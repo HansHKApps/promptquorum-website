@@ -112,11 +112,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'How much RAM does DeepSeek V3 need locally?', a: 'Approximately 400 GB RAM at Q4_K_M quantisation. At FP16 precision, over 1.3 TB of RAM is required.' },
-          { q: 'Can I run DeepSeek V3 with llama.cpp?', a: 'Technically yes if you have ~400 GB RAM and accept extremely slow inference (~0.1–0.5 tok/s). For practical use, the distilled versions are the right choice.' },
-          { q: 'Is the distilled version as good as DeepSeek V3?', a: 'For reasoning tasks: DS-R1-Distill-Qwen-32B (94% MATH-500) actually outperforms the full DeepSeek V3 on maths benchmarks. For broad general knowledge, V3 is better, but requires cloud API access.' },
-          { q: 'What is DeepSeek V3 vs DeepSeek-R1?', a: 'DeepSeek V3 is a general-purpose chat model (671B MoE). DeepSeek-R1 is a reasoning model trained via reinforcement learning. The distilled versions (Qwen-7B/14B/32B) are smaller dense models that retain R1\'s reasoning capability.' },
-        ],
+            { q: 'How much RAM does DeepSeek V3 need locally?', a: 'Approximately 400 GB RAM at Q4_K_M quantisation. At FP16 precision, over 1.3 TB of RAM is required.' },
+            { q: 'Can I run DeepSeek V3 with llama.cpp?', a: 'Technically yes if you have ~400 GB RAM and accept extremely slow inference (~0.1–0.5 tok/s). For practical use, the distilled versions are the right choice.' },
+            { q: 'Is the distilled version as good as DeepSeek V3?', a: 'For reasoning tasks: DS-R1-Distill-Qwen-32B (94% MATH-500) actually outperforms the full DeepSeek V3 on maths benchmarks. For broad general knowledge, V3 is better, but requires cloud API access.' },
+            { q: 'What is DeepSeek V3 vs DeepSeek-R1?', a: 'DeepSeek V3 is a general-purpose chat model (671B MoE). DeepSeek-R1 is a reasoning model trained via reinforcement learning. The distilled versions (Qwen-7B/14B/32B) are smaller dense models that retain R1\'s reasoning capability.' },
+            { q: 'What is the best local alternative to DeepSeek V3?', a: 'DS-R1-Distill-Qwen-32B at 20.5 GB VRAM delivers 94% MATH-500 — actually outperforming full V3 on maths benchmarks.' },
+            { q: 'Can llama.cpp run DeepSeek V3?', a: 'Technically yes with ~400 GB RAM, but inference speed would be 0.1–0.5 tok/s. Use distilled versions for practical local deployment.' },
+          ],
       },
     },
     schema: {
@@ -140,10 +142,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'How much RAM does DeepSeek V3 need to run locally?', acceptedAnswer: { '@type': 'Answer', text: 'Approximately 400 GB RAM at Q4_K_M quantisation — not viable on consumer hardware.' } },
-        { '@type': 'Question', name: 'What is the best local alternative to DeepSeek V3?', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B at 20.5 GB VRAM delivers 94% MATH-500 — actually outperforming full V3 on maths benchmarks.' } },
-        { '@type': 'Question', name: 'Can llama.cpp run DeepSeek V3?', acceptedAnswer: { '@type': 'Answer', text: 'Technically yes with ~400 GB RAM, but inference speed would be 0.1–0.5 tok/s. Use distilled versions for practical local deployment.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'How much RAM does DeepSeek V3 need locally?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Approximately 400 GB RAM at Q4_K_M quantisation. At FP16 precision, over 1.3 TB of RAM is required.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run DeepSeek V3 with llama.cpp?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Technically yes if you have ~400 GB RAM and accept extremely slow inference (~0.1–0.5 tok/s). For practical use, the distilled versions are the right choice.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is the distilled version as good as DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For reasoning tasks: DS-R1-Distill-Qwen-32B (94% MATH-500) actually outperforms the full DeepSeek V3 on maths benchmarks. For broad general knowledge, V3 is better, but requires cloud API access.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is DeepSeek V3 vs DeepSeek-R1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek V3 is a general-purpose chat model (671B MoE). DeepSeek-R1 is a reasoning model trained via reinforcement learning. The distilled versions (Qwen-7B/14B/32B) are smaller dense models that retain R1\'s reasoning capability.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best local alternative to DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DS-R1-Distill-Qwen-32B at 20.5 GB VRAM delivers 94% MATH-500 — actually outperforming full V3 on maths benchmarks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can llama.cpp run DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Technically yes with ~400 GB RAM, but inference speed would be 0.1–0.5 tok/s. Use distilled versions for practical local deployment.',
+            },
+          },
+        ],
     },
   },
 
@@ -525,11 +572,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'DeepSeek V3本地运行需要多少内存？', a: 'Q4_K_M量化约需400 GB内存。FP16精度需1.3 TB以上。' },
-          { q: 'llama.cpp可以运行DeepSeek V3吗？', a: '技术上有约400 GB内存可以，但推理速度约0.1–0.5 tok/s。实用部署建议使用蒸馏版本。' },
-          { q: '蒸馏版和完整V3性能相当吗？', a: '推理任务方面：DS-R1-Distill-Qwen-32B（MATH-500 94%）实际上在数学基准测试中超过了完整V3。' },
-          { q: 'DeepSeek V3和R1有什么区别？', a: 'V3是通用聊天模型（671B MoE）。R1是通过强化学习训练的推理模型。蒸馏版本是保留R1推理能力的小型稠密模型。' },
-        ],
+            { q: 'DeepSeek V3本地运行需要多少内存？', a: 'Q4_K_M量化约需400 GB内存。FP16精度需1.3 TB以上。' },
+            { q: 'llama.cpp可以运行DeepSeek V3吗？', a: '技术上有约400 GB内存可以，但推理速度约0.1–0.5 tok/s。实用部署建议使用蒸馏版本。' },
+            { q: '蒸馏版和完整V3性能相当吗？', a: '推理任务方面：DS-R1-Distill-Qwen-32B（MATH-500 94%）实际上在数学基准测试中超过了完整V3。' },
+            { q: 'DeepSeek V3和R1有什么区别？', a: 'V3是通用聊天模型（671B MoE）。R1是通过强化学习训练的推理模型。蒸馏版本是保留R1推理能力的小型稠密模型。' },
+            { q: '本地运行DeepSeek V3最佳替代方案？', a: 'DS-R1-Distill-Qwen-32B（20.5 GB显存，MATH-500 94%）——数学基准测试超越完整V3。' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -559,9 +607,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        { '@type': 'Question', name: 'DeepSeek V3本地运行需要多少内存？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M量化约需400 GB内存——消费级硬件无法实现。' } },
-        { '@type': 'Question', name: '本地运行DeepSeek V3最佳替代方案？', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B（20.5 GB显存，MATH-500 94%）——数学基准测试超越完整V3。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek V3本地运行需要多少内存？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M量化约需400 GB内存。FP16精度需1.3 TB以上。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'llama.cpp可以运行DeepSeek V3吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '技术上有约400 GB内存可以，但推理速度约0.1–0.5 tok/s。实用部署建议使用蒸馏版本。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '蒸馏版和完整V3性能相当吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '推理任务方面：DS-R1-Distill-Qwen-32B（MATH-500 94%）实际上在数学基准测试中超过了完整V3。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek V3和R1有什么区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'V3是通用聊天模型（671B MoE）。R1是通过强化学习训练的推理模型。蒸馏版本是保留R1推理能力的小型稠密模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地运行DeepSeek V3最佳替代方案？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DS-R1-Distill-Qwen-32B（20.5 GB显存，MATH-500 94%）——数学基准测试超越完整V3。',
+            },
+          },
+        ],
     },
   },
 
@@ -639,11 +725,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Quanta RAM o DeepSeek V3 precisa localmente?', a: 'Aproximadamente 400 GB de RAM em quantização Q4_K_M. Em precisão FP16, são necessários mais de 1,3 TB de RAM.' },
-          { q: 'O llama.cpp consegue rodar o DeepSeek V3?', a: 'Tecnicamente sim com ~400 GB de RAM, mas a velocidade de inferência seria ~0,1–0,5 tok/s. Para uso prático, as versões destiladas são a escolha certa.' },
-          { q: 'A versão destilada é tão boa quanto o DeepSeek V3?', a: 'Para tarefas de raciocínio: DS-R1-Distill-Qwen-32B (94% MATH-500) supera o V3 completo nos benchmarks de matemática. Para conhecimento geral amplo, o V3 é melhor, mas requer acesso à API em nuvem.' },
-          { q: 'Qual a diferença entre DeepSeek V3 e DeepSeek-R1?', a: 'DeepSeek V3 é um modelo de chat de propósito geral (671B MoE). DeepSeek-R1 é um modelo de raciocínio treinado por aprendizado por reforço. As versões destiladas (Qwen-7B/14B/32B) são modelos densos menores que mantêm a capacidade de raciocínio do R1.' },
-        ],
+            { q: 'Quanta RAM o DeepSeek V3 precisa localmente?', a: 'Aproximadamente 400 GB de RAM em quantização Q4_K_M. Em precisão FP16, são necessários mais de 1,3 TB de RAM.' },
+            { q: 'O llama.cpp consegue rodar o DeepSeek V3?', a: 'Tecnicamente sim com ~400 GB de RAM, mas a velocidade de inferência seria ~0,1–0,5 tok/s. Para uso prático, as versões destiladas são a escolha certa.' },
+            { q: 'A versão destilada é tão boa quanto o DeepSeek V3?', a: 'Para tarefas de raciocínio: DS-R1-Distill-Qwen-32B (94% MATH-500) supera o V3 completo nos benchmarks de matemática. Para conhecimento geral amplo, o V3 é melhor, mas requer acesso à API em nuvem.' },
+            { q: 'Qual a diferença entre DeepSeek V3 e DeepSeek-R1?', a: 'DeepSeek V3 é um modelo de chat de propósito geral (671B MoE). DeepSeek-R1 é um modelo de raciocínio treinado por aprendizado por reforço. As versões destiladas (Qwen-7B/14B/32B) são modelos densos menores que mantêm a capacidade de raciocínio do R1.' },
+            { q: 'Qual é a melhor alternativa local ao DeepSeek V3?', a: 'DS-R1-Distill-Qwen-32B com 20,5 GB de VRAM e 94% MATH-500 — supera o V3 completo nos benchmarks de matemática.' },
+          ],
       },
     },
     schema: {
@@ -667,9 +754,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'Quanta RAM o DeepSeek V3 precisa para rodar localmente?', acceptedAnswer: { '@type': 'Answer', text: 'Aproximadamente 400 GB de RAM em quantização Q4_K_M — inviável para hardware de consumo.' } },
-        { '@type': 'Question', name: 'Qual é a melhor alternativa local ao DeepSeek V3?', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B com 20,5 GB de VRAM e 94% MATH-500 — supera o V3 completo nos benchmarks de matemática.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Quanta RAM o DeepSeek V3 precisa localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aproximadamente 400 GB de RAM em quantização Q4_K_M. Em precisão FP16, são necessários mais de 1,3 TB de RAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O llama.cpp consegue rodar o DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Tecnicamente sim com ~400 GB de RAM, mas a velocidade de inferência seria ~0,1–0,5 tok/s. Para uso prático, as versões destiladas são a escolha certa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A versão destilada é tão boa quanto o DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para tarefas de raciocínio: DS-R1-Distill-Qwen-32B (94% MATH-500) supera o V3 completo nos benchmarks de matemática. Para conhecimento geral amplo, o V3 é melhor, mas requer acesso à API em nuvem.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual a diferença entre DeepSeek V3 e DeepSeek-R1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek V3 é um modelo de chat de propósito geral (671B MoE). DeepSeek-R1 é um modelo de raciocínio treinado por aprendizado por reforço. As versões destiladas (Qwen-7B/14B/32B) são modelos densos menores que mantêm a capacidade de raciocínio do R1.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a melhor alternativa local ao DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DS-R1-Distill-Qwen-32B com 20,5 GB de VRAM e 94% MATH-500 — supera o V3 completo nos benchmarks de matemática.',
+            },
+          },
+        ],
     },
   },
   es: {
@@ -756,11 +881,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Cuánta RAM necesita DeepSeek V3 en local?', a: 'Aproximadamente 400 GB RAM en cuantización Q4_K_M. En precisión FP16, se necesitan más de 1.3 TB de RAM.' },
-          { q: '¿Puede llama.cpp ejecutar DeepSeek V3?', a: 'Técnicamente sí si tienes ~400 GB RAM, pero la velocidad de inferencia sería ~0.1–0.5 tok/s. Para uso práctico, las versiones destiladas son la opción correcta.' },
-          { q: '¿Es la versión destilada igual de buena que DeepSeek V3?', a: 'Para tareas de razonamiento: DS-R1-Distill-Qwen-32B (94% MATH-500) supera al V3 completo en benchmarks de matemáticas. Para conocimiento general amplio, V3 es mejor, pero requiere acceso a la API cloud.' },
-          { q: '¿Cuál es la diferencia entre DeepSeek V3 y DeepSeek-R1?', a: 'DeepSeek V3 es un modelo de chat de propósito general (671B MoE). DeepSeek-R1 es un modelo de razonamiento entrenado con reinforcement learning. Las versiones destiladas (Qwen-7B/14B/32B) son modelos densos más pequeños que conservan la capacidad de razonamiento de R1.' },
-        ],
+            { q: '¿Cuánta RAM necesita DeepSeek V3 en local?', a: 'Aproximadamente 400 GB RAM en cuantización Q4_K_M. En precisión FP16, se necesitan más de 1.3 TB de RAM.' },
+            { q: '¿Puede llama.cpp ejecutar DeepSeek V3?', a: 'Técnicamente sí si tienes ~400 GB RAM, pero la velocidad de inferencia sería ~0.1–0.5 tok/s. Para uso práctico, las versiones destiladas son la opción correcta.' },
+            { q: '¿Es la versión destilada igual de buena que DeepSeek V3?', a: 'Para tareas de razonamiento: DS-R1-Distill-Qwen-32B (94% MATH-500) supera al V3 completo en benchmarks de matemáticas. Para conocimiento general amplio, V3 es mejor, pero requiere acceso a la API cloud.' },
+            { q: '¿Cuál es la diferencia entre DeepSeek V3 y DeepSeek-R1?', a: 'DeepSeek V3 es un modelo de chat de propósito general (671B MoE). DeepSeek-R1 es un modelo de razonamiento entrenado con reinforcement learning. Las versiones destiladas (Qwen-7B/14B/32B) son modelos densos más pequeños que conservan la capacidad de razonamiento de R1.' },
+            { q: '¿Cuál es la mejor alternativa local a DeepSeek V3?', a: 'DS-R1-Distill-Qwen-32B a 20.5 GB VRAM con 94% MATH-500 — supera al V3 completo en benchmarks de matemáticas.' },
+          ],
       },
     },
     schema: {
@@ -784,9 +910,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿Cuánta RAM necesita DeepSeek V3 para ejecutarse en local?', acceptedAnswer: { '@type': 'Answer', text: 'Aproximadamente 400 GB RAM en cuantización Q4_K_M — inviable en hardware de consumo.' } },
-        { '@type': 'Question', name: '¿Cuál es la mejor alternativa local a DeepSeek V3?', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B a 20.5 GB VRAM con 94% MATH-500 — supera al V3 completo en benchmarks de matemáticas.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Cuánta RAM necesita DeepSeek V3 en local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aproximadamente 400 GB RAM en cuantización Q4_K_M. En precisión FP16, se necesitan más de 1.3 TB de RAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puede llama.cpp ejecutar DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Técnicamente sí si tienes ~400 GB RAM, pero la velocidad de inferencia sería ~0.1–0.5 tok/s. Para uso práctico, las versiones destiladas son la opción correcta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es la versión destilada igual de buena que DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para tareas de razonamiento: DS-R1-Distill-Qwen-32B (94% MATH-500) supera al V3 completo en benchmarks de matemáticas. Para conocimiento general amplio, V3 es mejor, pero requiere acceso a la API cloud.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre DeepSeek V3 y DeepSeek-R1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek V3 es un modelo de chat de propósito general (671B MoE). DeepSeek-R1 es un modelo de razonamiento entrenado con reinforcement learning. Las versiones destiladas (Qwen-7B/14B/32B) son modelos densos más pequeños que conservan la capacidad de razonamiento de R1.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor alternativa local a DeepSeek V3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DS-R1-Distill-Qwen-32B a 20.5 GB VRAM con 94% MATH-500 — supera al V3 completo en benchmarks de matemáticas.',
+            },
+          },
+        ],
     },
   },
   ar: {
@@ -858,11 +1022,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'كم من RAM يحتاج DeepSeek V3 للتشغيل محلياً؟', a: 'حوالي 400 GB RAM بتكميم Q4_K_M. بدقة FP16، تحتاج إلى أكثر من 1.3 TB من RAM.' },
-          { q: 'هل يمكن لـ llama.cpp تشغيل DeepSeek V3؟', a: 'من الناحية التقنية نعم إذا كنت تمتلك حوالي 400 GB RAM، لكن سرعة الاستنتاج ستكون حوالي 0.1–0.5 رمز/ثانية. للاستخدام العملي، الإصدارات المقطّرة هي الخيار الصحيح.' },
-          { q: 'هل الإصدار المقطّر جيد مثل DeepSeek V3؟', a: 'لمهام الاستدلال: DS-R1-Distill-Qwen-32B (94% MATH-500) يتفوق على V3 الكامل في اختبارات الرياضيات. للمعرفة العامة الواسعة، V3 أفضل، لكنه يتطلب الوصول إلى واجهة API سحابية.' },
-          { q: 'ما الفرق بين DeepSeek V3 وDeepSeek-R1؟', a: 'DeepSeek V3 نموذج دردشة للأغراض العامة (671B MoE). DeepSeek-R1 نموذج استدلال مُدرَّب بالتعلم المعزز. الإصدارات المقطّرة (Qwen-7B/14B/32B) نماذج كثيفة أصغر تحتفظ بقدرة الاستدلال من R1.' },
-        ],
+            { q: 'كم من RAM يحتاج DeepSeek V3 للتشغيل محلياً؟', a: 'حوالي 400 GB RAM بتكميم Q4_K_M. بدقة FP16، تحتاج إلى أكثر من 1.3 TB من RAM.' },
+            { q: 'هل يمكن لـ llama.cpp تشغيل DeepSeek V3؟', a: 'من الناحية التقنية نعم إذا كنت تمتلك حوالي 400 GB RAM، لكن سرعة الاستنتاج ستكون حوالي 0.1–0.5 رمز/ثانية. للاستخدام العملي، الإصدارات المقطّرة هي الخيار الصحيح.' },
+            { q: 'هل الإصدار المقطّر جيد مثل DeepSeek V3؟', a: 'لمهام الاستدلال: DS-R1-Distill-Qwen-32B (94% MATH-500) يتفوق على V3 الكامل في اختبارات الرياضيات. للمعرفة العامة الواسعة، V3 أفضل، لكنه يتطلب الوصول إلى واجهة API سحابية.' },
+            { q: 'ما الفرق بين DeepSeek V3 وDeepSeek-R1؟', a: 'DeepSeek V3 نموذج دردشة للأغراض العامة (671B MoE). DeepSeek-R1 نموذج استدلال مُدرَّب بالتعلم المعزز. الإصدارات المقطّرة (Qwen-7B/14B/32B) نماذج كثيفة أصغر تحتفظ بقدرة الاستدلال من R1.' },
+            { q: 'ما أفضل بديل محلي لـ DeepSeek V3؟', a: 'DS-R1-Distill-Qwen-32B بـ 20.5 GB VRAM و94% MATH-500 — يتفوق على V3 الكامل في اختبارات الرياضيات.' },
+          ],
       },
     },
     schema: {
@@ -885,9 +1050,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'كم من RAM يحتاج DeepSeek V3 للتشغيل محلياً؟', acceptedAnswer: { '@type': 'Answer', text: 'حوالي 400 GB RAM بتكميم Q4_K_M — غير قابل للتشغيل على أجهزة المستهلكين.' } },
-        { '@type': 'Question', name: 'ما أفضل بديل محلي لـ DeepSeek V3؟', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B بـ 20.5 GB VRAM و94% MATH-500 — يتفوق على V3 الكامل في اختبارات الرياضيات.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'كم من RAM يحتاج DeepSeek V3 للتشغيل محلياً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'حوالي 400 GB RAM بتكميم Q4_K_M. بدقة FP16، تحتاج إلى أكثر من 1.3 TB من RAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن لـ llama.cpp تشغيل DeepSeek V3؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'من الناحية التقنية نعم إذا كنت تمتلك حوالي 400 GB RAM، لكن سرعة الاستنتاج ستكون حوالي 0.1–0.5 رمز/ثانية. للاستخدام العملي، الإصدارات المقطّرة هي الخيار الصحيح.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الإصدار المقطّر جيد مثل DeepSeek V3؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لمهام الاستدلال: DS-R1-Distill-Qwen-32B (94% MATH-500) يتفوق على V3 الكامل في اختبارات الرياضيات. للمعرفة العامة الواسعة، V3 أفضل، لكنه يتطلب الوصول إلى واجهة API سحابية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين DeepSeek V3 وDeepSeek-R1؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek V3 نموذج دردشة للأغراض العامة (671B MoE). DeepSeek-R1 نموذج استدلال مُدرَّب بالتعلم المعزز. الإصدارات المقطّرة (Qwen-7B/14B/32B) نماذج كثيفة أصغر تحتفظ بقدرة الاستدلال من R1.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل بديل محلي لـ DeepSeek V3؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DS-R1-Distill-Qwen-32B بـ 20.5 GB VRAM و94% MATH-500 — يتفوق على V3 الكامل في اختبارات الرياضيات.',
+            },
+          },
+        ],
     },
   },
   ko: {
@@ -963,11 +1166,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'DeepSeek V3를 로컬에서 실행하려면 RAM이 얼마나 필요합니까?', a: 'Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. FP16 정밀도에서는 1.3 TB 이상의 RAM이 필요합니다.' },
-          { q: 'llama.cpp로 DeepSeek V3를 실행할 수 있습니까?', a: '약 400 GB RAM이 있다면 기술적으로 가능하지만, 추론 속도가 약 0.1–0.5 tok/s에 불과합니다. 실용적 사용을 위해서는 증류 버전이 올바른 선택입니다.' },
-          { q: '증류 버전이 DeepSeek V3만큼 성능이 좋습니까?', a: '추론 작업에서: DS-R1-Distill-Qwen-32B (94% MATH-500)는 수학 벤치마크에서 V3 전체 모델을 능가합니다. 광범위한 일반 지식에서는 V3가 더 낫지만, 클라우드 API 접근이 필요합니다.' },
-          { q: 'DeepSeek V3와 DeepSeek-R1의 차이는 무엇입니까?', a: 'DeepSeek V3는 범용 채팅 모델(671B MoE)입니다. DeepSeek-R1은 강화학습으로 훈련된 추론 모델입니다. 증류 버전(Qwen-7B/14B/32B)은 R1의 추론 능력을 보존한 더 작은 밀집 모델입니다.' },
-        ],
+            { q: 'DeepSeek V3를 로컬에서 실행하려면 RAM이 얼마나 필요합니까?', a: 'Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. FP16 정밀도에서는 1.3 TB 이상의 RAM이 필요합니다.' },
+            { q: 'llama.cpp로 DeepSeek V3를 실행할 수 있습니까?', a: '약 400 GB RAM이 있다면 기술적으로 가능하지만, 추론 속도가 약 0.1–0.5 tok/s에 불과합니다. 실용적 사용을 위해서는 증류 버전이 올바른 선택입니다.' },
+            { q: '증류 버전이 DeepSeek V3만큼 성능이 좋습니까?', a: '추론 작업에서: DS-R1-Distill-Qwen-32B (94% MATH-500)는 수학 벤치마크에서 V3 전체 모델을 능가합니다. 광범위한 일반 지식에서는 V3가 더 낫지만, 클라우드 API 접근이 필요합니다.' },
+            { q: 'DeepSeek V3와 DeepSeek-R1의 차이는 무엇입니까?', a: 'DeepSeek V3는 범용 채팅 모델(671B MoE)입니다. DeepSeek-R1은 강화학습으로 훈련된 추론 모델입니다. 증류 버전(Qwen-7B/14B/32B)은 R1의 추론 능력을 보존한 더 작은 밀집 모델입니다.' },
+            { q: 'DeepSeek V3의 최고 로컬 대안은 무엇입니까?', a: 'DS-R1-Distill-Qwen-32B — 20.5 GB VRAM, 94% MATH-500으로 수학 벤치마크에서 V3 전체 모델을 능가합니다.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -1017,9 +1221,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: 'DeepSeek V3를 로컬에서 실행하려면 RAM이 얼마나 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 실행이 불가능합니다.' } },
-        { '@type': 'Question', name: 'DeepSeek V3의 최고 로컬 대안은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'DS-R1-Distill-Qwen-32B — 20.5 GB VRAM, 94% MATH-500으로 수학 벤치마크에서 V3 전체 모델을 능가합니다.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek V3를 로컬에서 실행하려면 RAM이 얼마나 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. FP16 정밀도에서는 1.3 TB 이상의 RAM이 필요합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'llama.cpp로 DeepSeek V3를 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '약 400 GB RAM이 있다면 기술적으로 가능하지만, 추론 속도가 약 0.1–0.5 tok/s에 불과합니다. 실용적 사용을 위해서는 증류 버전이 올바른 선택입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '증류 버전이 DeepSeek V3만큼 성능이 좋습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '추론 작업에서: DS-R1-Distill-Qwen-32B (94% MATH-500)는 수학 벤치마크에서 V3 전체 모델을 능가합니다. 광범위한 일반 지식에서는 V3가 더 낫지만, 클라우드 API 접근이 필요합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek V3와 DeepSeek-R1의 차이는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek V3는 범용 채팅 모델(671B MoE)입니다. DeepSeek-R1은 강화학습으로 훈련된 추론 모델입니다. 증류 버전(Qwen-7B/14B/32B)은 R1의 추론 능력을 보존한 더 작은 밀집 모델입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek V3의 최고 로컬 대안은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DS-R1-Distill-Qwen-32B — 20.5 GB VRAM, 94% MATH-500으로 수학 벤치마크에서 V3 전체 모델을 능가합니다.',
+            },
+          },
+        ],
     },
   },
 }

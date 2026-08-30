@@ -421,14 +421,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Can I run Apple MLX models on Windows or Linux?', a: 'No. MLX is macOS-only and requires Apple Silicon. GGUF models via llama.cpp work on all platforms. For cross-platform use, Ollama with GGUF format works on both Mac and NVIDIA systems.' },
-          { q: 'Does Ollama use MLX or Metal on Apple Silicon?', a: 'Ollama on Apple Silicon uses Metal GPU acceleration by default, not MLX. For MLX-specific optimizations (often faster for certain models), use mlx-lm directly or LM Studio with the MLX backend enabled.' },
-          { q: 'Can I use an eGPU with a Mac for NVIDIA CUDA?', a: 'No. macOS dropped CUDA eGPU support in 2019. External NVIDIA GPUs are not compatible with macOS for CUDA compute. The practical alternative is a separate Linux system with a NVIDIA GPU.' },
-          { q: 'Which is better for running Mistral Small?', a: 'NVIDIA RTX 4090 at ~150 tok/s vs Apple M5 Max at ~75 tok/s — NVIDIA is 2× faster. Even an RTX 3060 12GB (~$210 used) beats a Mac Mini M4 ($1,599) on pure 7B inference speed.' },
-          { q: 'What is the minimum Apple Mac for running 70B models?', a: 'Mac Studio M4 Max with 64GB unified memory (~$3,199). Llama 3 70B Q4_K_M needs ~38GB — the M4 Max 64GB fits it with headroom. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.' },
-          { q: 'Is Apple M5 Max better than RTX 4090 for local LLMs?', a: 'Depends on model size. For 7B: RTX 4090 wins (150 tok/s vs 75 tok/s). For 70B: M5 Max 128GB wins by default — RTX 4090 cannot load 70B at all. For training: NVIDIA wins by a wide margin.' },
-          { q: 'How does the new Apple M5 Ultra compare to the RTX 5090?', a: 'Apple announced the Mac Studio with M5 Ultra on August 25, 2026 — it starts at $5,499 for 96GB unified memory (256GB is $9,499; a 512GB configuration ships late October). Early figures show ~40–52 tok/s on Llama 3.3 70B, a model the RTX 5090\'s 32GB VRAM cannot load at all. For models that fit in 32GB, the RTX 5090 is still faster per token; for 70B+ models, the M5 Ultra has no consumer NVIDIA equivalent.' },
-        ],
+            { q: 'Can I run Apple MLX models on Windows or Linux?', a: 'No. MLX is macOS-only and requires Apple Silicon. GGUF models via llama.cpp work on all platforms. For cross-platform use, Ollama with GGUF format works on both Mac and NVIDIA systems.' },
+            { q: 'Does Ollama use MLX or Metal on Apple Silicon?', a: 'Ollama on Apple Silicon uses Metal GPU acceleration by default, not MLX. For MLX-specific optimizations (often faster for certain models), use mlx-lm directly or LM Studio with the MLX backend enabled.' },
+            { q: 'Can I use an eGPU with a Mac for NVIDIA CUDA?', a: 'No. macOS dropped CUDA eGPU support in 2019. External NVIDIA GPUs are not compatible with macOS for CUDA compute. The practical alternative is a separate Linux system with a NVIDIA GPU.' },
+            { q: 'Which is better for running Mistral Small?', a: 'NVIDIA RTX 4090 at ~150 tok/s vs Apple M5 Max at ~75 tok/s — NVIDIA is 2× faster. Even an RTX 3060 12GB (~$210 used) beats a Mac Mini M4 ($1,599) on pure 7B inference speed.' },
+            { q: 'What is the minimum Apple Mac for running 70B models?', a: 'Mac Studio M4 Max with 64GB unified memory (~$3,199). Llama 3 70B Q4_K_M needs ~38GB — the M4 Max 64GB fits it with headroom. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.' },
+            { q: 'Is Apple M5 Max better than RTX 4090 for local LLMs?', a: 'Depends on model size. For 7B: RTX 4090 wins (150 tok/s vs 75 tok/s). For 70B: M5 Max 128GB wins by default — RTX 4090 cannot load 70B at all. For training: NVIDIA wins by a wide margin.' },
+            { q: 'How does the new Apple M5 Ultra compare to the RTX 5090?', a: 'Apple announced the Mac Studio with M5 Ultra on August 25, 2026 — it starts at $5,499 for 96GB unified memory (256GB is $9,499; a 512GB configuration ships late October). Early figures show ~40–52 tok/s on Llama 3.3 70B, a model the RTX 5090\'s 32GB VRAM cannot load at all. For models that fit in 32GB, the RTX 5090 is still faster per token; for 70B+ models, the M5 Ultra has no consumer NVIDIA equivalent.' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -456,12 +456,111 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Can I run Apple MLX models on Windows or Linux?', acceptedAnswer: { '@type': 'Answer', text: 'No. MLX is macOS-only and requires Apple Silicon. GGUF models via llama.cpp work on all platforms. For cross-platform use, Ollama with GGUF format works on both Mac and NVIDIA systems.' } },
-        { '@type': 'Question', name: 'Is Apple M5 Max better than RTX 4090 for local LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Depends on model size. For 7B: RTX 4090 wins (150 tok/s vs 75 tok/s). For 70B: M5 Max 128GB wins by default — RTX 4090 cannot load 70B at all. For training: NVIDIA wins by a wide margin.' } },
-        { '@type': 'Question', name: 'What is the minimum Apple Mac for running 70B models?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M4 Max with 64GB unified memory (~$3,199). Llama 3 70B Q4_K_M needs ~38GB — the M4 Max 64GB fits it with headroom. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.' } },
-        { '@type': 'Question', name: 'Does Ollama use MLX on Apple Silicon?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama on Apple Silicon uses Metal GPU acceleration by default, not MLX. For MLX-specific performance, use mlx-lm directly or LM Studio with the MLX backend enabled.' } },
-        { '@type': 'Question', name: 'How does the new Apple M5 Ultra compare to the RTX 5090?', acceptedAnswer: { '@type': 'Answer', text: 'Apple announced the Mac Studio with M5 Ultra on August 25, 2026 — it starts at $5,499 for 96GB unified memory (256GB is $9,499). Early figures show ~40–52 tok/s on Llama 3.3 70B, a model the RTX 5090\'s 32GB VRAM cannot load at all.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Can Apple Silicon match NVIDIA memory bandwidth?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — RTX 4090 has 1,008 GB/s vs Apple M5 Max at 614 GB/s. Apple compensates with much larger memory capacity (128GB vs 24GB). For small models where VRAM is sufficient, NVIDIA wins on speed. For large models that exceed VRAM, Apple wins on capability.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is 18 tok/s on Llama 3 70B fast enough for interactive use?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes for most tasks. 18 tok/s produces a 500-word response in roughly 20–25 seconds. Interactive use at 70B quality that previously required a $40,000+ server is now available on a Mac Studio M4 Max 64GB (~$3,199) or MacBook Pro M5 Max 128GB. The new Mac Studio M5 Ultra (from $5,499) roughly doubles that to ~40–52 tok/s on Llama 3.3 70B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Why is NVIDIA faster on small models?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIA GDDR7/GDDR6X bandwidth (1,008–1,792 GB/s) exceeds Apple M5 Max bandwidth (614 GB/s). LLM inference is memory-bandwidth-bound — higher bandwidth runs small models faster. Apple\'s advantage is memory capacity, not bandwidth. The M5 Ultra narrows this gap with roughly double M5 Max bandwidth via UltraFusion, but has not yet been independently benchmarked on small models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use Ollama on both Apple and NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Ollama runs on Apple Silicon (Metal backend) and NVIDIA (CUDA). The same commands work on both. Model files are compatible across platforms.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does llama.cpp run on Apple Silicon?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes — llama.cpp has native Metal GPU acceleration on Apple Silicon. For MLX-specific optimizations, use mlx-lm or LM Studio with the MLX backend enabled.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Apple MLX 10× more efficient than NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Approximately yes under continuous inference. Mac Studio M4 Max draws 25–35W vs RTX 4090 system at 400–500W. The efficiency ratio is 8–15× depending on workload. At idle, NVIDIA systems scale down, closing the gap.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run Apple MLX models on Windows or Linux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. MLX is macOS-only and requires Apple Silicon. GGUF models via llama.cpp work on all platforms. For cross-platform use, Ollama with GGUF format works on both Mac and NVIDIA systems.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Ollama use MLX or Metal on Apple Silicon?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama on Apple Silicon uses Metal GPU acceleration by default, not MLX. For MLX-specific optimizations (often faster for certain models), use mlx-lm directly or LM Studio with the MLX backend enabled.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use an eGPU with a Mac for NVIDIA CUDA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. macOS dropped CUDA eGPU support in 2019. External NVIDIA GPUs are not compatible with macOS for CUDA compute. The practical alternative is a separate Linux system with a NVIDIA GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which is better for running Mistral Small?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIA RTX 4090 at ~150 tok/s vs Apple M5 Max at ~75 tok/s — NVIDIA is 2× faster. Even an RTX 3060 12GB (~$210 used) beats a Mac Mini M4 ($1,599) on pure 7B inference speed.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the minimum Apple Mac for running 70B models?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mac Studio M4 Max with 64GB unified memory (~$3,199). Llama 3 70B Q4_K_M needs ~38GB — the M4 Max 64GB fits it with headroom. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Apple M5 Max better than RTX 4090 for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depends on model size. For 7B: RTX 4090 wins (150 tok/s vs 75 tok/s). For 70B: M5 Max 128GB wins by default — RTX 4090 cannot load 70B at all. For training: NVIDIA wins by a wide margin.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does the new Apple M5 Ultra compare to the RTX 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apple announced the Mac Studio with M5 Ultra on August 25, 2026 — it starts at $5,499 for 96GB unified memory (256GB is $9,499; a 512GB configuration ships late October). Early figures show ~40–52 tok/s on Llama 3.3 70B, a model the RTX 5090\'s 32GB VRAM cannot load at all. For models that fit in 32GB, the RTX 5090 is still faster per token; for 70B+ models, the M5 Ultra has no consumer NVIDIA equivalent.',
+            },
+          },
+        ],
     },
   },
   de: {
@@ -1324,12 +1423,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Puis-je utiliser les modèles Apple MLX sur Windows ou Linux ?', a: 'Non. MLX est macOS uniquement et nécessite Apple Silicon. Les modèles GGUF via llama.cpp fonctionnent sur toutes les plateformes. Pour un usage multiplateforme, Ollama avec le format GGUF fonctionne sur Mac et systèmes NVIDIA.' },
-          { q: 'Ollama utilise-t-il MLX ou Metal sur Apple Silicon ?', a: 'Ollama sur Apple Silicon utilise l\'accélération GPU Metal par défaut, pas MLX. Pour les optimisations spécifiques MLX, utilisez mlx-lm directement ou LM Studio avec le backend MLX activé.' },
-          { q: 'Quel est le Mac minimum pour faire tourner des modèles 70B ?', a: 'Mac Studio M4 Max avec 64Go de mémoire unifiée (~3 199 €). Llama 3 70B Q4_K_M nécessite ~38Go — la configuration 64Go suffit avec une bonne marge.' },
-          { q: 'Apple M5 Max est-il meilleur que RTX 4090 pour les LLMs locaux ?', a: 'Cela dépend de la taille du modèle. Pour 7B : RTX 4090 gagne (150 tok/s vs 75 tok/s). Pour 70B : M5 Max 128Go gagne par défaut — RTX 4090 ne peut pas du tout charger 70B. Pour l\'entraînement : NVIDIA gagne largement.' },
-          { q: 'Comment le nouveau Apple M5 Ultra se compare-t-il au RTX 5090 ?', a: 'Apple a annoncé le Mac Studio avec M5 Ultra le 25 août 2026 — à partir de 5 499 $ pour 96Go de mémoire unifiée (256Go à 9 499 $). Les premiers chiffres montrent ~40–52 tok/s sur Llama 3.3 70B, un modèle que les 32Go de VRAM du RTX 5090 ne peuvent pas charger du tout. Pour les modèles qui tiennent en 32Go, le RTX 5090 reste plus rapide par token.' },
-        ],
+            { q: 'Puis-je utiliser les modèles Apple MLX sur Windows ou Linux ?', a: 'Non. MLX est macOS uniquement et nécessite Apple Silicon. Les modèles GGUF via llama.cpp fonctionnent sur toutes les plateformes. Pour un usage multiplateforme, Ollama avec le format GGUF fonctionne sur Mac et systèmes NVIDIA.' },
+            { q: 'Ollama utilise-t-il MLX ou Metal sur Apple Silicon ?', a: 'Ollama sur Apple Silicon utilise l\'accélération GPU Metal par défaut, pas MLX. Pour les optimisations spécifiques MLX, utilisez mlx-lm directement ou LM Studio avec le backend MLX activé.' },
+            { q: 'Quel est le Mac minimum pour faire tourner des modèles 70B ?', a: 'Mac Studio M4 Max avec 64Go de mémoire unifiée (~3 199 €). Llama 3 70B Q4_K_M nécessite ~38Go — la configuration 64Go suffit avec une bonne marge.' },
+            { q: 'Apple M5 Max est-il meilleur que RTX 4090 pour les LLMs locaux ?', a: 'Cela dépend de la taille du modèle. Pour 7B : RTX 4090 gagne (150 tok/s vs 75 tok/s). Pour 70B : M5 Max 128Go gagne par défaut — RTX 4090 ne peut pas du tout charger 70B. Pour l\'entraînement : NVIDIA gagne largement.' },
+            { q: 'Comment le nouveau Apple M5 Ultra se compare-t-il au RTX 5090 ?', a: 'Apple a annoncé le Mac Studio avec M5 Ultra le 25 août 2026 — à partir de 5 499 $ pour 96Go de mémoire unifiée (256Go à 9 499 $). Les premiers chiffres montrent ~40–52 tok/s sur Llama 3.3 70B, un modèle que les 32Go de VRAM du RTX 5090 ne peuvent pas charger du tout. Pour les modèles qui tiennent en 32Go, le RTX 5090 reste plus rapide par token.' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -1357,11 +1456,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Puis-je utiliser les modèles Apple MLX sur Windows ou Linux ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. MLX est macOS uniquement et nécessite Apple Silicon. Les modèles GGUF via llama.cpp fonctionnent sur toutes les plateformes.' } },
-        { '@type': 'Question', name: 'Apple M5 Max est-il meilleur que RTX 4090 pour les LLMs locaux ?', acceptedAnswer: { '@type': 'Answer', text: 'Cela dépend de la taille du modèle. Pour 7B : RTX 4090 gagne. Pour 70B : M5 Max 128Go gagne automatiquement. Pour l\'entraînement : NVIDIA gagne largement.' } },
-        { '@type': 'Question', name: 'Quel est le Mac minimum pour les modèles 70B ?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M4 Max avec 64Go de mémoire unifiée (~3 199 €). Llama 3 70B Q4_K_M nécessite ~38Go — la configuration 64Go suffit.' } },
-        { '@type': 'Question', name: 'Comment le nouveau Apple M5 Ultra se compare-t-il au RTX 5090 ?', acceptedAnswer: { '@type': 'Answer', text: 'Apple a annoncé le Mac Studio avec M5 Ultra le 25 août 2026 — à partir de 5 499 $ pour 96Go de mémoire unifiée (256Go à 9 499 $). Les premiers chiffres montrent ~40–52 tok/s sur Llama 3.3 70B, un modèle que les 32Go de VRAM du RTX 5090 ne peuvent pas charger.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Apple Silicon peut-il égaler la bande passante mémoire de NVIDIA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non — RTX 4090 a 1 008 Go/s vs Apple M5 Max à 614 Go/s. Apple compense avec une capacité mémoire bien plus grande (128Go vs 24Go). Pour les petits modèles où la VRAM suffit, NVIDIA gagne en vitesse. Pour les grands modèles qui dépassent la VRAM, Apple gagne en capacité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '18 tok/s sur Llama 3 70B est-il suffisant pour une utilisation interactive ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui pour la plupart des tâches. 18 tok/s produit une réponse de 500 mots en environ 20–25 secondes. Une utilisation interactive à la qualité 70B qui nécessitait auparavant un serveur à 40 000 €+ est maintenant disponible sur un Mac Studio M4 Max 64Go à ~3 199 €.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi NVIDIA est-il plus rapide sur les petits modèles ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La bande passante GDDR7/GDDR6X de NVIDIA (1 008–1 792 Go/s) dépasse celle de l\'Apple M5 Max (614 Go/s). L\'inférence LLM est limitée par la bande passante mémoire — une bande passante plus élevée fait tourner les petits modèles plus vite.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser Ollama sur Apple et NVIDIA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Ollama fonctionne sur Apple Silicon (backend Metal) et NVIDIA (CUDA). Les mêmes commandes fonctionnent sur les deux plateformes. Les fichiers de modèles sont compatibles entre plateformes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple MLX est-il 10× plus efficace que NVIDIA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Approximativement oui en inférence continue. Mac Studio M4 Max tire 25–35W vs système RTX 4090 à 400–500W. Le ratio d\'efficacité est de 8–15× selon la charge de travail.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser les modèles Apple MLX sur Windows ou Linux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. MLX est macOS uniquement et nécessite Apple Silicon. Les modèles GGUF via llama.cpp fonctionnent sur toutes les plateformes. Pour un usage multiplateforme, Ollama avec le format GGUF fonctionne sur Mac et systèmes NVIDIA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama utilise-t-il MLX ou Metal sur Apple Silicon ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama sur Apple Silicon utilise l\'accélération GPU Metal par défaut, pas MLX. Pour les optimisations spécifiques MLX, utilisez mlx-lm directement ou LM Studio avec le backend MLX activé.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est le Mac minimum pour faire tourner des modèles 70B ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mac Studio M4 Max avec 64Go de mémoire unifiée (~3 199 €). Llama 3 70B Q4_K_M nécessite ~38Go — la configuration 64Go suffit avec une bonne marge.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple M5 Max est-il meilleur que RTX 4090 pour les LLMs locaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cela dépend de la taille du modèle. Pour 7B : RTX 4090 gagne (150 tok/s vs 75 tok/s). Pour 70B : M5 Max 128Go gagne par défaut — RTX 4090 ne peut pas du tout charger 70B. Pour l\'entraînement : NVIDIA gagne largement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment le nouveau Apple M5 Ultra se compare-t-il au RTX 5090 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apple a annoncé le Mac Studio avec M5 Ultra le 25 août 2026 — à partir de 5 499 $ pour 96Go de mémoire unifiée (256Go à 9 499 $). Les premiers chiffres montrent ~40–52 tok/s sur Llama 3.3 70B, un modèle que les 32Go de VRAM du RTX 5090 ne peuvent pas charger du tout. Pour les modèles qui tiennent en 32Go, le RTX 5090 reste plus rapide par token.',
+            },
+          },
+        ],
     },
   },
   ja: {
@@ -1774,12 +1949,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'Apple MLXモデルをWindowsやLinuxで使えますか？', a: 'いいえ。MLXはmacOSのみでApple Siliconが必要です。llama.cpp経由のGGUFモデルはすべてのプラットフォームで動作します。クロスプラットフォームの使用には、GGUF形式のOllamaがMacとNVIDIAシステム両方で機能します。' },
-          { q: 'OllamaはApple SiliconでMLXまたはMetalを使用しますか？', a: 'Apple SiliconのOllamaはデフォルトでMLXではなくMetal GPU加速を使用します。MLX特有の最適化には、mlx-lmを直接使用するか、MLXバックエンドを有効にしたLM Studioを使用してください。' },
-          { q: '70Bモデルを実行するための最低限のApple Macは何ですか？', a: '64GBユニファイドメモリのMac Studio M4 Max（~299,800円）。Llama 3 70B Q4_K_Mは約38GB必要—64GB構成は十分な余裕で収容できます。' },
-          { q: 'Apple M5 MaxはローカルLLMでRTX 4090より優れていますか？', a: 'モデルサイズによります。7B：RTX 4090が勝ち（150 tok/s vs 75 tok/s）。70B：M5 Max 128GBがデフォルトで勝ち—RTX 4090は70Bを全くロードできません。トレーニング：NVIDIAが大差で勝ち。' },
-          { q: '新しいApple M5 UltraはRTX 5090と比べてどうですか？', a: 'Appleは2026年8月25日にMac Studio M5 Ultraを発表しました—96GBユニファイドメモリで5,499ドルから（256GBは9,499ドル）。初期のベンチマークではLlama 3.3 70Bで約40〜52 tok/sを記録しており、これはRTX 5090の32GB VRAMではまったくロードできないモデルです。32GBに収まるモデルではRTX 5090がトークンあたりで依然として高速です。' },
-        ],
+            { q: 'Apple MLXモデルをWindowsやLinuxで使えますか？', a: 'いいえ。MLXはmacOSのみでApple Siliconが必要です。llama.cpp経由のGGUFモデルはすべてのプラットフォームで動作します。クロスプラットフォームの使用には、GGUF形式のOllamaがMacとNVIDIAシステム両方で機能します。' },
+            { q: 'OllamaはApple SiliconでMLXまたはMetalを使用しますか？', a: 'Apple SiliconのOllamaはデフォルトでMLXではなくMetal GPU加速を使用します。MLX特有の最適化には、mlx-lmを直接使用するか、MLXバックエンドを有効にしたLM Studioを使用してください。' },
+            { q: '70Bモデルを実行するための最低限のApple Macは何ですか？', a: '64GBユニファイドメモリのMac Studio M4 Max（~299,800円）。Llama 3 70B Q4_K_Mは約38GB必要—64GB構成は十分な余裕で収容できます。' },
+            { q: 'Apple M5 MaxはローカルLLMでRTX 4090より優れていますか？', a: 'モデルサイズによります。7B：RTX 4090が勝ち（150 tok/s vs 75 tok/s）。70B：M5 Max 128GBがデフォルトで勝ち—RTX 4090は70Bを全くロードできません。トレーニング：NVIDIAが大差で勝ち。' },
+            { q: '新しいApple M5 UltraはRTX 5090と比べてどうですか？', a: 'Appleは2026年8月25日にMac Studio M5 Ultraを発表しました—96GBユニファイドメモリで5,499ドルから（256GBは9,499ドル）。初期のベンチマークではLlama 3.3 70Bで約40〜52 tok/sを記録しており、これはRTX 5090の32GB VRAMではまったくロードできないモデルです。32GBに収まるモデルではRTX 5090がトークンあたりで依然として高速です。' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -1807,11 +1982,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Apple MLXモデルをWindowsやLinuxで使えますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。MLXはmacOSのみでApple Siliconが必要です。クロスプラットフォームにはGGUF形式のOllamaが両方で機能します。' } },
-        { '@type': 'Question', name: 'Apple M5 MaxはローカルLLMでRTX 4090より優れていますか？', acceptedAnswer: { '@type': 'Answer', text: 'モデルサイズによります。7B：RTX 4090が勝ち。70B：M5 Max 128GBが自動的に勝ち—RTX 4090は70Bをロードできません。トレーニング：NVIDIAが大差で勝ち。' } },
-        { '@type': 'Question', name: '70Bモデルの最低限のMacは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '64GBユニファイドメモリのMac Studio M4 Max（~299,800円）。Llama 3 70B Q4_K_Mは約38GB必要—64GB構成は収容可能です。' } },
-        { '@type': 'Question', name: '新しいApple M5 UltraはRTX 5090と比べてどうですか？', acceptedAnswer: { '@type': 'Answer', text: 'Appleは2026年8月25日にMac Studio M5 Ultraを発表しました—96GBユニファイドメモリで5,499ドルから（256GBは9,499ドル）。初期のベンチマークではLlama 3.3 70Bで約40〜52 tok/sを記録しており、RTX 5090の32GB VRAMではロードできないモデルです。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Apple SiliconはNVIDIAのメモリ帯域幅に匹敵できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ—RTX 4090は1,008 GB/s vs Apple M5 Maxの614 GB/s。Appleははるかに大きなメモリ容量（128GB vs 24GB）で補います。VRAMで十分な小型モデルではNVIDIAが速度で勝ります。VRAMを超える大型モデルではAppleが容量で勝ります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Llama 3 70Bで18トークン/秒はインタラクティブな使用に十分ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどのタスクでは十分です。18トークン/秒で500語の応答を生成するには約20〜25秒かかります。以前は4,000,000円以上のサーバーが必要だった70B品質のインタラクティブ使用が、~299,800円のMac Studio M4 Max 64GBで可能になりました。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'なぜNVIDIAは小型モデルで速いのですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIAのGDDR7/GDDR6X帯域幅（1,008〜1,792 GB/s）はApple M5 Maxの帯域幅（614 GB/s）を超えています。LLM推論はメモリ帯域幅に制限される—高い帯域幅で小型モデルを速く実行できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaをAppleとNVIDIA両方で使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。OllamaはApple Silicon（Metalバックエンド）とNVIDIA（CUDA）で動作します。同じコマンドが両方のプラットフォームで機能します。モデルファイルはプラットフォーム間で互換性があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple MLXはNVIDIAより10倍効率的ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '継続的な推論時は概ねそうです。Mac Studio M4 Maxは25〜35Wを引き出すのに対し、RTX 4090システムは400〜500W。効率比はワークロードに応じて8〜15倍です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple MLXモデルをWindowsやLinuxで使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。MLXはmacOSのみでApple Siliconが必要です。llama.cpp経由のGGUFモデルはすべてのプラットフォームで動作します。クロスプラットフォームの使用には、GGUF形式のOllamaがMacとNVIDIAシステム両方で機能します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaはApple SiliconでMLXまたはMetalを使用しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apple SiliconのOllamaはデフォルトでMLXではなくMetal GPU加速を使用します。MLX特有の最適化には、mlx-lmを直接使用するか、MLXバックエンドを有効にしたLM Studioを使用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '70Bモデルを実行するための最低限のApple Macは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '64GBユニファイドメモリのMac Studio M4 Max（~299,800円）。Llama 3 70B Q4_K_Mは約38GB必要—64GB構成は十分な余裕で収容できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple M5 MaxはローカルLLMでRTX 4090より優れていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'モデルサイズによります。7B：RTX 4090が勝ち（150 tok/s vs 75 tok/s）。70B：M5 Max 128GBがデフォルトで勝ち—RTX 4090は70Bを全くロードできません。トレーニング：NVIDIAが大差で勝ち。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '新しいApple M5 UltraはRTX 5090と比べてどうですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Appleは2026年8月25日にMac Studio M5 Ultraを発表しました—96GBユニファイドメモリで5,499ドルから（256GBは9,499ドル）。初期のベンチマークではLlama 3.3 70Bで約40〜52 tok/sを記録しており、これはRTX 5090の32GB VRAMではまったくロードできないモデルです。32GBに収まるモデルではRTX 5090がトークンあたりで依然として高速です。',
+            },
+          },
+        ],
     },
   },
   zh: {
@@ -2675,14 +2926,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Puedo correr modelos Apple MLX en Windows o Linux?', a: 'No. MLX es solo para macOS y requiere Apple Silicon. Los modelos GGUF vía llama.cpp funcionan en todas las plataformas. Para uso multiplataforma, Ollama con formato GGUF funciona tanto en Mac como en sistemas NVIDIA.' },
-          { q: '¿Ollama usa MLX o Metal en Apple Silicon?', a: 'Ollama en Apple Silicon usa aceleración GPU Metal por defecto, no MLX. Para optimizaciones específicas de MLX (a menudo más rápidas para ciertos modelos), usa mlx-lm directamente o LM Studio con el backend MLX habilitado.' },
-          { q: '¿Puedo usar una eGPU con un Mac para NVIDIA CUDA?', a: 'No. macOS eliminó el soporte de eGPU CUDA en 2019. Las GPU NVIDIA externas no son compatibles con macOS para cómputo CUDA. La alternativa práctica es un sistema Linux separado con una GPU NVIDIA.' },
-          { q: '¿Cuál es mejor para correr Mistral Small?', a: 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — NVIDIA es 2× más rápida. Incluso una RTX 3060 12GB (~$280 usada) supera a un Mac Mini M4 ($1,599) en velocidad pura de inferencia con 7B.' },
-          { q: '¿Cuál es el Mac mínimo para correr modelos de 70B?', a: 'Mac Studio M4 Max con 64GB de memoria unificada (~$3,199). Llama 3 70B Q4_K_M necesita ~38GB — la configuración de 64GB lo aloja con margen cómodo.' },
-          { q: '¿Apple M5 Max es mejor que RTX 4090 para LLMs locales?', a: 'Depende del tamaño del modelo. Para 7B: RTX 4090 gana (150 tok/s vs 75 tok/s). Para 70B: M5 Max 128GB gana por defecto — RTX 4090 no puede cargar 70B en absoluto. Para entrenamiento: NVIDIA gana por un amplio margen.' },
-          { q: '¿Cómo se compara el nuevo Apple M5 Ultra con la RTX 5090?', a: 'Apple anunció el Mac Studio con M5 Ultra el 25 de agosto de 2026 — desde $5,499 por 96GB de memoria unificada (256GB por $9,499). Las primeras cifras muestran ~40–52 tok/s en Llama 3.3 70B, un modelo que los 32GB de VRAM de la RTX 5090 no pueden cargar en absoluto. Para modelos que sí caben en 32GB, la RTX 5090 sigue siendo más rápida por token.' },
-        ],
+            { q: '¿Puedo correr modelos Apple MLX en Windows o Linux?', a: 'No. MLX es solo para macOS y requiere Apple Silicon. Los modelos GGUF vía llama.cpp funcionan en todas las plataformas. Para uso multiplataforma, Ollama con formato GGUF funciona tanto en Mac como en sistemas NVIDIA.' },
+            { q: '¿Ollama usa MLX o Metal en Apple Silicon?', a: 'Ollama en Apple Silicon usa aceleración GPU Metal por defecto, no MLX. Para optimizaciones específicas de MLX (a menudo más rápidas para ciertos modelos), usa mlx-lm directamente o LM Studio con el backend MLX habilitado.' },
+            { q: '¿Puedo usar una eGPU con un Mac para NVIDIA CUDA?', a: 'No. macOS eliminó el soporte de eGPU CUDA en 2019. Las GPU NVIDIA externas no son compatibles con macOS para cómputo CUDA. La alternativa práctica es un sistema Linux separado con una GPU NVIDIA.' },
+            { q: '¿Cuál es mejor para correr Mistral Small?', a: 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — NVIDIA es 2× más rápida. Incluso una RTX 3060 12GB (~$280 usada) supera a un Mac Mini M4 ($1,599) en velocidad pura de inferencia con 7B.' },
+            { q: '¿Cuál es el Mac mínimo para correr modelos de 70B?', a: 'Mac Studio M4 Max con 64GB de memoria unificada (~$3,199). Llama 3 70B Q4_K_M necesita ~38GB — la configuración de 64GB lo aloja con margen cómodo.' },
+            { q: '¿Apple M5 Max es mejor que RTX 4090 para LLMs locales?', a: 'Depende del tamaño del modelo. Para 7B: RTX 4090 gana (150 tok/s vs 75 tok/s). Para 70B: M5 Max 128GB gana por defecto — RTX 4090 no puede cargar 70B en absoluto. Para entrenamiento: NVIDIA gana por un amplio margen.' },
+            { q: '¿Cómo se compara el nuevo Apple M5 Ultra con la RTX 5090?', a: 'Apple anunció el Mac Studio con M5 Ultra el 25 de agosto de 2026 — desde $5,499 por 96GB de memoria unificada (256GB por $9,499). Las primeras cifras muestran ~40–52 tok/s en Llama 3.3 70B, un modelo que los 32GB de VRAM de la RTX 5090 no pueden cargar en absoluto. Para modelos que sí caben en 32GB, la RTX 5090 sigue siendo más rápida por token.' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -2711,12 +2962,111 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿Puedo correr modelos Apple MLX en Windows o Linux?', acceptedAnswer: { '@type': 'Answer', text: 'No. MLX es solo para macOS y requiere Apple Silicon. Los modelos GGUF vía llama.cpp funcionan en todas las plataformas. Para uso multiplataforma, Ollama con formato GGUF funciona tanto en Mac como en sistemas NVIDIA.' } },
-        { '@type': 'Question', name: '¿Apple M5 Max es mejor que RTX 4090 para LLMs locales?', acceptedAnswer: { '@type': 'Answer', text: 'Depende del tamaño del modelo. Para 7B: RTX 4090 gana (150 tok/s vs 75 tok/s). Para 70B: M5 Max 128GB gana por defecto — RTX 4090 no puede cargar 70B en absoluto. Para entrenamiento: NVIDIA gana por un amplio margen.' } },
-        { '@type': 'Question', name: '¿Cuál es el Mac mínimo para correr modelos de 70B?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M4 Max con 64GB de memoria unificada (~$3,199). Llama 3 70B Q4_K_M necesita ~38GB — la configuración de 64GB lo aloja con margen cómodo.' } },
-        { '@type': 'Question', name: '¿Ollama usa MLX en Apple Silicon?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama en Apple Silicon usa aceleración GPU Metal por defecto, no MLX. Para rendimiento específico de MLX, usa mlx-lm directamente o LM Studio con el backend MLX habilitado.' } },
-        { '@type': 'Question', name: '¿Cómo se compara el nuevo Apple M5 Ultra con la RTX 5090?', acceptedAnswer: { '@type': 'Answer', text: 'Apple anunció el Mac Studio con M5 Ultra el 25 de agosto de 2026 — desde $5,499 por 96GB de memoria unificada (256GB por $9,499). Las primeras cifras muestran ~40–52 tok/s en Llama 3.3 70B, un modelo que los 32GB de VRAM de la RTX 5090 no pueden cargar.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Puede Apple Silicon igualar el ancho de banda de memoria de NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — RTX 4090 tiene 1,008 GB/s vs Apple M5 Max con 614 GB/s. Apple lo compensa con mucha mayor capacidad de memoria (128GB vs 24GB). Para modelos pequeños donde la VRAM es suficiente, NVIDIA gana en velocidad. Para modelos grandes que superan la VRAM, Apple gana en capacidad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Son suficientes 18 tok/s en Llama 3 70B para uso interactivo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí para la mayoría de tareas. 18 tok/s genera una respuesta de 500 palabras en unos 20–25 segundos. El uso interactivo a calidad 70B que antes requería un servidor de más de $40,000 ahora está disponible en un Mac Studio M4 Max 64GB (~$3,199).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué NVIDIA es más rápida en modelos pequeños?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El ancho de banda GDDR7/GDDR6X de NVIDIA (1,008–1,792 GB/s) supera al del Apple M5 Max (614 GB/s). La inferencia con LLMs está limitada por el ancho de banda de memoria — mayor ancho de banda corre modelos pequeños más rápido. La ventaja de Apple está en la capacidad, no en el ancho de banda.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar Ollama tanto en Apple como en NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Ollama corre en Apple Silicon (backend Metal) y NVIDIA (CUDA). Los mismos comandos funcionan en ambas plataformas. Los archivos de modelo son compatibles entre plataformas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿llama.cpp funciona en Apple Silicon?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — llama.cpp tiene aceleración GPU Metal nativa en Apple Silicon. Para optimizaciones específicas de MLX, usa mlx-lm o LM Studio con el backend MLX habilitado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es Apple MLX 10 veces más eficiente que NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aproximadamente sí bajo inferencia continua. Mac Studio M4 Max consume 25–35W vs un sistema RTX 4090 a 400–500W. El ratio de eficiencia es de 8–15× dependiendo de la carga de trabajo. En reposo, los sistemas NVIDIA reducen su consumo, acortando la diferencia.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo correr modelos Apple MLX en Windows o Linux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. MLX es solo para macOS y requiere Apple Silicon. Los modelos GGUF vía llama.cpp funcionan en todas las plataformas. Para uso multiplataforma, Ollama con formato GGUF funciona tanto en Mac como en sistemas NVIDIA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Ollama usa MLX o Metal en Apple Silicon?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama en Apple Silicon usa aceleración GPU Metal por defecto, no MLX. Para optimizaciones específicas de MLX (a menudo más rápidas para ciertos modelos), usa mlx-lm directamente o LM Studio con el backend MLX habilitado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar una eGPU con un Mac para NVIDIA CUDA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. macOS eliminó el soporte de eGPU CUDA en 2019. Las GPU NVIDIA externas no son compatibles con macOS para cómputo CUDA. La alternativa práctica es un sistema Linux separado con una GPU NVIDIA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es mejor para correr Mistral Small?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — NVIDIA es 2× más rápida. Incluso una RTX 3060 12GB (~$280 usada) supera a un Mac Mini M4 ($1,599) en velocidad pura de inferencia con 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el Mac mínimo para correr modelos de 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mac Studio M4 Max con 64GB de memoria unificada (~$3,199). Llama 3 70B Q4_K_M necesita ~38GB — la configuración de 64GB lo aloja con margen cómodo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Apple M5 Max es mejor que RTX 4090 para LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende del tamaño del modelo. Para 7B: RTX 4090 gana (150 tok/s vs 75 tok/s). Para 70B: M5 Max 128GB gana por defecto — RTX 4090 no puede cargar 70B en absoluto. Para entrenamiento: NVIDIA gana por un amplio margen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo se compara el nuevo Apple M5 Ultra con la RTX 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apple anunció el Mac Studio con M5 Ultra el 25 de agosto de 2026 — desde $5,499 por 96GB de memoria unificada (256GB por $9,499). Las primeras cifras muestran ~40–52 tok/s en Llama 3.3 70B, un modelo que los 32GB de VRAM de la RTX 5090 no pueden cargar en absoluto. Para modelos que sí caben en 32GB, la RTX 5090 sigue siendo más rápida por token.',
+            },
+          },
+        ],
     },
       schema: {
       '@context': 'https://schema.org',
@@ -3143,14 +3493,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Posso rodar modelos Apple MLX no Windows ou Linux?', a: 'Não. A MLX é apenas para macOS e exige Apple Silicon. Os modelos GGUF via llama.cpp funcionam em todas as plataformas. Para uso multiplataforma, o Ollama com formato GGUF funciona tanto no Mac quanto em sistemas NVIDIA.' },
-          { q: 'O Ollama usa MLX ou Metal no Apple Silicon?', a: 'O Ollama no Apple Silicon usa aceleração GPU Metal por padrão, não MLX. Para otimizações específicas de MLX (muitas vezes mais rápidas para certos modelos), use o mlx-lm diretamente ou o LM Studio com o backend MLX habilitado.' },
-          { q: 'Posso usar uma eGPU com um Mac para NVIDIA CUDA?', a: 'Não. O macOS removeu o suporte a eGPU CUDA em 2019. GPUs NVIDIA externas não são compatíveis com o macOS para processamento CUDA. A alternativa prática é um sistema Linux separado com uma GPU NVIDIA.' },
-          { q: 'Qual é melhor para rodar o Mistral Small?', a: 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — a NVIDIA é 2× mais rápida. Até uma RTX 3060 12GB (~$280 usada) supera um Mac Mini M4 ($1,599) em pura velocidade de inferência com 7B.' },
-          { q: 'Qual é o Mac mínimo para rodar modelos de 70B?', a: 'Mac Studio M4 Max com 64GB de memória unificada (~$3,199). O Llama 3 70B Q4_K_M precisa de ~38GB — a configuração de 64GB oferece margem suficiente para os pesos mais o contexto.' },
-          { q: 'O Apple M5 Max é melhor que a RTX 4090 para LLMs locais?', a: 'Depende do tamanho do modelo. Para 7B: a RTX 4090 vence (150 tok/s vs 75 tok/s). Para 70B: o M5 Max 128GB vence por padrão — a RTX 4090 não consegue carregar 70B de jeito nenhum. Para treinamento: a NVIDIA vence por uma ampla margem.' },
-          { q: 'Como o novo Apple M5 Ultra se compara à RTX 5090?', a: 'A Apple anunciou o Mac Studio com M5 Ultra em 25 de agosto de 2026 — a partir de $5.499 por 96GB de memória unificada (256GB por $9.499). Números iniciais mostram ~40–52 tok/s no Llama 3.3 70B, um modelo que os 32GB de VRAM da RTX 5090 não conseguem carregar de jeito nenhum. Para modelos que cabem em 32GB, a RTX 5090 ainda é mais rápida por token.' },
-        ],
+            { q: 'Posso rodar modelos Apple MLX no Windows ou Linux?', a: 'Não. A MLX é apenas para macOS e exige Apple Silicon. Os modelos GGUF via llama.cpp funcionam em todas as plataformas. Para uso multiplataforma, o Ollama com formato GGUF funciona tanto no Mac quanto em sistemas NVIDIA.' },
+            { q: 'O Ollama usa MLX ou Metal no Apple Silicon?', a: 'O Ollama no Apple Silicon usa aceleração GPU Metal por padrão, não MLX. Para otimizações específicas de MLX (muitas vezes mais rápidas para certos modelos), use o mlx-lm diretamente ou o LM Studio com o backend MLX habilitado.' },
+            { q: 'Posso usar uma eGPU com um Mac para NVIDIA CUDA?', a: 'Não. O macOS removeu o suporte a eGPU CUDA em 2019. GPUs NVIDIA externas não são compatíveis com o macOS para processamento CUDA. A alternativa prática é um sistema Linux separado com uma GPU NVIDIA.' },
+            { q: 'Qual é melhor para rodar o Mistral Small?', a: 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — a NVIDIA é 2× mais rápida. Até uma RTX 3060 12GB (~$280 usada) supera um Mac Mini M4 ($1,599) em pura velocidade de inferência com 7B.' },
+            { q: 'Qual é o Mac mínimo para rodar modelos de 70B?', a: 'Mac Studio M4 Max com 64GB de memória unificada (~$3,199). O Llama 3 70B Q4_K_M precisa de ~38GB — a configuração de 64GB oferece margem suficiente para os pesos mais o contexto.' },
+            { q: 'O Apple M5 Max é melhor que a RTX 4090 para LLMs locais?', a: 'Depende do tamanho do modelo. Para 7B: a RTX 4090 vence (150 tok/s vs 75 tok/s). Para 70B: o M5 Max 128GB vence por padrão — a RTX 4090 não consegue carregar 70B de jeito nenhum. Para treinamento: a NVIDIA vence por uma ampla margem.' },
+            { q: 'Como o novo Apple M5 Ultra se compara à RTX 5090?', a: 'A Apple anunciou o Mac Studio com M5 Ultra em 25 de agosto de 2026 — a partir de $5.499 por 96GB de memória unificada (256GB por $9.499). Números iniciais mostram ~40–52 tok/s no Llama 3.3 70B, um modelo que os 32GB de VRAM da RTX 5090 não conseguem carregar de jeito nenhum. Para modelos que cabem em 32GB, a RTX 5090 ainda é mais rápida por token.' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -3179,12 +3529,111 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'Posso rodar modelos Apple MLX no Windows ou Linux?', acceptedAnswer: { '@type': 'Answer', text: 'Não. A MLX é apenas para macOS e exige Apple Silicon. Os modelos GGUF via llama.cpp funcionam em todas as plataformas. Para uso multiplataforma, o Ollama com formato GGUF funciona tanto no Mac quanto em sistemas NVIDIA.' } },
-        { '@type': 'Question', name: 'O Apple M5 Max é melhor que a RTX 4090 para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Depende do tamanho do modelo. Para 7B: a RTX 4090 vence (150 tok/s vs 75 tok/s). Para 70B: o M5 Max 128GB vence por padrão — a RTX 4090 não consegue carregar 70B de jeito nenhum. Para treinamento: a NVIDIA vence por uma ampla margem.' } },
-        { '@type': 'Question', name: 'Como o novo Apple M5 Ultra se compara à RTX 5090?', acceptedAnswer: { '@type': 'Answer', text: 'A Apple anunciou o Mac Studio com M5 Ultra em 25 de agosto de 2026 — a partir de $5.499 por 96GB de memória unificada (256GB por $9.499). Números iniciais mostram ~40–52 tok/s no Llama 3.3 70B, um modelo que os 32GB de VRAM da RTX 5090 não conseguem carregar.' } },
-        { '@type': 'Question', name: 'Qual é o Mac mínimo para rodar modelos de 70B?', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M4 Max com 64GB de memória unificada (~$3,199). O Llama 3 70B Q4_K_M precisa de ~38GB — a configuração de 64GB oferece margem suficiente para os pesos mais o contexto.' } },
-        { '@type': 'Question', name: 'O Ollama usa MLX no Apple Silicon?', acceptedAnswer: { '@type': 'Answer', text: 'O Ollama no Apple Silicon usa aceleração GPU Metal por padrão, não MLX. Para desempenho específico de MLX, use o mlx-lm diretamente ou o LM Studio com o backend MLX habilitado.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'O Apple Silicon consegue igualar a largura de banda de memória da NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não — a RTX 4090 tem 1.008 GB/s vs o Apple M5 Max a 614 GB/s. A Apple compensa com capacidade de memória muito maior (128GB vs 24GB). Para modelos pequenos em que a VRAM é suficiente, a NVIDIA vence em velocidade. Para modelos grandes que excedem a VRAM, a Apple vence em capacidade.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '18 tok/s no Llama 3 70B é rápido o suficiente para uso interativo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, para a maioria das tarefas. 18 tok/s geram uma resposta de 500 palavras em cerca de 20–25 segundos. O uso interativo com qualidade de 70B que antes exigia um servidor de mais de $40,000 agora está disponível em um Mac Studio M4 Max de ~$3,199.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Por que a NVIDIA é mais rápida em modelos pequenos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A largura de banda GDDR7/GDDR6X da NVIDIA (1.008–1.792 GB/s) supera a do Apple M5 Max (614 GB/s). A inferência com LLMs é limitada pela largura de banda de memória — maior largura de banda roda modelos pequenos mais rápido. A vantagem da Apple é a capacidade de memória, não a largura de banda.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar o Ollama tanto na Apple quanto na NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. O Ollama roda no Apple Silicon (backend Metal) e na NVIDIA (CUDA). Os mesmos comandos funcionam em ambos. Os arquivos de modelo são compatíveis entre as plataformas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O llama.cpp roda no Apple Silicon?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim — o llama.cpp tem aceleração GPU Metal nativa no Apple Silicon. Para otimizações específicas de MLX, use o mlx-lm ou o LM Studio com o backend MLX habilitado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A Apple MLX é 10× mais eficiente que a NVIDIA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aproximadamente sim, sob inferência contínua. O Mac Studio M4 Max consome 25–35W vs um sistema RTX 4090 a 400–500W. A razão de eficiência é de 8–15× dependendo da carga de trabalho. Em repouso, os sistemas NVIDIA reduzem o consumo, diminuindo a diferença.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar modelos Apple MLX no Windows ou Linux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. A MLX é apenas para macOS e exige Apple Silicon. Os modelos GGUF via llama.cpp funcionam em todas as plataformas. Para uso multiplataforma, o Ollama com formato GGUF funciona tanto no Mac quanto em sistemas NVIDIA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Ollama usa MLX ou Metal no Apple Silicon?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Ollama no Apple Silicon usa aceleração GPU Metal por padrão, não MLX. Para otimizações específicas de MLX (muitas vezes mais rápidas para certos modelos), use o mlx-lm diretamente ou o LM Studio com o backend MLX habilitado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar uma eGPU com um Mac para NVIDIA CUDA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. O macOS removeu o suporte a eGPU CUDA em 2019. GPUs NVIDIA externas não são compatíveis com o macOS para processamento CUDA. A alternativa prática é um sistema Linux separado com uma GPU NVIDIA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é melhor para rodar o Mistral Small?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIA RTX 4090 a ~150 tok/s vs Apple M5 Max a ~75 tok/s — a NVIDIA é 2× mais rápida. Até uma RTX 3060 12GB (~$280 usada) supera um Mac Mini M4 ($1,599) em pura velocidade de inferência com 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o Mac mínimo para rodar modelos de 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mac Studio M4 Max com 64GB de memória unificada (~$3,199). O Llama 3 70B Q4_K_M precisa de ~38GB — a configuração de 64GB oferece margem suficiente para os pesos mais o contexto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Apple M5 Max é melhor que a RTX 4090 para LLMs locais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende do tamanho do modelo. Para 7B: a RTX 4090 vence (150 tok/s vs 75 tok/s). Para 70B: o M5 Max 128GB vence por padrão — a RTX 4090 não consegue carregar 70B de jeito nenhum. Para treinamento: a NVIDIA vence por uma ampla margem.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como o novo Apple M5 Ultra se compara à RTX 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A Apple anunciou o Mac Studio com M5 Ultra em 25 de agosto de 2026 — a partir de $5.499 por 96GB de memória unificada (256GB por $9.499). Números iniciais mostram ~40–52 tok/s no Llama 3.3 70B, um modelo que os 32GB de VRAM da RTX 5090 não conseguem carregar de jeito nenhum. Para modelos que cabem em 32GB, a RTX 5090 ainda é mais rápida por token.',
+            },
+          },
+        ],
     },
       schema: {
       '@context': 'https://schema.org',
@@ -3611,14 +4060,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل يمكنني تشغيل نماذج Apple MLX على Windows أو Linux؟', a: 'لا. MLX مخصصة لـmacOS فقط وتتطلب Apple Silicon. نماذج GGUF عبر llama.cpp تعمل على جميع المنصات. للاستخدام متعدد المنصات يعمل Ollama بتنسيق GGUF على كل من Mac وأنظمة NVIDIA.' },
-          { q: 'هل يستخدم Ollama ذاكرة MLX أو Metal على Apple Silicon؟', a: 'Ollama على Apple Silicon يستخدم تسريع GPU Metal افتراضيًا لا MLX. للحصول على تحسينات MLX الخاصة (الأسرع أحيانًا لبعض النماذج)، استخدم mlx-lm مباشرةً أو LM Studio مع تفعيل الواجهة الخلفية MLX.' },
-          { q: 'هل يمكنني استخدام eGPU مع Mac لـNVIDIA CUDA؟', a: 'لا. أزال macOS دعم eGPU لـCUDA في 2019. لوحات NVIDIA الخارجية غير متوافقة مع macOS للحساب عبر CUDA. البديل العملي هو نظام Linux منفصل بلوحة NVIDIA.' },
-          { q: 'أيهما أفضل لتشغيل Mistral Small؟', a: 'NVIDIA RTX 4090 بـ~150 رمز/ثانية مقابل Apple M5 Max بـ~75 رمز/ثانية — NVIDIA أسرع بمرتين. حتى RTX 3060 12GB (~280 دولارًا مستعملة) تفوق Mac Mini M4 (1,599 دولارًا) في سرعة الاستنتاج الخام مع نماذج 7B.' },
-          { q: 'ما الحد الأدنى من Mac لتشغيل نماذج 70B؟', a: 'Mac Studio M4 Max بذاكرة موحّدة 64GB (~3,199 دولارًا). Llama 3 70B Q4_K_M يحتاج ~38GB — تهيئة 64GB توفر هامشًا مريحًا للأوزان والسياق.' },
-          { q: 'هل Apple M5 Max أفضل من RTX 4090 لنماذج اللغة الكبيرة المحلية؟', a: 'يعتمد على حجم النموذج. لنماذج 7B: RTX 4090 تفوز (150 مقابل 75 رمز/ثانية). لنماذج 70B: M5 Max 128GB تفوز بالضرورة — RTX 4090 لا تستطيع تحميل 70B إطلاقًا. للتدريب: NVIDIA تفوز بفارق واسع.' },
-          { q: 'كيف يقارن Apple M5 Ultra الجديد بـRTX 5090؟', a: 'أعلنت Apple عن Mac Studio بمعالج M5 Ultra في 25 أغسطس 2026 — بسعر يبدأ من 5,499 دولارًا مقابل 96GB من الذاكرة الموحّدة (256GB بسعر 9,499 دولارًا). تُظهر الأرقام الأولية نحو 40 إلى 52 رمز/ثانية على Llama 3.3 70B، وهو نموذج لا تستطيع ذاكرة RTX 5090 البالغة 32GB تحميله إطلاقًا. بالنسبة للنماذج التي تناسب 32GB، تبقى RTX 5090 أسرع لكل رمز.' },
-        ],
+            { q: 'هل يمكنني تشغيل نماذج Apple MLX على Windows أو Linux؟', a: 'لا. MLX مخصصة لـmacOS فقط وتتطلب Apple Silicon. نماذج GGUF عبر llama.cpp تعمل على جميع المنصات. للاستخدام متعدد المنصات يعمل Ollama بتنسيق GGUF على كل من Mac وأنظمة NVIDIA.' },
+            { q: 'هل يستخدم Ollama ذاكرة MLX أو Metal على Apple Silicon؟', a: 'Ollama على Apple Silicon يستخدم تسريع GPU Metal افتراضيًا لا MLX. للحصول على تحسينات MLX الخاصة (الأسرع أحيانًا لبعض النماذج)، استخدم mlx-lm مباشرةً أو LM Studio مع تفعيل الواجهة الخلفية MLX.' },
+            { q: 'هل يمكنني استخدام eGPU مع Mac لـNVIDIA CUDA؟', a: 'لا. أزال macOS دعم eGPU لـCUDA في 2019. لوحات NVIDIA الخارجية غير متوافقة مع macOS للحساب عبر CUDA. البديل العملي هو نظام Linux منفصل بلوحة NVIDIA.' },
+            { q: 'أيهما أفضل لتشغيل Mistral Small؟', a: 'NVIDIA RTX 4090 بـ~150 رمز/ثانية مقابل Apple M5 Max بـ~75 رمز/ثانية — NVIDIA أسرع بمرتين. حتى RTX 3060 12GB (~280 دولارًا مستعملة) تفوق Mac Mini M4 (1,599 دولارًا) في سرعة الاستنتاج الخام مع نماذج 7B.' },
+            { q: 'ما الحد الأدنى من Mac لتشغيل نماذج 70B؟', a: 'Mac Studio M4 Max بذاكرة موحّدة 64GB (~3,199 دولارًا). Llama 3 70B Q4_K_M يحتاج ~38GB — تهيئة 64GB توفر هامشًا مريحًا للأوزان والسياق.' },
+            { q: 'هل Apple M5 Max أفضل من RTX 4090 لنماذج اللغة الكبيرة المحلية؟', a: 'يعتمد على حجم النموذج. لنماذج 7B: RTX 4090 تفوز (150 مقابل 75 رمز/ثانية). لنماذج 70B: M5 Max 128GB تفوز بالضرورة — RTX 4090 لا تستطيع تحميل 70B إطلاقًا. للتدريب: NVIDIA تفوز بفارق واسع.' },
+            { q: 'كيف يقارن Apple M5 Ultra الجديد بـRTX 5090؟', a: 'أعلنت Apple عن Mac Studio بمعالج M5 Ultra في 25 أغسطس 2026 — بسعر يبدأ من 5,499 دولارًا مقابل 96GB من الذاكرة الموحّدة (256GB بسعر 9,499 دولارًا). تُظهر الأرقام الأولية نحو 40 إلى 52 رمز/ثانية على Llama 3.3 70B، وهو نموذج لا تستطيع ذاكرة RTX 5090 البالغة 32GB تحميله إطلاقًا. بالنسبة للنماذج التي تناسب 32GB، تبقى RTX 5090 أسرع لكل رمز.' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -3647,12 +4096,111 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'هل يمكنني تشغيل نماذج Apple MLX على Windows أو Linux؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. MLX مخصصة لـmacOS فقط وتتطلب Apple Silicon. نماذج GGUF عبر llama.cpp تعمل على جميع المنصات. للاستخدام متعدد المنصات يعمل Ollama بتنسيق GGUF على كل من Mac وأنظمة NVIDIA.' } },
-        { '@type': 'Question', name: 'هل Apple M5 Max أفضل من RTX 4090 لنماذج اللغة الكبيرة المحلية؟', acceptedAnswer: { '@type': 'Answer', text: 'يعتمد على حجم النموذج. لنماذج 7B: RTX 4090 تفوز (150 مقابل 75 رمز/ثانية). لنماذج 70B: M5 Max 128GB تفوز بالضرورة — RTX 4090 لا تستطيع تحميل 70B إطلاقًا. للتدريب: NVIDIA تفوز بفارق واسع.' } },
-        { '@type': 'Question', name: 'كيف يقارن Apple M5 Ultra الجديد بـRTX 5090؟', acceptedAnswer: { '@type': 'Answer', text: 'أعلنت Apple عن Mac Studio بمعالج M5 Ultra في 25 أغسطس 2026 — بسعر يبدأ من 5,499 دولارًا مقابل 96GB من الذاكرة الموحّدة (256GB بسعر 9,499 دولارًا). تُظهر الأرقام الأولية نحو 40 إلى 52 رمز/ثانية على Llama 3.3 70B، وهو نموذج لا تستطيع ذاكرة RTX 5090 البالغة 32GB تحميله.' } },
-        { '@type': 'Question', name: 'ما الحد الأدنى من Mac لتشغيل نماذج 70B؟', acceptedAnswer: { '@type': 'Answer', text: 'Mac Studio M4 Max بذاكرة موحّدة 64GB (~3,199 دولارًا). Llama 3 70B Q4_K_M يحتاج ~38GB — تهيئة 64GB توفر هامشًا مريحًا للأوزان والسياق.' } },
-        { '@type': 'Question', name: 'هل يستخدم Ollama ذاكرة MLX على Apple Silicon؟', acceptedAnswer: { '@type': 'Answer', text: 'Ollama على Apple Silicon يستخدم تسريع GPU Metal افتراضيًا لا MLX. للحصول على أداء MLX الخاص، استخدم mlx-lm مباشرةً أو LM Studio مع تفعيل الواجهة الخلفية MLX.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يستطيع Apple Silicon مجاراة عرض نطاق ذاكرة NVIDIA؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا — RTX 4090 تملك 1,008 GB/s مقابل Apple M5 Max بـ614 GB/s. تعوّض Apple ذلك بسعة ذاكرة أكبر بكثير (128GB مقابل 24GB). للنماذج الصغيرة حيث تكفي VRAM تفوز NVIDIA في السرعة. للنماذج الكبيرة التي تتجاوز VRAM تفوز Apple في السعة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل 18 رمز/ثانية في Llama 3 70B كافٍ للاستخدام التفاعلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم في معظم المهام. 18 رمز/ثانية تُنتج ردًا من 500 كلمة في نحو 20–25 ثانية. الاستخدام التفاعلي بجودة 70B الذي كان يتطلب خادمًا بأكثر من 40,000 دولار بات متاحًا على Mac Studio M4 Max بـ~3,199 دولارًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا NVIDIA أسرع مع النماذج الصغيرة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'عرض نطاق GDDR7/GDDR6X لـNVIDIA (1,008–1,792 GB/s) يتفوق على Apple M5 Max (614 GB/s). الاستنتاج في نماذج اللغة الكبيرة محدود بعرض نطاق الذاكرة — عرض نطاق أكبر يشغّل النماذج الصغيرة أسرع. ميزة Apple في السعة لا في عرض النطاق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام Ollama على كل من Apple وNVIDIA؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يعمل Ollama على Apple Silicon (واجهة Metal الخلفية) وNVIDIA (CUDA). نفس الأوامر تعمل على كلتا المنصتين. ملفات النماذج متوافقة عبر المنصات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل llama.cpp على Apple Silicon؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — llama.cpp يدعم تسريع GPU Metal أصلًا على Apple Silicon. للتحسينات الخاصة بـMLX استخدم mlx-lm أو LM Studio مع تفعيل واجهة MLX الخلفية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Apple MLX أكفأ بمقدار 10 أضعاف من NVIDIA؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تقريبًا نعم تحت الاستنتاج المستمر. Mac Studio M4 Max يستهلك 25–35 واطًا مقابل نظام RTX 4090 بـ400–500 واط. نسبة الكفاءة 8–15× حسب عبء العمل. في وضع الخمول تنخفض أنظمة NVIDIA الاستهلاك مما يُقلّص الفارق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نماذج Apple MLX على Windows أو Linux؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. MLX مخصصة لـmacOS فقط وتتطلب Apple Silicon. نماذج GGUF عبر llama.cpp تعمل على جميع المنصات. للاستخدام متعدد المنصات يعمل Ollama بتنسيق GGUF على كل من Mac وأنظمة NVIDIA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يستخدم Ollama ذاكرة MLX أو Metal على Apple Silicon؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama على Apple Silicon يستخدم تسريع GPU Metal افتراضيًا لا MLX. للحصول على تحسينات MLX الخاصة (الأسرع أحيانًا لبعض النماذج)، استخدم mlx-lm مباشرةً أو LM Studio مع تفعيل الواجهة الخلفية MLX.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام eGPU مع Mac لـNVIDIA CUDA؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. أزال macOS دعم eGPU لـCUDA في 2019. لوحات NVIDIA الخارجية غير متوافقة مع macOS للحساب عبر CUDA. البديل العملي هو نظام Linux منفصل بلوحة NVIDIA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أيهما أفضل لتشغيل Mistral Small؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIA RTX 4090 بـ~150 رمز/ثانية مقابل Apple M5 Max بـ~75 رمز/ثانية — NVIDIA أسرع بمرتين. حتى RTX 3060 12GB (~280 دولارًا مستعملة) تفوق Mac Mini M4 (1,599 دولارًا) في سرعة الاستنتاج الخام مع نماذج 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الحد الأدنى من Mac لتشغيل نماذج 70B؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mac Studio M4 Max بذاكرة موحّدة 64GB (~3,199 دولارًا). Llama 3 70B Q4_K_M يحتاج ~38GB — تهيئة 64GB توفر هامشًا مريحًا للأوزان والسياق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Apple M5 Max أفضل من RTX 4090 لنماذج اللغة الكبيرة المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد على حجم النموذج. لنماذج 7B: RTX 4090 تفوز (150 مقابل 75 رمز/ثانية). لنماذج 70B: M5 Max 128GB تفوز بالضرورة — RTX 4090 لا تستطيع تحميل 70B إطلاقًا. للتدريب: NVIDIA تفوز بفارق واسع.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف يقارن Apple M5 Ultra الجديد بـRTX 5090؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أعلنت Apple عن Mac Studio بمعالج M5 Ultra في 25 أغسطس 2026 — بسعر يبدأ من 5,499 دولارًا مقابل 96GB من الذاكرة الموحّدة (256GB بسعر 9,499 دولارًا). تُظهر الأرقام الأولية نحو 40 إلى 52 رمز/ثانية على Llama 3.3 70B، وهو نموذج لا تستطيع ذاكرة RTX 5090 البالغة 32GB تحميله إطلاقًا. بالنسبة للنماذج التي تناسب 32GB، تبقى RTX 5090 أسرع لكل رمز.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',

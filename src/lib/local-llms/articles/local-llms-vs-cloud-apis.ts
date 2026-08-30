@@ -1097,46 +1097,16 @@ schema: {
           id: 'common-questions',
           title: 'Häufige Fragen zu lokalen LLMs vs. Cloud-APIs',
           faqs: [
-            {
-              q: 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?',
-              a: 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden. Der Wechsel zurück zur Cloud erfordert nur das Ändern der Basis-URL und des API-Schlüssels.',
-            },
-            {
-              q: 'Trainieren Cloud-API-Anbieter mit meinen Prompts?',
-              a: 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter (OpenAI, Anthropic, Google) API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers und Consumer-Produkte verwenden Eingaben in der Regel zur Verbesserung. Überprüfen Sie immer die aktuelle Datenschutzrichtlinie für den spezifischen Tier und das Produkt, das Sie verwenden.',
-            },
-            {
-              q: 'Ist ein lokales 70B-Modell besser als GPT-5.6 Luna?',
-              a: 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen3 72B erzielen bessere Ergebnisse als GPT-5.6 Luna bei Standard-Denk- und Codieraufgaben. Allerdings benötigen 70B-Modelle 40\u201348 GB RAM, was für die meisten Consumer-Hardware unerreichbar ist. Für die praktische lokale Nutzung ist der 7B\u201313B-Bereich üblicher.',
-            },
-            {
-              q: 'Welche Hardware benötige ich, um ein 7B-Modell lokal auszuführen?',
-              a: 'Eine moderne Laptop-CPU kann Llama 3.2 3B mit 10\u201320 Tokens/Sek. ausführen, aber eine GPU ist für die praktische Nutzung unerlässlich. Für 7B-Modelle: RTX 4070 Ti (12 GB, ~80 Tokens/Sek.), RTX 4090 (24 GB, ~130 Tokens/Sek.) oder Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Mit Q4-Quantisierung sinken die VRAM-Anforderungen erheblich.',
-            },
-            {
-              q: 'Sind Cloud-APIs DSGVO-konform?',
-              a: 'Die meisten Anbieter (OpenAI, Anthropic, Google) bieten DSGVO-konforme Tiers an, aber Sie müssen sich anmelden und Ihren Tier überprüfen. Enterprise-Pläne bieten strengere Datenisolierung. Für regulierte Gesundheits-, Finanz- oder Rechtsdaten bieten lokale LLMs die stärkste Garantie, indem sie Daten vollständig auf dem Gerät halten.',
-            },
-            {
-              q: 'Was ist das beste lokale Modell für Einsteiger?',
-              a: 'Llama 3.2 3B oder 8B ist der beste Einstiegspunkt: klein (3\u20138 GB VRAM), schnell (~50\u201380 Tokens/Sek. auf GPU) und gute Qualität für Zusammenfassungen und Fragen. Download über Ollama oder LM Studio. Beide haben integrierte Chat-Oberflächen.',
-            },
-            {
-              q: 'Wie reduziere ich Cloud-API-Kosten?',
-              a: 'Verwenden Sie günstigere Modelle für einfache Aufgaben (GPT-5.6 Luna: $0,15 pro 1\u00a0Mio. Tokens vs. GPT-5.6: $2,50). Bündeln Sie Anfragen. Nutzen Sie Prompt-Caching, wo unterstützt. Für hochvolumige Nutzung bieten Batch-Processing-APIs 50\u00a0% Rabatt. Oder wechseln Sie für häufige Workloads zu lokalen Modellen.',
-            },
-            {
-              q: 'Kann ich lokale und Cloud-Modelle parallel nutzen?',
-              a: 'Ja. Tools wie PromptQuorum ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, Ergebnisse nebeneinander zu vergleichen und Aufgaben an das beste Modell für jede Aufgabe weiterzuleiten. Dies kombiniert lokalen Datenschutz mit Cloud-Qualität nach Bedarf.',
-            },
-            {
-              q: 'Muss ich bei der Verwendung von Cloud-APIs die DSGVO beachten?',
-              a: 'Ja. Wenn Sie personenbezogene Daten von EU-Bürgern an einen Cloud-KI-Anbieter senden, sind Sie nach DSGVO Artikel 28 verpflichtet, einen Datenverarbeitungsvertrag (DPA) abzuschließen. Der Anbieter wird zum Auftragsverarbeiter. Für OpenAI, Anthropic oder Google Cloud AI müssen Sie deren DPA unterzeichnen und sicherstellen, dass der Verarbeitungsstandort den Anforderungen von DSGVO Artikel 46 entspricht. Lokale LLMs eliminieren diese Anforderung vollständig, da keine Daten das Gerät verlassen.',
-            },
-            {
-              q: 'Sind lokale LLMs für den deutschen Mittelstand geeignet?',
-              a: 'Ja. Lokale LLMs bieten vollständige Datensouveränität gemäß BSI-Grundschutz-Kompendium-Empfehlungen, keine laufenden API-Kosten und keine Abhängigkeit von US-amerikanischen Cloud-Anbietern. Das BSI-Grundschutz-Kompendium empfiehlt für Unternehmen mit sensiblen Daten die On-Premises-Verarbeitung. Für den Einstieg empfiehlt sich Ollama mit Llama 3.1 8B oder Mistral Small \u2014 beide laufen auf einem handelsüblichen Büro-PC mit NVIDIA RTX-GPU.',
-            },
+            { q: 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?', a: 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden. Der Wechsel zurück zur Cloud erfordert nur das Ändern der Basis-URL und des API-Schlüssels.' },
+            { q: 'Trainieren Cloud-API-Anbieter mit meinen Prompts?', a: 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter (OpenAI, Anthropic, Google) API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers und Consumer-Produkte verwenden Eingaben in der Regel zur Verbesserung. Überprüfen Sie immer die aktuelle Datenschutzrichtlinie für den spezifischen Tier und das Produkt, das Sie verwenden.' },
+            { q: 'Ist ein lokales 70B-Modell besser als GPT-5.6 Luna?', a: 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen3 72B erzielen bessere Ergebnisse als GPT-5.6 Luna bei Standard-Denk- und Codieraufgaben. Allerdings benötigen 70B-Modelle 40\u201348 GB RAM, was für die meisten Consumer-Hardware unerreichbar ist. Für die praktische lokale Nutzung ist der 7B\u201313B-Bereich üblicher.' },
+            { q: 'Welche Hardware benötige ich, um ein 7B-Modell lokal auszuführen?', a: 'Eine moderne Laptop-CPU kann Llama 3.2 3B mit 10\u201320 Tokens/Sek. ausführen, aber eine GPU ist für die praktische Nutzung unerlässlich. Für 7B-Modelle: RTX 4070 Ti (12 GB, ~80 Tokens/Sek.), RTX 4090 (24 GB, ~130 Tokens/Sek.) oder Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Mit Q4-Quantisierung sinken die VRAM-Anforderungen erheblich.' },
+            { q: 'Sind Cloud-APIs DSGVO-konform?', a: 'Die meisten Anbieter (OpenAI, Anthropic, Google) bieten DSGVO-konforme Tiers an, aber Sie müssen sich anmelden und Ihren Tier überprüfen. Enterprise-Pläne bieten strengere Datenisolierung. Für regulierte Gesundheits-, Finanz- oder Rechtsdaten bieten lokale LLMs die stärkste Garantie, indem sie Daten vollständig auf dem Gerät halten.' },
+            { q: 'Was ist das beste lokale Modell für Einsteiger?', a: 'Llama 3.2 3B oder 8B ist der beste Einstiegspunkt: klein (3\u20138 GB VRAM), schnell (~50\u201380 Tokens/Sek. auf GPU) und gute Qualität für Zusammenfassungen und Fragen. Download über Ollama oder LM Studio. Beide haben integrierte Chat-Oberflächen.' },
+            { q: 'Wie reduziere ich Cloud-API-Kosten?', a: 'Verwenden Sie günstigere Modelle für einfache Aufgaben (GPT-5.6 Luna: $0,15 pro 1\u00a0Mio. Tokens vs. GPT-5.6: $2,50). Bündeln Sie Anfragen. Nutzen Sie Prompt-Caching, wo unterstützt. Für hochvolumige Nutzung bieten Batch-Processing-APIs 50\u00a0% Rabatt. Oder wechseln Sie für häufige Workloads zu lokalen Modellen.' },
+            { q: 'Kann ich lokale und Cloud-Modelle parallel nutzen?', a: 'Ja. Tools wie PromptQuorum ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, Ergebnisse nebeneinander zu vergleichen und Aufgaben an das beste Modell für jede Aufgabe weiterzuleiten. Dies kombiniert lokalen Datenschutz mit Cloud-Qualität nach Bedarf.' },
+            { q: 'Muss ich bei der Verwendung von Cloud-APIs die DSGVO beachten?', a: 'Ja. Wenn Sie personenbezogene Daten von EU-Bürgern an einen Cloud-KI-Anbieter senden, sind Sie nach DSGVO Artikel 28 verpflichtet, einen Datenverarbeitungsvertrag (DPA) abzuschließen. Der Anbieter wird zum Auftragsverarbeiter. Für OpenAI, Anthropic oder Google Cloud AI müssen Sie deren DPA unterzeichnen und sicherstellen, dass der Verarbeitungsstandort den Anforderungen von DSGVO Artikel 46 entspricht. Lokale LLMs eliminieren diese Anforderung vollständig, da keine Daten das Gerät verlassen.' },
+            { q: 'Sind lokale LLMs für den deutschen Mittelstand geeignet?', a: 'Ja. Lokale LLMs bieten vollständige Datensouveränität gemäß BSI-Grundschutz-Kompendium-Empfehlungen, keine laufenden API-Kosten und keine Abhängigkeit von US-amerikanischen Cloud-Anbietern. Das BSI-Grundschutz-Kompendium empfiehlt für Unternehmen mit sensiblen Daten die On-Premises-Verarbeitung. Für den Einstieg empfiehlt sich Ollama mit Llama 3.1 8B oder Mistral Small \u2014 beide laufen auf einem handelsüblichen Büro-PC mit NVIDIA RTX-GPU.' },
           ],
         },
       },
@@ -1180,16 +1150,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden.' } },
-          { '@type': 'Question', 'name': 'Trainieren Cloud-API-Anbieter mit meinen Prompts?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers verwenden Eingaben in der Regel zur Verbesserung.' } },
-          { '@type': 'Question', 'name': 'Ist ein lokales 70B-Modell besser als GPT-5.6 Luna?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen3 72B erzielen bessere Ergebnisse. 70B-Modelle benötigen jedoch 40\u201348 GB RAM, was für Consumer-Hardware meist unerreichbar ist.' } },
-          { '@type': 'Question', 'name': 'Welche Hardware benötige ich für ein 7B-Modell?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für 7B-Modelle: RTX 4070 Ti (12 GB, ~80 Tokens/Sek.), RTX 4090 (24 GB, ~130 Tokens/Sek.) oder Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Mit Q4-Quantisierung sinken VRAM-Anforderungen auf ca. 4,7 GB.' } },
-          { '@type': 'Question', 'name': 'Sind Cloud-APIs DSGVO-konform?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die meisten Anbieter bieten DSGVO-konforme Tiers an, erfordern aber Opt-in. Für regulierte Daten bieten lokale LLMs die stärkste Garantie \u2014 kein Drittanbieter-Datenverarbeitungsverhältnis nach DSGVO Artikel 28.' } },
-          { '@type': 'Question', 'name': 'Was ist das beste lokale Modell für Einsteiger?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B oder 8B: klein (3\u20138 GB VRAM), schnell (50\u201380 Tokens/Sek. auf GPU), gute Qualität. Download über Ollama: ollama run llama3.2:3b.' } },
-          { '@type': 'Question', 'name': 'Wie reduziere ich Cloud-API-Kosten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Verwenden Sie günstigere Modelle (GPT-5.6 Luna: $0,15/1\u00a0Mio. Tokens vs. GPT-5.6: $2,50). Nutzen Sie Prompt-Caching. Oder wechseln Sie zu lokalen Modellen für häufige Workloads.' } },
-          { '@type': 'Question', 'name': 'Kann ich lokale und Cloud-Modelle parallel nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Tools wie PromptQuorum ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden und Ergebnisse nebeneinander zu vergleichen.' } },
-          { '@type': 'Question', 'name': 'Muss ich bei Cloud-APIs die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Das Senden personenbezogener Daten an einen Cloud-KI-Anbieter erfordert einen Datenverarbeitungsvertrag (DPA) nach DSGVO Artikel 28. Lokale LLMs eliminieren diese Anforderung vollständig.' } },
-          { '@type': 'Question', 'name': 'Sind lokale LLMs für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Lokale LLMs bieten vollständige Datensouveränität gemäß BSI-Grundschutz-Kompendium, keine laufenden API-Kosten und keine Abhängigkeit von US-amerikanischen Cloud-Anbietern.' } },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich in derselben Anwendung zwischen lokalen und Cloud-Modellen wechseln?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Ollama und LM Studio bieten beide eine OpenAI-kompatible REST-API auf localhost an. Jede mit dem OpenAI-SDK erstellte Anwendung kann ihre Basis-URL auf localhost:11434 (Ollama) oder localhost:1234 (LM Studio) zeigen, um ein lokales Modell ohne Codeänderungen zu verwenden. Der Wechsel zurück zur Cloud erfordert nur das Ändern der Basis-URL und des API-Schlüssels.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Trainieren Cloud-API-Anbieter mit meinen Prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für kostenpflichtige API-Tiers schließen die meisten großen Anbieter (OpenAI, Anthropic, Google) API-Kunden standardmäßig von der Trainingsdatensammlung aus. Kostenlose Tiers und Consumer-Produkte verwenden Eingaben in der Regel zur Verbesserung. Überprüfen Sie immer die aktuelle Datenschutzrichtlinie für den spezifischen Tier und das Produkt, das Sie verwenden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist ein lokales 70B-Modell besser als GPT-5.6 Luna?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei den meisten Benchmarks 2026 ja \u2014 Meta Llama 3.3 70B und Qwen3 72B erzielen bessere Ergebnisse als GPT-5.6 Luna bei Standard-Denk- und Codieraufgaben. Allerdings benötigen 70B-Modelle 40\u201348 GB RAM, was für die meisten Consumer-Hardware unerreichbar ist. Für die praktische lokale Nutzung ist der 7B\u201313B-Bereich üblicher.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Hardware benötige ich, um ein 7B-Modell lokal auszuführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Eine moderne Laptop-CPU kann Llama 3.2 3B mit 10\u201320 Tokens/Sek. ausführen, aber eine GPU ist für die praktische Nutzung unerlässlich. Für 7B-Modelle: RTX 4070 Ti (12 GB, ~80 Tokens/Sek.), RTX 4090 (24 GB, ~130 Tokens/Sek.) oder Apple M3 Pro (18 GB, ~60 Tokens/Sek.). Mit Q4-Quantisierung sinken die VRAM-Anforderungen erheblich.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sind Cloud-APIs DSGVO-konform?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die meisten Anbieter (OpenAI, Anthropic, Google) bieten DSGVO-konforme Tiers an, aber Sie müssen sich anmelden und Ihren Tier überprüfen. Enterprise-Pläne bieten strengere Datenisolierung. Für regulierte Gesundheits-, Finanz- oder Rechtsdaten bieten lokale LLMs die stärkste Garantie, indem sie Daten vollständig auf dem Gerät halten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist das beste lokale Modell für Einsteiger?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Llama 3.2 3B oder 8B ist der beste Einstiegspunkt: klein (3\u20138 GB VRAM), schnell (~50\u201380 Tokens/Sek. auf GPU) und gute Qualität für Zusammenfassungen und Fragen. Download über Ollama oder LM Studio. Beide haben integrierte Chat-Oberflächen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie reduziere ich Cloud-API-Kosten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwenden Sie günstigere Modelle für einfache Aufgaben (GPT-5.6 Luna: $0,15 pro 1\u00a0Mio. Tokens vs. GPT-5.6: $2,50). Bündeln Sie Anfragen. Nutzen Sie Prompt-Caching, wo unterstützt. Für hochvolumige Nutzung bieten Batch-Processing-APIs 50\u00a0% Rabatt. Oder wechseln Sie für häufige Workloads zu lokalen Modellen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich lokale und Cloud-Modelle parallel nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Tools wie PromptQuorum ermöglichen es Ihnen, einen Prompt gleichzeitig an Ihr lokales Ollama-Modell und 25+ Cloud-Modelle zu senden, Ergebnisse nebeneinander zu vergleichen und Aufgaben an das beste Modell für jede Aufgabe weiterzuleiten. Dies kombiniert lokalen Datenschutz mit Cloud-Qualität nach Bedarf.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von Cloud-APIs die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Wenn Sie personenbezogene Daten von EU-Bürgern an einen Cloud-KI-Anbieter senden, sind Sie nach DSGVO Artikel 28 verpflichtet, einen Datenverarbeitungsvertrag (DPA) abzuschließen. Der Anbieter wird zum Auftragsverarbeiter. Für OpenAI, Anthropic oder Google Cloud AI müssen Sie deren DPA unterzeichnen und sicherstellen, dass der Verarbeitungsstandort den Anforderungen von DSGVO Artikel 46 entspricht. Lokale LLMs eliminieren diese Anforderung vollständig, da keine Daten das Gerät verlassen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sind lokale LLMs für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Lokale LLMs bieten vollständige Datensouveränität gemäß BSI-Grundschutz-Kompendium-Empfehlungen, keine laufenden API-Kosten und keine Abhängigkeit von US-amerikanischen Cloud-Anbietern. Das BSI-Grundschutz-Kompendium empfiehlt für Unternehmen mit sensiblen Daten die On-Premises-Verarbeitung. Für den Einstieg empfiehlt sich Ollama mit Llama 3.1 8B oder Mistral Small \u2014 beide laufen auf einem handelsüblichen Büro-PC mit NVIDIA RTX-GPU.',
+            },
+          },
         ],
       },
       supplementalSchema: {
@@ -1356,46 +1396,16 @@ schema: {
           id: 'common-questions',
           title: 'Questions fréquentes sur les LLMs locaux vs APIs cloud',
           faqs: [
-            {
-              q: 'Puis-je basculer entre des modèles locaux et cloud dans la même application ?',
-              a: 'Oui. Ollama et LM Studio exposent tous deux une API REST compatible OpenAI sur localhost. Toute application construite sur le SDK OpenAI peut pointer son URL de base vers localhost:11434 (Ollama) ou localhost:1234 (LM Studio) pour utiliser un modèle local sans modifier le code. Revenir au cloud ne nécessite que de changer l\'URL de base et la clé API.',
-            },
-            {
-              q: 'Les fournisseurs d\'APIs cloud s\'entraînent-ils sur mes prompts ?',
-              a: 'Pour les niveaux API payants, la plupart des grands fournisseurs (OpenAI, Anthropic, Google) excluent explicitement les clients API de la collecte de données d\'entraînement par défaut. Les niveaux gratuits et les produits grand public utilisent généralement les entrées pour l\'amélioration. Vérifiez toujours la politique de données actuelle pour le niveau et le produit spécifique que vous utilisez.',
-            },
-            {
-              q: 'Un modèle local 70B est-il meilleur que GPT-5.6 Luna ?',
-              a: 'Sur la plupart des benchmarks en 2026, oui -- Meta Llama 3.3 70B et Qwen3 72B obtiennent de meilleurs scores que GPT-5.6 Luna sur les tâches standard de raisonnement et de codage. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, hors de portée de la plupart du matériel grand public. Pour une utilisation locale pratique, la plage 7B-13B est la plus courante.',
-            },
-            {
-              q: 'De quel matériel ai-je besoin pour exécuter un modèle 7B localement ?',
-              a: 'Un CPU de laptop moderne peut exécuter Llama 3.2 3B à 10-20 tokens/s, mais un GPU est indispensable pour une utilisation pratique. Pour les modèles 7B : RTX 4070 Ti (12 Go, ~80 tokens/s), RTX 4090 (24 Go, ~130 tokens/s), ou Apple M3 Pro (18 Go, ~60 tokens/s). Avec la quantification Q4, les besoins en VRAM diminuent considérablement.',
-            },
-            {
-              q: 'Les APIs cloud sont-elles conformes au RGPD ?',
-              a: 'La plupart des fournisseurs (OpenAI, Anthropic, Google) proposent des niveaux conformes au RGPD, mais vous devez vous inscrire et vérifier votre niveau. Les plans Enterprise offrent une isolation des données plus stricte. Pour les données réglementées en santé, finance ou droit, les LLMs locaux offrent la garantie la plus solide en conservant les données entièrement sur l\'appareil.',
-            },
-            {
-              q: 'Quel est le meilleur modèle local pour les débutants ?',
-              a: 'Llama 3.2 3B ou 8B est le meilleur point de départ : léger (3-8 Go VRAM), rapide (~50-80 tokens/s sur GPU) et bonne qualité pour la synthèse et les questions-réponses. Téléchargement via Ollama ou LM Studio. Les deux disposent d\'interfaces de chat intégrées.',
-            },
-            {
-              q: 'Comment réduire les coûts des APIs cloud ?',
-              a: 'Utilisez des modèles moins chers pour les tâches simples (GPT-5.6 Luna : $0,15 par million de tokens vs. GPT-5.6 : $2,50). Regroupez les requêtes. Mettez en cache les prompts lorsque c\'est possible. Pour les usages à volume élevé, les APIs de traitement par lots offrent 50 % de réduction. Ou passez aux modèles locaux pour les charges fréquentes.',
-            },
-            {
-              q: 'Puis-je utiliser des modèles locaux et cloud en parallèle ?',
-              a: 'Oui. Des outils comme PromptQuorum vous permettent d\'envoyer un prompt simultanément à votre modèle Ollama local et à plus de 25 modèles cloud, de comparer les résultats côte à côte et de router les tâches vers le meilleur modèle pour chaque travail. Cela combine la confidentialité locale avec la qualité cloud selon les besoins.',
-            },
-            {
-              q: 'Quelle est la différence entre les modèles locaux et cloud pour la confidentialité des données professionnelles ?',
-              a: 'Pour les données professionnelles sensibles -- dossiers clients, correspondances légales, données financières -- les LLMs locaux garantissent qu\'aucune donnée ne quitte votre infrastructure. Les APIs cloud, même conformes au RGPD, impliquent un transfert de données vers des serveurs tiers et la signature d\'un accord de traitement des données (DPA) selon l\'article 28 du RGPD. Pour les cabinets juridiques, établissements de santé et entreprises financières en France, l\'inférence locale est souvent la solution la plus prudente sur le plan réglementaire.',
-            },
-            {
-              q: 'Qwen3 fonctionne-t-il bien pour le français ?',
-              a: 'Oui. Qwen3 7B et 14B offrent de bonnes performances en français grâce à un entraînement multilingue étendu. Pour un usage professionnel en français, Llama 3.1 8B et Mistral Small sont également de bons choix avec Ollama. Les modèles 13B et supérieurs produisent généralement une qualité de texte français nettement supérieure aux modèles 7B.',
-            },
+            { q: 'Puis-je basculer entre des modèles locaux et cloud dans la même application ?', a: 'Oui. Ollama et LM Studio exposent tous deux une API REST compatible OpenAI sur localhost. Toute application construite sur le SDK OpenAI peut pointer son URL de base vers localhost:11434 (Ollama) ou localhost:1234 (LM Studio) pour utiliser un modèle local sans modifier le code. Revenir au cloud ne nécessite que de changer l\'URL de base et la clé API.' },
+            { q: 'Les fournisseurs d\'APIs cloud s\'entraînent-ils sur mes prompts ?', a: 'Pour les niveaux API payants, la plupart des grands fournisseurs (OpenAI, Anthropic, Google) excluent explicitement les clients API de la collecte de données d\'entraînement par défaut. Les niveaux gratuits et les produits grand public utilisent généralement les entrées pour l\'amélioration. Vérifiez toujours la politique de données actuelle pour le niveau et le produit spécifique que vous utilisez.' },
+            { q: 'Un modèle local 70B est-il meilleur que GPT-5.6 Luna ?', a: 'Sur la plupart des benchmarks en 2026, oui -- Meta Llama 3.3 70B et Qwen3 72B obtiennent de meilleurs scores que GPT-5.6 Luna sur les tâches standard de raisonnement et de codage. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, hors de portée de la plupart du matériel grand public. Pour une utilisation locale pratique, la plage 7B-13B est la plus courante.' },
+            { q: 'De quel matériel ai-je besoin pour exécuter un modèle 7B localement ?', a: 'Un CPU de laptop moderne peut exécuter Llama 3.2 3B à 10-20 tokens/s, mais un GPU est indispensable pour une utilisation pratique. Pour les modèles 7B : RTX 4070 Ti (12 Go, ~80 tokens/s), RTX 4090 (24 Go, ~130 tokens/s), ou Apple M3 Pro (18 Go, ~60 tokens/s). Avec la quantification Q4, les besoins en VRAM diminuent considérablement.' },
+            { q: 'Les APIs cloud sont-elles conformes au RGPD ?', a: 'La plupart des fournisseurs (OpenAI, Anthropic, Google) proposent des niveaux conformes au RGPD, mais vous devez vous inscrire et vérifier votre niveau. Les plans Enterprise offrent une isolation des données plus stricte. Pour les données réglementées en santé, finance ou droit, les LLMs locaux offrent la garantie la plus solide en conservant les données entièrement sur l\'appareil.' },
+            { q: 'Quel est le meilleur modèle local pour les débutants ?', a: 'Llama 3.2 3B ou 8B est le meilleur point de départ : léger (3-8 Go VRAM), rapide (~50-80 tokens/s sur GPU) et bonne qualité pour la synthèse et les questions-réponses. Téléchargement via Ollama ou LM Studio. Les deux disposent d\'interfaces de chat intégrées.' },
+            { q: 'Comment réduire les coûts des APIs cloud ?', a: 'Utilisez des modèles moins chers pour les tâches simples (GPT-5.6 Luna : $0,15 par million de tokens vs. GPT-5.6 : $2,50). Regroupez les requêtes. Mettez en cache les prompts lorsque c\'est possible. Pour les usages à volume élevé, les APIs de traitement par lots offrent 50 % de réduction. Ou passez aux modèles locaux pour les charges fréquentes.' },
+            { q: 'Puis-je utiliser des modèles locaux et cloud en parallèle ?', a: 'Oui. Des outils comme PromptQuorum vous permettent d\'envoyer un prompt simultanément à votre modèle Ollama local et à plus de 25 modèles cloud, de comparer les résultats côte à côte et de router les tâches vers le meilleur modèle pour chaque travail. Cela combine la confidentialité locale avec la qualité cloud selon les besoins.' },
+            { q: 'Quelle est la différence entre les modèles locaux et cloud pour la confidentialité des données professionnelles ?', a: 'Pour les données professionnelles sensibles -- dossiers clients, correspondances légales, données financières -- les LLMs locaux garantissent qu\'aucune donnée ne quitte votre infrastructure. Les APIs cloud, même conformes au RGPD, impliquent un transfert de données vers des serveurs tiers et la signature d\'un accord de traitement des données (DPA) selon l\'article 28 du RGPD. Pour les cabinets juridiques, établissements de santé et entreprises financières en France, l\'inférence locale est souvent la solution la plus prudente sur le plan réglementaire.' },
+            { q: 'Qwen3 fonctionne-t-il bien pour le français ?', a: 'Oui. Qwen3 7B et 14B offrent de bonnes performances en français grâce à un entraînement multilingue étendu. Pour un usage professionnel en français, Llama 3.1 8B et Mistral Small sont également de bons choix avec Ollama. Les modèles 13B et supérieurs produisent généralement une qualité de texte français nettement supérieure aux modèles 7B.' },
           ],
         },
       },
@@ -1439,16 +1449,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Puis-je basculer entre modèles locaux et cloud dans la même application ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Ollama et LM Studio exposent une API REST compatible OpenAI sur localhost. Toute application construite sur le SDK OpenAI peut pointer vers localhost:11434 (Ollama) ou localhost:1234 (LM Studio) sans modifier le code.' } },
-          { '@type': 'Question', 'name': 'Les fournisseurs d\'APIs cloud s\'entraînent-ils sur mes prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les niveaux API payants, la plupart des grands fournisseurs excluent les clients API de la collecte de données d\'entraînement par défaut. Les niveaux gratuits utilisent généralement les entrées pour l\'amélioration.' } },
-          { '@type': 'Question', 'name': 'Un modèle local 70B est-il meilleur que GPT-5.6 Luna ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sur la plupart des benchmarks 2026, oui -- Meta Llama 3.3 70B et Qwen3 72B surpassent GPT-5.6 Luna. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, inaccessible pour la plupart du matériel grand public.' } },
-          { '@type': 'Question', 'name': 'De quel matériel ai-je besoin pour un modèle 7B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les modèles 7B : RTX 4070 Ti (12 Go, ~80 tokens/s), RTX 4090 (24 Go, ~130 tokens/s), ou Apple M3 Pro (18 Go, ~60 tokens/s). Avec Q4, les besoins en VRAM descendent à ~4,7 Go.' } },
-          { '@type': 'Question', 'name': 'Les APIs cloud sont-elles conformes au RGPD ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La plupart proposent des niveaux conformes au RGPD mais nécessitent une inscription. Les LLMs locaux offrent la garantie la plus solide -- aucune relation de sous-traitant selon l\'article 28 du RGPD.' } },
-          { '@type': 'Question', 'name': 'Quel est le meilleur modèle local pour débutants ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B ou 8B : léger (3-8 Go VRAM), rapide (50-80 tokens/s sur GPU), bonne qualité. Téléchargement via Ollama : ollama run llama3.2:3b.' } },
-          { '@type': 'Question', 'name': 'Comment réduire les coûts des APIs cloud ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilisez des modèles moins chers (GPT-5.6 Luna : $0,15/M tokens vs. GPT-5.6 : $2,50). Regroupez les requêtes. Mettez en cache les prompts. Ou passez aux modèles locaux pour les charges fréquentes.' } },
-          { '@type': 'Question', 'name': 'Puis-je utiliser modèles locaux et cloud en parallèle ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Des outils comme PromptQuorum vous permettent d\'envoyer un prompt à votre modèle Ollama local et à plus de 25 modèles cloud simultanément, et de comparer les résultats côte à côte.' } },
-          { '@type': 'Question', 'name': 'Quelle différence pour la confidentialité des données professionnelles ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour les données professionnelles sensibles, les LLMs locaux garantissent qu\'aucune donnée ne quitte votre infrastructure. Les APIs cloud impliquent un transfert vers des tiers et la signature d\'un DPA selon l\'article 28 du RGPD.' } },
-          { '@type': 'Question', 'name': 'Qwen3 fonctionne-t-il bien pour le français ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Qwen3 7B et 14B offrent de bonnes performances en français. Llama 3.1 8B et Mistral Small sont également de bons choix via Ollama pour les flux professionnels en français.' } },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je basculer entre des modèles locaux et cloud dans la même application ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Ollama et LM Studio exposent tous deux une API REST compatible OpenAI sur localhost. Toute application construite sur le SDK OpenAI peut pointer son URL de base vers localhost:11434 (Ollama) ou localhost:1234 (LM Studio) pour utiliser un modèle local sans modifier le code. Revenir au cloud ne nécessite que de changer l\'URL de base et la clé API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les fournisseurs d\'APIs cloud s\'entraînent-ils sur mes prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour les niveaux API payants, la plupart des grands fournisseurs (OpenAI, Anthropic, Google) excluent explicitement les clients API de la collecte de données d\'entraînement par défaut. Les niveaux gratuits et les produits grand public utilisent généralement les entrées pour l\'amélioration. Vérifiez toujours la politique de données actuelle pour le niveau et le produit spécifique que vous utilisez.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Un modèle local 70B est-il meilleur que GPT-5.6 Luna ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sur la plupart des benchmarks en 2026, oui -- Meta Llama 3.3 70B et Qwen3 72B obtiennent de meilleurs scores que GPT-5.6 Luna sur les tâches standard de raisonnement et de codage. Cependant, les modèles 70B nécessitent 40-48 Go de RAM, hors de portée de la plupart du matériel grand public. Pour une utilisation locale pratique, la plage 7B-13B est la plus courante.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'De quel matériel ai-je besoin pour exécuter un modèle 7B localement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un CPU de laptop moderne peut exécuter Llama 3.2 3B à 10-20 tokens/s, mais un GPU est indispensable pour une utilisation pratique. Pour les modèles 7B : RTX 4070 Ti (12 Go, ~80 tokens/s), RTX 4090 (24 Go, ~130 tokens/s), ou Apple M3 Pro (18 Go, ~60 tokens/s). Avec la quantification Q4, les besoins en VRAM diminuent considérablement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les APIs cloud sont-elles conformes au RGPD ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La plupart des fournisseurs (OpenAI, Anthropic, Google) proposent des niveaux conformes au RGPD, mais vous devez vous inscrire et vérifier votre niveau. Les plans Enterprise offrent une isolation des données plus stricte. Pour les données réglementées en santé, finance ou droit, les LLMs locaux offrent la garantie la plus solide en conservant les données entièrement sur l\'appareil.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est le meilleur modèle local pour les débutants ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Llama 3.2 3B ou 8B est le meilleur point de départ : léger (3-8 Go VRAM), rapide (~50-80 tokens/s sur GPU) et bonne qualité pour la synthèse et les questions-réponses. Téléchargement via Ollama ou LM Studio. Les deux disposent d\'interfaces de chat intégrées.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment réduire les coûts des APIs cloud ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez des modèles moins chers pour les tâches simples (GPT-5.6 Luna : $0,15 par million de tokens vs. GPT-5.6 : $2,50). Regroupez les requêtes. Mettez en cache les prompts lorsque c\'est possible. Pour les usages à volume élevé, les APIs de traitement par lots offrent 50 % de réduction. Ou passez aux modèles locaux pour les charges fréquentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser des modèles locaux et cloud en parallèle ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Des outils comme PromptQuorum vous permettent d\'envoyer un prompt simultanément à votre modèle Ollama local et à plus de 25 modèles cloud, de comparer les résultats côte à côte et de router les tâches vers le meilleur modèle pour chaque travail. Cela combine la confidentialité locale avec la qualité cloud selon les besoins.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre les modèles locaux et cloud pour la confidentialité des données professionnelles ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour les données professionnelles sensibles -- dossiers clients, correspondances légales, données financières -- les LLMs locaux garantissent qu\'aucune donnée ne quitte votre infrastructure. Les APIs cloud, même conformes au RGPD, impliquent un transfert de données vers des serveurs tiers et la signature d\'un accord de traitement des données (DPA) selon l\'article 28 du RGPD. Pour les cabinets juridiques, établissements de santé et entreprises financières en France, l\'inférence locale est souvent la solution la plus prudente sur le plan réglementaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3 fonctionne-t-il bien pour le français ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Qwen3 7B et 14B offrent de bonnes performances en français grâce à un entraînement multilingue étendu. Pour un usage professionnel en français, Llama 3.1 8B et Mistral Small sont également de bons choix avec Ollama. Les modèles 13B et supérieurs produisent généralement une qualité de texte français nettement supérieure aux modèles 7B.',
+            },
+          },
         ],
       },
       supplementalSchema: {
@@ -1615,46 +1695,17 @@ schema: {
           id: 'common-questions',
           title: 'ローカルLLM vs クラウドAPIに関するよくある質問',
           faqs: [
-            {
-              q: '同じアプリケーション内でローカルモデルとクラウドモデルを切り替えられますか？',
-              a: 'はい。OllamaとLM StudioはどちらもlocalhostでオープンAI互換のREST APIを公開しています。OpenAI SDKで構築されたアプリケーションはベースURLをlocalhost:11434（Ollama）またはlocalhost:1234（LM Studio）に変更するだけで、コード変更なしにローカルモデルを使用できます。クラウドに戻す場合はベースURLとAPIキーを変更するだけです。',
-            },
-            {
-              q: 'クラウドAPIプロバイダーは私のプロンプトでトレーニングしますか？',
-              a: '有料APIティアでは、ほとんどの主要プロバイダー（OpenAI、Anthropic、Google）はデフォルトでAPIユーザーをトレーニングデータ収集から除外しています。無料ティアとコンシューマー製品は通常、改善のために入力データを使用します。使用する特定のティアと製品の現在のデータポリシーを必ず確認してください。',
-            },
-            {
-              q: 'ローカル70BモデルはGPT-5.6 Lunaより優れていますか？',
-              a: '2026年のほとんどのベンチマークでは、そうです -- Meta Llama 3.3 70BとQwen3 72Bは標準的な推論とコーディングタスクでGPT-5.6 Lunaを上回ります。ただし、70Bモデルは40〜48 GBのRAMが必要で、ほとんどのコンシューマーハードウェアでは実行困難です。実用的なローカル使用では7B〜13Bが一般的な範囲です。',
-            },
-            {
-              q: '7Bモデルをローカルで実行するにはどのようなハードウェアが必要ですか？',
-              a: 'モダンなラップトップのCPUでもLlama 3.2 3Bを10〜20トークン/秒で実行できますが、実用的な使用にはGPUが不可欠です。7Bモデルには：RTX 4070 Ti（12 GB、~80トークン/秒）、RTX 4090（24 GB、~130トークン/秒）、またはApple M3 Pro（18 GB、~60トークン/秒）。Q4量子化を使用すると、VRAM要件が大幅に削減されます。',
-            },
-            {
-              q: 'クラウドAPIはGDPRに準拠していますか？',
-              a: 'ほとんどのプロバイダー（OpenAI、Anthropic、Google）はGDPR準拠のティアを提供していますが、オプトインと確認が必要です。エンタープライズプランはより厳格なデータ分離を提供します。規制対象の医療・金融・法務データには、ローカルLLMがデータを完全にデバイス上に保持することで最も強力な保証を提供します。',
-            },
-            {
-              q: '初心者に最適なローカルモデルは何ですか？',
-              a: 'Llama 3.2 3BまたはLlama 3.1 8Bが最良の出発点です：小さい（3〜8 GB VRAM）、高速（GPU上で~50〜80トークン/秒）、要約やQ&Aで高品質。OllamaまたはLM Studioからダウンロード可能。両方とも内蔵チャットインターフェースを備えています。',
-            },
-            {
-              q: 'クラウドAPIコストを削減するにはどうすればよいですか？',
-              a: 'シンプルなタスクには安価なモデルを使用してください（GPT-5.6 Luna：$0.15/100万トークン vs GPT-5.6：$2.50）。リクエストをバッチ処理してください。可能な場所でプロンプトキャッシュを活用してください。高頻度ワークロードにはローカルモデルに切り替えてください。',
-            },
-            {
-              q: 'ローカルモデルとクラウドモデルを並行して使用できますか？',
-              a: 'はい。PromptQuorumなどのツールを使えば、1つのプロンプトをローカルOllamaモデルと25以上のクラウドモデルに同時に送信し、結果を並べて比較して、各タスクに最適なモデルにルーティングできます。ローカルのプライバシーと必要に応じたクラウド品質を組み合わせられます。',
-            },
-            {
-              q: '日本語の業務データにはローカルLLMとクラウドAPIのどちらが適していますか？',
-              a: 'METIのAIガバナンスガイドラインの観点から、機密な顧客データや業務データにはローカルLLMが推奨されます。OllamaでのQwen3 7Bは日本語に最適化されており、ネイティブな日本語トークナイゼーションにより高速な処理が可能です。個人情報保護法（APPI）への準拠を確実にするため、クラウドAPIを使用する場合はデータ処理場所を必ず確認してください。',
-            },
-            {
-              q: 'Qwen3は日本語に対応していますか？',
-              a: 'はい。Qwen3 7Bと14Bは広範な多言語トレーニングにより日本語で優れたパフォーマンスを発揮します。ネイティブな日本語トークナイゼーションにより、Llama系モデルと比較して日本語文書の処理が30〜40%効率的です。Ollamaで実行できます：ollama run qwen2.5:7b。',
-            },
+            { q: '同じアプリケーション内でローカルモデルとクラウドモデルを切り替えられますか？', a: 'はい。OllamaとLM StudioはどちらもlocalhostでオープンAI互換のREST APIを公開しています。OpenAI SDKで構築されたアプリケーションはベースURLをlocalhost:11434（Ollama）またはlocalhost:1234（LM Studio）に変更するだけで、コード変更なしにローカルモデルを使用できます。クラウドに戻す場合はベースURLとAPIキーを変更するだけです。' },
+            { q: 'クラウドAPIプロバイダーは私のプロンプトでトレーニングしますか？', a: '有料APIティアでは、ほとんどの主要プロバイダー（OpenAI、Anthropic、Google）はデフォルトでAPIユーザーをトレーニングデータ収集から除外しています。無料ティアとコンシューマー製品は通常、改善のために入力データを使用します。使用する特定のティアと製品の現在のデータポリシーを必ず確認してください。' },
+            { q: 'ローカル70BモデルはGPT-5.6 Lunaより優れていますか？', a: '2026年のほとんどのベンチマークでは、そうです -- Meta Llama 3.3 70BとQwen3 72Bは標準的な推論とコーディングタスクでGPT-5.6 Lunaを上回ります。ただし、70Bモデルは40〜48 GBのRAMが必要で、ほとんどのコンシューマーハードウェアでは実行困難です。実用的なローカル使用では7B〜13Bが一般的な範囲です。' },
+            { q: '7Bモデルをローカルで実行するにはどのようなハードウェアが必要ですか？', a: 'モダンなラップトップのCPUでもLlama 3.2 3Bを10〜20トークン/秒で実行できますが、実用的な使用にはGPUが不可欠です。7Bモデルには：RTX 4070 Ti（12 GB、~80トークン/秒）、RTX 4090（24 GB、~130トークン/秒）、またはApple M3 Pro（18 GB、~60トークン/秒）。Q4量子化を使用すると、VRAM要件が大幅に削減されます。' },
+            { q: 'クラウドAPIはGDPRに準拠していますか？', a: 'ほとんどのプロバイダー（OpenAI、Anthropic、Google）はGDPR準拠のティアを提供していますが、オプトインと確認が必要です。エンタープライズプランはより厳格なデータ分離を提供します。規制対象の医療・金融・法務データには、ローカルLLMがデータを完全にデバイス上に保持することで最も強力な保証を提供します。' },
+            { q: '初心者に最適なローカルモデルは何ですか？', a: 'Llama 3.2 3BまたはLlama 3.1 8Bが最良の出発点です：小さい（3〜8 GB VRAM）、高速（GPU上で~50〜80トークン/秒）、要約やQ&Aで高品質。OllamaまたはLM Studioからダウンロード可能。両方とも内蔵チャットインターフェースを備えています。' },
+            { q: 'クラウドAPIコストを削減するにはどうすればよいですか？', a: 'シンプルなタスクには安価なモデルを使用してください（GPT-5.6 Luna：$0.15/100万トークン vs GPT-5.6：$2.50）。リクエストをバッチ処理してください。可能な場所でプロンプトキャッシュを活用してください。高頻度ワークロードにはローカルモデルに切り替えてください。' },
+            { q: 'ローカルモデルとクラウドモデルを並行して使用できますか？', a: 'はい。PromptQuorumなどのツールを使えば、1つのプロンプトをローカルOllamaモデルと25以上のクラウドモデルに同時に送信し、結果を並べて比較して、各タスクに最適なモデルにルーティングできます。ローカルのプライバシーと必要に応じたクラウド品質を組み合わせられます。' },
+            { q: '日本語の業務データにはローカルLLMとクラウドAPIのどちらが適していますか？', a: 'METIのAIガバナンスガイドラインの観点から、機密な顧客データや業務データにはローカルLLMが推奨されます。OllamaでのQwen3 7Bは日本語に最適化されており、ネイティブな日本語トークナイゼーションにより高速な処理が可能です。個人情報保護法（APPI）への準拠を確実にするため、クラウドAPIを使用する場合はデータ処理場所を必ず確認してください。' },
+            { q: 'Qwen3は日本語に対応していますか？', a: 'はい。Qwen3 7Bと14Bは広範な多言語トレーニングにより日本語で優れたパフォーマンスを発揮します。ネイティブな日本語トークナイゼーションにより、Llama系モデルと比較して日本語文書の処理が30〜40%効率的です。Ollamaで実行できます：ollama run qwen2.5:7b。' },
+            { q: '7Bモデルに必要なハードウェアは？', a: 'RTX 4070 Ti（12 GB、~80トークン/秒）、RTX 4090（24 GB、~130トークン/秒）、またはApple M3 Pro（18 GB、~60トークン/秒）。Q4量子化でVRAM要件が大幅削減。' },
           ],
         },
       },
@@ -1698,16 +1749,94 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '同じアプリでローカルとクラウドモデルを切り替えられますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。OllamaとLM StudioはOpenAI互換REST APIをlocalhostで公開しています。ベースURLをlocalhost:11434（Ollama）またはlocalhost:1234（LM Studio）に変更するだけでコード変更なしに切り替え可能です。' } },
-          { '@type': 'Question', 'name': 'クラウドAPIプロバイダーはプロンプトでトレーニングしますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有料APIティアではほとんどのプロバイダーがデフォルトでトレーニングデータ収集から除外しています。無料ティアは通常入力データを改善に使用します。' } },
-          { '@type': 'Question', 'name': 'ローカル70BモデルはGPT-5.6 Lunaより優れていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年のほとんどのベンチマークでそうです -- Llama 3.3 70BとQwen3 72BがGPT-5.6 Lunaを上回ります。ただし40〜48 GB RAMが必要です。' } },
-          { '@type': 'Question', 'name': '7Bモデルに必要なハードウェアは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4070 Ti（12 GB、~80トークン/秒）、RTX 4090（24 GB、~130トークン/秒）、またはApple M3 Pro（18 GB、~60トークン/秒）。Q4量子化でVRAM要件が大幅削減。' } },
-          { '@type': 'Question', 'name': 'クラウドAPIはGDPRに準拠していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ほとんどのプロバイダーがGDPR準拠ティアを提供していますが、オプトインが必要です。ローカルLLMはデータを完全にデバイス上に保持することで最も強力な保証を提供します。' } },
-          { '@type': 'Question', 'name': '初心者に最適なローカルモデルは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3BまたはLlama 3.1 8B：小さい（3〜8 GB VRAM）、高速（~50〜80トークン/秒）。ollama run llama3.2:3bで開始できます。' } },
-          { '@type': 'Question', 'name': 'クラウドAPIコストを削減するには？', 'acceptedAnswer': { '@type': 'Answer', 'text': '安価なモデルを使用（GPT-5.6 Luna：$0.15/100万トークン vs GPT-5.6：$2.50）。バッチ処理とプロンプトキャッシュを活用。高頻度ワークロードはローカルモデルに切り替え。' } },
-          { '@type': 'Question', 'name': 'ローカルとクラウドモデルを並行して使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。PromptQuorumはローカルOllamaモデルと25以上のクラウドモデルに同時送信し、結果を並べて比較する機能を提供します。' } },
-          { '@type': 'Question', 'name': '日本語業務データにはどちらが適していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'METIのガイドラインでは機密データにはローカルLLMを推奨。QwendいえQwen3 7BはOllamaで日本語に最適化。APPIへの準拠のため、クラウドAPIはデータ処理場所を確認してください。' } },
-          { '@type': 'Question', 'name': 'Qwen3は日本語に対応していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Qwen3 7B/14Bは日本語で優れたパフォーマンスを発揮します。ollama run qwen2.5:7bで実行可能。Llamaと比較して日本語処理が30〜40%効率的です。' } },
+          {
+            '@type': 'Question',
+            'name': '同じアプリケーション内でローカルモデルとクラウドモデルを切り替えられますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。OllamaとLM StudioはどちらもlocalhostでオープンAI互換のREST APIを公開しています。OpenAI SDKで構築されたアプリケーションはベースURLをlocalhost:11434（Ollama）またはlocalhost:1234（LM Studio）に変更するだけで、コード変更なしにローカルモデルを使用できます。クラウドに戻す場合はベースURLとAPIキーを変更するだけです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'クラウドAPIプロバイダーは私のプロンプトでトレーニングしますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '有料APIティアでは、ほとんどの主要プロバイダー（OpenAI、Anthropic、Google）はデフォルトでAPIユーザーをトレーニングデータ収集から除外しています。無料ティアとコンシューマー製品は通常、改善のために入力データを使用します。使用する特定のティアと製品の現在のデータポリシーを必ず確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカル70BモデルはGPT-5.6 Lunaより優れていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年のほとんどのベンチマークでは、そうです -- Meta Llama 3.3 70BとQwen3 72Bは標準的な推論とコーディングタスクでGPT-5.6 Lunaを上回ります。ただし、70Bモデルは40〜48 GBのRAMが必要で、ほとんどのコンシューマーハードウェアでは実行困難です。実用的なローカル使用では7B〜13Bが一般的な範囲です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7Bモデルをローカルで実行するにはどのようなハードウェアが必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'モダンなラップトップのCPUでもLlama 3.2 3Bを10〜20トークン/秒で実行できますが、実用的な使用にはGPUが不可欠です。7Bモデルには：RTX 4070 Ti（12 GB、~80トークン/秒）、RTX 4090（24 GB、~130トークン/秒）、またはApple M3 Pro（18 GB、~60トークン/秒）。Q4量子化を使用すると、VRAM要件が大幅に削減されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'クラウドAPIはGDPRに準拠していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどのプロバイダー（OpenAI、Anthropic、Google）はGDPR準拠のティアを提供していますが、オプトインと確認が必要です。エンタープライズプランはより厳格なデータ分離を提供します。規制対象の医療・金融・法務データには、ローカルLLMがデータを完全にデバイス上に保持することで最も強力な保証を提供します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '初心者に最適なローカルモデルは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Llama 3.2 3BまたはLlama 3.1 8Bが最良の出発点です：小さい（3〜8 GB VRAM）、高速（GPU上で~50〜80トークン/秒）、要約やQ&Aで高品質。OllamaまたはLM Studioからダウンロード可能。両方とも内蔵チャットインターフェースを備えています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'クラウドAPIコストを削減するにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'シンプルなタスクには安価なモデルを使用してください（GPT-5.6 Luna：$0.15/100万トークン vs GPT-5.6：$2.50）。リクエストをバッチ処理してください。可能な場所でプロンプトキャッシュを活用してください。高頻度ワークロードにはローカルモデルに切り替えてください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルモデルとクラウドモデルを並行して使用できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。PromptQuorumなどのツールを使えば、1つのプロンプトをローカルOllamaモデルと25以上のクラウドモデルに同時に送信し、結果を並べて比較して、各タスクに最適なモデルにルーティングできます。ローカルのプライバシーと必要に応じたクラウド品質を組み合わせられます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '日本語の業務データにはローカルLLMとクラウドAPIのどちらが適していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'METIのAIガバナンスガイドラインの観点から、機密な顧客データや業務データにはローカルLLMが推奨されます。OllamaでのQwen3 7Bは日本語に最適化されており、ネイティブな日本語トークナイゼーションにより高速な処理が可能です。個人情報保護法（APPI）への準拠を確実にするため、クラウドAPIを使用する場合はデータ処理場所を必ず確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3は日本語に対応していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Qwen3 7Bと14Bは広範な多言語トレーニングにより日本語で優れたパフォーマンスを発揮します。ネイティブな日本語トークナイゼーションにより、Llama系モデルと比較して日本語文書の処理が30〜40%効率的です。Ollamaで実行できます：ollama run qwen2.5:7b。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7Bモデルに必要なハードウェアは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4070 Ti（12 GB、~80トークン/秒）、RTX 4090（24 GB、~130トークン/秒）、またはApple M3 Pro（18 GB、~60トークン/秒）。Q4量子化でVRAM要件が大幅削減。',
+            },
+          },
         ],
       },
       supplementalSchema: {
@@ -1874,46 +2003,16 @@ schema: {
           id: 'common-questions',
           title: '关于本地LLM vs 云端API的常见问题',
           faqs: [
-            {
-              q: '我可以在同一个应用中切换本地和云端模型吗？',
-              a: '可以。Ollama和LM Studio都在localhost上公开OpenAI兼容的REST API。任何基于OpenAI SDK构建的应用都可以将base URL指向localhost:11434（Ollama）或localhost:1234（LM Studio），无需更改代码即可使用本地模型。切换回云端只需更改base URL和API密钥。',
-            },
-            {
-              q: '云端API提供商会用我的提示词进行训练吗？',
-              a: '对于付费API层级，大多数主要提供商（OpenAI、Anthropic、Google）默认将API客户排除在训练数据收集之外。免费层级和消费者产品通常会将输入用于改进。请务必核实您使用的特定层级和产品的当前数据政策。',
-            },
-            {
-              q: '本地70B模型比GPT-5.6 Luna更好吗？',
-              a: '在2026年的大多数基准测试中，是的 -- Meta Llama 3.3 70B和Qwen3 72B在标准推理和编程任务上的得分高于GPT-5.6 Luna。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。实用的本地使用通常在7B-13B范围内。',
-            },
-            {
-              q: '在本地运行7B模型需要什么硬件？',
-              a: '现代笔记本CPU可以以10-20 token/秒运行Llama 3.2 3B，但实用使用必须有GPU。7B模型：RTX 4070 Ti（12 GB，~80 token/秒）、RTX 4090（24 GB，~130 token/秒）或Apple M3 Pro（18 GB，~60 token/秒）。使用Q4量化后，VRAM需求大幅降低。',
-            },
-            {
-              q: '云端API符合GDPR要求吗？',
-              a: '大多数提供商（OpenAI、Anthropic、Google）提供GDPR合规层级，但需要选择加入并核实。企业计划提供更严格的数据隔离。对于受监管的医疗、金融或法律数据，本地LLM通过将数据完全保留在设备上提供最强保证。',
-            },
-            {
-              q: '初学者最适合什么本地模型？',
-              a: 'Llama 3.2 3B或8B是最好的起点：体积小（3-8 GB VRAM）、速度快（GPU上约50-80 token/秒），摘要和问答质量良好。通过Ollama下载：ollama run llama3.2:3b。',
-            },
-            {
-              q: '如何降低云端API成本？',
-              a: '简单任务使用更便宜的模型（GPT-5.6 Luna：$0.15/百万token vs GPT-5.6：$2.50）。批量处理请求。在支持的地方缓存提示词。高频工作负载可切换到本地模型 -- 硬件投资后每token成本为零。',
-            },
-            {
-              q: '可以同时并行使用本地和云端模型吗？',
-              a: '可以。PromptQuorum等工具让您同时向本地Ollama模型和25+云端模型发送提示词，并排比较结果，并将任务路由到每项工作的最佳模型。这将本地隐私与按需云端质量相结合。',
-            },
-            {
-              q: '中国企业使用云端AI API需要注意什么合规要求？',
-              a: '根据《个人信息保护法》（PIPL），将中国公民的个人数据传输给境外云端提供商需要通过国家网信办的安全评估或标准合同。大多数情况下，本地LLM部署通过确保数据完全留在境内基础设施，是最简单的合规方案。境外API还需要审查数据处理协议是否符合《数据安全法》要求。',
-            },
-            {
-              q: 'Qwen3适合中文业务场景吗？',
-              a: '非常适合。Qwen3（通义千问2.5）是阿里云开源的多语言模型，对中文进行了深度优化。7B版本可在消费级GPU上运行（8 GB VRAM），72B版本适合企业服务器部署。相比Llama系列，Qwen3在中文理解和生成方面具有显著优势。通过Ollama下载：ollama run qwen2.5:7b。',
-            },
+            { q: '我可以在同一个应用中切换本地和云端模型吗？', a: '可以。Ollama和LM Studio都在localhost上公开OpenAI兼容的REST API。任何基于OpenAI SDK构建的应用都可以将base URL指向localhost:11434（Ollama）或localhost:1234（LM Studio），无需更改代码即可使用本地模型。切换回云端只需更改base URL和API密钥。' },
+            { q: '云端API提供商会用我的提示词进行训练吗？', a: '对于付费API层级，大多数主要提供商（OpenAI、Anthropic、Google）默认将API客户排除在训练数据收集之外。免费层级和消费者产品通常会将输入用于改进。请务必核实您使用的特定层级和产品的当前数据政策。' },
+            { q: '本地70B模型比GPT-5.6 Luna更好吗？', a: '在2026年的大多数基准测试中，是的 -- Meta Llama 3.3 70B和Qwen3 72B在标准推理和编程任务上的得分高于GPT-5.6 Luna。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。实用的本地使用通常在7B-13B范围内。' },
+            { q: '在本地运行7B模型需要什么硬件？', a: '现代笔记本CPU可以以10-20 token/秒运行Llama 3.2 3B，但实用使用必须有GPU。7B模型：RTX 4070 Ti（12 GB，~80 token/秒）、RTX 4090（24 GB，~130 token/秒）或Apple M3 Pro（18 GB，~60 token/秒）。使用Q4量化后，VRAM需求大幅降低。' },
+            { q: '云端API符合GDPR要求吗？', a: '大多数提供商（OpenAI、Anthropic、Google）提供GDPR合规层级，但需要选择加入并核实。企业计划提供更严格的数据隔离。对于受监管的医疗、金融或法律数据，本地LLM通过将数据完全保留在设备上提供最强保证。' },
+            { q: '初学者最适合什么本地模型？', a: 'Llama 3.2 3B或8B是最好的起点：体积小（3-8 GB VRAM）、速度快（GPU上约50-80 token/秒），摘要和问答质量良好。通过Ollama下载：ollama run llama3.2:3b。' },
+            { q: '如何降低云端API成本？', a: '简单任务使用更便宜的模型（GPT-5.6 Luna：$0.15/百万token vs GPT-5.6：$2.50）。批量处理请求。在支持的地方缓存提示词。高频工作负载可切换到本地模型 -- 硬件投资后每token成本为零。' },
+            { q: '可以同时并行使用本地和云端模型吗？', a: '可以。PromptQuorum等工具让您同时向本地Ollama模型和25+云端模型发送提示词，并排比较结果，并将任务路由到每项工作的最佳模型。这将本地隐私与按需云端质量相结合。' },
+            { q: '中国企业使用云端AI API需要注意什么合规要求？', a: '根据《个人信息保护法》（PIPL），将中国公民的个人数据传输给境外云端提供商需要通过国家网信办的安全评估或标准合同。大多数情况下，本地LLM部署通过确保数据完全留在境内基础设施，是最简单的合规方案。境外API还需要审查数据处理协议是否符合《数据安全法》要求。' },
+            { q: 'Qwen3适合中文业务场景吗？', a: '非常适合。Qwen3（通义千问2.5）是阿里云开源的多语言模型，对中文进行了深度优化。7B版本可在消费级GPU上运行（8 GB VRAM），72B版本适合企业服务器部署。相比Llama系列，Qwen3在中文理解和生成方面具有显著优势。通过Ollama下载：ollama run qwen2.5:7b。' },
           ],
         },
       },
@@ -1957,16 +2056,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '可以在同一应用中切换本地和云端模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。Ollama和LM Studio在localhost上公开OpenAI兼容REST API。将base URL指向localhost:11434（Ollama）或localhost:1234（LM Studio）即可无需更改代码使用本地模型。' } },
-          { '@type': 'Question', 'name': '云端API提供商会用我的提示词训练吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '付费API层级的大多数提供商默认将API客户排除在训练数据收集之外。免费层级通常使用输入进行改进。请核实您使用的特定层级的当前数据政策。' } },
-          { '@type': 'Question', 'name': '本地70B模型比GPT-5.6 Luna更好吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '大多数基准测试中是的 -- Llama 3.3 70B和Qwen3 72B在推理和编程任务上超越GPT-5.6 Luna。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。' } },
-          { '@type': 'Question', 'name': '运行7B模型需要什么硬件？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 4070 Ti（12 GB，~80 token/秒）、RTX 4090（24 GB，~130 token/秒）或Apple M3 Pro（18 GB，~60 token/秒）。Q4量化后VRAM需求约4.7 GB。' } },
-          { '@type': 'Question', 'name': '云端API是否符合GDPR要求？', 'acceptedAnswer': { '@type': 'Answer', 'text': '大多数提供商提供GDPR合规层级，但需要选择加入。本地LLM通过将数据完全保留在设备上提供最强保证 -- 无需GDPR第28条的数据处理协议。' } },
-          { '@type': 'Question', 'name': '初学者最适合什么本地模型？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Llama 3.2 3B或8B：体积小（3-8 GB VRAM）、速度快（~50-80 token/秒），质量良好。通过Ollama下载：ollama run llama3.2:3b。' } },
-          { '@type': 'Question', 'name': '如何降低云端API成本？', 'acceptedAnswer': { '@type': 'Answer', 'text': '简单任务使用更便宜的模型（GPT-5.6 Luna：$0.15/百万token vs GPT-5.6：$2.50）。批量处理请求。高频工作负载可切换到本地模型。' } },
-          { '@type': 'Question', 'name': '可以并行使用本地和云端模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。PromptQuorum让您同时向本地Ollama模型和25+云端模型发送提示词，并排比较结果，将任务路由到最佳模型。' } },
-          { '@type': 'Question', 'name': '中国企业使用境外AI API有哪些合规要求？', 'acceptedAnswer': { '@type': 'Answer', 'text': '根据PIPL，将中国公民个人数据传输给境外提供商需要通过国家网信办安全评估或标准合同。本地LLM部署通过确保数据留在境内基础设施是最简单的合规方案。' } },
-          { '@type': 'Question', 'name': 'Qwen3适合中文业务场景吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '非常适合。Qwen3是阿里云开源模型，对中文深度优化。7B版本可在8 GB VRAM GPU上运行，72B版本适合企业服务器。通过Ollama：ollama run qwen2.5:7b。' } },
+          {
+            '@type': 'Question',
+            'name': '我可以在同一个应用中切换本地和云端模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。Ollama和LM Studio都在localhost上公开OpenAI兼容的REST API。任何基于OpenAI SDK构建的应用都可以将base URL指向localhost:11434（Ollama）或localhost:1234（LM Studio），无需更改代码即可使用本地模型。切换回云端只需更改base URL和API密钥。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '云端API提供商会用我的提示词进行训练吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对于付费API层级，大多数主要提供商（OpenAI、Anthropic、Google）默认将API客户排除在训练数据收集之外。免费层级和消费者产品通常会将输入用于改进。请务必核实您使用的特定层级和产品的当前数据政策。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地70B模型比GPT-5.6 Luna更好吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在2026年的大多数基准测试中，是的 -- Meta Llama 3.3 70B和Qwen3 72B在标准推理和编程任务上的得分高于GPT-5.6 Luna。但70B模型需要40-48 GB内存，大多数消费级硬件难以满足。实用的本地使用通常在7B-13B范围内。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '在本地运行7B模型需要什么硬件？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '现代笔记本CPU可以以10-20 token/秒运行Llama 3.2 3B，但实用使用必须有GPU。7B模型：RTX 4070 Ti（12 GB，~80 token/秒）、RTX 4090（24 GB，~130 token/秒）或Apple M3 Pro（18 GB，~60 token/秒）。使用Q4量化后，VRAM需求大幅降低。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '云端API符合GDPR要求吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '大多数提供商（OpenAI、Anthropic、Google）提供GDPR合规层级，但需要选择加入并核实。企业计划提供更严格的数据隔离。对于受监管的医疗、金融或法律数据，本地LLM通过将数据完全保留在设备上提供最强保证。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '初学者最适合什么本地模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Llama 3.2 3B或8B是最好的起点：体积小（3-8 GB VRAM）、速度快（GPU上约50-80 token/秒），摘要和问答质量良好。通过Ollama下载：ollama run llama3.2:3b。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何降低云端API成本？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '简单任务使用更便宜的模型（GPT-5.6 Luna：$0.15/百万token vs GPT-5.6：$2.50）。批量处理请求。在支持的地方缓存提示词。高频工作负载可切换到本地模型 -- 硬件投资后每token成本为零。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '可以同时并行使用本地和云端模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。PromptQuorum等工具让您同时向本地Ollama模型和25+云端模型发送提示词，并排比较结果，并将任务路由到每项工作的最佳模型。这将本地隐私与按需云端质量相结合。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国企业使用云端AI API需要注意什么合规要求？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '根据《个人信息保护法》（PIPL），将中国公民的个人数据传输给境外云端提供商需要通过国家网信办的安全评估或标准合同。大多数情况下，本地LLM部署通过确保数据完全留在境内基础设施，是最简单的合规方案。境外API还需要审查数据处理协议是否符合《数据安全法》要求。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3适合中文业务场景吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '非常适合。Qwen3（通义千问2.5）是阿里云开源的多语言模型，对中文进行了深度优化。7B版本可在消费级GPU上运行（8 GB VRAM），72B版本适合企业服务器部署。相比Llama系列，Qwen3在中文理解和生成方面具有显著优势。通过Ollama下载：ollama run qwen2.5:7b。',
+            },
+          },
         ],
       },
       supplementalSchema: {

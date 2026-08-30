@@ -848,17 +848,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'Galaxy AIはApple Intelligenceより優れていますか?', a: '優先事項によります。Galaxy AIは発売時により多くの機能とユーザー制御を持ちます;Apple Intelligenceはより強いプライバシー保証と完成度を持ちます。オンデバイスLLM実行では:Galaxy S26がより優れています(より高速なハードウェア)。プライバシー重視の利用では:iPhone 16がより優れています(監査可能なPCC)。' },
-          { q: 'iPhoneでOllamaやMLC Chatを実行できますか?', a: '実用的にはできません。iOSのサンドボックス化は非常に制限的です。軽量な推論アプリは実行できますが、完全なOllama/MLC Chatは実行できません。Android(Galaxy S26)はDIYのLLM推論をはるかに良くサポートしています。' },
-          { q: 'AppleはPrivate Cloud Computeで私のデータを読み取りますか?', a: 'いいえ。PCCは暗号学的証明を使用します:Appleのサーバー上で実行されるコードをダウンロードして監査できます。Appleは暗号学的保証を破らずにあなたのデータを復号できません。' },
-          { q: 'Samsungは私のデータをGoogleに送信しますか?', a: 'Geminiを使用する機能のみです(エージェント、Circle to Search)。通話スクリーニング、Now Nudge、Now Brief、詐欺検出はSamsungのインフラにとどまります。' },
-          { q: 'オンデバイスAIにより高速なハードウェアはどれですか?', a: 'Exynos 2600(Galaxy S26グローバル)> Snapdragon 8 Elite Gen 5(Galaxy S26米国/中国/日本)がStable Diffusionにおいて優れています。Apple A18 ProはStable Diffusionでベンチマークされていません。' },
-          { q: 'Galaxy AIのクラウド機能を無効にできますか?', a: 'はい。設定 > Galaxy AIでCreative Studio、Geminiエージェント、Circle to Searchを無効にできます。「デバイスでのみデータを処理」を有効にすると、対応機能のクラウドフォールバックをブロックします。' },
-          { q: 'Apple Intelligenceはすべてのiphoneで利用できますか?', a: 'いいえ。iPhone 16以降(A18 Proチップ)のみです。iPhone 15は新しいAFM 3モデルを実行できません。' },
-          { q: 'Galaxy S26は世界中で利用可能ですか?', a: 'はい、ただし地域ごとにチップが分かれています:Exynos 2600(グローバルS26/S26+)、Snapdragon 8 Elite Gen 5(米国/中国/日本S26、すべてのS26 Ultra)。' },
-          { q: 'AppleのPCCサーバーを監査できますか?', a: 'はい。AppleはPCCのコードと脅威モデルを公開しています。独立したセキュリティ研究者がそれを監査できます。' },
-          { q: 'プライバシーに関してどちらのプラットフォームが優れていますか?', a: 'どちらも強力ですが異なります。Apple: デフォルトでプライバシー、監査可能なクラウド。Samsung: ユーザー制御のトグル、ハードウェアのKnox Vault。' }
-        ]
+            { q: 'Galaxy AIはApple Intelligenceより優れていますか?', a: '優先事項によります。Galaxy AIは発売時により多くの機能とユーザー制御を持ちます;Apple Intelligenceはより強いプライバシー保証と完成度を持ちます。オンデバイスLLM実行では:Galaxy S26がより優れています(より高速なハードウェア)。プライバシー重視の利用では:iPhone 16がより優れています(監査可能なPCC)。' },
+            { q: 'iPhoneでOllamaやMLC Chatを実行できますか?', a: '実用的にはできません。iOSのサンドボックス化は非常に制限的です。軽量な推論アプリは実行できますが、完全なOllama/MLC Chatは実行できません。Android(Galaxy S26)はDIYのLLM推論をはるかに良くサポートしています。' },
+            { q: 'AppleはPrivate Cloud Computeで私のデータを読み取りますか?', a: 'いいえ。PCCは暗号学的証明を使用します:Appleのサーバー上で実行されるコードをダウンロードして監査できます。Appleは暗号学的保証を破らずにあなたのデータを復号できません。' },
+            { q: 'Samsungは私のデータをGoogleに送信しますか?', a: 'Geminiを使用する機能のみです(エージェント、Circle to Search)。通話スクリーニング、Now Nudge、Now Brief、詐欺検出はSamsungのインフラにとどまります。' },
+            { q: 'オンデバイスAIにより高速なハードウェアはどれですか?', a: 'Exynos 2600(Galaxy S26グローバル)> Snapdragon 8 Elite Gen 5(Galaxy S26米国/中国/日本)がStable Diffusionにおいて優れています。Apple A18 ProはStable Diffusionでベンチマークされていません。' },
+            { q: 'Galaxy AIのクラウド機能を無効にできますか?', a: 'はい。設定 > Galaxy AIでCreative Studio、Geminiエージェント、Circle to Searchを無効にできます。「デバイスでのみデータを処理」を有効にすると、対応機能のクラウドフォールバックをブロックします。' },
+            { q: 'Apple Intelligenceはすべてのiphoneで利用できますか?', a: 'いいえ。iPhone 16以降(A18 Proチップ)のみです。iPhone 15は新しいAFM 3モデルを実行できません。' },
+            { q: 'Galaxy S26は世界中で利用可能ですか?', a: 'はい、ただし地域ごとにチップが分かれています:Exynos 2600(グローバルS26/S26+)、Snapdragon 8 Elite Gen 5(米国/中国/日本S26、すべてのS26 Ultra)。' },
+            { q: 'AppleのPCCサーバーを監査できますか?', a: 'はい。AppleはPCCのコードと脅威モデルを公開しています。独立したセキュリティ研究者がそれを監査できます。' },
+            { q: 'プライバシーに関してどちらのプラットフォームが優れていますか?', a: 'どちらも強力ですが異なります。Apple: デフォルトでプライバシー、監査可能なクラウド。Samsung: ユーザー制御のトグル、ハードウェアのKnox Vault。' },
+          ]
       },
       relatedReading: { id: 'related-reading', title: '関連記事', items: [
       '[Galaxy S26 でのローカル AI 実行: オンデバイス AI を完全解説 (2026)](/ja/local-llms/galaxy-s26-local-ai-on-device-2026) -- Galaxy S26でのローカルAI実行',
@@ -869,17 +869,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Galaxy vs iPhone オンデバイスAI: Samsung Galaxy AIとApple Intelligence(2026)', 'description': 'Galaxy AI vs Apple Intelligence: オンデバイスAI機能、プライバシーアーキテクチャ、クラウドフォールバック、ローカルLLM実行に適したスマートフォンを比較。', 'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-08-29', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'ja', 'url': 'https://www.promptquorum.com/ja/local-llms/galaxy-vs-iphone-on-device-ai-2026', 'articleBody': 'Samsung Galaxy S26とAppleの新しいIntelligenceスイートは、オンデバイスAIの2つの哲学を表しています。', 'proficiencyLevel': 'Intermediate' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ja', mainEntity: [
-      { '@type': 'Question', 'name': 'Galaxy AIはApple Intelligenceより優れていますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '優先事項によります。Galaxy AIは発売時により多くの機能とユーザー制御を持ちます;Apple Intelligenceはより強いプライバシー保証と完成度を持ちます。オンデバイスLLM実行ではGalaxy S26が優れています。プライバシー重視ではiPhone 16が優れています。' } },
-      { '@type': 'Question', 'name': 'iPhoneでOllamaやMLC Chatを実行できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '実用的にはできません。iOSのサンドボックス化は非常に制限的です。Android(Galaxy S26)がDIY LLM推論をはるかに良くサポートしています。' } },
-      { '@type': 'Question', 'name': 'AppleはPCCで私のデータを読み取りますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。PCCは暗号学的証明を使用し、研究者はAppleのサーバー上で実行されるコードを監査できます。' } },
-      { '@type': 'Question', 'name': 'Samsungは私のデータをGoogleに送信しますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Geminiを使用する機能のみです。他の機能はSamsungのインフラにとどまります。' } },
-      { '@type': 'Question', 'name': 'オンデバイスAIにより高速なハードウェアはどれですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exynos 2600 > Snapdragon 8 Elite Gen 5です。量子化7B LLMではExynos 2600が~24 tokens/秒に到達します。' } },
-      { '@type': 'Question', 'name': 'Galaxy AIのクラウド機能を無効にできますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。設定から無効にできます。オンデバイス機能は引き続き動作します。' } },
-      { '@type': 'Question', 'name': 'Apple Intelligenceはすべてのiphoneで利用できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。iPhone 16以降(A18 Proチップ)のみです。' } },
-      { '@type': 'Question', 'name': 'Galaxy S26は世界中で利用可能ですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、ただし地域ごとにExynos 2600とSnapdragon 8 Elite Gen 5に分かれています。' } },
-      { '@type': 'Question', 'name': 'AppleのPCCサーバーを監査できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。Appleはコードと脅威モデルを公開しており、独立研究者が監査できます。' } },
-      { '@type': 'Question', 'name': 'プライバシーに関してどちらのプラットフォームが優れていますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'どちらも強力ですが異なります。Apple: デフォルトでプライバシー。Samsung: ユーザー制御のトグル。' } }
-    ] }
+          {
+            '@type': 'Question',
+            'name': 'Galaxy AIはApple Intelligenceより優れていますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '優先事項によります。Galaxy AIは発売時により多くの機能とユーザー制御を持ちます;Apple Intelligenceはより強いプライバシー保証と完成度を持ちます。オンデバイスLLM実行では:Galaxy S26がより優れています(より高速なハードウェア)。プライバシー重視の利用では:iPhone 16がより優れています(監査可能なPCC)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'iPhoneでOllamaやMLC Chatを実行できますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '実用的にはできません。iOSのサンドボックス化は非常に制限的です。軽量な推論アプリは実行できますが、完全なOllama/MLC Chatは実行できません。Android(Galaxy S26)はDIYのLLM推論をはるかに良くサポートしています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AppleはPrivate Cloud Computeで私のデータを読み取りますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。PCCは暗号学的証明を使用します:Appleのサーバー上で実行されるコードをダウンロードして監査できます。Appleは暗号学的保証を破らずにあなたのデータを復号できません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Samsungは私のデータをGoogleに送信しますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Geminiを使用する機能のみです(エージェント、Circle to Search)。通話スクリーニング、Now Nudge、Now Brief、詐欺検出はSamsungのインフラにとどまります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'オンデバイスAIにより高速なハードウェアはどれですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exynos 2600(Galaxy S26グローバル)> Snapdragon 8 Elite Gen 5(Galaxy S26米国/中国/日本)がStable Diffusionにおいて優れています。Apple A18 ProはStable Diffusionでベンチマークされていません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Galaxy AIのクラウド機能を無効にできますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。設定 > Galaxy AIでCreative Studio、Geminiエージェント、Circle to Searchを無効にできます。「デバイスでのみデータを処理」を有効にすると、対応機能のクラウドフォールバックをブロックします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple Intelligenceはすべてのiphoneで利用できますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。iPhone 16以降(A18 Proチップ)のみです。iPhone 15は新しいAFM 3モデルを実行できません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Galaxy S26は世界中で利用可能ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、ただし地域ごとにチップが分かれています:Exynos 2600(グローバルS26/S26+)、Snapdragon 8 Elite Gen 5(米国/中国/日本S26、すべてのS26 Ultra)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AppleのPCCサーバーを監査できますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。AppleはPCCのコードと脅威モデルを公開しています。独立したセキュリティ研究者がそれを監査できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プライバシーに関してどちらのプラットフォームが優れていますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'どちらも強力ですが異なります。Apple: デフォルトでプライバシー、監査可能なクラウド。Samsung: ユーザー制御のトグル、ハードウェアのKnox Vault。',
+            },
+          },
+        ] }
   },
   zh: {
     freshness_tier: 'monthly',
@@ -1024,17 +1094,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'Galaxy AI比Apple Intelligence更好吗?', a: '取决于优先事项。Galaxy AI在发布时功能更多、用户控制更强;Apple Intelligence具备更强的隐私保障和打磨度。就本地设备LLM运行而言:Galaxy S26更好(硬件更快)。就隐私优先使用而言:iPhone 16更好(可审计的PCC)。' },
-          { q: '我能在iPhone上运行Ollama或MLC Chat吗?', a: '实际上不能。iOS的沙盒机制非常严格。你可以运行轻量级推理应用,但无法运行完整的Ollama/MLC Chat。Android(Galaxy S26)对DIY LLM推理的支持要好得多。' },
-          { q: '苹果会在Private Cloud Compute中读取我的数据吗?', a: '不会。PCC使用加密认证:你可以下载并审计在苹果服务器上运行的代码。苹果无法在不破坏加密保证的情况下解密你的数据。' },
-          { q: '三星会把我的数据发送给谷歌吗?', a: '仅限使用Gemini的功能(代理、Circle to Search)。通话筛选、Now Nudge、Now Brief、诈骗检测都保留在三星的基础设施内。' },
-          { q: '哪种硬件在本地设备AI方面更快?', a: 'Exynos 2600(Galaxy S26全球版)> Snapdragon 8 Elite Gen 5(Galaxy S26美国/中国/日本版),在Stable Diffusion方面表现更佳。苹果A18 Pro未与Stable Diffusion直接进行基准测试。' },
-          { q: '我可以禁用Galaxy AI的云端功能吗?', a: '可以。在设置>Galaxy AI中禁用Creative Studio、Gemini代理、Circle to Search。启用"仅在设备上处理数据"可为兼容功能阻止云端回退。' },
-          { q: 'Apple Intelligence在所有iPhone上都能使用吗?', a: '不能。仅限iPhone 16及更新机型(A18 Pro芯片)。iPhone 15无法运行新的AFM 3模型。' },
-          { q: 'Galaxy S26在全球都能买到吗?', a: '可以,但存在区域芯片划分:Exynos 2600(全球版S26/S26+)、Snapdragon 8 Elite Gen 5(美国/中国/日本版S26,所有S26 Ultra)。' },
-          { q: '我能审计苹果的PCC服务器吗?', a: '可以。苹果公开了PCC的代码和威胁模型。独立安全研究人员可以对其进行审计。' },
-          { q: '哪个平台在隐私方面更好?', a: '两者都很强大,但方式不同。苹果:默认隐私,云端可审计。三星:用户控制的开关,硬件级Knox Vault。' }
-        ]
+            { q: 'Galaxy AI比Apple Intelligence更好吗?', a: '取决于优先事项。Galaxy AI在发布时功能更多、用户控制更强;Apple Intelligence具备更强的隐私保障和打磨度。就本地设备LLM运行而言:Galaxy S26更好(硬件更快)。就隐私优先使用而言:iPhone 16更好(可审计的PCC)。' },
+            { q: '我能在iPhone上运行Ollama或MLC Chat吗?', a: '实际上不能。iOS的沙盒机制非常严格。你可以运行轻量级推理应用,但无法运行完整的Ollama/MLC Chat。Android(Galaxy S26)对DIY LLM推理的支持要好得多。' },
+            { q: '苹果会在Private Cloud Compute中读取我的数据吗?', a: '不会。PCC使用加密认证:你可以下载并审计在苹果服务器上运行的代码。苹果无法在不破坏加密保证的情况下解密你的数据。' },
+            { q: '三星会把我的数据发送给谷歌吗?', a: '仅限使用Gemini的功能(代理、Circle to Search)。通话筛选、Now Nudge、Now Brief、诈骗检测都保留在三星的基础设施内。' },
+            { q: '哪种硬件在本地设备AI方面更快?', a: 'Exynos 2600(Galaxy S26全球版)> Snapdragon 8 Elite Gen 5(Galaxy S26美国/中国/日本版),在Stable Diffusion方面表现更佳。苹果A18 Pro未与Stable Diffusion直接进行基准测试。' },
+            { q: '我可以禁用Galaxy AI的云端功能吗?', a: '可以。在设置>Galaxy AI中禁用Creative Studio、Gemini代理、Circle to Search。启用"仅在设备上处理数据"可为兼容功能阻止云端回退。' },
+            { q: 'Apple Intelligence在所有iPhone上都能使用吗?', a: '不能。仅限iPhone 16及更新机型(A18 Pro芯片)。iPhone 15无法运行新的AFM 3模型。' },
+            { q: 'Galaxy S26在全球都能买到吗?', a: '可以,但存在区域芯片划分:Exynos 2600(全球版S26/S26+)、Snapdragon 8 Elite Gen 5(美国/中国/日本版S26,所有S26 Ultra)。' },
+            { q: '我能审计苹果的PCC服务器吗?', a: '可以。苹果公开了PCC的代码和威胁模型。独立安全研究人员可以对其进行审计。' },
+            { q: '哪个平台在隐私方面更好?', a: '两者都很强大,但方式不同。苹果:默认隐私,云端可审计。三星:用户控制的开关,硬件级Knox Vault。' },
+            { q: '苹果会读取我在PCC中的数据吗?', a: '不会。PCC使用加密认证,研究人员可以审计在苹果服务器上运行的代码。' },
+          ]
       },
       relatedReading: { id: 'related-reading', title: '相关阅读', items: [
       '[在Galaxy S26上运行本地AI: 本地设备AI解析指南 (2026)](/zh/local-llms/galaxy-s26-local-ai-on-device-2026) -- Galaxy S26上的本地AI',
@@ -1045,17 +1116,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Galaxy对iPhone本地AI: Samsung Galaxy AI对Apple Intelligence(2026)', 'description': 'Galaxy AI对Apple Intelligence:比较本地设备AI功能、隐私架构、云端回退机制,以及哪款智能手机更适合运行本地LLM。', 'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-08-29', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'zh', 'url': 'https://www.promptquorum.com/zh/local-llms/galaxy-vs-iphone-on-device-ai-2026', 'articleBody': '三星Galaxy S26和苹果新的Intelligence套件代表了本地设备AI的两种理念。', 'proficiencyLevel': 'Intermediate' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'zh', mainEntity: [
-      { '@type': 'Question', 'name': 'Galaxy AI比Apple Intelligence更好吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '取决于优先事项。Galaxy AI功能更多、用户控制更强;Apple Intelligence隐私保障更强。本地设备LLM运行选Galaxy S26。隐私优先选iPhone 16。' } },
-      { '@type': 'Question', 'name': '我能在iPhone上运行Ollama或MLC Chat吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '实际上不能。iOS沙盒非常严格。Android(Galaxy S26)对DIY LLM推理的支持要好得多。' } },
-      { '@type': 'Question', 'name': '苹果会读取我在PCC中的数据吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不会。PCC使用加密认证,研究人员可以审计在苹果服务器上运行的代码。' } },
-      { '@type': 'Question', 'name': '三星会把我的数据发送给谷歌吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '仅限使用Gemini的功能。其他功能保留在三星的基础设施内。' } },
-      { '@type': 'Question', 'name': '哪种硬件在本地设备AI方面更快?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exynos 2600 > Snapdragon 8 Elite Gen 5。量化7B LLM上,Exynos 2600可达约24 tokens/秒。' } },
-      { '@type': 'Question', 'name': '我可以禁用Galaxy AI的云端功能吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以,在设置中禁用即可。本地设备功能仍会继续工作。' } },
-      { '@type': 'Question', 'name': 'Apple Intelligence在所有iPhone上都能使用吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能。仅限iPhone 16及更新机型(A18 Pro芯片)。' } },
-      { '@type': 'Question', 'name': 'Galaxy S26在全球都能买到吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以,但区域芯片有所不同:Exynos 2600和Snapdragon 8 Elite Gen 5。' } },
-      { '@type': 'Question', 'name': '我能审计苹果的PCC服务器吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。苹果公开代码和威胁模型,供独立研究人员审计。' } },
-      { '@type': 'Question', 'name': '哪个平台在隐私方面更好?', 'acceptedAnswer': { '@type': 'Answer', 'text': '两者都很强大但方式不同。苹果:默认隐私。三星:用户控制的开关。' } }
-    ] }
+          {
+            '@type': 'Question',
+            'name': 'Galaxy AI比Apple Intelligence更好吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '取决于优先事项。Galaxy AI在发布时功能更多、用户控制更强;Apple Intelligence具备更强的隐私保障和打磨度。就本地设备LLM运行而言:Galaxy S26更好(硬件更快)。就隐私优先使用而言:iPhone 16更好(可审计的PCC)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我能在iPhone上运行Ollama或MLC Chat吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '实际上不能。iOS的沙盒机制非常严格。你可以运行轻量级推理应用,但无法运行完整的Ollama/MLC Chat。Android(Galaxy S26)对DIY LLM推理的支持要好得多。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '苹果会在Private Cloud Compute中读取我的数据吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会。PCC使用加密认证:你可以下载并审计在苹果服务器上运行的代码。苹果无法在不破坏加密保证的情况下解密你的数据。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '三星会把我的数据发送给谷歌吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '仅限使用Gemini的功能(代理、Circle to Search)。通话筛选、Now Nudge、Now Brief、诈骗检测都保留在三星的基础设施内。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪种硬件在本地设备AI方面更快?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exynos 2600(Galaxy S26全球版)> Snapdragon 8 Elite Gen 5(Galaxy S26美国/中国/日本版),在Stable Diffusion方面表现更佳。苹果A18 Pro未与Stable Diffusion直接进行基准测试。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以禁用Galaxy AI的云端功能吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。在设置>Galaxy AI中禁用Creative Studio、Gemini代理、Circle to Search。启用"仅在设备上处理数据"可为兼容功能阻止云端回退。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple Intelligence在所有iPhone上都能使用吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能。仅限iPhone 16及更新机型(A18 Pro芯片)。iPhone 15无法运行新的AFM 3模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Galaxy S26在全球都能买到吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以,但存在区域芯片划分:Exynos 2600(全球版S26/S26+)、Snapdragon 8 Elite Gen 5(美国/中国/日本版S26,所有S26 Ultra)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我能审计苹果的PCC服务器吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。苹果公开了PCC的代码和威胁模型。独立安全研究人员可以对其进行审计。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪个平台在隐私方面更好?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '两者都很强大,但方式不同。苹果:默认隐私,云端可审计。三星:用户控制的开关,硬件级Knox Vault。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '苹果会读取我在PCC中的数据吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会。PCC使用加密认证,研究人员可以审计在苹果服务器上运行的代码。',
+            },
+          },
+        ] }
   },
   pt: {
     freshness_tier: 'monthly',
@@ -1200,17 +1349,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'O Galaxy AI é melhor que o Apple Intelligence?', a: 'Depende das prioridades. O Galaxy AI tem mais recursos no lançamento e controle do usuário; o Apple Intelligence tem garantias de privacidade mais fortes e polimento. Para rodar LLM no dispositivo: o Galaxy S26 é melhor (hardware mais rápido). Para uso focado em privacidade: o iPhone 16 é melhor (PCC auditável).' },
-          { q: 'Posso rodar Ollama ou MLC Chat no iPhone?', a: 'Não de forma prática. O sandboxing do iOS é muito restritivo. Você pode rodar aplicativos de inferência leves, mas não o Ollama/MLC Chat completos. O Android (Galaxy S26) tem suporte muito melhor para inferência LLM DIY.' },
-          { q: 'A Apple lê meus dados no Private Cloud Compute?', a: 'Não. O PCC usa atestação criptográfica: você pode baixar e auditar o código que roda nos servidores da Apple. A Apple não consegue descriptografar seus dados sem quebrar a garantia criptográfica.' },
-          { q: 'A Samsung envia meus dados para o Google?', a: 'Apenas para recursos que usam o Gemini (agentes, Circle to Search). Triagem de Chamadas, Now Nudge, Now Brief, Detecção de Golpes permanecem na infraestrutura da Samsung.' },
-          { q: 'Qual hardware é mais rápido para IA no dispositivo?', a: 'Exynos 2600 (Galaxy S26 global) > Snapdragon 8 Elite Gen 5 (Galaxy S26 EUA/China/Japão) para Stable Diffusion. O Apple A18 Pro não foi comparado diretamente com Stable Diffusion.' },
-          { q: 'Posso desativar os recursos de nuvem do Galaxy AI?', a: 'Sim. Desative Creative Studio, agentes Gemini, Circle to Search em Configurações > Galaxy AI. Ative "Processar dados apenas no dispositivo" para bloquear o fallback para nuvem em recursos compatíveis.' },
-          { q: 'O Apple Intelligence está disponível em todos os iPhones?', a: 'Não. Apenas iPhone 16 e mais recentes (chip A18 Pro). O iPhone 15 não consegue rodar os novos modelos AFM 3.' },
-          { q: 'O Galaxy S26 está disponível globalmente?', a: 'Sim, mas com divisões regionais de chip: Exynos 2600 (S26/S26+ global), Snapdragon 8 Elite Gen 5 (EUA/China/Japão S26, todos os S26 Ultra).' },
-          { q: 'Posso auditar os servidores PCC da Apple?', a: 'Sim. A Apple publica o código e o modelo de ameaças do PCC. Pesquisadores de segurança independentes podem auditá-lo.' },
-          { q: 'Qual plataforma é melhor para privacidade?', a: 'Ambas são fortes, mas diferentes. Apple: privacidade por padrão, nuvem auditável. Samsung: alternância controlada pelo usuário, Knox Vault de hardware.' }
-        ]
+            { q: 'O Galaxy AI é melhor que o Apple Intelligence?', a: 'Depende das prioridades. O Galaxy AI tem mais recursos no lançamento e controle do usuário; o Apple Intelligence tem garantias de privacidade mais fortes e polimento. Para rodar LLM no dispositivo: o Galaxy S26 é melhor (hardware mais rápido). Para uso focado em privacidade: o iPhone 16 é melhor (PCC auditável).' },
+            { q: 'Posso rodar Ollama ou MLC Chat no iPhone?', a: 'Não de forma prática. O sandboxing do iOS é muito restritivo. Você pode rodar aplicativos de inferência leves, mas não o Ollama/MLC Chat completos. O Android (Galaxy S26) tem suporte muito melhor para inferência LLM DIY.' },
+            { q: 'A Apple lê meus dados no Private Cloud Compute?', a: 'Não. O PCC usa atestação criptográfica: você pode baixar e auditar o código que roda nos servidores da Apple. A Apple não consegue descriptografar seus dados sem quebrar a garantia criptográfica.' },
+            { q: 'A Samsung envia meus dados para o Google?', a: 'Apenas para recursos que usam o Gemini (agentes, Circle to Search). Triagem de Chamadas, Now Nudge, Now Brief, Detecção de Golpes permanecem na infraestrutura da Samsung.' },
+            { q: 'Qual hardware é mais rápido para IA no dispositivo?', a: 'Exynos 2600 (Galaxy S26 global) > Snapdragon 8 Elite Gen 5 (Galaxy S26 EUA/China/Japão) para Stable Diffusion. O Apple A18 Pro não foi comparado diretamente com Stable Diffusion.' },
+            { q: 'Posso desativar os recursos de nuvem do Galaxy AI?', a: 'Sim. Desative Creative Studio, agentes Gemini, Circle to Search em Configurações > Galaxy AI. Ative "Processar dados apenas no dispositivo" para bloquear o fallback para nuvem em recursos compatíveis.' },
+            { q: 'O Apple Intelligence está disponível em todos os iPhones?', a: 'Não. Apenas iPhone 16 e mais recentes (chip A18 Pro). O iPhone 15 não consegue rodar os novos modelos AFM 3.' },
+            { q: 'O Galaxy S26 está disponível globalmente?', a: 'Sim, mas com divisões regionais de chip: Exynos 2600 (S26/S26+ global), Snapdragon 8 Elite Gen 5 (EUA/China/Japão S26, todos os S26 Ultra).' },
+            { q: 'Posso auditar os servidores PCC da Apple?', a: 'Sim. A Apple publica o código e o modelo de ameaças do PCC. Pesquisadores de segurança independentes podem auditá-lo.' },
+            { q: 'Qual plataforma é melhor para privacidade?', a: 'Ambas são fortes, mas diferentes. Apple: privacidade por padrão, nuvem auditável. Samsung: alternância controlada pelo usuário, Knox Vault de hardware.' },
+          ]
       },
       relatedReading: { id: 'related-reading', title: 'Leitura Relacionada', items: [
       '[Executar IA Local no Galaxy S26: IA no Dispositivo Explicada (2026)](/pt/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA local no Galaxy S26',
@@ -1221,17 +1370,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Galaxy vs iPhone IA em Dispositivo: Samsung Galaxy AI vs Apple Intelligence (2026)', 'description': 'Galaxy AI vs Apple Intelligence: compare recursos de IA no dispositivo, arquitetura de privacidade, fallback para nuvem, e qual smartphone é melhor para rodar LLMs locais.', 'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-08-29', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'pt', 'url': 'https://www.promptquorum.com/pt/local-llms/galaxy-vs-iphone-on-device-ai-2026', 'articleBody': 'O Samsung Galaxy S26 e o Apple Intelligence representam duas filosofias de IA no dispositivo.', 'proficiencyLevel': 'Intermediate' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'pt', mainEntity: [
-      { '@type': 'Question', 'name': 'O Galaxy AI é melhor que o Apple Intelligence?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Depende das prioridades. O Galaxy AI tem mais recursos e controle do usuário; o Apple Intelligence tem garantias de privacidade mais fortes. Para inferência de LLM: o Galaxy S26 é melhor. Para privacidade: o iPhone 16 é melhor.' } },
-      { '@type': 'Question', 'name': 'Posso rodar Ollama ou MLC Chat no iPhone?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não de forma prática. O sandboxing do iOS é muito restritivo. O Android (Galaxy S26) tem suporte muito melhor para inferência LLM DIY.' } },
-      { '@type': 'Question', 'name': 'A Apple lê meus dados no PCC?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. O PCC usa atestação criptográfica; pesquisadores podem auditar o código que roda nos servidores da Apple.' } },
-      { '@type': 'Question', 'name': 'A Samsung envia meus dados para o Google?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apenas para recursos que usam o Gemini. Os demais recursos permanecem na infraestrutura da Samsung.' } },
-      { '@type': 'Question', 'name': 'Qual hardware é mais rápido para IA no dispositivo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exynos 2600 > Snapdragon 8 Elite Gen 5. Em LLMs quantizados de 7B, o Exynos 2600 alcança ~24 tokens/seg.' } },
-      { '@type': 'Question', 'name': 'Posso desativar os recursos de nuvem do Galaxy AI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, em Configurações. Os recursos no dispositivo continuam funcionando normalmente.' } },
-      { '@type': 'Question', 'name': 'O Apple Intelligence está disponível em todos os iPhones?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. Apenas iPhone 16 e mais recentes (chip A18 Pro).' } },
-      { '@type': 'Question', 'name': 'O Galaxy S26 está disponível globalmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, mas com divisões regionais de chip: Exynos 2600 e Snapdragon 8 Elite Gen 5.' } },
-      { '@type': 'Question', 'name': 'Posso auditar os servidores PCC da Apple?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. A Apple publica o código e o modelo de ameaças para pesquisadores independentes auditarem.' } },
-      { '@type': 'Question', 'name': 'Qual plataforma é melhor para privacidade?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ambas são fortes, mas diferentes. Apple: privacidade por padrão. Samsung: alternância controlada pelo usuário.' } }
-    ] }
+          {
+            '@type': 'Question',
+            'name': 'O Galaxy AI é melhor que o Apple Intelligence?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende das prioridades. O Galaxy AI tem mais recursos no lançamento e controle do usuário; o Apple Intelligence tem garantias de privacidade mais fortes e polimento. Para rodar LLM no dispositivo: o Galaxy S26 é melhor (hardware mais rápido). Para uso focado em privacidade: o iPhone 16 é melhor (PCC auditável).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar Ollama ou MLC Chat no iPhone?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não de forma prática. O sandboxing do iOS é muito restritivo. Você pode rodar aplicativos de inferência leves, mas não o Ollama/MLC Chat completos. O Android (Galaxy S26) tem suporte muito melhor para inferência LLM DIY.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A Apple lê meus dados no Private Cloud Compute?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. O PCC usa atestação criptográfica: você pode baixar e auditar o código que roda nos servidores da Apple. A Apple não consegue descriptografar seus dados sem quebrar a garantia criptográfica.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A Samsung envia meus dados para o Google?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apenas para recursos que usam o Gemini (agentes, Circle to Search). Triagem de Chamadas, Now Nudge, Now Brief, Detecção de Golpes permanecem na infraestrutura da Samsung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual hardware é mais rápido para IA no dispositivo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exynos 2600 (Galaxy S26 global) > Snapdragon 8 Elite Gen 5 (Galaxy S26 EUA/China/Japão) para Stable Diffusion. O Apple A18 Pro não foi comparado diretamente com Stable Diffusion.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso desativar os recursos de nuvem do Galaxy AI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Desative Creative Studio, agentes Gemini, Circle to Search em Configurações > Galaxy AI. Ative "Processar dados apenas no dispositivo" para bloquear o fallback para nuvem em recursos compatíveis.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Apple Intelligence está disponível em todos os iPhones?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Apenas iPhone 16 e mais recentes (chip A18 Pro). O iPhone 15 não consegue rodar os novos modelos AFM 3.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Galaxy S26 está disponível globalmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, mas com divisões regionais de chip: Exynos 2600 (S26/S26+ global), Snapdragon 8 Elite Gen 5 (EUA/China/Japão S26, todos os S26 Ultra).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso auditar os servidores PCC da Apple?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. A Apple publica o código e o modelo de ameaças do PCC. Pesquisadores de segurança independentes podem auditá-lo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual plataforma é melhor para privacidade?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ambas são fortes, mas diferentes. Apple: privacidade por padrão, nuvem auditável. Samsung: alternância controlada pelo usuário, Knox Vault de hardware.',
+            },
+          },
+        ] }
   },
   ar: {
     freshness_tier: 'monthly',
@@ -1376,17 +1595,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل Galaxy AI أفضل من Apple Intelligence؟', a: 'يعتمد على الأولويات. يمتلك Galaxy AI ميزات أكثر عند الإطلاق وتحكم أكبر للمستخدم؛ ويمتلك Apple Intelligence ضمانات خصوصية أقوى وصقلًا أكبر. لتشغيل LLM على الجهاز: Galaxy S26 أفضل (أجهزة أسرع). للاستخدام الذي يُعطي الأولوية للخصوصية: iPhone 16 أفضل (PCC قابل للتدقيق).' },
-          { q: 'هل يمكنني تشغيل Ollama أو MLC Chat على iPhone؟', a: 'ليس عمليًا. الحماية الرملية في iOS مقيّدة جدًا. يمكنك تشغيل تطبيقات استدلال خفيفة، لكن ليس Ollama/MLC Chat الكاملين. يقدّم Android (Galaxy S26) دعمًا أفضل بكثير لاستدلال LLM اليدوي.' },
-          { q: 'هل تقرأ Apple بياناتي في Private Cloud Compute؟', a: 'لا. يستخدم PCC شهادة تشفيرية: يمكنك تنزيل الكود الذي يعمل على خوادم Apple وتدقيقه. لا تستطيع Apple فك تشفير بياناتك دون كسر الضمان التشفيري.' },
-          { q: 'هل ترسل Samsung بياناتي إلى Google؟', a: 'فقط للميزات التي تستخدم Gemini (الوكلاء، Circle to Search). تبقى ميزات فحص المكالمات وNow Nudge وNow Brief وكشف الاحتيال داخل بنية Samsung التحتية.' },
-          { q: 'أي جهاز أسرع للذكاء الاصطناعي على الجهاز؟', a: 'Exynos 2600 (Galaxy S26 عالميًا) > Snapdragon 8 Elite Gen 5 (Galaxy S26 في الولايات المتحدة/الصين/اليابان) في Stable Diffusion. لم تُقارَن Apple A18 Pro مباشرةً مع Stable Diffusion.' },
-          { q: 'هل يمكنني تعطيل ميزات سحابة Galaxy AI؟', a: 'نعم. عطّل Creative Studio ووكلاء Gemini وCircle to Search من الإعدادات > Galaxy AI. فعّل "معالجة البيانات على الجهاز فقط" لحظر الرجوع إلى السحابة للميزات المتوافقة.' },
-          { q: 'هل Apple Intelligence متاح على جميع أجهزة iPhone؟', a: 'لا. فقط iPhone 16 وما بعده (شريحة A18 Pro). لا يستطيع iPhone 15 تشغيل نماذج AFM 3 الجديدة.' },
-          { q: 'هل Galaxy S26 متاح عالميًا؟', a: 'نعم، لكن مع تقسيمات إقليمية للشرائح: Exynos 2600 (S26/S26+ عالميًا)، Snapdragon 8 Elite Gen 5 (الولايات المتحدة/الصين/اليابان S26، جميع طرازات S26 Ultra).' },
-          { q: 'هل يمكنني تدقيق خوادم PCC الخاصة بـApple؟', a: 'نعم. تنشر Apple الكود ونموذج التهديد لـPCC. يمكن لباحثي أمن مستقلين تدقيقه.' },
-          { q: 'أي منصة أفضل للخصوصية؟', a: 'كلاهما قوي لكنهما مختلفان. Apple: خصوصية افتراضية، سحابة قابلة للتدقيق. Samsung: مفتاح يتحكم به المستخدم، Knox Vault بالأجهزة.' }
-        ]
+            { q: 'هل Galaxy AI أفضل من Apple Intelligence؟', a: 'يعتمد على الأولويات. يمتلك Galaxy AI ميزات أكثر عند الإطلاق وتحكم أكبر للمستخدم؛ ويمتلك Apple Intelligence ضمانات خصوصية أقوى وصقلًا أكبر. لتشغيل LLM على الجهاز: Galaxy S26 أفضل (أجهزة أسرع). للاستخدام الذي يُعطي الأولوية للخصوصية: iPhone 16 أفضل (PCC قابل للتدقيق).' },
+            { q: 'هل يمكنني تشغيل Ollama أو MLC Chat على iPhone؟', a: 'ليس عمليًا. الحماية الرملية في iOS مقيّدة جدًا. يمكنك تشغيل تطبيقات استدلال خفيفة، لكن ليس Ollama/MLC Chat الكاملين. يقدّم Android (Galaxy S26) دعمًا أفضل بكثير لاستدلال LLM اليدوي.' },
+            { q: 'هل تقرأ Apple بياناتي في Private Cloud Compute؟', a: 'لا. يستخدم PCC شهادة تشفيرية: يمكنك تنزيل الكود الذي يعمل على خوادم Apple وتدقيقه. لا تستطيع Apple فك تشفير بياناتك دون كسر الضمان التشفيري.' },
+            { q: 'هل ترسل Samsung بياناتي إلى Google؟', a: 'فقط للميزات التي تستخدم Gemini (الوكلاء، Circle to Search). تبقى ميزات فحص المكالمات وNow Nudge وNow Brief وكشف الاحتيال داخل بنية Samsung التحتية.' },
+            { q: 'أي جهاز أسرع للذكاء الاصطناعي على الجهاز؟', a: 'Exynos 2600 (Galaxy S26 عالميًا) > Snapdragon 8 Elite Gen 5 (Galaxy S26 في الولايات المتحدة/الصين/اليابان) في Stable Diffusion. لم تُقارَن Apple A18 Pro مباشرةً مع Stable Diffusion.' },
+            { q: 'هل يمكنني تعطيل ميزات سحابة Galaxy AI؟', a: 'نعم. عطّل Creative Studio ووكلاء Gemini وCircle to Search من الإعدادات > Galaxy AI. فعّل "معالجة البيانات على الجهاز فقط" لحظر الرجوع إلى السحابة للميزات المتوافقة.' },
+            { q: 'هل Apple Intelligence متاح على جميع أجهزة iPhone؟', a: 'لا. فقط iPhone 16 وما بعده (شريحة A18 Pro). لا يستطيع iPhone 15 تشغيل نماذج AFM 3 الجديدة.' },
+            { q: 'هل Galaxy S26 متاح عالميًا؟', a: 'نعم، لكن مع تقسيمات إقليمية للشرائح: Exynos 2600 (S26/S26+ عالميًا)، Snapdragon 8 Elite Gen 5 (الولايات المتحدة/الصين/اليابان S26، جميع طرازات S26 Ultra).' },
+            { q: 'هل يمكنني تدقيق خوادم PCC الخاصة بـApple؟', a: 'نعم. تنشر Apple الكود ونموذج التهديد لـPCC. يمكن لباحثي أمن مستقلين تدقيقه.' },
+            { q: 'أي منصة أفضل للخصوصية؟', a: 'كلاهما قوي لكنهما مختلفان. Apple: خصوصية افتراضية، سحابة قابلة للتدقيق. Samsung: مفتاح يتحكم به المستخدم، Knox Vault بالأجهزة.' },
+          ]
       },
       relatedReading: { id: 'related-reading', title: 'قراءات ذات صلة', items: [
       '[تشغيل الذكاء الاصطناعي المحلي على Galaxy S26: شرح الذكاء الاصطناعي على الجهاز (2026)](/ar/local-llms/galaxy-s26-local-ai-on-device-2026) -- الذكاء الاصطناعي المحلي على Galaxy S26',
@@ -1397,17 +1616,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Galaxy مقابل iPhone على الجهاز AI: Samsung Galaxy AI مقابل Apple Intelligence (2026)', 'description': 'مقارنة الذكاء الاصطناعي على الجهاز: Galaxy S26 مقابل iPhone 16. ما يعمل محليًا على كل جهاز، أداء NPU، الخصوصية، وأيهما أفضل للذكاء بلا سحابة.', 'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-08-29', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'ar', 'url': 'https://www.promptquorum.com/ar/local-llms/galaxy-vs-iphone-on-device-ai-2026', 'articleBody': 'يمثّل Samsung Galaxy S26 وApple Intelligence فلسفتين للذكاء الاصطناعي على الجهاز.', 'proficiencyLevel': 'Intermediate' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'ar', mainEntity: [
-      { '@type': 'Question', 'name': 'هل Galaxy AI أفضل من Apple Intelligence؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يعتمد على الأولويات. يمتلك Galaxy AI ميزات أكثر وتحكمًا أكبر للمستخدم؛ ويمتلك Apple Intelligence ضمانات خصوصية أقوى. لاستدلال LLM: Galaxy S26 أفضل. للخصوصية: iPhone 16 أفضل.' } },
-      { '@type': 'Question', 'name': 'هل يمكنني تشغيل Ollama أو MLC Chat على iPhone؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس عمليًا. الحماية الرملية في iOS مقيّدة جدًا. يقدّم Android (Galaxy S26) دعمًا أفضل بكثير لاستدلال LLM اليدوي.' } },
-      { '@type': 'Question', 'name': 'هل تقرأ Apple بياناتي في PCC؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. يستخدم PCC شهادة تشفيرية، ويمكن للباحثين تدقيق الكود الذي يعمل على خوادم Apple.' } },
-      { '@type': 'Question', 'name': 'هل ترسل Samsung بياناتي إلى Google؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'فقط للميزات التي تستخدم Gemini. تبقى بقية الميزات داخل بنية Samsung التحتية.' } },
-      { '@type': 'Question', 'name': 'أي جهاز أسرع للذكاء الاصطناعي على الجهاز؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exynos 2600 > Snapdragon 8 Elite Gen 5. لنماذج LLM المكمّمة بحجم 7B، تصل Exynos 2600 إلى نحو 24 رمزًا/ثانية.' } },
-      { '@type': 'Question', 'name': 'هل يمكنني تعطيل ميزات سحابة Galaxy AI؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، من الإعدادات. تستمر الميزات على الجهاز بالعمل.' } },
-      { '@type': 'Question', 'name': 'هل Apple Intelligence متاح على جميع أجهزة iPhone؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. فقط iPhone 16 وما بعده (شريحة A18 Pro).' } },
-      { '@type': 'Question', 'name': 'هل Galaxy S26 متاح عالميًا؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، لكن مع تقسيمات إقليمية للشرائح: Exynos 2600 وSnapdragon 8 Elite Gen 5.' } },
-      { '@type': 'Question', 'name': 'هل يمكنني تدقيق خوادم PCC الخاصة بـApple؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. تنشر Apple الكود ونموذج التهديد ليدققه باحثون مستقلون.' } },
-      { '@type': 'Question', 'name': 'أي منصة أفضل للخصوصية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'كلاهما قوي لكنهما مختلفان. Apple: خصوصية افتراضية. Samsung: مفتاح يتحكم به المستخدم.' } }
-    ] }
+          {
+            '@type': 'Question',
+            'name': 'هل Galaxy AI أفضل من Apple Intelligence؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد على الأولويات. يمتلك Galaxy AI ميزات أكثر عند الإطلاق وتحكم أكبر للمستخدم؛ ويمتلك Apple Intelligence ضمانات خصوصية أقوى وصقلًا أكبر. لتشغيل LLM على الجهاز: Galaxy S26 أفضل (أجهزة أسرع). للاستخدام الذي يُعطي الأولوية للخصوصية: iPhone 16 أفضل (PCC قابل للتدقيق).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل Ollama أو MLC Chat على iPhone؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس عمليًا. الحماية الرملية في iOS مقيّدة جدًا. يمكنك تشغيل تطبيقات استدلال خفيفة، لكن ليس Ollama/MLC Chat الكاملين. يقدّم Android (Galaxy S26) دعمًا أفضل بكثير لاستدلال LLM اليدوي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تقرأ Apple بياناتي في Private Cloud Compute؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. يستخدم PCC شهادة تشفيرية: يمكنك تنزيل الكود الذي يعمل على خوادم Apple وتدقيقه. لا تستطيع Apple فك تشفير بياناتك دون كسر الضمان التشفيري.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل ترسل Samsung بياناتي إلى Google؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'فقط للميزات التي تستخدم Gemini (الوكلاء، Circle to Search). تبقى ميزات فحص المكالمات وNow Nudge وNow Brief وكشف الاحتيال داخل بنية Samsung التحتية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي جهاز أسرع للذكاء الاصطناعي على الجهاز؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exynos 2600 (Galaxy S26 عالميًا) > Snapdragon 8 Elite Gen 5 (Galaxy S26 في الولايات المتحدة/الصين/اليابان) في Stable Diffusion. لم تُقارَن Apple A18 Pro مباشرةً مع Stable Diffusion.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تعطيل ميزات سحابة Galaxy AI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. عطّل Creative Studio ووكلاء Gemini وCircle to Search من الإعدادات > Galaxy AI. فعّل "معالجة البيانات على الجهاز فقط" لحظر الرجوع إلى السحابة للميزات المتوافقة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Apple Intelligence متاح على جميع أجهزة iPhone؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. فقط iPhone 16 وما بعده (شريحة A18 Pro). لا يستطيع iPhone 15 تشغيل نماذج AFM 3 الجديدة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Galaxy S26 متاح عالميًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، لكن مع تقسيمات إقليمية للشرائح: Exynos 2600 (S26/S26+ عالميًا)، Snapdragon 8 Elite Gen 5 (الولايات المتحدة/الصين/اليابان S26، جميع طرازات S26 Ultra).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تدقيق خوادم PCC الخاصة بـApple؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. تنشر Apple الكود ونموذج التهديد لـPCC. يمكن لباحثي أمن مستقلين تدقيقه.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي منصة أفضل للخصوصية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'كلاهما قوي لكنهما مختلفان. Apple: خصوصية افتراضية، سحابة قابلة للتدقيق. Samsung: مفتاح يتحكم به المستخدم، Knox Vault بالأجهزة.',
+            },
+          },
+        ] }
   },
   de: {
     freshness_tier: 'monthly',
@@ -1552,17 +1841,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Ist Galaxy AI besser als Apple Intelligence?', a: 'Hängt von den Prioritäten ab. Galaxy AI hat mehr Funktionen zum Start und Nutzerkontrolle; Apple Intelligence hat stärkere Datenschutzgarantien und Politur. Für On-Device-LLM-Ausführung: Galaxy S26 ist besser (schnellere Hardware). Für datenschutzorientierte Nutzung: iPhone 16 ist besser (auditierbares PCC).' },
-          { q: 'Kann ich Ollama oder MLC Chat auf dem iPhone ausführen?', a: 'Nicht praktikabel. Das iOS-Sandboxing ist sehr restriktiv. Sie können leichte Inferenz-Apps ausführen, aber nicht vollständiges Ollama/MLC Chat. Android (Galaxy S26) hat viel bessere Unterstützung für DIY-LLM-Inferenz.' },
-          { q: 'Liest Apple meine Daten in Private Cloud Compute?', a: 'Nein. PCC nutzt kryptografische Bestätigung: Sie können den auf Apples Servern laufenden Code herunterladen und auditieren. Apple kann Ihre Daten nicht entschlüsseln, ohne die kryptografische Garantie zu brechen.' },
-          { q: 'Sendet Samsung meine Daten an Google?', a: 'Nur für Funktionen, die Gemini nutzen (Agenten, Circle to Search). Anrufscreening, Now Nudge, Now Brief, Betrugserkennung bleiben in Samsungs Infrastruktur.' },
-          { q: 'Welche Hardware ist schneller für On-Device-KI?', a: 'Exynos 2600 (Galaxy S26 global) > Snapdragon 8 Elite Gen 5 (Galaxy S26 USA/China/Japan) bei Stable Diffusion. Apple A18 Pro wurde nicht direkt gegen Stable Diffusion benchmarkt.' },
-          { q: 'Kann ich die Cloud-Funktionen von Galaxy AI deaktivieren?', a: 'Ja. Deaktivieren Sie Creative Studio, Gemini-Agenten, Circle to Search unter Einstellungen > Galaxy AI. Aktivieren Sie "Daten nur auf dem Gerät verarbeiten", um den Cloud-Fallback für kompatible Funktionen zu blockieren.' },
-          { q: 'Ist Apple Intelligence auf allen iPhones verfügbar?', a: 'Nein. Nur iPhone 16 und neuer (A18-Pro-Chip). Das iPhone 15 kann die neuen AFM-3-Modelle nicht ausführen.' },
-          { q: 'Ist das Galaxy S26 weltweit verfügbar?', a: 'Ja, aber mit regionalen Chip-Aufteilungen: Exynos 2600 (global S26/S26+), Snapdragon 8 Elite Gen 5 (USA/China/Japan S26, alle S26 Ultra).' },
-          { q: 'Kann ich Apples PCC-Server auditieren?', a: 'Ja. Apple veröffentlicht den Code und das Bedrohungsmodell für PCC. Unabhängige Sicherheitsforscher können ihn auditieren.' },
-          { q: 'Welche Plattform ist besser für den Datenschutz?', a: 'Beide sind stark, aber unterschiedlich. Apple: Datenschutz standardmäßig, auditierbare Cloud. Samsung: nutzergesteuerter Schalter, Hardware-Knox-Vault.' }
-        ]
+            { q: 'Ist Galaxy AI besser als Apple Intelligence?', a: 'Hängt von den Prioritäten ab. Galaxy AI hat mehr Funktionen zum Start und Nutzerkontrolle; Apple Intelligence hat stärkere Datenschutzgarantien und Politur. Für On-Device-LLM-Ausführung: Galaxy S26 ist besser (schnellere Hardware). Für datenschutzorientierte Nutzung: iPhone 16 ist besser (auditierbares PCC).' },
+            { q: 'Kann ich Ollama oder MLC Chat auf dem iPhone ausführen?', a: 'Nicht praktikabel. Das iOS-Sandboxing ist sehr restriktiv. Sie können leichte Inferenz-Apps ausführen, aber nicht vollständiges Ollama/MLC Chat. Android (Galaxy S26) hat viel bessere Unterstützung für DIY-LLM-Inferenz.' },
+            { q: 'Liest Apple meine Daten in Private Cloud Compute?', a: 'Nein. PCC nutzt kryptografische Bestätigung: Sie können den auf Apples Servern laufenden Code herunterladen und auditieren. Apple kann Ihre Daten nicht entschlüsseln, ohne die kryptografische Garantie zu brechen.' },
+            { q: 'Sendet Samsung meine Daten an Google?', a: 'Nur für Funktionen, die Gemini nutzen (Agenten, Circle to Search). Anrufscreening, Now Nudge, Now Brief, Betrugserkennung bleiben in Samsungs Infrastruktur.' },
+            { q: 'Welche Hardware ist schneller für On-Device-KI?', a: 'Exynos 2600 (Galaxy S26 global) > Snapdragon 8 Elite Gen 5 (Galaxy S26 USA/China/Japan) bei Stable Diffusion. Apple A18 Pro wurde nicht direkt gegen Stable Diffusion benchmarkt.' },
+            { q: 'Kann ich die Cloud-Funktionen von Galaxy AI deaktivieren?', a: 'Ja. Deaktivieren Sie Creative Studio, Gemini-Agenten, Circle to Search unter Einstellungen > Galaxy AI. Aktivieren Sie "Daten nur auf dem Gerät verarbeiten", um den Cloud-Fallback für kompatible Funktionen zu blockieren.' },
+            { q: 'Ist Apple Intelligence auf allen iPhones verfügbar?', a: 'Nein. Nur iPhone 16 und neuer (A18-Pro-Chip). Das iPhone 15 kann die neuen AFM-3-Modelle nicht ausführen.' },
+            { q: 'Ist das Galaxy S26 weltweit verfügbar?', a: 'Ja, aber mit regionalen Chip-Aufteilungen: Exynos 2600 (global S26/S26+), Snapdragon 8 Elite Gen 5 (USA/China/Japan S26, alle S26 Ultra).' },
+            { q: 'Kann ich Apples PCC-Server auditieren?', a: 'Ja. Apple veröffentlicht den Code und das Bedrohungsmodell für PCC. Unabhängige Sicherheitsforscher können ihn auditieren.' },
+            { q: 'Welche Plattform ist besser für den Datenschutz?', a: 'Beide sind stark, aber unterschiedlich. Apple: Datenschutz standardmäßig, auditierbare Cloud. Samsung: nutzergesteuerter Schalter, Hardware-Knox-Vault.' },
+          ]
       },
       relatedReading: { id: 'related-reading', title: 'Weiterführende Literatur', items: [
       '[Galaxy S26 Lokale KI Leitfaden: Galaxy AI & NPU erklärt (2026)](/de/local-llms/galaxy-s26-local-ai-on-device-2026) -- lokale KI auf dem Galaxy S26',
@@ -1573,17 +1862,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Galaxy vs iPhone On-Device AI: Samsung Galaxy AI vs Apple Intelligence (2026)', 'description': 'Galaxy AI vs Apple Intelligence: Vergleich von On-Device-KI-Funktionen, Datenschutzarchitektur, Cloud-Fallback und welches Smartphone besser für lokale LLM-Ausführung ist.', 'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-08-29', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'de', 'url': 'https://www.promptquorum.com/de/local-llms/galaxy-vs-iphone-on-device-ai-2026', 'articleBody': 'Samsung Galaxy S26 und Apple Intelligence stehen für zwei Philosophien der On-Device-KI.', 'proficiencyLevel': 'Intermediate' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'de', mainEntity: [
-      { '@type': 'Question', 'name': 'Ist Galaxy AI besser als Apple Intelligence?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Hängt von den Prioritäten ab. Galaxy AI hat mehr Funktionen und Nutzerkontrolle; Apple Intelligence hat stärkere Datenschutzgarantien. Für LLM-Ausführung: Galaxy S26 ist besser. Für Datenschutz: iPhone 16 ist besser.' } },
-      { '@type': 'Question', 'name': 'Kann ich Ollama oder MLC Chat auf dem iPhone ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nicht praktikabel. Das iOS-Sandboxing ist sehr restriktiv. Android (Galaxy S26) hat viel bessere Unterstützung für DIY-LLM-Inferenz.' } },
-      { '@type': 'Question', 'name': 'Liest Apple meine Daten in PCC?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. PCC nutzt kryptografische Bestätigung; Forscher können den auf Apples Servern laufenden Code auditieren.' } },
-      { '@type': 'Question', 'name': 'Sendet Samsung meine Daten an Google?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur für Funktionen, die Gemini nutzen. Andere Funktionen bleiben in Samsungs Infrastruktur.' } },
-      { '@type': 'Question', 'name': 'Welche Hardware ist schneller für On-Device-KI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exynos 2600 > Snapdragon 8 Elite Gen 5. Bei quantisierten 7B-LLMs erreicht Exynos 2600 ~24 Tokens/Sek.' } },
-      { '@type': 'Question', 'name': 'Kann ich die Cloud-Funktionen von Galaxy AI deaktivieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, in den Einstellungen. On-Device-Funktionen funktionieren weiterhin.' } },
-      { '@type': 'Question', 'name': 'Ist Apple Intelligence auf allen iPhones verfügbar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Nur iPhone 16 und neuer (A18-Pro-Chip).' } },
-      { '@type': 'Question', 'name': 'Ist das Galaxy S26 weltweit verfügbar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, aber mit regionalen Chip-Aufteilungen: Exynos 2600 und Snapdragon 8 Elite Gen 5.' } },
-      { '@type': 'Question', 'name': 'Kann ich Apples PCC-Server auditieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Apple veröffentlicht Code und Bedrohungsmodell für unabhängige Forscher.' } },
-      { '@type': 'Question', 'name': 'Welche Plattform ist besser für den Datenschutz?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide sind stark, aber unterschiedlich. Apple: Datenschutz standardmäßig. Samsung: nutzergesteuerter Schalter.' } }
-    ] }
+          {
+            '@type': 'Question',
+            'name': 'Ist Galaxy AI besser als Apple Intelligence?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hängt von den Prioritäten ab. Galaxy AI hat mehr Funktionen zum Start und Nutzerkontrolle; Apple Intelligence hat stärkere Datenschutzgarantien und Politur. Für On-Device-LLM-Ausführung: Galaxy S26 ist besser (schnellere Hardware). Für datenschutzorientierte Nutzung: iPhone 16 ist besser (auditierbares PCC).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Ollama oder MLC Chat auf dem iPhone ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht praktikabel. Das iOS-Sandboxing ist sehr restriktiv. Sie können leichte Inferenz-Apps ausführen, aber nicht vollständiges Ollama/MLC Chat. Android (Galaxy S26) hat viel bessere Unterstützung für DIY-LLM-Inferenz.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Liest Apple meine Daten in Private Cloud Compute?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. PCC nutzt kryptografische Bestätigung: Sie können den auf Apples Servern laufenden Code herunterladen und auditieren. Apple kann Ihre Daten nicht entschlüsseln, ohne die kryptografische Garantie zu brechen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sendet Samsung meine Daten an Google?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur für Funktionen, die Gemini nutzen (Agenten, Circle to Search). Anrufscreening, Now Nudge, Now Brief, Betrugserkennung bleiben in Samsungs Infrastruktur.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Hardware ist schneller für On-Device-KI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exynos 2600 (Galaxy S26 global) > Snapdragon 8 Elite Gen 5 (Galaxy S26 USA/China/Japan) bei Stable Diffusion. Apple A18 Pro wurde nicht direkt gegen Stable Diffusion benchmarkt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich die Cloud-Funktionen von Galaxy AI deaktivieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Deaktivieren Sie Creative Studio, Gemini-Agenten, Circle to Search unter Einstellungen > Galaxy AI. Aktivieren Sie "Daten nur auf dem Gerät verarbeiten", um den Cloud-Fallback für kompatible Funktionen zu blockieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Apple Intelligence auf allen iPhones verfügbar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Nur iPhone 16 und neuer (A18-Pro-Chip). Das iPhone 15 kann die neuen AFM-3-Modelle nicht ausführen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist das Galaxy S26 weltweit verfügbar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber mit regionalen Chip-Aufteilungen: Exynos 2600 (global S26/S26+), Snapdragon 8 Elite Gen 5 (USA/China/Japan S26, alle S26 Ultra).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Apples PCC-Server auditieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Apple veröffentlicht den Code und das Bedrohungsmodell für PCC. Unabhängige Sicherheitsforscher können ihn auditieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Plattform ist besser für den Datenschutz?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Beide sind stark, aber unterschiedlich. Apple: Datenschutz standardmäßig, auditierbare Cloud. Samsung: nutzergesteuerter Schalter, Hardware-Knox-Vault.',
+            },
+          },
+        ] }
   },
   fr: {
     freshness_tier: 'monthly',
@@ -1728,17 +2087,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
-          { q: 'Galaxy AI est-il meilleur qu\'Apple Intelligence ?', a: 'Cela dépend des priorités. Galaxy AI a plus de fonctionnalités au lancement et de contrôle utilisateur ; Apple Intelligence a des garanties de confidentialité plus fortes et une meilleure finition. Pour l\'exécution de LLM sur appareil : Galaxy S26 est meilleur (matériel plus rapide). Pour un usage axé sur la confidentialité : iPhone 16 est meilleur (PCC auditable).' },
-          { q: 'Puis-je exécuter Ollama ou MLC Chat sur iPhone ?', a: 'Pas de manière pratique. Le bac à sable iOS est très restrictif. Vous pouvez exécuter des applications d\'inférence légères, mais pas Ollama/MLC Chat complets. Android (Galaxy S26) offre un bien meilleur support pour l\'inférence LLM DIY.' },
-          { q: 'Apple lit-elle mes données dans Private Cloud Compute ?', a: 'Non. PCC utilise une attestation cryptographique : vous pouvez télécharger et auditer le code s\'exécutant sur les serveurs d\'Apple. Apple ne peut pas déchiffrer vos données sans briser la garantie cryptographique.' },
-          { q: 'Samsung envoie-t-elle mes données à Google ?', a: 'Uniquement pour les fonctionnalités utilisant Gemini (agents, Circle to Search). Filtrage d\'appels, Now Nudge, Now Brief, Détection d\'arnaques restent dans l\'infrastructure de Samsung.' },
-          { q: 'Quel matériel est le plus rapide pour l\'IA sur appareil ?', a: 'Exynos 2600 (Galaxy S26 mondial) > Snapdragon 8 Elite Gen 5 (Galaxy S26 États-Unis/Chine/Japon) pour Stable Diffusion. L\'Apple A18 Pro n\'a pas été comparé directement à Stable Diffusion.' },
-          { q: 'Puis-je désactiver les fonctionnalités cloud de Galaxy AI ?', a: 'Oui. Désactivez Creative Studio, les agents Gemini, Circle to Search dans Paramètres > Galaxy AI. Activez « Traiter les données uniquement sur l\'appareil » pour bloquer le repli cloud pour les fonctionnalités compatibles.' },
-          { q: 'Apple Intelligence est-elle disponible sur tous les iPhones ?', a: 'Non. Seulement iPhone 16 et ultérieur (puce A18 Pro). L\'iPhone 15 ne peut pas exécuter les nouveaux modèles AFM 3.' },
-          { q: 'Le Galaxy S26 est-il disponible mondialement ?', a: 'Oui, mais avec des répartitions de puces régionales : Exynos 2600 (S26/S26+ mondial), Snapdragon 8 Elite Gen 5 (États-Unis/Chine/Japon S26, tous les S26 Ultra).' },
-          { q: 'Puis-je auditer les serveurs PCC d\'Apple ?', a: 'Oui. Apple publie le code et le modèle de menace pour PCC. Des chercheurs en sécurité indépendants peuvent l\'auditer.' },
-          { q: 'Quelle plateforme est meilleure pour la confidentialité ?', a: 'Les deux sont solides mais différentes. Apple : confidentialité par défaut, cloud auditable. Samsung : bouton contrôlé par l\'utilisateur, Knox Vault matériel.' }
-        ]
+            { q: 'Galaxy AI est-il meilleur qu\'Apple Intelligence ?', a: 'Cela dépend des priorités. Galaxy AI a plus de fonctionnalités au lancement et de contrôle utilisateur ; Apple Intelligence a des garanties de confidentialité plus fortes et une meilleure finition. Pour l\'exécution de LLM sur appareil : Galaxy S26 est meilleur (matériel plus rapide). Pour un usage axé sur la confidentialité : iPhone 16 est meilleur (PCC auditable).' },
+            { q: 'Puis-je exécuter Ollama ou MLC Chat sur iPhone ?', a: 'Pas de manière pratique. Le bac à sable iOS est très restrictif. Vous pouvez exécuter des applications d\'inférence légères, mais pas Ollama/MLC Chat complets. Android (Galaxy S26) offre un bien meilleur support pour l\'inférence LLM DIY.' },
+            { q: 'Apple lit-elle mes données dans Private Cloud Compute ?', a: 'Non. PCC utilise une attestation cryptographique : vous pouvez télécharger et auditer le code s\'exécutant sur les serveurs d\'Apple. Apple ne peut pas déchiffrer vos données sans briser la garantie cryptographique.' },
+            { q: 'Samsung envoie-t-elle mes données à Google ?', a: 'Uniquement pour les fonctionnalités utilisant Gemini (agents, Circle to Search). Filtrage d\'appels, Now Nudge, Now Brief, Détection d\'arnaques restent dans l\'infrastructure de Samsung.' },
+            { q: 'Quel matériel est le plus rapide pour l\'IA sur appareil ?', a: 'Exynos 2600 (Galaxy S26 mondial) > Snapdragon 8 Elite Gen 5 (Galaxy S26 États-Unis/Chine/Japon) pour Stable Diffusion. L\'Apple A18 Pro n\'a pas été comparé directement à Stable Diffusion.' },
+            { q: 'Puis-je désactiver les fonctionnalités cloud de Galaxy AI ?', a: 'Oui. Désactivez Creative Studio, les agents Gemini, Circle to Search dans Paramètres > Galaxy AI. Activez « Traiter les données uniquement sur l\'appareil » pour bloquer le repli cloud pour les fonctionnalités compatibles.' },
+            { q: 'Apple Intelligence est-elle disponible sur tous les iPhones ?', a: 'Non. Seulement iPhone 16 et ultérieur (puce A18 Pro). L\'iPhone 15 ne peut pas exécuter les nouveaux modèles AFM 3.' },
+            { q: 'Le Galaxy S26 est-il disponible mondialement ?', a: 'Oui, mais avec des répartitions de puces régionales : Exynos 2600 (S26/S26+ mondial), Snapdragon 8 Elite Gen 5 (États-Unis/Chine/Japon S26, tous les S26 Ultra).' },
+            { q: 'Puis-je auditer les serveurs PCC d\'Apple ?', a: 'Oui. Apple publie le code et le modèle de menace pour PCC. Des chercheurs en sécurité indépendants peuvent l\'auditer.' },
+            { q: 'Quelle plateforme est meilleure pour la confidentialité ?', a: 'Les deux sont solides mais différentes. Apple : confidentialité par défaut, cloud auditable. Samsung : bouton contrôlé par l\'utilisateur, Knox Vault matériel.' },
+          ]
       },
       relatedReading: { id: 'related-reading', title: 'Lectures associées', items: [
       '[Guide Galaxy S26 IA Locale: Galaxy AI et NPU Expliqués (2026)](/fr/local-llms/galaxy-s26-local-ai-on-device-2026) -- IA locale sur le Galaxy S26',
@@ -1749,16 +2108,86 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ] } },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', 'headline': 'Galaxy vs iPhone IA sur appareil: Samsung Galaxy AI vs Apple Intelligence (2026)', 'description': 'Galaxy AI vs Apple Intelligence : comparez les fonctionnalités d\'IA sur appareil, l\'architecture de confidentialité, le repli cloud, et quel smartphone est meilleur pour exécuter des LLM locaux.', 'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png', 'datePublished': '2026-06-15', 'dateModified': '2026-08-29', 'author': { '@type': 'Organization', 'name': 'PromptQuorum' }, 'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' }, 'inLanguage': 'fr', 'url': 'https://www.promptquorum.com/fr/local-llms/galaxy-vs-iphone-on-device-ai-2026', 'articleBody': 'Le Samsung Galaxy S26 et Apple Intelligence représentent deux philosophies de l\'IA sur appareil.', 'proficiencyLevel': 'Intermediate' },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', 'inLanguage': 'fr', mainEntity: [
-      { '@type': 'Question', 'name': 'Galaxy AI est-il meilleur qu\'Apple Intelligence ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Cela dépend des priorités. Galaxy AI a plus de fonctionnalités et de contrôle utilisateur ; Apple Intelligence a des garanties de confidentialité plus fortes. Pour l\'exécution LLM : Galaxy S26 est meilleur. Pour la confidentialité : iPhone 16 est meilleur.' } },
-      { '@type': 'Question', 'name': 'Puis-je exécuter Ollama ou MLC Chat sur iPhone ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pas de manière pratique. Le bac à sable iOS est très restrictif. Android (Galaxy S26) offre un bien meilleur support pour l\'inférence LLM DIY.' } },
-      { '@type': 'Question', 'name': 'Apple lit-elle mes données dans PCC ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. PCC utilise une attestation cryptographique ; les chercheurs peuvent auditer le code s\'exécutant sur les serveurs d\'Apple.' } },
-      { '@type': 'Question', 'name': 'Samsung envoie-t-elle mes données à Google ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Uniquement pour les fonctionnalités utilisant Gemini. Les autres fonctionnalités restent dans l\'infrastructure de Samsung.' } },
-      { '@type': 'Question', 'name': 'Quel matériel est le plus rapide pour l\'IA sur appareil ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exynos 2600 > Snapdragon 8 Elite Gen 5. Sur des LLM quantifiés 7B, l\'Exynos 2600 atteint environ 24 tokens/sec.' } },
-      { '@type': 'Question', 'name': 'Puis-je désactiver les fonctionnalités cloud de Galaxy AI ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, dans les Paramètres. Les fonctionnalités sur appareil continuent de fonctionner.' } },
-      { '@type': 'Question', 'name': 'Apple Intelligence est-elle disponible sur tous les iPhones ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Seulement iPhone 16 et ultérieur (puce A18 Pro).' } },
-      { '@type': 'Question', 'name': 'Le Galaxy S26 est-il disponible mondialement ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, mais avec des répartitions de puces régionales : Exynos 2600 et Snapdragon 8 Elite Gen 5.' } },
-      { '@type': 'Question', 'name': 'Puis-je auditer les serveurs PCC d\'Apple ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Apple publie le code et le modèle de menace pour des chercheurs indépendants.' } },
-      { '@type': 'Question', 'name': 'Quelle plateforme est meilleure pour la confidentialité ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les deux sont solides mais différentes. Apple : confidentialité par défaut. Samsung : bouton contrôlé par l\'utilisateur.' } }
-    ] }
+          {
+            '@type': 'Question',
+            'name': 'Galaxy AI est-il meilleur qu\'Apple Intelligence ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cela dépend des priorités. Galaxy AI a plus de fonctionnalités au lancement et de contrôle utilisateur ; Apple Intelligence a des garanties de confidentialité plus fortes et une meilleure finition. Pour l\'exécution de LLM sur appareil : Galaxy S26 est meilleur (matériel plus rapide). Pour un usage axé sur la confidentialité : iPhone 16 est meilleur (PCC auditable).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je exécuter Ollama ou MLC Chat sur iPhone ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pas de manière pratique. Le bac à sable iOS est très restrictif. Vous pouvez exécuter des applications d\'inférence légères, mais pas Ollama/MLC Chat complets. Android (Galaxy S26) offre un bien meilleur support pour l\'inférence LLM DIY.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple lit-elle mes données dans Private Cloud Compute ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. PCC utilise une attestation cryptographique : vous pouvez télécharger et auditer le code s\'exécutant sur les serveurs d\'Apple. Apple ne peut pas déchiffrer vos données sans briser la garantie cryptographique.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Samsung envoie-t-elle mes données à Google ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Uniquement pour les fonctionnalités utilisant Gemini (agents, Circle to Search). Filtrage d\'appels, Now Nudge, Now Brief, Détection d\'arnaques restent dans l\'infrastructure de Samsung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel matériel est le plus rapide pour l\'IA sur appareil ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exynos 2600 (Galaxy S26 mondial) > Snapdragon 8 Elite Gen 5 (Galaxy S26 États-Unis/Chine/Japon) pour Stable Diffusion. L\'Apple A18 Pro n\'a pas été comparé directement à Stable Diffusion.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je désactiver les fonctionnalités cloud de Galaxy AI ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Désactivez Creative Studio, les agents Gemini, Circle to Search dans Paramètres > Galaxy AI. Activez « Traiter les données uniquement sur l\'appareil » pour bloquer le repli cloud pour les fonctionnalités compatibles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple Intelligence est-elle disponible sur tous les iPhones ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Seulement iPhone 16 et ultérieur (puce A18 Pro). L\'iPhone 15 ne peut pas exécuter les nouveaux modèles AFM 3.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Le Galaxy S26 est-il disponible mondialement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, mais avec des répartitions de puces régionales : Exynos 2600 (S26/S26+ mondial), Snapdragon 8 Elite Gen 5 (États-Unis/Chine/Japon S26, tous les S26 Ultra).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je auditer les serveurs PCC d\'Apple ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Apple publie le code et le modèle de menace pour PCC. Des chercheurs en sécurité indépendants peuvent l\'auditer.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle plateforme est meilleure pour la confidentialité ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les deux sont solides mais différentes. Apple : confidentialité par défaut, cloud auditable. Samsung : bouton contrôlé par l\'utilisateur, Knox Vault matériel.',
+            },
+          },
+        ] }
   }
 };

@@ -344,16 +344,86 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Was ist Prompt-Qualität?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Qualität misst, wie zuverlässig ein Prompt die beabsichtigte Ausgabe über verschiedene Eingaben erzeugt. Sie hat drei Dimensionen: Accuracy, Konsistenz und Instruction-Following Rate. Ein qualitativ hochwertiger Prompt erzeugt korrekte, konsistente und ordnungsgemäß formatierte Ausgaben zu 85%+ über alle Eingabetypen hinweg.' } },
-          { '@type': 'Question', name: 'Wie bewertest du die Prompt-Qualität?', acceptedAnswer: { '@type': 'Answer', text: 'Erstelle einen Test-Set mit 20+ Eingaben (Happy Path, Edge Cases, Adversarial), definiere Pass-Kriterien für jeden vor dem Testen, führe die Eingaben durch deinen Prompt und bewerte die Ausgaben gegen deine Rubrik. Verfolge die Gesamt-Pass-Rate als Primärmetrik. Speichere diese Baseline, damit du Regressionen erkennen kannst, wenn sich der Prompt ändert.' } },
-          { '@type': 'Question', name: 'Was ist Instruction-Following Rate?', acceptedAnswer: { '@type': 'Answer', text: 'Die Instruction-Following Rate ist der Prozentsatz von Ausgaben, bei denen das Modell jede Einschränkung im Prompt befolgt hat: Format, Länge, Ton, Umfang und verbotene Inhalte. Eine Rate von 90 % bedeutet, dass 1 von 10 Produktionsanfragen eine Einschränkung verletzt. Dies ist unterschiedlich von Accuracy und muss separat gemessen werden.' } },
-          { '@type': 'Question', name: 'Warum funktioniert manuelles Spot-Checking nicht bei der Prompt-Bewertung?', acceptedAnswer: { '@type': 'Answer', text: 'Manuelles Spot-Checking ist nicht wiederholbar (verschiedene Reviewer wählen unterschiedliche Beispiele), auswahlverzerrend (Reviewer wählen unbewusst Fälle, von denen sie erwarten, dass sie bestehen) und nicht skalierbar (10 Beispiele verpassen 90 % der Fehlermodi in einem 100er Set). Automatisierte Test-Sets liefern konsistente, reproduzierbare Ergebnisse über Prompt-Versionen und Modell-Updates.' } },
-          { '@type': 'Question', name: 'Wie viele Test-Fälle braucht ein Prompt-Test-Set?', acceptedAnswer: { '@type': 'Answer', text: 'Ein minimaler Test-Set braucht 20 Fälle: 10 Happy-Path-Eingaben für typische Nutzung, 5 Edge Cases an Grenzen (leere Eingabe, sehr lange Eingabe, mehrsprachige Texte) und 5 Adversarial Inputs. Weniger als 20 Fälle erzeugen statistisch unzuverlässige Pass-Raten, die reale Fehlerszenarien verpassen.' } },
-          { '@type': 'Question', name: 'Unterscheidet sich die Prompt-Qualität zwischen GPT-5.6 und Claude Opus 5?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, erheblich. Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-5.6 und Claude Opus 5 aufgrund von Unterschieden in der Instruction-Format-Sensitivität und dem System-Prompt-Handling. Messe die Pass-Rate immer separat auf jedem Modell, das du einsetzen möchtest. Ein Prompt, der auf GPT-5.6 95 % scored, kann auf Claude Opus 5 ohne modellspezifisches Tuning 80 % scored.' } },
-          { '@type': 'Question', name: 'Was ist LLM-as-Judge Scoring und wann sollte ich es verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-5.6 oder Claude Opus 5, um Ausgaben gegen eine Rubrik zu bewerten. Der Judge erhält die ursprüngliche Eingabe, deine Modell-Ausgabe und Evaluierungskriterien und liefert dann einen Score mit Begründung. Verwende LLM-as-Judge für Free-Text-Ausgaben, wo Binary Pass/Fail nicht ausreicht. Es skaliert auf Tausende Test-Fälle ohne menschliche Überprüfung, was es ideal für kontinuierliche Evaluierungs-Pipelines macht.' } },
-          { '@type': 'Question', name: 'Wie setzt du eine Pass-Rate Regressions-Schwelle?', acceptedAnswer: { '@type': 'Answer', text: 'Speichere die Pass-Rate aus dem ersten Test-Durchlauf als Baseline. Ein Regressions-Gate von 5 Punkten ist üblich: wenn eine Prompt-Änderung die Pass-Rate um mehr als 5 Punkte relativ zur Baseline senkt, blockiere das Deployment. Teams zielen typischerweise auf 85–95 % Pass-Rate für Produktions-Prompts ab. Für kritische Workflows (legal, medizinisch, finanziell) verwende stattdessen ein 2-Punkte-Regressions-Gate.' } },
-          { '@type': 'Question', name: 'Muss ich bei der Verwendung von Prompt-Bewertung die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Wenn dein Prompt personenbezogene Daten verarbeitet, gelten DSGVO Artikel 28 (Datenverarbeitungs-Vereinbarungen) und Artikel 22 (automatisierte Entscheidungsfindung). Dokumentierte Prompt-Bewertungs-Test-Sets mit Pass-Rate-Records liefern audit-bereite Nachweise für systematische Qualitätskontrolle. Sie unterstützen auch die Erklärbarkeit, die Artikel 22 für automatisierte Entscheidungen erfordert. Speichere Test-Sets als Compliance-Dokumentation.' } },
-          { '@type': 'Question', name: 'Ist Prompt-Bewertung für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Mittelständische Unternehmen profitieren von strukturierter Prompt-Bewertung, besonders wenn LLMs in kundenorientierten oder sicherheitskritischen Workflows eingesetzt werden. Ein 20er Test-Set mit dokumentierten Pass-Raten erfüllt BSI-Grundschutz-Katalog Anforderungen für Qualitätskontrolle. Der Aufwand ist niedrig (ein Test-Set mit etwa 6 Stunden Vorbereitung), und die Compliance-Dokumentation reduziert IT-Sicherheits-Audit-Fragen. Besonders relevant für Finanz-, Versicherungs- und Industrie-Mittelstand.' } },
+          {
+            '@type': 'Question',
+            'name': 'Was ist Prompt-Qualität?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Prompt-Qualität misst, wie zuverlässig ein Prompt die beabsichtigte Ausgabe über verschiedene Eingaben erzeugt. Sie hat drei Dimensionen: Accuracy, Konsistenz und Instruction-Following Rate. Ein qualitativ hochwertiger Prompt erzeugt korrekte, konsistente und ordnungsgemäß formatierte Ausgaben zu 85%+ über alle Eingabetypen hinweg.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie bewertest du Prompt-Qualität?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Erstelle einen Test-Set mit 20+ Eingaben (Happy Path, Edge Cases, Adversarial), definiere Pass-Kriterien für jeden vor dem Testen, führe die Eingaben durch deinen Prompt und bewerte Ausgaben gegen deine Rubrik. Verfolge die Gesamt-Pass-Rate als Primärmetrik. Speichere diese Baseline, damit du Regressionen erkennen kannst, wenn sich der Prompt ändert.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist Instruction-Following Rate?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Instruction-Following Rate ist der Prozentsatz von Ausgaben, bei denen das Modell jede Einschränkung im Prompt befolgt hat: Format, Länge, Ton, Umfang und verbotene Inhalte. Eine Rate von 90 % bedeutet, dass 1 von 10 Produktionsanfragen eine Einschränkung verletzt. Dies ist unterschiedlich von Accuracy und muss separat gemessen werden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Warum funktioniert manuelles Spot-Checking nicht bei der Prompt-Bewertung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Manuelles Spot-Checking ist nicht wiederholbar (verschiedene Reviewer wählen unterschiedliche Beispiele), auswahlverzerrend (Reviewer wählen unbewusst Fälle, von denen sie erwarten, dass sie bestehen) und nicht skalierbar (10 Beispiele verpassen 90 % der Fehlermodi in einem 100er Set). Automatisierte Test-Sets liefern konsistente, reproduzierbare Ergebnisse über Prompt-Versionen und Modell-Updates.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viele Test-Fälle braucht ein Prompt-Test-Set?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein minimaler Test-Set braucht 20 Fälle: 10 Happy-Path-Eingaben für typische Nutzung, 5 Edge Cases an Grenzen (leere Eingabe, sehr lange Eingabe, mehrsprachige Texte) und 5 Adversarial Inputs. Weniger als 20 Fälle erzeugen statistisch unzuverlässige Pass-Raten, die reale Fehlerszenarien verpassen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Unterscheidet sich die Prompt-Qualität zwischen GPT-5.6 und Claude Opus 5?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, erheblich. Derselbe Prompt scored regelmäßig 10-20 Punkte unterschiedlich zwischen GPT-5.6 und Claude Opus 5 aufgrund von Unterschieden in der Instruction-Format-Sensitivität und dem System-Prompt-Handling. Messe die Pass-Rate immer separat auf jedem Modell, das du einsetzen möchtest. Ein Prompt, der auf GPT-5.6 95 % scored, kann auf Claude Opus 5 ohne modellspezifisches Tuning 80 % scored.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist LLM-as-Judge Scoring und wann sollte ich es verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-5.6 oder Claude Opus 5, um Ausgaben gegen eine Rubrik zu bewerten. Der Judge erhält die ursprüngliche Eingabe, deine Modell-Ausgabe und Evaluierungskriterien und liefert dann einen Score mit Begründung. Verwende LLM-as-Judge für Free-Text-Ausgaben, wo Binary Pass/Fail nicht ausreicht. Es skaliert auf Tausende Test-Fälle ohne menschliche Überprüfung, was es ideal für kontinuierliche Evaluierungs-Pipelines macht.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie setzt du eine Pass-Rate Regressions-Schwelle?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Speichere die Pass-Rate aus dem ersten Test-Durchlauf als Baseline. Ein Regressions-Gate von 5 Punkten ist üblich: wenn eine Prompt-Änderung die Pass-Rate um mehr als 5 Punkte relativ zur Baseline senkt, blockiere das Deployment. Teams zielen typischerweise auf 85–95 % Pass-Rate für Produktions-Prompts ab. Für kritische Workflows (legal, medizinisch, finanziell) verwende stattdessen ein 2-Punkte-Regressions-Gate.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von Prompt-Bewertung die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Wenn dein Prompt personenbezogene Daten verarbeitet, gelten DSGVO Artikel 28 (Datenverarbeitungs-Vereinbarungen) und Artikel 22 (automatisierte Entscheidungsfindung). Dokumentierte Prompt-Bewertungs-Test-Sets mit Pass-Rate-Records liefern audit-bereite Nachweise für systematische Qualitätskontrolle. Sie unterstützen auch die Erklärbarkeit, die Artikel 22 für automatisierte Entscheidungen erfordert. Speichere Test-Sets als Compliance-Dokumentation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Prompt-Bewertung für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Mittelständische Unternehmen profitieren von strukturierter Prompt-Bewertung, besonders wenn LLMs in kundenorientierten oder sicherheitskritischen Workflows eingesetzt werden. Ein 20er Test-Set mit dokumentierten Pass-Raten erfüllt BSI-Grundschutz-Katalog Anforderungen für Qualitätskontrolle. Der Aufwand ist niedrig (ein Test-Set mit etwa 6 Stunden Vorbereitung), und die Compliance-Dokumentation reduziert IT-Sicherheits-Audit-Fragen. Besonders relevant für Finanz-, Versicherungs- und Industrie-Mittelstand.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -619,15 +689,78 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         mainEntity: [
-          { '@type': 'Question', name: '¿Qué es la calidad de los prompts?', acceptedAnswer: { '@type': 'Answer', text: 'La calidad de los prompts mide con qué fiabilidad un prompt produce la salida esperada en entradas variadas. Tiene tres dimensiones: precisión, consistencia y tasa de seguimiento de instrucciones. Un prompt de calidad produce salidas correctas, consistentes y correctamente formateadas en el 85 %+ del tiempo en todos los tipos de entrada.' } },
-          { '@type': 'Question', name: '¿Cómo evalúas la calidad de los prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Construye un conjunto de prueba de 20+ entradas (ruta estándar, casos límite, adversariales), define criterios de éxito para cada uno antes de probar, ejecuta las entradas a través de tu prompt y puntúa las salidas según tu rúbrica. Rastrea la tasa de éxito general como tu métrica principal. Registra esta línea base para poder detectar regresiones cuando cambie el prompt.' } },
-          { '@type': 'Question', name: '¿Qué es la tasa de seguimiento de instrucciones?', acceptedAnswer: { '@type': 'Answer', text: 'La tasa de seguimiento de instrucciones es el porcentaje de salidas donde el modelo obedeció todas las constraints del prompt: formato, longitud, tono, alcance y contenido prohibido. Una tasa del 90 % significa que 1 de cada 10 solicitudes falla en producción. Es distinta de la precisión y debe medirse por separado.' } },
-          { '@type': 'Question', name: '¿Por qué falla la verificación manual por muestras en la evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'La verificación manual por muestras no es reproducible (distintos revisores eligen ejemplos diferentes), está sesgada en la selección (los revisores eligen inconscientemente casos que esperan que pasen) y no escala (10 ejemplos se pierden el 90 % de los modos de fallo en un conjunto de 100 casos). Los conjuntos de prueba automatizados producen resultados consistentes y reproducibles entre versiones de prompt y actualizaciones de modelo.' } },
-          { '@type': 'Question', name: '¿Cuántos casos de prueba necesita un conjunto de prueba de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Un conjunto de prueba mínimo necesita 20 casos: 10 entradas de ruta estándar que cubran el uso típico, 5 casos límite que prueben los límites (entrada vacía, entrada muy larga, texto multilingüe) y 5 entradas adversariales diseñadas para romper el prompt. Menos de 20 casos produce tasas de éxito estadísticamente poco fiables.' } },
-          { '@type': 'Question', name: '¿Difiere la calidad de los prompts entre GPT-5.6 y Claude Opus 5?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, significativamente. El mismo prompt puntúa regularmente 10–20 puntos de forma diferente entre GPT-5.6 y Claude Opus 5 debido a diferencias en la sensibilidad al formato de instrucciones y el manejo del prompt del sistema. Mide siempre la tasa de éxito por separado en cada modelo que planees desplegar.' } },
-          { '@type': 'Question', name: '¿Qué es la puntuación LLM-as-judge y cuándo debo usarla?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa un modelo capaz como GPT-5.6 o Claude Opus 5 para puntuar salidas contra una rúbrica. El juez recibe la entrada original, la salida de tu modelo y los criterios de evaluación, luego devuelve una puntuación con justificación. Úsalo para salidas de texto libre donde el pass/fail binario es insuficiente. Escala a miles de casos de prueba sin revisión humana.' } },
-          { '@type': 'Question', name: '¿Cómo estableces un umbral de regresión de tasa de éxito?', acceptedAnswer: { '@type': 'Answer', text: 'Registra la tasa de éxito en la primera ejecución de prueba como tu línea base. Un umbral de regresión de 5 puntos es habitual: si un cambio de prompt reduce la tasa de éxito en más de 5 puntos respecto a la línea base, bloquea el despliegue. Los equipos suelen apuntar a tasas de éxito del 85–95 % para prompts de producción.' } },
-          { '@type': 'Question', name: '¿Debo tener en cuenta las regulaciones al usar evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los sistemas de IA de alto riesgo bajo el AI Act de la UE deben demostrar procesos documentados de pruebas y garantía de calidad. Los conjuntos de prueba de evaluación de prompts y los registros de tasas de éxito proporcionan evidencia lista para auditoría. Para workflows críticos (legal, médico, financiero), usa un umbral de regresión de 2 puntos.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es la calidad de los prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La calidad de los prompts mide con qué fiabilidad un prompt produce la salida esperada en entradas variadas. Tiene tres dimensiones: precisión, consistencia y tasa de seguimiento de instrucciones. Un prompt de calidad produce salidas correctas, consistentes y correctamente formateadas en el 85 %+ del tiempo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo evalúas la calidad de los prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Construye un conjunto de prueba de 20+ entradas (ruta estándar, casos límite, adversariales), define criterios de éxito para cada uno antes de probar, ejecuta las entradas y puntúa las salidas. Rastrea la tasa de éxito general como tu métrica principal y registra esta línea base para detectar regresiones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es la tasa de seguimiento de instrucciones?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La tasa de seguimiento de instrucciones es el porcentaje de salidas donde el modelo obedeció todas las constraints: formato, longitud, tono, alcance y contenido prohibido. Una tasa del 90 % significa que 1 de cada 10 solicitudes falla en producción. Es distinta de la precisión y debe medirse por separado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué falla la verificación manual por muestras?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No es reproducible (distintos revisores eligen ejemplos diferentes), está sesgada en la selección (los revisores eligen casos que esperan que pasen) y no escala (10 ejemplos se pierden el 90 % de los modos de fallo). Los conjuntos de prueba automatizados producen resultados consistentes y reproducibles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuántos casos de prueba necesita un conjunto de prueba de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un mínimo de 20 casos: 10 de ruta estándar, 5 casos límite y 5 adversariales. Menos de 20 produce tasas de éxito poco fiables estadísticamente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Difiere la calidad de los prompts entre GPT-5.6 y Claude Opus 5?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, significativamente. El mismo prompt puntúa regularmente 10–20 puntos de forma diferente. Mide siempre la tasa de éxito por separado en cada modelo que planees desplegar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es LLM-as-judge y cuándo debo usarlo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLM-as-judge usa un modelo capaz para puntuar salidas contra una rúbrica. Úsalo para salidas de texto libre donde el pass/fail binario es insuficiente. Escala a miles de casos sin revisión humana.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo estableces un umbral de regresión de tasa de éxito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Registra la tasa de éxito en la primera ejecución como tu línea base. Un umbral de regresión de 5 puntos es habitual: si un cambio de prompt reduce la tasa en más de 5 puntos, bloquea el despliegue. Para workflows críticos (legal, médico, financiero), usa un umbral de 2 puntos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo tener en cuenta regulaciones al usar evaluación de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Los sistemas de IA de alto riesgo bajo el AI Act de la UE deben demostrar procesos documentados de pruebas. Los conjuntos de prueba y registros de tasas de éxito proporcionan evidencia lista para auditoría. Almacénalos junto a tu biblioteca de prompts.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -892,15 +1025,78 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'ما هي جودة البرومبت؟', acceptedAnswer: { '@type': 'Answer', text: 'تقيس جودة البرومبت مدى موثوقية البرومبت في إنتاج المخرجات المتوقعة عبر مدخلات متنوعة. لها ثلاثة أبعاد: الدقة، والاتساق، ومعدل اتباع التعليمات. يُنتج البرومبت عالي الجودة مخرجات صحيحة ومتسقة ومنسقة بشكل صحيح في 85%+ من الوقت عبر جميع أنواع المدخلات.' } },
-          { '@type': 'Question', name: 'كيف تقيّم جودة البرومبت؟', acceptedAnswer: { '@type': 'Answer', text: 'ابنِ مجموعة اختبار من 20+ مدخلًا (مسار قياسي، حالات حدية، مدخلات عدائية)، حدّد معايير النجاح لكل منها قبل الاختبار، شغّل المدخلات عبر برومبتك وسجّل المخرجات وفق Rubric الخاص بك. تتبع معدل النجاح الإجمالي كمقياسك الرئيسي. سجّل هذا الخط الأساسي لتتمكن من اكتشاف الانحدارات عند تغيير البرومبت.' } },
-          { '@type': 'Question', name: 'ما هو معدل اتباع التعليمات؟', acceptedAnswer: { '@type': 'Answer', text: 'معدل اتباع التعليمات هو نسبة المخرجات التي يطيع فيها النموذج جميع قيود البرومبت: التنسيق، والطول، والنبرة، والنطاق، والمحتوى المحظور. معدل 90% يعني أن طلبًا واحدًا من كل 10 في الإنتاج يخفق في قيد ما. وهو مختلف عن الدقة ويجب قياسه بشكل منفصل.' } },
-          { '@type': 'Question', name: 'لماذا يفشل الفحص اليدوي العشوائي في تقييم البرومبت؟', acceptedAnswer: { '@type': 'Answer', text: 'الفحص اليدوي العشوائي غير قابل للاستنساخ (يختار مراجعون مختلفون أمثلة مختلفة)، ومتحيز في الاختيار (يختار المراجعون حالات يتوقعون نجاحها)، وغير قابل للتوسع (10 أمثلة تفوّت 90% من أوضاع الفشل في مجموعة من 100 حالة). تُنتج مجموعات الاختبار الآلية نتائج متسقة وقابلة للاستنساخ عبر إصدارات البرومبت وتحديثات النموذج.' } },
-          { '@type': 'Question', name: 'كم من حالات الاختبار تحتاجها مجموعة اختبار البرومبت؟', acceptedAnswer: { '@type': 'Answer', text: 'تحتاج مجموعة الاختبار الدنيا إلى 20 حالة: 10 مدخلات مسار قياسي تغطي الاستخدام النمطي، و5 حالات حدية تختبر الحدود (مدخل فارغ، مدخل طويل جدًا، نص متعدد اللغات)، و5 مدخلات عدائية مصممة لكسر البرومبت. أقل من 20 حالة ينتج معدلات نجاح غير موثوقة إحصائيًا.' } },
-          { '@type': 'Question', name: 'هل تختلف جودة البرومبت بين GPT-5.6 وClaude Opus 5؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، بشكل ملحوظ. يسجّل البرومبت ذاته بانتظام فارقًا من 10–20 نقطة بين GPT-5.6 وClaude Opus 5 بسبب اختلافات في حساسية تنسيق التعليمات والتعامل مع برومبت النظام. قِس دائمًا معدل النجاح بشكل منفصل على كل نموذج تخطط لنشره.' } },
-          { '@type': 'Question', name: 'ما هو تسجيل LLM-as-judge ومتى يجب استخدامه؟', acceptedAnswer: { '@type': 'Answer', text: 'يستخدم LLM-as-judge نموذجًا قادرًا مثل GPT-5.6 أو Claude Opus 5 لتسجيل المخرجات مقابل Rubric. يتلقى المحكّم المدخل الأصلي ومخرجات نموذجك ومعايير التقييم، ثم يُعيد درجة مع تبرير. استخدمه للمخرجات النصية الحرة حيث يكون التسجيل الثنائي غير كافٍ. يتوسع إلى آلاف حالات الاختبار دون مراجعة بشرية.' } },
-          { '@type': 'Question', name: 'كيف تحدد عتبة انحدار معدل النجاح؟', acceptedAnswer: { '@type': 'Answer', text: 'سجّل معدل النجاح في أول تشغيل اختبار كخط أساسك. عتبة انحدار من 5 نقاط شائعة: إذا خفّض تغيير برومبت معدل النجاح بأكثر من 5 نقاط عن الخط الأساسي، احجب النشر. تستهدف الفرق عادةً معدلات نجاح 85–95% لبرومبتات الإنتاج.' } },
-          { '@type': 'Question', name: 'هل يجب مراعاة اللوائح عند استخدام تقييم البرومبت؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يجب على أنظمة الذكاء الاصطناعي عالية المخاطر بموجب قانون الذكاء الاصطناعي الأوروبي إثبات عمليات اختبار وضمان جودة موثقة. توفر مجموعات اختبار تقييم البرومبت وسجلات معدلات النجاح أدلة جاهزة للتدقيق. للسير العمل الحيوية (القانونية، الطبية، المالية)، استخدم عتبة انحدار من نقطتين.' } },
+          {
+            '@type': 'Question',
+            'name': 'ما هي جودة البرومبت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تقيس جودة البرومبت مدى موثوقية البرومبت في إنتاج المخرجات المتوقعة عبر مدخلات متنوعة. لها ثلاثة أبعاد: الدقة، والاتساق، ومعدل اتباع التعليمات. يُنتج البرومبت عالي الجودة مخرجات صحيحة ومتسقة ومنسقة بشكل صحيح في 85%+ من الوقت.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف تقيّم جودة البرومبت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ابنِ مجموعة اختبار من 20+ مدخلًا (مسار قياسي، حالات حدية، مدخلات عدائية)، حدّد معايير النجاح لكل منها قبل الاختبار، شغّل المدخلات وسجّل المخرجات. تتبع معدل النجاح الإجمالي كمقياسك الرئيسي وسجّل هذا الخط الأساسي لاكتشاف الانحدارات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو معدل اتباع التعليمات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'معدل اتباع التعليمات هو نسبة المخرجات التي يطيع فيها النموذج جميع القيود: التنسيق، والطول، والنبرة، والنطاق، والمحتوى المحظور. معدل 90% يعني أن طلبًا واحدًا من كل 10 في الإنتاج يخفق. وهو مختلف عن الدقة ويجب قياسه بشكل منفصل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا يفشل الفحص اليدوي العشوائي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'غير قابل للاستنساخ (يختار مراجعون مختلفون أمثلة مختلفة)، ومتحيز في الاختيار (يختار المراجعون حالات يتوقعون نجاحها)، وغير قابل للتوسع (10 أمثلة تفوّت 90% من أوضاع الفشل). تُنتج مجموعات الاختبار الآلية نتائج متسقة وقابلة للاستنساخ.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم من حالات الاختبار تحتاجها مجموعة اختبار البرومبت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '20 حالة على الأقل: 10 مسار قياسي، و5 حالات حدية، و5 مدخلات عدائية. أقل من 20 ينتج معدلات نجاح غير موثوقة إحصائيًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تختلف جودة البرومبت بين GPT-5.6 وClaude Opus 5؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، بشكل ملحوظ. البرومبت ذاته يسجّل بانتظام بفارق 10–20 نقطة. قِس دائمًا معدل النجاح بشكل منفصل على كل نموذج تخطط لنشره.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو LLM-as-judge ومتى يجب استخدامه؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يستخدم LLM-as-judge نموذجًا قادرًا لتسجيل المخرجات مقابل Rubric. استخدمه للمخرجات النصية الحرة حيث يكون التسجيل الثنائي غير كافٍ. يتوسع إلى آلاف الحالات دون مراجعة بشرية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف تحدد عتبة انحدار معدل النجاح؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'سجّل معدل النجاح في أول تشغيل كخطك الأساسي. عتبة انحدار من 5 نقاط شائعة: إذا خفّض تغيير برومبت معدل النجاح بأكثر من 5 نقاط، احجب النشر. للسير العمل الحيوية (القانونية، الطبية، المالية)، استخدم عتبة نقطتين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يجب مراعاة اللوائح عند استخدام تقييم البرومبت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يجب على أنظمة الذكاء الاصطناعي عالية المخاطر بموجب قانون الذكاء الاصطناعي الأوروبي إثبات عمليات اختبار موثقة. توفر مجموعات الاختبار وسجلات معدلات النجاح أدلة جاهزة للتدقيق. خزّنها إلى جانب مكتبة برومبتاتك.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -1165,16 +1361,86 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'fr',
         mainEntity: [
-          { '@type': 'Question', name: 'Qu\'est-ce que la qualité des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'La qualité des prompts mesure la fiabilité avec laquelle un prompt produit la sortie prévue sur différentes entrées. Elle a trois dimensions : précision, cohérence et taux de conformité aux instructions. Un prompt de qualité produit des sorties correctes, cohérentes et correctement formatées à 85%+ sur tous les types d\'entrées.' } },
-          { '@type': 'Question', name: 'Comment évaluez-vous la qualité des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Construisez un ensemble de tests de 20+ entrées (chemins heureux, cas limites, adversariales), définissez les critères de passage avant de tester, exécutez les entrées via votre prompt, et évaluez les sorties contre votre rubrique. Suivez le taux de passage global comme métrique primaire. Enregistrez cette baseline pour détecter les régressions quand le prompt change.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que le taux de conformité aux instructions ?', acceptedAnswer: { '@type': 'Answer', text: 'Le taux de conformité aux instructions est le pourcentage de sorties où le modèle a respecté chaque contrainte du prompt : format, longueur, ton, portée et contenu interdit. Un taux de 90 % signifie que 1 requête de production sur 10 viole une contrainte. C\'est distinct de la précision et doit être mesuré séparément.' } },
-          { '@type': 'Question', name: 'Pourquoi la vérification manuelle échoue-t-elle pour l\'évaluation des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'La vérification manuelle n\'est pas reproductible (différents examinateurs choisissent différents exemples), souffre de biais de sélection (les examinateurs choisissent inconsciemment des cas qu\'ils s\'attendent à voir réussir), et ne s\'adapte pas à l\'échelle (10 exemples manquent 90 % des modes de défaillance dans un ensemble de 100). Les ensembles de tests automatisés produisent des résultats cohérents et reproductibles.' } },
-          { '@type': 'Question', name: 'De combien de cas de test un ensemble de tests a-t-il besoin ?', acceptedAnswer: { '@type': 'Answer', text: 'Un ensemble de tests minimal a besoin de 20 cas : 10 entrées de chemin heureux couvrant l\'usage typique, 5 cas limites testant les frontières (entrée vide, entrée très longue, texte multilingue), et 5 entrées adversariales. Moins de 20 cas produit des taux de passage statistiquement peu fiables qui manquent les vrais modes de défaillance.' } },
-          { '@type': 'Question', name: 'La qualité des prompts diffère-t-elle entre GPT-5.6 et Claude Opus 5 ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, considérablement. Le même prompt score régulièrement 10-20 points différemment entre GPT-5.6 et Claude Opus 5 en raison de différences dans la sensibilité aux formats d\'instructions et la gestion du prompt système. Mesurez toujours le taux de passage séparément sur chaque modèle que vous prévoyez de déployer. Un prompt qui score 95 % sur GPT-5.6 peut score 80 % sur Claude Opus 5 sans tuning modèle-spécifique.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que le scoring LLM-as-Judge et quand l\'utiliser ?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge utilise un modèle capable comme GPT-5.6 ou Claude Opus 5 pour évaluer les sorties contre une rubrique. Le juge reçoit l\'entrée originale, la sortie de votre modèle et les critères d\'évaluation, puis retourne un score avec justification. Utilisez LLM-as-Judge pour les sorties de texte libre où Pass/Fail binaire n\'est pas suffisant. Cela s\'adapte à des milliers de cas de test sans révision humaine, le rendant idéal pour les pipelines d\'évaluation continus.' } },
-          { '@type': 'Question', name: 'Comment définir un seuil de régression du taux de passage ?', acceptedAnswer: { '@type': 'Answer', text: 'Enregistrez le taux de passage du premier test en tant que baseline. Un gate de régression de 5 points est courant : si une modification du prompt abaisse le taux de passage de plus de 5 points par rapport à la baseline, bloquez le déploiement. Les équipes ciblent généralement 85–95 % de taux de passage pour les prompts en production. Pour les workflows critiques (juridique, médical, financier), utilisez plutôt un gate de 2 points.' } },
-          { '@type': 'Question', name: 'Comment intégrer l\'évaluation dans mon flux de travail ?', acceptedAnswer: { '@type': 'Answer', text: 'Créez un ensemble de 20 cas de test, exécutez-le une fois pour établir une baseline, puis réexécutez-le après chaque modification du prompt pour détecter les régressions. Un gate d\'au moins 5 points prévient les dégradations. Stockez les résultats avec le prompt pour la traçabilité. Les workflows à haut risque (finances, santé, légal) appliquent des gates plus stricts et utilisent LLM-as-Judge pour une évaluation continue.' } },
-          { '@type': 'Question', name: 'Quels outils existent pour l\'évaluation automatisée des prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'OpenAI Evals fournit un cadre de test harness, Anthropic publie les méthodes d\'évaluation, DeepEval offre un framework open-source avec métriques et intégration CI/CD, et PromptQuorum permet de diriger les ensembles de tests sur plusieurs modèles. Le choix dépend de votre cas d\'usage et de votre complexité d\'évaluation.' } },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que la qualité des prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La qualité des prompts mesure la fiabilité avec laquelle un prompt produit la sortie prévue sur différentes entrées. Elle a trois dimensions : précision, cohérence et taux de conformité aux instructions. Un prompt de qualité produit des sorties correctes, cohérentes et correctement formatées à 85%+ sur tous les types d\'entrées.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment évaluez-vous la qualité des prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Construisez un ensemble de tests de 20+ entrées (chemins heureux, cas limites, adversariales), définissez les critères de passage avant de tester, exécutez les entrées via votre prompt, et évaluez les sorties contre votre rubrique. Suivez le taux de passage global comme métrique primaire. Enregistrez cette baseline pour détecter les régressions quand le prompt change.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le taux de conformité aux instructions ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le taux de conformité aux instructions est le pourcentage de sorties où le modèle a respecté chaque contrainte du prompt : format, longueur, ton, portée et contenu interdit. Un taux de 90 % signifie que 1 requête de production sur 10 viole une contrainte. C\'est distinct de la précision et doit être mesuré séparément.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi la vérification manuelle échoue-t-elle pour l\'évaluation des prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La vérification manuelle n\'est pas reproductible (différents examinateurs choisissent différents exemples), souffre de biais de sélection (les examinateurs choisissent inconsciemment des cas qu\'ils s\'attendent à voir réussir), et ne s\'adapte pas à l\'échelle (10 exemples manquent 90 % des modes de défaillance dans un ensemble de 100). Les ensembles de tests automatisés produisent des résultats cohérents et reproductibles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'De combien de cas de test un ensemble de tests a-t-il besoin ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un ensemble de tests minimal a besoin de 20 cas : 10 entrées de chemin heureux couvrant l\'usage typique, 5 cas limites testant les frontières (entrée vide, entrée très longue, texte multilingue), et 5 entrées adversariales. Moins de 20 cas produit des taux de passage statistiquement peu fiables qui manquent les vrais modes de défaillance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La qualité diffère-t-elle entre GPT-5.6 et Claude Opus 5 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, considérablement. Le même prompt score régulièrement 10-20 points différemment entre GPT-5.6 et Claude Opus 5 en raison de différences dans la sensibilité aux formats d\'instructions et la gestion du prompt système. Mesurez toujours le taux de passage séparément sur chaque modèle que vous prévoyez de déployer. Un prompt qui score 95 % sur GPT-5.6 peut score 80 % sur Claude Opus 5 sans tuning modèle-spécifique.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le scoring LLM-as-Judge et quand l\'utiliser ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLM-as-Judge utilise un modèle capable comme GPT-5.6 ou Claude Opus 5 pour évaluer les sorties contre une rubrique. Le juge reçoit l\'entrée originale, la sortie de votre modèle et les critères d\'évaluation, puis retourne un score avec justification. Utilisez LLM-as-Judge pour les sorties de texte libre où Pass/Fail binaire n\'est pas suffisant. Cela s\'adapte à des milliers de cas de test sans révision humaine, le rendant idéal pour les pipelines d\'évaluation continus.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment définir un seuil de régression du taux de passage ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Enregistrez le taux de passage du premier test en tant que baseline. Un gate de régression de 5 points est courant : si une modification du prompt abaisse le taux de passage de plus de 5 points par rapport à la baseline, bloquez le déploiement. Les équipes ciblent généralement 85–95 % de taux de passage pour les prompts en production. Pour les workflows critiques (juridique, médical, financier), utilisez plutôt un gate de 2 points.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment intégrer l\'évaluation dans mon flux de travail ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Créez un ensemble de 20 cas de test, exécutez-le une fois pour établir une baseline, puis réexécutez-le après chaque modification du prompt pour détecter les régressions. Un gate d\'au moins 5 points prévient les dégradations. Stockez les résultats avec le prompt pour la traçabilité. Les workflows à haut risque (finances, santé, légal) appliquent des gates plus stricts et utilisent LLM-as-Judge pour une évaluation continue.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quels outils existent pour l\'évaluation automatisée des prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OpenAI Evals fournit un cadre de test harness, Anthropic publie les méthodes d\'évaluation, DeepEval offre un framework open-source avec métriques et intégration CI/CD, et PromptQuorum permet de diriger les ensembles de tests sur plusieurs modèles. Le choix dépend de votre cas d\'usage et de votre complexité d\'évaluation.',
+            },
+          },
         ],
       },
       howToSchema: {

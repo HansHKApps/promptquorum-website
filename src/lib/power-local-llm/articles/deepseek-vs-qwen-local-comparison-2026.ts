@@ -287,31 +287,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'Is DeepSeek-R1 the same as the distilled models?',
-            a: 'No. DeepSeek-R1 is the 671B mixture-of-experts model requiring server hardware. The distilled versions (7B, 14B, 32B) are separate dense models trained to replicate its reasoning style — these are the practical local-use options.',
-          },
-          {
-            q: 'Do DeepSeek and Qwen use the same VRAM at each parameter size?',
-            a: 'Yes, at the same quantisation level. Both 7B models need approximately 5.5 GB at Q4_K_M; both 32B models need 20.5 GB. The hardware choice is about task preference, not VRAM difference.',
-          },
-          {
-            q: 'Can I run DeepSeek-R1 distilled models with Ollama?',
-            a: 'Yes. Run `ollama run deepseek-r1:7b` for the 7B distill or `ollama run deepseek-r1:32b` for the 32B. Ollama downloads Q4_K_M by default.',
-          },
-          {
-            q: 'Which is better for Chinese text: DeepSeek or Qwen?',
-            a: 'Qwen3 is significantly better for Chinese text. It uses a purpose-built Chinese tokeniser that is 30–40% more efficient on CJK text. The DeepSeek-R1 distilled models are built on Qwen3 weights, so they also inherit reasonable Chinese support, but the base Qwen3 models are the primary choice.',
-          },
-          {
-            q: 'Which model should I use for math on 8 GB VRAM?',
-            a: 'DeepSeek-R1-Distill-Qwen-7B. It scores 88% on MATH-500 vs 62.5% for Qwen3 7B — a 25-point gap — at identical VRAM usage.',
-          },
-          {
-            q: 'Does DeepSeek-R1 comply with China data law if run locally?',
-            a: 'Running any model locally means data never leaves your hardware, which satisfies the data residency requirements of China\'s Data Security Law regardless of model origin. The compliance question is about data handling, not model provenance.',
-          },
-        ],
+            { q: 'Is DeepSeek-R1 the same as the distilled models?', a: 'No. DeepSeek-R1 is the 671B mixture-of-experts model requiring server hardware. The distilled versions (7B, 14B, 32B) are separate dense models trained to replicate its reasoning style — these are the practical local-use options.' },
+            { q: 'Do DeepSeek and Qwen use the same VRAM at each parameter size?', a: 'Yes, at the same quantisation level. Both 7B models need approximately 5.5 GB at Q4_K_M; both 32B models need 20.5 GB. The hardware choice is about task preference, not VRAM difference.' },
+            { q: 'Can I run DeepSeek-R1 distilled models with Ollama?', a: 'Yes. Run `ollama run deepseek-r1:7b` for the 7B distill or `ollama run deepseek-r1:32b` for the 32B. Ollama downloads Q4_K_M by default.' },
+            { q: 'Which is better for Chinese text: DeepSeek or Qwen?', a: 'Qwen3 is significantly better for Chinese text. It uses a purpose-built Chinese tokeniser that is 30–40% more efficient on CJK text. The DeepSeek-R1 distilled models are built on Qwen3 weights, so they also inherit reasonable Chinese support, but the base Qwen3 models are the primary choice.' },
+            { q: 'Which model should I use for math on 8 GB VRAM?', a: 'DeepSeek-R1-Distill-Qwen-7B. It scores 88% on MATH-500 vs 62.5% for Qwen3 7B — a 25-point gap — at identical VRAM usage.' },
+            { q: 'Does DeepSeek-R1 comply with China data law if run locally?', a: 'Running any model locally means data never leaves your hardware, which satisfies the data residency requirements of China\'s Data Security Law regardless of model origin. The compliance question is about data handling, not model provenance.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -349,11 +331,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'Is DeepSeek-R1 the same as the distilled models?', acceptedAnswer: { '@type': 'Answer', text: 'No. DeepSeek-R1 is the 671B MoE model. The distilled versions (7B, 14B, 32B) are separate dense models trained to replicate its reasoning style — practical for local use.' } },
-        { '@type': 'Question', name: 'Do DeepSeek and Qwen use the same VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, at the same quantisation level. Both 7B models need 5.5 GB at Q4_K_M; both 32B need 20.5 GB. The choice is about task strength, not VRAM.' } },
-        { '@type': 'Question', name: 'Which is better for Chinese text: DeepSeek or Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 is significantly better. It uses a purpose-built Chinese tokeniser that is 30–40% more efficient on CJK text.' } },
-        { '@type': 'Question', name: 'Which model for math on 8 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek-R1-Distill-Qwen-7B. It scores 88% MATH-500 vs 62.5% for Qwen3 7B at identical VRAM.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Is DeepSeek-R1 the same as the distilled models?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. DeepSeek-R1 is the 671B mixture-of-experts model requiring server hardware. The distilled versions (7B, 14B, 32B) are separate dense models trained to replicate its reasoning style — these are the practical local-use options.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do DeepSeek and Qwen use the same VRAM at each parameter size?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, at the same quantisation level. Both 7B models need approximately 5.5 GB at Q4_K_M; both 32B models need 20.5 GB. The hardware choice is about task preference, not VRAM difference.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run DeepSeek-R1 distilled models with Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Run `ollama run deepseek-r1:7b` for the 7B distill or `ollama run deepseek-r1:32b` for the 32B. Ollama downloads Q4_K_M by default.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which is better for Chinese text: DeepSeek or Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 is significantly better for Chinese text. It uses a purpose-built Chinese tokeniser that is 30–40% more efficient on CJK text. The DeepSeek-R1 distilled models are built on Qwen3 weights, so they also inherit reasonable Chinese support, but the base Qwen3 models are the primary choice.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which model should I use for math on 8 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1-Distill-Qwen-7B. It scores 88% on MATH-500 vs 62.5% for Qwen3 7B — a 25-point gap — at identical VRAM usage.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does DeepSeek-R1 comply with China data law if run locally?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Running any model locally means data never leaves your hardware, which satisfies the data residency requirements of China\'s Data Security Law regardless of model origin. The compliance question is about data handling, not model provenance.',
+            },
+          },
+        ],
     },
   },
 
@@ -654,31 +680,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿DeepSeek-R1 es lo mismo que los modelos destilados?',
-            a: 'No. DeepSeek-R1 es el modelo de mezcla de expertos de 671B que requiere hardware de servidor. Las versiones destiladas (7B, 14B, 32B) son modelos densos independientes entrenados para replicar su estilo de razonamiento — estas son las opciones prácticas para uso local.',
-          },
-          {
-            q: '¿DeepSeek y Qwen usan el mismo VRAM en cada tamaño de parámetros?',
-            a: 'Sí, al mismo nivel de cuantización. Ambos modelos 7B necesitan aproximadamente 5,5 GB en Q4_K_M; ambos modelos 32B necesitan 20,5 GB. La elección de hardware es sobre preferencia de tarea, no diferencia de VRAM.',
-          },
-          {
-            q: '¿Puedo ejecutar modelos destilados de DeepSeek-R1 con Ollama?',
-            a: 'Sí. Ejecuta `ollama run deepseek-r1:7b` para el destilado 7B o `ollama run deepseek-r1:32b` para el 32B. Ollama descarga Q4_K_M por defecto.',
-          },
-          {
-            q: '¿Cuál es mejor para texto en chino: DeepSeek o Qwen?',
-            a: 'Qwen3 es significativamente mejor para texto en chino. Utiliza un tokenizador chino diseñado específicamente que es un 30–40% más eficiente en texto CJK. Los modelos destilados de DeepSeek-R1 están construidos sobre pesos de Qwen3, por lo que también heredan un soporte razonable de chino, pero los modelos base de Qwen3 son la primera elección.',
-          },
-          {
-            q: '¿Qué modelo debo usar para matemáticas con 8 GB VRAM?',
-            a: 'DeepSeek-R1-Distill-Qwen-7B. Obtiene un 88% en MATH-500 frente al 62,5% de Qwen3 7B — una diferencia de 25 puntos — con un uso de VRAM idéntico.',
-          },
-          {
-            q: '¿Ejecutar DeepSeek-R1 localmente cumple con las leyes de datos?',
-            a: 'Ejecutar cualquier modelo localmente significa que los datos nunca salen de tu hardware, lo que satisface los requisitos de residencia de datos independientemente del origen del modelo. La pregunta de cumplimiento es sobre el manejo de datos, no la procedencia del modelo.',
-          },
-        ],
+            { q: '¿DeepSeek-R1 es lo mismo que los modelos destilados?', a: 'No. DeepSeek-R1 es el modelo de mezcla de expertos de 671B que requiere hardware de servidor. Las versiones destiladas (7B, 14B, 32B) son modelos densos independientes entrenados para replicar su estilo de razonamiento — estas son las opciones prácticas para uso local.' },
+            { q: '¿DeepSeek y Qwen usan el mismo VRAM en cada tamaño de parámetros?', a: 'Sí, al mismo nivel de cuantización. Ambos modelos 7B necesitan aproximadamente 5,5 GB en Q4_K_M; ambos modelos 32B necesitan 20,5 GB. La elección de hardware es sobre preferencia de tarea, no diferencia de VRAM.' },
+            { q: '¿Puedo ejecutar modelos destilados de DeepSeek-R1 con Ollama?', a: 'Sí. Ejecuta `ollama run deepseek-r1:7b` para el destilado 7B o `ollama run deepseek-r1:32b` para el 32B. Ollama descarga Q4_K_M por defecto.' },
+            { q: '¿Cuál es mejor para texto en chino: DeepSeek o Qwen?', a: 'Qwen3 es significativamente mejor para texto en chino. Utiliza un tokenizador chino diseñado específicamente que es un 30–40% más eficiente en texto CJK. Los modelos destilados de DeepSeek-R1 están construidos sobre pesos de Qwen3, por lo que también heredan un soporte razonable de chino, pero los modelos base de Qwen3 son la primera elección.' },
+            { q: '¿Qué modelo debo usar para matemáticas con 8 GB VRAM?', a: 'DeepSeek-R1-Distill-Qwen-7B. Obtiene un 88% en MATH-500 frente al 62,5% de Qwen3 7B — una diferencia de 25 puntos — con un uso de VRAM idéntico.' },
+            { q: '¿Ejecutar DeepSeek-R1 localmente cumple con las leyes de datos?', a: 'Ejecutar cualquier modelo localmente significa que los datos nunca salen de tu hardware, lo que satisface los requisitos de residencia de datos independientemente del origen del modelo. La pregunta de cumplimiento es sobre el manejo de datos, no la procedencia del modelo.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -716,11 +724,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿DeepSeek-R1 es lo mismo que los modelos destilados?', acceptedAnswer: { '@type': 'Answer', text: 'No. DeepSeek-R1 es el modelo MoE de 671B. Las versiones destiladas (7B, 14B, 32B) son modelos densos independientes entrenados para replicar su estilo de razonamiento — prácticos para uso local.' } },
-        { '@type': 'Question', name: '¿DeepSeek y Qwen usan el mismo VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, al mismo nivel de cuantización. Ambos modelos 7B necesitan 5,5 GB en Q4_K_M; ambos 32B necesitan 20,5 GB. La elección es por fortaleza de tarea, no por VRAM.' } },
-        { '@type': 'Question', name: '¿Cuál es mejor para texto en chino: DeepSeek o Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 es significativamente mejor. Utiliza un tokenizador chino nativo que es un 30–40% más eficiente en texto CJK.' } },
-        { '@type': 'Question', name: '¿Qué modelo para matemáticas con 8 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek-R1-Distill-Qwen-7B. Obtiene un 88% MATH-500 frente al 62,5% de Qwen3 7B con VRAM idéntico.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿DeepSeek-R1 es lo mismo que los modelos destilados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. DeepSeek-R1 es el modelo de mezcla de expertos de 671B que requiere hardware de servidor. Las versiones destiladas (7B, 14B, 32B) son modelos densos independientes entrenados para replicar su estilo de razonamiento — estas son las opciones prácticas para uso local.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿DeepSeek y Qwen usan el mismo VRAM en cada tamaño de parámetros?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, al mismo nivel de cuantización. Ambos modelos 7B necesitan aproximadamente 5,5 GB en Q4_K_M; ambos modelos 32B necesitan 20,5 GB. La elección de hardware es sobre preferencia de tarea, no diferencia de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar modelos destilados de DeepSeek-R1 con Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Ejecuta `ollama run deepseek-r1:7b` para el destilado 7B o `ollama run deepseek-r1:32b` para el 32B. Ollama descarga Q4_K_M por defecto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es mejor para texto en chino: DeepSeek o Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 es significativamente mejor para texto en chino. Utiliza un tokenizador chino diseñado específicamente que es un 30–40% más eficiente en texto CJK. Los modelos destilados de DeepSeek-R1 están construidos sobre pesos de Qwen3, por lo que también heredan un soporte razonable de chino, pero los modelos base de Qwen3 son la primera elección.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelo debo usar para matemáticas con 8 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1-Distill-Qwen-7B. Obtiene un 88% en MATH-500 frente al 62,5% de Qwen3 7B — una diferencia de 25 puntos — con un uso de VRAM idéntico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Ejecutar DeepSeek-R1 localmente cumple con las leyes de datos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ejecutar cualquier modelo localmente significa que los datos nunca salen de tu hardware, lo que satisface los requisitos de residencia de datos independientemente del origen del modelo. La pregunta de cumplimiento es sobre el manejo de datos, no la procedencia del modelo.',
+            },
+          },
+        ],
     },
   },
   pt: {
@@ -1020,31 +1072,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'O DeepSeek-R1 é o mesmo que os modelos destilados?',
-            a: 'Não. O DeepSeek-R1 é o modelo de mistura de especialistas de 671B que exige hardware de servidor. As versões destiladas (7B, 14B, 32B) são modelos densos independentes treinados para replicar seu estilo de raciocínio — estas são as opções práticas para uso local.',
-          },
-          {
-            q: 'DeepSeek e Qwen usam a mesma VRAM em cada tamanho de parâmetros?',
-            a: 'Sim, no mesmo nível de quantização. Ambos os modelos 7B precisam de aproximadamente 5,5 GB em Q4_K_M; ambos os modelos 32B precisam de 20,5 GB. A escolha de hardware é sobre preferência de tarefa, não diferença de VRAM.',
-          },
-          {
-            q: 'Posso rodar os modelos destilados do DeepSeek-R1 com o Ollama?',
-            a: 'Sim. Rode `ollama run deepseek-r1:7b` para o destilado 7B ou `ollama run deepseek-r1:32b` para o 32B. O Ollama baixa o Q4_K_M por padrão.',
-          },
-          {
-            q: 'Qual é melhor para texto em chinês: DeepSeek ou Qwen?',
-            a: 'O Qwen3 é significativamente melhor para texto em chinês. Utiliza um tokenizador chinês projetado especificamente que é 30–40% mais eficiente em texto CJK. Os modelos destilados do DeepSeek-R1 são construídos sobre pesos do Qwen3, por isso também herdam um suporte razoável de chinês, mas os modelos base do Qwen3 são a primeira escolha.',
-          },
-          {
-            q: 'Qual modelo devo usar para matemática com 8 GB VRAM?',
-            a: 'DeepSeek-R1-Distill-Qwen-7B. Atinge 88% no MATH-500 contra 62,5% do Qwen3 7B — uma diferença de 25 pontos — com uso de VRAM idêntico.',
-          },
-          {
-            q: 'Rodar o DeepSeek-R1 localmente cumpre as leis de dados?',
-            a: 'Rodar qualquer modelo localmente significa que os dados nunca saem do seu hardware, o que satisfaz os requisitos de residência de dados independentemente da origem do modelo. A questão de conformidade é sobre o tratamento de dados, não a procedência do modelo.',
-          },
-        ],
+            { q: 'O DeepSeek-R1 é o mesmo que os modelos destilados?', a: 'Não. O DeepSeek-R1 é o modelo de mistura de especialistas de 671B que exige hardware de servidor. As versões destiladas (7B, 14B, 32B) são modelos densos independentes treinados para replicar seu estilo de raciocínio — estas são as opções práticas para uso local.' },
+            { q: 'DeepSeek e Qwen usam a mesma VRAM em cada tamanho de parâmetros?', a: 'Sim, no mesmo nível de quantização. Ambos os modelos 7B precisam de aproximadamente 5,5 GB em Q4_K_M; ambos os modelos 32B precisam de 20,5 GB. A escolha de hardware é sobre preferência de tarefa, não diferença de VRAM.' },
+            { q: 'Posso rodar os modelos destilados do DeepSeek-R1 com o Ollama?', a: 'Sim. Rode `ollama run deepseek-r1:7b` para o destilado 7B ou `ollama run deepseek-r1:32b` para o 32B. O Ollama baixa o Q4_K_M por padrão.' },
+            { q: 'Qual é melhor para texto em chinês: DeepSeek ou Qwen?', a: 'O Qwen3 é significativamente melhor para texto em chinês. Utiliza um tokenizador chinês projetado especificamente que é 30–40% mais eficiente em texto CJK. Os modelos destilados do DeepSeek-R1 são construídos sobre pesos do Qwen3, por isso também herdam um suporte razoável de chinês, mas os modelos base do Qwen3 são a primeira escolha.' },
+            { q: 'Qual modelo devo usar para matemática com 8 GB VRAM?', a: 'DeepSeek-R1-Distill-Qwen-7B. Atinge 88% no MATH-500 contra 62,5% do Qwen3 7B — uma diferença de 25 pontos — com uso de VRAM idêntico.' },
+            { q: 'Rodar o DeepSeek-R1 localmente cumpre as leis de dados?', a: 'Rodar qualquer modelo localmente significa que os dados nunca saem do seu hardware, o que satisfaz os requisitos de residência de dados independentemente da origem do modelo. A questão de conformidade é sobre o tratamento de dados, não a procedência do modelo.' },
+            { q: 'DeepSeek e Qwen usam a mesma VRAM?', a: 'Sim, no mesmo nível de quantização. Ambos os modelos 7B precisam de 5,5 GB em Q4_K_M; ambos os 32B precisam de 20,5 GB. A escolha é por força de tarefa, não por VRAM.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -1082,11 +1117,63 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'O DeepSeek-R1 é o mesmo que os modelos destilados?', acceptedAnswer: { '@type': 'Answer', text: 'Não. O DeepSeek-R1 é o modelo MoE de 671B. As versões destiladas (7B, 14B, 32B) são modelos densos independentes treinados para replicar seu estilo de raciocínio — práticos para uso local.' } },
-        { '@type': 'Question', name: 'DeepSeek e Qwen usam a mesma VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, no mesmo nível de quantização. Ambos os modelos 7B precisam de 5,5 GB em Q4_K_M; ambos os 32B precisam de 20,5 GB. A escolha é por força de tarefa, não por VRAM.' } },
-        { '@type': 'Question', name: 'Qual é melhor para texto em chinês: DeepSeek ou Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3 é significativamente melhor. Utiliza um tokenizador chinês nativo que é 30–40% mais eficiente em texto CJK.' } },
-        { '@type': 'Question', name: 'Qual modelo para matemática com 8 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek-R1-Distill-Qwen-7B. Atinge 88% MATH-500 contra 62,5% do Qwen3 7B com VRAM idêntica.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'O DeepSeek-R1 é o mesmo que os modelos destilados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. O DeepSeek-R1 é o modelo de mistura de especialistas de 671B que exige hardware de servidor. As versões destiladas (7B, 14B, 32B) são modelos densos independentes treinados para replicar seu estilo de raciocínio — estas são as opções práticas para uso local.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek e Qwen usam a mesma VRAM em cada tamanho de parâmetros?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, no mesmo nível de quantização. Ambos os modelos 7B precisam de aproximadamente 5,5 GB em Q4_K_M; ambos os modelos 32B precisam de 20,5 GB. A escolha de hardware é sobre preferência de tarefa, não diferença de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar os modelos destilados do DeepSeek-R1 com o Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Rode `ollama run deepseek-r1:7b` para o destilado 7B ou `ollama run deepseek-r1:32b` para o 32B. O Ollama baixa o Q4_K_M por padrão.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é melhor para texto em chinês: DeepSeek ou Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Qwen3 é significativamente melhor para texto em chinês. Utiliza um tokenizador chinês projetado especificamente que é 30–40% mais eficiente em texto CJK. Os modelos destilados do DeepSeek-R1 são construídos sobre pesos do Qwen3, por isso também herdam um suporte razoável de chinês, mas os modelos base do Qwen3 são a primeira escolha.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual modelo devo usar para matemática com 8 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1-Distill-Qwen-7B. Atinge 88% no MATH-500 contra 62,5% do Qwen3 7B — uma diferença de 25 pontos — com uso de VRAM idêntico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Rodar o DeepSeek-R1 localmente cumpre as leis de dados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Rodar qualquer modelo localmente significa que os dados nunca saem do seu hardware, o que satisfaz os requisitos de residência de dados independentemente da origem do modelo. A questão de conformidade é sobre o tratamento de dados, não a procedência do modelo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek e Qwen usam a mesma VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, no mesmo nível de quantização. Ambos os modelos 7B precisam de 5,5 GB em Q4_K_M; ambos os 32B precisam de 20,5 GB. A escolha é por força de tarefa, não por VRAM.',
+            },
+          },
+        ],
     },
   },
   ar: {
@@ -1325,31 +1412,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'هل DeepSeek-R1 هو نفسه النماذج المقطّرة؟',
-            a: 'لا. DeepSeek-R1 هو نموذج خليط من الخبراء بـ671B يتطلب أجهزة من مستوى الخوادم. النسخ المقطّرة (7B و14B و32B) نماذج كثيفة مستقلة مدرّبة لتكرار أسلوب استدلاله — هذه هي الخيارات العملية للاستخدام المحلي.',
-          },
-          {
-            q: 'هل يستخدم DeepSeek وQwen نفس VRAM بكل حجم معاملات؟',
-            a: 'نعم، بنفس مستوى الكمية. كلا النموذجين 7B يحتاجان ~5.5 جيجابايت في Q4_K_M؛ وكلا النموذجين 32B يحتاجان 20.5 جيجابايت. اختيار الأجهزة يتعلق بتفضيل المهمة لا بالفارق في VRAM.',
-          },
-          {
-            q: 'هل يمكنني تشغيل النماذج المقطّرة من DeepSeek-R1 مع Ollama؟',
-            a: 'نعم. شغّل `ollama run deepseek-r1:7b` للمقطّر 7B أو `ollama run deepseek-r1:32b` للـ32B. يُنزّل Ollama Q4_K_M افتراضياً.',
-          },
-          {
-            q: 'أيّهما أفضل للنصوص الصينية: DeepSeek أم Qwen؟',
-            a: 'Qwen3 أفضل بشكل ملحوظ للنصوص الصينية. يستخدم محلّل نصوص صينياً مصمماً خصيصاً أكثر كفاءةً بـ30–40% في نصوص CJK. النماذج المقطّرة من DeepSeek-R1 مبنية على أوزان Qwen3، لذا ترث دعماً معقولاً للصينية، لكن نماذج Qwen3 الأساسية هي الخيار الأول.',
-          },
-          {
-            q: 'أيّ نموذج أستخدم للرياضيات مع 8 جيجابايت VRAM؟',
-            a: 'DeepSeek-R1-Distill-Qwen-7B. يحصل على 88% في MATH-500 مقابل 62.5% لـQwen3 7B — فارق 25 نقطة — باستخدام VRAM متطابق.',
-          },
-          {
-            q: 'هل تشغيل DeepSeek-R1 محلياً يتوافق مع قوانين البيانات؟',
-            a: 'تشغيل أي نموذج محلياً يعني أن البيانات لا تغادر أجهزتك أبداً، مما يُلبّي متطلبات الإقامة البيانية بغض النظر عن منشأ النموذج. السؤال الخاص بالامتثال يتعلق بمعالجة البيانات لا بمنشأ النموذج.',
-          },
-        ],
+            { q: 'هل DeepSeek-R1 هو نفسه النماذج المقطّرة؟', a: 'لا. DeepSeek-R1 هو نموذج خليط من الخبراء بـ671B يتطلب أجهزة من مستوى الخوادم. النسخ المقطّرة (7B و14B و32B) نماذج كثيفة مستقلة مدرّبة لتكرار أسلوب استدلاله — هذه هي الخيارات العملية للاستخدام المحلي.' },
+            { q: 'هل يستخدم DeepSeek وQwen نفس VRAM بكل حجم معاملات؟', a: 'نعم، بنفس مستوى الكمية. كلا النموذجين 7B يحتاجان ~5.5 جيجابايت في Q4_K_M؛ وكلا النموذجين 32B يحتاجان 20.5 جيجابايت. اختيار الأجهزة يتعلق بتفضيل المهمة لا بالفارق في VRAM.' },
+            { q: 'هل يمكنني تشغيل النماذج المقطّرة من DeepSeek-R1 مع Ollama؟', a: 'نعم. شغّل `ollama run deepseek-r1:7b` للمقطّر 7B أو `ollama run deepseek-r1:32b` للـ32B. يُنزّل Ollama Q4_K_M افتراضياً.' },
+            { q: 'أيّهما أفضل للنصوص الصينية: DeepSeek أم Qwen؟', a: 'Qwen3 أفضل بشكل ملحوظ للنصوص الصينية. يستخدم محلّل نصوص صينياً مصمماً خصيصاً أكثر كفاءةً بـ30–40% في نصوص CJK. النماذج المقطّرة من DeepSeek-R1 مبنية على أوزان Qwen3، لذا ترث دعماً معقولاً للصينية، لكن نماذج Qwen3 الأساسية هي الخيار الأول.' },
+            { q: 'أيّ نموذج أستخدم للرياضيات مع 8 جيجابايت VRAM؟', a: 'DeepSeek-R1-Distill-Qwen-7B. يحصل على 88% في MATH-500 مقابل 62.5% لـQwen3 7B — فارق 25 نقطة — باستخدام VRAM متطابق.' },
+            { q: 'هل تشغيل DeepSeek-R1 محلياً يتوافق مع قوانين البيانات؟', a: 'تشغيل أي نموذج محلياً يعني أن البيانات لا تغادر أجهزتك أبداً، مما يُلبّي متطلبات الإقامة البيانية بغض النظر عن منشأ النموذج. السؤال الخاص بالامتثال يتعلق بمعالجة البيانات لا بمنشأ النموذج.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -1387,11 +1456,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'هل DeepSeek-R1 هو نفسه النماذج المقطّرة؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. DeepSeek-R1 هو نموذج MoE بـ671B. النسخ المقطّرة (7B و14B و32B) نماذج كثيفة مستقلة مدرّبة لتكرار أسلوب استدلاله — عملية للاستخدام المحلي.' } },
-        { '@type': 'Question', name: 'هل يستخدم DeepSeek وQwen نفس VRAM؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، بنفس مستوى الكمية. كلا النموذجين 7B يحتاجان 5.5 جيجابايت في Q4_K_M؛ وكلا الـ32B يحتاجان 20.5 جيجابايت. الاختيار حسب نقاط قوة المهمة لا VRAM.' } },
-        { '@type': 'Question', name: 'أيّهما أفضل للنصوص الصينية: DeepSeek أم Qwen؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 أفضل بشكل ملحوظ. يستخدم محلّل نصوص صينياً أصيلاً أكثر كفاءةً بـ30–40% في نصوص CJK.' } },
-        { '@type': 'Question', name: 'أيّ نموذج للرياضيات مع 8 جيجابايت VRAM؟', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek-R1-Distill-Qwen-7B. يحصل على 88% MATH-500 مقابل 62.5% لـQwen3 7B بـVRAM متطابق.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل DeepSeek-R1 هو نفسه النماذج المقطّرة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. DeepSeek-R1 هو نموذج خليط من الخبراء بـ671B يتطلب أجهزة من مستوى الخوادم. النسخ المقطّرة (7B و14B و32B) نماذج كثيفة مستقلة مدرّبة لتكرار أسلوب استدلاله — هذه هي الخيارات العملية للاستخدام المحلي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يستخدم DeepSeek وQwen نفس VRAM بكل حجم معاملات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، بنفس مستوى الكمية. كلا النموذجين 7B يحتاجان ~5.5 جيجابايت في Q4_K_M؛ وكلا النموذجين 32B يحتاجان 20.5 جيجابايت. اختيار الأجهزة يتعلق بتفضيل المهمة لا بالفارق في VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل النماذج المقطّرة من DeepSeek-R1 مع Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. شغّل `ollama run deepseek-r1:7b` للمقطّر 7B أو `ollama run deepseek-r1:32b` للـ32B. يُنزّل Ollama Q4_K_M افتراضياً.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أيّهما أفضل للنصوص الصينية: DeepSeek أم Qwen؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 أفضل بشكل ملحوظ للنصوص الصينية. يستخدم محلّل نصوص صينياً مصمماً خصيصاً أكثر كفاءةً بـ30–40% في نصوص CJK. النماذج المقطّرة من DeepSeek-R1 مبنية على أوزان Qwen3، لذا ترث دعماً معقولاً للصينية، لكن نماذج Qwen3 الأساسية هي الخيار الأول.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أيّ نموذج أستخدم للرياضيات مع 8 جيجابايت VRAM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1-Distill-Qwen-7B. يحصل على 88% في MATH-500 مقابل 62.5% لـQwen3 7B — فارق 25 نقطة — باستخدام VRAM متطابق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تشغيل DeepSeek-R1 محلياً يتوافق مع قوانين البيانات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تشغيل أي نموذج محلياً يعني أن البيانات لا تغادر أجهزتك أبداً، مما يُلبّي متطلبات الإقامة البيانية بغض النظر عن منشأ النموذج. السؤال الخاص بالامتثال يتعلق بمعالجة البيانات لا بمنشأ النموذج.',
+            },
+          },
+        ],
     },
   },
 
@@ -1543,13 +1656,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'Ist DeepSeek-R1 dasselbe wie die destillierten Modelle?', a: 'Nein. DeepSeek-R1 ist das 671B-MoE-Modell. Die destillierten Versionen (7B, 14B, 32B) sind separate dichte Modelle — praktisch für lokale Nutzung.' },
-          { q: 'Benötigen DeepSeek und Qwen denselben VRAM?', a: 'Ja, bei gleicher Quantisierung. Beide 7B-Modelle benötigen ca. 5,5 GB bei Q4_K_M; beide 32B-Modelle benötigen 20,5 GB.' },
-          { q: 'Was ist besser für chinesischen Text: DeepSeek oder Qwen?', a: 'Qwen3 ist deutlich besser. Es verwendet einen speziell entwickelten chinesischen Tokenizer, der 30–40 % effizienter bei CJK-Text ist.' },
-          { q: 'Muss ich bei der Verwendung dieser Modelle die DSGVO beachten?', a: 'Bei lokaler Ausführung verarbeiten beide Modelle keine personenbezogenen Daten auf Drittservern. Das vereinfacht die DSGVO-Dokumentation erheblich, da kein Auftragsverarbeitungsvertrag mit externen Anbietern erforderlich ist.' },
-          { q: 'Welches Modell für Mathe bei 8 GB VRAM?', a: 'DeepSeek-R1-Distill-Qwen-7B. Es erzielt 88 % MATH-500 vs 62,5 % für Qwen3 7B bei identischem VRAM.' },
-          { q: 'Welche Lizenz haben diese Modelle?', a: 'Qwen3 verwendet Apache 2.0 — kommerzielle Nutzung ist erlaubt. DeepSeek-R1-Destillate verwenden die MIT-Lizenz. Beide sind für kommerzielle Deployments geeignet.' },
-        ],
+            { q: 'Ist DeepSeek-R1 dasselbe wie die destillierten Modelle?', a: 'Nein. DeepSeek-R1 ist das 671B-MoE-Modell. Die destillierten Versionen (7B, 14B, 32B) sind separate dichte Modelle — praktisch für lokale Nutzung.' },
+            { q: 'Benötigen DeepSeek und Qwen denselben VRAM?', a: 'Ja, bei gleicher Quantisierung. Beide 7B-Modelle benötigen ca. 5,5 GB bei Q4_K_M; beide 32B-Modelle benötigen 20,5 GB.' },
+            { q: 'Was ist besser für chinesischen Text: DeepSeek oder Qwen?', a: 'Qwen3 ist deutlich besser. Es verwendet einen speziell entwickelten chinesischen Tokenizer, der 30–40 % effizienter bei CJK-Text ist.' },
+            { q: 'Muss ich bei der Verwendung dieser Modelle die DSGVO beachten?', a: 'Bei lokaler Ausführung verarbeiten beide Modelle keine personenbezogenen Daten auf Drittservern. Das vereinfacht die DSGVO-Dokumentation erheblich, da kein Auftragsverarbeitungsvertrag mit externen Anbietern erforderlich ist.' },
+            { q: 'Welches Modell für Mathe bei 8 GB VRAM?', a: 'DeepSeek-R1-Distill-Qwen-7B. Es erzielt 88 % MATH-500 vs 62,5 % für Qwen3 7B bei identischem VRAM.' },
+            { q: 'Welche Lizenz haben diese Modelle?', a: 'Qwen3 verwendet Apache 2.0 — kommerzielle Nutzung ist erlaubt. DeepSeek-R1-Destillate verwenden die MIT-Lizenz. Beide sind für kommerzielle Deployments geeignet.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -1581,10 +1694,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Ist DeepSeek-R1 dasselbe wie die destillierten Modelle?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. DeepSeek-R1 ist das 671B-MoE-Modell. Die destillierten Versionen sind separate dichte Modelle für lokale Nutzung.' } },
-        { '@type': 'Question', name: 'Welches Modell für Mathe bei 8 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek-R1-Distill-Qwen-7B. Es erzielt 88 % MATH-500 vs 62,5 % für Qwen3 7B bei identischem VRAM.' } },
-        { '@type': 'Question', name: 'Muss ich bei diesen Modellen die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Bei lokaler Ausführung verarbeiten beide Modelle keine Daten auf Drittservern. Kein Auftragsverarbeitungsvertrag erforderlich.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Ist DeepSeek-R1 dasselbe wie die destillierten Modelle?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. DeepSeek-R1 ist das 671B-MoE-Modell. Die destillierten Versionen (7B, 14B, 32B) sind separate dichte Modelle — praktisch für lokale Nutzung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Benötigen DeepSeek und Qwen denselben VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, bei gleicher Quantisierung. Beide 7B-Modelle benötigen ca. 5,5 GB bei Q4_K_M; beide 32B-Modelle benötigen 20,5 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist besser für chinesischen Text: DeepSeek oder Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 ist deutlich besser. Es verwendet einen speziell entwickelten chinesischen Tokenizer, der 30–40 % effizienter bei CJK-Text ist.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung dieser Modelle die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei lokaler Ausführung verarbeiten beide Modelle keine personenbezogenen Daten auf Drittservern. Das vereinfacht die DSGVO-Dokumentation erheblich, da kein Auftragsverarbeitungsvertrag mit externen Anbietern erforderlich ist.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Modell für Mathe bei 8 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1-Distill-Qwen-7B. Es erzielt 88 % MATH-500 vs 62,5 % für Qwen3 7B bei identischem VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Lizenz haben diese Modelle?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 verwendet Apache 2.0 — kommerzielle Nutzung ist erlaubt. DeepSeek-R1-Destillate verwenden die MIT-Lizenz. Beide sind für kommerzielle Deployments geeignet.',
+            },
+          },
+        ],
     },
   },
 
@@ -1701,16 +1859,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       macVsNvidia: { id: 'mac-vs-nvidia', title: 'Apple Silicon vs NVIDIA', content: '両ファミリーともOllamaとMetal加速でApple Siliconで良好に動作します。', columns: ['ハードウェア', '最適モデル層', '速度（7B）', '速度（32B）'], rows: [{ 'ハードウェア': 'M2/M3 16 GB', '最適モデル層': '7Bのみ', '速度（7B）': '30–50 tok/s', '速度（32B）': 'N/A' }, { 'ハードウェア': 'M3 Max 48 GB', '最適モデル層': '32B (快適)', '速度（7B）': '80–120 tok/s', '速度（32B）': '15–25 tok/s' }, { 'ハードウェア': 'RTX 4090 24 GB', '最適モデル層': '32B', '速度（7B）': '100–150 tok/s', '速度（32B）': '18–28 tok/s' }], },
       useCaseVerdicts: { id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ja.svg', imageCaption: 'DeepSeek対Qwenのユースケースガイド：数学の家庭教師とステップバイステップ推論はDeepSeek-R1-Distill-Qwenが有利、コード生成（Qwen3-Coder 32B、HumanEval 91.5%）と中国語チャットはQwen3が有利です。', title: 'ユースケース別判定', content: '各ユースケースに対する一文の回答：', items: ['**数学/家庭教師：** DS-R1-Distill-Qwen-7B——MATH-500 88% vs Qwen3 7Bの62.5%', '**コード生成・レビュー：** Qwen3-Coder 32B——HumanEval 91.5%', '**中国語チャット：** Qwen3 7B——ネイティブCJKトークナイゼーション', '**ステップバイステップ分析：** DS-R1-Distill-Qwen-14B——デフォルトで明示的な思考連鎖を生成'] },
       faqSection: { id: 'faq', title: 'よくある質問', faqs: [
-        { q: 'DeepSeek-R1と蒸留モデルは同じですか？', a: 'いいえ。DeepSeek-R1は671B MoEモデルです。蒸留版（7B、14B、32B）はローカル利用のために訓練された別の高密度モデルです。' },
-        { q: 'DeepSeekとQwenは同じVRAMを使いますか？', a: 'はい、同じ量子化レベルで。両方の7Bモデルは約5.5 GB（Q4_K_M）が必要；両方の32Bは20.5 GBが必要です。' },
-        { q: '中国語テキストにはどちらが良いですか？', a: 'Qwen3が大幅に優れています。CJKテキストで30〜40%効率が高いネイティブ中国語トークナイザーを使用しています。' },
-        { q: '8 GB VRAMで数学に最適なモデルは？', a: 'DeepSeek-R1-Distill-Qwen-7B。同じVRAMでMATH-500 88%（Qwen3 7Bは62.5%）を達成します。' },
-        { q: 'METI AIガイドラインへの対応は？', a: 'ローカル実行では、データはお使いのハードウェア上のみで処理されます。METIのAI利活用ガイドラインにおけるデータ管理要件を満たしやすくなります。モデル名・バージョンの記録はどちらのモデルも同様に必要です。' },
-      ] },
+            { q: 'DeepSeek-R1と蒸留モデルは同じですか？', a: 'いいえ。DeepSeek-R1は671B MoEモデルです。蒸留版（7B、14B、32B）はローカル利用のために訓練された別の高密度モデルです。' },
+            { q: 'DeepSeekとQwenは同じVRAMを使いますか？', a: 'はい、同じ量子化レベルで。両方の7Bモデルは約5.5 GB（Q4_K_M）が必要；両方の32Bは20.5 GBが必要です。' },
+            { q: '中国語テキストにはどちらが良いですか？', a: 'Qwen3が大幅に優れています。CJKテキストで30〜40%効率が高いネイティブ中国語トークナイザーを使用しています。' },
+            { q: '8 GB VRAMで数学に最適なモデルは？', a: 'DeepSeek-R1-Distill-Qwen-7B。同じVRAMでMATH-500 88%（Qwen3 7Bは62.5%）を達成します。' },
+            { q: 'METI AIガイドラインへの対応は？', a: 'ローカル実行では、データはお使いのハードウェア上のみで処理されます。METIのAI利活用ガイドラインにおけるデータ管理要件を満たしやすくなります。モデル名・バージョンの記録はどちらのモデルも同様に必要です。' },
+          ] },
       relatedReading: { id: 'related-reading', title: '関連記事', items: ['[Qwenローカル展開ガイド 2026](/ja/local-llms/qwen-local-deployment-guide-2026) — 全Qwen3バリアントのハードウェア表', '[ローカルLLM向けGPU購入ガイド 2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)', '[Qwen vs Llama vs Mistral 2026](/ja/local-llms/qwen-vs-llama-vs-mistral)', '[Qwenローカルデプロイ完全ガイド2026：Docker・APIサーバー・マルチGPU](/ja/power-local-llm/qwen-local-deployment-complete-guide-2026)'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'DeepSeek vs Qwen：ローカルLLM比較 2026', description: 'DeepSeek-R1蒸留 vs Qwen3ローカル：VRAM・MMLU・MATH-500・HumanEvalの直接比較。', url: 'https://www.promptquorum.com/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'DeepSeek R1' }, { '@type': 'Thing', name: 'Qwen3' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
-    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ja', mainEntity: [{ '@type': 'Question', name: 'DeepSeekとQwenは同じVRAMを使いますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。両方の7Bモデルは約5.5 GB（Q4_K_M）が必要です。' } }, { '@type': 'Question', name: '中国語にはどちらが良い？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3。ネイティブ中国語トークナイザーでCJKテキストを30〜40%効率よく処理します。' } }] },
+    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ja', mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek-R1と蒸留モデルは同じですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。DeepSeek-R1は671B MoEモデルです。蒸留版（7B、14B、32B）はローカル利用のために訓練された別の高密度モデルです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeekとQwenは同じVRAMを使いますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、同じ量子化レベルで。両方の7Bモデルは約5.5 GB（Q4_K_M）が必要；両方の32Bは20.5 GBが必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国語テキストにはどちらが良いですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3が大幅に優れています。CJKテキストで30〜40%効率が高いネイティブ中国語トークナイザーを使用しています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8 GB VRAMで数学に最適なモデルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1-Distill-Qwen-7B。同じVRAMでMATH-500 88%（Qwen3 7Bは62.5%）を達成します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'METI AIガイドラインへの対応は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ローカル実行では、データはお使いのハードウェア上のみで処理されます。METIのAI利活用ガイドラインにおけるデータ管理要件を満たしやすくなります。モデル名・バージョンの記録はどちらのモデルも同様に必要です。',
+            },
+          },
+        ] },
   },
 
   zh: {
@@ -2011,31 +2210,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'DeepSeek-R1과 증류 모델은 같은 것인가요?',
-            a: '아닙니다. DeepSeek-R1은 서버 수준 하드웨어가 필요한 671B MoE 모델입니다. 증류 버전(7B, 14B, 32B)은 R1의 추론 스타일을 복제하도록 훈련된 독립적인 밀집 모델로, 로컬 사용에 실용적인 선택입니다.',
-          },
-          {
-            q: 'DeepSeek와 Qwen은 각 파라미터 크기에서 동일한 VRAM을 사용하나요?',
-            a: '예, 동일한 양자화 수준에서 그렇습니다. 두 7B 모델 모두 Q4_K_M 기준 약 5.5 GB가 필요하고, 두 32B 모델 모두 20.5 GB가 필요합니다. 하드웨어 선택은 VRAM 차이가 아닌 작업 선호도에 따릅니다.',
-          },
-          {
-            q: 'Ollama로 DeepSeek-R1 증류 모델을 실행할 수 있나요?',
-            a: '예. 7B 증류 버전은 `ollama run deepseek-r1:7b`, 32B는 `ollama run deepseek-r1:32b`를 실행하십시오. Ollama는 기본적으로 Q4_K_M을 다운로드합니다.',
-          },
-          {
-            q: '중국어 텍스트에는 DeepSeek와 Qwen 중 어느 것이 더 나은가요?',
-            a: 'Qwen3가 중국어 텍스트에서 훨씬 더 우수합니다. CJK 텍스트에서 30–40% 더 효율적인 전용 중국어 토크나이저를 사용합니다. DeepSeek-R1 증류 모델은 Qwen3 가중치를 기반으로 구축되어 중국어 지원을 어느 정도 상속하지만, Qwen3 베이스 모델이 첫 번째 선택입니다.',
-          },
-          {
-            q: '8 GB VRAM에서 수학에 어떤 모델을 사용해야 하나요?',
-            a: 'DeepSeek-R1-Distill-Qwen-7B를 사용하십시오. 동일한 VRAM으로 MATH-500 88%를 달성하며 Qwen3 7B(62.5%)보다 25포인트 높습니다.',
-          },
-          {
-            q: 'DeepSeek-R1을 로컬로 실행하면 개인정보보호법을 준수하나요?',
-            a: '모델을 로컬로 실행하면 데이터가 귀하의 하드웨어를 벗어나지 않습니다. 이는 모델 출처에 관계없이 PIPA(개인정보보호법) 및 데이터 거주 요건을 충족합니다. 준수 여부는 데이터 처리 방식에 관한 것이지 모델 출처에 관한 것이 아닙니다.',
-          },
-        ],
+            { q: 'DeepSeek-R1과 증류 모델은 같은 것인가요?', a: '아닙니다. DeepSeek-R1은 서버 수준 하드웨어가 필요한 671B MoE 모델입니다. 증류 버전(7B, 14B, 32B)은 R1의 추론 스타일을 복제하도록 훈련된 독립적인 밀집 모델로, 로컬 사용에 실용적인 선택입니다.' },
+            { q: 'DeepSeek와 Qwen은 각 파라미터 크기에서 동일한 VRAM을 사용하나요?', a: '예, 동일한 양자화 수준에서 그렇습니다. 두 7B 모델 모두 Q4_K_M 기준 약 5.5 GB가 필요하고, 두 32B 모델 모두 20.5 GB가 필요합니다. 하드웨어 선택은 VRAM 차이가 아닌 작업 선호도에 따릅니다.' },
+            { q: 'Ollama로 DeepSeek-R1 증류 모델을 실행할 수 있나요?', a: '예. 7B 증류 버전은 `ollama run deepseek-r1:7b`, 32B는 `ollama run deepseek-r1:32b`를 실행하십시오. Ollama는 기본적으로 Q4_K_M을 다운로드합니다.' },
+            { q: '중국어 텍스트에는 DeepSeek와 Qwen 중 어느 것이 더 나은가요?', a: 'Qwen3가 중국어 텍스트에서 훨씬 더 우수합니다. CJK 텍스트에서 30–40% 더 효율적인 전용 중국어 토크나이저를 사용합니다. DeepSeek-R1 증류 모델은 Qwen3 가중치를 기반으로 구축되어 중국어 지원을 어느 정도 상속하지만, Qwen3 베이스 모델이 첫 번째 선택입니다.' },
+            { q: '8 GB VRAM에서 수학에 어떤 모델을 사용해야 하나요?', a: 'DeepSeek-R1-Distill-Qwen-7B를 사용하십시오. 동일한 VRAM으로 MATH-500 88%를 달성하며 Qwen3 7B(62.5%)보다 25포인트 높습니다.' },
+            { q: 'DeepSeek-R1을 로컬로 실행하면 개인정보보호법을 준수하나요?', a: '모델을 로컬로 실행하면 데이터가 귀하의 하드웨어를 벗어나지 않습니다. 이는 모델 출처에 관계없이 PIPA(개인정보보호법) 및 데이터 거주 요건을 충족합니다. 준수 여부는 데이터 처리 방식에 관한 것이지 모델 출처에 관한 것이 아닙니다.' },
+            { q: '중국어 텍스트에는 어느 모델이 더 나은가요?', a: 'Qwen3가 훨씬 더 우수합니다. CJK 텍스트에서 30–40% 더 효율적인 네이티브 중국어 토크나이저를 사용합니다.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -2073,11 +2255,63 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: 'DeepSeek-R1과 증류 모델은 같은 것인가요?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. DeepSeek-R1은 671B MoE 모델입니다. 증류 버전(7B, 14B, 32B)은 로컬 사용에 적합한 독립적인 밀집 모델입니다.' } },
-        { '@type': 'Question', name: 'DeepSeek와 Qwen은 동일한 VRAM을 사용하나요?', acceptedAnswer: { '@type': 'Answer', text: '예, 동일한 양자화 수준에서 그렇습니다. 두 7B 모델 모두 Q4_K_M 기준 5.5 GB가 필요하고, 두 32B 모델 모두 20.5 GB가 필요합니다.' } },
-        { '@type': 'Question', name: '중국어 텍스트에는 어느 모델이 더 나은가요?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3가 훨씬 더 우수합니다. CJK 텍스트에서 30–40% 더 효율적인 네이티브 중국어 토크나이저를 사용합니다.' } },
-        { '@type': 'Question', name: '8 GB VRAM에서 수학에 최적인 모델은?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek-R1-Distill-Qwen-7B. 동일한 VRAM으로 MATH-500 88%를 달성하며 Qwen3 7B(62.5%)보다 25포인트 높습니다.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek-R1과 증류 모델은 같은 것인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. DeepSeek-R1은 서버 수준 하드웨어가 필요한 671B MoE 모델입니다. 증류 버전(7B, 14B, 32B)은 R1의 추론 스타일을 복제하도록 훈련된 독립적인 밀집 모델로, 로컬 사용에 실용적인 선택입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek와 Qwen은 각 파라미터 크기에서 동일한 VRAM을 사용하나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 동일한 양자화 수준에서 그렇습니다. 두 7B 모델 모두 Q4_K_M 기준 약 5.5 GB가 필요하고, 두 32B 모델 모두 20.5 GB가 필요합니다. 하드웨어 선택은 VRAM 차이가 아닌 작업 선호도에 따릅니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama로 DeepSeek-R1 증류 모델을 실행할 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. 7B 증류 버전은 `ollama run deepseek-r1:7b`, 32B는 `ollama run deepseek-r1:32b`를 실행하십시오. Ollama는 기본적으로 Q4_K_M을 다운로드합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '중국어 텍스트에는 DeepSeek와 Qwen 중 어느 것이 더 나은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3가 중국어 텍스트에서 훨씬 더 우수합니다. CJK 텍스트에서 30–40% 더 효율적인 전용 중국어 토크나이저를 사용합니다. DeepSeek-R1 증류 모델은 Qwen3 가중치를 기반으로 구축되어 중국어 지원을 어느 정도 상속하지만, Qwen3 베이스 모델이 첫 번째 선택입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8 GB VRAM에서 수학에 어떤 모델을 사용해야 하나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1-Distill-Qwen-7B를 사용하십시오. 동일한 VRAM으로 MATH-500 88%를 달성하며 Qwen3 7B(62.5%)보다 25포인트 높습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek-R1을 로컬로 실행하면 개인정보보호법을 준수하나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '모델을 로컬로 실행하면 데이터가 귀하의 하드웨어를 벗어나지 않습니다. 이는 모델 출처에 관계없이 PIPA(개인정보보호법) 및 데이터 거주 요건을 충족합니다. 준수 여부는 데이터 처리 방식에 관한 것이지 모델 출처에 관한 것이 아닙니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '중국어 텍스트에는 어느 모델이 더 나은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3가 훨씬 더 우수합니다. CJK 텍스트에서 30–40% 더 효율적인 네이티브 중국어 토크나이저를 사용합니다.',
+            },
+          },
+        ],
     },
   },
 }

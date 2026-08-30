@@ -540,38 +540,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            {
-              q: 'Wofür steht TRACE im Prompt Engineering?',
-              a: 'TRACE steht für Think (Denken), Reason (Begründen), Analyze (Analysieren), Conclude (Schlussfolgern), Explain (Erklären). Es ist ein strukturiertes Prompt-Muster, das KI-Modelle anweist, jeden Schritt ihres Denkprozesses zu zeigen, statt direkt eine Antwort zu geben.',
-            },
-            {
-              q: 'Wann sollte ich das TRACE Framework verwenden?',
-              a: 'Verwenden Sie TRACE, wenn Reasoning-Qualität und Begründung wichtiger sind als Kürze: strategische Entscheidungen, technische Architektur-Reviews, komplexes Debugging und Situationen, in denen Sie Stakeholdern zeigen müssen, wie eine Schlussfolgerung erreicht wurde.',
-            },
-            {
-              q: 'Wie unterscheidet sich TRACE von Chain-of-Thought Prompting?',
-              a: 'Chain-of-Thought ist eine allgemeine Technik, die Modelle bittet, Schritt für Schritt zu denken. TRACE ist eine spezifische 5-Stufen-Struktur (Think, Reason, Analyze, Conclude, Explain), die konsistente, reproduzierbare Reasoning-Spuren über Aufgaben und Modelle hinweg erzeugt.',
-            },
-            {
-              q: 'Wie unterscheidet sich TRACE vom RISEN Framework?',
-              a: 'TRACE fokussiert darauf, den Reasoning-Prozess explizit zu machen, damit Sie ihn prüfen können. RISEN fokussiert auf die iterative Verbesserung eines bestehenden Entwurfs. Nutzen Sie TRACE, um zu verstehen, wie ein Modell denkt; nutzen Sie RISEN, um die Ausgabequalität zu verbessern.',
-            },
-            {
-              q: 'Kann ich TRACE in einem einzigen Prompt verwenden oder brauche ich mehrere Turns?',
-              a: 'Beides funktioniert. Ein einziger Prompt, der alle fünf Stufen auflistet, ist schneller. Mehrere Turns ermöglichen es Ihnen, bei Bedarf zu pausieren und bei jeder Stufe neu zu steuern. Für maximale Kontrolle senden viele Benutzer TRACE-Schritte separat.',
-            },
-            {
-              q: 'Wie verhindere ich, dass TRACE zu langen Antworten führt?',
-              a: 'Längenvorgaben pro Stufe hinzufügen. Zum Beispiel: „Halte jede Stufe auf 1–2 Sätze." Das zwingt das Modell zur Kürze, während es seine Arbeit noch zeigt.',
-            },
-            {
-              q: 'Kann TRACE dabei helfen, Modellfehler zu erkennen?',
-              a: 'Ja. Indem Reasoning sichtbar gemacht wird, ermöglicht TRACE das Erkennen falscher Annahmen, logischer Lücken und falscher Berechnungen, die bei einer Antwort nur mit dem Endergebnis unsichtbar wären.',
-            },
-            {
-              q: 'Wie unterstützt PromptQuorum TRACE-Prompts?',
-              a: 'PromptQuorum enthält TRACE als integrierte Prompt-Struktur. Sie füllen aufgabenspezifischen Kontext in strukturierte Felder, die an den fünf Stufen ausgerichtet sind. PromptQuorum sendet den zusammengesetzten Prompt dann an mehrere Modelle parallel, damit Sie ihre Reasoning-Spuren nebeneinander vergleichen können.',
-            },
+            { q: 'Wofür steht TRACE im Prompt Engineering?', a: 'TRACE steht für Think (Denken), Reason (Begründen), Analyze (Analysieren), Conclude (Schlussfolgern), Explain (Erklären). Es ist ein strukturiertes Prompt-Muster, das KI-Modelle anweist, jeden Schritt ihres Denkprozesses zu zeigen, statt direkt eine Antwort zu geben.' },
+            { q: 'Wann sollte ich das TRACE Framework verwenden?', a: 'Verwenden Sie TRACE, wenn Reasoning-Qualität und Begründung wichtiger sind als Kürze: strategische Entscheidungen, technische Architektur-Reviews, komplexes Debugging und Situationen, in denen Sie Stakeholdern zeigen müssen, wie eine Schlussfolgerung erreicht wurde.' },
+            { q: 'Wie unterscheidet sich TRACE von Chain-of-Thought Prompting?', a: 'Chain-of-Thought ist eine allgemeine Technik, die Modelle bittet, Schritt für Schritt zu denken. TRACE ist eine spezifische 5-Stufen-Struktur (Think, Reason, Analyze, Conclude, Explain), die konsistente, reproduzierbare Reasoning-Spuren über Aufgaben und Modelle hinweg erzeugt.' },
+            { q: 'Wie unterscheidet sich TRACE vom RISEN Framework?', a: 'TRACE fokussiert darauf, den Reasoning-Prozess explizit zu machen, damit Sie ihn prüfen können. RISEN fokussiert auf die iterative Verbesserung eines bestehenden Entwurfs. Nutzen Sie TRACE, um zu verstehen, wie ein Modell denkt; nutzen Sie RISEN, um die Ausgabequalität zu verbessern.' },
+            { q: 'Kann ich TRACE in einem einzigen Prompt verwenden oder brauche ich mehrere Turns?', a: 'Beides funktioniert. Ein einziger Prompt, der alle fünf Stufen auflistet, ist schneller. Mehrere Turns ermöglichen es Ihnen, bei Bedarf zu pausieren und bei jeder Stufe neu zu steuern. Für maximale Kontrolle senden viele Benutzer TRACE-Schritte separat.' },
+            { q: 'Wie verhindere ich, dass TRACE zu langen Antworten führt?', a: 'Längenvorgaben pro Stufe hinzufügen. Zum Beispiel: „Halte jede Stufe auf 1–2 Sätze." Das zwingt das Modell zur Kürze, während es seine Arbeit noch zeigt.' },
+            { q: 'Kann TRACE dabei helfen, Modellfehler zu erkennen?', a: 'Ja. Indem Reasoning sichtbar gemacht wird, ermöglicht TRACE das Erkennen falscher Annahmen, logischer Lücken und falscher Berechnungen, die bei einer Antwort nur mit dem Endergebnis unsichtbar wären.' },
+            { q: 'Wie unterstützt PromptQuorum TRACE-Prompts?', a: 'PromptQuorum enthält TRACE als integrierte Prompt-Struktur. Sie füllen aufgabenspezifischen Kontext in strukturierte Felder, die an den fünf Stufen ausgerichtet sind. PromptQuorum sendet den zusammengesetzten Prompt dann an mehrere Modelle parallel, damit Sie ihre Reasoning-Spuren nebeneinander vergleichen können.' },
+            { q: 'Wie integriere ich TRACE in meine bestehenden Prompt-Workflows?', a: 'PromptQuorum speichert TRACE-Prompts als Templates. Du kannst ein Template für einen bestimmten Workflow erstellen (z.B. „Feature-Trade-off-Review"), es mit deinem Team teilen und es jedes Mal abrufen, wenn du einen ähnlichen Analyse-Prozess durchführen musst. Dies spart Zeit und stellt Konsistenz sicher.' },
+            { q: 'Ist TRACE für Anfänger in Prompt Engineering geeignet?', a: 'Ja. Obwohl TRACE für fortgeschrittene Reasoning-Workflows konzipiert wurde, ist die Struktur (Think–Reason–Analyze–Conclude–Explain) intuitiv und anfängerfreundlich. PromptQuorums vorausgefüllte Felder machen es noch einfacher.' },
+            { q: 'Welche Compliance-Aspekte gelten bei TRACE-Anwendung in regulierten Umgebungen?', a: 'In Banken, Versicherungen und anderen regulierten Branchen macht TRACE KI-Entscheidungen nachvollziehbar—wichtig für Compliance und Audits. Bei DSGVO-Bezug müssen personenbezogene Daten sicher behandelt werden; nutze lokale Modelle (Ollama, LM Studio) statt Cloud-APIs für sensible Daten.' },
           ],
         },
 
@@ -592,14 +571,94 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Unterscheidet sich TRACE vom RISEN Framework?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. TRACE betont explizites Reasoning und den Begründungspfad. RISEN fokussiert auf iterative Verbesserung bestehender Entwürfe. Nutze TRACE, wenn du verstehen musst, wie das Modell denkt; nutze RISEN, wenn du einen Entwurf schrittweise verfeinern möchtest.' } },
-          { '@type': 'Question', 'name': 'Kann ich TRACE in einem einzigen langen Prompt verwenden oder sollte ich mehrere Prompts senden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide Ansätze funktionieren. Ein einziger langer Prompt ist schneller; mehrere aufeinanderfolgende Prompts ermöglichen es dir, bei Bedarf zu pausieren und Feedback zu geben. Für maximale Kontrolle und Transparenz senden viele Benutzer die TRACE-Schritte separat, was auch die Token-Kosten sichtbar macht.' } },
-          { '@type': 'Question', 'name': 'Wie integriere ich TRACE in meine bestehenden Prompt-Workflows?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum speichert TRACE-Prompts als Templates. Du kannst ein Template für einen bestimmten Workflow erstellen (z.B. „Feature-Trade-off-Review"), es mit deinem Team teilen und es jedes Mal abrufen, wenn du einen ähnlichen Analyse-Prozess durchführen musst. Dies spart Zeit und stellt Konsistenz sicher.' } },
-          { '@type': 'Question', 'name': 'Ist TRACE für Anfänger in Prompt Engineering geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Obwohl TRACE für fortgeschrittene Reasoning-Workflows konzipiert wurde, ist die Struktur (Think–Reason–Analyze–Conclude–Explain) intuitiv und anfängerfreundlich. PromptQuorums vorausgefüllte Felder machen es noch einfacher.' } },
-          { '@type': 'Question', 'name': 'Welche Compliance-Aspekte gelten bei TRACE-Anwendung in regulierten Umgebungen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'In Banken, Versicherungen und anderen regulierten Branchen macht TRACE KI-Entscheidungen nachvollziehbar—wichtig für Compliance und Audits. Bei DSGVO-Bezug müssen personenbezogene Daten sicher behandelt werden; nutze lokale Modelle (Ollama, LM Studio) statt Cloud-APIs für sensible Daten.' } },
-          { '@type': 'Question', 'name': 'Wofür steht TRACE im Prompt Engineering?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE steht für Think (Denken), Reason (Begründen), Analyze (Analysieren), Conclude (Schlussfolgern), Explain (Erklären). Es ist ein strukturiertes Prompt-Muster, das KI-Modelle anweist, jeden Schritt ihres Denkprozesses zu zeigen, statt nur die Schlussfolgerung zu liefern.' } },
-          { '@type': 'Question', 'name': 'Wie unterscheidet sich TRACE von Chain-of-Thought?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought ist eine allgemeine Technik, die Modelle bittet, schrittweise zu denken. TRACE ist eine spezifische 5-Stufen-Struktur mit klaren Rollen für jede Phase. TRACE ist besser reproduzierbar und für Audit-Zwecke besser geeignet.' } },
-          { '@type': 'Question', 'name': 'Wie verhindere ich, dass TRACE zu langen, unübersichtlichen Antworten führt?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Füge pro Stufe eine Längenvorgabe ein, z.B. „Halte jede Stufe auf 1–2 Sätze." Das zwingt das Modell zur Kürze, ohne die Transparenz zu opfern.' } },
+          {
+            '@type': 'Question',
+            'name': 'Wofür steht TRACE im Prompt Engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE steht für Think (Denken), Reason (Begründen), Analyze (Analysieren), Conclude (Schlussfolgern), Explain (Erklären). Es ist ein strukturiertes Prompt-Muster, das KI-Modelle anweist, jeden Schritt ihres Denkprozesses zu zeigen, statt direkt eine Antwort zu geben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollte ich das TRACE Framework verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwenden Sie TRACE, wenn Reasoning-Qualität und Begründung wichtiger sind als Kürze: strategische Entscheidungen, technische Architektur-Reviews, komplexes Debugging und Situationen, in denen Sie Stakeholdern zeigen müssen, wie eine Schlussfolgerung erreicht wurde.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterscheidet sich TRACE von Chain-of-Thought Prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought ist eine allgemeine Technik, die Modelle bittet, Schritt für Schritt zu denken. TRACE ist eine spezifische 5-Stufen-Struktur (Think, Reason, Analyze, Conclude, Explain), die konsistente, reproduzierbare Reasoning-Spuren über Aufgaben und Modelle hinweg erzeugt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterscheidet sich TRACE vom RISEN Framework?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE fokussiert darauf, den Reasoning-Prozess explizit zu machen, damit Sie ihn prüfen können. RISEN fokussiert auf die iterative Verbesserung eines bestehenden Entwurfs. Nutzen Sie TRACE, um zu verstehen, wie ein Modell denkt; nutzen Sie RISEN, um die Ausgabequalität zu verbessern.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich TRACE in einem einzigen Prompt verwenden oder brauche ich mehrere Turns?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Beides funktioniert. Ein einziger Prompt, der alle fünf Stufen auflistet, ist schneller. Mehrere Turns ermöglichen es Ihnen, bei Bedarf zu pausieren und bei jeder Stufe neu zu steuern. Für maximale Kontrolle senden viele Benutzer TRACE-Schritte separat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie verhindere ich, dass TRACE zu langen Antworten führt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Längenvorgaben pro Stufe hinzufügen. Zum Beispiel: „Halte jede Stufe auf 1–2 Sätze." Das zwingt das Modell zur Kürze, während es seine Arbeit noch zeigt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann TRACE dabei helfen, Modellfehler zu erkennen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Indem Reasoning sichtbar gemacht wird, ermöglicht TRACE das Erkennen falscher Annahmen, logischer Lücken und falscher Berechnungen, die bei einer Antwort nur mit dem Endergebnis unsichtbar wären.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterstützt PromptQuorum TRACE-Prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum enthält TRACE als integrierte Prompt-Struktur. Sie füllen aufgabenspezifischen Kontext in strukturierte Felder, die an den fünf Stufen ausgerichtet sind. PromptQuorum sendet den zusammengesetzten Prompt dann an mehrere Modelle parallel, damit Sie ihre Reasoning-Spuren nebeneinander vergleichen können.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie integriere ich TRACE in meine bestehenden Prompt-Workflows?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum speichert TRACE-Prompts als Templates. Du kannst ein Template für einen bestimmten Workflow erstellen (z.B. „Feature-Trade-off-Review"), es mit deinem Team teilen und es jedes Mal abrufen, wenn du einen ähnlichen Analyse-Prozess durchführen musst. Dies spart Zeit und stellt Konsistenz sicher.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist TRACE für Anfänger in Prompt Engineering geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Obwohl TRACE für fortgeschrittene Reasoning-Workflows konzipiert wurde, ist die Struktur (Think–Reason–Analyze–Conclude–Explain) intuitiv und anfängerfreundlich. PromptQuorums vorausgefüllte Felder machen es noch einfacher.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Compliance-Aspekte gelten bei TRACE-Anwendung in regulierten Umgebungen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'In Banken, Versicherungen und anderen regulierten Branchen macht TRACE KI-Entscheidungen nachvollziehbar—wichtig für Compliance und Audits. Bei DSGVO-Bezug müssen personenbezogene Daten sicher behandelt werden; nutze lokale Modelle (Ollama, LM Studio) statt Cloud-APIs für sensible Daten.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -1741,38 +1800,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
-            {
-              q: 'Que signifie TRACE en ingénierie des prompts ?',
-              a: 'TRACE signifie Think (Penser), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure), Explain (Expliquer). C\'est un schéma de prompt structuré qui demande au modèle de montrer chaque étape de son raisonnement plutôt que donner directement une réponse finale.',
-            },
-            {
-              q: 'Quand dois-je utiliser le Framework TRACE ?',
-              a: 'Utilisez TRACE quand la qualité du raisonnement et la justification sont plus importantes que la brièveté : décisions stratégiques, évaluations de technologies, debugging complexe, situations où vous devez montrer aux parties prenantes comment une conclusion a été atteinte.',
-            },
-            {
-              q: 'Comment TRACE est-il différent du prompting Chain-of-Thought ?',
-              a: 'Chain-of-Thought est une technique générale qui demande aux modèles de penser étape par étape. TRACE est une structure spécifique à 5 étapes (Penser, Raisonner, Analyser, Conclure, Expliquer) qui produit des traces de raisonnement cohérentes et reproductibles entre les tâches et les modèles.',
-            },
-            {
-              q: 'Comment TRACE est-il différent du Framework RISEN ?',
-              a: 'TRACE se concentre sur rendre le processus de raisonnement explicite pour l\'auditer. RISEN se concentre sur l\'amélioration itérative d\'un brouillon existant. Utilisez TRACE pour comprendre comment un modèle pense ; utilisez RISEN pour affiner la qualité des résultats.',
-            },
-            {
-              q: 'Puis-je utiliser TRACE dans un seul prompt ou ai-je besoin de plusieurs tours ?',
-              a: 'Les deux fonctionnent. Un prompt unique listant les cinq étapes est plus rapide. Des tours multiples vous permettent de mettre en pause et de rediriger à chaque étape si besoin. Pour le contrôle maximal, beaucoup d\'utilisateurs envoient les étapes TRACE séparément.',
-            },
-            {
-              q: 'Comment empêcher TRACE de produire des réponses trop longues ?',
-              a: 'Ajoutez des contraintes de longueur par étape. Par exemple : « Garde chaque étape à 1–2 phrases. » Cela force le modèle à être concis tout en montrant son travail.',
-            },
-            {
-              q: 'TRACE peut-il aider à détecter les erreurs du modèle ?',
-              a: 'Oui. En rendant le raisonnement visible, TRACE vous permet de repérer les fausses hypothèses, les lacunes logiques et les calculs incorrects qui seraient invisibles dans une réponse finale seule.',
-            },
-            {
-              q: 'Comment PromptQuorum supporte-t-il les prompts TRACE ?',
-              a: 'PromptQuorum inclut TRACE comme structure de prompt intégrée. Vous remplissez le contexte spécifique à la tâche dans les champs alignés sur les cinq étapes. PromptQuorum compose ensuite le prompt et l\'envoie à plusieurs modèles en parallèle pour que vous puissiez comparer leurs traces de raisonnement côte à côte.',
-            },
+            { q: 'Que signifie TRACE en ingénierie des prompts ?', a: 'TRACE signifie Think (Penser), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure), Explain (Expliquer). C\'est un schéma de prompt structuré qui demande au modèle de montrer chaque étape de son raisonnement plutôt que donner directement une réponse finale.' },
+            { q: 'Quand dois-je utiliser le Framework TRACE ?', a: 'Utilisez TRACE quand la qualité du raisonnement et la justification sont plus importantes que la brièveté : décisions stratégiques, évaluations de technologies, debugging complexe, situations où vous devez montrer aux parties prenantes comment une conclusion a été atteinte.' },
+            { q: 'Comment TRACE est-il différent du prompting Chain-of-Thought ?', a: 'Chain-of-Thought est une technique générale qui demande aux modèles de penser étape par étape. TRACE est une structure spécifique à 5 étapes (Penser, Raisonner, Analyser, Conclure, Expliquer) qui produit des traces de raisonnement cohérentes et reproductibles entre les tâches et les modèles.' },
+            { q: 'Comment TRACE est-il différent du Framework RISEN ?', a: 'TRACE se concentre sur rendre le processus de raisonnement explicite pour l\'auditer. RISEN se concentre sur l\'amélioration itérative d\'un brouillon existant. Utilisez TRACE pour comprendre comment un modèle pense ; utilisez RISEN pour affiner la qualité des résultats.' },
+            { q: 'Puis-je utiliser TRACE dans un seul prompt ou ai-je besoin de plusieurs tours ?', a: 'Les deux fonctionnent. Un prompt unique listant les cinq étapes est plus rapide. Des tours multiples vous permettent de mettre en pause et de rediriger à chaque étape si besoin. Pour le contrôle maximal, beaucoup d\'utilisateurs envoient les étapes TRACE séparément.' },
+            { q: 'Comment empêcher TRACE de produire des réponses trop longues ?', a: 'Ajoutez des contraintes de longueur par étape. Par exemple : « Garde chaque étape à 1–2 phrases. » Cela force le modèle à être concis tout en montrant son travail.' },
+            { q: 'TRACE peut-il aider à détecter les erreurs du modèle ?', a: 'Oui. En rendant le raisonnement visible, TRACE vous permet de repérer les fausses hypothèses, les lacunes logiques et les calculs incorrects qui seraient invisibles dans une réponse finale seule.' },
+            { q: 'Comment PromptQuorum supporte-t-il les prompts TRACE ?', a: 'PromptQuorum inclut TRACE comme structure de prompt intégrée. Vous remplissez le contexte spécifique à la tâche dans les champs alignés sur les cinq étapes. PromptQuorum compose ensuite le prompt et l\'envoie à plusieurs modèles en parallèle pour que vous puissiez comparer leurs traces de raisonnement côte à côte.' },
+            { q: 'Quelle est la différence entre TRACE et RISEN ?', a: 'TRACE force le modèle à montrer son raisonnement en détail. RISEN améliore progressivement un brouillon existant. Utilisez TRACE pour comprendre la logique ; utilisez RISEN pour affiner un résultat.' },
+            { q: 'Puis-je combiner TRACE avec d\'autres frameworks ?', a: 'Absolument. Utilisez un framework génératif d\'abord, puis TRACE pour valider le raisonnement, puis optionnellement SPECS pour le formatage final.' },
+            { q: 'TRACE fonctionne-t-il pour tous les types de tâches ?', a: 'TRACE excelle pour les tâches où le raisonnement et la justification importent : décisions stratégiques, analyses, debugging. Pour les tâches simples et rapides, TRACE ajoute de la complexité inutile.' },
+            { q: 'Y a-t-il une différence entre TRACE et Chain-of-Thought ?', a: 'Chain-of-Thought est une technique générale de montrer le travail. TRACE est une structure spécifique à 5 étapes : Penser, Raisonner, Analyser, Conclure, Expliquer. TRACE est plus guidée et reproductible.' },
           ],
         },
 
@@ -1793,14 +1832,102 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Quelle est la différence entre TRACE et RISEN ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE force le modèle à montrer son raisonnement en détail. RISEN améliore progressivement un brouillon existant. Utilisez TRACE pour comprendre la logique ; utilisez RISEN pour affiner un résultat.' } },
-          { '@type': 'Question', 'name': 'Puis-je combiner TRACE avec d\'autres frameworks ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Absolument. Utilisez un framework génératif d\'abord, puis TRACE pour valider le raisonnement, puis optionnellement SPECS pour le formatage final.' } },
-          { '@type': 'Question', 'name': 'TRACE fonctionne-t-il pour tous les types de tâches ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE excelle pour les tâches où le raisonnement et la justification importent : décisions stratégiques, analyses, debugging. Pour les tâches simples et rapides, TRACE ajoute de la complexité inutile.' } },
-          { '@type': 'Question', 'name': 'Comment éviter que TRACE ne rende les réponses trop longues ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Soyez précis dans vos étapes TRACE. Demandez : « Donne chaque étape en 1–2 phrases max. » Cela force le modèle à être concis tout en montrant son travail.' } },
-          { '@type': 'Question', 'name': 'TRACE aide-t-il à détecter les erreurs du modèle ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. En rendant le raisonnement explicite, TRACE vous permet de repérer les fausses assomptions, les sauts logiques, ou les calculs incorrects que vous auriez ratés avec une réponse finale seule.' } },
-          { '@type': 'Question', 'name': 'Y a-t-il une différence entre TRACE et Chain-of-Thought ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought est une technique générale de montrer le travail. TRACE est une structure spécifique à 5 étapes : Penser, Raisonner, Analyser, Conclure, Expliquer. TRACE est plus guidée et reproductible.' } },
-          { '@type': 'Question', 'name': 'Que signifie TRACE en ingénierie des prompts ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE signifie Think (Réfléchir), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure), Explain (Expliquer). C\'est un schéma de prompt structuré qui demande au modèle de montrer chaque étape de son raisonnement plutôt que de donner directement une réponse finale.' } },
-          { '@type': 'Question', 'name': 'Comment PromptQuorum prend-il en charge les prompts TRACE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum inclut TRACE comme structure de prompt intégrée. Remplissez vos informations de contexte dans des champs alignés sur les cinq étapes. PromptQuorum compose ensuite le prompt et l\'envoie à plusieurs modèles en parallèle pour que vous puissiez comparer leurs traces de raisonnement côte à côte.' } },
+          {
+            '@type': 'Question',
+            'name': 'Que signifie TRACE en ingénierie des prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE signifie Think (Penser), Reason (Raisonner), Analyze (Analyser), Conclude (Conclure), Explain (Expliquer). C\'est un schéma de prompt structuré qui demande au modèle de montrer chaque étape de son raisonnement plutôt que donner directement une réponse finale.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand dois-je utiliser le Framework TRACE ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez TRACE quand la qualité du raisonnement et la justification sont plus importantes que la brièveté : décisions stratégiques, évaluations de technologies, debugging complexe, situations où vous devez montrer aux parties prenantes comment une conclusion a été atteinte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment TRACE est-il différent du prompting Chain-of-Thought ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought est une technique générale qui demande aux modèles de penser étape par étape. TRACE est une structure spécifique à 5 étapes (Penser, Raisonner, Analyser, Conclure, Expliquer) qui produit des traces de raisonnement cohérentes et reproductibles entre les tâches et les modèles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment TRACE est-il différent du Framework RISEN ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE se concentre sur rendre le processus de raisonnement explicite pour l\'auditer. RISEN se concentre sur l\'amélioration itérative d\'un brouillon existant. Utilisez TRACE pour comprendre comment un modèle pense ; utilisez RISEN pour affiner la qualité des résultats.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser TRACE dans un seul prompt ou ai-je besoin de plusieurs tours ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les deux fonctionnent. Un prompt unique listant les cinq étapes est plus rapide. Des tours multiples vous permettent de mettre en pause et de rediriger à chaque étape si besoin. Pour le contrôle maximal, beaucoup d\'utilisateurs envoient les étapes TRACE séparément.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment empêcher TRACE de produire des réponses trop longues ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ajoutez des contraintes de longueur par étape. Par exemple : « Garde chaque étape à 1–2 phrases. » Cela force le modèle à être concis tout en montrant son travail.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACE peut-il aider à détecter les erreurs du modèle ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. En rendant le raisonnement visible, TRACE vous permet de repérer les fausses hypothèses, les lacunes logiques et les calculs incorrects qui seraient invisibles dans une réponse finale seule.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment PromptQuorum supporte-t-il les prompts TRACE ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum inclut TRACE comme structure de prompt intégrée. Vous remplissez le contexte spécifique à la tâche dans les champs alignés sur les cinq étapes. PromptQuorum compose ensuite le prompt et l\'envoie à plusieurs modèles en parallèle pour que vous puissiez comparer leurs traces de raisonnement côte à côte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre TRACE et RISEN ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE force le modèle à montrer son raisonnement en détail. RISEN améliore progressivement un brouillon existant. Utilisez TRACE pour comprendre la logique ; utilisez RISEN pour affiner un résultat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je combiner TRACE avec d\'autres frameworks ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Absolument. Utilisez un framework génératif d\'abord, puis TRACE pour valider le raisonnement, puis optionnellement SPECS pour le formatage final.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACE fonctionne-t-il pour tous les types de tâches ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE excelle pour les tâches où le raisonnement et la justification importent : décisions stratégiques, analyses, debugging. Pour les tâches simples et rapides, TRACE ajoute de la complexité inutile.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Y a-t-il une différence entre TRACE et Chain-of-Thought ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought est une technique générale de montrer le travail. TRACE est une structure spécifique à 5 étapes : Penser, Raisonner, Analyser, Conclure, Expliquer. TRACE est plus guidée et reproductible.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -2044,38 +2171,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            {
-              q: 'プロンプト・エンジニアリングでTRACEは何を意味しますか？',
-              a: 'TRACEはThink（考える）、Reason（推論する）、Analyze（分析する）、Conclude（結論を出す）、Explain（説明する）を意味します。AIモデルに最終答だけでなく、推論の各段階を示させるような構造化されたプロンプトパターンです。',
-            },
-            {
-              q: 'TRACEフレームワークをいつ使うべきですか？',
-              a: '推論の品質と正当化が速度より重要な場合にTRACEを使用してください：戦略的判断、技術的レビュー、複雑なデバッグ、および関係者にどのように結論に到達したかを示す必要があるような状況。',
-            },
-            {
-              q: 'TRACEはChain-of-Thoughtプロンプティングとどう違いますか？',
-              a: 'Chain-of-Thoughtはモデルにステップバイステップで考えさせる一般的な技術です。TRACEは特定の5段階構造（Think、Reason、Analyze、Conclude、Explain）であり、タスクとモデルを超えて一貫した再現可能な推論トレースを生成します。',
-            },
-            {
-              q: 'TRACEはRISENフレームワークとどう違いますか？',
-              a: 'TRACEは推論プロセスを明示的にして、監査可能にします。RISENは既存のドラフトを段階的に改善します。論理を理解したい→TRACE、出力品質を高めたい→RISEN。',
-            },
-            {
-              q: '1つのプロンプトでTRACEを使うか、複数ターンで使うか？',
-              a: '両方が機能します。5つのステップをすべてリストする単一のプロンプトが速く、複数ターンでは各ステップで一時停止して方向を変更することができます。最大の制御のため、多くのユーザーは各TRACEステップを別々に送信します。',
-            },
-            {
-              q: 'TRACEが長すぎる回答を生成するのを防ぐにはどうすればよいですか？',
-              a: '段階ごとに長さ制限を追加してください。例えば：「各段階を最大2文で」このようにするとモデルに簡潔性を強制し、同時に仕事を見せさせることができます。',
-            },
-            {
-              q: 'TRACEはモデルエラーを検出するのに役立ちますか？',
-              a: 'はい。推論を見える化することで、TRACEは最終答だけでは見えない誤った仮定、論理的ギャップ、計算エラーを検出できます。',
-            },
-            {
-              q: 'PromptQuorumはTRACEプロンプトをどのようにサポートしていますか？',
-              a: 'PromptQuorumはTRACEを組み込みプロンプト構造として含んでいます。5つのステップに合わせた構造化フィールドにタスク固有のコンテキストを入力します。PromptQuorumはその後、プロンプトを複数のモデルに並行して送信して、推論トレースを並べて比較できるようにします。',
-            },
+            { q: 'プロンプト・エンジニアリングでTRACEは何を意味しますか？', a: 'TRACEはThink（考える）、Reason（推論する）、Analyze（分析する）、Conclude（結論を出す）、Explain（説明する）を意味します。AIモデルに最終答だけでなく、推論の各段階を示させるような構造化されたプロンプトパターンです。' },
+            { q: 'TRACEフレームワークをいつ使うべきですか？', a: '推論の品質と正当化が速度より重要な場合にTRACEを使用してください：戦略的判断、技術的レビュー、複雑なデバッグ、および関係者にどのように結論に到達したかを示す必要があるような状況。' },
+            { q: 'TRACEはChain-of-Thoughtプロンプティングとどう違いますか？', a: 'Chain-of-Thoughtはモデルにステップバイステップで考えさせる一般的な技術です。TRACEは特定の5段階構造（Think、Reason、Analyze、Conclude、Explain）であり、タスクとモデルを超えて一貫した再現可能な推論トレースを生成します。' },
+            { q: 'TRACEはRISENフレームワークとどう違いますか？', a: 'TRACEは推論プロセスを明示的にして、監査可能にします。RISENは既存のドラフトを段階的に改善します。論理を理解したい→TRACE、出力品質を高めたい→RISEN。' },
+            { q: '1つのプロンプトでTRACEを使うか、複数ターンで使うか？', a: '両方が機能します。5つのステップをすべてリストする単一のプロンプトが速く、複数ターンでは各ステップで一時停止して方向を変更することができます。最大の制御のため、多くのユーザーは各TRACEステップを別々に送信します。' },
+            { q: 'TRACEが長すぎる回答を生成するのを防ぐにはどうすればよいですか？', a: '段階ごとに長さ制限を追加してください。例えば：「各段階を最大2文で」このようにするとモデルに簡潔性を強制し、同時に仕事を見せさせることができます。' },
+            { q: 'TRACEはモデルエラーを検出するのに役立ちますか？', a: 'はい。推論を見える化することで、TRACEは最終答だけでは見えない誤った仮定、論理的ギャップ、計算エラーを検出できます。' },
+            { q: 'PromptQuorumはTRACEプロンプトをどのようにサポートしていますか？', a: 'PromptQuorumはTRACEを組み込みプロンプト構造として含んでいます。5つのステップに合わせた構造化フィールドにタスク固有のコンテキストを入力します。PromptQuorumはその後、プロンプトを複数のモデルに並行して送信して、推論トレースを並べて比較できるようにします。' },
+            { q: 'TRACEとRISENはどう違う？', a: 'TRACEは思考プロセスを見える化します。RISENは既存の出力を段階的に改善します。論理を理解したい → TRACE、品質を高めたい → RISEN。' },
+            { q: 'TRACEで回答が長くなりすぎないようにするには？', a: '各段階を1～2文に制限してください。例：「各ステップを最大2文で答えてください」と指示することで、簡潔さと透明性のバランスが取れます。' },
+            { q: 'すべての質問にTRACEを使うべき？', a: 'いいえ。推論と正当化が重要な複雑な判断に向いています。単純な質問や短い回答が必要な場合、TRACEはオーバーヘッドになります。' },
+            { q: 'TRACEはモデル間で推論品質の差を見つけるのに役立つ？', a: 'はい。GPT-5.5、Claude、Geminiなど同じTRACEプロンプトを複数モデルに送れば、推論スタイルと精度の違いが明確に見えます。' },
+            { q: 'TRACEはエラーを検出するのに本当に効果的？', a: 'はい。思考プロセスが見える化されるため、誤った前提や論理的な飛躍を早期に発見できます。最終答だけでは気づかない誤りが露呈します。' },
+            { q: '日本の企業で財務判断やコンプライアンス判定にTRACEを使う際の注意点は？', a: 'クラウドAPIで機密データを扱う場合は、データ保護方針を確認してください。機密情報はOllama・LM Studioなど自社環境のモデルを使用し、PromptQuorum経由で実行することをお勧めします。' },
           ],
         },
 
@@ -2096,14 +2205,118 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'TRACEとRISENはどう違う？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACEは思考プロセスを見える化します。RISENは既存の出力を段階的に改善します。論理を理解したい → TRACE、品質を高めたい → RISEN。' } },
-          { '@type': 'Question', 'name': 'TRACEで回答が長くなりすぎないようにするには？', 'acceptedAnswer': { '@type': 'Answer', 'text': '各段階を1～2文に制限してください。例：「各ステップを最大2文で答えてください」と指示することで、簡潔さと透明性のバランスが取れます。' } },
-          { '@type': 'Question', 'name': 'すべての質問にTRACEを使うべき？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。推論と正当化が重要な複雑な判断に向いています。単純な質問や短い回答が必要な場合、TRACEはオーバーヘッドになります。' } },
-          { '@type': 'Question', 'name': 'TRACEはモデル間で推論品質の差を見つけるのに役立つ？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。GPT-5.5、Claude、Geminiなど同じTRACEプロンプトを複数モデルに送れば、推論スタイルと精度の違いが明確に見えます。' } },
-          { '@type': 'Question', 'name': 'TRACEはエラーを検出するのに本当に効果的？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。思考プロセスが見える化されるため、誤った前提や論理的な飛躍を早期に発見できます。最終答だけでは気づかない誤りが露呈します。' } },
-          { '@type': 'Question', 'name': '日本の企業で財務判断やコンプライアンス判定にTRACEを使う際の注意点は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'クラウドAPIで機密データを扱う場合は、データ保護方針を確認してください。機密情報はOllama・LM Studioなど自社環境のモデルを使用し、PromptQuorum経由で実行することをお勧めします。' } },
-          { '@type': 'Question', 'name': 'プロンプト・エンジニアリングでTRACEは何を意味しますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACEはThink（考える）、Reason（推論する）、Analyze（分析する）、Conclude（結論を出す）、Explain（説明する）の頭文字です。最終的な答えだけでなく、AIモデルに推論の各段階を示させる構造化されたプロンプトパターンです。' } },
-          { '@type': 'Question', 'name': 'TRACEとChain-of-Thoughtの違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thoughtは、モデルにステップバイステップで考えさせる一般的な技術です。TRACEは特定の5段階構造（Think・Reason・Analyze・Conclude・Explain）で、タスクやモデルを超えて一貫した再現可能な推論トレースを生成します。' } },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト・エンジニアリングでTRACEは何を意味しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACEはThink（考える）、Reason（推論する）、Analyze（分析する）、Conclude（結論を出す）、Explain（説明する）を意味します。AIモデルに最終答だけでなく、推論の各段階を示させるような構造化されたプロンプトパターンです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEフレームワークをいつ使うべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '推論の品質と正当化が速度より重要な場合にTRACEを使用してください：戦略的判断、技術的レビュー、複雑なデバッグ、および関係者にどのように結論に到達したかを示す必要があるような状況。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEはChain-of-Thoughtプロンプティングとどう違いますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thoughtはモデルにステップバイステップで考えさせる一般的な技術です。TRACEは特定の5段階構造（Think、Reason、Analyze、Conclude、Explain）であり、タスクとモデルを超えて一貫した再現可能な推論トレースを生成します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEはRISENフレームワークとどう違いますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACEは推論プロセスを明示的にして、監査可能にします。RISENは既存のドラフトを段階的に改善します。論理を理解したい→TRACE、出力品質を高めたい→RISEN。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '1つのプロンプトでTRACEを使うか、複数ターンで使うか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '両方が機能します。5つのステップをすべてリストする単一のプロンプトが速く、複数ターンでは各ステップで一時停止して方向を変更することができます。最大の制御のため、多くのユーザーは各TRACEステップを別々に送信します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEが長すぎる回答を生成するのを防ぐにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '段階ごとに長さ制限を追加してください。例えば：「各段階を最大2文で」このようにするとモデルに簡潔性を強制し、同時に仕事を見せさせることができます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEはモデルエラーを検出するのに役立ちますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。推論を見える化することで、TRACEは最終答だけでは見えない誤った仮定、論理的ギャップ、計算エラーを検出できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PromptQuorumはTRACEプロンプトをどのようにサポートしていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorumはTRACEを組み込みプロンプト構造として含んでいます。5つのステップに合わせた構造化フィールドにタスク固有のコンテキストを入力します。PromptQuorumはその後、プロンプトを複数のモデルに並行して送信して、推論トレースを並べて比較できるようにします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEとRISENはどう違う？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACEは思考プロセスを見える化します。RISENは既存の出力を段階的に改善します。論理を理解したい → TRACE、品質を高めたい → RISEN。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEで回答が長くなりすぎないようにするには？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '各段階を1～2文に制限してください。例：「各ステップを最大2文で答えてください」と指示することで、簡潔さと透明性のバランスが取れます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'すべての質問にTRACEを使うべき？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。推論と正当化が重要な複雑な判断に向いています。単純な質問や短い回答が必要な場合、TRACEはオーバーヘッドになります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEはモデル間で推論品質の差を見つけるのに役立つ？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。GPT-5.5、Claude、Geminiなど同じTRACEプロンプトを複数モデルに送れば、推論スタイルと精度の違いが明確に見えます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACEはエラーを検出するのに本当に効果的？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。思考プロセスが見える化されるため、誤った前提や論理的な飛躍を早期に発見できます。最終答だけでは気づかない誤りが露呈します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '日本の企業で財務判断やコンプライアンス判定にTRACEを使う際の注意点は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'クラウドAPIで機密データを扱う場合は、データ保護方針を確認してください。機密情報はOllama・LM Studioなど自社環境のモデルを使用し、PromptQuorum経由で実行することをお勧めします。',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -2348,38 +2561,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: '提示工程中TRACE代表什么？',
-              a: 'TRACE是Think（思考）、Reason（推理）、Analyze（分析）、Conclude（结论）、Explain（解释）的首字母。是一个结构化的提示模式，让AI模型展示推理的每一步，而不仅仅是最终答案。',
-            },
-            {
-              q: '什么时候应该使用TRACE框架？',
-              a: '当推理质量和论证比速度更重要时使用TRACE：战略决策、技术评审、复杂调试，以及需要向利益相关者展示如何得出结论的情况。',
-            },
-            {
-              q: 'TRACE与Chain-of-Thought提示有什么不同？',
-              a: 'Chain-of-Thought是笼统的「逐步展示推理」技术。TRACE是具体的5步结构，能在任务和模型间产生一致、可重复的推理迹象。',
-            },
-            {
-              q: 'TRACE与RISEN框架有什么不同？',
-              a: 'TRACE侧重让推理过程明确可审计。RISEN侧重逐步改进现有草稿。要理解模型思考→TRACE，要提高质量→RISEN。',
-            },
-            {
-              q: '能在一个提示词中用TRACE，还是需要多轮提示？',
-              a: '都可以。单个提示词列出全5步更快；多轮可让你在各步停下来调整。要最大化控制，很多用户分步发送各TRACE步骤。',
-            },
-            {
-              q: '怎样防止TRACE生成太长的答案？',
-              a: '为各步设置长度限制。比如：「每步最多2句话」强制模型简洁，同时保持推理透明度。',
-            },
-            {
-              q: 'TRACE能帮助找到模型错误吗？',
-              a: '能。通过可见化推理过程，TRACE让你发现错误假设、逻辑跳跃、计算错误——这些在只看最终答案时看不见。',
-            },
-            {
-              q: 'PromptQuorum怎样支持TRACE提示？',
-              a: 'PromptQuorum把TRACE作为内置提示结构。你在对齐5步的结构化字段中填入任务上下文。PromptQuorum随后把提示并行发给多个模型，让你并排对比推理迹象。',
-            },
+            { q: '提示工程中TRACE代表什么？', a: 'TRACE是Think（思考）、Reason（推理）、Analyze（分析）、Conclude（结论）、Explain（解释）的首字母。是一个结构化的提示模式，让AI模型展示推理的每一步，而不仅仅是最终答案。' },
+            { q: '什么时候应该使用TRACE框架？', a: '当推理质量和论证比速度更重要时使用TRACE：战略决策、技术评审、复杂调试，以及需要向利益相关者展示如何得出结论的情况。' },
+            { q: 'TRACE与Chain-of-Thought提示有什么不同？', a: 'Chain-of-Thought是笼统的「逐步展示推理」技术。TRACE是具体的5步结构，能在任务和模型间产生一致、可重复的推理迹象。' },
+            { q: 'TRACE与RISEN框架有什么不同？', a: 'TRACE侧重让推理过程明确可审计。RISEN侧重逐步改进现有草稿。要理解模型思考→TRACE，要提高质量→RISEN。' },
+            { q: '能在一个提示词中用TRACE，还是需要多轮提示？', a: '都可以。单个提示词列出全5步更快；多轮可让你在各步停下来调整。要最大化控制，很多用户分步发送各TRACE步骤。' },
+            { q: '怎样防止TRACE生成太长的答案？', a: '为各步设置长度限制。比如：「每步最多2句话」强制模型简洁，同时保持推理透明度。' },
+            { q: 'TRACE能帮助找到模型错误吗？', a: '能。通过可见化推理过程，TRACE让你发现错误假设、逻辑跳跃、计算错误——这些在只看最终答案时看不见。' },
+            { q: 'PromptQuorum怎样支持TRACE提示？', a: 'PromptQuorum把TRACE作为内置提示结构。你在对齐5步的结构化字段中填入任务上下文。PromptQuorum随后把提示并行发给多个模型，让你并排对比推理迹象。' },
+            { q: '如何防止TRACE让答案变得太长？', a: '每个步骤限制在1～2句话。例如加上「每步最多2句话」的指示，能在保留推理透明度的同时保持简洁。' },
+            { q: '能用TRACE来检测AI的错误吗？', a: '能，而且非常有效。看到思考过程后，你能发现错误的前提、逻辑跳跃或计算错误——这些在只看最终答案时是看不到的。' },
+            { q: 'TRACE适合所有类型的问题吗？', a: '不是。TRACE适合推理和论证很重要的复杂问题：决策、分析、战略。简单问题用TRACE会增加不必要的开销。' },
+            { q: '在国内用TRACE框架评估金融或风险决策有什么注意事项？', a: '如果涉及敏感的财务或客户数据，避免用云API（OpenAI、Google等会在境外处理数据）。改用本地模型（Ollama、LM Studio）或符合《数据安全法》的国内方案。' },
+            { q: 'TRACE能帮助比较不同AI模型吗？', a: '能。同一个TRACE任务发给通义千问、文心一言、混元，能清楚看到它们推理风格的差异、严密程度、可靠性的区别。' },
+            { q: '企业多人协作时，TRACE怎样分工最有效？', a: '思考阶段→初级分析师，推理阶段→资深专家，分析→技术人员，结论→决策者。分工不但提高效率，还能从多角度增进洞察。' },
           ],
         },
 
@@ -2400,14 +2595,118 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'TRACE和RISEN框架有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'TRACE让模型展示思考过程。RISEN是逐步改进现有输出。需要理解推理→TRACE，需要提高质量→RISEN。' } },
-          { '@type': 'Question', 'name': '如何防止TRACE让答案变得太长？', 'acceptedAnswer': { '@type': 'Answer', 'text': '每个步骤限制在1～2句话。例如加上「每步最多2句话」的指示，能在保留推理透明度的同时保持简洁。' } },
-          { '@type': 'Question', 'name': '能用TRACE来检测AI的错误吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能，而且非常有效。看到思考过程后，你能发现错误的前提、逻辑跳跃或计算错误——这些在只看最终答案时是看不到的。' } },
-          { '@type': 'Question', 'name': 'TRACE适合所有类型的问题吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不是。TRACE适合推理和论证很重要的复杂问题：决策、分析、战略。简单问题用TRACE会增加不必要的开销。' } },
-          { '@type': 'Question', 'name': '在国内用TRACE框架评估金融或风险决策有什么注意事项？', 'acceptedAnswer': { '@type': 'Answer', 'text': '如果涉及敏感的财务或客户数据，避免用云API（OpenAI、Google等会在境外处理数据）。改用本地模型（Ollama、LM Studio）或符合《数据安全法》的国内方案。' } },
-          { '@type': 'Question', 'name': 'TRACE能帮助比较不同AI模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能。同一个TRACE任务发给通义千问、文心一言、混元，能清楚看到它们推理风格的差异、严密程度、可靠性的区别。' } },
-          { '@type': 'Question', 'name': '企业多人协作时，TRACE怎样分工最有效？', 'acceptedAnswer': { '@type': 'Answer', 'text': '思考阶段→初级分析师，推理阶段→资深专家，分析→技术人员，结论→决策者。分工不但提高效率，还能从多角度增进洞察。' } },
-          { '@type': 'Question', 'name': 'TRACE和Chain-of-Thought有什么不同？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chain-of-Thought是泛指「逐步展示推理」的技术。TRACE是一个结构化的5步框架，更可控、更适合复现。如果你需要标准化和可重复性，TRACE更好。' } },
+          {
+            '@type': 'Question',
+            'name': '提示工程中TRACE代表什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE是Think（思考）、Reason（推理）、Analyze（分析）、Conclude（结论）、Explain（解释）的首字母。是一个结构化的提示模式，让AI模型展示推理的每一步，而不仅仅是最终答案。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '什么时候应该使用TRACE框架？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '当推理质量和论证比速度更重要时使用TRACE：战略决策、技术评审、复杂调试，以及需要向利益相关者展示如何得出结论的情况。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACE与Chain-of-Thought提示有什么不同？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought是笼统的「逐步展示推理」技术。TRACE是具体的5步结构，能在任务和模型间产生一致、可重复的推理迹象。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACE与RISEN框架有什么不同？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TRACE侧重让推理过程明确可审计。RISEN侧重逐步改进现有草稿。要理解模型思考→TRACE，要提高质量→RISEN。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '能在一个提示词中用TRACE，还是需要多轮提示？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '都可以。单个提示词列出全5步更快；多轮可让你在各步停下来调整。要最大化控制，很多用户分步发送各TRACE步骤。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '怎样防止TRACE生成太长的答案？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '为各步设置长度限制。比如：「每步最多2句话」强制模型简洁，同时保持推理透明度。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACE能帮助找到模型错误吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '能。通过可见化推理过程，TRACE让你发现错误假设、逻辑跳跃、计算错误——这些在只看最终答案时看不见。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PromptQuorum怎样支持TRACE提示？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum把TRACE作为内置提示结构。你在对齐5步的结构化字段中填入任务上下文。PromptQuorum随后把提示并行发给多个模型，让你并排对比推理迹象。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何防止TRACE让答案变得太长？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '每个步骤限制在1～2句话。例如加上「每步最多2句话」的指示，能在保留推理透明度的同时保持简洁。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '能用TRACE来检测AI的错误吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '能，而且非常有效。看到思考过程后，你能发现错误的前提、逻辑跳跃或计算错误——这些在只看最终答案时是看不到的。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACE适合所有类型的问题吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不是。TRACE适合推理和论证很重要的复杂问题：决策、分析、战略。简单问题用TRACE会增加不必要的开销。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '在国内用TRACE框架评估金融或风险决策有什么注意事项？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '如果涉及敏感的财务或客户数据，避免用云API（OpenAI、Google等会在境外处理数据）。改用本地模型（Ollama、LM Studio）或符合《数据安全法》的国内方案。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TRACE能帮助比较不同AI模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '能。同一个TRACE任务发给通义千问、文心一言、混元，能清楚看到它们推理风格的差异、严密程度、可靠性的区别。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '企业多人协作时，TRACE怎样分工最有效？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '思考阶段→初级分析师，推理阶段→资深专家，分析→技术人员，结论→决策者。分工不但提高效率，还能从多角度增进洞察。',
+            },
+          },
         ],
       },
       howToSchema: {

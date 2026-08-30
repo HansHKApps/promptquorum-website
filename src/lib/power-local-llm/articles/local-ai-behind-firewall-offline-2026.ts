@@ -200,13 +200,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Does Ollama make any network calls when running offline?', a: 'By default, Ollama does not make network calls when serving a locally cached model. It contacts ollama.com only to pull or update models. Running `OLLAMA_MODELS` pointed at a local cache with `ollama serve` makes no outbound calls.' },
-          { q: 'Can I run Qwen3 72B on a NAS-mounted path?', a: 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.' },
-          { q: 'What is the smallest model that handles Chinese text well offline?', a: 'Qwen3 7B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.' },
-          { q: 'Do I need a CAC security assessment for an internal offline deployment?', a: 'Generally no. CAC\'s Algorithm Security Assessment rules target public-facing AI services. Internal deployments accessible only to employees are out of scope. Consult a compliance professional for your specific situation.' },
-          { q: 'Can llama.cpp run without any system dependencies?', a: 'On Linux, the pre-built binary requires GLIBC 2.28+ (standard on Ubuntu 20.04+). On macOS arm64, the binary is self-contained. On Windows, the CUDA build requires CUDA runtime DLLs.' },
-          { q: 'How do I update models in an air-gapped environment?', a: 'Download the updated GGUF on a connected machine, verify the SHA256 hash, transfer via USB/SSD, and replace the old GGUF in your model directory. Restart the Ollama server to pick up the new file.' },
-        ],
+            { q: 'Does Ollama make any network calls when running offline?', a: 'By default, Ollama does not make network calls when serving a locally cached model. It contacts ollama.com only to pull or update models. Running `OLLAMA_MODELS` pointed at a local cache with `ollama serve` makes no outbound calls.' },
+            { q: 'Can I run Qwen3 72B on a NAS-mounted path?', a: 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.' },
+            { q: 'What is the smallest model that handles Chinese text well offline?', a: 'Qwen3 7B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.' },
+            { q: 'Do I need a CAC security assessment for an internal offline deployment?', a: 'Generally no. CAC\'s Algorithm Security Assessment rules target public-facing AI services. Internal deployments accessible only to employees are out of scope. Consult a compliance professional for your specific situation.' },
+            { q: 'Can llama.cpp run without any system dependencies?', a: 'On Linux, the pre-built binary requires GLIBC 2.28+ (standard on Ubuntu 20.04+). On macOS arm64, the binary is self-contained. On Windows, the CUDA build requires CUDA runtime DLLs.' },
+            { q: 'How do I update models in an air-gapped environment?', a: 'Download the updated GGUF on a connected machine, verify the SHA256 hash, transfer via USB/SSD, and replace the old GGUF in your model directory. Restart the Ollama server to pick up the new file.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -239,10 +239,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'Does Ollama make any network calls when running offline?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama contacts ollama.com only to pull or update models. Running with a local cache and OLLAMA_MODELS set makes no outbound calls.' } },
-        { '@type': 'Question', name: 'What is the smallest model that handles Chinese text well offline?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B at Q4_K_M (5.5 GB VRAM). Native Chinese tokenisation, 50–80 tok/s on an RTX 3060.' } },
-        { '@type': 'Question', name: 'Do I need a CAC assessment for internal offline deployment?', acceptedAnswer: { '@type': 'Answer', text: 'Generally no. CAC Algorithm Security Assessment rules target public-facing AI services. Internal-only deployments are generally out of scope.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Does Ollama make any network calls when running offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'By default, Ollama does not make network calls when serving a locally cached model. It contacts ollama.com only to pull or update models. Running `OLLAMA_MODELS` pointed at a local cache with `ollama serve` makes no outbound calls.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run Qwen3 72B on a NAS-mounted path?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but expect slower load times (10–30 seconds) due to NFS latency during model loading. Once loaded, inference performance depends only on GPU/CPU VRAM — not storage speed.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the smallest model that handles Chinese text well offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B at Q4_K_M (5.5 GB VRAM). It handles Chinese with native tokenisation and produces coherent responses at 50–80 tok/s on an RTX 3060.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I need a CAC security assessment for an internal offline deployment?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Generally no. CAC\'s Algorithm Security Assessment rules target public-facing AI services. Internal deployments accessible only to employees are out of scope. Consult a compliance professional for your specific situation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can llama.cpp run without any system dependencies?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'On Linux, the pre-built binary requires GLIBC 2.28+ (standard on Ubuntu 20.04+). On macOS arm64, the binary is self-contained. On Windows, the CUDA build requires CUDA runtime DLLs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I update models in an air-gapped environment?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Download the updated GGUF on a connected machine, verify the SHA256 hash, transfer via USB/SSD, and replace the old GGUF in your model directory. Restart the Ollama server to pick up the new file.',
+            },
+          },
+        ],
     },
   },
 
@@ -339,13 +384,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chinaCompliance: { id: 'china-compliance', title: 'RGPD & conformité hors ligne', content: 'Pour les déploiements conformes au RGPD en France, l\'inférence locale simplifie les obligations.', items: ['**Pas de sous-traitance :** L\'inférence locale sans cloud ne nécessite pas de DPA selon l\'Art. 28 RGPD.', '**CNIL :** Les traitements locaux uniquement internes ne nécessitent pas de notification spécifique à la CNIL.', '**Journalisation :** Ollama ne journalise pas les prompts par défaut. Si un journal d\'audit est requis, ajouter un middleware local.'] },
       offlineRag: { id: 'offline-rag', title: 'RAG hors ligne', content: 'RAG entièrement hors ligne nécessite : LLM local + modèle d\'embedding local + base vectorielle locale.', numberedItems: ['**Modèle d\'embedding :** `ollama pull nomic-embed-text` sur la machine connectée.', '**Base vectorielle :** Chroma en binaire autonome ou Qdrant binary release.', '**Flux de requêtes :** Document → embedding nomic-embed → top-k chunks → Qwen3 → réponse. Zéro appel externe.'] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [
-        { q: 'Ollama effectue-t-il des appels réseau en mode hors ligne ?', a: 'Non. Ollama contacte ollama.com uniquement pour télécharger ou mettre à jour des modèles. `ollama serve` avec un cache local n\'effectue aucune connexion sortante.' },
-        { q: 'Ce déploiement est-il conforme au RGPD ?', a: 'Oui. L\'inférence locale sans cloud ne nécessite pas de DPA selon l\'Art. 28 RGPD, car aucune donnée n\'est transmise à des tiers.' },
-      ] },
+            { q: 'Ollama effectue-t-il des appels réseau en mode hors ligne ?', a: 'Non. Ollama contacte ollama.com uniquement pour télécharger ou mettre à jour des modèles. `ollama serve` avec un cache local n\'effectue aucune connexion sortante.' },
+            { q: 'Ce déploiement est-il conforme au RGPD ?', a: 'Oui. L\'inférence locale sans cloud ne nécessite pas de DPA selon l\'Art. 28 RGPD, car aucune donnée n\'est transmise à des tiers.' },
+          ] },
       relatedReading: { id: 'related-reading', title: 'Lectures connexes', items: ['[RAG local pour données professionnelles privées](/fr/power-local-llm/local-rag-for-private-business-data)', '[Meilleur NAS pour modèles IA locaux 2026](/fr/power-local-llm/best-nas-storage-local-ai-models-2026)'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'IA locale derrière un pare-feu : Guide de déploiement hors ligne 2026', description: 'Déployer des LLM locaux hors ligne : liste de contrôle, Ollama air-gap, NAS, RGPD.', url: 'https://www.promptquorum.com/fr/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'LLM hors ligne' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
-    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [{ '@type': 'Question', name: 'Ollama effectue-t-il des appels réseau hors ligne ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. `ollama serve` avec un cache local n\'effectue aucune connexion sortante.' } }] },
+    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'Ollama effectue-t-il des appels réseau en mode hors ligne ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Ollama contacte ollama.com uniquement pour télécharger ou mettre à jour des modèles. `ollama serve` avec un cache local n\'effectue aucune connexion sortante.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ce déploiement est-il conforme au RGPD ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. L\'inférence locale sans cloud ne nécessite pas de DPA selon l\'Art. 28 RGPD, car aucune donnée n\'est transmise à des tiers.',
+            },
+          },
+        ] },
   },
 
   ja: {
@@ -382,13 +444,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chinaCompliance: { id: 'china-compliance', title: 'METIガイドライン・データ管理対応', content: '日本のMETI AIガイドラインとデータガバナンスフレームワークへの対応。', items: ['**データ管理：** ローカル推論によりデータがハードウェアから出ない。METIの「AI利活用ガイドライン」のデータ管理要件を満たしやすい。', '**モデル記録：** METIガイドラインではモデル名とバージョンの記録が求められる。Ollamaはモデル情報を`~/.ollama/models/`に保存——記録に活用可能。', '**監査ログ：** Ollamaはデフォルトでプロンプトを記録しない。監査ログが必要な場合はミドルウェアをローカルに追加。'] },
       offlineRag: { id: 'offline-rag', title: 'オフラインRAGセットアップ', content: '完全オフラインのRAGには：ローカルLLM + ローカル埋め込みモデル + ローカルベクターDB。', numberedItems: ['**埋め込みモデル：** `ollama pull nomic-embed-text`を接続マシンで。Ollamaディレクトリと一緒に転送。', '**ベクターDB：** Chromaスタンドアロンバイナリ（Python不要）またはQdrantバイナリリリース。', '**クエリフロー：** 文書 → nomic-embed-textで埋め込み → ローカルDBからtop-kチャンク → Qwen3 → 応答。外部呼び出しゼロ。'] },
       faqSection: { id: 'faq', title: 'よくある質問', faqs: [
-        { q: 'オフライン実行時にOllamaはネットワーク呼び出しをしますか？', a: 'しません。Ollamaはモデルのダウンロード・更新時のみollama.comに接続します。ローカルキャッシュで`ollama serve`を実行した場合、外部接続は発生しません。' },
-        { q: 'METIガイドライン対応のため最適なモデルは？', a: 'Qwen3 14B（Q4_K_M、9.5 GB VRAM）。日本語・中国語・英語に対応し、METI推奨の高品質なAI出力を実現します。モデル名とバージョン（qwen3:14b）を記録に残してください。' },
-      ] },
+            { q: 'オフライン実行時にOllamaはネットワーク呼び出しをしますか？', a: 'しません。Ollamaはモデルのダウンロード・更新時のみollama.comに接続します。ローカルキャッシュで`ollama serve`を実行した場合、外部接続は発生しません。' },
+            { q: 'METIガイドライン対応のため最適なモデルは？', a: 'Qwen3 14B（Q4_K_M、9.5 GB VRAM）。日本語・中国語・英語に対応し、METI推奨の高品質なAI出力を実現します。モデル名とバージョン（qwen3:14b）を記録に残してください。' },
+          ] },
       relatedReading: { id: 'related-reading', title: '関連記事', items: ['[プライベートビジネスデータ用ローカルRAG](/ja/power-local-llm/local-rag-for-private-business-data)', '[ローカルAIモデル向けNAS 2026](/ja/power-local-llm/best-nas-storage-local-ai-models-2026)'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'ファイアウォール背後のローカルAI：オフライン展開ガイド 2026', description: 'ファイアウォール背後でのオフラインLLM展開：事前チェックリスト・Ollama air-gap・NASサイジング・METIガイドライン対応。', url: 'https://www.promptquorum.com/ja/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'オフラインLLM' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
-    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ja', mainEntity: [{ '@type': 'Question', name: 'オフラインでOllamaはネットワーク呼び出しをしますか？', acceptedAnswer: { '@type': 'Answer', text: 'しません。ローカルキャッシュで`ollama serve`を実行した場合、外部接続は発生しません。' } }] },
+    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ja', mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'オフライン実行時にOllamaはネットワーク呼び出しをしますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'しません。Ollamaはモデルのダウンロード・更新時のみollama.comに接続します。ローカルキャッシュで`ollama serve`を実行した場合、外部接続は発生しません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'METIガイドライン対応のため最適なモデルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 14B（Q4_K_M、9.5 GB VRAM）。日本語・中国語・英語に対応し、METI推奨の高品質なAI出力を実現します。モデル名とバージョン（qwen3:14b）を記録に残してください。',
+            },
+          },
+        ] },
   },
 
   zh: {
@@ -425,16 +504,57 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       chinaCompliance: { id: 'china-compliance', title: '中国《数据安全法》和CAC合规', content: '中国《数据安全法》（DSL，2021年）和《网络安全法》（CSL）要求在中国境内处理的重要数据在境内存储。国家互联网信息办公室（CAC）还要求提供面向公众服务的AI系统在上线前完成安全评估。', items: ['**数据驻留：** 本地推理意味着数据不会离开您的硬件，满足《数据安全法》第31条（重要数据在境内存储），与模型来源无关。', '**模型溯源：** 选用Qwen3（阿里巴巴）或DeepSeek（杭州深度求索）简化企业合规文档，两者均为中国企业出品。', '**面向公众的AI服务：** 若您的部署面向用户（非纯内部），需按CAC《算法安全评估规定》提交备案。仅供内部员工使用的离线部署通常不在范围内。', '**网络隔离验证：** 使用`iptables`或防火墙规则确认推理服务器无对外连接——记录在案以供合规审查。', '**审计日志：** Ollama默认不记录提示词。如内部数据治理政策要求，需在本地添加中间件（非云端）。'] },
       offlineRag: { id: 'offline-rag', title: '离线RAG设置', content: '完全离线的检索增强生成（RAG）需要：本地LLM + 本地嵌入模型 + 本地向量数据库。', numberedItems: ['**嵌入模型：** 在联网机器上`ollama pull nomic-embed-text`，随Ollama模型目录一起传输。', '**向量数据库：** Chroma可作为独立二进制运行（无需Python）；或使用Qdrant二进制版。', '**文档摄入：** 离线使用LangChain或LlamaIndex（断网前下载wheel包）。文档加载器指向本地文件——无需网络爬虫。', '**查询流程：** 文档 → 本地nomic-embed-text嵌入 → 从本地向量DB检索top-k片段 → 传递给本地Qwen3 → 响应。零外部调用。', '**验证：** 用`tcpdump -i any -n port 443`确认完整RAG查询周期无HTTPS流量产生。'] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [
-        { q: 'Ollama在离线运行时是否会产生网络调用？', a: '不会。Ollama仅在拉取或更新模型时连接ollama.com。使用本地缓存运行`ollama serve`不会产生任何对外连接。' },
-        { q: '本地AI部署是否符合中国《数据安全法》？', a: '本地推理意味着数据始终留在您的硬件上，无论模型来自哪家公司，均满足《数据安全法》的数据驻留要求。' },
-        { q: '内部离线部署是否需要CAC算法安全评估？', a: '通常不需要。CAC的算法安全评估规定主要针对面向公众的AI服务。仅供内部员工使用的部署通常不在范围内。请咨询合规专业人士了解您的具体情况。' },
-        { q: '最适合离线处理中文文本的最小模型是什么？', a: 'Qwen3 7B（Q4_K_M，5.5 GB显存）。原生中文分词，在RTX 3060上以50-80词元/秒运行，输出连贯。' },
-        { q: '如何在隔离环境中更新模型？', a: '在联网机器上下载更新的GGUF，验证SHA256哈希，通过USB/SSD传输，替换模型目录中的旧文件，重启Ollama服务器。' },
-      ] },
+            { q: 'Ollama在离线运行时是否会产生网络调用？', a: '不会。Ollama仅在拉取或更新模型时连接ollama.com。使用本地缓存运行`ollama serve`不会产生任何对外连接。' },
+            { q: '本地AI部署是否符合中国《数据安全法》？', a: '本地推理意味着数据始终留在您的硬件上，无论模型来自哪家公司，均满足《数据安全法》的数据驻留要求。' },
+            { q: '内部离线部署是否需要CAC算法安全评估？', a: '通常不需要。CAC的算法安全评估规定主要针对面向公众的AI服务。仅供内部员工使用的部署通常不在范围内。请咨询合规专业人士了解您的具体情况。' },
+            { q: '最适合离线处理中文文本的最小模型是什么？', a: 'Qwen3 7B（Q4_K_M，5.5 GB显存）。原生中文分词，在RTX 3060上以50-80词元/秒运行，输出连贯。' },
+            { q: '如何在隔离环境中更新模型？', a: '在联网机器上下载更新的GGUF，验证SHA256哈希，通过USB/SSD传输，替换模型目录中的旧文件，重启Ollama服务器。' },
+          ] },
       relatedReading: { id: 'related-reading', title: '相关阅读', items: ['[本地RAG用于私人业务数据](/zh/power-local-llm/local-rag-for-private-business-data)', '[本地AI模型最佳NAS存储 2026](/zh/power-local-llm/best-nas-storage-local-ai-models-2026)', '[Qwen本地部署指南 2026](/zh/local-llms/qwen-local-deployment-guide-2026)', '[微信本地LLM集成2026](/zh/power-local-llm/wechat-local-llm-integration-2026) — 将离线Ollama后端接入微信机器人：技术路线与合规注意事项。'] },
     },
     schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '防火墙后的本地AI：离线部署指南 2026', description: '防火墙后本地LLM离线部署：完整检查清单、Ollama air-gap、NAS存储规划、《数据安全法》/CAC合规说明。', url: 'https://www.promptquorum.com/zh/power-local-llm/local-ai-behind-firewall-offline-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: '离线LLM' }, { '@type': 'Thing', name: '数据安全法' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
-    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'zh', mainEntity: [{ '@type': 'Question', name: 'Ollama在离线运行时是否产生网络调用？', acceptedAnswer: { '@type': 'Answer', text: '不会。使用本地缓存运行`ollama serve`不会产生任何对外连接。' } }, { '@type': 'Question', name: '是否需要CAC安全评估？', acceptedAnswer: { '@type': 'Answer', text: '内部离线部署通常不需要。CAC规定主要针对面向公众的AI服务。' } }, { '@type': 'Question', name: '本地部署是否符合《数据安全法》？', acceptedAnswer: { '@type': 'Answer', text: '是的。本地推理数据始终在设备内，满足数据驻留要求。' } }] },
+    faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'zh', mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'Ollama在离线运行时是否会产生网络调用？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会。Ollama仅在拉取或更新模型时连接ollama.com。使用本地缓存运行`ollama serve`不会产生任何对外连接。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地AI部署是否符合中国《数据安全法》？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '本地推理意味着数据始终留在您的硬件上，无论模型来自哪家公司，均满足《数据安全法》的数据驻留要求。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '内部离线部署是否需要CAC算法安全评估？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通常不需要。CAC的算法安全评估规定主要针对面向公众的AI服务。仅供内部员工使用的部署通常不在范围内。请咨询合规专业人士了解您的具体情况。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '最适合离线处理中文文本的最小模型是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B（Q4_K_M，5.5 GB显存）。原生中文分词，在RTX 3060上以50-80词元/秒运行，输出连贯。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何在隔离环境中更新模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在联网机器上下载更新的GGUF，验证SHA256哈希，通过USB/SSD传输，替换模型目录中的旧文件，重启Ollama服务器。',
+            },
+          },
+        ] },
   },
 
   es: {
@@ -610,13 +730,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Ollama realiza llamadas de red cuando se ejecuta sin conexión?', a: 'Por defecto, Ollama no realiza llamadas de red cuando sirve un modelo almacenado en caché localmente. Solo contacta ollama.com para descargar o actualizar modelos. Ejecutar `ollama serve` con `OLLAMA_MODELS` apuntando a una caché local no genera ninguna conexión saliente.' },
-          { q: '¿Puedo ejecutar Qwen3 72B desde una ruta montada en NAS?', a: 'Sí, pero espera tiempos de carga más lentos (10-30 segundos) debido a la latencia de NFS durante la carga del modelo. Una vez cargado, el rendimiento de la inferencia depende únicamente de la VRAM de la GPU/CPU, no de la velocidad del almacenamiento.' },
-          { q: '¿Cuál es el modelo más pequeño que maneja bien el español offline?', a: 'Qwen3 7B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.' },
-          { q: '¿Necesito una evaluación de seguridad regulatoria para un despliegue offline interno?', a: 'Generalmente no. La mayoría de normativas regulatorias sobre IA se aplican a servicios orientados al público. Los despliegues internos accesibles solo por empleados suelen estar fuera del ámbito de aplicación. Consulta a un profesional de cumplimiento normativo para tu situación específica.' },
-          { q: '¿Puede llama.cpp ejecutarse sin dependencias del sistema?', a: 'En Linux, el binario precompilado requiere GLIBC 2.28+ (estándar en Ubuntu 20.04+). En macOS arm64, el binario es autocontenido. En Windows, la compilación con CUDA requiere las DLL del runtime de CUDA.' },
-          { q: '¿Cómo actualizo los modelos en un entorno air-gapped?', a: 'Descarga el GGUF actualizado en una máquina conectada, verifica el hash SHA256, transfiérelo mediante USB/SSD y reemplaza el GGUF antiguo en tu directorio de modelos. Reinicia el servidor de Ollama para que detecte el nuevo archivo.' },
-        ],
+            { q: '¿Ollama realiza llamadas de red cuando se ejecuta sin conexión?', a: 'Por defecto, Ollama no realiza llamadas de red cuando sirve un modelo almacenado en caché localmente. Solo contacta ollama.com para descargar o actualizar modelos. Ejecutar `ollama serve` con `OLLAMA_MODELS` apuntando a una caché local no genera ninguna conexión saliente.' },
+            { q: '¿Puedo ejecutar Qwen3 72B desde una ruta montada en NAS?', a: 'Sí, pero espera tiempos de carga más lentos (10-30 segundos) debido a la latencia de NFS durante la carga del modelo. Una vez cargado, el rendimiento de la inferencia depende únicamente de la VRAM de la GPU/CPU, no de la velocidad del almacenamiento.' },
+            { q: '¿Cuál es el modelo más pequeño que maneja bien el español offline?', a: 'Qwen3 7B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.' },
+            { q: '¿Necesito una evaluación de seguridad regulatoria para un despliegue offline interno?', a: 'Generalmente no. La mayoría de normativas regulatorias sobre IA se aplican a servicios orientados al público. Los despliegues internos accesibles solo por empleados suelen estar fuera del ámbito de aplicación. Consulta a un profesional de cumplimiento normativo para tu situación específica.' },
+            { q: '¿Puede llama.cpp ejecutarse sin dependencias del sistema?', a: 'En Linux, el binario precompilado requiere GLIBC 2.28+ (estándar en Ubuntu 20.04+). En macOS arm64, el binario es autocontenido. En Windows, la compilación con CUDA requiere las DLL del runtime de CUDA.' },
+            { q: '¿Cómo actualizo los modelos en un entorno air-gapped?', a: 'Descarga el GGUF actualizado en una máquina conectada, verifica el hash SHA256, transfiérelo mediante USB/SSD y reemplaza el GGUF antiguo en tu directorio de modelos. Reinicia el servidor de Ollama para que detecte el nuevo archivo.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -648,10 +768,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿Ollama realiza llamadas de red cuando se ejecuta sin conexión?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama solo contacta ollama.com para descargar o actualizar modelos. Ejecutar con una caché local y OLLAMA_MODELS configurado no genera ninguna conexión saliente.' } },
-        { '@type': 'Question', name: '¿Cuál es el modelo más pequeño que maneja bien el español offline?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B en Q4_K_M (5,5 GB de VRAM). Tokenización nativa en español, 50-80 tok/s en una RTX 3060.' } },
-        { '@type': 'Question', name: '¿Necesito una evaluación regulatoria para un despliegue offline interno?', acceptedAnswer: { '@type': 'Answer', text: 'Generalmente no. La mayoría de normativas sobre IA se aplican a servicios orientados al público. Los despliegues internos suelen estar fuera del ámbito de aplicación.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Ollama realiza llamadas de red cuando se ejecuta sin conexión?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Por defecto, Ollama no realiza llamadas de red cuando sirve un modelo almacenado en caché localmente. Solo contacta ollama.com para descargar o actualizar modelos. Ejecutar `ollama serve` con `OLLAMA_MODELS` apuntando a una caché local no genera ninguna conexión saliente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar Qwen3 72B desde una ruta montada en NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, pero espera tiempos de carga más lentos (10-30 segundos) debido a la latencia de NFS durante la carga del modelo. Una vez cargado, el rendimiento de la inferencia depende únicamente de la VRAM de la GPU/CPU, no de la velocidad del almacenamiento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el modelo más pequeño que maneja bien el español offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B en Q4_K_M (5,5 GB de VRAM). Maneja el español con tokenización nativa y produce respuestas coherentes a 50-80 tok/s en una RTX 3060.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito una evaluación de seguridad regulatoria para un despliegue offline interno?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Generalmente no. La mayoría de normativas regulatorias sobre IA se aplican a servicios orientados al público. Los despliegues internos accesibles solo por empleados suelen estar fuera del ámbito de aplicación. Consulta a un profesional de cumplimiento normativo para tu situación específica.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puede llama.cpp ejecutarse sin dependencias del sistema?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En Linux, el binario precompilado requiere GLIBC 2.28+ (estándar en Ubuntu 20.04+). En macOS arm64, el binario es autocontenido. En Windows, la compilación con CUDA requiere las DLL del runtime de CUDA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo actualizo los modelos en un entorno air-gapped?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Descarga el GGUF actualizado en una máquina conectada, verifica el hash SHA256, transfiérelo mediante USB/SSD y reemplaza el GGUF antiguo en tu directorio de modelos. Reinicia el servidor de Ollama para que detecte el nuevo archivo.',
+            },
+          },
+        ],
     },
   },
   ko: {
@@ -1044,13 +1209,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'O Ollama faz alguma chamada de rede ao executar offline?', a: 'Por padrão, o Ollama não faz chamadas de rede ao servir um modelo armazenado em cache localmente. Ele contata ollama.com apenas para baixar ou atualizar modelos. Executar `ollama serve` com `OLLAMA_MODELS` apontando para um cache local não gera nenhuma conexão de saída.' },
-          { q: 'Posso executar o Qwen3 72B a partir de um caminho montado em NAS?', a: 'Sim, mas espere tempos de carregamento mais lentos (10-30 segundos) devido à latência do NFS durante o carregamento do modelo. Uma vez carregado, o desempenho da inferência depende apenas da VRAM da GPU/CPU, não da velocidade do armazenamento.' },
-          { q: 'Qual é o menor modelo que lida bem com texto em português offline?', a: 'Qwen3 7B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.' },
-          { q: 'Preciso de uma avaliação de segurança regulatória para uma implantação offline interna?', a: 'Geralmente não. A maioria das normas regulatórias sobre IA se aplica a serviços voltados ao público. Implantações internas acessíveis apenas por funcionários costumam estar fora do âmbito de aplicação. Consulte um profissional de conformidade para a sua situação específica.' },
-          { q: 'O llama.cpp consegue rodar sem dependências do sistema?', a: 'No Linux, o binário pré-compilado requer GLIBC 2.28+ (padrão no Ubuntu 20.04+). No macOS arm64, o binário é autocontido. No Windows, a compilação com CUDA requer as DLLs do runtime do CUDA.' },
-          { q: 'Como atualizo os modelos em um ambiente air-gapped?', a: 'Baixe o GGUF atualizado em uma máquina conectada, verifique o hash SHA256, transfira via USB/SSD e substitua o GGUF antigo no seu diretório de modelos. Reinicie o servidor do Ollama para que ele detecte o novo arquivo.' },
-        ],
+            { q: 'O Ollama faz alguma chamada de rede ao executar offline?', a: 'Por padrão, o Ollama não faz chamadas de rede ao servir um modelo armazenado em cache localmente. Ele contata ollama.com apenas para baixar ou atualizar modelos. Executar `ollama serve` com `OLLAMA_MODELS` apontando para um cache local não gera nenhuma conexão de saída.' },
+            { q: 'Posso executar o Qwen3 72B a partir de um caminho montado em NAS?', a: 'Sim, mas espere tempos de carregamento mais lentos (10-30 segundos) devido à latência do NFS durante o carregamento do modelo. Uma vez carregado, o desempenho da inferência depende apenas da VRAM da GPU/CPU, não da velocidade do armazenamento.' },
+            { q: 'Qual é o menor modelo que lida bem com texto em português offline?', a: 'Qwen3 7B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.' },
+            { q: 'Preciso de uma avaliação de segurança regulatória para uma implantação offline interna?', a: 'Geralmente não. A maioria das normas regulatórias sobre IA se aplica a serviços voltados ao público. Implantações internas acessíveis apenas por funcionários costumam estar fora do âmbito de aplicação. Consulte um profissional de conformidade para a sua situação específica.' },
+            { q: 'O llama.cpp consegue rodar sem dependências do sistema?', a: 'No Linux, o binário pré-compilado requer GLIBC 2.28+ (padrão no Ubuntu 20.04+). No macOS arm64, o binário é autocontido. No Windows, a compilação com CUDA requer as DLLs do runtime do CUDA.' },
+            { q: 'Como atualizo os modelos em um ambiente air-gapped?', a: 'Baixe o GGUF atualizado em uma máquina conectada, verifique o hash SHA256, transfira via USB/SSD e substitua o GGUF antigo no seu diretório de modelos. Reinicie o servidor do Ollama para que ele detecte o novo arquivo.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -1082,10 +1247,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'O Ollama faz alguma chamada de rede ao executar offline?', acceptedAnswer: { '@type': 'Answer', text: 'O Ollama contata ollama.com apenas para baixar ou atualizar modelos. Executar com um cache local e OLLAMA_MODELS configurado não gera nenhuma conexão de saída.' } },
-        { '@type': 'Question', name: 'Qual é o menor modelo que lida bem com texto em português offline?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B em Q4_K_M (5,5 GB de VRAM). Tokenização nativa em português, 50-80 tok/s em uma RTX 3060.' } },
-        { '@type': 'Question', name: 'Preciso de uma avaliação regulatória para uma implantação offline interna?', acceptedAnswer: { '@type': 'Answer', text: 'Geralmente não. A maioria das normas sobre IA se aplica a serviços voltados ao público. Implantações internas costumam estar fora do âmbito de aplicação.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'O Ollama faz alguma chamada de rede ao executar offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Por padrão, o Ollama não faz chamadas de rede ao servir um modelo armazenado em cache localmente. Ele contata ollama.com apenas para baixar ou atualizar modelos. Executar `ollama serve` com `OLLAMA_MODELS` apontando para um cache local não gera nenhuma conexão de saída.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso executar o Qwen3 72B a partir de um caminho montado em NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, mas espere tempos de carregamento mais lentos (10-30 segundos) devido à latência do NFS durante o carregamento do modelo. Uma vez carregado, o desempenho da inferência depende apenas da VRAM da GPU/CPU, não da velocidade do armazenamento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o menor modelo que lida bem com texto em português offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B em Q4_K_M (5,5 GB de VRAM). Ele lida com o português com tokenização nativa e produz respostas coerentes a 50-80 tok/s em uma RTX 3060.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Preciso de uma avaliação de segurança regulatória para uma implantação offline interna?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Geralmente não. A maioria das normas regulatórias sobre IA se aplica a serviços voltados ao público. Implantações internas acessíveis apenas por funcionários costumam estar fora do âmbito de aplicação. Consulte um profissional de conformidade para a sua situação específica.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O llama.cpp consegue rodar sem dependências do sistema?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No Linux, o binário pré-compilado requer GLIBC 2.28+ (padrão no Ubuntu 20.04+). No macOS arm64, o binário é autocontido. No Windows, a compilação com CUDA requer as DLLs do runtime do CUDA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como atualizo os modelos em um ambiente air-gapped?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Baixe o GGUF atualizado em uma máquina conectada, verifique o hash SHA256, transfira via USB/SSD e substitua o GGUF antigo no seu diretório de modelos. Reinicie o servidor do Ollama para que ele detecte o novo arquivo.',
+            },
+          },
+        ],
     },
   },
   ar: {
@@ -1261,13 +1471,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل تُجري Ollama أي اتصالات شبكية عند العمل دون إنترنت؟', a: 'لا. لا تتصل Ollama بـ ollama.com إلا عند تنزيل النماذج أو تحديثها. تشغيل `ollama serve` مع تعيين `OLLAMA_MODELS` ليشير إلى ذاكرة تخزين محلية لا يولّد أي اتصالات صادرة.' },
-          { q: 'هل يمكنني تشغيل Qwen3 72B من مسار مثبّت على NAS؟', a: 'نعم، لكن توقع أوقات تحميل أبطأ (10–30 ثانية) بسبب زمن الاستجابة لـ NFS أثناء تحميل النموذج. بعد التحميل، يعتمد أداء الاستدلال على VRAM للمعالج فقط وليس سرعة التخزين.' },
-          { q: 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟', a: 'Qwen3 7B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.' },
-          { q: 'هل أحتاج إلى تقييم أمني تنظيمي للنشر الداخلي المعزول؟', a: 'بشكل عام لا. تنطبق معظم اللوائح التنظيمية للذكاء الاصطناعي على الخدمات الموجهة للعموم. عمليات النشر الداخلية المتاحة فقط للموظفين تقع عمومًا خارج نطاق التطبيق. استشر متخصصًا في الامتثال لوضعك المحدد.' },
-          { q: 'هل يمكن تشغيل llama.cpp دون أي تبعيات للنظام؟', a: 'على Linux، يتطلب الملف التنفيذي المبني مسبقًا GLIBC 2.28+ (القياسي في Ubuntu 20.04+). على macOS arm64، الملف التنفيذي مكتفٍ ذاتيًا. على Windows، يتطلب بناء CUDA ملفات DLL لوقت تشغيل CUDA.' },
-          { q: 'كيف أحدّث النماذج في بيئة معزولة air-gapped؟', a: 'نزّل ملف GGUF المحدّث على جهاز متصل، تحقق من تجزئة SHA256، انقله عبر USB/SSD، واستبدل ملف GGUF القديم في دليل نماذجك. أعد تشغيل خادم Ollama لاستيعاب الملف الجديد.' },
-        ],
+            { q: 'هل تُجري Ollama أي اتصالات شبكية عند العمل دون إنترنت؟', a: 'لا. لا تتصل Ollama بـ ollama.com إلا عند تنزيل النماذج أو تحديثها. تشغيل `ollama serve` مع تعيين `OLLAMA_MODELS` ليشير إلى ذاكرة تخزين محلية لا يولّد أي اتصالات صادرة.' },
+            { q: 'هل يمكنني تشغيل Qwen3 72B من مسار مثبّت على NAS؟', a: 'نعم، لكن توقع أوقات تحميل أبطأ (10–30 ثانية) بسبب زمن الاستجابة لـ NFS أثناء تحميل النموذج. بعد التحميل، يعتمد أداء الاستدلال على VRAM للمعالج فقط وليس سرعة التخزين.' },
+            { q: 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟', a: 'Qwen3 7B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.' },
+            { q: 'هل أحتاج إلى تقييم أمني تنظيمي للنشر الداخلي المعزول؟', a: 'بشكل عام لا. تنطبق معظم اللوائح التنظيمية للذكاء الاصطناعي على الخدمات الموجهة للعموم. عمليات النشر الداخلية المتاحة فقط للموظفين تقع عمومًا خارج نطاق التطبيق. استشر متخصصًا في الامتثال لوضعك المحدد.' },
+            { q: 'هل يمكن تشغيل llama.cpp دون أي تبعيات للنظام؟', a: 'على Linux، يتطلب الملف التنفيذي المبني مسبقًا GLIBC 2.28+ (القياسي في Ubuntu 20.04+). على macOS arm64، الملف التنفيذي مكتفٍ ذاتيًا. على Windows، يتطلب بناء CUDA ملفات DLL لوقت تشغيل CUDA.' },
+            { q: 'كيف أحدّث النماذج في بيئة معزولة air-gapped؟', a: 'نزّل ملف GGUF المحدّث على جهاز متصل، تحقق من تجزئة SHA256، انقله عبر USB/SSD، واستبدل ملف GGUF القديم في دليل نماذجك. أعد تشغيل خادم Ollama لاستيعاب الملف الجديد.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -1299,10 +1509,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'هل تُجري Ollama اتصالات شبكية عند العمل دون إنترنت؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. تتصل Ollama بـ ollama.com فقط عند تنزيل النماذج أو تحديثها. التشغيل مع ذاكرة تخزين محلية وتعيين OLLAMA_MODELS لا يولّد أي اتصالات صادرة.' } },
-        { '@type': 'Question', name: 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B بصيغة Q4_K_M (5.5 جيجابايت VRAM). ترميز native للعربية، 50–80 رمزًا/ثانية على RTX 3060.' } },
-        { '@type': 'Question', name: 'هل أحتاج إلى تقييم تنظيمي للنشر الداخلي المعزول؟', acceptedAnswer: { '@type': 'Answer', text: 'بشكل عام لا. تنطبق معظم اللوائح على الخدمات الموجهة للعموم. عمليات النشر الداخلية تقع عمومًا خارج نطاق التطبيق.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل تُجري Ollama أي اتصالات شبكية عند العمل دون إنترنت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. لا تتصل Ollama بـ ollama.com إلا عند تنزيل النماذج أو تحديثها. تشغيل `ollama serve` مع تعيين `OLLAMA_MODELS` ليشير إلى ذاكرة تخزين محلية لا يولّد أي اتصالات صادرة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل Qwen3 72B من مسار مثبّت على NAS؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، لكن توقع أوقات تحميل أبطأ (10–30 ثانية) بسبب زمن الاستجابة لـ NFS أثناء تحميل النموذج. بعد التحميل، يعتمد أداء الاستدلال على VRAM للمعالج فقط وليس سرعة التخزين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أصغر نموذج يتعامل جيدًا مع النصوص العربية دون إنترنت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B بصيغة Q4_K_M (5.5 جيجابايت VRAM). يتعامل مع العربية بترميز native ويُنتج استجابات متسقة بسرعة 50–80 رمزًا/ثانية على RTX 3060.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج إلى تقييم أمني تنظيمي للنشر الداخلي المعزول؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بشكل عام لا. تنطبق معظم اللوائح التنظيمية للذكاء الاصطناعي على الخدمات الموجهة للعموم. عمليات النشر الداخلية المتاحة فقط للموظفين تقع عمومًا خارج نطاق التطبيق. استشر متخصصًا في الامتثال لوضعك المحدد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن تشغيل llama.cpp دون أي تبعيات للنظام؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'على Linux، يتطلب الملف التنفيذي المبني مسبقًا GLIBC 2.28+ (القياسي في Ubuntu 20.04+). على macOS arm64، الملف التنفيذي مكتفٍ ذاتيًا. على Windows، يتطلب بناء CUDA ملفات DLL لوقت تشغيل CUDA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أحدّث النماذج في بيئة معزولة air-gapped؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نزّل ملف GGUF المحدّث على جهاز متصل، تحقق من تجزئة SHA256، انقله عبر USB/SSD، واستبدل ملف GGUF القديم في دليل نماذجك. أعد تشغيل خادم Ollama لاستيعاب الملف الجديد.',
+            },
+          },
+        ],
     },
   },
 }

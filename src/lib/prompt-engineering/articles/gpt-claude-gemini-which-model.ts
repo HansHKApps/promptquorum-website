@@ -2008,15 +2008,71 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'Si solo puedo pagar una suscripción, ¿cuál elijo?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Empieza con Claude Opus 5. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-5.6. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).' } },
-        { '@type': 'Question', 'name': '¿Con qué frecuencia debo reevaluar mis elecciones de modelos?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Trimestralmente. Cada 3–4 meses, se lanzan nuevos modelos y las posiciones en los rankings cambian. Usa PromptQuorum para re-testear tus tareas más críticas en los últimos modelos. Lo que era mejor hace 6 meses puede que ya no sea óptimo.' } },
-        { '@type': 'Question', 'name': '¿Puedo mezclar múltiples modelos dentro de un producto o agente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, y deberías hacerlo. Enruta distintas tareas a distintos modelos: Claude para escritura, Gemini para recuperación, GPT para agentes. Usa lógica condicional: si es una tarea de escritura, usa Claude; si es de recuperación, usa Gemini. Así es como funcionan los sistemas en producción.' } },
-        { '@type': 'Question', 'name': '¿Cómo pienso sobre el bloqueo por proveedor?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El bloqueo por proveedor ocurre cuando tu sistema depende del formato API de un modelo, funciones especiales o precios. Protégete: (1) Usa estructuras de prompt estándar que funcionen en todos los modelos. (2) Usa capas de abstracción (como PromptQuorum) que soporten múltiples proveedores. (3) Prueba regularmente en múltiples modelos para detectar divergencias específicas del proveedor. (4) Para sistemas críticos, soporta modelos locales (Ollama, LM Studio) como respaldo.' } },
-        { '@type': 'Question', 'name': '¿Dónde encajan los modelos locales de código abierto?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Los modelos locales (Llama 4 Scout, Qwen3, Mistral y otros vía Ollama o LM Studio) son mejores para: tareas repetitivas de alto volumen (clasificar, resumir, extraer), datos privados (sin llamadas a la API), cargas de trabajo sensibles al costo y pruebas antes de comprometerse con costos de API. No igualan a los modelos frontier en calidad, pero destacan en privacidad y costo. Úsalos para el 80% de las tareas que no necesitan razonamiento de nivel frontier.' } },
-        { '@type': 'Question', 'name': '¿Es Claude mejor que ChatGPT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 5 supera a ChatGPT (GPT-5.6) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-5.6 tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.' } },
-        { '@type': 'Question', 'name': '¿Qué modelo de IA es el más preciso?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 5 lidera en escritura y análisis estructurado. GPT-5.6 lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.' } },
-        { '@type': 'Question', 'name': '¿Cuál es la diferencia entre GPT-5.6 y GPT-5.6 Luna?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-5.6 (nivel Sol) es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-5.6 Luna es una versión más pequeña, rápida y barata ($0.20 entrada/$1.20 salida por millón de tokens) — ~25 veces más barata con calidad ligeramente menor. Usa GPT-5.6 Luna para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-5.6 Sol para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Si solo puedo pagar una suscripción, ¿cuál elijo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Empieza con Claude Opus 5. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-5.6. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Con qué frecuencia debo reevaluar mis elecciones de modelos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Trimestralmente. Cada 3–4 meses, se lanzan nuevos modelos y las posiciones en los rankings cambian. Usa PromptQuorum para re-testear tus tareas más críticas en los últimos modelos. Lo que era mejor hace 6 meses puede que ya no sea óptimo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo mezclar múltiples modelos dentro de un producto o agente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, y deberías hacerlo. Enruta distintas tareas a distintos modelos: Claude para escritura, Gemini para recuperación, GPT para agentes. Usa lógica condicional: si es una tarea de escritura, usa Claude; si es de recuperación, usa Gemini. Así es como funcionan los sistemas en producción.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo gestiono el bloqueo por proveedor?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El bloqueo por proveedor ocurre cuando tu sistema depende del formato API de un modelo, funciones especiales o precios. Protégete: (1) Usa estructuras de prompt estándar que funcionen en todos los modelos. (2) Usa capas de abstracción (como PromptQuorum) que soporten múltiples proveedores. (3) Prueba regularmente en múltiples modelos para detectar divergencias específicas del proveedor. (4) Para sistemas críticos, soporta modelos locales (Ollama, LM Studio) como respaldo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Dónde encajan los modelos locales de código abierto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los modelos locales (Llama 4 Scout, Qwen3, Mistral y otros vía Ollama o LM Studio) son mejores para: tareas repetitivas de alto volumen (clasificar, resumir, extraer), datos privados (sin llamadas a la API), cargas de trabajo sensibles al costo y pruebas antes de comprometerse con costos de API. No igualan a los modelos frontier en calidad, pero destacan en privacidad y costo. Úsalos para el 80% de las tareas que no necesitan razonamiento de nivel frontier.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es Claude mejor que ChatGPT?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 5 supera a ChatGPT (GPT-5.6) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-5.6 tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelo de IA es el más preciso?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 5 lidera en escritura y análisis estructurado. GPT-5.6 lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre GPT-5.6 y GPT-5.6 Luna?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6 (nivel Sol) es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-5.6 Luna es una versión más pequeña, rápida y barata ($0.20 entrada/$1.20 salida por millón de tokens) — ~25 veces más barata con calidad ligeramente menor. Usa GPT-5.6 Luna para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-5.6 Sol para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.',
+            },
+          },
+        ],
     },
     recipesHowToSchema: {
       '@context': 'https://schema.org',
@@ -2357,39 +2413,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: 'Si solo puedo pagar una suscripción, ¿cuál elijo?',
-            a: 'Empieza con Claude Opus 5. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-5.6. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).'
-          },
-          {
-            q: '¿Con qué frecuencia debo reevaluar mis elecciones de modelos?',
-            a: 'Trimestralmente. Cada 3–4 meses, se lanzan nuevos modelos y las posiciones en los rankings cambian. Usa PromptQuorum para re-testear tus tareas más críticas en los últimos modelos. Lo que era mejor hace 6 meses puede que ya no sea óptimo.'
-          },
-          {
-            q: '¿Puedo mezclar múltiples modelos dentro de un producto o agente?',
-            a: 'Sí, y deberías hacerlo. Enruta distintas tareas a distintos modelos: Claude para escritura, Gemini para recuperación, GPT para agentes. Usa lógica condicional: si es una tarea de escritura, usa Claude; si es de recuperación, usa Gemini. Así es como funcionan los sistemas en producción.'
-          },
-          {
-            q: '¿Cómo gestiono el bloqueo por proveedor?',
-            a: 'El bloqueo por proveedor ocurre cuando tu sistema depende del formato API de un modelo, funciones especiales o precios. Protégete: (1) Usa estructuras de prompt estándar que funcionen en todos los modelos. (2) Usa capas de abstracción (como PromptQuorum) que soporten múltiples proveedores. (3) Prueba regularmente en múltiples modelos para detectar divergencias específicas del proveedor. (4) Para sistemas críticos, soporta modelos locales (Ollama, LM Studio) como respaldo.'
-          },
-          {
-            q: '¿Dónde encajan los modelos locales de código abierto?',
-            a: 'Los modelos locales (Llama 4 Scout, Qwen3, Mistral y otros vía Ollama o LM Studio) son mejores para: tareas repetitivas de alto volumen (clasificar, resumir, extraer), datos privados (sin llamadas a la API), cargas de trabajo sensibles al costo y pruebas antes de comprometerse con costos de API. No igualan a los modelos frontier en calidad, pero destacan en privacidad y costo. Úsalos para el 80% de las tareas que no necesitan razonamiento de nivel frontier.'
-          },
-          {
-            q: '¿Es Claude mejor que ChatGPT?',
-            a: 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 5 supera a ChatGPT (GPT-5.6) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-5.6 tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.'
-          },
-          {
-            q: '¿Qué modelo de IA es el más preciso?',
-            a: 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 5 lidera en escritura y análisis estructurado. GPT-5.6 lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.'
-          },
-          {
-            q: '¿Cuál es la diferencia entre GPT-5.6 y GPT-5.6 Luna?',
-            a: 'GPT-5.6 (nivel Sol) es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-5.6 Luna es una versión más pequeña, rápida y barata ($0.20 entrada/$1.20 salida por millón de tokens) — ~25 veces más barata con calidad ligeramente menor. Usa GPT-5.6 Luna para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-5.6 Sol para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.'
-          },
-        ],
+            { q: 'Si solo puedo pagar una suscripción, ¿cuál elijo?', a: 'Empieza con Claude Opus 5. Es el de mayor calidad en escritura, razonamiento y código. Si tu principal necesidad es la integración de herramientas y multimodal (imágenes/audio), elige GPT-5.6. Si tienes un equipo que usa mucho Google Workspace y el costo es crítico, elige Gemini. Si tus usuarios están en China continental, no tienes opción — elige DeepSeek o Baidu ERNIE (necesarios por latencia y cumplimiento normativo).' },
+            { q: '¿Con qué frecuencia debo reevaluar mis elecciones de modelos?', a: 'Trimestralmente. Cada 3–4 meses, se lanzan nuevos modelos y las posiciones en los rankings cambian. Usa PromptQuorum para re-testear tus tareas más críticas en los últimos modelos. Lo que era mejor hace 6 meses puede que ya no sea óptimo.' },
+            { q: '¿Puedo mezclar múltiples modelos dentro de un producto o agente?', a: 'Sí, y deberías hacerlo. Enruta distintas tareas a distintos modelos: Claude para escritura, Gemini para recuperación, GPT para agentes. Usa lógica condicional: si es una tarea de escritura, usa Claude; si es de recuperación, usa Gemini. Así es como funcionan los sistemas en producción.' },
+            { q: '¿Cómo gestiono el bloqueo por proveedor?', a: 'El bloqueo por proveedor ocurre cuando tu sistema depende del formato API de un modelo, funciones especiales o precios. Protégete: (1) Usa estructuras de prompt estándar que funcionen en todos los modelos. (2) Usa capas de abstracción (como PromptQuorum) que soporten múltiples proveedores. (3) Prueba regularmente en múltiples modelos para detectar divergencias específicas del proveedor. (4) Para sistemas críticos, soporta modelos locales (Ollama, LM Studio) como respaldo.' },
+            { q: '¿Dónde encajan los modelos locales de código abierto?', a: 'Los modelos locales (Llama 4 Scout, Qwen3, Mistral y otros vía Ollama o LM Studio) son mejores para: tareas repetitivas de alto volumen (clasificar, resumir, extraer), datos privados (sin llamadas a la API), cargas de trabajo sensibles al costo y pruebas antes de comprometerse con costos de API. No igualan a los modelos frontier en calidad, pero destacan en privacidad y costo. Úsalos para el 80% de las tareas que no necesitan razonamiento de nivel frontier.' },
+            { q: '¿Es Claude mejor que ChatGPT?', a: 'Para calidad de escritura, revisión de código y razonamiento estructurado, Claude Opus 5 supera a ChatGPT (GPT-5.6) en la mayoría de las evaluaciones. Para integración de herramientas, flujos de trabajo multi-agente y el ecosistema más amplio de terceros, GPT-5.6 tiene la ventaja. Ninguno es universalmente mejor — la elección correcta depende de tu tarea específica. Usa PromptQuorum para probar ambos en tus prompts reales y comparar los resultados directamente.' },
+            { q: '¿Qué modelo de IA es el más preciso?', a: 'Ningún modelo es el más preciso en todas las tareas. Claude Opus 5 lidera en escritura y análisis estructurado. GPT-5.6 lidera en razonamiento integrado con herramientas. Gemini 3.1 Pro lidera en investigación de documentos largos con búsqueda web en vivo. La precisión es específica para cada tarea — la única prueba fiable es ejecutar tus prompts reales en todos los modelos y medir los resultados.' },
+            { q: '¿Cuál es la diferencia entre GPT-5.6 y GPT-5.6 Luna?', a: 'GPT-5.6 (nivel Sol) es el modelo frontier de OpenAI — máxima capacidad, mayor costo ($5 entrada/$30 salida por millón de tokens). GPT-5.6 Luna es una versión más pequeña, rápida y barata ($0.20 entrada/$1.20 salida por millón de tokens) — ~25 veces más barata con calidad ligeramente menor. Usa GPT-5.6 Luna para clasificación, resumen y tareas de alto volumen donde no se requiere razonamiento frontier. Usa GPT-5.6 Sol para razonamiento multi-paso complejo, flujos de trabajo de agentes y tareas donde la calidad es crítica.' },
+          ],
       },
 
       sources: {
@@ -3023,15 +3055,71 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       'mainEntity': [
-        { '@type': 'Question', 'name': 'إذا كنت لا أستطيع دفع تكلفة إلا لاشتراك واحد، أيها أختار؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ابدأ بـClaude Opus 5. إنه الأعلى جودة في الكتابة والاستدلال والكود. إذا كانت حاجتك الرئيسية هي تكامل الأدوات ومتعدد الوسائط (الصور/الصوت)، فاختر GPT-5.6. إذا كان لديك فريق يستخدم Google Workspace كثيراً والتكلفة حاسمة، فاختر Gemini. إذا كان مستخدموك في البر الرئيسي للصين، فليس لديك خيار — اختر DeepSeek أو Baidu ERNIE (ضروريان لزمن الاستجابة والامتثال التنظيمي).' } },
-        { '@type': 'Question', 'name': 'كم مرة يجب أن أعيد تقييم اختياراتي للنماذج؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ربع سنوياً. كل 3-4 أشهر، تُطلق نماذج جديدة وتتغير ترتيبات التصنيف. استخدم PromptQuorum لإعادة اختبار مهامك الأكثر أهمية على أحدث النماذج. ما كان أفضل قبل 6 أشهر قد لا يكون الأمثل الآن.' } },
-        { '@type': 'Question', 'name': 'هل يمكنني دمج نماذج متعددة داخل منتج أو وكيل واحد؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، ويجب عليك ذلك. وجّه مهاماً مختلفة إلى نماذج مختلفة: Claude للكتابة، وGemini للاسترجاع، وGPT للوكلاء. استخدم منطقاً شرطياً: إذا كانت مهمة كتابة، فاستخدم Claude؛ وإذا كانت استرجاعاً، فاستخدم Gemini. هكذا تعمل الأنظمة في الإنتاج.' } },
-        { '@type': 'Question', 'name': 'كيف أفكر في الارتباط بمزود واحد؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يحدث الارتباط بمزود واحد عندما يعتمد نظامك على تنسيق API لنموذج معين أو ميزات خاصة أو أسعار. احمِ نفسك: (1) استخدم هياكل استفسار قياسية تعمل عبر جميع النماذج. (2) استخدم طبقات تجريد (مثل PromptQuorum) تدعم مزودين متعددين. (3) اختبر بانتظام عبر نماذج متعددة للكشف عن التباينات الخاصة بالمزود. (4) لأنظمة بالغة الأهمية، ادعم النماذج المحلية (Ollama وLM Studio) كنسخة احتياطية.' } },
-        { '@type': 'Question', 'name': 'أين تناسب النماذج المحلية مفتوحة المصدر؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'النماذج المحلية (Llama 4 Scout وQwen3 وMistral وغيرها عبر Ollama أو LM Studio) هي الأفضل لـ: المهام المتكررة ذات الحجم الكبير (التصنيف والتلخيص والاستخراج)، والبيانات الخاصة (بدون استدعاءات API)، وأعباء العمل الحساسة للتكلفة، والاختبار قبل الالتزام بتكاليف API. لا تضاهي نماذج الحافة في الجودة، لكنها تتفوق في الخصوصية والتكلفة. استخدمها لـ80% من المهام التي لا تحتاج إلى استدلال من مستوى الحافة.' } },
-        { '@type': 'Question', 'name': 'هل Claude أفضل من ChatGPT؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لجودة الكتابة ومراجعة الكود والاستدلال المنظم، يتفوق Claude Opus 5 على ChatGPT (GPT-5.6) في معظم التقييمات. لتكامل الأدوات وسير عمل متعدد الوكلاء والنظام البيئي الأوسع من طرف ثالث، فإن GPT-5.6 يتمتع بالميزة. لا أحدهما أفضل بشكل عام — الاختيار الصحيح يعتمد على مهمتك المحددة. استخدم PromptQuorum لاختبار كليهما على استفساراتك الحقيقية ومقارنة النتائج مباشرة.' } },
-        { '@type': 'Question', 'name': 'أي نموذج ذكاء اصطناعي هو الأكثر دقة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا يوجد نموذج هو الأكثر دقة في جميع المهام. يتصدر Claude Opus 5 في الكتابة والتحليل المنظم. يتصدر GPT-5.6 في الاستدلال المدمج بالأدوات. يتصدر Gemini 3.1 Pro في البحث في المستندات الطويلة مع البحث على الويب المباشر. الدقة خاصة بكل مهمة — الاختبار الوحيد الموثوق هو تشغيل استفساراتك الحقيقية عبر جميع النماذج وقياس النتائج.' } },
-        { '@type': 'Question', 'name': 'ما الفرق بين GPT-5.6 وGPT-5.6 Luna؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'GPT-5.6 (فئة Sol) هو نموذج الحافة من OpenAI — أقصى قدرة وتكلفة أعلى ($5 إدخال / $30 إخراج لكل مليون رمز). GPT-5.6 Luna نسخة أصغر وأسرع وأرخص ($0.20 إدخال / $1.20 إخراج لكل مليون رمز) — أرخص بنحو 25 مرة مع جودة أقل قليلاً. استخدم GPT-5.6 Luna للتصنيف والتلخيص والمهام ذات الحجم الكبير التي لا تتطلب استدلالاً من مستوى الحافة. استخدم GPT-5.6 Sol للاستدلال متعدد الخطوات المعقد وسير عمل الوكلاء والمهام التي تكون فيها الجودة حاسمة.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'إذا كنت لا أستطيع دفع تكلفة إلا لاشتراك واحد، أيها أختار؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ابدأ بـClaude Opus 5. إنه الأعلى جودة في الكتابة والاستدلال والكود. إذا كانت حاجتك الرئيسية هي تكامل الأدوات ومتعدد الوسائط (الصور/الصوت)، فاختر GPT-5.6. إذا كان لديك فريق يستخدم Google Workspace كثيراً والتكلفة حاسمة، فاختر Gemini. إذا كان مستخدموك في البر الرئيسي للصين، فليس لديك خيار — اختر DeepSeek أو Baidu ERNIE (ضروريان لزمن الاستجابة والامتثال التنظيمي).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم مرة يجب أن أعيد تقييم اختياراتي للنماذج؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ربع سنوياً. كل 3-4 أشهر، تُطلق نماذج جديدة وتتغير ترتيبات التصنيف. استخدم PromptQuorum لإعادة اختبار مهامك الأكثر أهمية على أحدث النماذج. ما كان أفضل قبل 6 أشهر قد لا يكون الأمثل الآن.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني دمج نماذج متعددة داخل منتج أو وكيل واحد؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، ويجب عليك ذلك. وجّه مهاماً مختلفة إلى نماذج مختلفة: Claude للكتابة، وGemini للاسترجاع، وGPT للوكلاء. استخدم منطقاً شرطياً: إذا كانت مهمة كتابة، فاستخدم Claude؛ وإذا كانت استرجاعاً، فاستخدم Gemini. هكذا تعمل الأنظمة في الإنتاج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أتعامل مع الارتباط بمزود واحد؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يحدث الارتباط بمزود واحد عندما يعتمد نظامك على تنسيق API لنموذج معين أو ميزات خاصة أو أسعار. احمِ نفسك: (1) استخدم هياكل استفسار قياسية تعمل عبر جميع النماذج. (2) استخدم طبقات تجريد (مثل PromptQuorum) تدعم مزودين متعددين. (3) اختبر بانتظام عبر نماذج متعددة للكشف عن التباينات الخاصة بالمزود. (4) لأنظمة بالغة الأهمية، ادعم النماذج المحلية (Ollama وLM Studio) كنسخة احتياطية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أين تناسب النماذج المحلية مفتوحة المصدر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'النماذج المحلية (Llama 4 Scout وQwen3 وMistral وغيرها عبر Ollama أو LM Studio) هي الأفضل لـ: المهام المتكررة ذات الحجم الكبير (التصنيف والتلخيص والاستخراج)، والبيانات الخاصة (بدون استدعاءات API)، وأعباء العمل الحساسة للتكلفة، والاختبار قبل الالتزام بتكاليف API. لا تضاهي نماذج الحافة في الجودة، لكنها تتفوق في الخصوصية والتكلفة. استخدمها لـ80% من المهام التي لا تحتاج إلى استدلال من مستوى الحافة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Claude أفضل من ChatGPT؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لجودة الكتابة ومراجعة الكود والاستدلال المنظم، يتفوق Claude Opus 5 على ChatGPT (GPT-5.6) في معظم التقييمات. لتكامل الأدوات وسير عمل متعدد الوكلاء والنظام البيئي الأوسع من طرف ثالث، فإن GPT-5.6 يتمتع بالميزة. لا أحدهما أفضل بشكل عام — الاختيار الصحيح يعتمد على مهمتك المحددة. استخدم PromptQuorum لاختبار كليهما على استفساراتك الحقيقية ومقارنة النتائج مباشرة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي نموذج ذكاء اصطناعي هو الأكثر دقة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا يوجد نموذج هو الأكثر دقة في جميع المهام. يتصدر Claude Opus 5 في الكتابة والتحليل المنظم. يتصدر GPT-5.6 في الاستدلال المدمج بالأدوات. يتصدر Gemini 3.1 Pro في البحث في المستندات الطويلة مع البحث على الويب المباشر. الدقة خاصة بكل مهمة — الاختبار الوحيد الموثوق هو تشغيل استفساراتك الحقيقية عبر جميع النماذج وقياس النتائج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين GPT-5.6 وGPT-5.6 Luna؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6 (فئة Sol) هو نموذج الحافة من OpenAI — أقصى قدرة وتكلفة أعلى ($5 إدخال / $30 إخراج لكل مليون رمز). GPT-5.6 Luna نسخة أصغر وأسرع وأرخص ($0.20 إدخال / $1.20 إخراج لكل مليون رمز) — أرخص بنحو 25 مرة مع جودة أقل قليلاً. استخدم GPT-5.6 Luna للتصنيف والتلخيص والمهام ذات الحجم الكبير التي لا تتطلب استدلالاً من مستوى الحافة. استخدم GPT-5.6 Sol للاستدلال متعدد الخطوات المعقد وسير عمل الوكلاء والمهام التي تكون فيها الجودة حاسمة.',
+            },
+          },
+        ],
     },
     recipesHowToSchema: {
       '@context': 'https://schema.org',
@@ -3372,39 +3460,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'إذا كنت لا أستطيع دفع تكلفة إلا لاشتراك واحد، أيها أختار؟',
-            a: 'ابدأ بـClaude Opus 5. إنه الأعلى جودة في الكتابة والاستدلال والكود. إذا كانت حاجتك الرئيسية هي تكامل الأدوات ومتعدد الوسائط (الصور/الصوت)، فاختر GPT-5.6. إذا كان لديك فريق يستخدم Google Workspace كثيراً والتكلفة حاسمة، فاختر Gemini. إذا كان مستخدموك في البر الرئيسي للصين، فليس لديك خيار — اختر DeepSeek أو Baidu ERNIE (ضروريان لزمن الاستجابة والامتثال التنظيمي).'
-          },
-          {
-            q: 'كم مرة يجب أن أعيد تقييم اختياراتي للنماذج؟',
-            a: 'ربع سنوياً. كل 3-4 أشهر، تُطلق نماذج جديدة وتتغير ترتيبات التصنيف. استخدم PromptQuorum لإعادة اختبار مهامك الأكثر أهمية على أحدث النماذج. ما كان أفضل قبل 6 أشهر قد لا يكون الأمثل الآن.'
-          },
-          {
-            q: 'هل يمكنني دمج نماذج متعددة داخل منتج أو وكيل واحد؟',
-            a: 'نعم، ويجب عليك ذلك. وجّه مهاماً مختلفة إلى نماذج مختلفة: Claude للكتابة، وGemini للاسترجاع، وGPT للوكلاء. استخدم منطقاً شرطياً: إذا كانت مهمة كتابة، فاستخدم Claude؛ وإذا كانت استرجاعاً، فاستخدم Gemini. هكذا تعمل الأنظمة في الإنتاج.'
-          },
-          {
-            q: 'كيف أتعامل مع الارتباط بمزود واحد؟',
-            a: 'يحدث الارتباط بمزود واحد عندما يعتمد نظامك على تنسيق API لنموذج معين أو ميزات خاصة أو أسعار. احمِ نفسك: (1) استخدم هياكل استفسار قياسية تعمل عبر جميع النماذج. (2) استخدم طبقات تجريد (مثل PromptQuorum) تدعم مزودين متعددين. (3) اختبر بانتظام عبر نماذج متعددة للكشف عن التباينات الخاصة بالمزود. (4) لأنظمة بالغة الأهمية، ادعم النماذج المحلية (Ollama وLM Studio) كنسخة احتياطية.'
-          },
-          {
-            q: 'أين تناسب النماذج المحلية مفتوحة المصدر؟',
-            a: 'النماذج المحلية (Llama 4 Scout وQwen3 وMistral وغيرها عبر Ollama أو LM Studio) هي الأفضل لـ: المهام المتكررة ذات الحجم الكبير (التصنيف والتلخيص والاستخراج)، والبيانات الخاصة (بدون استدعاءات API)، وأعباء العمل الحساسة للتكلفة، والاختبار قبل الالتزام بتكاليف API. لا تضاهي نماذج الحافة في الجودة، لكنها تتفوق في الخصوصية والتكلفة. استخدمها لـ80% من المهام التي لا تحتاج إلى استدلال من مستوى الحافة.'
-          },
-          {
-            q: 'هل Claude أفضل من ChatGPT؟',
-            a: 'لجودة الكتابة ومراجعة الكود والاستدلال المنظم، يتفوق Claude Opus 5 على ChatGPT (GPT-5.6) في معظم التقييمات. لتكامل الأدوات وسير عمل متعدد الوكلاء والنظام البيئي الأوسع من طرف ثالث، فإن GPT-5.6 يتمتع بالميزة. لا أحدهما أفضل بشكل عام — الاختيار الصحيح يعتمد على مهمتك المحددة. استخدم PromptQuorum لاختبار كليهما على استفساراتك الحقيقية ومقارنة النتائج مباشرة.'
-          },
-          {
-            q: 'أي نموذج ذكاء اصطناعي هو الأكثر دقة؟',
-            a: 'لا يوجد نموذج هو الأكثر دقة في جميع المهام. يتصدر Claude Opus 5 في الكتابة والتحليل المنظم. يتصدر GPT-5.6 في الاستدلال المدمج بالأدوات. يتصدر Gemini 3.1 Pro في البحث في المستندات الطويلة مع البحث على الويب المباشر. الدقة خاصة بكل مهمة — الاختبار الوحيد الموثوق هو تشغيل استفساراتك الحقيقية عبر جميع النماذج وقياس النتائج.'
-          },
-          {
-            q: 'ما الفرق بين GPT-5.6 وGPT-5.6 Luna؟',
-            a: 'GPT-5.6 (فئة Sol) هو نموذج الحافة من OpenAI — أقصى قدرة وتكلفة أعلى ($5 إدخال / $30 إخراج لكل مليون رمز). GPT-5.6 Luna نسخة أصغر وأسرع وأرخص ($0.20 إدخال / $1.20 إخراج لكل مليون رمز) — أرخص بنحو 25 مرة مع جودة أقل قليلاً. استخدم GPT-5.6 Luna للتصنيف والتلخيص والمهام ذات الحجم الكبير التي لا تتطلب استدلالاً من مستوى الحافة. استخدم GPT-5.6 Sol للاستدلال متعدد الخطوات المعقد وسير عمل الوكلاء والمهام التي تكون فيها الجودة حاسمة.'
-          },
-        ],
+            { q: 'إذا كنت لا أستطيع دفع تكلفة إلا لاشتراك واحد، أيها أختار؟', a: 'ابدأ بـClaude Opus 5. إنه الأعلى جودة في الكتابة والاستدلال والكود. إذا كانت حاجتك الرئيسية هي تكامل الأدوات ومتعدد الوسائط (الصور/الصوت)، فاختر GPT-5.6. إذا كان لديك فريق يستخدم Google Workspace كثيراً والتكلفة حاسمة، فاختر Gemini. إذا كان مستخدموك في البر الرئيسي للصين، فليس لديك خيار — اختر DeepSeek أو Baidu ERNIE (ضروريان لزمن الاستجابة والامتثال التنظيمي).' },
+            { q: 'كم مرة يجب أن أعيد تقييم اختياراتي للنماذج؟', a: 'ربع سنوياً. كل 3-4 أشهر، تُطلق نماذج جديدة وتتغير ترتيبات التصنيف. استخدم PromptQuorum لإعادة اختبار مهامك الأكثر أهمية على أحدث النماذج. ما كان أفضل قبل 6 أشهر قد لا يكون الأمثل الآن.' },
+            { q: 'هل يمكنني دمج نماذج متعددة داخل منتج أو وكيل واحد؟', a: 'نعم، ويجب عليك ذلك. وجّه مهاماً مختلفة إلى نماذج مختلفة: Claude للكتابة، وGemini للاسترجاع، وGPT للوكلاء. استخدم منطقاً شرطياً: إذا كانت مهمة كتابة، فاستخدم Claude؛ وإذا كانت استرجاعاً، فاستخدم Gemini. هكذا تعمل الأنظمة في الإنتاج.' },
+            { q: 'كيف أتعامل مع الارتباط بمزود واحد؟', a: 'يحدث الارتباط بمزود واحد عندما يعتمد نظامك على تنسيق API لنموذج معين أو ميزات خاصة أو أسعار. احمِ نفسك: (1) استخدم هياكل استفسار قياسية تعمل عبر جميع النماذج. (2) استخدم طبقات تجريد (مثل PromptQuorum) تدعم مزودين متعددين. (3) اختبر بانتظام عبر نماذج متعددة للكشف عن التباينات الخاصة بالمزود. (4) لأنظمة بالغة الأهمية، ادعم النماذج المحلية (Ollama وLM Studio) كنسخة احتياطية.' },
+            { q: 'أين تناسب النماذج المحلية مفتوحة المصدر؟', a: 'النماذج المحلية (Llama 4 Scout وQwen3 وMistral وغيرها عبر Ollama أو LM Studio) هي الأفضل لـ: المهام المتكررة ذات الحجم الكبير (التصنيف والتلخيص والاستخراج)، والبيانات الخاصة (بدون استدعاءات API)، وأعباء العمل الحساسة للتكلفة، والاختبار قبل الالتزام بتكاليف API. لا تضاهي نماذج الحافة في الجودة، لكنها تتفوق في الخصوصية والتكلفة. استخدمها لـ80% من المهام التي لا تحتاج إلى استدلال من مستوى الحافة.' },
+            { q: 'هل Claude أفضل من ChatGPT؟', a: 'لجودة الكتابة ومراجعة الكود والاستدلال المنظم، يتفوق Claude Opus 5 على ChatGPT (GPT-5.6) في معظم التقييمات. لتكامل الأدوات وسير عمل متعدد الوكلاء والنظام البيئي الأوسع من طرف ثالث، فإن GPT-5.6 يتمتع بالميزة. لا أحدهما أفضل بشكل عام — الاختيار الصحيح يعتمد على مهمتك المحددة. استخدم PromptQuorum لاختبار كليهما على استفساراتك الحقيقية ومقارنة النتائج مباشرة.' },
+            { q: 'أي نموذج ذكاء اصطناعي هو الأكثر دقة؟', a: 'لا يوجد نموذج هو الأكثر دقة في جميع المهام. يتصدر Claude Opus 5 في الكتابة والتحليل المنظم. يتصدر GPT-5.6 في الاستدلال المدمج بالأدوات. يتصدر Gemini 3.1 Pro في البحث في المستندات الطويلة مع البحث على الويب المباشر. الدقة خاصة بكل مهمة — الاختبار الوحيد الموثوق هو تشغيل استفساراتك الحقيقية عبر جميع النماذج وقياس النتائج.' },
+            { q: 'ما الفرق بين GPT-5.6 وGPT-5.6 Luna؟', a: 'GPT-5.6 (فئة Sol) هو نموذج الحافة من OpenAI — أقصى قدرة وتكلفة أعلى ($5 إدخال / $30 إخراج لكل مليون رمز). GPT-5.6 Luna نسخة أصغر وأسرع وأرخص ($0.20 إدخال / $1.20 إخراج لكل مليون رمز) — أرخص بنحو 25 مرة مع جودة أقل قليلاً. استخدم GPT-5.6 Luna للتصنيف والتلخيص والمهام ذات الحجم الكبير التي لا تتطلب استدلالاً من مستوى الحافة. استخدم GPT-5.6 Sol للاستدلال متعدد الخطوات المعقد وسير عمل الوكلاء والمهام التي تكون فيها الجودة حاسمة.' },
+          ],
       },
 
       sources: {

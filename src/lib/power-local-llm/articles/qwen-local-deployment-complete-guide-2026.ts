@@ -2521,35 +2521,15 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'هل يوجد نموذج Qwen 3.8؟',
-            a: 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث وأقوى في البرمجة من Alibaba يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.',
-          },
-          {
-            q: 'هل يوجد نموذج Qwen3 7B؟',
-            a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 7B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.',
-          },
-          {
-            q: 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟',
-            a: 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.',
-          },
-          {
-            q: 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟',
-            a: 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.',
-          },
-          {
-            q: 'هل Qwen self-hosted متوافق مع أدوات OpenAI؟',
-            a: 'نعم. يعرض Ollama API متوافقة مع OpenAI على `http://خادمك:11434/v1`. اضبط `OPENAI_API_BASE` و`OPENAI_API_KEY` في أداتك — تعمل Continue.dev وLangChain وAutoGen بدون تعديل.',
-          },
-          {
-            q: 'كم تكلفة تشغيل خادم Qwen دائم التشغيل؟',
-            a: 'UM890 Pro مع Qwen3 8B على المعالج يستهلك ~12 واط في وضع الخمول و~45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80/شهرًا.',
-          },
-          {
-            q: 'ما الفرق بين استخدام Ollama وvLLM لنشر Qwen؟',
-            a: 'Ollama: أسهل في الإعداد، مناسب للاستخدام الفردي وبيئات التطوير. vLLM: أعلى إنتاجية لأحمال الطلبات المتزامنة، مناسب للإنتاج مع عدة مستخدمين.',
-          },
-        ],
+            { q: 'هل يوجد نموذج Qwen 3.8؟', a: 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث وأقوى في البرمجة من Alibaba يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.' },
+            { q: 'هل يوجد نموذج Qwen3 7B؟', a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 7B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.' },
+            { q: 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟', a: 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.' },
+            { q: 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟', a: 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.' },
+            { q: 'هل Qwen self-hosted متوافق مع أدوات OpenAI؟', a: 'نعم. يعرض Ollama API متوافقة مع OpenAI على `http://خادمك:11434/v1`. اضبط `OPENAI_API_BASE` و`OPENAI_API_KEY` في أداتك — تعمل Continue.dev وLangChain وAutoGen بدون تعديل.' },
+            { q: 'كم تكلفة تشغيل خادم Qwen دائم التشغيل؟', a: 'UM890 Pro مع Qwen3 8B على المعالج يستهلك ~12 واط في وضع الخمول و~45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80/شهرًا.' },
+            { q: 'ما الفرق بين استخدام Ollama وvLLM لنشر Qwen؟', a: 'Ollama: أسهل في الإعداد، مناسب للاستخدام الفردي وبيئات التطوير. vLLM: أعلى إنتاجية لأحمال الطلبات المتزامنة، مناسب للإنتاج مع عدة مستخدمين.' },
+            { q: 'هل يمكنني استخدام Qwen self-hosted مع التطبيقات المتوافقة مع ChatGPT؟', a: 'نعم. يعرض Ollama API متوافقة مع OpenAI على http://خادمك:11434/v1. اضبط OPENAI_API_BASE وOPENAI_API_KEY؛ تعمل أدوات مثل Continue.dev وLangChain وAutoGen بدون تعديل.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -2564,27 +2544,71 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للإنتاج.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'ليس بسرعة GPU كاملة. Qwen2.5-72B يحتاج ~45.6 جيجابايت VRAM؛ RTX 4090 الواحدة ستُشغّله جزئيًا على المعالج. للإنتاج، استخدم GPU مزدوجًا أو سحابة.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'كم تكلفة الكهرباء لخادم Qwen دائم التشغيل؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'UM890 Pro مع Qwen3 8B على المعالج يستهلك 12 واط في وضع الخمول و45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80 شهريًا.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكنني استخدام Qwen self-hosted مع التطبيقات المتوافقة مع ChatGPT؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'نعم. يعرض Ollama API متوافقة مع OpenAI على http://خادمك:11434/v1. اضبط OPENAI_API_BASE وOPENAI_API_KEY؛ تعمل أدوات مثل Continue.dev وLangChain وAutoGen بدون تعديل.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يوجد نموذج Qwen 3.8؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث وأقوى في البرمجة من Alibaba يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يوجد نموذج Qwen3 7B؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 7B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ثمانية جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Qwen self-hosted متوافق مع أدوات OpenAI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يعرض Ollama API متوافقة مع OpenAI على `http://خادمك:11434/v1`. اضبط `OPENAI_API_BASE` و`OPENAI_API_KEY` في أداتك — تعمل Continue.dev وLangChain وAutoGen بدون تعديل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم تكلفة تشغيل خادم Qwen دائم التشغيل؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'UM890 Pro مع Qwen3 8B على المعالج يستهلك ~12 واط في وضع الخمول و~45 واط أثناء الاستدلال. بـ $0.16/كيلوواط·ساعة، التشغيل 24/7 يكلف ~$0.70–1.80/شهرًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين استخدام Ollama وvLLM لنشر Qwen؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama: أسهل في الإعداد، مناسب للاستخدام الفردي وبيئات التطوير. vLLM: أعلى إنتاجية لأحمال الطلبات المتزامنة، مناسب للإنتاج مع عدة مستخدمين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام Qwen self-hosted مع التطبيقات المتوافقة مع ChatGPT؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يعرض Ollama API متوافقة مع OpenAI على http://خادمك:11434/v1. اضبط OPENAI_API_BASE وOPENAI_API_KEY؛ تعمل أدوات مثل Continue.dev وLangChain وAutoGen بدون تعديل.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',

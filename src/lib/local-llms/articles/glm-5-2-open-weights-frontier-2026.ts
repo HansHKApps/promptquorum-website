@@ -212,43 +212,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'Is GLM-5.2 still the best open-weights model right now?',
-            a: 'No — as of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).',
-          },
-          {
-            q: 'Can I run GLM-5.2 on a normal PC or Mac?',
-            a: 'Not the full model. At ~744B parameters it needs multi-GPU servers or a rented cloud GPU. On consumer hardware you are limited to heavily quantized 1-bit GGUF builds, which trade quality and speed. Z.ai\'s smaller GLM-5.3-Flash (320B total / ~18B active, MIT license) is somewhat more self-hostable but still not consumer-laptop territory. See our hardware guides for what large local models actually require.',
-          },
-          {
-            q: 'Does GLM-5.2 beat GPT-5.5, Claude Opus 4.8, and their successors?',
-            a: 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding (for example SWE-bench Pro and FrontierSWE orderings) while trailing Claude Opus 4.8 in most head-to-head comparisons — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both GPT-5.5 and Claude Opus 4.8 have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors. The accurate summary as of August 2026 is "a strong #2 open-weights model, further from the closed frontier than at launch."',
-          },
-          {
-            q: 'Has GLM-5.2 been replaced by GLM-5.3 or Kimi K3?',
-            a: 'GLM-5.2 has not been replaced, but it has been surpassed on two fronts. Z.ai released GLM-5.3 on August 14, 2026 — the same base model with heavier post-training and notably better coding scores — but its public weights had not shipped as of this refresh; it is available only via Z.ai\'s API and Coding Plan. Separately, Moonshot AI\'s Kimi K3 (July 27, 2026) overtook GLM-5.2 as the top open-weights model overall. GLM-5.2 remains a fully self-hostable, independently verified #2 open-weights option.',
-          },
-          {
-            q: 'Is GLM-5.2 really free? What is the license?',
-            a: 'GLM-5.2 is released under the MIT license with no regional usage limits, so you can download, self-host, and modify it for free. Running the full model still costs real infrastructure (multi-GPU or rented GPU), and the hosted Z.ai API is a paid service.',
-          },
-          {
-            q: 'Is my data safe with GLM-5.2?',
-            a: 'It depends on the deployment path. Self-hosted MIT weights keep all data inside your own boundary. The first-party Z.ai API carries China data-residency considerations flagged by independent coverage, so treat it as you would any third-party cloud endpoint subject to its jurisdiction.',
-          },
-          {
-            q: 'Are GLM-5.2\'s benchmark numbers trustworthy?',
-            a: 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking as of August 2026. Z.ai\'s own coding numbers are company-reported, and reproducibility is contested — the Artificial Analysis writeup notes internal evaluations were reported weaker than published benchmarks. This applies to GLM-5.3\'s reported gains too. Lead with the independent numbers and treat first-party figures as claims.',
-          },
-          {
-            q: 'How much does GLM-5.2 cost to run via API?',
-            a: 'Roughly one-sixth the cost of closed-frontier models. Reported pricing is approximately $1.4 per 1M input tokens and $4.4 per 1M output tokens (June 2026, unchanged as of this refresh). Because GLM-5.2 averages ~43,000 output tokens per task, estimate real cost on your own workload rather than per-token rates alone.',
-          },
-          {
-            q: 'What hardware do I need to self-host GLM-5.2 properly?',
-            a: 'For the full model, multi-GPU servers or a rented cloud GPU. Consumer hardware can only run heavily quantized 1-bit GGUF builds. See the Local LLM Hardware Guide 2026, Used GPUs for Local LLMs, and Running 70B Models on Consumer Hardware to size your setup.',
-          },
-        ],
+            { q: 'Is GLM-5.2 still the best open-weights model right now?', a: 'No — as of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).' },
+            { q: 'Can I run GLM-5.2 on a normal PC or Mac?', a: 'Not the full model. At ~744B parameters it needs multi-GPU servers or a rented cloud GPU. On consumer hardware you are limited to heavily quantized 1-bit GGUF builds, which trade quality and speed. Z.ai\'s smaller GLM-5.3-Flash (320B total / ~18B active, MIT license) is somewhat more self-hostable but still not consumer-laptop territory. See our hardware guides for what large local models actually require.' },
+            { q: 'Does GLM-5.2 beat GPT-5.5, Claude Opus 4.8, and their successors?', a: 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding (for example SWE-bench Pro and FrontierSWE orderings) while trailing Claude Opus 4.8 in most head-to-head comparisons — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both GPT-5.5 and Claude Opus 4.8 have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors. The accurate summary as of August 2026 is "a strong #2 open-weights model, further from the closed frontier than at launch."' },
+            { q: 'Has GLM-5.2 been replaced by GLM-5.3 or Kimi K3?', a: 'GLM-5.2 has not been replaced, but it has been surpassed on two fronts. Z.ai released GLM-5.3 on August 14, 2026 — the same base model with heavier post-training and notably better coding scores — but its public weights had not shipped as of this refresh; it is available only via Z.ai\'s API and Coding Plan. Separately, Moonshot AI\'s Kimi K3 (July 27, 2026) overtook GLM-5.2 as the top open-weights model overall. GLM-5.2 remains a fully self-hostable, independently verified #2 open-weights option.' },
+            { q: 'Is GLM-5.2 really free? What is the license?', a: 'GLM-5.2 is released under the MIT license with no regional usage limits, so you can download, self-host, and modify it for free. Running the full model still costs real infrastructure (multi-GPU or rented GPU), and the hosted Z.ai API is a paid service.' },
+            { q: 'Is my data safe with GLM-5.2?', a: 'It depends on the deployment path. Self-hosted MIT weights keep all data inside your own boundary. The first-party Z.ai API carries China data-residency considerations flagged by independent coverage, so treat it as you would any third-party cloud endpoint subject to its jurisdiction.' },
+            { q: 'Are GLM-5.2\'s benchmark numbers trustworthy?', a: 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking as of August 2026. Z.ai\'s own coding numbers are company-reported, and reproducibility is contested — the Artificial Analysis writeup notes internal evaluations were reported weaker than published benchmarks. This applies to GLM-5.3\'s reported gains too. Lead with the independent numbers and treat first-party figures as claims.' },
+            { q: 'How much does GLM-5.2 cost to run via API?', a: 'Roughly one-sixth the cost of closed-frontier models. Reported pricing is approximately $1.4 per 1M input tokens and $4.4 per 1M output tokens (June 2026, unchanged as of this refresh). Because GLM-5.2 averages ~43,000 output tokens per task, estimate real cost on your own workload rather than per-token rates alone.' },
+            { q: 'What hardware do I need to self-host GLM-5.2 properly?', a: 'For the full model, multi-GPU servers or a rented cloud GPU. Consumer hardware can only run heavily quantized 1-bit GGUF builds. See the Local LLM Hardware Guide 2026, Used GPUs for Local LLMs, and Running 70B Models on Consumer Hardware to size your setup.' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -317,79 +290,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'en',
       'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'Is GLM-5.2 still the best open-weights model right now?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'No — as of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).',
+          {
+            '@type': 'Question',
+            'name': 'Is GLM-5.2 still the best open-weights model right now?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — as of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Can I run GLM-5.2 on a normal PC or Mac?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Not the full model. At ~744B parameters it needs multi-GPU servers or a rented cloud GPU. On consumer hardware you are limited to heavily quantized 1-bit GGUF builds, which trade quality and speed. Z.ai\'s smaller GLM-5.3-Flash (320B total / ~18B active, MIT license) is somewhat more self-hostable but still not consumer-laptop territory.',
+          {
+            '@type': 'Question',
+            'name': 'Can I run GLM-5.2 on a normal PC or Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not the full model. At ~744B parameters it needs multi-GPU servers or a rented cloud GPU. On consumer hardware you are limited to heavily quantized 1-bit GGUF builds, which trade quality and speed. Z.ai\'s smaller GLM-5.3-Flash (320B total / ~18B active, MIT license) is somewhat more self-hostable but still not consumer-laptop territory. See our hardware guides for what large local models actually require.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does GLM-5.2 beat GPT-5.5, Claude Opus 4.8, and their successors?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding while trailing Claude Opus 4.8 in most head-to-heads — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors.',
+          {
+            '@type': 'Question',
+            'name': 'Does GLM-5.2 beat GPT-5.5, Claude Opus 4.8, and their successors?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding (for example SWE-bench Pro and FrontierSWE orderings) while trailing Claude Opus 4.8 in most head-to-head comparisons — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both GPT-5.5 and Claude Opus 4.8 have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors. The accurate summary as of August 2026 is "a strong #2 open-weights model, further from the closed frontier than at launch."',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Has GLM-5.2 been replaced by GLM-5.3 or Kimi K3?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'GLM-5.2 has not been replaced, but it has been surpassed on two fronts. Z.ai released GLM-5.3 on August 14, 2026 with heavier post-training and better coding scores, but its public weights had not shipped as of this refresh — it is API/Coding-Plan-only. Separately, Moonshot AI\'s Kimi K3 (July 27, 2026) overtook GLM-5.2 as the top open-weights model overall. GLM-5.2 remains a fully self-hostable #2 open-weights option.',
+          {
+            '@type': 'Question',
+            'name': 'Has GLM-5.2 been replaced by GLM-5.3 or Kimi K3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GLM-5.2 has not been replaced, but it has been surpassed on two fronts. Z.ai released GLM-5.3 on August 14, 2026 — the same base model with heavier post-training and notably better coding scores — but its public weights had not shipped as of this refresh; it is available only via Z.ai\'s API and Coding Plan. Separately, Moonshot AI\'s Kimi K3 (July 27, 2026) overtook GLM-5.2 as the top open-weights model overall. GLM-5.2 remains a fully self-hostable, independently verified #2 open-weights option.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Is GLM-5.2 really free? What is the license?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'GLM-5.2 is released under the MIT license with no regional usage limits, so you can download, self-host, and modify it for free. Running the full model still costs real infrastructure, and the hosted Z.ai API is a paid service.',
+          {
+            '@type': 'Question',
+            'name': 'Is GLM-5.2 really free? What is the license?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GLM-5.2 is released under the MIT license with no regional usage limits, so you can download, self-host, and modify it for free. Running the full model still costs real infrastructure (multi-GPU or rented GPU), and the hosted Z.ai API is a paid service.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Is my data safe with GLM-5.2?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'It depends on the deployment path. Self-hosted MIT weights keep all data inside your own boundary. The first-party Z.ai API carries China data-residency considerations flagged by independent coverage, so treat it as any third-party cloud endpoint subject to its jurisdiction.',
+          {
+            '@type': 'Question',
+            'name': 'Is my data safe with GLM-5.2?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It depends on the deployment path. Self-hosted MIT weights keep all data inside your own boundary. The first-party Z.ai API carries China data-residency considerations flagged by independent coverage, so treat it as you would any third-party cloud endpoint subject to its jurisdiction.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'Are GLM-5.2 benchmark numbers trustworthy?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking as of August 2026. Z.ai\'s own coding numbers are company-reported and reproducibility is contested (this applies to GLM-5.3\'s reported gains too), so lead with the independent numbers and treat first-party figures as claims.',
+          {
+            '@type': 'Question',
+            'name': 'Are GLM-5.2\'s benchmark numbers trustworthy?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking as of August 2026. Z.ai\'s own coding numbers are company-reported, and reproducibility is contested — the Artificial Analysis writeup notes internal evaluations were reported weaker than published benchmarks. This applies to GLM-5.3\'s reported gains too. Lead with the independent numbers and treat first-party figures as claims.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'How much does GLM-5.2 cost to run via API?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Roughly one-sixth the cost of closed-frontier models. Reported pricing is about $1.4 per 1M input tokens and $4.4 per 1M output tokens (June 2026). Because GLM-5.2 averages ~43,000 output tokens per task, estimate cost on your own workload.',
+          {
+            '@type': 'Question',
+            'name': 'How much does GLM-5.2 cost to run via API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Roughly one-sixth the cost of closed-frontier models. Reported pricing is approximately $1.4 per 1M input tokens and $4.4 per 1M output tokens (June 2026, unchanged as of this refresh). Because GLM-5.2 averages ~43,000 output tokens per task, estimate real cost on your own workload rather than per-token rates alone.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          'name': 'What hardware do I need to self-host GLM-5.2 properly?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'For the full model, multi-GPU servers or a rented cloud GPU. Consumer hardware can only run heavily quantized 1-bit GGUF builds. See the Local LLM Hardware Guide 2026 and related hardware guides to size your setup.',
+          {
+            '@type': 'Question',
+            'name': 'What hardware do I need to self-host GLM-5.2 properly?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For the full model, multi-GPU servers or a rented cloud GPU. Consumer hardware can only run heavily quantized 1-bit GGUF builds. See the Local LLM Hardware Guide 2026, Used GPUs for Local LLMs, and Running 70B Models on Consumer Hardware to size your setup.',
+            },
           },
-        },
-      ],
+        ],
     },
   },
   ar: {

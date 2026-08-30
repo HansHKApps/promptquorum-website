@@ -118,46 +118,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'faq',
           title: 'Common Questions About Local Code Completions',
           faqs: [
-            {
-              q: 'Which model is best for code completions with Ollama?',
-              a: 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Code Llama 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
-            },
-            {
-              q: 'Does Cursor support local LLMs natively?',
-              a: 'Yes. Cursor supports custom OpenAI-compatible endpoints. Set the base URL to http://localhost:11434/v1 and enter any API key (Ollama does not require authentication). Select your Ollama model from the model dropdown and Cursor will route requests to your local model.',
-            },
-            {
-              q: 'What is the minimum VRAM for usable local code completions?',
-              a: '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen3-Coder 7B or Code Llama 7B.',
-            },
-            {
-              q: 'How do I set up Continue.dev in VS Code?',
-              a: 'Install the Continue extension from the VS Code marketplace, then configure it to use Ollama: open the Continue sidebar, click the model selector, choose "Ollama" as provider, select your model (e.g., qwen2.5-coder:7b), and save. Continue will connect to Ollama at localhost:11434 automatically.',
-            },
-            {
-              q: 'Is local code completion faster than cloud?',
-              a: 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.',
-            },
-            {
-              q: 'Can I use local completions with other IDEs (PyCharm, Neovim)?',
-              a: 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.',
-            },
-            {
-              q: 'Can I use cloud models in Continue or Cursor?',
-              a: 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).',
-            },
-            {
-              q: 'Does local code completion work offline?',
-              a: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.',
-            },
-            {
-              q: 'Can I use local LLMs for code review and chat in VS Code?',
-              a: 'Yes. Continue.dev provides both tab completion and an inline chat mode. Highlight code in your editor, press Cmd/Ctrl+I, and type a question or instruction. The local model responds within the editor context. This works for code review, refactoring suggestions, and explanation requests.',
-            },
-            {
-              q: 'What happens if Ollama is not running when I open VS Code?',
-              a: 'Continue.dev will display a connection error and completions will not appear. Start Ollama with `ollama serve` in a terminal before opening VS Code. On macOS, you can set Ollama to start automatically at login in the Ollama menu bar settings.',
-            },
+            { q: 'Which model is best for code completions with Ollama?', a: 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Code Llama 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.' },
+            { q: 'Does Cursor support local LLMs natively?', a: 'Yes. Cursor supports custom OpenAI-compatible endpoints. Set the base URL to http://localhost:11434/v1 and enter any API key (Ollama does not require authentication). Select your Ollama model from the model dropdown and Cursor will route requests to your local model.' },
+            { q: 'What is the minimum VRAM for usable local code completions?', a: '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen3-Coder 7B or Code Llama 7B.' },
+            { q: 'How do I set up Continue.dev in VS Code?', a: 'Install the Continue extension from the VS Code marketplace, then configure it to use Ollama: open the Continue sidebar, click the model selector, choose "Ollama" as provider, select your model (e.g., qwen2.5-coder:7b), and save. Continue will connect to Ollama at localhost:11434 automatically.' },
+            { q: 'Is local code completion faster than cloud?', a: 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.' },
+            { q: 'Can I use local completions with other IDEs (PyCharm, Neovim)?', a: 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.' },
+            { q: 'Can I use cloud models in Continue or Cursor?', a: 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).' },
+            { q: 'Does local code completion work offline?', a: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.' },
+            { q: 'Can I use local LLMs for code review and chat in VS Code?', a: 'Yes. Continue.dev provides both tab completion and an inline chat mode. Highlight code in your editor, press Cmd/Ctrl+I, and type a question or instruction. The local model responds within the editor context. This works for code review, refactoring suggestions, and explanation requests.' },
+            { q: 'What happens if Ollama is not running when I open VS Code?', a: 'Continue.dev will display a connection error and completions will not appear. Start Ollama with `ollama serve` in a terminal before opening VS Code. On macOS, you can set Ollama to start automatically at login in the Ollama menu bar settings.' },
           ],
         },
         relatedReading: {
@@ -211,34 +181,18 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'Is local code completion faster than cloud completion?',
+            'name': 'Which model is best for code completions with Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.',
+              'text': 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Code Llama 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
             },
           },
           {
             '@type': 'Question',
-            'name': 'Can I use local completions with other IDEs like PyCharm or Neovim?',
+            'name': 'Does Cursor support local LLMs natively?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Can I use cloud models in Continue.dev or Cursor?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Does local code completion work offline?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Yes. If you have pulled the model in Ollama, completions work entirely offline.',
+              'text': 'Yes. Cursor supports custom OpenAI-compatible endpoints. Set the base URL to http://localhost:11434/v1 and enter any API key (Ollama does not require authentication). Select your Ollama model from the model dropdown and Cursor will route requests to your local model.',
             },
           },
           {
@@ -251,14 +205,6 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Which model is best for code completions with Ollama?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Code Llama 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
-            },
-          },
-          {
-            '@type': 'Question',
             'name': 'How do I set up Continue.dev in VS Code?',
             'acceptedAnswer': {
               '@type': 'Answer',
@@ -267,10 +213,34 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Does Cursor support local LLMs natively?',
+            'name': 'Is local code completion faster than cloud?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Cursor supports custom OpenAI-compatible endpoints. Set the base URL to http://localhost:11434/v1 and enter any API key (Ollama does not require authentication). Select your Ollama model from the model dropdown and Cursor will route requests to your local model.',
+              'text': 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use local completions with other IDEs (PyCharm, Neovim)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but setup varies. PyCharm has an Ollama plugin. For Neovim, use cmp-ollama (completion plugin). Always check the IDE community for integrations.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use cloud models in Continue or Cursor?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Configure Continue to use OpenAI, Claude, or Gemini. You can also mix (local for fast, cloud for complex code).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does local code completion work offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. If you have pulled the model in Ollama, completions work entirely offline.',
             },
           },
           {

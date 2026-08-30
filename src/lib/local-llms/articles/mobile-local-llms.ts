@@ -241,50 +241,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            {
-              q: 'Can I run a local LLM on my iPhone?',
-              a: 'Yes, but only small models (1–3B parameters). iPhone 16 with A18 chip runs Llama 3.2 1B at ~3 tokens/sec. Llama 3.2 3B runs at ~2 tokens/sec. Models larger than 3B cause crashes or require minutes per response. For practical use, Ollama iOS and Chatlize support 1–3B models on iPhone.',
-            },
-            {
-              q: 'What Android devices can run local LLMs?',
-              a: 'Android devices with Snapdragon X Elite or Snapdragon X Plus processors can run 7B models at ~5 tokens/sec. Standard mid-range Android phones (Snapdragon 8 Gen 3) handle 3B models at ~3 tokens/sec. Devices with less than 8 GB RAM are impractical for any local LLM inference.',
-            },
-            {
-              q: 'How does iPad compare to iPhone for local LLMs?',
-              a: 'iPad Pro M4 significantly outperforms iPhone for local LLMs: 15 tokens/sec on Llama 3.2 3B vs 3–4 tokens/sec on iPhone 16 Pro. The iPad M4 chip also handles 13B models comfortably (16 GB unified memory), which iPhone cannot run at all. For mobile AI work, iPad is the recommended Apple device.',
-            },
-            {
-              q: 'What is the best app for running LLMs on mobile?',
-              a: 'For iOS, Ollama iOS and Chatlize are the most reliable options as of April 2026 — both support 1–3B models offline. For Android, LLaMa Lite and Jan AI (beta) support 3–7B models on Snapdragon X devices. All are free. App quality varies more than desktop software; test before committing to a workflow.',
-            },
-            {
-              q: 'Why is mobile LLM inference so much slower than desktop?',
-              a: 'Mobile chips have lower memory bandwidth and fewer compute units than desktop GPUs. An iPhone A18 has ~68 GB/sec memory bandwidth; an RTX 4090 has 1,008 GB/sec — nearly 15× more. LLM inference speed scales with memory bandwidth, so desktop is 15–50× faster depending on the comparison. Mobile excels on efficiency (1–5W vs 300–600W), not throughput.',
-            },
-            {
-              q: 'Does mobile local LLM inference drain the battery?',
-              a: 'Yes — sustained inference at full load drains iPhone battery in 2–4 hours. Set response length limits (max 200 tokens) to reduce energy use. iPad M4 has a larger battery and lasts 4–6 hours under inference load. Apple Silicon devices are significantly more efficient than Snapdragon X for sustained inference.',
-            },
-            {
-              q: 'Can I use Gemini Nano for local LLM on my Pixel?',
-              a: 'Yes, but indirectly. Gemini Nano is Google\'s on-device model running natively on Pixel 9 Pro via the AICore API. As of April 2026, third-party apps cannot directly invoke Gemini Nano — it powers system features (Magic Compose, Recorder summaries). For user-controlled local LLM on Pixel, install PocketPal AI or MLC Chat and load Llama 3.2 3B or Phi-4 Mini instead.',
-            },
-            {
-              q: 'Will 2027 smartphones run 70B models locally?',
-              a: 'No. Current roadmaps (Apple A19 Pro, Snapdragon X2, Tensor G5) suggest 2027 phones will handle 7–13B models at 15–25 tok/s — not 70B. The memory bandwidth and thermal constraints on phones limit practical model size. For 70B local inference on mobile form factor, iPad Pro M6 or Mac mini M5 Pro (connected via Wi-Fi as a local server) remains the 2027 practical option.',
-            },
-            {
-              q: 'MLC LLM vs Ollama: which is better for Android on-device inference?',
-              a: 'MLC LLM (via MLC Chat) is better for Android on-device inference. Ollama is not a native Android app — it runs as a server on desktop and requires your Android phone to connect via Wi-Fi. MLC Chat compiles models using TVM to Vulkan shaders optimized for Android GPUs, delivering true offline inference at 5 tok/sec on Snapdragon X Elite for 7B models. Use MLC Chat for offline Android LLM inference. Use Ollama if you want to run it on a desktop server and access it remotely from your Android device.',
-            },
-            {
-              q: 'What are the best PocketPal AI alternatives for Android?',
-              a: 'The top PocketPal AI alternatives for Android are: MLC Chat (TVM-compiled models, faster on Snapdragon X Elite, Vulkan acceleration), LLaMa Lite (lightweight Android-only GGUF, 3–7B), and Chatlize (iOS and Android, free tier). On iOS, alternatives include Ollama iOS, Layla (with RAG), and Private LLM ($5.99, best for iPad M4). All run on-device without internet.',
-            },
-            {
-              q: 'MLC Chat vs PocketPal AI: which should I choose?',
-              a: 'Choose MLC Chat if you want faster inference on Snapdragon X Android (TVM-compiled Vulkan shaders, 5 tok/sec on 7B) and need Llama, Qwen, Gemma, and Phi support in one app. Choose PocketPal AI if you want broader GGUF model compatibility, easier model downloads directly from HuggingFace, or the same app across iPhone, iPad, and Android. Both are free and fully offline.',
-            },
+            { q: 'Can I run a local LLM on my iPhone?', a: 'Yes, but only small models (1–3B parameters). iPhone 16 with A18 chip runs Llama 3.2 1B at ~3 tokens/sec. Llama 3.2 3B runs at ~2 tokens/sec. Models larger than 3B cause crashes or require minutes per response. For practical use, Ollama iOS and Chatlize support 1–3B models on iPhone.' },
+            { q: 'What Android devices can run local LLMs?', a: 'Android devices with Snapdragon X Elite or Snapdragon X Plus processors can run 7B models at ~5 tokens/sec. Standard mid-range Android phones (Snapdragon 8 Gen 3) handle 3B models at ~3 tokens/sec. Devices with less than 8 GB RAM are impractical for any local LLM inference.' },
+            { q: 'How does iPad compare to iPhone for local LLMs?', a: 'iPad Pro M4 significantly outperforms iPhone for local LLMs: 15 tokens/sec on Llama 3.2 3B vs 3–4 tokens/sec on iPhone 16 Pro. The iPad M4 chip also handles 13B models comfortably (16 GB unified memory), which iPhone cannot run at all. For mobile AI work, iPad is the recommended Apple device.' },
+            { q: 'What is the best app for running LLMs on mobile?', a: 'For iOS, Ollama iOS and Chatlize are the most reliable options as of April 2026 — both support 1–3B models offline. For Android, LLaMa Lite and Jan AI (beta) support 3–7B models on Snapdragon X devices. All are free. App quality varies more than desktop software; test before committing to a workflow.' },
+            { q: 'Why is mobile LLM inference so much slower than desktop?', a: 'Mobile chips have lower memory bandwidth and fewer compute units than desktop GPUs. An iPhone A18 has ~68 GB/sec memory bandwidth; an RTX 4090 has 1,008 GB/sec — nearly 15× more. LLM inference speed scales with memory bandwidth, so desktop is 15–50× faster depending on the comparison. Mobile excels on efficiency (1–5W vs 300–600W), not throughput.' },
+            { q: 'Does mobile local LLM inference drain the battery?', a: 'Yes — sustained inference at full load drains iPhone battery in 2–4 hours. Set response length limits (max 200 tokens) to reduce energy use. iPad M4 has a larger battery and lasts 4–6 hours under inference load. Apple Silicon devices are significantly more efficient than Snapdragon X for sustained inference.' },
+            { q: 'Can I use Gemini Nano for local LLM on my Pixel?', a: 'Yes, but indirectly. Gemini Nano is Google\'s on-device model running natively on Pixel 9 Pro via the AICore API. As of April 2026, third-party apps cannot directly invoke Gemini Nano — it powers system features (Magic Compose, Recorder summaries). For user-controlled local LLM on Pixel, install PocketPal AI or MLC Chat and load Llama 3.2 3B or Phi-4 Mini instead.' },
+            { q: 'Will 2027 smartphones run 70B models locally?', a: 'No. Current roadmaps (Apple A19 Pro, Snapdragon X2, Tensor G5) suggest 2027 phones will handle 7–13B models at 15–25 tok/s — not 70B. The memory bandwidth and thermal constraints on phones limit practical model size. For 70B local inference on mobile form factor, iPad Pro M6 or Mac mini M5 Pro (connected via Wi-Fi as a local server) remains the 2027 practical option.' },
+            { q: 'MLC LLM vs Ollama: which is better for Android on-device inference?', a: 'MLC LLM (via MLC Chat) is better for Android on-device inference. Ollama is not a native Android app — it runs as a server on desktop and requires your Android phone to connect via Wi-Fi. MLC Chat compiles models using TVM to Vulkan shaders optimized for Android GPUs, delivering true offline inference at 5 tok/sec on Snapdragon X Elite for 7B models. Use MLC Chat for offline Android LLM inference. Use Ollama if you want to run it on a desktop server and access it remotely from your Android device.' },
+            { q: 'What are the best PocketPal AI alternatives for Android?', a: 'The top PocketPal AI alternatives for Android are: MLC Chat (TVM-compiled models, faster on Snapdragon X Elite, Vulkan acceleration), LLaMa Lite (lightweight Android-only GGUF, 3–7B), and Chatlize (iOS and Android, free tier). On iOS, alternatives include Ollama iOS, Layla (with RAG), and Private LLM ($5.99, best for iPad M4). All run on-device without internet.' },
+            { q: 'MLC Chat vs PocketPal AI: which should I choose?', a: 'Choose MLC Chat if you want faster inference on Snapdragon X Android (TVM-compiled Vulkan shaders, 5 tok/sec on 7B) and need Llama, Qwen, Gemma, and Phi support in one app. Choose PocketPal AI if you want broader GGUF model compatibility, easier model downloads directly from HuggingFace, or the same app across iPhone, iPad, and Android. Both are free and fully offline.' },
           ],
         },
         relatedReading: {
@@ -343,43 +310,91 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Can I run a local LLM on my iPhone?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes, but only small models (1–3B parameters). iPhone 16 Pro (A18 Pro) runs Llama 3.2 3B at ~4 tokens/sec. Larger models cause crashes or minutes-per-response. Use PocketPal AI, MLC Chat, or Ollama iOS for practical deployment.' },
+            'name': 'Can I run a local LLM on my iPhone?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but only small models (1–3B parameters). iPhone 16 with A18 chip runs Llama 3.2 1B at ~3 tokens/sec. Llama 3.2 3B runs at ~2 tokens/sec. Models larger than 3B cause crashes or require minutes per response. For practical use, Ollama iOS and Chatlize support 1–3B models on iPhone.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'What Android devices can run local LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Snapdragon X Elite/Plus runs 7B at ~5 tokens/sec. Standard mid-range Android (Snapdragon 8 Gen 3) runs 3B at ~3 tokens/sec. Pixel 9 Pro and Galaxy S25 Ultra both support 3–7B via MLC Chat. Under 8 GB RAM is impractical.' },
+            'name': 'What Android devices can run local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Android devices with Snapdragon X Elite or Snapdragon X Plus processors can run 7B models at ~5 tokens/sec. Standard mid-range Android phones (Snapdragon 8 Gen 3) handle 3B models at ~3 tokens/sec. Devices with less than 8 GB RAM are impractical for any local LLM inference.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'How does iPad compare to iPhone for local LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: 'iPad Pro M4 significantly outperforms iPhone: 15 tok/sec on Llama 7B vs 3–4 tok/sec on iPhone. iPad M4 handles 13B models comfortably (16 GB unified memory). For mobile AI workflows, iPad Pro M4 is the recommended Apple device.' },
+            'name': 'How does iPad compare to iPhone for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'iPad Pro M4 significantly outperforms iPhone for local LLMs: 15 tokens/sec on Llama 3.2 3B vs 3–4 tokens/sec on iPhone 16 Pro. The iPad M4 chip also handles 13B models comfortably (16 GB unified memory), which iPhone cannot run at all. For mobile AI work, iPad is the recommended Apple device.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'What is the best app for running LLMs on mobile?',
-            acceptedAnswer: { '@type': 'Answer', text: 'PocketPal AI is the most popular as of April 2026 (500K+ downloads, iOS + Android). MLC Chat offers broadest model support (Llama, Qwen, Gemma, Phi). For iOS specifically: Ollama iOS or Layla. For Android: LLaMa Lite or MLC Chat. All free.' },
+            'name': 'What is the best app for running LLMs on mobile?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For iOS, Ollama iOS and Chatlize are the most reliable options as of April 2026 — both support 1–3B models offline. For Android, LLaMa Lite and Jan AI (beta) support 3–7B models on Snapdragon X devices. All are free. App quality varies more than desktop software; test before committing to a workflow.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Why is mobile LLM inference so much slower than desktop?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Memory bandwidth. iPhone A18 has ~68 GB/sec; RTX 4090 has 1,008 GB/sec — nearly 15× more. LLM inference speed scales with memory bandwidth. Mobile excels on efficiency (1–5W vs 300–600W), not throughput.' },
+            'name': 'Why is mobile LLM inference so much slower than desktop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mobile chips have lower memory bandwidth and fewer compute units than desktop GPUs. An iPhone A18 has ~68 GB/sec memory bandwidth; an RTX 4090 has 1,008 GB/sec — nearly 15× more. LLM inference speed scales with memory bandwidth, so desktop is 15–50× faster depending on the comparison. Mobile excels on efficiency (1–5W vs 300–600W), not throughput.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Does mobile local LLM drain the battery?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes — sustained inference drains iPhone battery in 2–4 hours. Limit response length (max 200 tokens) to reduce drain. iPad M4 lasts 4–6 hours. Apple Silicon is more efficient than Snapdragon X for sustained inference.' },
+            'name': 'Does mobile local LLM inference drain the battery?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes — sustained inference at full load drains iPhone battery in 2–4 hours. Set response length limits (max 200 tokens) to reduce energy use. iPad M4 has a larger battery and lasts 4–6 hours under inference load. Apple Silicon devices are significantly more efficient than Snapdragon X for sustained inference.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Can I use Gemini Nano for local LLM on my Pixel?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Gemini Nano runs natively on Pixel 9 Pro via AICore API but is not accessible to third-party apps as of April 2026. Gemini Nano powers system features (Magic Compose, Recorder summaries). For user-controlled local LLM on Pixel: install PocketPal AI or MLC Chat with Llama 3.2 3B or Phi-4 Mini.' },
+            'name': 'Can I use Gemini Nano for local LLM on my Pixel?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but indirectly. Gemini Nano is Google\'s on-device model running natively on Pixel 9 Pro via the AICore API. As of April 2026, third-party apps cannot directly invoke Gemini Nano — it powers system features (Magic Compose, Recorder summaries). For user-controlled local LLM on Pixel, install PocketPal AI or MLC Chat and load Llama 3.2 3B or Phi-4 Mini instead.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Will 2027 smartphones run 70B models locally?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No. Current roadmaps (Apple A19 Pro, Snapdragon X2, Tensor G5) suggest 2027 phones will handle 7–13B models at 15–25 tok/s — not 70B. Memory bandwidth and thermal constraints limit practical mobile model size. For 70B on mobile form factor, iPad Pro M6 or a local mini PC server remains the 2027 option.' },
+            'name': 'Will 2027 smartphones run 70B models locally?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Current roadmaps (Apple A19 Pro, Snapdragon X2, Tensor G5) suggest 2027 phones will handle 7–13B models at 15–25 tok/s — not 70B. The memory bandwidth and thermal constraints on phones limit practical model size. For 70B local inference on mobile form factor, iPad Pro M6 or Mac mini M5 Pro (connected via Wi-Fi as a local server) remains the 2027 practical option.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC LLM vs Ollama: which is better for Android on-device inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MLC LLM (via MLC Chat) is better for Android on-device inference. Ollama is not a native Android app — it runs as a server on desktop and requires your Android phone to connect via Wi-Fi. MLC Chat compiles models using TVM to Vulkan shaders optimized for Android GPUs, delivering true offline inference at 5 tok/sec on Snapdragon X Elite for 7B models. Use MLC Chat for offline Android LLM inference. Use Ollama if you want to run it on a desktop server and access it remotely from your Android device.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are the best PocketPal AI alternatives for Android?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The top PocketPal AI alternatives for Android are: MLC Chat (TVM-compiled models, faster on Snapdragon X Elite, Vulkan acceleration), LLaMa Lite (lightweight Android-only GGUF, 3–7B), and Chatlize (iOS and Android, free tier). On iOS, alternatives include Ollama iOS, Layla (with RAG), and Private LLM ($5.99, best for iPad M4). All run on-device without internet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC Chat vs PocketPal AI: which should I choose?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Choose MLC Chat if you want faster inference on Snapdragon X Android (TVM-compiled Vulkan shaders, 5 tok/sec on 7B) and need Llama, Qwen, Gemma, and Phi support in one app. Choose PocketPal AI if you want broader GGUF model compatibility, easier model downloads directly from HuggingFace, or the same app across iPhone, iPad, and Android. Both are free and fully offline.',
+            },
           },
         ],
       },
@@ -692,58 +707,19 @@ schema: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            {
-              q: 'Kann ich ein lokales LLM auf meinem iPhone ausführen?',
-              a: 'Ja, aber nur kleine Modelle (1–3B Parameter). iPhone 16 mit A18-Chip führt Llama 3.2 1B mit ~3 Token/Sek aus. Llama 3.2 3B läuft mit ~2 Token/Sek. Modelle größer als 3B verursachen Abstürze. Für den praktischen Einsatz unterstützen PocketPal AI, MLC Chat und Ollama iOS 1–3B-Modelle auf dem iPhone.',
-            },
-            {
-              q: 'Welche Android-Geräte können lokale LLMs ausführen?',
-              a: 'Android-Geräte mit Snapdragon X Elite oder Snapdragon X Plus können 7B-Modelle mit ~5 Token/Sek ausführen. Standard-Mittelklasse-Android-Telefone (Snapdragon 8 Gen 3) bewältigen 3B-Modelle mit ~3 Token/Sek. Pixel 9 Pro und Galaxy S25 Ultra unterstützen beide 3–7B über MLC Chat. Geräte mit weniger als 8 GB RAM sind für lokale LLM-Inferenz unpraktisch.',
-            },
-            {
-              q: 'Wie schneidet das iPad im Vergleich zum iPhone für lokale LLMs ab?',
-              a: 'iPad Pro M4 übertrifft das iPhone deutlich: 15 Token/Sek bei Llama 7B vs 3–4 Token/Sek beim iPhone 16 Pro. Der iPad M4-Chip bewältigt auch 13B-Modelle komfortabel (16 GB Unified Memory), die das iPhone nicht ausführen kann. Für mobile KI-Arbeit ist das iPad das empfohlene Apple-Gerät.',
-            },
-            {
-              q: 'Welche ist die beste App zum Ausführen von LLMs auf Mobilgeräten?',
-              a: 'PocketPal AI ist die beliebteste App (Stand April 2026, über 500.000 Downloads, iOS + Android). MLC Chat bietet die breiteste Modellunterstützung (Llama, Qwen, Gemma, Phi). Für iOS speziell: Ollama iOS oder Layla. Für Android: LLaMa Lite oder MLC Chat. Alle kostenlos.',
-            },
-            {
-              q: 'Warum ist mobile LLM-Inferenz so viel langsamer als Desktop?',
-              a: 'Mobile Chips haben geringere Speicherbandbreite. Ein iPhone A18 hat ~68 GB/Sek; eine RTX 4090 hat 1.008 GB/Sek — fast 15× mehr. LLM-Inferenzgeschwindigkeit skaliert mit der Speicherbandbreite, daher ist Desktop 15–50× schneller. Mobile glänzt bei Effizienz (1–5 W vs 300–600 W), nicht beim Durchsatz.',
-            },
-            {
-              q: 'Verbraucht mobile lokale LLM-Inferenz viel Akku?',
-              a: 'Ja — dauerhafte Inferenz bei voller Last entleert den iPhone-Akku in 2–4 Stunden. Setzen Sie Antwortlängenbegrenzungen (max 200 Token). iPad M4 hält 4–6 Stunden unter Inferenzlast. Apple Silicon ist deutlich effizienter als Snapdragon X für dauerhafte Inferenz.',
-            },
-            {
-              q: 'Kann ich Gemini Nano für lokale LLM auf meinem Pixel verwenden?',
-              a: 'Ja, aber indirekt. Gemini Nano ist Googles On-Device-Modell, das nativ auf dem Pixel 9 Pro über die AICore API läuft. Stand April 2026 können Drittanbieter-Apps Gemini Nano nicht direkt aufrufen — es treibt Systemfunktionen an (Magic Compose, Recorder-Zusammenfassungen). Für nutzergesteuerte lokale LLM auf Pixel installieren Sie PocketPal AI oder MLC Chat und laden Sie Llama 3.2 3B oder Phi-4 Mini.',
-            },
-            {
-              q: 'Werden 2027er Smartphones 70B-Modelle lokal ausführen?',
-              a: 'Nein. Aktuelle Roadmaps (Apple A19 Pro, Snapdragon X2, Tensor G5) deuten darauf hin, dass 2027er Telefone 7–13B-Modelle mit 15–25 Tok/Sek bewältigen werden — nicht 70B. Speicherbandbreite und thermische Einschränkungen begrenzen die praktische Modellgröße auf Mobilgeräten. Für 70B im mobilen Formfaktor bleibt iPad Pro M6 oder Mac mini M5 Pro (per WLAN als lokaler Server) die praktische Option für 2027.',
-            },
-            {
-              q: 'Muss ich bei der Verwendung von mobilen lokalen LLMs die DSGVO beachten?',
-              a: 'Mobile lokale LLMs sind datenschutzrechtlich ideal: Alle Daten verbleiben auf dem Gerät des Nutzers, es findet keine grenzüberschreitende Datenübertragung statt. Gemäß DSGVO Artikel 28 entfällt die Notwendigkeit eines Auftragsverarbeitungsvertrags, da keine Daten an Dritte weitergegeben werden. BSI-Grundschutz-Kataloge empfehlen On-Device-Verarbeitung für sensible Daten im Gesundheits- und Rechtsbereich.',
-            },
-            {
-              q: 'Sind mobile lokale LLMs für den deutschen Mittelstand geeignet?',
-              a: 'Ja, für spezifische Anwendungsfälle. Mittelständische Unternehmen im Außendienst (Versicherung, Vertrieb, technischer Service) profitieren von Offline-KI auf Firmengeräten. iPad Pro M4 mit 13B-Modellen eignet sich für Dokumentenzusammenfassungen und Kundenkorrespondenz. Für Compliance-sensible Branchen (Gesundheit, Recht, Finanzen) ist On-Device-Inferenz die BSI-konforme Wahl.',
-            },
-            {
-              q: 'MLC LLM vs. Ollama: Was ist besser für Android On-Device-Inferenz?',
-              a: 'MLC LLM (via MLC Chat) ist besser für Android On-Device-Inferenz. Ollama ist keine native Android-App — es läuft als Server auf dem Desktop und erfordert eine WLAN-Verbindung vom Smartphone. MLC Chat kompiliert Modelle per TVM zu Vulkan-Shadern für Android-GPUs und liefert echte Offline-Inferenz mit 5 Tok/Sek auf Snapdragon X Elite für 7B-Modelle. Nutzen Sie MLC Chat für Offline-Android-LLM-Inferenz. Nutzen Sie Ollama, wenn Sie es auf einem Desktop-Server betreiben und über das Netzwerk von Android darauf zugreifen möchten.',
-            },
-            {
-              q: 'Was sind die besten PocketPal AI-Alternativen für Android?',
-              a: 'Die besten PocketPal AI-Alternativen für Android: MLC Chat (TVM-kompilierte Modelle, schneller auf Snapdragon X Elite, Vulkan-Beschleunigung), LLaMa Lite (leichtgewichtig, nur Android, GGUF 3–7B) und Chatlize (iOS und Android, kostenlos). Auf iOS: Ollama iOS, Layla (mit RAG) und Private LLM (5,99 $, ideal für iPad M4). Alle funktionieren On-Device ohne Internet.',
-            },
-            {
-              q: 'MLC Chat vs. PocketPal AI: Was soll ich wählen?',
-              a: 'Wählen Sie MLC Chat für schnellere Inferenz auf Snapdragon X Android (TVM-kompilierte Vulkan-Shader, 5 Tok/Sek bei 7B) und breite Modellunterstützung (Llama, Qwen, Gemma, Phi). Wählen Sie PocketPal AI für breitere GGUF-Modellkompatibilität, einfachere Downloads direkt von HuggingFace oder die gleiche App auf iPhone, iPad und Android. Beide kostenlos und vollständig offline.',
-            },
+            { q: 'Kann ich ein lokales LLM auf meinem iPhone ausführen?', a: 'Ja, aber nur kleine Modelle (1–3B Parameter). iPhone 16 mit A18-Chip führt Llama 3.2 1B mit ~3 Token/Sek aus. Llama 3.2 3B läuft mit ~2 Token/Sek. Modelle größer als 3B verursachen Abstürze. Für den praktischen Einsatz unterstützen PocketPal AI, MLC Chat und Ollama iOS 1–3B-Modelle auf dem iPhone.' },
+            { q: 'Welche Android-Geräte können lokale LLMs ausführen?', a: 'Android-Geräte mit Snapdragon X Elite oder Snapdragon X Plus können 7B-Modelle mit ~5 Token/Sek ausführen. Standard-Mittelklasse-Android-Telefone (Snapdragon 8 Gen 3) bewältigen 3B-Modelle mit ~3 Token/Sek. Pixel 9 Pro und Galaxy S25 Ultra unterstützen beide 3–7B über MLC Chat. Geräte mit weniger als 8 GB RAM sind für lokale LLM-Inferenz unpraktisch.' },
+            { q: 'Wie schneidet das iPad im Vergleich zum iPhone für lokale LLMs ab?', a: 'iPad Pro M4 übertrifft das iPhone deutlich: 15 Token/Sek bei Llama 7B vs 3–4 Token/Sek beim iPhone 16 Pro. Der iPad M4-Chip bewältigt auch 13B-Modelle komfortabel (16 GB Unified Memory), die das iPhone nicht ausführen kann. Für mobile KI-Arbeit ist das iPad das empfohlene Apple-Gerät.' },
+            { q: 'Welche ist die beste App zum Ausführen von LLMs auf Mobilgeräten?', a: 'PocketPal AI ist die beliebteste App (Stand April 2026, über 500.000 Downloads, iOS + Android). MLC Chat bietet die breiteste Modellunterstützung (Llama, Qwen, Gemma, Phi). Für iOS speziell: Ollama iOS oder Layla. Für Android: LLaMa Lite oder MLC Chat. Alle kostenlos.' },
+            { q: 'Warum ist mobile LLM-Inferenz so viel langsamer als Desktop?', a: 'Mobile Chips haben geringere Speicherbandbreite. Ein iPhone A18 hat ~68 GB/Sek; eine RTX 4090 hat 1.008 GB/Sek — fast 15× mehr. LLM-Inferenzgeschwindigkeit skaliert mit der Speicherbandbreite, daher ist Desktop 15–50× schneller. Mobile glänzt bei Effizienz (1–5 W vs 300–600 W), nicht beim Durchsatz.' },
+            { q: 'Verbraucht mobile lokale LLM-Inferenz viel Akku?', a: 'Ja — dauerhafte Inferenz bei voller Last entleert den iPhone-Akku in 2–4 Stunden. Setzen Sie Antwortlängenbegrenzungen (max 200 Token). iPad M4 hält 4–6 Stunden unter Inferenzlast. Apple Silicon ist deutlich effizienter als Snapdragon X für dauerhafte Inferenz.' },
+            { q: 'Kann ich Gemini Nano für lokale LLM auf meinem Pixel verwenden?', a: 'Ja, aber indirekt. Gemini Nano ist Googles On-Device-Modell, das nativ auf dem Pixel 9 Pro über die AICore API läuft. Stand April 2026 können Drittanbieter-Apps Gemini Nano nicht direkt aufrufen — es treibt Systemfunktionen an (Magic Compose, Recorder-Zusammenfassungen). Für nutzergesteuerte lokale LLM auf Pixel installieren Sie PocketPal AI oder MLC Chat und laden Sie Llama 3.2 3B oder Phi-4 Mini.' },
+            { q: 'Werden 2027er Smartphones 70B-Modelle lokal ausführen?', a: 'Nein. Aktuelle Roadmaps (Apple A19 Pro, Snapdragon X2, Tensor G5) deuten darauf hin, dass 2027er Telefone 7–13B-Modelle mit 15–25 Tok/Sek bewältigen werden — nicht 70B. Speicherbandbreite und thermische Einschränkungen begrenzen die praktische Modellgröße auf Mobilgeräten. Für 70B im mobilen Formfaktor bleibt iPad Pro M6 oder Mac mini M5 Pro (per WLAN als lokaler Server) die praktische Option für 2027.' },
+            { q: 'Muss ich bei der Verwendung von mobilen lokalen LLMs die DSGVO beachten?', a: 'Mobile lokale LLMs sind datenschutzrechtlich ideal: Alle Daten verbleiben auf dem Gerät des Nutzers, es findet keine grenzüberschreitende Datenübertragung statt. Gemäß DSGVO Artikel 28 entfällt die Notwendigkeit eines Auftragsverarbeitungsvertrags, da keine Daten an Dritte weitergegeben werden. BSI-Grundschutz-Kataloge empfehlen On-Device-Verarbeitung für sensible Daten im Gesundheits- und Rechtsbereich.' },
+            { q: 'Sind mobile lokale LLMs für den deutschen Mittelstand geeignet?', a: 'Ja, für spezifische Anwendungsfälle. Mittelständische Unternehmen im Außendienst (Versicherung, Vertrieb, technischer Service) profitieren von Offline-KI auf Firmengeräten. iPad Pro M4 mit 13B-Modellen eignet sich für Dokumentenzusammenfassungen und Kundenkorrespondenz. Für Compliance-sensible Branchen (Gesundheit, Recht, Finanzen) ist On-Device-Inferenz die BSI-konforme Wahl.' },
+            { q: 'MLC LLM vs. Ollama: Was ist besser für Android On-Device-Inferenz?', a: 'MLC LLM (via MLC Chat) ist besser für Android On-Device-Inferenz. Ollama ist keine native Android-App — es läuft als Server auf dem Desktop und erfordert eine WLAN-Verbindung vom Smartphone. MLC Chat kompiliert Modelle per TVM zu Vulkan-Shadern für Android-GPUs und liefert echte Offline-Inferenz mit 5 Tok/Sek auf Snapdragon X Elite für 7B-Modelle. Nutzen Sie MLC Chat für Offline-Android-LLM-Inferenz. Nutzen Sie Ollama, wenn Sie es auf einem Desktop-Server betreiben und über das Netzwerk von Android darauf zugreifen möchten.' },
+            { q: 'Was sind die besten PocketPal AI-Alternativen für Android?', a: 'Die besten PocketPal AI-Alternativen für Android: MLC Chat (TVM-kompilierte Modelle, schneller auf Snapdragon X Elite, Vulkan-Beschleunigung), LLaMa Lite (leichtgewichtig, nur Android, GGUF 3–7B) und Chatlize (iOS und Android, kostenlos). Auf iOS: Ollama iOS, Layla (mit RAG) und Private LLM (5,99 $, ideal für iPad M4). Alle funktionieren On-Device ohne Internet.' },
+            { q: 'MLC Chat vs. PocketPal AI: Was soll ich wählen?', a: 'Wählen Sie MLC Chat für schnellere Inferenz auf Snapdragon X Android (TVM-kompilierte Vulkan-Shader, 5 Tok/Sek bei 7B) und breite Modellunterstützung (Llama, Qwen, Gemma, Phi). Wählen Sie PocketPal AI für breitere GGUF-Modellkompatibilität, einfachere Downloads direkt von HuggingFace oder die gleiche App auf iPhone, iPad und Android. Beide kostenlos und vollständig offline.' },
           ],
         },
         relatedReading: {
@@ -799,16 +775,110 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Kann ich ein lokales LLM auf meinem iPhone ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber nur kleine Modelle (1–3B Parameter). iPhone 16 Pro (A18 Pro) führt Llama 3.2 3B mit ~4 Token/Sek aus. Größere Modelle verursachen Abstürze. Nutzen Sie PocketPal AI, MLC Chat oder Ollama iOS.' } },
-          { '@type': 'Question', name: 'Welche Android-Geräte können lokale LLMs ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Snapdragon X Elite/Plus führt 7B mit ~5 Token/Sek aus. Standard-Mittelklasse-Android (Snapdragon 8 Gen 3) schafft 3B mit ~3 Token/Sek. Pixel 9 Pro und Galaxy S25 Ultra unterstützen 3–7B über MLC Chat. Unter 8 GB RAM ist unpraktisch.' } },
-          { '@type': 'Question', name: 'Wie schneidet das iPad im Vergleich zum iPhone ab?', acceptedAnswer: { '@type': 'Answer', text: 'iPad Pro M4 übertrifft das iPhone deutlich: 15 Tok/Sek bei Llama 7B vs 3–4 Tok/Sek beim iPhone. iPad M4 bewältigt 13B-Modelle komfortabel (16 GB Unified Memory). Für mobile KI-Arbeit ist das iPad das empfohlene Apple-Gerät.' } },
-          { '@type': 'Question', name: 'Welche ist die beste App für LLMs auf Mobilgeräten?', acceptedAnswer: { '@type': 'Answer', text: 'PocketPal AI ist die beliebteste (Stand April 2026, 500K+ Downloads). MLC Chat bietet die breiteste Modellunterstützung (Llama, Qwen, Gemma, Phi). Für iOS: Ollama iOS oder Layla. Für Android: LLaMa Lite oder MLC Chat. Alle kostenlos.' } },
-          { '@type': 'Question', name: 'Warum ist mobile LLM-Inferenz so viel langsamer als Desktop?', acceptedAnswer: { '@type': 'Answer', text: 'Speicherbandbreite. iPhone A18 hat ~68 GB/Sek; RTX 4090 hat 1.008 GB/Sek — fast 15× mehr. LLM-Inferenzgeschwindigkeit skaliert mit Speicherbandbreite. Mobile glänzt bei Effizienz (1–5 W vs 300–600 W), nicht beim Durchsatz.' } },
-          { '@type': 'Question', name: 'Verbraucht mobile LLM-Inferenz viel Akku?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — dauerhafte Inferenz entleert den iPhone-Akku in 2–4 Stunden. Begrenzen Sie die Antwortlänge (max 200 Token). iPad M4 hält 4–6 Stunden. Apple Silicon ist effizienter als Snapdragon X für dauerhafte Inferenz.' } },
-          { '@type': 'Question', name: 'Kann ich Gemini Nano auf meinem Pixel verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Gemini Nano läuft nativ auf Pixel 9 Pro über die AICore API, ist aber für Drittanbieter-Apps nicht zugänglich (Stand April 2026). Für nutzergesteuerte lokale LLM: PocketPal AI oder MLC Chat mit Llama 3.2 3B oder Phi-4 Mini installieren.' } },
-          { '@type': 'Question', name: 'Werden 2027er Smartphones 70B-Modelle lokal ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Aktuelle Roadmaps deuten auf 7–13B-Modelle mit 15–25 Tok/Sek hin — nicht 70B. Speicherbandbreite und thermische Einschränkungen begrenzen die Modellgröße. iPad Pro M6 oder Mac mini M5 Pro als lokaler Server bleibt die 2027-Option.' } },
-          { '@type': 'Question', name: 'Muss ich bei mobilen lokalen LLMs die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Mobile lokale LLMs sind datenschutzrechtlich ideal: Alle Daten verbleiben auf dem Gerät. Gemäß DSGVO Artikel 28 entfällt der Auftragsverarbeitungsvertrag. BSI-Grundschutz empfiehlt On-Device-Verarbeitung für sensible Daten.' } },
-          { '@type': 'Question', name: 'Sind mobile lokale LLMs für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Mittelständische Unternehmen im Außendienst profitieren von Offline-KI auf Firmengeräten. iPad Pro M4 mit 13B-Modellen eignet sich für Dokumentenzusammenfassungen. Für Compliance-sensible Branchen ist On-Device-Inferenz die BSI-konforme Wahl.' } },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein lokales LLM auf meinem iPhone ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber nur kleine Modelle (1–3B Parameter). iPhone 16 mit A18-Chip führt Llama 3.2 1B mit ~3 Token/Sek aus. Llama 3.2 3B läuft mit ~2 Token/Sek. Modelle größer als 3B verursachen Abstürze. Für den praktischen Einsatz unterstützen PocketPal AI, MLC Chat und Ollama iOS 1–3B-Modelle auf dem iPhone.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Android-Geräte können lokale LLMs ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Android-Geräte mit Snapdragon X Elite oder Snapdragon X Plus können 7B-Modelle mit ~5 Token/Sek ausführen. Standard-Mittelklasse-Android-Telefone (Snapdragon 8 Gen 3) bewältigen 3B-Modelle mit ~3 Token/Sek. Pixel 9 Pro und Galaxy S25 Ultra unterstützen beide 3–7B über MLC Chat. Geräte mit weniger als 8 GB RAM sind für lokale LLM-Inferenz unpraktisch.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie schneidet das iPad im Vergleich zum iPhone für lokale LLMs ab?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'iPad Pro M4 übertrifft das iPhone deutlich: 15 Token/Sek bei Llama 7B vs 3–4 Token/Sek beim iPhone 16 Pro. Der iPad M4-Chip bewältigt auch 13B-Modelle komfortabel (16 GB Unified Memory), die das iPhone nicht ausführen kann. Für mobile KI-Arbeit ist das iPad das empfohlene Apple-Gerät.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche ist die beste App zum Ausführen von LLMs auf Mobilgeräten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PocketPal AI ist die beliebteste App (Stand April 2026, über 500.000 Downloads, iOS + Android). MLC Chat bietet die breiteste Modellunterstützung (Llama, Qwen, Gemma, Phi). Für iOS speziell: Ollama iOS oder Layla. Für Android: LLaMa Lite oder MLC Chat. Alle kostenlos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Warum ist mobile LLM-Inferenz so viel langsamer als Desktop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mobile Chips haben geringere Speicherbandbreite. Ein iPhone A18 hat ~68 GB/Sek; eine RTX 4090 hat 1.008 GB/Sek — fast 15× mehr. LLM-Inferenzgeschwindigkeit skaliert mit der Speicherbandbreite, daher ist Desktop 15–50× schneller. Mobile glänzt bei Effizienz (1–5 W vs 300–600 W), nicht beim Durchsatz.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Verbraucht mobile lokale LLM-Inferenz viel Akku?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja — dauerhafte Inferenz bei voller Last entleert den iPhone-Akku in 2–4 Stunden. Setzen Sie Antwortlängenbegrenzungen (max 200 Token). iPad M4 hält 4–6 Stunden unter Inferenzlast. Apple Silicon ist deutlich effizienter als Snapdragon X für dauerhafte Inferenz.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Gemini Nano für lokale LLM auf meinem Pixel verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber indirekt. Gemini Nano ist Googles On-Device-Modell, das nativ auf dem Pixel 9 Pro über die AICore API läuft. Stand April 2026 können Drittanbieter-Apps Gemini Nano nicht direkt aufrufen — es treibt Systemfunktionen an (Magic Compose, Recorder-Zusammenfassungen). Für nutzergesteuerte lokale LLM auf Pixel installieren Sie PocketPal AI oder MLC Chat und laden Sie Llama 3.2 3B oder Phi-4 Mini.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Werden 2027er Smartphones 70B-Modelle lokal ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Aktuelle Roadmaps (Apple A19 Pro, Snapdragon X2, Tensor G5) deuten darauf hin, dass 2027er Telefone 7–13B-Modelle mit 15–25 Tok/Sek bewältigen werden — nicht 70B. Speicherbandbreite und thermische Einschränkungen begrenzen die praktische Modellgröße auf Mobilgeräten. Für 70B im mobilen Formfaktor bleibt iPad Pro M6 oder Mac mini M5 Pro (per WLAN als lokaler Server) die praktische Option für 2027.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von mobilen lokalen LLMs die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mobile lokale LLMs sind datenschutzrechtlich ideal: Alle Daten verbleiben auf dem Gerät des Nutzers, es findet keine grenzüberschreitende Datenübertragung statt. Gemäß DSGVO Artikel 28 entfällt die Notwendigkeit eines Auftragsverarbeitungsvertrags, da keine Daten an Dritte weitergegeben werden. BSI-Grundschutz-Kataloge empfehlen On-Device-Verarbeitung für sensible Daten im Gesundheits- und Rechtsbereich.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sind mobile lokale LLMs für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, für spezifische Anwendungsfälle. Mittelständische Unternehmen im Außendienst (Versicherung, Vertrieb, technischer Service) profitieren von Offline-KI auf Firmengeräten. iPad Pro M4 mit 13B-Modellen eignet sich für Dokumentenzusammenfassungen und Kundenkorrespondenz. Für Compliance-sensible Branchen (Gesundheit, Recht, Finanzen) ist On-Device-Inferenz die BSI-konforme Wahl.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC LLM vs. Ollama: Was ist besser für Android On-Device-Inferenz?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MLC LLM (via MLC Chat) ist besser für Android On-Device-Inferenz. Ollama ist keine native Android-App — es läuft als Server auf dem Desktop und erfordert eine WLAN-Verbindung vom Smartphone. MLC Chat kompiliert Modelle per TVM zu Vulkan-Shadern für Android-GPUs und liefert echte Offline-Inferenz mit 5 Tok/Sek auf Snapdragon X Elite für 7B-Modelle. Nutzen Sie MLC Chat für Offline-Android-LLM-Inferenz. Nutzen Sie Ollama, wenn Sie es auf einem Desktop-Server betreiben und über das Netzwerk von Android darauf zugreifen möchten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was sind die besten PocketPal AI-Alternativen für Android?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die besten PocketPal AI-Alternativen für Android: MLC Chat (TVM-kompilierte Modelle, schneller auf Snapdragon X Elite, Vulkan-Beschleunigung), LLaMa Lite (leichtgewichtig, nur Android, GGUF 3–7B) und Chatlize (iOS und Android, kostenlos). Auf iOS: Ollama iOS, Layla (mit RAG) und Private LLM (5,99 $, ideal für iPad M4). Alle funktionieren On-Device ohne Internet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC Chat vs. PocketPal AI: Was soll ich wählen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Wählen Sie MLC Chat für schnellere Inferenz auf Snapdragon X Android (TVM-kompilierte Vulkan-Shader, 5 Tok/Sek bei 7B) und breite Modellunterstützung (Llama, Qwen, Gemma, Phi). Wählen Sie PocketPal AI für breitere GGUF-Modellkompatibilität, einfachere Downloads direkt von HuggingFace oder die gleiche App auf iPhone, iPad und Android. Beide kostenlos und vollständig offline.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1090,50 +1160,17 @@ schema: {
           id: 'faq',
           title: 'Questions fréquentes',
           faqs: [
-            {
-              q: 'Peut-on exécuter un LLM local sur iPhone ?',
-              a: 'Oui, mais uniquement les petits modèles (1–3B paramètres). L\'iPhone 16 avec puce A18 exécute Llama 3.2 1B à ~3 tokens/sec. Les modèles supérieurs à 3B provoquent des crashs. Utilisez PocketPal AI, MLC Chat ou Ollama iOS.',
-            },
-            {
-              q: 'Quels appareils Android peuvent exécuter des LLM locaux ?',
-              a: 'Les appareils Android avec Snapdragon X Elite/Plus exécutent les modèles 7B à ~5 tokens/sec. Les Android de milieu de gamme (Snapdragon 8 Gen 3) gèrent les 3B à ~3 tokens/sec. Pixel 9 Pro et Galaxy S25 Ultra supportent 3–7B via MLC Chat. Moins de 8 Go de RAM est insuffisant.',
-            },
-            {
-              q: 'Comment l\'iPad se compare-t-il à l\'iPhone pour les LLM locaux ?',
-              a: 'L\'iPad Pro M4 surpasse largement l\'iPhone : 15 tokens/sec sur Llama 7B vs 3–4 tokens/sec sur iPhone 16 Pro. L\'iPad M4 gère les modèles 13B (16 Go de mémoire unifiée). Pour l\'IA mobile, l\'iPad est l\'appareil Apple recommandé.',
-            },
-            {
-              q: 'Quelle est la meilleure app pour les LLM sur mobile ?',
-              a: 'PocketPal AI est la plus populaire en avril 2026 (500K+ téléchargements, iOS + Android). MLC Chat offre le support le plus large (Llama, Qwen, Gemma, Phi). Pour iOS : Ollama iOS ou Layla. Pour Android : LLaMa Lite ou MLC Chat. Toutes gratuites.',
-            },
-            {
-              q: 'Pourquoi l\'inférence LLM mobile est-elle beaucoup plus lente que le bureau ?',
-              a: 'La bande passante mémoire. L\'iPhone A18 a ~68 Go/sec ; la RTX 4090 a 1 008 Go/sec — près de 15× plus. La vitesse d\'inférence LLM est proportionnelle à la bande passante. Le mobile excelle en efficacité (1–5 W vs 300–600 W), pas en débit.',
-            },
-            {
-              q: 'L\'inférence LLM mobile draine-t-elle la batterie ?',
-              a: 'Oui — l\'inférence soutenue décharge l\'iPhone en 2–4 heures. Limitez la longueur des réponses (max 200 tokens). L\'iPad M4 tient 4–6 heures. Apple Silicon est plus efficace que Snapdragon X en inférence soutenue.',
-            },
-            {
-              q: 'Peut-on utiliser Gemini Nano sur Pixel ?',
-              a: 'Indirectement. Gemini Nano tourne nativement sur Pixel 9 Pro via l\'API AICore, mais n\'est pas accessible aux apps tierces (avril 2026). Gemini Nano alimente les fonctions système (Magic Compose, résumés). Pour un LLM local contrôlé : PocketPal AI ou MLC Chat avec Llama 3.2 3B ou Phi-4 Mini.',
-            },
-            {
-              q: 'Les smartphones de 2027 pourront-ils exécuter des modèles 70B ?',
-              a: 'Non. Les feuilles de route actuelles (Apple A19 Pro, Snapdragon X2, Tensor G5) indiquent 7–13B à 15–25 tok/sec — pas 70B. La bande passante et les contraintes thermiques limitent la taille des modèles. Pour le 70B en format mobile, l\'iPad Pro M6 ou un Mac mini M5 Pro (serveur local via Wi-Fi) reste l\'option pratique pour 2027.',
-            },
-            {
-              q: 'MLC LLM vs Ollama : lequel est meilleur pour l\'inférence Android sur l\'appareil ?',
-              a: 'MLC LLM (via MLC Chat) est meilleur pour l\'inférence Android sur l\'appareil. Ollama n\'est pas une app Android native — il tourne comme serveur sur desktop et nécessite une connexion Wi-Fi depuis votre téléphone. MLC Chat compile les modèles avec TVM en shaders Vulkan pour GPU Android, offrant une vraie inférence hors ligne à 5 tok/sec sur Snapdragon X Elite pour les modèles 7B. Utilisez MLC Chat pour l\'inférence LLM hors ligne sur Android. Utilisez Ollama si vous le faites tourner sur un serveur desktop et y accédez à distance depuis Android.',
-            },
-            {
-              q: 'Quelles sont les meilleures alternatives à PocketPal AI pour Android ?',
-              a: 'Les meilleures alternatives à PocketPal AI pour Android : MLC Chat (modèles compilés TVM, plus rapide sur Snapdragon X Elite, accélération Vulkan), LLaMa Lite (léger, Android uniquement, GGUF 3–7B), et Chatlize (iOS et Android, gratuit). Sur iOS : Ollama iOS, Layla (avec RAG) et Private LLM (5,99 $, idéal pour iPad M4). Toutes fonctionnent sur l\'appareil sans internet.',
-            },
-            {
-              q: 'MLC Chat vs PocketPal AI : lequel choisir ?',
-              a: 'Choisissez MLC Chat pour une inférence plus rapide sur Snapdragon X Android (shaders Vulkan compilés TVM, 5 tok/sec sur 7B) et un support Llama, Qwen, Gemma, Phi en une seule app. Choisissez PocketPal AI pour une compatibilité GGUF plus large, des téléchargements plus simples depuis HuggingFace, ou la même app sur iPhone, iPad et Android. Les deux sont gratuits et entièrement hors ligne.',
-            },
+            { q: 'Peut-on exécuter un LLM local sur iPhone ?', a: 'Oui, mais uniquement les petits modèles (1–3B paramètres). L\'iPhone 16 avec puce A18 exécute Llama 3.2 1B à ~3 tokens/sec. Les modèles supérieurs à 3B provoquent des crashs. Utilisez PocketPal AI, MLC Chat ou Ollama iOS.' },
+            { q: 'Quels appareils Android peuvent exécuter des LLM locaux ?', a: 'Les appareils Android avec Snapdragon X Elite/Plus exécutent les modèles 7B à ~5 tokens/sec. Les Android de milieu de gamme (Snapdragon 8 Gen 3) gèrent les 3B à ~3 tokens/sec. Pixel 9 Pro et Galaxy S25 Ultra supportent 3–7B via MLC Chat. Moins de 8 Go de RAM est insuffisant.' },
+            { q: 'Comment l\'iPad se compare-t-il à l\'iPhone pour les LLM locaux ?', a: 'L\'iPad Pro M4 surpasse largement l\'iPhone : 15 tokens/sec sur Llama 7B vs 3–4 tokens/sec sur iPhone 16 Pro. L\'iPad M4 gère les modèles 13B (16 Go de mémoire unifiée). Pour l\'IA mobile, l\'iPad est l\'appareil Apple recommandé.' },
+            { q: 'Quelle est la meilleure app pour les LLM sur mobile ?', a: 'PocketPal AI est la plus populaire en avril 2026 (500K+ téléchargements, iOS + Android). MLC Chat offre le support le plus large (Llama, Qwen, Gemma, Phi). Pour iOS : Ollama iOS ou Layla. Pour Android : LLaMa Lite ou MLC Chat. Toutes gratuites.' },
+            { q: 'Pourquoi l\'inférence LLM mobile est-elle beaucoup plus lente que le bureau ?', a: 'La bande passante mémoire. L\'iPhone A18 a ~68 Go/sec ; la RTX 4090 a 1 008 Go/sec — près de 15× plus. La vitesse d\'inférence LLM est proportionnelle à la bande passante. Le mobile excelle en efficacité (1–5 W vs 300–600 W), pas en débit.' },
+            { q: 'L\'inférence LLM mobile draine-t-elle la batterie ?', a: 'Oui — l\'inférence soutenue décharge l\'iPhone en 2–4 heures. Limitez la longueur des réponses (max 200 tokens). L\'iPad M4 tient 4–6 heures. Apple Silicon est plus efficace que Snapdragon X en inférence soutenue.' },
+            { q: 'Peut-on utiliser Gemini Nano sur Pixel ?', a: 'Indirectement. Gemini Nano tourne nativement sur Pixel 9 Pro via l\'API AICore, mais n\'est pas accessible aux apps tierces (avril 2026). Gemini Nano alimente les fonctions système (Magic Compose, résumés). Pour un LLM local contrôlé : PocketPal AI ou MLC Chat avec Llama 3.2 3B ou Phi-4 Mini.' },
+            { q: 'Les smartphones de 2027 pourront-ils exécuter des modèles 70B ?', a: 'Non. Les feuilles de route actuelles (Apple A19 Pro, Snapdragon X2, Tensor G5) indiquent 7–13B à 15–25 tok/sec — pas 70B. La bande passante et les contraintes thermiques limitent la taille des modèles. Pour le 70B en format mobile, l\'iPad Pro M6 ou un Mac mini M5 Pro (serveur local via Wi-Fi) reste l\'option pratique pour 2027.' },
+            { q: 'MLC LLM vs Ollama : lequel est meilleur pour l\'inférence Android sur l\'appareil ?', a: 'MLC LLM (via MLC Chat) est meilleur pour l\'inférence Android sur l\'appareil. Ollama n\'est pas une app Android native — il tourne comme serveur sur desktop et nécessite une connexion Wi-Fi depuis votre téléphone. MLC Chat compile les modèles avec TVM en shaders Vulkan pour GPU Android, offrant une vraie inférence hors ligne à 5 tok/sec sur Snapdragon X Elite pour les modèles 7B. Utilisez MLC Chat pour l\'inférence LLM hors ligne sur Android. Utilisez Ollama si vous le faites tourner sur un serveur desktop et y accédez à distance depuis Android.' },
+            { q: 'Quelles sont les meilleures alternatives à PocketPal AI pour Android ?', a: 'Les meilleures alternatives à PocketPal AI pour Android : MLC Chat (modèles compilés TVM, plus rapide sur Snapdragon X Elite, accélération Vulkan), LLaMa Lite (léger, Android uniquement, GGUF 3–7B), et Chatlize (iOS et Android, gratuit). Sur iOS : Ollama iOS, Layla (avec RAG) et Private LLM (5,99 $, idéal pour iPad M4). Toutes fonctionnent sur l\'appareil sans internet.' },
+            { q: 'MLC Chat vs PocketPal AI : lequel choisir ?', a: 'Choisissez MLC Chat pour une inférence plus rapide sur Snapdragon X Android (shaders Vulkan compilés TVM, 5 tok/sec sur 7B) et un support Llama, Qwen, Gemma, Phi en une seule app. Choisissez PocketPal AI pour une compatibilité GGUF plus large, des téléchargements plus simples depuis HuggingFace, ou la même app sur iPhone, iPad et Android. Les deux sont gratuits et entièrement hors ligne.' },
           ],
         },
         relatedReading: {
@@ -1189,14 +1226,94 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'fr',
         mainEntity: [
-          { '@type': 'Question', name: 'Peut-on exécuter un LLM local sur iPhone ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais uniquement les modèles 1–3B. iPhone 16 Pro (A18 Pro) exécute Llama 3.2 3B à ~4 tokens/sec. Les modèles plus grands provoquent des crashs. Utilisez PocketPal AI, MLC Chat ou Ollama iOS.' } },
-          { '@type': 'Question', name: 'Quels appareils Android pour les LLM locaux ?', acceptedAnswer: { '@type': 'Answer', text: 'Snapdragon X Elite/Plus : 7B à ~5 tokens/sec. Milieu de gamme (Snapdragon 8 Gen 3) : 3B à ~3 tokens/sec. Pixel 9 Pro et Galaxy S25 Ultra supportent 3–7B via MLC Chat. Moins de 8 Go RAM est insuffisant.' } },
-          { '@type': 'Question', name: 'iPad vs iPhone pour les LLM locaux ?', acceptedAnswer: { '@type': 'Answer', text: 'iPad Pro M4 surpasse largement l\'iPhone : 15 tok/sec sur Llama 7B vs 3–4 tok/sec. iPad M4 gère les 13B (16 Go mémoire unifiée). Pour l\'IA mobile, iPad est recommandé.' } },
-          { '@type': 'Question', name: 'Quelle est la meilleure app LLM mobile ?', acceptedAnswer: { '@type': 'Answer', text: 'PocketPal AI est la plus populaire (500K+ téléchargements, avril 2026). MLC Chat offre le support le plus large (Llama, Qwen, Gemma, Phi). iOS : Ollama iOS ou Layla. Android : LLaMa Lite ou MLC Chat. Toutes gratuites.' } },
-          { '@type': 'Question', name: 'Pourquoi le mobile est-il plus lent que le bureau ?', acceptedAnswer: { '@type': 'Answer', text: 'Bande passante mémoire. iPhone A18 : ~68 Go/sec ; RTX 4090 : 1 008 Go/sec — 15× plus. La vitesse d\'inférence LLM est proportionnelle à la bande passante.' } },
-          { '@type': 'Question', name: 'L\'inférence mobile draine-t-elle la batterie ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — inférence soutenue : iPhone se décharge en 2–4 heures. Limitez les réponses (max 200 tokens). iPad M4 : 4–6 heures. Apple Silicon plus efficace que Snapdragon X.' } },
-          { '@type': 'Question', name: 'Peut-on utiliser Gemini Nano sur Pixel ?', acceptedAnswer: { '@type': 'Answer', text: 'Gemini Nano tourne sur Pixel 9 Pro via AICore mais n\'est pas accessible aux apps tierces (avril 2026). Pour un LLM local : PocketPal AI ou MLC Chat avec Llama 3.2 3B ou Phi-4 Mini.' } },
-          { '@type': 'Question', name: 'Les smartphones 2027 pourront-ils exécuter des 70B ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Les roadmaps indiquent 7–13B à 15–25 tok/sec — pas 70B. Contraintes de bande passante et thermiques. iPad Pro M6 ou Mac mini M5 Pro reste l\'option 2027.' } },
+          {
+            '@type': 'Question',
+            'name': 'Peut-on exécuter un LLM local sur iPhone ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, mais uniquement les petits modèles (1–3B paramètres). L\'iPhone 16 avec puce A18 exécute Llama 3.2 1B à ~3 tokens/sec. Les modèles supérieurs à 3B provoquent des crashs. Utilisez PocketPal AI, MLC Chat ou Ollama iOS.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quels appareils Android peuvent exécuter des LLM locaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les appareils Android avec Snapdragon X Elite/Plus exécutent les modèles 7B à ~5 tokens/sec. Les Android de milieu de gamme (Snapdragon 8 Gen 3) gèrent les 3B à ~3 tokens/sec. Pixel 9 Pro et Galaxy S25 Ultra supportent 3–7B via MLC Chat. Moins de 8 Go de RAM est insuffisant.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment l\'iPad se compare-t-il à l\'iPhone pour les LLM locaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'iPad Pro M4 surpasse largement l\'iPhone : 15 tokens/sec sur Llama 7B vs 3–4 tokens/sec sur iPhone 16 Pro. L\'iPad M4 gère les modèles 13B (16 Go de mémoire unifiée). Pour l\'IA mobile, l\'iPad est l\'appareil Apple recommandé.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la meilleure app pour les LLM sur mobile ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PocketPal AI est la plus populaire en avril 2026 (500K+ téléchargements, iOS + Android). MLC Chat offre le support le plus large (Llama, Qwen, Gemma, Phi). Pour iOS : Ollama iOS ou Layla. Pour Android : LLaMa Lite ou MLC Chat. Toutes gratuites.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi l\'inférence LLM mobile est-elle beaucoup plus lente que le bureau ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La bande passante mémoire. L\'iPhone A18 a ~68 Go/sec ; la RTX 4090 a 1 008 Go/sec — près de 15× plus. La vitesse d\'inférence LLM est proportionnelle à la bande passante. Le mobile excelle en efficacité (1–5 W vs 300–600 W), pas en débit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'inférence LLM mobile draine-t-elle la batterie ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui — l\'inférence soutenue décharge l\'iPhone en 2–4 heures. Limitez la longueur des réponses (max 200 tokens). L\'iPad M4 tient 4–6 heures. Apple Silicon est plus efficace que Snapdragon X en inférence soutenue.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Peut-on utiliser Gemini Nano sur Pixel ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Indirectement. Gemini Nano tourne nativement sur Pixel 9 Pro via l\'API AICore, mais n\'est pas accessible aux apps tierces (avril 2026). Gemini Nano alimente les fonctions système (Magic Compose, résumés). Pour un LLM local contrôlé : PocketPal AI ou MLC Chat avec Llama 3.2 3B ou Phi-4 Mini.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les smartphones de 2027 pourront-ils exécuter des modèles 70B ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Les feuilles de route actuelles (Apple A19 Pro, Snapdragon X2, Tensor G5) indiquent 7–13B à 15–25 tok/sec — pas 70B. La bande passante et les contraintes thermiques limitent la taille des modèles. Pour le 70B en format mobile, l\'iPad Pro M6 ou un Mac mini M5 Pro (serveur local via Wi-Fi) reste l\'option pratique pour 2027.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC LLM vs Ollama : lequel est meilleur pour l\'inférence Android sur l\'appareil ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MLC LLM (via MLC Chat) est meilleur pour l\'inférence Android sur l\'appareil. Ollama n\'est pas une app Android native — il tourne comme serveur sur desktop et nécessite une connexion Wi-Fi depuis votre téléphone. MLC Chat compile les modèles avec TVM en shaders Vulkan pour GPU Android, offrant une vraie inférence hors ligne à 5 tok/sec sur Snapdragon X Elite pour les modèles 7B. Utilisez MLC Chat pour l\'inférence LLM hors ligne sur Android. Utilisez Ollama si vous le faites tourner sur un serveur desktop et y accédez à distance depuis Android.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelles sont les meilleures alternatives à PocketPal AI pour Android ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les meilleures alternatives à PocketPal AI pour Android : MLC Chat (modèles compilés TVM, plus rapide sur Snapdragon X Elite, accélération Vulkan), LLaMa Lite (léger, Android uniquement, GGUF 3–7B), et Chatlize (iOS et Android, gratuit). Sur iOS : Ollama iOS, Layla (avec RAG) et Private LLM (5,99 $, idéal pour iPad M4). Toutes fonctionnent sur l\'appareil sans internet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC Chat vs PocketPal AI : lequel choisir ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Choisissez MLC Chat pour une inférence plus rapide sur Snapdragon X Android (shaders Vulkan compilés TVM, 5 tok/sec sur 7B) et un support Llama, Qwen, Gemma, Phi en une seule app. Choisissez PocketPal AI pour une compatibilité GGUF plus large, des téléchargements plus simples depuis HuggingFace, ou la même app sur iPhone, iPad et Android. Les deux sont gratuits et entièrement hors ligne.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1478,50 +1595,18 @@ schema: {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            {
-              q: 'iPhoneでローカルLLMを実行できますか？',
-              a: 'はい。ただし小型モデル（1–3Bパラメータ）のみです。A18チップ搭載iPhone 16はLlama 3.2 1Bを約3トークン/秒で実行します。3B以上のモデルはクラッシュします。PocketPal AI、MLC Chat、Ollama iOSが実用的です。',
-            },
-            {
-              q: 'どのAndroidデバイスがローカルLLMを実行できますか？',
-              a: 'Snapdragon X Elite/Plus搭載デバイスが7Bモデルを約5トークン/秒で実行。標準ミドルレンジAndroid（Snapdragon 8 Gen 3）は3Bを約3トークン/秒。Pixel 9 ProとGalaxy S25 UltraはMLC Chat経由で3–7B対応。8 GB RAM未満は非実用的です。',
-            },
-            {
-              q: 'iPadとiPhoneのローカルLLM比較は？',
-              a: 'iPad Pro M4はiPhoneを大幅に上回ります：Llama 7Bで15トークン/秒 vs iPhoneの3–4トークン/秒。iPad M4は13Bモデルも快適に実行（16 GBユニファイドメモリ）。モバイルAI作業にはiPadが推奨です。',
-            },
-            {
-              q: 'モバイルでLLMを実行する最良のアプリは？',
-              a: 'PocketPal AIが2026年4月時点で最も人気（50万以上ダウンロード、iOS・Android）。MLC Chatが最も幅広いモデルサポート（Llama、Qwen、Gemma、Phi）。iOS：Ollama iOSまたはLayla。Android：LLaMa LiteまたはMLC Chat。すべて無料。',
-            },
-            {
-              q: 'なぜモバイルLLM推論はデスクトップより遅いのですか？',
-              a: 'メモリ帯域幅の差です。iPhone A18は約68 GB/秒、RTX 4090は1,008 GB/秒 — 約15倍の差。LLM推論速度はメモリ帯域幅に比例します。モバイルは効率（1–5 W vs 300–600 W）に優れ、スループットではありません。',
-            },
-            {
-              q: 'モバイルLLM推論はバッテリーを消耗しますか？',
-              a: 'はい。持続的推論でiPhoneバッテリーは2–4時間で消耗します。応答長制限（最大200トークン）を設定してください。iPad M4は4–6時間持続。Apple SiliconはSnapdragon Xより持続的推論で効率的です。',
-            },
-            {
-              q: 'PixelでGemini Nanoをローカルで使えますか？',
-              a: 'はい、ただし間接的です。Gemini NanoはPixel 9 ProでAICore API経由でネイティブ実行されますが、2026年4月時点でサードパーティアプリからアクセスできません。ユーザー制御のローカルLLMにはPocketPal AIまたはMLC ChatでLlama 3.2 3BまたはPhi-4 Miniをインストールしてください。',
-            },
-            {
-              q: '2027年のスマートフォンで70Bモデルをローカル実行できますか？',
-              a: 'いいえ。現在のロードマップ（Apple A19 Pro、Snapdragon X2、Tensor G5）は7–13Bモデルを15–25トークン/秒で示しており、70Bではありません。メモリ帯域幅と熱制約がモバイルの実用モデルサイズを制限します。モバイルフォームファクターでの70BにはiPad Pro M6またはMac mini M5 Pro（Wi-Fiローカルサーバー）が2027年の実用オプションです。',
-            },
-            {
-              q: 'MLC LLM vs Ollama：Android オンデバイス推論にはどちらが優れていますか？',
-              a: 'MLC LLM（MLC Chat 経由）が Android オンデバイス推論に優れています。Ollama はネイティブ Android アプリではありません——デスクトップ上でサーバーとして動作し、スマートフォンは Wi-Fi 経由で接続する必要があります。MLC Chat は TVM を使用してモデルを Android GPU 向けの Vulkan シェーダーにコンパイルし、Snapdragon X Elite で 7B モデルを 5 トークン/秒で真のオフライン推論を提供します。オフライン Android LLM 推論には MLC Chat を使用してください。Ollama をデスクトップサーバーで実行し Android からリモートアクセスする場合は Ollama をお使いください。',
-            },
-            {
-              q: 'Android 向け PocketPal AI の最良の代替アプリは何ですか？',
-              a: 'Android 向け PocketPal AI の最良の代替アプリ：MLC Chat（TVM コンパイルモデル、Snapdragon X Elite で高速、Vulkan 加速）、LLaMa Lite（軽量、Android 専用、GGUF 3〜7B）、Chatlize（iOS と Android、無料）。iOS では：Ollama iOS、Layla（RAG 付き）、Private LLM（5.99 ドル、iPad M4 に最適）。すべてインターネットなしでオンデバイスで動作します。',
-            },
-            {
-              q: 'MLC Chat vs PocketPal AI：どちらを選ぶべきですか？',
-              a: 'Snapdragon X Android での高速推論（TVM コンパイル Vulkan シェーダー、7B で 5 トークン/秒）と Llama、Qwen、Gemma、Phi のサポートが必要な場合は MLC Chat を選んでください。GGUF モデルの幅広い互換性、HuggingFace からの簡単なダウンロード、または iPhone・iPad・Android で同じアプリを使いたい場合は PocketPal AI を選んでください。どちらも無料で完全オフラインです。',
-            },
+            { q: 'iPhoneでローカルLLMを実行できますか？', a: 'はい。ただし小型モデル（1–3Bパラメータ）のみです。A18チップ搭載iPhone 16はLlama 3.2 1Bを約3トークン/秒で実行します。3B以上のモデルはクラッシュします。PocketPal AI、MLC Chat、Ollama iOSが実用的です。' },
+            { q: 'どのAndroidデバイスがローカルLLMを実行できますか？', a: 'Snapdragon X Elite/Plus搭載デバイスが7Bモデルを約5トークン/秒で実行。標準ミドルレンジAndroid（Snapdragon 8 Gen 3）は3Bを約3トークン/秒。Pixel 9 ProとGalaxy S25 UltraはMLC Chat経由で3–7B対応。8 GB RAM未満は非実用的です。' },
+            { q: 'iPadとiPhoneのローカルLLM比較は？', a: 'iPad Pro M4はiPhoneを大幅に上回ります：Llama 7Bで15トークン/秒 vs iPhoneの3–4トークン/秒。iPad M4は13Bモデルも快適に実行（16 GBユニファイドメモリ）。モバイルAI作業にはiPadが推奨です。' },
+            { q: 'モバイルでLLMを実行する最良のアプリは？', a: 'PocketPal AIが2026年4月時点で最も人気（50万以上ダウンロード、iOS・Android）。MLC Chatが最も幅広いモデルサポート（Llama、Qwen、Gemma、Phi）。iOS：Ollama iOSまたはLayla。Android：LLaMa LiteまたはMLC Chat。すべて無料。' },
+            { q: 'なぜモバイルLLM推論はデスクトップより遅いのですか？', a: 'メモリ帯域幅の差です。iPhone A18は約68 GB/秒、RTX 4090は1,008 GB/秒 — 約15倍の差。LLM推論速度はメモリ帯域幅に比例します。モバイルは効率（1–5 W vs 300–600 W）に優れ、スループットではありません。' },
+            { q: 'モバイルLLM推論はバッテリーを消耗しますか？', a: 'はい。持続的推論でiPhoneバッテリーは2–4時間で消耗します。応答長制限（最大200トークン）を設定してください。iPad M4は4–6時間持続。Apple SiliconはSnapdragon Xより持続的推論で効率的です。' },
+            { q: 'PixelでGemini Nanoをローカルで使えますか？', a: 'はい、ただし間接的です。Gemini NanoはPixel 9 ProでAICore API経由でネイティブ実行されますが、2026年4月時点でサードパーティアプリからアクセスできません。ユーザー制御のローカルLLMにはPocketPal AIまたはMLC ChatでLlama 3.2 3BまたはPhi-4 Miniをインストールしてください。' },
+            { q: '2027年のスマートフォンで70Bモデルをローカル実行できますか？', a: 'いいえ。現在のロードマップ（Apple A19 Pro、Snapdragon X2、Tensor G5）は7–13Bモデルを15–25トークン/秒で示しており、70Bではありません。メモリ帯域幅と熱制約がモバイルの実用モデルサイズを制限します。モバイルフォームファクターでの70BにはiPad Pro M6またはMac mini M5 Pro（Wi-Fiローカルサーバー）が2027年の実用オプションです。' },
+            { q: 'MLC LLM vs Ollama：Android オンデバイス推論にはどちらが優れていますか？', a: 'MLC LLM（MLC Chat 経由）が Android オンデバイス推論に優れています。Ollama はネイティブ Android アプリではありません——デスクトップ上でサーバーとして動作し、スマートフォンは Wi-Fi 経由で接続する必要があります。MLC Chat は TVM を使用してモデルを Android GPU 向けの Vulkan シェーダーにコンパイルし、Snapdragon X Elite で 7B モデルを 5 トークン/秒で真のオフライン推論を提供します。オフライン Android LLM 推論には MLC Chat を使用してください。Ollama をデスクトップサーバーで実行し Android からリモートアクセスする場合は Ollama をお使いください。' },
+            { q: 'Android 向け PocketPal AI の最良の代替アプリは何ですか？', a: 'Android 向け PocketPal AI の最良の代替アプリ：MLC Chat（TVM コンパイルモデル、Snapdragon X Elite で高速、Vulkan 加速）、LLaMa Lite（軽量、Android 専用、GGUF 3〜7B）、Chatlize（iOS と Android、無料）。iOS では：Ollama iOS、Layla（RAG 付き）、Private LLM（5.99 ドル、iPad M4 に最適）。すべてインターネットなしでオンデバイスで動作します。' },
+            { q: 'MLC Chat vs PocketPal AI：どちらを選ぶべきですか？', a: 'Snapdragon X Android での高速推論（TVM コンパイル Vulkan シェーダー、7B で 5 トークン/秒）と Llama、Qwen、Gemma、Phi のサポートが必要な場合は MLC Chat を選んでください。GGUF モデルの幅広い互換性、HuggingFace からの簡単なダウンロード、または iPhone・iPad・Android で同じアプリを使いたい場合は PocketPal AI を選んでください。どちらも無料で完全オフラインです。' },
+            { q: 'なぜモバイルは遅いのですか？', a: 'メモリ帯域幅の差。iPhone A18は約68 GB/秒、RTX 4090は1,008 GB/秒 — 約15倍。LLM推論速度はメモリ帯域幅に比例。モバイルは効率（1–5 W vs 300–600 W）に優れます。' },
           ],
         },
         relatedReading: {
@@ -1577,14 +1662,102 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [
-          { '@type': 'Question', name: 'iPhoneでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。小型モデル（1–3B）のみ。iPhone 16 Pro (A18 Pro)はLlama 3.2 3Bを約4トークン/秒で実行。大きいモデルはクラッシュします。PocketPal AI、MLC Chat、Ollama iOSを使用。' } },
-          { '@type': 'Question', name: 'どのAndroidがローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'Snapdragon X Elite/Plusが7Bを約5トークン/秒。ミドルレンジ（Snapdragon 8 Gen 3）は3Bを約3トークン/秒。Pixel 9 ProとGalaxy S25 UltraはMLC Chat経由で3–7B対応。8 GB RAM未満は非実用的。' } },
-          { '@type': 'Question', name: 'iPadとiPhoneの比較は？', acceptedAnswer: { '@type': 'Answer', text: 'iPad Pro M4はiPhoneを大幅に上回ります：Llama 7Bで15トークン/秒 vs 3–4トークン/秒。iPad M4は13Bモデルも快適に実行。モバイルAI作業にはiPadを推奨。' } },
-          { '@type': 'Question', name: 'モバイルLLMの最良アプリは？', acceptedAnswer: { '@type': 'Answer', text: 'PocketPal AIが最も人気（50万以上ダウンロード）。MLC Chatが最広モデルサポート。iOS：Ollama iOSまたはLayla。Android：LLaMa LiteまたはMLC Chat。すべて無料。' } },
-          { '@type': 'Question', name: 'なぜモバイルは遅いのですか？', acceptedAnswer: { '@type': 'Answer', text: 'メモリ帯域幅の差。iPhone A18は約68 GB/秒、RTX 4090は1,008 GB/秒 — 約15倍。LLM推論速度はメモリ帯域幅に比例。モバイルは効率（1–5 W vs 300–600 W）に優れます。' } },
-          { '@type': 'Question', name: 'モバイルLLMはバッテリーを消耗しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。持続推論でiPhoneは2–4時間で消耗。応答長制限（最大200トークン）を推奨。iPad M4は4–6時間持続。Apple SiliconはSnapdragon Xより効率的。' } },
-          { '@type': 'Question', name: 'PixelでGemini Nanoを使えますか？', acceptedAnswer: { '@type': 'Answer', text: 'Gemini NanoはPixel 9 ProでAICore経由でネイティブ実行されますが、サードパーティアプリからアクセス不可（2026年4月時点）。PocketPal AIまたはMLC ChatでLlama 3.2 3Bを使用してください。' } },
-          { '@type': 'Question', name: '2027年スマートフォンで70Bを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。ロードマップは7–13Bを15–25トークン/秒で示しており、70Bではありません。メモリ帯域幅と熱制約が制限。iPad Pro M6またはMac mini M5 Proが2027年の実用オプション。' } },
+          {
+            '@type': 'Question',
+            'name': 'iPhoneでローカルLLMを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。ただし小型モデル（1–3Bパラメータ）のみです。A18チップ搭載iPhone 16はLlama 3.2 1Bを約3トークン/秒で実行します。3B以上のモデルはクラッシュします。PocketPal AI、MLC Chat、Ollama iOSが実用的です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'どのAndroidデバイスがローカルLLMを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Snapdragon X Elite/Plus搭載デバイスが7Bモデルを約5トークン/秒で実行。標準ミドルレンジAndroid（Snapdragon 8 Gen 3）は3Bを約3トークン/秒。Pixel 9 ProとGalaxy S25 UltraはMLC Chat経由で3–7B対応。8 GB RAM未満は非実用的です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'iPadとiPhoneのローカルLLM比較は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'iPad Pro M4はiPhoneを大幅に上回ります：Llama 7Bで15トークン/秒 vs iPhoneの3–4トークン/秒。iPad M4は13Bモデルも快適に実行（16 GBユニファイドメモリ）。モバイルAI作業にはiPadが推奨です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'モバイルでLLMを実行する最良のアプリは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PocketPal AIが2026年4月時点で最も人気（50万以上ダウンロード、iOS・Android）。MLC Chatが最も幅広いモデルサポート（Llama、Qwen、Gemma、Phi）。iOS：Ollama iOSまたはLayla。Android：LLaMa LiteまたはMLC Chat。すべて無料。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'なぜモバイルLLM推論はデスクトップより遅いのですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'メモリ帯域幅の差です。iPhone A18は約68 GB/秒、RTX 4090は1,008 GB/秒 — 約15倍の差。LLM推論速度はメモリ帯域幅に比例します。モバイルは効率（1–5 W vs 300–600 W）に優れ、スループットではありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'モバイルLLM推論はバッテリーを消耗しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。持続的推論でiPhoneバッテリーは2–4時間で消耗します。応答長制限（最大200トークン）を設定してください。iPad M4は4–6時間持続。Apple SiliconはSnapdragon Xより持続的推論で効率的です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PixelでGemini Nanoをローカルで使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、ただし間接的です。Gemini NanoはPixel 9 ProでAICore API経由でネイティブ実行されますが、2026年4月時点でサードパーティアプリからアクセスできません。ユーザー制御のローカルLLMにはPocketPal AIまたはMLC ChatでLlama 3.2 3BまたはPhi-4 Miniをインストールしてください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2027年のスマートフォンで70Bモデルをローカル実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。現在のロードマップ（Apple A19 Pro、Snapdragon X2、Tensor G5）は7–13Bモデルを15–25トークン/秒で示しており、70Bではありません。メモリ帯域幅と熱制約がモバイルの実用モデルサイズを制限します。モバイルフォームファクターでの70BにはiPad Pro M6またはMac mini M5 Pro（Wi-Fiローカルサーバー）が2027年の実用オプションです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC LLM vs Ollama：Android オンデバイス推論にはどちらが優れていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MLC LLM（MLC Chat 経由）が Android オンデバイス推論に優れています。Ollama はネイティブ Android アプリではありません——デスクトップ上でサーバーとして動作し、スマートフォンは Wi-Fi 経由で接続する必要があります。MLC Chat は TVM を使用してモデルを Android GPU 向けの Vulkan シェーダーにコンパイルし、Snapdragon X Elite で 7B モデルを 5 トークン/秒で真のオフライン推論を提供します。オフライン Android LLM 推論には MLC Chat を使用してください。Ollama をデスクトップサーバーで実行し Android からリモートアクセスする場合は Ollama をお使いください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Android 向け PocketPal AI の最良の代替アプリは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Android 向け PocketPal AI の最良の代替アプリ：MLC Chat（TVM コンパイルモデル、Snapdragon X Elite で高速、Vulkan 加速）、LLaMa Lite（軽量、Android 専用、GGUF 3〜7B）、Chatlize（iOS と Android、無料）。iOS では：Ollama iOS、Layla（RAG 付き）、Private LLM（5.99 ドル、iPad M4 に最適）。すべてインターネットなしでオンデバイスで動作します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC Chat vs PocketPal AI：どちらを選ぶべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Snapdragon X Android での高速推論（TVM コンパイル Vulkan シェーダー、7B で 5 トークン/秒）と Llama、Qwen、Gemma、Phi のサポートが必要な場合は MLC Chat を選んでください。GGUF モデルの幅広い互換性、HuggingFace からの簡単なダウンロード、または iPhone・iPad・Android で同じアプリを使いたい場合は PocketPal AI を選んでください。どちらも無料で完全オフラインです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'なぜモバイルは遅いのですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'メモリ帯域幅の差。iPhone A18は約68 GB/秒、RTX 4090は1,008 GB/秒 — 約15倍。LLM推論速度はメモリ帯域幅に比例。モバイルは効率（1–5 W vs 300–600 W）に優れます。',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1866,50 +2039,19 @@ schema: {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: '能在iPhone上运行本地LLM吗？',
-              a: '可以，但仅限小型模型（1–3B参数）。搭载A18芯片的iPhone 16以约3令牌/秒运行Llama 3.2 1B。3B以上的模型会崩溃。使用PocketPal AI、MLC Chat或Ollama iOS进行实际部署。',
-            },
-            {
-              q: '哪些Android设备可以运行本地LLM？',
-              a: '搭载Snapdragon X Elite/Plus的设备以约5令牌/秒运行7B模型。标准中端Android（Snapdragon 8 Gen 3）以约3令牌/秒运行3B。Pixel 9 Pro和Galaxy S25 Ultra均通过MLC Chat支持3–7B。8 GB RAM以下不实用。',
-            },
-            {
-              q: 'iPad和iPhone运行本地LLM的对比？',
-              a: 'iPad Pro M4大幅超越iPhone：Llama 7B达15令牌/秒 vs iPhone的3–4令牌/秒。iPad M4可轻松运行13B模型（16 GB统一内存）。移动AI工作推荐iPad。',
-            },
-            {
-              q: '移动端运行LLM的最佳应用是什么？',
-              a: 'PocketPal AI是2026年4月最受欢迎的应用（50万以上下载，iOS+Android）。MLC Chat提供最广泛的模型支持（Llama、Qwen、Gemma、Phi）。iOS推荐Ollama iOS或Layla。Android推荐LLaMa Lite或MLC Chat。均免费。',
-            },
-            {
-              q: '为什么移动端LLM推理比桌面慢得多？',
-              a: '内存带宽差异。iPhone A18约68 GB/秒，RTX 4090为1,008 GB/秒——接近15倍差距。LLM推理速度与内存带宽成正比。移动端在能效（1–5 W vs 300–600 W）方面占优，而非吞吐量。',
-            },
-            {
-              q: '移动端LLM推理会消耗电池吗？',
-              a: '会。持续推理下iPhone电池2–4小时耗尽。设置响应长度限制（最大200令牌）。iPad M4持续4–6小时。Apple Silicon在持续推理方面比Snapdragon X更高效。',
-            },
-            {
-              q: '能在Pixel上使用Gemini Nano进行本地LLM吗？',
-              a: '可以，但只是间接使用。Gemini Nano通过AICore API在Pixel 9 Pro上原生运行，但截至2026年4月第三方应用无法访问。它驱动系统功能（Magic Compose、录音摘要）。在Pixel上实现用户控制的本地LLM，请安装PocketPal AI或MLC Chat并加载Llama 3.2 3B或Phi-4 Mini。',
-            },
-            {
-              q: '2027年智能手机能本地运行70B模型吗？',
-              a: '不能。当前路线图（Apple A19 Pro、Snapdragon X2、Tensor G5）表明2027年手机将处理7–13B模型，速度15–25令牌/秒——而非70B。内存带宽和散热限制了手机上的实用模型大小。移动形态的70B推理，iPad Pro M6或Mac mini M5 Pro（通过Wi-Fi作为本地服务器）是2027年的实用选择。',
-            },
-            {
-              q: 'MLC LLM vs Ollama：哪个更适合 Android 本地推理？',
-              a: 'MLC LLM（通过 MLC Chat）更适合 Android 本地推理。Ollama 不是原生 Android 应用——它在桌面端作为服务器运行，手机需要通过 Wi-Fi 连接。MLC Chat 使用 TVM 将模型编译为 Android GPU 的 Vulkan 着色器，在 Snapdragon X Elite 上为 7B 模型提供真正的离线推理（5 词元/秒）。需要 Android 离线 LLM 推理时请使用 MLC Chat。如果您在桌面服务器上运行 Ollama 并通过网络从 Android 远程访问，则使用 Ollama。',
-            },
-            {
-              q: 'Android 上 PocketPal AI 最好的替代应用有哪些？',
-              a: 'Android 上 PocketPal AI 最好的替代应用：MLC Chat（TVM 编译模型，在 Snapdragon X Elite 上更快，Vulkan 加速）、LLaMa Lite（轻量级，仅 Android，GGUF 3-7B）、Chatlize（iOS 和 Android，免费）。iOS 上的替代应用：Ollama iOS、Layla（含 RAG）和 Private LLM（5.99 美元，iPad M4 最佳选择）。所有应用均在设备端运行，无需联网。',
-            },
-            {
-              q: 'MLC Chat vs PocketPal AI：该选哪个？',
-              a: '如果需要在 Snapdragon X Android 上更快的推理（TVM 编译 Vulkan 着色器，7B 达 5 词元/秒）以及 Llama、Qwen、Gemma、Phi 的单应用支持，请选 MLC Chat。如果需要更广泛的 GGUF 模型兼容性、直接从 HuggingFace 更方便地下载模型，或在 iPhone、iPad 和 Android 上使用同一应用，请选 PocketPal AI。两者均免费且完全离线。',
-            },
+            { q: '能在iPhone上运行本地LLM吗？', a: '可以，但仅限小型模型（1–3B参数）。搭载A18芯片的iPhone 16以约3令牌/秒运行Llama 3.2 1B。3B以上的模型会崩溃。使用PocketPal AI、MLC Chat或Ollama iOS进行实际部署。' },
+            { q: '哪些Android设备可以运行本地LLM？', a: '搭载Snapdragon X Elite/Plus的设备以约5令牌/秒运行7B模型。标准中端Android（Snapdragon 8 Gen 3）以约3令牌/秒运行3B。Pixel 9 Pro和Galaxy S25 Ultra均通过MLC Chat支持3–7B。8 GB RAM以下不实用。' },
+            { q: 'iPad和iPhone运行本地LLM的对比？', a: 'iPad Pro M4大幅超越iPhone：Llama 7B达15令牌/秒 vs iPhone的3–4令牌/秒。iPad M4可轻松运行13B模型（16 GB统一内存）。移动AI工作推荐iPad。' },
+            { q: '移动端运行LLM的最佳应用是什么？', a: 'PocketPal AI是2026年4月最受欢迎的应用（50万以上下载，iOS+Android）。MLC Chat提供最广泛的模型支持（Llama、Qwen、Gemma、Phi）。iOS推荐Ollama iOS或Layla。Android推荐LLaMa Lite或MLC Chat。均免费。' },
+            { q: '为什么移动端LLM推理比桌面慢得多？', a: '内存带宽差异。iPhone A18约68 GB/秒，RTX 4090为1,008 GB/秒——接近15倍差距。LLM推理速度与内存带宽成正比。移动端在能效（1–5 W vs 300–600 W）方面占优，而非吞吐量。' },
+            { q: '移动端LLM推理会消耗电池吗？', a: '会。持续推理下iPhone电池2–4小时耗尽。设置响应长度限制（最大200令牌）。iPad M4持续4–6小时。Apple Silicon在持续推理方面比Snapdragon X更高效。' },
+            { q: '能在Pixel上使用Gemini Nano进行本地LLM吗？', a: '可以，但只是间接使用。Gemini Nano通过AICore API在Pixel 9 Pro上原生运行，但截至2026年4月第三方应用无法访问。它驱动系统功能（Magic Compose、录音摘要）。在Pixel上实现用户控制的本地LLM，请安装PocketPal AI或MLC Chat并加载Llama 3.2 3B或Phi-4 Mini。' },
+            { q: '2027年智能手机能本地运行70B模型吗？', a: '不能。当前路线图（Apple A19 Pro、Snapdragon X2、Tensor G5）表明2027年手机将处理7–13B模型，速度15–25令牌/秒——而非70B。内存带宽和散热限制了手机上的实用模型大小。移动形态的70B推理，iPad Pro M6或Mac mini M5 Pro（通过Wi-Fi作为本地服务器）是2027年的实用选择。' },
+            { q: 'MLC LLM vs Ollama：哪个更适合 Android 本地推理？', a: 'MLC LLM（通过 MLC Chat）更适合 Android 本地推理。Ollama 不是原生 Android 应用——它在桌面端作为服务器运行，手机需要通过 Wi-Fi 连接。MLC Chat 使用 TVM 将模型编译为 Android GPU 的 Vulkan 着色器，在 Snapdragon X Elite 上为 7B 模型提供真正的离线推理（5 词元/秒）。需要 Android 离线 LLM 推理时请使用 MLC Chat。如果您在桌面服务器上运行 Ollama 并通过网络从 Android 远程访问，则使用 Ollama。' },
+            { q: 'Android 上 PocketPal AI 最好的替代应用有哪些？', a: 'Android 上 PocketPal AI 最好的替代应用：MLC Chat（TVM 编译模型，在 Snapdragon X Elite 上更快，Vulkan 加速）、LLaMa Lite（轻量级，仅 Android，GGUF 3-7B）、Chatlize（iOS 和 Android，免费）。iOS 上的替代应用：Ollama iOS、Layla（含 RAG）和 Private LLM（5.99 美元，iPad M4 最佳选择）。所有应用均在设备端运行，无需联网。' },
+            { q: 'MLC Chat vs PocketPal AI：该选哪个？', a: '如果需要在 Snapdragon X Android 上更快的推理（TVM 编译 Vulkan 着色器，7B 达 5 词元/秒）以及 Llama、Qwen、Gemma、Phi 的单应用支持，请选 MLC Chat。如果需要更广泛的 GGUF 模型兼容性、直接从 HuggingFace 更方便地下载模型，或在 iPhone、iPad 和 Android 上使用同一应用，请选 PocketPal AI。两者均免费且完全离线。' },
+            { q: '最佳移动端LLM应用？', a: 'PocketPal AI最受欢迎（50万以上下载）。MLC Chat模型支持最广（Llama、Qwen、Gemma、Phi）。iOS：Ollama iOS或Layla。Android：LLaMa Lite或MLC Chat。均免费。' },
+            { q: '为什么移动端更慢？', a: '内存带宽差异。iPhone A18约68 GB/秒，RTX 4090为1,008 GB/秒——约15倍。LLM推理速度与内存带宽成正比。移动端在能效方面占优。' },
           ],
         },
         relatedReading: {
@@ -1965,14 +2107,110 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: '能在iPhone上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，仅限1–3B模型。iPhone 16 Pro (A18 Pro)以约4令牌/秒运行Llama 3.2 3B。更大模型会崩溃。使用PocketPal AI、MLC Chat或Ollama iOS。' } },
-          { '@type': 'Question', name: '哪些Android设备可以运行本地LLM？', acceptedAnswer: { '@type': 'Answer', text: 'Snapdragon X Elite/Plus以约5令牌/秒运行7B。中端Android（Snapdragon 8 Gen 3）以约3令牌/秒运行3B。Pixel 9 Pro和Galaxy S25 Ultra通过MLC Chat支持3–7B。8 GB RAM以下不实用。' } },
-          { '@type': 'Question', name: 'iPad和iPhone对比？', acceptedAnswer: { '@type': 'Answer', text: 'iPad Pro M4大幅超越iPhone：Llama 7B达15令牌/秒 vs 3–4令牌/秒。iPad M4运行13B模型（16 GB统一内存）。移动AI工作推荐iPad。' } },
-          { '@type': 'Question', name: '最佳移动端LLM应用？', acceptedAnswer: { '@type': 'Answer', text: 'PocketPal AI最受欢迎（50万以上下载）。MLC Chat模型支持最广（Llama、Qwen、Gemma、Phi）。iOS：Ollama iOS或Layla。Android：LLaMa Lite或MLC Chat。均免费。' } },
-          { '@type': 'Question', name: '为什么移动端更慢？', acceptedAnswer: { '@type': 'Answer', text: '内存带宽差异。iPhone A18约68 GB/秒，RTX 4090为1,008 GB/秒——约15倍。LLM推理速度与内存带宽成正比。移动端在能效方面占优。' } },
-          { '@type': 'Question', name: '移动端LLM消耗电池吗？', acceptedAnswer: { '@type': 'Answer', text: '会。持续推理下iPhone 2–4小时耗尽。限制响应长度（最大200令牌）。iPad M4持续4–6小时。Apple Silicon比Snapdragon X更高效。' } },
-          { '@type': 'Question', name: '能在Pixel上使用Gemini Nano吗？', acceptedAnswer: { '@type': 'Answer', text: 'Gemini Nano在Pixel 9 Pro上通过AICore原生运行，但第三方应用无法访问（2026年4月）。安装PocketPal AI或MLC Chat并使用Llama 3.2 3B或Phi-4 Mini。' } },
-          { '@type': 'Question', name: '2027年手机能运行70B吗？', acceptedAnswer: { '@type': 'Answer', text: '不能。路线图显示7–13B模型15–25令牌/秒——非70B。内存带宽和散热限制。iPad Pro M6或Mac mini M5 Pro是2027年选择。' } },
+          {
+            '@type': 'Question',
+            'name': '能在iPhone上运行本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以，但仅限小型模型（1–3B参数）。搭载A18芯片的iPhone 16以约3令牌/秒运行Llama 3.2 1B。3B以上的模型会崩溃。使用PocketPal AI、MLC Chat或Ollama iOS进行实际部署。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪些Android设备可以运行本地LLM？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '搭载Snapdragon X Elite/Plus的设备以约5令牌/秒运行7B模型。标准中端Android（Snapdragon 8 Gen 3）以约3令牌/秒运行3B。Pixel 9 Pro和Galaxy S25 Ultra均通过MLC Chat支持3–7B。8 GB RAM以下不实用。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'iPad和iPhone运行本地LLM的对比？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'iPad Pro M4大幅超越iPhone：Llama 7B达15令牌/秒 vs iPhone的3–4令牌/秒。iPad M4可轻松运行13B模型（16 GB统一内存）。移动AI工作推荐iPad。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '移动端运行LLM的最佳应用是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PocketPal AI是2026年4月最受欢迎的应用（50万以上下载，iOS+Android）。MLC Chat提供最广泛的模型支持（Llama、Qwen、Gemma、Phi）。iOS推荐Ollama iOS或Layla。Android推荐LLaMa Lite或MLC Chat。均免费。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '为什么移动端LLM推理比桌面慢得多？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '内存带宽差异。iPhone A18约68 GB/秒，RTX 4090为1,008 GB/秒——接近15倍差距。LLM推理速度与内存带宽成正比。移动端在能效（1–5 W vs 300–600 W）方面占优，而非吞吐量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '移动端LLM推理会消耗电池吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '会。持续推理下iPhone电池2–4小时耗尽。设置响应长度限制（最大200令牌）。iPad M4持续4–6小时。Apple Silicon在持续推理方面比Snapdragon X更高效。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '能在Pixel上使用Gemini Nano进行本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以，但只是间接使用。Gemini Nano通过AICore API在Pixel 9 Pro上原生运行，但截至2026年4月第三方应用无法访问。它驱动系统功能（Magic Compose、录音摘要）。在Pixel上实现用户控制的本地LLM，请安装PocketPal AI或MLC Chat并加载Llama 3.2 3B或Phi-4 Mini。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2027年智能手机能本地运行70B模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能。当前路线图（Apple A19 Pro、Snapdragon X2、Tensor G5）表明2027年手机将处理7–13B模型，速度15–25令牌/秒——而非70B。内存带宽和散热限制了手机上的实用模型大小。移动形态的70B推理，iPad Pro M6或Mac mini M5 Pro（通过Wi-Fi作为本地服务器）是2027年的实用选择。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC LLM vs Ollama：哪个更适合 Android 本地推理？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MLC LLM（通过 MLC Chat）更适合 Android 本地推理。Ollama 不是原生 Android 应用——它在桌面端作为服务器运行，手机需要通过 Wi-Fi 连接。MLC Chat 使用 TVM 将模型编译为 Android GPU 的 Vulkan 着色器，在 Snapdragon X Elite 上为 7B 模型提供真正的离线推理（5 词元/秒）。需要 Android 离线 LLM 推理时请使用 MLC Chat。如果您在桌面服务器上运行 Ollama 并通过网络从 Android 远程访问，则使用 Ollama。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Android 上 PocketPal AI 最好的替代应用有哪些？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Android 上 PocketPal AI 最好的替代应用：MLC Chat（TVM 编译模型，在 Snapdragon X Elite 上更快，Vulkan 加速）、LLaMa Lite（轻量级，仅 Android，GGUF 3-7B）、Chatlize（iOS 和 Android，免费）。iOS 上的替代应用：Ollama iOS、Layla（含 RAG）和 Private LLM（5.99 美元，iPad M4 最佳选择）。所有应用均在设备端运行，无需联网。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MLC Chat vs PocketPal AI：该选哪个？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '如果需要在 Snapdragon X Android 上更快的推理（TVM 编译 Vulkan 着色器，7B 达 5 词元/秒）以及 Llama、Qwen、Gemma、Phi 的单应用支持，请选 MLC Chat。如果需要更广泛的 GGUF 模型兼容性、直接从 HuggingFace 更方便地下载模型，或在 iPhone、iPad 和 Android 上使用同一应用，请选 PocketPal AI。两者均免费且完全离线。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '最佳移动端LLM应用？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PocketPal AI最受欢迎（50万以上下载）。MLC Chat模型支持最广（Llama、Qwen、Gemma、Phi）。iOS：Ollama iOS或Layla。Android：LLaMa Lite或MLC Chat。均免费。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '为什么移动端更慢？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '内存带宽差异。iPhone A18约68 GB/秒，RTX 4090为1,008 GB/秒——约15倍。LLM推理速度与内存带宽成正比。移动端在能效方面占优。',
+            },
+          },
         ],
       },
       itemListSchema: {

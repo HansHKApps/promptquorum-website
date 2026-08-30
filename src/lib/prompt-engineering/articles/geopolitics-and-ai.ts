@@ -143,18 +143,166 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'What is the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act is the world\'s first comprehensive legal framework for artificial intelligence, passed by the European Parliament in March 2024 with 523 votes in favor. It classifies AI systems into four risk tiers — Unacceptable, High, Limited, and Minimal — and applies different requirements and fines to each tier. Article 50 transparency duties took effect August 2026; standalone high-risk system requirements were deferred to December 2, 2027 by the Digital Omnibus (in force since July 27, 2026).' } },
-          { '@type': 'Question', name: 'Does the EU AI Act apply to companies outside the EU?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. The EU AI Act applies to any organization that places AI systems on the EU market or whose AI outputs are used in the EU, regardless of where the organization is headquartered. This extraterritorial reach is called the Brussels Effect and means US and Asian AI providers must also comply if they serve EU users.' } },
-          { '@type': 'Question', name: 'What are the fines for violating the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Fines reach up to €35 million or 7% of global annual turnover for prohibited AI practices (whichever is higher). High-risk AI violations carry fines up to €15 million or 3% of global turnover. Providing incorrect information to authorities carries fines up to €7.5 million or 1% of global turnover.' } },
-          { '@type': 'Question', name: 'What AI applications does the EU ban outright?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act prohibits: social scoring systems by public authorities, real-time biometric surveillance in public spaces (with narrow law enforcement exceptions), AI that exploits cognitive vulnerabilities, and untargeted scraping of facial images from the internet to build recognition databases. These are categorized as Unacceptable Risk.' } },
-          { '@type': 'Question', name: 'How does US AI regulation differ from the EU approach?', acceptedAnswer: { '@type': 'Answer', text: 'The US uses a sectoral, voluntary approach — existing regulators (FTC, FDA, CFPB, EEOC) apply their mandates to AI within their domains. There is no federal AI law equivalent to the EU AI Act. The Biden Executive Order on AI Safety (October 2023) was revoked by the Trump administration in January 2025 and replaced with a competitiveness-focused AI Action Plan.' } },
-          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, exceeded GPT-5.6 on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.6\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 3 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' } },
-          { '@type': 'Question', name: 'Can EU companies use GPT-5.6 and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-5.6 and Claude Opus 5 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
-          { '@type': 'Question', name: 'What is the UK AI Safety Institute (AISI)?', acceptedAnswer: { '@type': 'Answer', text: 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.' } },
-          { '@type': 'Question', name: 'How does DeepSeek affect the AI geopolitics race?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.' } },
-          { '@type': 'Question', name: 'What is the Brussels Effect in AI?', acceptedAnswer: { '@type': 'Answer', text: 'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies find it easier to apply the strictest standard worldwide rather than maintain separate compliance stacks per jurisdiction. For AI, this means the EU AI Act effectively raises standards for GPT-5.6, Claude, and Gemini globally — regardless of where users are located.' } },
-          { '@type': 'Question', name: 'What is the Hiroshima AI Process and what did it achieve?', acceptedAnswer: { '@type': 'Answer', text: 'The Hiroshima AI Process is a G7 initiative launched at the 2023 Hiroshima Summit under Japan\'s G7 presidency. It produced the Hiroshima AI Process Code of Conduct — 11 voluntary principles for developers of advanced AI systems, adopted by G7 nations in October 2023. Principles cover transparency, incident reporting, safety testing, and AI-generated content watermarking. The Code of Conduct is voluntary, not legally binding, and is separate from the EU AI Act.' } },
-          { '@type': 'Question', name: 'Can EU organizations use DeepSeek for commercial applications?', acceptedAnswer: { '@type': 'Answer', text: 'Technically yes, with GDPR-compliant Standard Contractual Clauses (SCCs). In practice, SCCs are difficult to enforce against Chinese law obligations requiring CAC data disclosure compliance. Germany (BSI), France (ANSSI), and the Netherlands (NCSC) have issued advisories restricting Chinese AI tools for government and critical infrastructure. Private-sector organizations must conduct a Transfer Impact Assessment under GDPR Article 46 before processing personal data through DeepSeek.' } },
+          {
+            '@type': 'Question',
+            'name': 'What is the EU AI Act and when does it apply?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The EU AI Act is the world\'s first comprehensive AI law, passed by the European Parliament in March 2024. Prohibited practices apply from August 2024. GPAI model obligations (for GPT-5.6, Claude, Gemini-class models) apply from August 2025. Article 50 transparency duties (chatbot and AI-content disclosure) apply from August 2026. Standalone high-risk AI system requirements (Annex III) were deferred by the Digital Omnibus, in force since July 27, 2026, from August 2026 to December 2, 2027. It applies to any organization placing AI on the EU market or using AI that affects EU residents.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does the EU AI Act apply to non-EU companies?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. The EU AI Act has extraterritorial reach — it applies to any provider whose AI outputs are used in the EU, regardless of where the provider is headquartered. A US company whose AI product is used by EU residents must comply. This is the same extraterritorial principle that made GDPR a global standard.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are the fines for violating the EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Fines up to €35 million or 7% of global annual turnover (whichever is higher) for prohibited AI practices. Up to €15 million or 3% for high-risk AI violations. Up to €7.5 million or 1% for providing incorrect information to enforcement authorities. The higher of the percentage or fixed amount applies.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What AI applications are banned under the EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Banned (Unacceptable Risk): social scoring systems by public authorities; real-time biometric identification in public spaces (with narrow exceptions); AI that exploits psychological vulnerabilities; untargeted scraping of facial images from the internet. These have been prohibited since August 2024.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does US AI regulation differ from the EU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The US has no federal AI law. Existing sector regulators (FTC, FDA, CFPB, EEOC) apply their existing mandates to AI in their domains. The Biden AI Safety Executive Order (October 2023) was revoked in January 2025 and replaced with a competitiveness-focused AI Action Plan. The NIST AI Risk Management Framework is voluntary. US regulation is reactive and sector-specific; EU regulation is proactive and horizontal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is DeepSeek safe to use in EU organizations?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek is subject to CAC (Cyberspace Administration of China) regulations, meaning the Chinese government can compel data disclosure. DeepSeek\'s privacy policy states data is stored on servers in China. For EU organizations processing personal data, using DeepSeek requires GDPR-compliant data transfer safeguards (SCCs), which are difficult to enforce against Chinese law. Government and critical infrastructure organizations in EU member states are generally avoiding Chinese AI tools.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the Brussels Effect?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies prefer one strict standard over maintaining separate compliance for each jurisdiction. The GDPR became a global privacy standard this way. The EU AI Act is doing the same for AI — OpenAI, Anthropic, and Google must comply with EU AI Act GPAI requirements for their global products, not just for EU-specific versions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What did the Bletchley Park AI Safety Summit achieve?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The November 2023 AI Safety Summit at Bletchley Park produced the Bletchley Declaration — signed by 28 countries including the US, China, and EU member states — acknowledging that frontier AI poses serious risks and requires international cooperation. The summit established the UK AI Safety Institute (AISI) and initiated a series of global AI safety institutes in the US and elsewhere. China\'s participation was notable given broader geopolitical tensions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does France support AI differently from Germany?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'France prioritizes high-profile international positioning (AI Action Summit in Paris, February 2025) and open-weights AI research through INRIA and CNRS, with €2 billion in public investment. Germany focuses on applied industrial AI through the Fraunhofer Society and DFKI, with €5 billion invested 2019–2025, and emphasizes AI governance and liability frameworks through federal legislation. Both have national AI strategies but different sector emphases.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does the EU AI Act affect AI used in prompt engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Most prompt engineering work falls in the Limited or Minimal risk category — standard chatbots and AI writing tools require disclosure (users must know they interact with AI) but no conformity assessment. High-risk classifications apply when AI makes significant decisions: employment screening, credit assessment, educational evaluation, or law enforcement. [AI limitations in practice](/prompt-engineering/ai-limitations-what-llms-cant-do) are relevant to high-risk system documentation requirements.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the Hiroshima AI Process and what did it achieve?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The Hiroshima AI Process is a G7 initiative launched at the 2023 Hiroshima Summit under Japan\'s G7 presidency. It produced the Hiroshima AI Process Code of Conduct — 11 voluntary guiding principles for developers of advanced AI systems, adopted by G7 nations in October 2023. Principles cover transparency, incident reporting, safety testing, and watermarking of AI-generated content. Italy\'s 2024 G7 presidency extended the framework with a broader international AI governance agenda. The Code of Conduct is voluntary, not legally binding, but signals international coordination separate from the EU\'s legally binding AI Act.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can EU organizations use DeepSeek for commercial applications?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Technically yes, with GDPR-compliant contractual safeguards (Standard Contractual Clauses). In practice, SCCs are difficult to enforce against Chinese law obligations, which require DeepSeek to comply with CAC data disclosure requests. Government procurement is a separate constraint: Germany\'s BSI, France\'s ANSSI, and the Netherlands\' NCSC have issued advisories or restrictions on Chinese AI tools for government and critical infrastructure use. Private-sector EU organizations can use DeepSeek commercially but must conduct a Transfer Impact Assessment under GDPR Article 46 and document the residual risk. Most legal counsel advise against processing personal data through DeepSeek.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does the EU AI Act help or hurt EU competitiveness in AI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'This is a genuine strategic dilemma: the EU AI Act may slow EU AI startups but strengthens Europe\'s regulatory credibility globally. On one side, compliance costs and conformity assessments create friction for EU companies — France\'s Mistral AI is more constrained than US competitors. On the other side, the Brussels Effect means the EU\'s regulatory framework becomes the global standard, giving EU-based companies a competitive advantage on compliance and giving the EU leverage over US/Chinese tech giants. Europe is betting on "regulatory leadership" rather than "raw capability leadership" — a fundamentally different AI strategy than the US or China, and one that makes Europe indispensable to global AI governance rather than a second-rate technology producer.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does Europe\'s compute capacity compare to the US and China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Europe lags significantly on compute infrastructure. The US dominates GPU manufacturing (Nvidia ~80% market share) and custom silicon (Google TPUs, Amazon Trainium). China manufactures at TSMC (Taiwan) and uses restricted Nvidia H-series and A-series GPUs. Europe has no equivalent: ASML (Netherlands) manufactures chip fabrication equipment but does not own fabs. The EU Chips Act (€43 billion, 2023–2032) aims to build Intel and TSMC fabs in EU territory, but neither will be operational until 2027–2029 — a 3–5 year deficit in compute capacity that Europe cannot close through investment alone. This is the core infrastructure vulnerability for European AI: training frontier models requires thousands of GPUs running for months. Without domestic fab capacity, Europe remains dependent on US (Nvidia) and Taiwan (TSMC) supply.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is Europe\'s AI advantage besides regulation?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Europe has three non-regulatory advantages: (1) Mistral AI and other open-weights models funded by the EU (France, Germany) provide GDPR-compliant alternatives without US or Chinese dependencies; (2) Europe leads on AI safety research through UK AI Safety Institute, ETH Zurich, and French research centers (INRIA, CNRS); (3) Europe\'s highly educated workforce and existing software/semiconductor talent give it an edge in AI applications and custom silicon (Arm, RISC-V chip design). However, none of these offset Europe\'s disadvantage in frontier model capability — the US leads on GPT-5.6, Claude, and Gemini, and China leads on deployment scale and volume. Europe\'s strategy is "do what you\'re good at (safety, regulation, ethics) rather than compete on raw capability."',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The EU AI Act is the world\'s first comprehensive legal framework for artificial intelligence, passed by the European Parliament in March 2024 with 523 votes in favor. It classifies AI systems into four risk tiers — Unacceptable, High, Limited, and Minimal — and applies different requirements and fines to each tier. Article 50 transparency duties took effect August 2026; standalone high-risk system requirements were deferred to December 2, 2027 by the Digital Omnibus (in force since July 27, 2026).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is China\'s AI as capable as US AI systems?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1, released January 2025, exceeded GPT-5.6 on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.6\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 3 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can EU companies use GPT-5.6 and Claude under the AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, for most use cases. GPT-5.6 and Claude Opus 5 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the UK AI Safety Institute (AISI)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does DeepSeek affect the AI geopolitics race?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.',
+            },
+          },
         ],
       },
       toc: [
@@ -773,6 +921,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Does the EU AI Act help or hurt EU competitiveness in AI?', a: 'This is a genuine strategic dilemma: the EU AI Act may slow EU AI startups but strengthens Europe\'s regulatory credibility globally. On one side, compliance costs and conformity assessments create friction for EU companies — France\'s Mistral AI is more constrained than US competitors. On the other side, the Brussels Effect means the EU\'s regulatory framework becomes the global standard, giving EU-based companies a competitive advantage on compliance and giving the EU leverage over US/Chinese tech giants. Europe is betting on "regulatory leadership" rather than "raw capability leadership" — a fundamentally different AI strategy than the US or China, and one that makes Europe indispensable to global AI governance rather than a second-rate technology producer.' },
             { q: 'How does Europe\'s compute capacity compare to the US and China?', a: 'Europe lags significantly on compute infrastructure. The US dominates GPU manufacturing (Nvidia ~80% market share) and custom silicon (Google TPUs, Amazon Trainium). China manufactures at TSMC (Taiwan) and uses restricted Nvidia H-series and A-series GPUs. Europe has no equivalent: ASML (Netherlands) manufactures chip fabrication equipment but does not own fabs. The EU Chips Act (€43 billion, 2023–2032) aims to build Intel and TSMC fabs in EU territory, but neither will be operational until 2027–2029 — a 3–5 year deficit in compute capacity that Europe cannot close through investment alone. This is the core infrastructure vulnerability for European AI: training frontier models requires thousands of GPUs running for months. Without domestic fab capacity, Europe remains dependent on US (Nvidia) and Taiwan (TSMC) supply.' },
             { q: 'What is Europe\'s AI advantage besides regulation?', a: 'Europe has three non-regulatory advantages: (1) Mistral AI and other open-weights models funded by the EU (France, Germany) provide GDPR-compliant alternatives without US or Chinese dependencies; (2) Europe leads on AI safety research through UK AI Safety Institute, ETH Zurich, and French research centers (INRIA, CNRS); (3) Europe\'s highly educated workforce and existing software/semiconductor talent give it an edge in AI applications and custom silicon (Arm, RISC-V chip design). However, none of these offset Europe\'s disadvantage in frontier model capability — the US leads on GPT-5.6, Claude, and Gemini, and China leads on deployment scale and volume. Europe\'s strategy is "do what you\'re good at (safety, regulation, ethics) rather than compete on raw capability."' },
+            { q: 'What is the EU AI Act?', a: 'The EU AI Act is the world\'s first comprehensive legal framework for artificial intelligence, passed by the European Parliament in March 2024 with 523 votes in favor. It classifies AI systems into four risk tiers — Unacceptable, High, Limited, and Minimal — and applies different requirements and fines to each tier. Article 50 transparency duties took effect August 2026; standalone high-risk system requirements were deferred to December 2, 2027 by the Digital Omnibus (in force since July 27, 2026).' },
+            { q: 'Is China\'s AI as capable as US AI systems?', a: 'DeepSeek R1, released January 2025, exceeded GPT-5.6 on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.6\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 3 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' },
+            { q: 'Can EU companies use GPT-5.6 and Claude under the AI Act?', a: 'Yes, for most use cases. GPT-5.6 and Claude Opus 5 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' },
+            { q: 'What is the UK AI Safety Institute (AISI)?', a: 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.' },
+            { q: 'How does DeepSeek affect the AI geopolitics race?', a: 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.' },
           ],
         },
 
@@ -891,18 +1044,190 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Was ist der EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der EU AI Act ist das erste umfassende KI-Gesetz der Welt, das im März 2024 mit 523 Stimmen verabschiedet wurde. Es klassifiziert KI-Systeme in vier Risikostufen — Inakzeptabel, Hoch, Begrenzt und Minimal — und sieht unterschiedliche Anforderungen und Bußgelder vor. Die vollständige Durchsetzung gilt ab August 2026.' } },
-          { '@type': 'Question', 'name': 'Gilt der EU AI Act auch für Unternehmen außerhalb der EU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Der EU AI Act gilt für jede Organisation, die KI-Systeme auf dem EU-Markt anbietet oder deren KI-Ergebnisse in der EU genutzt werden — unabhängig vom Unternehmenssitz. Dieser extraterritoriale Geltungsbereich wird als Brussels Effect bezeichnet und bedeutet, dass auch US- und asiatische Anbieter compliant sein müssen.' } },
-          { '@type': 'Question', 'name': 'Welche Bußgelder drohen bei Verstößen gegen den EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bußgelder erreichen bis zu 35 Millionen Euro oder 7 % des weltweiten Jahresumsatzes für verbotene KI-Praktiken. Verstöße bei Hochrisiko-KI kosten bis zu 15 Millionen Euro oder 3 % des Umsatzes. Falsche Angaben gegenüber Behörden werden mit bis zu 7,5 Millionen Euro oder 1 % des Umsatzes bestraft.' } },
-          { '@type': 'Question', 'name': 'Welche KI-Anwendungen verbietet die EU grundsätzlich?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der EU AI Act verbietet: Social-Scoring-Systeme staatlicher Behörden, Echtzeit-Biometrie-Überwachung im öffentlichen Raum (mit engen Ausnahmen), KI zur Ausnutzung kognitiver Schwächen und ungezieltes Scraping von Gesichtsbildern aus dem Internet zum Aufbau von Erkennungsdatenbanken.' } },
-          { '@type': 'Question', 'name': 'Wie unterscheidet sich die US-KI-Regulierung von der EU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die USA verwenden einen sektoralen, freiwilligen Ansatz — bestehende Regulierungsbehörden (FTC, FDA, CFPB, EEOC) wenden ihre Mandate auf KI in ihren Bereichen an. Es gibt kein bundesweites KI-Gesetz wie den EU AI Act. Der Biden-Erlass zur KI-Sicherheit wurde von der Trump-Administration im Januar 2025 aufgehoben und durch einen wettbewerbsorientierten KI-Aktionsplan ersetzt.' } },
-          { '@type': 'Question', 'name': 'Ist Chinas KI so leistungsfähig wie US-Systeme?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 (Januar 2025) erreichte bei mehreren Benchmarks das Niveau von GPT-5.6, darunter AIME 2024, MATH-500 und HumanEval — angeblich zu einem Bruchteil der Trainingskosten. Chinas führende Modelle wie Alibabas Qwen und Baidus ERNIE sind bei vielen Aufgaben konkurrenzfähig, liegen aber bei mehrsprachigem Reasoning und Sicherheits-Benchmarks zurück.' } },
-          { '@type': 'Question', 'name': 'Können EU-Unternehmen GPT-5.6 und Claude unter dem AI Act nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, für die meisten Unternehmensanwendungen. GPT-5.6 und Claude werden als Allzweck-KI (GPAI) klassifiziert. EU-Unternehmen müssen jedoch eigene Sorgfaltspflichten erfüllen, insbesondere bei Hochrisiko-Anwendungen wie Personalentscheidungen, Kreditvergabe oder kritischer Infrastruktur.' } },
-          { '@type': 'Question', 'name': 'Was ist das UK AI Safety Institute (AISI)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Das AISI wurde im November 2023 als weltweit erste staatliche KI-Sicherheitsbehörde gegründet. Es führt Pre-Deployment-Tests an Frontier-Modellen durch, hat Memoranden of Understanding mit OpenAI, Anthropic, Google DeepMind und Meta unterzeichnet und koordiniert internationale Sicherheitsstandards.' } },
-          { '@type': 'Question', 'name': 'Wie verändert DeepSeek die KI-Geopolitik?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 bewies, dass Frontier-KI-Fähigkeiten mit deutlich geringerem Rechenaufwand erreichbar sind und Exportkontrollen für Nvidia-Chips allein kein ausreichendes Bollwerk darstellen. Die Schockwellen veranlassten US-Gesetzgeber, die Chip-Exportpolitik zu überdenken, und trieben europäische Investitionen in souveräne KI-Infrastruktur voran.' } },
-          { '@type': 'Question', 'name': 'Was ist der Brussels Effect bei KI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Brussels Effect bezeichnet das Phänomen, dass EU-Regulierung weltweit zu De-facto-Standards wird, da globale Unternehmen ihre Produkte an EU-Regeln anpassen, anstatt mehrere Varianten zu pflegen. Im KI-Bereich bedeutet dies, dass der EU AI Act Compliance-Anforderungen für US- und asiatische KI-Anbieter schafft, die EU-Nutzer bedienen.' } },
-          { '@type': 'Question', 'name': 'Was ist der Hiroshima AI Process?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Hiroshima AI Process wurde beim G7-Gipfel 2023 initiiert und entwickelte internationale Leitprinzipien für Frontier-KI. Er führte zum G7 AI Code of Conduct — einem freiwilligen Rahmen für Anbieter fortschrittlicher KI-Systeme mit Verpflichtungen zu Sicherheitstests, Transparenz und Risikomanagement.' } },
-          { '@type': 'Question', 'name': 'Können EU-Organisationen DeepSeek für kommerzielle Anwendungen nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Mit Vorsicht. DeepSeek unterliegt chinesischem Recht, das Datenzugriff durch chinesische Behörden ermöglicht. Datenschutzbedenken veranlassten Italien, Irland und Deutschland, Datenschutzbehörden einzuschalten. Für Unternehmensanwendungen sind Open-Source-Versionen (DeepSeek R1 lokal) oder EU-basierte Anbieter die complianteste Option.' } },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der EU AI Act und wann wird er angewendet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der EU AI Act ist das weltweite erste umfassende KI-Gesetz, verabschiedet durch das Europäische Parlament im März 2024. Verbotene Praktiken gelten ab August 2024. GPAI-Modell-Verpflichtungen (für GPT-5.6, Claude, Gemini-Klasse-Modelle) gelten ab August 2025. Hochrisiko-KI-System-Anforderungen gelten ab August 2026. Es wird angewendet auf jede Organisation, die KI auf dem EU-Markt platziert oder KI nutzt, die EU-Einwohner beeinflusst.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wird der EU AI Act auf Nicht-EU-Unternehmen angewendet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Der EU AI Act hat extraterritoriales Reichweite — er wird angewendet auf jeden Provider, dessen KI-Outputs in der EU genutzt werden, unabhängig davon, wo der Provider ansässig ist. Ein US-Unternehmen, dessen KI-Produkt von EU-Einwohnern genutzt wird, muss konform sein. Dies ist das gleiche extraterritoriale Prinzip, das GDPR zu einem globalen Standard machte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was sind die Geldstrafen für Verstöße gegen den EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Geldstrafen bis zu 35 Millionen EUR oder 7% des globalen jährlichen Umsatzes (je nachdem, welcher Wert höher ist) für verbotene KI-Praktiken. Bis zu 15 Millionen EUR oder 3% für Hochrisiko-KI-Verstöße. Bis zu 7,5 Millionen EUR oder 1% für die Bereitstellung falscher Informationen an Durchsetzungsbehörden. Die höhere des Prozentsatzes oder des festen Betrages wird angewendet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche KI-Anwendungen sind unter dem EU AI Act verboten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verboten (Inakzeptables Risiko): Soziale Scoring-Systeme durch öffentliche Behörden; Echtzeit-Biometrische Identifizierung in öffentlichen Räumen (mit engen Ausnahmen); KI, die psychologische Schwachstellen nutzt aus; unkontrolliertes Scraping von Gesichtsbildern aus dem Internet. Diese wurden seit August 2024 verboten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterscheidet sich die US-KI-Regulierung von der EU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die USA haben kein bundesweites KI-Gesetz. Bestehende Sektor-Regulatoren (FTC, FDA, CFPB, EEOC) wenden ihre bestehenden Mandate auf KI in ihren Domänen an. Die Biden KI-Sicherheits-Executive Order (Oktober 2023) wurde im Januar 2025 aufgehoben und durch einen Wettbewerbsorientiert fokussierten KI Action Plan ersetzt. Das NIST AI Risk Management Framework ist freiwillig. US-Regulierung ist reaktiv und Sektor-spezifisch; EU-Regulierung ist proaktiv und horizontal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist DeepSeek sicher, um in EU-Organisationen zu nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek unterliegt CAC (Cyberspace Administration of China)-Regulierungen, bedeutend, dass die chinesische Regierung Daten-Offenlegung erzwingen kann. DeepSeeks Datenschutz-Richtlinie besagt, Daten werden auf Servern in China gespeichert. Für EU-Organisationen, die personenbezogene Daten verarbeiten, verlangt die Nutzung von DeepSeek GDPR-konforme Daten-Transfer-Sicherheitsvorkehrungen (SCCs), die schwer gegen chinesisches Gesetz durchzusetzen sind. Regierungs- und kritische Infrastruktur-Organisationen in EU-Mitgliedstaaten vermeiden allgemein chinesische KI-Tools.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Brussels Effect?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der Brussels Effect beschreibt, wie EU-Regulierungen De-facto-Globale Standards werden, weil multinationale Unternehmen einen strikten Standard über die Aufrechterhaltung separater Konformität für jede Jurisdiktion bevorzugen. GDPR wurde diese Weise ein globaler Datenschutz-Standard. Der EU AI Act tut das gleiche für KI — OpenAI, Anthropic und Google müssen EU AI Act GPAI-Anforderungen für ihre globalen Produkte befolgen, nicht nur EU-spezifische Versionen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was erreichte der Bletchley Park KI-Sicherheits-Gipfel?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der November 2023 KI-Sicherheits-Gipfel bei Bletchley Park produzierte die Bletchley Declaration — unterzeichnet von 28 Ländern, einschließlich USA, China und EU-Mitgliedstaaten — anerkennend, dass Frontier-KI ernsthafte Risiken darstellt und internationale Zusammenarbeit verlangt. Der Gipfel etablierte das UK AI Safety Institute (AISI) und initiierte eine Serie globaler KI-Sicherheits-Institute in den USA und anderswo. Chinas Teilnahme war bemerkenswert, gegeben breitere geopolitische Spannungen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterstützt Frankreich KI anders als Deutschland?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Frankreich priorisiert hochprofil-internationales Positionierung (KI Action Summit in Paris, Februar 2025) und Open-Weights-KI-Forschung durch INRIA und CNRS, mit 2 Milliarden EUR öffentliche Investition. Deutschland konzentriert sich auf angewandte industrielle KI durch die Fraunhofer-Gesellschaft und DFKI, mit 5 Milliarden EUR investiert 2019–2025, und betont KI-Governance und Haftungs-Rahmen durch föderale Gesetzgebung. Beide haben nationale KI-Strategien, aber unterschiedliche Sektor-Schwerpunkte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie beeinflusst der EU AI Act KI, die in Prompt Engineering genutzt wird?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die meisten Prompt-Engineering-Arbeiten fallen in die Begrenzte oder Minimalrisiko-Kategorie — standard Chatbots und KI-Schreib-Tools verlangen Offenlegung (Nutzer müssen wissen, dass sie mit KI interagieren), aber keine Konformitätsbewertung. Hochrisiko-Klassifizierungen gelten, wenn KI signifikante Entscheidungen trifft: Beschäftigungs-Screening, Kredit-Bewertung, Bildungs-Evaluierung oder Strafverfolgung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Hiroshima KI-Prozess und was erreichte er?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der Hiroshima KI-Prozess ist eine G7-Initiative, die beim 2023 Hiroshima Gipfel unter Japans G7-Präsidentschaft gestartet wurde. Er produzierte den Hiroshima KI Process Code of Conduct — 11 freiwillige Leitprinzipien für Entwickler fortgeschrittener KI-Systeme, angenommen von G7-Nationen im Oktober 2023. Prinzipien decken Transparenz, Vorfall-Berichterstattung, Sicherheits-Test und Wasserzeichen von KI-generiertem Inhalt. Italiens 2024 G7-Präsidentschaft erweiterte den Rahmen mit eine breitere internationale KI-Governance-Agenda. Der Code of Conduct ist freiwillig, nicht rechtlich bindend, signalisiert aber internationale Koordination separat von dem EU-KI Act.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Können EU-Organisationen DeepSeek für kommerzielle Anwendungen nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Technisch ja, mit GDPR-konformen vertraglichen Sicherheitsvorkehrungen (Standard Contractual Clauses). In der Praxis sind SCCs schwer gegen chinesisches Gesetz durchzusetzen, das DeepSeek verlangt, CAC-Daten-Offenlegungsanforderungen zu befolgen. Regierungs-Beschaffung ist eine separate Einschränkung: Deutschlands BSI, Frankreichs ANSSI und die Niederlande\'s NCSC gaben Empfehlungen oder Restriktionen zu chinesischen KI-Tools für Regierungs- und kritische Infrastruktur-Nutzung aus. Privat-Sektor EU-Organisationen können DeepSeek kommerziell nutzen, müssen aber eine Transfer Impact Assessment unter GDPR Artikel 46 durchführen und das residuale Risiko dokumentieren. Die meisten Legal-Ratgeber raten gegen die Verarbeitung personenbezogener Daten über DeepSeek.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Schadet das EU-KI-Gesetz der europäischen KI-Wettbewerbsfähigkeit?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Das ist ein echtes strategisches Dilemma: Das EU-KI-Gesetz kann europäische KI-Startups verlangsamen, stärkt aber Europas regulatorische Glaubwürdigkeit weltweit. Einerseits schaffen Compliance-Kosten und Konformitätsbewertungen Reibung für EU-Unternehmen — Frankreichs Mistral AI ist stärker eingeschränkt als US-Konkurrenten. Andererseits bedeutet der Brüssel-Effekt, dass der regulatorische Rahmen der EU zum globalen Standard wird und EU-basierten Unternehmen einen Wettbewerbsvorteil bei Compliance gibt. Europa setzt auf regulatorische Führerschaft statt reine technologische Fähigkeit — eine grundlegend andere KI-Strategie als die USA oder China.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie vergleicht sich Europas Rechenkapazität mit den USA und China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Europa hinkt bei der Recheninfrastruktur deutlich hinterher. Die USA dominieren GPU-Fertigung (Nvidia ~80 % Marktanteil) und Custom Silicon. China produziert bei TSMC (Taiwan) und nutzt begrenzte Nvidia H- und A-Serien GPUs. Europa hat kein Äquivalent: ASML (Niederlande) stellt Chipfertigungsausrüstung her, besitzt aber keine Fabs. Der EU Chips Act (43 Milliarden Euro) zielt darauf ab, Intel- und TSMC-Fabs auf EU-Gebiet zu bauen, aber keine wird vor 2027–2029 betriebsbereit sein. Dies ist Europas zentrale Infrastruktur-Schwachstelle: Training von Frontier-Modellen erfordert tausende GPUs monatelang. Ohne inländische Fab-Kapazität bleibt Europa von US (Nvidia) und Taiwan (TSMC) abhängig.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist Europas KI-Vorteil neben Regulierung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Europa hat drei nicht-regulatorische Vorteile: (1) Mistral AI und andere von der EU finanzierte Open-Source-Modelle bieten GDPR-konforme Alternativen ohne US- oder China-Abhängigkeit; (2) Europa führt bei KI-Sicherheitsforschung durch UK AI Safety Institute und französische Forschungszentren; (3) Europas hochgebildete Belegschaft und bestehendes Software-/Halbleiter-Talent geben ihm einen Vorteil bei KI-Anwendungen und Custom Silicon. Jedoch kompensiert keiner dieser Vorteile Europas Nachteil bei Frontier-Modell-Fähigkeit — die USA führen bei GPT-5.6 und Claude, China bei Skalierung und Volumen. Europas Strategie ist mach das, worin du gut bist (Sicherheit, Regulierung, Ethik), statt um reine Fähigkeit zu konkurrieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der EU AI Act ist das erste umfassende KI-Gesetz der Welt, das im März 2024 mit 523 Stimmen verabschiedet wurde. Es klassifiziert KI-Systeme in vier Risikostufen — Inakzeptabel, Hoch, Begrenzt und Minimal — und sieht unterschiedliche Anforderungen und Bußgelder vor. Die vollständige Durchsetzung gilt ab August 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Gilt der EU AI Act auch für Unternehmen außerhalb der EU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Der EU AI Act gilt für jede Organisation, die KI-Systeme auf dem EU-Markt anbietet oder deren KI-Ergebnisse in der EU genutzt werden — unabhängig vom Unternehmenssitz. Dieser extraterritoriale Geltungsbereich wird als Brussels Effect bezeichnet und bedeutet, dass auch US- und asiatische Anbieter compliant sein müssen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Bußgelder drohen bei Verstößen gegen den EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bußgelder erreichen bis zu 35 Millionen Euro oder 7 % des weltweiten Jahresumsatzes für verbotene KI-Praktiken. Verstöße bei Hochrisiko-KI kosten bis zu 15 Millionen Euro oder 3 % des Umsatzes. Falsche Angaben gegenüber Behörden werden mit bis zu 7,5 Millionen Euro oder 1 % des Umsatzes bestraft.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche KI-Anwendungen verbietet die EU grundsätzlich?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der EU AI Act verbietet: Social-Scoring-Systeme staatlicher Behörden, Echtzeit-Biometrie-Überwachung im öffentlichen Raum (mit engen Ausnahmen), KI zur Ausnutzung kognitiver Schwächen und ungezieltes Scraping von Gesichtsbildern aus dem Internet zum Aufbau von Erkennungsdatenbanken.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Chinas KI so leistungsfähig wie US-Systeme?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1 (Januar 2025) erreichte bei mehreren Benchmarks das Niveau von GPT-5.6, darunter AIME 2024, MATH-500 und HumanEval — angeblich zu einem Bruchteil der Trainingskosten. Chinas führende Modelle wie Alibabas Qwen und Baidus ERNIE sind bei vielen Aufgaben konkurrenzfähig, liegen aber bei mehrsprachigem Reasoning und Sicherheits-Benchmarks zurück.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Können EU-Unternehmen GPT-5.6 und Claude unter dem AI Act nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, für die meisten Unternehmensanwendungen. GPT-5.6 und Claude werden als Allzweck-KI (GPAI) klassifiziert. EU-Unternehmen müssen jedoch eigene Sorgfaltspflichten erfüllen, insbesondere bei Hochrisiko-Anwendungen wie Personalentscheidungen, Kreditvergabe oder kritischer Infrastruktur.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist das UK AI Safety Institute (AISI)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Das AISI wurde im November 2023 als weltweit erste staatliche KI-Sicherheitsbehörde gegründet. Es führt Pre-Deployment-Tests an Frontier-Modellen durch, hat Memoranden of Understanding mit OpenAI, Anthropic, Google DeepMind und Meta unterzeichnet und koordiniert internationale Sicherheitsstandards.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie verändert DeepSeek die KI-Geopolitik?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1 bewies, dass Frontier-KI-Fähigkeiten mit deutlich geringerem Rechenaufwand erreichbar sind und Exportkontrollen für Nvidia-Chips allein kein ausreichendes Bollwerk darstellen. Die Schockwellen veranlassten US-Gesetzgeber, die Chip-Exportpolitik zu überdenken, und trieben europäische Investitionen in souveräne KI-Infrastruktur voran.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -1439,6 +1764,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Schadet das EU-KI-Gesetz der europäischen KI-Wettbewerbsfähigkeit?', a: 'Das ist ein echtes strategisches Dilemma: Das EU-KI-Gesetz kann europäische KI-Startups verlangsamen, stärkt aber Europas regulatorische Glaubwürdigkeit weltweit. Einerseits schaffen Compliance-Kosten und Konformitätsbewertungen Reibung für EU-Unternehmen — Frankreichs Mistral AI ist stärker eingeschränkt als US-Konkurrenten. Andererseits bedeutet der Brüssel-Effekt, dass der regulatorische Rahmen der EU zum globalen Standard wird und EU-basierten Unternehmen einen Wettbewerbsvorteil bei Compliance gibt. Europa setzt auf regulatorische Führerschaft statt reine technologische Fähigkeit — eine grundlegend andere KI-Strategie als die USA oder China.' },
             { q: 'Wie vergleicht sich Europas Rechenkapazität mit den USA und China?', a: 'Europa hinkt bei der Recheninfrastruktur deutlich hinterher. Die USA dominieren GPU-Fertigung (Nvidia ~80 % Marktanteil) und Custom Silicon. China produziert bei TSMC (Taiwan) und nutzt begrenzte Nvidia H- und A-Serien GPUs. Europa hat kein Äquivalent: ASML (Niederlande) stellt Chipfertigungsausrüstung her, besitzt aber keine Fabs. Der EU Chips Act (43 Milliarden Euro) zielt darauf ab, Intel- und TSMC-Fabs auf EU-Gebiet zu bauen, aber keine wird vor 2027–2029 betriebsbereit sein. Dies ist Europas zentrale Infrastruktur-Schwachstelle: Training von Frontier-Modellen erfordert tausende GPUs monatelang. Ohne inländische Fab-Kapazität bleibt Europa von US (Nvidia) und Taiwan (TSMC) abhängig.' },
             { q: 'Was ist Europas KI-Vorteil neben Regulierung?', a: 'Europa hat drei nicht-regulatorische Vorteile: (1) Mistral AI und andere von der EU finanzierte Open-Source-Modelle bieten GDPR-konforme Alternativen ohne US- oder China-Abhängigkeit; (2) Europa führt bei KI-Sicherheitsforschung durch UK AI Safety Institute und französische Forschungszentren; (3) Europas hochgebildete Belegschaft und bestehendes Software-/Halbleiter-Talent geben ihm einen Vorteil bei KI-Anwendungen und Custom Silicon. Jedoch kompensiert keiner dieser Vorteile Europas Nachteil bei Frontier-Modell-Fähigkeit — die USA führen bei GPT-5.6 und Claude, China bei Skalierung und Volumen. Europas Strategie ist mach das, worin du gut bist (Sicherheit, Regulierung, Ethik), statt um reine Fähigkeit zu konkurrieren.' },
+            { q: 'Was ist der EU AI Act?', a: 'Der EU AI Act ist das erste umfassende KI-Gesetz der Welt, das im März 2024 mit 523 Stimmen verabschiedet wurde. Es klassifiziert KI-Systeme in vier Risikostufen — Inakzeptabel, Hoch, Begrenzt und Minimal — und sieht unterschiedliche Anforderungen und Bußgelder vor. Die vollständige Durchsetzung gilt ab August 2026.' },
+            { q: 'Gilt der EU AI Act auch für Unternehmen außerhalb der EU?', a: 'Ja. Der EU AI Act gilt für jede Organisation, die KI-Systeme auf dem EU-Markt anbietet oder deren KI-Ergebnisse in der EU genutzt werden — unabhängig vom Unternehmenssitz. Dieser extraterritoriale Geltungsbereich wird als Brussels Effect bezeichnet und bedeutet, dass auch US- und asiatische Anbieter compliant sein müssen.' },
+            { q: 'Welche Bußgelder drohen bei Verstößen gegen den EU AI Act?', a: 'Bußgelder erreichen bis zu 35 Millionen Euro oder 7 % des weltweiten Jahresumsatzes für verbotene KI-Praktiken. Verstöße bei Hochrisiko-KI kosten bis zu 15 Millionen Euro oder 3 % des Umsatzes. Falsche Angaben gegenüber Behörden werden mit bis zu 7,5 Millionen Euro oder 1 % des Umsatzes bestraft.' },
+            { q: 'Welche KI-Anwendungen verbietet die EU grundsätzlich?', a: 'Der EU AI Act verbietet: Social-Scoring-Systeme staatlicher Behörden, Echtzeit-Biometrie-Überwachung im öffentlichen Raum (mit engen Ausnahmen), KI zur Ausnutzung kognitiver Schwächen und ungezieltes Scraping von Gesichtsbildern aus dem Internet zum Aufbau von Erkennungsdatenbanken.' },
+            { q: 'Ist Chinas KI so leistungsfähig wie US-Systeme?', a: 'DeepSeek R1 (Januar 2025) erreichte bei mehreren Benchmarks das Niveau von GPT-5.6, darunter AIME 2024, MATH-500 und HumanEval — angeblich zu einem Bruchteil der Trainingskosten. Chinas führende Modelle wie Alibabas Qwen und Baidus ERNIE sind bei vielen Aufgaben konkurrenzfähig, liegen aber bei mehrsprachigem Reasoning und Sicherheits-Benchmarks zurück.' },
+            { q: 'Können EU-Unternehmen GPT-5.6 und Claude unter dem AI Act nutzen?', a: 'Ja, für die meisten Unternehmensanwendungen. GPT-5.6 und Claude werden als Allzweck-KI (GPAI) klassifiziert. EU-Unternehmen müssen jedoch eigene Sorgfaltspflichten erfüllen, insbesondere bei Hochrisiko-Anwendungen wie Personalentscheidungen, Kreditvergabe oder kritischer Infrastruktur.' },
+            { q: 'Was ist das UK AI Safety Institute (AISI)?', a: 'Das AISI wurde im November 2023 als weltweit erste staatliche KI-Sicherheitsbehörde gegründet. Es führt Pre-Deployment-Tests an Frontier-Modellen durch, hat Memoranden of Understanding mit OpenAI, Anthropic, Google DeepMind und Meta unterzeichnet und koordiniert internationale Sicherheitsstandards.' },
+            { q: 'Wie verändert DeepSeek die KI-Geopolitik?', a: 'DeepSeek R1 bewies, dass Frontier-KI-Fähigkeiten mit deutlich geringerem Rechenaufwand erreichbar sind und Exportkontrollen für Nvidia-Chips allein kein ausreichendes Bollwerk darstellen. Die Schockwellen veranlassten US-Gesetzgeber, die Chip-Exportpolitik zu überdenken, und trieben europäische Investitionen in souveräne KI-Infrastruktur voran.' },
           ],
         },
 
@@ -1556,17 +1889,110 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '¿Qué es el EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El EU AI Act es el primer marco legal integral del mundo para la inteligencia artificial, aprobado por el Parlamento Europeo en marzo de 2024 con 523 votos a favor. Clasifica los sistemas de IA en cuatro niveles de riesgo — Inaceptable, Alto, Limitado y Mínimo — y aplica diferentes requisitos y multas a cada nivel. La aplicación plena entra en vigor en agosto de 2026.' } },
-          { '@type': 'Question', 'name': '¿Se aplica el EU AI Act a empresas fuera de la UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. El EU AI Act se aplica a cualquier organización que coloque sistemas de IA en el mercado de la UE o cuyos resultados de IA se utilicen en la UE, independientemente de dónde esté radicada la organización. Este alcance extraterritorial se denomina Efecto Bruselas y significa que los proveedores de IA estadounidenses y asiáticos también deben cumplir si atienden a usuarios de la UE.' } },
-          { '@type': 'Question', 'name': '¿Cuáles son las multas por violar el EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Las multas alcanzan hasta 35 millones de euros o el 7% de la facturación global anual por prácticas de IA prohibidas (lo que sea mayor). Las infracciones de IA de alto riesgo acarrean multas de hasta 15 millones de euros o el 3% de la facturación global. Proporcionar información incorrecta a las autoridades conlleva multas de hasta 7,5 millones de euros o el 1% de la facturación global.' } },
-          { '@type': 'Question', 'name': '¿Qué aplicaciones de IA prohíbe la UE de forma absoluta?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El EU AI Act prohíbe: sistemas de puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos (con excepciones reducidas para fuerzas del orden), IA que explote vulnerabilidades cognitivas y la recopilación masiva de imágenes faciales de internet para construir bases de datos de reconocimiento. Estas están categorizadas como Riesgo Inaceptable.' } },
-          { '@type': 'Question', 'name': '¿En qué se diferencia la regulación de IA de EE.UU. del enfoque de la UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'EE.UU. utiliza un enfoque sectorial y voluntario: los reguladores existentes (FTC, FDA, CFPB, EEOC) aplican sus mandatos a la IA en sus dominios. No existe ninguna ley federal de IA equivalente al EU AI Act. La Orden Ejecutiva de Biden sobre Seguridad de la IA (octubre de 2023) fue revocada por la administración Trump en enero de 2025 y reemplazada por un Plan de Acción de IA centrado en la competitividad.' } },
-          { '@type': 'Question', 'name': '¿La IA de China es tan capaz como los sistemas de IA de EE.UU.?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1, lanzado en enero de 2025, superó a GPT-5.6 en benchmarks de razonamiento y codificación (AIME 2024: 79.8% vs 74.4% de GPT-5.6, MATH-500: 97.3%, HumanEval) mientras que supuestamente se entrenó a un costo de ~6 millones de dólares — una reducción del 94% frente a los costos estimados de entrenamiento de modelos de frontera. Los modelos líderes de China son competitivos en muchas tareas pero quedan por detrás en razonamiento multilingüe y benchmarks de seguridad.' } },
-          { '@type': 'Question', 'name': '¿Pueden las empresas de la UE usar GPT-5.6 y Claude bajo el AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para la mayoría de los casos de uso. GPT-5.6 y Claude Opus 5 califican como modelos de Propósito General de IA (GPAI) y deben cumplir obligaciones de transparencia — incluyendo publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — que entraron en vigor en agosto de 2025. OpenAI y Anthropic han publicado documentación de cumplimiento GPAI para usuarios de la UE.' } },
-          { '@type': 'Question', 'name': '¿Cómo afecta DeepSeek a la carrera geopolítica de la IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El lanzamiento de DeepSeek R1 en enero de 2025 demostró que las capacidades de IA de frontera son alcanzables a costos de cómputo significativamente menores de lo que se asumía previamente. Esto debilita el argumento de que los controles de exportación sobre las GPU de Nvidia limitarán permanentemente el desarrollo de IA en China. Aceleró los debates de política en EE.UU. y la UE sobre si las estrategias de contención basadas en cómputo son suficientes.' } },
-          { '@type': 'Question', 'name': '¿Qué es el Efecto Bruselas en la IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El Efecto Bruselas describe cómo las regulaciones de la UE se convierten en estándares globales de facto porque las empresas multinacionales encuentran más fácil aplicar el estándar más estricto en todo el mundo en lugar de mantener pilas de cumplimiento separadas por jurisdicción. Para la IA, esto significa que el EU AI Act efectivamente eleva los estándares para GPT-5.6, Claude y Gemini globalmente — independientemente de dónde estén ubicados los usuarios.' } },
-          { '@type': 'Question', 'name': '¿Pueden las organizaciones de la UE usar DeepSeek para aplicaciones comerciales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Técnicamente sí, con Cláusulas Contractuales Estándar (SCC) conformes con el RGPD. En la práctica, las SCC son difíciles de hacer cumplir frente a las obligaciones de la ley china que requieren el cumplimiento del acceso a datos del CAC. Alemania (BSI), Francia (ANSSI) y los Países Bajos (NCSC) han emitido avisos que restringen las herramientas de IA chinas para el gobierno y las infraestructuras críticas. Las organizaciones del sector privado deben realizar una Evaluación de Impacto de Transferencia bajo el Artículo 46 del RGPD antes de procesar datos personales a través de DeepSeek.' } },
-          { '@type': 'Question', 'name': '¿Qué marcos de gobernanza de IA existen en América Latina?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'América Latina no tiene equivalente al EU AI Act. Colombia lidera con el Conpes 3975 (2019), una política nacional de IA con directrices voluntarias sobre gobernanza responsable. Brasil avanza en una legislación de IA específica. Chile, México y Argentina han publicado estrategias nacionales de IA. La mayoría de los marcos latinoamericanos se alinean con los principios de IA de la OCDE y son voluntarios, sin sanciones vinculantes equivalentes a las del EU AI Act.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El EU AI Act es el primer marco legal integral del mundo para la inteligencia artificial, aprobado por el Parlamento Europeo en marzo de 2024 con 523 votos a favor. Clasifica los sistemas de IA en cuatro niveles de riesgo. Los deberes de transparencia del Artículo 50 se aplican desde agosto de 2026; los sistemas de IA de alto riesgo independientes se aplazaron al 2 de diciembre de 2027 por el Ómnibus Digital, en vigor desde el 27 de julio de 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Se aplica el EU AI Act a empresas fuera de la UE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Se aplica a cualquier organización que coloque sistemas de IA en el mercado de la UE o cuyos resultados de IA se utilicen en la UE. Esto se llama el Efecto Bruselas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuáles son las multas por violar el EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hasta €35 millones o el 7% de la facturación global por prácticas prohibidas. Hasta €15 millones o el 3% por infracciones de alto riesgo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo afecta la política de IA de EE.UU. a las organizaciones globales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EE.UU. usa un enfoque sectorial sin ley federal de IA. Los controles de exportación de hardware (GPU) son el principal instrumento de política con efectos globales — limitando el acceso de China a las GPU de Nvidia. La administración Trump revocó la EO de seguridad de IA de Biden en enero de 2025.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Pueden las organizaciones de la UE usar DeepSeek para aplicaciones comerciales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Con precaución. DeepSeek está sujeto a la ley china, que permite el acceso de las autoridades estatales a los datos. Alemania (BSI), Francia (ANSSI) y los Países Bajos (NCSC) han emitido avisos que restringen las herramientas de IA chinas para el gobierno e infraestructuras críticas. Las organizaciones del sector privado deben realizar una evaluación de impacto de transferencia bajo el Artículo 46 del RGPD.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el estatus del Ómnibus Digital y el plazo de cumplimiento del EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El Ómnibus Digital está adoptado: entró en vigor el 27 de julio de 2026, aplazando el plazo de cumplimiento de la IA de alto riesgo independiente (Anexo III) del 2 de agosto de 2026 al 2 de diciembre de 2027, y la IA de alto riesgo integrada en productos (Anexo I) al 2 de agosto de 2028. Los deberes de transparencia del Artículo 50 (divulgación de chatbots, etiquetado de deepfakes) no se vieron afectados y ya se aplican desde agosto de 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué marcos de gobernanza de IA aplican en América Latina?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'América Latina no tiene equivalente al EU AI Act. Colombia lidera con el Conpes 3975 (2019), una política de IA nacional con directrices voluntarias de gobernanza. Brasil avanza en legislación específica de IA. La mayoría de los marcos latinoamericanos se alinean con los principios de IA de la OCDE y son voluntarios.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué aplicaciones de IA prohíbe la UE de forma absoluta?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El EU AI Act prohíbe: sistemas de puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos (con excepciones reducidas para fuerzas del orden), IA que explote vulnerabilidades cognitivas y la recopilación masiva de imágenes faciales de internet para construir bases de datos de reconocimiento. Estas están categorizadas como Riesgo Inaceptable.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿En qué se diferencia la regulación de IA de EE.UU. del enfoque de la UE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EE.UU. utiliza un enfoque sectorial y voluntario: los reguladores existentes (FTC, FDA, CFPB, EEOC) aplican sus mandatos a la IA en sus dominios. No existe ninguna ley federal de IA equivalente al EU AI Act. La Orden Ejecutiva de Biden sobre Seguridad de la IA (octubre de 2023) fue revocada por la administración Trump en enero de 2025 y reemplazada por un Plan de Acción de IA centrado en la competitividad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿La IA de China es tan capaz como los sistemas de IA de EE.UU.?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1, lanzado en enero de 2025, superó a GPT-5.6 en benchmarks de razonamiento y codificación (AIME 2024: 79.8% vs 74.4% de GPT-5.6, MATH-500: 97.3%, HumanEval) mientras que supuestamente se entrenó a un costo de ~6 millones de dólares — una reducción del 94% frente a los costos estimados de entrenamiento de modelos de frontera. Los modelos líderes de China son competitivos en muchas tareas pero quedan por detrás en razonamiento multilingüe y benchmarks de seguridad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Pueden las empresas de la UE usar GPT-5.6 y Claude bajo el AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, para la mayoría de los casos de uso. GPT-5.6 y Claude Opus 5 califican como modelos de Propósito General de IA (GPAI) y deben cumplir obligaciones de transparencia — incluyendo publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — que entraron en vigor en agosto de 2025. OpenAI y Anthropic han publicado documentación de cumplimiento GPAI para usuarios de la UE.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo afecta DeepSeek a la carrera geopolítica de la IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El lanzamiento de DeepSeek R1 en enero de 2025 demostró que las capacidades de IA de frontera son alcanzables a costos de cómputo significativamente menores de lo que se asumía previamente. Esto debilita el argumento de que los controles de exportación sobre las GPU de Nvidia limitarán permanentemente el desarrollo de IA en China. Aceleró los debates de política en EE.UU. y la UE sobre si las estrategias de contención basadas en cómputo son suficientes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el Efecto Bruselas en la IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El Efecto Bruselas describe cómo las regulaciones de la UE se convierten en estándares globales de facto porque las empresas multinacionales encuentran más fácil aplicar el estándar más estricto en todo el mundo en lugar de mantener pilas de cumplimiento separadas por jurisdicción. Para la IA, esto significa que el EU AI Act efectivamente eleva los estándares para GPT-5.6, Claude y Gemini globalmente — independientemente de dónde estén ubicados los usuarios.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -2142,6 +2568,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Pueden las organizaciones de la UE usar DeepSeek para aplicaciones comerciales?', a: 'Con precaución. DeepSeek está sujeto a la ley china, que permite el acceso de las autoridades estatales a los datos. Alemania (BSI), Francia (ANSSI) y los Países Bajos (NCSC) han emitido avisos que restringen las herramientas de IA chinas para el gobierno e infraestructuras críticas. Las organizaciones del sector privado deben realizar una evaluación de impacto de transferencia bajo el Artículo 46 del RGPD.' },
             { q: '¿Cuál es el estatus del Ómnibus Digital y el plazo de cumplimiento del EU AI Act?', a: 'El Ómnibus Digital está adoptado: entró en vigor el 27 de julio de 2026, aplazando el plazo de cumplimiento de la IA de alto riesgo independiente (Anexo III) del 2 de agosto de 2026 al 2 de diciembre de 2027, y la IA de alto riesgo integrada en productos (Anexo I) al 2 de agosto de 2028. Los deberes de transparencia del Artículo 50 (divulgación de chatbots, etiquetado de deepfakes) no se vieron afectados y ya se aplican desde agosto de 2026.' },
             { q: '¿Qué marcos de gobernanza de IA aplican en América Latina?', a: 'América Latina no tiene equivalente al EU AI Act. Colombia lidera con el Conpes 3975 (2019), una política de IA nacional con directrices voluntarias de gobernanza. Brasil avanza en legislación específica de IA. La mayoría de los marcos latinoamericanos se alinean con los principios de IA de la OCDE y son voluntarios.' },
+            { q: '¿Qué aplicaciones de IA prohíbe la UE de forma absoluta?', a: 'El EU AI Act prohíbe: sistemas de puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos (con excepciones reducidas para fuerzas del orden), IA que explote vulnerabilidades cognitivas y la recopilación masiva de imágenes faciales de internet para construir bases de datos de reconocimiento. Estas están categorizadas como Riesgo Inaceptable.' },
+            { q: '¿En qué se diferencia la regulación de IA de EE.UU. del enfoque de la UE?', a: 'EE.UU. utiliza un enfoque sectorial y voluntario: los reguladores existentes (FTC, FDA, CFPB, EEOC) aplican sus mandatos a la IA en sus dominios. No existe ninguna ley federal de IA equivalente al EU AI Act. La Orden Ejecutiva de Biden sobre Seguridad de la IA (octubre de 2023) fue revocada por la administración Trump en enero de 2025 y reemplazada por un Plan de Acción de IA centrado en la competitividad.' },
+            { q: '¿La IA de China es tan capaz como los sistemas de IA de EE.UU.?', a: 'DeepSeek R1, lanzado en enero de 2025, superó a GPT-5.6 en benchmarks de razonamiento y codificación (AIME 2024: 79.8% vs 74.4% de GPT-5.6, MATH-500: 97.3%, HumanEval) mientras que supuestamente se entrenó a un costo de ~6 millones de dólares — una reducción del 94% frente a los costos estimados de entrenamiento de modelos de frontera. Los modelos líderes de China son competitivos en muchas tareas pero quedan por detrás en razonamiento multilingüe y benchmarks de seguridad.' },
+            { q: '¿Pueden las empresas de la UE usar GPT-5.6 y Claude bajo el AI Act?', a: 'Sí, para la mayoría de los casos de uso. GPT-5.6 y Claude Opus 5 califican como modelos de Propósito General de IA (GPAI) y deben cumplir obligaciones de transparencia — incluyendo publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — que entraron en vigor en agosto de 2025. OpenAI y Anthropic han publicado documentación de cumplimiento GPAI para usuarios de la UE.' },
+            { q: '¿Cómo afecta DeepSeek a la carrera geopolítica de la IA?', a: 'El lanzamiento de DeepSeek R1 en enero de 2025 demostró que las capacidades de IA de frontera son alcanzables a costos de cómputo significativamente menores de lo que se asumía previamente. Esto debilita el argumento de que los controles de exportación sobre las GPU de Nvidia limitarán permanentemente el desarrollo de IA en China. Aceleró los debates de política en EE.UU. y la UE sobre si las estrategias de contención basadas en cómputo son suficientes.' },
+            { q: '¿Qué es el Efecto Bruselas en la IA?', a: 'El Efecto Bruselas describe cómo las regulaciones de la UE se convierten en estándares globales de facto porque las empresas multinacionales encuentran más fácil aplicar el estándar más estricto en todo el mundo en lugar de mantener pilas de cumplimiento separadas por jurisdicción. Para la IA, esto significa que el EU AI Act efectivamente eleva los estándares para GPT-5.6, Claude y Gemini globalmente — independientemente de dónde estén ubicados los usuarios.' },
           ],
         },
 
@@ -2231,17 +2663,110 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'ما هو قانون الذكاء الاصطناعي الأوروبي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'قانون الذكاء الاصطناعي الأوروبي هو أول إطار قانوني شامل في العالم للذكاء الاصطناعي، أقرّه البرلمان الأوروبي في مارس 2024 بـ523 صوتاً مؤيداً. يُصنّف أنظمة الذكاء الاصطناعي في أربعة مستويات من المخاطر — غير مقبول، وعالي، ومحدود، وأدنى — ويُطبّق متطلبات وغرامات مختلفة على كل مستوى. يبدأ التطبيق الكامل في أغسطس 2026.' } },
-          { '@type': 'Question', 'name': 'هل يسري قانون الذكاء الاصطناعي الأوروبي على الشركات خارج الاتحاد الأوروبي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يسري القانون على أي مؤسسة تطرح أنظمة ذكاء اصطناعي في السوق الأوروبية أو تُستخدم مخرجاتها داخل الاتحاد الأوروبي، بصرف النظر عن موقع المؤسسة. يُسمى هذا النطاق خارج الإقليم "تأثير بروكسل"، وهو يعني أن موردي الذكاء الاصطناعي الأمريكيين والآسيويين ملزمون بالامتثال إذا كانوا يخدمون مستخدمين في الاتحاد الأوروبي.' } },
-          { '@type': 'Question', 'name': 'ما هي الغرامات المترتبة على انتهاك قانون الذكاء الاصطناعي الأوروبي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تبلغ الغرامات حتى 35 مليون يورو أو 7% من حجم الأعمال السنوي العالمي على الممارسات المحظورة (أيهما أكبر). تصل غرامات الذكاء الاصطناعي عالي المخاطر إلى 15 مليون يورو أو 3% من حجم الأعمال العالمي. تبلغ غرامة تقديم معلومات غير صحيحة للسلطات حتى 7.5 مليون يورو أو 1% من حجم الأعمال العالمي.' } },
-          { '@type': 'Question', 'name': 'ما تطبيقات الذكاء الاصطناعي التي يحظرها الاتحاد الأوروبي بشكل مطلق؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يحظر قانون الذكاء الاصطناعي الأوروبي: أنظمة التسجيل الاجتماعي من قِبل السلطات العامة، والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة (مع استثناءات محدودة لجهات إنفاذ القانون)، والذكاء الاصطناعي الذي يستغل الثغرات المعرفية، وجمع صور الوجوه بشكل جماعي من الإنترنت لبناء قواعد بيانات التعرف. هذه مُصنَّفة ضمن المخاطر غير المقبولة.' } },
-          { '@type': 'Question', 'name': 'كيف تختلف تنظيمات الذكاء الاصطناعي في الولايات المتحدة عن نهج الاتحاد الأوروبي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تعتمد الولايات المتحدة نهجاً قطاعياً طوعياً: يطبق المنظمون القائمون (FTC وFDA وCFPB وEEOC) صلاحياتهم على الذكاء الاصطناعي في نطاقاتهم. لا يوجد قانون فيدرالي للذكاء الاصطناعي مماثل لقانون الاتحاد الأوروبي. ألغى المرسوم التنفيذي لإدارة ترامب بشأن سلامة الذكاء الاصطناعي الصادر في يناير 2025 مرسوم بايدن السابق، واستُعيض عنه بخطة عمل مُركّزة على التنافسية.' } },
-          { '@type': 'Question', 'name': 'هل الذكاء الاصطناعي الصيني بمستوى الأنظمة الأمريكية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1، الذي أُطلق في يناير 2025، تفوّق على GPT-5.6 في معايير الاستدلال والبرمجة (AIME 2024: 79.8% مقابل 74.4% لـGPT-5.6، وMATH-500: 97.3%، وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار — تخفيض بنسبة 94% مقارنة بتكاليف تدريب النماذج الحدودية. النماذج الصينية الرائدة تنافسية في كثير من المهام لكنها تتأخر في الاستدلال متعدد اللغات ومعايير السلامة.' } },
-          { '@type': 'Question', 'name': 'هل يمكن لمؤسسات الاتحاد الأوروبي استخدام GPT-5.6 وClaude في ظل قانون الذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، في معظم حالات الاستخدام. يُصنَّف GPT-5.6 وClaude Opus 5 كنماذج ذكاء اصطناعي للأغراض العامة (GPAI) وعليهما التزامات الشفافية — تشمل نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي — المُطبَّقة منذ أغسطس 2025. نشرت OpenAI وAnthropic وثائق امتثال GPAI لمستخدمي الاتحاد الأوروبي.' } },
-          { '@type': 'Question', 'name': 'كيف أثّر DeepSeek على السباق الجيوسياسي للذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'أثبت إطلاق DeepSeek R1 في يناير 2025 أن قدرات الذكاء الاصطناعي الحدودي قابلة للتحقيق بتكاليف حوسبة أقل بكثير مما كان مفترضاً. هذا يُضعف الحجة القائلة بأن ضوابط التصدير على وحدات معالجة الرسوميات Nvidia ستُقيّد تطوير الذكاء الاصطناعي في الصين بشكل دائم، وأسرع النقاشات السياسية في الولايات المتحدة والاتحاد الأوروبي حول ما إذا كانت استراتيجيات الاحتواء القائمة على الحوسبة كافية.' } },
-          { '@type': 'Question', 'name': 'ما هو تأثير بروكسل في مجال الذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يصف تأثير بروكسل كيف تصبح لوائح الاتحاد الأوروبي معايير عالمية فعلية لأن الشركات متعددة الجنسيات تجد أنه من الأسهل تطبيق المعيار الأكثر صرامة على مستوى العالم بدلاً من الحفاظ على هياكل امتثال منفصلة لكل ولاية قضائية. في مجال الذكاء الاصطناعي، يعني هذا أن قانون الذكاء الاصطناعي الأوروبي يرفع فعلياً المعايير لنماذج GPT-5.6 وClaude وGemini عالمياً — بصرف النظر عن موقع المستخدمين.' } },
-          { '@type': 'Question', 'name': 'هل يمكن للمؤسسات الأوروبية استخدام DeepSeek في التطبيقات التجارية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'من الناحية التقنية نعم، مع البنود التعاقدية القياسية (SCC) المتوافقة مع اللائحة الأوروبية لحماية البيانات GDPR. من الناحية العملية، يصعب إنفاذ البنود التعاقدية القياسية في مواجهة التزامات القانون الصيني التي تُلزم بالامتثال لمتطلبات وصول CAC للبيانات. أصدرت ألمانيا (BSI) وفرنسا (ANSSI) وهولندا (NCSC) تحذيرات تُقيّد أدوات الذكاء الاصطناعي الصينية لصالح الحكومة والبنية التحتية الحيوية. يجب على مؤسسات القطاع الخاص إجراء تقييم أثر نقل البيانات بموجب المادة 46 من GDPR قبل معالجة بيانات شخصية عبر DeepSeek.' } },
-          { '@type': 'Question', 'name': 'ما أطر حوكمة الذكاء الاصطناعي في أمريكا اللاتينية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا يوجد في أمريكا اللاتينية ما يعادل قانون الذكاء الاصطناعي الأوروبي. تتصدّر كولومبيا المشهد بـConpes 3975 (2019)، وهي سياسة وطنية للذكاء الاصطناعي مع إرشادات طوعية للحوكمة المسؤولة. تُحرز البرازيل تقدماً في تشريع خاص بالذكاء الاصطناعي. نشرت كل من تشيلي والمكسيك والأرجنتين استراتيجيات وطنية للذكاء الاصطناعي. تتوافق معظم الأطر اللاتينية مع مبادئ الذكاء الاصطناعي للمنظمة الاقتصادية للتعاون والتنمية وهي طوعية بدون عقوبات ملزمة مماثلة لقانون الاتحاد الأوروبي.' } },
+          {
+            '@type': 'Question',
+            'name': 'ما هو قانون الذكاء الاصطناعي الأوروبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'قانون الذكاء الاصطناعي الأوروبي هو أول إطار قانوني شامل في العالم للذكاء الاصطناعي، أقرّه البرلمان الأوروبي في مارس 2024 بـ523 صوتاً مؤيداً. يُصنّف أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر. واجبات الشفافية بموجب المادة 50 سارية منذ أغسطس 2026؛ أما أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر فقد أُجّلت إلى 2 ديسمبر 2027 بموجب الحزمة الرقمية الشاملة، السارية منذ 27 يوليو 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يسري قانون الذكاء الاصطناعي الأوروبي على الشركات خارج الاتحاد الأوروبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يسري على أي مؤسسة تطرح أنظمة ذكاء اصطناعي في السوق الأوروبية أو تُستخدم مخرجاتها في الاتحاد الأوروبي. يُسمى هذا تأثير بروكسل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الغرامات المترتبة على انتهاك قانون الذكاء الاصطناعي الأوروبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'حتى 35 مليون يورو أو 7% من حجم الأعمال العالمي على الممارسات المحظورة. حتى 15 مليون يورو أو 3% على انتهاكات المخاطر العالية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف تؤثر سياسة الذكاء الاصطناعي الأمريكية على المؤسسات العالمية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تعتمد الولايات المتحدة نهجاً قطاعياً بلا قانون فيدرالي للذكاء الاصطناعي. ضوابط تصدير الأجهزة (وحدات معالجة الرسوميات) هي الأداة السياسية الرئيسية ذات التأثيرات العالمية — تُحدّ من وصول الصين إلى وحدات معالجة Nvidia. ألغت إدارة ترامب المرسوم التنفيذي لسلامة الذكاء الاصطناعي في يناير 2025.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن للمؤسسات الأوروبية استخدام DeepSeek في التطبيقات التجارية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بحذر. يخضع DeepSeek للقانون الصيني الذي يُتيح للسلطات الحكومية الوصول إلى البيانات. أصدرت ألمانيا (BSI) وفرنسا (ANSSI) وهولندا (NCSC) تحذيرات تُقيّد أدوات الذكاء الاصطناعي الصينية للحكومة والبنية التحتية الحيوية. على مؤسسات القطاع الخاص إجراء تقييم أثر النقل بموجب المادة 46 من GDPR.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما وضع الحزمة الرقمية الشاملة وموعد امتثال قانون الذكاء الاصطناعي الأوروبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الحزمة الرقمية الشاملة اعتُمدت رسمياً: دخلت حيّز التنفيذ في 27 يوليو 2026، مؤجّلةً موعد امتثال الذكاء الاصطناعي المستقل عالي المخاطر (الملحق الثالث) من 2 أغسطس 2026 إلى 2 ديسمبر 2027، والذكاء الاصطناعي عالي المخاطر المدمج في المنتجات (الملحق الأول) إلى 2 أغسطس 2028. لم تتأثر واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة، وسم المحتوى المزيّف العميق) وهي سارية بالفعل منذ أغسطس 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أطر حوكمة الذكاء الاصطناعي المُطبَّقة في أمريكا اللاتينية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا يوجد في أمريكا اللاتينية ما يعادل قانون الذكاء الاصطناعي الأوروبي. تتصدر كولومبيا بـConpes 3975 (2019)، وهي سياسة وطنية للذكاء الاصطناعي مع إرشادات طوعية. تُحرز البرازيل تقدماً في تشريع خاص بالذكاء الاصطناعي. تتوافق معظم الأطر اللاتينية مع مبادئ منظمة التعاون الاقتصادي والتنمية وهي طوعية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما تطبيقات الذكاء الاصطناعي التي يحظرها الاتحاد الأوروبي بشكل مطلق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يحظر قانون الذكاء الاصطناعي الأوروبي: أنظمة التسجيل الاجتماعي من قِبل السلطات العامة، والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة (مع استثناءات محدودة لجهات إنفاذ القانون)، والذكاء الاصطناعي الذي يستغل الثغرات المعرفية، وجمع صور الوجوه بشكل جماعي من الإنترنت لبناء قواعد بيانات التعرف. هذه مُصنَّفة ضمن المخاطر غير المقبولة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف تختلف تنظيمات الذكاء الاصطناعي في الولايات المتحدة عن نهج الاتحاد الأوروبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تعتمد الولايات المتحدة نهجاً قطاعياً طوعياً: يطبق المنظمون القائمون (FTC وFDA وCFPB وEEOC) صلاحياتهم على الذكاء الاصطناعي في نطاقاتهم. لا يوجد قانون فيدرالي للذكاء الاصطناعي مماثل لقانون الاتحاد الأوروبي. ألغى المرسوم التنفيذي لإدارة ترامب بشأن سلامة الذكاء الاصطناعي الصادر في يناير 2025 مرسوم بايدن السابق، واستُعيض عنه بخطة عمل مُركّزة على التنافسية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الذكاء الاصطناعي الصيني بمستوى الأنظمة الأمريكية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1، الذي أُطلق في يناير 2025، تفوّق على GPT-5.6 في معايير الاستدلال والبرمجة (AIME 2024: 79.8% مقابل 74.4% لـGPT-5.6، وMATH-500: 97.3%، وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار — تخفيض بنسبة 94% مقارنة بتكاليف تدريب النماذج الحدودية. النماذج الصينية الرائدة تنافسية في كثير من المهام لكنها تتأخر في الاستدلال متعدد اللغات ومعايير السلامة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن لمؤسسات الاتحاد الأوروبي استخدام GPT-5.6 وClaude في ظل قانون الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، في معظم حالات الاستخدام. يُصنَّف GPT-5.6 وClaude Opus 5 كنماذج ذكاء اصطناعي للأغراض العامة (GPAI) وعليهما التزامات الشفافية — تشمل نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي — المُطبَّقة منذ أغسطس 2025. نشرت OpenAI وAnthropic وثائق امتثال GPAI لمستخدمي الاتحاد الأوروبي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أثّر DeepSeek على السباق الجيوسياسي للذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أثبت إطلاق DeepSeek R1 في يناير 2025 أن قدرات الذكاء الاصطناعي الحدودي قابلة للتحقيق بتكاليف حوسبة أقل بكثير مما كان مفترضاً. هذا يُضعف الحجة القائلة بأن ضوابط التصدير على وحدات معالجة الرسوميات Nvidia ستُقيّد تطوير الذكاء الاصطناعي في الصين بشكل دائم، وأسرع النقاشات السياسية في الولايات المتحدة والاتحاد الأوروبي حول ما إذا كانت استراتيجيات الاحتواء القائمة على الحوسبة كافية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو تأثير بروكسل في مجال الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يصف تأثير بروكسل كيف تصبح لوائح الاتحاد الأوروبي معايير عالمية فعلية لأن الشركات متعددة الجنسيات تجد أنه من الأسهل تطبيق المعيار الأكثر صرامة على مستوى العالم بدلاً من الحفاظ على هياكل امتثال منفصلة لكل ولاية قضائية. في مجال الذكاء الاصطناعي، يعني هذا أن قانون الذكاء الاصطناعي الأوروبي يرفع فعلياً المعايير لنماذج GPT-5.6 وClaude وGemini عالمياً — بصرف النظر عن موقع المستخدمين.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -2817,6 +3342,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'هل يمكن للمؤسسات الأوروبية استخدام DeepSeek في التطبيقات التجارية؟', a: 'بحذر. يخضع DeepSeek للقانون الصيني الذي يُتيح للسلطات الحكومية الوصول إلى البيانات. أصدرت ألمانيا (BSI) وفرنسا (ANSSI) وهولندا (NCSC) تحذيرات تُقيّد أدوات الذكاء الاصطناعي الصينية للحكومة والبنية التحتية الحيوية. على مؤسسات القطاع الخاص إجراء تقييم أثر النقل بموجب المادة 46 من GDPR.' },
             { q: 'ما وضع الحزمة الرقمية الشاملة وموعد امتثال قانون الذكاء الاصطناعي الأوروبي؟', a: 'الحزمة الرقمية الشاملة اعتُمدت رسمياً: دخلت حيّز التنفيذ في 27 يوليو 2026، مؤجّلةً موعد امتثال الذكاء الاصطناعي المستقل عالي المخاطر (الملحق الثالث) من 2 أغسطس 2026 إلى 2 ديسمبر 2027، والذكاء الاصطناعي عالي المخاطر المدمج في المنتجات (الملحق الأول) إلى 2 أغسطس 2028. لم تتأثر واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة، وسم المحتوى المزيّف العميق) وهي سارية بالفعل منذ أغسطس 2026.' },
             { q: 'ما أطر حوكمة الذكاء الاصطناعي المُطبَّقة في أمريكا اللاتينية؟', a: 'لا يوجد في أمريكا اللاتينية ما يعادل قانون الذكاء الاصطناعي الأوروبي. تتصدر كولومبيا بـConpes 3975 (2019)، وهي سياسة وطنية للذكاء الاصطناعي مع إرشادات طوعية. تُحرز البرازيل تقدماً في تشريع خاص بالذكاء الاصطناعي. تتوافق معظم الأطر اللاتينية مع مبادئ منظمة التعاون الاقتصادي والتنمية وهي طوعية.' },
+            { q: 'ما تطبيقات الذكاء الاصطناعي التي يحظرها الاتحاد الأوروبي بشكل مطلق؟', a: 'يحظر قانون الذكاء الاصطناعي الأوروبي: أنظمة التسجيل الاجتماعي من قِبل السلطات العامة، والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة (مع استثناءات محدودة لجهات إنفاذ القانون)، والذكاء الاصطناعي الذي يستغل الثغرات المعرفية، وجمع صور الوجوه بشكل جماعي من الإنترنت لبناء قواعد بيانات التعرف. هذه مُصنَّفة ضمن المخاطر غير المقبولة.' },
+            { q: 'كيف تختلف تنظيمات الذكاء الاصطناعي في الولايات المتحدة عن نهج الاتحاد الأوروبي؟', a: 'تعتمد الولايات المتحدة نهجاً قطاعياً طوعياً: يطبق المنظمون القائمون (FTC وFDA وCFPB وEEOC) صلاحياتهم على الذكاء الاصطناعي في نطاقاتهم. لا يوجد قانون فيدرالي للذكاء الاصطناعي مماثل لقانون الاتحاد الأوروبي. ألغى المرسوم التنفيذي لإدارة ترامب بشأن سلامة الذكاء الاصطناعي الصادر في يناير 2025 مرسوم بايدن السابق، واستُعيض عنه بخطة عمل مُركّزة على التنافسية.' },
+            { q: 'هل الذكاء الاصطناعي الصيني بمستوى الأنظمة الأمريكية؟', a: 'DeepSeek R1، الذي أُطلق في يناير 2025، تفوّق على GPT-5.6 في معايير الاستدلال والبرمجة (AIME 2024: 79.8% مقابل 74.4% لـGPT-5.6، وMATH-500: 97.3%، وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار — تخفيض بنسبة 94% مقارنة بتكاليف تدريب النماذج الحدودية. النماذج الصينية الرائدة تنافسية في كثير من المهام لكنها تتأخر في الاستدلال متعدد اللغات ومعايير السلامة.' },
+            { q: 'هل يمكن لمؤسسات الاتحاد الأوروبي استخدام GPT-5.6 وClaude في ظل قانون الذكاء الاصطناعي؟', a: 'نعم، في معظم حالات الاستخدام. يُصنَّف GPT-5.6 وClaude Opus 5 كنماذج ذكاء اصطناعي للأغراض العامة (GPAI) وعليهما التزامات الشفافية — تشمل نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي — المُطبَّقة منذ أغسطس 2025. نشرت OpenAI وAnthropic وثائق امتثال GPAI لمستخدمي الاتحاد الأوروبي.' },
+            { q: 'كيف أثّر DeepSeek على السباق الجيوسياسي للذكاء الاصطناعي؟', a: 'أثبت إطلاق DeepSeek R1 في يناير 2025 أن قدرات الذكاء الاصطناعي الحدودي قابلة للتحقيق بتكاليف حوسبة أقل بكثير مما كان مفترضاً. هذا يُضعف الحجة القائلة بأن ضوابط التصدير على وحدات معالجة الرسوميات Nvidia ستُقيّد تطوير الذكاء الاصطناعي في الصين بشكل دائم، وأسرع النقاشات السياسية في الولايات المتحدة والاتحاد الأوروبي حول ما إذا كانت استراتيجيات الاحتواء القائمة على الحوسبة كافية.' },
+            { q: 'ما هو تأثير بروكسل في مجال الذكاء الاصطناعي؟', a: 'يصف تأثير بروكسل كيف تصبح لوائح الاتحاد الأوروبي معايير عالمية فعلية لأن الشركات متعددة الجنسيات تجد أنه من الأسهل تطبيق المعيار الأكثر صرامة على مستوى العالم بدلاً من الحفاظ على هياكل امتثال منفصلة لكل ولاية قضائية. في مجال الذكاء الاصطناعي، يعني هذا أن قانون الذكاء الاصطناعي الأوروبي يرفع فعلياً المعايير لنماذج GPT-5.6 وClaude وGemini عالمياً — بصرف النظر عن موقع المستخدمين.' },
           ],
         },
 
@@ -2945,21 +3476,374 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Qu\'est-ce que la loi IA de l\'UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La loi IA de l\'UE est le premier cadre legal complet au monde sur l\'intelligence artificielle, adoptee par le Parlement europeen en mars 2024 avec 523 voix pour. Elle classe les systemes d\'IA en quatre niveaux de risque — Inacceptable, Eleve, Limite et Minimal — avec des exigences et amendes differentes. L\'application complete entre en vigueur en aout 2026.' } },
-          { '@type': 'Question', 'name': 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. La loi IA de l\'UE s\'applique a toute organisation qui commercialise des systemes d\'IA dans l\'UE ou dont les resultats d\'IA sont utilises dans l\'UE, independamment du siege de l\'organisation. Cette portee extraterritoriale, appelee effet Bruxelles, oblige les fournisseurs americains et asiatiques a se conformer s\'ils servent des utilisateurs europeens.' } },
-          { '@type': 'Question', 'name': 'Quelles sont les amendes en cas de violation de la loi IA de l\'UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les amendes atteignent jusqu\'a 35 millions d\'euros ou 7 % du chiffre d\'affaires mondial annuel pour les pratiques d\'IA interdites. Les violations liees a l\'IA a haut risque entrainent des amendes jusqu\'a 15 millions d\'euros ou 3 % du chiffre d\'affaires. Les informations incorrectes transmises aux autorites coutent jusqu\'a 7,5 millions d\'euros ou 1 % du chiffre d\'affaires.' } },
-          { '@type': 'Question', 'name': 'Quelles applications d\'IA l\'UE interdit-elle formellement ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La loi IA de l\'UE interdit : les systemes de notation sociale par les autorites publiques, la surveillance biometrique en temps reel dans les espaces publics (avec exceptions etroites), les IA exploitant des vulnerabilites cognitives, et la collecte non ciblee d\'images faciales sur internet pour creer des bases de donnees de reconnaissance.' } },
-          { '@type': 'Question', 'name': 'En quoi la reglementation americaine de l\'IA differe-t-elle de l\'approche europeenne ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les Etats-Unis adoptent une approche sectorielle et volontaire — les regulateurs existants (FTC, FDA, CFPB, EEOC) appliquent leurs mandats a l\'IA dans leurs domaines. Il n\'existe pas de loi federale sur l\'IA equivalente a la loi UE. Le decret Biden sur la securite de l\'IA (octobre 2023) a ete revoque par l\'administration Trump en janvier 2025.' } },
-          { '@type': 'Question', 'name': 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 (janvier 2025) a egale GPT-5.6 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.' } },
-          { '@type': 'Question', 'name': 'Les entreprises europeennes peuvent-elles utiliser GPT-5.6 et Claude sous la loi IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour la plupart des applications professionnelles. GPT-5.6 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce que l\'UK AI Safety Institute (AISI) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'AISI a ete cree en novembre 2023 comme premiere agence gouvernementale de securite IA au monde. Il effectue des tests pre-deploiement sur les modeles frontier, a signe des memorandums avec OpenAI, Anthropic, Google DeepMind et Meta, et coordonne les standards de securite internationaux.' } },
-          { '@type': 'Question', 'name': 'Comment DeepSeek modifie-t-il la geopolitique de l\'IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 a prouve que des capacites IA frontier sont atteignables avec beaucoup moins de puissance de calcul, et que les controles a l\'exportation des puces Nvidia seuls sont insuffisants. Ces resultats ont pousse les legislateurs americains a reexaminer la politique d\'exportation de puces et accelere les investissements europeens dans des infrastructures IA souveraines.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce que l\'effet Bruxelles dans l\'IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'effet Bruxelles decrit le phenomene par lequel la reglementation de l\'UE devient de facto un standard mondial, car les entreprises globales adaptent leurs produits aux regles europeennes plutot que de maintenir des versions multiples. Pour l\'IA, cela signifie que la loi IA de l\'UE cree des obligations de conformite pour les fournisseurs americains et asiatiques qui servent des utilisateurs europeens.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce que le processus IA d\'Hiroshima ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le processus IA d\'Hiroshima a ete lance lors du sommet du G7 en 2023 et a developpe des principes directeurs internationaux pour l\'IA frontier. Il a abouti au code de conduite IA du G7 — un cadre volontaire pour les fournisseurs de systemes IA avances, avec des engagements sur les tests de securite, la transparence et la gestion des risques.' } },
-          { '@type': 'Question', 'name': 'Les organisations europeennes peuvent-elles utiliser DeepSeek pour des usages commerciaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Avec prudence. DeepSeek est soumis au droit chinois, qui permet l\'acces des autorites chinoises aux donnees. Les preoccupations ont conduit l\'Italie, l\'Irlande et l\'Allemagne a saisir leurs autorites de protection des donnees. Pour les applications d\'entreprise, les versions open source (DeepSeek R1 en local) ou les fournisseurs bases dans l\'UE sont les options les plus conformes au RGPD.' } },
-          { '@type': 'Question', 'name': 'L\'EU AI Act aide-t-il ou nuit-il à la compétitivité de l\'IA en Europe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'C\'est un dilemme stratégique réel : l\'EU AI Act peut ralentir les startups IA européennes mais renforce la crédibilité réglementaire de l\'Europe mondialement. D\'un côté, les coûts de conformité et les évaluations créent des frictions pour les entreprises européennes — Mistral AI français est plus contraint que les concurrents américains. De l\'autre, l\'effet Bruxelles signifie que le cadre réglementaire de l\'UE devient le standard mondial, donnant aux entreprises basées en UE un avantage compétitif en conformité et à l\'UE un levier sur les géants technologiques US/chinois.' } },
-          { '@type': 'Question', 'name': 'Comment la capacité informatique de l\'Europe se compare-t-elle aux États-Unis et à la Chine?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'Europe accuse un retard important. Les États-Unis dominent la fabrication de GPU (Nvidia ~80 % part de marché) et le silicium personnalisé. La Chine fabrique chez TSMC (Taïwan) et utilise des GPU Nvidia restreints. L\'Europe n\'a pas d\'équivalent : ASML (Pays-Bas) fabrique des équipements mais ne possède pas de fabs. L\'EU Chips Act (43 milliards d\'euros) vise à construire des fabs Intel et TSMC, mais aucune ne sera opérationnelle avant 2027–2029. C\'est la vulnérabilité centrale de l\'Europe : l\'entraînement de modèles frontier nécessite des milliers de GPU pendant des mois. Sans fab nationale, l\'Europe dépend de l\'approvisionnement US (Nvidia) et taïwanais (TSMC).' } },
-          { '@type': 'Question', 'name': 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.6 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.' } },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi les gouvernements investissent-ils des dizaines de milliards en IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'IA affecte trois domaines critiques : (1) puissance militaire — IA autonome, warfare cyber, reconnaissance ; (2) productivité économique — qui construit les meilleurs modèles exporte son avantage compétitif ; (3) soft power — les pays qui définissent les normes IA influencent la technologie mondiale.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le Brussels Effect en matière d\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les règles strictes de l\'UE deviennent normes mondiales car les entreprises mondiales s\'y conforment. Le RGPD de l\'UE a changé la confidentialité des données partout. La loi IA de l\'UE fait de même — si vous opérez en UE, vous appliquez ses règles globalement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel pays gagne la course IA en 2026 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pas de vainqueur unique. Les États-Unis dominent les modèles (OpenAI, Anthropic, Google) et les puces (NVIDIA). La Chine excelle en mise en œuvre rapide et déploiement pratique (DeepSeek, recherche vidéo). L\'UE construit une approche réglementaire cohérente (loi IA), lente mais rigoureuse.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les modèles chinois rattraperont-ils les modèles US ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Déjà partiellement. DeepSeek R1 offre une performance brute comparable à GPT-5.6, mais sous contrôles gouvernementaux. L\'écart diminue rapidement. L\'enjeu clé : NVIDIA (puces) — sans accès illimité, la Chine reste légèrement en retard.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi NVIDIA et les puces sont-elles au centre de la géopolitique IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les puces (H100, H200) sont les goulots critiques. Sans elles, vous ne pouvez pas entraîner des modèles fondamentaux. Les États-Unis contrôlent la conception (NVIDIA) et la fabrication (TSMC). La Chine ne peut pas acheter les puces US avancées — elle doit construire ses substituts, plus lents.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qui fabrique les puces IA ? Peuvent-elles être relocalisées ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TSMC (Taiwan) fabrique 90+ % des puces avancées au monde. Le CHIPS Act (US) et les initiatives EU veulent relocaliser la fabrication, mais c\'est coûteux (10+ ans, 100+ milliards $). TSMC restera dominante jusqu\'à 2030+.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment l\'IA change-t-elle la puissance militaire ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Trois façons : (1) intelligence — IA analyse les données satellites, prévoit les mouvements ; (2) autonomie — drones autonomes plus rapides que les humains ; (3) cyber — IA lance et défend les attaques. Les nations avec les meilleurs modèles IA obtiennent un avantage asymétrique.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment l\'IA affecte-t-elle le commerce et l\'emploi mondialement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les pays avec accès aux meilleurs modèles (US, partiellement Chine) verront une productivité accrue et un déplacement d\'emplois vers les rôles créatifs. Les pays sans accès risquent une divergence de richesse accrue. Le capital et le talent suivent l\'IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que la géopolitique de l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'C\'est l\'étude de comment la concurrence pour la dominance technologique IA remodèle le pouvoir mondial. Cela inclut : qui contrôle les modèles fondamentaux, qui fabrique les puces, qui a le talent, et qui impose les règles. La géopolitique IA détermine qui prospère et qui décline économiquement, militairement, et culturellement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi ça compte pour moi ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parce que vous travaillez probablement avec l\'IA (ou le ferez bientôt), et les règles qui vous encadrent dépendent de où vous êtes et qui contrôle les modèles. Comprendre la géopolitique IA vous aide à anticiper les changements réglementaires, les restrictions d\'accès, et les opportunités.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qui gagne actuellement la course IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les États-Unis dominent l\'innovation brute (modèles, puces, talent). La Chine excelle au déploiement pratique et à l\'innovation rapide. L\'UE construit une approche de long terme (conformité, indépendance). Aucun vainqueur clair. La course durera des décennies.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qui aura l\'avantage en 2030 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Si les tendances actuelles persistent : États-Unis en modèles fondamentaux, Chine en déploiement, UE en régulation. Mais la technologie se déplace vite. Des surprises arrivent (nouveau leader, nouvelle approche, découverte inattendue).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le Brussels Effect et comment s\'applique-t-il à l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le Brussels Effect est le phénomène où les régulations strictes de l\'UE deviennent les standards mondiaux car les entreprises mondiales les adoptent. Exemple : RGPD de l\'UE a changé la privacy partout, pas seulement en UE. La loi IA de l\'UE fait de même — si vous opérez globalement, vous appliquez les règles de l\'UE partout pour la simplicité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'impact sur les startups IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les startups doivent se préparer aux règles les plus strictes (UE) plutôt que aux moins strictes (US). Cela ralentit l\'innovation mais augmente la conformité. Les startups européennes ont un avantage : elles connaissent déjà les règles strictes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est l\'approche réglementaire chinoise pour l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'État chinois régule l\'IA via la Cyberspace Administration of China (CAC). Tous les modèles et services doivent être approuvés. L\'approbation dépend de : contenu (pas de politique critique), données (résidence en Chine), et contrôle (l\'État doit pouvoir déchiffrer). C\'est plus restrictif mais plus rapide que l\'UE.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Peux-tu opérer l\'IA en Chine sans État ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. L\'État approuve explicitement chaque modèle et service. Pas d\'approbation = pas d\'opération. Pas de gris zones. C\'est clairement défini mais inflexible.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que la loi IA de l\'UE demande aux organisations ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La loi IA de l\'UE classe l\'IA par risque et demande : (1) audit de conformité pour tous les systèmes IA ; (2) documentation complète (données, entraînement, tests) ; (3) tests de non-discrimination et de biais ; (4) suivi humain pour les systèmes à haut risque ; (5) notification des incidents graves à l\'autorité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien ça coûte de se conformer ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour une startup : 20-30% du budget IA. Pour une grande org : 10-15% (économies d\'échelle). Cela inclut : audit, documentation, tests, monitoring, legal review. C\'est un coût sans fin (pas juste une fois).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quels sont les contrôles à l\'export US sur la technologie IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les États-Unis contrôlent l\'export de puces IA (NVIDIA H100+) et de certains logiciels vers la Chine via l\'Administration for Export Control (EAC). Cela signifie que la Chine ne peut pas accéder aux puces les plus avancées légalement. La Chine contourne cela en achetant via des intermédiaires ou en construisant ses substituts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'UE a-t-elle des contrôles d\'export similaires ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'UE se coordonne avec les États-Unis via l\'Export Control Regulation (ECR), mais elle est moins stricte. L\'UE n\'interdit pas les puces à la Chine, seulement les technologies militaires. C\'est une faiblesse dans la stratégie occidentale — la Chine peut acheter en UE ce qu\'elle ne peut pas acheter aux US.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi TSMC est-elle si importante pour la géopolitique IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TSMC (Taiwan Semiconductor Manufacturing Company) fabrique 90%+ des puces les plus avancées au monde, y compris NVIDIA H100. Elle est l\'unique goulot critique. Si TSMC s\'arrête (war, accident, politique), toute l\'industrie IA s\'arrête. C\'est pourquoi les États-Unis soutiennent Taiwan militairement et pourquoi la Chine veut le contrôle politique de Taiwan.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que se passe-t-il si la Chine prend Taiwan ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Scénario catastrophique pour l\'Occident. La Chine contrôlerait la production mondiale de puces. Les États-Unis et l\'UE n\'auraient accès aux puces avancées que si la Chine les autorise. C\'est une dépendance stratégique inacceptable. C\'est pourquoi les États-Unis considèrent la défense de Taiwan comme intérêt vital.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelles sont les différences clés entre les approches US, UE et Chine sur l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'US : Innovation rapide, peu de régulation fédérale, exporte les standards technologiques. UE : Conformité stricte, droits fondamentaux d\'abord, régulation globale (Brussels Effect). Chine : Contrôle d\'État total, approbation requise, filtrage du contenu, données résidentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Laquelle est la meilleure approche ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Dépend de ce que tu values. US = innovation rapide mais risque élevé. UE = lenteur mais sécurité. Chine = contrôle mais censure. Il n\'y a pas de "meilleure" approche — ce sont des trade-offs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi la géopolitique de l\'IA compte pour moi personnellement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parce que les règles qui encadrent votre travail en IA dépendent de votre localisation et du contrôle des modèles. Si vous êtes en UE, la conformité est obligatoire. Si vous êtes aux US, moins de contraintes. Si vous êtes en Chine, l\'approbation gouvernementale est requise. Comprendre la géopolitique IA vous aide à anticiper les changements et à planifier votre carrière/entreprise.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle technologie IA dominera en 2030 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Probablement une combinaison : modèles fondamentaux américains (OpenAI, Anthropic) + déploiement rapide chinois (DeepSeek) + régulation européenne (loi IA). Pas de vainqueur unique. La fragmentation technologique est plus probable que la domination d\'un bloc.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je m\'inquiéter des restrictions chinoises si je travaille en Occident ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Seulement si vous utilisez des services cloud chinois (Alibaba, Baidu) ou des modèles chinois. Si vous utilisez OpenAI, Anthropic, ou Google, vous êtes en sécurité. Mais soyez conscient : si vous exportez vers la Chine, les restrictions s\'appliquent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'UE ralentit-elle l\'innovation IA avec sa loi stricte ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Peut-être un peu (20-30% plus lent que les États-Unis), mais cela pousse aussi vers une IA plus responsable et plus sûre. Le trade-off : innovation rapide vs conformité + éthique. L\'UE choisit le deuxième. C\'est intentionnel, pas une limitation involontaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi NVIDIA et TSMC sont-elles si stratégiques ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parce qu\'elles sont les goulots critiques. Sans puces avancées, vous ne pouvez pas entraîner de modèles fondamentaux. NVIDIA conçoit, TSMC fabrique. Contrôler cela = contrôler qui peut faire de l\'IA. C\'est pourquoi les États-Unis soutiennent NVIDIA et Taiwan si fortement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que se passe-t-il si la Chine isolée technologiquement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Peut-être une fission technologique complète : "Occident IA" vs "Chine IA". Deux internets IA distincts. Cela serait mauvais pour l\'innovation (moins de collaboration) mais réduirait les tensions géopolitiques. Peu probable mais possible.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment Mistral pourrait-elle rivaliser avec OpenAI ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Difficile. Mistral a moins de capital, moins de talent, moins de données. Son avantage : soutien gouvernemental français/européen + focus sur l\'indépendance. Elle pourrait dominer en Europe mais sera toujours n°2 ou #3 mondialement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le Brussels Effect signifie pour mon entreprise IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Si vous opérez globalement, vous devez respecter les règles les plus strictes (UE). C\'est plus coûteux mais plus simple que d\'avoir trois stacks différentes. Le Brussels Effect signifie : conformité UE = conformité mondiale pour la plupart des cas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. La loi IA de l\'UE s\'applique a toute organisation qui commercialise des systemes d\'IA dans l\'UE ou dont les resultats d\'IA sont utilises dans l\'UE, independamment du siege de l\'organisation. Cette portee extraterritoriale, appelee effet Bruxelles, oblige les fournisseurs americains et asiatiques a se conformer s\'ils servent des utilisateurs europeens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelles sont les amendes en cas de violation de la loi IA de l\'UE ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les amendes atteignent jusqu\'a 35 millions d\'euros ou 7 % du chiffre d\'affaires mondial annuel pour les pratiques d\'IA interdites. Les violations liees a l\'IA a haut risque entrainent des amendes jusqu\'a 15 millions d\'euros ou 3 % du chiffre d\'affaires. Les informations incorrectes transmises aux autorites coutent jusqu\'a 7,5 millions d\'euros ou 1 % du chiffre d\'affaires.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelles applications d\'IA l\'UE interdit-elle formellement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La loi IA de l\'UE interdit : les systemes de notation sociale par les autorites publiques, la surveillance biometrique en temps reel dans les espaces publics (avec exceptions etroites), les IA exploitant des vulnerabilites cognitives, et la collecte non ciblee d\'images faciales sur internet pour creer des bases de donnees de reconnaissance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'En quoi la reglementation americaine de l\'IA differe-t-elle de l\'approche europeenne ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les Etats-Unis adoptent une approche sectorielle et volontaire — les regulateurs existants (FTC, FDA, CFPB, EEOC) appliquent leurs mandats a l\'IA dans leurs domaines. Il n\'existe pas de loi federale sur l\'IA equivalente a la loi UE. Le decret Biden sur la securite de l\'IA (octobre 2023) a ete revoque par l\'administration Trump en janvier 2025.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1 (janvier 2025) a egale GPT-5.6 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les entreprises europeennes peuvent-elles utiliser GPT-5.6 et Claude sous la loi IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, pour la plupart des applications professionnelles. GPT-5.6 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que l\'UK AI Safety Institute (AISI) ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'AISI a ete cree en novembre 2023 comme premiere agence gouvernementale de securite IA au monde. Il effectue des tests pre-deploiement sur les modeles frontier, a signe des memorandums avec OpenAI, Anthropic, Google DeepMind et Meta, et coordonne les standards de securite internationaux.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment DeepSeek modifie-t-il la geopolitique de l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1 a prouve que des capacites IA frontier sont atteignables avec beaucoup moins de puissance de calcul, et que les controles a l\'exportation des puces Nvidia seuls sont insuffisants. Ces resultats ont pousse les legislateurs americains a reexaminer la politique d\'exportation de puces et accelere les investissements europeens dans des infrastructures IA souveraines.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que l\'effet Bruxelles dans l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'effet Bruxelles decrit le phenomene par lequel la reglementation de l\'UE devient de facto un standard mondial, car les entreprises globales adaptent leurs produits aux regles europeennes plutot que de maintenir des versions multiples. Pour l\'IA, cela signifie que la loi IA de l\'UE cree des obligations de conformite pour les fournisseurs americains et asiatiques qui servent des utilisateurs europeens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le processus IA d\'Hiroshima ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le processus IA d\'Hiroshima a ete lance lors du sommet du G7 en 2023 et a developpe des principes directeurs internationaux pour l\'IA frontier. Il a abouti au code de conduite IA du G7 — un cadre volontaire pour les fournisseurs de systemes IA avances, avec des engagements sur les tests de securite, la transparence et la gestion des risques.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les organisations europeennes peuvent-elles utiliser DeepSeek pour des usages commerciaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Avec prudence. DeepSeek est soumis au droit chinois, qui permet l\'acces des autorites chinoises aux donnees. Les preoccupations ont conduit l\'Italie, l\'Irlande et l\'Allemagne a saisir leurs autorites de protection des donnees. Pour les applications d\'entreprise, les versions open source (DeepSeek R1 en local) ou les fournisseurs bases dans l\'UE sont les options les plus conformes au RGPD.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'EU AI Act aide-t-il ou nuit-il à la compétitivité de l\'IA en Europe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'C\'est un dilemme stratégique réel : l\'EU AI Act peut ralentir les startups IA européennes mais renforce la crédibilité réglementaire de l\'Europe mondialement. D\'un côté, les coûts de conformité et les évaluations créent des frictions pour les entreprises européennes — Mistral AI français est plus contraint que les concurrents américains. De l\'autre, l\'effet Bruxelles signifie que le cadre réglementaire de l\'UE devient le standard mondial, donnant aux entreprises basées en UE un avantage compétitif en conformité et à l\'UE un levier sur les géants technologiques US/chinois.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment la capacité informatique de l\'Europe se compare-t-elle aux États-Unis et à la Chine?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'Europe accuse un retard important. Les États-Unis dominent la fabrication de GPU (Nvidia ~80 % part de marché) et le silicium personnalisé. La Chine fabrique chez TSMC (Taïwan) et utilise des GPU Nvidia restreints. L\'Europe n\'a pas d\'équivalent : ASML (Pays-Bas) fabrique des équipements mais ne possède pas de fabs. L\'EU Chips Act (43 milliards d\'euros) vise à construire des fabs Intel et TSMC, mais aucune ne sera opérationnelle avant 2027–2029. C\'est la vulnérabilité centrale de l\'Europe : l\'entraînement de modèles frontier nécessite des milliers de GPU pendant des mois. Sans fab nationale, l\'Europe dépend de l\'approvisionnement US (Nvidia) et taïwanais (TSMC).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.6 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -3567,38 +4451,28 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'FAQ : Géopolitique de l\'IA',
           faqs: [
-            {
-              q: 'Pourquoi la géopolitique de l\'IA compte pour moi personnellement ?',
-              a: 'Parce que les règles qui encadrent votre travail en IA dépendent de votre localisation et du contrôle des modèles. Si vous êtes en UE, la conformité est obligatoire. Si vous êtes aux US, moins de contraintes. Si vous êtes en Chine, l\'approbation gouvernementale est requise. Comprendre la géopolitique IA vous aide à anticiper les changements et à planifier votre carrière/entreprise.',
-            },
-            {
-              q: 'Quelle technologie IA dominera en 2030 ?',
-              a: 'Probablement une combinaison : modèles fondamentaux américains (OpenAI, Anthropic) + déploiement rapide chinois (DeepSeek) + régulation européenne (loi IA). Pas de vainqueur unique. La fragmentation technologique est plus probable que la domination d\'un bloc.',
-            },
-            {
-              q: 'Dois-je m\'inquiéter des restrictions chinoises si je travaille en Occident ?',
-              a: 'Seulement si vous utilisez des services cloud chinois (Alibaba, Baidu) ou des modèles chinois. Si vous utilisez OpenAI, Anthropic, ou Google, vous êtes en sécurité. Mais soyez conscient : si vous exportez vers la Chine, les restrictions s\'appliquent.',
-            },
-            {
-              q: 'L\'UE ralentit-elle l\'innovation IA avec sa loi stricte ?',
-              a: 'Peut-être un peu (20-30% plus lent que les États-Unis), mais cela pousse aussi vers une IA plus responsable et plus sûre. Le trade-off : innovation rapide vs conformité + éthique. L\'UE choisit le deuxième. C\'est intentionnel, pas une limitation involontaire.',
-            },
-            {
-              q: 'Pourquoi NVIDIA et TSMC sont-elles si stratégiques ?',
-              a: 'Parce qu\'elles sont les goulots critiques. Sans puces avancées, vous ne pouvez pas entraîner de modèles fondamentaux. NVIDIA conçoit, TSMC fabrique. Contrôler cela = contrôler qui peut faire de l\'IA. C\'est pourquoi les États-Unis soutiennent NVIDIA et Taiwan si fortement.',
-            },
-            {
-              q: 'Que se passe-t-il si la Chine isolée technologiquement ?',
-              a: 'Peut-être une fission technologique complète : "Occident IA" vs "Chine IA". Deux internets IA distincts. Cela serait mauvais pour l\'innovation (moins de collaboration) mais réduirait les tensions géopolitiques. Peu probable mais possible.',
-            },
-            {
-              q: 'Comment Mistral pourrait-elle rivaliser avec OpenAI ?',
-              a: 'Difficile. Mistral a moins de capital, moins de talent, moins de données. Son avantage : soutien gouvernemental français/européen + focus sur l\'indépendance. Elle pourrait dominer en Europe mais sera toujours n°2 ou #3 mondialement.',
-            },
-            {
-              q: 'Qu\'est-ce que le Brussels Effect signifie pour mon entreprise IA ?',
-              a: 'Si vous opérez globalement, vous devez respecter les règles les plus strictes (UE). C\'est plus coûteux mais plus simple que d\'avoir trois stacks différentes. Le Brussels Effect signifie : conformité UE = conformité mondiale pour la plupart des cas.',
-            },
+            { q: 'Pourquoi la géopolitique de l\'IA compte pour moi personnellement ?', a: 'Parce que les règles qui encadrent votre travail en IA dépendent de votre localisation et du contrôle des modèles. Si vous êtes en UE, la conformité est obligatoire. Si vous êtes aux US, moins de contraintes. Si vous êtes en Chine, l\'approbation gouvernementale est requise. Comprendre la géopolitique IA vous aide à anticiper les changements et à planifier votre carrière/entreprise.' },
+            { q: 'Quelle technologie IA dominera en 2030 ?', a: 'Probablement une combinaison : modèles fondamentaux américains (OpenAI, Anthropic) + déploiement rapide chinois (DeepSeek) + régulation européenne (loi IA). Pas de vainqueur unique. La fragmentation technologique est plus probable que la domination d\'un bloc.' },
+            { q: 'Dois-je m\'inquiéter des restrictions chinoises si je travaille en Occident ?', a: 'Seulement si vous utilisez des services cloud chinois (Alibaba, Baidu) ou des modèles chinois. Si vous utilisez OpenAI, Anthropic, ou Google, vous êtes en sécurité. Mais soyez conscient : si vous exportez vers la Chine, les restrictions s\'appliquent.' },
+            { q: 'L\'UE ralentit-elle l\'innovation IA avec sa loi stricte ?', a: 'Peut-être un peu (20-30% plus lent que les États-Unis), mais cela pousse aussi vers une IA plus responsable et plus sûre. Le trade-off : innovation rapide vs conformité + éthique. L\'UE choisit le deuxième. C\'est intentionnel, pas une limitation involontaire.' },
+            { q: 'Pourquoi NVIDIA et TSMC sont-elles si stratégiques ?', a: 'Parce qu\'elles sont les goulots critiques. Sans puces avancées, vous ne pouvez pas entraîner de modèles fondamentaux. NVIDIA conçoit, TSMC fabrique. Contrôler cela = contrôler qui peut faire de l\'IA. C\'est pourquoi les États-Unis soutiennent NVIDIA et Taiwan si fortement.' },
+            { q: 'Que se passe-t-il si la Chine isolée technologiquement ?', a: 'Peut-être une fission technologique complète : "Occident IA" vs "Chine IA". Deux internets IA distincts. Cela serait mauvais pour l\'innovation (moins de collaboration) mais réduirait les tensions géopolitiques. Peu probable mais possible.' },
+            { q: 'Comment Mistral pourrait-elle rivaliser avec OpenAI ?', a: 'Difficile. Mistral a moins de capital, moins de talent, moins de données. Son avantage : soutien gouvernemental français/européen + focus sur l\'indépendance. Elle pourrait dominer en Europe mais sera toujours n°2 ou #3 mondialement.' },
+            { q: 'Qu\'est-ce que le Brussels Effect signifie pour mon entreprise IA ?', a: 'Si vous opérez globalement, vous devez respecter les règles les plus strictes (UE). C\'est plus coûteux mais plus simple que d\'avoir trois stacks différentes. Le Brussels Effect signifie : conformité UE = conformité mondiale pour la plupart des cas.' },
+            { q: 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?', a: 'Oui. La loi IA de l\'UE s\'applique a toute organisation qui commercialise des systemes d\'IA dans l\'UE ou dont les resultats d\'IA sont utilises dans l\'UE, independamment du siege de l\'organisation. Cette portee extraterritoriale, appelee effet Bruxelles, oblige les fournisseurs americains et asiatiques a se conformer s\'ils servent des utilisateurs europeens.' },
+            { q: 'Quelles sont les amendes en cas de violation de la loi IA de l\'UE ?', a: 'Les amendes atteignent jusqu\'a 35 millions d\'euros ou 7 % du chiffre d\'affaires mondial annuel pour les pratiques d\'IA interdites. Les violations liees a l\'IA a haut risque entrainent des amendes jusqu\'a 15 millions d\'euros ou 3 % du chiffre d\'affaires. Les informations incorrectes transmises aux autorites coutent jusqu\'a 7,5 millions d\'euros ou 1 % du chiffre d\'affaires.' },
+            { q: 'Quelles applications d\'IA l\'UE interdit-elle formellement ?', a: 'La loi IA de l\'UE interdit : les systemes de notation sociale par les autorites publiques, la surveillance biometrique en temps reel dans les espaces publics (avec exceptions etroites), les IA exploitant des vulnerabilites cognitives, et la collecte non ciblee d\'images faciales sur internet pour creer des bases de donnees de reconnaissance.' },
+            { q: 'En quoi la reglementation americaine de l\'IA differe-t-elle de l\'approche europeenne ?', a: 'Les Etats-Unis adoptent une approche sectorielle et volontaire — les regulateurs existants (FTC, FDA, CFPB, EEOC) appliquent leurs mandats a l\'IA dans leurs domaines. Il n\'existe pas de loi federale sur l\'IA equivalente a la loi UE. Le decret Biden sur la securite de l\'IA (octobre 2023) a ete revoque par l\'administration Trump en janvier 2025.' },
+            { q: 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?', a: 'DeepSeek R1 (janvier 2025) a egale GPT-5.6 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.' },
+            { q: 'Les entreprises europeennes peuvent-elles utiliser GPT-5.6 et Claude sous la loi IA ?', a: 'Oui, pour la plupart des applications professionnelles. GPT-5.6 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.' },
+            { q: 'Qu\'est-ce que l\'UK AI Safety Institute (AISI) ?', a: 'L\'AISI a ete cree en novembre 2023 comme premiere agence gouvernementale de securite IA au monde. Il effectue des tests pre-deploiement sur les modeles frontier, a signe des memorandums avec OpenAI, Anthropic, Google DeepMind et Meta, et coordonne les standards de securite internationaux.' },
+            { q: 'Comment DeepSeek modifie-t-il la geopolitique de l\'IA ?', a: 'DeepSeek R1 a prouve que des capacites IA frontier sont atteignables avec beaucoup moins de puissance de calcul, et que les controles a l\'exportation des puces Nvidia seuls sont insuffisants. Ces resultats ont pousse les legislateurs americains a reexaminer la politique d\'exportation de puces et accelere les investissements europeens dans des infrastructures IA souveraines.' },
+            { q: 'Qu\'est-ce que l\'effet Bruxelles dans l\'IA ?', a: 'L\'effet Bruxelles decrit le phenomene par lequel la reglementation de l\'UE devient de facto un standard mondial, car les entreprises globales adaptent leurs produits aux regles europeennes plutot que de maintenir des versions multiples. Pour l\'IA, cela signifie que la loi IA de l\'UE cree des obligations de conformite pour les fournisseurs americains et asiatiques qui servent des utilisateurs europeens.' },
+            { q: 'Qu\'est-ce que le processus IA d\'Hiroshima ?', a: 'Le processus IA d\'Hiroshima a ete lance lors du sommet du G7 en 2023 et a developpe des principes directeurs internationaux pour l\'IA frontier. Il a abouti au code de conduite IA du G7 — un cadre volontaire pour les fournisseurs de systemes IA avances, avec des engagements sur les tests de securite, la transparence et la gestion des risques.' },
+            { q: 'Les organisations europeennes peuvent-elles utiliser DeepSeek pour des usages commerciaux ?', a: 'Avec prudence. DeepSeek est soumis au droit chinois, qui permet l\'acces des autorites chinoises aux donnees. Les preoccupations ont conduit l\'Italie, l\'Irlande et l\'Allemagne a saisir leurs autorites de protection des donnees. Pour les applications d\'entreprise, les versions open source (DeepSeek R1 en local) ou les fournisseurs bases dans l\'UE sont les options les plus conformes au RGPD.' },
+            { q: 'L\'EU AI Act aide-t-il ou nuit-il à la compétitivité de l\'IA en Europe?', a: 'C\'est un dilemme stratégique réel : l\'EU AI Act peut ralentir les startups IA européennes mais renforce la crédibilité réglementaire de l\'Europe mondialement. D\'un côté, les coûts de conformité et les évaluations créent des frictions pour les entreprises européennes — Mistral AI français est plus contraint que les concurrents américains. De l\'autre, l\'effet Bruxelles signifie que le cadre réglementaire de l\'UE devient le standard mondial, donnant aux entreprises basées en UE un avantage compétitif en conformité et à l\'UE un levier sur les géants technologiques US/chinois.' },
+            { q: 'Comment la capacité informatique de l\'Europe se compare-t-elle aux États-Unis et à la Chine?', a: 'L\'Europe accuse un retard important. Les États-Unis dominent la fabrication de GPU (Nvidia ~80 % part de marché) et le silicium personnalisé. La Chine fabrique chez TSMC (Taïwan) et utilise des GPU Nvidia restreints. L\'Europe n\'a pas d\'équivalent : ASML (Pays-Bas) fabrique des équipements mais ne possède pas de fabs. L\'EU Chips Act (43 milliards d\'euros) vise à construire des fabs Intel et TSMC, mais aucune ne sera opérationnelle avant 2027–2029. C\'est la vulnérabilité centrale de l\'Europe : l\'entraînement de modèles frontier nécessite des milliers de GPU pendant des mois. Sans fab nationale, l\'Europe dépend de l\'approvisionnement US (Nvidia) et taïwanais (TSMC).' },
+            { q: 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?', a: 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.6 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.' },
           ],
         },
 
@@ -3757,18 +4631,174 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'EU AI法とは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'EU AI法は世界初の包括的なAI法規制で、2024年3月に欧州議会で523票の賛成で採択されました。AIシステムを4つのリスクレベル（禁止、高リスク、限定的リスク、最小リスク）に分類し、それぞれ異なる要件と罰則を設けています。完全施行は2026年8月から始まります。' } },
-          { '@type': 'Question', 'name': 'EU AI法はEU域外の企業にも適用されますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。EU AI法はEU市場でAIシステムを提供するすべての組織、またはその出力がEU内で使用されるすべての組織に適用されます（所在地に関わらず）。この域外適用は「ブリュッセル効果」と呼ばれ、米国やアジアのAI企業もEUユーザーを対象とする場合はコンプライアンスが必要です。' } },
-          { '@type': 'Question', 'name': 'EU AI法違反の罰則はどのくらいですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '禁止されたAI実践に対しては最大3,500万ユーロまたは世界年間売上高の7%の罰金が科されます。高リスクAIの違反は最大1,500万ユーロまたは売上高の3%。当局への虚偽報告は最大750万ユーロまたは売上高の1%の罰金となります。' } },
-          { '@type': 'Question', 'name': 'EUが禁止するAI用途はどれですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'EU AI法が禁止するのは：政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体認証監視（例外あり）、認知的脆弱性を悪用するAI、顔識別データベース構築のためのインターネット上の顔画像の無差別収集です。' } },
-          { '@type': 'Question', 'name': '米国のAI規制はEUとどう違いますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '米国はセクター別・任意のアプローチを採用しています。既存の規制機関（FTC、FDA、CFPB、EEOC）が各分野でAIに既存の権限を適用します。EU AI法のような連邦AI法は存在しません。バイデン政権のAI安全性に関する大統領令は2025年1月にトランプ政権によって撤回されました。' } },
-          { '@type': 'Question', 'name': '中国のAIは米国のシステムと同等の能力を持っていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1（2025年1月）は複数のベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.6と同水準を達成し、はるかに低いコストで訓練されたとされています。AlibabaのQwenやBaiduのERNIEなど中国の主要モデルは多くのタスクで競争力がありますが、多言語推論とセキュリティベンチマークでは遅れをとっています。' } },
-          { '@type': 'Question', 'name': 'EU企業はAI法の下でGPT-5.6やClaudeを使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、ほとんどのビジネス用途で使用できます。GPT-5.6とClaudeは汎用AI（GPAI）に分類されます。ただし、EU企業は採用決定、与信、重要インフラなどの高リスク用途には独自のデューデリジェンス義務を果たす必要があります。' } },
-          { '@type': 'Question', 'name': 'UK AI Safety Institute（AISI）とは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'AISIは2023年11月に世界初の政府AI安全機関として設立されました。フロンティアモデルのデプロイ前テストを実施し、OpenAI、Anthropic、Google DeepMind、Metaと覚書を締結し、国際的な安全基準の調整を行っています。' } },
-          { '@type': 'Question', 'name': 'DeepSeekはAI地政学をどのように変えましたか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1は、フロンティアAI能力がはるかに少ない計算資源で達成可能であり、Nvidia製チップの輸出規制だけでは十分なバリアにならないことを証明しました。この衝撃から米国の立法者はチップ輸出政策の再検討を迫られ、欧州ではAI主権インフラへの投資が加速しました。' } },
-          { '@type': 'Question', 'name': 'AIにおけるブリュッセル効果とは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ブリュッセル効果とは、EU規制が事実上のグローバルスタンダードとなる現象を指します。グローバル企業は複数バージョンを維持するより製品をEUルールに合わせる方を選ぶためです。AIでは、EU AI法がEUユーザーにサービスを提供する米国・アジアのAIプロバイダーにコンプライアンス要件を課しています。' } },
-          { '@type': 'Question', 'name': '広島AIプロセスとは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '広島AIプロセスは2023年のG7サミットで開始され、フロンティアAIの国際的なガイドライン原則を策定しました。G7 AIコード・オブ・コンダクトに帰結し、先進AIシステムのプロバイダーに対し、安全テスト、透明性、リスク管理のコミットメントを定める任意の枠組みを設けています。' } },
-          { '@type': 'Question', 'name': 'EU組織はDeepSeekを商業利用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '慎重に判断が必要です。DeepSeekは中国法に従っており、中国当局のデータアクセスが可能です。プライバシー上の懸念からイタリア、アイルランド、ドイツはデータ保護当局に問い合わせを行いました。企業用途ではオープンソース版（DeepSeek R1のローカル実行）またはEUベースのプロバイダーがGDPR適合性の高い選択肢です。' } },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法とは何ですか？いつから適用されますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EU AI法は、2024年3月に欧州議会で可決された世界初の包括的なAI法です。禁止行為は2024年8月から適用されます。GPAIモデル（GPT-5.6、Claude、Geminiクラスのモデル）の義務は2025年8月から適用されます。第50条の透明性義務（チャットボットやAI生成コンテンツの開示）は2026年8月から適用されます。単独型高リスクAIシステムの要件は、2026年7月27日発効のデジタル・オムニバスにより2026年8月から2027年12月2日へ延期されました。EU市場にAIを提供する、またはEU居住者に影響を与えるAIを使用するすべての組織に適用されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法は非EU企業にも適用されますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。EU AI法は域外適用されます — プロバイダーの本社所在地にかかわらず、そのAI出力がEU内で使用されるすべてのプロバイダーに適用されます。AI製品がEU居住者に使用される米国企業も準拠しなければなりません。これはGDPRを世界標準にしたのと同じ域外適用の原則です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法違反の罰則はどのくらいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '禁止されたAI行為に対して最大3,500万ユーロまたは世界年間売上高の7%（いずれか高い方）。高リスクAI違反は最大1,500万ユーロまたは3%。執行当局への虚偽情報提供は最大750万ユーロまたは1%。金額の割合と固定額のうち高い方が適用されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法で禁止されているAI用途は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '禁止（容認できないリスク）：政府機関によるソーシャルスコアリングシステム、公共空間でのリアルタイム生体識別（限定的な例外あり）、心理的脆弱性を悪用するAI、インターネット上の顔画像の無差別収集。これらは2024年8月以降禁止されています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '米国のAI規制はEUとどう違いますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '米国には連邦AI法がありません。既存のセクター規制機関（FTC、FDA、CFPB、EEOC）が管轄分野で既存の権限をAIに適用します。バイデンAI安全大統領令（2023年10月）は2025年1月に撤回され、競争力重視のAI行動計画に置き換えられました。NIST AIリスクマネジメントフレームワークは任意です。米国の規制は事後対応的・セクター別であり、EUの規制は事前対応的・横断的です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeekはEU組織で使用しても安全ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeekは中国国家インターネット情報弁公室（CAC）の規制対象であり、中国政府がデータ開示を強制できることを意味します。DeepSeekのプライバシーポリシーは、データが中国国内のサーバーに保管されると明記しています。個人データを処理するEU組織がDeepSeekを使用するには、GDPR準拠のデータ移転保護措置（SCC）が必要ですが、これは中国法に対して執行するのが困難です。EU加盟国の政府機関や重要インフラ組織は、一般的に中国製AIツールの利用を避けています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ブリュッセル効果とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ブリュッセル効果とは、多国籍企業が法域ごとに別々のコンプライアンスを維持するより一つの厳格な基準を選ぶ傾向があるため、EU規制が事実上の世界標準になる現象を指します。GDPRはこの方法で世界的なプライバシー基準になりました。EU AI法もAIについて同じことを行っています — OpenAI、Anthropic、Googleは、EU限定版だけでなく世界向け製品全体でEU AI法のGPAI要件を遵守しなければなりません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ブレッチリー・パークAI安全サミットは何を達成しましたか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2023年11月のブレッチリー・パークAI安全サミットは、米国、中国、EU加盟国を含む28か国が署名したブレッチリー宣言を生み出し、フロンティアAIが深刻なリスクをもたらし国際協力が必要であることを認めました。このサミットは英国AI安全研究所（AISI）を設立し、米国その他での一連の国際的なAI安全研究所の設立を促しました。より広い地政学的緊張を踏まえると、中国の参加は注目に値しました。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'フランスとドイツのAI支援策はどう違いますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'フランスは、パリでのAI Action Summit（2025年2月）といった国際的な高い可視性のポジショニングと、INRIAやCNRSを通じたオープンウェイトAI研究を優先し、公的投資は20億ユーロです。ドイツはフラウンホーファー協会とDFKIを通じた応用型産業AIに重点を置き、2019〜2025年に50億ユーロを投資しており、連邦法制を通じたAIガバナンスと責任の枠組みを重視しています。両国とも国家AI戦略を持ちますが、重点分野が異なります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法はプロンプトエンジニアリングに使われるAIにどう影響しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプトエンジニアリングの業務の大半は限定的リスクまたは最小リスクに分類されます — 標準的なチャットボットやAIライティングツールは開示（ユーザーはAIと対話していることを知る必要がある）が必要ですが、適合性評価は不要です。高リスク分類は、AIが採用選考、信用評価、教育評価、法執行など重大な決定を行う場合に適用されます。[実務におけるAIの限界](/ja/prompt-engineering/ai-limitations-what-llms-cant-do)は、高リスクシステムの文書化要件に関連します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '広島AIプロセスとは何ですか？何を達成しましたか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '広島AIプロセスは、日本のG7議長国下で2023年の広島サミットで開始されたG7イニシアチブです。先端AIシステムの開発者向けの11の任意の指針原則である広島AIプロセス行動規範を生み出し、2023年10月にG7各国が採択しました。原則は透明性、インシデント報告、安全性テスト、AI生成コンテンツの電子透かしを対象とします。イタリアの2024年G7議長国は、より広範な国際AIガバナンスの議題でこの枠組みを拡張しました。行動規範は任意であり法的拘束力はありませんが、EUの法的拘束力あるAI法とは別に国際的な協調の意思を示しています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU組織はDeepSeekを商業目的で使用できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '技術的には可能で、GDPR準拠の契約上の保護措置（標準契約条項）を用います。しかし実際には、SCCは中国法上の義務 — DeepSeekにCACのデータ開示要請への対応を求める義務 — に対して執行するのが困難です。政府調達は別の制約です — ドイツのBSI、フランスのANSSI、オランダのNCSCは、政府および重要インフラ用途での中国製AIツールに関する勧告または制限を発行しています。民間セクターのEU組織は商業目的でDeepSeekを使用できますが、GDPR第46条に基づく移転影響評価を実施し、残存リスクを文書化しなければなりません。ほとんどの法律顧問は、DeepSeekを通じた個人データの処理を避けるよう助言しています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法はEUの競争力を助けますか、それとも損ないますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'これは本物の戦略的ジレンマです — EU AI法はEUのAIスタートアップを減速させる可能性がある一方、欧州の規制上の信頼性を世界的に強化します。一方では、コンプライアンスコストと適合性評価がEU企業にとっての摩擦を生みます — フランスのMistral AIは米国の競合他社よりも制約が大きい状況にあります。他方では、ブリュッセル効果によりEUの規制枠組みが世界標準になり、コンプライアンスにおけるEU拠点企業の競争優位と、米中テック大手に対する欧州の交渉力を生み出します。欧州は「規制上のリーダーシップ」に賭けており、「純粋な能力のリーダーシップ」ではありません — 米国や中国とは根本的に異なるAI戦略であり、欧州を二流の技術生産者ではなく世界のAIガバナンスに不可欠な存在にしています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '欧州の計算能力は米国・中国と比べてどうですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '欧州は計算インフラで大きく遅れをとっています。米国はGPU製造（Nvidiaの市場シェア約80%）とカスタムシリコン（Google TPU、Amazon Trainium）で優位に立っています。中国はTSMC（台湾）で製造し、制限対象のNvidia H系列・A系列GPUを使用しています。欧州には相当するものがありません — ASML（オランダ）はチップ製造装置を製造していますが、自社ファブは所有していません。EU Chips Act（430億ユーロ、2023〜2032年）はEU域内にIntelとTSMCのファブを建設することを目指していますが、いずれも2027〜2029年まで稼働しません — 投資だけでは埋められない3〜5年の計算能力の格差です。これは欧州AIの中核的なインフラ上の脆弱性です — フロンティアモデルの訓練には数千基のGPUを数か月間稼働させる必要があります。国内ファブ能力がなければ、欧州は米国（Nvidia）と台湾（TSMC）の供給に依存し続けます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '規制以外の欧州のAI優位性は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '欧州には3つの非規制的な優位性があります。（1）EU（フランス、ドイツ）が資金提供するMistral AIなどのオープンウェイトモデルは、米国や中国への依存なしにGDPR準拠の代替を提供します。（2）欧州は英国AI安全研究所、ETHチューリッヒ、フランスの研究センター（INRIA、CNRS）を通じてAI安全性研究で主導しています。（3）欧州の高学歴の労働力と既存のソフトウェア・半導体人材は、AIアプリケーションとカスタムシリコン（Arm、RISC-Vチップ設計）で優位性を与えています。ただし、これらのいずれも、欧州のフロンティアモデル能力における不利を相殺するものではありません — 米国はGPT-5.6、Claude、Geminiで主導し、中国は展開規模と量で主導しています。欧州の戦略は「得意なこと（安全性、規制、倫理）に集中し、純粋な能力で競争しない」ことです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EU AI法は世界初の包括的なAI法規制で、2024年3月に欧州議会で523票の賛成で採択されました。AIシステムを4つのリスクレベル（禁止、高リスク、限定的リスク、最小リスク）に分類し、それぞれ異なる要件と罰則を設けています。完全施行は2026年8月から始まります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EUが禁止するAI用途はどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EU AI法が禁止するのは：政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体認証監視（例外あり）、認知的脆弱性を悪用するAI、顔識別データベース構築のためのインターネット上の顔画像の無差別収集です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国のAIは米国のシステムと同等の能力を持っていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1（2025年1月）は複数のベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.6と同水準を達成し、はるかに低いコストで訓練されたとされています。AlibabaのQwenやBaiduのERNIEなど中国の主要モデルは多くのタスクで競争力がありますが、多言語推論とセキュリティベンチマークでは遅れをとっています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU企業はAI法の下でGPT-5.6やClaudeを使用できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、ほとんどのビジネス用途で使用できます。GPT-5.6とClaudeは汎用AI（GPAI）に分類されます。ただし、EU企業は採用決定、与信、重要インフラなどの高リスク用途には独自のデューデリジェンス義務を果たす必要があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'UK AI Safety Institute（AISI）とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AISIは2023年11月に世界初の政府AI安全機関として設立されました。フロンティアモデルのデプロイ前テストを実施し、OpenAI、Anthropic、Google DeepMind、Metaと覚書を締結し、国際的な安全基準の調整を行っています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeekはAI地政学をどのように変えましたか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1は、フロンティアAI能力がはるかに少ない計算資源で達成可能であり、Nvidia製チップの輸出規制だけでは十分なバリアにならないことを証明しました。この衝撃から米国の立法者はチップ輸出政策の再検討を迫られ、欧州ではAI主権インフラへの投資が加速しました。',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -4325,6 +5355,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'EU AI法はEUの競争力を助けますか、それとも損ないますか？', a: 'これは本物の戦略的ジレンマです — EU AI法はEUのAIスタートアップを減速させる可能性がある一方、欧州の規制上の信頼性を世界的に強化します。一方では、コンプライアンスコストと適合性評価がEU企業にとっての摩擦を生みます — フランスのMistral AIは米国の競合他社よりも制約が大きい状況にあります。他方では、ブリュッセル効果によりEUの規制枠組みが世界標準になり、コンプライアンスにおけるEU拠点企業の競争優位と、米中テック大手に対する欧州の交渉力を生み出します。欧州は「規制上のリーダーシップ」に賭けており、「純粋な能力のリーダーシップ」ではありません — 米国や中国とは根本的に異なるAI戦略であり、欧州を二流の技術生産者ではなく世界のAIガバナンスに不可欠な存在にしています。' },
             { q: '欧州の計算能力は米国・中国と比べてどうですか？', a: '欧州は計算インフラで大きく遅れをとっています。米国はGPU製造（Nvidiaの市場シェア約80%）とカスタムシリコン（Google TPU、Amazon Trainium）で優位に立っています。中国はTSMC（台湾）で製造し、制限対象のNvidia H系列・A系列GPUを使用しています。欧州には相当するものがありません — ASML（オランダ）はチップ製造装置を製造していますが、自社ファブは所有していません。EU Chips Act（430億ユーロ、2023〜2032年）はEU域内にIntelとTSMCのファブを建設することを目指していますが、いずれも2027〜2029年まで稼働しません — 投資だけでは埋められない3〜5年の計算能力の格差です。これは欧州AIの中核的なインフラ上の脆弱性です — フロンティアモデルの訓練には数千基のGPUを数か月間稼働させる必要があります。国内ファブ能力がなければ、欧州は米国（Nvidia）と台湾（TSMC）の供給に依存し続けます。' },
             { q: '規制以外の欧州のAI優位性は何ですか？', a: '欧州には3つの非規制的な優位性があります。（1）EU（フランス、ドイツ）が資金提供するMistral AIなどのオープンウェイトモデルは、米国や中国への依存なしにGDPR準拠の代替を提供します。（2）欧州は英国AI安全研究所、ETHチューリッヒ、フランスの研究センター（INRIA、CNRS）を通じてAI安全性研究で主導しています。（3）欧州の高学歴の労働力と既存のソフトウェア・半導体人材は、AIアプリケーションとカスタムシリコン（Arm、RISC-Vチップ設計）で優位性を与えています。ただし、これらのいずれも、欧州のフロンティアモデル能力における不利を相殺するものではありません — 米国はGPT-5.6、Claude、Geminiで主導し、中国は展開規模と量で主導しています。欧州の戦略は「得意なこと（安全性、規制、倫理）に集中し、純粋な能力で競争しない」ことです。' },
+            { q: 'EU AI法とは何ですか？', a: 'EU AI法は世界初の包括的なAI法規制で、2024年3月に欧州議会で523票の賛成で採択されました。AIシステムを4つのリスクレベル（禁止、高リスク、限定的リスク、最小リスク）に分類し、それぞれ異なる要件と罰則を設けています。完全施行は2026年8月から始まります。' },
+            { q: 'EUが禁止するAI用途はどれですか？', a: 'EU AI法が禁止するのは：政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体認証監視（例外あり）、認知的脆弱性を悪用するAI、顔識別データベース構築のためのインターネット上の顔画像の無差別収集です。' },
+            { q: '中国のAIは米国のシステムと同等の能力を持っていますか？', a: 'DeepSeek R1（2025年1月）は複数のベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.6と同水準を達成し、はるかに低いコストで訓練されたとされています。AlibabaのQwenやBaiduのERNIEなど中国の主要モデルは多くのタスクで競争力がありますが、多言語推論とセキュリティベンチマークでは遅れをとっています。' },
+            { q: 'EU企業はAI法の下でGPT-5.6やClaudeを使用できますか？', a: 'はい、ほとんどのビジネス用途で使用できます。GPT-5.6とClaudeは汎用AI（GPAI）に分類されます。ただし、EU企業は採用決定、与信、重要インフラなどの高リスク用途には独自のデューデリジェンス義務を果たす必要があります。' },
+            { q: 'UK AI Safety Institute（AISI）とは何ですか？', a: 'AISIは2023年11月に世界初の政府AI安全機関として設立されました。フロンティアモデルのデプロイ前テストを実施し、OpenAI、Anthropic、Google DeepMind、Metaと覚書を締結し、国際的な安全基準の調整を行っています。' },
+            { q: 'DeepSeekはAI地政学をどのように変えましたか？', a: 'DeepSeek R1は、フロンティアAI能力がはるかに少ない計算資源で達成可能であり、Nvidia製チップの輸出規制だけでは十分なバリアにならないことを証明しました。この衝撃から米国の立法者はチップ輸出政策の再検討を迫られ、欧州ではAI主権インフラへの投資が加速しました。' },
           ],
         },
 
@@ -4514,18 +5550,134 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'EU AI法案是什么？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法案是世界首个全面的人工智能法律框架，于2024年3月由欧洲议会以523票赞成通过。它将AI系统分为四个风险级别——不可接受、高风险、有限风险和最小风险——对每个级别适用不同的要求和罚款。第50条透明度义务自2026年8月起执行；独立高风险系统要求已由2026年7月27日生效的Digital Omnibus推迟至2027年12月2日。' } },
-          { '@type': 'Question', name: 'EU AI法案是否适用于欧盟外的公司？', acceptedAnswer: { '@type': 'Answer', text: '是的。EU AI法案适用于任何在欧盟市场上放置AI系统或其AI输出在欧盟使用的组织，无论该组织总部位于何处。这种属地外管辖权称为布鲁塞尔效应，意味着美国和亚洲AI提供商如果为欧盟用户服务，也必须合规。' } },
-          { '@type': 'Question', name: '违反EU AI法案的罚款是多少？', acceptedAnswer: { '@type': 'Answer', text: '对禁止的AI做法，罚款最高€3500万或全球年度营业额的7%（以较高者为准）。高风险AI违规的罚款最高€1500万或全球营业额的3%。向当局提供不正确信息的罚款最高€750万或全球营业额的1%。' } },
-          { '@type': 'Question', name: 'EU AI法案明确禁止哪些AI应用？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法案禁止：公共当局的社会评分系统、公共场所的实时生物特征监控（警执法例外除外）、利用认知漏洞的AI以及从互联网无差别抓取面部图像来构建识别数据库。这些被归类为不可接受的风险。' } },
-          { '@type': 'Question', name: '美国AI监管与欧盟方式有何不同？', acceptedAnswer: { '@type': 'Answer', text: '美国采用部门化、自愿性方式——现有监管机构（FTC、FDA、CFPB、EEOC）在其领域内对AI适用其任务。没有等同于EU AI法案的联邦AI法。Biden关于AI安全的行政令（2023年10月）于2025年1月被Trump政府撤销，取而代之的是以竞争力为中心的AI行动计划。' } },
-          { '@type': 'Question', name: '中国的AI与美国AI系统一样强大吗？', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1于2025年1月发布，在多个基准（AIME 2024、MATH-500、HumanEval）上与GPT-5.6相当，同时据报训练成本仅为其一小部分。中国的主要模型——包括阿里巴巴的Qwen和百度的ERNIE——在许多任务上具有竞争力，但在多语言推理和安全基准上落后。硬件出口管制限制了中国获取最新Nvidia GPU的途径。' } },
-          { '@type': 'Question', name: '欧盟公司能否在AI法案下使用GPT-5.6和Claude？', acceptedAnswer: { '@type': 'Answer', text: '是的，在大多数用例中可以。GPT-5.6和Claude Opus 5符合通用AI（GPAI）模型条件，必须遵守透明度义务——包括发布训练数据摘要和遵守欧盟版权法——这于2025年8月生效。OpenAI和Anthropic都已为欧盟用户发布了GPAI合规文档。' } },
-          { '@type': 'Question', name: '英国AI安全研究所（AISI）是什么？', acceptedAnswer: { '@type': 'Answer', text: '英国AI安全研究所（AISI）于2023年11月在Bletchley Park的AI安全峰会后成立。它进行AI安全的技术研究，评估前沿AI模型的危险能力，并发布安全报告。AISI独立于商业AI开发者运作，与美国AI安全研究所合作。' } },
-          { '@type': 'Question', name: 'DeepSeek如何影响AI地缘政治竞争？', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1于2025年1月发布，表明可以以远低于先前假设的计算成本实现前沿AI能力。这削弱了出口管制Nvidia GPU将永久限制中国AI发展的论点。它加速了美国和欧盟关于基于计算的遏制战略是否充分的政策讨论。' } },
-          { '@type': 'Question', name: '什么是AI中的布鲁塞尔效应？', acceptedAnswer: { '@type': 'Answer', text: '布鲁塞尔效应描述欧盟法规如何成为事实上的全球标准，因为跨国公司发现在全球应用最严格的标准比维护每个管辖区的单独合规堆栈更简单。对于AI，这意味着EU AI法案实际上为GPT-5.6、Claude和Gemini设定了全球标准——无论用户位于何处。' } },
-          { '@type': 'Question', name: '什么是广岛AI进程及其成就是什么？', acceptedAnswer: { '@type': 'Answer', text: '广岛AI进程是由日本担任G7主席时在2023年广岛峰会期间启动的G7倡议。它产生了广岛AI进程行为准则——G7采纳的11项自愿原则，供高级AI系统开发者遵循，于2023年10月通过。原则涵盖透明度、事件报告、安全测试和AI生成内容水印。行为准则是自愿性的，无法律约束力，独立于EU AI法案。' } },
-          { '@type': 'Question', name: '欧盟组织能否将DeepSeek用于商业应用？', acceptedAnswer: { '@type': 'Answer', text: '从技术上讲可以，使用GDPR兼容的标准合约条款（SCC）。实际上，对中国法律义务要求CAC数据披露合规，SCC很难执行。德国（BSI）、法国（ANSSI）和荷兰（NCSC）已发布建议，限制政府和关键基础设施中的中国AI工具。私营部门组织在通过DeepSeek处理个人数据之前必须根据GDPR第46条进行转让影响评估。' } },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法案是什么？何时适用？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EU AI法案是全球首部全面的AI法律，于2024年3月由欧洲议会通过。禁止行为条款自2024年8月起适用。GPAI模型义务（针对GPT-5.6、Claude、Gemini级模型）自2025年8月起适用。第50条透明度义务（聊天机器人与AI内容披露）自2026年8月起适用。独立高风险AI系统要求已由2026年7月27日生效的Digital Omnibus从2026年8月推迟至2027年12月2日。它适用于任何在欧盟市场投放AI或其AI影响欧盟居民的组织。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法案是否适用于非欧盟公司？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '适用。EU AI法案具有域外效力——只要提供商的AI输出在欧盟境内被使用，无论该提供商总部位于何处都必须遵守。这与GDPR成为全球标准的域外原则相同。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '违反EU AI法案的罚款是多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对于禁止的AI做法，罚款最高为€3500万或全球年营业额的7%（以较高者为准）。高风险AI违规最高€1500万或3%。向执法机构提供不正确信息最高€750万或1%。较高的比例或固定金额将适用。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法案禁止哪些AI应用？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '禁止（不可接受风险）：公共当局的社会评分系统；公共场所的实时生物特征识别（有限的执法例外）；利用心理弱点的AI；无差别抓取互联网面部图像。这些自2024年8月起被禁止。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '美国的AI监管与欧盟有何不同？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '美国没有联邦AI法。现有部门监管机构（FTC、FDA、CFPB、EEOC）在各自领域内对AI适用现有职权。拜登的AI安全行政令（2023年10月）已于2025年1月被撤销，代之以以竞争力为核心的AI行动计划。NIST AI风险管理框架是自愿性的。美国的监管是被动、按部门划分的；欧盟的监管是主动、横向覆盖的。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '在欧盟组织中使用DeepSeek安全吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek受中国网信办（CAC）监管，意味着中国政府可强制要求数据披露。DeepSeek的隐私政策表明数据存储在中国服务器上。对于处理个人数据的欧盟组织，使用DeepSeek需要符合GDPR的数据转移保障措施（标准合同条款），而这些措施难以对抗中国法律的约束。欧盟成员国的政府和关键基础设施机构普遍避免使用中国AI工具。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '什么是布鲁塞尔效应？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '布鲁塞尔效应描述了欧盟法规如何成为事实上的全球标准，因为跨国公司发现应用一套最严格的标准比为每个司法辖区维护单独的合规体系更简单。GDPR就是这样成为全球隐私标准的。EU AI法案正在AI领域重复这一过程——OpenAI、Anthropic和Google必须为其全球产品（而不仅是欧盟专属版本）遵守EU AI法案的GPAI要求。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '广岛AI进程取得了哪些成果？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '广岛AI进程是日本担任G7主席国期间于2023年广岛峰会启动的G7倡议。它产生了《广岛AI进程行为准则》——供先进AI系统开发者遵循的11项自愿原则，于2023年10月被G7各国采纳。原则涵盖透明度、事件报告、安全测试和AI生成内容水印。该行为准则是自愿性的，不具法律约束力，独立于具有法律约束力的EU AI法案之外。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '欧盟组织能否将DeepSeek用于商业用途？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '技术上可以，需配合符合GDPR的合同保障措施（标准合同条款）。但实践中，这些条款难以对抗要求DeepSeek遵守CAC数据披露义务的中国法律。德国的BSI、法国的ANSSI和荷兰的NCSC已发布建议或限制，禁止在政府和关键基础设施领域使用中国AI工具。私营部门的欧盟组织可以在商业上使用DeepSeek，但必须依据GDPR第46条进行转移影响评估并记录剩余风险。多数法律顾问建议不要通过DeepSeek处理个人数据。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI法案对欧盟AI竞争力是利是弊？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '这是一个真实的战略两难：EU AI法案可能拖慢欧盟AI初创企业的发展，但同时增强了欧洲在全球的监管公信力。一方面，合规成本和符合性评估给欧盟企业带来摩擦——法国的Mistral AI比美国竞争对手受到更多限制。另一方面，布鲁塞尔效应意味着欧盟的监管框架正成为全球标准，为欧盟企业带来合规优势，并让欧盟对美中科技巨头拥有影响力。欧洲押注于"监管领导力"而非"原始能力领先"——一种与美国或中国截然不同的AI战略。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '欧洲的算力与美中相比如何？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '欧洲在算力基础设施方面明显落后。美国主导GPU制造（Nvidia约80%市场份额）和定制芯片（Google TPU、Amazon Trainium）。中国在TSMC（台湾）代工生产，并使用受限的Nvidia H系列和A系列GPU。欧洲没有对应方案：ASML（荷兰）制造芯片制造设备，但自身不拥有晶圆厂。欧盟芯片法案（430亿欧元，2023–2032年）旨在欧盟境内建设Intel和TSMC的晶圆厂，但两者均要到2027–2029年才能投产——这是欧洲无法仅靠投资弥补的3–5年算力缺口。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国的AI与美国AI系统一样强大吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1于2025年1月发布，在多个基准（AIME 2024、MATH-500、HumanEval）上与GPT-5.6相当，同时据报训练成本仅为其一小部分。中国的主要模型——包括阿里巴巴的Qwen和百度的ERNIE——在许多任务上具有竞争力，但在多语言推理和安全基准上落后。硬件出口管制限制了中国获取最新Nvidia GPU的途径。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '欧盟公司能否在AI法案下使用GPT-5.6和Claude？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的，在大多数用例中可以。GPT-5.6和Claude Opus 5符合通用AI（GPAI）模型条件，必须遵守透明度义务——包括发布训练数据摘要和遵守欧盟版权法——这于2025年8月生效。OpenAI和Anthropic都已为欧盟用户发布了GPAI合规文档。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '英国AI安全研究所（AISI）是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '英国AI安全研究所（AISI）于2023年11月在Bletchley Park的AI安全峰会后成立。它进行AI安全的技术研究，评估前沿AI模型的危险能力，并发布安全报告。AISI独立于商业AI开发者运作，与美国AI安全研究所合作。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek如何影响AI地缘政治竞争？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1于2025年1月发布，表明可以以远低于先前假设的计算成本实现前沿AI能力。这削弱了出口管制Nvidia GPU将永久限制中国AI发展的论点。它加速了美国和欧盟关于基于计算的遏制战略是否充分的政策讨论。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '什么是广岛AI进程及其成就是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '广岛AI进程是由日本担任G7主席时在2023年广岛峰会期间启动的G7倡议。它产生了广岛AI进程行为准则——G7采纳的11项自愿原则，供高级AI系统开发者遵循，于2023年10月通过。原则涵盖透明度、事件报告、安全测试和AI生成内容水印。行为准则是自愿性的，无法律约束力，独立于EU AI法案。',
+            },
+          },
         ],
       },
       toc: [
@@ -5112,6 +6264,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '欧盟组织能否将DeepSeek用于商业用途？', a: '技术上可以，需配合符合GDPR的合同保障措施（标准合同条款）。但实践中，这些条款难以对抗要求DeepSeek遵守CAC数据披露义务的中国法律。德国的BSI、法国的ANSSI和荷兰的NCSC已发布建议或限制，禁止在政府和关键基础设施领域使用中国AI工具。私营部门的欧盟组织可以在商业上使用DeepSeek，但必须依据GDPR第46条进行转移影响评估并记录剩余风险。多数法律顾问建议不要通过DeepSeek处理个人数据。' },
             { q: 'EU AI法案对欧盟AI竞争力是利是弊？', a: '这是一个真实的战略两难：EU AI法案可能拖慢欧盟AI初创企业的发展，但同时增强了欧洲在全球的监管公信力。一方面，合规成本和符合性评估给欧盟企业带来摩擦——法国的Mistral AI比美国竞争对手受到更多限制。另一方面，布鲁塞尔效应意味着欧盟的监管框架正成为全球标准，为欧盟企业带来合规优势，并让欧盟对美中科技巨头拥有影响力。欧洲押注于"监管领导力"而非"原始能力领先"——一种与美国或中国截然不同的AI战略。' },
             { q: '欧洲的算力与美中相比如何？', a: '欧洲在算力基础设施方面明显落后。美国主导GPU制造（Nvidia约80%市场份额）和定制芯片（Google TPU、Amazon Trainium）。中国在TSMC（台湾）代工生产，并使用受限的Nvidia H系列和A系列GPU。欧洲没有对应方案：ASML（荷兰）制造芯片制造设备，但自身不拥有晶圆厂。欧盟芯片法案（430亿欧元，2023–2032年）旨在欧盟境内建设Intel和TSMC的晶圆厂，但两者均要到2027–2029年才能投产——这是欧洲无法仅靠投资弥补的3–5年算力缺口。' },
+            { q: '中国的AI与美国AI系统一样强大吗？', a: 'DeepSeek R1于2025年1月发布，在多个基准（AIME 2024、MATH-500、HumanEval）上与GPT-5.6相当，同时据报训练成本仅为其一小部分。中国的主要模型——包括阿里巴巴的Qwen和百度的ERNIE——在许多任务上具有竞争力，但在多语言推理和安全基准上落后。硬件出口管制限制了中国获取最新Nvidia GPU的途径。' },
+            { q: '欧盟公司能否在AI法案下使用GPT-5.6和Claude？', a: '是的，在大多数用例中可以。GPT-5.6和Claude Opus 5符合通用AI（GPAI）模型条件，必须遵守透明度义务——包括发布训练数据摘要和遵守欧盟版权法——这于2025年8月生效。OpenAI和Anthropic都已为欧盟用户发布了GPAI合规文档。' },
+            { q: '英国AI安全研究所（AISI）是什么？', a: '英国AI安全研究所（AISI）于2023年11月在Bletchley Park的AI安全峰会后成立。它进行AI安全的技术研究，评估前沿AI模型的危险能力，并发布安全报告。AISI独立于商业AI开发者运作，与美国AI安全研究所合作。' },
+            { q: 'DeepSeek如何影响AI地缘政治竞争？', a: 'DeepSeek R1于2025年1月发布，表明可以以远低于先前假设的计算成本实现前沿AI能力。这削弱了出口管制Nvidia GPU将永久限制中国AI发展的论点。它加速了美国和欧盟关于基于计算的遏制战略是否充分的政策讨论。' },
+            { q: '什么是广岛AI进程及其成就是什么？', a: '广岛AI进程是由日本担任G7主席时在2023年广岛峰会期间启动的G7倡议。它产生了广岛AI进程行为准则——G7采纳的11项自愿原则，供高级AI系统开发者遵循，于2023年10月通过。原则涵盖透明度、事件报告、安全测试和AI生成内容水印。行为准则是自愿性的，无法律约束力，独立于EU AI法案。' },
           ],
         },
 
@@ -5232,17 +6389,174 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'O que é o EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O EU AI Act é o primeiro framework legal abrangente do mundo para inteligência artificial, aprovado pelo Parlamento Europeu em março de 2024 com 523 votos a favor. Ele classifica sistemas de IA em quatro níveis de risco — Inaceitável, Alto, Limitado e Mínimo — e aplica diferentes requisitos e multas a cada nível. A aplicação plena entra em vigor em agosto de 2026.' } },
-          { '@type': 'Question', 'name': 'O EU AI Act se aplica a empresas fora da UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. O EU AI Act se aplica a qualquer organização que coloque sistemas de IA no mercado da UE ou cujos resultados de IA sejam utilizados na UE, independentemente de onde a organização está sediada. Esse alcance extraterritorial é chamado de Efeito Bruxelas e significa que fornecedores de IA dos EUA e da Ásia também precisam estar em conformidade se atenderem usuários da UE.' } },
-          { '@type': 'Question', 'name': 'Quais são as multas por violar o EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As multas chegam a até €35 milhões ou 7% do faturamento anual global por práticas de IA proibidas (o que for maior). Violações de IA de alto risco acarretam multas de até €15 milhões ou 3% do faturamento global. Fornecer informações incorretas às autoridades acarreta multas de até €7,5 milhões ou 1% do faturamento global.' } },
-          { '@type': 'Question', 'name': 'Quais aplicações de IA a UE proíbe completamente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O EU AI Act proíbe: sistemas de pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos (com exceções restritas para forças de segurança), IA que explore vulnerabilidades cognitivas e coleta indiscriminada de imagens faciais da internet para construir bancos de dados de reconhecimento. Esses são categorizados como Risco Inaceitável.' } },
-          { '@type': 'Question', 'name': 'Como a regulação de IA dos EUA difere da abordagem da UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Os EUA utilizam uma abordagem setorial e voluntária — reguladores existentes (FTC, FDA, CFPB, EEOC) aplicam seus mandatos à IA em seus domínios. Não existe lei federal de IA equivalente ao EU AI Act. A Ordem Executiva de Biden sobre Segurança de IA (outubro de 2023) foi revogada pela administração Trump em janeiro de 2025 e substituída por um Plano de Ação de IA focado em competitividade.' } },
-          { '@type': 'Question', 'name': 'A IA da China é tão capaz quanto os sistemas de IA dos EUA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O DeepSeek R1, lançado em janeiro de 2025, superou o GPT-5.6 em benchmarks de raciocínio e codificação (AIME 2024: 79,8% vs 74,4% do GPT-5.6, MATH-500: 97,3%, HumanEval) enquanto supostamente foi treinado a um custo de ~US$6 milhões — uma redução de 94% em relação aos custos estimados de treinamento de modelos de fronteira. Os modelos líderes da China são competitivos em muitas tarefas, mas ficam atrás em raciocínio multilíngue e benchmarks de segurança.' } },
-          { '@type': 'Question', 'name': 'Empresas da UE podem usar GPT-5.6 e Claude sob o AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, para a maioria dos casos de uso. GPT-5.6 e Claude Opus 5 se qualificam como modelos de IA de Propósito Geral (GPAI) e devem cumprir obrigações de transparência — incluindo publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — que entraram em vigor em agosto de 2025. OpenAI e Anthropic publicaram documentação de conformidade GPAI para usuários da UE.' } },
-          { '@type': 'Question', 'name': 'Como o DeepSeek afeta a corrida geopolítica de IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O lançamento do DeepSeek R1 em janeiro de 2025 demonstrou que capacidades de IA de fronteira são alcançáveis a custos de computação significativamente menores do que se assumia anteriormente. Isso enfraquece o argumento de que os controles de exportação sobre GPUs da Nvidia limitarão permanentemente o desenvolvimento de IA na China. Acelerou debates de política nos EUA e na UE sobre se estratégias de contenção baseadas em computação são suficientes.' } },
-          { '@type': 'Question', 'name': 'O que é o Efeito Bruxelas na IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Efeito Bruxelas descreve como as regulamentações da UE se tornam padrões globais de fato porque empresas multinacionais consideram mais fácil aplicar o padrão mais rigoroso em todo o mundo em vez de manter pilhas de conformidade separadas por jurisdição. Para a IA, isso significa que o EU AI Act efetivamente eleva os padrões para GPT-5.6, Claude e Gemini globalmente — independentemente de onde os usuários estão localizados.' } },
-          { '@type': 'Question', 'name': 'Organizações da UE podem usar DeepSeek para aplicações comerciais?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Tecnicamente sim, com Cláusulas Contratuais Padrão (SCC) em conformidade com o RGPD. Na prática, as SCCs são difíceis de aplicar diante das obrigações da lei chinesa que exigem conformidade com o acesso a dados do CAC. Alemanha (BSI), França (ANSSI) e Países Baixos (NCSC) emitiram avisos restringindo ferramentas de IA chinesas para o governo e infraestruturas críticas. Organizações do setor privado precisam realizar uma Avaliação de Impacto de Transferência nos termos do Artigo 46 do RGPD antes de processar dados pessoais por meio do DeepSeek.' } },
-          { '@type': 'Question', 'name': 'Quais frameworks de governança de IA existem na América Latina?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A América Latina não possui equivalente ao EU AI Act. A Colômbia lidera com o Conpes 3975 (2019), uma política nacional de IA com diretrizes voluntárias sobre governança responsável. O Brasil avança em legislação específica para IA. Chile, México e Argentina publicaram estratégias nacionais de IA. A maioria dos frameworks latino-americanos se alinha com os princípios de IA da OCDE e são voluntários, sem sanções vinculantes equivalentes às do EU AI Act.' } },
+          {
+            '@type': 'Question',
+            'name': 'O que é o EU AI Act e quando se aplica?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O EU AI Act é a primeira lei abrangente de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Práticas proibidas se aplicam a partir de agosto de 2024. Obrigações de modelos GPAI (para modelos GPT-5.6, Claude, classe Gemini) aplicam-se a partir de agosto de 2025. Os deveres de transparência do Artigo 50 aplicam-se a partir de agosto de 2026. Os requisitos de sistemas de IA de alto risco autônomos foram adiados pelo Omnibus Digital, em vigor desde 27 de julho de 2026, de agosto de 2026 para 2 de dezembro de 2027. Aplica-se a qualquer organização que coloque IA no mercado da UE ou use IA que afete residentes da UE.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O EU AI Act se aplica a empresas não pertencentes à UE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. O EU AI Act tem alcance extraterritorial — aplica-se a qualquer fornecedor cujas saídas de IA são usadas na UE, independentemente de onde o fornecedor está sediado. Uma empresa dos EUA cujo produto de IA é usado por residentes da UE precisa estar em conformidade. Este é o mesmo princípio extraterritorial que tornou o RGPD um padrão global.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais são as multas por violar o EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Multas de até €35 milhões ou 7% do faturamento anual global (o que for maior) por práticas de IA proibidas. Até €15 milhões ou 3% por violações de IA de alto risco. Até €7,5 milhões ou 1% por fornecer informações incorretas às autoridades de aplicação. O maior percentual ou valor fixo se aplica.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais aplicações de IA são proibidas sob o EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Proibidas (Risco Inaceitável): sistemas de pontuação social por autoridades públicas; identificação biométrica em tempo real em espaços públicos (com exceções restritas); IA que explora vulnerabilidades psicológicas; coleta indiscriminada de imagens faciais da internet. Essas estão proibidas desde agosto de 2024.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como a regulamentação de IA dos EUA difere da UE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Os EUA não têm lei federal de IA. Reguladores setoriais existentes (FTC, FDA, CFPB, EEOC) aplicam seus mandatos existentes à IA em seus domínios. A Ordem Executiva de Segurança de IA de Biden (outubro de 2023) foi revogada em janeiro de 2025 e substituída por um Plano de Ação de IA focado em competitividade. O NIST AI Risk Management Framework é voluntário. A regulamentação dos EUA é reativa e específica do setor; a regulamentação da UE é proativa e horizontal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O DeepSeek é seguro para usar em organizações da UE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O DeepSeek está sujeito a regulamentações do CAC (Administração do Ciberespaço da China), o que significa que o governo chinês pode compelir a divulgação de dados. A política de privacidade do DeepSeek afirma que os dados são armazenados em servidores na China. Para organizações da UE que processam dados pessoais, usar o DeepSeek requer salvaguardas de transferência de dados em conformidade com o RGPD (SCCs), que são difíceis de aplicar contra a lei chinesa. Organizações governamentais e de infraestrutura crítica em estados-membros da UE geralmente evitam ferramentas de IA chinesas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é o Efeito Bruxelas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Efeito Bruxelas descreve como as regulamentações da UE se tornam padrões globais de fato porque empresas multinacionais preferem um padrão rigoroso à manutenção de conformidade separada para cada jurisdição. O RGPD se tornou um padrão global de privacidade dessa forma. O EU AI Act está fazendo o mesmo para a IA — OpenAI, Anthropic e Google precisam cumprir os requisitos GPAI do EU AI Act para seus produtos globais, não apenas versões específicas para a UE.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que a AI Safety Summit de Bletchley Park alcançou?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A AI Safety Summit de novembro de 2023 em Bletchley Park produziu a Declaração de Bletchley — assinada por 28 países incluindo EUA, China e estados-membros da UE — reconhecendo que a IA de fronteira apresenta riscos sérios e requer cooperação internacional. A cúpula estabeleceu o UK AI Safety Institute (AISI) e iniciou uma série de institutos globais de segurança de IA nos EUA e em outros lugares. A participação da China foi notável dado as tensões geopolíticas mais amplas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como a França apoia a IA de forma diferente da Alemanha?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A França prioriza o posicionamento internacional de alto perfil (AI Action Summit em Paris, fevereiro de 2025) e a pesquisa de IA de pesos abertos por meio do INRIA e CNRS, com €2 bilhões em investimento público. A Alemanha foca na IA industrial aplicada por meio da Fraunhofer Society e DFKI, com €5 bilhões investidos 2019–2025, e enfatiza frameworks de governança e responsabilidade de IA por meio da legislação federal. Ambas têm estratégias nacionais de IA, mas com diferentes ênfases setoriais.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como o EU AI Act afeta a IA usada na engenharia de prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A maior parte do trabalho de engenharia de prompt se enquadra na categoria de Risco Limitado ou Mínimo — chatbots padrão e ferramentas de escrita de IA exigem divulgação (os usuários precisam saber que interagem com IA), mas sem avaliação de conformidade. As classificações de alto risco se aplicam quando a IA toma decisões significativas: triagem de empregos, avaliação de crédito, avaliação educacional ou aplicação da lei.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é o Processo de IA de Hiroshima e o que ele alcançou?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Processo de IA de Hiroshima é uma iniciativa do G7 lançada na Cúpula de Hiroshima de 2023 sob a presidência japonesa do G7. Produziu o Código de Conduta do Processo de IA de Hiroshima — 11 princípios orientadores voluntários para desenvolvedores de sistemas de IA avançados, adotados pelas nações do G7 em outubro de 2023. Os princípios cobrem transparência, relatórios de incidentes, testes de segurança e marca d\'água de conteúdo gerado por IA. O Código de Conduta é voluntário, não juridicamente vinculante, mas sinaliza coordenação internacional separada do EU AI Act juridicamente vinculante.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Organizações da UE podem usar DeepSeek para aplicações comerciais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Tecnicamente sim, com salvaguardas contratuais em conformidade com o RGPD (Cláusulas Contratuais Padrão). Na prática, as SCCs são difíceis de aplicar contra obrigações da lei chinesa, que exigem que o DeepSeek cumpra as solicitações de divulgação de dados do CAC. A aquisição governamental é uma restrição separada: o BSI da Alemanha, a ANSSI da França e o NCSC dos Países Baixos emitiram avisos ou restrições sobre ferramentas de IA chinesas para uso governamental e de infraestrutura crítica. Organizações privadas da UE podem usar o DeepSeek comercialmente, mas devem realizar uma Avaliação de Impacto de Transferência nos termos do Artigo 46 do RGPD e documentar o risco residual.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O EU AI Act prejudica ou ajuda a competitividade da UE em IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Este é um dilema estratégico genuíno: o EU AI Act pode desacelerar as startups de IA da UE, mas fortalece a credibilidade regulatória da Europa globalmente. Por um lado, os custos de conformidade e as avaliações de conformidade criam atrito para as empresas da UE — a Mistral AI da França é mais restrita do que os concorrentes dos EUA. Por outro lado, o Efeito Bruxelas significa que o framework regulatório da UE se torna o padrão global, dando às empresas sediadas na UE uma vantagem competitiva em conformidade. A Europa está apostando em "liderança regulatória" em vez de "liderança de capacidade bruta" — uma estratégia de IA fundamentalmente diferente dos EUA ou da China.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como a capacidade de computação da Europa se compara aos EUA e à China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A Europa fica significativamente atrás em infraestrutura de computação. Os EUA dominam a fabricação de GPU (Nvidia ~80% de participação de mercado) e o silício personalizado. A China fabrica na TSMC (Taiwan) e usa GPUs Nvidia H e A-series restritas. A Europa não tem equivalente: a ASML (Países Baixos) fabrica equipamentos de fabricação de chips, mas não possui fábricas. A EU Chips Act (€43 bilhões) visa construir fábricas da Intel e TSMC no território da UE, mas nenhuma estará operacional antes de 2027–2029. Esta é a principal vulnerabilidade de infraestrutura da Europa: treinar modelos de fronteira requer milhares de GPUs rodando por meses. Sem capacidade de fabricação doméstica, a Europa permanece dependente dos EUA (Nvidia) e de Taiwan (TSMC).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a vantagem da Europa em IA além da regulamentação?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A Europa tem três vantagens não regulatórias: (1) Mistral AI e outros modelos de pesos abertos financiados pela UE fornecem alternativas em conformidade com o RGPD sem dependências dos EUA ou da China; (2) A Europa lidera em pesquisa de segurança de IA por meio do UK AI Safety Institute, ETH Zurique e centros de pesquisa franceses (INRIA, CNRS); (3) A força de trabalho altamente qualificada da Europa e os talentos existentes em software/semicondutores lhe dão vantagem em aplicações de IA e silício personalizado. No entanto, nenhuma dessas vantagens compensa a desvantagem da Europa na capacidade de modelos de fronteira — os EUA lideram no GPT-5.6 e Claude, e a China na escala de implantação e volume. A estratégia da Europa é "fazer o que você é bom (segurança, regulamentação, ética) em vez de competir na capacidade bruta".',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é o EU AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O EU AI Act é o primeiro framework legal abrangente do mundo para inteligência artificial, aprovado pelo Parlamento Europeu em março de 2024 com 523 votos a favor. Ele classifica sistemas de IA em quatro níveis de risco — Inaceitável, Alto, Limitado e Mínimo — e aplica diferentes requisitos e multas a cada nível. A aplicação plena entra em vigor em agosto de 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais aplicações de IA a UE proíbe completamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O EU AI Act proíbe: sistemas de pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos (com exceções restritas para forças de segurança), IA que explore vulnerabilidades cognitivas e coleta indiscriminada de imagens faciais da internet para construir bancos de dados de reconhecimento. Esses são categorizados como Risco Inaceitável.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A IA da China é tão capaz quanto os sistemas de IA dos EUA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O DeepSeek R1, lançado em janeiro de 2025, superou o GPT-5.6 em benchmarks de raciocínio e codificação (AIME 2024: 79,8% vs 74,4% do GPT-5.6, MATH-500: 97,3%, HumanEval) enquanto supostamente foi treinado a um custo de ~US$6 milhões — uma redução de 94% em relação aos custos estimados de treinamento de modelos de fronteira. Os modelos líderes da China são competitivos em muitas tarefas, mas ficam atrás em raciocínio multilíngue e benchmarks de segurança.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Empresas da UE podem usar GPT-5.6 e Claude sob o AI Act?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, para a maioria dos casos de uso. GPT-5.6 e Claude Opus 5 se qualificam como modelos de IA de Propósito Geral (GPAI) e devem cumprir obrigações de transparência — incluindo publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — que entraram em vigor em agosto de 2025. OpenAI e Anthropic publicaram documentação de conformidade GPAI para usuários da UE.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como o DeepSeek afeta a corrida geopolítica de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O lançamento do DeepSeek R1 em janeiro de 2025 demonstrou que capacidades de IA de fronteira são alcançáveis a custos de computação significativamente menores do que se assumia anteriormente. Isso enfraquece o argumento de que os controles de exportação sobre GPUs da Nvidia limitarão permanentemente o desenvolvimento de IA na China. Acelerou debates de política nos EUA e na UE sobre se estratégias de contenção baseadas em computação são suficientes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais frameworks de governança de IA existem na América Latina?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A América Latina não possui equivalente ao EU AI Act. A Colômbia lidera com o Conpes 3975 (2019), uma política nacional de IA com diretrizes voluntárias sobre governança responsável. O Brasil avança em legislação específica para IA. Chile, México e Argentina publicaram estratégias nacionais de IA. A maioria dos frameworks latino-americanos se alinha com os princípios de IA da OCDE e são voluntários, sem sanções vinculantes equivalentes às do EU AI Act.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -5800,6 +7114,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'O EU AI Act prejudica ou ajuda a competitividade da UE em IA?', a: 'Este é um dilema estratégico genuíno: o EU AI Act pode desacelerar as startups de IA da UE, mas fortalece a credibilidade regulatória da Europa globalmente. Por um lado, os custos de conformidade e as avaliações de conformidade criam atrito para as empresas da UE — a Mistral AI da França é mais restrita do que os concorrentes dos EUA. Por outro lado, o Efeito Bruxelas significa que o framework regulatório da UE se torna o padrão global, dando às empresas sediadas na UE uma vantagem competitiva em conformidade. A Europa está apostando em "liderança regulatória" em vez de "liderança de capacidade bruta" — uma estratégia de IA fundamentalmente diferente dos EUA ou da China.' },
             { q: 'Como a capacidade de computação da Europa se compara aos EUA e à China?', a: 'A Europa fica significativamente atrás em infraestrutura de computação. Os EUA dominam a fabricação de GPU (Nvidia ~80% de participação de mercado) e o silício personalizado. A China fabrica na TSMC (Taiwan) e usa GPUs Nvidia H e A-series restritas. A Europa não tem equivalente: a ASML (Países Baixos) fabrica equipamentos de fabricação de chips, mas não possui fábricas. A EU Chips Act (€43 bilhões) visa construir fábricas da Intel e TSMC no território da UE, mas nenhuma estará operacional antes de 2027–2029. Esta é a principal vulnerabilidade de infraestrutura da Europa: treinar modelos de fronteira requer milhares de GPUs rodando por meses. Sem capacidade de fabricação doméstica, a Europa permanece dependente dos EUA (Nvidia) e de Taiwan (TSMC).' },
             { q: 'Qual é a vantagem da Europa em IA além da regulamentação?', a: 'A Europa tem três vantagens não regulatórias: (1) Mistral AI e outros modelos de pesos abertos financiados pela UE fornecem alternativas em conformidade com o RGPD sem dependências dos EUA ou da China; (2) A Europa lidera em pesquisa de segurança de IA por meio do UK AI Safety Institute, ETH Zurique e centros de pesquisa franceses (INRIA, CNRS); (3) A força de trabalho altamente qualificada da Europa e os talentos existentes em software/semicondutores lhe dão vantagem em aplicações de IA e silício personalizado. No entanto, nenhuma dessas vantagens compensa a desvantagem da Europa na capacidade de modelos de fronteira — os EUA lideram no GPT-5.6 e Claude, e a China na escala de implantação e volume. A estratégia da Europa é "fazer o que você é bom (segurança, regulamentação, ética) em vez de competir na capacidade bruta".' },
+            { q: 'O que é o EU AI Act?', a: 'O EU AI Act é o primeiro framework legal abrangente do mundo para inteligência artificial, aprovado pelo Parlamento Europeu em março de 2024 com 523 votos a favor. Ele classifica sistemas de IA em quatro níveis de risco — Inaceitável, Alto, Limitado e Mínimo — e aplica diferentes requisitos e multas a cada nível. A aplicação plena entra em vigor em agosto de 2026.' },
+            { q: 'Quais aplicações de IA a UE proíbe completamente?', a: 'O EU AI Act proíbe: sistemas de pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos (com exceções restritas para forças de segurança), IA que explore vulnerabilidades cognitivas e coleta indiscriminada de imagens faciais da internet para construir bancos de dados de reconhecimento. Esses são categorizados como Risco Inaceitável.' },
+            { q: 'A IA da China é tão capaz quanto os sistemas de IA dos EUA?', a: 'O DeepSeek R1, lançado em janeiro de 2025, superou o GPT-5.6 em benchmarks de raciocínio e codificação (AIME 2024: 79,8% vs 74,4% do GPT-5.6, MATH-500: 97,3%, HumanEval) enquanto supostamente foi treinado a um custo de ~US$6 milhões — uma redução de 94% em relação aos custos estimados de treinamento de modelos de fronteira. Os modelos líderes da China são competitivos em muitas tarefas, mas ficam atrás em raciocínio multilíngue e benchmarks de segurança.' },
+            { q: 'Empresas da UE podem usar GPT-5.6 e Claude sob o AI Act?', a: 'Sim, para a maioria dos casos de uso. GPT-5.6 e Claude Opus 5 se qualificam como modelos de IA de Propósito Geral (GPAI) e devem cumprir obrigações de transparência — incluindo publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — que entraram em vigor em agosto de 2025. OpenAI e Anthropic publicaram documentação de conformidade GPAI para usuários da UE.' },
+            { q: 'Como o DeepSeek afeta a corrida geopolítica de IA?', a: 'O lançamento do DeepSeek R1 em janeiro de 2025 demonstrou que capacidades de IA de fronteira são alcançáveis a custos de computação significativamente menores do que se assumia anteriormente. Isso enfraquece o argumento de que os controles de exportação sobre GPUs da Nvidia limitarão permanentemente o desenvolvimento de IA na China. Acelerou debates de política nos EUA e na UE sobre se estratégias de contenção baseadas em computação são suficientes.' },
+            { q: 'Quais frameworks de governança de IA existem na América Latina?', a: 'A América Latina não possui equivalente ao EU AI Act. A Colômbia lidera com o Conpes 3975 (2019), uma política nacional de IA com diretrizes voluntárias sobre governança responsável. O Brasil avança em legislação específica para IA. Chile, México e Argentina publicaram estratégias nacionais de IA. A maioria dos frameworks latino-americanos se alinha com os princípios de IA da OCDE e são voluntários, sem sanções vinculantes equivalentes às do EU AI Act.' },
           ],
         },
 

@@ -109,11 +109,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Is Qwen3-Coder better than DeepSeek-Coder for Python?', a: 'Qwen3-Coder 32B scores 91.5% HumanEval vs DeepSeek-Coder-V2-Lite at ~80%. For Python specifically, Qwen3-Coder 32B leads at the same VRAM tier.' },
-          { q: 'Does Qwen3-Coder support Chinese code comments?', a: 'Yes. It handles mixed Chinese/English code comments natively — a significant advantage for Chinese developers.' },
-          { q: 'Can I use Qwen3-Coder with Continue.dev or Cline?', a: 'Yes. Both support Ollama backends. Set the model to `qwen2.5-coder:32b` (or your chosen size) in the Continue.dev config or Cline settings.' },
-          { q: 'What quantization level should I use?', a: 'Q4_K_M is the best balance: near full-precision quality, ~35% VRAM reduction. Use Q8_0 only if you have abundant VRAM and want maximum accuracy.' },
-        ],
+            { q: 'Is Qwen3-Coder better than DeepSeek-Coder for Python?', a: 'Qwen3-Coder 32B scores 91.5% HumanEval vs DeepSeek-Coder-V2-Lite at ~80%. For Python specifically, Qwen3-Coder 32B leads at the same VRAM tier.' },
+            { q: 'Does Qwen3-Coder support Chinese code comments?', a: 'Yes. It handles mixed Chinese/English code comments natively — a significant advantage for Chinese developers.' },
+            { q: 'Can I use Qwen3-Coder with Continue.dev or Cline?', a: 'Yes. Both support Ollama backends. Set the model to `qwen2.5-coder:32b` (or your chosen size) in the Continue.dev config or Cline settings.' },
+            { q: 'What quantization level should I use?', a: 'Q4_K_M is the best balance: near full-precision quality, ~35% VRAM reduction. Use Q8_0 only if you have abundant VRAM and want maximum accuracy.' },
+            { q: 'Best Qwen model for coding at 8 GB VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — fits in 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s.' },
+            { q: 'Best Qwen coding model at 12–16 GB VRAM?', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, 88.0% HumanEval, the best quality-per-VRAM in the Coder family.' },
+          ],
       },
     },
     schema: {
@@ -137,10 +139,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'Best Qwen model for coding at 8 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — fits in 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s.' } },
-        { '@type': 'Question', name: 'Best Qwen coding model at 12–16 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, 88.0% HumanEval, the best quality-per-VRAM in the Coder family.' } },
-        { '@type': 'Question', name: 'Is Qwen3-Coder better than DeepSeek-Coder?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 32B (91.5% HumanEval) outperforms DeepSeek-Coder-V2-Lite at the same VRAM tier.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Is Qwen3-Coder better than DeepSeek-Coder for Python?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B scores 91.5% HumanEval vs DeepSeek-Coder-V2-Lite at ~80%. For Python specifically, Qwen3-Coder 32B leads at the same VRAM tier.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Qwen3-Coder support Chinese code comments?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. It handles mixed Chinese/English code comments natively — a significant advantage for Chinese developers.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use Qwen3-Coder with Continue.dev or Cline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Both support Ollama backends. Set the model to `qwen2.5-coder:32b` (or your chosen size) in the Continue.dev config or Cline settings.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What quantization level should I use?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M is the best balance: near full-precision quality, ~35% VRAM reduction. Use Q8_0 only if you have abundant VRAM and want maximum accuracy.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Best Qwen model for coding at 8 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M — fits in 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Best Qwen coding model at 12–16 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, 88.0% HumanEval, the best quality-per-VRAM in the Coder family.',
+            },
+          },
+        ],
     },
   },
 
@@ -207,11 +254,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Ist Qwen3-Coder besser als DeepSeek-Coder für Python?', a: 'Qwen3-Coder 32B erzielt 91,5 % HumanEval vs. ~80 % für DeepSeek-Coder-V2-Lite bei gleichem VRAM.' },
-          { q: 'Unterstützt Qwen3-Coder chinesische Code-Kommentare?', a: 'Ja. Es verarbeitet gemischte chinesische/englische Code-Kommentare nativ.' },
-          { q: 'Kann ich Qwen3-Coder mit Continue.dev oder Cline verwenden?', a: 'Ja. Ollama als Backend konfigurieren, Modell auf `qwen2.5-coder:32b` setzen.' },
-          { q: 'Welches Quantisierungsniveau sollte ich verwenden?', a: 'Q4_K_M: bestes Gleichgewicht zwischen Qualität und VRAM-Reduzierung (~35 %).' },
-        ],
+            { q: 'Ist Qwen3-Coder besser als DeepSeek-Coder für Python?', a: 'Qwen3-Coder 32B erzielt 91,5 % HumanEval vs. ~80 % für DeepSeek-Coder-V2-Lite bei gleichem VRAM.' },
+            { q: 'Unterstützt Qwen3-Coder chinesische Code-Kommentare?', a: 'Ja. Es verarbeitet gemischte chinesische/englische Code-Kommentare nativ.' },
+            { q: 'Kann ich Qwen3-Coder mit Continue.dev oder Cline verwenden?', a: 'Ja. Ollama als Backend konfigurieren, Modell auf `qwen2.5-coder:32b` setzen.' },
+            { q: 'Welches Quantisierungsniveau sollte ich verwenden?', a: 'Q4_K_M: bestes Gleichgewicht zwischen Qualität und VRAM-Reduzierung (~35 %).' },
+            { q: 'Bestes Qwen-Coding-Modell bei 8 GB VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — 5,5 GB VRAM, 79,7 % HumanEval.' },
+          ],
       },
     },
     schema: {
@@ -234,8 +282,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Bestes Qwen-Coding-Modell bei 8 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — 5,5 GB VRAM, 79,7 % HumanEval.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Ist Qwen3-Coder besser als DeepSeek-Coder für Python?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B erzielt 91,5 % HumanEval vs. ~80 % für DeepSeek-Coder-V2-Lite bei gleichem VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Unterstützt Qwen3-Coder chinesische Code-Kommentare?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Es verarbeitet gemischte chinesische/englische Code-Kommentare nativ.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Qwen3-Coder mit Continue.dev oder Cline verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Ollama als Backend konfigurieren, Modell auf `qwen2.5-coder:32b` setzen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Quantisierungsniveau sollte ich verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M: bestes Gleichgewicht zwischen Qualität und VRAM-Reduzierung (~35 %).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Bestes Qwen-Coding-Modell bei 8 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M — 5,5 GB VRAM, 79,7 % HumanEval.',
+            },
+          },
+        ],
     },
   },
 
@@ -306,11 +393,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Qwen3-Coder est-il meilleur que DeepSeek-Coder ?', a: 'Qwen3-Coder 32B atteint 91,5 % HumanEval vs ~80 % pour DeepSeek-Coder-V2-Lite au même VRAM.' },
-          { q: 'Qwen3-Coder supporte-t-il les commentaires en chinois ?', a: 'Oui, il gère nativement les commentaires chinois/anglais mixtes.' },
-          { q: 'Compatible avec Continue.dev ou Cline ?', a: 'Oui. Configurer Ollama comme backend, modèle `qwen2.5-coder:32b`.' },
-          { q: 'Quelle quantisation utiliser ?', a: 'Q4_K_M : meilleur équilibre qualité/réduction VRAM (~35 %).' },
-        ],
+            { q: 'Qwen3-Coder est-il meilleur que DeepSeek-Coder ?', a: 'Qwen3-Coder 32B atteint 91,5 % HumanEval vs ~80 % pour DeepSeek-Coder-V2-Lite au même VRAM.' },
+            { q: 'Qwen3-Coder supporte-t-il les commentaires en chinois ?', a: 'Oui, il gère nativement les commentaires chinois/anglais mixtes.' },
+            { q: 'Compatible avec Continue.dev ou Cline ?', a: 'Oui. Configurer Ollama comme backend, modèle `qwen2.5-coder:32b`.' },
+            { q: 'Quelle quantisation utiliser ?', a: 'Q4_K_M : meilleur équilibre qualité/réduction VRAM (~35 %).' },
+            { q: 'Meilleur modèle Qwen pour coder à 8 Go VRAM ?', a: 'Qwen3-Coder 7B Q4_K_M — 5,5 Go VRAM, 79,7 % HumanEval.' },
+          ],
       },
     },
     schema: {
@@ -333,8 +421,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        { '@type': 'Question', name: 'Meilleur modèle Qwen pour coder à 8 Go VRAM ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — 5,5 Go VRAM, 79,7 % HumanEval.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder est-il meilleur que DeepSeek-Coder ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B atteint 91,5 % HumanEval vs ~80 % pour DeepSeek-Coder-V2-Lite au même VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder supporte-t-il les commentaires en chinois ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, il gère nativement les commentaires chinois/anglais mixtes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Compatible avec Continue.dev ou Cline ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Configurer Ollama comme backend, modèle `qwen2.5-coder:32b`.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle quantisation utiliser ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M : meilleur équilibre qualité/réduction VRAM (~35 %).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Meilleur modèle Qwen pour coder à 8 Go VRAM ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M — 5,5 Go VRAM, 79,7 % HumanEval.',
+            },
+          },
+        ],
     },
   },
 
@@ -405,11 +532,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'Qwen3-CoderはDeepSeek-CoderよりPython性能が良いですか？', a: 'Qwen3-Coder 32BはHumanEval 91.5%で、同VRAMのDeepSeek-Coder-V2-Lite（~80%）を上回ります。' },
-          { q: 'Qwen3-Coderは中国語コメントに対応していますか？', a: 'はい。中英混在コメントをネイティブで処理できます。' },
-          { q: 'Continue.devやClineで使えますか？', a: 'はい。OllamaバックエンドとしてモデルをQwen3-Coderに設定するだけです。' },
-          { q: '推奨量子化レベルは？', a: 'Q4_K_M——品質とVRAM削減（~35%）の最良バランス。' },
-        ],
+            { q: 'Qwen3-CoderはDeepSeek-CoderよりPython性能が良いですか？', a: 'Qwen3-Coder 32BはHumanEval 91.5%で、同VRAMのDeepSeek-Coder-V2-Lite（~80%）を上回ります。' },
+            { q: 'Qwen3-Coderは中国語コメントに対応していますか？', a: 'はい。中英混在コメントをネイティブで処理できます。' },
+            { q: 'Continue.devやClineで使えますか？', a: 'はい。OllamaバックエンドとしてモデルをQwen3-Coderに設定するだけです。' },
+            { q: '推奨量子化レベルは？', a: 'Q4_K_M——品質とVRAM削減（~35%）の最良バランス。' },
+            { q: '8 GB VRAMでのコーディング向け最適Qwenモデルは？', a: 'Qwen3-Coder 7B Q4_K_M——5.5 GB VRAM、HumanEval 79.7%。' },
+          ],
       },
     },
     schema: {
@@ -432,8 +560,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        { '@type': 'Question', name: '8 GB VRAMでのコーディング向け最適Qwenモデルは？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M——5.5 GB VRAM、HumanEval 79.7%。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-CoderはDeepSeek-CoderよりPython性能が良いですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32BはHumanEval 91.5%で、同VRAMのDeepSeek-Coder-V2-Lite（~80%）を上回ります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coderは中国語コメントに対応していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。中英混在コメントをネイティブで処理できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Continue.devやClineで使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。OllamaバックエンドとしてモデルをQwen3-Coderに設定するだけです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '推奨量子化レベルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M——品質とVRAM削減（~35%）の最良バランス。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8 GB VRAMでのコーディング向け最適Qwenモデルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M——5.5 GB VRAM、HumanEval 79.7%。',
+            },
+          },
+        ],
     },
   },
 
@@ -506,11 +673,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'Qwen3-Coder比DeepSeek-Coder更适合Python吗？', a: 'Qwen3-Coder 32B HumanEval 91.5%，同显存的DeepSeek-Coder-V2-Lite约80%。Python专项Qwen3-Coder 32B领先。' },
-          { q: 'Qwen3-Coder支持中文代码注释吗？', a: '支持。原生处理中英混合代码注释——对中文开发者是显著优势。' },
-          { q: '可以与Continue.dev或Cline配合使用吗？', a: '可以。两者均支持Ollama后端，在设置中将模型设为`qwen2.5-coder:32b`即可。' },
-          { q: '应该使用哪种量化级别？', a: 'Q4_K_M：质量与显存节省（~35%）的最佳平衡。' },
-        ],
+            { q: 'Qwen3-Coder比DeepSeek-Coder更适合Python吗？', a: 'Qwen3-Coder 32B HumanEval 91.5%，同显存的DeepSeek-Coder-V2-Lite约80%。Python专项Qwen3-Coder 32B领先。' },
+            { q: 'Qwen3-Coder支持中文代码注释吗？', a: '支持。原生处理中英混合代码注释——对中文开发者是显著优势。' },
+            { q: '可以与Continue.dev或Cline配合使用吗？', a: '可以。两者均支持Ollama后端，在设置中将模型设为`qwen2.5-coder:32b`即可。' },
+            { q: '应该使用哪种量化级别？', a: 'Q4_K_M：质量与显存节省（~35%）的最佳平衡。' },
+            { q: '8 GB显存下编程最佳Qwen模型？', a: 'Qwen3-Coder 7B Q4_K_M——5.5 GB显存，HumanEval 79.7%。' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -541,9 +709,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        { '@type': 'Question', name: '8 GB显存下编程最佳Qwen模型？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M——5.5 GB显存，HumanEval 79.7%。' } },
-        { '@type': 'Question', name: 'Qwen3-Coder支持中文注释吗？', acceptedAnswer: { '@type': 'Answer', text: '支持，原生处理中英混合代码注释。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder比DeepSeek-Coder更适合Python吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B HumanEval 91.5%，同显存的DeepSeek-Coder-V2-Lite约80%。Python专项Qwen3-Coder 32B领先。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder支持中文代码注释吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '支持。原生处理中英混合代码注释——对中文开发者是显著优势。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '可以与Continue.dev或Cline配合使用吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。两者均支持Ollama后端，在设置中将模型设为`qwen2.5-coder:32b`即可。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '应该使用哪种量化级别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M：质量与显存节省（~35%）的最佳平衡。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8 GB显存下编程最佳Qwen模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M——5.5 GB显存，HumanEval 79.7%。',
+            },
+          },
+        ],
     },
   },
 
@@ -616,11 +822,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qwen3-Coder é melhor que DeepSeek-Coder para Python?', a: 'Qwen3-Coder 32B obtém 91,5% de HumanEval frente a ~80% do DeepSeek-Coder-V2-Lite. Para Python especificamente, Qwen3-Coder 32B lidera no mesmo nível de VRAM.' },
-          { q: 'Qwen3-Coder suporta comentários em chinês?', a: 'Sim. Lida nativamente com comentários de código mistos chinês/inglês — uma vantagem significativa para desenvolvedores chineses.' },
-          { q: 'Posso usar Qwen3-Coder com Continue.dev ou Cline?', a: 'Sim. Ambos suportam backends Ollama. Defina o modelo como `qwen2.5-coder:32b` na configuração do Continue.dev ou nas configurações do Cline.' },
-          { q: 'Qual nível de quantização devo usar?', a: 'Q4_K_M é o melhor equilíbrio: qualidade quase igual à precisão total com ~35% de redução de VRAM. Use Q8_0 apenas se tiver VRAM sobrando e quiser máxima precisão.' },
-        ],
+            { q: 'Qwen3-Coder é melhor que DeepSeek-Coder para Python?', a: 'Qwen3-Coder 32B obtém 91,5% de HumanEval frente a ~80% do DeepSeek-Coder-V2-Lite. Para Python especificamente, Qwen3-Coder 32B lidera no mesmo nível de VRAM.' },
+            { q: 'Qwen3-Coder suporta comentários em chinês?', a: 'Sim. Lida nativamente com comentários de código mistos chinês/inglês — uma vantagem significativa para desenvolvedores chineses.' },
+            { q: 'Posso usar Qwen3-Coder com Continue.dev ou Cline?', a: 'Sim. Ambos suportam backends Ollama. Defina o modelo como `qwen2.5-coder:32b` na configuração do Continue.dev ou nas configurações do Cline.' },
+            { q: 'Qual nível de quantização devo usar?', a: 'Q4_K_M é o melhor equilíbrio: qualidade quase igual à precisão total com ~35% de redução de VRAM. Use Q8_0 apenas se tiver VRAM sobrando e quiser máxima precisão.' },
+            { q: 'Qual é o melhor modelo Qwen para programar com 8 GB de VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.' },
+            { q: 'Qual é o melhor modelo Qwen para programar com 12–16 GB de VRAM?', a: 'Qwen3-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.' },
+          ],
       },
     },
     schema: {
@@ -644,9 +852,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programar com 8 GB de VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.' } },
-        { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programar com 12–16 GB de VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder é melhor que DeepSeek-Coder para Python?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B obtém 91,5% de HumanEval frente a ~80% do DeepSeek-Coder-V2-Lite. Para Python especificamente, Qwen3-Coder 32B lidera no mesmo nível de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder suporta comentários em chinês?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Lida nativamente com comentários de código mistos chinês/inglês — uma vantagem significativa para desenvolvedores chineses.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar Qwen3-Coder com Continue.dev ou Cline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Ambos suportam backends Ollama. Defina o modelo como `qwen2.5-coder:32b` na configuração do Continue.dev ou nas configurações do Cline.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual nível de quantização devo usar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M é o melhor equilíbrio: qualidade quase igual à precisão total com ~35% de redução de VRAM. Use Q8_0 apenas se tiver VRAM sobrando e quiser máxima precisão.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o melhor modelo Qwen para programar com 8 GB de VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o melhor modelo Qwen para programar com 12–16 GB de VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.',
+            },
+          },
+        ],
     },
   },
   es: {
@@ -718,11 +972,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Es Qwen3-Coder mejor que DeepSeek-Coder para Python?', a: 'Qwen3-Coder 32B obtiene 91.5% HumanEval frente a ~80% de DeepSeek-Coder-V2-Lite. Para Python específicamente, Qwen3-Coder 32B lidera al mismo nivel de VRAM.' },
-          { q: '¿Qwen3-Coder admite comentarios en chino?', a: 'Sí. Maneja comentarios de código mixtos chino/inglés de forma nativa — una ventaja significativa para desarrolladores chinos.' },
-          { q: '¿Puedo usar Qwen3-Coder con Continue.dev o Cline?', a: 'Sí. Ambos admiten backends de Ollama. Establece el modelo como `qwen2.5-coder:32b` en la configuración de Continue.dev o Cline.' },
-          { q: '¿Qué nivel de cuantización debo usar?', a: 'Q4_K_M es el mejor equilibrio: calidad casi igual a la precisión completa con ~35% de reducción de VRAM. Usa Q8_0 solo si tienes VRAM de sobra y quieres máxima precisión.' },
-        ],
+            { q: '¿Es Qwen3-Coder mejor que DeepSeek-Coder para Python?', a: 'Qwen3-Coder 32B obtiene 91.5% HumanEval frente a ~80% de DeepSeek-Coder-V2-Lite. Para Python específicamente, Qwen3-Coder 32B lidera al mismo nivel de VRAM.' },
+            { q: '¿Qwen3-Coder admite comentarios en chino?', a: 'Sí. Maneja comentarios de código mixtos chino/inglés de forma nativa — una ventaja significativa para desarrolladores chinos.' },
+            { q: '¿Puedo usar Qwen3-Coder con Continue.dev o Cline?', a: 'Sí. Ambos admiten backends de Ollama. Establece el modelo como `qwen2.5-coder:32b` en la configuración de Continue.dev o Cline.' },
+            { q: '¿Qué nivel de cuantización debo usar?', a: 'Q4_K_M es el mejor equilibrio: calidad casi igual a la precisión completa con ~35% de reducción de VRAM. Usa Q8_0 solo si tienes VRAM de sobra y quieres máxima precisión.' },
+            { q: '¿Cuál es el mejor modelo Qwen para programar con 8 GB VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — cabe en 5.5 GB VRAM, HumanEval 79.7%, 8–15 tok/s.' },
+            { q: '¿Cuál es el mejor modelo Qwen para programar con 12–16 GB VRAM?', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, la mejor relación calidad/VRAM de la familia.' },
+          ],
       },
     },
     schema: {
@@ -746,9 +1002,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿Cuál es el mejor modelo Qwen para programar con 8 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — cabe en 5.5 GB VRAM, HumanEval 79.7%, 8–15 tok/s.' } },
-        { '@type': 'Question', name: '¿Cuál es el mejor modelo Qwen para programar con 12–16 GB VRAM?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, la mejor relación calidad/VRAM de la familia.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Es Qwen3-Coder mejor que DeepSeek-Coder para Python?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B obtiene 91.5% HumanEval frente a ~80% de DeepSeek-Coder-V2-Lite. Para Python específicamente, Qwen3-Coder 32B lidera al mismo nivel de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qwen3-Coder admite comentarios en chino?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Maneja comentarios de código mixtos chino/inglés de forma nativa — una ventaja significativa para desarrolladores chinos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar Qwen3-Coder con Continue.dev o Cline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Ambos admiten backends de Ollama. Establece el modelo como `qwen2.5-coder:32b` en la configuración de Continue.dev o Cline.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué nivel de cuantización debo usar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M es el mejor equilibrio: calidad casi igual a la precisión completa con ~35% de reducción de VRAM. Usa Q8_0 solo si tienes VRAM de sobra y quieres máxima precisión.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor modelo Qwen para programar con 8 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M — cabe en 5.5 GB VRAM, HumanEval 79.7%, 8–15 tok/s.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor modelo Qwen para programar con 12–16 GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, la mejor relación calidad/VRAM de la familia.',
+            },
+          },
+        ],
     },
   },
   ar: {
@@ -815,11 +1117,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'أسئلة متكررة',
         faqs: [
-          { q: 'هل Qwen3-Coder أفضل من DeepSeek-Coder لـPython؟', a: 'Qwen3-Coder 32B يحقق 91.5% HumanEval مقابل ~80% لـDeepSeek-Coder-V2-Lite. لـPython تحديداً، Qwen3-Coder 32B يتصدر عند نفس مستوى VRAM.' },
-          { q: 'هل Qwen3-Coder يدعم التعليقات باللغة الصينية؟', a: 'نعم. يتعامل بشكل أصلي مع تعليقات الكود المختلطة صيني/إنجليزي — ميزة مهمة للمطورين الصينيين.' },
-          { q: 'هل يمكنني استخدام Qwen3-Coder مع Continue.dev أو Cline؟', a: 'نعم. كلاهما يدعم خلفيات Ollama. اضبط النموذج على `qwen2.5-coder:32b` في إعدادات Continue.dev أو في إعدادات Cline.' },
-          { q: 'ما مستوى التكميم الذي يجب استخدامه؟', a: 'Q4_K_M هو أفضل توازن: جودة تقترب من الدقة الكاملة مع تخفيض ~35% في VRAM. استخدم Q8_0 فقط إذا كان لديك VRAM زائدة وتريد أقصى دقة.' },
-        ],
+            { q: 'هل Qwen3-Coder أفضل من DeepSeek-Coder لـPython؟', a: 'Qwen3-Coder 32B يحقق 91.5% HumanEval مقابل ~80% لـDeepSeek-Coder-V2-Lite. لـPython تحديداً، Qwen3-Coder 32B يتصدر عند نفس مستوى VRAM.' },
+            { q: 'هل Qwen3-Coder يدعم التعليقات باللغة الصينية؟', a: 'نعم. يتعامل بشكل أصلي مع تعليقات الكود المختلطة صيني/إنجليزي — ميزة مهمة للمطورين الصينيين.' },
+            { q: 'هل يمكنني استخدام Qwen3-Coder مع Continue.dev أو Cline؟', a: 'نعم. كلاهما يدعم خلفيات Ollama. اضبط النموذج على `qwen2.5-coder:32b` في إعدادات Continue.dev أو في إعدادات Cline.' },
+            { q: 'ما مستوى التكميم الذي يجب استخدامه؟', a: 'Q4_K_M هو أفضل توازن: جودة تقترب من الدقة الكاملة مع تخفيض ~35% في VRAM. استخدم Q8_0 فقط إذا كان لديك VRAM زائدة وتريد أقصى دقة.' },
+            { q: 'ما هو أفضل نموذج Qwen للبرمجة بـ8 GB VRAM؟', a: 'Qwen3-Coder 7B Q4_K_M — يتسع في 5.5 GB VRAM، HumanEval 79.7%، 8–15 رمز/ثانية.' },
+            { q: 'ما هو أفضل نموذج Qwen للبرمجة بـ12–16 GB VRAM؟', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM، HumanEval 88.0%، أفضل نسبة جودة/VRAM في العائلة.' },
+          ],
       },
     },
     schema: {
@@ -843,9 +1147,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'ما هو أفضل نموذج Qwen للبرمجة بـ8 GB VRAM؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — يتسع في 5.5 GB VRAM، HumanEval 79.7%، 8–15 رمز/ثانية.' } },
-        { '@type': 'Question', name: 'ما هو أفضل نموذج Qwen للبرمجة بـ12–16 GB VRAM؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM، HumanEval 88.0%، أفضل نسبة جودة/VRAM في العائلة.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل Qwen3-Coder أفضل من DeepSeek-Coder لـPython؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B يحقق 91.5% HumanEval مقابل ~80% لـDeepSeek-Coder-V2-Lite. لـPython تحديداً، Qwen3-Coder 32B يتصدر عند نفس مستوى VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Qwen3-Coder يدعم التعليقات باللغة الصينية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يتعامل بشكل أصلي مع تعليقات الكود المختلطة صيني/إنجليزي — ميزة مهمة للمطورين الصينيين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام Qwen3-Coder مع Continue.dev أو Cline؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. كلاهما يدعم خلفيات Ollama. اضبط النموذج على `qwen2.5-coder:32b` في إعدادات Continue.dev أو في إعدادات Cline.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما مستوى التكميم الذي يجب استخدامه؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M هو أفضل توازن: جودة تقترب من الدقة الكاملة مع تخفيض ~35% في VRAM. استخدم Q8_0 فقط إذا كان لديك VRAM زائدة وتريد أقصى دقة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أفضل نموذج Qwen للبرمجة بـ8 GB VRAM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M — يتسع في 5.5 GB VRAM، HumanEval 79.7%، 8–15 رمز/ثانية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أفضل نموذج Qwen للبرمجة بـ12–16 GB VRAM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM، HumanEval 88.0%، أفضل نسبة جودة/VRAM في العائلة.',
+            },
+          },
+        ],
     },
   },
   ko: {
@@ -916,11 +1266,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'Qwen3-Coder는 Python에서 DeepSeek-Coder보다 뛰어납니까?', a: 'Qwen3-Coder 32B는 HumanEval 91.5%를 달성하는 반면 DeepSeek-Coder-V2-Lite는 약 80%입니다. Python 전용으로는 동일한 VRAM 수준에서 Qwen3-Coder 32B가 앞서 있습니다.' },
-          { q: 'Qwen3-Coder는 중국어 주석을 지원합니까?', a: '예, 중국어/영어 혼합 코드 주석을 기본적으로 처리합니다. 이는 중국어권 개발자에게 상당한 장점입니다.' },
-          { q: 'Qwen3-Coder를 Continue.dev 또는 Cline과 함께 사용할 수 있습니까?', a: '예, 두 도구 모두 Ollama 백엔드를 지원합니다. Continue.dev 또는 Cline 설정에서 모델을 `qwen2.5-coder:32b`로 지정하십시오.' },
-          { q: '어떤 양자화 수준을 사용해야 합니까?', a: 'Q4_K_M이 최적의 균형을 제공합니다. VRAM을 약 35% 절약하면서 전체 정밀도에 거의 근접한 품질을 유지합니다. Q8_0은 VRAM이 충분하고 최대 정밀도가 필요한 경우에만 사용하십시오.' },
-        ],
+            { q: 'Qwen3-Coder는 Python에서 DeepSeek-Coder보다 뛰어납니까?', a: 'Qwen3-Coder 32B는 HumanEval 91.5%를 달성하는 반면 DeepSeek-Coder-V2-Lite는 약 80%입니다. Python 전용으로는 동일한 VRAM 수준에서 Qwen3-Coder 32B가 앞서 있습니다.' },
+            { q: 'Qwen3-Coder는 중국어 주석을 지원합니까?', a: '예, 중국어/영어 혼합 코드 주석을 기본적으로 처리합니다. 이는 중국어권 개발자에게 상당한 장점입니다.' },
+            { q: 'Qwen3-Coder를 Continue.dev 또는 Cline과 함께 사용할 수 있습니까?', a: '예, 두 도구 모두 Ollama 백엔드를 지원합니다. Continue.dev 또는 Cline 설정에서 모델을 `qwen2.5-coder:32b`로 지정하십시오.' },
+            { q: '어떤 양자화 수준을 사용해야 합니까?', a: 'Q4_K_M이 최적의 균형을 제공합니다. VRAM을 약 35% 절약하면서 전체 정밀도에 거의 근접한 품질을 유지합니다. Q8_0은 VRAM이 충분하고 최대 정밀도가 필요한 경우에만 사용하십시오.' },
+            { q: 'VRAM 8 GB에서 가장 적합한 Qwen 코딩 모델은?', a: 'Qwen3-Coder 7B Q4_K_M — 5.5 GB VRAM에 적재, HumanEval 79.7%, 8–15 tok/s.' },
+            { q: 'VRAM 12–16 GB에서 가장 적합한 Qwen 코딩 모델은?', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, 패밀리 내 최고 VRAM 대비 품질 비율.' },
+          ],
       },
       relatedReading: {
         id: 'related',
@@ -962,9 +1314,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: 'VRAM 8 GB에서 가장 적합한 Qwen 코딩 모델은?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B Q4_K_M — 5.5 GB VRAM에 적재, HumanEval 79.7%, 8–15 tok/s.' } },
-        { '@type': 'Question', name: 'VRAM 12–16 GB에서 가장 적합한 Qwen 코딩 모델은?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, 패밀리 내 최고 VRAM 대비 품질 비율.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder는 Python에서 DeepSeek-Coder보다 뛰어납니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 32B는 HumanEval 91.5%를 달성하는 반면 DeepSeek-Coder-V2-Lite는 약 80%입니다. Python 전용으로는 동일한 VRAM 수준에서 Qwen3-Coder 32B가 앞서 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder는 중국어 주석을 지원합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 중국어/영어 혼합 코드 주석을 기본적으로 처리합니다. 이는 중국어권 개발자에게 상당한 장점입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder를 Continue.dev 또는 Cline과 함께 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 두 도구 모두 Ollama 백엔드를 지원합니다. Continue.dev 또는 Cline 설정에서 모델을 `qwen2.5-coder:32b`로 지정하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '어떤 양자화 수준을 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M이 최적의 균형을 제공합니다. VRAM을 약 35% 절약하면서 전체 정밀도에 거의 근접한 품질을 유지합니다. Q8_0은 VRAM이 충분하고 최대 정밀도가 필요한 경우에만 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'VRAM 8 GB에서 가장 적합한 Qwen 코딩 모델은?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 7B Q4_K_M — 5.5 GB VRAM에 적재, HumanEval 79.7%, 8–15 tok/s.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'VRAM 12–16 GB에서 가장 적합한 Qwen 코딩 모델은?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, 패밀리 내 최고 VRAM 대비 품질 비율.',
+            },
+          },
+        ],
     },
   },
 }

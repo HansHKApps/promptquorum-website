@@ -1083,43 +1083,91 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '¿Qué es la Optimización para Motores Generativos (GEO)?',
-            acceptedAnswer: { '@type': 'Answer', text: 'GEO es la práctica de estructurar el contenido para que los motores de búsqueda con IA lo citen al sintetizar respuestas. A diferencia del SEO tradicional, que apunta al posicionamiento en Google, GEO se centra en ser nombrado entre las 2–7 fuentes que un motor de IA cita por respuesta. Esto requiere: estructura respuesta-primero, entidades claras, marcado de esquema y párrafos independientes y citables.' },
+            'name': '¿Qué es la Optimización para Motores Generativos (GEO)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO es la práctica de estructurar el contenido para que los motores de búsqueda con IA lo citen al sintetizar respuestas. A diferencia del SEO tradicional, que apunta al posicionamiento en Google, GEO se centra en ser nombrado entre las 2–7 fuentes que un motor de IA cita por respuesta.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo se diferencia GEO del SEO tradicional?',
-            acceptedAnswer: { '@type': 'Answer', text: 'El SEO tradicional compite por clics en los resultados de búsqueda de Google. GEO compite por citas en las respuestas generadas por IA. Los factores de posicionamiento son diferentes: el SEO tradicional favorece los backlinks y las señales de los usuarios; GEO favorece los datos estructurados, las jerarquías de encabezados claras, las entidades por párrafo y la estructura de contenido compatible con RAG.' },
+            'name': '¿Cómo se diferencia GEO del SEO tradicional?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El SEO tradicional compite por clics en los resultados de Google. GEO compite por citas en las respuestas generadas por IA. Los factores son diferentes: SEO favorece backlinks y señales de usuarios; GEO favorece datos estructurados, jerarquías claras, entidades por párrafo y estructura compatible con RAG.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cuánto tráfico proviene de los motores de búsqueda con IA?',
-            acceptedAnswer: { '@type': 'Answer', text: 'El tráfico de búsqueda con IA creció un 796 % desde enero de 2024 hasta diciembre de 2025, con las conversiones de sesión creciendo un 6.432 % en el mismo período. El tráfico generado por IA a sitios minoristas de EE. UU. aumentó un 4.700 % interanual a julio de 2025. A pesar de este crecimiento, la búsqueda con IA representa solo el 0,18 % del total de sesiones web.' },
+            'name': '¿Qué motores de búsqueda con IA debería optimizar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los cuatro principales son ChatGPT (OpenAI), Perplexity, Gemini (Google DeepMind) y Claude (Anthropic). Cada uno usa diferentes heurísticas de rastreo y señales de posicionamiento. Optimiza tu contenido para los cuatro.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cuánto mejora el marcado de esquema las tasas de cita de IA?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Las páginas con marcado de esquema JSON-LD correcto obtienen hasta un 40 % más de impresiones de resultados enriquecidos. Las pruebas controladas encontraron que el contenido con datos estructurados correctamente implementados logró tasas de cita un 340 % más altas que el contenido no estructurado idéntico.' },
+            'name': '¿Cuánto tráfico proviene de los motores de búsqueda con IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El tráfico de búsqueda con IA creció un 796 % desde enero de 2024 hasta diciembre de 2025. A pesar de este crecimiento, la búsqueda con IA representa solo el 0,18 % del total de sesiones web. La proyección es que supere a la búsqueda orgánica tradicional en 2–4 años.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Sigue siendo relevante el SEO en la era de la búsqueda con IA?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí — el SEO tradicional es un requisito previo para GEO, no una alternativa. Los sitios posicionados en el top 10 de Google tienen un 25 % de probabilidad de ser citados en AI Overviews; los sitios fuera del top 10 tienen una visibilidad de IA cercana a cero a través de la plataforma de Google. Las señales E-E-A-T que impulsan el posicionamiento tradicional también fortalecen la probabilidad de cita de IA.' },
+            'name': '¿Puedo bloquear mi contenido de los crawlers de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Pero no bloquees ChatGPT, Perplexity, Gemini o Claude si tu objetivo es generar tráfico y citas. Bloquea solo si necesitas proteger el contenido del entrenamiento.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cuál es el primer paso para optimizar mi contenido para GEO?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Empieza auditando tu contenido actual con una perspectiva de IA: toma 10 de tus páginas de mayor tráfico y consulta ChatGPT, Perplexity y Google AI Overviews con preguntas relacionadas con tu tema. Verifica si tu contenido es citado. Desde ahí, prioriza añadir marcado de esquema JSON-LD, reestructurar el contenido al formato respuesta-primero y añadir secciones FAQ.' },
+            'name': '¿Qué impacto tiene el marcado de esquema en GEO?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El marcado de esquema (JSON-LD) es fundamental para GEO. Un estudio de 2026 mostró que TechArticle, FAQPage y HowTo aumentaron la frecuencia de citas en un 40 %.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Es GEO adecuado para empresas hispanohablantes?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Absolutamente. Las empresas B2B hispanohablantes se benefician de GEO: el contenido B2B convierte a través de búsqueda de IA 2–3× mejor, los tomadores de decisiones más jóvenes prefieren Perplexity y ChatGPT para investigación rápida, y las páginas optimizadas para GEO cuestan menos que los anuncios tradicionales. Consulta las leyes de protección de datos locales (LOPD en España, LGPD en Brasil, Ley 1581 en Colombia) antes de enviar datos de usuarios a APIs de IA en la nube.' },
+            'name': '¿Cuál es el primer paso para optimizar mi contenido para GEO?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Empieza auditando tu contenido con una perspectiva de IA: consulta ChatGPT, Perplexity y Google AI Overviews con preguntas relacionadas con tu tema. Verifica si tu contenido es citado. Prioriza añadir marcado de esquema JSON-LD y reestructurar el contenido al formato respuesta-primero.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿GEO es diferente de AEO (Optimización para Motores de Respuesta)?',
-            acceptedAnswer: { '@type': 'Answer', text: 'GEO y AEO están estrechamente relacionados pero no son idénticos. AEO se centra en optimizar para cuadros de respuesta directa en motores de búsqueda tradicionales. GEO apunta a los motores de IA generativos que sintetizan respuestas de múltiples fuentes usando pipelines RAG, requiriendo párrafos independientes y extraíbles que se puedan citar fuera de contexto.' },
+            'name': '¿GEO es diferente de AEO (Optimización para Motores de Respuesta)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO y AEO están estrechamente relacionados pero no son idénticos. AEO se centra en fragmentos destacados en búsqueda tradicional. GEO apunta a motores de IA generativos que sintetizan respuestas de múltiples fuentes usando pipelines RAG.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto mejora el marcado de esquema las tasas de cita de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las páginas con marcado de esquema JSON-LD correcto obtienen hasta un 40 % más de impresiones de resultados enriquecidos. Las pruebas controladas encontraron que el contenido con datos estructurados correctamente implementados logró tasas de cita un 340 % más altas que el contenido no estructurado idéntico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Sigue siendo relevante el SEO en la era de la búsqueda con IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — el SEO tradicional es un requisito previo para GEO, no una alternativa. Los sitios posicionados en el top 10 de Google tienen un 25 % de probabilidad de ser citados en AI Overviews; los sitios fuera del top 10 tienen una visibilidad de IA cercana a cero a través de la plataforma de Google. Las señales E-E-A-T que impulsan el posicionamiento tradicional también fortalecen la probabilidad de cita de IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es GEO adecuado para empresas hispanohablantes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Absolutamente. Las empresas B2B hispanohablantes se benefician de GEO: el contenido B2B convierte a través de búsqueda de IA 2–3× mejor, los tomadores de decisiones más jóvenes prefieren Perplexity y ChatGPT para investigación rápida, y las páginas optimizadas para GEO cuestan menos que los anuncios tradicionales. Consulta las leyes de protección de datos locales (LOPD en España, LGPD en Brasil, Ley 1581 en Colombia) antes de enviar datos de usuarios a APIs de IA en la nube.',
+            },
           },
         ],
       },
@@ -1353,6 +1401,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Qué impacto tiene el marcado de esquema en GEO?', a: 'El marcado de esquema (JSON-LD) es fundamental para GEO. Un estudio de 2026 mostró que TechArticle, FAQPage y HowTo aumentaron la frecuencia de citas en un 40 %.' },
             { q: '¿Cuál es el primer paso para optimizar mi contenido para GEO?', a: 'Empieza auditando tu contenido con una perspectiva de IA: consulta ChatGPT, Perplexity y Google AI Overviews con preguntas relacionadas con tu tema. Verifica si tu contenido es citado. Prioriza añadir marcado de esquema JSON-LD y reestructurar el contenido al formato respuesta-primero.' },
             { q: '¿GEO es diferente de AEO (Optimización para Motores de Respuesta)?', a: 'GEO y AEO están estrechamente relacionados pero no son idénticos. AEO se centra en fragmentos destacados en búsqueda tradicional. GEO apunta a motores de IA generativos que sintetizan respuestas de múltiples fuentes usando pipelines RAG.' },
+            { q: '¿Cuánto mejora el marcado de esquema las tasas de cita de IA?', a: 'Las páginas con marcado de esquema JSON-LD correcto obtienen hasta un 40 % más de impresiones de resultados enriquecidos. Las pruebas controladas encontraron que el contenido con datos estructurados correctamente implementados logró tasas de cita un 340 % más altas que el contenido no estructurado idéntico.' },
+            { q: '¿Sigue siendo relevante el SEO en la era de la búsqueda con IA?', a: 'Sí — el SEO tradicional es un requisito previo para GEO, no una alternativa. Los sitios posicionados en el top 10 de Google tienen un 25 % de probabilidad de ser citados en AI Overviews; los sitios fuera del top 10 tienen una visibilidad de IA cercana a cero a través de la plataforma de Google. Las señales E-E-A-T que impulsan el posicionamiento tradicional también fortalecen la probabilidad de cita de IA.' },
+            { q: '¿Es GEO adecuado para empresas hispanohablantes?', a: 'Absolutamente. Las empresas B2B hispanohablantes se benefician de GEO: el contenido B2B convierte a través de búsqueda de IA 2–3× mejor, los tomadores de decisiones más jóvenes prefieren Perplexity y ChatGPT para investigación rápida, y las páginas optimizadas para GEO cuestan menos que los anuncios tradicionales. Consulta las leyes de protección de datos locales (LOPD en España, LGPD en Brasil, Ley 1581 en Colombia) antes de enviar datos de usuarios a APIs de IA en la nube.' },
           ],
         },
         sources: {
@@ -1437,43 +1488,91 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'ما هو تحسين محركات البحث التوليدية (GEO)؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'GEO هو ممارسة هيكلة المحتوى لكي تستشهد به محركات البحث بالذكاء الاصطناعي عند تركيب الإجابات. على عكس السيو التقليدي الذي يستهدف التصدر في Google، تتمحور GEO حول الذكر بين المصادر الـ2–7 التي يستشهد بها محرك الذكاء الاصطناعي في كل إجابة. يتطلب ذلك: بنية إجابة أولاً وكيانات واضحة وترميز مخطط وفقرات مستقلة وقابلة للاستشهاد.' },
+            'name': 'ما هو تحسين محركات البحث التوليدية (GEO)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO هو ممارسة هيكلة المحتوى لكي تستشهد به محركات البحث بالذكاء الاصطناعي عند تركيب الإجابات. على عكس السيو التقليدي الذي يستهدف التصدر في Google، تتمحور GEO حول الذكر بين المصادر الـ2–7 التي يستشهد بها محرك الذكاء الاصطناعي في كل إجابة.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كيف تختلف GEO عن السيو التقليدي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'يتنافس السيو التقليدي على النقرات في نتائج بحث Google. تتنافس GEO على الاستشهادات في الإجابات التي يُولّدها الذكاء الاصطناعي. عوامل الترتيب مختلفة: السيو التقليدي يفضّل الروابط الخلفية وإشارات المستخدمين؛ GEO تفضّل البيانات المهيكلة وتسلسلات العناوين الواضحة والكيانات لكل فقرة وبنية المحتوى المتوافقة مع RAG.' },
+            'name': 'كيف تختلف GEO عن السيو التقليدي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'السيو التقليدي يتنافس على النقرات في نتائج Google. GEO تتنافس على الاستشهادات في الإجابات التي يُولّدها الذكاء الاصطناعي. العوامل مختلفة: السيو يُفضّل الروابط الخلفية وإشارات المستخدمين؛ GEO تُفضّل البيانات المهيكلة وتسلسلات العناوين الواضحة والكيانات لكل فقرة والبنية المتوافقة مع RAG.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كم حجم حركة المرور القادمة من محركات البحث بالذكاء الاصطناعي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نمت حركة مرور البحث بالذكاء الاصطناعي بنسبة 796٪ من يناير 2024 إلى ديسمبر 2025، مع نمو تحويلات الجلسات بنسبة 6432٪ في الفترة نفسها. رغم هذا النمو، تمثّل البحث بالذكاء الاصطناعي 0.18٪ فقط من إجمالي جلسات الويب.' },
+            'name': 'أي محركات بحث بالذكاء الاصطناعي يجب تحسين المحتوى لها؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'المحركات الأربعة الرئيسية هي ChatGPT (OpenAI) وPerplexity وGemini (Google DeepMind) وClaude (Anthropic). كل منها يستخدم استدلال زحف وإشارات ترتيب مختلفة. حسّن محتواك للأربعة.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كم يُحسّن ترميز المخطط معدلات استشهاد الذكاء الاصطناعي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'تحصل الصفحات التي تحتوي على ترميز JSON-LD الصحيح على ما يصل إلى 40٪ مزيداً من ظهور النتائج المنسّقة. وجدت الاختبارات المضبوطة أن المحتوى الذي يحتوي على بيانات مهيكلة منفّذة بشكل صحيح حقّق معدلات استشهاد أعلى بنسبة 340٪ من المحتوى غير المهيكل المتطابق.' },
+            'name': 'كم حجم حركة المرور القادمة من محركات البحث بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نمت حركة مرور البحث بالذكاء الاصطناعي بنسبة 796٪ من يناير 2024 إلى ديسمبر 2025. رغم هذا النمو، تمثّل البحث بالذكاء الاصطناعي 0.18٪ فقط من إجمالي جلسات الويب. التوقع هو تجاوز البحث العضوي التقليدي خلال 2–4 سنوات.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل لا يزال السيو التقليدي ذا صلة في عصر البحث بالذكاء الاصطناعي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نعم — السيو التقليدي هو متطلب مسبق لـ GEO وليس بديلاً. المواقع المتصدرة في أفضل 10 نتائج Google لديها احتمال 25٪ للاستشهاد في AI Overviews؛ المواقع خارج أفضل 10 لديها رؤية ذكاء اصطناعي تقارب الصفر عبر منصة Google.' },
+            'name': 'هل يمكنني حجب محتواي من زواحف الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. لكن لا تحجب ChatGPT وPerplexity وGemini وClaude إذا كان هدفك توليد حركة مرور واستشهادات. احجب فقط إذا كنت بحاجة إلى حماية المحتوى من التدريب.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ما هو الخطوة الأولى لتحسين محتواي لـ GEO؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'ابدأ بتدقيق محتواك الحالي بمنظور الذكاء الاصطناعي: خذ 10 صفحات من أعلى حركة مرور لديك وسجّل ChatGPT وPerplexity وGoogle AI Overviews بأسئلة مرتبطة بموضوعك. تحقق مما إذا كان محتواك مستشهداً. من هناك، أوّل بإضافة ترميز JSON-LD وإعادة هيكلة المحتوى إلى تنسيق إجابة أولاً وإضافة أقسام للأسئلة الشائعة.' },
+            'name': 'ما تأثير ترميز المخطط على GEO؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ترميز المخطط (JSON-LD) أساسي لـ GEO. أظهرت دراسة 2026 أن TechArticle وFAQPage وHowTo زادت وتيرة الاستشهادات بنسبة 40٪.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل GEO مناسبة للشركات الناطقة بالعربية؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'بالتأكيد. تستفيد الشركات B2B الناطقة بالعربية من GEO: المحتوى B2B يتحوّل عبر البحث بالذكاء الاصطناعي بمعدل أعلى بـ2–3×، ويُفضّل صانعو القرار الأصغر سناً Perplexity وChatGPT للبحث السريع، والصفحات المحسّنة لـ GEO أقل تكلفة من الإعلانات التقليدية. راجع قوانين حماية البيانات المحلية قبل إرسال بيانات المستخدمين إلى واجهات API للذكاء الاصطناعي السحابية.' },
+            'name': 'ما الخطوة الأولى لتحسين محتواي لـ GEO؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ابدأ بتدقيق محتواك بمنظور الذكاء الاصطناعي: سجّل ChatGPT وPerplexity وGoogle AI Overviews بأسئلة مرتبطة بموضوعك. تحقق مما إذا كان محتواك مستشهداً. أوّل بإضافة ترميز JSON-LD وإعادة هيكلة المحتوى إلى تنسيق إجابة أولاً.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل GEO مختلفة عن AEO (تحسين محركات الإجابة)؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'GEO وAEO مرتبطتان ارتباطاً وثيقاً لكنهما ليستا متطابقتَين. AEO تتمحور حول التحسين لمربعات الإجابة المباشرة في محركات البحث التقليدية. GEO تستهدف محركات الذكاء الاصطناعي التوليدية التي تُركّب إجابات من مصادر متعددة باستخدام خطوط معالجة RAG، مطلوبةً فقرات مستقلة وقابلة للاستخراج يمكن الاستشهاد بها خارج السياق.' },
+            'name': 'هل GEO مختلفة عن AEO (تحسين محركات الإجابة)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO وAEO مرتبطتان ارتباطاً وثيقاً لكنهما ليستا متطابقتَين. AEO تتمحور حول المقتطفات المميزة في البحث التقليدي. GEO تستهدف محركات الذكاء الاصطناعي التوليدية التي تُركّب إجابات من مصادر متعددة باستخدام خطوط معالجة RAG.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم يُحسّن ترميز المخطط معدلات استشهاد الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تحصل الصفحات التي تحتوي على ترميز JSON-LD الصحيح على ما يصل إلى 40٪ مزيداً من ظهور النتائج المنسّقة. وجدت الاختبارات المضبوطة أن المحتوى الذي يحتوي على بيانات مهيكلة منفّذة بشكل صحيح حقّق معدلات استشهاد أعلى بنسبة 340٪ من المحتوى غير المهيكل المتطابق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لا يزال السيو التقليدي ذا صلة في عصر البحث بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — السيو التقليدي هو متطلب مسبق لـ GEO وليس بديلاً. المواقع المتصدرة في أفضل 10 نتائج Google لديها احتمال 25٪ للاستشهاد في AI Overviews؛ المواقع خارج أفضل 10 لديها رؤية ذكاء اصطناعي تقارب الصفر عبر منصة Google.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل GEO مناسبة للشركات الناطقة بالعربية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بالتأكيد. تستفيد الشركات B2B الناطقة بالعربية من GEO: المحتوى B2B يتحوّل عبر البحث بالذكاء الاصطناعي بمعدل أعلى بـ2–3×، ويُفضّل صانعو القرار الأصغر سناً Perplexity وChatGPT للبحث السريع، والصفحات المحسّنة لـ GEO أقل تكلفة من الإعلانات التقليدية. راجع قوانين حماية البيانات المحلية قبل إرسال بيانات المستخدمين إلى واجهات API للذكاء الاصطناعي السحابية.',
+            },
           },
         ],
       },
@@ -1706,6 +1805,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'ما تأثير ترميز المخطط على GEO؟', a: 'ترميز المخطط (JSON-LD) أساسي لـ GEO. أظهرت دراسة 2026 أن TechArticle وFAQPage وHowTo زادت وتيرة الاستشهادات بنسبة 40٪.' },
             { q: 'ما الخطوة الأولى لتحسين محتواي لـ GEO؟', a: 'ابدأ بتدقيق محتواك بمنظور الذكاء الاصطناعي: سجّل ChatGPT وPerplexity وGoogle AI Overviews بأسئلة مرتبطة بموضوعك. تحقق مما إذا كان محتواك مستشهداً. أوّل بإضافة ترميز JSON-LD وإعادة هيكلة المحتوى إلى تنسيق إجابة أولاً.' },
             { q: 'هل GEO مختلفة عن AEO (تحسين محركات الإجابة)؟', a: 'GEO وAEO مرتبطتان ارتباطاً وثيقاً لكنهما ليستا متطابقتَين. AEO تتمحور حول المقتطفات المميزة في البحث التقليدي. GEO تستهدف محركات الذكاء الاصطناعي التوليدية التي تُركّب إجابات من مصادر متعددة باستخدام خطوط معالجة RAG.' },
+            { q: 'كم يُحسّن ترميز المخطط معدلات استشهاد الذكاء الاصطناعي؟', a: 'تحصل الصفحات التي تحتوي على ترميز JSON-LD الصحيح على ما يصل إلى 40٪ مزيداً من ظهور النتائج المنسّقة. وجدت الاختبارات المضبوطة أن المحتوى الذي يحتوي على بيانات مهيكلة منفّذة بشكل صحيح حقّق معدلات استشهاد أعلى بنسبة 340٪ من المحتوى غير المهيكل المتطابق.' },
+            { q: 'هل لا يزال السيو التقليدي ذا صلة في عصر البحث بالذكاء الاصطناعي؟', a: 'نعم — السيو التقليدي هو متطلب مسبق لـ GEO وليس بديلاً. المواقع المتصدرة في أفضل 10 نتائج Google لديها احتمال 25٪ للاستشهاد في AI Overviews؛ المواقع خارج أفضل 10 لديها رؤية ذكاء اصطناعي تقارب الصفر عبر منصة Google.' },
+            { q: 'هل GEO مناسبة للشركات الناطقة بالعربية؟', a: 'بالتأكيد. تستفيد الشركات B2B الناطقة بالعربية من GEO: المحتوى B2B يتحوّل عبر البحث بالذكاء الاصطناعي بمعدل أعلى بـ2–3×، ويُفضّل صانعو القرار الأصغر سناً Perplexity وChatGPT للبحث السريع، والصفحات المحسّنة لـ GEO أقل تكلفة من الإعلانات التقليدية. راجع قوانين حماية البيانات المحلية قبل إرسال بيانات المستخدمين إلى واجهات API للذكاء الاصطناعي السحابية.' },
           ],
         },
         sources: {
@@ -1898,6 +2000,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Desbloqueie crawlers de IA no robots.txt.** Verifique se GPTBot, Claude-Web, PerplexityBot, Google-Extended não estão bloqueados.',
             '**Cite fontes verificáveis com dados específicos.** "Aumentou 43% (Fonte: Harvard Business Review 2024)" supera "aumentou significativamente".',
             '**Use headings como perguntas.** "Como X funciona?" como H2 alinha com como mecanismos de busca com IA processam consultas.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Qual é a diferença entre SEO e GEO?', a: 'SEO (Search Engine Optimization) foca em posicionar páginas nos resultados tradicionais de mecanismos de busca como Google e Bing, onde os usuários escolhem entre uma lista de links azuis. GEO (Generative Engine Optimization) foca em fazer seu conteúdo ser citado dentro de respostas geradas por IA do ChatGPT, Perplexity, Gemini e Claude — onde os usuários recebem uma resposta sintetizada em vez de uma lista de opções. Ambos são necessários: estar entre os 10 primeiros do Google aumenta em aproximadamente 25% a probabilidade de ser citado nas Visões Gerais de IA do Google.' },
+            { q: 'O tráfego de busca por IA converte melhor do que a busca orgânica?', a: 'Para empresas B2B, sim — significativamente. Uma análise da WebFX com 2,3 bilhões de sessões constatou que visitantes vindos de IA converteram a uma taxa de sessão de 54,15% contra 45,23% da busca orgânica. A Ahrefs relatou taxas de conversão 23 vezes maiores vindas de busca por IA em seu próprio site. Para e-commerce, a evidência é mista — a análise da SearchEngineLand em 973 sites de e-commerce constatou que a busca por IA converteu pior do que a orgânica. A vantagem de conversão é mais clara para B2B e compras de alta consideração.' },
+            { q: 'Quanto o schema markup melhora as taxas de citação de IA?', a: 'Páginas com schema JSON-LD implementado corretamente recebem até 40% mais impressões de resultados avançados. Testes controlados constataram que conteúdo com dados estruturados corretamente implementados alcançou taxas de citação 340% mais altas do que conteúdo idêntico sem estrutura. No entanto, um estudo da SearchAtlas de 2026 constatou que a cobertura de schema isoladamente não aumenta de forma consistente a frequência de citação de LLMs entre OpenAI, Gemini e Perplexity — autoridade de conteúdo e estrutura de resposta direta continuam sendo sinais mais fortes.' },
+            { q: 'Quão rápido a busca por IA está crescendo?', a: 'O tráfego de IA generativa cresceu 796% entre janeiro de 2024 e dezembro de 2025, com conversões de sessão crescendo 6.432% no mesmo período. O tráfego gerado por IA para sites de varejo dos EUA aumentou 4.700% ano a ano até julho de 2025. Apesar desse crescimento, a busca por IA representa apenas 0,18% do total de sessões na web — o tráfego orgânico e direto ainda domina com 63%. Projeta-se que o tráfego de busca por IA ultrapasse a busca orgânica tradicional dentro de 2 a 4 anos.' },
+            { q: 'O SEO ainda é relevante na era da busca por IA?', a: 'Sim — o SEO tradicional é um pré-requisito para o GEO, não uma alternativa a ele. Sites entre os 10 primeiros do Google têm 25% de chance de serem citados nas Visões Gerais de IA; sites fora dos 10 primeiros têm visibilidade de IA próxima de zero através da plataforma do Google. Sinais de E-E-A-T (Experiência, Expertise, Autoridade, Confiabilidade) que melhoram rankings tradicionais também fortalecem a probabilidade de citação por IA. As duas disciplinas compartilham requisitos fundamentais — a diferença é que o GEO adiciona estrutura de resposta direta, densidade de entidades e schema markup como camadas adicionais.' },
+            { q: 'Qual é o primeiro passo para otimizar meu conteúdo para GEO?', a: 'Comece auditando seu conteúdo atual com uma lente de IA: pegue 10 das suas páginas com mais tráfego e consulte o ChatGPT, o Perplexity e as Visões Gerais de IA do Google com perguntas relacionadas ao seu tópico. Verifique se seu conteúdo é citado ou recomendado. Isso identifica lacunas onde você não está aparecendo em respostas de IA. A partir daí, priorize adicionar schema markup JSON-LD (Article e FAQPage têm o maior impacto), reestruturar o conteúdo para o formato de resposta direta e adicionar seções de FAQ que antecipem subperguntas que sistemas de IA decompõem de consultas de usuário mais amplas.' },
+            { q: 'O que é o llms.txt e eu preciso de um?', a: 'llms.txt é um padrão emergente (análogo ao robots.txt) que permite fornecer um resumo estruturado do site para que modelos de IA o processem diretamente. Ele fica na raiz do seu site e sinaliza qual conteúdo está disponível para citação. Em abril de 2026, ChatGPT, Perplexity e Claude suportam o llms.txt como indicação de rastreamento. Não é obrigatório, mas acelera a indexação por IA do seu conteúdo de maior valor.' },
+            { q: 'O GEO é diferente do AEO (Answer Engine Optimization)?', a: 'GEO e AEO são intimamente relacionados, mas não idênticos. O AEO foca em otimizar para caixas de resposta direta e snippets em destaque em mecanismos de busca tradicionais. O GEO tem como alvo especificamente mecanismos de IA generativa (ChatGPT, Gemini, Perplexity, Claude) que sintetizam respostas de múltiplas fontes usando pipelines RAG. O GEO exige estrutura de resposta direta, schema markup e densidade de entidades — as técnicas de AEO se sobrepõem significativamente, mas o GEO adiciona a exigência de parágrafos autônomos e extraíveis que podem ser citados fora de contexto.' },
           ],
         },
         relatedReading: {

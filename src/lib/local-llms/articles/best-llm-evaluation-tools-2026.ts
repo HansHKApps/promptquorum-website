@@ -355,39 +355,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently asked questions',
         faqs: [
-          {
-            q: 'What is the best LLM evaluation tool in 2026?',
-            a: 'Braintrust for teams where non-engineers review results, thanks to unlimited users even on the free tier. Weave if you already use Weights & Biases and are under 50 employees. Promptfoo if you want evals as version-controlled config that run on your own infrastructure at no cost. All three cover LLM-as-judge, custom scorers and dataset regression testing.',
-          },
-          {
-            q: 'Did OpenAI acquire Promptfoo?',
-            a: 'Yes. OpenAI announced the acquisition on 9 March 2026 and stated that Promptfoo will remain open source under its current licence and that existing customers will continue to be serviced and supported. As of late August 2026 the repository is still under the promptfoo organisation, still MIT-licensed, and actively maintained.',
-          },
-          {
-            q: 'How much does Braintrust cost?',
-            a: 'The free Starter tier includes 10,000 scores a month, 1 GB of processed data, 14-day retention, $10 of model credits and unlimited users. Pro is $249 a month and includes $249 of model credits, 50,000 scores, 5 GB and 30-day retention, with overage at $1.50 per 1,000 scores. Enterprise is custom-priced and adds on-prem or hosted deployment.',
-          },
-          {
-            q: 'Is Weave free, and what are the limits?',
-            a: 'Weave has a free tier with unlimited Weave seats and 1 GB a month of data ingestion. Pro starts at $60 a month with 1.5 GB, but Weights & Biases restricts it to early-stage teams with fewer than 50 employees; larger organisations must move to Enterprise. Additional ingestion is $0.10 per MB.',
-          },
-          {
-            q: 'Is Promptfoo really free at any scale?',
-            a: 'Yes, in the sense that the tool itself is MIT-licensed and runs on your own machines, so there is no per-score or per-gigabyte charge. You still pay for the model API calls the evaluations make, but that cost exists on every platform and is not specific to Promptfoo. An optional hosted Enterprise tier exists on top.',
-          },
-          {
-            q: 'Which one can I self-host?',
-            a: 'Promptfoo by default, since it is a CLI and library that runs wherever you run it. Braintrust offers on-prem or hosted deployment on its Enterprise plan. Weave offers a single-tenant Enterprise option with customer-managed encryption keys, which is a dedicated instance rather than true on-premise, so confirm the specifics if you have a strict on-prem requirement.',
-          },
-          {
-            q: 'Do any of these have affiliate programmes?',
-            a: 'We found no public affiliate or referral programme for content creators at Braintrust, Weights & Biases or Promptfoo. Weights & Biases runs a partner programme, but its public page describes reseller and technology-integration partnerships aimed at consultancies rather than a per-referral payout. Note also that usebraintrust.com is a separate talent marketplace, unrelated to braintrust.dev. PromptQuorum earns nothing from this page.',
-          },
-          {
-            q: 'What is the difference between evaluation and monitoring?',
-            a: 'Evaluation runs a fixed dataset before you ship and tells you whether a change improved or regressed quality. Monitoring watches live traffic after release and tells you what the system is doing now. This page covers the first. The two are complementary and many teams run both, but the tools and the questions are different.',
-          },
-        ],
+            { q: 'What is the best LLM evaluation tool in 2026?', a: 'Braintrust for teams where non-engineers review results, thanks to unlimited users even on the free tier. Weave if you already use Weights & Biases and are under 50 employees. Promptfoo if you want evals as version-controlled config that run on your own infrastructure at no cost. All three cover LLM-as-judge, custom scorers and dataset regression testing.' },
+            { q: 'Did OpenAI acquire Promptfoo?', a: 'Yes. OpenAI announced the acquisition on 9 March 2026 and stated that Promptfoo will remain open source under its current licence and that existing customers will continue to be serviced and supported. As of late August 2026 the repository is still under the promptfoo organisation, still MIT-licensed, and actively maintained.' },
+            { q: 'How much does Braintrust cost?', a: 'The free Starter tier includes 10,000 scores a month, 1 GB of processed data, 14-day retention, $10 of model credits and unlimited users. Pro is $249 a month and includes $249 of model credits, 50,000 scores, 5 GB and 30-day retention, with overage at $1.50 per 1,000 scores. Enterprise is custom-priced and adds on-prem or hosted deployment.' },
+            { q: 'Is Weave free, and what are the limits?', a: 'Weave has a free tier with unlimited Weave seats and 1 GB a month of data ingestion. Pro starts at $60 a month with 1.5 GB, but Weights & Biases restricts it to early-stage teams with fewer than 50 employees; larger organisations must move to Enterprise. Additional ingestion is $0.10 per MB.' },
+            { q: 'Is Promptfoo really free at any scale?', a: 'Yes, in the sense that the tool itself is MIT-licensed and runs on your own machines, so there is no per-score or per-gigabyte charge. You still pay for the model API calls the evaluations make, but that cost exists on every platform and is not specific to Promptfoo. An optional hosted Enterprise tier exists on top.' },
+            { q: 'Which one can I self-host?', a: 'Promptfoo by default, since it is a CLI and library that runs wherever you run it. Braintrust offers on-prem or hosted deployment on its Enterprise plan. Weave offers a single-tenant Enterprise option with customer-managed encryption keys, which is a dedicated instance rather than true on-premise, so confirm the specifics if you have a strict on-prem requirement.' },
+            { q: 'Do any of these have affiliate programmes?', a: 'We found no public affiliate or referral programme for content creators at Braintrust, Weights & Biases or Promptfoo. Weights & Biases runs a partner programme, but its public page describes reseller and technology-integration partnerships aimed at consultancies rather than a per-referral payout. Note also that usebraintrust.com is a separate talent marketplace, unrelated to braintrust.dev. PromptQuorum earns nothing from this page.' },
+            { q: 'What is the difference between evaluation and monitoring?', a: 'Evaluation runs a fixed dataset before you ship and tells you whether a change improved or regressed quality. Monitoring watches live traffic after release and tells you what the system is doing now. This page covers the first. The two are complementary and many teams run both, but the tools and the questions are different.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -454,47 +430,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best LLM evaluation tool in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust for teams where non-engineers review results, Weave if you already use Weights & Biases and are under 50 employees, and Promptfoo if you want evals as version-controlled config running free on your own infrastructure.',
+          {
+            '@type': 'Question',
+            'name': 'What is the best LLM evaluation tool in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust for teams where non-engineers review results, thanks to unlimited users even on the free tier. Weave if you already use Weights & Biases and are under 50 employees. Promptfoo if you want evals as version-controlled config that run on your own infrastructure at no cost. All three cover LLM-as-judge, custom scorers and dataset regression testing.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Did OpenAI acquire Promptfoo?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. OpenAI announced the acquisition on 9 March 2026 and stated Promptfoo will remain open source under its current licence. As of late August 2026 the repository is still MIT-licensed and actively maintained.',
+          {
+            '@type': 'Question',
+            'name': 'Did OpenAI acquire Promptfoo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. OpenAI announced the acquisition on 9 March 2026 and stated that Promptfoo will remain open source under its current licence and that existing customers will continue to be serviced and supported. As of late August 2026 the repository is still under the promptfoo organisation, still MIT-licensed, and actively maintained.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does Braintrust cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The free Starter tier includes 10,000 scores a month, 1 GB of data, 14-day retention and unlimited users. Pro is $249 a month including $249 of model credits, 50,000 scores and 5 GB. Enterprise is custom-priced with on-prem or hosted deployment.',
+          {
+            '@type': 'Question',
+            'name': 'How much does Braintrust cost?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The free Starter tier includes 10,000 scores a month, 1 GB of processed data, 14-day retention, $10 of model credits and unlimited users. Pro is $249 a month and includes $249 of model credits, 50,000 scores, 5 GB and 30-day retention, with overage at $1.50 per 1,000 scores. Enterprise is custom-priced and adds on-prem or hosted deployment.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Weave free and what are the limits?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Weave has a free tier with unlimited seats and 1 GB a month of ingestion. Pro starts at $60 a month with 1.5 GB but is restricted to teams with fewer than 50 employees. Additional ingestion costs $0.10 per MB.',
+          {
+            '@type': 'Question',
+            'name': 'Is Weave free, and what are the limits?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Weave has a free tier with unlimited Weave seats and 1 GB a month of data ingestion. Pro starts at $60 a month with 1.5 GB, but Weights & Biases restricts it to early-stage teams with fewer than 50 employees; larger organisations must move to Enterprise. Additional ingestion is $0.10 per MB.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do LLM evaluation tools have affiliate programmes?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We found no public affiliate or referral programme at Braintrust, Weights & Biases or Promptfoo. The Weights & Biases partner programme is a reseller and integration scheme for consultancies, not a per-referral payout.',
+          {
+            '@type': 'Question',
+            'name': 'Is Promptfoo really free at any scale?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, in the sense that the tool itself is MIT-licensed and runs on your own machines, so there is no per-score or per-gigabyte charge. You still pay for the model API calls the evaluations make, but that cost exists on every platform and is not specific to Promptfoo. An optional hosted Enterprise tier exists on top.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Which one can I self-host?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Promptfoo by default, since it is a CLI and library that runs wherever you run it. Braintrust offers on-prem or hosted deployment on its Enterprise plan. Weave offers a single-tenant Enterprise option with customer-managed encryption keys, which is a dedicated instance rather than true on-premise, so confirm the specifics if you have a strict on-prem requirement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do any of these have affiliate programmes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'We found no public affiliate or referral programme for content creators at Braintrust, Weights & Biases or Promptfoo. Weights & Biases runs a partner programme, but its public page describes reseller and technology-integration partnerships aimed at consultancies rather than a per-referral payout. Note also that usebraintrust.com is a separate talent marketplace, unrelated to braintrust.dev. PromptQuorum earns nothing from this page.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between evaluation and monitoring?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Evaluation runs a fixed dataset before you ship and tells you whether a change improved or regressed quality. Monitoring watches live traffic after release and tells you what the system is doing now. This page covers the first. The two are complementary and many teams run both, but the tools and the questions are different.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -863,47 +863,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          {
-            q: 'Welches LLM-Evaluationstool ist 2026 das beste?',
-            a: 'Braintrust für Teams, in denen Nicht-Entwickler die Ergebnisse prüfen, dank unbegrenzter Nutzender schon in der kostenlosen Stufe. Weave, wenn Sie bereits Weights & Biases nutzen und unter 50 Mitarbeitenden liegen. Promptfoo, wenn Sie Evaluationen als versionierte Konfiguration auf eigener Infrastruktur kostenlos ausführen wollen. Alle drei decken LLM-as-Judge, eigene Scorer und datensatzbasierte Regressionstests ab.',
-          },
-          {
-            q: 'Hat OpenAI Promptfoo übernommen?',
-            a: 'Ja. OpenAI kündigte die Übernahme am 9. März 2026 an und erklärte, Promptfoo bleibe unter der bisherigen Lizenz quelloffen und bestehende Kunden würden weiter betreut. Ende August 2026 liegt das Repository weiterhin in der Organisation promptfoo, ist weiterhin MIT-lizenziert und wird aktiv gepflegt.',
-          },
-          {
-            q: 'Was kostet Braintrust?',
-            a: 'Die kostenlose Starter-Stufe umfasst 10.000 Scores im Monat, 1 GB verarbeitete Daten, 14 Tage Aufbewahrung, 10 $ Modellguthaben und unbegrenzt viele Nutzende. Pro kostet 249 $ im Monat und enthält 249 $ Modellguthaben, 50.000 Scores, 5 GB und 30 Tage Aufbewahrung, mit Mehrverbrauch zu 1,50 $ je 1.000 Scores. Enterprise wird individuell kalkuliert und ergänzt On-Premises- oder gehostete Bereitstellung.',
-          },
-          {
-            q: 'Ist Weave kostenlos, und wo liegen die Grenzen?',
-            a: 'Weave hat eine kostenlose Stufe mit unbegrenzt vielen Weave-Plätzen und 1 GB Datenaufnahme im Monat. Pro beginnt bei 60 $ im Monat mit 1,5 GB, ist von Weights & Biases aber auf Teams mit weniger als 50 Mitarbeitenden begrenzt; größere Organisationen müssen zu Enterprise wechseln. Zusätzliche Datenaufnahme kostet 0,10 $ pro MB.',
-          },
-          {
-            q: 'Ist Promptfoo wirklich in jeder Größenordnung kostenlos?',
-            a: 'Ja, in dem Sinne, dass das Werkzeug selbst MIT-lizenziert ist und auf Ihren eigenen Rechnern läuft, es also keine Gebühr pro Score oder Gigabyte gibt. Sie zahlen weiterhin die Modell-API-Aufrufe der Evaluationen, doch diese Kosten fallen auf jeder Plattform an und sind nicht Promptfoo-spezifisch. Darüber hinaus existiert eine optionale gehostete Enterprise-Stufe.',
-          },
-          {
-            q: 'Welches kann ich selbst betreiben?',
-            a: 'Promptfoo standardmäßig, da es CLI und Bibliothek ist und dort läuft, wo Sie es starten. Braintrust bietet On-Premises- oder gehostete Bereitstellung in seinem Enterprise-Tarif. Weave bietet eine Single-Tenant-Enterprise-Option mit kundenverwalteten Schlüsseln, was eine dedizierte Instanz und kein echter Eigenbetrieb ist; klären Sie die Details, wenn Sie eine strikte On-Premises-Anforderung haben.',
-          },
-          {
-            q: 'Haben diese Anbieter Affiliate-Programme?',
-            a: 'Wir haben bei Braintrust, Weights & Biases und Promptfoo kein öffentliches Affiliate- oder Empfehlungsprogramm für Publisher gefunden. Weights & Biases betreibt ein Partnerprogramm, dessen öffentliche Seite jedoch Wiederverkaufs- und Integrationspartnerschaften für Beratungshäuser beschreibt und keine Vergütung pro Empfehlung. Beachten Sie außerdem, dass usebraintrust.com ein separater Talentmarktplatz ist und nichts mit braintrust.dev zu tun hat. PromptQuorum verdient an dieser Seite nichts.',
-          },
-          {
-            q: 'Was ist der Unterschied zwischen Evaluation und Monitoring?',
-            a: 'Evaluation lässt vor dem Release einen festen Datensatz laufen und sagt Ihnen, ob eine Änderung die Qualität verbessert oder verschlechtert hat. Monitoring beobachtet den Live-Verkehr nach dem Release und sagt Ihnen, was das System gerade tut. Diese Seite behandelt das Erste. Beides ergänzt sich, und viele Teams tun beides, doch Werkzeuge und Fragestellung unterscheiden sich.',
-          },
-          {
-            q: 'Ist DSGVO-konforme Evaluation mit einer US-Plattform möglich?',
-            a: 'Möglich ja, aber aufwendiger als lokale Auswertung. Evaluationsdatensätze stammen meist aus Produktionsprotokollen und enthalten damit echte Nutzereingaben, weshalb Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage nach den Artikeln 44 bis 49 brauchen. Erschwerend kommt hinzu, dass ein Evaluationsdatensatz dauerhaft aufbewahrt wird, um Vergleiche über die Zeit zu erlauben, und damit länger existiert als ein einzelner Prompt. Für sensible Datensätze ist lokal ausgeführtes Promptfoo der deutlich einfachere Weg zur Rechtskonformität.',
-          },
-          {
-            q: 'Welches Werkzeug passt zu einem Mittelständler ohne eigenes ML-Team?',
-            a: 'In den meisten Fällen Promptfoo auf der bestehenden CI, weil es kostenlos ist, keine Vertragsprüfung auslöst und die Testdaten das Haus nicht verlassen — was die datenschutzrechtliche Bewertung erheblich verkürzt. Braintrusts kostenlose Stufe lohnt sich zusätzlich, wenn Fachabteilungen die Ergebnisse ansehen sollen, da unbegrenzt viele Nutzende enthalten sind. Weave Pro ist mit 60 $ zwar günstig, für einen Mittelständler mit mehr als 50 Mitarbeitenden aber schlicht nicht verfügbar; kalkulieren Sie dann Enterprise oder lassen Sie es.',
-          },
-        ],
+            { q: 'Welches LLM-Evaluationstool ist 2026 das beste?', a: 'Braintrust für Teams, in denen Nicht-Entwickler die Ergebnisse prüfen, dank unbegrenzter Nutzender schon in der kostenlosen Stufe. Weave, wenn Sie bereits Weights & Biases nutzen und unter 50 Mitarbeitenden liegen. Promptfoo, wenn Sie Evaluationen als versionierte Konfiguration auf eigener Infrastruktur kostenlos ausführen wollen. Alle drei decken LLM-as-Judge, eigene Scorer und datensatzbasierte Regressionstests ab.' },
+            { q: 'Hat OpenAI Promptfoo übernommen?', a: 'Ja. OpenAI kündigte die Übernahme am 9. März 2026 an und erklärte, Promptfoo bleibe unter der bisherigen Lizenz quelloffen und bestehende Kunden würden weiter betreut. Ende August 2026 liegt das Repository weiterhin in der Organisation promptfoo, ist weiterhin MIT-lizenziert und wird aktiv gepflegt.' },
+            { q: 'Was kostet Braintrust?', a: 'Die kostenlose Starter-Stufe umfasst 10.000 Scores im Monat, 1 GB verarbeitete Daten, 14 Tage Aufbewahrung, 10 $ Modellguthaben und unbegrenzt viele Nutzende. Pro kostet 249 $ im Monat und enthält 249 $ Modellguthaben, 50.000 Scores, 5 GB und 30 Tage Aufbewahrung, mit Mehrverbrauch zu 1,50 $ je 1.000 Scores. Enterprise wird individuell kalkuliert und ergänzt On-Premises- oder gehostete Bereitstellung.' },
+            { q: 'Ist Weave kostenlos, und wo liegen die Grenzen?', a: 'Weave hat eine kostenlose Stufe mit unbegrenzt vielen Weave-Plätzen und 1 GB Datenaufnahme im Monat. Pro beginnt bei 60 $ im Monat mit 1,5 GB, ist von Weights & Biases aber auf Teams mit weniger als 50 Mitarbeitenden begrenzt; größere Organisationen müssen zu Enterprise wechseln. Zusätzliche Datenaufnahme kostet 0,10 $ pro MB.' },
+            { q: 'Ist Promptfoo wirklich in jeder Größenordnung kostenlos?', a: 'Ja, in dem Sinne, dass das Werkzeug selbst MIT-lizenziert ist und auf Ihren eigenen Rechnern läuft, es also keine Gebühr pro Score oder Gigabyte gibt. Sie zahlen weiterhin die Modell-API-Aufrufe der Evaluationen, doch diese Kosten fallen auf jeder Plattform an und sind nicht Promptfoo-spezifisch. Darüber hinaus existiert eine optionale gehostete Enterprise-Stufe.' },
+            { q: 'Welches kann ich selbst betreiben?', a: 'Promptfoo standardmäßig, da es CLI und Bibliothek ist und dort läuft, wo Sie es starten. Braintrust bietet On-Premises- oder gehostete Bereitstellung in seinem Enterprise-Tarif. Weave bietet eine Single-Tenant-Enterprise-Option mit kundenverwalteten Schlüsseln, was eine dedizierte Instanz und kein echter Eigenbetrieb ist; klären Sie die Details, wenn Sie eine strikte On-Premises-Anforderung haben.' },
+            { q: 'Haben diese Anbieter Affiliate-Programme?', a: 'Wir haben bei Braintrust, Weights & Biases und Promptfoo kein öffentliches Affiliate- oder Empfehlungsprogramm für Publisher gefunden. Weights & Biases betreibt ein Partnerprogramm, dessen öffentliche Seite jedoch Wiederverkaufs- und Integrationspartnerschaften für Beratungshäuser beschreibt und keine Vergütung pro Empfehlung. Beachten Sie außerdem, dass usebraintrust.com ein separater Talentmarktplatz ist und nichts mit braintrust.dev zu tun hat. PromptQuorum verdient an dieser Seite nichts.' },
+            { q: 'Was ist der Unterschied zwischen Evaluation und Monitoring?', a: 'Evaluation lässt vor dem Release einen festen Datensatz laufen und sagt Ihnen, ob eine Änderung die Qualität verbessert oder verschlechtert hat. Monitoring beobachtet den Live-Verkehr nach dem Release und sagt Ihnen, was das System gerade tut. Diese Seite behandelt das Erste. Beides ergänzt sich, und viele Teams tun beides, doch Werkzeuge und Fragestellung unterscheiden sich.' },
+            { q: 'Ist DSGVO-konforme Evaluation mit einer US-Plattform möglich?', a: 'Möglich ja, aber aufwendiger als lokale Auswertung. Evaluationsdatensätze stammen meist aus Produktionsprotokollen und enthalten damit echte Nutzereingaben, weshalb Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage nach den Artikeln 44 bis 49 brauchen. Erschwerend kommt hinzu, dass ein Evaluationsdatensatz dauerhaft aufbewahrt wird, um Vergleiche über die Zeit zu erlauben, und damit länger existiert als ein einzelner Prompt. Für sensible Datensätze ist lokal ausgeführtes Promptfoo der deutlich einfachere Weg zur Rechtskonformität.' },
+            { q: 'Welches Werkzeug passt zu einem Mittelständler ohne eigenes ML-Team?', a: 'In den meisten Fällen Promptfoo auf der bestehenden CI, weil es kostenlos ist, keine Vertragsprüfung auslöst und die Testdaten das Haus nicht verlassen — was die datenschutzrechtliche Bewertung erheblich verkürzt. Braintrusts kostenlose Stufe lohnt sich zusätzlich, wenn Fachabteilungen die Ergebnisse ansehen sollen, da unbegrenzt viele Nutzende enthalten sind. Weave Pro ist mit 60 $ zwar günstig, für einen Mittelständler mit mehr als 50 Mitarbeitenden aber schlicht nicht verfügbar; kalkulieren Sie dann Enterprise oder lassen Sie es.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -970,47 +940,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Welches LLM-Evaluationstool ist 2026 das beste?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust für Teams, in denen Nicht-Entwickler Ergebnisse prüfen, Weave bei bestehendem Weights-&-Biases-Einsatz unter 50 Mitarbeitenden, und Promptfoo für Evaluationen als versionierte Konfiguration auf eigener Infrastruktur.',
+          {
+            '@type': 'Question',
+            'name': 'Welches LLM-Evaluationstool ist 2026 das beste?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust für Teams, in denen Nicht-Entwickler die Ergebnisse prüfen, dank unbegrenzter Nutzender schon in der kostenlosen Stufe. Weave, wenn Sie bereits Weights & Biases nutzen und unter 50 Mitarbeitenden liegen. Promptfoo, wenn Sie Evaluationen als versionierte Konfiguration auf eigener Infrastruktur kostenlos ausführen wollen. Alle drei decken LLM-as-Judge, eigene Scorer und datensatzbasierte Regressionstests ab.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Hat OpenAI Promptfoo übernommen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja. OpenAI kündigte die Übernahme am 9. März 2026 an und erklärte, Promptfoo bleibe unter der bisherigen Lizenz quelloffen. Ende August 2026 ist das Repository weiterhin MIT-lizenziert und wird aktiv gepflegt.',
+          {
+            '@type': 'Question',
+            'name': 'Hat OpenAI Promptfoo übernommen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. OpenAI kündigte die Übernahme am 9. März 2026 an und erklärte, Promptfoo bleibe unter der bisherigen Lizenz quelloffen und bestehende Kunden würden weiter betreut. Ende August 2026 liegt das Repository weiterhin in der Organisation promptfoo, ist weiterhin MIT-lizenziert und wird aktiv gepflegt.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was kostet Braintrust?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Die kostenlose Starter-Stufe umfasst 10.000 Scores im Monat, 1 GB Daten, 14 Tage Aufbewahrung und unbegrenzt viele Nutzende. Pro kostet 249 $ im Monat inklusive 249 $ Modellguthaben, 50.000 Scores und 5 GB. Enterprise wird individuell kalkuliert.',
+          {
+            '@type': 'Question',
+            'name': 'Was kostet Braintrust?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die kostenlose Starter-Stufe umfasst 10.000 Scores im Monat, 1 GB verarbeitete Daten, 14 Tage Aufbewahrung, 10 $ Modellguthaben und unbegrenzt viele Nutzende. Pro kostet 249 $ im Monat und enthält 249 $ Modellguthaben, 50.000 Scores, 5 GB und 30 Tage Aufbewahrung, mit Mehrverbrauch zu 1,50 $ je 1.000 Scores. Enterprise wird individuell kalkuliert und ergänzt On-Premises- oder gehostete Bereitstellung.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist Weave kostenlos und wo liegen die Grenzen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Weave hat eine kostenlose Stufe mit unbegrenzten Plätzen und 1 GB Datenaufnahme im Monat. Pro beginnt bei 60 $ im Monat mit 1,5 GB, ist aber auf Teams unter 50 Mitarbeitenden begrenzt. Zusätzliche Aufnahme kostet 0,10 $ pro MB.',
+          {
+            '@type': 'Question',
+            'name': 'Ist Weave kostenlos, und wo liegen die Grenzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Weave hat eine kostenlose Stufe mit unbegrenzt vielen Weave-Plätzen und 1 GB Datenaufnahme im Monat. Pro beginnt bei 60 $ im Monat mit 1,5 GB, ist von Weights & Biases aber auf Teams mit weniger als 50 Mitarbeitenden begrenzt; größere Organisationen müssen zu Enterprise wechseln. Zusätzliche Datenaufnahme kostet 0,10 $ pro MB.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist DSGVO-konforme Evaluation mit einer US-Plattform möglich?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, aber aufwendiger als lokale Auswertung. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage. Da Evaluationsdatensätze aus Produktionsprotokollen stammen und dauerhaft aufbewahrt werden, ist lokal ausgeführtes Promptfoo bei sensiblen Daten der einfachere Weg.',
+          {
+            '@type': 'Question',
+            'name': 'Ist Promptfoo wirklich in jeder Größenordnung kostenlos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, in dem Sinne, dass das Werkzeug selbst MIT-lizenziert ist und auf Ihren eigenen Rechnern läuft, es also keine Gebühr pro Score oder Gigabyte gibt. Sie zahlen weiterhin die Modell-API-Aufrufe der Evaluationen, doch diese Kosten fallen auf jeder Plattform an und sind nicht Promptfoo-spezifisch. Darüber hinaus existiert eine optionale gehostete Enterprise-Stufe.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Welches kann ich selbst betreiben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Promptfoo standardmäßig, da es CLI und Bibliothek ist und dort läuft, wo Sie es starten. Braintrust bietet On-Premises- oder gehostete Bereitstellung in seinem Enterprise-Tarif. Weave bietet eine Single-Tenant-Enterprise-Option mit kundenverwalteten Schlüsseln, was eine dedizierte Instanz und kein echter Eigenbetrieb ist; klären Sie die Details, wenn Sie eine strikte On-Premises-Anforderung haben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Haben diese Anbieter Affiliate-Programme?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Wir haben bei Braintrust, Weights & Biases und Promptfoo kein öffentliches Affiliate- oder Empfehlungsprogramm für Publisher gefunden. Weights & Biases betreibt ein Partnerprogramm, dessen öffentliche Seite jedoch Wiederverkaufs- und Integrationspartnerschaften für Beratungshäuser beschreibt und keine Vergütung pro Empfehlung. Beachten Sie außerdem, dass usebraintrust.com ein separater Talentmarktplatz ist und nichts mit braintrust.dev zu tun hat. PromptQuorum verdient an dieser Seite nichts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Unterschied zwischen Evaluation und Monitoring?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Evaluation lässt vor dem Release einen festen Datensatz laufen und sagt Ihnen, ob eine Änderung die Qualität verbessert oder verschlechtert hat. Monitoring beobachtet den Live-Verkehr nach dem Release und sagt Ihnen, was das System gerade tut. Diese Seite behandelt das Erste. Beides ergänzt sich, und viele Teams tun beides, doch Werkzeuge und Fragestellung unterscheiden sich.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist DSGVO-konforme Evaluation mit einer US-Plattform möglich?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Möglich ja, aber aufwendiger als lokale Auswertung. Evaluationsdatensätze stammen meist aus Produktionsprotokollen und enthalten damit echte Nutzereingaben, weshalb Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage nach den Artikeln 44 bis 49 brauchen. Erschwerend kommt hinzu, dass ein Evaluationsdatensatz dauerhaft aufbewahrt wird, um Vergleiche über die Zeit zu erlauben, und damit länger existiert als ein einzelner Prompt. Für sensible Datensätze ist lokal ausgeführtes Promptfoo der deutlich einfachere Weg zur Rechtskonformität.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Werkzeug passt zu einem Mittelständler ohne eigenes ML-Team?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'In den meisten Fällen Promptfoo auf der bestehenden CI, weil es kostenlos ist, keine Vertragsprüfung auslöst und die Testdaten das Haus nicht verlassen — was die datenschutzrechtliche Bewertung erheblich verkürzt. Braintrusts kostenlose Stufe lohnt sich zusätzlich, wenn Fachabteilungen die Ergebnisse ansehen sollen, da unbegrenzt viele Nutzende enthalten sind. Weave Pro ist mit 60 $ zwar günstig, für einen Mittelständler mit mehr als 50 Mitarbeitenden aber schlicht nicht verfügbar; kalkulieren Sie dann Enterprise oder lassen Sie es.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1379,39 +1389,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Cuál es la mejor herramienta de evaluación de LLM en 2026?',
-            a: 'Braintrust para equipos donde personas no técnicas revisan resultados, gracias a los usuarios ilimitados incluso en el nivel gratuito. Weave si ya usa Weights & Biases y está por debajo de 50 empleados. Promptfoo si quiere evaluaciones como configuración versionada que se ejecuten gratis en su propia infraestructura. Las tres cubren LLM como juez, evaluadores propios y pruebas de regresión.',
-          },
-          {
-            q: '¿OpenAI adquirió Promptfoo?',
-            a: 'Sí. OpenAI anunció la adquisición el 9 de marzo de 2026 y declaró que Promptfoo seguirá siendo de código abierto bajo su licencia actual y que los clientes existentes seguirán recibiendo servicio y soporte. A finales de agosto de 2026 el repositorio sigue bajo la organización promptfoo, sigue con licencia MIT y se mantiene activamente.',
-          },
-          {
-            q: '¿Cuánto cuesta Braintrust?',
-            a: 'El nivel Starter gratuito incluye 10.000 puntuaciones al mes, 1 GB de datos procesados, 14 días de retención, 10 $ de crédito de modelo y usuarios ilimitados. Pro cuesta 249 $ al mes e incluye 249 $ de crédito, 50.000 puntuaciones, 5 GB y 30 días de retención, con exceso a 1,50 $ por 1.000 puntuaciones. Enterprise tiene precio personalizado y añade despliegue on-premise o alojado.',
-          },
-          {
-            q: '¿Weave es gratis y cuáles son los límites?',
-            a: 'Weave tiene un nivel gratuito con plazas ilimitadas y 1 GB al mes de ingesta de datos. Pro parte de 60 $ al mes con 1,5 GB, pero Weights & Biases lo restringe a equipos en fase inicial con menos de 50 empleados; las organizaciones mayores deben pasar a Enterprise. La ingesta adicional cuesta 0,10 $ por MB.',
-          },
-          {
-            q: '¿Promptfoo es realmente gratis a cualquier escala?',
-            a: 'Sí, en el sentido de que la herramienta tiene licencia MIT y se ejecuta en sus propias máquinas, así que no hay cargo por puntuación ni por gigabyte. Sigue pagando las llamadas de API del modelo que hacen las evaluaciones, pero ese coste existe en cualquier plataforma y no es específico de Promptfoo. Además existe un nivel Enterprise alojado opcional.',
-          },
-          {
-            q: '¿Cuál puedo autoalojar?',
-            a: 'Promptfoo por defecto, ya que es una CLI y biblioteca que se ejecuta donde usted la ejecute. Braintrust ofrece despliegue on-premise o alojado en su plan Enterprise. Weave ofrece una opción Enterprise de inquilino único con claves gestionadas por el cliente, que es una instancia dedicada más que un verdadero on-premise, así que confirme los detalles si tiene un requisito estricto.',
-          },
-          {
-            q: '¿Alguna tiene programa de afiliados?',
-            a: 'No encontramos programa público de afiliados o referidos para creadores en Braintrust, Weights & Biases ni Promptfoo. Weights & Biases tiene un programa de partners, pero su página pública describe asociaciones de reventa e integración tecnológica dirigidas a consultoras, no un pago por referido. Tenga en cuenta además que usebraintrust.com es un marketplace de talento independiente, sin relación con braintrust.dev. PromptQuorum no gana nada con esta página.',
-          },
-          {
-            q: '¿Qué diferencia hay entre evaluación y monitorización?',
-            a: 'La evaluación ejecuta un conjunto fijo de datos antes de publicar y le dice si un cambio mejoró o degradó la calidad. La monitorización observa el tráfico real tras la publicación y le dice qué está haciendo el sistema ahora. Esta página cubre lo primero. Son complementarias y muchos equipos hacen ambas, pero las herramientas y las preguntas son distintas.',
-          },
-        ],
+            { q: '¿Cuál es la mejor herramienta de evaluación de LLM en 2026?', a: 'Braintrust para equipos donde personas no técnicas revisan resultados, gracias a los usuarios ilimitados incluso en el nivel gratuito. Weave si ya usa Weights & Biases y está por debajo de 50 empleados. Promptfoo si quiere evaluaciones como configuración versionada que se ejecuten gratis en su propia infraestructura. Las tres cubren LLM como juez, evaluadores propios y pruebas de regresión.' },
+            { q: '¿OpenAI adquirió Promptfoo?', a: 'Sí. OpenAI anunció la adquisición el 9 de marzo de 2026 y declaró que Promptfoo seguirá siendo de código abierto bajo su licencia actual y que los clientes existentes seguirán recibiendo servicio y soporte. A finales de agosto de 2026 el repositorio sigue bajo la organización promptfoo, sigue con licencia MIT y se mantiene activamente.' },
+            { q: '¿Cuánto cuesta Braintrust?', a: 'El nivel Starter gratuito incluye 10.000 puntuaciones al mes, 1 GB de datos procesados, 14 días de retención, 10 $ de crédito de modelo y usuarios ilimitados. Pro cuesta 249 $ al mes e incluye 249 $ de crédito, 50.000 puntuaciones, 5 GB y 30 días de retención, con exceso a 1,50 $ por 1.000 puntuaciones. Enterprise tiene precio personalizado y añade despliegue on-premise o alojado.' },
+            { q: '¿Weave es gratis y cuáles son los límites?', a: 'Weave tiene un nivel gratuito con plazas ilimitadas y 1 GB al mes de ingesta de datos. Pro parte de 60 $ al mes con 1,5 GB, pero Weights & Biases lo restringe a equipos en fase inicial con menos de 50 empleados; las organizaciones mayores deben pasar a Enterprise. La ingesta adicional cuesta 0,10 $ por MB.' },
+            { q: '¿Promptfoo es realmente gratis a cualquier escala?', a: 'Sí, en el sentido de que la herramienta tiene licencia MIT y se ejecuta en sus propias máquinas, así que no hay cargo por puntuación ni por gigabyte. Sigue pagando las llamadas de API del modelo que hacen las evaluaciones, pero ese coste existe en cualquier plataforma y no es específico de Promptfoo. Además existe un nivel Enterprise alojado opcional.' },
+            { q: '¿Cuál puedo autoalojar?', a: 'Promptfoo por defecto, ya que es una CLI y biblioteca que se ejecuta donde usted la ejecute. Braintrust ofrece despliegue on-premise o alojado en su plan Enterprise. Weave ofrece una opción Enterprise de inquilino único con claves gestionadas por el cliente, que es una instancia dedicada más que un verdadero on-premise, así que confirme los detalles si tiene un requisito estricto.' },
+            { q: '¿Alguna tiene programa de afiliados?', a: 'No encontramos programa público de afiliados o referidos para creadores en Braintrust, Weights & Biases ni Promptfoo. Weights & Biases tiene un programa de partners, pero su página pública describe asociaciones de reventa e integración tecnológica dirigidas a consultoras, no un pago por referido. Tenga en cuenta además que usebraintrust.com es un marketplace de talento independiente, sin relación con braintrust.dev. PromptQuorum no gana nada con esta página.' },
+            { q: '¿Qué diferencia hay entre evaluación y monitorización?', a: 'La evaluación ejecuta un conjunto fijo de datos antes de publicar y le dice si un cambio mejoró o degradó la calidad. La monitorización observa el tráfico real tras la publicación y le dice qué está haciendo el sistema ahora. Esta página cubre lo primero. Son complementarias y muchos equipos hacen ambas, pero las herramientas y las preguntas son distintas.' },
+            { q: '¿Las herramientas de evaluación de LLM tienen programas de afiliados?', a: 'No encontramos programa público de afiliados o referidos en Braintrust, Weights & Biases ni Promptfoo. El programa de partners de Weights & Biases es un esquema de reventa e integración para consultoras, no un pago por referido.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1478,47 +1465,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Cuál es la mejor herramienta de evaluación de LLM en 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust para equipos donde personas no técnicas revisan resultados, Weave si ya usa Weights & Biases y está por debajo de 50 empleados, y Promptfoo si quiere evaluaciones como configuración versionada ejecutándose gratis en su propia infraestructura.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor herramienta de evaluación de LLM en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust para equipos donde personas no técnicas revisan resultados, gracias a los usuarios ilimitados incluso en el nivel gratuito. Weave si ya usa Weights & Biases y está por debajo de 50 empleados. Promptfoo si quiere evaluaciones como configuración versionada que se ejecuten gratis en su propia infraestructura. Las tres cubren LLM como juez, evaluadores propios y pruebas de regresión.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿OpenAI adquirió Promptfoo?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sí. OpenAI anunció la adquisición el 9 de marzo de 2026 y declaró que Promptfoo seguirá siendo de código abierto bajo su licencia actual. A finales de agosto de 2026 el repositorio sigue con licencia MIT y se mantiene activamente.',
+          {
+            '@type': 'Question',
+            'name': '¿OpenAI adquirió Promptfoo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. OpenAI anunció la adquisición el 9 de marzo de 2026 y declaró que Promptfoo seguirá siendo de código abierto bajo su licencia actual y que los clientes existentes seguirán recibiendo servicio y soporte. A finales de agosto de 2026 el repositorio sigue bajo la organización promptfoo, sigue con licencia MIT y se mantiene activamente.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cuánto cuesta Braintrust?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'El nivel Starter gratuito incluye 10.000 puntuaciones al mes, 1 GB de datos, 14 días de retención y usuarios ilimitados. Pro cuesta 249 $ al mes con 249 $ de crédito de modelo, 50.000 puntuaciones y 5 GB. Enterprise tiene precio personalizado con despliegue on-premise o alojado.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto cuesta Braintrust?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El nivel Starter gratuito incluye 10.000 puntuaciones al mes, 1 GB de datos procesados, 14 días de retención, 10 $ de crédito de modelo y usuarios ilimitados. Pro cuesta 249 $ al mes e incluye 249 $ de crédito, 50.000 puntuaciones, 5 GB y 30 días de retención, con exceso a 1,50 $ por 1.000 puntuaciones. Enterprise tiene precio personalizado y añade despliegue on-premise o alojado.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Weave es gratis y cuáles son los límites?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Weave tiene un nivel gratuito con plazas ilimitadas y 1 GB al mes de ingesta. Pro parte de 60 $ al mes con 1,5 GB pero está restringido a equipos de menos de 50 empleados. La ingesta adicional cuesta 0,10 $ por MB.',
+          {
+            '@type': 'Question',
+            'name': '¿Weave es gratis y cuáles son los límites?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Weave tiene un nivel gratuito con plazas ilimitadas y 1 GB al mes de ingesta de datos. Pro parte de 60 $ al mes con 1,5 GB, pero Weights & Biases lo restringe a equipos en fase inicial con menos de 50 empleados; las organizaciones mayores deben pasar a Enterprise. La ingesta adicional cuesta 0,10 $ por MB.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Las herramientas de evaluación de LLM tienen programas de afiliados?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No encontramos programa público de afiliados o referidos en Braintrust, Weights & Biases ni Promptfoo. El programa de partners de Weights & Biases es un esquema de reventa e integración para consultoras, no un pago por referido.',
+          {
+            '@type': 'Question',
+            'name': '¿Promptfoo es realmente gratis a cualquier escala?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, en el sentido de que la herramienta tiene licencia MIT y se ejecuta en sus propias máquinas, así que no hay cargo por puntuación ni por gigabyte. Sigue pagando las llamadas de API del modelo que hacen las evaluaciones, pero ese coste existe en cualquier plataforma y no es específico de Promptfoo. Además existe un nivel Enterprise alojado opcional.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Cuál puedo autoalojar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Promptfoo por defecto, ya que es una CLI y biblioteca que se ejecuta donde usted la ejecute. Braintrust ofrece despliegue on-premise o alojado en su plan Enterprise. Weave ofrece una opción Enterprise de inquilino único con claves gestionadas por el cliente, que es una instancia dedicada más que un verdadero on-premise, así que confirme los detalles si tiene un requisito estricto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Alguna tiene programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No encontramos programa público de afiliados o referidos para creadores en Braintrust, Weights & Biases ni Promptfoo. Weights & Biases tiene un programa de partners, pero su página pública describe asociaciones de reventa e integración tecnológica dirigidas a consultoras, no un pago por referido. Tenga en cuenta además que usebraintrust.com es un marketplace de talento independiente, sin relación con braintrust.dev. PromptQuorum no gana nada con esta página.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué diferencia hay entre evaluación y monitorización?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La evaluación ejecuta un conjunto fijo de datos antes de publicar y le dice si un cambio mejoró o degradó la calidad. La monitorización observa el tráfico real tras la publicación y le dice qué está haciendo el sistema ahora. Esta página cubre lo primero. Son complementarias y muchos equipos hacen ambas, pero las herramientas y las preguntas son distintas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Las herramientas de evaluación de LLM tienen programas de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No encontramos programa público de afiliados o referidos en Braintrust, Weights & Biases ni Promptfoo. El programa de partners de Weights & Biases es un esquema de reventa e integración para consultoras, no un pago por referido.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1887,39 +1906,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions frequentes',
         faqs: [
-          {
-            q: 'Quel est le meilleur outil d\'evaluation de LLM en 2026 ?',
-            a: 'Braintrust pour les equipes ou des non-developpeurs relisent les resultats, grace aux utilisateurs illimites des l\'offre gratuite. Weave si vous utilisez deja Weights & Biases et etes sous 50 salaries. Promptfoo si vous voulez des evaluations en configuration versionnee s\'executant gratuitement sur votre propre infrastructure. Les trois couvrent le LLM comme juge, les scoreurs personnalises et les tests de regression.',
-          },
-          {
-            q: 'OpenAI a-t-il acquis Promptfoo ?',
-            a: 'Oui. OpenAI a annonce l\'acquisition le 9 mars 2026 et a declare que Promptfoo resterait open source sous sa licence actuelle et que les clients existants continueraient d\'etre servis et accompagnes. Fin aout 2026, le depot reste dans l\'organisation promptfoo, reste sous licence MIT et est activement maintenu.',
-          },
-          {
-            q: 'Combien coute Braintrust ?',
-            a: 'L\'offre Starter gratuite comprend 10 000 scores par mois, 1 Go de donnees traitees, 14 jours de retention, 10 $ de credits modele et des utilisateurs illimites. Pro coute 249 $ par mois et comprend 249 $ de credits modele, 50 000 scores, 5 Go et 30 jours de retention, avec un depassement a 1,50 $ par 1 000 scores. Enterprise est sur devis et ajoute un deploiement sur site ou heberge.',
-          },
-          {
-            q: 'Weave est-il gratuit et quelles sont les limites ?',
-            a: 'Weave dispose d\'une offre gratuite avec des sieges illimites et 1 Go d\'ingestion par mois. Pro demarre a 60 $ par mois avec 1,5 Go, mais Weights & Biases le reserve aux equipes en phase initiale de moins de 50 salaries ; les organisations plus grandes doivent passer a Enterprise. L\'ingestion supplementaire coute 0,10 $ par Mo.',
-          },
-          {
-            q: 'Promptfoo est-il vraiment gratuit a toute echelle ?',
-            a: 'Oui, au sens ou l\'outil lui-meme est sous licence MIT et s\'execute sur vos propres machines : il n\'y a donc ni facturation par score ni par gigaoctet. Vous payez toujours les appels d\'API modele effectues par les evaluations, mais ce cout existe sur toute plateforme et n\'est pas propre a Promptfoo. Une offre Enterprise hebergee optionnelle existe par-dessus.',
-          },
-          {
-            q: 'Lequel puis-je auto-heberger ?',
-            a: 'Promptfoo par defaut, puisqu\'il s\'agit d\'une CLI et d\'une bibliotheque qui s\'executent la ou vous les lancez. Braintrust propose un deploiement sur site ou heberge dans son offre Enterprise. Weave propose une option Enterprise mono-locataire avec cles gerees par le client, qui est une instance dediee plutot qu\'un veritable sur site : confirmez les details si vous avez une exigence stricte.',
-          },
-          {
-            q: 'L\'un d\'eux a-t-il un programme d\'affiliation ?',
-            a: 'Nous n\'avons trouve aucun programme d\'affiliation ou de parrainage public pour les createurs chez Braintrust, Weights & Biases ni Promptfoo. Weights & Biases exploite un programme de partenaires, mais sa page publique decrit des partenariats de revente et d\'integration technique destines aux cabinets de conseil, non une remuneration par parrainage. Notez aussi que usebraintrust.com est une place de marche de talents distincte, sans lien avec braintrust.dev. PromptQuorum ne gagne rien sur cette page.',
-          },
-          {
-            q: 'Quelle difference entre evaluation et supervision ?',
-            a: 'L\'evaluation execute un jeu de donnees fixe avant la mise en production et vous dit si un changement a ameliore ou degrade la qualite. La supervision observe le trafic reel apres la mise en ligne et vous dit ce que fait le systeme maintenant. Cette page traite la premiere. Les deux sont complementaires et beaucoup d\'equipes font les deux, mais les outils et les questions different.',
-          },
-        ],
+            { q: 'Quel est le meilleur outil d\'evaluation de LLM en 2026 ?', a: 'Braintrust pour les equipes ou des non-developpeurs relisent les resultats, grace aux utilisateurs illimites des l\'offre gratuite. Weave si vous utilisez deja Weights & Biases et etes sous 50 salaries. Promptfoo si vous voulez des evaluations en configuration versionnee s\'executant gratuitement sur votre propre infrastructure. Les trois couvrent le LLM comme juge, les scoreurs personnalises et les tests de regression.' },
+            { q: 'OpenAI a-t-il acquis Promptfoo ?', a: 'Oui. OpenAI a annonce l\'acquisition le 9 mars 2026 et a declare que Promptfoo resterait open source sous sa licence actuelle et que les clients existants continueraient d\'etre servis et accompagnes. Fin aout 2026, le depot reste dans l\'organisation promptfoo, reste sous licence MIT et est activement maintenu.' },
+            { q: 'Combien coute Braintrust ?', a: 'L\'offre Starter gratuite comprend 10 000 scores par mois, 1 Go de donnees traitees, 14 jours de retention, 10 $ de credits modele et des utilisateurs illimites. Pro coute 249 $ par mois et comprend 249 $ de credits modele, 50 000 scores, 5 Go et 30 jours de retention, avec un depassement a 1,50 $ par 1 000 scores. Enterprise est sur devis et ajoute un deploiement sur site ou heberge.' },
+            { q: 'Weave est-il gratuit et quelles sont les limites ?', a: 'Weave dispose d\'une offre gratuite avec des sieges illimites et 1 Go d\'ingestion par mois. Pro demarre a 60 $ par mois avec 1,5 Go, mais Weights & Biases le reserve aux equipes en phase initiale de moins de 50 salaries ; les organisations plus grandes doivent passer a Enterprise. L\'ingestion supplementaire coute 0,10 $ par Mo.' },
+            { q: 'Promptfoo est-il vraiment gratuit a toute echelle ?', a: 'Oui, au sens ou l\'outil lui-meme est sous licence MIT et s\'execute sur vos propres machines : il n\'y a donc ni facturation par score ni par gigaoctet. Vous payez toujours les appels d\'API modele effectues par les evaluations, mais ce cout existe sur toute plateforme et n\'est pas propre a Promptfoo. Une offre Enterprise hebergee optionnelle existe par-dessus.' },
+            { q: 'Lequel puis-je auto-heberger ?', a: 'Promptfoo par defaut, puisqu\'il s\'agit d\'une CLI et d\'une bibliotheque qui s\'executent la ou vous les lancez. Braintrust propose un deploiement sur site ou heberge dans son offre Enterprise. Weave propose une option Enterprise mono-locataire avec cles gerees par le client, qui est une instance dediee plutot qu\'un veritable sur site : confirmez les details si vous avez une exigence stricte.' },
+            { q: 'L\'un d\'eux a-t-il un programme d\'affiliation ?', a: 'Nous n\'avons trouve aucun programme d\'affiliation ou de parrainage public pour les createurs chez Braintrust, Weights & Biases ni Promptfoo. Weights & Biases exploite un programme de partenaires, mais sa page publique decrit des partenariats de revente et d\'integration technique destines aux cabinets de conseil, non une remuneration par parrainage. Notez aussi que usebraintrust.com est une place de marche de talents distincte, sans lien avec braintrust.dev. PromptQuorum ne gagne rien sur cette page.' },
+            { q: 'Quelle difference entre evaluation et supervision ?', a: 'L\'evaluation execute un jeu de donnees fixe avant la mise en production et vous dit si un changement a ameliore ou degrade la qualite. La supervision observe le trafic reel apres la mise en ligne et vous dit ce que fait le systeme maintenant. Cette page traite la premiere. Les deux sont complementaires et beaucoup d\'equipes font les deux, mais les outils et les questions different.' },
+            { q: 'Les outils d\'evaluation de LLM ont-ils des programmes d\'affiliation ?', a: 'Nous n\'avons trouve aucun programme public d\'affiliation chez Braintrust, Weights & Biases ni Promptfoo. Le programme de partenaires de Weights & Biases est un dispositif de revente et d\'integration pour cabinets de conseil, non une remuneration par parrainage.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1986,47 +1982,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Quel est le meilleur outil d\'evaluation de LLM en 2026 ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust pour les equipes ou des non-developpeurs relisent les resultats, Weave si vous utilisez deja Weights & Biases et etes sous 50 salaries, et Promptfoo pour des evaluations en configuration versionnee s\'executant gratuitement sur votre propre infrastructure.',
+          {
+            '@type': 'Question',
+            'name': 'Quel est le meilleur outil d\'evaluation de LLM en 2026 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust pour les equipes ou des non-developpeurs relisent les resultats, grace aux utilisateurs illimites des l\'offre gratuite. Weave si vous utilisez deja Weights & Biases et etes sous 50 salaries. Promptfoo si vous voulez des evaluations en configuration versionnee s\'executant gratuitement sur votre propre infrastructure. Les trois couvrent le LLM comme juge, les scoreurs personnalises et les tests de regression.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenAI a-t-il acquis Promptfoo ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui. OpenAI a annonce l\'acquisition le 9 mars 2026 et a declare que Promptfoo resterait open source sous sa licence actuelle. Fin aout 2026, le depot reste sous licence MIT et activement maintenu.',
+          {
+            '@type': 'Question',
+            'name': 'OpenAI a-t-il acquis Promptfoo ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. OpenAI a annonce l\'acquisition le 9 mars 2026 et a declare que Promptfoo resterait open source sous sa licence actuelle et que les clients existants continueraient d\'etre servis et accompagnes. Fin aout 2026, le depot reste dans l\'organisation promptfoo, reste sous licence MIT et est activement maintenu.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Combien coute Braintrust ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'L\'offre Starter gratuite comprend 10 000 scores par mois, 1 Go de donnees, 14 jours de retention et des utilisateurs illimites. Pro coute 249 $ par mois avec 249 $ de credits modele, 50 000 scores et 5 Go. Enterprise est sur devis avec deploiement sur site ou heberge.',
+          {
+            '@type': 'Question',
+            'name': 'Combien coute Braintrust ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'offre Starter gratuite comprend 10 000 scores par mois, 1 Go de donnees traitees, 14 jours de retention, 10 $ de credits modele et des utilisateurs illimites. Pro coute 249 $ par mois et comprend 249 $ de credits modele, 50 000 scores, 5 Go et 30 jours de retention, avec un depassement a 1,50 $ par 1 000 scores. Enterprise est sur devis et ajoute un deploiement sur site ou heberge.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Weave est-il gratuit et quelles sont les limites ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Weave dispose d\'une offre gratuite avec sieges illimites et 1 Go d\'ingestion par mois. Pro demarre a 60 $ par mois avec 1,5 Go mais est reserve aux equipes de moins de 50 salaries. L\'ingestion supplementaire coute 0,10 $ par Mo.',
+          {
+            '@type': 'Question',
+            'name': 'Weave est-il gratuit et quelles sont les limites ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Weave dispose d\'une offre gratuite avec des sieges illimites et 1 Go d\'ingestion par mois. Pro demarre a 60 $ par mois avec 1,5 Go, mais Weights & Biases le reserve aux equipes en phase initiale de moins de 50 salaries ; les organisations plus grandes doivent passer a Enterprise. L\'ingestion supplementaire coute 0,10 $ par Mo.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Les outils d\'evaluation de LLM ont-ils des programmes d\'affiliation ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nous n\'avons trouve aucun programme public d\'affiliation chez Braintrust, Weights & Biases ni Promptfoo. Le programme de partenaires de Weights & Biases est un dispositif de revente et d\'integration pour cabinets de conseil, non une remuneration par parrainage.',
+          {
+            '@type': 'Question',
+            'name': 'Promptfoo est-il vraiment gratuit a toute echelle ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, au sens ou l\'outil lui-meme est sous licence MIT et s\'execute sur vos propres machines : il n\'y a donc ni facturation par score ni par gigaoctet. Vous payez toujours les appels d\'API modele effectues par les evaluations, mais ce cout existe sur toute plateforme et n\'est pas propre a Promptfoo. Une offre Enterprise hebergee optionnelle existe par-dessus.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Lequel puis-je auto-heberger ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Promptfoo par defaut, puisqu\'il s\'agit d\'une CLI et d\'une bibliotheque qui s\'executent la ou vous les lancez. Braintrust propose un deploiement sur site ou heberge dans son offre Enterprise. Weave propose une option Enterprise mono-locataire avec cles gerees par le client, qui est une instance dediee plutot qu\'un veritable sur site : confirmez les details si vous avez une exigence stricte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'un d\'eux a-t-il un programme d\'affiliation ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nous n\'avons trouve aucun programme d\'affiliation ou de parrainage public pour les createurs chez Braintrust, Weights & Biases ni Promptfoo. Weights & Biases exploite un programme de partenaires, mais sa page publique decrit des partenariats de revente et d\'integration technique destines aux cabinets de conseil, non une remuneration par parrainage. Notez aussi que usebraintrust.com est une place de marche de talents distincte, sans lien avec braintrust.dev. PromptQuorum ne gagne rien sur cette page.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle difference entre evaluation et supervision ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'evaluation execute un jeu de donnees fixe avant la mise en production et vous dit si un changement a ameliore ou degrade la qualite. La supervision observe le trafic reel apres la mise en ligne et vous dit ce que fait le systeme maintenant. Cette page traite la premiere. Les deux sont complementaires et beaucoup d\'equipes font les deux, mais les outils et les questions different.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les outils d\'evaluation de LLM ont-ils des programmes d\'affiliation ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nous n\'avons trouve aucun programme public d\'affiliation chez Braintrust, Weights & Biases ni Promptfoo. Le programme de partenaires de Weights & Biases est un dispositif de revente et d\'integration pour cabinets de conseil, non une remuneration par parrainage.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2395,39 +2423,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'Qual e a melhor ferramenta de avaliacao de LLM em 2026?',
-            a: 'Braintrust para times em que pessoas nao tecnicas revisam resultados, gracas aos usuarios ilimitados ja no nivel gratuito. Weave se voce ja usa o Weights & Biases e esta abaixo de 50 funcionarios. Promptfoo se quer avaliacoes como configuracao versionada rodando de graca na sua propria infraestrutura. As tres cobrem LLM como juiz, avaliadores proprios e testes de regressao.',
-          },
-          {
-            q: 'A OpenAI adquiriu o Promptfoo?',
-            a: 'Sim. A OpenAI anunciou a aquisicao em 9 de marco de 2026 e declarou que o Promptfoo continuara de codigo aberto sob sua licenca atual e que os clientes existentes seguirao com servico e suporte. No fim de agosto de 2026 o repositorio segue sob a organizacao promptfoo, segue com licenca MIT e e mantido ativamente.',
-          },
-          {
-            q: 'Quanto custa o Braintrust?',
-            a: 'O nivel Starter gratuito inclui 10.000 pontuacoes por mes, 1 GB de dados processados, 14 dias de retencao, US$ 10 de credito de modelo e usuarios ilimitados. O Pro custa US$ 249 por mes e inclui US$ 249 de credito, 50.000 pontuacoes, 5 GB e 30 dias de retencao, com excedente a US$ 1,50 por 1.000 pontuacoes. O Enterprise tem preco sob medida e acrescenta implantacao on-premise ou hospedada.',
-          },
-          {
-            q: 'O Weave e gratuito e quais sao os limites?',
-            a: 'O Weave tem um nivel gratuito com assentos ilimitados e 1 GB por mes de ingestao de dados. O Pro comeca em US$ 60 por mes com 1,5 GB, mas o Weights & Biases o restringe a times em estagio inicial com menos de 50 funcionarios; organizacoes maiores precisam migrar para o Enterprise. A ingestao adicional custa US$ 0,10 por MB.',
-          },
-          {
-            q: 'O Promptfoo e mesmo gratuito em qualquer escala?',
-            a: 'Sim, no sentido de que a ferramenta tem licenca MIT e roda nas suas proprias maquinas, entao nao ha cobranca por pontuacao nem por gigabyte. Voce ainda paga as chamadas de API do modelo feitas pelas avaliacoes, mas esse custo existe em qualquer plataforma e nao e especifico do Promptfoo. Ha ainda um nivel Enterprise hospedado opcional por cima.',
-          },
-          {
-            q: 'Qual posso auto-hospedar?',
-            a: 'O Promptfoo por padrao, ja que e CLI e biblioteca e roda onde voce o executar. O Braintrust oferece implantacao on-premise ou hospedada no plano Enterprise. O Weave oferece uma opcao Enterprise de inquilino unico com chaves gerenciadas pelo cliente, que e uma instancia dedicada e nao um verdadeiro on-premise, entao confirme os detalhes se tiver exigencia estrita.',
-          },
-          {
-            q: 'Alguma delas tem programa de afiliados?',
-            a: 'Nao encontramos programa publico de afiliados ou indicacao para criadores no Braintrust, Weights & Biases nem Promptfoo. O Weights & Biases mantem um programa de parceiros, mas sua pagina publica descreve parcerias de revenda e integracao tecnologica voltadas a consultorias, nao um pagamento por indicacao. Note tambem que usebraintrust.com e um marketplace de talentos separado, sem relacao com braintrust.dev. A PromptQuorum nao ganha nada com esta pagina.',
-          },
-          {
-            q: 'Qual a diferenca entre avaliacao e monitoramento?',
-            a: 'A avaliacao roda um conjunto fixo de dados antes do lancamento e diz se uma mudanca melhorou ou degradou a qualidade. O monitoramento observa o trafego real depois do lancamento e diz o que o sistema esta fazendo agora. Esta pagina cobre o primeiro. Os dois se complementam e muitos times fazem ambos, mas as ferramentas e as perguntas sao diferentes.',
-          },
-        ],
+            { q: 'Qual e a melhor ferramenta de avaliacao de LLM em 2026?', a: 'Braintrust para times em que pessoas nao tecnicas revisam resultados, gracas aos usuarios ilimitados ja no nivel gratuito. Weave se voce ja usa o Weights & Biases e esta abaixo de 50 funcionarios. Promptfoo se quer avaliacoes como configuracao versionada rodando de graca na sua propria infraestrutura. As tres cobrem LLM como juiz, avaliadores proprios e testes de regressao.' },
+            { q: 'A OpenAI adquiriu o Promptfoo?', a: 'Sim. A OpenAI anunciou a aquisicao em 9 de marco de 2026 e declarou que o Promptfoo continuara de codigo aberto sob sua licenca atual e que os clientes existentes seguirao com servico e suporte. No fim de agosto de 2026 o repositorio segue sob a organizacao promptfoo, segue com licenca MIT e e mantido ativamente.' },
+            { q: 'Quanto custa o Braintrust?', a: 'O nivel Starter gratuito inclui 10.000 pontuacoes por mes, 1 GB de dados processados, 14 dias de retencao, US$ 10 de credito de modelo e usuarios ilimitados. O Pro custa US$ 249 por mes e inclui US$ 249 de credito, 50.000 pontuacoes, 5 GB e 30 dias de retencao, com excedente a US$ 1,50 por 1.000 pontuacoes. O Enterprise tem preco sob medida e acrescenta implantacao on-premise ou hospedada.' },
+            { q: 'O Weave e gratuito e quais sao os limites?', a: 'O Weave tem um nivel gratuito com assentos ilimitados e 1 GB por mes de ingestao de dados. O Pro comeca em US$ 60 por mes com 1,5 GB, mas o Weights & Biases o restringe a times em estagio inicial com menos de 50 funcionarios; organizacoes maiores precisam migrar para o Enterprise. A ingestao adicional custa US$ 0,10 por MB.' },
+            { q: 'O Promptfoo e mesmo gratuito em qualquer escala?', a: 'Sim, no sentido de que a ferramenta tem licenca MIT e roda nas suas proprias maquinas, entao nao ha cobranca por pontuacao nem por gigabyte. Voce ainda paga as chamadas de API do modelo feitas pelas avaliacoes, mas esse custo existe em qualquer plataforma e nao e especifico do Promptfoo. Ha ainda um nivel Enterprise hospedado opcional por cima.' },
+            { q: 'Qual posso auto-hospedar?', a: 'O Promptfoo por padrao, ja que e CLI e biblioteca e roda onde voce o executar. O Braintrust oferece implantacao on-premise ou hospedada no plano Enterprise. O Weave oferece uma opcao Enterprise de inquilino unico com chaves gerenciadas pelo cliente, que e uma instancia dedicada e nao um verdadeiro on-premise, entao confirme os detalhes se tiver exigencia estrita.' },
+            { q: 'Alguma delas tem programa de afiliados?', a: 'Nao encontramos programa publico de afiliados ou indicacao para criadores no Braintrust, Weights & Biases nem Promptfoo. O Weights & Biases mantem um programa de parceiros, mas sua pagina publica descreve parcerias de revenda e integracao tecnologica voltadas a consultorias, nao um pagamento por indicacao. Note tambem que usebraintrust.com e um marketplace de talentos separado, sem relacao com braintrust.dev. A PromptQuorum nao ganha nada com esta pagina.' },
+            { q: 'Qual a diferenca entre avaliacao e monitoramento?', a: 'A avaliacao roda um conjunto fixo de dados antes do lancamento e diz se uma mudanca melhorou ou degradou a qualidade. O monitoramento observa o trafego real depois do lancamento e diz o que o sistema esta fazendo agora. Esta pagina cobre o primeiro. Os dois se complementam e muitos times fazem ambos, mas as ferramentas e as perguntas sao diferentes.' },
+            { q: 'Ferramentas de avaliacao de LLM tem programas de afiliados?', a: 'Nao encontramos programa publico de afiliados no Braintrust, Weights & Biases nem Promptfoo. O programa de parceiros do Weights & Biases e um esquema de revenda e integracao para consultorias, nao um pagamento por indicacao.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2494,47 +2499,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qual e a melhor ferramenta de avaliacao de LLM em 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust para times em que pessoas nao tecnicas revisam resultados, Weave se voce ja usa o Weights & Biases e esta abaixo de 50 funcionarios, e Promptfoo para avaliacoes como configuracao versionada rodando de graca na sua propria infraestrutura.',
+          {
+            '@type': 'Question',
+            'name': 'Qual e a melhor ferramenta de avaliacao de LLM em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust para times em que pessoas nao tecnicas revisam resultados, gracas aos usuarios ilimitados ja no nivel gratuito. Weave se voce ja usa o Weights & Biases e esta abaixo de 50 funcionarios. Promptfoo se quer avaliacoes como configuracao versionada rodando de graca na sua propria infraestrutura. As tres cobrem LLM como juiz, avaliadores proprios e testes de regressao.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'A OpenAI adquiriu o Promptfoo?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sim. A OpenAI anunciou a aquisicao em 9 de marco de 2026 e declarou que o Promptfoo continuara de codigo aberto sob sua licenca atual. No fim de agosto de 2026 o repositorio segue com licenca MIT e mantido ativamente.',
+          {
+            '@type': 'Question',
+            'name': 'A OpenAI adquiriu o Promptfoo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. A OpenAI anunciou a aquisicao em 9 de marco de 2026 e declarou que o Promptfoo continuara de codigo aberto sob sua licenca atual e que os clientes existentes seguirao com servico e suporte. No fim de agosto de 2026 o repositorio segue sob a organizacao promptfoo, segue com licenca MIT e e mantido ativamente.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quanto custa o Braintrust?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O nivel Starter gratuito inclui 10.000 pontuacoes por mes, 1 GB de dados, 14 dias de retencao e usuarios ilimitados. O Pro custa US$ 249 por mes com US$ 249 de credito de modelo, 50.000 pontuacoes e 5 GB. O Enterprise tem preco sob medida com implantacao on-premise ou hospedada.',
+          {
+            '@type': 'Question',
+            'name': 'Quanto custa o Braintrust?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O nivel Starter gratuito inclui 10.000 pontuacoes por mes, 1 GB de dados processados, 14 dias de retencao, US$ 10 de credito de modelo e usuarios ilimitados. O Pro custa US$ 249 por mes e inclui US$ 249 de credito, 50.000 pontuacoes, 5 GB e 30 dias de retencao, com excedente a US$ 1,50 por 1.000 pontuacoes. O Enterprise tem preco sob medida e acrescenta implantacao on-premise ou hospedada.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O Weave e gratuito e quais sao os limites?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O Weave tem nivel gratuito com assentos ilimitados e 1 GB por mes de ingestao. O Pro comeca em US$ 60 por mes com 1,5 GB mas e restrito a times com menos de 50 funcionarios. A ingestao adicional custa US$ 0,10 por MB.',
+          {
+            '@type': 'Question',
+            'name': 'O Weave e gratuito e quais sao os limites?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Weave tem um nivel gratuito com assentos ilimitados e 1 GB por mes de ingestao de dados. O Pro comeca em US$ 60 por mes com 1,5 GB, mas o Weights & Biases o restringe a times em estagio inicial com menos de 50 funcionarios; organizacoes maiores precisam migrar para o Enterprise. A ingestao adicional custa US$ 0,10 por MB.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ferramentas de avaliacao de LLM tem programas de afiliados?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nao encontramos programa publico de afiliados no Braintrust, Weights & Biases nem Promptfoo. O programa de parceiros do Weights & Biases e um esquema de revenda e integracao para consultorias, nao um pagamento por indicacao.',
+          {
+            '@type': 'Question',
+            'name': 'O Promptfoo e mesmo gratuito em qualquer escala?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, no sentido de que a ferramenta tem licenca MIT e roda nas suas proprias maquinas, entao nao ha cobranca por pontuacao nem por gigabyte. Voce ainda paga as chamadas de API do modelo feitas pelas avaliacoes, mas esse custo existe em qualquer plataforma e nao e especifico do Promptfoo. Ha ainda um nivel Enterprise hospedado opcional por cima.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qual posso auto-hospedar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Promptfoo por padrao, ja que e CLI e biblioteca e roda onde voce o executar. O Braintrust oferece implantacao on-premise ou hospedada no plano Enterprise. O Weave oferece uma opcao Enterprise de inquilino unico com chaves gerenciadas pelo cliente, que e uma instancia dedicada e nao um verdadeiro on-premise, entao confirme os detalhes se tiver exigencia estrita.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Alguma delas tem programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nao encontramos programa publico de afiliados ou indicacao para criadores no Braintrust, Weights & Biases nem Promptfoo. O Weights & Biases mantem um programa de parceiros, mas sua pagina publica descreve parcerias de revenda e integracao tecnologica voltadas a consultorias, nao um pagamento por indicacao. Note tambem que usebraintrust.com e um marketplace de talentos separado, sem relacao com braintrust.dev. A PromptQuorum nao ganha nada com esta pagina.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual a diferenca entre avaliacao e monitoramento?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A avaliacao roda um conjunto fixo de dados antes do lancamento e diz se uma mudanca melhorou ou degradou a qualidade. O monitoramento observa o trafego real depois do lancamento e diz o que o sistema esta fazendo agora. Esta pagina cobre o primeiro. Os dois se complementam e muitos times fazem ambos, mas as ferramentas e as perguntas sao diferentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ferramentas de avaliacao de LLM tem programas de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nao encontramos programa publico de afiliados no Braintrust, Weights & Biases nem Promptfoo. O programa de parceiros do Weights & Biases e um esquema de revenda e integracao para consultorias, nao um pagamento por indicacao.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2903,39 +2940,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          {
-            q: '2026年に最適なLLM評価ツールは何ですか？',
-            a: 'エンジニア以外が結果を確認するチームには、無料枠でもユーザー数が無制限のBraintrustです。すでにWeights & Biasesを使っていて従業員50人未満ならWeave。自社インフラで無料で動くバージョン管理された設定として評価を持ちたいならPromptfooです。三つともLLM-as-Judge、独自スコアラー、データセットによる回帰テストを備えています。',
-          },
-          {
-            q: 'OpenAIはPromptfooを買収したのですか？',
-            a: 'はい。OpenAIは2026年3月9日に買収を発表し、Promptfooは現行ライセンスのままオープンソースを維持し、既存顧客への提供とサポートも継続すると述べました。2026年8月下旬時点で、リポジトリはpromptfoo組織のまま、MITライセンスのままで、活発に保守されています。',
-          },
-          {
-            q: 'Braintrustはいくらですか？',
-            a: '無料のStarter枠には月1万スコア、処理データ1GB、保持14日、モデルクレジット10ドル、ユーザー数無制限が含まれます。Proは月249ドルで、249ドル分のモデルクレジット、5万スコア、5GB、保持30日を含み、超過は1,000スコアあたり1.50ドルです。Enterpriseは個別見積で、オンプレミスまたはホスト型の導入が加わります。',
-          },
-          {
-            q: 'Weaveは無料ですか、制限は何ですか？',
-            a: 'Weaveには席数無制限で取り込み月1GBの無料枠があります。Proは1.5GBで月60ドルからですが、Weights & Biasesはこれを従業員50人未満の初期段階のチームに限定しており、より大きな組織はEnterpriseへ移る必要があります。追加の取り込みは1MBあたり0.10ドルです。',
-          },
-          {
-            q: 'Promptfooは本当にどの規模でも無料ですか？',
-            a: 'はい。ツール自体がMITライセンスで自分のマシン上で動くという意味で、スコア単位やギガバイト単位の課金はありません。評価が行うモデルAPIの呼び出し費用は引き続き発生しますが、それはどのプラットフォームでも生じるものでPromptfoo固有ではありません。加えて任意のホスト型Enterprise枠が上に用意されています。',
-          },
-          {
-            q: '自社で運用できるのはどれですか？',
-            a: '既定ではPromptfooです。CLIとライブラリなので、動かした場所で動きます。BraintrustはEnterpriseプランでオンプレミスまたはホスト型の導入を提供します。Weaveは顧客管理鍵を伴うEnterpriseのシングルテナントを提供しますが、これは真のオンプレミスというより専用インスタンスなので、厳密な要件がある場合は詳細を確認してください。',
-          },
-          {
-            q: 'これらにアフィリエイトプログラムはありますか？',
-            a: 'Braintrust、Weights & Biases、Promptfooのいずれについても、発信者向けの公開アフィリエイトや紹介プログラムは見つかりませんでした。Weights & Biasesはパートナープログラムを運営していますが、公開ページはコンサルティング企業向けの再販・技術連携の提携を説明しており、紹介ごとの報酬ではありません。なお usebraintrust.com は braintrust.dev とは無関係の人材マーケットプレイスです。PromptQuorumは本ページから収益を得ていません。',
-          },
-          {
-            q: '評価と監視の違いは何ですか？',
-            a: '評価はリリース前に固定のデータセットを実行し、変更が品質を改善したか劣化させたかを教えます。監視はリリース後の実トラフィックを見張り、システムがいま何をしているかを教えます。本ページは前者を扱います。両者は補完的で多くのチームが両方を行いますが、道具も問いも異なります。',
-          },
-        ],
+            { q: '2026年に最適なLLM評価ツールは何ですか？', a: 'エンジニア以外が結果を確認するチームには、無料枠でもユーザー数が無制限のBraintrustです。すでにWeights & Biasesを使っていて従業員50人未満ならWeave。自社インフラで無料で動くバージョン管理された設定として評価を持ちたいならPromptfooです。三つともLLM-as-Judge、独自スコアラー、データセットによる回帰テストを備えています。' },
+            { q: 'OpenAIはPromptfooを買収したのですか？', a: 'はい。OpenAIは2026年3月9日に買収を発表し、Promptfooは現行ライセンスのままオープンソースを維持し、既存顧客への提供とサポートも継続すると述べました。2026年8月下旬時点で、リポジトリはpromptfoo組織のまま、MITライセンスのままで、活発に保守されています。' },
+            { q: 'Braintrustはいくらですか？', a: '無料のStarter枠には月1万スコア、処理データ1GB、保持14日、モデルクレジット10ドル、ユーザー数無制限が含まれます。Proは月249ドルで、249ドル分のモデルクレジット、5万スコア、5GB、保持30日を含み、超過は1,000スコアあたり1.50ドルです。Enterpriseは個別見積で、オンプレミスまたはホスト型の導入が加わります。' },
+            { q: 'Weaveは無料ですか、制限は何ですか？', a: 'Weaveには席数無制限で取り込み月1GBの無料枠があります。Proは1.5GBで月60ドルからですが、Weights & Biasesはこれを従業員50人未満の初期段階のチームに限定しており、より大きな組織はEnterpriseへ移る必要があります。追加の取り込みは1MBあたり0.10ドルです。' },
+            { q: 'Promptfooは本当にどの規模でも無料ですか？', a: 'はい。ツール自体がMITライセンスで自分のマシン上で動くという意味で、スコア単位やギガバイト単位の課金はありません。評価が行うモデルAPIの呼び出し費用は引き続き発生しますが、それはどのプラットフォームでも生じるものでPromptfoo固有ではありません。加えて任意のホスト型Enterprise枠が上に用意されています。' },
+            { q: '自社で運用できるのはどれですか？', a: '既定ではPromptfooです。CLIとライブラリなので、動かした場所で動きます。BraintrustはEnterpriseプランでオンプレミスまたはホスト型の導入を提供します。Weaveは顧客管理鍵を伴うEnterpriseのシングルテナントを提供しますが、これは真のオンプレミスというより専用インスタンスなので、厳密な要件がある場合は詳細を確認してください。' },
+            { q: 'これらにアフィリエイトプログラムはありますか？', a: 'Braintrust、Weights & Biases、Promptfooのいずれについても、発信者向けの公開アフィリエイトや紹介プログラムは見つかりませんでした。Weights & Biasesはパートナープログラムを運営していますが、公開ページはコンサルティング企業向けの再販・技術連携の提携を説明しており、紹介ごとの報酬ではありません。なお usebraintrust.com は braintrust.dev とは無関係の人材マーケットプレイスです。PromptQuorumは本ページから収益を得ていません。' },
+            { q: '評価と監視の違いは何ですか？', a: '評価はリリース前に固定のデータセットを実行し、変更が品質を改善したか劣化させたかを教えます。監視はリリース後の実トラフィックを見張り、システムがいま何をしているかを教えます。本ページは前者を扱います。両者は補完的で多くのチームが両方を行いますが、道具も問いも異なります。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3002,47 +3015,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026年に最適なLLM評価ツールは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'エンジニア以外が結果を確認するチームにはBraintrust、すでにWeights & Biasesを使い従業員50人未満ならWeave、自社インフラで無料で動く設定として評価を持ちたいならPromptfooです。',
+          {
+            '@type': 'Question',
+            'name': '2026年に最適なLLM評価ツールは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'エンジニア以外が結果を確認するチームには、無料枠でもユーザー数が無制限のBraintrustです。すでにWeights & Biasesを使っていて従業員50人未満ならWeave。自社インフラで無料で動くバージョン管理された設定として評価を持ちたいならPromptfooです。三つともLLM-as-Judge、独自スコアラー、データセットによる回帰テストを備えています。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenAIはPromptfooを買収したのですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'はい。OpenAIは2026年3月9日に買収を発表し、現行ライセンスのままオープンソースを維持すると述べました。2026年8月下旬時点でリポジトリはMITライセンスのままで、活発に保守されています。',
+          {
+            '@type': 'Question',
+            'name': 'OpenAIはPromptfooを買収したのですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。OpenAIは2026年3月9日に買収を発表し、Promptfooは現行ライセンスのままオープンソースを維持し、既存顧客への提供とサポートも継続すると述べました。2026年8月下旬時点で、リポジトリはpromptfoo組織のまま、MITライセンスのままで、活発に保守されています。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Braintrustはいくらですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '無料のStarter枠は月1万スコア、1GB、保持14日、ユーザー数無制限です。Proは月249ドルで249ドル分のモデルクレジット、5万スコア、5GBを含みます。Enterpriseは個別見積でオンプレミスまたはホスト型の導入が可能です。',
+          {
+            '@type': 'Question',
+            'name': 'Braintrustはいくらですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '無料のStarter枠には月1万スコア、処理データ1GB、保持14日、モデルクレジット10ドル、ユーザー数無制限が含まれます。Proは月249ドルで、249ドル分のモデルクレジット、5万スコア、5GB、保持30日を含み、超過は1,000スコアあたり1.50ドルです。Enterpriseは個別見積で、オンプレミスまたはホスト型の導入が加わります。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Weaveは無料ですか、制限は何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Weaveには席数無制限で取り込み月1GBの無料枠があります。Proは1.5GBで月60ドルからですが、従業員50人未満のチームに限られます。追加の取り込みは1MBあたり0.10ドルです。',
+          {
+            '@type': 'Question',
+            'name': 'Weaveは無料ですか、制限は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Weaveには席数無制限で取り込み月1GBの無料枠があります。Proは1.5GBで月60ドルからですが、Weights & Biasesはこれを従業員50人未満の初期段階のチームに限定しており、より大きな組織はEnterpriseへ移る必要があります。追加の取り込みは1MBあたり0.10ドルです。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LLM評価ツールにアフィリエイトプログラムはありますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust、Weights & Biases、Promptfooのいずれにも公開のアフィリエイトプログラムは見つかりませんでした。Weights & Biasesのパートナープログラムはコンサルティング企業向けの再販・連携の枠組みで、紹介ごとの報酬ではありません。',
+          {
+            '@type': 'Question',
+            'name': 'Promptfooは本当にどの規模でも無料ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。ツール自体がMITライセンスで自分のマシン上で動くという意味で、スコア単位やギガバイト単位の課金はありません。評価が行うモデルAPIの呼び出し費用は引き続き発生しますが、それはどのプラットフォームでも生じるものでPromptfoo固有ではありません。加えて任意のホスト型Enterprise枠が上に用意されています。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '自社で運用できるのはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '既定ではPromptfooです。CLIとライブラリなので、動かした場所で動きます。BraintrustはEnterpriseプランでオンプレミスまたはホスト型の導入を提供します。Weaveは顧客管理鍵を伴うEnterpriseのシングルテナントを提供しますが、これは真のオンプレミスというより専用インスタンスなので、厳密な要件がある場合は詳細を確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'これらにアフィリエイトプログラムはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust、Weights & Biases、Promptfooのいずれについても、発信者向けの公開アフィリエイトや紹介プログラムは見つかりませんでした。Weights & Biasesはパートナープログラムを運営していますが、公開ページはコンサルティング企業向けの再販・技術連携の提携を説明しており、紹介ごとの報酬ではありません。なお usebraintrust.com は braintrust.dev とは無関係の人材マーケットプレイスです。PromptQuorumは本ページから収益を得ていません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '評価と監視の違いは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '評価はリリース前に固定のデータセットを実行し、変更が品質を改善したか劣化させたかを教えます。監視はリリース後の実トラフィックを見張り、システムがいま何をしているかを教えます。本ページは前者を扱います。両者は補完的で多くのチームが両方を行いますが、道具も問いも異なります。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3411,39 +3448,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          {
-            q: '2026 年最好的 LLM 评估工具是哪个？',
-            a: '对需要非技术人员复核结果的团队是 Braintrust，因为免费档就不限用户数量。若你已在用 Weights & Biases 且员工少于 50 人，则是 Weave。若你想要在自己基础设施上免费运行、受版本控制的评估配置，则是 Promptfoo。三者都覆盖「大模型作为评判者」、自定义评分器与回归测试。',
-          },
-          {
-            q: 'OpenAI 收购 Promptfoo 了吗？',
-            a: '是的。OpenAI 于 2026 年 3 月 9 日宣布收购，并表示 Promptfoo 将在现有许可下保持开源，现有客户也将继续获得服务与支持。截至 2026 年 8 月下旬，该仓库仍在 promptfoo 组织之下、仍为 MIT 许可，并处于活跃维护中。',
-          },
-          {
-            q: 'Braintrust 多少钱？',
-            a: '免费的 Starter 档包含每月 1 万次评分、1 GB 处理数据、14 天留存、10 美元模型额度与不限数量的用户。Pro 每月 249 美元，含 249 美元额度、5 万次评分、5 GB 与 30 天留存，超量为每 1,000 次评分 1.50 美元。Enterprise 为定制报价，并增加本地或托管部署。',
-          },
-          {
-            q: 'Weave 免费吗，限制是什么？',
-            a: 'Weave 有一个免费档，提供不限数量的席位与每月 1 GB 数据摄入。Pro 每月 60 美元起、含 1.5 GB，但 Weights & Biases 将其限定为员工少于 50 人的早期团队；更大的组织必须转入 Enterprise。额外摄入为每 MB 0.10 美元。',
-          },
-          {
-            q: 'Promptfoo 真的在任意规模下免费吗？',
-            a: '是的，就工具本身而言：它采用 MIT 许可并运行在你自己的机器上，因此没有按评分或按 GB 的收费。你仍需为评估发起的模型 API 调用付费，但这笔成本在任何平台上都存在，并非 Promptfoo 特有。此外还有一个可选的托管 Enterprise 档位。',
-          },
-          {
-            q: '哪一个可以自托管？',
-            a: '默认是 Promptfoo，因为它是 CLI 和库，你在哪里运行它就在哪里跑。Braintrust 在其 Enterprise 套餐中提供本地或托管部署。Weave 提供带客户自管密钥的 Enterprise 单租户选项，那是专用实例而非真正的本地部署，若你有严格要求请确认细节。',
-          },
-          {
-            q: '它们有联盟计划吗？',
-            a: '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到面向创作者的公开联盟或推荐计划。Weights & Biases 确有合作伙伴计划，但其公开页面描述的是面向咨询公司的分销与技术集成合作，而非按推荐付费。另请注意 usebraintrust.com 是一个独立的人才市场，与 braintrust.dev 无关。PromptQuorum 不会从本页获得任何收入。',
-          },
-          {
-            q: '评估与监控有什么区别？',
-            a: '评估在发布前运行一个固定的数据集，告诉你某次改动提升还是拉低了质量。监控在发布后观察真实流量，告诉你系统现在正在做什么。本页讨论前者。两者互补，很多团队都会做，但工具与要回答的问题并不相同。',
-          },
-        ],
+            { q: '2026 年最好的 LLM 评估工具是哪个？', a: '对需要非技术人员复核结果的团队是 Braintrust，因为免费档就不限用户数量。若你已在用 Weights & Biases 且员工少于 50 人，则是 Weave。若你想要在自己基础设施上免费运行、受版本控制的评估配置，则是 Promptfoo。三者都覆盖「大模型作为评判者」、自定义评分器与回归测试。' },
+            { q: 'OpenAI 收购 Promptfoo 了吗？', a: '是的。OpenAI 于 2026 年 3 月 9 日宣布收购，并表示 Promptfoo 将在现有许可下保持开源，现有客户也将继续获得服务与支持。截至 2026 年 8 月下旬，该仓库仍在 promptfoo 组织之下、仍为 MIT 许可，并处于活跃维护中。' },
+            { q: 'Braintrust 多少钱？', a: '免费的 Starter 档包含每月 1 万次评分、1 GB 处理数据、14 天留存、10 美元模型额度与不限数量的用户。Pro 每月 249 美元，含 249 美元额度、5 万次评分、5 GB 与 30 天留存，超量为每 1,000 次评分 1.50 美元。Enterprise 为定制报价，并增加本地或托管部署。' },
+            { q: 'Weave 免费吗，限制是什么？', a: 'Weave 有一个免费档，提供不限数量的席位与每月 1 GB 数据摄入。Pro 每月 60 美元起、含 1.5 GB，但 Weights & Biases 将其限定为员工少于 50 人的早期团队；更大的组织必须转入 Enterprise。额外摄入为每 MB 0.10 美元。' },
+            { q: 'Promptfoo 真的在任意规模下免费吗？', a: '是的，就工具本身而言：它采用 MIT 许可并运行在你自己的机器上，因此没有按评分或按 GB 的收费。你仍需为评估发起的模型 API 调用付费，但这笔成本在任何平台上都存在，并非 Promptfoo 特有。此外还有一个可选的托管 Enterprise 档位。' },
+            { q: '哪一个可以自托管？', a: '默认是 Promptfoo，因为它是 CLI 和库，你在哪里运行它就在哪里跑。Braintrust 在其 Enterprise 套餐中提供本地或托管部署。Weave 提供带客户自管密钥的 Enterprise 单租户选项，那是专用实例而非真正的本地部署，若你有严格要求请确认细节。' },
+            { q: '它们有联盟计划吗？', a: '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到面向创作者的公开联盟或推荐计划。Weights & Biases 确有合作伙伴计划，但其公开页面描述的是面向咨询公司的分销与技术集成合作，而非按推荐付费。另请注意 usebraintrust.com 是一个独立的人才市场，与 braintrust.dev 无关。PromptQuorum 不会从本页获得任何收入。' },
+            { q: '评估与监控有什么区别？', a: '评估在发布前运行一个固定的数据集，告诉你某次改动提升还是拉低了质量。监控在发布后观察真实流量，告诉你系统现在正在做什么。本页讨论前者。两者互补，很多团队都会做，但工具与要回答的问题并不相同。' },
+            { q: 'LLM 评估工具有联盟计划吗？', a: '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到公开的联盟计划。Weights & Biases 的合作伙伴计划是面向咨询公司的分销与集成机制，而非按推荐付费。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3510,47 +3524,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026 年最好的 LLM 评估工具是哪个？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '需要非技术人员复核结果的团队选 Braintrust，已用 Weights & Biases 且员工少于 50 人的选 Weave，想在自己基础设施上免费运行受版本控制评估配置的选 Promptfoo。',
+          {
+            '@type': 'Question',
+            'name': '2026 年最好的 LLM 评估工具是哪个？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对需要非技术人员复核结果的团队是 Braintrust，因为免费档就不限用户数量。若你已在用 Weights & Biases 且员工少于 50 人，则是 Weave。若你想要在自己基础设施上免费运行、受版本控制的评估配置，则是 Promptfoo。三者都覆盖「大模型作为评判者」、自定义评分器与回归测试。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenAI 收购 Promptfoo 了吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '是的。OpenAI 于 2026 年 3 月 9 日宣布收购，并表示 Promptfoo 将在现有许可下保持开源。截至 2026 年 8 月下旬，该仓库仍为 MIT 许可并处于活跃维护中。',
+          {
+            '@type': 'Question',
+            'name': 'OpenAI 收购 Promptfoo 了吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。OpenAI 于 2026 年 3 月 9 日宣布收购，并表示 Promptfoo 将在现有许可下保持开源，现有客户也将继续获得服务与支持。截至 2026 年 8 月下旬，该仓库仍在 promptfoo 组织之下、仍为 MIT 许可，并处于活跃维护中。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Braintrust 多少钱？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '免费的 Starter 档含每月 1 万次评分、1 GB 数据、14 天留存与不限数量的用户。Pro 每月 249 美元，含 249 美元模型额度、5 万次评分与 5 GB。Enterprise 为定制报价，支持本地或托管部署。',
+          {
+            '@type': 'Question',
+            'name': 'Braintrust 多少钱？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '免费的 Starter 档包含每月 1 万次评分、1 GB 处理数据、14 天留存、10 美元模型额度与不限数量的用户。Pro 每月 249 美元，含 249 美元额度、5 万次评分、5 GB 与 30 天留存，超量为每 1,000 次评分 1.50 美元。Enterprise 为定制报价，并增加本地或托管部署。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Weave 免费吗，限制是什么？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Weave 有免费档，提供不限席位与每月 1 GB 摄入。Pro 每月 60 美元起、含 1.5 GB，但仅限员工少于 50 人的团队。额外摄入为每 MB 0.10 美元。',
+          {
+            '@type': 'Question',
+            'name': 'Weave 免费吗，限制是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Weave 有一个免费档，提供不限数量的席位与每月 1 GB 数据摄入。Pro 每月 60 美元起、含 1.5 GB，但 Weights & Biases 将其限定为员工少于 50 人的早期团队；更大的组织必须转入 Enterprise。额外摄入为每 MB 0.10 美元。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LLM 评估工具有联盟计划吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到公开的联盟计划。Weights & Biases 的合作伙伴计划是面向咨询公司的分销与集成机制，而非按推荐付费。',
+          {
+            '@type': 'Question',
+            'name': 'Promptfoo 真的在任意规模下免费吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的，就工具本身而言：它采用 MIT 许可并运行在你自己的机器上，因此没有按评分或按 GB 的收费。你仍需为评估发起的模型 API 调用付费，但这笔成本在任何平台上都存在，并非 Promptfoo 特有。此外还有一个可选的托管 Enterprise 档位。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '哪一个可以自托管？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '默认是 Promptfoo，因为它是 CLI 和库，你在哪里运行它就在哪里跑。Braintrust 在其 Enterprise 套餐中提供本地或托管部署。Weave 提供带客户自管密钥的 Enterprise 单租户选项，那是专用实例而非真正的本地部署，若你有严格要求请确认细节。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '它们有联盟计划吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到面向创作者的公开联盟或推荐计划。Weights & Biases 确有合作伙伴计划，但其公开页面描述的是面向咨询公司的分销与技术集成合作，而非按推荐付费。另请注意 usebraintrust.com 是一个独立的人才市场，与 braintrust.dev 无关。PromptQuorum 不会从本页获得任何收入。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '评估与监控有什么区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '评估在发布前运行一个固定的数据集，告诉你某次改动提升还是拉低了质量。监控在发布后观察真实流量，告诉你系统现在正在做什么。本页讨论前者。两者互补，很多团队都会做，但工具与要回答的问题并不相同。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM 评估工具有联盟计划吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到公开的联盟计划。Weights & Biases 的合作伙伴计划是面向咨询公司的分销与集成机制，而非按推荐付费。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3919,39 +3965,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'ما أفضل أداة لتقييم النماذج اللغوية في 2026؟',
-            a: 'Braintrust للفرق التي يراجع فيها غير المبرمجين النتائج، بفضل المستخدمين غير المحدودين حتى في الباقة المجانية. وWeave إن كنت تستخدم Weights & Biases أصلًا وعدد موظفيكم دون الخمسين. وPromptfoo إن أردت تقييمات في صورة إعدادات خاضعة لإدارة الإصدارات تعمل مجانًا على بنيتك التحتية. والثلاثة تغطي استخدام نموذج لغوي كحكم والمقيّمات المخصصة واختبارات الانحدار.',
-          },
-          {
-            q: 'هل استحوذت OpenAI على Promptfoo؟',
-            a: 'نعم. أعلنت OpenAI الاستحواذ في 9 مارس 2026 وذكرت أن Promptfoo ستبقى مفتوحة المصدر بموجب رخصتها الحالية وأن العملاء الحاليين سيستمرون في تلقّي الخدمة والدعم. وحتى أواخر أغسطس 2026 لا يزال المستودع ضمن منظمة promptfoo، ولا يزال مرخّصًا بـMIT، ويحظى بصيانة نشطة.',
-          },
-          {
-            q: 'كم تكلّف Braintrust؟',
-            a: 'تشمل باقة Starter المجانية 10 آلاف تقييم شهريًا، وجيغابايت واحدًا من البيانات المعالجة، واحتفاظًا لأربعة عشر يومًا، و10 دولارات رصيد نماذج، ومستخدمين غير محدودين. وباقة Pro بـ249 دولارًا شهريًا وتشمل 249 دولارًا رصيدًا، و50 ألف تقييم، و5 جيغابايت، واحتفاظًا لثلاثين يومًا، مع تجاوز بـ1.50 دولار لكل 1000 تقييم. وEnterprise بسعر مخصص وتضيف نشرًا محليًا أو مستضافًا.',
-          },
-          {
-            q: 'هل Weave مجانية وما حدودها؟',
-            a: 'لدى Weave باقة مجانية بمقاعد غير محدودة وجيغابايت واحد من استيعاب البيانات شهريًا. وتبدأ Pro من 60 دولارًا شهريًا مع 1.5 جيغابايت، لكن Weights & Biases تقصرها على الفرق في مراحلها الأولى التي يقل عدد موظفيها عن 50؛ والمؤسسات الأكبر عليها الانتقال إلى Enterprise. والاستيعاب الإضافي بـ0.10 دولار لكل ميغابايت.',
-          },
-          {
-            q: 'هل Promptfoo مجانية فعلًا عند أي حجم؟',
-            a: 'نعم، بمعنى أن الأداة نفسها مرخّصة بـMIT وتعمل على أجهزتك، فلا رسوم لكل تقييم ولا لكل جيغابايت. ولا تزال تدفع مقابل استدعاءات واجهة النموذج البرمجية التي تجريها التقييمات، لكن هذه الكلفة قائمة على أي منصة وليست خاصة بـPromptfoo. وتوجد فوق ذلك باقة Enterprise مستضافة اختيارية.',
-          },
-          {
-            q: 'أيها يمكنني استضافته ذاتيًا؟',
-            a: 'Promptfoo افتراضيًا، لأنها واجهة سطر أوامر ومكتبة تعمل حيث تشغّلها. وتوفّر Braintrust نشرًا محليًا أو مستضافًا في خطة Enterprise. وتوفّر Weave خيار Enterprise بمستأجر واحد مع مفاتيح يديرها العميل، وهو نسخة مخصصة أكثر منه نشرًا محليًا حقيقيًا، فتأكد من التفاصيل إن كان لديك متطلب صارم.',
-          },
-          {
-            q: 'هل لأي منها برنامج عمولة؟',
-            a: 'لم نجد برنامج عمولة أو إحالة علنيًا لصنّاع المحتوى لدى Braintrust ولا Weights & Biases ولا Promptfoo. وتدير Weights & Biases برنامج شركاء، لكن صفحته العلنية تصف شراكات إعادة بيع وتكامل تقني موجّهة إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة. ولاحظ أيضًا أن usebraintrust.com سوق مواهب منفصل لا صلة له بـbraintrust.dev. ومنصة PromptQuorum لا تكسب شيئًا من هذه الصفحة.',
-          },
-          {
-            q: 'ما الفرق بين التقييم والمراقبة؟',
-            a: 'يشغّل التقييم مجموعة بيانات ثابتة قبل الإطلاق ويخبرك إن كان التغيير قد حسّن الجودة أو أضعفها. أما المراقبة فتتابع الحركة الحية بعد الإطلاق وتخبرك بما يفعله النظام الآن. وهذه الصفحة تغطي الأول. والاثنان متكاملان وكثير من الفرق يمارس كليهما، لكن الأدوات والأسئلة مختلفة.',
-          },
-        ],
+            { q: 'ما أفضل أداة لتقييم النماذج اللغوية في 2026؟', a: 'Braintrust للفرق التي يراجع فيها غير المبرمجين النتائج، بفضل المستخدمين غير المحدودين حتى في الباقة المجانية. وWeave إن كنت تستخدم Weights & Biases أصلًا وعدد موظفيكم دون الخمسين. وPromptfoo إن أردت تقييمات في صورة إعدادات خاضعة لإدارة الإصدارات تعمل مجانًا على بنيتك التحتية. والثلاثة تغطي استخدام نموذج لغوي كحكم والمقيّمات المخصصة واختبارات الانحدار.' },
+            { q: 'هل استحوذت OpenAI على Promptfoo؟', a: 'نعم. أعلنت OpenAI الاستحواذ في 9 مارس 2026 وذكرت أن Promptfoo ستبقى مفتوحة المصدر بموجب رخصتها الحالية وأن العملاء الحاليين سيستمرون في تلقّي الخدمة والدعم. وحتى أواخر أغسطس 2026 لا يزال المستودع ضمن منظمة promptfoo، ولا يزال مرخّصًا بـMIT، ويحظى بصيانة نشطة.' },
+            { q: 'كم تكلّف Braintrust؟', a: 'تشمل باقة Starter المجانية 10 آلاف تقييم شهريًا، وجيغابايت واحدًا من البيانات المعالجة، واحتفاظًا لأربعة عشر يومًا، و10 دولارات رصيد نماذج، ومستخدمين غير محدودين. وباقة Pro بـ249 دولارًا شهريًا وتشمل 249 دولارًا رصيدًا، و50 ألف تقييم، و5 جيغابايت، واحتفاظًا لثلاثين يومًا، مع تجاوز بـ1.50 دولار لكل 1000 تقييم. وEnterprise بسعر مخصص وتضيف نشرًا محليًا أو مستضافًا.' },
+            { q: 'هل Weave مجانية وما حدودها؟', a: 'لدى Weave باقة مجانية بمقاعد غير محدودة وجيغابايت واحد من استيعاب البيانات شهريًا. وتبدأ Pro من 60 دولارًا شهريًا مع 1.5 جيغابايت، لكن Weights & Biases تقصرها على الفرق في مراحلها الأولى التي يقل عدد موظفيها عن 50؛ والمؤسسات الأكبر عليها الانتقال إلى Enterprise. والاستيعاب الإضافي بـ0.10 دولار لكل ميغابايت.' },
+            { q: 'هل Promptfoo مجانية فعلًا عند أي حجم؟', a: 'نعم، بمعنى أن الأداة نفسها مرخّصة بـMIT وتعمل على أجهزتك، فلا رسوم لكل تقييم ولا لكل جيغابايت. ولا تزال تدفع مقابل استدعاءات واجهة النموذج البرمجية التي تجريها التقييمات، لكن هذه الكلفة قائمة على أي منصة وليست خاصة بـPromptfoo. وتوجد فوق ذلك باقة Enterprise مستضافة اختيارية.' },
+            { q: 'أيها يمكنني استضافته ذاتيًا؟', a: 'Promptfoo افتراضيًا، لأنها واجهة سطر أوامر ومكتبة تعمل حيث تشغّلها. وتوفّر Braintrust نشرًا محليًا أو مستضافًا في خطة Enterprise. وتوفّر Weave خيار Enterprise بمستأجر واحد مع مفاتيح يديرها العميل، وهو نسخة مخصصة أكثر منه نشرًا محليًا حقيقيًا، فتأكد من التفاصيل إن كان لديك متطلب صارم.' },
+            { q: 'هل لأي منها برنامج عمولة؟', a: 'لم نجد برنامج عمولة أو إحالة علنيًا لصنّاع المحتوى لدى Braintrust ولا Weights & Biases ولا Promptfoo. وتدير Weights & Biases برنامج شركاء، لكن صفحته العلنية تصف شراكات إعادة بيع وتكامل تقني موجّهة إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة. ولاحظ أيضًا أن usebraintrust.com سوق مواهب منفصل لا صلة له بـbraintrust.dev. ومنصة PromptQuorum لا تكسب شيئًا من هذه الصفحة.' },
+            { q: 'ما الفرق بين التقييم والمراقبة؟', a: 'يشغّل التقييم مجموعة بيانات ثابتة قبل الإطلاق ويخبرك إن كان التغيير قد حسّن الجودة أو أضعفها. أما المراقبة فتتابع الحركة الحية بعد الإطلاق وتخبرك بما يفعله النظام الآن. وهذه الصفحة تغطي الأول. والاثنان متكاملان وكثير من الفرق يمارس كليهما، لكن الأدوات والأسئلة مختلفة.' },
+            { q: 'هل لأدوات تقييم النماذج اللغوية برامج عمولة؟', a: 'لم نجد برنامج عمولة علنيًا لدى Braintrust ولا Weights & Biases ولا Promptfoo. وبرنامج شركاء Weights & Biases ترتيب لإعادة البيع والتكامل موجّه إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4018,47 +4041,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما أفضل أداة لتقييم النماذج اللغوية في 2026؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust للفرق التي يراجع فيها غير المبرمجين النتائج، وWeave إن كنت تستخدم Weights & Biases وعدد موظفيكم دون الخمسين، وPromptfoo للتقييمات في صورة إعدادات خاضعة لإدارة الإصدارات تعمل مجانًا على بنيتك التحتية.',
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل أداة لتقييم النماذج اللغوية في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust للفرق التي يراجع فيها غير المبرمجين النتائج، بفضل المستخدمين غير المحدودين حتى في الباقة المجانية. وWeave إن كنت تستخدم Weights & Biases أصلًا وعدد موظفيكم دون الخمسين. وPromptfoo إن أردت تقييمات في صورة إعدادات خاضعة لإدارة الإصدارات تعمل مجانًا على بنيتك التحتية. والثلاثة تغطي استخدام نموذج لغوي كحكم والمقيّمات المخصصة واختبارات الانحدار.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل استحوذت OpenAI على Promptfoo؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'نعم. أعلنت OpenAI الاستحواذ في 9 مارس 2026 وذكرت أن Promptfoo ستبقى مفتوحة المصدر بموجب رخصتها الحالية. وحتى أواخر أغسطس 2026 لا يزال المستودع مرخّصًا بـMIT ويحظى بصيانة نشطة.',
+          {
+            '@type': 'Question',
+            'name': 'هل استحوذت OpenAI على Promptfoo؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. أعلنت OpenAI الاستحواذ في 9 مارس 2026 وذكرت أن Promptfoo ستبقى مفتوحة المصدر بموجب رخصتها الحالية وأن العملاء الحاليين سيستمرون في تلقّي الخدمة والدعم. وحتى أواخر أغسطس 2026 لا يزال المستودع ضمن منظمة promptfoo، ولا يزال مرخّصًا بـMIT، ويحظى بصيانة نشطة.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كم تكلّف Braintrust؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'تشمل باقة Starter المجانية 10 آلاف تقييم شهريًا وجيغابايت واحدًا واحتفاظًا لأربعة عشر يومًا ومستخدمين غير محدودين. وباقة Pro بـ249 دولارًا شهريًا مع 249 دولارًا رصيد نماذج و50 ألف تقييم و5 جيغابايت. وEnterprise بسعر مخصص مع نشر محلي أو مستضاف.',
+          {
+            '@type': 'Question',
+            'name': 'كم تكلّف Braintrust؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تشمل باقة Starter المجانية 10 آلاف تقييم شهريًا، وجيغابايت واحدًا من البيانات المعالجة، واحتفاظًا لأربعة عشر يومًا، و10 دولارات رصيد نماذج، ومستخدمين غير محدودين. وباقة Pro بـ249 دولارًا شهريًا وتشمل 249 دولارًا رصيدًا، و50 ألف تقييم، و5 جيغابايت، واحتفاظًا لثلاثين يومًا، مع تجاوز بـ1.50 دولار لكل 1000 تقييم. وEnterprise بسعر مخصص وتضيف نشرًا محليًا أو مستضافًا.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل Weave مجانية وما حدودها؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لدى Weave باقة مجانية بمقاعد غير محدودة وجيغابايت واحد من الاستيعاب شهريًا. وتبدأ Pro من 60 دولارًا شهريًا مع 1.5 جيغابايت لكنها مقصورة على الفرق التي يقل عدد موظفيها عن 50. والاستيعاب الإضافي بـ0.10 دولار لكل ميغابايت.',
+          {
+            '@type': 'Question',
+            'name': 'هل Weave مجانية وما حدودها؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لدى Weave باقة مجانية بمقاعد غير محدودة وجيغابايت واحد من استيعاب البيانات شهريًا. وتبدأ Pro من 60 دولارًا شهريًا مع 1.5 جيغابايت، لكن Weights & Biases تقصرها على الفرق في مراحلها الأولى التي يقل عدد موظفيها عن 50؛ والمؤسسات الأكبر عليها الانتقال إلى Enterprise. والاستيعاب الإضافي بـ0.10 دولار لكل ميغابايت.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل لأدوات تقييم النماذج اللغوية برامج عمولة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لم نجد برنامج عمولة علنيًا لدى Braintrust ولا Weights & Biases ولا Promptfoo. وبرنامج شركاء Weights & Biases ترتيب لإعادة البيع والتكامل موجّه إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة.',
+          {
+            '@type': 'Question',
+            'name': 'هل Promptfoo مجانية فعلًا عند أي حجم؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، بمعنى أن الأداة نفسها مرخّصة بـMIT وتعمل على أجهزتك، فلا رسوم لكل تقييم ولا لكل جيغابايت. ولا تزال تدفع مقابل استدعاءات واجهة النموذج البرمجية التي تجريها التقييمات، لكن هذه الكلفة قائمة على أي منصة وليست خاصة بـPromptfoo. وتوجد فوق ذلك باقة Enterprise مستضافة اختيارية.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'أيها يمكنني استضافته ذاتيًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Promptfoo افتراضيًا، لأنها واجهة سطر أوامر ومكتبة تعمل حيث تشغّلها. وتوفّر Braintrust نشرًا محليًا أو مستضافًا في خطة Enterprise. وتوفّر Weave خيار Enterprise بمستأجر واحد مع مفاتيح يديرها العميل، وهو نسخة مخصصة أكثر منه نشرًا محليًا حقيقيًا، فتأكد من التفاصيل إن كان لديك متطلب صارم.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لأي منها برنامج عمولة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لم نجد برنامج عمولة أو إحالة علنيًا لصنّاع المحتوى لدى Braintrust ولا Weights & Biases ولا Promptfoo. وتدير Weights & Biases برنامج شركاء، لكن صفحته العلنية تصف شراكات إعادة بيع وتكامل تقني موجّهة إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة. ولاحظ أيضًا أن usebraintrust.com سوق مواهب منفصل لا صلة له بـbraintrust.dev. ومنصة PromptQuorum لا تكسب شيئًا من هذه الصفحة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين التقييم والمراقبة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يشغّل التقييم مجموعة بيانات ثابتة قبل الإطلاق ويخبرك إن كان التغيير قد حسّن الجودة أو أضعفها. أما المراقبة فتتابع الحركة الحية بعد الإطلاق وتخبرك بما يفعله النظام الآن. وهذه الصفحة تغطي الأول. والاثنان متكاملان وكثير من الفرق يمارس كليهما، لكن الأدوات والأسئلة مختلفة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لأدوات تقييم النماذج اللغوية برامج عمولة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لم نجد برنامج عمولة علنيًا لدى Braintrust ولا Weights & Biases ولا Promptfoo. وبرنامج شركاء Weights & Biases ترتيب لإعادة البيع والتكامل موجّه إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4427,39 +4482,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: '2026년 최고의 LLM 평가 도구는 무엇인가요?',
-            a: '비개발자가 결과를 검토하는 팀에는 Braintrust입니다. 무료 등급에서도 사용자가 무제한이기 때문입니다. 이미 Weights & Biases를 쓰고 직원이 50명 미만이라면 Weave. 자체 인프라에서 무료로 돌아가는 버전 관리된 설정으로 평가를 두고 싶다면 Promptfoo입니다. 셋 다 LLM 심판, 사용자 정의 채점기, 회귀 테스트를 지원합니다.',
-          },
-          {
-            q: 'OpenAI가 Promptfoo를 인수했나요?',
-            a: '네. OpenAI는 2026년 3월 9일 인수를 발표하며 Promptfoo가 현재 라이선스 그대로 오픈소스를 유지하고 기존 고객도 계속 서비스와 지원을 받는다고 밝혔습니다. 2026년 8월 말 기준 저장소는 여전히 promptfoo 조직 아래에 있고 MIT 라이선스이며 활발히 유지보수되고 있습니다.',
-          },
-          {
-            q: 'Braintrust는 얼마인가요?',
-            a: '무료 Starter 등급은 월 1만 건 채점, 처리 데이터 1GB, 14일 보존, 10달러 모델 크레딧, 무제한 사용자를 포함합니다. Pro는 월 249달러로 249달러 크레딧, 5만 건 채점, 5GB, 30일 보존을 포함하며 초과는 1,000건당 1.50달러입니다. Enterprise는 맞춤 견적이며 온프레미스 또는 호스팅 배포를 더합니다.',
-          },
-          {
-            q: 'Weave는 무료인가요, 한도는 어떻게 되나요?',
-            a: 'Weave에는 좌석 무제한과 월 1GB 데이터 수집을 제공하는 무료 등급이 있습니다. Pro는 1.5GB로 월 60달러부터이지만, Weights & Biases가 직원 50명 미만의 초기 단계 팀으로 제한하며 더 큰 조직은 Enterprise로 옮겨야 합니다. 추가 수집은 MB당 0.10달러입니다.',
-          },
-          {
-            q: 'Promptfoo는 정말 어떤 규모에서도 무료인가요?',
-            a: '네. 도구 자체가 MIT 라이선스이고 자체 장비에서 돌기 때문에 채점당·기가바이트당 요금이 없다는 의미에서 그렇습니다. 평가가 만드는 모델 API 호출 비용은 여전히 부담하지만, 그 비용은 어느 플랫폼에서나 존재하며 Promptfoo에 국한된 것이 아닙니다. 그 위에 선택 사항인 호스팅 Enterprise 등급이 있습니다.',
-          },
-          {
-            q: '어느 것을 자체 호스팅할 수 있나요?',
-            a: '기본적으로 Promptfoo입니다. CLI와 라이브러리라 실행하는 곳에서 돌아갑니다. Braintrust는 Enterprise 요금제에서 온프레미스 또는 호스팅 배포를 제공합니다. Weave는 고객 관리 키를 쓰는 Enterprise 단일 테넌트 옵션을 제공하는데, 이는 진짜 온프레미스라기보다 전용 인스턴스이므로 엄격한 요건이 있다면 세부를 확인하세요.',
-          },
-          {
-            q: '이 중 제휴 프로그램이 있는 곳이 있나요?',
-            a: 'Braintrust, Weights & Biases, Promptfoo 어디에서도 창작자 대상 공개 제휴나 추천 프로그램을 찾지 못했습니다. Weights & Biases는 파트너 프로그램을 운영하지만, 공개 페이지는 컨설팅 회사를 대상으로 한 리셀러·기술 통합 파트너십을 설명하며 추천당 지급이 아닙니다. 또한 usebraintrust.com은 braintrust.dev와 무관한 별개의 인재 마켓플레이스입니다. PromptQuorum은 이 페이지에서 수익을 얻지 않습니다.',
-          },
-          {
-            q: '평가와 모니터링의 차이는 무엇인가요?',
-            a: '평가는 출시 전에 고정된 데이터셋을 돌려 변경이 품질을 개선했는지 떨어뜨렸는지 알려줍니다. 모니터링은 출시 후 실제 트래픽을 지켜보며 시스템이 지금 무엇을 하는지 알려줍니다. 이 페이지는 앞의 것을 다룹니다. 둘은 상호 보완적이며 많은 팀이 둘 다 하지만, 도구도 던지는 질문도 다릅니다.',
-          },
-        ],
+            { q: '2026년 최고의 LLM 평가 도구는 무엇인가요?', a: '비개발자가 결과를 검토하는 팀에는 Braintrust입니다. 무료 등급에서도 사용자가 무제한이기 때문입니다. 이미 Weights & Biases를 쓰고 직원이 50명 미만이라면 Weave. 자체 인프라에서 무료로 돌아가는 버전 관리된 설정으로 평가를 두고 싶다면 Promptfoo입니다. 셋 다 LLM 심판, 사용자 정의 채점기, 회귀 테스트를 지원합니다.' },
+            { q: 'OpenAI가 Promptfoo를 인수했나요?', a: '네. OpenAI는 2026년 3월 9일 인수를 발표하며 Promptfoo가 현재 라이선스 그대로 오픈소스를 유지하고 기존 고객도 계속 서비스와 지원을 받는다고 밝혔습니다. 2026년 8월 말 기준 저장소는 여전히 promptfoo 조직 아래에 있고 MIT 라이선스이며 활발히 유지보수되고 있습니다.' },
+            { q: 'Braintrust는 얼마인가요?', a: '무료 Starter 등급은 월 1만 건 채점, 처리 데이터 1GB, 14일 보존, 10달러 모델 크레딧, 무제한 사용자를 포함합니다. Pro는 월 249달러로 249달러 크레딧, 5만 건 채점, 5GB, 30일 보존을 포함하며 초과는 1,000건당 1.50달러입니다. Enterprise는 맞춤 견적이며 온프레미스 또는 호스팅 배포를 더합니다.' },
+            { q: 'Weave는 무료인가요, 한도는 어떻게 되나요?', a: 'Weave에는 좌석 무제한과 월 1GB 데이터 수집을 제공하는 무료 등급이 있습니다. Pro는 1.5GB로 월 60달러부터이지만, Weights & Biases가 직원 50명 미만의 초기 단계 팀으로 제한하며 더 큰 조직은 Enterprise로 옮겨야 합니다. 추가 수집은 MB당 0.10달러입니다.' },
+            { q: 'Promptfoo는 정말 어떤 규모에서도 무료인가요?', a: '네. 도구 자체가 MIT 라이선스이고 자체 장비에서 돌기 때문에 채점당·기가바이트당 요금이 없다는 의미에서 그렇습니다. 평가가 만드는 모델 API 호출 비용은 여전히 부담하지만, 그 비용은 어느 플랫폼에서나 존재하며 Promptfoo에 국한된 것이 아닙니다. 그 위에 선택 사항인 호스팅 Enterprise 등급이 있습니다.' },
+            { q: '어느 것을 자체 호스팅할 수 있나요?', a: '기본적으로 Promptfoo입니다. CLI와 라이브러리라 실행하는 곳에서 돌아갑니다. Braintrust는 Enterprise 요금제에서 온프레미스 또는 호스팅 배포를 제공합니다. Weave는 고객 관리 키를 쓰는 Enterprise 단일 테넌트 옵션을 제공하는데, 이는 진짜 온프레미스라기보다 전용 인스턴스이므로 엄격한 요건이 있다면 세부를 확인하세요.' },
+            { q: '이 중 제휴 프로그램이 있는 곳이 있나요?', a: 'Braintrust, Weights & Biases, Promptfoo 어디에서도 창작자 대상 공개 제휴나 추천 프로그램을 찾지 못했습니다. Weights & Biases는 파트너 프로그램을 운영하지만, 공개 페이지는 컨설팅 회사를 대상으로 한 리셀러·기술 통합 파트너십을 설명하며 추천당 지급이 아닙니다. 또한 usebraintrust.com은 braintrust.dev와 무관한 별개의 인재 마켓플레이스입니다. PromptQuorum은 이 페이지에서 수익을 얻지 않습니다.' },
+            { q: '평가와 모니터링의 차이는 무엇인가요?', a: '평가는 출시 전에 고정된 데이터셋을 돌려 변경이 품질을 개선했는지 떨어뜨렸는지 알려줍니다. 모니터링은 출시 후 실제 트래픽을 지켜보며 시스템이 지금 무엇을 하는지 알려줍니다. 이 페이지는 앞의 것을 다룹니다. 둘은 상호 보완적이며 많은 팀이 둘 다 하지만, 도구도 던지는 질문도 다릅니다.' },
+            { q: 'LLM 평가 도구에 제휴 프로그램이 있나요?', a: 'Braintrust, Weights & Biases, Promptfoo 어디에서도 공개 제휴 프로그램을 찾지 못했습니다. Weights & Biases의 파트너 프로그램은 컨설팅 회사를 위한 리셀러·통합 체계이지 추천당 지급이 아닙니다.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4526,47 +4558,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026년 최고의 LLM 평가 도구는 무엇인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '비개발자가 결과를 검토하는 팀에는 Braintrust, 이미 Weights & Biases를 쓰고 직원 50명 미만이라면 Weave, 자체 인프라에서 무료로 돌아가는 버전 관리된 설정으로 평가를 두고 싶다면 Promptfoo입니다.',
+          {
+            '@type': 'Question',
+            'name': '2026년 최고의 LLM 평가 도구는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '비개발자가 결과를 검토하는 팀에는 Braintrust입니다. 무료 등급에서도 사용자가 무제한이기 때문입니다. 이미 Weights & Biases를 쓰고 직원이 50명 미만이라면 Weave. 자체 인프라에서 무료로 돌아가는 버전 관리된 설정으로 평가를 두고 싶다면 Promptfoo입니다. 셋 다 LLM 심판, 사용자 정의 채점기, 회귀 테스트를 지원합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenAI가 Promptfoo를 인수했나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '네. OpenAI는 2026년 3월 9일 인수를 발표하며 Promptfoo가 현재 라이선스 그대로 오픈소스를 유지한다고 밝혔습니다. 2026년 8월 말 기준 저장소는 여전히 MIT 라이선스이며 활발히 유지보수되고 있습니다.',
+          {
+            '@type': 'Question',
+            'name': 'OpenAI가 Promptfoo를 인수했나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. OpenAI는 2026년 3월 9일 인수를 발표하며 Promptfoo가 현재 라이선스 그대로 오픈소스를 유지하고 기존 고객도 계속 서비스와 지원을 받는다고 밝혔습니다. 2026년 8월 말 기준 저장소는 여전히 promptfoo 조직 아래에 있고 MIT 라이선스이며 활발히 유지보수되고 있습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Braintrust는 얼마인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '무료 Starter 등급은 월 1만 건 채점, 1GB 데이터, 14일 보존, 무제한 사용자를 포함합니다. Pro는 월 249달러로 249달러 모델 크레딧, 5만 건 채점, 5GB를 포함합니다. Enterprise는 맞춤 견적이며 온프레미스 또는 호스팅 배포를 제공합니다.',
+          {
+            '@type': 'Question',
+            'name': 'Braintrust는 얼마인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '무료 Starter 등급은 월 1만 건 채점, 처리 데이터 1GB, 14일 보존, 10달러 모델 크레딧, 무제한 사용자를 포함합니다. Pro는 월 249달러로 249달러 크레딧, 5만 건 채점, 5GB, 30일 보존을 포함하며 초과는 1,000건당 1.50달러입니다. Enterprise는 맞춤 견적이며 온프레미스 또는 호스팅 배포를 더합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Weave는 무료이고 한도는 어떻게 되나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Weave에는 좌석 무제한과 월 1GB 수집을 제공하는 무료 등급이 있습니다. Pro는 1.5GB로 월 60달러부터이지만 직원 50명 미만 팀으로 제한됩니다. 추가 수집은 MB당 0.10달러입니다.',
+          {
+            '@type': 'Question',
+            'name': 'Weave는 무료인가요, 한도는 어떻게 되나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Weave에는 좌석 무제한과 월 1GB 데이터 수집을 제공하는 무료 등급이 있습니다. Pro는 1.5GB로 월 60달러부터이지만, Weights & Biases가 직원 50명 미만의 초기 단계 팀으로 제한하며 더 큰 조직은 Enterprise로 옮겨야 합니다. 추가 수집은 MB당 0.10달러입니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LLM 평가 도구에 제휴 프로그램이 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Braintrust, Weights & Biases, Promptfoo 어디에서도 공개 제휴 프로그램을 찾지 못했습니다. Weights & Biases의 파트너 프로그램은 컨설팅 회사를 위한 리셀러·통합 체계이지 추천당 지급이 아닙니다.',
+          {
+            '@type': 'Question',
+            'name': 'Promptfoo는 정말 어떤 규모에서도 무료인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. 도구 자체가 MIT 라이선스이고 자체 장비에서 돌기 때문에 채점당·기가바이트당 요금이 없다는 의미에서 그렇습니다. 평가가 만드는 모델 API 호출 비용은 여전히 부담하지만, 그 비용은 어느 플랫폼에서나 존재하며 Promptfoo에 국한된 것이 아닙니다. 그 위에 선택 사항인 호스팅 Enterprise 등급이 있습니다.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '어느 것을 자체 호스팅할 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '기본적으로 Promptfoo입니다. CLI와 라이브러리라 실행하는 곳에서 돌아갑니다. Braintrust는 Enterprise 요금제에서 온프레미스 또는 호스팅 배포를 제공합니다. Weave는 고객 관리 키를 쓰는 Enterprise 단일 테넌트 옵션을 제공하는데, 이는 진짜 온프레미스라기보다 전용 인스턴스이므로 엄격한 요건이 있다면 세부를 확인하세요.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '이 중 제휴 프로그램이 있는 곳이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust, Weights & Biases, Promptfoo 어디에서도 창작자 대상 공개 제휴나 추천 프로그램을 찾지 못했습니다. Weights & Biases는 파트너 프로그램을 운영하지만, 공개 페이지는 컨설팅 회사를 대상으로 한 리셀러·기술 통합 파트너십을 설명하며 추천당 지급이 아닙니다. 또한 usebraintrust.com은 braintrust.dev와 무관한 별개의 인재 마켓플레이스입니다. PromptQuorum은 이 페이지에서 수익을 얻지 않습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '평가와 모니터링의 차이는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '평가는 출시 전에 고정된 데이터셋을 돌려 변경이 품질을 개선했는지 떨어뜨렸는지 알려줍니다. 모니터링은 출시 후 실제 트래픽을 지켜보며 시스템이 지금 무엇을 하는지 알려줍니다. 이 페이지는 앞의 것을 다룹니다. 둘은 상호 보완적이며 많은 팀이 둘 다 하지만, 도구도 던지는 질문도 다릅니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM 평가 도구에 제휴 프로그램이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Braintrust, Weights & Biases, Promptfoo 어디에서도 공개 제휴 프로그램을 찾지 못했습니다. Weights & Biases의 파트너 프로그램은 컨설팅 회사를 위한 리셀러·통합 체계이지 추천당 지급이 아닙니다.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

@@ -80,19 +80,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Can open-source local models match ChatGPT Plus quality?',
-            a: 'Qwen3 72B and Llama 3.3 70B running locally match GPT-5.5 performance on most reasoning, coding, and writing benchmarks. They require 24GB+ VRAM for full quality. Smaller 14B models are noticeably weaker than GPT-5.5 but strong enough for most everyday tasks.',
-          },
-          {
-            q: 'What hardware do I need to run a free ChatGPT alternative locally?',
-            a: 'Minimum: 8GB RAM for 3B models on CPU. Better: 16GB RAM for 7B models, 8GB VRAM GPU for 7B models at full speed. Best: 16–24GB VRAM for 14–34B models. Mac with Apple Silicon M2 or later handles 7B–14B models well with unified memory.',
-          },
-          {
-            q: 'Is Groq really free?',
-            a: 'Groq offers a free tier with rate limits: ~30 requests/minute for Llama 3.3 70B. For personal use this is sufficient. The free tier has no credit card requirement. For production or heavy use, paid plans start at ~$0.05 per million tokens.',
-          },
-        ],
+            { q: 'Can open-source local models match ChatGPT Plus quality?', a: 'Qwen3 72B and Llama 3.3 70B running locally match GPT-5.5 performance on most reasoning, coding, and writing benchmarks. They require 24GB+ VRAM for full quality. Smaller 14B models are noticeably weaker than GPT-5.5 but strong enough for most everyday tasks.' },
+            { q: 'What hardware do I need to run a free ChatGPT alternative locally?', a: 'Minimum: 8GB RAM for 3B models on CPU. Better: 16GB RAM for 7B models, 8GB VRAM GPU for 7B models at full speed. Best: 16–24GB VRAM for 14–34B models. Mac with Apple Silicon M2 or later handles 7B–14B models well with unified memory.' },
+            { q: 'Is Groq really free?', a: 'Groq offers a free tier with rate limits: ~30 requests/minute for Llama 3.3 70B. For personal use this is sufficient. The free tier has no credit card requirement. For production or heavy use, paid plans start at ~$0.05 per million tokens.' },
+            { q: 'What is the best free alternative to ChatGPT Plus?', a: 'Ollama + Open WebUI for local self-hosting; Jan for the easiest desktop app. Both are completely free.' },
+          ],
       },
       relatedReading: {
         title: 'Related Guides',
@@ -108,17 +100,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best free alternative to ChatGPT Plus?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI for local self-hosting; Jan for the easiest desktop app. Both are completely free.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can open-source local models match ChatGPT Plus quality?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B and Llama 3.3 70B match GPT-5.5 on most benchmarks and require 24GB+ VRAM. 14B models are strong for everyday tasks.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Can open-source local models match ChatGPT Plus quality?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B and Llama 3.3 70B running locally match GPT-5.5 performance on most reasoning, coding, and writing benchmarks. They require 24GB+ VRAM for full quality. Smaller 14B models are noticeably weaker than GPT-5.5 but strong enough for most everyday tasks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What hardware do I need to run a free ChatGPT alternative locally?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Minimum: 8GB RAM for 3B models on CPU. Better: 16GB RAM for 7B models, 8GB VRAM GPU for 7B models at full speed. Best: 16–24GB VRAM for 14–34B models. Mac with Apple Silicon M2 or later handles 7B–14B models well with unified memory.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Groq really free?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Groq offers a free tier with rate limits: ~30 requests/minute for Llama 3.3 70B. For personal use this is sufficient. The free tier has no credit card requirement. For production or heavy use, paid plans start at ~$0.05 per million tokens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best free alternative to ChatGPT Plus?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama + Open WebUI for local self-hosting; Jan for the easiest desktop app. Both are completely free.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -180,11 +194,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Erreichen Open-Source-Modelle die Qualität von ChatGPT Plus?',
-            a: 'Qwen3 72B und Llama 3.3 70B erzielen lokal vergleichbare Ergebnisse zu GPT-5.5 bei den meisten Reasoning-, Coding- und Schreib-Benchmarks. Sie benötigen mindestens 24 GB VRAM.',
-          },
-        ],
+            { q: 'Erreichen Open-Source-Modelle die Qualität von ChatGPT Plus?', a: 'Qwen3 72B und Llama 3.3 70B erzielen lokal vergleichbare Ergebnisse zu GPT-5.5 bei den meisten Reasoning-, Coding- und Schreib-Benchmarks. Sie benötigen mindestens 24 GB VRAM.' },
+            { q: 'Was ist die beste kostenlose Alternative zu ChatGPT Plus?', a: 'Ollama + Open WebUI für lokales Self-Hosting; Jan für die einfachste Desktop-App ohne Abo.' },
+          ],
       },
       relatedReading: {
         title: 'Verwandte Leitfäden',
@@ -200,8 +212,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Was ist die beste kostenlose Alternative zu ChatGPT Plus?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI für lokales Self-Hosting; Jan für die einfachste Desktop-App ohne Abo.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Erreichen Open-Source-Modelle die Qualität von ChatGPT Plus?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B und Llama 3.3 70B erzielen lokal vergleichbare Ergebnisse zu GPT-5.5 bei den meisten Reasoning-, Coding- und Schreib-Benchmarks. Sie benötigen mindestens 24 GB VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist die beste kostenlose Alternative zu ChatGPT Plus?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama + Open WebUI für lokales Self-Hosting; Jan für die einfachste Desktop-App ohne Abo.',
+            },
+          },
+        ],
     },
     schema: { '@type': 'TechArticle', headline: 'Beste Open-Source-Alternativen zu ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/de/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'de' },
   },
@@ -250,11 +277,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Les modèles open source locaux peuvent-ils égaler ChatGPT Plus ?',
-            a: 'Qwen3 72B et Llama 3.3 70B en local égalent GPT-5.5 sur la plupart des benchmarks de raisonnement, code et écriture. Ils nécessitent 24 Go de VRAM minimum.',
-          },
-        ],
+            { q: 'Les modèles open source locaux peuvent-ils égaler ChatGPT Plus ?', a: 'Qwen3 72B et Llama 3.3 70B en local égalent GPT-5.5 sur la plupart des benchmarks de raisonnement, code et écriture. Ils nécessitent 24 Go de VRAM minimum.' },
+            { q: 'Quelle est la meilleure alternative gratuite à ChatGPT Plus ?', a: 'Ollama + Open WebUI pour l\'hébergement local ; Jan pour l\'application la plus simple sans abonnement.' },
+          ],
       },
       relatedReading: {
         title: 'Guides associés',
@@ -270,8 +295,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Quelle est la meilleure alternative gratuite à ChatGPT Plus ?', acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI pour l\'hébergement local ; Jan pour l\'application la plus simple sans abonnement.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Les modèles open source locaux peuvent-ils égaler ChatGPT Plus ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B et Llama 3.3 70B en local égalent GPT-5.5 sur la plupart des benchmarks de raisonnement, code et écriture. Ils nécessitent 24 Go de VRAM minimum.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la meilleure alternative gratuite à ChatGPT Plus ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama + Open WebUI pour l\'hébergement local ; Jan pour l\'application la plus simple sans abonnement.',
+            },
+          },
+        ],
     },
     schema: { '@type': 'TechArticle', headline: 'Meilleures alternatives open source à ChatGPT Plus 2026', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/fr/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'fr' },
   },
@@ -320,11 +360,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'オープンソースのローカルモデルはChatGPT Plusの品質に匹敵しますか？',
-            a: 'Qwen3 72BとLlama 3.3 70Bは、ほとんどの推論・コーディング・ライティングベンチマークでGPT-5.5と同等の性能を発揮します。フル品質には24GB以上のVRAMが必要です。',
-          },
-        ],
+            { q: 'オープンソースのローカルモデルはChatGPT Plusの品質に匹敵しますか？', a: 'Qwen3 72BとLlama 3.3 70Bは、ほとんどの推論・コーディング・ライティングベンチマークでGPT-5.5と同等の性能を発揮します。フル品質には24GB以上のVRAMが必要です。' },
+            { q: 'ChatGPT Plusの最良の無料代替は何ですか？', a: 'ローカルには Ollama + Open WebUI、最もシンプルなデスクトップアプリにはJan——どちらも完全無料です。' },
+          ],
       },
       relatedReading: {
         title: '関連ガイド',
@@ -340,8 +378,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'ChatGPT Plusの最良の無料代替は何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'ローカルには Ollama + Open WebUI、最もシンプルなデスクトップアプリにはJan——どちらも完全無料です。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'オープンソースのローカルモデルはChatGPT Plusの品質に匹敵しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72BとLlama 3.3 70Bは、ほとんどの推論・コーディング・ライティングベンチマークでGPT-5.5と同等の性能を発揮します。フル品質には24GB以上のVRAMが必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ChatGPT Plusの最良の無料代替は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ローカルには Ollama + Open WebUI、最もシンプルなデスクトップアプリにはJan——どちらも完全無料です。',
+            },
+          },
+        ],
     },
     schema: { '@type': 'TechArticle', headline: 'ChatGPT Plusの代替オープンソース 2026年ベスト', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/ja/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'ja' },
   },
@@ -397,19 +450,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
-            a: 'Qwen3 72B y Llama 3.3 70B ejecutándose localmente igualan el rendimiento GPT-5.5 en la mayoría de puntos de referencia de razonamiento, codificación y escritura. Requieren 24GB+ VRAM para calidad completa. Modelos 14B más pequeños son notablemente más débiles que GPT-5.5 pero suficientemente fuertes para la mayoría de tareas cotidianas.',
-          },
-          {
-            q: '¿Qué hardware necesito para ejecutar una alternativa gratuita a ChatGPT localmente?',
-            a: 'Mínimo: 8GB RAM para modelos 3B en CPU. Mejor: 16GB RAM para modelos 7B, GPU 8GB VRAM para modelos 7B a velocidad completa. Mejor: 16–24GB VRAM para modelos 14–34B. Mac con Apple Silicon M2 o posterior maneja bien modelos 7B–14B con memoria unificada.',
-          },
-          {
-            q: '¿Es Groq realmente gratis?',
-            a: 'Groq ofrece un nivel gratuito con límites de tasa: ~30 solicitudes/minuto para Llama 3.3 70B. Para uso personal es suficiente. El nivel gratuito no requiere tarjeta de crédito. Para producción o uso intenso, planes pagos empiezan en ~$0.05 por millón de tokens.',
-          },
-        ],
+            { q: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?', a: 'Qwen3 72B y Llama 3.3 70B ejecutándose localmente igualan el rendimiento GPT-5.5 en la mayoría de puntos de referencia de razonamiento, codificación y escritura. Requieren 24GB+ VRAM para calidad completa. Modelos 14B más pequeños son notablemente más débiles que GPT-5.5 pero suficientemente fuertes para la mayoría de tareas cotidianas.' },
+            { q: '¿Qué hardware necesito para ejecutar una alternativa gratuita a ChatGPT localmente?', a: 'Mínimo: 8GB RAM para modelos 3B en CPU. Mejor: 16GB RAM para modelos 7B, GPU 8GB VRAM para modelos 7B a velocidad completa. Mejor: 16–24GB VRAM para modelos 14–34B. Mac con Apple Silicon M2 o posterior maneja bien modelos 7B–14B con memoria unificada.' },
+            { q: '¿Es Groq realmente gratis?', a: 'Groq ofrece un nivel gratuito con límites de tasa: ~30 solicitudes/minuto para Llama 3.3 70B. Para uso personal es suficiente. El nivel gratuito no requiere tarjeta de crédito. Para producción o uso intenso, planes pagos empiezan en ~$0.05 por millón de tokens.' },
+            { q: '¿Cuál es la mejor alternativa gratuita a ChatGPT Plus?', a: 'Ollama + Open WebUI para auto-hospedaje local; Jan para la app de escritorio más fácil. Ambas son completamente gratis.' },
+          ],
       },
       relatedReading: {
         title: 'Guías relacionadas',
@@ -425,17 +470,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Cuál es la mejor alternativa gratuita a ChatGPT Plus?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI para auto-hospedaje local; Jan para la app de escritorio más fácil. Ambas son completamente gratis.' },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B y Llama 3.3 70B igualan GPT-5.5 en la mayoría de puntos de referencia y requieren 24GB+ VRAM. Modelos 14B son fuertes para tareas cotidianas.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Pueden los modelos open source locales igualar la calidad de ChatGPT Plus?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B y Llama 3.3 70B ejecutándose localmente igualan el rendimiento GPT-5.5 en la mayoría de puntos de referencia de razonamiento, codificación y escritura. Requieren 24GB+ VRAM para calidad completa. Modelos 14B más pequeños son notablemente más débiles que GPT-5.5 pero suficientemente fuertes para la mayoría de tareas cotidianas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué hardware necesito para ejecutar una alternativa gratuita a ChatGPT localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mínimo: 8GB RAM para modelos 3B en CPU. Mejor: 16GB RAM para modelos 7B, GPU 8GB VRAM para modelos 7B a velocidad completa. Mejor: 16–24GB VRAM para modelos 14–34B. Mac con Apple Silicon M2 o posterior maneja bien modelos 7B–14B con memoria unificada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es Groq realmente gratis?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Groq ofrece un nivel gratuito con límites de tasa: ~30 solicitudes/minuto para Llama 3.3 70B. Para uso personal es suficiente. El nivel gratuito no requiere tarjeta de crédito. Para producción o uso intenso, planes pagos empiezan en ~$0.05 por millón de tokens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor alternativa gratuita a ChatGPT Plus?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama + Open WebUI para auto-hospedaje local; Jan para la app de escritorio más fácil. Ambas son completamente gratis.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -497,15 +564,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: '开源本地模型能达到ChatGPT Plus的质量吗？',
-            a: 'Qwen3 72B和Llama 3.3 70B在大多数推理、编程和写作基准上与GPT-5.5性能相当，需要24GB以上显存才能达到最佳效果。14B模型在日常任务上表现良好。',
-          },
-          {
-            q: '国内用户用Ollama有什么注意事项？',
-            a: '国内网络访问Ollama模型库（registry.ollama.ai）可能需要代理。建议使用镜像站或将模型文件离线导入。Qwen系列模型由阿里开源，国内下载速度通常更快。',
-          },
-        ],
+            { q: '开源本地模型能达到ChatGPT Plus的质量吗？', a: 'Qwen3 72B和Llama 3.3 70B在大多数推理、编程和写作基准上与GPT-5.5性能相当，需要24GB以上显存才能达到最佳效果。14B模型在日常任务上表现良好。' },
+            { q: '国内用户用Ollama有什么注意事项？', a: '国内网络访问Ollama模型库（registry.ollama.ai）可能需要代理。建议使用镜像站或将模型文件离线导入。Qwen系列模型由阿里开源，国内下载速度通常更快。' },
+            { q: 'ChatGPT Plus最好的免费替代是什么？', a: '本地自托管选Ollama + Open WebUI；最简单的桌面应用选Jan。两者均完全免费无需订阅。' },
+          ],
       },
       relatedReading: {
         title: '相关指南',
@@ -521,8 +583,31 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'ChatGPT Plus最好的免费替代是什么？', acceptedAnswer: { '@type': 'Answer', text: '本地自托管选Ollama + Open WebUI；最简单的桌面应用选Jan。两者均完全免费无需订阅。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '开源本地模型能达到ChatGPT Plus的质量吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B和Llama 3.3 70B在大多数推理、编程和写作基准上与GPT-5.5性能相当，需要24GB以上显存才能达到最佳效果。14B模型在日常任务上表现良好。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '国内用户用Ollama有什么注意事项？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '国内网络访问Ollama模型库（registry.ollama.ai）可能需要代理。建议使用镜像站或将模型文件离线导入。Qwen系列模型由阿里开源，国内下载速度通常更快。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ChatGPT Plus最好的免费替代是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '本地自托管选Ollama + Open WebUI；最简单的桌面应用选Jan。两者均完全免费无需订阅。',
+            },
+          },
+        ],
     },
     schema: { '@type': 'TechArticle', headline: '2026年ChatGPT Plus最佳开源替代方案', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', url: 'https://www.promptquorum.com/zh/prompt-bites/best-open-source-alternatives-to-chatgpt-plus', inLanguage: 'zh' },
   },
@@ -578,19 +663,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Os modelos open source locais conseguem igualar a qualidade do ChatGPT Plus?',
-            a: 'Qwen3 72B e Llama 3.3 70B executados localmente igualam o desempenho do GPT-4o na maioria dos benchmarks de raciocínio, codificação e escrita. Requerem 24GB+ de VRAM para qualidade completa. Modelos menores de 14B são visivelmente mais fracos que o GPT-4o, mas fortes o suficiente para a maioria das tarefas cotidianas.',
-          },
-          {
-            q: 'Qual hardware preciso para executar uma alternativa gratuita ao ChatGPT localmente?',
-            a: 'Mínimo: 8GB de RAM para modelos 3B em CPU. Melhor: 16GB de RAM para modelos 7B, GPU com 8GB de VRAM para modelos 7B em velocidade total. Ideal: 16–24GB de VRAM para modelos 14–34B. Mac com Apple Silicon M2 ou posterior lida bem com modelos 7B–14B com memória unificada.',
-          },
-          {
-            q: 'O Groq é realmente gratuito?',
-            a: 'O Groq oferece um nível gratuito com limites de taxa: ~30 solicitações/minuto para Llama 3.3 70B. Para uso pessoal, isso é suficiente. O nível gratuito não requer cartão de crédito. Para produção ou uso intenso, planos pagos começam em ~$0,05 por milhão de tokens.',
-          },
-        ],
+            { q: 'Os modelos open source locais conseguem igualar a qualidade do ChatGPT Plus?', a: 'Qwen3 72B e Llama 3.3 70B executados localmente igualam o desempenho do GPT-4o na maioria dos benchmarks de raciocínio, codificação e escrita. Requerem 24GB+ de VRAM para qualidade completa. Modelos menores de 14B são visivelmente mais fracos que o GPT-4o, mas fortes o suficiente para a maioria das tarefas cotidianas.' },
+            { q: 'Qual hardware preciso para executar uma alternativa gratuita ao ChatGPT localmente?', a: 'Mínimo: 8GB de RAM para modelos 3B em CPU. Melhor: 16GB de RAM para modelos 7B, GPU com 8GB de VRAM para modelos 7B em velocidade total. Ideal: 16–24GB de VRAM para modelos 14–34B. Mac com Apple Silicon M2 ou posterior lida bem com modelos 7B–14B com memória unificada.' },
+            { q: 'O Groq é realmente gratuito?', a: 'O Groq oferece um nível gratuito com limites de taxa: ~30 solicitações/minuto para Llama 3.3 70B. Para uso pessoal, isso é suficiente. O nível gratuito não requer cartão de crédito. Para produção ou uso intenso, planos pagos começam em ~$0,05 por milhão de tokens.' },
+            { q: 'Qual é a melhor alternativa gratuita ao ChatGPT Plus?', a: 'Ollama + Open WebUI para auto-hospedagem local; Jan para o aplicativo de desktop mais fácil. Ambos são completamente gratuitos.' },
+          ],
       },
       relatedReading: {
         title: 'Guias relacionados',
@@ -606,17 +683,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qual é a melhor alternativa gratuita ao ChatGPT Plus?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI para auto-hospedagem local; Jan para o aplicativo de desktop mais fácil. Ambos são completamente gratuitos.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Os modelos open source locais conseguem igualar a qualidade do ChatGPT Plus?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B e Llama 3.3 70B igualam o GPT-4o na maioria dos benchmarks e requerem 24GB+ de VRAM. Modelos de 14B são fortes para tarefas cotidianas.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Os modelos open source locais conseguem igualar a qualidade do ChatGPT Plus?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B e Llama 3.3 70B executados localmente igualam o desempenho do GPT-4o na maioria dos benchmarks de raciocínio, codificação e escrita. Requerem 24GB+ de VRAM para qualidade completa. Modelos menores de 14B são visivelmente mais fracos que o GPT-4o, mas fortes o suficiente para a maioria das tarefas cotidianas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual hardware preciso para executar uma alternativa gratuita ao ChatGPT localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mínimo: 8GB de RAM para modelos 3B em CPU. Melhor: 16GB de RAM para modelos 7B, GPU com 8GB de VRAM para modelos 7B em velocidade total. Ideal: 16–24GB de VRAM para modelos 14–34B. Mac com Apple Silicon M2 ou posterior lida bem com modelos 7B–14B com memória unificada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Groq é realmente gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Groq oferece um nível gratuito com limites de taxa: ~30 solicitações/minuto para Llama 3.3 70B. Para uso pessoal, isso é suficiente. O nível gratuito não requer cartão de crédito. Para produção ou uso intenso, planos pagos começam em ~$0,05 por milhão de tokens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a melhor alternativa gratuita ao ChatGPT Plus?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama + Open WebUI para auto-hospedagem local; Jan para o aplicativo de desktop mais fácil. Ambos são completamente gratuitos.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -685,19 +784,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'هل يمكن لنماذج مفتوحة المصدر المحلية مجاراة جودة ChatGPT Plus؟',
-            a: 'Qwen3 72B وLlama 3.3 70B المشغَّلان محلياً يعادلان أداء GPT-4o في معظم معايير الاستدلال والبرمجة والكتابة. يحتاجان 24 GB+ VRAM للجودة الكاملة. النماذج الأصغر 14B أضعف ملحوظاً من GPT-4o لكنها قوية بما يكفي لمعظم المهام اليومية.',
-          },
-          {
-            q: 'ما العتاد الذي أحتاجه لتشغيل بديل مجاني لـChatGPT محلياً؟',
-            a: 'الحد الأدنى: 8 GB RAM لنماذج 3B على CPU. الأفضل: 16 GB RAM لنماذج 7B، GPU بـ8 GB VRAM لنماذج 7B بالسرعة الكاملة. المثالي: 16–24 GB VRAM لنماذج 14–34B. Mac بـApple Silicon M2 أو أحدث يتعامل جيداً مع نماذج 7B–14B بذاكرة موحدة.',
-          },
-          {
-            q: 'هل Groq مجاني فعلاً؟',
-            a: 'Groq يقدم مستوى مجانياً بحدود معدل: ~30 طلب/دقيقة لـLlama 3.3 70B. للاستخدام الشخصي هذا كافٍ. المستوى المجاني لا يحتاج بطاقة ائتمان. للإنتاج أو الاستخدام المكثف، الخطط المدفوعة تبدأ من ~$0.05 لكل مليون رمز.',
-          },
-        ],
+            { q: 'هل يمكن لنماذج مفتوحة المصدر المحلية مجاراة جودة ChatGPT Plus؟', a: 'Qwen3 72B وLlama 3.3 70B المشغَّلان محلياً يعادلان أداء GPT-4o في معظم معايير الاستدلال والبرمجة والكتابة. يحتاجان 24 GB+ VRAM للجودة الكاملة. النماذج الأصغر 14B أضعف ملحوظاً من GPT-4o لكنها قوية بما يكفي لمعظم المهام اليومية.' },
+            { q: 'ما العتاد الذي أحتاجه لتشغيل بديل مجاني لـChatGPT محلياً؟', a: 'الحد الأدنى: 8 GB RAM لنماذج 3B على CPU. الأفضل: 16 GB RAM لنماذج 7B، GPU بـ8 GB VRAM لنماذج 7B بالسرعة الكاملة. المثالي: 16–24 GB VRAM لنماذج 14–34B. Mac بـApple Silicon M2 أو أحدث يتعامل جيداً مع نماذج 7B–14B بذاكرة موحدة.' },
+            { q: 'هل Groq مجاني فعلاً؟', a: 'Groq يقدم مستوى مجانياً بحدود معدل: ~30 طلب/دقيقة لـLlama 3.3 70B. للاستخدام الشخصي هذا كافٍ. المستوى المجاني لا يحتاج بطاقة ائتمان. للإنتاج أو الاستخدام المكثف، الخطط المدفوعة تبدأ من ~$0.05 لكل مليون رمز.' },
+            { q: 'ما هو أفضل بديل مجاني لـChatGPT Plus؟', a: 'Ollama + Open WebUI للاستضافة الذاتية المحلية؛ Jan لأسهل تطبيق سطح مكتب. كلاهما مجاني تماماً.' },
+          ],
       },
       relatedReading: {
         title: 'أدلة ذات صلة',
@@ -713,17 +804,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما هو أفضل بديل مجاني لـChatGPT Plus؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ollama + Open WebUI للاستضافة الذاتية المحلية؛ Jan لأسهل تطبيق سطح مكتب. كلاهما مجاني تماماً.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكن لنماذج مفتوحة المصدر المحلية مجاراة جودة ChatGPT Plus؟',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B وLlama 3.3 70B يعادلان GPT-4o في معظم المعايير ويحتاجان 24 GB+ VRAM. نماذج 14B قوية للمهام اليومية.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن لنماذج مفتوحة المصدر المحلية مجاراة جودة ChatGPT Plus؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B وLlama 3.3 70B المشغَّلان محلياً يعادلان أداء GPT-4o في معظم معايير الاستدلال والبرمجة والكتابة. يحتاجان 24 GB+ VRAM للجودة الكاملة. النماذج الأصغر 14B أضعف ملحوظاً من GPT-4o لكنها قوية بما يكفي لمعظم المهام اليومية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما العتاد الذي أحتاجه لتشغيل بديل مجاني لـChatGPT محلياً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الحد الأدنى: 8 GB RAM لنماذج 3B على CPU. الأفضل: 16 GB RAM لنماذج 7B، GPU بـ8 GB VRAM لنماذج 7B بالسرعة الكاملة. المثالي: 16–24 GB VRAM لنماذج 14–34B. Mac بـApple Silicon M2 أو أحدث يتعامل جيداً مع نماذج 7B–14B بذاكرة موحدة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Groq مجاني فعلاً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Groq يقدم مستوى مجانياً بحدود معدل: ~30 طلب/دقيقة لـLlama 3.3 70B. للاستخدام الشخصي هذا كافٍ. المستوى المجاني لا يحتاج بطاقة ائتمان. للإنتاج أو الاستخدام المكثف، الخطط المدفوعة تبدأ من ~$0.05 لكل مليون رمز.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أفضل بديل مجاني لـChatGPT Plus؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama + Open WebUI للاستضافة الذاتية المحلية؛ Jan لأسهل تطبيق سطح مكتب. كلاهما مجاني تماماً.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -828,19 +941,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: '오픈소스 로컬 모델이 ChatGPT Plus 품질에 필적할 수 있습니까?',
-            a: 'Qwen3 72B와 Llama 3.3 70B는 로컬에서 실행할 때 대부분의 추론, 코딩, 글쓰기 벤치마크에서 GPT-5.5 성능에 필적합니다. 최고 품질을 위해서는 24GB 이상 VRAM이 필요합니다. 더 작은 14B 모델은 GPT-5.5보다 눈에 띄게 약하지만 대부분의 일상 작업에 충분히 강력합니다.',
-          },
-          {
-            q: 'ChatGPT 대안을 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
-            a: '최소 사양: CPU의 3B 모델에 8GB RAM. 권장: 7B 모델에 16GB RAM, 7B 모델 전속도 실행에 8GB VRAM GPU. 최적: 14~34B 모델에 16~24GB VRAM. Apple Silicon M2 이상의 Mac은 통합 메모리로 7B~14B 모델을 잘 처리합니다.',
-          },
-          {
-            q: 'Groq는 정말 무료입니까?',
-            a: 'Groq는 속도 제한이 있는 무료 티어를 제공합니다: Llama 3.3 70B에 분당 약 30 요청. 개인 사용에는 충분합니다. 무료 티어는 신용카드가 필요 없습니다. 프로덕션이나 대용량 사용의 경우 유료 플랜은 백만 토큰당 약 $0.05부터 시작합니다.',
-          },
-        ],
+            { q: '오픈소스 로컬 모델이 ChatGPT Plus 품질에 필적할 수 있습니까?', a: 'Qwen3 72B와 Llama 3.3 70B는 로컬에서 실행할 때 대부분의 추론, 코딩, 글쓰기 벤치마크에서 GPT-5.5 성능에 필적합니다. 최고 품질을 위해서는 24GB 이상 VRAM이 필요합니다. 더 작은 14B 모델은 GPT-5.5보다 눈에 띄게 약하지만 대부분의 일상 작업에 충분히 강력합니다.' },
+            { q: 'ChatGPT 대안을 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?', a: '최소 사양: CPU의 3B 모델에 8GB RAM. 권장: 7B 모델에 16GB RAM, 7B 모델 전속도 실행에 8GB VRAM GPU. 최적: 14~34B 모델에 16~24GB VRAM. Apple Silicon M2 이상의 Mac은 통합 메모리로 7B~14B 모델을 잘 처리합니다.' },
+            { q: 'Groq는 정말 무료입니까?', a: 'Groq는 속도 제한이 있는 무료 티어를 제공합니다: Llama 3.3 70B에 분당 약 30 요청. 개인 사용에는 충분합니다. 무료 티어는 신용카드가 필요 없습니다. 프로덕션이나 대용량 사용의 경우 유료 플랜은 백만 토큰당 약 $0.05부터 시작합니다.' },
+            { q: 'ChatGPT Plus의 최고 무료 대안은 무엇입니까?', a: '로컬 셀프호스팅에는 Ollama + Open WebUI, 가장 쉬운 데스크톱 앱에는 Jan을 선택하십시오. 두 가지 모두 완전히 무료입니다.' },
+          ],
       },
       relatedReading: {
         heading: '관련 가이드',
@@ -856,22 +961,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ChatGPT Plus의 최고 무료 대안은 무엇입니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '로컬 셀프호스팅에는 Ollama + Open WebUI, 가장 쉬운 데스크톱 앱에는 Jan을 선택하십시오. 두 가지 모두 완전히 무료입니다.' },
-        },
-        {
-          '@type': 'Question',
-          name: '오픈소스 로컬 모델이 ChatGPT Plus 품질에 필적할 수 있습니까?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 72B와 Llama 3.3 70B는 대부분의 벤치마크에서 GPT-5.5에 필적하며 24GB 이상 VRAM이 필요합니다. 14B 모델은 일상 작업에 충분히 강력합니다.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Groq는 정말 무료입니까?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Groq 무료 티어는 신용카드 없이 분당 약 30 요청을 제공합니다. 개인 사용에는 충분하며 프로덕션 플랜은 백만 토큰당 약 $0.05부터 시작합니다.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '오픈소스 로컬 모델이 ChatGPT Plus 품질에 필적할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 72B와 Llama 3.3 70B는 로컬에서 실행할 때 대부분의 추론, 코딩, 글쓰기 벤치마크에서 GPT-5.5 성능에 필적합니다. 최고 품질을 위해서는 24GB 이상 VRAM이 필요합니다. 더 작은 14B 모델은 GPT-5.5보다 눈에 띄게 약하지만 대부분의 일상 작업에 충분히 강력합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ChatGPT 대안을 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '최소 사양: CPU의 3B 모델에 8GB RAM. 권장: 7B 모델에 16GB RAM, 7B 모델 전속도 실행에 8GB VRAM GPU. 최적: 14~34B 모델에 16~24GB VRAM. Apple Silicon M2 이상의 Mac은 통합 메모리로 7B~14B 모델을 잘 처리합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Groq는 정말 무료입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Groq는 속도 제한이 있는 무료 티어를 제공합니다: Llama 3.3 70B에 분당 약 30 요청. 개인 사용에는 충분합니다. 무료 티어는 신용카드가 필요 없습니다. 프로덕션이나 대용량 사용의 경우 유료 플랜은 백만 토큰당 약 $0.05부터 시작합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ChatGPT Plus의 최고 무료 대안은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '로컬 셀프호스팅에는 Ollama + Open WebUI, 가장 쉬운 데스크톱 앱에는 Jan을 선택하십시오. 두 가지 모두 완전히 무료입니다.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

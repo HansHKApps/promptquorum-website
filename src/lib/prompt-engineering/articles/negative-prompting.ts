@@ -426,15 +426,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Zwei zusätzliche Fragen zu DSGVO-Compliance und Enterprise-Herausforderungen:',
       ],
       faqs: [
-        {
-          q: 'Wie stelle ich sicher, dass mein Negatives Prompting datenschutzkonform ist?',
-          a: 'DSGVO-Konformität bei Negatives Prompting bedeutet, dass Sie sensible personenbezogene Daten nicht in die negativen Regeln selbst einbeziehen sollten. Verwenden Sie stattdessen abstrakte Kategorien (z.B. „entfernen Sie alle Kundennamen und E-Mail-Adressen" statt „niemals Max Mustermann@example.de erwähnen"). Dokumentieren Sie Ihre negativen Constraints und deren Zweck in Ihrer Datenschutzerklärung. Wenn Sie PromptQuorum verwenden, stellen Sie sicher, dass Logs mit sensiblen Daten entsprechend geschützt sind.',
-        },
-        {
-          q: 'Welche Herausforderungen gibt es beim Negatives Prompting in DACH-Unternehmen?',
-          a: 'DACH-Unternehmen (Deutschland, Österreich, Schweiz) stehen vor besonderen Herausforderungen: (1) Rechtliche Anforderungen sind streng und regional unterschiedlich—Negatives Prompting muss diese nuanciert erfassen. (2) Compliance-Dokumentation ist umfangreich; die Constraints müssen revisionssicher sein. (3) Sprachliche Präzision ist kritisch—German-speaking Nutzer erwarten exakte Formulierungen, keine Vereinfachungen. (4) Große Enterprise-Organisationen benötigen zentrale Templates für Constraints, um konsistente Standards über Teams hinweg zu gewährleisten. PromptQuorum adressiert diese durch wiederverwendbare Constraint-Sets und Audit-Trails.',
-        },
-      ],
+            { q: 'Wie stelle ich sicher, dass mein Negatives Prompting datenschutzkonform ist?', a: 'DSGVO-Konformität bei Negatives Prompting bedeutet, dass Sie sensible personenbezogene Daten nicht in die negativen Regeln selbst einbeziehen sollten. Verwenden Sie stattdessen abstrakte Kategorien (z.B. „entfernen Sie alle Kundennamen und E-Mail-Adressen" statt „niemals Max Mustermann@example.de erwähnen"). Dokumentieren Sie Ihre negativen Constraints und deren Zweck in Ihrer Datenschutzerklärung. Wenn Sie PromptQuorum verwenden, stellen Sie sicher, dass Logs mit sensiblen Daten entsprechend geschützt sind.' },
+            { q: 'Welche Herausforderungen gibt es beim Negatives Prompting in DACH-Unternehmen?', a: 'DACH-Unternehmen (Deutschland, Österreich, Schweiz) stehen vor besonderen Herausforderungen: (1) Rechtliche Anforderungen sind streng und regional unterschiedlich—Negatives Prompting muss diese nuanciert erfassen. (2) Compliance-Dokumentation ist umfangreich; die Constraints müssen revisionssicher sein. (3) Sprachliche Präzision ist kritisch—German-speaking Nutzer erwarten exakte Formulierungen, keine Vereinfachungen. (4) Große Enterprise-Organisationen benötigen zentrale Templates für Constraints, um konsistente Standards über Teams hinweg zu gewährleisten. PromptQuorum adressiert diese durch wiederverwendbare Constraint-Sets und Audit-Trails.' },
+            { q: 'Was ist Negatives Prompting?', a: 'Negatives Prompting bedeutet, explizite „Nicht-Tun"-Regeln zu Ihren Prompts hinzuzufügen, parallel zu dem, was Sie vom Modell erwarten. Diese Regeln beschränken Inhalte (keine medizinischen Ratschläge), Ton (keine Hype-Begriffe), Struktur (keine nummerierten Listen) oder Verhalten (nie erfundene Statistiken). Jede Regel wirkt als Schutzschicht gegen bekannte Fehler.' },
+            { q: 'Was ist eine negative Einschränkung (Negativ-Prompt) in der KI?', a: 'Eine negative Einschränkung – auch Negativ-Prompt genannt – ist eine explizite „Nicht-Tun"-Regel in einem KI-Prompt, die Inhalt, Stil, Struktur oder Verhalten begrenzt. Sie wirkt zusammen mit positiven Anweisungen und hält die Modellausgabe innerhalb definierter Grenzen – zum Beispiel indem sie dem Modell untersagt, bestimmte Wörter zu verwenden, Mitbewerber zu erwähnen oder Statistiken zu erfinden.' },
+            { q: 'Funktioniert Negatives Prompting mit allen KI-Modellen?', a: 'Ja. GPT-5.5/4.5, Claude Sonnet/Opus und Gemini Pro reagieren auf harte Negative („darf nicht", „niemals", „nicht"). Die Einhaltung variiert nach Modell und Constraint-Typ: Formatverbote werden manchmal bei langen Outputs von Gemini Pro inkonsistent angewendet. Testen Sie Ihre spezifischen Constraints mit Ihrer aktuellen Modellversion.' },
+            { q: 'Wie viele negative Constraints sollte ich verwenden?', a: 'Begrenzen Sie sich auf 3–5 pro Prompt. Mehr als 5–6 Negative können Modelle verwirren, was zu ignorierten Regeln oder zögerlichen Outputs führt. Gruppieren Sie verwandte Regeln: „Verwenden Sie keine Hype-Wörter (revolutionär, disruptiv, bahnbrechend)" zählt als eine Einschränkung.' },
+            { q: 'Ist Negatives Prompting dasselbe wie Content Filtering?', a: 'Nein. Content Filtering ist eine externe Sicherheitsebene, die bestimmte Outputs unabhängig von Prompts blockiert. Negatives Prompting ist eine In-Prompt-Technik, die die Generierung formt. Sie ergänzen sich: Filter handhaben Sicherheitsverstöße; Negatives Prompting handhabe Marke, Ton und domänenspezifische Grenzen.' },
+            { q: 'Kann ich Negatives Prompting für kreative Aufgaben verwenden?', a: 'Ja. Für kreative Arbeiten verhindert Negatives Prompting generische Phrasen („keine Klischees"), begrenzt Strukturwahl („keine Drei-Akt-Struktur") oder schließt spezifische Referenzen aus („keine Kriegsmetaphern"). Wenden Sie dieselbe 3–5-Regel an — zu viele Negative schränken die kreative Reichweite ein.' },
+            { q: 'Hilft Negatives Prompting gegen Halluzinationen?', a: 'Es reduziert spezifische Halluzinationstypen, wenn genau begrenzt. „Zitieren Sie keine Quellen, wenn Sie nicht sicher sind" und „Sagen Sie, wenn Sie unsicher sind, statt zu raten" reduzieren Halluzinationen bei bestimmten Fehlern. Sie eliminieren das Halluzinationsrisiko nicht vollständig — nutzen Sie Output-Verifikation für hochriskante Fakten.' },
+            { q: 'Gibt es einen Unterschied zwischen Text- und Bild-KI Negatives Prompting?', a: 'Ja. Bei Bildgenerierung (DALL-E, Stable Diffusion, Midjourney) ist Negatives Prompting ein formales separates Parameterfeld. Bei Text-LLMs ist Negatives Prompting direkt als „Nicht-Tun"-Regeln in den Prompt-Text eingebettet. Dieses Handbuch behandelt Text-LLM Negatives Prompting.' },
+            { q: 'Wie teste ich, ob meine negativen Constraints funktionieren?', a: 'Führen Sie denselben Prompt 3–5 mal aus und überprüfen Sie, ob begrenzte Elemente erscheinen. Testen Sie für kritische Constraints über mehrere Modelle mit PromptQuorum Multi-Modell-Dispatch. Wenn ein Modell eine Regel konsistent verletzt, verstärken Sie die Formulierung von „vermeiden" zu „darf nicht" oder „niemals".' },
+          ],
     },
   },
   howToSchema: {
@@ -456,18 +459,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'de',
     mainEntity: [
-      { '@type': 'Question', name: 'Was ist Negatives Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Negatives Prompting bedeutet, explizite „Nicht-Tun"-Regeln zu Ihren Prompts hinzuzufügen, parallel zu dem, was Sie vom Modell erwarten. Diese Regeln beschränken Inhalte (keine medizinischen Ratschläge), Ton (keine Hype-Begriffe), Struktur (keine nummerierten Listen) oder Verhalten (nie erfundene Statistiken). Jede Regel wirkt als Schutzschicht gegen bekannte Fehler.' } },
-      { '@type': 'Question', name: 'Was ist eine negative Einschränkung (Negativ-Prompt) in der KI?', acceptedAnswer: { '@type': 'Answer', text: 'Eine negative Einschränkung – auch Negativ-Prompt genannt – ist eine explizite „Nicht-Tun"-Regel in einem KI-Prompt, die Inhalt, Stil, Struktur oder Verhalten begrenzt. Sie wirkt zusammen mit positiven Anweisungen und hält die Modellausgabe innerhalb definierter Grenzen – zum Beispiel indem sie dem Modell untersagt, bestimmte Wörter zu verwenden, Mitbewerber zu erwähnen oder Statistiken zu erfinden.' } },
-      { '@type': 'Question', name: 'Funktioniert Negatives Prompting mit allen KI-Modellen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GPT-5.5/4.5, Claude Sonnet/Opus und Gemini Pro reagieren auf harte Negative („darf nicht", „niemals", „nicht"). Die Einhaltung variiert nach Modell und Constraint-Typ: Formatverbote werden manchmal bei langen Outputs von Gemini Pro inkonsistent angewendet. Testen Sie Ihre spezifischen Constraints mit Ihrer aktuellen Modellversion.' } },
-      { '@type': 'Question', name: 'Wie viele negative Constraints sollte ich verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Begrenzen Sie sich auf 3–5 pro Prompt. Mehr als 5–6 Negative können Modelle verwirren, was zu ignorierten Regeln oder zögerlichen Outputs führt. Gruppieren Sie verwandte Regeln: „Verwenden Sie keine Hype-Wörter (revolutionär, disruptiv, bahnbrechend)" zählt als eine Einschränkung.' } },
-      { '@type': 'Question', name: 'Ist Negatives Prompting dasselbe wie Content Filtering?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Content Filtering ist eine externe Sicherheitsebene, die bestimmte Outputs unabhängig von Prompts blockiert. Negatives Prompting ist eine In-Prompt-Technik, die die Generierung formt. Sie ergänzen sich: Filter handhaben Sicherheitsverstöße; Negatives Prompting handhabe Marke, Ton und domänenspezifische Grenzen.' } },
-      { '@type': 'Question', name: 'Kann ich Negatives Prompting für kreative Aufgaben verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Für kreative Arbeiten verhindert Negatives Prompting generische Phrasen („keine Klischees"), begrenzt Strukturwahl („keine Drei-Akt-Struktur") oder schließt spezifische Referenzen aus („keine Kriegsmetaphern"). Wenden Sie dieselbe 3–5-Regel an — zu viele Negative schränken die kreative Reichweite ein.' } },
-      { '@type': 'Question', name: 'Hilft Negatives Prompting gegen Halluzinationen?', acceptedAnswer: { '@type': 'Answer', text: 'Es reduziert spezifische Halluzinationstypen, wenn genau begrenzt. „Zitieren Sie keine Quellen, wenn Sie nicht sicher sind" und „Sagen Sie, wenn Sie unsicher sind, statt zu raten" reduzieren Halluzinationen bei bestimmten Fehlern. Sie eliminieren das Halluzinationsrisiko nicht vollständig — nutzen Sie Output-Verifikation für hochriskante Fakten.' } },
-      { '@type': 'Question', name: 'Gibt es einen Unterschied zwischen Text- und Bild-KI Negatives Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Bei Bildgenerierung (DALL-E, Stable Diffusion, Midjourney) ist Negatives Prompting ein formales separates Parameterfeld. Bei Text-LLMs ist Negatives Prompting direkt als „Nicht-Tun"-Regeln in den Prompt-Text eingebettet. Dieses Handbuch behandelt Text-LLM Negatives Prompting.' } },
-      { '@type': 'Question', name: 'Wie teste ich, ob meine negativen Constraints funktionieren?', acceptedAnswer: { '@type': 'Answer', text: 'Führen Sie denselben Prompt 3–5 mal aus und überprüfen Sie, ob begrenzte Elemente erscheinen. Testen Sie für kritische Constraints über mehrere Modelle mit PromptQuorum Multi-Modell-Dispatch. Wenn ein Modell eine Regel konsistent verletzt, verstärken Sie die Formulierung von „vermeiden" zu „darf nicht" oder „niemals".' } },
-      { '@type': 'Question', name: 'Wie stelle ich sicher, dass mein Negatives Prompting datenschutzkonform ist?', acceptedAnswer: { '@type': 'Answer', text: 'DSGVO-Konformität bei Negatives Prompting bedeutet, dass Sie sensible personenbezogene Daten nicht in die negativen Regeln selbst einbeziehen sollten. Verwenden Sie stattdessen abstrakte Kategorien (z.B. „entfernen Sie alle Kundennamen und E-Mail-Adressen"). Dokumentieren Sie Ihre Constraints und deren Zweck in Ihrer Datenschutzerklärung. Stellen Sie sicher, dass Logs mit sensiblen Daten geschützt sind.' } },
-      { '@type': 'Question', name: 'Welche Herausforderungen gibt es beim Negatives Prompting in DACH-Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'DACH-Unternehmen stehen vor besonderen Herausforderungen: (1) Rechtliche Anforderungen sind streng und regional unterschiedlich. (2) Compliance-Dokumentation ist umfangreich. (3) Sprachliche Präzision ist kritisch. (4) Große Organisationen benötigen zentrale Constraint-Templates für Konsistenz über Teams. PromptQuorum adressiert diese durch wiederverwendbare Constraint-Sets und Audit-Trails.' } },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'Wie stelle ich sicher, dass mein Negatives Prompting datenschutzkonform ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DSGVO-Konformität bei Negatives Prompting bedeutet, dass Sie sensible personenbezogene Daten nicht in die negativen Regeln selbst einbeziehen sollten. Verwenden Sie stattdessen abstrakte Kategorien (z.B. „entfernen Sie alle Kundennamen und E-Mail-Adressen" statt „niemals Max Mustermann@example.de erwähnen"). Dokumentieren Sie Ihre negativen Constraints und deren Zweck in Ihrer Datenschutzerklärung. Wenn Sie PromptQuorum verwenden, stellen Sie sicher, dass Logs mit sensiblen Daten entsprechend geschützt sind.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Herausforderungen gibt es beim Negatives Prompting in DACH-Unternehmen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DACH-Unternehmen (Deutschland, Österreich, Schweiz) stehen vor besonderen Herausforderungen: (1) Rechtliche Anforderungen sind streng und regional unterschiedlich—Negatives Prompting muss diese nuanciert erfassen. (2) Compliance-Dokumentation ist umfangreich; die Constraints müssen revisionssicher sein. (3) Sprachliche Präzision ist kritisch—German-speaking Nutzer erwarten exakte Formulierungen, keine Vereinfachungen. (4) Große Enterprise-Organisationen benötigen zentrale Templates für Constraints, um konsistente Standards über Teams hinweg zu gewährleisten. PromptQuorum adressiert diese durch wiederverwendbare Constraint-Sets und Audit-Trails.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist Negatives Prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Negatives Prompting bedeutet, explizite „Nicht-Tun"-Regeln zu Ihren Prompts hinzuzufügen, parallel zu dem, was Sie vom Modell erwarten. Diese Regeln beschränken Inhalte (keine medizinischen Ratschläge), Ton (keine Hype-Begriffe), Struktur (keine nummerierten Listen) oder Verhalten (nie erfundene Statistiken). Jede Regel wirkt als Schutzschicht gegen bekannte Fehler.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist eine negative Einschränkung (Negativ-Prompt) in der KI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Eine negative Einschränkung – auch Negativ-Prompt genannt – ist eine explizite „Nicht-Tun"-Regel in einem KI-Prompt, die Inhalt, Stil, Struktur oder Verhalten begrenzt. Sie wirkt zusammen mit positiven Anweisungen und hält die Modellausgabe innerhalb definierter Grenzen – zum Beispiel indem sie dem Modell untersagt, bestimmte Wörter zu verwenden, Mitbewerber zu erwähnen oder Statistiken zu erfinden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert Negatives Prompting mit allen KI-Modellen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. GPT-5.5/4.5, Claude Sonnet/Opus und Gemini Pro reagieren auf harte Negative („darf nicht", „niemals", „nicht"). Die Einhaltung variiert nach Modell und Constraint-Typ: Formatverbote werden manchmal bei langen Outputs von Gemini Pro inkonsistent angewendet. Testen Sie Ihre spezifischen Constraints mit Ihrer aktuellen Modellversion.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viele negative Constraints sollte ich verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Begrenzen Sie sich auf 3–5 pro Prompt. Mehr als 5–6 Negative können Modelle verwirren, was zu ignorierten Regeln oder zögerlichen Outputs führt. Gruppieren Sie verwandte Regeln: „Verwenden Sie keine Hype-Wörter (revolutionär, disruptiv, bahnbrechend)" zählt als eine Einschränkung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Negatives Prompting dasselbe wie Content Filtering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Content Filtering ist eine externe Sicherheitsebene, die bestimmte Outputs unabhängig von Prompts blockiert. Negatives Prompting ist eine In-Prompt-Technik, die die Generierung formt. Sie ergänzen sich: Filter handhaben Sicherheitsverstöße; Negatives Prompting handhabe Marke, Ton und domänenspezifische Grenzen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Negatives Prompting für kreative Aufgaben verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Für kreative Arbeiten verhindert Negatives Prompting generische Phrasen („keine Klischees"), begrenzt Strukturwahl („keine Drei-Akt-Struktur") oder schließt spezifische Referenzen aus („keine Kriegsmetaphern"). Wenden Sie dieselbe 3–5-Regel an — zu viele Negative schränken die kreative Reichweite ein.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Hilft Negatives Prompting gegen Halluzinationen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es reduziert spezifische Halluzinationstypen, wenn genau begrenzt. „Zitieren Sie keine Quellen, wenn Sie nicht sicher sind" und „Sagen Sie, wenn Sie unsicher sind, statt zu raten" reduzieren Halluzinationen bei bestimmten Fehlern. Sie eliminieren das Halluzinationsrisiko nicht vollständig — nutzen Sie Output-Verifikation für hochriskante Fakten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Gibt es einen Unterschied zwischen Text- und Bild-KI Negatives Prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Bei Bildgenerierung (DALL-E, Stable Diffusion, Midjourney) ist Negatives Prompting ein formales separates Parameterfeld. Bei Text-LLMs ist Negatives Prompting direkt als „Nicht-Tun"-Regeln in den Prompt-Text eingebettet. Dieses Handbuch behandelt Text-LLM Negatives Prompting.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie teste ich, ob meine negativen Constraints funktionieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Führen Sie denselben Prompt 3–5 mal aus und überprüfen Sie, ob begrenzte Elemente erscheinen. Testen Sie für kritische Constraints über mehrere Modelle mit PromptQuorum Multi-Modell-Dispatch. Wenn ein Modell eine Regel konsistent verletzt, verstärken Sie die Formulierung von „vermeiden" zu „darf nicht" oder „niemals".',
+            },
+          },
+        ],
   },
   itemListSchema: {
     '@context': 'https://schema.org',
@@ -703,35 +783,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq',
       title: 'Preguntas frecuentes',
       faqs: [
-        {
-          q: '¿Qué es el negative prompting?',
-          a: 'El negative prompting significa añadir reglas explícitas de "no hacer" a un prompt junto con instrucciones positivas. Estas reglas restringen el contenido (sin consejos médicos), el estilo (sin palabras de hype), la estructura (sin introducción) o el comportamiento (nunca fabricar datos). Cada regla actúa como un guardrail que previene modos de fallo conocidos.',
-        },
-        {
-          q: '¿Qué es una constraint negativa (negative prompt) en la IA?',
-          a: 'Una constraint negativa —también llamada negative prompt— es una regla explícita de "no hacer" añadida a un prompt de IA que limita el contenido, el estilo, la estructura o el comportamiento. Funciona junto con las instrucciones positivas para mantener la salida del modelo dentro de límites definidos, por ejemplo indicándole al modelo que no use ciertas palabras, no mencione competidores o no invente estadísticas.',
-        },
-        {
-          q: '¿Funciona el negative prompting con todos los modelos de IA?',
-          a: 'Sí — GPT-5.5, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía: las prohibiciones de formato a veces se aplican de forma inconsistente en las salidas largas. Prueba tus constraints específicas con tus modelos objetivo.',
-        },
-        {
-          q: '¿Cuántas constraints negativas debo usar?',
-          a: 'Limita a 3-5 por prompt. Más de 5-6 puede confundir a los modelos, provocar constraints ignoradas o una salida excesivamente cautelosa. Agrupa reglas relacionadas: "Nunca uses palabras de hype (disruptivo, revolucionario, que cambia el juego)" cuenta como una constraint.',
-        },
-        {
-          q: '¿El negative prompting es lo mismo que el filtrado de contenido?',
-          a: 'No. El filtrado de contenido detecta y bloquea las salidas no deseadas después de la generación. El negative prompting previene las salidas no deseadas durante la generación diciéndole al modelo de antemano qué evitar. El filtrado ocurre downstream; el negative prompting previene el problema antes de que empiece.',
-        },
-        {
-          q: '¿Puedo usar el negative prompting para el cumplimiento (RGPD, HIPAA)?',
-          a: 'Sí. Incrustar las constraints de cumplimiento en las plantillas como reglas negativas crea una trazabilidad: cada salida fue procesada a través de los mismos guardrails. Esto es valioso para las auditorías, pero el negative prompting por sí solo no reemplaza la revisión legal ni los Acuerdos de Procesamiento de Datos.',
-        },
-        {
-          q: '¿Qué ocurre si combino negative prompting con ejemplos few-shot?',
-          a: 'La combinación funciona bien. Muestra ejemplos positivos de lo que quieres, luego añade constraints negativas para lo que evitar. Los ejemplos anclan al modelo; las constraints le impiden desviarse. Usa ambos juntos para el mayor control.',
-        },
-      ],
+            { q: '¿Qué es el negative prompting?', a: 'El negative prompting significa añadir reglas explícitas de "no hacer" a un prompt junto con instrucciones positivas. Estas reglas restringen el contenido (sin consejos médicos), el estilo (sin palabras de hype), la estructura (sin introducción) o el comportamiento (nunca fabricar datos). Cada regla actúa como un guardrail que previene modos de fallo conocidos.' },
+            { q: '¿Qué es una constraint negativa (negative prompt) en la IA?', a: 'Una constraint negativa —también llamada negative prompt— es una regla explícita de "no hacer" añadida a un prompt de IA que limita el contenido, el estilo, la estructura o el comportamiento. Funciona junto con las instrucciones positivas para mantener la salida del modelo dentro de límites definidos, por ejemplo indicándole al modelo que no use ciertas palabras, no mencione competidores o no invente estadísticas.' },
+            { q: '¿Funciona el negative prompting con todos los modelos de IA?', a: 'Sí — GPT-5.5, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía: las prohibiciones de formato a veces se aplican de forma inconsistente en las salidas largas. Prueba tus constraints específicas con tus modelos objetivo.' },
+            { q: '¿Cuántas constraints negativas debo usar?', a: 'Limita a 3-5 por prompt. Más de 5-6 puede confundir a los modelos, provocar constraints ignoradas o una salida excesivamente cautelosa. Agrupa reglas relacionadas: "Nunca uses palabras de hype (disruptivo, revolucionario, que cambia el juego)" cuenta como una constraint.' },
+            { q: '¿El negative prompting es lo mismo que el filtrado de contenido?', a: 'No. El filtrado de contenido detecta y bloquea las salidas no deseadas después de la generación. El negative prompting previene las salidas no deseadas durante la generación diciéndole al modelo de antemano qué evitar. El filtrado ocurre downstream; el negative prompting previene el problema antes de que empiece.' },
+            { q: '¿Puedo usar el negative prompting para el cumplimiento (RGPD, HIPAA)?', a: 'Sí. Incrustar las constraints de cumplimiento en las plantillas como reglas negativas crea una trazabilidad: cada salida fue procesada a través de los mismos guardrails. Esto es valioso para las auditorías, pero el negative prompting por sí solo no reemplaza la revisión legal ni los Acuerdos de Procesamiento de Datos.' },
+            { q: '¿Qué ocurre si combino negative prompting con ejemplos few-shot?', a: 'La combinación funciona bien. Muestra ejemplos positivos de lo que quieres, luego añade constraints negativas para lo que evitar. Los ejemplos anclan al modelo; las constraints le impiden desviarse. Usa ambos juntos para el mayor control.' },
+          ],
     },
     relatedReading: {
       title: 'Lecturas relacionadas',
@@ -770,14 +829,63 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'es',
     mainEntity: [
-      { '@type': 'Question', name: '¿Qué es el negative prompting?', acceptedAnswer: { '@type': 'Answer', text: 'El negative prompting significa añadir reglas explícitas de "no hacer" a tus prompts junto con lo que quieres que haga el modelo. Estas reglas restringen el contenido (sin consejos médicos), el estilo (sin palabras de hype), la estructura (sin introducción) o el comportamiento (nunca fabricar datos). Cada regla actúa como un guardrail que previene modos de fallo conocidos.' } },
-      { '@type': 'Question', name: '¿Qué es una constraint negativa (negative prompt) en la IA?', acceptedAnswer: { '@type': 'Answer', text: 'Una constraint negativa —también llamada negative prompt— es una regla explícita de "no hacer" añadida a un prompt de IA que limita el contenido, el estilo, la estructura o el comportamiento. Funciona junto con las instrucciones positivas para mantener la salida del modelo dentro de límites definidos, por ejemplo indicándole al modelo que no use ciertas palabras, no mencione competidores o no invente estadísticas.' } },
-      { '@type': 'Question', name: '¿Funciona el negative prompting con todos los modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. GPT-5.5, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía por tipo de constraint. Prueba tus constraints específicas con tus modelos objetivo.' } },
-      { '@type': 'Question', name: '¿Cuántas constraints negativas debo usar?', acceptedAnswer: { '@type': 'Answer', text: 'Limita a 3-5 por prompt. Más de 5-6 puede confundir a los modelos. Agrupa reglas relacionadas: "Nunca uses palabras de hype (disruptivo, revolucionario, que cambia el juego)" cuenta como una constraint.' } },
-      { '@type': 'Question', name: '¿El negative prompting es lo mismo que el filtrado de contenido?', acceptedAnswer: { '@type': 'Answer', text: 'No. El filtrado de contenido detecta y bloquea las salidas no deseadas después de la generación. El negative prompting previene las salidas no deseadas durante la generación. El filtrado ocurre downstream; el negative prompting previene el problema antes de que empiece.' } },
-      { '@type': 'Question', name: '¿Puedo usar el negative prompting para el cumplimiento regulatorio?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Incrustar las constraints de cumplimiento como reglas negativas crea una trazabilidad: cada salida fue procesada a través de los mismos guardrails. Pero el negative prompting por sí solo no reemplaza la revisión legal ni los Acuerdos de Procesamiento de Datos.' } },
-      { '@type': 'Question', name: '¿Qué ocurre si combino negative prompting con ejemplos few-shot?', acceptedAnswer: { '@type': 'Answer', text: 'La combinación funciona bien. Muestra ejemplos positivos de lo que quieres, luego añade constraints negativas para lo que evitar. Los ejemplos anclan al modelo; las constraints le impiden desviarse. Usa ambos juntos para el mayor control.' } },
-    ],
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el negative prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El negative prompting significa añadir reglas explícitas de "no hacer" a un prompt junto con instrucciones positivas. Estas reglas restringen el contenido (sin consejos médicos), el estilo (sin palabras de hype), la estructura (sin introducción) o el comportamiento (nunca fabricar datos). Cada regla actúa como un guardrail que previene modos de fallo conocidos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es una constraint negativa (negative prompt) en la IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Una constraint negativa —también llamada negative prompt— es una regla explícita de "no hacer" añadida a un prompt de IA que limita el contenido, el estilo, la estructura o el comportamiento. Funciona junto con las instrucciones positivas para mantener la salida del modelo dentro de límites definidos, por ejemplo indicándole al modelo que no use ciertas palabras, no mencione competidores o no invente estadísticas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Funciona el negative prompting con todos los modelos de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — GPT-5.5, Claude Opus/Sonnet y Gemini Pro todos responden a las constraints negativas duras ("no debe", "nunca", "no"). El cumplimiento varía: las prohibiciones de formato a veces se aplican de forma inconsistente en las salidas largas. Prueba tus constraints específicas con tus modelos objetivo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuántas constraints negativas debo usar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Limita a 3-5 por prompt. Más de 5-6 puede confundir a los modelos, provocar constraints ignoradas o una salida excesivamente cautelosa. Agrupa reglas relacionadas: "Nunca uses palabras de hype (disruptivo, revolucionario, que cambia el juego)" cuenta como una constraint.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿El negative prompting es lo mismo que el filtrado de contenido?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. El filtrado de contenido detecta y bloquea las salidas no deseadas después de la generación. El negative prompting previene las salidas no deseadas durante la generación diciéndole al modelo de antemano qué evitar. El filtrado ocurre downstream; el negative prompting previene el problema antes de que empiece.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar el negative prompting para el cumplimiento (RGPD, HIPAA)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Incrustar las constraints de cumplimiento en las plantillas como reglas negativas crea una trazabilidad: cada salida fue procesada a través de los mismos guardrails. Esto es valioso para las auditorías, pero el negative prompting por sí solo no reemplaza la revisión legal ni los Acuerdos de Procesamiento de Datos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué ocurre si combino negative prompting con ejemplos few-shot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La combinación funciona bien. Muestra ejemplos positivos de lo que quieres, luego añade constraints negativas para lo que evitar. Los ejemplos anclan al modelo; las constraints le impiden desviarse. Usa ambos juntos para el mayor control.',
+            },
+          },
+        ],
   },
   itemListSchema: {
     '@context': 'https://schema.org',
@@ -1013,35 +1121,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq',
       title: 'الأسئلة الشائعة',
       faqs: [
-        {
-          q: 'ما هو البرومبت السلبي؟',
-          a: 'البرومبت السلبي يعني إضافة قواعد "لا تفعل" صريحة إلى برومبت جنبًا إلى جنب مع التعليمات الإيجابية. هذه القواعد تقيّد المحتوى (بدون نصائح طبية)، والأسلوب (بدون مصطلحات مبالغًا فيها)، والبنية (بدون مقدمة)، والسلوك (لا تختلق بيانات). كل قاعدة تعمل كضمان يمنع أوضاع الفشل المعروفة.',
-        },
-        {
-          q: 'ما هو القيد السلبي (البرومبت السلبي) في الذكاء الاصطناعي؟',
-          a: 'القيد السلبي — ويُسمى أيضًا البرومبت السلبي — هو قاعدة صريحة من نوع "لا تفعل" تُضاف إلى برومبت الذكاء الاصطناعي لتحدّ من المحتوى أو الأسلوب أو البنية أو السلوك. يعمل جنبًا إلى جنب مع التعليمات الإيجابية للحفاظ على مخرجات النموذج ضمن حدود محددة، مثل توجيه النموذج بعدم استخدام كلمات معينة، أو عدم ذكر المنافسين، أو عدم اختلاق إحصاءات.',
-        },
-        {
-          q: 'هل يعمل البرومبت السلبي مع جميع نماذج الذكاء الاصطناعي؟',
-          a: 'نعم — GPT-5.5 وClaude Opus/Sonnet وGemini Pro جميعها تستجيب للقيود السلبية الحازمة ("لا يجب"، "أبدًا"، "لا"). يتفاوت الامتثال: قد تُطبَّق حظر التنسيق بشكل غير متسق أحيانًا في المخرجات الطويلة. اختبر قيودك المحددة مع نماذجك المستهدفة.',
-        },
-        {
-          q: 'كم قيدًا سلبيًا يجب استخدامي؟',
-          a: 'حدّ بـ3-5 لكل برومبت. أكثر من 5-6 قد يُربك النماذج ويؤدي إلى تجاهل القيود أو مخرجات حذرة بشكل مفرط. جمّع القواعد ذات الصلة: "لا تستخدم مصطلحات مبالغًا فيها (تخريبي، ثوري، يغيّر قواعد اللعبة)" تُعدّ قيدًا واحدًا.',
-        },
-        {
-          q: 'هل البرومبت السلبي هو نفسه تصفية المحتوى؟',
-          a: 'لا. تصفية المحتوى تكتشف المخرجات غير المرغوبة وتحظرها بعد التوليد. البرومبت السلبي يمنع المخرجات غير المرغوبة أثناء التوليد بإخبار النموذج مسبقًا بما يجب تجنبه. التصفية تحدث بعد ذلك؛ البرومبت السلبي يمنع المشكلة قبل بدايتها.',
-        },
-        {
-          q: 'هل يمكنني استخدام البرومبت السلبي للامتثال (GDPR، HIPAA)؟',
-          a: 'نعم. تضمين قيود الامتثال في القوالب كقواعد سلبية يخلق قابلية للتتبع: كل مخرجات مرّت عبر الضمانات ذاتها. هذا ذو قيمة لعمليات التدقيق، لكن البرومبت السلبي وحده لا يحل محل المراجعة القانونية أو اتفاقيات معالجة البيانات.',
-        },
-        {
-          q: 'ماذا يحدث إذا جمعت البرومبت السلبي مع أمثلة few-shot؟',
-          a: 'الجمع يعمل بشكل جيد. أرِ أمثلة إيجابية على ما تريده، ثم أضف قيودًا سلبية لما يجب تجنبه. الأمثلة ترسّخ النموذج؛ القيود تمنعه من الانحراف. استخدمهما معًا للتحكم الأقصى.',
-        },
-      ],
+            { q: 'ما هو البرومبت السلبي؟', a: 'البرومبت السلبي يعني إضافة قواعد "لا تفعل" صريحة إلى برومبت جنبًا إلى جنب مع التعليمات الإيجابية. هذه القواعد تقيّد المحتوى (بدون نصائح طبية)، والأسلوب (بدون مصطلحات مبالغًا فيها)، والبنية (بدون مقدمة)، والسلوك (لا تختلق بيانات). كل قاعدة تعمل كضمان يمنع أوضاع الفشل المعروفة.' },
+            { q: 'ما هو القيد السلبي (البرومبت السلبي) في الذكاء الاصطناعي؟', a: 'القيد السلبي — ويُسمى أيضًا البرومبت السلبي — هو قاعدة صريحة من نوع "لا تفعل" تُضاف إلى برومبت الذكاء الاصطناعي لتحدّ من المحتوى أو الأسلوب أو البنية أو السلوك. يعمل جنبًا إلى جنب مع التعليمات الإيجابية للحفاظ على مخرجات النموذج ضمن حدود محددة، مثل توجيه النموذج بعدم استخدام كلمات معينة، أو عدم ذكر المنافسين، أو عدم اختلاق إحصاءات.' },
+            { q: 'هل يعمل البرومبت السلبي مع جميع نماذج الذكاء الاصطناعي؟', a: 'نعم — GPT-5.5 وClaude Opus/Sonnet وGemini Pro جميعها تستجيب للقيود السلبية الحازمة ("لا يجب"، "أبدًا"، "لا"). يتفاوت الامتثال: قد تُطبَّق حظر التنسيق بشكل غير متسق أحيانًا في المخرجات الطويلة. اختبر قيودك المحددة مع نماذجك المستهدفة.' },
+            { q: 'كم قيدًا سلبيًا يجب استخدامي؟', a: 'حدّ بـ3-5 لكل برومبت. أكثر من 5-6 قد يُربك النماذج ويؤدي إلى تجاهل القيود أو مخرجات حذرة بشكل مفرط. جمّع القواعد ذات الصلة: "لا تستخدم مصطلحات مبالغًا فيها (تخريبي، ثوري، يغيّر قواعد اللعبة)" تُعدّ قيدًا واحدًا.' },
+            { q: 'هل البرومبت السلبي هو نفسه تصفية المحتوى؟', a: 'لا. تصفية المحتوى تكتشف المخرجات غير المرغوبة وتحظرها بعد التوليد. البرومبت السلبي يمنع المخرجات غير المرغوبة أثناء التوليد بإخبار النموذج مسبقًا بما يجب تجنبه. التصفية تحدث بعد ذلك؛ البرومبت السلبي يمنع المشكلة قبل بدايتها.' },
+            { q: 'هل يمكنني استخدام البرومبت السلبي للامتثال (GDPR، HIPAA)؟', a: 'نعم. تضمين قيود الامتثال في القوالب كقواعد سلبية يخلق قابلية للتتبع: كل مخرجات مرّت عبر الضمانات ذاتها. هذا ذو قيمة لعمليات التدقيق، لكن البرومبت السلبي وحده لا يحل محل المراجعة القانونية أو اتفاقيات معالجة البيانات.' },
+            { q: 'ماذا يحدث إذا جمعت البرومبت السلبي مع أمثلة few-shot؟', a: 'الجمع يعمل بشكل جيد. أرِ أمثلة إيجابية على ما تريده، ثم أضف قيودًا سلبية لما يجب تجنبه. الأمثلة ترسّخ النموذج؛ القيود تمنعه من الانحراف. استخدمهما معًا للتحكم الأقصى.' },
+          ],
     },
     relatedReading: {
       title: 'قراءات ذات صلة',
@@ -1080,14 +1167,63 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'ar',
     mainEntity: [
-      { '@type': 'Question', name: 'ما هو البرومبت السلبي؟', acceptedAnswer: { '@type': 'Answer', text: 'البرومبت السلبي يعني إضافة قواعد "لا تفعل" صريحة إلى برومبتاتك جنبًا إلى جنب مع ما تريد من النموذج فعله. هذه القواعد تقيّد المحتوى (بدون نصائح طبية)، والأسلوب (بدون مصطلحات مبالغًا فيها)، والبنية (بدون مقدمة)، والسلوك (لا تختلق بيانات). كل قاعدة تعمل كضمان يمنع أوضاع الفشل المعروفة.' } },
-      { '@type': 'Question', name: 'ما هو القيد السلبي (البرومبت السلبي) في الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'القيد السلبي — ويُسمى أيضًا البرومبت السلبي — هو قاعدة صريحة من نوع "لا تفعل" تُضاف إلى برومبت الذكاء الاصطناعي لتحدّ من المحتوى أو الأسلوب أو البنية أو السلوك. يعمل جنبًا إلى جنب مع التعليمات الإيجابية للحفاظ على مخرجات النموذج ضمن حدود محددة، مثل توجيه النموذج بعدم استخدام كلمات معينة، أو عدم ذكر المنافسين، أو عدم اختلاق إحصاءات.' } },
-      { '@type': 'Question', name: 'هل يعمل البرومبت السلبي مع جميع نماذج الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. GPT-5.5 وClaude Opus/Sonnet وGemini Pro جميعها تستجيب للقيود السلبية الحازمة ("لا يجب"، "أبدًا"، "لا"). يتفاوت الامتثال حسب نوع القيد. اختبر قيودك المحددة مع نماذجك المستهدفة.' } },
-      { '@type': 'Question', name: 'كم قيدًا سلبيًا يجب استخدامي؟', acceptedAnswer: { '@type': 'Answer', text: 'حدّ بـ3-5 لكل برومبت. أكثر من 5-6 قد يُربك النماذج. جمّع القواعد ذات الصلة: "لا تستخدم مصطلحات مبالغًا فيها (تخريبي، ثوري، يغيّر قواعد اللعبة)" تُعدّ قيدًا واحدًا.' } },
-      { '@type': 'Question', name: 'هل البرومبت السلبي هو نفسه تصفية المحتوى؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. تصفية المحتوى تكتشف المخرجات غير المرغوبة وتحظرها بعد التوليد. البرومبت السلبي يمنعها أثناء التوليد. التصفية تحدث بعد ذلك؛ البرومبت السلبي يمنع المشكلة قبل بدايتها.' } },
-      { '@type': 'Question', name: 'هل يمكنني استخدام البرومبت السلبي للامتثال التنظيمي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. تضمين قيود الامتثال كقواعد سلبية يخلق قابلية للتتبع: كل مخرجات مرّت عبر الضمانات ذاتها. لكن البرومبت السلبي وحده لا يحل محل المراجعة القانونية أو اتفاقيات معالجة البيانات.' } },
-      { '@type': 'Question', name: 'ماذا يحدث إذا جمعت البرومبت السلبي مع أمثلة few-shot؟', acceptedAnswer: { '@type': 'Answer', text: 'الجمع يعمل بشكل جيد. أرِ أمثلة إيجابية على ما تريده، ثم أضف قيودًا سلبية لما يجب تجنبه. الأمثلة ترسّخ النموذج؛ القيود تمنعه من الانحراف. استخدمهما معًا للتحكم الأقصى.' } },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'ما هو البرومبت السلبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'البرومبت السلبي يعني إضافة قواعد "لا تفعل" صريحة إلى برومبت جنبًا إلى جنب مع التعليمات الإيجابية. هذه القواعد تقيّد المحتوى (بدون نصائح طبية)، والأسلوب (بدون مصطلحات مبالغًا فيها)، والبنية (بدون مقدمة)، والسلوك (لا تختلق بيانات). كل قاعدة تعمل كضمان يمنع أوضاع الفشل المعروفة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو القيد السلبي (البرومبت السلبي) في الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'القيد السلبي — ويُسمى أيضًا البرومبت السلبي — هو قاعدة صريحة من نوع "لا تفعل" تُضاف إلى برومبت الذكاء الاصطناعي لتحدّ من المحتوى أو الأسلوب أو البنية أو السلوك. يعمل جنبًا إلى جنب مع التعليمات الإيجابية للحفاظ على مخرجات النموذج ضمن حدود محددة، مثل توجيه النموذج بعدم استخدام كلمات معينة، أو عدم ذكر المنافسين، أو عدم اختلاق إحصاءات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل البرومبت السلبي مع جميع نماذج الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — GPT-5.5 وClaude Opus/Sonnet وGemini Pro جميعها تستجيب للقيود السلبية الحازمة ("لا يجب"، "أبدًا"، "لا"). يتفاوت الامتثال: قد تُطبَّق حظر التنسيق بشكل غير متسق أحيانًا في المخرجات الطويلة. اختبر قيودك المحددة مع نماذجك المستهدفة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم قيدًا سلبيًا يجب استخدامي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'حدّ بـ3-5 لكل برومبت. أكثر من 5-6 قد يُربك النماذج ويؤدي إلى تجاهل القيود أو مخرجات حذرة بشكل مفرط. جمّع القواعد ذات الصلة: "لا تستخدم مصطلحات مبالغًا فيها (تخريبي، ثوري، يغيّر قواعد اللعبة)" تُعدّ قيدًا واحدًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل البرومبت السلبي هو نفسه تصفية المحتوى؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. تصفية المحتوى تكتشف المخرجات غير المرغوبة وتحظرها بعد التوليد. البرومبت السلبي يمنع المخرجات غير المرغوبة أثناء التوليد بإخبار النموذج مسبقًا بما يجب تجنبه. التصفية تحدث بعد ذلك؛ البرومبت السلبي يمنع المشكلة قبل بدايتها.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام البرومبت السلبي للامتثال (GDPR، HIPAA)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. تضمين قيود الامتثال في القوالب كقواعد سلبية يخلق قابلية للتتبع: كل مخرجات مرّت عبر الضمانات ذاتها. هذا ذو قيمة لعمليات التدقيق، لكن البرومبت السلبي وحده لا يحل محل المراجعة القانونية أو اتفاقيات معالجة البيانات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يحدث إذا جمعت البرومبت السلبي مع أمثلة few-shot؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الجمع يعمل بشكل جيد. أرِ أمثلة إيجابية على ما تريده، ثم أضف قيودًا سلبية لما يجب تجنبه. الأمثلة ترسّخ النموذج؛ القيود تمنعه من الانحراف. استخدمهما معًا للتحكم الأقصى.',
+            },
+          },
+        ],
   },
   itemListSchema: {
     '@context': 'https://schema.org',
@@ -1318,35 +1454,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq',
       title: 'Perguntas frequentes',
       faqs: [
-        {
-          q: 'O que é o negative prompting?',
-          a: 'O negative prompting significa adicionar regras explícitas de "não fazer" a um prompt junto com instruções positivas. Essas regras restringem o conteúdo (sem conselhos médicos), o estilo (sem palavras de hype), a estrutura (sem introdução) ou o comportamento (nunca fabricar dados). Cada regra atua como um guardrail que previne modos de falha conhecidos.',
-        },
-        {
-          q: 'O que é uma restrição negativa (negative prompt) em IA?',
-          a: 'Uma restrição negativa — também chamada de negative prompt — é uma regra explícita de "não fazer" adicionada a um prompt de IA que limita o conteúdo, o estilo, a estrutura ou o comportamento. Ela funciona junto com as instruções positivas para manter a saída do modelo dentro de limites definidos, por exemplo, dizendo ao modelo para não usar certas palavras, não mencionar concorrentes ou não inventar estatísticas.',
-        },
-        {
-          q: 'O negative prompting funciona com todos os modelos de IA?',
-          a: 'Sim — GPT-5.5, Claude Opus/Sonnet e Gemini Pro respondem a restrições negativas diretas ("não deve", "nunca", "não"). A conformidade varia: as proibições de formato às vezes são aplicadas de forma inconsistente em saídas longas. Teste suas restrições específicas com seus modelos-alvo.',
-        },
-        {
-          q: 'Quantas restrições negativas devo usar?',
-          a: 'Limite a 3-5 por prompt. Mais de 5-6 pode confundir os modelos, provocar restrições ignoradas ou uma saída excessivamente cautelosa. Agrupe regras relacionadas: "Nunca use palavras de hype (disruptivo, revolucionário, que muda o jogo)" conta como uma restrição.',
-        },
-        {
-          q: 'O negative prompting é o mesmo que filtragem de conteúdo?',
-          a: 'Não. A filtragem de conteúdo detecta e bloqueia saídas indesejadas após a geração. O negative prompting previne saídas indesejadas durante a geração, dizendo ao modelo antecipadamente o que evitar. A filtragem ocorre downstream; o negative prompting previne o problema antes que ele comece.',
-        },
-        {
-          q: 'Posso usar o negative prompting para conformidade (LGPD, HIPAA)?',
-          a: 'Sim. Incorporar restrições de conformidade em modelos como regras negativas cria uma trilha de auditoria: cada saída foi processada pelos mesmos guardrails. Isso é valioso para auditorias, mas o negative prompting sozinho não substitui a revisão jurídica nem os Acordos de Processamento de Dados.',
-        },
-        {
-          q: 'O que acontece se eu combinar negative prompting com exemplos few-shot?',
-          a: 'A combinação funciona bem. Mostre exemplos positivos do que você quer, depois adicione restrições negativas para o que evitar. Os exemplos ancoram o modelo; as restrições o impedem de se desviar. Use ambos juntos para o maior controle.',
-        },
-      ],
+            { q: 'O que é o negative prompting?', a: 'O negative prompting significa adicionar regras explícitas de "não fazer" a um prompt junto com instruções positivas. Essas regras restringem o conteúdo (sem conselhos médicos), o estilo (sem palavras de hype), a estrutura (sem introdução) ou o comportamento (nunca fabricar dados). Cada regra atua como um guardrail que previne modos de falha conhecidos.' },
+            { q: 'O que é uma restrição negativa (negative prompt) em IA?', a: 'Uma restrição negativa — também chamada de negative prompt — é uma regra explícita de "não fazer" adicionada a um prompt de IA que limita o conteúdo, o estilo, a estrutura ou o comportamento. Ela funciona junto com as instruções positivas para manter a saída do modelo dentro de limites definidos, por exemplo, dizendo ao modelo para não usar certas palavras, não mencionar concorrentes ou não inventar estatísticas.' },
+            { q: 'O negative prompting funciona com todos os modelos de IA?', a: 'Sim — GPT-5.5, Claude Opus/Sonnet e Gemini Pro respondem a restrições negativas diretas ("não deve", "nunca", "não"). A conformidade varia: as proibições de formato às vezes são aplicadas de forma inconsistente em saídas longas. Teste suas restrições específicas com seus modelos-alvo.' },
+            { q: 'Quantas restrições negativas devo usar?', a: 'Limite a 3-5 por prompt. Mais de 5-6 pode confundir os modelos, provocar restrições ignoradas ou uma saída excessivamente cautelosa. Agrupe regras relacionadas: "Nunca use palavras de hype (disruptivo, revolucionário, que muda o jogo)" conta como uma restrição.' },
+            { q: 'O negative prompting é o mesmo que filtragem de conteúdo?', a: 'Não. A filtragem de conteúdo detecta e bloqueia saídas indesejadas após a geração. O negative prompting previne saídas indesejadas durante a geração, dizendo ao modelo antecipadamente o que evitar. A filtragem ocorre downstream; o negative prompting previne o problema antes que ele comece.' },
+            { q: 'Posso usar o negative prompting para conformidade (LGPD, HIPAA)?', a: 'Sim. Incorporar restrições de conformidade em modelos como regras negativas cria uma trilha de auditoria: cada saída foi processada pelos mesmos guardrails. Isso é valioso para auditorias, mas o negative prompting sozinho não substitui a revisão jurídica nem os Acordos de Processamento de Dados.' },
+            { q: 'O que acontece se eu combinar negative prompting com exemplos few-shot?', a: 'A combinação funciona bem. Mostre exemplos positivos do que você quer, depois adicione restrições negativas para o que evitar. Os exemplos ancoram o modelo; as restrições o impedem de se desviar. Use ambos juntos para o maior controle.' },
+          ],
     },
     relatedReading: {
       title: 'Leitura relacionada',
@@ -1385,14 +1500,63 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'pt-BR',
     mainEntity: [
-      { '@type': 'Question', name: 'O que é o negative prompting?', acceptedAnswer: { '@type': 'Answer', text: 'O negative prompting significa adicionar regras explícitas de "não fazer" aos seus prompts junto com o que você quer que o modelo faça. Essas regras restringem o conteúdo (sem conselhos médicos), o estilo (sem palavras de hype), a estrutura (sem introdução) ou o comportamento (nunca fabricar dados). Cada regra atua como um guardrail que previne modos de falha conhecidos.' } },
-      { '@type': 'Question', name: 'O que é uma restrição negativa (negative prompt) em IA?', acceptedAnswer: { '@type': 'Answer', text: 'Uma restrição negativa — também chamada de negative prompt — é uma regra explícita de "não fazer" adicionada a um prompt de IA que limita o conteúdo, o estilo, a estrutura ou o comportamento. Ela funciona junto com as instruções positivas para manter a saída do modelo dentro de limites definidos, por exemplo, dizendo ao modelo para não usar certas palavras, não mencionar concorrentes ou não inventar estatísticas.' } },
-      { '@type': 'Question', name: 'O negative prompting funciona com todos os modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. GPT-5.5, Claude Opus/Sonnet e Gemini Pro respondem a restrições negativas diretas ("não deve", "nunca", "não"). A conformidade varia por tipo de restrição. Teste suas restrições específicas com seus modelos-alvo.' } },
-      { '@type': 'Question', name: 'Quantas restrições negativas devo usar?', acceptedAnswer: { '@type': 'Answer', text: 'Limite a 3-5 por prompt. Mais de 5-6 pode confundir os modelos. Agrupe regras relacionadas: "Nunca use palavras de hype (disruptivo, revolucionário, que muda o jogo)" conta como uma restrição.' } },
-      { '@type': 'Question', name: 'O negative prompting é o mesmo que filtragem de conteúdo?', acceptedAnswer: { '@type': 'Answer', text: 'Não. A filtragem de conteúdo detecta e bloqueia saídas indesejadas após a geração. O negative prompting previne saídas indesejadas durante a geração. A filtragem ocorre downstream; o negative prompting previne o problema antes que ele comece.' } },
-      { '@type': 'Question', name: 'Posso usar o negative prompting para conformidade regulatória?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Incorporar restrições de conformidade como regras negativas cria uma trilha de auditoria: cada saída foi processada pelos mesmos guardrails. Mas o negative prompting sozinho não substitui a revisão jurídica nem os Acordos de Processamento de Dados.' } },
-      { '@type': 'Question', name: 'O que acontece se eu combinar negative prompting com exemplos few-shot?', acceptedAnswer: { '@type': 'Answer', text: 'A combinação funciona bem. Mostre exemplos positivos do que você quer, depois adicione restrições negativas para o que evitar. Os exemplos ancoram o modelo; as restrições o impedem de se desviar. Use ambos juntos para o maior controle.' } },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'O que é o negative prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O negative prompting significa adicionar regras explícitas de "não fazer" a um prompt junto com instruções positivas. Essas regras restringem o conteúdo (sem conselhos médicos), o estilo (sem palavras de hype), a estrutura (sem introdução) ou o comportamento (nunca fabricar dados). Cada regra atua como um guardrail que previne modos de falha conhecidos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é uma restrição negativa (negative prompt) em IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Uma restrição negativa — também chamada de negative prompt — é uma regra explícita de "não fazer" adicionada a um prompt de IA que limita o conteúdo, o estilo, a estrutura ou o comportamento. Ela funciona junto com as instruções positivas para manter a saída do modelo dentro de limites definidos, por exemplo, dizendo ao modelo para não usar certas palavras, não mencionar concorrentes ou não inventar estatísticas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O negative prompting funciona com todos os modelos de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim — GPT-5.5, Claude Opus/Sonnet e Gemini Pro respondem a restrições negativas diretas ("não deve", "nunca", "não"). A conformidade varia: as proibições de formato às vezes são aplicadas de forma inconsistente em saídas longas. Teste suas restrições específicas com seus modelos-alvo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quantas restrições negativas devo usar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Limite a 3-5 por prompt. Mais de 5-6 pode confundir os modelos, provocar restrições ignoradas ou uma saída excessivamente cautelosa. Agrupe regras relacionadas: "Nunca use palavras de hype (disruptivo, revolucionário, que muda o jogo)" conta como uma restrição.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O negative prompting é o mesmo que filtragem de conteúdo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. A filtragem de conteúdo detecta e bloqueia saídas indesejadas após a geração. O negative prompting previne saídas indesejadas durante a geração, dizendo ao modelo antecipadamente o que evitar. A filtragem ocorre downstream; o negative prompting previne o problema antes que ele comece.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar o negative prompting para conformidade (LGPD, HIPAA)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Incorporar restrições de conformidade em modelos como regras negativas cria uma trilha de auditoria: cada saída foi processada pelos mesmos guardrails. Isso é valioso para auditorias, mas o negative prompting sozinho não substitui a revisão jurídica nem os Acordos de Processamento de Dados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que acontece se eu combinar negative prompting com exemplos few-shot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A combinação funciona bem. Mostre exemplos positivos do que você quer, depois adicione restrições negativas para o que evitar. Os exemplos ancoram o modelo; as restrições o impedem de se desviar. Use ambos juntos para o maior controle.',
+            },
+          },
+        ],
   },
   itemListSchema: {
     '@context': 'https://schema.org',

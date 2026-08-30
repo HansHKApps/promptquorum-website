@@ -193,6 +193,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Do I need both LM Studio and Jan AI?', a: 'No. Pick one. If you want a GUI and API, LM Studio is sufficient.' },
             { q: 'How much RAM do LM Studio and Jan AI use?', a: 'Base: 500MB-1GB each. With 7B model running: 8GB-12GB total (model + UI). Jan AI slightly heavier.' },
             { q: 'Can I run both simultaneously?', a: 'Yes, on different ports. But pointless--use one app for inference, one for other work.' },
+            { q: 'Is Jan AI truly open-source?', a: 'Yes. Jan AI is MIT-licensed and available on GitHub (janhq/jan). LM Studio is proprietary (free for personal use but closed-source). This makes Jan AI more auditable for privacy-sensitive deployments.' },
+            { q: 'Which app is faster -- LM Studio or Jan AI?', a: 'Neither is meaningfully faster than the other. Both use llama.cpp as the inference backend. Speed is determined by your GPU, model size, and quantization level -- not the app layer.' },
+            { q: 'Does Jan AI support AMD GPUs?', a: 'Yes, through llama.cpp HIP backend. AMD ROCm support improved in 2025. LM Studio also supports AMD ROCm on Linux. Both require ROCm-compatible drivers (Ubuntu recommended).' },
+            { q: 'Can I use Jan AI for local RAG (Retrieval-Augmented Generation)?', a: 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG as of April 2026.' },
           ],
         },
         'relatedReading': {
@@ -243,54 +247,84 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'Which should I choose for my first local LLM -- LM Studio or Jan AI?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. It has a simpler UI, faster setup, and built-in model discovery from Hugging Face. Jan AI is better if you want to experiment with plugins and extensibility.' }
+            'name': 'Which should I choose for my first local LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio. Simpler UI, faster setup, built-in model discovery. Jan AI if you want to tinker with plugins.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I use LM Studio API with VS Code Copilot?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Start the LM Studio Local Server, copy the endpoint URL (localhost:1234), and paste it into VS Code Copilot extension settings as the base URL.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Start LM Studio server, copy endpoint URL into Copilot extension settings.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Is Jan AI\'s plugin system production-ready?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Jan AI plugins are suitable for experimentation. For production inference, use a dedicated backend like vLLM or Ollama CLI. Desktop apps are not designed for production workloads.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Good for experimentation. Production use requires dedicated backend (vLLM, Ollama).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Do I need both LM Studio and Jan AI?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Pick one. Both offer GUI chat and an OpenAI-compatible API. LM Studio is sufficient for most users. Only run both if you need to compare specific features.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Pick one. If you want a GUI and API, LM Studio is sufficient.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How much RAM do LM Studio and Jan AI use?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Base app: 500MB-1GB each. With a 7B model loaded: 8-12GB total (model weights + app overhead). Jan AI is slightly heavier due to its plugin runtime.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Base: 500MB-1GB each. With 7B model running: 8GB-12GB total (model + UI). Jan AI slightly heavier.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Can I run LM Studio and Jan AI simultaneously?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, on different ports. LM Studio defaults to port 1234; Jan AI defaults to 1337. Both can run at the same time, but it doubles VRAM usage if both models are loaded.' }
+            'name': 'Can I run both simultaneously?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, on different ports. But pointless--use one app for inference, one for other work.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Is Jan AI truly open-source?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Jan AI is MIT-licensed and available on GitHub (janhq/jan). LM Studio is proprietary (free for personal use but closed-source). This makes Jan AI more auditable for privacy-sensitive deployments.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Jan AI is MIT-licensed and available on GitHub (janhq/jan). LM Studio is proprietary (free for personal use but closed-source). This makes Jan AI more auditable for privacy-sensitive deployments.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Which app is faster -- LM Studio or Jan AI?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Neither is meaningfully faster than the other. Both use llama.cpp as the inference backend. Speed is determined by your GPU, model size, and quantization level -- not the app layer.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Neither is meaningfully faster than the other. Both use llama.cpp as the inference backend. Speed is determined by your GPU, model size, and quantization level -- not the app layer.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Does Jan AI support AMD GPUs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, through llama.cpp HIP backend. AMD ROCm support improved in 2025. LM Studio also supports AMD ROCm on Linux. Both require ROCm-compatible drivers (Ubuntu recommended).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, through llama.cpp HIP backend. AMD ROCm support improved in 2025. LM Studio also supports AMD ROCm on Linux. Both require ROCm-compatible drivers (Ubuntu recommended).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I use Jan AI for local RAG (Retrieval-Augmented Generation)?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG as of April 2026.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG as of April 2026.',
+            },
+          },
         ]
       },
     },
@@ -1576,16 +1610,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '¿Cuál debería elegir para mi primer LLM local — LM Studio o Jan AI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. Tiene una interfaz más simple, configuración más rápida y descubrimiento de modelos integrado desde Hugging Face. Jan AI es mejor si quieres experimentar con plugins y extensibilidad.' } },
-          { '@type': 'Question', 'name': '¿Puedo usar la API de LM Studio con VS Code Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Inicia el servidor local de LM Studio, copia la URL del endpoint (localhost:1234) y pégala en los ajustes de la extensión VS Code Copilot como URL base.' } },
-          { '@type': 'Question', 'name': '¿El sistema de plugins de Jan AI está listo para producción?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Los plugins de Jan AI son adecuados para experimentación. Para inferencia en producción, usa un backend dedicado como vLLM u Ollama CLI. Las apps de escritorio no están diseñadas para cargas de trabajo en producción.' } },
-          { '@type': 'Question', 'name': '¿Necesito tanto LM Studio como Jan AI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Elige uno. Ambos ofrecen chat GUI y una API compatible con OpenAI. LM Studio es suficiente para la mayoría de los usuarios. Ejecuta ambos solo si necesitas comparar funciones específicas.' } },
-          { '@type': 'Question', 'name': '¿Cuánta RAM usan LM Studio y Jan AI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'App base: 500 MB-1 GB cada una. Con modelo 7B cargado: 8-12 GB total (pesos del modelo + overhead de la app). Jan AI es ligeramente más pesada por su runtime de plugins.' } },
-          { '@type': 'Question', 'name': '¿Puedo ejecutar LM Studio y Jan AI simultáneamente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, en puertos distintos. LM Studio usa el puerto 1234 por defecto; Jan AI usa el 1337. Ambas pueden correr al mismo tiempo, pero duplica el uso de VRAM si los dos modelos están cargados.' } },
-          { '@type': 'Question', 'name': '¿Es Jan AI verdaderamente open-source?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Jan AI tiene licencia MIT y está disponible en GitHub (janhq/jan). LM Studio es propietario (gratis para uso personal pero de código cerrado). Esto hace que Jan AI sea más auditable para despliegues sensibles a la privacidad.' } },
-          { '@type': 'Question', 'name': '¿Cuál app es más rápida — LM Studio o Jan AI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ninguna es significativamente más rápida que la otra. Ambas usan llama.cpp como backend de inferencia. La velocidad la determinan tu GPU, el tamaño del modelo y el nivel de cuantización, no la capa de la app.' } },
-          { '@type': 'Question', 'name': '¿Jan AI soporta GPUs AMD?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, a través del backend HIP de llama.cpp. El soporte AMD ROCm mejoró en 2025. LM Studio también soporta AMD ROCm en Linux. Ambas requieren drivers compatibles con ROCm (Ubuntu recomendado).' } },
-          { '@type': 'Question', 'name': '¿Puedo usar Jan AI para RAG local?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Jan AI incluye un plugin de base de conocimiento para RAG local. Sube documentos y Jan AI los indexa para contexto. LM Studio no incluye RAG a partir de abril de 2026.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál debería elegir para mi primer LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio. Interfaz más simple, configuración más rápida, descubrimiento de modelos integrado. Jan AI si quieres experimentar con plugins.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar la API de LM Studio con VS Code Copilot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Inicia el servidor local de LM Studio, copia la URL del endpoint (localhost:1234) y pégala en los ajustes de la extensión VS Code Copilot como URL base.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿El sistema de plugins de Jan AI está listo para producción?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Los plugins de Jan AI son adecuados para experimentación. Para inferencia en producción, usa un backend dedicado como vLLM u Ollama CLI.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito tanto LM Studio como Jan AI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Elige uno. Ambos ofrecen chat GUI y una API compatible con OpenAI. LM Studio es suficiente para la mayoría de los usuarios.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánta RAM usan LM Studio y Jan AI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'App base: 500 MB-1 GB cada una. Con modelo 7B cargado: 8-12 GB total (pesos del modelo + overhead de la app). Jan AI es ligeramente más pesada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar LM Studio y Jan AI simultáneamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, en puertos distintos. LM Studio usa el puerto 1234 por defecto; Jan AI usa el 1337. Ambas pueden correr al mismo tiempo, pero duplica el uso de VRAM si los dos modelos están cargados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es Jan AI verdaderamente open-source?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Jan AI tiene licencia MIT y está disponible en GitHub (janhq/jan). LM Studio es propietario (gratis para uso personal pero de código cerrado). Esto hace que Jan AI sea más auditable para despliegues sensibles a la privacidad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál app es más rápida — LM Studio o Jan AI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ninguna es significativamente más rápida que la otra. Ambas usan llama.cpp como backend de inferencia. La velocidad la determinan tu GPU, el tamaño del modelo y el nivel de cuantización, no la capa de la app.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Jan AI soporta GPUs AMD?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, a través del backend HIP de llama.cpp. El soporte AMD ROCm mejoró en 2025. LM Studio también soporta AMD ROCm en Linux. Ambas requieren drivers compatibles con ROCm (Ubuntu recomendado).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar Jan AI para RAG local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Jan AI incluye un plugin de base de conocimiento para RAG local. Sube documentos y Jan AI los indexa para contexto. LM Studio no incluye RAG a partir de abril de 2026.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1833,16 +1937,86 @@ schema: {
         '@type': 'FAQPage',
         'inLanguage': 'ar',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'أيهما ينبغي أن أختار لأول نموذج LLM محلي — LM Studio أم Jan AI؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio. يتمتع بواجهة أبسط وإعداد أسرع واكتشاف نماذج مدمج من Hugging Face. Jan AI أفضل إذا أردت تجربة الإضافات وقابلية التوسعة.' } },
-          { '@type': 'Question', 'name': 'هل يمكنني استخدام واجهة API الخاصة بـ LM Studio مع VS Code Copilot؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. شغِّل الخادم المحلي لـ LM Studio، انسخ عنوان نقطة النهاية (localhost:1234) والصقه في إعدادات امتداد VS Code Copilot بوصفه عنوان URL الأساسي.' } },
-          { '@type': 'Question', 'name': 'هل نظام إضافات Jan AI جاهز للإنتاج؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. إضافات Jan AI مناسبة للتجربة. للاستدلال في الإنتاج، استخدم خلفية مخصصة مثل vLLM أو Ollama CLI. تطبيقات سطح المكتب غير مصممة لأحمال عمل الإنتاج.' } },
-          { '@type': 'Question', 'name': 'هل أحتاج إلى كل من LM Studio وJan AI؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. اختر واحدًا. كلاهما يوفر محادثة رسومية وواجهة API متوافقة مع OpenAI. LM Studio كافٍ لمعظم المستخدمين. شغِّل كليهما فقط إذا احتجت إلى مقارنة ميزات محددة.' } },
-          { '@type': 'Question', 'name': 'كم تستخدم LM Studio وJan AI من RAM؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'التطبيق الأساسي: 500 MB-1 GB لكل منهما. مع نموذج 7B محمَّل: 8-12 GB إجمالًا (أوزان النموذج + عبء التطبيق). Jan AI أثقل قليلًا بسبب بيئة تشغيل الإضافات.' } },
-          { '@type': 'Question', 'name': 'هل يمكنني تشغيل LM Studio وJan AI في آن واحد؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، على منافذ مختلفة. يستخدم LM Studio المنفذ 1234 افتراضيًا؛ ويستخدم Jan AI المنفذ 1337. يمكن تشغيلهما في الوقت نفسه، لكن ذلك يُضاعف استخدام VRAM إذا كان النموذجان محمَّلين.' } },
-          { '@type': 'Question', 'name': 'هل Jan AI مفتوح المصدر حقًا؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. Jan AI مرخص بموجب MIT ومتاح على GitHub (janhq/jan). أما LM Studio فمملوك (مجاني للاستخدام الشخصي لكنه مغلق المصدر). هذا يجعل Jan AI أكثر قابلية للتدقيق في عمليات النشر الحساسة للخصوصية.' } },
-          { '@type': 'Question', 'name': 'أي تطبيق أسرع — LM Studio أم Jan AI؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا أحدهما أسرع بشكل ملحوظ من الآخر. كلاهما يستخدم llama.cpp بوصفه خلفية الاستدلال. تحدد السرعة GPU الخاصة بك وحجم النموذج ومستوى التكميم، لا طبقة التطبيق.' } },
-          { '@type': 'Question', 'name': 'هل يدعم Jan AI بطاقات GPU من AMD؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، عبر خلفية HIP الخاصة بـ llama.cpp. تحسَّن دعم AMD ROCm في 2025. كما يدعم LM Studio أيضًا AMD ROCm على Linux. كلاهما يتطلب برامج تشغيل متوافقة مع ROCm (يُوصى بـ Ubuntu).' } },
-          { '@type': 'Question', 'name': 'هل يمكنني استخدام Jan AI لـ RAG المحلي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يتضمن Jan AI إضافة قاعدة معرفة لـ RAG المحلي. ارفع المستندات ويفهرسها Jan AI للسياق. لا يتضمن LM Studio RAG اعتبارًا من أبريل 2026.' } },
+          {
+            '@type': 'Question',
+            'name': 'أيهما ينبغي أن أختار لأول نموذج LLM محلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio. واجهة أبسط، إعداد أسرع، اكتشاف نماذج مدمج. Jan AI إذا أردت تجربة الإضافات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام واجهة API الخاصة بـ LM Studio مع VS Code Copilot؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. شغِّل الخادم المحلي لـ LM Studio، انسخ عنوان نقطة النهاية (localhost:1234) والصقه في إعدادات امتداد VS Code Copilot بوصفه عنوان URL الأساسي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل نظام إضافات Jan AI جاهز للإنتاج؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. إضافات Jan AI مناسبة للتجربة. للاستدلال في الإنتاج، استخدم خلفية مخصصة مثل vLLM أو Ollama CLI.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج إلى كل من LM Studio وJan AI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. اختر واحدًا. كلاهما يوفر محادثة رسومية وواجهة API متوافقة مع OpenAI. LM Studio كافٍ لمعظم المستخدمين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم تستخدم LM Studio وJan AI من RAM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'التطبيق الأساسي: 500 MB-1 GB لكل منهما. مع نموذج 7B محمَّل: 8-12 GB إجمالًا (أوزان النموذج + عبء التطبيق). Jan AI أثقل قليلًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل LM Studio وJan AI في آن واحد؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، على منافذ مختلفة. يستخدم LM Studio المنفذ 1234 افتراضيًا؛ ويستخدم Jan AI المنفذ 1337. يمكن تشغيلهما في الوقت نفسه، لكن ذلك يُضاعف استخدام VRAM إذا كان النموذجان محمَّلين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Jan AI مفتوح المصدر حقًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. Jan AI مرخص بموجب MIT ومتاح على GitHub (janhq/jan). أما LM Studio فمملوك (مجاني للاستخدام الشخصي لكنه مغلق المصدر). هذا يجعل Jan AI أكثر قابلية للتدقيق في عمليات النشر الحساسة للخصوصية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي تطبيق أسرع — LM Studio أم Jan AI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا أحدهما أسرع بشكل ملحوظ من الآخر. كلاهما يستخدم llama.cpp بوصفه خلفية الاستدلال. تحدد السرعة GPU الخاصة بك وحجم النموذج ومستوى التكميم، لا طبقة التطبيق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يدعم Jan AI بطاقات GPU من AMD؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، عبر خلفية HIP الخاصة بـ llama.cpp. تحسَّن دعم AMD ROCm في 2025. كما يدعم LM Studio أيضًا AMD ROCm على Linux. كلاهما يتطلب برامج تشغيل متوافقة مع ROCm (يُوصى بـ Ubuntu).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام Jan AI لـ RAG المحلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يتضمن Jan AI إضافة قاعدة معرفة لـ RAG المحلي. ارفع المستندات ويفهرسها Jan AI للسياق. لا يتضمن LM Studio RAG اعتبارًا من أبريل 2026.',
+            },
+          },
         ],
       },
       itemListSchema: {

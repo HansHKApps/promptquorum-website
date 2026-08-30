@@ -2351,46 +2351,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
-            {
-              q: 'Que signifie RISEN?',
-              a: 'RISEN signifie Refine, Inspect, Summarize, Evaluate, Next Steps. C\'est framework itératif 5-étapes conçu améliorer brouillons existants via cycles révision structurés.',
-            },
-            {
-              q: 'Comment RISEN diffère de CO-STAR ou CRAFT?',
-              a: 'CO-STAR et CRAFT sont frameworks génération — aident créer brouillons initiaux. RISEN est framework amélioration — aide affiner matériel existant via itérations traçables. Utilisez génération frameworks créer, basculez RISEN affiner.',
-            },
-            {
-              q: 'Quand utiliser RISEN vs autres frameworks?',
-              a: 'Utilisez RISEN avec brouillon existant voulant amélioration contrôlée. Utilisez CO-STAR génération-draft générale, CRAFT contenu créatif, RTF spécifications rôles-tâches, TRACE comprendre raisonnement modèle.',
-            },
-            {
-              q: 'Combien de cycles RISEN faut-il?',
-              a: 'Typiquement 2–4 cycles. Arrêtez quand ratings s\'aplatissent (cycles consécutifs même score) et suggestions Next Steps mineures plutôt substancielles.',
-            },
-            {
-              q: 'Puis-je utiliser RISEN avec modèles locaux?',
-              a: 'Oui. RISEN fonctionne avec n\'importe LLM suivant instructions — incluant modèles locaux via Ollama ou LM Studio. Modèles plus grands (13B+) gèrent mieux structure multi-étapes.',
-            },
-            {
-              q: 'Qu\'est-ce qui rend l\'étape Inspect spéciale?',
-              a: 'Inspect force modèle lister chaque changement spécifique fait pendant Refine, créant audit trail. Vous voyez exactement quoi changé entre versions et pourquoi chaque changement fait.',
-            },
-            {
-              q: 'Puis-je combiner RISEN avec tests multi-modèles?',
-              a: 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro simultanément. Comparez améliorations, critiques, suggestions.',
-            },
-            {
-              q: 'RISEN augmente-t-il coût tokens?',
-              a: 'Oui. Chaque cycle RISEN génère 2–5× plus output tokens qu\'un prompt single-pass car modèle écrit sections multiples (contenu amélioré, journal changements, évaluation, recommandations). Utilisez RISEN sélectivement. Pour édits rapides, préférez prompts single-step.',
-            },
-            {
-              q: 'Si je traite données personnelles sensibles, quelles sont implications RGPD?',
-              a: 'Quand affinement documents confidentiels, soyez prudents APIs cloud (OpenAI, Google, Anthropic traitent données hors EU). Pour workflows RGPD-sensibles, utilisez modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum ou explorez offres Anthropic respectant standards EU.',
-            },
-            {
-              q: 'RISEN aide-t-il avec révisions multi-équipes?',
-              a: 'Oui. RISEN excelle workflows multi-personnes. Refine par auteur initial, Inspect par reviewer senior, Summarize par lead, Evaluate par décideur final. Cette séparation augmente objectivité et capture perspectives différentes.',
-            },
+            { q: 'Que signifie RISEN?', a: 'RISEN signifie Refine, Inspect, Summarize, Evaluate, Next Steps. C\'est framework itératif 5-étapes conçu améliorer brouillons existants via cycles révision structurés.' },
+            { q: 'Comment RISEN diffère de CO-STAR ou CRAFT?', a: 'CO-STAR et CRAFT sont frameworks génération — aident créer brouillons initiaux. RISEN est framework amélioration — aide affiner matériel existant via itérations traçables. Utilisez génération frameworks créer, basculez RISEN affiner.' },
+            { q: 'Quand utiliser RISEN vs autres frameworks?', a: 'Utilisez RISEN avec brouillon existant voulant amélioration contrôlée. Utilisez CO-STAR génération-draft générale, CRAFT contenu créatif, RTF spécifications rôles-tâches, TRACE comprendre raisonnement modèle.' },
+            { q: 'Combien de cycles RISEN faut-il?', a: 'Typiquement 2–4 cycles. Arrêtez quand ratings s\'aplatissent (cycles consécutifs même score) et suggestions Next Steps mineures plutôt substancielles.' },
+            { q: 'Puis-je utiliser RISEN avec modèles locaux?', a: 'Oui. RISEN fonctionne avec n\'importe LLM suivant instructions — incluant modèles locaux via Ollama ou LM Studio. Modèles plus grands (13B+) gèrent mieux structure multi-étapes.' },
+            { q: 'Qu\'est-ce qui rend l\'étape Inspect spéciale?', a: 'Inspect force modèle lister chaque changement spécifique fait pendant Refine, créant audit trail. Vous voyez exactement quoi changé entre versions et pourquoi chaque changement fait.' },
+            { q: 'Puis-je combiner RISEN avec tests multi-modèles?', a: 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro simultanément. Comparez améliorations, critiques, suggestions.' },
+            { q: 'RISEN augmente-t-il coût tokens?', a: 'Oui. Chaque cycle RISEN génère 2–5× plus output tokens qu\'un prompt single-pass car modèle écrit sections multiples (contenu amélioré, journal changements, évaluation, recommandations). Utilisez RISEN sélectivement. Pour édits rapides, préférez prompts single-step.' },
+            { q: 'Si je traite données personnelles sensibles, quelles sont implications RGPD?', a: 'Quand affinement documents confidentiels, soyez prudents APIs cloud (OpenAI, Google, Anthropic traitent données hors EU). Pour workflows RGPD-sensibles, utilisez modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum ou explorez offres Anthropic respectant standards EU.' },
+            { q: 'RISEN aide-t-il avec révisions multi-équipes?', a: 'Oui. RISEN excelle workflows multi-personnes. Refine par auteur initial, Inspect par reviewer senior, Summarize par lead, Evaluate par décideur final. Cette séparation augmente objectivité et capture perspectives différentes.' },
           ],
         },
 
@@ -2451,16 +2421,86 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Que signifie RISEN?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RISEN signifie Refine, Inspect, Summarize, Evaluate, Next Steps. C\'est framework itératif 5-étapes conçu améliorer brouillons existants via cycles révision structurés.' } },
-          { '@type': 'Question', 'name': 'Comment RISEN diffère de CO-STAR ou CRAFT?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR et CRAFT sont frameworks génération — aident créer brouillons initiaux. RISEN est framework amélioration — aide affiner matériel existant via itérations traçables.' } },
-          { '@type': 'Question', 'name': 'Quand utiliser RISEN vs autres frameworks?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilisez RISEN avec brouillon existant voulant amélioration contrôlée. Utilisez CO-STAR génération-draft générale, CRAFT contenu créatif, TRACE compréhension raisonnement.' } },
-          { '@type': 'Question', 'name': 'Combien de cycles RISEN faut-il?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Typiquement 2–4 cycles. Arrêtez quand ratings s\'aplatissent et Next Steps suggestions mineures plutôt substancielles.' } },
-          { '@type': 'Question', 'name': 'Puis-je utiliser RISEN avec modèles locaux?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. RISEN fonctionne avec n\'importe LLM suivant instructions — incluant modèles locaux via Ollama ou LM Studio. Modèles plus grands (13B+) gèrent mieux.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce qui rend l\'étape Inspect spéciale?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Inspect force modèle lister chaque changement spécifique, créant audit trail. Vous voyez exactement quoi changé entre versions et pourquoi.' } },
-          { '@type': 'Question', 'name': 'Puis-je combiner RISEN avec tests multi-modèles?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro simultanément. Comparez améliorations et suggestions.' } },
-          { '@type': 'Question', 'name': 'RISEN augmente-t-il coût tokens?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Chaque cycle RISEN génère 2–5× plus output tokens qu\'un prompt single-pass. Utilisez RISEN sélectivement. Pour édits rapides, préférez prompts single-step.' } },
-          { '@type': 'Question', 'name': 'Si je traite données sensibles, implications RGPD?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour workflows RGPD-sensibles, utilisez modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum ou explorez offres Anthropic respectant standards EU.' } },
-          { '@type': 'Question', 'name': 'RISEN aide-t-il révisions multi-équipes?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. RISEN excelle workflows multi-personnes où différentes personnes gèrent Refine, Inspect, Evaluate, augmentant objectivité et perspective diverse.' } },
+          {
+            '@type': 'Question',
+            'name': 'Que signifie RISEN?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RISEN signifie Refine, Inspect, Summarize, Evaluate, Next Steps. C\'est framework itératif 5-étapes conçu améliorer brouillons existants via cycles révision structurés.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment RISEN diffère de CO-STAR ou CRAFT?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR et CRAFT sont frameworks génération — aident créer brouillons initiaux. RISEN est framework amélioration — aide affiner matériel existant via itérations traçables. Utilisez génération frameworks créer, basculez RISEN affiner.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand utiliser RISEN vs autres frameworks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez RISEN avec brouillon existant voulant amélioration contrôlée. Utilisez CO-STAR génération-draft générale, CRAFT contenu créatif, RTF spécifications rôles-tâches, TRACE comprendre raisonnement modèle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien de cycles RISEN faut-il?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Typiquement 2–4 cycles. Arrêtez quand ratings s\'aplatissent (cycles consécutifs même score) et suggestions Next Steps mineures plutôt substancielles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser RISEN avec modèles locaux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. RISEN fonctionne avec n\'importe LLM suivant instructions — incluant modèles locaux via Ollama ou LM Studio. Modèles plus grands (13B+) gèrent mieux structure multi-étapes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce qui rend l\'étape Inspect spéciale?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Inspect force modèle lister chaque changement spécifique fait pendant Refine, créant audit trail. Vous voyez exactement quoi changé entre versions et pourquoi chaque changement fait.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je combiner RISEN avec tests multi-modèles?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Utilisez PromptQuorum envoyant même cycle RISEN à GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro simultanément. Comparez améliorations, critiques, suggestions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RISEN augmente-t-il coût tokens?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Chaque cycle RISEN génère 2–5× plus output tokens qu\'un prompt single-pass car modèle écrit sections multiples (contenu amélioré, journal changements, évaluation, recommandations). Utilisez RISEN sélectivement. Pour édits rapides, préférez prompts single-step.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Si je traite données personnelles sensibles, quelles sont implications RGPD?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Quand affinement documents confidentiels, soyez prudents APIs cloud (OpenAI, Google, Anthropic traitent données hors EU). Pour workflows RGPD-sensibles, utilisez modèles auto-hébergés (Ollama, LM Studio) via PromptQuorum ou explorez offres Anthropic respectant standards EU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RISEN aide-t-il avec révisions multi-équipes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. RISEN excelle workflows multi-personnes. Refine par auteur initial, Inspect par reviewer senior, Summarize par lead, Evaluate par décideur final. Cette séparation augmente objectivité et capture perspectives différentes.',
+            },
+          },
         ],
       },
 

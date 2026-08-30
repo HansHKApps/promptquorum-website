@@ -386,39 +386,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'What is an LLM API gateway?',
-            a: 'It is a routing layer that gives your application one consistent API for calling multiple LLM providers, typically adding fallback, cost tracking, and rate limiting on top of the raw provider APIs. You call the gateway; it handles provider-specific formatting and authentication. The benefit only materialises once you have more than one provider in production.',
-          },
-          {
-            q: 'Is LiteLLM really free?',
-            a: 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page as of August 2026. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.',
-          },
-          {
-            q: 'Does OpenRouter charge per request?',
-            a: 'Not directly. OpenRouter’s fee is on funding your account: roughly 5.5% on Stripe credit purchases with a $0.80 minimum, or 5% via crypto. A separate 5% BYOK fee applies only once monthly BYOK-routed spend exceeds $25,000 on pay-as-you-go or $200,000 on the enterprise tier.',
-          },
-          {
-            q: 'Is Portkey still an independent company?',
-            a: 'No. Palo Alto Networks completed its acquisition of Portkey on 29 May 2026 and is integrating it as the core AI gateway inside its Prisma AIRS security platform, per Palo Alto Networks’ own press release. Treat any pre-May-2026 pricing or roadmap information as potentially stale.',
-          },
-          {
-            q: 'Which gateway supports the most providers?',
-            a: 'OpenRouter lists 380+ models on its own site as of August 2026. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.',
-          },
-          {
-            q: 'Can I self-host Portkey?',
-            a: 'Portkey/Prisma AIRS offered private cloud deployment at the Enterprise tier per pre-acquisition pricing pages. Confirm current self-hosting terms directly with Palo Alto Networks, since acquisition integrations frequently change deployment options in the first year.',
-          },
-          {
-            q: 'Do any of these three have an affiliate program?',
-            a: 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter as of August 2026. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.',
-          },
-          {
-            q: 'How do I decide between self-hosting and a hosted gateway?',
-            a: 'Compare 5.5% of your monthly model spend against what it costs you to run a small always-on service. Below that crossover, OpenRouter is cheaper once your time is counted; above it, self-hosted LiteLLM wins on absolute dollars. Add a second test for compliance: if you must be able to state which provider handled a request, self-host regardless of the arithmetic.',
-          },
-        ],
+            { q: 'What is an LLM API gateway?', a: 'It is a routing layer that gives your application one consistent API for calling multiple LLM providers, typically adding fallback, cost tracking, and rate limiting on top of the raw provider APIs. You call the gateway; it handles provider-specific formatting and authentication. The benefit only materialises once you have more than one provider in production.' },
+            { q: 'Is LiteLLM really free?', a: 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page as of August 2026. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.' },
+            { q: 'Does OpenRouter charge per request?', a: 'Not directly. OpenRouter’s fee is on funding your account: roughly 5.5% on Stripe credit purchases with a $0.80 minimum, or 5% via crypto. A separate 5% BYOK fee applies only once monthly BYOK-routed spend exceeds $25,000 on pay-as-you-go or $200,000 on the enterprise tier.' },
+            { q: 'Is Portkey still an independent company?', a: 'No. Palo Alto Networks completed its acquisition of Portkey on 29 May 2026 and is integrating it as the core AI gateway inside its Prisma AIRS security platform, per Palo Alto Networks’ own press release. Treat any pre-May-2026 pricing or roadmap information as potentially stale.' },
+            { q: 'Which gateway supports the most providers?', a: 'OpenRouter lists 380+ models on its own site as of August 2026. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.' },
+            { q: 'Can I self-host Portkey?', a: 'Portkey/Prisma AIRS offered private cloud deployment at the Enterprise tier per pre-acquisition pricing pages. Confirm current self-hosting terms directly with Palo Alto Networks, since acquisition integrations frequently change deployment options in the first year.' },
+            { q: 'Do any of these three have an affiliate program?', a: 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter as of August 2026. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.' },
+            { q: 'How do I decide between self-hosting and a hosted gateway?', a: 'Compare 5.5% of your monthly model spend against what it costs you to run a small always-on service. Below that crossover, OpenRouter is cheaper once your time is counted; above it, self-hosted LiteLLM wins on absolute dollars. Add a second test for compliance: if you must be able to state which provider handled a request, self-host regardless of the arithmetic.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -483,47 +459,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is an LLM API gateway?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A routing layer that gives your application one consistent API for calling multiple LLM providers, adding fallback, cost tracking, and rate limiting on top of the raw provider APIs.',
+          {
+            '@type': 'Question',
+            'name': 'What is an LLM API gateway?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It is a routing layer that gives your application one consistent API for calling multiple LLM providers, typically adding fallback, cost tracking, and rate limiting on top of the raw provider APIs. You call the gateway; it handles provider-specific formatting and authentication. The benefit only materialises once you have more than one provider in production.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is LiteLLM really free?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The open-source core is free and self-hosted with no licence fee and no per-request markup at any volume, per LiteLLM’s own pricing page as of August 2026. The Enterprise tier uses custom annual pricing.',
+          {
+            '@type': 'Question',
+            'name': 'Is LiteLLM really free?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page as of August 2026. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does OpenRouter charge per request?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. OpenRouter charges roughly 5.5% on Stripe credit purchases ($0.80 minimum) or 5% via crypto, plus a 5% BYOK fee only above $25,000/month of BYOK-routed spend on pay-as-you-go, or $200,000/month on enterprise.',
+          {
+            '@type': 'Question',
+            'name': 'Does OpenRouter charge per request?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not directly. OpenRouter’s fee is on funding your account: roughly 5.5% on Stripe credit purchases with a $0.80 minimum, or 5% via crypto. A separate 5% BYOK fee applies only once monthly BYOK-routed spend exceeds $25,000 on pay-as-you-go or $200,000 on the enterprise tier.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Portkey still an independent company?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Palo Alto Networks completed its acquisition of Portkey on 29 May 2026 and is integrating it as the AI gateway inside the Prisma AIRS security platform.',
+          {
+            '@type': 'Question',
+            'name': 'Is Portkey still an independent company?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Palo Alto Networks completed its acquisition of Portkey on 29 May 2026 and is integrating it as the core AI gateway inside its Prisma AIRS security platform, per Palo Alto Networks’ own press release. Treat any pre-May-2026 pricing or roadmap information as potentially stale.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I decide between self-hosting and a hosted LLM gateway?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Compare 5.5% of your monthly model spend against the cost of running a small always-on service. Above that crossover, self-hosted LiteLLM is cheaper; below it, OpenRouter wins once your time is counted.',
+          {
+            '@type': 'Question',
+            'name': 'Which gateway supports the most providers?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OpenRouter lists 380+ models on its own site as of August 2026. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Can I self-host Portkey?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Portkey/Prisma AIRS offered private cloud deployment at the Enterprise tier per pre-acquisition pricing pages. Confirm current self-hosting terms directly with Palo Alto Networks, since acquisition integrations frequently change deployment options in the first year.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do any of these three have an affiliate program?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter as of August 2026. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I decide between self-hosting and a hosted gateway?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Compare 5.5% of your monthly model spend against what it costs you to run a small always-on service. Below that crossover, OpenRouter is cheaper once your time is counted; above it, self-hosted LiteLLM wins on absolute dollars. Add a second test for compliance: if you must be able to state which provider handled a request, self-host regardless of the arithmetic.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -923,47 +923,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufige Fragen',
         faqs: [
-          {
-            q: 'Was ist ein LLM-API-Gateway?',
-            a: 'Es ist eine Routing-Schicht, die Ihrer Anwendung eine einheitliche API für den Aufruf mehrerer LLM-Anbieter gibt und dabei üblicherweise Failover, Kostenerfassung und Rate-Limiting ergänzt. Sie rufen das Gateway auf; es kümmert sich um anbieterspezifische Formate und Authentifizierung. Der Nutzen entsteht erst, wenn mehr als ein Anbieter produktiv läuft.',
-          },
-          {
-            q: 'Ist LiteLLM wirklich kostenlos?',
-            a: 'Der Open-Source-Kern ist kostenlos und selbst gehostet, ohne Lizenzgebühr — so die eigene Preisseite von LiteLLM im August 2026. Es gibt bei keinem Volumen einen Aufschlag pro Anfrage. Der Enterprise-Tarif mit SSO, SCIM, dediziertem Support und Air-Gap-Betrieb wird jährlich nach Anfragevolumen bepreist und enthält eine 30-tägige Testphase.',
-          },
-          {
-            q: 'Berechnet OpenRouter eine Gebühr pro Anfrage?',
-            a: 'Nicht direkt. OpenRouters Gebühr fällt beim Aufladen des Kontos an: rund 5,5 % auf Stripe-Guthabenkäufe mit einem Mindestbetrag von 0,80 $ oder 5 % per Krypto. Eine separate BYOK-Gebühr von 5 % greift erst, wenn die monatlich über BYOK geleiteten Ausgaben 25.000 $ (Pay-as-you-go) bzw. 200.000 $ (Enterprise) übersteigen.',
-          },
-          {
-            q: 'Ist Portkey noch ein unabhängiges Unternehmen?',
-            a: 'Nein. Palo Alto Networks hat die Übernahme von Portkey am 29. Mai 2026 abgeschlossen und integriert es laut eigener Pressemitteilung als zentrales AI-Gateway in die Sicherheitsplattform Prisma AIRS. Behandeln Sie Preis- und Roadmap-Angaben von vor Mai 2026 als potenziell überholt.',
-          },
-          {
-            q: 'Welches Gateway unterstützt die meisten Anbieter?',
-            a: 'OpenRouter listet im August 2026 über 380 Modelle auf der eigenen Website. LiteLLMs Dokumentation nennt über 100 Anbieter-Integrationen — eine andere Einheit, da ein Anbieter viele Modelle bereitstellt. Portkeys Gateway-Repository warb zuvor mit über 1.600 LLMs; diese Zahl sollte angesichts der Übernahme neu geprüft werden.',
-          },
-          {
-            q: 'Kann ich Portkey selbst hosten?',
-            a: 'Portkey/Prisma AIRS bot laut den Preisseiten vor der Übernahme ein Private-Cloud-Deployment im Enterprise-Tarif an. Lassen Sie sich die aktuellen Bedingungen zum Selbst-Hosting direkt von Palo Alto Networks bestätigen, da Integrationen nach Übernahmen die Deployment-Optionen im ersten Jahr häufig verändern.',
-          },
-          {
-            q: 'Hat einer der drei Anbieter ein Partnerprogramm?',
-            a: 'Für LiteLLM, Portkey und OpenRouter war im August 2026 kein öffentlich prüfbares Partner- oder Empfehlungsprogramm auffindbar. Jeder Produktlink auf dieser Seite ist ein einfacher, offengelegter Link, der PromptQuorum nichts einbringt. Sollte sich das ändern, wird diese Seite mit einer Offenlegung angepasst, die den tatsächlichen Programmbedingungen entspricht.',
-          },
-          {
-            q: 'Wie entscheide ich zwischen Selbst-Hosting und einem gehosteten Gateway?',
-            a: 'Vergleichen Sie 5,5 % Ihrer monatlichen Modellkosten mit dem, was Sie der Betrieb eines kleinen Dauerdienstes kostet. Unterhalb dieses Kipppunkts ist OpenRouter günstiger, sobald Ihre Zeit mitgerechnet wird; darüber gewinnt selbst gehostetes LiteLLM in absoluten Zahlen. Ergänzen Sie einen zweiten Test für Compliance: Wenn Sie belegen müssen, welcher Anbieter eine Anfrage bearbeitet hat, hosten Sie unabhängig von der Rechnung selbst.',
-          },
-          {
-            q: 'Muss ich bei der Verwendung eines LLM-Gateways die DSGVO beachten?',
-            a: 'Ja. Sobald Prompt-Inhalte personenbezogene Daten enthalten, brauchen Sie für jeden Modellanbieter im Routing-Pfad einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und jede Weiterleitung an einen Anbieter außerhalb des EWR ist eine Drittlandübermittlung nach Art. 44–49. Ein selbst gehostetes LiteLLM erleichtert beides erheblich: Sie legen die Anbieterliste selbst fest, können Failover ausschließlich auf EU-Endpunkte begrenzen und erzeugen die Protokolle, die eine Aufsichtsbehörde sehen will. Die BSI-Grundschutz-Kataloge erwarten dabei eine technisch erzwungene, dokumentierte Routing-Regel — nicht die Zusage eines Anbieters, „meist" in der EU zu bleiben.',
-          },
-          {
-            q: 'Ist ein LLM-Gateway für den deutschen Mittelstand geeignet?',
-            a: 'Für mittelständische Unternehmen ist der kostenlose LiteLLM-Kern meist die pragmatischste Wahl: keine laufenden Lizenzkosten, Betrieb auf vorhandener Infrastruktur und volle Kontrolle darüber, welche Daten das Haus verlassen — was Prüfungen nach BSI-Grundschutz und Kundenaudits deutlich vereinfacht. Voraussetzung ist eine IT, die einen zusätzlichen Dienst betreiben und aktuell halten kann; fehlt diese Kapazität, ist OpenRouter mit rund 5,5 % Guthabengebühr bei kleinem Volumen der ehrlichere Weg. Rechnen Sie in beiden Fällen mit Abrechnung in US-Dollar und klären Sie das Reverse-Charge-Verfahren mit Ihrer Buchhaltung.',
-          },
-        ],
+            { q: 'Was ist ein LLM-API-Gateway?', a: 'Es ist eine Routing-Schicht, die Ihrer Anwendung eine einheitliche API für den Aufruf mehrerer LLM-Anbieter gibt und dabei üblicherweise Failover, Kostenerfassung und Rate-Limiting ergänzt. Sie rufen das Gateway auf; es kümmert sich um anbieterspezifische Formate und Authentifizierung. Der Nutzen entsteht erst, wenn mehr als ein Anbieter produktiv läuft.' },
+            { q: 'Ist LiteLLM wirklich kostenlos?', a: 'Der Open-Source-Kern ist kostenlos und selbst gehostet, ohne Lizenzgebühr — so die eigene Preisseite von LiteLLM im August 2026. Es gibt bei keinem Volumen einen Aufschlag pro Anfrage. Der Enterprise-Tarif mit SSO, SCIM, dediziertem Support und Air-Gap-Betrieb wird jährlich nach Anfragevolumen bepreist und enthält eine 30-tägige Testphase.' },
+            { q: 'Berechnet OpenRouter eine Gebühr pro Anfrage?', a: 'Nicht direkt. OpenRouters Gebühr fällt beim Aufladen des Kontos an: rund 5,5 % auf Stripe-Guthabenkäufe mit einem Mindestbetrag von 0,80 $ oder 5 % per Krypto. Eine separate BYOK-Gebühr von 5 % greift erst, wenn die monatlich über BYOK geleiteten Ausgaben 25.000 $ (Pay-as-you-go) bzw. 200.000 $ (Enterprise) übersteigen.' },
+            { q: 'Ist Portkey noch ein unabhängiges Unternehmen?', a: 'Nein. Palo Alto Networks hat die Übernahme von Portkey am 29. Mai 2026 abgeschlossen und integriert es laut eigener Pressemitteilung als zentrales AI-Gateway in die Sicherheitsplattform Prisma AIRS. Behandeln Sie Preis- und Roadmap-Angaben von vor Mai 2026 als potenziell überholt.' },
+            { q: 'Welches Gateway unterstützt die meisten Anbieter?', a: 'OpenRouter listet im August 2026 über 380 Modelle auf der eigenen Website. LiteLLMs Dokumentation nennt über 100 Anbieter-Integrationen — eine andere Einheit, da ein Anbieter viele Modelle bereitstellt. Portkeys Gateway-Repository warb zuvor mit über 1.600 LLMs; diese Zahl sollte angesichts der Übernahme neu geprüft werden.' },
+            { q: 'Kann ich Portkey selbst hosten?', a: 'Portkey/Prisma AIRS bot laut den Preisseiten vor der Übernahme ein Private-Cloud-Deployment im Enterprise-Tarif an. Lassen Sie sich die aktuellen Bedingungen zum Selbst-Hosting direkt von Palo Alto Networks bestätigen, da Integrationen nach Übernahmen die Deployment-Optionen im ersten Jahr häufig verändern.' },
+            { q: 'Hat einer der drei Anbieter ein Partnerprogramm?', a: 'Für LiteLLM, Portkey und OpenRouter war im August 2026 kein öffentlich prüfbares Partner- oder Empfehlungsprogramm auffindbar. Jeder Produktlink auf dieser Seite ist ein einfacher, offengelegter Link, der PromptQuorum nichts einbringt. Sollte sich das ändern, wird diese Seite mit einer Offenlegung angepasst, die den tatsächlichen Programmbedingungen entspricht.' },
+            { q: 'Wie entscheide ich zwischen Selbst-Hosting und einem gehosteten Gateway?', a: 'Vergleichen Sie 5,5 % Ihrer monatlichen Modellkosten mit dem, was Sie der Betrieb eines kleinen Dauerdienstes kostet. Unterhalb dieses Kipppunkts ist OpenRouter günstiger, sobald Ihre Zeit mitgerechnet wird; darüber gewinnt selbst gehostetes LiteLLM in absoluten Zahlen. Ergänzen Sie einen zweiten Test für Compliance: Wenn Sie belegen müssen, welcher Anbieter eine Anfrage bearbeitet hat, hosten Sie unabhängig von der Rechnung selbst.' },
+            { q: 'Muss ich bei der Verwendung eines LLM-Gateways die DSGVO beachten?', a: 'Ja. Sobald Prompt-Inhalte personenbezogene Daten enthalten, brauchen Sie für jeden Modellanbieter im Routing-Pfad einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und jede Weiterleitung an einen Anbieter außerhalb des EWR ist eine Drittlandübermittlung nach Art. 44–49. Ein selbst gehostetes LiteLLM erleichtert beides erheblich: Sie legen die Anbieterliste selbst fest, können Failover ausschließlich auf EU-Endpunkte begrenzen und erzeugen die Protokolle, die eine Aufsichtsbehörde sehen will. Die BSI-Grundschutz-Kataloge erwarten dabei eine technisch erzwungene, dokumentierte Routing-Regel — nicht die Zusage eines Anbieters, „meist" in der EU zu bleiben.' },
+            { q: 'Ist ein LLM-Gateway für den deutschen Mittelstand geeignet?', a: 'Für mittelständische Unternehmen ist der kostenlose LiteLLM-Kern meist die pragmatischste Wahl: keine laufenden Lizenzkosten, Betrieb auf vorhandener Infrastruktur und volle Kontrolle darüber, welche Daten das Haus verlassen — was Prüfungen nach BSI-Grundschutz und Kundenaudits deutlich vereinfacht. Voraussetzung ist eine IT, die einen zusätzlichen Dienst betreiben und aktuell halten kann; fehlt diese Kapazität, ist OpenRouter mit rund 5,5 % Guthabengebühr bei kleinem Volumen der ehrlichere Weg. Rechnen Sie in beiden Fällen mit Abrechnung in US-Dollar und klären Sie das Reverse-Charge-Verfahren mit Ihrer Buchhaltung.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1028,63 +998,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist ein LLM-API-Gateway?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Eine Routing-Schicht, die Ihrer Anwendung eine einheitliche API für den Aufruf mehrerer LLM-Anbieter gibt und dabei Failover, Kostenerfassung und Rate-Limiting ergänzt.',
+          {
+            '@type': 'Question',
+            'name': 'Was ist ein LLM-API-Gateway?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es ist eine Routing-Schicht, die Ihrer Anwendung eine einheitliche API für den Aufruf mehrerer LLM-Anbieter gibt und dabei üblicherweise Failover, Kostenerfassung und Rate-Limiting ergänzt. Sie rufen das Gateway auf; es kümmert sich um anbieterspezifische Formate und Authentifizierung. Der Nutzen entsteht erst, wenn mehr als ein Anbieter produktiv läuft.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist LiteLLM wirklich kostenlos?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Der Open-Source-Kern ist kostenlos und selbst gehostet, ohne Lizenzgebühr und ohne Aufschlag pro Anfrage — so die eigene Preisseite im August 2026. Der Enterprise-Tarif wird jährlich auf Anfrage bepreist.',
+          {
+            '@type': 'Question',
+            'name': 'Ist LiteLLM wirklich kostenlos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der Open-Source-Kern ist kostenlos und selbst gehostet, ohne Lizenzgebühr — so die eigene Preisseite von LiteLLM im August 2026. Es gibt bei keinem Volumen einen Aufschlag pro Anfrage. Der Enterprise-Tarif mit SSO, SCIM, dediziertem Support und Air-Gap-Betrieb wird jährlich nach Anfragevolumen bepreist und enthält eine 30-tägige Testphase.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Berechnet OpenRouter eine Gebühr pro Anfrage?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein. OpenRouter berechnet rund 5,5 % auf Stripe-Guthabenkäufe (mindestens 0,80 $) oder 5 % per Krypto, plus 5 % BYOK-Gebühr erst oberhalb von 25.000 $/Monat (Pay-as-you-go) bzw. 200.000 $/Monat (Enterprise).',
+          {
+            '@type': 'Question',
+            'name': 'Berechnet OpenRouter eine Gebühr pro Anfrage?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht direkt. OpenRouters Gebühr fällt beim Aufladen des Kontos an: rund 5,5 % auf Stripe-Guthabenkäufe mit einem Mindestbetrag von 0,80 $ oder 5 % per Krypto. Eine separate BYOK-Gebühr von 5 % greift erst, wenn die monatlich über BYOK geleiteten Ausgaben 25.000 $ (Pay-as-you-go) bzw. 200.000 $ (Enterprise) übersteigen.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist Portkey noch ein unabhängiges Unternehmen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein. Palo Alto Networks hat die Übernahme am 29. Mai 2026 abgeschlossen und integriert Portkey als AI-Gateway in die Sicherheitsplattform Prisma AIRS.',
+          {
+            '@type': 'Question',
+            'name': 'Ist Portkey noch ein unabhängiges Unternehmen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Palo Alto Networks hat die Übernahme von Portkey am 29. Mai 2026 abgeschlossen und integriert es laut eigener Pressemitteilung als zentrales AI-Gateway in die Sicherheitsplattform Prisma AIRS. Behandeln Sie Preis- und Roadmap-Angaben von vor Mai 2026 als potenziell überholt.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie entscheide ich zwischen Selbst-Hosting und einem gehosteten LLM-Gateway?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vergleichen Sie 5,5 % Ihrer monatlichen Modellkosten mit den Betriebskosten eines kleinen Dauerdienstes. Oberhalb dieses Kipppunkts ist selbst gehostetes LiteLLM günstiger, darunter gewinnt OpenRouter, sobald Ihre Zeit mitgerechnet wird.',
+          {
+            '@type': 'Question',
+            'name': 'Welches Gateway unterstützt die meisten Anbieter?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OpenRouter listet im August 2026 über 380 Modelle auf der eigenen Website. LiteLLMs Dokumentation nennt über 100 Anbieter-Integrationen — eine andere Einheit, da ein Anbieter viele Modelle bereitstellt. Portkeys Gateway-Repository warb zuvor mit über 1.600 LLMs; diese Zahl sollte angesichts der Übernahme neu geprüft werden.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Muss ich bei der Verwendung eines LLM-Gateways die DSGVO beachten?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja. Für jeden Modellanbieter im Routing-Pfad brauchen Sie einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO; Weiterleitungen außerhalb des EWR sind Drittlandübermittlungen nach Art. 44–49. Ein selbst gehostetes LiteLLM erlaubt es, Failover auf EU-Endpunkte zu begrenzen und die nötigen Protokolle zu erzeugen.',
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Portkey selbst hosten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Portkey/Prisma AIRS bot laut den Preisseiten vor der Übernahme ein Private-Cloud-Deployment im Enterprise-Tarif an. Lassen Sie sich die aktuellen Bedingungen zum Selbst-Hosting direkt von Palo Alto Networks bestätigen, da Integrationen nach Übernahmen die Deployment-Optionen im ersten Jahr häufig verändern.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist ein LLM-Gateway für den deutschen Mittelstand geeignet?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja — der kostenlose LiteLLM-Kern läuft ohne Lizenzkosten auf vorhandener Infrastruktur und vereinfacht Prüfungen nach BSI-Grundschutz. Fehlt die IT-Kapazität für einen zusätzlichen Dienst, ist OpenRouter bei kleinem Volumen der pragmatischere Weg. Beide Anbieter rechnen in US-Dollar ab.',
+          {
+            '@type': 'Question',
+            'name': 'Hat einer der drei Anbieter ein Partnerprogramm?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für LiteLLM, Portkey und OpenRouter war im August 2026 kein öffentlich prüfbares Partner- oder Empfehlungsprogramm auffindbar. Jeder Produktlink auf dieser Seite ist ein einfacher, offengelegter Link, der PromptQuorum nichts einbringt. Sollte sich das ändern, wird diese Seite mit einer Offenlegung angepasst, die den tatsächlichen Programmbedingungen entspricht.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Wie entscheide ich zwischen Selbst-Hosting und einem gehosteten Gateway?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vergleichen Sie 5,5 % Ihrer monatlichen Modellkosten mit dem, was Sie der Betrieb eines kleinen Dauerdienstes kostet. Unterhalb dieses Kipppunkts ist OpenRouter günstiger, sobald Ihre Zeit mitgerechnet wird; darüber gewinnt selbst gehostetes LiteLLM in absoluten Zahlen. Ergänzen Sie einen zweiten Test für Compliance: Wenn Sie belegen müssen, welcher Anbieter eine Anfrage bearbeitet hat, hosten Sie unabhängig von der Rechnung selbst.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung eines LLM-Gateways die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Sobald Prompt-Inhalte personenbezogene Daten enthalten, brauchen Sie für jeden Modellanbieter im Routing-Pfad einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und jede Weiterleitung an einen Anbieter außerhalb des EWR ist eine Drittlandübermittlung nach Art. 44–49. Ein selbst gehostetes LiteLLM erleichtert beides erheblich: Sie legen die Anbieterliste selbst fest, können Failover ausschließlich auf EU-Endpunkte begrenzen und erzeugen die Protokolle, die eine Aufsichtsbehörde sehen will. Die BSI-Grundschutz-Kataloge erwarten dabei eine technisch erzwungene, dokumentierte Routing-Regel — nicht die Zusage eines Anbieters, „meist" in der EU zu bleiben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist ein LLM-Gateway für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für mittelständische Unternehmen ist der kostenlose LiteLLM-Kern meist die pragmatischste Wahl: keine laufenden Lizenzkosten, Betrieb auf vorhandener Infrastruktur und volle Kontrolle darüber, welche Daten das Haus verlassen — was Prüfungen nach BSI-Grundschutz und Kundenaudits deutlich vereinfacht. Voraussetzung ist eine IT, die einen zusätzlichen Dienst betreiben und aktuell halten kann; fehlt diese Kapazität, ist OpenRouter mit rund 5,5 % Guthabengebühr bei kleinem Volumen der ehrlichere Weg. Rechnen Sie in beiden Fällen mit Abrechnung in US-Dollar und klären Sie das Reverse-Charge-Verfahren mit Ihrer Buchhaltung.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1484,39 +1478,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Qué es un gateway de API LLM?',
-            a: 'Es una capa de enrutamiento que da a tu aplicación una única API coherente para llamar a varios proveedores de LLM, y que normalmente añade failover, seguimiento de costes y rate limiting sobre las APIs originales. Tú llamas al gateway; él gestiona el formato específico de cada proveedor y la autenticación. El beneficio solo se materializa cuando tienes más de un proveedor en producción.',
-          },
-          {
-            q: '¿LiteLLM es realmente gratis?',
-            a: 'El núcleo open source es gratis y autoalojado, sin coste de licencia, según la propia página de precios de LiteLLM en agosto de 2026. No hay recargo por petición a ningún volumen. El plan Enterprise —SSO, SCIM, soporte dedicado y despliegue aislado de red— tiene precio anual a medida según tu volumen de peticiones e incluye una prueba de 30 días.',
-          },
-          {
-            q: '¿OpenRouter cobra por petición?',
-            a: 'No directamente. La comisión de OpenRouter está en cargar la cuenta: en torno al 5.5% sobre compras de saldo con Stripe con un mínimo de $0.80, o 5% con cripto. Una comisión BYOK separada del 5% se aplica solo cuando el gasto mensual enrutado por BYOK supera $25,000 en pago por uso o $200,000 en el plan empresarial.',
-          },
-          {
-            q: '¿Portkey sigue siendo una empresa independiente?',
-            a: 'No. Palo Alto Networks completó la adquisición de Portkey el 29 de mayo de 2026 y lo está integrando como el gateway de IA central de su plataforma de seguridad Prisma AIRS, según la nota de prensa de la propia Palo Alto Networks. Trata cualquier información de precios o de hoja de ruta anterior a mayo de 2026 como potencialmente desfasada.',
-          },
-          {
-            q: '¿Qué gateway soporta más proveedores?',
-            a: 'OpenRouter lista más de 380 modelos en su propio sitio en agosto de 2026. La documentación de LiteLLM describe más de 100 integraciones de proveedores, que es una unidad distinta, ya que un proveedor expone muchos modelos. El repositorio de Portkey anunciaba antes más de 1,600 LLM, aunque esa cifra debería reverificarse tras la adquisición.',
-          },
-          {
-            q: '¿Puedo autoalojar Portkey?',
-            a: 'Portkey/Prisma AIRS ofrecía despliegue en nube privada en el plan Enterprise según las páginas de precios previas a la adquisición. Confirma las condiciones actuales de autoalojamiento directamente con Palo Alto Networks, porque las integraciones tras una adquisición cambian con frecuencia las opciones de despliegue durante el primer año.',
-          },
-          {
-            q: '¿Alguno de los tres tiene programa de afiliados?',
-            a: 'En agosto de 2026 no se encontró ningún programa público y verificable de afiliados o referidos para LiteLLM, Portkey ni OpenRouter. Todos los enlaces de producto de esta página son enlaces simples y declarados que no generan ingresos a PromptQuorum. Si eso cambia, actualizaremos la página con una declaración acorde a las condiciones reales del programa.',
-          },
-          {
-            q: '¿Cómo decido entre autoalojar y usar un gateway alojado?',
-            a: 'Compara el 5.5% de tu gasto mensual en modelos con lo que te cuesta operar un servicio pequeño y permanente. Por debajo de ese punto de cruce, OpenRouter sale más barato una vez cuentas tu tiempo; por encima, gana LiteLLM autoalojado en dólares absolutos. Añade una segunda prueba de cumplimiento: si tienes que poder declarar qué proveedor atendió una petición, autoaloja al margen de la aritmética.',
-          },
-        ],
+            { q: '¿Qué es un gateway de API LLM?', a: 'Es una capa de enrutamiento que da a tu aplicación una única API coherente para llamar a varios proveedores de LLM, y que normalmente añade failover, seguimiento de costes y rate limiting sobre las APIs originales. Tú llamas al gateway; él gestiona el formato específico de cada proveedor y la autenticación. El beneficio solo se materializa cuando tienes más de un proveedor en producción.' },
+            { q: '¿LiteLLM es realmente gratis?', a: 'El núcleo open source es gratis y autoalojado, sin coste de licencia, según la propia página de precios de LiteLLM en agosto de 2026. No hay recargo por petición a ningún volumen. El plan Enterprise —SSO, SCIM, soporte dedicado y despliegue aislado de red— tiene precio anual a medida según tu volumen de peticiones e incluye una prueba de 30 días.' },
+            { q: '¿OpenRouter cobra por petición?', a: 'No directamente. La comisión de OpenRouter está en cargar la cuenta: en torno al 5.5% sobre compras de saldo con Stripe con un mínimo de $0.80, o 5% con cripto. Una comisión BYOK separada del 5% se aplica solo cuando el gasto mensual enrutado por BYOK supera $25,000 en pago por uso o $200,000 en el plan empresarial.' },
+            { q: '¿Portkey sigue siendo una empresa independiente?', a: 'No. Palo Alto Networks completó la adquisición de Portkey el 29 de mayo de 2026 y lo está integrando como el gateway de IA central de su plataforma de seguridad Prisma AIRS, según la nota de prensa de la propia Palo Alto Networks. Trata cualquier información de precios o de hoja de ruta anterior a mayo de 2026 como potencialmente desfasada.' },
+            { q: '¿Qué gateway soporta más proveedores?', a: 'OpenRouter lista más de 380 modelos en su propio sitio en agosto de 2026. La documentación de LiteLLM describe más de 100 integraciones de proveedores, que es una unidad distinta, ya que un proveedor expone muchos modelos. El repositorio de Portkey anunciaba antes más de 1,600 LLM, aunque esa cifra debería reverificarse tras la adquisición.' },
+            { q: '¿Puedo autoalojar Portkey?', a: 'Portkey/Prisma AIRS ofrecía despliegue en nube privada en el plan Enterprise según las páginas de precios previas a la adquisición. Confirma las condiciones actuales de autoalojamiento directamente con Palo Alto Networks, porque las integraciones tras una adquisición cambian con frecuencia las opciones de despliegue durante el primer año.' },
+            { q: '¿Alguno de los tres tiene programa de afiliados?', a: 'En agosto de 2026 no se encontró ningún programa público y verificable de afiliados o referidos para LiteLLM, Portkey ni OpenRouter. Todos los enlaces de producto de esta página son enlaces simples y declarados que no generan ingresos a PromptQuorum. Si eso cambia, actualizaremos la página con una declaración acorde a las condiciones reales del programa.' },
+            { q: '¿Cómo decido entre autoalojar y usar un gateway alojado?', a: 'Compara el 5.5% de tu gasto mensual en modelos con lo que te cuesta operar un servicio pequeño y permanente. Por debajo de ese punto de cruce, OpenRouter sale más barato una vez cuentas tu tiempo; por encima, gana LiteLLM autoalojado en dólares absolutos. Añade una segunda prueba de cumplimiento: si tienes que poder declarar qué proveedor atendió una petición, autoaloja al margen de la aritmética.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1581,47 +1551,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Qué es un gateway de API LLM?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Una capa de enrutamiento que da a tu aplicación una única API coherente para llamar a varios proveedores de LLM, añadiendo failover, seguimiento de costes y rate limiting sobre las APIs originales.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué es un gateway de API LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es una capa de enrutamiento que da a tu aplicación una única API coherente para llamar a varios proveedores de LLM, y que normalmente añade failover, seguimiento de costes y rate limiting sobre las APIs originales. Tú llamas al gateway; él gestiona el formato específico de cada proveedor y la autenticación. El beneficio solo se materializa cuando tienes más de un proveedor en producción.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿LiteLLM es realmente gratis?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'El núcleo open source es gratis y autoalojado, sin coste de licencia ni recargo por petición a ningún volumen, según su propia página de precios en agosto de 2026. El plan Enterprise tiene precio anual a medida.',
+          {
+            '@type': 'Question',
+            'name': '¿LiteLLM es realmente gratis?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El núcleo open source es gratis y autoalojado, sin coste de licencia, según la propia página de precios de LiteLLM en agosto de 2026. No hay recargo por petición a ningún volumen. El plan Enterprise —SSO, SCIM, soporte dedicado y despliegue aislado de red— tiene precio anual a medida según tu volumen de peticiones e incluye una prueba de 30 días.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿OpenRouter cobra por petición?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. OpenRouter cobra alrededor del 5.5% sobre compras de saldo con Stripe (mínimo $0.80) o 5% con cripto, más una comisión BYOK del 5% solo por encima de $25,000/mes de gasto enrutado por BYOK en pago por uso, o $200,000/mes en empresarial.',
+          {
+            '@type': 'Question',
+            'name': '¿OpenRouter cobra por petición?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No directamente. La comisión de OpenRouter está en cargar la cuenta: en torno al 5.5% sobre compras de saldo con Stripe con un mínimo de $0.80, o 5% con cripto. Una comisión BYOK separada del 5% se aplica solo cuando el gasto mensual enrutado por BYOK supera $25,000 en pago por uso o $200,000 en el plan empresarial.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Portkey sigue siendo una empresa independiente?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Palo Alto Networks completó la adquisición el 29 de mayo de 2026 y está integrando Portkey como el gateway de IA dentro de la plataforma de seguridad Prisma AIRS.',
+          {
+            '@type': 'Question',
+            'name': '¿Portkey sigue siendo una empresa independiente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Palo Alto Networks completó la adquisición de Portkey el 29 de mayo de 2026 y lo está integrando como el gateway de IA central de su plataforma de seguridad Prisma AIRS, según la nota de prensa de la propia Palo Alto Networks. Trata cualquier información de precios o de hoja de ruta anterior a mayo de 2026 como potencialmente desfasada.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cómo decido entre autoalojar y usar un gateway LLM alojado?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Compara el 5.5% de tu gasto mensual en modelos con el coste de operar un servicio pequeño y permanente. Por encima de ese punto de cruce gana LiteLLM autoalojado; por debajo gana OpenRouter una vez cuentas tu tiempo.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué gateway soporta más proveedores?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OpenRouter lista más de 380 modelos en su propio sitio en agosto de 2026. La documentación de LiteLLM describe más de 100 integraciones de proveedores, que es una unidad distinta, ya que un proveedor expone muchos modelos. El repositorio de Portkey anunciaba antes más de 1,600 LLM, aunque esa cifra debería reverificarse tras la adquisición.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Puedo autoalojar Portkey?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Portkey/Prisma AIRS ofrecía despliegue en nube privada en el plan Enterprise según las páginas de precios previas a la adquisición. Confirma las condiciones actuales de autoalojamiento directamente con Palo Alto Networks, porque las integraciones tras una adquisición cambian con frecuencia las opciones de despliegue durante el primer año.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Alguno de los tres tiene programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En agosto de 2026 no se encontró ningún programa público y verificable de afiliados o referidos para LiteLLM, Portkey ni OpenRouter. Todos los enlaces de producto de esta página son enlaces simples y declarados que no generan ingresos a PromptQuorum. Si eso cambia, actualizaremos la página con una declaración acorde a las condiciones reales del programa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo decido entre autoalojar y usar un gateway alojado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Compara el 5.5% de tu gasto mensual en modelos con lo que te cuesta operar un servicio pequeño y permanente. Por debajo de ese punto de cruce, OpenRouter sale más barato una vez cuentas tu tiempo; por encima, gana LiteLLM autoalojado en dólares absolutos. Añade una segunda prueba de cumplimiento: si tienes que poder declarar qué proveedor atendió una petición, autoaloja al margen de la aritmética.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2021,39 +2015,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions frequentes',
         faqs: [
-          {
-            q: 'Qu\'est-ce qu\'une passerelle API LLM ?',
-            a: 'C\'est une couche de routage qui donne a votre application une API unique et coherente pour appeler plusieurs fournisseurs de LLM, en ajoutant generalement failover, suivi des couts et limitation de debit par-dessus les API d\'origine. Vous appelez la passerelle ; elle gere le format propre a chaque fournisseur et l\'authentification. Le benefice n\'apparait qu\'a partir de deux fournisseurs en production.',
-          },
-          {
-            q: 'LiteLLM est-il vraiment gratuit ?',
-            a: 'Le coeur open source est gratuit et auto-heberge, sans cout de licence, d\'apres la page tarifaire de LiteLLM en aout 2026. Il n\'y a aucune majoration par requete, quel que soit le volume. L\'offre Enterprise — SSO, SCIM, support dedie, deploiement isole du reseau — est tarifee annuellement sur devis selon votre volume de requetes et inclut un essai de 30 jours.',
-          },
-          {
-            q: 'OpenRouter facture-t-il a la requete ?',
-            a: 'Pas directement. La commission d\'OpenRouter porte sur l\'alimentation du compte : environ 5,5 % sur les achats de credit via Stripe avec un minimum de 0,80 $, ou 5 % en crypto. Des frais BYOK distincts de 5 % ne s\'appliquent qu\'au-dela de 25 000 $ de depenses mensuelles routees en BYOK en paiement a l\'usage, ou 200 000 $ sur l\'offre entreprise.',
-          },
-          {
-            q: 'Portkey est-il encore une entreprise independante ?',
-            a: 'Non. Palo Alto Networks a finalise l\'acquisition de Portkey le 29 mai 2026 et l\'integre comme passerelle IA centrale de sa plateforme de securite Prisma AIRS, selon le communique de Palo Alto Networks. Considerez toute information tarifaire ou de feuille de route anterieure a mai 2026 comme potentiellement perimee.',
-          },
-          {
-            q: 'Quelle passerelle prend en charge le plus de fournisseurs ?',
-            a: 'OpenRouter liste plus de 380 modeles sur son propre site en aout 2026. La documentation de LiteLLM decrit plus de 100 integrations de fournisseurs, ce qui est une unite differente puisqu\'un fournisseur expose plusieurs modeles. Le depot de Portkey annoncait plus de 1 600 LLM, chiffre qu\'il convient de reverifier apres l\'acquisition.',
-          },
-          {
-            q: 'Puis-je auto-heberger Portkey ?',
-            a: 'Portkey/Prisma AIRS proposait un deploiement en cloud prive sur l\'offre Enterprise d\'apres les pages tarifaires anterieures a l\'acquisition. Faites confirmer les conditions actuelles d\'auto-hebergement directement par Palo Alto Networks : les integrations post-acquisition modifient souvent les options de deploiement la premiere annee.',
-          },
-          {
-            q: 'L\'un de ces trois a-t-il un programme d\'affiliation ?',
-            a: 'Aucun programme d\'affiliation ou de parrainage public et verifiable n\'a ete trouve pour LiteLLM, Portkey ou OpenRouter en aout 2026. Tous les liens produit de cette page sont de simples liens declares qui ne rapportent rien a PromptQuorum. Si cela change, la page sera mise a jour avec une mention conforme aux conditions reelles du programme.',
-          },
-          {
-            q: 'Comment choisir entre auto-hebergement et passerelle hebergee ?',
-            a: 'Comparez 5,5 % de vos depenses mensuelles en modeles au cout d\'exploitation d\'un petit service permanent. En dessous de ce point de bascule, OpenRouter revient moins cher une fois votre temps compte ; au-dessus, LiteLLM auto-heberge gagne en valeur absolue. Ajoutez un second test de conformite : si vous devez pouvoir declarer quel fournisseur a traite une requete, auto-hebergez quelle que soit l\'arithmetique.',
-          },
-        ],
+            { q: 'Qu\'est-ce qu\'une passerelle API LLM ?', a: 'C\'est une couche de routage qui donne a votre application une API unique et coherente pour appeler plusieurs fournisseurs de LLM, en ajoutant generalement failover, suivi des couts et limitation de debit par-dessus les API d\'origine. Vous appelez la passerelle ; elle gere le format propre a chaque fournisseur et l\'authentification. Le benefice n\'apparait qu\'a partir de deux fournisseurs en production.' },
+            { q: 'LiteLLM est-il vraiment gratuit ?', a: 'Le coeur open source est gratuit et auto-heberge, sans cout de licence, d\'apres la page tarifaire de LiteLLM en aout 2026. Il n\'y a aucune majoration par requete, quel que soit le volume. L\'offre Enterprise — SSO, SCIM, support dedie, deploiement isole du reseau — est tarifee annuellement sur devis selon votre volume de requetes et inclut un essai de 30 jours.' },
+            { q: 'OpenRouter facture-t-il a la requete ?', a: 'Pas directement. La commission d\'OpenRouter porte sur l\'alimentation du compte : environ 5,5 % sur les achats de credit via Stripe avec un minimum de 0,80 $, ou 5 % en crypto. Des frais BYOK distincts de 5 % ne s\'appliquent qu\'au-dela de 25 000 $ de depenses mensuelles routees en BYOK en paiement a l\'usage, ou 200 000 $ sur l\'offre entreprise.' },
+            { q: 'Portkey est-il encore une entreprise independante ?', a: 'Non. Palo Alto Networks a finalise l\'acquisition de Portkey le 29 mai 2026 et l\'integre comme passerelle IA centrale de sa plateforme de securite Prisma AIRS, selon le communique de Palo Alto Networks. Considerez toute information tarifaire ou de feuille de route anterieure a mai 2026 comme potentiellement perimee.' },
+            { q: 'Quelle passerelle prend en charge le plus de fournisseurs ?', a: 'OpenRouter liste plus de 380 modeles sur son propre site en aout 2026. La documentation de LiteLLM decrit plus de 100 integrations de fournisseurs, ce qui est une unite differente puisqu\'un fournisseur expose plusieurs modeles. Le depot de Portkey annoncait plus de 1 600 LLM, chiffre qu\'il convient de reverifier apres l\'acquisition.' },
+            { q: 'Puis-je auto-heberger Portkey ?', a: 'Portkey/Prisma AIRS proposait un deploiement en cloud prive sur l\'offre Enterprise d\'apres les pages tarifaires anterieures a l\'acquisition. Faites confirmer les conditions actuelles d\'auto-hebergement directement par Palo Alto Networks : les integrations post-acquisition modifient souvent les options de deploiement la premiere annee.' },
+            { q: 'L\'un de ces trois a-t-il un programme d\'affiliation ?', a: 'Aucun programme d\'affiliation ou de parrainage public et verifiable n\'a ete trouve pour LiteLLM, Portkey ou OpenRouter en aout 2026. Tous les liens produit de cette page sont de simples liens declares qui ne rapportent rien a PromptQuorum. Si cela change, la page sera mise a jour avec une mention conforme aux conditions reelles du programme.' },
+            { q: 'Comment choisir entre auto-hebergement et passerelle hebergee ?', a: 'Comparez 5,5 % de vos depenses mensuelles en modeles au cout d\'exploitation d\'un petit service permanent. En dessous de ce point de bascule, OpenRouter revient moins cher une fois votre temps compte ; au-dessus, LiteLLM auto-heberge gagne en valeur absolue. Ajoutez un second test de conformite : si vous devez pouvoir declarer quel fournisseur a traite une requete, auto-hebergez quelle que soit l\'arithmetique.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2118,47 +2088,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce qu\'une passerelle API LLM ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Une couche de routage qui donne a votre application une API unique pour appeler plusieurs fournisseurs de LLM, en ajoutant failover, suivi des couts et limitation de debit par-dessus les API d\'origine.',
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce qu\'une passerelle API LLM ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'C\'est une couche de routage qui donne a votre application une API unique et coherente pour appeler plusieurs fournisseurs de LLM, en ajoutant generalement failover, suivi des couts et limitation de debit par-dessus les API d\'origine. Vous appelez la passerelle ; elle gere le format propre a chaque fournisseur et l\'authentification. Le benefice n\'apparait qu\'a partir de deux fournisseurs en production.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LiteLLM est-il vraiment gratuit ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Le coeur open source est gratuit et auto-heberge, sans cout de licence ni majoration par requete quel que soit le volume, d\'apres sa page tarifaire en aout 2026. L\'offre Enterprise est tarifee annuellement sur devis.',
+          {
+            '@type': 'Question',
+            'name': 'LiteLLM est-il vraiment gratuit ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le coeur open source est gratuit et auto-heberge, sans cout de licence, d\'apres la page tarifaire de LiteLLM en aout 2026. Il n\'y a aucune majoration par requete, quel que soit le volume. L\'offre Enterprise — SSO, SCIM, support dedie, deploiement isole du reseau — est tarifee annuellement sur devis selon votre volume de requetes et inclut un essai de 30 jours.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenRouter facture-t-il a la requete ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non. OpenRouter preleve environ 5,5 % sur les achats de credit via Stripe (minimum 0,80 $) ou 5 % en crypto, plus des frais BYOK de 5 % seulement au-dela de 25 000 $/mois de depenses routees en BYOK, ou 200 000 $/mois en entreprise.',
+          {
+            '@type': 'Question',
+            'name': 'OpenRouter facture-t-il a la requete ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pas directement. La commission d\'OpenRouter porte sur l\'alimentation du compte : environ 5,5 % sur les achats de credit via Stripe avec un minimum de 0,80 $, ou 5 % en crypto. Des frais BYOK distincts de 5 % ne s\'appliquent qu\'au-dela de 25 000 $ de depenses mensuelles routees en BYOK en paiement a l\'usage, ou 200 000 $ sur l\'offre entreprise.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Portkey est-il encore une entreprise independante ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non. Palo Alto Networks a finalise l\'acquisition le 29 mai 2026 et integre Portkey comme passerelle IA au sein de la plateforme de securite Prisma AIRS.',
+          {
+            '@type': 'Question',
+            'name': 'Portkey est-il encore une entreprise independante ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Palo Alto Networks a finalise l\'acquisition de Portkey le 29 mai 2026 et l\'integre comme passerelle IA centrale de sa plateforme de securite Prisma AIRS, selon le communique de Palo Alto Networks. Considerez toute information tarifaire ou de feuille de route anterieure a mai 2026 comme potentiellement perimee.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Comment choisir entre auto-hebergement et passerelle LLM hebergee ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Comparez 5,5 % de vos depenses mensuelles en modeles au cout d\'exploitation d\'un petit service permanent. Au-dessus de ce point de bascule, LiteLLM auto-heberge gagne ; en dessous, OpenRouter l\'emporte une fois votre temps compte.',
+          {
+            '@type': 'Question',
+            'name': 'Quelle passerelle prend en charge le plus de fournisseurs ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OpenRouter liste plus de 380 modeles sur son propre site en aout 2026. La documentation de LiteLLM decrit plus de 100 integrations de fournisseurs, ce qui est une unite differente puisqu\'un fournisseur expose plusieurs modeles. Le depot de Portkey annoncait plus de 1 600 LLM, chiffre qu\'il convient de reverifier apres l\'acquisition.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Puis-je auto-heberger Portkey ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Portkey/Prisma AIRS proposait un deploiement en cloud prive sur l\'offre Enterprise d\'apres les pages tarifaires anterieures a l\'acquisition. Faites confirmer les conditions actuelles d\'auto-hebergement directement par Palo Alto Networks : les integrations post-acquisition modifient souvent les options de deploiement la premiere annee.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'un de ces trois a-t-il un programme d\'affiliation ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aucun programme d\'affiliation ou de parrainage public et verifiable n\'a ete trouve pour LiteLLM, Portkey ou OpenRouter en aout 2026. Tous les liens produit de cette page sont de simples liens declares qui ne rapportent rien a PromptQuorum. Si cela change, la page sera mise a jour avec une mention conforme aux conditions reelles du programme.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment choisir entre auto-hebergement et passerelle hebergee ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Comparez 5,5 % de vos depenses mensuelles en modeles au cout d\'exploitation d\'un petit service permanent. En dessous de ce point de bascule, OpenRouter revient moins cher une fois votre temps compte ; au-dessus, LiteLLM auto-heberge gagne en valeur absolue. Ajoutez un second test de conformite : si vous devez pouvoir declarer quel fournisseur a traite une requete, auto-hebergez quelle que soit l\'arithmetique.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2558,39 +2552,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'O que é um gateway de API LLM?',
-            a: 'É uma camada de roteamento que dá à sua aplicação uma única API consistente para chamar vários provedores de LLM, normalmente acrescentando failover, controle de custos e rate limiting sobre as APIs originais. Você chama o gateway; ele cuida do formato específico de cada provedor e da autenticação. O benefício só se materializa quando há mais de um provedor em produção.',
-          },
-          {
-            q: 'O LiteLLM é realmente gratuito?',
-            a: 'O núcleo open source é gratuito e auto-hospedado, sem custo de licença, conforme a própria página de preços do LiteLLM em agosto de 2026. Não há acréscimo por requisição em nenhum volume. O plano Enterprise — SSO, SCIM, suporte dedicado e implantação isolada de rede — tem preço anual sob consulta conforme o volume de requisições e inclui teste de 30 dias.',
-          },
-          {
-            q: 'O OpenRouter cobra por requisição?',
-            a: 'Não diretamente. A taxa do OpenRouter incide sobre a recarga da conta: cerca de 5,5% sobre compras de saldo via Stripe, com mínimo de US$ 0,80, ou 5% em cripto. Uma taxa BYOK separada de 5% se aplica apenas quando o gasto mensal roteado por BYOK ultrapassa US$ 25.000 no pagamento por uso, ou US$ 200.000 no plano corporativo.',
-          },
-          {
-            q: 'O Portkey ainda é uma empresa independente?',
-            a: 'Não. A Palo Alto Networks concluiu a aquisição do Portkey em 29 de maio de 2026 e o está integrando como gateway de IA central da sua plataforma de segurança Prisma AIRS, conforme o comunicado da própria Palo Alto Networks. Trate qualquer informação de preço ou roadmap anterior a maio de 2026 como potencialmente defasada.',
-          },
-          {
-            q: 'Qual gateway suporta mais provedores?',
-            a: 'O OpenRouter lista mais de 380 modelos no próprio site em agosto de 2026. A documentação do LiteLLM descreve mais de 100 integrações de provedores — uma unidade diferente, já que um provedor expõe muitos modelos. O repositório do Portkey já anunciou mais de 1.600 LLMs, número que deveria ser reverificado após a aquisição.',
-          },
-          {
-            q: 'Posso auto-hospedar o Portkey?',
-            a: 'O Portkey/Prisma AIRS oferecia implantação em nuvem privada no plano Enterprise conforme as páginas de preços anteriores à aquisição. Confirme as condições atuais de auto-hospedagem diretamente com a Palo Alto Networks, já que integrações pós-aquisição costumam mudar as opções de implantação no primeiro ano.',
-          },
-          {
-            q: 'Algum dos três tem programa de afiliados?',
-            a: 'Nenhum programa público e verificável de afiliados ou indicação foi encontrado para LiteLLM, Portkey ou OpenRouter em agosto de 2026. Todos os links de produto desta página são links simples e declarados que não rendem nada à PromptQuorum. Se isso mudar, a página será atualizada com uma divulgação compatível com os termos reais do programa.',
-          },
-          {
-            q: 'Como decidir entre auto-hospedar e um gateway hospedado?',
-            a: 'Compare 5,5% do seu gasto mensal com modelos ao custo de operar um serviço pequeno e permanente. Abaixo desse ponto de virada, o OpenRouter sai mais barato depois de contar o seu tempo; acima dele, o LiteLLM auto-hospedado vence em valores absolutos. Acrescente um segundo teste de conformidade: se você precisa declarar qual provedor atendeu uma requisição, auto-hospede independentemente da aritmética.',
-          },
-        ],
+            { q: 'O que é um gateway de API LLM?', a: 'É uma camada de roteamento que dá à sua aplicação uma única API consistente para chamar vários provedores de LLM, normalmente acrescentando failover, controle de custos e rate limiting sobre as APIs originais. Você chama o gateway; ele cuida do formato específico de cada provedor e da autenticação. O benefício só se materializa quando há mais de um provedor em produção.' },
+            { q: 'O LiteLLM é realmente gratuito?', a: 'O núcleo open source é gratuito e auto-hospedado, sem custo de licença, conforme a própria página de preços do LiteLLM em agosto de 2026. Não há acréscimo por requisição em nenhum volume. O plano Enterprise — SSO, SCIM, suporte dedicado e implantação isolada de rede — tem preço anual sob consulta conforme o volume de requisições e inclui teste de 30 dias.' },
+            { q: 'O OpenRouter cobra por requisição?', a: 'Não diretamente. A taxa do OpenRouter incide sobre a recarga da conta: cerca de 5,5% sobre compras de saldo via Stripe, com mínimo de US$ 0,80, ou 5% em cripto. Uma taxa BYOK separada de 5% se aplica apenas quando o gasto mensal roteado por BYOK ultrapassa US$ 25.000 no pagamento por uso, ou US$ 200.000 no plano corporativo.' },
+            { q: 'O Portkey ainda é uma empresa independente?', a: 'Não. A Palo Alto Networks concluiu a aquisição do Portkey em 29 de maio de 2026 e o está integrando como gateway de IA central da sua plataforma de segurança Prisma AIRS, conforme o comunicado da própria Palo Alto Networks. Trate qualquer informação de preço ou roadmap anterior a maio de 2026 como potencialmente defasada.' },
+            { q: 'Qual gateway suporta mais provedores?', a: 'O OpenRouter lista mais de 380 modelos no próprio site em agosto de 2026. A documentação do LiteLLM descreve mais de 100 integrações de provedores — uma unidade diferente, já que um provedor expõe muitos modelos. O repositório do Portkey já anunciou mais de 1.600 LLMs, número que deveria ser reverificado após a aquisição.' },
+            { q: 'Posso auto-hospedar o Portkey?', a: 'O Portkey/Prisma AIRS oferecia implantação em nuvem privada no plano Enterprise conforme as páginas de preços anteriores à aquisição. Confirme as condições atuais de auto-hospedagem diretamente com a Palo Alto Networks, já que integrações pós-aquisição costumam mudar as opções de implantação no primeiro ano.' },
+            { q: 'Algum dos três tem programa de afiliados?', a: 'Nenhum programa público e verificável de afiliados ou indicação foi encontrado para LiteLLM, Portkey ou OpenRouter em agosto de 2026. Todos os links de produto desta página são links simples e declarados que não rendem nada à PromptQuorum. Se isso mudar, a página será atualizada com uma divulgação compatível com os termos reais do programa.' },
+            { q: 'Como decidir entre auto-hospedar e um gateway hospedado?', a: 'Compare 5,5% do seu gasto mensal com modelos ao custo de operar um serviço pequeno e permanente. Abaixo desse ponto de virada, o OpenRouter sai mais barato depois de contar o seu tempo; acima dele, o LiteLLM auto-hospedado vence em valores absolutos. Acrescente um segundo teste de conformidade: se você precisa declarar qual provedor atendeu uma requisição, auto-hospede independentemente da aritmética.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2655,47 +2625,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'O que é um gateway de API LLM?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Uma camada de roteamento que dá à sua aplicação uma única API consistente para chamar vários provedores de LLM, acrescentando failover, controle de custos e rate limiting sobre as APIs originais.',
+          {
+            '@type': 'Question',
+            'name': 'O que é um gateway de API LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'É uma camada de roteamento que dá à sua aplicação uma única API consistente para chamar vários provedores de LLM, normalmente acrescentando failover, controle de custos e rate limiting sobre as APIs originais. Você chama o gateway; ele cuida do formato específico de cada provedor e da autenticação. O benefício só se materializa quando há mais de um provedor em produção.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O LiteLLM é realmente gratuito?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O núcleo open source é gratuito e auto-hospedado, sem custo de licença e sem acréscimo por requisição em nenhum volume, conforme a própria página de preços em agosto de 2026. O plano Enterprise tem preço anual sob consulta.',
+          {
+            '@type': 'Question',
+            'name': 'O LiteLLM é realmente gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O núcleo open source é gratuito e auto-hospedado, sem custo de licença, conforme a própria página de preços do LiteLLM em agosto de 2026. Não há acréscimo por requisição em nenhum volume. O plano Enterprise — SSO, SCIM, suporte dedicado e implantação isolada de rede — tem preço anual sob consulta conforme o volume de requisições e inclui teste de 30 dias.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O OpenRouter cobra por requisição?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não. O OpenRouter cobra cerca de 5,5% sobre compras de saldo via Stripe (mínimo US$ 0,80) ou 5% em cripto, mais taxa BYOK de 5% apenas acima de US$ 25.000/mês de gasto roteado por BYOK no pagamento por uso, ou US$ 200.000/mês no corporativo.',
+          {
+            '@type': 'Question',
+            'name': 'O OpenRouter cobra por requisição?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não diretamente. A taxa do OpenRouter incide sobre a recarga da conta: cerca de 5,5% sobre compras de saldo via Stripe, com mínimo de US$ 0,80, ou 5% em cripto. Uma taxa BYOK separada de 5% se aplica apenas quando o gasto mensal roteado por BYOK ultrapassa US$ 25.000 no pagamento por uso, ou US$ 200.000 no plano corporativo.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O Portkey ainda é uma empresa independente?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não. A Palo Alto Networks concluiu a aquisição em 29 de maio de 2026 e está integrando o Portkey como gateway de IA dentro da plataforma de segurança Prisma AIRS.',
+          {
+            '@type': 'Question',
+            'name': 'O Portkey ainda é uma empresa independente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. A Palo Alto Networks concluiu a aquisição do Portkey em 29 de maio de 2026 e o está integrando como gateway de IA central da sua plataforma de segurança Prisma AIRS, conforme o comunicado da própria Palo Alto Networks. Trate qualquer informação de preço ou roadmap anterior a maio de 2026 como potencialmente defasada.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Como decidir entre auto-hospedar e um gateway LLM hospedado?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Compare 5,5% do seu gasto mensal com modelos ao custo de operar um serviço pequeno e permanente. Acima desse ponto de virada, o LiteLLM auto-hospedado vence; abaixo dele, o OpenRouter ganha depois de contar o seu tempo.',
+          {
+            '@type': 'Question',
+            'name': 'Qual gateway suporta mais provedores?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O OpenRouter lista mais de 380 modelos no próprio site em agosto de 2026. A documentação do LiteLLM descreve mais de 100 integrações de provedores — uma unidade diferente, já que um provedor expõe muitos modelos. O repositório do Portkey já anunciou mais de 1.600 LLMs, número que deveria ser reverificado após a aquisição.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Posso auto-hospedar o Portkey?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Portkey/Prisma AIRS oferecia implantação em nuvem privada no plano Enterprise conforme as páginas de preços anteriores à aquisição. Confirme as condições atuais de auto-hospedagem diretamente com a Palo Alto Networks, já que integrações pós-aquisição costumam mudar as opções de implantação no primeiro ano.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Algum dos três tem programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nenhum programa público e verificável de afiliados ou indicação foi encontrado para LiteLLM, Portkey ou OpenRouter em agosto de 2026. Todos os links de produto desta página são links simples e declarados que não rendem nada à PromptQuorum. Se isso mudar, a página será atualizada com uma divulgação compatível com os termos reais do programa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como decidir entre auto-hospedar e um gateway hospedado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Compare 5,5% do seu gasto mensal com modelos ao custo de operar um serviço pequeno e permanente. Abaixo desse ponto de virada, o OpenRouter sai mais barato depois de contar o seu tempo; acima dele, o LiteLLM auto-hospedado vence em valores absolutos. Acrescente um segundo teste de conformidade: se você precisa declarar qual provedor atendeu uma requisição, auto-hospede independentemente da aritmética.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3095,39 +3089,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          {
-            q: 'LLM APIゲートウェイとは何ですか？',
-            a: '複数のLLMプロバイダーを呼び出すための単一で一貫したAPIをアプリケーションに提供するルーティング層で、通常は元のAPIの上にフェイルオーバー、コスト追跡、レート制限を追加します。呼び出すのはゲートウェイで、プロバイダー固有のフォーマットと認証はそちらが処理します。この利点は、本番でプロバイダーが2社以上になって初めて現れます。',
-          },
-          {
-            q: 'LiteLLMは本当に無料ですか？',
-            a: '2026年8月時点のLiteLLM公式の価格ページによれば、オープンソース中核は無料かつセルフホストで、ライセンス費用はかかりません。どの利用量でもリクエストごとの上乗せはありません。SSO、SCIM、専任サポート、エアギャップ導入を含むEnterpriseは、リクエスト量に応じた年額の個別見積もりで、30日間の試用が付きます。',
-          },
-          {
-            q: 'OpenRouterはリクエストごとに課金しますか？',
-            a: '直接には課金しません。OpenRouterの手数料はアカウントへの入金にかかり、Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産では5%です。別枠の5%のBYOK手数料は、BYOK経由の月間支出が従量課金で25,000ドル、エンタープライズで200,000ドルを超えた場合にのみ適用されます。',
-          },
-          {
-            q: 'Portkeyはまだ独立企業ですか？',
-            a: 'いいえ。Palo Alto Networks自身のプレスリリースによれば、同社は2026年5月29日にPortkeyの買収を完了し、セキュリティ基盤Prisma AIRSの中核AIゲートウェイとして統合を進めています。2026年5月より前の価格やロードマップの情報は、古くなっている可能性があるものとして扱ってください。',
-          },
-          {
-            q: '最も多くのプロバイダーに対応しているのはどれですか？',
-            a: 'OpenRouterは2026年8月時点で自社サイトに380以上のモデルを掲載しています。LiteLLMのドキュメントは100以上のプロバイダー統合を挙げていますが、1つのプロバイダーが多数のモデルを提供するため、単位が異なります。Portkeyのゲートウェイ・リポジトリは以前1,600以上のLLMを掲げていましたが、買収を踏まえて再確認すべき数字です。',
-          },
-          {
-            q: 'Portkeyをセルフホストできますか？',
-            a: '買収前の価格ページによれば、Portkey/Prisma AIRSはEnterpriseプランでプライベートクラウド導入を提供していました。買収後の統合では初年度に導入形態が変わることが多いため、現行のセルフホスト条件はPalo Alto Networksに直接確認してください。',
-          },
-          {
-            q: '3社のいずれかにアフィリエイト・プログラムはありますか？',
-            a: '2026年8月時点で、LiteLLM、Portkey、OpenRouterのいずれについても、公開され確認可能なアフィリエイトや紹介プログラムは見つかりませんでした。本ページの製品リンクはすべて、PromptQuorumに収益をもたらさない通常の開示済みリンクです。状況が変われば、実際のプログラム条件に沿った開示を加えて本ページを更新します。',
-          },
-          {
-            q: 'セルフホストとホスト型ゲートウェイはどう選び分けますか？',
-            a: '月間モデル費用の5.5%と、小さな常駐サービスを運用する費用を比べてください。この損益分岐点より下なら、自分の時間を計算に入れるとOpenRouterのほうが安く済みます。上回るなら、絶対額ではセルフホストのLiteLLMが有利です。コンプライアンスの観点でもう一つの基準を加えてください。どのプロバイダーがリクエストを処理したかを示す必要があるなら、計算にかかわらずセルフホストです。',
-          },
-        ],
+            { q: 'LLM APIゲートウェイとは何ですか？', a: '複数のLLMプロバイダーを呼び出すための単一で一貫したAPIをアプリケーションに提供するルーティング層で、通常は元のAPIの上にフェイルオーバー、コスト追跡、レート制限を追加します。呼び出すのはゲートウェイで、プロバイダー固有のフォーマットと認証はそちらが処理します。この利点は、本番でプロバイダーが2社以上になって初めて現れます。' },
+            { q: 'LiteLLMは本当に無料ですか？', a: '2026年8月時点のLiteLLM公式の価格ページによれば、オープンソース中核は無料かつセルフホストで、ライセンス費用はかかりません。どの利用量でもリクエストごとの上乗せはありません。SSO、SCIM、専任サポート、エアギャップ導入を含むEnterpriseは、リクエスト量に応じた年額の個別見積もりで、30日間の試用が付きます。' },
+            { q: 'OpenRouterはリクエストごとに課金しますか？', a: '直接には課金しません。OpenRouterの手数料はアカウントへの入金にかかり、Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産では5%です。別枠の5%のBYOK手数料は、BYOK経由の月間支出が従量課金で25,000ドル、エンタープライズで200,000ドルを超えた場合にのみ適用されます。' },
+            { q: 'Portkeyはまだ独立企業ですか？', a: 'いいえ。Palo Alto Networks自身のプレスリリースによれば、同社は2026年5月29日にPortkeyの買収を完了し、セキュリティ基盤Prisma AIRSの中核AIゲートウェイとして統合を進めています。2026年5月より前の価格やロードマップの情報は、古くなっている可能性があるものとして扱ってください。' },
+            { q: '最も多くのプロバイダーに対応しているのはどれですか？', a: 'OpenRouterは2026年8月時点で自社サイトに380以上のモデルを掲載しています。LiteLLMのドキュメントは100以上のプロバイダー統合を挙げていますが、1つのプロバイダーが多数のモデルを提供するため、単位が異なります。Portkeyのゲートウェイ・リポジトリは以前1,600以上のLLMを掲げていましたが、買収を踏まえて再確認すべき数字です。' },
+            { q: 'Portkeyをセルフホストできますか？', a: '買収前の価格ページによれば、Portkey/Prisma AIRSはEnterpriseプランでプライベートクラウド導入を提供していました。買収後の統合では初年度に導入形態が変わることが多いため、現行のセルフホスト条件はPalo Alto Networksに直接確認してください。' },
+            { q: '3社のいずれかにアフィリエイト・プログラムはありますか？', a: '2026年8月時点で、LiteLLM、Portkey、OpenRouterのいずれについても、公開され確認可能なアフィリエイトや紹介プログラムは見つかりませんでした。本ページの製品リンクはすべて、PromptQuorumに収益をもたらさない通常の開示済みリンクです。状況が変われば、実際のプログラム条件に沿った開示を加えて本ページを更新します。' },
+            { q: 'セルフホストとホスト型ゲートウェイはどう選び分けますか？', a: '月間モデル費用の5.5%と、小さな常駐サービスを運用する費用を比べてください。この損益分岐点より下なら、自分の時間を計算に入れるとOpenRouterのほうが安く済みます。上回るなら、絶対額ではセルフホストのLiteLLMが有利です。コンプライアンスの観点でもう一つの基準を加えてください。どのプロバイダーがリクエストを処理したかを示す必要があるなら、計算にかかわらずセルフホストです。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3192,47 +3162,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'LLM APIゲートウェイとは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '複数のLLMプロバイダーを呼び出すための単一で一貫したAPIをアプリケーションに提供し、フェイルオーバー、コスト追跡、レート制限を元のAPIの上に追加するルーティング層です。',
+          {
+            '@type': 'Question',
+            'name': 'LLM APIゲートウェイとは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '複数のLLMプロバイダーを呼び出すための単一で一貫したAPIをアプリケーションに提供するルーティング層で、通常は元のAPIの上にフェイルオーバー、コスト追跡、レート制限を追加します。呼び出すのはゲートウェイで、プロバイダー固有のフォーマットと認証はそちらが処理します。この利点は、本番でプロバイダーが2社以上になって初めて現れます。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LiteLLMは本当に無料ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '2026年8月時点の公式価格ページによれば、オープンソース中核は無料かつセルフホストで、ライセンス費用もリクエストごとの上乗せもありません。Enterpriseは年額の個別見積もりです。',
+          {
+            '@type': 'Question',
+            'name': 'LiteLLMは本当に無料ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年8月時点のLiteLLM公式の価格ページによれば、オープンソース中核は無料かつセルフホストで、ライセンス費用はかかりません。どの利用量でもリクエストごとの上乗せはありません。SSO、SCIM、専任サポート、エアギャップ導入を含むEnterpriseは、リクエスト量に応じた年額の個別見積もりで、30日間の試用が付きます。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenRouterはリクエストごとに課金しますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産で5%です。5%のBYOK手数料は、BYOK経由の月間支出が従量課金で25,000ドル、エンタープライズで200,000ドルを超えた場合にのみ発生します。',
+          {
+            '@type': 'Question',
+            'name': 'OpenRouterはリクエストごとに課金しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '直接には課金しません。OpenRouterの手数料はアカウントへの入金にかかり、Stripeでのクレジット購入に約5.5%（最低0.80ドル）、暗号資産では5%です。別枠の5%のBYOK手数料は、BYOK経由の月間支出が従量課金で25,000ドル、エンタープライズで200,000ドルを超えた場合にのみ適用されます。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Portkeyはまだ独立企業ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。Palo Alto Networksは2026年5月29日に買収を完了し、Portkeyをセキュリティ基盤Prisma AIRS内のAIゲートウェイとして統合しています。',
+          {
+            '@type': 'Question',
+            'name': 'Portkeyはまだ独立企業ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。Palo Alto Networks自身のプレスリリースによれば、同社は2026年5月29日にPortkeyの買収を完了し、セキュリティ基盤Prisma AIRSの中核AIゲートウェイとして統合を進めています。2026年5月より前の価格やロードマップの情報は、古くなっている可能性があるものとして扱ってください。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'セルフホストとホスト型LLMゲートウェイはどう選び分けますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '月間モデル費用の5.5%と、小さな常駐サービスの運用費用を比べてください。損益分岐点を上回ればセルフホストのLiteLLMが有利、下回れば自分の時間を含めるとOpenRouterが有利です。',
+          {
+            '@type': 'Question',
+            'name': '最も多くのプロバイダーに対応しているのはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OpenRouterは2026年8月時点で自社サイトに380以上のモデルを掲載しています。LiteLLMのドキュメントは100以上のプロバイダー統合を挙げていますが、1つのプロバイダーが多数のモデルを提供するため、単位が異なります。Portkeyのゲートウェイ・リポジトリは以前1,600以上のLLMを掲げていましたが、買収を踏まえて再確認すべき数字です。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Portkeyをセルフホストできますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '買収前の価格ページによれば、Portkey/Prisma AIRSはEnterpriseプランでプライベートクラウド導入を提供していました。買収後の統合では初年度に導入形態が変わることが多いため、現行のセルフホスト条件はPalo Alto Networksに直接確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '3社のいずれかにアフィリエイト・プログラムはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年8月時点で、LiteLLM、Portkey、OpenRouterのいずれについても、公開され確認可能なアフィリエイトや紹介プログラムは見つかりませんでした。本ページの製品リンクはすべて、PromptQuorumに収益をもたらさない通常の開示済みリンクです。状況が変われば、実際のプログラム条件に沿った開示を加えて本ページを更新します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'セルフホストとホスト型ゲートウェイはどう選び分けますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '月間モデル費用の5.5%と、小さな常駐サービスを運用する費用を比べてください。この損益分岐点より下なら、自分の時間を計算に入れるとOpenRouterのほうが安く済みます。上回るなら、絶対額ではセルフホストのLiteLLMが有利です。コンプライアンスの観点でもう一つの基準を加えてください。どのプロバイダーがリクエストを処理したかを示す必要があるなら、計算にかかわらずセルフホストです。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3632,39 +3626,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          {
-            q: '什么是LLM API网关？',
-            a: '它是一个路由层，为你的应用提供调用多个LLM提供方的统一一致API，通常还在原始API之上补充故障转移、成本跟踪与限流。你调用网关，由它处理各提供方特有的格式与认证。只有当生产环境中有不止一个提供方时，这份收益才会真正体现。',
-          },
-          {
-            q: 'LiteLLM真的免费吗？',
-            a: '根据LiteLLM自家价格页在2026年8月的说明，开源核心免费且可自托管，没有许可费用，任何用量下也不对每次请求加价。Enterprise档位（SSO、SCIM、专属支持、气隙部署）按你的请求量以年度定制报价，并包含30天试用。',
-          },
-          {
-            q: 'OpenRouter按请求收费吗？',
-            a: '并非直接按请求收费。OpenRouter的费用发生在给账户充值时：通过Stripe购买额度约收5.5%，最低0.80美元；用加密货币则为5%。另有5%的BYOK费用，仅当每月经BYOK路由的支出在按量付费下超过25,000美元、或在企业版下超过200,000美元时才适用。',
-          },
-          {
-            q: 'Portkey还是一家独立公司吗？',
-            a: '不是。根据Palo Alto Networks自己的新闻稿，该公司已于2026年5月29日完成对Portkey的收购，并正将其作为核心AI网关并入Prisma AIRS安全平台。请把2026年5月之前的任何价格或路线图信息视为可能已经过时。',
-          },
-          {
-            q: '哪个网关支持的提供方最多？',
-            a: '截至2026年8月，OpenRouter在自家网站上列出380多个模型。LiteLLM的文档描述了100多个提供方集成——这是不同的计量单位，因为一个提供方会暴露许多模型。Portkey的网关仓库此前曾宣称超过1,600个LLM，但考虑到此次收购，这个数字应当重新核实。',
-          },
-          {
-            q: '可以自托管Portkey吗？',
-            a: '根据收购前的价格页，Portkey/Prisma AIRS在Enterprise档位提供私有云部署。请直接向Palo Alto Networks确认当前的自托管条款，因为收购后的整合常常在第一年内改变部署选项。',
-          },
-          {
-            q: '这三家有联盟计划吗？',
-            a: '截至2026年8月，未发现LiteLLM、Portkey或OpenRouter有公开且可核查的联盟或推荐计划。本页所有产品链接都是普通的、已声明的链接，不会为PromptQuorum带来任何收益。若情况变化，本页会更新为与实际计划条款一致的披露说明。',
-          },
-          {
-            q: '如何在自托管与托管网关之间做选择？',
-            a: '把每月模型支出的5.5%与运维一个常驻小服务的成本相比较。低于这个盈亏平衡点时，把你的时间算进去后OpenRouter更便宜；高于它时，自托管的LiteLLM在绝对金额上取胜。再加一条合规判据：如果你必须能够说明由哪个提供方处理了某次请求，那么无论算术结果如何都应自托管。',
-          },
-        ],
+            { q: '什么是LLM API网关？', a: '它是一个路由层，为你的应用提供调用多个LLM提供方的统一一致API，通常还在原始API之上补充故障转移、成本跟踪与限流。你调用网关，由它处理各提供方特有的格式与认证。只有当生产环境中有不止一个提供方时，这份收益才会真正体现。' },
+            { q: 'LiteLLM真的免费吗？', a: '根据LiteLLM自家价格页在2026年8月的说明，开源核心免费且可自托管，没有许可费用，任何用量下也不对每次请求加价。Enterprise档位（SSO、SCIM、专属支持、气隙部署）按你的请求量以年度定制报价，并包含30天试用。' },
+            { q: 'OpenRouter按请求收费吗？', a: '并非直接按请求收费。OpenRouter的费用发生在给账户充值时：通过Stripe购买额度约收5.5%，最低0.80美元；用加密货币则为5%。另有5%的BYOK费用，仅当每月经BYOK路由的支出在按量付费下超过25,000美元、或在企业版下超过200,000美元时才适用。' },
+            { q: 'Portkey还是一家独立公司吗？', a: '不是。根据Palo Alto Networks自己的新闻稿，该公司已于2026年5月29日完成对Portkey的收购，并正将其作为核心AI网关并入Prisma AIRS安全平台。请把2026年5月之前的任何价格或路线图信息视为可能已经过时。' },
+            { q: '哪个网关支持的提供方最多？', a: '截至2026年8月，OpenRouter在自家网站上列出380多个模型。LiteLLM的文档描述了100多个提供方集成——这是不同的计量单位，因为一个提供方会暴露许多模型。Portkey的网关仓库此前曾宣称超过1,600个LLM，但考虑到此次收购，这个数字应当重新核实。' },
+            { q: '可以自托管Portkey吗？', a: '根据收购前的价格页，Portkey/Prisma AIRS在Enterprise档位提供私有云部署。请直接向Palo Alto Networks确认当前的自托管条款，因为收购后的整合常常在第一年内改变部署选项。' },
+            { q: '这三家有联盟计划吗？', a: '截至2026年8月，未发现LiteLLM、Portkey或OpenRouter有公开且可核查的联盟或推荐计划。本页所有产品链接都是普通的、已声明的链接，不会为PromptQuorum带来任何收益。若情况变化，本页会更新为与实际计划条款一致的披露说明。' },
+            { q: '如何在自托管与托管网关之间做选择？', a: '把每月模型支出的5.5%与运维一个常驻小服务的成本相比较。低于这个盈亏平衡点时，把你的时间算进去后OpenRouter更便宜；高于它时，自托管的LiteLLM在绝对金额上取胜。再加一条合规判据：如果你必须能够说明由哪个提供方处理了某次请求，那么无论算术结果如何都应自托管。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3729,47 +3699,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '什么是LLM API网关？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '一个路由层，为你的应用提供调用多个LLM提供方的统一API，并在原始API之上补充故障转移、成本跟踪与限流。',
+          {
+            '@type': 'Question',
+            'name': '什么是LLM API网关？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '它是一个路由层，为你的应用提供调用多个LLM提供方的统一一致API，通常还在原始API之上补充故障转移、成本跟踪与限流。你调用网关，由它处理各提供方特有的格式与认证。只有当生产环境中有不止一个提供方时，这份收益才会真正体现。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LiteLLM真的免费吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '根据其2026年8月的官方价格页，开源核心免费且可自托管，没有许可费用，任何用量下也不对每次请求加价。Enterprise档位按年定制报价。',
+          {
+            '@type': 'Question',
+            'name': 'LiteLLM真的免费吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '根据LiteLLM自家价格页在2026年8月的说明，开源核心免费且可自托管，没有许可费用，任何用量下也不对每次请求加价。Enterprise档位（SSO、SCIM、专属支持、气隙部署）按你的请求量以年度定制报价，并包含30天试用。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenRouter按请求收费吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '不。OpenRouter对Stripe额度购买约收5.5%（最低0.80美元）或加密货币5%，另有5%的BYOK费用，仅在每月经BYOK路由的支出超过25,000美元（按量付费）或200,000美元（企业版）后适用。',
+          {
+            '@type': 'Question',
+            'name': 'OpenRouter按请求收费吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '并非直接按请求收费。OpenRouter的费用发生在给账户充值时：通过Stripe购买额度约收5.5%，最低0.80美元；用加密货币则为5%。另有5%的BYOK费用，仅当每月经BYOK路由的支出在按量付费下超过25,000美元、或在企业版下超过200,000美元时才适用。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Portkey还是一家独立公司吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '不是。Palo Alto Networks已于2026年5月29日完成收购，正将Portkey作为AI网关并入Prisma AIRS安全平台。',
+          {
+            '@type': 'Question',
+            'name': 'Portkey还是一家独立公司吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不是。根据Palo Alto Networks自己的新闻稿，该公司已于2026年5月29日完成对Portkey的收购，并正将其作为核心AI网关并入Prisma AIRS安全平台。请把2026年5月之前的任何价格或路线图信息视为可能已经过时。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '如何在自托管与托管LLM网关之间做选择？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '把每月模型支出的5.5%与运维一个常驻小服务的成本相比较。高于这个盈亏平衡点时自托管的LiteLLM取胜；低于它时，把你的时间算进去后OpenRouter更划算。',
+          {
+            '@type': 'Question',
+            'name': '哪个网关支持的提供方最多？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '截至2026年8月，OpenRouter在自家网站上列出380多个模型。LiteLLM的文档描述了100多个提供方集成——这是不同的计量单位，因为一个提供方会暴露许多模型。Portkey的网关仓库此前曾宣称超过1,600个LLM，但考虑到此次收购，这个数字应当重新核实。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '可以自托管Portkey吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '根据收购前的价格页，Portkey/Prisma AIRS在Enterprise档位提供私有云部署。请直接向Palo Alto Networks确认当前的自托管条款，因为收购后的整合常常在第一年内改变部署选项。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '这三家有联盟计划吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '截至2026年8月，未发现LiteLLM、Portkey或OpenRouter有公开且可核查的联盟或推荐计划。本页所有产品链接都是普通的、已声明的链接，不会为PromptQuorum带来任何收益。若情况变化，本页会更新为与实际计划条款一致的披露说明。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何在自托管与托管网关之间做选择？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '把每月模型支出的5.5%与运维一个常驻小服务的成本相比较。低于这个盈亏平衡点时，把你的时间算进去后OpenRouter更便宜；高于它时，自托管的LiteLLM在绝对金额上取胜。再加一条合规判据：如果你必须能够说明由哪个提供方处理了某次请求，那么无论算术结果如何都应自托管。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4169,39 +4163,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'أسئلة شائعة',
         faqs: [
-          {
-            q: 'ما بوابة API لنماذج LLM؟',
-            a: 'هي طبقة توجيه تمنح تطبيقك واجهة برمجية واحدة متسقة لاستدعاء عدّة مزوّدي LLM، وتضيف عادةً فوق الواجهات الأصلية تحويلاً عند الأعطال وتتبّعاً للتكلفة وتحديداً للمعدّل. أنت تستدعي البوابة، وهي تتولّى الصيغ الخاصة بكل مزوّد والمصادقة. ولا تتحقّق الفائدة إلا حين يصبح لديك أكثر من مزوّد في الإنتاج.',
-          },
-          {
-            q: 'هل LiteLLM مجاني فعلاً؟',
-            a: 'النواة مفتوحة المصدر مجانية وذاتية الاستضافة بلا رسوم ترخيص، وفق صفحة أسعار LiteLLM نفسها في أغسطس 2026. ولا يوجد هامش لكل طلب عند أي حجم. أما خطة المؤسسات — تسجيل الدخول الموحّد وSCIM والدعم المخصّص والنشر المعزول عن الشبكة — فتُسعَّر سنوياً بالطلب بحسب حجم طلباتك وتشمل تجربة لمدة 30 يوماً.',
-          },
-          {
-            q: 'هل يفرض OpenRouter رسماً على كل طلب؟',
-            a: 'ليس مباشرةً. فرسم OpenRouter يقع على شحن الحساب: نحو 5.5% على مشتريات الرصيد عبر Stripe بحد أدنى 0.80 دولار، أو 5% عبر العملات الرقمية. أما رسم BYOK المنفصل البالغ 5% فينطبق فقط حين يتجاوز الإنفاق الشهري المُوجَّه عبر BYOK حاجز 25,000 دولار في الدفع حسب الاستخدام، أو 200,000 دولار في خطة المؤسسات.',
-          },
-          {
-            q: 'هل ما زال Portkey شركة مستقلة؟',
-            a: 'لا. فقد أتمّت Palo Alto Networks الاستحواذ على Portkey في 29 مايو 2026 وتدمجه بوصفه بوابة الذكاء الاصطناعي الأساسية داخل منصّة الأمن Prisma AIRS، وفق البيان الصحفي لـPalo Alto Networks نفسها. وتعامل مع أي معلومات أسعار أو خارطة طريق سابقة لمايو 2026 على أنها قد تكون تجاوزها الزمن.',
-          },
-          {
-            q: 'أي بوابة تدعم أكبر عدد من المزوّدين؟',
-            a: 'يعرض OpenRouter أكثر من 380 نموذجاً على موقعه في أغسطس 2026. وتصف وثائق LiteLLM أكثر من 100 تكامل مع مزوّدين — وهي وحدة قياس مختلفة، إذ يعرض المزوّد الواحد نماذج كثيرة. أما مستودع بوابة Portkey فقد أعلن سابقاً أكثر من 1600 نموذج، وهو رقم ينبغي إعادة التحقّق منه في ضوء الاستحواذ.',
-          },
-          {
-            q: 'هل يمكنني استضافة Portkey ذاتياً؟',
-            a: 'كان Portkey/Prisma AIRS يوفّر نشراً على سحابة خاصة في خطة المؤسسات وفق صفحات الأسعار السابقة للاستحواذ. تأكّد من شروط الاستضافة الذاتية الحالية مباشرةً لدى Palo Alto Networks، فعمليات الدمج بعد الاستحواذ كثيراً ما تغيّر خيارات النشر في السنة الأولى.',
-          },
-          {
-            q: 'هل لدى أي من الثلاثة برنامج إحالة؟',
-            a: 'لم يُعثر على أي برنامج إحالة أو شراكة عام وقابل للتحقّق لـLiteLLM أو Portkey أو OpenRouter حتى أغسطس 2026. وكل روابط المنتجات في هذه الصفحة روابط عادية معلَنة لا تدرّ على PromptQuorum شيئاً. وإن تغيّر ذلك فستُحدَّث الصفحة بإفصاح يطابق شروط البرنامج الفعلية.',
-          },
-          {
-            q: 'كيف أختار بين الاستضافة الذاتية والبوابة المُستضافة؟',
-            a: 'قارن نسبة 5.5% من إنفاقك الشهري على النماذج بتكلفة تشغيل خدمة صغيرة دائمة. فدون نقطة التعادل يكون OpenRouter أرخص متى احتسبت وقتك؛ وفوقها يتفوّق LiteLLM ذاتي الاستضافة بالقيمة المطلقة. وأضف اختباراً ثانياً للامتثال: إن لزمك أن تُثبت أي مزوّد عالج طلباً بعينه، فاستضف ذاتياً بصرف النظر عن الحساب.',
-          },
-        ],
+            { q: 'ما بوابة API لنماذج LLM؟', a: 'هي طبقة توجيه تمنح تطبيقك واجهة برمجية واحدة متسقة لاستدعاء عدّة مزوّدي LLM، وتضيف عادةً فوق الواجهات الأصلية تحويلاً عند الأعطال وتتبّعاً للتكلفة وتحديداً للمعدّل. أنت تستدعي البوابة، وهي تتولّى الصيغ الخاصة بكل مزوّد والمصادقة. ولا تتحقّق الفائدة إلا حين يصبح لديك أكثر من مزوّد في الإنتاج.' },
+            { q: 'هل LiteLLM مجاني فعلاً؟', a: 'النواة مفتوحة المصدر مجانية وذاتية الاستضافة بلا رسوم ترخيص، وفق صفحة أسعار LiteLLM نفسها في أغسطس 2026. ولا يوجد هامش لكل طلب عند أي حجم. أما خطة المؤسسات — تسجيل الدخول الموحّد وSCIM والدعم المخصّص والنشر المعزول عن الشبكة — فتُسعَّر سنوياً بالطلب بحسب حجم طلباتك وتشمل تجربة لمدة 30 يوماً.' },
+            { q: 'هل يفرض OpenRouter رسماً على كل طلب؟', a: 'ليس مباشرةً. فرسم OpenRouter يقع على شحن الحساب: نحو 5.5% على مشتريات الرصيد عبر Stripe بحد أدنى 0.80 دولار، أو 5% عبر العملات الرقمية. أما رسم BYOK المنفصل البالغ 5% فينطبق فقط حين يتجاوز الإنفاق الشهري المُوجَّه عبر BYOK حاجز 25,000 دولار في الدفع حسب الاستخدام، أو 200,000 دولار في خطة المؤسسات.' },
+            { q: 'هل ما زال Portkey شركة مستقلة؟', a: 'لا. فقد أتمّت Palo Alto Networks الاستحواذ على Portkey في 29 مايو 2026 وتدمجه بوصفه بوابة الذكاء الاصطناعي الأساسية داخل منصّة الأمن Prisma AIRS، وفق البيان الصحفي لـPalo Alto Networks نفسها. وتعامل مع أي معلومات أسعار أو خارطة طريق سابقة لمايو 2026 على أنها قد تكون تجاوزها الزمن.' },
+            { q: 'أي بوابة تدعم أكبر عدد من المزوّدين؟', a: 'يعرض OpenRouter أكثر من 380 نموذجاً على موقعه في أغسطس 2026. وتصف وثائق LiteLLM أكثر من 100 تكامل مع مزوّدين — وهي وحدة قياس مختلفة، إذ يعرض المزوّد الواحد نماذج كثيرة. أما مستودع بوابة Portkey فقد أعلن سابقاً أكثر من 1600 نموذج، وهو رقم ينبغي إعادة التحقّق منه في ضوء الاستحواذ.' },
+            { q: 'هل يمكنني استضافة Portkey ذاتياً؟', a: 'كان Portkey/Prisma AIRS يوفّر نشراً على سحابة خاصة في خطة المؤسسات وفق صفحات الأسعار السابقة للاستحواذ. تأكّد من شروط الاستضافة الذاتية الحالية مباشرةً لدى Palo Alto Networks، فعمليات الدمج بعد الاستحواذ كثيراً ما تغيّر خيارات النشر في السنة الأولى.' },
+            { q: 'هل لدى أي من الثلاثة برنامج إحالة؟', a: 'لم يُعثر على أي برنامج إحالة أو شراكة عام وقابل للتحقّق لـLiteLLM أو Portkey أو OpenRouter حتى أغسطس 2026. وكل روابط المنتجات في هذه الصفحة روابط عادية معلَنة لا تدرّ على PromptQuorum شيئاً. وإن تغيّر ذلك فستُحدَّث الصفحة بإفصاح يطابق شروط البرنامج الفعلية.' },
+            { q: 'كيف أختار بين الاستضافة الذاتية والبوابة المُستضافة؟', a: 'قارن نسبة 5.5% من إنفاقك الشهري على النماذج بتكلفة تشغيل خدمة صغيرة دائمة. فدون نقطة التعادل يكون OpenRouter أرخص متى احتسبت وقتك؛ وفوقها يتفوّق LiteLLM ذاتي الاستضافة بالقيمة المطلقة. وأضف اختباراً ثانياً للامتثال: إن لزمك أن تُثبت أي مزوّد عالج طلباً بعينه، فاستضف ذاتياً بصرف النظر عن الحساب.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4266,47 +4236,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما بوابة API لنماذج LLM؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'طبقة توجيه تمنح تطبيقك واجهة برمجية واحدة متسقة لاستدعاء عدّة مزوّدي LLM، وتضيف فوق الواجهات الأصلية تحويلاً عند الأعطال وتتبّعاً للتكلفة وتحديداً للمعدّل.',
+          {
+            '@type': 'Question',
+            'name': 'ما بوابة API لنماذج LLM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'هي طبقة توجيه تمنح تطبيقك واجهة برمجية واحدة متسقة لاستدعاء عدّة مزوّدي LLM، وتضيف عادةً فوق الواجهات الأصلية تحويلاً عند الأعطال وتتبّعاً للتكلفة وتحديداً للمعدّل. أنت تستدعي البوابة، وهي تتولّى الصيغ الخاصة بكل مزوّد والمصادقة. ولا تتحقّق الفائدة إلا حين يصبح لديك أكثر من مزوّد في الإنتاج.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل LiteLLM مجاني فعلاً؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'النواة مفتوحة المصدر مجانية وذاتية الاستضافة بلا رسوم ترخيص وبلا هامش لكل طلب عند أي حجم، وفق صفحة أسعارها في أغسطس 2026. أما خطة المؤسسات فتُسعَّر سنوياً بالطلب.',
+          {
+            '@type': 'Question',
+            'name': 'هل LiteLLM مجاني فعلاً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'النواة مفتوحة المصدر مجانية وذاتية الاستضافة بلا رسوم ترخيص، وفق صفحة أسعار LiteLLM نفسها في أغسطس 2026. ولا يوجد هامش لكل طلب عند أي حجم. أما خطة المؤسسات — تسجيل الدخول الموحّد وSCIM والدعم المخصّص والنشر المعزول عن الشبكة — فتُسعَّر سنوياً بالطلب بحسب حجم طلباتك وتشمل تجربة لمدة 30 يوماً.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يفرض OpenRouter رسماً على كل طلب؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا. يقتطع OpenRouter نحو 5.5% على مشتريات الرصيد عبر Stripe (بحد أدنى 0.80 دولار) أو 5% بالعملات الرقمية، إضافة إلى رسم BYOK بنسبة 5% فقط فوق 25,000 دولار شهرياً من الإنفاق المُوجَّه عبر BYOK، أو 200,000 دولار شهرياً للمؤسسات.',
+          {
+            '@type': 'Question',
+            'name': 'هل يفرض OpenRouter رسماً على كل طلب؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس مباشرةً. فرسم OpenRouter يقع على شحن الحساب: نحو 5.5% على مشتريات الرصيد عبر Stripe بحد أدنى 0.80 دولار، أو 5% عبر العملات الرقمية. أما رسم BYOK المنفصل البالغ 5% فينطبق فقط حين يتجاوز الإنفاق الشهري المُوجَّه عبر BYOK حاجز 25,000 دولار في الدفع حسب الاستخدام، أو 200,000 دولار في خطة المؤسسات.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل ما زال Portkey شركة مستقلة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا. أتمّت Palo Alto Networks الاستحواذ في 29 مايو 2026 وتدمج Portkey بوصفه بوابة الذكاء الاصطناعي داخل منصّة الأمن Prisma AIRS.',
+          {
+            '@type': 'Question',
+            'name': 'هل ما زال Portkey شركة مستقلة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. فقد أتمّت Palo Alto Networks الاستحواذ على Portkey في 29 مايو 2026 وتدمجه بوصفه بوابة الذكاء الاصطناعي الأساسية داخل منصّة الأمن Prisma AIRS، وفق البيان الصحفي لـPalo Alto Networks نفسها. وتعامل مع أي معلومات أسعار أو خارطة طريق سابقة لمايو 2026 على أنها قد تكون تجاوزها الزمن.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كيف أختار بين الاستضافة الذاتية وبوابة LLM مُستضافة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'قارن نسبة 5.5% من إنفاقك الشهري على النماذج بتكلفة تشغيل خدمة صغيرة دائمة. ففوق نقطة التعادل يتفوّق LiteLLM ذاتي الاستضافة، ودونها يتفوّق OpenRouter متى احتسبت وقتك.',
+          {
+            '@type': 'Question',
+            'name': 'أي بوابة تدعم أكبر عدد من المزوّدين؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعرض OpenRouter أكثر من 380 نموذجاً على موقعه في أغسطس 2026. وتصف وثائق LiteLLM أكثر من 100 تكامل مع مزوّدين — وهي وحدة قياس مختلفة، إذ يعرض المزوّد الواحد نماذج كثيرة. أما مستودع بوابة Portkey فقد أعلن سابقاً أكثر من 1600 نموذج، وهو رقم ينبغي إعادة التحقّق منه في ضوء الاستحواذ.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استضافة Portkey ذاتياً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'كان Portkey/Prisma AIRS يوفّر نشراً على سحابة خاصة في خطة المؤسسات وفق صفحات الأسعار السابقة للاستحواذ. تأكّد من شروط الاستضافة الذاتية الحالية مباشرةً لدى Palo Alto Networks، فعمليات الدمج بعد الاستحواذ كثيراً ما تغيّر خيارات النشر في السنة الأولى.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لدى أي من الثلاثة برنامج إحالة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لم يُعثر على أي برنامج إحالة أو شراكة عام وقابل للتحقّق لـLiteLLM أو Portkey أو OpenRouter حتى أغسطس 2026. وكل روابط المنتجات في هذه الصفحة روابط عادية معلَنة لا تدرّ على PromptQuorum شيئاً. وإن تغيّر ذلك فستُحدَّث الصفحة بإفصاح يطابق شروط البرنامج الفعلية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أختار بين الاستضافة الذاتية والبوابة المُستضافة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'قارن نسبة 5.5% من إنفاقك الشهري على النماذج بتكلفة تشغيل خدمة صغيرة دائمة. فدون نقطة التعادل يكون OpenRouter أرخص متى احتسبت وقتك؛ وفوقها يتفوّق LiteLLM ذاتي الاستضافة بالقيمة المطلقة. وأضف اختباراً ثانياً للامتثال: إن لزمك أن تُثبت أي مزوّد عالج طلباً بعينه، فاستضف ذاتياً بصرف النظر عن الحساب.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4706,39 +4700,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'LLM API 게이트웨이란 무엇입니까?',
-            a: '여러 LLM 공급자를 호출하기 위한 일관된 단일 API를 애플리케이션에 제공하는 라우팅 계층이며, 대개 원래 API 위에 장애 대응, 비용 추적, 레이트 리밋을 더합니다. 여러분은 게이트웨이를 호출하고, 공급자별 형식과 인증은 게이트웨이가 처리합니다. 이 이점은 프로덕션에 공급자가 둘 이상일 때에만 실현됩니다.',
-          },
-          {
-            q: 'LiteLLM은 정말 무료입니까?',
-            a: '2026년 8월 기준 LiteLLM 자체 가격 페이지에 따르면 오픈소스 코어는 무료이자 셀프 호스팅이며 라이선스 비용이 없습니다. 어떤 사용량에서도 요청당 가산이 없습니다. Enterprise 요금제(SSO, SCIM, 전담 지원, 망 분리 배포)는 요청 규모에 맞춘 연간 맞춤 가격이며 30일 체험이 포함됩니다.',
-          },
-          {
-            q: 'OpenRouter는 요청 건당 과금합니까?',
-            a: '직접 과금하지는 않습니다. OpenRouter의 수수료는 계정 충전에 부과되며, Stripe 크레딧 구매 시 약 5.5%(최소 0.80달러), 암호화폐는 5%입니다. 별도의 5% BYOK 수수료는 BYOK로 라우팅된 월 지출이 종량제에서 25,000달러, 엔터프라이즈에서 200,000달러를 넘을 때에만 적용됩니다.',
-          },
-          {
-            q: 'Portkey는 아직 독립 회사입니까?',
-            a: '아닙니다. Palo Alto Networks 자체 보도자료에 따르면 이 회사는 2026년 5월 29일 Portkey 인수를 완료했으며, 이를 보안 플랫폼 Prisma AIRS의 핵심 AI 게이트웨이로 통합하고 있습니다. 2026년 5월 이전의 가격이나 로드맵 정보는 낡았을 수 있는 것으로 다루십시오.',
-          },
-          {
-            q: '가장 많은 공급자를 지원하는 게이트웨이는 무엇입니까?',
-            a: 'OpenRouter는 2026년 8월 기준 자체 사이트에 380개 이상의 모델을 게시하고 있습니다. LiteLLM 문서는 100개 이상의 공급자 연동을 설명하는데, 공급자 하나가 여러 모델을 제공하므로 단위가 다릅니다. Portkey의 게이트웨이 저장소는 이전에 1,600개 이상의 LLM을 표방했으나, 인수를 고려하면 다시 확인해야 할 수치입니다.',
-          },
-          {
-            q: 'Portkey를 셀프 호스팅할 수 있습니까?',
-            a: '인수 이전 가격 페이지에 따르면 Portkey/Prisma AIRS는 Enterprise 요금제에서 프라이빗 클라우드 배포를 제공했습니다. 인수 후 통합은 첫해에 배포 옵션을 자주 바꾸므로, 현행 셀프 호스팅 조건은 Palo Alto Networks에 직접 확인하십시오.',
-          },
-          {
-            q: '세 곳 중 제휴 프로그램이 있는 곳이 있습니까?',
-            a: '2026년 8월 기준 LiteLLM, Portkey, OpenRouter 어디에서도 공개되고 확인 가능한 제휴나 추천 프로그램을 찾지 못했습니다. 이 페이지의 모든 제품 링크는 PromptQuorum에 아무런 수익도 발생시키지 않는 일반 공개 링크입니다. 상황이 바뀌면 실제 프로그램 조건에 맞는 고지를 담아 이 페이지를 갱신하겠습니다.',
-          },
-          {
-            q: '셀프 호스팅과 호스팅형 게이트웨이 중 무엇을 골라야 합니까?',
-            a: '월 모델 지출의 5.5%를 상시 구동되는 작은 서비스의 운영 비용과 비교하십시오. 손익분기점 아래에서는 여러분의 시간까지 계산에 넣으면 OpenRouter가 더 저렴하고, 그 위에서는 셀프 호스팅 LiteLLM이 절대 금액에서 앞섭니다. 컴플라이언스 기준을 하나 더 더하십시오. 어느 공급자가 요청을 처리했는지 밝혀야 한다면 계산과 무관하게 셀프 호스팅입니다.',
-          },
-        ],
+            { q: 'LLM API 게이트웨이란 무엇입니까?', a: '여러 LLM 공급자를 호출하기 위한 일관된 단일 API를 애플리케이션에 제공하는 라우팅 계층이며, 대개 원래 API 위에 장애 대응, 비용 추적, 레이트 리밋을 더합니다. 여러분은 게이트웨이를 호출하고, 공급자별 형식과 인증은 게이트웨이가 처리합니다. 이 이점은 프로덕션에 공급자가 둘 이상일 때에만 실현됩니다.' },
+            { q: 'LiteLLM은 정말 무료입니까?', a: '2026년 8월 기준 LiteLLM 자체 가격 페이지에 따르면 오픈소스 코어는 무료이자 셀프 호스팅이며 라이선스 비용이 없습니다. 어떤 사용량에서도 요청당 가산이 없습니다. Enterprise 요금제(SSO, SCIM, 전담 지원, 망 분리 배포)는 요청 규모에 맞춘 연간 맞춤 가격이며 30일 체험이 포함됩니다.' },
+            { q: 'OpenRouter는 요청 건당 과금합니까?', a: '직접 과금하지는 않습니다. OpenRouter의 수수료는 계정 충전에 부과되며, Stripe 크레딧 구매 시 약 5.5%(최소 0.80달러), 암호화폐는 5%입니다. 별도의 5% BYOK 수수료는 BYOK로 라우팅된 월 지출이 종량제에서 25,000달러, 엔터프라이즈에서 200,000달러를 넘을 때에만 적용됩니다.' },
+            { q: 'Portkey는 아직 독립 회사입니까?', a: '아닙니다. Palo Alto Networks 자체 보도자료에 따르면 이 회사는 2026년 5월 29일 Portkey 인수를 완료했으며, 이를 보안 플랫폼 Prisma AIRS의 핵심 AI 게이트웨이로 통합하고 있습니다. 2026년 5월 이전의 가격이나 로드맵 정보는 낡았을 수 있는 것으로 다루십시오.' },
+            { q: '가장 많은 공급자를 지원하는 게이트웨이는 무엇입니까?', a: 'OpenRouter는 2026년 8월 기준 자체 사이트에 380개 이상의 모델을 게시하고 있습니다. LiteLLM 문서는 100개 이상의 공급자 연동을 설명하는데, 공급자 하나가 여러 모델을 제공하므로 단위가 다릅니다. Portkey의 게이트웨이 저장소는 이전에 1,600개 이상의 LLM을 표방했으나, 인수를 고려하면 다시 확인해야 할 수치입니다.' },
+            { q: 'Portkey를 셀프 호스팅할 수 있습니까?', a: '인수 이전 가격 페이지에 따르면 Portkey/Prisma AIRS는 Enterprise 요금제에서 프라이빗 클라우드 배포를 제공했습니다. 인수 후 통합은 첫해에 배포 옵션을 자주 바꾸므로, 현행 셀프 호스팅 조건은 Palo Alto Networks에 직접 확인하십시오.' },
+            { q: '세 곳 중 제휴 프로그램이 있는 곳이 있습니까?', a: '2026년 8월 기준 LiteLLM, Portkey, OpenRouter 어디에서도 공개되고 확인 가능한 제휴나 추천 프로그램을 찾지 못했습니다. 이 페이지의 모든 제품 링크는 PromptQuorum에 아무런 수익도 발생시키지 않는 일반 공개 링크입니다. 상황이 바뀌면 실제 프로그램 조건에 맞는 고지를 담아 이 페이지를 갱신하겠습니다.' },
+            { q: '셀프 호스팅과 호스팅형 게이트웨이 중 무엇을 골라야 합니까?', a: '월 모델 지출의 5.5%를 상시 구동되는 작은 서비스의 운영 비용과 비교하십시오. 손익분기점 아래에서는 여러분의 시간까지 계산에 넣으면 OpenRouter가 더 저렴하고, 그 위에서는 셀프 호스팅 LiteLLM이 절대 금액에서 앞섭니다. 컴플라이언스 기준을 하나 더 더하십시오. 어느 공급자가 요청을 처리했는지 밝혀야 한다면 계산과 무관하게 셀프 호스팅입니다.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4803,47 +4773,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'LLM API 게이트웨이란 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '여러 LLM 공급자를 호출하기 위한 일관된 단일 API를 애플리케이션에 제공하고, 원래 API 위에 장애 대응·비용 추적·레이트 리밋을 더하는 라우팅 계층입니다.',
+          {
+            '@type': 'Question',
+            'name': 'LLM API 게이트웨이란 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '여러 LLM 공급자를 호출하기 위한 일관된 단일 API를 애플리케이션에 제공하는 라우팅 계층이며, 대개 원래 API 위에 장애 대응, 비용 추적, 레이트 리밋을 더합니다. 여러분은 게이트웨이를 호출하고, 공급자별 형식과 인증은 게이트웨이가 처리합니다. 이 이점은 프로덕션에 공급자가 둘 이상일 때에만 실현됩니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LiteLLM은 정말 무료입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '2026년 8월 기준 공식 가격 페이지에 따르면 오픈소스 코어는 무료이자 셀프 호스팅이며, 라이선스 비용도 요청당 가산도 없습니다. Enterprise 요금제는 연간 맞춤 가격입니다.',
+          {
+            '@type': 'Question',
+            'name': 'LiteLLM은 정말 무료입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 8월 기준 LiteLLM 자체 가격 페이지에 따르면 오픈소스 코어는 무료이자 셀프 호스팅이며 라이선스 비용이 없습니다. 어떤 사용량에서도 요청당 가산이 없습니다. Enterprise 요금제(SSO, SCIM, 전담 지원, 망 분리 배포)는 요청 규모에 맞춘 연간 맞춤 가격이며 30일 체험이 포함됩니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'OpenRouter는 요청 건당 과금합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '아닙니다. Stripe 크레딧 구매에 약 5.5%(최소 0.80달러) 또는 암호화폐 5%를 받으며, 5% BYOK 수수료는 BYOK 라우팅 월 지출이 종량제 25,000달러 또는 엔터프라이즈 200,000달러를 넘을 때에만 적용됩니다.',
+          {
+            '@type': 'Question',
+            'name': 'OpenRouter는 요청 건당 과금합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '직접 과금하지는 않습니다. OpenRouter의 수수료는 계정 충전에 부과되며, Stripe 크레딧 구매 시 약 5.5%(최소 0.80달러), 암호화폐는 5%입니다. 별도의 5% BYOK 수수료는 BYOK로 라우팅된 월 지출이 종량제에서 25,000달러, 엔터프라이즈에서 200,000달러를 넘을 때에만 적용됩니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Portkey는 아직 독립 회사입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '아닙니다. Palo Alto Networks가 2026년 5월 29일 인수를 완료했으며, Portkey를 보안 플랫폼 Prisma AIRS 안의 AI 게이트웨이로 통합하고 있습니다.',
+          {
+            '@type': 'Question',
+            'name': 'Portkey는 아직 독립 회사입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. Palo Alto Networks 자체 보도자료에 따르면 이 회사는 2026년 5월 29일 Portkey 인수를 완료했으며, 이를 보안 플랫폼 Prisma AIRS의 핵심 AI 게이트웨이로 통합하고 있습니다. 2026년 5월 이전의 가격이나 로드맵 정보는 낡았을 수 있는 것으로 다루십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '셀프 호스팅과 호스팅형 LLM 게이트웨이 중 무엇을 골라야 합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '월 모델 지출의 5.5%를 상시 구동되는 작은 서비스의 운영 비용과 비교하십시오. 손익분기점 위에서는 셀프 호스팅 LiteLLM이, 아래에서는 여러분의 시간까지 넣으면 OpenRouter가 유리합니다.',
+          {
+            '@type': 'Question',
+            'name': '가장 많은 공급자를 지원하는 게이트웨이는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OpenRouter는 2026년 8월 기준 자체 사이트에 380개 이상의 모델을 게시하고 있습니다. LiteLLM 문서는 100개 이상의 공급자 연동을 설명하는데, 공급자 하나가 여러 모델을 제공하므로 단위가 다릅니다. Portkey의 게이트웨이 저장소는 이전에 1,600개 이상의 LLM을 표방했으나, 인수를 고려하면 다시 확인해야 할 수치입니다.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Portkey를 셀프 호스팅할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '인수 이전 가격 페이지에 따르면 Portkey/Prisma AIRS는 Enterprise 요금제에서 프라이빗 클라우드 배포를 제공했습니다. 인수 후 통합은 첫해에 배포 옵션을 자주 바꾸므로, 현행 셀프 호스팅 조건은 Palo Alto Networks에 직접 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '세 곳 중 제휴 프로그램이 있는 곳이 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 8월 기준 LiteLLM, Portkey, OpenRouter 어디에서도 공개되고 확인 가능한 제휴나 추천 프로그램을 찾지 못했습니다. 이 페이지의 모든 제품 링크는 PromptQuorum에 아무런 수익도 발생시키지 않는 일반 공개 링크입니다. 상황이 바뀌면 실제 프로그램 조건에 맞는 고지를 담아 이 페이지를 갱신하겠습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '셀프 호스팅과 호스팅형 게이트웨이 중 무엇을 골라야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '월 모델 지출의 5.5%를 상시 구동되는 작은 서비스의 운영 비용과 비교하십시오. 손익분기점 아래에서는 여러분의 시간까지 계산에 넣으면 OpenRouter가 더 저렴하고, 그 위에서는 셀프 호스팅 LiteLLM이 절대 금액에서 앞섭니다. 컴플라이언스 기준을 하나 더 더하십시오. 어느 공급자가 요청을 처리했는지 밝혀야 한다면 계산과 무관하게 셀프 호스팅입니다.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

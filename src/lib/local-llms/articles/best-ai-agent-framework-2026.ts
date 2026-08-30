@@ -388,39 +388,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently asked questions',
         faqs: [
-          {
-            q: 'What is the best AI agent framework in 2026?',
-            a: 'LangGraph for production agents needing explicit state and auditability, CrewAI for the fastest route to a working prototype, Microsoft Agent Framework for .NET and Azure teams, and n8n where non-engineers build the workflows. There is no single winner because each solves a different constraint.',
-          },
-          {
-            q: 'Is Microsoft AutoGen still maintained?',
-            a: 'No, not in the sense of active development. The repository carries a maintenance-mode banner stating that AutoGen will not receive new features or enhancements and is community managed going forward, and it directs new users to Microsoft Agent Framework. Its last substantive commits were in early 2026. Microsoft publishes an official migration guide from AutoGen to Agent Framework.',
-          },
-          {
-            q: 'How many GitHub stars does AG2 have?',
-            a: 'AG2, the community fork of AutoGen, has about 4,900 stars and is Apache-2.0 licensed. The roughly 60,000-star figure often attributed to AG2 actually belongs to the original `microsoft/autogen` repository, which is in maintenance mode. The fork is actively developed but much smaller than commonly reported.',
-          },
-          {
-            q: 'Is LangGraph free to use?',
-            a: 'Yes. The LangGraph library is MIT-licensed and free to self-host with no execution limits. The paid layer is LangSmith and the deployment platform: a Developer tier at $0 per seat with up to 5,000 base traces a month, Plus at $39 per seat per month with up to 10,000, and custom Enterprise pricing. Compute and storage beyond the allowance bill separately.',
-          },
-          {
-            q: 'How much does CrewAI cost?',
-            a: 'The CrewAI library is MIT-licensed and free. Its hosted Basic plan is free and includes 50 workflow executions a month with a visual editor and GitHub integration. Above that, only an Enterprise tier exists and CrewAI publishes no dollar figure for it, so you have to contact sales.',
-          },
-          {
-            q: 'Is n8n open source?',
-            a: 'Not in the OSI sense. n8n uses the Sustainable Use License, which makes the source available and the Community Edition free to self-host, but restricts reselling n8n itself. LangGraph, CrewAI and Microsoft Agent Framework are all MIT-licensed, which carries no such restriction. Read the licence text before building a commercial product on n8n.',
-          },
-          {
-            q: 'Do any of these have an affiliate programme?',
-            a: 'Only n8n. It pays 30% of net earnings on n8n Cloud referrals for 12 months, issued monthly via PayPal once your balance reaches 100 euros, and paid advertising is explicitly prohibited under the programme terms. It applies to Cloud subscriptions only, not to the free self-hosted Community Edition. We found no public programme for LangChain, CrewAI or Microsoft. PromptQuorum is not enrolled in any of them.',
-          },
-          {
-            q: 'Do I need Kubernetes to self-host these?',
-            a: 'No. LangGraph, CrewAI and Microsoft Agent Framework run as ordinary application processes and deploy however you already deploy services. n8n\'s Community Edition runs as a single Docker container for small workloads; scaled setups need more infrastructure, which is part of what the paid tiers provide pre-built.',
-          },
-        ],
+            { q: 'What is the best AI agent framework in 2026?', a: 'LangGraph for production agents needing explicit state and auditability, CrewAI for the fastest route to a working prototype, Microsoft Agent Framework for .NET and Azure teams, and n8n where non-engineers build the workflows. There is no single winner because each solves a different constraint.' },
+            { q: 'Is Microsoft AutoGen still maintained?', a: 'No, not in the sense of active development. The repository carries a maintenance-mode banner stating that AutoGen will not receive new features or enhancements and is community managed going forward, and it directs new users to Microsoft Agent Framework. Its last substantive commits were in early 2026. Microsoft publishes an official migration guide from AutoGen to Agent Framework.' },
+            { q: 'How many GitHub stars does AG2 have?', a: 'AG2, the community fork of AutoGen, has about 4,900 stars and is Apache-2.0 licensed. The roughly 60,000-star figure often attributed to AG2 actually belongs to the original `microsoft/autogen` repository, which is in maintenance mode. The fork is actively developed but much smaller than commonly reported.' },
+            { q: 'Is LangGraph free to use?', a: 'Yes. The LangGraph library is MIT-licensed and free to self-host with no execution limits. The paid layer is LangSmith and the deployment platform: a Developer tier at $0 per seat with up to 5,000 base traces a month, Plus at $39 per seat per month with up to 10,000, and custom Enterprise pricing. Compute and storage beyond the allowance bill separately.' },
+            { q: 'How much does CrewAI cost?', a: 'The CrewAI library is MIT-licensed and free. Its hosted Basic plan is free and includes 50 workflow executions a month with a visual editor and GitHub integration. Above that, only an Enterprise tier exists and CrewAI publishes no dollar figure for it, so you have to contact sales.' },
+            { q: 'Is n8n open source?', a: 'Not in the OSI sense. n8n uses the Sustainable Use License, which makes the source available and the Community Edition free to self-host, but restricts reselling n8n itself. LangGraph, CrewAI and Microsoft Agent Framework are all MIT-licensed, which carries no such restriction. Read the licence text before building a commercial product on n8n.' },
+            { q: 'Do any of these have an affiliate programme?', a: 'Only n8n. It pays 30% of net earnings on n8n Cloud referrals for 12 months, issued monthly via PayPal once your balance reaches 100 euros, and paid advertising is explicitly prohibited under the programme terms. It applies to Cloud subscriptions only, not to the free self-hosted Community Edition. We found no public programme for LangChain, CrewAI or Microsoft. PromptQuorum is not enrolled in any of them.' },
+            { q: 'Do I need Kubernetes to self-host these?', a: 'No. LangGraph, CrewAI and Microsoft Agent Framework run as ordinary application processes and deploy however you already deploy services. n8n\'s Community Edition runs as a single Docker container for small workloads; scaled setups need more infrastructure, which is part of what the paid tiers provide pre-built.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -490,47 +466,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best AI agent framework in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LangGraph for production agents needing explicit state, CrewAI for the fastest prototype, Microsoft Agent Framework for .NET and Azure teams, and n8n where non-engineers build the workflows.',
+          {
+            '@type': 'Question',
+            'name': 'What is the best AI agent framework in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LangGraph for production agents needing explicit state and auditability, CrewAI for the fastest route to a working prototype, Microsoft Agent Framework for .NET and Azure teams, and n8n where non-engineers build the workflows. There is no single winner because each solves a different constraint.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Microsoft AutoGen still maintained?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. The repository carries a maintenance-mode banner stating AutoGen will not receive new features and is community managed, and directs new users to Microsoft Agent Framework, for which Microsoft publishes an official migration guide.',
+          {
+            '@type': 'Question',
+            'name': 'Is Microsoft AutoGen still maintained?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No, not in the sense of active development. The repository carries a maintenance-mode banner stating that AutoGen will not receive new features or enhancements and is community managed going forward, and it directs new users to Microsoft Agent Framework. Its last substantive commits were in early 2026. Microsoft publishes an official migration guide from AutoGen to Agent Framework.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'How many GitHub stars does AG2 have?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AG2, the community fork of AutoGen, has about 4,900 stars and is Apache-2.0 licensed. The roughly 60,000-star figure often attributed to it belongs to the original microsoft/autogen repository.',
+          {
+            '@type': 'Question',
+            'name': 'How many GitHub stars does AG2 have?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AG2, the community fork of AutoGen, has about 4,900 stars and is Apache-2.0 licensed. The roughly 60,000-star figure often attributed to AG2 actually belongs to the original `microsoft/autogen` repository, which is in maintenance mode. The fork is actively developed but much smaller than commonly reported.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is n8n open source?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Not by the OSI definition. n8n uses the Sustainable Use License, which is source-available and free to self-host but restricts reselling n8n itself. LangGraph, CrewAI and Microsoft Agent Framework are MIT-licensed.',
+          {
+            '@type': 'Question',
+            'name': 'Is LangGraph free to use?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. The LangGraph library is MIT-licensed and free to self-host with no execution limits. The paid layer is LangSmith and the deployment platform: a Developer tier at $0 per seat with up to 5,000 base traces a month, Plus at $39 per seat per month with up to 10,000, and custom Enterprise pricing. Compute and storage beyond the allowance bill separately.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do any AI agent frameworks have an affiliate programme?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Only n8n, which pays 30% of net earnings on Cloud referrals for 12 months via PayPal above a 100 euro threshold, with paid advertising prohibited. No public programme was found for LangChain, CrewAI or Microsoft.',
+          {
+            '@type': 'Question',
+            'name': 'How much does CrewAI cost?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The CrewAI library is MIT-licensed and free. Its hosted Basic plan is free and includes 50 workflow executions a month with a visual editor and GitHub integration. Above that, only an Enterprise tier exists and CrewAI publishes no dollar figure for it, so you have to contact sales.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Is n8n open source?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not in the OSI sense. n8n uses the Sustainable Use License, which makes the source available and the Community Edition free to self-host, but restricts reselling n8n itself. LangGraph, CrewAI and Microsoft Agent Framework are all MIT-licensed, which carries no such restriction. Read the licence text before building a commercial product on n8n.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do any of these have an affiliate programme?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Only n8n. It pays 30% of net earnings on n8n Cloud referrals for 12 months, issued monthly via PayPal once your balance reaches 100 euros, and paid advertising is explicitly prohibited under the programme terms. It applies to Cloud subscriptions only, not to the free self-hosted Community Edition. We found no public programme for LangChain, CrewAI or Microsoft. PromptQuorum is not enrolled in any of them.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I need Kubernetes to self-host these?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. LangGraph, CrewAI and Microsoft Agent Framework run as ordinary application processes and deploy however you already deploy services. n8n\'s Community Edition runs as a single Docker container for small workloads; scaled setups need more infrastructure, which is part of what the paid tiers provide pre-built.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -933,47 +933,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          {
-            q: 'Welches KI-Agenten-Framework ist 2026 das beste?',
-            a: 'LangGraph für produktive Agenten, die expliziten Zustand und Nachvollziehbarkeit brauchen, CrewAI für den schnellsten Weg zu einem funktionierenden Prototyp, Microsoft Agent Framework für .NET- und Azure-Teams und n8n dort, wo Nicht-Entwickler die Workflows bauen. Es gibt keinen einzelnen Sieger, weil jedes eine andere Einschränkung löst.',
-          },
-          {
-            q: 'Wird Microsoft AutoGen noch gepflegt?',
-            a: 'Nicht im Sinne aktiver Weiterentwicklung. Das Repository trägt einen Hinweis auf den Wartungsmodus, wonach AutoGen keine neuen Funktionen oder Erweiterungen mehr erhält und künftig von der Community betreut wird, und verweist neue Nutzerinnen und Nutzer auf Microsoft Agent Framework. Die letzten substanziellen Commits stammen aus dem Frühjahr 2026. Microsoft veröffentlicht einen offiziellen Migrationsleitfaden von AutoGen zu Agent Framework.',
-          },
-          {
-            q: 'Wie viele GitHub-Sterne hat AG2?',
-            a: 'AG2, der Community-Fork von AutoGen, hat etwa 4.900 Sterne und steht unter Apache-2.0. Die häufig AG2 zugeschriebene Zahl von rund 60.000 gehört tatsächlich zum ursprünglichen Repository `microsoft/autogen`, das sich im Wartungsmodus befindet. Der Fork wird aktiv entwickelt, ist aber weit kleiner als gemeinhin berichtet.',
-          },
-          {
-            q: 'Ist LangGraph kostenlos nutzbar?',
-            a: 'Ja. Die LangGraph-Bibliothek ist MIT-lizenziert und ohne Ausführungslimits kostenlos selbst zu hosten. Die kostenpflichtige Ebene sind LangSmith und die Deployment-Plattform: eine Developer-Stufe für 0 $ pro Platz mit bis zu 5.000 Basis-Traces im Monat, Plus für 39 $ pro Platz und Monat mit bis zu 10.000 sowie individuelle Enterprise-Preise. Rechenleistung und Speicher über das Kontingent hinaus werden getrennt abgerechnet.',
-          },
-          {
-            q: 'Was kostet CrewAI?',
-            a: 'Die CrewAI-Bibliothek ist MIT-lizenziert und kostenlos. Der gehostete Basic-Tarif ist kostenlos und umfasst 50 Workflow-Ausführungen im Monat mit visuellem Editor und GitHub-Integration. Darüber existiert nur eine Enterprise-Stufe, für die CrewAI keine Zahl veröffentlicht, sodass Sie den Vertrieb kontaktieren müssen.',
-          },
-          {
-            q: 'Ist n8n Open Source?',
-            a: 'Nicht im Sinne der OSI. n8n nutzt die Sustainable Use License, die den Quelltext einsehbar und die Community Edition kostenlos selbst hostbar macht, aber den Weiterverkauf von n8n selbst einschränkt. LangGraph, CrewAI und Microsoft Agent Framework sind alle MIT-lizenziert und kennen diese Einschränkung nicht. Lesen Sie den Lizenztext, bevor Sie ein kommerzielles Produkt auf n8n aufbauen.',
-          },
-          {
-            q: 'Hat eines davon ein Affiliate-Programm?',
-            a: 'Nur n8n. Es zahlt 30 % der Nettoerlöse auf n8n-Cloud-Empfehlungen über 12 Monate, monatlich per PayPal ab einem Guthaben von 100 Euro, und bezahlte Werbung ist nach den Programmbedingungen ausdrücklich untersagt. Es gilt nur für Cloud-Abonnements, nicht für die kostenlose selbst gehostete Community Edition. Für LangChain, CrewAI und Microsoft haben wir kein öffentliches Programm gefunden. PromptQuorum ist bei keinem angemeldet.',
-          },
-          {
-            q: 'Brauche ich Kubernetes, um diese selbst zu hosten?',
-            a: 'Nein. LangGraph, CrewAI und Microsoft Agent Framework laufen als gewöhnliche Anwendungsprozesse und werden so ausgerollt, wie Sie ohnehin Dienste ausrollen. n8ns Community Edition läuft für kleine Lasten als einzelner Docker-Container; skalierte Aufbauten brauchen mehr Infrastruktur, was Teil dessen ist, was die kostenpflichtigen Stufen vorgefertigt liefern.',
-          },
-          {
-            q: 'Ist der Einsatz dieser Frameworks DSGVO-konform möglich?',
-            a: 'Ja, aber der Ablauf umfasst mehr als bei einem einzelnen Prompt. Ein Agentenlauf zieht über Werkzeugaufrufe CRM-Datensätze, Tickets und Dokumente herein, und dieser gesamte Verlauf ist Verarbeitung. Für gehostete Ebenen wie LangSmith oder n8n Cloud brauchen Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Grundlage für die Übermittlung. Da alle vier Frameworks selbst gehostet werden können, ist der einfachste Weg zur Rechtskonformität, Orchestrierung und Tracing im eigenen Perimeter zu belassen.',
-          },
-          {
-            q: 'Welches Framework passt zu einem Mittelständler ohne großes Entwicklerteam?',
-            a: 'In den meisten Fällen n8n, weil Fachabteilungen die Workflows selbst pflegen können und der KI-Agent nur ein Knoten neben ERP-, E-Mail- und Datenbankanbindungen ist. Prüfen Sie vorher aber die Sustainable Use License, falls Sie daraus ein Produkt für Kunden machen wollen — für den internen Einsatz ist sie unproblematisch. Wenn Sie ohnehin C# und Azure einsetzen, ist Microsoft Agent Framework die bessere Grundlage. Zu LangGraph sollten Sie erst greifen, wenn ein Prozess wirklich prüfbar und fortsetzbar sein muss, etwa bei Freigaben mit Geldfolgen.',
-          },
-        ],
+            { q: 'Welches KI-Agenten-Framework ist 2026 das beste?', a: 'LangGraph für produktive Agenten, die expliziten Zustand und Nachvollziehbarkeit brauchen, CrewAI für den schnellsten Weg zu einem funktionierenden Prototyp, Microsoft Agent Framework für .NET- und Azure-Teams und n8n dort, wo Nicht-Entwickler die Workflows bauen. Es gibt keinen einzelnen Sieger, weil jedes eine andere Einschränkung löst.' },
+            { q: 'Wird Microsoft AutoGen noch gepflegt?', a: 'Nicht im Sinne aktiver Weiterentwicklung. Das Repository trägt einen Hinweis auf den Wartungsmodus, wonach AutoGen keine neuen Funktionen oder Erweiterungen mehr erhält und künftig von der Community betreut wird, und verweist neue Nutzerinnen und Nutzer auf Microsoft Agent Framework. Die letzten substanziellen Commits stammen aus dem Frühjahr 2026. Microsoft veröffentlicht einen offiziellen Migrationsleitfaden von AutoGen zu Agent Framework.' },
+            { q: 'Wie viele GitHub-Sterne hat AG2?', a: 'AG2, der Community-Fork von AutoGen, hat etwa 4.900 Sterne und steht unter Apache-2.0. Die häufig AG2 zugeschriebene Zahl von rund 60.000 gehört tatsächlich zum ursprünglichen Repository `microsoft/autogen`, das sich im Wartungsmodus befindet. Der Fork wird aktiv entwickelt, ist aber weit kleiner als gemeinhin berichtet.' },
+            { q: 'Ist LangGraph kostenlos nutzbar?', a: 'Ja. Die LangGraph-Bibliothek ist MIT-lizenziert und ohne Ausführungslimits kostenlos selbst zu hosten. Die kostenpflichtige Ebene sind LangSmith und die Deployment-Plattform: eine Developer-Stufe für 0 $ pro Platz mit bis zu 5.000 Basis-Traces im Monat, Plus für 39 $ pro Platz und Monat mit bis zu 10.000 sowie individuelle Enterprise-Preise. Rechenleistung und Speicher über das Kontingent hinaus werden getrennt abgerechnet.' },
+            { q: 'Was kostet CrewAI?', a: 'Die CrewAI-Bibliothek ist MIT-lizenziert und kostenlos. Der gehostete Basic-Tarif ist kostenlos und umfasst 50 Workflow-Ausführungen im Monat mit visuellem Editor und GitHub-Integration. Darüber existiert nur eine Enterprise-Stufe, für die CrewAI keine Zahl veröffentlicht, sodass Sie den Vertrieb kontaktieren müssen.' },
+            { q: 'Ist n8n Open Source?', a: 'Nicht im Sinne der OSI. n8n nutzt die Sustainable Use License, die den Quelltext einsehbar und die Community Edition kostenlos selbst hostbar macht, aber den Weiterverkauf von n8n selbst einschränkt. LangGraph, CrewAI und Microsoft Agent Framework sind alle MIT-lizenziert und kennen diese Einschränkung nicht. Lesen Sie den Lizenztext, bevor Sie ein kommerzielles Produkt auf n8n aufbauen.' },
+            { q: 'Hat eines davon ein Affiliate-Programm?', a: 'Nur n8n. Es zahlt 30 % der Nettoerlöse auf n8n-Cloud-Empfehlungen über 12 Monate, monatlich per PayPal ab einem Guthaben von 100 Euro, und bezahlte Werbung ist nach den Programmbedingungen ausdrücklich untersagt. Es gilt nur für Cloud-Abonnements, nicht für die kostenlose selbst gehostete Community Edition. Für LangChain, CrewAI und Microsoft haben wir kein öffentliches Programm gefunden. PromptQuorum ist bei keinem angemeldet.' },
+            { q: 'Brauche ich Kubernetes, um diese selbst zu hosten?', a: 'Nein. LangGraph, CrewAI und Microsoft Agent Framework laufen als gewöhnliche Anwendungsprozesse und werden so ausgerollt, wie Sie ohnehin Dienste ausrollen. n8ns Community Edition läuft für kleine Lasten als einzelner Docker-Container; skalierte Aufbauten brauchen mehr Infrastruktur, was Teil dessen ist, was die kostenpflichtigen Stufen vorgefertigt liefern.' },
+            { q: 'Ist der Einsatz dieser Frameworks DSGVO-konform möglich?', a: 'Ja, aber der Ablauf umfasst mehr als bei einem einzelnen Prompt. Ein Agentenlauf zieht über Werkzeugaufrufe CRM-Datensätze, Tickets und Dokumente herein, und dieser gesamte Verlauf ist Verarbeitung. Für gehostete Ebenen wie LangSmith oder n8n Cloud brauchen Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Grundlage für die Übermittlung. Da alle vier Frameworks selbst gehostet werden können, ist der einfachste Weg zur Rechtskonformität, Orchestrierung und Tracing im eigenen Perimeter zu belassen.' },
+            { q: 'Welches Framework passt zu einem Mittelständler ohne großes Entwicklerteam?', a: 'In den meisten Fällen n8n, weil Fachabteilungen die Workflows selbst pflegen können und der KI-Agent nur ein Knoten neben ERP-, E-Mail- und Datenbankanbindungen ist. Prüfen Sie vorher aber die Sustainable Use License, falls Sie daraus ein Produkt für Kunden machen wollen — für den internen Einsatz ist sie unproblematisch. Wenn Sie ohnehin C# und Azure einsetzen, ist Microsoft Agent Framework die bessere Grundlage. Zu LangGraph sollten Sie erst greifen, wenn ein Prozess wirklich prüfbar und fortsetzbar sein muss, etwa bei Freigaben mit Geldfolgen.' },
+            { q: 'Haben KI-Agenten-Frameworks Affiliate-Programme?', a: 'Nur n8n zahlt 30 % der Nettoerlöse auf Cloud-Empfehlungen über 12 Monate per PayPal ab 100 Euro, wobei bezahlte Werbung untersagt ist. Für LangChain, CrewAI und Microsoft wurde kein öffentliches Programm gefunden.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1043,47 +1014,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Welches KI-Agenten-Framework ist 2026 das beste?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LangGraph für produktive Agenten mit explizitem Zustand, CrewAI für den schnellsten Prototyp, Microsoft Agent Framework für .NET- und Azure-Teams und n8n dort, wo Nicht-Entwickler die Workflows bauen.',
+          {
+            '@type': 'Question',
+            'name': 'Welches KI-Agenten-Framework ist 2026 das beste?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LangGraph für produktive Agenten, die expliziten Zustand und Nachvollziehbarkeit brauchen, CrewAI für den schnellsten Weg zu einem funktionierenden Prototyp, Microsoft Agent Framework für .NET- und Azure-Teams und n8n dort, wo Nicht-Entwickler die Workflows bauen. Es gibt keinen einzelnen Sieger, weil jedes eine andere Einschränkung löst.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wird Microsoft AutoGen noch gepflegt?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein. Das Repository trägt einen Hinweis auf den Wartungsmodus, wonach AutoGen keine neuen Funktionen mehr erhält und von der Community betreut wird, und verweist neue Nutzende auf Microsoft Agent Framework, für das Microsoft einen offiziellen Migrationsleitfaden veröffentlicht.',
+          {
+            '@type': 'Question',
+            'name': 'Wird Microsoft AutoGen noch gepflegt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht im Sinne aktiver Weiterentwicklung. Das Repository trägt einen Hinweis auf den Wartungsmodus, wonach AutoGen keine neuen Funktionen oder Erweiterungen mehr erhält und künftig von der Community betreut wird, und verweist neue Nutzerinnen und Nutzer auf Microsoft Agent Framework. Die letzten substanziellen Commits stammen aus dem Frühjahr 2026. Microsoft veröffentlicht einen offiziellen Migrationsleitfaden von AutoGen zu Agent Framework.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Wie viele GitHub-Sterne hat AG2?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AG2, der Community-Fork von AutoGen, hat etwa 4.900 Sterne und steht unter Apache-2.0. Die oft genannte Zahl von rund 60.000 gehört zum ursprünglichen Repository microsoft/autogen.',
+          {
+            '@type': 'Question',
+            'name': 'Wie viele GitHub-Sterne hat AG2?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AG2, der Community-Fork von AutoGen, hat etwa 4.900 Sterne und steht unter Apache-2.0. Die häufig AG2 zugeschriebene Zahl von rund 60.000 gehört tatsächlich zum ursprünglichen Repository `microsoft/autogen`, das sich im Wartungsmodus befindet. Der Fork wird aktiv entwickelt, ist aber weit kleiner als gemeinhin berichtet.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist n8n Open Source?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nicht nach der OSI-Definition. n8n nutzt die Sustainable Use License, die quelloffen einsehbar und kostenlos selbst hostbar ist, aber den Weiterverkauf von n8n selbst einschränkt. LangGraph, CrewAI und Microsoft Agent Framework sind MIT-lizenziert.',
+          {
+            '@type': 'Question',
+            'name': 'Ist LangGraph kostenlos nutzbar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Die LangGraph-Bibliothek ist MIT-lizenziert und ohne Ausführungslimits kostenlos selbst zu hosten. Die kostenpflichtige Ebene sind LangSmith und die Deployment-Plattform: eine Developer-Stufe für 0 $ pro Platz mit bis zu 5.000 Basis-Traces im Monat, Plus für 39 $ pro Platz und Monat mit bis zu 10.000 sowie individuelle Enterprise-Preise. Rechenleistung und Speicher über das Kontingent hinaus werden getrennt abgerechnet.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Haben KI-Agenten-Frameworks Affiliate-Programme?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nur n8n zahlt 30 % der Nettoerlöse auf Cloud-Empfehlungen über 12 Monate per PayPal ab 100 Euro, wobei bezahlte Werbung untersagt ist. Für LangChain, CrewAI und Microsoft wurde kein öffentliches Programm gefunden.',
+          {
+            '@type': 'Question',
+            'name': 'Was kostet CrewAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die CrewAI-Bibliothek ist MIT-lizenziert und kostenlos. Der gehostete Basic-Tarif ist kostenlos und umfasst 50 Workflow-Ausführungen im Monat mit visuellem Editor und GitHub-Integration. Darüber existiert nur eine Enterprise-Stufe, für die CrewAI keine Zahl veröffentlicht, sodass Sie den Vertrieb kontaktieren müssen.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Ist n8n Open Source?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht im Sinne der OSI. n8n nutzt die Sustainable Use License, die den Quelltext einsehbar und die Community Edition kostenlos selbst hostbar macht, aber den Weiterverkauf von n8n selbst einschränkt. LangGraph, CrewAI und Microsoft Agent Framework sind alle MIT-lizenziert und kennen diese Einschränkung nicht. Lesen Sie den Lizenztext, bevor Sie ein kommerzielles Produkt auf n8n aufbauen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Hat eines davon ein Affiliate-Programm?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur n8n. Es zahlt 30 % der Nettoerlöse auf n8n-Cloud-Empfehlungen über 12 Monate, monatlich per PayPal ab einem Guthaben von 100 Euro, und bezahlte Werbung ist nach den Programmbedingungen ausdrücklich untersagt. Es gilt nur für Cloud-Abonnements, nicht für die kostenlose selbst gehostete Community Edition. Für LangChain, CrewAI und Microsoft haben wir kein öffentliches Programm gefunden. PromptQuorum ist bei keinem angemeldet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Brauche ich Kubernetes, um diese selbst zu hosten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. LangGraph, CrewAI und Microsoft Agent Framework laufen als gewöhnliche Anwendungsprozesse und werden so ausgerollt, wie Sie ohnehin Dienste ausrollen. n8ns Community Edition läuft für kleine Lasten als einzelner Docker-Container; skalierte Aufbauten brauchen mehr Infrastruktur, was Teil dessen ist, was die kostenpflichtigen Stufen vorgefertigt liefern.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist der Einsatz dieser Frameworks DSGVO-konform möglich?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber der Ablauf umfasst mehr als bei einem einzelnen Prompt. Ein Agentenlauf zieht über Werkzeugaufrufe CRM-Datensätze, Tickets und Dokumente herein, und dieser gesamte Verlauf ist Verarbeitung. Für gehostete Ebenen wie LangSmith oder n8n Cloud brauchen Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Grundlage für die Übermittlung. Da alle vier Frameworks selbst gehostet werden können, ist der einfachste Weg zur Rechtskonformität, Orchestrierung und Tracing im eigenen Perimeter zu belassen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Framework passt zu einem Mittelständler ohne großes Entwicklerteam?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'In den meisten Fällen n8n, weil Fachabteilungen die Workflows selbst pflegen können und der KI-Agent nur ein Knoten neben ERP-, E-Mail- und Datenbankanbindungen ist. Prüfen Sie vorher aber die Sustainable Use License, falls Sie daraus ein Produkt für Kunden machen wollen — für den internen Einsatz ist sie unproblematisch. Wenn Sie ohnehin C# und Azure einsetzen, ist Microsoft Agent Framework die bessere Grundlage. Zu LangGraph sollten Sie erst greifen, wenn ein Prozess wirklich prüfbar und fortsetzbar sein muss, etwa bei Freigaben mit Geldfolgen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Haben KI-Agenten-Frameworks Affiliate-Programme?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur n8n zahlt 30 % der Nettoerlöse auf Cloud-Empfehlungen über 12 Monate per PayPal ab 100 Euro, wobei bezahlte Werbung untersagt ist. Für LangChain, CrewAI und Microsoft wurde kein öffentliches Programm gefunden.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1486,39 +1505,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Cuál es el mejor framework de agentes de IA en 2026?',
-            a: 'LangGraph para agentes en producción que necesitan estado explícito y auditabilidad, CrewAI para la vía más rápida a un prototipo funcional, Microsoft Agent Framework para equipos de .NET y Azure, y n8n donde los flujos los construyen personas no técnicas. No hay un único ganador porque cada uno resuelve una restricción distinta.',
-          },
-          {
-            q: '¿Se sigue manteniendo Microsoft AutoGen?',
-            a: 'No en el sentido de desarrollo activo. El repositorio lleva un aviso de modo mantenimiento que indica que AutoGen no recibirá nuevas funciones ni mejoras y pasa a estar gestionado por la comunidad, y dirige a los nuevos usuarios a Microsoft Agent Framework. Sus últimos commits sustanciales son de principios de 2026. Microsoft publica una guía oficial de migración de AutoGen a Agent Framework.',
-          },
-          {
-            q: '¿Cuántas estrellas de GitHub tiene AG2?',
-            a: 'AG2, el fork comunitario de AutoGen, tiene unas 4.900 estrellas y licencia Apache-2.0. La cifra de unas 60.000 que suele atribuírsele pertenece en realidad al repositorio original `microsoft/autogen`, que está en modo mantenimiento. El fork se desarrolla activamente, pero es mucho más pequeño de lo que se suele informar.',
-          },
-          {
-            q: '¿LangGraph es gratuito?',
-            a: 'Sí. La biblioteca LangGraph tiene licencia MIT y es gratuita para autoalojar sin límites de ejecución. La capa de pago son LangSmith y la plataforma de despliegue: un nivel Developer a 0 $ por puesto con hasta 5.000 trazas base al mes, Plus a 39 $ por puesto y mes con hasta 10.000, y precios Enterprise personalizados. El cómputo y el almacenamiento por encima de la cuota se facturan aparte.',
-          },
-          {
-            q: '¿Cuánto cuesta CrewAI?',
-            a: 'La biblioteca CrewAI tiene licencia MIT y es gratuita. Su plan alojado Basic es gratuito e incluye 50 ejecuciones de flujo al mes con editor visual e integración con GitHub. Por encima solo existe un nivel Enterprise y CrewAI no publica cifra alguna, así que hay que contactar con ventas.',
-          },
-          {
-            q: '¿n8n es código abierto?',
-            a: 'No en el sentido de la OSI. n8n usa la Sustainable Use License, que hace el código disponible y la Community Edition gratuita para autoalojar, pero restringe revender n8n en sí. LangGraph, CrewAI y Microsoft Agent Framework tienen licencia MIT, que no impone esa restricción. Lea el texto de la licencia antes de construir un producto comercial sobre n8n.',
-          },
-          {
-            q: '¿Alguno tiene programa de afiliados?',
-            a: 'Solo n8n. Paga el 30 % de los ingresos netos por referidos de n8n Cloud durante 12 meses, emitido mensualmente por PayPal cuando el saldo alcanza 100 euros, y la publicidad de pago está expresamente prohibida en las condiciones del programa. Se aplica solo a suscripciones de Cloud, no a la Community Edition autoalojada gratuita. No encontramos programa público para LangChain, CrewAI ni Microsoft. PromptQuorum no está inscrito en ninguno.',
-          },
-          {
-            q: '¿Necesito Kubernetes para autoalojarlos?',
-            a: 'No. LangGraph, CrewAI y Microsoft Agent Framework se ejecutan como procesos de aplicación normales y se despliegan como ya despliega sus servicios. La Community Edition de n8n corre como un único contenedor Docker para cargas pequeñas; las configuraciones escaladas necesitan más infraestructura, que es parte de lo que ofrecen preconstruido los niveles de pago.',
-          },
-        ],
+            { q: '¿Cuál es el mejor framework de agentes de IA en 2026?', a: 'LangGraph para agentes en producción que necesitan estado explícito y auditabilidad, CrewAI para la vía más rápida a un prototipo funcional, Microsoft Agent Framework para equipos de .NET y Azure, y n8n donde los flujos los construyen personas no técnicas. No hay un único ganador porque cada uno resuelve una restricción distinta.' },
+            { q: '¿Se sigue manteniendo Microsoft AutoGen?', a: 'No en el sentido de desarrollo activo. El repositorio lleva un aviso de modo mantenimiento que indica que AutoGen no recibirá nuevas funciones ni mejoras y pasa a estar gestionado por la comunidad, y dirige a los nuevos usuarios a Microsoft Agent Framework. Sus últimos commits sustanciales son de principios de 2026. Microsoft publica una guía oficial de migración de AutoGen a Agent Framework.' },
+            { q: '¿Cuántas estrellas de GitHub tiene AG2?', a: 'AG2, el fork comunitario de AutoGen, tiene unas 4.900 estrellas y licencia Apache-2.0. La cifra de unas 60.000 que suele atribuírsele pertenece en realidad al repositorio original `microsoft/autogen`, que está en modo mantenimiento. El fork se desarrolla activamente, pero es mucho más pequeño de lo que se suele informar.' },
+            { q: '¿LangGraph es gratuito?', a: 'Sí. La biblioteca LangGraph tiene licencia MIT y es gratuita para autoalojar sin límites de ejecución. La capa de pago son LangSmith y la plataforma de despliegue: un nivel Developer a 0 $ por puesto con hasta 5.000 trazas base al mes, Plus a 39 $ por puesto y mes con hasta 10.000, y precios Enterprise personalizados. El cómputo y el almacenamiento por encima de la cuota se facturan aparte.' },
+            { q: '¿Cuánto cuesta CrewAI?', a: 'La biblioteca CrewAI tiene licencia MIT y es gratuita. Su plan alojado Basic es gratuito e incluye 50 ejecuciones de flujo al mes con editor visual e integración con GitHub. Por encima solo existe un nivel Enterprise y CrewAI no publica cifra alguna, así que hay que contactar con ventas.' },
+            { q: '¿n8n es código abierto?', a: 'No en el sentido de la OSI. n8n usa la Sustainable Use License, que hace el código disponible y la Community Edition gratuita para autoalojar, pero restringe revender n8n en sí. LangGraph, CrewAI y Microsoft Agent Framework tienen licencia MIT, que no impone esa restricción. Lea el texto de la licencia antes de construir un producto comercial sobre n8n.' },
+            { q: '¿Alguno tiene programa de afiliados?', a: 'Solo n8n. Paga el 30 % de los ingresos netos por referidos de n8n Cloud durante 12 meses, emitido mensualmente por PayPal cuando el saldo alcanza 100 euros, y la publicidad de pago está expresamente prohibida en las condiciones del programa. Se aplica solo a suscripciones de Cloud, no a la Community Edition autoalojada gratuita. No encontramos programa público para LangChain, CrewAI ni Microsoft. PromptQuorum no está inscrito en ninguno.' },
+            { q: '¿Necesito Kubernetes para autoalojarlos?', a: 'No. LangGraph, CrewAI y Microsoft Agent Framework se ejecutan como procesos de aplicación normales y se despliegan como ya despliega sus servicios. La Community Edition de n8n corre como un único contenedor Docker para cargas pequeñas; las configuraciones escaladas necesitan más infraestructura, que es parte de lo que ofrecen preconstruido los niveles de pago.' },
+            { q: '¿Los frameworks de agentes tienen programas de afiliados?', a: 'Solo n8n, que paga el 30 % de los ingresos netos por referidos de Cloud durante 12 meses vía PayPal a partir de 100 euros, con publicidad de pago prohibida. No se encontró programa público para LangChain, CrewAI ni Microsoft.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1588,47 +1584,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Cuál es el mejor framework de agentes de IA en 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LangGraph para agentes en producción con estado explícito, CrewAI para el prototipo más rápido, Microsoft Agent Framework para equipos de .NET y Azure, y n8n donde los flujos los construyen personas no técnicas.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor framework de agentes de IA en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LangGraph para agentes en producción que necesitan estado explícito y auditabilidad, CrewAI para la vía más rápida a un prototipo funcional, Microsoft Agent Framework para equipos de .NET y Azure, y n8n donde los flujos los construyen personas no técnicas. No hay un único ganador porque cada uno resuelve una restricción distinta.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Se sigue manteniendo Microsoft AutoGen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. El repositorio lleva un aviso de modo mantenimiento que indica que AutoGen no recibirá nuevas funciones y está gestionado por la comunidad, y remite a Microsoft Agent Framework, para el que Microsoft publica una guía oficial de migración.',
+          {
+            '@type': 'Question',
+            'name': '¿Se sigue manteniendo Microsoft AutoGen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No en el sentido de desarrollo activo. El repositorio lleva un aviso de modo mantenimiento que indica que AutoGen no recibirá nuevas funciones ni mejoras y pasa a estar gestionado por la comunidad, y dirige a los nuevos usuarios a Microsoft Agent Framework. Sus últimos commits sustanciales son de principios de 2026. Microsoft publica una guía oficial de migración de AutoGen a Agent Framework.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cuántas estrellas de GitHub tiene AG2?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AG2, el fork comunitario de AutoGen, tiene unas 4.900 estrellas y licencia Apache-2.0. La cifra de unas 60.000 que suele atribuírsele pertenece al repositorio original microsoft/autogen.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuántas estrellas de GitHub tiene AG2?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AG2, el fork comunitario de AutoGen, tiene unas 4.900 estrellas y licencia Apache-2.0. La cifra de unas 60.000 que suele atribuírsele pertenece en realidad al repositorio original `microsoft/autogen`, que está en modo mantenimiento. El fork se desarrolla activamente, pero es mucho más pequeño de lo que se suele informar.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿n8n es código abierto?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No según la definición de la OSI. n8n usa la Sustainable Use License, de código disponible y gratuita para autoalojar, pero que restringe revender n8n en sí. LangGraph, CrewAI y Microsoft Agent Framework tienen licencia MIT.',
+          {
+            '@type': 'Question',
+            'name': '¿LangGraph es gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. La biblioteca LangGraph tiene licencia MIT y es gratuita para autoalojar sin límites de ejecución. La capa de pago son LangSmith y la plataforma de despliegue: un nivel Developer a 0 $ por puesto con hasta 5.000 trazas base al mes, Plus a 39 $ por puesto y mes con hasta 10.000, y precios Enterprise personalizados. El cómputo y el almacenamiento por encima de la cuota se facturan aparte.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Los frameworks de agentes tienen programas de afiliados?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Solo n8n, que paga el 30 % de los ingresos netos por referidos de Cloud durante 12 meses vía PayPal a partir de 100 euros, con publicidad de pago prohibida. No se encontró programa público para LangChain, CrewAI ni Microsoft.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto cuesta CrewAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La biblioteca CrewAI tiene licencia MIT y es gratuita. Su plan alojado Basic es gratuito e incluye 50 ejecuciones de flujo al mes con editor visual e integración con GitHub. Por encima solo existe un nivel Enterprise y CrewAI no publica cifra alguna, así que hay que contactar con ventas.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿n8n es código abierto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No en el sentido de la OSI. n8n usa la Sustainable Use License, que hace el código disponible y la Community Edition gratuita para autoalojar, pero restringe revender n8n en sí. LangGraph, CrewAI y Microsoft Agent Framework tienen licencia MIT, que no impone esa restricción. Lea el texto de la licencia antes de construir un producto comercial sobre n8n.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Alguno tiene programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo n8n. Paga el 30 % de los ingresos netos por referidos de n8n Cloud durante 12 meses, emitido mensualmente por PayPal cuando el saldo alcanza 100 euros, y la publicidad de pago está expresamente prohibida en las condiciones del programa. Se aplica solo a suscripciones de Cloud, no a la Community Edition autoalojada gratuita. No encontramos programa público para LangChain, CrewAI ni Microsoft. PromptQuorum no está inscrito en ninguno.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito Kubernetes para autoalojarlos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. LangGraph, CrewAI y Microsoft Agent Framework se ejecutan como procesos de aplicación normales y se despliegan como ya despliega sus servicios. La Community Edition de n8n corre como un único contenedor Docker para cargas pequeñas; las configuraciones escaladas necesitan más infraestructura, que es parte de lo que ofrecen preconstruido los niveles de pago.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Los frameworks de agentes tienen programas de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo n8n, que paga el 30 % de los ingresos netos por referidos de Cloud durante 12 meses vía PayPal a partir de 100 euros, con publicidad de pago prohibida. No se encontró programa público para LangChain, CrewAI ni Microsoft.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2031,39 +2059,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions frequentes',
         faqs: [
-          {
-            q: 'Quel est le meilleur framework d\'agents IA en 2026 ?',
-            a: 'LangGraph pour les agents en production exigeant un etat explicite et de la tracabilite, CrewAI pour la voie la plus rapide vers un prototype fonctionnel, Microsoft Agent Framework pour les equipes .NET et Azure, et n8n la ou ce sont des non-developpeurs qui construisent les flux. Il n\'y a pas de vainqueur unique, chacun repondant a une contrainte differente.',
-          },
-          {
-            q: 'Microsoft AutoGen est-il encore maintenu ?',
-            a: 'Pas au sens d\'un developpement actif. Le depot porte un bandeau de mode maintenance indiquant qu\'AutoGen ne recevra plus de nouvelles fonctionnalites ni d\'ameliorations et sera desormais gere par la communaute, et il oriente les nouveaux utilisateurs vers Microsoft Agent Framework. Ses derniers commits substantiels datent du debut 2026. Microsoft publie un guide de migration officiel d\'AutoGen vers Agent Framework.',
-          },
-          {
-            q: 'Combien d\'etoiles GitHub compte AG2 ?',
-            a: 'AG2, le fork communautaire d\'AutoGen, compte environ 4 900 etoiles sous licence Apache-2.0. Le chiffre d\'environ 60 000 qu\'on lui attribue souvent appartient en realite au depot original `microsoft/autogen`, qui est en mode maintenance. Le fork est activement developpe, mais bien plus petit qu\'on ne le rapporte.',
-          },
-          {
-            q: 'LangGraph est-il gratuit ?',
-            a: 'Oui. La bibliotheque LangGraph est sous licence MIT et gratuite a auto-heberger, sans limite d\'executions. La couche payante, ce sont LangSmith et la plateforme de deploiement : une offre Developer a 0 $ par siege avec jusqu\'a 5 000 traces de base par mois, Plus a 39 $ par siege et par mois avec jusqu\'a 10 000, et des tarifs Enterprise sur devis. Le calcul et le stockage au-dela du quota sont factures a part.',
-          },
-          {
-            q: 'Combien coute CrewAI ?',
-            a: 'La bibliotheque CrewAI est sous licence MIT et gratuite. Son offre hebergee Basic est gratuite et inclut 50 executions de flux par mois avec un editeur visuel et l\'integration GitHub. Au-dela, seule une offre Enterprise existe et CrewAI n\'en publie aucun montant : il faut contacter le service commercial.',
-          },
-          {
-            q: 'n8n est-il open source ?',
-            a: 'Pas au sens de l\'OSI. n8n utilise la Sustainable Use License, qui rend le code consultable et la Community Edition gratuite a auto-heberger, mais qui restreint la revente de n8n lui-meme. LangGraph, CrewAI et Microsoft Agent Framework sont tous sous licence MIT, sans une telle restriction. Lisez le texte de la licence avant de batir un produit commercial sur n8n.',
-          },
-          {
-            q: 'L\'un d\'eux a-t-il un programme d\'affiliation ?',
-            a: 'Seulement n8n. Il verse 30 % des revenus nets sur les parrainages n8n Cloud pendant 12 mois, emis mensuellement par PayPal des que le solde atteint 100 euros, et la publicite payante est expressement interdite par les conditions du programme. Il ne s\'applique qu\'aux abonnements Cloud, pas a la Community Edition auto-hebergee gratuite. Nous n\'avons trouve aucun programme public pour LangChain, CrewAI ni Microsoft. PromptQuorum n\'est inscrit a aucun.',
-          },
-          {
-            q: 'Faut-il Kubernetes pour les auto-heberger ?',
-            a: 'Non. LangGraph, CrewAI et Microsoft Agent Framework tournent comme des processus applicatifs ordinaires et se deploient comme vous deployez deja vos services. La Community Edition de n8n tourne comme un unique conteneur Docker pour de petites charges ; les configurations a l\'echelle demandent davantage d\'infrastructure, ce que les offres payantes fournissent en partie prete a l\'emploi.',
-          },
-        ],
+            { q: 'Quel est le meilleur framework d\'agents IA en 2026 ?', a: 'LangGraph pour les agents en production exigeant un etat explicite et de la tracabilite, CrewAI pour la voie la plus rapide vers un prototype fonctionnel, Microsoft Agent Framework pour les equipes .NET et Azure, et n8n la ou ce sont des non-developpeurs qui construisent les flux. Il n\'y a pas de vainqueur unique, chacun repondant a une contrainte differente.' },
+            { q: 'Microsoft AutoGen est-il encore maintenu ?', a: 'Pas au sens d\'un developpement actif. Le depot porte un bandeau de mode maintenance indiquant qu\'AutoGen ne recevra plus de nouvelles fonctionnalites ni d\'ameliorations et sera desormais gere par la communaute, et il oriente les nouveaux utilisateurs vers Microsoft Agent Framework. Ses derniers commits substantiels datent du debut 2026. Microsoft publie un guide de migration officiel d\'AutoGen vers Agent Framework.' },
+            { q: 'Combien d\'etoiles GitHub compte AG2 ?', a: 'AG2, le fork communautaire d\'AutoGen, compte environ 4 900 etoiles sous licence Apache-2.0. Le chiffre d\'environ 60 000 qu\'on lui attribue souvent appartient en realite au depot original `microsoft/autogen`, qui est en mode maintenance. Le fork est activement developpe, mais bien plus petit qu\'on ne le rapporte.' },
+            { q: 'LangGraph est-il gratuit ?', a: 'Oui. La bibliotheque LangGraph est sous licence MIT et gratuite a auto-heberger, sans limite d\'executions. La couche payante, ce sont LangSmith et la plateforme de deploiement : une offre Developer a 0 $ par siege avec jusqu\'a 5 000 traces de base par mois, Plus a 39 $ par siege et par mois avec jusqu\'a 10 000, et des tarifs Enterprise sur devis. Le calcul et le stockage au-dela du quota sont factures a part.' },
+            { q: 'Combien coute CrewAI ?', a: 'La bibliotheque CrewAI est sous licence MIT et gratuite. Son offre hebergee Basic est gratuite et inclut 50 executions de flux par mois avec un editeur visuel et l\'integration GitHub. Au-dela, seule une offre Enterprise existe et CrewAI n\'en publie aucun montant : il faut contacter le service commercial.' },
+            { q: 'n8n est-il open source ?', a: 'Pas au sens de l\'OSI. n8n utilise la Sustainable Use License, qui rend le code consultable et la Community Edition gratuite a auto-heberger, mais qui restreint la revente de n8n lui-meme. LangGraph, CrewAI et Microsoft Agent Framework sont tous sous licence MIT, sans une telle restriction. Lisez le texte de la licence avant de batir un produit commercial sur n8n.' },
+            { q: 'L\'un d\'eux a-t-il un programme d\'affiliation ?', a: 'Seulement n8n. Il verse 30 % des revenus nets sur les parrainages n8n Cloud pendant 12 mois, emis mensuellement par PayPal des que le solde atteint 100 euros, et la publicite payante est expressement interdite par les conditions du programme. Il ne s\'applique qu\'aux abonnements Cloud, pas a la Community Edition auto-hebergee gratuite. Nous n\'avons trouve aucun programme public pour LangChain, CrewAI ni Microsoft. PromptQuorum n\'est inscrit a aucun.' },
+            { q: 'Faut-il Kubernetes pour les auto-heberger ?', a: 'Non. LangGraph, CrewAI et Microsoft Agent Framework tournent comme des processus applicatifs ordinaires et se deploient comme vous deployez deja vos services. La Community Edition de n8n tourne comme un unique conteneur Docker pour de petites charges ; les configurations a l\'echelle demandent davantage d\'infrastructure, ce que les offres payantes fournissent en partie prete a l\'emploi.' },
+            { q: 'Les frameworks d\'agents ont-ils des programmes d\'affiliation ?', a: 'Seulement n8n, qui verse 30 % des revenus nets sur les parrainages Cloud pendant 12 mois via PayPal au-dela de 100 euros, la publicite payante etant interdite. Aucun programme public trouve pour LangChain, CrewAI ou Microsoft.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2133,47 +2138,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Quel est le meilleur framework d\'agents IA en 2026 ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LangGraph pour les agents en production a etat explicite, CrewAI pour le prototype le plus rapide, Microsoft Agent Framework pour les equipes .NET et Azure, et n8n la ou des non-developpeurs construisent les flux.',
+          {
+            '@type': 'Question',
+            'name': 'Quel est le meilleur framework d\'agents IA en 2026 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LangGraph pour les agents en production exigeant un etat explicite et de la tracabilite, CrewAI pour la voie la plus rapide vers un prototype fonctionnel, Microsoft Agent Framework pour les equipes .NET et Azure, et n8n la ou ce sont des non-developpeurs qui construisent les flux. Il n\'y a pas de vainqueur unique, chacun repondant a une contrainte differente.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Microsoft AutoGen est-il encore maintenu ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non. Le depot porte un bandeau de mode maintenance indiquant qu\'AutoGen ne recevra plus de nouvelles fonctionnalites et est gere par la communaute, et il renvoie vers Microsoft Agent Framework, pour lequel Microsoft publie un guide de migration officiel.',
+          {
+            '@type': 'Question',
+            'name': 'Microsoft AutoGen est-il encore maintenu ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pas au sens d\'un developpement actif. Le depot porte un bandeau de mode maintenance indiquant qu\'AutoGen ne recevra plus de nouvelles fonctionnalites ni d\'ameliorations et sera desormais gere par la communaute, et il oriente les nouveaux utilisateurs vers Microsoft Agent Framework. Ses derniers commits substantiels datent du debut 2026. Microsoft publie un guide de migration officiel d\'AutoGen vers Agent Framework.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Combien d\'etoiles GitHub compte AG2 ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AG2, le fork communautaire d\'AutoGen, compte environ 4 900 etoiles sous licence Apache-2.0. Le chiffre d\'environ 60 000 qu\'on lui attribue appartient au depot original microsoft/autogen.',
+          {
+            '@type': 'Question',
+            'name': 'Combien d\'etoiles GitHub compte AG2 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AG2, le fork communautaire d\'AutoGen, compte environ 4 900 etoiles sous licence Apache-2.0. Le chiffre d\'environ 60 000 qu\'on lui attribue souvent appartient en realite au depot original `microsoft/autogen`, qui est en mode maintenance. Le fork est activement developpe, mais bien plus petit qu\'on ne le rapporte.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'n8n est-il open source ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Pas au sens de l\'OSI. n8n utilise la Sustainable Use License, a source disponible et gratuite a auto-heberger, mais qui restreint la revente de n8n lui-meme. LangGraph, CrewAI et Microsoft Agent Framework sont sous licence MIT.',
+          {
+            '@type': 'Question',
+            'name': 'LangGraph est-il gratuit ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. La bibliotheque LangGraph est sous licence MIT et gratuite a auto-heberger, sans limite d\'executions. La couche payante, ce sont LangSmith et la plateforme de deploiement : une offre Developer a 0 $ par siege avec jusqu\'a 5 000 traces de base par mois, Plus a 39 $ par siege et par mois avec jusqu\'a 10 000, et des tarifs Enterprise sur devis. Le calcul et le stockage au-dela du quota sont factures a part.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Les frameworks d\'agents ont-ils des programmes d\'affiliation ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Seulement n8n, qui verse 30 % des revenus nets sur les parrainages Cloud pendant 12 mois via PayPal au-dela de 100 euros, la publicite payante etant interdite. Aucun programme public trouve pour LangChain, CrewAI ou Microsoft.',
+          {
+            '@type': 'Question',
+            'name': 'Combien coute CrewAI ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La bibliotheque CrewAI est sous licence MIT et gratuite. Son offre hebergee Basic est gratuite et inclut 50 executions de flux par mois avec un editeur visuel et l\'integration GitHub. Au-dela, seule une offre Enterprise existe et CrewAI n\'en publie aucun montant : il faut contacter le service commercial.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'n8n est-il open source ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pas au sens de l\'OSI. n8n utilise la Sustainable Use License, qui rend le code consultable et la Community Edition gratuite a auto-heberger, mais qui restreint la revente de n8n lui-meme. LangGraph, CrewAI et Microsoft Agent Framework sont tous sous licence MIT, sans une telle restriction. Lisez le texte de la licence avant de batir un produit commercial sur n8n.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'un d\'eux a-t-il un programme d\'affiliation ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Seulement n8n. Il verse 30 % des revenus nets sur les parrainages n8n Cloud pendant 12 mois, emis mensuellement par PayPal des que le solde atteint 100 euros, et la publicite payante est expressement interdite par les conditions du programme. Il ne s\'applique qu\'aux abonnements Cloud, pas a la Community Edition auto-hebergee gratuite. Nous n\'avons trouve aucun programme public pour LangChain, CrewAI ni Microsoft. PromptQuorum n\'est inscrit a aucun.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Faut-il Kubernetes pour les auto-heberger ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. LangGraph, CrewAI et Microsoft Agent Framework tournent comme des processus applicatifs ordinaires et se deploient comme vous deployez deja vos services. La Community Edition de n8n tourne comme un unique conteneur Docker pour de petites charges ; les configurations a l\'echelle demandent davantage d\'infrastructure, ce que les offres payantes fournissent en partie prete a l\'emploi.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les frameworks d\'agents ont-ils des programmes d\'affiliation ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Seulement n8n, qui verse 30 % des revenus nets sur les parrainages Cloud pendant 12 mois via PayPal au-dela de 100 euros, la publicite payante etant interdite. Aucun programme public trouve pour LangChain, CrewAI ou Microsoft.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2576,39 +2613,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'Qual e o melhor framework de agentes de IA em 2026?',
-            a: 'LangGraph para agentes em producao que precisam de estado explicito e auditabilidade, CrewAI para o caminho mais rapido ate um prototipo funcional, Microsoft Agent Framework para equipes de .NET e Azure, e n8n onde os fluxos sao construidos por pessoas nao tecnicas. Nao ha um vencedor unico porque cada um resolve uma restricao diferente.',
-          },
-          {
-            q: 'O Microsoft AutoGen ainda e mantido?',
-            a: 'Nao no sentido de desenvolvimento ativo. O repositorio traz um aviso de modo manutencao informando que o AutoGen nao recebera novos recursos nem melhorias e passa a ser gerido pela comunidade, e encaminha novos usuarios ao Microsoft Agent Framework. Seus ultimos commits substanciais sao do inicio de 2026. A Microsoft publica um guia oficial de migracao do AutoGen para o Agent Framework.',
-          },
-          {
-            q: 'Quantas estrelas no GitHub o AG2 tem?',
-            a: 'O AG2, fork comunitario do AutoGen, tem cerca de 4.900 estrelas e licenca Apache-2.0. O numero de cerca de 60.000 frequentemente atribuido a ele pertence, na verdade, ao repositorio original `microsoft/autogen`, que esta em modo manutencao. O fork e desenvolvido ativamente, mas e bem menor do que se costuma relatar.',
-          },
-          {
-            q: 'O LangGraph e gratuito?',
-            a: 'Sim. A biblioteca LangGraph tem licenca MIT e e gratuita para auto-hospedar, sem limites de execucao. A camada paga sao o LangSmith e a plataforma de implantacao: um nivel Developer a US$ 0 por assento com ate 5.000 tracos base por mes, o Plus a US$ 39 por assento por mes com ate 10.000, e precos Enterprise sob medida. Computacao e armazenamento acima da cota sao cobrados a parte.',
-          },
-          {
-            q: 'Quanto custa o CrewAI?',
-            a: 'A biblioteca CrewAI tem licenca MIT e e gratuita. Seu plano hospedado Basic e gratuito e inclui 50 execucoes de fluxo por mes com editor visual e integracao com o GitHub. Acima disso existe apenas um nivel Enterprise, e o CrewAI nao publica valor algum, entao e preciso falar com o comercial.',
-          },
-          {
-            q: 'O n8n e codigo aberto?',
-            a: 'Nao no sentido da OSI. O n8n usa a Sustainable Use License, que torna o codigo disponivel e a Community Edition gratuita para auto-hospedar, mas restringe revender o proprio n8n. LangGraph, CrewAI e Microsoft Agent Framework tem licenca MIT, sem essa restricao. Leia o texto da licenca antes de construir um produto comercial sobre o n8n.',
-          },
-          {
-            q: 'Algum deles tem programa de afiliados?',
-            a: 'So o n8n. Ele paga 30% da receita liquida em indicacoes do n8n Cloud por 12 meses, emitido mensalmente via PayPal quando o saldo atinge 100 euros, e a publicidade paga e expressamente proibida nos termos do programa. Aplica-se apenas a assinaturas do Cloud, nao a Community Edition auto-hospedada gratuita. Nao encontramos programa publico para LangChain, CrewAI ou Microsoft. A PromptQuorum nao esta inscrita em nenhum.',
-          },
-          {
-            q: 'Preciso de Kubernetes para auto-hospedar?',
-            a: 'Nao. LangGraph, CrewAI e Microsoft Agent Framework rodam como processos de aplicacao comuns e sao implantados como voce ja implanta seus servicos. A Community Edition do n8n roda como um unico container Docker para cargas pequenas; configuracoes escaladas exigem mais infraestrutura, que e parte do que os niveis pagos entregam pronto.',
-          },
-        ],
+            { q: 'Qual e o melhor framework de agentes de IA em 2026?', a: 'LangGraph para agentes em producao que precisam de estado explicito e auditabilidade, CrewAI para o caminho mais rapido ate um prototipo funcional, Microsoft Agent Framework para equipes de .NET e Azure, e n8n onde os fluxos sao construidos por pessoas nao tecnicas. Nao ha um vencedor unico porque cada um resolve uma restricao diferente.' },
+            { q: 'O Microsoft AutoGen ainda e mantido?', a: 'Nao no sentido de desenvolvimento ativo. O repositorio traz um aviso de modo manutencao informando que o AutoGen nao recebera novos recursos nem melhorias e passa a ser gerido pela comunidade, e encaminha novos usuarios ao Microsoft Agent Framework. Seus ultimos commits substanciais sao do inicio de 2026. A Microsoft publica um guia oficial de migracao do AutoGen para o Agent Framework.' },
+            { q: 'Quantas estrelas no GitHub o AG2 tem?', a: 'O AG2, fork comunitario do AutoGen, tem cerca de 4.900 estrelas e licenca Apache-2.0. O numero de cerca de 60.000 frequentemente atribuido a ele pertence, na verdade, ao repositorio original `microsoft/autogen`, que esta em modo manutencao. O fork e desenvolvido ativamente, mas e bem menor do que se costuma relatar.' },
+            { q: 'O LangGraph e gratuito?', a: 'Sim. A biblioteca LangGraph tem licenca MIT e e gratuita para auto-hospedar, sem limites de execucao. A camada paga sao o LangSmith e a plataforma de implantacao: um nivel Developer a US$ 0 por assento com ate 5.000 tracos base por mes, o Plus a US$ 39 por assento por mes com ate 10.000, e precos Enterprise sob medida. Computacao e armazenamento acima da cota sao cobrados a parte.' },
+            { q: 'Quanto custa o CrewAI?', a: 'A biblioteca CrewAI tem licenca MIT e e gratuita. Seu plano hospedado Basic e gratuito e inclui 50 execucoes de fluxo por mes com editor visual e integracao com o GitHub. Acima disso existe apenas um nivel Enterprise, e o CrewAI nao publica valor algum, entao e preciso falar com o comercial.' },
+            { q: 'O n8n e codigo aberto?', a: 'Nao no sentido da OSI. O n8n usa a Sustainable Use License, que torna o codigo disponivel e a Community Edition gratuita para auto-hospedar, mas restringe revender o proprio n8n. LangGraph, CrewAI e Microsoft Agent Framework tem licenca MIT, sem essa restricao. Leia o texto da licenca antes de construir um produto comercial sobre o n8n.' },
+            { q: 'Algum deles tem programa de afiliados?', a: 'So o n8n. Ele paga 30% da receita liquida em indicacoes do n8n Cloud por 12 meses, emitido mensalmente via PayPal quando o saldo atinge 100 euros, e a publicidade paga e expressamente proibida nos termos do programa. Aplica-se apenas a assinaturas do Cloud, nao a Community Edition auto-hospedada gratuita. Nao encontramos programa publico para LangChain, CrewAI ou Microsoft. A PromptQuorum nao esta inscrita em nenhum.' },
+            { q: 'Preciso de Kubernetes para auto-hospedar?', a: 'Nao. LangGraph, CrewAI e Microsoft Agent Framework rodam como processos de aplicacao comuns e sao implantados como voce ja implanta seus servicos. A Community Edition do n8n roda como um unico container Docker para cargas pequenas; configuracoes escaladas exigem mais infraestrutura, que e parte do que os niveis pagos entregam pronto.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2678,47 +2691,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qual e o melhor framework de agentes de IA em 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LangGraph para agentes em producao com estado explicito, CrewAI para o prototipo mais rapido, Microsoft Agent Framework para equipes de .NET e Azure, e n8n onde pessoas nao tecnicas constroem os fluxos.',
+          {
+            '@type': 'Question',
+            'name': 'Qual e o melhor framework de agentes de IA em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LangGraph para agentes em producao que precisam de estado explicito e auditabilidade, CrewAI para o caminho mais rapido ate um prototipo funcional, Microsoft Agent Framework para equipes de .NET e Azure, e n8n onde os fluxos sao construidos por pessoas nao tecnicas. Nao ha um vencedor unico porque cada um resolve uma restricao diferente.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O Microsoft AutoGen ainda e mantido?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nao. O repositorio traz um aviso de modo manutencao informando que o AutoGen nao recebera novos recursos e e gerido pela comunidade, e encaminha ao Microsoft Agent Framework, para o qual a Microsoft publica um guia oficial de migracao.',
+          {
+            '@type': 'Question',
+            'name': 'O Microsoft AutoGen ainda e mantido?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nao no sentido de desenvolvimento ativo. O repositorio traz um aviso de modo manutencao informando que o AutoGen nao recebera novos recursos nem melhorias e passa a ser gerido pela comunidade, e encaminha novos usuarios ao Microsoft Agent Framework. Seus ultimos commits substanciais sao do inicio de 2026. A Microsoft publica um guia oficial de migracao do AutoGen para o Agent Framework.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quantas estrelas no GitHub o AG2 tem?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O AG2, fork comunitario do AutoGen, tem cerca de 4.900 estrelas e licenca Apache-2.0. O numero de cerca de 60.000 atribuido a ele pertence ao repositorio original microsoft/autogen.',
+          {
+            '@type': 'Question',
+            'name': 'Quantas estrelas no GitHub o AG2 tem?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O AG2, fork comunitario do AutoGen, tem cerca de 4.900 estrelas e licenca Apache-2.0. O numero de cerca de 60.000 frequentemente atribuido a ele pertence, na verdade, ao repositorio original `microsoft/autogen`, que esta em modo manutencao. O fork e desenvolvido ativamente, mas e bem menor do que se costuma relatar.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O n8n e codigo aberto?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nao pela definicao da OSI. O n8n usa a Sustainable Use License, de codigo disponivel e gratuita para auto-hospedar, mas que restringe revender o proprio n8n. LangGraph, CrewAI e Microsoft Agent Framework tem licenca MIT.',
+          {
+            '@type': 'Question',
+            'name': 'O LangGraph e gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. A biblioteca LangGraph tem licenca MIT e e gratuita para auto-hospedar, sem limites de execucao. A camada paga sao o LangSmith e a plataforma de implantacao: um nivel Developer a US$ 0 por assento com ate 5.000 tracos base por mes, o Plus a US$ 39 por assento por mes com ate 10.000, e precos Enterprise sob medida. Computacao e armazenamento acima da cota sao cobrados a parte.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Frameworks de agentes tem programas de afiliados?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'So o n8n, que paga 30% da receita liquida em indicacoes do Cloud por 12 meses via PayPal acima de 100 euros, com publicidade paga proibida. Nenhum programa publico encontrado para LangChain, CrewAI ou Microsoft.',
+          {
+            '@type': 'Question',
+            'name': 'Quanto custa o CrewAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A biblioteca CrewAI tem licenca MIT e e gratuita. Seu plano hospedado Basic e gratuito e inclui 50 execucoes de fluxo por mes com editor visual e integracao com o GitHub. Acima disso existe apenas um nivel Enterprise, e o CrewAI nao publica valor algum, entao e preciso falar com o comercial.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'O n8n e codigo aberto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nao no sentido da OSI. O n8n usa a Sustainable Use License, que torna o codigo disponivel e a Community Edition gratuita para auto-hospedar, mas restringe revender o proprio n8n. LangGraph, CrewAI e Microsoft Agent Framework tem licenca MIT, sem essa restricao. Leia o texto da licenca antes de construir um produto comercial sobre o n8n.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Algum deles tem programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'So o n8n. Ele paga 30% da receita liquida em indicacoes do n8n Cloud por 12 meses, emitido mensalmente via PayPal quando o saldo atinge 100 euros, e a publicidade paga e expressamente proibida nos termos do programa. Aplica-se apenas a assinaturas do Cloud, nao a Community Edition auto-hospedada gratuita. Nao encontramos programa publico para LangChain, CrewAI ou Microsoft. A PromptQuorum nao esta inscrita em nenhum.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Preciso de Kubernetes para auto-hospedar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nao. LangGraph, CrewAI e Microsoft Agent Framework rodam como processos de aplicacao comuns e sao implantados como voce ja implanta seus servicos. A Community Edition do n8n roda como um unico container Docker para cargas pequenas; configuracoes escaladas exigem mais infraestrutura, que e parte do que os niveis pagos entregam pronto.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3121,39 +3158,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          {
-            q: '2026年に最適なAIエージェント基盤は何ですか？',
-            a: '明示的な状態管理と監査可能性が要る本番エージェントにはLangGraph、動く試作までの最短経路にはCrewAI、.NETとAzureのチームにはMicrosoft Agent Framework、非エンジニアがワークフローを作る場ではn8nです。それぞれ異なる制約を解くため、単一の勝者はいません。',
-          },
-          {
-            q: 'Microsoft AutoGenはまだ保守されていますか？',
-            a: '活発な開発という意味では、されていません。リポジトリにはメンテナンスモードの告知があり、AutoGenは新機能や機能強化を受けずコミュニティ管理に移行すると明記され、新規利用者はMicrosoft Agent Frameworkへ案内されています。実質的な最後のコミットは2026年初頭です。MicrosoftはAutoGenからAgent Frameworkへの公式移行ガイドを公開しています。',
-          },
-          {
-            q: 'AG2のGitHubスターはいくつですか？',
-            a: 'AutoGenのコミュニティ版フォークであるAG2は約4,900スターで、ライセンスはApache-2.0です。AG2に帰されがちな約60,000という数字は、実際にはメンテナンスモードにある本家`microsoft/autogen`のものです。フォークは活発に開発されていますが、一般に報じられるよりはるかに小規模です。',
-          },
-          {
-            q: 'LangGraphは無料で使えますか？',
-            a: 'はい。LangGraphのライブラリはMITライセンスで、実行回数の制限なく無料で自社運用できます。有料層はLangSmithとデプロイ基盤で、1席0ドルで月5,000件までの基本トレースが使えるDeveloper、1席月39ドルで月10,000件までのPlus、個別見積のEnterpriseがあります。枠を超えた計算資源とストレージは別途課金されます。',
-          },
-          {
-            q: 'CrewAIはいくらかかりますか？',
-            a: 'CrewAIのライブラリはMITライセンスで無料です。ホスティングされるBasicプランは無料で、月50回のワークフロー実行とビジュアルエディタ、GitHub連携を含みます。その上はEnterpriseのみで、CrewAIは金額を公表していないため営業に問い合わせる必要があります。',
-          },
-          {
-            q: 'n8nはオープンソースですか？',
-            a: 'OSIの定義では違います。n8nはSustainable Use Licenseを採用しており、ソースは公開されCommunity Editionは無料で自社運用できますが、n8n自体の再販は制限されます。LangGraph、CrewAI、Microsoft Agent FrameworkはいずれもMITライセンスで、そうした制限はありません。n8nの上に商用製品を作る前にライセンス本文を読んでください。',
-          },
-          {
-            q: 'これらにアフィリエイトプログラムはありますか？',
-            a: 'n8nだけです。n8n Cloudの紹介について純収益の30％を12か月間支払い、残高が100ユーロに達すると毎月PayPalで支払われます。プログラムの規約で有料広告は明確に禁止されています。対象はCloudのサブスクリプションのみで、無料の自社運用版Community Editionは対象外です。LangChain、CrewAI、Microsoftについては公開のプログラムを確認できませんでした。PromptQuorumはいずれにも登録していません。',
-          },
-          {
-            q: '自社運用にKubernetesは必要ですか？',
-            a: '不要です。LangGraph、CrewAI、Microsoft Agent Frameworkは通常のアプリケーションプロセスとして動き、既存のサービスと同じ方法でデプロイできます。n8nのCommunity Editionは小規模な負荷なら単一のDockerコンテナで動きます。規模を広げる構成にはより多くのインフラが必要で、それは有料層があらかじめ用意している部分でもあります。',
-          },
-        ],
+            { q: '2026年に最適なAIエージェント基盤は何ですか？', a: '明示的な状態管理と監査可能性が要る本番エージェントにはLangGraph、動く試作までの最短経路にはCrewAI、.NETとAzureのチームにはMicrosoft Agent Framework、非エンジニアがワークフローを作る場ではn8nです。それぞれ異なる制約を解くため、単一の勝者はいません。' },
+            { q: 'Microsoft AutoGenはまだ保守されていますか？', a: '活発な開発という意味では、されていません。リポジトリにはメンテナンスモードの告知があり、AutoGenは新機能や機能強化を受けずコミュニティ管理に移行すると明記され、新規利用者はMicrosoft Agent Frameworkへ案内されています。実質的な最後のコミットは2026年初頭です。MicrosoftはAutoGenからAgent Frameworkへの公式移行ガイドを公開しています。' },
+            { q: 'AG2のGitHubスターはいくつですか？', a: 'AutoGenのコミュニティ版フォークであるAG2は約4,900スターで、ライセンスはApache-2.0です。AG2に帰されがちな約60,000という数字は、実際にはメンテナンスモードにある本家`microsoft/autogen`のものです。フォークは活発に開発されていますが、一般に報じられるよりはるかに小規模です。' },
+            { q: 'LangGraphは無料で使えますか？', a: 'はい。LangGraphのライブラリはMITライセンスで、実行回数の制限なく無料で自社運用できます。有料層はLangSmithとデプロイ基盤で、1席0ドルで月5,000件までの基本トレースが使えるDeveloper、1席月39ドルで月10,000件までのPlus、個別見積のEnterpriseがあります。枠を超えた計算資源とストレージは別途課金されます。' },
+            { q: 'CrewAIはいくらかかりますか？', a: 'CrewAIのライブラリはMITライセンスで無料です。ホスティングされるBasicプランは無料で、月50回のワークフロー実行とビジュアルエディタ、GitHub連携を含みます。その上はEnterpriseのみで、CrewAIは金額を公表していないため営業に問い合わせる必要があります。' },
+            { q: 'n8nはオープンソースですか？', a: 'OSIの定義では違います。n8nはSustainable Use Licenseを採用しており、ソースは公開されCommunity Editionは無料で自社運用できますが、n8n自体の再販は制限されます。LangGraph、CrewAI、Microsoft Agent FrameworkはいずれもMITライセンスで、そうした制限はありません。n8nの上に商用製品を作る前にライセンス本文を読んでください。' },
+            { q: 'これらにアフィリエイトプログラムはありますか？', a: 'n8nだけです。n8n Cloudの紹介について純収益の30％を12か月間支払い、残高が100ユーロに達すると毎月PayPalで支払われます。プログラムの規約で有料広告は明確に禁止されています。対象はCloudのサブスクリプションのみで、無料の自社運用版Community Editionは対象外です。LangChain、CrewAI、Microsoftについては公開のプログラムを確認できませんでした。PromptQuorumはいずれにも登録していません。' },
+            { q: '自社運用にKubernetesは必要ですか？', a: '不要です。LangGraph、CrewAI、Microsoft Agent Frameworkは通常のアプリケーションプロセスとして動き、既存のサービスと同じ方法でデプロイできます。n8nのCommunity Editionは小規模な負荷なら単一のDockerコンテナで動きます。規模を広げる構成にはより多くのインフラが必要で、それは有料層があらかじめ用意している部分でもあります。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3223,47 +3236,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026年に最適なAIエージェント基盤は何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '明示的な状態管理が要る本番エージェントにはLangGraph、最速の試作にはCrewAI、.NETとAzureのチームにはMicrosoft Agent Framework、非エンジニアがワークフローを作る場ではn8nです。',
+          {
+            '@type': 'Question',
+            'name': '2026年に最適なAIエージェント基盤は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '明示的な状態管理と監査可能性が要る本番エージェントにはLangGraph、動く試作までの最短経路にはCrewAI、.NETとAzureのチームにはMicrosoft Agent Framework、非エンジニアがワークフローを作る場ではn8nです。それぞれ異なる制約を解くため、単一の勝者はいません。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Microsoft AutoGenはまだ保守されていますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。リポジトリにはメンテナンスモードの告知があり、AutoGenは新機能を受けずコミュニティ管理になると明記され、Microsoft Agent Frameworkへ案内されています。Microsoftは公式の移行ガイドを公開しています。',
+          {
+            '@type': 'Question',
+            'name': 'Microsoft AutoGenはまだ保守されていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '活発な開発という意味では、されていません。リポジトリにはメンテナンスモードの告知があり、AutoGenは新機能や機能強化を受けずコミュニティ管理に移行すると明記され、新規利用者はMicrosoft Agent Frameworkへ案内されています。実質的な最後のコミットは2026年初頭です。MicrosoftはAutoGenからAgent Frameworkへの公式移行ガイドを公開しています。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AG2のGitHubスターはいくつですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoGenのコミュニティ版フォークであるAG2は約4,900スターでApache-2.0です。AG2に帰されがちな約60,000という数字は、本家microsoft/autogenのものです。',
+          {
+            '@type': 'Question',
+            'name': 'AG2のGitHubスターはいくつですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoGenのコミュニティ版フォークであるAG2は約4,900スターで、ライセンスはApache-2.0です。AG2に帰されがちな約60,000という数字は、実際にはメンテナンスモードにある本家`microsoft/autogen`のものです。フォークは活発に開発されていますが、一般に報じられるよりはるかに小規模です。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'n8nはオープンソースですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'OSIの定義では違います。n8nはSustainable Use Licenseを採用し、ソース公開かつ自社運用は無料ですが、n8n自体の再販を制限します。LangGraph、CrewAI、Microsoft Agent FrameworkはMITライセンスです。',
+          {
+            '@type': 'Question',
+            'name': 'LangGraphは無料で使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。LangGraphのライブラリはMITライセンスで、実行回数の制限なく無料で自社運用できます。有料層はLangSmithとデプロイ基盤で、1席0ドルで月5,000件までの基本トレースが使えるDeveloper、1席月39ドルで月10,000件までのPlus、個別見積のEnterpriseがあります。枠を超えた計算資源とストレージは別途課金されます。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'エージェント基盤にアフィリエイトプログラムはありますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'n8nだけで、Cloudの紹介について純収益の30％を12か月間、100ユーロ以上でPayPal経由で支払います。有料広告は禁止です。LangChain、CrewAI、Microsoftには公開のプログラムを確認できませんでした。',
+          {
+            '@type': 'Question',
+            'name': 'CrewAIはいくらかかりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CrewAIのライブラリはMITライセンスで無料です。ホスティングされるBasicプランは無料で、月50回のワークフロー実行とビジュアルエディタ、GitHub連携を含みます。その上はEnterpriseのみで、CrewAIは金額を公表していないため営業に問い合わせる必要があります。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'n8nはオープンソースですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OSIの定義では違います。n8nはSustainable Use Licenseを採用しており、ソースは公開されCommunity Editionは無料で自社運用できますが、n8n自体の再販は制限されます。LangGraph、CrewAI、Microsoft Agent FrameworkはいずれもMITライセンスで、そうした制限はありません。n8nの上に商用製品を作る前にライセンス本文を読んでください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'これらにアフィリエイトプログラムはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'n8nだけです。n8n Cloudの紹介について純収益の30％を12か月間支払い、残高が100ユーロに達すると毎月PayPalで支払われます。プログラムの規約で有料広告は明確に禁止されています。対象はCloudのサブスクリプションのみで、無料の自社運用版Community Editionは対象外です。LangChain、CrewAI、Microsoftについては公開のプログラムを確認できませんでした。PromptQuorumはいずれにも登録していません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '自社運用にKubernetesは必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不要です。LangGraph、CrewAI、Microsoft Agent Frameworkは通常のアプリケーションプロセスとして動き、既存のサービスと同じ方法でデプロイできます。n8nのCommunity Editionは小規模な負荷なら単一のDockerコンテナで動きます。規模を広げる構成にはより多くのインフラが必要で、それは有料層があらかじめ用意している部分でもあります。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3666,39 +3703,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          {
-            q: '2026 年最好的 AI 智能体框架是哪个？',
-            a: '需要显式状态与可审计性的生产级智能体选 LangGraph，最快做出可运行原型选 CrewAI，.NET 与 Azure 团队选 Microsoft Agent Framework，由非工程人员搭建工作流则选 n8n。没有单一赢家，因为每一个解决的是不同的约束。',
-          },
-          {
-            q: 'Microsoft AutoGen 还在维护吗？',
-            a: '就活跃开发而言，没有。仓库挂着维护模式横幅，声明 AutoGen 不会再获得新功能或增强、今后由社区管理，并引导新用户前往 Microsoft Agent Framework。其最后几次实质性提交在 2026 年年初。微软发布了从 AutoGen 迁移到 Agent Framework 的官方指南。',
-          },
-          {
-            q: 'AG2 有多少 GitHub 星标？',
-            a: 'AutoGen 的社区分支 AG2 约有 4,900 星标，许可证为 Apache-2.0。常被归到它名下的约 60,000 这个数字，实际属于处于维护模式的原始仓库 `microsoft/autogen`。该分支在活跃开发，但规模远小于通常的报道。',
-          },
-          {
-            q: 'LangGraph 免费吗？',
-            a: '免费。LangGraph 库采用 MIT 许可，可免费自托管且无执行次数限制。付费层是 LangSmith 与部署平台：Developer 层每席位 0 美元、每月最多 5,000 条基础追踪，Plus 层每席位每月 39 美元、最多 10,000 条，以及定制报价的 Enterprise。超出额度的计算与存储另行计费。',
-          },
-          {
-            q: 'CrewAI 多少钱？',
-            a: 'CrewAI 库采用 MIT 许可且免费。其托管的 Basic 套餐免费，包含每月 50 次工作流执行，并提供可视化编辑器与 GitHub 集成。再往上只有 Enterprise 一档，CrewAI 未公开任何价格，需联系销售。',
-          },
-          {
-            q: 'n8n 是开源的吗？',
-            a: '按 OSI 的定义不是。n8n 采用 Sustainable Use License，源码可见且 Community Edition 可免费自托管，但限制转售 n8n 本身。LangGraph、CrewAI 与 Microsoft Agent Framework 都采用 MIT 许可，没有这类限制。在基于 n8n 构建商业产品前请阅读许可原文。',
-          },
-          {
-            q: '它们有联盟计划吗？',
-            a: '只有 n8n。它按 n8n Cloud 推荐的净收入支付 30%，为期 12 个月，余额达到 100 欧元后每月经 PayPal 发放，且计划条款明确禁止付费广告。它仅适用于 Cloud 订阅，不适用于免费的自托管 Community Edition。我们没有找到 LangChain、CrewAI 或微软的公开计划。PromptQuorum 未加入其中任何一个。',
-          },
-          {
-            q: '自托管这些需要 Kubernetes 吗？',
-            a: '不需要。LangGraph、CrewAI 与 Microsoft Agent Framework 都以普通应用进程运行，可以按你现有的方式部署服务。n8n 的 Community Edition 在小规模负载下以单个 Docker 容器运行；规模化部署需要更多基础设施，而这正是付费层预先提供的一部分。',
-          },
-        ],
+            { q: '2026 年最好的 AI 智能体框架是哪个？', a: '需要显式状态与可审计性的生产级智能体选 LangGraph，最快做出可运行原型选 CrewAI，.NET 与 Azure 团队选 Microsoft Agent Framework，由非工程人员搭建工作流则选 n8n。没有单一赢家，因为每一个解决的是不同的约束。' },
+            { q: 'Microsoft AutoGen 还在维护吗？', a: '就活跃开发而言，没有。仓库挂着维护模式横幅，声明 AutoGen 不会再获得新功能或增强、今后由社区管理，并引导新用户前往 Microsoft Agent Framework。其最后几次实质性提交在 2026 年年初。微软发布了从 AutoGen 迁移到 Agent Framework 的官方指南。' },
+            { q: 'AG2 有多少 GitHub 星标？', a: 'AutoGen 的社区分支 AG2 约有 4,900 星标，许可证为 Apache-2.0。常被归到它名下的约 60,000 这个数字，实际属于处于维护模式的原始仓库 `microsoft/autogen`。该分支在活跃开发，但规模远小于通常的报道。' },
+            { q: 'LangGraph 免费吗？', a: '免费。LangGraph 库采用 MIT 许可，可免费自托管且无执行次数限制。付费层是 LangSmith 与部署平台：Developer 层每席位 0 美元、每月最多 5,000 条基础追踪，Plus 层每席位每月 39 美元、最多 10,000 条，以及定制报价的 Enterprise。超出额度的计算与存储另行计费。' },
+            { q: 'CrewAI 多少钱？', a: 'CrewAI 库采用 MIT 许可且免费。其托管的 Basic 套餐免费，包含每月 50 次工作流执行，并提供可视化编辑器与 GitHub 集成。再往上只有 Enterprise 一档，CrewAI 未公开任何价格，需联系销售。' },
+            { q: 'n8n 是开源的吗？', a: '按 OSI 的定义不是。n8n 采用 Sustainable Use License，源码可见且 Community Edition 可免费自托管，但限制转售 n8n 本身。LangGraph、CrewAI 与 Microsoft Agent Framework 都采用 MIT 许可，没有这类限制。在基于 n8n 构建商业产品前请阅读许可原文。' },
+            { q: '它们有联盟计划吗？', a: '只有 n8n。它按 n8n Cloud 推荐的净收入支付 30%，为期 12 个月，余额达到 100 欧元后每月经 PayPal 发放，且计划条款明确禁止付费广告。它仅适用于 Cloud 订阅，不适用于免费的自托管 Community Edition。我们没有找到 LangChain、CrewAI 或微软的公开计划。PromptQuorum 未加入其中任何一个。' },
+            { q: '自托管这些需要 Kubernetes 吗？', a: '不需要。LangGraph、CrewAI 与 Microsoft Agent Framework 都以普通应用进程运行，可以按你现有的方式部署服务。n8n 的 Community Edition 在小规模负载下以单个 Docker 容器运行；规模化部署需要更多基础设施，而这正是付费层预先提供的一部分。' },
+            { q: '智能体框架有联盟计划吗？', a: '只有 n8n，按 Cloud 推荐净收入支付 30%，为期 12 个月，满 100 欧元后经 PayPal 发放，且禁止付费广告。未找到 LangChain、CrewAI 或微软的公开计划。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3768,47 +3782,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026 年最好的 AI 智能体框架是哪个？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '需要显式状态的生产级智能体选 LangGraph，最快做出原型选 CrewAI，.NET 与 Azure 团队选 Microsoft Agent Framework，由非工程人员搭建工作流则选 n8n。',
+          {
+            '@type': 'Question',
+            'name': '2026 年最好的 AI 智能体框架是哪个？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '需要显式状态与可审计性的生产级智能体选 LangGraph，最快做出可运行原型选 CrewAI，.NET 与 Azure 团队选 Microsoft Agent Framework，由非工程人员搭建工作流则选 n8n。没有单一赢家，因为每一个解决的是不同的约束。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Microsoft AutoGen 还在维护吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '没有。仓库挂着维护模式横幅，声明 AutoGen 不会再获得新功能并由社区管理，同时引导用户前往 Microsoft Agent Framework，微软为此发布了官方迁移指南。',
+          {
+            '@type': 'Question',
+            'name': 'Microsoft AutoGen 还在维护吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '就活跃开发而言，没有。仓库挂着维护模式横幅，声明 AutoGen 不会再获得新功能或增强、今后由社区管理，并引导新用户前往 Microsoft Agent Framework。其最后几次实质性提交在 2026 年年初。微软发布了从 AutoGen 迁移到 Agent Framework 的官方指南。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AG2 有多少 GitHub 星标？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoGen 的社区分支 AG2 约有 4,900 星标，许可证为 Apache-2.0。常被归到它名下的约 60,000 这个数字属于原始仓库 microsoft/autogen。',
+          {
+            '@type': 'Question',
+            'name': 'AG2 有多少 GitHub 星标？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoGen 的社区分支 AG2 约有 4,900 星标，许可证为 Apache-2.0。常被归到它名下的约 60,000 这个数字，实际属于处于维护模式的原始仓库 `microsoft/autogen`。该分支在活跃开发，但规模远小于通常的报道。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'n8n 是开源的吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '按 OSI 定义不是。n8n 采用 Sustainable Use License，源码可见且可免费自托管，但限制转售 n8n 本身。LangGraph、CrewAI 与 Microsoft Agent Framework 采用 MIT 许可。',
+          {
+            '@type': 'Question',
+            'name': 'LangGraph 免费吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '免费。LangGraph 库采用 MIT 许可，可免费自托管且无执行次数限制。付费层是 LangSmith 与部署平台：Developer 层每席位 0 美元、每月最多 5,000 条基础追踪，Plus 层每席位每月 39 美元、最多 10,000 条，以及定制报价的 Enterprise。超出额度的计算与存储另行计费。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '智能体框架有联盟计划吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '只有 n8n，按 Cloud 推荐净收入支付 30%，为期 12 个月，满 100 欧元后经 PayPal 发放，且禁止付费广告。未找到 LangChain、CrewAI 或微软的公开计划。',
+          {
+            '@type': 'Question',
+            'name': 'CrewAI 多少钱？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CrewAI 库采用 MIT 许可且免费。其托管的 Basic 套餐免费，包含每月 50 次工作流执行，并提供可视化编辑器与 GitHub 集成。再往上只有 Enterprise 一档，CrewAI 未公开任何价格，需联系销售。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'n8n 是开源的吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '按 OSI 的定义不是。n8n 采用 Sustainable Use License，源码可见且 Community Edition 可免费自托管，但限制转售 n8n 本身。LangGraph、CrewAI 与 Microsoft Agent Framework 都采用 MIT 许可，没有这类限制。在基于 n8n 构建商业产品前请阅读许可原文。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '它们有联盟计划吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只有 n8n。它按 n8n Cloud 推荐的净收入支付 30%，为期 12 个月，余额达到 100 欧元后每月经 PayPal 发放，且计划条款明确禁止付费广告。它仅适用于 Cloud 订阅，不适用于免费的自托管 Community Edition。我们没有找到 LangChain、CrewAI 或微软的公开计划。PromptQuorum 未加入其中任何一个。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '自托管这些需要 Kubernetes 吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需要。LangGraph、CrewAI 与 Microsoft Agent Framework 都以普通应用进程运行，可以按你现有的方式部署服务。n8n 的 Community Edition 在小规模负载下以单个 Docker 容器运行；规模化部署需要更多基础设施，而这正是付费层预先提供的一部分。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '智能体框架有联盟计划吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只有 n8n，按 Cloud 推荐净收入支付 30%，为期 12 个月，满 100 欧元后经 PayPal 发放，且禁止付费广告。未找到 LangChain、CrewAI 或微软的公开计划。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4211,39 +4257,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'ما أفضل إطار عمل لوكلاء الذكاء الاصطناعي في 2026؟',
-            a: 'LangGraph للوكلاء في الإنتاج الذين يحتاجون حالة صريحة وقابلية للتدقيق، وCrewAI لأسرع طريق إلى نموذج أولي عامل، وMicrosoft Agent Framework لفرق ‎.NET وAzure، وn8n حيث يبني التدفقات أشخاص غير تقنيين. ولا يوجد فائز واحد لأن كلًا منها يحل قيدًا مختلفًا.',
-          },
-          {
-            q: 'هل ما زالت Microsoft AutoGen مصانة؟',
-            a: 'ليس بمعنى التطوير النشط. فالمستودع يحمل لافتة وضع الصيانة تنص على أن AutoGen لن تحصل على ميزات جديدة أو تحسينات وستُدار من المجتمع، ويوجّه المستخدمين الجدد إلى Microsoft Agent Framework. وآخر إسهاماتها الجوهرية كانت في مطلع 2026. وتنشر مايكروسوفت دليل هجرة رسميًا من AutoGen إلى Agent Framework.',
-          },
-          {
-            q: 'كم عدد نجوم AG2 على GitHub؟',
-            a: 'لدى AG2، النسخة المتفرعة المجتمعية من AutoGen، نحو 4900 نجمة وهي مرخّصة بـApache-2.0. أما رقم الستين ألفًا الذي يُنسب إليها كثيرًا فيخص في الحقيقة المستودع الأصلي `microsoft/autogen` الذي يقع في وضع الصيانة. والنسخة المتفرعة تُطوَّر بنشاط لكنها أصغر بكثير مما يُنقل عادةً.',
-          },
-          {
-            q: 'هل LangGraph مجاني الاستخدام؟',
-            a: 'نعم. فمكتبة LangGraph مرخّصة بـMIT ومجانية للاستضافة الذاتية دون حدود على عدد التنفيذات. أما الطبقة المدفوعة فهي LangSmith ومنصة النشر: باقة Developer بصفر دولار للمقعد مع حتى 5000 أثر أساسي شهريًا، وPlus بـ39 دولارًا للمقعد شهريًا مع حتى 10 آلاف، وأسعار Enterprise مخصصة. وتُحتسب الحوسبة والتخزين فوق الحصة على حدة.',
-          },
-          {
-            q: 'كم تكلّف CrewAI؟',
-            a: 'مكتبة CrewAI مرخّصة بـMIT ومجانية. وباقتها المستضافة Basic مجانية وتشمل 50 تنفيذًا للتدفقات شهريًا مع محرر مرئي وتكامل مع GitHub. وفوق ذلك توجد باقة Enterprise وحدها، ولا تنشر CrewAI أي رقم لها، فيلزم التواصل مع المبيعات.',
-          },
-          {
-            q: 'هل n8n مفتوحة المصدر؟',
-            a: 'ليست كذلك بمعنى OSI. فـn8n تستخدم رخصة Sustainable Use License، التي تجعل المصدر متاحًا ونسخة Community Edition مجانية للاستضافة الذاتية، لكنها تقيّد إعادة بيع n8n نفسها. أما LangGraph وCrewAI وMicrosoft Agent Framework فجميعها مرخّصة بـMIT دون هذا القيد. اقرأ نص الرخصة قبل بناء منتج تجاري على n8n.',
-          },
-          {
-            q: 'هل لأي منها برنامج عمولة؟',
-            a: 'وحدها n8n. فهي تدفع 30% من صافي الأرباح على إحالات n8n Cloud لمدة 12 شهرًا، تُصرف شهريًا عبر PayPal متى بلغ رصيدك 100 يورو، والإعلانات المدفوعة ممنوعة صراحةً بموجب شروط البرنامج. وينطبق ذلك على اشتراكات السحابة فقط، لا على نسخة Community Edition المجانية ذاتية الاستضافة. ولم نعثر على برنامج علني لـLangChain أو CrewAI أو مايكروسوفت. ومنصة PromptQuorum ليست مسجّلة في أي منها.',
-          },
-          {
-            q: 'هل أحتاج Kubernetes لاستضافتها ذاتيًا؟',
-            a: 'لا. فـLangGraph وCrewAI وMicrosoft Agent Framework تعمل بوصفها عمليات تطبيقية عادية وتُنشر بالطريقة التي تنشر بها خدماتك أصلًا. أما نسخة Community Edition من n8n فتعمل بحاوية Docker واحدة للأحمال الصغيرة، بينما تحتاج الإعدادات الموسّعة بنية تحتية أكبر، وهو جزء مما توفره الباقات المدفوعة جاهزًا.',
-          },
-        ],
+            { q: 'ما أفضل إطار عمل لوكلاء الذكاء الاصطناعي في 2026؟', a: 'LangGraph للوكلاء في الإنتاج الذين يحتاجون حالة صريحة وقابلية للتدقيق، وCrewAI لأسرع طريق إلى نموذج أولي عامل، وMicrosoft Agent Framework لفرق ‎.NET وAzure، وn8n حيث يبني التدفقات أشخاص غير تقنيين. ولا يوجد فائز واحد لأن كلًا منها يحل قيدًا مختلفًا.' },
+            { q: 'هل ما زالت Microsoft AutoGen مصانة؟', a: 'ليس بمعنى التطوير النشط. فالمستودع يحمل لافتة وضع الصيانة تنص على أن AutoGen لن تحصل على ميزات جديدة أو تحسينات وستُدار من المجتمع، ويوجّه المستخدمين الجدد إلى Microsoft Agent Framework. وآخر إسهاماتها الجوهرية كانت في مطلع 2026. وتنشر مايكروسوفت دليل هجرة رسميًا من AutoGen إلى Agent Framework.' },
+            { q: 'كم عدد نجوم AG2 على GitHub؟', a: 'لدى AG2، النسخة المتفرعة المجتمعية من AutoGen، نحو 4900 نجمة وهي مرخّصة بـApache-2.0. أما رقم الستين ألفًا الذي يُنسب إليها كثيرًا فيخص في الحقيقة المستودع الأصلي `microsoft/autogen` الذي يقع في وضع الصيانة. والنسخة المتفرعة تُطوَّر بنشاط لكنها أصغر بكثير مما يُنقل عادةً.' },
+            { q: 'هل LangGraph مجاني الاستخدام؟', a: 'نعم. فمكتبة LangGraph مرخّصة بـMIT ومجانية للاستضافة الذاتية دون حدود على عدد التنفيذات. أما الطبقة المدفوعة فهي LangSmith ومنصة النشر: باقة Developer بصفر دولار للمقعد مع حتى 5000 أثر أساسي شهريًا، وPlus بـ39 دولارًا للمقعد شهريًا مع حتى 10 آلاف، وأسعار Enterprise مخصصة. وتُحتسب الحوسبة والتخزين فوق الحصة على حدة.' },
+            { q: 'كم تكلّف CrewAI؟', a: 'مكتبة CrewAI مرخّصة بـMIT ومجانية. وباقتها المستضافة Basic مجانية وتشمل 50 تنفيذًا للتدفقات شهريًا مع محرر مرئي وتكامل مع GitHub. وفوق ذلك توجد باقة Enterprise وحدها، ولا تنشر CrewAI أي رقم لها، فيلزم التواصل مع المبيعات.' },
+            { q: 'هل n8n مفتوحة المصدر؟', a: 'ليست كذلك بمعنى OSI. فـn8n تستخدم رخصة Sustainable Use License، التي تجعل المصدر متاحًا ونسخة Community Edition مجانية للاستضافة الذاتية، لكنها تقيّد إعادة بيع n8n نفسها. أما LangGraph وCrewAI وMicrosoft Agent Framework فجميعها مرخّصة بـMIT دون هذا القيد. اقرأ نص الرخصة قبل بناء منتج تجاري على n8n.' },
+            { q: 'هل لأي منها برنامج عمولة؟', a: 'وحدها n8n. فهي تدفع 30% من صافي الأرباح على إحالات n8n Cloud لمدة 12 شهرًا، تُصرف شهريًا عبر PayPal متى بلغ رصيدك 100 يورو، والإعلانات المدفوعة ممنوعة صراحةً بموجب شروط البرنامج. وينطبق ذلك على اشتراكات السحابة فقط، لا على نسخة Community Edition المجانية ذاتية الاستضافة. ولم نعثر على برنامج علني لـLangChain أو CrewAI أو مايكروسوفت. ومنصة PromptQuorum ليست مسجّلة في أي منها.' },
+            { q: 'هل أحتاج Kubernetes لاستضافتها ذاتيًا؟', a: 'لا. فـLangGraph وCrewAI وMicrosoft Agent Framework تعمل بوصفها عمليات تطبيقية عادية وتُنشر بالطريقة التي تنشر بها خدماتك أصلًا. أما نسخة Community Edition من n8n فتعمل بحاوية Docker واحدة للأحمال الصغيرة، بينما تحتاج الإعدادات الموسّعة بنية تحتية أكبر، وهو جزء مما توفره الباقات المدفوعة جاهزًا.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4313,47 +4335,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما أفضل إطار عمل لوكلاء الذكاء الاصطناعي في 2026؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LangGraph للوكلاء في الإنتاج ذوي الحالة الصريحة، وCrewAI لأسرع نموذج أولي، وMicrosoft Agent Framework لفرق ‎.NET وAzure، وn8n حيث يبني التدفقات أشخاص غير تقنيين.',
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل إطار عمل لوكلاء الذكاء الاصطناعي في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LangGraph للوكلاء في الإنتاج الذين يحتاجون حالة صريحة وقابلية للتدقيق، وCrewAI لأسرع طريق إلى نموذج أولي عامل، وMicrosoft Agent Framework لفرق ‎.NET وAzure، وn8n حيث يبني التدفقات أشخاص غير تقنيين. ولا يوجد فائز واحد لأن كلًا منها يحل قيدًا مختلفًا.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل ما زالت Microsoft AutoGen مصانة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا. فالمستودع يحمل لافتة وضع الصيانة تنص على أن AutoGen لن تحصل على ميزات جديدة وتُدار من المجتمع، ويحيل إلى Microsoft Agent Framework الذي تنشر مايكروسوفت دليل هجرة رسميًا إليه.',
+          {
+            '@type': 'Question',
+            'name': 'هل ما زالت Microsoft AutoGen مصانة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس بمعنى التطوير النشط. فالمستودع يحمل لافتة وضع الصيانة تنص على أن AutoGen لن تحصل على ميزات جديدة أو تحسينات وستُدار من المجتمع، ويوجّه المستخدمين الجدد إلى Microsoft Agent Framework. وآخر إسهاماتها الجوهرية كانت في مطلع 2026. وتنشر مايكروسوفت دليل هجرة رسميًا من AutoGen إلى Agent Framework.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كم عدد نجوم AG2 على GitHub؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لدى AG2، النسخة المتفرعة المجتمعية من AutoGen، نحو 4900 نجمة ورخصة Apache-2.0. أما رقم الستين ألفًا المنسوب إليها فيخص المستودع الأصلي microsoft/autogen.',
+          {
+            '@type': 'Question',
+            'name': 'كم عدد نجوم AG2 على GitHub؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لدى AG2، النسخة المتفرعة المجتمعية من AutoGen، نحو 4900 نجمة وهي مرخّصة بـApache-2.0. أما رقم الستين ألفًا الذي يُنسب إليها كثيرًا فيخص في الحقيقة المستودع الأصلي `microsoft/autogen` الذي يقع في وضع الصيانة. والنسخة المتفرعة تُطوَّر بنشاط لكنها أصغر بكثير مما يُنقل عادةً.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل n8n مفتوحة المصدر؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ليست كذلك وفق تعريف OSI. فـn8n تستخدم رخصة Sustainable Use License، متاحة المصدر ومجانية للاستضافة الذاتية لكنها تقيّد إعادة بيع n8n نفسها. أما LangGraph وCrewAI وMicrosoft Agent Framework فمرخّصة بـMIT.',
+          {
+            '@type': 'Question',
+            'name': 'هل LangGraph مجاني الاستخدام؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. فمكتبة LangGraph مرخّصة بـMIT ومجانية للاستضافة الذاتية دون حدود على عدد التنفيذات. أما الطبقة المدفوعة فهي LangSmith ومنصة النشر: باقة Developer بصفر دولار للمقعد مع حتى 5000 أثر أساسي شهريًا، وPlus بـ39 دولارًا للمقعد شهريًا مع حتى 10 آلاف، وأسعار Enterprise مخصصة. وتُحتسب الحوسبة والتخزين فوق الحصة على حدة.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل لأطر الوكلاء برامج عمولة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'وحدها n8n، إذ تدفع 30% من صافي الأرباح على إحالات السحابة لمدة 12 شهرًا عبر PayPal فوق 100 يورو، مع منع الإعلانات المدفوعة. ولم يُعثر على برنامج علني لـLangChain أو CrewAI أو مايكروسوفت.',
+          {
+            '@type': 'Question',
+            'name': 'كم تكلّف CrewAI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'مكتبة CrewAI مرخّصة بـMIT ومجانية. وباقتها المستضافة Basic مجانية وتشمل 50 تنفيذًا للتدفقات شهريًا مع محرر مرئي وتكامل مع GitHub. وفوق ذلك توجد باقة Enterprise وحدها، ولا تنشر CrewAI أي رقم لها، فيلزم التواصل مع المبيعات.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل n8n مفتوحة المصدر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليست كذلك بمعنى OSI. فـn8n تستخدم رخصة Sustainable Use License، التي تجعل المصدر متاحًا ونسخة Community Edition مجانية للاستضافة الذاتية، لكنها تقيّد إعادة بيع n8n نفسها. أما LangGraph وCrewAI وMicrosoft Agent Framework فجميعها مرخّصة بـMIT دون هذا القيد. اقرأ نص الرخصة قبل بناء منتج تجاري على n8n.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لأي منها برنامج عمولة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'وحدها n8n. فهي تدفع 30% من صافي الأرباح على إحالات n8n Cloud لمدة 12 شهرًا، تُصرف شهريًا عبر PayPal متى بلغ رصيدك 100 يورو، والإعلانات المدفوعة ممنوعة صراحةً بموجب شروط البرنامج. وينطبق ذلك على اشتراكات السحابة فقط، لا على نسخة Community Edition المجانية ذاتية الاستضافة. ولم نعثر على برنامج علني لـLangChain أو CrewAI أو مايكروسوفت. ومنصة PromptQuorum ليست مسجّلة في أي منها.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج Kubernetes لاستضافتها ذاتيًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. فـLangGraph وCrewAI وMicrosoft Agent Framework تعمل بوصفها عمليات تطبيقية عادية وتُنشر بالطريقة التي تنشر بها خدماتك أصلًا. أما نسخة Community Edition من n8n فتعمل بحاوية Docker واحدة للأحمال الصغيرة، بينما تحتاج الإعدادات الموسّعة بنية تحتية أكبر، وهو جزء مما توفره الباقات المدفوعة جاهزًا.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4756,39 +4802,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: '2026년 최고의 AI 에이전트 프레임워크는 무엇인가요?',
-            a: '명시적 상태와 감사 가능성이 필요한 프로덕션 에이전트에는 LangGraph, 동작하는 프로토타입까지 가장 빠른 길은 CrewAI, .NET과 Azure 팀에는 Microsoft Agent Framework, 비기술 인력이 워크플로를 만드는 곳에는 n8n입니다. 각각 다른 제약을 해결하기 때문에 단일한 승자는 없습니다.',
-          },
-          {
-            q: 'Microsoft AutoGen은 아직 유지보수되나요?',
-            a: '활발한 개발이라는 의미로는 아닙니다. 저장소에 유지보수 모드 배너가 걸려 AutoGen이 새 기능이나 개선을 받지 않으며 커뮤니티가 관리한다고 명시하고, 신규 사용자를 Microsoft Agent Framework로 안내합니다. 마지막 실질적 커밋은 2026년 초입니다. 마이크로소프트는 AutoGen에서 Agent Framework로 가는 공식 마이그레이션 가이드를 제공합니다.',
-          },
-          {
-            q: 'AG2의 GitHub 별은 몇 개인가요?',
-            a: 'AutoGen의 커뮤니티 포크인 AG2는 약 4,900개이며 Apache-2.0 라이선스입니다. 흔히 AG2에 돌려지는 약 60,000이라는 수치는 실제로는 유지보수 모드인 원본 저장소 `microsoft/autogen`의 것입니다. 포크는 활발히 개발되지만 일반적으로 알려진 것보다 훨씬 작습니다.',
-          },
-          {
-            q: 'LangGraph는 무료인가요?',
-            a: '네. LangGraph 라이브러리는 MIT 라이선스이며 실행 횟수 제한 없이 무료로 자체 호스팅할 수 있습니다. 유료 계층은 LangSmith와 배포 플랫폼으로, 좌석당 0달러에 월 최대 5,000건의 기본 트레이스를 주는 Developer, 좌석당 월 39달러에 최대 1만 건을 주는 Plus, 맞춤 견적 Enterprise가 있습니다. 할당량을 넘는 연산과 저장은 별도 청구됩니다.',
-          },
-          {
-            q: 'CrewAI는 얼마인가요?',
-            a: 'CrewAI 라이브러리는 MIT 라이선스이며 무료입니다. 호스팅되는 Basic 요금제는 무료이고 월 50회 워크플로 실행과 시각적 편집기, GitHub 연동을 포함합니다. 그 위로는 Enterprise 등급뿐이고 CrewAI가 어떤 금액도 공개하지 않아 영업에 문의해야 합니다.',
-          },
-          {
-            q: 'n8n은 오픈소스인가요?',
-            a: 'OSI 기준으로는 아닙니다. n8n은 Sustainable Use License를 쓰며 소스는 공개되고 Community Edition은 무료로 자체 호스팅할 수 있지만 n8n 자체의 재판매를 제한합니다. LangGraph, CrewAI, Microsoft Agent Framework는 모두 MIT 라이선스로 그런 제한이 없습니다. n8n 위에 상업용 제품을 만들기 전에 라이선스 원문을 읽으세요.',
-          },
-          {
-            q: '이 중 제휴 프로그램이 있는 것이 있나요?',
-            a: 'n8n뿐입니다. n8n Cloud 추천에 대해 순수익의 30%를 12개월간 지급하며, 잔액이 100유로에 이르면 매월 PayPal로 지급되고, 프로그램 약관에서 유료 광고를 명시적으로 금지합니다. Cloud 구독에만 적용되며 무료 자체 호스팅 Community Edition에는 해당하지 않습니다. LangChain, CrewAI, 마이크로소프트에 대해서는 공개된 프로그램을 찾지 못했습니다. PromptQuorum은 어디에도 등록되어 있지 않습니다.',
-          },
-          {
-            q: '자체 호스팅에 쿠버네티스가 필요한가요?',
-            a: '아니요. LangGraph, CrewAI, Microsoft Agent Framework는 평범한 애플리케이션 프로세스로 실행되며 기존에 서비스를 배포하던 방식 그대로 배포합니다. n8n의 Community Edition은 작은 부하라면 단일 Docker 컨테이너로 돌아갑니다. 규모를 키운 구성에는 더 많은 인프라가 필요하고, 그것이 유료 등급이 미리 갖춰 제공하는 부분이기도 합니다.',
-          },
-        ],
+            { q: '2026년 최고의 AI 에이전트 프레임워크는 무엇인가요?', a: '명시적 상태와 감사 가능성이 필요한 프로덕션 에이전트에는 LangGraph, 동작하는 프로토타입까지 가장 빠른 길은 CrewAI, .NET과 Azure 팀에는 Microsoft Agent Framework, 비기술 인력이 워크플로를 만드는 곳에는 n8n입니다. 각각 다른 제약을 해결하기 때문에 단일한 승자는 없습니다.' },
+            { q: 'Microsoft AutoGen은 아직 유지보수되나요?', a: '활발한 개발이라는 의미로는 아닙니다. 저장소에 유지보수 모드 배너가 걸려 AutoGen이 새 기능이나 개선을 받지 않으며 커뮤니티가 관리한다고 명시하고, 신규 사용자를 Microsoft Agent Framework로 안내합니다. 마지막 실질적 커밋은 2026년 초입니다. 마이크로소프트는 AutoGen에서 Agent Framework로 가는 공식 마이그레이션 가이드를 제공합니다.' },
+            { q: 'AG2의 GitHub 별은 몇 개인가요?', a: 'AutoGen의 커뮤니티 포크인 AG2는 약 4,900개이며 Apache-2.0 라이선스입니다. 흔히 AG2에 돌려지는 약 60,000이라는 수치는 실제로는 유지보수 모드인 원본 저장소 `microsoft/autogen`의 것입니다. 포크는 활발히 개발되지만 일반적으로 알려진 것보다 훨씬 작습니다.' },
+            { q: 'LangGraph는 무료인가요?', a: '네. LangGraph 라이브러리는 MIT 라이선스이며 실행 횟수 제한 없이 무료로 자체 호스팅할 수 있습니다. 유료 계층은 LangSmith와 배포 플랫폼으로, 좌석당 0달러에 월 최대 5,000건의 기본 트레이스를 주는 Developer, 좌석당 월 39달러에 최대 1만 건을 주는 Plus, 맞춤 견적 Enterprise가 있습니다. 할당량을 넘는 연산과 저장은 별도 청구됩니다.' },
+            { q: 'CrewAI는 얼마인가요?', a: 'CrewAI 라이브러리는 MIT 라이선스이며 무료입니다. 호스팅되는 Basic 요금제는 무료이고 월 50회 워크플로 실행과 시각적 편집기, GitHub 연동을 포함합니다. 그 위로는 Enterprise 등급뿐이고 CrewAI가 어떤 금액도 공개하지 않아 영업에 문의해야 합니다.' },
+            { q: 'n8n은 오픈소스인가요?', a: 'OSI 기준으로는 아닙니다. n8n은 Sustainable Use License를 쓰며 소스는 공개되고 Community Edition은 무료로 자체 호스팅할 수 있지만 n8n 자체의 재판매를 제한합니다. LangGraph, CrewAI, Microsoft Agent Framework는 모두 MIT 라이선스로 그런 제한이 없습니다. n8n 위에 상업용 제품을 만들기 전에 라이선스 원문을 읽으세요.' },
+            { q: '이 중 제휴 프로그램이 있는 것이 있나요?', a: 'n8n뿐입니다. n8n Cloud 추천에 대해 순수익의 30%를 12개월간 지급하며, 잔액이 100유로에 이르면 매월 PayPal로 지급되고, 프로그램 약관에서 유료 광고를 명시적으로 금지합니다. Cloud 구독에만 적용되며 무료 자체 호스팅 Community Edition에는 해당하지 않습니다. LangChain, CrewAI, 마이크로소프트에 대해서는 공개된 프로그램을 찾지 못했습니다. PromptQuorum은 어디에도 등록되어 있지 않습니다.' },
+            { q: '자체 호스팅에 쿠버네티스가 필요한가요?', a: '아니요. LangGraph, CrewAI, Microsoft Agent Framework는 평범한 애플리케이션 프로세스로 실행되며 기존에 서비스를 배포하던 방식 그대로 배포합니다. n8n의 Community Edition은 작은 부하라면 단일 Docker 컨테이너로 돌아갑니다. 규모를 키운 구성에는 더 많은 인프라가 필요하고, 그것이 유료 등급이 미리 갖춰 제공하는 부분이기도 합니다.' },
+            { q: '에이전트 프레임워크에 제휴 프로그램이 있나요?', a: 'n8n뿐이며 Cloud 추천에 대해 순수익의 30%를 12개월간 100유로 이상일 때 PayPal로 지급하고 유료 광고는 금지합니다. LangChain, CrewAI, 마이크로소프트는 공개된 프로그램을 찾지 못했습니다.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4858,47 +4881,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026년 최고의 AI 에이전트 프레임워크는 무엇인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '명시적 상태가 필요한 프로덕션 에이전트에는 LangGraph, 가장 빠른 프로토타입에는 CrewAI, .NET과 Azure 팀에는 Microsoft Agent Framework, 비기술 인력이 워크플로를 만드는 곳에는 n8n입니다.',
+          {
+            '@type': 'Question',
+            'name': '2026년 최고의 AI 에이전트 프레임워크는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '명시적 상태와 감사 가능성이 필요한 프로덕션 에이전트에는 LangGraph, 동작하는 프로토타입까지 가장 빠른 길은 CrewAI, .NET과 Azure 팀에는 Microsoft Agent Framework, 비기술 인력이 워크플로를 만드는 곳에는 n8n입니다. 각각 다른 제약을 해결하기 때문에 단일한 승자는 없습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Microsoft AutoGen은 아직 유지보수되나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '아니요. 저장소에 유지보수 모드 배너가 걸려 AutoGen이 새 기능을 받지 않고 커뮤니티가 관리한다고 명시하며, 마이크로소프트가 공식 마이그레이션 가이드를 제공하는 Microsoft Agent Framework로 안내합니다.',
+          {
+            '@type': 'Question',
+            'name': 'Microsoft AutoGen은 아직 유지보수되나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '활발한 개발이라는 의미로는 아닙니다. 저장소에 유지보수 모드 배너가 걸려 AutoGen이 새 기능이나 개선을 받지 않으며 커뮤니티가 관리한다고 명시하고, 신규 사용자를 Microsoft Agent Framework로 안내합니다. 마지막 실질적 커밋은 2026년 초입니다. 마이크로소프트는 AutoGen에서 Agent Framework로 가는 공식 마이그레이션 가이드를 제공합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AG2의 GitHub 별은 몇 개인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoGen의 커뮤니티 포크인 AG2는 약 4,900개이며 Apache-2.0 라이선스입니다. AG2에 돌려지는 약 60,000이라는 수치는 원본 저장소 microsoft/autogen의 것입니다.',
+          {
+            '@type': 'Question',
+            'name': 'AG2의 GitHub 별은 몇 개인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoGen의 커뮤니티 포크인 AG2는 약 4,900개이며 Apache-2.0 라이선스입니다. 흔히 AG2에 돌려지는 약 60,000이라는 수치는 실제로는 유지보수 모드인 원본 저장소 `microsoft/autogen`의 것입니다. 포크는 활발히 개발되지만 일반적으로 알려진 것보다 훨씬 작습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'n8n은 오픈소스인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'OSI 정의로는 아닙니다. n8n은 Sustainable Use License를 쓰며 소스 공개이고 자체 호스팅은 무료지만 n8n 자체의 재판매를 제한합니다. LangGraph, CrewAI, Microsoft Agent Framework는 MIT 라이선스입니다.',
+          {
+            '@type': 'Question',
+            'name': 'LangGraph는 무료인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. LangGraph 라이브러리는 MIT 라이선스이며 실행 횟수 제한 없이 무료로 자체 호스팅할 수 있습니다. 유료 계층은 LangSmith와 배포 플랫폼으로, 좌석당 0달러에 월 최대 5,000건의 기본 트레이스를 주는 Developer, 좌석당 월 39달러에 최대 1만 건을 주는 Plus, 맞춤 견적 Enterprise가 있습니다. 할당량을 넘는 연산과 저장은 별도 청구됩니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '에이전트 프레임워크에 제휴 프로그램이 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'n8n뿐이며 Cloud 추천에 대해 순수익의 30%를 12개월간 100유로 이상일 때 PayPal로 지급하고 유료 광고는 금지합니다. LangChain, CrewAI, 마이크로소프트는 공개된 프로그램을 찾지 못했습니다.',
+          {
+            '@type': 'Question',
+            'name': 'CrewAI는 얼마인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CrewAI 라이브러리는 MIT 라이선스이며 무료입니다. 호스팅되는 Basic 요금제는 무료이고 월 50회 워크플로 실행과 시각적 편집기, GitHub 연동을 포함합니다. 그 위로는 Enterprise 등급뿐이고 CrewAI가 어떤 금액도 공개하지 않아 영업에 문의해야 합니다.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'n8n은 오픈소스인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OSI 기준으로는 아닙니다. n8n은 Sustainable Use License를 쓰며 소스는 공개되고 Community Edition은 무료로 자체 호스팅할 수 있지만 n8n 자체의 재판매를 제한합니다. LangGraph, CrewAI, Microsoft Agent Framework는 모두 MIT 라이선스로 그런 제한이 없습니다. n8n 위에 상업용 제품을 만들기 전에 라이선스 원문을 읽으세요.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '이 중 제휴 프로그램이 있는 것이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'n8n뿐입니다. n8n Cloud 추천에 대해 순수익의 30%를 12개월간 지급하며, 잔액이 100유로에 이르면 매월 PayPal로 지급되고, 프로그램 약관에서 유료 광고를 명시적으로 금지합니다. Cloud 구독에만 적용되며 무료 자체 호스팅 Community Edition에는 해당하지 않습니다. LangChain, CrewAI, 마이크로소프트에 대해서는 공개된 프로그램을 찾지 못했습니다. PromptQuorum은 어디에도 등록되어 있지 않습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '자체 호스팅에 쿠버네티스가 필요한가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니요. LangGraph, CrewAI, Microsoft Agent Framework는 평범한 애플리케이션 프로세스로 실행되며 기존에 서비스를 배포하던 방식 그대로 배포합니다. n8n의 Community Edition은 작은 부하라면 단일 Docker 컨테이너로 돌아갑니다. 규모를 키운 구성에는 더 많은 인프라가 필요하고, 그것이 유료 등급이 미리 갖춰 제공하는 부분이기도 합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '에이전트 프레임워크에 제휴 프로그램이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'n8n뿐이며 Cloud 추천에 대해 순수익의 30%를 12개월간 100유로 이상일 때 PayPal로 지급하고 유료 광고는 금지합니다. LangChain, CrewAI, 마이크로소프트는 공개된 프로그램을 찾지 못했습니다.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

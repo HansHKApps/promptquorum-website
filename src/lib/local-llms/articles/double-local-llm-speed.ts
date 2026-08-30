@@ -1203,6 +1203,8 @@ schema: {
             { q: 'Gibt es einen Geschwindigkeitsunterschied zwischen GGUF und Safetensors?', a: 'Ja. GGUF ist für CPU/Consumer-GPU optimiert. Safetensors ist schneller für Vollpräzisions-GPU-Inferenz. Für RTX 40-Serie mit FP16 übertrifft Safetensors + vLLM GGUF + Ollama um 10–20%.' },
             { q: 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?', a: 'Lokale LLM-Inferenz verarbeitet alle Daten ausschließlich auf Ihrer eigenen Hardware ohne Transfer zu externen Diensten — vollständig DSGVO-konform (Artikel 28). Die BSI-Grundschutz-Kataloge empfehlen lokale Inferenz für sensible Unternehmensdaten in der DACH-Region (Deutschland, Österreich, Schweiz).' },
             { q: 'Ist lokale LLM-Optimierung für den deutschen Mittelstand geeignet?', a: 'Ja. Ein RTX 4090-Server (~2.000 €) kann mit vLLM 10–20 gleichzeitige interne Nutzer bedienen — wirtschaftlicher als Cloud-APIs ab ca. 1.000 Anfragen/Tag. Vollständige Datensouveränität und BSI-Grundschutz-Konformität sind inklusive.' },
+            { q: 'Welche GPU-Speicher-Auslastung für maximale Geschwindigkeit?', a: '90–95% in vLLM (--gpu-memory-utilization 0.92). 100% vermeiden.' },
+            { q: 'Was ist PagedAttention?', a: 'vLLMs dynamisches KV-Cache-System — eliminiert VRAM-Fragmentierung, verbessert GPU-Auslastung auf 90%+.' },
           ],
         },
         relatedReading: {
@@ -1269,14 +1271,118 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Was ist der wirksamste Weg, lokale LLM-Inferenz zu beschleunigen?', acceptedAnswer: { '@type': 'Answer', text: 'Wechsel zu vLLM für 5–10× Durchsatz. GPU-Speicher auf 90–95% für 15–20% bei Einzelanfragen.' } },
-          { '@type': 'Question', name: 'Verbessert Batch-Verarbeitung die Latenz bei Einzelanfragen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — Batch-Größe beeinflusst Durchsatz, nicht Einzelanfrage-Latenz.' } },
-          { '@type': 'Question', name: 'Wie viel schneller ist vLLM als Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Bei gleichzeitigen Anfragen 5–10× schneller dank Continuous Batching und PagedAttention.' } },
-          { '@type': 'Question', name: 'Beschleunigt Quantisierung die Inferenz?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — primär VRAM-Reduzierung. Auf RTX 40-Serie gleiche Geschwindigkeit wie FP16.' } },
-          { '@type': 'Question', name: 'Welche GPU-Speicher-Auslastung für maximale Geschwindigkeit?', acceptedAnswer: { '@type': 'Answer', text: '90–95% in vLLM (--gpu-memory-utilization 0.92). 100% vermeiden.' } },
-          { '@type': 'Question', name: 'Was ist PagedAttention?', acceptedAnswer: { '@type': 'Answer', text: 'vLLMs dynamisches KV-Cache-System — eliminiert VRAM-Fragmentierung, verbessert GPU-Auslastung auf 90%+.' } },
-          { '@type': 'Question', name: 'Muss ich bei lokalen LLMs die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Lokale Inferenz ist vollständig DSGVO-konform (Art. 28) — alle Daten auf eigener Hardware. BSI-Grundschutz empfiehlt lokale Inferenz für sensible DACH-Unternehmensdaten.' } },
-          { '@type': 'Question', name: 'Ist lokale LLM-Optimierung für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. RTX 4090-Server (~2.000 €) + vLLM = 10–20 gleichzeitige Nutzer. Günstiger als Cloud ab 1.000 Anfragen/Tag. Datensouveränität und BSI-Grundschutz-Konformität inklusive.' } },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der wirksamste einzelne Weg, lokale LLM-Inferenz zu beschleunigen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der Wechsel von Ollama zu vLLM für gleichzeitige Anfragen bietet die größte Einzelbeschleunigung — 5–10× Durchsatzverbesserung bei Batch-Verarbeitung. Bei Einzelanfragen erzielt die Erhöhung der GPU-Speicher-Auslastung von 70% auf 90–95% einen 15–20% Geschwindigkeitsgewinn. Das Deaktivieren von Debug-Logging bringt zusätzliche 10%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Verbessert Batch-Verarbeitung die Latenz bei Einzelanfragen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein — die Batch-Größe beeinflusst den Durchsatz (Tokens pro Sekunde über alle Anfragen), nicht die Latenz bei Einzelanfragen. Um die Latenz zu reduzieren, optimieren Sie die GPU-Speicher-Auslastung und verwenden Sie eine schnellere Engine (vLLM oder llama.cpp).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viel schneller ist vLLM als Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei Einzelanfragen ähnliche Leistung (beide ~120–150 Tok/Sek auf RTX 4090 mit 7B-Modell). Bei gleichzeitigen Anfragen ist vLLM 5–10× schneller dank Continuous Batching und PagedAttention.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Beschleunigt Quantisierung die Inferenz?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der primäre Vorteil der Quantisierung ist VRAM-Reduzierung, nicht Geschwindigkeit. Auf modernen NVIDIA-GPUs (RTX 40-Serie) laufen Q4 und Q5 mit derselben Geschwindigkeit wie FP16.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche GPU-Speicher-Auslastung sollte ich einstellen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Stellen Sie die GPU-Speicher-Auslastung in vLLM auf 90–95% ein (--gpu-memory-utilization 0.92). Vermeiden Sie 100% — es verursacht OOM-Abstürze.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Warum ist mein lokales LLM nach dem ersten Prompt langsamer?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der erste Prompt lädt das Modell in den VRAM (Cold Start), was 10–30 Sekunden dauern kann. Halten Sie den Server aktiv. Mit Ollama: OLLAMA_KEEP_ALIVE=24h setzen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann die Inferenz mit reiner CPU-Nutzung sinnvoll beschleunigt werden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Begrenzte Verbesserungen: llama.cpp mit Thread-Anzahl gleich physischen Kernen, AVX2/AVX-512 aktivieren, Q4_K_M-Quantisierung. Realistisches Maximum: 8–12 Tok/Sek auf i9. Für interaktiven Chat ist GPU der einzige Weg.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie beeinflusst die Kontextlänge die Inferenzgeschwindigkeit?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Längere Kontextfenster verlangsamen die Inferenz quadratisch. Ein 4K-Kontext-Prompt ist ~4× langsamer als 1K. System-Prompts unter 500 Tokens halten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist PagedAttention und warum beschleunigt es vLLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PagedAttention paginiert den KV-Cache dynamisch — wie virtueller Speicher in einem OS. Dies eliminiert VRAM-Fragmentierung und verbessert die GPU-Auslastung von ~55% auf 90%+.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Gibt es einen Geschwindigkeitsunterschied zwischen GGUF und Safetensors?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. GGUF ist für CPU/Consumer-GPU optimiert. Safetensors ist schneller für Vollpräzisions-GPU-Inferenz. Für RTX 40-Serie mit FP16 übertrifft Safetensors + vLLM GGUF + Ollama um 10–20%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lokale LLM-Inferenz verarbeitet alle Daten ausschließlich auf Ihrer eigenen Hardware ohne Transfer zu externen Diensten — vollständig DSGVO-konform (Artikel 28). Die BSI-Grundschutz-Kataloge empfehlen lokale Inferenz für sensible Unternehmensdaten in der DACH-Region (Deutschland, Österreich, Schweiz).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist lokale LLM-Optimierung für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Ein RTX 4090-Server (~2.000 €) kann mit vLLM 10–20 gleichzeitige interne Nutzer bedienen — wirtschaftlicher als Cloud-APIs ab ca. 1.000 Anfragen/Tag. Vollständige Datensouveränität und BSI-Grundschutz-Konformität sind inklusive.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche GPU-Speicher-Auslastung für maximale Geschwindigkeit?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '90–95% in vLLM (--gpu-memory-utilization 0.92). 100% vermeiden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist PagedAttention?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'vLLMs dynamisches KV-Cache-System — eliminiert VRAM-Fragmentierung, verbessert GPU-Auslastung auf 90%+.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1427,6 +1533,7 @@ schema: {
             { q: 'Comment la longueur du contexte affecte-t-elle la vitesse d\'inférence ?', a: 'Des fenêtres de contexte plus longues ralentissent l\'inférence car le mécanisme d\'attention évolue quadratiquement avec la longueur du contexte. Un prompt de 4K de contexte est ~4× plus lent à traiter qu\'un prompt de 1K. Garder les prompts système sous 500 tokens.' },
             { q: 'Qu\'est-ce que PagedAttention et pourquoi accélère-t-il vLLM ?', a: 'PagedAttention est le système de gestion du cache KV de vLLM. Au lieu de pré-allouer un bloc mémoire fixe par requête, il pagine la mémoire dynamiquement — comme la mémoire virtuelle dans un OS. Cela élimine la fragmentation VRAM et améliore l\'utilisation GPU de ~55% à 90%+.' },
             { q: 'Y a-t-il une différence de vitesse entre les formats GGUF et safetensors ?', a: 'Oui. GGUF (utilisé par llama.cpp et Ollama) est optimisé pour l\'inférence CPU/GPU grand public avec quantification intégrée. Safetensors (utilisé par vLLM et HuggingFace) est plus rapide pour l\'inférence GPU en pleine précision. Pour les RTX 40-series avec FP16, safetensors + vLLM surpasse typiquement GGUF + Ollama de 10–20%.' },
+            { q: 'Qu\'est-ce que PagedAttention ?', a: 'Système de gestion du cache KV de vLLM — élimine la fragmentation VRAM, améliore l\'utilisation GPU de ~55% à 90%+.' },
           ],
         },
         relatedReading: {
@@ -1493,13 +1600,94 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'fr',
         mainEntity: [
-          { '@type': 'Question', name: 'Quelle est la méthode la plus efficace pour accélérer l\'inférence LLM locale ?', acceptedAnswer: { '@type': 'Answer', text: 'Passer à vLLM pour 5–10× de débit. Augmenter la mémoire GPU à 90–95% pour 15–20% sur requêtes uniques.' } },
-          { '@type': 'Question', name: 'Le traitement par lot améliore-t-il la latence des requêtes uniques ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — la taille de lot affecte le débit, pas la latence des requêtes uniques.' } },
-          { '@type': 'Question', name: 'Combien vLLM est-il plus rapide qu\'Ollama ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour les requêtes concurrentes, vLLM est 5–10× plus rapide grâce au batching continu et PagedAttention.' } },
-          { '@type': 'Question', name: 'La quantification accélère-t-elle l\'inférence ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — principalement réduction VRAM. Sur RTX 40-series, Q4 et FP16 ont la même vitesse.' } },
-          { '@type': 'Question', name: 'Quelle utilisation mémoire GPU pour vitesse maximale ?', acceptedAnswer: { '@type': 'Answer', text: '90–95% dans vLLM (--gpu-memory-utilization 0.92). Éviter 100% — provoque des plantages OOM.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que PagedAttention ?', acceptedAnswer: { '@type': 'Answer', text: 'Système de gestion du cache KV de vLLM — élimine la fragmentation VRAM, améliore l\'utilisation GPU de ~55% à 90%+.' } },
-          { '@type': 'Question', name: 'Y a-t-il une différence entre GGUF et safetensors ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Pour RTX 40-series FP16, safetensors + vLLM surpasse GGUF + Ollama de 10–20%.' } },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la méthode la plus efficace pour accélérer l\'inférence LLM locale ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Passer d\'Ollama à vLLM pour les requêtes concurrentes offre la plus grande accélération — 5–10× d\'amélioration du débit pour le traitement par lot. Pour les requêtes uniques, augmenter l\'utilisation mémoire GPU de 70% à 90–95% donne 15–20% de gain. Désactiver la journalisation debug apporte 10% supplémentaires.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Le traitement par lot améliore-t-il la latence des requêtes uniques ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non — la taille de lot affecte le débit (tokens par seconde sur toutes les requêtes), pas la latence des requêtes uniques. Pour réduire la latence d\'une requête, optimisez l\'utilisation mémoire GPU et utilisez un moteur plus rapide (vLLM ou llama.cpp).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien vLLM est-il plus rapide qu\'Ollama ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour les requêtes uniques, vLLM et Ollama ont des performances similaires (tous deux ~120–150 tok/sec sur RTX 4090 avec modèle 7B). Pour les requêtes concurrentes, vLLM est 5–10× plus rapide grâce au batching continu et PagedAttention.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La quantification accélère-t-elle l\'inférence ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'avantage principal de la quantification est la réduction du VRAM, pas la vitesse. Sur les GPU NVIDIA modernes (RTX 40-series), Q4 et Q5 fonctionnent à la même vitesse que FP16. L\'avantage de vitesse indirect : un modèle Q4 plus petit se charge plus vite depuis le disque.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle utilisation mémoire GPU définir pour une vitesse maximale ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Régler l\'utilisation mémoire GPU à 90–95% dans vLLM (--gpu-memory-utilization 0.92). Éviter 100% — cela provoque des plantages OOM. La marge de sécurité de 5–10% est non négociable.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi mon LLM local est-il plus lent après le premier prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le premier prompt charge le modèle en VRAM (démarrage à froid), ce qui peut prendre 10–30 secondes. Garder le serveur actif entre les sessions. Avec Ollama, définir OLLAMA_KEEP_ALIVE=24h pour éviter le déchargement du modèle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'inférence CPU seul peut-elle être accélérée de façon significative ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Des gains limités sont possibles : utiliser llama.cpp avec -t pour le nombre de threads égal aux cœurs physiques, activer AVX2/AVX-512, utiliser la quantification Q4_K_M. Plafond réaliste : 8–12 tok/sec sur un i9 moderne. Pour le chat interactif, le GPU est la seule voie vers une latence acceptable.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment la longueur du contexte affecte-t-elle la vitesse d\'inférence ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Des fenêtres de contexte plus longues ralentissent l\'inférence car le mécanisme d\'attention évolue quadratiquement avec la longueur du contexte. Un prompt de 4K de contexte est ~4× plus lent à traiter qu\'un prompt de 1K. Garder les prompts système sous 500 tokens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que PagedAttention et pourquoi accélère-t-il vLLM ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PagedAttention est le système de gestion du cache KV de vLLM. Au lieu de pré-allouer un bloc mémoire fixe par requête, il pagine la mémoire dynamiquement — comme la mémoire virtuelle dans un OS. Cela élimine la fragmentation VRAM et améliore l\'utilisation GPU de ~55% à 90%+.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Y a-t-il une différence de vitesse entre les formats GGUF et safetensors ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. GGUF (utilisé par llama.cpp et Ollama) est optimisé pour l\'inférence CPU/GPU grand public avec quantification intégrée. Safetensors (utilisé par vLLM et HuggingFace) est plus rapide pour l\'inférence GPU en pleine précision. Pour les RTX 40-series avec FP16, safetensors + vLLM surpasse typiquement GGUF + Ollama de 10–20%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que PagedAttention ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Système de gestion du cache KV de vLLM — élimine la fragmentation VRAM, améliore l\'utilisation GPU de ~55% à 90%+.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1716,13 +1904,86 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [
-          { '@type': 'Question', name: 'ローカルLLM推論を高速化する最も効果的な方法は？', acceptedAnswer: { '@type': 'Answer', text: 'vLLMへの切り替えで並行リクエストに5–10×スループット。GPUメモリ90–95%で単一リクエストに15–20%。' } },
-          { '@type': 'Question', name: 'バッチ処理は単一リクエストの遅延を改善するか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ — バッチサイズはスループットに影響しますが、単一リクエストの遅延には影響しません。' } },
-          { '@type': 'Question', name: 'vLLMはOllamaより何倍速いか？', acceptedAnswer: { '@type': 'Answer', text: '並行リクエストではContinuous BatchingとPagedAttentionにより5–10×高速。' } },
-          { '@type': 'Question', name: '量子化は推論を高速化するか？', acceptedAnswer: { '@type': 'Answer', text: '主なメリットはVRAM削減。RTX 40シリーズではQ4とFP16は同じ速度。' } },
-          { '@type': 'Question', name: 'GPUメモリ使用率は何%に設定すべきか？', acceptedAnswer: { '@type': 'Answer', text: 'vLLMで90–95%（--gpu-memory-utilization 0.92）。100%はOOMクラッシュを引き起こすため避けてください。' } },
-          { '@type': 'Question', name: 'PagedAttentionとは何か？', acceptedAnswer: { '@type': 'Answer', text: 'vLLMのKVキャッシュ管理システム。動的メモリページングでVRAM断片化を解消し、GPU利用率を~55%から90%+に向上。' } },
-          { '@type': 'Question', name: 'GGUFとsafetensorsの速度差はあるか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。RTX 40シリーズFP16ではsafetensors + vLLMがGGUF + Ollamaより10–20%優れています。' } },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM推論を高速化する最も効果的な方法は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '並行リクエストにOllamaからvLLMへ切り替えると最大の高速化が得られます — バッチ処理で5–10×のスループット向上。単一リクエストでは、GPUメモリ使用率を70%から90–95%に増やすと15–20%の速度向上。デバッグログ無効化でさらに10%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'バッチ処理は単一リクエストの遅延を改善するか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ — バッチサイズはスループット（全リクエストのtoken/sec）に影響しますが、単一リクエストの遅延には影響しません。遅延を下げるにはGPUメモリ使用率を最適化し、より高速なエンジン（vLLMまたはllama.cpp）を使用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'vLLMはOllamaより何倍速いか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '単一リクエストでは両者は同様（RTX 4090で7Bモデル使用時に両方とも~120–150 tok/sec）。並行リクエストでは、Continuous BatchingとPagedAttentionによりvLLMが5–10×高速。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '量子化は推論を高速化するか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量子化の主なメリットはVRAM削減で、速度向上ではありません。現代のNVIDIA GPU（RTX 40シリーズ）では、Q4とQ5はFP16と同じ速度で動作します。間接的な速度メリット：小さいQ4モデルはディスクからより速く読み込まれます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '最大速度のためにGPUメモリ使用率は何%に設定すべきか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'vLLMで90–95%に設定（--gpu-memory-utilization 0.92）。これによりエンジンがKVキャッシュ用により多くのメモリを事前確保できます。100%は避けてください — OOMクラッシュを引き起こします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'なぜ最初のプロンプト後にローカルLLMが遅くなるのか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最初のプロンプトはモデルをVRAMにロードします（コールドスタート）。これには10–30秒かかる場合があります。セッション間でサーバーを起動したままにしてください。Ollamaでは、非アクティブ後のモデルアンロードを防ぐためOLLAMA_KEEP_ALIVE=24hを設定。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CPUのみの推論を意味のある形で高速化できるか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '限定的な改善が可能です：llama.cppで-tフラグを使用して物理コア数（論理コア数ではなく）に設定、AVX2/AVX-512命令セットを有効化、Q4_K_M量子化を使用。現実的な上限：最新i9で8–12 tok/sec。インタラクティブチャットにはGPUハードウェアが唯一の選択肢。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'コンテキスト長は推論速度にどう影響するか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Attentionメカニズムがコンテキスト長に対して2次的にスケールするため、長いコンテキストウィンドウは推論を遅くします。4Kコンテキストのプロンプトは1Kより~4×遅い。システムプロンプトは500トークン未満に保ってください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PagedAttentionとは何か、なぜvLLMを高速化するのか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PagedAttentionはvLLMのKVキャッシュ管理システムです。リクエストごとに固定メモリブロックを事前確保する代わりに、OSの仮想メモリのようにメモリを動的にページングします。これによりVRAMの断片化が解消され、GPU利用率が~55%から90%+に向上します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GGUFとsafetensorsモデル形式の速度差はあるか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。GGUF（llama.cppとOllamaが使用）は組み込み量子化付きのCPU/コンシューマーGPU推論に最適化。Safetensors（vLLMとHuggingFaceが使用）は全精度GPU推論に高速。RTX 40シリーズでFP16を実行する場合、safetensors + vLLMは通常GGUF + Ollamaより10–20%優れています。',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1862,46 +2123,16 @@ schema: {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: '加速本地LLM推理最有效的单一方法是什么？',
-              a: '对于并发请求，从Ollama切换到vLLM可提供最大单一加速——批处理吞吐量提升5–10倍。对于单个请求，将GPU显存使用率从70%提升至90–95%可获得15–20%的速度提升。禁用调试日志可额外提升10%。',
-            },
-            {
-              q: '批处理能改善单请求延迟吗？',
-              a: '不能——批处理大小影响吞吐量（每秒总token数），而非单请求延迟。要降低单个请求的延迟，需优化GPU显存使用率并使用更快的引擎（vLLM或llama.cpp）。批次越大，每个请求的等待时间越长。',
-            },
-            {
-              q: 'vLLM比Ollama快多少？',
-              a: '单个请求时，vLLM和Ollama性能相近（RTX 4090运行7B模型均约120–150 tok/sec）。并发请求时，vLLM因连续批处理和PagedAttention快5–10倍。个人/单用户场景用Ollama；多用户API场景切换到vLLM。',
-            },
-            {
-              q: '量化能加速推理吗？',
-              a: '量化的主要优势是减少显存占用，而非提速。在现代NVIDIA GPU（RTX 40系列）上，Q4和Q5的运行速度与FP16相同。间接速度优势：Q4模型文件更小，从磁盘加载更快，且可能在相同显存预算内允许更大的批处理大小。',
-            },
-            {
-              q: '为获得最大速度，GPU显存使用率应设置为多少？',
-              a: '在vLLM中将GPU显存使用率设置为90–95%（--gpu-memory-utilization 0.92）。这允许引擎为KV缓存预分配更多内存，提升吞吐量。避免100%——会导致OOM崩溃。5–10%的安全余量不可忽视。',
-            },
-            {
-              q: '为什么本地LLM在第一次提示后变慢了？',
-              a: '第一次提示会将模型加载到显存中（冷启动），可能需要10–30秒。后续提示以全速运行。保持服务器运行（不要在会话之间重启）。使用Ollama时，设置OLLAMA_KEEP_ALIVE=24h以防止模型在不活动后卸载。',
-            },
-            {
-              q: '仅CPU推理能有效提速吗？',
-              a: '可以获得有限提升：使用llama.cpp并将线程数设置为物理核心数（非逻辑核心）、启用AVX2/AVX-512指令集，使用Q4_K_M量化。现代i9的现实上限：8–12 tok/sec。对于交互式对话，GPU是唯一能实现可接受延迟的路径。',
-            },
-            {
-              q: '上下文长度如何影响推理速度？',
-              a: '上下文窗口越长，推理越慢，因为注意力机制随上下文长度呈二次方扩展。处理4K上下文提示的速度约比1K提示慢4倍。将系统提示保持在500 token以下，并对长对话使用上下文摘要以保持速度。',
-            },
-            {
-              q: 'PagedAttention是什么？为什么它能加速vLLM？',
-              a: 'PagedAttention是vLLM的KV缓存管理系统。它动态分页内存——类似操作系统的虚拟内存。这消除了显存碎片化，允许更多并发请求，并将GPU利用率从约55%（朴素方法）提升至90%+。',
-            },
-            {
-              q: 'GGUF和safetensors模型格式之间有速度差异吗？',
-              a: '有。GGUF针对内置量化的CPU/消费级GPU推理进行了优化。Safetensors对全精度GPU推理更快。对于运行FP16的RTX 40系列GPU，safetensors + vLLM通常比GGUF + Ollama快10–20%。',
-            },
+            { q: '加速本地LLM推理最有效的单一方法是什么？', a: '对于并发请求，从Ollama切换到vLLM可提供最大单一加速——批处理吞吐量提升5–10倍。对于单个请求，将GPU显存使用率从70%提升至90–95%可获得15–20%的速度提升。禁用调试日志可额外提升10%。' },
+            { q: '批处理能改善单请求延迟吗？', a: '不能——批处理大小影响吞吐量（每秒总token数），而非单请求延迟。要降低单个请求的延迟，需优化GPU显存使用率并使用更快的引擎（vLLM或llama.cpp）。批次越大，每个请求的等待时间越长。' },
+            { q: 'vLLM比Ollama快多少？', a: '单个请求时，vLLM和Ollama性能相近（RTX 4090运行7B模型均约120–150 tok/sec）。并发请求时，vLLM因连续批处理和PagedAttention快5–10倍。个人/单用户场景用Ollama；多用户API场景切换到vLLM。' },
+            { q: '量化能加速推理吗？', a: '量化的主要优势是减少显存占用，而非提速。在现代NVIDIA GPU（RTX 40系列）上，Q4和Q5的运行速度与FP16相同。间接速度优势：Q4模型文件更小，从磁盘加载更快，且可能在相同显存预算内允许更大的批处理大小。' },
+            { q: '为获得最大速度，GPU显存使用率应设置为多少？', a: '在vLLM中将GPU显存使用率设置为90–95%（--gpu-memory-utilization 0.92）。这允许引擎为KV缓存预分配更多内存，提升吞吐量。避免100%——会导致OOM崩溃。5–10%的安全余量不可忽视。' },
+            { q: '为什么本地LLM在第一次提示后变慢了？', a: '第一次提示会将模型加载到显存中（冷启动），可能需要10–30秒。后续提示以全速运行。保持服务器运行（不要在会话之间重启）。使用Ollama时，设置OLLAMA_KEEP_ALIVE=24h以防止模型在不活动后卸载。' },
+            { q: '仅CPU推理能有效提速吗？', a: '可以获得有限提升：使用llama.cpp并将线程数设置为物理核心数（非逻辑核心）、启用AVX2/AVX-512指令集，使用Q4_K_M量化。现代i9的现实上限：8–12 tok/sec。对于交互式对话，GPU是唯一能实现可接受延迟的路径。' },
+            { q: '上下文长度如何影响推理速度？', a: '上下文窗口越长，推理越慢，因为注意力机制随上下文长度呈二次方扩展。处理4K上下文提示的速度约比1K提示慢4倍。将系统提示保持在500 token以下，并对长对话使用上下文摘要以保持速度。' },
+            { q: 'PagedAttention是什么？为什么它能加速vLLM？', a: 'PagedAttention是vLLM的KV缓存管理系统。它动态分页内存——类似操作系统的虚拟内存。这消除了显存碎片化，允许更多并发请求，并将GPU利用率从约55%（朴素方法）提升至90%+。' },
+            { q: 'GGUF和safetensors模型格式之间有速度差异吗？', a: '有。GGUF针对内置量化的CPU/消费级GPU推理进行了优化。Safetensors对全精度GPU推理更快。对于运行FP16的RTX 40系列GPU，safetensors + vLLM通常比GGUF + Ollama快10–20%。' },
           ],
         },
         relatedReading: {
@@ -1968,13 +2199,86 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: '加速本地LLM推理最有效的单一方法是什么？', acceptedAnswer: { '@type': 'Answer', text: '对于并发请求，切换到vLLM可提供5–10倍批处理吞吐量提升。对于单个请求，GPU显存90–95%可获得15–20%速度提升。' } },
-          { '@type': 'Question', name: '批处理能改善单请求延迟吗？', acceptedAnswer: { '@type': 'Answer', text: '不能——批处理大小影响吞吐量，而非单请求延迟。批次越大，每个请求的等待时间越长。' } },
-          { '@type': 'Question', name: 'vLLM比Ollama快多少？', acceptedAnswer: { '@type': 'Answer', text: '并发请求时，vLLM因连续批处理和PagedAttention快5–10倍。单个请求时两者性能相近。' } },
-          { '@type': 'Question', name: '量化能加速推理吗？', acceptedAnswer: { '@type': 'Answer', text: '主要优势是减少显存占用。RTX 40系列上Q4与FP16运行速度相同。' } },
-          { '@type': 'Question', name: '为获得最大速度，GPU显存使用率应设置为多少？', acceptedAnswer: { '@type': 'Answer', text: 'vLLM中设置90–95%（--gpu-memory-utilization 0.92）。避免100%——会导致OOM崩溃。' } },
-          { '@type': 'Question', name: 'PagedAttention是什么？', acceptedAnswer: { '@type': 'Answer', text: 'vLLM的KV缓存动态分页系统。消除显存碎片化，GPU利用率从~55%提升至90%+。' } },
-          { '@type': 'Question', name: 'GGUF和safetensors有速度差异吗？', acceptedAnswer: { '@type': 'Answer', text: '有。RTX 40系列FP16上，safetensors + vLLM通常比GGUF + Ollama快10–20%。' } },
+          {
+            '@type': 'Question',
+            'name': '加速本地LLM推理最有效的单一方法是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对于并发请求，从Ollama切换到vLLM可提供最大单一加速——批处理吞吐量提升5–10倍。对于单个请求，将GPU显存使用率从70%提升至90–95%可获得15–20%的速度提升。禁用调试日志可额外提升10%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '批处理能改善单请求延迟吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能——批处理大小影响吞吐量（每秒总token数），而非单请求延迟。要降低单个请求的延迟，需优化GPU显存使用率并使用更快的引擎（vLLM或llama.cpp）。批次越大，每个请求的等待时间越长。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'vLLM比Ollama快多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '单个请求时，vLLM和Ollama性能相近（RTX 4090运行7B模型均约120–150 tok/sec）。并发请求时，vLLM因连续批处理和PagedAttention快5–10倍。个人/单用户场景用Ollama；多用户API场景切换到vLLM。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '量化能加速推理吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量化的主要优势是减少显存占用，而非提速。在现代NVIDIA GPU（RTX 40系列）上，Q4和Q5的运行速度与FP16相同。间接速度优势：Q4模型文件更小，从磁盘加载更快，且可能在相同显存预算内允许更大的批处理大小。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '为获得最大速度，GPU显存使用率应设置为多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在vLLM中将GPU显存使用率设置为90–95%（--gpu-memory-utilization 0.92）。这允许引擎为KV缓存预分配更多内存，提升吞吐量。避免100%——会导致OOM崩溃。5–10%的安全余量不可忽视。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '为什么本地LLM在第一次提示后变慢了？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '第一次提示会将模型加载到显存中（冷启动），可能需要10–30秒。后续提示以全速运行。保持服务器运行（不要在会话之间重启）。使用Ollama时，设置OLLAMA_KEEP_ALIVE=24h以防止模型在不活动后卸载。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '仅CPU推理能有效提速吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以获得有限提升：使用llama.cpp并将线程数设置为物理核心数（非逻辑核心）、启用AVX2/AVX-512指令集，使用Q4_K_M量化。现代i9的现实上限：8–12 tok/sec。对于交互式对话，GPU是唯一能实现可接受延迟的路径。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '上下文长度如何影响推理速度？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '上下文窗口越长，推理越慢，因为注意力机制随上下文长度呈二次方扩展。处理4K上下文提示的速度约比1K提示慢4倍。将系统提示保持在500 token以下，并对长对话使用上下文摘要以保持速度。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PagedAttention是什么？为什么它能加速vLLM？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PagedAttention是vLLM的KV缓存管理系统。它动态分页内存——类似操作系统的虚拟内存。这消除了显存碎片化，允许更多并发请求，并将GPU利用率从约55%（朴素方法）提升至90%+。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GGUF和safetensors模型格式之间有速度差异吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '有。GGUF针对内置量化的CPU/消费级GPU推理进行了优化。Safetensors对全精度GPU推理更快。对于运行FP16的RTX 40系列GPU，safetensors + vLLM通常比GGUF + Ollama快10–20%。',
+            },
+          },
         ],
       },
       itemListSchema: {

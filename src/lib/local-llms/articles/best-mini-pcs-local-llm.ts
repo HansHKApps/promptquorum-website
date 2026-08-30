@@ -1049,6 +1049,7 @@ schema: {
             { q: 'ローカルLLM向けにはMac miniのM6とM5 Proのどちらが最適ですか？', a: '70Bクラスのモデルには、M5 Pro（1,699ドルから、最大64 GBの統合メモリ）のみが十分な余裕を持つ — M6（899ドルから）は統合メモリ上限32 GBで、Q4量子化でも70Bモデルには非対応。7B〜13Bモデルのみが必要な場合は基本のM6で十分。旧世代のM4 Pro（最大64 GB、最大2,299ドル）は販売終了が進んでいるが、値引き品が見つかれば70Bで10〜15 tok/sを達成していた。' },
             { q: 'ローカルLLM向けのMac miniの代替として良い選択肢は何ですか？', a: 'Framework Desktop（$1,999、128 GB統合メモリ）はどの新Mac mini構成（M6：32 GB、M5 Pro：64 GB）よりもメモリ余裕があり、旧世代のM4 Proとの比較では生の70B速度でMac miniを上回った（20+ tok/s対10〜15 tok/s）。ただしファンの動作音が大きく、ROCmのセットアップ手順が必要になる。統合メモリではなくx86の柔軟性を求めるなら、ASUS PN51 + RTX 5060 Tiビルド（$900）が7B〜13Bモデルをより低い初期費用でカバーする。' },
             { q: '2026年のローカルLLM向け最安ミニPCは何ですか？', a: 'Ryzen 5・RAM 32 GB・1TB SSD・RTX 5060 Ti 16 GBを搭載したASUS PN51またはPN52ベアボーンは合計約$900 — 専用GPUを搭載しながら7Bを25 tok/s、13Bを15 tok/sで実行できる最安のミニPCビルド。統合グラフィックスのみのプリビルトミニPCはさらに安いが、7Bで1〜2 tok/sまで低下するため、ローカルLLM推論の実用的な予算選択肢にはならない。' },
+            { q: 'ローカルLLM用にはMac miniのRAM構成は16 GB・24 GB・48 GB・64 GBのどれが最適ですか？', a: '16 GB（M4、$599）は7Bモデルのみ対応で40〜50 tok/s。24 GB（M4 Pro、$1,399）でも70Bは収まらず、7B〜13B向け。48 GB（M4 Pro、$1,999）が70Bを収められる最小構成で7〜10 tok/s。64 GB（M4 Pro、$2,299）が最適解：70Bを10〜15 tok/sで実行でき、コンテキスト長にも余裕がある。' },
           ],
         },
         relatedReading: {
@@ -1105,20 +1106,126 @@ schema: {
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'ミニPCで13Bモデルをスムーズに実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti（16 GB）またはRTX 4070（12 GB）でQ4量子化なら可能。RTX 4060 Ti（8 GB）は13Bにはタイト — VRAMヘッドルームが1 GB未満。' } },
-          { '@type': 'Question', 'name': 'RTX 5060 Ti eGPU接続のIntel NUCはローカルLLMに適していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。TB3 eGPUは帯域幅を15〜20%失うため、7Bで15ではなく12 tok/sを見込む。狭いスペースには依然として有効。' } },
-          { '@type': 'Question', 'name': 'LLM実行中のミニPCはどれくらい音がしますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti全負荷時は50〜60 dB。アンダーボルティングまたはNoctuaへのGPUファン交換で40〜45 dBに低減可能。' } },
-          { '@type': 'Question', 'name': 'RTX 4090をミニPCに搭載できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不可能。RTX 4090はデュアルスロットで280 mm以上。SFFケース（Lian Li A4、Dan A4-H2O）のGPU最大長は220 mm。' } },
-          { '@type': 'Question', 'name': 'ローカルLLMにはミニPCとノートPCどちらが優れていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '据え置き使用ならミニPC。優れた熱特性と完全なPCIe帯域幅を提供。ノートPCは持続負荷下で約10 tok/sにスロットル。' } },
-          { '@type': 'Question', 'name': '7B推論向けミニPCの総費用は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ASUS PN51ビルド：約¥140,000。Intel NUC 13 + RTX 5060 Ti eGPUドック：約¥200,000。両方7Bを20〜25 tok/sで実行。PN51が優れたコストパフォーマンス。' } },
-          { '@type': 'Question', 'name': 'LLM推論向けミニPCには専用冷却が必要ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '持続推論には必要。標準Mini-ITXファン（1×80 mm）はRTX 5060 Ti全負荷時に不十分。92 mmサイドファン追加またはNoctuaへの交換を推奨。' } },
-          { '@type': 'Question', 'name': 'ローカルLLM推論に最適なミニPCのCPUは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'トークン生成においてCPUはGPUより二次的。Ryzen 7 7700XまたはIntel Core i7-14700Kで十分。7B〜13B推論ではCPU速度よりGPU VRAMの予算を優先。' } },
-          { '@type': 'Question', 'name': '新しいMac mini（M6またはM5 Pro）でLlama 3.3 70Bは実行できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '70Bクラスのモデルに十分なメモリ余裕があるのはM5 Pro構成（1,699ドルから、統合メモリ上限64 GB）のみ — 独立したtok/sベンチマークはまだない。基本のM6（899ドルから）は統合メモリ上限32 GBで70Bモデルには非対応。' } },
-          { '@type': 'Question', 'name': '新しいMac mini M6は旧M4 Proのように64 GBの統合メモリに対応していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ — 基本のMac mini M6は統合メモリ上限32 GBで、M4 Proの最大64 GBより少ない。64 GBを得るにはM5 Pro構成（1,699ドルから）が必要で、M6（899ドルから）では対応不可。' } },
-          { '@type': 'Question', 'name': 'Framework Desktopは新しいMac miniよりもローカルLLMに優れていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Framework Desktop（$1,999、128 GB統合メモリ）は依然としてどちらの新Mac miniチップよりもメモリ余裕がある — M5 Proは64 GB、M6は32 GBが上限。旧世代のM4 Proとの比較では、Framework Desktopは70Bで20+ tok/sを実行し、Mac miniの10〜15 tok/sを上回った。' } },
-          { '@type': 'Question', 'name': 'ローカルLLM用にはMac miniのRAM構成は16 GB・24 GB・48 GB・64 GBのどれが最適ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '16 GB（M4、$599）は7Bモデルのみ対応で40〜50 tok/s。24 GB（M4 Pro、$1,399）でも70Bは収まらず、7B〜13B向け。48 GB（M4 Pro、$1,999）が70Bを収められる最小構成で7〜10 tok/s。64 GB（M4 Pro、$2,299）が最適解：70Bを10〜15 tok/sで実行でき、コンテキスト長にも余裕がある。' } },
-          { '@type': 'Question', 'name': 'ローカルLLM向けのMac miniの代替として良い選択肢は何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Framework Desktop（$1,999、128 GB統合メモリ）はどの新Mac mini構成（M6：32 GB、M5 Pro：64 GB）よりもメモリ余裕があり、旧世代のM4 Proとの比較では生の70B速度でMac miniを上回った（20+ tok/s対10〜15 tok/s）。x86の柔軟性を求めるなら、ASUS PN51 + RTX 5060 Tiビルド（$900）が7B〜13Bモデルをより低い初期費用でカバーする。' } },
-          { '@type': 'Question', 'name': '2026年のローカルLLM向け最安ミニPCは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ryzen 5・RAM 32 GB・1TB SSD・RTX 5060 Ti 16 GBを搭載したASUS PN51またはPN52ベアボーンは合計約$900 — 専用GPUを搭載しながら7Bを25 tok/s、13Bを15 tok/sで実行できる最安のミニPCビルド。' } },
+          {
+            '@type': 'Question',
+            'name': 'ミニPCで13Bモデルをスムーズに実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 5060 Ti（16 GB）またはRTX 4070（12 GB）でQ4量子化なら可能。RTX 4060 Ti（8 GB）は13Bにはタイト — VRAMヘッドルームが1 GB未満になる。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5060 Ti eGPU接続のIntel NUCはローカルLLMに適していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。TB3 eGPUは帯域幅を15〜20%失うため、7Bで15ではなく12 tok/sを見込む。フルタワーが不可能な狭いスペースには依然として有効。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM実行中のミニPCはどれくらい音がしますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 5060 Ti全負荷時は50〜60 dB。アンダーボルティングまたはNoctuaバリアントへのGPUファン交換でノイズを40〜45 dBに低減可能。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 4090をミニPCに搭載できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不可能。RTX 4090はデュアルスロットで280 mm以上。カスタムSFFケース（Lian Li A4、Dan A4-H2O）のGPU最大長は220 mm。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMにはミニPCとノートPCどちらが優れていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '据え置き使用ならミニPC。ミニPCは優れた熱特性（60〜70°C持続）と完全なPCIe帯域幅を提供。ノートPCは持続負荷下で約10 tok/sにスロットル。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7B推論向けミニPCの総費用は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ASUS PN51ビルド：約¥140,000。Intel NUC 13 + RTX 5060 Ti eGPUドック：約¥200,000。両方7Bを20〜25 tok/sで実行。PN51の方がコストパフォーマンスに優れる。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM推論向けミニPCには専用冷却が必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '持続推論には必要。標準Mini-ITXケースファン（1×80 mm）はRTX 5060 Ti全負荷時には不十分。92 mmサイドファン追加またはGPUファンをNoctuaバリアント（¥7,500〜12,000）に交換を推奨。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM推論に最適なミニPCのCPUは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'トークン生成においてCPUはGPUより二次的な要素。Ryzen 7 7700XまたはIntel Core i7-14700Kで十分。7B〜13B推論ではCPU速度よりGPU VRAMの予算を優先。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '新しいMac mini（M6またはM5 Pro）でLlama 3.3 70Bは実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '70Bクラスのモデルに十分なメモリ余裕があるのはM5 Pro構成（1,699ドルから、統合メモリ上限64 GB）のみ — 2026年9月22日発売のため独立したtok/sベンチマークはまだない。基本のM6（899ドルから）は統合メモリ上限32 GBで70Bモデルには非対応。比較として、旧世代のM4 Pro（64 GB、2,299ドル）は70Bで10〜15 tok/sを達成していた。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '新しいMac mini M6は旧M4 Proのように64 GBの統合メモリに対応していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ — 基本のMac mini M6は統合メモリ上限32 GBで、M4 Proの最大64 GBより少なくなっています。新しいMac miniラインナップで64 GBの統合メモリを得るには、M6（899ドルから）ではなくM5 Pro構成（1,699ドルから）が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Framework Desktopは新しいMac miniよりもローカルLLMに優れていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Framework Desktop（$1,999、128 GB統合メモリ）は依然としてどちらの新Mac miniチップよりもメモリ余裕がある — M5 Proは64 GB、M6は32 GBが上限。旧世代のM4 Proとの比較では、Framework Desktopは70Bで20+ tok/sを実行し、Mac miniの10〜15 tok/sを上回った。新しいM5 Proチップについてはまだ独立したベンチマークが存在しない。セットアップの簡単さでは依然Mac miniが優位 — OllamaがMetal対応ですぐ動作するのに対し、FrameworkはROCmのセットアップが必要。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM向けにはMac miniのM6とM5 Proのどちらが最適ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '70Bクラスのモデルには、M5 Pro（1,699ドルから、最大64 GBの統合メモリ）のみが十分な余裕を持つ — M6（899ドルから）は統合メモリ上限32 GBで、Q4量子化でも70Bモデルには非対応。7B〜13Bモデルのみが必要な場合は基本のM6で十分。旧世代のM4 Pro（最大64 GB、最大2,299ドル）は販売終了が進んでいるが、値引き品が見つかれば70Bで10〜15 tok/sを達成していた。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM向けのMac miniの代替として良い選択肢は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Framework Desktop（$1,999、128 GB統合メモリ）はどの新Mac mini構成（M6：32 GB、M5 Pro：64 GB）よりもメモリ余裕があり、旧世代のM4 Proとの比較では生の70B速度でMac miniを上回った（20+ tok/s対10〜15 tok/s）。ただしファンの動作音が大きく、ROCmのセットアップ手順が必要になる。統合メモリではなくx86の柔軟性を求めるなら、ASUS PN51 + RTX 5060 Tiビルド（$900）が7B〜13Bモデルをより低い初期費用でカバーする。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年のローカルLLM向け最安ミニPCは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ryzen 5・RAM 32 GB・1TB SSD・RTX 5060 Ti 16 GBを搭載したASUS PN51またはPN52ベアボーンは合計約$900 — 専用GPUを搭載しながら7Bを25 tok/s、13Bを15 tok/sで実行できる最安のミニPCビルド。統合グラフィックスのみのプリビルトミニPCはさらに安いが、7Bで1〜2 tok/sまで低下するため、ローカルLLM推論の実用的な予算選択肢にはならない。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM用にはMac miniのRAM構成は16 GB・24 GB・48 GB・64 GBのどれが最適ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '16 GB（M4、$599）は7Bモデルのみ対応で40〜50 tok/s。24 GB（M4 Pro、$1,399）でも70Bは収まらず、7B〜13B向け。48 GB（M4 Pro、$1,999）が70Bを収められる最小構成で7〜10 tok/s。64 GB（M4 Pro、$2,299）が最適解：70Bを10〜15 tok/sで実行でき、コンテキスト長にも余裕がある。',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1325,6 +1432,7 @@ schema: {
             { q: '本地LLM应该选择Mac mini M6还是M5 Pro？', a: '运行70B级模型只有M5 Pro（1,699美元起，最高64 GB统一内存）内存空间足够——M6（899美元起）统一内存上限32 GB，即使Q4量化也无法运行70B模型。如果只需要7B〜13B模型，基础版M6已经足够。上一代M4 Pro（最高64 GB，最高2,299美元）正在停产，但如果能找到折扣款，其70B速度可达10〜15 tok/s。' },
             { q: '本地LLM有什么替代Mac mini的好选择？', a: 'Framework Desktop（$1,999，128 GB统一内存）的内存空间超过任何一款全新Mac mini配置（M6：32 GB，M5 Pro：64 GB），与上一代M4 Pro对比，其70B原始速度也超越Mac mini（20+ tok/s对比10〜15 tok/s），代价是风扇噪音更大且需要配置ROCm。若想要x86平台的灵活性而非统一内存，ASUS PN51 + RTX 5060 Ti构建（$900）以更低的前期成本覆盖7B〜13B模型。' },
             { q: '2026年本地LLM性价比最高的迷你PC是什么？', a: 'ASUS PN51或PN52 barebone搭配Ryzen 5、32 GB内存、1TB SSD和RTX 5060 Ti 16 GB，总价约$900——这是仍能在独立GPU上实现7B达25 tok/s、13B达15 tok/s的最低成本迷你PC构建方案。仅搭载集成显卡的预装迷你PC虽然更便宜，但7B推理速度会降至1〜2 tok/s，因此并非本地LLM推理的真正预算选项。' },
+            { q: '本地LLM应该选择16 GB、24 GB、48 GB还是64 GB内存的Mac mini？', a: '16 GB（M4，$599）仅能运行7B模型，速度40〜50 tok/s。24 GB（M4 Pro，$1,399）仍无法加载70B——适合7B〜13B。48 GB（M4 Pro，$1,999）是能加载70B的最低配置，速度7〜10 tok/s。64 GB（M4 Pro，$2,299）是最佳平衡点：70B达10〜15 tok/s，且上下文长度有余量。' },
           ],
         },
         relatedReading: {
@@ -1381,20 +1489,126 @@ schema: {
         '@type': 'FAQPage',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-mini-pcs-local-llm',
         'mainEntity': [
-          { '@type': 'Question', 'name': '迷你PC能流畅运行13B模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '能，使用RTX 5060 Ti（16 GB）或RTX 4070（12 GB）进行Q4量化。RTX 4060 Ti（8 GB）运行13B过于紧张——VRAM余量降至1 GB以下。' } },
-          { '@type': 'Question', 'name': '搭载外置RTX 5060 Ti的Intel NUC适合本地LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '适合。TB3 eGPU损失15〜20%带宽，7B预计12 tok/s而非15。对小空间仍然实用。' } },
-          { '@type': 'Question', 'name': '运行LLM时迷你PC噪音有多大？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti满载达50〜60 dB。降压或换Noctua风扇可降至40〜45 dB。' } },
-          { '@type': 'Question', 'name': '迷你PC能安装RTX 4090吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能。RTX 4090是双槽设计，长度超280mm。定制SFF机箱GPU最大长度为220mm。' } },
-          { '@type': 'Question', 'name': '本地LLM用迷你PC还是笔记本更好？', 'acceptedAnswer': { '@type': 'Answer', 'text': '固定使用场景下迷你PC更好。提供更好的散热和完整PCIe带宽。笔记本在持续负载下会限速至约10 tok/s。' } },
-          { '@type': 'Question', 'name': '7B推理迷你PC的总成本是多少？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ASUS PN51构建：$900。Intel NUC 13 + RTX 5060 Ti eGPU：$1,300。两者均以20〜25 tok/s运行7B；PN51性价比更高。' } },
-          { '@type': 'Question', 'name': '迷你PC运行LLM需要专用散热方案吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '持续推理需要。标准Mini-ITX风扇不足以应对RTX 5060 Ti满载。建议增加92mm侧面风扇或换Noctua风扇（$50〜80）。' } },
-          { '@type': 'Question', 'name': '哪款迷你PC CPU最适合本地LLM推理？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'CPU对令牌生成是次要因素。Ryzen 7 7700X或Intel Core i7-14700K已足够。应优先考虑GPU VRAM预算。' } },
-          { '@type': 'Question', 'name': '全新Mac mini（M6或M5 Pro）能运行Llama 3.3 70B吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '只有M5 Pro配置（1,699美元起，统一内存上限64 GB）有足够内存运行70B级模型——尚无独立tok/s基准测试。基础版M6（899美元起）统一内存上限32 GB，无法运行70B模型。' } },
-          { '@type': 'Question', 'name': '全新Mac mini M6是否像旧款M4 Pro一样支持64 GB统一内存？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不支持——基础版Mac mini M6统一内存上限32 GB，低于M4 Pro最高64 GB。要获得64 GB统一内存，需选择M5 Pro配置（1,699美元起），而非M6（899美元起）。' } },
-          { '@type': 'Question', 'name': 'Framework Desktop比全新Mac mini更适合本地LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Framework Desktop（$1,999，128 GB统一内存）内存空间仍超过任何一款全新Mac mini芯片——M5 Pro上限64 GB，M6上限32 GB。与上一代M4 Pro对比，Framework Desktop以20+ tok/s运行70B，优于Mac mini的10〜15 tok/s。' } },
-          { '@type': 'Question', 'name': '本地LLM应该选择16 GB、24 GB、48 GB还是64 GB内存的Mac mini？', 'acceptedAnswer': { '@type': 'Answer', 'text': '16 GB（M4，$599）仅能运行7B模型，速度40〜50 tok/s。24 GB（M4 Pro，$1,399）仍无法加载70B——适合7B〜13B。48 GB（M4 Pro，$1,999）是能加载70B的最低配置，速度7〜10 tok/s。64 GB（M4 Pro，$2,299）是最佳平衡点：70B达10〜15 tok/s，且上下文长度有余量。' } },
-          { '@type': 'Question', 'name': '本地LLM有什么替代Mac mini的好选择？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Framework Desktop（$1,999，128 GB统一内存）内存空间超过任何一款全新Mac mini配置（M6：32 GB，M5 Pro：64 GB），与上一代M4 Pro对比，70B原始速度也超越Mac mini（20+ tok/s对比10〜15 tok/s）。追求x86灵活性时，ASUS PN51 + RTX 5060 Ti构建（$900）以更低的前期成本覆盖7B〜13B模型。' } },
-          { '@type': 'Question', 'name': '2026年本地LLM性价比最高的迷你PC是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ASUS PN51或PN52 barebone搭配Ryzen 5、32 GB内存、1TB SSD和RTX 5060 Ti 16 GB，总价约$900——这是仍能在独立GPU上实现7B达25 tok/s、13B达15 tok/s的最低成本迷你PC构建方案。' } },
+          {
+            '@type': 'Question',
+            'name': '迷你PC能流畅运行13B模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '能，使用RTX 5060 Ti（16 GB）或RTX 4070（12 GB）进行Q4量化。RTX 4060 Ti（8 GB）运行13B过于紧张——VRAM余量降至1 GB以下。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '搭载外置RTX 5060 Ti的Intel NUC适合本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '适合。TB3 eGPU损失15〜20%带宽，7B预计12 tok/s而非15。对于无法放置全尺寸塔式机的小空间仍然实用。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行LLM时迷你PC噪音有多大？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 5060 Ti满载达50〜60 dB。降压或将GPU风扇换为Noctua版本可将噪音降至40〜45 dB。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '迷你PC能安装RTX 4090吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能。RTX 4090是双槽设计，长度超280mm。定制SFF机箱（Lian Li A4、Dan A4-H2O）GPU最大长度为220mm。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM用迷你PC还是笔记本更好？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '固定使用场景下迷你PC更好。迷你PC提供更好的散热性能（持续60〜70°C）和完整PCIe带宽。笔记本在持续负载下会限速至约10 tok/s。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7B推理迷你PC的总成本是多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ASUS PN51构建：$900。Intel NUC 13 + RTX 5060 Ti eGPU坞站：$1,300。两者都能以20〜25 tok/s运行7B；PN51性价比更高。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '迷你PC运行LLM需要专用散热方案吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '持续推理需要。标准Mini-ITX机箱风扇（1×80mm）不足以应对RTX 5060 Ti满载。建议增加92mm侧面风扇或将GPU风扇换为Noctua版本（$50〜80）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪款迷你PC CPU最适合本地LLM推理？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CPU对于令牌生成是次要因素。Ryzen 7 7700X或Intel Core i7-14700K已足够。7B〜13B推理应优先考虑GPU VRAM预算而非CPU速度。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '全新Mac mini（M6或M5 Pro）能运行Llama 3.3 70B吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只有M5 Pro配置（1,699美元起，统一内存上限64 GB）有足够内存运行70B级模型——由于2026年9月22日才发售，尚无独立tok/s基准测试。基础版M6（899美元起）统一内存上限32 GB，无法运行70B模型。作为对比，上一代M4 Pro（64 GB，2,299美元）运行70B可达10〜15 tok/s。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '全新Mac mini M6是否像旧款M4 Pro一样支持64 GB统一内存？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不支持——基础版Mac mini M6统一内存上限为32 GB，低于M4 Pro最高64 GB的水平。要在全新Mac mini产品线中获得64 GB统一内存，需要选择M5 Pro配置（1,699美元起），而非M6（899美元起）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Framework Desktop比全新Mac mini更适合本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Framework Desktop（$1,999，128 GB统一内存）的内存空间仍然超过任何一款全新Mac mini芯片——M5 Pro上限64 GB，M6上限32 GB。与上一代M4 Pro对比，Framework Desktop以20+ tok/s运行70B，优于Mac mini的10〜15 tok/s；全新M5 Pro芯片目前尚无独立基准测试。在配置便利性方面Mac mini仍然领先——Ollama配合Metal即装即用，而Framework需要配置ROCm。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM应该选择Mac mini M6还是M5 Pro？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '运行70B级模型只有M5 Pro（1,699美元起，最高64 GB统一内存）内存空间足够——M6（899美元起）统一内存上限32 GB，即使Q4量化也无法运行70B模型。如果只需要7B〜13B模型，基础版M6已经足够。上一代M4 Pro（最高64 GB，最高2,299美元）正在停产，但如果能找到折扣款，其70B速度可达10〜15 tok/s。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM有什么替代Mac mini的好选择？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Framework Desktop（$1,999，128 GB统一内存）的内存空间超过任何一款全新Mac mini配置（M6：32 GB，M5 Pro：64 GB），与上一代M4 Pro对比，其70B原始速度也超越Mac mini（20+ tok/s对比10〜15 tok/s），代价是风扇噪音更大且需要配置ROCm。若想要x86平台的灵活性而非统一内存，ASUS PN51 + RTX 5060 Ti构建（$900）以更低的前期成本覆盖7B〜13B模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年本地LLM性价比最高的迷你PC是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ASUS PN51或PN52 barebone搭配Ryzen 5、32 GB内存、1TB SSD和RTX 5060 Ti 16 GB，总价约$900——这是仍能在独立GPU上实现7B达25 tok/s、13B达15 tok/s的最低成本迷你PC构建方案。仅搭载集成显卡的预装迷你PC虽然更便宜，但7B推理速度会降至1〜2 tok/s，因此并非本地LLM推理的真正预算选项。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM应该选择16 GB、24 GB、48 GB还是64 GB内存的Mac mini？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '16 GB（M4，$599）仅能运行7B模型，速度40〜50 tok/s。24 GB（M4 Pro，$1,399）仍无法加载70B——适合7B〜13B。48 GB（M4 Pro，$1,999）是能加载70B的最低配置，速度7〜10 tok/s。64 GB（M4 Pro，$2,299）是最佳平衡点：70B达10〜15 tok/s，且上下文长度有余量。',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1953,20 +2167,118 @@ schema: {
         'url': 'https://www.promptquorum.com/ar/local-llms/best-mini-pcs-local-llm',
         'inLanguage': 'ar',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'هل يمكنني تشغيل نماذج 13B دون مشاكل على كمبيوتر مصغر؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، بتكميم Q4 مع RTX 5060 Ti (16 GB) أو RTX 4070 (12 GB). RTX 4060 Ti (8 GB) ضيقة جداً لتشغيل 13B بشكل مريح — يهبط هامش VRAM دون 1 GB.' } },
-          { '@type': 'Question', 'name': 'هل Intel NUC مع RTX 5060 Ti خارجية في محطة مفيد لنماذج LLM المحلية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يفقد eGPU بمنفذ TB3 نسبة 15–20% من عرض النطاق، لذا توقّع 12 tok/s بدلاً من 15 على 7B. يبقى عملياً وممتازاً للأماكن الصغيرة حيث يكون البرج الكامل غير عملي.' } },
-          { '@type': 'Question', 'name': 'ما مدى ضجيج الكمبيوتر المصغر أثناء تشغيل نماذج LLM؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تصل RTX 5060 Ti بكامل الحمل إلى 50–60 dB. يقلّل خفض الجهد أو استبدال المراوح بإصدارات Noctua الضجيج إلى 40–45 dB — مقبول لمعظم المكاتب.' } },
-          { '@type': 'Question', 'name': 'هل يمكنني تركيب RTX 4090 في كمبيوتر مصغر؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. RTX 4090 مزدوجة المنفذ وبطول 280mm+. الصناديق المخصصة SFF (Lian Li A4، Dan A4-H2O) تبلغ حداً أقصى 220mm لطول GPU.' } },
-          { '@type': 'Question', 'name': 'هل الكمبيوتر المصغر أفضل من حاسوب محمول لنماذج LLM المحلية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'للاستخدام الثابت، نعم. يقدّم الكمبيوتر المصغر إدارة حرارة أفضل (60–70°م مستمرة) وعرض نطاق PCIe كامل. يحدّ الحاسوب المحمول عند نحو 10 tok/s تحت الحمل المستمر. يفوز الكمبيوتر المصغر للاستخدام المكتبي.' } },
-          { '@type': 'Question', 'name': 'ما التكلفة الإجمالية لكمبيوتر مصغر لاستدلال 7B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تجميع ASUS PN51: 900 دولار. Intel NUC 13 + محطة eGPU بـ RTX 5060 Ti: 1,300 دولار. كلاهما يشغّل 7B بسرعة 20–25 tok/s؛ يقدّم PN51 قيمة أفضل. قد تختلف الأسعار حسب بلدك.' } },
-          { '@type': 'Question', 'name': 'هل يحتاج الكمبيوتر المصغر إلى حل تبريد مخصص لنماذج LLM؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم للاستدلال المستمر. مراوح صندوق Mini-ITX القياسية (1×80mm) غير كافية لـ RTX 5060 Ti بكامل الحمل. أضف مروحة جانبية 92mm أو استبدل مراوح GPU بإصدارات Noctua (50–80 دولار).' } },
-          { '@type': 'Question', 'name': 'أي CPU كمبيوتر مصغر أفضل لاستدلال LLM المحلي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'الـ CPU ثانوية مقارنة بـ GPU في توليد الرموز. Ryzen 7 7700X أو Intel Core i7-14700K كافيان. أعطِ الأولوية لميزانية VRAM في GPU على سرعة CPU لاستدلال 7B–13B.' } },
-          { '@type': 'Question', 'name': 'هل يستطيع جهاز Mac mini الجديد (M6 أو M5 Pro) تشغيل Llama 3.3 70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تكوين M5 Pro فقط (من 1,699 دولاراً، بحد أقصى للذاكرة الموحدة 64 GB) لديه ذاكرة كافية لتشغيل نماذج بحجم 70B — ولا توجد بعد اختبارات مستقلة. أما M6 الأساسي (من 899 دولاراً) فحده الأقصى 32 GB وغير مناسب لنماذج 70B.' } },
-          { '@type': 'Question', 'name': 'هل يدعم جهاز Mac mini M6 الجديد ذاكرة موحدة 64 GB مثل M4 Pro القديم؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا — يصل الحد الأقصى لذاكرة Mac mini M6 الأساسي إلى 32 GB فقط. للحصول على 64 GB، يلزم اختيار تكوين M5 Pro (من 1,699 دولاراً)، وليس M6 (من 899 دولاراً).' } },
-          { '@type': 'Question', 'name': 'هل Framework Desktop أفضل من جهاز Mac mini الجديد لنماذج LLM المحلية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا يزال Framework Desktop (1,999 دولار، ذاكرة موحدة 128 GB) يملك هامش ذاكرة أكبر من أي شريحة في جهاز Mac mini الجديد — إذ يصل M5 Pro إلى 64 GB بحد أقصى وM6 إلى 32 GB. مقارنة بجيل M4 Pro السابق، حقق Framework Desktop سرعة 20+ tok/s على 70B متفوقاً على Mac mini (10–15 tok/s).' } },
-          { '@type': 'Question', 'name': 'ما هو أفضل تكوين ذاكرة RAM لـ Mac mini لتشغيل نماذج LLM المحلية — 16 GB أم 24 GB أم 48 GB أم 64 GB؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يكفي تكوين 16 GB (M4، 599 دولار) لنماذج 7B فقط بسرعة 40–50 tok/s. لا يزال تكوين 24 GB (M4 Pro، 1,399 دولار) غير قادر على تحميل 70B — استخدمه لنماذج 7B–13B. يُعد تكوين 48 GB (M4 Pro، 1,999 دولار) الحد الأدنى الذي يحمّل 70B، بسرعة 7–10 tok/s. يمثّل تكوين 64 GB (M4 Pro، 2,299 دولار) النقطة المثلى: 70B بسرعة 10–15 tok/s مع هامش إضافي لطول السياق.' } },
-          { '@type': 'Question', 'name': 'ما هو بديل جيد لـ Mac mini لتشغيل نماذج LLM المحلية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يملك Framework Desktop (1,999 دولار، ذاكرة موحدة 128 GB) هامش ذاكرة أكبر من أي تكوين جديد من Mac mini (M6: 32 GB، M5 Pro: 64 GB)، وقد تفوّق على Mac mini في سرعة 70B الخام مقارنة بجيل M4 Pro السابق (20+ tok/s مقابل 10–15 tok/s). لمرونة x86، يغطي تجميع ASUS PN51 + RTX 5060 Ti (900 دولار) نماذج 7B–13B بتكلفة أولية أقل.' } },
-          { '@type': 'Question', 'name': 'ما هو أفضل كمبيوتر مصغر اقتصادي لنماذج LLM المحلية في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يبلغ إجمالي تكلفة تجميع ASUS PN51 أو PN52 (بدون نظام تشغيل) مع Ryzen 5 و32 GB RAM وSSD بسعة 1TB وRTX 5060 Ti بذاكرة 16 GB نحو 900 دولار — وهو أرخص تجميع كمبيوتر مصغر لا يزال يحقق 25 tok/s على 7B و15 tok/s على 13B باستخدام GPU منفصلة.' } },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نماذج 13B دون مشاكل على كمبيوتر مصغر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، بتكميم Q4 مع RTX 5060 Ti (16 GB) أو RTX 4070 (12 GB). RTX 4060 Ti (8 GB) ضيقة جداً لتشغيل 13B بشكل مريح — يهبط هامش VRAM دون 1 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Intel NUC مع RTX 5060 Ti خارجية في محطة مفيد لنماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يفقد eGPU بمنفذ TB3 نسبة 15–20% من عرض النطاق، لذا توقّع 12 tok/s بدلاً من 15 على 7B. يبقى عملياً وممتازاً للأماكن الصغيرة حيث يكون البرج الكامل غير عملي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما مدى ضجيج الكمبيوتر المصغر أثناء تشغيل نماذج LLM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تصل RTX 5060 Ti بكامل الحمل إلى 50–60 dB. يقلّل خفض الجهد أو استبدال مراوح GPU بإصدارات Noctua الضجيج إلى 40–45 dB — مقبول لمعظم المكاتب.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تركيب RTX 4090 في كمبيوتر مصغر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. RTX 4090 مزدوجة المنفذ وبطول 280mm+. الصناديق المخصصة SFF (Lian Li A4، Dan A4-H2O) تبلغ حداً أقصى 220mm لطول GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الكمبيوتر المصغر أفضل من حاسوب محمول لنماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'للاستخدام الثابت، نعم. يقدّم الكمبيوتر المصغر إدارة حرارة أفضل (60–70°م مستمرة) وعرض نطاق PCIe كامل. يحدّ الحاسوب المحمول عند نحو 10 tok/s تحت الحمل المستمر. يفوز الكمبيوتر المصغر للاستخدام المكتبي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما التكلفة الإجمالية لكمبيوتر مصغر لاستدلال 7B؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تجميع ASUS PN51: 900 دولار. Intel NUC 13 + محطة eGPU بـ RTX 5060 Ti: 1,300 دولار. كلاهما يشغّل 7B بسرعة 20–25 tok/s؛ يقدّم PN51 قيمة أفضل. قد تختلف الأسعار حسب بلدك.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يحتاج الكمبيوتر المصغر إلى حل تبريد مخصص لنماذج LLM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم للاستدلال المستمر. مراوح صندوق Mini-ITX القياسية (1×80mm) غير كافية لـ RTX 5060 Ti بكامل الحمل. أضف مروحة جانبية 92mm أو استبدل مراوح GPU بإصدارات Noctua (50–80 دولار).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي CPU كمبيوتر مصغر أفضل لاستدلال LLM المحلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الـ CPU ثانوية مقارنة بـ GPU في توليد الرموز. Ryzen 7 7700X أو Intel Core i7-14700K كافيان. أعطِ الأولوية لميزانية VRAM في GPU على سرعة CPU لاستدلال 7B–13B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يستطيع جهاز Mac mini الجديد (M6 أو M5 Pro) تشغيل Llama 3.3 70B؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تكوين M5 Pro فقط (من 1,699 دولاراً، بحد أقصى للذاكرة الموحدة 64 GB) لديه ذاكرة كافية لتشغيل نماذج بحجم 70B — ولا توجد بعد اختبارات أداء مستقلة، إذ يتوفر ابتداءً من 22 سبتمبر 2026 فقط. أما M6 الأساسي (من 899 دولاراً) فحده الأقصى 32 GB وغير مناسب لنماذج 70B. للمقارنة، حقق M4 Pro السابق (64 GB، 2,299 دولار) سرعة 10–15 tok/s على 70B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يدعم جهاز Mac mini M6 الجديد ذاكرة موحدة 64 GB مثل M4 Pro القديم؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا — يصل الحد الأقصى لذاكرة Mac mini M6 الأساسي إلى 32 GB فقط، وهو أقل من الحد الأقصى البالغ 64 GB في M4 Pro. للحصول على 64 GB من الذاكرة الموحدة في تشكيلة Mac mini الجديدة، يلزم اختيار تكوين M5 Pro (من 1,699 دولاراً)، وليس M6 (من 899 دولاراً).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Framework Desktop أفضل من جهاز Mac mini الجديد لنماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا يزال Framework Desktop (1,999 دولار، ذاكرة موحدة 128 GB) يملك هامش ذاكرة أكبر من أي شريحة في جهاز Mac mini الجديد — إذ يصل M5 Pro إلى 64 GB بحد أقصى وM6 إلى 32 GB. مقارنة بجيل M4 Pro السابق، حقق Framework Desktop سرعة 20+ tok/s على 70B متفوقاً على Mac mini (10–15 tok/s)؛ ولا توجد بعد اختبارات مستقلة لشريحة M5 Pro الجديدة. لسهولة الإعداد، لا يزال Mac mini يفوز — يعمل Ollama مع Metal فوراً، بينما يتطلب Framework إعداد ROCm.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أفضل تكوين لجهاز Mac mini لتشغيل نماذج LLM المحلية — M6 أم M5 Pro؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لنماذج بحجم 70B، لا يكفي إلا M5 Pro (من 1,699 دولاراً، حتى 64 GB من الذاكرة الموحدة) — إذ يصل الحد الأقصى لذاكرة M6 (من 899 دولاراً) إلى 32 GB فقط ولا يناسب نماذج 70B حتى مع ضغط Q4. إذا كنت تحتاج فقط نماذج 7B–13B، فإن M6 الأساسي يكفي. يجري سحب M4 Pro السابق (حتى 64 GB، حتى 2,299 دولاراً) من الأسواق تدريجياً لكنه كان يحقق سرعة 10–15 tok/s على 70B إن وجدت نسخة مخفضة السعر.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو بديل جيد لـ Mac mini لتشغيل نماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يملك Framework Desktop (1,999 دولار، ذاكرة موحدة 128 GB) هامش ذاكرة أكبر من أي تكوين جديد من Mac mini (M6: 32 GB، M5 Pro: 64 GB)، وقد تفوّق على Mac mini في سرعة 70B الخام مقارنة بجيل M4 Pro السابق (20+ tok/s مقابل 10–15 tok/s)، مقابل مروحة أعلى ضجيجاً وخطوة إعداد ROCm إضافية. لمرونة x86 بدلاً من الذاكرة الموحدة، يغطي تجميع ASUS PN51 + RTX 5060 Ti (900 دولار) نماذج 7B–13B بتكلفة أولية أقل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أفضل كمبيوتر مصغر اقتصادي لنماذج LLM المحلية في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يبلغ إجمالي تكلفة تجميع ASUS PN51 أو PN52 (بدون نظام تشغيل) مع Ryzen 5 و32 GB RAM وSSD بسعة 1TB وRTX 5060 Ti بذاكرة 16 GB نحو 900 دولار — وهو أرخص تجميع كمبيوتر مصغر لا يزال يحقق 25 tok/s على 7B و15 tok/s على 13B باستخدام GPU منفصلة. تكلّف أجهزة الكمبيوتر المصغرة الجاهزة ذات الرسومات المدمجة أقل فقط، لكنها تهبط إلى 1–2 tok/s على 7B، لذا فهي ليست خياراً اقتصادياً حقيقياً لاستدلال LLM المحلي.',
+            },
+          },
         ],
       },
       itemListSchema: {

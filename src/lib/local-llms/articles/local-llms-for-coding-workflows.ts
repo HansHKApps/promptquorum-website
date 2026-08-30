@@ -1889,6 +1889,7 @@ schema: {
       primaryTerm: 'LLM local para programação',
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
+        { label: 'Perguntas frequentes', anchor: 'faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1919,6 +1920,21 @@ schema: {
             'Codestral 22B: melhor para autocompletar no IDE (FIM). 14 GB de VRAM. `ollama run codestral:22b`.',
             'Qwen3 8B: ~76% HumanEval (legado). 5 GB de VRAM. Melhor opção para a faixa de 8 GB. `ollama run qwen3:8b`.',
             'Velocidade: 2–5 s por resposta nos modelos maiores; menos de 2 s para autocompletar FIM. O código nunca sai da sua máquina — conformidade com a LGPD por padrão.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Qual é o melhor LLM local para programação em 2026?', a: 'Em julho de 2026: Kimi K2.6 (58,6 SWE-Bench Pro, MoE) para máxima precisão. Qwen3.8-27B (61,7% SWE-bench) para a melhor qualidade entre modelos densos em 22 GB de VRAM. Devstral Small 24B para programação agêntica multiarquivo. Codestral 22B para autocompletar no IDE. Qwen3 8B para 8 GB de VRAM.' },
+            { q: 'Qual é a pontuação do Qwen3 no HumanEval para programação?', a: 'Qwen3 8B pontua aproximadamente 76% no HumanEval (benchmark legado). Qwen3-Coder 32B pontua 87% no HumanEval. Em 2026, o SWE-bench substituiu o HumanEval como benchmark principal — Qwen3.8-27B pontua 61,7% no SWE-bench, Kimi K2.6 pontua 58,6 no SWE-Bench Pro.' },
+            { q: 'Como o Kimi K2.6 se compara ao GitHub Copilot?', a: 'Kimi K2.6 pontua 58,6 no SWE-Bench Pro, competitivo com vários modelos de nuvem de ponta na resolução de problemas do mundo real. Velocidade: local é 2-5 segundos vs. ~300ms do Copilot. Privacidade: local mantém o código no dispositivo. Custo: local $0/mês após o hardware; Copilot $228/ano.' },
+            { q: 'Posso usar um LLM de programação local no VS Code?', a: 'Sim — instale o Continue.dev (gratuito, código aberto). Configure para conectar ao Ollama em localhost:11434. Tab ou Ctrl+Shift+\\\\ ativa as sugestões. Funciona com Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B e todos os modelos Ollama.' },
+            { q: 'O Copilot ou um LLM local é melhor para uma base de código proprietária?', a: 'LLM local. Com o Copilot, o código é enviado para servidores da Microsoft/OpenAI. O local mantém o código no dispositivo. Para setores regulados (finanças, saúde, defesa), o local é a única opção compatível.' },
+            { q: 'Quanta VRAM eu preciso para um LLM de programação local?', a: 'Mínimo: 5 GB para Qwen3 8B. Recomendado: 16 GB para Devstral Small 24B ou Qwen3.8-27B. Premium: 20+ GB para Kimi K2.6 quantizado. RTX 4060 Ti (8 GB) executa Qwen3 8B. RTX 4070/4070 Ti (12-16 GB) executa Devstral Small 24B ou Codestral 22B.' },
+            { q: 'O LLM de programação local suporta autocompletar como o Copilot?', a: 'Sim — via editor Continue.dev ou Cursor. Ambos suportam fill-in-the-middle (FIM), em que o modelo vê o código acima/abaixo do cursor. Codestral 22B e Qwen3 8B suportam FIM nativamente. Resposta: menos de 2 segundos na GPU vs. 200-300ms do Copilot.' },
+            { q: 'Posso fazer fine-tuning de um modelo de programação na minha base de código?', a: 'Sim — use LoRA/QLoRA com Unsloth. Prepare 500+ exemplos em formato de instrução. O fine-tuning do Qwen3 8B leva 1-2 horas em 8 GB de VRAM. Ganho típico de precisão: 10-15%.' },
+            { q: 'Qual LLM de programação suporta mais linguagens de programação?', a: 'Qwen3.8-27B e Kimi K2.6 suportam mais de 90 linguagens: Python, JavaScript, TypeScript, Rust, Go, Java, C++, SQL, Bash, Ruby. Devstral Small 24B e Codestral 22B são mais fortes em Python, JavaScript, TypeScript, Go, Rust.' },
           ],
         },
       },

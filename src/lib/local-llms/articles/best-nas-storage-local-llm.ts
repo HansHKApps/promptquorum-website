@@ -50,19 +50,76 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Should I use NAS for inference, or just storage?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Just storage. Keep inference on local GPU. NAS over network is too slow for real-time inference.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use an old laptop as a NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but power consumption is high (20W+). Purpose-built NAS uses 10-15W. Cost-effective over 3+ years.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is cloud backup (Backblaze) secure for model files?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, with encryption. Backblaze uses AES-256 at rest. Data is private (Backblaze can\'t read it).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How long does RAID 6 rebuild take?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '~24 hours for 8TB. During rebuild, if 2nd drive fails, data is lost. Rare but possible; monitor actively.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use Synology + TrueNAS together?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Synology for speed/ease, TrueNAS for compliance/auditing. But overkill unless you have both.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I need 10Gbps network for NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Gigabit (1Gbps) is fine for model transfers (1 hour for 35GB 70B model). 10Gbps is for teams >20 users.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'What is a NAS and why do I need one for local LLMs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A NAS (Network-Attached Storage) keeps your model library organized, backed up, and accessible across machines. It is essential for production local LLM teams managing multiple models and users.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A NAS (Network-Attached Storage) keeps your model library organized, backed up, and accessible across machines. It is essential for production local LLM teams managing multiple models and users.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is RAID 6 and why is it recommended for NAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RAID 6 provides redundancy where 2 drives can fail simultaneously without data loss. It is essential for production systems to protect against drive failures.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAID 6 provides redundancy where 2 drives can fail simultaneously without data loss. It is essential for production systems to protect against drive failures.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Best NAS for local LLMs: Synology, QNAP, or TrueNAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Synology DS420+ is best for budget teams ($1,000 total with drives). QNAP TS-464C2U for performance needs. TrueNAS SCALE for advanced ZFS features and open-source deployment.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Synology DS420+ is best for budget teams ($1,000 total with drives). QNAP TS-464C2U for performance needs. TrueNAS SCALE for advanced ZFS features and open-source deployment.',
+            },
+          },
         ]
       },
       toc: [
@@ -169,6 +226,9 @@ schema: {
             { q: 'How long does RAID 6 rebuild take?', a: '~24 hours for 8TB. During rebuild, if 2nd drive fails, data is lost. Rare but possible; monitor actively.' },
             { q: 'Can I use Synology + TrueNAS together?', a: 'Yes. Synology for speed/ease, TrueNAS for compliance/auditing. But overkill unless you have both.' },
             { q: 'Do I need 10Gbps network for NAS?', a: 'No. Gigabit (1Gbps) is fine for model transfers (1 hour for 35GB 70B model). 10Gbps is for teams >20 users.' },
+            { q: 'What is a NAS and why do I need one for local LLMs?', a: 'A NAS (Network-Attached Storage) keeps your model library organized, backed up, and accessible across machines. It is essential for production local LLM teams managing multiple models and users.' },
+            { q: 'What is RAID 6 and why is it recommended for NAS?', a: 'RAID 6 provides redundancy where 2 drives can fail simultaneously without data loss. It is essential for production systems to protect against drive failures.' },
+            { q: 'Best NAS for local LLMs: Synology, QNAP, or TrueNAS?', a: 'Synology DS420+ is best for budget teams ($1,000 total with drives). QNAP TS-464C2U for performance needs. TrueNAS SCALE for advanced ZFS features and open-source deployment.' },
           ],
         },
         'relatedReading': {
@@ -232,19 +292,76 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': '¿Debo usar el NAS para la inferencia o solo para almacenamiento?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo para almacenamiento. Mantén la inferencia en la GPU local. El NAS por red es demasiado lento para la inferencia en tiempo real.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar un portátil antiguo como NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, pero el consumo eléctrico es alto (20W+). Un NAS dedicado usa 10-15W. Rentable a largo plazo (3+ años).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es seguro el backup en la nube (Backblaze) para archivos de modelos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, con cifrado. Backblaze usa AES-256 en reposo. Los datos son privados (Backblaze no puede leerlos).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto tarda la reconstrucción de RAID 6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '~24 horas para 8TB. Durante la reconstrucción, si falla un segundo disco, se pierden los datos. Es raro pero posible; supervisa activamente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar Synology + TrueNAS juntos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Synology para velocidad/facilidad de uso, TrueNAS para cumplimiento/auditoría. Pero es sobredimensionado salvo que necesites ambos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito red de 10Gbps para el NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Gigabit (1Gbps) es suficiente para transferencias de modelos (1 hora para un modelo 70B de 35GB). 10Gbps es para equipos de más de 20 usuarios.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '¿Qué es un NAS y por qué lo necesito para LLMs locales?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Un NAS (Network-Attached Storage) mantiene tu biblioteca de modelos organizada, respaldada y accesible desde cualquier máquina. Es esencial para equipos de LLMs locales en producción que gestionan múltiples modelos y usuarios.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un NAS (Network-Attached Storage) mantiene tu biblioteca de modelos organizada, respaldada y accesible desde cualquier máquina. Es esencial para equipos de LLMs locales en producción que gestionan múltiples modelos y usuarios.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Qué es RAID 6 y por qué se recomienda para NAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RAID 6 proporciona redundancia donde 2 discos pueden fallar simultáneamente sin pérdida de datos. Es esencial para sistemas en producción para protegerse contra fallos de disco.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAID 6 proporciona redundancia donde 2 discos pueden fallar simultáneamente sin pérdida de datos. Es esencial para sistemas en producción para protegerse contra fallos de disco.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Mejor NAS para LLMs locales: ¿Synology, QNAP o TrueNAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Synology DS420+ es la mejor opción para equipos con presupuesto ajustado ($1.000 en total con discos). QNAP TS-464C2U para necesidades de rendimiento. TrueNAS SCALE para funciones ZFS avanzadas y despliegue open-source.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Synology DS420+ es la mejor opción para equipos con presupuesto ajustado ($1.000 en total con discos). QNAP TS-464C2U para necesidades de rendimiento. TrueNAS SCALE para funciones ZFS avanzadas y despliegue open-source.',
+            },
+          },
         ]
       },
       toc: [
@@ -350,6 +467,9 @@ schema: {
             { q: '¿Cuánto tarda la reconstrucción de RAID 6?', a: '~24 horas para 8TB. Durante la reconstrucción, si falla un segundo disco, se pierden los datos. Es raro pero posible; supervisa activamente.' },
             { q: '¿Puedo usar Synology + TrueNAS juntos?', a: 'Sí. Synology para velocidad/facilidad de uso, TrueNAS para cumplimiento/auditoría. Pero es sobredimensionado salvo que necesites ambos.' },
             { q: '¿Necesito red de 10Gbps para el NAS?', a: 'No. Gigabit (1Gbps) es suficiente para transferencias de modelos (1 hora para un modelo 70B de 35GB). 10Gbps es para equipos de más de 20 usuarios.' },
+            { q: '¿Qué es un NAS y por qué lo necesito para LLMs locales?', a: 'Un NAS (Network-Attached Storage) mantiene tu biblioteca de modelos organizada, respaldada y accesible desde cualquier máquina. Es esencial para equipos de LLMs locales en producción que gestionan múltiples modelos y usuarios.' },
+            { q: '¿Qué es RAID 6 y por qué se recomienda para NAS?', a: 'RAID 6 proporciona redundancia donde 2 discos pueden fallar simultáneamente sin pérdida de datos. Es esencial para sistemas en producción para protegerse contra fallos de disco.' },
+            { q: 'Mejor NAS para LLMs locales: ¿Synology, QNAP o TrueNAS?', a: 'Synology DS420+ es la mejor opción para equipos con presupuesto ajustado ($1.000 en total con discos). QNAP TS-464C2U para necesidades de rendimiento. TrueNAS SCALE para funciones ZFS avanzadas y despliegue open-source.' },
           ],
         },
         'relatedReading': {
@@ -416,19 +536,76 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'هل ينبغي استخدام NAS للاستدلال أم للتخزين فقط؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'للتخزين فقط. أبقِ الاستدلال على GPU المحلية. NAS عبر الشبكة بطيء جداً للاستدلال في الوقت الفعلي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام حاسوب محمول قديم كـ NAS؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، لكن استهلاك الكهرباء مرتفع (20W+). يستهلك NAS مخصص 10–15W. مجدٍ على المدى الطويل (3+ سنوات).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل النسخ الاحتياطي السحابي (Backblaze) آمن لملفات النماذج؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، مع التشفير. يستخدم Backblaze AES-256 عند التخزين. البيانات خاصة (لا يستطيع Backblaze قراءتها).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم تستغرق إعادة بناء RAID 6؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '~24 ساعة لـ 8TB. أثناء إعادة البناء، إذا عطل قرص ثانٍ، تُفقد البيانات. نادر لكنه ممكن؛ راقب بنشاط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام Synology + TrueNAS معاً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. Synology للسرعة/سهولة الاستخدام، TrueNAS للامتثال/التدقيق. لكنه مبالغ فيه ما لم تحتج إلى كليهما.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج شبكة 10Gbps لـ NAS؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. Gigabit (1Gbps) كافٍ لنقل النماذج (ساعة واحدة لنموذج 70B بحجم 35GB). 10Gbps لفرق تزيد عن 20 مستخدماً.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'ما هو NAS ولماذا أحتاجه لنماذج LLM المحلية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'يحافظ NAS (التخزين المتصل بالشبكة) على مكتبة نماذجك منظمة ومنسوخة احتياطياً ومتاحة من أي جهاز. وهو ضروري لفرق نماذج LLM المحلية في الإنتاج التي تدير نماذج ومستخدمين متعددين.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يحافظ NAS (التخزين المتصل بالشبكة) على مكتبة نماذجك منظمة ومنسوخة احتياطياً ومتاحة من أي جهاز. وهو ضروري لفرق نماذج LLM المحلية في الإنتاج التي تدير نماذج ومستخدمين متعددين.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما هو RAID 6 ولماذا يُوصى به لـ NAS؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'يوفّر RAID 6 تكراراً يمكن فيه عطل قرصين في آن واحد دون فقدان البيانات. وهو ضروري لأنظمة الإنتاج للحماية من أعطال الأقراص.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يوفّر RAID 6 تكراراً يمكن فيه عطل قرصين في آن واحد دون فقدان البيانات. وهو ضروري لأنظمة الإنتاج للحماية من أعطال الأقراص.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'أفضل NAS لنماذج LLM المحلية: Synology أم QNAP أم TrueNAS؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Synology DS420+ أفضل خيار للفرق ذات الميزانية المحدودة (1,000 دولار إجمالاً مع الأقراص). QNAP TS-464C2U لاحتياجات الأداء. TrueNAS SCALE لميزات ZFS المتقدمة والنشر مفتوح المصدر.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Synology DS420+ أفضل خيار للفرق ذات الميزانية المحدودة (1,000 دولار إجمالاً مع الأقراص). QNAP TS-464C2U لاحتياجات الأداء. TrueNAS SCALE لميزات ZFS المتقدمة والنشر مفتوح المصدر.',
+            },
+          },
         ]
       },
       toc: [
@@ -534,6 +711,9 @@ schema: {
             { q: 'كم تستغرق إعادة بناء RAID 6؟', a: '~24 ساعة لـ 8TB. أثناء إعادة البناء، إذا عطل قرص ثانٍ، تُفقد البيانات. نادر لكنه ممكن؛ راقب بنشاط.' },
             { q: 'هل يمكنني استخدام Synology + TrueNAS معاً؟', a: 'نعم. Synology للسرعة/سهولة الاستخدام، TrueNAS للامتثال/التدقيق. لكنه مبالغ فيه ما لم تحتج إلى كليهما.' },
             { q: 'هل أحتاج شبكة 10Gbps لـ NAS؟', a: 'لا. Gigabit (1Gbps) كافٍ لنقل النماذج (ساعة واحدة لنموذج 70B بحجم 35GB). 10Gbps لفرق تزيد عن 20 مستخدماً.' },
+            { q: 'ما هو NAS ولماذا أحتاجه لنماذج LLM المحلية؟', a: 'يحافظ NAS (التخزين المتصل بالشبكة) على مكتبة نماذجك منظمة ومنسوخة احتياطياً ومتاحة من أي جهاز. وهو ضروري لفرق نماذج LLM المحلية في الإنتاج التي تدير نماذج ومستخدمين متعددين.' },
+            { q: 'ما هو RAID 6 ولماذا يُوصى به لـ NAS؟', a: 'يوفّر RAID 6 تكراراً يمكن فيه عطل قرصين في آن واحد دون فقدان البيانات. وهو ضروري لأنظمة الإنتاج للحماية من أعطال الأقراص.' },
+            { q: 'أفضل NAS لنماذج LLM المحلية: Synology أم QNAP أم TrueNAS؟', a: 'Synology DS420+ أفضل خيار للفرق ذات الميزانية المحدودة (1,000 دولار إجمالاً مع الأقراص). QNAP TS-464C2U لاحتياجات الأداء. TrueNAS SCALE لميزات ZFS المتقدمة والنشر مفتوح المصدر.' },
           ],
         },
         'relatedReading': {
@@ -598,19 +778,76 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Sollte ich das NAS für die Inferenz nutzen oder nur zur Speicherung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur zur Speicherung. Behalten Sie die Inferenz auf der lokalen GPU. Ein NAS über das Netzwerk ist für Echtzeit-Inferenz zu langsam.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich einen alten Laptop als NAS nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber der Stromverbrauch ist hoch (20W+). Ein speziell dafür gebautes NAS benötigt 10-15W. Über 3+ Jahre kostengünstiger.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Cloud-Backup (Backblaze) sicher für Modelldateien?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, mit Verschlüsselung. Backblaze verwendet AES-256 bei ruhenden Daten. Die Daten sind privat (Backblaze kann sie nicht lesen).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie lange dauert die Wiederherstellung von RAID 6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ca. 24 Stunden für 8TB. Fällt während der Wiederherstellung ein zweites Laufwerk aus, gehen Daten verloren. Selten, aber möglich; aktiv überwachen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Synology und TrueNAS zusammen nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Synology für Geschwindigkeit/Einfachheit, TrueNAS für Compliance/Auditing. Aber überdimensioniert, wenn Sie nicht beides benötigen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Brauche ich ein 10-Gbps-Netzwerk für das NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Gigabit (1 Gbps) genügt für Modellübertragungen (1 Stunde für ein 35GB großes 70B-Modell). 10 Gbps ist für Teams mit mehr als 20 Nutzern gedacht.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'Was ist ein NAS und warum brauche ich eines für lokale LLMs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ein NAS (Network-Attached Storage) hält Ihre Modellbibliothek organisiert, gesichert und über mehrere Rechner hinweg zugänglich. Es ist unverzichtbar für produktive lokale LLM-Teams, die mehrere Modelle und Nutzer verwalten.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein NAS (Network-Attached Storage) hält Ihre Modellbibliothek organisiert, gesichert und über mehrere Rechner hinweg zugänglich. Es ist unverzichtbar für produktive lokale LLM-Teams, die mehrere Modelle und Nutzer verwalten.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Was ist RAID 6 und warum wird es für NAS empfohlen?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RAID 6 bietet Redundanz, bei der 2 Laufwerke gleichzeitig ausfallen können, ohne dass Daten verloren gehen. Es ist für produktive Systeme unverzichtbar, um sich gegen Laufwerksausfälle abzusichern.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAID 6 bietet Redundanz, bei der 2 Laufwerke gleichzeitig ausfallen können, ohne dass Daten verloren gehen. Es ist für produktive Systeme unverzichtbar, um sich gegen Laufwerksausfälle abzusichern.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Bestes NAS für lokale LLMs: Synology, QNAP oder TrueNAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Synology DS420+ eignet sich am besten für Teams mit begrenztem Budget (ca. 1.000 € inklusive Festplatten). QNAP TS-464C2U für höhere Leistungsanforderungen. TrueNAS SCALE für erweiterte ZFS-Funktionen und Open-Source-Deployment.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Synology DS420+ eignet sich am besten für Teams mit begrenztem Budget (ca. 1.000 € inklusive Festplatten). QNAP TS-464C2U für höhere Leistungsanforderungen. TrueNAS SCALE für erweiterte ZFS-Funktionen und Open-Source-Deployment.',
+            },
+          },
         ]
       },
       toc: [
@@ -716,6 +953,9 @@ schema: {
             { q: 'Wie lange dauert die Wiederherstellung von RAID 6?', a: 'Ca. 24 Stunden für 8TB. Fällt während der Wiederherstellung ein zweites Laufwerk aus, gehen Daten verloren. Selten, aber möglich; aktiv überwachen.' },
             { q: 'Kann ich Synology und TrueNAS zusammen nutzen?', a: 'Ja. Synology für Geschwindigkeit/Einfachheit, TrueNAS für Compliance/Auditing. Aber überdimensioniert, wenn Sie nicht beides benötigen.' },
             { q: 'Brauche ich ein 10-Gbps-Netzwerk für das NAS?', a: 'Nein. Gigabit (1 Gbps) genügt für Modellübertragungen (1 Stunde für ein 35GB großes 70B-Modell). 10 Gbps ist für Teams mit mehr als 20 Nutzern gedacht.' },
+            { q: 'Was ist ein NAS und warum brauche ich eines für lokale LLMs?', a: 'Ein NAS (Network-Attached Storage) hält Ihre Modellbibliothek organisiert, gesichert und über mehrere Rechner hinweg zugänglich. Es ist unverzichtbar für produktive lokale LLM-Teams, die mehrere Modelle und Nutzer verwalten.' },
+            { q: 'Was ist RAID 6 und warum wird es für NAS empfohlen?', a: 'RAID 6 bietet Redundanz, bei der 2 Laufwerke gleichzeitig ausfallen können, ohne dass Daten verloren gehen. Es ist für produktive Systeme unverzichtbar, um sich gegen Laufwerksausfälle abzusichern.' },
+            { q: 'Bestes NAS für lokale LLMs: Synology, QNAP oder TrueNAS?', a: 'Synology DS420+ eignet sich am besten für Teams mit begrenztem Budget (ca. 1.000 € inklusive Festplatten). QNAP TS-464C2U für höhere Leistungsanforderungen. TrueNAS SCALE für erweiterte ZFS-Funktionen und Open-Source-Deployment.' },
           ],
         },
         'relatedReading': {
@@ -1039,19 +1279,76 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Devo usar o NAS para inferência ou apenas para armazenamento?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apenas armazenamento. Mantenha a inferência na GPU local. O NAS pela rede é lento demais para inferência em tempo real.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar um notebook antigo como NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, mas o consumo de energia é alto (20W+). Um NAS dedicado usa 10-15W. Compensa ao longo de 3+ anos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O backup na nuvem (Backblaze) é seguro para arquivos de modelos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, com criptografia. O Backblaze usa AES-256 em repouso. Os dados são privados (o Backblaze não consegue lê-los).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quanto tempo leva a reconstrução do RAID 6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '~24 horas para 8 TB. Durante a reconstrução, se um segundo disco falhar, os dados são perdidos. Raro, mas possível; monitore ativamente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar Synology + TrueNAS juntos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Synology para velocidade/facilidade, TrueNAS para conformidade/auditoria. Mas é exagero, a menos que você precise dos dois.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Preciso de rede de 10 Gbps para o NAS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Gigabit (1 Gbps) é suficiente para transferências de modelos (1 hora para um modelo 70B de 35 GB). 10 Gbps é para equipes com mais de 20 usuários.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'O que é um NAS e por que preciso dele para LLMs locais?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina. É essencial para equipes de LLMs locais em produção que gerenciam vários modelos e usuários.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina. É essencial para equipes de LLMs locais em produção que gerenciam vários modelos e usuários.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'O que é RAID 6 e por que é recomendado para NAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'O RAID 6 oferece redundância na qual 2 discos podem falhar simultaneamente sem perda de dados. É essencial para sistemas em produção, para proteger contra falhas de disco.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O RAID 6 oferece redundância na qual 2 discos podem falhar simultaneamente sem perda de dados. É essencial para sistemas em produção, para proteger contra falhas de disco.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Melhor NAS para LLMs locais: Synology, QNAP ou TrueNAS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'O Synology DS420+ é a melhor opção para equipes com orçamento limitado (~R$ 9.700 no total com os discos, no varejo brasileiro). QNAP TS-464C2U para necessidades de desempenho. TrueNAS SCALE para recursos ZFS avançados e implantação open-source.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Synology DS420+ é a melhor opção para equipes com orçamento limitado (~R$ 9.700 no total com os discos, no varejo brasileiro). QNAP TS-464C2U para necessidades de desempenho. TrueNAS SCALE para recursos ZFS avançados e implantação open-source.',
+            },
+          },
         ]
       },
       toc: [
@@ -1157,6 +1454,9 @@ schema: {
             { q: 'Quanto tempo leva a reconstrução do RAID 6?', a: '~24 horas para 8 TB. Durante a reconstrução, se um segundo disco falhar, os dados são perdidos. Raro, mas possível; monitore ativamente.' },
             { q: 'Posso usar Synology + TrueNAS juntos?', a: 'Sim. Synology para velocidade/facilidade, TrueNAS para conformidade/auditoria. Mas é exagero, a menos que você precise dos dois.' },
             { q: 'Preciso de rede de 10 Gbps para o NAS?', a: 'Não. Gigabit (1 Gbps) é suficiente para transferências de modelos (1 hora para um modelo 70B de 35 GB). 10 Gbps é para equipes com mais de 20 usuários.' },
+            { q: 'O que é um NAS e por que preciso dele para LLMs locais?', a: 'Um NAS (Network-Attached Storage) mantém sua biblioteca de modelos organizada, com backup e acessível em qualquer máquina. É essencial para equipes de LLMs locais em produção que gerenciam vários modelos e usuários.' },
+            { q: 'O que é RAID 6 e por que é recomendado para NAS?', a: 'O RAID 6 oferece redundância na qual 2 discos podem falhar simultaneamente sem perda de dados. É essencial para sistemas em produção, para proteger contra falhas de disco.' },
+            { q: 'Melhor NAS para LLMs locais: Synology, QNAP ou TrueNAS?', a: 'O Synology DS420+ é a melhor opção para equipes com orçamento limitado (~R$ 9.700 no total com os discos, no varejo brasileiro). QNAP TS-464C2U para necessidades de desempenho. TrueNAS SCALE para recursos ZFS avançados e implantação open-source.' },
           ],
         },
         'relatedReading': {
@@ -1219,19 +1519,76 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'NAS를 인퍼런스에 사용해야 합니까, 아니면 스토리지에만 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '스토리지에만 사용하십시오. 인퍼런스는 로컬 GPU에서 유지하십시오. 네트워크를 통한 NAS는 실시간 인퍼런스에 너무 느립니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '오래된 노트북을 NAS로 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '사용할 수 있지만 전력 소비가 높습니다(20W 이상). 전용 NAS는 10~15W를 사용합니다. 3년 이상 사용 시 비용 효율적입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '모델 파일에 클라우드 백업(Backblaze)은 안전합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '암호화를 사용하면 안전합니다. Backblaze는 저장 시 AES-256을 사용합니다. 데이터는 비공개입니다(Backblaze는 읽을 수 없습니다).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RAID 6 재구성에는 얼마나 걸립니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '8TB의 경우 약 24시간입니다. 재구성 중 두 번째 드라이브가 장애를 일으키면 데이터가 손실됩니다. 드물지만 가능하므로 적극적으로 모니터링하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Synology와 TrueNAS를 함께 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '사용할 수 있습니다. Synology는 속도와 편의성을 위해, TrueNAS는 컴플라이언스와 감사를 위해 사용하십시오. 그러나 둘 다 필요한 경우가 아니라면 과도합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'NAS에 10Gbps 네트워크가 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '필요하지 않습니다. 기가비트(1Gbps)는 모델 전송에 충분합니다(70B 35GB 모델 전송에 1시간). 10Gbps는 사용자 20명 이상의 팀을 위한 것입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'NAS란 무엇이며 로컬 LLM에 왜 필요합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'NAS(네트워크 결합 스토리지)는 모델 라이브러리를 체계적으로 구성하고, 백업하며, 여러 머신에서 접근할 수 있게 해 줍니다. 여러 모델과 사용자를 관리하는 프로덕션 로컬 LLM 팀에 필수적입니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NAS(네트워크 결합 스토리지)는 모델 라이브러리를 체계적으로 구성하고, 백업하며, 여러 머신에서 접근할 수 있게 해 줍니다. 여러 모델과 사용자를 관리하는 프로덕션 로컬 LLM 팀에 필수적입니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'RAID 6이란 무엇이며 왜 NAS에 권장됩니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'RAID 6은 드라이브 2개가 동시에 장애가 발생해도 데이터가 손실되지 않는 이중화를 제공합니다. 드라이브 장애로부터 보호하기 위해 프로덕션 시스템에 필수적입니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAID 6은 드라이브 2개가 동시에 장애가 발생해도 데이터가 손실되지 않는 이중화를 제공합니다. 드라이브 장애로부터 보호하기 위해 프로덕션 시스템에 필수적입니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '로컬 LLM에 최적의 NAS는 Synology, QNAP, TrueNAS 중 어느 것입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Synology DS420+는 예산이 제한된 팀에 최적입니다(드라이브 포함 총 $1,000). 성능이 필요한 경우 QNAP TS-464C2U를 선택하십시오. 고급 ZFS 기능과 오픈소스 배포에는 TrueNAS SCALE이 적합합니다.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Synology DS420+는 예산이 제한된 팀에 최적입니다(드라이브 포함 총 $1,000). 성능이 필요한 경우 QNAP TS-464C2U를 선택하십시오. 고급 ZFS 기능과 오픈소스 배포에는 TrueNAS SCALE이 적합합니다.',
+            },
+          },
         ]
       },
       toc: [
@@ -1337,6 +1694,9 @@ schema: {
             { q: 'RAID 6 재구성에는 얼마나 걸립니까?', a: '8TB의 경우 약 24시간입니다. 재구성 중 두 번째 드라이브가 장애를 일으키면 데이터가 손실됩니다. 드물지만 가능하므로 적극적으로 모니터링하십시오.' },
             { q: 'Synology와 TrueNAS를 함께 사용할 수 있습니까?', a: '사용할 수 있습니다. Synology는 속도와 편의성을 위해, TrueNAS는 컴플라이언스와 감사를 위해 사용하십시오. 그러나 둘 다 필요한 경우가 아니라면 과도합니다.' },
             { q: 'NAS에 10Gbps 네트워크가 필요합니까?', a: '필요하지 않습니다. 기가비트(1Gbps)는 모델 전송에 충분합니다(70B 35GB 모델 전송에 1시간). 10Gbps는 사용자 20명 이상의 팀을 위한 것입니다.' },
+            { q: 'NAS란 무엇이며 로컬 LLM에 왜 필요합니까?', a: 'NAS(네트워크 결합 스토리지)는 모델 라이브러리를 체계적으로 구성하고, 백업하며, 여러 머신에서 접근할 수 있게 해 줍니다. 여러 모델과 사용자를 관리하는 프로덕션 로컬 LLM 팀에 필수적입니다.' },
+            { q: 'RAID 6이란 무엇이며 왜 NAS에 권장됩니까?', a: 'RAID 6은 드라이브 2개가 동시에 장애가 발생해도 데이터가 손실되지 않는 이중화를 제공합니다. 드라이브 장애로부터 보호하기 위해 프로덕션 시스템에 필수적입니다.' },
+            { q: '로컬 LLM에 최적의 NAS는 Synology, QNAP, TrueNAS 중 어느 것입니까?', a: 'Synology DS420+는 예산이 제한된 팀에 최적입니다(드라이브 포함 총 $1,000). 성능이 필요한 경우 QNAP TS-464C2U를 선택하십시오. 고급 ZFS 기능과 오픈소스 배포에는 TrueNAS SCALE이 적합합니다.' },
           ],
         },
         'relatedReading': {

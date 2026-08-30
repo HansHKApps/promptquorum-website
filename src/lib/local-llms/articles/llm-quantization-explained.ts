@@ -3665,82 +3665,26 @@ schema: {
           id: 'faq',
           title: 'Questions fréquemment posées sur la quantification LLM',
           faqs: [
-            {
-              q: 'Qu\'est-ce que Q4_K_XL et cela vaut-il le coup face à Q4_K_M ?',
-              a: 'Q4_K_XL n\'est pas un format standard de llama.cpp mais une variante GGUF Dynamic d\'Unsloth. Elle conserve la base 4 bits de Q4_K_M mais stocke les couches les plus sensibles avec plus de précision, si bien que taille et qualité se situent entre Q4_K_M et Q5_K_M. L\'intérêt est surtout réel quand Q5_K_M dépasse de peu votre VRAM : si Q5_K_M tient, prenez Q5_K_M, car c\'est un format standard mieux pris en charge.',
-            },
-            {
-              q: 'Q5_K_M ou Q5_K_XL : quelle différence ?',
-              a: 'Le même principe qu\'en Q4 et Q8 : Q5_K_M est le K-quant standard de llama.cpp, Q5_K_XL la variante Dynamic d\'Unsloth, avec des couches sensibles en meilleure résolution et un fichier un peu plus gros. Comme Q5_K_M reste déjà sous 1% de perte de qualité, le gain pratique est faible. Vérifiez la taille réelle du fichier dans votre outil avant d\'opter pour la variante XL.',
-            },
-            {
-              q: 'FP8 ou Q8_0 : que choisir ?',
-              a: 'Pour l\'exécution locale via llama.cpp, Ollama ou LM Studio, le format pertinent est Q8_0. FP8 est un type de données qui compte surtout pour l\'inférence serveur sur matériel NVIDIA récent et n\'est pas une option de téléchargement courante dans l\'écosystème GGUF. Q8_0 reste déjà sous 0,5% de perte face à FP16 : le vrai choix se joue donc entre Q8_0 et les K-quants plus petits.',
-            },
-            {
-              q: 'Q4_0 et Q4_1 sont-ils encore pertinents ?',
-              a: 'Non : ce sont des formats anciens, sans les améliorations des K-quants. Q4_0 quantifie tous les poids uniformément sur 4 bits ; Q4_1 ajoute un décalage mais est tout aussi dépassé. Q4_K_M atteint une qualité nettement meilleure pour une empreinte mémoire quasi identique. Si vous voyez les deux dans un dépôt, prenez Q4_K_M — Q4_0 et Q4_1 ne se rencontrent plus que sur d\'anciens dépôts de modèles.',
-            },
-            {
-              q: 'Ollama utilise-t-il automatiquement la meilleure quantification ?',
-              a: 'Oui -- lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut. Pour tirer une quantification spécifique, ajoutez le tag : `ollama pull llama3.1:8b-instruct-q5_K_M`. Les tags de quantification disponibles pour chaque modèle sont listés sur la page du modèle sur ollama.com/library.',
-            },
-            {
-              q: 'Puis-je quantifier un modèle moi-même au lieu de télécharger une version pré-quantifiée ?',
-              a: 'Oui -- llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF à n\'importe quel niveau de quantification pris en charge. Le processus prend 5-30 minutes selon la taille du modèle. La plupart des utilisateurs devraient télécharger les fichiers GGUF pré-quantifiés de Hugging Face plutôt que de quantifier eux-mêmes, car les résultats sont équivalents.',
-            },
-            {
-              q: 'La quantification affecte-t-elle la fenêtre de contexte du modèle ?',
-              a: 'Non -- la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte. Un modèle Llama 3.1 8B prend en charge 128K tokens, qu\'il soit quantifié en Q4_K_M ou exécuté en FP16. Cependant, traiter des contextes plus longs nécessite plus de RAM indépendamment de la quantification.',
-            },
-            {
-              q: 'Quelle est la différence entre la quantification GGUF et GPTQ ?',
-              a: 'GGUF (format llama.cpp) et GPTQ sont deux approches différentes. GGUF utilise K-Quants et s\'exécute sur CPU et GPU. GPTQ est uniquement GPU et nécessite PyTorch. Pour l\'inférence locale avec Ollama, LM Studio ou Jan AI, GGUF est le format correct. GPTQ est utilisé avec des frameworks d\'inférence GPU comme AutoGPTQ et vLLM.',
-            },
-            {
-              q: 'Y a-t-il une différence de qualité entre les modèles Q4_K_M de différents fournisseurs sur Hugging Face ?',
-              a: 'L\'algorithme de quantification est standardisé dans llama.cpp, donc les quantifications Q4_K_M du même modèle de base devraient être pratiquement identiques indépendamment du créateur du fichier GGUF. Cependant, certains fournisseurs appliquent des ajustements supplémentaires (quantification imatrix) qui améliorent la qualité.',
-            },
-            {
-              q: 'Qu\'est-ce que la quantification imatrix ?',
-              a: 'La quantification imatrix (matrice d\'importance) utilise les données d\'étalonnage pour assigner différents niveaux de précision aux poids selon leur importance pour la sortie du modèle. Les poids qui affectent le plus les prédictions sont quantifiés avec plus de bits ; les poids moins importants utilisent moins de bits. Résultat : meilleure qualité au même nombre de bits par rapport à la quantification uniforme.',
-            },
-            {
-              q: 'Quelle est la différence entre Q4_K_M et Q4_K_S ?',
-              a: 'Les deux sont une quantification 4 bits, mais K_M (Medium) et K_S (Small) diffèrent dans l\'allocation de mémoire par bloc de quantification. Q4_K_M utilise plus de métadonnées pour une meilleure reconstruction de qualité. Q4_K_S est plus agressif -- économise 300-400 MB comparé à K_M mais avec perte de qualité 3-5%.',
-            },
-            {
-              q: 'Quelle est la différence entre Q8_0 et Q8_K_XL ?',
-              a: 'Q8_0 est la quantification 8 bits standard de llama.cpp -- chaque poids en 8 bits, environ 7.7 GB pour un modèle 7B, moins de 0.5% de perte de qualité par rapport à FP16. Q8_K_XL n\'est pas un type natif de llama.cpp ; c\'est une variante GGUF "Dynamic" d\'Unsloth qui conserve une base 8 bits mais upcaste les couches les plus sensibles (embeddings, attention, sortie) en 16 bits, rapprochant la qualité du FP16 complet pour une taille de fichier légèrement supérieure. Q8_0 étant déjà pratiquement sans perte pour la plupart des utilisateurs, Q8_K_XL n\'aide que si vous avez besoin de la dernière fraction de pourcent de précision et disposez de VRAM en réserve. Les tailles de fichier varient selon le modèle -- vérifiez la taille dans LM Studio ou sur Hugging Face avant le téléchargement.',
-            },
-            {
-              q: 'Puis-je basculer entre les niveaux de quantification sans retélécharger le modèle ?',
-              a: 'Non -- basculer entre les niveaux de quantification nécessite de télécharger un fichier GGUF différent ou de re-quantifier le modèle de base vous-même. Une fois qu\'un modèle est quantifié en Q4_K_M, vous ne pouvez pas le reconvertir en Q5_K_M sans le modèle FP16 original.',
-            },
-            {
-              q: 'Comment la quantification affecte-t-elle la vitesse d\'inférence ?',
-              a: 'La quantification augmente généralement la vitesse d\'inférence de 10-40% car charger et traiter les poids 4 bits est plus rapide que les flottants 16 bits. Un modèle 7B Q4_K_M s\'exécute à ~8-12 tok/s sur une CPU grand public ; le même modèle en FP16 s\'exécute à ~1-2 tok/s.',
-            },
-            {
-              q: 'Quel niveau de quantification Ollama utilise-t-il par défaut ?',
-              a: 'Ollama utilise par défaut Q4_K_M pour tous les modèles de sa bibliothèque. Lorsque vous exécutez `ollama pull llama3.1:8b`, vous téléchargez la variante Q4_K_M. Ce défaut équilibre bien la qualité et les exigences de RAM pour la plupart des utilisateurs. Pour tirer une quantification différente, ajoutez le tag : `ollama pull llama3.1:8b:q5_k_m` ou `ollama pull llama3.1:8b:q8_0`.',
-            },
-            {
-              q: 'Puis-je exécuter Llama 3.3 70B sur une seule RTX 4090 ?',
-              a: 'Oui, avec l\'offloading. Llama 3.3 70B Q4_K_M nécessite ~40 GB -- plus que les 24 GB VRAM de la RTX 4090. Avec l\'offloading CPU : ~24 GB en VRAM, ~16 GB en RAM système. La vitesse est de 5-10 tokens/sec contre 40-50 tokens/sec en charge GPU totale. Pour de meilleures performances : 2× RTX 4090 avec layer splitting (~100 tokens/sec) ou Mac Studio avec M5 Ultra, qui héberge le modèle nativement en mémoire unifiée (aucune mesure indépendante en tokens/sec n\'est encore disponible -- la puce arrive le 22 septembre 2026).',
-            },
-            {
-              q: 'Quelle est la différence entre quantification et offloading ?',
-              a: 'La quantification réduit la précision numérique des poids du modèle (FP16 → 4 bits), réduisant les besoins en mémoire de 50-75%. L\'offloading déplace des parties d\'un modèle vers la RAM système ou le CPU quand il ne tient pas en VRAM. La quantification réduit la taille totale ; l\'offloading permet d\'exécuter des modèles plus grands que le VRAM avec une perte de vitesse.',
-            },
-            {
-              q: 'Le Mac Studio M5 Ultra nécessite-t-il une quantification pour les modèles 70B ?',
-              a: 'Non -- Mac Studio avec M5 Ultra, doté d\'au moins 96 GB de mémoire unifiée (jusqu\'à 512 GB), exécute Llama 3.3 70B en FP16 (140 GB) ou Q4_K_M nativement. Pas d\'offloading requis. Q4_K_M reste recommandé car la bande passante mémoire demeure le facteur limitant ; aucune mesure indépendante en tokens/sec n\'est encore disponible pour cette nouvelle puce.',
-            },
-            {
-              q: 'Quelle combinaison de techniques est la meilleure pour mon matériel ?',
-              a: 'Pour 8 GB VRAM (RTX 4060 Ti) : Q4_K_M pour les modèles jusqu\'à 7B. Pour 24 GB VRAM (RTX 4090) : Q4_K_M nativement pour 7-13B ; pour 70B avec offloading et 64 GB RAM. Pour 2× 24 GB VRAM : layer splitting pour 70B en Q5_K_M avec ~100 tokens/sec. Pour Apple Silicon : utilisez la mémoire unifiée directement -- Q4_K_M pour l\'optimisation de la vitesse.',
-            },
+            { q: 'Qu\'est-ce que Q4_K_XL et cela vaut-il le coup face à Q4_K_M ?', a: 'Q4_K_XL n\'est pas un format standard de llama.cpp mais une variante GGUF Dynamic d\'Unsloth. Elle conserve la base 4 bits de Q4_K_M mais stocke les couches les plus sensibles avec plus de précision, si bien que taille et qualité se situent entre Q4_K_M et Q5_K_M. L\'intérêt est surtout réel quand Q5_K_M dépasse de peu votre VRAM : si Q5_K_M tient, prenez Q5_K_M, car c\'est un format standard mieux pris en charge.' },
+            { q: 'Q5_K_M ou Q5_K_XL : quelle différence ?', a: 'Le même principe qu\'en Q4 et Q8 : Q5_K_M est le K-quant standard de llama.cpp, Q5_K_XL la variante Dynamic d\'Unsloth, avec des couches sensibles en meilleure résolution et un fichier un peu plus gros. Comme Q5_K_M reste déjà sous 1% de perte de qualité, le gain pratique est faible. Vérifiez la taille réelle du fichier dans votre outil avant d\'opter pour la variante XL.' },
+            { q: 'FP8 ou Q8_0 : que choisir ?', a: 'Pour l\'exécution locale via llama.cpp, Ollama ou LM Studio, le format pertinent est Q8_0. FP8 est un type de données qui compte surtout pour l\'inférence serveur sur matériel NVIDIA récent et n\'est pas une option de téléchargement courante dans l\'écosystème GGUF. Q8_0 reste déjà sous 0,5% de perte face à FP16 : le vrai choix se joue donc entre Q8_0 et les K-quants plus petits.' },
+            { q: 'Q4_0 et Q4_1 sont-ils encore pertinents ?', a: 'Non : ce sont des formats anciens, sans les améliorations des K-quants. Q4_0 quantifie tous les poids uniformément sur 4 bits ; Q4_1 ajoute un décalage mais est tout aussi dépassé. Q4_K_M atteint une qualité nettement meilleure pour une empreinte mémoire quasi identique. Si vous voyez les deux dans un dépôt, prenez Q4_K_M — Q4_0 et Q4_1 ne se rencontrent plus que sur d\'anciens dépôts de modèles.' },
+            { q: 'Ollama utilise-t-il automatiquement la meilleure quantification ?', a: 'Oui -- lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut. Pour tirer une quantification spécifique, ajoutez le tag : `ollama pull llama3.1:8b-instruct-q5_K_M`. Les tags de quantification disponibles pour chaque modèle sont listés sur la page du modèle sur ollama.com/library.' },
+            { q: 'Puis-je quantifier un modèle moi-même au lieu de télécharger une version pré-quantifiée ?', a: 'Oui -- llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF à n\'importe quel niveau de quantification pris en charge. Le processus prend 5-30 minutes selon la taille du modèle. La plupart des utilisateurs devraient télécharger les fichiers GGUF pré-quantifiés de Hugging Face plutôt que de quantifier eux-mêmes, car les résultats sont équivalents.' },
+            { q: 'La quantification affecte-t-elle la fenêtre de contexte du modèle ?', a: 'Non -- la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte. Un modèle Llama 3.1 8B prend en charge 128K tokens, qu\'il soit quantifié en Q4_K_M ou exécuté en FP16. Cependant, traiter des contextes plus longs nécessite plus de RAM indépendamment de la quantification.' },
+            { q: 'Quelle est la différence entre la quantification GGUF et GPTQ ?', a: 'GGUF (format llama.cpp) et GPTQ sont deux approches différentes. GGUF utilise K-Quants et s\'exécute sur CPU et GPU. GPTQ est uniquement GPU et nécessite PyTorch. Pour l\'inférence locale avec Ollama, LM Studio ou Jan AI, GGUF est le format correct. GPTQ est utilisé avec des frameworks d\'inférence GPU comme AutoGPTQ et vLLM.' },
+            { q: 'Y a-t-il une différence de qualité entre les modèles Q4_K_M de différents fournisseurs sur Hugging Face ?', a: 'L\'algorithme de quantification est standardisé dans llama.cpp, donc les quantifications Q4_K_M du même modèle de base devraient être pratiquement identiques indépendamment du créateur du fichier GGUF. Cependant, certains fournisseurs appliquent des ajustements supplémentaires (quantification imatrix) qui améliorent la qualité.' },
+            { q: 'Qu\'est-ce que la quantification imatrix ?', a: 'La quantification imatrix (matrice d\'importance) utilise les données d\'étalonnage pour assigner différents niveaux de précision aux poids selon leur importance pour la sortie du modèle. Les poids qui affectent le plus les prédictions sont quantifiés avec plus de bits ; les poids moins importants utilisent moins de bits. Résultat : meilleure qualité au même nombre de bits par rapport à la quantification uniforme.' },
+            { q: 'Quelle est la différence entre Q4_K_M et Q4_K_S ?', a: 'Les deux sont une quantification 4 bits, mais K_M (Medium) et K_S (Small) diffèrent dans l\'allocation de mémoire par bloc de quantification. Q4_K_M utilise plus de métadonnées pour une meilleure reconstruction de qualité. Q4_K_S est plus agressif -- économise 300-400 MB comparé à K_M mais avec perte de qualité 3-5%.' },
+            { q: 'Quelle est la différence entre Q8_0 et Q8_K_XL ?', a: 'Q8_0 est la quantification 8 bits standard de llama.cpp -- chaque poids en 8 bits, environ 7.7 GB pour un modèle 7B, moins de 0.5% de perte de qualité par rapport à FP16. Q8_K_XL n\'est pas un type natif de llama.cpp ; c\'est une variante GGUF "Dynamic" d\'Unsloth qui conserve une base 8 bits mais upcaste les couches les plus sensibles (embeddings, attention, sortie) en 16 bits, rapprochant la qualité du FP16 complet pour une taille de fichier légèrement supérieure. Q8_0 étant déjà pratiquement sans perte pour la plupart des utilisateurs, Q8_K_XL n\'aide que si vous avez besoin de la dernière fraction de pourcent de précision et disposez de VRAM en réserve. Les tailles de fichier varient selon le modèle -- vérifiez la taille dans LM Studio ou sur Hugging Face avant le téléchargement.' },
+            { q: 'Puis-je basculer entre les niveaux de quantification sans retélécharger le modèle ?', a: 'Non -- basculer entre les niveaux de quantification nécessite de télécharger un fichier GGUF différent ou de re-quantifier le modèle de base vous-même. Une fois qu\'un modèle est quantifié en Q4_K_M, vous ne pouvez pas le reconvertir en Q5_K_M sans le modèle FP16 original.' },
+            { q: 'Comment la quantification affecte-t-elle la vitesse d\'inférence ?', a: 'La quantification augmente généralement la vitesse d\'inférence de 10-40% car charger et traiter les poids 4 bits est plus rapide que les flottants 16 bits. Un modèle 7B Q4_K_M s\'exécute à ~8-12 tok/s sur une CPU grand public ; le même modèle en FP16 s\'exécute à ~1-2 tok/s.' },
+            { q: 'Quel niveau de quantification Ollama utilise-t-il par défaut ?', a: 'Ollama utilise par défaut Q4_K_M pour tous les modèles de sa bibliothèque. Lorsque vous exécutez `ollama pull llama3.1:8b`, vous téléchargez la variante Q4_K_M. Ce défaut équilibre bien la qualité et les exigences de RAM pour la plupart des utilisateurs. Pour tirer une quantification différente, ajoutez le tag : `ollama pull llama3.1:8b:q5_k_m` ou `ollama pull llama3.1:8b:q8_0`.' },
+            { q: 'Puis-je exécuter Llama 3.3 70B sur une seule RTX 4090 ?', a: 'Oui, avec l\'offloading. Llama 3.3 70B Q4_K_M nécessite ~40 GB -- plus que les 24 GB VRAM de la RTX 4090. Avec l\'offloading CPU : ~24 GB en VRAM, ~16 GB en RAM système. La vitesse est de 5-10 tokens/sec contre 40-50 tokens/sec en charge GPU totale. Pour de meilleures performances : 2× RTX 4090 avec layer splitting (~100 tokens/sec) ou Mac Studio avec M5 Ultra, qui héberge le modèle nativement en mémoire unifiée (aucune mesure indépendante en tokens/sec n\'est encore disponible -- la puce arrive le 22 septembre 2026).' },
+            { q: 'Quelle est la différence entre quantification et offloading ?', a: 'La quantification réduit la précision numérique des poids du modèle (FP16 → 4 bits), réduisant les besoins en mémoire de 50-75%. L\'offloading déplace des parties d\'un modèle vers la RAM système ou le CPU quand il ne tient pas en VRAM. La quantification réduit la taille totale ; l\'offloading permet d\'exécuter des modèles plus grands que le VRAM avec une perte de vitesse.' },
+            { q: 'Le Mac Studio M5 Ultra nécessite-t-il une quantification pour les modèles 70B ?', a: 'Non -- Mac Studio avec M5 Ultra, doté d\'au moins 96 GB de mémoire unifiée (jusqu\'à 512 GB), exécute Llama 3.3 70B en FP16 (140 GB) ou Q4_K_M nativement. Pas d\'offloading requis. Q4_K_M reste recommandé car la bande passante mémoire demeure le facteur limitant ; aucune mesure indépendante en tokens/sec n\'est encore disponible pour cette nouvelle puce.' },
+            { q: 'Quelle combinaison de techniques est la meilleure pour mon matériel ?', a: 'Pour 8 GB VRAM (RTX 4060 Ti) : Q4_K_M pour les modèles jusqu\'à 7B. Pour 24 GB VRAM (RTX 4090) : Q4_K_M nativement pour 7-13B ; pour 70B avec offloading et 64 GB RAM. Pour 2× 24 GB VRAM : layer splitting pour 70B en Q5_K_M avec ~100 tokens/sec. Pour Apple Silicon : utilisez la mémoire unifiée directement -- Q4_K_M pour l\'optimisation de la vitesse.' },
+            { q: 'Puis-je quantifier un modèle moi-même ?', a: 'Oui -- llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF.' },
           ],
         },
         sources: {
@@ -3847,97 +3791,162 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Qu\'est-ce que Q4_K_XL et cela vaut-il le coup face à Q4_K_M ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL n\'est pas un format standard de llama.cpp mais une variante GGUF Dynamic d\'Unsloth. Elle conserve la base 4 bits de Q4_K_M mais stocke les couches les plus sensibles avec plus de précision, si bien que taille et qualité se situent entre Q4_K_M et Q5_K_M. L\'intérêt est surtout réel quand Q5_K_M dépasse de peu votre VRAM : si Q5_K_M tient, prenez Q5_K_M, car c\'est un format standard mieux pris en charge.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_XL n\'est pas un format standard de llama.cpp mais une variante GGUF Dynamic d\'Unsloth. Elle conserve la base 4 bits de Q4_K_M mais stocke les couches les plus sensibles avec plus de précision, si bien que taille et qualité se situent entre Q4_K_M et Q5_K_M. L\'intérêt est surtout réel quand Q5_K_M dépasse de peu votre VRAM : si Q5_K_M tient, prenez Q5_K_M, car c\'est un format standard mieux pris en charge.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q5_K_M ou Q5_K_XL : quelle différence ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Le même principe qu\'en Q4 et Q8 : Q5_K_M est le K-quant standard de llama.cpp, Q5_K_XL la variante Dynamic d\'Unsloth, avec des couches sensibles en meilleure résolution et un fichier un peu plus gros. Comme Q5_K_M reste déjà sous 1% de perte de qualité, le gain pratique est faible. Vérifiez la taille réelle du fichier dans votre outil avant d\'opter pour la variante XL.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le même principe qu\'en Q4 et Q8 : Q5_K_M est le K-quant standard de llama.cpp, Q5_K_XL la variante Dynamic d\'Unsloth, avec des couches sensibles en meilleure résolution et un fichier un peu plus gros. Comme Q5_K_M reste déjà sous 1% de perte de qualité, le gain pratique est faible. Vérifiez la taille réelle du fichier dans votre outil avant d\'opter pour la variante XL.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'FP8 ou Q8_0 : que choisir ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour l\'exécution locale via llama.cpp, Ollama ou LM Studio, le format pertinent est Q8_0. FP8 est un type de données qui compte surtout pour l\'inférence serveur sur matériel NVIDIA récent et n\'est pas une option de téléchargement courante dans l\'écosystème GGUF. Q8_0 reste déjà sous 0,5% de perte face à FP16 : le vrai choix se joue donc entre Q8_0 et les K-quants plus petits.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour l\'exécution locale via llama.cpp, Ollama ou LM Studio, le format pertinent est Q8_0. FP8 est un type de données qui compte surtout pour l\'inférence serveur sur matériel NVIDIA récent et n\'est pas une option de téléchargement courante dans l\'écosystème GGUF. Q8_0 reste déjà sous 0,5% de perte face à FP16 : le vrai choix se joue donc entre Q8_0 et les K-quants plus petits.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_0 et Q4_1 sont-ils encore pertinents ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non : ce sont des formats anciens, sans les améliorations des K-quants. Q4_0 quantifie tous les poids uniformément sur 4 bits ; Q4_1 ajoute un décalage mais est tout aussi dépassé. Q4_K_M atteint une qualité nettement meilleure pour une empreinte mémoire quasi identique. Si vous voyez les deux dans un dépôt, prenez Q4_K_M — Q4_0 et Q4_1 ne se rencontrent plus que sur d\'anciens dépôts de modèles.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non : ce sont des formats anciens, sans les améliorations des K-quants. Q4_0 quantifie tous les poids uniformément sur 4 bits ; Q4_1 ajoute un décalage mais est tout aussi dépassé. Q4_K_M atteint une qualité nettement meilleure pour une empreinte mémoire quasi identique. Si vous voyez les deux dans un dépôt, prenez Q4_K_M — Q4_0 et Q4_1 ne se rencontrent plus que sur d\'anciens dépôts de modèles.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ollama utilise-t-il automatiquement la meilleure quantification ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui -- lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui -- lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut. Pour tirer une quantification spécifique, ajoutez le tag : `ollama pull llama3.1:8b-instruct-q5_K_M`. Les tags de quantification disponibles pour chaque modèle sont listés sur la page du modèle sur ollama.com/library.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Puis-je quantifier un modèle moi-même ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui -- llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF.' },
+            'name': 'Puis-je quantifier un modèle moi-même au lieu de télécharger une version pré-quantifiée ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui -- llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF à n\'importe quel niveau de quantification pris en charge. Le processus prend 5-30 minutes selon la taille du modèle. La plupart des utilisateurs devraient télécharger les fichiers GGUF pré-quantifiés de Hugging Face plutôt que de quantifier eux-mêmes, car les résultats sont équivalents.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'La quantification affecte-t-elle la fenêtre de contexte du modèle ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non -- la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non -- la quantification n\'affecte que la précision des poids du modèle, pas la longueur du contexte. Un modèle Llama 3.1 8B prend en charge 128K tokens, qu\'il soit quantifié en Q4_K_M ou exécuté en FP16. Cependant, traiter des contextes plus longs nécessite plus de RAM indépendamment de la quantification.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Quelle est la différence entre GGUF et GPTQ ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF et GPTQ sont deux approches différentes. GGUF utilise K-Quants et s\'exécute sur CPU et GPU.' },
+            'name': 'Quelle est la différence entre la quantification GGUF et GPTQ ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF (format llama.cpp) et GPTQ sont deux approches différentes. GGUF utilise K-Quants et s\'exécute sur CPU et GPU. GPTQ est uniquement GPU et nécessite PyTorch. Pour l\'inférence locale avec Ollama, LM Studio ou Jan AI, GGUF est le format correct. GPTQ est utilisé avec des frameworks d\'inférence GPU comme AutoGPTQ et vLLM.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Y a-t-il une différence de qualité entre les modèles Q4_K_M ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'algorithme de quantification est standardisé, donc les quantifications Q4_K_M devraient être pratiquement identiques.' },
+            'name': 'Y a-t-il une différence de qualité entre les modèles Q4_K_M de différents fournisseurs sur Hugging Face ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'algorithme de quantification est standardisé dans llama.cpp, donc les quantifications Q4_K_M du même modèle de base devraient être pratiquement identiques indépendamment du créateur du fichier GGUF. Cependant, certains fournisseurs appliquent des ajustements supplémentaires (quantification imatrix) qui améliorent la qualité.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Qu\'est-ce que la quantification imatrix ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'La quantification imatrix utilise les données d\'étalonnage pour assigner différents niveaux de précision aux poids.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La quantification imatrix (matrice d\'importance) utilise les données d\'étalonnage pour assigner différents niveaux de précision aux poids selon leur importance pour la sortie du modèle. Les poids qui affectent le plus les prédictions sont quantifiés avec plus de bits ; les poids moins importants utilisent moins de bits. Résultat : meilleure qualité au même nombre de bits par rapport à la quantification uniforme.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Quelle est la différence entre Q4_K_M et Q4_K_S ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Tous deux sont une quantification 4 bits mais Q4_K_M utilise plus de métadonnées pour une meilleure qualité.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les deux sont une quantification 4 bits, mais K_M (Medium) et K_S (Small) diffèrent dans l\'allocation de mémoire par bloc de quantification. Q4_K_M utilise plus de métadonnées pour une meilleure reconstruction de qualité. Q4_K_S est plus agressif -- économise 300-400 MB comparé à K_M mais avec perte de qualité 3-5%.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Quelle est la différence entre Q8_0 et Q8_K_XL ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0 est la quantification 8 bits standard de llama.cpp (~7.7 GB pour un 7B, moins de 0.5% de perte vs FP16). Q8_K_XL est une variante GGUF "Dynamic" d\'Unsloth qui upcaste les couches les plus sensibles en 16 bits, rapprochant la qualité du FP16 pour une taille légèrement supérieure. Q8_K_XL n\'aide que si vous visez la dernière fraction de pourcent de précision et disposez de VRAM en réserve.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8_0 est la quantification 8 bits standard de llama.cpp -- chaque poids en 8 bits, environ 7.7 GB pour un modèle 7B, moins de 0.5% de perte de qualité par rapport à FP16. Q8_K_XL n\'est pas un type natif de llama.cpp ; c\'est une variante GGUF "Dynamic" d\'Unsloth qui conserve une base 8 bits mais upcaste les couches les plus sensibles (embeddings, attention, sortie) en 16 bits, rapprochant la qualité du FP16 complet pour une taille de fichier légèrement supérieure. Q8_0 étant déjà pratiquement sans perte pour la plupart des utilisateurs, Q8_K_XL n\'aide que si vous avez besoin de la dernière fraction de pourcent de précision et disposez de VRAM en réserve. Les tailles de fichier varient selon le modèle -- vérifiez la taille dans LM Studio ou sur Hugging Face avant le téléchargement.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Puis-je basculer entre les niveaux de quantification ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non -- basculer entre les niveaux nécessite de télécharger un fichier GGUF différent ou de re-quantifier.' },
+            'name': 'Puis-je basculer entre les niveaux de quantification sans retélécharger le modèle ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non -- basculer entre les niveaux de quantification nécessite de télécharger un fichier GGUF différent ou de re-quantifier le modèle de base vous-même. Une fois qu\'un modèle est quantifié en Q4_K_M, vous ne pouvez pas le reconvertir en Q5_K_M sans le modèle FP16 original.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Comment la quantification affecte-t-elle la vitesse d\'inférence ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'La quantification augmente généralement la vitesse d\'inférence de 10-40% car charger les poids 4 bits est plus rapide.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La quantification augmente généralement la vitesse d\'inférence de 10-40% car charger et traiter les poids 4 bits est plus rapide que les flottants 16 bits. Un modèle 7B Q4_K_M s\'exécute à ~8-12 tok/s sur une CPU grand public ; le même modèle en FP16 s\'exécute à ~1-2 tok/s.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Quel niveau Ollama utilise-t-il par défaut ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama utilise par défaut Q4_K_M pour tous les modèles. Quand vous exécutez `ollama pull llama3.1:8b`, vous téléchargez Q4_K_M.' },
+            'name': 'Quel niveau de quantification Ollama utilise-t-il par défaut ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama utilise par défaut Q4_K_M pour tous les modèles de sa bibliothèque. Lorsque vous exécutez `ollama pull llama3.1:8b`, vous téléchargez la variante Q4_K_M. Ce défaut équilibre bien la qualité et les exigences de RAM pour la plupart des utilisateurs. Pour tirer une quantification différente, ajoutez le tag : `ollama pull llama3.1:8b:q5_k_m` ou `ollama pull llama3.1:8b:q8_0`.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Puis-je exécuter Llama 3.3 70B sur une seule RTX 4090 ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, avec l\'offloading. Llama 3.3 70B Q4_K_M nécessite ~40 GB. Avec l\'offloading CPU : 5-10 tokens/sec.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, avec l\'offloading. Llama 3.3 70B Q4_K_M nécessite ~40 GB -- plus que les 24 GB VRAM de la RTX 4090. Avec l\'offloading CPU : ~24 GB en VRAM, ~16 GB en RAM système. La vitesse est de 5-10 tokens/sec contre 40-50 tokens/sec en charge GPU totale. Pour de meilleures performances : 2× RTX 4090 avec layer splitting (~100 tokens/sec) ou Mac Studio avec M5 Ultra, qui héberge le modèle nativement en mémoire unifiée (aucune mesure indépendante en tokens/sec n\'est encore disponible -- la puce arrive le 22 septembre 2026).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Quelle est la différence entre quantification et offloading ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'La quantification réduit la précision des poids. L\'offloading déplace des parties du modèle vers la RAM système quand le VRAM est insuffisant.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La quantification réduit la précision numérique des poids du modèle (FP16 → 4 bits), réduisant les besoins en mémoire de 50-75%. L\'offloading déplace des parties d\'un modèle vers la RAM système ou le CPU quand il ne tient pas en VRAM. La quantification réduit la taille totale ; l\'offloading permet d\'exécuter des modèles plus grands que le VRAM avec une perte de vitesse.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Le Mac Studio M5 Ultra nécessite-t-il une quantification pour les modèles 70B ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non -- avec au moins 96 GB de mémoire unifiée, il exécute Llama 3.3 70B nativement. Q4_K_M reste recommandé ; aucune mesure indépendante en tokens/sec n\'est encore disponible pour cette nouvelle puce.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non -- Mac Studio avec M5 Ultra, doté d\'au moins 96 GB de mémoire unifiée (jusqu\'à 512 GB), exécute Llama 3.3 70B en FP16 (140 GB) ou Q4_K_M nativement. Pas d\'offloading requis. Q4_K_M reste recommandé car la bande passante mémoire demeure le facteur limitant ; aucune mesure indépendante en tokens/sec n\'est encore disponible pour cette nouvelle puce.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Quelle combinaison de techniques est la meilleure pour mon matériel ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour 8 GB VRAM : Q4_K_M pour 7B. Pour 24 GB : Q4_K_M natif pour 7-13B, offloading pour 70B. Pour 2× 24 GB : layer splitting pour 70B.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour 8 GB VRAM (RTX 4060 Ti) : Q4_K_M pour les modèles jusqu\'à 7B. Pour 24 GB VRAM (RTX 4090) : Q4_K_M nativement pour 7-13B ; pour 70B avec offloading et 64 GB RAM. Pour 2× 24 GB VRAM : layer splitting pour 70B en Q5_K_M avec ~100 tokens/sec. Pour Apple Silicon : utilisez la mémoire unifiée directement -- Q4_K_M pour l\'optimisation de la vitesse.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je quantifier un modèle moi-même ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui -- llama.cpp inclut un binaire `quantize` qui convertit les fichiers GGUF.',
+            },
           },
         ],
       },
@@ -4316,82 +4325,28 @@ schema: {
           id: 'faq',
           title: 'LLM量子化についてのよくある質問',
           faqs: [
-            {
-              q: 'Q4_K_XLとは何ですか。Q4_K_Mより優れていますか？',
-              a: 'Q4_K_XLはllama.cppの標準フォーマットではなく、UnslothのDynamic GGUFバリアントです。Q4_K_Mと同じ4ビットを基本としながら、最も影響の大きい層をより高い精度で保存するため、ファイルサイズと品質はQ4_K_MとQ5_K_Mの中間になります。価値があるのは主に、Q5_K_MがVRAMにわずかに収まらない場合です。Q5_K_Mが収まるならQ5_K_Mを選んでください。標準フォーマットでツールの対応が広いためです。',
-            },
-            {
-              q: 'Q5_K_MとQ5_K_XLの違いは何ですか？',
-              a: 'Q4やQ8と同じ仕組みです。Q5_K_Mはllama.cppの標準K-quant、Q5_K_XLはUnslothのDynamicバリアントで、重要な層をより高い解像度で保持する分ファイルがやや大きくなります。Q5_K_Mは既に品質劣化が1%未満のため、実用上の差は小さめです。XLバリアントを選ぶ前に、ツール上で実際のファイルサイズを確認してください。',
-            },
-            {
-              q: 'FP8とQ8_0のどちらを使うべきですか？',
-              a: 'llama.cpp、Ollama、LM Studioでローカル実行する場合に関係するのはQ8_0です。FP8は主に現行のNVIDIAハードウェアでのサーバー推論で意味を持つデータ型で、GGUFの配布形式として一般的な選択肢ではありません。Q8_0はすでにFP16比0.5%未満の劣化に収まっているため、実際の判断はQ8_0とより小さいK-quantのどちらを取るかになります。',
-            },
-            {
-              q: 'Q4_0やQ4_1は今も使う意味がありますか？',
-              a: 'ありません。どちらもK-quantの改良が入る前の古いフォーマットです。Q4_0はすべての重みを一律4ビットで量子化し、Q4_1はオフセットを加えたものですが、いずれも役割を終えています。Q4_K_Mはほぼ同じメモリ使用量で明確に高い品質を得られます。リポジトリで両方を見かけた場合はQ4_K_Mを選んでください。Q4_0とQ4_1は古いモデルのアップロードでのみ見かけます。',
-            },
-            {
-              q: 'Ollamaは自動的に最適な量子化を使用しますか？',
-              a: 'はい -- `ollama pull llama3.1:8b`を実行すると、Ollamaはデフォルトでq4_k_mバリアントをダウンロードします。特定の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b-instruct-q5_K_M`。各モデルの利用可能な量子化タグはollama.com/libraryのモデルページに表示されます。',
-            },
-            {
-              q: '事前量子化バージョンをダウンロードするのではなく、モデルを自分で量子化できますか？',
-              a: 'はい -- llama.cppには、GGUFファイルをサポートされている任意の量子化レベルに変換する`quantize`バイナリが含まれています。プロセスはモデルサイズに応じて5～30分かかります。ほとんどのユーザーはHugging Faceから事前量子化GGUFファイルをダウンロードすべきです。結果は同等だからです。',
-            },
-            {
-              q: '量子化はモデルのコンテキストウィンドウに影響しますか？',
-              a: 'いいえ -- 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。Llama 3.1 8Bモデルは、Q4_K_Mに量子化されてもFP16で実行されても128Kトークンをサポートします。ただし、より長いコンテキストを処理するには、量子化に関わらずより多くのRAMが必要です -- Q4_K_M 7Bモデルで64Kトークンコンテキストを処理すると、10GB以上のRAMが必要になることもあります。',
-            },
-            {
-              q: 'GGUF量子化とGPTQ量子化の違いは何ですか？',
-              a: 'GGUF（llama.cpp形式）とGPTQは2つの異なる量子化アプローチです。GGUFはK-QuantsとCPU/GPUの両方で実行されます。GPTQはGPUのみで、PyTorchが必要です。Ollama、LM Studio、またはJan AIでのローカル推論にはGGUFが正しい形式です。GPTQはAutoGPTQやvLLMなどのGPU指向推論フレームワークで使用されます。',
-            },
-            {
-              q: 'Hugging Faceの異なるプロバイダーからのQ4_K_Mモデルには品質の違いがありますか？',
-              a: '量子化アルゴリズムはllama.cppで標準化されているため、同じベースモデルのQ4_K_M量子化は、GGUFファイルを作成した人に関わらず、ほぼ同一である必要があります。ただし、一部のプロバイダーは追加の調整（imatrix量子化）を適用し、品質を向上させます。「imat」または「importance matrix」として説明されているファイルは、通常、同じビット数でより高い品質を持っています。',
-            },
-            {
-              q: 'imatrix量子化とは何ですか？',
-              a: 'Imatrix（重要度行列）量子化は、キャリブレーションデータを使用して、異なる精度レベルを異なる重みに割り当てます。予測に最も影響する重みはより多くのビットで量子化され、あまり重要でない重みはより少ないビットを使用します。結果：均一量子化と比較して、同じビット数でより良い品質。Qwen3 imatrix量子化は、標準Q4_K_Mより2～4%優れています。',
-            },
-            {
-              q: 'Q4_K_MとQ4_K_Sの違いは何ですか？',
-              a: '両方とも4ビット量子化ですが、K_M（中）とK_S（小）は量子化ブロックごとのメモリ割り当てが異なります。Q4_K_Mはより良い品質再構築のためにより多くのメタデータを使用します -- 通常、7Bモデルで4.5～5GB。Q4_K_Sはより積極的です -- K_Mと比較して300～400MB節約しますが、3～5%の品質低下があります。極度に制限されたハードウェア（<4GB RAM）でない限り、Q4_K_Mを使用してください。',
-            },
-            {
-              q: 'Q8_0とQ8_K_XLの違いは何ですか？',
-              a: 'Q8_0は標準的なllama.cppの8ビット量子化です -- すべての重みを8ビットで保持し、7Bモデルで約7.7GB、FP16比の品質低下は0.5%未満です。Q8_K_XLは標準のllama.cppタイプではなく、Unslothの「Dynamic」GGUFバリアントです。8ビットのベースを保ちつつ最も感度の高いレイヤー（埋め込み、アテンション、出力）を16ビットにアップキャストし、ファイルサイズをやや大きくする代わりに品質をフルFP16に近づけます。Q8_0はすでにほとんどのユーザーにとって実質的にロスレスなので、Q8_K_XLは最後の数分の1パーセントの精度が必要で、VRAMに余裕がある場合にのみ役立ちます。ファイルサイズはモデルによって異なります -- ダウンロード前にLM StudioまたはHugging Faceでサイズを確認してください。',
-            },
-            {
-              q: 'モデルを再ダウンロードせずに量子化レベルを切り替えることはできますか？',
-              a: 'いいえ -- 量子化レベル間の切り替えには、異なるGGUFファイルをダウンロードするか、ベースモデル自体を再量子化する必要があります。モデルがQ4_K_Mに量子化されると、元のFP16モデルなしでQ5_K_Mに変換することはできません。ほとんどのユーザーは、希望する量子化レベルのHugging Faceから事前量子化GGUFファイルをダウンロードします。',
-            },
-            {
-              q: '量子化は推論速度にどのように影響しますか？',
-              a: '量子化は通常、4ビット重みの読み込みと処理が16ビット浮動小数点数より高速であるため、推論速度を10～40%向上させます。Q4_K_M 7Bモデルはコンシューマーの CPU上で約8～12 tok/sで実行されます。同じモデルをFP16で実行すると約1～2 tok/sです。量子化によるGPU性能向上はより小さい（5～15%高速化）です。GPUはすでにフロート演算に最適化されているためです。',
-            },
-            {
-              q: 'Ollamaはデフォルトでどの量子化レベルを使用しますか？',
-              a: 'Ollamaは、ライブラリ内のすべてのモデルでデフォルトでQ4_K_Mを使用します。`ollama pull llama3.1:8b`を実行すると、Q4_K_Mバリアントをダウンロードしています。このデフォルトは、ほとんどのユーザーの品質とRAM要件のバランスをよく取ります。別の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b:q5_k_m`または`ollama pull llama3.1:8b:q8_0`。',
-            },
-            {
-              q: 'シングルRTX 4090でLlama 3.3 70Bを実行できますか？',
-              a: 'はい、オフロードを使用すれば可能です。Llama 3.3 70B Q4_K_Mは~40GBが必要で、RTX 4090の24GB VRAMより大きいです。CPUオフロードで：~24GBがVRAMに、~16GBがシステムRAMに。速度は5-10 tok/sec（フルGPU負荷の40-50 tok/secと比較）。より良いパフォーマンスには：2× RTX 4090でレイヤースプリッティング（~100 tok/sec）またはMac Studio（M5 Ultra搭載、ユニファイドメモリにモデルをネイティブに収容）を推奨。ただし独立したtok/secの測定値はまだなく、発売は2026年9月22日です。',
-            },
-            {
-              q: '量子化とオフロードの違いは何ですか？',
-              a: '量子化はモデル重みの数値精度を削減します（FP16 → 4ビット）。メモリ要件を50-75%削減しますが、モデルアーキテクチャは変更しません。オフロードは、モデルがVRAMに収まらない場合にその一部をシステムRAMまたはCPUに移動します。量子化は総サイズを削減し、オフロードは速度低下を伴いながらVRAMより大きなモデルを実行可能にします。',
-            },
-            {
-              q: 'Mac Studio M5 Ultraは70Bモデルに量子化が必要ですか？',
-              a: 'いいえ -- 最低96GB（最大512GB）のユニファイドメモリを搭載したMac Studio（M5 Ultra搭載）はLlama 3.3 70Bをネイティブに実行できます。オフロード不要。Q4_K_Mは依然として推奨されます。メモリ帯域幅が制限要因であることに変わりはなく、この新チップの独立した速度測定値はまだ存在しません。',
-            },
-            {
-              q: 'どの技術の組み合わせが自分のハードウェアに最適ですか？',
-              a: '8GB VRAM（RTX 4060 Ti）：最大7BモデルにQ4_K_M。24GB VRAM（RTX 4090）：7-13BはQ4_K_Mでネイティブ；70Bは64GBシステムRAMでオフロード。2× 24GB VRAM：70BにQ5_K_Mでレイヤースプリッティング（~100 tok/sec）。Apple Silicon：ユニファイドメモリを直接使用 -- 速度最適化にQ4_K_M。',
-            },
+            { q: 'Q4_K_XLとは何ですか。Q4_K_Mより優れていますか？', a: 'Q4_K_XLはllama.cppの標準フォーマットではなく、UnslothのDynamic GGUFバリアントです。Q4_K_Mと同じ4ビットを基本としながら、最も影響の大きい層をより高い精度で保存するため、ファイルサイズと品質はQ4_K_MとQ5_K_Mの中間になります。価値があるのは主に、Q5_K_MがVRAMにわずかに収まらない場合です。Q5_K_Mが収まるならQ5_K_Mを選んでください。標準フォーマットでツールの対応が広いためです。' },
+            { q: 'Q5_K_MとQ5_K_XLの違いは何ですか？', a: 'Q4やQ8と同じ仕組みです。Q5_K_Mはllama.cppの標準K-quant、Q5_K_XLはUnslothのDynamicバリアントで、重要な層をより高い解像度で保持する分ファイルがやや大きくなります。Q5_K_Mは既に品質劣化が1%未満のため、実用上の差は小さめです。XLバリアントを選ぶ前に、ツール上で実際のファイルサイズを確認してください。' },
+            { q: 'FP8とQ8_0のどちらを使うべきですか？', a: 'llama.cpp、Ollama、LM Studioでローカル実行する場合に関係するのはQ8_0です。FP8は主に現行のNVIDIAハードウェアでのサーバー推論で意味を持つデータ型で、GGUFの配布形式として一般的な選択肢ではありません。Q8_0はすでにFP16比0.5%未満の劣化に収まっているため、実際の判断はQ8_0とより小さいK-quantのどちらを取るかになります。' },
+            { q: 'Q4_0やQ4_1は今も使う意味がありますか？', a: 'ありません。どちらもK-quantの改良が入る前の古いフォーマットです。Q4_0はすべての重みを一律4ビットで量子化し、Q4_1はオフセットを加えたものですが、いずれも役割を終えています。Q4_K_Mはほぼ同じメモリ使用量で明確に高い品質を得られます。リポジトリで両方を見かけた場合はQ4_K_Mを選んでください。Q4_0とQ4_1は古いモデルのアップロードでのみ見かけます。' },
+            { q: 'Ollamaは自動的に最適な量子化を使用しますか？', a: 'はい -- `ollama pull llama3.1:8b`を実行すると、Ollamaはデフォルトでq4_k_mバリアントをダウンロードします。特定の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b-instruct-q5_K_M`。各モデルの利用可能な量子化タグはollama.com/libraryのモデルページに表示されます。' },
+            { q: '事前量子化バージョンをダウンロードするのではなく、モデルを自分で量子化できますか？', a: 'はい -- llama.cppには、GGUFファイルをサポートされている任意の量子化レベルに変換する`quantize`バイナリが含まれています。プロセスはモデルサイズに応じて5～30分かかります。ほとんどのユーザーはHugging Faceから事前量子化GGUFファイルをダウンロードすべきです。結果は同等だからです。' },
+            { q: '量子化はモデルのコンテキストウィンドウに影響しますか？', a: 'いいえ -- 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。Llama 3.1 8Bモデルは、Q4_K_Mに量子化されてもFP16で実行されても128Kトークンをサポートします。ただし、より長いコンテキストを処理するには、量子化に関わらずより多くのRAMが必要です -- Q4_K_M 7Bモデルで64Kトークンコンテキストを処理すると、10GB以上のRAMが必要になることもあります。' },
+            { q: 'GGUF量子化とGPTQ量子化の違いは何ですか？', a: 'GGUF（llama.cpp形式）とGPTQは2つの異なる量子化アプローチです。GGUFはK-QuantsとCPU/GPUの両方で実行されます。GPTQはGPUのみで、PyTorchが必要です。Ollama、LM Studio、またはJan AIでのローカル推論にはGGUFが正しい形式です。GPTQはAutoGPTQやvLLMなどのGPU指向推論フレームワークで使用されます。' },
+            { q: 'Hugging Faceの異なるプロバイダーからのQ4_K_Mモデルには品質の違いがありますか？', a: '量子化アルゴリズムはllama.cppで標準化されているため、同じベースモデルのQ4_K_M量子化は、GGUFファイルを作成した人に関わらず、ほぼ同一である必要があります。ただし、一部のプロバイダーは追加の調整（imatrix量子化）を適用し、品質を向上させます。「imat」または「importance matrix」として説明されているファイルは、通常、同じビット数でより高い品質を持っています。' },
+            { q: 'imatrix量子化とは何ですか？', a: 'Imatrix（重要度行列）量子化は、キャリブレーションデータを使用して、異なる精度レベルを異なる重みに割り当てます。予測に最も影響する重みはより多くのビットで量子化され、あまり重要でない重みはより少ないビットを使用します。結果：均一量子化と比較して、同じビット数でより良い品質。Qwen3 imatrix量子化は、標準Q4_K_Mより2～4%優れています。' },
+            { q: 'Q4_K_MとQ4_K_Sの違いは何ですか？', a: '両方とも4ビット量子化ですが、K_M（中）とK_S（小）は量子化ブロックごとのメモリ割り当てが異なります。Q4_K_Mはより良い品質再構築のためにより多くのメタデータを使用します -- 通常、7Bモデルで4.5～5GB。Q4_K_Sはより積極的です -- K_Mと比較して300～400MB節約しますが、3～5%の品質低下があります。極度に制限されたハードウェア（<4GB RAM）でない限り、Q4_K_Mを使用してください。' },
+            { q: 'Q8_0とQ8_K_XLの違いは何ですか？', a: 'Q8_0は標準的なllama.cppの8ビット量子化です -- すべての重みを8ビットで保持し、7Bモデルで約7.7GB、FP16比の品質低下は0.5%未満です。Q8_K_XLは標準のllama.cppタイプではなく、Unslothの「Dynamic」GGUFバリアントです。8ビットのベースを保ちつつ最も感度の高いレイヤー（埋め込み、アテンション、出力）を16ビットにアップキャストし、ファイルサイズをやや大きくする代わりに品質をフルFP16に近づけます。Q8_0はすでにほとんどのユーザーにとって実質的にロスレスなので、Q8_K_XLは最後の数分の1パーセントの精度が必要で、VRAMに余裕がある場合にのみ役立ちます。ファイルサイズはモデルによって異なります -- ダウンロード前にLM StudioまたはHugging Faceでサイズを確認してください。' },
+            { q: 'モデルを再ダウンロードせずに量子化レベルを切り替えることはできますか？', a: 'いいえ -- 量子化レベル間の切り替えには、異なるGGUFファイルをダウンロードするか、ベースモデル自体を再量子化する必要があります。モデルがQ4_K_Mに量子化されると、元のFP16モデルなしでQ5_K_Mに変換することはできません。ほとんどのユーザーは、希望する量子化レベルのHugging Faceから事前量子化GGUFファイルをダウンロードします。' },
+            { q: '量子化は推論速度にどのように影響しますか？', a: '量子化は通常、4ビット重みの読み込みと処理が16ビット浮動小数点数より高速であるため、推論速度を10～40%向上させます。Q4_K_M 7Bモデルはコンシューマーの CPU上で約8～12 tok/sで実行されます。同じモデルをFP16で実行すると約1～2 tok/sです。量子化によるGPU性能向上はより小さい（5～15%高速化）です。GPUはすでにフロート演算に最適化されているためです。' },
+            { q: 'Ollamaはデフォルトでどの量子化レベルを使用しますか？', a: 'Ollamaは、ライブラリ内のすべてのモデルでデフォルトでQ4_K_Mを使用します。`ollama pull llama3.1:8b`を実行すると、Q4_K_Mバリアントをダウンロードしています。このデフォルトは、ほとんどのユーザーの品質とRAM要件のバランスをよく取ります。別の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b:q5_k_m`または`ollama pull llama3.1:8b:q8_0`。' },
+            { q: 'シングルRTX 4090でLlama 3.3 70Bを実行できますか？', a: 'はい、オフロードを使用すれば可能です。Llama 3.3 70B Q4_K_Mは~40GBが必要で、RTX 4090の24GB VRAMより大きいです。CPUオフロードで：~24GBがVRAMに、~16GBがシステムRAMに。速度は5-10 tok/sec（フルGPU負荷の40-50 tok/secと比較）。より良いパフォーマンスには：2× RTX 4090でレイヤースプリッティング（~100 tok/sec）またはMac Studio（M5 Ultra搭載、ユニファイドメモリにモデルをネイティブに収容）を推奨。ただし独立したtok/secの測定値はまだなく、発売は2026年9月22日です。' },
+            { q: '量子化とオフロードの違いは何ですか？', a: '量子化はモデル重みの数値精度を削減します（FP16 → 4ビット）。メモリ要件を50-75%削減しますが、モデルアーキテクチャは変更しません。オフロードは、モデルがVRAMに収まらない場合にその一部をシステムRAMまたはCPUに移動します。量子化は総サイズを削減し、オフロードは速度低下を伴いながらVRAMより大きなモデルを実行可能にします。' },
+            { q: 'Mac Studio M5 Ultraは70Bモデルに量子化が必要ですか？', a: 'いいえ -- 最低96GB（最大512GB）のユニファイドメモリを搭載したMac Studio（M5 Ultra搭載）はLlama 3.3 70Bをネイティブに実行できます。オフロード不要。Q4_K_Mは依然として推奨されます。メモリ帯域幅が制限要因であることに変わりはなく、この新チップの独立した速度測定値はまだ存在しません。' },
+            { q: 'どの技術の組み合わせが自分のハードウェアに最適ですか？', a: '8GB VRAM（RTX 4060 Ti）：最大7BモデルにQ4_K_M。24GB VRAM（RTX 4090）：7-13BはQ4_K_Mでネイティブ；70Bは64GBシステムRAMでオフロード。2× 24GB VRAM：70BにQ5_K_Mでレイヤースプリッティング（~100 tok/sec）。Apple Silicon：ユニファイドメモリを直接使用 -- 速度最適化にQ4_K_M。' },
+            { q: 'モデルを自分で量子化できますか？', a: 'はい -- llama.cppには`quantize`バイナリが含まれており、GGUFファイルを任意のサポート対象量子化レベルに変換できます。' },
+            { q: '量子化レベルを切り替えるために再ダウンロードできますか？', a: 'いいえ -- 異なるGGUFファイルをダウンロードするか、ベースモデルを再量子化する必要があります。' },
+            { q: '自分のハードウェアに最適な技術の組み合わせは何ですか？', a: '8GB VRAM：7BにQ4_K_M。24GB VRAM：7-13BはネイティブQ4_K_M、70Bはオフロード。2× 24GB：70BにQ5_K_Mレイヤースプリッティング。Apple Silicon：Q4_K_Mとユニファイドメモリ。' },
           ],
         },
         sources: {
@@ -4498,97 +4453,178 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Q4_K_XLとは何ですか。Q4_K_Mより優れていますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XLはllama.cppの標準フォーマットではなく、UnslothのDynamic GGUFバリアントです。Q4_K_Mと同じ4ビットを基本としながら、最も影響の大きい層をより高い精度で保存するため、ファイルサイズと品質はQ4_K_MとQ5_K_Mの中間になります。価値があるのは主に、Q5_K_MがVRAMにわずかに収まらない場合です。Q5_K_Mが収まるならQ5_K_Mを選んでください。標準フォーマットでツールの対応が広いためです。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_XLはllama.cppの標準フォーマットではなく、UnslothのDynamic GGUFバリアントです。Q4_K_Mと同じ4ビットを基本としながら、最も影響の大きい層をより高い精度で保存するため、ファイルサイズと品質はQ4_K_MとQ5_K_Mの中間になります。価値があるのは主に、Q5_K_MがVRAMにわずかに収まらない場合です。Q5_K_Mが収まるならQ5_K_Mを選んでください。標準フォーマットでツールの対応が広いためです。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q5_K_MとQ5_K_XLの違いは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4やQ8と同じ仕組みです。Q5_K_Mはllama.cppの標準K-quant、Q5_K_XLはUnslothのDynamicバリアントで、重要な層をより高い解像度で保持する分ファイルがやや大きくなります。Q5_K_Mは既に品質劣化が1%未満のため、実用上の差は小さめです。XLバリアントを選ぶ前に、ツール上で実際のファイルサイズを確認してください。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4やQ8と同じ仕組みです。Q5_K_Mはllama.cppの標準K-quant、Q5_K_XLはUnslothのDynamicバリアントで、重要な層をより高い解像度で保持する分ファイルがやや大きくなります。Q5_K_Mは既に品質劣化が1%未満のため、実用上の差は小さめです。XLバリアントを選ぶ前に、ツール上で実際のファイルサイズを確認してください。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'FP8とQ8_0のどちらを使うべきですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp、Ollama、LM Studioでローカル実行する場合に関係するのはQ8_0です。FP8は主に現行のNVIDIAハードウェアでのサーバー推論で意味を持つデータ型で、GGUFの配布形式として一般的な選択肢ではありません。Q8_0はすでにFP16比0.5%未満の劣化に収まっているため、実際の判断はQ8_0とより小さいK-quantのどちらを取るかになります。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp、Ollama、LM Studioでローカル実行する場合に関係するのはQ8_0です。FP8は主に現行のNVIDIAハードウェアでのサーバー推論で意味を持つデータ型で、GGUFの配布形式として一般的な選択肢ではありません。Q8_0はすでにFP16比0.5%未満の劣化に収まっているため、実際の判断はQ8_0とより小さいK-quantのどちらを取るかになります。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_0やQ4_1は今も使う意味がありますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'ありません。どちらもK-quantの改良が入る前の古いフォーマットです。Q4_0はすべての重みを一律4ビットで量子化し、Q4_1はオフセットを加えたものですが、いずれも役割を終えています。Q4_K_Mはほぼ同じメモリ使用量で明確に高い品質を得られます。リポジトリで両方を見かけた場合はQ4_K_Mを選んでください。Q4_0とQ4_1は古いモデルのアップロードでのみ見かけます。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ありません。どちらもK-quantの改良が入る前の古いフォーマットです。Q4_0はすべての重みを一律4ビットで量子化し、Q4_1はオフセットを加えたものですが、いずれも役割を終えています。Q4_K_Mはほぼ同じメモリ使用量で明確に高い品質を得られます。リポジトリで両方を見かけた場合はQ4_K_Mを選んでください。Q4_0とQ4_1は古いモデルのアップロードでのみ見かけます。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ollamaは自動的に最適な量子化を使用しますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい -- `ollama pull llama3.1:8b`を実行すると、OllamaはデフォルトでQ4_K_Mバリアントをダウンロードします。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい -- `ollama pull llama3.1:8b`を実行すると、Ollamaはデフォルトでq4_k_mバリアントをダウンロードします。特定の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b-instruct-q5_K_M`。各モデルの利用可能な量子化タグはollama.com/libraryのモデルページに表示されます。',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'モデルを自分で量子化できますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい -- llama.cppには`quantize`バイナリが含まれており、GGUFファイルを任意のサポート対象量子化レベルに変換できます。' },
+            'name': '事前量子化バージョンをダウンロードするのではなく、モデルを自分で量子化できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい -- llama.cppには、GGUFファイルをサポートされている任意の量子化レベルに変換する`quantize`バイナリが含まれています。プロセスはモデルサイズに応じて5～30分かかります。ほとんどのユーザーはHugging Faceから事前量子化GGUFファイルをダウンロードすべきです。結果は同等だからです。',
+            },
           },
           {
             '@type': 'Question',
             'name': '量子化はモデルのコンテキストウィンドウに影響しますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ -- 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ -- 量子化はモデル重み精度にのみ影響し、コンテキスト長には影響しません。Llama 3.1 8Bモデルは、Q4_K_Mに量子化されてもFP16で実行されても128Kトークンをサポートします。ただし、より長いコンテキストを処理するには、量子化に関わらずより多くのRAMが必要です -- Q4_K_M 7Bモデルで64Kトークンコンテキストを処理すると、10GB以上のRAMが必要になることもあります。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'GGUF量子化とGPTQ量子化の違いは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUFはCPUとGPUで実行され、GPTQはGPUのみです。ローカル推論にはGGUFが正しい形式です。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF（llama.cpp形式）とGPTQは2つの異なる量子化アプローチです。GGUFはK-QuantsとCPU/GPUの両方で実行されます。GPTQはGPUのみで、PyTorchが必要です。Ollama、LM Studio、またはJan AIでのローカル推論にはGGUFが正しい形式です。GPTQはAutoGPTQやvLLMなどのGPU指向推論フレームワークで使用されます。',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Hugging Faceの異なるプロバイダーのQ4_K_Mモデルは品質が異なりますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '量子化アルゴリズムは標準化されているため、同じベースモデルのQ4_K_M量子化はほぼ同一である必要があります。' },
+            'name': 'Hugging Faceの異なるプロバイダーからのQ4_K_Mモデルには品質の違いがありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量子化アルゴリズムはllama.cppで標準化されているため、同じベースモデルのQ4_K_M量子化は、GGUFファイルを作成した人に関わらず、ほぼ同一である必要があります。ただし、一部のプロバイダーは追加の調整（imatrix量子化）を適用し、品質を向上させます。「imat」または「importance matrix」として説明されているファイルは、通常、同じビット数でより高い品質を持っています。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'imatrix量子化とは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Imatrix量子化は、キャリブレーションデータを使用して異なる精度レベルを異なる重みに割り当てます。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Imatrix（重要度行列）量子化は、キャリブレーションデータを使用して、異なる精度レベルを異なる重みに割り当てます。予測に最も影響する重みはより多くのビットで量子化され、あまり重要でない重みはより少ないビットを使用します。結果：均一量子化と比較して、同じビット数でより良い品質。Qwen3 imatrix量子化は、標準Q4_K_Mより2～4%優れています。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_K_MとQ4_K_Sの違いは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '両方とも4ビット量子化ですが、Q4_K_M（中）はより多くのメタデータを使用してより良い品質を実現し、Q4_K_S（小）はより積極的で品質低下があります。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '両方とも4ビット量子化ですが、K_M（中）とK_S（小）は量子化ブロックごとのメモリ割り当てが異なります。Q4_K_Mはより良い品質再構築のためにより多くのメタデータを使用します -- 通常、7Bモデルで4.5～5GB。Q4_K_Sはより積極的です -- K_Mと比較して300～400MB節約しますが、3～5%の品質低下があります。極度に制限されたハードウェア（<4GB RAM）でない限り、Q4_K_Mを使用してください。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q8_0とQ8_K_XLの違いは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0は標準的なllama.cppの8ビット量子化で、すべての重みを8ビットで保持し、7Bモデルで約7.7GB、FP16比0.5%未満の品質低下です。Q8_K_XLはUnslothの「Dynamic」GGUFバリアントで、8ビットのベースに最も感度の高いレイヤーを16ビットでアップキャストし、品質をフルFP16に近づけます。Q8_0はすでに実質的にロスレスなので、Q8_K_XLは最後の0.5%の精度が必要でVRAMに余裕がある場合にのみ役立ちます。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8_0は標準的なllama.cppの8ビット量子化です -- すべての重みを8ビットで保持し、7Bモデルで約7.7GB、FP16比の品質低下は0.5%未満です。Q8_K_XLは標準のllama.cppタイプではなく、Unslothの「Dynamic」GGUFバリアントです。8ビットのベースを保ちつつ最も感度の高いレイヤー（埋め込み、アテンション、出力）を16ビットにアップキャストし、ファイルサイズをやや大きくする代わりに品質をフルFP16に近づけます。Q8_0はすでにほとんどのユーザーにとって実質的にロスレスなので、Q8_K_XLは最後の数分の1パーセントの精度が必要で、VRAMに余裕がある場合にのみ役立ちます。ファイルサイズはモデルによって異なります -- ダウンロード前にLM StudioまたはHugging Faceでサイズを確認してください。',
+            },
           },
           {
             '@type': 'Question',
-            'name': '量子化レベルを切り替えるために再ダウンロードできますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ -- 異なるGGUFファイルをダウンロードするか、ベースモデルを再量子化する必要があります。' },
+            'name': 'モデルを再ダウンロードせずに量子化レベルを切り替えることはできますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ -- 量子化レベル間の切り替えには、異なるGGUFファイルをダウンロードするか、ベースモデル自体を再量子化する必要があります。モデルがQ4_K_Mに量子化されると、元のFP16モデルなしでQ5_K_Mに変換することはできません。ほとんどのユーザーは、希望する量子化レベルのHugging Faceから事前量子化GGUFファイルをダウンロードします。',
+            },
           },
           {
             '@type': 'Question',
             'name': '量子化は推論速度にどのように影響しますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '量子化は通常、4ビット重みの処理が16ビットフロートより高速であるため、推論速度を10～40%向上させます。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量子化は通常、4ビット重みの読み込みと処理が16ビット浮動小数点数より高速であるため、推論速度を10～40%向上させます。Q4_K_M 7Bモデルはコンシューマーの CPU上で約8～12 tok/sで実行されます。同じモデルをFP16で実行すると約1～2 tok/sです。量子化によるGPU性能向上はより小さい（5～15%高速化）です。GPUはすでにフロート演算に最適化されているためです。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ollamaはデフォルトでどの量子化レベルを使用しますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'OllamaはデフォルトですべてのモデルにQ4_K_Mを使用します。このデフォルトは、ほとんどのユーザーの品質とRAM要件のバランスをよく取ります。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollamaは、ライブラリ内のすべてのモデルでデフォルトでQ4_K_Mを使用します。`ollama pull llama3.1:8b`を実行すると、Q4_K_Mバリアントをダウンロードしています。このデフォルトは、ほとんどのユーザーの品質とRAM要件のバランスをよく取ります。別の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b:q5_k_m`または`ollama pull llama3.1:8b:q8_0`。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'シングルRTX 4090でLlama 3.3 70Bを実行できますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、オフロードで可能です。Llama 3.3 70B Q4_K_Mは~40GB必要です。CPUオフロードで5-10 tok/sec。2× RTX 4090のレイヤースプリッティングで~100 tok/sec。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、オフロードを使用すれば可能です。Llama 3.3 70B Q4_K_Mは~40GBが必要で、RTX 4090の24GB VRAMより大きいです。CPUオフロードで：~24GBがVRAMに、~16GBがシステムRAMに。速度は5-10 tok/sec（フルGPU負荷の40-50 tok/secと比較）。より良いパフォーマンスには：2× RTX 4090でレイヤースプリッティング（~100 tok/sec）またはMac Studio（M5 Ultra搭載、ユニファイドメモリにモデルをネイティブに収容）を推奨。ただし独立したtok/secの測定値はまだなく、発売は2026年9月22日です。',
+            },
           },
           {
             '@type': 'Question',
             'name': '量子化とオフロードの違いは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '量子化は重みの精度を削減します（FP16 → 4ビット）。オフロードは、モデルがVRAMに収まらない場合にシステムRAMに移動します。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量子化はモデル重みの数値精度を削減します（FP16 → 4ビット）。メモリ要件を50-75%削減しますが、モデルアーキテクチャは変更しません。オフロードは、モデルがVRAMに収まらない場合にその一部をシステムRAMまたはCPUに移動します。量子化は総サイズを削減し、オフロードは速度低下を伴いながらVRAMより大きなモデルを実行可能にします。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Mac Studio M5 Ultraは70Bモデルに量子化が必要ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ -- 最低96GBのユニファイドメモリでLlama 3.3 70Bをネイティブに実行できます。Q4_K_Mは依然として推奨されますが、この新チップの独立した速度測定値はまだ存在しません。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ -- 最低96GB（最大512GB）のユニファイドメモリを搭載したMac Studio（M5 Ultra搭載）はLlama 3.3 70Bをネイティブに実行できます。オフロード不要。Q4_K_Mは依然として推奨されます。メモリ帯域幅が制限要因であることに変わりはなく、この新チップの独立した速度測定値はまだ存在しません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'どの技術の組み合わせが自分のハードウェアに最適ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '8GB VRAM（RTX 4060 Ti）：最大7BモデルにQ4_K_M。24GB VRAM（RTX 4090）：7-13BはQ4_K_Mでネイティブ；70Bは64GBシステムRAMでオフロード。2× 24GB VRAM：70BにQ5_K_Mでレイヤースプリッティング（~100 tok/sec）。Apple Silicon：ユニファイドメモリを直接使用 -- 速度最適化にQ4_K_M。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'モデルを自分で量子化できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい -- llama.cppには`quantize`バイナリが含まれており、GGUFファイルを任意のサポート対象量子化レベルに変換できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '量子化レベルを切り替えるために再ダウンロードできますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ -- 異なるGGUFファイルをダウンロードするか、ベースモデルを再量子化する必要があります。',
+            },
           },
           {
             '@type': 'Question',
             'name': '自分のハードウェアに最適な技術の組み合わせは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '8GB VRAM：7BにQ4_K_M。24GB VRAM：7-13BはネイティブQ4_K_M、70Bはオフロード。2× 24GB：70BにQ5_K_Mレイヤースプリッティング。Apple Silicon：Q4_K_Mとユニファイドメモリ。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '8GB VRAM：7BにQ4_K_M。24GB VRAM：7-13BはネイティブQ4_K_M、70Bはオフロード。2× 24GB：70BにQ5_K_Mレイヤースプリッティング。Apple Silicon：Q4_K_Mとユニファイドメモリ。',
+            },
           },
         ],
       },
@@ -4967,82 +5003,26 @@ schema: {
           id: 'faq',
           title: '关于大语言模型量化的常见问题',
           faqs: [
-            {
-              q: '什么是 Q4_K_XL？相比 Q4_K_M 值得用吗？',
-              a: 'Q4_K_XL 不是 llama.cpp 的标准格式，而是 Unsloth 的 Dynamic GGUF 变体。它保持 Q4_K_M 的 4 位基础，但以更高精度存储最敏感的层，因此文件大小和质量介于 Q4_K_M 与 Q5_K_M 之间。主要在 Q5_K_M 差一点装不进显存时才值得选用；如果 Q5_K_M 装得下，就选 Q5_K_M，因为它是标准格式，工具支持更广。',
-            },
-            {
-              q: 'Q5_K_M 和 Q5_K_XL 有什么区别？',
-              a: '原理与 Q4、Q8 相同：Q5_K_M 是 llama.cpp 的标准 K-quant，Q5_K_XL 是 Unsloth 的 Dynamic 变体，敏感层分辨率更高，文件也相应更大。由于 Q5_K_M 的质量损失已低于 1%，实际收益很小。选择 XL 变体前，请先在工具中查看实际文件大小。',
-            },
-            {
-              q: 'FP8 和 Q8_0 应该选哪个？',
-              a: '通过 llama.cpp、Ollama 或 LM Studio 在本地运行时，相关的格式是 Q8_0。FP8 主要用于当前 NVIDIA 硬件上的服务器推理，在 GGUF 生态中并不是常见的下载选项。Q8_0 相对 FP16 的质量损失已低于 0.5%，因此真正的取舍是在 Q8_0 与更小的 K-quant 之间。',
-            },
-            {
-              q: 'Q4_0 和 Q4_1 现在还有用吗？',
-              a: '没有了。两者都是没有 K-quant 改进的旧格式。Q4_0 将所有权重统一量化为 4 位；Q4_1 增加了一个偏移量，但同样已被取代。在内存占用几乎相同的情况下，Q4_K_M 的质量明显更好。如果在仓库中同时看到它们，请选 Q4_K_M——Q4_0 和 Q4_1 现在只出现在较早的模型上传中。',
-            },
-            {
-              q: 'Ollama会自动使用最佳量化吗？',
-              a: '是的----运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。要获取特定量化，请附加标签：`ollama pull llama3.1:8b-instruct-q5_K_M`。每个模型的可用量化标签列在ollama.com/library上的模型页面上。',
-            },
-            {
-              q: '我可以自己量化模型而不是下载预先量化的版本吗？',
-              a: '可以----llama.cpp包含一个`quantize`二进制文件，将GGUF文件转换为任何支持的量化级别。该过程根据模型大小需要5～30分钟。大多数用户应该从Hugging Face下载预先量化的GGUF文件，因为结果是等效的。',
-            },
-            {
-              q: '量化会影响模型的上下文窗口吗？',
-              a: '不会----量化仅影响模型权重精度，不影响上下文长度。Llama 3.1 8B模型支持128K代币，无论是量化到Q4_K_M还是在FP16下运行。但是，处理更长的上下文需要更多RAM，不管量化如何----用Q4_K_M 7B模型处理64K代币上下文可能需要10GB+RAM。',
-            },
-            {
-              q: 'GGUF和GPTQ量化有什么区别？',
-              a: 'GGUF（llama.cpp格式）和GPTQ是两种不同的量化方法。GGUF使用K-Quants并在CPU和GPU上运行。GPTQ仅在GPU上运行且需要PyTorch。对于Ollama、LM Studio或Jan AI的本地推理，GGUF是正确的格式。GPTQ用于AutoGPTQ和vLLM等GPU专注推理框架。',
-            },
-            {
-              q: 'Hugging Face上不同提供者的Q4_K_M模型质量有区别吗？',
-              a: '量化算法在llama.cpp中是标准化的，所以同一基础模型的Q4_K_M量化无论谁创建GGUF文件都应该几乎相同。但是，一些提供者应用了额外的调整（imatrix量化）来改进质量。标记为"imat"或"importance matrix"量化的文件通常在相同比特数下质量更高。',
-            },
-            {
-              q: '什么是imatrix量化？',
-              a: 'Imatrix（重要性矩阵）量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。最影响预测的权重用更多位量化；不太重要的权重使用更少的位。结果：与均匀量化相比，相同比特数的质量更好。Qwen3 imatrix量化比标准Q4_K_M好2～4%。',
-            },
-            {
-              q: 'Q4_K_M和Q4_K_S有什么区别？',
-              a: '两者都是4位量化，但K_M（中等）和K_S（小）在每个量化块的内存分配上有所不同。Q4_K_M使用更多元数据以获得更好的质量重构----通常对7B模型为4.5～5GB。Q4_K_S更激进----与K_M相比节省300～400MB，但有3～5%的质量损失。除非在极度受限硬件（<4GB RAM）上，否则使用Q4_K_M。',
-            },
-            {
-              q: 'Q8_0和Q8_K_XL有什么区别？',
-              a: 'Q8_0是标准的llama.cpp 8位量化----每个权重8位，7B模型约7.7 GB，相比FP16质量损失不足0.5%。Q8_K_XL不是llama.cpp的原生类型；它是Unsloth的"Dynamic"GGUF变体，保留8位基础，但将最敏感的层（嵌入层、注意力层、输出层）上采样到16位，以略大的文件大小将质量推向接近完整FP16。Q8_0对大多数用户而言已几乎无损，因此只有当您需要最后零点几个百分点的精度且有富余VRAM时，Q8_K_XL才有帮助。文件大小因模型而异----下载前请在LM Studio或Hugging Face上查看大小。',
-            },
-            {
-              q: '我可以在不重新下载模型的情况下切换量化级别吗？',
-              a: '不可以----切换量化级别需要下载不同的GGUF文件或自己重新量化基础模型。一旦模型被量化为Q4_K_M，如果没有原始FP16模型，您就无法将其转换回Q5_K_M。大多数用户从Hugging Face为其所需的量化级别下载预先量化的GGUF文件。',
-            },
-            {
-              q: '量化如何影响推理速度？',
-              a: '量化通常增加推理速度10～40%，因为加载和处理4位权重比16位浮点数更快。Q4_K_M 7B模型在消费级CPU上以约8～12 tok/s运行；相同模型在FP16下以约1～2 tok/s运行。量化对GPU性能的提升较小（快5～15%），因为GPU已经为浮点运算优化。',
-            },
-            {
-              q: 'Ollama默认使用哪种量化级别？',
-              a: 'Ollama默认为其库中的所有模型使用Q4_K_M。运行`ollama pull llama3.1:8b`时，您正在下载Q4_K_M变体。此默认为大多数用户很好地平衡了质量和RAM要求。要拉取不同的量化，请附加标签：`ollama pull llama3.1:8b:q5_k_m`或`ollama pull llama3.1:8b:q8_0`。',
-            },
-            {
-              q: '能在单块RTX 4090上运行Llama 3.3 70B吗？',
-              a: '可以，使用卸载。Llama 3.3 70B Q4_K_M需要~40GB----超过RTX 4090的24GB VRAM。通过CPU卸载：~24GB在VRAM中，~16GB在系统RAM中，速度5-10 token/秒。更好的选择：2× RTX 4090层分割（~100 token/秒）或搭载M5 Ultra的Mac Studio，它能在统一内存中原生容纳该模型（独立的token/秒测试数据尚不存在----该芯片于2026年9月22日上市）。',
-            },
-            {
-              q: '量化与卸载有什么区别？',
-              a: '量化降低模型权重的数值精度（FP16 → 4位），减少50-75%的内存需求，不改变模型架构。卸载在模型无法放入VRAM时将其部分移至系统RAM或CPU。量化减小总体大小；卸载使运行大于VRAM的模型成为可能，但会降低速度。',
-            },
-            {
-              q: 'Mac Studio M5 Ultra运行70B模型需要量化吗？',
-              a: '不需要----搭载M5 Ultra的Mac Studio最低配备96GB统一内存（最高512GB），可原生运行Llama 3.3 70B。无需卸载。仍推荐使用Q4_K_M，因为内存带宽而非内存容量是限制因素；这款新芯片目前尚无独立的速度测试数据。',
-            },
-            {
-              q: '哪种技术组合最适合我的硬件？',
-              a: '8GB VRAM（RTX 4060 Ti）：Q4_K_M用于最多7B模型。24GB VRAM（RTX 4090）：7-13B原生Q4_K_M；70B需要64GB系统RAM卸载。2× 24GB VRAM：70B的Q5_K_M层分割（~100 token/秒）。Apple Silicon：直接使用统一内存，Q4_K_M优化速度。',
-            },
+            { q: '什么是 Q4_K_XL？相比 Q4_K_M 值得用吗？', a: 'Q4_K_XL 不是 llama.cpp 的标准格式，而是 Unsloth 的 Dynamic GGUF 变体。它保持 Q4_K_M 的 4 位基础，但以更高精度存储最敏感的层，因此文件大小和质量介于 Q4_K_M 与 Q5_K_M 之间。主要在 Q5_K_M 差一点装不进显存时才值得选用；如果 Q5_K_M 装得下，就选 Q5_K_M，因为它是标准格式，工具支持更广。' },
+            { q: 'Q5_K_M 和 Q5_K_XL 有什么区别？', a: '原理与 Q4、Q8 相同：Q5_K_M 是 llama.cpp 的标准 K-quant，Q5_K_XL 是 Unsloth 的 Dynamic 变体，敏感层分辨率更高，文件也相应更大。由于 Q5_K_M 的质量损失已低于 1%，实际收益很小。选择 XL 变体前，请先在工具中查看实际文件大小。' },
+            { q: 'FP8 和 Q8_0 应该选哪个？', a: '通过 llama.cpp、Ollama 或 LM Studio 在本地运行时，相关的格式是 Q8_0。FP8 主要用于当前 NVIDIA 硬件上的服务器推理，在 GGUF 生态中并不是常见的下载选项。Q8_0 相对 FP16 的质量损失已低于 0.5%，因此真正的取舍是在 Q8_0 与更小的 K-quant 之间。' },
+            { q: 'Q4_0 和 Q4_1 现在还有用吗？', a: '没有了。两者都是没有 K-quant 改进的旧格式。Q4_0 将所有权重统一量化为 4 位；Q4_1 增加了一个偏移量，但同样已被取代。在内存占用几乎相同的情况下，Q4_K_M 的质量明显更好。如果在仓库中同时看到它们，请选 Q4_K_M——Q4_0 和 Q4_1 现在只出现在较早的模型上传中。' },
+            { q: 'Ollama会自动使用最佳量化吗？', a: '是的----运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。要获取特定量化，请附加标签：`ollama pull llama3.1:8b-instruct-q5_K_M`。每个模型的可用量化标签列在ollama.com/library上的模型页面上。' },
+            { q: '我可以自己量化模型而不是下载预先量化的版本吗？', a: '可以----llama.cpp包含一个`quantize`二进制文件，将GGUF文件转换为任何支持的量化级别。该过程根据模型大小需要5～30分钟。大多数用户应该从Hugging Face下载预先量化的GGUF文件，因为结果是等效的。' },
+            { q: '量化会影响模型的上下文窗口吗？', a: '不会----量化仅影响模型权重精度，不影响上下文长度。Llama 3.1 8B模型支持128K代币，无论是量化到Q4_K_M还是在FP16下运行。但是，处理更长的上下文需要更多RAM，不管量化如何----用Q4_K_M 7B模型处理64K代币上下文可能需要10GB+RAM。' },
+            { q: 'GGUF和GPTQ量化有什么区别？', a: 'GGUF（llama.cpp格式）和GPTQ是两种不同的量化方法。GGUF使用K-Quants并在CPU和GPU上运行。GPTQ仅在GPU上运行且需要PyTorch。对于Ollama、LM Studio或Jan AI的本地推理，GGUF是正确的格式。GPTQ用于AutoGPTQ和vLLM等GPU专注推理框架。' },
+            { q: 'Hugging Face上不同提供者的Q4_K_M模型质量有区别吗？', a: '量化算法在llama.cpp中是标准化的，所以同一基础模型的Q4_K_M量化无论谁创建GGUF文件都应该几乎相同。但是，一些提供者应用了额外的调整（imatrix量化）来改进质量。标记为"imat"或"importance matrix"量化的文件通常在相同比特数下质量更高。' },
+            { q: '什么是imatrix量化？', a: 'Imatrix（重要性矩阵）量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。最影响预测的权重用更多位量化；不太重要的权重使用更少的位。结果：与均匀量化相比，相同比特数的质量更好。Qwen3 imatrix量化比标准Q4_K_M好2～4%。' },
+            { q: 'Q4_K_M和Q4_K_S有什么区别？', a: '两者都是4位量化，但K_M（中等）和K_S（小）在每个量化块的内存分配上有所不同。Q4_K_M使用更多元数据以获得更好的质量重构----通常对7B模型为4.5～5GB。Q4_K_S更激进----与K_M相比节省300～400MB，但有3～5%的质量损失。除非在极度受限硬件（<4GB RAM）上，否则使用Q4_K_M。' },
+            { q: 'Q8_0和Q8_K_XL有什么区别？', a: 'Q8_0是标准的llama.cpp 8位量化----每个权重8位，7B模型约7.7 GB，相比FP16质量损失不足0.5%。Q8_K_XL不是llama.cpp的原生类型；它是Unsloth的"Dynamic"GGUF变体，保留8位基础，但将最敏感的层（嵌入层、注意力层、输出层）上采样到16位，以略大的文件大小将质量推向接近完整FP16。Q8_0对大多数用户而言已几乎无损，因此只有当您需要最后零点几个百分点的精度且有富余VRAM时，Q8_K_XL才有帮助。文件大小因模型而异----下载前请在LM Studio或Hugging Face上查看大小。' },
+            { q: '我可以在不重新下载模型的情况下切换量化级别吗？', a: '不可以----切换量化级别需要下载不同的GGUF文件或自己重新量化基础模型。一旦模型被量化为Q4_K_M，如果没有原始FP16模型，您就无法将其转换回Q5_K_M。大多数用户从Hugging Face为其所需的量化级别下载预先量化的GGUF文件。' },
+            { q: '量化如何影响推理速度？', a: '量化通常增加推理速度10～40%，因为加载和处理4位权重比16位浮点数更快。Q4_K_M 7B模型在消费级CPU上以约8～12 tok/s运行；相同模型在FP16下以约1～2 tok/s运行。量化对GPU性能的提升较小（快5～15%），因为GPU已经为浮点运算优化。' },
+            { q: 'Ollama默认使用哪种量化级别？', a: 'Ollama默认为其库中的所有模型使用Q4_K_M。运行`ollama pull llama3.1:8b`时，您正在下载Q4_K_M变体。此默认为大多数用户很好地平衡了质量和RAM要求。要拉取不同的量化，请附加标签：`ollama pull llama3.1:8b:q5_k_m`或`ollama pull llama3.1:8b:q8_0`。' },
+            { q: '能在单块RTX 4090上运行Llama 3.3 70B吗？', a: '可以，使用卸载。Llama 3.3 70B Q4_K_M需要~40GB----超过RTX 4090的24GB VRAM。通过CPU卸载：~24GB在VRAM中，~16GB在系统RAM中，速度5-10 token/秒。更好的选择：2× RTX 4090层分割（~100 token/秒）或搭载M5 Ultra的Mac Studio，它能在统一内存中原生容纳该模型（独立的token/秒测试数据尚不存在----该芯片于2026年9月22日上市）。' },
+            { q: '量化与卸载有什么区别？', a: '量化降低模型权重的数值精度（FP16 → 4位），减少50-75%的内存需求，不改变模型架构。卸载在模型无法放入VRAM时将其部分移至系统RAM或CPU。量化减小总体大小；卸载使运行大于VRAM的模型成为可能，但会降低速度。' },
+            { q: 'Mac Studio M5 Ultra运行70B模型需要量化吗？', a: '不需要----搭载M5 Ultra的Mac Studio最低配备96GB统一内存（最高512GB），可原生运行Llama 3.3 70B。无需卸载。仍推荐使用Q4_K_M，因为内存带宽而非内存容量是限制因素；这款新芯片目前尚无独立的速度测试数据。' },
+            { q: '哪种技术组合最适合我的硬件？', a: '8GB VRAM（RTX 4060 Ti）：Q4_K_M用于最多7B模型。24GB VRAM（RTX 4090）：7-13B原生Q4_K_M；70B需要64GB系统RAM卸载。2× 24GB VRAM：70B的Q5_K_M层分割（~100 token/秒）。Apple Silicon：直接使用统一内存，Q4_K_M优化速度。' },
+            { q: '我可以自己量化模型吗？', a: '可以----llama.cpp包含一个`quantize`二进制文件，可将GGUF文件转换为任何支持的量化级别。' },
           ],
         },
         sources: {
@@ -5140,97 +5120,162 @@ schema: {
           {
             '@type': 'Question',
             'name': '什么是 Q4_K_XL？相比 Q4_K_M 值得用吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL 不是 llama.cpp 的标准格式，而是 Unsloth 的 Dynamic GGUF 变体。它保持 Q4_K_M 的 4 位基础，但以更高精度存储最敏感的层，因此文件大小和质量介于 Q4_K_M 与 Q5_K_M 之间。主要在 Q5_K_M 差一点装不进显存时才值得选用；如果 Q5_K_M 装得下，就选 Q5_K_M，因为它是标准格式，工具支持更广。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_XL 不是 llama.cpp 的标准格式，而是 Unsloth 的 Dynamic GGUF 变体。它保持 Q4_K_M 的 4 位基础，但以更高精度存储最敏感的层，因此文件大小和质量介于 Q4_K_M 与 Q5_K_M 之间。主要在 Q5_K_M 差一点装不进显存时才值得选用；如果 Q5_K_M 装得下，就选 Q5_K_M，因为它是标准格式，工具支持更广。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q5_K_M 和 Q5_K_XL 有什么区别？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '原理与 Q4、Q8 相同：Q5_K_M 是 llama.cpp 的标准 K-quant，Q5_K_XL 是 Unsloth 的 Dynamic 变体，敏感层分辨率更高，文件也相应更大。由于 Q5_K_M 的质量损失已低于 1%，实际收益很小。选择 XL 变体前，请先在工具中查看实际文件大小。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '原理与 Q4、Q8 相同：Q5_K_M 是 llama.cpp 的标准 K-quant，Q5_K_XL 是 Unsloth 的 Dynamic 变体，敏感层分辨率更高，文件也相应更大。由于 Q5_K_M 的质量损失已低于 1%，实际收益很小。选择 XL 变体前，请先在工具中查看实际文件大小。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'FP8 和 Q8_0 应该选哪个？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '通过 llama.cpp、Ollama 或 LM Studio 在本地运行时，相关的格式是 Q8_0。FP8 主要用于当前 NVIDIA 硬件上的服务器推理，在 GGUF 生态中并不是常见的下载选项。Q8_0 相对 FP16 的质量损失已低于 0.5%，因此真正的取舍是在 Q8_0 与更小的 K-quant 之间。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通过 llama.cpp、Ollama 或 LM Studio 在本地运行时，相关的格式是 Q8_0。FP8 主要用于当前 NVIDIA 硬件上的服务器推理，在 GGUF 生态中并不是常见的下载选项。Q8_0 相对 FP16 的质量损失已低于 0.5%，因此真正的取舍是在 Q8_0 与更小的 K-quant 之间。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_0 和 Q4_1 现在还有用吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '没有了。两者都是没有 K-quant 改进的旧格式。Q4_0 将所有权重统一量化为 4 位；Q4_1 增加了一个偏移量，但同样已被取代。在内存占用几乎相同的情况下，Q4_K_M 的质量明显更好。如果在仓库中同时看到它们，请选 Q4_K_M——Q4_0 和 Q4_1 现在只出现在较早的模型上传中。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '没有了。两者都是没有 K-quant 改进的旧格式。Q4_0 将所有权重统一量化为 4 位；Q4_1 增加了一个偏移量，但同样已被取代。在内存占用几乎相同的情况下，Q4_K_M 的质量明显更好。如果在仓库中同时看到它们，请选 Q4_K_M——Q4_0 和 Q4_1 现在只出现在较早的模型上传中。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ollama会自动使用最佳量化吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '是的----运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的----运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。要获取特定量化，请附加标签：`ollama pull llama3.1:8b-instruct-q5_K_M`。每个模型的可用量化标签列在ollama.com/library上的模型页面上。',
+            },
           },
           {
             '@type': 'Question',
-            'name': '我可以自己量化模型吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '可以----llama.cpp包含一个`quantize`二进制文件，可将GGUF文件转换为任何支持的量化级别。' },
+            'name': '我可以自己量化模型而不是下载预先量化的版本吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以----llama.cpp包含一个`quantize`二进制文件，将GGUF文件转换为任何支持的量化级别。该过程根据模型大小需要5～30分钟。大多数用户应该从Hugging Face下载预先量化的GGUF文件，因为结果是等效的。',
+            },
           },
           {
             '@type': 'Question',
-            'name': '量化会影响上下文窗口吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '不会----量化仅影响模型权重精度，不影响上下文长度。' },
+            'name': '量化会影响模型的上下文窗口吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会----量化仅影响模型权重精度，不影响上下文长度。Llama 3.1 8B模型支持128K代币，无论是量化到Q4_K_M还是在FP16下运行。但是，处理更长的上下文需要更多RAM，不管量化如何----用Q4_K_M 7B模型处理64K代币上下文可能需要10GB+RAM。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'GGUF和GPTQ量化有什么区别？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF在CPU和GPU上运行，而GPTQ仅在GPU上运行。对于本地推理，GGUF是正确的格式。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF（llama.cpp格式）和GPTQ是两种不同的量化方法。GGUF使用K-Quants并在CPU和GPU上运行。GPTQ仅在GPU上运行且需要PyTorch。对于Ollama、LM Studio或Jan AI的本地推理，GGUF是正确的格式。GPTQ用于AutoGPTQ和vLLM等GPU专注推理框架。',
+            },
           },
           {
             '@type': 'Question',
-            'name': '不同提供者的Q4_K_M模型质量有区别吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '量化算法是标准化的，所以同一基础模型的Q4_K_M量化应该几乎相同。' },
+            'name': 'Hugging Face上不同提供者的Q4_K_M模型质量有区别吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量化算法在llama.cpp中是标准化的，所以同一基础模型的Q4_K_M量化无论谁创建GGUF文件都应该几乎相同。但是，一些提供者应用了额外的调整（imatrix量化）来改进质量。标记为"imat"或"importance matrix"量化的文件通常在相同比特数下质量更高。',
+            },
           },
           {
             '@type': 'Question',
             'name': '什么是imatrix量化？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Imatrix量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Imatrix（重要性矩阵）量化使用校准数据为不同权重分配不同的精度级别，基于其对模型输出的重要性。最影响预测的权重用更多位量化；不太重要的权重使用更少的位。结果：与均匀量化相比，相同比特数的质量更好。Qwen3 imatrix量化比标准Q4_K_M好2～4%。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_K_M和Q4_K_S有什么区别？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '两者都是4位量化，但Q4_K_M（中等）使用更多元数据以获得更好质量，而Q4_K_S（小）更激进。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '两者都是4位量化，但K_M（中等）和K_S（小）在每个量化块的内存分配上有所不同。Q4_K_M使用更多元数据以获得更好的质量重构----通常对7B模型为4.5～5GB。Q4_K_S更激进----与K_M相比节省300～400MB，但有3～5%的质量损失。除非在极度受限硬件（<4GB RAM）上，否则使用Q4_K_M。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q8_0和Q8_K_XL有什么区别？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0是标准的llama.cpp 8位量化----每个权重8位，7B模型约7.7 GB，相比FP16质量损失不足0.5%。Q8_K_XL是Unsloth的"Dynamic"GGUF变体，保留8位基础但将最敏感的层上采样到16位，以略大的文件大小将质量推向接近完整FP16。Q8_0对大多数用户已几乎无损，只有需要最后零点几个百分点精度且有富余VRAM时Q8_K_XL才有帮助。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8_0是标准的llama.cpp 8位量化----每个权重8位，7B模型约7.7 GB，相比FP16质量损失不足0.5%。Q8_K_XL不是llama.cpp的原生类型；它是Unsloth的"Dynamic"GGUF变体，保留8位基础，但将最敏感的层（嵌入层、注意力层、输出层）上采样到16位，以略大的文件大小将质量推向接近完整FP16。Q8_0对大多数用户而言已几乎无损，因此只有当您需要最后零点几个百分点的精度且有富余VRAM时，Q8_K_XL才有帮助。文件大小因模型而异----下载前请在LM Studio或Hugging Face上查看大小。',
+            },
           },
           {
             '@type': 'Question',
-            'name': '我可以在不重新下载的情况下切换量化吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '不可以----切换量化级别需要下载不同的GGUF文件或重新量化基础模型。' },
+            'name': '我可以在不重新下载模型的情况下切换量化级别吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不可以----切换量化级别需要下载不同的GGUF文件或自己重新量化基础模型。一旦模型被量化为Q4_K_M，如果没有原始FP16模型，您就无法将其转换回Q5_K_M。大多数用户从Hugging Face为其所需的量化级别下载预先量化的GGUF文件。',
+            },
           },
           {
             '@type': 'Question',
             'name': '量化如何影响推理速度？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '量化通常增加推理速度10～40%，因为处理4位权重比16位浮点数更快。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量化通常增加推理速度10～40%，因为加载和处理4位权重比16位浮点数更快。Q4_K_M 7B模型在消费级CPU上以约8～12 tok/s运行；相同模型在FP16下以约1～2 tok/s运行。量化对GPU性能的提升较小（快5～15%），因为GPU已经为浮点运算优化。',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Ollama默认使用哪种量化？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama默认为其库中的所有模型使用Q4_K_M。' },
+            'name': 'Ollama默认使用哪种量化级别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama默认为其库中的所有模型使用Q4_K_M。运行`ollama pull llama3.1:8b`时，您正在下载Q4_K_M变体。此默认为大多数用户很好地平衡了质量和RAM要求。要拉取不同的量化，请附加标签：`ollama pull llama3.1:8b:q5_k_m`或`ollama pull llama3.1:8b:q8_0`。',
+            },
           },
           {
             '@type': 'Question',
             'name': '能在单块RTX 4090上运行Llama 3.3 70B吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '可以，使用卸载。Llama 3.3 70B Q4_K_M需要~40GB。CPU卸载速度5-10 token/秒。2× RTX 4090层分割可达~100 token/秒。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以，使用卸载。Llama 3.3 70B Q4_K_M需要~40GB----超过RTX 4090的24GB VRAM。通过CPU卸载：~24GB在VRAM中，~16GB在系统RAM中，速度5-10 token/秒。更好的选择：2× RTX 4090层分割（~100 token/秒）或搭载M5 Ultra的Mac Studio，它能在统一内存中原生容纳该模型（独立的token/秒测试数据尚不存在----该芯片于2026年9月22日上市）。',
+            },
           },
           {
             '@type': 'Question',
             'name': '量化与卸载有什么区别？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '量化降低权重精度（FP16→4位）。卸载在VRAM不足时将模型移至系统RAM。量化减小总大小；卸载使运行更大模型成为可能但会降低速度。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '量化降低模型权重的数值精度（FP16 → 4位），减少50-75%的内存需求，不改变模型架构。卸载在模型无法放入VRAM时将其部分移至系统RAM或CPU。量化减小总体大小；卸载使运行大于VRAM的模型成为可能，但会降低速度。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Mac Studio M5 Ultra运行70B模型需要量化吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '不需要----最低96GB统一内存即可原生运行Llama 3.3 70B。仍推荐Q4_K_M；这款新芯片目前尚无独立的速度测试数据。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需要----搭载M5 Ultra的Mac Studio最低配备96GB统一内存（最高512GB），可原生运行Llama 3.3 70B。无需卸载。仍推荐使用Q4_K_M，因为内存带宽而非内存容量是限制因素；这款新芯片目前尚无独立的速度测试数据。',
+            },
           },
           {
             '@type': 'Question',
             'name': '哪种技术组合最适合我的硬件？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '8GB VRAM：Q4_K_M用于7B模型。24GB VRAM：7-13B原生Q4_K_M，70B需卸载。2× 24GB：70B的Q5_K_M层分割。Apple Silicon：Q4_K_M加统一内存。' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '8GB VRAM（RTX 4060 Ti）：Q4_K_M用于最多7B模型。24GB VRAM（RTX 4090）：7-13B原生Q4_K_M；70B需要64GB系统RAM卸载。2× 24GB VRAM：70B的Q5_K_M层分割（~100 token/秒）。Apple Silicon：直接使用统一内存，Q4_K_M优化速度。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以自己量化模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以----llama.cpp包含一个`quantize`二进制文件，可将GGUF文件转换为任何支持的量化级别。',
+            },
           },
         ],
       },
@@ -5309,102 +5354,170 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Q4_K_XL은 무엇이고 Q4_K_M보다 나을까요?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL은 llama.cpp의 표준 형식이 아니라 Unsloth의 Dynamic GGUF 변형입니다. Q4_K_M과 같은 4비트 기반을 유지하면서 가장 민감한 레이어를 더 높은 정밀도로 저장하므로, 파일 크기와 품질이 Q4_K_M과 Q5_K_M 사이에 놓입니다. Q5_K_M이 VRAM에 아슬아슬하게 들어가지 않을 때 주로 의미가 있습니다. Q5_K_M이 들어간다면 표준 형식이고 도구 지원이 넓은 Q5_K_M을 선택하세요.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_XL은 llama.cpp의 표준 형식이 아니라 Unsloth의 Dynamic GGUF 변형입니다. Q4_K_M과 같은 4비트 기반을 유지하면서 가장 민감한 레이어를 더 높은 정밀도로 저장하므로, 파일 크기와 품질이 Q4_K_M과 Q5_K_M 사이에 놓입니다. Q5_K_M이 VRAM에 아슬아슬하게 들어가지 않을 때 주로 의미가 있습니다. Q5_K_M이 들어간다면 표준 형식이고 도구 지원이 넓은 Q5_K_M을 선택하세요.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q5_K_M과 Q5_K_XL은 무엇이 다른가요?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4, Q8과 같은 원리입니다. Q5_K_M은 llama.cpp의 표준 K-quant이고, Q5_K_XL은 민감한 레이어를 더 높은 해상도로 담아 파일이 조금 커지는 Unsloth의 Dynamic 변형입니다. Q5_K_M은 이미 품질 손실이 1% 미만이므로 실질적인 이득은 크지 않습니다. XL 변형을 고르기 전에 도구에서 실제 파일 크기를 확인하세요.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4, Q8과 같은 원리입니다. Q5_K_M은 llama.cpp의 표준 K-quant이고, Q5_K_XL은 민감한 레이어를 더 높은 해상도로 담아 파일이 조금 커지는 Unsloth의 Dynamic 변형입니다. Q5_K_M은 이미 품질 손실이 1% 미만이므로 실질적인 이득은 크지 않습니다. XL 변형을 고르기 전에 도구에서 실제 파일 크기를 확인하세요.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'FP8과 Q8_0 중 무엇을 써야 하나요?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp, Ollama, LM Studio로 로컬 실행할 때 관련 있는 형식은 Q8_0입니다. FP8은 주로 최신 NVIDIA 하드웨어의 서버 추론에서 의미가 있는 자료형이며 GGUF 생태계에서 흔한 다운로드 선택지는 아닙니다. Q8_0은 이미 FP16 대비 품질 손실이 0.5% 미만이므로, 실제 선택은 Q8_0과 더 작은 K-quant 사이에서 이루어집니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp, Ollama, LM Studio로 로컬 실행할 때 관련 있는 형식은 Q8_0입니다. FP8은 주로 최신 NVIDIA 하드웨어의 서버 추론에서 의미가 있는 자료형이며 GGUF 생태계에서 흔한 다운로드 선택지는 아닙니다. Q8_0은 이미 FP16 대비 품질 손실이 0.5% 미만이므로, 실제 선택은 Q8_0과 더 작은 K-quant 사이에서 이루어집니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_0과 Q4_1은 아직 의미가 있나요?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '없습니다. 둘 다 K-quant 개선이 들어가기 전의 오래된 형식입니다. Q4_0은 모든 가중치를 4비트로 균일하게 양자화하고, Q4_1은 오프셋을 더했지만 마찬가지로 대체되었습니다. Q4_K_M은 사실상 같은 메모리 사용량으로 눈에 띄게 나은 품질을 냅니다. 저장소에서 둘 다 보인다면 Q4_K_M을 고르십시오. Q4_0과 Q4_1은 이제 오래된 모델 업로드에서만 보입니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '없습니다. 둘 다 K-quant 개선이 들어가기 전의 오래된 형식입니다. Q4_0은 모든 가중치를 4비트로 균일하게 양자화하고, Q4_1은 오프셋을 더했지만 마찬가지로 대체되었습니다. Q4_K_M은 사실상 같은 메모리 사용량으로 눈에 띄게 나은 품질을 냅니다. 저장소에서 둘 다 보인다면 Q4_K_M을 고르십시오. Q4_0과 Q4_1은 이제 오래된 모델 업로드에서만 보입니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ollama는 자동으로 최적의 양자화를 사용합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '그렇습니다 — `ollama pull llama3.1:8b`를 실행하면 Ollama는 기본적으로 Q4_K_M 변형을 다운로드합니다. 특정 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b-instruct-q5_K_M`.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '그렇습니다 — `ollama pull llama3.1:8b`를 실행하면 Ollama는 기본적으로 Q4_K_M 변형을 다운로드합니다. 특정 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b-instruct-q5_K_M`. 각 모델의 사용 가능한 양자화 태그는 ollama.com/library의 모델 페이지에 나열되어 있습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '미리 양자화된 버전을 다운로드하는 대신 직접 모델을 양자화할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '그렇습니다 — llama.cpp에는 GGUF 파일을 지원하는 모든 양자화 수준으로 변환하는 `quantize` 바이너리가 포함되어 있습니다. 프로세스는 모델 크기에 따라 5–30분이 소요됩니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '그렇습니다 — llama.cpp에는 GGUF 파일을 지원하는 모든 양자화 수준으로 변환하는 `quantize` 바이너리가 포함되어 있습니다. 프로세스는 모델 크기에 따라 5–30분이 소요됩니다. 결과는 동등하므로 대부분의 사용자는 직접 양자화하는 것보다 Hugging Face에서 미리 양자화된 GGUF 파일을 다운로드하는 것을 권장합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '양자화가 모델의 컨텍스트 창에 영향을 줍니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '아닙니다 — 양자화는 모델 가중치 정밀도에만 영향을 미치며 컨텍스트 길이에는 영향을 주지 않습니다. Llama 3.1 8B 모델은 Q4_K_M으로 양자화되든 FP16으로 실행되든 128K 토큰을 지원합니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다 — 양자화는 모델 가중치 정밀도에만 영향을 미치며 컨텍스트 길이에는 영향을 주지 않습니다. Llama 3.1 8B 모델은 Q4_K_M으로 양자화되든 FP16으로 실행되든 128K 토큰을 지원합니다. 그러나 양자화에 관계없이 긴 컨텍스트를 처리하려면 더 많은 RAM이 필요합니다 — Q4_K_M 7B 모델로 64K 토큰 컨텍스트를 처리하면 10+ GB RAM이 필요할 수 있습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'GGUF와 GPTQ 양자화의 차이점은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF(llama.cpp 형식)와 GPTQ는 두 가지 다른 양자화 방식입니다. GGUF는 K-퀀트를 사용하며 CPU와 GPU에서 모두 실행됩니다. GPTQ는 GPU 전용이며 PyTorch가 필요합니다. 로컬 추론에는 GGUF가 올바른 형식입니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF(llama.cpp 형식)와 GPTQ는 두 가지 다른 양자화 방식입니다. GGUF는 K-퀀트를 사용하며 CPU와 GPU에서 모두 실행됩니다. GPTQ는 GPU 전용이며 PyTorch가 필요합니다. Ollama, LM Studio, Jan AI를 이용한 로컬 추론에는 GGUF가 올바른 형식입니다. GPTQ는 AutoGPTQ 및 vLLM 같은 GPU 중심 추론 프레임워크에서 사용됩니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_K_M과 Q4_0의 차이점은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M과 Q4_0은 둘 다 4비트 양자화이지만 서로 다른 알고리즘을 사용합니다. Q4_0은 초기 llama.cpp의 원래 균일 4비트 형식입니다. Q4_K_M은 가중치를 블록으로 그룹화하고 혼합 정밀도를 적용하는 K-퀀트로, 동일한 RAM 사용량으로 5-8%의 품질을 회복합니다. 두 가지가 모두 있을 때는 항상 Q4_K_M을 선택하십시오.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M과 Q4_0은 둘 다 4비트 양자화이지만 서로 다른 알고리즘을 사용합니다. Q4_0은 초기 llama.cpp의 원래 균일 4비트 형식입니다. Q4_K_M은 2023년에 도입된 K-퀀트로, 가중치를 블록으로 그룹화하고 각 블록 내에서 혼합 정밀도를 적용하여 동일한 RAM 사용량으로 5-8%의 품질을 회복합니다. Hugging Face에서 두 가지를 모두 볼 경우 항상 Q4_K_M을 선택하십시오. Q4_0은 레거시 호환성을 위해서만 존재합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Hugging Face의 다른 제공자가 만든 Q4_K_M 모델 간에 품질 차이가 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '양자화 알고리즘은 llama.cpp에서 표준화되어 있으므로, 동일한 기본 모델의 Q4_K_M 양자화는 거의 동일합니다. imatrix 양자화를 적용하는 제공자는 동일한 비트 수에서 더 높은 품질을 제공합니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '양자화 알고리즘은 llama.cpp에서 표준화되어 있으므로, 동일한 기본 모델의 Q4_K_M 양자화는 GGUF 파일을 누가 만들었는지에 관계없이 거의 동일합니다. 그러나 일부 제공자는 imatrix 양자화를 적용하여 동일한 비트 수에서 품질을 향상시킵니다. "imat" 또는 "importance matrix"로 설명된 파일은 일반적으로 동일한 비트 수에서 더 높은 품질을 제공합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '이매트릭스(imatrix) 양자화란 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'imatrix(중요도 행렬) 양자화는 교정 데이터를 사용하여 모델 출력에 미치는 중요도에 따라 가중치에 서로 다른 정밀도 수준을 할당합니다. 표준 Q4_K_M 대비 동일한 비트 수에서 2–4% 더 나은 품질을 냅니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'imatrix(중요도 행렬) 양자화는 교정 데이터를 사용하여 모델 출력에 미치는 중요도에 따라 가중치에 서로 다른 정밀도 수준을 할당합니다. 예측에 가장 큰 영향을 미치는 가중치는 더 많은 비트로 양자화되고, 덜 중요한 가중치는 더 적은 비트를 사용합니다. 결과: 균일 양자화 대비 동일한 비트 수에서 더 나은 품질. Qwen3 imatrix 양자화는 표준 Q4_K_M 대비 2–4% 더 좋습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q4_K_M과 Q4_K_S의 차이점은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '두 가지 모두 4비트 양자화이지만, K_M(미디엄)과 K_S(스몰)는 양자화 블록당 메모리 할당이 다릅니다. Q4_K_M은 더 나은 품질 복원을 위해 더 많은 메타데이터를 사용하며, Q4_K_S는 300–400 MB를 절약하지만 3–5% 품질 손실이 있습니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '두 가지 모두 4비트 양자화이지만, K_M(미디엄)과 K_S(스몰)는 양자화 블록당 메모리 할당이 다릅니다. Q4_K_M은 더 나은 품질 복원을 위해 더 많은 메타데이터를 사용합니다 — 7B 모델 기준 일반적으로 4.5–5 GB. Q4_K_S는 K_M 대비 300–400 MB를 절약하지만 3–5% 품질 손실이 있습니다. RAM이 4 GB 미만으로 극도로 제한된 경우를 제외하고는 Q4_K_M을 사용하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q8_0과 Q8_K_XL의 차이점은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q8_0은 llama.cpp의 표준 8비트 양자화입니다 — 모든 가중치가 8비트이며, 7B 모델 기준 약 7.7 GB, FP16 대비 손실은 0.5% 미만입니다. Q8_K_XL은 표준 llama.cpp 유형이 아니라 Unsloth의 "Dynamic" GGUF 변형으로, 8비트 기반에 가장 민감한 레이어를 16비트로 업캐스트하여 품질을 완전한 FP16에 더 가깝게 만듭니다. Q8_0이 대부분의 사용자에게 이미 사실상 무손실이므로, Q8_K_XL은 마지막 몇 분의 1 퍼센트의 정밀도가 필요하고 여유 VRAM이 있을 때만 도움이 됩니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8_0은 llama.cpp의 표준 8비트 양자화입니다 — 모든 가중치가 8비트이며, 7B 모델 기준 약 7.7 GB, FP16 대비 손실은 0.5% 미만입니다. Q8_K_XL은 표준 llama.cpp 유형이 아니라 Unsloth의 "Dynamic" GGUF 변형으로, 8비트 기반을 유지하면서 가장 민감한 레이어(임베딩, 어텐션, 출력)를 16비트로 업캐스트하여 품질을 완전한 FP16에 더 가깝게 만듭니다. Q8_0이 대부분의 사용자에게 이미 사실상 무손실이므로, Q8_K_XL은 마지막 몇 분의 1 퍼센트의 정밀도가 필요하고 여유 VRAM이 있을 때만 도움이 됩니다. 파일 크기는 모델마다 다르므로 다운로드 전에 LM Studio나 Hugging Face에서 크기를 확인하십시오.',
+            },
           },
           {
             '@type': 'Question',
-            'name': '모델을 다시 다운로드하지 않고 양자화 수준을 전환할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '아닙니다 — 양자화 수준 전환에는 다른 GGUF 파일을 다운로드하거나 직접 기본 모델을 재양자화해야 합니다. Q4_K_M으로 양자화된 모델은 원본 FP16 모델 없이는 Q5_K_M으로 다시 변환할 수 없습니다.' },
+            'name': '양자화 수준 간 전환 시 모델을 다시 다운로드해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '그렇습니다 — 양자화 수준 전환에는 다른 GGUF 파일을 다운로드하거나 직접 기본 모델을 재양자화해야 합니다. Q4_K_M으로 양자화된 모델은 원본 FP16 모델 없이는 Q5_K_M으로 다시 변환할 수 없습니다. 대부분의 사용자는 원하는 양자화 수준의 미리 양자화된 GGUF 파일을 Hugging Face에서 다운로드합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '양자화는 추론 속도에 어떤 영향을 줍니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '양자화는 일반적으로 추론 속도를 10–40% 향상시킵니다. 4비트 가중치를 로드하고 처리하는 것이 16비트 부동소수점보다 빠르기 때문입니다. GPU에서의 성능 향상은 더 작습니다(5–15% 빠름).' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '양자화는 일반적으로 추론 속도를 10–40% 향상시킵니다. 4비트 가중치를 로드하고 처리하는 것이 16비트 부동소수점보다 빠르기 때문입니다. Q4_K_M 7B 모델은 소비자용 CPU에서 약 8–12 토큰/초로 실행되며, 동일한 모델이 FP16에서는 약 1–2 토큰/초로 실행됩니다. GPU는 이미 부동소수점 연산에 최적화되어 있기 때문에 GPU에서의 양자화 성능 향상은 작습니다(5–15% 빠름).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ollama는 기본적으로 어떤 양자화 수준을 사용합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ollama는 라이브러리의 모든 모델에 대해 Q4_K_M을 기본값으로 사용합니다. 이 기본값은 대부분의 사용자에게 품질과 RAM 요구 사항의 균형을 잘 맞춥니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama는 라이브러리의 모든 모델에 대해 Q4_K_M을 기본값으로 사용합니다. `ollama pull llama3.1:8b`를 실행하면 Q4_K_M 변형을 다운로드합니다. 이 기본값은 대부분의 사용자에게 품질과 RAM 요구 사항의 균형을 잘 맞춥니다. 다른 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b:q5_k_m` 또는 `ollama pull llama3.1:8b:q8_0`.',
+            },
           },
           {
             '@type': 'Question',
             'name': '단일 RTX 4090에서 Llama 3.3 70B를 실행할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '그렇습니다, 하지만 느립니다. Q4로 양자화(35 GB)하고 11 GB를 시스템 RAM으로 오프로드합니다. 실용적인 70B 추론을 위해서는 레이어 분할로 2× RTX 4090(~100 토큰/초) 또는 통합 메모리에 모델을 네이티브로 담을 수 있는 M5 Ultra 탑재 Mac Studio를 사용하십시오(독립적인 토큰/초 벤치마크는 아직 없습니다 — 해당 칩은 2026년 9월 22일 출시됩니다).' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '그렇습니다, 하지만 느립니다. Q4로 양자화(35 GB)하고 11 GB를 시스템 RAM으로 오프로드합니다. 5–10 토큰/초를 예상하십시오 — 실시간 채팅에는 너무 느리지만 배치 처리에는 적합합니다. 실용적인 70B 추론을 위해서는: 레이어 분할로 2× RTX 4090(~100 토큰/초) 또는 통합 메모리에 모델을 네이티브로 담을 수 있는 M5 Ultra 탑재 Mac Studio를 사용하십시오(독립적인 토큰/초 벤치마크는 아직 없습니다 — 해당 칩은 2026년 9월 22일 출시됩니다).',
+            },
           },
           {
             '@type': 'Question',
             'name': '양자화와 오프로딩의 차이점은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '양자화는 모델 가중치 정밀도를 영구적으로 줄입니다(FP16 → Q4). 오프로딩은 런타임에 모델 레이어를 VRAM에서 시스템 RAM으로 이동합니다. 양자화를 먼저 사용하고, 오프로딩은 최후의 수단으로 사용하십시오.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '양자화는 모델 가중치 정밀도를 영구적으로 줄입니다(FP16 → Q4). 모델 파일이 작아집니다. 오프로딩은 런타임에 모델 레이어를 VRAM에서 시스템 RAM으로 이동합니다. 양자화는 품질에 미치는 영향이 최소화되고(±5%), 오프로딩은 5–10배 속도 저하를 초래합니다. 양자화를 먼저 사용하고, 오프로딩은 최후의 수단으로 사용하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Mac Studio M5 Ultra는 70B 모델에 양자화가 필요합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '경미한 양자화만 필요합니다. M5 Ultra 탑재 Mac Studio는 최소 96 GB 통합 메모리(최대 512 GB)를 제공하며, Llama 3.3 70B를 Q4(35 GB)로 네이티브 실행할 수 있습니다 — 오프로딩이나 레이어 분할 없이도 가능합니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '경미한 양자화만 필요합니다. M5 Ultra 탑재 Mac Studio는 최소 96 GB 통합 메모리(최대 512 GB)를 제공하며, Llama 3.3 70B를 Q4(35 GB)로 네이티브 실행할 수 있습니다 — 오프로딩이나 레이어 분할 없이도 가능합니다. Q5에서도 70B가 맞습니다(44 GB). FP16 70B(140 GB)도 맞지만 더 느리게 실행됩니다. Q4는 Mac Studio 70B 워크플로의 최적 선택입니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '내 하드웨어에 가장 적합한 기법 조합은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '단일 RTX 4090 (24 GB): Q4 + 오프로딩으로 70B. 2× RTX 4090 (48 GB): Q5 + 레이어 분할로 70B (100 토큰/초). Mac Studio M5 Ultra (96–512 GB): 오프로딩 없이 Q4 네이티브로 70B 실행 — 독립적인 토큰/초 벤치마크는 칩 출시일인 2026년 9월 22일 이후를 기다려야 합니다.' },
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '단일 RTX 4090 (24 GB): Q4 + 오프로딩으로 70B (느림). Q5 네이티브로 32B (빠름). 2× RTX 4090 (48 GB): Q5 + 레이어 분할로 70B (100 토큰/초). RTX 5090 (32 GB): Q4 네이티브로 70B (10–12 토큰/초). Mac Studio M5 Ultra (96–512 GB): 오프로딩 없이 Q4 네이티브로 70B 실행 — 독립적인 토큰/초 벤치마크는 칩 출시일인 2026년 9월 22일 이후를 기다려야 합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '모델을 다시 다운로드하지 않고 양자화 수준을 전환할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다 — 양자화 수준 전환에는 다른 GGUF 파일을 다운로드하거나 직접 기본 모델을 재양자화해야 합니다. Q4_K_M으로 양자화된 모델은 원본 FP16 모델 없이는 Q5_K_M으로 다시 변환할 수 없습니다.',
+            },
           },
         ],
       },
@@ -5802,86 +5915,27 @@ schema: {
           id: 'common-questions',
           title: 'LLM 양자화에 관한 자주 묻는 질문',
           faqs: [
-            {
-              q: 'Q4_K_XL은 무엇이고 Q4_K_M보다 나을까요?',
-              a: 'Q4_K_XL은 llama.cpp의 표준 형식이 아니라 Unsloth의 Dynamic GGUF 변형입니다. Q4_K_M과 같은 4비트 기반을 유지하면서 가장 민감한 레이어를 더 높은 정밀도로 저장하므로, 파일 크기와 품질이 Q4_K_M과 Q5_K_M 사이에 놓입니다. Q5_K_M이 VRAM에 아슬아슬하게 들어가지 않을 때 주로 의미가 있습니다. Q5_K_M이 들어간다면 표준 형식이고 도구 지원이 넓은 Q5_K_M을 선택하세요.',
-            },
-            {
-              q: 'Q5_K_M과 Q5_K_XL은 무엇이 다른가요?',
-              a: 'Q4, Q8과 같은 원리입니다. Q5_K_M은 llama.cpp의 표준 K-quant이고, Q5_K_XL은 민감한 레이어를 더 높은 해상도로 담아 파일이 조금 커지는 Unsloth의 Dynamic 변형입니다. Q5_K_M은 이미 품질 손실이 1% 미만이므로 실질적인 이득은 크지 않습니다. XL 변형을 고르기 전에 도구에서 실제 파일 크기를 확인하세요.',
-            },
-            {
-              q: 'FP8과 Q8_0 중 무엇을 써야 하나요?',
-              a: 'llama.cpp, Ollama, LM Studio로 로컬 실행할 때 관련 있는 형식은 Q8_0입니다. FP8은 주로 최신 NVIDIA 하드웨어의 서버 추론에서 의미가 있는 자료형이며 GGUF 생태계에서 흔한 다운로드 선택지는 아닙니다. Q8_0은 이미 FP16 대비 품질 손실이 0.5% 미만이므로, 실제 선택은 Q8_0과 더 작은 K-quant 사이에서 이루어집니다.',
-            },
-            {
-              q: 'Q4_0과 Q4_1은 아직 의미가 있나요?',
-              a: '없습니다. 둘 다 K-quant 개선이 들어가기 전의 오래된 형식입니다. Q4_0은 모든 가중치를 4비트로 균일하게 양자화하고, Q4_1은 오프셋을 더했지만 마찬가지로 대체되었습니다. Q4_K_M은 사실상 같은 메모리 사용량으로 눈에 띄게 나은 품질을 냅니다. 저장소에서 둘 다 보인다면 Q4_K_M을 고르십시오. Q4_0과 Q4_1은 이제 오래된 모델 업로드에서만 보입니다.',
-            },
-            {
-              q: 'Ollama는 자동으로 최적의 양자화를 사용합니까?',
-              a: '그렇습니다 — `ollama pull llama3.1:8b`를 실행하면 Ollama는 기본적으로 Q4_K_M 변형을 다운로드합니다. 특정 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b-instruct-q5_K_M`. 각 모델의 사용 가능한 양자화 태그는 ollama.com/library의 모델 페이지에 나열되어 있습니다.',
-            },
-            {
-              q: '미리 양자화된 버전을 다운로드하는 대신 직접 모델을 양자화할 수 있습니까?',
-              a: '그렇습니다 — llama.cpp에는 GGUF 파일을 지원하는 모든 양자화 수준으로 변환하는 `quantize` 바이너리가 포함되어 있습니다. 프로세스는 모델 크기에 따라 5–30분이 소요됩니다. 결과는 동등하므로 대부분의 사용자는 직접 양자화하는 것보다 Hugging Face에서 미리 양자화된 GGUF 파일을 다운로드하는 것을 권장합니다.',
-            },
-            {
-              q: '양자화가 모델의 컨텍스트 창에 영향을 줍니까?',
-              a: '아닙니다 — 양자화는 모델 가중치 정밀도에만 영향을 미치며 컨텍스트 길이에는 영향을 주지 않습니다. Llama 3.1 8B 모델은 Q4_K_M으로 양자화되든 FP16으로 실행되든 128K 토큰을 지원합니다. 그러나 양자화에 관계없이 긴 컨텍스트를 처리하려면 더 많은 RAM이 필요합니다 — Q4_K_M 7B 모델로 64K 토큰 컨텍스트를 처리하면 10+ GB RAM이 필요할 수 있습니다.',
-            },
-            {
-              q: 'GGUF와 GPTQ 양자화의 차이점은 무엇입니까?',
-              a: 'GGUF(llama.cpp 형식)와 GPTQ는 두 가지 다른 양자화 방식입니다. GGUF는 K-퀀트를 사용하며 CPU와 GPU에서 모두 실행됩니다. GPTQ는 GPU 전용이며 PyTorch가 필요합니다. Ollama, LM Studio, Jan AI를 이용한 로컬 추론에는 GGUF가 올바른 형식입니다. GPTQ는 AutoGPTQ 및 vLLM 같은 GPU 중심 추론 프레임워크에서 사용됩니다.',
-            },
-            {
-              q: 'Q4_K_M과 Q4_0의 차이점은 무엇입니까?',
-              a: 'Q4_K_M과 Q4_0은 둘 다 4비트 양자화이지만 서로 다른 알고리즘을 사용합니다. Q4_0은 초기 llama.cpp의 원래 균일 4비트 형식입니다. Q4_K_M은 2023년에 도입된 K-퀀트로, 가중치를 블록으로 그룹화하고 각 블록 내에서 혼합 정밀도를 적용하여 동일한 RAM 사용량으로 5-8%의 품질을 회복합니다. Hugging Face에서 두 가지를 모두 볼 경우 항상 Q4_K_M을 선택하십시오. Q4_0은 레거시 호환성을 위해서만 존재합니다.',
-            },
-            {
-              q: 'Hugging Face의 다른 제공자가 만든 Q4_K_M 모델 간에 품질 차이가 있습니까?',
-              a: '양자화 알고리즘은 llama.cpp에서 표준화되어 있으므로, 동일한 기본 모델의 Q4_K_M 양자화는 GGUF 파일을 누가 만들었는지에 관계없이 거의 동일합니다. 그러나 일부 제공자는 imatrix 양자화를 적용하여 동일한 비트 수에서 품질을 향상시킵니다. "imat" 또는 "importance matrix"로 설명된 파일은 일반적으로 동일한 비트 수에서 더 높은 품질을 제공합니다.',
-            },
-            {
-              q: '이매트릭스(imatrix) 양자화란 무엇입니까?',
-              a: 'imatrix(중요도 행렬) 양자화는 교정 데이터를 사용하여 모델 출력에 미치는 중요도에 따라 가중치에 서로 다른 정밀도 수준을 할당합니다. 예측에 가장 큰 영향을 미치는 가중치는 더 많은 비트로 양자화되고, 덜 중요한 가중치는 더 적은 비트를 사용합니다. 결과: 균일 양자화 대비 동일한 비트 수에서 더 나은 품질. Qwen3 imatrix 양자화는 표준 Q4_K_M 대비 2–4% 더 좋습니다.',
-            },
-            {
-              q: 'Q4_K_M과 Q4_K_S의 차이점은 무엇입니까?',
-              a: '두 가지 모두 4비트 양자화이지만, K_M(미디엄)과 K_S(스몰)는 양자화 블록당 메모리 할당이 다릅니다. Q4_K_M은 더 나은 품질 복원을 위해 더 많은 메타데이터를 사용합니다 — 7B 모델 기준 일반적으로 4.5–5 GB. Q4_K_S는 K_M 대비 300–400 MB를 절약하지만 3–5% 품질 손실이 있습니다. RAM이 4 GB 미만으로 극도로 제한된 경우를 제외하고는 Q4_K_M을 사용하십시오.',
-            },
-            {
-              q: 'Q8_0과 Q8_K_XL의 차이점은 무엇입니까?',
-              a: 'Q8_0은 llama.cpp의 표준 8비트 양자화입니다 — 모든 가중치가 8비트이며, 7B 모델 기준 약 7.7 GB, FP16 대비 손실은 0.5% 미만입니다. Q8_K_XL은 표준 llama.cpp 유형이 아니라 Unsloth의 "Dynamic" GGUF 변형으로, 8비트 기반을 유지하면서 가장 민감한 레이어(임베딩, 어텐션, 출력)를 16비트로 업캐스트하여 품질을 완전한 FP16에 더 가깝게 만듭니다. Q8_0이 대부분의 사용자에게 이미 사실상 무손실이므로, Q8_K_XL은 마지막 몇 분의 1 퍼센트의 정밀도가 필요하고 여유 VRAM이 있을 때만 도움이 됩니다. 파일 크기는 모델마다 다르므로 다운로드 전에 LM Studio나 Hugging Face에서 크기를 확인하십시오.',
-            },
-            {
-              q: '양자화 수준 간 전환 시 모델을 다시 다운로드해야 합니까?',
-              a: '그렇습니다 — 양자화 수준 전환에는 다른 GGUF 파일을 다운로드하거나 직접 기본 모델을 재양자화해야 합니다. Q4_K_M으로 양자화된 모델은 원본 FP16 모델 없이는 Q5_K_M으로 다시 변환할 수 없습니다. 대부분의 사용자는 원하는 양자화 수준의 미리 양자화된 GGUF 파일을 Hugging Face에서 다운로드합니다.',
-            },
-            {
-              q: '양자화는 추론 속도에 어떤 영향을 줍니까?',
-              a: '양자화는 일반적으로 추론 속도를 10–40% 향상시킵니다. 4비트 가중치를 로드하고 처리하는 것이 16비트 부동소수점보다 빠르기 때문입니다. Q4_K_M 7B 모델은 소비자용 CPU에서 약 8–12 토큰/초로 실행되며, 동일한 모델이 FP16에서는 약 1–2 토큰/초로 실행됩니다. GPU는 이미 부동소수점 연산에 최적화되어 있기 때문에 GPU에서의 양자화 성능 향상은 작습니다(5–15% 빠름).',
-            },
-            {
-              q: 'Ollama는 기본적으로 어떤 양자화 수준을 사용합니까?',
-              a: 'Ollama는 라이브러리의 모든 모델에 대해 Q4_K_M을 기본값으로 사용합니다. `ollama pull llama3.1:8b`를 실행하면 Q4_K_M 변형을 다운로드합니다. 이 기본값은 대부분의 사용자에게 품질과 RAM 요구 사항의 균형을 잘 맞춥니다. 다른 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b:q5_k_m` 또는 `ollama pull llama3.1:8b:q8_0`.',
-            },
-            {
-              q: '단일 RTX 4090에서 Llama 3.3 70B를 실행할 수 있습니까?',
-              a: '그렇습니다, 하지만 느립니다. Q4로 양자화(35 GB)하고 11 GB를 시스템 RAM으로 오프로드합니다. 5–10 토큰/초를 예상하십시오 — 실시간 채팅에는 너무 느리지만 배치 처리에는 적합합니다. 실용적인 70B 추론을 위해서는: 레이어 분할로 2× RTX 4090(~100 토큰/초) 또는 통합 메모리에 모델을 네이티브로 담을 수 있는 M5 Ultra 탑재 Mac Studio를 사용하십시오(독립적인 토큰/초 벤치마크는 아직 없습니다 — 해당 칩은 2026년 9월 22일 출시됩니다).',
-            },
-            {
-              q: '양자화와 오프로딩의 차이점은 무엇입니까?',
-              a: '양자화는 모델 가중치 정밀도를 영구적으로 줄입니다(FP16 → Q4). 모델 파일이 작아집니다. 오프로딩은 런타임에 모델 레이어를 VRAM에서 시스템 RAM으로 이동합니다. 양자화는 품질에 미치는 영향이 최소화되고(±5%), 오프로딩은 5–10배 속도 저하를 초래합니다. 양자화를 먼저 사용하고, 오프로딩은 최후의 수단으로 사용하십시오.',
-            },
-            {
-              q: 'Mac Studio M5 Ultra는 70B 모델에 양자화가 필요합니까?',
-              a: '경미한 양자화만 필요합니다. M5 Ultra 탑재 Mac Studio는 최소 96 GB 통합 메모리(최대 512 GB)를 제공하며, Llama 3.3 70B를 Q4(35 GB)로 네이티브 실행할 수 있습니다 — 오프로딩이나 레이어 분할 없이도 가능합니다. Q5에서도 70B가 맞습니다(44 GB). FP16 70B(140 GB)도 맞지만 더 느리게 실행됩니다. Q4는 Mac Studio 70B 워크플로의 최적 선택입니다.',
-            },
-            {
-              q: '내 하드웨어에 가장 적합한 기법 조합은 무엇입니까?',
-              a: '단일 RTX 4090 (24 GB): Q4 + 오프로딩으로 70B (느림). Q5 네이티브로 32B (빠름). 2× RTX 4090 (48 GB): Q5 + 레이어 분할로 70B (100 토큰/초). RTX 5090 (32 GB): Q4 네이티브로 70B (10–12 토큰/초). Mac Studio M5 Ultra (96–512 GB): 오프로딩 없이 Q4 네이티브로 70B 실행 — 독립적인 토큰/초 벤치마크는 칩 출시일인 2026년 9월 22일 이후를 기다려야 합니다.',
-            },
+            { q: 'Q4_K_XL은 무엇이고 Q4_K_M보다 나을까요?', a: 'Q4_K_XL은 llama.cpp의 표준 형식이 아니라 Unsloth의 Dynamic GGUF 변형입니다. Q4_K_M과 같은 4비트 기반을 유지하면서 가장 민감한 레이어를 더 높은 정밀도로 저장하므로, 파일 크기와 품질이 Q4_K_M과 Q5_K_M 사이에 놓입니다. Q5_K_M이 VRAM에 아슬아슬하게 들어가지 않을 때 주로 의미가 있습니다. Q5_K_M이 들어간다면 표준 형식이고 도구 지원이 넓은 Q5_K_M을 선택하세요.' },
+            { q: 'Q5_K_M과 Q5_K_XL은 무엇이 다른가요?', a: 'Q4, Q8과 같은 원리입니다. Q5_K_M은 llama.cpp의 표준 K-quant이고, Q5_K_XL은 민감한 레이어를 더 높은 해상도로 담아 파일이 조금 커지는 Unsloth의 Dynamic 변형입니다. Q5_K_M은 이미 품질 손실이 1% 미만이므로 실질적인 이득은 크지 않습니다. XL 변형을 고르기 전에 도구에서 실제 파일 크기를 확인하세요.' },
+            { q: 'FP8과 Q8_0 중 무엇을 써야 하나요?', a: 'llama.cpp, Ollama, LM Studio로 로컬 실행할 때 관련 있는 형식은 Q8_0입니다. FP8은 주로 최신 NVIDIA 하드웨어의 서버 추론에서 의미가 있는 자료형이며 GGUF 생태계에서 흔한 다운로드 선택지는 아닙니다. Q8_0은 이미 FP16 대비 품질 손실이 0.5% 미만이므로, 실제 선택은 Q8_0과 더 작은 K-quant 사이에서 이루어집니다.' },
+            { q: 'Q4_0과 Q4_1은 아직 의미가 있나요?', a: '없습니다. 둘 다 K-quant 개선이 들어가기 전의 오래된 형식입니다. Q4_0은 모든 가중치를 4비트로 균일하게 양자화하고, Q4_1은 오프셋을 더했지만 마찬가지로 대체되었습니다. Q4_K_M은 사실상 같은 메모리 사용량으로 눈에 띄게 나은 품질을 냅니다. 저장소에서 둘 다 보인다면 Q4_K_M을 고르십시오. Q4_0과 Q4_1은 이제 오래된 모델 업로드에서만 보입니다.' },
+            { q: 'Ollama는 자동으로 최적의 양자화를 사용합니까?', a: '그렇습니다 — `ollama pull llama3.1:8b`를 실행하면 Ollama는 기본적으로 Q4_K_M 변형을 다운로드합니다. 특정 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b-instruct-q5_K_M`. 각 모델의 사용 가능한 양자화 태그는 ollama.com/library의 모델 페이지에 나열되어 있습니다.' },
+            { q: '미리 양자화된 버전을 다운로드하는 대신 직접 모델을 양자화할 수 있습니까?', a: '그렇습니다 — llama.cpp에는 GGUF 파일을 지원하는 모든 양자화 수준으로 변환하는 `quantize` 바이너리가 포함되어 있습니다. 프로세스는 모델 크기에 따라 5–30분이 소요됩니다. 결과는 동등하므로 대부분의 사용자는 직접 양자화하는 것보다 Hugging Face에서 미리 양자화된 GGUF 파일을 다운로드하는 것을 권장합니다.' },
+            { q: '양자화가 모델의 컨텍스트 창에 영향을 줍니까?', a: '아닙니다 — 양자화는 모델 가중치 정밀도에만 영향을 미치며 컨텍스트 길이에는 영향을 주지 않습니다. Llama 3.1 8B 모델은 Q4_K_M으로 양자화되든 FP16으로 실행되든 128K 토큰을 지원합니다. 그러나 양자화에 관계없이 긴 컨텍스트를 처리하려면 더 많은 RAM이 필요합니다 — Q4_K_M 7B 모델로 64K 토큰 컨텍스트를 처리하면 10+ GB RAM이 필요할 수 있습니다.' },
+            { q: 'GGUF와 GPTQ 양자화의 차이점은 무엇입니까?', a: 'GGUF(llama.cpp 형식)와 GPTQ는 두 가지 다른 양자화 방식입니다. GGUF는 K-퀀트를 사용하며 CPU와 GPU에서 모두 실행됩니다. GPTQ는 GPU 전용이며 PyTorch가 필요합니다. Ollama, LM Studio, Jan AI를 이용한 로컬 추론에는 GGUF가 올바른 형식입니다. GPTQ는 AutoGPTQ 및 vLLM 같은 GPU 중심 추론 프레임워크에서 사용됩니다.' },
+            { q: 'Q4_K_M과 Q4_0의 차이점은 무엇입니까?', a: 'Q4_K_M과 Q4_0은 둘 다 4비트 양자화이지만 서로 다른 알고리즘을 사용합니다. Q4_0은 초기 llama.cpp의 원래 균일 4비트 형식입니다. Q4_K_M은 2023년에 도입된 K-퀀트로, 가중치를 블록으로 그룹화하고 각 블록 내에서 혼합 정밀도를 적용하여 동일한 RAM 사용량으로 5-8%의 품질을 회복합니다. Hugging Face에서 두 가지를 모두 볼 경우 항상 Q4_K_M을 선택하십시오. Q4_0은 레거시 호환성을 위해서만 존재합니다.' },
+            { q: 'Hugging Face의 다른 제공자가 만든 Q4_K_M 모델 간에 품질 차이가 있습니까?', a: '양자화 알고리즘은 llama.cpp에서 표준화되어 있으므로, 동일한 기본 모델의 Q4_K_M 양자화는 GGUF 파일을 누가 만들었는지에 관계없이 거의 동일합니다. 그러나 일부 제공자는 imatrix 양자화를 적용하여 동일한 비트 수에서 품질을 향상시킵니다. "imat" 또는 "importance matrix"로 설명된 파일은 일반적으로 동일한 비트 수에서 더 높은 품질을 제공합니다.' },
+            { q: '이매트릭스(imatrix) 양자화란 무엇입니까?', a: 'imatrix(중요도 행렬) 양자화는 교정 데이터를 사용하여 모델 출력에 미치는 중요도에 따라 가중치에 서로 다른 정밀도 수준을 할당합니다. 예측에 가장 큰 영향을 미치는 가중치는 더 많은 비트로 양자화되고, 덜 중요한 가중치는 더 적은 비트를 사용합니다. 결과: 균일 양자화 대비 동일한 비트 수에서 더 나은 품질. Qwen3 imatrix 양자화는 표준 Q4_K_M 대비 2–4% 더 좋습니다.' },
+            { q: 'Q4_K_M과 Q4_K_S의 차이점은 무엇입니까?', a: '두 가지 모두 4비트 양자화이지만, K_M(미디엄)과 K_S(스몰)는 양자화 블록당 메모리 할당이 다릅니다. Q4_K_M은 더 나은 품질 복원을 위해 더 많은 메타데이터를 사용합니다 — 7B 모델 기준 일반적으로 4.5–5 GB. Q4_K_S는 K_M 대비 300–400 MB를 절약하지만 3–5% 품질 손실이 있습니다. RAM이 4 GB 미만으로 극도로 제한된 경우를 제외하고는 Q4_K_M을 사용하십시오.' },
+            { q: 'Q8_0과 Q8_K_XL의 차이점은 무엇입니까?', a: 'Q8_0은 llama.cpp의 표준 8비트 양자화입니다 — 모든 가중치가 8비트이며, 7B 모델 기준 약 7.7 GB, FP16 대비 손실은 0.5% 미만입니다. Q8_K_XL은 표준 llama.cpp 유형이 아니라 Unsloth의 "Dynamic" GGUF 변형으로, 8비트 기반을 유지하면서 가장 민감한 레이어(임베딩, 어텐션, 출력)를 16비트로 업캐스트하여 품질을 완전한 FP16에 더 가깝게 만듭니다. Q8_0이 대부분의 사용자에게 이미 사실상 무손실이므로, Q8_K_XL은 마지막 몇 분의 1 퍼센트의 정밀도가 필요하고 여유 VRAM이 있을 때만 도움이 됩니다. 파일 크기는 모델마다 다르므로 다운로드 전에 LM Studio나 Hugging Face에서 크기를 확인하십시오.' },
+            { q: '양자화 수준 간 전환 시 모델을 다시 다운로드해야 합니까?', a: '그렇습니다 — 양자화 수준 전환에는 다른 GGUF 파일을 다운로드하거나 직접 기본 모델을 재양자화해야 합니다. Q4_K_M으로 양자화된 모델은 원본 FP16 모델 없이는 Q5_K_M으로 다시 변환할 수 없습니다. 대부분의 사용자는 원하는 양자화 수준의 미리 양자화된 GGUF 파일을 Hugging Face에서 다운로드합니다.' },
+            { q: '양자화는 추론 속도에 어떤 영향을 줍니까?', a: '양자화는 일반적으로 추론 속도를 10–40% 향상시킵니다. 4비트 가중치를 로드하고 처리하는 것이 16비트 부동소수점보다 빠르기 때문입니다. Q4_K_M 7B 모델은 소비자용 CPU에서 약 8–12 토큰/초로 실행되며, 동일한 모델이 FP16에서는 약 1–2 토큰/초로 실행됩니다. GPU는 이미 부동소수점 연산에 최적화되어 있기 때문에 GPU에서의 양자화 성능 향상은 작습니다(5–15% 빠름).' },
+            { q: 'Ollama는 기본적으로 어떤 양자화 수준을 사용합니까?', a: 'Ollama는 라이브러리의 모든 모델에 대해 Q4_K_M을 기본값으로 사용합니다. `ollama pull llama3.1:8b`를 실행하면 Q4_K_M 변형을 다운로드합니다. 이 기본값은 대부분의 사용자에게 품질과 RAM 요구 사항의 균형을 잘 맞춥니다. 다른 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b:q5_k_m` 또는 `ollama pull llama3.1:8b:q8_0`.' },
+            { q: '단일 RTX 4090에서 Llama 3.3 70B를 실행할 수 있습니까?', a: '그렇습니다, 하지만 느립니다. Q4로 양자화(35 GB)하고 11 GB를 시스템 RAM으로 오프로드합니다. 5–10 토큰/초를 예상하십시오 — 실시간 채팅에는 너무 느리지만 배치 처리에는 적합합니다. 실용적인 70B 추론을 위해서는: 레이어 분할로 2× RTX 4090(~100 토큰/초) 또는 통합 메모리에 모델을 네이티브로 담을 수 있는 M5 Ultra 탑재 Mac Studio를 사용하십시오(독립적인 토큰/초 벤치마크는 아직 없습니다 — 해당 칩은 2026년 9월 22일 출시됩니다).' },
+            { q: '양자화와 오프로딩의 차이점은 무엇입니까?', a: '양자화는 모델 가중치 정밀도를 영구적으로 줄입니다(FP16 → Q4). 모델 파일이 작아집니다. 오프로딩은 런타임에 모델 레이어를 VRAM에서 시스템 RAM으로 이동합니다. 양자화는 품질에 미치는 영향이 최소화되고(±5%), 오프로딩은 5–10배 속도 저하를 초래합니다. 양자화를 먼저 사용하고, 오프로딩은 최후의 수단으로 사용하십시오.' },
+            { q: 'Mac Studio M5 Ultra는 70B 모델에 양자화가 필요합니까?', a: '경미한 양자화만 필요합니다. M5 Ultra 탑재 Mac Studio는 최소 96 GB 통합 메모리(최대 512 GB)를 제공하며, Llama 3.3 70B를 Q4(35 GB)로 네이티브 실행할 수 있습니다 — 오프로딩이나 레이어 분할 없이도 가능합니다. Q5에서도 70B가 맞습니다(44 GB). FP16 70B(140 GB)도 맞지만 더 느리게 실행됩니다. Q4는 Mac Studio 70B 워크플로의 최적 선택입니다.' },
+            { q: '내 하드웨어에 가장 적합한 기법 조합은 무엇입니까?', a: '단일 RTX 4090 (24 GB): Q4 + 오프로딩으로 70B (느림). Q5 네이티브로 32B (빠름). 2× RTX 4090 (48 GB): Q5 + 레이어 분할로 70B (100 토큰/초). RTX 5090 (32 GB): Q4 네이티브로 70B (10–12 토큰/초). Mac Studio M5 Ultra (96–512 GB): 오프로딩 없이 Q4 네이티브로 70B 실행 — 독립적인 토큰/초 벤치마크는 칩 출시일인 2026년 9월 22일 이후를 기다려야 합니다.' },
+            { q: '모델을 다시 다운로드하지 않고 양자화 수준을 전환할 수 있습니까?', a: '아닙니다 — 양자화 수준 전환에는 다른 GGUF 파일을 다운로드하거나 직접 기본 모델을 재양자화해야 합니다. Q4_K_M으로 양자화된 모델은 원본 FP16 모델 없이는 Q5_K_M으로 다시 변환할 수 없습니다.' },
           ],
         },
         sources: {

@@ -66,58 +66,91 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'What does CO-STAR stand for?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. Each letter represents one component of a structured AI prompt. Together, the six components give the model a complete brief — equivalent to what a human writer would need to produce the right output on the first attempt.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. Each letter represents one component of a structured AI prompt. Together, the six components give the model a complete brief — equivalent to what a human writer would need to produce the right output on the first attempt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Who created the CO-STAR framework?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR was popularized by Sheila Teo, a public officer at GovTech Singapore, who used it to win GovTech\'s internal prompt engineering competition. It has since spread widely as one of the most-cited structured prompting frameworks, independent of any specific AI vendor or product.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'When should I use CO-STAR instead of a simpler prompt?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use CO-STAR when multiple dimensions matter at once — when the output needs a specific structure AND tone AND must be calibrated for a particular audience. If you only need a factual answer or a simple format, a shorter prompt or single-step approach is sufficient. CO-STAR shines on documentation, customer-facing content, onboarding materials, and multi-stakeholder communications.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use CO-STAR when multiple dimensions matter at once — when the output needs a specific structure AND tone AND must be calibrated for a particular audience. If you only need a factual answer or a simple format, a shorter prompt or single-step approach is sufficient. CO-STAR shines on documentation, customer-facing content, onboarding materials, and multi-stakeholder communications.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How is CO-STAR different from CRAFT?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Both are structured prompt frameworks but with different emphases. CO-STAR (Context, Objective, Style, Tone, Audience, Response) focuses on communication dimensions — who reads it, how it should feel. CRAFT (Context, Role, Action, Format, Target) focuses on task execution — what role the model plays and what action it takes. CO-STAR is better for audience-centric content; CRAFT is better for role-defined tasks.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Both are structured prompt frameworks but with different emphases. CO-STAR (Context, Objective, Style, Tone, Audience, Response) focuses on communication dimensions — who reads it, how it should feel. CRAFT (Context, Role, Action, Format, Target) focuses on task execution — what role the model plays and what action it takes. CO-STAR is better for audience-centric content; CRAFT is better for role-defined tasks.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How is CO-STAR different from SPECS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'SPECS (Situation, Problem, Examples, Constraints, Style) is problem-solving oriented — it starts from a problem and works toward a solution. CO-STAR is communication-oriented — it starts from an audience and works toward the right message. Use SPECS for analytical and problem-solving tasks; use CO-STAR for content creation and communication tasks.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS (Situation, Problem, Examples, Constraints, Style) is problem-solving oriented — it starts from a problem and works toward a solution. CO-STAR is communication-oriented — it starts from an audience and works toward the right message. Use SPECS for analytical and problem-solving tasks; use CO-STAR for content creation and communication tasks.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I use CO-STAR with local models via Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. CO-STAR is a prompt-level technique — it works with any model that follows instructions. Local models respond to the same six-component structure. Smaller models may handle fewer constraints simultaneously, so prioritize the most important 3-4 components if you\'re using a model under 7B parameters.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. CO-STAR is a prompt-level technique — it works with any model that follows instructions. Local models respond to the same six-component structure. Smaller models may handle fewer constraints simultaneously, so prioritize the most important 3-4 components if you\'re using a model under 7B parameters.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Do I need all six CO-STAR components in every prompt?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Context and Objective are essential. Style, Tone, Audience, and Response improve quality but can be omitted for simple tasks. Start with Context + Objective + Response as the minimum viable CO-STAR prompt, then add Style, Tone, and Audience when the output needs calibration.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Context and Objective are essential. Style, Tone, Audience, and Response improve quality but can be omitted for simple tasks. Start with Context + Objective + Response as the minimum viable CO-STAR prompt, then add Style, Tone, and Audience when the output needs calibration.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I combine CO-STAR with Chain-of-Thought or APE?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. CO-STAR defines WHAT the model should produce and HOW it should feel. Chain-of-Thought or APE define how the model should THINK. You can use CO-STAR for the brief and add "Think step by step before producing the final response" as an additional instruction. The frameworks are complementary, not competing.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'What does CO-STAR stand for in prompt engineering?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. These six components work together to give an AI model a complete brief. Context provides background, Objective states the goal, Style defines structure, Tone sets the voice, Audience clarifies who will read it, and Response specifies the exact format needed.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. CO-STAR defines WHAT the model should produce and HOW it should feel. Chain-of-Thought or APE define how the model should THINK. You can use CO-STAR for the brief and add "Think step by step before producing the final response" as an additional instruction. The frameworks are complementary, not competing.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How do you use the CO-STAR method to write a prompt?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Fill out each of the six CO-STAR fields: write the context, state your objective, specify the style (bullets, narrative, steps), choose the tone (formal, casual, technical), identify the audience, and define the response format. You can format them as labeled lines or structured text. Send all six components together as one prompt to the AI model.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Fill out each of the six CO-STAR fields: write the context, state your objective, specify the style (bullets, narrative, steps), choose the tone (formal, casual, technical), identify the audience, and define the response format. You can format them as labeled lines or structured text. Send all six components together as one prompt to the AI model.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What are the best alternatives to the CO-STAR framework?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Top alternatives include RTF (Role, Task, Format—simpler, 3 components), CRAFT (Context, Role, Action, Format, Target—task-focused), SPECS (Situation, Problem, Examples, Constraints, Style—problem-solving), and TRACE (Task, Requirements, Actions, Context, Examples—reasoning-oriented). Choose based on your task type and complexity needs.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Top alternatives include RTF (Role, Task, Format—simpler, 3 components), CRAFT (Context, Role, Action, Format, Target—task-focused), SPECS (Situation, Problem, Examples, Constraints, Style—problem-solving), and TRACE (Task, Requirements, Actions, Context, Examples—reasoning-oriented). Choose based on your task type and complexity needs.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How does CO-STAR compare to RISEN, CRAFT, and other prompt frameworks?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR (6 components, audience-centric) is for communication-heavy tasks. CRAFT (5 components, role-focused) is for task execution. RISEN emphasizes role and goals. SPECS focuses on problem-solving with constraints. TRACE adds reasoning transparency. CO-STAR excels when audience, tone, and style matter equally; other frameworks shine for different task profiles.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR (6 components, audience-centric) is for communication-heavy tasks. CRAFT (5 components, role-focused) is for task execution. RISEN emphasizes role and goals. SPECS focuses on problem-solving with constraints. TRACE adds reasoning transparency. CO-STAR excels when audience, tone, and style matter equally; other frameworks shine for different task profiles.',
+            },
+          },
         ]
       },
       sections: {
@@ -279,38 +312,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
         expandedFAQ: {
           title: 'Frequently Asked Questions',
           faqs: [
-            {
-              q: 'What does CO-STAR stand for?',
-              a: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. Each letter represents one component of a structured AI prompt. Together, the six components give the model a complete brief — equivalent to what a human writer would need to produce the right output on the first attempt.'
-            },
-            {
-              q: 'Who created the CO-STAR framework?',
-              a: 'CO-STAR was popularized by Sheila Teo, a public officer at GovTech Singapore, who used it to win GovTech\'s internal prompt engineering competition. It has since spread widely as one of the most-cited structured prompting frameworks, independent of any specific AI vendor or product.'
-            },
-            {
-              q: 'When should I use CO-STAR instead of a simpler prompt?',
-              a: 'Use CO-STAR when multiple dimensions matter at once — when the output needs a specific structure AND tone AND must be calibrated for a particular audience. If you only need a factual answer or a simple format, a shorter prompt or single-step approach is sufficient. CO-STAR shines on documentation, customer-facing content, onboarding materials, and multi-stakeholder communications.'
-            },
-            {
-              q: 'How is CO-STAR different from CRAFT?',
-              a: 'Both are structured prompt frameworks but with different emphases. CO-STAR (Context, Objective, Style, Tone, Audience, Response) focuses on communication dimensions — who reads it, how it should feel. CRAFT (Context, Role, Action, Format, Target) focuses on task execution — what role the model plays and what action it takes. CO-STAR is better for audience-centric content; CRAFT is better for role-defined tasks.'
-            },
-            {
-              q: 'How is CO-STAR different from SPECS?',
-              a: 'SPECS (Situation, Problem, Examples, Constraints, Style) is problem-solving oriented — it starts from a problem and works toward a solution. CO-STAR is communication-oriented — it starts from an audience and works toward the right message. Use SPECS for analytical and problem-solving tasks; use CO-STAR for content creation and communication tasks.'
-            },
-            {
-              q: 'Can I use CO-STAR with local models via Ollama?',
-              a: 'Yes. CO-STAR is a prompt-level technique — it works with any model that follows instructions. Local models respond to the same six-component structure. Smaller models may handle fewer constraints simultaneously, so prioritize the most important 3-4 components if you\'re using a model under 7B parameters.'
-            },
-            {
-              q: 'Do I need all six CO-STAR components in every prompt?',
-              a: 'No. Context and Objective are essential. Style, Tone, Audience, and Response improve quality but can be omitted for simple tasks. Start with Context + Objective + Response as the minimum viable CO-STAR prompt, then add Style, Tone, and Audience when the output needs calibration.'
-            },
-            {
-              q: 'Can I combine CO-STAR with Chain-of-Thought or APE?',
-              a: 'Yes. CO-STAR defines WHAT the model should produce and HOW it should feel. Chain-of-Thought or APE define how the model should THINK. You can use CO-STAR for the brief and add "Think step by step before producing the final response" as an additional instruction. The frameworks are complementary, not competing.'
-            },
+            { q: 'What does CO-STAR stand for?', a: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. Each letter represents one component of a structured AI prompt. Together, the six components give the model a complete brief — equivalent to what a human writer would need to produce the right output on the first attempt.' },
+            { q: 'Who created the CO-STAR framework?', a: 'CO-STAR was popularized by Sheila Teo, a public officer at GovTech Singapore, who used it to win GovTech\'s internal prompt engineering competition. It has since spread widely as one of the most-cited structured prompting frameworks, independent of any specific AI vendor or product.' },
+            { q: 'When should I use CO-STAR instead of a simpler prompt?', a: 'Use CO-STAR when multiple dimensions matter at once — when the output needs a specific structure AND tone AND must be calibrated for a particular audience. If you only need a factual answer or a simple format, a shorter prompt or single-step approach is sufficient. CO-STAR shines on documentation, customer-facing content, onboarding materials, and multi-stakeholder communications.' },
+            { q: 'How is CO-STAR different from CRAFT?', a: 'Both are structured prompt frameworks but with different emphases. CO-STAR (Context, Objective, Style, Tone, Audience, Response) focuses on communication dimensions — who reads it, how it should feel. CRAFT (Context, Role, Action, Format, Target) focuses on task execution — what role the model plays and what action it takes. CO-STAR is better for audience-centric content; CRAFT is better for role-defined tasks.' },
+            { q: 'How is CO-STAR different from SPECS?', a: 'SPECS (Situation, Problem, Examples, Constraints, Style) is problem-solving oriented — it starts from a problem and works toward a solution. CO-STAR is communication-oriented — it starts from an audience and works toward the right message. Use SPECS for analytical and problem-solving tasks; use CO-STAR for content creation and communication tasks.' },
+            { q: 'Can I use CO-STAR with local models via Ollama?', a: 'Yes. CO-STAR is a prompt-level technique — it works with any model that follows instructions. Local models respond to the same six-component structure. Smaller models may handle fewer constraints simultaneously, so prioritize the most important 3-4 components if you\'re using a model under 7B parameters.' },
+            { q: 'Do I need all six CO-STAR components in every prompt?', a: 'No. Context and Objective are essential. Style, Tone, Audience, and Response improve quality but can be omitted for simple tasks. Start with Context + Objective + Response as the minimum viable CO-STAR prompt, then add Style, Tone, and Audience when the output needs calibration.' },
+            { q: 'Can I combine CO-STAR with Chain-of-Thought or APE?', a: 'Yes. CO-STAR defines WHAT the model should produce and HOW it should feel. Chain-of-Thought or APE define how the model should THINK. You can use CO-STAR for the brief and add "Think step by step before producing the final response" as an additional instruction. The frameworks are complementary, not competing.' },
+            { q: 'How do you use the CO-STAR method to write a prompt?', a: 'Fill out each of the six CO-STAR fields: write the context, state your objective, specify the style (bullets, narrative, steps), choose the tone (formal, casual, technical), identify the audience, and define the response format. You can format them as labeled lines or structured text. Send all six components together as one prompt to the AI model.' },
+            { q: 'What are the best alternatives to the CO-STAR framework?', a: 'Top alternatives include RTF (Role, Task, Format—simpler, 3 components), CRAFT (Context, Role, Action, Format, Target—task-focused), SPECS (Situation, Problem, Examples, Constraints, Style—problem-solving), and TRACE (Task, Requirements, Actions, Context, Examples—reasoning-oriented). Choose based on your task type and complexity needs.' },
+            { q: 'How does CO-STAR compare to RISEN, CRAFT, and other prompt frameworks?', a: 'CO-STAR (6 components, audience-centric) is for communication-heavy tasks. CRAFT (5 components, role-focused) is for task execution. RISEN emphasizes role and goals. SPECS focuses on problem-solving with constraints. TRACE adds reasoning transparency. CO-STAR excels when audience, tone, and style matter equally; other frameworks shine for different task profiles.' },
           ],
         },
 
@@ -394,47 +406,170 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'Was bedeutet CO-STAR?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR steht für Context (Kontext), Objective (Ziel), Style (Stil), Tone (Ton), Audience (Zielgruppe) und Response (Antwort). Jeder Buchstabe repräsentiert eine Komponente eines strukturierten KI-Prompts. Zusammen bilden die sechs Komponenten ein vollständiges Briefing — entsprechend dem, was ein menschlicher Autor benötigen würde, um beim ersten Versuch die richtige Ausgabe zu produzieren.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR steht für Context (Kontext), Objective (Ziel), Style (Stil), Tone (Ton), Audience (Zielgruppe) und Response (Antwort). Jeder Buchstabe repräsentiert eine Komponente eines strukturierten KI-Prompts. Zusammen bilden die sechs Komponenten ein vollständiges Briefing — entsprechend dem, was ein menschlicher Autor benötigen würde, um beim ersten Versuch die richtige Ausgabe zu produzieren.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Wann sollte ich das CO-STAR-Framework verwenden?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Verwenden Sie CO-STAR, wenn mehrere Dimensionen gleichzeitig wichtig sind — wenn die Ausgabe eine bestimmte Struktur UND einen bestimmten Ton UND muss für ein bestimmtes Publikum kalibriert sein. Wenn Sie nur eine sachliche Antwort oder ein einfaches Format benötigen, ist ein kürzerer Prompt oder ein Single-Step-Ansatz ausreichend. CO-STAR glänzt bei Dokumentation, kundenorientiertem Inhalt, Onboarding-Materialien und Mehrfach-Stakeholder-Kommunikation.' }
+            'name': 'Wer hat das CO-STAR-Framework entwickelt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR wurde von Sheila Teo bekannt gemacht, einer Beamtin bei GovTech Singapore, die es nutzte, um den internen Prompt-Engineering-Wettbewerb von GovTech zu gewinnen. Seitdem hat es sich als eines der meistzitierten strukturierten Prompting-Frameworks verbreitet, unabhängig von einem bestimmten KI-Anbieter oder Produkt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollte ich CO-STAR anstelle eines einfacheren Prompts verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwenden Sie CO-STAR, wenn mehrere Dimensionen gleichzeitig wichtig sind — wenn die Ausgabe eine bestimmte Struktur UND einen bestimmten Ton UND eine Kalibrierung für ein bestimmtes Publikum benötigt. Wenn Sie nur eine sachliche Antwort oder ein einfaches Format benötigen, ist ein kürzerer Prompt oder Single-Step-Ansatz ausreichend. CO-STAR glänzt bei Dokumentation, kundenorientiertem Inhalt, Onboarding-Materialien und Multi-Stakeholder-Kommunikation.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Wie unterscheidet sich CO-STAR von CRAFT?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Beide sind strukturierte Prompt-Frameworks, aber mit unterschiedlichen Schwerpunkten. CO-STAR (Context, Objective, Style, Tone, Audience, Response) konzentriert sich auf Kommunikationsdimensionen — wer liest es, wie sollte es sich anfühlen. CRAFT (Context, Role, Action, Format, Target) konzentriert sich auf Aufgabenausführung — welche Rolle das Modell spielt und welche Aktion es ergreift. CO-STAR ist besser für zielgruppenorientierte Inhalte; CRAFT ist besser für rollendefinierten Aufgaben.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Beide sind strukturierte Prompt-Frameworks, aber mit unterschiedlichen Schwerpunkten. CO-STAR (Context, Objective, Style, Tone, Audience, Response) konzentriert sich auf Kommunikationsdimensionen — wer liest es, wie sollte es sich anfühlen. CRAFT (Context, Role, Action, Format, Target) konzentriert sich auf Aufgabenausführung — welche Rolle das Modell spielt und welche Aktion es ergreift. CO-STAR ist besser für zielgruppenorientierte Inhalte; CRAFT ist besser für rollendefinierte Aufgaben.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Wie unterscheidet sich CO-STAR von SPECS?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'SPECS (Situation, Problem, Examples, Constraints, Style) ist problemlösungsorientiert — es geht von einem Problem aus und arbeitet auf eine Lösung hin. CO-STAR ist kommunikationsorientiert — es geht von einer Zielgruppe aus und arbeitet auf die richtige Botschaft hin. Verwenden Sie SPECS für analytische und problemlösende Aufgaben; verwenden Sie CO-STAR für Content-Erstellung und Kommunikationsaufgaben.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS (Situation, Problem, Examples, Constraints, Style) ist problemlösungsorientiert — es geht von einem Problem aus und arbeitet auf eine Lösung hin. CO-STAR ist kommunikationsorientiert — es geht von einer Zielgruppe aus und arbeitet auf die richtige Botschaft hin. Verwenden Sie SPECS für analytische und problemlösende Aufgaben; verwenden Sie CO-STAR für Content-Erstellung und Kommunikationsaufgaben.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Kann ich CO-STAR mit lokalen Modellen über Ollama verwenden?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. CO-STAR ist eine Prompt-Ebenen-Technik — sie funktioniert mit jedem Modell, das Anweisungen befolgt. Lokale Modelle reagieren auf die gleiche sechsteilige Struktur. Kleinere Modelle können möglicherweise weniger Einschränkungen gleichzeitig bewältigen, daher priorisieren Sie die wichtigsten 3–4 Komponenten, wenn Sie ein Modell unter 7B-Parametern verwenden.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. CO-STAR ist eine Prompt-Ebenen-Technik — sie funktioniert mit jedem Modell, das Anweisungen befolgt. Lokale Modelle reagieren auf die gleiche sechsteilige Struktur. Kleinere Modelle können möglicherweise weniger Einschränkungen gleichzeitig bewältigen, daher priorisieren Sie die wichtigsten 3–4 Komponenten, wenn Sie ein Modell unter 7B-Parametern verwenden.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Benötige ich alle sechs CO-STAR-Komponenten in jedem Prompt?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Kontext und Ziel sind essentiell. Stil, Ton, Zielgruppe und Response verbessern die Qualität, können aber bei einfachen Aufgaben weggelassen werden. Beginnen Sie mit Context + Objective + Response als minimal lebensfähigen CO-STAR-Prompt, dann fügen Sie Stil, Ton und Zielgruppe hinzu, wenn die Ausgabe Kalibrierung benötigt.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Context und Objective sind essentiell. Stil, Ton, Zielgruppe und Response verbessern die Qualität, können aber bei einfachen Aufgaben weggelassen werden. Beginnen Sie mit Context + Objective + Response als minimal lebensfähigen CO-STAR-Prompt, dann fügen Sie Stil, Ton und Zielgruppe hinzu, wenn die Ausgabe Kalibrierung benötigt.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Kann ich CO-STAR mit Chain-of-Thought oder APE kombinieren?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. CO-STAR definiert WAS das Modell produzieren soll und WIE es sich anfühlen soll. Chain-of-Thought oder APE definieren, wie das Modell DENKEN soll. Sie können CO-STAR für das Briefing verwenden und „Denken Sie Schritt für Schritt, bevor Sie die endgültige Antwort erstellen" als zusätzliche Anweisung hinzufügen. Die Frameworks ergänzen sich gegenseitig, sind nicht konkurrierend.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. CO-STAR definiert WAS das Modell produzieren soll und WIE es sich anfühlen soll. Chain-of-Thought oder APE definieren, wie das Modell DENKEN soll. Sie können CO-STAR für das Briefing verwenden und „Denken Sie Schritt für Schritt, bevor Sie die endgültige Antwort erstellen" als zusätzliche Anweisung hinzufügen. Die Frameworks ergänzen sich gegenseitig, sind nicht konkurrierend.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ist das CO-STAR-Framework DSGVO-konform?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Das CO-STAR-Framework selbst ist ein Prompt-Engineering-Konzept und unterliegt nicht direkt der DSGVO. Wenn Sie jedoch mit lokalen Modellen (wie Ollama) oder selbstgehosteten KI-Systemen arbeiten, können Sie sicherstellen, dass personenbezogene Daten lokal verbleiben. Dies erfüllt DSGVO-Anforderungen an Datenresidenz und -verarbeitung. BSI-Grundschutz-Kataloge empfehlen für sensitive Daten die Verwendung von lokalen Inferenzbasis-Systemen, die CO-STAR unterstützt.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Das CO-STAR-Framework selbst ist ein Prompt-Engineering-Konzept und unterliegt nicht direkt der DSGVO. Wenn Sie jedoch mit lokalen Modellen (wie Ollama) oder selbstgehosteten KI-Systemen arbeiten, können Sie sicherstellen, dass personenbezogene Daten lokal verbleiben. Dies erfüllt DSGVO-Anforderungen an Datenresidenz und -verarbeitung. BSI-Grundschutz-Kataloge empfehlen für sensitive Daten die Verwendung von lokalen Inferenzbasis-Systemen, die CO-STAR unterstützt.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ist das CO-STAR-Framework für den deutschen Mittelstand geeignet?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, besonders für den Mittelstand. Viele mittelständische Unternehmen in Deutschland, Österreich und der Schweiz nutzen CO-STAR für interne Dokumentation, Kundenkommunikation und Team-Workflows. Das Framework passt zu bestehenden IT-Sicherheitsstandards (BSI-Grundschutz) und ermöglicht es KMUs, KI-Prompts strukturiert und zuverlässig zu verwenden, ohne externe Abhängigkeiten. PromptQuorum bietet CO-STAR als integrierte Option, die mit lokalen Alternativen kompatibel ist.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, besonders für den Mittelstand. Viele mittelständische Unternehmen in Deutschland, Österreich und der Schweiz nutzen CO-STAR für interne Dokumentation, Kundenkommunikation und Team-Workflows. Das Framework passt zu bestehenden IT-Sicherheitsstandards (BSI-Grundschutz) und ermöglicht es KMUs, KI-Prompts strukturiert und zuverlässig zu verwenden, ohne externe Abhängigkeiten. PromptQuorum bietet CO-STAR als integrierte Option, die mit lokalen Alternativen kompatibel ist.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was steht CO-STAR für?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR steht für Context (Kontext), Objective (Ziel), Style (Stil), Tone (Ton), Audience (Zielgruppe) und Response (Antwort). Es ist ein sechsteiliges Framework, das Ihnen hilft, klare, strukturierte Prompts zu schreiben, indem Sie explizit jedes Element definieren, das beeinflusst, wie das Modell die Ausgabe erzeugt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterscheidet sich CO-STAR von Chain-of-Thought?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought fordert das Modell auf zu „Schritt für Schritt denken". CO-STAR definiert WAS die Ausgabe sein soll und WIE es sich anfühlen soll. Sie lösen unterschiedliche Probleme: CoT verbessert das Reasoning; CO-STAR verbessert die Output-Konsistenz und Zielgruppenpassung. Sie können sie kombinieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollte ich CO-STAR statt einfacherer Prompts verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwenden Sie CO-STAR, wenn die Output-Qualität von Zielgruppenpassung, Ton, Stil oder Format abhängt. Beispiele: Schreiben für nicht-technische Leser, Erstellung von Marketing-Copy, Produktion formaler Dokumentation. Für einfache sachliche Fragen sind einfachere Prompts ausreichend.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich CO-STAR mit jedem Sprachmodell verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. CO-STAR funktioniert mit allen großen Sprachmodellen: proprietären APIs, Open-Source-Modellen und lokalen Modellen wie Ollama. Das Framework ist modellunabhängig; es strukturiert Ihre Eingabe einfach klar, damit jedes Modell Ihre Erwartungen versteht.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich CO-STAR exakt befolgen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. CO-STAR ist ein Leitfaden, keine starre Vorlage. Überspringen Sie Komponenten, die nicht auf Ihre Aufgabe zutreffen, ordnen Sie sie neu an, oder kombinieren Sie sie mit anderen Frameworks. Das Ziel ist Klarheit über das, was Sie wollen und wie es sich anfühlen soll.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie erkenne ich, ob mein CO-STAR-Prompt effektiv ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Testen Sie ihn an 3–5 repräsentativen Eingaben und überprüfen Sie: (1) Entspricht die Ausgabe dem angegebenen Stil? (2) Ist der Ton konsistent mit Ihrem Briefing? (3) Spricht die Antwort die Zielgruppe an, die Sie benannt haben? Falls eine Frage nein ist, verfeinern Sie diese CO-STAR-Komponente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich CO-STAR mit anderen Frameworks kombinieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. CO-STAR definiert WAS und WIE die Ausgabe sich anfühlen soll. Chain-of-Thought oder APE definieren WIE das Modell DENKEN soll. Sie können CO-STAR für das Briefing verwenden und „Denken Sie Schritt für Schritt" als zusätzliche Anweisung hinzufügen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich CO-STAR-Elemente in einer bestimmten Reihenfolge platzieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Keine strikte Reihenfolge erforderlich. Beginnen Sie mit Objective, damit das Modell weiß, was Sie wollen. Dann fügen Sie nach Bedarf Kontext, Zielgruppe, Stil und Ton hinzu. Response kann überall platziert werden, wo es sinnvoll ist. Experimentieren Sie, um zu sehen, was für Ihren Anwendungsfall funktioniert.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Brauche ich alle sechs CO-STAR-Komponenten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Kontext und Ziel sind essentiell. Stil, Ton, Zielgruppe und Response verbessern die Qualität, können aber bei einfachen Aufgaben weggelassen werden. Beginnen Sie mit Context + Objective + Response als minimalem CO-STAR-Prompt, dann fügen Sie Stil, Ton und Zielgruppe hinzu, wenn die Ausgabe Kalibrierung benötigt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert CO-STAR mit lokalen Modellen wie Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja absolut. CO-STAR ist eine Prompt-Ebenen-Technik — sie funktioniert mit jedem Modell, das Anweisungen befolgt. Lokale Modelle reagieren auf die gleiche sechsteilige Struktur. Kleinere Modelle können möglicherweise weniger Constraints gleichzeitig bewältigen, also priorisieren Sie die wichtigsten 3–4 Komponenten bei Modellen unter 7B Parametern.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollte ich das CO-STAR-Framework verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwenden Sie CO-STAR, wenn mehrere Dimensionen gleichzeitig wichtig sind — wenn die Ausgabe eine bestimmte Struktur UND einen bestimmten Ton UND muss für ein bestimmtes Publikum kalibriert sein. Wenn Sie nur eine sachliche Antwort oder ein einfaches Format benötigen, ist ein kürzerer Prompt oder ein Single-Step-Ansatz ausreichend. CO-STAR glänzt bei Dokumentation, kundenorientiertem Inhalt, Onboarding-Materialien und Mehrfach-Stakeholder-Kommunikation.',
+            },
           },
         ]
       },
@@ -679,6 +814,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Muss ich CO-STAR-Elemente in einer bestimmten Reihenfolge platzieren?', a: 'Keine strikte Reihenfolge erforderlich. Beginnen Sie mit Objective, damit das Modell weiß, was Sie wollen. Dann fügen Sie nach Bedarf Kontext, Zielgruppe, Stil und Ton hinzu. Response kann überall platziert werden, wo es sinnvoll ist. Experimentieren Sie, um zu sehen, was für Ihren Anwendungsfall funktioniert.' },
             { q: 'Brauche ich alle sechs CO-STAR-Komponenten?', a: 'Nein. Kontext und Ziel sind essentiell. Stil, Ton, Zielgruppe und Response verbessern die Qualität, können aber bei einfachen Aufgaben weggelassen werden. Beginnen Sie mit Context + Objective + Response als minimalem CO-STAR-Prompt, dann fügen Sie Stil, Ton und Zielgruppe hinzu, wenn die Ausgabe Kalibrierung benötigt.' },
             { q: 'Funktioniert CO-STAR mit lokalen Modellen wie Ollama?', a: 'Ja absolut. CO-STAR ist eine Prompt-Ebenen-Technik — sie funktioniert mit jedem Modell, das Anweisungen befolgt. Lokale Modelle reagieren auf die gleiche sechsteilige Struktur. Kleinere Modelle können möglicherweise weniger Constraints gleichzeitig bewältigen, also priorisieren Sie die wichtigsten 3–4 Komponenten bei Modellen unter 7B Parametern.' },
+            { q: 'Wann sollte ich das CO-STAR-Framework verwenden?', a: 'Verwenden Sie CO-STAR, wenn mehrere Dimensionen gleichzeitig wichtig sind — wenn die Ausgabe eine bestimmte Struktur UND einen bestimmten Ton UND muss für ein bestimmtes Publikum kalibriert sein. Wenn Sie nur eine sachliche Antwort oder ein einfaches Format benötigen, ist ein kürzerer Prompt oder ein Single-Step-Ansatz ausreichend. CO-STAR glänzt bei Dokumentation, kundenorientiertem Inhalt, Onboarding-Materialien und Mehrfach-Stakeholder-Kommunikation.' },
           ],
         },
       },
@@ -728,17 +864,174 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         mainEntity: [
-          { '@type': 'Question', name: '¿Qué significa CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Cada letra representa un componente de un prompt de IA estructurado. Juntos, los seis componentes le dan al modelo un brief completo — equivalente a lo que un escritor humano necesitaría para producir el output correcto en el primer intento.' } },
-          { '@type': 'Question', name: '¿Cuándo debo usar CO-STAR en lugar de un prompt más simple?', acceptedAnswer: { '@type': 'Answer', text: 'Usa CO-STAR cuando múltiples dimensiones importan a la vez — cuando el output necesita una estructura específica Y tono Y debe calibrarse para una audiencia particular. Si solo necesitas una respuesta factual o un formato simple, un prompt más corto o enfoque de un solo paso es suficiente. CO-STAR brilla en documentación, contenido de cara al cliente, materiales de onboarding y comunicaciones con múltiples partes interesadas.' } },
-          { '@type': 'Question', name: '¿En qué se diferencia CO-STAR de CRAFT?', acceptedAnswer: { '@type': 'Answer', text: 'Ambos son frameworks de prompt estructurados pero con diferentes énfasis. CO-STAR (Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta) se centra en las dimensiones de comunicación — quién lo lee, cómo debe sentirse. CRAFT (Contexto, Rol, Acción, Formato, Objetivo) se centra en la ejecución de tareas — qué rol juega el modelo y qué acción realiza. CO-STAR es mejor para contenido orientado a la audiencia; CRAFT es mejor para tareas definidas por rol.' } },
-          { '@type': 'Question', name: '¿En qué se diferencia CO-STAR de SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'SPECS (Situación, Problema, Ejemplos, Restricciones, Estilo) está orientado a la resolución de problemas — comienza desde un problema y trabaja hacia una solución. CO-STAR está orientado a la comunicación — comienza desde una audiencia y trabaja hacia el mensaje correcto. Usa SPECS para tareas analíticas y de resolución de problemas; usa CO-STAR para creación de contenido y tareas de comunicación.' } },
-          { '@type': 'Question', name: '¿Puedo usar CO-STAR con modelos locales via Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. CO-STAR es una técnica a nivel de prompt — funciona con cualquier modelo que siga instrucciones. Los modelos locales responden a la misma estructura de seis componentes. Los modelos más pequeños pueden manejar menos restricciones simultáneamente, así que prioriza los 3-4 componentes más importantes si usas un modelo bajo 7B de parámetros.' } },
-          { '@type': 'Question', name: '¿Necesito los seis componentes CO-STAR en cada prompt?', acceptedAnswer: { '@type': 'Answer', text: 'No. Contexto y Objetivo son esenciales. Estilo, Tono, Audiencia y Respuesta mejoran la calidad pero pueden omitirse para tareas simples. Empieza con Contexto + Objetivo + Respuesta como el prompt CO-STAR mínimo viable, luego añade Estilo, Tono y Audiencia cuando el output necesite calibración.' } },
-          { '@type': 'Question', name: '¿Puedo combinar CO-STAR con Chain-of-Thought o APE?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. CO-STAR define QUÉ debe producir el modelo y CÓMO debe sentirse. Chain-of-Thought o APE definen cómo debe PENSAR el modelo. Puedes usar CO-STAR para el brief y añadir "Piensa paso a paso antes de producir la respuesta final" como instrucción adicional. Los frameworks son complementarios, no competidores.' } },
-          { '@type': 'Question', name: '¿Qué significa CO-STAR en prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Estos seis componentes trabajan juntos para darle al modelo de IA un brief completo. El Contexto proporciona antecedentes, el Objetivo establece el objetivo, el Estilo define la estructura, el Tono establece la voz, la Audiencia aclara quién lo leerá y la Respuesta especifica el formato exacto necesario.' } },
-          { '@type': 'Question', name: '¿Cómo se usa el método CO-STAR para escribir un prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Completa cada uno de los seis campos CO-STAR: escribe el contexto, establece tu objetivo, especifica el estilo (puntos, narrativa, pasos), elige el tono (formal, casual, técnico), identifica la audiencia y define el formato de respuesta. Puedes formatearlos como líneas etiquetadas o texto estructurado. Envía los seis componentes juntos como un prompt al modelo de IA.' } },
-          { '@type': 'Question', name: '¿Cuáles son las mejores alternativas al framework CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'Las principales alternativas incluyen RTF (Rol, Tarea, Formato — más simple, 3 componentes), CRAFT (Contexto, Rol, Acción, Formato, Objetivo — orientado a tareas), SPECS (Situación, Problema, Ejemplos, Restricciones, Estilo — resolución de problemas) y TRACE (Tarea, Requisitos, Acciones, Contexto, Ejemplos — orientado al razonamiento). Elige según el tipo de tarea y las necesidades de complejidad.' } },
-          { '@type': 'Question', name: '¿Cómo se compara CO-STAR con RISEN, CRAFT y otros frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR (6 componentes, centrado en la audiencia) es para tareas con mucha comunicación. CRAFT (5 componentes, orientado al rol) es para la ejecución de tareas. RISEN enfatiza el rol y los objetivos. SPECS se centra en la resolución de problemas con restricciones. TRACE añade transparencia al razonamiento. CO-STAR sobresale cuando la audiencia, el tono y el estilo importan igualmente; otros frameworks brillan para diferentes perfiles de tareas.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Qué significa CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Cada letra representa un componente de un prompt de IA estructurado. Juntos, los seis componentes le dan al modelo un brief completo — equivalente a lo que un escritor humano necesitaría para producir el output correcto en el primer intento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Quién creó el framework CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR fue popularizado por Sheila Teo, funcionaria pública de GovTech Singapur, quien lo usó para ganar la competencia interna de ingeniería de prompts de GovTech. Desde entonces se ha difundido ampliamente como uno de los frameworks de prompting estructurado más citados, independiente de cualquier proveedor o producto de IA específico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuándo debo usar CO-STAR en lugar de un prompt más simple?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa CO-STAR cuando múltiples dimensiones importan a la vez — cuando el output necesita una estructura específica Y tono Y debe calibrarse para una audiencia particular. Si solo necesitas una respuesta factual o un formato simple, un prompt más corto o enfoque de un solo paso es suficiente. CO-STAR brilla en documentación, contenido de cara al cliente, materiales de onboarding y comunicaciones con múltiples partes interesadas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿En qué se diferencia CO-STAR de CRAFT?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ambos son frameworks de prompt estructurados pero con diferentes énfasis. CO-STAR (Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta) se centra en las dimensiones de comunicación — quién lo lee, cómo debe sentirse. CRAFT (Contexto, Rol, Acción, Formato, Objetivo) se centra en la ejecución de tareas — qué rol juega el modelo y qué acción realiza. CO-STAR es mejor para contenido orientado a la audiencia; CRAFT es mejor para tareas definidas por rol.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿En qué se diferencia CO-STAR de SPECS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS (Situación, Problema, Ejemplos, Restricciones, Estilo) está orientado a la resolución de problemas — comienza desde un problema y trabaja hacia una solución. CO-STAR está orientado a la comunicación — comienza desde una audiencia y trabaja hacia el mensaje correcto. Usa SPECS para tareas analíticas y de resolución de problemas; usa CO-STAR para creación de contenido y tareas de comunicación.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar CO-STAR con modelos locales via Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. CO-STAR es una técnica a nivel de prompt — funciona con cualquier modelo que siga instrucciones. Los modelos locales responden a la misma estructura de seis componentes. Los modelos más pequeños pueden manejar menos restricciones simultáneamente, así que prioriza los 3-4 componentes más importantes si usas un modelo bajo 7B de parámetros.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito los seis componentes CO-STAR en cada prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Contexto y Objetivo son esenciales. Estilo, Tono, Audiencia y Respuesta mejoran la calidad pero pueden omitirse para tareas simples. Empieza con Contexto + Objetivo + Respuesta como el prompt CO-STAR mínimo viable, luego añade Estilo, Tono y Audiencia cuando el output necesite calibración.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo combinar CO-STAR con Chain-of-Thought o APE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. CO-STAR define QUÉ debe producir el modelo y CÓMO debe sentirse. Chain-of-Thought o APE definen cómo debe PENSAR el modelo. Puedes usar CO-STAR para el brief y añadir "Piensa paso a paso antes de producir la respuesta final" como instrucción adicional. Los frameworks son complementarios, no competidores.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué significa CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Es un framework de seis partes que te ayuda a escribir prompts claros y estructurados al definir explícitamente cada elemento que influye en cómo el modelo produce el output.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿En qué se diferencia CO-STAR de Chain-of-Thought?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought pide al modelo "pensar paso a paso". CO-STAR define QUÉ debe ser el output y CÓMO debe sentirse. Resuelven diferentes problemas: CoT mejora el razonamiento; CO-STAR mejora la consistencia del output y la alineación con la audiencia. Puedes combinarlos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuándo debo usar CO-STAR en lugar de prompts más simples?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa CO-STAR cuando la calidad del output depende de la alineación con la audiencia, el tono, el estilo o el formato. Ejemplos: escribir para lectores no técnicos, crear copy de marketing, producir documentación formal. Para preguntas factuales simples, los prompts más simples son suficientes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar CO-STAR con cualquier modelo de lenguaje?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. CO-STAR funciona con todos los modelos de lenguaje principales: APIs propietarias, modelos de código abierto y modelos locales como Ollama. El framework es agnóstico al modelo; simplemente estructura tu entrada claramente para que cualquier modelo entienda tus expectativas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo seguir CO-STAR exactamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. CO-STAR es una guía, no una plantilla rígida. Omite componentes que no apliquen a tu tarea, reordénalos o combínalos con otros frameworks. El objetivo es claridad sobre lo que quieres y cómo debe sentirse.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo sé si mi prompt CO-STAR es efectivo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pruébalo en 3-5 entradas representativas y verifica: (1) ¿El output coincide con el estilo especificado? (2) ¿Es el tono consistente con tu brief? (3) ¿La respuesta se dirige a la audiencia que nombraste? Si alguna es negativa, refina ese componente CO-STAR.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo combinar CO-STAR con otros frameworks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. CO-STAR define QUÉ y CÓMO debe sentirse el output. Chain-of-Thought o APE definen CÓMO debe PENSAR el modelo. Puedes usar CO-STAR para el brief y añadir "piensa paso a paso" como instrucción adicional.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo colocar los elementos CO-STAR en un orden específico?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No se requiere un orden estricto. Empieza con Objetivo para que el modelo sepa lo que quieres. Luego añade Contexto, Audiencia, Estilo y Tono según sea necesario. La Respuesta puede colocarse donde tenga más sentido. Experimenta para ver qué funciona para tu caso de uso.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito los seis componentes CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Contexto y Objetivo son esenciales. Estilo, Tono, Audiencia y Respuesta mejoran la calidad pero pueden omitirse para tareas simples. Empieza con Contexto + Objetivo + Respuesta como prompt CO-STAR mínimo, luego añade Estilo, Tono y Audiencia cuando el output necesite calibración.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Funciona CO-STAR con modelos locales como Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, absolutamente. CO-STAR es una técnica a nivel de prompt — funciona con cualquier modelo que siga instrucciones. Los modelos locales responden a la misma estructura de seis partes. Los modelos más pequeños pueden manejar menos restricciones simultáneamente, así que prioriza los 3-4 componentes más importantes con modelos bajo 7B parámetros.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué significa CO-STAR en prompt engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Estos seis componentes trabajan juntos para darle al modelo de IA un brief completo. El Contexto proporciona antecedentes, el Objetivo establece el objetivo, el Estilo define la estructura, el Tono establece la voz, la Audiencia aclara quién lo leerá y la Respuesta especifica el formato exacto necesario.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo se usa el método CO-STAR para escribir un prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Completa cada uno de los seis campos CO-STAR: escribe el contexto, establece tu objetivo, especifica el estilo (puntos, narrativa, pasos), elige el tono (formal, casual, técnico), identifica la audiencia y define el formato de respuesta. Puedes formatearlos como líneas etiquetadas o texto estructurado. Envía los seis componentes juntos como un prompt al modelo de IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuáles son las mejores alternativas al framework CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las principales alternativas incluyen RTF (Rol, Tarea, Formato — más simple, 3 componentes), CRAFT (Contexto, Rol, Acción, Formato, Objetivo — orientado a tareas), SPECS (Situación, Problema, Ejemplos, Restricciones, Estilo — resolución de problemas) y TRACE (Tarea, Requisitos, Acciones, Contexto, Ejemplos — orientado al razonamiento). Elige según el tipo de tarea y las necesidades de complejidad.',
+            },
+          },
         ],
       },
       sections: {
@@ -983,6 +1276,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Debo colocar los elementos CO-STAR en un orden específico?', a: 'No se requiere un orden estricto. Empieza con Objetivo para que el modelo sepa lo que quieres. Luego añade Contexto, Audiencia, Estilo y Tono según sea necesario. La Respuesta puede colocarse donde tenga más sentido. Experimenta para ver qué funciona para tu caso de uso.' },
             { q: '¿Necesito los seis componentes CO-STAR?', a: 'No. Contexto y Objetivo son esenciales. Estilo, Tono, Audiencia y Respuesta mejoran la calidad pero pueden omitirse para tareas simples. Empieza con Contexto + Objetivo + Respuesta como prompt CO-STAR mínimo, luego añade Estilo, Tono y Audiencia cuando el output necesite calibración.' },
             { q: '¿Funciona CO-STAR con modelos locales como Ollama?', a: 'Sí, absolutamente. CO-STAR es una técnica a nivel de prompt — funciona con cualquier modelo que siga instrucciones. Los modelos locales responden a la misma estructura de seis partes. Los modelos más pequeños pueden manejar menos restricciones simultáneamente, así que prioriza los 3-4 componentes más importantes con modelos bajo 7B parámetros.' },
+            { q: '¿Qué significa CO-STAR en prompt engineering?', a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Estos seis componentes trabajan juntos para darle al modelo de IA un brief completo. El Contexto proporciona antecedentes, el Objetivo establece el objetivo, el Estilo define la estructura, el Tono establece la voz, la Audiencia aclara quién lo leerá y la Respuesta especifica el formato exacto necesario.' },
+            { q: '¿Cómo se usa el método CO-STAR para escribir un prompt?', a: 'Completa cada uno de los seis campos CO-STAR: escribe el contexto, establece tu objetivo, especifica el estilo (puntos, narrativa, pasos), elige el tono (formal, casual, técnico), identifica la audiencia y define el formato de respuesta. Puedes formatearlos como líneas etiquetadas o texto estructurado. Envía los seis componentes juntos como un prompt al modelo de IA.' },
+            { q: '¿Cuáles son las mejores alternativas al framework CO-STAR?', a: 'Las principales alternativas incluyen RTF (Rol, Tarea, Formato — más simple, 3 componentes), CRAFT (Contexto, Rol, Acción, Formato, Objetivo — orientado a tareas), SPECS (Situación, Problema, Ejemplos, Restricciones, Estilo — resolución de problemas) y TRACE (Tarea, Requisitos, Acciones, Contexto, Ejemplos — orientado al razonamiento). Elige según el tipo de tarea y las necesidades de complejidad.' },
           ],
         },
       },
@@ -1032,17 +1328,182 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'ماذا يعني CO-STAR؟', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. يمثّل كل حرف مكوّنًا في موجّه الذكاء الاصطناعي المنظّم. تمنح المكوّنات الست مجتمعةً النموذجَ نبذةً كاملة تعادل ما يحتاجه كاتب بشري لإنتاج المخرجات الصحيحة من المحاولة الأولى.' } },
-          { '@type': 'Question', name: 'متى أستخدم CO-STAR بدلًا من موجّه أبسط؟', acceptedAnswer: { '@type': 'Answer', text: 'استخدم CO-STAR حين تهم أبعاد متعددة في آنٍ واحد — عندما تحتاج المخرجات إلى بنية محددة ونبرة معينة وضبط لجمهور بعينه. إن احتجت إجابة واقعية بسيطة أو تنسيقًا مباشرًا، يكفي موجّه أقصر. يتألق CO-STAR في التوثيق والمحتوى الموجّه للعملاء ومواد الإعداد والتواصل مع أصحاب المصلحة المتعددين.' } },
-          { '@type': 'Question', name: 'ما الفرق بين CO-STAR وCRAFT؟', acceptedAnswer: { '@type': 'Answer', text: 'كلاهما إطار موجّه منظّم لكن بتركيزات مختلفة. CO-STAR (السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة) يركّز على أبعاد التواصل — من يقرأه وكيف ينبغي أن يبدو. CRAFT (السياق، الدور، الإجراء، التنسيق، الهدف) يركّز على تنفيذ المهام — ما الدور الذي يؤديه النموذج وما الإجراء الذي يتخذه. CO-STAR أنسب للمحتوى الموجّه للجمهور؛ وCRAFT أنسب للمهام المحددة بالدور.' } },
-          { '@type': 'Question', name: 'ما الفرق بين CO-STAR وSPECS؟', acceptedAnswer: { '@type': 'Answer', text: 'SPECS (الموقف، المشكلة، الأمثلة، القيود، الأسلوب) موجّه نحو حل المشكلات — يبدأ من مشكلة ويعمل نحو حل. CO-STAR موجّه نحو التواصل — يبدأ من جمهور ويعمل نحو الرسالة الصحيحة. استخدم SPECS للمهام التحليلية وحل المشكلات؛ واستخدم CO-STAR لإنشاء المحتوى ومهام التواصل.' } },
-          { '@type': 'Question', name: 'هل يمكنني استخدام CO-STAR مع النماذج المحلية عبر Ollama؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. CO-STAR تقنية على مستوى الموجّه — تعمل مع أي نموذج يتبع التعليمات. تستجيب النماذج المحلية لنفس البنية المكوّنة من ست عناصر. قد تتعامل النماذج الأصغر مع قيود أقل في آنٍ واحد، لذا أعطِ الأولوية لأهم 3-4 مكوّنات إن كنت تستخدم نموذجًا أقل من 7B من المعاملات.' } },
-          { '@type': 'Question', name: 'هل أحتاج إلى المكوّنات الست لـCO-STAR في كل موجّه؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. السياق والهدف أساسيان. الأسلوب والنبرة والجمهور والاستجابة تُحسّن الجودة لكن يمكن حذفها للمهام البسيطة. ابدأ بـ السياق + الهدف + الاستجابة كحد أدنى قابل للتطبيق، ثم أضف الأسلوب والنبرة والجمهور عندما تحتاج المخرجات إلى ضبط.' } },
-          { '@type': 'Question', name: 'هل يمكنني دمج CO-STAR مع Chain-of-Thought أو APE؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يحدد CO-STAR ما يجب أن ينتجه النموذج وكيف ينبغي أن يبدو. يحدد Chain-of-Thought أو APE كيف ينبغي أن يُفكّر النموذج. يمكنك استخدام CO-STAR للنبذة التعريفية وإضافة "فكّر خطوة بخطوة قبل إنتاج الإجابة النهائية" كتعليمة إضافية. الأطر متكاملة وليست متنافسة.' } },
-          { '@type': 'Question', name: 'ما معنى CO-STAR في هندسة الموجّهات؟', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. تعمل هذه المكوّنات الست معًا لمنح نموذج الذكاء الاصطناعي نبذة كاملة. يوفر السياق خلفية المعلومات، ويحدد الهدف الغرض، ويعرّف الأسلوب البنية، وتضبط النبرة الصوت، ويوضّح الجمهور من سيقرأ المحتوى، وتحدد الاستجابة التنسيق المطلوب بالضبط.' } },
-          { '@type': 'Question', name: 'كيف أستخدم طريقة CO-STAR لكتابة موجّه؟', acceptedAnswer: { '@type': 'Answer', text: 'أكمل كل حقل من الحقول الست: اكتب السياق، وحدد هدفك، وعيّن الأسلوب (نقاط أو سرد أو خطوات)، واختر النبرة (رسمية أو غير رسمية أو تقنية)، وحدد الجمهور، وعرّف تنسيق الاستجابة. يمكنك تنسيقها كأسطر موسومة أو نص منظّم. أرسل المكوّنات الست معًا كموجّه واحد للنموذج.' } },
-          { '@type': 'Question', name: 'ما أفضل بدائل إطار CO-STAR؟', acceptedAnswer: { '@type': 'Answer', text: 'تشمل البدائل الرئيسية: RTF (الدور، المهمة، التنسيق — أبسط، 3 مكوّنات)، وCRAFT (السياق، الدور، الإجراء، التنسيق، الهدف — موجّه للمهام)، وSPECS (الموقف، المشكلة، الأمثلة، القيود، الأسلوب — حل مشكلات)، وTRACE (المهمة، المتطلبات، الإجراءات، السياق، الأمثلة — موجّه للتفكير). اختر بحسب نوع المهمة واحتياجات التعقيد.' } },
-          { '@type': 'Question', name: 'كيف يقارن CO-STAR بـRISEN وCRAFT وأطر أخرى؟', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR (6 مكوّنات، مرتكز على الجمهور) مناسب للمهام ذات المحتوى التواصلي العالي. CRAFT (5 مكوّنات، موجّه للدور) مناسب لتنفيذ المهام. RISEN يُركّز على الدور والأهداف. SPECS يركّز على حل المشكلات بقيود. TRACE يضيف الشفافية للتفكير. يتميز CO-STAR حين يهم الجمهور والنبرة والأسلوب بالتساوي.' } },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يعني CO-STAR؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. يمثّل كل حرف مكوّنًا في موجّه الذكاء الاصطناعي المنظّم. تمنح المكوّنات الست مجتمعةً النموذجَ نبذةً كاملة تعادل ما يحتاجه كاتب بشري لإنتاج المخرجات الصحيحة من المحاولة الأولى.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'من ابتكر إطار CO-STAR؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اشتُهر إطار CO-STAR على يد شيلا تيو، موظفة حكومية في GovTech سنغافورة، التي استخدمته للفوز بمسابقة هندسة الموجّهات الداخلية في GovTech. ومنذ ذلك الحين انتشر على نطاق واسع كواحد من أكثر أطر الموجّهات المنظمة استشهاداً، بمعزل عن أي مزود أو منتج ذكاء اصطناعي محدد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'متى أستخدم CO-STAR بدلًا من موجّه أبسط؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم CO-STAR حين تهم أبعاد متعددة في آنٍ واحد — عندما تحتاج المخرجات إلى بنية محددة ونبرة معينة وضبط لجمهور بعينه. إن احتجت إجابة واقعية أو تنسيقًا بسيطًا، يكفي موجّه أقصر. يتألق CO-STAR في التوثيق والمحتوى الموجّه للعملاء ومواد الإعداد والتواصل متعدد الأطراف.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين CO-STAR وCRAFT؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'كلاهما إطار منظّم لكن بتركيزات مختلفة. CO-STAR يركّز على أبعاد التواصل — من يقرأه وكيف ينبغي أن يبدو. CRAFT يركّز على تنفيذ المهام — ما الدور وما الإجراء. CO-STAR أنسب للمحتوى الموجّه للجمهور؛ وCRAFT أنسب للمهام المحددة بالدور.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين CO-STAR وSPECS؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS موجّه نحو حل المشكلات — يبدأ من مشكلة ويعمل نحو حل. CO-STAR موجّه نحو التواصل — يبدأ من جمهور ويعمل نحو الرسالة الصحيحة. استخدم SPECS للمهام التحليلية؛ واستخدم CO-STAR لإنشاء المحتوى ومهام التواصل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام CO-STAR مع النماذج المحلية عبر Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. CO-STAR تقنية على مستوى الموجّه — تعمل مع أي نموذج يتبع التعليمات. تستجيب النماذج المحلية لنفس البنية المكوّنة من ست عناصر. قد تتعامل النماذج الأصغر مع قيود أقل، لذا أعطِ الأولوية لأهم 3-4 مكوّنات مع النماذج الأقل من 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج إلى المكوّنات الست لـCO-STAR في كل موجّه؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. السياق والهدف أساسيان. الأسلوب والنبرة والجمهور والاستجابة تُحسّن الجودة لكن يمكن حذفها للمهام البسيطة. ابدأ بـ السياق + الهدف + الاستجابة كحد أدنى، ثم أضف الأسلوب والنبرة والجمهور عند الحاجة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني دمج CO-STAR مع Chain-of-Thought أو APE؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يحدد CO-STAR ما يجب إنتاجه وكيف ينبغي أن يبدو. يحدد Chain-of-Thought أو APE كيف يجب التفكير. يمكنك استخدام CO-STAR للنبذة وإضافة "فكّر خطوة بخطوة" كتعليمة إضافية. الأطر متكاملة وليست متنافسة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يعني CO-STAR؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. إطار من ست أجزاء يساعدك على كتابة موجّهات واضحة ومنظّمة بتحديد كل عنصر يؤثر على كيفية إنتاج النموذج للمخرجات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين CO-STAR وChain-of-Thought؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يطلب Chain-of-Thought من النموذج "التفكير خطوة بخطوة". يحدد CO-STAR ما يجب أن تكون عليه المخرجات وكيف ينبغي أن تبدو. يحلان مشكلتين مختلفتين: CoT يُحسّن التفكير؛ CO-STAR يُحسّن اتساق المخرجات ومواءمتها مع الجمهور. يمكنك دمجهما.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'متى أستخدم CO-STAR بدلًا من موجّهات أبسط؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم CO-STAR حين تعتمد جودة المخرجات على مواءمة الجمهور والنبرة والأسلوب والتنسيق. أمثلة: الكتابة لقراء غير تقنيين، وإنشاء محتوى تسويقي، وإنتاج توثيق رسمي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام CO-STAR مع أي نموذج لغة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يعمل CO-STAR مع جميع نماذج اللغة الرئيسية: واجهات برمجية مملوكة، ونماذج مفتوحة المصدر، ونماذج محلية كـOllama. الإطار مستقل عن النموذج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يجب اتباع CO-STAR بدقة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. CO-STAR دليل وليس قالبًا صارمًا. احذف المكوّنات غير المنطبقة أو أعدّ ترتيبها أو ادمجها مع أطر أخرى. الهدف هو الوضوح حول ما تريد وكيف ينبغي أن يبدو.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أعرف إن كان موجّه CO-STAR فعّالًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اختبره على 3-5 مدخلات تمثيلية وتحقق من: (1) هل تطابق المخرج الأسلوب المحدد؟ (2) هل النبرة متسقة مع نبذتك؟ (3) هل تخاطب الاستجابة الجمهور الذي سميته؟ إن كانت إحداها سلبية، أعدّ تحسين مكوّن CO-STAR ذاك.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني دمج CO-STAR مع أطر أخرى؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يحدد CO-STAR ما يجب أن تكون عليه المخرجات وكيف تبدو. يحدد Chain-of-Thought أو APE كيف يُفكّر النموذج. يمكنك استخدام CO-STAR للنبذة وإضافة "فكّر خطوة بخطوة" كتعليمة إضافية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يجب وضع عناصر CO-STAR بترتيب معين؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا يُشترط ترتيب صارم. ابدأ بالهدف حتى يعرف النموذج ما تريد. ثم أضف السياق والجمهور والأسلوب والنبرة حسب الحاجة. يمكن وضع الاستجابة حيث يبدو منطقيًا. جرّب لترى ما يناسب حالتك.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج إلى المكوّنات الست لـCO-STAR؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. السياق والهدف أساسيان. الأسلوب والنبرة والجمهور والاستجابة تُحسّن الجودة لكن يمكن حذفها للمهام البسيطة. ابدأ بـ السياق + الهدف + الاستجابة كحد أدنى، ثم أضف الأسلوب والنبرة والجمهور عند الحاجة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل CO-STAR مع النماذج المحلية مثل Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، تمامًا. CO-STAR تقنية على مستوى الموجّه — تعمل مع أي نموذج يتبع التعليمات. تستجيب النماذج المحلية لنفس البنية المكوّنة من ست أجزاء. أعطِ الأولوية لأهم 3-4 مكوّنات مع النماذج الأقل من 7B معامل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما معنى CO-STAR في هندسة الموجّهات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. تعمل هذه المكوّنات الست معًا لمنح نموذج الذكاء الاصطناعي نبذة كاملة. يوفر السياق خلفية المعلومات، ويحدد الهدف الغرض، ويعرّف الأسلوب البنية، وتضبط النبرة الصوت، ويوضّح الجمهور من سيقرأ المحتوى، وتحدد الاستجابة التنسيق المطلوب بالضبط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أستخدم طريقة CO-STAR لكتابة موجّه؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أكمل كل حقل من الحقول الست: اكتب السياق، وحدد هدفك، وعيّن الأسلوب (نقاط أو سرد أو خطوات)، واختر النبرة (رسمية أو غير رسمية أو تقنية)، وحدد الجمهور، وعرّف تنسيق الاستجابة. يمكنك تنسيقها كأسطر موسومة أو نص منظّم. أرسل المكوّنات الست معًا كموجّه واحد للنموذج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل بدائل إطار CO-STAR؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تشمل البدائل الرئيسية: RTF (الدور، المهمة، التنسيق — أبسط، 3 مكوّنات)، وCRAFT (السياق، الدور، الإجراء، التنسيق، الهدف — موجّه للمهام)، وSPECS (الموقف، المشكلة، الأمثلة، القيود، الأسلوب — حل مشكلات)، وTRACE (المهمة، المتطلبات، الإجراءات، السياق، الأمثلة — موجّه للتفكير). اختر بحسب نوع المهمة واحتياجات التعقيد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف يقارن CO-STAR بـRISEN وCRAFT وأطر أخرى؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR (6 مكوّنات، مرتكز على الجمهور) مناسب للمهام ذات المحتوى التواصلي العالي. CRAFT (5 مكوّنات، موجّه للدور) مناسب لتنفيذ المهام. RISEN يُركّز على الدور والأهداف. SPECS يركّز على حل المشكلات بقيود. TRACE يضيف الشفافية للتفكير. يتميز CO-STAR حين يهم الجمهور والنبرة والأسلوب بالتساوي.',
+            },
+          },
         ],
       },
       sections: {
@@ -1278,6 +1739,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'هل يجب وضع عناصر CO-STAR بترتيب معين؟', a: 'لا يُشترط ترتيب صارم. ابدأ بالهدف حتى يعرف النموذج ما تريد. ثم أضف السياق والجمهور والأسلوب والنبرة حسب الحاجة. يمكن وضع الاستجابة حيث يبدو منطقيًا. جرّب لترى ما يناسب حالتك.' },
             { q: 'هل أحتاج إلى المكوّنات الست لـCO-STAR؟', a: 'لا. السياق والهدف أساسيان. الأسلوب والنبرة والجمهور والاستجابة تُحسّن الجودة لكن يمكن حذفها للمهام البسيطة. ابدأ بـ السياق + الهدف + الاستجابة كحد أدنى، ثم أضف الأسلوب والنبرة والجمهور عند الحاجة.' },
             { q: 'هل يعمل CO-STAR مع النماذج المحلية مثل Ollama؟', a: 'نعم، تمامًا. CO-STAR تقنية على مستوى الموجّه — تعمل مع أي نموذج يتبع التعليمات. تستجيب النماذج المحلية لنفس البنية المكوّنة من ست أجزاء. أعطِ الأولوية لأهم 3-4 مكوّنات مع النماذج الأقل من 7B معامل.' },
+            { q: 'ما معنى CO-STAR في هندسة الموجّهات؟', a: 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. تعمل هذه المكوّنات الست معًا لمنح نموذج الذكاء الاصطناعي نبذة كاملة. يوفر السياق خلفية المعلومات، ويحدد الهدف الغرض، ويعرّف الأسلوب البنية، وتضبط النبرة الصوت، ويوضّح الجمهور من سيقرأ المحتوى، وتحدد الاستجابة التنسيق المطلوب بالضبط.' },
+            { q: 'كيف أستخدم طريقة CO-STAR لكتابة موجّه؟', a: 'أكمل كل حقل من الحقول الست: اكتب السياق، وحدد هدفك، وعيّن الأسلوب (نقاط أو سرد أو خطوات)، واختر النبرة (رسمية أو غير رسمية أو تقنية)، وحدد الجمهور، وعرّف تنسيق الاستجابة. يمكنك تنسيقها كأسطر موسومة أو نص منظّم. أرسل المكوّنات الست معًا كموجّه واحد للنموذج.' },
+            { q: 'ما أفضل بدائل إطار CO-STAR؟', a: 'تشمل البدائل الرئيسية: RTF (الدور، المهمة، التنسيق — أبسط، 3 مكوّنات)، وCRAFT (السياق، الدور، الإجراء، التنسيق، الهدف — موجّه للمهام)، وSPECS (الموقف، المشكلة، الأمثلة، القيود، الأسلوب — حل مشكلات)، وTRACE (المهمة، المتطلبات، الإجراءات، السياق، الأمثلة — موجّه للتفكير). اختر بحسب نوع المهمة واحتياجات التعقيد.' },
+            { q: 'كيف يقارن CO-STAR بـRISEN وCRAFT وأطر أخرى؟', a: 'CO-STAR (6 مكوّنات، مرتكز على الجمهور) مناسب للمهام ذات المحتوى التواصلي العالي. CRAFT (5 مكوّنات، موجّه للدور) مناسب لتنفيذ المهام. RISEN يُركّز على الدور والأهداف. SPECS يركّز على حل المشكلات بقيود. TRACE يضيف الشفافية للتفكير. يتميز CO-STAR حين يهم الجمهور والنبرة والأسلوب بالتساوي.' },
           ],
         },
       },
@@ -1327,17 +1792,182 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'O que significa CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Cada letra representa um componente de um prompt de IA estruturado. Juntos, os seis componentes dão ao modelo um briefing completo — equivalente ao que um escritor humano precisaria para produzir a saída correta na primeira tentativa.' } },
-          { '@type': 'Question', name: 'Quando devo usar CO-STAR em vez de um prompt mais simples?', acceptedAnswer: { '@type': 'Answer', text: 'Use CO-STAR quando múltiplas dimensões importam ao mesmo tempo — quando a saída precisa de uma estrutura específica E tom E deve ser calibrada para uma audiência particular. Se você só precisa de uma resposta factual ou um formato simples, um prompt mais curto ou abordagem de uma etapa é suficiente.' } },
-          { '@type': 'Question', name: 'Em que o CO-STAR difere do CRAFT?', acceptedAnswer: { '@type': 'Answer', text: 'Ambos são frameworks de prompt estruturados mas com ênfases diferentes. CO-STAR (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta) foca nas dimensões de comunicação — quem lê, como deve se sentir. CRAFT (Contexto, Papel, Ação, Formato, Objetivo) foca na execução de tarefas — qual papel o modelo desempenha e que ação realiza.' } },
-          { '@type': 'Question', name: 'Em que o CO-STAR difere do SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'SPECS (Situação, Problema, Exemplos, Restrições, Estilo) está orientado à resolução de problemas — começa de um problema e trabalha em direção a uma solução. CO-STAR está orientado à comunicação — começa de uma audiência e trabalha em direção à mensagem correta.' } },
-          { '@type': 'Question', name: 'Posso usar CO-STAR com modelos locais via Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. CO-STAR é uma técnica no nível do prompt — funciona com qualquer modelo que siga instruções. Os modelos locais respondem à mesma estrutura de seis componentes. Modelos menores podem lidar com menos restrições simultâneas, então priorize os 3-4 componentes mais importantes se usar um modelo abaixo de 7B parâmetros.' } },
-          { '@type': 'Question', name: 'Preciso dos seis componentes CO-STAR em cada prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Contexto e Objetivo são essenciais. Estilo, Tom, Audiência e Resposta melhoram a qualidade mas podem ser omitidos para tarefas simples. Comece com Contexto + Objetivo + Resposta como o prompt CO-STAR mínimo viável.' } },
-          { '@type': 'Question', name: 'Posso combinar CO-STAR com Chain-of-Thought ou APE?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. CO-STAR define O QUE o modelo deve produzir e COMO deve se sentir. Chain-of-Thought ou APE definem como o modelo deve PENSAR. Você pode usar CO-STAR para o briefing e adicionar "Pense passo a passo antes de produzir a resposta final" como instrução adicional.' } },
-          { '@type': 'Question', name: 'O que significa CO-STAR em prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Esses seis componentes trabalham juntos para dar ao modelo de IA um briefing completo.' } },
-          { '@type': 'Question', name: 'Como se usa o método CO-STAR para escrever um prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Preencha cada um dos seis campos CO-STAR: escreva o contexto, estabeleça seu objetivo, especifique o estilo, escolha o tom, identifique a audiência e defina o formato de resposta. Envie os seis componentes juntos como um prompt ao modelo de IA.' } },
-          { '@type': 'Question', name: 'Quais são as melhores alternativas ao framework CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'As principais alternativas incluem RTF (Papel, Tarefa, Formato — mais simples, 3 componentes), CRAFT (Contexto, Papel, Ação, Formato, Objetivo — orientado a tarefas), SPECS (Situação, Problema, Exemplos, Restrições, Estilo — resolução de problemas) e TRACE (Tarefa, Requisitos, Ações, Contexto, Exemplos — orientado ao raciocínio).' } },
-          { '@type': 'Question', name: 'Como o CO-STAR se compara ao RISEN, CRAFT e outros frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR (6 componentes, centrado na audiência) é para tarefas com muita comunicação. CRAFT (5 componentes, orientado ao papel) é para a execução de tarefas. RISEN enfatiza o papel e os objetivos. SPECS foca na resolução de problemas com restrições. TRACE adiciona transparência ao raciocínio.' } },
+          {
+            '@type': 'Question',
+            'name': 'O que significa CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Cada letra representa um componente de um prompt de IA estruturado. Juntos, os seis componentes dão ao modelo um briefing completo — equivalente ao que um escritor humano precisaria para produzir a saída correta na primeira tentativa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quem criou o framework CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O CO-STAR foi popularizado por Sheila Teo, funcionária pública do GovTech Singapura, que o usou para vencer a competição interna de engenharia de prompts do GovTech. Desde então, se espalhou amplamente como um dos frameworks de prompting estruturado mais citados, independente de qualquer fornecedor ou produto de IA específico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quando devo usar CO-STAR em vez de um prompt mais simples?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use CO-STAR quando múltiplas dimensões importam ao mesmo tempo — quando a saída precisa de uma estrutura específica E tom E deve ser calibrada para uma audiência particular. Se você só precisa de uma resposta factual ou um formato simples, um prompt mais curto ou abordagem de uma etapa é suficiente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Em que o CO-STAR difere do CRAFT?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ambos são frameworks de prompt estruturados mas com ênfases diferentes. CO-STAR (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta) foca nas dimensões de comunicação — quem lê, como deve se sentir. CRAFT (Contexto, Papel, Ação, Formato, Objetivo) foca na execução de tarefas — qual papel o modelo desempenha e que ação realiza.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Em que o CO-STAR difere do SPECS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS (Situação, Problema, Exemplos, Restrições, Estilo) está orientado à resolução de problemas — começa de um problema e trabalha em direção a uma solução. CO-STAR está orientado à comunicação — começa de uma audiência e trabalha em direção à mensagem correta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar CO-STAR com modelos locais via Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. CO-STAR é uma técnica no nível do prompt — funciona com qualquer modelo que siga instruções. Os modelos locais respondem à mesma estrutura de seis componentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Preciso dos seis componentes CO-STAR em cada prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Contexto e Objetivo são essenciais. Estilo, Tom, Audiência e Resposta melhoram a qualidade mas podem ser omitidos para tarefas simples. Comece com Contexto + Objetivo + Resposta como o prompt CO-STAR mínimo viável.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso combinar CO-STAR com Chain-of-Thought ou APE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. CO-STAR define O QUE o modelo deve produzir e COMO deve se sentir. Chain-of-Thought ou APE definem como o modelo deve PENSAR. Você pode usar CO-STAR para o briefing e adicionar "Pense passo a passo antes de produzir a resposta final" como instrução adicional.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que significa CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. É um framework de seis partes que ajuda você a escrever prompts claros e estruturados ao definir explicitamente cada elemento que influencia como o modelo produz a saída.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Em que o CO-STAR difere do Chain-of-Thought?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought pede ao modelo "pensar passo a passo". CO-STAR define O QUE deve ser a saída e COMO deve se sentir. Eles resolvem problemas diferentes: CoT melhora o raciocínio; CO-STAR melhora a consistência da saída e o alinhamento com a audiência.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quando devo usar CO-STAR em vez de prompts mais simples?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use CO-STAR quando a qualidade da saída depende do alinhamento com a audiência, o tom, o estilo ou o formato. Para perguntas factuais simples, prompts mais simples são suficientes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar CO-STAR com qualquer modelo de linguagem?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. CO-STAR funciona com todos os principais modelos de linguagem: APIs proprietárias, modelos de código aberto e modelos locais como Ollama. O framework é agnóstico ao modelo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devo seguir CO-STAR exatamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. CO-STAR é um guia, não um modelo rígido. Omita componentes que não se aplicam à sua tarefa, reordene-os ou combine-os com outros frameworks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como sei se meu prompt CO-STAR é eficaz?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Teste-o em 3-5 entradas representativas e verifique: (1) A saída corresponde ao estilo especificado? (2) O tom é consistente com seu briefing? (3) A resposta aborda a audiência que você nomeou?',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso combinar CO-STAR com outros frameworks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. CO-STAR define O QUE e COMO deve se sentir a saída. Chain-of-Thought ou APE definem COMO o modelo deve PENSAR.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devo colocar os elementos CO-STAR em uma ordem específica?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não é exigida uma ordem estrita. Comece com Objetivo para que o modelo saiba o que você quer. Depois adicione Contexto, Audiência, Estilo e Tom conforme necessário.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Preciso dos seis componentes CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Contexto e Objetivo são essenciais. Estilo, Tom, Audiência e Resposta melhoram a qualidade mas podem ser omitidos para tarefas simples.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O CO-STAR funciona com modelos locais como Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, absolutamente. CO-STAR é uma técnica no nível do prompt — funciona com qualquer modelo que siga instruções.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que significa CO-STAR em prompt engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Esses seis componentes trabalham juntos para dar ao modelo de IA um briefing completo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como se usa o método CO-STAR para escrever um prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Preencha cada um dos seis campos CO-STAR: escreva o contexto, estabeleça seu objetivo, especifique o estilo, escolha o tom, identifique a audiência e defina o formato de resposta. Envie os seis componentes juntos como um prompt ao modelo de IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais são as melhores alternativas ao framework CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As principais alternativas incluem RTF (Papel, Tarefa, Formato — mais simples, 3 componentes), CRAFT (Contexto, Papel, Ação, Formato, Objetivo — orientado a tarefas), SPECS (Situação, Problema, Exemplos, Restrições, Estilo — resolução de problemas) e TRACE (Tarefa, Requisitos, Ações, Contexto, Exemplos — orientado ao raciocínio).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como o CO-STAR se compara ao RISEN, CRAFT e outros frameworks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR (6 componentes, centrado na audiência) é para tarefas com muita comunicação. CRAFT (5 componentes, orientado ao papel) é para a execução de tarefas. RISEN enfatiza o papel e os objetivos. SPECS foca na resolução de problemas com restrições. TRACE adiciona transparência ao raciocínio.',
+            },
+          },
         ],
       },
       sections: {
@@ -1581,6 +2211,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Devo colocar os elementos CO-STAR em uma ordem específica?', a: 'Não é exigida uma ordem estrita. Comece com Objetivo para que o modelo saiba o que você quer. Depois adicione Contexto, Audiência, Estilo e Tom conforme necessário.' },
             { q: 'Preciso dos seis componentes CO-STAR?', a: 'Não. Contexto e Objetivo são essenciais. Estilo, Tom, Audiência e Resposta melhoram a qualidade mas podem ser omitidos para tarefas simples.' },
             { q: 'O CO-STAR funciona com modelos locais como Ollama?', a: 'Sim, absolutamente. CO-STAR é uma técnica no nível do prompt — funciona com qualquer modelo que siga instruções.' },
+            { q: 'O que significa CO-STAR em prompt engineering?', a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Esses seis componentes trabalham juntos para dar ao modelo de IA um briefing completo.' },
+            { q: 'Como se usa o método CO-STAR para escrever um prompt?', a: 'Preencha cada um dos seis campos CO-STAR: escreva o contexto, estabeleça seu objetivo, especifique o estilo, escolha o tom, identifique a audiência e defina o formato de resposta. Envie os seis componentes juntos como um prompt ao modelo de IA.' },
+            { q: 'Quais são as melhores alternativas ao framework CO-STAR?', a: 'As principais alternativas incluem RTF (Papel, Tarefa, Formato — mais simples, 3 componentes), CRAFT (Contexto, Papel, Ação, Formato, Objetivo — orientado a tarefas), SPECS (Situação, Problema, Exemplos, Restrições, Estilo — resolução de problemas) e TRACE (Tarefa, Requisitos, Ações, Contexto, Exemplos — orientado ao raciocínio).' },
+            { q: 'Como o CO-STAR se compara ao RISEN, CRAFT e outros frameworks?', a: 'CO-STAR (6 componentes, centrado na audiência) é para tarefas com muita comunicação. CRAFT (5 componentes, orientado ao papel) é para a execução de tarefas. RISEN enfatiza o papel e os objetivos. SPECS foca na resolução de problemas com restrições. TRACE adiciona transparência ao raciocínio.' },
           ],
         },
       },
@@ -1629,52 +2263,178 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'Que signifie CO-STAR ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR signifie Context (Contexte), Objective (Objectif), Style (Style), Tone (Ton), Audience (Audience) et Response (Réponse). Chaque lettre représente un composant d\'un prompt IA structuré. Ensemble, les six composants forment un brief complet — équivalent à ce qu\'un auteur humain nécessiterait pour produire le bon résultat du premier coup.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR signifie Context (Contexte), Objective (Objectif), Style (Style), Tone (Ton), Audience (Audience) et Response (Réponse). Chaque lettre représente un composant d\'un prompt IA structuré. Ensemble, les six composants forment un brief complet — équivalent à ce qu\'un auteur humain aurait besoin pour produire la bonne sortie au premier essai.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Quand dois-je utiliser le framework CO-STAR ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilisez CO-STAR quand plusieurs dimensions sont importantes simultanément — quand la sortie nécessite une structure spécifique ET un ton spécifique ET une calibration pour un public particulier. Pour une réponse factuelle ou un format simple, un prompt plus court ou une approche Single-Step suffisent. CO-STAR excelle pour la documentation, le contenu client, les matériels d\'intégration et la communication multi-parties prenantes.' }
+            'name': 'Qui a créé le framework CO-STAR ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "CO-STAR a été popularisé par Sheila Teo, une fonctionnaire de GovTech Singapour, qui l'a utilisé pour remporter le concours interne d'ingénierie de prompts de GovTech. Il s'est depuis largement répandu comme l'un des frameworks de prompting structuré les plus cités, indépendamment de tout fournisseur ou produit IA spécifique.",
+            },
           },
           {
             '@type': 'Question',
-            'name': 'En quoi CO-STAR diffère-t-il de CRAFT ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Les deux sont des frameworks de prompts structurés mais avec des orientations différentes. CO-STAR (Context, Objective, Style, Tone, Audience, Response) se concentre sur les dimensions de communication — qui lit, comment ça doit sonner. CRAFT (Context, Role, Action, Format, Target) se concentre sur l\'exécution des tâches — quel rôle le modèle joue. CO-STAR est meilleur pour contenu orienté audience; CRAFT pour tâches définies par rôle.' }
+            'name': 'Quand devrais-je utiliser CO-STAR au lieu d\'un prompt plus simple ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez CO-STAR quand plusieurs dimensions sont importantes simultanément — quand la sortie a besoin d\'une structure spécifique ET d\'un tone spécifique ET d\'une calibration pour une audience particulière. Si vous avez juste besoin d\'une réponse factuelle ou d\'un format simple, un prompt plus court ou Single-Step suffisent. CO-STAR brille sur documentation, contenu orienté client, matériels d\'intégration et communication multi-parties prenantes.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'En quoi CO-STAR diffère-t-il de SPECS ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'SPECS (Situation, Problem, Examples, Constraints, Style) est orienté résolution de problèmes — il commence par un problème et aboutit à une solution. CO-STAR est orienté communication — il commence par une audience et aboutit au bon message. Utilisez SPECS pour tâches analytiques; CO-STAR pour création de contenu et communication.' }
+            'name': 'Comment CO-STAR diffère-t-il de CRAFT ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les deux sont des frameworks structurés mais avec des orientations différentes. CO-STAR (Context, Objective, Style, Tone, Audience, Response) se concentre sur dimensions de communication — qui lit, comment ça doit sonner. CRAFT (Context, Role, Action, Format, Target) se concentre sur exécution de tâche — quel rôle le modèle joue. CO-STAR est meilleur pour contenu orienté audience; CRAFT pour tâches définies par rôle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment CO-STAR diffère-t-il de SPECS ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS (Situation, Problem, Examples, Constraints, Style) est orienté résolution de problèmes — commence par un problème, aboutit à solution. CO-STAR est orienté communication — commence par audience, aboutit au bon message. Utilisez SPECS pour tâches analytiques; CO-STAR pour création de contenu et communication.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Puis-je utiliser CO-STAR avec les modèles locaux via Ollama ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. CO-STAR est une technique au niveau du prompt — elle fonctionne avec tout modèle qui suit les instructions. Les modèles locaux répondent à la même structure six composants. Les modèles plus petits gèrent moins de contraintes simultanément, donc priorisez les 3–4 composants les plus importants pour les modèles sous 7B de paramètres.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. CO-STAR est une technique au niveau du prompt — fonctionne avec tout modèle qui suit les instructions. Les modèles locaux répondent à la même structure six composants. Les modèles plus petits gèrent moins de contraintes simultanément, donc priorisez les 3–4 composants les plus importants pour modèles sous 7B paramètres.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Ai-je besoin des six composants CO-STAR dans chaque prompt ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Contexte et Objectif sont essentiels. Style, Ton, Audience et Response améliorent la qualité mais peuvent être omis pour les tâches simples. Commencez par Context + Objective + Response comme prompt CO-STAR viable minimal, puis ajoutez Style, Tone et Audience quand la calibration est nécessaire.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Contexte et Objectif sont essentiels. Style, Tone, Audience et Response améliorent la qualité mais peuvent être omis pour tâches simples. Commencez par Context + Objective + Response comme prompt CO-STAR minimal viable, puis ajoutez Style, Tone et Audience quand la calibration est nécessaire.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Puis-je combiner CO-STAR avec Chain-of-Thought ou APE ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. CO-STAR définit QUOI produire et COMMENT ça doit sonner. Chain-of-Thought ou APE définissent COMMENT le modèle doit penser. Vous pouvez utiliser CO-STAR pour le brief et ajouter « Réfléchis étape par étape avant de produire la réponse finale » comme instruction supplémentaire. Les frameworks sont complémentaires, non concurrents.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. CO-STAR définit QUOI produire et COMMENT ça doit sonner. Chain-of-Thought ou APE définissent COMMENT le modèle doit penser. Vous pouvez utiliser CO-STAR pour le brief et ajouter « Réfléchis étape par étape avant de produire la réponse finale » comme instruction supplémentaire. Les frameworks se complètent.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STAR fonctionne-t-il avec tous les modèles ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. CO-STAR fonctionne avec tous les grands modèles de langage — propriétaires, open-source ou locaux. Les modèles plus grands gèrent mieux la nuance et les contextes complexes, mais tous bénéficient d\'une structure CO-STAR claire et complète comparé à des prompts vagues.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. CO-STAR fonctionne avec tous les grands modèles de langage — propriétaires, open-source ou locaux. Les modèles plus grands gèrent mieux la nuance et contextes complexes, mais tous bénéficient d\'une structure CO-STAR claire et complète comparé à prompts vagues.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'CO-STAR est-il pertinent pour le marché français et francophone ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Absolument. Les entreprises et équipes en France, Belgique et pays francophones utilisent CO-STAR pour documentation produit, communication client et workflows internes. L\'approche structurée améliore la clarté et la cohérence — particulièrement précieuse dans les contextes multilingues et les grandes organisations.' }
+            'name': 'Existe-t-il des considérations réglementaires pour CO-STAR en France ou Europe ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le framework CO-STAR lui-même est une technique d\'ingénierie de prompts neutre. Quand vous travaillez avec données sensibles en France, observez CNIL — l\'autorité de protection des données recommande l\'utilisation de modèles locaux ou auto-hébergés pour données sensibles. CO-STAR supporte ces setups, tout comme Ollama et modèles compatibles.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Comment commencer avec CO-STAR pratiquement ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Commencez avec un prompt simple : énoncez le Contexte, l\'Objectif et le Format Response souhaité. Une fois maîtrisés, ajoutez Style et Tone pour affiner la qualité. Définissez l\'Audience (cible, niveau de connaissances) pour adapter la complexité. Sauvegardez vos meilleurs prompts CO-STAR comme modèles pour réutilisation.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Commencez simple : énoncez le Contexte, l\'Objectif et le format Response souhaité. Une fois maîtrisés, ajoutez Style et Tone pour affiner la qualité. Définissez l\'Audience (cible, niveau de connaissances) pour adapter la complexité. Sauvegardez vos meilleurs prompts CO-STAR comme modèles pour réutilisation rapide.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que signifie CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR signifie Context (Contexte), Objective (Objectif), Style (Style), Tone (Ton), Audience (Audience) et Response (Réponse). C\'est un framework à six composants qui vous aide à écrire des prompts clairs et structurés en définissant explicitement chaque élément qui influence la façon dont le modèle produit une sortie.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment CO-STAR diffère-t-il de Chain-of-Thought?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought demande au modèle de « penser étape par étape ». CO-STAR définit CE que la sortie doit être et COMMENT elle doit se sentir. Ils résolvent des problèmes différents: CoT améliore le raisonnement; CO-STAR améliore la cohérence de la sortie et l\'adaptation au public. Vous pouvez les combiner.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand dois-je utiliser CO-STAR plutôt que des prompts plus simples?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez CO-STAR quand la qualité de la sortie dépend de l\'adaptation au public, du ton, du style ou du format. Exemples: écrire pour des lecteurs non techniques, créer du contenu marketing, produire de la documentation formelle. Pour les questions factuelles simples, des prompts plus simples suffisent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser CO-STAR avec n\'importe quel modèle de langage?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. CO-STAR fonctionne avec tous les grands modèles de langage: APIs propriétaires, modèles open-source et modèles locaux comme Ollama. Le framework est agnostique du modèle; il structure simplement votre entrée clairement afin que chaque modèle comprenne vos attentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je suivre CO-STAR exactement?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. CO-STAR est un guide, pas un modèle rigide. Omettez les composants qui ne s\'appliquent pas à votre tâche, réorganisez-les ou combinez-les avec d\'autres frameworks. L\'objectif est la clarté sur ce que vous voulez et comment cela doit se sentir.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment savoir si mon prompt CO-STAR est efficace?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Testez-le sur 3–5 entrées représentatives et vérifiez: (1) La sortie correspond-elle au style spécifié? (2) Le ton est-il cohérent avec votre briefing? (3) La réponse s\'adresse-t-elle au public nommé? Si l\'une d\'elles est non, affinez ce composant CO-STAR.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je combiner CO-STAR avec d\'autres frameworks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. CO-STAR définit CE et COMMENT la sortie doit se sentir. Chain-of-Thought ou APE définissent COMMENT le modèle doit PENSER. Vous pouvez utiliser CO-STAR pour le briefing et ajouter « Pensez étape par étape » comme instruction supplémentaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je placer les éléments CO-STAR dans un ordre spécifique?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aucun ordre strict requis. Commencez par Objective pour que le modèle sache ce que vous voulez. Puis ajoutez Contexte, Audience, Style et Ton selon les besoins. Response peut être placé n\'importe où où cela a du sens. Expérimentez pour trouver ce qui fonctionne pour votre cas d\'usage.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ai-je besoin de tous les six composants CO-STAR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Contexte et Objectif sont essentiels. Style, Ton, Audience et Response améliorent la qualité mais peuvent être omis pour les tâches simples. Commencez avec Context + Objective + Response comme prompt CO-STAR minimal viable, puis ajoutez Style, Ton et Audience quand la sortie nécessite un calibrage.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR fonctionne-t-il avec les modèles locaux comme Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Absolument. CO-STAR est une technique au niveau du prompt — elle fonctionne avec n\'importe quel modèle qui suit les instructions. Les modèles locaux répondent à la même structure à six éléments. Les modèles plus petits peuvent gérer moins de contraintes simultanément, donc priorisez les 3–4 composants les plus importants avec des modèles sous 7B paramètres.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR est-il pertinent pour le marché français et francophone ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Absolument. Les entreprises et équipes en France, Belgique et pays francophones utilisent CO-STAR pour documentation produit, communication client et workflows internes. L\'approche structurée améliore la clarté et la cohérence — particulièrement précieuse dans les contextes multilingues et les grandes organisations.',
+            },
           },
         ]
       },
@@ -1923,6 +2683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Dois-je placer les éléments CO-STAR dans un ordre spécifique?', a: 'Aucun ordre strict requis. Commencez par Objective pour que le modèle sache ce que vous voulez. Puis ajoutez Contexte, Audience, Style et Ton selon les besoins. Response peut être placé n\'importe où où cela a du sens. Expérimentez pour trouver ce qui fonctionne pour votre cas d\'usage.' },
             { q: 'Ai-je besoin de tous les six composants CO-STAR?', a: 'Non. Contexte et Objectif sont essentiels. Style, Ton, Audience et Response améliorent la qualité mais peuvent être omis pour les tâches simples. Commencez avec Context + Objective + Response comme prompt CO-STAR minimal viable, puis ajoutez Style, Ton et Audience quand la sortie nécessite un calibrage.' },
             { q: 'CO-STAR fonctionne-t-il avec les modèles locaux comme Ollama?', a: 'Absolument. CO-STAR est une technique au niveau du prompt — elle fonctionne avec n\'importe quel modèle qui suit les instructions. Les modèles locaux répondent à la même structure à six éléments. Les modèles plus petits peuvent gérer moins de contraintes simultanément, donc priorisez les 3–4 composants les plus importants avec des modèles sous 7B paramètres.' },
+            { q: 'CO-STAR est-il pertinent pour le marché français et francophone ?', a: 'Absolument. Les entreprises et équipes en France, Belgique et pays francophones utilisent CO-STAR pour documentation produit, communication client et workflows internes. L\'approche structurée améliore la clarté et la cohérence — particulièrement précieuse dans les contextes multilingues et les grandes organisations.' },
           ],
         },
       },
@@ -1971,52 +2732,170 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'CO-STARは何の略ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STARは Context（コンテキスト）、Objective（目的）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（レスポンス）の略です。各文字は構造化されたAIプロンプトの1つの要素を表します。6つの要素全体で、完全なブリーフが形成されます。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STARは Context（コンテキスト）、Objective（目的）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（レスポンス）の略です。各文字は構造化されたAIプロンプトの1つの要素を表します。6つの要素全体で、完全なブリーフが形成されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARフレームワークを作ったのは誰ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STARは、GovTechシンガポールの公務員であるシーラ・テオ氏によって広められました。彼女はこのフレームワークを使ってGovTech社内のプロンプトエンジニアリングコンテストで優勝しました。以来、特定のAIベンダーや製品に依存しない、最も広く引用される構造化プロンプトフレームワークの一つとして広まっています。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STARはいつ使うべきですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '複数の側面が同時に重要な場合に使用します。出力が特定の構造、特定のトーン、特定の対象者向けの調整を必要とする場合です。単なる事実の回答や単純なフォーマットが必要な場合は、よりシンプルなプロンプトで十分です。ドキュメント、顧客向けコンテンツ、オンボーディング資料で特に役立ちます。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '複数の側面が同時に重要な場合に使用します。出力が特定の構造と特定のトーン、特定の対象者への調整が必要な場合です。単なる事実の回答または単純なフォーマットの場合は、より短いプロンプトで十分です。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STARとCRAFTの違いは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'どちらも構造化されたフレームワークですが、焦点が異なります。CO-STAR（Context、Objective、Style、Tone、Audience、Response）は、コミュニケーション次元に焦点を当てています。CRAFTは、タスク実行に焦点を当てています。対象者中心のコンテンツにはCO-STARが、役割定義されたタスクにはCRAFTが適しています。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '両方とも構造化されたフレームワークですが、焦点が異なります。CO-STAR（Context、Objective、Style、Tone、Audience、Response）はコミュニケーション次元に焦点を当てています。CRAFTはタスク実行に焦点を当てています。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STARとSPECSの違いは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'SPECS（Situation、Problem、Examples、Constraints、Style）は問題解決志向です。CO-STARはコミュニケーション志向です。分析的なタスクにはSPECSを、コンテンツ作成や通信タスクにはCO-STARを使用してください。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS（Situation、Problem、Examples、Constraints、Style）は問題解決志向です。CO-STARはコミュニケーション志向です。分析的なタスクにはSPECSを、コンテンツ作成や通信にはCO-STARを使用してください。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'OllamaなどのローカルモデルでCO-STARを使用できますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。CO-STARはプロンプトレベルのテクニックです。すべてのモデルで機能します。ローカルモデルは同じ6要素構造に応答します。小さなモデル（7B未満）の場合は、最も重要な3～4要素に優先順位を付けてください。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。CO-STARはプロンプトレベルのテクニックです。すべてのモデルで機能します。ローカルモデルは同じ6要素構造に応答します。小さなモデル（7B未満）では最も重要な3～4要素に焦点を当ててください。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'すべてのプロンプトに6つの要素が必要ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。コンテキストと目的は必須です。スタイル、トーン、対象者、レスポンスは品質を向上させますが、シンプルなタスクでは省略できます。Context + Objective + Responseから始めて、必要に応じて他の要素を追加してください。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。Context と Objective は必須です。Style、Tone、Audience、Response は品質を向上させますがオプションです。Context + Objective + Response から始めて、必要に応じて追加してください。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STARをChain-of-ThoughtやAPEと組み合わせられますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。CO-STARは「何を」「どのように」作成するかを定義し、Chain-of-ThoughtやAPEは「どのように考えるか」を定義します。2つは補完関係にあり、競合していません。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。CO-STARは「何を」「どのように」するかを定義し、Chain-of-ThoughtやAPEは「どのように考えるか」を定義します。補完関係にあり、競合していません。',
+            },
           },
           {
             '@type': 'Question',
             'name': '日本企業でCO-STARは使用されていますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。日本の多くの企業がCO-STARを内部ドキュメント、顧客コミュニケーション、チームワークフローに使用しています。構造化されたアプローチは日本のQA文化や品質基準に適合しており、AIプロンプトの一貫性と信頼性を向上させます。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。日本企業の多くが内部ドキュメント、顧客コミュニケーション、チームワークフローに使用しています。構造化されたアプローチは品質基準に適合し、AIプロンプトの一貫性と信頼性を向上させます。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STARのすべての要素を毎回使用する必要はありますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。ただし、コンテキストと目的は常に含めることをお勧めします。スタイル、トーン、対象者を追加すると、より目的に合った出力が得られます。シンプルなタスクではミニマル版のContext+Objective+Responseで始めることができます。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。ただし、Context と Objective は常に含めることをお勧めします。スタイル、トーン、対象者を追加すると、より目的に合った出力が得られます。',
+            },
           },
           {
             '@type': 'Question',
-            'name': '実際にCO-STARの使い始めるにはどうしたらいいですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'まずシンプルに始めてください。コンテキスト、目的、希望する出力フォーマットを定義します。習得後、スタイルとトーンを追加して品質を向上させます。対象者を指定して複雑さを調整します。最高のプロンプトをテンプレートとして保存して再利用してください。' }
+            'name': '実践的にCO-STARの使い始めるにはどうしたらいいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'まずシンプルに始めてください。コンテキスト、目的、希望する出力フォーマットを定義します。習得後、スタイルとトーンを追加して品質を向上させます。対象者を指定して複雑さを調整します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARは何の略ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STARはContext（コンテキスト）、Objective（目的）、Style（スタイル）、Tone（トーン）、Audience（対象）、Response（応答）を意味します。これは6つのコンポーネントフレームワークで、モデルが出力をどのように生成するかに影響を与える各要素を明示的に定義することで、明確で構造化されたプロンプトを作成するのに役立ちます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARはChain-of-Thoughtとどのように異なりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thoughtはモデルに「ステップバイステップで考える」ように求めます。CO-STARは出力が何であるべきか、どのように感じるべきかを定義します。異なる問題を解決します：CoTは推論を改善し、CO-STARは出力の一貫性と対象者への適応を改善します。両方を組み合わせることができます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'より単純なプロンプトの代わりにCO-STARをいつ使用すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STARは、出力品質が対象者への適応、トーン、スタイル、またはフォーマットに依存する場合に使用してください。例：非技術系の読者のために書く、マーケティングコンテンツを作成する、形式的なドキュメントを作成する。単純な事実的な質問には、より単純なプロンプトで十分です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARは任意の言語モデルで使用できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。CO-STARはすべての大規模言語モデルで機能します：プロプライエタリAPI、オープンソースモデル、Ollamaなどのローカルモデル。フレームワークはモデルに依存しません。入力を明確に構造化するだけで、どのモデルでも期待を理解できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARを厳密に従う必要がありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。CO-STARはガイドであり、厳格なテンプレートではありません。タスクに適用されないコンポーネントをスキップし、並べ替え、または他のフレームワークと組み合わせます。目標は、あなたが何を望んでいるか、そしてそれがどのように感じるべきかについて明確にすることです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARプロンプトが効果的かどうかを知るにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '3～5つの代表的な入力でテストし、確認してください：（1）出力は指定されたスタイルと一致していますか？（2）トーンはあなたのブリーフィングと一致していますか？（3）応答は指定した対象者に対応していますか？いずれかがいいえの場合は、そのCO-STARコンポーネントを改善してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARを他のフレームワークと組み合わせることができますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。CO-STARは出力が何であるかと、どのように感じるべきかを定義します。Chain-of-ThoughtまたはAPEはモデルがどのように考えるべきかを定義します。ブリーフィングにCO-STARを使用し、「ステップバイステップで考える」を追加命令として追加できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARの要素を特定の順序で配置する必要がありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '厳密な順序は必要ありません。Objectiveから始めてください。これにより、モデルは何をしたいのかを知ります。次に、必要に応じてContext、Audience、Style、Toneを追加します。Responseは意味のある場所ならどこでも配置できます。ユースケースに合ったものを実験して探してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '6つのCO-STARコンポーネントすべてが必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。ContextとObjectiveは必須です。Style、Tone、Audience、Responseは品質を向上させますが、単純なタスクでは省略できます。Context + Objective + Responseから始めて、出力がキャリブレーションを必要とする場合はStyle、Tone、Audienceを追加してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STARはOllamaなどのローカルモデルで機能しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'もちろんです。CO-STARはプロンプトレベルの技法です。指示に従うモデルで機能します。ローカルモデルも同じ6要素の構造に応答します。小さなモデルは同時に処理できない制約が少ないため、7Bパラメータ以下のモデルでは最も重要な3～4のコンポーネントを優先してください。',
+            },
           },
         ]
       },
@@ -2314,53 +3193,147 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'CO-STAR代表什么？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR代表Context（背景）、Objective（目标）、Style（风格）、Tone（语调）、Audience（受众）和Response（回应）。每个字母代表结构化AI提示中的一个要素。六个要素结合在一起形成完整的指令。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR代表Context（背景）、Objective（目标）、Style（风格）、Tone（语调）、Audience（受众）、Response（回应）。这是一个六要素框架，通过明确定义影响模型如何生成输出的每个因素，帮助您编写清晰、结构化的提示。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR框架是谁创建的？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR由新加坡政府科技局（GovTech Singapore）的公务员Sheila Teo推广开来，她凭借该框架赢得了GovTech内部的提示工程比赛。此后，它已广泛传播，成为被引用最多的结构化提示框架之一，且不依赖于任何特定的AI供应商或产品。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR与Chain-of-Thought有何区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought要求模型"逐步思考"。CO-STAR定义输出应该是什么以及应该如何感觉。它们解决不同的问题：CoT改进推理；CO-STAR改进输出一致性和受众适应。您可以将两者结合。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我什么时候应该使用CO-STAR而不是更简单的提示？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '当输出质量取决于受众适应、语调、风格或格式时，使用CO-STAR。例如：为非技术读者写作、创建营销内容、生成正式文档。对于简单的事实性问题，更简单的提示就足够了。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR能与任何语言模型一起使用吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。CO-STAR适用于所有大型语言模型：专有API、开源模型和本地模型如Ollama。该框架与模型无关；它只是清晰地组织您的输入，使每个模型都能理解您的期望。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我需要严格遵循CO-STAR吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需要。CO-STAR是指南，不是严格的模板。跳过不适用于您的任务的组件、重新排列或与其他框架结合。目标是明确您想要什么以及它应该如何感觉。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我如何知道我的CO-STAR提示是否有效？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在3-5个代表性输入上测试它，并检查：（1）输出是否符合指定的风格？（2）语调是否与您的简报一致？（3）响应是否针对您命名的受众？如果任何一个是否，请改进该CO-STAR组件。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我能将CO-STAR与其他框架结合吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。CO-STAR定义输出应该是什么以及应该如何感觉。Chain-of-Thought或APE定义模型应该如何思考。您可以为简报使用CO-STAR，并将"逐步思考"作为附加指令添加。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我需要按特定顺序放置CO-STAR元素吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '没有严格的顺序要求。从Objective开始，以便模型知道您想要什么。然后根据需要添加Context、Audience、Style和Tone。Response可以放在任何有意义的地方。尝试找到适合您用例的方式。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我需要所有六个CO-STAR组件吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需要。Context和Objective是必不可少的。Style、Tone、Audience和Response可以改进质量，但对于简单的任务可以省略。从Context + Objective + Response开始作为最小可行的CO-STAR提示，然后在需要调整输出时添加Style、Tone和Audience。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR能与Ollama等本地模型一起工作吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '当然可以。CO-STAR是提示级别的技术，与任何遵循指令的模型都有效。本地模型对相同的六要素结构做出反应。较小的模型可能无法同时处理那么多约束，所以对于少于7B参数的模型，请优先考虑最重要的3-4个组件。',
+            },
           },
           {
             '@type': 'Question',
             'name': '何时应该使用CO-STAR框架？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '当你需要AI执行复杂、多步骤的任务时，使用CO-STAR框架最有效。它特别适合需要特定格式输出、复杂逻辑或详细上下文的任务。对于简单查询，通常不需要使用所有6个组件。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '当你需要AI执行复杂、多步骤的任务时，使用CO-STAR框架最有效。它特别适合需要特定格式输出、复杂逻辑或详细上下文的任务。对于简单查询，通常不需要使用所有6个组件。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STAR和CRAFT框架有什么区别？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'CO-STAR关注提示结构的6个维度，而CRAFT（Clarity、Role、Assistance、Format、Task）只有5个。CO-STAR更详细地分离了风格、语调和受众，而CRAFT在Role（角色）中合并了部分这些元素。两个框架都有效，选择取决于你的偏好。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR关注提示结构的6个维度，而CRAFT（Clarity、Role、Assistance、Format、Task）只有5个。CO-STAR更详细地分离了风格、语调和受众，而CRAFT在Role（角色）中合并了部分这些元素。两个框架都有效，选择取决于你的偏好。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STAR框架可以跨所有AI模型工作吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '是的。CO-STAR框架适用于所有大型语言模型，包括GPT、Claude、Gemini、Llama等。框架的有效性不取决于特定模型，而是取决于你的指令清晰度和完整性。' }
-          },
-          {
-            '@type': 'Question',
-            'name': '我需要在每个提示中使用所有6个CO-STAR组件吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '不一定。CO-STAR框架是灵活的——你可以根据任务需求使用1个、3个或全部6个组件。对于简单的查询，也许只需要背景和目标。对于复杂任务，所有6个组件都会提高质量。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。CO-STAR框架适用于所有大型语言模型，包括GPT、Claude、Gemini、Llama等。框架的有效性不取决于特定模型，而是取决于你的指令清晰度和完整性。',
+            },
           },
           {
             '@type': 'Question',
             'name': '如何确保AI的回应符合我想要的格式？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '在Response组件中明确指定所需的格式。例如：「以JSON格式返回，包含字段：errors（数组）、summary（字符串）、confidence（high|medium|low）」。越明确越好，AI就越可能按照你的要求返回。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在Response组件中明确指定所需的格式。例如：「以JSON格式返回，包含字段：errors（数组）、summary（字符串）、confidence（high|medium|low）」。越明确越好，AI就越可能按照你的要求返回。',
+            },
           },
           {
             '@type': 'Question',
             'name': '提示的长度会影响CO-STAR框架的有效性吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '不会。CO-STAR框架的有效性来自其结构，而不是长度。即使在较短的提示中，清晰地定义这6个组件也比冗长但模糊的提示更有效。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会。CO-STAR框架的有效性来自其结构，而不是长度。即使在较短的提示中，清晰地定义这6个组件也比冗长但模糊的提示更有效。',
+            },
           },
           {
             '@type': 'Question',
             'name': '如何使用CO-STAR框架处理多语言任务？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '只需在背景组件中指定语言，或在回应组件中说明："用中文回应"。CO-STAR框架不限制语言——它对中文、英文、日文或任何其他语言的提示都同样有效。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只需在背景组件中指定语言，或在回应组件中说明："用中文回应"。CO-STAR框架不限制语言——它对中文、英文、日文或任何其他语言的提示都同样有效。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'CO-STAR框架是否适合内容生成任务？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '非常适合。对于博客文章、广告文案、技术文档等内容生成，使用CO-STAR可以产生更一致和高质量的输出。背景提供写作背景，目标明确输出目标，风格和语调保证统一的品牌声音。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '非常适合。对于博客文章、广告文案、技术文档等内容生成，使用CO-STAR可以产生更一致和高质量的输出。背景提供写作背景，目标明确输出目标，风格和语调保证统一的品牌声音。',
+            },
           },
-          {
-            '@type': 'Question',
-            'name': '如何测试CO-STAR提示是否有效？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '测试方法：(1)使用相同的CO-STAR提示在多个模型上运行，看一致性；(2)移除一个组件并比较质量下降；(3)迭代调整每个组件，看哪个组件对输出影响最大；(4)收集真实用户反馈评估实用性。' }
-          }
         ],
       },
       sections: {
@@ -2513,6 +3486,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '我需要按特定顺序放置CO-STAR元素吗？', a: '没有严格的顺序要求。从Objective开始，以便模型知道您想要什么。然后根据需要添加Context、Audience、Style和Tone。Response可以放在任何有意义的地方。尝试找到适合您用例的方式。' },
             { q: '我需要所有六个CO-STAR组件吗？', a: '不需要。Context和Objective是必不可少的。Style、Tone、Audience和Response可以改进质量，但对于简单的任务可以省略。从Context + Objective + Response开始作为最小可行的CO-STAR提示，然后在需要调整输出时添加Style、Tone和Audience。' },
             { q: 'CO-STAR能与Ollama等本地模型一起工作吗？', a: '当然可以。CO-STAR是提示级别的技术，与任何遵循指令的模型都有效。本地模型对相同的六要素结构做出反应。较小的模型可能无法同时处理那么多约束，所以对于少于7B参数的模型，请优先考虑最重要的3-4个组件。' },
+            { q: '何时应该使用CO-STAR框架？', a: '当你需要AI执行复杂、多步骤的任务时，使用CO-STAR框架最有效。它特别适合需要特定格式输出、复杂逻辑或详细上下文的任务。对于简单查询，通常不需要使用所有6个组件。' },
+            { q: 'CO-STAR和CRAFT框架有什么区别？', a: 'CO-STAR关注提示结构的6个维度，而CRAFT（Clarity、Role、Assistance、Format、Task）只有5个。CO-STAR更详细地分离了风格、语调和受众，而CRAFT在Role（角色）中合并了部分这些元素。两个框架都有效，选择取决于你的偏好。' },
+            { q: 'CO-STAR框架可以跨所有AI模型工作吗？', a: '是的。CO-STAR框架适用于所有大型语言模型，包括GPT、Claude、Gemini、Llama等。框架的有效性不取决于特定模型，而是取决于你的指令清晰度和完整性。' },
+            { q: '如何确保AI的回应符合我想要的格式？', a: '在Response组件中明确指定所需的格式。例如：「以JSON格式返回，包含字段：errors（数组）、summary（字符串）、confidence（high|medium|low）」。越明确越好，AI就越可能按照你的要求返回。' },
+            { q: '提示的长度会影响CO-STAR框架的有效性吗？', a: '不会。CO-STAR框架的有效性来自其结构，而不是长度。即使在较短的提示中，清晰地定义这6个组件也比冗长但模糊的提示更有效。' },
+            { q: '如何使用CO-STAR框架处理多语言任务？', a: '只需在背景组件中指定语言，或在回应组件中说明："用中文回应"。CO-STAR框架不限制语言——它对中文、英文、日文或任何其他语言的提示都同样有效。' },
+            { q: 'CO-STAR框架是否适合内容生成任务？', a: '非常适合。对于博客文章、广告文案、技术文档等内容生成，使用CO-STAR可以产生更一致和高质量的输出。背景提供写作背景，目标明确输出目标，风格和语调保证统一的品牌声音。' },
           ],
         },
       },
@@ -2562,18 +3542,183 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: 'CO-STAR는 무엇을 의미합니까?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 각 글자는 구조화된 AI 프롬프트의 구성 요소를 나타냅니다. 6개의 구성 요소가 함께 모델에게 완전한 브리프를 제공합니다.' } },
-        { '@type': 'Question', name: '더 간단한 프롬프트 대신 CO-STAR를 언제 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR는 여러 차원이 동시에 중요할 때 사용하십시오. 문서화, 고객 대상 콘텐츠, 온보딩 자료, 다수 이해관계자와의 커뮤니케이션에서 탁월합니다.' } },
-        { '@type': 'Question', name: 'CO-STAR와 CRAFT의 차이점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR는 커뮤니케이션 차원(누가 읽는지, 어떻게 느껴져야 하는지)에 집중하고, CRAFT는 작업 실행(역할, 행동)에 집중합니다. CO-STAR는 대상 중심 콘텐츠에, CRAFT는 역할로 정의된 작업에 더 적합합니다.' } },
-        { '@type': 'Question', name: 'CO-STAR와 SPECS의 차이점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'SPECS는 문제 해결 지향적이고, CO-STAR는 커뮤니케이션 지향적입니다. 분석 작업에는 SPECS를, 콘텐츠 생성 및 커뮤니케이션에는 CO-STAR를 사용하십시오.' } },
-        { '@type': 'Question', name: 'Ollama를 통한 로컬 모델에서 CO-STAR를 사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. CO-STAR는 프롬프트 수준의 기법으로 지시를 따르는 모든 모델에서 작동합니다. 7B 파라미터 미만의 모델은 가장 중요한 3-4개의 구성 요소를 우선시하십시오.' } },
-        { '@type': 'Question', name: '모든 프롬프트에 6개의 CO-STAR 구성 요소가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오. 컨텍스트와 목표는 필수이고, 나머지는 필요에 따라 추가할 수 있습니다. 최소 실행 가능한 CO-STAR 프롬프트는 컨텍스트 + 목표 + 응답입니다.' } },
-        { '@type': 'Question', name: 'CO-STAR와 Chain-of-Thought 또는 APE를 결합할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. CO-STAR는 무엇을 생산해야 하는지를 정의하고, Chain-of-Thought 또는 APE는 어떻게 사고해야 하는지를 정의합니다. 두 프레임워크는 상호 보완적입니다.' } },
-        { '@type': 'Question', name: '프롬프트 엔지니어링에서 CO-STAR의 의미는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR는 컨텍스트, 목표, 스타일, 어조, 대상, 응답을 의미합니다. 이 6개의 구성 요소는 AI 모델에 완전한 브리프를 제공하여 정확하고 일관된 출력을 가능하게 합니다.' } },
-        { '@type': 'Question', name: 'CO-STAR 방법을 사용하여 프롬프트를 작성하는 방법은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '6개의 CO-STAR 필드(컨텍스트, 목표, 스타일, 어조, 대상, 응답)를 각각 작성하여 하나의 프롬프트로 AI 모델에 보내십시오.' } },
-        { '@type': 'Question', name: 'CO-STAR 프레임워크의 최선의 대안은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '주요 대안으로는 RTF(역할, 작업, 형식), CRAFT(컨텍스트, 역할, 행동, 형식, 목표), SPECS(상황, 문제, 예시, 제약, 스타일), TRACE(작업, 요구사항, 행동, 컨텍스트, 예시) 등이 있습니다.' } },
-        { '@type': 'Question', name: 'CO-STAR가 RISEN, CRAFT 및 다른 프레임워크와 어떻게 비교됩니까?', acceptedAnswer: { '@type': 'Answer', text: 'CO-STAR(6요소, 대상 중심)는 커뮤니케이션 작업에 적합합니다. CRAFT(5요소, 역할 지향)는 작업 실행에, RISEN은 역할과 목표에, SPECS는 문제 해결에 집중합니다.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR는 무엇을 의미합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 각 글자는 구조화된 AI 프롬프트의 구성 요소를 나타냅니다. 6개의 구성 요소가 함께 모델에게 완전한 브리프를 제공합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR 프레임워크는 누가 만들었습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR는 GovTech 싱가포르의 공무원인 실라 테오(Sheila Teo)가 대중화했습니다. 그녀는 이 프레임워크를 사용해 GovTech 내부 프롬프트 엔지니어링 경진대회에서 우승했습니다. 이후 특정 AI 공급업체나 제품에 종속되지 않는, 가장 많이 인용되는 구조화된 프롬프팅 프레임워크 중 하나로 널리 퍼졌습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '더 간단한 프롬프트 대신 CO-STAR를 언제 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR는 여러 차원이 동시에 중요할 때 사용하십시오. 문서화, 고객 대상 콘텐츠, 온보딩 자료에서 탁월합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR와 CRAFT의 차이점은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR는 커뮤니케이션 차원에 집중하며 대상 중심 콘텐츠에 더 적합합니다. CRAFT는 작업 실행에 집중하며 역할로 정의된 작업에 더 적합합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR와 SPECS의 차이점은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SPECS는 문제 해결 지향적이고, CO-STAR는 커뮤니케이션 지향적입니다. 분석 작업에는 SPECS를, 콘텐츠 생성에는 CO-STAR를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama를 통한 로컬 모델에서 CO-STAR를 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. CO-STAR는 프롬프트 수준의 기법으로 지시를 따르는 모든 모델에서 작동합니다. 7B 파라미터 미만의 모델은 가장 중요한 3-4개의 구성 요소를 우선시하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '모든 프롬프트에 6개의 CO-STAR 구성 요소가 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니오. 컨텍스트와 목표는 필수입니다. 스타일, 어조, 대상, 응답은 간단한 작업에서는 생략할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR와 Chain-of-Thought 또는 APE를 결합할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. CO-STAR는 모델이 무엇을 생산해야 하는지를 정의하고, Chain-of-Thought 또는 APE는 어떻게 사고해야 하는지를 정의합니다. 두 프레임워크는 상호 보완적입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR는 무엇을 의미합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 이 6부분 프레임워크는 모델이 출력을 생성하는 방식에 영향을 미치는 모든 요소를 명시적으로 정의하여 명확하고 구조화된 프롬프트를 작성하는 데 도움을 줍니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR와 Chain-of-Thought의 차이점은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought는 모델에게 단계별로 생각하라고 요청합니다. CO-STAR는 출력이 무엇이어야 하는지와 어떻게 느껴져야 하는지를 정의합니다. CoT는 추론을 개선하고, CO-STAR는 출력 일관성과 대상 맞춤을 개선합니다. 두 가지를 결합할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '더 간단한 프롬프트 대신 CO-STAR를 언제 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '출력 품질이 대상 맞춤, 어조, 스타일 또는 형식에 달려 있을 때 CO-STAR를 사용하십시오. 단순한 사실적 질문에는 더 간단한 프롬프트로 충분합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR를 모든 언어 모델과 함께 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. CO-STAR는 모든 주요 언어 모델에서 작동합니다: 독점 API, 오픈 소스 모델, Ollama와 같은 로컬 모델. 프레임워크는 모델에 관계없이 입력을 명확하게 구성합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR를 정확히 따라야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니오. CO-STAR는 가이드이지 엄격한 템플릿이 아닙니다. 작업에 적용되지 않는 구성 요소를 생략하거나 다른 프레임워크와 결합하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR 프롬프트가 효과적인지 어떻게 알 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '3-5개의 대표 입력에서 테스트하고 다음을 확인하십시오: 출력이 지정된 스타일과 일치합니까? 어조가 브리프와 일관됩니까? 응답이 명명한 대상을 대상으로 합니까? 하나라도 아니오라면 해당 CO-STAR 구성 요소를 개선하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR를 다른 프레임워크와 결합할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. CO-STAR는 출력이 무엇이어야 하는지를 정의하고, Chain-of-Thought 또는 APE는 모델이 어떻게 사고해야 하는지를 정의합니다. 두 접근법은 상호 보완적입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR 요소를 특정 순서로 배치해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '엄격한 순서는 필요하지 않습니다. 목표부터 시작하여 필요에 따라 컨텍스트, 대상, 스타일, 어조를 추가하십시오. 응답은 가장 의미 있는 곳에 배치할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR의 6개 구성 요소가 모두 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니오. 컨텍스트와 목표는 필수입니다. 스타일, 어조, 대상, 응답은 품질을 향상시키지만 간단한 작업에서는 생략할 수 있습니다. 최소 CO-STAR 프롬프트는 컨텍스트 + 목표 + 응답입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR는 Ollama와 같은 로컬 모델에서 작동합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '물론입니다. CO-STAR는 프롬프트 수준의 기법으로 지시를 따르는 모든 모델에서 작동합니다. 7B 파라미터 미만의 모델은 가장 중요한 3-4개의 구성 요소를 우선시하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '프롬프트 엔지니어링에서 CO-STAR의 의미는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR는 컨텍스트, 목표, 스타일, 어조, 대상, 응답을 의미합니다. 이 6개의 구성 요소는 AI 모델에 완전한 브리프를 제공하여 정확하고 일관된 출력을 가능하게 합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR 방법을 사용하여 프롬프트를 작성하는 방법은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '6개의 CO-STAR 필드(컨텍스트, 목표, 스타일, 어조, 대상, 응답)를 각각 작성하여 하나의 프롬프트로 AI 모델에 보내십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR 프레임워크의 최선의 대안은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '주요 대안으로는 RTF(역할, 작업, 형식), CRAFT(컨텍스트, 역할, 행동, 형식, 목표), SPECS(상황, 문제, 예시, 제약, 스타일), TRACE(작업, 요구사항, 행동, 컨텍스트, 예시) 등이 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CO-STAR가 RISEN, CRAFT 및 다른 프레임워크와 어떻게 비교됩니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CO-STAR(6요소, 대상 중심)는 커뮤니케이션 작업에 적합합니다. CRAFT(5요소, 역할 지향)는 작업 실행에, RISEN은 역할과 목표에, SPECS는 문제 해결에 집중합니다.',
+            },
+          },
+        ],
     },
     leadAnswerBlock: 'CO-STAR 프레임워크는 명확하고 일관된 AI 출력을 만들기 위해 프롬프트를 컨텍스트, 목표, 스타일, 어조, 대상, 응답의 6개 부분으로 나누는 구조화된 방법입니다. 복잡한 문서화, 커뮤니케이션, 교육 작업에 효과적입니다.',
     sections: {
@@ -2799,17 +3944,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'CO-STAR는 무엇을 의미합니까?', a: 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 이 6부분 프레임워크는 모델이 출력을 생성하는 방식에 영향을 미치는 모든 요소를 명시적으로 정의하여 명확하고 구조화된 프롬프트를 작성하는 데 도움을 줍니다.' },
-          { q: 'CO-STAR와 Chain-of-Thought의 차이점은 무엇입니까?', a: 'Chain-of-Thought는 모델에게 단계별로 생각하라고 요청합니다. CO-STAR는 출력이 무엇이어야 하는지와 어떻게 느껴져야 하는지를 정의합니다. CoT는 추론을 개선하고, CO-STAR는 출력 일관성과 대상 맞춤을 개선합니다. 두 가지를 결합할 수 있습니다.' },
-          { q: '더 간단한 프롬프트 대신 CO-STAR를 언제 사용해야 합니까?', a: '출력 품질이 대상 맞춤, 어조, 스타일 또는 형식에 달려 있을 때 CO-STAR를 사용하십시오. 단순한 사실적 질문에는 더 간단한 프롬프트로 충분합니다.' },
-          { q: 'CO-STAR를 모든 언어 모델과 함께 사용할 수 있습니까?', a: '예. CO-STAR는 모든 주요 언어 모델에서 작동합니다: 독점 API, 오픈 소스 모델, Ollama와 같은 로컬 모델. 프레임워크는 모델에 관계없이 입력을 명확하게 구성합니다.' },
-          { q: 'CO-STAR를 정확히 따라야 합니까?', a: '아니오. CO-STAR는 가이드이지 엄격한 템플릿이 아닙니다. 작업에 적용되지 않는 구성 요소를 생략하거나 다른 프레임워크와 결합하십시오.' },
-          { q: 'CO-STAR 프롬프트가 효과적인지 어떻게 알 수 있습니까?', a: '3-5개의 대표 입력에서 테스트하고 다음을 확인하십시오: 출력이 지정된 스타일과 일치합니까? 어조가 브리프와 일관됩니까? 응답이 명명한 대상을 대상으로 합니까? 하나라도 아니오라면 해당 CO-STAR 구성 요소를 개선하십시오.' },
-          { q: 'CO-STAR를 다른 프레임워크와 결합할 수 있습니까?', a: '예. CO-STAR는 출력이 무엇이어야 하는지를 정의하고, Chain-of-Thought 또는 APE는 모델이 어떻게 사고해야 하는지를 정의합니다. 두 접근법은 상호 보완적입니다.' },
-          { q: 'CO-STAR 요소를 특정 순서로 배치해야 합니까?', a: '엄격한 순서는 필요하지 않습니다. 목표부터 시작하여 필요에 따라 컨텍스트, 대상, 스타일, 어조를 추가하십시오. 응답은 가장 의미 있는 곳에 배치할 수 있습니다.' },
-          { q: 'CO-STAR의 6개 구성 요소가 모두 필요합니까?', a: '아니오. 컨텍스트와 목표는 필수입니다. 스타일, 어조, 대상, 응답은 품질을 향상시키지만 간단한 작업에서는 생략할 수 있습니다. 최소 CO-STAR 프롬프트는 컨텍스트 + 목표 + 응답입니다.' },
-          { q: 'CO-STAR는 Ollama와 같은 로컬 모델에서 작동합니까?', a: '물론입니다. CO-STAR는 프롬프트 수준의 기법으로 지시를 따르는 모든 모델에서 작동합니다. 7B 파라미터 미만의 모델은 가장 중요한 3-4개의 구성 요소를 우선시하십시오.' },
-        ],
+            { q: 'CO-STAR는 무엇을 의미합니까?', a: 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 이 6부분 프레임워크는 모델이 출력을 생성하는 방식에 영향을 미치는 모든 요소를 명시적으로 정의하여 명확하고 구조화된 프롬프트를 작성하는 데 도움을 줍니다.' },
+            { q: 'CO-STAR와 Chain-of-Thought의 차이점은 무엇입니까?', a: 'Chain-of-Thought는 모델에게 단계별로 생각하라고 요청합니다. CO-STAR는 출력이 무엇이어야 하는지와 어떻게 느껴져야 하는지를 정의합니다. CoT는 추론을 개선하고, CO-STAR는 출력 일관성과 대상 맞춤을 개선합니다. 두 가지를 결합할 수 있습니다.' },
+            { q: '더 간단한 프롬프트 대신 CO-STAR를 언제 사용해야 합니까?', a: '출력 품질이 대상 맞춤, 어조, 스타일 또는 형식에 달려 있을 때 CO-STAR를 사용하십시오. 단순한 사실적 질문에는 더 간단한 프롬프트로 충분합니다.' },
+            { q: 'CO-STAR를 모든 언어 모델과 함께 사용할 수 있습니까?', a: '예. CO-STAR는 모든 주요 언어 모델에서 작동합니다: 독점 API, 오픈 소스 모델, Ollama와 같은 로컬 모델. 프레임워크는 모델에 관계없이 입력을 명확하게 구성합니다.' },
+            { q: 'CO-STAR를 정확히 따라야 합니까?', a: '아니오. CO-STAR는 가이드이지 엄격한 템플릿이 아닙니다. 작업에 적용되지 않는 구성 요소를 생략하거나 다른 프레임워크와 결합하십시오.' },
+            { q: 'CO-STAR 프롬프트가 효과적인지 어떻게 알 수 있습니까?', a: '3-5개의 대표 입력에서 테스트하고 다음을 확인하십시오: 출력이 지정된 스타일과 일치합니까? 어조가 브리프와 일관됩니까? 응답이 명명한 대상을 대상으로 합니까? 하나라도 아니오라면 해당 CO-STAR 구성 요소를 개선하십시오.' },
+            { q: 'CO-STAR를 다른 프레임워크와 결합할 수 있습니까?', a: '예. CO-STAR는 출력이 무엇이어야 하는지를 정의하고, Chain-of-Thought 또는 APE는 모델이 어떻게 사고해야 하는지를 정의합니다. 두 접근법은 상호 보완적입니다.' },
+            { q: 'CO-STAR 요소를 특정 순서로 배치해야 합니까?', a: '엄격한 순서는 필요하지 않습니다. 목표부터 시작하여 필요에 따라 컨텍스트, 대상, 스타일, 어조를 추가하십시오. 응답은 가장 의미 있는 곳에 배치할 수 있습니다.' },
+            { q: 'CO-STAR의 6개 구성 요소가 모두 필요합니까?', a: '아니오. 컨텍스트와 목표는 필수입니다. 스타일, 어조, 대상, 응답은 품질을 향상시키지만 간단한 작업에서는 생략할 수 있습니다. 최소 CO-STAR 프롬프트는 컨텍스트 + 목표 + 응답입니다.' },
+            { q: 'CO-STAR는 Ollama와 같은 로컬 모델에서 작동합니까?', a: '물론입니다. CO-STAR는 프롬프트 수준의 기법으로 지시를 따르는 모든 모델에서 작동합니다. 7B 파라미터 미만의 모델은 가장 중요한 3-4개의 구성 요소를 우선시하십시오.' },
+            { q: '프롬프트 엔지니어링에서 CO-STAR의 의미는 무엇입니까?', a: 'CO-STAR는 컨텍스트, 목표, 스타일, 어조, 대상, 응답을 의미합니다. 이 6개의 구성 요소는 AI 모델에 완전한 브리프를 제공하여 정확하고 일관된 출력을 가능하게 합니다.' },
+            { q: 'CO-STAR 방법을 사용하여 프롬프트를 작성하는 방법은 무엇입니까?', a: '6개의 CO-STAR 필드(컨텍스트, 목표, 스타일, 어조, 대상, 응답)를 각각 작성하여 하나의 프롬프트로 AI 모델에 보내십시오.' },
+            { q: 'CO-STAR 프레임워크의 최선의 대안은 무엇입니까?', a: '주요 대안으로는 RTF(역할, 작업, 형식), CRAFT(컨텍스트, 역할, 행동, 형식, 목표), SPECS(상황, 문제, 예시, 제약, 스타일), TRACE(작업, 요구사항, 행동, 컨텍스트, 예시) 등이 있습니다.' },
+            { q: 'CO-STAR가 RISEN, CRAFT 및 다른 프레임워크와 어떻게 비교됩니까?', a: 'CO-STAR(6요소, 대상 중심)는 커뮤니케이션 작업에 적합합니다. CRAFT(5요소, 역할 지향)는 작업 실행에, RISEN은 역할과 목표에, SPECS는 문제 해결에 집중합니다.' },
+          ],
       },
     },
   },

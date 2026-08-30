@@ -57,76 +57,68 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Does the formula work for all model types?',
-            acceptedAnswer: {
+            'name': 'Does the formula work for all model types?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Yes. The formula (Model Billions × Quantization Bits) ÷ 8 applies to all Transformer-based models (Llama, Qwen, Mistral, Claude, etc.). Non-Transformer architectures (RNNs, etc.) are rare and may require adjustment.'
-            }
+              'text': 'Yes. The formula (Model Billions × Quantization Bits) ÷ 8 applies to all Transformer-based models (Llama, Qwen, Mistral, Claude, etc.). Non-Transformer architectures (RNNs, etc.) are rare and may require adjustment.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'What quantization should I use?',
-            acceptedAnswer: {
+            'name': 'What quantization should I use?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'For most use cases: Q5 offers the best balance (95% quality, 68% size reduction). For consumer GPUs: Q4 is standard (90-95% quality, 75% reduction). For production: Q8 if VRAM allows (99% quality). Avoid Q3 and below unless you have no choice.'
-            }
+              'text': 'For most use cases: Q5 offers the best balance (95% quality, 68% size reduction). For consumer GPUs: Q4 is standard (90-95% quality, 75% reduction). For production: Q8 if VRAM allows (99% quality). Avoid Q3 and below unless you have no choice.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'How much system RAM do I need?',
-            acceptedAnswer: {
+            'name': 'How much system RAM do I need?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Minimum 16 GB for offloading. If using VRAM offloading (CPU spillover), system RAM becomes the fallback. For batch processing, add 8–16 GB system RAM beyond model offload requirements. For single-user chat, 16 GB is sufficient.'
-            }
+              'text': 'Minimum 16 GB for offloading. If using VRAM offloading (CPU spillover), system RAM becomes the fallback. For batch processing, add 8–16 GB system RAM beyond model offload requirements. For single-user chat, 16 GB is sufficient.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Does batch size affect VRAM calculation?',
-            acceptedAnswer: {
+            'name': 'Does batch size affect VRAM calculation?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Yes. The formula calculates single-request VRAM. Batch size adds additional VRAM linearly: each concurrent request adds ~500 MB–2 GB depending on context length. If running batch=4, add 2–8 GB to the calculated amount.'
-            }
+              'text': 'Yes. The formula calculates single-request VRAM. Batch size adds additional VRAM linearly: each concurrent request adds ~500 MB–2 GB depending on context length. If running batch=4, add 2–8 GB to the calculated amount.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Can I run a 70B model on a 12 GB GPU?',
-            acceptedAnswer: {
+            'name': 'Can I run a 70B model on a 12 GB GPU?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Only with extreme quantization (Q2, ~70% quality loss) and CPU offloading (very slow, 1–3 tokens/sec). Not practical. Better option: use a 13B model at Q4 (same VRAM, much faster and better quality).'
-            }
+              'text': 'Only with extreme quantization (Q2, ~70% quality loss) and CPU offloading (very slow, 1–3 tokens/sec). Not practical. Better option: use a 13B model at Q4 (same VRAM, much faster and better quality).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'What if my actual VRAM usage is lower than calculated?',
-            acceptedAnswer: {
+            'name': 'What if my actual VRAM usage is lower than calculated?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'The formula is conservative and includes overhead. Lower actual usage means more headroom for batch processing, longer contexts, or safety margin. Use nvidia-smi to measure real usage, then benchmark your model to confirm performance.'
-            }
+              'text': 'The formula is conservative and includes overhead. Lower actual usage means more headroom for batch processing, longer contexts, or safety margin. Use nvidia-smi to measure real usage, then benchmark your model to confirm performance.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Should I buy a GPU exactly at the calculated VRAM size?',
-            acceptedAnswer: {
+            'name': 'Should I buy a GPU exactly at the calculated VRAM size?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'No. Always buy 25% more VRAM than calculated. If you calculate 18 GB need, buy a 24 GB GPU. This safety margin accounts for context growth, batching, and system processes. Exact-fit purchases leave no headroom and cause out-of-memory errors.'
-            }
+              'text': 'No. Always buy 25% more VRAM than calculated. If you calculate 18 GB need, buy a 24 GB GPU. This safety margin accounts for context growth, batching, and system processes. Exact-fit purchases leave no headroom and cause out-of-memory errors.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'What is the best GPU for 13B models in 2026?',
-            acceptedAnswer: {
+            'name': 'What is the best GPU for 13B models in 2026?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTX 5070 Ti (16 GB) for single-user chat at Q4-Q5. RTX 4080 (16 GB, previous gen) if you want Q8 quality or batch processing and don\'t need the newest card. M5 Max (36 GB) if using Mac. All three comfortably run 13B-class models from the Qwen3 and Mistral families.'
-            }
+              'text': 'RTX 5070 Ti (16 GB) for single-user chat at Q4-Q5. RTX 4080 (16 GB, previous gen) if you want Q8 quality or batch processing and don\'t need the newest card. M5 Max (36 GB) if using Mac. All three comfortably run 13B-class models from the Qwen3 and Mistral families.',
+            },
           },
-          {
-            '@type': 'Question',
-            name: 'Can I run a 70B model on RTX 4090?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'On RTX 4090 (24 GB): only with Q4 quantization (35 GB) + CPU offloading (slow, 3-5 tok/sec), which is impractical. Better approach: use a 32B model at Q5 (20 GB) on RTX 4090 for fast, quality responses. RTX 5090 (32 GB) runs a 70B model at Q4 (35 GB is still tight -- Q3 or offloading recommended for headroom).'
-            }
-          }
         ]
       },
       softwareApplicationSchema: {
@@ -389,6 +381,8 @@ schema: {
             { q: 'Does batch size affect VRAM calculation?', a: 'Yes. The formula calculates single-request VRAM. Batch size adds additional VRAM linearly: each concurrent request adds ~500 MB–2 GB depending on context length. If running batch=4, add 2–8 GB to the calculated amount.' },
             { q: 'Can I run a 70B model on a 12 GB GPU?', a: 'Only with extreme quantization (Q2, ~70% quality loss) and CPU offloading (very slow, 1–3 tokens/sec). Not practical. Better option: use a 13B model at Q4 (same VRAM, much faster and better quality).' },
             { q: 'What if my actual VRAM usage is lower than calculated?', a: 'The formula is conservative and includes overhead. Lower actual usage means more headroom for batch processing, longer contexts, or safety margin. Use nvidia-smi to measure real usage, then benchmark your model to confirm performance.' },
+            { q: 'Should I buy a GPU exactly at the calculated VRAM size?', a: 'No. Always buy 25% more VRAM than calculated. If you calculate 18 GB need, buy a 24 GB GPU. This safety margin accounts for context growth, batching, and system processes. Exact-fit purchases leave no headroom and cause out-of-memory errors.' },
+            { q: 'What is the best GPU for 13B models in 2026?', a: 'RTX 5070 Ti (16 GB) for single-user chat at Q4-Q5. RTX 4080 (16 GB, previous gen) if you want Q8 quality or batch processing and don\'t need the newest card. M5 Max (36 GB) if using Mac. All three comfortably run 13B-class models from the Qwen3 and Mistral families.' },
           ],
         },
         relatedReading: {
@@ -470,76 +464,68 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '¿La fórmula funciona para todos los tipos de modelos?',
-            acceptedAnswer: {
+            'name': '¿La fórmula funciona para todos los tipos de modelos?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Sí. La fórmula (Miles de millones del modelo × Bits de cuantización) ÷ 8 se aplica a todos los modelos basados en Transformer (Llama, Qwen, Mistral, Claude, etc.). Las arquitecturas no Transformer (RNN, etc.) son poco frecuentes y pueden requerir ajustes.'
-            }
+              'text': 'Sí. La fórmula (Miles de millones del modelo × Bits de cuantización) ÷ 8 se aplica a todos los modelos basados en Transformer (Llama, Qwen, Mistral, Claude, etc.). Las arquitecturas no Transformer (RNN, etc.) son poco frecuentes y pueden requerir ajustes.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Qué cuantización debo usar?',
-            acceptedAnswer: {
+            'name': '¿Qué cuantización debo usar?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Para la mayoría de los casos: Q5 ofrece el mejor equilibrio (95 % de calidad, 68 % de reducción de tamaño). Para GPU de consumo: Q4 es el estándar (90–95 % de calidad, 75 % de reducción). Para producción: Q8 si la VRAM lo permite (99 % de calidad). Evita Q3 y niveles inferiores salvo que no tengas otra opción.'
-            }
+              'text': 'Para la mayoría de los casos: Q5 ofrece el mejor equilibrio (95 % de calidad, 68 % de reducción de tamaño). Para GPU de consumo: Q4 es el estándar (90–95 % de calidad, 75 % de reducción). Para producción: Q8 si la VRAM lo permite (99 % de calidad). Evita Q3 y niveles inferiores salvo que no tengas otra opción.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cuánta RAM del sistema necesito?',
-            acceptedAnswer: {
+            'name': '¿Cuánta RAM del sistema necesito?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Mínimo 16 GB para la descarga (offloading). Si usas descarga de VRAM (desbordamiento a CPU), la RAM del sistema actúa como respaldo. Para procesamiento por lotes, añade 8–16 GB de RAM del sistema más allá de los requisitos de descarga del modelo. Para chat de un solo usuario, 16 GB son suficientes.'
-            }
+              'text': 'Mínimo 16 GB para la descarga (offloading). Si usas descarga de VRAM (desbordamiento a CPU), la RAM del sistema actúa como respaldo. Para procesamiento por lotes, añade 8–16 GB de RAM del sistema más allá de los requisitos de descarga del modelo. Para chat de un solo usuario, 16 GB son suficientes.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿El tamaño del lote afecta al cálculo de VRAM?',
-            acceptedAnswer: {
+            'name': '¿El tamaño del lote afecta al cálculo de VRAM?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Sí. La fórmula calcula la VRAM para una sola solicitud. El tamaño del lote añade VRAM de forma lineal: cada solicitud simultánea agrega entre 500 MB y 2 GB según la longitud del contexto. Con batch=4, añade entre 2 y 8 GB a la cantidad calculada.'
-            }
+              'text': 'Sí. La fórmula calcula la VRAM para una sola solicitud. El tamaño del lote añade VRAM de forma lineal: cada solicitud simultánea agrega entre 500 MB y 2 GB según la longitud del contexto. Con batch=4, añade entre 2 y 8 GB a la cantidad calculada.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Puedo ejecutar un modelo de 70B en una GPU de 12 GB?',
-            acceptedAnswer: {
+            'name': '¿Puedo ejecutar un modelo de 70B en una GPU de 12 GB?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Solo con cuantización extrema (Q2, ~70 % de pérdida de calidad) y descarga a CPU (muy lento, 1–3 tokens/s). No es práctico. Mejor opción: usa un modelo de 13B en Q4 (misma VRAM, mucho más rápido y mejor calidad).'
-            }
+              'text': 'Solo con cuantización extrema (Q2, ~70 % de pérdida de calidad) y descarga a CPU (muy lento, 1–3 tokens/s). No es práctico. Mejor opción: usa un modelo de 13B en Q4 (misma VRAM, mucho más rápido y mejor calidad).',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Qué pasa si el uso real de VRAM es menor que el calculado?',
-            acceptedAnswer: {
+            'name': '¿Qué pasa si el uso real de VRAM es menor que el calculado?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'La fórmula es conservadora e incluye sobrecarga. Un uso real menor significa más margen para procesamiento por lotes, contextos más largos o margen de seguridad. Usa nvidia-smi para medir el uso real y luego benchmarkea tu modelo para confirmar el rendimiento.'
-            }
+              'text': 'La fórmula es conservadora e incluye sobrecarga. Un uso real menor significa más margen para procesamiento por lotes, contextos más largos o margen de seguridad. Usa nvidia-smi para medir el uso real y luego benchmarkea tu modelo para confirmar el rendimiento.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Debo comprar una GPU exactamente al tamaño de VRAM calculado?',
-            acceptedAnswer: {
+            'name': '¿Debo comprar una GPU exactamente al tamaño de VRAM calculado?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'No. Compra siempre un 25 % más de VRAM del calculado. Si calculas 18 GB, compra una GPU de 24 GB. Este margen de seguridad contempla el crecimiento del contexto, el procesamiento por lotes y los procesos del sistema. Las compras ajustadas al límite no dejan margen y causan errores de memoria insuficiente.'
-            }
+              'text': 'No. Compra siempre un 25 % más de VRAM del calculado. Si calculas 18 GB, compra una GPU de 24 GB. Este margen de seguridad contempla el crecimiento del contexto, el procesamiento por lotes y los procesos del sistema. Las compras ajustadas al límite no dejan margen y causan errores de memoria insuficiente.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cuál es la mejor GPU para modelos de 13B en 2026?',
-            acceptedAnswer: {
+            'name': '¿Cuál es la mejor GPU para modelos de 13B en 2026?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTX 4070 Ti (12 GB) para chat de un solo usuario en Q4–Q5. RTX 4080 (16 GB) si quieres calidad Q8 o procesamiento por lotes. M5 Max (36 GB) si usas Mac. Las tres ejecutan cómodamente modelos Llama 3.3, Qwen3 y Mistral 3.1 de 13B.'
-            }
+              'text': 'RTX 4070 Ti (12 GB) para chat de un solo usuario en Q4–Q5. RTX 4080 (16 GB) si quieres calidad Q8 o procesamiento por lotes. M5 Max (36 GB) si usas Mac. Las tres ejecutan cómodamente modelos Llama 3.3, Qwen3 y Mistral 3.1 de 13B.',
+            },
           },
-          {
-            '@type': 'Question',
-            name: '¿Puedo ejecutar un modelo de 70B en una RTX 4090?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Solo con cuantización Q4 (35 GB) + descarga a CPU (lento, 3–5 tok/s), lo que no es práctico. Mejor enfoque: usa un modelo de 32B en Q5 (20 GB) en la RTX 4090 para respuestas rápidas y de calidad. O actualiza a la RTX 5090 (32 GB) para ejecutar 70B en Q4 sin descarga.'
-            }
-          }
         ]
       },
       softwareApplicationSchema: {
@@ -804,6 +790,8 @@ schema: {
             { q: '¿El tamaño del lote afecta al cálculo de VRAM?', a: 'Sí. La fórmula calcula la VRAM para una sola solicitud. El tamaño del lote añade VRAM de forma lineal: cada solicitud simultánea agrega entre 500 MB y 2 GB según la longitud del contexto. Con batch=4, añade entre 2 y 8 GB a la cantidad calculada.' },
             { q: '¿Puedo ejecutar un modelo de 70B en una GPU de 12 GB?', a: 'Solo con cuantización extrema (Q2, ~70 % de pérdida de calidad) y descarga a CPU (muy lento, 1–3 tokens/s). No es práctico. Mejor opción: usa un modelo de 13B en Q4 (misma VRAM, mucho más rápido y mejor calidad).' },
             { q: '¿Qué pasa si el uso real de VRAM es menor que el calculado?', a: 'La fórmula es conservadora e incluye sobrecarga. Un uso real menor significa más margen para procesamiento por lotes, contextos más largos o margen de seguridad. Usa nvidia-smi para medir el uso real y luego benchmarkea tu modelo para confirmar el rendimiento.' },
+            { q: '¿Debo comprar una GPU exactamente al tamaño de VRAM calculado?', a: 'No. Compra siempre un 25 % más de VRAM del calculado. Si calculas 18 GB, compra una GPU de 24 GB. Este margen de seguridad contempla el crecimiento del contexto, el procesamiento por lotes y los procesos del sistema. Las compras ajustadas al límite no dejan margen y causan errores de memoria insuficiente.' },
+            { q: '¿Cuál es la mejor GPU para modelos de 13B en 2026?', a: 'RTX 4070 Ti (12 GB) para chat de un solo usuario en Q4–Q5. RTX 4080 (16 GB) si quieres calidad Q8 o procesamiento por lotes. M5 Max (36 GB) si usas Mac. Las tres ejecutan cómodamente modelos Llama 3.3, Qwen3 y Mistral 3.1 de 13B.' },
           ],
         },
         relatedReading: {
@@ -885,76 +873,68 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'هل تعمل الصيغة لجميع أنواع النماذج؟',
-            acceptedAnswer: {
+            'name': 'هل تعمل الصيغة لجميع أنواع النماذج؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'نعم. تنطبق الصيغة (مليارات النموذج × بتات التكميم) ÷ 8 على جميع النماذج القائمة على Transformer (Llama، Qwen، Mistral، Claude، إلخ). البنى غير القائمة على Transformer (RNN، إلخ) نادرة وقد تتطلب تعديلات.'
-            }
+              'text': 'نعم. تنطبق الصيغة (مليارات النموذج × بتات التكميم) ÷ 8 على جميع النماذج القائمة على Transformer (Llama، Qwen، Mistral، Claude، إلخ). البنى غير القائمة على Transformer (RNN، إلخ) نادرة وقد تتطلب تعديلات.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'أي تكميم يجب أن أستخدم؟',
-            acceptedAnswer: {
+            'name': 'أي تكميم يجب أن أستخدم؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'لمعظم الحالات: يقدّم Q5 أفضل توازن (95% جودة، 68% تقليل حجم). لوحدات GPU الاستهلاكية: Q4 هو المعيار (90–95% جودة، 75% تقليل). للإنتاج: Q8 إذا سمح VRAM (99% جودة). تجنّب Q3 وما دونه إلا إذا لم يكن لديك خيار آخر.'
-            }
+              'text': 'لمعظم الحالات: يقدّم Q5 أفضل توازن (95% جودة، 68% تقليل حجم). لوحدات GPU الاستهلاكية: Q4 هو المعيار (90–95% جودة، 75% تقليل). للإنتاج: Q8 إذا سمح VRAM (99% جودة). تجنّب Q3 وما دونه إلا إذا لم يكن لديك خيار آخر.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كم RAM النظام التي أحتاجها؟',
-            acceptedAnswer: {
+            'name': 'كم RAM النظام التي أحتاجها؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'الحد الأدنى 16 GB للتفريغ (offloading). إذا استخدمت تفريغ VRAM (الفائض إلى CPU)، تعمل RAM النظام كاحتياطي. للمعالجة بالدُفعات، أضف 8–16 GB من RAM النظام بما يتجاوز متطلبات تفريغ النموذج. لدردشة مستخدم واحد، 16 GB كافية.'
-            }
+              'text': 'الحد الأدنى 16 GB للتفريغ (offloading). إذا استخدمت تفريغ VRAM (الفائض إلى CPU)، تعمل RAM النظام كاحتياطي. للمعالجة بالدُفعات، أضف 8–16 GB من RAM النظام بما يتجاوز متطلبات تفريغ النموذج. لدردشة مستخدم واحد، 16 GB كافية.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل يؤثر حجم الدفعة في حساب VRAM؟',
-            acceptedAnswer: {
+            'name': 'هل يؤثر حجم الدفعة في حساب VRAM؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'نعم. تحسب الصيغة VRAM لطلب واحد. يضيف حجم الدفعة VRAM خطيًا: كل طلب متزامن يضيف بين 500 MB و2 GB حسب طول السياق. مع batch=4، أضف بين 2 و8 GB إلى المقدار المحسوب.'
-            }
+              'text': 'نعم. تحسب الصيغة VRAM لطلب واحد. يضيف حجم الدفعة VRAM خطيًا: كل طلب متزامن يضيف بين 500 MB و2 GB حسب طول السياق. مع batch=4، أضف بين 2 و8 GB إلى المقدار المحسوب.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل يمكنني تشغيل نموذج 70B على GPU بسعة 12 GB؟',
-            acceptedAnswer: {
+            'name': 'هل يمكنني تشغيل نموذج 70B على GPU بسعة 12 GB؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'فقط بتكميم متطرف (Q2، ~70% فقدان جودة) وتفريغ إلى CPU (بطيء جدًا، 1–3 token/ثانية). غير عملي. خيار أفضل: استخدم نموذج 13B بـ Q4 (نفس VRAM، أسرع بكثير وجودة أفضل).'
-            }
+              'text': 'فقط بتكميم متطرف (Q2، ~70% فقدان جودة) وتفريغ إلى CPU (بطيء جدًا، 1–3 token/ثانية). غير عملي. خيار أفضل: استخدم نموذج 13B بـ Q4 (نفس VRAM، أسرع بكثير وجودة أفضل).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ماذا لو كان استخدام VRAM الفعلي أقل من المحسوب؟',
-            acceptedAnswer: {
+            'name': 'ماذا لو كان استخدام VRAM الفعلي أقل من المحسوب؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'الصيغة متحفظة وتشمل الحمل الإضافي. الاستخدام الفعلي الأقل يعني هامشًا أكبر للمعالجة بالدُفعات، أو سياقات أطول، أو هامش أمان. استخدم nvidia-smi لقياس الاستخدام الفعلي ثم قِس أداء نموذجك للتأكيد.'
-            }
+              'text': 'الصيغة متحفظة وتشمل الحمل الإضافي. الاستخدام الفعلي الأقل يعني هامشًا أكبر للمعالجة بالدُفعات، أو سياقات أطول، أو هامش أمان. استخدم nvidia-smi لقياس الاستخدام الفعلي ثم قِس أداء نموذجك للتأكيد.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل أشتري GPU بحجم VRAM المحسوب بالضبط؟',
-            acceptedAnswer: {
+            'name': 'هل أشتري GPU بحجم VRAM المحسوب بالضبط؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'لا. اشترِ دائمًا VRAM أكثر بنسبة 25% من المحسوب. إذا حسبت 18 GB، فاشترِ GPU بسعة 24 GB. هذا هامش الأمان يراعي نمو السياق، والمعالجة بالدُفعات، وعمليات النظام. المشتريات المحدودة تمامًا لا تترك هامشًا وتسبب أخطاء نفاد الذاكرة.'
-            }
+              'text': 'لا. اشترِ دائمًا VRAM أكثر بنسبة 25% من المحسوب. إذا حسبت 18 GB، فاشترِ GPU بسعة 24 GB. هذا هامش الأمان يراعي نمو السياق، والمعالجة بالدُفعات، وعمليات النظام. المشتريات المحدودة تمامًا لا تترك هامشًا وتسبب أخطاء نفاد الذاكرة.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ما أفضل GPU لنماذج 13B في 2026؟',
-            acceptedAnswer: {
+            'name': 'ما أفضل GPU لنماذج 13B في 2026؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTX 4070 Ti (12 GB) لدردشة مستخدم واحد بـ Q4–Q5. RTX 4080 (16 GB) إذا أردت جودة Q8 أو المعالجة بالدُفعات. M5 Max (36 GB) إذا كنت تستخدم Mac. الثلاثة تشغّل بسهولة نماذج Llama 3.3 وQwen3 وMistral 3.1 بحجم 13B.'
-            }
+              'text': 'RTX 4070 Ti (12 GB) لدردشة مستخدم واحد بـ Q4–Q5. RTX 4080 (16 GB) إذا أردت جودة Q8 أو المعالجة بالدُفعات. M5 Max (36 GB) إذا كنت تستخدم Mac. الثلاثة تشغّل بسهولة نماذج Llama 3.3 وQwen3 وMistral 3.1 بحجم 13B.',
+            },
           },
-          {
-            '@type': 'Question',
-            name: 'هل يمكنني تشغيل نموذج 70B على RTX 4090؟',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'فقط بتكميم Q4 (35 GB) + تفريغ إلى CPU (بطيء، 3–5 tok/ثانية)، وهو غير عملي. نهج أفضل: استخدم نموذج 32B بـ Q5 (20 GB) على RTX 4090 لاستجابات سريعة وعالية الجودة. أو رقِّ إلى RTX 5090 (32 GB) لتشغيل 70B بـ Q4 دون تفريغ.'
-            }
-          }
         ]
       },
       softwareApplicationSchema: {
@@ -1219,6 +1199,8 @@ schema: {
             { q: 'هل يؤثر حجم الدفعة في حساب VRAM؟', a: 'نعم. تحسب الصيغة VRAM لطلب واحد. يضيف حجم الدفعة VRAM خطيًا: كل طلب متزامن يضيف بين 500 MB و2 GB حسب طول السياق. مع batch=4، أضف بين 2 و8 GB إلى المقدار المحسوب.' },
             { q: 'هل يمكنني تشغيل نموذج 70B على GPU بسعة 12 GB؟', a: 'فقط بتكميم متطرف (Q2، ~70% فقدان جودة) وتفريغ إلى CPU (بطيء جدًا، 1–3 token/ثانية). غير عملي. خيار أفضل: استخدم نموذج 13B بـ Q4 (نفس VRAM، أسرع بكثير وجودة أفضل).' },
             { q: 'ماذا لو كان استخدام VRAM الفعلي أقل من المحسوب؟', a: 'الصيغة متحفظة وتشمل الحمل الإضافي. الاستخدام الفعلي الأقل يعني هامشًا أكبر للمعالجة بالدُفعات، أو سياقات أطول، أو هامش أمان. استخدم nvidia-smi لقياس الاستخدام الفعلي ثم قِس أداء نموذجك للتأكيد.' },
+            { q: 'هل أشتري GPU بحجم VRAM المحسوب بالضبط؟', a: 'لا. اشترِ دائمًا VRAM أكثر بنسبة 25% من المحسوب. إذا حسبت 18 GB، فاشترِ GPU بسعة 24 GB. هذا هامش الأمان يراعي نمو السياق، والمعالجة بالدُفعات، وعمليات النظام. المشتريات المحدودة تمامًا لا تترك هامشًا وتسبب أخطاء نفاد الذاكرة.' },
+            { q: 'ما أفضل GPU لنماذج 13B في 2026؟', a: 'RTX 4070 Ti (12 GB) لدردشة مستخدم واحد بـ Q4–Q5. RTX 4080 (16 GB) إذا أردت جودة Q8 أو المعالجة بالدُفعات. M5 Max (36 GB) إذا كنت تستخدم Mac. الثلاثة تشغّل بسهولة نماذج Llama 3.3 وQwen3 وMistral 3.1 بحجم 13B.' },
           ],
         },
         relatedReading: {
@@ -1411,17 +1393,86 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Funktioniert die Formel für alle Modelltypen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die Formel (Modell-Milliarden × Quantisierungs-Bits) ÷ 8 gilt für alle Transformer-basierten Modelle (Llama, Qwen, Mistral, Claude usw.). Nicht-Transformer-Architekturen (RNNs usw.) sind selten und können Anpassungen erfordern.' } },
-          { '@type': 'Question', name: 'Welche Quantisierung sollte ich verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Anwendungsfälle: Q5 bietet die beste Balance (95 % Qualität, 68 % Größenreduktion). Für Consumer-GPUs: Q4 ist Standard (90–95 % Qualität, 75 % Reduktion). Für Produktion: Q8, wenn VRAM verfügbar (99 % Qualität). Vermeiden Sie Q3 und darunter, es sei denn, Sie haben keine andere Wahl.' } },
-          { '@type': 'Question', name: 'Wie viel System-RAM benötige ich?', acceptedAnswer: { '@type': 'Answer', text: 'Minimum 16 GB für Offloading. Wenn Sie VRAM-Offloading verwenden (CPU-Spillover), wird System-RAM zum Fallback. Für Batch-Verarbeitung addieren Sie 8–16 GB System-RAM zu den Modell-Offload-Anforderungen. Für Single-User-Chat genügen 16 GB.' } },
-          { '@type': 'Question', name: 'Beeinflußt die Batch-Größe die VRAM-Berechnung?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die Formel berechnet Single-Request-VRAM. Batch-Größe addiert zusätzliches VRAM linear: jede gleichzeitige Anfrage addiert ~500 MB–2 GB je nach Kontextlänge. Wenn Sie Batch=4 ausführen, addieren Sie 2–8 GB zur berechneten Menge.' } },
-          { '@type': 'Question', name: 'Kann ich ein 70B-Modell auf einer 12 GB GPU ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Nur mit extremer Quantisierung (Q2, ~70 % Qualitätsverlust) und CPU-Offloading (sehr langsam, 1–3 Tokens/s). Nicht praktisch. Bessere Option: Verwenden Sie ein 13B-Modell bei Q4 (gleiches VRAM, viel schneller und bessere Qualität).' } },
-          { '@type': 'Question', name: 'Was ist, wenn meine tatsächliche VRAM-Nutzung niedriger als berechnet ist?', acceptedAnswer: { '@type': 'Answer', text: 'Die Formel ist konservativ und includes Overhead. Niedrigere Nutzung bedeutet mehr Spielraum für Batch-Verarbeitung, längere Kontexte oder Sicherheitsmarge. Verwenden Sie nvidia-smi zur Messung echter Nutzung, dann benchen Sie Ihr Modell zur Leistungsbestätigung.' } },
-          { '@type': 'Question', name: 'Sollte ich eine GPU genau in der berechneten VRAM-Größe kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Kaufen Sie immer 25 % mehr VRAM als berechnet. Wenn Sie 18 GB benötigen, kaufen Sie eine 24 GB GPU. Diese Sicherheitsmarge berücksichtigt Kontextwachstum, Batching und Systemprozesse. Exakte Passungen hinterlassen keinen Spielraum und verursachen Out-of-Memory-Fehler.' } },
-          { '@type': 'Question', name: 'Was ist die beste GPU für 13B-Modelle im Jahr 2026?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4070 Ti (12 GB) für Single-User-Chat bei Q4–Q5. RTX 4080 (16 GB) wenn Sie Q8-Qualität oder Batch-Verarbeitung möchten. M5 Max (36 GB) auf Mac. Alle drei führen Llama 3.3, Qwen3 und Mistral 3.1 13B-Modelle problemlos aus.' } },
-          { '@type': 'Question', name: 'Kann ich ein 70B-Modell auf RTX 4090 ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Nur mit Q4-Quantisierung (35 GB) + CPU-Offloading (langsam, 3–5 Tokens/s), was unpraktisch ist. Besserer Ansatz: Verwenden Sie ein 32B-Modell bei Q5 (20 GB) auf RTX 4090 für schnelle, hochwertige Antworten. Oder upgraden Sie auf RTX 5090 (32 GB) für 70B bei Q4 ohne Offloading.' } },
-          { '@type': 'Question', name: 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die DSGVO Artikel 28 erfordert Datenverarbeitungsverträge. Lokale Inferenz auf eigenem Hardware erfüllt Datenschutz-Anforderungen: Daten bleiben on-premises, keine Übertragung an Cloud-APIs. BSI-Grundschutz-Kataloge für Bundestechnologiestandards: lokale LLMs erfüllen Anforderungen für sensible Daten in Behörden und Finanzinstitutionen. Diese VRAM-Berechnungen unterstützen DSGVO-konforme Deployments.' } },
-          { '@type': 'Question', name: 'Ist der Einsatz lokaler LLMs für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, sehr geeignet. Kleine und mittlere Unternehmen (Mittelstand) profitieren: Kostenenkontrolle (keine wiederkehrenden API-Kosten), Datensicherheit (keine externen Abhängigkeiten), Compliance mit BSI IT-Sicherheitsstandards. Mit diesem VRAM-Rechner können Mittelstand-Unternehmen exakt kalkulieren, welche GPU für ihre Anforderungen passt—oft genügt eine RTX 4070 Ti (€600–800) für 13B-Modelle. Besser als monatliche Cloud-Abos für APIs.' } }
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert die Formel für alle Modelltypen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Die Formel (Modell-Milliarden × Quantisierungs-Bits) ÷ 8 gilt für alle Transformer-basierten Modelle (Llama, Qwen, Mistral, Claude usw.). Nicht-Transformer-Architekturen (RNNs usw.) sind selten und können Anpassungen erfordern.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Quantisierung sollte ich verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für die meisten Anwendungsfälle: Q5 bietet die beste Balance (95 % Qualität, 68 % Größenreduktion). Für Consumer-GPUs: Q4 ist Standard (90–95 % Qualität, 75 % Reduktion). Für Produktion: Q8, wenn VRAM verfügbar (99 % Qualität). Vermeiden Sie Q3 und darunter, es sei denn, Sie haben keine andere Wahl.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viel System-RAM benötige ich?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Minimum 16 GB für Offloading. Wenn Sie VRAM-Offloading verwenden (CPU-Spillover), wird System-RAM zum Fallback. Für Batch-Verarbeitung addieren Sie 8–16 GB System-RAM zu den Modell-Offload-Anforderungen. Für Single-User-Chat genügen 16 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Beeinflußt die Batch-Größe die VRAM-Berechnung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Die Formel berechnet Single-Request-VRAM. Batch-Größe addiert zusätzliches VRAM linear: jede gleichzeitige Anfrage addiert ~500 MB–2 GB je nach Kontextlänge. Wenn Sie Batch=4 ausführen, addieren Sie 2–8 GB zur berechneten Menge.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein 70B-Modell auf einer 12 GB GPU ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur mit extremer Quantisierung (Q2, ~70 % Qualitätsverlust) und CPU-Offloading (sehr langsam, 1–3 Tokens/s). Nicht praktisch. Bessere Option: Verwenden Sie ein 13B-Modell bei Q4 (gleiches VRAM, viel schneller und bessere Qualität).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist, wenn meine tatsächliche VRAM-Nutzung niedriger als berechnet ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die Formel ist konservativ und includes Overhead. Niedrigere Nutzung bedeutet mehr Spielraum für Batch-Verarbeitung, längere Kontexte oder Sicherheitsmarge. Verwenden Sie nvidia-smi zur Messung echter Nutzung, dann benchen Sie Ihr Modell zur Leistungsbestätigung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Die DSGVO Artikel 28 erfordert Datenverarbeitungsverträge. Lokale Inferenz auf eigenem Hardware erfüllt Datenschutz-Anforderungen: Daten bleiben on-premises, keine Übertragung an Cloud-APIs. BSI-Grundschutz-Kataloge für Bundestechnologiestandards: lokale LLMs erfüllen Anforderungen für sensible Daten in Behörden und Finanzinstitutionen. Diese VRAM-Berechnungen unterstützen DSGVO-konforme Deployments.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist der Einsatz lokaler LLMs für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, sehr geeignet. Kleine und mittlere Unternehmen (Mittelstand) profitieren: Kostenenkontrolle (keine wiederkehrenden API-Kosten), Datensicherheit (keine externen Abhängigkeiten), Compliance mit BSI IT-Sicherheitsstandards. Mit diesem VRAM-Rechner können Mittelstand-Unternehmen exakt kalkulieren, welche GPU für ihre Anforderungen passt—oft genügt eine RTX 4070 Ti (€600–800) für 13B-Modelle. Besser als monatliche Cloud-Abos für APIs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich eine GPU genau in der berechneten VRAM-Größe kaufen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Kaufen Sie immer 25 % mehr VRAM als berechnet. Wenn Sie 18 GB benötigen, kaufen Sie eine 24 GB GPU. Diese Sicherheitsmarge berücksichtigt Kontextwachstum, Batching und Systemprozesse. Exakte Passungen hinterlassen keinen Spielraum und verursachen Out-of-Memory-Fehler.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist die beste GPU für 13B-Modelle im Jahr 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4070 Ti (12 GB) für Single-User-Chat bei Q4–Q5. RTX 4080 (16 GB) wenn Sie Q8-Qualität oder Batch-Verarbeitung möchten. M5 Max (36 GB) auf Mac. Alle drei führen Llama 3.3, Qwen3 und Mistral 3.1 13B-Modelle problemlos aus.',
+            },
+          },
         ]
       },
       softwareApplicationSchema: { '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'VRAM-Rechner für lokale LLMs', description: 'Interaktiver VRAM-Rechner für lokale LLMs. Berechnen Sie exakte GPU-VRAM-Anforderungen für jede Kombination von Modellgröße (1B–405B), Quantisierung (FP16, Q8, Q5, Q4, Q3, Q2), Kontextlänge (2K–128K Tokens) und Batch-Größe (1–8). Enthält Echtzeit-GPU-Kompatibilitätsprüfung für RTX 3060/4070/4080/4090 und M5 Max.', applicationCategory: 'UtilityApplication', operatingSystem: 'Web', url: 'https://www.promptquorum.com/de/local-llms/vram-calculator-local-llm', inLanguage: 'de', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, creator: { '@type': 'Person', name: 'Hans Kuepper' } },
@@ -1447,7 +1498,18 @@ schema: {
       ],
       gammaEmbedUrl: '/presentations/vram-calculator-local-llm-static.html',
       gammaDescription: 'Das Foliendeck unten behandelt: VRAM-Formel (Modell-Milliarden × Quantisierungs-Bits) ÷ 8, Quantisierungsstufen Q2–FP16 mit Qualitäts-Trade-offs, Quick-Reference-Tabelle (3B–70B-Modelle), reale GPU-Szenarien (RTX 4090, 4080, M5 Max) und regionale Compliance (EU GDPR, Japan APPI, China Data Security Law). Laden Sie die PDF als VRAM-Rechner-Referenzkarte herunter.',
-      sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['VRAM = (Modellgröße × Quantisierungs-Bits) ÷ 8', 'FP16 = 16 Bits, Q8 = 8, Q5 = 5, Q4 = 4 Bits', 'Beispiel: 13B-Modell bei Q4 = (13 × 4) ÷ 8 = 6,5 GB', 'Addieren Sie immer 25 % Puffer für Kontext, Systemoverhead und Sicherheitsmarge', 'Ab August 2026 ist diese Formel auf ±10 % genau'] }, quickFacts: { id: 'quick-facts', title: 'Quick Facts: VRAM-Anforderungen nach GPU', items: ['**RTX 4090 (24 GB):** ein 7B-Modell bei Q4 (3,5 GB), 13B bei Q5 (8,1 GB), 70B bei Q4 mit Offloading', '**RTX 4080 (16 GB):** ein 7B-Modell bei Q4 (3,5 GB), 13B bei Q5 (8,1 GB), 32B bei Q4 (16 GB)', '**RTX 4070 Ti (12 GB):** ein 7B-Modell bei Q4 (3,5 GB), 13B bei Q5 (8,1 GB mit knappem Spielraum)', '**M5 Max Mac (36 GB unified):** ein 13B-Modell bei FP16 (26 GB), 70B nicht möglich ohne extreme Quantisierung', '**Faustregel:** Budget immer 25–40 % zusätzliches VRAM für Kontext, Batching und Systemoverhead über dem Formelergebnis'] }, inOneSentence: { id: 'in-one-sentence', title: 'In einem Satz', content: 'Der erforderliche VRAM (GB) entspricht Modellparametern in Milliarden multipliziert mit Quantisierungs-Bits (16 für FP16, 8 für Q8, 4 für Q4 usw.) geteilt durch 8.' }, inPlainTerms: { id: 'in-plain-terms', title: 'In einfachen Worten', content: 'Stellen Sie sich VRAM wie Regalplatz vor. Größere Bücher (Modelle mit mehr Parametern wie 70B) benötigen mehr Regalplatz. Kleinere Bücher (Q4-Quantisierung) benötigen weniger Platz als größere (FP16). Die Formel sagt Ihnen exakt, wie viele „Regale" (GB) Sie benötigen. Lassen Sie immer extra leere Regale für Gespräche, mehrere gleichzeitige Anfragen und Systemsoftware.' }, formula: { id: 'vram-formula', title: 'Was ist die VRAM-Formel?', image: '/images/vram-calculator-local-llm-formula-de.svg', imageCaption: 'VRAM-Formel mit 3 Berechnungsbeispielen: 7B-Modell bei Q4 = 3,5 GB, 13B bei Q5 = 8,1 GB, 70B bei Q8 = 70 GB. Addieren Sie immer 25–40 % Puffer für Kontext, Batching und Systemoverhead.', content: ['Die Formel für VRAM-Anforderung ist betrügerisch einfach:', '💡 **Pro-Tipp:** Diese Formel berechnet nur Modellgewichte. Echte VRAM-Nutzung ist 25–40 % höher aufgrund von Kontext, Batching und Systemoverhead. Addieren Sie immer eine Sicherheitsmarge.'], codeBlock: 'VRAM (GB) = (Modellgröße in Milliarden × Quantisierungs-Bits) ÷ 8\n\nBeispiel:\n- 7B-Modell bei 4-Bit-Quantisierung\n- (7 × 4) ÷ 8 = 3,5 GB\n\n- 13B-Modell bei 5-Bit-Quantisierung\n- (13 × 5) ÷ 8 = 8,125 GB\n\n- 70B-Modell bei 8-Bit-Quantisierung\n- (70 × 8) ÷ 8 = 70 GB', codeLanguage: 'bash' }, calculator: { id: 'interactive-calculator', title: 'Interaktiver VRAM-Rechner', content: 'Verwenden Sie diesen Rechner, um exakte VRAM-Anforderungen für jede Kombination von Modell, Quantisierung, Kontext und Batch-Größe zu berechnen. Wählen Sie Ihre Konfiguration und sehen Sie, welche GPUs passen.', component: 'VramCalculator' }, quantization: { id: 'quantization-levels', title: 'Was bedeuten Quantisierungsstufen?', image: '/images/vram-calculator-local-llm-quant-levels-de.svg', imageCaption: 'Quantisierungsstufen-Vergleich: FP16 (100 % Qualität), Q8 (99 %), Q5 (95 %, empfohlen), Q4 (90–95 %), Q3 (80–85 %), Q2 (70 %). Q5 reduziert ein 7B-Modell von 14 GB auf 4,4 GB mit nur 5 % Qualitätsverlust.', content: '🔍 **Schlüsselinsight:** Quantisierung handelt Dateigröße gegen Qualität. Q5 ist der Sweet Spot (95 % Qualität, 68 % kleiner). Q4 ist für die meisten Benutzer akzeptabel. Q3 und darunter sind nur für Edge-Geräte oder wenn VRAM kritisch begrenzt ist.', rows: [{ 'Quantisierung': 'FP16 (16-Bit)', 'Größenreduktion': 'Keine (Basis)', 'Qualität': '100 % (perfekt)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Forschung, Fine-Tuning' }, { 'Quantisierung': 'Q8 (8-Bit)', 'Größenreduktion': '50 %', 'Qualität': '99 % (unmerklich)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Produktion, lokale Server' }, { 'Quantisierung': 'Q6 (6-Bit)', 'Größenreduktion': '62,5 %', 'Qualität': '98 % (vernachlässigbar)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Ausgewogene Nutzung' }, { 'Quantisierung': 'Q5 (5-Bit)', 'Größenreduktion': '68,75 %', 'Qualität': '95 % (geringer Verlust)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Gute Kompression, Consumer' }, { 'Quantisierung': 'Q4 (4-Bit)', 'Größenreduktion': '75 %', 'Qualität': '90–95 % (akzeptabel)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Maximale Kompression' }, { 'Quantisierung': 'Q3 (3-Bit)', 'Größenreduktion': '81 %', 'Qualität': '80–85 % (merklicher Verlust)', 'Geschwindigkeit': 'Schneller', 'Anwendungsfall': 'Extreme Kompression, CPU' }, { 'Quantisierung': 'Q2 (2-Bit)', 'Größenreduktion': '87,5 %', 'Qualität': '70 % (sichtbarer Verlust)', 'Geschwindigkeit': 'Am schnellsten', 'Anwendungsfall': 'Kleine Modelle, Edge-Geräte' }], columns: ['Quantisierung', 'Größenreduktion', 'Qualität', 'Geschwindigkeit', 'Anwendungsfall'] }, quickRef: { id: 'quick-reference', title: 'Quick-Reference-Tabelle: VRAM nach Modell und Quantisierung', image: '/images/vram-calculator-local-llm-quick-ref-de.svg', imageCaption: 'VRAM-Quick-Reference-Matrix: 3B bis 70B-Modelle bei FP16, Q8, Q5 und Q4-Quantisierung. Grün = passt in 12 GB GPU. Orange = benötigt 16–24 GB. Rot = benötigt 40+ GB oder Multi-GPU.', rows: [{ 'Modell': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1,9 GB', 'Q4': '1,5 GB' }, { 'Modell': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4,4 GB', 'Q4': '3,5 GB' }, { 'Modell': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8,1 GB', 'Q4': '6,5 GB' }, { 'Modell': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' }, { 'Modell': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43,75 GB', 'Q4': '35 GB' }], columns: ['Modell', 'FP16', 'Q8', 'Q5', 'Q4'] }, realWorld: { id: 'real-world-examples', title: 'Praxisbeispiele', image: '/images/vram-calculator-local-llm-gpu-scenarios-de.svg', imageCaption: 'Praxis-GPU-Szenarien: RTX 4090 (24 GB), RTX 4080 (16 GB), RTX 4070 Ti (12 GB), M5 Max Mac (36 GB) und RTX 3060 (12 GB) — welche Llama 3.3 Modelle jede bei verschiedenen Quantisierungsstufen ausführen kann.', content: ['Praktische VRAM-Berechnungen für häufige Szenarien:', '⚠️ **Warnung:** Diese Berechnungen sind nur für Modellgewichte. Addieren Sie 25–40 % für Kontext, Batch-Verarbeitung und Systemoverhead. Beispiel: 13B Q5 = 8,1 GB Modell + 2–3 GB Overhead = 10–11 GB tatsächlich.'], items: ['**RTX 4070 Ti (12 GB)**: ein 7B-Modell bei Q4 = 3,5 GB ✓ (viel Platz). ein 13B-Modell bei Q5 = 8,1 GB ✓ (knapp, aber funktioniert ohne Kontext/Batching).', '**RTX 4090 (24 GB)**: Llama 3.3 70B bei Q5 = 43,75 GB ✗ (zu groß). Llama 3.3 70B bei Q4 = 35 GB ✗ (immer noch zu groß). Llama 3.3 70B bei Q4 mit Offloading = funktioniert (langsam, 3–5 Tokens/s).', '**M5 Max Mac (36 GB)**: ein 13B-Modell bei FP16 = 26 GB ✓ (funktioniert). Llama 3.3 70B = unmöglich (selbst bei Q2, ~70 % Qualitätsverlust).'] }, overhead: { id: 'hidden-overhead', title: 'Welcher versteckter VRAM-Overhead sollte man berücksichtigen?', image: '/images/vram-calculator-local-llm-overhead-de.svg', imageCaption: 'Versteckter VRAM-Overhead-Aufschlüsselung: Kontextfenster (2–3 GB für 4K Tokens), Batch-Verarbeitung (×4 für Batch=4), Systemoverhead (500 MB–1 GB) und 25–40 % Sicherheitsmarge gesamt.', content: ['**Die Formel berechnet nur Modellgewichte.** Ihre echte VRAM-Nutzung wird höher sein aufgrund mehrerer Faktoren. Budget zusätzlich 25–40 % über dem berechneten Betrag.', 'Kontextfenster (Key-Value-Cache) speichert Gesprächsverlauf während Inferenz. Ein 4K-Token-Kontext verwendet ca. 2–3 GB für ein 7B-Modell.', '📌 **Schlüsselpunkt:** Batch-Verarbeitung erhöht VRAM-Nutzung linear. Jede zusätzliche gleichzeitige Anfrage (bei simultaner Verarbeitung mehrerer Anfragen) nutzt 500 MB–2 GB zusätzlich. Wenn Sie Batch=4 ausführen, multiplizieren Sie Single-Request-VRAM mit 4 und addieren Overhead.', 'Systemoverhead vom Betriebssystem und Inferenz-Engine-Framework (Ollama, vLLM, llama.cpp) reserviert 500 MB–1 GB. Halten Sie immer Sicherheitsmarge bei GPU-Auswahl.'] }, hardwareGuide: { id: 'hardware-fit', title: 'Welches lokale LLM passt zu Ihrer GPU? 2026-Anleitung', content: ['Verwenden Sie den interaktiven Rechner oben zur exakten Passform. Unten sind häufige GPU-Szenarien und empfohlene Modelle.'], items: ['**RTX 3060 (12 GB):** Bestes Modell: Qwen3 7B Q5 (4,4 GB) ✓. Alternative: ein 8B-Modell Q4 (4 GB) ✓. Nicht möglich: 32B+ Modelle.', '**RTX 4070 (12 GB):** Bestes Modell: Qwen3 13B Q4 (6,5 GB) ✓. Mit Spielraum: ein 8B-Modell Q5 (5 GB) ✓. Nicht möglich: 32B-Modelle.', '**RTX 4070 Ti (12 GB):** Bestes Modell: Qwen3 13B Q5 (8,1 GB) ✓. Enge Passform: ein 13B-Modell Q4 (6,5 GB) ✓. Nicht ideal: Batch-Verarbeitung.', '**RTX 4080 (16 GB):** Bestes Modell: Qwen3 32B Q4 (16 GB) ✓ knapp. Komfortabel: Mistral 3.1 24B Q5 (15 GB) ✓. Empfohlen: ein 13B-Modell Q8 (13 GB) ✓.', '**RTX 4090 (24 GB):** Bestes Modell: Qwen3 32B Q5 (20 GB) ✓. Mit Offload: Llama 3.3 70B Q4 (35 GB – benötigt Offloading). Komfortabel: Alle 32B bei Q5/Q8.', '**RTX 5090 (32 GB, wenn veröffentlicht):** Bestes Modell: Llama 3.3 70B Q4 (35 GB – enge Passform). Besser: Qwen3 72B Q3 (27 GB) ✓. Komfortabel: 70B bei Q5+ mit Batching.'] }, accuracy: { id: 'accuracy', title: 'Wie genau ist die Formel?', image: '/images/vram-calculator-local-llm-accuracy-de.svg', imageCaption: 'VRAM-Formel-Genauigkeit ±10 %: Abweichung verursacht durch Quantisierungsformat (GGUF vs. GPTQ vs. AWQ), Modellarchitektur (Transformer vs. MoE) und Inferenz-Engine (vLLM vs. llama.cpp vs. Ollama).', content: ['**Die Formel ist für die meisten Fälle auf ±10 % genau.** Echte VRAM-Nutzung variiert basierend auf Implementierung, Modellarchitektur und Inferenz-Engine-Optimierungen.', 'Variationsquellen umfassen: verschiedene Quantisierungsformate (GGUF vs. Safetensors vs. AWQ), Modellarchitektur (Transformer vs. Nicht-Transformer) und Inferenz-Engine-spezifische Optimierungen (vLLM, llama.cpp, Ollama).', 'Ab August 2026 behandeln Sie die Formel als konservative Schätzung. Addieren Sie immer 25 % Sicherheitsmarge beim GPU-Kauf, um Kontext-Overhead, Batching und Systemprozesse zu berücksichtigen.'] }, commonMistakes: { id: 'common-mistakes', title: 'Häufige Fehler bei VRAM-Berechnung', image: '/images/vram-calculator-local-llm-mistakes-de.svg', imageCaption: '4 häufige VRAM-Fehler: Kontext-Overhead vergessen (addiert 1,5–3 GB), 70B-Parameter mit 70 GB VRAM verwechseln, Systemoverhead von 1–2 GB ignorieren, GPU exakt bei berechneter Größe kaufen ohne 25 % Marge.', items: ['**Kontext-Overhead vergessen.** Ein 7B-Modell bei Q4 ist 3,5 GB, aber mit 4K-Kontext benötigt es 5–6 GB gesamt.', '**Modellgröße von HuggingFace ohne Quantisierung verwenden.** 70B bedeutet 70 Milliarden Parameter, nicht 70 GB VRAM.', '**Systemoverhead nicht berücksichtigen.** Modelle erhalten nie vollständiges GPU-VRAM. 1–2 GB für OS und Inferenz-Engine reservieren.', '**GPU exakt bei berechneter Größe kaufen.** Kaufen Sie immer 25 % mehr. Berechneter 18 GB-Bedarf = kaufen Sie 24 GB GPU.'] }, regionalContext: { id: 'regional-context', title: 'Überlegungen zur regionalen Bereitstellung', content: ['**Europäische Union (GDPR):** Lokale Inferenz (On-Premises) gewährleistet Datenschutz-Compliance unter GDPR. Das Ausführen von Modellen auf Ihrer eigenen GPU hält Benutzerdaten im Land. Dieser VRAM-Rechner hilft Ihnen, Hardware für datenschutzfreundliche Deployments richtig zu dimensionieren.', '**Deutschland & DACH-Region (BSI-Grundschutz):** Der BSI-Grundschutz-Katalog ist Standard für deutsche Behörden, Finanzinstitute und Mittelstand. Lokale LLM-Inferenz erfüllt BSI-Anforderungen für sensible Daten: keine Cloud-Abhängigkeiten, vollständige Kontrolle über Datenverarbeitung. Dieser Rechner unterstützt DSGVO-konforme und BSI-konforme Deployments.', '**Japan (APPI):** Das Gesetz zum Schutz personenbezogener Daten (APPI) erfordert sorgfältige Datenbehandlung. On-Device-LLM-Inferenz reduziert Datentransfer und externe Verarbeitung von Japan. Verwenden Sie diesen Rechner zur Dimensionierung für japanische Unternehmensbereitstellungen.', '**China (Datensicherheitsgesetz):** Chinas 2021 Datensicherheitsgesetz erfordert Datenresidenz innerhalb chinesischer Grenzen. Lokale LLM-Inferenz auf inländischen Servern (Alibaba Cloud, Tencent Cloud) ist konform. Diese Formel gilt für Dimensionierung dieser Deployments mit chinesisch-optimierten Modellen wie Qwen3.', 'In allen Regionen bietet lokale Inferenz stärkere Datenschutz-Garantien als Cloud-APIs. Dieser VRAM-Rechner ist essentiell für das Design konformer, datenschutzfreundlicher KI-Systeme.'] }, faqSection: { id: 'faq', title: 'FAQ: VRAM und GPU-Anforderungen', faqs: [{ q: 'Funktioniert die Formel für alle Modelltypen?', a: 'Ja. Die Formel (Modell-Milliarden × Quantisierungs-Bits) ÷ 8 gilt für alle Transformer-basierten Modelle (Llama, Qwen, Mistral, Claude usw.). Nicht-Transformer-Architekturen (RNNs usw.) sind selten und können Anpassungen erfordern.' }, { q: 'Welche Quantisierung sollte ich verwenden?', a: 'Für die meisten Anwendungsfälle: Q5 bietet die beste Balance (95 % Qualität, 68 % Größenreduktion). Für Consumer-GPUs: Q4 ist Standard (90–95 % Qualität, 75 % Reduktion). Für Produktion: Q8, wenn VRAM verfügbar (99 % Qualität). Vermeiden Sie Q3 und darunter, es sei denn, Sie haben keine andere Wahl.' }, { q: 'Wie viel System-RAM benötige ich?', a: 'Minimum 16 GB für Offloading. Wenn Sie VRAM-Offloading verwenden (CPU-Spillover), wird System-RAM zum Fallback. Für Batch-Verarbeitung addieren Sie 8–16 GB System-RAM zu den Modell-Offload-Anforderungen. Für Single-User-Chat genügen 16 GB.' }, { q: 'Beeinflußt die Batch-Größe die VRAM-Berechnung?', a: 'Ja. Die Formel berechnet Single-Request-VRAM. Batch-Größe addiert zusätzliches VRAM linear: jede gleichzeitige Anfrage addiert ~500 MB–2 GB je nach Kontextlänge. Wenn Sie Batch=4 ausführen, addieren Sie 2–8 GB zur berechneten Menge.' }, { q: 'Kann ich ein 70B-Modell auf einer 12 GB GPU ausführen?', a: 'Nur mit extremer Quantisierung (Q2, ~70 % Qualitätsverlust) und CPU-Offloading (sehr langsam, 1–3 Tokens/s). Nicht praktisch. Bessere Option: Verwenden Sie ein 13B-Modell bei Q4 (gleiches VRAM, viel schneller und bessere Qualität).' }, { q: 'Was ist, wenn meine tatsächliche VRAM-Nutzung niedriger als berechnet ist?', a: 'Die Formel ist konservativ und includes Overhead. Niedrigere Nutzung bedeutet mehr Spielraum für Batch-Verarbeitung, längere Kontexte oder Sicherheitsmarge. Verwenden Sie nvidia-smi zur Messung echter Nutzung, dann benchen Sie Ihr Modell zur Leistungsbestätigung.' }, { q: 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?', a: 'Ja. Die DSGVO Artikel 28 erfordert Datenverarbeitungsverträge. Lokale Inferenz auf eigenem Hardware erfüllt Datenschutz-Anforderungen: Daten bleiben on-premises, keine Übertragung an Cloud-APIs. BSI-Grundschutz-Kataloge für Bundestechnologiestandards: lokale LLMs erfüllen Anforderungen für sensible Daten in Behörden und Finanzinstitutionen. Diese VRAM-Berechnungen unterstützen DSGVO-konforme Deployments.' }, { q: 'Ist der Einsatz lokaler LLMs für den deutschen Mittelstand geeignet?', a: 'Ja, sehr geeignet. Kleine und mittlere Unternehmen (Mittelstand) profitieren: Kostenenkontrolle (keine wiederkehrenden API-Kosten), Datensicherheit (keine externen Abhängigkeiten), Compliance mit BSI IT-Sicherheitsstandards. Mit diesem VRAM-Rechner können Mittelstand-Unternehmen exakt kalkulieren, welche GPU für ihre Anforderungen passt—oft genügt eine RTX 4070 Ti (€600–800) für 13B-Modelle. Besser als monatliche Cloud-Abos für APIs.' }] }, relatedReading: { id: 'related-reading', title: 'Weiterführende Ressourcen', items: ['[Hardware-Anleitung für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Vollständige GPU- und CPU-Empfehlungen für Ihr Budget.', '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) -- RTX 4090, 4080, 4070 Ti Benchmarks und Kostenanalyse.', '[70B-Modelle auf 24GB VRAM ausführen](/de/local-llms/run-70b-models-24gb-vram) -- Quantisierungs- und Offloading-Techniken für große Modelle.', '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) -- Tiefgang in Q4, Q5, Q8-Formate und Qualitäts-Trade-offs.', '[Stromverbrauch lokaler LLMs](/de/local-llms/local-llm-power-consumption) -- Netzteil-, Kühl- und Stromkostenanalyse.', '[Multi-GPU lokale LLMs](/de/local-llms/multi-gpu-local-llms) -- Layer-Splitting und verteilte Inferenz für 70B+ Modelle.'] }, sources: { id: 'sources', title: 'Quellen', items: ['[GGUF-Spezifikation](https://github.com/ggerganov/ggml/blob/master/docs/gguf.md) -- ggerganov/ggml-Dokumentation zum quantisierten Dateiformat.', '[Transformers Quantisierungs-Dokumentation](https://huggingface.co/docs/transformers/quantization) -- Hugging Face offizieller Leitfaden zu Quantisierungsmethoden.', '[Ollama-Dokumentation](https://ollama.ai) -- Offizielle Ollama-Anleitungen zur Modellverwaltung.', '[vLLM Performance-Anleitung](https://docs.vllm.ai) -- vLLM Framework Optimierungs-Dokumentation.'] } },
+      sections: { tldr: { id: 'key-takeaways', isTldr: true, items: ['VRAM = (Modellgröße × Quantisierungs-Bits) ÷ 8', 'FP16 = 16 Bits, Q8 = 8, Q5 = 5, Q4 = 4 Bits', 'Beispiel: 13B-Modell bei Q4 = (13 × 4) ÷ 8 = 6,5 GB', 'Addieren Sie immer 25 % Puffer für Kontext, Systemoverhead und Sicherheitsmarge', 'Ab August 2026 ist diese Formel auf ±10 % genau'] }, quickFacts: { id: 'quick-facts', title: 'Quick Facts: VRAM-Anforderungen nach GPU', items: ['**RTX 4090 (24 GB):** ein 7B-Modell bei Q4 (3,5 GB), 13B bei Q5 (8,1 GB), 70B bei Q4 mit Offloading', '**RTX 4080 (16 GB):** ein 7B-Modell bei Q4 (3,5 GB), 13B bei Q5 (8,1 GB), 32B bei Q4 (16 GB)', '**RTX 4070 Ti (12 GB):** ein 7B-Modell bei Q4 (3,5 GB), 13B bei Q5 (8,1 GB mit knappem Spielraum)', '**M5 Max Mac (36 GB unified):** ein 13B-Modell bei FP16 (26 GB), 70B nicht möglich ohne extreme Quantisierung', '**Faustregel:** Budget immer 25–40 % zusätzliches VRAM für Kontext, Batching und Systemoverhead über dem Formelergebnis'] }, inOneSentence: { id: 'in-one-sentence', title: 'In einem Satz', content: 'Der erforderliche VRAM (GB) entspricht Modellparametern in Milliarden multipliziert mit Quantisierungs-Bits (16 für FP16, 8 für Q8, 4 für Q4 usw.) geteilt durch 8.' }, inPlainTerms: { id: 'in-plain-terms', title: 'In einfachen Worten', content: 'Stellen Sie sich VRAM wie Regalplatz vor. Größere Bücher (Modelle mit mehr Parametern wie 70B) benötigen mehr Regalplatz. Kleinere Bücher (Q4-Quantisierung) benötigen weniger Platz als größere (FP16). Die Formel sagt Ihnen exakt, wie viele „Regale" (GB) Sie benötigen. Lassen Sie immer extra leere Regale für Gespräche, mehrere gleichzeitige Anfragen und Systemsoftware.' }, formula: { id: 'vram-formula', title: 'Was ist die VRAM-Formel?', image: '/images/vram-calculator-local-llm-formula-de.svg', imageCaption: 'VRAM-Formel mit 3 Berechnungsbeispielen: 7B-Modell bei Q4 = 3,5 GB, 13B bei Q5 = 8,1 GB, 70B bei Q8 = 70 GB. Addieren Sie immer 25–40 % Puffer für Kontext, Batching und Systemoverhead.', content: ['Die Formel für VRAM-Anforderung ist betrügerisch einfach:', '💡 **Pro-Tipp:** Diese Formel berechnet nur Modellgewichte. Echte VRAM-Nutzung ist 25–40 % höher aufgrund von Kontext, Batching und Systemoverhead. Addieren Sie immer eine Sicherheitsmarge.'], codeBlock: 'VRAM (GB) = (Modellgröße in Milliarden × Quantisierungs-Bits) ÷ 8\n\nBeispiel:\n- 7B-Modell bei 4-Bit-Quantisierung\n- (7 × 4) ÷ 8 = 3,5 GB\n\n- 13B-Modell bei 5-Bit-Quantisierung\n- (13 × 5) ÷ 8 = 8,125 GB\n\n- 70B-Modell bei 8-Bit-Quantisierung\n- (70 × 8) ÷ 8 = 70 GB', codeLanguage: 'bash' }, calculator: { id: 'interactive-calculator', title: 'Interaktiver VRAM-Rechner', content: 'Verwenden Sie diesen Rechner, um exakte VRAM-Anforderungen für jede Kombination von Modell, Quantisierung, Kontext und Batch-Größe zu berechnen. Wählen Sie Ihre Konfiguration und sehen Sie, welche GPUs passen.', component: 'VramCalculator' }, quantization: { id: 'quantization-levels', title: 'Was bedeuten Quantisierungsstufen?', image: '/images/vram-calculator-local-llm-quant-levels-de.svg', imageCaption: 'Quantisierungsstufen-Vergleich: FP16 (100 % Qualität), Q8 (99 %), Q5 (95 %, empfohlen), Q4 (90–95 %), Q3 (80–85 %), Q2 (70 %). Q5 reduziert ein 7B-Modell von 14 GB auf 4,4 GB mit nur 5 % Qualitätsverlust.', content: '🔍 **Schlüsselinsight:** Quantisierung handelt Dateigröße gegen Qualität. Q5 ist der Sweet Spot (95 % Qualität, 68 % kleiner). Q4 ist für die meisten Benutzer akzeptabel. Q3 und darunter sind nur für Edge-Geräte oder wenn VRAM kritisch begrenzt ist.', rows: [{ 'Quantisierung': 'FP16 (16-Bit)', 'Größenreduktion': 'Keine (Basis)', 'Qualität': '100 % (perfekt)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Forschung, Fine-Tuning' }, { 'Quantisierung': 'Q8 (8-Bit)', 'Größenreduktion': '50 %', 'Qualität': '99 % (unmerklich)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Produktion, lokale Server' }, { 'Quantisierung': 'Q6 (6-Bit)', 'Größenreduktion': '62,5 %', 'Qualität': '98 % (vernachlässigbar)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Ausgewogene Nutzung' }, { 'Quantisierung': 'Q5 (5-Bit)', 'Größenreduktion': '68,75 %', 'Qualität': '95 % (geringer Verlust)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Gute Kompression, Consumer' }, { 'Quantisierung': 'Q4 (4-Bit)', 'Größenreduktion': '75 %', 'Qualität': '90–95 % (akzeptabel)', 'Geschwindigkeit': 'Basis', 'Anwendungsfall': 'Maximale Kompression' }, { 'Quantisierung': 'Q3 (3-Bit)', 'Größenreduktion': '81 %', 'Qualität': '80–85 % (merklicher Verlust)', 'Geschwindigkeit': 'Schneller', 'Anwendungsfall': 'Extreme Kompression, CPU' }, { 'Quantisierung': 'Q2 (2-Bit)', 'Größenreduktion': '87,5 %', 'Qualität': '70 % (sichtbarer Verlust)', 'Geschwindigkeit': 'Am schnellsten', 'Anwendungsfall': 'Kleine Modelle, Edge-Geräte' }], columns: ['Quantisierung', 'Größenreduktion', 'Qualität', 'Geschwindigkeit', 'Anwendungsfall'] }, quickRef: { id: 'quick-reference', title: 'Quick-Reference-Tabelle: VRAM nach Modell und Quantisierung', image: '/images/vram-calculator-local-llm-quick-ref-de.svg', imageCaption: 'VRAM-Quick-Reference-Matrix: 3B bis 70B-Modelle bei FP16, Q8, Q5 und Q4-Quantisierung. Grün = passt in 12 GB GPU. Orange = benötigt 16–24 GB. Rot = benötigt 40+ GB oder Multi-GPU.', rows: [{ 'Modell': '3B', 'FP16': '6 GB', 'Q8': '3 GB', 'Q5': '1,9 GB', 'Q4': '1,5 GB' }, { 'Modell': '7B', 'FP16': '14 GB', 'Q8': '7 GB', 'Q5': '4,4 GB', 'Q4': '3,5 GB' }, { 'Modell': '13B', 'FP16': '26 GB', 'Q8': '13 GB', 'Q5': '8,1 GB', 'Q4': '6,5 GB' }, { 'Modell': '32B', 'FP16': '64 GB', 'Q8': '32 GB', 'Q5': '20 GB', 'Q4': '16 GB' }, { 'Modell': '70B', 'FP16': '140 GB', 'Q8': '70 GB', 'Q5': '43,75 GB', 'Q4': '35 GB' }], columns: ['Modell', 'FP16', 'Q8', 'Q5', 'Q4'] }, realWorld: { id: 'real-world-examples', title: 'Praxisbeispiele', image: '/images/vram-calculator-local-llm-gpu-scenarios-de.svg', imageCaption: 'Praxis-GPU-Szenarien: RTX 4090 (24 GB), RTX 4080 (16 GB), RTX 4070 Ti (12 GB), M5 Max Mac (36 GB) und RTX 3060 (12 GB) — welche Llama 3.3 Modelle jede bei verschiedenen Quantisierungsstufen ausführen kann.', content: ['Praktische VRAM-Berechnungen für häufige Szenarien:', '⚠️ **Warnung:** Diese Berechnungen sind nur für Modellgewichte. Addieren Sie 25–40 % für Kontext, Batch-Verarbeitung und Systemoverhead. Beispiel: 13B Q5 = 8,1 GB Modell + 2–3 GB Overhead = 10–11 GB tatsächlich.'], items: ['**RTX 4070 Ti (12 GB)**: ein 7B-Modell bei Q4 = 3,5 GB ✓ (viel Platz). ein 13B-Modell bei Q5 = 8,1 GB ✓ (knapp, aber funktioniert ohne Kontext/Batching).', '**RTX 4090 (24 GB)**: Llama 3.3 70B bei Q5 = 43,75 GB ✗ (zu groß). Llama 3.3 70B bei Q4 = 35 GB ✗ (immer noch zu groß). Llama 3.3 70B bei Q4 mit Offloading = funktioniert (langsam, 3–5 Tokens/s).', '**M5 Max Mac (36 GB)**: ein 13B-Modell bei FP16 = 26 GB ✓ (funktioniert). Llama 3.3 70B = unmöglich (selbst bei Q2, ~70 % Qualitätsverlust).'] }, overhead: { id: 'hidden-overhead', title: 'Welcher versteckter VRAM-Overhead sollte man berücksichtigen?', image: '/images/vram-calculator-local-llm-overhead-de.svg', imageCaption: 'Versteckter VRAM-Overhead-Aufschlüsselung: Kontextfenster (2–3 GB für 4K Tokens), Batch-Verarbeitung (×4 für Batch=4), Systemoverhead (500 MB–1 GB) und 25–40 % Sicherheitsmarge gesamt.', content: ['**Die Formel berechnet nur Modellgewichte.** Ihre echte VRAM-Nutzung wird höher sein aufgrund mehrerer Faktoren. Budget zusätzlich 25–40 % über dem berechneten Betrag.', 'Kontextfenster (Key-Value-Cache) speichert Gesprächsverlauf während Inferenz. Ein 4K-Token-Kontext verwendet ca. 2–3 GB für ein 7B-Modell.', '📌 **Schlüsselpunkt:** Batch-Verarbeitung erhöht VRAM-Nutzung linear. Jede zusätzliche gleichzeitige Anfrage (bei simultaner Verarbeitung mehrerer Anfragen) nutzt 500 MB–2 GB zusätzlich. Wenn Sie Batch=4 ausführen, multiplizieren Sie Single-Request-VRAM mit 4 und addieren Overhead.', 'Systemoverhead vom Betriebssystem und Inferenz-Engine-Framework (Ollama, vLLM, llama.cpp) reserviert 500 MB–1 GB. Halten Sie immer Sicherheitsmarge bei GPU-Auswahl.'] }, hardwareGuide: { id: 'hardware-fit', title: 'Welches lokale LLM passt zu Ihrer GPU? 2026-Anleitung', content: ['Verwenden Sie den interaktiven Rechner oben zur exakten Passform. Unten sind häufige GPU-Szenarien und empfohlene Modelle.'], items: ['**RTX 3060 (12 GB):** Bestes Modell: Qwen3 7B Q5 (4,4 GB) ✓. Alternative: ein 8B-Modell Q4 (4 GB) ✓. Nicht möglich: 32B+ Modelle.', '**RTX 4070 (12 GB):** Bestes Modell: Qwen3 13B Q4 (6,5 GB) ✓. Mit Spielraum: ein 8B-Modell Q5 (5 GB) ✓. Nicht möglich: 32B-Modelle.', '**RTX 4070 Ti (12 GB):** Bestes Modell: Qwen3 13B Q5 (8,1 GB) ✓. Enge Passform: ein 13B-Modell Q4 (6,5 GB) ✓. Nicht ideal: Batch-Verarbeitung.', '**RTX 4080 (16 GB):** Bestes Modell: Qwen3 32B Q4 (16 GB) ✓ knapp. Komfortabel: Mistral 3.1 24B Q5 (15 GB) ✓. Empfohlen: ein 13B-Modell Q8 (13 GB) ✓.', '**RTX 4090 (24 GB):** Bestes Modell: Qwen3 32B Q5 (20 GB) ✓. Mit Offload: Llama 3.3 70B Q4 (35 GB – benötigt Offloading). Komfortabel: Alle 32B bei Q5/Q8.', '**RTX 5090 (32 GB, wenn veröffentlicht):** Bestes Modell: Llama 3.3 70B Q4 (35 GB – enge Passform). Besser: Qwen3 72B Q3 (27 GB) ✓. Komfortabel: 70B bei Q5+ mit Batching.'] }, accuracy: { id: 'accuracy', title: 'Wie genau ist die Formel?', image: '/images/vram-calculator-local-llm-accuracy-de.svg', imageCaption: 'VRAM-Formel-Genauigkeit ±10 %: Abweichung verursacht durch Quantisierungsformat (GGUF vs. GPTQ vs. AWQ), Modellarchitektur (Transformer vs. MoE) und Inferenz-Engine (vLLM vs. llama.cpp vs. Ollama).', content: ['**Die Formel ist für die meisten Fälle auf ±10 % genau.** Echte VRAM-Nutzung variiert basierend auf Implementierung, Modellarchitektur und Inferenz-Engine-Optimierungen.', 'Variationsquellen umfassen: verschiedene Quantisierungsformate (GGUF vs. Safetensors vs. AWQ), Modellarchitektur (Transformer vs. Nicht-Transformer) und Inferenz-Engine-spezifische Optimierungen (vLLM, llama.cpp, Ollama).', 'Ab August 2026 behandeln Sie die Formel als konservative Schätzung. Addieren Sie immer 25 % Sicherheitsmarge beim GPU-Kauf, um Kontext-Overhead, Batching und Systemprozesse zu berücksichtigen.'] }, commonMistakes: { id: 'common-mistakes', title: 'Häufige Fehler bei VRAM-Berechnung', image: '/images/vram-calculator-local-llm-mistakes-de.svg', imageCaption: '4 häufige VRAM-Fehler: Kontext-Overhead vergessen (addiert 1,5–3 GB), 70B-Parameter mit 70 GB VRAM verwechseln, Systemoverhead von 1–2 GB ignorieren, GPU exakt bei berechneter Größe kaufen ohne 25 % Marge.', items: ['**Kontext-Overhead vergessen.** Ein 7B-Modell bei Q4 ist 3,5 GB, aber mit 4K-Kontext benötigt es 5–6 GB gesamt.', '**Modellgröße von HuggingFace ohne Quantisierung verwenden.** 70B bedeutet 70 Milliarden Parameter, nicht 70 GB VRAM.', '**Systemoverhead nicht berücksichtigen.** Modelle erhalten nie vollständiges GPU-VRAM. 1–2 GB für OS und Inferenz-Engine reservieren.', '**GPU exakt bei berechneter Größe kaufen.** Kaufen Sie immer 25 % mehr. Berechneter 18 GB-Bedarf = kaufen Sie 24 GB GPU.'] }, regionalContext: { id: 'regional-context', title: 'Überlegungen zur regionalen Bereitstellung', content: ['**Europäische Union (GDPR):** Lokale Inferenz (On-Premises) gewährleistet Datenschutz-Compliance unter GDPR. Das Ausführen von Modellen auf Ihrer eigenen GPU hält Benutzerdaten im Land. Dieser VRAM-Rechner hilft Ihnen, Hardware für datenschutzfreundliche Deployments richtig zu dimensionieren.', '**Deutschland & DACH-Region (BSI-Grundschutz):** Der BSI-Grundschutz-Katalog ist Standard für deutsche Behörden, Finanzinstitute und Mittelstand. Lokale LLM-Inferenz erfüllt BSI-Anforderungen für sensible Daten: keine Cloud-Abhängigkeiten, vollständige Kontrolle über Datenverarbeitung. Dieser Rechner unterstützt DSGVO-konforme und BSI-konforme Deployments.', '**Japan (APPI):** Das Gesetz zum Schutz personenbezogener Daten (APPI) erfordert sorgfältige Datenbehandlung. On-Device-LLM-Inferenz reduziert Datentransfer und externe Verarbeitung von Japan. Verwenden Sie diesen Rechner zur Dimensionierung für japanische Unternehmensbereitstellungen.', '**China (Datensicherheitsgesetz):** Chinas 2021 Datensicherheitsgesetz erfordert Datenresidenz innerhalb chinesischer Grenzen. Lokale LLM-Inferenz auf inländischen Servern (Alibaba Cloud, Tencent Cloud) ist konform. Diese Formel gilt für Dimensionierung dieser Deployments mit chinesisch-optimierten Modellen wie Qwen3.', 'In allen Regionen bietet lokale Inferenz stärkere Datenschutz-Garantien als Cloud-APIs. Dieser VRAM-Rechner ist essentiell für das Design konformer, datenschutzfreundlicher KI-Systeme.'] }, faqSection: { id: 'faq', title: 'FAQ: VRAM und GPU-Anforderungen', faqs: [
+            { q: 'Funktioniert die Formel für alle Modelltypen?', a: 'Ja. Die Formel (Modell-Milliarden × Quantisierungs-Bits) ÷ 8 gilt für alle Transformer-basierten Modelle (Llama, Qwen, Mistral, Claude usw.). Nicht-Transformer-Architekturen (RNNs usw.) sind selten und können Anpassungen erfordern.' },
+            { q: 'Welche Quantisierung sollte ich verwenden?', a: 'Für die meisten Anwendungsfälle: Q5 bietet die beste Balance (95 % Qualität, 68 % Größenreduktion). Für Consumer-GPUs: Q4 ist Standard (90–95 % Qualität, 75 % Reduktion). Für Produktion: Q8, wenn VRAM verfügbar (99 % Qualität). Vermeiden Sie Q3 und darunter, es sei denn, Sie haben keine andere Wahl.' },
+            { q: 'Wie viel System-RAM benötige ich?', a: 'Minimum 16 GB für Offloading. Wenn Sie VRAM-Offloading verwenden (CPU-Spillover), wird System-RAM zum Fallback. Für Batch-Verarbeitung addieren Sie 8–16 GB System-RAM zu den Modell-Offload-Anforderungen. Für Single-User-Chat genügen 16 GB.' },
+            { q: 'Beeinflußt die Batch-Größe die VRAM-Berechnung?', a: 'Ja. Die Formel berechnet Single-Request-VRAM. Batch-Größe addiert zusätzliches VRAM linear: jede gleichzeitige Anfrage addiert ~500 MB–2 GB je nach Kontextlänge. Wenn Sie Batch=4 ausführen, addieren Sie 2–8 GB zur berechneten Menge.' },
+            { q: 'Kann ich ein 70B-Modell auf einer 12 GB GPU ausführen?', a: 'Nur mit extremer Quantisierung (Q2, ~70 % Qualitätsverlust) und CPU-Offloading (sehr langsam, 1–3 Tokens/s). Nicht praktisch. Bessere Option: Verwenden Sie ein 13B-Modell bei Q4 (gleiches VRAM, viel schneller und bessere Qualität).' },
+            { q: 'Was ist, wenn meine tatsächliche VRAM-Nutzung niedriger als berechnet ist?', a: 'Die Formel ist konservativ und includes Overhead. Niedrigere Nutzung bedeutet mehr Spielraum für Batch-Verarbeitung, längere Kontexte oder Sicherheitsmarge. Verwenden Sie nvidia-smi zur Messung echter Nutzung, dann benchen Sie Ihr Modell zur Leistungsbestätigung.' },
+            { q: 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?', a: 'Ja. Die DSGVO Artikel 28 erfordert Datenverarbeitungsverträge. Lokale Inferenz auf eigenem Hardware erfüllt Datenschutz-Anforderungen: Daten bleiben on-premises, keine Übertragung an Cloud-APIs. BSI-Grundschutz-Kataloge für Bundestechnologiestandards: lokale LLMs erfüllen Anforderungen für sensible Daten in Behörden und Finanzinstitutionen. Diese VRAM-Berechnungen unterstützen DSGVO-konforme Deployments.' },
+            { q: 'Ist der Einsatz lokaler LLMs für den deutschen Mittelstand geeignet?', a: 'Ja, sehr geeignet. Kleine und mittlere Unternehmen (Mittelstand) profitieren: Kostenenkontrolle (keine wiederkehrenden API-Kosten), Datensicherheit (keine externen Abhängigkeiten), Compliance mit BSI IT-Sicherheitsstandards. Mit diesem VRAM-Rechner können Mittelstand-Unternehmen exakt kalkulieren, welche GPU für ihre Anforderungen passt—oft genügt eine RTX 4070 Ti (€600–800) für 13B-Modelle. Besser als monatliche Cloud-Abos für APIs.' },
+            { q: 'Sollte ich eine GPU genau in der berechneten VRAM-Größe kaufen?', a: 'Nein. Kaufen Sie immer 25 % mehr VRAM als berechnet. Wenn Sie 18 GB benötigen, kaufen Sie eine 24 GB GPU. Diese Sicherheitsmarge berücksichtigt Kontextwachstum, Batching und Systemprozesse. Exakte Passungen hinterlassen keinen Spielraum und verursachen Out-of-Memory-Fehler.' },
+            { q: 'Was ist die beste GPU für 13B-Modelle im Jahr 2026?', a: 'RTX 4070 Ti (12 GB) für Single-User-Chat bei Q4–Q5. RTX 4080 (16 GB) wenn Sie Q8-Qualität oder Batch-Verarbeitung möchten. M5 Max (36 GB) auf Mac. Alle drei führen Llama 3.3, Qwen3 und Mistral 3.1 13B-Modelle problemlos aus.' },
+          ] }, relatedReading: { id: 'related-reading', title: 'Weiterführende Ressourcen', items: ['[Hardware-Anleitung für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Vollständige GPU- und CPU-Empfehlungen für Ihr Budget.', '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) -- RTX 4090, 4080, 4070 Ti Benchmarks und Kostenanalyse.', '[70B-Modelle auf 24GB VRAM ausführen](/de/local-llms/run-70b-models-24gb-vram) -- Quantisierungs- und Offloading-Techniken für große Modelle.', '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) -- Tiefgang in Q4, Q5, Q8-Formate und Qualitäts-Trade-offs.', '[Stromverbrauch lokaler LLMs](/de/local-llms/local-llm-power-consumption) -- Netzteil-, Kühl- und Stromkostenanalyse.', '[Multi-GPU lokale LLMs](/de/local-llms/multi-gpu-local-llms) -- Layer-Splitting und verteilte Inferenz für 70B+ Modelle.'] }, sources: { id: 'sources', title: 'Quellen', items: ['[GGUF-Spezifikation](https://github.com/ggerganov/ggml/blob/master/docs/gguf.md) -- ggerganov/ggml-Dokumentation zum quantisierten Dateiformat.', '[Transformers Quantisierungs-Dokumentation](https://huggingface.co/docs/transformers/quantization) -- Hugging Face offizieller Leitfaden zu Quantisierungsmethoden.', '[Ollama-Dokumentation](https://ollama.ai) -- Offizielle Ollama-Anleitungen zur Modellverwaltung.', '[vLLM Performance-Anleitung](https://docs.vllm.ai) -- vLLM Framework Optimierungs-Dokumentation.'] } },
     },
     fr: {
       theme: 'Matériel & Performance',
@@ -1543,15 +1605,78 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [
-          { '@type': 'Question', name: 'この計算式はすべてのモデルタイプに対応していますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。計算式（モデルの十億パラメータ × 量子化ビット数）÷ 8は、すべてのTransformerベースのモデル（Llama、Qwen、Mistral、Claudeなど）に適用されます。非Transformerアーキテクチャ（RNNなど）はまれで、調整が必要な場合があります。' } },
-          { '@type': 'Question', name: 'どの量子化レベルを使用すべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'ほとんどの用途：Q5が最適なバランスを提供します（品質95%、サイズ68%削減）。コンシューマーGPU：Q4が標準です（品質90〜95%、75%削減）。本番環境：VRAMが許せばQ8（品質99%）。選択肢がない限り、Q3以下は避けてください。' } },
-          { '@type': 'Question', name: 'システムRAMはどのくらい必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'オフロードには最低16 GB。VRAMオフロード（CPUスピルオーバー）を使用する場合、システムRAMがフォールバックになります。バッチ処理には、モデルオフロード要件を超えて8〜16 GBのシステムRAMを追加してください。単一ユーザーチャットには16 GBで十分です。' } },
-          { '@type': 'Question', name: 'バッチサイズはVRAM計算に影響しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。計算式は単一リクエストのVRAMを計算します。バッチサイズはVRAMを線形的に追加します：各同時リクエストがコンテキスト長に応じて約500 MB〜2 GBを追加します。batch=4を実行する場合、計算量に2〜8 GBを追加してください。' } },
-          { '@type': 'Question', name: '12 GB GPUで70Bモデルを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: '極端な量子化（Q2、品質損失約70%）とCPUオフロード（非常に遅い、毎秒1〜3トークン）を使用した場合のみ可能です。実用的ではありません。より良い選択肢：Q4の13Bモデルを使用してください（同じVRAM、はるかに高速で品質も優れています）。' } },
-          { '@type': 'Question', name: '実際のVRAM使用量が計算値より低い場合はどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: '計算式は保守的で、オーバーヘッドが含まれています。実際の使用量が低い場合は、バッチ処理、より長いコンテキスト、またはセーフティマージンのためのヘッドルームが増えます。nvidia-smiを使用して実際の使用量を測定し、モデルをベンチマークしてパフォーマンスを確認してください。' } },
-          { '@type': 'Question', name: '計算されたVRAMサイズぴったりのGPUを購入すべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。常に計算値より25%多いVRAMを購入してください。18 GBが必要な場合は、24 GB GPUを購入してください。このセーフティマージンは、コンテキストの増加、バッチ処理、システムプロセスを考慮します。ぴったりサイズの購入はヘッドルームがなく、メモリ不足エラーを引き起こします。' } },
-          { '@type': 'Question', name: '2026年に13Bモデルに最適なGPUはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Q4〜Q5での単一ユーザーチャットにはRTX 4070 Ti（12 GB）。Q8品質またはバッチ処理が必要な場合はRTX 4080（16 GB）。Macを使用している場合はM5 Max（36 GB）。3つともLlama 3.3、Qwen3、Mistral 3.1 13Bモデルを快適に実行できます。' } },
-          { '@type': 'Question', name: 'RTX 4090で70Bモデルを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'Q4量子化（35 GB）＋CPUオフロード（遅い、毎秒3〜5トークン）でのみ可能で、実用的ではありません。より良いアプローチ：RTX 4090でQ5の32Bモデル（20 GB）を使用して高速・高品質な応答を得る。または、オフロードなしでQ4の70Bを実行するためにRTX 5090（32 GB）にアップグレードする。' } }
+          {
+            '@type': 'Question',
+            'name': 'この計算式はすべてのモデルタイプに対応していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。計算式（モデルの十億パラメータ × 量子化ビット数）÷ 8は、すべてのTransformerベースのモデル（Llama、Qwen、Mistral、Claudeなど）に適用されます。非Transformerアーキテクチャ（RNNなど）はまれで、調整が必要な場合があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'どの量子化レベルを使用すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどの用途：Q5が最適なバランスを提供します（品質95%、サイズ68%削減）。コンシューマーGPU：Q4が標準です（品質90〜95%、75%削減）。本番環境：VRAMが許せばQ8（品質99%）。選択肢がない限り、Q3以下は避けてください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'システムRAMはどのくらい必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'オフロードには最低16 GB。VRAMオフロード（CPUスピルオーバー）を使用する場合、システムRAMがフォールバックになります。バッチ処理には、モデルオフロード要件を超えて8〜16 GBのシステムRAMを追加してください。単一ユーザーチャットには16 GBで十分です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'バッチサイズはVRAM計算に影響しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。計算式は単一リクエストのVRAMを計算します。バッチサイズはVRAMを線形的に追加します：各同時リクエストがコンテキスト長に応じて約500 MB〜2 GBを追加します。batch=4を実行する場合、計算量に2〜8 GBを追加してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '12 GB GPUで70Bモデルを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '極端な量子化（Q2、品質損失約70%）とCPUオフロード（非常に遅い、毎秒1〜3トークン）を使用した場合のみ可能です。実用的ではありません。より良い選択肢：Q4の13Bモデルを使用してください（同じVRAM、はるかに高速で品質も優れています）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '実際のVRAM使用量が計算値より低い場合はどうなりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '計算式は保守的で、オーバーヘッドが含まれています。実際の使用量が低い場合は、バッチ処理、より長いコンテキスト、またはセーフティマージンのためのヘッドルームが増えます。nvidia-smiを使用して実際の使用量を測定し、モデルをベンチマークしてパフォーマンスを確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '計算されたVRAMサイズぴったりのGPUを購入すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。常に計算値より25%多いVRAMを購入してください。18 GBが必要な場合は、24 GB GPUを購入してください。このセーフティマージンは、コンテキストの増加、バッチ処理、システムプロセスを考慮します。ぴったりサイズの購入はヘッドルームがなく、メモリ不足エラーを引き起こします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年に13Bモデルに最適なGPUはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4〜Q5での単一ユーザーチャットにはRTX 4070 Ti（12 GB）。Q8品質またはバッチ処理が必要な場合はRTX 4080（16 GB）。Macを使用している場合はM5 Max（36 GB）。3つともLlama 3.3、Qwen3、Mistral 3.1 13Bモデルを快適に実行できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 4090で70Bモデルを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4量子化（35 GB）＋CPUオフロード（遅い、毎秒3〜5トークン）でのみ可能で、実用的ではありません。より良いアプローチ：RTX 4090でQ5の32Bモデル（20 GB）を使用して高速・高品質な応答を得る。または、オフロードなしでQ4の70Bを実行するためにRTX 5090（32 GB）にアップグレードする。',
+            },
+          },
         ]
       },
       softwareApplicationSchema: {
@@ -1784,6 +1909,9 @@ schema: {
             { q: 'バッチサイズはVRAM計算に影響しますか？', a: 'はい。計算式は単一リクエストのVRAMを計算します。バッチサイズはVRAMを線形的に追加します：各同時リクエストがコンテキスト長に応じて約500 MB〜2 GBを追加します。batch=4を実行する場合、計算量に2〜8 GBを追加してください。' },
             { q: '12 GB GPUで70Bモデルを実行できますか？', a: '極端な量子化（Q2、品質損失約70%）とCPUオフロード（非常に遅い、毎秒1〜3トークン）を使用した場合のみ可能です。実用的ではありません。より良い選択肢：Q4の13Bモデルを使用してください（同じVRAM、はるかに高速で品質も優れています）。' },
             { q: '実際のVRAM使用量が計算値より低い場合はどうなりますか？', a: '計算式は保守的で、オーバーヘッドが含まれています。実際の使用量が低い場合は、バッチ処理、より長いコンテキスト、またはセーフティマージンのためのヘッドルームが増えます。nvidia-smiを使用して実際の使用量を測定し、モデルをベンチマークしてパフォーマンスを確認してください。' },
+            { q: '計算されたVRAMサイズぴったりのGPUを購入すべきですか？', a: 'いいえ。常に計算値より25%多いVRAMを購入してください。18 GBが必要な場合は、24 GB GPUを購入してください。このセーフティマージンは、コンテキストの増加、バッチ処理、システムプロセスを考慮します。ぴったりサイズの購入はヘッドルームがなく、メモリ不足エラーを引き起こします。' },
+            { q: '2026年に13Bモデルに最適なGPUはどれですか？', a: 'Q4〜Q5での単一ユーザーチャットにはRTX 4070 Ti（12 GB）。Q8品質またはバッチ処理が必要な場合はRTX 4080（16 GB）。Macを使用している場合はM5 Max（36 GB）。3つともLlama 3.3、Qwen3、Mistral 3.1 13Bモデルを快適に実行できます。' },
+            { q: 'RTX 4090で70Bモデルを実行できますか？', a: 'Q4量子化（35 GB）＋CPUオフロード（遅い、毎秒3〜5トークン）でのみ可能で、実用的ではありません。より良いアプローチ：RTX 4090でQ5の32Bモデル（20 GB）を使用して高速・高品質な応答を得る。または、オフロードなしでQ4の70Bを実行するためにRTX 5090（32 GB）にアップグレードする。' },
           ],
         },
         relatedReading: {
@@ -1850,15 +1978,78 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: '该公式适用于所有模型类型吗？', acceptedAnswer: { '@type': 'Answer', text: '适用。公式（模型十亿参数 × 量化位数）÷ 8适用于所有基于Transformer的模型（Llama、Qwen、Mistral、Claude等）。非Transformer架构（如RNN）较为罕见，可能需要调整。' } },
-          { '@type': 'Question', name: '应该使用哪种量化级别？', acceptedAnswer: { '@type': 'Answer', text: '大多数场景：Q5提供最佳平衡（95%质量，68%体积缩减）。消费级GPU：Q4是标准选择（90-95%质量，75%缩减）。生产环境：VRAM允许时使用Q8（99%质量）。除非别无选择，否则避免Q3及以下。' } },
-          { '@type': 'Question', name: '需要多少系统内存？', acceptedAnswer: { '@type': 'Answer', text: '卸载至少需要16 GB。使用VRAM卸载（CPU溢出）时，系统内存作为后备。批处理需在模型卸载基础上额外增加8-16 GB系统内存。单用户聊天16 GB已足够。' } },
-          { '@type': 'Question', name: '批次大小影响VRAM计算吗？', acceptedAnswer: { '@type': 'Answer', text: '影响。该公式计算单请求VRAM。批次大小线性增加VRAM：每个并发请求根据上下文长度增加约500 MB至2 GB。运行batch=4时，在计算量基础上再加2-8 GB。' } },
-          { '@type': 'Question', name: '12 GB GPU能运行70B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '仅在极端量化（Q2，质量损失约70%）和CPU卸载（非常慢，每秒1-3个token）的条件下可行，实用性差。更好的选择：使用Q4的13B模型（相同VRAM，速度更快，质量更好）。' } },
-          { '@type': 'Question', name: '实际VRAM用量低于计算值怎么办？', acceptedAnswer: { '@type': 'Answer', text: '该公式偏保守并已含开销。实际用量低意味着批处理、更长上下文或安全余量有更多空间。使用nvidia-smi测量实际用量，然后对模型进行基准测试以确认性能。' } },
-          { '@type': 'Question', name: '应该购买刚好达到计算VRAM大小的GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '不应该。始终购买比计算值多25%的VRAM。如果需要18 GB，购买24 GB GPU。此安全余量考虑到上下文增长、批处理和系统进程。刚好匹配的购买没有余量，会导致内存不足错误。' } },
-          { '@type': 'Question', name: '2026年13B模型的最佳GPU是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Q4-Q5单用户聊天推荐RTX 4070 Ti（12 GB）。需要Q8质量或批处理时选RTX 4080（16 GB）。使用Mac时选M5 Max（36 GB）。三者均可轻松运行Llama 3.3、Qwen3和Mistral 3.1 13B模型。' } },
-          { '@type': 'Question', name: 'RTX 4090能运行70B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '仅能以Q4量化（35 GB）+CPU卸载（慢，每秒3-5个token）运行，实用性差。更好方案：在RTX 4090上使用Q5的32B模型（20 GB）获得快速高质量响应；或升级到RTX 5090（32 GB）无需卸载运行Q4的70B。' } },
+          {
+            '@type': 'Question',
+            'name': '该公式适用于所有模型类型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '适用。公式（模型十亿参数 × 量化位数）÷ 8适用于所有基于Transformer的模型（Llama、Qwen、Mistral、Claude等）。非Transformer架构（如RNN）较为罕见，可能需要调整。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '应该使用哪种量化级别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '大多数场景：Q5提供最佳平衡（95%质量，68%体积缩减）。消费级GPU：Q4是标准选择（90-95%质量，75%缩减）。生产环境：VRAM允许时使用Q8（99%质量）。除非别无选择，否则避免Q3及以下。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '需要多少系统内存？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '卸载至少需要16 GB。使用VRAM卸载（CPU溢出）时，系统内存作为后备。批处理需在模型卸载基础上额外增加8-16 GB系统内存。单用户聊天16 GB已足够。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '批次大小影响VRAM计算吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '影响。该公式计算单请求VRAM。批次大小线性增加VRAM：每个并发请求根据上下文长度增加约500 MB至2 GB。运行batch=4时，在计算量基础上再加2-8 GB。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '12 GB GPU能运行70B模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '仅在极端量化（Q2，质量损失约70%）和CPU卸载（非常慢，每秒1-3个token）的条件下可行，实用性差。更好的选择：使用Q4的13B模型（相同VRAM，速度更快，质量更好）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '实际VRAM用量低于计算值怎么办？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '该公式偏保守并已含开销。实际用量低意味着批处理、更长上下文或安全余量有更多空间。使用nvidia-smi测量实际用量，然后对模型进行基准测试以确认性能。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '应该购买刚好达到计算VRAM大小的GPU吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不应该。始终购买比计算值多25%的VRAM。如果需要18 GB，购买24 GB GPU。此安全余量考虑到上下文增长、批处理和系统进程。刚好匹配的购买没有余量，会导致内存不足错误。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年13B模型的最佳GPU是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4-Q5单用户聊天推荐RTX 4070 Ti（12 GB）。需要Q8质量或批处理时选RTX 4080（16 GB）。使用Mac时选M5 Max（36 GB）。三者均可轻松运行Llama 3.3、Qwen3和Mistral 3.1 13B模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 4090能运行70B模型吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '仅能以Q4量化（35 GB）+CPU卸载（慢，每秒3-5个token）运行，实用性差。更好方案：在RTX 4090上使用Q5的32B模型（20 GB）获得快速高质量响应；或升级到RTX 5090（32 GB）无需卸载运行Q4的70B。',
+            },
+          },
         ],
       },
       softwareApplicationSchema: {
@@ -2083,6 +2274,9 @@ schema: {
             { q: '批次大小影响VRAM计算吗？', a: '影响。该公式计算单请求VRAM。批次大小线性增加VRAM：每个并发请求根据上下文长度增加约500 MB至2 GB。运行batch=4时，在计算量基础上再加2-8 GB。' },
             { q: '12 GB GPU能运行70B模型吗？', a: '仅在极端量化（Q2，质量损失约70%）和CPU卸载（非常慢，每秒1-3个token）的条件下可行，实用性差。更好的选择：使用Q4的13B模型（相同VRAM，速度更快，质量更好）。' },
             { q: '实际VRAM用量低于计算值怎么办？', a: '该公式偏保守并已含开销。实际用量低意味着批处理、更长上下文或安全余量有更多空间。使用nvidia-smi测量实际用量，然后对模型进行基准测试以确认性能。' },
+            { q: '应该购买刚好达到计算VRAM大小的GPU吗？', a: '不应该。始终购买比计算值多25%的VRAM。如果需要18 GB，购买24 GB GPU。此安全余量考虑到上下文增长、批处理和系统进程。刚好匹配的购买没有余量，会导致内存不足错误。' },
+            { q: '2026年13B模型的最佳GPU是什么？', a: 'Q4-Q5单用户聊天推荐RTX 4070 Ti（12 GB）。需要Q8质量或批处理时选RTX 4080（16 GB）。使用Mac时选M5 Max（36 GB）。三者均可轻松运行Llama 3.3、Qwen3和Mistral 3.1 13B模型。' },
+            { q: 'RTX 4090能运行70B模型吗？', a: '仅能以Q4量化（35 GB）+CPU卸载（慢，每秒3-5个token）运行，实用性差。更好方案：在RTX 4090上使用Q5的32B模型（20 GB）获得快速高质量响应；或升级到RTX 5090（32 GB）无需卸载运行Q4的70B。' },
           ],
         },
         relatedReading: {

@@ -1870,46 +1870,16 @@ schema: {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: 'RTX 4090的实际功耗是多少？',
-              a: 'RTX 4090 TDP为450W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。电源设计建议850W PSU。',
-            },
-            {
-              q: '功率限制如何影响推理速度？',
-              a: 'RTX 4090限制350W（削减40%）时，推理速度下降约10%。月电成本从$52降至$31，节省40%。24小时连续推理时，功率限制成为权衡选项。',
-            },
-            {
-              q: 'Apple Silicon M5 Max真的比NVIDIA效率高10倍？',
-              a: '是的。M5 Max（128GB统一内存，2026年3月）在25～35W下运行7B模型达65～85 tok/sec。RTX 4090在600W下相同模型达150 tok/sec。M5 Max每token能效约高10倍，加上128GB > 32GB VRAM优势。',
-            },
-            {
-              q: '24小时GPU推理会损伤显卡吗？',
-              a: '不会。GPU设计可承受100%负载24/7，但冷却至关重要。真正风险：不足冷却（热节流）、低瓦数电源尖峰（断电）、风扇故障（过热）。适当冷却和电源条件下，GPU寿命5年以上。',
-            },
-            {
-              q: 'RTX 4090需要多少瓦电源？',
-              a: '最少1000W，建议850W。RTX 4090（450W）+ CPU（150～170W）+ 主板/RAM/存储（100W）+ 冷却（50W）+ 效率损失（20%） = 约900W峰值。750W + RTX 4090组合在持续推理中断电风险高。',
-            },
-            {
-              q: 'GPU温度监控怎么做？',
-              a: '用`nvidia-smi -q -d TEMPERATURE`持续监控。本地LLM推理长期90～100% GPU使用，温度会持续上升。83°C触发热节流。理想运行范围：65～75°C（冷却系统有效）。',
-            },
-            {
-              q: '空冷 vs 液冷：选哪个？',
-              a: '空冷：$200～700、安装简易、30～40dB。液冷：$1000～2000、温度低10～15°C、35～45dB。本地LLM 24/7运行时，液冷长期可靠性更优，电力效率也提升5～10%。',
-            },
-            {
-              q: '添加冷却风扇会增加功耗吗？',
-              a: '略有增加。1～2个PCIe风扇额外消耗15～30W。但GPU温度下降10～15°C，GPU时钟保持稳定，推理速度提升5～10%，整体电力效率改善。',
-            },
-            {
-              q: 'TDP和实测功耗的区别？',
-              a: 'TDP（热设计功耗）=最大散热=峰值功耗。NVIDIA RTX 4090 TDP为450W，但实际时钟和负载下550～600W浮动。推理运行90～100% GPU，实测接近TDP。',
-            },
-            {
-              q: '怎样削减电力成本？',
-              a: 'RTX 4090月成本$52可通过：(1) 350W功率限制削减40%、(2) 定时运行（24/7改8h/day削减67%）、(3) 迁移至M5 Max削减90%、(4) 仅在低峰电价时段运行（因地区而异）。',
-            },
+            { q: 'RTX 4090的实际功耗是多少？', a: 'RTX 4090 TDP为450W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。电源设计建议850W PSU。' },
+            { q: '功率限制如何影响推理速度？', a: 'RTX 4090限制350W（削减40%）时，推理速度下降约10%。月电成本从$52降至$31，节省40%。24小时连续推理时，功率限制成为权衡选项。' },
+            { q: 'Apple Silicon M5 Max真的比NVIDIA效率高10倍？', a: '是的。M5 Max（128GB统一内存，2026年3月）在25～35W下运行7B模型达65～85 tok/sec。RTX 4090在600W下相同模型达150 tok/sec。M5 Max每token能效约高10倍，加上128GB > 32GB VRAM优势。' },
+            { q: '24小时GPU推理会损伤显卡吗？', a: '不会。GPU设计可承受100%负载24/7，但冷却至关重要。真正风险：不足冷却（热节流）、低瓦数电源尖峰（断电）、风扇故障（过热）。适当冷却和电源条件下，GPU寿命5年以上。' },
+            { q: 'RTX 4090需要多少瓦电源？', a: '最少1000W，建议850W。RTX 4090（450W）+ CPU（150～170W）+ 主板/RAM/存储（100W）+ 冷却（50W）+ 效率损失（20%） = 约900W峰值。750W + RTX 4090组合在持续推理中断电风险高。' },
+            { q: 'GPU温度监控怎么做？', a: '用`nvidia-smi -q -d TEMPERATURE`持续监控。本地LLM推理长期90～100% GPU使用，温度会持续上升。83°C触发热节流。理想运行范围：65～75°C（冷却系统有效）。' },
+            { q: '空冷 vs 液冷：选哪个？', a: '空冷：$200～700、安装简易、30～40dB。液冷：$1000～2000、温度低10～15°C、35～45dB。本地LLM 24/7运行时，液冷长期可靠性更优，电力效率也提升5～10%。' },
+            { q: '添加冷却风扇会增加功耗吗？', a: '略有增加。1～2个PCIe风扇额外消耗15～30W。但GPU温度下降10～15°C，GPU时钟保持稳定，推理速度提升5～10%，整体电力效率改善。' },
+            { q: 'TDP和实测功耗的区别？', a: 'TDP（热设计功耗）=最大散热=峰值功耗。NVIDIA RTX 4090 TDP为450W，但实际时钟和负载下550～600W浮动。推理运行90～100% GPU，实测接近TDP。' },
+            { q: '怎样削减电力成本？', a: 'RTX 4090月成本$52可通过：(1) 350W功率限制削减40%、(2) 定时运行（24/7改8h/day削减67%）、(3) 迁移至M5 Max削减90%、(4) 仅在低峰电价时段运行（因地区而异）。' },
           ],
         },
         relatedReading: {
@@ -1970,16 +1940,86 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: 'RTX 4090的实际功耗是多少？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090 TDP为450W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。' } },
-          { '@type': 'Question', name: '功率限制如何影响推理速度？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090限制350W（削减40%）时，推理速度下降约10%。月电成本可削减40%。24小时连续推理时是功耗成本的权衡。' } },
-          { '@type': 'Question', name: 'Apple Silicon M5 Max真的比NVIDIA效率高？', acceptedAnswer: { '@type': 'Answer', text: '是的。M5 Max在25～35W下运行7B模型达65～85 tok/sec。RTX 4090在600W下达150 tok/sec。M5 Max每token能效约高10倍。' } },
-          { '@type': 'Question', name: '24小时GPU推理会损伤显卡吗？', acceptedAnswer: { '@type': 'Answer', text: '不会。GPU设计可承受100%负载24/7。风险来自冷却不足、低瓦电源、风扇故障。适当冷却条件下，GPU寿命5年以上。' } },
-          { '@type': 'Question', name: 'RTX 4090需要多少瓦电源？', acceptedAnswer: { '@type': 'Answer', text: '最少1000W，建议850W。总峰值约900W。750W + RTX 4090组合持续推理时断电风险高。' } },
-          { '@type': 'Question', name: 'GPU温度监控怎么做？', acceptedAnswer: { '@type': 'Answer', text: '用`nvidia-smi -q -d TEMPERATURE`持续监控。本地LLM推理90～100% GPU。83°C触发热节流。理想：65～75°C。' } },
-          { '@type': 'Question', name: '空冷 vs 液冷：选哪个？', acceptedAnswer: { '@type': 'Answer', text: '空冷：$200～700、简易、30～40dB。液冷：$1000～2000、低10～15°C、35～45dB。24/7运行时液冷可靠性更优。' } },
-          { '@type': 'Question', name: '添加冷却风扇会增加功耗吗？', acceptedAnswer: { '@type': 'Answer', text: '略增。1～2个PCIe风扇额外15～30W。但GPU温度低10～15°C，推理速度提升5～10%，整体效率改善。' } },
-          { '@type': 'Question', name: 'TDP和实测功耗的区别？', acceptedAnswer: { '@type': 'Answer', text: 'TDP=最大散热=峰值功耗。RTX 4090 TDP 450W，实际550～600W浮动。推理运行90～100%，实测接近TDP。' } },
-          { '@type': 'Question', name: '怎样削减电力成本？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090月$52可通过：(1) 350W限制削减40%、(2) 定时运行削减67%、(3) 迁移M5 Max削减90%、(4) 低峰电价时段运行。' } },
+          {
+            '@type': 'Question',
+            'name': 'RTX 4090的实际功耗是多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4090 TDP为450W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。电源设计建议850W PSU。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '功率限制如何影响推理速度？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4090限制350W（削减40%）时，推理速度下降约10%。月电成本从$52降至$31，节省40%。24小时连续推理时，功率限制成为权衡选项。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple Silicon M5 Max真的比NVIDIA效率高10倍？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。M5 Max（128GB统一内存，2026年3月）在25～35W下运行7B模型达65～85 tok/sec。RTX 4090在600W下相同模型达150 tok/sec。M5 Max每token能效约高10倍，加上128GB > 32GB VRAM优势。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '24小时GPU推理会损伤显卡吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会。GPU设计可承受100%负载24/7，但冷却至关重要。真正风险：不足冷却（热节流）、低瓦数电源尖峰（断电）、风扇故障（过热）。适当冷却和电源条件下，GPU寿命5年以上。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 4090需要多少瓦电源？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最少1000W，建议850W。RTX 4090（450W）+ CPU（150～170W）+ 主板/RAM/存储（100W）+ 冷却（50W）+ 效率损失（20%） = 约900W峰值。750W + RTX 4090组合在持续推理中断电风险高。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GPU温度监控怎么做？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '用`nvidia-smi -q -d TEMPERATURE`持续监控。本地LLM推理长期90～100% GPU使用，温度会持续上升。83°C触发热节流。理想运行范围：65～75°C（冷却系统有效）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '空冷 vs 液冷：选哪个？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '空冷：$200～700、安装简易、30～40dB。液冷：$1000～2000、温度低10～15°C、35～45dB。本地LLM 24/7运行时，液冷长期可靠性更优，电力效率也提升5～10%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '添加冷却风扇会增加功耗吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '略有增加。1～2个PCIe风扇额外消耗15～30W。但GPU温度下降10～15°C，GPU时钟保持稳定，推理速度提升5～10%，整体电力效率改善。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'TDP和实测功耗的区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TDP（热设计功耗）=最大散热=峰值功耗。NVIDIA RTX 4090 TDP为450W，但实际时钟和负载下550～600W浮动。推理运行90～100% GPU，实测接近TDP。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '怎样削减电力成本？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4090月成本$52可通过：(1) 350W功率限制削减40%、(2) 定时运行（24/7改8h/day削减67%）、(3) 迁移至M5 Max削减90%、(4) 仅在低峰电价时段运行（因地区而异）。',
+            },
+          },
         ],
       },
       itemListSchema: {

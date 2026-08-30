@@ -1274,43 +1274,91 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '¿Mejoran los tutores de IA realmente los resultados de aprendizaje?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí — la evidencia es sólida. Un ensayo controlado aleatorizado de Harvard de 2024 con 194 estudiantes de física encontró que la tutoría con IA produjo efectos de 0,73–1,3 desviaciones estándar sobre las aulas de aprendizaje activo, con los estudiantes logrando puntuaciones más altas en 49 minutos frente a 60 minutos de tiempo de clase (p < 10⁻⁸). Una revisión sistemática de 2025 de 21 estudios muestra que los estudiantes asistidos por IA superan los métodos de enseñanza tradicionales en evaluaciones en un 15–35 %.' },
+            'name': '¿Mejoran los tutores de IA realmente los resultados de aprendizaje?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — la evidencia es sólida. Un ensayo controlado aleatorizado de Harvard de 2024 con 194 estudiantes de física encontró que la tutoría con IA produjo efectos de 0,73–1,3 DE sobre las aulas de aprendizaje activo, con los estudiantes logrando puntuaciones más altas en 49 minutos frente a 60 minutos de tiempo de clase (p < 10⁻⁸). Una revisión sistemática de 2025 de 21 estudios muestra que los estudiantes asistidos por IA superan los métodos de enseñanza tradicionales en un 15–35 %.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cuánto tiempo puede ahorrarles la IA a los docentes por semana?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Los prompts específicos y ricos en contexto ahorran a los docentes entre 5 y 13 horas por semana en planificación de lecciones y tareas administrativas cuando se usan de forma coherente. Las aplicaciones de ahorro de tiempo más comunes son: investigación y recopilación de contenido (44 % de los docentes), creación de planes de lección (38 %), resumen de información (38 %) y creación de materiales de clase (37 %).' },
+            'name': '¿Cuál es la mejor herramienta de IA para docentes en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La respuesta depende de la tarea. Khanmigo (Khan Academy, impulsado por GPT-4) es el más potente para la tutoría estudiantil mediante el cuestionamiento socrático a 44 USD al año. MagicSchool lidera en herramientas completas de flujo de trabajo para docentes (planes de lección, PEIs, comunicación con padres). ChatGPT (GPT-5.6, OpenAI) ofrece la creación de contenido universal más flexible. Para el análisis de planes de estudio complejos, Claude Sonnet 5 (Anthropic) maneja 1.000.000 de tokens — aproximadamente 800 páginas estándar — en una sola sesión.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Es legal la IA en la educación bajo las regulaciones de la UE?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Los sistemas de IA que influyen en la evaluación del aprendizaje o las rutas de aprendizaje se clasifican como de alto riesgo en la Ley de IA de la UE (Anexo III). Las escuelas de la UE deben llevar a cabo formación en competencias de IA para el personal docente (Artículo 4, vigente desde 2025), mantener supervisión humana para las evaluaciones influenciadas por IA y gestionar registros de auditoría de todos los sistemas de IA que afecten los resultados de los estudiantes. La IA de reconocimiento de emociones en instituciones educativas está completamente prohibida por la ley.' },
+            'name': '¿Cuánto tiempo puede ahorrarles la IA a los docentes por semana?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los prompts específicos y ricos en contexto ahorran a los docentes entre 5 y 13 horas por semana en planificación de lecciones y tareas administrativas cuando se usan de forma coherente. Las aplicaciones de ahorro de tiempo más comunes son: investigación y recopilación de contenido (44 % de los docentes), creación de planes de lección (38 %), resumen de información (38 %) y creación de materiales de clase (37 %).',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿El software de detección de IA detecta de manera fiable el engaño académico?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No — las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares, lo que significa que hasta 30 de cada 100 entregas legítimas de estudiantes pueden marcarse erróneamente. Los hablantes no nativos y los estudiantes que escriben en estilos académicos estructurados se marcan de forma desproporcionada. Las universidades están pasando en 2026 de políticas de prohibición a marcos de divulgación y citación.' },
+            'name': '¿Es legal la IA en la educación bajo las regulaciones de la UE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los sistemas de IA que influyen en la evaluación del aprendizaje o las rutas de aprendizaje se clasifican como de alto riesgo en la Ley de IA de la UE (Anexo III). Las escuelas de la UE deben llevar a cabo formación en competencias de IA para el personal docente (Artículo 4, vigente desde 2025), mantener supervisión humana para las evaluaciones influenciadas por IA y gestionar registros de auditoría. La IA de reconocimiento de emociones en instituciones educativas está completamente prohibida.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Qué ajuste de temperatura deberían usar los docentes para la planificación con IA?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Establece la temperatura en 0,1–0,2 para el contenido factual de las lecciones — planes de lección, rúbricas de evaluación, alineación curricular. Esto produce salidas consistentes y de baja variación. Usa 0,7–0,9 solo al generar ideas de actividades creativas donde las opciones diversas son el objetivo.' },
+            'name': '¿El software de detección de IA detecta de manera fiable el engaño académico?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares. Los hablantes no nativos y los estudiantes que escriben en estilos académicos estructurados se marcan de forma desproporcionada. Las universidades están pasando en 2026 de políticas de prohibición a marcos de divulgación y citación, tratando la detección de IA como un dato más entre varios en lugar de una prueba definitiva.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Qué es Khanmigo y en qué se diferencia de ChatGPT para los estudiantes?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Khanmigo es el asistente de tutoría con IA de Khan Academy, impulsado por GPT-4. Su característica definitoria es el cuestionamiento socrático — guía a los estudiantes hacia las respuestas en lugar de dárselas directamente. ChatGPT proporciona respuestas directas de forma predeterminada, lo que es eficiente pero reduce el esfuerzo cognitivo que produce el aprendizaje a largo plazo. Para la tutoría orientada al estudiante, el diseño pedagógico de Khanmigo es superior; para la creación de contenido por parte de los docentes, gana la flexibilidad de ChatGPT.' },
+            'name': '¿Qué ajuste de temperatura deberían usar los docentes para la planificación de lecciones con IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Establece la temperatura en 0,1–0,2 para el contenido factual de las lecciones — planes de lección, rúbricas de evaluación, alineación curricular. Esto produce salidas consistentes y de baja variación. Usa 0,7–0,9 solo al generar ideas de actividades creativas donde las opciones diversas son el objetivo. La temperatura predeterminada en la mayoría de las plataformas (0,7–1,0) está diseñada para tareas creativas y aumenta los errores factuales en el contenido de las lecciones.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo creo una política de uso de IA para mi escuela?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Una política escolar de uso de IA eficaz define cuatro cosas: (1) qué tareas permiten la IA (lluvia de ideas, problemas de práctica, borradores de retroalimentación), (2) qué tareas requieren divulgación (ensayos asistidos por IA, presentaciones), (3) qué tareas prohíben la IA (respuestas finales de exámenes, plagio), (4) cómo se deben citar los contenidos generados por IA. La política debe revisarse cada 6 meses dada la rápida evolución de las herramientas. Las escuelas de la UE deben abordar adicionalmente los requisitos de formación del Artículo 4 y las obligaciones de alto riesgo del Anexo III.' },
+            'name': '¿Pueden las herramientas de IA ayudar con la instrucción diferenciada?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — este es uno de los usos más potentes de la IA en la educación. Los LLMs pueden reescribir el mismo contenido en múltiples niveles de lectura en segundos. Estructura del prompt: "Reescribe esta sección para el nivel de grado [N]. Conserva todo el contenido factual. Reemplaza el vocabulario complejo con equivalentes más simples. Mantén la misma estructura de párrafo." Claude Sonnet 5 produce la diferenciación más coherente en todos los niveles de lectura.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Debo cumplir con el RGPD al usar herramientas de IA para docentes?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí — si tu escuela está en la UE o el EEE y las herramientas de IA procesan datos de los estudiantes, debes cumplir con el RGPD. El punto crítico es el Artículo 28: si la plataforma de IA (p. ej., ChatGPT, Claude) actúa como procesador de datos, necesitas un Acuerdo de Procesamiento de Datos (DPA). Para escuelas en España, la LOPD-GDD se aplica con obligaciones adicionales; consulta la AEPD para orientación específica sobre el uso de IA en entornos educativos.' },
+            'name': '¿Cómo deberían las escuelas manejar la competencia en IA para el personal docente bajo la Ley de IA de la UE?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El Artículo 4 de la Ley de IA de la UE requiere que los proveedores de IA (incluidas las escuelas) garanticen suficiente competencia en IA para todo el personal que trabaje con sistemas de IA — vigente desde 2025. Esto significa formación en: cómo la IA toma decisiones, qué tasas de error tienen las herramientas específicas, cuándo se requiere la supervisión humana y cómo documentar las decisiones influenciadas por IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es Khanmigo y en qué se diferencia de ChatGPT para los estudiantes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Khanmigo es el asistente de tutoría con IA de Khan Academy, impulsado por GPT-4. Su característica definitoria es el cuestionamiento socrático — guía a los estudiantes hacia las respuestas en lugar de dárselas directamente. ChatGPT proporciona respuestas directas de forma predeterminada, lo que es eficiente pero reduce el esfuerzo cognitivo que produce el aprendizaje a largo plazo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo creo una política de uso de IA para mi escuela?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Una política escolar de uso de IA eficaz define cuatro cosas: (1) qué tareas permiten la IA (lluvia de ideas, problemas de práctica, borradores de retroalimentación), (2) qué tareas requieren divulgación (ensayos asistidos por IA, presentaciones), (3) qué tareas prohíben la IA (respuestas finales de exámenes, plagio), (4) cómo se deben citar los contenidos generados por IA. La política debe revisarse cada 6 meses.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo cumplir con el RGPD al usar herramientas de IA para docentes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — si tu escuela está en la UE o el EEE y las herramientas de IA procesan datos de los estudiantes, debes cumplir con el RGPD. El punto crítico es el Artículo 28: si la plataforma de IA actúa como procesador de datos, necesitas un DPA. Para escuelas en España, la LOPD-GDD se aplica con obligaciones adicionales; consulta la AEPD para orientación específica sobre el uso de IA en entornos educativos.',
+            },
           },
         ],
       },
@@ -1599,50 +1647,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Preguntas frecuentes',
           items: [],
           faqs: [
-            {
-              q: '¿Mejoran los tutores de IA realmente los resultados de aprendizaje?',
-              a: 'Sí — la evidencia es sólida. Un ensayo controlado aleatorizado de Harvard de 2024 con 194 estudiantes de física encontró que la tutoría con IA produjo efectos de 0,73–1,3 DE sobre las aulas de aprendizaje activo, con los estudiantes logrando puntuaciones más altas en 49 minutos frente a 60 minutos de tiempo de clase (p < 10⁻⁸). Una revisión sistemática de 2025 de 21 estudios muestra que los estudiantes asistidos por IA superan los métodos de enseñanza tradicionales en un 15–35 %.',
-            },
-            {
-              q: '¿Cuál es la mejor herramienta de IA para docentes en 2026?',
-              a: 'La respuesta depende de la tarea. Khanmigo (Khan Academy, impulsado por GPT-4) es el más potente para la tutoría estudiantil mediante el cuestionamiento socrático a 44 USD al año. MagicSchool lidera en herramientas completas de flujo de trabajo para docentes (planes de lección, PEIs, comunicación con padres). ChatGPT (GPT-5.6, OpenAI) ofrece la creación de contenido universal más flexible. Para el análisis de planes de estudio complejos, Claude Sonnet 5 (Anthropic) maneja 1.000.000 de tokens — aproximadamente 800 páginas estándar — en una sola sesión.',
-            },
-            {
-              q: '¿Cuánto tiempo puede ahorrarles la IA a los docentes por semana?',
-              a: 'Los prompts específicos y ricos en contexto ahorran a los docentes entre 5 y 13 horas por semana en planificación de lecciones y tareas administrativas cuando se usan de forma coherente. Las aplicaciones de ahorro de tiempo más comunes son: investigación y recopilación de contenido (44 % de los docentes), creación de planes de lección (38 %), resumen de información (38 %) y creación de materiales de clase (37 %).',
-            },
-            {
-              q: '¿Es legal la IA en la educación bajo las regulaciones de la UE?',
-              a: 'Los sistemas de IA que influyen en la evaluación del aprendizaje o las rutas de aprendizaje se clasifican como de alto riesgo en la Ley de IA de la UE (Anexo III). Las escuelas de la UE deben llevar a cabo formación en competencias de IA para el personal docente (Artículo 4, vigente desde 2025), mantener supervisión humana para las evaluaciones influenciadas por IA y gestionar registros de auditoría. La IA de reconocimiento de emociones en instituciones educativas está completamente prohibida.',
-            },
-            {
-              q: '¿El software de detección de IA detecta de manera fiable el engaño académico?',
-              a: 'No — las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares. Los hablantes no nativos y los estudiantes que escriben en estilos académicos estructurados se marcan de forma desproporcionada. Las universidades están pasando en 2026 de políticas de prohibición a marcos de divulgación y citación, tratando la detección de IA como un dato más entre varios en lugar de una prueba definitiva.',
-            },
-            {
-              q: '¿Qué ajuste de temperatura deberían usar los docentes para la planificación de lecciones con IA?',
-              a: 'Establece la temperatura en 0,1–0,2 para el contenido factual de las lecciones — planes de lección, rúbricas de evaluación, alineación curricular. Esto produce salidas consistentes y de baja variación. Usa 0,7–0,9 solo al generar ideas de actividades creativas donde las opciones diversas son el objetivo. La temperatura predeterminada en la mayoría de las plataformas (0,7–1,0) está diseñada para tareas creativas y aumenta los errores factuales en el contenido de las lecciones.',
-            },
-            {
-              q: '¿Pueden las herramientas de IA ayudar con la instrucción diferenciada?',
-              a: 'Sí — este es uno de los usos más potentes de la IA en la educación. Los LLMs pueden reescribir el mismo contenido en múltiples niveles de lectura en segundos. Estructura del prompt: "Reescribe esta sección para el nivel de grado [N]. Conserva todo el contenido factual. Reemplaza el vocabulario complejo con equivalentes más simples. Mantén la misma estructura de párrafo." Claude Sonnet 5 produce la diferenciación más coherente en todos los niveles de lectura.',
-            },
-            {
-              q: '¿Cómo deberían las escuelas manejar la competencia en IA para el personal docente bajo la Ley de IA de la UE?',
-              a: 'El Artículo 4 de la Ley de IA de la UE requiere que los proveedores de IA (incluidas las escuelas) garanticen suficiente competencia en IA para todo el personal que trabaje con sistemas de IA — vigente desde 2025. Esto significa formación en: cómo la IA toma decisiones, qué tasas de error tienen las herramientas específicas, cuándo se requiere la supervisión humana y cómo documentar las decisiones influenciadas por IA.',
-            },
-            {
-              q: '¿Qué es Khanmigo y en qué se diferencia de ChatGPT para los estudiantes?',
-              a: 'Khanmigo es el asistente de tutoría con IA de Khan Academy, impulsado por GPT-4. Su característica definitoria es el cuestionamiento socrático — guía a los estudiantes hacia las respuestas en lugar de dárselas directamente. ChatGPT proporciona respuestas directas de forma predeterminada, lo que es eficiente pero reduce el esfuerzo cognitivo que produce el aprendizaje a largo plazo.',
-            },
-            {
-              q: '¿Cómo creo una política de uso de IA para mi escuela?',
-              a: 'Una política escolar de uso de IA eficaz define cuatro cosas: (1) qué tareas permiten la IA (lluvia de ideas, problemas de práctica, borradores de retroalimentación), (2) qué tareas requieren divulgación (ensayos asistidos por IA, presentaciones), (3) qué tareas prohíben la IA (respuestas finales de exámenes, plagio), (4) cómo se deben citar los contenidos generados por IA. La política debe revisarse cada 6 meses.',
-            },
-            {
-              q: '¿Debo cumplir con el RGPD al usar herramientas de IA para docentes?',
-              a: 'Sí — si tu escuela está en la UE o el EEE y las herramientas de IA procesan datos de los estudiantes, debes cumplir con el RGPD. El punto crítico es el Artículo 28: si la plataforma de IA actúa como procesador de datos, necesitas un DPA. Para escuelas en España, la LOPD-GDD se aplica con obligaciones adicionales; consulta la AEPD para orientación específica sobre el uso de IA en entornos educativos.',
-            },
+            { q: '¿Mejoran los tutores de IA realmente los resultados de aprendizaje?', a: 'Sí — la evidencia es sólida. Un ensayo controlado aleatorizado de Harvard de 2024 con 194 estudiantes de física encontró que la tutoría con IA produjo efectos de 0,73–1,3 DE sobre las aulas de aprendizaje activo, con los estudiantes logrando puntuaciones más altas en 49 minutos frente a 60 minutos de tiempo de clase (p < 10⁻⁸). Una revisión sistemática de 2025 de 21 estudios muestra que los estudiantes asistidos por IA superan los métodos de enseñanza tradicionales en un 15–35 %.' },
+            { q: '¿Cuál es la mejor herramienta de IA para docentes en 2026?', a: 'La respuesta depende de la tarea. Khanmigo (Khan Academy, impulsado por GPT-4) es el más potente para la tutoría estudiantil mediante el cuestionamiento socrático a 44 USD al año. MagicSchool lidera en herramientas completas de flujo de trabajo para docentes (planes de lección, PEIs, comunicación con padres). ChatGPT (GPT-5.6, OpenAI) ofrece la creación de contenido universal más flexible. Para el análisis de planes de estudio complejos, Claude Sonnet 5 (Anthropic) maneja 1.000.000 de tokens — aproximadamente 800 páginas estándar — en una sola sesión.' },
+            { q: '¿Cuánto tiempo puede ahorrarles la IA a los docentes por semana?', a: 'Los prompts específicos y ricos en contexto ahorran a los docentes entre 5 y 13 horas por semana en planificación de lecciones y tareas administrativas cuando se usan de forma coherente. Las aplicaciones de ahorro de tiempo más comunes son: investigación y recopilación de contenido (44 % de los docentes), creación de planes de lección (38 %), resumen de información (38 %) y creación de materiales de clase (37 %).' },
+            { q: '¿Es legal la IA en la educación bajo las regulaciones de la UE?', a: 'Los sistemas de IA que influyen en la evaluación del aprendizaje o las rutas de aprendizaje se clasifican como de alto riesgo en la Ley de IA de la UE (Anexo III). Las escuelas de la UE deben llevar a cabo formación en competencias de IA para el personal docente (Artículo 4, vigente desde 2025), mantener supervisión humana para las evaluaciones influenciadas por IA y gestionar registros de auditoría. La IA de reconocimiento de emociones en instituciones educativas está completamente prohibida.' },
+            { q: '¿El software de detección de IA detecta de manera fiable el engaño académico?', a: 'No — las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares. Los hablantes no nativos y los estudiantes que escriben en estilos académicos estructurados se marcan de forma desproporcionada. Las universidades están pasando en 2026 de políticas de prohibición a marcos de divulgación y citación, tratando la detección de IA como un dato más entre varios en lugar de una prueba definitiva.' },
+            { q: '¿Qué ajuste de temperatura deberían usar los docentes para la planificación de lecciones con IA?', a: 'Establece la temperatura en 0,1–0,2 para el contenido factual de las lecciones — planes de lección, rúbricas de evaluación, alineación curricular. Esto produce salidas consistentes y de baja variación. Usa 0,7–0,9 solo al generar ideas de actividades creativas donde las opciones diversas son el objetivo. La temperatura predeterminada en la mayoría de las plataformas (0,7–1,0) está diseñada para tareas creativas y aumenta los errores factuales en el contenido de las lecciones.' },
+            { q: '¿Pueden las herramientas de IA ayudar con la instrucción diferenciada?', a: 'Sí — este es uno de los usos más potentes de la IA en la educación. Los LLMs pueden reescribir el mismo contenido en múltiples niveles de lectura en segundos. Estructura del prompt: "Reescribe esta sección para el nivel de grado [N]. Conserva todo el contenido factual. Reemplaza el vocabulario complejo con equivalentes más simples. Mantén la misma estructura de párrafo." Claude Sonnet 5 produce la diferenciación más coherente en todos los niveles de lectura.' },
+            { q: '¿Cómo deberían las escuelas manejar la competencia en IA para el personal docente bajo la Ley de IA de la UE?', a: 'El Artículo 4 de la Ley de IA de la UE requiere que los proveedores de IA (incluidas las escuelas) garanticen suficiente competencia en IA para todo el personal que trabaje con sistemas de IA — vigente desde 2025. Esto significa formación en: cómo la IA toma decisiones, qué tasas de error tienen las herramientas específicas, cuándo se requiere la supervisión humana y cómo documentar las decisiones influenciadas por IA.' },
+            { q: '¿Qué es Khanmigo y en qué se diferencia de ChatGPT para los estudiantes?', a: 'Khanmigo es el asistente de tutoría con IA de Khan Academy, impulsado por GPT-4. Su característica definitoria es el cuestionamiento socrático — guía a los estudiantes hacia las respuestas en lugar de dárselas directamente. ChatGPT proporciona respuestas directas de forma predeterminada, lo que es eficiente pero reduce el esfuerzo cognitivo que produce el aprendizaje a largo plazo.' },
+            { q: '¿Cómo creo una política de uso de IA para mi escuela?', a: 'Una política escolar de uso de IA eficaz define cuatro cosas: (1) qué tareas permiten la IA (lluvia de ideas, problemas de práctica, borradores de retroalimentación), (2) qué tareas requieren divulgación (ensayos asistidos por IA, presentaciones), (3) qué tareas prohíben la IA (respuestas finales de exámenes, plagio), (4) cómo se deben citar los contenidos generados por IA. La política debe revisarse cada 6 meses.' },
+            { q: '¿Debo cumplir con el RGPD al usar herramientas de IA para docentes?', a: 'Sí — si tu escuela está en la UE o el EEE y las herramientas de IA procesan datos de los estudiantes, debes cumplir con el RGPD. El punto crítico es el Artículo 28: si la plataforma de IA actúa como procesador de datos, necesitas un DPA. Para escuelas en España, la LOPD-GDD se aplica con obligaciones adicionales; consulta la AEPD para orientación específica sobre el uso de IA en entornos educativos.' },
           ],
         },
         sources: {
@@ -1722,43 +1737,91 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'هل يُحسّن المعلمون الذكاء الاصطناعي نتائج التعلم فعلاً؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نعم — الأدلة قوية. وجدت تجربة عشوائية محكومة من هارفارد عام 2024 مع 194 طالب فيزياء أن التدريس الفردي بالذكاء الاصطناعي أنتج تأثيرات بحجم 0.73–1.3 انحراف معياري فوق فصول التعلم النشط، مع تحقيق الطلاب درجات أعلى في 49 دقيقة مقابل 60 دقيقة من وقت الفصل (p < 10⁻⁸). مراجعة منهجية عام 2025 لـ21 دراسة تُظهر أن الطلاب المدعومين بالذكاء الاصطناعي يتفوقون على طرق التدريس التقليدية في التقييمات بنسبة 15–35٪.' },
+            'name': 'هل يُحسّن المعلمون الذكاء الاصطناعي نتائج التعلم فعلاً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — الأدلة قوية. وجدت تجربة عشوائية محكومة من هارفارد عام 2024 مع 194 طالب فيزياء أن التدريس الفردي بالذكاء الاصطناعي أنتج تأثيرات بحجم 0.73–1.3 انحراف معياري فوق فصول التعلم النشط في وقت أقل بـ18٪ (p < 10⁻⁸). مراجعة منهجية عام 2025 لـ21 دراسة تُظهر أن الطلاب المدعومين بالذكاء الاصطناعي يتفوقون على طرق التدريس التقليدية بنسبة 15–35٪.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كم ساعة يمكن للذكاء الاصطناعي توفيرها للمعلمين أسبوعياً؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'البرومبتات المحددة الغنية بالسياق توفّر للمعلمين 5–13 ساعة أسبوعياً في التخطيط للدروس والمهام الإدارية عند استخدامها باتساق. أكثر تطبيقات توفير الوقت شيوعاً: البحث وجمع المحتوى (44٪ من المعلمين) وإنشاء خطط الدروس (38٪) وتلخيص المعلومات (38٪) وإنشاء مواد الفصل (37٪).' },
+            'name': 'ما أفضل أداة ذكاء اصطناعي للمعلمين في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الإجابة تعتمد على المهمة. Khanmigo (Khan Academy، مدعوم بـGPT-4) الأقوى للتدريس الفردي للطلاب عبر الاستجواب السقراطي بـ44 دولار سنوياً. MagicSchool يتقدم في أدوات سير عمل المعلمين الشاملة (خطط الدروس والخطط التعليمية الفردية والتواصل مع الأولياء). ChatGPT (GPT-5.6، OpenAI) يُقدّم أكثر إنشاء المحتوى العالمي مرونة. لتحليل المناهج المعقدة، Claude Sonnet 5 (Anthropic) يتعامل مع مليون رمز — حوالي 800 صفحة قياسية — في جلسة واحدة.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل استخدام الذكاء الاصطناعي في التعليم قانوني بموجب لوائح الاتحاد الأوروبي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'تُصنَّف أنظمة الذكاء الاصطناعي التي تؤثر على التقييم التعليمي أو مسارات التعلم كعالية المخاطر في قانون الذكاء الاصطناعي الأوروبي (الملحق الثالث). يجب على مدارس الاتحاد الأوروبي إجراء تدريب على كفاءة الذكاء الاصطناعي للموظفين (المادة 4، سارية من 2025)، والحفاظ على الإشراف البشري على التقييمات المتأثرة بالذكاء الاصطناعي، وإدارة سجلات التدقيق لجميع أنظمة الذكاء الاصطناعي. الذكاء الاصطناعي للتعرف على المشاعر في المؤسسات التعليمية محظور بالكامل.' },
+            'name': 'كم ساعة يمكن للذكاء الاصطناعي توفيرها للمعلمين أسبوعياً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'البرومبتات المحددة الغنية بالسياق توفّر للمعلمين 5–13 ساعة أسبوعياً في التخطيط للدروس والمهام الإدارية عند استخدامها باتساق. أكثر تطبيقات توفير الوقت شيوعاً: البحث وجمع المحتوى (44٪ من المعلمين) وإنشاء خطط الدروس (38٪) وتلخيص المعلومات (38٪) وإنشاء مواد الفصل (37٪).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل تكشف برامج كشف الذكاء الاصطناعي الغش الأكاديمي بشكل موثوق؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'لا — أدوات كشف الذكاء الاصطناعي الحالية لها معدلات إيجابية كاذبة 15–30٪ في الدراسات المراجَعة من الأقران، مما يعني أن ما يصل إلى 30 من كل 100 تسليم مشروع للطلاب قد يُعلَّم بشكل خاطئ. غير الناطقين باللغة الأصلية والطلاب الذين يكتبون بأساليب أكاديمية منظمة يُعلَّمون بشكل غير متناسب. الجامعات تتحول في 2026 من سياسات الحظر إلى أطر الإفصاح والاستشهاد.' },
+            'name': 'هل استخدام الذكاء الاصطناعي في التعليم قانوني بموجب لوائح الاتحاد الأوروبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تُصنَّف أنظمة الذكاء الاصطناعي التي تؤثر على التقييم التعليمي أو مسارات التعلم كعالية المخاطر في قانون الذكاء الاصطناعي الأوروبي (الملحق الثالث). يجب على مدارس الاتحاد الأوروبي إجراء تدريب كفاءة الذكاء الاصطناعي للموظفين (المادة 4، سارية من 2025) والحفاظ على الإشراف البشري والاحتفاظ بسجلات التدقيق. الذكاء الاصطناعي للتعرف على المشاعر في المؤسسات التعليمية محظور بالكامل.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ما إعداد درجة الحرارة الذي يجب على المعلمين استخدامه للتخطيط بالذكاء الاصطناعي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'اضبط درجة الحرارة على 0.1–0.2 للمحتوى الحقائقي للدروس — خطط الدروس ومعايير التقييم ومحاذاة المناهج. هذا يُنتج مخرجات متسقة ومنخفضة التباين. استخدم 0.7–0.9 فقط عند توليد أفكار للأنشطة الإبداعية حيث تكون الخيارات المتنوعة هي الهدف.' },
+            'name': 'هل تكشف برامج كشف الذكاء الاصطناعي الغش الأكاديمي بشكل موثوق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا — أدوات كشف الذكاء الاصطناعي الحالية لها معدلات إيجابية كاذبة 15–30٪ في الدراسات المراجَعة من الأقران. غير الناطقين باللغة الأصلية والطلاب ذوو أساليب الكتابة الأكاديمية المنظمة يُعلَّمون بشكل غير متناسب. الجامعات تتحول في 2026 من سياسات الحظر إلى أطر الإفصاح والاستشهاد، مُعاملةً الكشف كمؤشر من بين مؤشرات عدة وليس دليلاً قاطعاً.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ما هو Khanmigo وكيف يختلف عن ChatGPT للطلاب؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'Khanmigo هو مساعد التدريس الفردي بالذكاء الاصطناعي من Khan Academy، مدعوم بـGPT-4. خاصيته المميزة هي الاستجواب السقراطي — يُرشد الطلاب نحو الإجابات بدلاً من إعطائها مباشرة. ChatGPT يُقدّم إجابات مباشرة افتراضياً، وهو فعّال لكنه يُقلّل الجهد المعرفي الذي يُنتج التعلم طويل المدى. لتدريس الطلاب، التصميم التربوي لـKhanmigo أفضل؛ لإنشاء المحتوى من قبل المعلمين، تفوز مرونة ChatGPT.' },
+            'name': 'ما إعداد درجة الحرارة الذي يجب على المعلمين استخدامه للتخطيط للدروس بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اضبط درجة الحرارة على 0.1–0.2 للمحتوى الحقائقي للدروس — خطط الدروس ومعايير التقييم ومحاذاة المناهج. هذا يُنتج مخرجات متسقة ومنخفضة التباين. استخدم 0.7–0.9 فقط عند توليد أفكار للأنشطة الإبداعية. درجة الحرارة الافتراضية في معظم المنصات (0.7–1.0) مُصمَّمة للمهام الإبداعية وتزيد الأخطاء الحقائقية في محتوى الدروس.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كيف أنشئ سياسة استخدام الذكاء الاصطناعي لمدرستي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'سياسة استخدام الذكاء الاصطناعي المدرسية الفعّالة تُعرّف أربعة أشياء: (1) ما المهام التي تسمح بالذكاء الاصطناعي (العصف الذهني ومسائل التدريب ومسودات التغذية الراجعة)، (2) ما المهام التي تتطلب إفصاحاً (المقالات المساعدة بالذكاء الاصطناعي والعروض التقديمية)، (3) ما المهام التي تحظر الذكاء الاصطناعي (إجابات الامتحانات النهائية والانتحال)، (4) كيفية الاستشهاد بالمحتوى المُنتج بالذكاء الاصطناعي. يجب مراجعة السياسة كل 6 أشهر. يجب على مدارس الاتحاد الأوروبي أيضاً معالجة متطلبات التدريب في المادة 4 والالتزامات عالية المخاطر في الملحق الثالث.' },
+            'name': 'هل يمكن لأدوات الذكاء الاصطناعي المساعدة في التعليم المُتمايز؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — هذا من أكثر استخدامات الذكاء الاصطناعي قوةً في التعليم. النماذج اللغوية يمكنها إعادة كتابة نفس المحتوى في مستويات قراءة متعددة في ثوانٍ. بنية البرومبت: "أعد كتابة هذا المقطع للمستوى الدراسي [ن]. احتفظ بجميع المحتوى الحقائقي. استبدل المفردات المعقدة بمكافئات أبسط. حافظ على نفس بنية الفقرة." Claude Sonnet 5 يُنتج أكثر التمايز اتساقاً عبر مستويات القراءة.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل يجب عليّ الامتثال للوائح حماية البيانات عند استخدام أدوات ذكاء اصطناعي للمعلمين؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نعم — إذا كانت مدرستك في الاتحاد الأوروبي أو المنطقة الاقتصادية الأوروبية وأدوات الذكاء الاصطناعي تعالج بيانات الطلاب، يجب الامتثال لـGDPR. النقطة الحرجة هي المادة 28: إذا كانت منصة الذكاء الاصطناعي (مثل ChatGPT وClaude) تعمل كمعالج للبيانات، فأنت بحاجة إلى اتفاقية معالجة بيانات. بالنسبة للمدارس في دول الخليج العربي وسائر الدول العربية، استشر الجهات التنظيمية المحلية للمعايير المحددة لاستخدام الذكاء الاصطناعي في البيئات التعليمية.' },
+            'name': 'كيف يجب على المدارس التعامل مع كفاءة الذكاء الاصطناعي للموظفين بموجب قانون الذكاء الاصطناعي الأوروبي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'المادة 4 من قانون الذكاء الاصطناعي الأوروبي تُلزم مزودي الذكاء الاصطناعي (بما في ذلك المدارس) بضمان كفاءة كافية في الذكاء الاصطناعي لجميع الموظفين العاملين مع أنظمة الذكاء الاصطناعي — سارية من 2025. هذا يعني التدريب على: كيف يتخذ الذكاء الاصطناعي القرارات وما معدلات الخطأ للأدوات المحددة ومتى يُطلَب الإشراف البشري وكيفية توثيق القرارات المتأثرة بالذكاء الاصطناعي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو Khanmigo وكيف يختلف عن ChatGPT للطلاب؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Khanmigo هو مساعد التدريس الفردي بالذكاء الاصطناعي من Khan Academy، مدعوم بـGPT-4. خاصيته المميزة هي الاستجواب السقراطي — يُرشد الطلاب نحو الإجابات بدلاً من إعطائها مباشرة. ChatGPT يُقدّم إجابات مباشرة افتراضياً، وهو فعّال لكنه يُقلّل الجهد المعرفي الذي يُنتج التعلم طويل المدى.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أنشئ سياسة استخدام الذكاء الاصطناعي لمدرستي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'سياسة استخدام الذكاء الاصطناعي المدرسية الفعّالة تُعرّف أربعة أشياء: (1) ما المهام التي تسمح بالذكاء الاصطناعي، (2) ما المهام التي تتطلب إفصاحاً، (3) ما المهام التي تحظر الذكاء الاصطناعي، (4) كيفية الاستشهاد بالمحتوى المُنتج بالذكاء الاصطناعي. يجب مراجعة السياسة كل 6 أشهر.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يجب عليّ الامتثال للوائح حماية البيانات عند استخدام أدوات ذكاء اصطناعي للمعلمين؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — إذا كانت مدرستك في منطقة تُطبّق لوائح حماية البيانات وأدوات الذكاء الاصطناعي تعالج بيانات الطلاب، يجب الامتثال للوائح المحلية. النقطة الحرجة: إذا كانت منصة الذكاء الاصطناعي تعمل كمعالج للبيانات، تحتاج إلى اتفاقية معالجة بيانات. استشر الجهات التنظيمية المحلية للمعايير المحددة في دولتك.',
+            },
           },
         ],
       },
@@ -2047,50 +2110,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'الأسئلة الشائعة',
           items: [],
           faqs: [
-            {
-              q: 'هل يُحسّن المعلمون الذكاء الاصطناعي نتائج التعلم فعلاً؟',
-              a: 'نعم — الأدلة قوية. وجدت تجربة عشوائية محكومة من هارفارد عام 2024 مع 194 طالب فيزياء أن التدريس الفردي بالذكاء الاصطناعي أنتج تأثيرات بحجم 0.73–1.3 انحراف معياري فوق فصول التعلم النشط في وقت أقل بـ18٪ (p < 10⁻⁸). مراجعة منهجية عام 2025 لـ21 دراسة تُظهر أن الطلاب المدعومين بالذكاء الاصطناعي يتفوقون على طرق التدريس التقليدية بنسبة 15–35٪.',
-            },
-            {
-              q: 'ما أفضل أداة ذكاء اصطناعي للمعلمين في 2026؟',
-              a: 'الإجابة تعتمد على المهمة. Khanmigo (Khan Academy، مدعوم بـGPT-4) الأقوى للتدريس الفردي للطلاب عبر الاستجواب السقراطي بـ44 دولار سنوياً. MagicSchool يتقدم في أدوات سير عمل المعلمين الشاملة (خطط الدروس والخطط التعليمية الفردية والتواصل مع الأولياء). ChatGPT (GPT-5.6، OpenAI) يُقدّم أكثر إنشاء المحتوى العالمي مرونة. لتحليل المناهج المعقدة، Claude Sonnet 5 (Anthropic) يتعامل مع مليون رمز — حوالي 800 صفحة قياسية — في جلسة واحدة.',
-            },
-            {
-              q: 'كم ساعة يمكن للذكاء الاصطناعي توفيرها للمعلمين أسبوعياً؟',
-              a: 'البرومبتات المحددة الغنية بالسياق توفّر للمعلمين 5–13 ساعة أسبوعياً في التخطيط للدروس والمهام الإدارية عند استخدامها باتساق. أكثر تطبيقات توفير الوقت شيوعاً: البحث وجمع المحتوى (44٪ من المعلمين) وإنشاء خطط الدروس (38٪) وتلخيص المعلومات (38٪) وإنشاء مواد الفصل (37٪).',
-            },
-            {
-              q: 'هل استخدام الذكاء الاصطناعي في التعليم قانوني بموجب لوائح الاتحاد الأوروبي؟',
-              a: 'تُصنَّف أنظمة الذكاء الاصطناعي التي تؤثر على التقييم التعليمي أو مسارات التعلم كعالية المخاطر في قانون الذكاء الاصطناعي الأوروبي (الملحق الثالث). يجب على مدارس الاتحاد الأوروبي إجراء تدريب كفاءة الذكاء الاصطناعي للموظفين (المادة 4، سارية من 2025) والحفاظ على الإشراف البشري والاحتفاظ بسجلات التدقيق. الذكاء الاصطناعي للتعرف على المشاعر في المؤسسات التعليمية محظور بالكامل.',
-            },
-            {
-              q: 'هل تكشف برامج كشف الذكاء الاصطناعي الغش الأكاديمي بشكل موثوق؟',
-              a: 'لا — أدوات كشف الذكاء الاصطناعي الحالية لها معدلات إيجابية كاذبة 15–30٪ في الدراسات المراجَعة من الأقران. غير الناطقين باللغة الأصلية والطلاب ذوو أساليب الكتابة الأكاديمية المنظمة يُعلَّمون بشكل غير متناسب. الجامعات تتحول في 2026 من سياسات الحظر إلى أطر الإفصاح والاستشهاد، مُعاملةً الكشف كمؤشر من بين مؤشرات عدة وليس دليلاً قاطعاً.',
-            },
-            {
-              q: 'ما إعداد درجة الحرارة الذي يجب على المعلمين استخدامه للتخطيط للدروس بالذكاء الاصطناعي؟',
-              a: 'اضبط درجة الحرارة على 0.1–0.2 للمحتوى الحقائقي للدروس — خطط الدروس ومعايير التقييم ومحاذاة المناهج. هذا يُنتج مخرجات متسقة ومنخفضة التباين. استخدم 0.7–0.9 فقط عند توليد أفكار للأنشطة الإبداعية. درجة الحرارة الافتراضية في معظم المنصات (0.7–1.0) مُصمَّمة للمهام الإبداعية وتزيد الأخطاء الحقائقية في محتوى الدروس.',
-            },
-            {
-              q: 'هل يمكن لأدوات الذكاء الاصطناعي المساعدة في التعليم المُتمايز؟',
-              a: 'نعم — هذا من أكثر استخدامات الذكاء الاصطناعي قوةً في التعليم. النماذج اللغوية يمكنها إعادة كتابة نفس المحتوى في مستويات قراءة متعددة في ثوانٍ. بنية البرومبت: "أعد كتابة هذا المقطع للمستوى الدراسي [ن]. احتفظ بجميع المحتوى الحقائقي. استبدل المفردات المعقدة بمكافئات أبسط. حافظ على نفس بنية الفقرة." Claude Sonnet 5 يُنتج أكثر التمايز اتساقاً عبر مستويات القراءة.',
-            },
-            {
-              q: 'كيف يجب على المدارس التعامل مع كفاءة الذكاء الاصطناعي للموظفين بموجب قانون الذكاء الاصطناعي الأوروبي؟',
-              a: 'المادة 4 من قانون الذكاء الاصطناعي الأوروبي تُلزم مزودي الذكاء الاصطناعي (بما في ذلك المدارس) بضمان كفاءة كافية في الذكاء الاصطناعي لجميع الموظفين العاملين مع أنظمة الذكاء الاصطناعي — سارية من 2025. هذا يعني التدريب على: كيف يتخذ الذكاء الاصطناعي القرارات وما معدلات الخطأ للأدوات المحددة ومتى يُطلَب الإشراف البشري وكيفية توثيق القرارات المتأثرة بالذكاء الاصطناعي.',
-            },
-            {
-              q: 'ما هو Khanmigo وكيف يختلف عن ChatGPT للطلاب؟',
-              a: 'Khanmigo هو مساعد التدريس الفردي بالذكاء الاصطناعي من Khan Academy، مدعوم بـGPT-4. خاصيته المميزة هي الاستجواب السقراطي — يُرشد الطلاب نحو الإجابات بدلاً من إعطائها مباشرة. ChatGPT يُقدّم إجابات مباشرة افتراضياً، وهو فعّال لكنه يُقلّل الجهد المعرفي الذي يُنتج التعلم طويل المدى.',
-            },
-            {
-              q: 'كيف أنشئ سياسة استخدام الذكاء الاصطناعي لمدرستي؟',
-              a: 'سياسة استخدام الذكاء الاصطناعي المدرسية الفعّالة تُعرّف أربعة أشياء: (1) ما المهام التي تسمح بالذكاء الاصطناعي، (2) ما المهام التي تتطلب إفصاحاً، (3) ما المهام التي تحظر الذكاء الاصطناعي، (4) كيفية الاستشهاد بالمحتوى المُنتج بالذكاء الاصطناعي. يجب مراجعة السياسة كل 6 أشهر.',
-            },
-            {
-              q: 'هل يجب عليّ الامتثال للوائح حماية البيانات عند استخدام أدوات ذكاء اصطناعي للمعلمين؟',
-              a: 'نعم — إذا كانت مدرستك في منطقة تُطبّق لوائح حماية البيانات وأدوات الذكاء الاصطناعي تعالج بيانات الطلاب، يجب الامتثال للوائح المحلية. النقطة الحرجة: إذا كانت منصة الذكاء الاصطناعي تعمل كمعالج للبيانات، تحتاج إلى اتفاقية معالجة بيانات. استشر الجهات التنظيمية المحلية للمعايير المحددة في دولتك.',
-            },
+            { q: 'هل يُحسّن المعلمون الذكاء الاصطناعي نتائج التعلم فعلاً؟', a: 'نعم — الأدلة قوية. وجدت تجربة عشوائية محكومة من هارفارد عام 2024 مع 194 طالب فيزياء أن التدريس الفردي بالذكاء الاصطناعي أنتج تأثيرات بحجم 0.73–1.3 انحراف معياري فوق فصول التعلم النشط في وقت أقل بـ18٪ (p < 10⁻⁸). مراجعة منهجية عام 2025 لـ21 دراسة تُظهر أن الطلاب المدعومين بالذكاء الاصطناعي يتفوقون على طرق التدريس التقليدية بنسبة 15–35٪.' },
+            { q: 'ما أفضل أداة ذكاء اصطناعي للمعلمين في 2026؟', a: 'الإجابة تعتمد على المهمة. Khanmigo (Khan Academy، مدعوم بـGPT-4) الأقوى للتدريس الفردي للطلاب عبر الاستجواب السقراطي بـ44 دولار سنوياً. MagicSchool يتقدم في أدوات سير عمل المعلمين الشاملة (خطط الدروس والخطط التعليمية الفردية والتواصل مع الأولياء). ChatGPT (GPT-5.6، OpenAI) يُقدّم أكثر إنشاء المحتوى العالمي مرونة. لتحليل المناهج المعقدة، Claude Sonnet 5 (Anthropic) يتعامل مع مليون رمز — حوالي 800 صفحة قياسية — في جلسة واحدة.' },
+            { q: 'كم ساعة يمكن للذكاء الاصطناعي توفيرها للمعلمين أسبوعياً؟', a: 'البرومبتات المحددة الغنية بالسياق توفّر للمعلمين 5–13 ساعة أسبوعياً في التخطيط للدروس والمهام الإدارية عند استخدامها باتساق. أكثر تطبيقات توفير الوقت شيوعاً: البحث وجمع المحتوى (44٪ من المعلمين) وإنشاء خطط الدروس (38٪) وتلخيص المعلومات (38٪) وإنشاء مواد الفصل (37٪).' },
+            { q: 'هل استخدام الذكاء الاصطناعي في التعليم قانوني بموجب لوائح الاتحاد الأوروبي؟', a: 'تُصنَّف أنظمة الذكاء الاصطناعي التي تؤثر على التقييم التعليمي أو مسارات التعلم كعالية المخاطر في قانون الذكاء الاصطناعي الأوروبي (الملحق الثالث). يجب على مدارس الاتحاد الأوروبي إجراء تدريب كفاءة الذكاء الاصطناعي للموظفين (المادة 4، سارية من 2025) والحفاظ على الإشراف البشري والاحتفاظ بسجلات التدقيق. الذكاء الاصطناعي للتعرف على المشاعر في المؤسسات التعليمية محظور بالكامل.' },
+            { q: 'هل تكشف برامج كشف الذكاء الاصطناعي الغش الأكاديمي بشكل موثوق؟', a: 'لا — أدوات كشف الذكاء الاصطناعي الحالية لها معدلات إيجابية كاذبة 15–30٪ في الدراسات المراجَعة من الأقران. غير الناطقين باللغة الأصلية والطلاب ذوو أساليب الكتابة الأكاديمية المنظمة يُعلَّمون بشكل غير متناسب. الجامعات تتحول في 2026 من سياسات الحظر إلى أطر الإفصاح والاستشهاد، مُعاملةً الكشف كمؤشر من بين مؤشرات عدة وليس دليلاً قاطعاً.' },
+            { q: 'ما إعداد درجة الحرارة الذي يجب على المعلمين استخدامه للتخطيط للدروس بالذكاء الاصطناعي؟', a: 'اضبط درجة الحرارة على 0.1–0.2 للمحتوى الحقائقي للدروس — خطط الدروس ومعايير التقييم ومحاذاة المناهج. هذا يُنتج مخرجات متسقة ومنخفضة التباين. استخدم 0.7–0.9 فقط عند توليد أفكار للأنشطة الإبداعية. درجة الحرارة الافتراضية في معظم المنصات (0.7–1.0) مُصمَّمة للمهام الإبداعية وتزيد الأخطاء الحقائقية في محتوى الدروس.' },
+            { q: 'هل يمكن لأدوات الذكاء الاصطناعي المساعدة في التعليم المُتمايز؟', a: 'نعم — هذا من أكثر استخدامات الذكاء الاصطناعي قوةً في التعليم. النماذج اللغوية يمكنها إعادة كتابة نفس المحتوى في مستويات قراءة متعددة في ثوانٍ. بنية البرومبت: "أعد كتابة هذا المقطع للمستوى الدراسي [ن]. احتفظ بجميع المحتوى الحقائقي. استبدل المفردات المعقدة بمكافئات أبسط. حافظ على نفس بنية الفقرة." Claude Sonnet 5 يُنتج أكثر التمايز اتساقاً عبر مستويات القراءة.' },
+            { q: 'كيف يجب على المدارس التعامل مع كفاءة الذكاء الاصطناعي للموظفين بموجب قانون الذكاء الاصطناعي الأوروبي؟', a: 'المادة 4 من قانون الذكاء الاصطناعي الأوروبي تُلزم مزودي الذكاء الاصطناعي (بما في ذلك المدارس) بضمان كفاءة كافية في الذكاء الاصطناعي لجميع الموظفين العاملين مع أنظمة الذكاء الاصطناعي — سارية من 2025. هذا يعني التدريب على: كيف يتخذ الذكاء الاصطناعي القرارات وما معدلات الخطأ للأدوات المحددة ومتى يُطلَب الإشراف البشري وكيفية توثيق القرارات المتأثرة بالذكاء الاصطناعي.' },
+            { q: 'ما هو Khanmigo وكيف يختلف عن ChatGPT للطلاب؟', a: 'Khanmigo هو مساعد التدريس الفردي بالذكاء الاصطناعي من Khan Academy، مدعوم بـGPT-4. خاصيته المميزة هي الاستجواب السقراطي — يُرشد الطلاب نحو الإجابات بدلاً من إعطائها مباشرة. ChatGPT يُقدّم إجابات مباشرة افتراضياً، وهو فعّال لكنه يُقلّل الجهد المعرفي الذي يُنتج التعلم طويل المدى.' },
+            { q: 'كيف أنشئ سياسة استخدام الذكاء الاصطناعي لمدرستي؟', a: 'سياسة استخدام الذكاء الاصطناعي المدرسية الفعّالة تُعرّف أربعة أشياء: (1) ما المهام التي تسمح بالذكاء الاصطناعي، (2) ما المهام التي تتطلب إفصاحاً، (3) ما المهام التي تحظر الذكاء الاصطناعي، (4) كيفية الاستشهاد بالمحتوى المُنتج بالذكاء الاصطناعي. يجب مراجعة السياسة كل 6 أشهر.' },
+            { q: 'هل يجب عليّ الامتثال للوائح حماية البيانات عند استخدام أدوات ذكاء اصطناعي للمعلمين؟', a: 'نعم — إذا كانت مدرستك في منطقة تُطبّق لوائح حماية البيانات وأدوات الذكاء الاصطناعي تعالج بيانات الطلاب، يجب الامتثال للوائح المحلية. النقطة الحرجة: إذا كانت منصة الذكاء الاصطناعي تعمل كمعالج للبيانات، تحتاج إلى اتفاقية معالجة بيانات. استشر الجهات التنظيمية المحلية للمعايير المحددة في دولتك.' },
           ],
         },
         sources: {
@@ -2279,6 +2309,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Defina temperatura em 0,1–0,2 para conteúdo factual.** Para materiais de educação em ciências, matemática ou história, use temperatura baixa.',
             '**Verifique a conformidade com LGPD antes de compartilhar dados de alunos com qualquer ferramenta.** Nunca insira nomes completos de alunos ou informações de IEP/504 em ferramentas de IA a menos que haja DPA adequado.',
             '**Itere sobre prompts que não funcionam.** Se a saída for genérica, adicione mais contexto do aluno.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Os tutores de IA realmente melhoram os resultados de aprendizado?', a: 'Sim — a evidência é forte. Um ensaio clínico randomizado de Harvard de 2024, com 194 estudantes de física de graduação, constatou que a tutoria com IA produziu tamanhos de efeito de 0,73–1,3 desvios-padrão acima de salas de aula de aprendizado ativo, com alunos alcançando notas mais altas em 49 minutos contra 60 minutos de tempo de aula (p < 10⁻⁸). Uma revisão sistemática de 2025 com 21 estudos constatou que alunos apoiados por IA superam o ensino tradicional em 15–35% nas avaliações.' },
+            { q: 'Qual é a melhor ferramenta de IA para professores em 2026?', a: 'A resposta depende da tarefa. Khanmigo (Khan Academy) é a mais forte para tutoria de alunos via questionamento socrático. MagicSchool lidera em ferramentas abrangentes de fluxo de trabalho do professor (planos de aula, IEPs, comunicação com pais). Modelos de propósito geral como GPT-5.6 oferecem a geração de conteúdo mais flexível. Para análise complexa de currículo, Claude Sonnet 5 processa 1M de tokens — aproximadamente 800 páginas padrão — em uma única sessão.' },
+            { q: 'Quanto tempo a IA pode economizar dos professores por semana?', a: 'Prompts específicos e ricos em contexto economizam de 5 a 13 horas por semana em planejamento de aulas e tarefas administrativas quando usados de forma consistente. As aplicações mais comuns que economizam tempo são: pesquisa e coleta de conteúdo (44% dos professores), criação de planos de aula (38%), resumo de informações (38%) e geração de material de sala de aula (37%).' },
+            { q: 'O uso de IA na educação é legal segundo as regulamentações da UE e a LGPD brasileira?', a: 'Sistemas de IA que influenciam avaliação educacional ou trajetórias de aprendizado são classificados como de "alto risco" segundo a Lei de IA da UE (Anexo III). Escolas da UE devem implementar treinamento de alfabetização em IA para o pessoal (Artigo 4, em vigor desde 2025), manter supervisão humana sobre avaliações influenciadas por IA e garantir trilhas de auditoria para qualquer sistema de IA que afete resultados de alunos. No Brasil, a LGPD (Lei 13.709/2018) exige consentimento específico dos responsáveis legais para o processamento de dados de alunos menores de 18 anos.' },
+            { q: 'Softwares de detecção de IA identificam de forma confiável a cola acadêmica?', a: 'Não — as ferramentas de detecção de IA atuais têm taxas de falso positivo de 15–30% em estudos revisados por pares, o que significa que até 30 de cada 100 submissões legítimas de alunos podem ser sinalizadas incorretamente. Falantes não nativos de inglês e alunos que escrevem em estilos acadêmicos estruturados são sinalizados em taxas desproporcionalmente mais altas. Em 2026, universidades estão migrando de políticas de proibição para frameworks de divulgação e citação, tratando a detecção de IA como um insumo entre vários, e não como prova definitiva de má conduta.' },
+            { q: 'Qual configuração de temperatura os professores devem usar no planejamento de aulas com IA?', a: 'Defina a temperatura em 0,1–0,2 para conteúdo educacional factual — planos de aula, rubricas de avaliação, alinhamento curricular. Isso produz saída consistente e com baixa variação. Use 0,7–0,9 apenas ao gerar ideias de atividades criativas, quando opções diversas forem o objetivo. A temperatura padrão na maioria das plataformas (0,7–1,0) é projetada para tarefas criativas e aumenta erros factuais em conteúdo educacional.' },
+            { q: 'As ferramentas de IA ajudam na instrução diferenciada?', a: 'Sim — este é um dos casos de uso educacional mais fortes da IA. Os LLMs conseguem reescrever o mesmo conteúdo em múltiplos níveis de leitura em segundos. Estrutura de prompt: "Reescreva este trecho no nível de leitura da série [N]. Preserve todo o conteúdo factual. Substitua vocabulário complexo por equivalentes mais simples. Mantenha a mesma estrutura de parágrafo." O Claude Sonnet 5 produz a diferenciação mais consistente entre níveis de leitura.' },
+            { q: 'Qual deve ser o primeiro passo de uma escola brasileira para adotar IA em conformidade com a LGPD?', a: 'Antes de usar qualquer ferramenta de IA com dados de alunos, verifique os termos de serviço e as políticas de processamento de dados de menores de cada fornecedor. A LGPD (Lei 13.709/2018) exige consentimento específico dos responsáveis legais para o processamento de dados de alunos menores de 18 anos. Nunca insira nomes completos de alunos ou informações de planos de ensino individualizado em ferramentas de IA sem um acordo de processamento de dados (DPA) adequado com o fornecedor.' },
           ],
         },
         relatedReading: {

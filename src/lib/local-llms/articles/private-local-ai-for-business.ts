@@ -439,6 +439,7 @@ de: {
             { q: 'Welche Sicherheitsherausforderungen bei Private lokaler KI?', a: 'Hauptherausforderungen: Netzwerkisolierung (Inferenz vor internen Bedrohungen schützen), Datenverschlüsselung in Übertragung (TLS 1.3), Zugriffsprüfung (OAuth 2.0, MFA), unveränderliche Audit-Trails, regelmäßige Sicherheitsaktualisierungen. Implementiere Netzwerk-Segmentierung zwischen Inferenzservern und Benutzernetzwerken.' },
             { q: 'Ist Private lokale KI für den deutschen Mittelstand geeignet?', a: 'Ja, besonders für Mittelstands-Unternehmen mit sensiblen Daten. Das BSI empfiehlt On-Premises-Inferenz für KMU, die DSGVO- und IT-Sicherheitsstandards einhalten müssen. Private lokale KI entfernt Herstellerbindung, bietet vorhersehbare Kosten ab 200 Mio. Token/Monat und erfüllt strenge deutsche Datenschutz-Anforderungen. IT-Abteilungen von Mittelstands-Unternehmen können lokale Infrastruktur selbst verwalten oder mit lokalen Anbietern arbeiten.' },
             { q: 'Muss ich bei der Verwendung von Private lokaler KI die DSGVO beachten?', a: 'Ja, sogar noch mehr als mit Cloud-APIs. Mit Private lokaler KI haben Sie vollständige Kontrolle über Datenschutz und müssen sicherstellen: (1) Verarbeitungsverträge (Art. 28 DSGVO) mit Dritten, die Zugriff haben, (2) Verschlüsselung und Zugriffskontrolle implementiert, (3) Datenschutzfolgenabschätzung durchgeführt, (4) Mitarbeiter geschult. Private lokale KI hilft dabei, DSGVO-Anforderungen zu erfüllen, aber die Verantwortung liegt immer noch bei Ihnen als Datenverantwortlicher.' },
+            { q: 'Muss ich DSGVO bei Private lokaler KI beachten?', a: 'Ja, sogar noch mehr als mit Cloud-APIs. Sie haben vollständige Kontrolle, aber müssen sicherstellen: Verarbeitungsverträge (Art. 28), Verschlüsselung/Zugriffskontrolle, Datenschutzfolgenabschätzung, Mitarbeiterschulung. Sie bleiben Datenverantwortlicher.' },
           ],
         },
         relatedReading: {
@@ -492,16 +493,102 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Wann wird Private lokale KI günstiger als Cloud-APIs?', acceptedAnswer: { '@type': 'Answer', text: 'Break-Even etwa bei 200 Mio. Token/Monat. Bei 0,005 €/1K-Token kosten 200 Mio. Token 1.000 €/Monat. RTX 5090 (2.000 €) über 36 Monate = ca. 55 €/Monat Hardware plus Strom (~50 €/Monat) = ~130 €/Monat Gesamtbudget.' } },
-          { '@type': 'Question', name: 'Welche Hardware für On-Premises-Bereitstellung?', acceptedAnswer: { '@type': 'Answer', text: 'Kleine Teams: 1× RTX 5090 (32 GB, 2.000 €) für 13B-Modelle. Produktion: 2× RTX 5090 (4.000 €) für 70B-Modelle. Enterprise: 4× RTX 5090 oder A100 80 GB (8.000–30.000 €) für 100+ gleichzeitige Benutzer.' } },
-          { '@type': 'Question', name: 'Welche Open-Source-Modelle für geschäftliche Nutzung?', acceptedAnswer: { '@type': 'Answer', text: 'August 2026: Llama 3.1 8B (Apache 2.0, kommerziell kostenlos), Qwen 3 7B (Apache 2.0), Mistral Small v0.3 (Apache 2.0). Alle sind kommerziell kostenlos lizenziert.' } },
-          { '@type': 'Question', name: 'Verlangt die DSGVO Private lokale KI für deutsche Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'DSGVO verlangt nicht explizit Private lokale KI, aber erfordert angemessene Datenschutzmaßnahmen. Hochregulierte deutsche Branchen mandatieren zunehmend On-Premises-KI als den sichersten Konformitätsweg.' } },
-          { '@type': 'Question', name: 'Ist Private lokale KI für den Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, besonders für Mittelstands-KMU mit sensiblen Daten. Das BSI empfiehlt On-Premises-Inferenz für Mittelstand, der DSGVO- und IT-Sicherheitsstandards einhalten muss. Vorhersehbare Kosten ab 200 Mio. Token/Monat.' } },
-          { '@type': 'Question', name: 'Muss ich DSGVO bei Private lokaler KI beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, sogar noch mehr als mit Cloud-APIs. Sie haben vollständige Kontrolle, aber müssen sicherstellen: Verarbeitungsverträge (Art. 28), Verschlüsselung/Zugriffskontrolle, Datenschutzfolgenabschätzung, Mitarbeiterschulung. Sie bleiben Datenverantwortlicher.' } },
-          { '@type': 'Question', name: 'Welche Latenz Private lokale KI vs. Cloud-APIs?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-APIs: 200–500 ms erstes-Token-Latenz. vLLM On-Premises (RTX 5090): 50–150 ms erstes-Token-Latenz lokales Netzwerk. Batch-Workloads profitieren am meisten On-Premises.' } },
-          { '@type': 'Question', name: 'Kann ich Apple Silicon M5 für geschäftliche Private lokale KI nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — MacBook Pro M5 Max (128 GB, 3.200+ €) führt Llama 3.3 70B mit 25–35 Token/Sekunde aus. Für Produktion bieten NVIDIA RTX 5090 oder A100 höheren Durchsatz über vLLM.' } },
-          { '@type': 'Question', name: 'Wie stelle ich Audit-Logs für Private lokale KI sicher?', acceptedAnswer: { '@type': 'Answer', text: 'Erfasse Anfragen/Antworten in strukturierter DB (PostgreSQL/Elasticsearch) mit Zeitstempel, Benutzer-ID, Modellname, Tokens, Antwortzeit. vLLM unterstützt nativ Request-Logging. HIPAA: AES-256-Verschlüsselung. SOC2: Rollenbasierte Zugriffskontrolle. 7+ Jahre Aufbewahrung.' } },
-          { '@type': 'Question', name: 'Welche Sicherheitsherausforderungen bei Private lokaler KI?', acceptedAnswer: { '@type': 'Answer', text: 'Hauptherausforderungen: Netzwerkisolierung (Inferenz-Server schützen), TLS-1.3-Verschlüsselung, OAuth/MFA-Authentifizierung, unveränderliche Audit-Trails, regelmäßige Sicherheitsaktualisierungen. Netzwerk-Segmentierung zwischen Inferenzservern und Benutzernetzwerken implementieren.' } },
+          {
+            '@type': 'Question',
+            'name': 'Wann wird Private lokale KI günstiger als Cloud-APIs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Break-Even etwa bei 200 Mio. Token/Monat. Bei 0,005 €/1K-Token (GPT-5.6) kosten 200 Mio. Token 1.000 €/Monat. RTX-5090-Workstation (2.000 €) amortisiert über 36 Monate = ca. 55 €/Monat plus Strom (~50 €/Monat) plus Kühlung (~25 €/Monat) = ~130 €/Monat Gesamtbudget. Bei 200 Mio.+ Token/Monat amortisiert sich lokale Hardware in 1–2 Monaten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Verlangt die DSGVO Private lokale KI für deutsche Unternehmen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DSGVO verlangt nicht explizit Private lokale KI. Sie verlangt angemessene Datenschutzmaßnahmen (Artikel 28). Hochregulierte Sektoren (Gesundheitswesen, Finanzen, Regierung) in Deutschland und Österreich mandatieren zunehmend Private lokale KI als den sichersten DSGVO-Konformitätsweg.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Hardware für Private-lokale-KI-Bereitstellung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Kleine Teams (5–20 Benutzer): 1× RTX 5090 (32 GB, 2.000 €) für Llama 3.1 8B oder Mistral Small. Produktion (20–100 Benutzer): 2× RTX 5090 (64 GB, 4.000 €) für Llama 3.3 70B mit Tensor-Parallelismus. Enterprise (100+ Benutzer): 4× RTX 5090 oder 2× A100 80 GB (8.000–30.000 €) für hohe Parallelität + RAG. Budget auch für Netzwerk, Kühlung und redundante Stromversorgung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie stelle ich HIPAA-Konformität mit lokal gehostem LLM sicher?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'HIPAA-Konformität für lokale LLMs erfordert: (1) Verschlüsselung im Ruhezustand (AES-256) und in Übertragung (TLS 1.3), (2) Vollständiges Audit-Logging von Anfragen/Antworten, (3) Zugriffskontrolle (rollenbasiert, MFA), (4) Business-Associate-Vereinbarung (BAA), wenn Services von Drittanbietern beteiligt sind, (5) Physische Serversicherheit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Open-Source-Modelle sind am besten für geschäftliche Nutzung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für April-2026-Geschäftsbereitstellungen: Llama 3.3 70B (Meta, Llama-Community-Lizenz — kostenlos für kommerzielle Nutzung <700 Mio. Benutzer), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Kleine Bereitstellungen: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Alle sind kommerziell kostenfrei lizenziert. Lizenz vor Produktionsbereitstellung überprüfen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Latenz Private lokale KI vs. Cloud-APIs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cloud-APIs (OpenAI GPT-5.6): 200–500 ms erstes-Token-Latenz Netzwerk-RTT. vLLM On-Premises (RTX 5090): 50–150 ms erstes-Token-Latenz lokales Netzwerk. Batch-Verarbeitungs-Workloads profitieren am meisten On-Premises durch Beseitigung von API-Rate-Limits.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Apple Silicon M5 für geschäftliche Private lokale KI nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja — MacBook Pro M5 Max (128 GB, 3.200+ €) führt Llama 3.3 70B mit 25–35 Token/Sekunde aus. Geräuschlos, keine GPU-Kühlung erforderlich, macOS-verwaltet. Eignet sich für kleine Teams (5–10 Benutzer) mit leichten Workloads. Für Produktion (20+ Benutzer) bieten NVIDIA RTX 5090 oder A100 höheren Durchsatz und Verwaltung gleichzeitiger Anfragen über vLLM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie stelle ich Audit-Logs für Private lokale KI sicher?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Erfasse jede Anfrage/Antwort in strukturierter DB (PostgreSQL oder Elasticsearch). Einzuschließen: Zeitstempel, Benutzer-ID, Modellname, Token Ein-/Ausgabe, Antwortzeit. vLLM unterstützt nativ Request-Logging. HIPAA: Aktiviere AES-256-Verschlüsselung der Log-DB. SOC2: Implementiere rollenbasierte Zugriffskontrolle für Logs. Log-Aufbewahrung: Mindestens 7 Jahre (Finanzdienstleistungen) oder wie vom Konformitäts-Framework verlangt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Sicherheitsherausforderungen bei Private lokaler KI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hauptherausforderungen: Netzwerkisolierung (Inferenz vor internen Bedrohungen schützen), Datenverschlüsselung in Übertragung (TLS 1.3), Zugriffsprüfung (OAuth 2.0, MFA), unveränderliche Audit-Trails, regelmäßige Sicherheitsaktualisierungen. Implementiere Netzwerk-Segmentierung zwischen Inferenzservern und Benutzernetzwerken.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Private lokale KI für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, besonders für Mittelstands-Unternehmen mit sensiblen Daten. Das BSI empfiehlt On-Premises-Inferenz für KMU, die DSGVO- und IT-Sicherheitsstandards einhalten müssen. Private lokale KI entfernt Herstellerbindung, bietet vorhersehbare Kosten ab 200 Mio. Token/Monat und erfüllt strenge deutsche Datenschutz-Anforderungen. IT-Abteilungen von Mittelstands-Unternehmen können lokale Infrastruktur selbst verwalten oder mit lokalen Anbietern arbeiten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von Private lokaler KI die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, sogar noch mehr als mit Cloud-APIs. Mit Private lokaler KI haben Sie vollständige Kontrolle über Datenschutz und müssen sicherstellen: (1) Verarbeitungsverträge (Art. 28 DSGVO) mit Dritten, die Zugriff haben, (2) Verschlüsselung und Zugriffskontrolle implementiert, (3) Datenschutzfolgenabschätzung durchgeführt, (4) Mitarbeiter geschult. Private lokale KI hilft dabei, DSGVO-Anforderungen zu erfüllen, aber die Verantwortung liegt immer noch bei Ihnen als Datenverantwortlicher.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich DSGVO bei Private lokaler KI beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, sogar noch mehr als mit Cloud-APIs. Sie haben vollständige Kontrolle, aber müssen sicherstellen: Verarbeitungsverträge (Art. 28), Verschlüsselung/Zugriffskontrolle, Datenschutzfolgenabschätzung, Mitarbeiterschulung. Sie bleiben Datenverantwortlicher.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1157,42 +1244,16 @@ schema: {
           id: 'faq',
           title: '頻繁に寄せられる質問',
           faqs: [
-            {
-              q: 'オンプレミスAIがクラウドAPIより安くなるのはいつか',
-              a: '採算分岐点は月2億トークン。¥0.0045/1Kトークン（GPT-5.6）で月2億トークンは月¥90,000。RTX 5090（¥235,000）36ヶ月減価償却は月¥6,500 + 電気代月¥5,000 + 冷却月¥2,800 = 月¥15,000。月2億トークン以上で、ハードウェアは 1–2ヶ月で回収します。'
-            },
-            {
-              q: '個人情報保護法はEU企業向けローカルAIを要求するか',
-              a: '個人情報保護法は明示的にローカルAIを要求しません。個人情報の適切な保護（個人情報保護法第28条）を要求します。日本の高度に規制される産業（医療、金融、政府）はますますローカルAIをコンプライアンスの最も安全な経路として要求しています。'
-            },
-            {
-              q: 'オンプレミスAI展開用のハードウェア',
-              a: '小規模チーム（5–20ユーザー）： 1× RTX 5090（32 GB、¥235,000）Llama 3.1 8B または Mistral Small 用。本番環境（20–100ユーザー）： 2× RTX 5090（64 GB、¥470,000）テンソル並列処理経由で Llama 3.3 70B 用。エンタープライズ（100+ ユーザー）： 4× RTX 5090 または 2× A100 80GB（¥940,000–¥3,555,000）高同時実行 + RAG 用。ネットワーク、冷却、冗長電源を予算化します。'
-            },
-            {
-              q: 'ローカルLLMで金融庁サイバーセキュリティ要件に準拠する方法',
-              a: '金融庁準拠ローカルLLMには ： (1) 保存時（AES-256）と転送中（TLS 1.3）暗号化、(2) リクエスト/レスポンス監査ログ、(3) アクセス制御（ロールベース、MFA）、(4) セキュリティサーバー物理、(5) インシデント対応計画。定期的なセキュリティ監査を実施します。'
-            },
-            {
-              q: 'ビジネス使用に最適なオープンソースモデルはどれか',
-              a: '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。'
-            },
-            {
-              q: 'ローカルAI vs クラウドAPIのレイテンシ',
-              a: 'クラウドAPI（OpenAI GPT-5.6）初期トークンレイテンシ 200–500msネットワークRTT。vLLM オンプレミス RTX 5090 は初期トークンレイテンシ 50–150msローカルネットワークを達成します。バッチ処理ワークロードはクラウド API レート制限排除により、オンプレミスから最も利益を得ます。'
-            },
-            {
-              q: 'ビジネスAIにApple Silicon M5を使用できるか',
-              a: 'はい — MacBook Pro M5 Max（128 GB、¥428,000+）は Llama 3.3 70B を 25–35 トークン/秒 で実行します。静か、GPU冷却不要、macOS管理。小規模チーム（5–10ユーザー）軽量ワークロード向け。本番環境（20+ ユーザー）、NVIDIA RTX 5090 または A100 はスループット高く、vLLM経由の同時リクエスト管理提供。'
-            },
-            {
-              q: 'オンプレミスAI監査ログを確認する方法',
-              a: 'すべてのリクエスト/レスポンスを構造化DB（PostgreSQL または Elasticsearch）に記録します。含める ： timestamp、user ID、モデル名、入力/出力トークン、応答時間。vLLM はネイティブリクエストログをサポート。HIPAA ： DB ログを AES-256 暗号化で有効化。SOC2 ： ロールベースアクセス制御ログを実装。ログは最低7年保持（金融サービス）または規制フレームワーク要件。'
-            },
-            {
-              q: 'オンプレミスAIのセキュリティチャレンジ',
-              a: '主要チャレンジ ： ネットワーク分離（内部脅威から推論保護）、転送中暗号化（TLS 1.3）、アクセス認証（OAuth 2.0、MFA）、不変監査証跡、定期セキュリティ更新。推論サーバーとユーザーネットワーク間のネットワーク分割を実装します。'
-            }
+            { q: 'オンプレミスAIがクラウドAPIより安くなるのはいつか', a: '採算分岐点は月2億トークン。¥0.0045/1Kトークン（GPT-5.6）で月2億トークンは月¥90,000。RTX 5090（¥235,000）36ヶ月減価償却は月¥6,500 + 電気代月¥5,000 + 冷却月¥2,800 = 月¥15,000。月2億トークン以上で、ハードウェアは 1–2ヶ月で回収します。' },
+            { q: '個人情報保護法はEU企業向けローカルAIを要求するか', a: '個人情報保護法は明示的にローカルAIを要求しません。個人情報の適切な保護（個人情報保護法第28条）を要求します。日本の高度に規制される産業（医療、金融、政府）はますますローカルAIをコンプライアンスの最も安全な経路として要求しています。' },
+            { q: 'オンプレミスAI展開用のハードウェア', a: '小規模チーム（5–20ユーザー）： 1× RTX 5090（32 GB、¥235,000）Llama 3.1 8B または Mistral Small 用。本番環境（20–100ユーザー）： 2× RTX 5090（64 GB、¥470,000）テンソル並列処理経由で Llama 3.3 70B 用。エンタープライズ（100+ ユーザー）： 4× RTX 5090 または 2× A100 80GB（¥940,000–¥3,555,000）高同時実行 + RAG 用。ネットワーク、冷却、冗長電源を予算化します。' },
+            { q: 'ローカルLLMで金融庁サイバーセキュリティ要件に準拠する方法', a: '金融庁準拠ローカルLLMには ： (1) 保存時（AES-256）と転送中（TLS 1.3）暗号化、(2) リクエスト/レスポンス監査ログ、(3) アクセス制御（ロールベース、MFA）、(4) セキュリティサーバー物理、(5) インシデント対応計画。定期的なセキュリティ監査を実施します。' },
+            { q: 'ビジネス使用に最適なオープンソースモデルはどれか', a: '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。' },
+            { q: 'ローカルAI vs クラウドAPIのレイテンシ', a: 'クラウドAPI（OpenAI GPT-5.6）初期トークンレイテンシ 200–500msネットワークRTT。vLLM オンプレミス RTX 5090 は初期トークンレイテンシ 50–150msローカルネットワークを達成します。バッチ処理ワークロードはクラウド API レート制限排除により、オンプレミスから最も利益を得ます。' },
+            { q: 'ビジネスAIにApple Silicon M5を使用できるか', a: 'はい — MacBook Pro M5 Max（128 GB、¥428,000+）は Llama 3.3 70B を 25–35 トークン/秒 で実行します。静か、GPU冷却不要、macOS管理。小規模チーム（5–10ユーザー）軽量ワークロード向け。本番環境（20+ ユーザー）、NVIDIA RTX 5090 または A100 はスループット高く、vLLM経由の同時リクエスト管理提供。' },
+            { q: 'オンプレミスAI監査ログを確認する方法', a: 'すべてのリクエスト/レスポンスを構造化DB（PostgreSQL または Elasticsearch）に記録します。含める ： timestamp、user ID、モデル名、入力/出力トークン、応答時間。vLLM はネイティブリクエストログをサポート。HIPAA ： DB ログを AES-256 暗号化で有効化。SOC2 ： ロールベースアクセス制御ログを実装。ログは最低7年保持（金融サービス）または規制フレームワーク要件。' },
+            { q: 'オンプレミスAIのセキュリティチャレンジ', a: '主要チャレンジ ： ネットワーク分離（内部脅威から推論保護）、転送中暗号化（TLS 1.3）、アクセス認証（OAuth 2.0、MFA）、不変監査証跡、定期セキュリティ更新。推論サーバーとユーザーネットワーク間のネットワーク分割を実装します。' },
+            { q: 'METI AI統治 2024オンプレミス展開', a: 'METI AI統治はAI透明性、追跡可能性、セキュリティを要求。ローカル推論はMETIガイドラインをサポート、完全な監査ログ制御を提供。日本のエンタープライズAI展開はMETI要件に準拠します。' },
           ]
         },
         relatedReading: {
@@ -1275,76 +1336,84 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'オンプレミスAIがクラウドAPIより安くなるのはいつか',
-            acceptedAnswer: {
+            'name': 'オンプレミスAIがクラウドAPIより安くなるのはいつか',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '採算分岐点は月2億トークン。¥0.0045/1Kトークン（GPT-5.6）で月2億トークンは月¥90,000。RTX 5090（¥235,000）36ヶ月減価償却は月¥6,500 + 電気代月¥5,000 = 月¥15,000。'
-            }
+              'text': '採算分岐点は月2億トークン。¥0.0045/1Kトークン（GPT-5.6）で月2億トークンは月¥90,000。RTX 5090（¥235,000）36ヶ月減価償却は月¥6,500 + 電気代月¥5,000 + 冷却月¥2,800 = 月¥15,000。月2億トークン以上で、ハードウェアは 1–2ヶ月で回収します。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'オンプレミスAI展開用のハードウェア',
-            acceptedAnswer: {
+            'name': '個人情報保護法はEU企業向けローカルAIを要求するか',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '最小本番環境 ： 1× RTX 5090（32 GB VRAM）最大10–20ユーザー同時モデル。エンタープライズ ： 2–4× RTX 5090 または NVIDIA A100 80GB 100+ ユーザー。予算 ¥235,000–¥3,555,000 スケールに応じて。'
-            }
+              'text': '個人情報保護法は明示的にローカルAIを要求しません。個人情報の適切な保護（個人情報保護法第28条）を要求します。日本の高度に規制される産業（医療、金融、政府）はますますローカルAIをコンプライアンスの最も安全な経路として要求しています。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ビジネス使用に最適なオープンソースモデルはどれか',
-            acceptedAnswer: {
+            'name': 'オンプレミスAI展開用のハードウェア',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '2026年4月 ： Llama 3.1 8B（Apache 2.0、商用無料）、Qwen 3 7B（Apache 2.0）、Mistral Small v0.3（Apache 2.0）。すべて3つとも商用ライセンス無料です。'
-            }
+              'text': '小規模チーム（5–20ユーザー）： 1× RTX 5090（32 GB、¥235,000）Llama 3.1 8B または Mistral Small 用。本番環境（20–100ユーザー）： 2× RTX 5090（64 GB、¥470,000）テンソル並列処理経由で Llama 3.3 70B 用。エンタープライズ（100+ ユーザー）： 4× RTX 5090 または 2× A100 80GB（¥940,000–¥3,555,000）高同時実行 + RAG 用。ネットワーク、冷却、冗長電源を予算化します。',
+            },
           },
           {
             '@type': 'Question',
-            name: '個人情報保護法はEU企業向けローカルAIを要求するか',
-            acceptedAnswer: {
+            'name': 'ローカルLLMで金融庁サイバーセキュリティ要件に準拠する方法',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '個人情報保護法は明示的にローカルAIを要求しません。ただし個人情報を適切に保護する必要があります。日本の高度に規制される産業はますますローカルAIをコンプライアンスの最も安全な経路として要求しています。'
-            }
+              'text': '金融庁準拠ローカルLLMには ： (1) 保存時（AES-256）と転送中（TLS 1.3）暗号化、(2) リクエスト/レスポンス監査ログ、(3) アクセス制御（ロールベース、MFA）、(4) セキュリティサーバー物理、(5) インシデント対応計画。定期的なセキュリティ監査を実施します。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'METI AI統治 2024オンプレミス展開',
-            acceptedAnswer: {
+            'name': 'ビジネス使用に最適なオープンソースモデルはどれか',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'METI AI統治はAI透明性、追跡可能性、セキュリティを要求。ローカル推論はMETIガイドラインをサポート、完全な監査ログ制御を提供。日本のエンタープライズAI展開はMETI要件に準拠します。'
-            }
+              'text': '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLM vs クラウドAPIのレイテンシ',
-            acceptedAnswer: {
+            'name': 'ローカルAI vs クラウドAPIのレイテンシ',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'クラウドAPI（OpenAI GPT-5.6）初期トークンレイテンシ 200–500msネットワークRTT。vLLM オンプレミス RTX 5090 は 50–150msローカルネットワーク達成。'
-            }
+              'text': 'クラウドAPI（OpenAI GPT-5.6）初期トークンレイテンシ 200–500msネットワークRTT。vLLM オンプレミス RTX 5090 は初期トークンレイテンシ 50–150msローカルネットワークを達成します。バッチ処理ワークロードはクラウド API レート制限排除により、オンプレミスから最も利益を得ます。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ビジネスAIにApple Silicon M5を使用できるか',
-            acceptedAnswer: {
+            'name': 'ビジネスAIにApple Silicon M5を使用できるか',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'はい — MacBook Pro M5 Max（128 GB、¥428,000+）は Llama 3.3 70B を 25–35 トークン/秒 実行。小規模チーム向けですが、本番環境は RTX 5090 推奨。'
-            }
+              'text': 'はい — MacBook Pro M5 Max（128 GB、¥428,000+）は Llama 3.3 70B を 25–35 トークン/秒 で実行します。静か、GPU冷却不要、macOS管理。小規模チーム（5–10ユーザー）軽量ワークロード向け。本番環境（20+ ユーザー）、NVIDIA RTX 5090 または A100 はスループット高く、vLLM経由の同時リクエスト管理提供。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'オンプレミスAI監査ログの実装',
-            acceptedAnswer: {
+            'name': 'オンプレミスAI監査ログを確認する方法',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'すべてのリクエスト/レスポンスを構造化DB（PostgreSQL、Elasticsearch）に記録。timestamp、user ID、モデル名、トークン、応答時間含める。vLLM ネイティブログ対応。'
-            }
+              'text': 'すべてのリクエスト/レスポンスを構造化DB（PostgreSQL または Elasticsearch）に記録します。含める ： timestamp、user ID、モデル名、入力/出力トークン、応答時間。vLLM はネイティブリクエストログをサポート。HIPAA ： DB ログを AES-256 暗号化で有効化。SOC2 ： ロールベースアクセス制御ログを実装。ログは最低7年保持（金融サービス）または規制フレームワーク要件。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルAIセキュリティチャレンジ',
-            acceptedAnswer: {
+            'name': 'オンプレミスAIのセキュリティチャレンジ',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '主要チャレンジ ： ネットワーク分離（内部脅威保護）、TLS 1.3転送中暗号化、OAuth 2.0 / MFA認証、不変監査証跡、定期セキュリティ更新。推論サーバーとユーザーネットワーク間のセグメンテーション実装します。'
-            }
-          }
+              'text': '主要チャレンジ ： ネットワーク分離（内部脅威から推論保護）、転送中暗号化（TLS 1.3）、アクセス認証（OAuth 2.0、MFA）、不変監査証跡、定期セキュリティ更新。推論サーバーとユーザーネットワーク間のネットワーク分割を実装します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'METI AI統治 2024オンプレミス展開',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'METI AI統治はAI透明性、追跡可能性、セキュリティを要求。ローカル推論はMETIガイドラインをサポート、完全な監査ログ制御を提供。日本のエンタープライズAI展開はMETI要件に準拠します。',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -1610,42 +1679,15 @@ schema: {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: '本地AI何时比云API更便宜？',
-              a: '损益平衡点约在月2亿token。在$0.005/1K token（GPT-5.6）时，月2亿token成本为$1,000。RTX 5090工作站（$2,000）在36个月内摊销成本约$56/月，加电力$50/月，冷却$27/月 = 月$150。在月2亿token以上时，硬件在1–2个月内收回。'
-            },
-            {
-              q: '数据安全法要求企业使用本地AI吗？',
-              a: '数据安全法没有明确要求本地AI。它要求个人数据适当保护。但严格受监管的行业（金融、医疗、政府）越来越多地将本地AI视为数据安全法合规的最安全路径。'
-            },
-            {
-              q: '本地AI部署需要什么硬件？',
-              a: '小型团队（5–20用户）：1× RTX 5090（32 GB，$2,000）用于Llama 3.1 8B或Mistral Small。生产（20–100用户）：2× RTX 5090（64 GB，$4,000）通过张量并行处理Llama 3.3 70B。企业（100+用户）：4× RTX 5090或2× A100 80GB（$8K–$30K）用于高并发 + RAG。预算网络、冷却和冗余电源。'
-            },
-            {
-              q: '如何使用本地LLM满足金融合规要求？',
-              a: '金融机构的本地LLM合规需要：(1) 静态数据加密（AES-256）和传输中加密（TLS 1.3），(2) 所有查询和响应的审计日志，(3) 访问控制（基于角色、MFA），(4) 物理服务器安全，(5) 事件响应计划。定期安全审计。'
-            },
-            {
-              q: '哪些开源模型最适合业务使用？',
-              a: '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。'
-            },
-            {
-              q: '本地AI vs 云API的延迟？',
-              a: '云API（OpenAI GPT-5.6）首token延迟200–500ms网络RTT。vLLM本地RTX 5090实现50–150ms本地网络首token延迟。批处理工作负载因消除API速率限制而最受本地益处。'
-            },
-            {
-              q: '能否为业务AI使用Apple Silicon M5？',
-              a: '可以——MacBook Pro M5 Max（128 GB、$3,200+）以25–35 token/秒执行Llama 3.3 70B。安静、无GPU冷却、macOS管理。适合小型团队（5–10用户）轻型工作负载。生产（20+用户）、NVIDIA RTX 5090或A100提供更高吞吐量和通过vLLM的并发请求管理。'
-            },
-            {
-              q: '如何确保本地AI审计日志？',
-              a: '将所有请求/响应记录到结构化数据库（PostgreSQL或Elasticsearch）。包括：时间戳、用户ID、模型名、输入/输出token、响应时间。vLLM本机支持请求日志。合规性：为日志启用AES-256加密。监管要求：保留日志最少7年（金融）或按框架要求。'
-            },
-            {
-              q: '本地AI的安全挑战？',
-              a: '主要挑战：网络隔离（防止内部威胁）、传输中加密（TLS 1.3）、访问认证（OAuth 2.0、MFA）、不可变审计跟踪、定期安全更新。在推理服务器和用户网络之间实施网络分割。'
-            }
+            { q: '本地AI何时比云API更便宜？', a: '损益平衡点约在月2亿token。在$0.005/1K token（GPT-5.6）时，月2亿token成本为$1,000。RTX 5090工作站（$2,000）在36个月内摊销成本约$56/月，加电力$50/月，冷却$27/月 = 月$150。在月2亿token以上时，硬件在1–2个月内收回。' },
+            { q: '数据安全法要求企业使用本地AI吗？', a: '数据安全法没有明确要求本地AI。它要求个人数据适当保护。但严格受监管的行业（金融、医疗、政府）越来越多地将本地AI视为数据安全法合规的最安全路径。' },
+            { q: '本地AI部署需要什么硬件？', a: '小型团队（5–20用户）：1× RTX 5090（32 GB，$2,000）用于Llama 3.1 8B或Mistral Small。生产（20–100用户）：2× RTX 5090（64 GB，$4,000）通过张量并行处理Llama 3.3 70B。企业（100+用户）：4× RTX 5090或2× A100 80GB（$8K–$30K）用于高并发 + RAG。预算网络、冷却和冗余电源。' },
+            { q: '如何使用本地LLM满足金融合规要求？', a: '金融机构的本地LLM合规需要：(1) 静态数据加密（AES-256）和传输中加密（TLS 1.3），(2) 所有查询和响应的审计日志，(3) 访问控制（基于角色、MFA），(4) 物理服务器安全，(5) 事件响应计划。定期安全审计。' },
+            { q: '哪些开源模型最适合业务使用？', a: '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。' },
+            { q: '本地AI vs 云API的延迟？', a: '云API（OpenAI GPT-5.6）首token延迟200–500ms网络RTT。vLLM本地RTX 5090实现50–150ms本地网络首token延迟。批处理工作负载因消除API速率限制而最受本地益处。' },
+            { q: '能否为业务AI使用Apple Silicon M5？', a: '可以——MacBook Pro M5 Max（128 GB、$3,200+）以25–35 token/秒执行Llama 3.3 70B。安静、无GPU冷却、macOS管理。适合小型团队（5–10用户）轻型工作负载。生产（20+用户）、NVIDIA RTX 5090或A100提供更高吞吐量和通过vLLM的并发请求管理。' },
+            { q: '如何确保本地AI审计日志？', a: '将所有请求/响应记录到结构化数据库（PostgreSQL或Elasticsearch）。包括：时间戳、用户ID、模型名、输入/输出token、响应时间。vLLM本机支持请求日志。合规性：为日志启用AES-256加密。监管要求：保留日志最少7年（金融）或按框架要求。' },
+            { q: '本地AI的安全挑战？', a: '主要挑战：网络隔离（防止内部威胁）、传输中加密（TLS 1.3）、访问认证（OAuth 2.0、MFA）、不可变审计跟踪、定期安全更新。在推理服务器和用户网络之间实施网络分割。' },
           ]
         },
         relatedReading: {
@@ -1728,68 +1770,76 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '本地AI何时比云API更便宜？',
-            acceptedAnswer: {
+            'name': '本地AI何时比云API更便宜？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '损益平衡点约在月2亿token。在$0.005/1K token（GPT-5.6）时，月2亿token成本为$1,000。RTX 5090（$2,000）在36个月内摊销成本约$56/月 + 电力$50/月 = 月$150。'
-            }
+              'text': '损益平衡点约在月2亿token。在$0.005/1K token（GPT-5.6）时，月2亿token成本为$1,000。RTX 5090工作站（$2,000）在36个月内摊销成本约$56/月，加电力$50/月，冷却$27/月 = 月$150。在月2亿token以上时，硬件在1–2个月内收回。',
+            },
           },
           {
             '@type': 'Question',
-            name: '本地AI部署需要什么硬件？',
-            acceptedAnswer: {
+            'name': '数据安全法要求企业使用本地AI吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '最小生产环境：1× RTX 5090（32 GB VRAM）服务13B模型至10–20并发用户。企业：2–4× RTX 5090或NVIDIA A100 80GB 100+用户。预算$2,000–$30,000取决于规模。'
-            }
+              'text': '数据安全法没有明确要求本地AI。它要求个人数据适当保护。但严格受监管的行业（金融、医疗、政府）越来越多地将本地AI视为数据安全法合规的最安全路径。',
+            },
           },
           {
             '@type': 'Question',
-            name: '哪些开源模型最适合业务使用？',
-            acceptedAnswer: {
+            'name': '本地AI部署需要什么硬件？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '2026年4月：Llama 3.1 8B（Apache 2.0、商用免费）、Qwen 3 7B（Apache 2.0）、Mistral Small v0.3（Apache 2.0）。全部三个商用许可免费。'
-            }
+              'text': '小型团队（5–20用户）：1× RTX 5090（32 GB，$2,000）用于Llama 3.1 8B或Mistral Small。生产（20–100用户）：2× RTX 5090（64 GB，$4,000）通过张量并行处理Llama 3.3 70B。企业（100+用户）：4× RTX 5090或2× A100 80GB（$8K–$30K）用于高并发 + RAG。预算网络、冷却和冗余电源。',
+            },
           },
           {
             '@type': 'Question',
-            name: '数据安全法要求使用本地AI吗？',
-            acceptedAnswer: {
+            'name': '如何使用本地LLM满足金融合规要求？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '数据安全法没有明确要求本地AI，但要求个人数据适当保护。严格受监管行业日益将本地AI视为数据安全法合规最安全路径。'
-            }
+              'text': '金融机构的本地LLM合规需要：(1) 静态数据加密（AES-256）和传输中加密（TLS 1.3），(2) 所有查询和响应的审计日志，(3) 访问控制（基于角色、MFA），(4) 物理服务器安全，(5) 事件响应计划。定期安全审计。',
+            },
           },
           {
             '@type': 'Question',
-            name: '本地LLM vs 云API延迟',
-            acceptedAnswer: {
+            'name': '哪些开源模型最适合业务使用？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '云API（OpenAI GPT-5.6）首token延迟200–500ms网络RTT。vLLM本地RTX 5090实现50–150ms本地网络延迟。'
-            }
+              'text': '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。',
+            },
           },
           {
             '@type': 'Question',
-            name: '可否为业务使用Apple Silicon M5？',
-            acceptedAnswer: {
+            'name': '本地AI vs 云API的延迟？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '可以——MacBook Pro M5 Max（128 GB，$3,200+）以25–35 token/秒执行Llama 3.3 70B。适合小型团队，生产需RTX 5090。'
-            }
+              'text': '云API（OpenAI GPT-5.6）首token延迟200–500ms网络RTT。vLLM本地RTX 5090实现50–150ms本地网络首token延迟。批处理工作负载因消除API速率限制而最受本地益处。',
+            },
           },
           {
             '@type': 'Question',
-            name: '如何确保本地AI审计日志？',
-            acceptedAnswer: {
+            'name': '能否为业务AI使用Apple Silicon M5？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '将所有请求/响应记录至结构化数据库（PostgreSQL、Elasticsearch）。包括时间戳、用户ID、模型名、token、响应时间。vLLM本机支持日志。'
-            }
+              'text': '可以——MacBook Pro M5 Max（128 GB、$3,200+）以25–35 token/秒执行Llama 3.3 70B。安静、无GPU冷却、macOS管理。适合小型团队（5–10用户）轻型工作负载。生产（20+用户）、NVIDIA RTX 5090或A100提供更高吞吐量和通过vLLM的并发请求管理。',
+            },
           },
           {
             '@type': 'Question',
-            name: '本地AI安全挑战',
-            acceptedAnswer: {
+            'name': '如何确保本地AI审计日志？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '主要挑战：网络隔离（防内部威胁）、TLS 1.3传输加密、OAuth 2.0 / MFA认证、不可变审计跟踪、定期安全更新。在推理服务器和用户网络间实施分割。'
-            }
-          }
+              'text': '将所有请求/响应记录到结构化数据库（PostgreSQL或Elasticsearch）。包括：时间戳、用户ID、模型名、输入/输出token、响应时间。vLLM本机支持请求日志。合规性：为日志启用AES-256加密。监管要求：保留日志最少7年（金融）或按框架要求。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地AI的安全挑战？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '主要挑战：网络隔离（防止内部威胁）、传输中加密（TLS 1.3）、访问认证（OAuth 2.0、MFA）、不可变审计跟踪、定期安全更新。在推理服务器和用户网络之间实施网络分割。',
+            },
+          },
         ]
       },
       itemListSchema: {

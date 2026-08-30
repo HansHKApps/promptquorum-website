@@ -631,27 +631,182 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Was ist Prompt-Optimierung?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines bestehenden Prompts zur Verbesserung der KI-Ausgabequalität für eine bestimmte Aufgabe. Dabei wird ein Fehlermuster identifiziert (falsches Format, Halluzination, vage Ausgabe), eine Variable geändert (Spezifität, Kontext, Beispiele, Einschränkungen, Ausgabeformat oder Rolle) und das Ergebnis über Modelle wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro getestet.' } },
-          { '@type': 'Question', name: 'Was ist der Unterschied zwischen Prompt-Optimierung und Prompt-Engineering?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Engineering ist die Disziplin, eine Prompt-Struktur von Grund auf mit Bausteinen wie Ziel, Kontext und Ausgabeformat zu entwerfen. Prompt-Optimierung ist der iterative Teilprozess der Verbesserung eines bereits geschriebenen Prompts durch Diagnose von Fehlermustern und gezielte Anpassungen. Du brauchst Prompt-Engineering, um einen Ausgangspunkt zu schaffen; Prompt-Optimierung nutzt du, um ihn zu verfeinern.' } },
-          { '@type': 'Question', name: 'Wie viele Iterationen braucht man zur Prompt-Optimierung?', acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Aufgaben reichen 2–4 gezielte Iterationen aus, um von einem fehlerhaften Prompt zu einem zuverlässigen zu gelangen. Jede Iteration sollte eine Variable ändern und an 3–5 repräsentativen Eingaben getestet werden. Nach 5–6 Iterationen treten abnehmende Erträge auf – wenn sich ein Prompt bis dahin nicht stabilisiert hat, muss möglicherweise die Aufgabendefinition selbst überarbeitet werden.' } },
-          { '@type': 'Question', name: 'Welchen Hebel sollte ich zuerst bei der Prompt-Optimierung ändern?', acceptedAnswer: { '@type': 'Answer', text: 'Beginne mit dem Ausgabeformat. Format-Nichtkonformität – einen Absatz zu erhalten, wenn du eine Tabelle wolltest, oder Klartext statt JSON – ist das häufigste und am schnellsten behebbare Fehlermuster. Gib die gewünschte Struktur exakt an und behebe andere Probleme (Genauigkeit, Ton, Umfang) in nachfolgenden Iterationen.' } },
-          { '@type': 'Question', name: 'Funktioniert Prompt-Optimierung bei allen KI-Modellen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber mit modellspezifischen Anpassungen. Die sechs zentralen Optimierungshebel (Spezifität, Kontext, Beispiele, Einschränkungen, Ausgabeformat, Rolle) gelten für GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Mistral Large. Jedes Modell reagiert jedoch unterschiedlich auf Anweisungsdichte – Claude verarbeitet längere mehrteilige Anweisungen besser; GPT-5.6 reagiert gut auf strukturierte System-Prompts; Gemini profitiert von expliziten Abschnittsüberschriften.' } },
-          { '@type': 'Question', name: 'Was ist der häufigste Fehler bei der Prompt-Optimierung?', acceptedAnswer: { '@type': 'Answer', text: 'Mehrere Variablen gleichzeitig zu ändern. Wenn du in derselben Überarbeitung Beispiele hinzufügst, das Ausgabeformat änderst und eine Rollenanweisung einfügst, kannst du nicht bestimmen, welche Änderung die Ausgabe verbessert (oder verschlechtert) hat. Effektive Optimierung ändert pro Iteration eine Variable.' } },
-          { '@type': 'Question', name: 'Kann Prompt-Optimierung KI-Halluzinationen reduzieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, mit den richtigen Techniken. Grounding-Kontext hinzufügen („Stütze deine Antwort nur auf das folgende Dokument"), Few-Shot-Beispiele mit faktisch korrekten Ausgaben und explizite Einschränkungen („Erfinde keine Zahlen – verwende nur Daten aus dem bereitgestellten Text") reduzieren die Halluzinationsrate zuverlässig. Self-Consistency Prompting – mehrere Ausgaben generieren und die häufigste zurückgeben – reduziert Fabrikationen mit geringer Wahrscheinlichkeit weiter.' } },
-          { '@type': 'Question', name: 'Wann sollte ich Fine-Tuning statt Prompt-Optimierung verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Verwende Fine-Tuning, wenn die Prompt-Optimierung eine Obergrenze erreicht hat – typischerweise wenn das gewünschte Verhalten hochgradig domänenspezifisch ist, eine konsistente stilistische Stimme über Tausende von Ausgaben erfordert oder von Wissen abhängt, das nicht im Basismodell enthalten ist. Prompt-Optimierung ist schneller und günstiger und sollte immer vor dem Fine-Tuning ausgeschöpft werden.' } },
-          { '@type': 'Question', name: 'Woran erkenne ich, dass ein Prompt vollständig optimiert ist?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Prompt ist ausreichend optimiert, wenn er: (1) bei 4–5 repräsentativen Eingaben korrekte Ausgaben produziert, (2) bei Wiederholungen konsistente Ausgaben liefert, (3) bei mindestens zwei Modellen funktioniert (z. B. GPT-5.6 und Claude) und (4) die Formatvorgabe ohne Nachbearbeitung erfüllt. Perfekte Prompts existieren nicht – „optimiert" bedeutet zuverlässig genug für den Anwendungsfall.' } },
-          { '@type': 'Question', name: 'Gilt Prompt-Optimierung auch für Bild-Prompts (Text-zu-Bild)?', acceptedAnswer: { '@type': 'Answer', text: 'Die Prinzipien gelten – Spezifität, Einschränkungen und Beispiele (Referenzbilder) sind gültige Hebel für Bildmodelle wie DALL-E 3 und Stable Diffusion. Die Mechanismen unterscheiden sich jedoch: Bildmodelle reagieren auf Stil-Modifikatoren, Seitenverhältnisangaben und Negative Prompts als Einschränkungen. Der Optimierungsprozess (Ausgangspunkt → Diagnose → eine Variable ändern → testen) ist identisch.' } },
-          { '@type': 'Question', name: 'Was ist automatische Prompt-Optimierung?', acceptedAnswer: { '@type': 'Answer', text: 'Automatische Prompt-Optimierung nutzt ein zweites KI-Modell (oder dasselbe Modell in einer Meta-Prompting-Schleife), um Prompts ohne menschliches Eingreifen umzuschreiben und zu verbessern. Tools wie DSPy (Stanford), TextGrad und APE (Automatic Prompt Engineer) generieren Kandidaten-Prompts, bewerten sie anhand einer Metrik (Genauigkeit, Formateinhaltung, Nutzerbewertung) und wählen die beste Variante aus. Manuelle Optimierung ist für gut verstandene Aufgaben schneller; automatische Optimierung skaliert besser, wenn du beschriftete Evaluierungsdaten hast und Hunderte von Varianten testen möchtest.' } },
-          { '@type': 'Question', name: 'Wie unterscheidet sich Prompt-Optimierung von Prompt-Tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Optimierung verbessert diskrete Text-Prompts – die Anweisungen, die du in natürlicher Sprache schreibst – ohne Modellgewichte zu verändern. Prompt-Tuning (eingeführt von Lester et al., 2021) lernt kontinuierliche Soft-Prompt-Vektoren, die der Eingabe vorangestellt und durch Gradientenabstieg trainiert werden. Prompt-Tuning erfordert Rechenleistung und Trainingsdaten; Prompt-Optimierung erfordert beides nicht. Für die meisten Produktionsanwendungen solltest du zuerst diskrete Prompts optimieren und Prompt-Tuning nur in Betracht ziehen, wenn eine harte Qualitätsobergrenze erreicht wurde.' } },
-          { '@type': 'Question', name: 'Was sind die besten Tools zur Prompt-Optimierung?', acceptedAnswer: { '@type': 'Answer', text: 'Die meistgenutzten Tools sind: PromptQuorum (einen Prompt gleichzeitig an GPT-5.6, Claude und Gemini senden für direkten Vergleich), DSPy (programmatische Prompt-Optimierung mit automatischer metrikbasierter Auswahl), LangSmith (Prompt-Versionierung, A/B-Tests und Tracing für LangChain-Pipelines), Promptfoo (Open-Source-CLI zum Ausführen von Prompts gegen Testfälle und Regressionstests) und PromptLayer (Prompt-Versionierung und Analysen). Für manuelle Iterationen reicht eine Tabelle, die Prompt-Version, Eingabe, Ausgabe und Bestehen/Nichtbestehen der Kriterien protokolliert, für die meisten Einzelaufgaben aus.' } },
-          { '@type': 'Question', name: 'Wie optimiere ich einen System-Prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Die Optimierung von System-Prompts folgt demselben 6-Schritte-Prozess wie die Optimierung von User-Prompts, mit zwei zusätzlichen Einschränkungen. Erstens: System-Prompts bleiben über alle Gesprächsrunden erhalten – eine zu spezifische Anweisung kann die Leistung bei nicht vorhergesehenen Eingaben verschlechtern. Teste über 5–10 diverse repräsentative Eingaben, nicht nur eine. Zweitens: Die Länge des System-Prompts ist wichtig: Sehr lange System-Prompts (>2.000 Tokens) können bei einigen Modellen (insbesondere GPT-5.6) die Befehlsbefolgung bei späteren Benutzeranfragen beeinträchtigen. Optimiere auf Prägnanz: Jede Anweisung im System-Prompt muss notwendig sein.' } },
-          { '@type': 'Question', name: 'Kann man ChatGPT zur Prompt-Optimierung nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Du kannst GPT-5.6 bitten, einen Prompt umzuschreiben, indem du den fehlerhaften Prompt und das Fehlermuster beschreibst: „Dieser Prompt produziert zu vage Ausgaben. Schreibe ihn um, sodass er eine strukturierte 3-Punkte-Antwort erfordert." Dies ist eine Form von Meta-Prompting – das Modell nutzen, um seine eigenen Eingaben zu verbessern. Die Einschränkung: GPT-5.6 optimiert für das, was es für besser hält, nicht unbedingt für deine spezifischen Evaluierungskriterien. Teste den umgeschriebenen Prompt immer mit echten Eingaben und miss ihn an deinen tatsächlichen Bestehen/Nichtbestehen-Kriterien.' } },
-          { '@type': 'Question', name: 'Was ist Prompt-Optimierung im maschinellen Lernen?', acceptedAnswer: { '@type': 'Answer', text: 'Im Kontext des maschinellen Lernens bezieht sich Prompt-Optimierung auf Techniken, die die in Sprachmodelle eingespeisten Prompts als Teil einer Pipeline verbessern – ohne das Modell neu zu trainieren. Dies umfasst sowohl diskrete Prompt-Optimierung (Umschreiben von natürlichsprachlichen Anweisungen) als auch kontinuierliches Prompt-Tuning (Lernen von Soft-Token-Einbettungen durch Gradientenabstieg). In Produktions-ML-Systemen ist Prompt-Optimierung typischerweise Teil der Inferenzpipeline: Der Prompt wird als Hyperparameter behandelt, der gegen einen zurückgehaltenen Evaluierungssatz abgestimmt wird, analog zur Lernratenauswahl beim Modelltraining.' } },
-          { '@type': 'Question', name: 'Wie stark verbessert Prompt-Optimierung die KI-Ausgabequalität?', acceptedAnswer: { '@type': 'Answer', text: 'Der Verbesserungsbereich hängt davon ab, wie schlecht der Ausgangs-Prompt optimiert ist. In kontrollierten Auswertungen verbessert der Wechsel von einem nicht optimierten zu einem gut optimierten Prompt die Aufgabengenauigkeit typischerweise um 20–40 % bei strukturierten Aufgaben (Klassifizierung, Extraktion, JSON-Generierung) und 15–25 % bei offenen Aufgaben (Zusammenfassung, Analyse). Die größten Gewinne kommen von der Angabe des Ausgabeformats (eliminiert Format-Nichtkonformität vollständig) und dem Hinzufügen von 1–2 Few-Shot-Beispielen (reduziert Halluzinationen bei strukturierten Ausgaben). Der Schulhoff et al. 2024 Prompt Report dokumentiert konsistente Gewinne von 10–30 % über 58 bewertete Prompting-Techniken.' } },
-          { '@type': 'Question', name: 'Sollte ich Prompts für jedes KI-Modell separat optimieren?', acceptedAnswer: { '@type': 'Answer', text: 'Beginne mit einer modellunabhängigen Optimierung – wende die 6 Hebel (Spezifität, Kontext, Beispiele, Einschränkungen, Ausgabeformat, Rolle) an und teste bei GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro. Ein gut strukturierter Prompt funktioniert typischerweise bei allen drei gut. Füge modellspezifische Varianten nur dann hinzu, wenn modellübergreifende Tests divergierende Ergebnisse zeigen. Häufige modellspezifische Anpassungen: Claude verarbeitet längere mehrteilige System-Prompts gut; GPT-5.6 profitiert von expliziten JSON-Formatanfragen; Gemini 3.1 Pro profitiert von expliziten Abschnittsüberschriften bei langen Dokumentenaufgaben. Halte modellspezifische Varianten in einer Prompt-Bibliothek mit Versionshinweisen.' } },
-          { '@type': 'Question', name: 'Was ist der Unterschied zwischen Prompt-Optimierung und RAG?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Optimierung verbessert die Anweisungen und Struktur eines Prompts. Retrieval-Augmented Generation (RAG) verbessert die dem Modell zur Inferenzzeit verfügbaren Informationen, indem relevante Dokumente abgerufen und in den Prompt-Kontext eingefügt werden. Beide sind komplementär: RAG löst das Problem, dass das Modell nicht die richtigen Fakten hat; Prompt-Optimierung löst das Problem, dass das Modell diese Fakten nicht korrekt verarbeitet. Eine vollständig optimierte RAG-Pipeline erfordert beides: gutes Retrieval (die richtigen Dokumente werden abgerufen) und einen gut optimierten Prompt (das Modell wird angewiesen, nur den abgerufenen Inhalt zu verwenden).' } },
-          { '@type': 'Question', name: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum selbst erfordert keine Registrierung und sendet standardmäßig keine Daten an eigene Server. Bei der Nutzung von Cloud-KI-APIs (OpenAI, Anthropic, Google) über PromptQuorum gelten die jeweiligen Datenverarbeitungsverträge gemäß DSGVO Art. 28. Für Unternehmen empfiehlt das BSI-Grundschutz-Kompendium die Evaluierung von KI-Tools anhand der Schutzziele Vertraulichkeit, Integrität und Verfügbarkeit. Lokale Modelle über Ollama oder LM Studio erfüllen Datenschutzanforderungen vollständig, da keine Daten das Unternehmensnetz verlassen.' } },
-          { '@type': 'Question', name: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. PromptQuorum ist besonders für mittelständische Unternehmen geeignet, die KI-Prompts ohne eigene KI-Infrastruktur systematisch verbessern möchten. Die Unterstützung lokaler Modelle (Ollama, LM Studio) ermöglicht datenschutzkonforme Nutzung ohne Cloud-Abhängigkeit. Für DACH-Unternehmen, die BSI-IT-Grundschutz-konforme Lösungen benötigen, bieten lokale Inferenz mit quantisierten Modellen wie Llama 4 oder Mistral Large eine geprüfte Alternative zu Cloud-KI-Diensten.' } },
+          {
+            '@type': 'Question',
+            'name': 'Was ist Prompt-Optimierung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der KI-Ausgabequalität für eine spezifische Aufgabe. Es beinhaltet die Identifizierung eines Fehlermodus (falsches Format, Halluzination, vage Ausgabe), das Ändern einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat oder Rolle) und das Testen des Ergebnisses über Modelle wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Unterschied zwischen Prompt-Optimierung und Prompt-Engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Prompt-Engineering ist die Disziplin des Designs einer Prompt-Struktur von Grund auf mit Bausteinen wie Ziel, Kontext und Ausgabeformat. Prompt-Optimierung ist der iterative Subprozess der Verbesserung eines bereits geschriebenen Prompts durch Diagnose von Fehlermodi und Anwendung gezielter Änderungen. Du brauchst Prompt-Engineering, um einen Ausgangspunkt zu schaffen; du verwendest Prompt-Optimierung, um ihn zu verfeinern.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viele Iterationen braucht es, um einen Prompt zu optimieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für die meisten Aufgaben reichen 2–4 gezielte Iterationen, um von einem fehlgeschlagenen Prompt zu einem zuverlässigen zu gelangen. Jede Iteration sollte eine Variable ändern und auf 3–5 repräsentativen Eingaben getestet werden. Abnehmende Erträge setzen nach 5–6 Iterationen ein — wenn ein Prompt sich bis dahin nicht stabilisiert hat, könnte die Aufgabendefinition selbst überarbeitet werden müssen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welchen Hebel sollte ich zuerst ändern, wenn ich einen Prompt optimiere?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Beginne mit dem Ausgabeformat. Format-Nicht-Einhaltung — ein Absatz statt einer Tabelle zu erhalten oder Klartext wenn du JSON brauchst — ist der häufigste und schnellste Fehlermodus zu beheben. Spezifiziere die genaue Struktur, die du willst, dann bearbeite andere Probleme (Genauigkeit, Ton, Umfang) in nachfolgenden Iterationen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert Prompt-Optimierung über alle KI-Modelle?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, aber mit modellspezifischen Anpassungen. Die sechs Kern-Optimierungshebel (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat, Rolle) gelten für GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Mistral Large. Allerdings reagiert jedes Modell unterschiedlich auf Anweisungsdichte — Claude handhabt längere mehrteilige Anweisungen besser; GPT-5.6 reagiert gut auf strukturierte System-Prompts; Gemini profitiert von expliziten Abschnittsüberschriften.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der häufigste Prompt-Optimierungsfehler?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Das gleichzeitige Ändern mehrerer Variablen. Wenn du Beispiele hinzufügst, das Ausgabeformat änderst und eine Rollenanweisung in derselben Überarbeitung hinzufügst, kannst du nicht feststellen, welche Änderung sich verbessert (oder verschlechtert) hat. Effektive Optimierung ändert eine Variable pro Iteration.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann Prompt-Optimierung KI-Halluzinationen reduzieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, mit den richtigen Techniken. Das Hinzufügen von Grundlagen-Kontext („Basiere deine Antwort nur auf dem folgenden Dokument"), Few-Shot-Beispiele mit faktisch korrekten Ausgaben und explizite Beschränkungen („Erfinde keine Zahlen — verwende nur Daten aus dem bereitgestellten Text") reduzieren zuverlässig Halluzinations-Raten. Self-Consistency-Prompting — das Generieren mehrerer Ausgaben und Zurückgeben der häufigsten — reduziert weiter niedrig-wahrscheinliche Erfindungen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollte ich Fine-Tuning statt Prompt-Optimierung verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwende Fine-Tuning, wenn Prompt-Optimierung ein Plafond erreicht hat — typischerweise wenn das erforderliche Verhalten hochgradig domänenspezifisch ist, konsistente stilistische Stimme über Tausende von Ausgaben benötigt, oder abhängig ist von Wissen, das nicht in der Basis-Trainierung des Modells enthalten ist. Prompt-Optimierung ist schneller und günstiger und sollte immer vor Fine-Tuning ausgeschöpft werden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Woher weiß ich, wenn ein Prompt vollständig optimiert ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein Prompt ist ausreichend optimiert, wenn er: (1) korrekte Ausgabe auf 4–5 repräsentativen Eingaben erzeugt, (2) konsistente Ausgabe bei Neu-Läufen erzeugt, (3) über mindestens zwei Modelle funktioniert (z.B. GPT-5.6 und Claude), und (4) die Format-Spezifikation ohne Nach-Verarbeitung erfüllt. Perfekte Prompts existieren nicht — „optimiert" bedeutet zuverlässig genug für den Anwendungsfall.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Gilt Prompt-Optimierung für Bild-Prompts (Text-zu-Bild)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die Grundsätze gelten — Spezifität, Beschränkungen und Beispiele (Referenzbilder) sind alle gültige Hebel für Bildmodelle wie DALL-E 3 und Stable Diffusion. Allerdings unterscheiden sich die Mechaniken: Bildmodelle reagieren auf Style-Modifizierer, Seitenverhältnisse und negative Prompts als Beschränkungen. Der Optimierungsprozess (Basis → Diagnose → eine Variable ändern → Testen) ist identisch.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist automatische Prompt-Optimierung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Automatische Prompt-Optimierung verwendet ein zweites KI-Modell (oder dasselbe Modell in einer Meta-Prompting-Schleife), um Prompts ohne menschliches Eingreifen umzuschreiben und zu verbessern. Tools wie DSPy (Stanford), TextGrad und APE (Automatic Prompt Engineer) generieren Kandidaten-Prompts, bewerten sie gegen eine Metrik (Genauigkeit, Format-Einhaltung, Benutzer-Rating) und wählen die beste Variante. Manuelle Optimierung ist schneller für gut verstandene Aufgaben; automatische Optimierung skaliert besser, wenn du markierte Evaluierungs-Daten hast und Hunderte von Varianten testen musst.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie unterscheidet sich Prompt-Optimierung von Prompt Tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Prompt-Optimierung verbessert diskrete Text-Prompts — die Anweisungen, die du in natürlicher Sprache schreibst — ohne Modellgewichte zu ändern. Prompt Tuning (eingeführt von Lester et al., 2021) lernt kontinuierliche Soft-Prompt-Vektoren, die der Eingabe vorgestellt und durch Gradientenabstieg neben oder statt des Modells trainiert werden. Prompt Tuning erfordert Rechenleistung und Trainingsdaten; Prompt-Optimierung erfordert keines von beiden. Für die meisten Produktionsanwendungsfälle optimieren Sie zunächst diskrete Prompts und ziehen Prompt Tuning erst in Betracht, wenn eine harte Qualitätsgrenze erreicht wurde.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was sind die besten Tools für Prompt-Optimierung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die am häufigsten verwendeten Tools sind: PromptQuorum (einen Prompt an GPT-5.6, Claude und Gemini gleichzeitig versenden für die Vergleichsanalyse), DSPy (programmgesteuerte Prompt-Optimierung mit automatischer metrik-basierter Auswahl), LangSmith (Prompt-Versionierung, A/B-Tests und Tracing für LangChain-Pipelines), Promptfoo (Open-Source-CLI zum Ausführen von Prompts gegen Testfälle und Regressionstests) und PromptLayer (Prompt-Versionierung und Analytik). Für manuelle Iteration genügt eine Tabelle, die Prompt-Version, Eingabe, Ausgabe und Bestanden/Fehlgeschlagen gegen Kriterien protokolliert, für die meisten einteiligen Optimierungsarbeiten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie optimiere ich einen System-Prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'System-Prompt-Optimierung folgt dem gleichen 6-Schritte-Prozess wie Benutzer-Prompt-Optimierung mit zwei zusätzlichen Einschränkungen. Erstens, System-Prompts bleiben über alle Wendungen erhalten — eine zu spezifische Anweisung kann die Leistung bei Eingaben, die du nicht erwartet hast, beeinträchtigen. Testen Sie über 5–10 vielfältige repräsentative Eingaben, nicht nur eine. Zweitens ist die System-Prompt-Länge wichtig: sehr lange System-Prompts (>2.000 Tokens) können die Anweisung-Befolgung in späteren Benutzer-Wendungen auf einigen Modellen (insbesondere GPT-5.6) reduzieren. Optimieren Sie für Kürze: jede Anweisung in dem System-Prompt sollte notwendig sein. Entfernen Sie alle Anweisungen, die die Ausgabe auf Ihrem Testsatz nicht ändern.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ChatGPT zur Prompt-Optimierung nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Sie können GPT-5.6 bitten, einen Prompt umzuschreiben, indem Sie den fehlgeschlagenen Prompt und die Fehlermodus-Beschreibung bereitstellen: „Dieser Prompt erzeugt Ausgaben, die zu vage sind. Schreibe ihn um, um eine 3-Punkte-strukturierte Antwort zu erfordern." Dies ist eine Form des Meta-Promptings — das Modell verwenden, um seine eigenen Eingaben zu verbessern. Die Einschränkung ist, dass GPT-5.6 für das optimieren wird, was es für besser hält, nicht unbedingt, was Ihre spezifischen Evaluierungskriterien erfordern. Testen Sie immer den umgeschriebenen Prompt auf echten Eingaben und messen Sie gegen Ihre tatsächlichen Bestanden/Fehlgeschlagen-Kriterien, bevor Sie die Überarbeitung akzeptieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was bedeutet Prompt-Optimierung im Machine-Learning-Kontext?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Im Machine-Learning-Kontext bezieht sich Prompt-Optimierung auf Techniken, die die Prompts verbessern, die in ein Sprachmodell als Teil einer Pipeline eingehen — ohne das Modell selbst umzuschulen. Dies umfasst sowohl diskrete Prompt-Optimierung (Umschreiben natürlichsprachiger Anweisungen) als auch kontinuierliche Prompt-Abstimmung (Erlernen von Soft-Token-Einbettungen durch Gradientenabstieg). In ML-Produktionssystemen ist Prompt-Optimierung typischerweise Teil der Inferenz-Pipeline: der Prompt wird als Hyperparameter behandelt, der gegen einen einbehaltenen Evaluierungssatz optimiert wird, ähnlich wie bei der Lernraten-Auswahl beim Modelltraining.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viel verbessert Prompt-Optimierung die Ausgabequalität?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der Verbesserungsbereich hängt von der Ausgangssituation des nicht optimierten Prompts ab. In gesteuerten Bewertungen führt das Verschieben von einem nicht optimierten Prompt zu einem gut optimierten Prompt typischerweise zu einer Verbesserung der Aufgabengenauigkeit um 20–40 % auf strukturierten Aufgaben (Klassifizierung, Extraktion, JSON-Generierung) und 15–25 % auf offene Aufgaben (Zusammenfassung, Analyse). Die größten Gewinne ergeben sich aus der Angabe des Ausgabeformats (Beseitigung der Format-Nicht-Einhaltung völlig) und dem Hinzufügen von 1–2 Few-Shot-Beispielen (Reduzierung der Halluzination bei strukturierten Ausgaben). Der Schulhoff et al. 2024 Prompt Report dokumentiert konsistente Gewinne von 10–30 % über 58 Prompting-Techniken, die über mehrere Modelle ausgewertet wurden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich Prompts für jedes Modell separat optimieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Beginnen Sie mit einer modellunabhängigen Optimierung — wenden Sie die 6 Hebel (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat, Rolle) an und testen Sie auf GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro. Ein gut strukturierter Prompt funktioniert typischerweise gut über alle drei. Fügen Sie nur modellspezifische Varianten hinzu, wenn übergreifende Tests divergente Ergebnisse zeigen. Häufige modellspezifische Anpassungen: Claude handhabt längere mehrteilige System-Prompts gut; GPT-5.6 profitiert von expliziten JSON-Format-Anfragen; Gemini 3.1 Pro profitiert von expliziten Abschnittsüberschriften in Aufgaben mit langen Dokumenten. Führen Sie modellspezifische Varianten in einer Prompt-Bibliothek mit Versions-Notizen auf.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Unterschied zwischen Prompt-Optimierung und RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Prompt-Optimierung verbessert die Anweisungen und die Struktur eines Prompts. Retrieval-Augmented Generation (RAG) verbessert die Informationen, die dem Modell zur Inferenzzeit zur Verfügung stehen, indem relevante Dokumente abgerufen und in den Prompt-Kontext eingefügt werden. Die zwei sind sich ergänzend: RAG löst das Problem, dass das Modell nicht die richtigen Fakten hat; Prompt-Optimierung löst das Problem, dass das Modell diese Fakten nicht richtig verarbeitet. Eine vollständig optimierte RAG-Pipeline erfordert sowohl gutes Abrufen (die richtigen Dokumente werden abgerufen) als auch einen gut optimierten Prompt (das Modell wird angewiesen, nur den abgerufenen Inhalt zu verwenden, Quellen zu zitieren und die Antwort korrekt zu formatieren).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie optimiere ich Prompts speziell für GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6 reagiert gut auf vier Optimierungsbewegungen: (1) Explizite JSON-Format-Anfragen im System-Prompt — GPT-5.6\'s Anweisungs-Befolgung bei strukturierter Ausgabe ist stark, wenn das Schema präzise definiert ist. (2) Markdown-Header in System-Prompts — verwenden Sie H2-Abschnitte (## Rolle, ## Aufgabe, ## Ausgabeformat) zur Trennung von Bedenken; GPT-5.6 beachtet diese Struktur zuverlässig. (3) Enge Beschränkungen — GPT-5.6 neigt dazu, ohne Wort-/Längenbeschränkungen zu viel zu erklären; fügen Sie „antworte in ≤150 Wörtern" oder „geben Sie nur das JSON-Objekt zurück, keine Erklärung" hinzu. (4) Tool-Use-Framing — für Aufgaben mit Abruf oder Berechnung formulieren Sie den Prompt als Funktionsdefinition statt einer Prosa-Anweisung, wenn Sie die Assistants-API mit aktivierten Tools verwenden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum selbst erfordert keine Registrierung und sendet standardmäßig keine Daten an eigene Server. Bei der Nutzung von Cloud-KI-APIs (OpenAI, Anthropic, Google) über PromptQuorum gelten die jeweiligen Datenverarbeitungsverträge gemäß DSGVO Art. 28. Für Unternehmen empfiehlt das BSI-Grundschutz-Kompendium die Evaluierung von KI-Tools anhand der Schutzziele Vertraulichkeit, Integrität und Verfügbarkeit. Lokale Modelle über Ollama oder LM Studio erfüllen Datenschutzanforderungen vollständig, da keine Daten das Unternehmensnetz verlassen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. PromptQuorum ist besonders für mittelständische Unternehmen geeignet, die KI-Prompts ohne eigene KI-Infrastruktur systematisch verbessern möchten. Die Unterstützung lokaler Modelle (Ollama, LM Studio) ermöglicht datenschutzkonforme Nutzung ohne Cloud-Abhängigkeit. Für DACH-Unternehmen, die BSI-IT-Grundschutz-konforme Lösungen benötigen, bieten lokale Inferenz mit quantisierten Modellen wie Llama 4 oder Mistral Large eine geprüfte Alternative zu Cloud-KI-Diensten.',
+            },
+          },
         ],
       },
       sections: {
@@ -951,86 +1106,28 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'FAQ: Prompt-Optimierung',
           faqs: [
-            {
-              q: 'Was ist Prompt-Optimierung?',
-              a: 'Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der KI-Ausgabequalität für eine spezifische Aufgabe. Es beinhaltet die Identifizierung eines Fehlermodus (falsches Format, Halluzination, vage Ausgabe), das Ändern einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat oder Rolle) und das Testen des Ergebnisses über Modelle wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro.',
-            },
-            {
-              q: 'Was ist der Unterschied zwischen Prompt-Optimierung und Prompt-Engineering?',
-              a: 'Prompt-Engineering ist die Disziplin des Designs einer Prompt-Struktur von Grund auf mit Bausteinen wie Ziel, Kontext und Ausgabeformat. Prompt-Optimierung ist der iterative Subprozess der Verbesserung eines bereits geschriebenen Prompts durch Diagnose von Fehlermodi und Anwendung gezielter Änderungen. Du brauchst Prompt-Engineering, um einen Ausgangspunkt zu schaffen; du verwendest Prompt-Optimierung, um ihn zu verfeinern.',
-            },
-            {
-              q: 'Wie viele Iterationen braucht es, um einen Prompt zu optimieren?',
-              a: 'Für die meisten Aufgaben reichen 2–4 gezielte Iterationen, um von einem fehlgeschlagenen Prompt zu einem zuverlässigen zu gelangen. Jede Iteration sollte eine Variable ändern und auf 3–5 repräsentativen Eingaben getestet werden. Abnehmende Erträge setzen nach 5–6 Iterationen ein — wenn ein Prompt sich bis dahin nicht stabilisiert hat, könnte die Aufgabendefinition selbst überarbeitet werden müssen.',
-            },
-            {
-              q: 'Welchen Hebel sollte ich zuerst ändern, wenn ich einen Prompt optimiere?',
-              a: 'Beginne mit dem Ausgabeformat. Format-Nicht-Einhaltung — ein Absatz statt einer Tabelle zu erhalten oder Klartext wenn du JSON brauchst — ist der häufigste und schnellste Fehlermodus zu beheben. Spezifiziere die genaue Struktur, die du willst, dann bearbeite andere Probleme (Genauigkeit, Ton, Umfang) in nachfolgenden Iterationen.',
-            },
-            {
-              q: 'Funktioniert Prompt-Optimierung über alle KI-Modelle?',
-              a: 'Ja, aber mit modellspezifischen Anpassungen. Die sechs Kern-Optimierungshebel (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat, Rolle) gelten für GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Mistral Large. Allerdings reagiert jedes Modell unterschiedlich auf Anweisungsdichte — Claude handhabt längere mehrteilige Anweisungen besser; GPT-5.6 reagiert gut auf strukturierte System-Prompts; Gemini profitiert von expliziten Abschnittsüberschriften.',
-            },
-            {
-              q: 'Was ist der häufigste Prompt-Optimierungsfehler?',
-              a: 'Das gleichzeitige Ändern mehrerer Variablen. Wenn du Beispiele hinzufügst, das Ausgabeformat änderst und eine Rollenanweisung in derselben Überarbeitung hinzufügst, kannst du nicht feststellen, welche Änderung sich verbessert (oder verschlechtert) hat. Effektive Optimierung ändert eine Variable pro Iteration.',
-            },
-            {
-              q: 'Kann Prompt-Optimierung KI-Halluzinationen reduzieren?',
-              a: 'Ja, mit den richtigen Techniken. Das Hinzufügen von Grundlagen-Kontext („Basiere deine Antwort nur auf dem folgenden Dokument"), Few-Shot-Beispiele mit faktisch korrekten Ausgaben und explizite Beschränkungen („Erfinde keine Zahlen — verwende nur Daten aus dem bereitgestellten Text") reduzieren zuverlässig Halluzinations-Raten. Self-Consistency-Prompting — das Generieren mehrerer Ausgaben und Zurückgeben der häufigsten — reduziert weiter niedrig-wahrscheinliche Erfindungen.',
-            },
-            {
-              q: 'Wann sollte ich Fine-Tuning statt Prompt-Optimierung verwenden?',
-              a: 'Verwende Fine-Tuning, wenn Prompt-Optimierung ein Plafond erreicht hat — typischerweise wenn das erforderliche Verhalten hochgradig domänenspezifisch ist, konsistente stilistische Stimme über Tausende von Ausgaben benötigt, oder abhängig ist von Wissen, das nicht in der Basis-Trainierung des Modells enthalten ist. Prompt-Optimierung ist schneller und günstiger und sollte immer vor Fine-Tuning ausgeschöpft werden.',
-            },
-            {
-              q: 'Woher weiß ich, wenn ein Prompt vollständig optimiert ist?',
-              a: 'Ein Prompt ist ausreichend optimiert, wenn er: (1) korrekte Ausgabe auf 4–5 repräsentativen Eingaben erzeugt, (2) konsistente Ausgabe bei Neu-Läufen erzeugt, (3) über mindestens zwei Modelle funktioniert (z.B. GPT-5.6 und Claude), und (4) die Format-Spezifikation ohne Nach-Verarbeitung erfüllt. Perfekte Prompts existieren nicht — „optimiert" bedeutet zuverlässig genug für den Anwendungsfall.',
-            },
-            {
-              q: 'Gilt Prompt-Optimierung für Bild-Prompts (Text-zu-Bild)?',
-              a: 'Die Grundsätze gelten — Spezifität, Beschränkungen und Beispiele (Referenzbilder) sind alle gültige Hebel für Bildmodelle wie DALL-E 3 und Stable Diffusion. Allerdings unterscheiden sich die Mechaniken: Bildmodelle reagieren auf Style-Modifizierer, Seitenverhältnisse und negative Prompts als Beschränkungen. Der Optimierungsprozess (Basis → Diagnose → eine Variable ändern → Testen) ist identisch.',
-            },
-            {
-              q: 'Was ist automatische Prompt-Optimierung?',
-              a: 'Automatische Prompt-Optimierung verwendet ein zweites KI-Modell (oder dasselbe Modell in einer Meta-Prompting-Schleife), um Prompts ohne menschliches Eingreifen umzuschreiben und zu verbessern. Tools wie DSPy (Stanford), TextGrad und APE (Automatic Prompt Engineer) generieren Kandidaten-Prompts, bewerten sie gegen eine Metrik (Genauigkeit, Format-Einhaltung, Benutzer-Rating) und wählen die beste Variante. Manuelle Optimierung ist schneller für gut verstandene Aufgaben; automatische Optimierung skaliert besser, wenn du markierte Evaluierungs-Daten hast und Hunderte von Varianten testen musst.',
-            },
-            {
-              q: 'Wie unterscheidet sich Prompt-Optimierung von Prompt Tuning?',
-              a: 'Prompt-Optimierung verbessert diskrete Text-Prompts — die Anweisungen, die du in natürlicher Sprache schreibst — ohne Modellgewichte zu ändern. Prompt Tuning (eingeführt von Lester et al., 2021) lernt kontinuierliche Soft-Prompt-Vektoren, die der Eingabe vorgestellt und durch Gradientenabstieg neben oder statt des Modells trainiert werden. Prompt Tuning erfordert Rechenleistung und Trainingsdaten; Prompt-Optimierung erfordert keines von beiden. Für die meisten Produktionsanwendungsfälle optimieren Sie zunächst diskrete Prompts und ziehen Prompt Tuning erst in Betracht, wenn eine harte Qualitätsgrenze erreicht wurde.',
-            },
-            {
-              q: 'Was sind die besten Tools für Prompt-Optimierung?',
-              a: 'Die am häufigsten verwendeten Tools sind: PromptQuorum (einen Prompt an GPT-5.6, Claude und Gemini gleichzeitig versenden für die Vergleichsanalyse), DSPy (programmgesteuerte Prompt-Optimierung mit automatischer metrik-basierter Auswahl), LangSmith (Prompt-Versionierung, A/B-Tests und Tracing für LangChain-Pipelines), Promptfoo (Open-Source-CLI zum Ausführen von Prompts gegen Testfälle und Regressionstests) und PromptLayer (Prompt-Versionierung und Analytik). Für manuelle Iteration genügt eine Tabelle, die Prompt-Version, Eingabe, Ausgabe und Bestanden/Fehlgeschlagen gegen Kriterien protokolliert, für die meisten einteiligen Optimierungsarbeiten.',
-            },
-            {
-              q: 'Wie optimiere ich einen System-Prompt?',
-              a: 'System-Prompt-Optimierung folgt dem gleichen 6-Schritte-Prozess wie Benutzer-Prompt-Optimierung mit zwei zusätzlichen Einschränkungen. Erstens, System-Prompts bleiben über alle Wendungen erhalten — eine zu spezifische Anweisung kann die Leistung bei Eingaben, die du nicht erwartet hast, beeinträchtigen. Testen Sie über 5–10 vielfältige repräsentative Eingaben, nicht nur eine. Zweitens ist die System-Prompt-Länge wichtig: sehr lange System-Prompts (>2.000 Tokens) können die Anweisung-Befolgung in späteren Benutzer-Wendungen auf einigen Modellen (insbesondere GPT-5.6) reduzieren. Optimieren Sie für Kürze: jede Anweisung in dem System-Prompt sollte notwendig sein. Entfernen Sie alle Anweisungen, die die Ausgabe auf Ihrem Testsatz nicht ändern.',
-            },
-            {
-              q: 'Kann ich ChatGPT zur Prompt-Optimierung nutzen?',
-              a: 'Ja. Sie können GPT-5.6 bitten, einen Prompt umzuschreiben, indem Sie den fehlgeschlagenen Prompt und die Fehlermodus-Beschreibung bereitstellen: „Dieser Prompt erzeugt Ausgaben, die zu vage sind. Schreibe ihn um, um eine 3-Punkte-strukturierte Antwort zu erfordern." Dies ist eine Form des Meta-Promptings — das Modell verwenden, um seine eigenen Eingaben zu verbessern. Die Einschränkung ist, dass GPT-5.6 für das optimieren wird, was es für besser hält, nicht unbedingt, was Ihre spezifischen Evaluierungskriterien erfordern. Testen Sie immer den umgeschriebenen Prompt auf echten Eingaben und messen Sie gegen Ihre tatsächlichen Bestanden/Fehlgeschlagen-Kriterien, bevor Sie die Überarbeitung akzeptieren.',
-            },
-            {
-              q: 'Was bedeutet Prompt-Optimierung im Machine-Learning-Kontext?',
-              a: 'Im Machine-Learning-Kontext bezieht sich Prompt-Optimierung auf Techniken, die die Prompts verbessern, die in ein Sprachmodell als Teil einer Pipeline eingehen — ohne das Modell selbst umzuschulen. Dies umfasst sowohl diskrete Prompt-Optimierung (Umschreiben natürlichsprachiger Anweisungen) als auch kontinuierliche Prompt-Abstimmung (Erlernen von Soft-Token-Einbettungen durch Gradientenabstieg). In ML-Produktionssystemen ist Prompt-Optimierung typischerweise Teil der Inferenz-Pipeline: der Prompt wird als Hyperparameter behandelt, der gegen einen einbehaltenen Evaluierungssatz optimiert wird, ähnlich wie bei der Lernraten-Auswahl beim Modelltraining.',
-            },
-            {
-              q: 'Wie viel verbessert Prompt-Optimierung die Ausgabequalität?',
-              a: 'Der Verbesserungsbereich hängt von der Ausgangssituation des nicht optimierten Prompts ab. In gesteuerten Bewertungen führt das Verschieben von einem nicht optimierten Prompt zu einem gut optimierten Prompt typischerweise zu einer Verbesserung der Aufgabengenauigkeit um 20–40 % auf strukturierten Aufgaben (Klassifizierung, Extraktion, JSON-Generierung) und 15–25 % auf offene Aufgaben (Zusammenfassung, Analyse). Die größten Gewinne ergeben sich aus der Angabe des Ausgabeformats (Beseitigung der Format-Nicht-Einhaltung völlig) und dem Hinzufügen von 1–2 Few-Shot-Beispielen (Reduzierung der Halluzination bei strukturierten Ausgaben). Der Schulhoff et al. 2024 Prompt Report dokumentiert konsistente Gewinne von 10–30 % über 58 Prompting-Techniken, die über mehrere Modelle ausgewertet wurden.',
-            },
-            {
-              q: 'Sollte ich Prompts für jedes Modell separat optimieren?',
-              a: 'Beginnen Sie mit einer modellunabhängigen Optimierung — wenden Sie die 6 Hebel (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat, Rolle) an und testen Sie auf GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro. Ein gut strukturierter Prompt funktioniert typischerweise gut über alle drei. Fügen Sie nur modellspezifische Varianten hinzu, wenn übergreifende Tests divergente Ergebnisse zeigen. Häufige modellspezifische Anpassungen: Claude handhabt längere mehrteilige System-Prompts gut; GPT-5.6 profitiert von expliziten JSON-Format-Anfragen; Gemini 3.1 Pro profitiert von expliziten Abschnittsüberschriften in Aufgaben mit langen Dokumenten. Führen Sie modellspezifische Varianten in einer Prompt-Bibliothek mit Versions-Notizen auf.',
-            },
-            {
-              q: 'Was ist der Unterschied zwischen Prompt-Optimierung und RAG?',
-              a: 'Prompt-Optimierung verbessert die Anweisungen und die Struktur eines Prompts. Retrieval-Augmented Generation (RAG) verbessert die Informationen, die dem Modell zur Inferenzzeit zur Verfügung stehen, indem relevante Dokumente abgerufen und in den Prompt-Kontext eingefügt werden. Die zwei sind sich ergänzend: RAG löst das Problem, dass das Modell nicht die richtigen Fakten hat; Prompt-Optimierung löst das Problem, dass das Modell diese Fakten nicht richtig verarbeitet. Eine vollständig optimierte RAG-Pipeline erfordert sowohl gutes Abrufen (die richtigen Dokumente werden abgerufen) als auch einen gut optimierten Prompt (das Modell wird angewiesen, nur den abgerufenen Inhalt zu verwenden, Quellen zu zitieren und die Antwort korrekt zu formatieren).',
-            },
-            {
-              q: 'Wie optimiere ich Prompts speziell für GPT-5.6?',
-              a: 'GPT-5.6 reagiert gut auf vier Optimierungsbewegungen: (1) Explizite JSON-Format-Anfragen im System-Prompt — GPT-5.6\'s Anweisungs-Befolgung bei strukturierter Ausgabe ist stark, wenn das Schema präzise definiert ist. (2) Markdown-Header in System-Prompts — verwenden Sie H2-Abschnitte (## Rolle, ## Aufgabe, ## Ausgabeformat) zur Trennung von Bedenken; GPT-5.6 beachtet diese Struktur zuverlässig. (3) Enge Beschränkungen — GPT-5.6 neigt dazu, ohne Wort-/Längenbeschränkungen zu viel zu erklären; fügen Sie „antworte in ≤150 Wörtern" oder „geben Sie nur das JSON-Objekt zurück, keine Erklärung" hinzu. (4) Tool-Use-Framing — für Aufgaben mit Abruf oder Berechnung formulieren Sie den Prompt als Funktionsdefinition statt einer Prosa-Anweisung, wenn Sie die Assistants-API mit aktivierten Tools verwenden.',
-            },
+            { q: 'Was ist Prompt-Optimierung?', a: 'Prompt-Optimierung ist der iterative Prozess der Überarbeitung eines Prompts zur Verbesserung der KI-Ausgabequalität für eine spezifische Aufgabe. Es beinhaltet die Identifizierung eines Fehlermodus (falsches Format, Halluzination, vage Ausgabe), das Ändern einer Variable (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat oder Rolle) und das Testen des Ergebnisses über Modelle wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro.' },
+            { q: 'Was ist der Unterschied zwischen Prompt-Optimierung und Prompt-Engineering?', a: 'Prompt-Engineering ist die Disziplin des Designs einer Prompt-Struktur von Grund auf mit Bausteinen wie Ziel, Kontext und Ausgabeformat. Prompt-Optimierung ist der iterative Subprozess der Verbesserung eines bereits geschriebenen Prompts durch Diagnose von Fehlermodi und Anwendung gezielter Änderungen. Du brauchst Prompt-Engineering, um einen Ausgangspunkt zu schaffen; du verwendest Prompt-Optimierung, um ihn zu verfeinern.' },
+            { q: 'Wie viele Iterationen braucht es, um einen Prompt zu optimieren?', a: 'Für die meisten Aufgaben reichen 2–4 gezielte Iterationen, um von einem fehlgeschlagenen Prompt zu einem zuverlässigen zu gelangen. Jede Iteration sollte eine Variable ändern und auf 3–5 repräsentativen Eingaben getestet werden. Abnehmende Erträge setzen nach 5–6 Iterationen ein — wenn ein Prompt sich bis dahin nicht stabilisiert hat, könnte die Aufgabendefinition selbst überarbeitet werden müssen.' },
+            { q: 'Welchen Hebel sollte ich zuerst ändern, wenn ich einen Prompt optimiere?', a: 'Beginne mit dem Ausgabeformat. Format-Nicht-Einhaltung — ein Absatz statt einer Tabelle zu erhalten oder Klartext wenn du JSON brauchst — ist der häufigste und schnellste Fehlermodus zu beheben. Spezifiziere die genaue Struktur, die du willst, dann bearbeite andere Probleme (Genauigkeit, Ton, Umfang) in nachfolgenden Iterationen.' },
+            { q: 'Funktioniert Prompt-Optimierung über alle KI-Modelle?', a: 'Ja, aber mit modellspezifischen Anpassungen. Die sechs Kern-Optimierungshebel (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat, Rolle) gelten für GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Mistral Large. Allerdings reagiert jedes Modell unterschiedlich auf Anweisungsdichte — Claude handhabt längere mehrteilige Anweisungen besser; GPT-5.6 reagiert gut auf strukturierte System-Prompts; Gemini profitiert von expliziten Abschnittsüberschriften.' },
+            { q: 'Was ist der häufigste Prompt-Optimierungsfehler?', a: 'Das gleichzeitige Ändern mehrerer Variablen. Wenn du Beispiele hinzufügst, das Ausgabeformat änderst und eine Rollenanweisung in derselben Überarbeitung hinzufügst, kannst du nicht feststellen, welche Änderung sich verbessert (oder verschlechtert) hat. Effektive Optimierung ändert eine Variable pro Iteration.' },
+            { q: 'Kann Prompt-Optimierung KI-Halluzinationen reduzieren?', a: 'Ja, mit den richtigen Techniken. Das Hinzufügen von Grundlagen-Kontext („Basiere deine Antwort nur auf dem folgenden Dokument"), Few-Shot-Beispiele mit faktisch korrekten Ausgaben und explizite Beschränkungen („Erfinde keine Zahlen — verwende nur Daten aus dem bereitgestellten Text") reduzieren zuverlässig Halluzinations-Raten. Self-Consistency-Prompting — das Generieren mehrerer Ausgaben und Zurückgeben der häufigsten — reduziert weiter niedrig-wahrscheinliche Erfindungen.' },
+            { q: 'Wann sollte ich Fine-Tuning statt Prompt-Optimierung verwenden?', a: 'Verwende Fine-Tuning, wenn Prompt-Optimierung ein Plafond erreicht hat — typischerweise wenn das erforderliche Verhalten hochgradig domänenspezifisch ist, konsistente stilistische Stimme über Tausende von Ausgaben benötigt, oder abhängig ist von Wissen, das nicht in der Basis-Trainierung des Modells enthalten ist. Prompt-Optimierung ist schneller und günstiger und sollte immer vor Fine-Tuning ausgeschöpft werden.' },
+            { q: 'Woher weiß ich, wenn ein Prompt vollständig optimiert ist?', a: 'Ein Prompt ist ausreichend optimiert, wenn er: (1) korrekte Ausgabe auf 4–5 repräsentativen Eingaben erzeugt, (2) konsistente Ausgabe bei Neu-Läufen erzeugt, (3) über mindestens zwei Modelle funktioniert (z.B. GPT-5.6 und Claude), und (4) die Format-Spezifikation ohne Nach-Verarbeitung erfüllt. Perfekte Prompts existieren nicht — „optimiert" bedeutet zuverlässig genug für den Anwendungsfall.' },
+            { q: 'Gilt Prompt-Optimierung für Bild-Prompts (Text-zu-Bild)?', a: 'Die Grundsätze gelten — Spezifität, Beschränkungen und Beispiele (Referenzbilder) sind alle gültige Hebel für Bildmodelle wie DALL-E 3 und Stable Diffusion. Allerdings unterscheiden sich die Mechaniken: Bildmodelle reagieren auf Style-Modifizierer, Seitenverhältnisse und negative Prompts als Beschränkungen. Der Optimierungsprozess (Basis → Diagnose → eine Variable ändern → Testen) ist identisch.' },
+            { q: 'Was ist automatische Prompt-Optimierung?', a: 'Automatische Prompt-Optimierung verwendet ein zweites KI-Modell (oder dasselbe Modell in einer Meta-Prompting-Schleife), um Prompts ohne menschliches Eingreifen umzuschreiben und zu verbessern. Tools wie DSPy (Stanford), TextGrad und APE (Automatic Prompt Engineer) generieren Kandidaten-Prompts, bewerten sie gegen eine Metrik (Genauigkeit, Format-Einhaltung, Benutzer-Rating) und wählen die beste Variante. Manuelle Optimierung ist schneller für gut verstandene Aufgaben; automatische Optimierung skaliert besser, wenn du markierte Evaluierungs-Daten hast und Hunderte von Varianten testen musst.' },
+            { q: 'Wie unterscheidet sich Prompt-Optimierung von Prompt Tuning?', a: 'Prompt-Optimierung verbessert diskrete Text-Prompts — die Anweisungen, die du in natürlicher Sprache schreibst — ohne Modellgewichte zu ändern. Prompt Tuning (eingeführt von Lester et al., 2021) lernt kontinuierliche Soft-Prompt-Vektoren, die der Eingabe vorgestellt und durch Gradientenabstieg neben oder statt des Modells trainiert werden. Prompt Tuning erfordert Rechenleistung und Trainingsdaten; Prompt-Optimierung erfordert keines von beiden. Für die meisten Produktionsanwendungsfälle optimieren Sie zunächst diskrete Prompts und ziehen Prompt Tuning erst in Betracht, wenn eine harte Qualitätsgrenze erreicht wurde.' },
+            { q: 'Was sind die besten Tools für Prompt-Optimierung?', a: 'Die am häufigsten verwendeten Tools sind: PromptQuorum (einen Prompt an GPT-5.6, Claude und Gemini gleichzeitig versenden für die Vergleichsanalyse), DSPy (programmgesteuerte Prompt-Optimierung mit automatischer metrik-basierter Auswahl), LangSmith (Prompt-Versionierung, A/B-Tests und Tracing für LangChain-Pipelines), Promptfoo (Open-Source-CLI zum Ausführen von Prompts gegen Testfälle und Regressionstests) und PromptLayer (Prompt-Versionierung und Analytik). Für manuelle Iteration genügt eine Tabelle, die Prompt-Version, Eingabe, Ausgabe und Bestanden/Fehlgeschlagen gegen Kriterien protokolliert, für die meisten einteiligen Optimierungsarbeiten.' },
+            { q: 'Wie optimiere ich einen System-Prompt?', a: 'System-Prompt-Optimierung folgt dem gleichen 6-Schritte-Prozess wie Benutzer-Prompt-Optimierung mit zwei zusätzlichen Einschränkungen. Erstens, System-Prompts bleiben über alle Wendungen erhalten — eine zu spezifische Anweisung kann die Leistung bei Eingaben, die du nicht erwartet hast, beeinträchtigen. Testen Sie über 5–10 vielfältige repräsentative Eingaben, nicht nur eine. Zweitens ist die System-Prompt-Länge wichtig: sehr lange System-Prompts (>2.000 Tokens) können die Anweisung-Befolgung in späteren Benutzer-Wendungen auf einigen Modellen (insbesondere GPT-5.6) reduzieren. Optimieren Sie für Kürze: jede Anweisung in dem System-Prompt sollte notwendig sein. Entfernen Sie alle Anweisungen, die die Ausgabe auf Ihrem Testsatz nicht ändern.' },
+            { q: 'Kann ich ChatGPT zur Prompt-Optimierung nutzen?', a: 'Ja. Sie können GPT-5.6 bitten, einen Prompt umzuschreiben, indem Sie den fehlgeschlagenen Prompt und die Fehlermodus-Beschreibung bereitstellen: „Dieser Prompt erzeugt Ausgaben, die zu vage sind. Schreibe ihn um, um eine 3-Punkte-strukturierte Antwort zu erfordern." Dies ist eine Form des Meta-Promptings — das Modell verwenden, um seine eigenen Eingaben zu verbessern. Die Einschränkung ist, dass GPT-5.6 für das optimieren wird, was es für besser hält, nicht unbedingt, was Ihre spezifischen Evaluierungskriterien erfordern. Testen Sie immer den umgeschriebenen Prompt auf echten Eingaben und messen Sie gegen Ihre tatsächlichen Bestanden/Fehlgeschlagen-Kriterien, bevor Sie die Überarbeitung akzeptieren.' },
+            { q: 'Was bedeutet Prompt-Optimierung im Machine-Learning-Kontext?', a: 'Im Machine-Learning-Kontext bezieht sich Prompt-Optimierung auf Techniken, die die Prompts verbessern, die in ein Sprachmodell als Teil einer Pipeline eingehen — ohne das Modell selbst umzuschulen. Dies umfasst sowohl diskrete Prompt-Optimierung (Umschreiben natürlichsprachiger Anweisungen) als auch kontinuierliche Prompt-Abstimmung (Erlernen von Soft-Token-Einbettungen durch Gradientenabstieg). In ML-Produktionssystemen ist Prompt-Optimierung typischerweise Teil der Inferenz-Pipeline: der Prompt wird als Hyperparameter behandelt, der gegen einen einbehaltenen Evaluierungssatz optimiert wird, ähnlich wie bei der Lernraten-Auswahl beim Modelltraining.' },
+            { q: 'Wie viel verbessert Prompt-Optimierung die Ausgabequalität?', a: 'Der Verbesserungsbereich hängt von der Ausgangssituation des nicht optimierten Prompts ab. In gesteuerten Bewertungen führt das Verschieben von einem nicht optimierten Prompt zu einem gut optimierten Prompt typischerweise zu einer Verbesserung der Aufgabengenauigkeit um 20–40 % auf strukturierten Aufgaben (Klassifizierung, Extraktion, JSON-Generierung) und 15–25 % auf offene Aufgaben (Zusammenfassung, Analyse). Die größten Gewinne ergeben sich aus der Angabe des Ausgabeformats (Beseitigung der Format-Nicht-Einhaltung völlig) und dem Hinzufügen von 1–2 Few-Shot-Beispielen (Reduzierung der Halluzination bei strukturierten Ausgaben). Der Schulhoff et al. 2024 Prompt Report dokumentiert konsistente Gewinne von 10–30 % über 58 Prompting-Techniken, die über mehrere Modelle ausgewertet wurden.' },
+            { q: 'Sollte ich Prompts für jedes Modell separat optimieren?', a: 'Beginnen Sie mit einer modellunabhängigen Optimierung — wenden Sie die 6 Hebel (Spezifität, Kontext, Beispiele, Beschränkungen, Ausgabeformat, Rolle) an und testen Sie auf GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro. Ein gut strukturierter Prompt funktioniert typischerweise gut über alle drei. Fügen Sie nur modellspezifische Varianten hinzu, wenn übergreifende Tests divergente Ergebnisse zeigen. Häufige modellspezifische Anpassungen: Claude handhabt längere mehrteilige System-Prompts gut; GPT-5.6 profitiert von expliziten JSON-Format-Anfragen; Gemini 3.1 Pro profitiert von expliziten Abschnittsüberschriften in Aufgaben mit langen Dokumenten. Führen Sie modellspezifische Varianten in einer Prompt-Bibliothek mit Versions-Notizen auf.' },
+            { q: 'Was ist der Unterschied zwischen Prompt-Optimierung und RAG?', a: 'Prompt-Optimierung verbessert die Anweisungen und die Struktur eines Prompts. Retrieval-Augmented Generation (RAG) verbessert die Informationen, die dem Modell zur Inferenzzeit zur Verfügung stehen, indem relevante Dokumente abgerufen und in den Prompt-Kontext eingefügt werden. Die zwei sind sich ergänzend: RAG löst das Problem, dass das Modell nicht die richtigen Fakten hat; Prompt-Optimierung löst das Problem, dass das Modell diese Fakten nicht richtig verarbeitet. Eine vollständig optimierte RAG-Pipeline erfordert sowohl gutes Abrufen (die richtigen Dokumente werden abgerufen) als auch einen gut optimierten Prompt (das Modell wird angewiesen, nur den abgerufenen Inhalt zu verwenden, Quellen zu zitieren und die Antwort korrekt zu formatieren).' },
+            { q: 'Wie optimiere ich Prompts speziell für GPT-5.6?', a: 'GPT-5.6 reagiert gut auf vier Optimierungsbewegungen: (1) Explizite JSON-Format-Anfragen im System-Prompt — GPT-5.6\'s Anweisungs-Befolgung bei strukturierter Ausgabe ist stark, wenn das Schema präzise definiert ist. (2) Markdown-Header in System-Prompts — verwenden Sie H2-Abschnitte (## Rolle, ## Aufgabe, ## Ausgabeformat) zur Trennung von Bedenken; GPT-5.6 beachtet diese Struktur zuverlässig. (3) Enge Beschränkungen — GPT-5.6 neigt dazu, ohne Wort-/Längenbeschränkungen zu viel zu erklären; fügen Sie „antworte in ≤150 Wörtern" oder „geben Sie nur das JSON-Objekt zurück, keine Erklärung" hinzu. (4) Tool-Use-Framing — für Aufgaben mit Abruf oder Berechnung formulieren Sie den Prompt als Funktionsdefinition statt einer Prosa-Anweisung, wenn Sie die Assistants-API mit aktivierten Tools verwenden.' },
+            { q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?', a: 'PromptQuorum selbst erfordert keine Registrierung und sendet standardmäßig keine Daten an eigene Server. Bei der Nutzung von Cloud-KI-APIs (OpenAI, Anthropic, Google) über PromptQuorum gelten die jeweiligen Datenverarbeitungsverträge gemäß DSGVO Art. 28. Für Unternehmen empfiehlt das BSI-Grundschutz-Kompendium die Evaluierung von KI-Tools anhand der Schutzziele Vertraulichkeit, Integrität und Verfügbarkeit. Lokale Modelle über Ollama oder LM Studio erfüllen Datenschutzanforderungen vollständig, da keine Daten das Unternehmensnetz verlassen.' },
+            { q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?', a: 'Ja. PromptQuorum ist besonders für mittelständische Unternehmen geeignet, die KI-Prompts ohne eigene KI-Infrastruktur systematisch verbessern möchten. Die Unterstützung lokaler Modelle (Ollama, LM Studio) ermöglicht datenschutzkonforme Nutzung ohne Cloud-Abhängigkeit. Für DACH-Unternehmen, die BSI-IT-Grundschutz-konforme Lösungen benötigen, bieten lokale Inferenz mit quantisierten Modellen wie Llama 4 oder Mistral Large eine geprüfte Alternative zu Cloud-KI-Diensten.' },
           ],
         },
 
@@ -1156,26 +1253,166 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         mainEntity: [
-          { '@type': 'Question', name: '¿Qué es la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad de la salida de IA para una tarea específica. Implica identificar un modo de fallo (formato incorrecto, alucinación, salida vaga), cambiar una variable (especificidad, contexto, ejemplos, restricciones, formato de salida o rol) y probar el resultado en modelos como GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro.' } },
-          { '@type': 'Question', name: '¿Cuál es la diferencia entre la optimización de prompts y el prompt engineering?', acceptedAnswer: { '@type': 'Answer', text: 'El prompt engineering es la disciplina de diseñar una estructura de prompt desde cero usando bloques de construcción como objetivo, contexto y formato de salida. La optimización de prompts es el subproceso iterativo de mejorar un prompt ya escrito diagnosticando modos de fallo y aplicando cambios dirigidos. Necesitas el prompt engineering para crear un punto de partida; usas la optimización de prompts para refinarlo.' } },
-          { '@type': 'Question', name: '¿Cuántas iteraciones se necesitan para optimizar un prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Para la mayoría de las tareas, 2–4 iteraciones dirigidas son suficientes para pasar de un prompt fallido a uno fiable. Cada iteración debe cambiar una variable y probarse en 3–5 entradas representativas. Los rendimientos decrecientes se establecen después de 5–6 iteraciones — si un prompt no se ha estabilizado para entonces, puede ser necesario revisar la propia definición de la tarea.' } },
-          { '@type': 'Question', name: '¿Qué palanca debo cambiar primero al optimizar un prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Empieza con el formato de salida. El incumplimiento del formato — recibir un párrafo cuando querías una tabla, o texto plano cuando necesitabas JSON — es el modo de fallo más común y más rápido de corregir. Especifica la estructura exacta que quieres, luego aborda otros problemas (precisión, tono, alcance) en iteraciones posteriores.' } },
-          { '@type': 'Question', name: '¿Funciona la optimización de prompts en todos los modelos de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, pero con ajustes específicos del modelo. Las seis palancas de optimización principales (especificidad, contexto, ejemplos, restricciones, formato de salida, rol) se aplican a GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y Mistral Large. Sin embargo, cada modelo responde de manera diferente a la densidad de instrucciones — Claude maneja mejor instrucciones más largas y de múltiples partes; GPT-5.6 responde bien a system prompts estructurados; Gemini se beneficia de encabezados de sección explícitos.' } },
-          { '@type': 'Question', name: '¿Cuál es el error más común en la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Cambiar múltiples variables simultáneamente. Si añades ejemplos, cambias el formato de salida y añades una instrucción de rol en la misma revisión, no puedes determinar qué cambio mejoró (o degradó) la salida. La optimización efectiva cambia una variable por iteración.' } },
-          { '@type': 'Question', name: '¿Puede la optimización de prompts reducir las alucinaciones de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, con las técnicas correctas. Añadir contexto de anclaje ("Basa tu respuesta solo en el siguiente documento"), ejemplos few-shot con salidas factualmente correctas y restricciones explícitas ("No inventes cifras — usa solo datos del texto proporcionado") reduce de forma fiable las tasas de alucinación. El self-consistency prompting — generando múltiples salidas y devolviendo la más común — reduce aún más las fabricaciones de baja probabilidad.' } },
-          { '@type': 'Question', name: '¿Cuándo debo usar el fine-tuning en lugar de la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Usa el fine-tuning cuando la optimización de prompts haya alcanzado un techo — típicamente cuando el comportamiento requerido es muy específico del dominio, requiere una voz estilística consistente en miles de salidas, o depende de conocimiento que no está en el entrenamiento del modelo base. La optimización de prompts es más rápida y barata y siempre debe agotarse antes del fine-tuning.' } },
-          { '@type': 'Question', name: '¿Cómo sé cuándo un prompt está completamente optimizado?', acceptedAnswer: { '@type': 'Answer', text: 'Un prompt está suficientemente optimizado cuando: (1) produce salida correcta en 4–5 entradas representativas, (2) produce salida consistente en re-ejecuciones, (3) funciona en al menos dos modelos (ej. GPT-5.6 y Claude), y (4) cumple la especificación de formato sin post-procesamiento. Los prompts perfectos no existen — "optimizado" significa suficientemente fiable para el caso de uso.' } },
-          { '@type': 'Question', name: '¿Se aplica la optimización de prompts a los prompts de imágenes (texto a imagen)?', acceptedAnswer: { '@type': 'Answer', text: 'Los principios se aplican — especificidad, restricciones y ejemplos (imágenes de referencia) son palancas válidas para modelos de imágenes como DALL-E 3 y Stable Diffusion. Sin embargo, la mecánica difiere: los modelos de imágenes responden a modificadores de estilo, especificaciones de relación de aspecto y prompts negativos como restricciones. El proceso de optimización (línea base → diagnosticar → cambiar una variable → probar) es idéntico.' } },
-          { '@type': 'Question', name: '¿Qué es la optimización automática de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización automática de prompts usa un segundo modelo de IA (o el mismo modelo en un bucle de meta-prompting) para reescribir y mejorar prompts sin intervención humana. Herramientas como DSPy (Stanford), TextGrad y APE (Automatic Prompt Engineer) generan prompts candidatos, los puntúan contra una métrica y seleccionan la mejor variante. La optimización manual es más rápida para tareas bien entendidas; la automática escala mejor cuando tienes datos de evaluación etiquetados.' } },
-          { '@type': 'Question', name: '¿En qué se diferencia la optimización de prompts del prompt tuning?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización de prompts mejora los prompts de texto discreto — las instrucciones que escribes en lenguaje natural — sin modificar los pesos del modelo. El prompt tuning (introducido por Lester et al., 2021) aprende vectores de prompt suave continuos que se anteponen a la entrada y se entrenan por descenso de gradiente. El prompt tuning requiere cómputo y datos de entrenamiento; la optimización de prompts no requiere ninguno.' } },
-          { '@type': 'Question', name: '¿Cuáles son las mejores herramientas para la optimización de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Las herramientas más utilizadas son: PromptQuorum (despacha un prompt a GPT-5.6, Claude y Gemini simultáneamente para comparación lado a lado), DSPy (optimización programática de prompts con selección automática basada en métricas), LangSmith (versionado de prompts, pruebas A/B y rastreo para pipelines de LangChain), Promptfoo (CLI open-source para ejecutar prompts contra casos de prueba) y PromptLayer (versionado y análisis de prompts).' } },
-          { '@type': 'Question', name: '¿Cómo optimizo un system prompt?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización del system prompt sigue el mismo proceso de 6 pasos que la optimización del prompt de usuario, con dos restricciones adicionales. Primero, los system prompts persisten en todos los turnos — una instrucción demasiado específica puede degradar el rendimiento en entradas que no anticipaste. Prueba en 5–10 entradas representativas diversas. Segundo, la longitud del system prompt importa: los system prompts muy largos (>2.000 tokens) pueden reducir el seguimiento de instrucciones en turnos posteriores del usuario en algunos modelos.' } },
-          { '@type': 'Question', name: '¿Se puede usar ChatGPT para optimizar prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Puedes pedirle a GPT-5.6 que reescriba un prompt proporcionando el prompt fallido y describiendo el modo de fallo: "Este prompt produce salida demasiado vaga. Reescríbelo para requerir una respuesta estructurada de 3 viñetas." Esto es una forma de meta-prompting. La limitación es que GPT-5.6 optimizará para lo que considera mejor, no necesariamente para tus criterios de evaluación específicos.' } },
-          { '@type': 'Question', name: '¿Qué es la optimización de prompts en machine learning?', acceptedAnswer: { '@type': 'Answer', text: 'En contextos de machine learning, la optimización de prompts se refiere a técnicas que mejoran los prompts alimentados en modelos de lenguaje como parte de un pipeline — sin reentrenar el modelo. Esto incluye tanto la optimización de prompts discretos (reescritura de instrucciones en lenguaje natural) como el prompt tuning continuo (aprendizaje de embeddings de tokens suaves mediante descenso de gradiente).' } },
-          { '@type': 'Question', name: '¿Cuánto mejora la optimización de prompts la calidad de la salida de IA?', acceptedAnswer: { '@type': 'Answer', text: 'El rango de mejora depende de qué tan mal optimizado esté el prompt de línea base. En evaluaciones controladas, pasar de un prompt sin optimizar a uno bien optimizado típicamente mejora la precisión de la tarea en un 20–40% en tareas estructuradas y un 15–25% en tareas abiertas. Las mayores ganancias provienen de especificar el formato de salida y añadir 1–2 ejemplos few-shot. El Prompt Report de Schulhoff et al. 2024 documenta ganancias consistentes del 10–30%.' } },
-          { '@type': 'Question', name: '¿Debo optimizar los prompts para cada modelo de IA por separado?', acceptedAnswer: { '@type': 'Answer', text: 'Empieza con una optimización agnóstica al modelo — aplica las 6 palancas y prueba en GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro. Un prompt bien estructurado típicamente funciona bien en los tres. Solo añade variantes específicas del modelo si las pruebas entre modelos revelan resultados divergentes.' } },
-          { '@type': 'Question', name: '¿Cuál es la diferencia entre la optimización de prompts y RAG?', acceptedAnswer: { '@type': 'Answer', text: 'La optimización de prompts mejora las instrucciones y la estructura de un prompt. RAG (Retrieval-Augmented Generation) mejora la información disponible para el modelo en el tiempo de inferencia recuperando documentos relevantes e insertándolos en el contexto del prompt. Los dos son complementarios: RAG resuelve el problema de que el modelo no tiene los hechos correctos; la optimización de prompts resuelve el problema de que el modelo no procesa correctamente esos hechos.' } },
-          { '@type': 'Question', name: '¿Cómo optimizo prompts específicamente para GPT-5.6?', acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.6 responde bien a cuatro movimientos de optimización: (1) Solicitudes de formato JSON explícitas en el system prompt. (2) Encabezados Markdown en system prompts — usa secciones H2 (## Rol, ## Tarea, ## Formato de salida). (3) Restricciones estrictas — GPT-5.6 tiende a sobre-explicar sin restricciones de palabras/longitud. (4) Encuadre de uso de herramientas — para tareas que implican recuperación o cálculo, enmarca el prompt como una definición de función cuando uses la API de Asistentes.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es la optimización de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad de la salida de IA para una tarea específica. Implica identificar un modo de fallo (formato incorrecto, alucinación, salida vaga), cambiar una variable (especificidad, contexto, ejemplos, restricciones, formato de salida o rol) y probar el resultado en modelos como GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre la optimización de prompts y el prompt engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El prompt engineering es la disciplina de diseñar una estructura de prompt desde cero usando bloques de construcción como objetivo, contexto y formato de salida. La optimización de prompts es el subproceso iterativo de mejorar un prompt ya escrito diagnosticando modos de fallo y aplicando cambios dirigidos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuántas iteraciones se necesitan para optimizar un prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para la mayoría de las tareas, 2–4 iteraciones dirigidas son suficientes para pasar de un prompt fallido a uno fiable. Los rendimientos decrecientes se establecen después de 5–6 iteraciones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué palanca debo cambiar primero al optimizar un prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Empieza con el formato de salida. El incumplimiento del formato es el modo de fallo más común y más rápido de corregir. Especifica la estructura exacta que quieres, luego aborda otros problemas en iteraciones posteriores.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Funciona la optimización de prompts en todos los modelos de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, pero con ajustes específicos del modelo. Las seis palancas de optimización principales se aplican a GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y Mistral Large. Sin embargo, cada modelo responde de manera diferente a la densidad de instrucciones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el error más común en la optimización de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cambiar múltiples variables simultáneamente. Si añades ejemplos, cambias el formato de salida y añades una instrucción de rol en la misma revisión, no puedes determinar qué cambio mejoró (o degradó) la salida.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puede la optimización de prompts reducir las alucinaciones de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, con las técnicas correctas. Añadir contexto de anclaje, ejemplos few-shot con salidas factualmente correctas y restricciones explícitas reducen de forma fiable las tasas de alucinación. El self-consistency prompting reduce aún más las fabricaciones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuándo debo usar el fine-tuning en lugar de la optimización de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa el fine-tuning cuando la optimización de prompts haya alcanzado un techo. La optimización de prompts es más rápida y barata y siempre debe agotarse antes del fine-tuning.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo sé cuándo un prompt está completamente optimizado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un prompt está suficientemente optimizado cuando: (1) produce salida correcta en 4–5 entradas representativas, (2) produce salida consistente en re-ejecuciones, (3) funciona en al menos dos modelos, y (4) cumple la especificación de formato sin post-procesamiento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Se aplica la optimización de prompts a los prompts de imágenes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los principios se aplican — especificidad, restricciones y ejemplos son palancas válidas para modelos de imágenes. El proceso de optimización (línea base → diagnosticar → cambiar una variable → probar) es idéntico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es la optimización automática de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa un segundo modelo de IA para reescribir y mejorar prompts sin intervención humana. Herramientas como DSPy (Stanford), TextGrad y APE generan prompts candidatos, los puntúan y seleccionan la mejor variante.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿En qué se diferencia la optimización de prompts del prompt tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La optimización de prompts mejora los prompts de texto discreto sin modificar los pesos del modelo. El prompt tuning aprende vectores de prompt suave continuos entrenados por descenso de gradiente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuáles son las mejores herramientas para la optimización de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las herramientas más utilizadas son: PromptQuorum (despacha un prompt a GPT-5.6, Claude y Gemini simultáneamente), DSPy (optimización programática), LangSmith (versionado y trazabilidad), Promptfoo (CLI open-source para tests de regresión) y PromptLayer (versionado y análisis).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo optimizo un system prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La optimización del system prompt sigue el mismo proceso de 6 pasos que la optimización del prompt de usuario, con dos restricciones adicionales. Los system prompts persisten en todos los turnos; la longitud importa — los system prompts muy largos pueden reducir el seguimiento de instrucciones en turnos posteriores.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Se puede usar ChatGPT para optimizar prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Puedes pedirle a GPT-5.6 que reescriba un prompt proporcionando el prompt fallido y describiendo el modo de fallo. Esto es meta-prompting. Siempre prueba el prompt reescrito con entradas reales y mide contra tus criterios reales de aprobado/fallado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es la optimización de prompts en machine learning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Se refiere a técnicas que mejoran los prompts alimentados en modelos de lenguaje como parte de un pipeline — sin reentrenar el modelo. Incluye tanto la optimización de prompts discretos como el prompt tuning continuo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto mejora la optimización de prompts la calidad de la salida de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pasar de un prompt sin optimizar a uno bien optimizado típicamente mejora la precisión en un 20–40% en tareas estructuradas y un 15–25% en tareas abiertas. El Prompt Report de Schulhoff et al. 2024 documenta ganancias consistentes del 10–30%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo optimizar los prompts para cada modelo de IA por separado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Empieza con una optimización agnóstica al modelo. Un prompt bien estructurado típicamente funciona bien en los tres principales. Solo añade variantes específicas del modelo si las pruebas entre modelos revelan resultados divergentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre la optimización de prompts y RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La optimización de prompts mejora las instrucciones y la estructura de un prompt. RAG mejora la información disponible para el modelo recuperando documentos relevantes. Los dos son complementarios: RAG resuelve el problema de información; la optimización resuelve el problema de procesamiento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo optimizo prompts específicamente para GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6 responde bien a cuatro movimientos de optimización: (1) Solicitudes explícitas de formato JSON en el system prompt — el seguimiento de instrucciones de GPT-5.6 en salidas estructuradas es sólido cuando el esquema está definido con precisión. (2) Encabezados markdown en system prompts — usa secciones H2 (## Rol, ## Tarea, ## Formato de salida) para separar responsabilidades; GPT-5.6 respeta esta estructura de forma fiable. (3) Restricciones estrictas — GPT-5.6 tiende a sobreexplicar sin restricciones de palabras/longitud; añade "responde en ≤150 palabras" o "devuelve solo el objeto JSON, sin explicación". (4) Encuadre de uso de herramientas — para tareas de recuperación o cálculo, plantea el prompt como una definición de función en lugar de una instrucción en prosa cuando uses la Assistants API con herramientas habilitadas.',
+            },
+          },
         ],
       },
       sections: {
@@ -1653,26 +1890,166 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'ما تحسين الموجّهات؟', acceptedAnswer: { '@type': 'Answer', text: 'تحسين الموجّهات هو العملية التكرارية لمراجعة موجّه موجود لتحسين جودة مخرجات الذكاء الاصطناعي لمهمة محددة. يتضمن تحديد وضع فشل (تنسيق خاطئ، هلوسة، مخرجات غامضة)، وتغيير متغير واحد (التحديد الدقيق، السياق، الأمثلة، القيود، تنسيق المخرجات، أو الدور)، واختبار النتيجة على نماذج مثل GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro.' } },
-          { '@type': 'Question', name: 'ما الفرق بين تحسين الموجّهات وهندسة الموجّهات؟', acceptedAnswer: { '@type': 'Answer', text: 'هندسة الموجّهات هي تخصص تصميم بنية الموجّه من الصفر باستخدام عناصر البناء مثل الهدف والسياق وتنسيق المخرجات. تحسين الموجّهات هو العملية الفرعية التكرارية لتحسين موجّه مكتوب بالفعل من خلال تشخيص أوضاع الفشل وتطبيق تغييرات موجَّهة. تحتاج هندسة الموجّهات لإنشاء نقطة البداية؛ وتستخدم التحسين لتنقيتها.' } },
-          { '@type': 'Question', name: 'كم تكرارًا تحتاج لتحسين موجّه؟', acceptedAnswer: { '@type': 'Answer', text: 'لمعظم المهام، تكفي 2–4 تكرارات موجَّهة للانتقال من موجّه فاشل إلى موجّه موثوق. كل تكرار يجب أن يُغيّر متغيرًا واحدًا ويُختبَر على 3–5 مدخلات تمثيلية. تتراجع العوائد بعد 5–6 تكرارات.' } },
-          { '@type': 'Question', name: 'أي رافعة أبدأ بتغييرها عند تحسين موجّه؟', acceptedAnswer: { '@type': 'Answer', text: 'ابدأ بتنسيق المخرجات. عدم الامتثال للتنسيق — الحصول على فقرة بدلًا من جدول، أو نص عادي بدلًا من JSON — هو أكثر أوضاع الفشل شيوعًا وأسرعها تصحيحًا. حدّد البنية الدقيقة التي تريدها، ثم عالج مشكلات أخرى في تكرارات لاحقة.' } },
-          { '@type': 'Question', name: 'هل تعمل تحسين الموجّهات على جميع نماذج الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، لكن مع تعديلات خاصة بكل نموذج. الرافعات الست الرئيسية تنطبق على GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وMistral Large. غير أن كل نموذج يستجيب بشكل مختلف لكثافة التعليمات.' } },
-          { '@type': 'Question', name: 'ما أكثر خطأ شائع في تحسين الموجّهات؟', acceptedAnswer: { '@type': 'Answer', text: 'تغيير متغيرات متعددة في نفس الوقت. إذا أضفت أمثلة وغيّرت تنسيق المخرجات وأضفت تعليمة دور في نفس المراجعة، لا يمكنك تحديد أي تغيير حسّن (أو أفسد) المخرجات. التحسين الفعّال يُغيّر متغيرًا واحدًا لكل تكرار.' } },
-          { '@type': 'Question', name: 'هل يمكن لتحسين الموجّهات تقليل هلوسة الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، بالتقنيات الصحيحة. إضافة سياق الارتكاز ("ابنِ إجابتك فقط على الوثيقة التالية")، وأمثلة few-shot بمخرجات صحيحة واقعيًا، وقيود صريحة ("لا تخترع أرقامًا — استخدم فقط بيانات النص المُقدَّم") تُقلّل معدلات الهلوسة بشكل موثوق.' } },
-          { '@type': 'Question', name: 'متى يجب أن أستخدم الضبط الدقيق بدلًا من تحسين الموجّهات؟', acceptedAnswer: { '@type': 'Answer', text: 'استخدم الضبط الدقيق حين يصل تحسين الموجّهات إلى سقفه — عادةً حين يكون السلوك المطلوب خاصًا جدًا بالمجال، أو يتطلب صوتًا أسلوبيًا متسقًا عبر آلاف المخرجات، أو يعتمد على معرفة غير موجودة في تدريب النموذج الأساسي. تحسين الموجّهات أسرع وأرخص وينبغي استنفاده دائمًا قبل الضبط الدقيق.' } },
-          { '@type': 'Question', name: 'كيف أعرف متى يكون الموجّه مُحسَّنًا بشكل كامل؟', acceptedAnswer: { '@type': 'Answer', text: 'الموجّه مُحسَّن بما يكفي حين: (1) يُنتج مخرجات صحيحة على 4–5 مدخلات تمثيلية، (2) يُنتج مخرجات متسقة عند إعادة التشغيل، (3) يعمل على نموذجين على الأقل (مثل GPT-5.6 وClaude)، و(4) يمتثل لمواصفات التنسيق دون معالجة لاحقة. الموجّهات المثالية غير موجودة — "مُحسَّن" يعني موثوقًا بما يكفي لحالة الاستخدام.' } },
-          { '@type': 'Question', name: 'هل ينطبق تحسين الموجّهات على موجّهات الصور (نص إلى صورة)؟', acceptedAnswer: { '@type': 'Answer', text: 'تنطبق المبادئ — التحديد الدقيق والقيود والأمثلة (صور مرجعية) رافعات صالحة لنماذج الصور مثل DALL-E 3 وStable Diffusion. غير أن الميكانيكا تختلف: تستجيب نماذج الصور لمعدّلات الأسلوب ومواصفات نسبة العرض إلى الارتفاع والموجّهات السلبية كقيود. عملية التحسين (خط أساسي → تشخيص → تغيير متغير → اختبار) متطابقة.' } },
-          { '@type': 'Question', name: 'ما تحسين الموجّهات التلقائي؟', acceptedAnswer: { '@type': 'Answer', text: 'يستخدم تحسين الموجّهات التلقائي نموذج ذكاء اصطناعي ثانٍ (أو نفس النموذج في حلقة meta-prompting) لإعادة كتابة الموجّهات وتحسينها دون تدخل بشري. أدوات مثل DSPy (Stanford) وTextGrad وAPE تولّد موجّهات مرشحة وتُقيّمها ضد مقياس وتختار الأفضل.' } },
-          { '@type': 'Question', name: 'ما الفرق بين تحسين الموجّهات وضبط الموجّهات (prompt tuning)؟', acceptedAnswer: { '@type': 'Answer', text: 'يُحسّن تحسين الموجّهات الموجّهات النصية المتقطعة — التعليمات المكتوبة بلغة طبيعية — دون تعديل أوزان النموذج. ضبط الموجّهات (Lester et al., 2021) يتعلّم متجهات موجّهات ناعمة مستمرة تُدرَّب بنزول التدرج. ضبط الموجّهات يتطلب حوسبة وبيانات تدريب؛ تحسين الموجّهات لا يتطلب شيئًا من ذلك.' } },
-          { '@type': 'Question', name: 'ما أفضل أدوات تحسين الموجّهات؟', acceptedAnswer: { '@type': 'Answer', text: 'الأدوات الأكثر استخدامًا هي: PromptQuorum (يُرسل موجّهًا إلى GPT-5.6 وClaude وGemini في آنٍ واحد للمقارنة)، وDSPy (تحسين برمجي للموجّهات)، وLangSmith (إصدارات الموجّهات واختبار A/B)، وPromptfoo (CLI مفتوح المصدر)، وPromptLayer (الإصدارات والتحليلات).' } },
-          { '@type': 'Question', name: 'كيف أُحسّن system prompt؟', acceptedAnswer: { '@type': 'Answer', text: 'يتبع تحسين system prompt نفس العملية من 6 خطوات مع قيدين إضافيين. أولًا، system prompts تستمر عبر جميع الأدوار — التعليمة المفرطة التحديد قد تُدهور الأداء على مدخلات غير متوقعة. ثانيًا، طول system prompt يهم: system prompts الطويلة جدًا (>2,000 رمز) قد تقلّل اتباع التعليمات في أدوار المستخدم اللاحقة.' } },
-          { '@type': 'Question', name: 'هل يمكن استخدام ChatGPT لتحسين الموجّهات؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يمكنك أن تطلب من GPT-5.6 إعادة كتابة موجّه بتقديم الموجّه الفاشل ووصف وضع الفشل. هذا شكل من أشكال meta-prompting. القيد هو أن GPT-5.6 سيُحسّن لما يراه الأفضل، وليس بالضرورة لمعايير التقييم الخاصة بك.' } },
-          { '@type': 'Question', name: 'ما تحسين الموجّهات في التعلم الآلي؟', acceptedAnswer: { '@type': 'Answer', text: 'في سياقات التعلم الآلي، يشير تحسين الموجّهات إلى تقنيات تُحسّن الموجّهات المُدخَلة في نماذج اللغة كجزء من خط الأنابيب — دون إعادة تدريب النموذج. وهذا يشمل تحسين الموجّهات المتقطعة وضبط الموجّهات المستمرة.' } },
-          { '@type': 'Question', name: 'بكم يُحسّن تحسين الموجّهات جودة مخرجات الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نطاق التحسين يعتمد على مدى سوء الموجّه الأساسي. في التقييمات المضبوطة، الانتقال من موجّه غير مُحسَّن إلى مُحسَّن جيدًا يُحسّن دقة المهمة عادةً بنسبة 20–40٪ في المهام المنظمة و15–25٪ في المهام المفتوحة. وثّق Prompt Report لـSchulhoff et al. 2024 مكاسب متسقة بنسبة 10–30٪.' } },
-          { '@type': 'Question', name: 'هل يجب تحسين الموجّهات لكل نموذج ذكاء اصطناعي بشكل منفصل؟', acceptedAnswer: { '@type': 'Answer', text: 'ابدأ بالتحسين المحايد للنموذج — طبّق الرافعات الست واختبر على GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro. الموجّه الجيد البنية يعمل عادةً بشكل جيد على الثلاثة. أضف متغيرات خاصة بالنموذج فقط إذا كشفت الاختبارات عن نتائج متباينة.' } },
-          { '@type': 'Question', name: 'ما الفرق بين تحسين الموجّهات وRAG؟', acceptedAnswer: { '@type': 'Answer', text: 'يُحسّن تحسين الموجّهات التعليمات وبنية الموجّه. RAG (Retrieval-Augmented Generation) يُحسّن المعلومات المتاحة للنموذج باسترجاع وثائق ذات صلة. الاثنان متكاملان: RAG يحل مشكلة عدم امتلاك النموذج للحقائق الصحيحة؛ تحسين الموجّهات يحل مشكلة عدم معالجة النموذج لتلك الحقائق بشكل صحيح.' } },
-          { '@type': 'Question', name: 'كيف أُحسّن الموجّهات خصيصًا لـGPT-5.6؟', acceptedAnswer: { '@type': 'Answer', text: 'يستجيب GPT-5.6 جيدًا لأربع خطوات تحسين: طلبات تنسيق JSON صريحة في موجّه النظام، عناوين Markdown لفصل الأدوار والمهام وتنسيق المخرجات، قيود صارمة على عدد الكلمات لمنع الإفراط في الشرح، وصياغة استخدام الأدوات كتعريف دالة بدلًا من تعليمة نثرية عند استخدام Assistants API.' } },
+          {
+            '@type': 'Question',
+            'name': 'ما تحسين الموجّهات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تحسين الموجّهات هو العملية التكرارية لمراجعة موجّه موجود لتحسين جودة مخرجات الذكاء الاصطناعي لمهمة محددة. يتضمن تحديد وضع فشل (تنسيق خاطئ، هلوسة، مخرجات غامضة)، وتغيير متغير واحد (التحديد الدقيق، السياق، الأمثلة، القيود، تنسيق المخرجات، أو الدور)، واختبار النتيجة على نماذج مثل GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين تحسين الموجّهات وهندسة الموجّهات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'هندسة الموجّهات هي تخصص تصميم بنية الموجّه من الصفر. تحسين الموجّهات هو العملية الفرعية التكرارية لتحسين موجّه مكتوب بالفعل بتشخيص أوضاع الفشل وتطبيق تغييرات موجَّهة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم تكرارًا تحتاج لتحسين موجّه؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لمعظم المهام، تكفي 2–4 تكرارات موجَّهة للانتقال من موجّه فاشل إلى موجّه موثوق. تتراجع العوائد بعد 5–6 تكرارات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي رافعة أبدأ بتغييرها؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ابدأ بتنسيق المخرجات. عدم الامتثال للتنسيق هو أكثر أوضاع الفشل شيوعًا وأسرعها تصحيحًا. حدّد البنية الدقيقة التي تريدها، ثم عالج مشكلات أخرى في تكرارات لاحقة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تعمل تحسين الموجّهات على جميع نماذج الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، لكن مع تعديلات خاصة بكل نموذج. الرافعات الست الرئيسية تنطبق على GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وMistral Large. غير أن كل نموذج يستجيب بشكل مختلف لكثافة التعليمات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أكثر خطأ شائع في تحسين الموجّهات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تغيير متغيرات متعددة في آنٍ واحد. إذا أضفت أمثلة وغيّرت تنسيق المخرجات وأضفت تعليمة دور في نفس المراجعة، لا يمكنك تحديد أي تغيير أفاد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن لتحسين الموجّهات تقليل هلوسة الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، بالتقنيات الصحيحة. إضافة سياق الارتكاز وأمثلة few-shot وقيود صريحة تُقلّل معدلات الهلوسة بشكل موثوق. self-consistency prompting يُقلّل الهلوسة أكثر.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'متى يجب أن أستخدم الضبط الدقيق بدلًا من تحسين الموجّهات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم الضبط الدقيق حين يصل تحسين الموجّهات إلى سقفه. تحسين الموجّهات أسرع وأرخص وينبغي استنفاده دائمًا أولًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أعرف متى يكون الموجّه مُحسَّنًا بشكل كافٍ؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'موجّه مُحسَّن بما يكفي حين: (1) يُنتج مخرجات صحيحة على 4–5 مدخلات تمثيلية، (2) يُنتج مخرجات متسقة عند إعادة التشغيل، (3) يعمل على نموذجين على الأقل، و(4) يمتثل لمواصفات التنسيق دون معالجة لاحقة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل ينطبق تحسين الموجّهات على موجّهات الصور؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تنطبق المبادئ — التحديد الدقيق والقيود والأمثلة رافعات صالحة لنماذج الصور. عملية التحسين (خط أساسي → تشخيص → تغيير متغير → اختبار) متطابقة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما تحسين الموجّهات التلقائي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يستخدم نموذج ذكاء اصطناعي ثانٍ لإعادة كتابة الموجّهات وتحسينها. أدوات مثل DSPy وTextGrad وAPE تولّد موجّهات مرشحة وتُقيّمها وتختار الأفضل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين تحسين الموجّهات وضبط الموجّهات (prompt tuning)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يُحسّن تحسين الموجّهات الموجّهات النصية دون تعديل أوزان النموذج. ضبط الموجّهات يتعلّم متجهات موجّهات ناعمة مستمرة بنزول التدرج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل أدوات تحسين الموجّهات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum (يُرسل موجّهًا لـGPT-5.6 وClaude وGemini في آنٍ واحد)، وDSPy (تحسين برمجي)، وLangSmith (إصدارات واختبار A/B)، وPromptfoo (CLI مفتوح المصدر)، وPromptLayer (الإصدارات والتحليلات).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أُحسّن system prompt؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يتبع نفس العملية من 6 خطوات مع قيدين إضافيين: system prompts تستمر عبر جميع الأدوار، والطول يهم — system prompts الطويلة جدًا قد تقلّل اتباع التعليمات في الأدوار اللاحقة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن استخدام ChatGPT لتحسين الموجّهات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يمكنك طلب من GPT-5.6 إعادة كتابة موجّه بوصف وضع الفشل. هذا meta-prompting. اختبر دائمًا الموجّه المُعاد كتابته بمدخلات حقيقية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما تحسين الموجّهات في التعلم الآلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يشير إلى تقنيات تُحسّن الموجّهات في خط الأنابيب — دون إعادة تدريب النموذج. يشمل تحسين الموجّهات المتقطعة وضبط الموجّهات المستمرة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'بكم يُحسّن تحسين الموجّهات جودة مخرجات الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الانتقال من موجّه غير مُحسَّن إلى مُحسَّن جيدًا يُحسّن الدقة عادةً بنسبة 20–40٪ في المهام المنظمة و15–25٪ في المهام المفتوحة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يجب تحسين الموجّهات لكل نموذج بشكل منفصل؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ابدأ بالتحسين المحايد للنموذج. الموجّه الجيد البنية يعمل عادةً بشكل جيد على النماذج الثلاثة الرئيسية. أضف متغيرات خاصة بالنموذج فقط إذا كشفت الاختبارات عن نتائج متباينة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين تحسين الموجّهات وRAG؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تحسين الموجّهات يُحسّن التعليمات والبنية. RAG يُحسّن المعلومات المتاحة باسترجاع وثائق ذات صلة. الاثنان متكاملان: RAG يحل مشكلة المعلومات؛ التحسين يحل مشكلة المعالجة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أُحسّن الموجّهات خصيصًا لـGPT-5.6؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يستجيب GPT-5.6 جيدًا لأربع خطوات تحسين: (1) طلبات تنسيق JSON صريحة في موجّه النظام — اتباع التعليمات في GPT-5.6 للمخرجات المنظَّمة قوي عند تحديد المخطط بدقة. (2) عناوين Markdown في موجّهات النظام — استخدم أقسام H2 (## الدور، ## المهمة، ## تنسيق المخرجات) لفصل الاهتمامات؛ يلتزم GPT-5.6 بهذا الهيكل بشكل موثوق. (3) قيود صارمة — يميل GPT-5.6 إلى الإفراط في الشرح دون قيود على عدد الكلمات/الطول؛ أضف "أجب في ≤150 كلمة" أو "أعد كائن JSON فقط، دون شرح". (4) صياغة استخدام الأدوات — للمهام التي تتضمن الاسترجاع أو الحساب، صُغ الموجّه كتعريف دالة بدلًا من تعليمة نثرية عند استخدام Assistants API مع تفعيل الأدوات.',
+            },
+          },
         ],
       },
       sections: {
@@ -2123,17 +2500,166 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'fr',
         mainEntity: [
-          { '@type': 'Question', name: 'Qu\'est-ce que l\'optimisation de prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'optimisation de prompt est le processus itératif de révision d\'un prompt existant pour améliorer la qualité de la sortie IA pour une tâche spécifique. Elle implique d\'identifier un mode d\'échec (mauvais format, hallucination, sortie vague), de modifier une variable (spécificité, contexte, exemples, contraintes, format de sortie ou rôle) et de tester le résultat sur des modèles comme GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro.' } },
-          { '@type': 'Question', name: 'Quelle est la différence entre optimisation de prompt et ingénierie de prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'ingénierie de prompt est la discipline qui consiste à concevoir une structure de prompt de zéro à partir de blocs comme l\'objectif, le contexte et le format de sortie. L\'optimisation de prompt est le sous-processus itératif d\'amélioration d\'un prompt déjà rédigé en diagnostiquant les modes d\'échec et en appliquant des modifications ciblées. L\'ingénierie de prompt sert à créer un point de départ ; l\'optimisation sert à l\'affiner.' } },
-          { '@type': 'Question', name: 'Combien d\'itérations faut-il pour optimiser un prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour la plupart des tâches, 2 à 4 itérations ciblées suffisent pour passer d\'un prompt défaillant à un prompt fiable. Chaque itération doit modifier une variable et être testée sur 3 à 5 entrées représentatives. Les rendements décroissants apparaissent après 5 à 6 itérations — si un prompt ne s\'est pas stabilisé à ce stade, la définition de la tâche elle-même doit peut-être être révisée.' } },
-          { '@type': 'Question', name: 'Quel levier modifier en premier lors de l\'optimisation d\'un prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Commencez par le format de sortie. La non-conformité de format — recevoir un paragraphe quand vous vouliez un tableau, ou du texte brut au lieu de JSON — est le mode d\'échec le plus fréquent et le plus rapide à corriger. Spécifiez la structure exacte souhaitée, puis traitez les autres problèmes (précision, ton, portée) lors des itérations suivantes.' } },
-          { '@type': 'Question', name: 'L\'optimisation de prompt fonctionne-t-elle sur tous les modèles IA ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec des ajustements spécifiques aux modèles. Les six leviers d\'optimisation (spécificité, contexte, exemples, contraintes, format de sortie, rôle) s\'appliquent à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et Mistral Large. Toutefois, chaque modèle réagit différemment à la densité des instructions.' } },
-          { '@type': 'Question', name: 'Quelle est l\'erreur d\'optimisation de prompt la plus courante ?', acceptedAnswer: { '@type': 'Answer', text: 'Modifier plusieurs variables simultanément. Si vous ajoutez des exemples, changez le format de sortie et ajoutez une instruction de rôle dans la même révision, il est impossible de déterminer quelle modification a amélioré (ou dégradé) la sortie. L\'optimisation efficace change une variable par itération.' } },
-          { '@type': 'Question', name: 'L\'optimisation de prompt peut-elle réduire les hallucinations IA ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, avec les bonnes techniques. L\'ajout de contexte d\'ancrage (« basez votre réponse uniquement sur le document suivant »), d\'exemples few-shot avec des sorties factuellement correctes, et de contraintes explicites (« n\'inventez pas de chiffres ») réduit de manière fiable les taux d\'hallucination.' } },
-          { '@type': 'Question', name: 'Quand utiliser le fine-tuning plutôt que l\'optimisation de prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez le fine-tuning lorsque l\'optimisation de prompt a atteint un plafond — typiquement quand le comportement requis est très spécifique au domaine, ou dépend de connaissances absentes du modèle de base. L\'optimisation de prompt est plus rapide et moins coûteuse et doit toujours être épuisée avant le fine-tuning.' } },
-          { '@type': 'Question', name: 'Comment savoir qu\'un prompt est pleinement optimisé ?', acceptedAnswer: { '@type': 'Answer', text: 'Un prompt est suffisamment optimisé quand il : (1) produit une sortie correcte sur 4 à 5 entrées représentatives, (2) produit une sortie cohérente lors des ré-exécutions, (3) fonctionne sur au moins deux modèles, et (4) satisfait la spécification de format sans post-traitement.' } },
-          { '@type': 'Question', name: 'L\'optimisation de prompt s\'applique-t-elle aux prompts d\'images ?', acceptedAnswer: { '@type': 'Answer', text: 'Les principes s\'appliquent — spécificité, contraintes et exemples (images de référence) sont des leviers valides pour les modèles d\'images comme DALL-E 3 et Stable Diffusion. Le processus d\'optimisation (base → diagnostiquer → changer une variable → tester) est identique.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que l\'optimisation automatique de prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'optimisation automatique de prompt utilise un second modèle IA pour réécrire et améliorer les prompts sans intervention humaine. Des outils comme DSPy (Stanford) et TextGrad génèrent des prompts candidats, les évaluent selon une métrique et sélectionnent la meilleure variante.' } },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que l\'optimisation de prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'optimisation de prompt est le processus itératif de révision d\'un prompt existant pour améliorer la qualité de la sortie IA pour une tâche spécifique. Elle implique l\'identification d\'un mode d\'échec (format incorrect, hallucination, sortie vague), la modification d\'une variable (spécificité, contexte, exemples, contraintes, format de sortie ou rôle) et le test du résultat sur plusieurs modèles comme GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre l\'optimisation de prompt et l\'ingénierie de prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'ingénierie de prompt est la discipline de conception d\'une structure de prompt à partir de zéro en utilisant des éléments constitutifs comme l\'objectif, le contexte et le format de sortie. L\'optimisation de prompt est le sous-processus itératif d\'amélioration d\'un prompt déjà écrit en diagnostiquant les modes d\'échec et en appliquant des modifications ciblées. Vous avez besoin de l\'ingénierie de prompt pour créer un point de départ ; vous utilisez l\'optimisation de prompt pour l\'affiner.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien d\'itérations faut-il pour optimiser un prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour la plupart des tâches, 2–4 itérations ciblées sont suffisantes pour passer d\'un prompt défaillant à un prompt fiable. Chaque itération doit modifier une variable et être testée sur 3–5 entrées représentatives. Les rendements décroissants s\'installent après 5–6 itérations — si un prompt ne s\'est pas stabilisé à ce moment-là, la définition de la tâche elle-même peut nécessiter une révision.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel levier devrais-je modifier en premier lors de l\'optimisation d\'un prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Commencez par le format de sortie. La non-conformité du format — recevoir un paragraphe quand vous vouliez un tableau, ou du texte brut quand vous aviez besoin de JSON — est le mode d\'échec le plus courant et le plus rapide à corriger. Spécifiez la structure exacte que vous souhaitez, puis abordez d\'autres problèmes (précision, ton, portée) dans les itérations suivantes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'optimisation de prompt fonctionne-t-elle sur tous les modèles d\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, mais avec des ajustements spécifiques au modèle. Les six leviers d\'optimisation fondamentaux (spécificité, contexte, exemples, contraintes, format de sortie, rôle) s\'appliquent à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et Mistral Large. Cependant, chaque modèle répond différemment à la densité d\'instructions — Claude gère mieux les instructions multi-parties plus longues ; GPT-5.6 répond bien aux system prompts structurés ; Gemini bénéficie des en-têtes de section explicites.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est l\'erreur d\'optimisation de prompt la plus courante ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Modifier plusieurs variables simultanément. Si vous ajoutez des exemples, modifiez le format de sortie et ajoutez une instruction de rôle dans la même révision, vous ne pouvez pas déterminer quel changement a amélioré (ou dégradé) la sortie. L\'optimisation efficace modifie une variable par itération.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'optimisation de prompt peut-elle réduire les hallucinations de l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, avec les bonnes techniques. Ajouter un contexte d\'ancrage (« Basez votre réponse uniquement sur le document suivant »), des exemples few-shot avec des sorties factuellement correctes et des contraintes explicites (« N\'invente pas de chiffres — utilise uniquement les données du texte fourni ») réduisent de façon fiable les taux d\'hallucination. Le prompting auto-cohérent — générer plusieurs sorties et retourner la plus courante — réduit davantage les fabrications de faible probabilité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand devrais-je utiliser le fine-tuning plutôt que l\'optimisation de prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez le fine-tuning lorsque l\'optimisation de prompt atteint un plafond — généralement lorsque le comportement requis est hautement spécifique au domaine, nécessite une voix stylistique cohérente sur des milliers de sorties ou dépend de connaissances absentes de l\'entraînement du modèle de base. L\'optimisation de prompt est plus rapide et moins coûteuse et devrait toujours être épuisée avant le fine-tuning.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment savoir si un prompt est entièrement optimisé ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un prompt est suffisamment optimisé quand il : (1) produit une sortie correcte sur 4–5 entrées représentatives, (2) produit une sortie cohérente lors de ré-exécutions, (3) fonctionne sur au moins deux modèles (par ex., GPT-5.6 et Claude) et (4) respecte la spécification de format sans post-traitement. Les prompts parfaits n\'existent pas — « optimisé » signifie suffisamment fiable pour le cas d\'usage.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'optimisation de prompt s\'applique-t-elle aux prompts d\'images (text-to-image) ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les principes s\'appliquent — spécificité, contraintes et exemples (images de référence) sont tous des leviers valides pour les modèles d\'image comme DALL-E 3 et Stable Diffusion. Cependant, la mécanique diffère : les modèles d\'image répondent aux modificateurs de style, aux spécifications de rapport d\'aspect et aux prompts négatifs comme contraintes. Le processus d\'optimisation (baseline → diagnostiquer → changer une variable → tester) est identique.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment fonctionne l\'optimisation automatique de prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'optimisation automatique de prompt utilise un deuxième modèle IA (ou le même modèle dans une boucle de meta-prompting) pour réécrire et améliorer les prompts sans intervention humaine. Des outils comme DSPy (Stanford), TextGrad et APE (Automatic Prompt Engineer) génèrent des prompts candidats, les évaluent par rapport à une métrique (précision, conformité du format, évaluation utilisateur) et sélectionnent la meilleure variante. L\'optimisation manuelle est plus rapide pour les tâches bien comprises ; l\'optimisation automatique s\'adapter mieux si vous avez des données d\'évaluation annotées et devez tester des centaines de variantes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment l\'optimisation de prompt diffère-t-elle du réglage fin de prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'optimisation de prompt améliore les prompts texte discrets — les instructions que vous écrivez en langage naturel — sans modifier les poids du modèle. Le réglage fin de prompt (introduit par Lester et al., 2021) apprend des vecteurs de soft-prompt continus qui sont préfacés à l\'entrée et entraînés par descente de gradient aux côtés ou à la place du modèle. Le réglage fin de prompt nécessite de la puissance de calcul et des données d\'entraînement ; l\'optimisation de prompt n\'a besoin d\'aucun des deux. Pour la plupart des cas d\'utilisation en production, vous optimisez d\'abord les prompts discrets et ne considérez le réglage fin de prompt que lorsqu\'un plafond de qualité difficile est atteint.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quels sont les meilleurs outils pour l\'optimisation de prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les outils les plus couramment utilisés sont : PromptQuorum (envoyez un prompt à GPT-5.6, Claude et Gemini simultanément pour l\'analyse comparative), DSPy (optimisation de prompt programmée avec sélection basée sur des métriques automatiques), LangSmith (versioning de prompt, tests A/B et traçage pour les pipelines LangChain), Promptfoo (CLI open-source pour exécuter les prompts contre des cas de test et des tests de régression) et PromptLayer (versioning de prompt et analytique). Pour l\'itération manuelle, un tableur enregistrant la version du prompt, l\'entrée, la sortie et Réussi/Échoué par rapport aux critères suffit pour la plupart des tâches d\'optimisation simples.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment optimiser un prompt système ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'optimisation du prompt système suit le même processus en 6 étapes que l\'optimisation du prompt utilisateur avec deux contraintes supplémentaires. Premièrement, les prompts système persistent sur tous les tours — une instruction trop spécifique peut dégrader les performances sur des entrées que vous n\'aviez pas prévues. Testez sur 5–10 entrées représentatives diverses, pas seulement une. Deuxièmement, la longueur du prompt système est importante : les prompts système très longs (>2 000 tokens) peuvent réduire le suivi des instructions dans les tours utilisateur ultérieurs sur certains modèles (particulièrement GPT-5.6). Optimisez pour la concision : chaque instruction du prompt système doit être nécessaire. Supprimez toute instruction qui ne change pas la sortie sur votre ensemble de test.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser ChatGPT pour l\'optimisation de prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Vous pouvez demander à GPT-5.6 de réécrire un prompt en fournissant le prompt défaillant et une description du mode d\'échec : « Ce prompt produit des sorties trop vagues. Réécrivez-le pour exiger une réponse structurée en 3 points. » C\'est une forme de meta-prompting — utiliser le modèle pour améliorer ses propres entrées. La limitation est que GPT-5.6 optimisera pour ce qu\'il considère comme meilleur, pas nécessairement pour ce que vos critères d\'évaluation spécifiques exigent. Testez toujours le prompt réécrit sur des entrées réelles et mesurez par rapport à vos critères réels de Réussi/Échoué avant d\'accepter la révision.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que signifie l\'optimisation de prompt dans le contexte du machine learning ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Dans le contexte du machine learning, l\'optimisation de prompt fait référence à des techniques qui améliorent les prompts envoyés à un modèle de langage dans le cadre d\'un pipeline — sans réentraîner le modèle lui-même. Cela inclut l\'optimisation de prompt discrète (réécrire les instructions en langage naturel) et l\'optimisation continue de prompt (apprendre les embeddings de soft-tokens par descente de gradient). Dans les systèmes de production ML, l\'optimisation de prompt est généralement partie intégrante du pipeline d\'inférence : le prompt est traité comme un hyperparamètre optimisé par rapport à un ensemble d\'évaluation réservé, similaire à la sélection du taux d\'apprentissage lors de l\'entraînement du modèle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien l\'optimisation de prompt améliore-t-elle la qualité de la sortie ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La plage d\'amélioration dépend du point de départ du prompt non optimisé. Dans les évaluations contrôlées, le passage d\'un prompt non optimisé à un prompt bien optimisé entraîne généralement une amélioration de la précision des tâches de 20–40 % sur les tâches structurées (classification, extraction, génération JSON) et de 15–25 % sur les tâches ouvertes (résumé, analyse). Les plus gros gains proviennent de la spécification du format de sortie (éliminant entièrement la non-conformité du format) et de l\'ajout de 1–2 exemples few-shot (réduisant les hallucinations dans les sorties structurées). Le rapport Schulhoff et al. 2024 Prompt Report documente des gains constants de 10–30 % sur 58 techniques de prompting évaluées sur plusieurs modèles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je optimiser les prompts séparément pour chaque modèle ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Commencez par une optimisation indépendante du modèle — appliquez les 6 leviers (spécificité, contexte, exemples, contraintes, format de sortie, rôle) et testez sur GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro. Un prompt bien structuré fonctionne généralement bien sur tous les trois. N\'ajoutez des variantes spécifiques au modèle que si les tests cross-model montrent des résultats divergents. Les ajustements spécifiques au modèle les plus courants : Claude gère bien les prompts système multi-parties plus longs ; GPT-5.6 bénéficie des demandes de format JSON explicites ; Gemini 3.1 Pro bénéficie des en-têtes de section explicites dans les tâches avec de longs documents. Documentez les variantes spécifiques au modèle dans une bibliothèque de prompts avec des notes de version.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre l\'optimisation de prompt et RAG ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'optimisation de prompt améliore les instructions et la structure d\'un prompt. La génération augmentée par récupération (RAG) améliore les informations disponibles pour le modèle au moment de l\'inférence en récupérant des documents pertinents et en les insérant dans le contexte du prompt. Les deux sont complémentaires : RAG résout le problème que le modèle n\'a pas les bonnes données ; l\'optimisation de prompt résout le problème que le modèle ne traite pas correctement ces données. Un pipeline RAG entièrement optimisé nécessite à la fois une bonne récupération (les bons documents sont récupérés) et un prompt bien optimisé (le modèle est instruitd\'utiliser uniquement le contenu récupéré, de citer les sources et de formater correctement la réponse).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment optimiser les prompts spécifiquement pour GPT-5.6 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6 répond bien à quatre mouvements d\'optimisation : (1) Demandes explicites de format JSON dans le prompt système — le suivi des instructions de GPT-5.6 pour la sortie structurée est fort lorsque le schéma est précisément défini. (2) En-têtes Markdown dans les prompts système — utilisez les sections H2 (## Rôle, ## Tâche, ## Format de sortie) pour séparer les préoccupations ; GPT-5.6 respecte cette structure de façon fiable. (3) Contraintes strictes — GPT-5.6 tend à sur-expliquer sans limites de mots/longueur ; ajoutez « répondez en ≤150 mots » ou « retournez uniquement l\'objet JSON, pas d\'explication ». (4) Encadrage d\'utilisation d\'outils — pour les tâches impliquant la récupération ou le calcul, formulez le prompt comme une définition de fonction plutôt qu\'une instruction en prose si vous utilisez l\'API Assistants avec les outils activés.',
+            },
+          },
         ],
       },
       toc: [
@@ -2445,86 +2971,26 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'FAQ : Optimisation de Prompt',
           faqs: [
-            {
-              q: 'Qu\'est-ce que l\'optimisation de prompt ?',
-              a: 'L\'optimisation de prompt est le processus itératif de révision d\'un prompt existant pour améliorer la qualité de la sortie IA pour une tâche spécifique. Elle implique l\'identification d\'un mode d\'échec (format incorrect, hallucination, sortie vague), la modification d\'une variable (spécificité, contexte, exemples, contraintes, format de sortie ou rôle) et le test du résultat sur plusieurs modèles comme GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro.',
-            },
-            {
-              q: 'Quelle est la différence entre l\'optimisation de prompt et l\'ingénierie de prompt ?',
-              a: 'L\'ingénierie de prompt est la discipline de conception d\'une structure de prompt à partir de zéro en utilisant des éléments constitutifs comme l\'objectif, le contexte et le format de sortie. L\'optimisation de prompt est le sous-processus itératif d\'amélioration d\'un prompt déjà écrit en diagnostiquant les modes d\'échec et en appliquant des modifications ciblées. Vous avez besoin de l\'ingénierie de prompt pour créer un point de départ ; vous utilisez l\'optimisation de prompt pour l\'affiner.',
-            },
-            {
-              q: 'Combien d\'itérations faut-il pour optimiser un prompt ?',
-              a: 'Pour la plupart des tâches, 2–4 itérations ciblées sont suffisantes pour passer d\'un prompt défaillant à un prompt fiable. Chaque itération doit modifier une variable et être testée sur 3–5 entrées représentatives. Les rendements décroissants s\'installent après 5–6 itérations — si un prompt ne s\'est pas stabilisé à ce moment-là, la définition de la tâche elle-même peut nécessiter une révision.',
-            },
-            {
-              q: 'Quel levier devrais-je modifier en premier lors de l\'optimisation d\'un prompt ?',
-              a: 'Commencez par le format de sortie. La non-conformité du format — recevoir un paragraphe quand vous vouliez un tableau, ou du texte brut quand vous aviez besoin de JSON — est le mode d\'échec le plus courant et le plus rapide à corriger. Spécifiez la structure exacte que vous souhaitez, puis abordez d\'autres problèmes (précision, ton, portée) dans les itérations suivantes.',
-            },
-            {
-              q: 'L\'optimisation de prompt fonctionne-t-elle sur tous les modèles d\'IA ?',
-              a: 'Oui, mais avec des ajustements spécifiques au modèle. Les six leviers d\'optimisation fondamentaux (spécificité, contexte, exemples, contraintes, format de sortie, rôle) s\'appliquent à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et Mistral Large. Cependant, chaque modèle répond différemment à la densité d\'instructions — Claude gère mieux les instructions multi-parties plus longues ; GPT-5.6 répond bien aux system prompts structurés ; Gemini bénéficie des en-têtes de section explicites.',
-            },
-            {
-              q: 'Quelle est l\'erreur d\'optimisation de prompt la plus courante ?',
-              a: 'Modifier plusieurs variables simultanément. Si vous ajoutez des exemples, modifiez le format de sortie et ajoutez une instruction de rôle dans la même révision, vous ne pouvez pas déterminer quel changement a amélioré (ou dégradé) la sortie. L\'optimisation efficace modifie une variable par itération.',
-            },
-            {
-              q: 'L\'optimisation de prompt peut-elle réduire les hallucinations de l\'IA ?',
-              a: 'Oui, avec les bonnes techniques. Ajouter un contexte d\'ancrage (« Basez votre réponse uniquement sur le document suivant »), des exemples few-shot avec des sorties factuellement correctes et des contraintes explicites (« N\'invente pas de chiffres — utilise uniquement les données du texte fourni ») réduisent de façon fiable les taux d\'hallucination. Le prompting auto-cohérent — générer plusieurs sorties et retourner la plus courante — réduit davantage les fabrications de faible probabilité.',
-            },
-            {
-              q: 'Quand devrais-je utiliser le fine-tuning plutôt que l\'optimisation de prompt ?',
-              a: 'Utilisez le fine-tuning lorsque l\'optimisation de prompt atteint un plafond — généralement lorsque le comportement requis est hautement spécifique au domaine, nécessite une voix stylistique cohérente sur des milliers de sorties ou dépend de connaissances absentes de l\'entraînement du modèle de base. L\'optimisation de prompt est plus rapide et moins coûteuse et devrait toujours être épuisée avant le fine-tuning.',
-            },
-            {
-              q: 'Comment savoir si un prompt est entièrement optimisé ?',
-              a: 'Un prompt est suffisamment optimisé quand il : (1) produit une sortie correcte sur 4–5 entrées représentatives, (2) produit une sortie cohérente lors de ré-exécutions, (3) fonctionne sur au moins deux modèles (par ex., GPT-5.6 et Claude) et (4) respecte la spécification de format sans post-traitement. Les prompts parfaits n\'existent pas — « optimisé » signifie suffisamment fiable pour le cas d\'usage.',
-            },
-            {
-              q: 'L\'optimisation de prompt s\'applique-t-elle aux prompts d\'images (text-to-image) ?',
-              a: 'Les principes s\'appliquent — spécificité, contraintes et exemples (images de référence) sont tous des leviers valides pour les modèles d\'image comme DALL-E 3 et Stable Diffusion. Cependant, la mécanique diffère : les modèles d\'image répondent aux modificateurs de style, aux spécifications de rapport d\'aspect et aux prompts négatifs comme contraintes. Le processus d\'optimisation (baseline → diagnostiquer → changer une variable → tester) est identique.',
-            },
-            {
-              q: 'Comment fonctionne l\'optimisation automatique de prompt ?',
-              a: 'L\'optimisation automatique de prompt utilise un deuxième modèle IA (ou le même modèle dans une boucle de meta-prompting) pour réécrire et améliorer les prompts sans intervention humaine. Des outils comme DSPy (Stanford), TextGrad et APE (Automatic Prompt Engineer) génèrent des prompts candidats, les évaluent par rapport à une métrique (précision, conformité du format, évaluation utilisateur) et sélectionnent la meilleure variante. L\'optimisation manuelle est plus rapide pour les tâches bien comprises ; l\'optimisation automatique s\'adapter mieux si vous avez des données d\'évaluation annotées et devez tester des centaines de variantes.',
-            },
-            {
-              q: 'Comment l\'optimisation de prompt diffère-t-elle du réglage fin de prompt ?',
-              a: 'L\'optimisation de prompt améliore les prompts texte discrets — les instructions que vous écrivez en langage naturel — sans modifier les poids du modèle. Le réglage fin de prompt (introduit par Lester et al., 2021) apprend des vecteurs de soft-prompt continus qui sont préfacés à l\'entrée et entraînés par descente de gradient aux côtés ou à la place du modèle. Le réglage fin de prompt nécessite de la puissance de calcul et des données d\'entraînement ; l\'optimisation de prompt n\'a besoin d\'aucun des deux. Pour la plupart des cas d\'utilisation en production, vous optimisez d\'abord les prompts discrets et ne considérez le réglage fin de prompt que lorsqu\'un plafond de qualité difficile est atteint.',
-            },
-            {
-              q: 'Quels sont les meilleurs outils pour l\'optimisation de prompt ?',
-              a: 'Les outils les plus couramment utilisés sont : PromptQuorum (envoyez un prompt à GPT-5.6, Claude et Gemini simultanément pour l\'analyse comparative), DSPy (optimisation de prompt programmée avec sélection basée sur des métriques automatiques), LangSmith (versioning de prompt, tests A/B et traçage pour les pipelines LangChain), Promptfoo (CLI open-source pour exécuter les prompts contre des cas de test et des tests de régression) et PromptLayer (versioning de prompt et analytique). Pour l\'itération manuelle, un tableur enregistrant la version du prompt, l\'entrée, la sortie et Réussi/Échoué par rapport aux critères suffit pour la plupart des tâches d\'optimisation simples.',
-            },
-            {
-              q: 'Comment optimiser un prompt système ?',
-              a: 'L\'optimisation du prompt système suit le même processus en 6 étapes que l\'optimisation du prompt utilisateur avec deux contraintes supplémentaires. Premièrement, les prompts système persistent sur tous les tours — une instruction trop spécifique peut dégrader les performances sur des entrées que vous n\'aviez pas prévues. Testez sur 5–10 entrées représentatives diverses, pas seulement une. Deuxièmement, la longueur du prompt système est importante : les prompts système très longs (>2 000 tokens) peuvent réduire le suivi des instructions dans les tours utilisateur ultérieurs sur certains modèles (particulièrement GPT-5.6). Optimisez pour la concision : chaque instruction du prompt système doit être nécessaire. Supprimez toute instruction qui ne change pas la sortie sur votre ensemble de test.',
-            },
-            {
-              q: 'Puis-je utiliser ChatGPT pour l\'optimisation de prompt ?',
-              a: 'Oui. Vous pouvez demander à GPT-5.6 de réécrire un prompt en fournissant le prompt défaillant et une description du mode d\'échec : « Ce prompt produit des sorties trop vagues. Réécrivez-le pour exiger une réponse structurée en 3 points. » C\'est une forme de meta-prompting — utiliser le modèle pour améliorer ses propres entrées. La limitation est que GPT-5.6 optimisera pour ce qu\'il considère comme meilleur, pas nécessairement pour ce que vos critères d\'évaluation spécifiques exigent. Testez toujours le prompt réécrit sur des entrées réelles et mesurez par rapport à vos critères réels de Réussi/Échoué avant d\'accepter la révision.',
-            },
-            {
-              q: 'Que signifie l\'optimisation de prompt dans le contexte du machine learning ?',
-              a: 'Dans le contexte du machine learning, l\'optimisation de prompt fait référence à des techniques qui améliorent les prompts envoyés à un modèle de langage dans le cadre d\'un pipeline — sans réentraîner le modèle lui-même. Cela inclut l\'optimisation de prompt discrète (réécrire les instructions en langage naturel) et l\'optimisation continue de prompt (apprendre les embeddings de soft-tokens par descente de gradient). Dans les systèmes de production ML, l\'optimisation de prompt est généralement partie intégrante du pipeline d\'inférence : le prompt est traité comme un hyperparamètre optimisé par rapport à un ensemble d\'évaluation réservé, similaire à la sélection du taux d\'apprentissage lors de l\'entraînement du modèle.',
-            },
-            {
-              q: 'Combien l\'optimisation de prompt améliore-t-elle la qualité de la sortie ?',
-              a: 'La plage d\'amélioration dépend du point de départ du prompt non optimisé. Dans les évaluations contrôlées, le passage d\'un prompt non optimisé à un prompt bien optimisé entraîne généralement une amélioration de la précision des tâches de 20–40 % sur les tâches structurées (classification, extraction, génération JSON) et de 15–25 % sur les tâches ouvertes (résumé, analyse). Les plus gros gains proviennent de la spécification du format de sortie (éliminant entièrement la non-conformité du format) et de l\'ajout de 1–2 exemples few-shot (réduisant les hallucinations dans les sorties structurées). Le rapport Schulhoff et al. 2024 Prompt Report documente des gains constants de 10–30 % sur 58 techniques de prompting évaluées sur plusieurs modèles.',
-            },
-            {
-              q: 'Dois-je optimiser les prompts séparément pour chaque modèle ?',
-              a: 'Commencez par une optimisation indépendante du modèle — appliquez les 6 leviers (spécificité, contexte, exemples, contraintes, format de sortie, rôle) et testez sur GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro. Un prompt bien structuré fonctionne généralement bien sur tous les trois. N\'ajoutez des variantes spécifiques au modèle que si les tests cross-model montrent des résultats divergents. Les ajustements spécifiques au modèle les plus courants : Claude gère bien les prompts système multi-parties plus longs ; GPT-5.6 bénéficie des demandes de format JSON explicites ; Gemini 3.1 Pro bénéficie des en-têtes de section explicites dans les tâches avec de longs documents. Documentez les variantes spécifiques au modèle dans une bibliothèque de prompts avec des notes de version.',
-            },
-            {
-              q: 'Quelle est la différence entre l\'optimisation de prompt et RAG ?',
-              a: 'L\'optimisation de prompt améliore les instructions et la structure d\'un prompt. La génération augmentée par récupération (RAG) améliore les informations disponibles pour le modèle au moment de l\'inférence en récupérant des documents pertinents et en les insérant dans le contexte du prompt. Les deux sont complémentaires : RAG résout le problème que le modèle n\'a pas les bonnes données ; l\'optimisation de prompt résout le problème que le modèle ne traite pas correctement ces données. Un pipeline RAG entièrement optimisé nécessite à la fois une bonne récupération (les bons documents sont récupérés) et un prompt bien optimisé (le modèle est instruitd\'utiliser uniquement le contenu récupéré, de citer les sources et de formater correctement la réponse).',
-            },
-            {
-              q: 'Comment optimiser les prompts spécifiquement pour GPT-5.6 ?',
-              a: 'GPT-5.6 répond bien à quatre mouvements d\'optimisation : (1) Demandes explicites de format JSON dans le prompt système — le suivi des instructions de GPT-5.6 pour la sortie structurée est fort lorsque le schéma est précisément défini. (2) En-têtes Markdown dans les prompts système — utilisez les sections H2 (## Rôle, ## Tâche, ## Format de sortie) pour séparer les préoccupations ; GPT-5.6 respecte cette structure de façon fiable. (3) Contraintes strictes — GPT-5.6 tend à sur-expliquer sans limites de mots/longueur ; ajoutez « répondez en ≤150 mots » ou « retournez uniquement l\'objet JSON, pas d\'explication ». (4) Encadrage d\'utilisation d\'outils — pour les tâches impliquant la récupération ou le calcul, formulez le prompt comme une définition de fonction plutôt qu\'une instruction en prose si vous utilisez l\'API Assistants avec les outils activés.',
-            },
+            { q: 'Qu\'est-ce que l\'optimisation de prompt ?', a: 'L\'optimisation de prompt est le processus itératif de révision d\'un prompt existant pour améliorer la qualité de la sortie IA pour une tâche spécifique. Elle implique l\'identification d\'un mode d\'échec (format incorrect, hallucination, sortie vague), la modification d\'une variable (spécificité, contexte, exemples, contraintes, format de sortie ou rôle) et le test du résultat sur plusieurs modèles comme GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro.' },
+            { q: 'Quelle est la différence entre l\'optimisation de prompt et l\'ingénierie de prompt ?', a: 'L\'ingénierie de prompt est la discipline de conception d\'une structure de prompt à partir de zéro en utilisant des éléments constitutifs comme l\'objectif, le contexte et le format de sortie. L\'optimisation de prompt est le sous-processus itératif d\'amélioration d\'un prompt déjà écrit en diagnostiquant les modes d\'échec et en appliquant des modifications ciblées. Vous avez besoin de l\'ingénierie de prompt pour créer un point de départ ; vous utilisez l\'optimisation de prompt pour l\'affiner.' },
+            { q: 'Combien d\'itérations faut-il pour optimiser un prompt ?', a: 'Pour la plupart des tâches, 2–4 itérations ciblées sont suffisantes pour passer d\'un prompt défaillant à un prompt fiable. Chaque itération doit modifier une variable et être testée sur 3–5 entrées représentatives. Les rendements décroissants s\'installent après 5–6 itérations — si un prompt ne s\'est pas stabilisé à ce moment-là, la définition de la tâche elle-même peut nécessiter une révision.' },
+            { q: 'Quel levier devrais-je modifier en premier lors de l\'optimisation d\'un prompt ?', a: 'Commencez par le format de sortie. La non-conformité du format — recevoir un paragraphe quand vous vouliez un tableau, ou du texte brut quand vous aviez besoin de JSON — est le mode d\'échec le plus courant et le plus rapide à corriger. Spécifiez la structure exacte que vous souhaitez, puis abordez d\'autres problèmes (précision, ton, portée) dans les itérations suivantes.' },
+            { q: 'L\'optimisation de prompt fonctionne-t-elle sur tous les modèles d\'IA ?', a: 'Oui, mais avec des ajustements spécifiques au modèle. Les six leviers d\'optimisation fondamentaux (spécificité, contexte, exemples, contraintes, format de sortie, rôle) s\'appliquent à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et Mistral Large. Cependant, chaque modèle répond différemment à la densité d\'instructions — Claude gère mieux les instructions multi-parties plus longues ; GPT-5.6 répond bien aux system prompts structurés ; Gemini bénéficie des en-têtes de section explicites.' },
+            { q: 'Quelle est l\'erreur d\'optimisation de prompt la plus courante ?', a: 'Modifier plusieurs variables simultanément. Si vous ajoutez des exemples, modifiez le format de sortie et ajoutez une instruction de rôle dans la même révision, vous ne pouvez pas déterminer quel changement a amélioré (ou dégradé) la sortie. L\'optimisation efficace modifie une variable par itération.' },
+            { q: 'L\'optimisation de prompt peut-elle réduire les hallucinations de l\'IA ?', a: 'Oui, avec les bonnes techniques. Ajouter un contexte d\'ancrage (« Basez votre réponse uniquement sur le document suivant »), des exemples few-shot avec des sorties factuellement correctes et des contraintes explicites (« N\'invente pas de chiffres — utilise uniquement les données du texte fourni ») réduisent de façon fiable les taux d\'hallucination. Le prompting auto-cohérent — générer plusieurs sorties et retourner la plus courante — réduit davantage les fabrications de faible probabilité.' },
+            { q: 'Quand devrais-je utiliser le fine-tuning plutôt que l\'optimisation de prompt ?', a: 'Utilisez le fine-tuning lorsque l\'optimisation de prompt atteint un plafond — généralement lorsque le comportement requis est hautement spécifique au domaine, nécessite une voix stylistique cohérente sur des milliers de sorties ou dépend de connaissances absentes de l\'entraînement du modèle de base. L\'optimisation de prompt est plus rapide et moins coûteuse et devrait toujours être épuisée avant le fine-tuning.' },
+            { q: 'Comment savoir si un prompt est entièrement optimisé ?', a: 'Un prompt est suffisamment optimisé quand il : (1) produit une sortie correcte sur 4–5 entrées représentatives, (2) produit une sortie cohérente lors de ré-exécutions, (3) fonctionne sur au moins deux modèles (par ex., GPT-5.6 et Claude) et (4) respecte la spécification de format sans post-traitement. Les prompts parfaits n\'existent pas — « optimisé » signifie suffisamment fiable pour le cas d\'usage.' },
+            { q: 'L\'optimisation de prompt s\'applique-t-elle aux prompts d\'images (text-to-image) ?', a: 'Les principes s\'appliquent — spécificité, contraintes et exemples (images de référence) sont tous des leviers valides pour les modèles d\'image comme DALL-E 3 et Stable Diffusion. Cependant, la mécanique diffère : les modèles d\'image répondent aux modificateurs de style, aux spécifications de rapport d\'aspect et aux prompts négatifs comme contraintes. Le processus d\'optimisation (baseline → diagnostiquer → changer une variable → tester) est identique.' },
+            { q: 'Comment fonctionne l\'optimisation automatique de prompt ?', a: 'L\'optimisation automatique de prompt utilise un deuxième modèle IA (ou le même modèle dans une boucle de meta-prompting) pour réécrire et améliorer les prompts sans intervention humaine. Des outils comme DSPy (Stanford), TextGrad et APE (Automatic Prompt Engineer) génèrent des prompts candidats, les évaluent par rapport à une métrique (précision, conformité du format, évaluation utilisateur) et sélectionnent la meilleure variante. L\'optimisation manuelle est plus rapide pour les tâches bien comprises ; l\'optimisation automatique s\'adapter mieux si vous avez des données d\'évaluation annotées et devez tester des centaines de variantes.' },
+            { q: 'Comment l\'optimisation de prompt diffère-t-elle du réglage fin de prompt ?', a: 'L\'optimisation de prompt améliore les prompts texte discrets — les instructions que vous écrivez en langage naturel — sans modifier les poids du modèle. Le réglage fin de prompt (introduit par Lester et al., 2021) apprend des vecteurs de soft-prompt continus qui sont préfacés à l\'entrée et entraînés par descente de gradient aux côtés ou à la place du modèle. Le réglage fin de prompt nécessite de la puissance de calcul et des données d\'entraînement ; l\'optimisation de prompt n\'a besoin d\'aucun des deux. Pour la plupart des cas d\'utilisation en production, vous optimisez d\'abord les prompts discrets et ne considérez le réglage fin de prompt que lorsqu\'un plafond de qualité difficile est atteint.' },
+            { q: 'Quels sont les meilleurs outils pour l\'optimisation de prompt ?', a: 'Les outils les plus couramment utilisés sont : PromptQuorum (envoyez un prompt à GPT-5.6, Claude et Gemini simultanément pour l\'analyse comparative), DSPy (optimisation de prompt programmée avec sélection basée sur des métriques automatiques), LangSmith (versioning de prompt, tests A/B et traçage pour les pipelines LangChain), Promptfoo (CLI open-source pour exécuter les prompts contre des cas de test et des tests de régression) et PromptLayer (versioning de prompt et analytique). Pour l\'itération manuelle, un tableur enregistrant la version du prompt, l\'entrée, la sortie et Réussi/Échoué par rapport aux critères suffit pour la plupart des tâches d\'optimisation simples.' },
+            { q: 'Comment optimiser un prompt système ?', a: 'L\'optimisation du prompt système suit le même processus en 6 étapes que l\'optimisation du prompt utilisateur avec deux contraintes supplémentaires. Premièrement, les prompts système persistent sur tous les tours — une instruction trop spécifique peut dégrader les performances sur des entrées que vous n\'aviez pas prévues. Testez sur 5–10 entrées représentatives diverses, pas seulement une. Deuxièmement, la longueur du prompt système est importante : les prompts système très longs (>2 000 tokens) peuvent réduire le suivi des instructions dans les tours utilisateur ultérieurs sur certains modèles (particulièrement GPT-5.6). Optimisez pour la concision : chaque instruction du prompt système doit être nécessaire. Supprimez toute instruction qui ne change pas la sortie sur votre ensemble de test.' },
+            { q: 'Puis-je utiliser ChatGPT pour l\'optimisation de prompt ?', a: 'Oui. Vous pouvez demander à GPT-5.6 de réécrire un prompt en fournissant le prompt défaillant et une description du mode d\'échec : « Ce prompt produit des sorties trop vagues. Réécrivez-le pour exiger une réponse structurée en 3 points. » C\'est une forme de meta-prompting — utiliser le modèle pour améliorer ses propres entrées. La limitation est que GPT-5.6 optimisera pour ce qu\'il considère comme meilleur, pas nécessairement pour ce que vos critères d\'évaluation spécifiques exigent. Testez toujours le prompt réécrit sur des entrées réelles et mesurez par rapport à vos critères réels de Réussi/Échoué avant d\'accepter la révision.' },
+            { q: 'Que signifie l\'optimisation de prompt dans le contexte du machine learning ?', a: 'Dans le contexte du machine learning, l\'optimisation de prompt fait référence à des techniques qui améliorent les prompts envoyés à un modèle de langage dans le cadre d\'un pipeline — sans réentraîner le modèle lui-même. Cela inclut l\'optimisation de prompt discrète (réécrire les instructions en langage naturel) et l\'optimisation continue de prompt (apprendre les embeddings de soft-tokens par descente de gradient). Dans les systèmes de production ML, l\'optimisation de prompt est généralement partie intégrante du pipeline d\'inférence : le prompt est traité comme un hyperparamètre optimisé par rapport à un ensemble d\'évaluation réservé, similaire à la sélection du taux d\'apprentissage lors de l\'entraînement du modèle.' },
+            { q: 'Combien l\'optimisation de prompt améliore-t-elle la qualité de la sortie ?', a: 'La plage d\'amélioration dépend du point de départ du prompt non optimisé. Dans les évaluations contrôlées, le passage d\'un prompt non optimisé à un prompt bien optimisé entraîne généralement une amélioration de la précision des tâches de 20–40 % sur les tâches structurées (classification, extraction, génération JSON) et de 15–25 % sur les tâches ouvertes (résumé, analyse). Les plus gros gains proviennent de la spécification du format de sortie (éliminant entièrement la non-conformité du format) et de l\'ajout de 1–2 exemples few-shot (réduisant les hallucinations dans les sorties structurées). Le rapport Schulhoff et al. 2024 Prompt Report documente des gains constants de 10–30 % sur 58 techniques de prompting évaluées sur plusieurs modèles.' },
+            { q: 'Dois-je optimiser les prompts séparément pour chaque modèle ?', a: 'Commencez par une optimisation indépendante du modèle — appliquez les 6 leviers (spécificité, contexte, exemples, contraintes, format de sortie, rôle) et testez sur GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro. Un prompt bien structuré fonctionne généralement bien sur tous les trois. N\'ajoutez des variantes spécifiques au modèle que si les tests cross-model montrent des résultats divergents. Les ajustements spécifiques au modèle les plus courants : Claude gère bien les prompts système multi-parties plus longs ; GPT-5.6 bénéficie des demandes de format JSON explicites ; Gemini 3.1 Pro bénéficie des en-têtes de section explicites dans les tâches avec de longs documents. Documentez les variantes spécifiques au modèle dans une bibliothèque de prompts avec des notes de version.' },
+            { q: 'Quelle est la différence entre l\'optimisation de prompt et RAG ?', a: 'L\'optimisation de prompt améliore les instructions et la structure d\'un prompt. La génération augmentée par récupération (RAG) améliore les informations disponibles pour le modèle au moment de l\'inférence en récupérant des documents pertinents et en les insérant dans le contexte du prompt. Les deux sont complémentaires : RAG résout le problème que le modèle n\'a pas les bonnes données ; l\'optimisation de prompt résout le problème que le modèle ne traite pas correctement ces données. Un pipeline RAG entièrement optimisé nécessite à la fois une bonne récupération (les bons documents sont récupérés) et un prompt bien optimisé (le modèle est instruitd\'utiliser uniquement le contenu récupéré, de citer les sources et de formater correctement la réponse).' },
+            { q: 'Comment optimiser les prompts spécifiquement pour GPT-5.6 ?', a: 'GPT-5.6 répond bien à quatre mouvements d\'optimisation : (1) Demandes explicites de format JSON dans le prompt système — le suivi des instructions de GPT-5.6 pour la sortie structurée est fort lorsque le schéma est précisément défini. (2) En-têtes Markdown dans les prompts système — utilisez les sections H2 (## Rôle, ## Tâche, ## Format de sortie) pour séparer les préoccupations ; GPT-5.6 respecte cette structure de façon fiable. (3) Contraintes strictes — GPT-5.6 tend à sur-expliquer sans limites de mots/longueur ; ajoutez « répondez en ≤150 mots » ou « retournez uniquement l\'objet JSON, pas d\'explication ». (4) Encadrage d\'utilisation d\'outils — pour les tâches impliquant la récupération ou le calcul, formulez le prompt comme une définition de fonction plutôt qu\'une instruction en prose si vous utilisez l\'API Assistants avec les outils activés.' },
           ],
         },
 
@@ -2623,17 +3089,182 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [
-          { '@type': 'Question', name: 'プロンプト最適化とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプト最適化は、特定のタスクに対するAI出力品質を向上させるために既存のプロンプトを反復的に改定するプロセスです。障害モード（フォーマット不良、ハルシネーション、曖昧な出力）を特定し、一つの変数（具体性、コンテキスト、例、制約、出力フォーマット、ロール）を変更して、GPT-5.6、Claude Opus 5、Gemini 3.1 Proなどのモデルで結果をテストします。' } },
-          { '@type': 'Question', name: 'プロンプト最適化とプロンプトエンジニアリングの違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングは、目標・コンテキスト・出力フォーマットなどのブロックを使ってゼロからプロンプト構造を設計する分野です。プロンプト最適化は、既に書かれたプロンプトを改善する反復的なサブプロセスで、障害モードを診断して的を絞った変更を適用します。エンジニアリングで出発点を作り、最適化でそれを洗練させます。' } },
-          { '@type': 'Question', name: 'プロンプトの最適化に何回の反復が必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'ほとんどのタスクでは、失敗したプロンプトから信頼性の高いプロンプトへと進むために2〜4回の的を絞った反復で十分です。各反復は一つの変数を変更し、3〜5つの代表的な入力でテストする必要があります。5〜6回の反復後に収穫逓減が始まります。' } },
-          { '@type': 'Question', name: 'プロンプト最適化でどのレバーを最初に変更すべきですか？', acceptedAnswer: { '@type': 'Answer', text: '出力フォーマットから始めましょう。フォーマット不適合（表が欲しかったのに段落が来る、JSONが必要なのにプレーンテキストが来る）は最も一般的で最も素早く修正できる障害モードです。希望する構造を正確に指定し、その後の反復で他の問題（精度、トーン、範囲）に対処します。' } },
-          { '@type': 'Question', name: 'プロンプト最適化はすべてのAIモデルで機能しますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、ただしモデル固有の調整が必要です。6つのコア最適化レバー（具体性、コンテキスト、例、制約、出力フォーマット、ロール）は、GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Largeに適用されます。ただし、各モデルは命令密度に対して異なる反応を示します。' } },
-          { '@type': 'Question', name: 'プロンプト最適化の最も一般的な間違いは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '複数の変数を同時に変更することです。同じ改訂で例を追加し、出力フォーマットを変更し、ロール指示を追加すると、どの変更が出力を改善（または悪化）させたかを判断できません。効果的な最適化は反復ごとに一つの変数を変更します。' } },
-          { '@type': 'Question', name: 'プロンプト最適化はAIのハルシネーションを減らすことができますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、適切なテクニックを使えば可能です。グラウンディングコンテキストの追加（「以下の文書のみに基づいて回答してください」）、事実的に正確な出力のフューショット例、明示的な制約（「数字を作らないでください」）により、ハルシネーション率を確実に低下させることができます。' } },
-          { '@type': 'Question', name: 'プロンプト最適化の代わりにファインチューニングを使用するのはいつですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプト最適化が上限に達したとき、つまり必要な動作が非常にドメイン固有である場合、何千もの出力にわたって一貫したスタイル的声が必要な場合、またはベースモデルのトレーニングにない知識に依存している場合にファインチューニングを使用してください。プロンプト最適化の方が高速で安価なので、常にファインチューニング前に徹底的に試みてください。' } },
-          { '@type': 'Question', name: 'プロンプトが完全に最適化されていることをどうやって知りますか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトが十分に最適化されているのは：(1) 4〜5つの代表的な入力で正しい出力を生成する、(2) 再実行で一貫した出力を生成する、(3) 少なくとも2つのモデルで動作する、(4) 後処理なしにフォーマット仕様を満たす、という条件を満たすときです。完璧なプロンプトは存在しません—「最適化された」とは、ユースケースに対して十分に信頼できることを意味します。' } },
-          { '@type': 'Question', name: 'プロンプト最適化は画像プロンプト（テキスト-画像）に適用されますか？', acceptedAnswer: { '@type': 'Answer', text: '原則は適用されます—具体性、制約、例（参考画像）はDALL-E 3やStable DiffusionなどのIMAGEモデルの有効なレバーです。ただしメカニズムは異なります：画像モデルはスタイル修飾子、アスペクト比指定、ネガティブプロンプトに反応します。最適化プロセス（ベースライン→診断→一変数変更→テスト）は同じです。' } },
-          { '@type': 'Question', name: '自動プロンプト最適化とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '自動プロンプト最適化は、人間の介入なしにプロンプトを書き直して改善するために、2番目のAIモデル（またはメタプロンプティングループの同じモデル）を使用します。DSPy（Stanford）、TextGrad、APEなどのツールが候補プロンプトを生成し、メトリック（精度、フォーマット準拠、ユーザー評価）に対して評価し、最良のバリアントを選択します。' } },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプト最適化は、特定のタスクのためのAI出力品質を改善するために既存のプロンプトを改定する反復的なプロセスです。障害モード（形式が違う、幻覚、曖昧な出力）を識別し、1つの変数（具体性、コンテキスト、例、制約、出力フォーマット、またはロール）を変更し、GPT-5.6、Claude Opus 5、Gemini 3.1 Proなどのモデル全体で結果をテストします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化とプロンプトエンジニアリングの違いは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプトエンジニアリングは、目的、コンテキスト、出力フォーマットなどの構成要素を使用して最初からプロンプト構造を設計する規律です。プロンプト最適化は既に書かれたプロンプトを改善する反復的なサブプロセスで、障害モードを診断してターゲット変更を適用します。プロンプトエンジニアリングで出発点を作成する必要があります；プロンプト最適化で改善します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトを最適化するのに何回の反復が必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどのタスクでは、2～4回のターゲット反復は失敗するプロンプトから信頼できるプロンプトに移動するのに十分です。各反復は1つの変数を変更し、3～5個の代表的な入力でテストする必要があります。5～6回の反復後に収穫逓減が設定されます—プロンプトがそれまでに安定していない場合、タスク定義自体を改定する必要があるかもしれません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトを最適化するときに最初に変更するべきレバーはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '出力フォーマットで開始します。フォーマット非準拠—テーブルを要望したときにパラグラフを受け取るか、JSONが必要なときにプレーンテキストを受け取る—最も一般的で最速修正の障害モードです。正確な構造を指定してから、後続の反復で他の問題（精度、トーン、スコープ）に対処します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化はすべてのAIモデルで機能しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、ただしモデル固有の調整があります。6つのコア最適化・レバー（具体性、コンテキスト、例、制約、出力フォーマット、ロール）はGPT-5.6、Claude Opus 5、Gemini 3.1 Pro、およびMistral Largeに適用されます。ただし、各モデルは命令密度に異なる方法で応答します—Claudeはより長いマルチパート指示をより良く処理；GPT-5.6は構造化システム・プロンプトに良く応答；Geminiは明示的なセクション・ヘッダーから利益を得ます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '最も一般的なプロンプト最適化エラーは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '複数の変数を同時に変更する。同じ改定に例を追加し、出力フォーマットを変更し、ロール指示を追加する場合、どの変更が改善（または低下）した出力を決定できません。効果的な最適化は反復ごとに1つの変数を変更します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化はAIの幻覚を減らすことができますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、適切なテクニックで。係留コンテキスト（「提供されたドキュメントのみに基づいて回答してください」）、事実的に正しい出力を含むフューショット例、および明示的な制約（「数字を発明しない—提供されたテキストのデータのみを使用」）を追加すると、幻覚率が確実に低下します。自己一貫性プロンプティング—複数の出力を生成し、最も一般的なものを返す—低確率の作成をさらに減らします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '代わりにファインチューニングを使用すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプト最適化が天井に達したときにファインチューニングを使用します—通常、必要な動作がドメイン固有の場合、数千の出力全体で一貫した文体の声が必要な場合、またはベース・モデルのトレーニングにない知識に依存する場合。プロンプト最適化はより速く安価で、ファインチューニングの前に常に最大化する必要があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトが完全に最適化されているかどうかを知るにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプトが十分に最適化される場合：(1) 4～5個の代表的な入力で正しい出力を生成（2）再実行時に一貫性のある出力を生成（3）少なくとも2つのモデル（GPT-5.6およびClaudeなど）で機能（4）ポスト処理なしでフォーマット指定を満たします。完璧なプロンプトは存在しません—「最適化」はユースケースに十分な信頼性を意味します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化は画像プロンプト（テキストから画像）に適用されますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '原理は適用されます—具体性、制約、および例（リファレンス画像）はすべてDALL-E 3およびStable Diffusionなどの画像モデルに対して有効なレバーです。ただし、メカニクスは異なります：画像モデルは制約としてのスタイル修飾子、アスペクト比指定、負のプロンプトに応答します。最適化プロセス（ベースライン→診断→1つの変数を変更→テスト）は同一です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '自動プロンプト最適化はどのように機能しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '自動プロンプト最適化は、2番目のAIモデル（またはメタ・プロンプティング・ループ内の同じモデル）を使用して、人間の介入なしにプロンプトを改写および改善します。DSPy（Stanford）、TextGrad、APE（Automatic Prompt Engineer）などのツールは候補プロンプトを生成し、メトリック（精度、フォーマット準拠、ユーザー評価）に対して評価し、最適な変種を選択します。手動最適化は理解されたタスクでより速い；自動最適化は、ラベル付き評価データがあり、数百の変種をテストする必要がある場合、より良いスケーリングを行います。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化とプロンプト・チューニングはどのように異なりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプト最適化は、モデル重みを変更することなく、離散テキスト・プロンプト—自然言語で記述した指示—を改善します。プロンプト・チューニング（Lester et al. 2021によって導入）は、入力の前に提示され、勾配下降によってモデルの横または代わりにトレーニングされる連続的なソフト・プロンプト・ベクトルを学習します。プロンプト・チューニングは計算能力とトレーニングデータを必要とします；プロンプト最適化はどちらも必要としません。ほとんどの本番ユースケースでは、最初に離散プロンプトを最適化し、ハード品質の天井に達した場合にのみプロンプト・チューニングを検討してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化の最良のツールは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最も一般的に使用されるツールは：PromptQuorum（1つのプロンプトをGPT-5.6、Claude、Geminiに同時に送信して比較分析を行う）、DSPy（自動メトリック・ベース選択を備えたプログラム的プロンプト最適化）、LangSmith（プロンプト・バージョン管理、A/Bテスト、LangChain・パイプラインの追跡）、Promptfoo（テストケースと回帰テストに対してプロンプトを実行するオープン・ソース・CLI）およびPromptLayer（プロンプト・バージョン管理と分析）です。手動反復の場合、ほとんどの単一部分最適化作業では、プロンプト・バージョン、入力、出力、および基準に対するパスド/フェイルドを記録する表で十分です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'システム・プロンプトを最適化するにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'システム・プロンプト最適化は、2つの追加制約を備えた同じ6ステップ・プロセスに従います。最初に、システム・プロンプトはすべてのターンを保持します—あまりに具体的な指示は、予期しなかった入力でのパフォーマンスを低下させることができます。1つだけではなく、5～10個の多様な代表的な入力でテストしてください。次に、システム・プロンプト・レングスは重要です：非常に長いシステム・プロンプト（>2,000トークン）は、後続のユーザー・ターンの指示追従を削減する可能性があります（特にGPT-5.6の場合）。簡潔さのために最適化してください：システム・プロンプト内のすべての指示は必要である必要があります。テスト・セットの出力を変更しない指示を削除してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化にChatGPTを使用できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。失敗したプロンプトと障害モード説明を提供することにより、プロンプトを改写するようGPT-5.6に求めることができます：「このプロンプトは曖昧な出力を生成します。3点構造化応答を要求するように改写してください」。これはメタ・プロンプティングの形式です—モデルを使用して独自の入力を改善します。制限は、GPT-5.6があなたの特定の評価基準が必要なものではなく、それがより良いと思うために最適化することです。改写されたプロンプトを実際の入力でテストし、改定を受け入れる前に実際のパスド/フェイルド基準に対して測定してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '機械学習のコンテキストにおけるプロンプト最適化は何を意味しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '機械学習のコンテキストでは、プロンプト最適化は、パイプラインの一部として言語モデルに入力されるプロンプトを改善する技術を指します—モデル自体を再トレーニングせずに。これには、離散プロンプト最適化（自然言語の指示の改写）と連続プロンプト・チューニング（勾配下降によるソフト・トークン・エンベディングの学習）の両方が含まれます。ML本番システムでは、プロンプト最適化は通常、推論パイプラインの一部です：プロンプトはハイパーパラメータとして扱われ、保留評価セットに対して最適化されます。モデルトレーニング中の学習レート選択と同様です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化はどのくらい出力品質を改善しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '改善の範囲は、最適化されていないプロンプトのベースラインに依存します。制御された評価では、最適化されていないプロンプトから十分に最適化されたプロンプトに移動すると、通常、構造化タスク（分類、抽出、JSON生成）で20～40％、開いたタスク（要約、分析）で15～25％のタスク精度が改善されます。最大の利益は、出力フォーマットを指定し（フォーマット非準拠を完全に排除）、1～2個のフューショット例を追加することから生まれます（構造化出力で幻覚を削減）。Schulhoff et al. 2024 Prompt Reportは、複数のモデルで評価された58の異なるプロンプティング技術にわたって10～30％の一貫性のある利益を文書化しています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'モデルごとに別々にプロンプトを最適化すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'モデルに依存しない最適化で始めてください—6つのレバー（具体性、コンテキスト、例、制約、出力フォーマット、ロール）を適用し、GPT-5.6、Claude Opus 5、Gemini 3.1 Proでテストしてください。十分に構造化されたプロンプトは通常、3つすべてで十分に機能します。クロス・モデル・テストで相違する結果が示される場合にのみ、モデル固有の変種を追加します。一般的なモデル固有の調整：Claudeは長いマルチパート・システム・プロンプトをより良く処理；GPT-5.6は明示的なJSON形式要求から利益を得る；Gemini 3.1 Proは長いドキュメント・タスクで明示的なセクション・ヘッダーから利益を得ます。プロンプト・ライブラリ内のモデル固有の変種をバージョン・ノート付きで文書化してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化とRAGの違いは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプト最適化は、プロンプトの指示と構造を改善します。検索増強生成（RAG）は、関連ドキュメントを取得し、推論時にモデルが利用可能な情報を改善し、プロンプト・コンテキストに挿入します。2つは相補的です：RAGはモデルが正しい事実を持たないという問題を解決；プロンプト最適化はモデルが正しくこれらの事実を処理しないという問題を解決します。完全に最適化されたRAG・パイプラインには、良好な検索（正しいドキュメントが検索される）と十分に最適化されたプロンプト（モデルは検索されたコンテンツのみを使用し、ソースを引用し、回答を正しくフォーマットするよう指示される）の両方が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GPT-5.6に対してプロンプトを最適化するにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6は4つの最適化の動きに良く応答します：(1)システム・プロンプト内の明示的なJSON形式要求—スキーマが正確に定義されているときに、構造化出力でのGPT-5.6の指示追従は強力です。(2)システム・プロンプト内のMarkdownヘッダー—関心事を分離するにはH2セクション（## ロール、## タスク、## 出力フォーマット）を使用します；GPT-5.6はこの構造を確実に尊重します。(3)厳密な制約—GPT-5.6は制約なしで過度に説明する傾向があります；「150ワード以下で回答」または「JSONオブジェクトのみを返し、説明はしない」を追加します。(4)ツール使用フレーミング—取得または計算を含むタスクの場合、散文指示の代わりに機能定義としてプロンプトを作成してください（Assistants APIで有効なツールを使用する場合）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト最適化でどのレバーを最初に変更すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '出力フォーマットから始めましょう。フォーマット不適合（表が欲しかったのに段落が来る、JSONが必要なのにプレーンテキストが来る）は最も一般的で最も素早く修正できる障害モードです。希望する構造を正確に指定し、その後の反復で他の問題（精度、トーン、範囲）に対処します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトが完全に最適化されていることをどうやって知りますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプトが十分に最適化されているのは：(1) 4〜5つの代表的な入力で正しい出力を生成する、(2) 再実行で一貫した出力を生成する、(3) 少なくとも2つのモデルで動作する、(4) 後処理なしにフォーマット仕様を満たす、という条件を満たすときです。完璧なプロンプトは存在しません—「最適化された」とは、ユースケースに対して十分に信頼できることを意味します。',
+            },
+          },
         ],
       },
       toc: [
@@ -2955,6 +3586,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'モデルごとに別々にプロンプトを最適化すべきですか？', a: 'モデルに依存しない最適化で始めてください—6つのレバー（具体性、コンテキスト、例、制約、出力フォーマット、ロール）を適用し、GPT-5.6、Claude Opus 5、Gemini 3.1 Proでテストしてください。十分に構造化されたプロンプトは通常、3つすべてで十分に機能します。クロス・モデル・テストで相違する結果が示される場合にのみ、モデル固有の変種を追加します。一般的なモデル固有の調整：Claudeは長いマルチパート・システム・プロンプトをより良く処理；GPT-5.6は明示的なJSON形式要求から利益を得る；Gemini 3.1 Proは長いドキュメント・タスクで明示的なセクション・ヘッダーから利益を得ます。プロンプト・ライブラリ内のモデル固有の変種をバージョン・ノート付きで文書化してください。' },
             { q: 'プロンプト最適化とRAGの違いは何ですか？', a: 'プロンプト最適化は、プロンプトの指示と構造を改善します。検索増強生成（RAG）は、関連ドキュメントを取得し、推論時にモデルが利用可能な情報を改善し、プロンプト・コンテキストに挿入します。2つは相補的です：RAGはモデルが正しい事実を持たないという問題を解決；プロンプト最適化はモデルが正しくこれらの事実を処理しないという問題を解決します。完全に最適化されたRAG・パイプラインには、良好な検索（正しいドキュメントが検索される）と十分に最適化されたプロンプト（モデルは検索されたコンテンツのみを使用し、ソースを引用し、回答を正しくフォーマットするよう指示される）の両方が必要です。' },
             { q: 'GPT-5.6に対してプロンプトを最適化するにはどうすればよいですか？', a: 'GPT-5.6は4つの最適化の動きに良く応答します：(1)システム・プロンプト内の明示的なJSON形式要求—スキーマが正確に定義されているときに、構造化出力でのGPT-5.6の指示追従は強力です。(2)システム・プロンプト内のMarkdownヘッダー—関心事を分離するにはH2セクション（## ロール、## タスク、## 出力フォーマット）を使用します；GPT-5.6はこの構造を確実に尊重します。(3)厳密な制約—GPT-5.6は制約なしで過度に説明する傾向があります；「150ワード以下で回答」または「JSONオブジェクトのみを返し、説明はしない」を追加します。(4)ツール使用フレーミング—取得または計算を含むタスクの場合、散文指示の代わりに機能定義としてプロンプトを作成してください（Assistants APIで有効なツールを使用する場合）。' },
+            { q: 'プロンプト最適化でどのレバーを最初に変更すべきですか？', a: '出力フォーマットから始めましょう。フォーマット不適合（表が欲しかったのに段落が来る、JSONが必要なのにプレーンテキストが来る）は最も一般的で最も素早く修正できる障害モードです。希望する構造を正確に指定し、その後の反復で他の問題（精度、トーン、範囲）に対処します。' },
+            { q: 'プロンプトが完全に最適化されていることをどうやって知りますか？', a: 'プロンプトが十分に最適化されているのは：(1) 4〜5つの代表的な入力で正しい出力を生成する、(2) 再実行で一貫した出力を生成する、(3) 少なくとも2つのモデルで動作する、(4) 後処理なしにフォーマット仕様を満たす、という条件を満たすときです。完璧なプロンプトは存在しません—「最適化された」とは、ユースケースに対して十分に信頼できることを意味します。' },
           ],
         },
 
@@ -3053,17 +3686,174 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: '什么是提示词优化？', acceptedAnswer: { '@type': 'Answer', text: '提示词优化是通过迭代修改现有提示词来改进特定任务AI输出质量的过程。包括识别失败模式（格式错误、幻觉、模糊输出），更改一个变量（具体性、上下文、示例、约束、输出格式或角色），并在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro等模型上测试结果。' } },
-          { '@type': 'Question', name: '提示词优化和提示词工程有什么区别？', acceptedAnswer: { '@type': 'Answer', text: '提示词工程是使用目标、上下文和输出格式等构建块从头设计提示词结构的学科。提示词优化是通过诊断失败模式并应用针对性更改来改进已写好提示词的迭代子过程。提示词工程用于创建起点，提示词优化用于完善它。' } },
-          { '@type': 'Question', name: '优化一个提示词需要多少次迭代？', acceptedAnswer: { '@type': 'Answer', text: '对于大多数任务，2到4次有针对性的迭代就足以从失败的提示词变为可靠的提示词。每次迭代应更改一个变量并在3到5个代表性输入上测试。5到6次迭代后收益递减——如果提示词仍未稳定，任务定义本身可能需要修改。' } },
-          { '@type': 'Question', name: '优化提示词时应该先改哪个杠杆？', acceptedAnswer: { '@type': 'Answer', text: '从输出格式开始。格式不符合——想要表格却收到段落，需要JSON却得到纯文本——是最常见且最容易修复的失败模式。精确指定您想要的结构，然后在后续迭代中处理其他问题（准确性、语气、范围）。' } },
-          { '@type': 'Question', name: '提示词优化适用于所有AI模型吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，但需要针对模型进行调整。六个核心优化杠杆（具体性、上下文、示例、约束、输出格式、角色）适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和Mistral Large。但每个模型对指令密度的反应不同——Claude更好地处理长而复杂的指令；GPT-5.6对结构化系统提示词响应好；Gemini受益于明确的章节标题。' } },
-          { '@type': 'Question', name: '提示词优化最常见的错误是什么？', acceptedAnswer: { '@type': 'Answer', text: '同时更改多个变量。如果您在同一次修改中添加示例、更改输出格式并添加角色指令，就无法判断哪个更改改善（或降低）了输出。有效的优化每次迭代只更改一个变量。' } },
-          { '@type': 'Question', name: '提示词优化能减少AI幻觉吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，使用正确的技术。添加基础上下文（"仅根据以下文档回答"）、带有事实正确输出的少样本示例以及明确约束（"不要捏造数字——仅使用提供文本中的数据"）能可靠地降低幻觉率。' } },
-          { '@type': 'Question', name: '什么时候应该使用微调而不是提示词优化？', acceptedAnswer: { '@type': 'Answer', text: '当提示词优化达到上限时使用微调——通常是所需行为高度特定于领域、需要数千个输出中的一致风格声音，或依赖于基础模型训练中没有的知识。提示词优化更快更便宜，应始终在微调之前尝试。' } },
-          { '@type': 'Question', name: '怎么知道提示词已经完全优化了？', acceptedAnswer: { '@type': 'Answer', text: '当提示词满足以下条件时即充分优化：(1) 在4到5个代表性输入上产生正确输出，(2) 重新运行时产生一致输出，(3) 在至少两个模型上工作，(4) 无需后处理即满足格式规范。完美的提示词不存在——"优化"意味着对用例足够可靠。' } },
-          { '@type': 'Question', name: '提示词优化适用于图像提示词（文本转图像）吗？', acceptedAnswer: { '@type': 'Answer', text: '原则适用——具体性、约束和示例（参考图像）都是DALL-E 3和Stable Diffusion等图像模型的有效杠杆。但机制不同：图像模型响应风格修饰符、宽高比规范和负面提示词作为约束。优化过程（基线→诊断→更改一个变量→测试）相同。' } },
-          { '@type': 'Question', name: '什么是自动提示词优化？', acceptedAnswer: { '@type': 'Answer', text: '自动提示词优化使用第二个AI模型在没有人工干预的情况下重写和改进提示词。DSPy（斯坦福）、TextGrad和APE（自动提示词工程师）等工具生成候选提示词，根据指标（准确性、格式合规性、用户评分）对其评分，并选择最佳变体。' } },
+          {
+            '@type': 'Question',
+            'name': '什么是提示词优化？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词优化是为了改进特定任务的AI输出质量而迭代修改现有提示词的过程。它涉及识别失败模式（格式错误、幻觉、模糊输出），改变一个变量（具体性、上下文、示例、约束、输出格式或角色），并在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro等模型上测试结果。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化与提示词工程的区别是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词工程是使用目标、上下文和输出格式等构建块从头开始设计提示词结构的学科。提示词优化是改进已编写提示词的迭代子流程，通过诊断失败模式并应用有针对性的改变。您需要提示词工程来创建起点；您使用提示词优化来完善它。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '优化提示词需要多少次迭代？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对于大多数任务，2–4次有针对性的迭代足以从失败提示词移到可靠提示词。每次迭代应改变一个变量并在3–5个代表性输入上测试。5–6次迭代后出现收益递减——如果提示词此时尚未稳定，任务定义本身可能需要修改。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '优化提示词时应该首先改变哪个杠杆？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '从输出格式开始。格式不合规——当您想要表格时收到段落，或当需要JSON时收到纯文本——是最常见和最快修复的失败模式。指定确切的结构，然后在后续迭代中处理其他问题（准确性、基调、范围）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化在所有AI模型上都有效吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的，但需要特定于模型的调整。六个核心优化杠杆（具体性、上下文、示例、约束、输出格式、角色）适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和Mistral Large。但是，每个模型对指示密度的响应不同——Claude更好地处理较长的多部分指示；GPT-5.6响应结构化system prompts；Gemini受益于显式部分标题。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '最常见的提示词优化错误是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '同时改变多个变量。如果您在同一修订中添加示例、改变输出格式并添加角色指示，您无法确定哪个改变改进（或降低）了输出。有效的优化每次迭代改变一个变量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化能减少AI幻觉吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的，使用正确的技巧。添加接地上下文（"仅基于以下文档进行回答"）、带有事实正确输出的少样本示例以及明确约束（"不要发明数字——仅使用提供的文本中的数据"）可靠地减少幻觉率。自一致性提示——生成多个输出并返回最常见的——进一步减少低概率虚构。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '何时应该使用微调而不是提示词优化？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '当提示词优化达到天花板时使用微调——通常在所需行为高度特定领域、需要数千个输出的一致文体声音，或依赖于基础模型培训中不存在的知识时。提示词优化更快更便宜，在微调之前应始终耗尽。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何知道提示词是否完全优化？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词在以下情况下充分优化：(1)在4–5个代表性输入上产生正确输出，(2)重新运行时产生一致输出，(3)在至少两个模型上工作（例如GPT-5.6和Claude），(4)不需要后处理即满足格式规范。完美提示词不存在——"优化"意味着对您的用例足够可靠。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化是否适用于图像提示（文本转图像）？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '原理适用——具体性、约束和示例（参考图像）对于DALL-E 3和Stable Diffusion等图像模型都是有效的杠杆。但机制不同：图像模型响应样式修饰符、宽高比规范和负面提示作为约束。优化流程（基线→诊断→改变一个变量→测试）是相同的。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '自动提示词优化如何工作？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '自动提示词优化使用第二个AI模型（或meta-prompting循环中的相同模型）在没有人工干预的情况下重写和改进提示词。DSPy（Stanford）、TextGrad和APE（自动提示词工程师）等工具生成候选提示词，根据指标（准确性、格式合规性、用户评分）评估它们，并选择最佳变种。手动优化对理解任务更快；自动优化在有标记评估数据且需要测试数百个变种时扩展得更好。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化与提示词调整有何不同？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词优化改进离散文本提示——您以自然语言编写的指示——不改变模型权重。提示词调整（Lester等人2021引入）学习连续的soft-prompt向量，这些向量在输入前加入并通过梯度下降在模型旁边或代替模型进行训练。提示词调整需要计算能力和训练数据；提示词优化两者都不需要。对于大多数生产用例，首先优化离散提示词，仅在达到硬质量上限时考虑提示词调整。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化的最佳工具是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最常用的工具是：PromptQuorum（同时将一个提示词发送到GPT-5.6、Claude和Gemini进行比较分析）、DSPy（带有自动基于指标选择的程序化提示词优化）、LangSmith（提示词版本控制、A/B测试和LangChain管道的追踪）、Promptfoo（用于针对测试用例和回归测试运行提示词的开源CLI）和PromptLayer（提示词版本控制和分析）。对于手动迭代，对于大多数单部分优化工作，记录提示词版本、输入、输出和基于标准的通过/失败的电子表格就足够了。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我如何优化系统提示？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '系统提示优化遵循相同的6步流程，但有两个额外的约束。首先，系统提示在所有回合中持续存在——过于具体的指示可能会降低您未预期的输入上的性能。在5–10个不同的代表性输入上测试，而不仅仅是一个。其次，系统提示长度很重要：非常长的系统提示（>2,000令牌）可能会在后续用户回合中减少某些模型（特别是GPT-5.6）上的指示跟随。为简洁而优化：系统提示中的每条指示都应该是必要的。删除不改变测试集输出的任何指示。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以使用ChatGPT进行提示词优化吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。您可以通过提供失败提示词和失败模式描述来要求GPT-5.6重写提示词："此提示词产生模糊输出。重写它以要求3点结构化答案。"这是meta-prompting的一种形式——使用模型改进其自己的输入。限制是GPT-5.6将针对它认为更好的内容进行优化，而不一定是您的特定评估标准要求的内容。始终在实际输入上测试重写提示词，并在接受修改之前针对您的实际通过/失败标准进行衡量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '在机器学习背景下，提示词优化是什么意思？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在机器学习背景下，提示词优化指的是改进发送到语言模型的提示词的技巧，作为管道的一部分——不重新训练模型本身。这包括离散提示词优化（重写自然语言指示）和连续提示词调整（通过梯度下降学习soft-令牌嵌入）。在ML生产系统中，提示词优化通常是推理管道的一部分：提示词被视为针对保留评估集优化的超参数，类似于模型训练期间的学习率选择。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化能改进多少输出质量？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '改进范围取决于未优化提示词的基线。在受控评估中，从未优化提示词迁移到优化良好的提示词通常会在结构化任务（分类、提取、JSON生成）上产生20–40%的任务准确性改进，在开放式任务（总结、分析）上产生15–25%的改进。最大的收益来自指定输出格式（完全消除格式不合规）和添加1–2个少样本示例（减少结构化输出中的幻觉）。Schulhoff等人2024 Prompt Report在多个模型上评估的58个不同提示技巧中记录了10–30%的一致收益。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我应该为每个模型分别优化提示词吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '从模型无关的优化开始——应用6个杠杆（具体性、上下文、示例、约束、输出格式、角色）并在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro上测试。结构良好的提示词通常在全部三个上工作得很好。仅当跨模型测试显示不同的结果时才添加特定于模型的变种。常见的特定于模型的调整：Claude更好地处理较长的多部分system prompts；GPT-5.6受益于显式JSON格式请求；Gemini 3.1 Pro受益于长文档任务中的显式部分标题。在提示词库中用版本注释记录特定于模型的变种。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词优化与RAG之间的区别是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词优化改进提示词的指示和结构。检索增强生成（RAG）通过检索相关文档并将其插入提示词上下文来改进模型在推理时可用的信息。两者是互补的：RAG解决模型没有正确事实的问题；提示词优化解决模型不正确处理这些事实的问题。完全优化的RAG管道需要好的检索（检索正确的文档）和优化良好的提示词（指导模型仅使用检索的内容、引用来源并正确格式化答案）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我如何特别针对GPT-5.6优化提示词？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6对四个优化步骤反应良好：(1)system prompts中的显式JSON格式请求——当schema精确定义时，GPT-5.6对结构化输出的指示跟随很强。(2)system prompts中的Markdown标题——使用H2部分（## 角色、## 任务、## 输出格式）来分离关注点；GPT-5.6可靠地尊重这种结构。(3)紧密约束——GPT-5.6倾向于在没有字/长度约束的情况下过度解释；添加"在≤150字以内回答"或"仅返回JSON对象，不解释"。(4)工具使用框架——对于涉及检索或计算的任务，如果您将Assistants API与启用的工具一起使用，将提示词表述为函数定义而不是散文指示。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '怎么知道提示词已经完全优化了？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '当提示词满足以下条件时即充分优化：(1) 在4到5个代表性输入上产生正确输出，(2) 重新运行时产生一致输出，(3) 在至少两个模型上工作，(4) 无需后处理即满足格式规范。完美的提示词不存在——"优化"意味着对用例足够可靠。',
+            },
+          },
         ],
       },
       toc: [
@@ -3346,86 +4136,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: '什么是提示词优化？',
-              a: '提示词优化是为了改进特定任务的AI输出质量而迭代修改现有提示词的过程。它涉及识别失败模式（格式错误、幻觉、模糊输出），改变一个变量（具体性、上下文、示例、约束、输出格式或角色），并在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro等模型上测试结果。',
-            },
-            {
-              q: '提示词优化与提示词工程的区别是什么？',
-              a: '提示词工程是使用目标、上下文和输出格式等构建块从头开始设计提示词结构的学科。提示词优化是改进已编写提示词的迭代子流程，通过诊断失败模式并应用有针对性的改变。您需要提示词工程来创建起点；您使用提示词优化来完善它。',
-            },
-            {
-              q: '优化提示词需要多少次迭代？',
-              a: '对于大多数任务，2–4次有针对性的迭代足以从失败提示词移到可靠提示词。每次迭代应改变一个变量并在3–5个代表性输入上测试。5–6次迭代后出现收益递减——如果提示词此时尚未稳定，任务定义本身可能需要修改。',
-            },
-            {
-              q: '优化提示词时应该首先改变哪个杠杆？',
-              a: '从输出格式开始。格式不合规——当您想要表格时收到段落，或当需要JSON时收到纯文本——是最常见和最快修复的失败模式。指定确切的结构，然后在后续迭代中处理其他问题（准确性、基调、范围）。',
-            },
-            {
-              q: '提示词优化在所有AI模型上都有效吗？',
-              a: '是的，但需要特定于模型的调整。六个核心优化杠杆（具体性、上下文、示例、约束、输出格式、角色）适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和Mistral Large。但是，每个模型对指示密度的响应不同——Claude更好地处理较长的多部分指示；GPT-5.6响应结构化system prompts；Gemini受益于显式部分标题。',
-            },
-            {
-              q: '最常见的提示词优化错误是什么？',
-              a: '同时改变多个变量。如果您在同一修订中添加示例、改变输出格式并添加角色指示，您无法确定哪个改变改进（或降低）了输出。有效的优化每次迭代改变一个变量。',
-            },
-            {
-              q: '提示词优化能减少AI幻觉吗？',
-              a: '是的，使用正确的技巧。添加接地上下文（"仅基于以下文档进行回答"）、带有事实正确输出的少样本示例以及明确约束（"不要发明数字——仅使用提供的文本中的数据"）可靠地减少幻觉率。自一致性提示——生成多个输出并返回最常见的——进一步减少低概率虚构。',
-            },
-            {
-              q: '何时应该使用微调而不是提示词优化？',
-              a: '当提示词优化达到天花板时使用微调——通常在所需行为高度特定领域、需要数千个输出的一致文体声音，或依赖于基础模型培训中不存在的知识时。提示词优化更快更便宜，在微调之前应始终耗尽。',
-            },
-            {
-              q: '如何知道提示词是否完全优化？',
-              a: '提示词在以下情况下充分优化：(1)在4–5个代表性输入上产生正确输出，(2)重新运行时产生一致输出，(3)在至少两个模型上工作（例如GPT-5.6和Claude），(4)不需要后处理即满足格式规范。完美提示词不存在——"优化"意味着对您的用例足够可靠。',
-            },
-            {
-              q: '提示词优化是否适用于图像提示（文本转图像）？',
-              a: '原理适用——具体性、约束和示例（参考图像）对于DALL-E 3和Stable Diffusion等图像模型都是有效的杠杆。但机制不同：图像模型响应样式修饰符、宽高比规范和负面提示作为约束。优化流程（基线→诊断→改变一个变量→测试）是相同的。',
-            },
-            {
-              q: '自动提示词优化如何工作？',
-              a: '自动提示词优化使用第二个AI模型（或meta-prompting循环中的相同模型）在没有人工干预的情况下重写和改进提示词。DSPy（Stanford）、TextGrad和APE（自动提示词工程师）等工具生成候选提示词，根据指标（准确性、格式合规性、用户评分）评估它们，并选择最佳变种。手动优化对理解任务更快；自动优化在有标记评估数据且需要测试数百个变种时扩展得更好。',
-            },
-            {
-              q: '提示词优化与提示词调整有何不同？',
-              a: '提示词优化改进离散文本提示——您以自然语言编写的指示——不改变模型权重。提示词调整（Lester等人2021引入）学习连续的soft-prompt向量，这些向量在输入前加入并通过梯度下降在模型旁边或代替模型进行训练。提示词调整需要计算能力和训练数据；提示词优化两者都不需要。对于大多数生产用例，首先优化离散提示词，仅在达到硬质量上限时考虑提示词调整。',
-            },
-            {
-              q: '提示词优化的最佳工具是什么？',
-              a: '最常用的工具是：PromptQuorum（同时将一个提示词发送到GPT-5.6、Claude和Gemini进行比较分析）、DSPy（带有自动基于指标选择的程序化提示词优化）、LangSmith（提示词版本控制、A/B测试和LangChain管道的追踪）、Promptfoo（用于针对测试用例和回归测试运行提示词的开源CLI）和PromptLayer（提示词版本控制和分析）。对于手动迭代，对于大多数单部分优化工作，记录提示词版本、输入、输出和基于标准的通过/失败的电子表格就足够了。',
-            },
-            {
-              q: '我如何优化系统提示？',
-              a: '系统提示优化遵循相同的6步流程，但有两个额外的约束。首先，系统提示在所有回合中持续存在——过于具体的指示可能会降低您未预期的输入上的性能。在5–10个不同的代表性输入上测试，而不仅仅是一个。其次，系统提示长度很重要：非常长的系统提示（>2,000令牌）可能会在后续用户回合中减少某些模型（特别是GPT-5.6）上的指示跟随。为简洁而优化：系统提示中的每条指示都应该是必要的。删除不改变测试集输出的任何指示。',
-            },
-            {
-              q: '我可以使用ChatGPT进行提示词优化吗？',
-              a: '可以。您可以通过提供失败提示词和失败模式描述来要求GPT-5.6重写提示词："此提示词产生模糊输出。重写它以要求3点结构化答案。"这是meta-prompting的一种形式——使用模型改进其自己的输入。限制是GPT-5.6将针对它认为更好的内容进行优化，而不一定是您的特定评估标准要求的内容。始终在实际输入上测试重写提示词，并在接受修改之前针对您的实际通过/失败标准进行衡量。',
-            },
-            {
-              q: '在机器学习背景下，提示词优化是什么意思？',
-              a: '在机器学习背景下，提示词优化指的是改进发送到语言模型的提示词的技巧，作为管道的一部分——不重新训练模型本身。这包括离散提示词优化（重写自然语言指示）和连续提示词调整（通过梯度下降学习soft-令牌嵌入）。在ML生产系统中，提示词优化通常是推理管道的一部分：提示词被视为针对保留评估集优化的超参数，类似于模型训练期间的学习率选择。',
-            },
-            {
-              q: '提示词优化能改进多少输出质量？',
-              a: '改进范围取决于未优化提示词的基线。在受控评估中，从未优化提示词迁移到优化良好的提示词通常会在结构化任务（分类、提取、JSON生成）上产生20–40%的任务准确性改进，在开放式任务（总结、分析）上产生15–25%的改进。最大的收益来自指定输出格式（完全消除格式不合规）和添加1–2个少样本示例（减少结构化输出中的幻觉）。Schulhoff等人2024 Prompt Report在多个模型上评估的58个不同提示技巧中记录了10–30%的一致收益。',
-            },
-            {
-              q: '我应该为每个模型分别优化提示词吗？',
-              a: '从模型无关的优化开始——应用6个杠杆（具体性、上下文、示例、约束、输出格式、角色）并在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro上测试。结构良好的提示词通常在全部三个上工作得很好。仅当跨模型测试显示不同的结果时才添加特定于模型的变种。常见的特定于模型的调整：Claude更好地处理较长的多部分system prompts；GPT-5.6受益于显式JSON格式请求；Gemini 3.1 Pro受益于长文档任务中的显式部分标题。在提示词库中用版本注释记录特定于模型的变种。',
-            },
-            {
-              q: '提示词优化与RAG之间的区别是什么？',
-              a: '提示词优化改进提示词的指示和结构。检索增强生成（RAG）通过检索相关文档并将其插入提示词上下文来改进模型在推理时可用的信息。两者是互补的：RAG解决模型没有正确事实的问题；提示词优化解决模型不正确处理这些事实的问题。完全优化的RAG管道需要好的检索（检索正确的文档）和优化良好的提示词（指导模型仅使用检索的内容、引用来源并正确格式化答案）。',
-            },
-            {
-              q: '我如何特别针对GPT-5.6优化提示词？',
-              a: 'GPT-5.6对四个优化步骤反应良好：(1)system prompts中的显式JSON格式请求——当schema精确定义时，GPT-5.6对结构化输出的指示跟随很强。(2)system prompts中的Markdown标题——使用H2部分（## 角色、## 任务、## 输出格式）来分离关注点；GPT-5.6可靠地尊重这种结构。(3)紧密约束——GPT-5.6倾向于在没有字/长度约束的情况下过度解释；添加"在≤150字以内回答"或"仅返回JSON对象，不解释"。(4)工具使用框架——对于涉及检索或计算的任务，如果您将Assistants API与启用的工具一起使用，将提示词表述为函数定义而不是散文指示。',
-            },
+            { q: '什么是提示词优化？', a: '提示词优化是为了改进特定任务的AI输出质量而迭代修改现有提示词的过程。它涉及识别失败模式（格式错误、幻觉、模糊输出），改变一个变量（具体性、上下文、示例、约束、输出格式或角色），并在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro等模型上测试结果。' },
+            { q: '提示词优化与提示词工程的区别是什么？', a: '提示词工程是使用目标、上下文和输出格式等构建块从头开始设计提示词结构的学科。提示词优化是改进已编写提示词的迭代子流程，通过诊断失败模式并应用有针对性的改变。您需要提示词工程来创建起点；您使用提示词优化来完善它。' },
+            { q: '优化提示词需要多少次迭代？', a: '对于大多数任务，2–4次有针对性的迭代足以从失败提示词移到可靠提示词。每次迭代应改变一个变量并在3–5个代表性输入上测试。5–6次迭代后出现收益递减——如果提示词此时尚未稳定，任务定义本身可能需要修改。' },
+            { q: '优化提示词时应该首先改变哪个杠杆？', a: '从输出格式开始。格式不合规——当您想要表格时收到段落，或当需要JSON时收到纯文本——是最常见和最快修复的失败模式。指定确切的结构，然后在后续迭代中处理其他问题（准确性、基调、范围）。' },
+            { q: '提示词优化在所有AI模型上都有效吗？', a: '是的，但需要特定于模型的调整。六个核心优化杠杆（具体性、上下文、示例、约束、输出格式、角色）适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和Mistral Large。但是，每个模型对指示密度的响应不同——Claude更好地处理较长的多部分指示；GPT-5.6响应结构化system prompts；Gemini受益于显式部分标题。' },
+            { q: '最常见的提示词优化错误是什么？', a: '同时改变多个变量。如果您在同一修订中添加示例、改变输出格式并添加角色指示，您无法确定哪个改变改进（或降低）了输出。有效的优化每次迭代改变一个变量。' },
+            { q: '提示词优化能减少AI幻觉吗？', a: '是的，使用正确的技巧。添加接地上下文（"仅基于以下文档进行回答"）、带有事实正确输出的少样本示例以及明确约束（"不要发明数字——仅使用提供的文本中的数据"）可靠地减少幻觉率。自一致性提示——生成多个输出并返回最常见的——进一步减少低概率虚构。' },
+            { q: '何时应该使用微调而不是提示词优化？', a: '当提示词优化达到天花板时使用微调——通常在所需行为高度特定领域、需要数千个输出的一致文体声音，或依赖于基础模型培训中不存在的知识时。提示词优化更快更便宜，在微调之前应始终耗尽。' },
+            { q: '如何知道提示词是否完全优化？', a: '提示词在以下情况下充分优化：(1)在4–5个代表性输入上产生正确输出，(2)重新运行时产生一致输出，(3)在至少两个模型上工作（例如GPT-5.6和Claude），(4)不需要后处理即满足格式规范。完美提示词不存在——"优化"意味着对您的用例足够可靠。' },
+            { q: '提示词优化是否适用于图像提示（文本转图像）？', a: '原理适用——具体性、约束和示例（参考图像）对于DALL-E 3和Stable Diffusion等图像模型都是有效的杠杆。但机制不同：图像模型响应样式修饰符、宽高比规范和负面提示作为约束。优化流程（基线→诊断→改变一个变量→测试）是相同的。' },
+            { q: '自动提示词优化如何工作？', a: '自动提示词优化使用第二个AI模型（或meta-prompting循环中的相同模型）在没有人工干预的情况下重写和改进提示词。DSPy（Stanford）、TextGrad和APE（自动提示词工程师）等工具生成候选提示词，根据指标（准确性、格式合规性、用户评分）评估它们，并选择最佳变种。手动优化对理解任务更快；自动优化在有标记评估数据且需要测试数百个变种时扩展得更好。' },
+            { q: '提示词优化与提示词调整有何不同？', a: '提示词优化改进离散文本提示——您以自然语言编写的指示——不改变模型权重。提示词调整（Lester等人2021引入）学习连续的soft-prompt向量，这些向量在输入前加入并通过梯度下降在模型旁边或代替模型进行训练。提示词调整需要计算能力和训练数据；提示词优化两者都不需要。对于大多数生产用例，首先优化离散提示词，仅在达到硬质量上限时考虑提示词调整。' },
+            { q: '提示词优化的最佳工具是什么？', a: '最常用的工具是：PromptQuorum（同时将一个提示词发送到GPT-5.6、Claude和Gemini进行比较分析）、DSPy（带有自动基于指标选择的程序化提示词优化）、LangSmith（提示词版本控制、A/B测试和LangChain管道的追踪）、Promptfoo（用于针对测试用例和回归测试运行提示词的开源CLI）和PromptLayer（提示词版本控制和分析）。对于手动迭代，对于大多数单部分优化工作，记录提示词版本、输入、输出和基于标准的通过/失败的电子表格就足够了。' },
+            { q: '我如何优化系统提示？', a: '系统提示优化遵循相同的6步流程，但有两个额外的约束。首先，系统提示在所有回合中持续存在——过于具体的指示可能会降低您未预期的输入上的性能。在5–10个不同的代表性输入上测试，而不仅仅是一个。其次，系统提示长度很重要：非常长的系统提示（>2,000令牌）可能会在后续用户回合中减少某些模型（特别是GPT-5.6）上的指示跟随。为简洁而优化：系统提示中的每条指示都应该是必要的。删除不改变测试集输出的任何指示。' },
+            { q: '我可以使用ChatGPT进行提示词优化吗？', a: '可以。您可以通过提供失败提示词和失败模式描述来要求GPT-5.6重写提示词："此提示词产生模糊输出。重写它以要求3点结构化答案。"这是meta-prompting的一种形式——使用模型改进其自己的输入。限制是GPT-5.6将针对它认为更好的内容进行优化，而不一定是您的特定评估标准要求的内容。始终在实际输入上测试重写提示词，并在接受修改之前针对您的实际通过/失败标准进行衡量。' },
+            { q: '在机器学习背景下，提示词优化是什么意思？', a: '在机器学习背景下，提示词优化指的是改进发送到语言模型的提示词的技巧，作为管道的一部分——不重新训练模型本身。这包括离散提示词优化（重写自然语言指示）和连续提示词调整（通过梯度下降学习soft-令牌嵌入）。在ML生产系统中，提示词优化通常是推理管道的一部分：提示词被视为针对保留评估集优化的超参数，类似于模型训练期间的学习率选择。' },
+            { q: '提示词优化能改进多少输出质量？', a: '改进范围取决于未优化提示词的基线。在受控评估中，从未优化提示词迁移到优化良好的提示词通常会在结构化任务（分类、提取、JSON生成）上产生20–40%的任务准确性改进，在开放式任务（总结、分析）上产生15–25%的改进。最大的收益来自指定输出格式（完全消除格式不合规）和添加1–2个少样本示例（减少结构化输出中的幻觉）。Schulhoff等人2024 Prompt Report在多个模型上评估的58个不同提示技巧中记录了10–30%的一致收益。' },
+            { q: '我应该为每个模型分别优化提示词吗？', a: '从模型无关的优化开始——应用6个杠杆（具体性、上下文、示例、约束、输出格式、角色）并在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro上测试。结构良好的提示词通常在全部三个上工作得很好。仅当跨模型测试显示不同的结果时才添加特定于模型的变种。常见的特定于模型的调整：Claude更好地处理较长的多部分system prompts；GPT-5.6受益于显式JSON格式请求；Gemini 3.1 Pro受益于长文档任务中的显式部分标题。在提示词库中用版本注释记录特定于模型的变种。' },
+            { q: '提示词优化与RAG之间的区别是什么？', a: '提示词优化改进提示词的指示和结构。检索增强生成（RAG）通过检索相关文档并将其插入提示词上下文来改进模型在推理时可用的信息。两者是互补的：RAG解决模型没有正确事实的问题；提示词优化解决模型不正确处理这些事实的问题。完全优化的RAG管道需要好的检索（检索正确的文档）和优化良好的提示词（指导模型仅使用检索的内容、引用来源并正确格式化答案）。' },
+            { q: '我如何特别针对GPT-5.6优化提示词？', a: 'GPT-5.6对四个优化步骤反应良好：(1)system prompts中的显式JSON格式请求——当schema精确定义时，GPT-5.6对结构化输出的指示跟随很强。(2)system prompts中的Markdown标题——使用H2部分（## 角色、## 任务、## 输出格式）来分离关注点；GPT-5.6可靠地尊重这种结构。(3)紧密约束——GPT-5.6倾向于在没有字/长度约束的情况下过度解释；添加"在≤150字以内回答"或"仅返回JSON对象，不解释"。(4)工具使用框架——对于涉及检索或计算的任务，如果您将Assistants API与启用的工具一起使用，将提示词表述为函数定义而不是散文指示。' },
+            { q: '怎么知道提示词已经完全优化了？', a: '当提示词满足以下条件时即充分优化：(1) 在4到5个代表性输入上产生正确输出，(2) 重新运行时产生一致输出，(3) 在至少两个模型上工作，(4) 无需后处理即满足格式规范。完美的提示词不存在——"优化"意味着对用例足够可靠。' },
           ],
         },
 

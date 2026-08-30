@@ -292,27 +292,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'Can I run DeepSeek-V3 locally on my GPU?',
-            a: 'No, not on consumer hardware. DeepSeek-V3 is a 236B Mixture of Experts model. Even at INT4 quantization, it requires approximately 140 GB of combined VRAM — equivalent to 6 NVIDIA A100 80 GB cards. The locally runnable alternatives are DeepSeek-R1-Distill-Qwen-32B (fits on RTX 4090 24 GB) or smaller distillations (DeepSeek-R1-Distill-Llama-8B on RTX 3060 12 GB).',
-          },
-          {
-            q: 'Is DeepSeek-R1-Distill-Qwen-32B better than Qwen3-Coder 32B for coding?',
-            a: 'Depends on the task. DeepSeek-R1-Distill-Qwen-32B is better for algorithmic reasoning — mathematical problems, competitive programming, complex debugging with visible reasoning chains. Qwen3-Coder 32B is better for practical coding: autocomplete, refactoring, idiomatic Rust/C++, and type-safe TypeScript. For everyday IDE use, Qwen3-Coder is the better choice; it is also 10–20% faster for autocomplete tasks.',
-          },
-          {
-            q: 'Which local model is best for a Continue.dev or Cline integration?',
-            a: 'Qwen3-Coder 14B on an RTX 4060 Ti 16 GB delivers the best balance of speed (14–18 tok/s) and quality for IDE autocomplete. If you have an RTX 4090, use Qwen3-Coder 32B for significantly better multi-file refactoring. Both work natively with Continue.dev, Cline, and Cursor local mode via Ollama.',
-          },
-          {
-            q: 'What is DeepSeek-V3\'s API price compared to running Qwen locally?',
-            a: 'DeepSeek-V3 API pricing (as of August 2026): $0.27 per 1M input tokens, $1.10 per 1M output tokens. At typical IDE usage (200K tokens/day), that is $0.27/day or ~$8/month. Running Qwen3-Coder 32B locally on a used RTX 4090 (now $2,000–2,600 after NVIDIA discontinued the GPU line) costs ~$0.05/day in electricity plus hardware amortization of ~$1.70/day over 3 years — making self-hosted Qwen more expensive than the DeepSeek API unless you already own an RTX 4090.',
-          },
-          {
-            q: 'Does Qwen3-Coder support function calling for agentic coding tasks?',
-            a: 'Yes. Qwen3-Coder 14B and 32B support function calling and structured JSON output, which are required for agentic coding tools like Cline and Aider. Qwen3-Coder 7B also supports function calling but with lower reliability on complex multi-step workflows. DeepSeek-R1-Distill-Qwen-32B was not specifically optimized for function calling — Qwen3-Coder is the better choice for agentic tools.',
-          },
-        ],
+            { q: 'Can I run DeepSeek-V3 locally on my GPU?', a: 'No, not on consumer hardware. DeepSeek-V3 is a 236B Mixture of Experts model. Even at INT4 quantization, it requires approximately 140 GB of combined VRAM — equivalent to 6 NVIDIA A100 80 GB cards. The locally runnable alternatives are DeepSeek-R1-Distill-Qwen-32B (fits on RTX 4090 24 GB) or smaller distillations (DeepSeek-R1-Distill-Llama-8B on RTX 3060 12 GB).' },
+            { q: 'Is DeepSeek-R1-Distill-Qwen-32B better than Qwen3-Coder 32B for coding?', a: 'Depends on the task. DeepSeek-R1-Distill-Qwen-32B is better for algorithmic reasoning — mathematical problems, competitive programming, complex debugging with visible reasoning chains. Qwen3-Coder 32B is better for practical coding: autocomplete, refactoring, idiomatic Rust/C++, and type-safe TypeScript. For everyday IDE use, Qwen3-Coder is the better choice; it is also 10–20% faster for autocomplete tasks.' },
+            { q: 'Which local model is best for a Continue.dev or Cline integration?', a: 'Qwen3-Coder 14B on an RTX 4060 Ti 16 GB delivers the best balance of speed (14–18 tok/s) and quality for IDE autocomplete. If you have an RTX 4090, use Qwen3-Coder 32B for significantly better multi-file refactoring. Both work natively with Continue.dev, Cline, and Cursor local mode via Ollama.' },
+            { q: 'What is DeepSeek-V3\'s API price compared to running Qwen locally?', a: 'DeepSeek-V3 API pricing (as of August 2026): $0.27 per 1M input tokens, $1.10 per 1M output tokens. At typical IDE usage (200K tokens/day), that is $0.27/day or ~$8/month. Running Qwen3-Coder 32B locally on a used RTX 4090 (now $2,000–2,600 after NVIDIA discontinued the GPU line) costs ~$0.05/day in electricity plus hardware amortization of ~$1.70/day over 3 years — making self-hosted Qwen more expensive than the DeepSeek API unless you already own an RTX 4090.' },
+            { q: 'Does Qwen3-Coder support function calling for agentic coding tasks?', a: 'Yes. Qwen3-Coder 14B and 32B support function calling and structured JSON output, which are required for agentic coding tools like Cline and Aider. Qwen3-Coder 7B also supports function calling but with lower reliability on complex multi-step workflows. DeepSeek-R1-Distill-Qwen-32B was not specifically optimized for function calling — Qwen3-Coder is the better choice for agentic tools.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -329,47 +314,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Can I run DeepSeek-V3 locally on my GPU?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. DeepSeek-V3 is a 236B Mixture of Experts model requiring approximately 140 GB combined VRAM — equivalent to 6 NVIDIA A100 80 GB cards. Locally runnable alternatives: DeepSeek-R1-Distill-Qwen-32B (RTX 4090 24 GB) or smaller distillations.',
+          {
+            '@type': 'Question',
+            'name': 'Can I run DeepSeek-V3 locally on my GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No, not on consumer hardware. DeepSeek-V3 is a 236B Mixture of Experts model. Even at INT4 quantization, it requires approximately 140 GB of combined VRAM — equivalent to 6 NVIDIA A100 80 GB cards. The locally runnable alternatives are DeepSeek-R1-Distill-Qwen-32B (fits on RTX 4090 24 GB) or smaller distillations (DeepSeek-R1-Distill-Llama-8B on RTX 3060 12 GB).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is DeepSeek-R1-Distill-Qwen-32B better than Qwen3-Coder 32B for coding?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DeepSeek-R1-Distill-Qwen-32B is better for algorithmic reasoning. Qwen3-Coder 32B is better for autocomplete, refactoring, and idiomatic Rust/C++. For everyday IDE use, Qwen3-Coder is the better choice and 10–20% faster.',
+          {
+            '@type': 'Question',
+            'name': 'Is DeepSeek-R1-Distill-Qwen-32B better than Qwen3-Coder 32B for coding?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depends on the task. DeepSeek-R1-Distill-Qwen-32B is better for algorithmic reasoning — mathematical problems, competitive programming, complex debugging with visible reasoning chains. Qwen3-Coder 32B is better for practical coding: autocomplete, refactoring, idiomatic Rust/C++, and type-safe TypeScript. For everyday IDE use, Qwen3-Coder is the better choice; it is also 10–20% faster for autocomplete tasks.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which local model is best for Continue.dev or Cline?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qwen3-Coder 14B on RTX 4060 Ti 16 GB delivers the best balance of speed (14–18 tok/s) and quality. With an RTX 4090, use Qwen3-Coder 32B for multi-file refactoring. Both work natively via Ollama.',
+          {
+            '@type': 'Question',
+            'name': 'Which local model is best for a Continue.dev or Cline integration?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B on an RTX 4060 Ti 16 GB delivers the best balance of speed (14–18 tok/s) and quality for IDE autocomplete. If you have an RTX 4090, use Qwen3-Coder 32B for significantly better multi-file refactoring. Both work natively with Continue.dev, Cline, and Cursor local mode via Ollama.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is DeepSeek-V3\'s API price vs running Qwen locally?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DeepSeek-V3 API: $0.27/1M input tokens, $1.10/1M output tokens — at typical IDE usage, ~$8/month. Running Qwen3-Coder 32B locally on a used RTX 4090 ($2,000–2,600) costs ~$0.05/day electricity plus hardware amortization. If you already own an RTX 4090, local Qwen can be competitive over 3+ years.',
+          {
+            '@type': 'Question',
+            'name': 'What is DeepSeek-V3\'s API price compared to running Qwen locally?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-V3 API pricing (as of August 2026): $0.27 per 1M input tokens, $1.10 per 1M output tokens. At typical IDE usage (200K tokens/day), that is $0.27/day or ~$8/month. Running Qwen3-Coder 32B locally on a used RTX 4090 (now $2,000–2,600 after NVIDIA discontinued the GPU line) costs ~$0.05/day in electricity plus hardware amortization of ~$1.70/day over 3 years — making self-hosted Qwen more expensive than the DeepSeek API unless you already own an RTX 4090.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Qwen3-Coder support function calling?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Qwen3-Coder 14B and 32B support function calling and structured JSON output — required for Cline and Aider. Qwen3-Coder 7B also supports it but with lower reliability on complex workflows.',
+          {
+            '@type': 'Question',
+            'name': 'Does Qwen3-Coder support function calling for agentic coding tasks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Qwen3-Coder 14B and 32B support function calling and structured JSON output, which are required for agentic coding tools like Cline and Aider. Qwen3-Coder 7B also supports function calling but with lower reliability on complex multi-step workflows. DeepSeek-R1-Distill-Qwen-32B was not specifically optimized for function calling — Qwen3-Coder is the better choice for agentic tools.',
+            },
           },
-        },
-      ],
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -688,27 +673,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Puedo ejecutar DeepSeek-V3 de forma local en mi GPU?',
-            a: 'No, no en hardware de consumidor. DeepSeek-V3 es un modelo Mixture of Experts de 236B parámetros. Incluso con cuantización INT4, requiere aproximadamente 140 GB de VRAM combinada — equivalente a 6 tarjetas NVIDIA A100 80 GB. Las alternativas ejecutables localmente son DeepSeek-R1-Distill-Qwen-32B (cabe en RTX 4090 24 GB) o destilaciones más pequeñas (DeepSeek-R1-Distill-Llama-8B en RTX 3060 12 GB).',
-          },
-          {
-            q: '¿Es DeepSeek-R1-Distill-Qwen-32B mejor que Qwen3-Coder 32B para coding?',
-            a: 'Depende de la tarea. DeepSeek-R1-Distill-Qwen-32B es mejor para razonamiento algorítmico — problemas matemáticos, programación competitiva, depuración compleja con cadenas de razonamiento visibles. Qwen3-Coder 32B es mejor para coding práctico: autocompletado, refactoring, Rust/C++ idiomático y TypeScript con tipos seguros. Para uso diario en el IDE, Qwen3-Coder es la mejor opción; además es un 10–20 % más rápido en tareas de autocompletado.',
-          },
-          {
-            q: '¿Qué modelo local es el mejor para una integración con Continue.dev o Cline?',
-            a: 'Qwen3-Coder 14B en una RTX 4060 Ti 16 GB ofrece el mejor equilibrio de velocidad (14–18 tok/s) y calidad para el autocompletado en el IDE. Si tienes una RTX 4090, usa Qwen3-Coder 32B para un refactoring multi-archivo significativamente mejor. Ambos funcionan de forma nativa con Continue.dev, Cline y el modo local de Cursor mediante Ollama.',
-          },
-          {
-            q: '¿Cuál es el precio de la API de DeepSeek-V3 comparado con ejecutar Qwen de forma local?',
-            a: 'Precio de la API de DeepSeek-V3 (a agosto de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de salida. Con un uso típico del IDE (200K tokens/día), eso equivale a $0,27/día o ~$8/mes. Ejecutar Qwen3-Coder 32B localmente en una RTX 4090 usada (ahora $2.000–2.600 tras discontinuación de NVIDIA) cuesta ~$0,05/día en electricidad más amortización de hardware de ~$1,70/día durante 3 años — lo que hace que Qwen autohospedado sea más caro que la API de DeepSeek a menos que ya tengas una RTX 4090.',
-          },
-          {
-            q: '¿Qwen3-Coder admite function calling para tareas de coding agentivo?',
-            a: 'Sí. Qwen3-Coder 14B y 32B admiten function calling y salida JSON estructurada, que son necesarias para herramientas de coding agentivo como Cline y Aider. Qwen3-Coder 7B también admite function calling pero con menor fiabilidad en flujos de trabajo multi-paso complejos. DeepSeek-R1-Distill-Qwen-32B no fue optimizado específicamente para function calling — Qwen3-Coder es la mejor opción para herramientas agentivas.',
-          },
-        ],
+            { q: '¿Puedo ejecutar DeepSeek-V3 de forma local en mi GPU?', a: 'No, no en hardware de consumidor. DeepSeek-V3 es un modelo Mixture of Experts de 236B parámetros. Incluso con cuantización INT4, requiere aproximadamente 140 GB de VRAM combinada — equivalente a 6 tarjetas NVIDIA A100 80 GB. Las alternativas ejecutables localmente son DeepSeek-R1-Distill-Qwen-32B (cabe en RTX 4090 24 GB) o destilaciones más pequeñas (DeepSeek-R1-Distill-Llama-8B en RTX 3060 12 GB).' },
+            { q: '¿Es DeepSeek-R1-Distill-Qwen-32B mejor que Qwen3-Coder 32B para coding?', a: 'Depende de la tarea. DeepSeek-R1-Distill-Qwen-32B es mejor para razonamiento algorítmico — problemas matemáticos, programación competitiva, depuración compleja con cadenas de razonamiento visibles. Qwen3-Coder 32B es mejor para coding práctico: autocompletado, refactoring, Rust/C++ idiomático y TypeScript con tipos seguros. Para uso diario en el IDE, Qwen3-Coder es la mejor opción; además es un 10–20 % más rápido en tareas de autocompletado.' },
+            { q: '¿Qué modelo local es el mejor para una integración con Continue.dev o Cline?', a: 'Qwen3-Coder 14B en una RTX 4060 Ti 16 GB ofrece el mejor equilibrio de velocidad (14–18 tok/s) y calidad para el autocompletado en el IDE. Si tienes una RTX 4090, usa Qwen3-Coder 32B para un refactoring multi-archivo significativamente mejor. Ambos funcionan de forma nativa con Continue.dev, Cline y el modo local de Cursor mediante Ollama.' },
+            { q: '¿Cuál es el precio de la API de DeepSeek-V3 comparado con ejecutar Qwen de forma local?', a: 'Precio de la API de DeepSeek-V3 (a agosto de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de salida. Con un uso típico del IDE (200K tokens/día), eso equivale a $0,27/día o ~$8/mes. Ejecutar Qwen3-Coder 32B localmente en una RTX 4090 usada (ahora $2.000–2.600 tras discontinuación de NVIDIA) cuesta ~$0,05/día en electricidad más amortización de hardware de ~$1,70/día durante 3 años — lo que hace que Qwen autohospedado sea más caro que la API de DeepSeek a menos que ya tengas una RTX 4090.' },
+            { q: '¿Qwen3-Coder admite function calling para tareas de coding agentivo?', a: 'Sí. Qwen3-Coder 14B y 32B admiten function calling y salida JSON estructurada, que son necesarias para herramientas de coding agentivo como Cline y Aider. Qwen3-Coder 7B también admite function calling pero con menor fiabilidad en flujos de trabajo multi-paso complejos. DeepSeek-R1-Distill-Qwen-32B no fue optimizado específicamente para function calling — Qwen3-Coder es la mejor opción para herramientas agentivas.' },
+            { q: '¿Qwen3-Coder admite function calling?', a: 'Sí. Qwen3-Coder 14B y 32B admiten function calling y salida JSON estructurada — necesarios para Cline y Aider. Qwen3-Coder 7B también lo admite pero con menor fiabilidad en flujos de trabajo complejos.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -726,47 +697,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Puedo ejecutar DeepSeek-V3 de forma local en mi GPU?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. DeepSeek-V3 es un modelo Mixture of Experts de 236B parámetros que requiere aproximadamente 140 GB de VRAM combinada — equivalente a 6 tarjetas NVIDIA A100 80 GB. Alternativas ejecutables localmente: DeepSeek-R1-Distill-Qwen-32B (RTX 4090 24 GB) o destilaciones más pequeñas.',
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar DeepSeek-V3 de forma local en mi GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No, no en hardware de consumidor. DeepSeek-V3 es un modelo Mixture of Experts de 236B parámetros. Incluso con cuantización INT4, requiere aproximadamente 140 GB de VRAM combinada — equivalente a 6 tarjetas NVIDIA A100 80 GB. Las alternativas ejecutables localmente son DeepSeek-R1-Distill-Qwen-32B (cabe en RTX 4090 24 GB) o destilaciones más pequeñas (DeepSeek-R1-Distill-Llama-8B en RTX 3060 12 GB).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Es DeepSeek-R1-Distill-Qwen-32B mejor que Qwen3-Coder 32B para coding?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DeepSeek-R1-Distill-Qwen-32B es mejor para razonamiento algorítmico. Qwen3-Coder 32B es mejor para autocompletado, refactoring y Rust/C++ idiomático. Para uso diario en el IDE, Qwen3-Coder es la mejor opción y un 10–20 % más rápido.',
+          {
+            '@type': 'Question',
+            'name': '¿Es DeepSeek-R1-Distill-Qwen-32B mejor que Qwen3-Coder 32B para coding?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende de la tarea. DeepSeek-R1-Distill-Qwen-32B es mejor para razonamiento algorítmico — problemas matemáticos, programación competitiva, depuración compleja con cadenas de razonamiento visibles. Qwen3-Coder 32B es mejor para coding práctico: autocompletado, refactoring, Rust/C++ idiomático y TypeScript con tipos seguros. Para uso diario en el IDE, Qwen3-Coder es la mejor opción; además es un 10–20 % más rápido en tareas de autocompletado.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué modelo local es el mejor para Continue.dev o Cline?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qwen3-Coder 14B en RTX 4060 Ti 16 GB ofrece el mejor equilibrio de velocidad (14–18 tok/s) y calidad. Con una RTX 4090, usa Qwen3-Coder 32B para refactoring multi-archivo. Ambos funcionan de forma nativa mediante Ollama.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelo local es el mejor para una integración con Continue.dev o Cline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B en una RTX 4060 Ti 16 GB ofrece el mejor equilibrio de velocidad (14–18 tok/s) y calidad para el autocompletado en el IDE. Si tienes una RTX 4090, usa Qwen3-Coder 32B para un refactoring multi-archivo significativamente mejor. Ambos funcionan de forma nativa con Continue.dev, Cline y el modo local de Cursor mediante Ollama.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cuál es el precio de la API de DeepSeek-V3 frente a ejecutar Qwen de forma local?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'API de DeepSeek-V3: $0,27/1M tokens de entrada, $1,10/1M tokens de salida — con uso típico del IDE, ~$8/mes. Ejecutar Qwen3-Coder 32B localmente cuesta ~$0,05/día en electricidad más amortización de hardware. Si ya tienes una RTX 4090, Qwen local puede ser competitivo a lo largo de 3+ años.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el precio de la API de DeepSeek-V3 comparado con ejecutar Qwen de forma local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Precio de la API de DeepSeek-V3 (a agosto de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de salida. Con un uso típico del IDE (200K tokens/día), eso equivale a $0,27/día o ~$8/mes. Ejecutar Qwen3-Coder 32B localmente en una RTX 4090 usada (ahora $2.000–2.600 tras discontinuación de NVIDIA) cuesta ~$0,05/día en electricidad más amortización de hardware de ~$1,70/día durante 3 años — lo que hace que Qwen autohospedado sea más caro que la API de DeepSeek a menos que ya tengas una RTX 4090.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qwen3-Coder admite function calling?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sí. Qwen3-Coder 14B y 32B admiten function calling y salida JSON estructurada — necesarios para Cline y Aider. Qwen3-Coder 7B también lo admite pero con menor fiabilidad en flujos de trabajo complejos.',
+          {
+            '@type': 'Question',
+            'name': '¿Qwen3-Coder admite function calling para tareas de coding agentivo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Qwen3-Coder 14B y 32B admiten function calling y salida JSON estructurada, que son necesarias para herramientas de coding agentivo como Cline y Aider. Qwen3-Coder 7B también admite function calling pero con menor fiabilidad en flujos de trabajo multi-paso complejos. DeepSeek-R1-Distill-Qwen-32B no fue optimizado específicamente para function calling — Qwen3-Coder es la mejor opción para herramientas agentivas.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Qwen3-Coder admite function calling?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Qwen3-Coder 14B y 32B admiten function calling y salida JSON estructurada — necesarios para Cline y Aider. Qwen3-Coder 7B también lo admite pero con menor fiabilidad en flujos de trabajo complejos.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1086,27 +1065,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'GPU에서 DeepSeek-V3를 로컬로 실행할 수 있습니까?',
-            a: '소비자 하드웨어에서는 불가능합니다. DeepSeek-V3는 236B 파라미터 Mixture of Experts 모델입니다. INT4 양자화를 적용해도 약 140 GB의 VRAM이 필요하므로 NVIDIA A100 80 GB 6장이 필요합니다. 로컬에서 실행 가능한 대안은 DeepSeek-R1-Distill-Qwen-32B(RTX 4090 24 GB) 또는 더 작은 증류 모델(RTX 3060 12 GB의 DeepSeek-R1-Distill-Llama-8B)입니다.',
-          },
-          {
-            q: 'DeepSeek-R1-Distill-Qwen-32B가 코딩에서 Qwen3-Coder 32B보다 낫습니까?',
-            a: '작업에 따라 다릅니다. DeepSeek-R1-Distill-Qwen-32B는 알고리즘 추론(수학 문제, 경쟁 프로그래밍, 가시적 추론 체인을 활용한 복잡한 디버깅)에서 더 낫습니다. Qwen3-Coder 32B는 실용적인 코딩(자동 완성, 리팩터링, 관용적 Rust/C++, 타입 안전 TypeScript)에서 더 낫습니다. 일상적인 IDE 사용에서는 Qwen3-Coder가 더 나은 선택이며 자동 완성 작업에서 10~20% 빠릅니다.',
-          },
-          {
-            q: 'Continue.dev 또는 Cline 통합에 가장 좋은 로컬 모델은 무엇입니까?',
-            a: 'RTX 4060 Ti 16 GB의 Qwen3-Coder 14B가 IDE 자동 완성의 속도(14~18 tok/s)와 품질 사이에서 최적 균형을 제공합니다. RTX 4090이 있다면 Qwen3-Coder 32B를 사용하면 멀티 파일 리팩터링이 크게 향상됩니다. 두 모델 모두 Ollama를 통해 Continue.dev, Cline, Cursor 로컬 모드에서 기본 작동합니다.',
-          },
-          {
-            q: 'DeepSeek-V3 API 가격은 Qwen 로컬 실행과 비교하면 어떻습니까?',
-            a: 'DeepSeek-V3 API 가격: 입력 토큰 1M당 $0.27, 출력 토큰 1M당 $1.10. 일반적인 IDE 사용량(하루 200K 토큰)의 경우 일 $0.27, 월 약 $8입니다. Qwen3-Coder 32B를 RTX 4090에서 로컬 실행하면 전기료 약 $0.05/일에 3년간 하드웨어 상각 약 $1.70/일이 추가됩니다. 이미 RTX 4090이 있지 않은 한 DeepSeek API가 더 경제적입니다.',
-          },
-          {
-            q: 'Qwen3-Coder는 에이전트 코딩 작업을 위한 function calling을 지원합니까?',
-            a: '지원합니다. Qwen3-Coder 14B와 32B는 Cline, Aider 같은 에이전트 코딩 도구에 필요한 function calling과 구조화된 JSON 출력을 지원합니다. Qwen3-Coder 7B도 function calling을 지원하지만 복잡한 멀티 스텝 워크플로에서 신뢰성이 낮습니다. DeepSeek-R1-Distill-Qwen-32B는 function calling에 특화 최적화되지 않았으므로 에이전트 도구에는 Qwen3-Coder가 더 나은 선택입니다.',
-          },
-        ],
+            { q: 'GPU에서 DeepSeek-V3를 로컬로 실행할 수 있습니까?', a: '소비자 하드웨어에서는 불가능합니다. DeepSeek-V3는 236B 파라미터 Mixture of Experts 모델입니다. INT4 양자화를 적용해도 약 140 GB의 VRAM이 필요하므로 NVIDIA A100 80 GB 6장이 필요합니다. 로컬에서 실행 가능한 대안은 DeepSeek-R1-Distill-Qwen-32B(RTX 4090 24 GB) 또는 더 작은 증류 모델(RTX 3060 12 GB의 DeepSeek-R1-Distill-Llama-8B)입니다.' },
+            { q: 'DeepSeek-R1-Distill-Qwen-32B가 코딩에서 Qwen3-Coder 32B보다 낫습니까?', a: '작업에 따라 다릅니다. DeepSeek-R1-Distill-Qwen-32B는 알고리즘 추론(수학 문제, 경쟁 프로그래밍, 가시적 추론 체인을 활용한 복잡한 디버깅)에서 더 낫습니다. Qwen3-Coder 32B는 실용적인 코딩(자동 완성, 리팩터링, 관용적 Rust/C++, 타입 안전 TypeScript)에서 더 낫습니다. 일상적인 IDE 사용에서는 Qwen3-Coder가 더 나은 선택이며 자동 완성 작업에서 10~20% 빠릅니다.' },
+            { q: 'Continue.dev 또는 Cline 통합에 가장 좋은 로컬 모델은 무엇입니까?', a: 'RTX 4060 Ti 16 GB의 Qwen3-Coder 14B가 IDE 자동 완성의 속도(14~18 tok/s)와 품질 사이에서 최적 균형을 제공합니다. RTX 4090이 있다면 Qwen3-Coder 32B를 사용하면 멀티 파일 리팩터링이 크게 향상됩니다. 두 모델 모두 Ollama를 통해 Continue.dev, Cline, Cursor 로컬 모드에서 기본 작동합니다.' },
+            { q: 'DeepSeek-V3 API 가격은 Qwen 로컬 실행과 비교하면 어떻습니까?', a: 'DeepSeek-V3 API 가격: 입력 토큰 1M당 $0.27, 출력 토큰 1M당 $1.10. 일반적인 IDE 사용량(하루 200K 토큰)의 경우 일 $0.27, 월 약 $8입니다. Qwen3-Coder 32B를 RTX 4090에서 로컬 실행하면 전기료 약 $0.05/일에 3년간 하드웨어 상각 약 $1.70/일이 추가됩니다. 이미 RTX 4090이 있지 않은 한 DeepSeek API가 더 경제적입니다.' },
+            { q: 'Qwen3-Coder는 에이전트 코딩 작업을 위한 function calling을 지원합니까?', a: '지원합니다. Qwen3-Coder 14B와 32B는 Cline, Aider 같은 에이전트 코딩 도구에 필요한 function calling과 구조화된 JSON 출력을 지원합니다. Qwen3-Coder 7B도 function calling을 지원하지만 복잡한 멀티 스텝 워크플로에서 신뢰성이 낮습니다. DeepSeek-R1-Distill-Qwen-32B는 function calling에 특화 최적화되지 않았으므로 에이전트 도구에는 Qwen3-Coder가 더 나은 선택입니다.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -1123,47 +1087,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'GPU에서 DeepSeek-V3를 로컬로 실행할 수 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '불가능합니다. DeepSeek-V3는 236B 파라미터 Mixture of Experts 모델로 약 140 GB VRAM이 필요합니다. 로컬 대안: DeepSeek-R1-Distill-Qwen-32B(RTX 4090) 또는 더 작은 증류 모델.',
+          {
+            '@type': 'Question',
+            'name': 'GPU에서 DeepSeek-V3를 로컬로 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '소비자 하드웨어에서는 불가능합니다. DeepSeek-V3는 236B 파라미터 Mixture of Experts 모델입니다. INT4 양자화를 적용해도 약 140 GB의 VRAM이 필요하므로 NVIDIA A100 80 GB 6장이 필요합니다. 로컬에서 실행 가능한 대안은 DeepSeek-R1-Distill-Qwen-32B(RTX 4090 24 GB) 또는 더 작은 증류 모델(RTX 3060 12 GB의 DeepSeek-R1-Distill-Llama-8B)입니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'DeepSeek-R1-Distill-Qwen-32B가 코딩에서 Qwen3-Coder 32B보다 낫습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DeepSeek-R1-Distill-Qwen-32B는 알고리즘 추론에서 더 낫습니다. Qwen3-Coder 32B는 자동 완성, 리팩터링, Rust/C++에서 더 낫고 10~20% 빠릅니다.',
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek-R1-Distill-Qwen-32B가 코딩에서 Qwen3-Coder 32B보다 낫습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '작업에 따라 다릅니다. DeepSeek-R1-Distill-Qwen-32B는 알고리즘 추론(수학 문제, 경쟁 프로그래밍, 가시적 추론 체인을 활용한 복잡한 디버깅)에서 더 낫습니다. Qwen3-Coder 32B는 실용적인 코딩(자동 완성, 리팩터링, 관용적 Rust/C++, 타입 안전 TypeScript)에서 더 낫습니다. 일상적인 IDE 사용에서는 Qwen3-Coder가 더 나은 선택이며 자동 완성 작업에서 10~20% 빠릅니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Continue.dev 또는 Cline에 가장 좋은 로컬 모델은 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RTX 4060 Ti 16 GB의 Qwen3-Coder 14B(14~18 tok/s). RTX 4090 있으면 Qwen3-Coder 32B로 멀티 파일 리팩터링 향상. Ollama를 통해 기본 작동.',
+          {
+            '@type': 'Question',
+            'name': 'Continue.dev 또는 Cline 통합에 가장 좋은 로컬 모델은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 4060 Ti 16 GB의 Qwen3-Coder 14B가 IDE 자동 완성의 속도(14~18 tok/s)와 품질 사이에서 최적 균형을 제공합니다. RTX 4090이 있다면 Qwen3-Coder 32B를 사용하면 멀티 파일 리팩터링이 크게 향상됩니다. 두 모델 모두 Ollama를 통해 Continue.dev, Cline, Cursor 로컬 모드에서 기본 작동합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'DeepSeek-V3 API 가격은 Qwen 로컬 실행과 비교하면?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DeepSeek-V3 API: 입력 $0.27/1M 토큰, 출력 $1.10/1M 토큰 — 일반 IDE 사용 기준 월 약 $8. RTX 4090 없이 새로 구매하면 하드웨어 상각이 더 비쌉니다.',
+          {
+            '@type': 'Question',
+            'name': 'DeepSeek-V3 API 가격은 Qwen 로컬 실행과 비교하면 어떻습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-V3 API 가격: 입력 토큰 1M당 $0.27, 출력 토큰 1M당 $1.10. 일반적인 IDE 사용량(하루 200K 토큰)의 경우 일 $0.27, 월 약 $8입니다. Qwen3-Coder 32B를 RTX 4090에서 로컬 실행하면 전기료 약 $0.05/일에 3년간 하드웨어 상각 약 $1.70/일이 추가됩니다. 이미 RTX 4090이 있지 않은 한 DeepSeek API가 더 경제적입니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qwen3-Coder는 function calling을 지원합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '지원합니다. Qwen3-Coder 14B와 32B는 function calling과 구조화된 JSON 출력을 지원합니다. Qwen3-Coder 7B도 지원하지만 복잡한 워크플로에서 신뢰성이 낮습니다.',
+          {
+            '@type': 'Question',
+            'name': 'Qwen3-Coder는 에이전트 코딩 작업을 위한 function calling을 지원합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '지원합니다. Qwen3-Coder 14B와 32B는 Cline, Aider 같은 에이전트 코딩 도구에 필요한 function calling과 구조화된 JSON 출력을 지원합니다. Qwen3-Coder 7B도 function calling을 지원하지만 복잡한 멀티 스텝 워크플로에서 신뢰성이 낮습니다. DeepSeek-R1-Distill-Qwen-32B는 function calling에 특화 최적화되지 않았으므로 에이전트 도구에는 Qwen3-Coder가 더 나은 선택입니다.',
+            },
           },
-        },
-      ],
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1275,19 +1239,50 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Kann ich DeepSeek-V3 lokal auf meiner GPU betreiben?', a: 'Nein, nicht auf Consumer-Hardware. DeepSeek-V3 ist ein 236-Milliarden-Parameter-MoE-Modell. Auch bei INT4-Quantisierung sind ca. 140 GB VRAM erforderlich — entsprechend 6 NVIDIA A100 80 GB. Lokal lauffähige Alternativen: DeepSeek-R1-Distill-Qwen-32B (passt auf RTX 4090 24 GB) oder kleinere Destillationen.' },
-          { q: 'Welches lokale Modell eignet sich am besten für Continue.dev oder Cline?', a: 'Qwen3-Coder 14B auf einer RTX 4060 Ti 16 GB liefert die beste Balance aus Geschwindigkeit (14–18 tok/s) und Qualität für IDE-Autocomplete. Mit einer RTX 4090 empfiehlt sich Qwen3-Coder 32B für deutlich besseres Multi-File-Refactoring.' },
-          { q: 'Was kostet DeepSeek-V3 per API im Vergleich zu lokalem Qwen?', a: 'DeepSeek-V3 API (Stand Juli 2026): 0,27 US-Dollar pro 1 Mio. Input-Token, 1,10 US-Dollar pro 1 Mio. Output-Token — bei typischer IDE-Nutzung ca. 7–8 Euro/Monat. Qwen3-Coder 32B lokal auf einer RTX 4090 kostet ca. 0,05 Euro/Tag Strom plus Hardware-Amortisierung.' },
-        ],
+            { q: 'Kann ich DeepSeek-V3 lokal auf meiner GPU betreiben?', a: 'Nein, nicht auf Consumer-Hardware. DeepSeek-V3 ist ein 236-Milliarden-Parameter-MoE-Modell. Auch bei INT4-Quantisierung sind ca. 140 GB VRAM erforderlich — entsprechend 6 NVIDIA A100 80 GB. Lokal lauffähige Alternativen: DeepSeek-R1-Distill-Qwen-32B (passt auf RTX 4090 24 GB) oder kleinere Destillationen.' },
+            { q: 'Welches lokale Modell eignet sich am besten für Continue.dev oder Cline?', a: 'Qwen3-Coder 14B auf einer RTX 4060 Ti 16 GB liefert die beste Balance aus Geschwindigkeit (14–18 tok/s) und Qualität für IDE-Autocomplete. Mit einer RTX 4090 empfiehlt sich Qwen3-Coder 32B für deutlich besseres Multi-File-Refactoring.' },
+            { q: 'Was kostet DeepSeek-V3 per API im Vergleich zu lokalem Qwen?', a: 'DeepSeek-V3 API (Stand Juli 2026): 0,27 US-Dollar pro 1 Mio. Input-Token, 1,10 US-Dollar pro 1 Mio. Output-Token — bei typischer IDE-Nutzung ca. 7–8 Euro/Monat. Qwen3-Coder 32B lokal auf einer RTX 4090 kostet ca. 0,05 Euro/Tag Strom plus Hardware-Amortisierung.' },
+            { q: 'Welches Modell für Continue.dev?', a: 'Qwen3-Coder 14B auf RTX 4060 Ti 16 GB: beste Balance aus Geschwindigkeit und Qualität für IDE-Autocomplete.' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Kann ich DeepSeek-V3 lokal betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. DeepSeek-V3 (236B MoE) benötigt ca. 140 GB VRAM. Lokal lauffähig: DeepSeek-R1-Distill-Qwen-32B (RTX 4090) oder kleinere Destillationen.' } },
-        { '@type': 'Question', name: 'Welches Modell für Continue.dev?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 14B auf RTX 4060 Ti 16 GB: beste Balance aus Geschwindigkeit und Qualität für IDE-Autocomplete.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Kann ich DeepSeek-V3 lokal auf meiner GPU betreiben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein, nicht auf Consumer-Hardware. DeepSeek-V3 ist ein 236-Milliarden-Parameter-MoE-Modell. Auch bei INT4-Quantisierung sind ca. 140 GB VRAM erforderlich — entsprechend 6 NVIDIA A100 80 GB. Lokal lauffähige Alternativen: DeepSeek-R1-Distill-Qwen-32B (passt auf RTX 4090 24 GB) oder kleinere Destillationen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches lokale Modell eignet sich am besten für Continue.dev oder Cline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B auf einer RTX 4060 Ti 16 GB liefert die beste Balance aus Geschwindigkeit (14–18 tok/s) und Qualität für IDE-Autocomplete. Mit einer RTX 4090 empfiehlt sich Qwen3-Coder 32B für deutlich besseres Multi-File-Refactoring.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was kostet DeepSeek-V3 per API im Vergleich zu lokalem Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-V3 API (Stand Juli 2026): 0,27 US-Dollar pro 1 Mio. Input-Token, 1,10 US-Dollar pro 1 Mio. Output-Token — bei typischer IDE-Nutzung ca. 7–8 Euro/Monat. Qwen3-Coder 32B lokal auf einer RTX 4090 kostet ca. 0,05 Euro/Tag Strom plus Hardware-Amortisierung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Modell für Continue.dev?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B auf RTX 4060 Ti 16 GB: beste Balance aus Geschwindigkeit und Qualität für IDE-Autocomplete.',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -1955,27 +1950,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'Posso executar o DeepSeek-V3 localmente na minha GPU?',
-            a: 'Não, não em hardware de consumidor. DeepSeek-V3 é um modelo Mixture of Experts de 236B parâmetros. Mesmo com quantização INT4, ele exige aproximadamente 140 GB de VRAM combinada — equivalente a 6 placas NVIDIA A100 80 GB. As alternativas executáveis localmente são DeepSeek-R1-Distill-Qwen-32B (cabe em RTX 4090 24 GB) ou destilações menores (DeepSeek-R1-Distill-Llama-8B em RTX 3060 12 GB).',
-          },
-          {
-            q: 'O DeepSeek-R1-Distill-Qwen-32B é melhor que o Qwen3-Coder 32B para codificação?',
-            a: 'Depende da tarefa. DeepSeek-R1-Distill-Qwen-32B é melhor para raciocínio algorítmico — problemas matemáticos, programação competitiva, depuração complexa com cadeias de raciocínio visíveis. Qwen3-Coder 32B é melhor para codificação prática: autocompletar, refatoração, Rust/C++ idiomático e TypeScript com tipos seguros. Para uso diário no IDE, o Qwen3-Coder é a melhor escolha; ele também é 10–20% mais rápido em tarefas de autocompletar.',
-          },
-          {
-            q: 'Qual modelo local é o melhor para uma integração com Continue.dev ou Cline?',
-            a: 'Qwen3-Coder 14B em uma RTX 4060 Ti 16 GB oferece o melhor equilíbrio entre velocidade (14–18 tok/s) e qualidade para autocompletar no IDE. Se você tem uma RTX 4090, use Qwen3-Coder 32B para uma refatoração multiarquivo significativamente melhor. Ambos funcionam nativamente com Continue.dev, Cline e o modo local do Cursor via Ollama.',
-          },
-          {
-            q: 'Qual é o preço da API do DeepSeek-V3 comparado a executar o Qwen localmente?',
-            a: 'Preço da API do DeepSeek-V3 (em julho de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de saída. Com uso típico de IDE (200K tokens/dia), isso equivale a $0,27/dia ou ~$8/mês. Executar Qwen3-Coder 32B localmente em uma RTX 4090 custa ~$0,05/dia em eletricidade mais amortização de hardware de ~$1,70/dia ao longo de 3 anos — o que torna o Qwen auto-hospedado mais caro que a API do DeepSeek, a menos que você já tenha uma RTX 4090.',
-          },
-          {
-            q: 'O Qwen3-Coder suporta function calling para tarefas de codificação agêntica?',
-            a: 'Sim. Qwen3-Coder 14B e 32B suportam function calling e saída JSON estruturada, que são necessários para ferramentas de codificação agêntica como Cline e Aider. Qwen3-Coder 7B também suporta function calling, mas com menor confiabilidade em fluxos de trabalho complexos de múltiplos passos. DeepSeek-R1-Distill-Qwen-32B não foi otimizado especificamente para function calling — o Qwen3-Coder é a melhor escolha para ferramentas agênticas.',
-          },
-        ],
+            { q: 'Posso executar o DeepSeek-V3 localmente na minha GPU?', a: 'Não, não em hardware de consumidor. DeepSeek-V3 é um modelo Mixture of Experts de 236B parâmetros. Mesmo com quantização INT4, ele exige aproximadamente 140 GB de VRAM combinada — equivalente a 6 placas NVIDIA A100 80 GB. As alternativas executáveis localmente são DeepSeek-R1-Distill-Qwen-32B (cabe em RTX 4090 24 GB) ou destilações menores (DeepSeek-R1-Distill-Llama-8B em RTX 3060 12 GB).' },
+            { q: 'O DeepSeek-R1-Distill-Qwen-32B é melhor que o Qwen3-Coder 32B para codificação?', a: 'Depende da tarefa. DeepSeek-R1-Distill-Qwen-32B é melhor para raciocínio algorítmico — problemas matemáticos, programação competitiva, depuração complexa com cadeias de raciocínio visíveis. Qwen3-Coder 32B é melhor para codificação prática: autocompletar, refatoração, Rust/C++ idiomático e TypeScript com tipos seguros. Para uso diário no IDE, o Qwen3-Coder é a melhor escolha; ele também é 10–20% mais rápido em tarefas de autocompletar.' },
+            { q: 'Qual modelo local é o melhor para uma integração com Continue.dev ou Cline?', a: 'Qwen3-Coder 14B em uma RTX 4060 Ti 16 GB oferece o melhor equilíbrio entre velocidade (14–18 tok/s) e qualidade para autocompletar no IDE. Se você tem uma RTX 4090, use Qwen3-Coder 32B para uma refatoração multiarquivo significativamente melhor. Ambos funcionam nativamente com Continue.dev, Cline e o modo local do Cursor via Ollama.' },
+            { q: 'Qual é o preço da API do DeepSeek-V3 comparado a executar o Qwen localmente?', a: 'Preço da API do DeepSeek-V3 (em julho de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de saída. Com uso típico de IDE (200K tokens/dia), isso equivale a $0,27/dia ou ~$8/mês. Executar Qwen3-Coder 32B localmente em uma RTX 4090 custa ~$0,05/dia em eletricidade mais amortização de hardware de ~$1,70/dia ao longo de 3 anos — o que torna o Qwen auto-hospedado mais caro que a API do DeepSeek, a menos que você já tenha uma RTX 4090.' },
+            { q: 'O Qwen3-Coder suporta function calling para tarefas de codificação agêntica?', a: 'Sim. Qwen3-Coder 14B e 32B suportam function calling e saída JSON estruturada, que são necessários para ferramentas de codificação agêntica como Cline e Aider. Qwen3-Coder 7B também suporta function calling, mas com menor confiabilidade em fluxos de trabalho complexos de múltiplos passos. DeepSeek-R1-Distill-Qwen-32B não foi otimizado especificamente para function calling — o Qwen3-Coder é a melhor escolha para ferramentas agênticas.' },
+            { q: 'O Qwen3-Coder suporta function calling?', a: 'Sim. Qwen3-Coder 14B e 32B suportam function calling e saída JSON estruturada — necessários para Cline e Aider. Qwen3-Coder 7B também suporta, mas com menor confiabilidade em fluxos de trabalho complexos.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -1992,47 +1973,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Posso executar o DeepSeek-V3 localmente na minha GPU?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não. DeepSeek-V3 é um modelo Mixture of Experts de 236B parâmetros que exige aproximadamente 140 GB de VRAM combinada — equivalente a 6 placas NVIDIA A100 80 GB. Alternativas executáveis localmente: DeepSeek-R1-Distill-Qwen-32B (RTX 4090 24 GB) ou destilações menores.',
+          {
+            '@type': 'Question',
+            'name': 'Posso executar o DeepSeek-V3 localmente na minha GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não, não em hardware de consumidor. DeepSeek-V3 é um modelo Mixture of Experts de 236B parâmetros. Mesmo com quantização INT4, ele exige aproximadamente 140 GB de VRAM combinada — equivalente a 6 placas NVIDIA A100 80 GB. As alternativas executáveis localmente são DeepSeek-R1-Distill-Qwen-32B (cabe em RTX 4090 24 GB) ou destilações menores (DeepSeek-R1-Distill-Llama-8B em RTX 3060 12 GB).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O DeepSeek-R1-Distill-Qwen-32B é melhor que o Qwen3-Coder 32B para codificação?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DeepSeek-R1-Distill-Qwen-32B é melhor para raciocínio algorítmico. Qwen3-Coder 32B é melhor para autocompletar, refatoração e Rust/C++ idiomático. Para uso diário no IDE, o Qwen3-Coder é a melhor escolha e 10–20% mais rápido.',
+          {
+            '@type': 'Question',
+            'name': 'O DeepSeek-R1-Distill-Qwen-32B é melhor que o Qwen3-Coder 32B para codificação?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende da tarefa. DeepSeek-R1-Distill-Qwen-32B é melhor para raciocínio algorítmico — problemas matemáticos, programação competitiva, depuração complexa com cadeias de raciocínio visíveis. Qwen3-Coder 32B é melhor para codificação prática: autocompletar, refatoração, Rust/C++ idiomático e TypeScript com tipos seguros. Para uso diário no IDE, o Qwen3-Coder é a melhor escolha; ele também é 10–20% mais rápido em tarefas de autocompletar.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qual modelo local é o melhor para Continue.dev ou Cline?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qwen3-Coder 14B em RTX 4060 Ti 16 GB oferece o melhor equilíbrio entre velocidade (14–18 tok/s) e qualidade. Com uma RTX 4090, use Qwen3-Coder 32B para refatoração multiarquivo. Ambos funcionam nativamente via Ollama.',
+          {
+            '@type': 'Question',
+            'name': 'Qual modelo local é o melhor para uma integração com Continue.dev ou Cline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B em uma RTX 4060 Ti 16 GB oferece o melhor equilíbrio entre velocidade (14–18 tok/s) e qualidade para autocompletar no IDE. Se você tem uma RTX 4090, use Qwen3-Coder 32B para uma refatoração multiarquivo significativamente melhor. Ambos funcionam nativamente com Continue.dev, Cline e o modo local do Cursor via Ollama.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qual é o preço da API do DeepSeek-V3 frente a executar o Qwen localmente?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'API do DeepSeek-V3: $0,27/1M tokens de entrada, $1,10/1M tokens de saída — com uso típico de IDE, ~$8/mês. Executar Qwen3-Coder 32B localmente custa ~$0,05/dia em eletricidade mais amortização de hardware. Se você já tem uma RTX 4090, o Qwen local pode ser competitivo ao longo de 3+ anos.',
+          {
+            '@type': 'Question',
+            'name': 'Qual é o preço da API do DeepSeek-V3 comparado a executar o Qwen localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Preço da API do DeepSeek-V3 (em julho de 2026): $0,27 por 1M de tokens de entrada, $1,10 por 1M de tokens de saída. Com uso típico de IDE (200K tokens/dia), isso equivale a $0,27/dia ou ~$8/mês. Executar Qwen3-Coder 32B localmente em uma RTX 4090 custa ~$0,05/dia em eletricidade mais amortização de hardware de ~$1,70/dia ao longo de 3 anos — o que torna o Qwen auto-hospedado mais caro que a API do DeepSeek, a menos que você já tenha uma RTX 4090.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O Qwen3-Coder suporta function calling?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sim. Qwen3-Coder 14B e 32B suportam function calling e saída JSON estruturada — necessários para Cline e Aider. Qwen3-Coder 7B também suporta, mas com menor confiabilidade em fluxos de trabalho complexos.',
+          {
+            '@type': 'Question',
+            'name': 'O Qwen3-Coder suporta function calling para tarefas de codificação agêntica?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Qwen3-Coder 14B e 32B suportam function calling e saída JSON estruturada, que são necessários para ferramentas de codificação agêntica como Cline e Aider. Qwen3-Coder 7B também suporta function calling, mas com menor confiabilidade em fluxos de trabalho complexos de múltiplos passos. DeepSeek-R1-Distill-Qwen-32B não foi otimizado especificamente para function calling — o Qwen3-Coder é a melhor escolha para ferramentas agênticas.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'O Qwen3-Coder suporta function calling?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Qwen3-Coder 14B e 32B suportam function calling e saída JSON estruturada — necessários para Cline e Aider. Qwen3-Coder 7B também suporta, mas com menor confiabilidade em fluxos de trabalho complexos.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2352,27 +2341,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'هل يمكنني تشغيل DeepSeek-V3 محلياً على وحدة GPU الخاصة بي؟',
-            a: 'لا، ليس على أجهزة المستهلك. DeepSeek-V3 نموذج Mixture of Experts بـ236B معامل. حتى مع الكمية INT4، يتطلب ~140 GB من VRAM الإجمالية — ما يعادل 6 بطاقات NVIDIA A100 80 GB. البدائل القابلة للتشغيل المحلي: DeepSeek-R1-Distill-Qwen-32B (يتسع في RTX 4090 24 GB) أو التقطيرات الأصغر (DeepSeek-R1-Distill-Llama-8B على RTX 3060 12 GB).',
-          },
-          {
-            q: 'هل DeepSeek-R1-Distill-Qwen-32B أفضل من Qwen3-Coder 32B للبرمجة؟',
-            a: 'يعتمد على المهمة. DeepSeek-R1-Distill-Qwen-32B أفضل للاستدلال الخوارزمي — المسائل الرياضية والبرمجة التنافسية والتصحيح المعقد مع سلاسل استدلال مرئية. Qwen3-Coder 32B أفضل للبرمجة العملية: إكمال تلقائي وإعادة هيكلة وRust/C++ اصطلاحي وTypeScript بأنواع آمنة. للاستخدام اليومي في بيئة التطوير، Qwen3-Coder الخيار الأفضل؛ وهو أيضاً أسرع بـ10–20% في مهام الإكمال التلقائي.',
-          },
-          {
-            q: 'ما أفضل نموذج محلي لتكامل Continue.dev أو Cline؟',
-            a: 'Qwen3-Coder 14B على RTX 4060 Ti 16 GB يوفر أفضل توازن بين السرعة (14–18 tok/s) والجودة للإكمال التلقائي في بيئة التطوير. إن كان لديك RTX 4090، استخدم Qwen3-Coder 32B لإعادة هيكلة متعددة الملفات أفضل بكثير. كلاهما يعمل محلياً مباشرةً مع Continue.dev وCline والوضع المحلي لـCursor عبر Ollama.',
-          },
-          {
-            q: 'ما سعر واجهة DeepSeek-V3 البرمجية مقارنةً بتشغيل Qwen محلياً؟',
-            a: 'سعر واجهة DeepSeek-V3 البرمجية (يوليو 2026): $0.27 لكل مليون توكن إدخال، $1.10 لكل مليون توكن إخراج. مع الاستخدام النموذجي لبيئة التطوير (200K توكن/يوم)، هذا يعادل $0.27/يوم أو ~$8/شهر. تشغيل Qwen3-Coder 32B محلياً على RTX 4090 يكلف ~$0.05/يوم في الكهرباء بالإضافة إلى استهلاك الأجهزة ~$1.70/يوم على مدى 3 سنوات — مما يجعل Qwen المستضاف ذاتياً أغلى من واجهة DeepSeek البرمجية ما لم يكن لديك بالفعل RTX 4090.',
-          },
-          {
-            q: 'هل يدعم Qwen3-Coder استدعاء الدوال لمهام البرمجة الوكيلية؟',
-            a: 'نعم. يدعم Qwen3-Coder 14B و32B استدعاء الدوال ومخرجات JSON المنظمة، وهما ضروريان لأدوات البرمجة الوكيلية مثل Cline وAider. يدعم Qwen3-Coder 7B أيضاً استدعاء الدوال لكن بموثوقية أقل في سير العمل متعدد الخطوات المعقدة. لم يُحسَّن DeepSeek-R1-Distill-Qwen-32B تحديداً لاستدعاء الدوال — Qwen3-Coder هو الخيار الأفضل للأدوات الوكيلية.',
-          },
-        ],
+            { q: 'هل يمكنني تشغيل DeepSeek-V3 محلياً على وحدة GPU الخاصة بي؟', a: 'لا، ليس على أجهزة المستهلك. DeepSeek-V3 نموذج Mixture of Experts بـ236B معامل. حتى مع الكمية INT4، يتطلب ~140 GB من VRAM الإجمالية — ما يعادل 6 بطاقات NVIDIA A100 80 GB. البدائل القابلة للتشغيل المحلي: DeepSeek-R1-Distill-Qwen-32B (يتسع في RTX 4090 24 GB) أو التقطيرات الأصغر (DeepSeek-R1-Distill-Llama-8B على RTX 3060 12 GB).' },
+            { q: 'هل DeepSeek-R1-Distill-Qwen-32B أفضل من Qwen3-Coder 32B للبرمجة؟', a: 'يعتمد على المهمة. DeepSeek-R1-Distill-Qwen-32B أفضل للاستدلال الخوارزمي — المسائل الرياضية والبرمجة التنافسية والتصحيح المعقد مع سلاسل استدلال مرئية. Qwen3-Coder 32B أفضل للبرمجة العملية: إكمال تلقائي وإعادة هيكلة وRust/C++ اصطلاحي وTypeScript بأنواع آمنة. للاستخدام اليومي في بيئة التطوير، Qwen3-Coder الخيار الأفضل؛ وهو أيضاً أسرع بـ10–20% في مهام الإكمال التلقائي.' },
+            { q: 'ما أفضل نموذج محلي لتكامل Continue.dev أو Cline؟', a: 'Qwen3-Coder 14B على RTX 4060 Ti 16 GB يوفر أفضل توازن بين السرعة (14–18 tok/s) والجودة للإكمال التلقائي في بيئة التطوير. إن كان لديك RTX 4090، استخدم Qwen3-Coder 32B لإعادة هيكلة متعددة الملفات أفضل بكثير. كلاهما يعمل محلياً مباشرةً مع Continue.dev وCline والوضع المحلي لـCursor عبر Ollama.' },
+            { q: 'ما سعر واجهة DeepSeek-V3 البرمجية مقارنةً بتشغيل Qwen محلياً؟', a: 'سعر واجهة DeepSeek-V3 البرمجية (يوليو 2026): $0.27 لكل مليون توكن إدخال، $1.10 لكل مليون توكن إخراج. مع الاستخدام النموذجي لبيئة التطوير (200K توكن/يوم)، هذا يعادل $0.27/يوم أو ~$8/شهر. تشغيل Qwen3-Coder 32B محلياً على RTX 4090 يكلف ~$0.05/يوم في الكهرباء بالإضافة إلى استهلاك الأجهزة ~$1.70/يوم على مدى 3 سنوات — مما يجعل Qwen المستضاف ذاتياً أغلى من واجهة DeepSeek البرمجية ما لم يكن لديك بالفعل RTX 4090.' },
+            { q: 'هل يدعم Qwen3-Coder استدعاء الدوال لمهام البرمجة الوكيلية؟', a: 'نعم. يدعم Qwen3-Coder 14B و32B استدعاء الدوال ومخرجات JSON المنظمة، وهما ضروريان لأدوات البرمجة الوكيلية مثل Cline وAider. يدعم Qwen3-Coder 7B أيضاً استدعاء الدوال لكن بموثوقية أقل في سير العمل متعدد الخطوات المعقدة. لم يُحسَّن DeepSeek-R1-Distill-Qwen-32B تحديداً لاستدعاء الدوال — Qwen3-Coder هو الخيار الأفضل للأدوات الوكيلية.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -2389,47 +2363,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'هل يمكنني تشغيل DeepSeek-V3 محلياً على وحدة GPU؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا. DeepSeek-V3 نموذج Mixture of Experts بـ236B معامل يتطلب ~140 GB من VRAM — ما يعادل 6 بطاقات NVIDIA A100 80 GB. البدائل المحلية: DeepSeek-R1-Distill-Qwen-32B (RTX 4090) أو التقطيرات الأصغر.',
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل DeepSeek-V3 محلياً على وحدة GPU الخاصة بي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا، ليس على أجهزة المستهلك. DeepSeek-V3 نموذج Mixture of Experts بـ236B معامل. حتى مع الكمية INT4، يتطلب ~140 GB من VRAM الإجمالية — ما يعادل 6 بطاقات NVIDIA A100 80 GB. البدائل القابلة للتشغيل المحلي: DeepSeek-R1-Distill-Qwen-32B (يتسع في RTX 4090 24 GB) أو التقطيرات الأصغر (DeepSeek-R1-Distill-Llama-8B على RTX 3060 12 GB).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل DeepSeek-R1-Distill-Qwen-32B أفضل من Qwen3-Coder 32B للبرمجة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'DeepSeek-R1-Distill-Qwen-32B أفضل للاستدلال الخوارزمي. Qwen3-Coder 32B أفضل للإكمال التلقائي وإعادة الهيكلة وRust/C++ الاصطلاحي. للاستخدام اليومي في بيئة التطوير، Qwen3-Coder الخيار الأفضل وأسرع بـ10–20%.',
+          {
+            '@type': 'Question',
+            'name': 'هل DeepSeek-R1-Distill-Qwen-32B أفضل من Qwen3-Coder 32B للبرمجة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد على المهمة. DeepSeek-R1-Distill-Qwen-32B أفضل للاستدلال الخوارزمي — المسائل الرياضية والبرمجة التنافسية والتصحيح المعقد مع سلاسل استدلال مرئية. Qwen3-Coder 32B أفضل للبرمجة العملية: إكمال تلقائي وإعادة هيكلة وRust/C++ اصطلاحي وTypeScript بأنواع آمنة. للاستخدام اليومي في بيئة التطوير، Qwen3-Coder الخيار الأفضل؛ وهو أيضاً أسرع بـ10–20% في مهام الإكمال التلقائي.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ما أفضل نموذج محلي لـContinue.dev أو Cline؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qwen3-Coder 14B على RTX 4060 Ti 16 GB: أفضل توازن بين السرعة والجودة (14–18 tok/s). مع RTX 4090 اختر Qwen3-Coder 32B.',
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل نموذج محلي لتكامل Continue.dev أو Cline؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder 14B على RTX 4060 Ti 16 GB يوفر أفضل توازن بين السرعة (14–18 tok/s) والجودة للإكمال التلقائي في بيئة التطوير. إن كان لديك RTX 4090، استخدم Qwen3-Coder 32B لإعادة هيكلة متعددة الملفات أفضل بكثير. كلاهما يعمل محلياً مباشرةً مع Continue.dev وCline والوضع المحلي لـCursor عبر Ollama.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ما سعر واجهة DeepSeek-V3 البرمجية مقارنةً بـQwen المحلي؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'واجهة DeepSeek-V3: $0.27/1M توكن إدخال، $1.10/1M توكن إخراج — مع استخدام نموذجي لبيئة التطوير ~$8/شهر. تشغيل Qwen3-Coder 32B محلياً على RTX 4090 يكلف ~$0.05/يوم كهرباء بالإضافة إلى استهلاك الأجهزة.',
+          {
+            '@type': 'Question',
+            'name': 'ما سعر واجهة DeepSeek-V3 البرمجية مقارنةً بتشغيل Qwen محلياً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'سعر واجهة DeepSeek-V3 البرمجية (يوليو 2026): $0.27 لكل مليون توكن إدخال، $1.10 لكل مليون توكن إخراج. مع الاستخدام النموذجي لبيئة التطوير (200K توكن/يوم)، هذا يعادل $0.27/يوم أو ~$8/شهر. تشغيل Qwen3-Coder 32B محلياً على RTX 4090 يكلف ~$0.05/يوم في الكهرباء بالإضافة إلى استهلاك الأجهزة ~$1.70/يوم على مدى 3 سنوات — مما يجعل Qwen المستضاف ذاتياً أغلى من واجهة DeepSeek البرمجية ما لم يكن لديك بالفعل RTX 4090.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يدعم Qwen3-Coder استدعاء الدوال؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'نعم. يدعم Qwen3-Coder 14B و32B استدعاء الدوال ومخرجات JSON المنظمة — ضروريان لـCline وAider. يدعم Qwen3-Coder 7B أيضاً لكن بموثوقية أقل في سير العمل المعقدة.',
+          {
+            '@type': 'Question',
+            'name': 'هل يدعم Qwen3-Coder استدعاء الدوال لمهام البرمجة الوكيلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يدعم Qwen3-Coder 14B و32B استدعاء الدوال ومخرجات JSON المنظمة، وهما ضروريان لأدوات البرمجة الوكيلية مثل Cline وAider. يدعم Qwen3-Coder 7B أيضاً استدعاء الدوال لكن بموثوقية أقل في سير العمل متعدد الخطوات المعقدة. لم يُحسَّن DeepSeek-R1-Distill-Qwen-32B تحديداً لاستدعاء الدوال — Qwen3-Coder هو الخيار الأفضل للأدوات الوكيلية.',
+            },
           },
-        },
-      ],
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

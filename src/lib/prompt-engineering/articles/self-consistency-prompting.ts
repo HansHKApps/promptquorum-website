@@ -489,6 +489,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Ist Self-Consistency das gleiche wie "Best-of-N" Sampling?', a: 'Ähnlich, aber nicht identisch. Best-of-N generiert N Antworten und wählt die beste aus (oft durch einen Qualitäts-Scorer). Self-Consistency generiert N Lösungswege und wählt die häufigste ANTWORT — die Abstimmung erfolgt über die Schlussfolgerung, nicht über die Qualität. Self-Consistency benötigt keinen Qualitäts-Scorer; es nutzt Übereinstimmung als Signal.' },
             { q: 'Kann ich Self-Consistency mit Chain-of-Thought Prompting kombinieren?', a: 'Ja — dies ist die ursprüngliche und effektivste Kombination. Jeder Ihrer N Samples verwendet Chain-of-Thought Reasoning und erzeugt eine vollständige Reasoning-Spur plus eine endgültige Antwort. Sie stimmen dann über die endgültigen Antworten über alle N Spuren ab. Die Lösungswege können unterschiedlich sein, aber wenn die meisten zu der gleichen Schlussfolgerung führen, ist diese Schlussfolgerung robust.' },
             { q: 'Wie verhält sich PromptQuorum zu Self-Consistency?', a: 'PromptQuorum wendet das gleiche Konsensprinzip über verschiedene Modelle hinweg statt innerhalb eines Modells an. Anstatt das gleiche Modell 10 Mal zu fragen, stellen Sie 5 verschiedene Modelle einmal jedes und vergleichen ihre Antworten. Wo sie sich einigen, ist das Vertrauen hoch. Wo sie sich uneinig sind, muss der Anspruch überprüft werden. Dies erfasst modellspezifische Verzerrungen, die Single-Model Self-Consistency nicht erkennen kann.' },
+            { q: 'Muss ich Self-Consistency bei der Verwendung von PromptQuorum beachten?', a: 'Self-Consistency und Multi-Modell-Konsens sind komplementäre Techniken. Self-Consistency erfasst Sampling-Instabilität in einem Modell; Multi-Modell-Konsens erfasst modellspezifische Verzerrungen. Für höchste Zuverlässigkeit kombinieren Sie beide: Lassen Sie Self-Consistency in Ihrem Hauptmodell ablaufen UND überprüfen Sie die Konsensantwort gegen ein zweites Modell in PromptQuorum.' },
+            { q: 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?', a: 'Nein, Self-Consistency ist eine reine Prompting-Technik und hat keinen Einfluss auf DSGVO-Anforderungen. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Modelle Sie verwenden, nicht davon, wie oft Sie samplen. Wenn Sie lokale Modelle (Ollama, LM Studio) verwenden, erfüllen Sie bereits DSGVO, unabhängig davon, ob Sie Self-Consistency anwenden.' },
+            { q: 'Ist Self-Consistency Prompting für Mittelstand-Unternehmen geeignet?', a: 'Ja. Deutsche Mittelstand-Unternehmen können Self-Consistency nutzen, um KI-gestützte Entscheidungsfindung in technischen Analysen, Finanzprognosen und Forschungssynthese zuverlässiger zu machen. Die Technik funktioniert mit allen Modellen. Kombiniert mit lokalen Modellen (Ollama, LM Studio) auf eigenen Servern erfüllen Sie BSI-Grundschutz-Standards und DSGVO-Anforderungen.' },
           ],
         },
       },
@@ -497,17 +500,94 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Was ist Self-Consistency Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Self-Consistency Prompting ist eine Technik, bei der Sie mehrere unabhängige Antworten auf die gleiche Frage generieren — jeweils mit ihrem eigenen Lösungsweg — und dann die Antwort auswählen, die am häufigsten vorkommt. Anstatt einer AI-Antwort zu vertrauen, verlassen Sie sich auf den Konsens vieler. Es wurde 2023 von Wang et al. eingeführt und verbessert die Genauigkeit bei Mathematik-, Logik- und mehrstufigen Reasoning-Aufgaben deutlich.' } },
-          { '@type': 'Question', name: 'Wie viele Samples brauche ich für Self-Consistency?', acceptedAnswer: { '@type': 'Answer', text: 'Für die meisten Aufgaben bieten 5–10 Samples das beste Genauigkeit-Kosten-Verhältnis. Das ursprüngliche Paper zeigte, dass die Genauigkeit schnell von 1 auf 5 Samples verbessert wird, dann sinkende Erträge jenseits von 20. Der Übergang von 20 auf 40 Samples brachte nur 2 Prozentpunkte auf GSM8K. Beginnen Sie mit 5; erhöhen Sie auf 10–20 nur bei hochriskanten Entscheidungen.' } },
-          { '@type': 'Question', name: 'Funktioniert Self-Consistency bei einfachen Aufgaben?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht sinnvoll. Bei Faktenabfragen, einfacher Klassifizierung oder kurzer Textproduktion ist eine einzelne Antwort fast immer ausreichend und viel günstiger. Self-Consistency bietet Wert nur bei Aufgaben, bei denen die Einzeldurchlauf-Genauigkeit beobachtbar unter ~90% liegt — typischerweise Mathematik, Logik-Rätsel, mehrstufige Analyse und komplexes Reasoning.' } },
-          { '@type': 'Question', name: 'Welche Temperatur sollte ich für Self-Consistency verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Setzen Sie Temperatur auf 0,7–1,0. Die Technik erfordert unterschiedliche Lösungswege — wenn Temperatur 0 ist (deterministisch), erzeugt jeder Sample das identische Ergebnis und Voting ist sinnlos. Höhere Temperatur erzeugt die Vielfalt, die das Mehrheitsvoting aussagekräftig macht.' } },
-          { '@type': 'Question', name: 'Wie viel mehr kostet Self-Consistency?', acceptedAnswer: { '@type': 'Answer', text: 'Ungefähr 5–20× mehr Token pro Aufgabe, da Sie 5–20 komplette Responses statt einer generieren. Bei einer Response, die $0,01 kostet, kostet Self-Consistency bei 10 Samples $0,10. Dies ist für kritische Entscheidungen gerechtfertigt (Finanzanalyse, medizinisches Reasoning, rechtliche Interpretation), aber verschwenderisch für Routineaufgaben.' } },
-          { '@type': 'Question', name: 'Ist Self-Consistency das gleiche wie "Best-of-N" Sampling?', acceptedAnswer: { '@type': 'Answer', text: 'Ähnlich, aber nicht identisch. Best-of-N generiert N Responses und wählt die beste aus (oft mit einem Quality Scorer). Self-Consistency generiert N Lösungswege und wählt die HÄUFIGSTE ANTWORT — das Voting ist über die Schlussfolgerung, nicht über die Qualität. Self-Consistency braucht keinen Quality Scorer; es verwendet Übereinstimmung als Signal.' } },
-          { '@type': 'Question', name: 'Kann ich Self-Consistency mit Chain-of-Thought Prompting verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — dies ist die ursprüngliche und effektivste Kombination. Jeder Ihrer N Samples verwendet Chain-of-Thought Reasoning und erzeugt ein komplettes Reasoning-Trace plus eine finale Antwort. Sie stimmen dann über die finalen Antworten über alle N Traces ab. Die Lösungswege können unterschiedlich sein, aber wenn die meisten zur gleichen Schlussfolgerung führen, ist diese Schlussfolgerung robust.' } },
-          { '@type': 'Question', name: 'Wie hängt PromptQuorum mit Self-Consistency zusammen?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum wendet das gleiche Konsensprinzip über verschiedene Modelle statt in einem Modell an. Anstatt das gleiche Modell 10 Mal zu befragen, befragen Sie 5 verschiedene Modelle je einmal und vergleichen ihre Antworten. Wenn sie übereinstimmen, ist Vertrauen hoch. Wenn sie sich widersprechen, muss der Anspruch überprüft werden. Dies erfasst modellspezifische Verzerrungen, die Single-Modell Self-Consistency nicht erkennen kann.' } },
-          { '@type': 'Question', name: 'Muss ich Self-Consistency bei der Verwendung von PromptQuorum beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Self-Consistency und Multi-Modell-Konsens sind komplementäre Techniken. Self-Consistency erfasst Sampling-Instabilität in einem Modell; Multi-Modell-Konsens erfasst modellspezifische Verzerrungen. Für höchste Zuverlässigkeit kombinieren Sie beide: Lassen Sie Self-Consistency in Ihrem Hauptmodell ablaufen UND überprüfen Sie die Konsensantwort gegen ein zweites Modell in PromptQuorum.' } },
-          { '@type': 'Question', name: 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Nein, Self-Consistency ist eine reine Prompting-Technik und hat keinen Einfluss auf DSGVO-Anforderungen. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Modelle Sie verwenden, nicht davon, wie oft Sie samplen. Wenn Sie lokale Modelle (Ollama, LM Studio) verwenden, erfüllen Sie bereits DSGVO, unabhängig davon, ob Sie Self-Consistency anwenden.' } },
-          { '@type': 'Question', name: 'Ist Self-Consistency Prompting für Mittelstand-Unternehmen geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Deutsche Mittelstand-Unternehmen können Self-Consistency nutzen, um KI-gestützte Entscheidungsfindung in technischen Analysen, Finanzprognosen und Forschungssynthese zuverlässiger zu machen. Die Technik funktioniert mit allen Modellen. Kombiniert mit lokalen Modellen (Ollama, LM Studio) auf eigenen Servern erfüllen Sie BSI-Grundschutz-Standards und DSGVO-Anforderungen.' } },
+          {
+            '@type': 'Question',
+            'name': 'Was ist Self-Consistency Prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Self-Consistency Prompting ist eine Technik, bei der Sie mehrere unabhängige Antworten auf die gleiche Frage generieren — jede mit ihrem eigenen Lösungsweg — und dann die am häufigsten vorkommende Antwort auswählen. Anstatt einer einzigen KI-Antwort zu vertrauen, vertrauen Sie dem Konsens vieler. Sie wurde von Wang et al. (2023) eingeführt und verbessert die Genauigkeit bei Mathematik-, Logik- und mehrstufigen Reasoning-Aufgaben erheblich.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viele Samples benötige ich für Self-Consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für die meisten Aufgaben bieten 5–10 Samples das beste Verhältnis zwischen Genauigkeit und Kosten. Das ursprüngliche Paper zeigte schnelle Genauigkeitssteigerung von 1 auf 5 Samples, dann abnehmende Grenznutzen jenseits von 20. Die Steigerung von 20 auf 40 Samples addierte nur 2 Prozentpunkte bei GSM8K hinzu. Beginnen Sie mit 5; erhöhen Sie auf 10-20 nur für kritische Entscheidungen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert Self-Consistency bei einfachen Aufgaben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht sinnvoll. Für Faktenabruf, einfache Klassifikation oder Short-Form-Schreiben ist eine einzelne Antwort fast immer ausreichend und viel billiger. Self-Consistency bietet Mehrwert nur bei Aufgaben, bei denen die Genauigkeit des Modells beim einmaligen Durchlauf unter ~90% liegt — typischerweise Mathematik, Logikrätsel, mehrstufige Analyse und komplexes Reasoning.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Temperatur sollte ich für Self-Consistency verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Setzen Sie die Temperatur auf 0,7–1,0. Die Technik erfordert unterschiedliche Lösungswege — wenn die Temperatur 0 ist (deterministisch), erzeugt jedes Sample identische Ausgaben und Abstimmungen sind sinnlos. Höhere Temperatur erzeugt die Variation, die Mehrheitsvoting informativ macht.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viel mehr kostet Self-Consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Etwa 5–20× mehr Token pro Aufgabe, da Sie 5–20 vollständige Antworten statt einer generieren. Für eine Antwort, die 0,01$ kostet, kostet Self-Consistency mit 10 Samples 0,10$. Dies ist für kritische Entscheidungen gerechtfertigt (Finanzanalyse, medizinisches Reasoning, juristische Interpretation), aber verschwendet für Routineaufgaben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Self-Consistency das gleiche wie "Best-of-N" Sampling?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ähnlich, aber nicht identisch. Best-of-N generiert N Antworten und wählt die beste aus (oft durch einen Qualitäts-Scorer). Self-Consistency generiert N Lösungswege und wählt die häufigste ANTWORT — die Abstimmung erfolgt über die Schlussfolgerung, nicht über die Qualität. Self-Consistency benötigt keinen Qualitäts-Scorer; es nutzt Übereinstimmung als Signal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Self-Consistency mit Chain-of-Thought Prompting kombinieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja — dies ist die ursprüngliche und effektivste Kombination. Jeder Ihrer N Samples verwendet Chain-of-Thought Reasoning und erzeugt eine vollständige Reasoning-Spur plus eine endgültige Antwort. Sie stimmen dann über die endgültigen Antworten über alle N Spuren ab. Die Lösungswege können unterschiedlich sein, aber wenn die meisten zu der gleichen Schlussfolgerung führen, ist diese Schlussfolgerung robust.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie verhält sich PromptQuorum zu Self-Consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum wendet das gleiche Konsensprinzip über verschiedene Modelle hinweg statt innerhalb eines Modells an. Anstatt das gleiche Modell 10 Mal zu fragen, stellen Sie 5 verschiedene Modelle einmal jedes und vergleichen ihre Antworten. Wo sie sich einigen, ist das Vertrauen hoch. Wo sie sich uneinig sind, muss der Anspruch überprüft werden. Dies erfasst modellspezifische Verzerrungen, die Single-Model Self-Consistency nicht erkennen kann.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich Self-Consistency bei der Verwendung von PromptQuorum beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Self-Consistency und Multi-Modell-Konsens sind komplementäre Techniken. Self-Consistency erfasst Sampling-Instabilität in einem Modell; Multi-Modell-Konsens erfasst modellspezifische Verzerrungen. Für höchste Zuverlässigkeit kombinieren Sie beide: Lassen Sie Self-Consistency in Ihrem Hauptmodell ablaufen UND überprüfen Sie die Konsensantwort gegen ein zweites Modell in PromptQuorum.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich Self-Consistency bei der Einhaltung der DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein, Self-Consistency ist eine reine Prompting-Technik und hat keinen Einfluss auf DSGVO-Anforderungen. Datenschutz hängt davon ab, wo Daten verarbeitet werden und welche Modelle Sie verwenden, nicht davon, wie oft Sie samplen. Wenn Sie lokale Modelle (Ollama, LM Studio) verwenden, erfüllen Sie bereits DSGVO, unabhängig davon, ob Sie Self-Consistency anwenden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Self-Consistency Prompting für Mittelstand-Unternehmen geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Deutsche Mittelstand-Unternehmen können Self-Consistency nutzen, um KI-gestützte Entscheidungsfindung in technischen Analysen, Finanzprognosen und Forschungssynthese zuverlässiger zu machen. Die Technik funktioniert mit allen Modellen. Kombiniert mit lokalen Modellen (Ollama, LM Studio) auf eigenen Servern erfüllen Sie BSI-Grundschutz-Standards und DSGVO-Anforderungen.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -740,6 +820,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Es el self-consistency lo mismo que el muestreo "best-of-N"?', a: 'Similar pero no idéntico. Best-of-N genera N respuestas y selecciona la mejor (a menudo por un evaluador de calidad). El self-consistency genera N caminos de razonamiento y selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad. El self-consistency no necesita un evaluador de calidad; usa el acuerdo como señal.' },
             { q: '¿Puedo usar el self-consistency con chain-of-thought prompting?', a: 'Sí — esta es la combinación original y más efectiva. Cada una de tus N muestras usa razonamiento de chain-of-thought, produciendo un rastro de razonamiento completo más una respuesta final. Luego votas sobre las respuestas finales de todos los N rastros. Los caminos de razonamiento pueden diferir, pero si la mayoría llega a la misma conclusión, esa conclusión es robusta.' },
             { q: '¿Cómo se relaciona PromptQuorum con el self-consistency?', a: 'PromptQuorum aplica el mismo principio de consenso entre diferentes modelos en lugar de dentro de uno. En lugar de preguntarle al mismo modelo 10 veces, le preguntas a 5 modelos diferentes una vez cada uno y comparas sus respuestas. Donde coinciden, la confianza es alta. Donde difieren, la afirmación necesita verificación. Esto detecta sesgos específicos del modelo que el self-consistency de un solo modelo no puede detectar.' },
+            { q: '¿Cuántas muestras necesito?', a: 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.' },
+            { q: '¿Qué temperatura debo usar?', a: 'Establece la temperatura en 0.7–1.0. La técnica requiere caminos de razonamiento diversos — si la temperatura es 0, cada muestra produce la salida idéntica y la votación no tiene sentido.' },
+            { q: '¿Es lo mismo que best-of-N?', a: 'Similar pero no idéntico. Best-of-N selecciona la mejor respuesta por calidad. El self-consistency selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad.' },
           ],
         },
       },
@@ -748,14 +831,94 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         mainEntity: [
-          { '@type': 'Question', name: '¿Qué es el self-consistency prompting?', acceptedAnswer: { '@type': 'Answer', text: 'El self-consistency prompting es una técnica donde generas múltiples respuestas independientes a la misma pregunta y seleccionas la que aparece con más frecuencia. En lugar de confiar en una respuesta de IA, confías en el consenso de muchas.' } },
-          { '@type': 'Question', name: '¿Cuántas muestras necesito?', acceptedAnswer: { '@type': 'Answer', text: 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.' } },
-          { '@type': 'Question', name: '¿Qué temperatura debo usar?', acceptedAnswer: { '@type': 'Answer', text: 'Establece la temperatura en 0.7–1.0. La técnica requiere caminos de razonamiento diversos — si la temperatura es 0, cada muestra produce la salida idéntica y la votación no tiene sentido.' } },
-          { '@type': 'Question', name: '¿Cuánto más cuesta el self-consistency?', acceptedAnswer: { '@type': 'Answer', text: 'Aproximadamente 5–20× más tokens por tarea. Esto se justifica para decisiones críticas pero es un desperdicio para tareas rutinarias.' } },
-          { '@type': 'Question', name: '¿Puedo usar el self-consistency con chain-of-thought?', acceptedAnswer: { '@type': 'Answer', text: 'Sí — esta es la combinación original y más efectiva. Cada muestra usa razonamiento de chain-of-thought, y luego votas sobre las respuestas finales.' } },
-          { '@type': 'Question', name: '¿Funciona en tareas simples?', acceptedAnswer: { '@type': 'Answer', text: 'No de forma significativa. El self-consistency solo añade valor cuando la precisión de pasada única esté por debajo del ~90% — típicamente matemáticas, lógica y razonamiento complejo.' } },
-          { '@type': 'Question', name: '¿Es lo mismo que best-of-N?', acceptedAnswer: { '@type': 'Answer', text: 'Similar pero no idéntico. Best-of-N selecciona la mejor respuesta por calidad. El self-consistency selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad.' } },
-          { '@type': 'Question', name: '¿Cómo se relaciona PromptQuorum con el self-consistency?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum aplica el mismo principio de consenso entre diferentes modelos en lugar de dentro de uno. Esto detecta sesgos específicos del modelo que el self-consistency de un solo modelo no puede.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el self-consistency prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El self-consistency prompting es una técnica donde generas múltiples respuestas independientes a la misma pregunta — cada una con su propio camino de razonamiento — y luego seleccionas la respuesta que aparece con más frecuencia. En lugar de confiar en una respuesta de IA, confías en el consenso de muchas. Fue introducido por Wang et al. (2023) y mejora significativamente la precisión en matemáticas, lógica y tareas de razonamiento de múltiples pasos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuántas muestras necesito para el self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. El artículo original mostró que la precisión mejora rápidamente de 1 a 5 muestras, luego con rendimientos decrecientes más allá de 20. Pasar de 20 a 40 muestras solo añadió 2 puntos porcentuales en GSM8K. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Funciona el self-consistency en tareas simples?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No de forma significativa. Para búsquedas factuales, clasificación simple o escritura de forma corta, una sola respuesta es casi siempre suficiente y mucho más barata. El self-consistency solo añade valor en tareas donde la precisión de pasada única del modelo esté por debajo del ~90% — típicamente matemáticas, puzzles lógicos, análisis de múltiples pasos y razonamiento complejo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué temperatura debo usar para el self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Establece la temperatura en 0.7–1.0. La técnica requiere caminos de razonamiento diversos — si la temperatura es 0 (determinista), cada muestra produce la salida idéntica y la votación no tiene sentido. Una temperatura más alta crea la variación que hace que la votación mayoritaria sea informativa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto más cuesta el self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aproximadamente 5–20× más tokens por tarea, ya que generas 5–20 respuestas completas en lugar de una. Para una respuesta que cuesta $0.01, el self-consistency a 10 muestras cuesta $0.10. Esto se justifica para decisiones críticas pero es un desperdicio para tareas rutinarias.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es el self-consistency lo mismo que el muestreo "best-of-N"?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Similar pero no idéntico. Best-of-N genera N respuestas y selecciona la mejor (a menudo por un evaluador de calidad). El self-consistency genera N caminos de razonamiento y selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad. El self-consistency no necesita un evaluador de calidad; usa el acuerdo como señal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar el self-consistency con chain-of-thought prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — esta es la combinación original y más efectiva. Cada una de tus N muestras usa razonamiento de chain-of-thought, produciendo un rastro de razonamiento completo más una respuesta final. Luego votas sobre las respuestas finales de todos los N rastros. Los caminos de razonamiento pueden diferir, pero si la mayoría llega a la misma conclusión, esa conclusión es robusta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo se relaciona PromptQuorum con el self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum aplica el mismo principio de consenso entre diferentes modelos en lugar de dentro de uno. En lugar de preguntarle al mismo modelo 10 veces, le preguntas a 5 modelos diferentes una vez cada uno y comparas sus respuestas. Donde coinciden, la confianza es alta. Donde difieren, la afirmación necesita verificación. Esto detecta sesgos específicos del modelo que el self-consistency de un solo modelo no puede detectar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuántas muestras necesito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para la mayoría de tareas, 5–10 muestras proporcionan la mejor relación precisión-costo. Comienza con 5; aumenta a 10–20 solo para decisiones de alto riesgo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué temperatura debo usar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Establece la temperatura en 0.7–1.0. La técnica requiere caminos de razonamiento diversos — si la temperatura es 0, cada muestra produce la salida idéntica y la votación no tiene sentido.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es lo mismo que best-of-N?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Similar pero no idéntico. Best-of-N selecciona la mejor respuesta por calidad. El self-consistency selecciona la RESPUESTA más común — la votación es sobre la conclusión, no sobre la calidad.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -988,6 +1151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'هل الاتساق الذاتي مثل أخذ عينات "best-of-N"؟', a: 'مشابه لكن ليس متطابقاً. Best-of-N يُولّد N إجابة ويختار الأفضل (في أغلب الأحيان بمقيّم جودة). الاتساق الذاتي يُولّد N مسار استدلال ويختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة. الاتساق الذاتي لا يحتاج مقيّم جودة؛ يستخدم الاتفاق كإشارة.' },
             { q: 'هل يمكن استخدام الاتساق الذاتي مع برومبت سلسلة الأفكار؟', a: 'نعم — هذا المزيج الأصلي والأكثر فعالية. كل عينة من N عيناتك تستخدم استدلال سلسلة الأفكار، مُنتِجةً مسار استدلال كامل بالإضافة إلى إجابة نهائية. ثم تصوّت على الإجابات النهائية من جميع مسارات N. قد تختلف مسارات الاستدلال، لكن إذا توصّل أغلبها إلى الاستنتاج نفسه، فذلك الاستنتاج متين.' },
             { q: 'كيف يرتبط PromptQuorum بالاتساق الذاتي؟', a: 'PromptQuorum يُطبّق مبدأ التوافق نفسه عبر نماذج مختلفة بدلاً من داخل نموذج واحد. بدلاً من سؤال النموذج نفسه 10 مرات، تسأل 5 نماذج مختلفة مرة واحدة لكل منها وتقارن إجاباتها. حيث تتوافق، الثقة عالية. حيث تختلف، الادعاء يحتاج تحقق. هذا يكشف الانحيازات الخاصة بالنموذج التي لا يستطيع الاتساق الذاتي لنموذج واحد اكتشافها.' },
+            { q: 'هل هو مثل best-of-N؟', a: 'مشابه لكن ليس متطابقاً. Best-of-N يختار الأفضل جودةً. الاتساق الذاتي يختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة.' },
           ],
         },
       },
@@ -996,14 +1160,78 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'ما هو برومبت الاتساق الذاتي؟', acceptedAnswer: { '@type': 'Answer', text: 'برومبت الاتساق الذاتي تقنية تُولّد فيها استجابات مستقلة متعددة للسؤال نفسه وتختار التي تظهر في أغلب الأحيان. بدلاً من الاعتماد على إجابة ذكاء اصطناعي، تعتمد على توافق استجابات عديدة.' } },
-          { '@type': 'Question', name: 'كم عدد العينات الضرورية؟', acceptedAnswer: { '@type': 'Answer', text: 'لمعظم المهام، 5–10 عينات تُوفّر أفضل توازن دقة-تكلفة. ابدأ بـ5؛ زد إلى 10–20 فقط للقرارات عالية المخاطر.' } },
-          { '@type': 'Question', name: 'أي درجة حرارة يجب استخدامها؟', acceptedAnswer: { '@type': 'Answer', text: 'اضبط درجة الحرارة على 0.7–1.0. التقنية تتطلب مسارات استدلالية متنوعة — إذا كانت درجة الحرارة 0، كل عينة تُنتج المخرج المتطابق والتصويت لا معنى له.' } },
-          { '@type': 'Question', name: 'كم يزيد الاتساق الذاتي في التكلفة؟', acceptedAnswer: { '@type': 'Answer', text: 'تقريباً 5–20× رموز أكثر لكل مهمة. مبرر للقرارات الحاسمة لكن إهدار للمهام الروتينية.' } },
-          { '@type': 'Question', name: 'هل يمكن استخدامه مع سلسلة الأفكار؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم — هذا المزيج الأصلي والأكثر فعالية. كل عينة تستخدم استدلال سلسلة الأفكار، ثم تصوّت على الإجابات النهائية.' } },
-          { '@type': 'Question', name: 'هل يعمل في المهام البسيطة؟', acceptedAnswer: { '@type': 'Answer', text: 'ليس بشكل ملحوظ. الاتساق الذاتي يُضيف قيمة فقط في المهام حيث دقة التشغيل الواحد أقل من ~90٪ — الرياضيات والمنطق والاستدلال المعقد.' } },
-          { '@type': 'Question', name: 'هل هو مثل best-of-N؟', acceptedAnswer: { '@type': 'Answer', text: 'مشابه لكن ليس متطابقاً. Best-of-N يختار الأفضل جودةً. الاتساق الذاتي يختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة.' } },
-          { '@type': 'Question', name: 'كيف يرتبط PromptQuorum بالاتساق الذاتي؟', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum يُطبّق مبدأ التوافق نفسه عبر نماذج مختلفة. بدلاً من سؤال النموذج نفسه 10 مرات، تسأل 5 نماذج مختلفة وتقارن. هذا يكشف الانحيازات الخاصة بالنموذج.' } },
+          {
+            '@type': 'Question',
+            'name': 'ما هو برومبت الاتساق الذاتي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'برومبت الاتساق الذاتي تقنية تُولّد فيها استجابات مستقلة متعددة للسؤال نفسه — لكل منها مسار استدلالي خاص — ثم تختار الإجابة التي تظهر في أغلب الأحيان. بدلاً من الاعتماد على إجابة ذكاء اصطناعي، تعتمد على توافق استجابات عديدة. قدّمتها Wang et al. (2023) وتُحسّن الدقة بشكل ملحوظ في الرياضيات والمنطق ومهام الاستدلال متعدد الخطوات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم عدد العينات الضرورية للاتساق الذاتي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لمعظم المهام، 5–10 عينات تُوفّر أفضل توازن دقة-تكلفة. أظهرت الورقة الأصلية تحسّن الدقة بسرعة من 1 إلى 5 عينات، ثم عوائد متناقصة ما وراء 20. الانتقال من 20 إلى 40 عينة أضاف فقط 2 نقطة مئوية في GSM8K. ابدأ بـ5؛ زد إلى 10–20 فقط للقرارات عالية المخاطر.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل الاتساق الذاتي في المهام البسيطة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس بشكل ملحوظ. للبحث عن الحقائق والتصنيف البسيط والكتابة القصيرة، إجابة واحدة كافية دائماً وأقل تكلفة بكثير. الاتساق الذاتي يُضيف قيمة فقط في المهام حيث دقة التشغيل الواحد للنموذج أقل من ~90٪ — عادةً الرياضيات والمسائل المنطقية والتحليل متعدد الخطوات والاستدلال المعقد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي درجة حرارة يجب استخدامها للاتساق الذاتي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اضبط درجة الحرارة على 0.7–1.0. تتطلب التقنية مسارات استدلالية متنوعة — إذا كانت درجة الحرارة 0 (حتمية)، كل عينة تُنتج المخرج المتطابق والتصويت لا معنى له. درجة الحرارة الأعلى تُنشئ التباين الذي يجعل التصويت الأغلبي مفيداً.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم يزيد الاتساق الذاتي في التكلفة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تقريباً 5–20× رموز أكثر لكل مهمة، لأنك تُولّد 5–20 استجابة كاملة بدلاً من واحدة. للقرارات الحاسمة مبرر، لكنه إهدار للمهام الروتينية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الاتساق الذاتي مثل أخذ عينات "best-of-N"؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'مشابه لكن ليس متطابقاً. Best-of-N يُولّد N إجابة ويختار الأفضل (في أغلب الأحيان بمقيّم جودة). الاتساق الذاتي يُولّد N مسار استدلال ويختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة. الاتساق الذاتي لا يحتاج مقيّم جودة؛ يستخدم الاتفاق كإشارة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن استخدام الاتساق الذاتي مع برومبت سلسلة الأفكار؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — هذا المزيج الأصلي والأكثر فعالية. كل عينة من N عيناتك تستخدم استدلال سلسلة الأفكار، مُنتِجةً مسار استدلال كامل بالإضافة إلى إجابة نهائية. ثم تصوّت على الإجابات النهائية من جميع مسارات N. قد تختلف مسارات الاستدلال، لكن إذا توصّل أغلبها إلى الاستنتاج نفسه، فذلك الاستنتاج متين.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف يرتبط PromptQuorum بالاتساق الذاتي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum يُطبّق مبدأ التوافق نفسه عبر نماذج مختلفة بدلاً من داخل نموذج واحد. بدلاً من سؤال النموذج نفسه 10 مرات، تسأل 5 نماذج مختلفة مرة واحدة لكل منها وتقارن إجاباتها. حيث تتوافق، الثقة عالية. حيث تختلف، الادعاء يحتاج تحقق. هذا يكشف الانحيازات الخاصة بالنموذج التي لا يستطيع الاتساق الذاتي لنموذج واحد اكتشافها.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل هو مثل best-of-N؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'مشابه لكن ليس متطابقاً. Best-of-N يختار الأفضل جودةً. الاتساق الذاتي يختار الإجابة الأكثر شيوعاً — التصويت على الاستنتاج لا على الجودة.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1234,6 +1462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Quantas amostras preciso para self-consistency?', a: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. O artigo original mostrou precisão melhorando rapidamente de 1 para 5 amostras, depois retornos decrescentes além de 20. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' },
             { q: 'Qual temperatura devo usar para self-consistency?', a: 'Defina temperatura em 0,7–1,0. A técnica requer caminhos de raciocínio diversos — se temperatura for 0 (determinístico), cada amostra produz a saída idêntica e a votação não tem sentido.' },
             { q: 'Como o PromptQuorum se relaciona com self-consistency?', a: 'PromptQuorum aplica o mesmo princípio de consenso entre diferentes modelos em vez de dentro de um. Em vez de perguntar ao mesmo modelo 10 vezes, você pergunta a 5 modelos diferentes uma vez cada e compara suas respostas. Onde concordam, a confiança é alta. Isso captura vieses específicos do modelo que o self-consistency de um único modelo não consegue detectar.' },
+            { q: 'Quantas amostras preciso?', a: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' },
           ],
         },
       },
@@ -1242,9 +1471,46 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'O que é self-consistency prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Self-consistency prompting é uma técnica onde você gera múltiplas respostas independentes para a mesma pergunta e seleciona a que aparece com mais frequência. Em vez de confiar em uma resposta de IA, você confia no consenso de muitas.' } },
-          { '@type': 'Question', name: 'Quantas amostras preciso?', acceptedAnswer: { '@type': 'Answer', text: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' } },
-          { '@type': 'Question', name: 'Qual temperatura devo usar?', acceptedAnswer: { '@type': 'Answer', text: 'Defina temperatura em 0,7–1,0. A técnica requer caminhos de raciocínio diversos — se temperatura for 0, cada amostra produz saída idêntica e a votação não tem sentido.' } },
+          {
+            '@type': 'Question',
+            'name': 'O que é self-consistency prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Self-consistency prompting é uma técnica onde você gera múltiplas respostas independentes para a mesma pergunta — cada uma com seu próprio caminho de raciocínio — e depois seleciona a resposta que aparece com mais frequência. Introduzida por Wang et al. (2023) e melhora significativamente a precisão em matemática, lógica e tarefas de raciocínio de múltiplos passos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quantas amostras preciso para self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. O artigo original mostrou precisão melhorando rapidamente de 1 para 5 amostras, depois retornos decrescentes além de 20. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual temperatura devo usar para self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Defina temperatura em 0,7–1,0. A técnica requer caminhos de raciocínio diversos — se temperatura for 0 (determinístico), cada amostra produz a saída idêntica e a votação não tem sentido.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como o PromptQuorum se relaciona com self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum aplica o mesmo princípio de consenso entre diferentes modelos em vez de dentro de um. Em vez de perguntar ao mesmo modelo 10 vezes, você pergunta a 5 modelos diferentes uma vez cada e compara suas respostas. Onde concordam, a confiança é alta. Isso captura vieses específicos do modelo que o self-consistency de um único modelo não consegue detectar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quantas amostras preciso?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1493,14 +1759,70 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'fr',
         mainEntity: [
-          { '@type': 'Question', name: 'Qu\'est-ce que le Self-Consistency Prompting ?', acceptedAnswer: { '@type': 'Answer', text: 'Le Self-Consistency Prompting est une technique où vous générez plusieurs réponses indépendantes à la même question — chacune avec son propre chemin de raisonnement — puis sélectionnez la réponse qui apparaît le plus fréquemment. Au lieu de faire confiance à une réponse IA, vous vous appuyez sur le consensus de plusieurs. Il a été introduit en 2023 par Wang et al. et améliore significativement la précision sur les tâches mathématiques, logiques et de raisonnement multi-étapes.' } },
-          { '@type': 'Question', name: 'Combien d\'échantillons ai-je besoin pour Self-Consistency ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour la plupart des tâches, 5–10 échantillons offrent le meilleur rapport qualité-coût. Le papier original a montré que la précision s\'améliore rapidement de 1 à 5 échantillons, puis des rendements décroissants au-delà de 20. Le passage de 20 à 40 échantillons n\'a ajouté que 2 points de pourcentage sur GSM8K. Commencez par 5 ; augmentez à 10–20 uniquement pour les décisions à enjeux élevés.' } },
-          { '@type': 'Question', name: 'Self-Consistency fonctionne-t-il sur les tâches simples ?', acceptedAnswer: { '@type': 'Answer', text: 'Pas vraiment. Pour les recherches factuelles, la classification simple ou la production de texte court, une seule réponse est presque toujours suffisante et beaucoup moins chère. Self-Consistency offre de la valeur uniquement sur les tâches où la précision d\'un passage unique est observablement inférieure à ~90% — généralement math, énigmes logiques, analyse multi-étapes et raisonnement complexe.' } },
-          { '@type': 'Question', name: 'Quelle température dois-je utiliser pour Self-Consistency ?', acceptedAnswer: { '@type': 'Answer', text: 'Définissez la température à 0.7–1.0. La technique exige des chemins de raisonnement distincts — si la température est 0 (déterministe), chaque échantillon produit le résultat identique et le vote est inutile. Une température plus élevée crée la variation qui rend le vote majoritaire informatif.' } },
-          { '@type': 'Question', name: 'Combien coûte Self-Consistency en plus ?', acceptedAnswer: { '@type': 'Answer', text: 'Environ 5–20× plus de tokens par tâche, car vous générez 5–20 réponses complètes au lieu d\'une. Pour une réponse qui coûte $0.01, Self-Consistency à 10 échantillons coûte $0.10. Ceci est justifié pour les décisions critiques (analyse financière, raisonnement médical, interprétation légale), mais gaspillé pour les tâches routinières.' } },
-          { '@type': 'Question', name: 'Self-Consistency est-il le même que le "Best-of-N" Sampling ?', acceptedAnswer: { '@type': 'Answer', text: 'Similaire, mais pas identique. Best-of-N génère N réponses et sélectionne la meilleure (souvent avec un scorer de qualité). Self-Consistency génère N chemins de raisonnement et sélectionne la RÉPONSE LA PLUS FRÉQUENTE — le vote porte sur la conclusion, pas sur la qualité. Self-Consistency ne nécessite pas de scorer de qualité ; il utilise l\'accord comme signal.' } },
-          { '@type': 'Question', name: 'Puis-je utiliser Self-Consistency avec Chaîne de Pensée ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — c\'est la combinaison originale et la plus efficace. Chacun de vos N échantillons utilise le raisonnement Chaîne de Pensée, produisant une trace de raisonnement complète plus une réponse finale. Vous votez ensuite sur les réponses finales sur toutes les N traces. Les chemins de raisonnement peuvent différer, mais si la plupart mènent à la même conclusion, cette conclusion est robuste.' } },
-          { '@type': 'Question', name: 'Comment PromptQuorum relate-t-il à Self-Consistency ?', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum applique le même principe de consensus sur différents modèles au lieu d\'au sein d\'un modèle. Au lieu de demander au même modèle 10 fois, vous demandez à 5 modèles différents une fois chacun et comparez leurs réponses. Quand ils concordent, la confiance est élevée. Quand ils divergent, l\'affirmation a besoin de vérification. Ceci capture les biais modèle-spécifiques que Self-Consistency à modèle unique ne peut pas détecter.' } },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le Self-Consistency Prompting ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le Self-Consistency Prompting est une technique où vous générez plusieurs réponses indépendantes à la même question — chacune avec son propre chemin de raisonnement — puis sélectionnez la réponse qui apparaît le plus fréquemment. Au lieu de faire confiance à une réponse IA, vous vous appuyez sur le consensus de plusieurs. Il a été introduit en 2023 par Wang et al. et améliore significativement la précision sur les tâches mathématiques, logiques et de raisonnement multi-étapes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien d\'échantillons ai-je besoin pour Self-Consistency ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour la plupart des tâches, 5–10 échantillons offrent le meilleur rapport qualité-coût. Le papier original a montré que la précision s\'améliore rapidement de 1 à 5 échantillons, puis des rendements décroissants au-delà de 20. Le passage de 20 à 40 échantillons n\'a ajouté que 2 points de pourcentage sur GSM8K. Commencez par 5 ; augmentez à 10–20 uniquement pour les décisions à enjeux élevés.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Self-Consistency fonctionne-t-il sur les tâches simples ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pas vraiment. Pour les recherches factuelles, la classification simple ou la production de texte court, une seule réponse est presque toujours suffisante et beaucoup moins chère. Self-Consistency offre de la valeur uniquement sur les tâches où la précision d\'un passage unique est observablement inférieure à ~90% — généralement math, énigmes logiques, analyse multi-étapes et raisonnement complexe.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle température dois-je utiliser pour Self-Consistency ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Définissez la température à 0.7–1.0. La technique exige des chemins de raisonnement distincts — si la température est 0 (déterministe), chaque échantillon produit le résultat identique et le vote est inutile. Une température plus élevée crée la variation qui rend le vote majoritaire informatif.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien coûte Self-Consistency en plus ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Environ 5–20× plus de tokens par tâche, car vous générez 5–20 réponses complètes au lieu d\'une. Pour une réponse qui coûte $0.01, Self-Consistency à 10 échantillons coûte $0.10. Ceci est justifié pour les décisions critiques (analyse financière, raisonnement médical, interprétation légale), mais gaspillé pour les tâches routinières.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Self-Consistency est-elle la même chose que l\'échantillonnage "Best-of-N" ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Similaire mais pas identique. Best-of-N génère N réponses et sélectionne la meilleure (souvent par un évaluateur de qualité). Self-Consistency génère N chemins de raisonnement et sélectionne la RÉPONSE la plus commune — le vote porte sur la conclusion, non sur la qualité. Self-Consistency n\'a pas besoin d\'évaluateur de qualité ; il utilise l\'accord comme signal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser Self-Consistency avec le Chain-of-Thought Prompting ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui — c\'est la combinaison originale et la plus efficace. Chacun de vos N échantillons utilise le raisonnement Chain-of-Thought, produisant une trace de raisonnement complète plus une réponse finale. Vous votez alors sur les réponses finales sur toutes les N traces. Les chemins de raisonnement peuvent différer, mais si la plupart aboutissent à la même conclusion, cette conclusion est robuste.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment PromptQuorum se rapporte-t-il à Self-Consistency ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum applique le même principe de consensus sur différents modèles au lieu d\'au sein d\'un modèle. Au lieu de demander au même modèle 10 fois, vous posez la question à 5 modèles différents une fois chacun et comparez leurs réponses. Là où ils s\'accordent, la confiance est élevée. Là où ils divergent, l\'affirmation nécessite vérification. Cela capture les biais spécifiques au modèle que Self-Consistency d\'un seul modèle ne peut pas détecter.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1845,6 +2167,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'セルフコンシステンシーは「ベストオブN」サンプリングと同じですか？', a: '同様ですが同一ではありません。ベストオブNはN個の応答を生成し、最高のものを選択します（多くの場合、品質スコアラーによる）。セルフコンシステンシーはN個の推論パスを生成し、最も一般的な答えを選択します——投票は質の上ではなく結論の上です。セルフコンシステンシーは品質スコアラーを必要としません。合意をシグナルとして使用します。' },
             { q: 'セルフコンシステンシーをチェーンオブソートプロンプティングで使用できますか？', a: 'はい——これが元の最も効果的な組み合わせです。N個のサンプルのそれぞれが推論の連鎖を使用し、完全な推論トレースと最終的な答えを生成します。その後、すべてのNトレース全体で最終的な答えについて投票します。推論パスは異なる可能性がありますが、ほとんどが同じ結論に達する場合、その結論は堅牢です。' },
             { q: 'PromptQuorumはセルフコンシステンシーにどのように関連していますか？', a: 'PromptQuorumは、1つのモデル内ではなく異なるモデル全体に同じコンセンサス原則を適用します。同じモデルに10回質問する代わりに、5つの異なるモデルに1回ずつ質問し、それらの答えを比較します。同意するところ、信頼度は高いです。意見が異なるところ、請求は検証が必要です。これにより、単一モデルのセルフコンシステンシーが検出できないモデル固有のバイアスをキャッチします。' },
+            { q: '何パス生成すればいいですか？', a: '推奨は5～10パス。パス数が増えるほど精度は向上しますが、8パス以上では改善が頭打ち傾向。20パスを超えるとコスト増加に対して精度向上が望めません。最初は5パスで試し、必要に応じて8に拡張することをお勧めします。' },
+            { q: 'トークンコストはどのくらい増えますか？', a: 'セルフコンシステンシーは複数パス実行するため、単一推論の5～10倍のトークンを消費します。例えば、Claude Opus 5で1回5,000トークン生成なら、8パスで40,000トークン。高精度が必須な場合のみ使用をお勧めします。' },
+            { q: 'どのモデルがセルフコンシステンシーに向いていますか？', a: '2026年現在、Claude Opus 5、GPT-5.6、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。' },
+            { q: 'セルフコンシステンシーが向いていない場面は？', a: '創作・物語生成（「正解」がない）、テキスト分類（感情判定など不確定）、機械翻訳（複数の正解が並立）、開放的質問（視点多様化が意味をなさない）などには不向き。確定的な答えが存在する問題に限定すれば有効です。' },
+            { q: '複数パスの答えが同票になったらどうしますか？', a: '同票の場合の処理を事前に決定することが重要。「最初の答えを選ぶ」「全パスを返す」「ユーザーに複数案を提示」など、目的に応じて方針を決めておきましょう。確信度が低いため、必ず注記をつけることをお勧めします。' },
           ],
         },
       },
@@ -1856,68 +2183,108 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'セルフコンシステンシーとは何ですか？',
-            acceptedAnswer: {
+            'name': 'セルフコンシステンシープロンプティングとは？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'セルフコンシステンシーは、同じ質問に対してLLMに複数の異なる推論経路を生成させ、最終答えを投票で決定するプロンプト技法です。複数パスを実行することで、単一パスの計算ミスや論理飛躍を回避し、精度を向上させます。'
-            }
+              'text': 'セルフコンシステンシープロンプティングは、同じ質問に複数の独立した回答を生成し——各々が独自の推論パスを持つ——その後、最も頻繁に現れる答えを選択する技術です。1つのAI回答を信頼する代わりに、多くの回答の合意に依存します。2023年にWang et al.によって導入され、数学、論理、および多段階推論タスクの精度を大幅に向上させます。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'セルフコンシステンシーはどのくらい精度が向上しますか？',
-            acceptedAnswer: {
+            'name': 'セルフコンシステンシーには何個のサンプルが必要ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'GSM8K数学ベンチマークでは、CoT（単一パス）56%に対してセルフコンシステンシー（8パス投票）は74%を達成。+18ポイントの向上です。他の論理問題でも15～25ポイントの向上が報告されています。ただし、問題の難度・モデルの性能によって変動します。'
-            }
+              'text': 'ほとんどのタスクでは、5～10サンプルが最良の精度対コスト比を提供します。元の論文は1から5サンプルまで精度が急速に向上し、20を超えると収穫逓減を示していることを示しました。20から40サンプルへの移行はGSM8Kで2パーセントポイントのみを追加しました。5から始めます。高リスク決定でのみ10～20に増加させます。',
+            },
           },
           {
             '@type': 'Question',
-            name: '何パス生成すればいいですか？',
-            acceptedAnswer: {
+            'name': 'セルフコンシステンシーは単純なタスクで機能しますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '推奨は5～10パス。パス数が増えるほど精度は向上しますが、8パス以上では改善が頭打ち傾向。20パスを超えるとコスト増加に対して精度向上が望めません。最初は5パスで試し、必要に応じて8に拡張することをお勧めします。'
-            }
+              'text': '大きな意味では機能しません。事実検索、単純な分類、または短編の執筆については、単一の回答はほぼ常に十分で、はるかに安価です。セルフコンシステンシーはモデルの単一パス精度が～90%未満のタスク——通常は数学、ロジックパズル、多段階分析、複雑な推論——でのみ値を追加します。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'トークンコストはどのくらい増えますか？',
-            acceptedAnswer: {
+            'name': 'セルフコンシステンシーにはどの温度を使用すればよいですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'セルフコンシステンシーは複数パス実行するため、単一推論の5～10倍のトークンを消費します。例えば、Claude Opus 5で1回5,000トークン生成なら、8パスで40,000トークン。高精度が必須な場合のみ使用をお勧めします。'
-            }
+              'text': '温度を0.7～1.0に設定します。この技術は異なる推論パスを必要とします——温度が0（決定論的）の場合、各サンプルは同じ出力を生成し、投票は無意味になります。より高い温度は多数決投票を有益にする変動を生成します。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'どのモデルがセルフコンシステンシーに向いていますか？',
-            acceptedAnswer: {
+            'name': 'セルフコンシステンシーはどのくらい多くのコストがかかりますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '2026年現在、Claude Opus 5、GPT-5.6、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。'
-            }
+              'text': '1つの代わりに5～20の完全な応答を生成するため、タスクあたり大体5～20倍のトークンです。$0.01の費用がかかる応答の場合、10サンプルでのセルフコンシステンシーは$0.10かかります。これは重大な決定（財務分析、医学的推論、法的解釈）に対しては正当化されますが、日常的なタスクに対しては無駄です。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'セルフコンシステンシーが向いていない場面は？',
-            acceptedAnswer: {
+            'name': 'セルフコンシステンシーは「ベストオブN」サンプリングと同じですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '創作・物語生成（「正解」がない）、テキスト分類（感情判定など不確定）、機械翻訳（複数の正解が並立）、開放的質問（視点多様化が意味をなさない）などには不向き。確定的な答えが存在する問題に限定すれば有効です。'
-            }
+              'text': '同様ですが同一ではありません。ベストオブNはN個の応答を生成し、最高のものを選択します（多くの場合、品質スコアラーによる）。セルフコンシステンシーはN個の推論パスを生成し、最も一般的な答えを選択します——投票は質の上ではなく結論の上です。セルフコンシステンシーは品質スコアラーを必要としません。合意をシグナルとして使用します。',
+            },
           },
           {
             '@type': 'Question',
-            name: '複数パスの答えが同票になったらどうしますか？',
-            acceptedAnswer: {
+            'name': 'セルフコンシステンシーをチェーンオブソートプロンプティングで使用できますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '同票の場合の処理を事前に決定することが重要。「最初の答えを選ぶ」「全パスを返す」「ユーザーに複数案を提示」など、目的に応じて方針を決めておきましょう。確信度が低いため、必ず注記をつけることをお勧めします。'
-            }
+              'text': 'はい——これが元の最も効果的な組み合わせです。N個のサンプルのそれぞれが推論の連鎖を使用し、完全な推論トレースと最終的な答えを生成します。その後、すべてのNトレース全体で最終的な答えについて投票します。推論パスは異なる可能性がありますが、ほとんどが同じ結論に達する場合、その結論は堅牢です。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'PromptQuorumではセルフコンシステンシーをどう使いますか？',
-            acceptedAnswer: {
+            'name': 'PromptQuorumはセルフコンシステンシーにどのように関連していますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorumでは複数パスの自動生成・投票が可能。モデル選択、Temperature設定、パス数指定後、同じプロンプトを複数回実行して投票メカニズムで最終答えを決定。複数モデル間で比較実験も容易です。'
-            }
-          }
+              'text': 'PromptQuorumは、1つのモデル内ではなく異なるモデル全体に同じコンセンサス原則を適用します。同じモデルに10回質問する代わりに、5つの異なるモデルに1回ずつ質問し、それらの答えを比較します。同意するところ、信頼度は高いです。意見が異なるところ、請求は検証が必要です。これにより、単一モデルのセルフコンシステンシーが検出できないモデル固有のバイアスをキャッチします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '何パス生成すればいいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '推奨は5～10パス。パス数が増えるほど精度は向上しますが、8パス以上では改善が頭打ち傾向。20パスを超えるとコスト増加に対して精度向上が望めません。最初は5パスで試し、必要に応じて8に拡張することをお勧めします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'トークンコストはどのくらい増えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'セルフコンシステンシーは複数パス実行するため、単一推論の5～10倍のトークンを消費します。例えば、Claude Opus 5で1回5,000トークン生成なら、8パスで40,000トークン。高精度が必須な場合のみ使用をお勧めします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'どのモデルがセルフコンシステンシーに向いていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年現在、Claude Opus 5、GPT-5.6、Gemini 3.1 Pro が推奨。これらは高い推論能力を持ち、複数パスの多様性が得やすい。オープンソースモデル（Llama、Qwen）でも可能ですが、閉鎖的なモデルほど効果が顕著です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'セルフコンシステンシーが向いていない場面は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '創作・物語生成（「正解」がない）、テキスト分類（感情判定など不確定）、機械翻訳（複数の正解が並立）、開放的質問（視点多様化が意味をなさない）などには不向き。確定的な答えが存在する問題に限定すれば有効です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '複数パスの答えが同票になったらどうしますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '同票の場合の処理を事前に決定することが重要。「最初の答えを選ぶ」「全パスを返す」「ユーザーに複数案を提示」など、目的に応じて方針を決めておきましょう。確信度が低いため、必ず注記をつけることをお勧めします。',
+            },
+          },
         ]
       },
 
@@ -2325,6 +2692,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '自洽一致性与"最佳N"采样相同吗？', a: '相似但不相同。最佳N生成N个响应并选择最好的（通常由质量评分器）。自洽一致性生成N个推理路径并选择最常见的答案——投票是关于结论而不是质量。自洽一致性不需要质量评分器；它使用一致性作为信号。' },
             { q: '我可以将自洽一致性与链式思维提示结合使用吗？', a: '可以——这是原始的、最有效的组合。您的每个N个样本都使用链式思维推理，产生完整的推理踪迹加上最终答案。然后您对所有N条踪迹的最终答案进行投票。推理路径可能不同，但如果大多数达到相同的结论，那么该结论是稳健的。' },
             { q: 'PromptQuorum与自洽一致性的关系如何？', a: 'PromptQuorum在不同模型之间而不是在一个模型内应用相同的共识原则。您不是让同一模型回答10次，而是让5个不同的模型各回答一次并比较答案。他们同意的地方，信心很高。他们不同意的地方，需要验证。这捕捉了单模型自洽一致性无法检测的模型特定偏见。' },
+            { q: '自洽一致性是什么？', a: '自洽一致性（Self-Consistency）是一种提示工程技术，对同一个问题让LLM生成多条（通常5-20条）独立的推理链，然后用投票选出出现最频繁的答案。与单次推理相比，这种方法大大提升了复杂问题的准确率。' },
+            { q: '自洽一致性能提升多少精度？', a: '根据论文数据，在GSM8K数学基准上，Chain-of-Thought单次得56%，自洽一致性（8采样）得74%，提升18个百分点。其他基准如SVAMP也有7-10个百分点的提升。但提升幅度取决于问题复杂度和模型能力。' },
+            { q: '需要多少次采样？', a: '建议5-10次。根据研究，1→5次采样收益最大（+10点）。5→8次再加2-3点。超过16次后精度改善停滞。对大多数应用，8次采样是成本和精度的最优平衡。' },
+            { q: 'Token成本会增加多少？', a: '自洽一致性会消耗5-20倍的token（取决于采样数）。8次采样就是8倍成本。虽然贵，但对金融风控、医疗诊断等高价值决策，精度提升带来的收益远大于token成本。' },
+            { q: '哪些模型最适合？', a: '2026年，Claude Opus 5、GPT-5.6、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。' },
+            { q: '自洽一致性不适用的场景是？', a: '创意写作（无"正确答案"）、文本分类（概率型判断）、开放式问答（多观点都有效）这些不适合。自洽一致性只对有确定答案的问题有效。' },
+            { q: '答案投票时怎样处理平局？', a: '需要事先制定规则。可选方案：(1)简单多数（票数最多）；(2)绝对多数（>50%）；(3)低于某个阈值就标记为"不确定"。一定要记录投票置信度，低置信度的决策需要人工复核。' },
           ],
         },
       },
@@ -2336,68 +2710,124 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '自洽一致性是什么？',
-            acceptedAnswer: {
+            'name': '什么是自洽一致性提示？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '自洽一致性（Self-Consistency）是一种提示工程技术，对同一个问题让LLM生成多条（通常5-20条）独立的推理链，然后用投票选出出现最频繁的答案。与单次推理相比，这种方法大大提升了复杂问题的准确率。'
-            }
+              'text': '自洽一致性提示是一种技术，其中您为同一问题生成多个独立答案——每个都有自己的推理路径——然后选择出现最频繁的答案。您不是相信单一AI回应，而是相信许多人的共识。它由Wang et al.在2023年引入，并显著改善了数学、逻辑和多步推理任务的准确性。',
+            },
           },
           {
             '@type': 'Question',
-            name: '自洽一致性能提升多少精度？',
-            acceptedAnswer: {
+            'name': '自洽一致性需要多少个样本？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '根据论文数据，在GSM8K数学基准上，Chain-of-Thought单次得56%，自洽一致性（8采样）得74%，提升18个百分点。其他基准如SVAMP也有7-10个百分点的提升。但提升幅度取决于问题复杂度和模型能力。'
-            }
+              'text': '对于大多数任务，5-10个样本提供最佳的准确性与成本比率。原始论文显示精度从1到5个样本迅速改善，然后在20个以上出现收益递减。从20个到40个样本在GSM8K上只增加了2个百分点。从5个开始；仅在高风险决策中增加到10-20个。',
+            },
           },
           {
             '@type': 'Question',
-            name: '需要多少次采样？',
-            acceptedAnswer: {
+            'name': '自洽一致性在简单任务上有效吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '建议5-10次。根据研究，1→5次采样收益最大（+10点）。5→8次再加2-3点。超过16次后精度改善停滞。对大多数应用，8次采样是成本和精度的最优平衡。'
-            }
+              'text': '没有显著效果。对于事实查询、简单分类或短文本编写，单一答案几乎总是足够且便宜得多。自洽一致性只对模型单次精度低于~90%的任务有价值——通常是数学、逻辑谜题、多步分析和复杂推理。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Token成本会增加多少？',
-            acceptedAnswer: {
+            'name': '自洽一致性应该使用多少温度？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '自洽一致性会消耗5-20倍的token（取决于采样数）。8次采样就是8倍成本。虽然贵，但对金融风控、医疗诊断等高价值决策，精度提升带来的收益远大于token成本。'
-            }
+              'text': '将温度设置为0.7-1.0。该技术需要多样化的推理路径——如果温度为0（确定性），每个样本都会产生相同的输出，投票就没有意义了。更高的温度会产生使多数投票更有信息量的变异。',
+            },
           },
           {
             '@type': 'Question',
-            name: '哪些模型最适合？',
-            acceptedAnswer: {
+            'name': '自洽一致性成本增加多少？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '2026年，Claude Opus 5、GPT-5.6、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。'
-            }
+              'text': '大约每个任务多耗费5-20倍token，因为您生成5-20个完整的响应而不是一个。对于成本0.01美元的响应，10个样本的自洽一致性成本为0.10美元。这对关键决策（财务分析、医学推理、法律解释）是合理的，但对日常任务浪费。',
+            },
           },
           {
             '@type': 'Question',
-            name: '自洽一致性不适用的场景是？',
-            acceptedAnswer: {
+            'name': '自洽一致性与"最佳N"采样相同吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '创意写作（无"正确答案"）、文本分类（概率型判断）、开放式问答（多观点都有效）这些不适合。自洽一致性只对有确定答案的问题有效。'
-            }
+              'text': '相似但不相同。最佳N生成N个响应并选择最好的（通常由质量评分器）。自洽一致性生成N个推理路径并选择最常见的答案——投票是关于结论而不是质量。自洽一致性不需要质量评分器；它使用一致性作为信号。',
+            },
           },
           {
             '@type': 'Question',
-            name: '答案投票时怎样处理平局？',
-            acceptedAnswer: {
+            'name': '我可以将自洽一致性与链式思维提示结合使用吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '需要事先制定规则。可选方案：(1)简单多数（票数最多）；(2)绝对多数（>50%）；(3)低于某个阈值就标记为"不确定"。一定要记录投票置信度，低置信度的决策需要人工复核。'
-            }
+              'text': '可以——这是原始的、最有效的组合。您的每个N个样本都使用链式思维推理，产生完整的推理踪迹加上最终答案。然后您对所有N条踪迹的最终答案进行投票。推理路径可能不同，但如果大多数达到相同的结论，那么该结论是稳健的。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'PromptQuorum如何支持自洽一致性？',
-            acceptedAnswer: {
+            'name': 'PromptQuorum与自洽一致性的关系如何？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorum内置多采样和自动投票功能。选择模型、设置温度、指定采样数后，系统自动运行多次、统计答案频率、给出投票结果和置信度。还支持跨模型对比，看不同模型的一致性。'
-            }
-          }
+              'text': 'PromptQuorum在不同模型之间而不是在一个模型内应用相同的共识原则。您不是让同一模型回答10次，而是让5个不同的模型各回答一次并比较答案。他们同意的地方，信心很高。他们不同意的地方，需要验证。这捕捉了单模型自洽一致性无法检测的模型特定偏见。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '自洽一致性是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '自洽一致性（Self-Consistency）是一种提示工程技术，对同一个问题让LLM生成多条（通常5-20条）独立的推理链，然后用投票选出出现最频繁的答案。与单次推理相比，这种方法大大提升了复杂问题的准确率。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '自洽一致性能提升多少精度？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '根据论文数据，在GSM8K数学基准上，Chain-of-Thought单次得56%，自洽一致性（8采样）得74%，提升18个百分点。其他基准如SVAMP也有7-10个百分点的提升。但提升幅度取决于问题复杂度和模型能力。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '需要多少次采样？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '建议5-10次。根据研究，1→5次采样收益最大（+10点）。5→8次再加2-3点。超过16次后精度改善停滞。对大多数应用，8次采样是成本和精度的最优平衡。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Token成本会增加多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '自洽一致性会消耗5-20倍的token（取决于采样数）。8次采样就是8倍成本。虽然贵，但对金融风控、医疗诊断等高价值决策，精度提升带来的收益远大于token成本。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪些模型最适合？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年，Claude Opus 5、GPT-5.6、Gemini 3.1 Pro三款模型推理能力最强，采样多样性也最好。开源模型（Llama、Qwen）也可以用，但效果不如闭源前沿模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '自洽一致性不适用的场景是？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '创意写作（无"正确答案"）、文本分类（概率型判断）、开放式问答（多观点都有效）这些不适合。自洽一致性只对有确定答案的问题有效。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '答案投票时怎样处理平局？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '需要事先制定规则。可选方案：(1)简单多数（票数最多）；(2)绝对多数（>50%）；(3)低于某个阈值就标记为"不确定"。一定要记录投票置信度，低置信度的决策需要人工复核。',
+            },
+          },
         ]
       },
 
