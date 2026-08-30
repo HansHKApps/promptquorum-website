@@ -70,90 +70,82 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Do LLMs understand text the way humans do?',
-            acceptedAnswer: {
+            'name': 'Do LLMs understand text the way humans do?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'No. LLMs do not understand text in the human sense. They predict the statistically most probable next token given the tokens before it, based on patterns learned during training. There is no comprehension, intent, or awareness — only weighted probability distributions over a vocabulary of roughly 50,000–100,000 tokens.',
+              'text': 'No. LLMs do not understand text in the human sense. They predict the statistically most probable next token given the tokens before it, based on patterns learned during training. There is no comprehension, intent, or awareness — only weighted probability distributions over a vocabulary of roughly 50,000–100,000 tokens.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What is a token in an LLM?',
-            acceptedAnswer: {
+            'name': 'What is a token in an LLM?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.6 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.',
+              'text': 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.6 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What does temperature do in an LLM?',
-            acceptedAnswer: {
+            'name': 'What does temperature do in an LLM?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Temperature controls how randomly the model samples from its probability distribution. Temperature 0 always picks the highest-probability next token (deterministic, repetitive). Temperature 1.0 samples proportionally from the distribution (creative, variable). Temperature above 1.5 flattens the distribution and increases hallucination risk. Most production use cases work best between 0.1 and 0.7.',
+              'text': 'Temperature controls how randomly the model samples from its probability distribution. Temperature 0 always picks the highest-probability next token (deterministic). Temperature 1.0 samples proportionally from the distribution. Temperature above 1.5 flattens the distribution and increases hallucination risk. Most production use cases work best between 0.1 and 0.7.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Why does the position of information in a prompt matter?',
-            acceptedAnswer: {
+            'name': 'Why does the position of information in a prompt matter?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Due to how transformer attention works, LLMs tend to weight tokens near the beginning and end of the context window more heavily than tokens in the middle — a pattern called the "lost in the middle" effect, documented in research from Stanford. For prompts longer than ~2,000 tokens, place the most critical instruction at the start (system prompt) and repeat key constraints at the end of the user prompt.',
+              'text': 'Transformer attention tends to weight tokens near the beginning and end of the context window more heavily than tokens in the middle — the "lost in the middle" effect documented by Liu et al. (2023). For prompts longer than ~2,000 tokens, place the most critical instruction at the start and repeat key constraints at the end.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What is RLHF and how does it affect model outputs?',
-            acceptedAnswer: {
+            'name': 'What is RLHF and how does it affect model outputs?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Reinforcement Learning from Human Feedback (RLHF) is the post-training step where human raters score model outputs, and a reward model is trained on those ratings. The base LLM is then fine-tuned to maximize reward. RLHF shapes refusals, tone, helpfulness, and safety behavior — it is why ChatGPT and Claude decline certain requests and why models from different labs behave differently on the same prompt even when they have similar benchmark scores.',
+              'text': 'Reinforcement Learning from Human Feedback (RLHF) is a post-training step where human raters score model outputs and a reward model is trained on those ratings. The base LLM is fine-tuned to maximize reward. RLHF shapes refusals, tone, helpfulness, and safety behavior — it is why models from different labs behave differently on the same prompt even with similar benchmark scores.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What is the difference between a context window and memory?',
-            acceptedAnswer: {
+            'name': 'What is the difference between a context window and memory?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'The context window is all the text the model can see during a single inference call — including the system prompt, conversation history, and the current user message. It is not persistent memory: when the conversation ends, the model retains nothing. GPT-5.6 has a 128,000-token context window (~96,000 words). Claude Opus 5 supports 200,000 tokens (~150,000 words). Gemini 3.1 Pro supports 2,000,000 tokens (~1,500,000 words).',
+              'text': 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-5.6: 128,000 tokens. Claude Opus 5: 200,000 tokens. Gemini 3.1 Pro: 2,000,000 tokens.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What is the "lost in the middle" effect and how do I avoid it?',
-            acceptedAnswer: {
+            'name': 'What is the "lost in the middle" effect and how do I avoid it?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'The "lost in the middle" effect, documented by Liu et al. (2023) at Stanford, shows that transformer attention systematically underweights information in the middle of long contexts — tokens at the beginning and end receive more attention weight. To avoid it: place critical instructions and constraints in the system prompt (beginning), keep important context in the first 10-15% of your input, and repeat the most important constraint at the end of the user message. For documents longer than ~50,000 tokens, use retrieval-augmented generation (RAG) instead of stuffing the full context.',
+              'text': 'The "lost in the middle" effect, documented by Liu et al. (2023) at Stanford, shows that transformer attention systematically underweights information in the middle of long contexts — tokens at the beginning and end receive more attention weight. To avoid it: place critical instructions in the system prompt (beginning), keep important context in the first 10-15% of input, and repeat the most important constraint at the end. For documents longer than ~50,000 tokens, use retrieval-augmented generation (RAG) instead of full-context stuffing.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How does RLHF differ from Constitutional AI?',
-            acceptedAnswer: {
+            'name': 'How does RLHF differ from Constitutional AI?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RLHF (Reinforcement Learning from Human Feedback) is a post-training technique where human raters score model outputs, a reward model is trained on those ratings, and the LLM is fine-tuned to maximize reward. Constitutional AI (used by Anthropic for Claude) extends RLHF by adding a set of written principles ("constitution") that guide the model\'s behavior. This reduces reliance on human feedback for every edge case — the constitution provides consistent guidance for refusals, tone, and values alignment without needing human raters for every scenario.',
+              'text': 'RLHF (Reinforcement Learning from Human Feedback) uses human raters to score outputs, trains a reward model, and fine-tunes the LLM to maximize reward. Constitutional AI (used by Anthropic for Claude) extends RLHF by adding a set of written principles ("constitution") that guide behavior without needing human feedback for every edge case. This reduces reliance on human raters while maintaining consistent alignment with values.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What is the difference between GPT-5.6, Claude, and Gemini architecturally?',
-            acceptedAnswer: {
+            'name': 'What is the difference between GPT-5.6, Claude, and Gemini architecturally?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'All three are transformer-based LLMs trained on massive text corpora, but they differ in scale, context window, and post-training approach. GPT-5.6 (OpenAI) has a 128,000-token context window. Claude Opus 5 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has the largest context window at 2,000,000 tokens. These differences affect cost, latency, and suitability for different tasks — GPT-5.6 excels at reasoning, Claude at long context and nuance, Gemini at ultra-long document processing.',
+              'text': 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-5.6 (OpenAI) has 128,000-token context and excels at reasoning. Claude Opus 5 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How many tokens is 1000 words?',
-            acceptedAnswer: {
+            'name': 'How many tokens is 1000 words?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'In English, 1,000 words ≈ 1,300–1,350 tokens using GPT-5.6 or Claude tokenizers. Roughly 1 token = 0.75 words. For Chinese or Japanese, use 1 token ≈ 0.5 words — so 1,000 Chinese/Japanese words ≈ 2,000 tokens. Token count directly affects API cost and context window consumption, so understanding the ratio is critical for budgeting.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'What is the difference between temperature and top-p?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Temperature sharpens or flattens the entire probability distribution — temperature 0 = deterministic, temperature 1.0 = standard, temperature 2.0 = very random. Top-p (nucleus sampling) restricts sampling to the smallest set of tokens whose cumulative probability reaches p — top-p 0.9 means "sample from the tokens that make up 90% of the probability mass." For most tasks, adjust top-p (0.8–0.95) rather than temperature; temperature is best reserved for creativity control.',
+              'text': 'In English, 1,000 words ≈ 1,300–1,350 tokens using GPT-5.6 or Claude tokenizers. Roughly 1 token = 0.75 words. For Chinese or Japanese, use 1 token ≈ 0.5 words — so 1,000 Chinese/Japanese words ≈ 2,000 tokens. Token count directly affects API cost and context window consumption, so understanding the ratio is critical for budgeting.',
             },
           },
         ],
@@ -411,42 +403,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            {
-              q: 'Do LLMs understand text the way humans do?',
-              a: 'No. LLMs do not understand text in the human sense. They predict the statistically most probable next token given the tokens before it, based on patterns learned during training. There is no comprehension, intent, or awareness — only weighted probability distributions over a vocabulary of roughly 50,000–100,000 tokens.',
-            },
-            {
-              q: 'What is a token in an LLM?',
-              a: 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.6 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.',
-            },
-            {
-              q: 'What does temperature do in an LLM?',
-              a: 'Temperature controls how randomly the model samples from its probability distribution. Temperature 0 always picks the highest-probability next token (deterministic). Temperature 1.0 samples proportionally from the distribution. Temperature above 1.5 flattens the distribution and increases hallucination risk. Most production use cases work best between 0.1 and 0.7.',
-            },
-            {
-              q: 'Why does the position of information in a prompt matter?',
-              a: 'Transformer attention tends to weight tokens near the beginning and end of the context window more heavily than tokens in the middle — the "lost in the middle" effect documented by Liu et al. (2023). For prompts longer than ~2,000 tokens, place the most critical instruction at the start and repeat key constraints at the end.',
-            },
-            {
-              q: 'What is RLHF and how does it affect model outputs?',
-              a: 'Reinforcement Learning from Human Feedback (RLHF) is a post-training step where human raters score model outputs and a reward model is trained on those ratings. The base LLM is fine-tuned to maximize reward. RLHF shapes refusals, tone, helpfulness, and safety behavior — it is why models from different labs behave differently on the same prompt even with similar benchmark scores.',
-            },
-            {
-              q: 'What is the difference between a context window and memory?',
-              a: 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-5.6: 128,000 tokens. Claude Opus 5: 200,000 tokens. Gemini 3.1 Pro: 2,000,000 tokens.',
-            },
-            {
-              q: 'What is the "lost in the middle" effect and how do I avoid it?',
-              a: 'The "lost in the middle" effect, documented by Liu et al. (2023) at Stanford, shows that transformer attention systematically underweights information in the middle of long contexts — tokens at the beginning and end receive more attention weight. To avoid it: place critical instructions in the system prompt (beginning), keep important context in the first 10-15% of input, and repeat the most important constraint at the end. For documents longer than ~50,000 tokens, use retrieval-augmented generation (RAG) instead of full-context stuffing.',
-            },
-            {
-              q: 'How does RLHF differ from Constitutional AI?',
-              a: 'RLHF (Reinforcement Learning from Human Feedback) uses human raters to score outputs, trains a reward model, and fine-tunes the LLM to maximize reward. Constitutional AI (used by Anthropic for Claude) extends RLHF by adding a set of written principles ("constitution") that guide behavior without needing human feedback for every edge case. This reduces reliance on human raters while maintaining consistent alignment with values.',
-            },
-            {
-              q: 'What is the difference between GPT-5.6, Claude, and Gemini architecturally?',
-              a: 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-5.6 (OpenAI) has 128,000-token context and excels at reasoning. Claude Opus 5 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.',
-            },
+            { q: 'Do LLMs understand text the way humans do?', a: 'No. LLMs do not understand text in the human sense. They predict the statistically most probable next token given the tokens before it, based on patterns learned during training. There is no comprehension, intent, or awareness — only weighted probability distributions over a vocabulary of roughly 50,000–100,000 tokens.' },
+            { q: 'What is a token in an LLM?', a: 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.6 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.' },
+            { q: 'What does temperature do in an LLM?', a: 'Temperature controls how randomly the model samples from its probability distribution. Temperature 0 always picks the highest-probability next token (deterministic). Temperature 1.0 samples proportionally from the distribution. Temperature above 1.5 flattens the distribution and increases hallucination risk. Most production use cases work best between 0.1 and 0.7.' },
+            { q: 'Why does the position of information in a prompt matter?', a: 'Transformer attention tends to weight tokens near the beginning and end of the context window more heavily than tokens in the middle — the "lost in the middle" effect documented by Liu et al. (2023). For prompts longer than ~2,000 tokens, place the most critical instruction at the start and repeat key constraints at the end.' },
+            { q: 'What is RLHF and how does it affect model outputs?', a: 'Reinforcement Learning from Human Feedback (RLHF) is a post-training step where human raters score model outputs and a reward model is trained on those ratings. The base LLM is fine-tuned to maximize reward. RLHF shapes refusals, tone, helpfulness, and safety behavior — it is why models from different labs behave differently on the same prompt even with similar benchmark scores.' },
+            { q: 'What is the difference between a context window and memory?', a: 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-5.6: 128,000 tokens. Claude Opus 5: 200,000 tokens. Gemini 3.1 Pro: 2,000,000 tokens.' },
+            { q: 'What is the "lost in the middle" effect and how do I avoid it?', a: 'The "lost in the middle" effect, documented by Liu et al. (2023) at Stanford, shows that transformer attention systematically underweights information in the middle of long contexts — tokens at the beginning and end receive more attention weight. To avoid it: place critical instructions in the system prompt (beginning), keep important context in the first 10-15% of input, and repeat the most important constraint at the end. For documents longer than ~50,000 tokens, use retrieval-augmented generation (RAG) instead of full-context stuffing.' },
+            { q: 'How does RLHF differ from Constitutional AI?', a: 'RLHF (Reinforcement Learning from Human Feedback) uses human raters to score outputs, trains a reward model, and fine-tunes the LLM to maximize reward. Constitutional AI (used by Anthropic for Claude) extends RLHF by adding a set of written principles ("constitution") that guide behavior without needing human feedback for every edge case. This reduces reliance on human raters while maintaining consistent alignment with values.' },
+            { q: 'What is the difference between GPT-5.6, Claude, and Gemini architecturally?', a: 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-5.6 (OpenAI) has 128,000-token context and excels at reasoning. Claude Opus 5 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.' },
+            { q: 'How many tokens is 1000 words?', a: 'In English, 1,000 words ≈ 1,300–1,350 tokens using GPT-5.6 or Claude tokenizers. Roughly 1 token = 0.75 words. For Chinese or Japanese, use 1 token ≈ 0.5 words — so 1,000 Chinese/Japanese words ≈ 2,000 tokens. Token count directly affects API cost and context window consumption, so understanding the ratio is critical for budgeting.' },
           ],
         },
 

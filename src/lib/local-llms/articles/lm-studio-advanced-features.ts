@@ -64,54 +64,108 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'What is the difference between LM Studio API and Ollama API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Both expose OpenAI-compatible endpoints. LM Studio API is on localhost:1234, Ollama on localhost:11434. Both work similarly. Choose whichever tool you prefer for chatting.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use the LM Studio API in production?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It works, but Ollama API is more mature. LM Studio API is in beta. For production, Ollama is the safer choice.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does lowering GPU allocation reduce VRAM requirements?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Lowering GPU allocation to 50% roughly halves VRAM usage, but inference is 2-5× slower because the model runs partially on CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'What is the impact of increasing the context window in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Longer context allows models to remember more conversation history, but increases VRAM usage and latency. A 2K context uses ~2× the VRAM of a 512-token context. Benchmark after each change.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Longer context allows models to remember more conversation history, but increases VRAM usage and latency. A 2K context uses ~2× the VRAM of a 512-token context. Benchmark after each change.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Should I use 100% GPU acceleration in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not always. Use 100% for maximum speed if only running LM Studio. Reduce to 50-75% if you need VRAM headroom for browsers, IDEs, or other GPU tasks. Measure inference speed at each level.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not always. Use 100% for maximum speed if only running LM Studio. Reduce to 50-75% if you need VRAM headroom for browsers, IDEs, or other GPU tasks. Measure inference speed at each level.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How do I use LM Studio as a backend for other apps?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Enable Local Server in Settings. It exposes OpenAI-compatible endpoints at localhost:1234. Point any OpenAI SDK (Python, Node.js) to this URL as base_url to use local models.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Enable Local Server in Settings. It exposes OpenAI-compatible endpoints at localhost:1234. Point any OpenAI SDK (Python, Node.js) to this URL as base_url to use local models.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Does LM Studio support LoRA fine-tuning?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'As of April 2026, LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As of April 2026, LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How do I run batch inference in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially as of April 2026.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially as of April 2026.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How do I benchmark my model speed in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio shows tokens/sec in the status bar during inference. The Performance tab provides latency metrics, VRAM usage, and generation speed. Run a long prompt to get stable benchmarks.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio shows tokens/sec in the status bar during inference. The Performance tab provides latency metrics, VRAM usage, and generation speed. Run a long prompt to get stable benchmarks.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I adjust temperature and top-p in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Click the Settings icon (gear) on the chat panel to access temperature, top-p, top-k, and repeat penalty sliders. Temperature 0.7 is default; lower values give more deterministic output.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Click the Settings icon (gear) on the chat panel to access temperature, top-p, top-k, and repeat penalty sliders. Temperature 0.7 is default; lower values give more deterministic output.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How do I load a custom GGUF model in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Download the .gguf file manually and place it in your LM Studio models directory (~/.lmstudio/models on macOS/Linux). LM Studio scans this folder and lists custom models in the model selector.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Download the .gguf file manually and place it in your LM Studio models directory (~/.lmstudio/models on macOS/Linux). LM Studio scans this folder and lists custom models in the model selector.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What LM Studio settings improve speed for coding tasks?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Use Q4_K_M quantization for fastest inference. Set context window to 4K (enough for code files). Enable 100% GPU offload. Use a model with strong coding support (Qwen3-Coder, DeepSeek-Coder).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use Q4_K_M quantization for fastest inference. Set context window to 4K (enough for code files). Enable 100% GPU offload. Use a model with strong coding support (Qwen3-Coder, DeepSeek-Coder).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I disable chat history in LM Studio for testing?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Click "New Chat" to start fresh. For API-based testing, omit previous messages from the messages array and only send a system prompt + user message. This simulates zero-context inference.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Click "New Chat" to start fresh. For API-based testing, omit previous messages from the messages array and only send a system prompt + user message. This simulates zero-context inference.',
+            },
+          },
         ]
       },
 
@@ -233,18 +287,19 @@ schema: {
           id: 'faq',
           title: 'Common Questions About LM Studio Advanced Features',
           faqs: [
-            {
-              q: 'What is the difference between LM Studio API and Ollama API?',
-              a: 'Both expose OpenAI-compatible endpoints. LM Studio API is on localhost:1234, Ollama on localhost:11434. Both work similarly. Choose whichever tool you prefer for chatting.',
-            },
-            {
-              q: 'Can I use the LM Studio API in production?',
-              a: 'It works, but Ollama API is more mature. LM Studio API is in beta. For production, Ollama is the safer choice.',
-            },
-            {
-              q: 'Does lowering GPU allocation reduce VRAM requirements?',
-              a: 'Yes. Lowering GPU allocation to 50% roughly halves VRAM usage, but inference is 2-5× slower because the model runs partially on CPU.',
-            },
+            { q: 'What is the difference between LM Studio API and Ollama API?', a: 'Both expose OpenAI-compatible endpoints. LM Studio API is on localhost:1234, Ollama on localhost:11434. Both work similarly. Choose whichever tool you prefer for chatting.' },
+            { q: 'Can I use the LM Studio API in production?', a: 'It works, but Ollama API is more mature. LM Studio API is in beta. For production, Ollama is the safer choice.' },
+            { q: 'Does lowering GPU allocation reduce VRAM requirements?', a: 'Yes. Lowering GPU allocation to 50% roughly halves VRAM usage, but inference is 2-5× slower because the model runs partially on CPU.' },
+            { q: 'What is the impact of increasing the context window in LM Studio?', a: 'Longer context allows models to remember more conversation history, but increases VRAM usage and latency. A 2K context uses ~2× the VRAM of a 512-token context. Benchmark after each change.' },
+            { q: 'Should I use 100% GPU acceleration in LM Studio?', a: 'Not always. Use 100% for maximum speed if only running LM Studio. Reduce to 50-75% if you need VRAM headroom for browsers, IDEs, or other GPU tasks. Measure inference speed at each level.' },
+            { q: 'How do I use LM Studio as a backend for other apps?', a: 'Enable Local Server in Settings. It exposes OpenAI-compatible endpoints at localhost:1234. Point any OpenAI SDK (Python, Node.js) to this URL as base_url to use local models.' },
+            { q: 'Does LM Studio support LoRA fine-tuning?', a: 'As of April 2026, LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.' },
+            { q: 'How do I run batch inference in LM Studio?', a: 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially as of April 2026.' },
+            { q: 'How do I benchmark my model speed in LM Studio?', a: 'LM Studio shows tokens/sec in the status bar during inference. The Performance tab provides latency metrics, VRAM usage, and generation speed. Run a long prompt to get stable benchmarks.' },
+            { q: 'Can I adjust temperature and top-p in LM Studio?', a: 'Yes. Click the Settings icon (gear) on the chat panel to access temperature, top-p, top-k, and repeat penalty sliders. Temperature 0.7 is default; lower values give more deterministic output.' },
+            { q: 'How do I load a custom GGUF model in LM Studio?', a: 'Download the .gguf file manually and place it in your LM Studio models directory (~/.lmstudio/models on macOS/Linux). LM Studio scans this folder and lists custom models in the model selector.' },
+            { q: 'What LM Studio settings improve speed for coding tasks?', a: 'Use Q4_K_M quantization for fastest inference. Set context window to 4K (enough for code files). Enable 100% GPU offload. Use a model with strong coding support (Qwen3-Coder, DeepSeek-Coder).' },
+            { q: 'Can I disable chat history in LM Studio for testing?', a: 'Yes. Click "New Chat" to start fresh. For API-based testing, omit previous messages from the messages array and only send a system prompt + user message. This simulates zero-context inference.' },
           ],
         },
         relatedReading: {
@@ -1444,53 +1499,107 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '¿Cuál es el impacto de aumentar la ventana de contexto en LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Un contexto más largo permite que los modelos recuerden más historial de conversación, pero aumenta el uso de VRAM y la latencia. Un contexto de 2K usa aproximadamente el doble de VRAM que uno de 512 tokens. Haz benchmarks tras cada cambio.' },
+            'name': '¿Cuál es la diferencia entre la API de LM Studio y la API de Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ambas exponen endpoints compatibles con OpenAI. La API de LM Studio usa localhost:1234, la de Ollama usa localhost:11434. Ambas funcionan de forma idéntica. Elige la herramienta que prefieras para chatear.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Debo usar el 100 % de aceleración GPU en LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No siempre. Usa el 100 % para máxima velocidad si solo ejecutas LM Studio. Reduce al 50-75 % si necesitas margen de VRAM para navegadores, IDEs u otras tareas de GPU. Mide la velocidad de inferencia en cada nivel.' },
+            'name': '¿Puedo usar la API de LM Studio en producción?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Funciona, pero la API de Ollama es más madura. La API de LM Studio está en beta. Para producción, Ollama es la opción más segura.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo uso LM Studio como backend para otras aplicaciones?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Activa el Servidor local en Configuración. Expone endpoints compatibles con OpenAI en localhost:1234. Apunta cualquier SDK de OpenAI (Python, Node.js) a esta URL como base_url para usar modelos locales.' },
+            'name': '¿Reducir la asignación de GPU reduce los requisitos de VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Reducir la asignación de GPU al 50 % aproximadamente reduce a la mitad el uso de VRAM, pero la inferencia es 2-5× más lenta porque el modelo se ejecuta parcialmente en la CPU.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿LM Studio soporta el ajuste fino con LoRA?',
-            acceptedAnswer: { '@type': 'Answer', text: 'A partir de abril de 2026, el ajuste fino con LoRA no está integrado en LM Studio. Usa Unsloth o scripts de entrenamiento de llama.cpp para flujos de ajuste fino. LM Studio puede cargar y ejecutar archivos de adaptadores LoRA desde el disco.' },
+            'name': '¿Cuál es el impacto de aumentar la ventana de contexto en LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un contexto más largo permite que los modelos recuerden más historial de conversación, pero aumenta el uso de VRAM y la latencia. Un contexto de 2K usa aproximadamente el doble de VRAM que uno de 512 tokens. Haz benchmarks tras cada cambio.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo ejecuto inferencia por lotes en LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Usa la API local de LM Studio con un bucle. Envía múltiples solicitudes POST a /v1/chat/completions con distintos prompts. LM Studio procesa cada solicitud de forma secuencial a partir de abril de 2026.' },
+            'name': '¿Debo usar el 100 % de aceleración GPU en LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No siempre. Usa el 100 % para máxima velocidad si solo ejecutas LM Studio. Reduce al 50-75 % si necesitas margen de VRAM para navegadores, IDEs u otras tareas de GPU. Mide la velocidad de inferencia en cada nivel.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo mido la velocidad de mi modelo en LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'LM Studio muestra tokens/segundo en la barra de estado durante la inferencia. La pestaña Rendimiento ofrece métricas de latencia, uso de VRAM y velocidad de generación. Ejecuta un prompt largo para obtener benchmarks estables.' },
+            'name': '¿Cómo uso LM Studio como backend para otras aplicaciones?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Activa el Servidor local en Configuración. Expone endpoints compatibles con OpenAI en localhost:1234. Apunta cualquier SDK de OpenAI (Python, Node.js) a esta URL como base_url para usar modelos locales.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Puedo ajustar temperatura y top-p en LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Haz clic en el icono de Configuración (engranaje) del panel de chat para acceder a los controles de temperatura, top-p, top-k y penalización por repetición. La temperatura 0.7 es el valor predeterminado; valores menores producen resultados más deterministas.' },
+            'name': '¿LM Studio soporta el ajuste fino con LoRA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A partir de abril de 2026, el ajuste fino con LoRA no está integrado en LM Studio. Usa Unsloth o scripts de entrenamiento de llama.cpp para flujos de ajuste fino. LM Studio puede cargar y ejecutar archivos de adaptadores LoRA desde el disco.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo cargo un modelo GGUF personalizado en LM Studio?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Descarga el archivo .gguf manualmente y colócalo en el directorio de modelos de LM Studio (~/.lmstudio/models en macOS/Linux). LM Studio escanea esta carpeta y lista los modelos personalizados en el selector de modelos.' },
+            'name': '¿Cómo ejecuto inferencia por lotes en LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa la API local de LM Studio con un bucle. Envía múltiples solicitudes POST a /v1/chat/completions con distintos prompts. LM Studio procesa cada solicitud de forma secuencial a partir de abril de 2026.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Qué configuraciones de LM Studio mejoran la velocidad en tareas de programación?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Usa cuantización Q4_K_M para la inferencia más rápida. Establece la ventana de contexto en 4K (suficiente para archivos de código). Activa el 100 % de descarga en GPU. Usa un modelo con buen soporte para programación (Qwen3-Coder, DeepSeek-Coder).' },
+            'name': '¿Cómo mido la velocidad de mi modelo en LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio muestra tokens/segundo en la barra de estado durante la inferencia. La pestaña Rendimiento ofrece métricas de latencia, uso de VRAM y velocidad de generación. Ejecuta un prompt largo para obtener benchmarks estables.',
+            },
           },
           {
             '@type': 'Question',
-            name: '¿Puedo desactivar el historial de chat en LM Studio para pruebas?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Haz clic en "Nuevo chat" para comenzar de cero. Para pruebas basadas en API, omite los mensajes anteriores del array de mensajes y envía solo un system prompt + mensaje de usuario. Esto simula la inferencia sin contexto previo.' },
+            'name': '¿Puedo ajustar temperatura y top-p en LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Haz clic en el icono de Configuración (engranaje) del panel de chat para acceder a los controles de temperatura, top-p, top-k y penalización por repetición. La temperatura 0.7 es el valor predeterminado; valores menores producen resultados más deterministas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo cargo un modelo GGUF personalizado en LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Descarga el archivo .gguf manualmente y colócalo en el directorio de modelos de LM Studio (~/.lmstudio/models en macOS/Linux). LM Studio escanea esta carpeta y lista los modelos personalizados en el selector de modelos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué configuraciones de LM Studio mejoran la velocidad en tareas de programación?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa cuantización Q4_K_M para la inferencia más rápida. Establece la ventana de contexto en 4K (suficiente para archivos de código). Activa el 100 % de descarga en GPU. Usa un modelo con buen soporte para programación (Qwen3-Coder, DeepSeek-Coder).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo desactivar el historial de chat en LM Studio para pruebas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Haz clic en "Nuevo chat" para comenzar de cero. Para pruebas basadas en API, omite los mensajes anteriores del array de mensajes y envía solo un system prompt + mensaje de usuario. Esto simula la inferencia sin contexto previo.',
+            },
           },
         ],
       },
@@ -1611,18 +1720,19 @@ schema: {
           id: 'faq',
           title: 'Preguntas frecuentes sobre las funciones avanzadas de LM Studio',
           faqs: [
-            {
-              q: '¿Cuál es la diferencia entre la API de LM Studio y la API de Ollama?',
-              a: 'Ambas exponen endpoints compatibles con OpenAI. La API de LM Studio usa localhost:1234, la de Ollama usa localhost:11434. Ambas funcionan de forma idéntica. Elige la herramienta que prefieras para chatear.',
-            },
-            {
-              q: '¿Puedo usar la API de LM Studio en producción?',
-              a: 'Funciona, pero la API de Ollama es más madura. La API de LM Studio está en beta. Para producción, Ollama es la opción más segura.',
-            },
-            {
-              q: '¿Reducir la asignación de GPU reduce los requisitos de VRAM?',
-              a: 'Sí. Reducir la asignación de GPU al 50 % aproximadamente reduce a la mitad el uso de VRAM, pero la inferencia es 2-5× más lenta porque el modelo se ejecuta parcialmente en la CPU.',
-            },
+            { q: '¿Cuál es la diferencia entre la API de LM Studio y la API de Ollama?', a: 'Ambas exponen endpoints compatibles con OpenAI. La API de LM Studio usa localhost:1234, la de Ollama usa localhost:11434. Ambas funcionan de forma idéntica. Elige la herramienta que prefieras para chatear.' },
+            { q: '¿Puedo usar la API de LM Studio en producción?', a: 'Funciona, pero la API de Ollama es más madura. La API de LM Studio está en beta. Para producción, Ollama es la opción más segura.' },
+            { q: '¿Reducir la asignación de GPU reduce los requisitos de VRAM?', a: 'Sí. Reducir la asignación de GPU al 50 % aproximadamente reduce a la mitad el uso de VRAM, pero la inferencia es 2-5× más lenta porque el modelo se ejecuta parcialmente en la CPU.' },
+            { q: '¿Cuál es el impacto de aumentar la ventana de contexto en LM Studio?', a: 'Un contexto más largo permite que los modelos recuerden más historial de conversación, pero aumenta el uso de VRAM y la latencia. Un contexto de 2K usa aproximadamente el doble de VRAM que uno de 512 tokens. Haz benchmarks tras cada cambio.' },
+            { q: '¿Debo usar el 100 % de aceleración GPU en LM Studio?', a: 'No siempre. Usa el 100 % para máxima velocidad si solo ejecutas LM Studio. Reduce al 50-75 % si necesitas margen de VRAM para navegadores, IDEs u otras tareas de GPU. Mide la velocidad de inferencia en cada nivel.' },
+            { q: '¿Cómo uso LM Studio como backend para otras aplicaciones?', a: 'Activa el Servidor local en Configuración. Expone endpoints compatibles con OpenAI en localhost:1234. Apunta cualquier SDK de OpenAI (Python, Node.js) a esta URL como base_url para usar modelos locales.' },
+            { q: '¿LM Studio soporta el ajuste fino con LoRA?', a: 'A partir de abril de 2026, el ajuste fino con LoRA no está integrado en LM Studio. Usa Unsloth o scripts de entrenamiento de llama.cpp para flujos de ajuste fino. LM Studio puede cargar y ejecutar archivos de adaptadores LoRA desde el disco.' },
+            { q: '¿Cómo ejecuto inferencia por lotes en LM Studio?', a: 'Usa la API local de LM Studio con un bucle. Envía múltiples solicitudes POST a /v1/chat/completions con distintos prompts. LM Studio procesa cada solicitud de forma secuencial a partir de abril de 2026.' },
+            { q: '¿Cómo mido la velocidad de mi modelo en LM Studio?', a: 'LM Studio muestra tokens/segundo en la barra de estado durante la inferencia. La pestaña Rendimiento ofrece métricas de latencia, uso de VRAM y velocidad de generación. Ejecuta un prompt largo para obtener benchmarks estables.' },
+            { q: '¿Puedo ajustar temperatura y top-p en LM Studio?', a: 'Sí. Haz clic en el icono de Configuración (engranaje) del panel de chat para acceder a los controles de temperatura, top-p, top-k y penalización por repetición. La temperatura 0.7 es el valor predeterminado; valores menores producen resultados más deterministas.' },
+            { q: '¿Cómo cargo un modelo GGUF personalizado en LM Studio?', a: 'Descarga el archivo .gguf manualmente y colócalo en el directorio de modelos de LM Studio (~/.lmstudio/models en macOS/Linux). LM Studio escanea esta carpeta y lista los modelos personalizados en el selector de modelos.' },
+            { q: '¿Qué configuraciones de LM Studio mejoran la velocidad en tareas de programación?', a: 'Usa cuantización Q4_K_M para la inferencia más rápida. Establece la ventana de contexto en 4K (suficiente para archivos de código). Activa el 100 % de descarga en GPU. Usa un modelo con buen soporte para programación (Qwen3-Coder, DeepSeek-Coder).' },
+            { q: '¿Puedo desactivar el historial de chat en LM Studio para pruebas?', a: 'Sí. Haz clic en "Nuevo chat" para comenzar de cero. Para pruebas basadas en API, omite los mensajes anteriores del array de mensajes y envía solo un system prompt + mensaje de usuario. Esto simula la inferencia sin contexto previo.' },
           ],
         },
         relatedReading: {
@@ -1711,53 +1821,107 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'ما تأثير زيادة نافذة السياق في LM Studio؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'يتيح السياق الأطول للنماذج تذكُّر مزيد من سجل المحادثة، لكنه يزيد من استخدام VRAM وزمن الاستجابة. يستخدم سياق 2K نحو ضعف VRAM مقارنةً بسياق 512 token. أجرِ قياس أداء بعد كل تغيير.' },
+            'name': 'ما الفرق بين واجهة API الخاصة بـ LM Studio وواجهة API الخاصة بـ Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'كلتاهما تعرض نقاط نهاية متوافقة مع OpenAI. تستخدم واجهة API الخاصة بـ LM Studio العنوان localhost:1234، وتستخدم واجهة Ollama العنوان localhost:11434. كلتاهما تعملان بشكل متقارب. اختر الأداة التي تفضلها للمحادثة.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل ينبغي استخدام تسريع GPU بنسبة 100% في LM Studio؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'ليس دائمًا. استخدم 100% لأقصى سرعة إذا كنت تُشغِّل LM Studio فقط. اخفض إلى 50-75% إذا احتجت إلى هامش VRAM للمتصفحات أو بيئات IDE أو مهام GPU الأخرى. قِس سرعة الاستدلال عند كل مستوى.' },
+            'name': 'هل يمكنني استخدام واجهة API الخاصة بـ LM Studio في الإنتاج؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تعمل، لكن واجهة API الخاصة بـ Ollama أكثر نضجًا. واجهة API الخاصة بـ LM Studio في مرحلة تجريبية. للإنتاج، يُعد Ollama الخيار الأكثر أمانًا.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كيف أستخدم LM Studio كخلفية لتطبيقات أخرى؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'فعِّل الخادم المحلي في الإعدادات. يعرض نقاط نهاية متوافقة مع OpenAI على localhost:1234. وجِّه أي SDK خاص بـ OpenAI (Python أو Node.js) إلى هذا العنوان بوصفه base_url لاستخدام النماذج المحلية.' },
+            'name': 'هل يقلل خفض تخصيص GPU من متطلبات VRAM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. خفض تخصيص GPU إلى 50% تقريبًا يقلل استخدام VRAM إلى النصف، لكن الاستدلال يصبح أبطأ بمقدار 2-5× لأن النموذج يعمل جزئيًا على CPU.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل يدعم LM Studio الضبط الدقيق باستخدام LoRA؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'اعتبارًا من أبريل 2026، الضبط الدقيق باستخدام LoRA غير مدمج في LM Studio. استخدم Unsloth أو سكربتات تدريب llama.cpp لسير عمل الضبط الدقيق. يمكن لـ LM Studio تحميل وتشغيل ملفات محوِّلات LoRA من القرص.' },
+            'name': 'ما تأثير زيادة نافذة السياق في LM Studio؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يتيح السياق الأطول للنماذج تذكُّر مزيد من سجل المحادثة، لكنه يزيد من استخدام VRAM وزمن الاستجابة. يستخدم سياق 2K نحو ضعف VRAM مقارنةً بسياق 512 token. أجرِ قياس أداء بعد كل تغيير.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كيف أُشغِّل الاستدلال على دفعات في LM Studio؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'استخدم واجهة API المحلية لـ LM Studio مع حلقة. أرسل عدة طلبات POST إلى /v1/chat/completions بمطالبات مختلفة. يعالج LM Studio كل طلب على نحو متسلسل اعتبارًا من أبريل 2026.' },
+            'name': 'هل ينبغي استخدام تسريع GPU بنسبة 100% في LM Studio؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس دائمًا. استخدم 100% لأقصى سرعة إذا كنت تُشغِّل LM Studio فقط. اخفض إلى 50-75% إذا احتجت إلى هامش VRAM للمتصفحات أو بيئات IDE أو مهام GPU الأخرى. قِس سرعة الاستدلال عند كل مستوى.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كيف أقيس سرعة نموذجي في LM Studio؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'يعرض LM Studio عدد الـ token/الثانية في شريط الحالة أثناء الاستدلال. توفر علامة تبويب الأداء مقاييس لزمن الاستجابة واستخدام VRAM وسرعة التوليد. شغِّل مطالبة طويلة للحصول على قياسات أداء مستقرة.' },
+            'name': 'كيف أستخدم LM Studio كخلفية لتطبيقات أخرى؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'فعِّل الخادم المحلي في الإعدادات. يعرض نقاط نهاية متوافقة مع OpenAI على localhost:1234. وجِّه أي SDK خاص بـ OpenAI (Python أو Node.js) إلى هذا العنوان بوصفه base_url لاستخدام النماذج المحلية.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل يمكنني ضبط temperature وtop-p في LM Studio؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نعم. انقر على أيقونة الإعدادات (الترس) في لوحة المحادثة للوصول إلى عناصر التحكم في temperature وtop-p وtop-k وعقوبة التكرار. القيمة الافتراضية لـ temperature هي 0.7؛ وتُنتج القيم الأصغر مخرجات أكثر حتمية.' },
+            'name': 'هل يدعم LM Studio الضبط الدقيق باستخدام LoRA؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اعتبارًا من أبريل 2026، الضبط الدقيق باستخدام LoRA غير مدمج في LM Studio. استخدم Unsloth أو سكربتات تدريب llama.cpp لسير عمل الضبط الدقيق. يمكن لـ LM Studio تحميل وتشغيل ملفات محوِّلات LoRA من القرص.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'كيف أُحمِّل نموذج GGUF مخصصًا في LM Studio؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نزِّل ملف .gguf يدويًا وضعه في دليل النماذج الخاص بـ LM Studio (‎~/.lmstudio/models على macOS/Linux). يفحص LM Studio هذا المجلد ويُدرج النماذج المخصصة في مُحدِّد النماذج.' },
+            'name': 'كيف أُشغِّل الاستدلال على دفعات في LM Studio؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم واجهة API المحلية لـ LM Studio مع حلقة. أرسل عدة طلبات POST إلى /v1/chat/completions بمطالبات مختلفة. يعالج LM Studio كل طلب على نحو متسلسل اعتبارًا من أبريل 2026.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ما إعدادات LM Studio التي تُحسِّن السرعة في مهام البرمجة؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'استخدم تكميم Q4_K_M لأسرع استدلال. اضبط نافذة السياق على 4K (كافية لملفات الكود). فعِّل التفريغ الكامل إلى GPU بنسبة 100%. استخدم نموذجًا بدعم جيد للبرمجة (Qwen3-Coder أو DeepSeek-Coder).' },
+            'name': 'كيف أقيس سرعة نموذجي في LM Studio؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعرض LM Studio عدد الـ token/الثانية في شريط الحالة أثناء الاستدلال. توفر علامة تبويب الأداء مقاييس لزمن الاستجابة واستخدام VRAM وسرعة التوليد. شغِّل مطالبة طويلة للحصول على قياسات أداء مستقرة.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'هل يمكنني تعطيل سجل المحادثة في LM Studio للاختبار؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'نعم. انقر على "محادثة جديدة" للبدء من الصفر. للاختبار القائم على API، احذف الرسائل السابقة من مصفوفة الرسائل وأرسل system prompt + رسالة المستخدم فقط. هذا يُحاكي الاستدلال دون سياق سابق.' },
+            'name': 'هل يمكنني ضبط temperature وtop-p في LM Studio؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. انقر على أيقونة الإعدادات (الترس) في لوحة المحادثة للوصول إلى عناصر التحكم في temperature وtop-p وtop-k وعقوبة التكرار. القيمة الافتراضية لـ temperature هي 0.7؛ وتُنتج القيم الأصغر مخرجات أكثر حتمية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أُحمِّل نموذج GGUF مخصصًا في LM Studio؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نزِّل ملف .gguf يدويًا وضعه في دليل النماذج الخاص بـ LM Studio (‎~/.lmstudio/models على macOS/Linux). يفحص LM Studio هذا المجلد ويُدرج النماذج المخصصة في مُحدِّد النماذج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما إعدادات LM Studio التي تُحسِّن السرعة في مهام البرمجة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم تكميم Q4_K_M لأسرع استدلال. اضبط نافذة السياق على 4K (كافية لملفات الكود). فعِّل التفريغ الكامل إلى GPU بنسبة 100%. استخدم نموذجًا بدعم جيد للبرمجة (Qwen3-Coder أو DeepSeek-Coder).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تعطيل سجل المحادثة في LM Studio للاختبار؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. انقر على "محادثة جديدة" للبدء من الصفر. للاختبار القائم على API، احذف الرسائل السابقة من مصفوفة الرسائل وأرسل system prompt + رسالة المستخدم فقط. هذا يُحاكي الاستدلال دون سياق سابق.',
+            },
           },
         ],
       },
@@ -1878,18 +2042,19 @@ schema: {
           id: 'faq',
           title: 'الأسئلة الشائعة حول الميزات المتقدمة في LM Studio',
           faqs: [
-            {
-              q: 'ما الفرق بين واجهة API الخاصة بـ LM Studio وواجهة API الخاصة بـ Ollama؟',
-              a: 'كلتاهما تعرض نقاط نهاية متوافقة مع OpenAI. تستخدم واجهة API الخاصة بـ LM Studio العنوان localhost:1234، وتستخدم واجهة Ollama العنوان localhost:11434. كلتاهما تعملان بشكل متقارب. اختر الأداة التي تفضلها للمحادثة.',
-            },
-            {
-              q: 'هل يمكنني استخدام واجهة API الخاصة بـ LM Studio في الإنتاج؟',
-              a: 'تعمل، لكن واجهة API الخاصة بـ Ollama أكثر نضجًا. واجهة API الخاصة بـ LM Studio في مرحلة تجريبية. للإنتاج، يُعد Ollama الخيار الأكثر أمانًا.',
-            },
-            {
-              q: 'هل يقلل خفض تخصيص GPU من متطلبات VRAM؟',
-              a: 'نعم. خفض تخصيص GPU إلى 50% تقريبًا يقلل استخدام VRAM إلى النصف، لكن الاستدلال يصبح أبطأ بمقدار 2-5× لأن النموذج يعمل جزئيًا على CPU.',
-            },
+            { q: 'ما الفرق بين واجهة API الخاصة بـ LM Studio وواجهة API الخاصة بـ Ollama؟', a: 'كلتاهما تعرض نقاط نهاية متوافقة مع OpenAI. تستخدم واجهة API الخاصة بـ LM Studio العنوان localhost:1234، وتستخدم واجهة Ollama العنوان localhost:11434. كلتاهما تعملان بشكل متقارب. اختر الأداة التي تفضلها للمحادثة.' },
+            { q: 'هل يمكنني استخدام واجهة API الخاصة بـ LM Studio في الإنتاج؟', a: 'تعمل، لكن واجهة API الخاصة بـ Ollama أكثر نضجًا. واجهة API الخاصة بـ LM Studio في مرحلة تجريبية. للإنتاج، يُعد Ollama الخيار الأكثر أمانًا.' },
+            { q: 'هل يقلل خفض تخصيص GPU من متطلبات VRAM؟', a: 'نعم. خفض تخصيص GPU إلى 50% تقريبًا يقلل استخدام VRAM إلى النصف، لكن الاستدلال يصبح أبطأ بمقدار 2-5× لأن النموذج يعمل جزئيًا على CPU.' },
+            { q: 'ما تأثير زيادة نافذة السياق في LM Studio؟', a: 'يتيح السياق الأطول للنماذج تذكُّر مزيد من سجل المحادثة، لكنه يزيد من استخدام VRAM وزمن الاستجابة. يستخدم سياق 2K نحو ضعف VRAM مقارنةً بسياق 512 token. أجرِ قياس أداء بعد كل تغيير.' },
+            { q: 'هل ينبغي استخدام تسريع GPU بنسبة 100% في LM Studio؟', a: 'ليس دائمًا. استخدم 100% لأقصى سرعة إذا كنت تُشغِّل LM Studio فقط. اخفض إلى 50-75% إذا احتجت إلى هامش VRAM للمتصفحات أو بيئات IDE أو مهام GPU الأخرى. قِس سرعة الاستدلال عند كل مستوى.' },
+            { q: 'كيف أستخدم LM Studio كخلفية لتطبيقات أخرى؟', a: 'فعِّل الخادم المحلي في الإعدادات. يعرض نقاط نهاية متوافقة مع OpenAI على localhost:1234. وجِّه أي SDK خاص بـ OpenAI (Python أو Node.js) إلى هذا العنوان بوصفه base_url لاستخدام النماذج المحلية.' },
+            { q: 'هل يدعم LM Studio الضبط الدقيق باستخدام LoRA؟', a: 'اعتبارًا من أبريل 2026، الضبط الدقيق باستخدام LoRA غير مدمج في LM Studio. استخدم Unsloth أو سكربتات تدريب llama.cpp لسير عمل الضبط الدقيق. يمكن لـ LM Studio تحميل وتشغيل ملفات محوِّلات LoRA من القرص.' },
+            { q: 'كيف أُشغِّل الاستدلال على دفعات في LM Studio؟', a: 'استخدم واجهة API المحلية لـ LM Studio مع حلقة. أرسل عدة طلبات POST إلى /v1/chat/completions بمطالبات مختلفة. يعالج LM Studio كل طلب على نحو متسلسل اعتبارًا من أبريل 2026.' },
+            { q: 'كيف أقيس سرعة نموذجي في LM Studio؟', a: 'يعرض LM Studio عدد الـ token/الثانية في شريط الحالة أثناء الاستدلال. توفر علامة تبويب الأداء مقاييس لزمن الاستجابة واستخدام VRAM وسرعة التوليد. شغِّل مطالبة طويلة للحصول على قياسات أداء مستقرة.' },
+            { q: 'هل يمكنني ضبط temperature وtop-p في LM Studio؟', a: 'نعم. انقر على أيقونة الإعدادات (الترس) في لوحة المحادثة للوصول إلى عناصر التحكم في temperature وtop-p وtop-k وعقوبة التكرار. القيمة الافتراضية لـ temperature هي 0.7؛ وتُنتج القيم الأصغر مخرجات أكثر حتمية.' },
+            { q: 'كيف أُحمِّل نموذج GGUF مخصصًا في LM Studio؟', a: 'نزِّل ملف .gguf يدويًا وضعه في دليل النماذج الخاص بـ LM Studio (‎~/.lmstudio/models على macOS/Linux). يفحص LM Studio هذا المجلد ويُدرج النماذج المخصصة في مُحدِّد النماذج.' },
+            { q: 'ما إعدادات LM Studio التي تُحسِّن السرعة في مهام البرمجة؟', a: 'استخدم تكميم Q4_K_M لأسرع استدلال. اضبط نافذة السياق على 4K (كافية لملفات الكود). فعِّل التفريغ الكامل إلى GPU بنسبة 100%. استخدم نموذجًا بدعم جيد للبرمجة (Qwen3-Coder أو DeepSeek-Coder).' },
+            { q: 'هل يمكنني تعطيل سجل المحادثة في LM Studio للاختبار؟', a: 'نعم. انقر على "محادثة جديدة" للبدء من الصفر. للاختبار القائم على API، احذف الرسائل السابقة من مصفوفة الرسائل وأرسل system prompt + رسالة المستخدم فقط. هذا يُحاكي الاستدلال دون سياق سابق.' },
           ],
         },
         relatedReading: {
@@ -2153,54 +2318,108 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'LM Studio API와 Ollama API의 차이점은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '둘 다 OpenAI 호환 엔드포인트를 노출합니다. LM Studio API는 localhost:1234에서, Ollama는 localhost:11434에서 실행됩니다. 동일하게 작동합니다. 채팅에 선호하는 도구를 선택하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio API를 프로덕션에서 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '작동하지만 Ollama API가 더 성숙합니다. LM Studio API는 베타 상태입니다. 프로덕션에서는 Ollama가 더 안전한 선택입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GPU 할당을 낮추면 VRAM 요구 사항이 줄어듭니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '그렇습니다. GPU 할당을 50%로 낮추면 VRAM 사용량이 약 절반으로 줄어들지만, 모델이 부분적으로 CPU에서 실행되어 추론 속도가 2~5배 느려집니다.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'LM Studio에서 컨텍스트 창을 늘리면 어떤 영향이 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '컨텍스트가 길수록 모델이 더 많은 대화 기록을 기억할 수 있지만, VRAM 사용량과 지연 시간이 증가합니다. 2K 컨텍스트는 512 토큰 컨텍스트보다 약 2배의 VRAM을 사용합니다. 변경 후 반드시 벤치마크를 실행하십시오.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '컨텍스트가 길수록 모델이 더 많은 대화 기록을 기억할 수 있지만, VRAM 사용량과 지연 시간이 증가합니다. 2K 컨텍스트는 512 토큰 컨텍스트보다 약 2배의 VRAM을 사용합니다. 변경 후 반드시 벤치마크를 실행하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 GPU 가속을 100%로 설정해야 합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '항상 그런 것은 아닙니다. LM Studio만 실행하는 경우 최대 속도를 위해 100%를 사용하십시오. 브라우저, IDE 또는 다른 GPU 작업을 위해 VRAM 여유가 필요하면 50~75%로 줄이십시오. 각 수준에서 추론 속도를 측정하십시오.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '항상 그런 것은 아닙니다. LM Studio만 실행하는 경우 최대 속도를 위해 100%를 사용하십시오. 브라우저, IDE 또는 다른 GPU 작업을 위해 VRAM 여유가 필요하면 50~75%로 줄이십시오. 각 수준에서 추론 속도를 측정하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio를 다른 앱의 백엔드로 어떻게 사용합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '설정에서 로컬 서버를 활성화하십시오. localhost:1234에 OpenAI 호환 엔드포인트가 노출됩니다. OpenAI SDK(Python, Node.js)에서 이 URL을 base_url로 지정하면 로컬 모델을 사용할 수 있습니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '설정에서 로컬 서버를 활성화하십시오. localhost:1234에 OpenAI 호환 엔드포인트가 노출됩니다. OpenAI SDK(Python, Node.js)에서 이 URL을 base_url로 지정하면 로컬 모델을 사용할 수 있습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio는 LoRA 파인튜닝을 지원합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '2026년 4월 기준으로 LoRA 파인튜닝은 LM Studio에 내장되어 있지 않습니다. 파인튜닝에는 Unsloth 또는 llama.cpp 학습 스크립트를 사용하십시오. LM Studio는 디스크에서 LoRA 어댑터 파일을 로드하여 실행할 수 있습니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 4월 기준으로 LoRA 파인튜닝은 LM Studio에 내장되어 있지 않습니다. 파인튜닝에는 Unsloth 또는 llama.cpp 학습 스크립트를 사용하십시오. LM Studio는 디스크에서 LoRA 어댑터 파일을 로드하여 실행할 수 있습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 배치 추론은 어떻게 실행합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio 로컬 API와 루프를 사용하십시오. /v1/chat/completions에 다른 프롬프트로 여러 POST 요청을 전송합니다. 2026년 4월 기준으로 LM Studio는 각 요청을 순차적으로 처리합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio 로컬 API와 루프를 사용하십시오. /v1/chat/completions에 다른 프롬프트로 여러 POST 요청을 전송합니다. 2026년 4월 기준으로 LM Studio는 각 요청을 순차적으로 처리합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 모델 속도를 어떻게 벤치마킹합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio는 추론 중 상태 표시줄에 토큰/초를 표시합니다. 성능 탭에서 지연 시간 지표, VRAM 사용량, 생성 속도를 확인할 수 있습니다. 안정적인 벤치마크를 얻으려면 긴 프롬프트를 실행하십시오.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio는 추론 중 상태 표시줄에 토큰/초를 표시합니다. 성능 탭에서 지연 시간 지표, VRAM 사용량, 생성 속도를 확인할 수 있습니다. 안정적인 벤치마크를 얻으려면 긴 프롬프트를 실행하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 temperature와 top-p를 조정할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '가능합니다. 채팅 패널의 설정 아이콘(기어)을 클릭하면 temperature, top-p, top-k, 반복 페널티 슬라이더에 접근할 수 있습니다. temperature 기본값은 0.7이며, 낮을수록 더 결정론적인 출력을 제공합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '가능합니다. 채팅 패널의 설정 아이콘(기어)을 클릭하면 temperature, top-p, top-k, 반복 페널티 슬라이더에 접근할 수 있습니다. temperature 기본값은 0.7이며, 낮을수록 더 결정론적인 출력을 제공합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 커스텀 GGUF 모델을 어떻게 로드합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '.gguf 파일을 수동으로 다운로드하여 LM Studio 모델 디렉토리(macOS/Linux에서는 ~/.lmstudio/models)에 저장하십시오. LM Studio가 이 폴더를 스캔하여 모델 선택기에 커스텀 모델을 표시합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '.gguf 파일을 수동으로 다운로드하여 LM Studio 모델 디렉토리(macOS/Linux에서는 ~/.lmstudio/models)에 저장하십시오. LM Studio가 이 폴더를 스캔하여 모델 선택기에 커스텀 모델을 표시합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 코딩 작업 속도를 개선하는 설정은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '가장 빠른 추론을 위해 Q4_K_M 양자화를 사용하십시오. 컨텍스트 창을 4K로 설정하면 코드 파일에 충분합니다. GPU 오프로드를 100%로 활성화하십시오. 강력한 코딩 지원 모델(Qwen3-Coder, DeepSeek-Coder)을 사용하십시오.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '가장 빠른 추론을 위해 Q4_K_M 양자화를 사용하십시오. 컨텍스트 창을 4K로 설정하면 코드 파일에 충분합니다. GPU 오프로드를 100%로 활성화하십시오. 강력한 코딩 지원 모델(Qwen3-Coder, DeepSeek-Coder)을 사용하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 테스트를 위해 채팅 기록을 비활성화할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '가능합니다. "새 채팅"을 클릭하면 새로 시작할 수 있습니다. API 기반 테스트에서는 messages 배열에서 이전 메시지를 제거하고 시스템 프롬프트와 사용자 메시지만 전송하십시오. 이렇게 하면 제로 컨텍스트 추론을 시뮬레이션할 수 있습니다.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '가능합니다. "새 채팅"을 클릭하면 새로 시작할 수 있습니다. API 기반 테스트에서는 messages 배열에서 이전 메시지를 제거하고 시스템 프롬프트와 사용자 메시지만 전송하십시오. 이렇게 하면 제로 컨텍스트 추론을 시뮬레이션할 수 있습니다.',
+            },
+          },
         ]
       },
 
@@ -2317,18 +2536,19 @@ schema: {
           id: 'faq',
           title: 'LM Studio 고급 기능에 대한 자주 묻는 질문',
           faqs: [
-            {
-              q: 'LM Studio API와 Ollama API의 차이점은 무엇입니까?',
-              a: '둘 다 OpenAI 호환 엔드포인트를 노출합니다. LM Studio API는 localhost:1234에서, Ollama는 localhost:11434에서 실행됩니다. 동일하게 작동합니다. 채팅에 선호하는 도구를 선택하십시오.',
-            },
-            {
-              q: 'LM Studio API를 프로덕션에서 사용할 수 있습니까?',
-              a: '작동하지만 Ollama API가 더 성숙합니다. LM Studio API는 베타 상태입니다. 프로덕션에서는 Ollama가 더 안전한 선택입니다.',
-            },
-            {
-              q: 'GPU 할당을 낮추면 VRAM 요구 사항이 줄어듭니까?',
-              a: '그렇습니다. GPU 할당을 50%로 낮추면 VRAM 사용량이 약 절반으로 줄어들지만, 모델이 부분적으로 CPU에서 실행되어 추론 속도가 2~5배 느려집니다.',
-            },
+            { q: 'LM Studio API와 Ollama API의 차이점은 무엇입니까?', a: '둘 다 OpenAI 호환 엔드포인트를 노출합니다. LM Studio API는 localhost:1234에서, Ollama는 localhost:11434에서 실행됩니다. 동일하게 작동합니다. 채팅에 선호하는 도구를 선택하십시오.' },
+            { q: 'LM Studio API를 프로덕션에서 사용할 수 있습니까?', a: '작동하지만 Ollama API가 더 성숙합니다. LM Studio API는 베타 상태입니다. 프로덕션에서는 Ollama가 더 안전한 선택입니다.' },
+            { q: 'GPU 할당을 낮추면 VRAM 요구 사항이 줄어듭니까?', a: '그렇습니다. GPU 할당을 50%로 낮추면 VRAM 사용량이 약 절반으로 줄어들지만, 모델이 부분적으로 CPU에서 실행되어 추론 속도가 2~5배 느려집니다.' },
+            { q: 'LM Studio에서 컨텍스트 창을 늘리면 어떤 영향이 있습니까?', a: '컨텍스트가 길수록 모델이 더 많은 대화 기록을 기억할 수 있지만, VRAM 사용량과 지연 시간이 증가합니다. 2K 컨텍스트는 512 토큰 컨텍스트보다 약 2배의 VRAM을 사용합니다. 변경 후 반드시 벤치마크를 실행하십시오.' },
+            { q: 'LM Studio에서 GPU 가속을 100%로 설정해야 합니까?', a: '항상 그런 것은 아닙니다. LM Studio만 실행하는 경우 최대 속도를 위해 100%를 사용하십시오. 브라우저, IDE 또는 다른 GPU 작업을 위해 VRAM 여유가 필요하면 50~75%로 줄이십시오. 각 수준에서 추론 속도를 측정하십시오.' },
+            { q: 'LM Studio를 다른 앱의 백엔드로 어떻게 사용합니까?', a: '설정에서 로컬 서버를 활성화하십시오. localhost:1234에 OpenAI 호환 엔드포인트가 노출됩니다. OpenAI SDK(Python, Node.js)에서 이 URL을 base_url로 지정하면 로컬 모델을 사용할 수 있습니다.' },
+            { q: 'LM Studio는 LoRA 파인튜닝을 지원합니까?', a: '2026년 4월 기준으로 LoRA 파인튜닝은 LM Studio에 내장되어 있지 않습니다. 파인튜닝에는 Unsloth 또는 llama.cpp 학습 스크립트를 사용하십시오. LM Studio는 디스크에서 LoRA 어댑터 파일을 로드하여 실행할 수 있습니다.' },
+            { q: 'LM Studio에서 배치 추론은 어떻게 실행합니까?', a: 'LM Studio 로컬 API와 루프를 사용하십시오. /v1/chat/completions에 다른 프롬프트로 여러 POST 요청을 전송합니다. 2026년 4월 기준으로 LM Studio는 각 요청을 순차적으로 처리합니다.' },
+            { q: 'LM Studio에서 모델 속도를 어떻게 벤치마킹합니까?', a: 'LM Studio는 추론 중 상태 표시줄에 토큰/초를 표시합니다. 성능 탭에서 지연 시간 지표, VRAM 사용량, 생성 속도를 확인할 수 있습니다. 안정적인 벤치마크를 얻으려면 긴 프롬프트를 실행하십시오.' },
+            { q: 'LM Studio에서 temperature와 top-p를 조정할 수 있습니까?', a: '가능합니다. 채팅 패널의 설정 아이콘(기어)을 클릭하면 temperature, top-p, top-k, 반복 페널티 슬라이더에 접근할 수 있습니다. temperature 기본값은 0.7이며, 낮을수록 더 결정론적인 출력을 제공합니다.' },
+            { q: 'LM Studio에서 커스텀 GGUF 모델을 어떻게 로드합니까?', a: '.gguf 파일을 수동으로 다운로드하여 LM Studio 모델 디렉토리(macOS/Linux에서는 ~/.lmstudio/models)에 저장하십시오. LM Studio가 이 폴더를 스캔하여 모델 선택기에 커스텀 모델을 표시합니다.' },
+            { q: 'LM Studio에서 코딩 작업 속도를 개선하는 설정은 무엇입니까?', a: '가장 빠른 추론을 위해 Q4_K_M 양자화를 사용하십시오. 컨텍스트 창을 4K로 설정하면 코드 파일에 충분합니다. GPU 오프로드를 100%로 활성화하십시오. 강력한 코딩 지원 모델(Qwen3-Coder, DeepSeek-Coder)을 사용하십시오.' },
+            { q: 'LM Studio에서 테스트를 위해 채팅 기록을 비활성화할 수 있습니까?', a: '가능합니다. "새 채팅"을 클릭하면 새로 시작할 수 있습니다. API 기반 테스트에서는 messages 배열에서 이전 메시지를 제거하고 시스템 프롬프트와 사용자 메시지만 전송하십시오. 이렇게 하면 제로 컨텍스트 추론을 시뮬레이션할 수 있습니다.' },
           ],
         },
         relatedReading: {

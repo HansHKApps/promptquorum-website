@@ -2050,47 +2050,143 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     'mainEntity': [
-      {
-        '@type': 'Question',
-        'name': 'ローカルLLMでOOMエラーの原因は何ですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'OOM（メモリ不足）エラーは、モデルサイズが利用可能なRAMまたはVRAMを超えた場合に発生します。修正：より小さいモデルに切り替えます（`ollama run llama3.2:3b`は~2.5 GBを必要）、または低い量子化レベルを使用します。7B以上のモデルをプルする前に、`free -h`（Linux/macOS）を実行して利用可能なRAMを確認します。' }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Ollamaで私のGPUが検出されない理由は何ですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'NVIDIA：ドライバ525+とCUDA Toolkit 11.3+をインストール後、Ollamaを再起動。AMD on Linux：ROCm 5.7+をインストール。`nvidia-smi`（NVIDIA）または`rocm-smi`（AMD）で検出を確認。Apple Silicon：Ollamaはデフォルトでメタルを使用します。OLLAMA_GPU_LAYERS=999を設定して、最大GPU オフロードを強制します。' }
-      },
-      {
-        '@type': 'Question',
-        'name': 'OllamaでポートU11434が拒否されるのはなぜですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'ポート11434が拒否されるのは、Ollamaサーバーが実行されていないためです。`ollama serve`で起動し、`curl http://localhost:11434`で確認します。期待される応答は「Ollama is running」です。Linux上では、systemdサービスを再起動します：`systemctl restart ollama`。' }
-      },
-      {
-        '@type': 'Question',
-        'name': 'ローカルLLMがCPUで実行されているのに、GPUがあるのはなぜですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'OllamaはGPUが検出されないか、VRAM が不十分な場合、CPUにフォールバックします。Ollamaを開始する前に、環境変数`OLLAMA_GPU_LAYERS=999`を設定して、最大GPU オフロードを強制します。最初に`nvidia-smi`でGPU可視性をチェック。全モデルのVRAMが不足している場合、Ollamaは自動的にGPUとCPU間でレイヤーを分割します。' }
-      },
-      {
-        '@type': 'Question',
-        'name': 'ローカルLLMデプロイの最も一般的なエラーは何ですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': '11個の最も一般的なローカルLLMエラーは：（1）OOM/メモリ不足、（2）GPU未検出、（3）ポート11434拒否、（4）遅いCPUフォールバック、（5）モデル未検出、（6）部分ダウンロード破損、（7）生成が早期に停止、（8）CUDAバージョン不一致、（9）コンテキスト長超過、（10）不正なモデルタグ、（11）クライアントが予期しないリモートホストに接続しようとする。各エラーはOllamaとLM Studioに固有の修正コマンドがあります。' }
-      },
-      {
-        '@type': 'Question',
-        'name': '破損したOllamaモデルダウンロードを修正するにはどうすればよいですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'キャッシュされたモデルを削除して再プル：`ollama rm <モデル名>`次に`ollama pull <モデル名>`。破損したダウンロードはプルが中断された場合に発生します。Ollamaは部分ダウンロードを常に自動検出するわけではありません。' }
-      },
-      {
-        '@type': 'Question',
-        'name': 'OllamaがGPUを使用しているかを確認するにはどうすればよいですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': 'モデルが読み込まれている間に`ollama ps`を実行します。出力にはGPU vs CPU のどのレイヤーがあるかが表示されます。また、`nvidia-smi -l 1`でGPU利用率をリアルタイム監視できます。GPU利用率が0%のままの場合、OllamaはレイトンlyCPUのみで実行しています。ドライバのインストールとCUDA互換性を確認します。' }
-      },
-      {
-        '@type': 'Question',
-        'name': 'LLM生成が早期に停止するのはなぜですか？',
-        'acceptedAnswer': { '@type': 'Answer', 'text': '早期の停止は通常、Modelfileのストップトークンが原因です。予期しないストップシーケンスのシステムプロンプトとテンプレートを確認します。また`num_predict`パラメータを確認します。低く設定されている場合、Ollamaはそのトークン数で出力を切り詰めます。デフォルトは-1（無制限）です。' }
-      }
-    ]
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMで最も一般的なエラーは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'メモリ不足（OOM）エラーは初めてのユーザーにとって最も一般的です。これは、モデルが利用可能なRAMより多くのメモリを必要とすることを意味します。小さい量子化（Q4_K_M）またはより小さいモデル（3Bではなく7B）に切り替えます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'NVIDIAでOllamaのGPUを有効にするにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LinuxではNVIDIAドライバを525+に、WindowsではドライバをバージョンNVIDIA 452+にアップデートします。OLLAMA_GPU_LAYERS=999を設定します。nvidia-smiで実行してGPUが検出されることを確認します。Ollamaは再起動時にCUDAを自動検出します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '推論がこんなに遅いのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CPUのみで実行しています。モデルが読み込まれている間、ollama psで確認します。OLLAMA_GPU_LAYERS=999でGPUを有効にします。モデルサイズを減らします（13Bではなく7B）か、より高速な量子化（Q4_K_M）を使用します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaで「接続拒否」エラーをどのように修正しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollamaが実行されていません。ターミナルでollama serveで起動します（Mac/Linux）、またはOllamaアプリを再起動します（Windows）。curl http://localhost:11434でサーバーが起動していることを確認します。「Ollama is running」が返される必要があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMからの出力が破損しているまたは反復的な理由は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプトテンプレートが間違っています。Instruct形式なしでベースモデルを使用しています。Instruct variant（例えば、llama3.1:8b-instruct）に切り替えるか、LM Studioで正しいチャットテンプレートを適用します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaで破損したモデルファイルをどのように修正しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '削除して再ダウンロードします：ollama rm modelname && ollama pull modelname。破損は中断されたダウンロードから発生します。sha256ハッシュはダウンロード時に検証されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GPUがあるのに、モデルがCPUで実行しているのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CUDAドライバがインストールされていないか検出されていません。nvidia-smiで確認します。GPUがない場合は、NVIDIAドライバを再インストールします。その後、Ollamaを再起動します。自動的にCUDAを検出し、ログに「GPU layers: 35」と表示されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '「CUDAエラー：メモリ不足」とはどういう意味ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPU VRAMがいっぱいです。モデルは選択された量子化に適合しません。修正：小さいモデルを使用します、Q4_K_M（低い量子化）に切り替えます、または--n-gpu-layers 20でいくつかのレイヤーをCPUにオフロードします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaの「ポート既に使用中」とはどういう意味ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '別のプロセスがポート11434を使用しています。lsof -i :11434（Mac/Linux）またはnetstat -ano | findstr 11434（Windows）で探します。プロセスを終了するか、OLLAMA_HOST=0.0.0.0:11435を変更して別のポートを使用します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMが途中で応答を停止するのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'コンテキストウィンドウの制限に達しました。モデルがmax_tokensに達しました。Ollamaでnum_ctxを増やします（例えば、OLLAMA_NUM_CTX=4096）。またはLM Studioでより高いmax_tokensを設定します。RAMの負荷も確認します。スワップ使用は推論を途中で停止させます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '「failed to load LLM client」で見慣れないホストが表示されるのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'そのアプリがハードコードされたリモートエンドポイントを持つサードパーティ製のラッパーであり、OllamaやLM Studio自体ではないことを意味します。ネットワークがそのホストへのHTTPS通信をブロックしていないか確認するか、完全にローカルなOllama（localhost:11434）またはLM Studio（localhost:1234）に切り替えてください。出所を確認できないアプリには認証情報を入力しないでください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaで私のGPUが検出されない理由は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIA：ドライバ525+とCUDA Toolkit 11.3+をインストール後、Ollamaを再起動。AMD on Linux：ROCm 5.7+をインストール。`nvidia-smi`（NVIDIA）または`rocm-smi`（AMD）で検出を確認。Apple Silicon：Ollamaはデフォルトでメタルを使用します。OLLAMA_GPU_LAYERS=999を設定して、最大GPU オフロードを強制します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaでポートU11434が拒否されるのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ポート11434が拒否されるのは、Ollamaサーバーが実行されていないためです。`ollama serve`で起動し、`curl http://localhost:11434`で確認します。期待される応答は「Ollama is running」です。Linux上では、systemdサービスを再起動します：`systemctl restart ollama`。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMがCPUで実行されているのに、GPUがあるのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OllamaはGPUが検出されないか、VRAM が不十分な場合、CPUにフォールバックします。Ollamaを開始する前に、環境変数`OLLAMA_GPU_LAYERS=999`を設定して、最大GPU オフロードを強制します。最初に`nvidia-smi`でGPU可視性をチェック。全モデルのVRAMが不足している場合、Ollamaは自動的にGPUとCPU間でレイヤーを分割します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '破損したOllamaモデルダウンロードを修正するにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'キャッシュされたモデルを削除して再プル：`ollama rm <モデル名>`次に`ollama pull <モデル名>`。破損したダウンロードはプルが中断された場合に発生します。Ollamaは部分ダウンロードを常に自動検出するわけではありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaがGPUを使用しているかを確認するにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'モデルが読み込まれている間に`ollama ps`を実行します。出力にはGPU vs CPU のどのレイヤーがあるかが表示されます。また、`nvidia-smi -l 1`でGPU利用率をリアルタイム監視できます。GPU利用率が0%のままの場合、OllamaはレイトンlyCPUのみで実行しています。ドライバのインストールとCUDA互換性を確認します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM生成が早期に停止するのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '早期の停止は通常、Modelfileのストップトークンが原因です。予期しないストップシーケンスのシステムプロンプトとテンプレートを確認します。また`num_predict`パラメータを確認します。低く設定されている場合、Ollamaはそのトークン数で出力を切り詰めます。デフォルトは-1（無制限）です。',
+            },
+          },
+        ]
   },
   sections: {
     tldr: {
@@ -2283,51 +2379,24 @@ schema: {
       id: 'common-questions',
       title: 'ローカルLLMエラーについてよくある質問',
       faqs: [
-        {
-          q: 'ローカルLLMで最も一般的なエラーは何ですか？',
-          a: 'メモリ不足（OOM）エラーは初めてのユーザーにとって最も一般的です。これは、モデルが利用可能なRAMより多くのメモリを必要とすることを意味します。小さい量子化（Q4_K_M）またはより小さいモデル（3Bではなく7B）に切り替えます。',
-        },
-        {
-          q: 'NVIDIAでOllamaのGPUを有効にするにはどうすればよいですか？',
-          a: 'LinuxではNVIDIAドライバを525+に、WindowsではドライバをバージョンNVIDIA 452+にアップデートします。OLLAMA_GPU_LAYERS=999を設定します。nvidia-smiで実行してGPUが検出されることを確認します。Ollamaは再起動時にCUDAを自動検出します。',
-        },
-        {
-          q: '推論がこんなに遅いのはなぜですか？',
-          a: 'CPUのみで実行しています。モデルが読み込まれている間、ollama psで確認します。OLLAMA_GPU_LAYERS=999でGPUを有効にします。モデルサイズを減らします（13Bではなく7B）か、より高速な量子化（Q4_K_M）を使用します。',
-        },
-        {
-          q: 'Ollamaで「接続拒否」エラーをどのように修正しますか？',
-          a: 'Ollamaが実行されていません。ターミナルでollama serveで起動します（Mac/Linux）、またはOllamaアプリを再起動します（Windows）。curl http://localhost:11434でサーバーが起動していることを確認します。「Ollama is running」が返される必要があります。',
-        },
-        {
-          q: 'ローカルLLMからの出力が破損しているまたは反復的な理由は何ですか？',
-          a: 'プロンプトテンプレートが間違っています。Instruct形式なしでベースモデルを使用しています。Instruct variant（例えば、llama3.1:8b-instruct）に切り替えるか、LM Studioで正しいチャットテンプレートを適用します。',
-        },
-        {
-          q: 'Ollamaで破損したモデルファイルをどのように修正しますか？',
-          a: '削除して再ダウンロードします：ollama rm modelname && ollama pull modelname。破損は中断されたダウンロードから発生します。sha256ハッシュはダウンロード時に検証されます。',
-        },
-        {
-          q: 'GPUがあるのに、モデルがCPUで実行しているのはなぜですか？',
-          a: 'CUDAドライバがインストールされていないか検出されていません。nvidia-smiで確認します。GPUがない場合は、NVIDIAドライバを再インストールします。その後、Ollamaを再起動します。自動的にCUDAを検出し、ログに「GPU layers: 35」と表示されます。',
-        },
-        {
-          q: '「CUDAエラー：メモリ不足」とはどういう意味ですか？',
-          a: 'GPU VRAMがいっぱいです。モデルは選択された量子化に適合しません。修正：小さいモデルを使用します、Q4_K_M（低い量子化）に切り替えます、または--n-gpu-layers 20でいくつかのレイヤーをCPUにオフロードします。',
-        },
-        {
-          q: 'Ollamaの「ポート既に使用中」とはどういう意味ですか？',
-          a: '別のプロセスがポート11434を使用しています。lsof -i :11434（Mac/Linux）またはnetstat -ano | findstr 11434（Windows）で探します。プロセスを終了するか、OLLAMA_HOST=0.0.0.0:11435を変更して別のポートを使用します。',
-        },
-        {
-          q: 'ローカルLLMが途中で応答を停止するのはなぜですか？',
-          a: 'コンテキストウィンドウの制限に達しました。モデルがmax_tokensに達しました。Ollamaでnum_ctxを増やします（例えば、OLLAMA_NUM_CTX=4096）。またはLM Studioでより高いmax_tokensを設定します。RAMの負荷も確認します。スワップ使用は推論を途中で停止させます。',
-        },
-        {
-          q: '「failed to load LLM client」で見慣れないホストが表示されるのはなぜですか？',
-          a: 'そのアプリがハードコードされたリモートエンドポイントを持つサードパーティ製のラッパーであり、OllamaやLM Studio自体ではないことを意味します。ネットワークがそのホストへのHTTPS通信をブロックしていないか確認するか、完全にローカルなOllama（localhost:11434）またはLM Studio（localhost:1234）に切り替えてください。出所を確認できないアプリには認証情報を入力しないでください。',
-        },
-      ],
+            { q: 'ローカルLLMで最も一般的なエラーは何ですか？', a: 'メモリ不足（OOM）エラーは初めてのユーザーにとって最も一般的です。これは、モデルが利用可能なRAMより多くのメモリを必要とすることを意味します。小さい量子化（Q4_K_M）またはより小さいモデル（3Bではなく7B）に切り替えます。' },
+            { q: 'NVIDIAでOllamaのGPUを有効にするにはどうすればよいですか？', a: 'LinuxではNVIDIAドライバを525+に、WindowsではドライバをバージョンNVIDIA 452+にアップデートします。OLLAMA_GPU_LAYERS=999を設定します。nvidia-smiで実行してGPUが検出されることを確認します。Ollamaは再起動時にCUDAを自動検出します。' },
+            { q: '推論がこんなに遅いのはなぜですか？', a: 'CPUのみで実行しています。モデルが読み込まれている間、ollama psで確認します。OLLAMA_GPU_LAYERS=999でGPUを有効にします。モデルサイズを減らします（13Bではなく7B）か、より高速な量子化（Q4_K_M）を使用します。' },
+            { q: 'Ollamaで「接続拒否」エラーをどのように修正しますか？', a: 'Ollamaが実行されていません。ターミナルでollama serveで起動します（Mac/Linux）、またはOllamaアプリを再起動します（Windows）。curl http://localhost:11434でサーバーが起動していることを確認します。「Ollama is running」が返される必要があります。' },
+            { q: 'ローカルLLMからの出力が破損しているまたは反復的な理由は何ですか？', a: 'プロンプトテンプレートが間違っています。Instruct形式なしでベースモデルを使用しています。Instruct variant（例えば、llama3.1:8b-instruct）に切り替えるか、LM Studioで正しいチャットテンプレートを適用します。' },
+            { q: 'Ollamaで破損したモデルファイルをどのように修正しますか？', a: '削除して再ダウンロードします：ollama rm modelname && ollama pull modelname。破損は中断されたダウンロードから発生します。sha256ハッシュはダウンロード時に検証されます。' },
+            { q: 'GPUがあるのに、モデルがCPUで実行しているのはなぜですか？', a: 'CUDAドライバがインストールされていないか検出されていません。nvidia-smiで確認します。GPUがない場合は、NVIDIAドライバを再インストールします。その後、Ollamaを再起動します。自動的にCUDAを検出し、ログに「GPU layers: 35」と表示されます。' },
+            { q: '「CUDAエラー：メモリ不足」とはどういう意味ですか？', a: 'GPU VRAMがいっぱいです。モデルは選択された量子化に適合しません。修正：小さいモデルを使用します、Q4_K_M（低い量子化）に切り替えます、または--n-gpu-layers 20でいくつかのレイヤーをCPUにオフロードします。' },
+            { q: 'Ollamaの「ポート既に使用中」とはどういう意味ですか？', a: '別のプロセスがポート11434を使用しています。lsof -i :11434（Mac/Linux）またはnetstat -ano | findstr 11434（Windows）で探します。プロセスを終了するか、OLLAMA_HOST=0.0.0.0:11435を変更して別のポートを使用します。' },
+            { q: 'ローカルLLMが途中で応答を停止するのはなぜですか？', a: 'コンテキストウィンドウの制限に達しました。モデルがmax_tokensに達しました。Ollamaでnum_ctxを増やします（例えば、OLLAMA_NUM_CTX=4096）。またはLM Studioでより高いmax_tokensを設定します。RAMの負荷も確認します。スワップ使用は推論を途中で停止させます。' },
+            { q: '「failed to load LLM client」で見慣れないホストが表示されるのはなぜですか？', a: 'そのアプリがハードコードされたリモートエンドポイントを持つサードパーティ製のラッパーであり、OllamaやLM Studio自体ではないことを意味します。ネットワークがそのホストへのHTTPS通信をブロックしていないか確認するか、完全にローカルなOllama（localhost:11434）またはLM Studio（localhost:1234）に切り替えてください。出所を確認できないアプリには認証情報を入力しないでください。' },
+            { q: 'Ollamaで私のGPUが検出されない理由は何ですか？', a: 'NVIDIA：ドライバ525+とCUDA Toolkit 11.3+をインストール後、Ollamaを再起動。AMD on Linux：ROCm 5.7+をインストール。`nvidia-smi`（NVIDIA）または`rocm-smi`（AMD）で検出を確認。Apple Silicon：Ollamaはデフォルトでメタルを使用します。OLLAMA_GPU_LAYERS=999を設定して、最大GPU オフロードを強制します。' },
+            { q: 'OllamaでポートU11434が拒否されるのはなぜですか？', a: 'ポート11434が拒否されるのは、Ollamaサーバーが実行されていないためです。`ollama serve`で起動し、`curl http://localhost:11434`で確認します。期待される応答は「Ollama is running」です。Linux上では、systemdサービスを再起動します：`systemctl restart ollama`。' },
+            { q: 'ローカルLLMがCPUで実行されているのに、GPUがあるのはなぜですか？', a: 'OllamaはGPUが検出されないか、VRAM が不十分な場合、CPUにフォールバックします。Ollamaを開始する前に、環境変数`OLLAMA_GPU_LAYERS=999`を設定して、最大GPU オフロードを強制します。最初に`nvidia-smi`でGPU可視性をチェック。全モデルのVRAMが不足している場合、Ollamaは自動的にGPUとCPU間でレイヤーを分割します。' },
+            { q: '破損したOllamaモデルダウンロードを修正するにはどうすればよいですか？', a: 'キャッシュされたモデルを削除して再プル：`ollama rm <モデル名>`次に`ollama pull <モデル名>`。破損したダウンロードはプルが中断された場合に発生します。Ollamaは部分ダウンロードを常に自動検出するわけではありません。' },
+            { q: 'OllamaがGPUを使用しているかを確認するにはどうすればよいですか？', a: 'モデルが読み込まれている間に`ollama ps`を実行します。出力にはGPU vs CPU のどのレイヤーがあるかが表示されます。また、`nvidia-smi -l 1`でGPU利用率をリアルタイム監視できます。GPU利用率が0%のままの場合、OllamaはレイトンlyCPUのみで実行しています。ドライバのインストールとCUDA互換性を確認します。' },
+            { q: 'LLM生成が早期に停止するのはなぜですか？', a: '早期の停止は通常、Modelfileのストップトークンが原因です。予期しないストップシーケンスのシステムプロンプトとテンプレートを確認します。また`num_predict`パラメータを確認します。低く設定されている場合、Ollamaはそのトークン数で出力を切り詰めます。デフォルトは-1（無制限）です。' },
+          ],
     },
     moreTroubleshooting: {
       title: 'さらに支援を探す場所',

@@ -215,78 +215,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Does this WeChat bot work on Mac?',
-            a: 'Not natively. WeChatFerry requires Windows and hooks into the WeChat Windows PC client via DLL injection. macOS users can run Windows in a virtual machine (Parallels or VMware Fusion) to use this setup, at the cost of added complexity.',
-          },
-          {
-            q: 'Will my WeChat account get banned for using a bot?',
-            a: 'WeChat\'s Terms of Service prohibit automated bots. Accounts detected using automation tools risk temporary suspension or a permanent ban. Use this only for personal productivity at low message volumes — the account risk is real, and this is not an officially sanctioned integration.',
-          },
-          {
-            q: 'What is the best Ollama model for Chinese WeChat messages?',
-            a: 'Qwen3 8B is the best balance of quality and speed for Chinese-language WeChat responses for most users — strong Chinese comprehension, and the roughly 4.7 GB (Q4) model fits in 8 GB of VRAM or runs at an acceptable pace on 16 GB of CPU RAM.',
-          },
-          {
-            q: 'Can the bot handle group chats?',
-            a: 'Yes. WeChatFerry exposes group messages with a room ID. Filter which groups the bot responds in via `msg.roomid`, and require an explicit trigger keyword (e.g. "@ai") so the bot doesn\'t reply to every message in a group.',
-          },
-          {
-            q: 'What hardware do I actually need for this?',
-            a: 'For a light Qwen3 3B assistant, any modern 16 GB Windows PC is enough — a budget N150 mini PC like the GMKtec G3 Plus (from €159.99/$140–200) covers this. For Qwen3 8B to feel responsive and for 24/7 always-on operation, 32 GB RAM and a Ryzen-class CPU is the better spend — the Minisforum UM890 Pro (from $439 barebones/~$649 with 32 GB) is our pick for that tier.',
-          },
-          {
-            q: 'Is the Minisforum UM890 Pro overkill for a WeChat bot?',
-            a: 'For a simple WeChat bot running Qwen3 3B, yes — a budget N150 box is enough and roughly a third of the price. For a general-purpose local AI server with 32–96 GB RAM, multiple models, RAG, and other services running alongside the bot, the UM890 Pro is much easier to justify.',
-          },
-          {
-            q: 'Does running the LLM locally make WeChat private?',
-            a: 'No, and this is an important distinction. Local inference means your message content is not sent to a third-party cloud LLM provider for processing. It does not make WeChat itself a private communications platform — WeChat still operates through Tencent\'s own infrastructure regardless of where the AI model runs.',
-          },
-          {
-            q: 'Is this an official WeChat integration?',
-            a: 'No. WeChatFerry is an unofficial automation/integration approach, not an official WeChat bot API. Use it cautiously, keep message volume low and personal, and understand the account risk that comes with any unofficial automation tool.',
-          },
-        ],
+            { q: 'Does this WeChat bot work on Mac?', a: 'Not natively. WeChatFerry requires Windows and hooks into the WeChat Windows PC client via DLL injection. macOS users can run Windows in a virtual machine (Parallels or VMware Fusion) to use this setup, at the cost of added complexity.' },
+            { q: 'Will my WeChat account get banned for using a bot?', a: 'WeChat\'s Terms of Service prohibit automated bots. Accounts detected using automation tools risk temporary suspension or a permanent ban. Use this only for personal productivity at low message volumes — the account risk is real, and this is not an officially sanctioned integration.' },
+            { q: 'What is the best Ollama model for Chinese WeChat messages?', a: 'Qwen3 8B is the best balance of quality and speed for Chinese-language WeChat responses for most users — strong Chinese comprehension, and the roughly 4.7 GB (Q4) model fits in 8 GB of VRAM or runs at an acceptable pace on 16 GB of CPU RAM.' },
+            { q: 'Can the bot handle group chats?', a: 'Yes. WeChatFerry exposes group messages with a room ID. Filter which groups the bot responds in via `msg.roomid`, and require an explicit trigger keyword (e.g. "@ai") so the bot doesn\'t reply to every message in a group.' },
+            { q: 'What hardware do I actually need for this?', a: 'For a light Qwen3 3B assistant, any modern 16 GB Windows PC is enough — a budget N150 mini PC like the GMKtec G3 Plus (from €159.99/$140–200) covers this. For Qwen3 8B to feel responsive and for 24/7 always-on operation, 32 GB RAM and a Ryzen-class CPU is the better spend — the Minisforum UM890 Pro (from $439 barebones/~$649 with 32 GB) is our pick for that tier.' },
+            { q: 'Is the Minisforum UM890 Pro overkill for a WeChat bot?', a: 'For a simple WeChat bot running Qwen3 3B, yes — a budget N150 box is enough and roughly a third of the price. For a general-purpose local AI server with 32–96 GB RAM, multiple models, RAG, and other services running alongside the bot, the UM890 Pro is much easier to justify.' },
+            { q: 'Does running the LLM locally make WeChat private?', a: 'No, and this is an important distinction. Local inference means your message content is not sent to a third-party cloud LLM provider for processing. It does not make WeChat itself a private communications platform — WeChat still operates through Tencent\'s own infrastructure regardless of where the AI model runs.' },
+            { q: 'Is this an official WeChat integration?', a: 'No. WeChatFerry is an unofficial automation/integration approach, not an official WeChat bot API. Use it cautiously, keep message volume low and personal, and understand the account risk that comes with any unofficial automation tool.' },
+            { q: 'How do I build a WeChat bot with a local LLM?', a: 'Use WeChatFerry (Windows) to hook into the WeChat PC client, connect to Ollama via its local HTTP API, and route incoming messages to a Qwen3 model. Total setup time is roughly 30–60 minutes for someone comfortable with Python.' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How do I build a WeChat bot with a local LLM?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Use WeChatFerry (Windows) to hook into the WeChat PC client, connect to Ollama via its local HTTP API, and route incoming messages to a Qwen3 model. Total setup time is roughly 30–60 minutes for someone comfortable with Python.',
+          {
+            '@type': 'Question',
+            'name': 'Does this WeChat bot work on Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not natively. WeChatFerry requires Windows and hooks into the WeChat Windows PC client via DLL injection. macOS users can run Windows in a virtual machine (Parallels or VMware Fusion) to use this setup, at the cost of added complexity.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does this WeChat bot work on Mac?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Not natively. WeChatFerry requires Windows. macOS users can run Windows in a virtual machine (Parallels or VMware Fusion).',
+          {
+            '@type': 'Question',
+            'name': 'Will my WeChat account get banned for using a bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'WeChat\'s Terms of Service prohibit automated bots. Accounts detected using automation tools risk temporary suspension or a permanent ban. Use this only for personal productivity at low message volumes — the account risk is real, and this is not an officially sanctioned integration.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the best model for Chinese WeChat messages?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qwen3 8B is the best balance of quality and speed for most users — strong Chinese comprehension, roughly 4.7 GB (Q4), and it fits in 8 GB of VRAM.',
+          {
+            '@type': 'Question',
+            'name': 'What is the best Ollama model for Chinese WeChat messages?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 8B is the best balance of quality and speed for Chinese-language WeChat responses for most users — strong Chinese comprehension, and the roughly 4.7 GB (Q4) model fits in 8 GB of VRAM or runs at an acceptable pace on 16 GB of CPU RAM.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What hardware do I actually need for this?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A budget N150 mini PC (from roughly €159.99/$140–200) is enough for a light Qwen3 3B assistant. For Qwen3 8B and 24/7 always-on use, a Ryzen-class box like the Minisforum UM890 Pro (from $439 barebones/~$649 with 32GB) is the better spend.',
+          {
+            '@type': 'Question',
+            'name': 'Can the bot handle group chats?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. WeChatFerry exposes group messages with a room ID. Filter which groups the bot responds in via `msg.roomid`, and require an explicit trigger keyword (e.g. "@ai") so the bot doesn\'t reply to every message in a group.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'What hardware do I actually need for this?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For a light Qwen3 3B assistant, any modern 16 GB Windows PC is enough — a budget N150 mini PC like the GMKtec G3 Plus (from €159.99/$140–200) covers this. For Qwen3 8B to feel responsive and for 24/7 always-on operation, 32 GB RAM and a Ryzen-class CPU is the better spend — the Minisforum UM890 Pro (from $439 barebones/~$649 with 32 GB) is our pick for that tier.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is the Minisforum UM890 Pro overkill for a WeChat bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For a simple WeChat bot running Qwen3 3B, yes — a budget N150 box is enough and roughly a third of the price. For a general-purpose local AI server with 32–96 GB RAM, multiple models, RAG, and other services running alongside the bot, the UM890 Pro is much easier to justify.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does running the LLM locally make WeChat private?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No, and this is an important distinction. Local inference means your message content is not sent to a third-party cloud LLM provider for processing. It does not make WeChat itself a private communications platform — WeChat still operates through Tencent\'s own infrastructure regardless of where the AI model runs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is this an official WeChat integration?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. WeChatFerry is an unofficial automation/integration approach, not an official WeChat bot API. Use it cautiously, keep message volume low and personal, and understand the account risk that comes with any unofficial automation tool.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I build a WeChat bot with a local LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use WeChatFerry (Windows) to hook into the WeChat PC client, connect to Ollama via its local HTTP API, and route incoming messages to a Qwen3 model. Total setup time is roughly 30–60 minutes for someone comfortable with Python.',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -497,30 +514,113 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          { q: 'Funktioniert der WeChat-Bot auch auf macOS?', a: 'Nicht nativ. WeChatFerry benötigt Windows und hakt sich via DLL-Injektion in den WeChat-Windows-PC-Client ein. macOS-Nutzer können Windows in einer virtuellen Maschine (Parallels oder VMware Fusion) verwenden, mit zusätzlicher Komplexität.' },
-          { q: 'Riskiert mein WeChat-Konto eine Sperre durch die Nutzung eines Bots?', a: 'Die WeChat-Nutzungsbedingungen verbieten automatisierte Bots. Konten, bei denen Automatisierungstools erkannt werden, riskieren eine vorübergehende Sperre oder einen dauerhaften Bann. Nutzen Sie dies nur bei geringem Nachrichtenvolumen für persönliche Produktivität — das Kontenrisiko ist real, und dies ist keine offiziell sanktionierte Integration.' },
-          { q: 'Welches Ollama-Modell eignet sich am besten für chinesische WeChat-Nachrichten?', a: 'Qwen3 8B bietet für die meisten Nutzer die beste Balance aus Qualität und Geschwindigkeit — starkes Chinesisch-Verständnis, und das etwa 4,7 GB große (Q4) Modell passt in 8 GB VRAM oder läuft mit 16 GB CPU-RAM in akzeptablem Tempo.' },
-          { q: 'Kann der Bot Gruppenchats verarbeiten?', a: 'Ja. WeChatFerry liefert Gruppennachrichten inklusive Raum-ID. Filtern Sie über `msg.roomid`, in welchen Gruppen der Bot antworten soll, und verlangen Sie ein explizites Auslöse-Schlüsselwort (z. B. „@ai"), damit der Bot nicht auf jede Gruppennachricht reagiert.' },
-          { q: 'Welche Hardware brauche ich für dieses Projekt wirklich?', a: 'Für einen leichten Qwen3-3B-Assistenten reicht jeder moderne Windows-PC mit 16 GB RAM — ein günstiger N150-Mini-PC wie der GMKtec G3 Plus (ab 159,99 €) deckt das ab. Damit sich Qwen3 8B reaktionsschnell anfühlt und für dauerhaften 24/7-Betrieb ist 32 GB RAM und eine Ryzen-Klasse-CPU die bessere Ausgabe — unsere Wahl dafür ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB).' },
-          { q: 'Ist der Minisforum UM890 Pro für einen WeChat-Bot überdimensioniert?', a: 'Für einen einfachen WeChat-Bot mit Qwen3 3B ja — eine günstige N150-Box reicht und kostet etwa ein Drittel. Für einen universellen lokalen KI-Server mit 32–96 GB RAM, mehreren Modellen, RAG und weiteren Diensten neben dem Bot ist der UM890 Pro deutlich leichter zu rechtfertigen.' },
-          { q: 'Macht lokale LLM-Inferenz WeChat privat?', a: 'Nein, und diese Unterscheidung ist wichtig. Lokale Inferenz bedeutet, dass Ihre Nachrichteninhalte nicht zur Verarbeitung an einen Cloud-LLM-Anbieter gesendet werden. Sie macht WeChat selbst nicht zu einer privaten Kommunikationsplattform — WeChat läuft weiterhin über die eigene Infrastruktur von Tencent, unabhängig davon, wo das KI-Modell läuft.' },
-          { q: 'Ist dies eine offizielle WeChat-Integration?', a: 'Nein. WeChatFerry ist ein inoffizieller Automatisierungs-/Integrationsansatz, keine offizielle WeChat-Bot-API. Nutzen Sie es vorsichtig, halten Sie das Nachrichtenvolumen niedrig und persönlich, und seien Sie sich des Kontenrisikos jeder inoffiziellen Automatisierung bewusst.' },
-          { q: 'Muss ich bei diesem Setup die DSGVO beachten?', a: 'Die lokale Verarbeitung durch Ollama und das Qwen-Modell erleichtert die DSGVO-Konformität, weil Nachrichteninhalte zur KI-Verarbeitung nicht an einen Drittanbieter außerhalb Ihres Netzwerks übermittelt werden — das unterstützt die Datenresidenz- und Verarbeitungspflichten nach DSGVO-Artikel 28. Das ändert jedoch nichts daran, dass WeChat selbst als Messaging-Plattform über die eigene Infrastruktur von Tencent läuft; für sensible dienstliche Nutzung dokumentieren Sie den Datenfluss und sichern Sie den Rechner im Netzwerk ab.' },
-          { q: 'Ist dieses Setup für den deutschen Mittelstand geeignet?', a: 'Als produktiver Geschäftsprozess eher nicht — WeChatFerry ist eine inoffizielle Integration mit echtem Kontenrisiko, was für den geschäftlichen Einsatz ein reales Problem ist. Für IT-Verantwortliche, die das Konzept lokaler LLM-Automatisierung intern evaluieren wollen (z. B. für andere Messaging-Kanäle mit offizieller API), ist der Aufbau als technischer Proof-of-Concept auf Basis der BSI-Grundschutz-Kataloge (Netzsegmentierung, Zugriffskontrolle) durchaus lehrreich — für den produktiven WeChat-Einsatz im Mittelstand raten wir davon ab.' },
-        ],
+            { q: 'Funktioniert der WeChat-Bot auch auf macOS?', a: 'Nicht nativ. WeChatFerry benötigt Windows und hakt sich via DLL-Injektion in den WeChat-Windows-PC-Client ein. macOS-Nutzer können Windows in einer virtuellen Maschine (Parallels oder VMware Fusion) verwenden, mit zusätzlicher Komplexität.' },
+            { q: 'Riskiert mein WeChat-Konto eine Sperre durch die Nutzung eines Bots?', a: 'Die WeChat-Nutzungsbedingungen verbieten automatisierte Bots. Konten, bei denen Automatisierungstools erkannt werden, riskieren eine vorübergehende Sperre oder einen dauerhaften Bann. Nutzen Sie dies nur bei geringem Nachrichtenvolumen für persönliche Produktivität — das Kontenrisiko ist real, und dies ist keine offiziell sanktionierte Integration.' },
+            { q: 'Welches Ollama-Modell eignet sich am besten für chinesische WeChat-Nachrichten?', a: 'Qwen3 8B bietet für die meisten Nutzer die beste Balance aus Qualität und Geschwindigkeit — starkes Chinesisch-Verständnis, und das etwa 4,7 GB große (Q4) Modell passt in 8 GB VRAM oder läuft mit 16 GB CPU-RAM in akzeptablem Tempo.' },
+            { q: 'Kann der Bot Gruppenchats verarbeiten?', a: 'Ja. WeChatFerry liefert Gruppennachrichten inklusive Raum-ID. Filtern Sie über `msg.roomid`, in welchen Gruppen der Bot antworten soll, und verlangen Sie ein explizites Auslöse-Schlüsselwort (z. B. „@ai"), damit der Bot nicht auf jede Gruppennachricht reagiert.' },
+            { q: 'Welche Hardware brauche ich für dieses Projekt wirklich?', a: 'Für einen leichten Qwen3-3B-Assistenten reicht jeder moderne Windows-PC mit 16 GB RAM — ein günstiger N150-Mini-PC wie der GMKtec G3 Plus (ab 159,99 €) deckt das ab. Damit sich Qwen3 8B reaktionsschnell anfühlt und für dauerhaften 24/7-Betrieb ist 32 GB RAM und eine Ryzen-Klasse-CPU die bessere Ausgabe — unsere Wahl dafür ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB).' },
+            { q: 'Ist der Minisforum UM890 Pro für einen WeChat-Bot überdimensioniert?', a: 'Für einen einfachen WeChat-Bot mit Qwen3 3B ja — eine günstige N150-Box reicht und kostet etwa ein Drittel. Für einen universellen lokalen KI-Server mit 32–96 GB RAM, mehreren Modellen, RAG und weiteren Diensten neben dem Bot ist der UM890 Pro deutlich leichter zu rechtfertigen.' },
+            { q: 'Macht lokale LLM-Inferenz WeChat privat?', a: 'Nein, und diese Unterscheidung ist wichtig. Lokale Inferenz bedeutet, dass Ihre Nachrichteninhalte nicht zur Verarbeitung an einen Cloud-LLM-Anbieter gesendet werden. Sie macht WeChat selbst nicht zu einer privaten Kommunikationsplattform — WeChat läuft weiterhin über die eigene Infrastruktur von Tencent, unabhängig davon, wo das KI-Modell läuft.' },
+            { q: 'Ist dies eine offizielle WeChat-Integration?', a: 'Nein. WeChatFerry ist ein inoffizieller Automatisierungs-/Integrationsansatz, keine offizielle WeChat-Bot-API. Nutzen Sie es vorsichtig, halten Sie das Nachrichtenvolumen niedrig und persönlich, und seien Sie sich des Kontenrisikos jeder inoffiziellen Automatisierung bewusst.' },
+            { q: 'Muss ich bei diesem Setup die DSGVO beachten?', a: 'Die lokale Verarbeitung durch Ollama und das Qwen-Modell erleichtert die DSGVO-Konformität, weil Nachrichteninhalte zur KI-Verarbeitung nicht an einen Drittanbieter außerhalb Ihres Netzwerks übermittelt werden — das unterstützt die Datenresidenz- und Verarbeitungspflichten nach DSGVO-Artikel 28. Das ändert jedoch nichts daran, dass WeChat selbst als Messaging-Plattform über die eigene Infrastruktur von Tencent läuft; für sensible dienstliche Nutzung dokumentieren Sie den Datenfluss und sichern Sie den Rechner im Netzwerk ab.' },
+            { q: 'Ist dieses Setup für den deutschen Mittelstand geeignet?', a: 'Als produktiver Geschäftsprozess eher nicht — WeChatFerry ist eine inoffizielle Integration mit echtem Kontenrisiko, was für den geschäftlichen Einsatz ein reales Problem ist. Für IT-Verantwortliche, die das Konzept lokaler LLM-Automatisierung intern evaluieren wollen (z. B. für andere Messaging-Kanäle mit offizieller API), ist der Aufbau als technischer Proof-of-Concept auf Basis der BSI-Grundschutz-Kataloge (Netzsegmentierung, Zugriffskontrolle) durchaus lehrreich — für den produktiven WeChat-Einsatz im Mittelstand raten wir davon ab.' },
+            { q: 'Wie baue ich einen WeChat-Bot mit einem lokalen LLM?', a: 'WeChatFerry (Windows) zum Einhaken in den WeChat-PC-Client nutzen, über die lokale HTTP-API mit Ollama verbinden und Nachrichten an ein Qwen3-Modell weiterleiten. Einrichtungszeit: etwa 30–60 Minuten mit Python-Kenntnissen.' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Wie baue ich einen WeChat-Bot mit einem lokalen LLM?', acceptedAnswer: { '@type': 'Answer', text: 'WeChatFerry (Windows) zum Einhaken in den WeChat-PC-Client nutzen, über die lokale HTTP-API mit Ollama verbinden und Nachrichten an ein Qwen3-Modell weiterleiten. Einrichtungszeit: etwa 30–60 Minuten mit Python-Kenntnissen.' } },
-        { '@type': 'Question', name: 'Funktioniert der WeChat-Bot auch auf macOS?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht nativ. WeChatFerry benötigt Windows. macOS-Nutzer können Windows in einer virtuellen Maschine (Parallels oder VMware Fusion) verwenden.' } },
-        { '@type': 'Question', name: 'Welches Modell eignet sich am besten für chinesische WeChat-Nachrichten?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B bietet für die meisten Nutzer die beste Balance aus Qualität und Geschwindigkeit — starkes Chinesisch-Verständnis, etwa 4,7 GB (Q4), passt in 8 GB VRAM.' } },
-        { '@type': 'Question', name: 'Welche Hardware brauche ich für dieses Projekt wirklich?', acceptedAnswer: { '@type': 'Answer', text: 'Ein günstiger N150-Mini-PC (ab ca. 159,99 €) reicht für einen leichten Qwen3-3B-Assistenten. Für Qwen3 8B und dauerhaften 24/7-Betrieb ist eine Ryzen-Box wie der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB) die bessere Ausgabe.' } },
-        { '@type': 'Question', name: 'Muss ich bei diesem Setup die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Die lokale Verarbeitung erleichtert die DSGVO-Konformität, da Nachrichteninhalte nicht an einen KI-Drittanbieter übermittelt werden — WeChat selbst läuft aber weiterhin über die Infrastruktur von Tencent.' } },
-        { '@type': 'Question', name: 'Ist dieses Setup für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Als produktiver Geschäftsprozess eher nicht, wegen des Kontenrisikos einer inoffiziellen Integration — als technischer Proof-of-Concept für lokale LLM-Automatisierung kann der Aufbau aber lehrreich sein.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert der WeChat-Bot auch auf macOS?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht nativ. WeChatFerry benötigt Windows und hakt sich via DLL-Injektion in den WeChat-Windows-PC-Client ein. macOS-Nutzer können Windows in einer virtuellen Maschine (Parallels oder VMware Fusion) verwenden, mit zusätzlicher Komplexität.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Riskiert mein WeChat-Konto eine Sperre durch die Nutzung eines Bots?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die WeChat-Nutzungsbedingungen verbieten automatisierte Bots. Konten, bei denen Automatisierungstools erkannt werden, riskieren eine vorübergehende Sperre oder einen dauerhaften Bann. Nutzen Sie dies nur bei geringem Nachrichtenvolumen für persönliche Produktivität — das Kontenrisiko ist real, und dies ist keine offiziell sanktionierte Integration.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Ollama-Modell eignet sich am besten für chinesische WeChat-Nachrichten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 8B bietet für die meisten Nutzer die beste Balance aus Qualität und Geschwindigkeit — starkes Chinesisch-Verständnis, und das etwa 4,7 GB große (Q4) Modell passt in 8 GB VRAM oder läuft mit 16 GB CPU-RAM in akzeptablem Tempo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann der Bot Gruppenchats verarbeiten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. WeChatFerry liefert Gruppennachrichten inklusive Raum-ID. Filtern Sie über `msg.roomid`, in welchen Gruppen der Bot antworten soll, und verlangen Sie ein explizites Auslöse-Schlüsselwort (z. B. „@ai"), damit der Bot nicht auf jede Gruppennachricht reagiert.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Hardware brauche ich für dieses Projekt wirklich?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für einen leichten Qwen3-3B-Assistenten reicht jeder moderne Windows-PC mit 16 GB RAM — ein günstiger N150-Mini-PC wie der GMKtec G3 Plus (ab 159,99 €) deckt das ab. Damit sich Qwen3 8B reaktionsschnell anfühlt und für dauerhaften 24/7-Betrieb ist 32 GB RAM und eine Ryzen-Klasse-CPU die bessere Ausgabe — unsere Wahl dafür ist der Minisforum UM890 Pro (ab ca. 489 € Barebone / ca. 649 € mit 32 GB).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist der Minisforum UM890 Pro für einen WeChat-Bot überdimensioniert?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für einen einfachen WeChat-Bot mit Qwen3 3B ja — eine günstige N150-Box reicht und kostet etwa ein Drittel. Für einen universellen lokalen KI-Server mit 32–96 GB RAM, mehreren Modellen, RAG und weiteren Diensten neben dem Bot ist der UM890 Pro deutlich leichter zu rechtfertigen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Macht lokale LLM-Inferenz WeChat privat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein, und diese Unterscheidung ist wichtig. Lokale Inferenz bedeutet, dass Ihre Nachrichteninhalte nicht zur Verarbeitung an einen Cloud-LLM-Anbieter gesendet werden. Sie macht WeChat selbst nicht zu einer privaten Kommunikationsplattform — WeChat läuft weiterhin über die eigene Infrastruktur von Tencent, unabhängig davon, wo das KI-Modell läuft.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist dies eine offizielle WeChat-Integration?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. WeChatFerry ist ein inoffizieller Automatisierungs-/Integrationsansatz, keine offizielle WeChat-Bot-API. Nutzen Sie es vorsichtig, halten Sie das Nachrichtenvolumen niedrig und persönlich, und seien Sie sich des Kontenrisikos jeder inoffiziellen Automatisierung bewusst.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei diesem Setup die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die lokale Verarbeitung durch Ollama und das Qwen-Modell erleichtert die DSGVO-Konformität, weil Nachrichteninhalte zur KI-Verarbeitung nicht an einen Drittanbieter außerhalb Ihres Netzwerks übermittelt werden — das unterstützt die Datenresidenz- und Verarbeitungspflichten nach DSGVO-Artikel 28. Das ändert jedoch nichts daran, dass WeChat selbst als Messaging-Plattform über die eigene Infrastruktur von Tencent läuft; für sensible dienstliche Nutzung dokumentieren Sie den Datenfluss und sichern Sie den Rechner im Netzwerk ab.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist dieses Setup für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Als produktiver Geschäftsprozess eher nicht — WeChatFerry ist eine inoffizielle Integration mit echtem Kontenrisiko, was für den geschäftlichen Einsatz ein reales Problem ist. Für IT-Verantwortliche, die das Konzept lokaler LLM-Automatisierung intern evaluieren wollen (z. B. für andere Messaging-Kanäle mit offizieller API), ist der Aufbau als technischer Proof-of-Concept auf Basis der BSI-Grundschutz-Kataloge (Netzsegmentierung, Zugriffskontrolle) durchaus lehrreich — für den produktiven WeChat-Einsatz im Mittelstand raten wir davon ab.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie baue ich einen WeChat-Bot mit einem lokalen LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'WeChatFerry (Windows) zum Einhaken in den WeChat-PC-Client nutzen, über die lokale HTTP-API mit Ollama verbinden und Nachrichten an ein Qwen3-Modell weiterleiten. Einrichtungszeit: etwa 30–60 Minuten mit Python-Kenntnissen.',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -941,26 +1041,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          { q: 'このWeChatボットはMacでも動きますか？', a: 'ネイティブには動きません。WeChatFerryはWindowsを必要とし、DLLインジェクションを介してWindows版WeChat PCクライアントにフックします。macOSユーザーは仮想マシン（ParallelsやVMware Fusion）でWindowsを動かすことでこの構成を利用できますが、複雑さが増します。' },
-          { q: 'ボットを使うとWeChatアカウントが停止されますか？', a: 'WeChatの利用規約は自動化ボットを禁止しています。自動化ツールの使用が検出されたアカウントは、一時停止または永久停止のリスクがあります。低頻度の個人的な生産性向上目的にのみ使用してください——アカウントリスクは実在し、これは公式に承認されたインテグレーションではありません。' },
-          { q: '中国語のWeChatメッセージに最適なOllamaモデルは？', a: 'ほとんどのユーザーにとって、Qwen3 8Bが品質と速度の最良のバランスです——中国語の理解力が高く、約4.7GB（Q4）のモデルは8GBのVRAMに収まるか、16GBのCPU RAMで許容できる速度で動作します。' },
-          { q: 'ボットはグループチャットに対応できますか？', a: 'はい。WeChatFerryはルームIDとともにグループメッセージを公開します。`msg.roomid`でボットが応答すべきグループをフィルタリングし、すべてのグループメッセージに反応しないよう「@ai」などの明示的なトリガーキーワードを設定してください。' },
-          { q: 'このプロジェクトに実際に必要なハードウェアは？', a: '軽量なQwen3 3Bアシスタントであれば、16GB RAMを備えた現行のWindows PCで十分です——GMKtec G3 Plusのような安価なN150ミニPCがこれをカバーします。Qwen3 8Bを快適に応答させ、24時間常時稼働させるには、32GB RAMとRyzen級CPUがより良い投資です——このティアで推奨するのはMinisforum UM890 Pro（32GB構成で約15万〜18万円）です。' },
-          { q: 'Minisforum UM890 ProはWeChatボットにはオーバースペックですか？', a: 'Qwen3 3BによるシンプルなWeChatボットには、その通りオーバースペックです——安価なN150ボックスで十分で、価格もおよそ3分の1です。32〜96GBのRAM、複数のモデル、RAG、そしてボットと並行する他のサービスを備えた汎用ローカルAIサーバーとしては、UM890 Proの方がはるかに正当化しやすくなります。' },
-          { q: 'ローカルLLM推論を使えばWeChatはプライベートになりますか？', a: 'いいえ、この区別は重要です。ローカル推論とは、メッセージ内容がサードパーティのクラウドLLMプロバイダーに処理のため送信されないことを意味します。それによってWeChat自体がプライベートな通信プラットフォームになるわけではありません——AIモデルがどこで動作していても、WeChatは引き続き自社のTencentインフラ上で動作します。' },
-          { q: 'これは公式のWeChatインテグレーションですか？', a: 'いいえ。WeChatFerryは非公式な自動化・インテグレーション手法であり、公式のWeChatボットAPIではありません。慎重に使用し、メッセージ量を低く個人的な範囲に抑え、あらゆる非公式自動化に伴うアカウントリスクを理解した上で利用してください。' },
-        ],
+            { q: 'このWeChatボットはMacでも動きますか？', a: 'ネイティブには動きません。WeChatFerryはWindowsを必要とし、DLLインジェクションを介してWindows版WeChat PCクライアントにフックします。macOSユーザーは仮想マシン（ParallelsやVMware Fusion）でWindowsを動かすことでこの構成を利用できますが、複雑さが増します。' },
+            { q: 'ボットを使うとWeChatアカウントが停止されますか？', a: 'WeChatの利用規約は自動化ボットを禁止しています。自動化ツールの使用が検出されたアカウントは、一時停止または永久停止のリスクがあります。低頻度の個人的な生産性向上目的にのみ使用してください——アカウントリスクは実在し、これは公式に承認されたインテグレーションではありません。' },
+            { q: '中国語のWeChatメッセージに最適なOllamaモデルは？', a: 'ほとんどのユーザーにとって、Qwen3 8Bが品質と速度の最良のバランスです——中国語の理解力が高く、約4.7GB（Q4）のモデルは8GBのVRAMに収まるか、16GBのCPU RAMで許容できる速度で動作します。' },
+            { q: 'ボットはグループチャットに対応できますか？', a: 'はい。WeChatFerryはルームIDとともにグループメッセージを公開します。`msg.roomid`でボットが応答すべきグループをフィルタリングし、すべてのグループメッセージに反応しないよう「@ai」などの明示的なトリガーキーワードを設定してください。' },
+            { q: 'このプロジェクトに実際に必要なハードウェアは？', a: '軽量なQwen3 3Bアシスタントであれば、16GB RAMを備えた現行のWindows PCで十分です——GMKtec G3 Plusのような安価なN150ミニPCがこれをカバーします。Qwen3 8Bを快適に応答させ、24時間常時稼働させるには、32GB RAMとRyzen級CPUがより良い投資です——このティアで推奨するのはMinisforum UM890 Pro（32GB構成で約15万〜18万円）です。' },
+            { q: 'Minisforum UM890 ProはWeChatボットにはオーバースペックですか？', a: 'Qwen3 3BによるシンプルなWeChatボットには、その通りオーバースペックです——安価なN150ボックスで十分で、価格もおよそ3分の1です。32〜96GBのRAM、複数のモデル、RAG、そしてボットと並行する他のサービスを備えた汎用ローカルAIサーバーとしては、UM890 Proの方がはるかに正当化しやすくなります。' },
+            { q: 'ローカルLLM推論を使えばWeChatはプライベートになりますか？', a: 'いいえ、この区別は重要です。ローカル推論とは、メッセージ内容がサードパーティのクラウドLLMプロバイダーに処理のため送信されないことを意味します。それによってWeChat自体がプライベートな通信プラットフォームになるわけではありません——AIモデルがどこで動作していても、WeChatは引き続き自社のTencentインフラ上で動作します。' },
+            { q: 'これは公式のWeChatインテグレーションですか？', a: 'いいえ。WeChatFerryは非公式な自動化・インテグレーション手法であり、公式のWeChatボットAPIではありません。慎重に使用し、メッセージ量を低く個人的な範囲に抑え、あらゆる非公式自動化に伴うアカウントリスクを理解した上で利用してください。' },
+            { q: 'ローカルLLMでWeChatボットを構築するには？', a: 'WeChatFerry（Windows）でWeChat PCクライアントにフックし、ローカルのHTTP API経由でOllamaに接続し、メッセージをQwen3モデルに転送します。セットアップ時間はPythonの知識があれば約30〜60分です。' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'ローカルLLMでWeChatボットを構築するには？', acceptedAnswer: { '@type': 'Answer', text: 'WeChatFerry（Windows）でWeChat PCクライアントにフックし、ローカルのHTTP API経由でOllamaに接続し、メッセージをQwen3モデルに転送します。セットアップ時間はPythonの知識があれば約30〜60分です。' } },
-        { '@type': 'Question', name: 'このWeChatボットはMacでも動きますか？', acceptedAnswer: { '@type': 'Answer', text: 'ネイティブには動きません。WeChatFerryはWindowsを必要とします。macOSユーザーは仮想マシン（ParallelsやVMware Fusion）でWindowsを動かすことができます。' } },
-        { '@type': 'Question', name: '中国語のWeChatメッセージに最適なモデルは？', acceptedAnswer: { '@type': 'Answer', text: 'ほとんどのユーザーにとって、Qwen3 8Bが品質と速度の最良のバランスです——中国語の理解力が高く、約4.7GB（Q4）で8GBのVRAMに収まります。' } },
-        { '@type': 'Question', name: 'このプロジェクトに実際に必要なハードウェアは？', acceptedAnswer: { '@type': 'Answer', text: '軽量なQwen3 3Bアシスタントには安価なN150ミニPCで十分です。Qwen3 8Bと24時間常時稼働には、Minisforum UM890 Proのような32GB構成のRyzen級マシン（約15万〜18万円）がより良い投資です。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'このWeChatボットはMacでも動きますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ネイティブには動きません。WeChatFerryはWindowsを必要とし、DLLインジェクションを介してWindows版WeChat PCクライアントにフックします。macOSユーザーは仮想マシン（ParallelsやVMware Fusion）でWindowsを動かすことでこの構成を利用できますが、複雑さが増します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ボットを使うとWeChatアカウントが停止されますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'WeChatの利用規約は自動化ボットを禁止しています。自動化ツールの使用が検出されたアカウントは、一時停止または永久停止のリスクがあります。低頻度の個人的な生産性向上目的にのみ使用してください——アカウントリスクは実在し、これは公式に承認されたインテグレーションではありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国語のWeChatメッセージに最適なOllamaモデルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどのユーザーにとって、Qwen3 8Bが品質と速度の最良のバランスです——中国語の理解力が高く、約4.7GB（Q4）のモデルは8GBのVRAMに収まるか、16GBのCPU RAMで許容できる速度で動作します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ボットはグループチャットに対応できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。WeChatFerryはルームIDとともにグループメッセージを公開します。`msg.roomid`でボットが応答すべきグループをフィルタリングし、すべてのグループメッセージに反応しないよう「@ai」などの明示的なトリガーキーワードを設定してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'このプロジェクトに実際に必要なハードウェアは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '軽量なQwen3 3Bアシスタントであれば、16GB RAMを備えた現行のWindows PCで十分です——GMKtec G3 Plusのような安価なN150ミニPCがこれをカバーします。Qwen3 8Bを快適に応答させ、24時間常時稼働させるには、32GB RAMとRyzen級CPUがより良い投資です——このティアで推奨するのはMinisforum UM890 Pro（32GB構成で約15万〜18万円）です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Minisforum UM890 ProはWeChatボットにはオーバースペックですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 3BによるシンプルなWeChatボットには、その通りオーバースペックです——安価なN150ボックスで十分で、価格もおよそ3分の1です。32〜96GBのRAM、複数のモデル、RAG、そしてボットと並行する他のサービスを備えた汎用ローカルAIサーバーとしては、UM890 Proの方がはるかに正当化しやすくなります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM推論を使えばWeChatはプライベートになりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ、この区別は重要です。ローカル推論とは、メッセージ内容がサードパーティのクラウドLLMプロバイダーに処理のため送信されないことを意味します。それによってWeChat自体がプライベートな通信プラットフォームになるわけではありません——AIモデルがどこで動作していても、WeChatは引き続き自社のTencentインフラ上で動作します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'これは公式のWeChatインテグレーションですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。WeChatFerryは非公式な自動化・インテグレーション手法であり、公式のWeChatボットAPIではありません。慎重に使用し、メッセージ量を低く個人的な範囲に抑え、あらゆる非公式自動化に伴うアカウントリスクを理解した上で利用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMでWeChatボットを構築するには？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'WeChatFerry（Windows）でWeChat PCクライアントにフックし、ローカルのHTTP API経由でOllamaに接続し、メッセージをQwen3モデルに転送します。セットアップ時間はPythonの知識があれば約30〜60分です。',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -1161,26 +1330,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          { q: '这个微信机器人能在Mac上运行吗？', a: '无法原生运行。WeChatFerry需要Windows环境，通过DLL注入挂接Windows版微信PC客户端。macOS用户可以在虚拟机（Parallels或VMware Fusion）中运行Windows来使用这套方案，但会增加复杂度。' },
-          { q: '使用机器人会导致我的微信账号被封吗？', a: '微信服务条款禁止自动化机器人。被检测到使用自动化工具的账号存在临时限制或永久封禁的风险。请仅在低消息量的个人生产力场景下使用——账号风险是真实存在的，这不是一项官方认可的集成。' },
-          { q: '中文微信消息最适合用哪个Ollama模型？', a: '对大多数用户而言，Qwen3 8B在质量和速度之间取得了最佳平衡——中文理解能力强，约4.7GB（Q4）的模型能装入8GB显存，或在16GB CPU内存上以尚可接受的速度运行。' },
-          { q: '机器人能处理群聊吗？', a: '可以。WeChatFerry会连同房间ID一起暴露群消息。通过`msg.roomid`过滤机器人应该在哪些群回复，并设置一个明确的触发关键词（如"@ai"），避免它回复群里的每一条消息。' },
-          { q: '这个项目实际需要什么硬件？', a: '如果只是轻量的Qwen3 3B助手，任何配备16GB内存的现代Windows电脑就足够——GMKtec G3 Plus这类预算款N150迷你主机（约$140–200）就能满足。要让Qwen3 8B运行流畅并实现24/7常驻运行，32GB内存加Ryzen级CPU是更好的投入——这个档位我们推荐Minisforum UM890 Pro（32GB配置约$649）。' },
-          { q: 'Minisforum UM890 Pro对一个微信机器人来说是不是配置过高？', a: '如果只是运行Qwen3 3B的简单微信机器人，确实如此——预算款N150主机就够用，价格大约只是它的三分之一。但如果目标是一台配备32–96GB内存、运行多个模型、支持RAG，并在机器人之外运行其他服务的通用本地AI服务器，UM890 Pro就容易站得住脚得多。' },
-          { q: '本地LLM推理能让微信变得私密吗？', a: '不能，这个区别很重要。本地推理意味着你的消息内容不会被发送给第三方云LLM提供商进行处理。它并不会让微信本身变成一个私密的通信平台——无论AI模型运行在哪里，微信依然运行在腾讯自己的基础设施之上。' },
-          { q: '这是官方的微信集成方式吗？', a: '不是。WeChatFerry是一种非官方的自动化/集成方案，不是官方的微信机器人API。请谨慎使用，将消息量控制在较低且个人化的范围内，并了解任何非官方自动化方案都伴随着账号风险。' },
-        ],
+            { q: '这个微信机器人能在Mac上运行吗？', a: '无法原生运行。WeChatFerry需要Windows环境，通过DLL注入挂接Windows版微信PC客户端。macOS用户可以在虚拟机（Parallels或VMware Fusion）中运行Windows来使用这套方案，但会增加复杂度。' },
+            { q: '使用机器人会导致我的微信账号被封吗？', a: '微信服务条款禁止自动化机器人。被检测到使用自动化工具的账号存在临时限制或永久封禁的风险。请仅在低消息量的个人生产力场景下使用——账号风险是真实存在的，这不是一项官方认可的集成。' },
+            { q: '中文微信消息最适合用哪个Ollama模型？', a: '对大多数用户而言，Qwen3 8B在质量和速度之间取得了最佳平衡——中文理解能力强，约4.7GB（Q4）的模型能装入8GB显存，或在16GB CPU内存上以尚可接受的速度运行。' },
+            { q: '机器人能处理群聊吗？', a: '可以。WeChatFerry会连同房间ID一起暴露群消息。通过`msg.roomid`过滤机器人应该在哪些群回复，并设置一个明确的触发关键词（如"@ai"），避免它回复群里的每一条消息。' },
+            { q: '这个项目实际需要什么硬件？', a: '如果只是轻量的Qwen3 3B助手，任何配备16GB内存的现代Windows电脑就足够——GMKtec G3 Plus这类预算款N150迷你主机（约$140–200）就能满足。要让Qwen3 8B运行流畅并实现24/7常驻运行，32GB内存加Ryzen级CPU是更好的投入——这个档位我们推荐Minisforum UM890 Pro（32GB配置约$649）。' },
+            { q: 'Minisforum UM890 Pro对一个微信机器人来说是不是配置过高？', a: '如果只是运行Qwen3 3B的简单微信机器人，确实如此——预算款N150主机就够用，价格大约只是它的三分之一。但如果目标是一台配备32–96GB内存、运行多个模型、支持RAG，并在机器人之外运行其他服务的通用本地AI服务器，UM890 Pro就容易站得住脚得多。' },
+            { q: '本地LLM推理能让微信变得私密吗？', a: '不能，这个区别很重要。本地推理意味着你的消息内容不会被发送给第三方云LLM提供商进行处理。它并不会让微信本身变成一个私密的通信平台——无论AI模型运行在哪里，微信依然运行在腾讯自己的基础设施之上。' },
+            { q: '这是官方的微信集成方式吗？', a: '不是。WeChatFerry是一种非官方的自动化/集成方案，不是官方的微信机器人API。请谨慎使用，将消息量控制在较低且个人化的范围内，并了解任何非官方自动化方案都伴随着账号风险。' },
+            { q: '如何用本地LLM搭建微信机器人？', a: '使用WeChatFerry（Windows）挂接微信PC客户端，通过本地HTTP API连接Ollama，并将消息转发给Qwen3模型。使用Python的话，搭建时间大约30–60分钟。' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: '如何用本地LLM搭建微信机器人？', acceptedAnswer: { '@type': 'Answer', text: '使用WeChatFerry（Windows）挂接微信PC客户端，通过本地HTTP API连接Ollama，并将消息转发给Qwen3模型。使用Python的话，搭建时间大约30–60分钟。' } },
-        { '@type': 'Question', name: '这个微信机器人能在Mac上运行吗？', acceptedAnswer: { '@type': 'Answer', text: '无法原生运行。WeChatFerry需要Windows环境。macOS用户可以在虚拟机（Parallels或VMware Fusion）中运行Windows。' } },
-        { '@type': 'Question', name: '中文微信消息最适合用哪个模型？', acceptedAnswer: { '@type': 'Answer', text: '对大多数用户而言，Qwen3 8B在质量和速度之间取得了最佳平衡——中文理解能力强，约4.7GB（Q4），能装入8GB显存。' } },
-        { '@type': 'Question', name: '这个项目实际需要什么硬件？', acceptedAnswer: { '@type': 'Answer', text: '预算款N150迷你主机（约$140–200）足以支撑轻量的Qwen3 3B助手。要运行Qwen3 8B并实现24/7常驻运行，Minisforum UM890 Pro这类Ryzen级主机（32GB配置约$649）是更好的投入。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '这个微信机器人能在Mac上运行吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '无法原生运行。WeChatFerry需要Windows环境，通过DLL注入挂接Windows版微信PC客户端。macOS用户可以在虚拟机（Parallels或VMware Fusion）中运行Windows来使用这套方案，但会增加复杂度。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '使用机器人会导致我的微信账号被封吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '微信服务条款禁止自动化机器人。被检测到使用自动化工具的账号存在临时限制或永久封禁的风险。请仅在低消息量的个人生产力场景下使用——账号风险是真实存在的，这不是一项官方认可的集成。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中文微信消息最适合用哪个Ollama模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对大多数用户而言，Qwen3 8B在质量和速度之间取得了最佳平衡——中文理解能力强，约4.7GB（Q4）的模型能装入8GB显存，或在16GB CPU内存上以尚可接受的速度运行。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '机器人能处理群聊吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。WeChatFerry会连同房间ID一起暴露群消息。通过`msg.roomid`过滤机器人应该在哪些群回复，并设置一个明确的触发关键词（如"@ai"），避免它回复群里的每一条消息。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '这个项目实际需要什么硬件？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '如果只是轻量的Qwen3 3B助手，任何配备16GB内存的现代Windows电脑就足够——GMKtec G3 Plus这类预算款N150迷你主机（约$140–200）就能满足。要让Qwen3 8B运行流畅并实现24/7常驻运行，32GB内存加Ryzen级CPU是更好的投入——这个档位我们推荐Minisforum UM890 Pro（32GB配置约$649）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Minisforum UM890 Pro对一个微信机器人来说是不是配置过高？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '如果只是运行Qwen3 3B的简单微信机器人，确实如此——预算款N150主机就够用，价格大约只是它的三分之一。但如果目标是一台配备32–96GB内存、运行多个模型、支持RAG，并在机器人之外运行其他服务的通用本地AI服务器，UM890 Pro就容易站得住脚得多。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM推理能让微信变得私密吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能，这个区别很重要。本地推理意味着你的消息内容不会被发送给第三方云LLM提供商进行处理。它并不会让微信本身变成一个私密的通信平台——无论AI模型运行在哪里，微信依然运行在腾讯自己的基础设施之上。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '这是官方的微信集成方式吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不是。WeChatFerry是一种非官方的自动化/集成方案，不是官方的微信机器人API。请谨慎使用，将消息量控制在较低且个人化的范围内，并了解任何非官方自动化方案都伴随着账号风险。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何用本地LLM搭建微信机器人？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '使用WeChatFerry（Windows）挂接微信PC客户端，通过本地HTTP API连接Ollama，并将消息转发给Qwen3模型。使用Python的话，搭建时间大约30–60分钟。',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -1381,26 +1619,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          { q: '¿Este bot de WeChat funciona en Mac?', a: 'No de forma nativa. WeChatFerry requiere Windows y se conecta al cliente de WeChat para Windows mediante inyección de DLL. Los usuarios de macOS pueden ejecutar Windows en una máquina virtual (Parallels o VMware Fusion) para usar esta configuración, con complejidad añadida.' },
-          { q: '¿Puede mi cuenta de WeChat ser bloqueada por usar un bot?', a: 'Los términos de servicio de WeChat prohíben los bots automatizados. Las cuentas detectadas usando herramientas de automatización corren el riesgo de suspensión temporal o bloqueo permanente. Úsalo solo con bajo volumen de mensajes para productividad personal — el riesgo de cuenta es real, y esto no es una integración oficialmente sancionada.' },
-          { q: '¿Cuál es el mejor modelo de Ollama para mensajes de WeChat en chino?', a: 'Para la mayoría de usuarios, Qwen3 8B ofrece el mejor equilibrio entre calidad y velocidad — buena comprensión del chino, y el modelo de unos 4,7 GB (Q4) cabe en 8 GB de VRAM o funciona a un ritmo aceptable con 16 GB de RAM en CPU.' },
-          { q: '¿Puede el bot gestionar chats grupales?', a: 'Sí. WeChatFerry expone los mensajes de grupo junto con el ID de la sala. Filtra mediante `msg.roomid` en qué grupos debe responder el bot, y exige una palabra clave de activación explícita (p. ej. "@ai") para que no responda a cada mensaje del grupo.' },
-          { q: '¿Qué hardware necesito realmente para este proyecto?', a: 'Para un asistente ligero con Qwen3 3B, cualquier PC Windows moderno con 16 GB de RAM es suficiente — un mini PC N150 económico como el GMKtec G3 Plus (desde ~170 €/$140–200) cubre esto. Para que Qwen3 8B se sienta ágil y para funcionamiento 24/7 permanente, 32 GB de RAM y una CPU de clase Ryzen son mejor inversión — nuestra elección para ese nivel es el Minisforum UM890 Pro (desde ~470 €/$439–649).' },
-          { q: '¿Es excesivo el Minisforum UM890 Pro para un bot de WeChat?', a: 'Para un bot de WeChat sencillo con Qwen3 3B, sí — un equipo N150 económico basta y cuesta aproximadamente un tercio. Para un servidor de IA local de propósito general con 32–96 GB de RAM, varios modelos, RAG y otros servicios además del bot, el UM890 Pro es mucho más fácil de justificar.' },
-          { q: '¿La inferencia de LLM local hace que WeChat sea privado?', a: 'No, y esta distinción es importante. La inferencia local significa que el contenido de tus mensajes no se envía a un proveedor de LLM en la nube de terceros para su procesamiento. No convierte a WeChat en sí en una plataforma de comunicación privada — WeChat sigue funcionando a través de su propia infraestructura de Tencent, sin importar dónde se ejecute el modelo de IA.' },
-          { q: '¿Es esta una integración oficial de WeChat?', a: 'No. WeChatFerry es un enfoque de automatización/integración no oficial, no una API oficial de bots de WeChat. Úsalo con precaución, mantén el volumen de mensajes bajo y personal, y sé consciente del riesgo de cuenta que conlleva cualquier automatización no oficial.' },
-        ],
+            { q: '¿Este bot de WeChat funciona en Mac?', a: 'No de forma nativa. WeChatFerry requiere Windows y se conecta al cliente de WeChat para Windows mediante inyección de DLL. Los usuarios de macOS pueden ejecutar Windows en una máquina virtual (Parallels o VMware Fusion) para usar esta configuración, con complejidad añadida.' },
+            { q: '¿Puede mi cuenta de WeChat ser bloqueada por usar un bot?', a: 'Los términos de servicio de WeChat prohíben los bots automatizados. Las cuentas detectadas usando herramientas de automatización corren el riesgo de suspensión temporal o bloqueo permanente. Úsalo solo con bajo volumen de mensajes para productividad personal — el riesgo de cuenta es real, y esto no es una integración oficialmente sancionada.' },
+            { q: '¿Cuál es el mejor modelo de Ollama para mensajes de WeChat en chino?', a: 'Para la mayoría de usuarios, Qwen3 8B ofrece el mejor equilibrio entre calidad y velocidad — buena comprensión del chino, y el modelo de unos 4,7 GB (Q4) cabe en 8 GB de VRAM o funciona a un ritmo aceptable con 16 GB de RAM en CPU.' },
+            { q: '¿Puede el bot gestionar chats grupales?', a: 'Sí. WeChatFerry expone los mensajes de grupo junto con el ID de la sala. Filtra mediante `msg.roomid` en qué grupos debe responder el bot, y exige una palabra clave de activación explícita (p. ej. "@ai") para que no responda a cada mensaje del grupo.' },
+            { q: '¿Qué hardware necesito realmente para este proyecto?', a: 'Para un asistente ligero con Qwen3 3B, cualquier PC Windows moderno con 16 GB de RAM es suficiente — un mini PC N150 económico como el GMKtec G3 Plus (desde ~170 €/$140–200) cubre esto. Para que Qwen3 8B se sienta ágil y para funcionamiento 24/7 permanente, 32 GB de RAM y una CPU de clase Ryzen son mejor inversión — nuestra elección para ese nivel es el Minisforum UM890 Pro (desde ~470 €/$439–649).' },
+            { q: '¿Es excesivo el Minisforum UM890 Pro para un bot de WeChat?', a: 'Para un bot de WeChat sencillo con Qwen3 3B, sí — un equipo N150 económico basta y cuesta aproximadamente un tercio. Para un servidor de IA local de propósito general con 32–96 GB de RAM, varios modelos, RAG y otros servicios además del bot, el UM890 Pro es mucho más fácil de justificar.' },
+            { q: '¿La inferencia de LLM local hace que WeChat sea privado?', a: 'No, y esta distinción es importante. La inferencia local significa que el contenido de tus mensajes no se envía a un proveedor de LLM en la nube de terceros para su procesamiento. No convierte a WeChat en sí en una plataforma de comunicación privada — WeChat sigue funcionando a través de su propia infraestructura de Tencent, sin importar dónde se ejecute el modelo de IA.' },
+            { q: '¿Es esta una integración oficial de WeChat?', a: 'No. WeChatFerry es un enfoque de automatización/integración no oficial, no una API oficial de bots de WeChat. Úsalo con precaución, mantén el volumen de mensajes bajo y personal, y sé consciente del riesgo de cuenta que conlleva cualquier automatización no oficial.' },
+            { q: '¿Cómo creo un bot de WeChat con un LLM local?', a: 'Usa WeChatFerry (Windows) para conectarte al cliente de WeChat, conéctalo a Ollama mediante su API HTTP local y enruta los mensajes a un modelo Qwen3. La configuración toma entre 30 y 60 minutos con Python.' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: '¿Cómo creo un bot de WeChat con un LLM local?', acceptedAnswer: { '@type': 'Answer', text: 'Usa WeChatFerry (Windows) para conectarte al cliente de WeChat, conéctalo a Ollama mediante su API HTTP local y enruta los mensajes a un modelo Qwen3. La configuración toma entre 30 y 60 minutos con Python.' } },
-        { '@type': 'Question', name: '¿Este bot de WeChat funciona en Mac?', acceptedAnswer: { '@type': 'Answer', text: 'No de forma nativa. WeChatFerry requiere Windows. Los usuarios de macOS pueden ejecutar Windows en una máquina virtual (Parallels o VMware Fusion).' } },
-        { '@type': 'Question', name: '¿Cuál es el mejor modelo para mensajes de WeChat en chino?', acceptedAnswer: { '@type': 'Answer', text: 'Para la mayoría de usuarios, Qwen3 8B ofrece el mejor equilibrio entre calidad y velocidad — buena comprensión del chino, unos 4,7 GB (Q4), cabe en 8 GB de VRAM.' } },
-        { '@type': 'Question', name: '¿Qué hardware necesito realmente para este proyecto?', acceptedAnswer: { '@type': 'Answer', text: 'Un mini PC N150 económico (desde unos 170 €/$140–200) es suficiente para un asistente ligero con Qwen3 3B. Para Qwen3 8B y funcionamiento 24/7 permanente, un equipo de clase Ryzen como el Minisforum UM890 Pro (desde unos 470 €/$439–649) es mejor inversión.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Este bot de WeChat funciona en Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No de forma nativa. WeChatFerry requiere Windows y se conecta al cliente de WeChat para Windows mediante inyección de DLL. Los usuarios de macOS pueden ejecutar Windows en una máquina virtual (Parallels o VMware Fusion) para usar esta configuración, con complejidad añadida.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puede mi cuenta de WeChat ser bloqueada por usar un bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los términos de servicio de WeChat prohíben los bots automatizados. Las cuentas detectadas usando herramientas de automatización corren el riesgo de suspensión temporal o bloqueo permanente. Úsalo solo con bajo volumen de mensajes para productividad personal — el riesgo de cuenta es real, y esto no es una integración oficialmente sancionada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor modelo de Ollama para mensajes de WeChat en chino?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para la mayoría de usuarios, Qwen3 8B ofrece el mejor equilibrio entre calidad y velocidad — buena comprensión del chino, y el modelo de unos 4,7 GB (Q4) cabe en 8 GB de VRAM o funciona a un ritmo aceptable con 16 GB de RAM en CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puede el bot gestionar chats grupales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. WeChatFerry expone los mensajes de grupo junto con el ID de la sala. Filtra mediante `msg.roomid` en qué grupos debe responder el bot, y exige una palabra clave de activación explícita (p. ej. "@ai") para que no responda a cada mensaje del grupo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué hardware necesito realmente para este proyecto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para un asistente ligero con Qwen3 3B, cualquier PC Windows moderno con 16 GB de RAM es suficiente — un mini PC N150 económico como el GMKtec G3 Plus (desde ~170 €/$140–200) cubre esto. Para que Qwen3 8B se sienta ágil y para funcionamiento 24/7 permanente, 32 GB de RAM y una CPU de clase Ryzen son mejor inversión — nuestra elección para ese nivel es el Minisforum UM890 Pro (desde ~470 €/$439–649).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es excesivo el Minisforum UM890 Pro para un bot de WeChat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para un bot de WeChat sencillo con Qwen3 3B, sí — un equipo N150 económico basta y cuesta aproximadamente un tercio. Para un servidor de IA local de propósito general con 32–96 GB de RAM, varios modelos, RAG y otros servicios además del bot, el UM890 Pro es mucho más fácil de justificar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿La inferencia de LLM local hace que WeChat sea privado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No, y esta distinción es importante. La inferencia local significa que el contenido de tus mensajes no se envía a un proveedor de LLM en la nube de terceros para su procesamiento. No convierte a WeChat en sí en una plataforma de comunicación privada — WeChat sigue funcionando a través de su propia infraestructura de Tencent, sin importar dónde se ejecute el modelo de IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es esta una integración oficial de WeChat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. WeChatFerry es un enfoque de automatización/integración no oficial, no una API oficial de bots de WeChat. Úsalo con precaución, mantén el volumen de mensajes bajo y personal, y sé consciente del riesgo de cuenta que conlleva cualquier automatización no oficial.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo creo un bot de WeChat con un LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa WeChatFerry (Windows) para conectarte al cliente de WeChat, conéctalo a Ollama mediante su API HTTP local y enruta los mensajes a un modelo Qwen3. La configuración toma entre 30 y 60 minutos con Python.',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -1601,26 +1908,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          { q: '이 위챗 봇은 Mac에서도 동작하나요?', a: '네이티브로는 동작하지 않습니다. WeChatFerry는 Windows가 필요하며 DLL 인젝션을 통해 Windows용 위챗 PC 클라이언트에 연결합니다. macOS 사용자는 가상머신(Parallels 또는 VMware Fusion)에서 Windows를 실행하여 이 구성을 사용할 수 있지만 복잡성이 추가됩니다.' },
-          { q: '봇을 사용하면 위챗 계정이 정지될 수 있나요?', a: '위챗 이용약관은 자동화된 봇을 금지합니다. 자동화 도구 사용이 탐지된 계정은 일시 정지나 영구 차단의 위험이 있습니다. 낮은 메시지량의 개인 생산성 향상 용도로만 사용하세요 — 계정 위험은 실재하며, 이는 공식적으로 승인된 통합이 아닙니다.' },
-          { q: '중국어 위챗 메시지에 가장 적합한 Ollama 모델은?', a: '대부분의 사용자에게는 Qwen3 8B가 품질과 속도의 최적 균형을 제공합니다 — 중국어 이해력이 뛰어나며, 약 4.7GB(Q4)의 모델은 8GB VRAM에 들어가거나 16GB CPU RAM에서 받아들일 만한 속도로 동작합니다.' },
-          { q: '봇이 그룹 채팅을 처리할 수 있나요?', a: '네. WeChatFerry는 방 ID와 함께 그룹 메시지를 노출합니다. `msg.roomid`로 봇이 응답해야 할 그룹을 필터링하고, 모든 그룹 메시지에 반응하지 않도록 명시적인 트리거 키워드(예: "@ai")를 요구하세요.' },
-          { q: '이 프로젝트에 실제로 필요한 하드웨어는 무엇인가요?', a: '가벼운 Qwen3 3B 비서라면 16GB RAM을 갖춘 현행 Windows PC로 충분합니다 — GMKtec G3 Plus 같은 저가형 N150 미니PC(약 $140–200)가 이를 충족합니다. Qwen3 8B가 반응성 있게 느껴지고 24/7 상시 가동을 원한다면, 32GB RAM과 Ryzen급 CPU가 더 나은 투자입니다 — 이 등급에서 저희의 선택은 Minisforum UM890 Pro(32GB 구성 기준 약 $649)입니다.' },
-          { q: 'Minisforum UM890 Pro는 위챗 봇에 과잉 사양인가요?', a: 'Qwen3 3B로 동작하는 단순한 위챗 봇이라면 그렇습니다 — 저가형 N150 기기로 충분하며 가격도 약 3분의 1입니다. 32~96GB RAM, 여러 모델, RAG, 봇 외 다른 서비스를 갖춘 범용 로컬 AI 서버로는 UM890 Pro가 훨씬 정당화하기 쉽습니다.' },
-          { q: '로컬 LLM 추론이 위챗을 프라이빗하게 만들어주나요?', a: '아닙니다. 그리고 이 구분은 중요합니다. 로컬 추론은 메시지 내용이 처리를 위해 제3자 클라우드 LLM 제공업체로 전송되지 않는다는 것을 의미합니다. 이것이 위챗 자체를 프라이빗 통신 플랫폼으로 만들어주지는 않습니다 — AI 모델이 어디서 동작하든 위챗은 여전히 텐센트 자체 인프라를 통해 동작합니다.' },
-          { q: '이것은 공식 위챗 통합인가요?', a: '아닙니다. WeChatFerry는 비공식 자동화/통합 방식이며 공식 위챗 봇 API가 아닙니다. 신중하게 사용하고, 메시지량을 낮고 개인적인 수준으로 유지하며, 모든 비공식 자동화에 따르는 계정 위험을 이해하세요.' },
-        ],
+            { q: '이 위챗 봇은 Mac에서도 동작하나요?', a: '네이티브로는 동작하지 않습니다. WeChatFerry는 Windows가 필요하며 DLL 인젝션을 통해 Windows용 위챗 PC 클라이언트에 연결합니다. macOS 사용자는 가상머신(Parallels 또는 VMware Fusion)에서 Windows를 실행하여 이 구성을 사용할 수 있지만 복잡성이 추가됩니다.' },
+            { q: '봇을 사용하면 위챗 계정이 정지될 수 있나요?', a: '위챗 이용약관은 자동화된 봇을 금지합니다. 자동화 도구 사용이 탐지된 계정은 일시 정지나 영구 차단의 위험이 있습니다. 낮은 메시지량의 개인 생산성 향상 용도로만 사용하세요 — 계정 위험은 실재하며, 이는 공식적으로 승인된 통합이 아닙니다.' },
+            { q: '중국어 위챗 메시지에 가장 적합한 Ollama 모델은?', a: '대부분의 사용자에게는 Qwen3 8B가 품질과 속도의 최적 균형을 제공합니다 — 중국어 이해력이 뛰어나며, 약 4.7GB(Q4)의 모델은 8GB VRAM에 들어가거나 16GB CPU RAM에서 받아들일 만한 속도로 동작합니다.' },
+            { q: '봇이 그룹 채팅을 처리할 수 있나요?', a: '네. WeChatFerry는 방 ID와 함께 그룹 메시지를 노출합니다. `msg.roomid`로 봇이 응답해야 할 그룹을 필터링하고, 모든 그룹 메시지에 반응하지 않도록 명시적인 트리거 키워드(예: "@ai")를 요구하세요.' },
+            { q: '이 프로젝트에 실제로 필요한 하드웨어는 무엇인가요?', a: '가벼운 Qwen3 3B 비서라면 16GB RAM을 갖춘 현행 Windows PC로 충분합니다 — GMKtec G3 Plus 같은 저가형 N150 미니PC(약 $140–200)가 이를 충족합니다. Qwen3 8B가 반응성 있게 느껴지고 24/7 상시 가동을 원한다면, 32GB RAM과 Ryzen급 CPU가 더 나은 투자입니다 — 이 등급에서 저희의 선택은 Minisforum UM890 Pro(32GB 구성 기준 약 $649)입니다.' },
+            { q: 'Minisforum UM890 Pro는 위챗 봇에 과잉 사양인가요?', a: 'Qwen3 3B로 동작하는 단순한 위챗 봇이라면 그렇습니다 — 저가형 N150 기기로 충분하며 가격도 약 3분의 1입니다. 32~96GB RAM, 여러 모델, RAG, 봇 외 다른 서비스를 갖춘 범용 로컬 AI 서버로는 UM890 Pro가 훨씬 정당화하기 쉽습니다.' },
+            { q: '로컬 LLM 추론이 위챗을 프라이빗하게 만들어주나요?', a: '아닙니다. 그리고 이 구분은 중요합니다. 로컬 추론은 메시지 내용이 처리를 위해 제3자 클라우드 LLM 제공업체로 전송되지 않는다는 것을 의미합니다. 이것이 위챗 자체를 프라이빗 통신 플랫폼으로 만들어주지는 않습니다 — AI 모델이 어디서 동작하든 위챗은 여전히 텐센트 자체 인프라를 통해 동작합니다.' },
+            { q: '이것은 공식 위챗 통합인가요?', a: '아닙니다. WeChatFerry는 비공식 자동화/통합 방식이며 공식 위챗 봇 API가 아닙니다. 신중하게 사용하고, 메시지량을 낮고 개인적인 수준으로 유지하며, 모든 비공식 자동화에 따르는 계정 위험을 이해하세요.' },
+            { q: '로컬 LLM으로 위챗 봇을 만들려면 어떻게 해야 하나요?', a: 'WeChatFerry(Windows)로 위챗 PC 클라이언트에 연결하고, 로컬 HTTP API를 통해 Ollama에 연결한 뒤, 메시지를 Qwen3 모델로 전달합니다. Python 사용 시 설정에 약 30~60분이 걸립니다.' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: '로컬 LLM으로 위챗 봇을 만들려면 어떻게 해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: 'WeChatFerry(Windows)로 위챗 PC 클라이언트에 연결하고, 로컬 HTTP API를 통해 Ollama에 연결한 뒤, 메시지를 Qwen3 모델로 전달합니다. Python 사용 시 설정에 약 30~60분이 걸립니다.' } },
-        { '@type': 'Question', name: '이 위챗 봇은 Mac에서도 동작하나요?', acceptedAnswer: { '@type': 'Answer', text: '네이티브로는 동작하지 않습니다. WeChatFerry는 Windows가 필요합니다. macOS 사용자는 가상머신(Parallels 또는 VMware Fusion)에서 Windows를 실행할 수 있습니다.' } },
-        { '@type': 'Question', name: '중국어 위챗 메시지에 가장 적합한 모델은?', acceptedAnswer: { '@type': 'Answer', text: '대부분의 사용자에게는 Qwen3 8B가 품질과 속도의 최적 균형을 제공합니다 — 중국어 이해력이 뛰어나며, 약 4.7GB(Q4)로 8GB VRAM에 들어갑니다.' } },
-        { '@type': 'Question', name: '이 프로젝트에 실제로 필요한 하드웨어는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '저가형 N150 미니PC(약 $140–200)면 가벼운 Qwen3 3B 비서에 충분합니다. Qwen3 8B와 24/7 상시 가동에는 Minisforum UM890 Pro 같은 Ryzen급 기기(32GB 구성 기준 약 $649)가 더 나은 투자입니다.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '이 위챗 봇은 Mac에서도 동작하나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네이티브로는 동작하지 않습니다. WeChatFerry는 Windows가 필요하며 DLL 인젝션을 통해 Windows용 위챗 PC 클라이언트에 연결합니다. macOS 사용자는 가상머신(Parallels 또는 VMware Fusion)에서 Windows를 실행하여 이 구성을 사용할 수 있지만 복잡성이 추가됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '봇을 사용하면 위챗 계정이 정지될 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '위챗 이용약관은 자동화된 봇을 금지합니다. 자동화 도구 사용이 탐지된 계정은 일시 정지나 영구 차단의 위험이 있습니다. 낮은 메시지량의 개인 생산성 향상 용도로만 사용하세요 — 계정 위험은 실재하며, 이는 공식적으로 승인된 통합이 아닙니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '중국어 위챗 메시지에 가장 적합한 Ollama 모델은?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '대부분의 사용자에게는 Qwen3 8B가 품질과 속도의 최적 균형을 제공합니다 — 중국어 이해력이 뛰어나며, 약 4.7GB(Q4)의 모델은 8GB VRAM에 들어가거나 16GB CPU RAM에서 받아들일 만한 속도로 동작합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '봇이 그룹 채팅을 처리할 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. WeChatFerry는 방 ID와 함께 그룹 메시지를 노출합니다. `msg.roomid`로 봇이 응답해야 할 그룹을 필터링하고, 모든 그룹 메시지에 반응하지 않도록 명시적인 트리거 키워드(예: "@ai")를 요구하세요.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '이 프로젝트에 실제로 필요한 하드웨어는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '가벼운 Qwen3 3B 비서라면 16GB RAM을 갖춘 현행 Windows PC로 충분합니다 — GMKtec G3 Plus 같은 저가형 N150 미니PC(약 $140–200)가 이를 충족합니다. Qwen3 8B가 반응성 있게 느껴지고 24/7 상시 가동을 원한다면, 32GB RAM과 Ryzen급 CPU가 더 나은 투자입니다 — 이 등급에서 저희의 선택은 Minisforum UM890 Pro(32GB 구성 기준 약 $649)입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Minisforum UM890 Pro는 위챗 봇에 과잉 사양인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 3B로 동작하는 단순한 위챗 봇이라면 그렇습니다 — 저가형 N150 기기로 충분하며 가격도 약 3분의 1입니다. 32~96GB RAM, 여러 모델, RAG, 봇 외 다른 서비스를 갖춘 범용 로컬 AI 서버로는 UM890 Pro가 훨씬 정당화하기 쉽습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM 추론이 위챗을 프라이빗하게 만들어주나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. 그리고 이 구분은 중요합니다. 로컬 추론은 메시지 내용이 처리를 위해 제3자 클라우드 LLM 제공업체로 전송되지 않는다는 것을 의미합니다. 이것이 위챗 자체를 프라이빗 통신 플랫폼으로 만들어주지는 않습니다 — AI 모델이 어디서 동작하든 위챗은 여전히 텐센트 자체 인프라를 통해 동작합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '이것은 공식 위챗 통합인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. WeChatFerry는 비공식 자동화/통합 방식이며 공식 위챗 봇 API가 아닙니다. 신중하게 사용하고, 메시지량을 낮고 개인적인 수준으로 유지하며, 모든 비공식 자동화에 따르는 계정 위험을 이해하세요.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM으로 위챗 봇을 만들려면 어떻게 해야 하나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'WeChatFerry(Windows)로 위챗 PC 클라이언트에 연결하고, 로컬 HTTP API를 통해 Ollama에 연결한 뒤, 메시지를 Qwen3 모델로 전달합니다. Python 사용 시 설정에 약 30~60분이 걸립니다.',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -1821,26 +2197,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          { q: 'Esse bot do WeChat funciona no Mac?', a: 'Não nativamente. O WeChatFerry exige Windows e se conecta ao cliente WeChat para Windows via injeção de DLL. Usuários de macOS podem rodar o Windows em uma máquina virtual (Parallels ou VMware Fusion) para usar essa configuração, com complexidade adicional.' },
-          { q: 'Minha conta do WeChat pode ser banida por usar um bot?', a: 'Os termos de uso do WeChat proíbem bots automatizados. Contas detectadas usando ferramentas de automação correm o risco de suspensão temporária ou banimento permanente. Use isso apenas em baixo volume de mensagens para produtividade pessoal — o risco de conta é real, e isso não é uma integração oficialmente sancionada.' },
-          { q: 'Qual é o melhor modelo do Ollama para mensagens do WeChat em chinês?', a: 'Para a maioria dos usuários, o Qwen3 8B oferece o melhor equilíbrio entre qualidade e velocidade — boa compreensão do chinês, e o modelo de cerca de 4,7 GB (Q4) cabe em 8 GB de VRAM ou roda em ritmo aceitável com 16 GB de RAM na CPU.' },
-          { q: 'O bot consegue lidar com chats em grupo?', a: 'Sim. O WeChatFerry expõe mensagens de grupo junto com um ID de sala. Filtre via `msg.roomid` em quais grupos o bot deve responder, e exija uma palavra-chave de gatilho explícita (ex.: "@ai") para que ele não responda a toda mensagem do grupo.' },
-          { q: 'De que hardware eu realmente preciso para este projeto?', a: 'Para um assistente leve com Qwen3 3B, qualquer PC Windows moderno com 16 GB de RAM já basta — um mini PC N150 econômico como o GMKtec G3 Plus cobre isso. Para o Qwen3 8B parecer responsivo e para operação 24/7 permanente, 32 GB de RAM e uma CPU classe Ryzen são o melhor investimento — nossa escolha para esse nível é o Minisforum UM890 Pro (no Brasil, a partir de cerca de R$ 3.900 importado).' },
-          { q: 'O Minisforum UM890 Pro é superdimensionado para um bot do WeChat?', a: 'Para um bot simples do WeChat com Qwen3 3B, sim — uma máquina N150 econômica basta e custa uma fração do preço. Para um servidor de IA local de uso geral com 32–96 GB de RAM, vários modelos, RAG e outros serviços além do bot, o UM890 Pro fica muito mais fácil de justificar.' },
-          { q: 'A inferência de LLM local torna o WeChat privado?', a: 'Não, e essa distinção é importante. A inferência local significa que o conteúdo das suas mensagens não é enviado a um provedor de LLM na nuvem de terceiros para processamento. Ela não transforma o WeChat em si em uma plataforma de comunicação privada — o WeChat continua rodando pela própria infraestrutura da Tencent, não importa onde o modelo de IA rode.' },
-          { q: 'Essa é uma integração oficial do WeChat?', a: 'Não. O WeChatFerry é uma abordagem de automação/integração não oficial, não uma API oficial de bots do WeChat. Use com cautela, mantenha o volume de mensagens baixo e pessoal, e esteja ciente do risco de conta que acompanha qualquer automação não oficial.' },
-        ],
+            { q: 'Esse bot do WeChat funciona no Mac?', a: 'Não nativamente. O WeChatFerry exige Windows e se conecta ao cliente WeChat para Windows via injeção de DLL. Usuários de macOS podem rodar o Windows em uma máquina virtual (Parallels ou VMware Fusion) para usar essa configuração, com complexidade adicional.' },
+            { q: 'Minha conta do WeChat pode ser banida por usar um bot?', a: 'Os termos de uso do WeChat proíbem bots automatizados. Contas detectadas usando ferramentas de automação correm o risco de suspensão temporária ou banimento permanente. Use isso apenas em baixo volume de mensagens para produtividade pessoal — o risco de conta é real, e isso não é uma integração oficialmente sancionada.' },
+            { q: 'Qual é o melhor modelo do Ollama para mensagens do WeChat em chinês?', a: 'Para a maioria dos usuários, o Qwen3 8B oferece o melhor equilíbrio entre qualidade e velocidade — boa compreensão do chinês, e o modelo de cerca de 4,7 GB (Q4) cabe em 8 GB de VRAM ou roda em ritmo aceitável com 16 GB de RAM na CPU.' },
+            { q: 'O bot consegue lidar com chats em grupo?', a: 'Sim. O WeChatFerry expõe mensagens de grupo junto com um ID de sala. Filtre via `msg.roomid` em quais grupos o bot deve responder, e exija uma palavra-chave de gatilho explícita (ex.: "@ai") para que ele não responda a toda mensagem do grupo.' },
+            { q: 'De que hardware eu realmente preciso para este projeto?', a: 'Para um assistente leve com Qwen3 3B, qualquer PC Windows moderno com 16 GB de RAM já basta — um mini PC N150 econômico como o GMKtec G3 Plus cobre isso. Para o Qwen3 8B parecer responsivo e para operação 24/7 permanente, 32 GB de RAM e uma CPU classe Ryzen são o melhor investimento — nossa escolha para esse nível é o Minisforum UM890 Pro (no Brasil, a partir de cerca de R$ 3.900 importado).' },
+            { q: 'O Minisforum UM890 Pro é superdimensionado para um bot do WeChat?', a: 'Para um bot simples do WeChat com Qwen3 3B, sim — uma máquina N150 econômica basta e custa uma fração do preço. Para um servidor de IA local de uso geral com 32–96 GB de RAM, vários modelos, RAG e outros serviços além do bot, o UM890 Pro fica muito mais fácil de justificar.' },
+            { q: 'A inferência de LLM local torna o WeChat privado?', a: 'Não, e essa distinção é importante. A inferência local significa que o conteúdo das suas mensagens não é enviado a um provedor de LLM na nuvem de terceiros para processamento. Ela não transforma o WeChat em si em uma plataforma de comunicação privada — o WeChat continua rodando pela própria infraestrutura da Tencent, não importa onde o modelo de IA rode.' },
+            { q: 'Essa é uma integração oficial do WeChat?', a: 'Não. O WeChatFerry é uma abordagem de automação/integração não oficial, não uma API oficial de bots do WeChat. Use com cautela, mantenha o volume de mensagens baixo e pessoal, e esteja ciente do risco de conta que acompanha qualquer automação não oficial.' },
+            { q: 'Como eu crio um bot do WeChat com um LLM local?', a: 'Use o WeChatFerry (Windows) para se conectar ao cliente do WeChat no PC, conecte-o ao Ollama via API HTTP local e encaminhe as mensagens para um modelo Qwen3. A configuração leva de 30 a 60 minutos com Python.' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Como eu crio um bot do WeChat com um LLM local?', acceptedAnswer: { '@type': 'Answer', text: 'Use o WeChatFerry (Windows) para se conectar ao cliente do WeChat no PC, conecte-o ao Ollama via API HTTP local e encaminhe as mensagens para um modelo Qwen3. A configuração leva de 30 a 60 minutos com Python.' } },
-        { '@type': 'Question', name: 'Esse bot do WeChat funciona no Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Não nativamente. O WeChatFerry exige Windows. Usuários de macOS podem rodar o Windows em uma máquina virtual (Parallels ou VMware Fusion).' } },
-        { '@type': 'Question', name: 'Qual é o melhor modelo para mensagens do WeChat em chinês?', acceptedAnswer: { '@type': 'Answer', text: 'Para a maioria dos usuários, o Qwen3 8B oferece o melhor equilíbrio entre qualidade e velocidade — boa compreensão do chinês, cerca de 4,7 GB (Q4), cabe em 8 GB de VRAM.' } },
-        { '@type': 'Question', name: 'De que hardware eu realmente preciso para este projeto?', acceptedAnswer: { '@type': 'Answer', text: 'Um mini PC N150 econômico já basta para um assistente leve com Qwen3 3B. Para o Qwen3 8B e operação 24/7 permanente, uma máquina classe Ryzen como o Minisforum UM890 Pro (no Brasil, a partir de ~R$ 3.900 importado) é o melhor investimento.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Esse bot do WeChat funciona no Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não nativamente. O WeChatFerry exige Windows e se conecta ao cliente WeChat para Windows via injeção de DLL. Usuários de macOS podem rodar o Windows em uma máquina virtual (Parallels ou VMware Fusion) para usar essa configuração, com complexidade adicional.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Minha conta do WeChat pode ser banida por usar um bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Os termos de uso do WeChat proíbem bots automatizados. Contas detectadas usando ferramentas de automação correm o risco de suspensão temporária ou banimento permanente. Use isso apenas em baixo volume de mensagens para produtividade pessoal — o risco de conta é real, e isso não é uma integração oficialmente sancionada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o melhor modelo do Ollama para mensagens do WeChat em chinês?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para a maioria dos usuários, o Qwen3 8B oferece o melhor equilíbrio entre qualidade e velocidade — boa compreensão do chinês, e o modelo de cerca de 4,7 GB (Q4) cabe em 8 GB de VRAM ou roda em ritmo aceitável com 16 GB de RAM na CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O bot consegue lidar com chats em grupo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. O WeChatFerry expõe mensagens de grupo junto com um ID de sala. Filtre via `msg.roomid` em quais grupos o bot deve responder, e exija uma palavra-chave de gatilho explícita (ex.: "@ai") para que ele não responda a toda mensagem do grupo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'De que hardware eu realmente preciso para este projeto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para um assistente leve com Qwen3 3B, qualquer PC Windows moderno com 16 GB de RAM já basta — um mini PC N150 econômico como o GMKtec G3 Plus cobre isso. Para o Qwen3 8B parecer responsivo e para operação 24/7 permanente, 32 GB de RAM e uma CPU classe Ryzen são o melhor investimento — nossa escolha para esse nível é o Minisforum UM890 Pro (no Brasil, a partir de cerca de R$ 3.900 importado).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Minisforum UM890 Pro é superdimensionado para um bot do WeChat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para um bot simples do WeChat com Qwen3 3B, sim — uma máquina N150 econômica basta e custa uma fração do preço. Para um servidor de IA local de uso geral com 32–96 GB de RAM, vários modelos, RAG e outros serviços além do bot, o UM890 Pro fica muito mais fácil de justificar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A inferência de LLM local torna o WeChat privado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não, e essa distinção é importante. A inferência local significa que o conteúdo das suas mensagens não é enviado a um provedor de LLM na nuvem de terceiros para processamento. Ela não transforma o WeChat em si em uma plataforma de comunicação privada — o WeChat continua rodando pela própria infraestrutura da Tencent, não importa onde o modelo de IA rode.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Essa é uma integração oficial do WeChat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. O WeChatFerry é uma abordagem de automação/integração não oficial, não uma API oficial de bots do WeChat. Use com cautela, mantenha o volume de mensagens baixo e pessoal, e esteja ciente do risco de conta que acompanha qualquer automação não oficial.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como eu crio um bot do WeChat com um LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use o WeChatFerry (Windows) para se conectar ao cliente do WeChat no PC, conecte-o ao Ollama via API HTTP local e encaminhe as mensagens para um modelo Qwen3. A configuração leva de 30 a 60 minutos com Python.',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',
@@ -2041,26 +2486,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          { q: 'هل يعمل بوت WeChat هذا على Mac؟', a: 'لا يعمل بشكل أصلي. يتطلب WeChatFerry نظام Windows ويتصل بعميل WeChat لنظام Windows عبر حقن DLL. يمكن لمستخدمي macOS تشغيل Windows داخل جهاز افتراضي (Parallels أو VMware Fusion) لاستخدام هذا الإعداد، مع تعقيد إضافي.' },
-          { q: 'هل يمكن أن يُحظر حسابي على WeChat بسبب استخدام البوت؟', a: 'تحظر شروط استخدام WeChat البوتات الآلية. الحسابات التي يُكتشف استخدامها لأدوات أتمتة تواجه خطر التعليق المؤقت أو الحظر الدائم. استخدمه فقط بحجم رسائل منخفض للإنتاجية الشخصية — خطر الحساب حقيقي، وهذا ليس تكاملًا معتمدًا رسميًا.' },
-          { q: 'ما أفضل نموذج Ollama لرسائل WeChat بالصينية؟', a: 'بالنسبة لمعظم المستخدمين، يقدّم Qwen3 8B أفضل توازن بين الجودة والسرعة — فهم قوي للغة الصينية، والنموذج بحجم نحو 4.7GB (بصيغة Q4) يتسع في 8GB من VRAM أو يعمل بوتيرة مقبولة مع 16GB من ذاكرة المعالج.' },
-          { q: 'هل يمكن للبوت التعامل مع الدردشات الجماعية؟', a: 'نعم. يكشف WeChatFerry عن رسائل المجموعات مع معرّف الغرفة. صفِّ عبر `msg.roomid` المجموعات التي يجب أن يرد فيها البوت، واشترط كلمة تفعيل محفّزة صريحة (مثل "@ai") كي لا يرد على كل رسالة في المجموعة.' },
-          { q: 'ما الأجهزة التي أحتاجها فعليًا لهذا المشروع؟', a: 'بالنسبة لمساعد خفيف بنموذج Qwen3 3B، يكفي أي جهاز Windows حديث بذاكرة 16GB — يغطي هذا الاحتياج جهاز N150 المصغّر الاقتصادي مثل GMKtec G3 Plus (حوالي $140–200). ليشعر Qwen3 8B بالاستجابة السريعة وللتشغيل المستمر على مدار الساعة، تُعد ذاكرة 32GB مع معالج من فئة Ryzen الاستثمار الأفضل — اختيارنا لهذا المستوى هو Minisforum UM890 Pro (بحوالي $649 مع 32GB).' },
-          { q: 'هل Minisforum UM890 Pro مبالغ فيه لبوت WeChat؟', a: 'بالنسبة لبوت WeChat بسيط يعمل بنموذج Qwen3 3B، نعم — يكفي جهاز N150 اقتصادي بسعر يقارب ثلث السعر. أما بالنسبة لخادم ذكاء اصطناعي محلي عام بذاكرة 32–96GB وعدة نماذج وRAG وخدمات أخرى إلى جانب البوت، فيصبح تبرير UM890 Pro أسهل بكثير.' },
-          { q: 'هل يجعل الاستدلال المحلي لنموذج LLM WeChat خاصًا؟', a: 'لا، وهذا التمييز مهم. يعني الاستدلال المحلي أن محتوى رسائلك لا يُرسل إلى مزوّد LLM سحابي تابع لجهة خارجية لمعالجته. لكنه لا يجعل WeChat نفسه منصة اتصال خاصة — يظل WeChat يعمل عبر بنية Tencent التحتية الخاصة به، بصرف النظر عن مكان تشغيل نموذج الذكاء الاصطناعي.' },
-          { q: 'هل هذا تكامل رسمي مع WeChat؟', a: 'لا. WeChatFerry نهج أتمتة/تكامل غير رسمي، وليس واجهة برمجة تطبيقات رسمية لبوتات WeChat. استخدمه بحذر، وحافظ على حجم رسائل منخفض وشخصي، وكن على دراية بمخاطر الحساب المصاحبة لأي أتمتة غير رسمية.' },
-        ],
+            { q: 'هل يعمل بوت WeChat هذا على Mac؟', a: 'لا يعمل بشكل أصلي. يتطلب WeChatFerry نظام Windows ويتصل بعميل WeChat لنظام Windows عبر حقن DLL. يمكن لمستخدمي macOS تشغيل Windows داخل جهاز افتراضي (Parallels أو VMware Fusion) لاستخدام هذا الإعداد، مع تعقيد إضافي.' },
+            { q: 'هل يمكن أن يُحظر حسابي على WeChat بسبب استخدام البوت؟', a: 'تحظر شروط استخدام WeChat البوتات الآلية. الحسابات التي يُكتشف استخدامها لأدوات أتمتة تواجه خطر التعليق المؤقت أو الحظر الدائم. استخدمه فقط بحجم رسائل منخفض للإنتاجية الشخصية — خطر الحساب حقيقي، وهذا ليس تكاملًا معتمدًا رسميًا.' },
+            { q: 'ما أفضل نموذج Ollama لرسائل WeChat بالصينية؟', a: 'بالنسبة لمعظم المستخدمين، يقدّم Qwen3 8B أفضل توازن بين الجودة والسرعة — فهم قوي للغة الصينية، والنموذج بحجم نحو 4.7GB (بصيغة Q4) يتسع في 8GB من VRAM أو يعمل بوتيرة مقبولة مع 16GB من ذاكرة المعالج.' },
+            { q: 'هل يمكن للبوت التعامل مع الدردشات الجماعية؟', a: 'نعم. يكشف WeChatFerry عن رسائل المجموعات مع معرّف الغرفة. صفِّ عبر `msg.roomid` المجموعات التي يجب أن يرد فيها البوت، واشترط كلمة تفعيل محفّزة صريحة (مثل "@ai") كي لا يرد على كل رسالة في المجموعة.' },
+            { q: 'ما الأجهزة التي أحتاجها فعليًا لهذا المشروع؟', a: 'بالنسبة لمساعد خفيف بنموذج Qwen3 3B، يكفي أي جهاز Windows حديث بذاكرة 16GB — يغطي هذا الاحتياج جهاز N150 المصغّر الاقتصادي مثل GMKtec G3 Plus (حوالي $140–200). ليشعر Qwen3 8B بالاستجابة السريعة وللتشغيل المستمر على مدار الساعة، تُعد ذاكرة 32GB مع معالج من فئة Ryzen الاستثمار الأفضل — اختيارنا لهذا المستوى هو Minisforum UM890 Pro (بحوالي $649 مع 32GB).' },
+            { q: 'هل Minisforum UM890 Pro مبالغ فيه لبوت WeChat؟', a: 'بالنسبة لبوت WeChat بسيط يعمل بنموذج Qwen3 3B، نعم — يكفي جهاز N150 اقتصادي بسعر يقارب ثلث السعر. أما بالنسبة لخادم ذكاء اصطناعي محلي عام بذاكرة 32–96GB وعدة نماذج وRAG وخدمات أخرى إلى جانب البوت، فيصبح تبرير UM890 Pro أسهل بكثير.' },
+            { q: 'هل يجعل الاستدلال المحلي لنموذج LLM WeChat خاصًا؟', a: 'لا، وهذا التمييز مهم. يعني الاستدلال المحلي أن محتوى رسائلك لا يُرسل إلى مزوّد LLM سحابي تابع لجهة خارجية لمعالجته. لكنه لا يجعل WeChat نفسه منصة اتصال خاصة — يظل WeChat يعمل عبر بنية Tencent التحتية الخاصة به، بصرف النظر عن مكان تشغيل نموذج الذكاء الاصطناعي.' },
+            { q: 'هل هذا تكامل رسمي مع WeChat؟', a: 'لا. WeChatFerry نهج أتمتة/تكامل غير رسمي، وليس واجهة برمجة تطبيقات رسمية لبوتات WeChat. استخدمه بحذر، وحافظ على حجم رسائل منخفض وشخصي، وكن على دراية بمخاطر الحساب المصاحبة لأي أتمتة غير رسمية.' },
+            { q: 'كيف أبني بوت WeChat بنموذج LLM محلي؟', a: 'استخدم WeChatFerry (Windows) للاتصال بعميل WeChat لسطح المكتب، واربطه بـ Ollama عبر واجهة HTTP محلية، ووجّه الرسائل إلى نموذج Qwen3. يستغرق الإعداد نحو 30 إلى 60 دقيقة باستخدام بايثون.' },
+          ],
       },
     },
     faqSchema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'كيف أبني بوت WeChat بنموذج LLM محلي؟', acceptedAnswer: { '@type': 'Answer', text: 'استخدم WeChatFerry (Windows) للاتصال بعميل WeChat لسطح المكتب، واربطه بـ Ollama عبر واجهة HTTP محلية، ووجّه الرسائل إلى نموذج Qwen3. يستغرق الإعداد نحو 30 إلى 60 دقيقة باستخدام بايثون.' } },
-        { '@type': 'Question', name: 'هل يعمل بوت WeChat هذا على Mac؟', acceptedAnswer: { '@type': 'Answer', text: 'لا يعمل بشكل أصلي. يتطلب WeChatFerry نظام Windows. يمكن لمستخدمي macOS تشغيل Windows داخل جهاز افتراضي (Parallels أو VMware Fusion).' } },
-        { '@type': 'Question', name: 'ما أفضل نموذج لرسائل WeChat بالصينية؟', acceptedAnswer: { '@type': 'Answer', text: 'بالنسبة لمعظم المستخدمين، يقدّم Qwen3 8B أفضل توازن بين الجودة والسرعة — فهم قوي للغة الصينية، بحجم نحو 4.7GB (Q4)، ويتسع في 8GB من VRAM.' } },
-        { '@type': 'Question', name: 'ما الأجهزة التي أحتاجها فعليًا لهذا المشروع؟', acceptedAnswer: { '@type': 'Answer', text: 'جهاز N150 المصغّر الاقتصادي (حوالي $140–200) يكفي لمساعد خفيف بنموذج Qwen3 3B. أما بالنسبة لـ Qwen3 8B والتشغيل المستمر على مدار الساعة، فإن جهازًا من فئة Ryzen مثل Minisforum UM890 Pro (بحوالي $649 مع 32GB) هو الاستثمار الأفضل.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل بوت WeChat هذا على Mac؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا يعمل بشكل أصلي. يتطلب WeChatFerry نظام Windows ويتصل بعميل WeChat لنظام Windows عبر حقن DLL. يمكن لمستخدمي macOS تشغيل Windows داخل جهاز افتراضي (Parallels أو VMware Fusion) لاستخدام هذا الإعداد، مع تعقيد إضافي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن أن يُحظر حسابي على WeChat بسبب استخدام البوت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تحظر شروط استخدام WeChat البوتات الآلية. الحسابات التي يُكتشف استخدامها لأدوات أتمتة تواجه خطر التعليق المؤقت أو الحظر الدائم. استخدمه فقط بحجم رسائل منخفض للإنتاجية الشخصية — خطر الحساب حقيقي، وهذا ليس تكاملًا معتمدًا رسميًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل نموذج Ollama لرسائل WeChat بالصينية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بالنسبة لمعظم المستخدمين، يقدّم Qwen3 8B أفضل توازن بين الجودة والسرعة — فهم قوي للغة الصينية، والنموذج بحجم نحو 4.7GB (بصيغة Q4) يتسع في 8GB من VRAM أو يعمل بوتيرة مقبولة مع 16GB من ذاكرة المعالج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن للبوت التعامل مع الدردشات الجماعية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يكشف WeChatFerry عن رسائل المجموعات مع معرّف الغرفة. صفِّ عبر `msg.roomid` المجموعات التي يجب أن يرد فيها البوت، واشترط كلمة تفعيل محفّزة صريحة (مثل "@ai") كي لا يرد على كل رسالة في المجموعة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الأجهزة التي أحتاجها فعليًا لهذا المشروع؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بالنسبة لمساعد خفيف بنموذج Qwen3 3B، يكفي أي جهاز Windows حديث بذاكرة 16GB — يغطي هذا الاحتياج جهاز N150 المصغّر الاقتصادي مثل GMKtec G3 Plus (حوالي $140–200). ليشعر Qwen3 8B بالاستجابة السريعة وللتشغيل المستمر على مدار الساعة، تُعد ذاكرة 32GB مع معالج من فئة Ryzen الاستثمار الأفضل — اختيارنا لهذا المستوى هو Minisforum UM890 Pro (بحوالي $649 مع 32GB).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Minisforum UM890 Pro مبالغ فيه لبوت WeChat؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بالنسبة لبوت WeChat بسيط يعمل بنموذج Qwen3 3B، نعم — يكفي جهاز N150 اقتصادي بسعر يقارب ثلث السعر. أما بالنسبة لخادم ذكاء اصطناعي محلي عام بذاكرة 32–96GB وعدة نماذج وRAG وخدمات أخرى إلى جانب البوت، فيصبح تبرير UM890 Pro أسهل بكثير.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يجعل الاستدلال المحلي لنموذج LLM WeChat خاصًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا، وهذا التمييز مهم. يعني الاستدلال المحلي أن محتوى رسائلك لا يُرسل إلى مزوّد LLM سحابي تابع لجهة خارجية لمعالجته. لكنه لا يجعل WeChat نفسه منصة اتصال خاصة — يظل WeChat يعمل عبر بنية Tencent التحتية الخاصة به، بصرف النظر عن مكان تشغيل نموذج الذكاء الاصطناعي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل هذا تكامل رسمي مع WeChat؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. WeChatFerry نهج أتمتة/تكامل غير رسمي، وليس واجهة برمجة تطبيقات رسمية لبوتات WeChat. استخدمه بحذر، وحافظ على حجم رسائل منخفض وشخصي، وكن على دراية بمخاطر الحساب المصاحبة لأي أتمتة غير رسمية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أبني بوت WeChat بنموذج LLM محلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم WeChatFerry (Windows) للاتصال بعميل WeChat لسطح المكتب، واربطه بـ Ollama عبر واجهة HTTP محلية، ووجّه الرسائل إلى نموذج Qwen3. يستغرق الإعداد نحو 30 إلى 60 دقيقة باستخدام بايثون.',
+            },
+          },
+        ],
     },
     howToSchema: {
       '@context': 'https://schema.org',

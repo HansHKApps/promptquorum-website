@@ -127,11 +127,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Does prompting in Chinese save money on API calls?', a: 'Yes, significantly. Chinese tokens are 30–50% fewer for the same content on Qwen-family models. This applies to both local context windows and cloud API token costs.' },
-          { q: 'Can I mix English and Chinese in the same prompt?', a: 'Yes. Mixed-language prompts are well-handled by Qwen3 and DeepSeek-R1-Distill. The model understands both languages in context.' },
-          { q: 'Which language should I use for system prompts?', a: 'English, even on Chinese-native models. English system prompts consistently produce better reasoning and instruction-following than Chinese system prompts.' },
-          { q: 'What about Traditional Chinese (Traditional vs Simplified)?', a: 'Qwen3 handles both. Specify in the system prompt: "请使用繁体中文回答" for Traditional or "请使用简体中文回答" for Simplified.' },
-        ],
+            { q: 'Does prompting in Chinese save money on API calls?', a: 'Yes, significantly. Chinese tokens are 30–50% fewer for the same content on Qwen-family models. This applies to both local context windows and cloud API token costs.' },
+            { q: 'Can I mix English and Chinese in the same prompt?', a: 'Yes. Mixed-language prompts are well-handled by Qwen3 and DeepSeek-R1-Distill. The model understands both languages in context.' },
+            { q: 'Which language should I use for system prompts?', a: 'English, even on Chinese-native models. English system prompts consistently produce better reasoning and instruction-following than Chinese system prompts.' },
+            { q: 'What about Traditional Chinese (Traditional vs Simplified)?', a: 'Qwen3 handles both. Specify in the system prompt: "请使用繁体中文回答" for Traditional or "请使用简体中文回答" for Simplified.' },
+            { q: 'Is Chinese or English prompting better for local LLMs?', a: 'Best practice: English instructions with "reply in Chinese" directive. Chinese prompts save 30–50% tokens; English prompts produce stronger reasoning.' },
+          ],
       },
     },
     schema: {
@@ -155,9 +156,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'Is Chinese or English prompting better for local LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Best practice: English instructions with "reply in Chinese" directive. Chinese prompts save 30–50% tokens; English prompts produce stronger reasoning.' } },
-        { '@type': 'Question', name: 'Which language for system prompts?', acceptedAnswer: { '@type': 'Answer', text: 'English, even on Chinese-native models like Qwen3. English system prompts consistently produce better instruction-following.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Does prompting in Chinese save money on API calls?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, significantly. Chinese tokens are 30–50% fewer for the same content on Qwen-family models. This applies to both local context windows and cloud API token costs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I mix English and Chinese in the same prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Mixed-language prompts are well-handled by Qwen3 and DeepSeek-R1-Distill. The model understands both languages in context.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which language should I use for system prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'English, even on Chinese-native models. English system prompts consistently produce better reasoning and instruction-following than Chinese system prompts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What about Traditional Chinese (Traditional vs Simplified)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 handles both. Specify in the system prompt: "请使用繁体中文回答" for Traditional or "请使用简体中文回答" for Simplified.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Chinese or English prompting better for local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Best practice: English instructions with "reply in Chinese" directive. Chinese prompts save 30–50% tokens; English prompts produce stronger reasoning.',
+            },
+          },
+        ],
     },
   },
 
@@ -238,11 +277,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Spart Chinesisch-Prompting API-Kosten?', a: 'Ja. Chinesische Tokens sind bei Qwen-Modellen 30–50 % weniger für denselben Inhalt.' },
-          { q: 'Kann ich Chinesisch und Englisch mischen?', a: 'Ja. Qwen3 und DeepSeek-R1-Distill verarbeiten zweisprachige Prompts gut.' },
-          { q: 'Welche Sprache für System-Prompts?', a: 'Englisch, auch bei chinesisch-nativen Modellen wie Qwen3. Liefert besseres Reasoning.' },
-          { q: 'Was ist mit Traditionell vs. Vereinfacht Chinesisch?', a: 'Qwen3 verarbeitet beides. "请使用繁体中文回答" für Traditionell; "请使用简体中文回答" für Vereinfacht angeben.' },
-        ],
+            { q: 'Spart Chinesisch-Prompting API-Kosten?', a: 'Ja. Chinesische Tokens sind bei Qwen-Modellen 30–50 % weniger für denselben Inhalt.' },
+            { q: 'Kann ich Chinesisch und Englisch mischen?', a: 'Ja. Qwen3 und DeepSeek-R1-Distill verarbeiten zweisprachige Prompts gut.' },
+            { q: 'Welche Sprache für System-Prompts?', a: 'Englisch, auch bei chinesisch-nativen Modellen wie Qwen3. Liefert besseres Reasoning.' },
+            { q: 'Was ist mit Traditionell vs. Vereinfacht Chinesisch?', a: 'Qwen3 verarbeitet beides. "请使用繁体中文回答" für Traditionell; "请使用简体中文回答" für Vereinfacht angeben.' },
+            { q: 'Chinesisch oder Englisch beim Prompting?', a: 'Englische Anweisungen + Chinesisch-Direktive ist optimal. Chinesisch spart 30–50 % Tokens; Englisch liefert besseres Reasoning.' },
+          ],
       },
     },
     schema: {
@@ -265,8 +305,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Chinesisch oder Englisch beim Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Englische Anweisungen + Chinesisch-Direktive ist optimal. Chinesisch spart 30–50 % Tokens; Englisch liefert besseres Reasoning.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Spart Chinesisch-Prompting API-Kosten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Chinesische Tokens sind bei Qwen-Modellen 30–50 % weniger für denselben Inhalt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Chinesisch und Englisch mischen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Qwen3 und DeepSeek-R1-Distill verarbeiten zweisprachige Prompts gut.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Sprache für System-Prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Englisch, auch bei chinesisch-nativen Modellen wie Qwen3. Liefert besseres Reasoning.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist mit Traditionell vs. Vereinfacht Chinesisch?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 verarbeitet beides. "请使用繁体中文回答" für Traditionell; "请使用简体中文回答" für Vereinfacht angeben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Chinesisch oder Englisch beim Prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Englische Anweisungen + Chinesisch-Direktive ist optimal. Chinesisch spart 30–50 % Tokens; Englisch liefert besseres Reasoning.',
+            },
+          },
+        ],
     },
   },
 
@@ -351,11 +430,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Le prompting en chinois économise-t-il des coûts API ?', a: 'Oui. Les tokens chinois sont 30–50 % moins nombreux pour le même contenu sur les modèles Qwen.' },
-          { q: 'Peut-on mélanger chinois et anglais dans un prompt ?', a: 'Oui. Qwen3 et DeepSeek-R1-Distill gèrent bien les prompts bilingues.' },
-          { q: 'Quelle langue pour les prompts système ?', a: 'Anglais, même sur des modèles à dominante chinoise comme Qwen3. Meilleure instruction-following.' },
-          { q: 'Chinois traditionnel vs simplifié ?', a: 'Qwen3 gère les deux. Préciser "请使用繁体中文" pour le traditionnel ou "请使用简体中文" pour le simplifié.' },
-        ],
+            { q: 'Le prompting en chinois économise-t-il des coûts API ?', a: 'Oui. Les tokens chinois sont 30–50 % moins nombreux pour le même contenu sur les modèles Qwen.' },
+            { q: 'Peut-on mélanger chinois et anglais dans un prompt ?', a: 'Oui. Qwen3 et DeepSeek-R1-Distill gèrent bien les prompts bilingues.' },
+            { q: 'Quelle langue pour les prompts système ?', a: 'Anglais, même sur des modèles à dominante chinoise comme Qwen3. Meilleure instruction-following.' },
+            { q: 'Chinois traditionnel vs simplifié ?', a: 'Qwen3 gère les deux. Préciser "请使用繁体中文" pour le traditionnel ou "请使用简体中文" pour le simplifié.' },
+            { q: 'Prompting en chinois ou anglais pour LLM local ?', a: 'Instructions en anglais + directive en chinois est optimal. Le chinois économise 30–50 % de tokens.' },
+          ],
       },
     },
     schema: {
@@ -378,8 +458,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        { '@type': 'Question', name: 'Prompting en chinois ou anglais pour LLM local ?', acceptedAnswer: { '@type': 'Answer', text: 'Instructions en anglais + directive en chinois est optimal. Le chinois économise 30–50 % de tokens.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Le prompting en chinois économise-t-il des coûts API ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Les tokens chinois sont 30–50 % moins nombreux pour le même contenu sur les modèles Qwen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Peut-on mélanger chinois et anglais dans un prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Qwen3 et DeepSeek-R1-Distill gèrent bien les prompts bilingues.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle langue pour les prompts système ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Anglais, même sur des modèles à dominante chinoise comme Qwen3. Meilleure instruction-following.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Chinois traditionnel vs simplifié ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 gère les deux. Préciser "请使用繁体中文" pour le traditionnel ou "请使用简体中文" pour le simplifié.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Prompting en chinois ou anglais pour LLM local ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Instructions en anglais + directive en chinois est optimal. Le chinois économise 30–50 % de tokens.',
+            },
+          },
+        ],
     },
   },
 
@@ -465,11 +584,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: '中国語プロンプトはAPIコストを節約しますか？', a: 'はい。Qwenファミリーモデルでは、同じコンテンツに対して中国語トークンが30–50%少なくなります。' },
-          { q: '同じプロンプトで中国語と英語を混ぜられますか？', a: 'はい。Qwen3とDeepSeek-R1-Distillはバイリンガルプロンプトをよく処理します。' },
-          { q: 'システムプロンプトにはどの言語を使うべきですか？', a: 'Qwen3のような中国語ネイティブモデルでも英語が推奨。より良い指示フォローを一貫して生成します。' },
-          { q: '繁体字と簡体字の違いは？', a: 'Qwen3は両方に対応。繁体字には「请使用繁体中文回答」、簡体字には「请使用简体中文回答」と指定。' },
-        ],
+            { q: '中国語プロンプトはAPIコストを節約しますか？', a: 'はい。Qwenファミリーモデルでは、同じコンテンツに対して中国語トークンが30–50%少なくなります。' },
+            { q: '同じプロンプトで中国語と英語を混ぜられますか？', a: 'はい。Qwen3とDeepSeek-R1-Distillはバイリンガルプロンプトをよく処理します。' },
+            { q: 'システムプロンプトにはどの言語を使うべきですか？', a: 'Qwen3のような中国語ネイティブモデルでも英語が推奨。より良い指示フォローを一貫して生成します。' },
+            { q: '繁体字と簡体字の違いは？', a: 'Qwen3は両方に対応。繁体字には「请使用繁体中文回答」、簡体字には「请使用简体中文回答」と指定。' },
+            { q: 'LLMプロンプトは中国語と英語どちらが良い？', a: '英語指示+「中国語で返答」が最適。中国語で30–50%トークン節約、英語でより強い推論。' },
+          ],
       },
     },
     schema: {
@@ -492,8 +612,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        { '@type': 'Question', name: 'LLMプロンプトは中国語と英語どちらが良い？', acceptedAnswer: { '@type': 'Answer', text: '英語指示+「中国語で返答」が最適。中国語で30–50%トークン節約、英語でより強い推論。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '中国語プロンプトはAPIコストを節約しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Qwenファミリーモデルでは、同じコンテンツに対して中国語トークンが30–50%少なくなります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '同じプロンプトで中国語と英語を混ぜられますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Qwen3とDeepSeek-R1-Distillはバイリンガルプロンプトをよく処理します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'システムプロンプトにはどの言語を使うべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3のような中国語ネイティブモデルでも英語が推奨。より良い指示フォローを一貫して生成します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '繁体字と簡体字の違いは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3は両方に対応。繁体字には「请使用繁体中文回答」、簡体字には「请使用简体中文回答」と指定。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLMプロンプトは中国語と英語どちらが良い？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '英語指示+「中国語で返答」が最適。中国語で30–50%トークン節約、英語でより強い推論。',
+            },
+          },
+        ],
     },
   },
 
@@ -596,11 +755,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '中文提示能节省API费用吗？', a: '能，显著节省。Qwen系模型中，同等内容的中文token比英文少30–50%。' },
-          { q: '同一提示中可以混用中英文吗？', a: '可以。Qwen3和DeepSeek-R1-Distill能很好地处理双语混合提示。' },
-          { q: '系统提示应该使用哪种语言？', a: '英文，即使在Qwen3这样的中文原生模型上。英文系统提示始终产生更好的指令遵从。' },
-          { q: '繁体字和简体字有什么区别？', a: 'Qwen3两者都支持。指定"请使用繁体中文回答"使用繁体，"请使用简体中文回答"使用简体。' },
-        ],
+            { q: '中文提示能节省API费用吗？', a: '能，显著节省。Qwen系模型中，同等内容的中文token比英文少30–50%。' },
+            { q: '同一提示中可以混用中英文吗？', a: '可以。Qwen3和DeepSeek-R1-Distill能很好地处理双语混合提示。' },
+            { q: '系统提示应该使用哪种语言？', a: '英文，即使在Qwen3这样的中文原生模型上。英文系统提示始终产生更好的指令遵从。' },
+            { q: '繁体字和简体字有什么区别？', a: 'Qwen3两者都支持。指定"请使用繁体中文回答"使用繁体，"请使用简体中文回答"使用简体。' },
+            { q: '本地LLM中文还是英文提示更好？', a: '英文指令+「请用中文回复」最优。中文节省30–50% token；英文产生更强推理链。' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -631,9 +791,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        { '@type': 'Question', name: '本地LLM中文还是英文提示更好？', acceptedAnswer: { '@type': 'Answer', text: '英文指令+「请用中文回复」最优。中文节省30–50% token；英文产生更强推理链。' } },
-        { '@type': 'Question', name: '系统提示词应该用哪种语言？', acceptedAnswer: { '@type': 'Answer', text: '英文，即使在Qwen3这样的中文原生模型上，英文系统提示始终产生更好的指令遵从。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '中文提示能节省API费用吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '能，显著节省。Qwen系模型中，同等内容的中文token比英文少30–50%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '同一提示中可以混用中英文吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。Qwen3和DeepSeek-R1-Distill能很好地处理双语混合提示。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '系统提示应该使用哪种语言？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '英文，即使在Qwen3这样的中文原生模型上。英文系统提示始终产生更好的指令遵从。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '繁体字和简体字有什么区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3两者都支持。指定"请使用繁体中文回答"使用繁体，"请使用简体中文回答"使用简体。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM中文还是英文提示更好？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '英文指令+「请用中文回复」最优。中文节省30–50% token；英文产生更强推理链。',
+            },
+          },
+        ],
     },
   },
 
@@ -720,11 +918,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Prompting em chinês economiza dinheiro em chamadas de API?', a: 'Sim, significativamente. Os tokens em chinês são 30–50% menos para o mesmo conteúdo em modelos da família Qwen.' },
-          { q: 'Posso misturar chinês e inglês no mesmo prompt?', a: 'Sim. Prompts em dois idiomas são bem tratados pelo Qwen3 e DeepSeek-R1-Distill.' },
-          { q: 'Qual idioma devo usar para os system prompts?', a: 'Inglês, mesmo em modelos nativos em chinês como o Qwen3. System prompts em inglês produzem consistentemente melhor seguimento de instruções.' },
-          { q: 'E o chinês tradicional vs simplificado?', a: 'Qwen3 lida com ambos. Especifique "請使用繁體中文回答" para tradicional ou "请使用简体中文回答" para simplificado.' },
-        ],
+            { q: 'Prompting em chinês economiza dinheiro em chamadas de API?', a: 'Sim, significativamente. Os tokens em chinês são 30–50% menos para o mesmo conteúdo em modelos da família Qwen.' },
+            { q: 'Posso misturar chinês e inglês no mesmo prompt?', a: 'Sim. Prompts em dois idiomas são bem tratados pelo Qwen3 e DeepSeek-R1-Distill.' },
+            { q: 'Qual idioma devo usar para os system prompts?', a: 'Inglês, mesmo em modelos nativos em chinês como o Qwen3. System prompts em inglês produzem consistentemente melhor seguimento de instruções.' },
+            { q: 'E o chinês tradicional vs simplificado?', a: 'Qwen3 lida com ambos. Especifique "請使用繁體中文回答" para tradicional ou "请使用简体中文回答" para simplificado.' },
+            { q: 'É melhor o prompting em chinês ou em inglês para LLMs locais?', a: 'Instruções em inglês + diretiva em chinês é o ideal. O chinês economiza 30–50% de tokens; o inglês produz melhor raciocínio.' },
+          ],
       },
     },
     schema: {
@@ -748,9 +947,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'É melhor o prompting em chinês ou em inglês para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Instruções em inglês + diretiva em chinês é o ideal. O chinês economiza 30–50% de tokens; o inglês produz melhor raciocínio.' } },
-        { '@type': 'Question', name: 'Qual idioma usar para os system prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Inglês, mesmo em modelos nativos em chinês como o Qwen3. System prompts em inglês sempre produzem melhor seguimento de instruções.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Prompting em chinês economiza dinheiro em chamadas de API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, significativamente. Os tokens em chinês são 30–50% menos para o mesmo conteúdo em modelos da família Qwen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso misturar chinês e inglês no mesmo prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Prompts em dois idiomas são bem tratados pelo Qwen3 e DeepSeek-R1-Distill.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual idioma devo usar para os system prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Inglês, mesmo em modelos nativos em chinês como o Qwen3. System prompts em inglês produzem consistentemente melhor seguimento de instruções.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'E o chinês tradicional vs simplificado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 lida com ambos. Especifique "請使用繁體中文回答" para tradicional ou "请使用简体中文回答" para simplificado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'É melhor o prompting em chinês ou em inglês para LLMs locais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Instruções em inglês + diretiva em chinês é o ideal. O chinês economiza 30–50% de tokens; o inglês produz melhor raciocínio.',
+            },
+          },
+        ],
     },
   },
   es: {
@@ -836,11 +1073,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿El prompting en chino ahorra dinero en llamadas a la API?', a: 'Sí, significativamente. Los tokens en chino son 30–50% menos para el mismo contenido en modelos de la familia Qwen.' },
-          { q: '¿Puedo mezclar chino e inglés en el mismo prompt?', a: 'Sí. Los prompts en dos idiomas los maneja bien Qwen3 y DeepSeek-R1-Distill.' },
-          { q: '¿Qué idioma debo usar para los system prompts?', a: 'Inglés, incluso en modelos nativos en chino como Qwen3. Los system prompts en inglés producen consistentemente mejor seguimiento de instrucciones.' },
-          { q: '¿Qué hay del chino tradicional vs simplificado?', a: 'Qwen3 maneja ambos. Especifica "请使用繁体中文回答" para tradicional o "请使用简体中文回答" para simplificado.' },
-        ],
+            { q: '¿El prompting en chino ahorra dinero en llamadas a la API?', a: 'Sí, significativamente. Los tokens en chino son 30–50% menos para el mismo contenido en modelos de la familia Qwen.' },
+            { q: '¿Puedo mezclar chino e inglés en el mismo prompt?', a: 'Sí. Los prompts en dos idiomas los maneja bien Qwen3 y DeepSeek-R1-Distill.' },
+            { q: '¿Qué idioma debo usar para los system prompts?', a: 'Inglés, incluso en modelos nativos en chino como Qwen3. Los system prompts en inglés producen consistentemente mejor seguimiento de instrucciones.' },
+            { q: '¿Qué hay del chino tradicional vs simplificado?', a: 'Qwen3 maneja ambos. Especifica "请使用繁体中文回答" para tradicional o "请使用简体中文回答" para simplificado.' },
+            { q: '¿Es mejor el prompting en chino o en inglés para LLMs locales?', a: 'Instrucciones en inglés + directiva en chino es óptimo. El chino ahorra 30–50% de tokens; el inglés produce mejor razonamiento.' },
+          ],
       },
     },
     schema: {
@@ -864,9 +1102,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿Es mejor el prompting en chino o en inglés para LLMs locales?', acceptedAnswer: { '@type': 'Answer', text: 'Instrucciones en inglés + directiva en chino es óptimo. El chino ahorra 30–50% de tokens; el inglés produce mejor razonamiento.' } },
-        { '@type': 'Question', name: '¿Qué idioma usar para los system prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Inglés, incluso en modelos nativos en chino como Qwen3. Los system prompts en inglés siempre producen mejor seguimiento de instrucciones.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿El prompting en chino ahorra dinero en llamadas a la API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, significativamente. Los tokens en chino son 30–50% menos para el mismo contenido en modelos de la familia Qwen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo mezclar chino e inglés en el mismo prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Los prompts en dos idiomas los maneja bien Qwen3 y DeepSeek-R1-Distill.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué idioma debo usar para los system prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Inglés, incluso en modelos nativos en chino como Qwen3. Los system prompts en inglés producen consistentemente mejor seguimiento de instrucciones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué hay del chino tradicional vs simplificado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 maneja ambos. Especifica "请使用繁体中文回答" para tradicional o "请使用简体中文回答" para simplificado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es mejor el prompting en chino o en inglés para LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Instrucciones en inglés + directiva en chino es óptimo. El chino ahorra 30–50% de tokens; el inglés produce mejor razonamiento.',
+            },
+          },
+        ],
     },
   },
   ar: {
@@ -946,11 +1222,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل الكتابة بالصينية توفّر المال في استدعاءات API؟', a: 'نعم، بشكل ملحوظ. الرموز الصينية أقل بنسبة 30–50% لنفس المحتوى على نماذج عائلة Qwen.' },
-          { q: 'هل يمكنني مزج الصينية والإنجليزية في نفس الأمر؟', a: 'نعم. Qwen3 وDeepSeek-R1-Distill يتعاملان بشكل جيد مع الأوامر ثنائية اللغة.' },
-          { q: 'ما اللغة التي يجب استخدامها لنصوص النظام؟', a: 'الإنجليزية، حتى على النماذج ذات الأصول الصينية كـ Qwen3. نصوص النظام الإنجليزية تُنتج باستمرار اتباعًا أفضل للتعليمات.' },
-          { q: 'ما الفرق بين الصينية التقليدية والمبسّطة؟', a: 'Qwen3 يتعامل مع كليهما. حدّد "请使用繁体中文回答" للتقليدية أو "请使用简体中文回答" للمبسّطة.' },
-        ],
+            { q: 'هل الكتابة بالصينية توفّر المال في استدعاءات API؟', a: 'نعم، بشكل ملحوظ. الرموز الصينية أقل بنسبة 30–50% لنفس المحتوى على نماذج عائلة Qwen.' },
+            { q: 'هل يمكنني مزج الصينية والإنجليزية في نفس الأمر؟', a: 'نعم. Qwen3 وDeepSeek-R1-Distill يتعاملان بشكل جيد مع الأوامر ثنائية اللغة.' },
+            { q: 'ما اللغة التي يجب استخدامها لنصوص النظام؟', a: 'الإنجليزية، حتى على النماذج ذات الأصول الصينية كـ Qwen3. نصوص النظام الإنجليزية تُنتج باستمرار اتباعًا أفضل للتعليمات.' },
+            { q: 'ما الفرق بين الصينية التقليدية والمبسّطة؟', a: 'Qwen3 يتعامل مع كليهما. حدّد "请使用繁体中文回答" للتقليدية أو "请使用简体中文回答" للمبسّطة.' },
+            { q: 'هل الكتابة بالصينية أم الإنجليزية أفضل لنماذج LLM المحلية؟', a: 'التعليمات بالإنجليزية + توجيه بالصينية هو الأمثل. الصينية توفّر 30–50% من الرموز؛ الإنجليزية تُنتج استدلالًا أفضل.' },
+          ],
       },
     },
     schema: {
@@ -974,9 +1251,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'هل الكتابة بالصينية أم الإنجليزية أفضل لنماذج LLM المحلية؟', acceptedAnswer: { '@type': 'Answer', text: 'التعليمات بالإنجليزية + توجيه بالصينية هو الأمثل. الصينية توفّر 30–50% من الرموز؛ الإنجليزية تُنتج استدلالًا أفضل.' } },
-        { '@type': 'Question', name: 'ما اللغة المناسبة لنصوص النظام؟', acceptedAnswer: { '@type': 'Answer', text: 'الإنجليزية، حتى على النماذج ذات الأصول الصينية كـ Qwen3. نصوص النظام الإنجليزية دائمًا تُنتج اتباعًا أفضل للتعليمات.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل الكتابة بالصينية توفّر المال في استدعاءات API؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، بشكل ملحوظ. الرموز الصينية أقل بنسبة 30–50% لنفس المحتوى على نماذج عائلة Qwen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني مزج الصينية والإنجليزية في نفس الأمر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. Qwen3 وDeepSeek-R1-Distill يتعاملان بشكل جيد مع الأوامر ثنائية اللغة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما اللغة التي يجب استخدامها لنصوص النظام؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الإنجليزية، حتى على النماذج ذات الأصول الصينية كـ Qwen3. نصوص النظام الإنجليزية تُنتج باستمرار اتباعًا أفضل للتعليمات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين الصينية التقليدية والمبسّطة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 يتعامل مع كليهما. حدّد "请使用繁体中文回答" للتقليدية أو "请使用简体中文回答" للمبسّطة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الكتابة بالصينية أم الإنجليزية أفضل لنماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'التعليمات بالإنجليزية + توجيه بالصينية هو الأمثل. الصينية توفّر 30–50% من الرموز؛ الإنجليزية تُنتج استدلالًا أفضل.',
+            },
+          },
+        ],
     },
   },
   ko: {
@@ -1061,11 +1376,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '중국어 프롬프팅은 API 호출 비용을 절약합니까?', a: '네, 상당히 절약됩니다. Qwen 계열 모델에서 동일한 내용에 대해 중국어 토큰이 30–50% 더 적습니다.' },
-          { q: '같은 프롬프트에 중국어와 영어를 혼합할 수 있습니까?', a: '네. Qwen3 및 DeepSeek-R1-Distill은 이중 언어 프롬프트를 잘 처리합니다.' },
-          { q: '시스템 프롬프트에는 어떤 언어를 사용해야 합니까?', a: 'Qwen3 같은 중국어 네이티브 모델에서도 영어를 사용하십시오. 영어 시스템 프롬프트는 일관되게 더 나은 지시 준수를 보여줍니다.' },
-          { q: '번체 중국어와 간체 중국어의 차이는 무엇입니까?', a: 'Qwen3은 두 가지 모두 처리합니다. 번체의 경우 "请使用繁体中文回答", 간체의 경우 "请使用简体中文回答"를 지정하십시오.' },
-        ],
+            { q: '중국어 프롬프팅은 API 호출 비용을 절약합니까?', a: '네, 상당히 절약됩니다. Qwen 계열 모델에서 동일한 내용에 대해 중국어 토큰이 30–50% 더 적습니다.' },
+            { q: '같은 프롬프트에 중국어와 영어를 혼합할 수 있습니까?', a: '네. Qwen3 및 DeepSeek-R1-Distill은 이중 언어 프롬프트를 잘 처리합니다.' },
+            { q: '시스템 프롬프트에는 어떤 언어를 사용해야 합니까?', a: 'Qwen3 같은 중국어 네이티브 모델에서도 영어를 사용하십시오. 영어 시스템 프롬프트는 일관되게 더 나은 지시 준수를 보여줍니다.' },
+            { q: '번체 중국어와 간체 중국어의 차이는 무엇입니까?', a: 'Qwen3은 두 가지 모두 처리합니다. 번체의 경우 "请使用繁体中文回答", 간체의 경우 "请使用简体中文回答"를 지정하십시오.' },
+            { q: '로컬 LLM 프롬프팅에는 중국어와 영어 중 어느 쪽이 더 낫습니까?', a: '영어 지시문 + 중국어 지시어가 최적입니다. 중국어는 토큰을 30–50% 절약하고, 영어는 더 나은 추론을 생성합니다.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -1107,9 +1423,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: '로컬 LLM 프롬프팅에는 중국어와 영어 중 어느 쪽이 더 낫습니까?', acceptedAnswer: { '@type': 'Answer', text: '영어 지시문 + 중국어 지시어가 최적입니다. 중국어는 토큰을 30–50% 절약하고, 영어는 더 나은 추론을 생성합니다.' } },
-        { '@type': 'Question', name: '시스템 프롬프트에는 어떤 언어를 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 같은 중국어 네이티브 모델에서도 영어를 사용하십시오. 영어 시스템 프롬프트는 항상 더 나은 지시 준수를 보여줍니다.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '중국어 프롬프팅은 API 호출 비용을 절약합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네, 상당히 절약됩니다. Qwen 계열 모델에서 동일한 내용에 대해 중국어 토큰이 30–50% 더 적습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '같은 프롬프트에 중국어와 영어를 혼합할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. Qwen3 및 DeepSeek-R1-Distill은 이중 언어 프롬프트를 잘 처리합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '시스템 프롬프트에는 어떤 언어를 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 같은 중국어 네이티브 모델에서도 영어를 사용하십시오. 영어 시스템 프롬프트는 일관되게 더 나은 지시 준수를 보여줍니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '번체 중국어와 간체 중국어의 차이는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3은 두 가지 모두 처리합니다. 번체의 경우 "请使用繁体中文回答", 간체의 경우 "请使用简体中文回答"를 지정하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM 프롬프팅에는 중국어와 영어 중 어느 쪽이 더 낫습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '영어 지시문 + 중국어 지시어가 최적입니다. 중국어는 토큰을 30–50% 절약하고, 영어는 더 나은 추론을 생성합니다.',
+            },
+          },
+        ],
     },
   },
 }

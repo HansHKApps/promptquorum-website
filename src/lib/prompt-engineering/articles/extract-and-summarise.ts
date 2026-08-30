@@ -1209,66 +1209,66 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '¿Cuál es la diferencia entre el resumen extractivo y el abstractivo con IA?',
-            acceptedAnswer: {
+            'name': '¿Cuál es la diferencia entre el resumen extractivo y el abstractivo con IA?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'El resumen extractivo copia oraciones directamente del documento fuente sin modificarlas — los errores fácticos son estructuralmente imposibles porque no se genera texto nuevo. El resumen abstractivo usa LLMs para generar nuevas oraciones parafraseadas que condensan la información — produciendo una salida más legible pero con tasas de alucinación del 0,7–14 % según el modelo y la tarea. Usa extractivo para documentos legales y de cumplimiento; usa abstractivo para resúmenes ejecutivos y síntesis de investigación.',
+              'text': 'El resumen extractivo copia oraciones directamente del documento fuente sin modificarlas — los errores fácticos son estructuralmente imposibles. El resumen abstractivo usa LLMs para generar nuevas oraciones parafraseadas con tasas de alucinación del 0,7–14 %. Usa extractivo para documentos legales y de cumplimiento; usa abstractivo para resúmenes ejecutivos y síntesis de investigación.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Qué modelo de IA alucina menos al resumir documentos?',
-            acceptedAnswer: {
+            'name': '¿Qué modelo de IA alucina menos al resumir documentos?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'En el benchmark HHEM de Vectara — el test estándar de fidelidad para resumen de documentos en 831 documentos — Gemini 3 Flash (Google DeepMind) alcanzó la menor tasa de alucinación del 0,7 % en 2025. Cuatro modelos logran ahora tasas inferiores al 1 % en resumen anclado a la fuente. Estas tasas solo aplican a tareas ancladas a la fuente; la recuperación factual de dominio abierto produce tasas del 3–33 % en los mismos modelos.',
+              'text': 'En el benchmark HHEM de Vectara, Gemini 3 Flash alcanzó la menor tasa de alucinación del 0,7 % en 2025. Estas tasas solo aplican al resumen anclado a la fuente; la recuperación factual de dominio abierto produce tasas del 3–33 %.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Cuántas páginas pueden procesar a la vez las herramientas de resumen con IA?',
-            acceptedAnswer: {
+            'name': '¿Cuántas páginas pueden procesar las herramientas de resumen con IA?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Depende del context window del modelo. GPT-5.6 maneja aproximadamente 100 páginas estándar por sesión (128k tokens). Claude Sonnet 5 maneja aproximadamente 160 páginas (200k tokens). Gemini 3.1 Pro maneja aproximadamente 800 páginas (1M tokens). NotebookLM soporta hasta 50 fuentes con un total de ~500.000 palabras por notebook. Para corpora más grandes, se requiere chunking.',
+              'text': 'GPT-5.6 maneja ~100 páginas (128k tokens). Claude Sonnet 5 maneja ~160 páginas (200k tokens). Gemini 3.1 Pro maneja ~800 páginas (1M tokens). NotebookLM soporta hasta 50 fuentes con ~500.000 palabras. Para corpora más grandes, se requiere chunking.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Es mejor NotebookLM o Claude para el resumen de documentos?',
-            acceptedAnswer: {
+            'name': '¿Es mejor NotebookLM o Claude para el resumen de documentos?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Sirven para necesidades diferentes. NotebookLM proporciona un anclaje a la fuente más estricto con citas en línea clicables — alucina menos sobre las fuentes cargadas y es mejor para representar fielmente lo que dicen los documentos. Claude Sonnet 5 produce análisis más matizados, destaca en la síntesis entre múltiples documentos e identifica conexiones no obvias — pero ocasionalmente mezcla el contenido fuente con el conocimiento general de entrenamiento. Usa NotebookLM para precisión; usa Claude para obtener insights.',
+              'text': 'Sirven para necesidades diferentes. NotebookLM proporciona anclaje más estricto a la fuente con citas en línea clicables. Claude Sonnet 5 produce análisis más matizados y destaca en la síntesis entre documentos. Usa NotebookLM para precisión; usa Claude para obtener insights.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Cómo evito que la IA alucinara en mis resúmenes?',
-            acceptedAnswer: {
+            'name': '¿Cómo evito que la IA alucinara en mis resúmenes?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Cuatro técnicas reducen la alucinación en tareas de resumen: (1) instruye al modelo explícitamente — "resume solo desde el documento a continuación; no añadas conocimiento externo"; (2) establece Temperature (T) a 0,0–0,1 para máximo determinismo; (3) usa una verificación de fidelidad — pide al modelo que liste cada afirmación en su resumen e identifique su oración fuente; (4) verifica con un segundo modelo — cuando GPT-5.6 y Claude Sonnet 5 coinciden en un hecho específico, la probabilidad de alucinación compartida es estadísticamente casi cero.',
+              'text': 'Cuatro técnicas: (1) instruye explícitamente — "resume solo desde el documento"; (2) temperatura 0,0–0,1; (3) verificación de fidelidad; (4) verificación multi-modelo. Cuando GPT-5.6 y Claude coinciden en un hecho, la probabilidad de alucinación compartida es casi cero.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Qué es el chunking de documentos y cuándo debo usarlo?',
-            acceptedAnswer: {
+            'name': '¿Qué es el chunking de documentos y cuándo debo usarlo?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'El chunking divide un documento en segmentos (típicamente 500–2.000 tokens), resume cada segmento por separado, luego sintetiza los resúmenes de los chunks en una salida final. Úsalo cuando tu documento supere el context window del modelo — aproximadamente 100 páginas para GPT-5.6, 160 para Claude Sonnet 5, u 800 para Gemini 3.1 Pro. Para documentos estructurados (contratos legales, informes anuales), el chunking temático por secciones produce la síntesis final más coherente.',
+              'text': 'El chunking divide el documento en segmentos de 500–2.000 tokens, resume cada uno por separado, luego sintetiza. Úsalo cuando el documento supere el context window del modelo (~100 páginas para GPT-5.6, ~160 para Claude, ~800 para Gemini).',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Qué son ROUGE y BERTScore, y qué métrica usar para evaluar resúmenes de IA?',
-            acceptedAnswer: {
+            'name': '¿Qué son ROUGE y BERTScore para evaluar resúmenes?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'ROUGE mide la superposición de n-gramas entre un resumen generado y una referencia — útil para benchmarking pero ciego a la semántica y la exactitud factual. BERTScore usa similitud coseno entre embeddings BERT, capturando similitud semántica en lugar de coincidencias exactas de palabras. Para workflows de documentos en producción, ninguna es suficiente sola: usa métricas de fidelidad como HHEM (Vectara) o FaithJudge para medir si el resumen contiene solo afirmaciones respaldadas por el documento fuente.',
+              'text': 'ROUGE mide la superposición de n-gramas — útil para benchmarking pero ciego a la semántica. BERTScore usa similitud coseno entre embeddings BERT, capturando similitud semántica. Para producción, combina HHEM de fidelidad con una verificación de completitud.',
             },
           },
           {
             '@type': 'Question',
-            name: '¿Pueden las herramientas de resumen con IA manejar documentos en otros idiomas además del inglés?',
-            acceptedAnswer: {
+            'name': '¿Pueden las herramientas de resumen con IA manejar documentos en otros idiomas?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Sí, con advertencias importantes. Los modelos de Mistral AI manejan francés y lenguas europeas de forma nativa y pueden desplegarse localmente para cumplimiento GDPR. Qwen 3 (Alibaba) tokeniza los caracteres chinos con aproximadamente un 40 % menos de tokens que GPT-5.6. Los modelos LLaMA 4 desplegados vía Ollama soportan resumen multilingüe mientras mantienen los datos completamente on-premise.',
+              'text': 'Sí. Mistral AI maneja francés y lenguas europeas de forma nativa con despliegue local para cumplimiento GDPR. Qwen 3 tokeniza el chino con ~40 % menos tokens que GPT-5.6. LLaMA 4 vía Ollama soporta resumen multilingüe completamente on-premise.',
             },
           },
         ],
@@ -1587,38 +1587,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
-            {
-              q: '¿Cuál es la diferencia entre el resumen extractivo y el abstractivo con IA?',
-              a: 'El resumen extractivo copia oraciones directamente del documento fuente sin modificarlas — los errores fácticos son estructuralmente imposibles. El resumen abstractivo usa LLMs para generar nuevas oraciones parafraseadas con tasas de alucinación del 0,7–14 %. Usa extractivo para documentos legales y de cumplimiento; usa abstractivo para resúmenes ejecutivos y síntesis de investigación.',
-            },
-            {
-              q: '¿Qué modelo de IA alucina menos al resumir documentos?',
-              a: 'En el benchmark HHEM de Vectara, Gemini 3 Flash alcanzó la menor tasa de alucinación del 0,7 % en 2025. Estas tasas solo aplican al resumen anclado a la fuente; la recuperación factual de dominio abierto produce tasas del 3–33 %.',
-            },
-            {
-              q: '¿Cuántas páginas pueden procesar las herramientas de resumen con IA?',
-              a: 'GPT-5.6 maneja ~100 páginas (128k tokens). Claude Sonnet 5 maneja ~160 páginas (200k tokens). Gemini 3.1 Pro maneja ~800 páginas (1M tokens). NotebookLM soporta hasta 50 fuentes con ~500.000 palabras. Para corpora más grandes, se requiere chunking.',
-            },
-            {
-              q: '¿Es mejor NotebookLM o Claude para el resumen de documentos?',
-              a: 'Sirven para necesidades diferentes. NotebookLM proporciona anclaje más estricto a la fuente con citas en línea clicables. Claude Sonnet 5 produce análisis más matizados y destaca en la síntesis entre documentos. Usa NotebookLM para precisión; usa Claude para obtener insights.',
-            },
-            {
-              q: '¿Cómo evito que la IA alucinara en mis resúmenes?',
-              a: 'Cuatro técnicas: (1) instruye explícitamente — "resume solo desde el documento"; (2) temperatura 0,0–0,1; (3) verificación de fidelidad; (4) verificación multi-modelo. Cuando GPT-5.6 y Claude coinciden en un hecho, la probabilidad de alucinación compartida es casi cero.',
-            },
-            {
-              q: '¿Qué es el chunking de documentos y cuándo debo usarlo?',
-              a: 'El chunking divide el documento en segmentos de 500–2.000 tokens, resume cada uno por separado, luego sintetiza. Úsalo cuando el documento supere el context window del modelo (~100 páginas para GPT-5.6, ~160 para Claude, ~800 para Gemini).',
-            },
-            {
-              q: '¿Qué son ROUGE y BERTScore para evaluar resúmenes?',
-              a: 'ROUGE mide la superposición de n-gramas — útil para benchmarking pero ciego a la semántica. BERTScore usa similitud coseno entre embeddings BERT, capturando similitud semántica. Para producción, combina HHEM de fidelidad con una verificación de completitud.',
-            },
-            {
-              q: '¿Pueden las herramientas de resumen con IA manejar documentos en otros idiomas?',
-              a: 'Sí. Mistral AI maneja francés y lenguas europeas de forma nativa con despliegue local para cumplimiento GDPR. Qwen 3 tokeniza el chino con ~40 % menos tokens que GPT-5.6. LLaMA 4 vía Ollama soporta resumen multilingüe completamente on-premise.',
-            },
+            { q: '¿Cuál es la diferencia entre el resumen extractivo y el abstractivo con IA?', a: 'El resumen extractivo copia oraciones directamente del documento fuente sin modificarlas — los errores fácticos son estructuralmente imposibles. El resumen abstractivo usa LLMs para generar nuevas oraciones parafraseadas con tasas de alucinación del 0,7–14 %. Usa extractivo para documentos legales y de cumplimiento; usa abstractivo para resúmenes ejecutivos y síntesis de investigación.' },
+            { q: '¿Qué modelo de IA alucina menos al resumir documentos?', a: 'En el benchmark HHEM de Vectara, Gemini 3 Flash alcanzó la menor tasa de alucinación del 0,7 % en 2025. Estas tasas solo aplican al resumen anclado a la fuente; la recuperación factual de dominio abierto produce tasas del 3–33 %.' },
+            { q: '¿Cuántas páginas pueden procesar las herramientas de resumen con IA?', a: 'GPT-5.6 maneja ~100 páginas (128k tokens). Claude Sonnet 5 maneja ~160 páginas (200k tokens). Gemini 3.1 Pro maneja ~800 páginas (1M tokens). NotebookLM soporta hasta 50 fuentes con ~500.000 palabras. Para corpora más grandes, se requiere chunking.' },
+            { q: '¿Es mejor NotebookLM o Claude para el resumen de documentos?', a: 'Sirven para necesidades diferentes. NotebookLM proporciona anclaje más estricto a la fuente con citas en línea clicables. Claude Sonnet 5 produce análisis más matizados y destaca en la síntesis entre documentos. Usa NotebookLM para precisión; usa Claude para obtener insights.' },
+            { q: '¿Cómo evito que la IA alucinara en mis resúmenes?', a: 'Cuatro técnicas: (1) instruye explícitamente — "resume solo desde el documento"; (2) temperatura 0,0–0,1; (3) verificación de fidelidad; (4) verificación multi-modelo. Cuando GPT-5.6 y Claude coinciden en un hecho, la probabilidad de alucinación compartida es casi cero.' },
+            { q: '¿Qué es el chunking de documentos y cuándo debo usarlo?', a: 'El chunking divide el documento en segmentos de 500–2.000 tokens, resume cada uno por separado, luego sintetiza. Úsalo cuando el documento supere el context window del modelo (~100 páginas para GPT-5.6, ~160 para Claude, ~800 para Gemini).' },
+            { q: '¿Qué son ROUGE y BERTScore para evaluar resúmenes?', a: 'ROUGE mide la superposición de n-gramas — útil para benchmarking pero ciego a la semántica. BERTScore usa similitud coseno entre embeddings BERT, capturando similitud semántica. Para producción, combina HHEM de fidelidad con una verificación de completitud.' },
+            { q: '¿Pueden las herramientas de resumen con IA manejar documentos en otros idiomas?', a: 'Sí. Mistral AI maneja francés y lenguas europeas de forma nativa con despliegue local para cumplimiento GDPR. Qwen 3 tokeniza el chino con ~40 % menos tokens que GPT-5.6. LLaMA 4 vía Ollama soporta resumen multilingüe completamente on-premise.' },
           ],
         },
         sources: {
@@ -1728,66 +1704,74 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'ما الفرق بين التلخيص الاستخراجي والتجريدي بالذكاء الاصطناعي؟',
-            acceptedAnswer: {
+            'name': 'ما الفرق بين التلخيص الاستخراجي والتجريدي بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'يقوم التلخيص الاستخراجي بنسخ الجمل مباشرةً من الوثيقة المصدر دون تعديل — فالأخطاء الواقعية مستحيلة هيكليًا لأنه لا يُولَّد نص جديد. أما التلخيص التجريدي فيستخدم النماذج اللغوية الكبيرة لتوليد جمل مُعادة الصياغة تُكثّف المعلومات — مما ينتج مخرجات أكثر قابلية للقراءة لكن بمعدلات هلوسة تتراوح بين 0.7 و14٪ حسب النموذج والمهمة. استخدم الاستخراجي للوثائق القانونية والامتثالية؛ واستخدم التجريدي للملخصات التنفيذية وتوليف الأبحاث.',
+              'text': 'يقوم الاستخراجي بنسخ الجمل مباشرةً من الوثيقة المصدر دون تعديل — فالأخطاء الواقعية مستحيلة هيكليًا. يستخدم التجريدي النماذج اللغوية الكبيرة لتوليد جمل مُعادة الصياغة بمعدلات هلوسة 0.7–14٪. استخدم الاستخراجي للوثائق القانونية والامتثالية؛ واستخدم التجريدي للملخصات التنفيذية وتوليف الأبحاث.',
             },
           },
           {
             '@type': 'Question',
-            name: 'أي نموذج ذكاء اصطناعي يُهلوس أقل عند تلخيص الوثائق؟',
-            acceptedAnswer: {
+            'name': 'أي نموذج ذكاء اصطناعي يُهلوس أقل عند تلخيص الوثائق؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'في معيار HHEM من Vectara — اختبار الدقة القياسي لتلخيص الوثائق على 831 وثيقة — حقّق Gemini 3 Flash أدنى معدل هلوسة بنسبة 0.7٪ في 2025. أربعة نماذج تحقق الآن معدلات أقل من 1٪ في التلخيص المرتكز على المصدر. تنطبق هذه المعدلات فقط على المهام المرتكزة على المصدر؛ استرجاع الحقائق من المجال المفتوح ينتج معدلات 3–33٪ في النماذج ذاتها.',
+              'text': 'في معيار HHEM من Vectara، حقّق Gemini 3 Flash أدنى معدل هلوسة بنسبة 0.7٪ في 2025. تنطبق هذه المعدلات فقط على التلخيص المرتكز على المصدر؛ استرجاع الحقائق من المجال المفتوح ينتج معدلات 3–33٪.',
             },
           },
           {
             '@type': 'Question',
-            name: 'كم صفحة يمكن لأدوات التلخيص بالذكاء الاصطناعي معالجتها دفعةً واحدة؟',
-            acceptedAnswer: {
+            'name': 'كم صفحة يمكن لأدوات التلخيص معالجتها؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'يعتمد ذلك على نافذة سياق النموذج. يعالج GPT-5.6 نحو 100 صفحة قياسية لكل جلسة (128K رمز). يعالج Claude Sonnet 5 نحو 160 صفحة (200K رمز). يعالج Gemini 3.1 Pro نحو 800 صفحة (1M رمز). يدعم NotebookLM ما يصل إلى 50 مصدرًا بإجمالي ~500,000 كلمة لكل مفكّرة. للمجموعات الأكبر، يلزم التقطيع.',
+              'text': 'يعالج GPT-5.6 ~100 صفحة (128K رمز). يعالج Claude Sonnet 5 ~160 صفحة (200K رمز). يعالج Gemini 3.1 Pro ~800 صفحة (1M رمز). يدعم NotebookLM ما يصل إلى 50 مصدرًا بـ~500,000 كلمة. للمجموعات الأكبر، يلزم التقطيع.',
             },
           },
           {
             '@type': 'Question',
-            name: 'أيهما أفضل: NotebookLM أم Claude لتلخيص الوثائق؟',
-            acceptedAnswer: {
+            'name': 'أيهما أفضل: NotebookLM أم Claude لتلخيص الوثائق؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'يخدم كلٌّ منهما احتياجات مختلفة. يوفر NotebookLM ارتكازًا أكثر صرامة على المصدر مع اقتباسات مضمّنة قابلة للنقر — يُهلوس أقل حول المصادر المحمّلة وهو الأفضل لتمثيل ما تقوله الوثائق بأمانة. يُنتج Claude Sonnet 5 تحليلات أكثر دقةً، ويتفوق في التوليف عبر الوثائق المتعددة وتحديد الروابط غير الواضحة — لكنه قد يخلط أحيانًا بين محتوى المصدر والمعرفة العامة من التدريب. استخدم NotebookLM للدقة؛ واستخدم Claude للحصول على رؤى معمّقة.',
+              'text': 'يخدم كلٌّ منهما احتياجات مختلفة. يوفر NotebookLM ارتكازًا أكثر صرامة على المصدر مع اقتباسات مضمّنة قابلة للنقر. يُنتج Claude Sonnet 5 تحليلات أكثر دقةً ويتفوق في التوليف عبر الوثائق. استخدم NotebookLM للدقة؛ واستخدم Claude للرؤى المعمّقة.',
             },
           },
           {
             '@type': 'Question',
-            name: 'كيف أمنع الذكاء الاصطناعي من الهلوسة في ملخصاتي؟',
-            acceptedAnswer: {
+            'name': 'كيف أمنع الذكاء الاصطناعي من الهلوسة في ملخصاتي؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'أربع تقنيات تقلّل الهلوسة في مهام التلخيص: (1) وجّه النموذج صراحةً — "لخّص من الوثيقة أدناه فحسب؛ لا تُضف معرفة خارجية"؛ (2) اضبط درجة الحرارة على 0.0–0.1 لأقصى حتمية؛ (3) استخدم فحص الدقة — اطلب من النموذج إدراج كل ادعاء في ملخصه وتحديد الجملة المصدر المقابلة؛ (4) تحقق بنموذج ثانٍ — عندما يتفق GPT-5.6 وClaude Sonnet 5 على حقيقة محددة، تكون احتمالية الهلوسة المشتركة شبه صفرية إحصائيًا.',
+              'text': 'أربع تقنيات: (1) وجّهه صراحةً — "لخّص فقط من الوثيقة"؛ (2) درجة حرارة 0.0–0.1؛ (3) فحص الدقة؛ (4) التحقق متعدد النماذج. حين يتفق GPT-5.6 وClaude على حقيقة، تكون احتمالية الهلوسة المشتركة شبه صفرية.',
             },
           },
           {
             '@type': 'Question',
-            name: 'ما تقطيع الوثائق ومتى يجب استخدامه؟',
-            acceptedAnswer: {
+            'name': 'ما تقطيع الوثائق ومتى يجب استخدامه؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'يقسّم التقطيع الوثيقة إلى أجزاء (عادةً 500–2,000 رمز)، يُلخّص كل جزء بشكل منفصل، ثم يُركّب الملخصات في مخرج نهائي. استخدمه حين تتجاوز وثيقتك نافذة سياق النموذج — نحو 100 صفحة لـGPT-5.6، و160 لـClaude Sonnet 5، و800 لـGemini 3.1 Pro. للوثائق المهيكلة (العقود القانونية، التقارير السنوية)، يُنتج التقطيع الموضوعي حسب الأقسام التوليفَ النهائي الأكثر تماسكًا.',
+              'text': 'يقسّم التقطيع الوثيقة إلى أجزاء من 500–2,000 رمز، يُلخّص كلًا منها على حدة، ثم يُركّب النتائج. استخدمه حين تتجاوز وثيقتك نافذة سياق النموذج (~100 صفحة لـGPT-5.6، ~160 لـClaude، ~800 لـGemini).',
             },
           },
           {
             '@type': 'Question',
-            name: 'ما ROUGE وBERTScore، وأي مقياس تستخدم لتقييم ملخصات الذكاء الاصطناعي؟',
-            acceptedAnswer: {
+            'name': 'ما ROUGE وBERTScore لتقييم الملخصات؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'يقيس ROUGE التداخل في النجرامات بين ملخص مُولَّد ومرجعي — مفيد للمعايرة لكنه أعمى عن الدلالة والدقة الواقعية. يستخدم BERTScore تشابه جيب التمام بين تضمينات BERT، مما يلتقط التشابه الدلالي بدلًا من التطابق الحرفي. لسير عمل الوثائق في الإنتاج، لا يكفي أيٌّ منهما وحده: استخدم مقاييس الدقة مثل HHEM (Vectara) أو FaithJudge لقياس ما إذا كان الملخص يحتوي فقط على ادعاءات مدعومة بالوثيقة المصدر.',
+              'text': 'يقيس ROUGE التداخل في النجرامات — مفيد للمعايرة لكنه أعمى عن الدلالة. يستخدم BERTScore تشابه جيب التمام بين تضمينات BERT، مما يلتقط التشابه الدلالي. للإنتاج، اجمع دقة HHEM مع فحص الاكتمال.',
             },
           },
           {
             '@type': 'Question',
-            name: 'هل تستطيع أدوات التلخيص بالذكاء الاصطناعي التعامل مع وثائق بلغات غير الإنجليزية؟',
-            acceptedAnswer: {
+            'name': 'هل تستطيع أدوات التلخيص التعامل مع وثائق بلغات أخرى؟',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'نعم، مع تحفظات مهمة. تتعامل نماذج Mistral AI مع الفرنسية والغات الأوروبية بشكل أصيل ويمكن نشرها محليًا للامتثال لـGDPR. يرمّز Qwen 3 (Alibaba) الأحرف الصينية بنحو 40٪ رموز أقل مقارنةً بـGPT-5.6. تدعم نماذج LLaMA 4 المنشورة عبر Ollama التلخيص متعدد اللغات مع الإبقاء على جميع البيانات داخل البنية التحتية المحلية.',
+              'text': 'نعم. تتعامل Mistral AI مع الفرنسية والغات الأوروبية بشكل أصيل مع النشر المحلي لامتثال GDPR. يُرمّز Qwen 3 الصينية بـ~40٪ رموز أقل من GPT-5.6. يدعم LLaMA 4 عبر Ollama التلخيص متعدد اللغات بالكامل محليًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما ROUGE وBERTScore، وأي مقياس تستخدم لتقييم ملخصات الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يقيس ROUGE التداخل في النجرامات بين ملخص مُولَّد ومرجعي — مفيد للمعايرة لكنه أعمى عن الدلالة والدقة الواقعية. يستخدم BERTScore تشابه جيب التمام بين تضمينات BERT، مما يلتقط التشابه الدلالي بدلًا من التطابق الحرفي. لسير عمل الوثائق في الإنتاج، لا يكفي أيٌّ منهما وحده: استخدم مقاييس الدقة مثل HHEM (Vectara) أو FaithJudge لقياس ما إذا كان الملخص يحتوي فقط على ادعاءات مدعومة بالوثيقة المصدر.',
             },
           },
         ],
@@ -2106,38 +2090,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
-            {
-              q: 'ما الفرق بين التلخيص الاستخراجي والتجريدي بالذكاء الاصطناعي؟',
-              a: 'يقوم الاستخراجي بنسخ الجمل مباشرةً من الوثيقة المصدر دون تعديل — فالأخطاء الواقعية مستحيلة هيكليًا. يستخدم التجريدي النماذج اللغوية الكبيرة لتوليد جمل مُعادة الصياغة بمعدلات هلوسة 0.7–14٪. استخدم الاستخراجي للوثائق القانونية والامتثالية؛ واستخدم التجريدي للملخصات التنفيذية وتوليف الأبحاث.',
-            },
-            {
-              q: 'أي نموذج ذكاء اصطناعي يُهلوس أقل عند تلخيص الوثائق؟',
-              a: 'في معيار HHEM من Vectara، حقّق Gemini 3 Flash أدنى معدل هلوسة بنسبة 0.7٪ في 2025. تنطبق هذه المعدلات فقط على التلخيص المرتكز على المصدر؛ استرجاع الحقائق من المجال المفتوح ينتج معدلات 3–33٪.',
-            },
-            {
-              q: 'كم صفحة يمكن لأدوات التلخيص معالجتها؟',
-              a: 'يعالج GPT-5.6 ~100 صفحة (128K رمز). يعالج Claude Sonnet 5 ~160 صفحة (200K رمز). يعالج Gemini 3.1 Pro ~800 صفحة (1M رمز). يدعم NotebookLM ما يصل إلى 50 مصدرًا بـ~500,000 كلمة. للمجموعات الأكبر، يلزم التقطيع.',
-            },
-            {
-              q: 'أيهما أفضل: NotebookLM أم Claude لتلخيص الوثائق؟',
-              a: 'يخدم كلٌّ منهما احتياجات مختلفة. يوفر NotebookLM ارتكازًا أكثر صرامة على المصدر مع اقتباسات مضمّنة قابلة للنقر. يُنتج Claude Sonnet 5 تحليلات أكثر دقةً ويتفوق في التوليف عبر الوثائق. استخدم NotebookLM للدقة؛ واستخدم Claude للرؤى المعمّقة.',
-            },
-            {
-              q: 'كيف أمنع الذكاء الاصطناعي من الهلوسة في ملخصاتي؟',
-              a: 'أربع تقنيات: (1) وجّهه صراحةً — "لخّص فقط من الوثيقة"؛ (2) درجة حرارة 0.0–0.1؛ (3) فحص الدقة؛ (4) التحقق متعدد النماذج. حين يتفق GPT-5.6 وClaude على حقيقة، تكون احتمالية الهلوسة المشتركة شبه صفرية.',
-            },
-            {
-              q: 'ما تقطيع الوثائق ومتى يجب استخدامه؟',
-              a: 'يقسّم التقطيع الوثيقة إلى أجزاء من 500–2,000 رمز، يُلخّص كلًا منها على حدة، ثم يُركّب النتائج. استخدمه حين تتجاوز وثيقتك نافذة سياق النموذج (~100 صفحة لـGPT-5.6، ~160 لـClaude، ~800 لـGemini).',
-            },
-            {
-              q: 'ما ROUGE وBERTScore لتقييم الملخصات؟',
-              a: 'يقيس ROUGE التداخل في النجرامات — مفيد للمعايرة لكنه أعمى عن الدلالة. يستخدم BERTScore تشابه جيب التمام بين تضمينات BERT، مما يلتقط التشابه الدلالي. للإنتاج، اجمع دقة HHEM مع فحص الاكتمال.',
-            },
-            {
-              q: 'هل تستطيع أدوات التلخيص التعامل مع وثائق بلغات أخرى؟',
-              a: 'نعم. تتعامل Mistral AI مع الفرنسية والغات الأوروبية بشكل أصيل مع النشر المحلي لامتثال GDPR. يُرمّز Qwen 3 الصينية بـ~40٪ رموز أقل من GPT-5.6. يدعم LLaMA 4 عبر Ollama التلخيص متعدد اللغات بالكامل محليًا.',
-            },
+            { q: 'ما الفرق بين التلخيص الاستخراجي والتجريدي بالذكاء الاصطناعي؟', a: 'يقوم الاستخراجي بنسخ الجمل مباشرةً من الوثيقة المصدر دون تعديل — فالأخطاء الواقعية مستحيلة هيكليًا. يستخدم التجريدي النماذج اللغوية الكبيرة لتوليد جمل مُعادة الصياغة بمعدلات هلوسة 0.7–14٪. استخدم الاستخراجي للوثائق القانونية والامتثالية؛ واستخدم التجريدي للملخصات التنفيذية وتوليف الأبحاث.' },
+            { q: 'أي نموذج ذكاء اصطناعي يُهلوس أقل عند تلخيص الوثائق؟', a: 'في معيار HHEM من Vectara، حقّق Gemini 3 Flash أدنى معدل هلوسة بنسبة 0.7٪ في 2025. تنطبق هذه المعدلات فقط على التلخيص المرتكز على المصدر؛ استرجاع الحقائق من المجال المفتوح ينتج معدلات 3–33٪.' },
+            { q: 'كم صفحة يمكن لأدوات التلخيص معالجتها؟', a: 'يعالج GPT-5.6 ~100 صفحة (128K رمز). يعالج Claude Sonnet 5 ~160 صفحة (200K رمز). يعالج Gemini 3.1 Pro ~800 صفحة (1M رمز). يدعم NotebookLM ما يصل إلى 50 مصدرًا بـ~500,000 كلمة. للمجموعات الأكبر، يلزم التقطيع.' },
+            { q: 'أيهما أفضل: NotebookLM أم Claude لتلخيص الوثائق؟', a: 'يخدم كلٌّ منهما احتياجات مختلفة. يوفر NotebookLM ارتكازًا أكثر صرامة على المصدر مع اقتباسات مضمّنة قابلة للنقر. يُنتج Claude Sonnet 5 تحليلات أكثر دقةً ويتفوق في التوليف عبر الوثائق. استخدم NotebookLM للدقة؛ واستخدم Claude للرؤى المعمّقة.' },
+            { q: 'كيف أمنع الذكاء الاصطناعي من الهلوسة في ملخصاتي؟', a: 'أربع تقنيات: (1) وجّهه صراحةً — "لخّص فقط من الوثيقة"؛ (2) درجة حرارة 0.0–0.1؛ (3) فحص الدقة؛ (4) التحقق متعدد النماذج. حين يتفق GPT-5.6 وClaude على حقيقة، تكون احتمالية الهلوسة المشتركة شبه صفرية.' },
+            { q: 'ما تقطيع الوثائق ومتى يجب استخدامه؟', a: 'يقسّم التقطيع الوثيقة إلى أجزاء من 500–2,000 رمز، يُلخّص كلًا منها على حدة، ثم يُركّب النتائج. استخدمه حين تتجاوز وثيقتك نافذة سياق النموذج (~100 صفحة لـGPT-5.6، ~160 لـClaude، ~800 لـGemini).' },
+            { q: 'ما ROUGE وBERTScore لتقييم الملخصات؟', a: 'يقيس ROUGE التداخل في النجرامات — مفيد للمعايرة لكنه أعمى عن الدلالة. يستخدم BERTScore تشابه جيب التمام بين تضمينات BERT، مما يلتقط التشابه الدلالي. للإنتاج، اجمع دقة HHEM مع فحص الاكتمال.' },
+            { q: 'هل تستطيع أدوات التلخيص التعامل مع وثائق بلغات أخرى؟', a: 'نعم. تتعامل Mistral AI مع الفرنسية والغات الأوروبية بشكل أصيل مع النشر المحلي لامتثال GDPR. يُرمّز Qwen 3 الصينية بـ~40٪ رموز أقل من GPT-5.6. يدعم LLaMA 4 عبر Ollama التلخيص متعدد اللغات بالكامل محليًا.' },
+            { q: 'ما ROUGE وBERTScore، وأي مقياس تستخدم لتقييم ملخصات الذكاء الاصطناعي؟', a: 'يقيس ROUGE التداخل في النجرامات بين ملخص مُولَّد ومرجعي — مفيد للمعايرة لكنه أعمى عن الدلالة والدقة الواقعية. يستخدم BERTScore تشابه جيب التمام بين تضمينات BERT، مما يلتقط التشابه الدلالي بدلًا من التطابق الحرفي. لسير عمل الوثائق في الإنتاج، لا يكفي أيٌّ منهما وحده: استخدم مقاييس الدقة مثل HHEM (Vectara) أو FaithJudge لقياس ما إذا كان الملخص يحتوي فقط على ادعاءات مدعومة بالوثيقة المصدر.' },
           ],
         },
         sources: {
@@ -2246,66 +2207,66 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Qual é a diferença entre o resumo extrativo e o abstrativo com IA?',
-            acceptedAnswer: {
+            'name': 'Qual é a diferença entre o resumo extrativo e o abstrativo com IA?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'O resumo extrativo copia frases diretamente do documento-fonte sem modificá-las — erros factuais são estruturalmente impossíveis porque nenhum texto novo é gerado. O resumo abstrativo usa LLMs para gerar novas frases parafraseadas que condensam a informação — produzindo uma saída mais legível mas com taxas de alucinação de 0,7–14% dependendo do modelo e da tarefa. Use extrativo para documentos jurídicos e de conformidade; use abstrativo para resumos executivos e síntese de pesquisa.',
+              'text': 'O resumo extrativo copia frases diretamente do documento-fonte sem modificá-las — erros factuais são estruturalmente impossíveis. O resumo abstrativo usa LLMs para gerar novas frases parafraseadas com taxas de alucinação de 0,7–14%. Use extrativo para documentos jurídicos e de conformidade; use abstrativo para resumos executivos e síntese de pesquisa.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Qual modelo de IA alucina menos ao resumir documentos?',
-            acceptedAnswer: {
+            'name': 'Qual modelo de IA alucina menos ao resumir documentos?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'No benchmark HHEM do Vectara — o teste padrão de fidelidade para resumo de documentos em 831 documentos — o Gemini 3 Flash (Google DeepMind) alcançou a menor taxa de alucinação de 0,7% em 2025. Quatro modelos agora alcançam taxas abaixo de 1% no resumo ancorado na fonte. Essas taxas só se aplicam a tarefas ancoradas na fonte; a recuperação factual de domínio aberto produz taxas de 3–33% nos mesmos modelos.',
+              'text': 'No benchmark HHEM do Vectara, o Gemini 3 Flash alcançou a menor taxa de alucinação de 0,7% em 2025. Essas taxas só se aplicam ao resumo ancorado na fonte; a recuperação factual de domínio aberto produz taxas de 3–33%.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quantas páginas as ferramentas de resumo com IA podem processar de uma vez?',
-            acceptedAnswer: {
+            'name': 'Quantas páginas as ferramentas de resumo com IA podem processar?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Depende do context window do modelo. GPT-5.6 processa aproximadamente 100 páginas padrão por sessão (128k tokens). Claude Sonnet 5 processa aproximadamente 160 páginas (200k tokens). Gemini 3.1 Pro processa aproximadamente 800 páginas (1M tokens). NotebookLM suporta até 50 fontes com um total de ~500.000 palavras por notebook. Para corpora maiores, o chunking é necessário.',
+              'text': 'GPT-5.6 processa ~100 páginas (128k tokens). Claude Sonnet 5 processa ~160 páginas (200k tokens). Gemini 3.1 Pro processa ~800 páginas (1M tokens). NotebookLM suporta até 50 fontes com ~500.000 palavras. Para corpora maiores, o chunking é necessário.',
             },
           },
           {
             '@type': 'Question',
-            name: 'NotebookLM é melhor que Claude para o resumo de documentos?',
-            acceptedAnswer: {
+            'name': 'NotebookLM é melhor que Claude para o resumo de documentos?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Servem para necessidades diferentes. NotebookLM fornece ancoragem mais rigorosa na fonte com citações inline clicáveis — alucina menos sobre as fontes carregadas e é melhor para representar fielmente o que os documentos dizem. Claude Sonnet 5 produz análises mais matizadas, se destaca na síntese entre múltiplos documentos e identifica conexões não óbvias. Use NotebookLM para precisão; use Claude para obter insights.',
+              'text': 'Servem para necessidades diferentes. NotebookLM fornece ancoragem mais rigorosa na fonte com citações inline clicáveis. Claude Sonnet 5 produz análises mais matizadas e se destaca na síntese entre documentos. Use NotebookLM para precisão; use Claude para obter insights.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Como evito que a IA alucinize nos meus resumos?',
-            acceptedAnswer: {
+            'name': 'Como evito que a IA alucinize nos meus resumos?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Quatro técnicas reduzem a alucinação em tarefas de resumo: (1) instrua o modelo explicitamente — "resuma apenas a partir do documento abaixo; não adicione conhecimento externo"; (2) defina Temperature (T) para 0,0–0,1 para máximo determinismo; (3) use uma verificação de fidelidade — peça ao modelo que liste cada afirmação em seu resumo e identifique sua frase-fonte; (4) verifique com um segundo modelo — quando GPT-5.6 e Claude Sonnet 5 concordam em um fato específico, a probabilidade de alucinação compartilhada é estatisticamente quase zero.',
+              'text': 'Quatro técnicas: (1) instrua explicitamente — "resuma apenas a partir do documento"; (2) temperatura 0,0–0,1; (3) verificação de fidelidade; (4) verificação multi-modelo. Quando GPT-5.6 e Claude concordam em um fato, a probabilidade de alucinação compartilhada é quase zero.',
             },
           },
           {
             '@type': 'Question',
-            name: 'O que é chunking de documentos e quando devo usá-lo?',
-            acceptedAnswer: {
+            'name': 'O que é chunking de documentos e quando devo usá-lo?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'O chunking divide um documento em segmentos (tipicamente 500–2.000 tokens), resume cada segmento separadamente, depois sintetiza os resumos dos chunks em uma saída final. Use-o quando seu documento exceder o context window do modelo — aproximadamente 100 páginas para GPT-5.6, 160 para Claude Sonnet 5, ou 800 para Gemini 3.1 Pro.',
+              'text': 'O chunking divide o documento em segmentos de 500–2.000 tokens, resume cada um separadamente, depois sintetiza. Use-o quando o documento exceder o context window do modelo (~100 páginas para GPT-5.6, ~160 para Claude, ~800 para Gemini).',
             },
           },
           {
             '@type': 'Question',
-            name: 'O que são ROUGE e BERTScore, e qual métrica usar para avaliar resumos de IA?',
-            acceptedAnswer: {
+            'name': 'O que são ROUGE e BERTScore para avaliar resumos?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'ROUGE mede a sobreposição de n-gramas entre um resumo gerado e uma referência — útil para benchmarking mas cego à semântica e à exatidão factual. BERTScore usa similaridade cosseno entre embeddings BERT, capturando similaridade semântica em vez de correspondências exatas de palavras. Para workflows de documentos em produção, nenhuma é suficiente sozinha: use métricas de fidelidade como HHEM (Vectara) para medir se o resumo contém apenas afirmações respaldadas pelo documento-fonte.',
+              'text': 'ROUGE mede a sobreposição de n-gramas — útil para benchmarking mas cego à semântica. BERTScore usa similaridade cosseno entre embeddings BERT, capturando similaridade semântica. Para produção, combine HHEM de fidelidade com uma verificação de completude.',
             },
           },
           {
             '@type': 'Question',
-            name: 'As ferramentas de resumo com IA podem lidar com documentos em outros idiomas?',
-            acceptedAnswer: {
+            'name': 'As ferramentas de resumo com IA podem lidar com documentos em outros idiomas?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Sim, com ressalvas importantes. Os modelos da Mistral AI lidam com francês e línguas europeias nativamente e podem ser implantados localmente para conformidade com o RGPD. O Qwen 3 (Alibaba) tokeniza caracteres chineses com aproximadamente 40% menos tokens do que o GPT-5.6. Os modelos LLaMA 4 implantados via Ollama suportam resumo multilíngue mantendo os dados completamente on-premise.',
+              'text': 'Sim. Mistral AI lida com francês e línguas europeias nativamente com implantação local para conformidade com o RGPD. Qwen 3 tokeniza o chinês com ~40% menos tokens do que o GPT-5.6. LLaMA 4 via Ollama suporta resumo multilíngue completamente on-premise.',
             },
           },
         ],
@@ -2624,38 +2585,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            {
-              q: 'Qual é a diferença entre o resumo extrativo e o abstrativo com IA?',
-              a: 'O resumo extrativo copia frases diretamente do documento-fonte sem modificá-las — erros factuais são estruturalmente impossíveis. O resumo abstrativo usa LLMs para gerar novas frases parafraseadas com taxas de alucinação de 0,7–14%. Use extrativo para documentos jurídicos e de conformidade; use abstrativo para resumos executivos e síntese de pesquisa.',
-            },
-            {
-              q: 'Qual modelo de IA alucina menos ao resumir documentos?',
-              a: 'No benchmark HHEM do Vectara, o Gemini 3 Flash alcançou a menor taxa de alucinação de 0,7% em 2025. Essas taxas só se aplicam ao resumo ancorado na fonte; a recuperação factual de domínio aberto produz taxas de 3–33%.',
-            },
-            {
-              q: 'Quantas páginas as ferramentas de resumo com IA podem processar?',
-              a: 'GPT-5.6 processa ~100 páginas (128k tokens). Claude Sonnet 5 processa ~160 páginas (200k tokens). Gemini 3.1 Pro processa ~800 páginas (1M tokens). NotebookLM suporta até 50 fontes com ~500.000 palavras. Para corpora maiores, o chunking é necessário.',
-            },
-            {
-              q: 'NotebookLM é melhor que Claude para o resumo de documentos?',
-              a: 'Servem para necessidades diferentes. NotebookLM fornece ancoragem mais rigorosa na fonte com citações inline clicáveis. Claude Sonnet 5 produz análises mais matizadas e se destaca na síntese entre documentos. Use NotebookLM para precisão; use Claude para obter insights.',
-            },
-            {
-              q: 'Como evito que a IA alucinize nos meus resumos?',
-              a: 'Quatro técnicas: (1) instrua explicitamente — "resuma apenas a partir do documento"; (2) temperatura 0,0–0,1; (3) verificação de fidelidade; (4) verificação multi-modelo. Quando GPT-5.6 e Claude concordam em um fato, a probabilidade de alucinação compartilhada é quase zero.',
-            },
-            {
-              q: 'O que é chunking de documentos e quando devo usá-lo?',
-              a: 'O chunking divide o documento em segmentos de 500–2.000 tokens, resume cada um separadamente, depois sintetiza. Use-o quando o documento exceder o context window do modelo (~100 páginas para GPT-5.6, ~160 para Claude, ~800 para Gemini).',
-            },
-            {
-              q: 'O que são ROUGE e BERTScore para avaliar resumos?',
-              a: 'ROUGE mede a sobreposição de n-gramas — útil para benchmarking mas cego à semântica. BERTScore usa similaridade cosseno entre embeddings BERT, capturando similaridade semântica. Para produção, combine HHEM de fidelidade com uma verificação de completude.',
-            },
-            {
-              q: 'As ferramentas de resumo com IA podem lidar com documentos em outros idiomas?',
-              a: 'Sim. Mistral AI lida com francês e línguas europeias nativamente com implantação local para conformidade com o RGPD. Qwen 3 tokeniza o chinês com ~40% menos tokens do que o GPT-5.6. LLaMA 4 via Ollama suporta resumo multilíngue completamente on-premise.',
-            },
+            { q: 'Qual é a diferença entre o resumo extrativo e o abstrativo com IA?', a: 'O resumo extrativo copia frases diretamente do documento-fonte sem modificá-las — erros factuais são estruturalmente impossíveis. O resumo abstrativo usa LLMs para gerar novas frases parafraseadas com taxas de alucinação de 0,7–14%. Use extrativo para documentos jurídicos e de conformidade; use abstrativo para resumos executivos e síntese de pesquisa.' },
+            { q: 'Qual modelo de IA alucina menos ao resumir documentos?', a: 'No benchmark HHEM do Vectara, o Gemini 3 Flash alcançou a menor taxa de alucinação de 0,7% em 2025. Essas taxas só se aplicam ao resumo ancorado na fonte; a recuperação factual de domínio aberto produz taxas de 3–33%.' },
+            { q: 'Quantas páginas as ferramentas de resumo com IA podem processar?', a: 'GPT-5.6 processa ~100 páginas (128k tokens). Claude Sonnet 5 processa ~160 páginas (200k tokens). Gemini 3.1 Pro processa ~800 páginas (1M tokens). NotebookLM suporta até 50 fontes com ~500.000 palavras. Para corpora maiores, o chunking é necessário.' },
+            { q: 'NotebookLM é melhor que Claude para o resumo de documentos?', a: 'Servem para necessidades diferentes. NotebookLM fornece ancoragem mais rigorosa na fonte com citações inline clicáveis. Claude Sonnet 5 produz análises mais matizadas e se destaca na síntese entre documentos. Use NotebookLM para precisão; use Claude para obter insights.' },
+            { q: 'Como evito que a IA alucinize nos meus resumos?', a: 'Quatro técnicas: (1) instrua explicitamente — "resuma apenas a partir do documento"; (2) temperatura 0,0–0,1; (3) verificação de fidelidade; (4) verificação multi-modelo. Quando GPT-5.6 e Claude concordam em um fato, a probabilidade de alucinação compartilhada é quase zero.' },
+            { q: 'O que é chunking de documentos e quando devo usá-lo?', a: 'O chunking divide o documento em segmentos de 500–2.000 tokens, resume cada um separadamente, depois sintetiza. Use-o quando o documento exceder o context window do modelo (~100 páginas para GPT-5.6, ~160 para Claude, ~800 para Gemini).' },
+            { q: 'O que são ROUGE e BERTScore para avaliar resumos?', a: 'ROUGE mede a sobreposição de n-gramas — útil para benchmarking mas cego à semântica. BERTScore usa similaridade cosseno entre embeddings BERT, capturando similaridade semântica. Para produção, combine HHEM de fidelidade com uma verificação de completude.' },
+            { q: 'As ferramentas de resumo com IA podem lidar com documentos em outros idiomas?', a: 'Sim. Mistral AI lida com francês e línguas europeias nativamente com implantação local para conformidade com o RGPD. Qwen 3 tokeniza o chinês com ~40% menos tokens do que o GPT-5.6. LLaMA 4 via Ollama suporta resumo multilíngue completamente on-premise.' },
           ],
         },
         sources: {
@@ -4331,71 +4268,79 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'AI에서 추출적 요약과 추상적 요약의 차이는 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '추출적 요약은 소스 문서에서 문장을 직접 복사하여 수정하지 않습니다 — 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 환각률 0.7~14%의 새 문장을 생성합니다.',
+          {
+            '@type': 'Question',
+            'name': 'AI에서 추출적 요약과 추상적 요약의 차이는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '추출적 요약은 소스 문서에서 문장을 직접 복사합니다 — 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 환각률 0.7~14%의 새로운 바꿔 쓴 문장을 생성합니다. 법률 및 규정 준수 문서에는 추출적 방식을 사용하고, 경영진 요약 및 연구 합성에는 추상적 방식을 사용하십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '문서 요약 시 환각이 가장 적은 AI 모델은 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vectara HHEM 벤치마크에서 Gemini 3 Flash가 2025년에 0.7%의 최저 환각률을 달성하였습니다. 4개 모델이 소스 기반 요약에서 1% 미만의 환각률을 달성합니다.',
+          {
+            '@type': 'Question',
+            'name': '문서 요약 시 환각이 가장 적은 AI 모델은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vectara HHEM 벤치마크에서 Gemini 3 Flash는 2025년에 0.7%의 최저 환각률을 달성하였습니다. 이 수치는 소스 기반 요약에만 적용됩니다; 오픈 도메인 사실 검색은 3~33%의 환각률을 생성합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AI 요약 도구는 한 번에 몇 페이지를 처리할 수 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GPT-5.6는 약 100페이지(128k 토큰), Claude Sonnet 5은 약 160페이지(200k 토큰), Gemini 3.1 Pro는 약 800페이지(1M 토큰)를 처리합니다. 더 큰 코퍼스에는 청킹이 필요합니다.',
+          {
+            '@type': 'Question',
+            'name': 'AI 요약 도구는 몇 페이지를 처리할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6는 ~100페이지(128k 토큰)를 처리합니다. Claude Sonnet 5은 ~160페이지(200k 토큰)를 처리합니다. Gemini 3.1 Pro는 ~800페이지(1M 토큰)를 처리합니다. NotebookLM은 최대 50개 소스, ~500,000단어를 지원합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '문서 요약에 NotebookLM과 Claude 중 어느 것이 더 좋습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '정확도를 위해 NotebookLM을 사용하고, 인사이트를 얻으려면 Claude를 사용하십시오. NotebookLM은 소스 고정이 엄격하고, Claude Sonnet 5은 문서 간 합성에서 뛰어납니다.',
+          {
+            '@type': 'Question',
+            'name': '문서 요약에 NotebookLM과 Claude 중 어느 것이 더 좋습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '정확도를 위해 NotebookLM을 사용하고, 인사이트를 얻으려면 Claude를 사용하십시오. NotebookLM은 소스 고정이 엄격하고, Claude Sonnet 5은 문서 간 합성에서 뛰어납니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AI가 요약에서 환각을 일으키지 않게 하려면 어떻게 해야 합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '네 가지 기법: (1) 명시적으로 지시 — "문서에서만 요약"; (2) Temperature 0.0~0.1; (3) 충실도 확인; (4) 다중 모델 검증.',
+          {
+            '@type': 'Question',
+            'name': 'AI가 요약에서 환각을 일으키지 않게 하려면 어떻게 해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네 가지 기법: (1) 명시적으로 지시 — "문서에서만 요약"; (2) Temperature 0.0~0.1; (3) 충실도 확인; (4) 다중 모델 검증.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '문서 청킹이란 무엇이며 언제 사용해야 합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '청킹은 문서를 500~2,000 토큰 세그먼트로 분할하고 각각을 요약한 다음 합성합니다. 문서가 모델의 컨텍스트 윈도우를 초과할 때 사용하십시오.',
+          {
+            '@type': 'Question',
+            'name': '문서 청킹이란 무엇이며 언제 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '청킹은 문서를 500~2,000 토큰 세그먼트로 분할하고 각각을 요약한 다음 합성합니다. 문서가 모델의 컨텍스트 윈도우를 초과할 때 사용하십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ROUGE와 BERTScore란 무엇이며 AI 요약 평가에 어떤 지표를 사용해야 합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ROUGE는 n-gram 중첩을 측정하고, BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 HHEM 충실도 지표를 함께 사용하십시오.',
+          {
+            '@type': 'Question',
+            'name': '요약 평가를 위한 ROUGE와 BERTScore란 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ROUGE는 n-gram 중첩을 측정합니다. BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 충실도 확인과 함께 HHEM을 결합하십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AI 요약 도구가 영어 이외의 언어로 된 문서를 처리할 수 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '예. Mistral AI는 GDPR 준수 로컬 배포를 지원합니다. Qwen 3는 중국어를 40% 적은 토큰으로 처리합니다. Ollama를 통한 LLaMA 4는 온프레미스로 다국어 요약을 지원합니다.',
+          {
+            '@type': 'Question',
+            'name': 'AI 요약 도구가 다른 언어로 된 문서를 처리할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. Mistral AI는 GDPR 준수 로컬 배포를 지원합니다. Qwen 3는 GPT-5.6보다 약 40% 적은 토큰으로 중국어를 처리합니다. Ollama를 통한 LLaMA 4는 온프레미스로 다국어 요약을 지원합니다.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'ROUGE와 BERTScore란 무엇이며 AI 요약 평가에 어떤 지표를 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ROUGE는 n-gram 중첩을 측정하고, BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 HHEM 충실도 지표를 함께 사용하십시오.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4707,39 +4652,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'AI에서 추출적 요약과 추상적 요약의 차이는 무엇입니까?',
-            a: '추출적 요약은 소스 문서에서 문장을 직접 복사합니다 — 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 환각률 0.7~14%의 새로운 바꿔 쓴 문장을 생성합니다. 법률 및 규정 준수 문서에는 추출적 방식을 사용하고, 경영진 요약 및 연구 합성에는 추상적 방식을 사용하십시오.',
-          },
-          {
-            q: '문서 요약 시 환각이 가장 적은 AI 모델은 무엇입니까?',
-            a: 'Vectara HHEM 벤치마크에서 Gemini 3 Flash는 2025년에 0.7%의 최저 환각률을 달성하였습니다. 이 수치는 소스 기반 요약에만 적용됩니다; 오픈 도메인 사실 검색은 3~33%의 환각률을 생성합니다.',
-          },
-          {
-            q: 'AI 요약 도구는 몇 페이지를 처리할 수 있습니까?',
-            a: 'GPT-5.6는 ~100페이지(128k 토큰)를 처리합니다. Claude Sonnet 5은 ~160페이지(200k 토큰)를 처리합니다. Gemini 3.1 Pro는 ~800페이지(1M 토큰)를 처리합니다. NotebookLM은 최대 50개 소스, ~500,000단어를 지원합니다.',
-          },
-          {
-            q: '문서 요약에 NotebookLM과 Claude 중 어느 것이 더 좋습니까?',
-            a: '정확도를 위해 NotebookLM을 사용하고, 인사이트를 얻으려면 Claude를 사용하십시오. NotebookLM은 소스 고정이 엄격하고, Claude Sonnet 5은 문서 간 합성에서 뛰어납니다.',
-          },
-          {
-            q: 'AI가 요약에서 환각을 일으키지 않게 하려면 어떻게 해야 합니까?',
-            a: '네 가지 기법: (1) 명시적으로 지시 — "문서에서만 요약"; (2) Temperature 0.0~0.1; (3) 충실도 확인; (4) 다중 모델 검증.',
-          },
-          {
-            q: '문서 청킹이란 무엇이며 언제 사용해야 합니까?',
-            a: '청킹은 문서를 500~2,000 토큰 세그먼트로 분할하고 각각을 요약한 다음 합성합니다. 문서가 모델의 컨텍스트 윈도우를 초과할 때 사용하십시오.',
-          },
-          {
-            q: '요약 평가를 위한 ROUGE와 BERTScore란 무엇입니까?',
-            a: 'ROUGE는 n-gram 중첩을 측정합니다. BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 충실도 확인과 함께 HHEM을 결합하십시오.',
-          },
-          {
-            q: 'AI 요약 도구가 다른 언어로 된 문서를 처리할 수 있습니까?',
-            a: '예. Mistral AI는 GDPR 준수 로컬 배포를 지원합니다. Qwen 3는 GPT-5.6보다 약 40% 적은 토큰으로 중국어를 처리합니다. Ollama를 통한 LLaMA 4는 온프레미스로 다국어 요약을 지원합니다.',
-          },
-        ],
+            { q: 'AI에서 추출적 요약과 추상적 요약의 차이는 무엇입니까?', a: '추출적 요약은 소스 문서에서 문장을 직접 복사합니다 — 사실적 오류가 구조적으로 불가능합니다. 추상적 요약은 LLM을 사용하여 환각률 0.7~14%의 새로운 바꿔 쓴 문장을 생성합니다. 법률 및 규정 준수 문서에는 추출적 방식을 사용하고, 경영진 요약 및 연구 합성에는 추상적 방식을 사용하십시오.' },
+            { q: '문서 요약 시 환각이 가장 적은 AI 모델은 무엇입니까?', a: 'Vectara HHEM 벤치마크에서 Gemini 3 Flash는 2025년에 0.7%의 최저 환각률을 달성하였습니다. 이 수치는 소스 기반 요약에만 적용됩니다; 오픈 도메인 사실 검색은 3~33%의 환각률을 생성합니다.' },
+            { q: 'AI 요약 도구는 몇 페이지를 처리할 수 있습니까?', a: 'GPT-5.6는 ~100페이지(128k 토큰)를 처리합니다. Claude Sonnet 5은 ~160페이지(200k 토큰)를 처리합니다. Gemini 3.1 Pro는 ~800페이지(1M 토큰)를 처리합니다. NotebookLM은 최대 50개 소스, ~500,000단어를 지원합니다.' },
+            { q: '문서 요약에 NotebookLM과 Claude 중 어느 것이 더 좋습니까?', a: '정확도를 위해 NotebookLM을 사용하고, 인사이트를 얻으려면 Claude를 사용하십시오. NotebookLM은 소스 고정이 엄격하고, Claude Sonnet 5은 문서 간 합성에서 뛰어납니다.' },
+            { q: 'AI가 요약에서 환각을 일으키지 않게 하려면 어떻게 해야 합니까?', a: '네 가지 기법: (1) 명시적으로 지시 — "문서에서만 요약"; (2) Temperature 0.0~0.1; (3) 충실도 확인; (4) 다중 모델 검증.' },
+            { q: '문서 청킹이란 무엇이며 언제 사용해야 합니까?', a: '청킹은 문서를 500~2,000 토큰 세그먼트로 분할하고 각각을 요약한 다음 합성합니다. 문서가 모델의 컨텍스트 윈도우를 초과할 때 사용하십시오.' },
+            { q: '요약 평가를 위한 ROUGE와 BERTScore란 무엇입니까?', a: 'ROUGE는 n-gram 중첩을 측정합니다. BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 충실도 확인과 함께 HHEM을 결합하십시오.' },
+            { q: 'AI 요약 도구가 다른 언어로 된 문서를 처리할 수 있습니까?', a: '예. Mistral AI는 GDPR 준수 로컬 배포를 지원합니다. Qwen 3는 GPT-5.6보다 약 40% 적은 토큰으로 중국어를 처리합니다. Ollama를 통한 LLaMA 4는 온프레미스로 다국어 요약을 지원합니다.' },
+            { q: 'ROUGE와 BERTScore란 무엇이며 AI 요약 평가에 어떤 지표를 사용해야 합니까?', a: 'ROUGE는 n-gram 중첩을 측정하고, BERTScore는 의미론적 유사성을 포착합니다. 프로덕션에서는 HHEM 충실도 지표를 함께 사용하십시오.' },
+          ],
       },
       sources: {
         id: 'sources',

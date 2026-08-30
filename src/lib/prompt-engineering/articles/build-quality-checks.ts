@@ -988,14 +988,70 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         mainEntity: [
-          { '@type': 'Question', name: '¿Qué es un control de calidad de build consciente de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Un control de calidad de build consciente de IA es un gate CI/CD diseñado para detectar modos de fallo específicos del código generado por IA: APIs alucinadas, nombres de paquetes fabricados y errores lógicos que compilan pero violan los requisitos. A diferencia de los gates tradicionales de lint y cobertura, estos controles verifican que los paquetes referenciados realmente existen y que las APIs invocadas coinciden con tus definiciones reales de SDK o servicio.' } },
-          { '@type': 'Question', name: '¿En qué se diferencia el código generado por IA del código escrito por humanos en términos de riesgo de calidad?', acceptedAnswer: { '@type': 'Answer', text: 'El código generado por IA introduce modos de fallo estructurales que el código escrito por humanos raramente muestra: nombres de paquetes inventados que no existen en ningún registro, llamadas a métodos ausentes de tus versiones de SDK, y código que satisface tests superficiales mientras implementa incorrectamente los requisitos de forma silenciosa.' } },
-          { '@type': 'Question', name: '¿Cómo detecto nombres de paquetes alucinados en mi pipeline CI/CD?', acceptedAnswer: { '@type': 'Answer', text: 'Añade un paso de validación de dependencias que compruebe si cada paquete importado realmente existe en tu registro objetivo (npm, PyPI, Maven, etc.) antes de ejecutar los tests. Impleméntalo como un hook de pre-commit o un trabajo CI que llame a la API del registro.' } },
-          { '@type': 'Question', name: '¿Qué controles de seguridad debo añadir para el código generado por IA?', acceptedAnswer: { '@type': 'Answer', text: 'Ejecuta herramientas SAST como Bandit (Python), ESLint-Security (JavaScript) o Snyk en cada archivo modificado. Requiere cero nuevos hallazgos altos o críticos en rutas de código modificadas por IA. Exige revisión manual de seguridad para código generado por IA que toque autenticación, pagos, características de administración o datos personales.' } },
-          { '@type': 'Question', name: '¿Una API alucinada es lo mismo que un error en tiempo de ejecución?', acceptedAnswer: { '@type': 'Answer', text: 'Una API alucinada es más sutil que un simple error en tiempo de ejecución. Se refiere a un modelo que inventa un método, parámetro u opción de configuración que no existe en el SDK o servicio real — código que parece correcto y pasa la compilación pero falla en tiempo de ejecución o degrada el comportamiento de forma silenciosa.' } },
-          { '@type': 'Question', name: '¿Puedo usar herramientas de IA para revisar código generado por IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. La verificación cruzada multi-modelo es un patrón efectivo: un modelo genera código, un modelo diferente lo revisa. Las áreas donde el modelo revisor expresa incertidumbre o no está de acuerdo con el generador pueden marcarse para atención humana.' } },
-          { '@type': 'Question', name: '¿Cómo introduzco controles de calidad conscientes de IA sin ralentizar a mi equipo?', acceptedAnswer: { '@type': 'Answer', text: 'Empieza todas las nuevas reglas en modo de advertencia para recopilar datos antes de bloquear los merges. Explica los motivos de los fallos claramente en los mensajes de error con enlaces a la documentación. Permite excepciones documentadas para que los equipos puedan continuar en casos inusuales pero válidos.' } },
-          { '@type': 'Question', name: '¿Qué es el slopsquatting y por qué es peligroso para el desarrollo asistido por IA?', acceptedAnswer: { '@type': 'Answer', text: 'El slopsquatting ocurre cuando un modelo de IA inventa un nombre de paquete que suena plausible pero que en realidad no existe en ningún registro. Si un atacante registra más tarde ese nombre con código malicioso, cualquier desarrollador que ejecute npm install o pip install en él ejecuta el payload del atacante.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es un control de calidad de build consciente de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un control de calidad de build consciente de IA es un gate CI/CD diseñado para detectar modos de fallo específicos del código generado por IA: APIs alucinadas, nombres de paquetes fabricados y errores lógicos que compilan pero violan los requisitos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿En qué se diferencia el código generado por IA del código escrito por humanos en riesgo de calidad?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El código generado por IA introduce modos de fallo estructurales que el código escrito por humanos raramente muestra: nombres de paquetes inventados, llamadas a métodos ausentes de tus versiones de SDK, y código que satisface tests superficiales mientras implementa incorrectamente los requisitos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo detecto nombres de paquetes alucinados en mi pipeline CI/CD?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Añade un paso de validación de dependencias que compruebe si cada paquete importado realmente existe en tu registro objetivo antes de ejecutar los tests. Los paquetes que no se pueden resolver o no tienen historial de publicación deben fallar el build inmediatamente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué controles de seguridad debo añadir para el código generado por IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ejecuta herramientas SAST como Bandit (Python), ESLint-Security (JavaScript) o Snyk en cada archivo modificado. Requiere cero nuevos hallazgos altos o críticos en rutas de código modificadas por IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Una API alucinada es lo mismo que un error en tiempo de ejecución?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Una API alucinada es más sutil que un simple error en tiempo de ejecución. Se refiere a un modelo que inventa un método, parámetro u opción de configuración que no existe en el SDK o servicio real.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar herramientas de IA para revisar código generado por IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. La verificación cruzada multi-modelo es un patrón efectivo: un modelo genera código, un modelo diferente lo revisa. Esto funciona mejor en rutas de riesgo crítico como autenticación, procesamiento de pagos o configuración de infraestructura.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo introduzco controles de calidad conscientes de IA sin ralentizar a mi equipo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Empieza todas las nuevas reglas en modo de advertencia para recopilar datos antes de bloquear los merges. Permite excepciones documentadas para que los equipos puedan continuar en casos inusuales pero válidos mientras dejan un rastro de auditoría.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el slopsquatting y por qué es peligroso?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El slopsquatting ocurre cuando un modelo de IA inventa un nombre de paquete que suena plausible pero no existe en ningún registro. Si un atacante registra más tarde ese nombre con código malicioso, cualquier desarrollador que lo instale ejecuta el payload del atacante.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -1317,14 +1373,78 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'ما هي بوابة جودة البناء الواعية بالذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'بوابة جودة البناء الواعية بالذكاء الاصطناعي هي بوابة CI/CD مُصمَّمة لكشف أنماط فشل محددة في الكود المولَّد بالذكاء الاصطناعي: APIs مُهلوَسة وأسماء حزم مختلَقة وأخطاء منطقية تُصرَّف لكن تنتهك المتطلبات. على عكس بوابات lint والتغطية التقليدية، تتحقق هذه البوابات من أن الحزم المشار إليها موجودة فعليًا وأن APIs المستدعاة تتطابق مع تعريفات SDK أو خدماتك الفعلية.' } },
-          { '@type': 'Question', name: 'كيف يختلف الكود المولَّد بالذكاء الاصطناعي من حيث مخاطر الجودة؟', acceptedAnswer: { '@type': 'Answer', text: 'يُدخِل الكود المولَّد بالذكاء الاصطناعي أنماط فشل هيكلية نادرًا ما يُظهرها الكود المكتوب بشريًا: أسماء حزم مخترعة غير موجودة في أي سجل، واستدعاءات لمناهج غائبة عن إصدارات SDK لديك، وكود يجتاز اختبارات سطحية مع تطبيق غير صحيح للمتطلبات بصمت.' } },
-          { '@type': 'Question', name: 'كيف أكتشف أسماء الحزم المُهلوَسة في خط أنابيب CI/CD؟', acceptedAnswer: { '@type': 'Answer', text: 'أضف خطوة التحقق من التبعيات التي تتحقق من وجود كل حزمة مستوردة فعليًا في سجلك المستهدف (npm وPyPI وMaven وإلخ) قبل تشغيل الاختبارات. نفِّذها كـ pre-commit hook أو مهمة CI تستدعي API السجل.' } },
-          { '@type': 'Question', name: 'ما فحوصات الأمان التي يجب إضافتها للكود المولَّد بالذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'شغِّل أدوات SAST مثل Bandit (Python) وESLint-Security (JavaScript) أو Snyk على كل ملف معدَّل. اشترط صفر نتائج جديدة عالية أو حرجة في مسارات الكود المعدَّلة بالذكاء الاصطناعي. اشترط مراجعة أمان يدوية للكود المولَّد بالذكاء الاصطناعي الذي يلمس المصادقة والمدفوعات وميزات الإدارة أو البيانات الشخصية.' } },
-          { '@type': 'Question', name: 'هل API مُهلوَسة هي نفسها خطأ في وقت التشغيل؟', acceptedAnswer: { '@type': 'Answer', text: 'API مُهلوَسة أكثر دقةً من خطأ وقت تشغيل بسيط. تشير إلى نموذج يخترع منهجًا أو معاملًا أو خيار تكوين غير موجود في SDK أو خدمتك الفعلية — كود يبدو صحيحًا ويجتاز التصريف لكن يفشل في وقت التشغيل أو يتدهور سلوكه بصمت.' } },
-          { '@type': 'Question', name: 'هل يمكنني استخدام أدوات الذكاء الاصطناعي لمراجعة الكود المولَّد بالذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. التحقق المتبادل متعدد النماذج هو نمط فعَّال: نموذج يولِّد الكود ونموذج مختلف يراجعه. المناطق التي يُعبِّر فيها النموذج المراجع عن عدم يقين أو لا يتفق مع المولِّد يمكن وضع علامة عليها لانتباه بشري.' } },
-          { '@type': 'Question', name: 'كيف أُدخِل بوابات جودة واعية بالذكاء الاصطناعي دون إبطاء فريقي؟', acceptedAnswer: { '@type': 'Answer', text: 'ابدأ جميع القواعد الجديدة في وضع التحذير لجمع البيانات قبل حجب عمليات الدمج. اشرح أسباب الإخفاقات بوضوح في رسائل الخطأ مع روابط للوثائق. اسمح بالاستثناءات الموثَّقة حتى تتمكن الفرق من المتابعة في الحالات غير المعتادة لكن الصالحة.' } },
-          { '@type': 'Question', name: 'ما هو slopsquatting ولماذا هو خطير على التطوير المدعوم بالذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'slopsquatting يحدث حين يخترع نموذج ذكاء اصطناعي اسم حزمة يبدو معقولًا لكنه غير موجود فعليًا في أي سجل. إذا سجَّل مهاجم لاحقًا ذلك الاسم بكود خبيث، فإن أي مطور ينفذ npm install أو pip install عليه يُنفِّذ حمولة المهاجم.' } },
+          {
+            '@type': 'Question',
+            'name': 'ما هي بوابة جودة البناء الواعية بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بوابة جودة البناء الواعية بالذكاء الاصطناعي هي بوابة CI/CD مُصمَّمة لكشف أنماط فشل محددة في الكود المولَّد بالذكاء الاصطناعي: APIs مُهلوَسة وأسماء حزم مختلَقة وأخطاء منطقية تُصرَّف لكن تنتهك المتطلبات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف يختلف الكود المولَّد بالذكاء الاصطناعي من حيث مخاطر الجودة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يُدخِل الكود المولَّد بالذكاء الاصطناعي أنماط فشل هيكلية نادرًا ما يُظهرها الكود المكتوب بشريًا: أسماء حزم مخترعة وإصدارات SDK واستدعاءات مناهج غير موجودة وكود يجتاز اختبارات سطحية مع تطبيق غير صحيح للمتطلبات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أكتشف أسماء الحزم المُهلوَسة في خط أنابيب CI/CD؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أضف خطوة التحقق من التبعيات التي تتحقق من وجود كل حزمة مستوردة فعليًا في سجلك المستهدف قبل تشغيل الاختبارات. الحزم التي يتعذَّر حلها أو لا يكون لها تاريخ نشر يجب أن تُفشِل عملية البناء فورًا.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما فحوصات الأمان التي يجب إضافتها للكود المولَّد بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'شغِّل أدوات SAST مثل Bandit (Python) وESLint-Security (JavaScript) أو Snyk على كل ملف معدَّل. اشترط صفر نتائج جديدة عالية أو حرجة في مسارات الكود المعدَّلة بالذكاء الاصطناعي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل API مُهلوَسة هي نفسها خطأ في وقت التشغيل؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'API مُهلوَسة أكثر دقةً من خطأ وقت تشغيل بسيط. تشير إلى نموذج يخترع منهجًا أو معاملًا أو خيار تكوين غير موجود في SDK أو خدمتك الفعلية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام أدوات الذكاء الاصطناعي لمراجعة الكود المولَّد بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. التحقق المتبادل متعدد النماذج هو نمط فعَّال: نموذج يولِّد الكود ونموذج مختلف يراجعه. هذا يعمل بشكل أفضل في مسارات المخاطر الحرجة مثل المصادقة ومعالجة المدفوعات أو تكوين البنية التحتية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أُدخِل بوابات جودة واعية بالذكاء الاصطناعي دون إبطاء فريقي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ابدأ جميع القواعد الجديدة في وضع التحذير لجمع البيانات قبل حجب عمليات الدمج. اسمح بالاستثناءات الموثَّقة حتى تتمكن الفرق من المتابعة في الحالات غير المعتادة لكن الصالحة مع ترك أثر تدقيق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو slopsquatting ولماذا هو خطير؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'slopsquatting يحدث حين يخترع نموذج ذكاء اصطناعي اسم حزمة يبدو معقولًا لكنه غير موجود فعليًا في أي سجل. إذا سجَّل مهاجم لاحقًا ذلك الاسم بكود خبيث، فإن أي مطور ينفِّذ npm install أو pip install عليه يُنفِّذ حمولة المهاجم.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو slopsquatting ولماذا هو خطير على التطوير المدعوم بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'slopsquatting يحدث حين يخترع نموذج ذكاء اصطناعي اسم حزمة يبدو معقولًا لكنه غير موجود فعليًا في أي سجل. إذا سجَّل مهاجم لاحقًا ذلك الاسم بكود خبيث، فإن أي مطور ينفذ npm install أو pip install عليه يُنفِّذ حمولة المهاجم.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -1552,6 +1672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'هل يمكنني استخدام أدوات الذكاء الاصطناعي لمراجعة الكود المولَّد بالذكاء الاصطناعي؟', a: 'نعم. التحقق المتبادل متعدد النماذج هو نمط فعَّال: نموذج يولِّد الكود ونموذج مختلف يراجعه. هذا يعمل بشكل أفضل في مسارات المخاطر الحرجة مثل المصادقة ومعالجة المدفوعات أو تكوين البنية التحتية.' },
             { q: 'كيف أُدخِل بوابات جودة واعية بالذكاء الاصطناعي دون إبطاء فريقي؟', a: 'ابدأ جميع القواعد الجديدة في وضع التحذير لجمع البيانات قبل حجب عمليات الدمج. اسمح بالاستثناءات الموثَّقة حتى تتمكن الفرق من المتابعة في الحالات غير المعتادة لكن الصالحة مع ترك أثر تدقيق.' },
             { q: 'ما هو slopsquatting ولماذا هو خطير؟', a: 'slopsquatting يحدث حين يخترع نموذج ذكاء اصطناعي اسم حزمة يبدو معقولًا لكنه غير موجود فعليًا في أي سجل. إذا سجَّل مهاجم لاحقًا ذلك الاسم بكود خبيث، فإن أي مطور ينفِّذ npm install أو pip install عليه يُنفِّذ حمولة المهاجم.' },
+            { q: 'ما هو slopsquatting ولماذا هو خطير على التطوير المدعوم بالذكاء الاصطناعي؟', a: 'slopsquatting يحدث حين يخترع نموذج ذكاء اصطناعي اسم حزمة يبدو معقولًا لكنه غير موجود فعليًا في أي سجل. إذا سجَّل مهاجم لاحقًا ذلك الاسم بكود خبيث، فإن أي مطور ينفذ npm install أو pip install عليه يُنفِّذ حمولة المهاجم.' },
           ],
         },
         relatedReading: {
@@ -1645,14 +1766,78 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'O que é uma verificação de qualidade de build consciente de IA?', acceptedAnswer: { '@type': 'Answer', text: 'Uma verificação de qualidade de build consciente de IA é um gate CI/CD projetado para detectar modos de falha específicos do código gerado por IA: APIs alucinadas, nomes de pacotes fabricados e erros lógicos que compilam mas violam os requisitos. Ao contrário dos gates tradicionais de lint e cobertura, essas verificações confirmam que pacotes referenciados realmente existem e que APIs invocadas correspondem às suas definições reais de SDK ou serviço.' } },
-          { '@type': 'Question', name: 'Em que o código gerado por IA difere do código escrito por humanos em termos de risco de qualidade?', acceptedAnswer: { '@type': 'Answer', text: 'O código gerado por IA introduz modos de falha estruturais que o código escrito por humanos raramente apresenta: nomes de pacotes inventados que não existem em nenhum registro, chamadas de métodos ausentes das suas versões de SDK e código que satisfaz testes superficiais enquanto implementa incorrectamente os requisitos de forma silenciosa.' } },
-          { '@type': 'Question', name: 'Como detecto nomes de pacotes alucinados no meu pipeline CI/CD?', acceptedAnswer: { '@type': 'Answer', text: 'Adicione uma etapa de validação de dependências que verifique se cada pacote importado realmente existe em seu registro de destino (npm, PyPI, Maven, etc.) antes de executar os testes. Implemente-a como um hook de pré-commit ou um job CI que chama a API do registro.' } },
-          { '@type': 'Question', name: 'Quais verificações de segurança devo adicionar para código gerado por IA?', acceptedAnswer: { '@type': 'Answer', text: 'Execute ferramentas SAST como Bandit (Python), ESLint-Security (JavaScript) ou Snyk em cada arquivo modificado. Exija zero novos achados altos ou críticos em caminhos de código modificados por IA. Exija revisão manual de segurança para código gerado por IA que toque autenticação, pagamentos, recursos de administração ou dados pessoais.' } },
-          { '@type': 'Question', name: 'Uma API alucinada é o mesmo que um erro em tempo de execução?', acceptedAnswer: { '@type': 'Answer', text: 'Uma API alucinada é mais sutil do que um simples erro em tempo de execução. Refere-se a um modelo inventando um método, parâmetro ou opção de configuração que não existe no SDK ou serviço real — código que parece correto e passa na compilação mas lança exceção em tempo de execução ou degrada o comportamento silenciosamente.' } },
-          { '@type': 'Question', name: 'Posso usar ferramentas de IA para revisar código gerado por IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A verificação cruzada multi-modelo é um padrão eficaz: um modelo gera código, um modelo diferente o revisa. Áreas onde o modelo revisor expressa incerteza ou discorda do gerador podem ser sinalizadas para atenção humana. Isso funciona melhor em caminhos de risco crítico como autenticação, processamento de pagamentos ou configuração de infraestrutura.' } },
-          { '@type': 'Question', name: 'Como introduzo verificações de qualidade conscientes de IA sem atrasar minha equipe?', acceptedAnswer: { '@type': 'Answer', text: 'Inicie todas as novas regras no modo de aviso para coletar dados antes de bloquear merges. Explique claramente os motivos de falha nas mensagens de erro com links para documentação. Permita exceções documentadas para que as equipes possam continuar em casos incomuns mas válidos enquanto deixam uma trilha de auditoria.' } },
-          { '@type': 'Question', name: 'O que é slopsquatting e por que é perigoso para o desenvolvimento assistido por IA?', acceptedAnswer: { '@type': 'Answer', text: 'O slopsquatting ocorre quando um modelo de IA inventa um nome de pacote que soa plausível mas não existe em nenhum registro. Se um atacante registrar mais tarde esse nome com código malicioso, qualquer desenvolvedor que executar npm install ou pip install nele executa o payload do atacante.' } },
+          {
+            '@type': 'Question',
+            'name': 'O que é uma verificação de qualidade de build consciente de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Uma verificação de qualidade de build consciente de IA é um gate CI/CD projetado para detectar modos de falha específicos do código gerado por IA: APIs alucinadas, nomes de pacotes fabricados e erros lógicos que compilam mas violam os requisitos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Em que o código gerado por IA difere do código escrito por humanos em risco de qualidade?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O código gerado por IA introduz modos de falha estruturais que o código escrito por humanos raramente apresenta: nomes de pacotes inventados, chamadas de métodos ausentes das suas versões de SDK e código que satisfaz testes superficiais enquanto implementa incorretamente os requisitos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como detecto nomes de pacotes alucinados no meu pipeline CI/CD?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Adicione uma etapa de validação de dependências que verifique se cada pacote importado realmente existe em seu registro de destino antes de executar os testes. Pacotes que não podem ser resolvidos ou não têm histórico de publicação devem falhar o build imediatamente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais verificações de segurança devo adicionar para código gerado por IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Execute ferramentas SAST como Bandit (Python), ESLint-Security (JavaScript) ou Snyk em cada arquivo modificado. Exija zero novos achados altos ou críticos em caminhos de código modificados por IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Uma API alucinada é o mesmo que um erro em tempo de execução?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Uma API alucinada é mais sutil do que um simples erro em tempo de execução. Refere-se a um modelo inventando um método, parâmetro ou opção de configuração que não existe no SDK ou serviço real.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar ferramentas de IA para revisar código gerado por IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. A verificação cruzada multi-modelo é um padrão eficaz: um modelo gera código, um modelo diferente o revisa. Isso funciona melhor em caminhos de risco crítico como autenticação, processamento de pagamentos ou configuração de infraestrutura.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como introduzo verificações de qualidade conscientes de IA sem atrasar minha equipe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Inicie todas as novas regras no modo de aviso para coletar dados antes de bloquear merges. Permita exceções documentadas para que as equipes possam continuar em casos incomuns mas válidos enquanto deixam uma trilha de auditoria.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é slopsquatting e por que é perigoso?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O slopsquatting ocorre quando um modelo de IA inventa um nome de pacote que soa plausível mas não existe em nenhum registro. Se um atacante registrar mais tarde esse nome com código malicioso, qualquer desenvolvedor que o instalar via npm install ou pip install executa o payload do atacante.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é slopsquatting e por que é perigoso para o desenvolvimento assistido por IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O slopsquatting ocorre quando um modelo de IA inventa um nome de pacote que soa plausível mas não existe em nenhum registro. Se um atacante registrar mais tarde esse nome com código malicioso, qualquer desenvolvedor que executar npm install ou pip install nele executa o payload do atacante.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -1901,6 +2086,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Posso usar ferramentas de IA para revisar código gerado por IA?', a: 'Sim. A verificação cruzada multi-modelo é um padrão eficaz: um modelo gera código, um modelo diferente o revisa. Isso funciona melhor em caminhos de risco crítico como autenticação, processamento de pagamentos ou configuração de infraestrutura.' },
             { q: 'Como introduzo verificações de qualidade conscientes de IA sem atrasar minha equipe?', a: 'Inicie todas as novas regras no modo de aviso para coletar dados antes de bloquear merges. Permita exceções documentadas para que as equipes possam continuar em casos incomuns mas válidos enquanto deixam uma trilha de auditoria.' },
             { q: 'O que é slopsquatting e por que é perigoso?', a: 'O slopsquatting ocorre quando um modelo de IA inventa um nome de pacote que soa plausível mas não existe em nenhum registro. Se um atacante registrar mais tarde esse nome com código malicioso, qualquer desenvolvedor que o instalar via npm install ou pip install executa o payload do atacante.' },
+            { q: 'O que é slopsquatting e por que é perigoso para o desenvolvimento assistido por IA?', a: 'O slopsquatting ocorre quando um modelo de IA inventa um nome de pacote que soa plausível mas não existe em nenhum registro. Se um atacante registrar mais tarde esse nome com código malicioso, qualquer desenvolvedor que executar npm install ou pip install nele executa o payload do atacante.' },
           ],
         },
         relatedReading: {
@@ -3359,14 +3545,70 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ko',
         mainEntity: [
-          { '@type': 'Question', name: 'AI 인식 빌드 품질 검사란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'AI 인식 빌드 품질 검사는 AI 생성 코드의 특정 실패 패턴을 감지하도록 설계된 CI/CD 게이트입니다: 환각된 API, 조작된 패키지 이름, 컴파일은 되지만 요구사항을 위반하는 논리 오류. 전통적인 린트 및 커버리지 게이트와 달리, 이 검사는 참조된 패키지가 실제로 존재하는지, 호출된 API가 실제 SDK 또는 서비스 정의와 일치하는지 검증합니다.' } },
-          { '@type': 'Question', name: 'AI 생성 코드는 품질 위험 면에서 인간이 작성한 코드와 어떻게 다릅니까?', acceptedAnswer: { '@type': 'Answer', text: 'AI 생성 코드는 인간이 작성한 코드에서 거의 나타나지 않는 구조적 실패 패턴을 도입합니다: 어떤 레지스트리에도 존재하지 않는 조작된 패키지 이름, SDK 버전에 없는 메서드 호출, 표면적인 테스트를 통과하면서 요구사항을 잘못 구현하는 코드.' } },
-          { '@type': 'Question', name: 'CI/CD 파이프라인에서 환각된 패키지 이름을 어떻게 감지합니까?', acceptedAnswer: { '@type': 'Answer', text: '테스트 실행 전에 가져온 각 패키지가 대상 레지스트리(npm, PyPI, Maven 등)에 실제로 존재하는지 확인하는 의존성 검증 단계를 추가하십시오. pre-commit hook 또는 레지스트리 API를 호출하는 CI 작업으로 구현하십시오.' } },
-          { '@type': 'Question', name: 'AI 생성 코드에 어떤 보안 검사를 추가해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '수정된 모든 파일에 Bandit(Python), ESLint-Security(JavaScript) 또는 Snyk와 같은 SAST 도구를 실행하십시오. AI가 수정한 코드 경로에서 새로운 높음 또는 심각한 발견이 없을 것을 요구하십시오. 인증, 결제, 관리 기능 또는 개인 데이터를 다루는 AI 생성 코드에 대해 수동 보안 검토를 요구하십시오.' } },
-          { '@type': 'Question', name: '환각된 API는 런타임 오류와 같습니까?', acceptedAnswer: { '@type': 'Answer', text: '환각된 API는 단순한 런타임 오류보다 더 미묘합니다. 실제 SDK 또는 서비스에 존재하지 않는 메서드, 매개변수 또는 구성 옵션을 모델이 만들어내는 것을 말합니다 — 올바르게 보이고 컴파일을 통과하지만 런타임에 실패하거나 동작이 조용히 저하됩니다.' } },
-          { '@type': 'Question', name: 'AI 도구를 사용하여 AI 생성 코드를 검토할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 다중 모델 교차 검증은 효과적인 패턴입니다: 한 모델이 코드를 생성하고 다른 모델이 검토합니다. 검토 모델이 불확실성을 표현하거나 생성 모델과 동의하지 않는 영역은 사람의 주의가 필요한 것으로 표시할 수 있습니다.' } },
-          { '@type': 'Question', name: '팀을 느리게 하지 않고 AI 인식 품질 검사를 어떻게 도입합니까?', acceptedAnswer: { '@type': 'Answer', text: '병합을 차단하기 전에 데이터를 수집하기 위해 모든 새 규칙을 경고 모드로 시작하십시오. 오류 메시지에서 실패 이유를 문서 링크와 함께 명확하게 설명하십시오. 팀이 비정상적이지만 유효한 경우에 계속 진행할 수 있도록 문서화된 예외를 허용하십시오.' } },
-          { '@type': 'Question', name: 'slopsquatting이란 무엇이며 AI 지원 개발에 왜 위험합니까?', acceptedAnswer: { '@type': 'Answer', text: 'slopsquatting은 AI 모델이 그럴듯하게 들리지만 실제로는 어떤 레지스트리에도 존재하지 않는 패키지 이름을 만들어낼 때 발생합니다. 공격자가 나중에 해당 이름을 악성 코드로 등록하면, npm install 또는 pip install을 실행하는 모든 개발자는 공격자의 페이로드를 실행하게 됩니다.' } },
+          {
+            '@type': 'Question',
+            'name': 'AI 인식 빌드 품질 검사란 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AI 인식 빌드 품질 검사는 AI 생성 코드의 특정 실패 패턴을 감지하도록 설계된 CI/CD 게이트입니다: 환각된 API, 조작된 패키지 이름, 컴파일은 되지만 요구사항을 위반하는 논리 오류.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AI 생성 코드는 품질 위험 면에서 인간이 작성한 코드와 어떻게 다릅니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AI 생성 코드는 인간이 작성한 코드에서 거의 나타나지 않는 구조적 실패 패턴을 도입합니다: 조작된 패키지 이름, SDK 버전에 없는 메서드 호출, 요구사항을 잘못 구현하면서 표면적인 테스트를 통과하는 코드.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CI/CD 파이프라인에서 환각된 패키지 이름을 어떻게 감지합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '테스트 실행 전에 가져온 각 패키지가 대상 레지스트리에 실제로 존재하는지 확인하는 의존성 검증 단계를 추가하십시오. 해결할 수 없거나 게시 이력이 없는 패키지는 즉시 빌드를 실패시켜야 합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AI 생성 코드에 어떤 보안 검사를 추가해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '수정된 모든 파일에 Bandit(Python), ESLint-Security(JavaScript) 또는 Snyk와 같은 SAST 도구를 실행하십시오. AI가 수정한 코드 경로에서 새로운 높음 또는 심각한 발견이 없을 것을 요구하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '환각된 API는 런타임 오류와 같습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '환각된 API는 단순한 런타임 오류보다 더 미묘합니다. 실제 SDK 또는 서비스에 존재하지 않는 메서드, 매개변수 또는 구성 옵션을 모델이 만들어내는 것을 말합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AI 도구를 사용하여 AI 생성 코드를 검토할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. 다중 모델 교차 검증은 효과적인 패턴입니다: 한 모델이 코드를 생성하고 다른 모델이 검토합니다. 인증, 결제 처리 또는 인프라 구성과 같은 중요 위험 경로에서 가장 잘 작동합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '팀을 느리게 하지 않고 AI 인식 품질 검사를 어떻게 도입합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '병합을 차단하기 전에 데이터를 수집하기 위해 모든 새 규칙을 경고 모드로 시작하십시오. 팀이 감사 추적을 남기면서 비정상적이지만 유효한 경우에 계속 진행할 수 있도록 문서화된 예외를 허용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'slopsquatting이란 무엇이며 왜 위험합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'slopsquatting은 AI 모델이 그럴듯하게 들리지만 실제로는 어떤 레지스트리에도 존재하지 않는 패키지 이름을 만들어낼 때 발생합니다. 공격자가 나중에 악성 코드로 해당 이름을 등록하면, 이를 설치하는 모든 개발자는 공격자의 페이로드를 실행하게 됩니다.',
+            },
+          },
         ],
       },
       howToSchema: {

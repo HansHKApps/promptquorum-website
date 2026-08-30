@@ -189,38 +189,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { type: 'practice', text: 'Test agents with a max iteration count first (e.g., 5 steps) to catch bugs before deploying to production where they might waste resources.' },
           ],
           faqs: [
-            {
-              q: 'How much faster are cloud agents vs local agents?',
-              a: 'Cloud agents: ~1 sec per reasoning step. Local agents: ~3–5 sec per step depending on model size and hardware. Local inference adds latency but eliminates API costs and keeps all data on your own hardware.',
-            },
-            {
-              q: 'Can local agents access the internet?',
-              a: 'Yes, if you provide a web_search tool. The agent calls that tool the same way it calls any other function. Popular options include the DuckDuckGo search API and SerpAPI for structured results.',
-            },
-            {
-              q: 'How do I ensure an agent doesn\'t break things (e.g., delete files)?',
-              a: 'Run tools inside a Docker container with strict filesystem and network permissions. Log every tool call with its inputs and outputs for audit trails. Add a confirmation step before any destructive action (file delete, email send).',
-            },
-            {
-              q: 'Can I run multiple agents in parallel?',
-              a: 'Yes. Use async frameworks like FastAPI to handle concurrent agent requests. Each request gets its own conversation state. Note that each parallel agent requires its own LLM inference thread, so VRAM limits how many you can run simultaneously.',
-            },
-            {
-              q: 'What is the minimum hardware needed to run a local AI agent?',
-              a: 'A 13B+ parameter model is recommended for reliable autonomous reasoning. That requires at least 16GB RAM and preferably a GPU with 8GB+ VRAM for a quantized 13B model. On CPU-only hardware, expect 5–15 seconds per reasoning step.',
-            },
-            {
-              q: 'When should I use LangGraph instead of plain LangChain?',
-              a: 'Use LangGraph when your workflow requires loops, conditional branching, or recovery from tool failures. Plain LangChain works well for linear pipelines (step A → B → C) without decision points. If your agent needs to retry or reason again after a failed step, LangGraph\'s graph structure handles this cleanly.',
-            },
-            {
-              q: 'Is LangGraph the same as LangChain?',
-              a: 'No. LangChain is a general-purpose LLM toolkit for building chains and pipelines. LangGraph is a separate framework built on top of LangChain specifically for agents and stateful workflows — it adds the graph structure (nodes, edges, state) needed for reliable reasoning loops.',
-            },
-            {
-              q: 'How many tools should a local agent have?',
-              a: 'Limit agents to 5–10 tools. With too many options, the LLM struggles to select the right tool and per-step latency increases. Start with 3–5 core tools and expand only when you hit a specific capability gap. Write each tool description in under 50 words and state exactly when to use it.',
-            },
+            { q: 'How much faster are cloud agents vs local agents?', a: 'Cloud agents: ~1 sec per reasoning step. Local agents: ~3–5 sec per step depending on model size and hardware. Local inference adds latency but eliminates API costs and keeps all data on your own hardware.' },
+            { q: 'Can local agents access the internet?', a: 'Yes, if you provide a web_search tool. The agent calls that tool the same way it calls any other function. Popular options include the DuckDuckGo search API and SerpAPI for structured results.' },
+            { q: 'How do I ensure an agent doesn\'t break things (e.g., delete files)?', a: 'Run tools inside a Docker container with strict filesystem and network permissions. Log every tool call with its inputs and outputs for audit trails. Add a confirmation step before any destructive action (file delete, email send).' },
+            { q: 'Can I run multiple agents in parallel?', a: 'Yes. Use async frameworks like FastAPI to handle concurrent agent requests. Each request gets its own conversation state. Note that each parallel agent requires its own LLM inference thread, so VRAM limits how many you can run simultaneously.' },
+            { q: 'What is the minimum hardware needed to run a local AI agent?', a: 'A 13B+ parameter model is recommended for reliable autonomous reasoning. That requires at least 16GB RAM and preferably a GPU with 8GB+ VRAM for a quantized 13B model. On CPU-only hardware, expect 5–15 seconds per reasoning step.' },
+            { q: 'When should I use LangGraph instead of plain LangChain?', a: 'Use LangGraph when your workflow requires loops, conditional branching, or recovery from tool failures. Plain LangChain works well for linear pipelines (step A → B → C) without decision points. If your agent needs to retry or reason again after a failed step, LangGraph\'s graph structure handles this cleanly.' },
+            { q: 'Is LangGraph the same as LangChain?', a: 'No. LangChain is a general-purpose LLM toolkit for building chains and pipelines. LangGraph is a separate framework built on top of LangChain specifically for agents and stateful workflows — it adds the graph structure (nodes, edges, state) needed for reliable reasoning loops.' },
+            { q: 'How many tools should a local agent have?', a: 'Limit agents to 5–10 tools. With too many options, the LLM struggles to select the right tool and per-step latency increases. Start with 3–5 core tools and expand only when you hit a specific capability gap. Write each tool description in under 50 words and state exactly when to use it.' },
           ],
         },
         quickFacts: {
@@ -290,14 +266,70 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'How much faster are cloud agents vs local agents?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Cloud agents: ~1 sec per reasoning step. Local agents: ~3–5 sec per step depending on model size and hardware. Local inference adds latency but eliminates API costs and keeps all data on your own hardware.' } },
-          { '@type': 'Question', 'name': 'Can local agents access the internet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, if you provide a web_search tool. The agent calls that tool the same way it calls any other function. Popular options include the DuckDuckGo search API and SerpAPI for structured results.' } },
-          { '@type': 'Question', 'name': 'How do I ensure an agent does not break things (e.g., delete files)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Run tools inside a Docker container with strict filesystem and network permissions. Log every tool call with its inputs and outputs for audit trails. Add a confirmation step before any destructive action.' } },
-          { '@type': 'Question', 'name': 'Can I run multiple agents in parallel?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Use async frameworks like FastAPI to handle concurrent agent requests. Each request gets its own conversation state. Note that each parallel agent requires its own LLM inference thread, so VRAM limits how many you can run simultaneously.' } },
-          { '@type': 'Question', 'name': 'What is the minimum hardware needed to run a local AI agent?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A 13B+ parameter model is recommended for reliable autonomous reasoning. That requires at least 16GB RAM and preferably a GPU with 8GB+ VRAM for a quantized 13B model. On CPU-only hardware, expect 5–15 seconds per reasoning step.' } },
-          { '@type': 'Question', 'name': 'When should I use LangGraph instead of plain LangChain?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Use LangGraph when your workflow requires loops, conditional branching, or recovery from tool failures. Plain LangChain works well for linear pipelines without decision points. If your agent needs to retry or reason again after a failed step, LangGraph\'s graph structure handles this cleanly.' } },
-          { '@type': 'Question', 'name': 'Is LangGraph the same as LangChain?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. LangChain is a general-purpose LLM toolkit for building chains and pipelines. LangGraph is a separate framework built on top of LangChain specifically for agents and stateful workflows — it adds the graph structure needed for reliable reasoning loops.' } },
-          { '@type': 'Question', 'name': 'How many tools should a local agent have?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Limit agents to 5–10 tools. With too many options, the LLM struggles to select the right tool and per-step latency increases. Start with 3–5 core tools and expand only when you hit a specific capability gap.' } },
+          {
+            '@type': 'Question',
+            'name': 'How much faster are cloud agents vs local agents?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cloud agents: ~1 sec per reasoning step. Local agents: ~3–5 sec per step depending on model size and hardware. Local inference adds latency but eliminates API costs and keeps all data on your own hardware.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can local agents access the internet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, if you provide a web_search tool. The agent calls that tool the same way it calls any other function. Popular options include the DuckDuckGo search API and SerpAPI for structured results.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I ensure an agent doesn\'t break things (e.g., delete files)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Run tools inside a Docker container with strict filesystem and network permissions. Log every tool call with its inputs and outputs for audit trails. Add a confirmation step before any destructive action (file delete, email send).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run multiple agents in parallel?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Use async frameworks like FastAPI to handle concurrent agent requests. Each request gets its own conversation state. Note that each parallel agent requires its own LLM inference thread, so VRAM limits how many you can run simultaneously.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the minimum hardware needed to run a local AI agent?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A 13B+ parameter model is recommended for reliable autonomous reasoning. That requires at least 16GB RAM and preferably a GPU with 8GB+ VRAM for a quantized 13B model. On CPU-only hardware, expect 5–15 seconds per reasoning step.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'When should I use LangGraph instead of plain LangChain?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use LangGraph when your workflow requires loops, conditional branching, or recovery from tool failures. Plain LangChain works well for linear pipelines (step A → B → C) without decision points. If your agent needs to retry or reason again after a failed step, LangGraph\'s graph structure handles this cleanly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is LangGraph the same as LangChain?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. LangChain is a general-purpose LLM toolkit for building chains and pipelines. LangGraph is a separate framework built on top of LangChain specifically for agents and stateful workflows — it adds the graph structure (nodes, edges, state) needed for reliable reasoning loops.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How many tools should a local agent have?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Limit agents to 5–10 tools. With too many options, the LLM struggles to select the right tool and per-step latency increases. Start with 3–5 core tools and expand only when you hit a specific capability gap. Write each tool description in under 50 words and state exactly when to use it.',
+            },
+          },
         ],
       },
       itemListSchema: {

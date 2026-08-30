@@ -3547,70 +3547,22 @@ schema: {
           id: 'faq',
           title: '关于在笔记本电脑上运行本地LLM的常见问题',
           faqs: [
-            {
-              q: '配备16GB RAM的Intel Iris Xe最佳Ollama模型是什么？',
-              a: '在配有Intel Iris Xe集成显卡和16GB RAM的笔记本上，推理在CPU上运行（Iris Xe不会加速它），因此请选择Q4_K_M的3B–7B模型。Llama 3.2 3B最快，位于8–20令牌/秒区间的上端；Mistral Small（7B）更慢但质量更高。用`ollama run llama3.2:3b`或`ollama run mistral`运行其中任一个。',
-            },
-            {
-              q: '可以在笔记本上本地运行RAG吗？',
-              a: '可以。笔记本上的RAG栈由一个小型嵌入模型、一个本地向量库和你的聊天模型组成。嵌入模型只有几百MB，因此聊天模型仍是决定性的RAM瓶颈——8GB笔记本可从容地运行带检索的3B聊天模型。RAM分解详见上文[笔记本RAG部分](#rag-laptop)。',
-            },
-            {
-              q: '笔记本上最佳的纯CPU本地LLM是什么？',
-              a: '对于纯CPU笔记本，Q4_K_M的Llama 3.2 3B（25–45令牌/秒）和Mistral Small 7B（10–20令牌/秒）在速度与质量之间最为平衡。完整排名比较和Ollama命令请参阅专门指南：[最佳纯CPU本地LLM 2026](/zh/local-llms/best-cpu-only-llm)。',
-            },
-            {
-              q: '运行本地LLM会随着时间推移损伤我的笔记本电脑吗？',
-              a: '否 -- 现代CPU和GPU设计可通过热节流安全地处理持续的高负荷。运行推理数小时等同于视频编码或游戏。笔记本电脑支架和适当的通风可防止过度热量积聚。通过插电充电增加的电池周期数是正常的磨损。',
-            },
-            {
-              q: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？',
-              a: '勉强。Gemma 2 2B之类的2B模型需要约1.7GB RAM用于模型，但操作系统同时需要2-3GB。在4GB总RAM下，您可能会经历交换使用，使推理速度降低5-10倍。实际最小值是8GB。',
-            },
-            {
-              q: '我的笔记本电脑需要专用GPU来运行本地LLM吗？',
-              a: '否。所有主要的本地LLM工具（Ollama、LM Studio、GPT4All）仅在CPU上运行。专用GPU显著加速推理，但3B-7B模型可在10-30令牌/秒的CPU单独上使用。参见[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models)。',
-            },
-            {
-              q: '运行本地LLM的最快笔记本电脑是什么？',
-              a: '自2026年3月起，Apple MacBook Pro M5 Max（最高128GB统一内存，614GB/秒带宽）是本地LLM推理的最快消费级笔记本电脑。它在13B模型上达到80-120令牌/秒，可以在Q4_K_M处运行30B模型。对于Windows笔记本电脑，RTX 4090笔记本电脑GPU（16GB VRAM）在7B模型上产生100-130令牌/秒，但消耗更多功率并产生更多热量。',
-            },
-            {
-              q: '我如何知道我的笔记本电脑是否进行热节流？',
-              a: '在macOS上：打开Activity Monitor → Window → CPU使用历史记录。在持续生成期间CPU频率的突然下降表示节流。在Windows上：使用HWiNFO64实时监视CPU/GPU温度和时钟速度。节流通常在CPU温度超过95-100°C时发生。',
-            },
-            {
-              q: '我可以在电池电力上运行本地LLM吗？',
-              a: '是的，但速度和持续时间降低。在电池模式下，macOS自动限制CPU/GPU电源提取，相比插电性能降低推理速度20-35%。MacBook M3 Pro上的7B模型在推理期间消耗约12-18W -- 从完全充电时预计3-4小时的活跃生成，然后下降至20%。对于电池高效的会话，使用3B模型（6-10W）。',
-            },
-            {
-              q: '8GB RAM笔记本电脑最好的型号大小是什么？',
-              a: 'Q4_K_M中的7B模型是在运行浏览器或其他应用程序打开时运行8GB RAM笔记本电脑的实际最大值。仅对于关闭所有其他应用程序的模型，9B模型可能适合。推荐的标准是多任务处理的llama3.2:3b或当您可以关闭浏览器时品质的mistral:7b。',
-            },
-            {
-              q: 'Ollama在笔记本电脑上自动使用GPU吗？',
-              a: '是的。Ollama自动检测并使用可用的GPU加速。在Apple Silicon上，它使用Metal GPU加速。在NVIDIA笔记本电脑上，它使用CUDA。在AMD笔记本电脑上，它使用ROCm（在Linux上需要一些额外设置）。您可以通过启动模型后运行`ollama ps`来验证GPU是否被使用 -- 它显示层是否加载到GPU或CPU。',
-            },
-            {
-              q: '我可以在8GB RAM上运行本地LLM吗？',
-              a: '可以。8GB RAM的笔记本可在CPU上以10–25令牌/秒运行Q4_K_M量化（4.5GB）的7B模型，Apple Silicon上为30–80令牌/秒。',
-            },
-            {
-              q: '运行本地LLM最快的笔记本是什么？',
-              a: '配备最高64–128GB统一内存的Apple MacBook Pro M5 Pro/M5 Max在13B模型上达到80–120令牌/秒。Windows上NVIDIA RTX 4070/4090笔记本GPU（8–16GB VRAM）在7B模型上实现60–130令牌/秒。',
-            },
-            {
-              q: '运行本地LLM需要GPU吗？',
-              a: '不需要 — Ollama和LM Studio仅在CPU上运行。GPU将7B模型的推理速度从10–25提升至50–90令牌/秒，但不是必需的。',
-            },
-            {
-              q: '本地LLM在CPU上有多慢？',
-              a: '现代笔记本CPU上Q4_K_M的7B模型以10–25令牌/秒运行 — 适合聊天和摘要的实用速度。Apple Silicon使用统一内存作为GPU，达到30–80令牌/秒。',
-            },
-            {
-              q: '运行LLM会损坏笔记本吗？',
-              a: '不会。CPU和GPU通过热节流设计用于持续负载。使用笔记本支架保持气流并适当休息可防止过热；正常风扇噪音不是损坏迹象。',
-            },
+            { q: '配备16GB RAM的Intel Iris Xe最佳Ollama模型是什么？', a: '在配有Intel Iris Xe集成显卡和16GB RAM的笔记本上，推理在CPU上运行（Iris Xe不会加速它），因此请选择Q4_K_M的3B–7B模型。Llama 3.2 3B最快，位于8–20令牌/秒区间的上端；Mistral Small（7B）更慢但质量更高。用`ollama run llama3.2:3b`或`ollama run mistral`运行其中任一个。' },
+            { q: '可以在笔记本上本地运行RAG吗？', a: '可以。笔记本上的RAG栈由一个小型嵌入模型、一个本地向量库和你的聊天模型组成。嵌入模型只有几百MB，因此聊天模型仍是决定性的RAM瓶颈——8GB笔记本可从容地运行带检索的3B聊天模型。RAM分解详见上文[笔记本RAG部分](#rag-laptop)。' },
+            { q: '笔记本上最佳的纯CPU本地LLM是什么？', a: '对于纯CPU笔记本，Q4_K_M的Llama 3.2 3B（25–45令牌/秒）和Mistral Small 7B（10–20令牌/秒）在速度与质量之间最为平衡。完整排名比较和Ollama命令请参阅专门指南：[最佳纯CPU本地LLM 2026](/zh/local-llms/best-cpu-only-llm)。' },
+            { q: '运行本地LLM会随着时间推移损伤我的笔记本电脑吗？', a: '否 -- 现代CPU和GPU设计可通过热节流安全地处理持续的高负荷。运行推理数小时等同于视频编码或游戏。笔记本电脑支架和适当的通风可防止过度热量积聚。通过插电充电增加的电池周期数是正常的磨损。' },
+            { q: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', a: '勉强。Gemma 2 2B之类的2B模型需要约1.7GB RAM用于模型，但操作系统同时需要2-3GB。在4GB总RAM下，您可能会经历交换使用，使推理速度降低5-10倍。实际最小值是8GB。' },
+            { q: '我的笔记本电脑需要专用GPU来运行本地LLM吗？', a: '否。所有主要的本地LLM工具（Ollama、LM Studio、GPT4All）仅在CPU上运行。专用GPU显著加速推理，但3B-7B模型可在10-30令牌/秒的CPU单独上使用。参见[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models)。' },
+            { q: '运行本地LLM的最快笔记本电脑是什么？', a: '自2026年3月起，Apple MacBook Pro M5 Max（最高128GB统一内存，614GB/秒带宽）是本地LLM推理的最快消费级笔记本电脑。它在13B模型上达到80-120令牌/秒，可以在Q4_K_M处运行30B模型。对于Windows笔记本电脑，RTX 4090笔记本电脑GPU（16GB VRAM）在7B模型上产生100-130令牌/秒，但消耗更多功率并产生更多热量。' },
+            { q: '我如何知道我的笔记本电脑是否进行热节流？', a: '在macOS上：打开Activity Monitor → Window → CPU使用历史记录。在持续生成期间CPU频率的突然下降表示节流。在Windows上：使用HWiNFO64实时监视CPU/GPU温度和时钟速度。节流通常在CPU温度超过95-100°C时发生。' },
+            { q: '我可以在电池电力上运行本地LLM吗？', a: '是的，但速度和持续时间降低。在电池模式下，macOS自动限制CPU/GPU电源提取，相比插电性能降低推理速度20-35%。MacBook M3 Pro上的7B模型在推理期间消耗约12-18W -- 从完全充电时预计3-4小时的活跃生成，然后下降至20%。对于电池高效的会话，使用3B模型（6-10W）。' },
+            { q: '8GB RAM笔记本电脑最好的型号大小是什么？', a: 'Q4_K_M中的7B模型是在运行浏览器或其他应用程序打开时运行8GB RAM笔记本电脑的实际最大值。仅对于关闭所有其他应用程序的模型，9B模型可能适合。推荐的标准是多任务处理的llama3.2:3b或当您可以关闭浏览器时品质的mistral:7b。' },
+            { q: 'Ollama在笔记本电脑上自动使用GPU吗？', a: '是的。Ollama自动检测并使用可用的GPU加速。在Apple Silicon上，它使用Metal GPU加速。在NVIDIA笔记本电脑上，它使用CUDA。在AMD笔记本电脑上，它使用ROCm（在Linux上需要一些额外设置）。您可以通过启动模型后运行`ollama ps`来验证GPU是否被使用 -- 它显示层是否加载到GPU或CPU。' },
+            { q: '我可以在8GB RAM上运行本地LLM吗？', a: '可以。8GB RAM的笔记本可在CPU上以10–25令牌/秒运行Q4_K_M量化（4.5GB）的7B模型，Apple Silicon上为30–80令牌/秒。' },
+            { q: '运行本地LLM最快的笔记本是什么？', a: '配备最高64–128GB统一内存的Apple MacBook Pro M5 Pro/M5 Max在13B模型上达到80–120令牌/秒。Windows上NVIDIA RTX 4070/4090笔记本GPU（8–16GB VRAM）在7B模型上实现60–130令牌/秒。' },
+            { q: '运行本地LLM需要GPU吗？', a: '不需要 — Ollama和LM Studio仅在CPU上运行。GPU将7B模型的推理速度从10–25提升至50–90令牌/秒，但不是必需的。' },
+            { q: '本地LLM在CPU上有多慢？', a: '现代笔记本CPU上Q4_K_M的7B模型以10–25令牌/秒运行 — 适合聊天和摘要的实用速度。Apple Silicon使用统一内存作为GPU，达到30–80令牌/秒。' },
+            { q: '运行LLM会损坏笔记本吗？', a: '不会。CPU和GPU通过热节流设计用于持续负载。使用笔记本支架保持气流并适当休息可防止过热；正常风扇噪音不是损坏迹象。' },
           ],
         },
         sources: {
@@ -3669,17 +3621,134 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: '配备16GB RAM的Intel Iris Xe最佳Ollama模型是什么？', acceptedAnswer: { '@type': 'Answer', text: '在配有Intel Iris Xe集成显卡和16GB RAM的笔记本上，推理在CPU上运行（Iris Xe不会加速它），因此请选择Q4_K_M的3B–7B模型。Llama 3.2 3B最快，位于8–20令牌/秒区间的上端；Mistral Small（7B）更慢但质量更高。' } },
-          { '@type': 'Question', name: '可以在笔记本上本地运行RAG吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。笔记本上的RAG栈由一个小型嵌入模型、一个本地向量库和你的聊天模型组成。嵌入模型只有几百MB，因此聊天模型仍是决定性的RAM瓶颈——8GB笔记本可从容地运行带检索的3B聊天模型。2GB RAM实际上无法用于RAG。' } },
-          { '@type': 'Question', name: '笔记本上最佳的纯CPU本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '对于纯CPU笔记本，Q4_K_M的Llama 3.2 3B（25–45令牌/秒）和Mistral Small 7B（10–20令牌/秒）在速度与质量之间最为平衡。完整排名比较请参阅专门指南《最佳纯CPU本地LLM 2026》。' } },
-          { '@type': 'Question', name: '运行本地LLM会随着时间推移损伤笔记本电脑吗？', acceptedAnswer: { '@type': 'Answer', text: '否 -- 现代CPU和GPU设计可安全处理持续的高负荷。笔记本电脑支架和适当的通风可防止过度热量积聚。' } },
-          { '@type': 'Question', name: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '勉强。2B模型需要约1.7GB RAM，操作系统需要2-3GB。在4GB总RAM下，交换使用使推理速度降低5-10倍。' } },
-          { '@type': 'Question', name: '我的笔记本电脑需要专用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '否。所有主要的本地LLM工具仅在CPU上运行。专用GPU加速推理，但3B-7B模型可在10-30令牌/秒的CPU单独上使用。' } },
-          { '@type': 'Question', name: '运行本地LLM的最快笔记本电脑是什么？', acceptedAnswer: { '@type': 'Answer', text: '自2026年3月起，Apple MacBook Pro M5 Max（最高128GB统一内存）是最快的。它在13B模型上达到80-120令牌/秒。' } },
-          { '@type': 'Question', name: '我如何知道笔记本电脑是否进行热节流？', acceptedAnswer: { '@type': 'Answer', text: '在macOS上：打开Activity Monitor → Window → CPU使用历史。在持续生成期间CPU频率的突然下降表示节流。' } },
-          { '@type': 'Question', name: '我可以在电池电力上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，但速度和持续时间降低。macOS限制CPU/GPU电源提取，相比插电性能降低推理速度20-35%。' } },
-          { '@type': 'Question', name: '8GB RAM笔记本电脑最好的型号大小是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M中的7B是实际最大值。推荐的标准是多任务处理的llama3.2:3b。' } },
-          { '@type': 'Question', name: 'Ollama在笔记本电脑上自动使用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。Ollama自动检测并使用可用的GPU加速。通过启动模型后运行`ollama ps`来验证。' } }
+          {
+            '@type': 'Question',
+            'name': '配备16GB RAM的Intel Iris Xe最佳Ollama模型是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在配有Intel Iris Xe集成显卡和16GB RAM的笔记本上，推理在CPU上运行（Iris Xe不会加速它），因此请选择Q4_K_M的3B–7B模型。Llama 3.2 3B最快，位于8–20令牌/秒区间的上端；Mistral Small（7B）更慢但质量更高。用`ollama run llama3.2:3b`或`ollama run mistral`运行其中任一个。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '可以在笔记本上本地运行RAG吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。笔记本上的RAG栈由一个小型嵌入模型、一个本地向量库和你的聊天模型组成。嵌入模型只有几百MB，因此聊天模型仍是决定性的RAM瓶颈——8GB笔记本可从容地运行带检索的3B聊天模型。RAM分解详见上文[笔记本RAG部分](#rag-laptop)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '笔记本上最佳的纯CPU本地LLM是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对于纯CPU笔记本，Q4_K_M的Llama 3.2 3B（25–45令牌/秒）和Mistral Small 7B（10–20令牌/秒）在速度与质量之间最为平衡。完整排名比较和Ollama命令请参阅专门指南：[最佳纯CPU本地LLM 2026](/zh/local-llms/best-cpu-only-llm)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行本地LLM会随着时间推移损伤我的笔记本电脑吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '否 -- 现代CPU和GPU设计可通过热节流安全地处理持续的高负荷。运行推理数小时等同于视频编码或游戏。笔记本电脑支架和适当的通风可防止过度热量积聚。通过插电充电增加的电池周期数是正常的磨损。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在4GB RAM笔记本电脑上运行本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '勉强。Gemma 2 2B之类的2B模型需要约1.7GB RAM用于模型，但操作系统同时需要2-3GB。在4GB总RAM下，您可能会经历交换使用，使推理速度降低5-10倍。实际最小值是8GB。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我的笔记本电脑需要专用GPU来运行本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '否。所有主要的本地LLM工具（Ollama、LM Studio、GPT4All）仅在CPU上运行。专用GPU显著加速推理，但3B-7B模型可在10-30令牌/秒的CPU单独上使用。参见[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行本地LLM的最快笔记本电脑是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '自2026年3月起，Apple MacBook Pro M5 Max（最高128GB统一内存，614GB/秒带宽）是本地LLM推理的最快消费级笔记本电脑。它在13B模型上达到80-120令牌/秒，可以在Q4_K_M处运行30B模型。对于Windows笔记本电脑，RTX 4090笔记本电脑GPU（16GB VRAM）在7B模型上产生100-130令牌/秒，但消耗更多功率并产生更多热量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我如何知道我的笔记本电脑是否进行热节流？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在macOS上：打开Activity Monitor → Window → CPU使用历史记录。在持续生成期间CPU频率的突然下降表示节流。在Windows上：使用HWiNFO64实时监视CPU/GPU温度和时钟速度。节流通常在CPU温度超过95-100°C时发生。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在电池电力上运行本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的，但速度和持续时间降低。在电池模式下，macOS自动限制CPU/GPU电源提取，相比插电性能降低推理速度20-35%。MacBook M3 Pro上的7B模型在推理期间消耗约12-18W -- 从完全充电时预计3-4小时的活跃生成，然后下降至20%。对于电池高效的会话，使用3B模型（6-10W）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8GB RAM笔记本电脑最好的型号大小是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M中的7B模型是在运行浏览器或其他应用程序打开时运行8GB RAM笔记本电脑的实际最大值。仅对于关闭所有其他应用程序的模型，9B模型可能适合。推荐的标准是多任务处理的llama3.2:3b或当您可以关闭浏览器时品质的mistral:7b。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama在笔记本电脑上自动使用GPU吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。Ollama自动检测并使用可用的GPU加速。在Apple Silicon上，它使用Metal GPU加速。在NVIDIA笔记本电脑上，它使用CUDA。在AMD笔记本电脑上，它使用ROCm（在Linux上需要一些额外设置）。您可以通过启动模型后运行`ollama ps`来验证GPU是否被使用 -- 它显示层是否加载到GPU或CPU。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在8GB RAM上运行本地LLM吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。8GB RAM的笔记本可在CPU上以10–25令牌/秒运行Q4_K_M量化（4.5GB）的7B模型，Apple Silicon上为30–80令牌/秒。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行本地LLM最快的笔记本是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '配备最高64–128GB统一内存的Apple MacBook Pro M5 Pro/M5 Max在13B模型上达到80–120令牌/秒。Windows上NVIDIA RTX 4070/4090笔记本GPU（8–16GB VRAM）在7B模型上实现60–130令牌/秒。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行本地LLM需要GPU吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需要 — Ollama和LM Studio仅在CPU上运行。GPU将7B模型的推理速度从10–25提升至50–90令牌/秒，但不是必需的。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM在CPU上有多慢？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '现代笔记本CPU上Q4_K_M的7B模型以10–25令牌/秒运行 — 适合聊天和摘要的实用速度。Apple Silicon使用统一内存作为GPU，达到30–80令牌/秒。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行LLM会损坏笔记本吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会。CPU和GPU通过热节流设计用于持续负载。使用笔记本支架保持气流并适当休息可防止过热；正常风扇噪音不是损坏迹象。',
+            },
+          },
         ]
       },
       itemListSchema: {

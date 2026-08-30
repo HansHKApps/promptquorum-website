@@ -1101,18 +1101,67 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'Quel est le meilleur framework de prompt pour toutes les tâches ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Il n\'y a pas de meilleur framework universel. Chain-of-Thought pour le raisonnement, ReAct pour l\'utilisation d\'outils, Tree-of-Thought pour les tâches complexes multi-étapes. Testez les frameworks sur votre tâche spécifique.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Il n\'y a pas de meilleur framework universel. Chain-of-Thought fonctionne pour le raisonnement, ReAct pour l\'utilisation d\'outils, Tree-of-Thought pour les tâches complexes multi-étapes. Testez les frameworks sur votre tâche spécifique pour trouver la meilleure solution.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Les frameworks de prompt fonctionnent-ils avec les LLM locaux comme Ollama ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Les frameworks fonctionnent avec GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les modèles locaux via Ollama ou LM Studio. Certains frameworks complexes nécessitent des modèles locaux plus grands (13B+).' }
+            'name': 'Les frameworks de prompt fonctionnent-ils avec les LLMs locaux comme Ollama ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Les frameworks fonctionnent avec GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les modèles locaux via Ollama ou LM Studio. Certains frameworks complexes (par exemple, Tree-of-Thought) peuvent nécessiter des modèles locaux plus grands (13B+).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Puis-je changer de framework pour la même tâche ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Le choix du framework est itératif. Si Chain-of-Thought est lent, passez à une méthode plus simple. Si les sorties manquent de détail, passez à Tree-of-Thought. Testez et itérez selon les résultats.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Le choix du framework est itératif. Si Chain-of-Thought produit des résultats lents, passez à une méthode plus simple. Si les résultats manquent de détails, passez à Tree-of-Thought. Testez et itérez en fonction des résultats.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment savoir quel framework est le meilleur pour ma tâche ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Commencez par identifier le type de votre tâche : Optimisez-vous pour la profondeur du raisonnement, la créativité, la vitesse ou une sortie structurée précise ? Ensuite, associez-le à un framework (CoT pour le raisonnement, CRAFT pour la créativité, SPECS pour la précision). Testez 2–3 frameworks et comparez les résultats.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je combiner plusieurs frameworks dans un seul prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Superposer les frameworks est courant. Utilisez CO-STAR pour définir le contexte et l\'audience, puis ajoutez Chain-of-Thought pour le raisonnement, puis SPECS pour les contraintes de sortie. L\'essentiel est la clarté—assurez-vous que le modèle comprend chaque composant.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Le choix du framework affecte-t-il la consommation de tokens ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Les frameworks complexes comme Tree-of-Thought génèrent plus d\'étapes de raisonnement et coûtent plus de tokens. Les structures simples comme les prompts directs coûtent moins cher mais peuvent produire une qualité inférieure. Le choix du framework implique un compromis entre la qualité et le coût.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je m\'en tenir à un framework ou en alterner entre plusieurs ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mélangez les deux approches. Constituez un petit ensemble de frameworks testés (3–5) pour différents types de tâches et utilisez-les régulièrement. Mais réexaminez vos choix lorsque les exigences de la tâche ou les capacités du modèle changent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment les frameworks de prompt se rapportent-ils au sélecteur automatique de PromptQuorum ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le sélecteur de PromptQuorum analyse votre tâche et recommande un framework basé sur votre description. Vous pouvez le contourner, tester des alternatives ou créer un framework personnalisé adapté à vos besoins exacts.',
+            },
+          },
         ]
       },
       sections: {
@@ -1299,18 +1348,67 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             'name': 'すべてのタスクに最適なプロンプトフレームワークは何ですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '万能な最適なフレームワークはありません。推論にはChain-of-Thought、ツール使用にはReAct、複雑な多段階タスクにはTree-of-Thoughtが機能します。特定のタスク上でフレームワークをテストしてください。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'すべてのタスクに対する普遍的な最適なフレームワークはありません。Chain-of-Thoughtは推論に機能し、ReActはツールの使用に、Tree-of-Thoughtは複雑なマルチステップタスクに機能します。特定のタスクでフレームワークをテストして、最適なものを見つけてください。',
+            },
           },
           {
             '@type': 'Question',
             'name': 'プロンプトフレームワークはOllamaなどのローカルLLMで機能しますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。フレームワークはGPT-5.6、Claude Opus 5、Gemini 3.1 Pro、およびOllamaやLM Studio経由のローカルモデルで機能します。一部の複雑なフレームワーク（例：Tree-of-Thought）は、より大きなローカルモデル（13B+）を必要とします。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。フレームワークはGPT-5.6、Claude Opus 5、Gemini 3.1 Pro、およびOllamaまたはLM Studio経由のローカルモデルで機能します。一部の複雑なフレームワーク（例：Tree-of-Thought）では、より大きなローカルモデル（13B以上）が必要な場合があります。',
+            },
           },
           {
             '@type': 'Question',
-            'name': '同じタスクのフレームワークを切り替えることはできますか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。フレームワーク選択はイテレーティブです。Chain-of-Thoughtが遅い場合は、シンプルな方法に切り替えてください。出力が詳細不足の場合は、Tree-of-Thoughtにアップグレードします。結果に基づいてテストと反復を行います。' }
-          }
+            'name': '同じタスクでフレームワークを切り替えることはできますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。フレームワークの選択は反復的です。Chain-of-Thoughtが遅い結果を生成する場合は、より単純な方法に切り替えます。出力が詳細に欠ける場合は、Tree-of-Thoughtにアップグレードします。結果に基づいてテストと反復を行います。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'タスクに最適なフレームワークをどのようにして知ることができますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'タスクタイプを特定することから始めます：推論の深さ、創造性、速度、または正確な構造化出力を最適化していますか？次に、フレームワーク（推論用CoT、創造性用CRAFT、精度用SPECS）にマップします。2～3のフレームワークをテストして、出力を比較します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '1つのプロンプトに複数のフレームワークを組み合わせることはできますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。フレームワークをレイヤーリングするのは一般的です。CO-STARを使用してコンテキストとオーディエンスを設定し、Chain-of-Thoughtで推論を追加し、SPECS出力制約を追加します。重要なのは明確性です。モデルが各コンポーネントを理解していることを確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'フレームワークの選択はトークン消費に影響しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Tree-of-Thoughtのような複雑なフレームワークはより多くの推論ステップを生成し、より多くのトークンがかかります。直接プロンプトのようなシンプルな構造はコストが低いですが、低い品質の結果が出る可能性があります。フレームワークの選択には品質とコストのトレードオフが関わります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '1つのフレームワークに固執すべきか、それとも切り替えるべきか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '両方のアプローチを混ぜます。異なるタスクタイプ（3～5）のテスト済みフレームワークの小さなセットを構築し、それらを一貫して使用します。ただし、タスク要件またはモデル機能が変わったときは、選択を再検討してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトフレームワークはPromptQuorumの自動セレクターとどのように関連していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorumのセレクターはタスクを分析し、説明に基づいてフレームワークを推奨します。これを上書きしてか、代替案をテストするか、正確なニーズに合わせたカスタムフレームワークを構築することもできます。',
+            },
+          },
         ]
       },
             sections: {
@@ -1496,19 +1594,76 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': '所有任务最好的提示词框架是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '没有通用最佳框架。Chain-of-Thought适合推理，ReAct适合工具使用，Tree-of-Thought适合复杂的多步骤任务。在您的特定任务上测试框架，找到最合适的。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词框架能在Ollama等本地LLM上使用吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。框架适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型。某些复杂框架（例如Tree-of-Thought）可能需要更大的本地模型（13B+）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以针对同一任务切换框架吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。框架选择是迭代的。如果Chain-of-Thought生成缓慢的结果，切换到更简单的方法。如果输出缺乏细节，升级为Tree-of-Thought。根据结果进行测试和迭代。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我如何知道哪个框架最适合我的任务？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '首先识别您的任务类型：是否在优化推理深度、创意、速度或精确的结构化输出？然后匹配到框架（推理用CoT、创意用CRAFT、精度用SPECS）。测试2-3个框架并比较输出。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在一个提示词中组合多个框架吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。框架分层很常见。使用CO-STAR设置上下文和受众，添加Chain-of-Thought进行推理，再添加SPECS输出约束。关键是明确性——确保模型理解每个组件。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '框架选择是否影响token消耗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。像Tree-of-Thought这样的复杂框架生成更多推理步骤，消耗更多token。直接提示等简单结构成本低但可能输出质量较低。框架选择涉及质量与成本的权衡。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我应该坚持一个框架还是在不同框架间切换？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '两种方法都混合使用。为不同任务类型构建一个小的已测试框架集（3-5个）并一致地使用它们。但当任务需求或模型能力改变时重新评估您的选择。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词框架与PromptQuorum自动选择器如何关联？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum的选择器分析您的任务并根据您的描述推荐一个框架。您可以覆盖它、测试替代方案或构建一个针对您的确切需求的自定义框架。',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '什么是最好的提示框架适用于所有任务？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '没有通用的最佳框架。Chain-of-Thought用于推理，ReAct用于工具使用，Tree-of-Thought用于复杂多步任务。在您的特定任务上测试框架找到最佳选择。' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '没有通用的最佳框架。Chain-of-Thought用于推理，ReAct用于工具使用，Tree-of-Thought用于复杂多步任务。在您的特定任务上测试框架找到最佳选择。',
+            },
           },
-          {
-            '@type': 'Question',
-            'name': '提示词框架是否与Ollama等本地LLM兼容？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '是的。框架与GPT-5.6、Claude Opus 5、Gemini 3.1 Pro以及通过Ollama或LM Studio的本地模型兼容。一些复杂框架（如Tree-of-Thought）可能需要更大的本地模型（13B+）。' }
-          },
-          {
-            '@type': 'Question',
-            'name': '我可以为相同的任务切换框架吗？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '是的。框架选择是迭代的。如果Chain-of-Thought太慢，切换到更简单的方法。如果输出缺乏细节，升级到Tree-of-Thought。根据结果测试和迭代。' }
-          }
         ]
       },
             sections: {
@@ -1650,6 +1805,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '框架选择是否影响token消耗？', a: '是的。像Tree-of-Thought这样的复杂框架生成更多推理步骤，消耗更多token。直接提示等简单结构成本低但可能输出质量较低。框架选择涉及质量与成本的权衡。' },
             { q: '我应该坚持一个框架还是在不同框架间切换？', a: '两种方法都混合使用。为不同任务类型构建一个小的已测试框架集（3-5个）并一致地使用它们。但当任务需求或模型能力改变时重新评估您的选择。' },
             { q: '提示词框架与PromptQuorum自动选择器如何关联？', a: 'PromptQuorum的选择器分析您的任务并根据您的描述推荐一个框架。您可以覆盖它、测试替代方案或构建一个针对您的确切需求的自定义框架。' },
+            { q: '什么是最好的提示框架适用于所有任务？', a: '没有通用的最佳框架。Chain-of-Thought用于推理，ReAct用于工具使用，Tree-of-Thought用于复杂多步任务。在您的特定任务上测试框架找到最佳选择。' },
           ],
         },
       },

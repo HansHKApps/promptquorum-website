@@ -1789,10 +1789,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         content: 'Perguntas comuns sobre provedores de aluguel de GPU na nuvem.',
         faqs: [
-          { q: 'Posso pausar e retomar minha instância?', a: 'Sim. RunPod e Vast.ai permitem pausar instâncias (o snapshot é salvo). Lambda Labs pode pausar via API. Enquanto pausada, você paga apenas pelo armazenamento (custo desprezível, normalmente <$0,01/dia).' },
-          { q: 'Posso usar esses serviços para inferência de IA comercial?', a: 'Sim, mas revise os termos do provedor. RunPod e Lambda Labs permitem cargas de trabalho comerciais. Provedores individuais da Vast.ai podem ter restrições — leia a listagem com atenção.' },
-          { q: 'Qual provedor é melhor para inferência em produção 24/7?', a: 'Lambda Labs (SLA 99,9%, instâncias reservadas). RunPod Secure Cloud (SLA 99%, mais barato). Evite instâncias spot da Vast.ai para uso 24/7 (interrompíveis).' },
-        ],
+            { q: 'Posso pausar e retomar minha instância?', a: 'Sim. RunPod e Vast.ai permitem pausar instâncias (o snapshot é salvo). Lambda Labs pode pausar via API. Enquanto pausada, você paga apenas pelo armazenamento (custo desprezível, normalmente <$0,01/dia).' },
+            { q: 'Posso usar esses serviços para inferência de IA comercial?', a: 'Sim, mas revise os termos do provedor. RunPod e Lambda Labs permitem cargas de trabalho comerciais. Provedores individuais da Vast.ai podem ter restrições — leia a listagem com atenção.' },
+            { q: 'Qual provedor é melhor para inferência em produção 24/7?', a: 'Lambda Labs (SLA 99,9%, instâncias reservadas). RunPod Secure Cloud (SLA 99%, mais barato). Evite instâncias spot da Vast.ai para uso 24/7 (interrompíveis).' },
+            { q: 'Qual aluguel de GPU na nuvem é o mais barato?', a: 'Instâncias spot da Vast.ai custam 30–50% menos mas são interrompíveis. RunPod é 40% mais barato que Lambda Labs. O preço depende do tipo de GPU e demanda do mercado.' },
+            { q: 'O aluguel de GPU na nuvem está em conformidade com a LGPD?', a: 'Para dados de cidadãos brasileiros, verifique se o provedor pode firmar um DPA e se os dados não são transferidos para fora do Brasil sem consentimento. RunPod com regiões EU oferece opções de conformidade. Consulte a seção de conformidade para alternativas.' },
+            { q: 'Minha instância pode ser interrompida?', a: 'Vast.ai spot: sim (15 segundos de aviso). RunPod Secure Cloud: não (SLA 99%). Lambda Labs: não (SLA 99,9%). Escolha com base na criticidade da sua carga de trabalho.' },
+          ],
       },
     },
     schema: {
@@ -1842,10 +1845,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'Qual aluguel de GPU na nuvem é o mais barato?', acceptedAnswer: { '@type': 'Answer', text: 'Instâncias spot da Vast.ai custam 30–50% menos mas são interrompíveis. RunPod é 40% mais barato que Lambda Labs. O preço depende do tipo de GPU e demanda do mercado.' } },
-        { '@type': 'Question', name: 'O aluguel de GPU na nuvem está em conformidade com a LGPD?', acceptedAnswer: { '@type': 'Answer', text: 'Para dados de cidadãos brasileiros, verifique se o provedor pode firmar um DPA e se os dados não são transferidos para fora do Brasil sem consentimento. RunPod com regiões EU oferece opções de conformidade. Consulte a seção de conformidade para alternativas.' } },
-        { '@type': 'Question', name: 'Minha instância pode ser interrompida?', acceptedAnswer: { '@type': 'Answer', text: 'Vast.ai spot: sim (15 segundos de aviso). RunPod Secure Cloud: não (SLA 99%). Lambda Labs: não (SLA 99,9%). Escolha com base na criticidade da sua carga de trabalho.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Posso pausar e retomar minha instância?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. RunPod e Vast.ai permitem pausar instâncias (o snapshot é salvo). Lambda Labs pode pausar via API. Enquanto pausada, você paga apenas pelo armazenamento (custo desprezível, normalmente <$0,01/dia).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar esses serviços para inferência de IA comercial?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, mas revise os termos do provedor. RunPod e Lambda Labs permitem cargas de trabalho comerciais. Provedores individuais da Vast.ai podem ter restrições — leia a listagem com atenção.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual provedor é melhor para inferência em produção 24/7?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs (SLA 99,9%, instâncias reservadas). RunPod Secure Cloud (SLA 99%, mais barato). Evite instâncias spot da Vast.ai para uso 24/7 (interrompíveis).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual aluguel de GPU na nuvem é o mais barato?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Instâncias spot da Vast.ai custam 30–50% menos mas são interrompíveis. RunPod é 40% mais barato que Lambda Labs. O preço depende do tipo de GPU e demanda do mercado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O aluguel de GPU na nuvem está em conformidade com a LGPD?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para dados de cidadãos brasileiros, verifique se o provedor pode firmar um DPA e se os dados não são transferidos para fora do Brasil sem consentimento. RunPod com regiões EU oferece opções de conformidade. Consulte a seção de conformidade para alternativas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Minha instância pode ser interrompida?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vast.ai spot: sim (15 segundos de aviso). RunPod Secure Cloud: não (SLA 99%). Lambda Labs: não (SLA 99,9%). Escolha com base na criticidade da sua carga de trabalho.',
+            },
+          },
+        ],
     },
   },
   de: {

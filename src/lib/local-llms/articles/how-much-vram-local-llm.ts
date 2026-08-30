@@ -218,6 +218,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Does increasing batch size reduce VRAM for single inference?', a: 'No. Single inference always uses batch=1 VRAM. Batch size only helps throughput (multi-user scenarios).' },
             { q: 'What\'s the best quantization for accuracy?', a: 'Q8 is nearly imperceptible loss. Q5 is ~2% loss. Q4 is ~1% loss. For most, Q4 is the sweet spot.' },
             { q: 'Can I offload some VRAM to CPU RAM?', a: 'Yes, via layer-splitting (NVLink). Llama.cpp and Ollama support this. Performance drops 30-50% but it works. Under 8 GB VRAM? See **[which models run fastest on your exact hardware tier](/local-llms/fastest-local-llms-low-end-pcs)** — CPU-only, 4 GB, 6 GB, and 8 GB VRAM benchmarks with real tok/sec numbers.' },
+            { q: 'What quantization level has the best accuracy?', a: 'Q8 is nearly imperceptible quality loss. Q5 is ~2% degradation. Q4 is ~1% degradation. For most tasks, Q4 is the sweet spot between VRAM savings and quality.' },
+            { q: 'What is the VRAM formula for LLMs?', a: 'VRAM (GB) = model parameters (billions) × bytes per parameter + overhead. At Q4 (4-bit): 7B × 0.5 bytes + 1GB overhead ≈ 4.5GB weights + 2GB KV cache = ~7GB total.' },
+            { q: 'How much more VRAM does Q8 need vs Q4?', a: 'Q8 uses 2× the VRAM of Q4. A 7B model at Q4 needs ~4-5GB; at Q8, ~8-9GB. Always check quantization level before buying a GPU.' },
+            { q: 'Can I run a 70B model on two GPUs?', a: 'Yes. Two RTX 5090s (24GB each) combine for 48GB VRAM -- enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -275,81 +279,89 @@ schema: {
             'name': 'Can I run Mistral Small on a 6GB GPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Mistral Small is a 22-24B model -- even at Q4 it needs about 13-14GB of VRAM for weights alone. A 6GB or 8GB GPU will OOM. Budget 16GB for a comfortable buy-target, or drop to a 7B-8B model for a 6-8GB card.'
-            }
+              'text': 'No. Mistral Small is a 22-24B model — even at Q4 it needs about 13-14GB of VRAM for weights alone. A 6GB or 8GB GPU will OOM. Budget 16GB for a comfortable buy-target, or drop to a 7B-8B model for a 6-8GB card.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How much VRAM do I need for fine-tuning a 7B model?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'For LoRA fine-tuning: 12-16GB. Full fine-tuning: 28GB+. Fine-tuning requires optimizer state (2-4× model VRAM), not just inference weights.'
-            }
+              'text': 'For LoRA: 12-16GB. Full fine-tuning: 28GB+. Fine-tuning requires optimizer state (2-4× model VRAM), not just inference.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Is 12GB enough for Llama 3 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, comfortably. A 13B model needs about 8GB at Q4, so 12GB leaves real headroom. At Q5 (~9GB) it is still fine; at Q8 (~14GB) it is tight.'
-            }
+              'text': 'Yes, comfortably. A 13B model needs about 8GB at Q4, so 12GB leaves real headroom for context and other overhead. At Q5 (~9GB) it is still fine; at Q8 (~14GB) it is tight.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Do I need 24GB VRAM for a 70B model?',
+            'name': 'Do I need 24GB for a 70B model?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No, but you need close to it -- 70B models require about 42GB VRAM at Q4 for weights alone. At Q5+, you need 50GB+. 24GB is not enough at any quantization level.'
-            }
+              'text': 'No, but you need close to it. A 70B model needs about 42GB at Q4 for its weights, so 24GB is not enough at any quantization level — you need at least 42-48GB (e.g. 2× 24GB GPUs, or one 48GB card).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Does increasing batch size reduce VRAM for single inference?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Single inference always uses batch=1 VRAM. Batch size only helps throughput in multi-user scenarios. It does not reduce VRAM per request.'
-            }
+              'text': 'No. Single inference always uses batch=1 VRAM. Batch size only helps throughput (multi-user scenarios).',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'What quantization level has the best accuracy?',
+            'name': 'What\'s the best quantization for accuracy?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q8 is nearly imperceptible quality loss. Q5 is ~2% degradation. Q4 is ~1% degradation. For most tasks, Q4 is the sweet spot between VRAM savings and quality.'
-            }
+              'text': 'Q8 is nearly imperceptible loss. Q5 is ~2% loss. Q4 is ~1% loss. For most, Q4 is the sweet spot.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I offload some VRAM to CPU RAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, via layer-splitting. llama.cpp and Ollama support this via --n-gpu-layers. Performance drops 30-50% but models run when VRAM is insufficient.'
-            }
+              'text': 'Yes, via layer-splitting (NVLink). Llama.cpp and Ollama support this. Performance drops 30-50% but it works. Under 8 GB VRAM? See **[which models run fastest on your exact hardware tier](/local-llms/fastest-local-llms-low-end-pcs)** — CPU-only, 4 GB, 6 GB, and 8 GB VRAM benchmarks with real tok/sec numbers.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What quantization level has the best accuracy?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8 is nearly imperceptible quality loss. Q5 is ~2% degradation. Q4 is ~1% degradation. For most tasks, Q4 is the sweet spot between VRAM savings and quality.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is the VRAM formula for LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'VRAM (GB) = model parameters (billions) × bytes per parameter + overhead. At Q4 (4-bit): 7B × 0.5 bytes + 1GB overhead ≈ 4.5GB weights + 2GB KV cache = ~7GB total.'
-            }
+              'text': 'VRAM (GB) = model parameters (billions) × bytes per parameter + overhead. At Q4 (4-bit): 7B × 0.5 bytes + 1GB overhead ≈ 4.5GB weights + 2GB KV cache = ~7GB total.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How much more VRAM does Q8 need vs Q4?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q8 uses 2× the VRAM of Q4. A 7B model at Q4 needs ~4-5GB; at Q8, ~8-9GB. Always check quantization level before buying a GPU.'
-            }
+              'text': 'Q8 uses 2× the VRAM of Q4. A 7B model at Q4 needs ~4-5GB; at Q8, ~8-9GB. Always check quantization level before buying a GPU.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I run a 70B model on two GPUs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Two RTX 5090s (24GB each) combine for 48GB VRAM -- enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.'
-            }
-          }
+              'text': 'Yes. Two RTX 5090s (24GB each) combine for 48GB VRAM -- enough for a 70B model at Q4. llama.cpp and Ollama support multi-GPU via tensor parallelism and --n-gpu-layers.',
+            },
+          },
         ]
       },
     },
@@ -542,6 +554,10 @@ schema: {
             { q: '¿Aumentar el batch size reduce la VRAM para inferencia individual?', a: 'No. La inferencia individual siempre usa la VRAM de batch=1. El batch size solo ayuda al rendimiento (escenarios multiusuario).' },
             { q: '¿Cuál es la mejor cuantización para la precisión?', a: 'Q8 tiene una pérdida casi imperceptible. Q5 tiene ~2% de pérdida. Q4 tiene ~1% de pérdida. Para la mayoría, Q4 es el punto óptimo.' },
             { q: '¿Puedo descargar parte de la VRAM a la RAM de la CPU?', a: 'Sí, mediante la división de capas (NVLink). Llama.cpp y Ollama lo soportan. El rendimiento cae un 30-50% pero funciona. ¿Menos de 8 GB de VRAM? Consulta **[qué modelos corren más rápido en tu nivel exacto de hardware](/es/local-llms/fastest-local-llms-low-end-pcs)** — benchmarks con números reales de tok/seg para solo CPU, 4 GB, 6 GB y 8 GB de VRAM.' },
+            { q: '¿Qué nivel de cuantización tiene la mejor precisión?', a: 'Q8 tiene una pérdida de calidad casi imperceptible. Q5 tiene ~2% de degradación. Q4 tiene ~1% de degradación. Para la mayoría de las tareas, Q4 es el punto óptimo entre ahorro de VRAM y calidad.' },
+            { q: '¿Cuál es la fórmula de VRAM para LLMs?', a: 'VRAM (GB) = parámetros del modelo (miles de millones) × bytes por parámetro + overhead. En Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB pesos + 2 GB caché KV = ~7 GB total.' },
+            { q: '¿Cuánta más VRAM necesita Q8 frente a Q4?', a: 'Q8 usa el doble de VRAM que Q4. Un modelo 7B en Q4 necesita ~4-5 GB; en Q8, ~8-9 GB. Comprueba siempre el nivel de cuantización antes de comprar una GPU.' },
+            { q: '¿Puedo ejecutar un modelo 70B en dos GPUs?', a: 'Sí. Dos RTX 5090 (24 GB cada una) combinan 48 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -599,81 +615,89 @@ schema: {
             'name': '¿Puedo ejecutar Mistral Small en una GPU de 6 GB?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. Mistral Small es un modelo de 22-24B -- incluso en Q4 necesita unos 13-14 GB de VRAM solo para los pesos. Una GPU de 6 GB u 8 GB dará error de OOM. Reserva 16 GB para un margen cómodo, o baja a un modelo de 7B-8B para una tarjeta de 6-8 GB.'
-            }
+              'text': 'No. Mistral Small es un modelo de 22-24B -- incluso en Q4 necesita unos 13-14 GB de VRAM solo para los pesos. Una GPU de 6 GB u 8 GB dará error de OOM. Reserva 16 GB para un margen cómodo, o baja a un modelo de 7B-8B para una tarjeta de 6-8 GB.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cuánta VRAM necesito para hacer fine-tuning de un modelo 7B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para fine-tuning LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. El fine-tuning requiere estado del optimizador (2-4× la VRAM del modelo), no solo los pesos de inferencia.'
-            }
+              'text': 'Para LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. El fine-tuning requiere estado del optimizador (2-4× la VRAM del modelo), no solo la inferencia.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Son suficientes 12 GB para Llama 3 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí, con margen de sobra. Un modelo 13B necesita unos 8 GB en Q4, así que 12 GB deja margen real. En Q5 (~9 GB) sigue siendo cómodo; en Q8 (~14 GB) va ajustado.'
-            }
+              'text': 'Sí, con margen de sobra. Un modelo 13B necesita unos 8 GB en Q4, así que 12 GB deja margen real. En Q5 (~9 GB) sigue siendo cómodo; en Q8 (~14 GB) va ajustado.',
+            },
           },
           {
             '@type': 'Question',
-            'name': '¿Necesito 24 GB de VRAM para un modelo 70B?',
+            'name': '¿Necesito 24 GB para un modelo 70B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No — los modelos 70B requieren ~40-48 GB de VRAM en Q4. En Q5+, necesitas 50 GB+. Una cuantización más alta añade necesidades de VRAM proporcionalmente.'
-            }
+              'text': 'No. Un modelo 70B necesita 40-48 GB en Q4. En Q5+, necesitas 50 GB+. 24 GB no es suficiente para ningún modelo 70B en ningún nivel de cuantización.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Aumentar el batch size reduce la VRAM para inferencia individual?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. La inferencia individual siempre usa la VRAM de batch=1. El batch size solo ayuda al rendimiento en escenarios multiusuario. No reduce la VRAM por petición.'
-            }
+              'text': 'No. La inferencia individual siempre usa la VRAM de batch=1. El batch size solo ayuda al rendimiento (escenarios multiusuario).',
+            },
           },
           {
             '@type': 'Question',
-            'name': '¿Qué nivel de cuantización tiene la mejor precisión?',
+            'name': '¿Cuál es la mejor cuantización para la precisión?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q8 tiene una pérdida de calidad casi imperceptible. Q5 tiene ~2% de degradación. Q4 tiene ~1% de degradación. Para la mayoría de las tareas, Q4 es el punto óptimo entre ahorro de VRAM y calidad.'
-            }
+              'text': 'Q8 tiene una pérdida casi imperceptible. Q5 tiene ~2% de pérdida. Q4 tiene ~1% de pérdida. Para la mayoría, Q4 es el punto óptimo.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Puedo descargar parte de la VRAM a la RAM de la CPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí, mediante la división de capas. llama.cpp y Ollama lo soportan con --n-gpu-layers. El rendimiento cae un 30-50% pero los modelos funcionan cuando la VRAM es insuficiente.'
-            }
+              'text': 'Sí, mediante la división de capas (NVLink). Llama.cpp y Ollama lo soportan. El rendimiento cae un 30-50% pero funciona. ¿Menos de 8 GB de VRAM? Consulta **[qué modelos corren más rápido en tu nivel exacto de hardware](/es/local-llms/fastest-local-llms-low-end-pcs)** — benchmarks con números reales de tok/seg para solo CPU, 4 GB, 6 GB y 8 GB de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué nivel de cuantización tiene la mejor precisión?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8 tiene una pérdida de calidad casi imperceptible. Q5 tiene ~2% de degradación. Q4 tiene ~1% de degradación. Para la mayoría de las tareas, Q4 es el punto óptimo entre ahorro de VRAM y calidad.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cuál es la fórmula de VRAM para LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'VRAM (GB) = parámetros del modelo (miles de millones) × bytes por parámetro + overhead. En Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB pesos + 2 GB caché KV = ~7 GB total.'
-            }
+              'text': 'VRAM (GB) = parámetros del modelo (miles de millones) × bytes por parámetro + overhead. En Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB pesos + 2 GB caché KV = ~7 GB total.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cuánta más VRAM necesita Q8 frente a Q4?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q8 usa el doble de VRAM que Q4. Un modelo 7B en Q4 necesita ~4-5 GB; en Q8, ~8-9 GB. Comprueba siempre el nivel de cuantización antes de comprar una GPU.'
-            }
+              'text': 'Q8 usa el doble de VRAM que Q4. Un modelo 7B en Q4 necesita ~4-5 GB; en Q8, ~8-9 GB. Comprueba siempre el nivel de cuantización antes de comprar una GPU.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Puedo ejecutar un modelo 70B en dos GPUs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí. Dos RTX 5090 (24 GB cada una) combinan 48 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.'
-            }
-          }
+              'text': 'Sí. Dos RTX 5090 (24 GB cada una) combinan 48 GB de VRAM — suficiente para un modelo 70B en Q4. llama.cpp y Ollama soportan múltiples GPUs mediante paralelismo tensorial y --n-gpu-layers.',
+            },
+          },
         ]
       },
     },
@@ -866,6 +890,10 @@ schema: {
             { q: 'هل تقليل batch size يقلّل VRAM للاستدلال الفردي؟', a: 'لا. يستخدم الاستدلال الفردي دائمًا VRAM لـ batch=1. يساعد batch size في الإنتاجية فقط (سيناريوهات متعددة المستخدمين).' },
             { q: 'ما أفضل تكميم للدقة؟', a: 'Q8 فقدانه غير محسوس تقريبًا. Q5 فقدانه ~2%. Q4 فقدانه ~1%. للأغلب، Q4 هي النقطة المثالية.' },
             { q: 'هل يمكنني إنزال جزء من VRAM إلى RAM الخاصة بـ CPU؟', a: 'نعم، عبر تقسيم الطبقات (NVLink). يدعمه Llama.cpp و Ollama. تنخفض الإنتاجية بنسبة 30-50% لكنه يعمل. أقل من 8 GB من VRAM؟ راجع **[أي النماذج تعمل أسرع على مستوى جهازك الدقيق](/ar/local-llms/fastest-local-llms-low-end-pcs)** — معايير بأرقام tok/ثانية حقيقية لـ CPU فقط و4 GB و6 GB و8 GB من VRAM.' },
+            { q: 'أي مستوى تكميم له أفضل دقة؟', a: 'Q8 فقدان جودته غير محسوس تقريبًا. Q5 تدهوره ~2%. Q4 تدهوره ~1%. لمعظم المهام، Q4 هي النقطة المثالية بين توفير VRAM والجودة.' },
+            { q: 'ما صيغة VRAM لنماذج LLM؟', a: 'VRAM (GB) = معاملات النموذج (مليار) × بايت لكل معامل + عبء. بـ Q4 (4 بت): 7B × 0.5 بايت + 1 GB عبء ≈ 4.5 GB أوزان + 2 GB ذاكرة KV = ~7 GB إجمالي.' },
+            { q: 'كم تحتاج Q8 من VRAM أكثر من Q4؟', a: 'تستخدم Q8 ضعف VRAM مقارنة بـ Q4. يحتاج نموذج 7B بـ Q4 إلى ~4-5 GB؛ وبـ Q8 ~8-9 GB. تحقّق دائمًا من مستوى التكميم قبل شراء GPU.' },
+            { q: 'هل يمكنني تشغيل نموذج 70B على وحدتي GPU؟', a: 'نعم. وحدتا RTX 5090 (24 GB لكل منهما) تجمعان 48 GB من VRAM — كافية لنموذج 70B بـ Q4. يدعم llama.cpp و Ollama وحدات GPU متعددة عبر التوازي التنسوري و --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -923,81 +951,89 @@ schema: {
             'name': 'هل يمكنني تشغيل Mistral Small على GPU بسعة 6 GB؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا. Mistral Small نموذج بحجم 22-24B — حتى بتكميم Q4 يحتاج نحو 13-14 GB من VRAM لأوزانه فقط. بطاقة 6 GB أو 8 GB ستواجه خطأ OOM. خصص 16 GB لهامش مريح، أو انزل إلى نموذج 7B-8B لبطاقة 6-8 GB.'
-            }
+              'text': 'لا. Mistral Small نموذج بحجم 22-24B — حتى بتكميم Q4 يحتاج نحو 13-14 GB من VRAM لأوزانه فقط. بطاقة 6 GB أو 8 GB ستواجه خطأ OOM. خصص 16 GB لهامش مريح، أو انزل إلى نموذج 7B-8B لبطاقة 6-8 GB.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'كم أحتاج من VRAM لعمل fine-tuning لنموذج 7B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لـ fine-tuning بـ LoRA: 12-16 GB. fine-tuning كامل: 28 GB+. يتطلب الـ fine-tuning حالة المُحسّن (2-4× VRAM النموذج)، لا مجرد أوزان الاستدلال.'
-            }
+              'text': 'لـ LoRA: 12-16 GB. fine-tuning كامل: 28 GB+. يتطلب الـ fine-tuning حالة المُحسّن (2-4× VRAM النموذج)، لا مجرد الاستدلال.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل 12 GB كافية لـ Llama 3 13B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم، بارتياح. نموذج 13B يحتاج نحو 8 GB بتكميم Q4، لذا 12 GB تترك هامشًا حقيقيًا. بـ Q5 (~9 GB) لا تزال مريحة؛ بـ Q8 (~14 GB) تصبح ضيّقة لنماذج 13B.'
-            }
+              'text': 'نعم، بارتياح. نموذج 13B يحتاج نحو 8 GB بتكميم Q4، لذا 12 GB تترك هامشًا حقيقيًا. بـ Q5 (~9 GB) لا تزال مريحة؛ بـ Q8 (~14 GB) تصبح ضيّقة.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'هل أحتاج 24 GB من VRAM لنموذج 70B؟',
+            'name': 'هل أحتاج 24 GB لنموذج 70B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا — تتطلب نماذج 70B ~40-48 GB من VRAM بتكميم Q4. بـ Q5+، تحتاج 50 GB+. التكميم الأعلى يضيف احتياجات VRAM بشكل متناسب.'
-            }
+              'text': 'لا. يحتاج نموذج 70B إلى 40-48 GB بتكميم Q4. بـ Q5+، تحتاج 50 GB+. 24 GB غير كافية لأي نموذج 70B عند أي مستوى تكميم.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل تقليل batch size يقلّل VRAM للاستدلال الفردي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا. يستخدم الاستدلال الفردي دائمًا VRAM لـ batch=1. يساعد batch size في الإنتاجية فقط في سيناريوهات متعددة المستخدمين. لا يقلّل VRAM لكل طلب.'
-            }
+              'text': 'لا. يستخدم الاستدلال الفردي دائمًا VRAM لـ batch=1. يساعد batch size في الإنتاجية فقط (سيناريوهات متعددة المستخدمين).',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'أي مستوى تكميم له أفضل دقة؟',
+            'name': 'ما أفضل تكميم للدقة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q8 فقدان جودته غير محسوس تقريبًا. Q5 تدهوره ~2%. Q4 تدهوره ~1%. لمعظم المهام، Q4 هي النقطة المثالية بين توفير VRAM والجودة.'
-            }
+              'text': 'Q8 فقدانه غير محسوس تقريبًا. Q5 فقدانه ~2%. Q4 فقدانه ~1%. للأغلب، Q4 هي النقطة المثالية.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل يمكنني إنزال جزء من VRAM إلى RAM الخاصة بـ CPU؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم، عبر تقسيم الطبقات. يدعمه llama.cpp و Ollama عبر --n-gpu-layers. تنخفض الإنتاجية بنسبة 30-50% لكن النماذج تعمل عندما تكون VRAM غير كافية.'
-            }
+              'text': 'نعم، عبر تقسيم الطبقات (NVLink). يدعمه Llama.cpp و Ollama. تنخفض الإنتاجية بنسبة 30-50% لكنه يعمل. أقل من 8 GB من VRAM؟ راجع **[أي النماذج تعمل أسرع على مستوى جهازك الدقيق](/ar/local-llms/fastest-local-llms-low-end-pcs)** — معايير بأرقام tok/ثانية حقيقية لـ CPU فقط و4 GB و6 GB و8 GB من VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي مستوى تكميم له أفضل دقة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8 فقدان جودته غير محسوس تقريبًا. Q5 تدهوره ~2%. Q4 تدهوره ~1%. لمعظم المهام، Q4 هي النقطة المثالية بين توفير VRAM والجودة.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما صيغة VRAM لنماذج LLM؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'VRAM (GB) = معاملات النموذج (مليار) × بايت لكل معامل + عبء. بـ Q4 (4 بت): 7B × 0.5 بايت + 1 GB عبء ≈ 4.5 GB أوزان + 2 GB ذاكرة KV = ~7 GB إجمالي.'
-            }
+              'text': 'VRAM (GB) = معاملات النموذج (مليار) × بايت لكل معامل + عبء. بـ Q4 (4 بت): 7B × 0.5 بايت + 1 GB عبء ≈ 4.5 GB أوزان + 2 GB ذاكرة KV = ~7 GB إجمالي.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'كم تحتاج Q8 من VRAM أكثر من Q4؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'تستخدم Q8 ضعف VRAM مقارنة بـ Q4. يحتاج نموذج 7B بـ Q4 إلى ~4-5 GB؛ وبـ Q8 ~8-9 GB. تحقّق دائمًا من مستوى التكميم قبل شراء GPU.'
-            }
+              'text': 'تستخدم Q8 ضعف VRAM مقارنة بـ Q4. يحتاج نموذج 7B بـ Q4 إلى ~4-5 GB؛ وبـ Q8 ~8-9 GB. تحقّق دائمًا من مستوى التكميم قبل شراء GPU.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل يمكنني تشغيل نموذج 70B على وحدتي GPU؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم. وحدتا RTX 5090 (24 GB لكل منهما) تجمعان 48 GB من VRAM — كافية لنموذج 70B بـ Q4. يدعم llama.cpp و Ollama وحدات GPU متعددة عبر التوازي التنسوري و --n-gpu-layers.'
-            }
-          }
+              'text': 'نعم. وحدتا RTX 5090 (24 GB لكل منهما) تجمعان 48 GB من VRAM — كافية لنموذج 70B بـ Q4. يدعم llama.cpp و Ollama وحدات GPU متعددة عبر التوازي التنسوري و --n-gpu-layers.',
+            },
+          },
         ]
       },
     },
@@ -1190,6 +1226,9 @@ schema: {
             { q: 'Aumentar o batch size reduz a VRAM para inferência individual?', a: 'Não. A inferência individual sempre usa a VRAM de batch=1. O batch size só ajuda a vazão (cenários multiusuário).' },
             { q: 'Qual é a melhor quantização para a precisão?', a: 'O Q8 tem perda quase imperceptível. O Q5 tem ~2% de perda. O Q4 tem ~1% de perda. Para a maioria, o Q4 é o ponto ideal.' },
             { q: 'Posso descarregar parte da VRAM para a RAM da CPU?', a: 'Sim, via divisão de camadas (NVLink). O llama.cpp e o Ollama suportam isso. A vazão cai 30-50%, mas funciona. Menos de 8 GB de VRAM? Veja **[quais modelos rodam mais rápido no seu nível exato de hardware](/pt/local-llms/fastest-local-llms-low-end-pcs)** — benchmarks com números reais de tok/seg para apenas CPU, 4 GB, 6 GB e 8 GB de VRAM.' },
+            { q: 'Qual é a fórmula de VRAM para LLMs?', a: 'VRAM (GB) = parâmetros do modelo (bilhões) × bytes por parâmetro + overhead. Em Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB de pesos + 2 GB de cache KV = ~7 GB no total.' },
+            { q: 'Quanto mais VRAM o Q8 precisa em relação ao Q4?', a: 'O Q8 usa o dobro da VRAM do Q4. Um modelo 7B em Q4 precisa de ~4-5 GB; em Q8, ~8-9 GB. Verifique sempre o nível de quantização antes de comprar uma GPU.' },
+            { q: 'Posso rodar um modelo 70B em duas GPUs?', a: 'Sim. Duas RTX 5090 (24 GB cada) combinam 48 GB de VRAM — suficiente para um modelo 70B em Q4. O llama.cpp e o Ollama suportam várias GPUs via paralelismo tensorial e --n-gpu-layers.' },
           ],
         },
         'relatedReading': {
@@ -1247,81 +1286,81 @@ schema: {
             'name': 'Posso rodar o Mistral Small em uma GPU de 6 GB?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Não. O Mistral Small é um modelo de 22-24B -- mesmo em Q4 precisa de cerca de 13-14 GB de VRAM só para os pesos. Uma GPU de 6 GB ou 8 GB vai dar erro de OOM. Reserve 16 GB para uma margem confortável, ou use um modelo de 7B-8B para uma placa de 6-8 GB.'
-            }
+              'text': 'Não. O Mistral Small é um modelo de 22-24B -- mesmo em Q4 precisa de cerca de 13-14 GB de VRAM só para os pesos. Uma GPU de 6 GB ou 8 GB vai dar erro de OOM. Reserve 16 GB para uma margem confortável, ou use um modelo de 7B-8B para uma placa de 6-8 GB.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Quanta VRAM preciso para fazer fine-tuning de um modelo 7B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para fine-tuning LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. O fine-tuning exige estado do otimizador (2-4× a VRAM do modelo), não só os pesos de inferência.'
-            }
+              'text': 'Para LoRA: 12-16 GB. Fine-tuning completo: 28 GB+. O fine-tuning exige estado do otimizador (2-4× a VRAM do modelo), não só a inferência.',
+            },
           },
           {
             '@type': 'Question',
             'name': '12 GB são suficientes para o Llama 3 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim, com folga. Um modelo 13B precisa de cerca de 8 GB em Q4, então 12 GB deixa margem real. Em Q5 (~9 GB) ainda está confortável; em Q8 (~14 GB) fica apertado para modelos 13B.'
-            }
+              'text': 'Sim, com folga. Um modelo 13B precisa de cerca de 8 GB em Q4, então 12 GB deixa margem real. Em Q5 (~9 GB) ainda está confortável; em Q8 (~14 GB) fica apertado.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Preciso de 24 GB de VRAM para um modelo 70B?',
+            'name': 'Preciso de 24 GB para um modelo 70B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Não — os modelos 70B exigem ~40-48 GB de VRAM em Q4. Em Q5+, você precisa de 50 GB+. Uma quantização mais alta adiciona necessidades de VRAM proporcionalmente.'
-            }
+              'text': 'Não. Um modelo 70B precisa de 40-48 GB em Q4. Em Q5+, você precisa de 50 GB+. 24 GB não é suficiente para nenhum modelo 70B em nenhum nível de quantização.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Aumentar o batch size reduz a VRAM para inferência individual?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Não. A inferência individual sempre usa a VRAM de batch=1. O batch size só ajuda a vazão em cenários multiusuário. Não reduz a VRAM por requisição.'
-            }
+              'text': 'Não. A inferência individual sempre usa a VRAM de batch=1. O batch size só ajuda a vazão (cenários multiusuário).',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Qual nível de quantização tem a melhor precisão?',
+            'name': 'Qual é a melhor quantização para a precisão?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'O Q8 tem uma perda de qualidade quase imperceptível. O Q5 tem ~2% de degradação. O Q4 tem ~1% de degradação. Para a maioria das tarefas, o Q4 é o ponto ideal entre economia de VRAM e qualidade.'
-            }
+              'text': 'O Q8 tem perda quase imperceptível. O Q5 tem ~2% de perda. O Q4 tem ~1% de perda. Para a maioria, o Q4 é o ponto ideal.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Posso descarregar parte da VRAM para a RAM da CPU?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim, via divisão de camadas. O llama.cpp e o Ollama suportam isso com --n-gpu-layers. A vazão cai 30-50%, mas os modelos funcionam quando a VRAM é insuficiente.'
-            }
+              'text': 'Sim, via divisão de camadas (NVLink). O llama.cpp e o Ollama suportam isso. A vazão cai 30-50%, mas funciona. Menos de 8 GB de VRAM? Veja **[quais modelos rodam mais rápido no seu nível exato de hardware](/pt/local-llms/fastest-local-llms-low-end-pcs)** — benchmarks com números reais de tok/seg para apenas CPU, 4 GB, 6 GB e 8 GB de VRAM.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Qual é a fórmula de VRAM para LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'VRAM (GB) = parâmetros do modelo (bilhões) × bytes por parâmetro + overhead. Em Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB de pesos + 2 GB de cache KV = ~7 GB no total.'
-            }
+              'text': 'VRAM (GB) = parâmetros do modelo (bilhões) × bytes por parâmetro + overhead. Em Q4 (4 bits): 7B × 0.5 bytes + 1 GB overhead ≈ 4.5 GB de pesos + 2 GB de cache KV = ~7 GB no total.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Quanto mais VRAM o Q8 precisa em relação ao Q4?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'O Q8 usa o dobro da VRAM do Q4. Um modelo 7B em Q4 precisa de ~4-5 GB; em Q8, ~8-9 GB. Verifique sempre o nível de quantização antes de comprar uma GPU.'
-            }
+              'text': 'O Q8 usa o dobro da VRAM do Q4. Um modelo 7B em Q4 precisa de ~4-5 GB; em Q8, ~8-9 GB. Verifique sempre o nível de quantização antes de comprar uma GPU.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Posso rodar um modelo 70B em duas GPUs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim. Duas RTX 5090 (24 GB cada) combinam 48 GB de VRAM — suficiente para um modelo 70B em Q4. O llama.cpp e o Ollama suportam várias GPUs via paralelismo tensorial e --n-gpu-layers.'
-            }
-          }
+              'text': 'Sim. Duas RTX 5090 (24 GB cada) combinam 48 GB de VRAM — suficiente para um modelo 70B em Q4. O llama.cpp e o Ollama suportam várias GPUs via paralelismo tensorial e --n-gpu-layers.',
+            },
+          },
         ]
       },
     },
@@ -1708,7 +1747,20 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
         mistakes: { title: '一般的な間違い', content: ['VRAM ≠ モデルサイズ。常に5 GB以上の余地が必要。'] },
         vramCalculator: { id: 'vram-calculator', title: 'VRAM計算機', component: 'VramCalculator', content: 'モデルサイズと量子化を選択してVRAM要件を推定します。' },
         faqSection: {
-          id: 'faq', faqs: [{ q: 'RTX 4060は7B Q4に十分?', a: '十分です。7BはQ4で約4 GBの重みなので、RTX 4060の8 GBなら余裕があります。' }, { q: '70B用に24 GBは?', a: '不十分です。Q4でも約42 GB必要です。' }] },
+          id: 'faq', faqs: [
+            { q: 'RTX 4060は7B Q4に十分?', a: '十分です。7BはQ4で約4 GBの重みなので、RTX 4060の8 GBなら余裕があります。' },
+            { q: '70B用に24 GBは?', a: '不十分です。Q4でも約42 GB必要です。' },
+            { q: '6GB GPUでMistral Smallを実行できますか?', a: 'いいえ。Mistral Smallは22-24Bモデルで、Q4でも重みだけで約13-14GBのVRAMが必要です。6GBや8GBのGPUではOOMになります。余裕を持って16GBを、または6-8GBのカードなら7B-8Bモデルを使ってください。' },
+            { q: '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?', a: 'LoRA用: 12-16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。' },
+            { q: 'Llama 3 13Bに12GBで十分ですか?', a: '十分すぎるほどです。13BモデルはQ4で約8GBしか必要とせず、12GBなら実際に余裕があります。Q5（約9GB）でも快適で、Q8（約14GB）でぎりぎりになります。' },
+            { q: '70Bモデルに24GBが必要ですか?', a: 'いいえ、ただしそれに近い量が必要です。70Bモデルは重みだけでQ4で約42GB必要です。Q5以上では50GB以上必要になります。どの量子化レベルでも24GBでは不十分です。' },
+            { q: 'バッチサイズを増やすと単一推論のVRAMが減りますか?', a: 'いいえ。単一推論は常にbatch=1 VRAMを使用します。バッチサイズはスループット(マルチユーザーシナリオ)にのみ役立ちます。' },
+            { q: '精度に最適な量子化は何ですか?', a: 'Q8はほぼ知覚できないロスです。Q5は~2%ロス。Q4は~1%ロス。ほとんどの場合、Q4がスイートスポットです。' },
+            { q: 'VRAMの一部をCPU RAMにオフロードできますか?', a: 'はい、レイヤー分割を使用します。Llama.cppとOllamaがサポートしています。パフォーマンスは30-50%低下します。' },
+            { q: 'ローカルLLM実行の最小VRAMは?', a: '3B Q4なら4GB VRAM。実用的な最小値は8GB VRAM + 7B Q4。6GB以下では、ほとんどの7Bモデルでは不十分です。' },
+            { q: 'Apple Silicon VRAMはGPU VRAMと同じですか?', a: 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBはLlama 3 13B Q4(~7GB) + オーバーヘッドを実行できます。' },
+            { q: '異なる量子化レベルで7Bには何GBのVRAMが必要ですか?', a: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GBの重み + 1-2GBオーバーヘッド)。6GBはきついです、8GBが快適です。' },
+          ] },
         relatedReading: {
           id: 'related-reading', title: '関連資料', items: ['/ja/local-llms/best-local-llms-2026', '/ja/local-llms/how-much-unified-memory-for-local-llm', '/ja/local-llms/running-70b-models-apple-silicon-m5-max', '/ja/local-llms/best-models-apple-silicon-2026', '/ja/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
         sources: {
@@ -1744,16 +1796,102 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: '6GB GPUでMistral Smallを実行できますか?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。Mistral Smallは22-24Bモデルで、Q4でも重みだけで約13-14GBのVRAMが必要です。6GBや8GBのGPUではOOMになります。余裕を持って16GBを、または6-8GBのカードなら7B-8Bモデルを使ってください。' } },
-          { '@type': 'Question', name: '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA用: 12-16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。' } },
-          { '@type': 'Question', name: 'Llama 3 13Bに12GBで十分ですか?', acceptedAnswer: { '@type': 'Answer', text: '十分すぎるほどです。13BモデルはQ4で約8GBしか必要とせず、12GBなら実際に余裕があります。Q5（約9GB）でも快適で、Q8（約14GB）でぎりぎりになります。' } },
-          { '@type': 'Question', name: '70Bモデルに24GBが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、ただしそれに近い量が必要です。70Bモデルは重みだけでQ4で約42GB必要です。Q5以上では50GB以上必要になります。どの量子化レベルでも24GBでは不十分です。' } },
-          { '@type': 'Question', name: 'バッチサイズを増やすと単一推論のVRAMが減りますか?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。単一推論は常にbatch=1 VRAMを使用します。バッチサイズはスループット(マルチユーザーシナリオ)にのみ役立ちます。' } },
-          { '@type': 'Question', name: '精度に最適な量子化は何ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Q8はほぼ知覚できないロスです。Q5は~2%ロス。Q4は~1%ロス。ほとんどの場合、Q4がスイートスポットです。' } },
-          { '@type': 'Question', name: 'VRAMの一部をCPU RAMにオフロードできますか?', acceptedAnswer: { '@type': 'Answer', text: 'はい、レイヤー分割を使用します。Llama.cppとOllamaがサポートしています。パフォーマンスは30-50%低下します。' } },
-          { '@type': 'Question', name: 'ローカルLLM実行の最小VRAMは?', acceptedAnswer: { '@type': 'Answer', text: '3B Q4なら4GB VRAM。実用的な最小値は8GB VRAM + 7B Q4。6GB以下では、ほとんどの7Bモデルでは不十分です。' } },
-          { '@type': 'Question', name: 'Apple Silicon VRAMはGPU VRAMと同じですか?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBはLlama 3 13B Q4(~7GB) + オーバーヘッドを実行できます。' } },
-          { '@type': 'Question', name: '異なる量子化レベルで7Bには何GBのVRAMが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GBの重み + 1-2GBオーバーヘッド)。6GBはきついです、8GBが快適です。' } }
+          {
+            '@type': 'Question',
+            'name': 'RTX 4060は7B Q4に十分?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '十分です。7BはQ4で約4 GBの重みなので、RTX 4060の8 GBなら余裕があります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '70B用に24 GBは?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不十分です。Q4でも約42 GB必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '6GB GPUでMistral Smallを実行できますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。Mistral Smallは22-24Bモデルで、Q4でも重みだけで約13-14GBのVRAMが必要です。6GBや8GBのGPUではOOMになります。余裕を持って16GBを、または6-8GBのカードなら7B-8Bモデルを使ってください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7BモデルのファインチューニングにはどのくらいのVRAMが必要ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA用: 12-16GB。フルファインチューニング: 28GB以上。ファインチューニングはオプティマイザー状態(モデルVRAMの2-4倍)が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Llama 3 13Bに12GBで十分ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '十分すぎるほどです。13BモデルはQ4で約8GBしか必要とせず、12GBなら実際に余裕があります。Q5（約9GB）でも快適で、Q8（約14GB）でぎりぎりになります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '70Bモデルに24GBが必要ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ、ただしそれに近い量が必要です。70Bモデルは重みだけでQ4で約42GB必要です。Q5以上では50GB以上必要になります。どの量子化レベルでも24GBでは不十分です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'バッチサイズを増やすと単一推論のVRAMが減りますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。単一推論は常にbatch=1 VRAMを使用します。バッチサイズはスループット(マルチユーザーシナリオ)にのみ役立ちます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '精度に最適な量子化は何ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8はほぼ知覚できないロスです。Q5は~2%ロス。Q4は~1%ロス。ほとんどの場合、Q4がスイートスポットです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'VRAMの一部をCPU RAMにオフロードできますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、レイヤー分割を使用します。Llama.cppとOllamaがサポートしています。パフォーマンスは30-50%低下します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM実行の最小VRAMは?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '3B Q4なら4GB VRAM。実用的な最小値は8GB VRAM + 7B Q4。6GB以下では、ほとんどの7Bモデルでは不十分です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple Silicon VRAMはGPU VRAMと同じですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apple Siliconは共有メモリを使用します。M3 18GB = GPU 18GB VRAM。MacBook Pro M3 18GBはLlama 3 13B Q4(~7GB) + オーバーヘッドを実行できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '異なる量子化レベルで7Bには何GBのVRAMが必要ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GBの重み + 1-2GBオーバーヘッド)。6GBはきついです、8GBが快適です。',
+            },
+          },
         ]
       },
     },
@@ -1806,7 +1944,19 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         mistakes: { title: '常见错误', content: ['显存 ≠ 模型大小。总需要5 GB以上余地。'] },
         vramCalculator: { id: 'vram-calculator', title: '显存计算器', component: 'VramCalculator', content: '选择你的模型大小和量子化方式以估计显存需求。' },
         faqSection: {
-          id: 'faq', faqs: [{ q: 'RTX 4060足以运行7B Q4吗?', a: '足够。7B在Q4下权重约4 GB，RTX 4060的8 GB绰绰有余。' }, { q: '70B模型需要24 GB吗?', a: '不够。仅权重在Q4下就约需42 GB。' }] },
+          id: 'faq', faqs: [
+            { q: 'RTX 4060足以运行7B Q4吗?', a: '足够。7B在Q4下权重约4 GB，RTX 4060的8 GB绰绰有余。' },
+            { q: '70B模型需要24 GB吗?', a: '不够。仅权重在Q4下就约需42 GB。' },
+            { q: '我可以在6GB GPU上运行Mistral Small吗?', a: '不行。Mistral Small是22-24B模型，即使在Q4下仅权重就约需13-14GB显存。6GB或8GB的GPU会出现OOM错误。建议预留16GB以获得舒适余量，或在6-8GB显卡上改用7B-8B模型。' },
+            { q: '微调7B模型需要多少显存?', a: 'LoRA: 12-16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。' },
+            { q: '12GB足以运行Llama 3 13B吗?', a: '完全足够。13B模型在Q4下仅需约8GB，因此12GB留有真正的余量。在Q5（约9GB）下依然舒适，在Q8（约14GB）下会比较紧张。' },
+            { q: '增加批大小会减少单次推理的显存吗?', a: '不会。单次推理始终使用batch=1显存。批大小只有助于吞吐量(多用户场景)。' },
+            { q: '精度最好的量化方式是什么?', a: 'Q8几乎无法感知的损失。Q5大约2%损失。Q4大约1%损失。对大多数人来说,Q4是最好的折中。' },
+            { q: '我可以将部分显存卸载到CPU RAM吗?', a: '可以,通过层分割。Llama.cpp和Ollama都支持。性能会下降30-50%。' },
+            { q: '运行本地LLM的最小显存是多少?', a: '3B Q4需要4GB显存。实用最小值是8GB显存+ 7B Q4。低于6GB的话,大多数7B模型会导致内存溢出。' },
+            { q: 'Apple Silicon显存与GPU显存的工作方式相同吗?', a: 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行Llama 3 13B Q4(~7GB) + 开销。' },
+            { q: '7B模型在不同量化级别需要多少显存?', a: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GB权重+ 1-2GB开销)。6GB太紧张,8GB比较舒适。' },
+          ] },
         relatedReading: {
           id: 'related-reading', title: '相关阅读', items: ['/zh/local-llms/best-local-llms-2026', '/zh/local-llms/how-much-unified-memory-for-local-llm', '/zh/local-llms/running-70b-models-apple-silicon-m5-max', '/zh/local-llms/best-models-apple-silicon-2026', '/zh/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
         sources: {
@@ -1842,16 +1992,94 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: '我可以在6GB GPU上运行Mistral Small吗?', acceptedAnswer: { '@type': 'Answer', text: '不行。Mistral Small是22-24B模型，即使在Q4下仅权重就约需13-14GB显存。6GB或8GB的GPU会出现OOM错误。建议预留16GB以获得舒适余量，或在6-8GB显卡上改用7B-8B模型。' } },
-          { '@type': 'Question', name: '微调7B模型需要多少显存?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA: 12-16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。' } },
-          { '@type': 'Question', name: '12GB足以运行Llama 3 13B吗?', acceptedAnswer: { '@type': 'Answer', text: '完全足够。13B模型在Q4下仅需约8GB，因此12GB留有真正的余量。在Q5（约9GB）下依然舒适，在Q8（约14GB）下会比较紧张。' } },
-          { '@type': 'Question', name: '70B模型需要24GB吗?', acceptedAnswer: { '@type': 'Answer', text: '不需要，但也相差不远。70B模型仅权重在Q4下就约需42GB。在Q5以上则需要50GB以上。无论哪种量化级别,24GB都不足够。' } },
-          { '@type': 'Question', name: '增加批大小会减少单次推理的显存吗?', acceptedAnswer: { '@type': 'Answer', text: '不会。单次推理始终使用batch=1显存。批大小只有助于吞吐量(多用户场景)。' } },
-          { '@type': 'Question', name: '精度最好的量化方式是什么?', acceptedAnswer: { '@type': 'Answer', text: 'Q8几乎无法感知的损失。Q5大约2%损失。Q4大约1%损失。对大多数人来说,Q4是最好的折中。' } },
-          { '@type': 'Question', name: '我可以将部分显存卸载到CPU RAM吗?', acceptedAnswer: { '@type': 'Answer', text: '可以,通过层分割。Llama.cpp和Ollama都支持。性能会下降30-50%。' } },
-          { '@type': 'Question', name: '运行本地LLM的最小显存是多少?', acceptedAnswer: { '@type': 'Answer', text: '3B Q4需要4GB显存。实用最小值是8GB显存+ 7B Q4。低于6GB的话,大多数7B模型会导致内存溢出。' } },
-          { '@type': 'Question', name: 'Apple Silicon显存与GPU显存的工作方式相同吗?', acceptedAnswer: { '@type': 'Answer', text: 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行Llama 3 13B Q4(~7GB) + 开销。' } },
-          { '@type': 'Question', name: '7B模型在不同量化级别需要多少显存?', acceptedAnswer: { '@type': 'Answer', text: '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GB权重+ 1-2GB开销)。6GB太紧张,8GB比较舒适。' } }
+          {
+            '@type': 'Question',
+            'name': 'RTX 4060足以运行7B Q4吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '足够。7B在Q4下权重约4 GB，RTX 4060的8 GB绰绰有余。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '70B模型需要24 GB吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不够。仅权重在Q4下就约需42 GB。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以在6GB GPU上运行Mistral Small吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不行。Mistral Small是22-24B模型，即使在Q4下仅权重就约需13-14GB显存。6GB或8GB的GPU会出现OOM错误。建议预留16GB以获得舒适余量，或在6-8GB显卡上改用7B-8B模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '微调7B模型需要多少显存?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA: 12-16GB。全微调: 28GB以上。微调需要优化器状态(模型显存的2-4倍),而不仅仅是推理。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '12GB足以运行Llama 3 13B吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '完全足够。13B模型在Q4下仅需约8GB，因此12GB留有真正的余量。在Q5（约9GB）下依然舒适，在Q8（约14GB）下会比较紧张。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '增加批大小会减少单次推理的显存吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会。单次推理始终使用batch=1显存。批大小只有助于吞吐量(多用户场景)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '精度最好的量化方式是什么?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8几乎无法感知的损失。Q5大约2%损失。Q4大约1%损失。对大多数人来说,Q4是最好的折中。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以将部分显存卸载到CPU RAM吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以,通过层分割。Llama.cpp和Ollama都支持。性能会下降30-50%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行本地LLM的最小显存是多少?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '3B Q4需要4GB显存。实用最小值是8GB显存+ 7B Q4。低于6GB的话,大多数7B模型会导致内存溢出。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Apple Silicon显存与GPU显存的工作方式相同吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apple Silicon使用统一内存。M3 18GB = GPU 18GB显存。MacBook Pro M3 18GB可以运行Llama 3 13B Q4(~7GB) + 开销。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7B模型在不同量化级别需要多少显存?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '7B FP32: ~28GB。7B Q8: ~7GB。7B Q5: ~5GB。7B Q4: ~5-6GB(4GB权重+ 1-2GB开销)。6GB太紧张,8GB比较舒适。',
+            },
+          },
         ]
       },
     },
@@ -2045,6 +2273,10 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             { q: '배치 크기를 늘리면 단일 추론의 VRAM이 줄어듭니까?', a: '아닙니다. 단일 추론은 항상 batch=1 VRAM을 사용합니다. 배치 크기는 처리량(다중 사용자 시나리오)에만 도움이 됩니다.' },
             { q: '정확도를 위한 최고의 양자화는 무엇입니까?', a: 'Q8은 거의 감지하기 어려운 손실입니다. Q5는 약 2% 손실. Q4는 약 1% 손실. 대부분의 경우 Q4가 최적점입니다.' },
             { q: 'VRAM 일부를 CPU RAM으로 오프로드할 수 있습니까?', a: '예, 레이어 분할(NVLink)을 통해 가능합니다. Llama.cpp와 Ollama가 이를 지원합니다. 성능은 30~50% 저하되지만 작동합니다. VRAM이 8GB 미만이십니까? **[정확한 하드웨어 등급에서 가장 빠른 모델을 확인하십시오](/ko/local-llms/fastest-local-llms-low-end-pcs)** — CPU 전용, 4 GB, 6 GB, 8 GB VRAM의 실제 tok/초 벤치마크.' },
+            { q: '정확도가 가장 높은 양자화 수준은 무엇입니까?', a: 'Q8은 거의 감지하기 어려운 품질 손실입니다. Q5는 약 2% 저하. Q4는 약 1% 저하. 대부분의 작업에서 Q4가 VRAM 절감과 품질 사이의 최적점입니다.' },
+            { q: 'LLM의 VRAM 공식이란 무엇입니까?', a: 'VRAM (GB) = 모델 파라미터(십억 단위) × 파라미터당 바이트 + 오버헤드. 파라미터당 바이트는 실제 GGUF 파일로 검증된 값으로 Q4는 약 0.6, Q5는 약 0.7, Q8은 약 1.05입니다. 예: 7B × 0.6바이트 = 4.2GB 가중치 + 1~2GB 오버헤드 ≈ 5~6GB 합계.' },
+            { q: 'Q8은 Q4보다 VRAM이 얼마나 더 필요합니까?', a: 'Q8은 Q4의 약 1.75배 VRAM을 사용합니다. 7B 모델은 Q4에서 약 4GB, Q8에서 약 7GB가 필요합니다. GPU를 구매하기 전에 항상 양자화 수준을 확인하십시오.' },
+            { q: '두 개의 GPU로 70B 모델을 실행할 수 있습니까?', a: '예. 두 개의 RTX 5090(각 24GB)을 합치면 48GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.' },
           ],
         },
         'relatedReading': {
@@ -2102,81 +2334,89 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
             'name': 'Mistral Small을 6GB GPU에서 실행할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '불가능합니다. Mistral Small은 22~24B 모델로, Q4에서도 가중치만 약 13~14GB의 VRAM이 필요합니다. 6GB나 8GB GPU는 OOM 오류가 발생합니다. 여유 있게 16GB를 확보하거나, 6~8GB 카드라면 7B~8B 모델로 낮추십시오.'
-            }
+              'text': '불가능합니다. Mistral Small은 22~24B 모델로, Q4에서도 가중치만 약 13~14GB의 VRAM이 필요합니다. 6GB나 8GB GPU는 OOM 오류가 발생합니다. 여유 있게 16GB를 확보하거나, 6~8GB 카드라면 7B~8B 모델로 낮추십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': '7B 모델을 파인튜닝하려면 VRAM이 얼마나 필요합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LoRA 파인튜닝: 12~16GB. 전체 파인튜닝: 28GB 이상. 파인튜닝은 옵티마이저 상태(모델 VRAM의 2~4배)가 필요하며, 추론 가중치만이 아닙니다.'
-            }
+              'text': 'LoRA: 12~16GB. 전체 파인튜닝: 28GB 이상. 파인튜닝은 옵티마이저 상태(모델 VRAM의 2~4배)가 필요하며, 추론만이 아닙니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Llama 3 13B에 12GB로 충분합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '네, 여유롭습니다. 13B 모델은 Q4에서 약 8GB만 필요하므로 12GB는 실질적인 여유를 남깁니다. Q5(약 9GB)에서도 여전히 편안하고, Q8(약 14GB)에서는 빠듯해집니다.'
-            }
+              'text': '네, 여유롭습니다. 13B 모델은 Q4에서 약 8GB만 필요하므로 12GB는 실질적인 여유를 남깁니다. Q5(약 9GB)에서도 여전히 편안하고, Q8(약 14GB)에서는 빠듯해집니다.',
+            },
           },
           {
             '@type': 'Question',
-            'name': '70B 모델에 24GB VRAM이 필요합니까?',
+            'name': '70B 모델에 24GB가 필요합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '아닙니다 — 다만 그에 가까운 양이 필요합니다. 70B 모델은 가중치만으로 Q4에서 약 42GB VRAM이 필요합니다. Q5 이상에서는 50GB 이상이 필요합니다. 더 높은 양자화는 VRAM 요구 사항을 비례적으로 늘립니다.'
-            }
+              'text': '아닙니다, 다만 그에 가까운 양이 필요합니다. 70B 모델은 가중치만으로 Q4에서 약 42GB가 필요합니다. Q5 이상에서는 50GB 이상이 필요합니다. 어떤 양자화 수준에서도 24GB는 충분하지 않습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '배치 크기를 늘리면 단일 추론의 VRAM이 줄어듭니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '아닙니다. 단일 추론은 항상 batch=1 VRAM을 사용합니다. 배치 크기는 다중 사용자 시나리오에서 처리량에만 도움이 됩니다. 요청당 VRAM을 줄이지 않습니다.'
-            }
+              'text': '아닙니다. 단일 추론은 항상 batch=1 VRAM을 사용합니다. 배치 크기는 처리량(다중 사용자 시나리오)에만 도움이 됩니다.',
+            },
           },
           {
             '@type': 'Question',
-            'name': '정확도가 가장 높은 양자화 수준은 무엇입니까?',
+            'name': '정확도를 위한 최고의 양자화는 무엇입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q8은 거의 감지하기 어려운 품질 손실입니다. Q5는 약 2% 저하. Q4는 약 1% 저하. 대부분의 작업에서 Q4가 VRAM 절감과 품질 사이의 최적점입니다.'
-            }
+              'text': 'Q8은 거의 감지하기 어려운 손실입니다. Q5는 약 2% 손실. Q4는 약 1% 손실. 대부분의 경우 Q4가 최적점입니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'VRAM 일부를 CPU RAM으로 오프로드할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '예, 레이어 분할을 통해 가능합니다. llama.cpp와 Ollama는 --n-gpu-layers를 통해 이를 지원합니다. 성능은 30~50% 저하되지만 VRAM이 부족할 때 모델을 실행할 수 있습니다.'
-            }
+              'text': '예, 레이어 분할(NVLink)을 통해 가능합니다. Llama.cpp와 Ollama가 이를 지원합니다. 성능은 30~50% 저하되지만 작동합니다. VRAM이 8GB 미만이십니까? **[정확한 하드웨어 등급에서 가장 빠른 모델을 확인하십시오](/ko/local-llms/fastest-local-llms-low-end-pcs)** — CPU 전용, 4 GB, 6 GB, 8 GB VRAM의 실제 tok/초 벤치마크.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '정확도가 가장 높은 양자화 수준은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8은 거의 감지하기 어려운 품질 손실입니다. Q5는 약 2% 저하. Q4는 약 1% 저하. 대부분의 작업에서 Q4가 VRAM 절감과 품질 사이의 최적점입니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LLM의 VRAM 공식이란 무엇입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'VRAM (GB) = 모델 파라미터(십억 단위) × 파라미터당 바이트 + 오버헤드. 파라미터당 바이트는 실제 GGUF 파일로 검증된 값으로 Q4는 약 0.6, Q5는 약 0.7, Q8은 약 1.05입니다. 예: 7B × 0.6바이트 = 4.2GB 가중치 + 1~2GB 오버헤드 ≈ 5~6GB 합계.'
-            }
+              'text': 'VRAM (GB) = 모델 파라미터(십억 단위) × 파라미터당 바이트 + 오버헤드. 파라미터당 바이트는 실제 GGUF 파일로 검증된 값으로 Q4는 약 0.6, Q5는 약 0.7, Q8은 약 1.05입니다. 예: 7B × 0.6바이트 = 4.2GB 가중치 + 1~2GB 오버헤드 ≈ 5~6GB 합계.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Q8은 Q4보다 VRAM이 얼마나 더 필요합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Q8은 Q4의 약 1.75배 VRAM을 사용합니다. 7B 모델은 Q4에서 약 4GB, Q8에서 약 7GB가 필요합니다. GPU를 구매하기 전에 항상 양자화 수준을 확인하십시오.'
-            }
+              'text': 'Q8은 Q4의 약 1.75배 VRAM을 사용합니다. 7B 모델은 Q4에서 약 4GB, Q8에서 약 7GB가 필요합니다. GPU를 구매하기 전에 항상 양자화 수준을 확인하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': '두 개의 GPU로 70B 모델을 실행할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '예. 두 개의 RTX 5090(각 24GB)을 합치면 48GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.'
-            }
-          }
+              'text': '예. 두 개의 RTX 5090(각 24GB)을 합치면 48GB VRAM — Q4에서 70B 모델을 실행하기에 충분합니다. llama.cpp와 Ollama는 텐서 병렬 처리 및 --n-gpu-layers를 통해 다중 GPU를 지원합니다.',
+            },
+          },
         ]
       },
     },

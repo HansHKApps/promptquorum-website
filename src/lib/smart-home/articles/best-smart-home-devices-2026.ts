@@ -378,20 +378,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What\'s the best smart home device to start with?', a: 'A local hub running Home Assistant, plus a Zigbee coordinator and a couple of Zigbee bulbs or sensors. The hub is the foundation that makes every other local-capable device work together offline and privately.' },
-          { q: 'Which smart home devices are worth buying this year?', a: 'The ones that work locally: Home Assistant Green as the hub, a Zigbee/Thread coordinator (ZBDongle-E or Connect ZBT-2), Zigbee lighting and sensors, and a local RTSP camera paired with Frigate instead of a cloud subscription — see the quick-picks table above for a specific product per category.' },
-          { q: 'Which brands work locally?', a: 'Look for devices using Zigbee, Z-Wave, or Matter, or local-Wi-Fi devices with a documented local API. These work through a local hub without a vendor cloud, regardless of brand. Avoid devices that require a cloud account for basic control.' },
-          { q: 'Do I need the manufacturer\'s hub?', a: 'Usually not. A local hub like Home Assistant can talk to Zigbee, Z-Wave, and Matter devices directly with a coordinator, so you can often skip the manufacturer\'s cloud-tied hub. Check that the specific device supports local pairing.' },
-          { q: 'What are good budget picks?', a: 'Zigbee bulbs, plugs, and sensors are inexpensive and local-capable, making them strong budget choices. Starting with a few Zigbee devices and a local hub keeps initial cost low while staying private and expandable — see the starter kit above.' },
-          { q: 'What is the best provider if I want to outfit my whole house with smart home devices?', a: 'There is no single "provider" for a local-first setup — that\'s the point. Home Assistant is the hub, and you mix and match Zigbee/Z-Wave/Matter devices from any brand (Aqara, SONOFF, Philips Hue, IKEA, Reolink, etc.) rather than being locked to one vendor\'s ecosystem and price list.' },
-          { q: 'Which networked household devices are best controlled via an app?', a: 'Devices with a documented local API — Zigbee, Z-Wave, and Matter devices paired through Home Assistant all get app control (the Home Assistant app) without routing your data through a vendor cloud. Cloud-only devices also offer app control, but through the vendor\'s own app and servers.' },
-          { q: 'How much do local-capable devices cost compared to cloud-only devices?', a: 'Local-capable devices (Zigbee, Z-Wave, Matter) typically cost the same or less than cloud-only equivalents at purchase, since the difference is protocol support, not hardware quality. The real savings show up over time: cloud-only cameras and hubs often add monthly subscription fees for recording or advanced automation, while a local hub and local devices have no recurring cost after the initial purchase.' },
-          { q: 'Is my data safer with local-capable devices than cloud-only devices?', a: 'Yes. Local-capable devices paired to a local hub keep voice recordings, camera footage, and automation routines on your own network, with no data sent to a manufacturer\'s server. Cloud-only devices route that same data through the vendor\'s cloud, where it is subject to that company\'s retention policy, breach risk, and terms of service changes.' },
-          { q: 'Do local-capable devices work with HomeKit, Google Home, and Amazon Alexa?', a: 'Most do. Matter-certified devices work natively with HomeKit, Google Home, and Alexa alongside a local hub. Zigbee and Z-Wave devices connect through Home Assistant, which can then expose them to HomeKit, Google Home, or Alexa as a bridge — so you keep local control while still using those voice assistants if you want to.' },
-          { q: 'Is Matter compatible with my existing Zigbee or Z-Wave devices?', a: 'Matter runs alongside Zigbee and Z-Wave rather than replacing them — a hub like Home Assistant can control Matter, Zigbee, and Z-Wave devices at the same time. You do not need to replace working Zigbee or Z-Wave gear to add Matter devices; a Thread border router is needed only for Matter-over-Thread devices specifically.' },
-          { q: 'Are there budget-friendly ways to add smart home features to an existing house?', a: 'Yes — Zigbee bulbs, plugs, and sensors are the cheapest entry point and don\'t require rewiring. Start with a $199 hub and a $20–27 Zigbee dongle, then add a handful of $15–30 devices in one room before expanding — see the starter kit table above for exact costs.' },
-          { q: 'How hard is it for a complete beginner to set up a local-first smart home?', a: 'Setting up a single local hub (for example, Home Assistant Green) and a handful of Zigbee devices takes under an hour for most beginners, since the setup wizard handles pairing through a web interface. Building out a full multi-room system with cameras, locks, and custom automations is a multi-weekend project, but you can add devices incrementally at your own pace.' },
-        ],
+            { q: 'What\'s the best smart home device to start with?', a: 'A local hub running Home Assistant, plus a Zigbee coordinator and a couple of Zigbee bulbs or sensors. The hub is the foundation that makes every other local-capable device work together offline and privately.' },
+            { q: 'Which smart home devices are worth buying this year?', a: 'The ones that work locally: Home Assistant Green as the hub, a Zigbee/Thread coordinator (ZBDongle-E or Connect ZBT-2), Zigbee lighting and sensors, and a local RTSP camera paired with Frigate instead of a cloud subscription — see the quick-picks table above for a specific product per category.' },
+            { q: 'Which brands work locally?', a: 'Look for devices using Zigbee, Z-Wave, or Matter, or local-Wi-Fi devices with a documented local API. These work through a local hub without a vendor cloud, regardless of brand. Avoid devices that require a cloud account for basic control.' },
+            { q: 'Do I need the manufacturer\'s hub?', a: 'Usually not. A local hub like Home Assistant can talk to Zigbee, Z-Wave, and Matter devices directly with a coordinator, so you can often skip the manufacturer\'s cloud-tied hub. Check that the specific device supports local pairing.' },
+            { q: 'What are good budget picks?', a: 'Zigbee bulbs, plugs, and sensors are inexpensive and local-capable, making them strong budget choices. Starting with a few Zigbee devices and a local hub keeps initial cost low while staying private and expandable — see the starter kit above.' },
+            { q: 'What is the best provider if I want to outfit my whole house with smart home devices?', a: 'There is no single "provider" for a local-first setup — that\'s the point. Home Assistant is the hub, and you mix and match Zigbee/Z-Wave/Matter devices from any brand (Aqara, SONOFF, Philips Hue, IKEA, Reolink, etc.) rather than being locked to one vendor\'s ecosystem and price list.' },
+            { q: 'Which networked household devices are best controlled via an app?', a: 'Devices with a documented local API — Zigbee, Z-Wave, and Matter devices paired through Home Assistant all get app control (the Home Assistant app) without routing your data through a vendor cloud. Cloud-only devices also offer app control, but through the vendor\'s own app and servers.' },
+            { q: 'How much do local-capable devices cost compared to cloud-only devices?', a: 'Local-capable devices (Zigbee, Z-Wave, Matter) typically cost the same or less than cloud-only equivalents at purchase, since the difference is protocol support, not hardware quality. The real savings show up over time: cloud-only cameras and hubs often add monthly subscription fees for recording or advanced automation, while a local hub and local devices have no recurring cost after the initial purchase.' },
+            { q: 'Is my data safer with local-capable devices than cloud-only devices?', a: 'Yes. Local-capable devices paired to a local hub keep voice recordings, camera footage, and automation routines on your own network, with no data sent to a manufacturer\'s server. Cloud-only devices route that same data through the vendor\'s cloud, where it is subject to that company\'s retention policy, breach risk, and terms of service changes.' },
+            { q: 'Do local-capable devices work with HomeKit, Google Home, and Amazon Alexa?', a: 'Most do. Matter-certified devices work natively with HomeKit, Google Home, and Alexa alongside a local hub. Zigbee and Z-Wave devices connect through Home Assistant, which can then expose them to HomeKit, Google Home, or Alexa as a bridge — so you keep local control while still using those voice assistants if you want to.' },
+            { q: 'Is Matter compatible with my existing Zigbee or Z-Wave devices?', a: 'Matter runs alongside Zigbee and Z-Wave rather than replacing them — a hub like Home Assistant can control Matter, Zigbee, and Z-Wave devices at the same time. You do not need to replace working Zigbee or Z-Wave gear to add Matter devices; a Thread border router is needed only for Matter-over-Thread devices specifically.' },
+            { q: 'Are there budget-friendly ways to add smart home features to an existing house?', a: 'Yes — Zigbee bulbs, plugs, and sensors are the cheapest entry point and don\'t require rewiring. Start with a $199 hub and a $20–27 Zigbee dongle, then add a handful of $15–30 devices in one room before expanding — see the starter kit table above for exact costs.' },
+            { q: 'How hard is it for a complete beginner to set up a local-first smart home?', a: 'Setting up a single local hub (for example, Home Assistant Green) and a handful of Zigbee devices takes under an hour for most beginners, since the setup wizard handles pairing through a web interface. Building out a full multi-room system with cameras, locks, and custom automations is a multi-weekend project, but you can add devices incrementally at your own pace.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -429,20 +429,111 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'What is the best smart home device to start with?', acceptedAnswer: { '@type': 'Answer', text: 'A local hub running Home Assistant, plus a Zigbee coordinator and a couple of Zigbee bulbs or sensors — the hub makes every other local-capable device work together offline.' } },
-        { '@type': 'Question', name: 'Which smart home devices are worth buying this year?', acceptedAnswer: { '@type': 'Answer', text: 'The ones that work locally: Home Assistant Green as the hub, a Zigbee/Thread coordinator, Zigbee lighting and sensors, and a local RTSP camera paired with Frigate instead of a cloud subscription.' } },
-        { '@type': 'Question', name: 'Which brands work locally?', acceptedAnswer: { '@type': 'Answer', text: 'Devices using Zigbee, Z-Wave, or Matter, or local-Wi-Fi devices with a documented local API. These work through a local hub without a vendor cloud, regardless of brand.' } },
-        { '@type': 'Question', name: 'Do I need the manufacturer\'s hub?', acceptedAnswer: { '@type': 'Answer', text: 'Usually not. A local hub like Home Assistant can talk to Zigbee, Z-Wave, and Matter devices directly with a coordinator, so you can often skip the manufacturer\'s cloud-tied hub.' } },
-        { '@type': 'Question', name: 'What are good budget picks?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee bulbs, plugs, and sensors are inexpensive and local-capable. Starting with a few Zigbee devices and a local hub keeps cost low while staying private and expandable.' } },
-        { '@type': 'Question', name: 'What is the best provider if I want to outfit my whole house with smart home devices?', acceptedAnswer: { '@type': 'Answer', text: 'There is no single provider for a local-first setup — Home Assistant is the hub, and you mix and match Zigbee/Z-Wave/Matter devices from any brand rather than being locked to one vendor.' } },
-        { '@type': 'Question', name: 'Which networked household devices are best controlled via an app?', acceptedAnswer: { '@type': 'Answer', text: 'Devices with a documented local API — Zigbee, Z-Wave, and Matter devices paired through Home Assistant all get app control without routing data through a vendor cloud.' } },
-        { '@type': 'Question', name: 'How much do local-capable devices cost compared to cloud-only devices?', acceptedAnswer: { '@type': 'Answer', text: 'Local-capable devices typically cost the same or less at purchase. The real savings show up over time: cloud-only cameras and hubs often add monthly subscription fees, while local devices have no recurring cost.' } },
-        { '@type': 'Question', name: 'Is my data safer with local-capable devices than cloud-only devices?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Local-capable devices paired to a local hub keep voice recordings, camera footage, and routines on your own network. Cloud-only devices route that data through the vendor\'s cloud.' } },
-        { '@type': 'Question', name: 'Do local-capable devices work with HomeKit, Google Home, and Amazon Alexa?', acceptedAnswer: { '@type': 'Answer', text: 'Most do. Matter-certified devices work natively with all three. Zigbee and Z-Wave devices connect through Home Assistant, which can bridge them to HomeKit, Google Home, or Alexa while keeping local control.' } },
-        { '@type': 'Question', name: 'Is Matter compatible with my existing Zigbee or Z-Wave devices?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Matter runs alongside Zigbee and Z-Wave rather than replacing them — a hub like Home Assistant can control all three protocols at the same time.' } },
-        { '@type': 'Question', name: 'Are there budget-friendly ways to add smart home features to an existing house?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — Zigbee bulbs, plugs, and sensors are the cheapest entry point and don\'t require rewiring. Start with a hub and a Zigbee dongle, then add a handful of devices in one room before expanding.' } },
-        { '@type': 'Question', name: 'How hard is it for a complete beginner to set up a local-first smart home?', acceptedAnswer: { '@type': 'Answer', text: 'Setting up a single local hub and a handful of Zigbee devices takes under an hour for most beginners. Building out a full multi-room system is a multi-weekend project, but devices can be added incrementally.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'What\'s the best smart home device to start with?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A local hub running Home Assistant, plus a Zigbee coordinator and a couple of Zigbee bulbs or sensors. The hub is the foundation that makes every other local-capable device work together offline and privately.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which smart home devices are worth buying this year?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The ones that work locally: Home Assistant Green as the hub, a Zigbee/Thread coordinator (ZBDongle-E or Connect ZBT-2), Zigbee lighting and sensors, and a local RTSP camera paired with Frigate instead of a cloud subscription — see the quick-picks table above for a specific product per category.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which brands work locally?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Look for devices using Zigbee, Z-Wave, or Matter, or local-Wi-Fi devices with a documented local API. These work through a local hub without a vendor cloud, regardless of brand. Avoid devices that require a cloud account for basic control.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I need the manufacturer\'s hub?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usually not. A local hub like Home Assistant can talk to Zigbee, Z-Wave, and Matter devices directly with a coordinator, so you can often skip the manufacturer\'s cloud-tied hub. Check that the specific device supports local pairing.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are good budget picks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Zigbee bulbs, plugs, and sensors are inexpensive and local-capable, making them strong budget choices. Starting with a few Zigbee devices and a local hub keeps initial cost low while staying private and expandable — see the starter kit above.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best provider if I want to outfit my whole house with smart home devices?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'There is no single "provider" for a local-first setup — that\'s the point. Home Assistant is the hub, and you mix and match Zigbee/Z-Wave/Matter devices from any brand (Aqara, SONOFF, Philips Hue, IKEA, Reolink, etc.) rather than being locked to one vendor\'s ecosystem and price list.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which networked household devices are best controlled via an app?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Devices with a documented local API — Zigbee, Z-Wave, and Matter devices paired through Home Assistant all get app control (the Home Assistant app) without routing your data through a vendor cloud. Cloud-only devices also offer app control, but through the vendor\'s own app and servers.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much do local-capable devices cost compared to cloud-only devices?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Local-capable devices (Zigbee, Z-Wave, Matter) typically cost the same or less than cloud-only equivalents at purchase, since the difference is protocol support, not hardware quality. The real savings show up over time: cloud-only cameras and hubs often add monthly subscription fees for recording or advanced automation, while a local hub and local devices have no recurring cost after the initial purchase.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is my data safer with local-capable devices than cloud-only devices?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Local-capable devices paired to a local hub keep voice recordings, camera footage, and automation routines on your own network, with no data sent to a manufacturer\'s server. Cloud-only devices route that same data through the vendor\'s cloud, where it is subject to that company\'s retention policy, breach risk, and terms of service changes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do local-capable devices work with HomeKit, Google Home, and Amazon Alexa?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Most do. Matter-certified devices work natively with HomeKit, Google Home, and Alexa alongside a local hub. Zigbee and Z-Wave devices connect through Home Assistant, which can then expose them to HomeKit, Google Home, or Alexa as a bridge — so you keep local control while still using those voice assistants if you want to.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Matter compatible with my existing Zigbee or Z-Wave devices?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Matter runs alongside Zigbee and Z-Wave rather than replacing them — a hub like Home Assistant can control Matter, Zigbee, and Z-Wave devices at the same time. You do not need to replace working Zigbee or Z-Wave gear to add Matter devices; a Thread border router is needed only for Matter-over-Thread devices specifically.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are there budget-friendly ways to add smart home features to an existing house?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes — Zigbee bulbs, plugs, and sensors are the cheapest entry point and don\'t require rewiring. Start with a $199 hub and a $20–27 Zigbee dongle, then add a handful of $15–30 devices in one room before expanding — see the starter kit table above for exact costs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How hard is it for a complete beginner to set up a local-first smart home?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Setting up a single local hub (for example, Home Assistant Green) and a handful of Zigbee devices takes under an hour for most beginners, since the setup wizard handles pairing through a web interface. Building out a full multi-room system with cameras, locks, and custom automations is a multi-weekend project, but you can add devices incrementally at your own pace.',
+            },
+          },
+        ],
     },
   },
 

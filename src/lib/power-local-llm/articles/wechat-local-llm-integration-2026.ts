@@ -236,31 +236,13 @@ while True:
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'Does WeChatFerry work with WeChat for Mac?',
-            a: 'No. WeChatFerry hooks the Windows WeChat PC client DLLs and does not support WeChat for Mac. On Mac, use a Windows VM or one of the HTTP webhook patterns instead.',
-          },
-          {
-            q: 'Will Tencent ban my account for using a bot?',
-            a: 'WeChat\'s ToS prohibits automated messaging at scale. Personal bots with human-like response rates (1–5 messages per minute) rarely trigger bans. Avoid bulk messaging, group spam, or using the bot for commercial outreach.',
-          },
-          {
-            q: 'Which Ollama model is best for Chinese text?',
-            a: 'Qwen3 7B Q4_K_M. Built by Alibaba with native CJK tokenisation — 30–40% more efficient on Chinese text than Llama or Mistral models.',
-          },
-          {
-            q: 'Can I run this on a laptop?',
-            a: 'Yes. A 16 GB RAM laptop runs Qwen3 7B comfortably at 8–15 tok/s CPU-only. Response latency is 3–8 seconds per message — acceptable for chat.',
-          },
-          {
-            q: 'Does local inference satisfy China Data Security Law?',
-            a: 'For inference content (prompts and responses), yes — no data leaves your hardware. WeChat message metadata still resides on Tencent servers per WeChat ToS.',
-          },
-          {
-            q: 'How do I handle multi-turn conversations?',
-            a: 'Store conversation history as a Python list of {role, content} dicts keyed by sender. Pass the last 10–15 messages to /api/chat on each request to maintain context.',
-          },
-        ],
+            { q: 'Does WeChatFerry work with WeChat for Mac?', a: 'No. WeChatFerry hooks the Windows WeChat PC client DLLs and does not support WeChat for Mac. On Mac, use a Windows VM or one of the HTTP webhook patterns instead.' },
+            { q: 'Will Tencent ban my account for using a bot?', a: 'WeChat\'s ToS prohibits automated messaging at scale. Personal bots with human-like response rates (1–5 messages per minute) rarely trigger bans. Avoid bulk messaging, group spam, or using the bot for commercial outreach.' },
+            { q: 'Which Ollama model is best for Chinese text?', a: 'Qwen3 7B Q4_K_M. Built by Alibaba with native CJK tokenisation — 30–40% more efficient on Chinese text than Llama or Mistral models.' },
+            { q: 'Can I run this on a laptop?', a: 'Yes. A 16 GB RAM laptop runs Qwen3 7B comfortably at 8–15 tok/s CPU-only. Response latency is 3–8 seconds per message — acceptable for chat.' },
+            { q: 'Does local inference satisfy China Data Security Law?', a: 'For inference content (prompts and responses), yes — no data leaves your hardware. WeChat message metadata still resides on Tencent servers per WeChat ToS.' },
+            { q: 'How do I handle multi-turn conversations?', a: 'Store conversation history as a Python list of {role, content} dicts keyed by sender. Pass the last 10–15 messages to /api/chat on each request to maintain context.' },
+          ],
       },
       relatedReading: {
         title: 'Related Reading',
@@ -301,11 +283,55 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'Does WeChatFerry work with WeChat for Mac?', acceptedAnswer: { '@type': 'Answer', text: 'No. WeChatFerry hooks the Windows WeChat PC client DLLs and does not support WeChat for Mac. On Mac, use a Windows VM or one of the HTTP webhook patterns instead.' } },
-        { '@type': 'Question', name: 'Which Ollama model is best for Chinese WeChat chat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — built by Alibaba with native CJK tokenisation, 5.5 GB VRAM, and 30–40% more efficient on Chinese text than Llama or Mistral models.' } },
-        { '@type': 'Question', name: 'Will Tencent ban my account for using a bot?', acceptedAnswer: { '@type': 'Answer', text: 'Personal bots with human-like response rates (1–5 messages per minute) rarely trigger bans. Avoid bulk messaging or commercial outreach via the bot.' } },
-        { '@type': 'Question', name: 'Does local LLM inference satisfy China Data Security Law?', acceptedAnswer: { '@type': 'Answer', text: 'For inference content, yes — no prompts or responses leave your hardware. WeChat metadata still resides on Tencent servers per their ToS.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Does WeChatFerry work with WeChat for Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. WeChatFerry hooks the Windows WeChat PC client DLLs and does not support WeChat for Mac. On Mac, use a Windows VM or one of the HTTP webhook patterns instead.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Will Tencent ban my account for using a bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'WeChat\'s ToS prohibits automated messaging at scale. Personal bots with human-like response rates (1–5 messages per minute) rarely trigger bans. Avoid bulk messaging, group spam, or using the bot for commercial outreach.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which Ollama model is best for Chinese text?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M. Built by Alibaba with native CJK tokenisation — 30–40% more efficient on Chinese text than Llama or Mistral models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run this on a laptop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. A 16 GB RAM laptop runs Qwen3 7B comfortably at 8–15 tok/s CPU-only. Response latency is 3–8 seconds per message — acceptable for chat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does local inference satisfy China Data Security Law?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For inference content (prompts and responses), yes — no data leaves your hardware. WeChat message metadata still resides on Tencent servers per WeChat ToS.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I handle multi-turn conversations?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Store conversation history as a Python list of {role, content} dicts keyed by sender. Pass the last 10–15 messages to /api/chat on each request to maintain context.',
+            },
+          },
+        ],
     },
   },
 
@@ -479,13 +505,14 @@ while True:
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Funktioniert WeChatFerry mit WeChat für Mac?', a: 'Nein. WeChatFerry hakt in die Windows-WeChat-PC-Client-DLLs ein und unterstützt WeChat für Mac nicht.' },
-          { q: 'Sperrt Tencent mein Konto bei Verwendung eines Bots?', a: 'Persönliche Bots mit menschenähnlichen Antwortzeiten (1–5 Nachrichten pro Minute) lösen selten Sperren aus. Massennachrichten vermeiden.' },
-          { q: 'Welches Ollama-Modell ist am besten für chinesischen Text?', a: 'Qwen3 7B Q4_K_M von Alibaba – native CJK-Tokenisierung, 30–40 % effizienter bei chinesischem Text als Llama oder Mistral.' },
-          { q: 'Kann ich dies auf einem Laptop betreiben?', a: 'Ja. Ein 16 GB RAM Laptop betreibt Qwen3 7B mit 8–15 tok/s (CPU-only). Antwortlatenz: 3–8 Sekunden.' },
-          { q: 'Erfüllt lokale Inferenz DSGVO-Anforderungen?', a: 'Lokale LLMs vermeiden Auftragsverarbeitungsverträge mit LLM-Anbietern. WeChat-Metadaten verbleiben auf Tencent-Servern.' },
-          { q: 'Wie behandle ich mehrstufige Unterhaltungen?', a: 'Gesprächsverlauf als Python-Liste von {role, content}-Dicts nach Absender indexiert führen und die letzten 10–15 Nachrichten an /api/chat übergeben.' },
-        ],
+            { q: 'Funktioniert WeChatFerry mit WeChat für Mac?', a: 'Nein. WeChatFerry hakt in die Windows-WeChat-PC-Client-DLLs ein und unterstützt WeChat für Mac nicht.' },
+            { q: 'Sperrt Tencent mein Konto bei Verwendung eines Bots?', a: 'Persönliche Bots mit menschenähnlichen Antwortzeiten (1–5 Nachrichten pro Minute) lösen selten Sperren aus. Massennachrichten vermeiden.' },
+            { q: 'Welches Ollama-Modell ist am besten für chinesischen Text?', a: 'Qwen3 7B Q4_K_M von Alibaba – native CJK-Tokenisierung, 30–40 % effizienter bei chinesischem Text als Llama oder Mistral.' },
+            { q: 'Kann ich dies auf einem Laptop betreiben?', a: 'Ja. Ein 16 GB RAM Laptop betreibt Qwen3 7B mit 8–15 tok/s (CPU-only). Antwortlatenz: 3–8 Sekunden.' },
+            { q: 'Erfüllt lokale Inferenz DSGVO-Anforderungen?', a: 'Lokale LLMs vermeiden Auftragsverarbeitungsverträge mit LLM-Anbietern. WeChat-Metadaten verbleiben auf Tencent-Servern.' },
+            { q: 'Wie behandle ich mehrstufige Unterhaltungen?', a: 'Gesprächsverlauf als Python-Liste von {role, content}-Dicts nach Absender indexiert führen und die letzten 10–15 Nachrichten an /api/chat übergeben.' },
+            { q: 'Welches Modell für chinesischen WeChat-Chat?', a: 'Qwen3 7B Q4_K_M – native CJK-Tokenisierung, 5,5 GB VRAM.' },
+          ],
       },
       relatedReading: {
         title: 'Weiterführende Lektüre',
@@ -516,9 +543,63 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Funktioniert WeChatFerry mit WeChat für Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. WeChatFerry unterstützt nur den Windows WeChat PC Client.' } },
-        { '@type': 'Question', name: 'Welches Modell für chinesischen WeChat-Chat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M – native CJK-Tokenisierung, 5,5 GB VRAM.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert WeChatFerry mit WeChat für Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. WeChatFerry hakt in die Windows-WeChat-PC-Client-DLLs ein und unterstützt WeChat für Mac nicht.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sperrt Tencent mein Konto bei Verwendung eines Bots?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Persönliche Bots mit menschenähnlichen Antwortzeiten (1–5 Nachrichten pro Minute) lösen selten Sperren aus. Massennachrichten vermeiden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Ollama-Modell ist am besten für chinesischen Text?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M von Alibaba – native CJK-Tokenisierung, 30–40 % effizienter bei chinesischem Text als Llama oder Mistral.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich dies auf einem Laptop betreiben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Ein 16 GB RAM Laptop betreibt Qwen3 7B mit 8–15 tok/s (CPU-only). Antwortlatenz: 3–8 Sekunden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Erfüllt lokale Inferenz DSGVO-Anforderungen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lokale LLMs vermeiden Auftragsverarbeitungsverträge mit LLM-Anbietern. WeChat-Metadaten verbleiben auf Tencent-Servern.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie behandle ich mehrstufige Unterhaltungen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Gesprächsverlauf als Python-Liste von {role, content}-Dicts nach Absender indexiert führen und die letzten 10–15 Nachrichten an /api/chat übergeben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Modell für chinesischen WeChat-Chat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M – native CJK-Tokenisierung, 5,5 GB VRAM.',
+            },
+          },
+        ],
     },
   },
 
@@ -676,13 +757,13 @@ while True:
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'WeChatFerry fonctionne-t-il avec WeChat pour Mac ?', a: 'Non. WeChatFerry ne supporte que le client WeChat PC sur Windows.' },
-          { q: 'Tencent peut-il bannir mon compte pour l\'utilisation d\'un bot ?', a: 'Les bots personnels avec des taux de réponse humains (1–5 messages/min) déclenchent rarement des bannissements.' },
-          { q: 'Quel modèle Ollama pour le chinois ?', a: 'Qwen3 7B Q4_K_M — tokenisation CJK native, 30–40% plus efficace que Llama ou Mistral.' },
-          { q: 'Puis-je utiliser un laptop ?', a: 'Oui. 16 Go RAM suffit pour Qwen3 7B en mode CPU-only, 8–15 tok/s.' },
-          { q: 'Conformité RGPD avec un LLM local ?', a: 'Les LLM locaux évitent les accords DPA avec les fournisseurs cloud. Les métadonnées WeChat restent chez Tencent.' },
-          { q: 'Comment gérer les conversations multi-tours ?', a: 'Maintenir l\'historique comme liste de dicts {role, content} par expéditeur, transmettre les 10–15 derniers messages à /api/chat.' },
-        ],
+            { q: 'WeChatFerry fonctionne-t-il avec WeChat pour Mac ?', a: 'Non. WeChatFerry ne supporte que le client WeChat PC sur Windows.' },
+            { q: 'Tencent peut-il bannir mon compte pour l\'utilisation d\'un bot ?', a: 'Les bots personnels avec des taux de réponse humains (1–5 messages/min) déclenchent rarement des bannissements.' },
+            { q: 'Quel modèle Ollama pour le chinois ?', a: 'Qwen3 7B Q4_K_M — tokenisation CJK native, 30–40% plus efficace que Llama ou Mistral.' },
+            { q: 'Puis-je utiliser un laptop ?', a: 'Oui. 16 Go RAM suffit pour Qwen3 7B en mode CPU-only, 8–15 tok/s.' },
+            { q: 'Conformité RGPD avec un LLM local ?', a: 'Les LLM locaux évitent les accords DPA avec les fournisseurs cloud. Les métadonnées WeChat restent chez Tencent.' },
+            { q: 'Comment gérer les conversations multi-tours ?', a: 'Maintenir l\'historique comme liste de dicts {role, content} par expéditeur, transmettre les 10–15 derniers messages à /api/chat.' },
+          ],
       },
       relatedReading: {
         title: 'Lecture connexe',
@@ -713,9 +794,55 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        { '@type': 'Question', name: 'WeChatFerry fonctionne-t-il sur Mac ?', acceptedAnswer: { '@type': 'Answer', text: 'Non, uniquement sur le client WeChat PC Windows.' } },
-        { '@type': 'Question', name: 'Quel modèle pour le texte chinois ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — tokenisation CJK native, 5,5 Go VRAM.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'WeChatFerry fonctionne-t-il avec WeChat pour Mac ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. WeChatFerry ne supporte que le client WeChat PC sur Windows.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Tencent peut-il bannir mon compte pour l\'utilisation d\'un bot ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les bots personnels avec des taux de réponse humains (1–5 messages/min) déclenchent rarement des bannissements.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel modèle Ollama pour le chinois ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M — tokenisation CJK native, 30–40% plus efficace que Llama ou Mistral.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser un laptop ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. 16 Go RAM suffit pour Qwen3 7B en mode CPU-only, 8–15 tok/s.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Conformité RGPD avec un LLM local ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les LLM locaux évitent les accords DPA avec les fournisseurs cloud. Les métadonnées WeChat restent chez Tencent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment gérer les conversations multi-tours ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Maintenir l\'historique comme liste de dicts {role, content} par expéditeur, transmettre les 10–15 derniers messages à /api/chat.',
+            },
+          },
+        ],
     },
   },
 
@@ -879,13 +1006,14 @@ while True:
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'WeChatFerryはWeChat for Macで動きますか？', a: 'いいえ。WeChatFerryはWindowsのWeChat PCクライアントDLLをフックするため、Mac版WeChat非対応です。' },
-          { q: 'Tencentにアカウントがバンされますか？', a: '人間的な返信レート（1〜5メッセージ/分）のパーソナルボットはほとんどバンされません。大量送信は避けてください。' },
-          { q: '中国語向け最適Ollamaモデルは？', a: 'Qwen3 7B Q4_K_M。Alibabaがネイティブ中国語処理向けに開発、5.5 GB VRAM。' },
-          { q: 'ノートパソコンで使えますか？', a: 'はい。16 GBのRAMでQwen3 7BをCPU-onlyで8〜15 tok/sで実行可能。応答遅延3〜8秒。' },
-          { q: '個人情報保護法への対応は？', a: 'ローカルLLMはクラウドプロバイダーへのデータ転送を回避。WeChatメタデータはTencentサーバーに残ります。' },
-          { q: 'マルチターン会話の管理方法は？', a: '送信者別に{role, content}辞書のリストを保持し、最新10〜15メッセージを/api/chatに渡します。' },
-        ],
+            { q: 'WeChatFerryはWeChat for Macで動きますか？', a: 'いいえ。WeChatFerryはWindowsのWeChat PCクライアントDLLをフックするため、Mac版WeChat非対応です。' },
+            { q: 'Tencentにアカウントがバンされますか？', a: '人間的な返信レート（1〜5メッセージ/分）のパーソナルボットはほとんどバンされません。大量送信は避けてください。' },
+            { q: '中国語向け最適Ollamaモデルは？', a: 'Qwen3 7B Q4_K_M。Alibabaがネイティブ中国語処理向けに開発、5.5 GB VRAM。' },
+            { q: 'ノートパソコンで使えますか？', a: 'はい。16 GBのRAMでQwen3 7BをCPU-onlyで8〜15 tok/sで実行可能。応答遅延3〜8秒。' },
+            { q: '個人情報保護法への対応は？', a: 'ローカルLLMはクラウドプロバイダーへのデータ転送を回避。WeChatメタデータはTencentサーバーに残ります。' },
+            { q: 'マルチターン会話の管理方法は？', a: '送信者別に{role, content}辞書のリストを保持し、最新10〜15メッセージを/api/chatに渡します。' },
+            { q: '中国語テキスト向け最適モデルは？', a: 'Qwen3 7B Q4_K_M——5.5 GB VRAMのネイティブ中国語対応モデル。' },
+          ],
       },
       relatedReading: {
         title: '関連記事',
@@ -916,9 +1044,63 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        { '@type': 'Question', name: 'WeChatFerryはMacで動きますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、Windows版WeChat PCクライアントのみ対応です。' } },
-        { '@type': 'Question', name: '中国語テキスト向け最適モデルは？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M——5.5 GB VRAMのネイティブ中国語対応モデル。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'WeChatFerryはWeChat for Macで動きますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。WeChatFerryはWindowsのWeChat PCクライアントDLLをフックするため、Mac版WeChat非対応です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Tencentにアカウントがバンされますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '人間的な返信レート（1〜5メッセージ/分）のパーソナルボットはほとんどバンされません。大量送信は避けてください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国語向け最適Ollamaモデルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M。Alibabaがネイティブ中国語処理向けに開発、5.5 GB VRAM。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ノートパソコンで使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。16 GBのRAMでQwen3 7BをCPU-onlyで8〜15 tok/sで実行可能。応答遅延3〜8秒。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '個人情報保護法への対応は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ローカルLLMはクラウドプロバイダーへのデータ転送を回避。WeChatメタデータはTencentサーバーに残ります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'マルチターン会話の管理方法は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '送信者別に{role, content}辞書のリストを保持し、最新10〜15メッセージを/api/chatに渡します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国語テキスト向け最適モデルは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M——5.5 GB VRAMのネイティブ中国語対応モデル。',
+            },
+          },
+        ],
     },
   },
 
@@ -1093,13 +1275,13 @@ while True:
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'WeChatFerry支持Mac版微信吗？', a: '不支持。WeChatFerry钩入Windows版微信PC客户端DLL，不支持Mac版微信。Mac用户可使用Windows虚拟机或HTTP Webhook方案。' },
-          { q: '使用机器人会被腾讯封号吗？', a: '微信ToS禁止大规模自动发消息。个人机器人以接近人类的回复频率（每分钟1–5条）运行极少触发封号。避免批量发送消息或商业推广。' },
-          { q: '微信中文聊天最推荐哪个Ollama模型？', a: 'Qwen3 7B Q4_K_M。阿里巴巴开发的原生中文分词模型，处理中文比Llama或Mistral效率高30–40%。' },
-          { q: '可以在笔记本电脑上运行吗？', a: '可以。16 GB内存的笔记本以纯CPU运行Qwen3 7B，速度约8–15 tok/s，每条消息响应延迟3–8秒，可接受用于聊天场景。' },
-          { q: '本地推理能满足《数据安全法》要求吗？', a: '对于推理内容（提示词和回复），是的——数据不离开您的设备。微信消息元数据依据微信ToS仍存储在腾讯服务器上。' },
-          { q: '如何处理多轮对话？', a: '将对话历史以sender为键存储为Python列表（每项为{role, content}字典），每次请求将最近10–15条消息传递给/api/chat。' },
-        ],
+            { q: 'WeChatFerry支持Mac版微信吗？', a: '不支持。WeChatFerry钩入Windows版微信PC客户端DLL，不支持Mac版微信。Mac用户可使用Windows虚拟机或HTTP Webhook方案。' },
+            { q: '使用机器人会被腾讯封号吗？', a: '微信ToS禁止大规模自动发消息。个人机器人以接近人类的回复频率（每分钟1–5条）运行极少触发封号。避免批量发送消息或商业推广。' },
+            { q: '微信中文聊天最推荐哪个Ollama模型？', a: 'Qwen3 7B Q4_K_M。阿里巴巴开发的原生中文分词模型，处理中文比Llama或Mistral效率高30–40%。' },
+            { q: '可以在笔记本电脑上运行吗？', a: '可以。16 GB内存的笔记本以纯CPU运行Qwen3 7B，速度约8–15 tok/s，每条消息响应延迟3–8秒，可接受用于聊天场景。' },
+            { q: '本地推理能满足《数据安全法》要求吗？', a: '对于推理内容（提示词和回复），是的——数据不离开您的设备。微信消息元数据依据微信ToS仍存储在腾讯服务器上。' },
+            { q: '如何处理多轮对话？', a: '将对话历史以sender为键存储为Python列表（每项为{role, content}字典），每次请求将最近10–15条消息传递给/api/chat。' },
+          ],
       },
       relatedReading: {
         title: '相关阅读',
@@ -1141,10 +1323,55 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        { '@type': 'Question', name: 'WeChatFerry支持Mac版微信吗？', acceptedAnswer: { '@type': 'Answer', text: '不支持。WeChatFerry仅支持Windows版微信PC客户端。' } },
-        { '@type': 'Question', name: '微信中文聊天推荐哪个模型？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M——5.5 GB显存，原生中文分词，速度8–15 tok/s。' } },
-        { '@type': 'Question', name: '本地推理能满足《数据安全法》要求吗？', acceptedAnswer: { '@type': 'Answer', text: '对于推理内容可以——数据不出设备。微信元数据仍在腾讯服务器上。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'WeChatFerry支持Mac版微信吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不支持。WeChatFerry钩入Windows版微信PC客户端DLL，不支持Mac版微信。Mac用户可使用Windows虚拟机或HTTP Webhook方案。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '使用机器人会被腾讯封号吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '微信ToS禁止大规模自动发消息。个人机器人以接近人类的回复频率（每分钟1–5条）运行极少触发封号。避免批量发送消息或商业推广。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '微信中文聊天最推荐哪个Ollama模型？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M。阿里巴巴开发的原生中文分词模型，处理中文比Llama或Mistral效率高30–40%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '可以在笔记本电脑上运行吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。16 GB内存的笔记本以纯CPU运行Qwen3 7B，速度约8–15 tok/s，每条消息响应延迟3–8秒，可接受用于聊天场景。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地推理能满足《数据安全法》要求吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对于推理内容（提示词和回复），是的——数据不离开您的设备。微信消息元数据依据微信ToS仍存储在腾讯服务器上。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何处理多轮对话？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '将对话历史以sender为键存储为Python列表（每项为{role, content}字典），每次请求将最近10–15条消息传递给/api/chat。',
+            },
+          },
+        ],
     },
   },
 
@@ -1344,31 +1571,13 @@ while True:
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿WeChatFerry funciona con WeChat para Mac?',
-            a: 'No. WeChatFerry intercepta las DLL del cliente WeChat PC de Windows y no es compatible con WeChat para Mac. En Mac, usa una VM de Windows o uno de los patrones de webhook HTTP.',
-          },
-          {
-            q: '¿Tencent puede banearme la cuenta por usar un bot?',
-            a: 'Los Términos de Servicio de WeChat prohíben el envío masivo de mensajes automatizados. Los bots personales con tasas de respuesta similares a las humanas (1–5 mensajes por minuto) raramente provocan bans. Evita el envío masivo, el spam en grupos o usar el bot para promoción comercial.',
-          },
-          {
-            q: '¿Qué modelo de Ollama es mejor para texto en chino?',
-            a: 'Qwen3 7B Q4_K_M. Desarrollado por Alibaba con tokenización CJK nativa — entre un 30–40% más eficiente con texto en chino que los modelos Llama o Mistral.',
-          },
-          {
-            q: '¿Puedo ejecutar esto en un portátil?',
-            a: 'Sí. Un portátil con 16 GB de RAM ejecuta Qwen3 7B cómodamente a 8–15 tok/s solo con CPU. La latencia de respuesta es de 3–8 segundos por mensaje, aceptable para chat.',
-          },
-          {
-            q: '¿La inferencia local cumple la Ley de Seguridad de Datos de China?',
-            a: 'Para el contenido de la inferencia (prompts y respuestas), sí — ningún dato sale de tu hardware. Los metadatos de los mensajes de WeChat siguen residiendo en los servidores de Tencent según sus ToS.',
-          },
-          {
-            q: '¿Cómo gestiono conversaciones multi-turno?',
-            a: 'Almacena el historial de conversación como una lista de Python con dicts {role, content} indexados por remitente. Pasa los últimos 10–15 mensajes a /api/chat en cada solicitud para mantener el contexto.',
-          },
-        ],
+            { q: '¿WeChatFerry funciona con WeChat para Mac?', a: 'No. WeChatFerry intercepta las DLL del cliente WeChat PC de Windows y no es compatible con WeChat para Mac. En Mac, usa una VM de Windows o uno de los patrones de webhook HTTP.' },
+            { q: '¿Tencent puede banearme la cuenta por usar un bot?', a: 'Los Términos de Servicio de WeChat prohíben el envío masivo de mensajes automatizados. Los bots personales con tasas de respuesta similares a las humanas (1–5 mensajes por minuto) raramente provocan bans. Evita el envío masivo, el spam en grupos o usar el bot para promoción comercial.' },
+            { q: '¿Qué modelo de Ollama es mejor para texto en chino?', a: 'Qwen3 7B Q4_K_M. Desarrollado por Alibaba con tokenización CJK nativa — entre un 30–40% más eficiente con texto en chino que los modelos Llama o Mistral.' },
+            { q: '¿Puedo ejecutar esto en un portátil?', a: 'Sí. Un portátil con 16 GB de RAM ejecuta Qwen3 7B cómodamente a 8–15 tok/s solo con CPU. La latencia de respuesta es de 3–8 segundos por mensaje, aceptable para chat.' },
+            { q: '¿La inferencia local cumple la Ley de Seguridad de Datos de China?', a: 'Para el contenido de la inferencia (prompts y respuestas), sí — ningún dato sale de tu hardware. Los metadatos de los mensajes de WeChat siguen residiendo en los servidores de Tencent según sus ToS.' },
+            { q: '¿Cómo gestiono conversaciones multi-turno?', a: 'Almacena el historial de conversación como una lista de Python con dicts {role, content} indexados por remitente. Pasa los últimos 10–15 mensajes a /api/chat en cada solicitud para mantener el contexto.' },
+          ],
       },
       relatedReading: {
         title: 'Lecturas relacionadas',
@@ -1409,11 +1618,55 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿WeChatFerry funciona con WeChat para Mac?', acceptedAnswer: { '@type': 'Answer', text: 'No. WeChatFerry intercepta las DLL del cliente WeChat PC de Windows y no es compatible con WeChat para Mac. En Mac, usa una VM de Windows o un patrón de webhook HTTP.' } },
-        { '@type': 'Question', name: '¿Qué modelo de Ollama es mejor para chats en chino en WeChat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — desarrollado por Alibaba con tokenización CJK nativa, 5.5 GB de VRAM y entre un 30–40% más eficiente con texto en chino que Llama o Mistral.' } },
-        { '@type': 'Question', name: '¿Tencent puede banearme por usar un bot?', acceptedAnswer: { '@type': 'Answer', text: 'Los bots personales con tasas de respuesta similares a las humanas (1–5 mensajes por minuto) raramente provocan bans. Evita el envío masivo o la promoción comercial a través del bot.' } },
-        { '@type': 'Question', name: '¿La inferencia local con un LLM cumple la Ley de Seguridad de Datos de China?', acceptedAnswer: { '@type': 'Answer', text: 'Para el contenido de la inferencia, sí — ningún prompt ni respuesta sale de tu hardware. Los metadatos de WeChat siguen residiendo en los servidores de Tencent según sus ToS.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿WeChatFerry funciona con WeChat para Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. WeChatFerry intercepta las DLL del cliente WeChat PC de Windows y no es compatible con WeChat para Mac. En Mac, usa una VM de Windows o uno de los patrones de webhook HTTP.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Tencent puede banearme la cuenta por usar un bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los Términos de Servicio de WeChat prohíben el envío masivo de mensajes automatizados. Los bots personales con tasas de respuesta similares a las humanas (1–5 mensajes por minuto) raramente provocan bans. Evita el envío masivo, el spam en grupos o usar el bot para promoción comercial.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelo de Ollama es mejor para texto en chino?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M. Desarrollado por Alibaba con tokenización CJK nativa — entre un 30–40% más eficiente con texto en chino que los modelos Llama o Mistral.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar esto en un portátil?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Un portátil con 16 GB de RAM ejecuta Qwen3 7B cómodamente a 8–15 tok/s solo con CPU. La latencia de respuesta es de 3–8 segundos por mensaje, aceptable para chat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿La inferencia local cumple la Ley de Seguridad de Datos de China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para el contenido de la inferencia (prompts y respuestas), sí — ningún dato sale de tu hardware. Los metadatos de los mensajes de WeChat siguen residiendo en los servidores de Tencent según sus ToS.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo gestiono conversaciones multi-turno?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Almacena el historial de conversación como una lista de Python con dicts {role, content} indexados por remitente. Pasa los últimos 10–15 mensajes a /api/chat en cada solicitud para mantener el contexto.',
+            },
+          },
+        ],
     },
   },
   ko: {
@@ -1598,31 +1851,13 @@ while True:
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'WeChatFerry가 Mac용 WeChat에서 작동합니까?',
-            a: '아니요. WeChatFerry는 Windows WeChat PC 클라이언트 DLL을 인터셉트하며 Mac용 WeChat과 호환되지 않습니다. Mac에서는 Windows VM을 사용하거나 HTTP webhook 패턴 중 하나를 사용하십시오.',
-          },
-          {
-            q: 'Tencent가 봇을 사용한다고 계정을 차단할 수 있습니까?',
-            a: 'WeChat 서비스 약관은 자동화된 대량 메시지 전송을 금지합니다. 인간과 유사한 응답 속도(분당 1–5개 메시지)의 개인 봇은 차단을 거의 유발하지 않습니다. 대량 전송, 그룹 스팸, 또는 상업적 홍보에 봇을 사용하지 마십시오.',
-          },
-          {
-            q: 'WeChat에서 중국어 텍스트에 가장 좋은 Ollama 모델은 무엇입니까?',
-            a: 'Qwen3 7B Q4_K_M. 네이티브 CJK 토큰화로 Alibaba가 개발했습니다 — 중국어 텍스트에서 Llama나 Mistral 모델보다 30–40% 더 효율적입니다.',
-          },
-          {
-            q: '노트북에서 이것을 실행할 수 있습니까?',
-            a: '네. 16 GB RAM의 노트북은 CPU 전용으로 Qwen3 7B를 8–15 tok/s로 편안하게 실행합니다. 메시지당 응답 지연은 3–8초로 채팅에서 허용 가능합니다.',
-          },
-          {
-            q: '로컬 추론이 중국 데이터 보안법을 준수합니까?',
-            a: '추론 콘텐츠(프롬프트 및 응답)의 경우 네 — 데이터가 하드웨어를 떠나지 않습니다. WeChat 메시지 메타데이터는 서비스 약관에 따라 Tencent 서버에 계속 남아 있습니다.',
-          },
-          {
-            q: '다중 턴 대화를 어떻게 처리합니까?',
-            a: '보낸 사람으로 인덱싱된 {role, content} dict의 Python 목록으로 대화 기록을 저장하십시오. 컨텍스트를 유지하기 위해 각 요청에서 /api/chat에 마지막 10–15개 메시지를 전달하십시오.',
-          },
-        ],
+            { q: 'WeChatFerry가 Mac용 WeChat에서 작동합니까?', a: '아니요. WeChatFerry는 Windows WeChat PC 클라이언트 DLL을 인터셉트하며 Mac용 WeChat과 호환되지 않습니다. Mac에서는 Windows VM을 사용하거나 HTTP webhook 패턴 중 하나를 사용하십시오.' },
+            { q: 'Tencent가 봇을 사용한다고 계정을 차단할 수 있습니까?', a: 'WeChat 서비스 약관은 자동화된 대량 메시지 전송을 금지합니다. 인간과 유사한 응답 속도(분당 1–5개 메시지)의 개인 봇은 차단을 거의 유발하지 않습니다. 대량 전송, 그룹 스팸, 또는 상업적 홍보에 봇을 사용하지 마십시오.' },
+            { q: 'WeChat에서 중국어 텍스트에 가장 좋은 Ollama 모델은 무엇입니까?', a: 'Qwen3 7B Q4_K_M. 네이티브 CJK 토큰화로 Alibaba가 개발했습니다 — 중국어 텍스트에서 Llama나 Mistral 모델보다 30–40% 더 효율적입니다.' },
+            { q: '노트북에서 이것을 실행할 수 있습니까?', a: '네. 16 GB RAM의 노트북은 CPU 전용으로 Qwen3 7B를 8–15 tok/s로 편안하게 실행합니다. 메시지당 응답 지연은 3–8초로 채팅에서 허용 가능합니다.' },
+            { q: '로컬 추론이 중국 데이터 보안법을 준수합니까?', a: '추론 콘텐츠(프롬프트 및 응답)의 경우 네 — 데이터가 하드웨어를 떠나지 않습니다. WeChat 메시지 메타데이터는 서비스 약관에 따라 Tencent 서버에 계속 남아 있습니다.' },
+            { q: '다중 턴 대화를 어떻게 처리합니까?', a: '보낸 사람으로 인덱싱된 {role, content} dict의 Python 목록으로 대화 기록을 저장하십시오. 컨텍스트를 유지하기 위해 각 요청에서 /api/chat에 마지막 10–15개 메시지를 전달하십시오.' },
+          ],
       },
       relatedReading: {
         title: '관련 읽을거리',
@@ -1663,11 +1898,55 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: 'WeChatFerry가 Mac용 WeChat에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니요. WeChatFerry는 Windows WeChat PC 클라이언트 DLL을 인터셉트하며 Mac용 WeChat과 호환되지 않습니다. Mac에서는 Windows VM을 사용하거나 HTTP webhook 패턴을 사용하십시오.' } },
-        { '@type': 'Question', name: 'WeChat에서 중국어 채팅에 가장 좋은 Ollama 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — 네이티브 CJK 토큰화로 Alibaba가 개발했으며, 5.5 GB VRAM, 중국어 텍스트에서 Llama나 Mistral보다 30–40% 더 효율적입니다.' } },
-        { '@type': 'Question', name: 'Tencent가 봇을 사용한다고 차단할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '인간과 유사한 응답 속도(분당 1–5개 메시지)의 개인 봇은 차단을 거의 유발하지 않습니다. 대량 전송이나 상업적 홍보에 봇을 사용하지 마십시오.' } },
-        { '@type': 'Question', name: '로컬 LLM으로의 로컬 추론이 중국 데이터 보안법을 준수합니까?', acceptedAnswer: { '@type': 'Answer', text: '추론 콘텐츠의 경우 네 — 어떤 프롬프트나 응답도 하드웨어를 떠나지 않습니다. WeChat 메타데이터는 서비스 약관에 따라 Tencent 서버에 계속 남아 있습니다.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'WeChatFerry가 Mac용 WeChat에서 작동합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니요. WeChatFerry는 Windows WeChat PC 클라이언트 DLL을 인터셉트하며 Mac용 WeChat과 호환되지 않습니다. Mac에서는 Windows VM을 사용하거나 HTTP webhook 패턴 중 하나를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Tencent가 봇을 사용한다고 계정을 차단할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'WeChat 서비스 약관은 자동화된 대량 메시지 전송을 금지합니다. 인간과 유사한 응답 속도(분당 1–5개 메시지)의 개인 봇은 차단을 거의 유발하지 않습니다. 대량 전송, 그룹 스팸, 또는 상업적 홍보에 봇을 사용하지 마십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'WeChat에서 중국어 텍스트에 가장 좋은 Ollama 모델은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M. 네이티브 CJK 토큰화로 Alibaba가 개발했습니다 — 중국어 텍스트에서 Llama나 Mistral 모델보다 30–40% 더 효율적입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '노트북에서 이것을 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. 16 GB RAM의 노트북은 CPU 전용으로 Qwen3 7B를 8–15 tok/s로 편안하게 실행합니다. 메시지당 응답 지연은 3–8초로 채팅에서 허용 가능합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 추론이 중국 데이터 보안법을 준수합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '추론 콘텐츠(프롬프트 및 응답)의 경우 네 — 데이터가 하드웨어를 떠나지 않습니다. WeChat 메시지 메타데이터는 서비스 약관에 따라 Tencent 서버에 계속 남아 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '다중 턴 대화를 어떻게 처리합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '보낸 사람으로 인덱싱된 {role, content} dict의 Python 목록으로 대화 기록을 저장하십시오. 컨텍스트를 유지하기 위해 각 요청에서 /api/chat에 마지막 10–15개 메시지를 전달하십시오.',
+            },
+          },
+        ],
     },
   },
   pt: {
@@ -1852,31 +2131,13 @@ while True:
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'O WeChatFerry funciona com o WeChat para Mac?',
-            a: 'Não. O WeChatFerry intercepta as DLLs do cliente WeChat PC do Windows e não é compatível com o WeChat para Mac. No Mac, use uma VM do Windows ou um dos padrões de webhook HTTP.',
-          },
-          {
-            q: 'A Tencent pode banir minha conta por usar um bot?',
-            a: 'Os Termos de Serviço do WeChat proíbem o envio em massa de mensagens automatizadas. Os bots pessoais com taxas de resposta semelhantes às humanas (1–5 mensagens por minuto) raramente provocam banimentos. Evite o envio em massa, o spam em grupos ou usar o bot para promoção comercial.',
-          },
-          {
-            q: 'Qual modelo do Ollama é melhor para texto em chinês?',
-            a: 'Qwen3 7B Q4_K_M. Desenvolvido pela Alibaba com tokenização CJK nativa — entre 30–40% mais eficiente com texto em chinês que os modelos Llama ou Mistral.',
-          },
-          {
-            q: 'Posso rodar isso em um laptop?',
-            a: 'Sim. Um laptop com 16 GB de RAM roda o Qwen3 7B confortavelmente a 8–15 tok/s apenas com CPU. A latência de resposta é de 3–8 segundos por mensagem, aceitável para chat.',
-          },
-          {
-            q: 'A inferência local atende à Lei de Segurança de Dados da China?',
-            a: 'Para o conteúdo da inferência (prompts e respostas), sim — nenhum dado sai do seu hardware. Os metadados das mensagens do WeChat continuam residindo nos servidores da Tencent conforme seus ToS.',
-          },
-          {
-            q: 'Como gerencio conversas multi-turno?',
-            a: 'Armazene o histórico de conversa como uma lista Python com dicts {role, content} indexados por remetente. Passe as últimas 10–15 mensagens para /api/chat em cada requisição para manter o contexto.',
-          },
-        ],
+            { q: 'O WeChatFerry funciona com o WeChat para Mac?', a: 'Não. O WeChatFerry intercepta as DLLs do cliente WeChat PC do Windows e não é compatível com o WeChat para Mac. No Mac, use uma VM do Windows ou um dos padrões de webhook HTTP.' },
+            { q: 'A Tencent pode banir minha conta por usar um bot?', a: 'Os Termos de Serviço do WeChat proíbem o envio em massa de mensagens automatizadas. Os bots pessoais com taxas de resposta semelhantes às humanas (1–5 mensagens por minuto) raramente provocam banimentos. Evite o envio em massa, o spam em grupos ou usar o bot para promoção comercial.' },
+            { q: 'Qual modelo do Ollama é melhor para texto em chinês?', a: 'Qwen3 7B Q4_K_M. Desenvolvido pela Alibaba com tokenização CJK nativa — entre 30–40% mais eficiente com texto em chinês que os modelos Llama ou Mistral.' },
+            { q: 'Posso rodar isso em um laptop?', a: 'Sim. Um laptop com 16 GB de RAM roda o Qwen3 7B confortavelmente a 8–15 tok/s apenas com CPU. A latência de resposta é de 3–8 segundos por mensagem, aceitável para chat.' },
+            { q: 'A inferência local atende à Lei de Segurança de Dados da China?', a: 'Para o conteúdo da inferência (prompts e respostas), sim — nenhum dado sai do seu hardware. Os metadados das mensagens do WeChat continuam residindo nos servidores da Tencent conforme seus ToS.' },
+            { q: 'Como gerencio conversas multi-turno?', a: 'Armazene o histórico de conversa como uma lista Python com dicts {role, content} indexados por remetente. Passe as últimas 10–15 mensagens para /api/chat em cada requisição para manter o contexto.' },
+          ],
       },
       relatedReading: {
         title: 'Leituras relacionadas',
@@ -1917,11 +2178,55 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'O WeChatFerry funciona com o WeChat para Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Não. O WeChatFerry intercepta as DLLs do cliente WeChat PC do Windows e não é compatível com o WeChat para Mac. No Mac, use uma VM do Windows ou um padrão de webhook HTTP.' } },
-        { '@type': 'Question', name: 'Qual modelo do Ollama é melhor para chats em chinês no WeChat?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — desenvolvido pela Alibaba com tokenização CJK nativa, 5.5 GB de VRAM e entre 30–40% mais eficiente com texto em chinês que Llama ou Mistral.' } },
-        { '@type': 'Question', name: 'A Tencent pode me banir por usar um bot?', acceptedAnswer: { '@type': 'Answer', text: 'Os bots pessoais com taxas de resposta semelhantes às humanas (1–5 mensagens por minuto) raramente provocam banimentos. Evite o envio em massa ou a promoção comercial através do bot.' } },
-        { '@type': 'Question', name: 'A inferência local com um LLM atende à Lei de Segurança de Dados da China?', acceptedAnswer: { '@type': 'Answer', text: 'Para o conteúdo da inferência, sim — nenhum prompt ou resposta sai do seu hardware. Os metadados do WeChat continuam residindo nos servidores da Tencent conforme seus ToS.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'O WeChatFerry funciona com o WeChat para Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. O WeChatFerry intercepta as DLLs do cliente WeChat PC do Windows e não é compatível com o WeChat para Mac. No Mac, use uma VM do Windows ou um dos padrões de webhook HTTP.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A Tencent pode banir minha conta por usar um bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Os Termos de Serviço do WeChat proíbem o envio em massa de mensagens automatizadas. Os bots pessoais com taxas de resposta semelhantes às humanas (1–5 mensagens por minuto) raramente provocam banimentos. Evite o envio em massa, o spam em grupos ou usar o bot para promoção comercial.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual modelo do Ollama é melhor para texto em chinês?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M. Desenvolvido pela Alibaba com tokenização CJK nativa — entre 30–40% mais eficiente com texto em chinês que os modelos Llama ou Mistral.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar isso em um laptop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Um laptop com 16 GB de RAM roda o Qwen3 7B confortavelmente a 8–15 tok/s apenas com CPU. A latência de resposta é de 3–8 segundos por mensagem, aceitável para chat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A inferência local atende à Lei de Segurança de Dados da China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para o conteúdo da inferência (prompts e respostas), sim — nenhum dado sai do seu hardware. Os metadados das mensagens do WeChat continuam residindo nos servidores da Tencent conforme seus ToS.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como gerencio conversas multi-turno?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Armazene o histórico de conversa como uma lista Python com dicts {role, content} indexados por remetente. Passe as últimas 10–15 mensagens para /api/chat em cada requisição para manter o contexto.',
+            },
+          },
+        ],
     },
   },
 
@@ -2107,31 +2412,13 @@ while True:
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'هل يعمل WeChatFerry مع WeChat للماك؟',
-            a: 'لا. يعترض WeChatFerry ملفات DLL لعميل WeChat PC على Windows ولا يتوافق مع WeChat للماك. على الماك، استخدم VM بـ Windows أو أحد أنماط HTTP webhook.',
-          },
-          {
-            q: 'هل يمكن أن تحظر Tencent حسابي لاستخدام بوت؟',
-            a: 'تحظر شروط خدمة WeChat الإرسال الجماعي الآلي. نادرًا ما تؤدي البوتات الشخصية ذات معدلات الرد الشبيهة بالبشر (1–5 رسائل في الدقيقة) إلى حظر. تجنّب الإرسال الجماعي أو البريد المزعج في المجموعات أو استخدام البوت للترويج التجاري.',
-          },
-          {
-            q: 'ما أفضل نموذج Ollama للنص الصيني؟',
-            a: 'Qwen3 7B Q4_K_M. طوّرته Alibaba بترميز CJK أصلي — أكثر كفاءة بـ 30–40% مع النص الصيني مقارنةً بنماذج Llama أو Mistral.',
-          },
-          {
-            q: 'هل يمكنني تشغيل هذا على كمبيوتر محمول؟',
-            a: 'نعم. يشغّل كمبيوتر محمول بـ 16 GB RAM نموذج Qwen3 7B بشكل مريح بـ 8–15 رمز/ثانية على المعالج فقط. كمون الرد 3–8 ثوانٍ لكل رسالة، وهو مقبول للمحادثة.',
-          },
-          {
-            q: 'هل يمتثل الاستدلال المحلي لقانون أمن البيانات الصيني؟',
-            a: 'بالنسبة لمحتوى الاستدلال (المطالبات والردود)، نعم — لا تغادر أي بيانات أجهزتك. تظل بيانات تعريف رسائل WeChat على خوادم Tencent وفقًا لشروط الخدمة.',
-          },
-          {
-            q: 'كيف أدير المحادثات متعددة الأدوار؟',
-            a: 'خزّن تاريخ المحادثة كقائمة Python تحتوي قواميس {role, content} مفهرسة بالمرسل. مرّر آخر 10–15 رسالة إلى /api/chat في كل طلب للحفاظ على السياق.',
-          },
-        ],
+            { q: 'هل يعمل WeChatFerry مع WeChat للماك؟', a: 'لا. يعترض WeChatFerry ملفات DLL لعميل WeChat PC على Windows ولا يتوافق مع WeChat للماك. على الماك، استخدم VM بـ Windows أو أحد أنماط HTTP webhook.' },
+            { q: 'هل يمكن أن تحظر Tencent حسابي لاستخدام بوت؟', a: 'تحظر شروط خدمة WeChat الإرسال الجماعي الآلي. نادرًا ما تؤدي البوتات الشخصية ذات معدلات الرد الشبيهة بالبشر (1–5 رسائل في الدقيقة) إلى حظر. تجنّب الإرسال الجماعي أو البريد المزعج في المجموعات أو استخدام البوت للترويج التجاري.' },
+            { q: 'ما أفضل نموذج Ollama للنص الصيني؟', a: 'Qwen3 7B Q4_K_M. طوّرته Alibaba بترميز CJK أصلي — أكثر كفاءة بـ 30–40% مع النص الصيني مقارنةً بنماذج Llama أو Mistral.' },
+            { q: 'هل يمكنني تشغيل هذا على كمبيوتر محمول؟', a: 'نعم. يشغّل كمبيوتر محمول بـ 16 GB RAM نموذج Qwen3 7B بشكل مريح بـ 8–15 رمز/ثانية على المعالج فقط. كمون الرد 3–8 ثوانٍ لكل رسالة، وهو مقبول للمحادثة.' },
+            { q: 'هل يمتثل الاستدلال المحلي لقانون أمن البيانات الصيني؟', a: 'بالنسبة لمحتوى الاستدلال (المطالبات والردود)، نعم — لا تغادر أي بيانات أجهزتك. تظل بيانات تعريف رسائل WeChat على خوادم Tencent وفقًا لشروط الخدمة.' },
+            { q: 'كيف أدير المحادثات متعددة الأدوار؟', a: 'خزّن تاريخ المحادثة كقائمة Python تحتوي قواميس {role, content} مفهرسة بالمرسل. مرّر آخر 10–15 رسالة إلى /api/chat في كل طلب للحفاظ على السياق.' },
+          ],
       },
       relatedReading: {
         title: 'قراءة ذات صلة',
@@ -2172,11 +2459,55 @@ while True:
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'هل يعمل WeChatFerry مع WeChat للماك؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. يعترض WeChatFerry ملفات DLL لعميل WeChat PC على Windows ولا يتوافق مع WeChat للماك. على الماك، استخدم VM بـ Windows أو نمط HTTP webhook.' } },
-        { '@type': 'Question', name: 'ما أفضل نموذج Ollama للمحادثات الصينية في WeChat؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 7B Q4_K_M — طوّرته Alibaba بترميز CJK أصلي، 5.5 GB VRAM، أكثر كفاءة بـ 30–40% مع النص الصيني مقارنةً بـ Llama أو Mistral.' } },
-        { '@type': 'Question', name: 'هل يمكن أن تحظر Tencent حسابي لاستخدام بوت؟', acceptedAnswer: { '@type': 'Answer', text: 'نادرًا ما تؤدي البوتات الشخصية ذات معدلات الرد الشبيهة بالبشر (1–5 رسائل في الدقيقة) إلى حظر. تجنّب الإرسال الجماعي أو الترويج التجاري عبر البوت.' } },
-        { '@type': 'Question', name: 'هل يمتثل الاستدلال المحلي مع نموذج لغة لقانون أمن البيانات الصيني؟', acceptedAnswer: { '@type': 'Answer', text: 'بالنسبة لمحتوى الاستدلال، نعم — لا تغادر أي مطالبة أو رد أجهزتك. تظل بيانات تعريف WeChat على خوادم Tencent وفقًا لشروط الخدمة.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل WeChatFerry مع WeChat للماك؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. يعترض WeChatFerry ملفات DLL لعميل WeChat PC على Windows ولا يتوافق مع WeChat للماك. على الماك، استخدم VM بـ Windows أو أحد أنماط HTTP webhook.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن أن تحظر Tencent حسابي لاستخدام بوت؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تحظر شروط خدمة WeChat الإرسال الجماعي الآلي. نادرًا ما تؤدي البوتات الشخصية ذات معدلات الرد الشبيهة بالبشر (1–5 رسائل في الدقيقة) إلى حظر. تجنّب الإرسال الجماعي أو البريد المزعج في المجموعات أو استخدام البوت للترويج التجاري.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل نموذج Ollama للنص الصيني؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 7B Q4_K_M. طوّرته Alibaba بترميز CJK أصلي — أكثر كفاءة بـ 30–40% مع النص الصيني مقارنةً بنماذج Llama أو Mistral.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل هذا على كمبيوتر محمول؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يشغّل كمبيوتر محمول بـ 16 GB RAM نموذج Qwen3 7B بشكل مريح بـ 8–15 رمز/ثانية على المعالج فقط. كمون الرد 3–8 ثوانٍ لكل رسالة، وهو مقبول للمحادثة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمتثل الاستدلال المحلي لقانون أمن البيانات الصيني؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بالنسبة لمحتوى الاستدلال (المطالبات والردود)، نعم — لا تغادر أي بيانات أجهزتك. تظل بيانات تعريف رسائل WeChat على خوادم Tencent وفقًا لشروط الخدمة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أدير المحادثات متعددة الأدوار؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'خزّن تاريخ المحادثة كقائمة Python تحتوي قواميس {role, content} مفهرسة بالمرسل. مرّر آخر 10–15 رسالة إلى /api/chat في كل طلب للحفاظ على السياق.',
+            },
+          },
+        ],
     },
   },
 }

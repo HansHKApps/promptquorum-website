@@ -127,22 +127,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'common-questions',
           title: 'Common Questions About Local LLMs',
           faqs: [
-            {
-              q: 'Can a local LLM match GPT-5.6 quality?',
-              a: 'No -- not on current consumer hardware. GPT-5.6 and Claude Sonnet 5 outperform any locally-runnable model on complex reasoning, code generation, and instruction-following benchmarks. However, for summarization, translation, and everyday writing tasks, a well-quantized 13B-34B model produces results that are difficult to distinguish from frontier models.',
-            },
-            {
-              q: 'Do I need a GPU to run a local LLM?',
-              a: 'No. All major inference engines (Ollama, LM Studio, llama.cpp) run on CPU only. A GPU significantly speeds things up -- an NVIDIA RTX 4060 (8 GB VRAM) runs a 7B model at 60-90 tokens/sec vs. 10-20 tokens/sec on CPU. Apple Silicon Macs use GPU-accelerated unified memory by default and are well-suited for local LLMs without a discrete GPU.',
-            },
-            {
-              q: 'Where do I download local LLM models?',
-              a: 'The three main sources are: Ollama\'s model library (ollama.com/library) for easy one-command downloads; Hugging Face (huggingface.co) for the full range of GGUF and safetensors models; and LM Studio\'s built-in model browser which searches Hugging Face directly. See [How to Install Ollama](/local-llms/how-to-install-ollama) and [How to Install LM Studio](/local-llms/how-to-install-lm-studio) for setup guides.',
-            },
-            {
-              q: 'Is running a local LLM private?',
-              a: 'Yes -- with caveats. The model inference itself is fully local. However, some applications built on top of local LLMs may send data to external servers. Always check whether the interface or plugin layer you use has telemetry or cloud sync enabled. See the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) for a full audit guide.',
-            },
+            { q: 'Can a local LLM match GPT-5.6 quality?', a: 'No -- not on current consumer hardware. GPT-5.6 and Claude Sonnet 5 outperform any locally-runnable model on complex reasoning, code generation, and instruction-following benchmarks. However, for summarization, translation, and everyday writing tasks, a well-quantized 13B-34B model produces results that are difficult to distinguish from frontier models.' },
+            { q: 'Do I need a GPU to run a local LLM?', a: 'No. All major inference engines (Ollama, LM Studio, llama.cpp) run on CPU only. A GPU significantly speeds things up -- an NVIDIA RTX 4060 (8 GB VRAM) runs a 7B model at 60-90 tokens/sec vs. 10-20 tokens/sec on CPU. Apple Silicon Macs use GPU-accelerated unified memory by default and are well-suited for local LLMs without a discrete GPU.' },
+            { q: 'Where do I download local LLM models?', a: 'The three main sources are: Ollama\'s model library (ollama.com/library) for easy one-command downloads; Hugging Face (huggingface.co) for the full range of GGUF and safetensors models; and LM Studio\'s built-in model browser which searches Hugging Face directly. See [How to Install Ollama](/local-llms/how-to-install-ollama) and [How to Install LM Studio](/local-llms/how-to-install-lm-studio) for setup guides.' },
+            { q: 'Is running a local LLM private?', a: 'Yes -- with caveats. The model inference itself is fully local. However, some applications built on top of local LLMs may send data to external servers. Always check whether the interface or plugin layer you use has telemetry or cloud sync enabled. See the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) for a full audit guide.' },
+            { q: 'What is the difference between a local LLM and a cloud AI API?', a: 'A local LLM runs on your own hardware -- your CPU or GPU. A cloud AI API (OpenAI, Anthropic, Google) processes your prompts on remote servers. Local LLMs are private and free after setup; cloud APIs charge per token and send your data to external servers.' },
+            { q: 'Can I run a local LLM without a GPU?', a: 'Yes. CPU inference works with 8GB+ RAM. A 7B model at Q4 quantization runs at 5-15 tokens/sec on a modern laptop CPU. GPU acceleration (NVIDIA CUDA, AMD ROCm, Apple Metal) boosts this to 30-100 tokens/sec.' },
+            { q: 'What hardware do I need for a local LLM?', a: 'Minimum: 8GB RAM for a 7B model at Q4 quantization. Recommended: 16GB RAM and a GPU with 8GB+ VRAM for comfortable inference. Apple Silicon Macs (M1/M2/M3) run local LLMs efficiently using unified memory.' },
+            { q: 'What is GGUF format?', a: 'GGUF (GPT-Generated Unified Format) is the standard file format for quantized local LLMs. Developed by the llama.cpp project, it stores model weights in a compact format that supports multiple quantization levels (Q4_K_M, Q5_K_M, Q8_0).' },
+            { q: 'What is quantization in local LLMs?', a: 'Quantization reduces the numerical precision of model weights from 16-bit to 4-bit or 8-bit, shrinking file size and VRAM requirements by 50-75%. Q4_K_M is the standard: a 7B model shrinks from ~14GB (FP16) to ~4.5GB, with about 1% quality loss.' },
+            { q: 'What is llama.cpp?', a: 'llama.cpp is an open-source C++ inference library that runs quantized LLMs on CPU and GPU. It is the engine used by Ollama, LM Studio, GPT4All, and most other local LLM tools. It supports GGUF format, NVIDIA CUDA, AMD ROCm, and Apple Metal.' },
+            { q: 'Do local LLMs match GPT-5.6 or Claude Sonnet 5 on complex reasoning tasks?', a: 'Not yet for the most demanding tasks. The best consumer-grade local model (Llama 3.3 70B at Q4) approaches top-tier cloud models on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than large cloud models.' },
+            { q: 'What is the difference between a local LLM and a fine-tuned model?', a: 'A local LLM is any model run on your own hardware. A fine-tuned model is a base model retrained on specific data to change its behavior. Fine-tuned models can also run locally via Ollama or llama.cpp using LoRA adapters or merged GGUF files.' },
           ],
         },
         nextSteps: {
@@ -209,54 +205,100 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'What is the difference between a local LLM and a cloud AI API?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A local LLM runs on your own hardware -- your CPU or GPU. A cloud AI API (OpenAI, Anthropic, Google) processes your prompts on remote servers. Local LLMs are private and free after setup; cloud APIs charge per token and send your data to external servers.' }
+            'name': 'Can a local LLM match GPT-5.6 quality?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No -- not on current consumer hardware. GPT-5.6 and Claude Sonnet 5 outperform any locally-runnable model on complex reasoning, code generation, and instruction-following benchmarks. However, for summarization, translation, and everyday writing tasks, a well-quantized 13B-34B model produces results that are difficult to distinguish from frontier models.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Can I run a local LLM without a GPU?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. CPU inference works with 8GB+ RAM. A 7B model at Q4 quantization runs at 5-15 tokens/sec on a modern laptop CPU. GPU acceleration (NVIDIA CUDA, AMD ROCm, Apple Metal) boosts this to 30-100 tokens/sec.' }
+            'name': 'Do I need a GPU to run a local LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. All major inference engines (Ollama, LM Studio, llama.cpp) run on CPU only. A GPU significantly speeds things up -- an NVIDIA RTX 4060 (8 GB VRAM) runs a 7B model at 60-90 tokens/sec vs. 10-20 tokens/sec on CPU. Apple Silicon Macs use GPU-accelerated unified memory by default and are well-suited for local LLMs without a discrete GPU.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Where do I download local LLM models?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Three main sources: Ollama library (ollama.com/library) for one-command downloads, Hugging Face (huggingface.co) for the full range of GGUF models, and LM Studio\'s built-in model browser which searches Hugging Face directly.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The three main sources are: Ollama\'s model library (ollama.com/library) for easy one-command downloads; Hugging Face (huggingface.co) for the full range of GGUF and safetensors models; and LM Studio\'s built-in model browser which searches Hugging Face directly. See [How to Install Ollama](/local-llms/how-to-install-ollama) and [How to Install LM Studio](/local-llms/how-to-install-lm-studio) for setup guides.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Is running a local LLM private?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- inference is fully local. However, some apps built on local LLMs may send data externally. Always check whether the interface or plugin layer has telemetry or cloud sync enabled.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes -- with caveats. The model inference itself is fully local. However, some applications built on top of local LLMs may send data to external servers. Always check whether the interface or plugin layer you use has telemetry or cloud sync enabled. See the [Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) for a full audit guide.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between a local LLM and a cloud AI API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A local LLM runs on your own hardware -- your CPU or GPU. A cloud AI API (OpenAI, Anthropic, Google) processes your prompts on remote servers. Local LLMs are private and free after setup; cloud APIs charge per token and send your data to external servers.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run a local LLM without a GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. CPU inference works with 8GB+ RAM. A 7B model at Q4 quantization runs at 5-15 tokens/sec on a modern laptop CPU. GPU acceleration (NVIDIA CUDA, AMD ROCm, Apple Metal) boosts this to 30-100 tokens/sec.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What hardware do I need for a local LLM?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum: 8GB RAM for a 7B model at Q4 quantization. Recommended: 16GB RAM and a GPU with 8GB+ VRAM for comfortable inference. Apple Silicon Macs (M1/M2/M3) run local LLMs efficiently using unified memory.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Minimum: 8GB RAM for a 7B model at Q4 quantization. Recommended: 16GB RAM and a GPU with 8GB+ VRAM for comfortable inference. Apple Silicon Macs (M1/M2/M3) run local LLMs efficiently using unified memory.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is GGUF format?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF (GPT-Generated Unified Format) is the standard file format for quantized local LLMs. Developed by the llama.cpp project, it stores model weights in a compact format that supports multiple quantization levels (Q4_K_M, Q5_K_M, Q8_0).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF (GPT-Generated Unified Format) is the standard file format for quantized local LLMs. Developed by the llama.cpp project, it stores model weights in a compact format that supports multiple quantization levels (Q4_K_M, Q5_K_M, Q8_0).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is quantization in local LLMs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Quantization reduces the numerical precision of model weights from 16-bit to 4-bit or 8-bit, shrinking file size and VRAM requirements by 50-75%. Q4_K_M is the standard: a 7B model shrinks from ~14GB (FP16) to ~4.5GB, with about 1% quality loss.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Quantization reduces the numerical precision of model weights from 16-bit to 4-bit or 8-bit, shrinking file size and VRAM requirements by 50-75%. Q4_K_M is the standard: a 7B model shrinks from ~14GB (FP16) to ~4.5GB, with about 1% quality loss.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is llama.cpp?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp is an open-source C++ inference library that runs quantized LLMs on CPU and GPU. It is the engine used by Ollama, LM Studio, GPT4All, and most other local LLM tools. It supports GGUF format, NVIDIA CUDA, AMD ROCm, and Apple Metal.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp is an open-source C++ inference library that runs quantized LLMs on CPU and GPU. It is the engine used by Ollama, LM Studio, GPT4All, and most other local LLM tools. It supports GGUF format, NVIDIA CUDA, AMD ROCm, and Apple Metal.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Do local LLMs match GPT-5.6 or Claude Sonnet 5 on complex reasoning tasks?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not yet for the most demanding tasks. The best consumer-grade local model (Llama 3.3 70B at Q4) approaches top-tier cloud models on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than large cloud models.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not yet for the most demanding tasks. The best consumer-grade local model (Llama 3.3 70B at Q4) approaches top-tier cloud models on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than large cloud models.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is the difference between a local LLM and a fine-tuned model?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A local LLM is any model run on your own hardware. A fine-tuned model is a base model retrained on specific data to change its behavior. Fine-tuned models can also run locally via Ollama or llama.cpp using LoRA adapters or merged GGUF files.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A local LLM is any model run on your own hardware. A fine-tuned model is a base model retrained on specific data to change its behavior. Fine-tuned models can also run locally via Ollama or llama.cpp using LoRA adapters or merged GGUF files.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -391,22 +433,17 @@ schema: {
           id: 'common-questions',
           title: 'Preguntas frecuentes sobre los LLM locales',
           faqs: [
-            {
-              q: '¿Puede un LLM local igualar la calidad de GPT-5.6?',
-              a: 'No, no en el hardware de consumo actual. GPT-5.6 y Claude Sonnet 5 superan a cualquier modelo ejecutable localmente en razonamiento complejo, generación de código y benchmarks de seguimiento de instrucciones. Sin embargo, para tareas de resumen, traducción y escritura cotidiana, un modelo de 13B-34B bien cuantizado produce resultados difíciles de distinguir de los modelos frontier.',
-            },
-            {
-              q: '¿Necesito una GPU para ejecutar un LLM local?',
-              a: 'No. Todos los motores de inferencia principales (Ollama, LM Studio, llama.cpp) funcionan solo con CPU. Una GPU acelera considerablemente el rendimiento: una NVIDIA RTX 4060 (8 GB de VRAM) ejecuta un modelo de 7B a 60-90 tokens/seg frente a 10-20 tokens/seg solo en CPU. Los Mac con Apple Silicon utilizan memoria unificada acelerada por GPU de forma predeterminada y son ideales para LLM locales sin una GPU dedicada.',
-            },
-            {
-              q: '¿Dónde descargo los modelos de LLM locales?',
-              a: 'Las tres fuentes principales son: la biblioteca de modelos de Ollama (ollama.com/library) para descargas con un solo comando; Hugging Face (huggingface.co) para la gama completa de modelos GGUF y safetensors; y el navegador de modelos integrado de LM Studio, que busca directamente en Hugging Face. Consulta [Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) y [Cómo instalar LM Studio](/es/local-llms/how-to-install-lm-studio) para guías de configuración.',
-            },
-            {
-              q: '¿Es privado ejecutar un LLM local?',
-              a: 'Sí, con matices. La inferencia del modelo en sí es completamente local. Sin embargo, algunas aplicaciones construidas sobre LLM locales pueden enviar datos a servidores externos. Comprueba siempre si la interfaz o la capa de plugins que utilizas tiene habilitada la telemetría o la sincronización en la nube. Consulta la [Lista de verificación de seguridad y privacidad para LLM locales](/es/local-llms/local-llm-security-privacy-checklist) para una guía de auditoría completa.',
-            },
+            { q: '¿Puede un LLM local igualar la calidad de GPT-5.6?', a: 'No, no en el hardware de consumo actual. GPT-5.6 y Claude Sonnet 5 superan a cualquier modelo ejecutable localmente en razonamiento complejo, generación de código y benchmarks de seguimiento de instrucciones. Sin embargo, para tareas de resumen, traducción y escritura cotidiana, un modelo de 13B-34B bien cuantizado produce resultados difíciles de distinguir de los modelos frontier.' },
+            { q: '¿Necesito una GPU para ejecutar un LLM local?', a: 'No. Todos los motores de inferencia principales (Ollama, LM Studio, llama.cpp) funcionan solo con CPU. Una GPU acelera considerablemente el rendimiento: una NVIDIA RTX 4060 (8 GB de VRAM) ejecuta un modelo de 7B a 60-90 tokens/seg frente a 10-20 tokens/seg solo en CPU. Los Mac con Apple Silicon utilizan memoria unificada acelerada por GPU de forma predeterminada y son ideales para LLM locales sin una GPU dedicada.' },
+            { q: '¿Dónde descargo los modelos de LLM locales?', a: 'Las tres fuentes principales son: la biblioteca de modelos de Ollama (ollama.com/library) para descargas con un solo comando; Hugging Face (huggingface.co) para la gama completa de modelos GGUF y safetensors; y el navegador de modelos integrado de LM Studio, que busca directamente en Hugging Face. Consulta [Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) y [Cómo instalar LM Studio](/es/local-llms/how-to-install-lm-studio) para guías de configuración.' },
+            { q: '¿Es privado ejecutar un LLM local?', a: 'Sí, con matices. La inferencia del modelo en sí es completamente local. Sin embargo, algunas aplicaciones construidas sobre LLM locales pueden enviar datos a servidores externos. Comprueba siempre si la interfaz o la capa de plugins que utilizas tiene habilitada la telemetría o la sincronización en la nube. Consulta la [Lista de verificación de seguridad y privacidad para LLM locales](/es/local-llms/local-llm-security-privacy-checklist) para una guía de auditoría completa.' },
+            { q: '¿Cuál es la diferencia entre un LLM local y una API de IA en la nube?', a: 'Un LLM local se ejecuta en tu propio hardware: tu CPU o GPU. Una API de IA en la nube (OpenAI, Anthropic, Google) procesa tus prompts en servidores remotos. Los LLM locales son privados y gratuitos después de la configuración; las API en la nube cobran por token y envían tus datos a servidores externos.' },
+            { q: '¿Qué hardware necesito para un LLM local?', a: 'Mínimo: 8 GB de RAM para un modelo de 7B con cuantización Q4. Recomendado: 16 GB de RAM y una GPU con 8 GB+ de VRAM para una inferencia cómoda. Los Mac con Apple Silicon (M1/M2/M3) ejecutan LLM locales de forma eficiente utilizando memoria unificada.' },
+            { q: '¿Qué es el formato GGUF?', a: 'GGUF (GPT-Generated Unified Format) es el formato de archivo estándar para LLM locales cuantizados. Desarrollado por el proyecto llama.cpp, almacena los pesos del modelo en un formato compacto que soporta múltiples niveles de cuantización (Q4_K_M, Q5_K_M, Q8_0).' },
+            { q: '¿Qué es la cuantización en los LLM locales?', a: 'La cuantización reduce la precisión numérica de los pesos del modelo de 16 bits a 4 u 8 bits, reduciendo el tamaño del archivo y los requisitos de VRAM en un 50-75%. Q4_K_M es el estándar: un modelo de 7B pasa de ~14 GB (FP16) a ~4,5 GB, con una pérdida de calidad de aproximadamente un 1%.' },
+            { q: '¿Qué es llama.cpp?', a: 'llama.cpp es una biblioteca de inferencia C++ de código abierto que ejecuta LLM cuantizados en CPU y GPU. Es el motor utilizado por Ollama, LM Studio, GPT4All y la mayoría de las demás herramientas de LLM local. Soporta el formato GGUF, NVIDIA CUDA, AMD ROCm y Apple Metal.' },
+            { q: '¿Los LLM locales igualan a GPT-5.6 o Claude Sonnet 5 en razonamiento complejo?', a: 'Todavía no para las tareas más exigentes. El mejor modelo local para consumidores (Llama 3.3 70B en Q4) se acerca a los modelos en la nube de gama alta en benchmarks, pero requiere una GPU de estación de trabajo con 48 GB+ de VRAM. Los modelos de 7B funcionan en portátiles, pero son significativamente más débiles que los grandes modelos en la nube.' },
+            { q: '¿Cuál es la diferencia entre un LLM local y un modelo ajustado (fine-tuned)?', a: 'Un LLM local es cualquier modelo que se ejecuta en tu propio hardware. Un modelo ajustado es un modelo base reentrenado con datos específicos para cambiar su comportamiento. Los modelos ajustados también pueden ejecutarse localmente a través de Ollama o llama.cpp usando adaptadores LoRA o archivos GGUF combinados.' },
           ],
         },
         nextSteps: {
@@ -472,54 +509,92 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': '¿Cuál es la diferencia entre un LLM local y una API de IA en la nube?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Un LLM local se ejecuta en tu propio hardware: tu CPU o GPU. Una API de IA en la nube (OpenAI, Anthropic, Google) procesa tus prompts en servidores remotos. Los LLM locales son privados y gratuitos después de la configuración; las API en la nube cobran por token y envían tus datos a servidores externos.' }
+            'name': '¿Puede un LLM local igualar la calidad de GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No, no en el hardware de consumo actual. GPT-5.6 y Claude Sonnet 5 superan a cualquier modelo ejecutable localmente en razonamiento complejo, generación de código y benchmarks de seguimiento de instrucciones. Sin embargo, para tareas de resumen, traducción y escritura cotidiana, un modelo de 13B-34B bien cuantizado produce resultados difíciles de distinguir de los modelos frontier.',
+            },
           },
           {
             '@type': 'Question',
-            'name': '¿Puedo ejecutar un LLM local sin GPU?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. La inferencia con CPU funciona con 8 GB de RAM o más. Un modelo de 7B con cuantización Q4 se ejecuta a 5-15 tokens/seg en una CPU de portátil moderna. La aceleración por GPU (NVIDIA CUDA, AMD ROCm, Apple Metal) lo eleva a 30-100 tokens/seg.' }
+            'name': '¿Necesito una GPU para ejecutar un LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Todos los motores de inferencia principales (Ollama, LM Studio, llama.cpp) funcionan solo con CPU. Una GPU acelera considerablemente el rendimiento: una NVIDIA RTX 4060 (8 GB de VRAM) ejecuta un modelo de 7B a 60-90 tokens/seg frente a 10-20 tokens/seg solo en CPU. Los Mac con Apple Silicon utilizan memoria unificada acelerada por GPU de forma predeterminada y son ideales para LLM locales sin una GPU dedicada.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Dónde descargo los modelos de LLM locales?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Tres fuentes principales: la biblioteca de Ollama (ollama.com/library) para descargas con un solo comando, Hugging Face (huggingface.co) para la gama completa de modelos GGUF, y el navegador de modelos integrado de LM Studio, que busca directamente en Hugging Face.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las tres fuentes principales son: la biblioteca de modelos de Ollama (ollama.com/library) para descargas con un solo comando; Hugging Face (huggingface.co) para la gama completa de modelos GGUF y safetensors; y el navegador de modelos integrado de LM Studio, que busca directamente en Hugging Face. Consulta [Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) y [Cómo instalar LM Studio](/es/local-llms/how-to-install-lm-studio) para guías de configuración.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Es privado ejecutar un LLM local?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí: la inferencia es completamente local. Sin embargo, algunas aplicaciones construidas sobre LLM locales pueden enviar datos al exterior. Comprueba siempre si la interfaz o la capa de plugins tiene habilitada la telemetría o la sincronización en la nube.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, con matices. La inferencia del modelo en sí es completamente local. Sin embargo, algunas aplicaciones construidas sobre LLM locales pueden enviar datos a servidores externos. Comprueba siempre si la interfaz o la capa de plugins que utilizas tiene habilitada la telemetría o la sincronización en la nube. Consulta la [Lista de verificación de seguridad y privacidad para LLM locales](/es/local-llms/local-llm-security-privacy-checklist) para una guía de auditoría completa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre un LLM local y una API de IA en la nube?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un LLM local se ejecuta en tu propio hardware: tu CPU o GPU. Una API de IA en la nube (OpenAI, Anthropic, Google) procesa tus prompts en servidores remotos. Los LLM locales son privados y gratuitos después de la configuración; las API en la nube cobran por token y envían tus datos a servidores externos.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Qué hardware necesito para un LLM local?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Mínimo: 8 GB de RAM para un modelo de 7B con cuantización Q4. Recomendado: 16 GB de RAM y una GPU con 8 GB+ de VRAM para una inferencia cómoda. Los Mac con Apple Silicon (M1/M2/M3) ejecutan LLM locales de forma eficiente utilizando memoria unificada.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mínimo: 8 GB de RAM para un modelo de 7B con cuantización Q4. Recomendado: 16 GB de RAM y una GPU con 8 GB+ de VRAM para una inferencia cómoda. Los Mac con Apple Silicon (M1/M2/M3) ejecutan LLM locales de forma eficiente utilizando memoria unificada.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Qué es el formato GGUF?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF (GPT-Generated Unified Format) es el formato de archivo estándar para LLM locales cuantizados. Desarrollado por el proyecto llama.cpp, almacena los pesos del modelo en un formato compacto que soporta múltiples niveles de cuantización (Q4_K_M, Q5_K_M, Q8_0).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF (GPT-Generated Unified Format) es el formato de archivo estándar para LLM locales cuantizados. Desarrollado por el proyecto llama.cpp, almacena los pesos del modelo en un formato compacto que soporta múltiples niveles de cuantización (Q4_K_M, Q5_K_M, Q8_0).',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Qué es la cuantización en los LLM locales?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'La cuantización reduce la precisión numérica de los pesos del modelo de 16 bits a 4 u 8 bits, reduciendo el tamaño del archivo y los requisitos de VRAM en un 50-75%. Q4_K_M es el estándar: un modelo de 7B pasa de ~14 GB (FP16) a ~4,5 GB, con una pérdida de calidad de aproximadamente un 1%.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La cuantización reduce la precisión numérica de los pesos del modelo de 16 bits a 4 u 8 bits, reduciendo el tamaño del archivo y los requisitos de VRAM en un 50-75%. Q4_K_M es el estándar: un modelo de 7B pasa de ~14 GB (FP16) a ~4,5 GB, con una pérdida de calidad de aproximadamente un 1%.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Qué es llama.cpp?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp es una biblioteca de inferencia C++ de código abierto que ejecuta LLM cuantizados en CPU y GPU. Es el motor utilizado por Ollama, LM Studio, GPT4All y la mayoría de las demás herramientas de LLM local. Soporta el formato GGUF, NVIDIA CUDA, AMD ROCm y Apple Metal.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp es una biblioteca de inferencia C++ de código abierto que ejecuta LLM cuantizados en CPU y GPU. Es el motor utilizado por Ollama, LM Studio, GPT4All y la mayoría de las demás herramientas de LLM local. Soporta el formato GGUF, NVIDIA CUDA, AMD ROCm y Apple Metal.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Los LLM locales igualan a GPT-5.6 o Claude Sonnet 5 en razonamiento complejo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Todavía no para las tareas más exigentes. El mejor modelo local para consumidores (Llama 3.3 70B en Q4) se acerca a los modelos en la nube de gama alta en benchmarks, pero requiere una GPU de estación de trabajo con 48 GB+ de VRAM. Los modelos de 7B funcionan en portátiles, pero son significativamente más débiles que los grandes modelos en la nube.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Todavía no para las tareas más exigentes. El mejor modelo local para consumidores (Llama 3.3 70B en Q4) se acerca a los modelos en la nube de gama alta en benchmarks, pero requiere una GPU de estación de trabajo con 48 GB+ de VRAM. Los modelos de 7B funcionan en portátiles, pero son significativamente más débiles que los grandes modelos en la nube.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cuál es la diferencia entre un LLM local y un modelo ajustado (fine-tuned)?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Un LLM local es cualquier modelo que se ejecuta en tu propio hardware. Un modelo ajustado es un modelo base reentrenado con datos específicos para cambiar su comportamiento. Los modelos ajustados también pueden ejecutarse localmente a través de Ollama o llama.cpp usando adaptadores LoRA o archivos GGUF combinados.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un LLM local es cualquier modelo que se ejecuta en tu propio hardware. Un modelo ajustado es un modelo base reentrenado con datos específicos para cambiar su comportamiento. Los modelos ajustados también pueden ejecutarse localmente a través de Ollama o llama.cpp usando adaptadores LoRA o archivos GGUF combinados.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -654,22 +729,17 @@ schema: {
           id: 'common-questions',
           title: 'أسئلة شائعة حول نماذج LLM المحلية',
           faqs: [
-            {
-              q: 'هل يمكن لنموذج LLM محلي مضاهاة جودة GPT-5.6؟',
-              a: 'لا، ليس على العتاد الاستهلاكي الحالي. يتفوق GPT-5.6 وClaude Sonnet 5 على أي نموذج قابل للتشغيل محليًا في الاستدلال المعقد، وتوليد الشيفرة، ومعايير اتباع التعليمات. مع ذلك، لمهام التلخيص، والترجمة، والكتابة اليومية، ينتج نموذج 13B-34B مكمَّم جيدًا نتائج يصعب تمييزها عن النماذج الرائدة.',
-            },
-            {
-              q: 'هل أحتاج إلى GPU لتشغيل نموذج LLM محلي؟',
-              a: 'لا. تعمل جميع محركات الاستدلال الرئيسية (Ollama، LM Studio، llama.cpp) على CPU فقط. تسرّع GPU الأداء بشكل كبير: تشغّل NVIDIA RTX 4060 (8 GB من VRAM) نموذج 7B بـ 60-90 token/ثانية مقابل 10-20 token/ثانية على CPU فقط. تستخدم أجهزة Mac بمعالج Apple Silicon ذاكرة موحّدة مسرّعة بـ GPU افتراضيًا وهي مثالية لنماذج LLM المحلية دون GPU مخصصة.',
-            },
-            {
-              q: 'من أين أنزّل نماذج LLM المحلية؟',
-              a: 'المصادر الثلاثة الرئيسية هي: مكتبة نماذج Ollama (ollama.com/library) للتنزيلات بأمر واحد؛ وHugging Face (huggingface.co) لمجموعة كاملة من نماذج GGUF وsafetensors؛ ومتصفح النماذج المدمج في LM Studio الذي يبحث في Hugging Face مباشرة. راجع [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) و[كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) لأدلة الإعداد.',
-            },
-            {
-              q: 'هل تشغيل نموذج LLM محلي خاص؟',
-              a: 'نعم، مع تفاصيل دقيقة. استدلال النموذج نفسه محلي بالكامل. مع ذلك، قد ترسل بعض التطبيقات المبنية على نماذج LLM المحلية بيانات إلى خوادم خارجية. تحقق دائمًا مما إذا كانت الواجهة أو طبقة الإضافات التي تستخدمها قد فعّلت القياس عن بُعد أو المزامنة السحابية. راجع [قائمة تحقق أمان وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) للحصول على دليل تدقيق كامل.',
-            },
+            { q: 'هل يمكن لنموذج LLM محلي مضاهاة جودة GPT-5.6؟', a: 'لا، ليس على العتاد الاستهلاكي الحالي. يتفوق GPT-5.6 وClaude Sonnet 5 على أي نموذج قابل للتشغيل محليًا في الاستدلال المعقد، وتوليد الشيفرة، ومعايير اتباع التعليمات. مع ذلك، لمهام التلخيص، والترجمة، والكتابة اليومية، ينتج نموذج 13B-34B مكمَّم جيدًا نتائج يصعب تمييزها عن النماذج الرائدة.' },
+            { q: 'هل أحتاج إلى GPU لتشغيل نموذج LLM محلي؟', a: 'لا. تعمل جميع محركات الاستدلال الرئيسية (Ollama، LM Studio، llama.cpp) على CPU فقط. تسرّع GPU الأداء بشكل كبير: تشغّل NVIDIA RTX 4060 (8 GB من VRAM) نموذج 7B بـ 60-90 token/ثانية مقابل 10-20 token/ثانية على CPU فقط. تستخدم أجهزة Mac بمعالج Apple Silicon ذاكرة موحّدة مسرّعة بـ GPU افتراضيًا وهي مثالية لنماذج LLM المحلية دون GPU مخصصة.' },
+            { q: 'من أين أنزّل نماذج LLM المحلية؟', a: 'المصادر الثلاثة الرئيسية هي: مكتبة نماذج Ollama (ollama.com/library) للتنزيلات بأمر واحد؛ وHugging Face (huggingface.co) لمجموعة كاملة من نماذج GGUF وsafetensors؛ ومتصفح النماذج المدمج في LM Studio الذي يبحث في Hugging Face مباشرة. راجع [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) و[كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) لأدلة الإعداد.' },
+            { q: 'هل تشغيل نموذج LLM محلي خاص؟', a: 'نعم، مع تفاصيل دقيقة. استدلال النموذج نفسه محلي بالكامل. مع ذلك، قد ترسل بعض التطبيقات المبنية على نماذج LLM المحلية بيانات إلى خوادم خارجية. تحقق دائمًا مما إذا كانت الواجهة أو طبقة الإضافات التي تستخدمها قد فعّلت القياس عن بُعد أو المزامنة السحابية. راجع [قائمة تحقق أمان وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) للحصول على دليل تدقيق كامل.' },
+            { q: 'ما الفرق بين نموذج LLM محلي وواجهة API ذكاء اصطناعي سحابية؟', a: 'يعمل نموذج LLM المحلي على عتادك الخاص: CPU أو GPU لديك. تعالج واجهة API السحابية (OpenAI، Anthropic، Google) موجّهاتك على خوادم بعيدة. النماذج المحلية خاصة ومجانية بعد الإعداد؛ بينما تتقاضى واجهات API السحابية رسومًا لكل token وترسل بياناتك إلى خوادم خارجية.' },
+            { q: 'أي عتاد أحتاج لنموذج LLM محلي؟', a: 'الحد الأدنى: 8 GB من RAM لنموذج 7B بتكميم Q4. الموصى به: 16 GB من RAM وGPU بذاكرة VRAM سعة 8 GB+ لاستدلال مريح. تشغّل أجهزة Mac بمعالج Apple Silicon (M1/M2/M3) نماذج LLM المحلية بكفاءة باستخدام الذاكرة الموحّدة.' },
+            { q: 'ما هي صيغة GGUF؟', a: 'GGUF (GPT-Generated Unified Format) هي صيغة الملف المعيارية لنماذج LLM المحلية المكمَّمة. طوّرها مشروع llama.cpp، وتخزّن أوزان النموذج بصيغة مدمجة تدعم مستويات تكميم متعددة (Q4_K_M، Q5_K_M، Q8_0).' },
+            { q: 'ما هو التكميم في نماذج LLM المحلية؟', a: 'يقلّل التكميم الدقة العددية لأوزان النموذج من 16 بت إلى 4 أو 8 بت، مما يخفض حجم الملف ومتطلبات VRAM بنسبة 50-75%. Q4_K_M هو المعيار: ينتقل نموذج 7B من ~14 GB (FP16) إلى ~4.5 GB، بفقدان جودة نحو 1%.' },
+            { q: 'ما هو llama.cpp؟', a: 'llama.cpp مكتبة استدلال C++ مفتوحة المصدر تشغّل نماذج LLM المكمَّمة على CPU وGPU. وهي المحرك المستخدم في Ollama، وLM Studio، وGPT4All، ومعظم أدوات LLM المحلية الأخرى. تدعم صيغة GGUF، وNVIDIA CUDA، وAMD ROCm، وApple Metal.' },
+            { q: 'هل تضاهي نماذج LLM المحلية جودة GPT-5.6 أو Claude Sonnet 5 في الاستدلال المعقد؟', a: 'ليس بعد للمهام الأكثر تطلبًا. يقترب أفضل نموذج محلي للمستهلكين (Llama 3.3 70B بـ Q4) من نماذج السحابة الكبرى في المعايير، لكنه يتطلب GPU محطة عمل بذاكرة VRAM سعة 48 GB+. تعمل نماذج 7B على الحواسيب المحمولة، لكنها أضعف بكثير من نماذج السحابة الكبرى.' },
+            { q: 'ما الفرق بين نموذج LLM محلي ونموذج مضبوط دقيقًا (fine-tuned)؟', a: 'نموذج LLM المحلي هو أي نموذج يعمل على عتادك الخاص. النموذج المضبوط دقيقًا هو نموذج أساسي أُعيد تدريبه ببيانات محددة لتغيير سلوكه. يمكن أيضًا تشغيل النماذج المضبوطة محليًا عبر Ollama أو llama.cpp باستخدام محوّلات LoRA أو ملفات GGUF مدمجة.' },
           ],
         },
         nextSteps: {
@@ -737,54 +807,92 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'ما الفرق بين نموذج LLM محلي وواجهة API ذكاء اصطناعي سحابية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'يعمل نموذج LLM المحلي على عتادك الخاص: CPU أو GPU لديك. تعالج واجهة API السحابية (OpenAI، Anthropic، Google) موجّهاتك على خوادم بعيدة. النماذج المحلية خاصة ومجانية بعد الإعداد؛ بينما تتقاضى واجهات API السحابية رسومًا لكل token وترسل بياناتك إلى خوادم خارجية.' }
+            'name': 'هل يمكن لنموذج LLM محلي مضاهاة جودة GPT-5.6؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا، ليس على العتاد الاستهلاكي الحالي. يتفوق GPT-5.6 وClaude Sonnet 5 على أي نموذج قابل للتشغيل محليًا في الاستدلال المعقد، وتوليد الشيفرة، ومعايير اتباع التعليمات. مع ذلك، لمهام التلخيص، والترجمة، والكتابة اليومية، ينتج نموذج 13B-34B مكمَّم جيدًا نتائج يصعب تمييزها عن النماذج الرائدة.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'هل يمكنني تشغيل نموذج LLM محلي دون GPU؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. يعمل الاستدلال على CPU بذاكرة 8 GB من RAM أو أكثر. نموذج 7B بتكميم Q4 يعمل بـ 5-15 token/ثانية على CPU حاسوب محمول حديث. يرفعه التسريع بـ GPU (NVIDIA CUDA، AMD ROCm، Apple Metal) إلى 30-100 token/ثانية.' }
+            'name': 'هل أحتاج إلى GPU لتشغيل نموذج LLM محلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. تعمل جميع محركات الاستدلال الرئيسية (Ollama، LM Studio، llama.cpp) على CPU فقط. تسرّع GPU الأداء بشكل كبير: تشغّل NVIDIA RTX 4060 (8 GB من VRAM) نموذج 7B بـ 60-90 token/ثانية مقابل 10-20 token/ثانية على CPU فقط. تستخدم أجهزة Mac بمعالج Apple Silicon ذاكرة موحّدة مسرّعة بـ GPU افتراضيًا وهي مثالية لنماذج LLM المحلية دون GPU مخصصة.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'من أين أنزّل نماذج LLM المحلية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'ثلاثة مصادر رئيسية: مكتبة Ollama (ollama.com/library) للتنزيلات بأمر واحد، وHugging Face (huggingface.co) لمجموعة كاملة من نماذج GGUF، ومتصفح النماذج المدمج في LM Studio الذي يبحث في Hugging Face مباشرة.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'المصادر الثلاثة الرئيسية هي: مكتبة نماذج Ollama (ollama.com/library) للتنزيلات بأمر واحد؛ وHugging Face (huggingface.co) لمجموعة كاملة من نماذج GGUF وsafetensors؛ ومتصفح النماذج المدمج في LM Studio الذي يبحث في Hugging Face مباشرة. راجع [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) و[كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio) لأدلة الإعداد.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل تشغيل نموذج LLM محلي خاص؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم: الاستدلال محلي بالكامل. مع ذلك، قد ترسل بعض التطبيقات المبنية على نماذج LLM المحلية بيانات إلى الخارج. تحقق دائمًا مما إذا كانت الواجهة أو طبقة الإضافات قد فعّلت القياس عن بُعد أو المزامنة السحابية.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، مع تفاصيل دقيقة. استدلال النموذج نفسه محلي بالكامل. مع ذلك، قد ترسل بعض التطبيقات المبنية على نماذج LLM المحلية بيانات إلى خوادم خارجية. تحقق دائمًا مما إذا كانت الواجهة أو طبقة الإضافات التي تستخدمها قد فعّلت القياس عن بُعد أو المزامنة السحابية. راجع [قائمة تحقق أمان وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) للحصول على دليل تدقيق كامل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين نموذج LLM محلي وواجهة API ذكاء اصطناعي سحابية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعمل نموذج LLM المحلي على عتادك الخاص: CPU أو GPU لديك. تعالج واجهة API السحابية (OpenAI، Anthropic، Google) موجّهاتك على خوادم بعيدة. النماذج المحلية خاصة ومجانية بعد الإعداد؛ بينما تتقاضى واجهات API السحابية رسومًا لكل token وترسل بياناتك إلى خوادم خارجية.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'أي عتاد أحتاج لنموذج LLM محلي؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'الحد الأدنى: 8 GB من RAM لنموذج 7B بتكميم Q4. الموصى به: 16 GB من RAM وGPU بذاكرة VRAM سعة 8 GB+ لاستدلال مريح. تشغّل أجهزة Mac بمعالج Apple Silicon (M1/M2/M3) نماذج LLM المحلية بكفاءة باستخدام الذاكرة الموحّدة.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الحد الأدنى: 8 GB من RAM لنموذج 7B بتكميم Q4. الموصى به: 16 GB من RAM وGPU بذاكرة VRAM سعة 8 GB+ لاستدلال مريح. تشغّل أجهزة Mac بمعالج Apple Silicon (M1/M2/M3) نماذج LLM المحلية بكفاءة باستخدام الذاكرة الموحّدة.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما هي صيغة GGUF؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF (GPT-Generated Unified Format) هي صيغة الملف المعيارية لنماذج LLM المحلية المكمَّمة. طوّرها مشروع llama.cpp، وتخزّن أوزان النموذج بصيغة مدمجة تدعم مستويات تكميم متعددة (Q4_K_M، Q5_K_M، Q8_0).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF (GPT-Generated Unified Format) هي صيغة الملف المعيارية لنماذج LLM المحلية المكمَّمة. طوّرها مشروع llama.cpp، وتخزّن أوزان النموذج بصيغة مدمجة تدعم مستويات تكميم متعددة (Q4_K_M، Q5_K_M، Q8_0).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما هو التكميم في نماذج LLM المحلية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'يقلّل التكميم الدقة العددية لأوزان النموذج من 16 بت إلى 4 أو 8 بت، مما يخفض حجم الملف ومتطلبات VRAM بنسبة 50-75%. Q4_K_M هو المعيار: ينتقل نموذج 7B من ~14 GB (FP16) إلى ~4.5 GB، بفقدان جودة نحو 1%.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يقلّل التكميم الدقة العددية لأوزان النموذج من 16 بت إلى 4 أو 8 بت، مما يخفض حجم الملف ومتطلبات VRAM بنسبة 50-75%. Q4_K_M هو المعيار: ينتقل نموذج 7B من ~14 GB (FP16) إلى ~4.5 GB، بفقدان جودة نحو 1%.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما هو llama.cpp؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp مكتبة استدلال C++ مفتوحة المصدر تشغّل نماذج LLM المكمَّمة على CPU وGPU. وهي المحرك المستخدم في Ollama، وLM Studio، وGPT4All، ومعظم أدوات LLM المحلية الأخرى. تدعم صيغة GGUF، وNVIDIA CUDA، وAMD ROCm، وApple Metal.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'llama.cpp مكتبة استدلال C++ مفتوحة المصدر تشغّل نماذج LLM المكمَّمة على CPU وGPU. وهي المحرك المستخدم في Ollama، وLM Studio، وGPT4All، ومعظم أدوات LLM المحلية الأخرى. تدعم صيغة GGUF، وNVIDIA CUDA، وAMD ROCm، وApple Metal.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل تضاهي نماذج LLM المحلية جودة GPT-5.6 أو Claude Sonnet 5 في الاستدلال المعقد؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بعد للمهام الأكثر تطلبًا. يقترب أفضل نموذج محلي للمستهلكين (Llama 3.3 70B بـ Q4) من نماذج السحابة الكبرى في المعايير، لكنه يتطلب GPU محطة عمل بذاكرة VRAM سعة 48 GB+. تعمل نماذج 7B على الحواسيب المحمولة، لكنها أضعف بكثير من نماذج السحابة الكبرى.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس بعد للمهام الأكثر تطلبًا. يقترب أفضل نموذج محلي للمستهلكين (Llama 3.3 70B بـ Q4) من نماذج السحابة الكبرى في المعايير، لكنه يتطلب GPU محطة عمل بذاكرة VRAM سعة 48 GB+. تعمل نماذج 7B على الحواسيب المحمولة، لكنها أضعف بكثير من نماذج السحابة الكبرى.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما الفرق بين نموذج LLM محلي ونموذج مضبوط دقيقًا (fine-tuned)؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نموذج LLM المحلي هو أي نموذج يعمل على عتادك الخاص. النموذج المضبوط دقيقًا هو نموذج أساسي أُعيد تدريبه ببيانات محددة لتغيير سلوكه. يمكن أيضًا تشغيل النماذج المضبوطة محليًا عبر Ollama أو llama.cpp باستخدام محوّلات LoRA أو ملفات GGUF مدمجة.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نموذج LLM المحلي هو أي نموذج يعمل على عتادك الخاص. النموذج المضبوط دقيقًا هو نموذج أساسي أُعيد تدريبه ببيانات محددة لتغيير سلوكه. يمكن أيضًا تشغيل النماذج المضبوطة محليًا عبر Ollama أو llama.cpp باستخدام محوّلات LoRA أو ملفات GGUF مدمجة.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -919,22 +1027,18 @@ schema: {
           id: 'common-questions',
           title: 'Perguntas frequentes sobre os LLMs locais',
           faqs: [
-            {
-              q: 'Um LLM local pode igualar a qualidade do GPT-5.6?',
-              a: 'Não, não no hardware de consumo atual. O GPT-5.6 e o Claude Sonnet 5 superam qualquer modelo executável localmente em raciocínio complexo, geração de código e benchmarks de seguimento de instruções. Porém, para tarefas de resumo, tradução e escrita do dia a dia, um modelo de 13B-34B bem quantizado produz resultados difíceis de distinguir dos modelos de fronteira.',
-            },
-            {
-              q: 'Preciso de uma GPU para rodar um LLM local?',
-              a: 'Não. Todos os principais motores de inferência (Ollama, LM Studio, llama.cpp) funcionam apenas com CPU. Uma GPU acelera consideravelmente o desempenho: uma NVIDIA RTX 4060 (8 GB de VRAM) roda um modelo de 7B a 60-90 tokens/seg ante 10-20 tokens/seg apenas na CPU. Os Macs com Apple Silicon usam memória unificada acelerada por GPU por padrão e são ideais para LLMs locais sem uma GPU dedicada.',
-            },
-            {
-              q: 'Onde baixo os modelos de LLM locais?',
-              a: 'As três fontes principais são: a biblioteca de modelos do Ollama (ollama.com/library) para downloads com um único comando; o Hugging Face (huggingface.co) para a gama completa de modelos GGUF e safetensors; e o navegador de modelos integrado do LM Studio, que busca diretamente no Hugging Face. Consulte [Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) e [Como instalar o LM Studio](/pt/local-llms/how-to-install-lm-studio) para guias de configuração.',
-            },
-            {
-              q: 'Rodar um LLM local é privado?',
-              a: 'Sim, com ressalvas. A inferência do modelo em si é completamente local. Porém, algumas aplicações construídas sobre LLMs locais podem enviar dados a servidores externos. Verifique sempre se a interface ou a camada de plugins que você usa tem telemetria ou sincronização em nuvem habilitada. Consulte a [Lista de verificação de segurança e privacidade para LLMs locais](/pt/local-llms/local-llm-security-privacy-checklist) para um guia de auditoria completo.',
-            },
+            { q: 'Um LLM local pode igualar a qualidade do GPT-5.6?', a: 'Não, não no hardware de consumo atual. O GPT-5.6 e o Claude Sonnet 5 superam qualquer modelo executável localmente em raciocínio complexo, geração de código e benchmarks de seguimento de instruções. Porém, para tarefas de resumo, tradução e escrita do dia a dia, um modelo de 13B-34B bem quantizado produz resultados difíceis de distinguir dos modelos de fronteira.' },
+            { q: 'Preciso de uma GPU para rodar um LLM local?', a: 'Não. Todos os principais motores de inferência (Ollama, LM Studio, llama.cpp) funcionam apenas com CPU. Uma GPU acelera consideravelmente o desempenho: uma NVIDIA RTX 4060 (8 GB de VRAM) roda um modelo de 7B a 60-90 tokens/seg ante 10-20 tokens/seg apenas na CPU. Os Macs com Apple Silicon usam memória unificada acelerada por GPU por padrão e são ideais para LLMs locais sem uma GPU dedicada.' },
+            { q: 'Onde baixo os modelos de LLM locais?', a: 'As três fontes principais são: a biblioteca de modelos do Ollama (ollama.com/library) para downloads com um único comando; o Hugging Face (huggingface.co) para a gama completa de modelos GGUF e safetensors; e o navegador de modelos integrado do LM Studio, que busca diretamente no Hugging Face. Consulte [Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) e [Como instalar o LM Studio](/pt/local-llms/how-to-install-lm-studio) para guias de configuração.' },
+            { q: 'Rodar um LLM local é privado?', a: 'Sim, com ressalvas. A inferência do modelo em si é completamente local. Porém, algumas aplicações construídas sobre LLMs locais podem enviar dados a servidores externos. Verifique sempre se a interface ou a camada de plugins que você usa tem telemetria ou sincronização em nuvem habilitada. Consulte a [Lista de verificação de segurança e privacidade para LLMs locais](/pt/local-llms/local-llm-security-privacy-checklist) para um guia de auditoria completo.' },
+            { q: 'Qual é a diferença entre um LLM local e uma API de IA em nuvem?', a: 'Um LLM local roda no seu próprio hardware: sua CPU ou GPU. Uma API de IA em nuvem (OpenAI, Anthropic, Google) processa seus prompts em servidores remotos. Os LLMs locais são privados e gratuitos depois da configuração; as APIs em nuvem cobram por token e enviam seus dados a servidores externos.' },
+            { q: 'Posso rodar um LLM local sem GPU?', a: 'Sim. A inferência com CPU funciona com 8 GB de RAM ou mais. Um modelo de 7B com quantização Q4 roda a 5-15 tokens/seg em uma CPU de notebook moderna. A aceleração por GPU (NVIDIA CUDA, AMD ROCm, Apple Metal) eleva isso a 30-100 tokens/seg.' },
+            { q: 'Qual hardware preciso para um LLM local?', a: 'Mínimo: 8 GB de RAM para um modelo de 7B com quantização Q4. Recomendado: 16 GB de RAM e uma GPU com 8 GB+ de VRAM para uma inferência confortável. Os Macs com Apple Silicon (M1/M2/M3) rodam LLMs locais de forma eficiente usando memória unificada.' },
+            { q: 'O que é o formato GGUF?', a: 'GGUF (GPT-Generated Unified Format) é o formato de arquivo padrão para LLMs locais quantizados. Desenvolvido pelo projeto llama.cpp, armazena os pesos do modelo em um formato compacto que suporta vários níveis de quantização (Q4_K_M, Q5_K_M, Q8_0).' },
+            { q: 'O que é a quantização nos LLMs locais?', a: 'A quantização reduz a precisão numérica dos pesos do modelo de 16 bits para 4 ou 8 bits, reduzindo o tamanho do arquivo e os requisitos de VRAM em 50-75%. O Q4_K_M é o padrão: um modelo de 7B passa de ~14 GB (FP16) para ~4,5 GB, com uma perda de qualidade de cerca de 1%.' },
+            { q: 'O que é o llama.cpp?', a: 'O llama.cpp é uma biblioteca de inferência C++ de código aberto que roda LLMs quantizados em CPU e GPU. É o motor usado por Ollama, LM Studio, GPT4All e a maioria das demais ferramentas de LLM local. Suporta o formato GGUF, NVIDIA CUDA, AMD ROCm e Apple Metal.' },
+            { q: 'Os LLMs locais igualam o GPT-5.6 ou o Claude Sonnet 5 em raciocínio complexo?', a: 'Ainda não para as tarefas mais exigentes. O melhor modelo local para consumidores (Llama 3.3 70B em Q4) se aproxima dos maiores modelos em nuvem em benchmarks, mas exige uma GPU de estação de trabalho com 48 GB+ de VRAM. Os modelos de 7B funcionam em notebooks, mas são significativamente mais fracos que os maiores modelos em nuvem.' },
+            { q: 'Qual é a diferença entre um LLM local e um modelo ajustado (fine-tuned)?', a: 'Um LLM local é qualquer modelo que roda no seu próprio hardware. Um modelo ajustado é um modelo base retreinado com dados específicos para mudar seu comportamento. Os modelos ajustados também podem rodar localmente via Ollama ou llama.cpp usando adaptadores LoRA ou arquivos GGUF combinados.' },
           ],
         },
         nextSteps: {
@@ -1000,54 +1104,100 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'Qual é a diferença entre um LLM local e uma API de IA em nuvem?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Um LLM local roda no seu próprio hardware: sua CPU ou GPU. Uma API de IA em nuvem (OpenAI, Anthropic, Google) processa seus prompts em servidores remotos. Os LLMs locais são privados e gratuitos depois da configuração; as APIs em nuvem cobram por token e enviam seus dados a servidores externos.' }
+            'name': 'Um LLM local pode igualar a qualidade do GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não, não no hardware de consumo atual. O GPT-5.6 e o Claude Sonnet 5 superam qualquer modelo executável localmente em raciocínio complexo, geração de código e benchmarks de seguimento de instruções. Porém, para tarefas de resumo, tradução e escrita do dia a dia, um modelo de 13B-34B bem quantizado produz resultados difíceis de distinguir dos modelos de fronteira.',
+            },
           },
           {
             '@type': 'Question',
-            'name': 'Posso rodar um LLM local sem GPU?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. A inferência com CPU funciona com 8 GB de RAM ou mais. Um modelo de 7B com quantização Q4 roda a 5-15 tokens/seg em uma CPU de notebook moderna. A aceleração por GPU (NVIDIA CUDA, AMD ROCm, Apple Metal) eleva isso a 30-100 tokens/seg.' }
+            'name': 'Preciso de uma GPU para rodar um LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Todos os principais motores de inferência (Ollama, LM Studio, llama.cpp) funcionam apenas com CPU. Uma GPU acelera consideravelmente o desempenho: uma NVIDIA RTX 4060 (8 GB de VRAM) roda um modelo de 7B a 60-90 tokens/seg ante 10-20 tokens/seg apenas na CPU. Os Macs com Apple Silicon usam memória unificada acelerada por GPU por padrão e são ideais para LLMs locais sem uma GPU dedicada.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Onde baixo os modelos de LLM locais?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Três fontes principais: a biblioteca do Ollama (ollama.com/library) para downloads com um único comando, o Hugging Face (huggingface.co) para a gama completa de modelos GGUF, e o navegador de modelos integrado do LM Studio, que busca diretamente no Hugging Face.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As três fontes principais são: a biblioteca de modelos do Ollama (ollama.com/library) para downloads com um único comando; o Hugging Face (huggingface.co) para a gama completa de modelos GGUF e safetensors; e o navegador de modelos integrado do LM Studio, que busca diretamente no Hugging Face. Consulte [Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) e [Como instalar o LM Studio](/pt/local-llms/how-to-install-lm-studio) para guias de configuração.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Rodar um LLM local é privado?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim: a inferência é completamente local. Porém, algumas aplicações construídas sobre LLMs locais podem enviar dados para fora. Verifique sempre se a interface ou a camada de plugins tem telemetria ou sincronização em nuvem habilitada.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, com ressalvas. A inferência do modelo em si é completamente local. Porém, algumas aplicações construídas sobre LLMs locais podem enviar dados a servidores externos. Verifique sempre se a interface ou a camada de plugins que você usa tem telemetria ou sincronização em nuvem habilitada. Consulte a [Lista de verificação de segurança e privacidade para LLMs locais](/pt/local-llms/local-llm-security-privacy-checklist) para um guia de auditoria completo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre um LLM local e uma API de IA em nuvem?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Um LLM local roda no seu próprio hardware: sua CPU ou GPU. Uma API de IA em nuvem (OpenAI, Anthropic, Google) processa seus prompts em servidores remotos. Os LLMs locais são privados e gratuitos depois da configuração; as APIs em nuvem cobram por token e enviam seus dados a servidores externos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar um LLM local sem GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. A inferência com CPU funciona com 8 GB de RAM ou mais. Um modelo de 7B com quantização Q4 roda a 5-15 tokens/seg em uma CPU de notebook moderna. A aceleração por GPU (NVIDIA CUDA, AMD ROCm, Apple Metal) eleva isso a 30-100 tokens/seg.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Qual hardware preciso para um LLM local?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Mínimo: 8 GB de RAM para um modelo de 7B com quantização Q4. Recomendado: 16 GB de RAM e uma GPU com 8 GB+ de VRAM para uma inferência confortável. Os Macs com Apple Silicon (M1/M2/M3) rodam LLMs locais de forma eficiente usando memória unificada.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mínimo: 8 GB de RAM para um modelo de 7B com quantização Q4. Recomendado: 16 GB de RAM e uma GPU com 8 GB+ de VRAM para uma inferência confortável. Os Macs com Apple Silicon (M1/M2/M3) rodam LLMs locais de forma eficiente usando memória unificada.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'O que é o formato GGUF?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'GGUF (GPT-Generated Unified Format) é o formato de arquivo padrão para LLMs locais quantizados. Desenvolvido pelo projeto llama.cpp, armazena os pesos do modelo em um formato compacto que suporta vários níveis de quantização (Q4_K_M, Q5_K_M, Q8_0).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GGUF (GPT-Generated Unified Format) é o formato de arquivo padrão para LLMs locais quantizados. Desenvolvido pelo projeto llama.cpp, armazena os pesos do modelo em um formato compacto que suporta vários níveis de quantização (Q4_K_M, Q5_K_M, Q8_0).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'O que é a quantização nos LLMs locais?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'A quantização reduz a precisão numérica dos pesos do modelo de 16 bits para 4 ou 8 bits, reduzindo o tamanho do arquivo e os requisitos de VRAM em 50-75%. O Q4_K_M é o padrão: um modelo de 7B passa de ~14 GB (FP16) para ~4,5 GB, com uma perda de qualidade de cerca de 1%.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A quantização reduz a precisão numérica dos pesos do modelo de 16 bits para 4 ou 8 bits, reduzindo o tamanho do arquivo e os requisitos de VRAM em 50-75%. O Q4_K_M é o padrão: um modelo de 7B passa de ~14 GB (FP16) para ~4,5 GB, com uma perda de qualidade de cerca de 1%.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'O que é o llama.cpp?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'O llama.cpp é uma biblioteca de inferência C++ de código aberto que roda LLMs quantizados em CPU e GPU. É o motor usado por Ollama, LM Studio, GPT4All e a maioria das demais ferramentas de LLM local. Suporta o formato GGUF, NVIDIA CUDA, AMD ROCm e Apple Metal.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O llama.cpp é uma biblioteca de inferência C++ de código aberto que roda LLMs quantizados em CPU e GPU. É o motor usado por Ollama, LM Studio, GPT4All e a maioria das demais ferramentas de LLM local. Suporta o formato GGUF, NVIDIA CUDA, AMD ROCm e Apple Metal.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Os LLMs locais igualam o GPT-5.6 ou o Claude Sonnet 5 em raciocínio complexo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ainda não para as tarefas mais exigentes. O melhor modelo local para consumidores (Llama 3.3 70B em Q4) se aproxima dos maiores modelos em nuvem em benchmarks, mas exige uma GPU de estação de trabalho com 48 GB+ de VRAM. Os modelos de 7B funcionam em notebooks, mas são significativamente mais fracos que os maiores modelos em nuvem.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ainda não para as tarefas mais exigentes. O melhor modelo local para consumidores (Llama 3.3 70B em Q4) se aproxima dos maiores modelos em nuvem em benchmarks, mas exige uma GPU de estação de trabalho com 48 GB+ de VRAM. Os modelos de 7B funcionam em notebooks, mas são significativamente mais fracos que os maiores modelos em nuvem.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Qual é a diferença entre um LLM local e um modelo ajustado (fine-tuned)?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Um LLM local é qualquer modelo que roda no seu próprio hardware. Um modelo ajustado é um modelo base retreinado com dados específicos para mudar seu comportamento. Os modelos ajustados também podem rodar localmente via Ollama ou llama.cpp usando adaptadores LoRA ou arquivos GGUF combinados.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Um LLM local é qualquer modelo que roda no seu próprio hardware. Um modelo ajustado é um modelo base retreinado com dados específicos para mudar seu comportamento. Os modelos ajustados também podem rodar localmente via Ollama ou llama.cpp usando adaptadores LoRA ou arquivos GGUF combinados.',
+            },
+          },
         ]
       },
       itemListSchema: {

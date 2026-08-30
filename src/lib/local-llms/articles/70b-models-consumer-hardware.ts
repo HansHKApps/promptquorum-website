@@ -1400,95 +1400,95 @@ schema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     'mainEntity': [
-      {
-        '@type': 'Question',
-        'name': 'Was ist die billigste Hardware, auf der ein 70B Modell praktisch ausführbar ist?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Der Mac mini M5 Pro (1.699 $, 64 GB unified memory, ab 22. September 2026 verfügbar) wird voraussichtlich die günstigste neue Hardware sein, die ein 70B Modell ausführen kann -- 800 $ günstiger als die bisherige günstigste Neuoption, der Mac Studio M5 Max (64 GB, 2.499 $). Ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € bleibt der günstigste gebrauchte Weg mit bewährten 25+ tok/sec. Für den Mac mini M5 Pro liegen noch keine unabhängigen Benchmarks vor. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber langsamere Inferenz wegen Layer Offloading. Verwechsle den Mac mini M5 Pro nicht mit dem Basis-Mac mini M6 (899 $) -- der M6 hat maximal 32 GB unified memory und kann kein 70B Modell ausführen.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Kann der Mac mini M6 ein 70B Modell ausführen?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Nein. Der Mac mini M6 (ab 899 $) hat maximal 32 GB unified memory und 170 GB/s Bandbreite -- deutlich weniger als die 40+ GB, die ein 70B Modell bei Q4_K_M benötigt. Für 70B auf einem Mac mini bestelle den Mac mini M5 Pro (ab 1.699 $, 64 GB unified memory, 307 GB/s Bandbreite, Thunderbolt 5). Beide sind ab dem 22. September 2026 verfügbar, und für keinen der beiden Chips liegen bisher unabhängige Benchmarks vor.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Kann ich ein 70B Modell auf zwei GPUs ausführen?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Ja -- llama.cpp und Ollama unterstützen Multi-GPU Inferenz auf NVIDIA Hardware. Zwei RTX 4090s (48 GB insgesamt VRAM) passen ein Q4_K_M 70B Modell vollständig in VRAM. Ollama verwaltet Multi-GPU automatisch, wenn mehrere GPUs vorhanden sind. Tensor Parallelism in llama.cpp (`--tensor-split`) kontrolliert, wie Layers verteilt werden.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen3 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoningintensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Unterstützt Ollama die automatische Ausführung von 70B Modellen?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Ja. Das Ausführen von `ollama run llama3.3:70b` lädt das Modell herunter und führt es mit automatischem GPU Layer Offloading aus. Ollama erkennt verfügbare VRAM und System RAM, verlagert so viele Layers wie möglich zur GPU und führt die Reste auf der CPU aus. Keine manuelle Konfiguration erforderlich für grundlegende Nutzung.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Wie viel Strom verbraucht die Ausführung eines 70B Modells?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Ein Mac Studio M2 Ultra, der 70B Inferenz ausführt, verbraucht etwa 30-50 W. Ein NVIDIA RTX 4090 Desktop unter Last verbraucht 350-450 W. Bei 0,15 € pro kWh kostet kontinuierliche 70B Inferenz auf einem RTX 4090 etwa 0,05-0,07 € pro Stunde. Apple Silicon ist 7-10× energieeffizienter für diesen Workload.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Lohnen sich 70B Modelle im Vergleich zu 13B Modellen für alltägliche Aufgaben?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Ist die Q4_K_M Quantisierung für 70B Modelle ausreichend?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Ja, Q4_K_M ist die Standard-Empfehlung für 70B Modelle bei Verbraucher-Hardware. Der Qualitätsverlust beträgt 1-3% bei MMLU Benchmarks im Vergleich zu FP16 und ist bei praktischen Aufgaben imperceptible. Q5_K_M und Q8_0 bieten bessere Qualität, benötigen aber erheblich mehr RAM und sind auf Consumer Hardware nicht praktisch.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/de) auf deinen speziellen Aufgaben.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'DSGVO: Muss ich bei der Verwendung von lokalen 70B Modellen die DSGVO beachten?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Bei lokaler Inferenz werden keine Daten an externe Server übertragen, was lokale LLMs unter der DSGVO vorteilhaft macht. Sie sind jedoch kein automatischer DSGVO-Compliance-Garant. Unter Artikel 28 (Datenverarbeitervertrag) musst du dokumentieren, wie Eingaben verarbeitet werden und wie lange Sie verwahrt werden. Beachte die BSI-Grundschutz-Kataloge für Klassifikation sensibler Daten (Kundeninfo, Finanzakten, Patientenakten). Lokale Systeme können für Verarbeitung vertraulicher Unternehmensdaten vorteilhaft sein, benötigen aber für regulierte Sektoren (Finanzwesen, Gesundheitswesen, Recht) explizite Compliance-Dokumentation mit Datenschutz- und Sicherheitsauditoren.',
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Ist ein 70B Modell für den deutschen Mittelstand geeignet?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Für KMU und Mittelstand-Unternehmen (50-500 Mitarbeiter) können lokale 70B Modelle strategisch sinnvoll sein. Sie ermöglichen Datenbeschaffenheit: keine Übertragung sensibler Geschäftsdaten an US-Cloud-Provider (Compliance mit BSI-Grundschutz). Typische Anwendungsfälle: Analyse von Kundenanfragen, Automatisierung von Dokumentation, interne Wissensdatenbank-Abfrage. Hardware-Kosten (Mac Studio oder RTX 4090 Workstation) von 2.000-4.000 € einmaliges Kapital amortisiert sich schnell bei größeren Teams. Empfehlung: Konsultiere mit Datenschutz- und IT-Sicherheitsberatern für Umsetzung unter DSGVO und BSI-Standard.',
-        }
-      },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'Was ist die billigste Hardware, auf der ein 70B Modell praktisch brauchbar ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der Mac mini M5 Pro (1.699 $, 64 GB unified memory, ab 22. September 2026 verfügbar) wird voraussichtlich die günstigste neue Hardware sein, die ein 70B Modell ausführen kann -- 800 $ günstiger als die bisherige günstigste Neuoption, der Mac Studio M5 Max (64 GB, 2.499 $). Ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € bleibt der günstigste gebrauchte Weg mit bewährten 25+ tok/sec. Für den Mac mini M5 Pro liegen noch keine unabhängigen Benchmarks vor. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber wegen Layer Offloading langsamere Inferenz. Verwechsle den Mac mini M5 Pro nicht mit dem Basis-Mac mini M6 (899 $) -- der M6 hat maximal 32 GB unified memory und kann kein 70B Modell ausführen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann der Mac mini M6 ein 70B Modell ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Der Mac mini M6 (ab 899 $) hat maximal 32 GB unified memory und 170 GB/s Bandbreite -- deutlich weniger als die 40+ GB, die ein 70B Modell bei Q4_K_M benötigt. Für 70B auf einem Mac mini bestelle den Mac mini M5 Pro (ab 1.699 $, 64 GB unified memory, 307 GB/s Bandbreite, Thunderbolt 5). Beide sind ab dem 22. September 2026 verfügbar, und für keinen der beiden Chips liegen bisher unabhängige Benchmarks vor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein 70B Modell auf zwei GPUs ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja -- llama.cpp und Ollama unterstützen Multi-GPU Inferenz auf NVIDIA Hardware. Zwei RTX 4090s (48 GB insgesamt VRAM) passen ein Q4_K_M 70B Modell vollständig in VRAM. Ollama verwaltet Multi-GPU automatisch, wenn mehrere GPUs vorhanden sind. Tensor Parallelism in llama.cpp (`--tensor-split`) kontrolliert, wie Layers verteilt werden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen3 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoning-intensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Unterstützt Ollama die automatische Ausführung von 70B Modellen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Das Ausführen von `ollama run llama3.3:70b` lädt das Modell herunter und führt es mit automatischem GPU Layer Offloading aus. Ollama erkennt verfügbare VRAM und System RAM, verlagert so viele Layers wie möglich zur GPU und führt die Reste auf der CPU aus. Keine manuelle Konfiguration erforderlich für grundlegende Nutzung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viel Strom verbraucht die Ausführung eines 70B Modells?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein Mac Studio M2 Ultra, der 70B Inferenz ausführt, verbraucht etwa 30-50 W. Ein NVIDIA RTX 4090 Desktop unter Last verbraucht 350-450 W. Bei 0,15 € pro kWh kostet kontinuierliche 70B Inferenz auf einem RTX 4090 etwa 0,05-0,07 € pro Stunde. Apple Silicon ist 7-10× energieeffizienter für diesen Workload.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Lohnen sich 70B Modelle im Vergleich zu 13B Modellen für alltägliche Aufgaben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist die Q4_K_M Quantisierung für 70B Modelle ausreichend?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, Q4_K_M ist die Standard-Empfehlung für 70B Modelle bei Verbraucher-Hardware. Der Qualitätsverlust beträgt 1-3% bei MMLU Benchmarks im Vergleich zu FP16 und ist bei praktischen Aufgaben imperceptible. Q5_K_M und Q8_0 bieten bessere Qualität, benötigen aber erheblich mehr RAM und sind auf Consumer Hardware nicht praktisch.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/de) auf deinen speziellen Aufgaben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'DSGVO: Muss ich bei der Verwendung von lokalen 70B Modellen die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei lokaler Inferenz werden keine Daten an externe Server übertragen, was lokale LLMs unter der DSGVO vorteilhaft macht. Sie sind jedoch kein automatischer DSGVO-Compliance-Garant. Unter Artikel 28 (Datenverarbeitervertrag) musst du dokumentieren, wie Eingaben verarbeitet werden und wie lange Sie verwahrt werden. Beachte die BSI-Grundschutz-Kataloge für Klassifikation sensibler Daten (Kundeninfo, Finanzakten, Patientenakten). Lokale Systeme können für Verarbeitung vertraulicher Unternehmensdaten vorteilhaft sein, benötigen aber für regulierte Sektoren (Finanzwesen, Gesundheitswesen, Recht) explizite Compliance-Dokumentation mit Datenschutz- und Sicherheitsauditoren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist ein 70B Modell für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für KMU und Mittelstand-Unternehmen (50-500 Mitarbeiter) können lokale 70B Modelle strategisch sinnvoll sein. Sie ermöglichen Datenbeschaffenheit: keine Übertragung sensibler Geschäftsdaten an US-Cloud-Provider (Compliance mit BSI-Grundschutz). Typische Anwendungsfälle: Analyse von Kundenanfragen, Automatisierung von Dokumentation, interne Wissensdatenbank-Abfrage. Hardware-Kosten (Mac Studio oder RTX 4090 Workstation) von 2.000-4.000 € einmaliges Kapital amortisiert sich schnell bei größeren Teams. Empfehlung: Konsultiere mit Datenschutz- und IT-Sicherheitsberatern für Umsetzung unter DSGVO und BSI-Standard.',
+            },
+          },
+        ],
   },
   sections: {
     tldr: {
@@ -1621,51 +1621,18 @@ schema: {
       id: 'faq',
       title: 'Häufig gestellte Fragen zu 70B Modellen auf Consumer Hardware',
       faqs: [
-        {
-          q: 'Was ist die billigste Hardware, auf der ein 70B Modell praktisch brauchbar ist?',
-          a: 'Der Mac mini M5 Pro (1.699 $, 64 GB unified memory, ab 22. September 2026 verfügbar) wird voraussichtlich die günstigste neue Hardware sein, die ein 70B Modell ausführen kann -- 800 $ günstiger als die bisherige günstigste Neuoption, der Mac Studio M5 Max (64 GB, 2.499 $). Ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € bleibt der günstigste gebrauchte Weg mit bewährten 25+ tok/sec. Für den Mac mini M5 Pro liegen noch keine unabhängigen Benchmarks vor. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber wegen Layer Offloading langsamere Inferenz. Verwechsle den Mac mini M5 Pro nicht mit dem Basis-Mac mini M6 (899 $) -- der M6 hat maximal 32 GB unified memory und kann kein 70B Modell ausführen.',
-        },
-        {
-          q: 'Kann der Mac mini M6 ein 70B Modell ausführen?',
-          a: 'Nein. Der Mac mini M6 (ab 899 $) hat maximal 32 GB unified memory und 170 GB/s Bandbreite -- deutlich weniger als die 40+ GB, die ein 70B Modell bei Q4_K_M benötigt. Für 70B auf einem Mac mini bestelle den Mac mini M5 Pro (ab 1.699 $, 64 GB unified memory, 307 GB/s Bandbreite, Thunderbolt 5). Beide sind ab dem 22. September 2026 verfügbar, und für keinen der beiden Chips liegen bisher unabhängige Benchmarks vor.',
-        },
-        {
-          q: 'Kann ich ein 70B Modell auf zwei GPUs ausführen?',
-          a: 'Ja -- llama.cpp und Ollama unterstützen Multi-GPU Inferenz auf NVIDIA Hardware. Zwei RTX 4090s (48 GB insgesamt VRAM) passen ein Q4_K_M 70B Modell vollständig in VRAM. Ollama verwaltet Multi-GPU automatisch, wenn mehrere GPUs vorhanden sind. Tensor Parallelism in llama.cpp (`--tensor-split`) kontrolliert, wie Layers verteilt werden.',
-        },
-        {
-          q: 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?',
-          a: 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen3 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoning-intensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.',
-        },
-        {
-          q: 'Unterstützt Ollama die automatische Ausführung von 70B Modellen?',
-          a: 'Ja. Das Ausführen von `ollama run llama3.3:70b` lädt das Modell herunter und führt es mit automatischem GPU Layer Offloading aus. Ollama erkennt verfügbare VRAM und System RAM, verlagert so viele Layers wie möglich zur GPU und führt die Reste auf der CPU aus. Keine manuelle Konfiguration erforderlich für grundlegende Nutzung.',
-        },
-        {
-          q: 'Wie viel Strom verbraucht die Ausführung eines 70B Modells?',
-          a: 'Ein Mac Studio M2 Ultra, der 70B Inferenz ausführt, verbraucht etwa 30-50 W. Ein NVIDIA RTX 4090 Desktop unter Last verbraucht 350-450 W. Bei 0,15 € pro kWh kostet kontinuierliche 70B Inferenz auf einem RTX 4090 etwa 0,05-0,07 € pro Stunde. Apple Silicon ist 7-10× energieeffizienter für diesen Workload.',
-        },
-        {
-          q: 'Lohnen sich 70B Modelle im Vergleich zu 13B Modellen für alltägliche Aufgaben?',
-          a: 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.',
-        },
-        {
-          q: 'Ist die Q4_K_M Quantisierung für 70B Modelle ausreichend?',
-          a: 'Ja, Q4_K_M ist die Standard-Empfehlung für 70B Modelle bei Verbraucher-Hardware. Der Qualitätsverlust beträgt 1-3% bei MMLU Benchmarks im Vergleich zu FP16 und ist bei praktischen Aufgaben imperceptible. Q5_K_M und Q8_0 bieten bessere Qualität, benötigen aber erheblich mehr RAM und sind auf Consumer Hardware nicht praktisch.',
-        },
-        {
-          q: 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?',
-          a: 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/de) auf deinen speziellen Aufgaben.',
-        },
-        {
-          q: 'DSGVO: Muss ich bei der Verwendung von lokalen 70B Modellen die DSGVO beachten?',
-          a: 'Bei lokaler Inferenz werden keine Daten an externe Server übertragen, was lokale LLMs unter der DSGVO vorteilhaft macht. Sie sind jedoch kein automatischer DSGVO-Compliance-Garant. Unter Artikel 28 (Datenverarbeitervertrag) musst du dokumentieren, wie Eingaben verarbeitet werden und wie lange Sie verwahrt werden. Beachte die BSI-Grundschutz-Kataloge für Klassifikation sensibler Daten (Kundeninfo, Finanzakten, Patientenakten). Lokale Systeme können für Verarbeitung vertraulicher Unternehmensdaten vorteilhaft sein, benötigen aber für regulierte Sektoren (Finanzwesen, Gesundheitswesen, Recht) explizite Compliance-Dokumentation mit Datenschutz- und Sicherheitsauditoren.',
-        },
-        {
-          q: 'Ist ein 70B Modell für den deutschen Mittelstand geeignet?',
-          a: 'Für KMU und Mittelstand-Unternehmen (50-500 Mitarbeiter) können lokale 70B Modelle strategisch sinnvoll sein. Sie ermöglichen Datenbeschaffenheit: keine Übertragung sensibler Geschäftsdaten an US-Cloud-Provider (Compliance mit BSI-Grundschutz). Typische Anwendungsfälle: Analyse von Kundenanfragen, Automatisierung von Dokumentation, interne Wissensdatenbank-Abfrage. Hardware-Kosten (Mac Studio oder RTX 4090 Workstation) von 2.000-4.000 € einmaliges Kapital amortisiert sich schnell bei größeren Teams. Empfehlung: Konsultiere mit Datenschutz- und IT-Sicherheitsberatern für Umsetzung unter DSGVO und BSI-Standard.',
-        },
-      ],
+            { q: 'Was ist die billigste Hardware, auf der ein 70B Modell praktisch brauchbar ist?', a: 'Der Mac mini M5 Pro (1.699 $, 64 GB unified memory, ab 22. September 2026 verfügbar) wird voraussichtlich die günstigste neue Hardware sein, die ein 70B Modell ausführen kann -- 800 $ günstiger als die bisherige günstigste Neuoption, der Mac Studio M5 Max (64 GB, 2.499 $). Ein gebrauchter Mac Studio M2 Ultra (64 GB unified memory) für etwa 2.000 € bleibt der günstigste gebrauchte Weg mit bewährten 25+ tok/sec. Für den Mac mini M5 Pro liegen noch keine unabhängigen Benchmarks vor. Ein NVIDIA RTX 4090 Desktop-Setup (24 GB VRAM + 32 GB RAM) kostet etwa 3.000-4.000 € insgesamt, erzeugt aber wegen Layer Offloading langsamere Inferenz. Verwechsle den Mac mini M5 Pro nicht mit dem Basis-Mac mini M6 (899 $) -- der M6 hat maximal 32 GB unified memory und kann kein 70B Modell ausführen.' },
+            { q: 'Kann der Mac mini M6 ein 70B Modell ausführen?', a: 'Nein. Der Mac mini M6 (ab 899 $) hat maximal 32 GB unified memory und 170 GB/s Bandbreite -- deutlich weniger als die 40+ GB, die ein 70B Modell bei Q4_K_M benötigt. Für 70B auf einem Mac mini bestelle den Mac mini M5 Pro (ab 1.699 $, 64 GB unified memory, 307 GB/s Bandbreite, Thunderbolt 5). Beide sind ab dem 22. September 2026 verfügbar, und für keinen der beiden Chips liegen bisher unabhängige Benchmarks vor.' },
+            { q: 'Kann ich ein 70B Modell auf zwei GPUs ausführen?', a: 'Ja -- llama.cpp und Ollama unterstützen Multi-GPU Inferenz auf NVIDIA Hardware. Zwei RTX 4090s (48 GB insgesamt VRAM) passen ein Q4_K_M 70B Modell vollständig in VRAM. Ollama verwaltet Multi-GPU automatisch, wenn mehrere GPUs vorhanden sind. Tensor Parallelism in llama.cpp (`--tensor-split`) kontrolliert, wie Layers verteilt werden.' },
+            { q: 'Wie vergleicht sich 70B lokale Qualität mit GPT-5.5?', a: 'Bei MMLU und HumanEval Benchmarks entspricht Llama 3.3 70B (82%, 88%) und Qwen3 72B (84%, 87%) oder übertrifft leicht GPT-4 (2023) Scores. GPT-5.5 (2024) schneidet höher bei reasoning-intensiven Aufgaben ab. Für allgemeine Anweisung-Befolgung, Zusammenfassung und Code-Generierung sind 70B lokale Modelle bei den meisten Aufgaben konkurrenzfähig mit GPT-5.5.' },
+            { q: 'Unterstützt Ollama die automatische Ausführung von 70B Modellen?', a: 'Ja. Das Ausführen von `ollama run llama3.3:70b` lädt das Modell herunter und führt es mit automatischem GPU Layer Offloading aus. Ollama erkennt verfügbare VRAM und System RAM, verlagert so viele Layers wie möglich zur GPU und führt die Reste auf der CPU aus. Keine manuelle Konfiguration erforderlich für grundlegende Nutzung.' },
+            { q: 'Wie viel Strom verbraucht die Ausführung eines 70B Modells?', a: 'Ein Mac Studio M2 Ultra, der 70B Inferenz ausführt, verbraucht etwa 30-50 W. Ein NVIDIA RTX 4090 Desktop unter Last verbraucht 350-450 W. Bei 0,15 € pro kWh kostet kontinuierliche 70B Inferenz auf einem RTX 4090 etwa 0,05-0,07 € pro Stunde. Apple Silicon ist 7-10× energieeffizienter für diesen Workload.' },
+            { q: 'Lohnen sich 70B Modelle im Vergleich zu 13B Modellen für alltägliche Aufgaben?', a: 'Bei komplexem Reasoning, Analyse längerer Dokumente und nuanciertem Schreiben ja -- der Qualitätsunterschied ist spürbar. Bei einfacher Zusammenfassung, Fragen beantworten und Klassifizierung erzeugt ein 13B oder sogar 7B Modell fast identische Ausgaben. Führe beide auf deinen spezifischen Use-Case mit [PromptQuorum](/de) durch, um den Qualitätsunterschied zu quantifizieren, bevor du in 70B Hardware investierst.' },
+            { q: 'Ist die Q4_K_M Quantisierung für 70B Modelle ausreichend?', a: 'Ja, Q4_K_M ist die Standard-Empfehlung für 70B Modelle bei Verbraucher-Hardware. Der Qualitätsverlust beträgt 1-3% bei MMLU Benchmarks im Vergleich zu FP16 und ist bei praktischen Aufgaben imperceptible. Q5_K_M und Q8_0 bieten bessere Qualität, benötigen aber erheblich mehr RAM und sind auf Consumer Hardware nicht praktisch.' },
+            { q: 'Sollte ich 70B oder 34B Modelle auf meinem System laufen lassen?', a: 'Wenn du mindestens 48 GB RAM hast (dediziert für das Modell), wähle 70B -- der Qualitätssprung ist erheblich und rechtfertigt die zusätzliche Hardware-Anforderung. Mit 32-48 GB RAM ist ein 34B Modell eine praktischere Option mit noch respektabler Qualität (ähnlich GPT-4o mini). Teste beide mit [PromptQuorum](/de) auf deinen speziellen Aufgaben.' },
+            { q: 'DSGVO: Muss ich bei der Verwendung von lokalen 70B Modellen die DSGVO beachten?', a: 'Bei lokaler Inferenz werden keine Daten an externe Server übertragen, was lokale LLMs unter der DSGVO vorteilhaft macht. Sie sind jedoch kein automatischer DSGVO-Compliance-Garant. Unter Artikel 28 (Datenverarbeitervertrag) musst du dokumentieren, wie Eingaben verarbeitet werden und wie lange Sie verwahrt werden. Beachte die BSI-Grundschutz-Kataloge für Klassifikation sensibler Daten (Kundeninfo, Finanzakten, Patientenakten). Lokale Systeme können für Verarbeitung vertraulicher Unternehmensdaten vorteilhaft sein, benötigen aber für regulierte Sektoren (Finanzwesen, Gesundheitswesen, Recht) explizite Compliance-Dokumentation mit Datenschutz- und Sicherheitsauditoren.' },
+            { q: 'Ist ein 70B Modell für den deutschen Mittelstand geeignet?', a: 'Für KMU und Mittelstand-Unternehmen (50-500 Mitarbeiter) können lokale 70B Modelle strategisch sinnvoll sein. Sie ermöglichen Datenbeschaffenheit: keine Übertragung sensibler Geschäftsdaten an US-Cloud-Provider (Compliance mit BSI-Grundschutz). Typische Anwendungsfälle: Analyse von Kundenanfragen, Automatisierung von Dokumentation, interne Wissensdatenbank-Abfrage. Hardware-Kosten (Mac Studio oder RTX 4090 Workstation) von 2.000-4.000 € einmaliges Kapital amortisiert sich schnell bei größeren Teams. Empfehlung: Konsultiere mit Datenschutz- und IT-Sicherheitsberatern für Umsetzung unter DSGVO und BSI-Standard.' },
+          ],
     },
     sources: {
       title: 'Quellen',

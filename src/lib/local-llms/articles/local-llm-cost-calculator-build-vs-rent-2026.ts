@@ -668,39 +668,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'L\'IA locale est-elle toujours moins chère que le cloud ?',
-            a: 'Non. Le matériel local n\'est moins cher qu\'au-delà d\'un seuil d\'usage dépendant du prix du matériel, du tarif électrique et du tarif cloud — typiquement environ 250–500 h/mois pour une workstation GPU milieu de gamme. En dessous, la location cloud est généralement moins chère.',
-          },
-          {
-            q: 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?',
-            a: 'Pour une workstation RTX 4090 à 2 800 $ face à un tarif cloud de 0,50 $/h, le seuil naïf (prix ÷ tarif) est de 5 600 heures cumulées. En intégrant électricité et valeur de revente, le seuil TCO complet à 240 h/mois (8 h/jour) est d\'environ 4 780 heures, soit environ 20 mois. Utilisez le calculateur ci-dessus pour vos chiffres.',
-          },
-          {
-            q: 'L\'électricité est-elle incluse dans les estimations de coût de l\'IA locale ?',
-            a: 'Elle devrait l\'être, mais elle est souvent absente des comparaisons simples. Un système de 450 W fonctionnant 8 h/jour ajoute environ 18 $/mois aux États-Unis ou environ 24 $/mois en France, selon les tarifs résidentiels.',
-          },
-          {
-            q: 'Un Mac convient-il pour les LLM locaux ?',
-            a: 'Les Mac à grande mémoire unifiée peuvent exécuter de grands modèles (classe 70B) à faible consommation, ce qui améliore leur coût de possession, en particulier dans les pays à tarif électrique élevé. Voir le guide Apple Silicon lié plus haut pour les tailles de modèle et performances actuelles.',
-          },
-          {
-            q: '24 Go de VRAM suffisent-ils pour les LLM locaux ?',
-            a: '24 Go (RTX 3090 ou RTX 4090) exécutent confortablement des modèles jusqu\'à environ 30–34B de paramètres en quantification 4 bits, ce qui couvre la plupart des usages IA locale mono-utilisateur. Les modèles classe 70B nécessitent environ 48 Go, atteints avec des configurations bi-GPU ou des Mac à grande mémoire unifiée.',
-          },
-          {
-            q: 'Faut-il acheter une RTX 4090 ou louer du temps de GPU cloud ?',
-            a: 'Achetez si vous prévoyez un usage soutenu au-delà d\'environ 250–500 h/mois sur plusieurs années et pouvez garder le matériel bien utilisé. Louez si votre usage est occasionnel, sporadique, ou si vous validez encore la charge de travail — la location évite entièrement l\'investissement initial d\'environ 2 000–2 600 $ d\'une RTX 4090 (prix EOL, août 2026, fin de production au T2 2026).',
-          },
-          {
-            q: 'Quel est le moyen le moins cher d\'exécuter un LLM local ?',
-            a: 'Pour le coût initial le plus bas, un mini PC Ryzen (500–1 000 $) exécutant un modèle 7B–14B quantifié est la configuration locale dédiée la moins chère. Pour le coût le plus bas par inférence à faible volume, la location cloud GPU sans aucun achat de matériel est moins chère.',
-          },
-          {
-            q: 'Exécuter l\'IA en local signifie-t-il que les données ne quittent jamais mon ordinateur ?',
-            a: 'Oui, pour l\'inférence locale via des outils comme Ollama sur votre propre matériel — aucune donnée n\'est envoyée nulle part. Ceci est distinct du service cloud géré séparé d\'Ollama, qui envoie bien des requêtes à l\'infrastructure d\'Ollama ; seul le mode local sur l\'appareil garde les données entièrement sur votre machine.',
-          },
-        ],
+            { q: 'L\'IA locale est-elle toujours moins chère que le cloud ?', a: 'Non. Le matériel local n\'est moins cher qu\'au-delà d\'un seuil d\'usage dépendant du prix du matériel, du tarif électrique et du tarif cloud — typiquement environ 250–500 h/mois pour une workstation GPU milieu de gamme. En dessous, la location cloud est généralement moins chère.' },
+            { q: 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?', a: 'Pour une workstation RTX 4090 à 2 800 $ face à un tarif cloud de 0,50 $/h, le seuil naïf (prix ÷ tarif) est de 5 600 heures cumulées. En intégrant électricité et valeur de revente, le seuil TCO complet à 240 h/mois (8 h/jour) est d\'environ 4 780 heures, soit environ 20 mois. Utilisez le calculateur ci-dessus pour vos chiffres.' },
+            { q: 'L\'électricité est-elle incluse dans les estimations de coût de l\'IA locale ?', a: 'Elle devrait l\'être, mais elle est souvent absente des comparaisons simples. Un système de 450 W fonctionnant 8 h/jour ajoute environ 18 $/mois aux États-Unis ou environ 24 $/mois en France, selon les tarifs résidentiels.' },
+            { q: 'Un Mac convient-il pour les LLM locaux ?', a: 'Les Mac à grande mémoire unifiée peuvent exécuter de grands modèles (classe 70B) à faible consommation, ce qui améliore leur coût de possession, en particulier dans les pays à tarif électrique élevé. Voir le guide Apple Silicon lié plus haut pour les tailles de modèle et performances actuelles.' },
+            { q: '24 Go de VRAM suffisent-ils pour les LLM locaux ?', a: '24 Go (RTX 3090 ou RTX 4090) exécutent confortablement des modèles jusqu\'à environ 30–34B de paramètres en quantification 4 bits, ce qui couvre la plupart des usages IA locale mono-utilisateur. Les modèles classe 70B nécessitent environ 48 Go, atteints avec des configurations bi-GPU ou des Mac à grande mémoire unifiée.' },
+            { q: 'Faut-il acheter une RTX 4090 ou louer du temps de GPU cloud ?', a: 'Achetez si vous prévoyez un usage soutenu au-delà d\'environ 250–500 h/mois sur plusieurs années et pouvez garder le matériel bien utilisé. Louez si votre usage est occasionnel, sporadique, ou si vous validez encore la charge de travail — la location évite entièrement l\'investissement initial d\'environ 2 000–2 600 $ d\'une RTX 4090 (prix EOL, août 2026, fin de production au T2 2026).' },
+            { q: 'Quel est le moyen le moins cher d\'exécuter un LLM local ?', a: 'Pour le coût initial le plus bas, un mini PC Ryzen (500–1 000 $) exécutant un modèle 7B–14B quantifié est la configuration locale dédiée la moins chère. Pour le coût le plus bas par inférence à faible volume, la location cloud GPU sans aucun achat de matériel est moins chère.' },
+            { q: 'Exécuter l\'IA en local signifie-t-il que les données ne quittent jamais mon ordinateur ?', a: 'Oui, pour l\'inférence locale via des outils comme Ollama sur votre propre matériel — aucune donnée n\'est envoyée nulle part. Ceci est distinct du service cloud géré séparé d\'Ollama, qui envoie bien des requêtes à l\'infrastructure d\'Ollama ; seul le mode local sur l\'appareil garde les données entièrement sur votre machine.' },
+            { q: 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?', a: 'Cela dépend du volume d\'utilisation. En dessous de 100 h/mois, la location cloud gagne presque toujours. Au-delà de ~500 h/mois, posséder le matériel gagne généralement une fois électricité et revente pris en compte.' },
+          ],
       },
       relatedReading: {
         id: 'related-reading',
@@ -720,17 +697,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Cela dépend du volume d\'utilisation. En dessous de 100 h/mois, la location cloud gagne presque toujours. Au-delà de ~500 h/mois, posséder le matériel gagne généralement une fois électricité et revente pris en compte.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Pour une workstation RTX 4090 à 2 800 $ face à 0,50 $/h de cloud, le seuil naïf est de 5 600 heures ; le seuil TCO complet avec électricité et revente est d\'environ 4 780 heures (environ 20 mois à 8 h/jour).' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'L\'IA locale est-elle toujours moins chère que le cloud ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Le matériel local n\'est moins cher qu\'au-delà d\'un seuil d\'usage dépendant du prix du matériel, du tarif électrique et du tarif cloud — typiquement environ 250–500 h/mois pour une workstation GPU milieu de gamme. En dessous, la location cloud est généralement moins chère.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'À partir de combien d\'heures l\'achat de matériel local devient-il rentable ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour une workstation RTX 4090 à 2 800 $ face à un tarif cloud de 0,50 $/h, le seuil naïf (prix ÷ tarif) est de 5 600 heures cumulées. En intégrant électricité et valeur de revente, le seuil TCO complet à 240 h/mois (8 h/jour) est d\'environ 4 780 heures, soit environ 20 mois. Utilisez le calculateur ci-dessus pour vos chiffres.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'électricité est-elle incluse dans les estimations de coût de l\'IA locale ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Elle devrait l\'être, mais elle est souvent absente des comparaisons simples. Un système de 450 W fonctionnant 8 h/jour ajoute environ 18 $/mois aux États-Unis ou environ 24 $/mois en France, selon les tarifs résidentiels.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Un Mac convient-il pour les LLM locaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les Mac à grande mémoire unifiée peuvent exécuter de grands modèles (classe 70B) à faible consommation, ce qui améliore leur coût de possession, en particulier dans les pays à tarif électrique élevé. Voir le guide Apple Silicon lié plus haut pour les tailles de modèle et performances actuelles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '24 Go de VRAM suffisent-ils pour les LLM locaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '24 Go (RTX 3090 ou RTX 4090) exécutent confortablement des modèles jusqu\'à environ 30–34B de paramètres en quantification 4 bits, ce qui couvre la plupart des usages IA locale mono-utilisateur. Les modèles classe 70B nécessitent environ 48 Go, atteints avec des configurations bi-GPU ou des Mac à grande mémoire unifiée.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Faut-il acheter une RTX 4090 ou louer du temps de GPU cloud ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Achetez si vous prévoyez un usage soutenu au-delà d\'environ 250–500 h/mois sur plusieurs années et pouvez garder le matériel bien utilisé. Louez si votre usage est occasionnel, sporadique, ou si vous validez encore la charge de travail — la location évite entièrement l\'investissement initial d\'environ 2 000–2 600 $ d\'une RTX 4090 (prix EOL, août 2026, fin de production au T2 2026).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est le moyen le moins cher d\'exécuter un LLM local ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour le coût initial le plus bas, un mini PC Ryzen (500–1 000 $) exécutant un modèle 7B–14B quantifié est la configuration locale dédiée la moins chère. Pour le coût le plus bas par inférence à faible volume, la location cloud GPU sans aucun achat de matériel est moins chère.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Exécuter l\'IA en local signifie-t-il que les données ne quittent jamais mon ordinateur ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, pour l\'inférence locale via des outils comme Ollama sur votre propre matériel — aucune donnée n\'est envoyée nulle part. Ceci est distinct du service cloud géré séparé d\'Ollama, qui envoie bien des requêtes à l\'infrastructure d\'Ollama ; seul le mode local sur l\'appareil garde les données entièrement sur votre machine.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Est-il moins cher de construire un serveur LLM local ou de louer un GPU cloud ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cela dépend du volume d\'utilisation. En dessous de 100 h/mois, la location cloud gagne presque toujours. Au-delà de ~500 h/mois, posséder le matériel gagne généralement une fois électricité et revente pris en compte.',
+            },
+          },
+        ],
     },
     schema: { '@type': 'TechArticle', headline: 'IA locale vs IA cloud : calculateur de coût (construire vs louer) 2026', description: 'Calculateur interactif de coût total de possession comparant matériel GPU local et location cloud GPU pour LLM en 2026.', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-26', dateModified: '2026-08-28', url: 'https://www.promptquorum.com/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026', inLanguage: 'fr' },
   },

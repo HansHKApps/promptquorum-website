@@ -103,7 +103,7 @@ schema: {
             'name': 'Can I summarize an entire book with a local LLM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A typical 300-page book is 90,000-120,000 words -- approximately 120K-160K tokens. This exceeds the practical reliable context of most 7B models. For 7B models, split the book into 20K-word chapters, summarize each, then summarize the summaries. A 70B model handles up to 64K tokens reliably.',
+              'text': 'A typical 300-page book is 90,000-120,000 words -- approximately 120K-160K tokens. This exceeds the practical reliable context of most 7B models and requires either a 70B model (64K reliable) or chunked processing. For 7B models, split the book into 20K-word chapters and summarize each, then summarize the chapter summaries.',
             },
           },
           {
@@ -111,7 +111,7 @@ schema: {
             'name': 'How many pages of text fit in 32K tokens?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Approximately 50-70 pages of standard English text at 250 words per page. A 32K token context holds a short novel, a full research paper with appendices, or a complete technical specification document.',
+              'text': 'Approximately 50-70 pages of standard English text (250 words per page). A 32K token context holds a short novel, a full research paper with appendices, or a complete technical specification document.',
             },
           },
           {
@@ -119,7 +119,55 @@ schema: {
             'name': 'Does increasing context length slow down inference?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Processing a 32K context takes approximately 3-4x longer to generate the first token than a 4K context, due to quadratic attention scaling. Generation speed (tokens per second after the first token) is not significantly affected, but time-to-first-token scales with input length.',
+              'text': 'Yes -- processing a 32K context takes approximately 3-4× longer than processing a 4K context on the same hardware, due to the quadratic scaling of attention computation. Generation speed (tokens per second) is not significantly affected, but the time to first token (TTFT) scales with input length.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which local LLM handles RAG better than long context?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For document search and retrieval tasks, RAG (retrieval-augmented generation) is often more effective than feeding entire documents as context. RAG retrieves the 3-5 most relevant chunks from a large document set and provides only those to the model. This uses 4K-8K tokens of context and avoids the "lost in the middle" problem. Tools like GPT4All LocalDocs and LlamaIndex implement local RAG.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the KV cache and why does it grow with context length?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The KV cache (key-value cache) stores attention states for every token processed in the context window. Each token requires a fixed amount of memory for its key and value vectors -- so a 32K context requires 8× more KV cache memory than a 4K context. This is why a 7B model at Q4_K_M needs ~6 GB for 4K context but ~9 GB for 32K context. The model weights stay the same -- only the KV cache grows.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can local models handle 1M token contexts like Gemini 3.1 Pro?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The mainstream local models in June 2026 top out at 128K tokens, which covers most real-world use cases. 1M-token local inference requires specialized hardware (150+ GB VRAM). For the vast majority of long-document tasks, Qwen3 14B at 128K context is the practical answer.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the "lost in the middle" problem and how do I avoid it?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Research shows LLMs reliably retrieve information from the beginning and end of the context window, but miss details from the middle. For a 128K context, content placed at the 40K-80K token mark is most likely to be ignored. To avoid this: either keep important information at the start of the prompt, use RAG to retrieve only relevant chunks, or process long documents in overlapping 16K-32K sections.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I check what context length Ollama is using?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Run `ollama show <model>` -- the output lists the parameters including num_ctx. If it shows 2048, Ollama is using the default, not the model\'s full context window. To change it persistently, create a Modelfile with PARAMETER num_ctx 32768 and run ollama create <name> -f Modelfile. Check active sessions with ollama ps.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is long context or RAG better for document question-answering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG is usually more effective and RAM-efficient than long context for document Q&A. RAG retrieves 3-5 relevant chunks (4K-8K tokens total) from a large corpus and avoids the "lost in the middle" problem. Long context is better when the model needs to understand the entire document structure or when exact ordering and relationships between sections matter. For most practical document Q&A, start with RAG.',
             },
           },
           {
@@ -128,46 +176,6 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'As of June 2026: Qwen3 (all sizes 4B–30B), Gemma 4 (E2B/26B-A4B/31B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'What is the KV cache and why does it grow with context length?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'The KV cache stores attention states for every token in the context window. A 32K context requires 8x more KV cache memory than 4K context. A 7B model at Q4_K_M needs ~6 GB for 4K context but ~9 GB for 32K context. Model weights stay the same -- only the KV cache grows.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Can local models handle 1M token contexts like Gemini 3.1 Pro?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'The mainstream local models in June 2026 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — all support 128K tokens natively. 1M-token local inference requires specialized hardware (150+ GB VRAM) and models not yet in mainstream Ollama. For most users, 128K with Qwen3 14B covers the vast majority of long-document tasks.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'What is the lost in the middle problem?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'LLMs reliably retrieve information from the beginning and end of the context window but miss details from the middle. For a 128K context, content placed at the 40K-80K token mark is most likely to be ignored. Fix: keep critical information at the prompt start, use RAG, or process documents in overlapping 16K-32K sections.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'How do I check what context length Ollama is using?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Run ollama show <model> -- look for num_ctx in the output. If it shows 2048, Ollama is using the default. To change it: create a Modelfile with PARAMETER num_ctx 32768 and run ollama create <name> -f Modelfile. Verify active sessions with ollama ps.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Is long context or RAG better for document question-answering?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'RAG is usually more effective and RAM-efficient for document Q&A across many documents. Long context is better when reasoning over a complete coherent document -- a contract, codebase, or book chapter -- where missing any section breaks the analysis. Choose by task: search → RAG, holistic analysis → long context.',
             },
           },
           {
@@ -423,42 +431,17 @@ schema: {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            {
-              q: 'Can I summarize an entire book with a local LLM?',
-              a: 'A typical 300-page book is 90,000-120,000 words -- approximately 120K-160K tokens. This exceeds the practical reliable context of most 7B models and requires either a 70B model (64K reliable) or chunked processing. For 7B models, split the book into 20K-word chapters and summarize each, then summarize the chapter summaries.',
-            },
-            {
-              q: 'How many pages of text fit in 32K tokens?',
-              a: 'Approximately 50-70 pages of standard English text (250 words per page). A 32K token context holds a short novel, a full research paper with appendices, or a complete technical specification document.',
-            },
-            {
-              q: 'Does increasing context length slow down inference?',
-              a: 'Yes -- processing a 32K context takes approximately 3-4× longer than processing a 4K context on the same hardware, due to the quadratic scaling of attention computation. Generation speed (tokens per second) is not significantly affected, but the time to first token (TTFT) scales with input length.',
-            },
-            {
-              q: 'Which local LLM handles RAG better than long context?',
-              a: 'For document search and retrieval tasks, RAG (retrieval-augmented generation) is often more effective than feeding entire documents as context. RAG retrieves the 3-5 most relevant chunks from a large document set and provides only those to the model. This uses 4K-8K tokens of context and avoids the "lost in the middle" problem. Tools like GPT4All LocalDocs and LlamaIndex implement local RAG.',
-            },
-            {
-              q: 'What is the KV cache and why does it grow with context length?',
-              a: 'The KV cache (key-value cache) stores attention states for every token processed in the context window. Each token requires a fixed amount of memory for its key and value vectors -- so a 32K context requires 8× more KV cache memory than a 4K context. This is why a 7B model at Q4_K_M needs ~6 GB for 4K context but ~9 GB for 32K context. The model weights stay the same -- only the KV cache grows.',
-            },
-            {
-              q: 'Can local models handle 1M token contexts like Gemini 3.1 Pro?',
-              a: 'The mainstream local models in June 2026 top out at 128K tokens, which covers most real-world use cases. 1M-token local inference requires specialized hardware (150+ GB VRAM). For the vast majority of long-document tasks, Qwen3 14B at 128K context is the practical answer.',
-            },
-            {
-              q: 'What is the "lost in the middle" problem and how do I avoid it?',
-              a: 'Research shows LLMs reliably retrieve information from the beginning and end of the context window, but miss details from the middle. For a 128K context, content placed at the 40K-80K token mark is most likely to be ignored. To avoid this: either keep important information at the start of the prompt, use RAG to retrieve only relevant chunks, or process long documents in overlapping 16K-32K sections.',
-            },
-            {
-              q: 'How do I check what context length Ollama is using?',
-              a: 'Run `ollama show <model>` -- the output lists the parameters including num_ctx. If it shows 2048, Ollama is using the default, not the model\'s full context window. To change it persistently, create a Modelfile with PARAMETER num_ctx 32768 and run ollama create <name> -f Modelfile. Check active sessions with ollama ps.',
-            },
-            {
-              q: 'Is long context or RAG better for document question-answering?',
-              a: 'RAG is usually more effective and RAM-efficient than long context for document Q&A. RAG retrieves 3-5 relevant chunks (4K-8K tokens total) from a large corpus and avoids the "lost in the middle" problem. Long context is better when the model needs to understand the entire document structure or when exact ordering and relationships between sections matter. For most practical document Q&A, start with RAG.',
-            },
+            { q: 'Can I summarize an entire book with a local LLM?', a: 'A typical 300-page book is 90,000-120,000 words -- approximately 120K-160K tokens. This exceeds the practical reliable context of most 7B models and requires either a 70B model (64K reliable) or chunked processing. For 7B models, split the book into 20K-word chapters and summarize each, then summarize the chapter summaries.' },
+            { q: 'How many pages of text fit in 32K tokens?', a: 'Approximately 50-70 pages of standard English text (250 words per page). A 32K token context holds a short novel, a full research paper with appendices, or a complete technical specification document.' },
+            { q: 'Does increasing context length slow down inference?', a: 'Yes -- processing a 32K context takes approximately 3-4× longer than processing a 4K context on the same hardware, due to the quadratic scaling of attention computation. Generation speed (tokens per second) is not significantly affected, but the time to first token (TTFT) scales with input length.' },
+            { q: 'Which local LLM handles RAG better than long context?', a: 'For document search and retrieval tasks, RAG (retrieval-augmented generation) is often more effective than feeding entire documents as context. RAG retrieves the 3-5 most relevant chunks from a large document set and provides only those to the model. This uses 4K-8K tokens of context and avoids the "lost in the middle" problem. Tools like GPT4All LocalDocs and LlamaIndex implement local RAG.' },
+            { q: 'What is the KV cache and why does it grow with context length?', a: 'The KV cache (key-value cache) stores attention states for every token processed in the context window. Each token requires a fixed amount of memory for its key and value vectors -- so a 32K context requires 8× more KV cache memory than a 4K context. This is why a 7B model at Q4_K_M needs ~6 GB for 4K context but ~9 GB for 32K context. The model weights stay the same -- only the KV cache grows.' },
+            { q: 'Can local models handle 1M token contexts like Gemini 3.1 Pro?', a: 'The mainstream local models in June 2026 top out at 128K tokens, which covers most real-world use cases. 1M-token local inference requires specialized hardware (150+ GB VRAM). For the vast majority of long-document tasks, Qwen3 14B at 128K context is the practical answer.' },
+            { q: 'What is the "lost in the middle" problem and how do I avoid it?', a: 'Research shows LLMs reliably retrieve information from the beginning and end of the context window, but miss details from the middle. For a 128K context, content placed at the 40K-80K token mark is most likely to be ignored. To avoid this: either keep important information at the start of the prompt, use RAG to retrieve only relevant chunks, or process long documents in overlapping 16K-32K sections.' },
+            { q: 'How do I check what context length Ollama is using?', a: 'Run `ollama show <model>` -- the output lists the parameters including num_ctx. If it shows 2048, Ollama is using the default, not the model\'s full context window. To change it persistently, create a Modelfile with PARAMETER num_ctx 32768 and run ollama create <name> -f Modelfile. Check active sessions with ollama ps.' },
+            { q: 'Is long context or RAG better for document question-answering?', a: 'RAG is usually more effective and RAM-efficient than long context for document Q&A. RAG retrieves 3-5 relevant chunks (4K-8K tokens total) from a large corpus and avoids the "lost in the middle" problem. Long context is better when the model needs to understand the entire document structure or when exact ordering and relationships between sections matter. For most practical document Q&A, start with RAG.' },
+            { q: 'Which Ollama models have the largest context window?', a: 'As of June 2026: Qwen3 (all sizes 4B–30B), Gemma 4 (E2B/26B-A4B/31B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.' },
+            { q: 'How do I run a local LLM with 128K context on 16 GB RAM?', a: 'On 16 GB RAM, Mistral Small 3.1 24B at Q4_K_M with 32K context uses ~17 GB -- exceeds 16 GB. Use Llama 3.1 8B at Q4_K_M with 32K context (~9 GB) or 128K context (~14 GB) for a comfortable fit. Set num_ctx in a Modelfile: PARAMETER num_ctx 32768.' },
           ],
         },
         sources: {
@@ -560,7 +543,7 @@ schema: {
             'name': '¿Puedo resumir un libro completo con un LLM local?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Un libro típico de 300 páginas tiene 90.000-120.000 palabras -- aproximadamente 120K-160K tokens. Esto supera el contexto confiable práctico de la mayoría de los modelos 7B. Para modelos 7B, divide el libro en capítulos de 20K palabras, resume cada uno y luego resume los resúmenes. Un modelo de 70B maneja hasta 64K tokens de forma fiable.',
+              'text': 'Un libro típico de 300 páginas tiene 90.000-120.000 palabras -- aproximadamente 120K-160K tokens. Esto supera el contexto confiable práctico de la mayoría de los modelos 7B y requiere un modelo de 70B (64K fiable) o procesamiento por fragmentos. Para modelos 7B, divide el libro en capítulos de 20K palabras, resume cada uno y luego resume los resúmenes de los capítulos.',
             },
           },
           {
@@ -568,7 +551,7 @@ schema: {
             'name': '¿Cuántas páginas de texto caben en 32K tokens?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Aproximadamente 50-70 páginas de texto en español estándar a 250 palabras por página. Un contexto de 32K tokens puede contener una novela corta, un artículo de investigación completo con apéndices o un documento de especificación técnica completo.',
+              'text': 'Aproximadamente 50-70 páginas de texto estándar (250 palabras por página). Un contexto de 32K tokens puede contener una novela corta, un artículo de investigación completo con apéndices o un documento de especificación técnica completo.',
             },
           },
           {
@@ -576,7 +559,55 @@ schema: {
             'name': '¿Aumentar la longitud de contexto ralentiza la inferencia?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí. Procesar un contexto de 32K tarda aproximadamente 3-4 veces más en generar el primer token que un contexto de 4K, debido al escalado cuadrático de la atención. La velocidad de generación (tokens por segundo tras el primer token) no se ve afectada de forma significativa, pero el tiempo hasta el primer token escala con la longitud de la entrada.',
+              'text': 'Sí -- procesar un contexto de 32K tarda aproximadamente 3-4 veces más que procesar un contexto de 4K en el mismo hardware, debido al escalado cuadrático del cálculo de atención. La velocidad de generación (tokens por segundo) no se ve afectada de forma significativa, pero el tiempo hasta el primer token (TTFT) escala con la longitud de la entrada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué LLM local maneja mejor RAG que el contexto largo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para tareas de búsqueda y recuperación de documentos, RAG (generación aumentada por recuperación) suele ser más efectivo que alimentar documentos completos como contexto. RAG recupera los 3-5 fragmentos más relevantes de un gran conjunto de documentos y solo proporciona esos al modelo. Esto usa 4K-8K tokens de contexto y evita el problema "lost in the middle". Herramientas como GPT4All LocalDocs y LlamaIndex implementan RAG local.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el caché KV y por qué crece con la longitud del contexto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El caché KV (caché clave-valor) almacena los estados de atención de cada token procesado en la ventana de contexto. Cada token requiere una cantidad fija de memoria para sus vectores clave y valor -- por eso un contexto de 32K requiere 8 veces más memoria de caché KV que uno de 4K. Es por esto que un modelo 7B en Q4_K_M necesita ~6 GB para 4K de contexto, pero ~9 GB para 32K. Los pesos del modelo no cambian -- solo crece el caché KV.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Los modelos locales pueden manejar contextos de 1M tokens como Gemini 3.1 Pro?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No -- a partir de abril de 2026, ningún modelo ejecutable localmente soporta contextos de 1M tokens. La ventana de 1M tokens de Gemini 3.1 Pro requiere la infraestructura TPU de Google. De forma local, 128K es el máximo soportado por el hardware de consumo actual. Para tareas que requieren contextos de 1M+ tokens, las APIs en la nube siguen siendo la única opción práctica.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el problema "lost in the middle" y cómo lo evito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las investigaciones muestran que los LLM recuperan de forma fiable la información del principio y el final de la ventana de contexto, pero pierden detalles del medio. Para un contexto de 128K, el contenido colocado en los tokens 40K-80K es el que más probable es que sea ignorado. Para evitarlo: mantén la información importante al inicio del prompt, usa RAG para recuperar solo los fragmentos relevantes, o procesa documentos largos en secciones solapadas de 16K-32K.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo verifico qué longitud de contexto está usando Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ejecuta `ollama show <modelo>` -- la salida lista los parámetros incluyendo num_ctx. Si muestra 2048, Ollama está usando el valor por defecto, no la ventana de contexto completa del modelo. Para cambiarlo de forma persistente, crea un Modelfile con PARAMETER num_ctx 32768 y ejecuta ollama create <nombre> -f Modelfile. Verifica las sesiones activas con ollama ps.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es mejor el contexto largo o RAG para preguntas y respuestas sobre documentos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG suele ser más efectivo y eficiente en RAM que el contexto largo para preguntas y respuestas sobre documentos. RAG recupera 3-5 fragmentos relevantes (4K-8K tokens en total) de un corpus grande y evita el problema "lost in the middle". El contexto largo es mejor cuando el modelo necesita entender la estructura completa del documento o cuando el orden exacto y las relaciones entre secciones son importantes. Para la mayoría de las preguntas y respuestas prácticas sobre documentos, empieza con RAG.',
             },
           },
           {
@@ -585,46 +616,6 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'A mayo de 2026: Llama 4 Scout soporta 10M tokens (práctico: 256K-1M en hardware suficiente). DeepSeek V4-Flash y Qwen 3.6 soportan 1M y 256K tokens respectivamente (Qwen 3.6 extensible a 1M mediante YaRN). Modelos anteriores: Qwen3, Llama 3.3, Qwen3 y Mistral Small soportan 128K tokens. Ollama usa 2048 tokens por defecto -- establece num_ctx explícitamente en un Modelfile para acceder a contextos largos.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Qué es el caché KV y por qué crece con la longitud del contexto?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'El caché KV almacena los estados de atención de cada token en la ventana de contexto. Un contexto de 32K requiere 8 veces más memoria de caché KV que uno de 4K. Un modelo 7B en Q4_K_M necesita ~6 GB para 4K de contexto, pero ~9 GB para 32K. Los pesos del modelo no cambian -- solo crece el caché KV.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Los modelos locales pueden manejar contextos de 1M tokens como Gemini 3.1 Pro?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Los modelos locales principales en junio de 2026 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — soportan 128K tokens nativamente, lo que cubre la gran mayoría de casos de uso con documentos largos. La inferencia local de 1M tokens requiere hardware especializado (150+ GB de VRAM). Para la mayoría de usuarios, Qwen3 14B con 128K de contexto es la respuesta práctica.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Qué es el problema "lost in the middle"?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Los LLM recuperan con fiabilidad la información del principio y el final de la ventana de contexto, pero pierden detalles del medio. Para un contexto de 128K, el contenido ubicado en los tokens 40K-80K es el que más probable es que se ignore. Solución: mantén la información crítica al inicio del prompt, usa RAG o procesa los documentos en secciones solapadas de 16K-32K.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Cómo verifico qué longitud de contexto está usando Ollama?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Ejecuta ollama show <modelo> -- busca num_ctx en la salida. Si muestra 2048, Ollama está usando el valor por defecto. Para cambiarlo: crea un Modelfile con PARAMETER num_ctx 32768 y ejecuta ollama create <nombre> -f Modelfile. Verifica las sesiones activas con ollama ps.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Es mejor el contexto largo o RAG para responder preguntas sobre documentos?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'RAG suele ser más efectivo y eficiente en RAM para preguntas y respuestas sobre documentos. El contexto largo es mejor cuando necesitas razonar sobre un documento completo y coherente -- un contrato, una base de código o un capítulo de libro -- donde perder cualquier sección rompe el análisis. Elige según la tarea: búsqueda → RAG, análisis holístico → contexto largo.',
             },
           },
           {
@@ -772,42 +763,17 @@ schema: {
           id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
-            {
-              q: '¿Puedo resumir un libro completo con un LLM local?',
-              a: 'Un libro típico de 300 páginas tiene 90.000-120.000 palabras -- aproximadamente 120K-160K tokens. Esto supera el contexto confiable práctico de la mayoría de los modelos 7B y requiere un modelo de 70B (64K fiable) o procesamiento por fragmentos. Para modelos 7B, divide el libro en capítulos de 20K palabras, resume cada uno y luego resume los resúmenes de los capítulos.',
-            },
-            {
-              q: '¿Cuántas páginas de texto caben en 32K tokens?',
-              a: 'Aproximadamente 50-70 páginas de texto estándar (250 palabras por página). Un contexto de 32K tokens puede contener una novela corta, un artículo de investigación completo con apéndices o un documento de especificación técnica completo.',
-            },
-            {
-              q: '¿Aumentar la longitud de contexto ralentiza la inferencia?',
-              a: 'Sí -- procesar un contexto de 32K tarda aproximadamente 3-4 veces más que procesar un contexto de 4K en el mismo hardware, debido al escalado cuadrático del cálculo de atención. La velocidad de generación (tokens por segundo) no se ve afectada de forma significativa, pero el tiempo hasta el primer token (TTFT) escala con la longitud de la entrada.',
-            },
-            {
-              q: '¿Qué LLM local maneja mejor RAG que el contexto largo?',
-              a: 'Para tareas de búsqueda y recuperación de documentos, RAG (generación aumentada por recuperación) suele ser más efectivo que alimentar documentos completos como contexto. RAG recupera los 3-5 fragmentos más relevantes de un gran conjunto de documentos y solo proporciona esos al modelo. Esto usa 4K-8K tokens de contexto y evita el problema "lost in the middle". Herramientas como GPT4All LocalDocs y LlamaIndex implementan RAG local.',
-            },
-            {
-              q: '¿Qué es el caché KV y por qué crece con la longitud del contexto?',
-              a: 'El caché KV (caché clave-valor) almacena los estados de atención de cada token procesado en la ventana de contexto. Cada token requiere una cantidad fija de memoria para sus vectores clave y valor -- por eso un contexto de 32K requiere 8 veces más memoria de caché KV que uno de 4K. Es por esto que un modelo 7B en Q4_K_M necesita ~6 GB para 4K de contexto, pero ~9 GB para 32K. Los pesos del modelo no cambian -- solo crece el caché KV.',
-            },
-            {
-              q: '¿Los modelos locales pueden manejar contextos de 1M tokens como Gemini 3.1 Pro?',
-              a: 'No -- a partir de abril de 2026, ningún modelo ejecutable localmente soporta contextos de 1M tokens. La ventana de 1M tokens de Gemini 3.1 Pro requiere la infraestructura TPU de Google. De forma local, 128K es el máximo soportado por el hardware de consumo actual. Para tareas que requieren contextos de 1M+ tokens, las APIs en la nube siguen siendo la única opción práctica.',
-            },
-            {
-              q: '¿Qué es el problema "lost in the middle" y cómo lo evito?',
-              a: 'Las investigaciones muestran que los LLM recuperan de forma fiable la información del principio y el final de la ventana de contexto, pero pierden detalles del medio. Para un contexto de 128K, el contenido colocado en los tokens 40K-80K es el que más probable es que sea ignorado. Para evitarlo: mantén la información importante al inicio del prompt, usa RAG para recuperar solo los fragmentos relevantes, o procesa documentos largos en secciones solapadas de 16K-32K.',
-            },
-            {
-              q: '¿Cómo verifico qué longitud de contexto está usando Ollama?',
-              a: 'Ejecuta `ollama show <modelo>` -- la salida lista los parámetros incluyendo num_ctx. Si muestra 2048, Ollama está usando el valor por defecto, no la ventana de contexto completa del modelo. Para cambiarlo de forma persistente, crea un Modelfile con PARAMETER num_ctx 32768 y ejecuta ollama create <nombre> -f Modelfile. Verifica las sesiones activas con ollama ps.',
-            },
-            {
-              q: '¿Es mejor el contexto largo o RAG para preguntas y respuestas sobre documentos?',
-              a: 'RAG suele ser más efectivo y eficiente en RAM que el contexto largo para preguntas y respuestas sobre documentos. RAG recupera 3-5 fragmentos relevantes (4K-8K tokens en total) de un corpus grande y evita el problema "lost in the middle". El contexto largo es mejor cuando el modelo necesita entender la estructura completa del documento o cuando el orden exacto y las relaciones entre secciones son importantes. Para la mayoría de las preguntas y respuestas prácticas sobre documentos, empieza con RAG.',
-            },
+            { q: '¿Puedo resumir un libro completo con un LLM local?', a: 'Un libro típico de 300 páginas tiene 90.000-120.000 palabras -- aproximadamente 120K-160K tokens. Esto supera el contexto confiable práctico de la mayoría de los modelos 7B y requiere un modelo de 70B (64K fiable) o procesamiento por fragmentos. Para modelos 7B, divide el libro en capítulos de 20K palabras, resume cada uno y luego resume los resúmenes de los capítulos.' },
+            { q: '¿Cuántas páginas de texto caben en 32K tokens?', a: 'Aproximadamente 50-70 páginas de texto estándar (250 palabras por página). Un contexto de 32K tokens puede contener una novela corta, un artículo de investigación completo con apéndices o un documento de especificación técnica completo.' },
+            { q: '¿Aumentar la longitud de contexto ralentiza la inferencia?', a: 'Sí -- procesar un contexto de 32K tarda aproximadamente 3-4 veces más que procesar un contexto de 4K en el mismo hardware, debido al escalado cuadrático del cálculo de atención. La velocidad de generación (tokens por segundo) no se ve afectada de forma significativa, pero el tiempo hasta el primer token (TTFT) escala con la longitud de la entrada.' },
+            { q: '¿Qué LLM local maneja mejor RAG que el contexto largo?', a: 'Para tareas de búsqueda y recuperación de documentos, RAG (generación aumentada por recuperación) suele ser más efectivo que alimentar documentos completos como contexto. RAG recupera los 3-5 fragmentos más relevantes de un gran conjunto de documentos y solo proporciona esos al modelo. Esto usa 4K-8K tokens de contexto y evita el problema "lost in the middle". Herramientas como GPT4All LocalDocs y LlamaIndex implementan RAG local.' },
+            { q: '¿Qué es el caché KV y por qué crece con la longitud del contexto?', a: 'El caché KV (caché clave-valor) almacena los estados de atención de cada token procesado en la ventana de contexto. Cada token requiere una cantidad fija de memoria para sus vectores clave y valor -- por eso un contexto de 32K requiere 8 veces más memoria de caché KV que uno de 4K. Es por esto que un modelo 7B en Q4_K_M necesita ~6 GB para 4K de contexto, pero ~9 GB para 32K. Los pesos del modelo no cambian -- solo crece el caché KV.' },
+            { q: '¿Los modelos locales pueden manejar contextos de 1M tokens como Gemini 3.1 Pro?', a: 'No -- a partir de abril de 2026, ningún modelo ejecutable localmente soporta contextos de 1M tokens. La ventana de 1M tokens de Gemini 3.1 Pro requiere la infraestructura TPU de Google. De forma local, 128K es el máximo soportado por el hardware de consumo actual. Para tareas que requieren contextos de 1M+ tokens, las APIs en la nube siguen siendo la única opción práctica.' },
+            { q: '¿Qué es el problema "lost in the middle" y cómo lo evito?', a: 'Las investigaciones muestran que los LLM recuperan de forma fiable la información del principio y el final de la ventana de contexto, pero pierden detalles del medio. Para un contexto de 128K, el contenido colocado en los tokens 40K-80K es el que más probable es que sea ignorado. Para evitarlo: mantén la información importante al inicio del prompt, usa RAG para recuperar solo los fragmentos relevantes, o procesa documentos largos en secciones solapadas de 16K-32K.' },
+            { q: '¿Cómo verifico qué longitud de contexto está usando Ollama?', a: 'Ejecuta `ollama show <modelo>` -- la salida lista los parámetros incluyendo num_ctx. Si muestra 2048, Ollama está usando el valor por defecto, no la ventana de contexto completa del modelo. Para cambiarlo de forma persistente, crea un Modelfile con PARAMETER num_ctx 32768 y ejecuta ollama create <nombre> -f Modelfile. Verifica las sesiones activas con ollama ps.' },
+            { q: '¿Es mejor el contexto largo o RAG para preguntas y respuestas sobre documentos?', a: 'RAG suele ser más efectivo y eficiente en RAM que el contexto largo para preguntas y respuestas sobre documentos. RAG recupera 3-5 fragmentos relevantes (4K-8K tokens en total) de un corpus grande y evita el problema "lost in the middle". El contexto largo es mejor cuando el modelo necesita entender la estructura completa del documento o cuando el orden exacto y las relaciones entre secciones son importantes. Para la mayoría de las preguntas y respuestas prácticas sobre documentos, empieza con RAG.' },
+            { q: '¿Qué modelos de Ollama tienen la ventana de contexto más grande?', a: 'A mayo de 2026: Llama 4 Scout soporta 10M tokens (práctico: 256K-1M en hardware suficiente). DeepSeek V4-Flash y Qwen 3.6 soportan 1M y 256K tokens respectivamente (Qwen 3.6 extensible a 1M mediante YaRN). Modelos anteriores: Qwen3, Llama 3.3, Qwen3 y Mistral Small soportan 128K tokens. Ollama usa 2048 tokens por defecto -- establece num_ctx explícitamente en un Modelfile para acceder a contextos largos.' },
+            { q: '¿Cómo ejecuto un LLM local con contexto de 128K en 16 GB de RAM?', a: 'Con 16 GB de RAM, Mistral Small 3.1 24B en Q4_K_M con 32K de contexto usa ~17 GB -- supera los 16 GB. Usa Llama 3.1 8B en Q4_K_M con 32K de contexto (~9 GB) o 128K de contexto (~14 GB) para un ajuste cómodo. Establece num_ctx en un Modelfile: PARAMETER num_ctx 32768.' },
           ],
         },
         sources: {
@@ -909,7 +875,7 @@ schema: {
             'name': 'هل يمكنني تلخيص كتاب كامل بنموذج LLM محلي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'كتاب نموذجي من 300 صفحة يضم 90,000-120,000 كلمة -- قرابة 120K-160K رمز. يتجاوز هذا السياق العملي الموثوق لمعظم نماذج 7B. لنماذج 7B، قسّم الكتاب إلى فصول من 20 ألف كلمة، ولخّص كلًّا منها، ثم لخّص الملخصات. نموذج 70B يتعامل مع حتى 64K رمز بموثوقية.',
+              'text': 'كتاب نموذجي من 300 صفحة يضم 90,000-120,000 كلمة -- قرابة 120K-160K رمز. يتجاوز هذا السياق العملي الموثوق لمعظم نماذج 7B ويتطلب نموذج 70B (64K موثوق) أو معالجة بالأجزاء. لنماذج 7B، قسّم الكتاب إلى فصول من 20 ألف كلمة، ولخّص كلًّا منها، ثم لخّص ملخصات الفصول.',
             },
           },
           {
@@ -917,7 +883,7 @@ schema: {
             'name': 'كم صفحة نص تتسع في 32K رمز؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'قرابة 50-70 صفحة من نص عربي قياسي بمعدل 250 كلمة لكل صفحة. يستطيع سياق 32K رمز احتواء رواية قصيرة أو ورقة بحثية كاملة مع ملاحق أو مستند مواصفات تقني كامل.',
+              'text': 'قرابة 50-70 صفحة من نص قياسي (250 كلمة لكل صفحة). يستطيع سياق 32K رمز احتواء رواية قصيرة أو ورقة بحثية كاملة مع ملاحق أو مستند مواصفات تقني كامل.',
             },
           },
           {
@@ -925,7 +891,55 @@ schema: {
             'name': 'هل زيادة طول السياق تُبطئ الاستدلال؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم. معالجة سياق 32K تستغرق قرابة 3-4 أضعاف الوقت لتوليد الرمز الأول مقارنة بسياق 4K، بسبب التوسّع التربيعي للانتباه. سرعة التوليد (الرموز في الثانية بعد الرمز الأول) لا تتأثر بشكل كبير، لكن الوقت حتى الرمز الأول يتوسّع مع طول المدخلات.',
+              'text': 'نعم -- معالجة سياق 32K تستغرق قرابة 3-4 أضعاف معالجة سياق 4K على العتاد نفسه، بسبب التوسّع التربيعي لحساب الانتباه. سرعة التوليد (الرموز في الثانية) لا تتأثر بشكل كبير، لكن الوقت حتى الرمز الأول (TTFT) يتوسّع مع طول المدخلات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي نموذج LLM محلي يتعامل مع RAG أفضل من السياق الطويل؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لمهام البحث واسترجاع المستندات، عادةً ما يكون RAG (التوليد المعزَّز بالاسترجاع) أكثر فعالية من تغذية المستندات الكاملة كسياق. يسترجع RAG أكثر 3-5 أجزاء صلة من مجموعة مستندات كبيرة ويقدّم تلك فقط للنموذج. يستخدم هذا 4K-8K رمز سياق ويتجنّب مشكلة "lost in the middle". أدوات مثل GPT4All LocalDocs وLlamaIndex تنفّذ RAG محلي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هي ذاكرة KV المؤقتة ولماذا تنمو مع طول السياق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تخزّن ذاكرة KV المؤقتة (ذاكرة المفتاح-القيمة) حالات الانتباه لكل رمز معالَج في نافذة السياق. يتطلب كل رمز مقدارًا ثابتًا من الذاكرة لمتجهات المفتاح والقيمة الخاصة به -- لذلك يتطلب سياق 32K ذاكرة KV مؤقتة أكبر بـ8 مرات من سياق 4K. لهذا يحتاج نموذج 7B في Q4_K_M ~6 GB لسياق 4K، لكن ~9 GB لسياق 32K. أوزان النموذج لا تتغير -- تنمو ذاكرة KV المؤقتة فقط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تستطيع النماذج المحلية التعامل مع سياقات مليون رمز مثل Gemini 3.1 Pro؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'النماذج المحلية الرئيسية في يونيو 2026 — Qwen3 وGemma 4 وLlama 3.1 وMistral Small 3.1 — تصل جميعها إلى 128K رمز كحد أقصى، وهو ما يكفي للغالبية العظمى من مهام المستندات الطويلة. يتطلب الاستدلال المحلي بـ1M رمز عتادًا متخصصًا (150+ GB من VRAM). للمستخدم العادي، Qwen3 14B مع سياق 128K هو الحل العملي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما مشكلة "lost in the middle" وكيف أتجنّبها؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تُظهر الأبحاث أن نماذج LLM تسترجع بموثوقية المعلومات من بداية ونهاية نافذة السياق، لكنها تفقد تفاصيل المنتصف. لسياق 128K، المحتوى الموضوع في الرموز 40K-80K هو الأكثر عرضة للتجاهل. لتجنّبه: أبقِ المعلومات المهمة في بداية المطالبة، استخدم RAG لاسترجاع الأجزاء ذات الصلة فقط، أو عالج المستندات الطويلة في أقسام متداخلة من 16K-32K.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أتحقق من طول السياق الذي يستخدمه Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'شغّل `ollama show <النموذج>` -- تسرد المخرجات المعاملات بما في ذلك num_ctx. إذا عرض 2048، فإن Ollama يستخدم القيمة الافتراضية، لا نافذة السياق الكاملة للنموذج. لتغييره بشكل دائم، أنشئ Modelfile بـPARAMETER num_ctx 32768 وشغّل ollama create <الاسم> -f Modelfile. تحقق من الجلسات النشطة بـollama ps.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أيهما أفضل للأسئلة والأجوبة حول المستندات: السياق الطويل أم RAG؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'عادةً ما يكون RAG أكثر فعالية وكفاءة في RAM من السياق الطويل للأسئلة والأجوبة حول المستندات. يسترجع RAG 3-5 أجزاء ذات صلة (4K-8K رمز إجمالًا) من مجموعة كبيرة ويتجنّب مشكلة "lost in the middle". السياق الطويل أفضل عندما يحتاج النموذج لفهم بنية المستند الكاملة أو عندما يكون الترتيب الدقيق والعلاقات بين الأقسام مهمة. لمعظم الأسئلة والأجوبة العملية حول المستندات، ابدأ بـRAG.',
             },
           },
           {
@@ -934,46 +948,6 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'اعتبارًا من مايو 2026: يدعم Llama 4 Scout سياق 10M رمز (عمليًا: 256K-1M على عتاد كافٍ). يدعم DeepSeek V4-Flash وQwen 3.6 مليون رمز و256K رمز على التوالي (Qwen 3.6 قابل للتمديد إلى 1M عبر YaRN). نماذج سابقة: Qwen3 وLlama 3.3 وQwen3 وMistral Small تدعم 128K رمز. يستخدم Ollama 2048 رمزًا افتراضيًا -- اضبط num_ctx صراحةً في Modelfile للوصول إلى السياقات الطويلة.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'ما هي ذاكرة KV المؤقتة ولماذا تنمو مع طول السياق؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'تخزّن ذاكرة KV المؤقتة حالات الانتباه لكل رمز في نافذة السياق. سياق 32K يتطلب ذاكرة KV مؤقتة أكبر بـ8 مرات من سياق 4K. نموذج 7B في Q4_K_M يحتاج ~6 GB لسياق 4K، لكن ~9 GB لسياق 32K. أوزان النموذج لا تتغير -- تنمو ذاكرة KV المؤقتة فقط.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل تستطيع النماذج المحلية التعامل مع سياقات مليون رمز مثل Gemini 3.1 Pro؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'النماذج المحلية الرئيسية في يونيو 2026 — Qwen3 وGemma 4 وLlama 3.1 وMistral Small 3.1 — تدعم جميعها 128K رمز أصليًا، وهو ما يغطي الغالبية العظمى من حالات استخدام المستندات الطويلة. تتطلب الاستدلال المحلي بـ1M رمز عتادًا متخصصًا (150+ GB من VRAM). للمستخدم العادي، Qwen3 14B مع سياق 128K هو الحل العملي.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'ما مشكلة "lost in the middle"؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'تسترجع نماذج LLM المعلومات بموثوقية من بداية ونهاية نافذة السياق، لكنها تفقد تفاصيل المنتصف. لسياق 128K، المحتوى الواقع في الرموز 40K-80K هو الأكثر عرضة للتجاهل. الحل: أبقِ المعلومات الحرجة في بداية المطالبة، استخدم RAG، أو عالج المستندات في أقسام متداخلة من 16K-32K.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'كيف أتحقق من طول السياق الذي يستخدمه Ollama؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'شغّل ollama show <النموذج> -- ابحث عن num_ctx في المخرجات. إذا عرض 2048، فإن Ollama يستخدم القيمة الافتراضية. لتغييره: أنشئ Modelfile بـPARAMETER num_ctx 32768 وشغّل ollama create <الاسم> -f Modelfile. تحقق من الجلسات النشطة بـollama ps.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'أيهما أفضل للإجابة عن أسئلة المستندات: السياق الطويل أم RAG؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'عادةً ما يكون RAG أكثر فعالية وكفاءة في RAM للأسئلة والأجوبة حول المستندات. السياق الطويل أفضل عندما تحتاج للاستدلال حول مستند كامل ومتماسك -- عقد أو قاعدة شيفرة أو فصل كتاب -- حيث يكسر فقدان أي قسم التحليل. اختر حسب المهمة: بحث → RAG، تحليل شمولي → سياق طويل.',
             },
           },
           {
@@ -1121,42 +1095,17 @@ schema: {
           id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
-            {
-              q: 'هل يمكنني تلخيص كتاب كامل بنموذج LLM محلي؟',
-              a: 'كتاب نموذجي من 300 صفحة يضم 90,000-120,000 كلمة -- قرابة 120K-160K رمز. يتجاوز هذا السياق العملي الموثوق لمعظم نماذج 7B ويتطلب نموذج 70B (64K موثوق) أو معالجة بالأجزاء. لنماذج 7B، قسّم الكتاب إلى فصول من 20 ألف كلمة، ولخّص كلًّا منها، ثم لخّص ملخصات الفصول.',
-            },
-            {
-              q: 'كم صفحة نص تتسع في 32K رمز؟',
-              a: 'قرابة 50-70 صفحة من نص قياسي (250 كلمة لكل صفحة). يستطيع سياق 32K رمز احتواء رواية قصيرة أو ورقة بحثية كاملة مع ملاحق أو مستند مواصفات تقني كامل.',
-            },
-            {
-              q: 'هل زيادة طول السياق تُبطئ الاستدلال؟',
-              a: 'نعم -- معالجة سياق 32K تستغرق قرابة 3-4 أضعاف معالجة سياق 4K على العتاد نفسه، بسبب التوسّع التربيعي لحساب الانتباه. سرعة التوليد (الرموز في الثانية) لا تتأثر بشكل كبير، لكن الوقت حتى الرمز الأول (TTFT) يتوسّع مع طول المدخلات.',
-            },
-            {
-              q: 'أي نموذج LLM محلي يتعامل مع RAG أفضل من السياق الطويل؟',
-              a: 'لمهام البحث واسترجاع المستندات، عادةً ما يكون RAG (التوليد المعزَّز بالاسترجاع) أكثر فعالية من تغذية المستندات الكاملة كسياق. يسترجع RAG أكثر 3-5 أجزاء صلة من مجموعة مستندات كبيرة ويقدّم تلك فقط للنموذج. يستخدم هذا 4K-8K رمز سياق ويتجنّب مشكلة "lost in the middle". أدوات مثل GPT4All LocalDocs وLlamaIndex تنفّذ RAG محلي.',
-            },
-            {
-              q: 'ما هي ذاكرة KV المؤقتة ولماذا تنمو مع طول السياق؟',
-              a: 'تخزّن ذاكرة KV المؤقتة (ذاكرة المفتاح-القيمة) حالات الانتباه لكل رمز معالَج في نافذة السياق. يتطلب كل رمز مقدارًا ثابتًا من الذاكرة لمتجهات المفتاح والقيمة الخاصة به -- لذلك يتطلب سياق 32K ذاكرة KV مؤقتة أكبر بـ8 مرات من سياق 4K. لهذا يحتاج نموذج 7B في Q4_K_M ~6 GB لسياق 4K، لكن ~9 GB لسياق 32K. أوزان النموذج لا تتغير -- تنمو ذاكرة KV المؤقتة فقط.',
-            },
-            {
-              q: 'هل تستطيع النماذج المحلية التعامل مع سياقات مليون رمز مثل Gemini 3.1 Pro؟',
-              a: 'النماذج المحلية الرئيسية في يونيو 2026 — Qwen3 وGemma 4 وLlama 3.1 وMistral Small 3.1 — تصل جميعها إلى 128K رمز كحد أقصى، وهو ما يكفي للغالبية العظمى من مهام المستندات الطويلة. يتطلب الاستدلال المحلي بـ1M رمز عتادًا متخصصًا (150+ GB من VRAM). للمستخدم العادي، Qwen3 14B مع سياق 128K هو الحل العملي.',
-            },
-            {
-              q: 'ما مشكلة "lost in the middle" وكيف أتجنّبها؟',
-              a: 'تُظهر الأبحاث أن نماذج LLM تسترجع بموثوقية المعلومات من بداية ونهاية نافذة السياق، لكنها تفقد تفاصيل المنتصف. لسياق 128K، المحتوى الموضوع في الرموز 40K-80K هو الأكثر عرضة للتجاهل. لتجنّبه: أبقِ المعلومات المهمة في بداية المطالبة، استخدم RAG لاسترجاع الأجزاء ذات الصلة فقط، أو عالج المستندات الطويلة في أقسام متداخلة من 16K-32K.',
-            },
-            {
-              q: 'كيف أتحقق من طول السياق الذي يستخدمه Ollama؟',
-              a: 'شغّل `ollama show <النموذج>` -- تسرد المخرجات المعاملات بما في ذلك num_ctx. إذا عرض 2048، فإن Ollama يستخدم القيمة الافتراضية، لا نافذة السياق الكاملة للنموذج. لتغييره بشكل دائم، أنشئ Modelfile بـPARAMETER num_ctx 32768 وشغّل ollama create <الاسم> -f Modelfile. تحقق من الجلسات النشطة بـollama ps.',
-            },
-            {
-              q: 'أيهما أفضل للأسئلة والأجوبة حول المستندات: السياق الطويل أم RAG؟',
-              a: 'عادةً ما يكون RAG أكثر فعالية وكفاءة في RAM من السياق الطويل للأسئلة والأجوبة حول المستندات. يسترجع RAG 3-5 أجزاء ذات صلة (4K-8K رمز إجمالًا) من مجموعة كبيرة ويتجنّب مشكلة "lost in the middle". السياق الطويل أفضل عندما يحتاج النموذج لفهم بنية المستند الكاملة أو عندما يكون الترتيب الدقيق والعلاقات بين الأقسام مهمة. لمعظم الأسئلة والأجوبة العملية حول المستندات، ابدأ بـRAG.',
-            },
+            { q: 'هل يمكنني تلخيص كتاب كامل بنموذج LLM محلي؟', a: 'كتاب نموذجي من 300 صفحة يضم 90,000-120,000 كلمة -- قرابة 120K-160K رمز. يتجاوز هذا السياق العملي الموثوق لمعظم نماذج 7B ويتطلب نموذج 70B (64K موثوق) أو معالجة بالأجزاء. لنماذج 7B، قسّم الكتاب إلى فصول من 20 ألف كلمة، ولخّص كلًّا منها، ثم لخّص ملخصات الفصول.' },
+            { q: 'كم صفحة نص تتسع في 32K رمز؟', a: 'قرابة 50-70 صفحة من نص قياسي (250 كلمة لكل صفحة). يستطيع سياق 32K رمز احتواء رواية قصيرة أو ورقة بحثية كاملة مع ملاحق أو مستند مواصفات تقني كامل.' },
+            { q: 'هل زيادة طول السياق تُبطئ الاستدلال؟', a: 'نعم -- معالجة سياق 32K تستغرق قرابة 3-4 أضعاف معالجة سياق 4K على العتاد نفسه، بسبب التوسّع التربيعي لحساب الانتباه. سرعة التوليد (الرموز في الثانية) لا تتأثر بشكل كبير، لكن الوقت حتى الرمز الأول (TTFT) يتوسّع مع طول المدخلات.' },
+            { q: 'أي نموذج LLM محلي يتعامل مع RAG أفضل من السياق الطويل؟', a: 'لمهام البحث واسترجاع المستندات، عادةً ما يكون RAG (التوليد المعزَّز بالاسترجاع) أكثر فعالية من تغذية المستندات الكاملة كسياق. يسترجع RAG أكثر 3-5 أجزاء صلة من مجموعة مستندات كبيرة ويقدّم تلك فقط للنموذج. يستخدم هذا 4K-8K رمز سياق ويتجنّب مشكلة "lost in the middle". أدوات مثل GPT4All LocalDocs وLlamaIndex تنفّذ RAG محلي.' },
+            { q: 'ما هي ذاكرة KV المؤقتة ولماذا تنمو مع طول السياق؟', a: 'تخزّن ذاكرة KV المؤقتة (ذاكرة المفتاح-القيمة) حالات الانتباه لكل رمز معالَج في نافذة السياق. يتطلب كل رمز مقدارًا ثابتًا من الذاكرة لمتجهات المفتاح والقيمة الخاصة به -- لذلك يتطلب سياق 32K ذاكرة KV مؤقتة أكبر بـ8 مرات من سياق 4K. لهذا يحتاج نموذج 7B في Q4_K_M ~6 GB لسياق 4K، لكن ~9 GB لسياق 32K. أوزان النموذج لا تتغير -- تنمو ذاكرة KV المؤقتة فقط.' },
+            { q: 'هل تستطيع النماذج المحلية التعامل مع سياقات مليون رمز مثل Gemini 3.1 Pro؟', a: 'النماذج المحلية الرئيسية في يونيو 2026 — Qwen3 وGemma 4 وLlama 3.1 وMistral Small 3.1 — تصل جميعها إلى 128K رمز كحد أقصى، وهو ما يكفي للغالبية العظمى من مهام المستندات الطويلة. يتطلب الاستدلال المحلي بـ1M رمز عتادًا متخصصًا (150+ GB من VRAM). للمستخدم العادي، Qwen3 14B مع سياق 128K هو الحل العملي.' },
+            { q: 'ما مشكلة "lost in the middle" وكيف أتجنّبها؟', a: 'تُظهر الأبحاث أن نماذج LLM تسترجع بموثوقية المعلومات من بداية ونهاية نافذة السياق، لكنها تفقد تفاصيل المنتصف. لسياق 128K، المحتوى الموضوع في الرموز 40K-80K هو الأكثر عرضة للتجاهل. لتجنّبه: أبقِ المعلومات المهمة في بداية المطالبة، استخدم RAG لاسترجاع الأجزاء ذات الصلة فقط، أو عالج المستندات الطويلة في أقسام متداخلة من 16K-32K.' },
+            { q: 'كيف أتحقق من طول السياق الذي يستخدمه Ollama؟', a: 'شغّل `ollama show <النموذج>` -- تسرد المخرجات المعاملات بما في ذلك num_ctx. إذا عرض 2048، فإن Ollama يستخدم القيمة الافتراضية، لا نافذة السياق الكاملة للنموذج. لتغييره بشكل دائم، أنشئ Modelfile بـPARAMETER num_ctx 32768 وشغّل ollama create <الاسم> -f Modelfile. تحقق من الجلسات النشطة بـollama ps.' },
+            { q: 'أيهما أفضل للأسئلة والأجوبة حول المستندات: السياق الطويل أم RAG؟', a: 'عادةً ما يكون RAG أكثر فعالية وكفاءة في RAM من السياق الطويل للأسئلة والأجوبة حول المستندات. يسترجع RAG 3-5 أجزاء ذات صلة (4K-8K رمز إجمالًا) من مجموعة كبيرة ويتجنّب مشكلة "lost in the middle". السياق الطويل أفضل عندما يحتاج النموذج لفهم بنية المستند الكاملة أو عندما يكون الترتيب الدقيق والعلاقات بين الأقسام مهمة. لمعظم الأسئلة والأجوبة العملية حول المستندات، ابدأ بـRAG.' },
+            { q: 'أي نماذج Ollama لديها أكبر نافذة سياق؟', a: 'اعتبارًا من مايو 2026: يدعم Llama 4 Scout سياق 10M رمز (عمليًا: 256K-1M على عتاد كافٍ). يدعم DeepSeek V4-Flash وQwen 3.6 مليون رمز و256K رمز على التوالي (Qwen 3.6 قابل للتمديد إلى 1M عبر YaRN). نماذج سابقة: Qwen3 وLlama 3.3 وQwen3 وMistral Small تدعم 128K رمز. يستخدم Ollama 2048 رمزًا افتراضيًا -- اضبط num_ctx صراحةً في Modelfile للوصول إلى السياقات الطويلة.' },
+            { q: 'كيف أُشغّل نموذج LLM محلي بسياق 128K على 16 GB من RAM؟', a: 'بـ16 GB من RAM، يستخدم Mistral Small 3.1 24B في Q4_K_M بسياق 32K ~17 GB -- يتجاوز 16 GB. استخدم Llama 3.1 8B في Q4_K_M بسياق 32K (~9 GB) أو سياق 128K (~14 GB) لملاءمة مريحة. اضبط num_ctx في Modelfile: PARAMETER num_ctx 32768.' },
           ],
         },
         sources: {
@@ -1258,7 +1207,7 @@ schema: {
             'name': 'Posso resumir um livro inteiro com um LLM local?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Um livro típico de 300 páginas tem 90.000-120.000 palavras -- aproximadamente 120K-160K tokens. Isso supera o contexto confiável prático da maioria dos modelos 7B. Para modelos 7B, divida o livro em capítulos de 20K palavras, resuma cada um e depois resuma os resumos. Um modelo de 70B dá conta de até 64K tokens de forma confiável.',
+              'text': 'Um livro típico de 300 páginas tem 90.000-120.000 palavras -- aproximadamente 120K-160K tokens. Isso supera o contexto confiável prático da maioria dos modelos 7B e exige um modelo de 70B (64K confiável) ou processamento por fragmentos. Para modelos 7B, divida o livro em capítulos de 20K palavras, resuma cada um e depois resuma os resumos dos capítulos.',
             },
           },
           {
@@ -1266,7 +1215,7 @@ schema: {
             'name': 'Quantas páginas de texto cabem em 32K tokens?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Aproximadamente 50-70 páginas de texto em português padrão a 250 palavras por página. Um contexto de 32K tokens pode conter um romance curto, um artigo de pesquisa completo com apêndices ou um documento de especificação técnica completo.',
+              'text': 'Aproximadamente 50-70 páginas de texto padrão (250 palavras por página). Um contexto de 32K tokens pode conter um romance curto, um artigo de pesquisa completo com apêndices ou um documento de especificação técnica completo.',
             },
           },
           {
@@ -1274,7 +1223,55 @@ schema: {
             'name': 'Aumentar o comprimento de contexto deixa a inferência mais lenta?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim. Processar um contexto de 32K leva cerca de 3-4 vezes mais para gerar o primeiro token que um contexto de 4K, por causa do escalonamento quadrático da atenção. A velocidade de geração (tokens por segundo após o primeiro token) não é afetada de forma significativa, mas o tempo até o primeiro token escala com o comprimento da entrada.',
+              'text': 'Sim -- processar um contexto de 32K leva cerca de 3-4 vezes mais que processar um contexto de 4K no mesmo hardware, por causa do escalonamento quadrático do cálculo de atenção. A velocidade de geração (tokens por segundo) não é afetada de forma significativa, mas o tempo até o primeiro token (TTFT) escala com o comprimento da entrada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual LLM local lida melhor com RAG que com contexto longo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para tarefas de busca e recuperação de documentos, o RAG (geração aumentada por recuperação) costuma ser mais eficaz que alimentar documentos completos como contexto. O RAG recupera os 3-5 fragmentos mais relevantes de um grande conjunto de documentos e fornece apenas esses ao modelo. Isso usa 4K-8K tokens de contexto e evita o problema "lost in the middle". Ferramentas como GPT4All LocalDocs e LlamaIndex implementam RAG local.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é o cache KV e por que ele cresce com o comprimento do contexto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O cache KV (cache chave-valor) armazena os estados de atenção de cada token processado na janela de contexto. Cada token exige uma quantidade fixa de memória para seus vetores chave e valor -- por isso um contexto de 32K exige 8 vezes mais memória de cache KV que um de 4K. É por isso que um modelo 7B em Q4_K_M precisa de ~6 GB para 4K de contexto, mas ~9 GB para 32K. Os pesos do modelo não mudam -- só o cache KV cresce.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Os modelos locais conseguem lidar com contextos de 1M tokens como o Gemini 3.1 Pro?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Os modelos locais principais em junho de 2026 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — todos chegam a 128K tokens como máximo, o que cobre a grande maioria dos casos de uso com documentos longos. A inferência local de 1M tokens exige hardware especializado (150+ GB de VRAM). Para a maioria dos usuários, o Qwen3 14B com 128K de contexto é a resposta prática.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é o problema "lost in the middle" e como eu o evito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As pesquisas mostram que os LLMs recuperam de forma confiável a informação do início e do fim da janela de contexto, mas perdem detalhes do meio. Para um contexto de 128K, o conteúdo colocado nos tokens 40K-80K é o mais provável de ser ignorado. Para evitar: mantenha a informação importante no início do prompt, use RAG para recuperar só os fragmentos relevantes, ou processe documentos longos em seções sobrepostas de 16K-32K.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como verifico qual comprimento de contexto o Ollama está usando?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Execute `ollama show <modelo>` -- a saída lista os parâmetros incluindo num_ctx. Se mostrar 2048, o Ollama está usando o valor padrão, não a janela de contexto completa do modelo. Para mudar de forma persistente, crie um Modelfile com PARAMETER num_ctx 32768 e execute ollama create <nome> -f Modelfile. Verifique as sessões ativas com ollama ps.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'É melhor contexto longo ou RAG para perguntas e respostas sobre documentos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O RAG costuma ser mais eficaz e eficiente em RAM que o contexto longo para perguntas e respostas sobre documentos. O RAG recupera 3-5 fragmentos relevantes (4K-8K tokens no total) de um corpus grande e evita o problema "lost in the middle". O contexto longo é melhor quando o modelo precisa entender a estrutura completa do documento ou quando a ordem exata e as relações entre seções são importantes. Para a maioria das perguntas e respostas práticas sobre documentos, comece com RAG.',
             },
           },
           {
@@ -1283,46 +1280,6 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Em maio de 2026: o Llama 4 Scout suporta 10M tokens (prático: 256K-1M em hardware suficiente). O DeepSeek V4-Flash e o Qwen 3.6 suportam 1M e 256K tokens respectivamente (o Qwen 3.6 é extensível a 1M via YaRN). Modelos anteriores: Qwen3, Llama 3.3, Qwen3 e Mistral Small suportam 128K tokens. O Ollama usa 2048 tokens por padrão -- defina num_ctx explicitamente em um Modelfile para acessar contextos longos.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'O que é o cache KV e por que ele cresce com o comprimento do contexto?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'O cache KV armazena os estados de atenção de cada token na janela de contexto. Um contexto de 32K exige 8 vezes mais memória de cache KV que um de 4K. Um modelo 7B em Q4_K_M precisa de ~6 GB para 4K de contexto, mas ~9 GB para 32K. Os pesos do modelo não mudam -- só o cache KV cresce.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Os modelos locais conseguem lidar com contextos de 1M tokens como o Gemini 3.1 Pro?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Os modelos locais principais em junho de 2026 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — todos suportam 128K tokens nativamente, o que cobre a grande maioria dos casos de uso com documentos longos. A inferência local de 1M tokens exige hardware especializado (150+ GB de VRAM). Para a maioria dos usuários, o Qwen3 14B com 128K de contexto é a resposta prática.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'O que é o problema "lost in the middle"?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Os LLMs recuperam de forma confiável a informação do início e do fim da janela de contexto, mas perdem detalhes do meio. Para um contexto de 128K, o conteúdo nos tokens 40K-80K é o mais provável de ser ignorado. Solução: mantenha a informação crítica no início do prompt, use RAG ou processe os documentos em seções sobrepostas de 16K-32K.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'Como verifico qual comprimento de contexto o Ollama está usando?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Execute ollama show <modelo> -- procure num_ctx na saída. Se mostrar 2048, o Ollama está usando o valor padrão. Para mudar: crie um Modelfile com PARAMETER num_ctx 32768 e execute ollama create <nome> -f Modelfile. Verifique as sessões ativas com ollama ps.',
-            },
-          },
-          {
-            '@type': 'Question',
-            'name': 'É melhor contexto longo ou RAG para responder perguntas sobre documentos?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'O RAG costuma ser mais eficaz e eficiente em RAM para perguntas e respostas sobre documentos. O contexto longo é melhor quando você precisa raciocinar sobre um documento completo e coerente -- um contrato, uma base de código ou um capítulo de livro -- onde perder qualquer seção quebra a análise. Escolha conforme a tarefa: busca → RAG, análise holística → contexto longo.',
             },
           },
           {
@@ -1470,42 +1427,17 @@ schema: {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            {
-              q: 'Posso resumir um livro inteiro com um LLM local?',
-              a: 'Um livro típico de 300 páginas tem 90.000-120.000 palavras -- aproximadamente 120K-160K tokens. Isso supera o contexto confiável prático da maioria dos modelos 7B e exige um modelo de 70B (64K confiável) ou processamento por fragmentos. Para modelos 7B, divida o livro em capítulos de 20K palavras, resuma cada um e depois resuma os resumos dos capítulos.',
-            },
-            {
-              q: 'Quantas páginas de texto cabem em 32K tokens?',
-              a: 'Aproximadamente 50-70 páginas de texto padrão (250 palavras por página). Um contexto de 32K tokens pode conter um romance curto, um artigo de pesquisa completo com apêndices ou um documento de especificação técnica completo.',
-            },
-            {
-              q: 'Aumentar o comprimento de contexto deixa a inferência mais lenta?',
-              a: 'Sim -- processar um contexto de 32K leva cerca de 3-4 vezes mais que processar um contexto de 4K no mesmo hardware, por causa do escalonamento quadrático do cálculo de atenção. A velocidade de geração (tokens por segundo) não é afetada de forma significativa, mas o tempo até o primeiro token (TTFT) escala com o comprimento da entrada.',
-            },
-            {
-              q: 'Qual LLM local lida melhor com RAG que com contexto longo?',
-              a: 'Para tarefas de busca e recuperação de documentos, o RAG (geração aumentada por recuperação) costuma ser mais eficaz que alimentar documentos completos como contexto. O RAG recupera os 3-5 fragmentos mais relevantes de um grande conjunto de documentos e fornece apenas esses ao modelo. Isso usa 4K-8K tokens de contexto e evita o problema "lost in the middle". Ferramentas como GPT4All LocalDocs e LlamaIndex implementam RAG local.',
-            },
-            {
-              q: 'O que é o cache KV e por que ele cresce com o comprimento do contexto?',
-              a: 'O cache KV (cache chave-valor) armazena os estados de atenção de cada token processado na janela de contexto. Cada token exige uma quantidade fixa de memória para seus vetores chave e valor -- por isso um contexto de 32K exige 8 vezes mais memória de cache KV que um de 4K. É por isso que um modelo 7B em Q4_K_M precisa de ~6 GB para 4K de contexto, mas ~9 GB para 32K. Os pesos do modelo não mudam -- só o cache KV cresce.',
-            },
-            {
-              q: 'Os modelos locais conseguem lidar com contextos de 1M tokens como o Gemini 3.1 Pro?',
-              a: 'Os modelos locais principais em junho de 2026 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — todos chegam a 128K tokens como máximo, o que cobre a grande maioria dos casos de uso com documentos longos. A inferência local de 1M tokens exige hardware especializado (150+ GB de VRAM). Para a maioria dos usuários, o Qwen3 14B com 128K de contexto é a resposta prática.',
-            },
-            {
-              q: 'O que é o problema "lost in the middle" e como eu o evito?',
-              a: 'As pesquisas mostram que os LLMs recuperam de forma confiável a informação do início e do fim da janela de contexto, mas perdem detalhes do meio. Para um contexto de 128K, o conteúdo colocado nos tokens 40K-80K é o mais provável de ser ignorado. Para evitar: mantenha a informação importante no início do prompt, use RAG para recuperar só os fragmentos relevantes, ou processe documentos longos em seções sobrepostas de 16K-32K.',
-            },
-            {
-              q: 'Como verifico qual comprimento de contexto o Ollama está usando?',
-              a: 'Execute `ollama show <modelo>` -- a saída lista os parâmetros incluindo num_ctx. Se mostrar 2048, o Ollama está usando o valor padrão, não a janela de contexto completa do modelo. Para mudar de forma persistente, crie um Modelfile com PARAMETER num_ctx 32768 e execute ollama create <nome> -f Modelfile. Verifique as sessões ativas com ollama ps.',
-            },
-            {
-              q: 'É melhor contexto longo ou RAG para perguntas e respostas sobre documentos?',
-              a: 'O RAG costuma ser mais eficaz e eficiente em RAM que o contexto longo para perguntas e respostas sobre documentos. O RAG recupera 3-5 fragmentos relevantes (4K-8K tokens no total) de um corpus grande e evita o problema "lost in the middle". O contexto longo é melhor quando o modelo precisa entender a estrutura completa do documento ou quando a ordem exata e as relações entre seções são importantes. Para a maioria das perguntas e respostas práticas sobre documentos, comece com RAG.',
-            },
+            { q: 'Posso resumir um livro inteiro com um LLM local?', a: 'Um livro típico de 300 páginas tem 90.000-120.000 palavras -- aproximadamente 120K-160K tokens. Isso supera o contexto confiável prático da maioria dos modelos 7B e exige um modelo de 70B (64K confiável) ou processamento por fragmentos. Para modelos 7B, divida o livro em capítulos de 20K palavras, resuma cada um e depois resuma os resumos dos capítulos.' },
+            { q: 'Quantas páginas de texto cabem em 32K tokens?', a: 'Aproximadamente 50-70 páginas de texto padrão (250 palavras por página). Um contexto de 32K tokens pode conter um romance curto, um artigo de pesquisa completo com apêndices ou um documento de especificação técnica completo.' },
+            { q: 'Aumentar o comprimento de contexto deixa a inferência mais lenta?', a: 'Sim -- processar um contexto de 32K leva cerca de 3-4 vezes mais que processar um contexto de 4K no mesmo hardware, por causa do escalonamento quadrático do cálculo de atenção. A velocidade de geração (tokens por segundo) não é afetada de forma significativa, mas o tempo até o primeiro token (TTFT) escala com o comprimento da entrada.' },
+            { q: 'Qual LLM local lida melhor com RAG que com contexto longo?', a: 'Para tarefas de busca e recuperação de documentos, o RAG (geração aumentada por recuperação) costuma ser mais eficaz que alimentar documentos completos como contexto. O RAG recupera os 3-5 fragmentos mais relevantes de um grande conjunto de documentos e fornece apenas esses ao modelo. Isso usa 4K-8K tokens de contexto e evita o problema "lost in the middle". Ferramentas como GPT4All LocalDocs e LlamaIndex implementam RAG local.' },
+            { q: 'O que é o cache KV e por que ele cresce com o comprimento do contexto?', a: 'O cache KV (cache chave-valor) armazena os estados de atenção de cada token processado na janela de contexto. Cada token exige uma quantidade fixa de memória para seus vetores chave e valor -- por isso um contexto de 32K exige 8 vezes mais memória de cache KV que um de 4K. É por isso que um modelo 7B em Q4_K_M precisa de ~6 GB para 4K de contexto, mas ~9 GB para 32K. Os pesos do modelo não mudam -- só o cache KV cresce.' },
+            { q: 'Os modelos locais conseguem lidar com contextos de 1M tokens como o Gemini 3.1 Pro?', a: 'Os modelos locais principais em junho de 2026 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — todos chegam a 128K tokens como máximo, o que cobre a grande maioria dos casos de uso com documentos longos. A inferência local de 1M tokens exige hardware especializado (150+ GB de VRAM). Para a maioria dos usuários, o Qwen3 14B com 128K de contexto é a resposta prática.' },
+            { q: 'O que é o problema "lost in the middle" e como eu o evito?', a: 'As pesquisas mostram que os LLMs recuperam de forma confiável a informação do início e do fim da janela de contexto, mas perdem detalhes do meio. Para um contexto de 128K, o conteúdo colocado nos tokens 40K-80K é o mais provável de ser ignorado. Para evitar: mantenha a informação importante no início do prompt, use RAG para recuperar só os fragmentos relevantes, ou processe documentos longos em seções sobrepostas de 16K-32K.' },
+            { q: 'Como verifico qual comprimento de contexto o Ollama está usando?', a: 'Execute `ollama show <modelo>` -- a saída lista os parâmetros incluindo num_ctx. Se mostrar 2048, o Ollama está usando o valor padrão, não a janela de contexto completa do modelo. Para mudar de forma persistente, crie um Modelfile com PARAMETER num_ctx 32768 e execute ollama create <nome> -f Modelfile. Verifique as sessões ativas com ollama ps.' },
+            { q: 'É melhor contexto longo ou RAG para perguntas e respostas sobre documentos?', a: 'O RAG costuma ser mais eficaz e eficiente em RAM que o contexto longo para perguntas e respostas sobre documentos. O RAG recupera 3-5 fragmentos relevantes (4K-8K tokens no total) de um corpus grande e evita o problema "lost in the middle". O contexto longo é melhor quando o modelo precisa entender a estrutura completa do documento ou quando a ordem exata e as relações entre seções são importantes. Para a maioria das perguntas e respostas práticas sobre documentos, comece com RAG.' },
+            { q: 'Quais modelos do Ollama têm a maior janela de contexto?', a: 'Em maio de 2026: o Llama 4 Scout suporta 10M tokens (prático: 256K-1M em hardware suficiente). O DeepSeek V4-Flash e o Qwen 3.6 suportam 1M e 256K tokens respectivamente (o Qwen 3.6 é extensível a 1M via YaRN). Modelos anteriores: Qwen3, Llama 3.3, Qwen3 e Mistral Small suportam 128K tokens. O Ollama usa 2048 tokens por padrão -- defina num_ctx explicitamente em um Modelfile para acessar contextos longos.' },
+            { q: 'Como rodo um LLM local com contexto de 128K em 16 GB de RAM?', a: 'Com 16 GB de RAM, o Mistral Small 3.1 24B em Q4_K_M com 32K de contexto usa ~17 GB -- ultrapassa os 16 GB. Use o Llama 3.1 8B em Q4_K_M com 32K de contexto (~9 GB) ou 128K de contexto (~14 GB) para um encaixe confortável. Defina num_ctx em um Modelfile: PARAMETER num_ctx 32768.' },
           ],
         },
         sources: {
@@ -2121,7 +2053,7 @@ schema: {
             'name': '로컬 LLM으로 책 전체를 요약할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '일반적인 300페이지 책은 9만~12만 단어로, 약 120K~160K 토큰에 해당합니다. 이는 대부분의 7B 모델의 실용적 신뢰 컨텍스트를 초과합니다. 7B 모델의 경우 책을 2만 단어 단위의 챕터로 분할하여 각각 요약한 후, 챕터 요약본을 다시 요약하십시오. 70B 모델은 64K 토큰까지 안정적으로 처리합니다.',
+              'text': '일반적인 300페이지 책은 9만~12만 단어로, 약 120K~160K 토큰에 해당합니다. 이는 대부분의 7B 모델의 실용적 신뢰 컨텍스트를 초과하며, 70B 모델(64K 안정)이나 분할 처리가 필요합니다. 7B 모델의 경우 책을 2만 단어 단위의 챕터로 분할하여 각각 요약한 후, 챕터 요약본을 다시 요약하십시오.',
             },
           },
           {
@@ -2137,15 +2069,15 @@ schema: {
             'name': '컨텍스트 길이를 늘리면 추론 속도가 느려집니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '그렇습니다. 32K 컨텍스트를 처리할 때 첫 번째 토큰 생성까지 4K 컨텍스트보다 약 3~4배 더 오래 걸립니다. 이는 어텐션의 이차 함수적 확장 때문입니다. 토큰 생성 속도(첫 번째 토큰 이후)는 크게 영향을 받지 않지만, 첫 번째 토큰까지의 시간(TTFT)은 입력 길이에 따라 증가합니다.',
+              'text': '그렇습니다. 어텐션 계산의 이차 함수적 확장으로 인해 동일 하드웨어에서 32K 컨텍스트를 처리하는 것은 4K 컨텍스트보다 약 3~4배 더 오래 걸립니다. 토큰 생성 속도(초당 토큰)는 크게 영향을 받지 않지만, 첫 번째 토큰까지의 시간(TTFT)은 입력 길이에 따라 증가합니다.',
             },
           },
           {
             '@type': 'Question',
-            'name': 'Ollama에서 가장 큰 컨텍스트 창을 가진 모델은 무엇입니까?',
+            'name': '긴 컨텍스트보다 RAG를 더 잘 처리하는 로컬 LLM은 무엇입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '2026년 5월 기준: Llama 4 Scout는 1,000만 토큰을 지원합니다(충분한 하드웨어에서 256K~1M 실용 가능). DeepSeek V4-Flash와 Qwen 3.6은 각각 1M 및 256K 토큰을 지원합니다(Qwen 3.6은 YaRN으로 1M 확장 가능). 이전 모델: Qwen3, Llama 3.3, Mistral Small은 128K 토큰을 지원합니다. Ollama의 기본값은 2048 토큰이므로 긴 컨텍스트를 사용하려면 Modelfile에서 num_ctx를 명시적으로 설정하십시오.',
+              'text': '문서 검색 및 검색 작업의 경우, RAG(검색 증강 생성)는 전체 문서를 컨텍스트로 입력하는 것보다 더 효과적인 경우가 많습니다. RAG는 대규모 문서 세트에서 가장 관련성 높은 3~5개 청크를 검색하여 모델에게만 제공합니다. 이는 4K~8K 토큰의 컨텍스트를 사용하며 "중간 소실" 문제를 피합니다. GPT4All LocalDocs 및 LlamaIndex와 같은 도구가 로컬 RAG를 구현합니다.',
             },
           },
           {
@@ -2153,7 +2085,7 @@ schema: {
             'name': 'KV 캐시란 무엇이며 컨텍스트 길이에 따라 왜 증가합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'KV 캐시는 컨텍스트 창의 모든 토큰에 대한 어텐션 상태를 저장합니다. 32K 컨텍스트는 4K 컨텍스트보다 8배 더 많은 KV 캐시 메모리를 필요로 합니다. Q4_K_M의 7B 모델은 4K 컨텍스트에서 약 6GB가 필요하지만 32K 컨텍스트에서는 약 9GB가 필요합니다. 모델 가중치는 변하지 않고 KV 캐시만 증가합니다.',
+              'text': 'KV 캐시(키-값 캐시)는 컨텍스트 창에서 처리된 모든 토큰에 대한 어텐션 상태를 저장합니다. 각 토큰은 키 및 값 벡터를 위한 고정된 양의 메모리가 필요합니다. 따라서 32K 컨텍스트는 4K 컨텍스트보다 8배 더 많은 KV 캐시 메모리가 필요합니다. 이것이 Q4_K_M의 7B 모델이 4K 컨텍스트에서 약 6GB, 32K 컨텍스트에서 약 9GB가 필요한 이유입니다. 모델 가중치는 변하지 않고 KV 캐시만 증가합니다.',
             },
           },
           {
@@ -2166,10 +2098,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': '"중간 소실" 문제란 무엇입니까?',
+            'name': '"중간 소실" 문제란 무엇이며 어떻게 피할 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'LLM은 컨텍스트 창의 시작과 끝 부분의 정보는 안정적으로 검색하지만 중간 부분의 세부 정보는 놓치는 경향이 있습니다. 128K 컨텍스트에서 40K~80K 토큰 구간에 배치된 내용이 가장 무시될 가능성이 높습니다. 해결책: 중요한 정보는 프롬프트 시작 부분에 배치하고, RAG를 사용하거나, 문서를 16K~32K 구간으로 나누어 겹치게 처리하십시오.',
+              'text': '연구에 따르면 LLM은 컨텍스트 창의 시작과 끝 부분의 정보는 안정적으로 검색하지만 중간 부분의 세부 정보는 놓칩니다. 128K 컨텍스트에서 40K~80K 토큰 구간에 배치된 내용이 가장 무시될 가능성이 높습니다. 이를 피하려면: 중요한 정보를 프롬프트 시작 부분에 배치하고, RAG를 사용하여 관련 청크만 검색하거나, 긴 문서를 겹치는 16K~32K 섹션으로 분할 처리하십시오.',
             },
           },
           {
@@ -2177,7 +2109,7 @@ schema: {
             'name': 'Ollama가 사용 중인 컨텍스트 길이를 어떻게 확인합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ollama show <모델명>을 실행하십시오. 출력에서 num_ctx를 확인하십시오. 2048로 표시되면 Ollama가 기본값을 사용 중인 것입니다. 변경하려면: PARAMETER num_ctx 32768이 포함된 Modelfile을 생성하고 ollama create <이름> -f Modelfile을 실행하십시오. ollama ps로 활성 세션을 확인하십시오.',
+              'text': '`ollama show <모델명>`을 실행하십시오. 출력에는 num_ctx를 포함한 파라미터 목록이 표시됩니다. 2048로 표시되면 Ollama가 기본값을 사용 중이며 모델의 전체 컨텍스트 창을 사용하지 않는 것입니다. 영구적으로 변경하려면 PARAMETER num_ctx 32768이 포함된 Modelfile을 생성하고 ollama create <이름> -f Modelfile을 실행하십시오. ollama ps로 활성 세션을 확인하십시오.',
             },
           },
           {
@@ -2185,7 +2117,23 @@ schema: {
             'name': '문서 질의응답에는 긴 컨텍스트와 RAG 중 어느 것이 더 낫습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RAG는 일반적으로 문서 Q&A에서 더 효과적이고 RAM 효율적입니다. RAG는 대규모 문서에서 가장 관련성 높은 3~5개 청크(총 4K~8K 토큰)를 검색하여 모델에 제공하므로 "중간 소실" 문제를 피할 수 있습니다. 긴 컨텍스트는 계약서, 코드베이스, 책 챕터처럼 전체 문서 구조를 이해해야 하거나 섹션 간의 관계와 순서가 중요할 때 더 적합합니다.',
+              'text': 'RAG는 일반적으로 문서 Q&A에서 긴 컨텍스트보다 더 효과적이고 RAM 효율적입니다. RAG는 대규모 코퍼스에서 관련성 높은 3~5개 청크(총 4K~8K 토큰)를 검색하여 "중간 소실" 문제를 피합니다. 모델이 전체 문서 구조를 이해하거나 섹션 간의 정확한 순서와 관계가 중요한 경우에는 긴 컨텍스트가 더 적합합니다. 대부분의 실용적인 문서 Q&A에서는 RAG로 시작하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama에서 가장 큰 컨텍스트 창을 가진 모델은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 5월 기준: Llama 4 Scout는 1,000만 토큰을 지원합니다(충분한 하드웨어에서 256K~1M 실용 가능). DeepSeek V4-Flash와 Qwen 3.6은 각각 1M 및 256K 토큰을 지원합니다(Qwen 3.6은 YaRN으로 1M 확장 가능). 이전 모델: Qwen3, Llama 3.3, Mistral Small은 128K 토큰을 지원합니다. Ollama의 기본값은 2048 토큰이므로 긴 컨텍스트를 사용하려면 Modelfile에서 num_ctx를 명시적으로 설정하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '"중간 소실" 문제란 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLM은 컨텍스트 창의 시작과 끝 부분의 정보는 안정적으로 검색하지만 중간 부분의 세부 정보는 놓치는 경향이 있습니다. 128K 컨텍스트에서 40K~80K 토큰 구간에 배치된 내용이 가장 무시될 가능성이 높습니다. 해결책: 중요한 정보는 프롬프트 시작 부분에 배치하고, RAG를 사용하거나, 문서를 16K~32K 구간으로 나누어 겹치게 처리하십시오.',
             },
           },
           {
@@ -2330,42 +2278,18 @@ schema: {
           id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
-            {
-              q: '로컬 LLM으로 책 전체를 요약할 수 있습니까?',
-              a: '일반적인 300페이지 책은 9만~12만 단어로, 약 120K~160K 토큰에 해당합니다. 이는 대부분의 7B 모델의 실용적 신뢰 컨텍스트를 초과하며, 70B 모델(64K 안정)이나 분할 처리가 필요합니다. 7B 모델의 경우 책을 2만 단어 단위의 챕터로 분할하여 각각 요약한 후, 챕터 요약본을 다시 요약하십시오.',
-            },
-            {
-              q: '32K 토큰에는 몇 페이지의 텍스트가 들어갑니까?',
-              a: '표준 영어 텍스트 기준(페이지당 250단어) 약 50~70페이지입니다. 32K 토큰 컨텍스트에는 단편 소설, 부록이 포함된 완전한 연구 논문, 또는 전체 기술 사양 문서가 들어갑니다.',
-            },
-            {
-              q: '컨텍스트 길이를 늘리면 추론 속도가 느려집니까?',
-              a: '그렇습니다. 어텐션 계산의 이차 함수적 확장으로 인해 동일 하드웨어에서 32K 컨텍스트를 처리하는 것은 4K 컨텍스트보다 약 3~4배 더 오래 걸립니다. 토큰 생성 속도(초당 토큰)는 크게 영향을 받지 않지만, 첫 번째 토큰까지의 시간(TTFT)은 입력 길이에 따라 증가합니다.',
-            },
-            {
-              q: '긴 컨텍스트보다 RAG를 더 잘 처리하는 로컬 LLM은 무엇입니까?',
-              a: '문서 검색 및 검색 작업의 경우, RAG(검색 증강 생성)는 전체 문서를 컨텍스트로 입력하는 것보다 더 효과적인 경우가 많습니다. RAG는 대규모 문서 세트에서 가장 관련성 높은 3~5개 청크를 검색하여 모델에게만 제공합니다. 이는 4K~8K 토큰의 컨텍스트를 사용하며 "중간 소실" 문제를 피합니다. GPT4All LocalDocs 및 LlamaIndex와 같은 도구가 로컬 RAG를 구현합니다.',
-            },
-            {
-              q: 'KV 캐시란 무엇이며 컨텍스트 길이에 따라 왜 증가합니까?',
-              a: 'KV 캐시(키-값 캐시)는 컨텍스트 창에서 처리된 모든 토큰에 대한 어텐션 상태를 저장합니다. 각 토큰은 키 및 값 벡터를 위한 고정된 양의 메모리가 필요합니다. 따라서 32K 컨텍스트는 4K 컨텍스트보다 8배 더 많은 KV 캐시 메모리가 필요합니다. 이것이 Q4_K_M의 7B 모델이 4K 컨텍스트에서 약 6GB, 32K 컨텍스트에서 약 9GB가 필요한 이유입니다. 모델 가중치는 변하지 않고 KV 캐시만 증가합니다.',
-            },
-            {
-              q: '로컬 모델이 Gemini 3.1 Pro처럼 1M 토큰 컨텍스트를 처리할 수 있습니까?',
-              a: '2026년 6월 주요 로컬 모델 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — 은 모두 128K 토큰을 기본 지원하며 대부분의 긴 문서 사용 사례를 커버합니다. 1M 토큰 로컬 추론은 전문 하드웨어(150+ GB VRAM)가 필요합니다. 대부분의 사용자에게는 Qwen3 14B와 128K 컨텍스트가 실용적인 최적 솔루션입니다.',
-            },
-            {
-              q: '"중간 소실" 문제란 무엇이며 어떻게 피할 수 있습니까?',
-              a: '연구에 따르면 LLM은 컨텍스트 창의 시작과 끝 부분의 정보는 안정적으로 검색하지만 중간 부분의 세부 정보는 놓칩니다. 128K 컨텍스트에서 40K~80K 토큰 구간에 배치된 내용이 가장 무시될 가능성이 높습니다. 이를 피하려면: 중요한 정보를 프롬프트 시작 부분에 배치하고, RAG를 사용하여 관련 청크만 검색하거나, 긴 문서를 겹치는 16K~32K 섹션으로 분할 처리하십시오.',
-            },
-            {
-              q: 'Ollama가 사용 중인 컨텍스트 길이를 어떻게 확인합니까?',
-              a: '`ollama show <모델명>`을 실행하십시오. 출력에는 num_ctx를 포함한 파라미터 목록이 표시됩니다. 2048로 표시되면 Ollama가 기본값을 사용 중이며 모델의 전체 컨텍스트 창을 사용하지 않는 것입니다. 영구적으로 변경하려면 PARAMETER num_ctx 32768이 포함된 Modelfile을 생성하고 ollama create <이름> -f Modelfile을 실행하십시오. ollama ps로 활성 세션을 확인하십시오.',
-            },
-            {
-              q: '문서 질의응답에는 긴 컨텍스트와 RAG 중 어느 것이 더 낫습니까?',
-              a: 'RAG는 일반적으로 문서 Q&A에서 긴 컨텍스트보다 더 효과적이고 RAM 효율적입니다. RAG는 대규모 코퍼스에서 관련성 높은 3~5개 청크(총 4K~8K 토큰)를 검색하여 "중간 소실" 문제를 피합니다. 모델이 전체 문서 구조를 이해하거나 섹션 간의 정확한 순서와 관계가 중요한 경우에는 긴 컨텍스트가 더 적합합니다. 대부분의 실용적인 문서 Q&A에서는 RAG로 시작하십시오.',
-            },
+            { q: '로컬 LLM으로 책 전체를 요약할 수 있습니까?', a: '일반적인 300페이지 책은 9만~12만 단어로, 약 120K~160K 토큰에 해당합니다. 이는 대부분의 7B 모델의 실용적 신뢰 컨텍스트를 초과하며, 70B 모델(64K 안정)이나 분할 처리가 필요합니다. 7B 모델의 경우 책을 2만 단어 단위의 챕터로 분할하여 각각 요약한 후, 챕터 요약본을 다시 요약하십시오.' },
+            { q: '32K 토큰에는 몇 페이지의 텍스트가 들어갑니까?', a: '표준 영어 텍스트 기준(페이지당 250단어) 약 50~70페이지입니다. 32K 토큰 컨텍스트에는 단편 소설, 부록이 포함된 완전한 연구 논문, 또는 전체 기술 사양 문서가 들어갑니다.' },
+            { q: '컨텍스트 길이를 늘리면 추론 속도가 느려집니까?', a: '그렇습니다. 어텐션 계산의 이차 함수적 확장으로 인해 동일 하드웨어에서 32K 컨텍스트를 처리하는 것은 4K 컨텍스트보다 약 3~4배 더 오래 걸립니다. 토큰 생성 속도(초당 토큰)는 크게 영향을 받지 않지만, 첫 번째 토큰까지의 시간(TTFT)은 입력 길이에 따라 증가합니다.' },
+            { q: '긴 컨텍스트보다 RAG를 더 잘 처리하는 로컬 LLM은 무엇입니까?', a: '문서 검색 및 검색 작업의 경우, RAG(검색 증강 생성)는 전체 문서를 컨텍스트로 입력하는 것보다 더 효과적인 경우가 많습니다. RAG는 대규모 문서 세트에서 가장 관련성 높은 3~5개 청크를 검색하여 모델에게만 제공합니다. 이는 4K~8K 토큰의 컨텍스트를 사용하며 "중간 소실" 문제를 피합니다. GPT4All LocalDocs 및 LlamaIndex와 같은 도구가 로컬 RAG를 구현합니다.' },
+            { q: 'KV 캐시란 무엇이며 컨텍스트 길이에 따라 왜 증가합니까?', a: 'KV 캐시(키-값 캐시)는 컨텍스트 창에서 처리된 모든 토큰에 대한 어텐션 상태를 저장합니다. 각 토큰은 키 및 값 벡터를 위한 고정된 양의 메모리가 필요합니다. 따라서 32K 컨텍스트는 4K 컨텍스트보다 8배 더 많은 KV 캐시 메모리가 필요합니다. 이것이 Q4_K_M의 7B 모델이 4K 컨텍스트에서 약 6GB, 32K 컨텍스트에서 약 9GB가 필요한 이유입니다. 모델 가중치는 변하지 않고 KV 캐시만 증가합니다.' },
+            { q: '로컬 모델이 Gemini 3.1 Pro처럼 1M 토큰 컨텍스트를 처리할 수 있습니까?', a: '2026년 6월 주요 로컬 모델 — Qwen3, Gemma 4, Llama 3.1, Mistral Small 3.1 — 은 모두 128K 토큰을 기본 지원하며 대부분의 긴 문서 사용 사례를 커버합니다. 1M 토큰 로컬 추론은 전문 하드웨어(150+ GB VRAM)가 필요합니다. 대부분의 사용자에게는 Qwen3 14B와 128K 컨텍스트가 실용적인 최적 솔루션입니다.' },
+            { q: '"중간 소실" 문제란 무엇이며 어떻게 피할 수 있습니까?', a: '연구에 따르면 LLM은 컨텍스트 창의 시작과 끝 부분의 정보는 안정적으로 검색하지만 중간 부분의 세부 정보는 놓칩니다. 128K 컨텍스트에서 40K~80K 토큰 구간에 배치된 내용이 가장 무시될 가능성이 높습니다. 이를 피하려면: 중요한 정보를 프롬프트 시작 부분에 배치하고, RAG를 사용하여 관련 청크만 검색하거나, 긴 문서를 겹치는 16K~32K 섹션으로 분할 처리하십시오.' },
+            { q: 'Ollama가 사용 중인 컨텍스트 길이를 어떻게 확인합니까?', a: '`ollama show <모델명>`을 실행하십시오. 출력에는 num_ctx를 포함한 파라미터 목록이 표시됩니다. 2048로 표시되면 Ollama가 기본값을 사용 중이며 모델의 전체 컨텍스트 창을 사용하지 않는 것입니다. 영구적으로 변경하려면 PARAMETER num_ctx 32768이 포함된 Modelfile을 생성하고 ollama create <이름> -f Modelfile을 실행하십시오. ollama ps로 활성 세션을 확인하십시오.' },
+            { q: '문서 질의응답에는 긴 컨텍스트와 RAG 중 어느 것이 더 낫습니까?', a: 'RAG는 일반적으로 문서 Q&A에서 긴 컨텍스트보다 더 효과적이고 RAM 효율적입니다. RAG는 대규모 코퍼스에서 관련성 높은 3~5개 청크(총 4K~8K 토큰)를 검색하여 "중간 소실" 문제를 피합니다. 모델이 전체 문서 구조를 이해하거나 섹션 간의 정확한 순서와 관계가 중요한 경우에는 긴 컨텍스트가 더 적합합니다. 대부분의 실용적인 문서 Q&A에서는 RAG로 시작하십시오.' },
+            { q: 'Ollama에서 가장 큰 컨텍스트 창을 가진 모델은 무엇입니까?', a: '2026년 5월 기준: Llama 4 Scout는 1,000만 토큰을 지원합니다(충분한 하드웨어에서 256K~1M 실용 가능). DeepSeek V4-Flash와 Qwen 3.6은 각각 1M 및 256K 토큰을 지원합니다(Qwen 3.6은 YaRN으로 1M 확장 가능). 이전 모델: Qwen3, Llama 3.3, Mistral Small은 128K 토큰을 지원합니다. Ollama의 기본값은 2048 토큰이므로 긴 컨텍스트를 사용하려면 Modelfile에서 num_ctx를 명시적으로 설정하십시오.' },
+            { q: '"중간 소실" 문제란 무엇입니까?', a: 'LLM은 컨텍스트 창의 시작과 끝 부분의 정보는 안정적으로 검색하지만 중간 부분의 세부 정보는 놓치는 경향이 있습니다. 128K 컨텍스트에서 40K~80K 토큰 구간에 배치된 내용이 가장 무시될 가능성이 높습니다. 해결책: 중요한 정보는 프롬프트 시작 부분에 배치하고, RAG를 사용하거나, 문서를 16K~32K 구간으로 나누어 겹치게 처리하십시오.' },
+            { q: '16GB RAM으로 128K 컨텍스트 로컬 LLM을 실행하려면 어떻게 해야 합니까?', a: '16GB RAM에서 Q4_K_M의 Mistral Small 3.1 24B로 32K 컨텍스트를 사용하면 약 17GB가 필요하여 16GB를 초과합니다. Q4_K_M의 Llama 3.1 8B로 32K 컨텍스트(약 9GB) 또는 128K 컨텍스트(약 14GB)를 사용하면 여유 있게 실행됩니다. Modelfile에서 num_ctx를 설정하십시오: PARAMETER num_ctx 32768.' },
           ],
         },
         sources: {

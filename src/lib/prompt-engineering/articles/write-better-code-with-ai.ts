@@ -600,98 +600,98 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Was ist das beste KI-Modell zum Code-Schreiben 2026?',
-            acceptedAnswer: {
+            'name': 'Was ist das beste KI-Modell zum Code-Schreiben 2026?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Claude 4.8 Opus (Anthropic) liefert die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing, gewinnt in 60–65% der direkten Vergleiche gegen GPT-5 bei diesen Aufgaben. GPT-5 (OpenAI) hat einen leichten Vorteil bei Algorithmus-Design und komplexer Argumentation. Für datenschutz-sensitive Codebasen erzeugt LLaMA 4 8B, lokal über Ollama laufend, null externe API-Aufrufe.',
+              'text': 'Claude 4.8 Opus (Anthropic) erzeugt die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing. GPT-5 (OpenAI) hat einen leichten Vorteil für Algorithmus-Design und komplexe Argumentation. Für datenschutz-sensitive Codebasen erzeugt LLaMA 4 8B, lokal über Ollama laufend, null externe API-Aufrufe. Benchmark-Performance variiert nach Aufgabe; wir empfehlen, alle drei auf Ihren spezifischen Use Cases zu testen.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Ist KI-generierter Code sicher direkt zu deployen?',
-            acceptedAnswer: {
+            'name': 'Ist KI-generierter Code sicher, direkt zu deployen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein. KI führt Sicherheitslücken in 45% der generierten Code-Fälle ein, einschließlich unsicherer Implementierungen und halluzinierten Paketnamen, die Supply-Chain-Angriffe ermöglichen. Aller KI-generierter Code muss von einem Entwickler überprüft und mit einem Security-Linter (z.B. Bandit für Python, ESLint Security für JavaScript) gescannt werden, bevor er in Production geht.',
+              'text': 'Nein. KI führt Sicherheitslücken in 45% der generierten Code-Fälle ein, inklusive unsicherer Implementierungen und halluzinierten Package-Namen, die Supply-Chain-Angriffe ermöglichen. Aller KI-generierter Code muss von einem Entwickler überprüft und mit einem Security-Linter (z.B. Bandit für Python, ESLint Security für JavaScript) gescannt werden, bevor Production-Deployment.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Wie viel schneller sind Entwickler, die KI-Programmier-Tools nutzen?',
-            acceptedAnswer: {
+            'name': 'Wie viel schneller sind Entwickler, die KI-Programmier-Tools nutzen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Entwickler, die KI-Programmier-Assistenten nutzen, schließen in kontrollierten Studien 126% mehr Projekte pro Woche ab als manuelle Codierer. Eine 2025 METR-Feldstudie zeigte jedoch, dass erfahrene Entwickler 19% länger brauchten bei Aufgaben, die komplexe Codebase-Integration erfordern — der Produktivitätszuwachs ist aufgabenabhängig und erfordert strukturierte Prompt-Disziplin.',
+              'text': 'Entwickler, die KI-Programmier-Assistenten nutzen, schließen in kontrollierten Studien 126% mehr Projekte pro Woche ab als manuelle Codierer. Eine 2025 METR-Feldstudie zeigte jedoch, dass erfahrene Entwickler 19% länger brauchten bei Aufgaben, die komplexe Codebase-Integration erfordern — der Produktivitäts-Zuwachs ist aufgabenabhängig und erfordert strukturierte Prompt-Disziplin.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging?',
-            acceptedAnswer: {
+            'name': 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Chain-of-Thought (CoT) Prompting fordert das Modell auf, jeden Schritt seiner Argumentation zu verfolgen, bevor es die letzte Antwort produziert. Beim Debugging bedeutet das, dass das Modell den Fehlerpfad explizit verfolgt, was es Ihnen ermöglicht, genau zu identifizieren, wo die Logik zusammenbricht.',
+              'text': 'Chain-of-Thought (CoT) Prompting fordert das Modell auf, jeden Schritt seiner Argumentation zu verfolgen, bevor es den endgültigen Output erzeugt. Beim Debugging bedeutet das, das Modell identifiziert die genaue Operation, die den falschen Wert erzeugt, macht den Fehler tracierbar und korrigierbar, statt eine vollständige Output-Regeneration zu erfordern.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?',
-            acceptedAnswer: {
+            'name': 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung erhalten. Für japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte bieten Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, da ihre Tokenizer CJK-Skripte besser verarbeiten als westliche Modelle.',
+              'text': 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Welche Temperature sollte ich für KI-Code-Generierung nutzen?',
-            acceptedAnswer: {
+            'name': 'Welche Temperature sollte ich für KI-Code-Generierung nutzen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Setzen Sie Temperature auf 0,1–0,2 für Production-Code-Generierung. Das erzeugt deterministischen, konservativen Output mit minimaler zufälliger Variation. Nutzen Sie Temperature 0,7–0,9 nur beim Brainstorming algorithmischer Ansätze, wenn Sie verschiedene Optionen zum Evaluieren wollen — nicht beim Schreiben von Code, der deployed wird.',
+              'text': 'Setzen Sie Temperature auf 0,1–0,2 für Production-Code-Generierung. Das erzeugt deterministischen, konservativen Output mit minimaler zufälliger Variation. Nutzen Sie Temperature 0,7–0,9 nur, wenn Sie algorithmische Ansätze brainstormen, wo Sie diverse Optionen zum Evaluieren wollen — nicht, wenn Sie Code schreiben, der deployed wird.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Was sind halluzinierte Abhängigkeiten in KI-Programmierung?',
-            acceptedAnswer: {
+            'name': 'Was sind halluzinierte Dependencies in KI-Programmierung?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Halluzinierte Abhängigkeiten sind Paket- oder Bibliotheksnamen, die das Modell empfiehlt, aber tatsächlich nicht existieren. Forschung zeigt, dass KI-Modelle nicht-existente Bibliotheken 20% der Zeit empfehlen. Angreifer nutzen das über Slopsquatting aus — registrieren den halluzierten Paketnamen mit schädlichem Code. Verifizieren Sie immer jedes von KI empfohlene Paket auf PyPI oder npm, bevor Sie es installieren.',
+              'text': 'Halluzinierte Dependencies sind Paket- oder Bibliotheksnamen, die das Modell empfiehlt, aber tatsächlich nicht existieren. Eine akademische Studie fand, dass LLMs etwa 20% der Zeit nicht-existente Bibliotheken empfehlen. Angreifer nutzen das über Slopsquatting aus — registrieren den halluzierten Paketnamen auf PyPI oder npm mit schädlichem Code darin. Verifizieren Sie immer jedes von KI empfohlene Package, bevor Sie installieren, indem Sie das Official Repository prüfen.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Kann ich KI-Programmier-Tools mit lokalen LLMs nutzen?',
-            acceptedAnswer: {
+            'name': 'Kann ich KI-Programmier-Tools mit lokalen LLMs für Datenschutz nutzen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja. LLaMA 4 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.',
+              'text': 'Ja. LLaMA 4 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Wie schreibe ich einen System-Prompt für KI-Programmier-Tools?',
-            acceptedAnswer: {
+            'name': 'Wie schreibe ich einen System-Prompt für KI-Programmier-Tools?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Definieren Sie vier Dinge in Ihrem System-Prompt: (1) die technische Rolle ("Senior Python Backend Engineer"), (2) den Tech Stack und verbotene Bibliotheken, (3) Code-Style-Regeln ("TypeScript strict mode, kein any"), (4) Output-Format ("nur Code zurückgeben, keine Prosa"). Speichern Sie das als projektweite Regel in Cursor, Claude Code oder Ihren IDE-KI-Einstellungen, damit es über alle Sessions hinweg gilt.',
+              'text': 'Definieren Sie vier Dinge in Ihrem System-Prompt: (1) die technische Rolle ("Senior Python Backend Engineer"), (2) den Tech Stack und verbotene Bibliotheken, (3) Code-Style-Regeln ("TypeScript strict mode, kein any"), (4) Output-Format ("nur Code zurückgeben, keine Prosa"). Speichern Sie das als projektweite Regel in Cursor, Claude Code oder Ihren IDE KI-Einstellungen, damit es über alle Sessions gilt.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Erzeugt GitHub Copilot oder Cursor weniger Bugs?',
-            acceptedAnswer: {
+            'name': 'Erzeugt GitHub Copilot oder Cursor weniger Bugs?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Cursor erzeugt weniger Format-Fehler mit ~10–15% Halluzinations-Rate versus Copilots ~15–20%, hauptsächlich weil Cursor projekt-weite RAG (Retrieval-Augmented Generation) Indexierung nutzt, um Ihre existierende Codebase zu verstehen. Bei Single-File-Boilerplate-Aufgaben ist der Gap gering. Bei Multi-File-Refactoring, wo Architektur-Konsistenz zählt, erzeugt Cursors Codebase-Kontext messbar weniger Integrationsfehler.',
+              'text': 'Cursor erzeugt weniger Format-Fehler mit ~10–15% Halluzinations-Rate vs. Copilots ~15–20%, hauptsächlich weil Cursor projekt-weite RAG (Retrieval-Augmented Generation) Indexierung nutzt, um Ihren bestehenden Codebase zu verstehen. Bei Single-File-Boilerplate-Aufgaben ist der Gap gering. Bei Multi-File-Refactoring, wo Architektur-Konsistenz zählt, erzeugt Cursors Codebase-Kontext messbar weniger Integrationsfehler. Beide benötigen Security-Linting bevor Deployment.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5 senden?',
-            acceptedAnswer: {
+            'name': 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5 senden?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Datenverarbeitung. Verwenden Sie LLaMA 4 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.',
+              'text': 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie LLaMA 4 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?',
-            acceptedAnswer: {
+            'name': 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (LLaMA 4, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. BSI TR-03183 empfiehlt für staatliche deutsche Stellen: lokale Modelle mit luftgestützter Architektur für Hochrisiko-Code-Generierung.',
+              'text': 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (LLaMA 4, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.',
             },
           },
         ],
@@ -963,54 +963,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            {
-              q: 'Was ist das beste KI-Modell zum Code-Schreiben 2026?',
-              a: 'Claude 4.8 Opus (Anthropic) erzeugt die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing. GPT-5 (OpenAI) hat einen leichten Vorteil für Algorithmus-Design und komplexe Argumentation. Für datenschutz-sensitive Codebasen erzeugt LLaMA 4 8B, lokal über Ollama laufend, null externe API-Aufrufe. Benchmark-Performance variiert nach Aufgabe; wir empfehlen, alle drei auf Ihren spezifischen Use Cases zu testen.',
-            },
-            {
-              q: 'Ist KI-generierter Code sicher, direkt zu deployen?',
-              a: 'Nein. KI führt Sicherheitslücken in 45% der generierten Code-Fälle ein, inklusive unsicherer Implementierungen und halluzinierten Package-Namen, die Supply-Chain-Angriffe ermöglichen. Aller KI-generierter Code muss von einem Entwickler überprüft und mit einem Security-Linter (z.B. Bandit für Python, ESLint Security für JavaScript) gescannt werden, bevor Production-Deployment.',
-            },
-            {
-              q: 'Wie viel schneller sind Entwickler, die KI-Programmier-Tools nutzen?',
-              a: 'Entwickler, die KI-Programmier-Assistenten nutzen, schließen in kontrollierten Studien 126% mehr Projekte pro Woche ab als manuelle Codierer. Eine 2025 METR-Feldstudie zeigte jedoch, dass erfahrene Entwickler 19% länger brauchten bei Aufgaben, die komplexe Codebase-Integration erfordern — der Produktivitäts-Zuwachs ist aufgabenabhängig und erfordert strukturierte Prompt-Disziplin.',
-            },
-            {
-              q: 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging?',
-              a: 'Chain-of-Thought (CoT) Prompting fordert das Modell auf, jeden Schritt seiner Argumentation zu verfolgen, bevor es den endgültigen Output erzeugt. Beim Debugging bedeutet das, das Modell identifiziert die genaue Operation, die den falschen Wert erzeugt, macht den Fehler tracierbar und korrigierbar, statt eine vollständige Output-Regeneration zu erfordern.',
-            },
-            {
-              q: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?',
-              a: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.',
-            },
-            {
-              q: 'Welche Temperature sollte ich für KI-Code-Generierung nutzen?',
-              a: 'Setzen Sie Temperature auf 0,1–0,2 für Production-Code-Generierung. Das erzeugt deterministischen, konservativen Output mit minimaler zufälliger Variation. Nutzen Sie Temperature 0,7–0,9 nur, wenn Sie algorithmische Ansätze brainstormen, wo Sie diverse Optionen zum Evaluieren wollen — nicht, wenn Sie Code schreiben, der deployed wird.',
-            },
-            {
-              q: 'Was sind halluzinierte Dependencies in KI-Programmierung?',
-              a: 'Halluzinierte Dependencies sind Paket- oder Bibliotheksnamen, die das Modell empfiehlt, aber tatsächlich nicht existieren. Eine akademische Studie fand, dass LLMs etwa 20% der Zeit nicht-existente Bibliotheken empfehlen. Angreifer nutzen das über Slopsquatting aus — registrieren den halluzierten Paketnamen auf PyPI oder npm mit schädlichem Code darin. Verifizieren Sie immer jedes von KI empfohlene Package, bevor Sie installieren, indem Sie das Official Repository prüfen.',
-            },
-            {
-              q: 'Kann ich KI-Programmier-Tools mit lokalen LLMs für Datenschutz nutzen?',
-              a: 'Ja. LLaMA 4 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.',
-            },
-            {
-              q: 'Wie schreibe ich einen System-Prompt für KI-Programmier-Tools?',
-              a: 'Definieren Sie vier Dinge in Ihrem System-Prompt: (1) die technische Rolle ("Senior Python Backend Engineer"), (2) den Tech Stack und verbotene Bibliotheken, (3) Code-Style-Regeln ("TypeScript strict mode, kein any"), (4) Output-Format ("nur Code zurückgeben, keine Prosa"). Speichern Sie das als projektweite Regel in Cursor, Claude Code oder Ihren IDE KI-Einstellungen, damit es über alle Sessions gilt.',
-            },
-            {
-              q: 'Erzeugt GitHub Copilot oder Cursor weniger Bugs?',
-              a: 'Cursor erzeugt weniger Format-Fehler mit ~10–15% Halluzinations-Rate vs. Copilots ~15–20%, hauptsächlich weil Cursor projekt-weite RAG (Retrieval-Augmented Generation) Indexierung nutzt, um Ihren bestehenden Codebase zu verstehen. Bei Single-File-Boilerplate-Aufgaben ist der Gap gering. Bei Multi-File-Refactoring, wo Architektur-Konsistenz zählt, erzeugt Cursors Codebase-Kontext messbar weniger Integrationsfehler. Beide benötigen Security-Linting bevor Deployment.',
-            },
-            {
-              q: 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5 senden?',
-              a: 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie LLaMA 4 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.',
-            },
-            {
-              q: 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?',
-              a: 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (LLaMA 4, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.',
-            },
+            { q: 'Was ist das beste KI-Modell zum Code-Schreiben 2026?', a: 'Claude 4.8 Opus (Anthropic) erzeugt die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing. GPT-5 (OpenAI) hat einen leichten Vorteil für Algorithmus-Design und komplexe Argumentation. Für datenschutz-sensitive Codebasen erzeugt LLaMA 4 8B, lokal über Ollama laufend, null externe API-Aufrufe. Benchmark-Performance variiert nach Aufgabe; wir empfehlen, alle drei auf Ihren spezifischen Use Cases zu testen.' },
+            { q: 'Ist KI-generierter Code sicher, direkt zu deployen?', a: 'Nein. KI führt Sicherheitslücken in 45% der generierten Code-Fälle ein, inklusive unsicherer Implementierungen und halluzinierten Package-Namen, die Supply-Chain-Angriffe ermöglichen. Aller KI-generierter Code muss von einem Entwickler überprüft und mit einem Security-Linter (z.B. Bandit für Python, ESLint Security für JavaScript) gescannt werden, bevor Production-Deployment.' },
+            { q: 'Wie viel schneller sind Entwickler, die KI-Programmier-Tools nutzen?', a: 'Entwickler, die KI-Programmier-Assistenten nutzen, schließen in kontrollierten Studien 126% mehr Projekte pro Woche ab als manuelle Codierer. Eine 2025 METR-Feldstudie zeigte jedoch, dass erfahrene Entwickler 19% länger brauchten bei Aufgaben, die komplexe Codebase-Integration erfordern — der Produktivitäts-Zuwachs ist aufgabenabhängig und erfordert strukturierte Prompt-Disziplin.' },
+            { q: 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging?', a: 'Chain-of-Thought (CoT) Prompting fordert das Modell auf, jeden Schritt seiner Argumentation zu verfolgen, bevor es den endgültigen Output erzeugt. Beim Debugging bedeutet das, das Modell identifiziert die genaue Operation, die den falschen Wert erzeugt, macht den Fehler tracierbar und korrigierbar, statt eine vollständige Output-Regeneration zu erfordern.' },
+            { q: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?', a: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.' },
+            { q: 'Welche Temperature sollte ich für KI-Code-Generierung nutzen?', a: 'Setzen Sie Temperature auf 0,1–0,2 für Production-Code-Generierung. Das erzeugt deterministischen, konservativen Output mit minimaler zufälliger Variation. Nutzen Sie Temperature 0,7–0,9 nur, wenn Sie algorithmische Ansätze brainstormen, wo Sie diverse Optionen zum Evaluieren wollen — nicht, wenn Sie Code schreiben, der deployed wird.' },
+            { q: 'Was sind halluzinierte Dependencies in KI-Programmierung?', a: 'Halluzinierte Dependencies sind Paket- oder Bibliotheksnamen, die das Modell empfiehlt, aber tatsächlich nicht existieren. Eine akademische Studie fand, dass LLMs etwa 20% der Zeit nicht-existente Bibliotheken empfehlen. Angreifer nutzen das über Slopsquatting aus — registrieren den halluzierten Paketnamen auf PyPI oder npm mit schädlichem Code darin. Verifizieren Sie immer jedes von KI empfohlene Package, bevor Sie installieren, indem Sie das Official Repository prüfen.' },
+            { q: 'Kann ich KI-Programmier-Tools mit lokalen LLMs für Datenschutz nutzen?', a: 'Ja. LLaMA 4 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.' },
+            { q: 'Wie schreibe ich einen System-Prompt für KI-Programmier-Tools?', a: 'Definieren Sie vier Dinge in Ihrem System-Prompt: (1) die technische Rolle ("Senior Python Backend Engineer"), (2) den Tech Stack und verbotene Bibliotheken, (3) Code-Style-Regeln ("TypeScript strict mode, kein any"), (4) Output-Format ("nur Code zurückgeben, keine Prosa"). Speichern Sie das als projektweite Regel in Cursor, Claude Code oder Ihren IDE KI-Einstellungen, damit es über alle Sessions gilt.' },
+            { q: 'Erzeugt GitHub Copilot oder Cursor weniger Bugs?', a: 'Cursor erzeugt weniger Format-Fehler mit ~10–15% Halluzinations-Rate vs. Copilots ~15–20%, hauptsächlich weil Cursor projekt-weite RAG (Retrieval-Augmented Generation) Indexierung nutzt, um Ihren bestehenden Codebase zu verstehen. Bei Single-File-Boilerplate-Aufgaben ist der Gap gering. Bei Multi-File-Refactoring, wo Architektur-Konsistenz zählt, erzeugt Cursors Codebase-Kontext messbar weniger Integrationsfehler. Beide benötigen Security-Linting bevor Deployment.' },
+            { q: 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5 senden?', a: 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie LLaMA 4 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.' },
+            { q: 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?', a: 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (LLaMA 4, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.' },
           ],
         },
         sources: {
@@ -1699,10 +1663,54 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'Qual é o melhor modelo de IA para escrever código em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Claude 4.8 Opus (Anthropic) oferece os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, LLaMA 4 8B rodando localmente via Ollama gera zero chamadas de API externas.' } },
-          { '@type': 'Question', name: 'É seguro fazer deploy de código gerado por IA diretamente?', acceptedAnswer: { '@type': 'Answer', text: 'Não. IA introduz vulnerabilidades de segurança em 45% dos casos de código gerado. Todo código gerado por IA deve ser revisado por um desenvolvedor e escaneado com um linter de segurança antes do deploy em produção.' } },
-          { '@type': 'Question', name: 'Qual temperatura devo usar para geração de código com IA?', acceptedAnswer: { '@type': 'Answer', text: 'Defina a Temperatura em 0,1–0,2 para geração de código de produção. Use Temperatura 0,7–0,9 apenas para brainstorming de abordagens algorítmicas.' } },
-          { '@type': 'Question', name: 'Posso enviar código-fonte relevante para LGPD a modelos de IA na nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use LLaMA 4 8B via Ollama para inferência local sem chamadas de API externas.' } },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o melhor modelo de IA para escrever código em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Claude 4.8 Opus (Anthropic) produz os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, LLaMA 4 8B rodando localmente via Ollama gera zero chamadas de API externas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'É seguro fazer deploy de código gerado por IA diretamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. IA introduz vulnerabilidades de segurança em 45% dos casos de código gerado, incluindo implementações inseguras e nomes de pacotes alucinados. Todo código gerado por IA deve ser revisado e escaneado antes do deploy em produção.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual temperatura devo usar para geração de código com IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Defina a Temperatura em 0,1–0,2 para geração de código de produção. Use Temperatura 0,7–0,9 apenas para brainstorming algorítmico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que são dependências alucinadas em codificação com IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nomes de pacotes ou bibliotecas que o modelo recomenda mas que na verdade não existem. IA recomenda bibliotecas inexistentes 20% das vezes. Sempre verifique cada pacote recomendado no PyPI ou npm.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar ferramentas de codificação com IA com LLMs locais para privacidade?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. LLaMA 4 8B rodando via Ollama em uma máquina com 8 GB de RAM gera zero chamadas de API externas. É adequado para bases de código com algoritmos proprietários ou código que não pode sair da sua infraestrutura.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso enviar código-fonte relevante para a LGPD a modelos de IA na nuvem?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use LLaMA 4 8B via Ollama para inferência local sem chamadas de API externas.',
+            },
+          },
         ],
       },
       sections: {
@@ -1989,98 +1997,98 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Quel est le meilleur modèle d\'IA pour écrire du code en 2026 ?',
-            acceptedAnswer: {
+            'name': 'Quel est le meilleur modèle d\'IA pour écrire du code en 2026 ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Claude 4.8 Opus (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, LLaMA 3.1 7B s\'exécutant localement via Ollama produit zéro appel API externe.',
+              'text': 'Claude 4.8 Opus (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, LLaMA 4 8B s\'exécutant localement via Ollama produit zéro appel API externe. Les performances varient selon la tâche ; nous recommandons de tester tous les trois sur vos cas d\'utilisation spécifiques.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Le code généré par l\'IA est-il sûr de déployer directement ?',
-            acceptedAnswer: {
+            'name': 'Le code généré par l\'IA est-il sûr de déployer directement ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Non. L\'IA introduit des vulnérabilités de sécurité dans 45 % des cas de code généré, y compris des implémentations insécurisées et des noms de packages halluccinés qui permettent des attaques de la chaîne d\'approvisionnement. Tout code généré par l\'IA doit être examiné par un développeur et scanné avec un linter de sécurité (par exemple Bandit pour Python, ESLint Security pour JavaScript) avant le déploiement en production.',
+              'text': 'Non. L\'IA introduit des vulnérabilités de sécurité dans 45 % des cas de code généré, y compris les implémentations insécurisées et les noms de packages halluccinés qui permettent les attaques de la chaîne d\'approvisionnement. Tout code généré par l\'IA doit être examiné par un développeur et scanné avec un linter de sécurité (par exemple Bandit pour Python, ESLint Security pour JavaScript) avant le déploiement en production.',
             },
           },
           {
             '@type': 'Question',
-            name: 'À quel point les développeurs qui utilisent les outils de codage IA sont-ils plus rapides ?',
-            acceptedAnswer: {
+            'name': 'À quel point les développeurs utilisant les outils de codage IA sont-ils plus rapides ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Les développeurs utilisant les assistants de codage IA complètent 126 % plus de projets par semaine que les codeurs manuels dans les études contrôlées. Cependant, une étude de terrain METR 2025 a trouvé que les développeurs expérimentés prenaient 19 % plus de temps sur les tâches nécessitant une intégration complexe de la codebase — le gain de productivité dépend de la tâche et nécessite une discipline de prompt structuré.',
+              'text': 'Les développeurs utilisant les assistants de codage IA complètent 126 % plus de projets par semaine que les codeurs manuels dans les études contrôlées. Cependant, une étude de terrain METR 2025 a trouvé que les développeurs expérimentés prenaient 19 % plus de temps sur les tâches nécessitant une intégration complexe de la codebase — le gain de productivité dépend de la tâche et nécessite une discipline de prompt structuré.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Comment le chain-of-thought prompting améliore-t-il le débogage du code ?',
-            acceptedAnswer: {
+            'name': 'Comment le chain-of-thought prompting améliore-t-il le débogage du code ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Le Chain-of-Thought (CoT) prompting demande au modèle de tracer chaque étape de son raisonnement avant de produire la sortie finale. Pour le débogage, cela signifie que le modèle identifie l\'opération exacte qui produit la valeur intermédiaire incorrecte, rendant l\'erreur traçable et corrigible plutôt que de nécessiter une régénération complète de la sortie.',
+              'text': 'Le Chain-of-Thought (CoT) prompting demande au modèle de tracer chaque étape de son raisonnement avant de produire la sortie finale. Pour le débogage, cela signifie que le modèle identifie l\'opération exacte qui produit la valeur intermédiaire incorrecte, rendant l\'erreur traçable et corrigible plutôt que de nécessiter une régénération complète de la sortie.',
             },
           },
           {
             '@type': 'Question',
-            name: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?',
-            acceptedAnswer: {
+            'name': 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
+              'text': 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quelle température devrais-je utiliser pour la génération de code IA ?',
-            acceptedAnswer: {
+            'name': 'Quelle température devrais-je utiliser pour la génération de code IA ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Réglez la température sur 0,1–0,2 pour la génération de code en production. Cela produit une sortie déterministe et conservative avec une variation aléatoire minimale. Utilisez la température 0,7–0,9 uniquement lors du brainstorming d\'approches algorithmiques où vous voulez des options diversifiées à évaluer — pas lors de l\'écriture de code qui sera déployé.',
+              'text': 'Réglez la température sur 0,1–0,2 pour la génération de code en production. Cela produit une sortie déterministe et conservative avec une variation aléatoire minimale. Utilisez la température 0,7–0,9 uniquement lors du brainstorming d\'approches algorithmiques où vous voulez des options diversifiées à évaluer — pas lors de l\'écriture de code qui sera déployé.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Qu\'est-ce que les dépendances halluccinées dans le codage IA ?',
-            acceptedAnswer: {
+            'name': 'Qu\'est-ce que les dépendances halluccinées dans le codage IA ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Les dépendances halluccinées sont des noms de packages ou de bibliothèques que le modèle recommande mais qui n\'existent pas réellement. La recherche a montré que les modèles d\'IA recommandent des bibliothèques inexistantes 20 % du temps. Les attaquants exploitent cela via slopsquatting — en enregistrant le nom de package hallucciné avec du code malveillant. Vérifiez toujours tout package suggéré par l\'IA sur PyPI ou npm avant d\'installer.',
+              'text': 'Les dépendances halluccinées sont des noms de packages ou de bibliothèques que le modèle recommande mais qui n\'existent pas réellement. Une étude académique 2024 a trouvé que les LLM recommandent des bibliothèques inexistantes approximativement 20 % du temps. Les attaquants exploitent cela via slopsquatting — enregistrant le nom de package hallucciné sur PyPI ou npm avec du code malveillant à l\'intérieur. Vérifiez toujours tout package suggéré par l\'IA avant d\'installer en consultant le dépôt officiel.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?',
-            acceptedAnswer: {
+            'name': 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Oui. LLaMA 3.1 7B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.',
+              'text': 'Oui. LLaMA 4 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Comment écrire un prompt système pour les outils de codage IA ?',
-            acceptedAnswer: {
+            'name': 'Comment écrire un prompt système pour les outils de codage IA ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Définissez quatre choses dans votre prompt système : (1) le rôle technique (« ingénieur backend Python senior »), (2) la pile technologique et les bibliothèques interdites, (3) les règles de style de code (« Mode strict TypeScript, pas de types any »), (4) le format de sortie (« retournez uniquement le code, pas de prose »). Conservez cela comme une règle au niveau du projet dans Cursor, Claude Code ou les paramètres d\'IA de votre IDE pour qu\'il s\'applique à toutes les sessions.',
+              'text': 'Définissez quatre choses dans votre prompt système : (1) le rôle technique (« ingénieur backend Python senior »), (2) la pile technologique et les bibliothèques interdites, (3) les règles de style de code (« Mode strict TypeScript, pas de types any »), (4) le format de sortie (« retournez uniquement le code, pas de prose »). Conservez ceci comme une règle au niveau du projet dans Cursor, Claude Code ou vos paramètres d\'IA IDE pour qu\'il s\'applique à toutes les sessions.',
             },
           },
           {
             '@type': 'Question',
-            name: 'GitHub Copilot ou Cursor produisent-ils moins de bugs ?',
-            acceptedAnswer: {
+            'name': 'GitHub Copilot ou Cursor produisent-ils moins de bugs ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Cursor produit moins d\'erreurs de format à environ 10–15 % de taux d\'hallucination par rapport à Copilot à environ 15–20 %, principalement parce que Cursor utilise l\'indexage RAG au niveau du projet pour comprendre votre codebase existante. Pour les tâches de boilerplate à fichier unique, l\'écart est petit. Pour la refactorisation multi-fichiers où la cohérence architecturale compte, le contexte de codebase de Cursor produit mesurably moins d\'erreurs d\'intégration.',
+              'text': 'Cursor utilise l\'indexage RAG (Retrieval-Augmented Generation) au niveau du projet pour comprendre votre codebase entière, réduisant les hallucinations par rapport au contexte au niveau du fichier uniquement de GitHub Copilot. Pour les tâches de boilerplate à fichier unique, la différence est minimale. Pour la refactorisation multi-fichiers où la cohérence architecturale compte, le contexte conscient de codebase de Cursor produit moins d\'erreurs d\'intégration. Les deux nécessitent le linting de sécurité avant le déploiement.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?',
-            acceptedAnswer: {
+            'name': 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5, Claude 4.8). Utilisez à la place une approche locale : LLaMA 3.1 via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.',
+              'text': 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5, Claude 4.8). Utilisez à la place une approche locale : LLaMA 3.1 via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quels sont les risques de conformité du CNIL avec les outils de codage IA ?',
-            acceptedAnswer: {
+            'name': 'Quels sont les risques de conformité du CNIL avec les outils de codage IA ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'La CNIL (Commission Nationale de l\'Informatique et des Libertés) exige un Contrat de Traitement des Données (DPA) avec tout fournisseur cloud traitant des données personnelles. La plupart des outils de codage IA n\'offrent pas de DPA pour les entreprises de moins de 100 employés. Mitigation : (1) utilisez des modèles locaux, (2) anonymisez le code avant de le soumettre à l\'IA, (3) établissez un DPA signé avec OpenAI/Anthropic, ou (4) obtenez une exemption écrite de votre officiel de conformité.',
+              'text': 'La CNIL (Commission Nationale de l\'Informatique et des Libertés) exige un Contrat de Traitement des Données (DPA) avec tout fournisseur cloud traitant des données personnelles. La plupart des outils de codage IA n\'offrent pas de DPA pour les entreprises de moins de 100 employés. Mitigation : (1) utilisez des modèles locaux, (2) anonymisez le code avant de le soumettre à l\'IA, (3) établissez un DPA signé avec OpenAI/Anthropic, ou (4) obtenez une exemption écrite de votre officiel de conformité.',
             },
           },
         ],
@@ -2342,54 +2350,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
-            {
-              q: 'Quel est le meilleur modèle d\'IA pour écrire du code en 2026 ?',
-              a: 'Claude 4.8 Opus (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, LLaMA 4 8B s\'exécutant localement via Ollama produit zéro appel API externe. Les performances varient selon la tâche ; nous recommandons de tester tous les trois sur vos cas d\'utilisation spécifiques.',
-            },
-            {
-              q: 'Le code généré par l\'IA est-il sûr de déployer directement ?',
-              a: 'Non. L\'IA introduit des vulnérabilités de sécurité dans 45 % des cas de code généré, y compris les implémentations insécurisées et les noms de packages halluccinés qui permettent les attaques de la chaîne d\'approvisionnement. Tout code généré par l\'IA doit être examiné par un développeur et scanné avec un linter de sécurité (par exemple Bandit pour Python, ESLint Security pour JavaScript) avant le déploiement en production.',
-            },
-            {
-              q: 'À quel point les développeurs utilisant les outils de codage IA sont-ils plus rapides ?',
-              a: 'Les développeurs utilisant les assistants de codage IA complètent 126 % plus de projets par semaine que les codeurs manuels dans les études contrôlées. Cependant, une étude de terrain METR 2025 a trouvé que les développeurs expérimentés prenaient 19 % plus de temps sur les tâches nécessitant une intégration complexe de la codebase — le gain de productivité dépend de la tâche et nécessite une discipline de prompt structuré.',
-            },
-            {
-              q: 'Comment le chain-of-thought prompting améliore-t-il le débogage du code ?',
-              a: 'Le Chain-of-Thought (CoT) prompting demande au modèle de tracer chaque étape de son raisonnement avant de produire la sortie finale. Pour le débogage, cela signifie que le modèle identifie l\'opération exacte qui produit la valeur intermédiaire incorrecte, rendant l\'erreur traçable et corrigible plutôt que de nécessiter une régénération complète de la sortie.',
-            },
-            {
-              q: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?',
-              a: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
-            },
-            {
-              q: 'Quelle température devrais-je utiliser pour la génération de code IA ?',
-              a: 'Réglez la température sur 0,1–0,2 pour la génération de code en production. Cela produit une sortie déterministe et conservative avec une variation aléatoire minimale. Utilisez la température 0,7–0,9 uniquement lors du brainstorming d\'approches algorithmiques où vous voulez des options diversifiées à évaluer — pas lors de l\'écriture de code qui sera déployé.',
-            },
-            {
-              q: 'Qu\'est-ce que les dépendances halluccinées dans le codage IA ?',
-              a: 'Les dépendances halluccinées sont des noms de packages ou de bibliothèques que le modèle recommande mais qui n\'existent pas réellement. Une étude académique 2024 a trouvé que les LLM recommandent des bibliothèques inexistantes approximativement 20 % du temps. Les attaquants exploitent cela via slopsquatting — enregistrant le nom de package hallucciné sur PyPI ou npm avec du code malveillant à l\'intérieur. Vérifiez toujours tout package suggéré par l\'IA avant d\'installer en consultant le dépôt officiel.',
-            },
-            {
-              q: 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?',
-              a: 'Oui. LLaMA 4 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.',
-            },
-            {
-              q: 'Comment écrire un prompt système pour les outils de codage IA ?',
-              a: 'Définissez quatre choses dans votre prompt système : (1) le rôle technique (« ingénieur backend Python senior »), (2) la pile technologique et les bibliothèques interdites, (3) les règles de style de code (« Mode strict TypeScript, pas de types any »), (4) le format de sortie (« retournez uniquement le code, pas de prose »). Conservez ceci comme une règle au niveau du projet dans Cursor, Claude Code ou vos paramètres d\'IA IDE pour qu\'il s\'applique à toutes les sessions.',
-            },
-            {
-              q: 'GitHub Copilot ou Cursor produisent-ils moins de bugs ?',
-              a: 'Cursor utilise l\'indexage RAG (Retrieval-Augmented Generation) au niveau du projet pour comprendre votre codebase entière, réduisant les hallucinations par rapport au contexte au niveau du fichier uniquement de GitHub Copilot. Pour les tâches de boilerplate à fichier unique, la différence est minimale. Pour la refactorisation multi-fichiers où la cohérence architecturale compte, le contexte conscient de codebase de Cursor produit moins d\'erreurs d\'intégration. Les deux nécessitent le linting de sécurité avant le déploiement.',
-            },
-            {
-              q: 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?',
-              a: 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5, Claude 4.8). Utilisez à la place une approche locale : LLaMA 3.1 via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.',
-            },
-            {
-              q: 'Quels sont les risques de conformité du CNIL avec les outils de codage IA ?',
-              a: 'La CNIL (Commission Nationale de l\'Informatique et des Libertés) exige un Contrat de Traitement des Données (DPA) avec tout fournisseur cloud traitant des données personnelles. La plupart des outils de codage IA n\'offrent pas de DPA pour les entreprises de moins de 100 employés. Mitigation : (1) utilisez des modèles locaux, (2) anonymisez le code avant de le soumettre à l\'IA, (3) établissez un DPA signé avec OpenAI/Anthropic, ou (4) obtenez une exemption écrite de votre officiel de conformité.',
-            },
+            { q: 'Quel est le meilleur modèle d\'IA pour écrire du code en 2026 ?', a: 'Claude 4.8 Opus (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, LLaMA 4 8B s\'exécutant localement via Ollama produit zéro appel API externe. Les performances varient selon la tâche ; nous recommandons de tester tous les trois sur vos cas d\'utilisation spécifiques.' },
+            { q: 'Le code généré par l\'IA est-il sûr de déployer directement ?', a: 'Non. L\'IA introduit des vulnérabilités de sécurité dans 45 % des cas de code généré, y compris les implémentations insécurisées et les noms de packages halluccinés qui permettent les attaques de la chaîne d\'approvisionnement. Tout code généré par l\'IA doit être examiné par un développeur et scanné avec un linter de sécurité (par exemple Bandit pour Python, ESLint Security pour JavaScript) avant le déploiement en production.' },
+            { q: 'À quel point les développeurs utilisant les outils de codage IA sont-ils plus rapides ?', a: 'Les développeurs utilisant les assistants de codage IA complètent 126 % plus de projets par semaine que les codeurs manuels dans les études contrôlées. Cependant, une étude de terrain METR 2025 a trouvé que les développeurs expérimentés prenaient 19 % plus de temps sur les tâches nécessitant une intégration complexe de la codebase — le gain de productivité dépend de la tâche et nécessite une discipline de prompt structuré.' },
+            { q: 'Comment le chain-of-thought prompting améliore-t-il le débogage du code ?', a: 'Le Chain-of-Thought (CoT) prompting demande au modèle de tracer chaque étape de son raisonnement avant de produire la sortie finale. Pour le débogage, cela signifie que le modèle identifie l\'opération exacte qui produit la valeur intermédiaire incorrecte, rendant l\'erreur traçable et corrigible plutôt que de nécessiter une régénération complète de la sortie.' },
+            { q: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?', a: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.' },
+            { q: 'Quelle température devrais-je utiliser pour la génération de code IA ?', a: 'Réglez la température sur 0,1–0,2 pour la génération de code en production. Cela produit une sortie déterministe et conservative avec une variation aléatoire minimale. Utilisez la température 0,7–0,9 uniquement lors du brainstorming d\'approches algorithmiques où vous voulez des options diversifiées à évaluer — pas lors de l\'écriture de code qui sera déployé.' },
+            { q: 'Qu\'est-ce que les dépendances halluccinées dans le codage IA ?', a: 'Les dépendances halluccinées sont des noms de packages ou de bibliothèques que le modèle recommande mais qui n\'existent pas réellement. Une étude académique 2024 a trouvé que les LLM recommandent des bibliothèques inexistantes approximativement 20 % du temps. Les attaquants exploitent cela via slopsquatting — enregistrant le nom de package hallucciné sur PyPI ou npm avec du code malveillant à l\'intérieur. Vérifiez toujours tout package suggéré par l\'IA avant d\'installer en consultant le dépôt officiel.' },
+            { q: 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?', a: 'Oui. LLaMA 4 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.' },
+            { q: 'Comment écrire un prompt système pour les outils de codage IA ?', a: 'Définissez quatre choses dans votre prompt système : (1) le rôle technique (« ingénieur backend Python senior »), (2) la pile technologique et les bibliothèques interdites, (3) les règles de style de code (« Mode strict TypeScript, pas de types any »), (4) le format de sortie (« retournez uniquement le code, pas de prose »). Conservez ceci comme une règle au niveau du projet dans Cursor, Claude Code ou vos paramètres d\'IA IDE pour qu\'il s\'applique à toutes les sessions.' },
+            { q: 'GitHub Copilot ou Cursor produisent-ils moins de bugs ?', a: 'Cursor utilise l\'indexage RAG (Retrieval-Augmented Generation) au niveau du projet pour comprendre votre codebase entière, réduisant les hallucinations par rapport au contexte au niveau du fichier uniquement de GitHub Copilot. Pour les tâches de boilerplate à fichier unique, la différence est minimale. Pour la refactorisation multi-fichiers où la cohérence architecturale compte, le contexte conscient de codebase de Cursor produit moins d\'erreurs d\'intégration. Les deux nécessitent le linting de sécurité avant le déploiement.' },
+            { q: 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?', a: 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5, Claude 4.8). Utilisez à la place une approche locale : LLaMA 3.1 via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.' },
+            { q: 'Quels sont les risques de conformité du CNIL avec les outils de codage IA ?', a: 'La CNIL (Commission Nationale de l\'Informatique et des Libertés) exige un Contrat de Traitement des Données (DPA) avec tout fournisseur cloud traitant des données personnelles. La plupart des outils de codage IA n\'offrent pas de DPA pour les entreprises de moins de 100 employés. Mitigation : (1) utilisez des modèles locaux, (2) anonymisez le code avant de le soumettre à l\'IA, (3) établissez un DPA signé avec OpenAI/Anthropic, ou (4) obtenez une exemption écrite de votre officiel de conformité.' },
           ],
         },
         sources: {
@@ -2967,90 +2939,90 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: '2026年编写代码的最佳AI模型是什么？',
-            acceptedAnswer: {
+            'name': '2026年编写代码的最佳AI模型是什么？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Claude 4.8 Opus（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，LLaMA 4 8B通过Ollama本地运行会产生零外部API调用。',
+              'text': 'Claude 4.8 Opus（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，LLaMA 4 8B通过Ollama本地运行产生零外部API调用。基准性能因任务而异；我们建议在你的具体用例上测试所有三个。',
             },
           },
           {
             '@type': 'Question',
-            name: 'AI生成的代码可以直接部署吗？',
-            acceptedAnswer: {
+            'name': 'AI生成的代码可以直接部署吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '不行。AI在45%的生成代码中引入安全漏洞，包括不安全的实现和幻觉包名，这可能导致供应链攻击。所有AI生成的代码在生产部署前必须由开发人员审查，并使用安全检查工具扫描（如Python的Bandit或JavaScript的ESLint Security）。',
+              'text': '不行。AI在45%的生成代码中引入安全漏洞，包括不安全的实现和幻觉包名，这可能导致供应链攻击。所有AI生成的代码在生产部署前必须由开发人员审查，并使用安全检查工具扫描（例如Python的Bandit、JavaScript的ESLint Security）。',
             },
           },
           {
             '@type': 'Question',
-            name: '使用AI编码工具的开发人员速度快多少？',
-            acceptedAnswer: {
+            'name': '使用AI编码工具的开发人员速度快多少？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '在对照研究中，使用AI编码助手的开发人员每周完成的项目比手动编码人员多126%。但是，2025年METR实地研究发现，经验丰富的开发人员在需要复杂代码库集成的任务上花费的时间长19% — 生产率提升是任务相关的，需要结构化提示学科。',
+              'text': '在对照研究中，使用AI编码助手的开发人员每周完成的项目比手动编码人员多126%。但是，2025年METR实地研究发现，经验丰富的开发人员在需要复杂代码库集成的任务上花费的时间长19% — 生产率提升是任务相关的，需要结构化提示学科。',
             },
           },
           {
             '@type': 'Question',
-            name: '思路链提示词如何改进代码调试？',
-            acceptedAnswer: {
+            'name': '思路链提示词如何改进代码调试？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '思路链（CoT）提示词要求模型在生成最终输出之前逐步追踪其推理过程。对于调试，这意味着模型识别产生不正确中间值的确切操作，使错误可追踪和可纠正，而不是需要完整输出重新生成。',
+              'text': '思路链（CoT）提示词要求模型在生成最终输出前逐步追踪其推理过程。对于调试，这意味着模型识别产生不正确中间值的确切操作，使错误可追踪和可纠正，而不是需要完整输出重新生成。',
             },
           },
           {
             '@type': 'Question',
-            name: 'AI编码协助是否在所有编程语言中的工作方式相同？',
-            acceptedAnswer: {
+            'name': 'AI编码协助是否在所有编程语言中工作方式相同？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen 3（阿里巴巴）或DeepSeek V3提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。',
+              'text': '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen 3（阿里巴巴）或DeepSeek V3提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。',
             },
           },
           {
             '@type': 'Question',
-            name: '我应该为AI代码生成使用什么温度？',
-            acceptedAnswer: {
+            'name': '我应该为AI代码生成使用什么温度？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '对于生产代码生成，将温度设置为0.1–0.2。这会产生确定性、保守的输出，随机变化最少。仅在你想要多样选项进行评估的算法方法头脑风暴时使用温度0.7–0.9 — 不是在编写要部署的代码时。',
+              'text': '对于生产代码生成，将温度设置为0.1–0.2。这产生确定性、保守的输出，最少随机变化。仅在你想要多样选项进行评估的算法方法头脑风暴时使用温度0.7–0.9 — 不是在编写要部署的代码时。',
             },
           },
           {
             '@type': 'Question',
-            name: 'AI编码中的幻觉依赖是什么？',
-            acceptedAnswer: {
+            'name': 'AI编码中的幻觉依赖是什么？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '幻觉依赖是模型推荐但实际不存在的包或库名称。研究发现AI模型在20%的时间内推荐不存在的库。攻击者通过"仓鼠撞库"（slopsquatting）利用这一点 — 注册幻觉包名称，其中包含恶意代码。在安装任何AI建议的包之前，始终在PyPI或npm上验证它的存在。',
+              'text': '幻觉依赖是模型推荐但实际不存在的包或库名称。2024年学术研究发现LLM在约20%的时间内推荐不存在的库。攻击者通过"仓鼠撞库"（slopsquatting）利用这一点 — 在PyPI或npm上注册幻觉包名称，其中包含恶意代码。在安装前，始终通过检查官方存储库验证任何AI建议的包。',
             },
           },
           {
             '@type': 'Question',
-            name: '我能否使用本地LLM的AI编码工具来保护隐私？',
-            acceptedAnswer: {
+            'name': '我能否使用本地LLM的AI编码工具来保护隐私？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '可以。LLaMA 4 8B通过Ollama在具有8GB RAM的机器上运行会产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5或Claude，但对于模板和简单函数是可接受的。',
+              'text': '可以。LLaMA 4 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5或Claude，但对于模板和简单函数是可接受的。',
             },
           },
           {
             '@type': 'Question',
-            name: '我如何为AI编码工具编写系统提示？',
-            acceptedAnswer: {
+            'name': '我如何为AI编码工具编写系统提示？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '在系统提示中定义四件事：(1)技术角色（"资深Python后端工程师"）、(2)技术堆栈和禁止库、(3)代码风格规则（"TypeScript严格模式，没有any类型"）、(4)输出格式（"只返回代码，没有说明"）。在Cursor、Claude Code或你的IDE的AI设置中将其作为项目级规则持久化，以便它适用于所有会话。',
+              'text': '在系统提示中定义四件事：(1)技术角色（"资深Python后端工程师"）、(2)技术堆栈和禁止库、(3)代码风格规则（"TypeScript严格模式，没有any类型"）、(4)输出格式（"只返回代码，没有说明"）。在Cursor、Claude Code或你的IDE的AI设置中将其作为项目级规则持久化，以便它适用于所有会话。',
             },
           },
           {
             '@type': 'Question',
-            name: 'GitHub Copilot或Cursor会产生更少的错误吗？',
-            acceptedAnswer: {
+            'name': 'GitHub Copilot或Cursor会产生更少的错误吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Cursor使用项目级RAG（检索增强生成）索引来理解你的整个代码库，与GitHub Copilot的仅文件级上下文相比减少了幻觉。对于单文件模板任务，差距很小。对于多文件重构（其中架构一致性很重要），Cursor的代码库感知上下文会产生更少的集成错误。两者在部署前都需要安全检查。',
+              'text': 'Cursor使用项目级RAG（检索增强生成）索引来理解你的整个代码库，与GitHub Copilot的仅文件级上下文相比减少了幻觉。对于单文件模板任务，差距很小。对于多文件重构（其中架构一致性很重要），Cursor的代码库感知上下文会产生更少的集成错误。两者都在部署前需要安全检查。',
             },
           },
           {
             '@type': 'Question',
-            name: '在中国开发中，使用Qwen 3或DeepSeek V3有什么特别考虑？',
-            acceptedAnswer: {
+            'name': '在中国开发中，使用Qwen 3或DeepSeek V3有什么特别考虑？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen 3和DeepSeek V3。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。',
+              'text': '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen 3和DeepSeek V3。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。',
             },
           },
         ],
@@ -3311,50 +3283,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: '2026年编写代码的最佳AI模型是什么？',
-              a: 'Claude 4.8 Opus（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，LLaMA 4 8B通过Ollama本地运行产生零外部API调用。基准性能因任务而异；我们建议在你的具体用例上测试所有三个。',
-            },
-            {
-              q: 'AI生成的代码可以直接部署吗？',
-              a: '不行。AI在45%的生成代码中引入安全漏洞，包括不安全的实现和幻觉包名，这可能导致供应链攻击。所有AI生成的代码在生产部署前必须由开发人员审查，并使用安全检查工具扫描（例如Python的Bandit、JavaScript的ESLint Security）。',
-            },
-            {
-              q: '使用AI编码工具的开发人员速度快多少？',
-              a: '在对照研究中，使用AI编码助手的开发人员每周完成的项目比手动编码人员多126%。但是，2025年METR实地研究发现，经验丰富的开发人员在需要复杂代码库集成的任务上花费的时间长19% — 生产率提升是任务相关的，需要结构化提示学科。',
-            },
-            {
-              q: '思路链提示词如何改进代码调试？',
-              a: '思路链（CoT）提示词要求模型在生成最终输出前逐步追踪其推理过程。对于调试，这意味着模型识别产生不正确中间值的确切操作，使错误可追踪和可纠正，而不是需要完整输出重新生成。',
-            },
-            {
-              q: 'AI编码协助是否在所有编程语言中工作方式相同？',
-              a: '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen 3（阿里巴巴）或DeepSeek V3提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。',
-            },
-            {
-              q: '我应该为AI代码生成使用什么温度？',
-              a: '对于生产代码生成，将温度设置为0.1–0.2。这产生确定性、保守的输出，最少随机变化。仅在你想要多样选项进行评估的算法方法头脑风暴时使用温度0.7–0.9 — 不是在编写要部署的代码时。',
-            },
-            {
-              q: 'AI编码中的幻觉依赖是什么？',
-              a: '幻觉依赖是模型推荐但实际不存在的包或库名称。2024年学术研究发现LLM在约20%的时间内推荐不存在的库。攻击者通过"仓鼠撞库"（slopsquatting）利用这一点 — 在PyPI或npm上注册幻觉包名称，其中包含恶意代码。在安装前，始终通过检查官方存储库验证任何AI建议的包。',
-            },
-            {
-              q: '我能否使用本地LLM的AI编码工具来保护隐私？',
-              a: '可以。LLaMA 4 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5或Claude，但对于模板和简单函数是可接受的。',
-            },
-            {
-              q: '我如何为AI编码工具编写系统提示？',
-              a: '在系统提示中定义四件事：(1)技术角色（"资深Python后端工程师"）、(2)技术堆栈和禁止库、(3)代码风格规则（"TypeScript严格模式，没有any类型"）、(4)输出格式（"只返回代码，没有说明"）。在Cursor、Claude Code或你的IDE的AI设置中将其作为项目级规则持久化，以便它适用于所有会话。',
-            },
-            {
-              q: 'GitHub Copilot或Cursor会产生更少的错误吗？',
-              a: 'Cursor使用项目级RAG（检索增强生成）索引来理解你的整个代码库，与GitHub Copilot的仅文件级上下文相比减少了幻觉。对于单文件模板任务，差距很小。对于多文件重构（其中架构一致性很重要），Cursor的代码库感知上下文会产生更少的集成错误。两者都在部署前需要安全检查。',
-            },
-            {
-              q: '在中国开发中，使用Qwen 3或DeepSeek V3有什么特别考虑？',
-              a: '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen 3和DeepSeek V3。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。',
-            },
+            { q: '2026年编写代码的最佳AI模型是什么？', a: 'Claude 4.8 Opus（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，LLaMA 4 8B通过Ollama本地运行产生零外部API调用。基准性能因任务而异；我们建议在你的具体用例上测试所有三个。' },
+            { q: 'AI生成的代码可以直接部署吗？', a: '不行。AI在45%的生成代码中引入安全漏洞，包括不安全的实现和幻觉包名，这可能导致供应链攻击。所有AI生成的代码在生产部署前必须由开发人员审查，并使用安全检查工具扫描（例如Python的Bandit、JavaScript的ESLint Security）。' },
+            { q: '使用AI编码工具的开发人员速度快多少？', a: '在对照研究中，使用AI编码助手的开发人员每周完成的项目比手动编码人员多126%。但是，2025年METR实地研究发现，经验丰富的开发人员在需要复杂代码库集成的任务上花费的时间长19% — 生产率提升是任务相关的，需要结构化提示学科。' },
+            { q: '思路链提示词如何改进代码调试？', a: '思路链（CoT）提示词要求模型在生成最终输出前逐步追踪其推理过程。对于调试，这意味着模型识别产生不正确中间值的确切操作，使错误可追踪和可纠正，而不是需要完整输出重新生成。' },
+            { q: 'AI编码协助是否在所有编程语言中工作方式相同？', a: '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen 3（阿里巴巴）或DeepSeek V3提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。' },
+            { q: '我应该为AI代码生成使用什么温度？', a: '对于生产代码生成，将温度设置为0.1–0.2。这产生确定性、保守的输出，最少随机变化。仅在你想要多样选项进行评估的算法方法头脑风暴时使用温度0.7–0.9 — 不是在编写要部署的代码时。' },
+            { q: 'AI编码中的幻觉依赖是什么？', a: '幻觉依赖是模型推荐但实际不存在的包或库名称。2024年学术研究发现LLM在约20%的时间内推荐不存在的库。攻击者通过"仓鼠撞库"（slopsquatting）利用这一点 — 在PyPI或npm上注册幻觉包名称，其中包含恶意代码。在安装前，始终通过检查官方存储库验证任何AI建议的包。' },
+            { q: '我能否使用本地LLM的AI编码工具来保护隐私？', a: '可以。LLaMA 4 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5或Claude，但对于模板和简单函数是可接受的。' },
+            { q: '我如何为AI编码工具编写系统提示？', a: '在系统提示中定义四件事：(1)技术角色（"资深Python后端工程师"）、(2)技术堆栈和禁止库、(3)代码风格规则（"TypeScript严格模式，没有any类型"）、(4)输出格式（"只返回代码，没有说明"）。在Cursor、Claude Code或你的IDE的AI设置中将其作为项目级规则持久化，以便它适用于所有会话。' },
+            { q: 'GitHub Copilot或Cursor会产生更少的错误吗？', a: 'Cursor使用项目级RAG（检索增强生成）索引来理解你的整个代码库，与GitHub Copilot的仅文件级上下文相比减少了幻觉。对于单文件模板任务，差距很小。对于多文件重构（其中架构一致性很重要），Cursor的代码库感知上下文会产生更少的集成错误。两者都在部署前需要安全检查。' },
+            { q: '在中国开发中，使用Qwen 3或DeepSeek V3有什么特别考虑？', a: '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen 3和DeepSeek V3。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。' },
           ],
         },
         sources: {

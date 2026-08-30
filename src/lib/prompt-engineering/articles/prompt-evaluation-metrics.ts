@@ -1358,16 +1358,102 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'fr',
         mainEntity: [
-          { '@type': 'Question', name: 'Que sont les métriques d\'évaluation de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Les métriques d\'évaluation de prompts sont des signaux quantitatifs mesurant si un prompt produit la sortie souhaitée de manière fiable. Les métriques clés incluent le taux de réussite (correct/incorrect), le score BLEU (chevauchement n-gramme pour traduction et résumé), la similarité sémantique (similarité cosinus d\'embeddings pour paraphrases), et LLM-as-Judge (évaluation basée modèle pour texte libre). Choisir la mauvaise métrique produit des scores trompeurs.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que le taux de réussite en évaluation de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Le taux de réussite est le pourcentage d\'entrées de test où la sortie prompt satisfait les critères de succès définis. Taux de réussite = sorties réussies / nombre total de tests. C\'est la métrique la plus utile pour les sorties structurées car elle se traduit directement par le taux d\'erreur en production.' } },
-          { '@type': 'Question', name: 'Quand utiliser le score BLEU pour les prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU convient aux traductions et résumés où la sortie doit correspondre étroitement à un texte de référence. Il est trompeur pour JSON, l\'exécution d\'instructions et l\'écriture créative car il mesure le chevauchement de mots n-gramme, pas la conformité de format. Par exemple, un prompt d\'extraction JSON retournant la bonne structure avec une formulation différente obtient quasi zéro sur BLEU malgré une correction fonctionnelle.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que l\'évaluation LLM-as-Judge ?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge utilise un modèle capable comme GPT-5.6 ou Claude Opus 5 pour évaluer les sorties selon une rubrique. Il scale à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent. Le principal risque est le biais du modèle : le juge peut favoriser les sorties similaires à son style.' } },
-          { '@type': 'Question', name: 'Comment détecter une régression de métrique ?', acceptedAnswer: { '@type': 'Answer', text: 'Suivez votre métrique primaire par version de prompt et alertez si elle baisse de plus de 5 points. Le flux : enregistrer la métrique avant changement, faire le changement, relancer l\'ensemble de test, comparer à la baseline. Une baisse > 5 points bloque le déploiement. Une baisse > 10 points est critique et nécessite investigation.' } },
-          { '@type': 'Question', name: 'Quelle métrique pour les sorties JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez taux de réussite binaire pour les sorties JSON. Définissez réussite comme : JSON valide + champs obligatoires présents + valeurs dans la plage admissible. BLEU et similarité sémantique ne sont pas significatifs pour les sorties structurées.' } },
-          { '@type': 'Question', name: 'Peut-on combiner plusieurs métriques ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — les prompts de production nécessitent généralement une métrique primaire (taux de réussite pour structuré, exactitude pour classification) et une métrique secondaire (similarité sémantique ou LLM-as-Judge). Un prompt d\'extraction JSON peut avoir 100% de taux de réussite mais produire des valeurs sémantiquement incorrectes. Suivez les deux indépendamment et alertez si l\'une baisse.' } },
-          { '@type': 'Question', name: 'Comment évaluer les prompts de génération de code ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez le taux de réussite de test comme métrique primaire — générez du code, exécutez les tests unitaires, calculez le pourcentage qui passe. C\'est plus fiable que BLEU ou la similarité sémantique car le code peut être fonctionnellement correct avec une syntaxe complètement différente. Complétez avec des scores d\'analyse statique pour une vue plus complète.' } },
-          { '@type': 'Question', name: 'Quel est l\'impact du RGPD sur l\'évaluation de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Le RGPD exige la documentation de la qualité des systèmes IA. Les métriques d\'évaluation et les ensembles de test doivent être enregistrés comme dossiers de traitement. L\'inférence locale (sans API tiers) satisfait les exigences de résidence des données. Pour la conformité CNIL, l\'inférence locale est recommandée pour les données professionnelles sensibles.' } },
-          { '@type': 'Question', name: 'Quels sont les défis spécifiques à la France ?', acceptedAnswer: { '@type': 'Answer', text: 'En France, respectez la directive CNIL sur l\'IA. Pour les PME du secteur légal ou financier, documentez le taux de réussite comme preuve de contrôle qualité. L\'évaluation des prompts sur des textes français nécessite une attention particulière aux nuances linguistiques. Établissez des baselines séparées pour le français car BLEU et les seuils de similarité diffèrent du contenu anglais.' } },
+          {
+            '@type': 'Question',
+            'name': 'Que sont les métriques d\'évaluation de prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ce sont des signaux quantitatifs mesurant si un prompt produit la sortie souhaitée fiablement. Les clés incluent taux de réussite (correct/incorrect), BLEU (chevauchement pour traduction/résumé), similarité sémantique (embeddings pour paraphrases) et LLM-as-Judge (rubrique modèle pour texte libre). Choisir mal produit des scores trompeurs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le taux de réussite ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pourcentage d\'entrées de test où la sortie rencontre les critères de succès. C\'est la métrique la plus utile pour les sorties structurées car elle se traduit directement par le taux d\'erreur en production.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand utiliser BLEU ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'BLEU convient pour traduction et résumé où la sortie doit correspondre à une référence. Il est trompeur pour JSON, instructions et créatif car il mesure le chevauchement de mots, pas la correction sémantique. Un prompt correct avec formulation différente scores près de zéro malgré la fonctionnalité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que LLM-as-Judge ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilise GPT-5.6 ou Claude Opus pour noter les sorties selon une rubrique à l\'échelle. Gère les dimensions que les métriques binaires manquent. Principal risque : biais du modèle vers son propre style.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment détecter une régression ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Suivez la métrique primaire par version et alertez si elle baisse de plus de 5 points. Flux : enregistrer avant, faire le changement, relancer les tests, comparer. Plus de 5 points bloque, plus de 10 est critique.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle métrique pour JSON ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez réussite/échec binaire. Définissez réussite comme JSON valide + champs obligatoires + valeurs autorisées. BLEU et similarité sémantique ne sont pas significatifs pour structuré.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combiner des métriques ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui — production nécessite généralement une primaire (taux pour structuré, exactitude pour classification) et une secondaire (similarité ou LLM-as-Judge) pour différents modes de panne. JSON peut avoir 100% réussite mais valeurs sémantiquement fausses. Suivez les deux indépendamment.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Évaluer la génération de code ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez taux de réussite de test comme primaire — générez, testez unitaires, calculez le pourcentage qui passe. Plus fiable que BLEU car le code peut être fonctionnellement correct avec syntaxe différente. Complétez avec scores d\'analyse statique.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'en est-il du RGPD ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le RGPD exige la documentation de la qualité IA. Les métriques et ensembles doivent être enregistrés comme dossiers. L\'inférence locale satisfait les exigences de résidence. Pour CNIL, l\'inférence locale est recommandée pour données sensibles professionnelles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Défis spécifiques à la France ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Respectez la directive CNIL sur l\'IA. Pour PME légale/financière, documentez le taux comme preuve de contrôle. L\'évaluation sur texte français nécessite attention aux nuances. Établissez baselines séparées car BLEU et seuils diffèrent du contenu anglais.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand utiliser le score BLEU pour les prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'BLEU convient aux traductions et résumés où la sortie doit correspondre étroitement à un texte de référence. Il est trompeur pour JSON, l\'exécution d\'instructions et l\'écriture créative car il mesure le chevauchement de mots n-gramme, pas la conformité de format. Par exemple, un prompt d\'extraction JSON retournant la bonne structure avec une formulation différente obtient quasi zéro sur BLEU malgré une correction fonctionnelle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'impact du RGPD sur l\'évaluation de prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le RGPD exige la documentation de la qualité des systèmes IA. Les métriques d\'évaluation et les ensembles de test doivent être enregistrés comme dossiers de traitement. L\'inférence locale (sans API tiers) satisfait les exigences de résidence des données. Pour la conformité CNIL, l\'inférence locale est recommandée pour les données professionnelles sensibles.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -1530,6 +1616,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Évaluer la génération de code ?', a: 'Utilisez taux de réussite de test comme primaire — générez, testez unitaires, calculez le pourcentage qui passe. Plus fiable que BLEU car le code peut être fonctionnellement correct avec syntaxe différente. Complétez avec scores d\'analyse statique.' },
             { q: 'Qu\'en est-il du RGPD ?', a: 'Le RGPD exige la documentation de la qualité IA. Les métriques et ensembles doivent être enregistrés comme dossiers. L\'inférence locale satisfait les exigences de résidence. Pour CNIL, l\'inférence locale est recommandée pour données sensibles professionnelles.' },
             { q: 'Défis spécifiques à la France ?', a: 'Respectez la directive CNIL sur l\'IA. Pour PME légale/financière, documentez le taux comme preuve de contrôle. L\'évaluation sur texte français nécessite attention aux nuances. Établissez baselines séparées car BLEU et seuils diffèrent du contenu anglais.' },
+            { q: 'Quand utiliser le score BLEU pour les prompts ?', a: 'BLEU convient aux traductions et résumés où la sortie doit correspondre étroitement à un texte de référence. Il est trompeur pour JSON, l\'exécution d\'instructions et l\'écriture créative car il mesure le chevauchement de mots n-gramme, pas la conformité de format. Par exemple, un prompt d\'extraction JSON retournant la bonne structure avec une formulation différente obtient quasi zéro sur BLEU malgré une correction fonctionnelle.' },
+            { q: 'Quel est l\'impact du RGPD sur l\'évaluation de prompts ?', a: 'Le RGPD exige la documentation de la qualité des systèmes IA. Les métriques d\'évaluation et les ensembles de test doivent être enregistrés comme dossiers de traitement. L\'inférence locale (sans API tiers) satisfait les exigences de résidence des données. Pour la conformité CNIL, l\'inférence locale est recommandée pour les données professionnelles sensibles.' },
           ],
         },
         regionalConsiderations: {
@@ -1617,16 +1705,86 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [
-          { '@type': 'Question', name: 'プロンプト評価指標とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプト評価指標は、プロンプトが意図した出力を確実に生成するかを測定する定量的シグナルです。重要な指標には合格率（正誤二値）、BLEUスコア（翻訳・要約用n-gram重複）、意味的類似度（言い換え用埋め込みコサイン類似度）、LLM-as-Judge（フリーテキスト用モデル評点）が含まれます。出力タイプに間違った指標を選ぶと、誤解を招くスコアが生じます。' } },
-          { '@type': 'Question', name: 'プロンプト評価における合格率とは？', acceptedAnswer: { '@type': 'Answer', text: '合格率は、定義された成功基準を満たすテスト入力の割合です。合格率 = 合格出力 / テストケース総数。構造化出力に対して最も実用的な指標です。本番環境の失敗率に直結するからです。' } },
-          { '@type': 'Question', name: 'プロンプトにBLEUスコアをいつ使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'BLEUは翻訳・要約など、出力が参照テキストと密接に一致すべき場合に適切です。JSON生成、命令遵守、創作文には誤解を招きます。単語n-gram重複を測定し、形式遵守や意味的正確性は測定しないためです。例えば、正しい構造を返すがフレーズが異なるJSON抽出プロンプトは、機能的に正確なのにBLEUでほぼゼロになります。' } },
-          { '@type': 'Question', name: 'LLM-as-Judge評価とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-JudgeはGPT-5.6やClaude Opus 5などの高性能モデルを使い、ルーブリックに基づいて出力を評点します。人間の審査なしに数千のテストケースに拡張でき、二値指標では捉えられない品質次元を扱います。主なリスクはモデルバイアス：判定者が自身のスタイルと類似した出力を高く評価する傾向があります。' } },
-          { '@type': 'Question', name: 'プロンプト指標の回帰をどのように検出しますか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトバージョンごとに主要指標を追跡し、確立されたベースラインから5ポイント以上低下したらアラートを出します。ワークフロー：変更前に指標を記録し、変更を実施し、完全なテストセットを再実行し、ベースラインと比較します。5ポイント以上の低下は展開をブロックします。10ポイント以上は調査が必要な重大回帰です。' } },
-          { '@type': 'Question', name: 'JSON出力プロンプトにはどの指標を使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'JSON出力プロンプトには二値合格/不合格を使用します。合格を以下のように定義します：有効なJSON + 必須フィールド存在 + 値は許可範囲内。BLEUと意味的類似度は構造化出力には意味がありません。' } },
-          { '@type': 'Question', name: '複数のプロンプト評価指標を組み合わせられますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい—本番プロンプトは通常、主要指標（構造化には合格率、分類には正確度）と副次指標（意味的類似度またはLLM-as-Judge）が必要です。異なる障害モードを捉えるためです。JSON抽出プロンプトは合格率100%でも意味的に誤った値を生じる可能性があり、副次検査だけで検出されます。両方を独立して追跡し、どちらかが閾値を下回ったらアラートを出します。' } },
-          { '@type': 'Question', name: 'コード生成プロンプトの品質をどのように評価しますか？', acceptedAnswer: { '@type': 'Answer', text: 'テスト合格率を主要指標として使用します—コードを生成し、ユニットテストを実行し、合格率を計算します。BLEUや意味的類似度より信頼性が高いです。コードは完全に異なる構文でも機能的に正確になる可能性があるためです。静的解析スコア（リント警告、セキュリティ検出）で補足すると、より完全な品質像が得られます。' } },
-          { '@type': 'Question', name: 'プロンプト評価指標を使用する際、個人情報の取り扱いについて注意すべきことはありますか？', acceptedAnswer: { '@type': 'Answer', text: '日本の個人情報保護方針では、AI評価セット（テストデータ）の取り扱いに注意が必要です。METI AI Governance Guidelines 2024に基づき、評価データが個人情報を含む場合、ローカルで評価（サードパーティAPI非使用）することで、データ遵守要件を満たします。評価メトリクスと結果をセキュアに記録し、監査証跡を維持してください。' } },
-          { '@type': 'Question', name: 'アジア太平洋地域でのプロンプト評価における注意点は何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'APAC地域の多くの国はデータ越境に関する厳格な規制を持っています。評価ログがサードパーティのクラウドサービスに送信される場合、複数国のデータレジデンス要件に準拠する必要があります。ローカルLLMおよびローカル評価インフラを検討してください。中国、日本、シンガポール、インドなど各国の個別要件に対応する必要があります。' } },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト評価指標とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプトが意図した出力を確実に生成するかを測定する定量的シグナルです。重要な指標：合格率（正誤）、BLEUスコア（翻訳・要約用n-gram）、意味的類似度（言い換え用埋め込みコサイン）、LLM-as-Judge（フリーテキスト用モデル評点）。出力タイプに間違った指標を選ぶと誤解を招くスコアになります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト評価における合格率とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'テスト入力で定義された成功基準を満たす割合です。本番環境の失敗率に直結し、構造化出力プロンプトで最も実用的な指標です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトにBLEUスコアをいつ使うべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '翻訳・要約で参照テキストと出力が密接に一致すべき場合に使います。JSON、命令遵守、創作には誤解を招きます。n-gram単語重複を測定し、形式遵守や意味的正確性ではないからです。例：正しい構造を返すが異なるフレーズのJSON抽出プロンプトはBLEUでほぼゼロなのに機能的に正確です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLM-as-Judge評価とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPT-5.6やClaude Opus 5でルーブリックに基づいて出力を評点し、大規模に拡張します。二値指標では捉えられない品質次元を扱います。主なリスクはモデルバイアス：判定者が自身のスタイルに似た出力を優先する傾向。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト指標の回帰をどのように検出しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'バージョンごとに主要指標を追跡し、ベースラインから5ポイント以上低下でアラート。フロー：変更前に記録、変更実施、テスト再実行、ベースラインと比較。5ポイント超は展開をブロック、10ポイント超は調査が必要な重大回帰です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'JSON出力プロンプトにはどの指標を使うべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '二値合格/不合格を使用。合格を以下のように定義：有効なJSON + 必須フィールド + 値は許可範囲。BLEUと意味的類似度は構造化出力には意味がありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '複数のプロンプト評価指標を組み合わせられますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい—本番プロンプトは主要指標（構造化には合格率、分類には正確度）と副次指標（意味的類似度またはLLM-as-Judge）が必要です。JSON抽出は合格率100%でも意味的に誤った値を生じ、副次検査だけで検出。両方を独立追跡し、どちらかが閾値を下回ったらアラート。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'コード生成プロンプトの品質をどのように評価しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'テスト合格率を主要指標として使用—コード生成、ユニットテスト実行、合格率計算。BLEUや意味的類似度より信頼性が高い。コードは完全に異なる構文でも機能的に正確になる可能性があるため。静的解析スコア（リント、セキュリティ検出）で補足。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプト評価指標を使用する際、個人情報の取り扱いについて注意すべきことはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '日本の個人情報保護では、AI評価セットの取り扱いに注意が必要です。METI AI Governance Guidelines 2024に基づき、個人情報を含むデータはローカル評価（サードパーティAPI非使用）で遵守要件を満たします。メトリクス結果をセキュアに記録し、監査証跡を維持。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'アジア太平洋地域でのプロンプト評価における注意点は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'APAC地域はデータ越境に厳格な規制があります。評価ログがサードパーティクラウドに送信される場合、複数国のデータレジデンス要件に準拠必要。ローカルLLMとローカル評価インフラを検討。中国、日本、シンガポール、インド各国の個別要件に対応してください。',
+            },
+          },
         ],
       },
       howToSchema: {

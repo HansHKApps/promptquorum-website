@@ -267,43 +267,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'Is balcony solar legal in the US?',
-            a: 'There\'s no single US answer — legality varies by state and utility. Some states have enacted plug-in solar rules similar to Germany\'s Balkonkraftwerk; others require permits, utility approval under NEC Article 705, and UL 1741-certified equipment for any grid-connected solar. For a per-state breakdown, see the dedicated US states legality guide. The safest approach in any state is a standalone battery + panel system with no grid connection.',
-          },
-          {
-            q: 'EcoFlow vs. Bluetti — which is better for US home backup in 2026?',
-            a: 'EcoFlow Delta Pro has the stronger MPPT solar input, making it the better choice if fast panel-based recharging is a priority. Bluetti\'s AC300+B300 is better if modular expansion (adding battery capacity in increments) is the priority. Both use LFP chemistry. Prices change frequently due to tariff exposure — compare current prices at time of purchase, since the price gap fluctuates.',
-          },
-          {
-            q: 'What\'s the difference between LFP and NMC battery chemistry?',
-            a: 'LFP (lithium iron phosphate) provides ~3,000–6,000 charge cycles at 80% retention, better thermal stability, and longer calendar life — preferred for home backup units that cycle daily. NMC (nickel manganese cobalt) provides higher energy density for a given weight, which is why it dominates portable/camping-focused units like older Jackery Explorer models. For a unit sitting in your home cycling daily from solar, LFP chemistry is meaningfully better over a 5–10 year horizon.',
-          },
-          {
-            q: 'Can I run my refrigerator during a grid outage with one of these?',
-            a: 'Yes, with the right sizing. A typical US refrigerator draws 100–400W continuous (150W average) and has a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours. Add a 200–400W solar panel and you can extend that indefinitely in decent sunlight. Verify the AC output and surge rating of any unit you\'re considering — some affordable power stations have surge ratings too low for fridge compressors.',
-          },
-          {
-            q: 'Do I need permits or grid interconnection for a power station paired with solar panels?',
-            a: 'If you\'re not connecting to the grid — just charging the power station from panels and using it to power your home — you generally do not need interconnection permits or utility approval. The panels connect only to the power station\'s solar input, not to your home\'s electrical panel. This is the key legal simplicity of the standalone-battery approach versus balcony solar kits that export to the grid. Verify with your local AHJ (authority having jurisdiction) if you\'re uncertain.',
-          },
-          {
-            q: 'Can I use these with Home Assistant for local monitoring?',
-            a: 'Partially. EcoFlow has a community-maintained Home Assistant integration (via HACS) for the Delta series, but it routes through EcoFlow\'s cloud API rather than a true local endpoint. Bluetti, Jackery, and Anker SOLIX lack well-documented local APIs. If local control with no cloud dependency is a hard requirement, see the No-Cloud Balcony Solar guide for a current summary of which hardware genuinely supports local-only operation.',
-          },
-          {
-            q: 'Is Anker SOLIX available in the US?',
-            a: 'Anker SOLIX portable power stations (F2000, F3800, and similar units) are available in the US at ankersolix.com and on Amazon. Anker SOLIX Solarbank models — designed for grid-connected balcony solar storage — are not sold or certified for the US market and should not be recommended to US buyers. This is a common point of confusion since the Solarbank gets significant coverage in EU solar reviews.',
-          },
-          {
-            q: 'Why are prices for these products so volatile?',
-            a: 'EcoFlow, Bluetti, Jackery, and Anker SOLIX are all manufactured in China. US retail prices are subject to Section 301 tariffs on lithium-ion batteries and solar components, which have been rising through 2024–2026 and can shift retail prices by 10–25% or more. Brands also run frequent promotions that can move prices $200–500 in either direction. Always check the current price on Amazon or the brand\'s US storefront at time of purchase.',
-          },
-          {
-            q: 'What\'s the best portable power station for camping that also works for home backup?',
-            a: 'Jackery Explorer 2000 Pro or 3000 Pro for portability-first users (lighter, Amazon-friendly, but NMC — verify current chemistry). Anker SOLIX F2000 for buyers who want LFP with similar portability to Jackery. EcoFlow Delta Pro if you\'re willing to compromise on portability for LFP chemistry and a stronger solar input. The "camping crossover" use case is well-served by all four brands — the differentiator is chemistry and long-term cycle life for buyers who plan to use the unit heavily at home between trips.',
-          },
-        ],
+            { q: 'Is balcony solar legal in the US?', a: 'There\'s no single US answer — legality varies by state and utility. Some states have enacted plug-in solar rules similar to Germany\'s Balkonkraftwerk; others require permits, utility approval under NEC Article 705, and UL 1741-certified equipment for any grid-connected solar. For a per-state breakdown, see the dedicated US states legality guide. The safest approach in any state is a standalone battery + panel system with no grid connection.' },
+            { q: 'EcoFlow vs. Bluetti — which is better for US home backup in 2026?', a: 'EcoFlow Delta Pro has the stronger MPPT solar input, making it the better choice if fast panel-based recharging is a priority. Bluetti\'s AC300+B300 is better if modular expansion (adding battery capacity in increments) is the priority. Both use LFP chemistry. Prices change frequently due to tariff exposure — compare current prices at time of purchase, since the price gap fluctuates.' },
+            { q: 'What\'s the difference between LFP and NMC battery chemistry?', a: 'LFP (lithium iron phosphate) provides ~3,000–6,000 charge cycles at 80% retention, better thermal stability, and longer calendar life — preferred for home backup units that cycle daily. NMC (nickel manganese cobalt) provides higher energy density for a given weight, which is why it dominates portable/camping-focused units like older Jackery Explorer models. For a unit sitting in your home cycling daily from solar, LFP chemistry is meaningfully better over a 5–10 year horizon.' },
+            { q: 'Can I run my refrigerator during a grid outage with one of these?', a: 'Yes, with the right sizing. A typical US refrigerator draws 100–400W continuous (150W average) and has a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours. Add a 200–400W solar panel and you can extend that indefinitely in decent sunlight. Verify the AC output and surge rating of any unit you\'re considering — some affordable power stations have surge ratings too low for fridge compressors.' },
+            { q: 'Do I need permits or grid interconnection for a power station paired with solar panels?', a: 'If you\'re not connecting to the grid — just charging the power station from panels and using it to power your home — you generally do not need interconnection permits or utility approval. The panels connect only to the power station\'s solar input, not to your home\'s electrical panel. This is the key legal simplicity of the standalone-battery approach versus balcony solar kits that export to the grid. Verify with your local AHJ (authority having jurisdiction) if you\'re uncertain.' },
+            { q: 'Can I use these with Home Assistant for local monitoring?', a: 'Partially. EcoFlow has a community-maintained Home Assistant integration (via HACS) for the Delta series, but it routes through EcoFlow\'s cloud API rather than a true local endpoint. Bluetti, Jackery, and Anker SOLIX lack well-documented local APIs. If local control with no cloud dependency is a hard requirement, see the No-Cloud Balcony Solar guide for a current summary of which hardware genuinely supports local-only operation.' },
+            { q: 'Is Anker SOLIX available in the US?', a: 'Anker SOLIX portable power stations (F2000, F3800, and similar units) are available in the US at ankersolix.com and on Amazon. Anker SOLIX Solarbank models — designed for grid-connected balcony solar storage — are not sold or certified for the US market and should not be recommended to US buyers. This is a common point of confusion since the Solarbank gets significant coverage in EU solar reviews.' },
+            { q: 'Why are prices for these products so volatile?', a: 'EcoFlow, Bluetti, Jackery, and Anker SOLIX are all manufactured in China. US retail prices are subject to Section 301 tariffs on lithium-ion batteries and solar components, which have been rising through 2024–2026 and can shift retail prices by 10–25% or more. Brands also run frequent promotions that can move prices $200–500 in either direction. Always check the current price on Amazon or the brand\'s US storefront at time of purchase.' },
+            { q: 'What\'s the best portable power station for camping that also works for home backup?', a: 'Jackery Explorer 2000 Pro or 3000 Pro for portability-first users (lighter, Amazon-friendly, but NMC — verify current chemistry). Anker SOLIX F2000 for buyers who want LFP with similar portability to Jackery. EcoFlow Delta Pro if you\'re willing to compromise on portability for LFP chemistry and a stronger solar input. The "camping crossover" use case is well-served by all four brands — the differentiator is chemistry and long-term cycle life for buyers who plan to use the unit heavily at home between trips.' },
+            { q: 'Can I use a portable power station to run my fridge during a grid outage?', a: 'Yes. A typical US refrigerator draws 100–400W (150W average) with a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours; add a 200–400W solar panel to extend run time. Verify the AC surge rating of any unit before purchase.' },
+          ],
       },
     },
     schema: {
@@ -376,39 +350,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Is balcony solar legal in the US?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'There is no single US answer — legality varies by state and utility. Grid-connected plug-in solar requires NEC Article 705 compliance and UL 1741-certified equipment. Standalone battery + panel systems that do not connect to the grid are generally permit-free. See the US states legality guide for a per-state breakdown.',
+          {
+            '@type': 'Question',
+            'name': 'Is balcony solar legal in the US?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'There\'s no single US answer — legality varies by state and utility. Some states have enacted plug-in solar rules similar to Germany\'s Balkonkraftwerk; others require permits, utility approval under NEC Article 705, and UL 1741-certified equipment for any grid-connected solar. For a per-state breakdown, see the dedicated US states legality guide. The safest approach in any state is a standalone battery + panel system with no grid connection.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the difference between LFP and NMC battery chemistry?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LFP (lithium iron phosphate) provides ~3,000–6,000 charge cycles at 80% retention, better thermal stability, and longer lifespan — preferred for home backup units cycling daily. NMC (nickel manganese cobalt) offers higher energy density per kilogram, which is why it dominates portable/camping units, but degrades faster under daily cycling.',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow vs. Bluetti — which is better for US home backup in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow Delta Pro has the stronger MPPT solar input, making it the better choice if fast panel-based recharging is a priority. Bluetti\'s AC300+B300 is better if modular expansion (adding battery capacity in increments) is the priority. Both use LFP chemistry. Prices change frequently due to tariff exposure — compare current prices at time of purchase, since the price gap fluctuates.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use a portable power station to run my fridge during a grid outage?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. A typical US refrigerator draws 100–400W (150W average) with a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours; add a 200–400W solar panel to extend run time. Verify the AC surge rating of any unit before purchase.',
+          {
+            '@type': 'Question',
+            'name': 'What\'s the difference between LFP and NMC battery chemistry?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LFP (lithium iron phosphate) provides ~3,000–6,000 charge cycles at 80% retention, better thermal stability, and longer calendar life — preferred for home backup units that cycle daily. NMC (nickel manganese cobalt) provides higher energy density for a given weight, which is why it dominates portable/camping-focused units like older Jackery Explorer models. For a unit sitting in your home cycling daily from solar, LFP chemistry is meaningfully better over a 5–10 year horizon.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Anker SOLIX Solarbank available in the US?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No — Anker SOLIX Solarbank models are not sold or certified for the US market. Anker SOLIX portable power stations (F2000, F3800) are available in the US. Confirm which Anker SOLIX product you are looking at before purchasing.',
+          {
+            '@type': 'Question',
+            'name': 'Can I run my refrigerator during a grid outage with one of these?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, with the right sizing. A typical US refrigerator draws 100–400W continuous (150W average) and has a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours. Add a 200–400W solar panel and you can extend that indefinitely in decent sunlight. Verify the AC output and surge rating of any unit you\'re considering — some affordable power stations have surge ratings too low for fridge compressors.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Do I need permits or grid interconnection for a power station paired with solar panels?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'If you\'re not connecting to the grid — just charging the power station from panels and using it to power your home — you generally do not need interconnection permits or utility approval. The panels connect only to the power station\'s solar input, not to your home\'s electrical panel. This is the key legal simplicity of the standalone-battery approach versus balcony solar kits that export to the grid. Verify with your local AHJ (authority having jurisdiction) if you\'re uncertain.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use these with Home Assistant for local monitoring?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Partially. EcoFlow has a community-maintained Home Assistant integration (via HACS) for the Delta series, but it routes through EcoFlow\'s cloud API rather than a true local endpoint. Bluetti, Jackery, and Anker SOLIX lack well-documented local APIs. If local control with no cloud dependency is a hard requirement, see the No-Cloud Balcony Solar guide for a current summary of which hardware genuinely supports local-only operation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Anker SOLIX available in the US?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Anker SOLIX portable power stations (F2000, F3800, and similar units) are available in the US at ankersolix.com and on Amazon. Anker SOLIX Solarbank models — designed for grid-connected balcony solar storage — are not sold or certified for the US market and should not be recommended to US buyers. This is a common point of confusion since the Solarbank gets significant coverage in EU solar reviews.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Why are prices for these products so volatile?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow, Bluetti, Jackery, and Anker SOLIX are all manufactured in China. US retail prices are subject to Section 301 tariffs on lithium-ion batteries and solar components, which have been rising through 2024–2026 and can shift retail prices by 10–25% or more. Brands also run frequent promotions that can move prices $200–500 in either direction. Always check the current price on Amazon or the brand\'s US storefront at time of purchase.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What\'s the best portable power station for camping that also works for home backup?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Jackery Explorer 2000 Pro or 3000 Pro for portability-first users (lighter, Amazon-friendly, but NMC — verify current chemistry). Anker SOLIX F2000 for buyers who want LFP with similar portability to Jackery. EcoFlow Delta Pro if you\'re willing to compromise on portability for LFP chemistry and a stronger solar input. The "camping crossover" use case is well-served by all four brands — the differentiator is chemistry and long-term cycle life for buyers who plan to use the unit heavily at home between trips.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use a portable power station to run my fridge during a grid outage?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. A typical US refrigerator draws 100–400W (150W average) with a startup surge of 600–1,200W. A 2 kWh LFP unit with 2,000W+ AC output can power a standard fridge for 8–12 hours; add a 200–400W solar panel to extend run time. Verify the AC surge rating of any unit before purchase.',
+            },
+          },
+        ],
     },
   },
   de: {
@@ -672,43 +694,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          {
-            q: 'Ist Balkon-Solar in den USA legal?',
-            a: 'Es gibt keine einheitliche US-Antwort — die Legalität variiert je nach Bundesstaat und Versorger. Einige Bundesstaaten haben Plug-in-Solar-Regeln ähnlich dem deutschen Balkonkraftwerk erlassen; andere verlangen für netzgekoppeltes Solar Genehmigungen, die Zustimmung des Versorgers nach NEC Article 705 und UL-1741-zertifizierte Ausrüstung. Eine Aufschlüsselung nach Bundesstaat finden Sie im eigenen Leitfaden zur Legalität in den US-Bundesstaaten. Der sicherste Ansatz in jedem Bundesstaat ist ein eigenständiges Akku-plus-Panel-System ohne Netzverbindung.',
-          },
-          {
-            q: 'EcoFlow vs. Bluetti — was ist 2026 besser für die US-Heim-Notstromversorgung?',
-            a: 'Die EcoFlow Delta Pro hat den stärkeren MPPT-Solareingang und ist damit die bessere Wahl, wenn schnelles panelbasiertes Nachladen Priorität hat. Bluettis AC300+B300 ist besser, wenn modulare Erweiterung (Akkukapazität in Schritten hinzufügen) Priorität hat. Beide verwenden LFP-Chemie. Die Preise ändern sich häufig durch die Zollbelastung — vergleichen Sie die aktuellen Preise zum Kaufzeitpunkt, da der Preisabstand schwankt.',
-          },
-          {
-            q: 'Was ist der Unterschied zwischen LFP- und NMC-Batteriechemie?',
-            a: 'LFP (Lithium-Eisenphosphat) liefert ~3,000–6,000 Ladezyklen bei 80 % Erhalt, bessere thermische Stabilität und längere Kalenderlebensdauer — bevorzugt für Heim-Notstromeinheiten, die täglich zyklisieren. NMC (Nickel-Mangan-Kobalt) bietet höhere Energiedichte pro Gewicht, weshalb es tragbare/campingorientierte Einheiten wie ältere Jackery-Explorer-Modelle dominiert. Für eine Einheit, die zu Hause täglich aus Solar zyklisiert, ist die LFP-Chemie über einen Horizont von 5–10 Jahren deutlich besser.',
-          },
-          {
-            q: 'Kann ich damit meinen Kühlschrank während eines Netzausfalls betreiben?',
-            a: 'Ja, bei richtiger Dimensionierung. Ein typischer US-Kühlschrank zieht 100–400 W kontinuierlich (150 W im Mittel) und hat eine Anlaufspitze von 600–1,200 W. Eine 2-kWh-LFP-Einheit mit 2,000 W+ AC-Ausgang kann einen Standardkühlschrank 8–12 Stunden versorgen. Fügen Sie ein 200–400-W-Solarpanel hinzu, und Sie können das bei ordentlichem Sonnenlicht unbegrenzt verlängern. Prüfen Sie die AC-Ausgangs- und Spitzenleistung jeder Einheit, die Sie in Betracht ziehen — einige günstige Powerstations haben eine für Kühlschrankkompressoren zu niedrige Spitzenleistung.',
-          },
-          {
-            q: 'Brauche ich Genehmigungen oder Netzeinbindung für eine mit Solarpanels kombinierte Powerstation?',
-            a: 'Wenn Sie sich nicht mit dem Netz verbinden — die Powerstation also nur aus Panels laden und damit Ihr Zuhause versorgen —, benötigen Sie in der Regel keine Netzeinbindungsgenehmigungen oder die Zustimmung des Versorgers. Die Panels verbinden sich nur mit dem Solareingang der Powerstation, nicht mit dem elektrischen Verteiler Ihres Hauses. Dies ist die zentrale rechtliche Einfachheit des Ansatzes mit eigenständigem Akku gegenüber Balkon-Solar-Kits, die ins Netz einspeisen. Klären Sie es bei Unsicherheit mit Ihrer örtlichen AHJ (zuständige Behörde).',
-          },
-          {
-            q: 'Kann ich diese mit Home Assistant zur lokalen Überwachung nutzen?',
-            a: 'Teilweise. EcoFlow hat eine community-gepflegte Home-Assistant-Integration (über HACS) für die Delta-Serie, aber sie läuft über EcoFlows Cloud-API statt über einen echten lokalen Endpunkt. Bluetti, Jackery und Anker SOLIX bieten keine gut dokumentierten lokalen APIs. Wenn lokale Steuerung ohne Cloud-Abhängigkeit eine harte Anforderung ist, siehe den Leitfaden zu Balkon-Solar ohne Cloud für eine aktuelle Zusammenfassung, welche Hardware wirklich einen reinen Lokalbetrieb unterstützt.',
-          },
-          {
-            q: 'Ist Anker SOLIX in den USA verfügbar?',
-            a: 'Tragbare Anker-SOLIX-Powerstations (F2000, F3800 und ähnliche Einheiten) sind in den USA auf ankersolix.com und bei Amazon verfügbar. Anker-SOLIX-Solarbank-Modelle — konzipiert für netzgekoppelten Balkon-Solar-Speicher — werden für den US-Markt nicht verkauft oder zertifiziert und sollten US-Käufern nicht empfohlen werden. Dies ist ein häufiger Verwechslungspunkt, da die Solarbank in EU-Solar-Tests erhebliche Beachtung findet.',
-          },
-          {
-            q: 'Warum sind die Preise für diese Produkte so volatil?',
-            a: 'EcoFlow, Bluetti, Jackery und Anker SOLIX werden alle in China gefertigt. Die US-Einzelhandelspreise unterliegen Section-301-Zöllen auf Lithium-Ionen-Akkus und Solarkomponenten, die über 2024–2026 gestiegen sind und die Einzelhandelspreise um 10–25 % oder mehr verschieben können. Die Marken führen zudem häufig Aktionen durch, die die Preise um 200–500 $ in beide Richtungen bewegen können. Prüfen Sie stets den aktuellen Preis auf Amazon oder im US-Shop der Marke zum Kaufzeitpunkt.',
-          },
-          {
-            q: 'Was ist die beste tragbare Powerstation fürs Camping, die auch als Heim-Notstrom funktioniert?',
-            a: 'Jackery Explorer 2000 Pro oder 3000 Pro für portabilitätsorientierte Nutzer (leichter, Amazon-freundlich, aber NMC — aktuelle Chemie prüfen). Anker SOLIX F2000 für Käufer, die LFP mit ähnlicher Portabilität wie Jackery wollen. EcoFlow Delta Pro, wenn Sie bereit sind, bei der Portabilität Kompromisse für LFP-Chemie und einen stärkeren Solareingang einzugehen. Der Anwendungsfall „Camping-Crossover“ wird von allen vier Marken gut bedient — das Unterscheidungsmerkmal ist die Chemie und die langfristige Zyklenlebensdauer für Käufer, die die Einheit zwischen den Touren zu Hause intensiv nutzen wollen.',
-          },
-        ],
+            { q: 'Ist Balkon-Solar in den USA legal?', a: 'Es gibt keine einheitliche US-Antwort — die Legalität variiert je nach Bundesstaat und Versorger. Einige Bundesstaaten haben Plug-in-Solar-Regeln ähnlich dem deutschen Balkonkraftwerk erlassen; andere verlangen für netzgekoppeltes Solar Genehmigungen, die Zustimmung des Versorgers nach NEC Article 705 und UL-1741-zertifizierte Ausrüstung. Eine Aufschlüsselung nach Bundesstaat finden Sie im eigenen Leitfaden zur Legalität in den US-Bundesstaaten. Der sicherste Ansatz in jedem Bundesstaat ist ein eigenständiges Akku-plus-Panel-System ohne Netzverbindung.' },
+            { q: 'EcoFlow vs. Bluetti — was ist 2026 besser für die US-Heim-Notstromversorgung?', a: 'Die EcoFlow Delta Pro hat den stärkeren MPPT-Solareingang und ist damit die bessere Wahl, wenn schnelles panelbasiertes Nachladen Priorität hat. Bluettis AC300+B300 ist besser, wenn modulare Erweiterung (Akkukapazität in Schritten hinzufügen) Priorität hat. Beide verwenden LFP-Chemie. Die Preise ändern sich häufig durch die Zollbelastung — vergleichen Sie die aktuellen Preise zum Kaufzeitpunkt, da der Preisabstand schwankt.' },
+            { q: 'Was ist der Unterschied zwischen LFP- und NMC-Batteriechemie?', a: 'LFP (Lithium-Eisenphosphat) liefert ~3,000–6,000 Ladezyklen bei 80 % Erhalt, bessere thermische Stabilität und längere Kalenderlebensdauer — bevorzugt für Heim-Notstromeinheiten, die täglich zyklisieren. NMC (Nickel-Mangan-Kobalt) bietet höhere Energiedichte pro Gewicht, weshalb es tragbare/campingorientierte Einheiten wie ältere Jackery-Explorer-Modelle dominiert. Für eine Einheit, die zu Hause täglich aus Solar zyklisiert, ist die LFP-Chemie über einen Horizont von 5–10 Jahren deutlich besser.' },
+            { q: 'Kann ich damit meinen Kühlschrank während eines Netzausfalls betreiben?', a: 'Ja, bei richtiger Dimensionierung. Ein typischer US-Kühlschrank zieht 100–400 W kontinuierlich (150 W im Mittel) und hat eine Anlaufspitze von 600–1,200 W. Eine 2-kWh-LFP-Einheit mit 2,000 W+ AC-Ausgang kann einen Standardkühlschrank 8–12 Stunden versorgen. Fügen Sie ein 200–400-W-Solarpanel hinzu, und Sie können das bei ordentlichem Sonnenlicht unbegrenzt verlängern. Prüfen Sie die AC-Ausgangs- und Spitzenleistung jeder Einheit, die Sie in Betracht ziehen — einige günstige Powerstations haben eine für Kühlschrankkompressoren zu niedrige Spitzenleistung.' },
+            { q: 'Brauche ich Genehmigungen oder Netzeinbindung für eine mit Solarpanels kombinierte Powerstation?', a: 'Wenn Sie sich nicht mit dem Netz verbinden — die Powerstation also nur aus Panels laden und damit Ihr Zuhause versorgen —, benötigen Sie in der Regel keine Netzeinbindungsgenehmigungen oder die Zustimmung des Versorgers. Die Panels verbinden sich nur mit dem Solareingang der Powerstation, nicht mit dem elektrischen Verteiler Ihres Hauses. Dies ist die zentrale rechtliche Einfachheit des Ansatzes mit eigenständigem Akku gegenüber Balkon-Solar-Kits, die ins Netz einspeisen. Klären Sie es bei Unsicherheit mit Ihrer örtlichen AHJ (zuständige Behörde).' },
+            { q: 'Kann ich diese mit Home Assistant zur lokalen Überwachung nutzen?', a: 'Teilweise. EcoFlow hat eine community-gepflegte Home-Assistant-Integration (über HACS) für die Delta-Serie, aber sie läuft über EcoFlows Cloud-API statt über einen echten lokalen Endpunkt. Bluetti, Jackery und Anker SOLIX bieten keine gut dokumentierten lokalen APIs. Wenn lokale Steuerung ohne Cloud-Abhängigkeit eine harte Anforderung ist, siehe den Leitfaden zu Balkon-Solar ohne Cloud für eine aktuelle Zusammenfassung, welche Hardware wirklich einen reinen Lokalbetrieb unterstützt.' },
+            { q: 'Ist Anker SOLIX in den USA verfügbar?', a: 'Tragbare Anker-SOLIX-Powerstations (F2000, F3800 und ähnliche Einheiten) sind in den USA auf ankersolix.com und bei Amazon verfügbar. Anker-SOLIX-Solarbank-Modelle — konzipiert für netzgekoppelten Balkon-Solar-Speicher — werden für den US-Markt nicht verkauft oder zertifiziert und sollten US-Käufern nicht empfohlen werden. Dies ist ein häufiger Verwechslungspunkt, da die Solarbank in EU-Solar-Tests erhebliche Beachtung findet.' },
+            { q: 'Warum sind die Preise für diese Produkte so volatil?', a: 'EcoFlow, Bluetti, Jackery und Anker SOLIX werden alle in China gefertigt. Die US-Einzelhandelspreise unterliegen Section-301-Zöllen auf Lithium-Ionen-Akkus und Solarkomponenten, die über 2024–2026 gestiegen sind und die Einzelhandelspreise um 10–25 % oder mehr verschieben können. Die Marken führen zudem häufig Aktionen durch, die die Preise um 200–500 $ in beide Richtungen bewegen können. Prüfen Sie stets den aktuellen Preis auf Amazon oder im US-Shop der Marke zum Kaufzeitpunkt.' },
+            { q: 'Was ist die beste tragbare Powerstation fürs Camping, die auch als Heim-Notstrom funktioniert?', a: 'Jackery Explorer 2000 Pro oder 3000 Pro für portabilitätsorientierte Nutzer (leichter, Amazon-freundlich, aber NMC — aktuelle Chemie prüfen). Anker SOLIX F2000 für Käufer, die LFP mit ähnlicher Portabilität wie Jackery wollen. EcoFlow Delta Pro, wenn Sie bereit sind, bei der Portabilität Kompromisse für LFP-Chemie und einen stärkeren Solareingang einzugehen. Der Anwendungsfall „Camping-Crossover“ wird von allen vier Marken gut bedient — das Unterscheidungsmerkmal ist die Chemie und die langfristige Zyklenlebensdauer für Käufer, die die Einheit zwischen den Touren zu Hause intensiv nutzen wollen.' },
+          ],
       },
     },
     schema: {
@@ -781,39 +776,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Ist Balkon-Solar in den USA legal?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Es gibt keine einheitliche US-Antwort — die Legalität variiert je nach Bundesstaat und Versorger. Netzgekoppeltes Plug-in-Solar erfordert die Einhaltung von NEC Article 705 und UL-1741-zertifizierte Ausrüstung. Eigenständige Akku-plus-Panel-Systeme, die sich nicht mit dem Netz verbinden, sind in der Regel genehmigungsfrei. Eine Aufschlüsselung nach Bundesstaat finden Sie im Leitfaden zur Legalität in den US-Bundesstaaten.',
+          {
+            '@type': 'Question',
+            'name': 'Ist Balkon-Solar in den USA legal?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es gibt keine einheitliche US-Antwort — die Legalität variiert je nach Bundesstaat und Versorger. Einige Bundesstaaten haben Plug-in-Solar-Regeln ähnlich dem deutschen Balkonkraftwerk erlassen; andere verlangen für netzgekoppeltes Solar Genehmigungen, die Zustimmung des Versorgers nach NEC Article 705 und UL-1741-zertifizierte Ausrüstung. Eine Aufschlüsselung nach Bundesstaat finden Sie im eigenen Leitfaden zur Legalität in den US-Bundesstaaten. Der sicherste Ansatz in jedem Bundesstaat ist ein eigenständiges Akku-plus-Panel-System ohne Netzverbindung.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was ist der Unterschied zwischen LFP- und NMC-Batteriechemie?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LFP (Lithium-Eisenphosphat) liefert ~3,000–6,000 Ladezyklen bei 80 % Erhalt, bessere thermische Stabilität und längere Lebensdauer — bevorzugt für täglich zyklisierende Heim-Notstromeinheiten. NMC (Nickel-Mangan-Kobalt) bietet höhere Energiedichte pro Kilogramm, weshalb es tragbare/Camping-Einheiten dominiert, degradiert aber bei täglicher Zyklisierung schneller.',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow vs. Bluetti — was ist 2026 besser für die US-Heim-Notstromversorgung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die EcoFlow Delta Pro hat den stärkeren MPPT-Solareingang und ist damit die bessere Wahl, wenn schnelles panelbasiertes Nachladen Priorität hat. Bluettis AC300+B300 ist besser, wenn modulare Erweiterung (Akkukapazität in Schritten hinzufügen) Priorität hat. Beide verwenden LFP-Chemie. Die Preise ändern sich häufig durch die Zollbelastung — vergleichen Sie die aktuellen Preise zum Kaufzeitpunkt, da der Preisabstand schwankt.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kann ich mit einer tragbaren Powerstation meinen Kühlschrank während eines Netzausfalls betreiben?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja. Ein typischer US-Kühlschrank zieht 100–400 W (150 W im Mittel) mit einer Anlaufspitze von 600–1,200 W. Eine 2-kWh-LFP-Einheit mit 2,000 W+ AC-Ausgang kann einen Standardkühlschrank 8–12 Stunden versorgen; fügen Sie ein 200–400-W-Solarpanel hinzu, um die Laufzeit zu verlängern. Prüfen Sie vor dem Kauf die AC-Spitzenleistung jeder Einheit.',
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Unterschied zwischen LFP- und NMC-Batteriechemie?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LFP (Lithium-Eisenphosphat) liefert ~3,000–6,000 Ladezyklen bei 80 % Erhalt, bessere thermische Stabilität und längere Kalenderlebensdauer — bevorzugt für Heim-Notstromeinheiten, die täglich zyklisieren. NMC (Nickel-Mangan-Kobalt) bietet höhere Energiedichte pro Gewicht, weshalb es tragbare/campingorientierte Einheiten wie ältere Jackery-Explorer-Modelle dominiert. Für eine Einheit, die zu Hause täglich aus Solar zyklisiert, ist die LFP-Chemie über einen Horizont von 5–10 Jahren deutlich besser.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist die Anker SOLIX Solarbank in den USA verfügbar?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein — Anker-SOLIX-Solarbank-Modelle werden für den US-Markt nicht verkauft oder zertifiziert. Tragbare Anker-SOLIX-Powerstations (F2000, F3800) sind in den USA verfügbar. Vergewissern Sie sich vor dem Kauf, welches Anker-SOLIX-Produkt Sie betrachten.',
+          {
+            '@type': 'Question',
+            'name': 'Kann ich damit meinen Kühlschrank während eines Netzausfalls betreiben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, bei richtiger Dimensionierung. Ein typischer US-Kühlschrank zieht 100–400 W kontinuierlich (150 W im Mittel) und hat eine Anlaufspitze von 600–1,200 W. Eine 2-kWh-LFP-Einheit mit 2,000 W+ AC-Ausgang kann einen Standardkühlschrank 8–12 Stunden versorgen. Fügen Sie ein 200–400-W-Solarpanel hinzu, und Sie können das bei ordentlichem Sonnenlicht unbegrenzt verlängern. Prüfen Sie die AC-Ausgangs- und Spitzenleistung jeder Einheit, die Sie in Betracht ziehen — einige günstige Powerstations haben eine für Kühlschrankkompressoren zu niedrige Spitzenleistung.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Brauche ich Genehmigungen oder Netzeinbindung für eine mit Solarpanels kombinierte Powerstation?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Wenn Sie sich nicht mit dem Netz verbinden — die Powerstation also nur aus Panels laden und damit Ihr Zuhause versorgen —, benötigen Sie in der Regel keine Netzeinbindungsgenehmigungen oder die Zustimmung des Versorgers. Die Panels verbinden sich nur mit dem Solareingang der Powerstation, nicht mit dem elektrischen Verteiler Ihres Hauses. Dies ist die zentrale rechtliche Einfachheit des Ansatzes mit eigenständigem Akku gegenüber Balkon-Solar-Kits, die ins Netz einspeisen. Klären Sie es bei Unsicherheit mit Ihrer örtlichen AHJ (zuständige Behörde).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich diese mit Home Assistant zur lokalen Überwachung nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Teilweise. EcoFlow hat eine community-gepflegte Home-Assistant-Integration (über HACS) für die Delta-Serie, aber sie läuft über EcoFlows Cloud-API statt über einen echten lokalen Endpunkt. Bluetti, Jackery und Anker SOLIX bieten keine gut dokumentierten lokalen APIs. Wenn lokale Steuerung ohne Cloud-Abhängigkeit eine harte Anforderung ist, siehe den Leitfaden zu Balkon-Solar ohne Cloud für eine aktuelle Zusammenfassung, welche Hardware wirklich einen reinen Lokalbetrieb unterstützt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Anker SOLIX in den USA verfügbar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Tragbare Anker-SOLIX-Powerstations (F2000, F3800 und ähnliche Einheiten) sind in den USA auf ankersolix.com und bei Amazon verfügbar. Anker-SOLIX-Solarbank-Modelle — konzipiert für netzgekoppelten Balkon-Solar-Speicher — werden für den US-Markt nicht verkauft oder zertifiziert und sollten US-Käufern nicht empfohlen werden. Dies ist ein häufiger Verwechslungspunkt, da die Solarbank in EU-Solar-Tests erhebliche Beachtung findet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Warum sind die Preise für diese Produkte so volatil?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow, Bluetti, Jackery und Anker SOLIX werden alle in China gefertigt. Die US-Einzelhandelspreise unterliegen Section-301-Zöllen auf Lithium-Ionen-Akkus und Solarkomponenten, die über 2024–2026 gestiegen sind und die Einzelhandelspreise um 10–25 % oder mehr verschieben können. Die Marken führen zudem häufig Aktionen durch, die die Preise um 200–500 $ in beide Richtungen bewegen können. Prüfen Sie stets den aktuellen Preis auf Amazon oder im US-Shop der Marke zum Kaufzeitpunkt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist die beste tragbare Powerstation fürs Camping, die auch als Heim-Notstrom funktioniert?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Jackery Explorer 2000 Pro oder 3000 Pro für portabilitätsorientierte Nutzer (leichter, Amazon-freundlich, aber NMC — aktuelle Chemie prüfen). Anker SOLIX F2000 für Käufer, die LFP mit ähnlicher Portabilität wie Jackery wollen. EcoFlow Delta Pro, wenn Sie bereit sind, bei der Portabilität Kompromisse für LFP-Chemie und einen stärkeren Solareingang einzugehen. Der Anwendungsfall „Camping-Crossover“ wird von allen vier Marken gut bedient — das Unterscheidungsmerkmal ist die Chemie und die langfristige Zyklenlebensdauer für Käufer, die die Einheit zwischen den Touren zu Hause intensiv nutzen wollen.',
+            },
+          },
+        ],
     },
   },
   fr: {
@@ -1077,43 +1112,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Foire aux questions',
         faqs: [
-          {
-            q: 'Le solaire de balcon est-il légal aux États-Unis ?',
-            a: 'Il n\'y a pas de réponse américaine unique — la légalité varie selon l\'État et le fournisseur d\'électricité. Certains États ont adopté des règles de solaire plug-in similaires au Balkonkraftwerk allemand ; d\'autres exigent des permis, l\'approbation du fournisseur au titre de l\'article 705 du NEC et des équipements certifiés UL 1741 pour tout solaire raccordé au réseau. Pour un détail État par État, voir le guide dédié à la légalité par État américain. L\'approche la plus sûre dans n\'importe quel État est un système batterie + panneau autonome sans aucune connexion au réseau.',
-          },
-          {
-            q: 'EcoFlow vs Bluetti — laquelle est la meilleure pour le secours domestique américain en 2026 ?',
-            a: 'L\'EcoFlow Delta Pro a l\'entrée solaire MPPT la plus forte, ce qui en fait le meilleur choix si la recharge rapide par panneaux est une priorité. La Bluetti AC300+B300 est préférable si l\'extension modulaire (ajout de capacité de batterie par paliers) est la priorité. Les deux utilisent la chimie LFP. Les prix changent souvent en raison de l\'exposition aux droits de douane — comparez les prix actuels au moment de l\'achat, car l\'écart de prix fluctue.',
-          },
-          {
-            q: 'Quelle est la différence entre la chimie de batterie LFP et NMC ?',
-            a: 'Le LFP (lithium fer phosphate) offre ~3 000–6 000 cycles de charge à 80 % de rétention, une meilleure stabilité thermique et une durée de vie calendaire plus longue — préféré pour les unités de secours domestique qui cyclent quotidiennement. La NMC (nickel manganèse cobalt) offre une densité énergétique plus élevée pour un poids donné, ce qui explique sa domination dans les unités portables/camping comme les anciens modèles Jackery Explorer. Pour une unité qui reste chez vous et cycle quotidiennement à partir du solaire, la chimie LFP est nettement meilleure sur un horizon de 5–10 ans.',
-          },
-          {
-            q: 'Puis-je faire fonctionner mon réfrigérateur pendant une coupure de réseau avec l\'une de ces unités ?',
-            a: 'Oui, avec le bon dimensionnement. Un réfrigérateur américain typique tire 100–400 W en continu (150 W en moyenne) et présente une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures. Ajoutez un panneau solaire de 200–400 W et vous pouvez prolonger cela indéfiniment par ensoleillement correct. Vérifiez la sortie CA et la puissance de pointe de toute unité que vous envisagez — certaines stations électriques abordables ont des puissances de pointe trop faibles pour les compresseurs de réfrigérateur.',
-          },
-          {
-            q: 'Ai-je besoin de permis ou d\'interconnexion au réseau pour une station électrique appairée à des panneaux solaires ?',
-            a: 'Si vous ne vous connectez pas au réseau — que vous chargez simplement la station électrique depuis des panneaux et l\'utilisez pour alimenter votre maison — vous n\'avez généralement pas besoin de permis d\'interconnexion ni d\'approbation du fournisseur. Les panneaux se connectent uniquement à l\'entrée solaire de la station électrique, pas au tableau électrique de votre maison. C\'est la simplicité juridique clé de l\'approche batterie autonome par rapport aux kits de solaire de balcon qui exportent vers le réseau. Vérifiez auprès de votre AHJ local (autorité compétente) en cas de doute.',
-          },
-          {
-            q: 'Puis-je les utiliser avec Home Assistant pour une surveillance locale ?',
-            a: 'Partiellement. EcoFlow dispose d\'une intégration Home Assistant maintenue par la communauté (via HACS) pour la série Delta, mais elle transite par l\'API cloud d\'EcoFlow plutôt que par un véritable point de terminaison local. Bluetti, Jackery et Anker SOLIX manquent d\'API locales bien documentées. Si le contrôle local sans dépendance au cloud est une exigence stricte, voir le guide du solaire de balcon sans cloud pour un résumé actuel du matériel qui prend véritablement en charge un fonctionnement local uniquement.',
-          },
-          {
-            q: 'Anker SOLIX est-elle disponible aux États-Unis ?',
-            a: 'Les stations électriques portables Anker SOLIX (F2000, F3800 et unités similaires) sont disponibles aux États-Unis sur ankersolix.com et sur Amazon. Les modèles Anker SOLIX Solarbank — conçus pour le stockage solaire de balcon raccordé au réseau — ne sont ni vendus ni certifiés pour le marché américain et ne doivent pas être recommandés aux acheteurs américains. C\'est un point de confusion fréquent, la Solarbank recevant une couverture importante dans les tests solaires européens.',
-          },
-          {
-            q: 'Pourquoi les prix de ces produits sont-ils si volatils ?',
-            a: 'EcoFlow, Bluetti, Jackery et Anker SOLIX sont toutes fabriquées en Chine. Les prix de détail américains sont soumis aux droits de douane de la Section 301 sur les batteries lithium-ion et les composants solaires, qui n\'ont cessé d\'augmenter entre 2024 et 2026 et peuvent faire varier les prix de détail de 10–25 % ou plus. Les marques mènent aussi des promotions fréquentes qui peuvent faire bouger les prix de 200–500 $ dans un sens ou dans l\'autre. Vérifiez toujours le prix actuel sur Amazon ou la boutique américaine de la marque au moment de l\'achat.',
-          },
-          {
-            q: 'Quelle est la meilleure station électrique portable pour le camping qui fonctionne aussi pour le secours domestique ?',
-            a: 'La Jackery Explorer 2000 Pro ou 3000 Pro pour les utilisateurs qui privilégient la portabilité (plus légère, adaptée à Amazon, mais NMC — vérifiez la chimie actuelle). L\'Anker SOLIX F2000 pour les acheteurs qui veulent du LFP avec une portabilité similaire à Jackery. L\'EcoFlow Delta Pro si vous êtes prêt à faire un compromis sur la portabilité pour la chimie LFP et une entrée solaire plus forte. Le cas d\'usage « polyvalence camping » est bien servi par les quatre marques — le facteur différenciant est la chimie et la durée de vie en cycles à long terme pour les acheteurs qui prévoient d\'utiliser l\'unité intensivement à la maison entre les voyages.',
-          },
-        ],
+            { q: 'Le solaire de balcon est-il légal aux États-Unis ?', a: 'Il n\'y a pas de réponse américaine unique — la légalité varie selon l\'État et le fournisseur d\'électricité. Certains États ont adopté des règles de solaire plug-in similaires au Balkonkraftwerk allemand ; d\'autres exigent des permis, l\'approbation du fournisseur au titre de l\'article 705 du NEC et des équipements certifiés UL 1741 pour tout solaire raccordé au réseau. Pour un détail État par État, voir le guide dédié à la légalité par État américain. L\'approche la plus sûre dans n\'importe quel État est un système batterie + panneau autonome sans aucune connexion au réseau.' },
+            { q: 'EcoFlow vs Bluetti — laquelle est la meilleure pour le secours domestique américain en 2026 ?', a: 'L\'EcoFlow Delta Pro a l\'entrée solaire MPPT la plus forte, ce qui en fait le meilleur choix si la recharge rapide par panneaux est une priorité. La Bluetti AC300+B300 est préférable si l\'extension modulaire (ajout de capacité de batterie par paliers) est la priorité. Les deux utilisent la chimie LFP. Les prix changent souvent en raison de l\'exposition aux droits de douane — comparez les prix actuels au moment de l\'achat, car l\'écart de prix fluctue.' },
+            { q: 'Quelle est la différence entre la chimie de batterie LFP et NMC ?', a: 'Le LFP (lithium fer phosphate) offre ~3 000–6 000 cycles de charge à 80 % de rétention, une meilleure stabilité thermique et une durée de vie calendaire plus longue — préféré pour les unités de secours domestique qui cyclent quotidiennement. La NMC (nickel manganèse cobalt) offre une densité énergétique plus élevée pour un poids donné, ce qui explique sa domination dans les unités portables/camping comme les anciens modèles Jackery Explorer. Pour une unité qui reste chez vous et cycle quotidiennement à partir du solaire, la chimie LFP est nettement meilleure sur un horizon de 5–10 ans.' },
+            { q: 'Puis-je faire fonctionner mon réfrigérateur pendant une coupure de réseau avec l\'une de ces unités ?', a: 'Oui, avec le bon dimensionnement. Un réfrigérateur américain typique tire 100–400 W en continu (150 W en moyenne) et présente une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures. Ajoutez un panneau solaire de 200–400 W et vous pouvez prolonger cela indéfiniment par ensoleillement correct. Vérifiez la sortie CA et la puissance de pointe de toute unité que vous envisagez — certaines stations électriques abordables ont des puissances de pointe trop faibles pour les compresseurs de réfrigérateur.' },
+            { q: 'Ai-je besoin de permis ou d\'interconnexion au réseau pour une station électrique appairée à des panneaux solaires ?', a: 'Si vous ne vous connectez pas au réseau — que vous chargez simplement la station électrique depuis des panneaux et l\'utilisez pour alimenter votre maison — vous n\'avez généralement pas besoin de permis d\'interconnexion ni d\'approbation du fournisseur. Les panneaux se connectent uniquement à l\'entrée solaire de la station électrique, pas au tableau électrique de votre maison. C\'est la simplicité juridique clé de l\'approche batterie autonome par rapport aux kits de solaire de balcon qui exportent vers le réseau. Vérifiez auprès de votre AHJ local (autorité compétente) en cas de doute.' },
+            { q: 'Puis-je les utiliser avec Home Assistant pour une surveillance locale ?', a: 'Partiellement. EcoFlow dispose d\'une intégration Home Assistant maintenue par la communauté (via HACS) pour la série Delta, mais elle transite par l\'API cloud d\'EcoFlow plutôt que par un véritable point de terminaison local. Bluetti, Jackery et Anker SOLIX manquent d\'API locales bien documentées. Si le contrôle local sans dépendance au cloud est une exigence stricte, voir le guide du solaire de balcon sans cloud pour un résumé actuel du matériel qui prend véritablement en charge un fonctionnement local uniquement.' },
+            { q: 'Anker SOLIX est-elle disponible aux États-Unis ?', a: 'Les stations électriques portables Anker SOLIX (F2000, F3800 et unités similaires) sont disponibles aux États-Unis sur ankersolix.com et sur Amazon. Les modèles Anker SOLIX Solarbank — conçus pour le stockage solaire de balcon raccordé au réseau — ne sont ni vendus ni certifiés pour le marché américain et ne doivent pas être recommandés aux acheteurs américains. C\'est un point de confusion fréquent, la Solarbank recevant une couverture importante dans les tests solaires européens.' },
+            { q: 'Pourquoi les prix de ces produits sont-ils si volatils ?', a: 'EcoFlow, Bluetti, Jackery et Anker SOLIX sont toutes fabriquées en Chine. Les prix de détail américains sont soumis aux droits de douane de la Section 301 sur les batteries lithium-ion et les composants solaires, qui n\'ont cessé d\'augmenter entre 2024 et 2026 et peuvent faire varier les prix de détail de 10–25 % ou plus. Les marques mènent aussi des promotions fréquentes qui peuvent faire bouger les prix de 200–500 $ dans un sens ou dans l\'autre. Vérifiez toujours le prix actuel sur Amazon ou la boutique américaine de la marque au moment de l\'achat.' },
+            { q: 'Quelle est la meilleure station électrique portable pour le camping qui fonctionne aussi pour le secours domestique ?', a: 'La Jackery Explorer 2000 Pro ou 3000 Pro pour les utilisateurs qui privilégient la portabilité (plus légère, adaptée à Amazon, mais NMC — vérifiez la chimie actuelle). L\'Anker SOLIX F2000 pour les acheteurs qui veulent du LFP avec une portabilité similaire à Jackery. L\'EcoFlow Delta Pro si vous êtes prêt à faire un compromis sur la portabilité pour la chimie LFP et une entrée solaire plus forte. Le cas d\'usage « polyvalence camping » est bien servi par les quatre marques — le facteur différenciant est la chimie et la durée de vie en cycles à long terme pour les acheteurs qui prévoient d\'utiliser l\'unité intensivement à la maison entre les voyages.' },
+            { q: 'Puis-je utiliser une station électrique portable pour faire fonctionner mon réfrigérateur pendant une coupure de réseau ?', a: 'Oui. Un réfrigérateur américain typique tire 100–400 W (150 W en moyenne) avec une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures ; ajoutez un panneau solaire de 200–400 W pour prolonger l\'autonomie. Vérifiez la puissance de pointe CA de toute unité avant l\'achat.' },
+          ],
       },
     },
     schema: {
@@ -1189,39 +1198,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Le solaire de balcon est-il légal aux États-Unis ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Il n\'y a pas de réponse américaine unique — la légalité varie selon l\'État et le fournisseur d\'électricité. Le solaire plug-in raccordé au réseau exige la conformité à l\'article 705 du NEC et des équipements certifiés UL 1741. Les systèmes batterie + panneau autonomes qui ne se connectent pas au réseau sont généralement exempts de permis. Voir le guide de légalité par État américain pour un détail État par État.',
+          {
+            '@type': 'Question',
+            'name': 'Le solaire de balcon est-il légal aux États-Unis ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Il n\'y a pas de réponse américaine unique — la légalité varie selon l\'État et le fournisseur d\'électricité. Certains États ont adopté des règles de solaire plug-in similaires au Balkonkraftwerk allemand ; d\'autres exigent des permis, l\'approbation du fournisseur au titre de l\'article 705 du NEC et des équipements certifiés UL 1741 pour tout solaire raccordé au réseau. Pour un détail État par État, voir le guide dédié à la légalité par État américain. L\'approche la plus sûre dans n\'importe quel État est un système batterie + panneau autonome sans aucune connexion au réseau.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quelle est la différence entre la chimie de batterie LFP et NMC ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Le LFP (lithium fer phosphate) offre ~3 000–6 000 cycles de charge à 80 % de rétention, une meilleure stabilité thermique et une durée de vie plus longue — préféré pour les unités de secours domestique qui cyclent quotidiennement. La NMC (nickel manganèse cobalt) offre une densité énergétique plus élevée par kilogramme, ce qui explique sa domination dans les unités portables/camping, mais elle se dégrade plus vite en cyclage quotidien.',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow vs Bluetti — laquelle est la meilleure pour le secours domestique américain en 2026 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'EcoFlow Delta Pro a l\'entrée solaire MPPT la plus forte, ce qui en fait le meilleur choix si la recharge rapide par panneaux est une priorité. La Bluetti AC300+B300 est préférable si l\'extension modulaire (ajout de capacité de batterie par paliers) est la priorité. Les deux utilisent la chimie LFP. Les prix changent souvent en raison de l\'exposition aux droits de douane — comparez les prix actuels au moment de l\'achat, car l\'écart de prix fluctue.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Puis-je utiliser une station électrique portable pour faire fonctionner mon réfrigérateur pendant une coupure de réseau ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui. Un réfrigérateur américain typique tire 100–400 W (150 W en moyenne) avec une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures ; ajoutez un panneau solaire de 200–400 W pour prolonger l\'autonomie. Vérifiez la puissance de pointe CA de toute unité avant l\'achat.',
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre la chimie de batterie LFP et NMC ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le LFP (lithium fer phosphate) offre ~3 000–6 000 cycles de charge à 80 % de rétention, une meilleure stabilité thermique et une durée de vie calendaire plus longue — préféré pour les unités de secours domestique qui cyclent quotidiennement. La NMC (nickel manganèse cobalt) offre une densité énergétique plus élevée pour un poids donné, ce qui explique sa domination dans les unités portables/camping comme les anciens modèles Jackery Explorer. Pour une unité qui reste chez vous et cycle quotidiennement à partir du solaire, la chimie LFP est nettement meilleure sur un horizon de 5–10 ans.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'L\'Anker SOLIX Solarbank est-elle disponible aux États-Unis ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non — les modèles Anker SOLIX Solarbank ne sont ni vendus ni certifiés pour le marché américain. Les stations électriques portables Anker SOLIX (F2000, F3800) sont disponibles aux États-Unis. Confirmez quel produit Anker SOLIX vous regardez avant l\'achat.',
+          {
+            '@type': 'Question',
+            'name': 'Puis-je faire fonctionner mon réfrigérateur pendant une coupure de réseau avec l\'une de ces unités ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, avec le bon dimensionnement. Un réfrigérateur américain typique tire 100–400 W en continu (150 W en moyenne) et présente une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures. Ajoutez un panneau solaire de 200–400 W et vous pouvez prolonger cela indéfiniment par ensoleillement correct. Vérifiez la sortie CA et la puissance de pointe de toute unité que vous envisagez — certaines stations électriques abordables ont des puissances de pointe trop faibles pour les compresseurs de réfrigérateur.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Ai-je besoin de permis ou d\'interconnexion au réseau pour une station électrique appairée à des panneaux solaires ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Si vous ne vous connectez pas au réseau — que vous chargez simplement la station électrique depuis des panneaux et l\'utilisez pour alimenter votre maison — vous n\'avez généralement pas besoin de permis d\'interconnexion ni d\'approbation du fournisseur. Les panneaux se connectent uniquement à l\'entrée solaire de la station électrique, pas au tableau électrique de votre maison. C\'est la simplicité juridique clé de l\'approche batterie autonome par rapport aux kits de solaire de balcon qui exportent vers le réseau. Vérifiez auprès de votre AHJ local (autorité compétente) en cas de doute.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je les utiliser avec Home Assistant pour une surveillance locale ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Partiellement. EcoFlow dispose d\'une intégration Home Assistant maintenue par la communauté (via HACS) pour la série Delta, mais elle transite par l\'API cloud d\'EcoFlow plutôt que par un véritable point de terminaison local. Bluetti, Jackery et Anker SOLIX manquent d\'API locales bien documentées. Si le contrôle local sans dépendance au cloud est une exigence stricte, voir le guide du solaire de balcon sans cloud pour un résumé actuel du matériel qui prend véritablement en charge un fonctionnement local uniquement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Anker SOLIX est-elle disponible aux États-Unis ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les stations électriques portables Anker SOLIX (F2000, F3800 et unités similaires) sont disponibles aux États-Unis sur ankersolix.com et sur Amazon. Les modèles Anker SOLIX Solarbank — conçus pour le stockage solaire de balcon raccordé au réseau — ne sont ni vendus ni certifiés pour le marché américain et ne doivent pas être recommandés aux acheteurs américains. C\'est un point de confusion fréquent, la Solarbank recevant une couverture importante dans les tests solaires européens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi les prix de ces produits sont-ils si volatils ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow, Bluetti, Jackery et Anker SOLIX sont toutes fabriquées en Chine. Les prix de détail américains sont soumis aux droits de douane de la Section 301 sur les batteries lithium-ion et les composants solaires, qui n\'ont cessé d\'augmenter entre 2024 et 2026 et peuvent faire varier les prix de détail de 10–25 % ou plus. Les marques mènent aussi des promotions fréquentes qui peuvent faire bouger les prix de 200–500 $ dans un sens ou dans l\'autre. Vérifiez toujours le prix actuel sur Amazon ou la boutique américaine de la marque au moment de l\'achat.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la meilleure station électrique portable pour le camping qui fonctionne aussi pour le secours domestique ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La Jackery Explorer 2000 Pro ou 3000 Pro pour les utilisateurs qui privilégient la portabilité (plus légère, adaptée à Amazon, mais NMC — vérifiez la chimie actuelle). L\'Anker SOLIX F2000 pour les acheteurs qui veulent du LFP avec une portabilité similaire à Jackery. L\'EcoFlow Delta Pro si vous êtes prêt à faire un compromis sur la portabilité pour la chimie LFP et une entrée solaire plus forte. Le cas d\'usage « polyvalence camping » est bien servi par les quatre marques — le facteur différenciant est la chimie et la durée de vie en cycles à long terme pour les acheteurs qui prévoient d\'utiliser l\'unité intensivement à la maison entre les voyages.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser une station électrique portable pour faire fonctionner mon réfrigérateur pendant une coupure de réseau ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Un réfrigérateur américain typique tire 100–400 W (150 W en moyenne) avec une pointe de démarrage de 600–1 200 W. Une unité LFP de 2 kWh avec 2 000 W+ de sortie CA peut alimenter un réfrigérateur standard pendant 8–12 heures ; ajoutez un panneau solaire de 200–400 W pour prolonger l\'autonomie. Vérifiez la puissance de pointe CA de toute unité avant l\'achat.',
+            },
+          },
+        ],
     },
   },
   ja: {
@@ -1485,43 +1542,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          {
-            q: '米国でベランダ発電は合法ですか？',
-            a: '米国全体で一律の答えはなく、合法性は州と電力会社によって異なります。ドイツの Balkonkraftwerk に似たプラグイン・ソーラーのルールを制定した州もあれば、系統連系するソーラーには許認可、NEC Article 705 に基づく電力会社の承認、UL 1741 認証機器を求める州もあります。州ごとの内訳は、専用の米国州別合法性ガイドを参照してください。どの州でも最も安全な方法は、系統に接続しない単独のバッテリー＋パネルシステムです。',
-          },
-          {
-            q: 'EcoFlow 対 Bluetti — 2026年の米国の家庭用バックアップにはどちらが良いですか？',
-            a: 'EcoFlow Delta Pro は MPPT ソーラー入力が強く、パネルからの高速再充電を優先するなら良い選択です。Bluetti の AC300＋B300 は、モジュール式の拡張（バッテリー容量を段階的に追加する）を優先するなら良い選択です。どちらも LFP 化学です。関税の影響で価格は頻繁に変わるため、価格差も変動します。購入時点の現在価格を比較してください。',
-          },
-          {
-            q: 'LFP と NMC の電池化学の違いは何ですか？',
-            a: 'LFP（リン酸鉄リチウム）は80%保持で約3,000〜6,000回の充電サイクル、優れた熱安定性、長いカレンダー寿命を提供し、毎日充放電する家庭用バックアップ機に好まれます。NMC（ニッケルマンガンコバルト）は所定の重量あたりのエネルギー密度が高く、これが旧型 Jackery Explorer のようなポータブル／キャンプ向け機器を席巻する理由です。自宅に据えてソーラーから毎日充放電する機器には、5〜10年の時間軸で LFP 化学が明確に優れています。',
-          },
-          {
-            q: 'これらの1台で停電時に冷蔵庫を動かせますか？',
-            a: 'はい、適切なサイジングなら可能です。一般的な米国の冷蔵庫は100〜400W 連続（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら、標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば、十分な日照下で無期限に延長できます。検討中の機器の AC 出力とサージ定格を確認してください。手頃なポータブル電源の中には、冷蔵庫のコンプレッサーにはサージ定格が低すぎるものがあります。',
-          },
-          {
-            q: 'ソーラーパネルと組み合わせたポータブル電源に許認可や系統連系は必要ですか？',
-            a: '系統に接続せず、パネルからポータブル電源を充電して家に給電するだけなら、一般に連系の許認可や電力会社の承認は不要です。パネルはポータブル電源のソーラー入力にのみ接続し、家の分電盤には接続しません。これが、系統へ送電するベランダ発電キットに対する単独バッテリー方式の法的な簡便さの要点です。不確かなら、地域の AHJ（管轄権を持つ当局）に確認してください。',
-          },
-          {
-            q: 'これらを Home Assistant でローカル監視に使えますか？',
-            a: '部分的に可能です。EcoFlow には Delta シリーズ向けのコミュニティ保守の Home Assistant 連携（HACS 経由）がありますが、真のローカルエンドポイントではなく EcoFlow のクラウド API を経由します。Bluetti、Jackery、Anker SOLIX は十分に文書化されたローカル API を欠いています。クラウド依存のないローカル制御が必須要件なら、どのハードウェアが本当にローカル専用運用をサポートするかの現行のまとめについて、クラウド不要のベランダ発電ガイドを参照してください。',
-          },
-          {
-            q: 'Anker SOLIX は米国で入手できますか？',
-            a: 'Anker SOLIX のポータブル電源（F2000、F3800 などの機器）は、米国では ankersolix.com と Amazon で入手できます。系統連系型のベランダ発電蓄電向けに設計された Anker SOLIX Solarbank モデルは、米国市場向けに販売も認証もされておらず、米国の購入者に推奨すべきではありません。Solarbank は EU のソーラーレビューで大きく取り上げられるため、これはよくある混同の原因です。',
-          },
-          {
-            q: 'なぜこれらの製品の価格はこれほど変動しやすいのですか？',
-            a: 'EcoFlow、Bluetti、Jackery、Anker SOLIX はいずれも中国で製造されています。米国小売価格はリチウムイオン電池とソーラー部品への Section 301 関税の対象で、2024〜2026年にかけて上昇しており、小売価格を10〜25%以上動かしうります。各ブランドは頻繁なプロモーションも実施し、価格を200〜500ドルどちらの方向にも動かしえます。購入時点で常に Amazon やブランドの米国ストアで現在価格を確認してください。',
-          },
-          {
-            q: '家庭用バックアップにも使えるキャンプ向けのベストなポータブル電源はどれですか？',
-            a: '携帯性を最優先するユーザーには Jackery Explorer 2000 Pro か 3000 Pro（軽量で Amazon 向き、ただし NMC。現行化学組成は要確認）。Jackery と同等の携帯性で LFP が欲しい購入者には Anker SOLIX F2000。携帯性を妥協してでも LFP 化学と強力なソーラー入力が欲しいなら EcoFlow Delta Pro。「キャンプ兼用」の用途は4ブランドすべてでよく満たされます。差別化要素は、旅行の合間に自宅で機器をよく使う購入者にとっての化学組成と長期サイクル寿命です。',
-          },
-        ],
+            { q: '米国でベランダ発電は合法ですか？', a: '米国全体で一律の答えはなく、合法性は州と電力会社によって異なります。ドイツの Balkonkraftwerk に似たプラグイン・ソーラーのルールを制定した州もあれば、系統連系するソーラーには許認可、NEC Article 705 に基づく電力会社の承認、UL 1741 認証機器を求める州もあります。州ごとの内訳は、専用の米国州別合法性ガイドを参照してください。どの州でも最も安全な方法は、系統に接続しない単独のバッテリー＋パネルシステムです。' },
+            { q: 'EcoFlow 対 Bluetti — 2026年の米国の家庭用バックアップにはどちらが良いですか？', a: 'EcoFlow Delta Pro は MPPT ソーラー入力が強く、パネルからの高速再充電を優先するなら良い選択です。Bluetti の AC300＋B300 は、モジュール式の拡張（バッテリー容量を段階的に追加する）を優先するなら良い選択です。どちらも LFP 化学です。関税の影響で価格は頻繁に変わるため、価格差も変動します。購入時点の現在価格を比較してください。' },
+            { q: 'LFP と NMC の電池化学の違いは何ですか？', a: 'LFP（リン酸鉄リチウム）は80%保持で約3,000〜6,000回の充電サイクル、優れた熱安定性、長いカレンダー寿命を提供し、毎日充放電する家庭用バックアップ機に好まれます。NMC（ニッケルマンガンコバルト）は所定の重量あたりのエネルギー密度が高く、これが旧型 Jackery Explorer のようなポータブル／キャンプ向け機器を席巻する理由です。自宅に据えてソーラーから毎日充放電する機器には、5〜10年の時間軸で LFP 化学が明確に優れています。' },
+            { q: 'これらの1台で停電時に冷蔵庫を動かせますか？', a: 'はい、適切なサイジングなら可能です。一般的な米国の冷蔵庫は100〜400W 連続（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら、標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば、十分な日照下で無期限に延長できます。検討中の機器の AC 出力とサージ定格を確認してください。手頃なポータブル電源の中には、冷蔵庫のコンプレッサーにはサージ定格が低すぎるものがあります。' },
+            { q: 'ソーラーパネルと組み合わせたポータブル電源に許認可や系統連系は必要ですか？', a: '系統に接続せず、パネルからポータブル電源を充電して家に給電するだけなら、一般に連系の許認可や電力会社の承認は不要です。パネルはポータブル電源のソーラー入力にのみ接続し、家の分電盤には接続しません。これが、系統へ送電するベランダ発電キットに対する単独バッテリー方式の法的な簡便さの要点です。不確かなら、地域の AHJ（管轄権を持つ当局）に確認してください。' },
+            { q: 'これらを Home Assistant でローカル監視に使えますか？', a: '部分的に可能です。EcoFlow には Delta シリーズ向けのコミュニティ保守の Home Assistant 連携（HACS 経由）がありますが、真のローカルエンドポイントではなく EcoFlow のクラウド API を経由します。Bluetti、Jackery、Anker SOLIX は十分に文書化されたローカル API を欠いています。クラウド依存のないローカル制御が必須要件なら、どのハードウェアが本当にローカル専用運用をサポートするかの現行のまとめについて、クラウド不要のベランダ発電ガイドを参照してください。' },
+            { q: 'Anker SOLIX は米国で入手できますか？', a: 'Anker SOLIX のポータブル電源（F2000、F3800 などの機器）は、米国では ankersolix.com と Amazon で入手できます。系統連系型のベランダ発電蓄電向けに設計された Anker SOLIX Solarbank モデルは、米国市場向けに販売も認証もされておらず、米国の購入者に推奨すべきではありません。Solarbank は EU のソーラーレビューで大きく取り上げられるため、これはよくある混同の原因です。' },
+            { q: 'なぜこれらの製品の価格はこれほど変動しやすいのですか？', a: 'EcoFlow、Bluetti、Jackery、Anker SOLIX はいずれも中国で製造されています。米国小売価格はリチウムイオン電池とソーラー部品への Section 301 関税の対象で、2024〜2026年にかけて上昇しており、小売価格を10〜25%以上動かしうります。各ブランドは頻繁なプロモーションも実施し、価格を200〜500ドルどちらの方向にも動かしえます。購入時点で常に Amazon やブランドの米国ストアで現在価格を確認してください。' },
+            { q: '家庭用バックアップにも使えるキャンプ向けのベストなポータブル電源はどれですか？', a: '携帯性を最優先するユーザーには Jackery Explorer 2000 Pro か 3000 Pro（軽量で Amazon 向き、ただし NMC。現行化学組成は要確認）。Jackery と同等の携帯性で LFP が欲しい購入者には Anker SOLIX F2000。携帯性を妥協してでも LFP 化学と強力なソーラー入力が欲しいなら EcoFlow Delta Pro。「キャンプ兼用」の用途は4ブランドすべてでよく満たされます。差別化要素は、旅行の合間に自宅で機器をよく使う購入者にとっての化学組成と長期サイクル寿命です。' },
+            { q: '停電時に冷蔵庫を動かすのにポータブル電源を使えますか？', a: 'はい。一般的な米国の冷蔵庫は100〜400W（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば稼働時間を延ばせます。購入前に機器の AC サージ定格を確認してください。' },
+          ],
       },
     },
     schema: {
@@ -1597,39 +1628,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '米国でベランダ発電は合法ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '米国全体で一律の答えはなく、合法性は州と電力会社によって異なります。系統連系するプラグイン・ソーラーには NEC Article 705 への適合と UL 1741 認証機器が必要です。系統に接続しない単独のバッテリー＋パネルシステムは一般に許認可不要です。州ごとの内訳は米国州別合法性ガイドを参照してください。',
+          {
+            '@type': 'Question',
+            'name': '米国でベランダ発電は合法ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '米国全体で一律の答えはなく、合法性は州と電力会社によって異なります。ドイツの Balkonkraftwerk に似たプラグイン・ソーラーのルールを制定した州もあれば、系統連系するソーラーには許認可、NEC Article 705 に基づく電力会社の承認、UL 1741 認証機器を求める州もあります。州ごとの内訳は、専用の米国州別合法性ガイドを参照してください。どの州でも最も安全な方法は、系統に接続しない単独のバッテリー＋パネルシステムです。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LFP と NMC の電池化学の違いは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LFP（リン酸鉄リチウム）は80%保持で約3,000〜6,000回の充電サイクル、優れた熱安定性、長い寿命を提供し、毎日充放電する家庭用バックアップ機に好まれます。NMC（ニッケルマンガンコバルト）はキログラムあたりのエネルギー密度が高く、これがポータブル／キャンプ機を席巻する理由ですが、毎日充放電すると劣化が速くなります。',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow 対 Bluetti — 2026年の米国の家庭用バックアップにはどちらが良いですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow Delta Pro は MPPT ソーラー入力が強く、パネルからの高速再充電を優先するなら良い選択です。Bluetti の AC300＋B300 は、モジュール式の拡張（バッテリー容量を段階的に追加する）を優先するなら良い選択です。どちらも LFP 化学です。関税の影響で価格は頻繁に変わるため、価格差も変動します。購入時点の現在価格を比較してください。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '停電時に冷蔵庫を動かすのにポータブル電源を使えますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'はい。一般的な米国の冷蔵庫は100〜400W（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば稼働時間を延ばせます。購入前に機器の AC サージ定格を確認してください。',
+          {
+            '@type': 'Question',
+            'name': 'LFP と NMC の電池化学の違いは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LFP（リン酸鉄リチウム）は80%保持で約3,000〜6,000回の充電サイクル、優れた熱安定性、長いカレンダー寿命を提供し、毎日充放電する家庭用バックアップ機に好まれます。NMC（ニッケルマンガンコバルト）は所定の重量あたりのエネルギー密度が高く、これが旧型 Jackery Explorer のようなポータブル／キャンプ向け機器を席巻する理由です。自宅に据えてソーラーから毎日充放電する機器には、5〜10年の時間軸で LFP 化学が明確に優れています。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Anker SOLIX Solarbank は米国で入手できますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。Anker SOLIX Solarbank モデルは米国市場向けに販売も認証もされていません。Anker SOLIX のポータブル電源（F2000、F3800）は米国で入手できます。購入前にどの Anker SOLIX 製品を見ているか確認してください。',
+          {
+            '@type': 'Question',
+            'name': 'これらの1台で停電時に冷蔵庫を動かせますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、適切なサイジングなら可能です。一般的な米国の冷蔵庫は100〜400W 連続（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら、標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば、十分な日照下で無期限に延長できます。検討中の機器の AC 出力とサージ定格を確認してください。手頃なポータブル電源の中には、冷蔵庫のコンプレッサーにはサージ定格が低すぎるものがあります。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'ソーラーパネルと組み合わせたポータブル電源に許認可や系統連系は必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '系統に接続せず、パネルからポータブル電源を充電して家に給電するだけなら、一般に連系の許認可や電力会社の承認は不要です。パネルはポータブル電源のソーラー入力にのみ接続し、家の分電盤には接続しません。これが、系統へ送電するベランダ発電キットに対する単独バッテリー方式の法的な簡便さの要点です。不確かなら、地域の AHJ（管轄権を持つ当局）に確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'これらを Home Assistant でローカル監視に使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '部分的に可能です。EcoFlow には Delta シリーズ向けのコミュニティ保守の Home Assistant 連携（HACS 経由）がありますが、真のローカルエンドポイントではなく EcoFlow のクラウド API を経由します。Bluetti、Jackery、Anker SOLIX は十分に文書化されたローカル API を欠いています。クラウド依存のないローカル制御が必須要件なら、どのハードウェアが本当にローカル専用運用をサポートするかの現行のまとめについて、クラウド不要のベランダ発電ガイドを参照してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Anker SOLIX は米国で入手できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Anker SOLIX のポータブル電源（F2000、F3800 などの機器）は、米国では ankersolix.com と Amazon で入手できます。系統連系型のベランダ発電蓄電向けに設計された Anker SOLIX Solarbank モデルは、米国市場向けに販売も認証もされておらず、米国の購入者に推奨すべきではありません。Solarbank は EU のソーラーレビューで大きく取り上げられるため、これはよくある混同の原因です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'なぜこれらの製品の価格はこれほど変動しやすいのですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow、Bluetti、Jackery、Anker SOLIX はいずれも中国で製造されています。米国小売価格はリチウムイオン電池とソーラー部品への Section 301 関税の対象で、2024〜2026年にかけて上昇しており、小売価格を10〜25%以上動かしうります。各ブランドは頻繁なプロモーションも実施し、価格を200〜500ドルどちらの方向にも動かしえます。購入時点で常に Amazon やブランドの米国ストアで現在価格を確認してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '家庭用バックアップにも使えるキャンプ向けのベストなポータブル電源はどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '携帯性を最優先するユーザーには Jackery Explorer 2000 Pro か 3000 Pro（軽量で Amazon 向き、ただし NMC。現行化学組成は要確認）。Jackery と同等の携帯性で LFP が欲しい購入者には Anker SOLIX F2000。携帯性を妥協してでも LFP 化学と強力なソーラー入力が欲しいなら EcoFlow Delta Pro。「キャンプ兼用」の用途は4ブランドすべてでよく満たされます。差別化要素は、旅行の合間に自宅で機器をよく使う購入者にとっての化学組成と長期サイクル寿命です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '停電時に冷蔵庫を動かすのにポータブル電源を使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。一般的な米国の冷蔵庫は100〜400W（平均150W）を消費し、起動サージは600〜1,200W です。2,000W 以上の AC 出力を持つ2 kWh の LFP 機なら標準的な冷蔵庫を8〜12時間動かせます。200〜400W のソーラーパネルを追加すれば稼働時間を延ばせます。購入前に機器の AC サージ定格を確認してください。',
+            },
+          },
+        ],
     },
   },
   zh: {
@@ -1893,43 +1972,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          {
-            q: '阳台太阳能在美国合法吗？',
-            a: '美国没有统一答案——合法性因州和公用事业公司而异。一些州已出台类似德国 Balkonkraftwerk 的即插式太阳能规则；另一些州则要求许可、依 NEC Article 705 获得公用事业批准，并对任何并网太阳能要求 UL 1741 认证设备。按州逐项梳理请见专门的美国各州合法性指南。在任何州，最稳妥的做法都是采用不接入电网的独立电池 + 太阳能板系统。',
-          },
-          {
-            q: 'EcoFlow 对比 Bluetti——2026 年美国家庭备电哪个更好？',
-            a: 'EcoFlow Delta Pro 的 MPPT 太阳能输入更强，如果基于太阳能板的快速充电是重点，它是更好的选择。如果模块化扩展（按增量增加电池容量）是重点，Bluetti 的 AC300+B300 更好。两者都采用 LFP 电芯。由于关税影响，价格频繁变动——请在购买时对比实时价格，因为两者的价格差会波动。',
-          },
-          {
-            q: 'LFP 与 NMC 电芯化学有什么区别？',
-            a: 'LFP（磷酸铁锂）在保持 80% 容量的前提下可提供约 3,000–6,000 次充电循环，热稳定性更好、日历寿命更长——更适合每日循环的家庭备电机型。NMC（镍锰钴）在给定重量下能量密度更高，这正是它在旧款 Jackery Explorer 等便携/露营机型中占主导的原因。对于放在家里每日用太阳能循环的机型，在 5–10 年的时间跨度上，LFP 电芯明显更好。',
-          },
-          {
-            q: '停电时我能用其中一台带动冰箱吗？',
-            a: '可以，只要选型合适。一台典型的美国冰箱持续耗电 100–400W（平均 150W），启动浪涌为 600–1,200W。一台 2 kWh、交流输出 2,000W 以上的 LFP 机型可以给标准冰箱供电 8–12 小时。加一块 200–400W 太阳能板，在光照尚可时就能无限延长。请核实你考虑的任何机型的交流输出和浪涌功率——有些平价电源的浪涌功率过低，带不动冰箱压缩机。',
-          },
-          {
-            q: '电源搭配太阳能板需要许可或并网吗？',
-            a: '如果你不接入电网——只是用太阳能板给电源充电，再用它给家里供电——一般不需要并网许可或公用事业批准。太阳能板只连到电源的太阳能输入口，而不接到你家的配电盘。这正是独立电池方案相比向电网输电的阳台太阳能套件的关键法律简单性。如有不确定，请向当地 AHJ（有管辖权的主管机关）核实。',
-          },
-          {
-            q: '我能用它们配合 Home Assistant 做本地监控吗？',
-            a: '部分可以。EcoFlow 为 Delta 系列提供了一个社区维护的 Home Assistant 集成（通过 HACS），但它经由 EcoFlow 的云 API 中转，而非真正的本地端点。Bluetti、Jackery 和 Anker SOLIX 缺乏有良好文档的本地 API。如果不依赖云端的本地控制是硬性要求，请见无云阳台太阳能指南，了解哪些硬件真正支持纯本地运行的当前汇总。',
-          },
-          {
-            q: 'Anker SOLIX 在美国有售吗？',
-            a: 'Anker SOLIX 便携式电源（F2000、F3800 及类似机型）在美国的 ankersolix.com 和亚马逊上有售。而 Anker SOLIX Solarbank 系列——为并网阳台太阳能储能设计——在美国不销售、也未获认证，不应向美国买家推荐。由于 Solarbank 在欧盟太阳能评测中被大量报道，这是一个常见的混淆点。',
-          },
-          {
-            q: '为什么这些产品的价格波动这么大？',
-            a: 'EcoFlow、Bluetti、Jackery 和 Anker SOLIX 都在中国制造。美国零售价受锂离子电池及太阳能组件的 Section 301 关税影响，这些关税在 2024–2026 年间持续上涨，可使零售价变动 10–25% 甚至更多。品牌也经常做促销，价格可在任一方向浮动 200–500 美元。请始终在购买时到亚马逊或品牌的美国门店查询实时价格。',
-          },
-          {
-            q: '兼顾露营又能做家庭备电的最佳便携式电源是哪款？',
-            a: '对便携优先的用户，选 Jackery Explorer 2000 Pro 或 3000 Pro（更轻、亚马逊友好，但为 NMC——请核实当前电芯化学）。想要与 Jackery 相近便携性又要 LFP 的买家，选 Anker SOLIX F2000。如果你愿意为 LFP 电芯和更强的太阳能输入而在便携性上妥协，就选 EcoFlow Delta Pro。"兼顾露营"这一场景四家品牌都能很好满足——差异点在于电芯化学，以及对计划在旅行间隙在家频繁使用的买家而言的长期循环寿命。',
-          },
-        ],
+            { q: '阳台太阳能在美国合法吗？', a: '美国没有统一答案——合法性因州和公用事业公司而异。一些州已出台类似德国 Balkonkraftwerk 的即插式太阳能规则；另一些州则要求许可、依 NEC Article 705 获得公用事业批准，并对任何并网太阳能要求 UL 1741 认证设备。按州逐项梳理请见专门的美国各州合法性指南。在任何州，最稳妥的做法都是采用不接入电网的独立电池 + 太阳能板系统。' },
+            { q: 'EcoFlow 对比 Bluetti——2026 年美国家庭备电哪个更好？', a: 'EcoFlow Delta Pro 的 MPPT 太阳能输入更强，如果基于太阳能板的快速充电是重点，它是更好的选择。如果模块化扩展（按增量增加电池容量）是重点，Bluetti 的 AC300+B300 更好。两者都采用 LFP 电芯。由于关税影响，价格频繁变动——请在购买时对比实时价格，因为两者的价格差会波动。' },
+            { q: 'LFP 与 NMC 电芯化学有什么区别？', a: 'LFP（磷酸铁锂）在保持 80% 容量的前提下可提供约 3,000–6,000 次充电循环，热稳定性更好、日历寿命更长——更适合每日循环的家庭备电机型。NMC（镍锰钴）在给定重量下能量密度更高，这正是它在旧款 Jackery Explorer 等便携/露营机型中占主导的原因。对于放在家里每日用太阳能循环的机型，在 5–10 年的时间跨度上，LFP 电芯明显更好。' },
+            { q: '停电时我能用其中一台带动冰箱吗？', a: '可以，只要选型合适。一台典型的美国冰箱持续耗电 100–400W（平均 150W），启动浪涌为 600–1,200W。一台 2 kWh、交流输出 2,000W 以上的 LFP 机型可以给标准冰箱供电 8–12 小时。加一块 200–400W 太阳能板，在光照尚可时就能无限延长。请核实你考虑的任何机型的交流输出和浪涌功率——有些平价电源的浪涌功率过低，带不动冰箱压缩机。' },
+            { q: '电源搭配太阳能板需要许可或并网吗？', a: '如果你不接入电网——只是用太阳能板给电源充电，再用它给家里供电——一般不需要并网许可或公用事业批准。太阳能板只连到电源的太阳能输入口，而不接到你家的配电盘。这正是独立电池方案相比向电网输电的阳台太阳能套件的关键法律简单性。如有不确定，请向当地 AHJ（有管辖权的主管机关）核实。' },
+            { q: '我能用它们配合 Home Assistant 做本地监控吗？', a: '部分可以。EcoFlow 为 Delta 系列提供了一个社区维护的 Home Assistant 集成（通过 HACS），但它经由 EcoFlow 的云 API 中转，而非真正的本地端点。Bluetti、Jackery 和 Anker SOLIX 缺乏有良好文档的本地 API。如果不依赖云端的本地控制是硬性要求，请见无云阳台太阳能指南，了解哪些硬件真正支持纯本地运行的当前汇总。' },
+            { q: 'Anker SOLIX 在美国有售吗？', a: 'Anker SOLIX 便携式电源（F2000、F3800 及类似机型）在美国的 ankersolix.com 和亚马逊上有售。而 Anker SOLIX Solarbank 系列——为并网阳台太阳能储能设计——在美国不销售、也未获认证，不应向美国买家推荐。由于 Solarbank 在欧盟太阳能评测中被大量报道，这是一个常见的混淆点。' },
+            { q: '为什么这些产品的价格波动这么大？', a: 'EcoFlow、Bluetti、Jackery 和 Anker SOLIX 都在中国制造。美国零售价受锂离子电池及太阳能组件的 Section 301 关税影响，这些关税在 2024–2026 年间持续上涨，可使零售价变动 10–25% 甚至更多。品牌也经常做促销，价格可在任一方向浮动 200–500 美元。请始终在购买时到亚马逊或品牌的美国门店查询实时价格。' },
+            { q: '兼顾露营又能做家庭备电的最佳便携式电源是哪款？', a: '对便携优先的用户，选 Jackery Explorer 2000 Pro 或 3000 Pro（更轻、亚马逊友好，但为 NMC——请核实当前电芯化学）。想要与 Jackery 相近便携性又要 LFP 的买家，选 Anker SOLIX F2000。如果你愿意为 LFP 电芯和更强的太阳能输入而在便携性上妥协，就选 EcoFlow Delta Pro。"兼顾露营"这一场景四家品牌都能很好满足——差异点在于电芯化学，以及对计划在旅行间隙在家频繁使用的买家而言的长期循环寿命。' },
+          ],
       },
     },
     schema: {
@@ -2005,39 +2057,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '阳台太阳能在美国合法吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '美国没有统一答案——合法性因州和公用事业公司而异。并网即插式太阳能需符合 NEC Article 705 并采用 UL 1741 认证设备。不接入电网的独立电池 + 太阳能板系统一般无需许可。按州逐项梳理请见美国各州合法性指南。',
+          {
+            '@type': 'Question',
+            'name': '阳台太阳能在美国合法吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '美国没有统一答案——合法性因州和公用事业公司而异。一些州已出台类似德国 Balkonkraftwerk 的即插式太阳能规则；另一些州则要求许可、依 NEC Article 705 获得公用事业批准，并对任何并网太阳能要求 UL 1741 认证设备。按州逐项梳理请见专门的美国各州合法性指南。在任何州，最稳妥的做法都是采用不接入电网的独立电池 + 太阳能板系统。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LFP 与 NMC 电芯化学有什么区别？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LFP（磷酸铁锂）在保持 80% 容量的前提下可提供约 3,000–6,000 次充电循环，热稳定性更好、寿命更长——更适合每日循环的家庭备电机型。NMC（镍锰钴）在每公斤下能量密度更高，这正是它在便携/露营机型中占主导的原因，但在每日循环下衰减更快。',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow 对比 Bluetti——2026 年美国家庭备电哪个更好？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow Delta Pro 的 MPPT 太阳能输入更强，如果基于太阳能板的快速充电是重点，它是更好的选择。如果模块化扩展（按增量增加电池容量）是重点，Bluetti 的 AC300+B300 更好。两者都采用 LFP 电芯。由于关税影响，价格频繁变动——请在购买时对比实时价格，因为两者的价格差会波动。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '停电时我能用便携式电源带动冰箱吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '可以。一台典型的美国冰箱耗电 100–400W（平均 150W），启动浪涌为 600–1,200W。一台 2 kWh、交流输出 2,000W 以上的 LFP 机型可给标准冰箱供电 8–12 小时；加一块 200–400W 太阳能板可延长续航。购买前请核实任何机型的交流浪涌功率。',
+          {
+            '@type': 'Question',
+            'name': 'LFP 与 NMC 电芯化学有什么区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LFP（磷酸铁锂）在保持 80% 容量的前提下可提供约 3,000–6,000 次充电循环，热稳定性更好、日历寿命更长——更适合每日循环的家庭备电机型。NMC（镍锰钴）在给定重量下能量密度更高，这正是它在旧款 Jackery Explorer 等便携/露营机型中占主导的原因。对于放在家里每日用太阳能循环的机型，在 5–10 年的时间跨度上，LFP 电芯明显更好。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Anker SOLIX Solarbank 在美国有售吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '没有——Anker SOLIX Solarbank 系列在美国不销售、也未获认证。Anker SOLIX 便携式电源（F2000、F3800）在美国有售。购买前请确认你看的是哪款 Anker SOLIX 产品。',
+          {
+            '@type': 'Question',
+            'name': '停电时我能用其中一台带动冰箱吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以，只要选型合适。一台典型的美国冰箱持续耗电 100–400W（平均 150W），启动浪涌为 600–1,200W。一台 2 kWh、交流输出 2,000W 以上的 LFP 机型可以给标准冰箱供电 8–12 小时。加一块 200–400W 太阳能板，在光照尚可时就能无限延长。请核实你考虑的任何机型的交流输出和浪涌功率——有些平价电源的浪涌功率过低，带不动冰箱压缩机。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '电源搭配太阳能板需要许可或并网吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '如果你不接入电网——只是用太阳能板给电源充电，再用它给家里供电——一般不需要并网许可或公用事业批准。太阳能板只连到电源的太阳能输入口，而不接到你家的配电盘。这正是独立电池方案相比向电网输电的阳台太阳能套件的关键法律简单性。如有不确定，请向当地 AHJ（有管辖权的主管机关）核实。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我能用它们配合 Home Assistant 做本地监控吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '部分可以。EcoFlow 为 Delta 系列提供了一个社区维护的 Home Assistant 集成（通过 HACS），但它经由 EcoFlow 的云 API 中转，而非真正的本地端点。Bluetti、Jackery 和 Anker SOLIX 缺乏有良好文档的本地 API。如果不依赖云端的本地控制是硬性要求，请见无云阳台太阳能指南，了解哪些硬件真正支持纯本地运行的当前汇总。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Anker SOLIX 在美国有售吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Anker SOLIX 便携式电源（F2000、F3800 及类似机型）在美国的 ankersolix.com 和亚马逊上有售。而 Anker SOLIX Solarbank 系列——为并网阳台太阳能储能设计——在美国不销售、也未获认证，不应向美国买家推荐。由于 Solarbank 在欧盟太阳能评测中被大量报道，这是一个常见的混淆点。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '为什么这些产品的价格波动这么大？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow、Bluetti、Jackery 和 Anker SOLIX 都在中国制造。美国零售价受锂离子电池及太阳能组件的 Section 301 关税影响，这些关税在 2024–2026 年间持续上涨，可使零售价变动 10–25% 甚至更多。品牌也经常做促销，价格可在任一方向浮动 200–500 美元。请始终在购买时到亚马逊或品牌的美国门店查询实时价格。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '兼顾露营又能做家庭备电的最佳便携式电源是哪款？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对便携优先的用户，选 Jackery Explorer 2000 Pro 或 3000 Pro（更轻、亚马逊友好，但为 NMC——请核实当前电芯化学）。想要与 Jackery 相近便携性又要 LFP 的买家，选 Anker SOLIX F2000。如果你愿意为 LFP 电芯和更强的太阳能输入而在便携性上妥协，就选 EcoFlow Delta Pro。"兼顾露营"这一场景四家品牌都能很好满足——差异点在于电芯化学，以及对计划在旅行间隙在家频繁使用的买家而言的长期循环寿命。',
+            },
+          },
+        ],
     },
   },
   es: {
@@ -2301,43 +2393,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Es legal la solar de balcón en EE. UU.?',
-            a: 'No hay una única respuesta para EE. UU. — la legalidad varía según el estado y la compañía eléctrica. Algunos estados han promulgado normas de solar enchufable similares al Balkonkraftwerk de Alemania; otros exigen permisos, aprobación de la compañía eléctrica según el Artículo 705 del NEC y equipos certificados UL 1741 para cualquier solar conectada a la red. Para un desglose por estado, consulta la guía de legalidad por estados de EE. UU. dedicada. El enfoque más seguro en cualquier estado es un sistema independiente de batería + panel sin conexión a la red.',
-          },
-          {
-            q: 'EcoFlow vs. Bluetti — ¿cuál es mejor para respaldo doméstico en EE. UU. en 2026?',
-            a: 'El EcoFlow Delta Pro tiene la entrada solar MPPT más potente, lo que lo convierte en la mejor opción si la recarga rápida basada en paneles es una prioridad. El AC300+B300 de Bluetti es mejor si la prioridad es la expansión modular (añadir capacidad de batería por incrementos). Ambos usan química LFP. Los precios cambian con frecuencia debido a la exposición a los aranceles — compara los precios actuales en el momento de la compra, ya que la diferencia de precio fluctúa.',
-          },
-          {
-            q: '¿Cuál es la diferencia entre la química de batería LFP y NMC?',
-            a: 'La LFP (fosfato de hierro y litio) ofrece ~3,000–6,000 ciclos de carga con un 80% de retención, mejor estabilidad térmica y mayor vida útil de calendario — preferida para unidades de respaldo doméstico que ciclan a diario. La NMC (níquel manganeso cobalto) ofrece mayor densidad de energía para un peso dado, razón por la que domina las unidades portátiles/enfocadas al camping como los modelos Jackery Explorer más antiguos. Para una unidad que está en tu hogar ciclando a diario desde la solar, la química LFP es significativamente mejor en un horizonte de 5–10 años.',
-          },
-          {
-            q: '¿Puedo hacer funcionar mi nevera durante un corte de red con una de estas?',
-            a: 'Sí, con el dimensionamiento correcto. Una nevera estadounidense típica consume 100–400W continuos (150W de media) y tiene un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas. Añade un panel solar de 200–400W y podrás ampliar eso indefinidamente con luz solar decente. Verifica la salida de CA y la potencia de pico de cualquier unidad que estés considerando — algunas estaciones de energía asequibles tienen potencias de pico demasiado bajas para los compresores de las neveras.',
-          },
-          {
-            q: '¿Necesito permisos o interconexión a la red para una estación de energía emparejada con paneles solares?',
-            a: 'Si no te conectas a la red — solo cargando la estación de energía desde los paneles y usándola para alimentar tu hogar — por lo general no necesitas permisos de interconexión ni aprobación de la compañía eléctrica. Los paneles se conectan únicamente a la entrada solar de la estación de energía, no al cuadro eléctrico de tu casa. Esta es la clave de la simplicidad legal del enfoque de batería independiente frente a los kits de solar de balcón que exportan a la red. Verifica con tu AHJ local (autoridad con jurisdicción) si tienes dudas.',
-          },
-          {
-            q: '¿Puedo usar estas con Home Assistant para monitorización local?',
-            a: 'Parcialmente. EcoFlow tiene una integración con Home Assistant mantenida por la comunidad (vía HACS) para la serie Delta, pero enruta a través de la API en la nube de EcoFlow en lugar de un endpoint local verdadero. Bluetti, Jackery y Anker SOLIX carecen de API locales bien documentadas. Si el control local sin dependencia de la nube es un requisito estricto, consulta la guía de solar de balcón sin nube para un resumen actual de qué hardware soporta genuinamente la operación solo local.',
-          },
-          {
-            q: '¿Está disponible Anker SOLIX en EE. UU.?',
-            a: 'Las estaciones de energía portátiles Anker SOLIX (F2000, F3800 y unidades similares) están disponibles en EE. UU. en ankersolix.com y en Amazon. Los modelos Anker SOLIX Solarbank — diseñados para el almacenamiento solar de balcón conectado a la red — no se venden ni están certificados para el mercado de EE. UU. y no deberían recomendarse a compradores estadounidenses. Este es un punto de confusión habitual, ya que el Solarbank recibe una cobertura significativa en las reseñas europeas de solar.',
-          },
-          {
-            q: '¿Por qué son tan volátiles los precios de estos productos?',
-            a: 'EcoFlow, Bluetti, Jackery y Anker SOLIX se fabrican todos en China. Los precios de venta en EE. UU. están sujetos a los aranceles de la Sección 301 sobre baterías de iones de litio y componentes solares, que han ido subiendo a lo largo de 2024–2026 y pueden mover los precios de venta un 10–25% o más. Las marcas también realizan promociones frecuentes que pueden mover los precios entre 200 y 500 dólares en cualquier dirección. Consulta siempre el precio actual en Amazon o en la tienda estadounidense de la marca en el momento de la compra.',
-          },
-          {
-            q: '¿Cuál es la mejor estación de energía portátil para camping que también sirva para respaldo doméstico?',
-            a: 'El Jackery Explorer 2000 Pro o 3000 Pro para usuarios que priorizan la portabilidad (más ligeros, amigables con Amazon, pero NMC — verifica la química actual). El Anker SOLIX F2000 para compradores que quieren LFP con una portabilidad similar a Jackery. El EcoFlow Delta Pro si estás dispuesto a ceder en portabilidad a cambio de la química LFP y una entrada solar más potente. El caso de uso de "cruce con camping" está bien servido por las cuatro marcas — el diferenciador es la química y la vida útil de ciclos a largo plazo para los compradores que planean usar la unidad intensamente en casa entre viajes.',
-          },
-        ],
+            { q: '¿Es legal la solar de balcón en EE. UU.?', a: 'No hay una única respuesta para EE. UU. — la legalidad varía según el estado y la compañía eléctrica. Algunos estados han promulgado normas de solar enchufable similares al Balkonkraftwerk de Alemania; otros exigen permisos, aprobación de la compañía eléctrica según el Artículo 705 del NEC y equipos certificados UL 1741 para cualquier solar conectada a la red. Para un desglose por estado, consulta la guía de legalidad por estados de EE. UU. dedicada. El enfoque más seguro en cualquier estado es un sistema independiente de batería + panel sin conexión a la red.' },
+            { q: 'EcoFlow vs. Bluetti — ¿cuál es mejor para respaldo doméstico en EE. UU. en 2026?', a: 'El EcoFlow Delta Pro tiene la entrada solar MPPT más potente, lo que lo convierte en la mejor opción si la recarga rápida basada en paneles es una prioridad. El AC300+B300 de Bluetti es mejor si la prioridad es la expansión modular (añadir capacidad de batería por incrementos). Ambos usan química LFP. Los precios cambian con frecuencia debido a la exposición a los aranceles — compara los precios actuales en el momento de la compra, ya que la diferencia de precio fluctúa.' },
+            { q: '¿Cuál es la diferencia entre la química de batería LFP y NMC?', a: 'La LFP (fosfato de hierro y litio) ofrece ~3,000–6,000 ciclos de carga con un 80% de retención, mejor estabilidad térmica y mayor vida útil de calendario — preferida para unidades de respaldo doméstico que ciclan a diario. La NMC (níquel manganeso cobalto) ofrece mayor densidad de energía para un peso dado, razón por la que domina las unidades portátiles/enfocadas al camping como los modelos Jackery Explorer más antiguos. Para una unidad que está en tu hogar ciclando a diario desde la solar, la química LFP es significativamente mejor en un horizonte de 5–10 años.' },
+            { q: '¿Puedo hacer funcionar mi nevera durante un corte de red con una de estas?', a: 'Sí, con el dimensionamiento correcto. Una nevera estadounidense típica consume 100–400W continuos (150W de media) y tiene un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas. Añade un panel solar de 200–400W y podrás ampliar eso indefinidamente con luz solar decente. Verifica la salida de CA y la potencia de pico de cualquier unidad que estés considerando — algunas estaciones de energía asequibles tienen potencias de pico demasiado bajas para los compresores de las neveras.' },
+            { q: '¿Necesito permisos o interconexión a la red para una estación de energía emparejada con paneles solares?', a: 'Si no te conectas a la red — solo cargando la estación de energía desde los paneles y usándola para alimentar tu hogar — por lo general no necesitas permisos de interconexión ni aprobación de la compañía eléctrica. Los paneles se conectan únicamente a la entrada solar de la estación de energía, no al cuadro eléctrico de tu casa. Esta es la clave de la simplicidad legal del enfoque de batería independiente frente a los kits de solar de balcón que exportan a la red. Verifica con tu AHJ local (autoridad con jurisdicción) si tienes dudas.' },
+            { q: '¿Puedo usar estas con Home Assistant para monitorización local?', a: 'Parcialmente. EcoFlow tiene una integración con Home Assistant mantenida por la comunidad (vía HACS) para la serie Delta, pero enruta a través de la API en la nube de EcoFlow en lugar de un endpoint local verdadero. Bluetti, Jackery y Anker SOLIX carecen de API locales bien documentadas. Si el control local sin dependencia de la nube es un requisito estricto, consulta la guía de solar de balcón sin nube para un resumen actual de qué hardware soporta genuinamente la operación solo local.' },
+            { q: '¿Está disponible Anker SOLIX en EE. UU.?', a: 'Las estaciones de energía portátiles Anker SOLIX (F2000, F3800 y unidades similares) están disponibles en EE. UU. en ankersolix.com y en Amazon. Los modelos Anker SOLIX Solarbank — diseñados para el almacenamiento solar de balcón conectado a la red — no se venden ni están certificados para el mercado de EE. UU. y no deberían recomendarse a compradores estadounidenses. Este es un punto de confusión habitual, ya que el Solarbank recibe una cobertura significativa en las reseñas europeas de solar.' },
+            { q: '¿Por qué son tan volátiles los precios de estos productos?', a: 'EcoFlow, Bluetti, Jackery y Anker SOLIX se fabrican todos en China. Los precios de venta en EE. UU. están sujetos a los aranceles de la Sección 301 sobre baterías de iones de litio y componentes solares, que han ido subiendo a lo largo de 2024–2026 y pueden mover los precios de venta un 10–25% o más. Las marcas también realizan promociones frecuentes que pueden mover los precios entre 200 y 500 dólares en cualquier dirección. Consulta siempre el precio actual en Amazon o en la tienda estadounidense de la marca en el momento de la compra.' },
+            { q: '¿Cuál es la mejor estación de energía portátil para camping que también sirva para respaldo doméstico?', a: 'El Jackery Explorer 2000 Pro o 3000 Pro para usuarios que priorizan la portabilidad (más ligeros, amigables con Amazon, pero NMC — verifica la química actual). El Anker SOLIX F2000 para compradores que quieren LFP con una portabilidad similar a Jackery. El EcoFlow Delta Pro si estás dispuesto a ceder en portabilidad a cambio de la química LFP y una entrada solar más potente. El caso de uso de "cruce con camping" está bien servido por las cuatro marcas — el diferenciador es la química y la vida útil de ciclos a largo plazo para los compradores que planean usar la unidad intensamente en casa entre viajes.' },
+            { q: '¿Puedo usar una estación de energía portátil para hacer funcionar mi nevera durante un corte de red?', a: 'Sí. Una nevera estadounidense típica consume 100–400W (150W de media) con un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas; añade un panel solar de 200–400W para ampliar el tiempo de funcionamiento. Verifica la potencia de pico de CA de cualquier unidad antes de comprar.' },
+          ],
       },
     },
     schema: {
@@ -2413,39 +2479,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Es legal la solar de balcón en EE. UU.?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No hay una única respuesta para EE. UU. — la legalidad varía según el estado y la compañía eléctrica. La solar enchufable conectada a la red exige el cumplimiento del Artículo 705 del NEC y equipos certificados UL 1741. Los sistemas independientes de batería + panel que no se conectan a la red por lo general no requieren permisos. Consulta la guía de legalidad por estados de EE. UU. para un desglose por estado.',
+          {
+            '@type': 'Question',
+            'name': '¿Es legal la solar de balcón en EE. UU.?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No hay una única respuesta para EE. UU. — la legalidad varía según el estado y la compañía eléctrica. Algunos estados han promulgado normas de solar enchufable similares al Balkonkraftwerk de Alemania; otros exigen permisos, aprobación de la compañía eléctrica según el Artículo 705 del NEC y equipos certificados UL 1741 para cualquier solar conectada a la red. Para un desglose por estado, consulta la guía de legalidad por estados de EE. UU. dedicada. El enfoque más seguro en cualquier estado es un sistema independiente de batería + panel sin conexión a la red.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cuál es la diferencia entre la química de batería LFP y NMC?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'La LFP (fosfato de hierro y litio) ofrece ~3,000–6,000 ciclos de carga con un 80% de retención, mejor estabilidad térmica y mayor vida útil — preferida para unidades de respaldo doméstico que ciclan a diario. La NMC (níquel manganeso cobalto) ofrece mayor densidad de energía por kilogramo, razón por la que domina las unidades portátiles/de camping, pero se degrada más rápido con el ciclado diario.',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow vs. Bluetti — ¿cuál es mejor para respaldo doméstico en EE. UU. en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El EcoFlow Delta Pro tiene la entrada solar MPPT más potente, lo que lo convierte en la mejor opción si la recarga rápida basada en paneles es una prioridad. El AC300+B300 de Bluetti es mejor si la prioridad es la expansión modular (añadir capacidad de batería por incrementos). Ambos usan química LFP. Los precios cambian con frecuencia debido a la exposición a los aranceles — compara los precios actuales en el momento de la compra, ya que la diferencia de precio fluctúa.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Puedo usar una estación de energía portátil para hacer funcionar mi nevera durante un corte de red?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sí. Una nevera estadounidense típica consume 100–400W (150W de media) con un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas; añade un panel solar de 200–400W para ampliar el tiempo de funcionamiento. Verifica la potencia de pico de CA de cualquier unidad antes de comprar.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre la química de batería LFP y NMC?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La LFP (fosfato de hierro y litio) ofrece ~3,000–6,000 ciclos de carga con un 80% de retención, mejor estabilidad térmica y mayor vida útil de calendario — preferida para unidades de respaldo doméstico que ciclan a diario. La NMC (níquel manganeso cobalto) ofrece mayor densidad de energía para un peso dado, razón por la que domina las unidades portátiles/enfocadas al camping como los modelos Jackery Explorer más antiguos. Para una unidad que está en tu hogar ciclando a diario desde la solar, la química LFP es significativamente mejor en un horizonte de 5–10 años.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Está disponible el Anker SOLIX Solarbank en EE. UU.?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No — los modelos Anker SOLIX Solarbank no se venden ni están certificados para el mercado de EE. UU. Las estaciones de energía portátiles Anker SOLIX (F2000, F3800) están disponibles en EE. UU. Confirma qué producto Anker SOLIX estás mirando antes de comprar.',
+          {
+            '@type': 'Question',
+            'name': '¿Puedo hacer funcionar mi nevera durante un corte de red con una de estas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, con el dimensionamiento correcto. Una nevera estadounidense típica consume 100–400W continuos (150W de media) y tiene un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas. Añade un panel solar de 200–400W y podrás ampliar eso indefinidamente con luz solar decente. Verifica la salida de CA y la potencia de pico de cualquier unidad que estés considerando — algunas estaciones de energía asequibles tienen potencias de pico demasiado bajas para los compresores de las neveras.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Necesito permisos o interconexión a la red para una estación de energía emparejada con paneles solares?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Si no te conectas a la red — solo cargando la estación de energía desde los paneles y usándola para alimentar tu hogar — por lo general no necesitas permisos de interconexión ni aprobación de la compañía eléctrica. Los paneles se conectan únicamente a la entrada solar de la estación de energía, no al cuadro eléctrico de tu casa. Esta es la clave de la simplicidad legal del enfoque de batería independiente frente a los kits de solar de balcón que exportan a la red. Verifica con tu AHJ local (autoridad con jurisdicción) si tienes dudas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar estas con Home Assistant para monitorización local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parcialmente. EcoFlow tiene una integración con Home Assistant mantenida por la comunidad (vía HACS) para la serie Delta, pero enruta a través de la API en la nube de EcoFlow en lugar de un endpoint local verdadero. Bluetti, Jackery y Anker SOLIX carecen de API locales bien documentadas. Si el control local sin dependencia de la nube es un requisito estricto, consulta la guía de solar de balcón sin nube para un resumen actual de qué hardware soporta genuinamente la operación solo local.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Está disponible Anker SOLIX en EE. UU.?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las estaciones de energía portátiles Anker SOLIX (F2000, F3800 y unidades similares) están disponibles en EE. UU. en ankersolix.com y en Amazon. Los modelos Anker SOLIX Solarbank — diseñados para el almacenamiento solar de balcón conectado a la red — no se venden ni están certificados para el mercado de EE. UU. y no deberían recomendarse a compradores estadounidenses. Este es un punto de confusión habitual, ya que el Solarbank recibe una cobertura significativa en las reseñas europeas de solar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué son tan volátiles los precios de estos productos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow, Bluetti, Jackery y Anker SOLIX se fabrican todos en China. Los precios de venta en EE. UU. están sujetos a los aranceles de la Sección 301 sobre baterías de iones de litio y componentes solares, que han ido subiendo a lo largo de 2024–2026 y pueden mover los precios de venta un 10–25% o más. Las marcas también realizan promociones frecuentes que pueden mover los precios entre 200 y 500 dólares en cualquier dirección. Consulta siempre el precio actual en Amazon o en la tienda estadounidense de la marca en el momento de la compra.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor estación de energía portátil para camping que también sirva para respaldo doméstico?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El Jackery Explorer 2000 Pro o 3000 Pro para usuarios que priorizan la portabilidad (más ligeros, amigables con Amazon, pero NMC — verifica la química actual). El Anker SOLIX F2000 para compradores que quieren LFP con una portabilidad similar a Jackery. El EcoFlow Delta Pro si estás dispuesto a ceder en portabilidad a cambio de la química LFP y una entrada solar más potente. El caso de uso de "cruce con camping" está bien servido por las cuatro marcas — el diferenciador es la química y la vida útil de ciclos a largo plazo para los compradores que planean usar la unidad intensamente en casa entre viajes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar una estación de energía portátil para hacer funcionar mi nevera durante un corte de red?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Una nevera estadounidense típica consume 100–400W (150W de media) con un pico de arranque de 600–1,200W. Una unidad LFP de 2 kWh con salida de CA de más de 2,000W puede alimentar una nevera estándar durante 8–12 horas; añade un panel solar de 200–400W para ampliar el tiempo de funcionamiento. Verifica la potencia de pico de CA de cualquier unidad antes de comprar.',
+            },
+          },
+        ],
     },
   },
   pt: {
@@ -2709,43 +2823,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas Frequentes',
         faqs: [
-          {
-            q: 'A energia solar de sacada é legal nos EUA?',
-            a: 'Não há uma única resposta para os EUA — a legalidade varia por estado e por concessionária. Alguns estados adotaram regras de solar plug-and-play semelhantes ao Balkonkraftwerk da Alemanha; outros exigem licenças, aprovação da concessionária sob o Artigo 705 do NEC e equipamentos certificados UL 1741 para qualquer solar conectado à rede. Para uma análise estado a estado, veja o guia dedicado de legalidade nos estados dos EUA. A abordagem mais segura em qualquer estado é um sistema autônomo de bateria + painel sem conexão com a rede.',
-          },
-          {
-            q: 'EcoFlow vs. Bluetti — qual é melhor para backup doméstico nos EUA em 2026?',
-            a: 'O EcoFlow Delta Pro tem a entrada solar MPPT mais forte, o que o torna a melhor escolha se a recarga rápida por painéis for uma prioridade. O AC300+B300 da Bluetti é melhor se a expansão modular (adicionar capacidade de bateria em incrementos) for a prioridade. Ambos usam química LFP. Os preços mudam com frequência devido à exposição às tarifas — compare os preços atuais no momento da compra, já que a diferença de preço flutua.',
-          },
-          {
-            q: 'Qual é a diferença entre as químicas de bateria LFP e NMC?',
-            a: 'A LFP (fosfato de ferro-lítio) oferece ~3.000–6.000 ciclos de carga com 80% de retenção, melhor estabilidade térmica e maior vida útil de calendário — preferida para unidades de backup doméstico que fazem ciclos diariamente. A NMC (níquel-manganês-cobalto) oferece maior densidade de energia para um dado peso, e é por isso que domina as unidades portáteis/voltadas a camping como os modelos Jackery Explorer mais antigos. Para uma unidade que fica em casa fazendo ciclos diários a partir dos painéis solares, a química LFP é significativamente melhor num horizonte de 5–10 anos.',
-          },
-          {
-            q: 'Consigo alimentar minha geladeira durante uma queda de energia com uma dessas?',
-            a: 'Sim, com o dimensionamento certo. Uma geladeira americana típica consome 100–400W contínuos (150W em média) e tem um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas. Adicione um painel solar de 200–400W e você pode estender isso indefinidamente com luz solar decente. Verifique a saída CA e a potência de pico de qualquer unidade que esteja considerando — algumas estações de energia mais baratas têm potência de pico baixa demais para os compressores de geladeira.',
-          },
-          {
-            q: 'Preciso de licenças ou interconexão com a rede para uma estação de energia combinada com painéis solares?',
-            a: 'Se você não está se conectando à rede — apenas carregando a estação de energia a partir dos painéis e usando-a para alimentar sua casa — em geral você não precisa de licenças de interconexão nem de aprovação da concessionária. Os painéis se conectam apenas à entrada solar da estação de energia, não ao quadro elétrico da sua casa. Essa é a principal simplicidade legal da abordagem de bateria autônoma em comparação com os kits de solar de sacada que exportam para a rede. Verifique com a sua autoridade local competente (AHJ) se estiver em dúvida.',
-          },
-          {
-            q: 'Posso usar essas unidades com o Home Assistant para monitoramento local?',
-            a: 'Parcialmente. A EcoFlow tem uma integração com o Home Assistant mantida pela comunidade (via HACS) para a série Delta, mas ela roteia pela API em nuvem da EcoFlow em vez de um endpoint local verdadeiro. Bluetti, Jackery e Anker SOLIX carecem de APIs locais bem documentadas. Se o controle local sem dependência de nuvem for um requisito rígido, veja o guia de Solar de Sacada Sem Nuvem para um resumo atual de qual hardware realmente suporta operação apenas local.',
-          },
-          {
-            q: 'A Anker SOLIX está disponível nos EUA?',
-            a: 'As estações portáteis de energia Anker SOLIX (F2000, F3800 e unidades semelhantes) estão disponíveis nos EUA em ankersolix.com e na Amazon. Os modelos Anker SOLIX Solarbank — projetados para armazenamento solar de sacada conectado à rede — não são vendidos nem certificados para o mercado dos EUA e não devem ser recomendados a compradores americanos. Esse é um ponto comum de confusão, já que o Solarbank recebe cobertura significativa nas análises europeias de energia solar.',
-          },
-          {
-            q: 'Por que os preços desses produtos são tão voláteis?',
-            a: 'EcoFlow, Bluetti, Jackery e Anker SOLIX são todas fabricadas na China. Os preços de varejo nos EUA estão sujeitos às tarifas da Seção 301 sobre baterias de íon-lítio e componentes solares, que vêm subindo ao longo de 2024–2026 e podem alterar os preços de varejo em 10–25% ou mais. As marcas também fazem promoções frequentes que podem mover os preços em $200–500 para qualquer direção. Sempre verifique o preço atual na Amazon ou na loja da marca nos EUA no momento da compra.',
-          },
-          {
-            q: 'Qual é a melhor estação portátil de energia para camping que também sirva para backup doméstico?',
-            a: 'Jackery Explorer 2000 Pro ou 3000 Pro para usuários que priorizam portabilidade (mais leves, amigáveis à Amazon, mas NMC — verifique a química atual). Anker SOLIX F2000 para compradores que querem LFP com portabilidade semelhante à da Jackery. EcoFlow Delta Pro se você estiver disposto a abrir mão de portabilidade em troca de química LFP e uma entrada solar mais forte. O caso de uso de "crossover para camping" é bem atendido pelas quatro marcas — o diferencial é a química e a vida útil em ciclos a longo prazo para compradores que planejam usar a unidade intensamente em casa entre as viagens.',
-          },
-        ],
+            { q: 'A energia solar de sacada é legal nos EUA?', a: 'Não há uma única resposta para os EUA — a legalidade varia por estado e por concessionária. Alguns estados adotaram regras de solar plug-and-play semelhantes ao Balkonkraftwerk da Alemanha; outros exigem licenças, aprovação da concessionária sob o Artigo 705 do NEC e equipamentos certificados UL 1741 para qualquer solar conectado à rede. Para uma análise estado a estado, veja o guia dedicado de legalidade nos estados dos EUA. A abordagem mais segura em qualquer estado é um sistema autônomo de bateria + painel sem conexão com a rede.' },
+            { q: 'EcoFlow vs. Bluetti — qual é melhor para backup doméstico nos EUA em 2026?', a: 'O EcoFlow Delta Pro tem a entrada solar MPPT mais forte, o que o torna a melhor escolha se a recarga rápida por painéis for uma prioridade. O AC300+B300 da Bluetti é melhor se a expansão modular (adicionar capacidade de bateria em incrementos) for a prioridade. Ambos usam química LFP. Os preços mudam com frequência devido à exposição às tarifas — compare os preços atuais no momento da compra, já que a diferença de preço flutua.' },
+            { q: 'Qual é a diferença entre as químicas de bateria LFP e NMC?', a: 'A LFP (fosfato de ferro-lítio) oferece ~3.000–6.000 ciclos de carga com 80% de retenção, melhor estabilidade térmica e maior vida útil de calendário — preferida para unidades de backup doméstico que fazem ciclos diariamente. A NMC (níquel-manganês-cobalto) oferece maior densidade de energia para um dado peso, e é por isso que domina as unidades portáteis/voltadas a camping como os modelos Jackery Explorer mais antigos. Para uma unidade que fica em casa fazendo ciclos diários a partir dos painéis solares, a química LFP é significativamente melhor num horizonte de 5–10 anos.' },
+            { q: 'Consigo alimentar minha geladeira durante uma queda de energia com uma dessas?', a: 'Sim, com o dimensionamento certo. Uma geladeira americana típica consome 100–400W contínuos (150W em média) e tem um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas. Adicione um painel solar de 200–400W e você pode estender isso indefinidamente com luz solar decente. Verifique a saída CA e a potência de pico de qualquer unidade que esteja considerando — algumas estações de energia mais baratas têm potência de pico baixa demais para os compressores de geladeira.' },
+            { q: 'Preciso de licenças ou interconexão com a rede para uma estação de energia combinada com painéis solares?', a: 'Se você não está se conectando à rede — apenas carregando a estação de energia a partir dos painéis e usando-a para alimentar sua casa — em geral você não precisa de licenças de interconexão nem de aprovação da concessionária. Os painéis se conectam apenas à entrada solar da estação de energia, não ao quadro elétrico da sua casa. Essa é a principal simplicidade legal da abordagem de bateria autônoma em comparação com os kits de solar de sacada que exportam para a rede. Verifique com a sua autoridade local competente (AHJ) se estiver em dúvida.' },
+            { q: 'Posso usar essas unidades com o Home Assistant para monitoramento local?', a: 'Parcialmente. A EcoFlow tem uma integração com o Home Assistant mantida pela comunidade (via HACS) para a série Delta, mas ela roteia pela API em nuvem da EcoFlow em vez de um endpoint local verdadeiro. Bluetti, Jackery e Anker SOLIX carecem de APIs locais bem documentadas. Se o controle local sem dependência de nuvem for um requisito rígido, veja o guia de Solar de Sacada Sem Nuvem para um resumo atual de qual hardware realmente suporta operação apenas local.' },
+            { q: 'A Anker SOLIX está disponível nos EUA?', a: 'As estações portáteis de energia Anker SOLIX (F2000, F3800 e unidades semelhantes) estão disponíveis nos EUA em ankersolix.com e na Amazon. Os modelos Anker SOLIX Solarbank — projetados para armazenamento solar de sacada conectado à rede — não são vendidos nem certificados para o mercado dos EUA e não devem ser recomendados a compradores americanos. Esse é um ponto comum de confusão, já que o Solarbank recebe cobertura significativa nas análises europeias de energia solar.' },
+            { q: 'Por que os preços desses produtos são tão voláteis?', a: 'EcoFlow, Bluetti, Jackery e Anker SOLIX são todas fabricadas na China. Os preços de varejo nos EUA estão sujeitos às tarifas da Seção 301 sobre baterias de íon-lítio e componentes solares, que vêm subindo ao longo de 2024–2026 e podem alterar os preços de varejo em 10–25% ou mais. As marcas também fazem promoções frequentes que podem mover os preços em $200–500 para qualquer direção. Sempre verifique o preço atual na Amazon ou na loja da marca nos EUA no momento da compra.' },
+            { q: 'Qual é a melhor estação portátil de energia para camping que também sirva para backup doméstico?', a: 'Jackery Explorer 2000 Pro ou 3000 Pro para usuários que priorizam portabilidade (mais leves, amigáveis à Amazon, mas NMC — verifique a química atual). Anker SOLIX F2000 para compradores que querem LFP com portabilidade semelhante à da Jackery. EcoFlow Delta Pro se você estiver disposto a abrir mão de portabilidade em troca de química LFP e uma entrada solar mais forte. O caso de uso de "crossover para camping" é bem atendido pelas quatro marcas — o diferencial é a química e a vida útil em ciclos a longo prazo para compradores que planejam usar a unidade intensamente em casa entre as viagens.' },
+            { q: 'Posso usar uma estação portátil de energia para alimentar minha geladeira durante uma queda de energia?', a: 'Sim. Uma geladeira americana típica consome 100–400W (150W em média) com um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas; adicione um painel solar de 200–400W para estender o tempo de operação. Verifique a potência de pico CA de qualquer unidade antes da compra.' },
+          ],
       },
     },
     schema: {
@@ -2821,39 +2909,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'A energia solar de sacada é legal nos EUA?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não há uma única resposta para os EUA — a legalidade varia por estado e por concessionária. O solar plug-and-play conectado à rede exige conformidade com o Artigo 705 do NEC e equipamentos certificados UL 1741. Sistemas autônomos de bateria + painel que não se conectam à rede em geral dispensam licenças. Veja o guia de legalidade nos estados dos EUA para uma análise estado a estado.',
+          {
+            '@type': 'Question',
+            'name': 'A energia solar de sacada é legal nos EUA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não há uma única resposta para os EUA — a legalidade varia por estado e por concessionária. Alguns estados adotaram regras de solar plug-and-play semelhantes ao Balkonkraftwerk da Alemanha; outros exigem licenças, aprovação da concessionária sob o Artigo 705 do NEC e equipamentos certificados UL 1741 para qualquer solar conectado à rede. Para uma análise estado a estado, veja o guia dedicado de legalidade nos estados dos EUA. A abordagem mais segura em qualquer estado é um sistema autônomo de bateria + painel sem conexão com a rede.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qual é a diferença entre as químicas de bateria LFP e NMC?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A LFP (fosfato de ferro-lítio) oferece ~3.000–6.000 ciclos de carga com 80% de retenção, melhor estabilidade térmica e maior vida útil — preferida para unidades de backup doméstico que fazem ciclos diariamente. A NMC (níquel-manganês-cobalto) oferece maior densidade de energia por quilograma, e é por isso que domina as unidades portáteis/de camping, mas degrada mais rápido sob ciclos diários.',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow vs. Bluetti — qual é melhor para backup doméstico nos EUA em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O EcoFlow Delta Pro tem a entrada solar MPPT mais forte, o que o torna a melhor escolha se a recarga rápida por painéis for uma prioridade. O AC300+B300 da Bluetti é melhor se a expansão modular (adicionar capacidade de bateria em incrementos) for a prioridade. Ambos usam química LFP. Os preços mudam com frequência devido à exposição às tarifas — compare os preços atuais no momento da compra, já que a diferença de preço flutua.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Posso usar uma estação portátil de energia para alimentar minha geladeira durante uma queda de energia?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sim. Uma geladeira americana típica consome 100–400W (150W em média) com um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas; adicione um painel solar de 200–400W para estender o tempo de operação. Verifique a potência de pico CA de qualquer unidade antes da compra.',
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre as químicas de bateria LFP e NMC?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A LFP (fosfato de ferro-lítio) oferece ~3.000–6.000 ciclos de carga com 80% de retenção, melhor estabilidade térmica e maior vida útil de calendário — preferida para unidades de backup doméstico que fazem ciclos diariamente. A NMC (níquel-manganês-cobalto) oferece maior densidade de energia para um dado peso, e é por isso que domina as unidades portáteis/voltadas a camping como os modelos Jackery Explorer mais antigos. Para uma unidade que fica em casa fazendo ciclos diários a partir dos painéis solares, a química LFP é significativamente melhor num horizonte de 5–10 anos.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O Anker SOLIX Solarbank está disponível nos EUA?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não — os modelos Anker SOLIX Solarbank não são vendidos nem certificados para o mercado dos EUA. As estações portáteis de energia Anker SOLIX (F2000, F3800) estão disponíveis nos EUA. Confirme qual produto Anker SOLIX você está olhando antes de comprar.',
+          {
+            '@type': 'Question',
+            'name': 'Consigo alimentar minha geladeira durante uma queda de energia com uma dessas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, com o dimensionamento certo. Uma geladeira americana típica consome 100–400W contínuos (150W em média) e tem um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas. Adicione um painel solar de 200–400W e você pode estender isso indefinidamente com luz solar decente. Verifique a saída CA e a potência de pico de qualquer unidade que esteja considerando — algumas estações de energia mais baratas têm potência de pico baixa demais para os compressores de geladeira.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Preciso de licenças ou interconexão com a rede para uma estação de energia combinada com painéis solares?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Se você não está se conectando à rede — apenas carregando a estação de energia a partir dos painéis e usando-a para alimentar sua casa — em geral você não precisa de licenças de interconexão nem de aprovação da concessionária. Os painéis se conectam apenas à entrada solar da estação de energia, não ao quadro elétrico da sua casa. Essa é a principal simplicidade legal da abordagem de bateria autônoma em comparação com os kits de solar de sacada que exportam para a rede. Verifique com a sua autoridade local competente (AHJ) se estiver em dúvida.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar essas unidades com o Home Assistant para monitoramento local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parcialmente. A EcoFlow tem uma integração com o Home Assistant mantida pela comunidade (via HACS) para a série Delta, mas ela roteia pela API em nuvem da EcoFlow em vez de um endpoint local verdadeiro. Bluetti, Jackery e Anker SOLIX carecem de APIs locais bem documentadas. Se o controle local sem dependência de nuvem for um requisito rígido, veja o guia de Solar de Sacada Sem Nuvem para um resumo atual de qual hardware realmente suporta operação apenas local.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A Anker SOLIX está disponível nos EUA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As estações portáteis de energia Anker SOLIX (F2000, F3800 e unidades semelhantes) estão disponíveis nos EUA em ankersolix.com e na Amazon. Os modelos Anker SOLIX Solarbank — projetados para armazenamento solar de sacada conectado à rede — não são vendidos nem certificados para o mercado dos EUA e não devem ser recomendados a compradores americanos. Esse é um ponto comum de confusão, já que o Solarbank recebe cobertura significativa nas análises europeias de energia solar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Por que os preços desses produtos são tão voláteis?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow, Bluetti, Jackery e Anker SOLIX são todas fabricadas na China. Os preços de varejo nos EUA estão sujeitos às tarifas da Seção 301 sobre baterias de íon-lítio e componentes solares, que vêm subindo ao longo de 2024–2026 e podem alterar os preços de varejo em 10–25% ou mais. As marcas também fazem promoções frequentes que podem mover os preços em $200–500 para qualquer direção. Sempre verifique o preço atual na Amazon ou na loja da marca nos EUA no momento da compra.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a melhor estação portátil de energia para camping que também sirva para backup doméstico?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Jackery Explorer 2000 Pro ou 3000 Pro para usuários que priorizam portabilidade (mais leves, amigáveis à Amazon, mas NMC — verifique a química atual). Anker SOLIX F2000 para compradores que querem LFP com portabilidade semelhante à da Jackery. EcoFlow Delta Pro se você estiver disposto a abrir mão de portabilidade em troca de química LFP e uma entrada solar mais forte. O caso de uso de "crossover para camping" é bem atendido pelas quatro marcas — o diferencial é a química e a vida útil em ciclos a longo prazo para compradores que planejam usar a unidade intensamente em casa entre as viagens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar uma estação portátil de energia para alimentar minha geladeira durante uma queda de energia?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Uma geladeira americana típica consome 100–400W (150W em média) com um pico de partida de 600–1.200W. Uma unidade LFP de 2 kWh com saída CA de 2.000W+ pode alimentar uma geladeira padrão por 8–12 horas; adicione um painel solar de 200–400W para estender o tempo de operação. Verifique a potência de pico CA de qualquer unidade antes da compra.',
+            },
+          },
+        ],
     },
   },
   ar: {
@@ -3117,43 +3253,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟',
-            a: 'لا توجد إجابة أمريكية واحدة — إذ تختلف القانونية حسب الولاية وشركة المرافق. أقرّت بعض الولايات قواعد للطاقة الشمسية للتوصيل المباشر مشابهة للـ Balkonkraftwerk الألماني؛ بينما تشترط ولايات أخرى تصاريح، وموافقة شركة المرافق وفق المادة 705 من NEC، ومعدات معتمدة من UL 1741 لأي طاقة شمسية موصولة بالشبكة. للحصول على تفصيل لكل ولاية، راجع دليل القانونية المخصص لكل ولاية أمريكية. النهج الأكثر أماناً في أي ولاية هو نظام بطارية + ألواح مستقل بلا اتصال بالشبكة.',
-          },
-          {
-            q: 'EcoFlow مقابل Bluetti — أيهما أفضل للطاقة الاحتياطية المنزلية الأمريكية في 2026؟',
-            a: 'يمتلك EcoFlow Delta Pro إدخالاً شمسياً MPPT أقوى، مما يجعله الخيار الأفضل إن كانت سرعة إعادة الشحن من الألواح أولوية. أما Bluetti AC300+B300 فأفضل إذا كانت التوسعة المعيارية (إضافة سعة بطارية على مراحل) هي الأولوية. كلاهما يستخدم كيمياء LFP. تتغير الأسعار كثيراً بسبب التعرض للرسوم الجمركية — قارن الأسعار الحالية عند الشراء، إذ تتذبذب فجوة السعر.',
-          },
-          {
-            q: 'ما الفرق بين كيمياء البطارية LFP وNMC؟',
-            a: 'تقدّم LFP (فوسفات حديد الليثيوم) ~3,000–6,000 دورة شحن مع الاحتفاظ بـ 80%، واستقراراً حرارياً أفضل، وعمراً زمنياً أطول — وهي مُفضَّلة لوحدات الطاقة الاحتياطية المنزلية التي تعمل بدورات يومية. أما NMC (نيكل منغنيز كوبالت) فتقدّم كثافة طاقة أعلى لوزن معين، ولهذا تهيمن على الوحدات المحمولة/الموجّهة للتخييم مثل طرازات Jackery Explorer الأقدم. لوحدة موضوعة في منزلك تعمل بدورات يومية من الطاقة الشمسية، تُعدّ كيمياء LFP أفضل بشكل ملموس على مدى 5–10 سنوات.',
-          },
-          {
-            q: 'هل يمكنني تشغيل ثلاجتي أثناء انقطاع الشبكة بإحدى هذه الوحدات؟',
-            a: 'نعم، مع التحجيم الصحيح. تسحب الثلاجة الأمريكية النموذجية 100–400W مستمر (150W في المتوسط) ولها اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة. أضف لوحاً شمسياً بقدرة 200–400W ويمكنك تمديد ذلك إلى ما لا نهاية في ضوء شمس جيد. تحقق من خرج التيار المتردد وتصنيف الاندفاع لأي وحدة تفكر فيها — فبعض محطات الطاقة الميسورة لها تصنيفات اندفاع منخفضة جداً لضواغط الثلاجات.',
-          },
-          {
-            q: 'هل أحتاج إلى تصاريح أو ربط بالشبكة لمحطة طاقة مقترنة بألواح شمسية؟',
-            a: 'إن كنت لا تتصل بالشبكة — بل تشحن محطة الطاقة من الألواح فقط وتستخدمها لتغذية منزلك — فأنت عموماً لا تحتاج إلى تصاريح ربط أو موافقة المرافق. فالألواح تتصل بمنفذ الإدخال الشمسي لمحطة الطاقة فقط، لا بلوحة منزلك الكهربائية. هذه هي البساطة القانونية الأساسية لنهج البطارية المستقلة مقابل أطقم الطاقة الشمسية للشرفات التي تصدّر إلى الشبكة. تحقق من سلطة الاختصاص المحلية (AHJ) إن كنت غير متأكد.',
-          },
-          {
-            q: 'هل يمكنني استخدام هذه الوحدات مع Home Assistant للمراقبة المحلية؟',
-            a: 'جزئياً. تمتلك EcoFlow تكاملاً مع Home Assistant يُصان من المجتمع (عبر HACS) لسلسلة Delta، لكنه يوجّه عبر API السحابي لـ EcoFlow لا عبر نقطة نهاية محلية حقيقية. وتفتقر Bluetti وJackery وAnker SOLIX إلى واجهات API محلية موثّقة جيداً. إن كان التحكم المحلي دون اعتماد على السحابة متطلباً صارماً، راجع دليل الطاقة الشمسية للشرفات بلا سحابة للحصول على ملخص محدّث لأي الأجهزة يدعم التشغيل المحلي فقط حقاً.',
-          },
-          {
-            q: 'هل Anker SOLIX متوفر في الولايات المتحدة؟',
-            a: 'محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800 ووحدات مماثلة) متوفرة في الولايات المتحدة على ankersolix.com وعلى Amazon. أما طرازات Anker SOLIX Solarbank — المصممة لتخزين الطاقة الشمسية للشرفات الموصولة بالشبكة — فغير مُباعة أو معتمدة للسوق الأمريكية وينبغي ألا يُوصى بها للمشترين الأمريكيين. وهذه نقطة التباس شائعة إذ يحظى الـ Solarbank بتغطية كبيرة في مراجعات الطاقة الشمسية الأوروبية.',
-          },
-          {
-            q: 'لماذا أسعار هذه المنتجات متقلبة إلى هذا الحد؟',
-            a: 'EcoFlow وBluetti وJackery وAnker SOLIX جميعها مصنوعة في الصين. وأسعار التجزئة الأمريكية خاضعة لرسوم القسم 301 الجمركية على بطاريات أيونات الليثيوم ومكونات الطاقة الشمسية، والتي ارتفعت خلال 2024–2026 ويمكن أن تغيّر أسعار التجزئة بنسبة 10–25% أو أكثر. كما تُجري العلامات عروضاً متكررة يمكن أن تحرّك الأسعار بمقدار 200–500 دولار في أي من الاتجاهين. تحقق دائماً من السعر الحالي على Amazon أو المتجر الأمريكي للعلامة عند الشراء.',
-          },
-          {
-            q: 'ما أفضل محطة طاقة محمولة للتخييم تصلح أيضاً للطاقة الاحتياطية المنزلية؟',
-            a: 'Jackery Explorer 2000 Pro أو 3000 Pro للمستخدمين الذين يفضّلون قابلية النقل أولاً (أخف، وملائم لـ Amazon، لكنه NMC — تحقق من الكيمياء الحالية). Anker SOLIX F2000 للمشترين الراغبين في LFP بقابلية نقل مماثلة لـ Jackery. EcoFlow Delta Pro إن كنت مستعداً للتنازل عن قابلية النقل مقابل كيمياء LFP وإدخال شمسي أقوى. حالة الاستخدام "الصالحة للتخييم" تخدمها الماركات الأربع جميعها جيداً — والفارق هو الكيمياء وعمر الدورات على المدى الطويل للمشترين الذين يخططون لاستخدام الوحدة بكثافة في المنزل بين الرحلات.',
-          },
-        ],
+            { q: 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟', a: 'لا توجد إجابة أمريكية واحدة — إذ تختلف القانونية حسب الولاية وشركة المرافق. أقرّت بعض الولايات قواعد للطاقة الشمسية للتوصيل المباشر مشابهة للـ Balkonkraftwerk الألماني؛ بينما تشترط ولايات أخرى تصاريح، وموافقة شركة المرافق وفق المادة 705 من NEC، ومعدات معتمدة من UL 1741 لأي طاقة شمسية موصولة بالشبكة. للحصول على تفصيل لكل ولاية، راجع دليل القانونية المخصص لكل ولاية أمريكية. النهج الأكثر أماناً في أي ولاية هو نظام بطارية + ألواح مستقل بلا اتصال بالشبكة.' },
+            { q: 'EcoFlow مقابل Bluetti — أيهما أفضل للطاقة الاحتياطية المنزلية الأمريكية في 2026؟', a: 'يمتلك EcoFlow Delta Pro إدخالاً شمسياً MPPT أقوى، مما يجعله الخيار الأفضل إن كانت سرعة إعادة الشحن من الألواح أولوية. أما Bluetti AC300+B300 فأفضل إذا كانت التوسعة المعيارية (إضافة سعة بطارية على مراحل) هي الأولوية. كلاهما يستخدم كيمياء LFP. تتغير الأسعار كثيراً بسبب التعرض للرسوم الجمركية — قارن الأسعار الحالية عند الشراء، إذ تتذبذب فجوة السعر.' },
+            { q: 'ما الفرق بين كيمياء البطارية LFP وNMC؟', a: 'تقدّم LFP (فوسفات حديد الليثيوم) ~3,000–6,000 دورة شحن مع الاحتفاظ بـ 80%، واستقراراً حرارياً أفضل، وعمراً زمنياً أطول — وهي مُفضَّلة لوحدات الطاقة الاحتياطية المنزلية التي تعمل بدورات يومية. أما NMC (نيكل منغنيز كوبالت) فتقدّم كثافة طاقة أعلى لوزن معين، ولهذا تهيمن على الوحدات المحمولة/الموجّهة للتخييم مثل طرازات Jackery Explorer الأقدم. لوحدة موضوعة في منزلك تعمل بدورات يومية من الطاقة الشمسية، تُعدّ كيمياء LFP أفضل بشكل ملموس على مدى 5–10 سنوات.' },
+            { q: 'هل يمكنني تشغيل ثلاجتي أثناء انقطاع الشبكة بإحدى هذه الوحدات؟', a: 'نعم، مع التحجيم الصحيح. تسحب الثلاجة الأمريكية النموذجية 100–400W مستمر (150W في المتوسط) ولها اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة. أضف لوحاً شمسياً بقدرة 200–400W ويمكنك تمديد ذلك إلى ما لا نهاية في ضوء شمس جيد. تحقق من خرج التيار المتردد وتصنيف الاندفاع لأي وحدة تفكر فيها — فبعض محطات الطاقة الميسورة لها تصنيفات اندفاع منخفضة جداً لضواغط الثلاجات.' },
+            { q: 'هل أحتاج إلى تصاريح أو ربط بالشبكة لمحطة طاقة مقترنة بألواح شمسية؟', a: 'إن كنت لا تتصل بالشبكة — بل تشحن محطة الطاقة من الألواح فقط وتستخدمها لتغذية منزلك — فأنت عموماً لا تحتاج إلى تصاريح ربط أو موافقة المرافق. فالألواح تتصل بمنفذ الإدخال الشمسي لمحطة الطاقة فقط، لا بلوحة منزلك الكهربائية. هذه هي البساطة القانونية الأساسية لنهج البطارية المستقلة مقابل أطقم الطاقة الشمسية للشرفات التي تصدّر إلى الشبكة. تحقق من سلطة الاختصاص المحلية (AHJ) إن كنت غير متأكد.' },
+            { q: 'هل يمكنني استخدام هذه الوحدات مع Home Assistant للمراقبة المحلية؟', a: 'جزئياً. تمتلك EcoFlow تكاملاً مع Home Assistant يُصان من المجتمع (عبر HACS) لسلسلة Delta، لكنه يوجّه عبر API السحابي لـ EcoFlow لا عبر نقطة نهاية محلية حقيقية. وتفتقر Bluetti وJackery وAnker SOLIX إلى واجهات API محلية موثّقة جيداً. إن كان التحكم المحلي دون اعتماد على السحابة متطلباً صارماً، راجع دليل الطاقة الشمسية للشرفات بلا سحابة للحصول على ملخص محدّث لأي الأجهزة يدعم التشغيل المحلي فقط حقاً.' },
+            { q: 'هل Anker SOLIX متوفر في الولايات المتحدة؟', a: 'محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800 ووحدات مماثلة) متوفرة في الولايات المتحدة على ankersolix.com وعلى Amazon. أما طرازات Anker SOLIX Solarbank — المصممة لتخزين الطاقة الشمسية للشرفات الموصولة بالشبكة — فغير مُباعة أو معتمدة للسوق الأمريكية وينبغي ألا يُوصى بها للمشترين الأمريكيين. وهذه نقطة التباس شائعة إذ يحظى الـ Solarbank بتغطية كبيرة في مراجعات الطاقة الشمسية الأوروبية.' },
+            { q: 'لماذا أسعار هذه المنتجات متقلبة إلى هذا الحد؟', a: 'EcoFlow وBluetti وJackery وAnker SOLIX جميعها مصنوعة في الصين. وأسعار التجزئة الأمريكية خاضعة لرسوم القسم 301 الجمركية على بطاريات أيونات الليثيوم ومكونات الطاقة الشمسية، والتي ارتفعت خلال 2024–2026 ويمكن أن تغيّر أسعار التجزئة بنسبة 10–25% أو أكثر. كما تُجري العلامات عروضاً متكررة يمكن أن تحرّك الأسعار بمقدار 200–500 دولار في أي من الاتجاهين. تحقق دائماً من السعر الحالي على Amazon أو المتجر الأمريكي للعلامة عند الشراء.' },
+            { q: 'ما أفضل محطة طاقة محمولة للتخييم تصلح أيضاً للطاقة الاحتياطية المنزلية؟', a: 'Jackery Explorer 2000 Pro أو 3000 Pro للمستخدمين الذين يفضّلون قابلية النقل أولاً (أخف، وملائم لـ Amazon، لكنه NMC — تحقق من الكيمياء الحالية). Anker SOLIX F2000 للمشترين الراغبين في LFP بقابلية نقل مماثلة لـ Jackery. EcoFlow Delta Pro إن كنت مستعداً للتنازل عن قابلية النقل مقابل كيمياء LFP وإدخال شمسي أقوى. حالة الاستخدام "الصالحة للتخييم" تخدمها الماركات الأربع جميعها جيداً — والفارق هو الكيمياء وعمر الدورات على المدى الطويل للمشترين الذين يخططون لاستخدام الوحدة بكثافة في المنزل بين الرحلات.' },
+            { q: 'هل يمكنني استخدام محطة طاقة محمولة لتشغيل ثلاجتي أثناء انقطاع الشبكة؟', a: 'نعم. تسحب الثلاجة الأمريكية النموذجية 100–400W (150W في المتوسط) مع اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة؛ أضف لوحاً شمسياً بقدرة 200–400W لتمديد وقت التشغيل. تحقق من تصنيف اندفاع التيار المتردد لأي وحدة قبل الشراء.' },
+          ],
       },
     },
     schema: {
@@ -3226,39 +3336,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا توجد إجابة أمريكية واحدة — إذ تختلف القانونية حسب الولاية وشركة المرافق. تتطلب الطاقة الشمسية للتوصيل المباشر الموصولة بالشبكة الامتثال للمادة 705 من NEC ومعدات معتمدة من UL 1741. أما أنظمة البطارية + الألواح المستقلة التي لا تتصل بالشبكة فتكون عموماً خالية من التصاريح. راجع دليل القانونية لكل ولاية أمريكية للحصول على تفصيل لكل ولاية.',
+          {
+            '@type': 'Question',
+            'name': 'هل الطاقة الشمسية للشرفات قانونية في الولايات المتحدة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا توجد إجابة أمريكية واحدة — إذ تختلف القانونية حسب الولاية وشركة المرافق. أقرّت بعض الولايات قواعد للطاقة الشمسية للتوصيل المباشر مشابهة للـ Balkonkraftwerk الألماني؛ بينما تشترط ولايات أخرى تصاريح، وموافقة شركة المرافق وفق المادة 705 من NEC، ومعدات معتمدة من UL 1741 لأي طاقة شمسية موصولة بالشبكة. للحصول على تفصيل لكل ولاية، راجع دليل القانونية المخصص لكل ولاية أمريكية. النهج الأكثر أماناً في أي ولاية هو نظام بطارية + ألواح مستقل بلا اتصال بالشبكة.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ما الفرق بين كيمياء البطارية LFP وNMC؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'تقدّم LFP (فوسفات حديد الليثيوم) ~3,000–6,000 دورة شحن مع الاحتفاظ بـ 80%، واستقراراً حرارياً أفضل، وعمراً أطول — وهي مُفضَّلة لوحدات الطاقة الاحتياطية المنزلية التي تعمل بدورات يومية. أما NMC (نيكل منغنيز كوبالت) فتقدّم كثافة طاقة أعلى لكل كيلوغرام، ولهذا تهيمن على الوحدات المحمولة/للتخييم، لكنها تتدهور أسرع تحت الدورات اليومية.',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow مقابل Bluetti — أيهما أفضل للطاقة الاحتياطية المنزلية الأمريكية في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يمتلك EcoFlow Delta Pro إدخالاً شمسياً MPPT أقوى، مما يجعله الخيار الأفضل إن كانت سرعة إعادة الشحن من الألواح أولوية. أما Bluetti AC300+B300 فأفضل إذا كانت التوسعة المعيارية (إضافة سعة بطارية على مراحل) هي الأولوية. كلاهما يستخدم كيمياء LFP. تتغير الأسعار كثيراً بسبب التعرض للرسوم الجمركية — قارن الأسعار الحالية عند الشراء، إذ تتذبذب فجوة السعر.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكنني استخدام محطة طاقة محمولة لتشغيل ثلاجتي أثناء انقطاع الشبكة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'نعم. تسحب الثلاجة الأمريكية النموذجية 100–400W (150W في المتوسط) مع اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة؛ أضف لوحاً شمسياً بقدرة 200–400W لتمديد وقت التشغيل. تحقق من تصنيف اندفاع التيار المتردد لأي وحدة قبل الشراء.',
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين كيمياء البطارية LFP وNMC؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تقدّم LFP (فوسفات حديد الليثيوم) ~3,000–6,000 دورة شحن مع الاحتفاظ بـ 80%، واستقراراً حرارياً أفضل، وعمراً زمنياً أطول — وهي مُفضَّلة لوحدات الطاقة الاحتياطية المنزلية التي تعمل بدورات يومية. أما NMC (نيكل منغنيز كوبالت) فتقدّم كثافة طاقة أعلى لوزن معين، ولهذا تهيمن على الوحدات المحمولة/الموجّهة للتخييم مثل طرازات Jackery Explorer الأقدم. لوحدة موضوعة في منزلك تعمل بدورات يومية من الطاقة الشمسية، تُعدّ كيمياء LFP أفضل بشكل ملموس على مدى 5–10 سنوات.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل Anker SOLIX Solarbank متوفر في الولايات المتحدة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا — طرازات Anker SOLIX Solarbank غير مُباعة أو معتمدة للسوق الأمريكية. محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800) متوفرة في الولايات المتحدة. تأكد من أي منتج Anker SOLIX تنظر إليه قبل الشراء.',
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل ثلاجتي أثناء انقطاع الشبكة بإحدى هذه الوحدات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، مع التحجيم الصحيح. تسحب الثلاجة الأمريكية النموذجية 100–400W مستمر (150W في المتوسط) ولها اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة. أضف لوحاً شمسياً بقدرة 200–400W ويمكنك تمديد ذلك إلى ما لا نهاية في ضوء شمس جيد. تحقق من خرج التيار المتردد وتصنيف الاندفاع لأي وحدة تفكر فيها — فبعض محطات الطاقة الميسورة لها تصنيفات اندفاع منخفضة جداً لضواغط الثلاجات.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج إلى تصاريح أو ربط بالشبكة لمحطة طاقة مقترنة بألواح شمسية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'إن كنت لا تتصل بالشبكة — بل تشحن محطة الطاقة من الألواح فقط وتستخدمها لتغذية منزلك — فأنت عموماً لا تحتاج إلى تصاريح ربط أو موافقة المرافق. فالألواح تتصل بمنفذ الإدخال الشمسي لمحطة الطاقة فقط، لا بلوحة منزلك الكهربائية. هذه هي البساطة القانونية الأساسية لنهج البطارية المستقلة مقابل أطقم الطاقة الشمسية للشرفات التي تصدّر إلى الشبكة. تحقق من سلطة الاختصاص المحلية (AHJ) إن كنت غير متأكد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام هذه الوحدات مع Home Assistant للمراقبة المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'جزئياً. تمتلك EcoFlow تكاملاً مع Home Assistant يُصان من المجتمع (عبر HACS) لسلسلة Delta، لكنه يوجّه عبر API السحابي لـ EcoFlow لا عبر نقطة نهاية محلية حقيقية. وتفتقر Bluetti وJackery وAnker SOLIX إلى واجهات API محلية موثّقة جيداً. إن كان التحكم المحلي دون اعتماد على السحابة متطلباً صارماً، راجع دليل الطاقة الشمسية للشرفات بلا سحابة للحصول على ملخص محدّث لأي الأجهزة يدعم التشغيل المحلي فقط حقاً.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Anker SOLIX متوفر في الولايات المتحدة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'محطات الطاقة المحمولة Anker SOLIX (F2000 وF3800 ووحدات مماثلة) متوفرة في الولايات المتحدة على ankersolix.com وعلى Amazon. أما طرازات Anker SOLIX Solarbank — المصممة لتخزين الطاقة الشمسية للشرفات الموصولة بالشبكة — فغير مُباعة أو معتمدة للسوق الأمريكية وينبغي ألا يُوصى بها للمشترين الأمريكيين. وهذه نقطة التباس شائعة إذ يحظى الـ Solarbank بتغطية كبيرة في مراجعات الطاقة الشمسية الأوروبية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا أسعار هذه المنتجات متقلبة إلى هذا الحد؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow وBluetti وJackery وAnker SOLIX جميعها مصنوعة في الصين. وأسعار التجزئة الأمريكية خاضعة لرسوم القسم 301 الجمركية على بطاريات أيونات الليثيوم ومكونات الطاقة الشمسية، والتي ارتفعت خلال 2024–2026 ويمكن أن تغيّر أسعار التجزئة بنسبة 10–25% أو أكثر. كما تُجري العلامات عروضاً متكررة يمكن أن تحرّك الأسعار بمقدار 200–500 دولار في أي من الاتجاهين. تحقق دائماً من السعر الحالي على Amazon أو المتجر الأمريكي للعلامة عند الشراء.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل محطة طاقة محمولة للتخييم تصلح أيضاً للطاقة الاحتياطية المنزلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Jackery Explorer 2000 Pro أو 3000 Pro للمستخدمين الذين يفضّلون قابلية النقل أولاً (أخف، وملائم لـ Amazon، لكنه NMC — تحقق من الكيمياء الحالية). Anker SOLIX F2000 للمشترين الراغبين في LFP بقابلية نقل مماثلة لـ Jackery. EcoFlow Delta Pro إن كنت مستعداً للتنازل عن قابلية النقل مقابل كيمياء LFP وإدخال شمسي أقوى. حالة الاستخدام "الصالحة للتخييم" تخدمها الماركات الأربع جميعها جيداً — والفارق هو الكيمياء وعمر الدورات على المدى الطويل للمشترين الذين يخططون لاستخدام الوحدة بكثافة في المنزل بين الرحلات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام محطة طاقة محمولة لتشغيل ثلاجتي أثناء انقطاع الشبكة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. تسحب الثلاجة الأمريكية النموذجية 100–400W (150W في المتوسط) مع اندفاع بدء تشغيل بقدرة 600–1,200W. يمكن لوحدة LFP بسعة 2 kWh وخرج تيار متردد 2,000W+ تشغيل ثلاجة قياسية لمدة 8–12 ساعة؛ أضف لوحاً شمسياً بقدرة 200–400W لتمديد وقت التشغيل. تحقق من تصنيف اندفاع التيار المتردد لأي وحدة قبل الشراء.',
+            },
+          },
+        ],
     },
   },
   ko: {
@@ -3522,43 +3680,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: '미국에서 발코니 태양광은 합법인가요?',
-            a: '단일한 미국식 답은 없습니다. 합법 여부는 주와 유틸리티마다 다릅니다. 일부 주는 독일의 Balkonkraftwerk와 유사한 플러그인 태양광 규정을 제정했고, 다른 주는 그리드에 연결된 모든 태양광에 대해 허가, NEC Article 705에 따른 유틸리티 승인, UL 1741 인증 장비를 요구합니다. 주별 세부 내용은 별도의 미국 주 합법성 가이드를 참조하십시오. 어느 주에서든 가장 안전한 방법은 그리드에 연결하지 않는 독립형 배터리 + 패널 시스템입니다.',
-          },
-          {
-            q: 'EcoFlow 대 Bluetti — 2026년 미국 홈 백업에는 어느 것이 더 나은가요?',
-            a: 'EcoFlow Delta Pro가 MPPT 태양광 입력이 더 강력해서 패널 기반 빠른 재충전이 우선이라면 더 나은 선택입니다. Bluetti의 AC300+B300은 (배터리 용량을 단계적으로 추가하는) 모듈식 확장이 우선이라면 더 낫습니다. 둘 다 LFP 화학 방식을 사용합니다. 관세 노출로 가격이 자주 변하므로, 가격 차이가 변동하는 만큼 구매 시점에 현재 가격을 비교하십시오.',
-          },
-          {
-            q: 'LFP와 NMC 배터리 화학 방식의 차이는 무엇인가요?',
-            a: 'LFP(리튬인산철)는 80% 유지 기준으로 약 3,000–6,000 충전 사이클, 더 나은 열 안정성, 더 긴 달력 수명을 제공하여 매일 사이클을 도는 홈 백업 유닛에 선호됩니다. NMC(니켈망간코발트)는 주어진 무게당 더 높은 에너지 밀도를 제공하며, 그래서 구형 Jackery Explorer 모델 같은 포터블/캠핑 중심 유닛을 지배합니다. 태양광으로 집에서 매일 사이클을 도는 유닛에는 5–10년 기간에 걸쳐 LFP 화학 방식이 의미 있게 더 낫습니다.',
-          },
-          {
-            q: '이 제품들로 그리드 정전 중에 냉장고를 구동할 수 있나요?',
-            a: '적절한 사이징이라면 가능합니다. 일반적인 미국 냉장고는 100–400W 연속(평균 150W)을 소비하고 600–1,200W의 시동 서지가 있습니다. 2,000W 이상 AC 출력을 갖춘 2 kWh LFP 유닛이면 표준 냉장고를 8–12시간 구동할 수 있습니다. 200–400W 태양광 패널을 추가하면 적당한 햇빛에서 무기한 연장할 수 있습니다. 고려 중인 유닛의 AC 출력과 서지 정격을 확인하십시오. 일부 저렴한 파워 스테이션은 냉장고 압축기에 서지 정격이 너무 낮습니다.',
-          },
-          {
-            q: '태양광 패널과 결합된 파워 스테이션에 허가나 그리드 계통 연계가 필요한가요?',
-            a: '그리드에 연결하지 않고 — 단지 패널로 파워 스테이션을 충전하고 이를 사용해 가정에 전력을 공급한다면 — 일반적으로 계통 연계 허가나 유틸리티 승인이 필요 없습니다. 패널은 가정 배전반이 아니라 파워 스테이션의 태양광 입력에만 연결됩니다. 이것이 그리드로 전력을 내보내는 발코니 태양광 키트 대비 독립형 배터리 접근법의 핵심적인 법적 단순함입니다. 확실하지 않다면 현지 AHJ(관할 당국)에 확인하십시오.',
-          },
-          {
-            q: '이 제품들을 Home Assistant와 함께 로컬 모니터링에 사용할 수 있나요?',
-            a: '부분적으로 가능합니다. EcoFlow는 Delta 시리즈용으로 커뮤니티가 유지 관리하는 Home Assistant 통합(HACS 경유)이 있지만, 진정한 로컬 엔드포인트가 아니라 EcoFlow의 클라우드 API를 통해 라우팅됩니다. Bluetti, Jackery, Anker SOLIX는 잘 문서화된 로컬 API가 없습니다. 클라우드 의존 없는 로컬 제어가 필수 요건이라면, 어떤 하드웨어가 진정으로 로컬 전용 운영을 지원하는지에 대한 현재 요약은 노클라우드 발코니 태양광 가이드를 참조하십시오.',
-          },
-          {
-            q: 'Anker SOLIX는 미국에서 판매되나요?',
-            a: 'Anker SOLIX 포터블 파워 스테이션(F2000, F3800 및 유사 유닛)은 미국에서 ankersolix.com과 Amazon에서 판매됩니다. 그리드 연결형 발코니 태양광 저장용으로 설계된 Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않았으며 미국 구매자에게 추천해서는 안 됩니다. Solarbank가 EU 태양광 리뷰에서 상당한 조명을 받기 때문에 흔히 혼동되는 지점입니다.',
-          },
-          {
-            q: '이 제품들의 가격은 왜 이렇게 변동이 심한가요?',
-            a: 'EcoFlow, Bluetti, Jackery, Anker SOLIX는 모두 중국에서 제조됩니다. 미국 소매가는 리튬이온 배터리와 태양광 부품에 대한 Section 301 관세의 대상이며, 이 관세는 2024–2026년에 걸쳐 상승해 소매가를 10–25% 이상 움직일 수 있습니다. 브랜드는 또한 가격을 어느 방향으로든 $200–500 움직일 수 있는 잦은 프로모션을 진행합니다. 구매 시점에 항상 Amazon이나 브랜드의 미국 스토어에서 현재 가격을 확인하십시오.',
-          },
-          {
-            q: '홈 백업에도 쓸 수 있는 캠핑용 최고의 포터블 파워 스테이션은 무엇인가요?',
-            a: '휴대성 우선 사용자에게는 Jackery Explorer 2000 Pro 또는 3000 Pro(더 가볍고 Amazon 친화적이지만 NMC — 현재 화학 방식 확인)입니다. Jackery와 비슷한 휴대성으로 LFP를 원하는 구매자에게는 Anker SOLIX F2000입니다. LFP 화학 방식과 더 강력한 태양광 입력을 위해 휴대성을 타협할 의향이 있다면 EcoFlow Delta Pro입니다. "캠핑 겸용" 용도는 네 브랜드 모두 잘 충족하며, 차별화 요소는 여행 사이에 집에서 유닛을 많이 사용할 계획인 구매자를 위한 화학 방식과 장기 사이클 수명입니다.',
-          },
-        ],
+            { q: '미국에서 발코니 태양광은 합법인가요?', a: '단일한 미국식 답은 없습니다. 합법 여부는 주와 유틸리티마다 다릅니다. 일부 주는 독일의 Balkonkraftwerk와 유사한 플러그인 태양광 규정을 제정했고, 다른 주는 그리드에 연결된 모든 태양광에 대해 허가, NEC Article 705에 따른 유틸리티 승인, UL 1741 인증 장비를 요구합니다. 주별 세부 내용은 별도의 미국 주 합법성 가이드를 참조하십시오. 어느 주에서든 가장 안전한 방법은 그리드에 연결하지 않는 독립형 배터리 + 패널 시스템입니다.' },
+            { q: 'EcoFlow 대 Bluetti — 2026년 미국 홈 백업에는 어느 것이 더 나은가요?', a: 'EcoFlow Delta Pro가 MPPT 태양광 입력이 더 강력해서 패널 기반 빠른 재충전이 우선이라면 더 나은 선택입니다. Bluetti의 AC300+B300은 (배터리 용량을 단계적으로 추가하는) 모듈식 확장이 우선이라면 더 낫습니다. 둘 다 LFP 화학 방식을 사용합니다. 관세 노출로 가격이 자주 변하므로, 가격 차이가 변동하는 만큼 구매 시점에 현재 가격을 비교하십시오.' },
+            { q: 'LFP와 NMC 배터리 화학 방식의 차이는 무엇인가요?', a: 'LFP(리튬인산철)는 80% 유지 기준으로 약 3,000–6,000 충전 사이클, 더 나은 열 안정성, 더 긴 달력 수명을 제공하여 매일 사이클을 도는 홈 백업 유닛에 선호됩니다. NMC(니켈망간코발트)는 주어진 무게당 더 높은 에너지 밀도를 제공하며, 그래서 구형 Jackery Explorer 모델 같은 포터블/캠핑 중심 유닛을 지배합니다. 태양광으로 집에서 매일 사이클을 도는 유닛에는 5–10년 기간에 걸쳐 LFP 화학 방식이 의미 있게 더 낫습니다.' },
+            { q: '이 제품들로 그리드 정전 중에 냉장고를 구동할 수 있나요?', a: '적절한 사이징이라면 가능합니다. 일반적인 미국 냉장고는 100–400W 연속(평균 150W)을 소비하고 600–1,200W의 시동 서지가 있습니다. 2,000W 이상 AC 출력을 갖춘 2 kWh LFP 유닛이면 표준 냉장고를 8–12시간 구동할 수 있습니다. 200–400W 태양광 패널을 추가하면 적당한 햇빛에서 무기한 연장할 수 있습니다. 고려 중인 유닛의 AC 출력과 서지 정격을 확인하십시오. 일부 저렴한 파워 스테이션은 냉장고 압축기에 서지 정격이 너무 낮습니다.' },
+            { q: '태양광 패널과 결합된 파워 스테이션에 허가나 그리드 계통 연계가 필요한가요?', a: '그리드에 연결하지 않고 — 단지 패널로 파워 스테이션을 충전하고 이를 사용해 가정에 전력을 공급한다면 — 일반적으로 계통 연계 허가나 유틸리티 승인이 필요 없습니다. 패널은 가정 배전반이 아니라 파워 스테이션의 태양광 입력에만 연결됩니다. 이것이 그리드로 전력을 내보내는 발코니 태양광 키트 대비 독립형 배터리 접근법의 핵심적인 법적 단순함입니다. 확실하지 않다면 현지 AHJ(관할 당국)에 확인하십시오.' },
+            { q: '이 제품들을 Home Assistant와 함께 로컬 모니터링에 사용할 수 있나요?', a: '부분적으로 가능합니다. EcoFlow는 Delta 시리즈용으로 커뮤니티가 유지 관리하는 Home Assistant 통합(HACS 경유)이 있지만, 진정한 로컬 엔드포인트가 아니라 EcoFlow의 클라우드 API를 통해 라우팅됩니다. Bluetti, Jackery, Anker SOLIX는 잘 문서화된 로컬 API가 없습니다. 클라우드 의존 없는 로컬 제어가 필수 요건이라면, 어떤 하드웨어가 진정으로 로컬 전용 운영을 지원하는지에 대한 현재 요약은 노클라우드 발코니 태양광 가이드를 참조하십시오.' },
+            { q: 'Anker SOLIX는 미국에서 판매되나요?', a: 'Anker SOLIX 포터블 파워 스테이션(F2000, F3800 및 유사 유닛)은 미국에서 ankersolix.com과 Amazon에서 판매됩니다. 그리드 연결형 발코니 태양광 저장용으로 설계된 Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않았으며 미국 구매자에게 추천해서는 안 됩니다. Solarbank가 EU 태양광 리뷰에서 상당한 조명을 받기 때문에 흔히 혼동되는 지점입니다.' },
+            { q: '이 제품들의 가격은 왜 이렇게 변동이 심한가요?', a: 'EcoFlow, Bluetti, Jackery, Anker SOLIX는 모두 중국에서 제조됩니다. 미국 소매가는 리튬이온 배터리와 태양광 부품에 대한 Section 301 관세의 대상이며, 이 관세는 2024–2026년에 걸쳐 상승해 소매가를 10–25% 이상 움직일 수 있습니다. 브랜드는 또한 가격을 어느 방향으로든 $200–500 움직일 수 있는 잦은 프로모션을 진행합니다. 구매 시점에 항상 Amazon이나 브랜드의 미국 스토어에서 현재 가격을 확인하십시오.' },
+            { q: '홈 백업에도 쓸 수 있는 캠핑용 최고의 포터블 파워 스테이션은 무엇인가요?', a: '휴대성 우선 사용자에게는 Jackery Explorer 2000 Pro 또는 3000 Pro(더 가볍고 Amazon 친화적이지만 NMC — 현재 화학 방식 확인)입니다. Jackery와 비슷한 휴대성으로 LFP를 원하는 구매자에게는 Anker SOLIX F2000입니다. LFP 화학 방식과 더 강력한 태양광 입력을 위해 휴대성을 타협할 의향이 있다면 EcoFlow Delta Pro입니다. "캠핑 겸용" 용도는 네 브랜드 모두 잘 충족하며, 차별화 요소는 여행 사이에 집에서 유닛을 많이 사용할 계획인 구매자를 위한 화학 방식과 장기 사이클 수명입니다.' },
+          ],
       },
     },
     schema: {
@@ -3634,39 +3765,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '미국에서 발코니 태양광은 합법인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '단일한 미국식 답은 없습니다. 합법 여부는 주와 유틸리티마다 다릅니다. 그리드에 연결된 플러그인 태양광은 NEC Article 705 준수와 UL 1741 인증 장비가 필요합니다. 그리드에 연결하지 않는 독립형 배터리 + 패널 시스템은 일반적으로 허가가 필요 없습니다. 주별 세부 내용은 미국 주 합법성 가이드를 참조하십시오.',
+          {
+            '@type': 'Question',
+            'name': '미국에서 발코니 태양광은 합법인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '단일한 미국식 답은 없습니다. 합법 여부는 주와 유틸리티마다 다릅니다. 일부 주는 독일의 Balkonkraftwerk와 유사한 플러그인 태양광 규정을 제정했고, 다른 주는 그리드에 연결된 모든 태양광에 대해 허가, NEC Article 705에 따른 유틸리티 승인, UL 1741 인증 장비를 요구합니다. 주별 세부 내용은 별도의 미국 주 합법성 가이드를 참조하십시오. 어느 주에서든 가장 안전한 방법은 그리드에 연결하지 않는 독립형 배터리 + 패널 시스템입니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LFP와 NMC 배터리 화학 방식의 차이는 무엇인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'LFP(리튬인산철)는 80% 유지 기준으로 약 3,000–6,000 충전 사이클, 더 나은 열 안정성, 더 긴 수명을 제공하여 매일 사이클을 도는 홈 백업 유닛에 선호됩니다. NMC(니켈망간코발트)는 킬로그램당 더 높은 에너지 밀도를 제공하여 포터블/캠핑 유닛을 지배하지만, 매일 사이클을 돌 때 더 빠르게 열화됩니다.',
+          {
+            '@type': 'Question',
+            'name': 'EcoFlow 대 Bluetti — 2026년 미국 홈 백업에는 어느 것이 더 나은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow Delta Pro가 MPPT 태양광 입력이 더 강력해서 패널 기반 빠른 재충전이 우선이라면 더 나은 선택입니다. Bluetti의 AC300+B300은 (배터리 용량을 단계적으로 추가하는) 모듈식 확장이 우선이라면 더 낫습니다. 둘 다 LFP 화학 방식을 사용합니다. 관세 노출로 가격이 자주 변하므로, 가격 차이가 변동하는 만큼 구매 시점에 현재 가격을 비교하십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '포터블 파워 스테이션으로 그리드 정전 중에 냉장고를 구동할 수 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '가능합니다. 일반적인 미국 냉장고는 100–400W(평균 150W)를 소비하며 600–1,200W의 시동 서지가 있습니다. 2,000W 이상 AC 출력을 갖춘 2 kWh LFP 유닛이면 표준 냉장고를 8–12시간 구동할 수 있습니다. 200–400W 태양광 패널을 추가하면 구동 시간이 연장됩니다. 구매 전 유닛의 AC 서지 정격을 확인하십시오.',
+          {
+            '@type': 'Question',
+            'name': 'LFP와 NMC 배터리 화학 방식의 차이는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LFP(리튬인산철)는 80% 유지 기준으로 약 3,000–6,000 충전 사이클, 더 나은 열 안정성, 더 긴 달력 수명을 제공하여 매일 사이클을 도는 홈 백업 유닛에 선호됩니다. NMC(니켈망간코발트)는 주어진 무게당 더 높은 에너지 밀도를 제공하며, 그래서 구형 Jackery Explorer 모델 같은 포터블/캠핑 중심 유닛을 지배합니다. 태양광으로 집에서 매일 사이클을 도는 유닛에는 5–10년 기간에 걸쳐 LFP 화학 방식이 의미 있게 더 낫습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Anker SOLIX Solarbank는 미국에서 판매되나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '아니요 — Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않았습니다. Anker SOLIX 포터블 파워 스테이션(F2000, F3800)은 미국에서 판매됩니다. 구매 전 어떤 Anker SOLIX 제품을 보고 있는지 확인하십시오.',
+          {
+            '@type': 'Question',
+            'name': '이 제품들로 그리드 정전 중에 냉장고를 구동할 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '적절한 사이징이라면 가능합니다. 일반적인 미국 냉장고는 100–400W 연속(평균 150W)을 소비하고 600–1,200W의 시동 서지가 있습니다. 2,000W 이상 AC 출력을 갖춘 2 kWh LFP 유닛이면 표준 냉장고를 8–12시간 구동할 수 있습니다. 200–400W 태양광 패널을 추가하면 적당한 햇빛에서 무기한 연장할 수 있습니다. 고려 중인 유닛의 AC 출력과 서지 정격을 확인하십시오. 일부 저렴한 파워 스테이션은 냉장고 압축기에 서지 정격이 너무 낮습니다.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '태양광 패널과 결합된 파워 스테이션에 허가나 그리드 계통 연계가 필요한가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '그리드에 연결하지 않고 — 단지 패널로 파워 스테이션을 충전하고 이를 사용해 가정에 전력을 공급한다면 — 일반적으로 계통 연계 허가나 유틸리티 승인이 필요 없습니다. 패널은 가정 배전반이 아니라 파워 스테이션의 태양광 입력에만 연결됩니다. 이것이 그리드로 전력을 내보내는 발코니 태양광 키트 대비 독립형 배터리 접근법의 핵심적인 법적 단순함입니다. 확실하지 않다면 현지 AHJ(관할 당국)에 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '이 제품들을 Home Assistant와 함께 로컬 모니터링에 사용할 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '부분적으로 가능합니다. EcoFlow는 Delta 시리즈용으로 커뮤니티가 유지 관리하는 Home Assistant 통합(HACS 경유)이 있지만, 진정한 로컬 엔드포인트가 아니라 EcoFlow의 클라우드 API를 통해 라우팅됩니다. Bluetti, Jackery, Anker SOLIX는 잘 문서화된 로컬 API가 없습니다. 클라우드 의존 없는 로컬 제어가 필수 요건이라면, 어떤 하드웨어가 진정으로 로컬 전용 운영을 지원하는지에 대한 현재 요약은 노클라우드 발코니 태양광 가이드를 참조하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Anker SOLIX는 미국에서 판매되나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Anker SOLIX 포터블 파워 스테이션(F2000, F3800 및 유사 유닛)은 미국에서 ankersolix.com과 Amazon에서 판매됩니다. 그리드 연결형 발코니 태양광 저장용으로 설계된 Anker SOLIX Solarbank 모델은 미국 시장에서 판매되거나 인증되지 않았으며 미국 구매자에게 추천해서는 안 됩니다. Solarbank가 EU 태양광 리뷰에서 상당한 조명을 받기 때문에 흔히 혼동되는 지점입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '이 제품들의 가격은 왜 이렇게 변동이 심한가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'EcoFlow, Bluetti, Jackery, Anker SOLIX는 모두 중국에서 제조됩니다. 미국 소매가는 리튬이온 배터리와 태양광 부품에 대한 Section 301 관세의 대상이며, 이 관세는 2024–2026년에 걸쳐 상승해 소매가를 10–25% 이상 움직일 수 있습니다. 브랜드는 또한 가격을 어느 방향으로든 $200–500 움직일 수 있는 잦은 프로모션을 진행합니다. 구매 시점에 항상 Amazon이나 브랜드의 미국 스토어에서 현재 가격을 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '홈 백업에도 쓸 수 있는 캠핑용 최고의 포터블 파워 스테이션은 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '휴대성 우선 사용자에게는 Jackery Explorer 2000 Pro 또는 3000 Pro(더 가볍고 Amazon 친화적이지만 NMC — 현재 화학 방식 확인)입니다. Jackery와 비슷한 휴대성으로 LFP를 원하는 구매자에게는 Anker SOLIX F2000입니다. LFP 화학 방식과 더 강력한 태양광 입력을 위해 휴대성을 타협할 의향이 있다면 EcoFlow Delta Pro입니다. "캠핑 겸용" 용도는 네 브랜드 모두 잘 충족하며, 차별화 요소는 여행 사이에 집에서 유닛을 많이 사용할 계획인 구매자를 위한 화학 방식과 장기 사이클 수명입니다.',
+            },
+          },
+        ],
     },
   },
 }

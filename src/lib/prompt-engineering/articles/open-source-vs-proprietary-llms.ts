@@ -765,21 +765,118 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Ist Llama 3.3 wirklich Open Source oder nur Open-Weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur Open-Weights. LLaMA 3.1 veröffentlicht Modellgewichte unter Llama Community License 2.1, die nicht OSI-konform ist. Die Lizenz erlaubt kommerzielle Nutzung, beschränkt aber die Benennung von Derivaten als "LLaMA", erfordert Attribution und enthält Non-Compete-Klauseln. Echte Open-Source-Lizenzen (Apache 2.0, MIT, GPL) haben keine dieser Einschränkungen.' } },
-          { '@type': 'Question', 'name': 'Was ist billiger in 2026 — Self-Hosting von Llama oder Nutzung der GPT-5.6 API?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Das hängt vom Volumen ab. Unter 5M Token/Tag ist GPT-5.6 API billiger — keine Infrastrukturkosten. Bei 5–10M Token/Tag gleichen sich die Kosten aus. Über 10M Token/Tag gewinnt Self-Hosting LLaMA 3.1 bei Kosten. Bei 100M Token/Tag ist Self-Hosting 10–20× billiger. Versteckte Faktoren: GPU-Amortisierung, Elektrizität und DevOps-Arbeit kippen Grenzfälle oft zur API.' } },
-          { '@type': 'Question', 'name': 'Betrifft der EU AI Act Open-Source-LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, abhängig von der Bereitstellung. High-Risk-AI-Systeme (Einstellung, Kredit, Rechtsbeschlüsse) erfordern Risicodokumentation, Bias-Tests und Audit-Trails. Open-Weights auf Unternehmenseigenen Systemen erleichtert Compliance — Sie kontrollieren Daten und Logs. Proprietäre APIs zwingen zur Abhängigkeit von Vendor-Bescheinigungen. Allzweckmodelle mit >10^25 FLOP Trainingscompute sehen sich zusätzlichen Transparenzpflichten gegenüber.' } },
-          { '@type': 'Question', 'name': 'Welches Open-Source-LLM ist GPT-5.6 in 2026 am nächsten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick, DeepSeek-R1 und Mistral Large 2 sind am nächsten. MMLU: GPT-5.6 88,7% vs. Open-Weights 80–83%. Beim Agentic-Coding (SWE-bench Pro) zeigt Claude Opus 5 (64,3%) Parität zu GPT-5.6 (58,6%), was aufgabenspezifische Wettbewerbsfähigkeit demonstriert. Benchmarken Sie auf Ihrer spezifischen Aufgabe.' } },
-          { '@type': 'Question', 'name': 'Kann ich GPT-5.6 Fine-Tunen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. OpenAI Fine-Tuning ist nur für GPT-5.6 Luna, GPT-4 und gpt-3.5-turbo verfügbar. Anthropic bietet kein Fine-Tuning für Claude an. Google bietet Gemini Fine-Tuning an. Open-Weights (LLaMA, Mistral, Qwen) unterstützen vollständiges Fine-Tuning via LoRA, QLoRA oder vollständiges Training.' } },
-          { '@type': 'Question', 'name': 'Welche Hardware benötige ich, um LLaMA 4 lokal zu betreiben?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Scout (MoE, 17B aktiv): einzelner H100 80GB oder quantisiert 4-Bit auf RTX 4090. LLaMA 4 Maverick (17B aktiv, 400B total): Multi-GPU-Setup (4× A100 80GB oder H100). Für das ältere LLaMA 3.1 70B: Vollständige Präzision ~40GB VRAM; 4-Bit quantisiert ~16–20GB. LLaMA 4 Scout wird für neue Bereitstellungen gegenüber LLaMA 3.1 empfohlen.' } },
-          { '@type': 'Question', 'name': 'Kann ich Open-Source-LLMs auf einem MacBook ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Apple Silicon (M1/M2/M3/M4/M5) Macs führen Open-Weights-Modelle über Ollama oder LM Studio aus. M2 Pro 16GB führt LLaMA 3.1 8B mit 10–15 Token/Sec aus. M3 Max 128GB führt LLaMA 3.1 70B (4-Bit) aus. Langsamer als dedizierte GPU-Server, aber lebensfähig für Entwicklung.' } },
-          { '@type': 'Question', 'name': 'Haben Open-Source-LLMs die gleichen Einschränkungen wie proprietäre?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja auf Grundlagen: beide halluzinieren, haben Wissens-Cutoffs und Kontextgrenzen. Open-Weights können nicht serverseitig gepatcht werden — Updates erfordern eine neue Veröffentlichung. Proprietäre Modelle können inkrementell verbessert werden. Fine-Tuning von Open-Weights kann domänenspezifische Einschränkungen mindern, kann aber nicht strukturelle Zwänge überwinden.' } },
-          { '@type': 'Question', 'name': 'Welches Open-Weights-Modell ist 2026 am besten für Programmierung?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick und DeepSeek-R1 sind am stärksten bei SWE-bench Verified (Agentic-Coding), mit ~75–80% auf HumanEval konkurierend. Claude Opus 5 führt SWE-bench Verified (87,6%) an; GPT-5.6 ~77%. Open-Weights sind lebensfähig für Python und SQL. Proprietäre Modelle behalten einen Vorteil bei Multi-File-Refactoring und agentic Schleifen.' } },
-          { '@type': 'Question', 'name': 'Kann ich Open-Source-LLMs für kommerzielle Anwendungen nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. LLaMA, Mistral und Qwen erlauben kommerzielle Nutzung. Schlüsselbeschränkung: können Derivate nicht "LLaMA" nennen; müssen Lizenzattribution einfügen; Llama 3.3 beschränkte Organisationen mit >700M monatlichen aktiven Benutzern (in LLaMA 3.x entfernt). Die meisten Teams stellen Open-Weights intern bereit (private Inferenz), was Benennungsprobleme vermeidet.' } },
-          { '@type': 'Question', 'name': 'Was ist LoRA und warum spielt es eine Rolle für Open-Weights Fine-Tuning?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRA (Low-Rank Adaptation) trainiert ~1–5% der Modellparameter als Adapter anstelle von vollständiger Rückausbreitung, Reduktion von Trainingskosten 5–10×. QLoRA erweitert dies mit 4-Bit-Quantisierung für Consumer-GPUs (16–24GB VRAM). LoRA ist der Standard-Ansatz zum Spezialisieren von LLaMA und Mistral ohne vollständiges Neutraining.' } },
-          { '@type': 'Question', 'name': 'Was ist Mixture-of-Experts (MoE) und warum spielt es eine Rolle für Open-Weights-Modelle?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'MoE ist eine Architektur, in der ein Modell viele "Experten"-Subnetzwerke enthält, aber nur eine Teilmenge pro Token aktiviert. LLaMA 4 Scout hat 109B Gesamtparameter, aber nur 17B aktive pro Token (16 Experten). Dies ermöglicht sehr große Modellkapazität mit Inferenzkosten ähnlich einem kleineren dichten Modell. Praktischer Vorteil: LLaMA 4 Scout passt auf einen einzelnen H100 trotz 109B Gesamtparameter. Der Kompromiss: MoE-Modelle erfordern mehr VRAM, um alle Parameter zu laden, obwohl die Berechnung pro Token niedriger ist.' } },
-          { '@type': 'Question', 'name': 'Wie vergleicht sich LLaMA 4 mit LLaMA 3.1?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 ist ein generationaler Upgrade. Scout (MoE, 109B total / 17B aktiv) ersetzt LLaMA 3.1 70B als primäres Mid-Range-Modell — mit einem 10-Mio.-Token-Kontextfenster vs. 131K und MoE-Effizienz, die Single-H100-Inferenz ermöglicht. Maverick (400B total / 17B aktiv) ersetzt LLaMA 3.1 405B im High-Performance-Slot. Trainingsdaten und Alignment haben sich verbessert. LLaMA 3.1 bleibt verwendbar und weit verbreitet in Ollama, aber neue Bereitstellungen sollten mit LLaMA 4 Scout beginnen, es sei denn, Sie haben spezifische Gründe für die ältere Generation.' } },
-          { '@type': 'Question', 'name': 'Muss ich bei der Verwendung von Open-Weights-Modellen die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Open-Weights-Modelle, die lokal bereitgestellt werden, ermöglichen DSGVO-Konformität für Artikel-28-Verarbeitung. Da Daten niemals externe Server verlassen, müssen Sie keine Datenverarbeitungsverträge (AVV) mit einem Anbieter unterzeichnen. Für regulierte Branchen (Gesundheitswesen, Finanzen, Rechtswesen) ist dies entscheidend. BSI-Grundschutz-Kataloge zur Informationssicherheit werden ebenfalls erfüllt, wenn Sie bewährte Praktiken für die Systemisolation befolgen.' } },
-          { '@type': 'Question', 'name': 'Sind Open-Weights-Modelle für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, besonders für Unternehmen mit strikten Datenschutz- oder Compliance-Anforderungen. Kleine bis mittlere Unternehmen (KMU) können Open-Weights-Modelle in Private Cloud oder On-Premises-Umgebungen einsetzen und somit die IT-Sicherheitsstandards (BSI-Grundschutz) einhalten. Der Nachteil: Sie benötigen IT-Personal, um die Infrastruktur (Ollama, Kubernetes oder Docker) zu verwalten. Große KMU können dies mit dediziertem Personal tun; kleinere können Managed-Hosting-Partner in Anspruch nehmen, um die Komplexität zu reduzieren.' } },
+          {
+            '@type': 'Question',
+            'name': 'Ist Llama 3.3 wirklich Open Source oder nur Open-Weights?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur Open-Weights. LLaMA 3.1 veröffentlicht Modellgewichte unter Llama Community License 2.1, die nicht OSI-konform ist. Die Lizenz erlaubt kommerzielle Nutzung, beschränkt aber die Benennung von Derivaten als "LLaMA," erfordert Attribution und enthält Non-Compete-Klauseln. Echte Open-Source-Lizenzen (Apache 2.0, MIT, GPL) haben keine dieser Einschränkungen. LLaMA ist permissiver als geschlossener proprietärer Zugriff, ist aber nicht rechtlich "Open Source."',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist billiger in 2026 — Self-Hosting von Llama oder Nutzung der GPT-5.6 API?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es hängt vom Volumen ab. Unter 5M Token/Tag ist GPT-5.6 API (oder GPT-5.6 Luna) billiger, da Infrastruktur-Kosten API-Billing übersteigen. Bei 5–10M Token/Tag gleichen sich Kosten aus. Über 10M Token/Tag gewinnt Self-Hosting LLaMA 3.1 bei Kosten. Bei 100M Token/Tag ist Self-Hosting 10–20× billiger. Versteckte Faktoren: GPU-Amortisierung, Elektrizität (~$0,10/kWh) und DevOps-Arbeit kippen oft Grenzfälle zur API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Betrifft der EU AI Act Open-Source-LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, abhängig von der Bereitstellung. Der EU AI Act (2024) bezeichnet "High-Risk" AI-Systeme — Einstellung, Kreditvergabe, Rechtsentscheidung — als erforderlich für Risicodokumentation, Bias-Tests und Audit-Trails. Open-Weights On-Premises erleichtern Compliance, da Sie Daten und Logs kontrollieren. Proprietäre APIs zwingen zu Abhängigkeit von Vendor-Bescheinigungen. Allzweck-AI-Modelle mit >10^25 FLOP Trainingscompute sehen sich zusätzlichen Transparenzpflichten gegenüber. Konsultieren Sie Compliance-Rat für regulierte Sektoren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Open-Source-LLM ist GPT-5.6 in 2026 am nächsten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 3.1 70B und Mistral Large 2 sind am nächsten, aber Lücken bleiben. Bei MMLU (Reasoning-Benchmark) erzielt GPT-5.6 88,7% vs. LLaMA 3.1 70B bei 80,5% und Mistral Large bei 81,2%. Bei spezifischen Aufgaben (Klassifizierung, Zusammenfassung, Extraktion) entspricht Open-Weights jetzt proprietär. Die Lücke verengt sich ~2–3 Punkte pro Jahr; Konvergenz bei Reasoning-Aufgaben ist in 18–24 Monaten wahrscheinlich.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich GPT-5.6 Fine-Tunen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. OpenAI Fine-Tuning ist nur für GPT-5.6 Luna, GPT-4 und gpt-3.5-turbo verfügbar — nicht GPT-5.6 selbst. Anthropic bietet kein Fine-Tuning für Claude an. Google bietet Fine-Tuning für Gemini an. Open-Weights-Modelle (LLaMA, Mistral, Qwen) unterstützen vollständiges Fine-Tuning via LoRA, QLoRA oder vollständiges Gradient-Training — Sie besitzen die resultierenden Gewichte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Hardware benötige ich, um LLaMA 3.1 70B lokal zu betreiben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vollständige Präzision: ~40GB VRAM (A100 80GB oder dual RTX 3090/4090). Quantisiert 4-Bit über Ollama: ~16–20GB VRAM (einzelner RTX 4090 24GB). LLaMA 3.1 8B läuft auf Consumer-Hardware (~8GB VRAM, RTX 3060 oder Apple M2 Pro). Ollama verarbeitet Quantisierung und Modell-Management automatisch — empfohlen für die meisten lokalen Bereitstellungen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Open-Source-LLMs auf einem MacBook ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Apple Silicon (M1/M2/M3/M4/M5) Macs können Open-Weights-Modelle über Ollama oder LM Studio ausführen. Die unified Memory-Architektur teilt RAM mit GPU — ein M2 Pro mit 16GB führt LLaMA 3.1 8B mit 10–15 Token/Sec aus. M3 Max mit 128GB Speicher kann LLaMA 3.1 70B in 4-Bit-Quantisierung ausführen. Leistung ist langsamer als ein dedizierter GPU-Server, aber lebensfähig für Entwicklung und persönliche Nutzung.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Haben Open-Source-LLMs die gleichen Einschränkungen wie proprietäre?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja bei Fundamentalen: beide halluzinieren, haben Wissens-Cutoffs, Kontextfenster-Grenzen und Reasoning-Grenzen. Open-Weights können nicht serverseitig gepatcht werden — Gewichts-Updates erfordern eine neue Veröffentlichung und Umschulung. Proprietäre Modelle können inkrementell ohne Benutzer-Aktion verbessert werden. Fine-Tuning von Open-Weights kann spezifische Einschränkungen (Domain-Wissen, Ton) mindern, kann aber strukturelle Zwänge wie Wissens-Cutoff oder Halluzinations-Risiko nicht überwinden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Open-Weights-Modell ist 2026 am besten für Programmierung?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 3.1 70B und Mistral Large 2 sind die stärksten Open-Weights-Programmierungs-Modelle. Bei HumanEval (Code-Generierungs-Benchmark) erzielen sie 73–78%, verglichen mit GPT-5.6 bei ~90% und Claude Opus 5 bei ~87%. Für Python, SQL und strukturierte Ausgabe ist Open-Weights wettbewerbsfähig. Für komplexes Algorithmus-Design und Multi-File-Reasoning behalten proprietäre Modelle einen signifikanten Vorteil.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Open-Source-LLMs für kommerzielle Anwendungen nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. LLaMA, Mistral und Qwen erlauben ausdrücklich kommerzielle Nutzung unter ihren Lizenzen. Schlüssel-Zwänge: können Derivate nicht "LLaMA" nennen (müssen umbenennen); müssen Lizenz-Attribution einschließen; Llama 3.3 beschränkte Organisationen mit >700M monatlichen aktiven Benutzern (entfernt in LLaMA 3.x). Die meisten Teams stellen Open-Weights intern bereit (private Inferenz), was Benennungs-Probleme ganz vermeidet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist LoRA und warum spielt es eine Rolle für Open-Weights Fine-Tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA (Low-Rank Adaptation) ist ein Fine-Tuning-Methode, die nur einen kleinen Satz von Adapter-Gewichten trainiert (~1–5% der Modellparameter) anstelle von vollständiger Rückausbreitung über alle Layer. Dies reduziert Trainingskosten 5–10× vs. vollständigem Fine-Tuning mit minimalem Qualitätsverlust. QLoRA erweitert dies mit 4-Bit-Quantisierung, ermöglicht Fine-Tuning auf Consumer-GPUs (16–24GB VRAM). LoRA ist der Standard-Ansatz zur Anpassung von LLaMA und Mistral an Domain-spezifische Aufgaben ohne vollständiges Umtraining.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie vergleicht sich LLaMA 4 mit LLaMA 3.1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 ist ein generationaler Upgrade. Scout (MoE, 109B total / 17B aktiv) ersetzt LLaMA 3.1 70B als primäres Mid-Range-Modell — mit einem 10-Mio.-Token-Kontextfenster vs. 131K und MoE-Effizienz, die Single-H100-Inferenz ermöglicht. Maverick (400B total / 17B aktiv) ersetzt LLaMA 3.1 405B im High-Performance-Slot. Trainingsdaten und Alignment haben sich verbessert. LLaMA 3.1 bleibt verwendbar und weit verbreitet in Ollama, aber neue Bereitstellungen sollten mit LLaMA 4 Scout beginnen, es sei denn, Sie haben spezifische Gründe für die ältere Generation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von Open-Weights-Modellen die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Open-Weights-Modelle, die lokal bereitgestellt werden, ermöglichen DSGVO-Konformität für Artikel-28-Verarbeitung. Da Daten niemals externe Server verlassen, müssen Sie keine Datenverarbeitungsverträge (AVV) mit einem Anbieter unterzeichnen. Für regulierte Branchen (Gesundheitswesen, Finanzen, Rechtswesen) ist dies entscheidend. BSI-Grundschutz-Kataloge zur Informationssicherheit werden ebenfalls erfüllt, wenn Sie bewährte Praktiken für die Systemisolation befolgen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sind Open-Weights-Modelle für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, besonders für Unternehmen mit strikten Datenschutz- oder Compliance-Anforderungen. Kleine bis mittlere Unternehmen (KMU) können Open-Weights-Modelle in Private Cloud oder On-Premises-Umgebungen einsetzen und somit die IT-Sicherheitsstandards (BSI-Grundschutz) einhalten. Der Nachteil: Sie benötigen IT-Personal, um die Infrastruktur (Ollama, Kubernetes oder Docker) zu verwalten. Große KMU können dies mit dediziertem Personal tun; kleinere können Managed-Hosting-Partner in Anspruch nehmen, um die Komplexität zu reduzieren.',
+            },
+          },
         ],
       },
       sections: {
@@ -1098,50 +1195,20 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            {
-              q: 'Ist Llama 3.3 wirklich Open Source oder nur Open-Weights?',
-              a: 'Nur Open-Weights. LLaMA 3.1 veröffentlicht Modellgewichte unter Llama Community License 2.1, die nicht OSI-konform ist. Die Lizenz erlaubt kommerzielle Nutzung, beschränkt aber die Benennung von Derivaten als "LLaMA," erfordert Attribution und enthält Non-Compete-Klauseln. Echte Open-Source-Lizenzen (Apache 2.0, MIT, GPL) haben keine dieser Einschränkungen. LLaMA ist permissiver als geschlossener proprietärer Zugriff, ist aber nicht rechtlich "Open Source."',
-            },
-            {
-              q: 'Was ist billiger in 2026 — Self-Hosting von Llama oder Nutzung der GPT-5.6 API?',
-              a: 'Es hängt vom Volumen ab. Unter 5M Token/Tag ist GPT-5.6 API (oder GPT-5.6 Luna) billiger, da Infrastruktur-Kosten API-Billing übersteigen. Bei 5–10M Token/Tag gleichen sich Kosten aus. Über 10M Token/Tag gewinnt Self-Hosting LLaMA 3.1 bei Kosten. Bei 100M Token/Tag ist Self-Hosting 10–20× billiger. Versteckte Faktoren: GPU-Amortisierung, Elektrizität (~$0,10/kWh) und DevOps-Arbeit kippen oft Grenzfälle zur API.',
-            },
-            {
-              q: 'Betrifft der EU AI Act Open-Source-LLMs?',
-              a: 'Ja, abhängig von der Bereitstellung. Der EU AI Act (2024) bezeichnet "High-Risk" AI-Systeme — Einstellung, Kreditvergabe, Rechtsentscheidung — als erforderlich für Risicodokumentation, Bias-Tests und Audit-Trails. Open-Weights On-Premises erleichtern Compliance, da Sie Daten und Logs kontrollieren. Proprietäre APIs zwingen zu Abhängigkeit von Vendor-Bescheinigungen. Allzweck-AI-Modelle mit >10^25 FLOP Trainingscompute sehen sich zusätzlichen Transparenzpflichten gegenüber. Konsultieren Sie Compliance-Rat für regulierte Sektoren.',
-            },
-            {
-              q: 'Welches Open-Source-LLM ist GPT-5.6 in 2026 am nächsten?',
-              a: 'LLaMA 3.1 70B und Mistral Large 2 sind am nächsten, aber Lücken bleiben. Bei MMLU (Reasoning-Benchmark) erzielt GPT-5.6 88,7% vs. LLaMA 3.1 70B bei 80,5% und Mistral Large bei 81,2%. Bei spezifischen Aufgaben (Klassifizierung, Zusammenfassung, Extraktion) entspricht Open-Weights jetzt proprietär. Die Lücke verengt sich ~2–3 Punkte pro Jahr; Konvergenz bei Reasoning-Aufgaben ist in 18–24 Monaten wahrscheinlich.',
-            },
-            {
-              q: 'Kann ich GPT-5.6 Fine-Tunen?',
-              a: 'Nein. OpenAI Fine-Tuning ist nur für GPT-5.6 Luna, GPT-4 und gpt-3.5-turbo verfügbar — nicht GPT-5.6 selbst. Anthropic bietet kein Fine-Tuning für Claude an. Google bietet Fine-Tuning für Gemini an. Open-Weights-Modelle (LLaMA, Mistral, Qwen) unterstützen vollständiges Fine-Tuning via LoRA, QLoRA oder vollständiges Gradient-Training — Sie besitzen die resultierenden Gewichte.',
-            },
-            {
-              q: 'Welche Hardware benötige ich, um LLaMA 3.1 70B lokal zu betreiben?',
-              a: 'Vollständige Präzision: ~40GB VRAM (A100 80GB oder dual RTX 3090/4090). Quantisiert 4-Bit über Ollama: ~16–20GB VRAM (einzelner RTX 4090 24GB). LLaMA 3.1 8B läuft auf Consumer-Hardware (~8GB VRAM, RTX 3060 oder Apple M2 Pro). Ollama verarbeitet Quantisierung und Modell-Management automatisch — empfohlen für die meisten lokalen Bereitstellungen.',
-            },
-            {
-              q: 'Kann ich Open-Source-LLMs auf einem MacBook ausführen?',
-              a: 'Ja. Apple Silicon (M1/M2/M3/M4/M5) Macs können Open-Weights-Modelle über Ollama oder LM Studio ausführen. Die unified Memory-Architektur teilt RAM mit GPU — ein M2 Pro mit 16GB führt LLaMA 3.1 8B mit 10–15 Token/Sec aus. M3 Max mit 128GB Speicher kann LLaMA 3.1 70B in 4-Bit-Quantisierung ausführen. Leistung ist langsamer als ein dedizierter GPU-Server, aber lebensfähig für Entwicklung und persönliche Nutzung.',
-            },
-            {
-              q: 'Haben Open-Source-LLMs die gleichen Einschränkungen wie proprietäre?',
-              a: 'Ja bei Fundamentalen: beide halluzinieren, haben Wissens-Cutoffs, Kontextfenster-Grenzen und Reasoning-Grenzen. Open-Weights können nicht serverseitig gepatcht werden — Gewichts-Updates erfordern eine neue Veröffentlichung und Umschulung. Proprietäre Modelle können inkrementell ohne Benutzer-Aktion verbessert werden. Fine-Tuning von Open-Weights kann spezifische Einschränkungen (Domain-Wissen, Ton) mindern, kann aber strukturelle Zwänge wie Wissens-Cutoff oder Halluzinations-Risiko nicht überwinden.',
-            },
-            {
-              q: 'Welches Open-Weights-Modell ist 2026 am besten für Programmierung?',
-              a: 'LLaMA 3.1 70B und Mistral Large 2 sind die stärksten Open-Weights-Programmierungs-Modelle. Bei HumanEval (Code-Generierungs-Benchmark) erzielen sie 73–78%, verglichen mit GPT-5.6 bei ~90% und Claude Opus 5 bei ~87%. Für Python, SQL und strukturierte Ausgabe ist Open-Weights wettbewerbsfähig. Für komplexes Algorithmus-Design und Multi-File-Reasoning behalten proprietäre Modelle einen signifikanten Vorteil.',
-            },
-            {
-              q: 'Kann ich Open-Source-LLMs für kommerzielle Anwendungen nutzen?',
-              a: 'Ja. LLaMA, Mistral und Qwen erlauben ausdrücklich kommerzielle Nutzung unter ihren Lizenzen. Schlüssel-Zwänge: können Derivate nicht "LLaMA" nennen (müssen umbenennen); müssen Lizenz-Attribution einschließen; Llama 3.3 beschränkte Organisationen mit >700M monatlichen aktiven Benutzern (entfernt in LLaMA 3.x). Die meisten Teams stellen Open-Weights intern bereit (private Inferenz), was Benennungs-Probleme ganz vermeidet.',
-            },
-            {
-              q: 'Was ist LoRA und warum spielt es eine Rolle für Open-Weights Fine-Tuning?',
-              a: 'LoRA (Low-Rank Adaptation) ist ein Fine-Tuning-Methode, die nur einen kleinen Satz von Adapter-Gewichten trainiert (~1–5% der Modellparameter) anstelle von vollständiger Rückausbreitung über alle Layer. Dies reduziert Trainingskosten 5–10× vs. vollständigem Fine-Tuning mit minimalem Qualitätsverlust. QLoRA erweitert dies mit 4-Bit-Quantisierung, ermöglicht Fine-Tuning auf Consumer-GPUs (16–24GB VRAM). LoRA ist der Standard-Ansatz zur Anpassung von LLaMA und Mistral an Domain-spezifische Aufgaben ohne vollständiges Umtraining.',
-            },
+            { q: 'Ist Llama 3.3 wirklich Open Source oder nur Open-Weights?', a: 'Nur Open-Weights. LLaMA 3.1 veröffentlicht Modellgewichte unter Llama Community License 2.1, die nicht OSI-konform ist. Die Lizenz erlaubt kommerzielle Nutzung, beschränkt aber die Benennung von Derivaten als "LLaMA," erfordert Attribution und enthält Non-Compete-Klauseln. Echte Open-Source-Lizenzen (Apache 2.0, MIT, GPL) haben keine dieser Einschränkungen. LLaMA ist permissiver als geschlossener proprietärer Zugriff, ist aber nicht rechtlich "Open Source."' },
+            { q: 'Was ist billiger in 2026 — Self-Hosting von Llama oder Nutzung der GPT-5.6 API?', a: 'Es hängt vom Volumen ab. Unter 5M Token/Tag ist GPT-5.6 API (oder GPT-5.6 Luna) billiger, da Infrastruktur-Kosten API-Billing übersteigen. Bei 5–10M Token/Tag gleichen sich Kosten aus. Über 10M Token/Tag gewinnt Self-Hosting LLaMA 3.1 bei Kosten. Bei 100M Token/Tag ist Self-Hosting 10–20× billiger. Versteckte Faktoren: GPU-Amortisierung, Elektrizität (~$0,10/kWh) und DevOps-Arbeit kippen oft Grenzfälle zur API.' },
+            { q: 'Betrifft der EU AI Act Open-Source-LLMs?', a: 'Ja, abhängig von der Bereitstellung. Der EU AI Act (2024) bezeichnet "High-Risk" AI-Systeme — Einstellung, Kreditvergabe, Rechtsentscheidung — als erforderlich für Risicodokumentation, Bias-Tests und Audit-Trails. Open-Weights On-Premises erleichtern Compliance, da Sie Daten und Logs kontrollieren. Proprietäre APIs zwingen zu Abhängigkeit von Vendor-Bescheinigungen. Allzweck-AI-Modelle mit >10^25 FLOP Trainingscompute sehen sich zusätzlichen Transparenzpflichten gegenüber. Konsultieren Sie Compliance-Rat für regulierte Sektoren.' },
+            { q: 'Welches Open-Source-LLM ist GPT-5.6 in 2026 am nächsten?', a: 'LLaMA 3.1 70B und Mistral Large 2 sind am nächsten, aber Lücken bleiben. Bei MMLU (Reasoning-Benchmark) erzielt GPT-5.6 88,7% vs. LLaMA 3.1 70B bei 80,5% und Mistral Large bei 81,2%. Bei spezifischen Aufgaben (Klassifizierung, Zusammenfassung, Extraktion) entspricht Open-Weights jetzt proprietär. Die Lücke verengt sich ~2–3 Punkte pro Jahr; Konvergenz bei Reasoning-Aufgaben ist in 18–24 Monaten wahrscheinlich.' },
+            { q: 'Kann ich GPT-5.6 Fine-Tunen?', a: 'Nein. OpenAI Fine-Tuning ist nur für GPT-5.6 Luna, GPT-4 und gpt-3.5-turbo verfügbar — nicht GPT-5.6 selbst. Anthropic bietet kein Fine-Tuning für Claude an. Google bietet Fine-Tuning für Gemini an. Open-Weights-Modelle (LLaMA, Mistral, Qwen) unterstützen vollständiges Fine-Tuning via LoRA, QLoRA oder vollständiges Gradient-Training — Sie besitzen die resultierenden Gewichte.' },
+            { q: 'Welche Hardware benötige ich, um LLaMA 3.1 70B lokal zu betreiben?', a: 'Vollständige Präzision: ~40GB VRAM (A100 80GB oder dual RTX 3090/4090). Quantisiert 4-Bit über Ollama: ~16–20GB VRAM (einzelner RTX 4090 24GB). LLaMA 3.1 8B läuft auf Consumer-Hardware (~8GB VRAM, RTX 3060 oder Apple M2 Pro). Ollama verarbeitet Quantisierung und Modell-Management automatisch — empfohlen für die meisten lokalen Bereitstellungen.' },
+            { q: 'Kann ich Open-Source-LLMs auf einem MacBook ausführen?', a: 'Ja. Apple Silicon (M1/M2/M3/M4/M5) Macs können Open-Weights-Modelle über Ollama oder LM Studio ausführen. Die unified Memory-Architektur teilt RAM mit GPU — ein M2 Pro mit 16GB führt LLaMA 3.1 8B mit 10–15 Token/Sec aus. M3 Max mit 128GB Speicher kann LLaMA 3.1 70B in 4-Bit-Quantisierung ausführen. Leistung ist langsamer als ein dedizierter GPU-Server, aber lebensfähig für Entwicklung und persönliche Nutzung.' },
+            { q: 'Haben Open-Source-LLMs die gleichen Einschränkungen wie proprietäre?', a: 'Ja bei Fundamentalen: beide halluzinieren, haben Wissens-Cutoffs, Kontextfenster-Grenzen und Reasoning-Grenzen. Open-Weights können nicht serverseitig gepatcht werden — Gewichts-Updates erfordern eine neue Veröffentlichung und Umschulung. Proprietäre Modelle können inkrementell ohne Benutzer-Aktion verbessert werden. Fine-Tuning von Open-Weights kann spezifische Einschränkungen (Domain-Wissen, Ton) mindern, kann aber strukturelle Zwänge wie Wissens-Cutoff oder Halluzinations-Risiko nicht überwinden.' },
+            { q: 'Welches Open-Weights-Modell ist 2026 am besten für Programmierung?', a: 'LLaMA 3.1 70B und Mistral Large 2 sind die stärksten Open-Weights-Programmierungs-Modelle. Bei HumanEval (Code-Generierungs-Benchmark) erzielen sie 73–78%, verglichen mit GPT-5.6 bei ~90% und Claude Opus 5 bei ~87%. Für Python, SQL und strukturierte Ausgabe ist Open-Weights wettbewerbsfähig. Für komplexes Algorithmus-Design und Multi-File-Reasoning behalten proprietäre Modelle einen signifikanten Vorteil.' },
+            { q: 'Kann ich Open-Source-LLMs für kommerzielle Anwendungen nutzen?', a: 'Ja. LLaMA, Mistral und Qwen erlauben ausdrücklich kommerzielle Nutzung unter ihren Lizenzen. Schlüssel-Zwänge: können Derivate nicht "LLaMA" nennen (müssen umbenennen); müssen Lizenz-Attribution einschließen; Llama 3.3 beschränkte Organisationen mit >700M monatlichen aktiven Benutzern (entfernt in LLaMA 3.x). Die meisten Teams stellen Open-Weights intern bereit (private Inferenz), was Benennungs-Probleme ganz vermeidet.' },
+            { q: 'Was ist LoRA und warum spielt es eine Rolle für Open-Weights Fine-Tuning?', a: 'LoRA (Low-Rank Adaptation) ist ein Fine-Tuning-Methode, die nur einen kleinen Satz von Adapter-Gewichten trainiert (~1–5% der Modellparameter) anstelle von vollständiger Rückausbreitung über alle Layer. Dies reduziert Trainingskosten 5–10× vs. vollständigem Fine-Tuning mit minimalem Qualitätsverlust. QLoRA erweitert dies mit 4-Bit-Quantisierung, ermöglicht Fine-Tuning auf Consumer-GPUs (16–24GB VRAM). LoRA ist der Standard-Ansatz zur Anpassung von LLaMA und Mistral an Domain-spezifische Aufgaben ohne vollständiges Umtraining.' },
+            { q: 'Wie vergleicht sich LLaMA 4 mit LLaMA 3.1?', a: 'LLaMA 4 ist ein generationaler Upgrade. Scout (MoE, 109B total / 17B aktiv) ersetzt LLaMA 3.1 70B als primäres Mid-Range-Modell — mit einem 10-Mio.-Token-Kontextfenster vs. 131K und MoE-Effizienz, die Single-H100-Inferenz ermöglicht. Maverick (400B total / 17B aktiv) ersetzt LLaMA 3.1 405B im High-Performance-Slot. Trainingsdaten und Alignment haben sich verbessert. LLaMA 3.1 bleibt verwendbar und weit verbreitet in Ollama, aber neue Bereitstellungen sollten mit LLaMA 4 Scout beginnen, es sei denn, Sie haben spezifische Gründe für die ältere Generation.' },
+            { q: 'Muss ich bei der Verwendung von Open-Weights-Modellen die DSGVO beachten?', a: 'Ja. Open-Weights-Modelle, die lokal bereitgestellt werden, ermöglichen DSGVO-Konformität für Artikel-28-Verarbeitung. Da Daten niemals externe Server verlassen, müssen Sie keine Datenverarbeitungsverträge (AVV) mit einem Anbieter unterzeichnen. Für regulierte Branchen (Gesundheitswesen, Finanzen, Rechtswesen) ist dies entscheidend. BSI-Grundschutz-Kataloge zur Informationssicherheit werden ebenfalls erfüllt, wenn Sie bewährte Praktiken für die Systemisolation befolgen.' },
+            { q: 'Sind Open-Weights-Modelle für den deutschen Mittelstand geeignet?', a: 'Ja, besonders für Unternehmen mit strikten Datenschutz- oder Compliance-Anforderungen. Kleine bis mittlere Unternehmen (KMU) können Open-Weights-Modelle in Private Cloud oder On-Premises-Umgebungen einsetzen und somit die IT-Sicherheitsstandards (BSI-Grundschutz) einhalten. Der Nachteil: Sie benötigen IT-Personal, um die Infrastruktur (Ollama, Kubernetes oder Docker) zu verwalten. Große KMU können dies mit dediziertem Personal tun; kleinere können Managed-Hosting-Partner in Anspruch nehmen, um die Komplexität zu reduzieren.' },
           ],
         },
     
@@ -1259,19 +1326,110 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         'mainEntity': [
-          { '@type': 'Question', 'name': '¿LLaMA 3.1 es realmente de código abierto o solo open-weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Solo open-weights. LLaMA 3.1 publica los pesos del modelo bajo la Licencia Comunitaria Llama 3.3.1, que no es open-source compatible con OSI. La licencia permite uso comercial pero restringe nombrar derivados como "LLaMA" y requiere atribución. Las licencias verdaderamente open-source (Apache 2.0, MIT, GPL) no tienen ninguna de estas restricciones.' } },
-          { '@type': 'Question', 'name': '¿Qué es más barato en 2026 — auto-alojar LLaMA o usar la API de GPT-5.6?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Por debajo de 5M tokens/día, la API de GPT-5.6 es más barata — sin costo de infraestructura. Entre 5–10M tokens/día, los costos se igualan. Por encima de 10M tokens/día, auto-alojar LLaMA 3.1 gana. A 100M tokens/día, el auto-alojamiento es 10–20× más barato.' } },
-          { '@type': 'Question', 'name': '¿El AI Act de la UE afecta a los LLMs de código abierto?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, dependiendo del despliegue. Los sistemas de IA de alto riesgo (contratación, crédito, decisiones legales) requieren documentación de riesgos, pruebas de sesgo y trazas de auditoría. Los open-weights on-premises facilitan el cumplimiento — tú controlas los datos y los logs. Las APIs propietarias fuerzan a depender de las atestaciones del proveedor.' } },
-          { '@type': 'Question', 'name': '¿Qué LLM de código abierto se acerca más a GPT-5.6 en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick, DeepSeek-R1 y Mistral Large 2 son los más cercanos. En MMLU, GPT-5.6 88,7 % vs open-weights 80–83 %. En código agéntico (SWE-bench Pro), Claude Opus 5 (64,3 %) lidera GPT-5.6 (58,6 %), mostrando que la paridad específica de tareas es alcanzable. Prueba en tu tarea específica.' } },
-          { '@type': 'Question', 'name': '¿Puedo hacer fine-tuning de GPT-5.6?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. El fine-tuning de OpenAI solo está disponible para GPT-5.6 Luna, GPT-4 y gpt-3.5-turbo. Anthropic no ofrece fine-tuning para Claude. Google ofrece fine-tuning para Gemini. Los open-weights (LLaMA, Mistral, Qwen) soportan fine-tuning completo vía LoRA, QLoRA o entrenamiento completo.' } },
-          { '@type': 'Question', 'name': '¿Qué hardware necesito para ejecutar LLaMA 4 localmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Scout (MoE, 17B activos): una sola H100 80GB o RTX 4090 cuantizado a 4 bits. LLaMA 4 Maverick (17B activos, 400B total): multi-GPU (4× A100 80GB o H100). Para LLaMA 3.1 70B: precisión completa ~40 GB de VRAM, 4 bits ~16–20 GB.' } },
-          { '@type': 'Question', 'name': '¿Puedo ejecutar LLMs de código abierto en un MacBook?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. M4 Max / M5 Pro/Max soportan 64–128 GB de memoria unificada. M5 Pro (307 GB/s) ejecuta LLaMA 3.1 70B (4 bits) a velocidades utilizables; M5 Max (460–614 GB/s, 128 GB) ejecuta LLaMA 4 Scout cuantizado. Prueba vía Ollama.' } },
-          { '@type': 'Question', 'name': '¿Los LLMs de código abierto tienen las mismas limitaciones que los propietarios?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí en lo fundamental: ambos alucinan, tienen fechas de corte de conocimiento y límites de contexto. Los open-weights no pueden parchearse del lado del servidor — las actualizaciones requieren una nueva versión. Los modelos propietarios pueden mejorar incrementalmente. El fine-tuning de open-weights puede mitigar limitaciones específicas del dominio pero no puede superar las limitaciones estructurales.' } },
-          { '@type': 'Question', 'name': '¿Cuál es el mejor modelo open-weights para programación en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick y DeepSeek-R1 son competitivos en HumanEval (~75–80 %) y mejorando en SWE-bench. Claude Opus 5 (SWE-bench Verified 87,6 %) lidera GPT-5.6 (~77 %). Los open-weights son viables para Python, SQL. Los propietarios mantienen ventaja en la refactorización de múltiples archivos y los bucles de agentes.' } },
-          { '@type': 'Question', 'name': '¿Puedo usar LLMs de código abierto para aplicaciones comerciales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. LLaMA, Mistral y Qwen permiten el uso comercial. Restricción clave: no puedes nombrar derivados como "LLaMA". Los despliegues de inferencia privados internos evitan completamente los problemas de denominación.' } },
-          { '@type': 'Question', 'name': '¿Qué es LoRA y por qué importa para el fine-tuning de open-weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRA (Low-Rank Adaptation) entrena ~1–5 % de los parámetros del modelo como adaptadores en lugar de retropropagación completa, reduciendo el costo de entrenamiento 5–10×. QLoRA extiende esto con cuantización de 4 bits para GPUs de consumidor (16–24 GB de VRAM). LoRA es el enfoque estándar para especializar LLaMA y Mistral en dominios específicos sin reentrenamiento completo.' } },
-          { '@type': 'Question', 'name': '¿Qué es Mixture-of-Experts (MoE) y por qué importa para los modelos open-weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'MoE es una arquitectura con muchas sub-redes "expertas" pero que activa solo un subconjunto por token. LLaMA 4 Scout tiene 109B total / 17B activos (16 expertos). Permite una capacidad de modelo muy grande con un costo de inferencia similar al de un modelo denso más pequeño. LLaMA 4 Scout cabe en una sola H100 a pesar de los 109B de parámetros totales.' } },
-          { '@type': 'Question', 'name': '¿Cómo se compara LLaMA 4 con LLaMA 3.1?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Scout (MoE, 109B total / 17B activos) reemplaza a LLaMA 3.1 70B con 10M de contexto vs 131K, y eficiencia MoE permitiendo inferencia en una sola H100. Maverick (400B total / 17B activos) reemplaza a LLaMA 3.1 405B. Los nuevos despliegues deben comenzar con LLaMA 4 Scout salvo razones específicas para la generación anterior.' } },
+          {
+            '@type': 'Question',
+            'name': '¿LLaMA 3.1 es realmente de código abierto o solo open-weights?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo open-weights. LLaMA 3.1 publica los pesos del modelo bajo la Licencia Comunitaria Llama 3.3.1, que no es compatible con OSI. La licencia permite uso comercial pero incluye restricciones de denominación y requiere atribución.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es más barato en 2026 — auto-alojar LLaMA o usar la API de GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende del volumen. Por debajo de 5M tokens/día, la API de GPT-5.6 es más barata. Entre 5–10M tokens/día, los costos se igualan. Por encima de 10M tokens/día, el auto-alojamiento de LLaMA 3.1 gana.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿El AI Act de la UE afecta a los LLMs de código abierto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, dependiendo del despliegue. Los sistemas de IA de alto riesgo requieren documentación de riesgos y trazas de auditoría. Los open-weights on-premises facilitan el cumplimiento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué LLM de código abierto se acerca más a GPT-5.6 en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick, DeepSeek-R1 y Mistral Large 2 son los más cercanos. En MMLU, GPT-5.6 88,7 % vs open-weights 80–83 %.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo hacer fine-tuning de GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. El fine-tuning de OpenAI solo está disponible para GPT-5.6 Luna. Anthropic no ofrece fine-tuning para Claude. Los open-weights soportan fine-tuning completo vía LoRA, QLoRA o entrenamiento completo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué hardware necesito para ejecutar LLaMA 4 localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Scout: una sola H100 80 GB o RTX 4090 cuantizado a 4 bits. LLaMA 4 Maverick: multi-GPU (4× A100 80 GB o H100). Para LLaMA 3.1 70B: precisión completa ~40 GB de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar LLMs de código abierto en un MacBook?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Los Macs con Apple Silicon M4 Max/M5 Pro/Max soportan 64–128 GB de memoria unificada. M5 Max puede ejecutar LLaMA 4 Scout cuantizado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Los LLMs de código abierto tienen las mismas limitaciones que los propietarios?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí en lo fundamental: ambos alucinan, tienen fechas de corte de conocimiento y límites de contexto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor modelo open-weights para programación en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick y DeepSeek-R1 son competitivos en HumanEval (~75–80 %). Claude Opus 5 lidera en SWE-bench Verified.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar LLMs de código abierto para aplicaciones comerciales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. LLaMA, Mistral y Qwen permiten el uso comercial. No puedes nombrar derivados como "LLaMA".',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es LoRA y por qué importa para el fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA (Low-Rank Adaptation) entrena ~1–5 % de los parámetros del modelo como adaptadores, reduciendo el costo de entrenamiento 5–10×. QLoRA extiende esto con cuantización de 4 bits para GPUs de consumidor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es Mixture-of-Experts (MoE) y por qué importa para los modelos open-weights?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MoE es una arquitectura con muchas sub-redes "expertas" pero que activa solo un subconjunto por token. LLaMA 4 Scout tiene 109B total / 17B activos (16 expertos). Permite una capacidad de modelo muy grande con un costo de inferencia similar al de un modelo denso más pequeño. LLaMA 4 Scout cabe en una sola H100 a pesar de los 109B de parámetros totales.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo se compara LLaMA 4 con LLaMA 3.1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Scout (MoE, 109B total / 17B activos) reemplaza a LLaMA 3.1 70B con 10M de contexto vs 131K, y eficiencia MoE permitiendo inferencia en una sola H100. Maverick (400B total / 17B activos) reemplaza a LLaMA 3.1 405B. Los nuevos despliegues deben comenzar con LLaMA 4 Scout salvo razones específicas para la generación anterior.',
+            },
+          },
         ],
       },
       sections: {
@@ -1406,6 +1564,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Cuál es el mejor modelo open-weights para programación en 2026?', a: 'LLaMA 4 Maverick y DeepSeek-R1 son competitivos en HumanEval (~75–80 %). Claude Opus 5 lidera en SWE-bench Verified.' },
             { q: '¿Puedo usar LLMs de código abierto para aplicaciones comerciales?', a: 'Sí. LLaMA, Mistral y Qwen permiten el uso comercial. No puedes nombrar derivados como "LLaMA".' },
             { q: '¿Qué es LoRA y por qué importa para el fine-tuning?', a: 'LoRA (Low-Rank Adaptation) entrena ~1–5 % de los parámetros del modelo como adaptadores, reduciendo el costo de entrenamiento 5–10×. QLoRA extiende esto con cuantización de 4 bits para GPUs de consumidor.' },
+            { q: '¿Qué es Mixture-of-Experts (MoE) y por qué importa para los modelos open-weights?', a: 'MoE es una arquitectura con muchas sub-redes "expertas" pero que activa solo un subconjunto por token. LLaMA 4 Scout tiene 109B total / 17B activos (16 expertos). Permite una capacidad de modelo muy grande con un costo de inferencia similar al de un modelo denso más pequeño. LLaMA 4 Scout cabe en una sola H100 a pesar de los 109B de parámetros totales.' },
+            { q: '¿Cómo se compara LLaMA 4 con LLaMA 3.1?', a: 'LLaMA 4 Scout (MoE, 109B total / 17B activos) reemplaza a LLaMA 3.1 70B con 10M de contexto vs 131K, y eficiencia MoE permitiendo inferencia en una sola H100. Maverick (400B total / 17B activos) reemplaza a LLaMA 3.1 405B. Los nuevos despliegues deben comenzar con LLaMA 4 Scout salvo razones específicas para la generación anterior.' },
           ],
         },
         sources: {
@@ -1521,19 +1681,110 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'هل LLaMA 3.1 مفتوح المصدر حقًا أم مجرد أوزان مفتوحة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'أوزان مفتوحة فقط. ينشر LLaMA 3.1 أوزان النموذج بموجب رخصة مجتمع Llama 3.3.1، التي ليست متوافقة مع OSI. الرخصة تسمح بالاستخدام التجاري لكن تقيّد تسمية المشتقات بـ"LLaMA" وتتطلب الإسناد. الرخص مفتوحة المصدر الحقيقية (Apache 2.0، MIT، GPL) لا تفرض أيًا من هذه القيود.' } },
-          { '@type': 'Question', 'name': 'أيهما أرخص في 2026 — استضافة LLaMA ذاتيًا أم استخدام واجهة برمجة تطبيقات GPT-5.6؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'دون 5M رمز/يوم، واجهة برمجة تطبيقات GPT-5.6 أرخص — بدون تكلفة بنية تحتية. بين 5–10M رمز/يوم، تتعادل التكاليف. فوق 10M رمز/يوم، استضافة LLaMA 3.1 ذاتيًا تفوز. عند 100M رمز/يوم، الاستضافة الذاتية أرخص بـ10–20 ضعف.' } },
-          { '@type': 'Question', 'name': 'هل يؤثر قانون الذكاء الاصطناعي الأوروبي على النماذج مفتوحة المصدر؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، حسب طريقة النشر. أنظمة الذكاء الاصطناعي عالية المخاطر (التوظيف، الائتمان، القرارات القانونية) تتطلب توثيق المخاطر واختبار التحيز ومسارات التدقيق. النماذج مفتوحة الأوزان المحلية تسهّل الامتثال — أنت تتحكم في البيانات والسجلات. واجهات برمجة التطبيقات المملوكة تجبرك على الاعتماد على شهادات المزود.' } },
-          { '@type': 'Question', 'name': 'ما النموذج مفتوح المصدر الأقرب إلى GPT-5.6 في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick وDeepSeek-R1 وMistral Large 2 هي الأقرب. في MMLU: GPT-5.6 88.7% مقابل النماذج مفتوحة الأوزان 80–83%. في الكود الوكيل (SWE-bench Pro)، Claude Opus 5 (64.3%) يتقدم على GPT-5.6 (58.6%)، مما يُظهر أن التعادل في مهام محددة قابل للتحقيق. اختبر في مهمتك المحددة.' } },
-          { '@type': 'Question', 'name': 'هل يمكنني ضبط GPT-5.6 بشكل دقيق؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. الضبط الدقيق من OpenAI متاح فقط لـGPT-5.6 Luna وGPT-4 وgpt-3.5-turbo. Anthropic لا تقدم ضبطًا دقيقًا لـClaude. Google تقدم ضبطًا دقيقًا لـGemini. النماذج مفتوحة الأوزان (LLaMA، Mistral، Qwen) تدعم الضبط الدقيق الكامل عبر LoRA وQLoRA أو التدريب الكامل.' } },
-          { '@type': 'Question', 'name': 'ما الأجهزة التي أحتاجها لتشغيل LLaMA 4 محليًا؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Scout (MoE، 17B نشط): H100 80GB واحدة أو RTX 4090 بكميّ 4-bit. LLaMA 4 Maverick (17B نشط، 400B إجمالي): متعدد GPU (4× A100 80GB أو H100). لـLLaMA 3.1 70B: دقة كاملة ~40 GB VRAM، 4-bit ~16–20 GB.' } },
-          { '@type': 'Question', 'name': 'هل يمكنني تشغيل نماذج مفتوحة المصدر على MacBook؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. M4 Max / M5 Pro/Max تدعم 64–128 GB ذاكرة موحّدة. M5 Pro (307 GB/s) يشغّل LLaMA 3.1 70B (4-bit) بسرعات قابلة للاستخدام؛ M5 Max (460–614 GB/s، 128 GB) يشغّل LLaMA 4 Scout المقلّص. جرّب عبر Ollama.' } },
-          { '@type': 'Question', 'name': 'هل النماذج مفتوحة المصدر لها نفس قيود النماذج المملوكة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم في الجوهر: كلاهما تُهلوس، ولها تواريخ قطع المعرفة وحدود السياق. النماذج مفتوحة الأوزان لا يمكن ترقيعها من جانب الخادم — التحديثات تتطلب إصدارًا جديدًا. النماذج المملوكة يمكن تحسينها تدريجيًا. الضبط الدقيق للنماذج مفتوحة الأوزان يمكن أن يخفف القيود الخاصة بالمجال لكنه لا يتجاوز القيود البنيوية.' } },
-          { '@type': 'Question', 'name': 'ما أفضل نموذج مفتوح الأوزان للبرمجة في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick وDeepSeek-R1 تنافسيان في HumanEval (~75–80%) وتتحسنان في SWE-bench. Claude Opus 5 (SWE-bench Verified 87.6%) يتقدم على GPT-5.6 (~77%). النماذج مفتوحة الأوزان مناسبة للإنتاج في Python وSQL. النماذج المملوكة تحتفظ بميزة في إعادة هيكلة الملفات المتعددة وحلقات الوكلاء.' } },
-          { '@type': 'Question', 'name': 'هل يمكنني استخدام النماذج مفتوحة المصدر للتطبيقات التجارية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. LLaMA وMistral وQwen تسمح بالاستخدام التجاري. القيد الرئيسي: لا يمكنك تسمية المشتقات بـ"LLaMA". عمليات النشر المحلي الداخلية الخاصة تتجنب مشاكل التسمية كليًا.' } },
-          { '@type': 'Question', 'name': 'ما LoRA ولماذا يهم للضبط الدقيق لنماذج مفتوحة الأوزان؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRA (Low-Rank Adaptation) يدرّب ~1–5% من معاملات النموذج كمحوّلات بدلًا من الانتشار العكسي الكامل، مما يقلل تكلفة التدريب بـ5–10×. QLoRA يمتد هذا مع كميّ 4-bit لوحدات GPU الاستهلاكية (16–24 GB VRAM). LoRA هو النهج القياسي لتخصيص LLaMA وMistral في مجالات محددة دون إعادة تدريب كامل.' } },
-          { '@type': 'Question', 'name': 'ما Mixture-of-Experts (MoE) ولماذا يهم للنماذج مفتوحة الأوزان؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'MoE هي بنية بها شبكات فرعية "خبيرة" عديدة لكن تُنشّط فرعية فقط لكل رمز. LLaMA 4 Scout لها 109B إجمالي / 17B نشط (16 خبيرًا). تتيح قدرة نموذج كبيرة جدًا بتكلفة استدلال مماثلة لنموذج كثيف أصغر. LLaMA 4 Scout تتناسب مع H100 واحدة رغم 109B معامل إجمالي.' } },
-          { '@type': 'Question', 'name': 'كيف تقارن LLaMA 4 بـLLaMA 3.1؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Scout (MoE، 109B إجمالي / 17B نشط) تحل محل LLaMA 3.1 70B بسياق 10M مقابل 131K وكفاءة MoE تتيح الاستدلال على H100 واحدة. Maverick (400B إجمالي / 17B نشط) تحل محل LLaMA 3.1 405B. عمليات النشر الجديدة يجب أن تبدأ بـLLaMA 4 Scout إلا لأسباب محددة لاستخدام الجيل السابق.' } },
+          {
+            '@type': 'Question',
+            'name': 'هل LLaMA 3.1 مفتوح المصدر حقًا أم مجرد أوزان مفتوحة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أوزان مفتوحة فقط. LLaMA 3.1 ينشر الأوزان بموجب رخصة مجتمع Llama 3.3.1، غير المتوافقة مع OSI. الرخصة تسمح بالاستخدام التجاري لكن تتضمن قيود التسمية وتتطلب الإسناد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أيهما أرخص في 2026 — استضافة LLaMA ذاتيًا أم واجهة برمجة تطبيقات GPT-5.6؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد على الحجم. دون 5M رمز/يوم، واجهة برمجة تطبيقات GPT-5.6 أرخص. بين 5–10M رمز/يوم، تتعادل التكاليف. فوق 10M رمز/يوم، استضافة LLaMA 3.1 ذاتيًا تفوز.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يؤثر قانون الذكاء الاصطناعي الأوروبي على النماذج مفتوحة المصدر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، حسب طريقة النشر. أنظمة الذكاء الاصطناعي عالية المخاطر تتطلب توثيق المخاطر ومسارات التدقيق. النماذج مفتوحة الأوزان المحلية تسهّل الامتثال.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما النموذج مفتوح المصدر الأقرب إلى GPT-5.6 في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick وDeepSeek-R1 وMistral Large 2 هي الأقرب. في MMLU: GPT-5.6 88.7% مقابل النماذج مفتوحة الأوزان 80–83%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني ضبط GPT-5.6 بشكل دقيق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. الضبط الدقيق من OpenAI متاح فقط لـGPT-5.6 Luna. Anthropic لا تقدم ضبطًا دقيقًا لـClaude. النماذج مفتوحة الأوزان تدعم الضبط الدقيق الكامل عبر LoRA وQLoRA أو التدريب الكامل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الأجهزة التي أحتاجها لتشغيل LLaMA 4 محليًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Scout: H100 80GB واحدة أو RTX 4090 بكميّ 4-bit. LLaMA 4 Maverick: متعدد GPU (4× A100 80GB أو H100). لـLLaMA 3.1 70B: دقة كاملة ~40 GB VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نماذج مفتوحة المصدر على MacBook؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. M4 Max/M5 Pro/Max يدعمان 64–128 GB ذاكرة موحّدة. M5 Max يمكنه تشغيل LLaMA 4 Scout المقلّص.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل النماذج مفتوحة المصدر لها نفس قيود النماذج المملوكة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم في الجوهر: كلاهما تُهلوس، ولها تواريخ قطع المعرفة وحدود السياق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل نموذج مفتوح الأوزان للبرمجة في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick وDeepSeek-R1 تنافسيان في HumanEval (~75–80%). Claude Opus 5 يتصدر في SWE-bench Verified.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام النماذج مفتوحة المصدر للتطبيقات التجارية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. LLaMA وMistral وQwen تسمح بالاستخدام التجاري. لا يمكنك تسمية المشتقات بـ"LLaMA".',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما LoRA ولماذا يهم للضبط الدقيق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA (Low-Rank Adaptation) يدرّب ~1–5% من معاملات النموذج كمحوّلات، مما يقلل تكلفة التدريب بـ5–10×. QLoRA يمتد هذا مع كميّ 4-bit لوحدات GPU الاستهلاكية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما Mixture-of-Experts (MoE) ولماذا يهم للنماذج مفتوحة الأوزان؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MoE هي بنية بها شبكات فرعية "خبيرة" عديدة لكن تُنشّط فرعية فقط لكل رمز. LLaMA 4 Scout لها 109B إجمالي / 17B نشط (16 خبيرًا). تتيح قدرة نموذج كبيرة جدًا بتكلفة استدلال مماثلة لنموذج كثيف أصغر. LLaMA 4 Scout تتناسب مع H100 واحدة رغم 109B معامل إجمالي.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف تقارن LLaMA 4 بـLLaMA 3.1؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Scout (MoE، 109B إجمالي / 17B نشط) تحل محل LLaMA 3.1 70B بسياق 10M مقابل 131K وكفاءة MoE تتيح الاستدلال على H100 واحدة. Maverick (400B إجمالي / 17B نشط) تحل محل LLaMA 3.1 405B. عمليات النشر الجديدة يجب أن تبدأ بـLLaMA 4 Scout إلا لأسباب محددة لاستخدام الجيل السابق.',
+            },
+          },
         ],
       },
       sections: {
@@ -1668,6 +1919,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'ما أفضل نموذج مفتوح الأوزان للبرمجة في 2026؟', a: 'LLaMA 4 Maverick وDeepSeek-R1 تنافسيان في HumanEval (~75–80%). Claude Opus 5 يتصدر في SWE-bench Verified.' },
             { q: 'هل يمكنني استخدام النماذج مفتوحة المصدر للتطبيقات التجارية؟', a: 'نعم. LLaMA وMistral وQwen تسمح بالاستخدام التجاري. لا يمكنك تسمية المشتقات بـ"LLaMA".' },
             { q: 'ما LoRA ولماذا يهم للضبط الدقيق؟', a: 'LoRA (Low-Rank Adaptation) يدرّب ~1–5% من معاملات النموذج كمحوّلات، مما يقلل تكلفة التدريب بـ5–10×. QLoRA يمتد هذا مع كميّ 4-bit لوحدات GPU الاستهلاكية.' },
+            { q: 'ما Mixture-of-Experts (MoE) ولماذا يهم للنماذج مفتوحة الأوزان؟', a: 'MoE هي بنية بها شبكات فرعية "خبيرة" عديدة لكن تُنشّط فرعية فقط لكل رمز. LLaMA 4 Scout لها 109B إجمالي / 17B نشط (16 خبيرًا). تتيح قدرة نموذج كبيرة جدًا بتكلفة استدلال مماثلة لنموذج كثيف أصغر. LLaMA 4 Scout تتناسب مع H100 واحدة رغم 109B معامل إجمالي.' },
+            { q: 'كيف تقارن LLaMA 4 بـLLaMA 3.1؟', a: 'LLaMA 4 Scout (MoE، 109B إجمالي / 17B نشط) تحل محل LLaMA 3.1 70B بسياق 10M مقابل 131K وكفاءة MoE تتيح الاستدلال على H100 واحدة. Maverick (400B إجمالي / 17B نشط) تحل محل LLaMA 3.1 405B. عمليات النشر الجديدة يجب أن تبدأ بـLLaMA 4 Scout إلا لأسباب محددة لاستخدام الجيل السابق.' },
           ],
         },
         sources: {
@@ -1781,19 +2034,110 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'O LLaMA 3.1 é realmente de código aberto ou apenas open-weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apenas open-weights. O LLaMA 3.1 publica os pesos do modelo sob a Licença Comunitária Llama 3.3.1, que não é compatível com OSI. A licença permite uso comercial, mas restringe nomear derivados como "LLaMA" e requer atribuição.' } },
-          { '@type': 'Question', 'name': 'O que é mais barato em 2026 — auto-hospedar LLaMA ou usar a API do GPT-5.6?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Abaixo de 5M tokens/dia, a API do GPT-5.6 é mais barata — sem custo de infraestrutura. Entre 5–10M tokens/dia, os custos se igualam. Acima de 10M tokens/dia, auto-hospedar LLaMA 3.1 ganha. A 100M tokens/dia, a auto-hospedagem é 10–20× mais barata.' } },
-          { '@type': 'Question', 'name': 'O AI Act da UE afeta os LLMs de código aberto?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, dependendo da implantação. Os sistemas de IA de alto risco (contratação, crédito, decisões legais) requerem documentação de riscos, testes de viés e trilhas de auditoria. Os open-weights on-premises facilitam a conformidade — você controla os dados e os logs.' } },
-          { '@type': 'Question', 'name': 'Qual LLM de código aberto está mais próximo do GPT-5.6 em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick, DeepSeek-R1 e Mistral Large 2 são os mais próximos. No MMLU, GPT-5.6 88,7% vs open-weights 80–83%. No código agêntico (SWE-bench Pro), Claude Opus 5 (64,3%) lidera GPT-5.6 (58,6%), mostrando que a paridade específica de tarefas é alcançável.' } },
-          { '@type': 'Question', 'name': 'Posso fazer fine-tuning do GPT-5.6?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. O fine-tuning da OpenAI está disponível apenas para GPT-5.6 Luna, GPT-4 e gpt-3.5-turbo. A Anthropic não oferece fine-tuning para Claude. O Google oferece fine-tuning para Gemini. Os open-weights (LLaMA, Mistral, Qwen) suportam fine-tuning completo via LoRA, QLoRA ou treinamento completo.' } },
-          { '@type': 'Question', 'name': 'Qual hardware preciso para executar o LLaMA 4 localmente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Scout (MoE, 17B ativos): um único H100 80GB ou RTX 4090 quantizado a 4 bits. LLaMA 4 Maverick (17B ativos, 400B total): multi-GPU (4× A100 80GB ou H100). Para LLaMA 3.1 70B: precisão completa ~40 GB de VRAM, 4 bits ~16–20 GB.' } },
-          { '@type': 'Question', 'name': 'Posso executar LLMs de código aberto em um MacBook?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. M4 Max / M5 Pro/Max suportam 64–128 GB de memória unificada. M5 Pro (307 GB/s) executa LLaMA 3.1 70B (4 bits) em velocidades utilizáveis; M5 Max (460–614 GB/s, 128 GB) executa LLaMA 4 Scout quantizado. Teste via Ollama.' } },
-          { '@type': 'Question', 'name': 'Os LLMs de código aberto têm as mesmas limitações que os proprietários?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim no fundamental: ambos alucinam, têm datas de corte de conhecimento e limites de contexto. Os open-weights não podem ser corrigidos do lado do servidor — as atualizações requerem uma nova versão. Os modelos proprietários podem melhorar incrementalmente.' } },
-          { '@type': 'Question', 'name': 'Qual é o melhor modelo open-weights para programação em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Maverick e DeepSeek-R1 são competitivos no HumanEval (~75–80%) e melhorando no SWE-bench. Claude Opus 5 (SWE-bench Verified 87,6%) lidera GPT-5.6 (~77%). Os open-weights são viáveis para Python, SQL.' } },
-          { '@type': 'Question', 'name': 'Posso usar LLMs de código aberto para aplicações comerciais?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. LLaMA, Mistral e Qwen permitem uso comercial. Restrição principal: você não pode nomear derivados como "LLaMA". As implantações de inferência privada interna evitam completamente os problemas de denominação.' } },
-          { '@type': 'Question', 'name': 'O que é LoRA e por que importa para o fine-tuning de open-weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LoRA (Low-Rank Adaptation) treina ~1–5% dos parâmetros do modelo como adaptadores em vez de retropropagação completa, reduzindo o custo de treinamento 5–10×. QLoRA estende isso com quantização de 4 bits para GPUs de consumidor (16–24 GB de VRAM).' } },
-          { '@type': 'Question', 'name': 'O que é Mixture-of-Experts (MoE) e por que importa para os modelos open-weights?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'MoE é uma arquitetura com muitas sub-redes "especialistas", mas que ativa apenas um subconjunto por token. LLaMA 4 Scout tem 109B total / 17B ativos (16 especialistas). Permite uma capacidade de modelo muito grande com um custo de inferência similar ao de um modelo denso menor.' } },
-          { '@type': 'Question', 'name': 'Como o LLaMA 4 se compara ao LLaMA 3.1?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLaMA 4 Scout (MoE, 109B total / 17B ativos) substitui LLaMA 3.1 70B com 10M de contexto vs 131K, e eficiência MoE permitindo inferência em um único H100. Maverick (400B total / 17B ativos) substitui LLaMA 3.1 405B.' } },
+          {
+            '@type': 'Question',
+            'name': 'O LLaMA 3.1 é realmente de código aberto ou apenas open-weights?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apenas open-weights. O LLaMA 3.1 publica os pesos do modelo sob a Licença Comunitária Llama 3.3.1, que não é compatível com OSI. A licença permite uso comercial, mas inclui restrições de denominação e requer atribuição.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é mais barato em 2026 — auto-hospedar LLaMA ou usar a API do GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende do volume. Abaixo de 5M tokens/dia, a API do GPT-5.6 é mais barata. Entre 5–10M tokens/dia, os custos se igualam. Acima de 10M tokens/dia, a auto-hospedagem do LLaMA 3.1 ganha.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O AI Act da UE afeta os LLMs de código aberto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, dependendo da implantação. Os sistemas de IA de alto risco requerem documentação de riscos e trilhas de auditoria. Os open-weights on-premises facilitam a conformidade.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual LLM de código aberto está mais próximo do GPT-5.6 em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick, DeepSeek-R1 e Mistral Large 2 são os mais próximos. No MMLU, GPT-5.6 88,7% vs open-weights 80–83%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso fazer fine-tuning do GPT-5.6?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. O fine-tuning da OpenAI está disponível apenas para GPT-5.6 Luna. A Anthropic não oferece fine-tuning para Claude. Os open-weights suportam fine-tuning completo via LoRA, QLoRA ou treinamento completo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual hardware preciso para executar o LLaMA 4 localmente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Scout: um único H100 80 GB ou RTX 4090 quantizado a 4 bits. LLaMA 4 Maverick: multi-GPU (4× A100 80 GB ou H100). Para LLaMA 3.1 70B: precisão completa ~40 GB de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso executar LLMs de código aberto em um MacBook?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Os Macs com Apple Silicon M4 Max/M5 Pro/Max suportam 64–128 GB de memória unificada. M5 Max pode executar LLaMA 4 Scout quantizado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Os LLMs de código aberto têm as mesmas limitações que os proprietários?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim no fundamental: ambos alucinam, têm datas de corte de conhecimento e limites de contexto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o melhor modelo open-weights para programação em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick e DeepSeek-R1 são competitivos no HumanEval (~75–80%). Claude Opus 5 lidera no SWE-bench Verified.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar LLMs de código aberto para aplicações comerciais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. LLaMA, Mistral e Qwen permitem uso comercial. Você não pode nomear derivados como "LLaMA".',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é LoRA e por que importa para o fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA (Low-Rank Adaptation) treina ~1–5% dos parâmetros do modelo como adaptadores, reduzindo o custo de treinamento 5–10×. QLoRA estende isso com quantização de 4 bits para GPUs de consumidor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é Mixture-of-Experts (MoE) e por que importa para os modelos open-weights?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MoE é uma arquitetura com muitas sub-redes "especialistas", mas que ativa apenas um subconjunto por token. LLaMA 4 Scout tem 109B total / 17B ativos (16 especialistas). Permite uma capacidade de modelo muito grande com um custo de inferência similar ao de um modelo denso menor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como o LLaMA 4 se compara ao LLaMA 3.1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Scout (MoE, 109B total / 17B ativos) substitui LLaMA 3.1 70B com 10M de contexto vs 131K, e eficiência MoE permitindo inferência em um único H100. Maverick (400B total / 17B ativos) substitui LLaMA 3.1 405B.',
+            },
+          },
         ],
       },
       sections: {
@@ -1928,6 +2272,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Qual é o melhor modelo open-weights para programação em 2026?', a: 'LLaMA 4 Maverick e DeepSeek-R1 são competitivos no HumanEval (~75–80%). Claude Opus 5 lidera no SWE-bench Verified.' },
             { q: 'Posso usar LLMs de código aberto para aplicações comerciais?', a: 'Sim. LLaMA, Mistral e Qwen permitem uso comercial. Você não pode nomear derivados como "LLaMA".' },
             { q: 'O que é LoRA e por que importa para o fine-tuning?', a: 'LoRA (Low-Rank Adaptation) treina ~1–5% dos parâmetros do modelo como adaptadores, reduzindo o custo de treinamento 5–10×. QLoRA estende isso com quantização de 4 bits para GPUs de consumidor.' },
+            { q: 'O que é Mixture-of-Experts (MoE) e por que importa para os modelos open-weights?', a: 'MoE é uma arquitetura com muitas sub-redes "especialistas", mas que ativa apenas um subconjunto por token. LLaMA 4 Scout tem 109B total / 17B ativos (16 especialistas). Permite uma capacidade de modelo muito grande com um custo de inferência similar ao de um modelo denso menor.' },
+            { q: 'Como o LLaMA 4 se compara ao LLaMA 3.1?', a: 'LLaMA 4 Scout (MoE, 109B total / 17B ativos) substitui LLaMA 3.1 70B com 10M de contexto vs 131K, e eficiência MoE permitindo inferência em um único H100. Maverick (400B total / 17B ativos) substitui LLaMA 3.1 405B.' },
           ],
         },
         sources: {
@@ -3688,18 +4034,102 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ko',
         mainEntity: [
-          { '@type': 'Question', name: 'LLaMA 3.1은 진정한 오픈소스입니까, 아니면 오픈-웨이트입니까?', acceptedAnswer: { '@type': 'Answer', text: '오픈-웨이트만입니다. LLaMA 3.1은 OSI 호환이 아닌 Llama 3.3.1 커뮤니티 라이선스 하에 모델 가중치를 공개합니다. 라이선스는 상업적 사용을 허용하지만 파생물을 "LLaMA"라고 이름 짓는 것을 제한하고 저작권 표시를 요구합니다. 진정한 오픈소스 라이선스 (Apache 2.0, MIT, GPL)는 이러한 제한이 없습니다.' } },
-          { '@type': 'Question', name: '2026년에 무엇이 더 저렴합니까 — LLaMA 자체 호스팅 또는 GPT-5.6 API 사용?', acceptedAnswer: { '@type': 'Answer', text: '하루 500만 토큰 미만에서는 GPT-5.6 API가 더 저렴합니다 — 인프라 비용이 없습니다. 500만–1천만 토큰 사이에서는 비용이 균등해집니다. 하루 1천만 토큰 초과 시 LLaMA 3.1 자체 호스팅이 이깁니다. 하루 1억 토큰에서는 자체 호스팅이 10–20배 더 저렴합니다.' } },
-          { '@type': 'Question', name: 'EU AI Act가 오픈소스 LLM에 영향을 줍니까?', acceptedAnswer: { '@type': 'Answer', text: '네, 배포 방식에 따라 다릅니다. 고위험 AI 시스템 (채용, 신용, 법적 결정)은 위험 문서화, 편향 테스트, 감사 추적이 필요합니다. 온-프레미스 오픈-웨이트는 컴플라이언스를 더 쉽게 만듭니다 — 데이터와 로그를 귀사가 제어합니다. 독점 API는 공급업체 증명에 의존하게 만듭니다.' } },
-          { '@type': 'Question', name: '2026년 GPT-5.6에 가장 근접한 오픈소스 LLM은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'LLaMA 4 Maverick, DeepSeek-R1, Mistral Large 2가 가장 근접합니다. MMLU에서 GPT-5.6 88.7% vs 오픈-웨이트 80–83%. 에이전틱 코드 (SWE-bench Pro)에서 Claude Opus 5 (64.3%)이 GPT-5.6 (58.6%)를 앞서며 작업별 성능 동등이 달성 가능함을 보여줍니다. 귀사의 특정 작업에서 테스트하십시오.' } },
-          { '@type': 'Question', name: 'GPT-5.6를 파인튜닝할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오. OpenAI 파인튜닝은 GPT-5.6 Luna, GPT-4, gpt-3.5-turbo에만 제공됩니다. Anthropic은 Claude에 대한 파인튜닝을 제공하지 않습니다. Google은 Gemini에 파인튜닝을 제공합니다. 오픈-웨이트 (LLaMA, Mistral, Qwen)은 LoRA, QLoRA, 전체 훈련을 통해 완전한 파인튜닝을 지원합니다.' } },
-          { '@type': 'Question', name: 'LLaMA 4를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'LLaMA 4 Scout (MoE, 활성 17B): 단일 H100 80GB 또는 4비트 양자화된 RTX 4090. LLaMA 4 Maverick (활성 17B, 총 400B): 멀티-GPU (4× A100 80GB 또는 H100). LLaMA 3.1 70B: 전체 정밀도 약 40GB VRAM, 4비트 약 16–20GB.' } },
-          { '@type': 'Question', name: 'MacBook에서 오픈소스 LLM을 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네. M4 Max / M5 Pro/Max는 64–128GB 통합 메모리를 지원합니다. M5 Pro (307 GB/s)는 LLaMA 3.1 70B (4비트)를 사용 가능한 속도로 실행하고; M5 Max (460–614 GB/s, 128GB)는 양자화된 LLaMA 4 Scout를 실행합니다. Ollama를 통해 테스트하십시오.' } },
-          { '@type': 'Question', name: '오픈소스 LLM은 독점 모델과 같은 제한이 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '기본적으로 네: 둘 다 환각을 생성하고, 지식 마감일과 컨텍스트 윈도우 제한이 있습니다. 오픈-웨이트는 서버 측 패치가 불가능합니다 — 업데이트는 새 버전 출시가 필요합니다. 독점 모델은 점진적으로 개선될 수 있습니다. 오픈-웨이트 파인튜닝은 특정 제한 (도메인 지식, 톤)을 완화할 수 있지만 구조적 제약을 극복할 수는 없습니다.' } },
-          { '@type': 'Question', name: '2026년 코딩에 가장 적합한 오픈-웨이트 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'LLaMA 4 Maverick와 DeepSeek-R1이 HumanEval (~75–80%)에서 경쟁력 있으며 SWE-bench에서 향상 중입니다. Claude Opus 5 (SWE-bench Verified 87.6%)이 GPT-5.6 (~77%)를 앞섭니다. 오픈-웨이트는 Python, SQL에서 실용적입니다. 독점 모델은 멀티파일 리팩토링과 에이전트 루프에서 우위를 유지합니다.' } },
-          { '@type': 'Question', name: '상업 애플리케이션에 오픈소스 LLM을 사용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네. LLaMA, Mistral, Qwen은 상업적 사용을 허용합니다. 주요 제한: 파생물을 "LLaMA"라고 이름 짓을 수 없습니다. 내부 비공개 추론 배포는 이름 지정 문제를 완전히 피합니다.' } },
-          { '@type': 'Question', name: 'LoRA란 무엇이며 오픈-웨이트 파인튜닝에 왜 중요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'LoRA (Low-Rank Adaptation)는 전체 역전파 대신 모델 파라미터의 약 1–5%를 어댑터로 훈련시켜 훈련 비용을 5–10배 줄입니다. QLoRA는 이를 소비자 GPU (16–24GB VRAM)를 위해 4비트 양자화로 확장합니다. LoRA는 전체 재훈련 없이 LLaMA와 Mistral을 특정 도메인에 특화시키는 표준 방법입니다.' } },
-          { '@type': 'Question', name: 'Mixture-of-Experts (MoE)란 무엇이며 오픈-웨이트 모델에 왜 중요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'MoE는 많은 "전문가" 서브네트워크가 있지만 토큰당 일부만 활성화되는 아키텍처입니다. LLaMA 4 Scout는 총 109B / 활성 17B (16 전문가)입니다. 더 작은 밀집 모델과 유사한 추론 비용으로 매우 큰 모델 용량을 가능하게 합니다. LLaMA 4 Scout는 총 109B 파라미터임에도 단일 H100에 적합합니다.' } },
+          {
+            '@type': 'Question',
+            'name': 'LLaMA 3.1은 진정한 오픈소스입니까, 아니면 오픈-웨이트입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '오픈-웨이트만입니다. LLaMA 3.1은 OSI 호환이 아닌 Llama 3.3.1 커뮤니티 라이선스 하에 모델 가중치를 공개합니다. 라이선스는 상업적 사용을 허용하지만 이름 지정 제한이 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026년에 무엇이 더 저렴합니까 — LLaMA 자체 호스팅 또는 GPT-5.6 API 사용?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '볼륨에 따라 다릅니다. 하루 500만 토큰 미만에서는 GPT-5.6 API가 더 저렴합니다. 500만–1천만 토큰 사이에서는 비용이 균등해집니다. 하루 1천만 토큰 초과 시 LLaMA 3.1 자체 호스팅이 이깁니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI Act가 오픈소스 LLM에 영향을 줍니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네, 배포 방식에 따라 다릅니다. 고위험 AI 시스템은 위험 문서화와 감사 추적이 필요합니다. 온-프레미스 오픈-웨이트는 컴플라이언스를 더 쉽게 만듭니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026년 GPT-5.6에 가장 근접한 오픈소스 LLM은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick, DeepSeek-R1, Mistral Large 2가 가장 근접합니다. MMLU에서 GPT-5.6 88.7% vs 오픈-웨이트 80–83%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GPT-5.6를 파인튜닝할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니오. OpenAI 파인튜닝은 GPT-5.6 Luna에만 제공됩니다. Anthropic은 Claude에 대한 파인튜닝을 제공하지 않습니다. 오픈-웨이트는 LoRA, QLoRA를 통해 완전한 파인튜닝을 지원합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLaMA 4를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Scout: 단일 H100 80GB 또는 4비트 양자화된 RTX 4090. LLaMA 3.1 70B: 전체 정밀도 약 40GB VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'MacBook에서 오픈소스 LLM을 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. M4 Max/M5 Pro/Max를 장착한 Mac은 64–128GB 통합 메모리를 지원합니다. M5 Max는 양자화된 LLaMA 4 Scout를 실행할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '오픈소스 LLM은 독점 모델과 같은 제한이 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '기본적으로 네: 둘 다 환각을 생성하고, 지식 마감일과 컨텍스트 윈도우 제한이 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026년 코딩에 가장 적합한 오픈-웨이트 모델은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLaMA 4 Maverick와 DeepSeek-R1이 HumanEval (~75–80%)에서 경쟁력 있습니다. Claude Opus 5가 SWE-bench Verified에서 앞섭니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '상업 애플리케이션에 오픈소스 LLM을 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. LLaMA, Mistral, Qwen은 상업적 사용을 허용합니다. 파생물을 "LLaMA"라고 이름 짓을 수 없습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LoRA란 무엇이며 파인튜닝에 왜 중요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LoRA (Low-Rank Adaptation)는 모델 파라미터의 약 1–5%를 어댑터로 훈련시켜 훈련 비용을 5–10배 줄입니다. QLoRA는 이를 소비자 GPU (16–24GB VRAM)를 위해 4비트 양자화로 확장합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mixture-of-Experts (MoE)란 무엇이며 오픈-웨이트 모델에 왜 중요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MoE는 많은 "전문가" 서브네트워크가 있지만 토큰당 일부만 활성화되는 아키텍처입니다. LLaMA 4 Scout는 총 109B / 활성 17B (16 전문가)입니다. 더 작은 밀집 모델과 유사한 추론 비용으로 매우 큰 모델 용량을 가능하게 합니다. LLaMA 4 Scout는 총 109B 파라미터임에도 단일 H100에 적합합니다.',
+            },
+          },
         ],
       },
       sections: {
@@ -3834,6 +4264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '2026년 코딩에 가장 적합한 오픈-웨이트 모델은 무엇입니까?', a: 'LLaMA 4 Maverick와 DeepSeek-R1이 HumanEval (~75–80%)에서 경쟁력 있습니다. Claude Opus 5가 SWE-bench Verified에서 앞섭니다.' },
             { q: '상업 애플리케이션에 오픈소스 LLM을 사용할 수 있습니까?', a: '네. LLaMA, Mistral, Qwen은 상업적 사용을 허용합니다. 파생물을 "LLaMA"라고 이름 짓을 수 없습니다.' },
             { q: 'LoRA란 무엇이며 파인튜닝에 왜 중요합니까?', a: 'LoRA (Low-Rank Adaptation)는 모델 파라미터의 약 1–5%를 어댑터로 훈련시켜 훈련 비용을 5–10배 줄입니다. QLoRA는 이를 소비자 GPU (16–24GB VRAM)를 위해 4비트 양자화로 확장합니다.' },
+            { q: 'Mixture-of-Experts (MoE)란 무엇이며 오픈-웨이트 모델에 왜 중요합니까?', a: 'MoE는 많은 "전문가" 서브네트워크가 있지만 토큰당 일부만 활성화되는 아키텍처입니다. LLaMA 4 Scout는 총 109B / 활성 17B (16 전문가)입니다. 더 작은 밀집 모델과 유사한 추론 비용으로 매우 큰 모델 용량을 가능하게 합니다. LLaMA 4 Scout는 총 109B 파라미터임에도 단일 H100에 적합합니다.' },
           ],
         },
         sources: {

@@ -71,66 +71,66 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'What is a prompt library?',
-            acceptedAnswer: {
+            'name': 'What is a prompt library?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'A prompt library is a structured collection of tested prompts with metadata (inputs, model guidance, expected output, version, owner). Unlike a list of prompts copied from the internet, a prompt library is an internal product your team maintains and reuses for consistency and speed.',
+              'text': 'A prompt library is a structured collection of tested prompts with metadata (inputs, model guidance, expected output, version, owner). Unlike a list of cool prompts copied from the internet, a prompt library is an internal product your team maintains and reuses for consistency and speed.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should a team use a prompt library instead of personal notes?',
-            acceptedAnswer: {
+            'name': 'When should we use a prompt library instead of just keeping personal notes?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'As soon as you have 3+ team members and 2+ prompts you use more than once. Personal notes work for one person; libraries work for teams. A library cuts task setup time, onboards new colleagues faster, and prevents duplicate work.',
+              'text': 'As soon as you have 3+ team members and 2+ prompts you use more than once. Personal notes work for one person; libraries work for teams. A library cuts task setup time, onboards new people faster, and prevents duplicate work.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How long does it take to build a usable prompt library from scratch?',
-            acceptedAnswer: {
+            'name': 'How long does it take to build a usable prompt library from scratch?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Start small: 1–2 weeks to harvest 5–10 real prompts from everyday work, normalize them into a template, and upload them to a shared system. Governance and tooling improve over time; start with just Draft and Approved status labels.',
+              'text': 'Start small: 1–2 weeks to harvest 5–10 real prompts from everyday work, normalize them into a template, and upload them to a shared system. Then grow it over months as you add more prompts. Governance and tooling improve over time; start simple.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How do I get my team to contribute to a shared prompt library?',
-            acceptedAnswer: {
+            'name': 'How do I get my team to actually contribute to a shared prompt library?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Make contribution easy and frictionless. Start with 3–5 champion prompts you create yourself so people see examples. Keep approval lightweight (one person, 5 minutes). Showcase wins like "This library saved us 10 hours this month." Never make contribution mandatory; make it the path of least resistance.',
+              'text': 'Make contribution easy and frictionless. Start with 3–5 champion prompts you create yourself so people see examples. Keep approval lightweight (one person, 5 minutes). Showcase wins ("This library saved us 10 hours this month"). Never make contribution mandatory; make it the path of least resistance.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Is a prompt library the same as a system prompt?',
-            acceptedAnswer: {
+            'name': 'Is a prompt library the same as a system prompt?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'No. A system prompt is a single persistent instruction that sets the LLM\'s behavior for one conversation. A prompt library is a collection of prompts (each with context and metadata) shared across your team for many use cases. A system prompt might live in your library as one entry.',
+              'text': 'No. A system prompt is a single persistent instruction that sets the LLM\'s behavior for one conversation. A prompt library is a collection of prompts (each with context and metadata) shared across your team for many use cases. A system prompt might live in your library as one entry.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How often should we review and prune a prompt library?',
-            acceptedAnswer: {
+            'name': 'How often should we review and prune a prompt library?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Monthly at minimum. Look for prompts nobody uses, prompts that people keep editing ad-hoc, and opportunities to consolidate. Mark unused prompts as Deprecated; remove them from default views after 3 months of inactivity. Teams running monthly review cycles typically retire 20–30% of stored prompts as model defaults improve.',
+              'text': 'Monthly at minimum. Look for: prompts nobody uses, prompts that drift (people keep editing the same one ad-hoc), and opportunities to consolidate. Mark unused prompts as Deprecated; retire them after 3 months of no activity. Actively used prompts stay fresh and useful.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How do you handle prompts that work on one model but not another?',
-            acceptedAnswer: {
+            'name': 'How do you handle prompts that work on one model but not another?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Model A" and "Meeting summary – Model B" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
+              'text': 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Model A" and "Meeting summary – Model B" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What is the difference between a prompt library and a prompt management platform?',
-            acceptedAnswer: {
+            'name': 'What is the difference between a prompt library and a prompt management platform?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'A prompt library is a collection of structured prompt records your team maintains — it can live in a Git repo, a spreadsheet, or a dedicated tool. A prompt management platform adds execution, analytics, version control, and collaboration features on top of the library concept. Start with a simple library and upgrade to a platform when volume or governance needs justify it.',
+              'text': 'A prompt library is a collection of structured prompt records your team maintains — it can live in a Git repo, a spreadsheet, or a dedicated tool. A prompt management platform adds execution, analytics, version control, and collaboration features on top of the library concept. Start with a simple library and upgrade to a platform when volume or governance needs justify it.',
             },
           },
         ],
@@ -558,38 +558,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            {
-              q: 'What is a prompt library?',
-              a: 'A prompt library is a structured collection of tested prompts with metadata (inputs, model guidance, expected output, version, owner). Unlike a list of cool prompts copied from the internet, a prompt library is an internal product your team maintains and reuses for consistency and speed.',
-            },
-            {
-              q: 'When should we use a prompt library instead of just keeping personal notes?',
-              a: 'As soon as you have 3+ team members and 2+ prompts you use more than once. Personal notes work for one person; libraries work for teams. A library cuts task setup time, onboards new people faster, and prevents duplicate work.',
-            },
-            {
-              q: 'How long does it take to build a usable prompt library from scratch?',
-              a: 'Start small: 1–2 weeks to harvest 5–10 real prompts from everyday work, normalize them into a template, and upload them to a shared system. Then grow it over months as you add more prompts. Governance and tooling improve over time; start simple.',
-            },
-            {
-              q: 'How do I get my team to actually contribute to a shared prompt library?',
-              a: 'Make contribution easy and frictionless. Start with 3–5 champion prompts you create yourself so people see examples. Keep approval lightweight (one person, 5 minutes). Showcase wins ("This library saved us 10 hours this month"). Never make contribution mandatory; make it the path of least resistance.',
-            },
-            {
-              q: 'Is a prompt library the same as a system prompt?',
-              a: 'No. A system prompt is a single persistent instruction that sets the LLM\'s behavior for one conversation. A prompt library is a collection of prompts (each with context and metadata) shared across your team for many use cases. A system prompt might live in your library as one entry.',
-            },
-            {
-              q: 'How often should we review and prune a prompt library?',
-              a: 'Monthly at minimum. Look for: prompts nobody uses, prompts that drift (people keep editing the same one ad-hoc), and opportunities to consolidate. Mark unused prompts as Deprecated; retire them after 3 months of no activity. Actively used prompts stay fresh and useful.',
-            },
-            {
-              q: 'How do you handle prompts that work on one model but not another?',
-              a: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Model A" and "Meeting summary – Model B" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.',
-            },
-            {
-              q: 'What is the difference between a prompt library and a prompt management platform?',
-              a: 'A prompt library is a collection of structured prompt records your team maintains — it can live in a Git repo, a spreadsheet, or a dedicated tool. A prompt management platform adds execution, analytics, version control, and collaboration features on top of the library concept. Start with a simple library and upgrade to a platform when volume or governance needs justify it.',
-            },
+            { q: 'What is a prompt library?', a: 'A prompt library is a structured collection of tested prompts with metadata (inputs, model guidance, expected output, version, owner). Unlike a list of cool prompts copied from the internet, a prompt library is an internal product your team maintains and reuses for consistency and speed.' },
+            { q: 'When should we use a prompt library instead of just keeping personal notes?', a: 'As soon as you have 3+ team members and 2+ prompts you use more than once. Personal notes work for one person; libraries work for teams. A library cuts task setup time, onboards new people faster, and prevents duplicate work.' },
+            { q: 'How long does it take to build a usable prompt library from scratch?', a: 'Start small: 1–2 weeks to harvest 5–10 real prompts from everyday work, normalize them into a template, and upload them to a shared system. Then grow it over months as you add more prompts. Governance and tooling improve over time; start simple.' },
+            { q: 'How do I get my team to actually contribute to a shared prompt library?', a: 'Make contribution easy and frictionless. Start with 3–5 champion prompts you create yourself so people see examples. Keep approval lightweight (one person, 5 minutes). Showcase wins ("This library saved us 10 hours this month"). Never make contribution mandatory; make it the path of least resistance.' },
+            { q: 'Is a prompt library the same as a system prompt?', a: 'No. A system prompt is a single persistent instruction that sets the LLM\'s behavior for one conversation. A prompt library is a collection of prompts (each with context and metadata) shared across your team for many use cases. A system prompt might live in your library as one entry.' },
+            { q: 'How often should we review and prune a prompt library?', a: 'Monthly at minimum. Look for: prompts nobody uses, prompts that drift (people keep editing the same one ad-hoc), and opportunities to consolidate. Mark unused prompts as Deprecated; retire them after 3 months of no activity. Actively used prompts stay fresh and useful.' },
+            { q: 'How do you handle prompts that work on one model but not another?', a: 'Tag each prompt with tested models in metadata. When a prompt fails on a new model, create a variant — for example "Meeting summary – Model A" and "Meeting summary – Model B" — rather than forcing one prompt to work everywhere. Multi-model testing tools let you compare output across models before promoting a prompt to Approved status.' },
+            { q: 'What is the difference between a prompt library and a prompt management platform?', a: 'A prompt library is a collection of structured prompt records your team maintains — it can live in a Git repo, a spreadsheet, or a dedicated tool. A prompt management platform adds execution, analytics, version control, and collaboration features on top of the library concept. Start with a simple library and upgrade to a platform when volume or governance needs justify it.' },
           ],
         },
         relatedReading: {
@@ -692,87 +668,87 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'de',
     mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was ist eine Prompt-Bibliothek?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts, die Ihr Team verwaltet. Sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Das Ziel: Prompts standardisieren, teilen und verbessern, statt sie in persönlichen Notizen zu verlieren.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wann sollte Ihr Team eine Prompt-Bibliothek statt persönlicher Notizen verwenden?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Verwenden Sie eine Bibliothek sobald mehr als eine Person die gleichen Prompts nutzt. Persönliche Notizen funktionieren für Einzelne, aber wenn Ihr Team skaliert, verlieren Sie bewährte Prompts und verschwenden Zeit mit Doppelarbeit.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie lange dauert es, eine brauchbare Prompt-Bibliothek von Grund auf zu erstellen?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Eine minimale Bibliothek mit 10–15 getesteten Prompts dauert 2–4 Wochen (abhängig von Teamgröße). Mit aktiver Nutzung und monatlichen Reviews wächst die Qualität kontinuierlich. Rechnen Sie mit weniger als 1 Stunde pro Woche für Wartung, sobald die Struktur etabliert ist.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie bringe ich mein Team dazu, tatsächlich zu einer gemeinsamen Prompt-Bibliothek beizutragen?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Machen Sie den Beitrag so einfach wie möglich: ein Formular oder Git-Template, klare Metadaten-Anforderungen, und monatliche Reviews. Das Wichtigste: Zeigen Sie Mehrwert — Teams tragen bei, wenn sie sehen, dass ihre Prompts genutzt und verbessert werden.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist eine Prompt-Bibliothek dasselbe wie ein System-Prompt?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nein. Ein System-Prompt sind Regeln, die Sie einmal definieren und auf alle Eingaben anwenden. Eine Prompt-Bibliothek ist eine Sammlung von verschiedenen Prompts für verschiedene Aufgaben — jeder mit eigenen Metadaten und Versionen.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie oft sollte Ihr Team eine Prompt-Bibliothek überprüfen und bereinigen?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Monatlich ist ideal. Markieren Sie selten genutzte Prompts als Deprecated, fördern Sie verbesserte Versionen zu Approved, und erstellen Sie neue Kategorien, wenn sich die Nutzung verändert. Teams, die monatlich reviewen, haben 20–30 % weniger Bloat nach 6 Monaten.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting-Zusammenfassung – Claude" und "Meeting-Zusammenfassung – GPT-5.5" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zwischen einer Prompt-Bibliothek und einer Prompt-Management-Plattform?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Eine Prompt-Bibliothek ist eine Sammlung strukturierter Prompt-Einträge, die Ihr Team verwaltet — sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Eine Prompt-Management-Plattform fügt Ausführung, Analysen, Versionskontrolle und Collaboration-Features auf top der Bibliothek hinzu. Fangen Sie mit einer einfachen Bibliothek an und upgraden Sie zu einer Plattform, wenn Volumen oder Governance es rechtfertigen.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ja. Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor der Aktivierung für sensitive Workflows. Die wichtigste Regel: Speichern Sie echte persönliche Daten nie im Prompt-Body — nutzen Sie Platzhalter wie <CUSTOMER_NAME> und übergeben Sie echte Daten nur im Runtime-Input. Für Article 28 Compliance (Auftragsverarbeitung) benötigen Sie einen Data Processing Agreement.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ja. Mittelstand-Unternehmen profitieren von PromptQuorum für Qualitätskontrolle, Wissensmanagement und Governance. PromptQuorum erfüllt SOC 2 Type II Zertifizierung (Stand 2026) und unterstützt DSGVO Article 28 Anforderungen für Auftragsverarbeitung. Nutzen Sie lokale Inference für sensitive Workflows (Finanzen, Medizin, Recht) und Prompt-Verwaltung für breitere Adoption in Teams. BSI-Grundschutz-Kataloge sind mit PromptQuorum EU-based Deployment kompatibel.',
-        },
-      },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'Was ist eine Prompt-Bibliothek?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts, die Ihr Team als eine zentrale Quelle der Wahrheit verwaltet. Sie kann in einem Git-Repo, einer Notion-Datenbank, Airtable, einer Google Sheet oder einem dedizierten Tool leben. Das Ziel: Wiederverwendung ermöglichen, Qualität verbessern, schneller onboarden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollte unser Team eine Prompt-Bibliothek statt persönlicher Notizen verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sobald mehr als eine Person die gleichen Prompts nutzt. Persönliche Notizen funktionieren für Einzelne — aber wenn Ihr Team skaliert, verlieren Sie bewährte Prompts und verschwenden Zeit mit Doppelarbeit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie lange dauert es, eine brauchbare Prompt-Bibliothek von Grund auf zu erstellen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Eine minimale Bibliothek mit 10–15 getesteten Prompts dauert 2–4 Wochen (abhängig von Teamgröße). Mit aktiver Nutzung und monatlichen Reviews wächst die Qualität kontinuierlich. Rechnen Sie mit weniger als 1 Stunde pro Woche für Wartung, sobald die Struktur etabliert ist.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie bringe ich mein Team dazu, tatsächlich zu einer gemeinsamen Prompt-Bibliothek beizutragen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Machen Sie den Beitrag so einfach wie möglich: ein Formular oder Git-Template, klare Metadaten-Anforderungen, und monatliche Reviews. Das Wichtigste: Zeigen Sie Mehrwert — Teams tragen bei, wenn sie sehen, dass ihre Prompts genutzt und verbessert werden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist eine Prompt-Bibliothek dasselbe wie ein System-Prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Ein System-Prompt sind Regeln, die Sie einmal definieren und auf alle Eingaben anwenden. Eine Prompt-Bibliothek ist eine Sammlung von verschiedenen Prompts für verschiedene Aufgaben — jeder mit eigenen Metadaten und Versionen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie oft sollte Ihr Team eine Prompt-Bibliothek überprüfen und bereinigen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Monatlich ist ideal. Markieren Sie selten genutzte Prompts als Deprecated, fördern Sie verbesserte Versionen zu Approved, und erstellen Sie neue Kategorien, wenn sich die Nutzung verändert. Teams, die monatlich reviewen, haben 20–30 % weniger Bloat nach 6 Monaten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-5.5" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Unterschied zwischen einer Prompt-Bibliothek und einer Prompt-Management-Plattform?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Eine Prompt-Bibliothek ist eine Sammlung strukturierter Prompt-Einträge, die Ihr Team verwaltet — sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Eine Prompt-Management-Plattform fügt Ausführung, Analysen, Versionskontrolle und Zusammenarbeits-Features auf top der Bibliothek hinzu. Starten Sie mit einer einfachen Bibliothek und upgraden Sie zu einer Plattform, wenn Volumen oder Governance es rechtfertigen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor der Aktivierung für sensitive Workflows. Die wichtigste Regel: Speichern Sie echte persönliche Daten nie im Prompt-Body — nutzen Sie Platzhalter wie <CUSTOMER_NAME> und übergeben Sie echte Daten nur im Runtime-Input. Für Article 28 Compliance (Auftragsverarbeitung) benötigen Sie einen Data Processing Agreement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Mittelstand-Unternehmen profitieren von PromptQuorum für Qualitätskontrolle, Wissensmanagement und Governance. PromptQuorum erfüllt SOC 2 Type II Zertifizierung (Stand 2026) und unterstützt DSGVO Article 28 Anforderungen für Auftragsverarbeitung. Nutzen Sie lokale Inference für sensitive Workflows (Finanzen, Medizin, Recht) und Prompt-Verwaltung für breitere Adoption in Teams. BSI-Grundschutz-Kataloge sind mit PromptQuorum EU-based Deployment kompatibel.',
+            },
+          },
+        ],
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -1131,47 +1107,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq-section',
       title: 'Häufig gestellte Fragen',
       faqs: [
-        {
-          q: 'Was ist eine Prompt-Bibliothek?',
-          a: 'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts, die Ihr Team als eine zentrale Quelle der Wahrheit verwaltet. Sie kann in einem Git-Repo, einer Notion-Datenbank, Airtable, einer Google Sheet oder einem dedizierten Tool leben. Das Ziel: Wiederverwendung ermöglichen, Qualität verbessern, schneller onboarden.',
-        },
-        {
-          q: 'Wann sollte unser Team eine Prompt-Bibliothek statt persönlicher Notizen verwenden?',
-          a: 'Sobald mehr als eine Person die gleichen Prompts nutzt. Persönliche Notizen funktionieren für Einzelne — aber wenn Ihr Team skaliert, verlieren Sie bewährte Prompts und verschwenden Zeit mit Doppelarbeit.',
-        },
-        {
-          q: 'Wie lange dauert es, eine brauchbare Prompt-Bibliothek von Grund auf zu erstellen?',
-          a: 'Eine minimale Bibliothek mit 10–15 getesteten Prompts dauert 2–4 Wochen (abhängig von Teamgröße). Mit aktiver Nutzung und monatlichen Reviews wächst die Qualität kontinuierlich. Rechnen Sie mit weniger als 1 Stunde pro Woche für Wartung, sobald die Struktur etabliert ist.',
-        },
-        {
-          q: 'Wie bringe ich mein Team dazu, tatsächlich zu einer gemeinsamen Prompt-Bibliothek beizutragen?',
-          a: 'Machen Sie den Beitrag so einfach wie möglich: ein Formular oder Git-Template, klare Metadaten-Anforderungen, und monatliche Reviews. Das Wichtigste: Zeigen Sie Mehrwert — Teams tragen bei, wenn sie sehen, dass ihre Prompts genutzt und verbessert werden.',
-        },
-        {
-          q: 'Ist eine Prompt-Bibliothek dasselbe wie ein System-Prompt?',
-          a: 'Nein. Ein System-Prompt sind Regeln, die Sie einmal definieren und auf alle Eingaben anwenden. Eine Prompt-Bibliothek ist eine Sammlung von verschiedenen Prompts für verschiedene Aufgaben — jeder mit eigenen Metadaten und Versionen.',
-        },
-        {
-          q: 'Wie oft sollte Ihr Team eine Prompt-Bibliothek überprüfen und bereinigen?',
-          a: 'Monatlich ist ideal. Markieren Sie selten genutzte Prompts als Deprecated, fördern Sie verbesserte Versionen zu Approved, und erstellen Sie neue Kategorien, wenn sich die Nutzung verändert. Teams, die monatlich reviewen, haben 20–30 % weniger Bloat nach 6 Monaten.',
-        },
-        {
-          q: 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?',
-          a: 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-5.5" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.',
-        },
-        {
-          q: 'Was ist der Unterschied zwischen einer Prompt-Bibliothek und einer Prompt-Management-Plattform?',
-          a: 'Eine Prompt-Bibliothek ist eine Sammlung strukturierter Prompt-Einträge, die Ihr Team verwaltet — sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Eine Prompt-Management-Plattform fügt Ausführung, Analysen, Versionskontrolle und Zusammenarbeits-Features auf top der Bibliothek hinzu. Starten Sie mit einer einfachen Bibliothek und upgraden Sie zu einer Plattform, wenn Volumen oder Governance es rechtfertigen.',
-        },
-        {
-          q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?',
-          a: 'Ja. Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor der Aktivierung für sensitive Workflows. Die wichtigste Regel: Speichern Sie echte persönliche Daten nie im Prompt-Body — nutzen Sie Platzhalter wie <CUSTOMER_NAME> und übergeben Sie echte Daten nur im Runtime-Input. Für Article 28 Compliance (Auftragsverarbeitung) benötigen Sie einen Data Processing Agreement.',
-        },
-        {
-          q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?',
-          a: 'Ja. Mittelstand-Unternehmen profitieren von PromptQuorum für Qualitätskontrolle, Wissensmanagement und Governance. PromptQuorum erfüllt SOC 2 Type II Zertifizierung (Stand 2026) und unterstützt DSGVO Article 28 Anforderungen für Auftragsverarbeitung. Nutzen Sie lokale Inference für sensitive Workflows (Finanzen, Medizin, Recht) und Prompt-Verwaltung für breitere Adoption in Teams. BSI-Grundschutz-Kataloge sind mit PromptQuorum EU-based Deployment kompatibel.',
-        },
-      ],
+            { q: 'Was ist eine Prompt-Bibliothek?', a: 'Eine Prompt-Bibliothek ist eine strukturierte, durchsuchbare Sammlung von Prompts, die Ihr Team als eine zentrale Quelle der Wahrheit verwaltet. Sie kann in einem Git-Repo, einer Notion-Datenbank, Airtable, einer Google Sheet oder einem dedizierten Tool leben. Das Ziel: Wiederverwendung ermöglichen, Qualität verbessern, schneller onboarden.' },
+            { q: 'Wann sollte unser Team eine Prompt-Bibliothek statt persönlicher Notizen verwenden?', a: 'Sobald mehr als eine Person die gleichen Prompts nutzt. Persönliche Notizen funktionieren für Einzelne — aber wenn Ihr Team skaliert, verlieren Sie bewährte Prompts und verschwenden Zeit mit Doppelarbeit.' },
+            { q: 'Wie lange dauert es, eine brauchbare Prompt-Bibliothek von Grund auf zu erstellen?', a: 'Eine minimale Bibliothek mit 10–15 getesteten Prompts dauert 2–4 Wochen (abhängig von Teamgröße). Mit aktiver Nutzung und monatlichen Reviews wächst die Qualität kontinuierlich. Rechnen Sie mit weniger als 1 Stunde pro Woche für Wartung, sobald die Struktur etabliert ist.' },
+            { q: 'Wie bringe ich mein Team dazu, tatsächlich zu einer gemeinsamen Prompt-Bibliothek beizutragen?', a: 'Machen Sie den Beitrag so einfach wie möglich: ein Formular oder Git-Template, klare Metadaten-Anforderungen, und monatliche Reviews. Das Wichtigste: Zeigen Sie Mehrwert — Teams tragen bei, wenn sie sehen, dass ihre Prompts genutzt und verbessert werden.' },
+            { q: 'Ist eine Prompt-Bibliothek dasselbe wie ein System-Prompt?', a: 'Nein. Ein System-Prompt sind Regeln, die Sie einmal definieren und auf alle Eingaben anwenden. Eine Prompt-Bibliothek ist eine Sammlung von verschiedenen Prompts für verschiedene Aufgaben — jeder mit eigenen Metadaten und Versionen.' },
+            { q: 'Wie oft sollte Ihr Team eine Prompt-Bibliothek überprüfen und bereinigen?', a: 'Monatlich ist ideal. Markieren Sie selten genutzte Prompts als Deprecated, fördern Sie verbesserte Versionen zu Approved, und erstellen Sie neue Kategorien, wenn sich die Nutzung verändert. Teams, die monatlich reviewen, haben 20–30 % weniger Bloat nach 6 Monaten.' },
+            { q: 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?', a: 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-5.5" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.' },
+            { q: 'Was ist der Unterschied zwischen einer Prompt-Bibliothek und einer Prompt-Management-Plattform?', a: 'Eine Prompt-Bibliothek ist eine Sammlung strukturierter Prompt-Einträge, die Ihr Team verwaltet — sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Eine Prompt-Management-Plattform fügt Ausführung, Analysen, Versionskontrolle und Zusammenarbeits-Features auf top der Bibliothek hinzu. Starten Sie mit einer einfachen Bibliothek und upgraden Sie zu einer Plattform, wenn Volumen oder Governance es rechtfertigen.' },
+            { q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?', a: 'Ja. Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor der Aktivierung für sensitive Workflows. Die wichtigste Regel: Speichern Sie echte persönliche Daten nie im Prompt-Body — nutzen Sie Platzhalter wie <CUSTOMER_NAME> und übergeben Sie echte Daten nur im Runtime-Input. Für Article 28 Compliance (Auftragsverarbeitung) benötigen Sie einen Data Processing Agreement.' },
+            { q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?', a: 'Ja. Mittelstand-Unternehmen profitieren von PromptQuorum für Qualitätskontrolle, Wissensmanagement und Governance. PromptQuorum erfüllt SOC 2 Type II Zertifizierung (Stand 2026) und unterstützt DSGVO Article 28 Anforderungen für Auftragsverarbeitung. Nutzen Sie lokale Inference für sensitive Workflows (Finanzen, Medizin, Recht) und Prompt-Verwaltung für breitere Adoption in Teams. BSI-Grundschutz-Kataloge sind mit PromptQuorum EU-based Deployment kompatibel.' },
+          ],
     },
     relatedReading: {
       id: 'related-reading',
@@ -1954,14 +1900,70 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'O que é uma biblioteca de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Uma biblioteca de prompts é uma coleção estruturada de prompts testados com metadados (entradas, orientação de modelo, saída esperada, versão, responsável). Ao contrário de uma lista de prompts copiados da internet, uma biblioteca de prompts é um produto interno que sua equipe mantém e reutiliza para consistência e velocidade.' } },
-          { '@type': 'Question', name: 'Quando uma equipe deve usar uma biblioteca de prompts em vez de anotações pessoais?', acceptedAnswer: { '@type': 'Answer', text: 'Assim que você tiver 3+ membros na equipe e 2+ prompts que usa mais de uma vez. Anotações pessoais funcionam para uma pessoa; bibliotecas funcionam para equipes. Uma biblioteca reduz o tempo de configuração de tarefas, integra novos colegas mais rapidamente e evita trabalho duplicado.' } },
-          { '@type': 'Question', name: 'Quanto tempo leva para construir uma biblioteca de prompts utilizável do zero?', acceptedAnswer: { '@type': 'Answer', text: 'Comece pequeno: 1–2 semanas para coletar 5–10 prompts reais do trabalho diário, normalizá-los em um modelo e carregá-los em um sistema compartilhado. A governança e as ferramentas melhoram ao longo do tempo; comece apenas com os rótulos de status Rascunho e Aprovado.' } },
-          { '@type': 'Question', name: 'Como faço para que minha equipe contribua para uma biblioteca de prompts compartilhada?', acceptedAnswer: { '@type': 'Answer', text: 'Torne a contribuição fácil e sem atrito. Comece com 3–5 prompts campeões que você mesmo cria para que as pessoas vejam exemplos. Mantenha a aprovação leve (uma pessoa, 5 minutos). Mostre vitórias ("Esta biblioteca nos economizou 10 horas este mês"). Nunca torne a contribuição obrigatória; torne-a o caminho de menor resistência.' } },
-          { '@type': 'Question', name: 'Uma biblioteca de prompts é o mesmo que um system prompt?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Um system prompt é uma instrução persistente única que define o comportamento do LLM para uma conversa. Uma biblioteca de prompts é uma coleção de prompts (cada um com contexto e metadados) compartilhada em sua equipe para muitos casos de uso. Um system prompt pode estar na sua biblioteca como uma entrada.' } },
-          { '@type': 'Question', name: 'Com que frequência devemos revisar e podar uma biblioteca de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Mensalmente no mínimo. Procure prompts que ninguém usa, prompts que as pessoas continuam editando ad hoc e oportunidades de consolidar. Marque prompts não utilizados como Obsoletos; remova-os das visualizações padrão após 3 meses de inatividade.' } },
-          { '@type': 'Question', name: 'Como você lida com prompts que funcionam em um modelo mas não em outro?', acceptedAnswer: { '@type': 'Answer', text: 'Marque cada prompt com os modelos testados nos metadados. Quando um prompt falha em um novo modelo, crie uma variante — por exemplo "Resumo de reunião – Modelo A" e "Resumo de reunião – Modelo B" — em vez de forçar um prompt a funcionar em todo lugar.' } },
-          { '@type': 'Question', name: 'Qual é a diferença entre uma biblioteca de prompts e uma plataforma de gestão de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Uma biblioteca de prompts é uma coleção de registros de prompts estruturados que sua equipe mantém — pode estar em um repositório Git, uma planilha ou uma ferramenta dedicada. Uma plataforma de gestão de prompts adiciona execução, análises, controle de versão e recursos de colaboração sobre o conceito de biblioteca. Comece com uma biblioteca simples e atualize para uma plataforma quando o volume ou as necessidades de governança justificarem.' } },
+          {
+            '@type': 'Question',
+            'name': 'O que é uma biblioteca de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Uma biblioteca de prompts é uma coleção estruturada de prompts testados com metadados (entradas, orientação de modelo, saída esperada, versão, responsável). Ao contrário de uma lista de prompts da internet, uma biblioteca de prompts é um produto interno que sua equipe mantém e reutiliza para consistência e velocidade.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quando uma equipe deve usar uma biblioteca de prompts em vez de anotações pessoais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Assim que você tiver 3+ membros na equipe e 2+ prompts que usa mais de uma vez. Anotações pessoais funcionam para uma pessoa; bibliotecas funcionam para equipes. Uma biblioteca reduz o tempo de configuração, integra pessoas mais rapidamente e evita trabalho duplicado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quanto tempo leva para construir uma biblioteca de prompts utilizável do zero?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Comece pequeno: 1–2 semanas para coletar 5–10 prompts reais do trabalho diário, normalizá-los em um modelo e carregá-los em um sistema compartilhado. Depois cresça ao longo dos meses.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como faço para que minha equipe realmente contribua para uma biblioteca de prompts compartilhada?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Torne a contribuição fácil e sem atrito. Comece com 3–5 prompts campeões que você mesmo cria. Mantenha a aprovação leve. Mostre vitórias. Nunca torne a contribuição obrigatória; torne-a o caminho de menor resistência.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Uma biblioteca de prompts é o mesmo que um system prompt?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. Um system prompt é uma instrução persistente única para uma conversa. Uma biblioteca de prompts é uma coleção de prompts compartilhada em sua equipe para muitos casos de uso.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Com que frequência devemos revisar e podar uma biblioteca de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mensalmente no mínimo. Procure prompts que ninguém usa e oportunidades de consolidar. Marque prompts não utilizados como Obsoletos; retire-os após 3 meses de inatividade.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como você lida com prompts que funcionam em um modelo mas não em outro?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Marque cada prompt com os modelos testados nos metadados. Quando um prompt falha em um novo modelo, crie uma variante em vez de forçar um prompt a funcionar em todo lugar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre uma biblioteca de prompts e uma plataforma de gestão de prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Uma biblioteca de prompts é uma coleção de registros de prompts estruturados. Uma plataforma de gestão de prompts adiciona execução, análises e controle de versão sobre o conceito de biblioteca. Comece com uma biblioteca simples.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -2312,71 +2314,71 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'fr',
     mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Qu\'est-ce qu\'une bibliothèque de prompts ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Une bibliothèque de prompts est une collection structurée et consultable de prompts que votre équipe gère. Elle peut vivre dans un repo Git, une base de données Notion, Airtable, une Google Sheet ou un outil dédié. L\'objectif : standardiser, partager et améliorer les prompts au lieu de les perdre dans des notes personnelles.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Quand une équipe doit-elle utiliser une bibliothèque plutôt que des notes personnelles ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Dès que plus d\'une personne utilise les mêmes prompts. Les notes personnelles fonctionnent pour les individus, mais quand votre équipe se développe, vous perdez les meilleurs prompts et gaspillez du temps en double travail.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Combien de temps faut-il pour créer une bibliothèque de prompts utile ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Une bibliothèque minimale avec 10–15 prompts testés prend 2–4 semaines (selon la taille de l\'équipe). Avec une utilisation active et des examens mensuels, la qualité s\'améliore continuellement. Comptez moins d\'1 heure par semaine de maintenance une fois la structure établie.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Comment amener mon équipe à contribuer réellement à une bibliothèque partagée ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Rendez la contribution aussi simple que possible : un formulaire ou modèle Git, des exigences de métadonnées claires, et des examens mensuels. Le plus important : montrez la valeur — les équipes contribuent quand elles voient que leurs prompts sont utilisés et améliorés.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Une bibliothèque de prompts est-elle la même qu\'un system prompt ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Non. Un system prompt est un ensemble de règles que vous définissez une fois et appliquez à toutes les entrées. Une bibliothèque de prompts est une collection de différents prompts pour différentes tâches — chacun avec ses propres métadonnées et versions.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'À quelle fréquence une équipe doit-elle examiner et nettoyer sa bibliothèque ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Mensuellement est idéal. Marquez les prompts peu utilisés comme Dépréciés, promovez les versions améliorées en Approuvé, et créez de nouvelles catégories si l\'utilisation change. Les équipes qui examinent mensuellement ont 20–30 % moins de bloat après 6 mois.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.5 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir un prompt en Approuvé.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Quelle est la différence entre une bibliothèque de prompts et une plateforme de gestion de prompts ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Une bibliothèque de prompts est une collection d\'entrées de prompts structurées que votre équipe gère — elle peut vivre dans un repo Git, une feuille de calcul ou un outil dédié. Une plateforme de gestion de prompts ajoute l\'exécution, les analyses, le contrôle de version et les fonctionnalités de collaboration en plus du concept de bibliothèque. Commencez avec une bibliothèque simple et mettez à niveau vers une plateforme quand le volume ou la gouvernance le justifie.',
-        },
-      },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce qu\'une bibliothèque de prompts ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Une bibliothèque de prompts est une collection structurée et consultable de prompts que votre équipe gère comme une source unique de vérité. Elle peut vivre dans un repo Git, une base de données Notion, Airtable, une Google Sheet ou un outil dédié. L\'objectif : permettre la réutilisation, améliorer la qualité, intégrer plus vite.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand notre équipe devrait-elle utiliser une bibliothèque plutôt que des notes personnelles ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Dès que plus d\'une personne utilise les mêmes prompts. Les notes personnelles fonctionnent pour les individus — mais quand votre équipe se développe, vous perdez les meilleurs prompts et gaspillez du temps en double travail.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien de temps faut-il pour créer une bibliothèque utilisable ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Une bibliothèque minimale avec 10–15 prompts testés prend 2–4 semaines (selon la taille de l\'équipe). Avec une utilisation active et des examens mensuels, la qualité s\'améliore continuellement. Comptez moins d\'1 heure par semaine de maintenance une fois établie.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment amener mon équipe à contribuer réellement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Rendez la contribution aussi simple que possible : un formulaire ou modèle Git, des exigences de métadonnées claires, et des examens mensuels. Le plus important : montrez la valeur — les équipes contribuent quand elles voient que leurs prompts sont utilisés et améliorés.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Une bibliothèque de prompts est-elle la même qu\'un system prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Un system prompt est un ensemble de règles que vous définissez une fois et appliquez à toutes les entrées. Une bibliothèque de prompts est une collection de différents prompts pour différentes tâches — chacun avec ses propres métadonnées et versions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'À quelle fréquence une équipe doit-elle examiner et nettoyer ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mensuellement est idéal. Marquez les prompts peu utilisés comme Dépréciés, promovez les versions améliorées en Approuvé, et créez de nouvelles catégories si l\'utilisation change. Les équipes qui examinent mensuellement ont 20–30 % moins de bloat après 6 mois.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.5 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre une bibliothèque de prompts et une plateforme de gestion ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Une bibliothèque de prompts est une collection d\'entrées structurées que votre équipe gère — elle peut vivre dans un repo Git, une feuille de calcul ou un outil dédié. Une plateforme de gestion ajoute l\'exécution, les analyses, le contrôle de version et les fonctionnalités de collaboration en plus du concept de bibliothèque. Commencez avec une bibliothèque simple et mettez à niveau vers une plateforme quand le volume ou la gouvernance le justifie.',
+            },
+          },
+        ],
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -2735,39 +2737,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq-section',
       title: 'Questions fréquemment posées',
       faqs: [
-        {
-          q: 'Qu\'est-ce qu\'une bibliothèque de prompts ?',
-          a: 'Une bibliothèque de prompts est une collection structurée et consultable de prompts que votre équipe gère comme une source unique de vérité. Elle peut vivre dans un repo Git, une base de données Notion, Airtable, une Google Sheet ou un outil dédié. L\'objectif : permettre la réutilisation, améliorer la qualité, intégrer plus vite.',
-        },
-        {
-          q: 'Quand notre équipe devrait-elle utiliser une bibliothèque plutôt que des notes personnelles ?',
-          a: 'Dès que plus d\'une personne utilise les mêmes prompts. Les notes personnelles fonctionnent pour les individus — mais quand votre équipe se développe, vous perdez les meilleurs prompts et gaspillez du temps en double travail.',
-        },
-        {
-          q: 'Combien de temps faut-il pour créer une bibliothèque utilisable ?',
-          a: 'Une bibliothèque minimale avec 10–15 prompts testés prend 2–4 semaines (selon la taille de l\'équipe). Avec une utilisation active et des examens mensuels, la qualité s\'améliore continuellement. Comptez moins d\'1 heure par semaine de maintenance une fois établie.',
-        },
-        {
-          q: 'Comment amener mon équipe à contribuer réellement ?',
-          a: 'Rendez la contribution aussi simple que possible : un formulaire ou modèle Git, des exigences de métadonnées claires, et des examens mensuels. Le plus important : montrez la valeur — les équipes contribuent quand elles voient que leurs prompts sont utilisés et améliorés.',
-        },
-        {
-          q: 'Une bibliothèque de prompts est-elle la même qu\'un system prompt ?',
-          a: 'Non. Un system prompt est un ensemble de règles que vous définissez une fois et appliquez à toutes les entrées. Une bibliothèque de prompts est une collection de différents prompts pour différentes tâches — chacun avec ses propres métadonnées et versions.',
-        },
-        {
-          q: 'À quelle fréquence une équipe doit-elle examiner et nettoyer ?',
-          a: 'Mensuellement est idéal. Marquez les prompts peu utilisés comme Dépréciés, promovez les versions améliorées en Approuvé, et créez de nouvelles catégories si l\'utilisation change. Les équipes qui examinent mensuellement ont 20–30 % moins de bloat après 6 mois.',
-        },
-        {
-          q: 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?',
-          a: 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.5 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.',
-        },
-        {
-          q: 'Quelle est la différence entre une bibliothèque de prompts et une plateforme de gestion ?',
-          a: 'Une bibliothèque de prompts est une collection d\'entrées structurées que votre équipe gère — elle peut vivre dans un repo Git, une feuille de calcul ou un outil dédié. Une plateforme de gestion ajoute l\'exécution, les analyses, le contrôle de version et les fonctionnalités de collaboration en plus du concept de bibliothèque. Commencez avec une bibliothèque simple et mettez à niveau vers une plateforme quand le volume ou la gouvernance le justifie.',
-        },
-      ],
+            { q: 'Qu\'est-ce qu\'une bibliothèque de prompts ?', a: 'Une bibliothèque de prompts est une collection structurée et consultable de prompts que votre équipe gère comme une source unique de vérité. Elle peut vivre dans un repo Git, une base de données Notion, Airtable, une Google Sheet ou un outil dédié. L\'objectif : permettre la réutilisation, améliorer la qualité, intégrer plus vite.' },
+            { q: 'Quand notre équipe devrait-elle utiliser une bibliothèque plutôt que des notes personnelles ?', a: 'Dès que plus d\'une personne utilise les mêmes prompts. Les notes personnelles fonctionnent pour les individus — mais quand votre équipe se développe, vous perdez les meilleurs prompts et gaspillez du temps en double travail.' },
+            { q: 'Combien de temps faut-il pour créer une bibliothèque utilisable ?', a: 'Une bibliothèque minimale avec 10–15 prompts testés prend 2–4 semaines (selon la taille de l\'équipe). Avec une utilisation active et des examens mensuels, la qualité s\'améliore continuellement. Comptez moins d\'1 heure par semaine de maintenance une fois établie.' },
+            { q: 'Comment amener mon équipe à contribuer réellement ?', a: 'Rendez la contribution aussi simple que possible : un formulaire ou modèle Git, des exigences de métadonnées claires, et des examens mensuels. Le plus important : montrez la valeur — les équipes contribuent quand elles voient que leurs prompts sont utilisés et améliorés.' },
+            { q: 'Une bibliothèque de prompts est-elle la même qu\'un system prompt ?', a: 'Non. Un system prompt est un ensemble de règles que vous définissez une fois et appliquez à toutes les entrées. Une bibliothèque de prompts est une collection de différents prompts pour différentes tâches — chacun avec ses propres métadonnées et versions.' },
+            { q: 'À quelle fréquence une équipe doit-elle examiner et nettoyer ?', a: 'Mensuellement est idéal. Marquez les prompts peu utilisés comme Dépréciés, promovez les versions améliorées en Approuvé, et créez de nouvelles catégories si l\'utilisation change. Les équipes qui examinent mensuellement ont 20–30 % moins de bloat après 6 mois.' },
+            { q: 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?', a: 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.5 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.' },
+            { q: 'Quelle est la différence entre une bibliothèque de prompts et une plateforme de gestion ?', a: 'Une bibliothèque de prompts est une collection d\'entrées structurées que votre équipe gère — elle peut vivre dans un repo Git, une feuille de calcul ou un outil dédié. Une plateforme de gestion ajoute l\'exécution, les analyses, le contrôle de version et les fonctionnalités de collaboration en plus du concept de bibliothèque. Commencez avec une bibliothèque simple et mettez à niveau vers une plateforme quand le volume ou la gouvernance le justifie.' },
+          ],
     },
     relatedReading: {
       id: 'related-reading',
@@ -2867,87 +2845,119 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'ja',
     mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'プロンプトライブラリとは何ですか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'プロンプトライブラリは、チームが管理する構造化された検索可能なプロンプト集約です。Git リポジトリ、Notion、Airtable、Google Sheet、または PromptQuorum のような専用ツールに保存できます。プロンプトの標準化、共有、改善が目的です。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '個人的なメモの代わりにライブラリを使うべき時期は？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '複数の人が同じプロンプトを使用する場合です。個人的なメモは個人向けで十分ですが、チームが成長すると、優れたプロンプトが消失し、二重作業が生じます。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '最初から使用可能なプロンプトライブラリを構築するのにどのくらいの時間がかかりますか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'テスト済みプロンプト10～15個を含む最小限のライブラリなら2～4週間（チームサイズに応じて変動）。継続的な使用と月次レビューにより、品質は継続的に向上します。一度確立されれば、保守に週1時間未満で済みます。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'チームに共有プロンプトライブラリへの貢献を促すにはどうすればよいですか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '貢献を可能な限りシンプルにしてください：フォームまたは Git テンプレート、明確なメタデータ要件、月次レビュー。最重要：価値を示してください。チームはプロンプトが使用され改善されるのを見れば貢献します。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'プロンプトライブラリはシステムプロンプトと同じですか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'いいえ。システムプロンプトは、一度定義して全入力に適用する規則集です。プロンプトライブラリは、異なるタスク向けの異なるプロンプトの集約で、各々に独自のメタデータとバージョンがあります。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'チームはどの頻度でプロンプトライブラリを確認・整理すべきですか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '月1回が理想的です。使用頻度の低いプロンプトを廃止予定として標識し、改善版を承認済みに昇格させ、使用方法が変わったときに新カテゴリを作成してください。月次レビューを行うチームは6か月後に20～30%の無駄を削減できます。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'あるモデルで機能するが別のモデルでは機能しないプロンプトはどう対処しますか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'メタデータでテスト済みモデルを各プロンプトにタグ付けしてください。プロンプトが新モデルで失敗した場合、一つのプロンプトを無理に全モデルで機能させるのではなく、バリエーション（例：「会議要約 – Claude」と「会議要約 – GPT-5.5」）を作成してください。多モデルテストツールで昇格前に出力を比較できます。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'プロンプトライブラリとプロンプト管理プラットフォームの違いは何ですか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'プロンプトライブラリは、チームが管理する構造化プロンプトレコードの集約で、Git リポジトリ、スプレッドシート、専用ツールに保存できます。プロンプト管理プラットフォームは、ライブラリのコンセプト上に実行、分析、バージョン管理、コラボレーション機能を追加します。シンプルなライブラリから始めて、ボリュームやガバナンスが必要な場合にプラットフォームにアップグレードしてください。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'PromptQuorum 使用時に METI AI ガバナンスに対応する必要がありますか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '2024年の METI AI ガバナンスガイドラインに対応することが推奨されています。PromptQuorum は日本国内のエンタープライズ展開に対応し、ローカル推論と監査ログで企業コンプライアンス要件を満たします。機密情報を扱うワークフロー（金融、医療、法務）にはローカル推論を使用し、ゼネラルなプロンプト管理には PromptQuorum を活用してください。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'エンタープライズセキュリティ下でのローカル推論はどのように実装しますか？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'ローカル推論（LM Studio、Ollama など）と PromptQuorum を組み合わせることで、機密性の高いプロンプトをオンプレミスで管理できます。メタデータと標準化は PromptQuorum で管理し、実行はローカル環境で行うというハイブリッドアプローチが効果的です。これにより、データ主権を確保しながらライブラリの利点を享受できます。',
-        },
-      },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'プロンプトライブラリとは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプトライブラリは、チームが唯一の情報源として管理する構造化・検索可能なプロンプト集約。Git リポジトリ、Notion、Airtable、Google Sheet、または専用ツール内に保存可能。目標は再利用、品質向上、速いオンボーディング。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '個人的なメモではなくライブラリを使う時期はいつ？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '複数人が同じプロンプト使用時。個人的なメモは個人向け — チーム成長時に優れたプロンプト消失・二重作業が生じる。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '使用可能なプロンプトライブラリを最初から構築するのに何日必要？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'テスト済み 10～15 プロンプトで 2～4 週（チームサイズに応じて）。継続使用・月次レビューで品質継続改善。確立後は週 1 時間未満で保守。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームに本当に貢献させるには？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '貢献を可能な限りシンプルに：フォーム・Git テンプレート、明確なメタデータ、月次レビュー。最重要：価値を示す — チームはプロンプト使用・改善を見れば投稿。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトライブラリはシステムプロンプトと同じ？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。システムプロンプトは一度定義した規則（全入力に適用）。ライブラリは異タスク向け異なるプロンプト集約（各々にメタデータ・バージョン）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '確認・整理の頻度は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '月 1 回が理想。使用少ないプロンプトを廃止予定に、改善版を承認済みに昇格。月次レビューチームは 6 か月で無駄 20～30% 削減。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'あるモデルで機能するが別では機能しないプロンプトは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'メタデータでテスト済みモデルをタグ付け。新モデルで失敗なら、一つを無理に全モデルで機能させるのではなく「会議要約 – Claude」と「会議要約 – GPT-5.5」のバリエーション作成。多モデルテストツールで出力比較→昇格。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトライブラリとプロンプト管理プラットフォームの違い？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ライブラリはチーム管理の構造化プロンプトレコード集約（Git・スプレッドシート・専用ツール）。プラットフォームはライブラリの上に実行・分析・バージョン管理・協業機能追加。シンプルから開始し、ボリューム・ガバナンスでアップグレード。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'METI AI ガバナンス対応は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2024 年 METI ガバナンスガイドラインに対応することが推奨。PromptQuorum は日本エンタープライズ展開対応で、ローカル推論・監査ログで企業コンプライアンス要件満たす。機密（金融・医療・法務）はローカル推論、汎用はプラットフォーム活用。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'エンタープライズセキュリティ下でローカル推論は？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ローカル推論（LM Studio・Ollama）と PromptQuorum の組み合わせで機密プロンプトのオンプレミス管理可能。メタデータ・標準化は PromptQuorum、実行はローカル環境 — ハイブリッド。データ主権確保しながらライブラリ利点享受。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '最初から使用可能なプロンプトライブラリを構築するのにどのくらいの時間がかかりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'テスト済みプロンプト10～15個を含む最小限のライブラリなら2～4週間（チームサイズに応じて変動）。継続的な使用と月次レビューにより、品質は継続的に向上します。一度確立されれば、保守に週1時間未満で済みます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームに共有プロンプトライブラリへの貢献を促すにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '貢献を可能な限りシンプルにしてください：フォームまたは Git テンプレート、明確なメタデータ要件、月次レビュー。最重要：価値を示してください。チームはプロンプトが使用され改善されるのを見れば貢献します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームはどの頻度でプロンプトライブラリを確認・整理すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '月1回が理想的です。使用頻度の低いプロンプトを廃止予定として標識し、改善版を承認済みに昇格させ、使用方法が変わったときに新カテゴリを作成してください。月次レビューを行うチームは6か月後に20～30%の無駄を削減できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PromptQuorum 使用時に METI AI ガバナンスに対応する必要がありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2024年の METI AI ガバナンスガイドラインに対応することが推奨されています。PromptQuorum は日本国内のエンタープライズ展開に対応し、ローカル推論と監査ログで企業コンプライアンス要件を満たします。機密情報を扱うワークフロー（金融、医療、法務）にはローカル推論を使用し、ゼネラルなプロンプト管理には PromptQuorum を活用してください。',
+            },
+          },
+        ],
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -3306,47 +3316,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq-section',
       title: 'よくある質問',
       faqs: [
-        {
-          q: 'プロンプトライブラリとは何ですか？',
-          a: 'プロンプトライブラリは、チームが唯一の情報源として管理する構造化・検索可能なプロンプト集約。Git リポジトリ、Notion、Airtable、Google Sheet、または専用ツール内に保存可能。目標は再利用、品質向上、速いオンボーディング。',
-        },
-        {
-          q: '個人的なメモではなくライブラリを使う時期はいつ？',
-          a: '複数人が同じプロンプト使用時。個人的なメモは個人向け — チーム成長時に優れたプロンプト消失・二重作業が生じる。',
-        },
-        {
-          q: '使用可能なプロンプトライブラリを最初から構築するのに何日必要？',
-          a: 'テスト済み 10～15 プロンプトで 2～4 週（チームサイズに応じて）。継続使用・月次レビューで品質継続改善。確立後は週 1 時間未満で保守。',
-        },
-        {
-          q: 'チームに本当に貢献させるには？',
-          a: '貢献を可能な限りシンプルに：フォーム・Git テンプレート、明確なメタデータ、月次レビュー。最重要：価値を示す — チームはプロンプト使用・改善を見れば投稿。',
-        },
-        {
-          q: 'プロンプトライブラリはシステムプロンプトと同じ？',
-          a: 'いいえ。システムプロンプトは一度定義した規則（全入力に適用）。ライブラリは異タスク向け異なるプロンプト集約（各々にメタデータ・バージョン）。',
-        },
-        {
-          q: '確認・整理の頻度は？',
-          a: '月 1 回が理想。使用少ないプロンプトを廃止予定に、改善版を承認済みに昇格。月次レビューチームは 6 か月で無駄 20～30% 削減。',
-        },
-        {
-          q: 'あるモデルで機能するが別では機能しないプロンプトは？',
-          a: 'メタデータでテスト済みモデルをタグ付け。新モデルで失敗なら、一つを無理に全モデルで機能させるのではなく「会議要約 – Claude」と「会議要約 – GPT-5.5」のバリエーション作成。多モデルテストツールで出力比較→昇格。',
-        },
-        {
-          q: 'プロンプトライブラリとプロンプト管理プラットフォームの違い？',
-          a: 'ライブラリはチーム管理の構造化プロンプトレコード集約（Git・スプレッドシート・専用ツール）。プラットフォームはライブラリの上に実行・分析・バージョン管理・協業機能追加。シンプルから開始し、ボリューム・ガバナンスでアップグレード。',
-        },
-        {
-          q: 'METI AI ガバナンス対応は？',
-          a: '2024 年 METI ガバナンスガイドラインに対応することが推奨。PromptQuorum は日本エンタープライズ展開対応で、ローカル推論・監査ログで企業コンプライアンス要件満たす。機密（金融・医療・法務）はローカル推論、汎用はプラットフォーム活用。',
-        },
-        {
-          q: 'エンタープライズセキュリティ下でローカル推論は？',
-          a: 'ローカル推論（LM Studio・Ollama）と PromptQuorum の組み合わせで機密プロンプトのオンプレミス管理可能。メタデータ・標準化は PromptQuorum、実行はローカル環境 — ハイブリッド。データ主権確保しながらライブラリ利点享受。',
-        },
-      ],
+            { q: 'プロンプトライブラリとは何ですか？', a: 'プロンプトライブラリは、チームが唯一の情報源として管理する構造化・検索可能なプロンプト集約。Git リポジトリ、Notion、Airtable、Google Sheet、または専用ツール内に保存可能。目標は再利用、品質向上、速いオンボーディング。' },
+            { q: '個人的なメモではなくライブラリを使う時期はいつ？', a: '複数人が同じプロンプト使用時。個人的なメモは個人向け — チーム成長時に優れたプロンプト消失・二重作業が生じる。' },
+            { q: '使用可能なプロンプトライブラリを最初から構築するのに何日必要？', a: 'テスト済み 10～15 プロンプトで 2～4 週（チームサイズに応じて）。継続使用・月次レビューで品質継続改善。確立後は週 1 時間未満で保守。' },
+            { q: 'チームに本当に貢献させるには？', a: '貢献を可能な限りシンプルに：フォーム・Git テンプレート、明確なメタデータ、月次レビュー。最重要：価値を示す — チームはプロンプト使用・改善を見れば投稿。' },
+            { q: 'プロンプトライブラリはシステムプロンプトと同じ？', a: 'いいえ。システムプロンプトは一度定義した規則（全入力に適用）。ライブラリは異タスク向け異なるプロンプト集約（各々にメタデータ・バージョン）。' },
+            { q: '確認・整理の頻度は？', a: '月 1 回が理想。使用少ないプロンプトを廃止予定に、改善版を承認済みに昇格。月次レビューチームは 6 か月で無駄 20～30% 削減。' },
+            { q: 'あるモデルで機能するが別では機能しないプロンプトは？', a: 'メタデータでテスト済みモデルをタグ付け。新モデルで失敗なら、一つを無理に全モデルで機能させるのではなく「会議要約 – Claude」と「会議要約 – GPT-5.5」のバリエーション作成。多モデルテストツールで出力比較→昇格。' },
+            { q: 'プロンプトライブラリとプロンプト管理プラットフォームの違い？', a: 'ライブラリはチーム管理の構造化プロンプトレコード集約（Git・スプレッドシート・専用ツール）。プラットフォームはライブラリの上に実行・分析・バージョン管理・協業機能追加。シンプルから開始し、ボリューム・ガバナンスでアップグレード。' },
+            { q: 'METI AI ガバナンス対応は？', a: '2024 年 METI ガバナンスガイドラインに対応することが推奨。PromptQuorum は日本エンタープライズ展開対応で、ローカル推論・監査ログで企業コンプライアンス要件満たす。機密（金融・医療・法務）はローカル推論、汎用はプラットフォーム活用。' },
+            { q: 'エンタープライズセキュリティ下でローカル推論は？', a: 'ローカル推論（LM Studio・Ollama）と PromptQuorum の組み合わせで機密プロンプトのオンプレミス管理可能。メタデータ・標準化は PromptQuorum、実行はローカル環境 — ハイブリッド。データ主権確保しながらライブラリ利点享受。' },
+            { q: '最初から使用可能なプロンプトライブラリを構築するのにどのくらいの時間がかかりますか？', a: 'テスト済みプロンプト10～15個を含む最小限のライブラリなら2～4週間（チームサイズに応じて変動）。継続的な使用と月次レビューにより、品質は継続的に向上します。一度確立されれば、保守に週1時間未満で済みます。' },
+            { q: 'チームに共有プロンプトライブラリへの貢献を促すにはどうすればよいですか？', a: '貢献を可能な限りシンプルにしてください：フォームまたは Git テンプレート、明確なメタデータ要件、月次レビュー。最重要：価値を示してください。チームはプロンプトが使用され改善されるのを見れば貢献します。' },
+            { q: 'チームはどの頻度でプロンプトライブラリを確認・整理すべきですか？', a: '月1回が理想的です。使用頻度の低いプロンプトを廃止予定として標識し、改善版を承認済みに昇格させ、使用方法が変わったときに新カテゴリを作成してください。月次レビューを行うチームは6か月後に20～30%の無駄を削減できます。' },
+            { q: 'PromptQuorum 使用時に METI AI ガバナンスに対応する必要がありますか？', a: '2024年の METI AI ガバナンスガイドラインに対応することが推奨されています。PromptQuorum は日本国内のエンタープライズ展開に対応し、ローカル推論と監査ログで企業コンプライアンス要件を満たします。機密情報を扱うワークフロー（金融、医療、法務）にはローカル推論を使用し、ゼネラルなプロンプト管理には PromptQuorum を活用してください。' },
+          ],
     },
     relatedReading: {
       id: 'related-reading',
@@ -3446,87 +3430,119 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'zh',
     mainEntity: [
-      {
-        '@type': 'Question',
-        name: '什么是提示词库？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '提示词库是您的团队作为唯一信息源管理的结构化、可搜索的提示词集合。它可以存储在Git仓库、Notion、Airtable、Google Sheet或PromptQuorum等专用工具中。目标是标准化、共享和改进提示词。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '什么时候应该使用库而不是个人笔记？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '一旦多个人使用相同的提示词。个人笔记适合个人工作，但当团队增长时，优质提示词会丢失，团队会浪费时间重复工作。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '从零开始构建可用的提示词库需要多长时间？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '含10-15个经过测试的提示词的最小库需要2-4周（取决于团队规模）。通过持续使用和月度审查，质量会不断提高。一旦建立，维护每周只需不到1小时。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '如何让团队真正为共享库做贡献？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '让贡献尽可能简单：表单或Git模板、清晰的元数据要求、月度审查。最重要的是：展示价值——当团队看到他们的提示词被使用和改进时，他们会贡献。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '提示词库与系统提示词相同吗？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '不相同。系统提示词是一次定义然后应用于所有输入的规则。提示词库是针对不同任务的不同提示词的集合——每个都有自己的元数据和版本。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '团队应该多久审查和整理一次库？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '每月一次为宜。标记使用少的提示词为已弃用，将改进版本升级为已批准，在使用方式改变时创建新类别。月度审查的团队6个月内可减少20-30%的冗余。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '如何处理在一个模型上有效但在另一个模型上无效的提示词？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-5.5"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '提示词库和提示词管理平台有什么区别？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '提示词库是您的团队管理的结构化提示词记录的集合——可以存储在Git仓库、电子表格或专用工具中。提示词管理平台在库的基础上增加了执行、分析、版本控制和协作功能。从简单库开始，当需要更多治理时升级到平台。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '使用PromptQuorum时需要遵守数据安全法吗？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '是的。根据2021年的数据安全法，如果提示词模板包含或涉及敏感数据，存储工具必须符合数据安全法要求。PromptQuorum提供中国地区部署选项，并支持本地推论以满足数据驻留和处理要求。对于金融、医疗、法律等受管制行业，使用本地推论确保敏感工作流的合规性。',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '企业合规下如何实现本地推论？',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '结合本地推论（LM Studio、Ollama等）和PromptQuorum，可以在自有基础设施中管理敏感提示词。混合方法：在PromptQuorum中管理元数据和标准化，在本地环境中执行。这既确保数据主权，又能享受库的优势。',
-        },
-      },
-    ],
+          {
+            '@type': 'Question',
+            'name': '什么是提示词库？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词库是您的团队作为唯一信息源管理的结构化、可搜索的提示词集合。可以存储在Git仓库、Notion、Airtable、Google Sheet或专用工具中。目标是重用、改进质量、加快入职。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '何时用库而不是个人笔记？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '一旦多个人使用相同提示词。个人笔记对个人有效——但团队增长时丢失优质提示词，浪费时间重复工作。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '从零构建可用库需多久？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '含10-15个经测试提示词的最小库需2-4周(按团队规模)。持续使用和月审查时质量持续提高。一旦建立，维护每周<1小时。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何让团队真实贡献？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '让贡献尽简单：表单或Git模板、清晰元数据要求、月审查。最重要：显示价值——团队看到提示词被用和改进时会贡献。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '库与系统提示词相同吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不同。系统提示词是一次定义应用到全部输入的规则。库是不同任务的不同提示词集合——各有元数据和版本。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '多久审查和整理一次库？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '每月为宜。标记少用提示词为已弃用、升级改进版本为已批准、使用改变时创建新类别。月审查团队6个月内减少20-30%冗余。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '一个模型有效但另一个无效的提示词如何处理？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-5.5」）而不强制一个提示词处处工作。多模型工具升级前比较输出。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '库和管理平台有何区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '库是团队管理的结构化提示词记录集合(可在Git、表格、专用工具中)。平台在库基础加执行、分析、版本管理、协作。从简单库开始，需要时升级到平台。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '使用PromptQuorum需遵守数据安全法吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。按数据安全法，敏感数据相关提示词工具必须符合法律。PromptQuorum提供中国部署选项且支持本地推论满足驻留和处理要求。受管制行业用本地推论确保敏感工作流合规。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '企业合规下如何用本地推论？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '结合本地推论(LM Studio、Ollama等)和PromptQuorum可在自有基础设施管理敏感提示词。混合：在PromptQuorum管理元数据和标准化，在本地环境执行。既保数据主权又享库优势。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '从零开始构建可用的提示词库需要多长时间？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '含10-15个经过测试的提示词的最小库需要2-4周（取决于团队规模）。通过持续使用和月度审查，质量会不断提高。一旦建立，维护每周只需不到1小时。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何让团队真正为共享库做贡献？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '让贡献尽可能简单：表单或Git模板、清晰的元数据要求、月度审查。最重要的是：展示价值——当团队看到他们的提示词被使用和改进时，他们会贡献。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何处理在一个模型上有效但在另一个模型上无效的提示词？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-5.5"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '提示词库和提示词管理平台有什么区别？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词库是您的团队管理的结构化提示词记录的集合——可以存储在Git仓库、电子表格或专用工具中。提示词管理平台在库的基础上增加了执行、分析、版本控制和协作功能。从简单库开始，当需要更多治理时升级到平台。',
+            },
+          },
+        ],
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -3885,47 +3901,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq-section',
       title: '常见问题',
       faqs: [
-        {
-          q: '什么是提示词库？',
-          a: '提示词库是您的团队作为唯一信息源管理的结构化、可搜索的提示词集合。可以存储在Git仓库、Notion、Airtable、Google Sheet或专用工具中。目标是重用、改进质量、加快入职。',
-        },
-        {
-          q: '何时用库而不是个人笔记？',
-          a: '一旦多个人使用相同提示词。个人笔记对个人有效——但团队增长时丢失优质提示词，浪费时间重复工作。',
-        },
-        {
-          q: '从零构建可用库需多久？',
-          a: '含10-15个经测试提示词的最小库需2-4周(按团队规模)。持续使用和月审查时质量持续提高。一旦建立，维护每周<1小时。',
-        },
-        {
-          q: '如何让团队真实贡献？',
-          a: '让贡献尽简单：表单或Git模板、清晰元数据要求、月审查。最重要：显示价值——团队看到提示词被用和改进时会贡献。',
-        },
-        {
-          q: '库与系统提示词相同吗？',
-          a: '不同。系统提示词是一次定义应用到全部输入的规则。库是不同任务的不同提示词集合——各有元数据和版本。',
-        },
-        {
-          q: '多久审查和整理一次库？',
-          a: '每月为宜。标记少用提示词为已弃用、升级改进版本为已批准、使用改变时创建新类别。月审查团队6个月内减少20-30%冗余。',
-        },
-        {
-          q: '一个模型有效但另一个无效的提示词如何处理？',
-          a: '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-5.5」）而不强制一个提示词处处工作。多模型工具升级前比较输出。',
-        },
-        {
-          q: '库和管理平台有何区别？',
-          a: '库是团队管理的结构化提示词记录集合(可在Git、表格、专用工具中)。平台在库基础加执行、分析、版本管理、协作。从简单库开始，需要时升级到平台。',
-        },
-        {
-          q: '使用PromptQuorum需遵守数据安全法吗？',
-          a: '是的。按数据安全法，敏感数据相关提示词工具必须符合法律。PromptQuorum提供中国部署选项且支持本地推论满足驻留和处理要求。受管制行业用本地推论确保敏感工作流合规。',
-        },
-        {
-          q: '企业合规下如何用本地推论？',
-          a: '结合本地推论(LM Studio、Ollama等)和PromptQuorum可在自有基础设施管理敏感提示词。混合：在PromptQuorum管理元数据和标准化，在本地环境执行。既保数据主权又享库优势。',
-        },
-      ],
+            { q: '什么是提示词库？', a: '提示词库是您的团队作为唯一信息源管理的结构化、可搜索的提示词集合。可以存储在Git仓库、Notion、Airtable、Google Sheet或专用工具中。目标是重用、改进质量、加快入职。' },
+            { q: '何时用库而不是个人笔记？', a: '一旦多个人使用相同提示词。个人笔记对个人有效——但团队增长时丢失优质提示词，浪费时间重复工作。' },
+            { q: '从零构建可用库需多久？', a: '含10-15个经测试提示词的最小库需2-4周(按团队规模)。持续使用和月审查时质量持续提高。一旦建立，维护每周<1小时。' },
+            { q: '如何让团队真实贡献？', a: '让贡献尽简单：表单或Git模板、清晰元数据要求、月审查。最重要：显示价值——团队看到提示词被用和改进时会贡献。' },
+            { q: '库与系统提示词相同吗？', a: '不同。系统提示词是一次定义应用到全部输入的规则。库是不同任务的不同提示词集合——各有元数据和版本。' },
+            { q: '多久审查和整理一次库？', a: '每月为宜。标记少用提示词为已弃用、升级改进版本为已批准、使用改变时创建新类别。月审查团队6个月内减少20-30%冗余。' },
+            { q: '一个模型有效但另一个无效的提示词如何处理？', a: '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-5.5」）而不强制一个提示词处处工作。多模型工具升级前比较输出。' },
+            { q: '库和管理平台有何区别？', a: '库是团队管理的结构化提示词记录集合(可在Git、表格、专用工具中)。平台在库基础加执行、分析、版本管理、协作。从简单库开始，需要时升级到平台。' },
+            { q: '使用PromptQuorum需遵守数据安全法吗？', a: '是的。按数据安全法，敏感数据相关提示词工具必须符合法律。PromptQuorum提供中国部署选项且支持本地推论满足驻留和处理要求。受管制行业用本地推论确保敏感工作流合规。' },
+            { q: '企业合规下如何用本地推论？', a: '结合本地推论(LM Studio、Ollama等)和PromptQuorum可在自有基础设施管理敏感提示词。混合：在PromptQuorum管理元数据和标准化，在本地环境执行。既保数据主权又享库优势。' },
+            { q: '从零开始构建可用的提示词库需要多长时间？', a: '含10-15个经过测试的提示词的最小库需要2-4周（取决于团队规模）。通过持续使用和月度审查，质量会不断提高。一旦建立，维护每周只需不到1小时。' },
+            { q: '如何让团队真正为共享库做贡献？', a: '让贡献尽可能简单：表单或Git模板、清晰的元数据要求、月度审查。最重要的是：展示价值——当团队看到他们的提示词被使用和改进时，他们会贡献。' },
+            { q: '如何处理在一个模型上有效但在另一个模型上无效的提示词？', a: '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-5.5"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。' },
+            { q: '提示词库和提示词管理平台有什么区别？', a: '提示词库是您的团队管理的结构化提示词记录的集合——可以存储在Git仓库、电子表格或专用工具中。提示词管理平台在库的基础上增加了执行、分析、版本控制和协作功能。从简单库开始，当需要更多治理时升级到平台。' },
+          ],
     },
     relatedReading: {
       id: 'related-reading',
@@ -4016,14 +4006,70 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ko',
         mainEntity: [
-          { '@type': 'Question', name: '프롬프트 라이브러리란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 라이브러리는 메타데이터(입력값, 모델 가이드, 예상 출력, 버전, 담당자)를 갖춘 검증된 프롬프트의 구조화된 모음입니다. 인터넷에서 복사한 프롬프트 목록과 달리, 팀이 일관성과 속도를 위해 유지 관리하고 재사용하는 내부 제품입니다.' } },
-          { '@type': 'Question', name: '팀이 개인 메모 대신 프롬프트 라이브러리를 사용해야 하는 시점은 언제입니까?', acceptedAnswer: { '@type': 'Answer', text: '팀원이 3명 이상이고 두 번 이상 사용하는 프롬프트가 2개 이상인 즉시입니다. 개인 메모는 한 사람에게 유효하지만, 라이브러리는 팀에 유효합니다. 라이브러리는 작업 설정 시간을 단축하고, 새 동료를 더 빨리 온보딩하며, 중복 작업을 방지합니다.' } },
-          { '@type': 'Question', name: '처음부터 사용 가능한 프롬프트 라이브러리를 구축하는 데 얼마나 걸립니까?', acceptedAnswer: { '@type': 'Answer', text: '작게 시작하십시오. 일상 업무에서 실제 프롬프트 5~10개를 수집하여 템플릿으로 정규화하고 공유 시스템에 업로드하는 데 1~2주가 걸립니다. 거버넌스와 도구는 시간이 지남에 따라 개선됩니다. 초안과 승인 상태 레이블만으로 시작하십시오.' } },
-          { '@type': 'Question', name: '팀이 공유 프롬프트 라이브러리에 기여하도록 하려면 어떻게 해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '기여를 쉽고 마찰 없이 만드십시오. 직접 3~5개의 대표 프롬프트를 만들어 예시를 보여주십시오. 승인을 가볍게 유지하십시오(한 명, 5분). 성과를 보여주십시오. 기여를 절대 의무화하지 마십시오.' } },
-          { '@type': 'Question', name: '프롬프트 라이브러리는 system prompt와 같습니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. system prompt는 대화의 LLM 동작을 설정하는 단일 영구 지시문입니다. 프롬프트 라이브러리는 많은 사용 사례를 위해 팀 전체에 공유되는 프롬프트 모음(각각 컨텍스트와 메타데이터 포함)입니다. system prompt는 라이브러리의 항목으로 존재할 수 있습니다.' } },
-          { '@type': 'Question', name: '프롬프트 라이브러리를 얼마나 자주 검토하고 정리해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: '최소 월 1회입니다. 아무도 사용하지 않는 프롬프트, 사람들이 계속 임시로 편집하는 프롬프트, 통합 기회를 찾으십시오. 미사용 프롬프트를 폐기됨으로 표시하고, 3개월 비활동 후 기본 보기에서 제거하십시오.' } },
-          { '@type': 'Question', name: '한 모델에서는 작동하지만 다른 모델에서는 작동하지 않는 프롬프트는 어떻게 처리합니까?', acceptedAnswer: { '@type': 'Answer', text: '메타데이터에서 각 프롬프트에 테스트된 모델을 태그하십시오. 새 모델에서 프롬프트가 실패하면 프롬프트를 모든 곳에서 작동하도록 강제하는 대신 변형을 만드십시오.' } },
-          { '@type': 'Question', name: '프롬프트 라이브러리와 프롬프트 관리 플랫폼의 차이는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '프롬프트 라이브러리는 팀이 유지 관리하는 구조화된 프롬프트 레코드 모음으로, Git 저장소, 스프레드시트 또는 전용 도구에 존재할 수 있습니다. 프롬프트 관리 플랫폼은 라이브러리 개념 위에 실행, 분석, 버전 관리 및 협업 기능을 추가합니다.' } },
+          {
+            '@type': 'Question',
+            'name': '프롬프트 라이브러리란 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '프롬프트 라이브러리는 메타데이터(입력값, 모델 가이드, 예상 출력, 버전, 담당자)를 갖춘 검증된 프롬프트의 구조화된 모음입니다. 인터넷에서 복사한 프롬프트 목록과 달리, 팀이 일관성과 속도를 위해 유지 관리하고 재사용하는 내부 제품입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '팀이 개인 메모 대신 프롬프트 라이브러리를 언제 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '팀원이 3명 이상이고 두 번 이상 사용하는 프롬프트가 2개 이상인 즉시입니다. 개인 메모는 한 사람에게 유효하지만 라이브러리는 팀에 유효합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '처음부터 사용 가능한 프롬프트 라이브러리를 구축하는 데 얼마나 걸립니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '작게 시작하십시오. 일상 업무에서 실제 프롬프트 5~10개를 수집하여 템플릿으로 정규화하고 공유 시스템에 업로드하는 데 1~2주가 걸립니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '팀이 공유 프롬프트 라이브러리에 기여하도록 하려면 어떻게 해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '기여를 쉽고 마찰 없이 만드십시오. 직접 3~5개의 대표 프롬프트를 만드십시오. 승인을 가볍게 유지하십시오. 성과를 보여주십시오. 기여를 절대 의무화하지 마십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '프롬프트 라이브러리는 system prompt와 같습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. system prompt는 대화의 단일 영구 지시문입니다. 프롬프트 라이브러리는 많은 사용 사례를 위해 팀 전체에 공유되는 프롬프트 모음입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '프롬프트 라이브러리를 얼마나 자주 검토하고 정리해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '최소 월 1회입니다. 아무도 사용하지 않는 프롬프트와 통합 기회를 찾으십시오. 미사용 프롬프트를 폐기됨으로 표시하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '한 모델에서는 작동하지만 다른 모델에서는 작동하지 않는 프롬프트는 어떻게 처리합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '메타데이터에서 각 프롬프트에 테스트된 모델을 태그하십시오. 새 모델에서 프롬프트가 실패하면 프롬프트를 모든 곳에서 작동하도록 강제하는 대신 변형을 만드십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '프롬프트 라이브러리와 프롬프트 관리 플랫폼의 차이는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '프롬프트 라이브러리는 팀이 유지 관리하는 구조화된 프롬프트 레코드 모음입니다. 프롬프트 관리 플랫폼은 라이브러리 개념 위에 실행, 분석, 버전 관리를 추가합니다. 간단한 라이브러리로 시작하십시오.',
+            },
+          },
         ],
       },
       howToSchema: {

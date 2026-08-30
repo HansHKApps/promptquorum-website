@@ -912,47 +912,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          {
-            q: 'Welches LLM-Finetuning-Framework ist 2026 das beste?',
-            a: 'Unsloth für die meisten, die auf eigener Hardware trainieren, denn die Apache-2.0-Bibliothek ist kostenlos und deckt inzwischen Multi-GPU-Setups über NVIDIA, AMD, Intel, CPU und Vulkan unter Windows, Linux, WSL und macOS ab. Axolotl ist die bessere Wahl, sobald das Training über mehrere Maschinen reicht, da es Multi-Node-Training und ND-Parallelität dokumentiert. MLX-LM ist die schlankeste Option auf Apple Silicon.',
-          },
-          {
-            q: 'Ist Unsloth kostenlos, und unterstützt die kostenlose Version Multi-GPU?',
-            a: 'Die Unsloth-Bibliothek ist unter Apache-2.0 kostenlos, und ihre README nennt Multi-GPU-Unterstützung ohne Bezahlschranke im Repository. Kostenpflichtige Pro- und Enterprise-Stufen existieren, ihre Preise sind jedoch nicht veröffentlicht, weshalb jede anderswo genannte konkrete Zahl als ungeprüft gelten sollte. Die verbreitete Behauptung, Multi-GPU erfordere eine kostenpflichtige Stufe, widerspricht der aktuellen Dokumentation des Projekts.',
-          },
-          {
-            q: 'Was kostet Cloud-Finetuning pro Million Token?',
-            a: 'Bei Together.ai kostet überwachtes LoRA-Finetuning 0,48 $ pro Million Trainings-Token bis 16B Parameter, 1,50 $ bei 17 bis 69B und 2,90 $ bei 70 bis 100B, mit 4,00 $ Mindestbetrag pro Job. Vollständiges überwachtes Finetuning kostet in denselben Stufen 1,20 $, 3,75 $ und 7,25 $. Bei Fireworks.ai beginnt LoRA-SFT bei 0,50 $ pro Million Token bis 16B und steigt oberhalb von 300B auf 10,00 $.',
-          },
-          {
-            q: 'Kann ich MLX-LM unter Windows oder Linux nutzen?',
-            a: 'Nein. MLX-LM baut auf Apples MLX-Framework und dem Unified Memory von Apple Silicon auf und kommt auf anderen Plattformen nicht infrage. Nutzen Sie unter Windows oder Linux Unsloth oder Axolotl. Beachten Sie, dass Unsloth inzwischen auch macOS-Builds ausliefert, Sie auf dem Mac also eine echte Wahl zwischen beiden haben.',
-          },
-          {
-            q: 'Was ist aus Predibase geworden?',
-            a: 'Rubrik gab die Übernahme von Predibase am 25. Juni 2025 bekannt. Am 28. August 2026 antwortet predibase.com mit einer HTTP-301-Weiterleitung auf Rubriks Agent-Cloud-Seite statt mit einem eigenständigen Produkt. Klären Sie die aktuelle Verfügbarkeit direkt mit Rubrik, bevor Sie sich in einem neuen Projekt darauf verlassen.',
-          },
-          {
-            q: 'Haben Together.ai oder Fireworks.ai Affiliate-Programme?',
-            a: 'Wir haben im August 2026 für keines der beiden ein öffentliches Affiliate- oder Empfehlungsprogramm gefunden, und keines taucht in den einschlägigen Übersichten auf. Ihre Partnerseiten beschreiben Geschäftsintegrationen, keine Empfehlungsprogramme für Publisher. PromptQuorum verdient an den Links auf dieser Seite nichts.',
-          },
-          {
-            q: 'Ist Cloud-Finetuning teurer als lokales?',
-            a: 'Das hängt davon ab, wie oft Sie trainieren. Für einen einzelnen Lauf auf einem kleinen Datensatz liegt die Cloud-Gebühr bei wenigen Dollar, was meist unter dem Wert eines Abends für die Umgebungseinrichtung liegt. Bei häufiger Iteration auf bereits vorhandener Hardware ist lokal ab dem zweiten Lauf günstiger, weil die Grenzkosten der Rechenleistung nahe null liegen.',
-          },
-          {
-            q: 'Brauche ich Multi-GPU, um ein 7B-Modell feinabzustimmen?',
-            a: 'In der Regel nicht. Eine einzelne Karte der 24-GB-Klasse bewältigt ein 7B-Modell mit QLoRA komfortabel. Multi-GPU ist eher bei größeren Modellen oder vollständigem Finetuning ohne LoRA relevant. Zur VRAM-Dimensionierung siehe den [Leitfaden zu den Hardwareanforderungen](/de/prompt-bites/fine-tuning-7b-model-locally-hardware).',
-          },
-          {
-            q: 'Ist DSGVO-konformes Finetuning mit einer US-Cloud-API überhaupt möglich?',
-            a: 'Möglich ja, aber aufwendiger als lokales Training. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28, eine tragfähige Rechtsgrundlage für die Übermittlung nach den Artikeln 44 bis 49 und eine dokumentierte Folgenabschätzung, wenn der Trainingsdatensatz personenbezogene Daten enthält. Erschwerend kommt hinzu, dass Trainingsdaten in die Modellgewichte eingehen und sich damit schlechter zurückholen lassen als ein einzelner Prompt. Für sensible Datensätze ist lokales Finetuning mit Unsloth oder Axolotl der deutlich einfachere Weg zur Rechtskonformität.',
-          },
-          {
-            q: 'Welches Framework passt zu einem Mittelständler ohne eigenes ML-Team?',
-            a: 'Unsloth auf einer einzelnen Workstation mit einer Karte der 24-GB-Klasse. Der Einrichtungsaufwand ist der geringste der drei, die Lizenz ist Apache-2.0 und damit kommerziell unproblematisch, und die Daten verlassen das Haus nicht — was die datenschutzrechtliche Prüfung erheblich verkürzt. Axolotl lohnt sich erst, wenn Sie tatsächlich über mehrere Maschinen trainieren, und bindet sonst nur Personal an ein Konfigurationssystem. Prüfen Sie vorab ernsthaft, ob eine RAG-Pipeline Ihr Problem nicht ohne Training löst: Bei den meisten Mittelstandsanwendungen lautet die Antwort ja.',
-          },
-        ],
+            { q: 'Welches LLM-Finetuning-Framework ist 2026 das beste?', a: 'Unsloth für die meisten, die auf eigener Hardware trainieren, denn die Apache-2.0-Bibliothek ist kostenlos und deckt inzwischen Multi-GPU-Setups über NVIDIA, AMD, Intel, CPU und Vulkan unter Windows, Linux, WSL und macOS ab. Axolotl ist die bessere Wahl, sobald das Training über mehrere Maschinen reicht, da es Multi-Node-Training und ND-Parallelität dokumentiert. MLX-LM ist die schlankeste Option auf Apple Silicon.' },
+            { q: 'Ist Unsloth kostenlos, und unterstützt die kostenlose Version Multi-GPU?', a: 'Die Unsloth-Bibliothek ist unter Apache-2.0 kostenlos, und ihre README nennt Multi-GPU-Unterstützung ohne Bezahlschranke im Repository. Kostenpflichtige Pro- und Enterprise-Stufen existieren, ihre Preise sind jedoch nicht veröffentlicht, weshalb jede anderswo genannte konkrete Zahl als ungeprüft gelten sollte. Die verbreitete Behauptung, Multi-GPU erfordere eine kostenpflichtige Stufe, widerspricht der aktuellen Dokumentation des Projekts.' },
+            { q: 'Was kostet Cloud-Finetuning pro Million Token?', a: 'Bei Together.ai kostet überwachtes LoRA-Finetuning 0,48 $ pro Million Trainings-Token bis 16B Parameter, 1,50 $ bei 17 bis 69B und 2,90 $ bei 70 bis 100B, mit 4,00 $ Mindestbetrag pro Job. Vollständiges überwachtes Finetuning kostet in denselben Stufen 1,20 $, 3,75 $ und 7,25 $. Bei Fireworks.ai beginnt LoRA-SFT bei 0,50 $ pro Million Token bis 16B und steigt oberhalb von 300B auf 10,00 $.' },
+            { q: 'Kann ich MLX-LM unter Windows oder Linux nutzen?', a: 'Nein. MLX-LM baut auf Apples MLX-Framework und dem Unified Memory von Apple Silicon auf und kommt auf anderen Plattformen nicht infrage. Nutzen Sie unter Windows oder Linux Unsloth oder Axolotl. Beachten Sie, dass Unsloth inzwischen auch macOS-Builds ausliefert, Sie auf dem Mac also eine echte Wahl zwischen beiden haben.' },
+            { q: 'Was ist aus Predibase geworden?', a: 'Rubrik gab die Übernahme von Predibase am 25. Juni 2025 bekannt. Am 28. August 2026 antwortet predibase.com mit einer HTTP-301-Weiterleitung auf Rubriks Agent-Cloud-Seite statt mit einem eigenständigen Produkt. Klären Sie die aktuelle Verfügbarkeit direkt mit Rubrik, bevor Sie sich in einem neuen Projekt darauf verlassen.' },
+            { q: 'Haben Together.ai oder Fireworks.ai Affiliate-Programme?', a: 'Wir haben im August 2026 für keines der beiden ein öffentliches Affiliate- oder Empfehlungsprogramm gefunden, und keines taucht in den einschlägigen Übersichten auf. Ihre Partnerseiten beschreiben Geschäftsintegrationen, keine Empfehlungsprogramme für Publisher. PromptQuorum verdient an den Links auf dieser Seite nichts.' },
+            { q: 'Ist Cloud-Finetuning teurer als lokales?', a: 'Das hängt davon ab, wie oft Sie trainieren. Für einen einzelnen Lauf auf einem kleinen Datensatz liegt die Cloud-Gebühr bei wenigen Dollar, was meist unter dem Wert eines Abends für die Umgebungseinrichtung liegt. Bei häufiger Iteration auf bereits vorhandener Hardware ist lokal ab dem zweiten Lauf günstiger, weil die Grenzkosten der Rechenleistung nahe null liegen.' },
+            { q: 'Brauche ich Multi-GPU, um ein 7B-Modell feinabzustimmen?', a: 'In der Regel nicht. Eine einzelne Karte der 24-GB-Klasse bewältigt ein 7B-Modell mit QLoRA komfortabel. Multi-GPU ist eher bei größeren Modellen oder vollständigem Finetuning ohne LoRA relevant. Zur VRAM-Dimensionierung siehe den [Leitfaden zu den Hardwareanforderungen](/de/prompt-bites/fine-tuning-7b-model-locally-hardware).' },
+            { q: 'Ist DSGVO-konformes Finetuning mit einer US-Cloud-API überhaupt möglich?', a: 'Möglich ja, aber aufwendiger als lokales Training. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28, eine tragfähige Rechtsgrundlage für die Übermittlung nach den Artikeln 44 bis 49 und eine dokumentierte Folgenabschätzung, wenn der Trainingsdatensatz personenbezogene Daten enthält. Erschwerend kommt hinzu, dass Trainingsdaten in die Modellgewichte eingehen und sich damit schlechter zurückholen lassen als ein einzelner Prompt. Für sensible Datensätze ist lokales Finetuning mit Unsloth oder Axolotl der deutlich einfachere Weg zur Rechtskonformität.' },
+            { q: 'Welches Framework passt zu einem Mittelständler ohne eigenes ML-Team?', a: 'Unsloth auf einer einzelnen Workstation mit einer Karte der 24-GB-Klasse. Der Einrichtungsaufwand ist der geringste der drei, die Lizenz ist Apache-2.0 und damit kommerziell unproblematisch, und die Daten verlassen das Haus nicht — was die datenschutzrechtliche Prüfung erheblich verkürzt. Axolotl lohnt sich erst, wenn Sie tatsächlich über mehrere Maschinen trainieren, und bindet sonst nur Personal an ein Konfigurationssystem. Prüfen Sie vorab ernsthaft, ob eine RAG-Pipeline Ihr Problem nicht ohne Training löst: Bei den meisten Mittelstandsanwendungen lautet die Antwort ja.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1020,47 +990,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Welches LLM-Finetuning-Framework ist 2026 das beste?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Unsloth für die meisten, die auf eigener Hardware trainieren, da die Apache-2.0-Bibliothek kostenlos ist und Multi-GPU über NVIDIA, AMD, Intel, CPU und Vulkan abdeckt. Axolotl ist besser, sobald das Training über mehrere Maschinen reicht, MLX-LM ist die schlankeste Option auf Apple Silicon.',
+          {
+            '@type': 'Question',
+            'name': 'Welches LLM-Finetuning-Framework ist 2026 das beste?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unsloth für die meisten, die auf eigener Hardware trainieren, denn die Apache-2.0-Bibliothek ist kostenlos und deckt inzwischen Multi-GPU-Setups über NVIDIA, AMD, Intel, CPU und Vulkan unter Windows, Linux, WSL und macOS ab. Axolotl ist die bessere Wahl, sobald das Training über mehrere Maschinen reicht, da es Multi-Node-Training und ND-Parallelität dokumentiert. MLX-LM ist die schlankeste Option auf Apple Silicon.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist Unsloth kostenlos, und unterstützt die kostenlose Version Multi-GPU?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Die Unsloth-Bibliothek ist unter Apache-2.0 kostenlos und ihre README nennt Multi-GPU-Unterstützung ohne Bezahlschranke im Repository. Kostenpflichtige Pro- und Enterprise-Stufen existieren, ihre Preise sind jedoch nicht veröffentlicht.',
+          {
+            '@type': 'Question',
+            'name': 'Ist Unsloth kostenlos, und unterstützt die kostenlose Version Multi-GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die Unsloth-Bibliothek ist unter Apache-2.0 kostenlos, und ihre README nennt Multi-GPU-Unterstützung ohne Bezahlschranke im Repository. Kostenpflichtige Pro- und Enterprise-Stufen existieren, ihre Preise sind jedoch nicht veröffentlicht, weshalb jede anderswo genannte konkrete Zahl als ungeprüft gelten sollte. Die verbreitete Behauptung, Multi-GPU erfordere eine kostenpflichtige Stufe, widerspricht der aktuellen Dokumentation des Projekts.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was kostet Cloud-Finetuning pro Million Token?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Together.ai verlangt 0,48 $ pro Million Token für überwachtes LoRA-Finetuning bis 16B Parameter, steigend auf 2,90 $ bei 70 bis 100B, mit 4,00 $ Mindestbetrag pro Job. Vollständiges SFT kostet in denselben Stufen 1,20 bis 7,25 $. Fireworks.ai beginnt bei 0,50 $ pro Million Token.',
+          {
+            '@type': 'Question',
+            'name': 'Was kostet Cloud-Finetuning pro Million Token?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bei Together.ai kostet überwachtes LoRA-Finetuning 0,48 $ pro Million Trainings-Token bis 16B Parameter, 1,50 $ bei 17 bis 69B und 2,90 $ bei 70 bis 100B, mit 4,00 $ Mindestbetrag pro Job. Vollständiges überwachtes Finetuning kostet in denselben Stufen 1,20 $, 3,75 $ und 7,25 $. Bei Fireworks.ai beginnt LoRA-SFT bei 0,50 $ pro Million Token bis 16B und steigt oberhalb von 300B auf 10,00 $.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was ist aus Predibase geworden?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Rubrik gab die Übernahme von Predibase am 25. Juni 2025 bekannt. Am 28. August 2026 antwortet predibase.com mit einer HTTP-301-Weiterleitung auf Rubrik Agent Cloud statt mit einem eigenständigen Self-Service-Finetuning-Produkt.',
+          {
+            '@type': 'Question',
+            'name': 'Kann ich MLX-LM unter Windows oder Linux nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. MLX-LM baut auf Apples MLX-Framework und dem Unified Memory von Apple Silicon auf und kommt auf anderen Plattformen nicht infrage. Nutzen Sie unter Windows oder Linux Unsloth oder Axolotl. Beachten Sie, dass Unsloth inzwischen auch macOS-Builds ausliefert, Sie auf dem Mac also eine echte Wahl zwischen beiden haben.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist DSGVO-konformes Finetuning mit einer US-Cloud-API möglich?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, aber aufwendiger als lokales Training. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage nach den Artikeln 44 bis 49. Da Trainingsdaten in die Gewichte eingehen, ist lokales Finetuning bei sensiblen Datensätzen der einfachere Weg.',
+          {
+            '@type': 'Question',
+            'name': 'Was ist aus Predibase geworden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Rubrik gab die Übernahme von Predibase am 25. Juni 2025 bekannt. Am 28. August 2026 antwortet predibase.com mit einer HTTP-301-Weiterleitung auf Rubriks Agent-Cloud-Seite statt mit einem eigenständigen Produkt. Klären Sie die aktuelle Verfügbarkeit direkt mit Rubrik, bevor Sie sich in einem neuen Projekt darauf verlassen.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Haben Together.ai oder Fireworks.ai Affiliate-Programme?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Wir haben im August 2026 für keines der beiden ein öffentliches Affiliate- oder Empfehlungsprogramm gefunden, und keines taucht in den einschlägigen Übersichten auf. Ihre Partnerseiten beschreiben Geschäftsintegrationen, keine Empfehlungsprogramme für Publisher. PromptQuorum verdient an den Links auf dieser Seite nichts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Cloud-Finetuning teurer als lokales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Das hängt davon ab, wie oft Sie trainieren. Für einen einzelnen Lauf auf einem kleinen Datensatz liegt die Cloud-Gebühr bei wenigen Dollar, was meist unter dem Wert eines Abends für die Umgebungseinrichtung liegt. Bei häufiger Iteration auf bereits vorhandener Hardware ist lokal ab dem zweiten Lauf günstiger, weil die Grenzkosten der Rechenleistung nahe null liegen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Brauche ich Multi-GPU, um ein 7B-Modell feinabzustimmen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'In der Regel nicht. Eine einzelne Karte der 24-GB-Klasse bewältigt ein 7B-Modell mit QLoRA komfortabel. Multi-GPU ist eher bei größeren Modellen oder vollständigem Finetuning ohne LoRA relevant. Zur VRAM-Dimensionierung siehe den [Leitfaden zu den Hardwareanforderungen](/de/prompt-bites/fine-tuning-7b-model-locally-hardware).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist DSGVO-konformes Finetuning mit einer US-Cloud-API überhaupt möglich?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Möglich ja, aber aufwendiger als lokales Training. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28, eine tragfähige Rechtsgrundlage für die Übermittlung nach den Artikeln 44 bis 49 und eine dokumentierte Folgenabschätzung, wenn der Trainingsdatensatz personenbezogene Daten enthält. Erschwerend kommt hinzu, dass Trainingsdaten in die Modellgewichte eingehen und sich damit schlechter zurückholen lassen als ein einzelner Prompt. Für sensible Datensätze ist lokales Finetuning mit Unsloth oder Axolotl der deutlich einfachere Weg zur Rechtskonformität.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welches Framework passt zu einem Mittelständler ohne eigenes ML-Team?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unsloth auf einer einzelnen Workstation mit einer Karte der 24-GB-Klasse. Der Einrichtungsaufwand ist der geringste der drei, die Lizenz ist Apache-2.0 und damit kommerziell unproblematisch, und die Daten verlassen das Haus nicht — was die datenschutzrechtliche Prüfung erheblich verkürzt. Axolotl lohnt sich erst, wenn Sie tatsächlich über mehrere Maschinen trainieren, und bindet sonst nur Personal an ein Konfigurationssystem. Prüfen Sie vorab ernsthaft, ob eine RAG-Pipeline Ihr Problem nicht ohne Training löst: Bei den meisten Mittelstandsanwendungen lautet die Antwort ja.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1454,39 +1464,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Cuál es el mejor framework de fine-tuning de LLM en 2026?',
-            a: 'Unsloth para la mayoría de quienes entrenan en hardware propio, porque la biblioteca Apache-2.0 es gratuita y ya cubre configuraciones multi-GPU en NVIDIA, AMD, Intel, CPU y Vulkan sobre Windows, Linux, WSL y macOS. Axolotl es mejor cuando el entrenamiento abarca varias máquinas, ya que documenta entrenamiento multinodo y paralelismo ND. MLX-LM es la opción más ligera en Apple Silicon.',
-          },
-          {
-            q: '¿Unsloth es gratuito y la versión gratuita admite multi-GPU?',
-            a: 'La biblioteca Unsloth es gratuita bajo Apache-2.0 y su README enumera soporte multi-GPU sin muro de pago en el repositorio. Existen planes de pago Pro y Enterprise, pero sus precios no están publicados, así que cualquier cifra concreta citada en otro sitio debe considerarse no verificada. La afirmación habitual de que el multi-GPU exige un plan de pago contradice la documentación actual del proyecto.',
-          },
-          {
-            q: '¿Cuánto cuesta el fine-tuning en la nube por millón de tokens?',
-            a: 'En Together.ai, el fine-tuning supervisado con LoRA cuesta 0,48 $ por millón de tokens hasta 16B parámetros, 1,50 $ entre 17 y 69B y 2,90 $ entre 70 y 100B, con un mínimo de 4,00 $ por trabajo. El fine-tuning supervisado completo cuesta 1,20 $, 3,75 $ y 7,25 $ en esos mismos tramos. En Fireworks.ai, LoRA SFT parte de 0,50 $ por millón de tokens hasta 16B y sube a 10,00 $ por encima de 300B.',
-          },
-          {
-            q: '¿Puedo usar MLX-LM en Windows o Linux?',
-            a: 'No. MLX-LM está construido sobre el framework MLX de Apple y la memoria unificada de Apple Silicon, así que no es candidato en otras plataformas. Use Unsloth o Axolotl en Windows o Linux. Tenga en cuenta que Unsloth también publica compilaciones de macOS, de modo que en un Mac tiene una elección real entre ambos.',
-          },
-          {
-            q: '¿Qué pasó con Predibase?',
-            a: 'Rubrik anunció la adquisición de Predibase el 25 de junio de 2025. A 28 de agosto de 2026, predibase.com devuelve una redirección HTTP 301 a la página Agent Cloud de Rubrik en lugar de servir un producto independiente. Confirme la disponibilidad actual directamente con Rubrik antes de depender de ello para un proyecto nuevo.',
-          },
-          {
-            q: '¿Together.ai o Fireworks.ai tienen programas de afiliados?',
-            a: 'No hemos encontrado ningún programa público de afiliados o referidos para ninguno de los dos en agosto de 2026, y ninguno aparece en los principales listados del sector. Sus páginas de partners describen integraciones empresariales, no programas de referidos para creadores. PromptQuorum no gana nada con los enlaces de esta página.',
-          },
-          {
-            q: '¿El fine-tuning en la nube es más caro que el local?',
-            a: 'Depende de con qué frecuencia entrene. Para una sola ejecución sobre un conjunto pequeño, la tarifa en la nube es de unos pocos dólares, normalmente menos que el valor de una tarde dedicada a configurar el entorno. Para iteración frecuente en hardware que ya posee, local es más barato en cada ejecución después de la primera, porque el coste marginal de cómputo es casi nulo.',
-          },
-          {
-            q: '¿Necesito multi-GPU para ajustar un modelo 7B?',
-            a: 'Normalmente no. Una sola tarjeta de clase 24 GB maneja un modelo 7B con holgura usando QLoRA. El multi-GPU importa más en modelos mayores o en fine-tuning completo sin LoRA. Consulte la [guía de requisitos de hardware](/es/prompt-bites/fine-tuning-7b-model-locally-hardware) para el dimensionamiento de VRAM.',
-          },
-        ],
+            { q: '¿Cuál es el mejor framework de fine-tuning de LLM en 2026?', a: 'Unsloth para la mayoría de quienes entrenan en hardware propio, porque la biblioteca Apache-2.0 es gratuita y ya cubre configuraciones multi-GPU en NVIDIA, AMD, Intel, CPU y Vulkan sobre Windows, Linux, WSL y macOS. Axolotl es mejor cuando el entrenamiento abarca varias máquinas, ya que documenta entrenamiento multinodo y paralelismo ND. MLX-LM es la opción más ligera en Apple Silicon.' },
+            { q: '¿Unsloth es gratuito y la versión gratuita admite multi-GPU?', a: 'La biblioteca Unsloth es gratuita bajo Apache-2.0 y su README enumera soporte multi-GPU sin muro de pago en el repositorio. Existen planes de pago Pro y Enterprise, pero sus precios no están publicados, así que cualquier cifra concreta citada en otro sitio debe considerarse no verificada. La afirmación habitual de que el multi-GPU exige un plan de pago contradice la documentación actual del proyecto.' },
+            { q: '¿Cuánto cuesta el fine-tuning en la nube por millón de tokens?', a: 'En Together.ai, el fine-tuning supervisado con LoRA cuesta 0,48 $ por millón de tokens hasta 16B parámetros, 1,50 $ entre 17 y 69B y 2,90 $ entre 70 y 100B, con un mínimo de 4,00 $ por trabajo. El fine-tuning supervisado completo cuesta 1,20 $, 3,75 $ y 7,25 $ en esos mismos tramos. En Fireworks.ai, LoRA SFT parte de 0,50 $ por millón de tokens hasta 16B y sube a 10,00 $ por encima de 300B.' },
+            { q: '¿Puedo usar MLX-LM en Windows o Linux?', a: 'No. MLX-LM está construido sobre el framework MLX de Apple y la memoria unificada de Apple Silicon, así que no es candidato en otras plataformas. Use Unsloth o Axolotl en Windows o Linux. Tenga en cuenta que Unsloth también publica compilaciones de macOS, de modo que en un Mac tiene una elección real entre ambos.' },
+            { q: '¿Qué pasó con Predibase?', a: 'Rubrik anunció la adquisición de Predibase el 25 de junio de 2025. A 28 de agosto de 2026, predibase.com devuelve una redirección HTTP 301 a la página Agent Cloud de Rubrik en lugar de servir un producto independiente. Confirme la disponibilidad actual directamente con Rubrik antes de depender de ello para un proyecto nuevo.' },
+            { q: '¿Together.ai o Fireworks.ai tienen programas de afiliados?', a: 'No hemos encontrado ningún programa público de afiliados o referidos para ninguno de los dos en agosto de 2026, y ninguno aparece en los principales listados del sector. Sus páginas de partners describen integraciones empresariales, no programas de referidos para creadores. PromptQuorum no gana nada con los enlaces de esta página.' },
+            { q: '¿El fine-tuning en la nube es más caro que el local?', a: 'Depende de con qué frecuencia entrene. Para una sola ejecución sobre un conjunto pequeño, la tarifa en la nube es de unos pocos dólares, normalmente menos que el valor de una tarde dedicada a configurar el entorno. Para iteración frecuente en hardware que ya posee, local es más barato en cada ejecución después de la primera, porque el coste marginal de cómputo es casi nulo.' },
+            { q: '¿Necesito multi-GPU para ajustar un modelo 7B?', a: 'Normalmente no. Una sola tarjeta de clase 24 GB maneja un modelo 7B con holgura usando QLoRA. El multi-GPU importa más en modelos mayores o en fine-tuning completo sin LoRA. Consulte la [guía de requisitos de hardware](/es/prompt-bites/fine-tuning-7b-model-locally-hardware) para el dimensionamiento de VRAM.' },
+            { q: '¿Unsloth es gratuito y admite multi-GPU en la versión gratuita?', a: 'La biblioteca Unsloth es gratuita bajo Apache-2.0 y su README enumera soporte multi-GPU sin muro de pago en el repositorio. Existen planes Pro y Enterprise de pago, pero sus precios no están publicados.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1554,47 +1541,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Cuál es el mejor framework de fine-tuning de LLM en 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Unsloth para la mayoría de quienes entrenan en hardware propio, ya que la biblioteca Apache-2.0 es gratuita y cubre multi-GPU en NVIDIA, AMD, Intel, CPU y Vulkan. Axolotl es mejor cuando el entrenamiento abarca varias máquinas, y MLX-LM es la opción más ligera en Apple Silicon.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor framework de fine-tuning de LLM en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unsloth para la mayoría de quienes entrenan en hardware propio, porque la biblioteca Apache-2.0 es gratuita y ya cubre configuraciones multi-GPU en NVIDIA, AMD, Intel, CPU y Vulkan sobre Windows, Linux, WSL y macOS. Axolotl es mejor cuando el entrenamiento abarca varias máquinas, ya que documenta entrenamiento multinodo y paralelismo ND. MLX-LM es la opción más ligera en Apple Silicon.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Unsloth es gratuito y admite multi-GPU en la versión gratuita?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'La biblioteca Unsloth es gratuita bajo Apache-2.0 y su README enumera soporte multi-GPU sin muro de pago en el repositorio. Existen planes Pro y Enterprise de pago, pero sus precios no están publicados.',
+          {
+            '@type': 'Question',
+            'name': '¿Unsloth es gratuito y la versión gratuita admite multi-GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La biblioteca Unsloth es gratuita bajo Apache-2.0 y su README enumera soporte multi-GPU sin muro de pago en el repositorio. Existen planes de pago Pro y Enterprise, pero sus precios no están publicados, así que cualquier cifra concreta citada en otro sitio debe considerarse no verificada. La afirmación habitual de que el multi-GPU exige un plan de pago contradice la documentación actual del proyecto.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cuánto cuesta el fine-tuning en la nube por millón de tokens?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Together.ai cobra 0,48 $ por millón de tokens para fine-tuning supervisado con LoRA hasta 16B parámetros, subiendo a 2,90 $ entre 70 y 100B, con un mínimo de 4,00 $ por trabajo. El SFT completo cuesta de 1,20 a 7,25 $ en esos tramos. Fireworks.ai parte de 0,50 $ por millón de tokens.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto cuesta el fine-tuning en la nube por millón de tokens?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En Together.ai, el fine-tuning supervisado con LoRA cuesta 0,48 $ por millón de tokens hasta 16B parámetros, 1,50 $ entre 17 y 69B y 2,90 $ entre 70 y 100B, con un mínimo de 4,00 $ por trabajo. El fine-tuning supervisado completo cuesta 1,20 $, 3,75 $ y 7,25 $ en esos mismos tramos. En Fireworks.ai, LoRA SFT parte de 0,50 $ por millón de tokens hasta 16B y sube a 10,00 $ por encima de 300B.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué pasó con Predibase?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Rubrik anunció la adquisición de Predibase el 25 de junio de 2025. A 28 de agosto de 2026, predibase.com devuelve una redirección HTTP 301 a Rubrik Agent Cloud en lugar de servir un producto independiente de fine-tuning autoservicio.',
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar MLX-LM en Windows o Linux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. MLX-LM está construido sobre el framework MLX de Apple y la memoria unificada de Apple Silicon, así que no es candidato en otras plataformas. Use Unsloth o Axolotl en Windows o Linux. Tenga en cuenta que Unsloth también publica compilaciones de macOS, de modo que en un Mac tiene una elección real entre ambos.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Puedo usar MLX-LM en Windows o Linux?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. MLX-LM está construido sobre MLX de Apple y la memoria unificada de Apple Silicon, así que solo funciona en macOS. Use Unsloth o Axolotl en Windows o Linux.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué pasó con Predibase?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Rubrik anunció la adquisición de Predibase el 25 de junio de 2025. A 28 de agosto de 2026, predibase.com devuelve una redirección HTTP 301 a la página Agent Cloud de Rubrik en lugar de servir un producto independiente. Confirme la disponibilidad actual directamente con Rubrik antes de depender de ello para un proyecto nuevo.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Together.ai o Fireworks.ai tienen programas de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No hemos encontrado ningún programa público de afiliados o referidos para ninguno de los dos en agosto de 2026, y ninguno aparece en los principales listados del sector. Sus páginas de partners describen integraciones empresariales, no programas de referidos para creadores. PromptQuorum no gana nada con los enlaces de esta página.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿El fine-tuning en la nube es más caro que el local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende de con qué frecuencia entrene. Para una sola ejecución sobre un conjunto pequeño, la tarifa en la nube es de unos pocos dólares, normalmente menos que el valor de una tarde dedicada a configurar el entorno. Para iteración frecuente en hardware que ya posee, local es más barato en cada ejecución después de la primera, porque el coste marginal de cómputo es casi nulo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesito multi-GPU para ajustar un modelo 7B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Normalmente no. Una sola tarjeta de clase 24 GB maneja un modelo 7B con holgura usando QLoRA. El multi-GPU importa más en modelos mayores o en fine-tuning completo sin LoRA. Consulte la [guía de requisitos de hardware](/es/prompt-bites/fine-tuning-7b-model-locally-hardware) para el dimensionamiento de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Unsloth es gratuito y admite multi-GPU en la versión gratuita?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La biblioteca Unsloth es gratuita bajo Apache-2.0 y su README enumera soporte multi-GPU sin muro de pago en el repositorio. Existen planes Pro y Enterprise de pago, pero sus precios no están publicados.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1988,39 +2007,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions frequentes',
         faqs: [
-          {
-            q: 'Quel est le meilleur framework de fine-tuning LLM en 2026 ?',
-            a: 'Unsloth pour la plupart de ceux qui entrainent sur leur propre materiel, car la bibliotheque Apache-2.0 est gratuite et couvre desormais les configurations multi-GPU sur NVIDIA, AMD, Intel, CPU et Vulkan sous Windows, Linux, WSL et macOS. Axolotl devient preferable des que l\'entrainement s\'etend sur plusieurs machines, puisqu\'il documente l\'entrainement multi-noeud et le parallelisme ND. MLX-LM est l\'option la plus legere sur Apple Silicon.',
-          },
-          {
-            q: 'Unsloth est-il gratuit, et la version gratuite gere-t-elle le multi-GPU ?',
-            a: 'La bibliotheque Unsloth est gratuite sous Apache-2.0, et son README mentionne la prise en charge du multi-GPU sans mur payant dans le depot. Des offres payantes Pro et Enterprise existent mais leurs tarifs ne sont pas publies : tout montant precis cite ailleurs doit etre considere comme non verifie. L\'affirmation courante selon laquelle le multi-GPU exige une offre payante est contredite par la documentation actuelle du projet.',
-          },
-          {
-            q: 'Combien coute le fine-tuning cloud par million de tokens ?',
-            a: 'Chez Together.ai, le fine-tuning supervise LoRA coute 0,48 $ par million de tokens jusqu\'a 16B parametres, 1,50 $ entre 17 et 69B et 2,90 $ entre 70 et 100B, avec un minimum de 4,00 $ par tache. Le fine-tuning supervise complet coute 1,20 $, 3,75 $ et 7,25 $ sur ces memes paliers. Chez Fireworks.ai, le LoRA SFT demarre a 0,50 $ par million de tokens jusqu\'a 16B et monte a 10,00 $ au-dela de 300B.',
-          },
-          {
-            q: 'Puis-je utiliser MLX-LM sous Windows ou Linux ?',
-            a: 'Non. MLX-LM repose sur le framework MLX d\'Apple et sur la memoire unifiee d\'Apple Silicon, il n\'est donc pas candidat sur d\'autres plateformes. Utilisez Unsloth ou Axolotl sous Windows ou Linux. Notez qu\'Unsloth publie desormais aussi des versions macOS : sur un Mac, vous avez donc un vrai choix entre les deux.',
-          },
-          {
-            q: 'Qu\'est devenu Predibase ?',
-            a: 'Rubrik a annonce l\'acquisition de Predibase le 25 juin 2025. Au 28 aout 2026, predibase.com renvoie une redirection HTTP 301 vers la page Agent Cloud de Rubrik plutot qu\'un produit autonome. Confirmez la disponibilite actuelle directement aupres de Rubrik avant de vous appuyer dessus pour un nouveau projet.',
-          },
-          {
-            q: 'Together.ai ou Fireworks.ai ont-ils des programmes d\'affiliation ?',
-            a: 'Nous n\'avons trouve aucun programme d\'affiliation public pour l\'un ou l\'autre en aout 2026, et aucun n\'apparait dans les principaux recensements du secteur. Leurs pages partenaires decrivent des integrations d\'entreprise, non des dispositifs de parrainage pour createurs. PromptQuorum ne gagne rien sur les liens de cette page.',
-          },
-          {
-            q: 'Le fine-tuning cloud est-il plus cher que le local ?',
-            a: 'Cela depend de votre frequence d\'entrainement. Pour une execution unique sur un petit jeu de donnees, les frais cloud se comptent en quelques dollars, generalement moins que la valeur d\'une soiree passee a configurer l\'environnement. Pour une iteration frequente sur du materiel deja possede, le local revient moins cher a chaque execution apres la premiere, le cout marginal de calcul etant quasi nul.',
-          },
-          {
-            q: 'Ai-je besoin du multi-GPU pour affiner un modele 7B ?',
-            a: 'En general non. Une seule carte de classe 24 Go gere confortablement un modele 7B avec QLoRA. Le multi-GPU compte davantage pour des modeles plus grands ou un fine-tuning complet sans LoRA. Consultez le [guide des besoins materiels](/fr/prompt-bites/fine-tuning-7b-model-locally-hardware) pour le dimensionnement de la VRAM.',
-          },
-        ],
+            { q: 'Quel est le meilleur framework de fine-tuning LLM en 2026 ?', a: 'Unsloth pour la plupart de ceux qui entrainent sur leur propre materiel, car la bibliotheque Apache-2.0 est gratuite et couvre desormais les configurations multi-GPU sur NVIDIA, AMD, Intel, CPU et Vulkan sous Windows, Linux, WSL et macOS. Axolotl devient preferable des que l\'entrainement s\'etend sur plusieurs machines, puisqu\'il documente l\'entrainement multi-noeud et le parallelisme ND. MLX-LM est l\'option la plus legere sur Apple Silicon.' },
+            { q: 'Unsloth est-il gratuit, et la version gratuite gere-t-elle le multi-GPU ?', a: 'La bibliotheque Unsloth est gratuite sous Apache-2.0, et son README mentionne la prise en charge du multi-GPU sans mur payant dans le depot. Des offres payantes Pro et Enterprise existent mais leurs tarifs ne sont pas publies : tout montant precis cite ailleurs doit etre considere comme non verifie. L\'affirmation courante selon laquelle le multi-GPU exige une offre payante est contredite par la documentation actuelle du projet.' },
+            { q: 'Combien coute le fine-tuning cloud par million de tokens ?', a: 'Chez Together.ai, le fine-tuning supervise LoRA coute 0,48 $ par million de tokens jusqu\'a 16B parametres, 1,50 $ entre 17 et 69B et 2,90 $ entre 70 et 100B, avec un minimum de 4,00 $ par tache. Le fine-tuning supervise complet coute 1,20 $, 3,75 $ et 7,25 $ sur ces memes paliers. Chez Fireworks.ai, le LoRA SFT demarre a 0,50 $ par million de tokens jusqu\'a 16B et monte a 10,00 $ au-dela de 300B.' },
+            { q: 'Puis-je utiliser MLX-LM sous Windows ou Linux ?', a: 'Non. MLX-LM repose sur le framework MLX d\'Apple et sur la memoire unifiee d\'Apple Silicon, il n\'est donc pas candidat sur d\'autres plateformes. Utilisez Unsloth ou Axolotl sous Windows ou Linux. Notez qu\'Unsloth publie desormais aussi des versions macOS : sur un Mac, vous avez donc un vrai choix entre les deux.' },
+            { q: 'Qu\'est devenu Predibase ?', a: 'Rubrik a annonce l\'acquisition de Predibase le 25 juin 2025. Au 28 aout 2026, predibase.com renvoie une redirection HTTP 301 vers la page Agent Cloud de Rubrik plutot qu\'un produit autonome. Confirmez la disponibilite actuelle directement aupres de Rubrik avant de vous appuyer dessus pour un nouveau projet.' },
+            { q: 'Together.ai ou Fireworks.ai ont-ils des programmes d\'affiliation ?', a: 'Nous n\'avons trouve aucun programme d\'affiliation public pour l\'un ou l\'autre en aout 2026, et aucun n\'apparait dans les principaux recensements du secteur. Leurs pages partenaires decrivent des integrations d\'entreprise, non des dispositifs de parrainage pour createurs. PromptQuorum ne gagne rien sur les liens de cette page.' },
+            { q: 'Le fine-tuning cloud est-il plus cher que le local ?', a: 'Cela depend de votre frequence d\'entrainement. Pour une execution unique sur un petit jeu de donnees, les frais cloud se comptent en quelques dollars, generalement moins que la valeur d\'une soiree passee a configurer l\'environnement. Pour une iteration frequente sur du materiel deja possede, le local revient moins cher a chaque execution apres la premiere, le cout marginal de calcul etant quasi nul.' },
+            { q: 'Ai-je besoin du multi-GPU pour affiner un modele 7B ?', a: 'En general non. Une seule carte de classe 24 Go gere confortablement un modele 7B avec QLoRA. Le multi-GPU compte davantage pour des modeles plus grands ou un fine-tuning complet sans LoRA. Consultez le [guide des besoins materiels](/fr/prompt-bites/fine-tuning-7b-model-locally-hardware) pour le dimensionnement de la VRAM.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2088,47 +2083,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Quel est le meilleur framework de fine-tuning LLM en 2026 ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Unsloth pour la plupart de ceux qui entrainent sur leur propre materiel, car la bibliotheque Apache-2.0 est gratuite et couvre le multi-GPU sur NVIDIA, AMD, Intel, CPU et Vulkan. Axolotl est preferable des que l\'entrainement s\'etend sur plusieurs machines, et MLX-LM est l\'option la plus legere sur Apple Silicon.',
+          {
+            '@type': 'Question',
+            'name': 'Quel est le meilleur framework de fine-tuning LLM en 2026 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unsloth pour la plupart de ceux qui entrainent sur leur propre materiel, car la bibliotheque Apache-2.0 est gratuite et couvre desormais les configurations multi-GPU sur NVIDIA, AMD, Intel, CPU et Vulkan sous Windows, Linux, WSL et macOS. Axolotl devient preferable des que l\'entrainement s\'etend sur plusieurs machines, puisqu\'il documente l\'entrainement multi-noeud et le parallelisme ND. MLX-LM est l\'option la plus legere sur Apple Silicon.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Unsloth est-il gratuit et gere-t-il le multi-GPU gratuitement ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'La bibliotheque Unsloth est gratuite sous Apache-2.0 et son README mentionne la prise en charge du multi-GPU sans mur payant dans le depot. Des offres payantes Pro et Enterprise existent mais leurs tarifs ne sont pas publies.',
+          {
+            '@type': 'Question',
+            'name': 'Unsloth est-il gratuit, et la version gratuite gere-t-elle le multi-GPU ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La bibliotheque Unsloth est gratuite sous Apache-2.0, et son README mentionne la prise en charge du multi-GPU sans mur payant dans le depot. Des offres payantes Pro et Enterprise existent mais leurs tarifs ne sont pas publies : tout montant precis cite ailleurs doit etre considere comme non verifie. L\'affirmation courante selon laquelle le multi-GPU exige une offre payante est contredite par la documentation actuelle du projet.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Combien coute le fine-tuning cloud par million de tokens ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Together.ai facture 0,48 $ par million de tokens pour le fine-tuning supervise LoRA jusqu\'a 16B parametres, montant a 2,90 $ entre 70 et 100B, avec un minimum de 4,00 $ par tache. Le SFT complet coute de 1,20 a 7,25 $ sur ces paliers. Fireworks.ai demarre a 0,50 $ par million de tokens.',
+          {
+            '@type': 'Question',
+            'name': 'Combien coute le fine-tuning cloud par million de tokens ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chez Together.ai, le fine-tuning supervise LoRA coute 0,48 $ par million de tokens jusqu\'a 16B parametres, 1,50 $ entre 17 et 69B et 2,90 $ entre 70 et 100B, avec un minimum de 4,00 $ par tache. Le fine-tuning supervise complet coute 1,20 $, 3,75 $ et 7,25 $ sur ces memes paliers. Chez Fireworks.ai, le LoRA SFT demarre a 0,50 $ par million de tokens jusqu\'a 16B et monte a 10,00 $ au-dela de 300B.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qu\'est devenu Predibase ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Rubrik a annonce l\'acquisition de Predibase le 25 juin 2025. Au 28 aout 2026, predibase.com renvoie une redirection HTTP 301 vers Rubrik Agent Cloud plutot qu\'un produit autonome de fine-tuning en libre-service.',
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser MLX-LM sous Windows ou Linux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. MLX-LM repose sur le framework MLX d\'Apple et sur la memoire unifiee d\'Apple Silicon, il n\'est donc pas candidat sur d\'autres plateformes. Utilisez Unsloth ou Axolotl sous Windows ou Linux. Notez qu\'Unsloth publie desormais aussi des versions macOS : sur un Mac, vous avez donc un vrai choix entre les deux.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Puis-je utiliser MLX-LM sous Windows ou Linux ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non. MLX-LM repose sur MLX d\'Apple et la memoire unifiee d\'Apple Silicon, il ne fonctionne donc que sous macOS. Utilisez Unsloth ou Axolotl sous Windows ou Linux.',
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est devenu Predibase ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Rubrik a annonce l\'acquisition de Predibase le 25 juin 2025. Au 28 aout 2026, predibase.com renvoie une redirection HTTP 301 vers la page Agent Cloud de Rubrik plutot qu\'un produit autonome. Confirmez la disponibilite actuelle directement aupres de Rubrik avant de vous appuyer dessus pour un nouveau projet.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Together.ai ou Fireworks.ai ont-ils des programmes d\'affiliation ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nous n\'avons trouve aucun programme d\'affiliation public pour l\'un ou l\'autre en aout 2026, et aucun n\'apparait dans les principaux recensements du secteur. Leurs pages partenaires decrivent des integrations d\'entreprise, non des dispositifs de parrainage pour createurs. PromptQuorum ne gagne rien sur les liens de cette page.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Le fine-tuning cloud est-il plus cher que le local ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cela depend de votre frequence d\'entrainement. Pour une execution unique sur un petit jeu de donnees, les frais cloud se comptent en quelques dollars, generalement moins que la valeur d\'une soiree passee a configurer l\'environnement. Pour une iteration frequente sur du materiel deja possede, le local revient moins cher a chaque execution apres la premiere, le cout marginal de calcul etant quasi nul.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ai-je besoin du multi-GPU pour affiner un modele 7B ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En general non. Une seule carte de classe 24 Go gere confortablement un modele 7B avec QLoRA. Le multi-GPU compte davantage pour des modeles plus grands ou un fine-tuning complet sans LoRA. Consultez le [guide des besoins materiels](/fr/prompt-bites/fine-tuning-7b-model-locally-hardware) pour le dimensionnement de la VRAM.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2522,39 +2541,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'Qual e o melhor framework de fine-tuning de LLM em 2026?',
-            a: 'Unsloth para a maioria de quem treina em hardware proprio, porque a biblioteca Apache-2.0 e gratuita e ja cobre configuracoes multi-GPU em NVIDIA, AMD, Intel, CPU e Vulkan sobre Windows, Linux, WSL e macOS. O Axolotl e melhor quando o treino abrange varias maquinas, ja que documenta treino multinó e paralelismo ND. O MLX-LM e a opcao mais enxuta em Apple Silicon.',
-          },
-          {
-            q: 'O Unsloth e gratuito, e a versao gratuita suporta multi-GPU?',
-            a: 'A biblioteca Unsloth e gratuita sob Apache-2.0 e seu README lista suporte a multi-GPU sem barreira paga no repositorio. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados, entao qualquer cifra especifica citada em outro lugar deve ser tratada como nao verificada. A afirmacao comum de que multi-GPU exige plano pago e contrariada pela documentacao atual do projeto.',
-          },
-          {
-            q: 'Quanto custa o fine-tuning na nuvem por milhao de tokens?',
-            a: 'Na Together.ai, o fine-tuning supervisionado com LoRA custa US$ 0,48 por milhao de tokens ate 16B parametros, US$ 1,50 entre 17 e 69B e US$ 2,90 entre 70 e 100B, com minimo de US$ 4,00 por job. O fine-tuning supervisionado completo custa US$ 1,20, US$ 3,75 e US$ 7,25 nessas mesmas faixas. Na Fireworks.ai, o LoRA SFT parte de US$ 0,50 por milhao de tokens ate 16B e sobe para US$ 10,00 acima de 300B.',
-          },
-          {
-            q: 'Posso usar o MLX-LM no Windows ou Linux?',
-            a: 'Nao. O MLX-LM e construido sobre o framework MLX da Apple e a memoria unificada do Apple Silicon, entao nao e candidato em outras plataformas. Use Unsloth ou Axolotl no Windows ou Linux. Note que o Unsloth tambem publica builds de macOS agora, entao em um Mac voce tem uma escolha real entre os dois.',
-          },
-          {
-            q: 'O que aconteceu com a Predibase?',
-            a: 'A Rubrik anunciou a aquisicao da Predibase em 25 de junho de 2025. Em 28 de agosto de 2026, predibase.com devolve um redirecionamento HTTP 301 para a pagina Agent Cloud da Rubrik em vez de servir um produto independente. Confirme a disponibilidade atual diretamente com a Rubrik antes de depender disso em um projeto novo.',
-          },
-          {
-            q: 'Together.ai ou Fireworks.ai tem programas de afiliados?',
-            a: 'Nao encontramos programa publico de afiliados ou indicacao para nenhuma das duas em agosto de 2026, e nenhuma aparece nas principais listagens do setor. Suas paginas de parceiros descrevem integracoes empresariais, nao programas de indicacao para criadores. A PromptQuorum nao ganha nada com os links desta pagina.',
-          },
-          {
-            q: 'O fine-tuning na nuvem e mais caro que o local?',
-            a: 'Depende da frequencia com que voce treina. Para uma unica execucao em um conjunto pequeno, a taxa na nuvem e de poucos dolares, normalmente menos que o valor de uma noite dedicada a configurar o ambiente. Para iteracao frequente em hardware que ja possui, o local sai mais barato em toda execucao depois da primeira, porque o custo marginal de computacao e quase nulo.',
-          },
-          {
-            q: 'Preciso de multi-GPU para ajustar um modelo 7B?',
-            a: 'Normalmente nao. Uma unica placa da classe 24 GB lida confortavelmente com um modelo 7B usando QLoRA. Multi-GPU importa mais em modelos maiores ou em fine-tuning completo sem LoRA. Consulte o [guia de requisitos de hardware](/pt/prompt-bites/fine-tuning-7b-model-locally-hardware) para o dimensionamento de VRAM.',
-          },
-        ],
+            { q: 'Qual e o melhor framework de fine-tuning de LLM em 2026?', a: 'Unsloth para a maioria de quem treina em hardware proprio, porque a biblioteca Apache-2.0 e gratuita e ja cobre configuracoes multi-GPU em NVIDIA, AMD, Intel, CPU e Vulkan sobre Windows, Linux, WSL e macOS. O Axolotl e melhor quando o treino abrange varias maquinas, ja que documenta treino multinó e paralelismo ND. O MLX-LM e a opcao mais enxuta em Apple Silicon.' },
+            { q: 'O Unsloth e gratuito, e a versao gratuita suporta multi-GPU?', a: 'A biblioteca Unsloth e gratuita sob Apache-2.0 e seu README lista suporte a multi-GPU sem barreira paga no repositorio. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados, entao qualquer cifra especifica citada em outro lugar deve ser tratada como nao verificada. A afirmacao comum de que multi-GPU exige plano pago e contrariada pela documentacao atual do projeto.' },
+            { q: 'Quanto custa o fine-tuning na nuvem por milhao de tokens?', a: 'Na Together.ai, o fine-tuning supervisionado com LoRA custa US$ 0,48 por milhao de tokens ate 16B parametros, US$ 1,50 entre 17 e 69B e US$ 2,90 entre 70 e 100B, com minimo de US$ 4,00 por job. O fine-tuning supervisionado completo custa US$ 1,20, US$ 3,75 e US$ 7,25 nessas mesmas faixas. Na Fireworks.ai, o LoRA SFT parte de US$ 0,50 por milhao de tokens ate 16B e sobe para US$ 10,00 acima de 300B.' },
+            { q: 'Posso usar o MLX-LM no Windows ou Linux?', a: 'Nao. O MLX-LM e construido sobre o framework MLX da Apple e a memoria unificada do Apple Silicon, entao nao e candidato em outras plataformas. Use Unsloth ou Axolotl no Windows ou Linux. Note que o Unsloth tambem publica builds de macOS agora, entao em um Mac voce tem uma escolha real entre os dois.' },
+            { q: 'O que aconteceu com a Predibase?', a: 'A Rubrik anunciou a aquisicao da Predibase em 25 de junho de 2025. Em 28 de agosto de 2026, predibase.com devolve um redirecionamento HTTP 301 para a pagina Agent Cloud da Rubrik em vez de servir um produto independente. Confirme a disponibilidade atual diretamente com a Rubrik antes de depender disso em um projeto novo.' },
+            { q: 'Together.ai ou Fireworks.ai tem programas de afiliados?', a: 'Nao encontramos programa publico de afiliados ou indicacao para nenhuma das duas em agosto de 2026, e nenhuma aparece nas principais listagens do setor. Suas paginas de parceiros descrevem integracoes empresariais, nao programas de indicacao para criadores. A PromptQuorum nao ganha nada com os links desta pagina.' },
+            { q: 'O fine-tuning na nuvem e mais caro que o local?', a: 'Depende da frequencia com que voce treina. Para uma unica execucao em um conjunto pequeno, a taxa na nuvem e de poucos dolares, normalmente menos que o valor de uma noite dedicada a configurar o ambiente. Para iteracao frequente em hardware que ja possui, o local sai mais barato em toda execucao depois da primeira, porque o custo marginal de computacao e quase nulo.' },
+            { q: 'Preciso de multi-GPU para ajustar um modelo 7B?', a: 'Normalmente nao. Uma unica placa da classe 24 GB lida confortavelmente com um modelo 7B usando QLoRA. Multi-GPU importa mais em modelos maiores ou em fine-tuning completo sem LoRA. Consulte o [guia de requisitos de hardware](/pt/prompt-bites/fine-tuning-7b-model-locally-hardware) para o dimensionamento de VRAM.' },
+            { q: 'O Unsloth e gratuito e suporta multi-GPU na versao gratuita?', a: 'A biblioteca Unsloth e gratuita sob Apache-2.0 e seu README lista suporte a multi-GPU sem barreira paga no repositorio. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2622,47 +2618,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qual e o melhor framework de fine-tuning de LLM em 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Unsloth para a maioria de quem treina em hardware proprio, ja que a biblioteca Apache-2.0 e gratuita e cobre multi-GPU em NVIDIA, AMD, Intel, CPU e Vulkan. O Axolotl e melhor quando o treino abrange varias maquinas, e o MLX-LM e a opcao mais enxuta em Apple Silicon.',
+          {
+            '@type': 'Question',
+            'name': 'Qual e o melhor framework de fine-tuning de LLM em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unsloth para a maioria de quem treina em hardware proprio, porque a biblioteca Apache-2.0 e gratuita e ja cobre configuracoes multi-GPU em NVIDIA, AMD, Intel, CPU e Vulkan sobre Windows, Linux, WSL e macOS. O Axolotl e melhor quando o treino abrange varias maquinas, ja que documenta treino multinó e paralelismo ND. O MLX-LM e a opcao mais enxuta em Apple Silicon.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O Unsloth e gratuito e suporta multi-GPU na versao gratuita?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A biblioteca Unsloth e gratuita sob Apache-2.0 e seu README lista suporte a multi-GPU sem barreira paga no repositorio. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados.',
+          {
+            '@type': 'Question',
+            'name': 'O Unsloth e gratuito, e a versao gratuita suporta multi-GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A biblioteca Unsloth e gratuita sob Apache-2.0 e seu README lista suporte a multi-GPU sem barreira paga no repositorio. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados, entao qualquer cifra especifica citada em outro lugar deve ser tratada como nao verificada. A afirmacao comum de que multi-GPU exige plano pago e contrariada pela documentacao atual do projeto.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quanto custa o fine-tuning na nuvem por milhao de tokens?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A Together.ai cobra US$ 0,48 por milhao de tokens para fine-tuning supervisionado com LoRA ate 16B parametros, subindo para US$ 2,90 entre 70 e 100B, com minimo de US$ 4,00 por job. O SFT completo custa de US$ 1,20 a US$ 7,25 nessas faixas. A Fireworks.ai parte de US$ 0,50 por milhao de tokens.',
+          {
+            '@type': 'Question',
+            'name': 'Quanto custa o fine-tuning na nuvem por milhao de tokens?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Na Together.ai, o fine-tuning supervisionado com LoRA custa US$ 0,48 por milhao de tokens ate 16B parametros, US$ 1,50 entre 17 e 69B e US$ 2,90 entre 70 e 100B, com minimo de US$ 4,00 por job. O fine-tuning supervisionado completo custa US$ 1,20, US$ 3,75 e US$ 7,25 nessas mesmas faixas. Na Fireworks.ai, o LoRA SFT parte de US$ 0,50 por milhao de tokens ate 16B e sobe para US$ 10,00 acima de 300B.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O que aconteceu com a Predibase?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A Rubrik anunciou a aquisicao da Predibase em 25 de junho de 2025. Em 28 de agosto de 2026, predibase.com devolve um redirecionamento HTTP 301 para o Rubrik Agent Cloud em vez de servir um produto independente de fine-tuning em autoatendimento.',
+          {
+            '@type': 'Question',
+            'name': 'Posso usar o MLX-LM no Windows ou Linux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nao. O MLX-LM e construido sobre o framework MLX da Apple e a memoria unificada do Apple Silicon, entao nao e candidato em outras plataformas. Use Unsloth ou Axolotl no Windows ou Linux. Note que o Unsloth tambem publica builds de macOS agora, entao em um Mac voce tem uma escolha real entre os dois.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Posso usar o MLX-LM no Windows ou Linux?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nao. O MLX-LM e construido sobre o MLX da Apple e a memoria unificada do Apple Silicon, entao roda apenas em macOS. Use Unsloth ou Axolotl no Windows ou Linux.',
+          {
+            '@type': 'Question',
+            'name': 'O que aconteceu com a Predibase?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A Rubrik anunciou a aquisicao da Predibase em 25 de junho de 2025. Em 28 de agosto de 2026, predibase.com devolve um redirecionamento HTTP 301 para a pagina Agent Cloud da Rubrik em vez de servir um produto independente. Confirme a disponibilidade atual diretamente com a Rubrik antes de depender disso em um projeto novo.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Together.ai ou Fireworks.ai tem programas de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nao encontramos programa publico de afiliados ou indicacao para nenhuma das duas em agosto de 2026, e nenhuma aparece nas principais listagens do setor. Suas paginas de parceiros descrevem integracoes empresariais, nao programas de indicacao para criadores. A PromptQuorum nao ganha nada com os links desta pagina.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O fine-tuning na nuvem e mais caro que o local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende da frequencia com que voce treina. Para uma unica execucao em um conjunto pequeno, a taxa na nuvem e de poucos dolares, normalmente menos que o valor de uma noite dedicada a configurar o ambiente. Para iteracao frequente em hardware que ja possui, o local sai mais barato em toda execucao depois da primeira, porque o custo marginal de computacao e quase nulo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Preciso de multi-GPU para ajustar um modelo 7B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Normalmente nao. Uma unica placa da classe 24 GB lida confortavelmente com um modelo 7B usando QLoRA. Multi-GPU importa mais em modelos maiores ou em fine-tuning completo sem LoRA. Consulte o [guia de requisitos de hardware](/pt/prompt-bites/fine-tuning-7b-model-locally-hardware) para o dimensionamento de VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Unsloth e gratuito e suporta multi-GPU na versao gratuita?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A biblioteca Unsloth e gratuita sob Apache-2.0 e seu README lista suporte a multi-GPU sem barreira paga no repositorio. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3056,39 +3084,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          {
-            q: '2026年に最適なLLMファインチューニング基盤は何ですか？',
-            a: '自前のハードウェアで学習するほとんどの人にはUnslothです。Apache-2.0のライブラリが無料で、いまやWindows・Linux・WSL・macOS上のNVIDIA・AMD・Intel・CPU・VulkanにわたるマルチGPU構成をカバーするためです。学習が複数マシンにまたがるならAxolotlのほうが適しており、マルチノード学習とND並列を文書化しています。MLX-LMはApple Siliconで最も軽量な選択肢です。',
-          },
-          {
-            q: 'Unslothは無料ですか、無料版でマルチGPUは使えますか？',
-            a: 'UnslothのライブラリはApache-2.0で無料であり、READMEはリポジトリ内に有料の壁のないマルチGPU対応を記載しています。有料のProおよびEnterpriseは存在しますが価格は公開されていないため、他所で引用される具体的な金額は未検証として扱うべきです。マルチGPUには有料枠が必要だという一般的な主張は、プロジェクトの現在の文書と矛盾します。',
-          },
-          {
-            q: 'クラウドでのファインチューニングは100万トークンあたりいくらですか？',
-            a: 'Together.aiでは、教師ありLoRAファインチューニングが16Bパラメータまで100万トークンあたり0.48ドル、17〜69Bで1.50ドル、70〜100Bで2.90ドル、1ジョブ最低4.00ドルです。教師ありフルファインチューニングは同じ区分で1.20ドル、3.75ドル、7.25ドルです。Fireworks.aiではLoRA SFTが16Bまで100万トークン0.50ドルから始まり、300B超では10.00ドルまで上がります。',
-          },
-          {
-            q: 'MLX-LMをWindowsやLinuxで使えますか？',
-            a: 'いいえ。MLX-LMはAppleのMLXフレームワークとApple Siliconの統合メモリの上に構築されているため、他のプラットフォームでは候補になりません。WindowsやLinuxではUnslothかAxolotlを使ってください。なおUnslothはmacOS版も配布するようになったため、Macでは両者を本当に選べます。',
-          },
-          {
-            q: 'Predibaseはどうなりましたか？',
-            a: 'Rubrikは2025年6月25日にPredibaseの買収を発表しました。2026年8月28日時点で、predibase.comは独立した製品を提供する代わりにRubrikのAgent CloudページへのHTTP 301リダイレクトを返します。新しいプロジェクトで頼る前に、現在の提供状況をRubrikに直接確認してください。',
-          },
-          {
-            q: 'Together.aiやFireworks.aiにアフィリエイトプログラムはありますか？',
-            a: '2026年8月時点で、どちらにも公開のアフィリエイトや紹介プログラムは見つかりませんでしたし、主要な一覧にも掲載されていません。両社のパートナーページは事業連携について説明したもので、発信者向けの紹介制度ではありません。PromptQuorumは本ページのリンクから収益を得ていません。',
-          },
-          {
-            q: 'クラウドでのファインチューニングはローカルより高いですか？',
-            a: '学習頻度によります。小さなデータセットでの単発の実行ならクラウドの費用は数ドルで、環境構築に費やす一晩の価値より安いのが普通です。既に所有するハードウェアで頻繁に反復するなら、計算の限界費用がほぼゼロなので2回目以降はローカルが安くなります。',
-          },
-          {
-            q: '7Bモデルの調整にマルチGPUは必要ですか？',
-            a: '通常は不要です。24GBクラスのカード1枚でQLoRAを使えば7Bモデルを余裕をもって扱えます。マルチGPUがより重要になるのは、より大きなモデルやLoRAを使わないフル調整です。VRAMの見積もりは[ハードウェア要件のガイド](/ja/prompt-bites/fine-tuning-7b-model-locally-hardware)をご覧ください。',
-          },
-        ],
+            { q: '2026年に最適なLLMファインチューニング基盤は何ですか？', a: '自前のハードウェアで学習するほとんどの人にはUnslothです。Apache-2.0のライブラリが無料で、いまやWindows・Linux・WSL・macOS上のNVIDIA・AMD・Intel・CPU・VulkanにわたるマルチGPU構成をカバーするためです。学習が複数マシンにまたがるならAxolotlのほうが適しており、マルチノード学習とND並列を文書化しています。MLX-LMはApple Siliconで最も軽量な選択肢です。' },
+            { q: 'Unslothは無料ですか、無料版でマルチGPUは使えますか？', a: 'UnslothのライブラリはApache-2.0で無料であり、READMEはリポジトリ内に有料の壁のないマルチGPU対応を記載しています。有料のProおよびEnterpriseは存在しますが価格は公開されていないため、他所で引用される具体的な金額は未検証として扱うべきです。マルチGPUには有料枠が必要だという一般的な主張は、プロジェクトの現在の文書と矛盾します。' },
+            { q: 'クラウドでのファインチューニングは100万トークンあたりいくらですか？', a: 'Together.aiでは、教師ありLoRAファインチューニングが16Bパラメータまで100万トークンあたり0.48ドル、17〜69Bで1.50ドル、70〜100Bで2.90ドル、1ジョブ最低4.00ドルです。教師ありフルファインチューニングは同じ区分で1.20ドル、3.75ドル、7.25ドルです。Fireworks.aiではLoRA SFTが16Bまで100万トークン0.50ドルから始まり、300B超では10.00ドルまで上がります。' },
+            { q: 'MLX-LMをWindowsやLinuxで使えますか？', a: 'いいえ。MLX-LMはAppleのMLXフレームワークとApple Siliconの統合メモリの上に構築されているため、他のプラットフォームでは候補になりません。WindowsやLinuxではUnslothかAxolotlを使ってください。なおUnslothはmacOS版も配布するようになったため、Macでは両者を本当に選べます。' },
+            { q: 'Predibaseはどうなりましたか？', a: 'Rubrikは2025年6月25日にPredibaseの買収を発表しました。2026年8月28日時点で、predibase.comは独立した製品を提供する代わりにRubrikのAgent CloudページへのHTTP 301リダイレクトを返します。新しいプロジェクトで頼る前に、現在の提供状況をRubrikに直接確認してください。' },
+            { q: 'Together.aiやFireworks.aiにアフィリエイトプログラムはありますか？', a: '2026年8月時点で、どちらにも公開のアフィリエイトや紹介プログラムは見つかりませんでしたし、主要な一覧にも掲載されていません。両社のパートナーページは事業連携について説明したもので、発信者向けの紹介制度ではありません。PromptQuorumは本ページのリンクから収益を得ていません。' },
+            { q: 'クラウドでのファインチューニングはローカルより高いですか？', a: '学習頻度によります。小さなデータセットでの単発の実行ならクラウドの費用は数ドルで、環境構築に費やす一晩の価値より安いのが普通です。既に所有するハードウェアで頻繁に反復するなら、計算の限界費用がほぼゼロなので2回目以降はローカルが安くなります。' },
+            { q: '7Bモデルの調整にマルチGPUは必要ですか？', a: '通常は不要です。24GBクラスのカード1枚でQLoRAを使えば7Bモデルを余裕をもって扱えます。マルチGPUがより重要になるのは、より大きなモデルやLoRAを使わないフル調整です。VRAMの見積もりは[ハードウェア要件のガイド](/ja/prompt-bites/fine-tuning-7b-model-locally-hardware)をご覧ください。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3156,47 +3160,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026年に最適なLLMファインチューニング基盤は何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '自前のハードウェアで学習するほとんどの人にはUnslothです。Apache-2.0のライブラリが無料で、NVIDIA・AMD・Intel・CPU・VulkanにわたるマルチGPUをカバーします。学習が複数マシンにまたがるならAxolotl、Apple SiliconならMLX-LMが最も軽量です。',
+          {
+            '@type': 'Question',
+            'name': '2026年に最適なLLMファインチューニング基盤は何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '自前のハードウェアで学習するほとんどの人にはUnslothです。Apache-2.0のライブラリが無料で、いまやWindows・Linux・WSL・macOS上のNVIDIA・AMD・Intel・CPU・VulkanにわたるマルチGPU構成をカバーするためです。学習が複数マシンにまたがるならAxolotlのほうが適しており、マルチノード学習とND並列を文書化しています。MLX-LMはApple Siliconで最も軽量な選択肢です。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Unslothは無料で、無料版でマルチGPUは使えますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'UnslothのライブラリはApache-2.0で無料であり、READMEはリポジトリ内に有料の壁のないマルチGPU対応を記載しています。有料のProおよびEnterpriseは存在しますが価格は公開されていません。',
+          {
+            '@type': 'Question',
+            'name': 'Unslothは無料ですか、無料版でマルチGPUは使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'UnslothのライブラリはApache-2.0で無料であり、READMEはリポジトリ内に有料の壁のないマルチGPU対応を記載しています。有料のProおよびEnterpriseは存在しますが価格は公開されていないため、他所で引用される具体的な金額は未検証として扱うべきです。マルチGPUには有料枠が必要だという一般的な主張は、プロジェクトの現在の文書と矛盾します。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'クラウドでのファインチューニングは100万トークンあたりいくらですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Together.aiは16Bパラメータまでの教師ありLoRA調整を100万トークン0.48ドルで提供し、70〜100Bでは2.90ドル、1ジョブ最低4.00ドルです。フルSFTは同区分で1.20〜7.25ドル。Fireworks.aiは100万トークン0.50ドルから始まります。',
+          {
+            '@type': 'Question',
+            'name': 'クラウドでのファインチューニングは100万トークンあたりいくらですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Together.aiでは、教師ありLoRAファインチューニングが16Bパラメータまで100万トークンあたり0.48ドル、17〜69Bで1.50ドル、70〜100Bで2.90ドル、1ジョブ最低4.00ドルです。教師ありフルファインチューニングは同じ区分で1.20ドル、3.75ドル、7.25ドルです。Fireworks.aiではLoRA SFTが16Bまで100万トークン0.50ドルから始まり、300B超では10.00ドルまで上がります。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Predibaseはどうなりましたか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Rubrikは2025年6月25日にPredibaseの買収を発表しました。2026年8月28日時点で、predibase.comは独立したセルフサービス型のファインチューニング製品ではなくRubrik Agent CloudへのHTTP 301リダイレクトを返します。',
+          {
+            '@type': 'Question',
+            'name': 'MLX-LMをWindowsやLinuxで使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。MLX-LMはAppleのMLXフレームワークとApple Siliconの統合メモリの上に構築されているため、他のプラットフォームでは候補になりません。WindowsやLinuxではUnslothかAxolotlを使ってください。なおUnslothはmacOS版も配布するようになったため、Macでは両者を本当に選べます。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'MLX-LMをWindowsやLinuxで使えますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。MLX-LMはAppleのMLXとApple Siliconの統合メモリの上に構築されているため、macOSでのみ動作します。WindowsやLinuxではUnslothかAxolotlを使ってください。',
+          {
+            '@type': 'Question',
+            'name': 'Predibaseはどうなりましたか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Rubrikは2025年6月25日にPredibaseの買収を発表しました。2026年8月28日時点で、predibase.comは独立した製品を提供する代わりにRubrikのAgent CloudページへのHTTP 301リダイレクトを返します。新しいプロジェクトで頼る前に、現在の提供状況をRubrikに直接確認してください。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Together.aiやFireworks.aiにアフィリエイトプログラムはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年8月時点で、どちらにも公開のアフィリエイトや紹介プログラムは見つかりませんでしたし、主要な一覧にも掲載されていません。両社のパートナーページは事業連携について説明したもので、発信者向けの紹介制度ではありません。PromptQuorumは本ページのリンクから収益を得ていません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'クラウドでのファインチューニングはローカルより高いですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '学習頻度によります。小さなデータセットでの単発の実行ならクラウドの費用は数ドルで、環境構築に費やす一晩の価値より安いのが普通です。既に所有するハードウェアで頻繁に反復するなら、計算の限界費用がほぼゼロなので2回目以降はローカルが安くなります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7Bモデルの調整にマルチGPUは必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通常は不要です。24GBクラスのカード1枚でQLoRAを使えば7Bモデルを余裕をもって扱えます。マルチGPUがより重要になるのは、より大きなモデルやLoRAを使わないフル調整です。VRAMの見積もりは[ハードウェア要件のガイド](/ja/prompt-bites/fine-tuning-7b-model-locally-hardware)をご覧ください。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4124,39 +4152,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'ما أفضل إطار عمل لضبط النماذج اللغوية في 2026؟',
-            a: 'أداة Unsloth لمعظم من يدرّبون على عتادهم الخاص، لأن المكتبة برخصة Apache-2.0 مجانية وتغطي الآن إعدادات تعدد المعالجات على NVIDIA وAMD وIntel والمعالجات المركزية وVulkan فوق Windows وLinux وWSL وmacOS. أما Axolotl فخيار أفضل حين يمتد التدريب عبر عدة أجهزة، إذ يوثّق التدريب متعدد العقد والتوازي متعدد الأبعاد. وMLX-LM هي الخيار الأخف على معالجات Apple Silicon.',
-          },
-          {
-            q: 'هل Unsloth مجاني، وهل تدعم النسخة المجانية تعدد المعالجات؟',
-            a: 'مكتبة Unsloth مجانية برخصة Apache-2.0، ويورد ملف التعريف الخاص بها دعم تعدد المعالجات دون جدار دفع في المستودع. وتوجد باقتان مدفوعتان، Pro وEnterprise، غير أن أسعارهما غير منشورة، فأي رقم محدد مقتبس في مكان آخر ينبغي أن يُعامل على أنه غير موثق. والادعاء الشائع بأن تعدد المعالجات يستلزم باقة مدفوعة يناقض التوثيق الحالي للمشروع.',
-          },
-          {
-            q: 'كم يكلّف الضبط الدقيق السحابي لكل مليون رمز؟',
-            a: 'لدى Together.ai، يكلّف الضبط الخاضع للإشراف بطريقة LoRA 0.48 دولار لكل مليون رمز حتى 16 مليار معامل، و1.50 دولار بين 17 و69 مليارًا، و2.90 دولار بين 70 و100 مليار، بحد أدنى 4.00 دولارات لكل مهمة. أما الضبط الكامل الخاضع للإشراف فيكلّف 1.20 و3.75 و7.25 دولار في الشرائح نفسها. ولدى Fireworks.ai يبدأ الضبط بطريقة LoRA من 0.50 دولار لكل مليون رمز حتى 16 مليارًا ويرتفع إلى 10.00 دولارات فوق 300 مليار.',
-          },
-          {
-            q: 'هل يمكنني استخدام MLX-LM على Windows أو Linux؟',
-            a: 'لا. فـMLX-LM مبنية على إطار MLX من آبل وعلى الذاكرة الموحدة في Apple Silicon، ولذلك لا تُطرح كخيار على منصات أخرى. استخدم Unsloth أو Axolotl على Windows أو Linux. ولاحظ أن Unsloth صار يوفّر إصدارات macOS أيضًا، فلديك على حاسوب Mac اختيار حقيقي بين الاثنين.',
-          },
-          {
-            q: 'ماذا حلّ بـPredibase؟',
-            a: 'أعلنت Rubrik استحواذها على Predibase في 25 يونيو 2025. وحتى 28 أغسطس 2026، يعيد predibase.com إعادة توجيه من نوع HTTP 301 إلى صفحة Agent Cloud لدى Rubrik بدل تقديم منتج مستقل. تأكد من التوافر الحالي مع Rubrik مباشرةً قبل الاعتماد عليها في مشروع جديد.',
-          },
-          {
-            q: 'هل لدى Together.ai أو Fireworks.ai برامج عمولة؟',
-            a: 'لم نجد أي برنامج عمولة أو إحالة علني لأي منهما حتى أغسطس 2026، ولا تظهر أي منهما في القوائم الرئيسية. وصفحات الشركاء لديهما تصف تكاملات مؤسسية لا برامج إحالة لصنّاع المحتوى. ومنصة PromptQuorum لا تكسب شيئًا من روابط هذه الصفحة.',
-          },
-          {
-            q: 'هل الضبط الدقيق السحابي أغلى من المحلي؟',
-            a: 'يتوقف ذلك على وتيرة تدريبك. ففي تشغيل واحد على مجموعة بيانات صغيرة تكون رسوم السحابة بضعة دولارات، وهو عادةً أقل من قيمة أمسية تُنفَق على تهيئة البيئة. أما مع التكرار المتواتر على عتاد تملكه أصلًا، فالمحلي أرخص في كل تشغيل بعد الأول لأن التكلفة الحدية للحوسبة تقارب الصفر.',
-          },
-          {
-            q: 'هل أحتاج تعدد المعالجات لضبط نموذج بسبعة مليارات معامل؟',
-            a: 'عادةً لا. فبطاقة واحدة من فئة 24 غيغابايت تتعامل مع نموذج بسبعة مليارات معامل بارتياح باستخدام QLoRA. ويزداد أثر تعدد المعالجات مع النماذج الأكبر أو مع الضبط الكامل دون LoRA. راجع [دليل متطلبات العتاد](/ar/prompt-bites/fine-tuning-7b-model-locally-hardware) لتقدير حجم ذاكرة المعالج الرسومي.',
-          },
-        ],
+            { q: 'ما أفضل إطار عمل لضبط النماذج اللغوية في 2026؟', a: 'أداة Unsloth لمعظم من يدرّبون على عتادهم الخاص، لأن المكتبة برخصة Apache-2.0 مجانية وتغطي الآن إعدادات تعدد المعالجات على NVIDIA وAMD وIntel والمعالجات المركزية وVulkan فوق Windows وLinux وWSL وmacOS. أما Axolotl فخيار أفضل حين يمتد التدريب عبر عدة أجهزة، إذ يوثّق التدريب متعدد العقد والتوازي متعدد الأبعاد. وMLX-LM هي الخيار الأخف على معالجات Apple Silicon.' },
+            { q: 'هل Unsloth مجاني، وهل تدعم النسخة المجانية تعدد المعالجات؟', a: 'مكتبة Unsloth مجانية برخصة Apache-2.0، ويورد ملف التعريف الخاص بها دعم تعدد المعالجات دون جدار دفع في المستودع. وتوجد باقتان مدفوعتان، Pro وEnterprise، غير أن أسعارهما غير منشورة، فأي رقم محدد مقتبس في مكان آخر ينبغي أن يُعامل على أنه غير موثق. والادعاء الشائع بأن تعدد المعالجات يستلزم باقة مدفوعة يناقض التوثيق الحالي للمشروع.' },
+            { q: 'كم يكلّف الضبط الدقيق السحابي لكل مليون رمز؟', a: 'لدى Together.ai، يكلّف الضبط الخاضع للإشراف بطريقة LoRA 0.48 دولار لكل مليون رمز حتى 16 مليار معامل، و1.50 دولار بين 17 و69 مليارًا، و2.90 دولار بين 70 و100 مليار، بحد أدنى 4.00 دولارات لكل مهمة. أما الضبط الكامل الخاضع للإشراف فيكلّف 1.20 و3.75 و7.25 دولار في الشرائح نفسها. ولدى Fireworks.ai يبدأ الضبط بطريقة LoRA من 0.50 دولار لكل مليون رمز حتى 16 مليارًا ويرتفع إلى 10.00 دولارات فوق 300 مليار.' },
+            { q: 'هل يمكنني استخدام MLX-LM على Windows أو Linux؟', a: 'لا. فـMLX-LM مبنية على إطار MLX من آبل وعلى الذاكرة الموحدة في Apple Silicon، ولذلك لا تُطرح كخيار على منصات أخرى. استخدم Unsloth أو Axolotl على Windows أو Linux. ولاحظ أن Unsloth صار يوفّر إصدارات macOS أيضًا، فلديك على حاسوب Mac اختيار حقيقي بين الاثنين.' },
+            { q: 'ماذا حلّ بـPredibase؟', a: 'أعلنت Rubrik استحواذها على Predibase في 25 يونيو 2025. وحتى 28 أغسطس 2026، يعيد predibase.com إعادة توجيه من نوع HTTP 301 إلى صفحة Agent Cloud لدى Rubrik بدل تقديم منتج مستقل. تأكد من التوافر الحالي مع Rubrik مباشرةً قبل الاعتماد عليها في مشروع جديد.' },
+            { q: 'هل لدى Together.ai أو Fireworks.ai برامج عمولة؟', a: 'لم نجد أي برنامج عمولة أو إحالة علني لأي منهما حتى أغسطس 2026، ولا تظهر أي منهما في القوائم الرئيسية. وصفحات الشركاء لديهما تصف تكاملات مؤسسية لا برامج إحالة لصنّاع المحتوى. ومنصة PromptQuorum لا تكسب شيئًا من روابط هذه الصفحة.' },
+            { q: 'هل الضبط الدقيق السحابي أغلى من المحلي؟', a: 'يتوقف ذلك على وتيرة تدريبك. ففي تشغيل واحد على مجموعة بيانات صغيرة تكون رسوم السحابة بضعة دولارات، وهو عادةً أقل من قيمة أمسية تُنفَق على تهيئة البيئة. أما مع التكرار المتواتر على عتاد تملكه أصلًا، فالمحلي أرخص في كل تشغيل بعد الأول لأن التكلفة الحدية للحوسبة تقارب الصفر.' },
+            { q: 'هل أحتاج تعدد المعالجات لضبط نموذج بسبعة مليارات معامل؟', a: 'عادةً لا. فبطاقة واحدة من فئة 24 غيغابايت تتعامل مع نموذج بسبعة مليارات معامل بارتياح باستخدام QLoRA. ويزداد أثر تعدد المعالجات مع النماذج الأكبر أو مع الضبط الكامل دون LoRA. راجع [دليل متطلبات العتاد](/ar/prompt-bites/fine-tuning-7b-model-locally-hardware) لتقدير حجم ذاكرة المعالج الرسومي.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4224,47 +4228,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما أفضل إطار عمل لضبط النماذج اللغوية في 2026؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'أداة Unsloth لمعظم من يدرّبون على عتادهم الخاص، إذ إن المكتبة برخصة Apache-2.0 مجانية وتغطي تعدد المعالجات على NVIDIA وAMD وIntel والمعالجات المركزية وVulkan. وAxolotl أفضل حين يمتد التدريب عبر عدة أجهزة، وMLX-LM هي الأخف على Apple Silicon.',
+          {
+            '@type': 'Question',
+            'name': 'ما أفضل إطار عمل لضبط النماذج اللغوية في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أداة Unsloth لمعظم من يدرّبون على عتادهم الخاص، لأن المكتبة برخصة Apache-2.0 مجانية وتغطي الآن إعدادات تعدد المعالجات على NVIDIA وAMD وIntel والمعالجات المركزية وVulkan فوق Windows وLinux وWSL وmacOS. أما Axolotl فخيار أفضل حين يمتد التدريب عبر عدة أجهزة، إذ يوثّق التدريب متعدد العقد والتوازي متعدد الأبعاد. وMLX-LM هي الخيار الأخف على معالجات Apple Silicon.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل Unsloth مجاني ويدعم تعدد المعالجات مجانًا؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'مكتبة Unsloth مجانية برخصة Apache-2.0 ويورد ملف التعريف الخاص بها دعم تعدد المعالجات دون جدار دفع في المستودع. وتوجد باقتان مدفوعتان، Pro وEnterprise، غير أن أسعارهما غير منشورة.',
+          {
+            '@type': 'Question',
+            'name': 'هل Unsloth مجاني، وهل تدعم النسخة المجانية تعدد المعالجات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'مكتبة Unsloth مجانية برخصة Apache-2.0، ويورد ملف التعريف الخاص بها دعم تعدد المعالجات دون جدار دفع في المستودع. وتوجد باقتان مدفوعتان، Pro وEnterprise، غير أن أسعارهما غير منشورة، فأي رقم محدد مقتبس في مكان آخر ينبغي أن يُعامل على أنه غير موثق. والادعاء الشائع بأن تعدد المعالجات يستلزم باقة مدفوعة يناقض التوثيق الحالي للمشروع.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كم يكلّف الضبط الدقيق السحابي لكل مليون رمز؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'تتقاضى Together.ai 0.48 دولار لكل مليون رمز للضبط الخاضع للإشراف بطريقة LoRA حتى 16 مليار معامل، ترتفع إلى 2.90 دولار بين 70 و100 مليار، بحد أدنى 4.00 دولارات لكل مهمة. والضبط الكامل يتراوح بين 1.20 و7.25 دولار في تلك الشرائح. وتبدأ Fireworks.ai من 0.50 دولار لكل مليون رمز.',
+          {
+            '@type': 'Question',
+            'name': 'كم يكلّف الضبط الدقيق السحابي لكل مليون رمز؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لدى Together.ai، يكلّف الضبط الخاضع للإشراف بطريقة LoRA 0.48 دولار لكل مليون رمز حتى 16 مليار معامل، و1.50 دولار بين 17 و69 مليارًا، و2.90 دولار بين 70 و100 مليار، بحد أدنى 4.00 دولارات لكل مهمة. أما الضبط الكامل الخاضع للإشراف فيكلّف 1.20 و3.75 و7.25 دولار في الشرائح نفسها. ولدى Fireworks.ai يبدأ الضبط بطريقة LoRA من 0.50 دولار لكل مليون رمز حتى 16 مليارًا ويرتفع إلى 10.00 دولارات فوق 300 مليار.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ماذا حلّ بـPredibase؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'أعلنت Rubrik استحواذها على Predibase في 25 يونيو 2025. وحتى 28 أغسطس 2026 يعيد predibase.com إعادة توجيه من نوع HTTP 301 إلى Rubrik Agent Cloud بدل تقديم منتج ضبط مستقل بالخدمة الذاتية.',
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام MLX-LM على Windows أو Linux؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. فـMLX-LM مبنية على إطار MLX من آبل وعلى الذاكرة الموحدة في Apple Silicon، ولذلك لا تُطرح كخيار على منصات أخرى. استخدم Unsloth أو Axolotl على Windows أو Linux. ولاحظ أن Unsloth صار يوفّر إصدارات macOS أيضًا، فلديك على حاسوب Mac اختيار حقيقي بين الاثنين.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكنني استخدام MLX-LM على Windows أو Linux؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا. فـMLX-LM مبنية على MLX من آبل وعلى الذاكرة الموحدة في Apple Silicon، ولذلك تعمل على macOS فقط. استخدم Unsloth أو Axolotl على Windows أو Linux.',
+          {
+            '@type': 'Question',
+            'name': 'ماذا حلّ بـPredibase؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أعلنت Rubrik استحواذها على Predibase في 25 يونيو 2025. وحتى 28 أغسطس 2026، يعيد predibase.com إعادة توجيه من نوع HTTP 301 إلى صفحة Agent Cloud لدى Rubrik بدل تقديم منتج مستقل. تأكد من التوافر الحالي مع Rubrik مباشرةً قبل الاعتماد عليها في مشروع جديد.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل لدى Together.ai أو Fireworks.ai برامج عمولة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لم نجد أي برنامج عمولة أو إحالة علني لأي منهما حتى أغسطس 2026، ولا تظهر أي منهما في القوائم الرئيسية. وصفحات الشركاء لديهما تصف تكاملات مؤسسية لا برامج إحالة لصنّاع المحتوى. ومنصة PromptQuorum لا تكسب شيئًا من روابط هذه الصفحة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الضبط الدقيق السحابي أغلى من المحلي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يتوقف ذلك على وتيرة تدريبك. ففي تشغيل واحد على مجموعة بيانات صغيرة تكون رسوم السحابة بضعة دولارات، وهو عادةً أقل من قيمة أمسية تُنفَق على تهيئة البيئة. أما مع التكرار المتواتر على عتاد تملكه أصلًا، فالمحلي أرخص في كل تشغيل بعد الأول لأن التكلفة الحدية للحوسبة تقارب الصفر.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أحتاج تعدد المعالجات لضبط نموذج بسبعة مليارات معامل؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'عادةً لا. فبطاقة واحدة من فئة 24 غيغابايت تتعامل مع نموذج بسبعة مليارات معامل بارتياح باستخدام QLoRA. ويزداد أثر تعدد المعالجات مع النماذج الأكبر أو مع الضبط الكامل دون LoRA. راجع [دليل متطلبات العتاد](/ar/prompt-bites/fine-tuning-7b-model-locally-hardware) لتقدير حجم ذاكرة المعالج الرسومي.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4658,39 +4686,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: '2026년 최고의 LLM 파인튜닝 프레임워크는 무엇인가요?',
-            a: '자체 하드웨어에서 학습하는 대부분에게는 Unsloth입니다. Apache-2.0 라이브러리가 무료이고 이제 Windows·Linux·WSL·macOS에서 NVIDIA·AMD·Intel·CPU·Vulkan에 걸친 멀티 GPU 구성을 지원하기 때문입니다. 학습이 여러 대에 걸치면 Axolotl이 더 낫습니다. 멀티노드 학습과 ND 병렬을 문서화하고 있기 때문입니다. MLX-LM은 Apple Silicon에서 가장 가벼운 선택지입니다.',
-          },
-          {
-            q: 'Unsloth는 무료이고, 무료 버전이 멀티 GPU를 지원하나요?',
-            a: 'Unsloth 라이브러리는 Apache-2.0으로 무료이며, README는 저장소 내에 유료 장벽 없이 멀티 GPU 지원을 명시합니다. 유료 Pro와 Enterprise 등급이 있지만 가격은 공개되지 않았으므로, 다른 곳에서 인용된 구체적 금액은 검증되지 않은 것으로 봐야 합니다. 멀티 GPU에 유료 등급이 필요하다는 흔한 주장은 프로젝트의 현재 문서와 어긋납니다.',
-          },
-          {
-            q: '클라우드 파인튜닝은 100만 토큰당 얼마인가요?',
-            a: 'Together.ai에서 지도 LoRA 파인튜닝은 16B 파라미터까지 100만 토큰당 0.48달러, 17~69B는 1.50달러, 70~100B는 2.90달러이며 작업당 최소 4.00달러입니다. 전체 지도 파인튜닝은 같은 구간에서 1.20, 3.75, 7.25달러입니다. Fireworks.ai에서는 LoRA SFT가 16B까지 100만 토큰당 0.50달러에서 시작해 300B 초과에서 10.00달러까지 오릅니다.',
-          },
-          {
-            q: 'MLX-LM을 Windows나 Linux에서 쓸 수 있나요?',
-            a: '아니요. MLX-LM은 애플의 MLX 프레임워크와 Apple Silicon의 통합 메모리 위에 구축되어 다른 플랫폼에서는 후보가 되지 않습니다. Windows나 Linux에서는 Unsloth나 Axolotl을 쓰세요. Unsloth도 이제 macOS 빌드를 제공하므로 Mac에서는 둘 사이에 실질적인 선택지가 있습니다.',
-          },
-          {
-            q: 'Predibase는 어떻게 되었나요?',
-            a: 'Rubrik이 2025년 6월 25일 Predibase 인수를 발표했습니다. 2026년 8월 28일 기준 predibase.com은 독립 제품을 제공하는 대신 Rubrik의 Agent Cloud 페이지로 HTTP 301 리디렉션을 반환합니다. 새 프로젝트에서 의존하기 전에 현재 가용성을 Rubrik에 직접 확인하세요.',
-          },
-          {
-            q: 'Together.ai나 Fireworks.ai에 제휴 프로그램이 있나요?',
-            a: '2026년 8월 기준 두 곳 모두 공개된 제휴나 추천 프로그램을 찾지 못했고, 주요 목록에도 등장하지 않습니다. 두 회사의 파트너 페이지는 기업 연동을 설명할 뿐 창작자용 추천 제도가 아닙니다. PromptQuorum은 이 페이지의 링크로 수익을 얻지 않습니다.',
-          },
-          {
-            q: '클라우드 파인튜닝이 로컬보다 비싼가요?',
-            a: '얼마나 자주 학습하느냐에 달렸습니다. 작은 데이터셋에서 한 번 실행한다면 클라우드 요금은 몇 달러로, 보통 환경 설정에 저녁 한 번을 쓰는 가치보다 적습니다. 이미 보유한 하드웨어에서 자주 반복한다면 연산의 한계비용이 거의 0이므로 첫 실행 이후로는 로컬이 매번 저렴합니다.',
-          },
-          {
-            q: '7B 모델을 조정하는 데 멀티 GPU가 필요한가요?',
-            a: '대개 필요 없습니다. 24GB급 카드 한 장이면 QLoRA로 7B 모델을 넉넉히 다룹니다. 멀티 GPU는 더 큰 모델이나 LoRA를 쓰지 않는 전체 파인튜닝에서 더 중요합니다. VRAM 산정은 [하드웨어 요구사항 가이드](/ko/prompt-bites/fine-tuning-7b-model-locally-hardware)를 참고하세요.',
-          },
-        ],
+            { q: '2026년 최고의 LLM 파인튜닝 프레임워크는 무엇인가요?', a: '자체 하드웨어에서 학습하는 대부분에게는 Unsloth입니다. Apache-2.0 라이브러리가 무료이고 이제 Windows·Linux·WSL·macOS에서 NVIDIA·AMD·Intel·CPU·Vulkan에 걸친 멀티 GPU 구성을 지원하기 때문입니다. 학습이 여러 대에 걸치면 Axolotl이 더 낫습니다. 멀티노드 학습과 ND 병렬을 문서화하고 있기 때문입니다. MLX-LM은 Apple Silicon에서 가장 가벼운 선택지입니다.' },
+            { q: 'Unsloth는 무료이고, 무료 버전이 멀티 GPU를 지원하나요?', a: 'Unsloth 라이브러리는 Apache-2.0으로 무료이며, README는 저장소 내에 유료 장벽 없이 멀티 GPU 지원을 명시합니다. 유료 Pro와 Enterprise 등급이 있지만 가격은 공개되지 않았으므로, 다른 곳에서 인용된 구체적 금액은 검증되지 않은 것으로 봐야 합니다. 멀티 GPU에 유료 등급이 필요하다는 흔한 주장은 프로젝트의 현재 문서와 어긋납니다.' },
+            { q: '클라우드 파인튜닝은 100만 토큰당 얼마인가요?', a: 'Together.ai에서 지도 LoRA 파인튜닝은 16B 파라미터까지 100만 토큰당 0.48달러, 17~69B는 1.50달러, 70~100B는 2.90달러이며 작업당 최소 4.00달러입니다. 전체 지도 파인튜닝은 같은 구간에서 1.20, 3.75, 7.25달러입니다. Fireworks.ai에서는 LoRA SFT가 16B까지 100만 토큰당 0.50달러에서 시작해 300B 초과에서 10.00달러까지 오릅니다.' },
+            { q: 'MLX-LM을 Windows나 Linux에서 쓸 수 있나요?', a: '아니요. MLX-LM은 애플의 MLX 프레임워크와 Apple Silicon의 통합 메모리 위에 구축되어 다른 플랫폼에서는 후보가 되지 않습니다. Windows나 Linux에서는 Unsloth나 Axolotl을 쓰세요. Unsloth도 이제 macOS 빌드를 제공하므로 Mac에서는 둘 사이에 실질적인 선택지가 있습니다.' },
+            { q: 'Predibase는 어떻게 되었나요?', a: 'Rubrik이 2025년 6월 25일 Predibase 인수를 발표했습니다. 2026년 8월 28일 기준 predibase.com은 독립 제품을 제공하는 대신 Rubrik의 Agent Cloud 페이지로 HTTP 301 리디렉션을 반환합니다. 새 프로젝트에서 의존하기 전에 현재 가용성을 Rubrik에 직접 확인하세요.' },
+            { q: 'Together.ai나 Fireworks.ai에 제휴 프로그램이 있나요?', a: '2026년 8월 기준 두 곳 모두 공개된 제휴나 추천 프로그램을 찾지 못했고, 주요 목록에도 등장하지 않습니다. 두 회사의 파트너 페이지는 기업 연동을 설명할 뿐 창작자용 추천 제도가 아닙니다. PromptQuorum은 이 페이지의 링크로 수익을 얻지 않습니다.' },
+            { q: '클라우드 파인튜닝이 로컬보다 비싼가요?', a: '얼마나 자주 학습하느냐에 달렸습니다. 작은 데이터셋에서 한 번 실행한다면 클라우드 요금은 몇 달러로, 보통 환경 설정에 저녁 한 번을 쓰는 가치보다 적습니다. 이미 보유한 하드웨어에서 자주 반복한다면 연산의 한계비용이 거의 0이므로 첫 실행 이후로는 로컬이 매번 저렴합니다.' },
+            { q: '7B 모델을 조정하는 데 멀티 GPU가 필요한가요?', a: '대개 필요 없습니다. 24GB급 카드 한 장이면 QLoRA로 7B 모델을 넉넉히 다룹니다. 멀티 GPU는 더 큰 모델이나 LoRA를 쓰지 않는 전체 파인튜닝에서 더 중요합니다. VRAM 산정은 [하드웨어 요구사항 가이드](/ko/prompt-bites/fine-tuning-7b-model-locally-hardware)를 참고하세요.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4758,47 +4762,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '2026년 최고의 LLM 파인튜닝 프레임워크는 무엇인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '자체 하드웨어에서 학습하는 대부분에게는 Unsloth입니다. Apache-2.0 라이브러리가 무료이고 NVIDIA·AMD·Intel·CPU·Vulkan에 걸친 멀티 GPU를 지원하기 때문입니다. 학습이 여러 대에 걸치면 Axolotl이, Apple Silicon에서는 MLX-LM이 가장 가볍습니다.',
+          {
+            '@type': 'Question',
+            'name': '2026년 최고의 LLM 파인튜닝 프레임워크는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '자체 하드웨어에서 학습하는 대부분에게는 Unsloth입니다. Apache-2.0 라이브러리가 무료이고 이제 Windows·Linux·WSL·macOS에서 NVIDIA·AMD·Intel·CPU·Vulkan에 걸친 멀티 GPU 구성을 지원하기 때문입니다. 학습이 여러 대에 걸치면 Axolotl이 더 낫습니다. 멀티노드 학습과 ND 병렬을 문서화하고 있기 때문입니다. MLX-LM은 Apple Silicon에서 가장 가벼운 선택지입니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Unsloth는 무료이고 무료 버전에서 멀티 GPU를 지원하나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Unsloth 라이브러리는 Apache-2.0으로 무료이며 README는 저장소 내 유료 장벽 없이 멀티 GPU 지원을 명시합니다. 유료 Pro와 Enterprise 등급이 있으나 가격은 공개되지 않았습니다.',
+          {
+            '@type': 'Question',
+            'name': 'Unsloth는 무료이고, 무료 버전이 멀티 GPU를 지원하나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unsloth 라이브러리는 Apache-2.0으로 무료이며, README는 저장소 내에 유료 장벽 없이 멀티 GPU 지원을 명시합니다. 유료 Pro와 Enterprise 등급이 있지만 가격은 공개되지 않았으므로, 다른 곳에서 인용된 구체적 금액은 검증되지 않은 것으로 봐야 합니다. 멀티 GPU에 유료 등급이 필요하다는 흔한 주장은 프로젝트의 현재 문서와 어긋납니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '클라우드 파인튜닝은 100만 토큰당 얼마인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Together.ai는 16B 파라미터까지 지도 LoRA 파인튜닝을 100만 토큰당 0.48달러에 제공하며 70~100B에서 2.90달러로 오르고 작업당 최소 4.00달러입니다. 전체 SFT는 해당 구간에서 1.20~7.25달러입니다. Fireworks.ai는 100만 토큰당 0.50달러에서 시작합니다.',
+          {
+            '@type': 'Question',
+            'name': '클라우드 파인튜닝은 100만 토큰당 얼마인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Together.ai에서 지도 LoRA 파인튜닝은 16B 파라미터까지 100만 토큰당 0.48달러, 17~69B는 1.50달러, 70~100B는 2.90달러이며 작업당 최소 4.00달러입니다. 전체 지도 파인튜닝은 같은 구간에서 1.20, 3.75, 7.25달러입니다. Fireworks.ai에서는 LoRA SFT가 16B까지 100만 토큰당 0.50달러에서 시작해 300B 초과에서 10.00달러까지 오릅니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Predibase는 어떻게 되었나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Rubrik이 2025년 6월 25일 Predibase 인수를 발표했습니다. 2026년 8월 28일 기준 predibase.com은 독립적인 셀프서비스 파인튜닝 제품 대신 Rubrik Agent Cloud로 HTTP 301 리디렉션을 반환합니다.',
+          {
+            '@type': 'Question',
+            'name': 'MLX-LM을 Windows나 Linux에서 쓸 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니요. MLX-LM은 애플의 MLX 프레임워크와 Apple Silicon의 통합 메모리 위에 구축되어 다른 플랫폼에서는 후보가 되지 않습니다. Windows나 Linux에서는 Unsloth나 Axolotl을 쓰세요. Unsloth도 이제 macOS 빌드를 제공하므로 Mac에서는 둘 사이에 실질적인 선택지가 있습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'MLX-LM을 Windows나 Linux에서 쓸 수 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '아니요. MLX-LM은 애플 MLX와 Apple Silicon 통합 메모리 위에 구축되어 macOS에서만 실행됩니다. Windows나 Linux에서는 Unsloth나 Axolotl을 쓰세요.',
+          {
+            '@type': 'Question',
+            'name': 'Predibase는 어떻게 되었나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Rubrik이 2025년 6월 25일 Predibase 인수를 발표했습니다. 2026년 8월 28일 기준 predibase.com은 독립 제품을 제공하는 대신 Rubrik의 Agent Cloud 페이지로 HTTP 301 리디렉션을 반환합니다. 새 프로젝트에서 의존하기 전에 현재 가용성을 Rubrik에 직접 확인하세요.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Together.ai나 Fireworks.ai에 제휴 프로그램이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 8월 기준 두 곳 모두 공개된 제휴나 추천 프로그램을 찾지 못했고, 주요 목록에도 등장하지 않습니다. 두 회사의 파트너 페이지는 기업 연동을 설명할 뿐 창작자용 추천 제도가 아닙니다. PromptQuorum은 이 페이지의 링크로 수익을 얻지 않습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '클라우드 파인튜닝이 로컬보다 비싼가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '얼마나 자주 학습하느냐에 달렸습니다. 작은 데이터셋에서 한 번 실행한다면 클라우드 요금은 몇 달러로, 보통 환경 설정에 저녁 한 번을 쓰는 가치보다 적습니다. 이미 보유한 하드웨어에서 자주 반복한다면 연산의 한계비용이 거의 0이므로 첫 실행 이후로는 로컬이 매번 저렴합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '7B 모델을 조정하는 데 멀티 GPU가 필요한가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '대개 필요 없습니다. 24GB급 카드 한 장이면 QLoRA로 7B 모델을 넉넉히 다룹니다. 멀티 GPU는 더 큰 모델이나 LoRA를 쓰지 않는 전체 파인튜닝에서 더 중요합니다. VRAM 산정은 [하드웨어 요구사항 가이드](/ko/prompt-bites/fine-tuning-7b-model-locally-hardware)를 참고하세요.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

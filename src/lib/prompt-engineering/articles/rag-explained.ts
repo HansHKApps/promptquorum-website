@@ -821,18 +821,126 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         mainEntity: [
-          { '@type': 'Question', name: '¿Qué es RAG (Retrieval-Augmented Generation)?', acceptedAnswer: { '@type': 'Answer', text: 'RAG es una técnica donde un sistema de IA recupera documentos relevantes de una base de conocimientos antes de generar una respuesta. En lugar de depender de lo que el modelo memorizó durante el entrenamiento, la respuesta se ancla en documentos que tú proporcionas y controlas.' } },
-          { '@type': 'Question', name: '¿Cómo reduce RAG las alucinaciones?', acceptedAnswer: { '@type': 'Answer', text: 'RAG ancla la respuesta del modelo en el texto recuperado. El prompt le dice explícitamente al modelo que responda solo a partir de los extractos proporcionados y que indique cuando la información no está presente. Esto elimina el incentivo del modelo de inventar detalles plausibles.' } },
-          { '@type': 'Question', name: '¿Cuál es la diferencia entre RAG y fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'RAG recupera conocimiento externo en tiempo de consulta y lo añade al prompt. El fine-tuning modifica permanentemente los parámetros del modelo mediante entrenamiento adicional. RAG es mejor para datos que cambian frecuentemente; el fine-tuning es mejor para enseñar comportamiento o estilo consistentes.' } },
-          { '@type': 'Question', name: '¿Qué bases de datos vectoriales funcionan mejor para RAG en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Las opciones más utilizadas son Pinecone (gestionada, fácil de arrancar), Weaviate (open-source, flexible), Chroma (ligera, local) y Milvus (escala empresarial). Para residencia de datos en la UE, se prefieren Weaviate o Chroma autoalojadas.' } },
-          { '@type': 'Question', name: '¿Cuál es el tamaño óptimo de fragmento para RAG?', acceptedAnswer: { '@type': 'Answer', text: '200–500 palabras por fragmento con solapamiento del 10–20% entre fragmentos adyacentes funciona bien para la mayoría de los casos. Fragmentos más pequeños (menos de 100 palabras) pierden contexto; fragmentos más grandes (más de 1.000 palabras) reducen la precisión de recuperación.' } },
-          { '@type': 'Question', name: '¿Puedo usar RAG con LLMs locales como Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. RAG es agnóstico al modelo. Recuperas documentos usando cualquier modelo de embeddings, luego pasas el contexto recuperado a cualquier LLM — incluyendo LLaMA 4 Scout o Mistral ejecutándose localmente via Ollama o LM Studio. Esto mantiene todos los datos en tu propio hardware.' } },
-          { '@type': 'Question', name: '¿RAG funciona con GPT-5.6, Claude y Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Los tres aceptan contexto recuperado en el prompt. Claude Opus 5 es particularmente efectivo para indicar cuando el contexto recuperado no contiene la respuesta, en lugar de alucinar. GPT-5.6 produce respuestas más concisas a partir de contexto denso.' } },
-          { '@type': 'Question', name: '¿Qué es un umbral de relevancia en RAG?', acceptedAnswer: { '@type': 'Answer', text: 'Un umbral de puntuación de similitud por debajo del cual los documentos recuperados no se pasan al LLM. Un umbral de 0.7 de similitud coseno significa que solo los documentos con un 70% o más de coincidencia semántica con la consulta se incluyen.' } },
-          { '@type': 'Question', name: '¿Es RAG mejor que usar una ventana de contexto grande?', acceptedAnswer: { '@type': 'Answer', text: 'Para conjuntos de documentos grandes, sí. RAG busca millones de documentos en milisegundos mediante similitud semántica y cuesta menos por consulta ya que solo pasas fragmentos relevantes, no toda tu base de conocimientos.' } },
-          { '@type': 'Question', name: '¿Cómo evito ataques de inyección de prompts a través de RAG?', acceptedAnswer: { '@type': 'Answer', text: 'Nunca confíes en el contenido recuperado como instrucciones. Usa delimitadores claros entre tus instrucciones y el texto recuperado en el prompt. Valida que el contenido recuperado coincida con el formato y fuente esperados antes de incluirlo.' } },
-          { '@type': 'Question', name: '¿Cuál es el pipeline RAG para un sistema de producción?', acceptedAnswer: { '@type': 'Answer', text: 'Ingestión, fragmentación, embedding, vector store, embedding de consulta, búsqueda semántica, filtrado de relevancia, construcción del prompt, generación por LLM, respuesta con citas de fuentes. Cada etapa puede probarse y actualizarse de forma independiente.' } },
-          { '@type': 'Question', name: '¿Puedo usar RAG sin una base de datos vectorial?', acceptedAnswer: { '@type': 'Answer', text: 'Sí para conjuntos pequeños de documentos. La búsqueda por palabras clave BM25 funciona para menos de 10.000 fragmentos y no requiere infraestructura vectorial. Para similitud semántica en colecciones más grandes, una base de datos vectorial es necesaria.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG (Retrieval-Augmented Generation) recupera documentos relevantes antes de generar una respuesta, en lugar de depender del conocimiento de entrenamiento del modelo. La respuesta se ancla en tus documentos, no se inventa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo reduce RAG las alucinaciones?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG ancla la respuesta en el texto recuperado. El prompt le indica al modelo que responda solo a partir de los extractos proporcionados y que señale la información faltante. Esto elimina el incentivo del modelo de inventar detalles plausibles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre RAG y fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG recupera conocimiento en tiempo de consulta y lo añade al prompt. El fine-tuning modifica los parámetros del modelo de forma permanente. RAG es mejor para datos cambiantes; el fine-tuning para comportamiento estable.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Funciona RAG con cualquier modelo de lenguaje?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. RAG es agnóstico al modelo. Cualquier LLM que acepte un prompt con contexto puede usar documentos recuperados. Esto aplica a GPT-5.6, Claude Opus, Gemini, modelos open-source como Llama y modelos locales via Ollama.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el tamaño óptimo de fragmento para RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para la mayoría de casos: 200–500 palabras por fragmento con solapamiento del 10–20% entre fragmentos adyacentes. Fragmentos más pequeños (50–100 palabras) mejoran la precisión; fragmentos más grandes (500+ palabras) dan más contexto pero arriesgan pasajes irrelevantes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es un umbral de relevancia en RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un umbral de puntuación de similitud. Si la similitud de un documento recuperado está por debajo del umbral (ej. 0.7 similitud coseno), no se pasa al LLM. Esto evita que contexto de baja calidad confunda al modelo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es RAG mejor que una ventana de contexto grande?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para conjuntos masivos de documentos, sí. RAG busca millones de documentos en milisegundos mediante similitud semántica. Las ventanas de contexto grandes son más costosas y requieren saber de antemano qué documentos incluir.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo combinar RAG con fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Haz fine-tuning de un modelo para mejorar estilo, tono o comportamiento de dominio. Luego usa RAG para anclarlo en hechos actuales. Esto crea lo mejor de ambos: comportamiento consistente + anclaje factual.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo evito ataques de inyección de prompts en RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Valida el contenido recuperado antes de incluirlo en el prompt. Usa delimitadores claros entre las instrucciones del sistema y el texto recuperado. Nunca trates el contenido recuperado como instrucciones ejecutables. Monitoriza patrones sospechosos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Necesita RAG una base de datos vectorial?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No para colecciones pequeñas. La búsqueda por palabras clave BM25 funciona para menos de 10.000 documentos sin vectores. Para similitud semántica en colecciones más grandes, una base de datos vectorial (Weaviate, Pinecone, Chroma, Milvus) es esencial.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es RAG (Retrieval-Augmented Generation)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG es una técnica donde un sistema de IA recupera documentos relevantes de una base de conocimientos antes de generar una respuesta. En lugar de depender de lo que el modelo memorizó durante el entrenamiento, la respuesta se ancla en documentos que tú proporcionas y controlas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué bases de datos vectoriales funcionan mejor para RAG en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las opciones más utilizadas son Pinecone (gestionada, fácil de arrancar), Weaviate (open-source, flexible), Chroma (ligera, local) y Milvus (escala empresarial). Para residencia de datos en la UE, se prefieren Weaviate o Chroma autoalojadas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar RAG con LLMs locales como Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. RAG es agnóstico al modelo. Recuperas documentos usando cualquier modelo de embeddings, luego pasas el contexto recuperado a cualquier LLM — incluyendo LLaMA 4 Scout o Mistral ejecutándose localmente via Ollama o LM Studio. Esto mantiene todos los datos en tu propio hardware.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿RAG funciona con GPT-5.6, Claude y Gemini?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Los tres aceptan contexto recuperado en el prompt. Claude Opus 5 es particularmente efectivo para indicar cuando el contexto recuperado no contiene la respuesta, en lugar de alucinar. GPT-5.6 produce respuestas más concisas a partir de contexto denso.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el pipeline RAG para un sistema de producción?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ingestión, fragmentación, embedding, vector store, embedding de consulta, búsqueda semántica, filtrado de relevancia, construcción del prompt, generación por LLM, respuesta con citas de fuentes. Cada etapa puede probarse y actualizarse de forma independiente.',
+            },
+          },
         ],
       },
       sections: {
@@ -1002,6 +1110,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Puedo combinar RAG con fine-tuning?', a: 'Sí. Haz fine-tuning de un modelo para mejorar estilo, tono o comportamiento de dominio. Luego usa RAG para anclarlo en hechos actuales. Esto crea lo mejor de ambos: comportamiento consistente + anclaje factual.' },
             { q: '¿Cómo evito ataques de inyección de prompts en RAG?', a: 'Valida el contenido recuperado antes de incluirlo en el prompt. Usa delimitadores claros entre las instrucciones del sistema y el texto recuperado. Nunca trates el contenido recuperado como instrucciones ejecutables. Monitoriza patrones sospechosos.' },
             { q: '¿Necesita RAG una base de datos vectorial?', a: 'No para colecciones pequeñas. La búsqueda por palabras clave BM25 funciona para menos de 10.000 documentos sin vectores. Para similitud semántica en colecciones más grandes, una base de datos vectorial (Weaviate, Pinecone, Chroma, Milvus) es esencial.' },
+            { q: '¿Qué es RAG (Retrieval-Augmented Generation)?', a: 'RAG es una técnica donde un sistema de IA recupera documentos relevantes de una base de conocimientos antes de generar una respuesta. En lugar de depender de lo que el modelo memorizó durante el entrenamiento, la respuesta se ancla en documentos que tú proporcionas y controlas.' },
+            { q: '¿Qué bases de datos vectoriales funcionan mejor para RAG en 2026?', a: 'Las opciones más utilizadas son Pinecone (gestionada, fácil de arrancar), Weaviate (open-source, flexible), Chroma (ligera, local) y Milvus (escala empresarial). Para residencia de datos en la UE, se prefieren Weaviate o Chroma autoalojadas.' },
+            { q: '¿Puedo usar RAG con LLMs locales como Ollama?', a: 'Sí. RAG es agnóstico al modelo. Recuperas documentos usando cualquier modelo de embeddings, luego pasas el contexto recuperado a cualquier LLM — incluyendo LLaMA 4 Scout o Mistral ejecutándose localmente via Ollama o LM Studio. Esto mantiene todos los datos en tu propio hardware.' },
+            { q: '¿RAG funciona con GPT-5.6, Claude y Gemini?', a: 'Sí. Los tres aceptan contexto recuperado en el prompt. Claude Opus 5 es particularmente efectivo para indicar cuando el contexto recuperado no contiene la respuesta, en lugar de alucinar. GPT-5.6 produce respuestas más concisas a partir de contexto denso.' },
+            { q: '¿Cuál es el pipeline RAG para un sistema de producción?', a: 'Ingestión, fragmentación, embedding, vector store, embedding de consulta, búsqueda semántica, filtrado de relevancia, construcción del prompt, generación por LLM, respuesta con citas de fuentes. Cada etapa puede probarse y actualizarse de forma independiente.' },
           ],
         },
       },
@@ -1096,18 +1209,126 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'ما هو RAG (التوليد المُعزَّز بالاسترجاع)؟', acceptedAnswer: { '@type': 'Answer', text: 'RAG تقنية يسترجع فيها نظام الذكاء الاصطناعي المستندات ذات الصلة من قاعدة معرفة قبل توليد الاستجابة. بدلاً من الاعتماد على ما حفظه النموذج أثناء التدريب، تُرسى الاستجابة في المستندات التي تقدمها وتتحكم فيها.' } },
-          { '@type': 'Question', name: 'كيف يُقلل RAG الهلوسة؟', acceptedAnswer: { '@type': 'Answer', text: 'يُرسي RAG استجابة النموذج في النص المُسترجع. يُخبر البرومبت النموذج صراحةً بالإجابة فقط من المقتطفات المقدمة والإشارة عندما لا تكون المعلومات موجودة. هذا يُلغي دافع النموذج لاختراع تفاصيل معقولة.' } },
-          { '@type': 'Question', name: 'ما الفرق بين RAG والضبط الدقيق؟', acceptedAnswer: { '@type': 'Answer', text: 'يسترجع RAG المعرفة الخارجية في وقت الاستعلام ويُضيفها إلى البرومبت. يُعدّل الضبط الدقيق معاملات النموذج بشكل دائم من خلال تدريب إضافي. RAG أفضل للبيانات المتغيرة بشكل متكرر؛ الضبط الدقيق أفضل لتعليم سلوك أو أسلوب ثابت.' } },
-          { '@type': 'Question', name: 'ما قواعد البيانات المتجهية الأفضل لـ RAG في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'الخيارات الأكثر استخداماً هي Pinecone (مُدارة، سهلة البدء)، وWeaviate (مفتوحة المصدر، مرنة)، وChroma (خفيفة، محلية)، وMilvus (حجم مؤسسي). للإقامة في الاتحاد الأوروبي، يُفضَّل Weaviate أو Chroma ذاتية الاستضافة.' } },
-          { '@type': 'Question', name: 'ما الحجم المثالي للشظايا في RAG؟', acceptedAnswer: { '@type': 'Answer', text: '200-500 كلمة لكل شظية مع تداخل 10-20٪ بين الشظايا المتجاورة يعمل بشكل جيد لمعظم الحالات. الشظايا الأصغر (أقل من 100 كلمة) تفقد السياق؛ الشظايا الأكبر (أكثر من 1000 كلمة) تُقلل دقة الاسترجاع.' } },
-          { '@type': 'Question', name: 'هل يمكنني استخدام RAG مع النماذج اللغوية الكبيرة المحلية مثل Ollama؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. RAG مستقل عن النموذج. تسترجع المستندات باستخدام أي نموذج تضمينات، ثم تُمرر السياق المُسترجع إلى أي LLM — بما في ذلك LLaMA 4 Scout أو Mistral الذي يعمل محلياً عبر Ollama أو LM Studio. هذا يُبقي جميع البيانات على جهازك.' } },
-          { '@type': 'Question', name: 'هل يعمل RAG مع GPT-5.6 وClaude وGemini؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. الثلاثة يقبلون السياق المُسترجع في البرومبت. Claude Opus 5 فعّال بشكل خاص في الإشارة عندما لا يحتوي السياق المُسترجع على الإجابة، بدلاً من الهلوسة. GPT-5.6 ينتج استجابات أكثر إيجازاً من السياق الكثيف.' } },
-          { '@type': 'Question', name: 'ما هي عتبة الصلة في RAG؟', acceptedAnswer: { '@type': 'Answer', text: 'حد درجة التشابه الذي دونه لا تُمرَّر المستندات المُسترجعة إلى LLM. عتبة 0.7 تشابه جيب التمام تعني أن المستندات التي تُطابق الاستعلام دلالياً بنسبة 70٪ أو أكثر فقط تُدرج.' } },
-          { '@type': 'Question', name: 'هل RAG أفضل من استخدام نافذة سياق كبيرة؟', acceptedAnswer: { '@type': 'Answer', text: 'بالنسبة لمجموعات المستندات الكبيرة، نعم. يبحث RAG في ملايين المستندات في أجزاء من الثانية عبر التشابه الدلالي ويُكلف أقل لكل استعلام لأنك تُمرر فقط الشظايا ذات الصلة وليس قاعدة معرفتك بأكملها.' } },
-          { '@type': 'Question', name: 'كيف أتجنب هجمات حقن البرومبت عبر RAG؟', acceptedAnswer: { '@type': 'Answer', text: 'لا تثق أبداً بالمحتوى المُسترجع كتعليمات. استخدم محددات واضحة بين تعليماتك والنص المُسترجع في البرومبت. تحقق من مطابقة المحتوى المُسترجع للتنسيق والمصدر المتوقع قبل إدراجه.' } },
-          { '@type': 'Question', name: 'ما هو أنبوب RAG لنظام الإنتاج؟', acceptedAnswer: { '@type': 'Answer', text: 'الاستيعاب، التقسيم إلى شظايا، التضمين، مخزن المتجهات، تضمين الاستعلام، البحث الدلالي، تصفية الصلة، بناء البرومبت، التوليد بواسطة LLM، الاستجابة مع استشهادات المصادر. يمكن اختبار كل مرحلة وتحديثها بشكل مستقل.' } },
-          { '@type': 'Question', name: 'هل يمكنني استخدام RAG بدون قاعدة بيانات متجهية؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم لمجموعات المستندات الصغيرة. بحث الكلمات المفتاحية BM25 يعمل لأقل من 10,000 شظية ولا يتطلب بنية تحتية متجهية. للتشابه الدلالي في المجموعات الأكبر، قاعدة البيانات المتجهية ضرورية.' } },
+          {
+            '@type': 'Question',
+            'name': 'ما هو RAG؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يسترجع RAG (التوليد المُعزَّز بالاسترجاع) المستندات ذات الصلة قبل توليد الاستجابة، بدلاً من الاعتماد على معرفة تدريب النموذج. الاستجابة مُرساة في مستنداتك، وليست مخترعة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف يُقلل RAG الهلوسة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يُرسي RAG الاستجابة في النص المُسترجع. يُخبر البرومبت النموذج بالإجابة فقط من المقتطفات المقدمة والإشارة إلى المعلومات المفقودة. هذا يُلغي دافع النموذج لاختراع تفاصيل معقولة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين RAG والضبط الدقيق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يسترجع RAG المعرفة في وقت الاستعلام ويُضيفها إلى البرومبت. يُعدّل الضبط الدقيق معاملات النموذج بشكل دائم. RAG أفضل للبيانات المتغيرة؛ الضبط الدقيق للسلوك الثابت.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل RAG مع أي نموذج لغوي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. RAG مستقل عن النموذج. أي LLM يقبل برومبتاً بسياق يمكنه استخدام المستندات المُسترجعة. ينطبق هذا على GPT-5.6 وClaude Opus وGemini والنماذج مفتوحة المصدر مثل Llama والنماذج المحلية عبر Ollama.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الحجم المثالي للشظايا في RAG؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لمعظم الحالات: 200-500 كلمة لكل شظية مع تداخل 10-20٪ بين الشظايا المتجاورة. الشظايا الأصغر (50-100 كلمة) تُحسّن الدقة؛ الشظايا الأكبر (500+ كلمة) تُعطي سياقاً أكثر لكن تُخاطر بمقاطع غير ذات صلة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هي عتبة الصلة في RAG؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'حد درجة التشابه. إذا كانت درجة التشابه لمستند مُسترجع أقل من الحد (مثل 0.7 تشابه جيب التمام)، لا يُمرَّر إلى LLM. هذا يمنع السياق منخفض الجودة من إرباك النموذج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل RAG أفضل من نافذة سياق كبيرة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لمجموعات المستندات الضخمة، نعم. يبحث RAG في ملايين المستندات في أجزاء من الثانية عبر التشابه الدلالي. نوافذ السياق الكبيرة أغلى وتتطلب معرفة المستندات المراد إدراجها مسبقاً.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني دمج RAG مع الضبط الدقيق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. اضبط نموذجاً دقيقاً لتحسين الأسلوب والنبرة أو سلوك المجال. ثم استخدم RAG لتثبيته في الحقائق الحالية. هذا يخلق الأفضل من كليهما: سلوك ثابت + ترسية وقائعية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أتجنب هجمات حقن البرومبت في RAG؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تحقق من المحتوى المُسترجع قبل إدراجه في البرومبت. استخدم محددات واضحة بين تعليمات النظام والنص المُسترجع. لا تعامل المحتوى المُسترجع أبداً كتعليمات قابلة للتنفيذ. راقب الأنماط المشبوهة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يحتاج RAG إلى قاعدة بيانات متجهية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا للمجموعات الصغيرة. بحث الكلمات المفتاحية BM25 يعمل لأقل من 10,000 مستند بدون متجهات. للتشابه الدلالي في المجموعات الأكبر، قاعدة البيانات المتجهية (Weaviate، Pinecone، Chroma، Milvus) ضرورية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو RAG (التوليد المُعزَّز بالاسترجاع)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG تقنية يسترجع فيها نظام الذكاء الاصطناعي المستندات ذات الصلة من قاعدة معرفة قبل توليد الاستجابة. بدلاً من الاعتماد على ما حفظه النموذج أثناء التدريب، تُرسى الاستجابة في المستندات التي تقدمها وتتحكم فيها.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما قواعد البيانات المتجهية الأفضل لـ RAG في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الخيارات الأكثر استخداماً هي Pinecone (مُدارة، سهلة البدء)، وWeaviate (مفتوحة المصدر، مرنة)، وChroma (خفيفة، محلية)، وMilvus (حجم مؤسسي). للإقامة في الاتحاد الأوروبي، يُفضَّل Weaviate أو Chroma ذاتية الاستضافة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام RAG مع النماذج اللغوية الكبيرة المحلية مثل Ollama؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. RAG مستقل عن النموذج. تسترجع المستندات باستخدام أي نموذج تضمينات، ثم تُمرر السياق المُسترجع إلى أي LLM — بما في ذلك LLaMA 4 Scout أو Mistral الذي يعمل محلياً عبر Ollama أو LM Studio. هذا يُبقي جميع البيانات على جهازك.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يعمل RAG مع GPT-5.6 وClaude وGemini؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. الثلاثة يقبلون السياق المُسترجع في البرومبت. Claude Opus 5 فعّال بشكل خاص في الإشارة عندما لا يحتوي السياق المُسترجع على الإجابة، بدلاً من الهلوسة. GPT-5.6 ينتج استجابات أكثر إيجازاً من السياق الكثيف.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أنبوب RAG لنظام الإنتاج؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الاستيعاب، التقسيم إلى شظايا، التضمين، مخزن المتجهات، تضمين الاستعلام، البحث الدلالي، تصفية الصلة، بناء البرومبت، التوليد بواسطة LLM، الاستجابة مع استشهادات المصادر. يمكن اختبار كل مرحلة وتحديثها بشكل مستقل.',
+            },
+          },
         ],
       },
       sections: {
@@ -1277,6 +1498,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'هل يمكنني دمج RAG مع الضبط الدقيق؟', a: 'نعم. اضبط نموذجاً دقيقاً لتحسين الأسلوب والنبرة أو سلوك المجال. ثم استخدم RAG لتثبيته في الحقائق الحالية. هذا يخلق الأفضل من كليهما: سلوك ثابت + ترسية وقائعية.' },
             { q: 'كيف أتجنب هجمات حقن البرومبت في RAG؟', a: 'تحقق من المحتوى المُسترجع قبل إدراجه في البرومبت. استخدم محددات واضحة بين تعليمات النظام والنص المُسترجع. لا تعامل المحتوى المُسترجع أبداً كتعليمات قابلة للتنفيذ. راقب الأنماط المشبوهة.' },
             { q: 'هل يحتاج RAG إلى قاعدة بيانات متجهية؟', a: 'لا للمجموعات الصغيرة. بحث الكلمات المفتاحية BM25 يعمل لأقل من 10,000 مستند بدون متجهات. للتشابه الدلالي في المجموعات الأكبر، قاعدة البيانات المتجهية (Weaviate، Pinecone، Chroma، Milvus) ضرورية.' },
+            { q: 'ما هو RAG (التوليد المُعزَّز بالاسترجاع)؟', a: 'RAG تقنية يسترجع فيها نظام الذكاء الاصطناعي المستندات ذات الصلة من قاعدة معرفة قبل توليد الاستجابة. بدلاً من الاعتماد على ما حفظه النموذج أثناء التدريب، تُرسى الاستجابة في المستندات التي تقدمها وتتحكم فيها.' },
+            { q: 'ما قواعد البيانات المتجهية الأفضل لـ RAG في 2026؟', a: 'الخيارات الأكثر استخداماً هي Pinecone (مُدارة، سهلة البدء)، وWeaviate (مفتوحة المصدر، مرنة)، وChroma (خفيفة، محلية)، وMilvus (حجم مؤسسي). للإقامة في الاتحاد الأوروبي، يُفضَّل Weaviate أو Chroma ذاتية الاستضافة.' },
+            { q: 'هل يمكنني استخدام RAG مع النماذج اللغوية الكبيرة المحلية مثل Ollama؟', a: 'نعم. RAG مستقل عن النموذج. تسترجع المستندات باستخدام أي نموذج تضمينات، ثم تُمرر السياق المُسترجع إلى أي LLM — بما في ذلك LLaMA 4 Scout أو Mistral الذي يعمل محلياً عبر Ollama أو LM Studio. هذا يُبقي جميع البيانات على جهازك.' },
+            { q: 'هل يعمل RAG مع GPT-5.6 وClaude وGemini؟', a: 'نعم. الثلاثة يقبلون السياق المُسترجع في البرومبت. Claude Opus 5 فعّال بشكل خاص في الإشارة عندما لا يحتوي السياق المُسترجع على الإجابة، بدلاً من الهلوسة. GPT-5.6 ينتج استجابات أكثر إيجازاً من السياق الكثيف.' },
+            { q: 'ما هو أنبوب RAG لنظام الإنتاج؟', a: 'الاستيعاب، التقسيم إلى شظايا، التضمين، مخزن المتجهات، تضمين الاستعلام، البحث الدلالي، تصفية الصلة، بناء البرومبت، التوليد بواسطة LLM، الاستجابة مع استشهادات المصادر. يمكن اختبار كل مرحلة وتحديثها بشكل مستقل.' },
           ],
         },
       },
@@ -1371,18 +1597,126 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'O que é RAG (Retrieval-Augmented Generation)?', acceptedAnswer: { '@type': 'Answer', text: 'RAG é uma técnica em que um sistema de IA recupera documentos relevantes de uma base de conhecimento antes de gerar uma resposta. Em vez de depender do que o modelo memorizou durante o treinamento, a resposta é ancorada em documentos que você fornece e controla.' } },
-          { '@type': 'Question', name: 'Como o RAG reduz alucinações?', acceptedAnswer: { '@type': 'Answer', text: 'O RAG ancora a resposta do modelo no texto recuperado. O prompt instrui explicitamente o modelo a responder apenas com base nos trechos fornecidos e a sinalizar quando a informação não está presente. Isso elimina o incentivo do modelo de inventar detalhes plausíveis.' } },
-          { '@type': 'Question', name: 'Qual é a diferença entre RAG e fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'O RAG recupera conhecimento externo no momento da consulta e o adiciona ao prompt. O fine-tuning modifica permanentemente os parâmetros do modelo por meio de treinamento adicional. O RAG é melhor para dados que mudam com frequência; o fine-tuning é melhor para ensinar comportamento ou estilo consistentes.' } },
-          { '@type': 'Question', name: 'Quais bancos de dados vetoriais funcionam melhor para RAG em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'As opções mais utilizadas são Pinecone (gerenciado, fácil de iniciar), Weaviate (open-source, flexível), Chroma (leve, local) e Milvus (escala empresarial). Para residência de dados na UE, Weaviate ou Chroma auto-hospedados são preferidos.' } },
-          { '@type': 'Question', name: 'Qual é o tamanho ideal de fragmento para RAG?', acceptedAnswer: { '@type': 'Answer', text: '200–500 palavras por fragmento com sobreposição de 10–20% entre fragmentos adjacentes funciona bem para a maioria dos casos. Fragmentos menores (menos de 100 palavras) perdem contexto; fragmentos maiores (mais de 1.000 palavras) reduzem a precisão da recuperação.' } },
-          { '@type': 'Question', name: 'Posso usar RAG com LLMs locais como o Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O RAG é agnóstico ao modelo. Você recupera documentos usando qualquer modelo de embedding e passa o contexto recuperado para qualquer LLM — mantendo todos os dados no seu próprio hardware.' } },
-          { '@type': 'Question', name: 'O RAG funciona com GPT-5.6, Claude e Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Os três aceitam contexto recuperado no prompt. O Claude Opus 5 é particularmente eficaz em sinalizar quando o contexto recuperado não contém a resposta, em vez de alucinar.' } },
-          { '@type': 'Question', name: 'O que é um limiar de relevância no RAG?', acceptedAnswer: { '@type': 'Answer', text: 'Um limite de pontuação de similaridade abaixo do qual os documentos recuperados não são passados ao LLM. Um limiar de 0,7 de similaridade de cosseno significa que apenas documentos com 70% ou mais de correspondência semântica com a consulta são incluídos.' } },
-          { '@type': 'Question', name: 'O RAG é melhor do que usar uma janela de contexto grande?', acceptedAnswer: { '@type': 'Answer', text: 'Para grandes conjuntos de documentos, sim. O RAG busca milhões de documentos em milissegundos via similaridade semântica e custa menos por consulta, pois você passa apenas fragmentos relevantes, não toda a sua base de conhecimento.' } },
-          { '@type': 'Question', name: 'Como evito ataques de injeção de prompt via RAG?', acceptedAnswer: { '@type': 'Answer', text: 'Nunca trate o conteúdo recuperado como instruções. Use delimitadores claros entre suas instruções e o texto recuperado no prompt. Valide se o conteúdo recuperado corresponde ao formato e à fonte esperados antes de incluí-lo.' } },
-          { '@type': 'Question', name: 'Qual é o pipeline RAG para um sistema em produção?', acceptedAnswer: { '@type': 'Answer', text: 'Ingestão, fragmentação, embedding, armazenamento vetorial, embedding de consulta, busca semântica, filtragem de relevância, construção do prompt, geração pelo LLM, resposta com citações de fontes. Cada etapa pode ser testada e atualizada de forma independente.' } },
-          { '@type': 'Question', name: 'Posso usar RAG sem um banco de dados vetorial?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, para conjuntos pequenos de documentos. A busca por palavras-chave BM25 funciona para menos de 10.000 fragmentos e não exige infraestrutura vetorial. Para similaridade semântica em coleções maiores, um banco de dados vetorial é necessário.' } },
+          {
+            '@type': 'Question',
+            'name': 'O que é RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG (Retrieval-Augmented Generation) recupera documentos relevantes antes de gerar uma resposta, em vez de depender do conhecimento de treinamento do modelo. A resposta é ancorada nos seus documentos, não inventada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como o RAG reduz alucinações?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O RAG ancora a resposta no texto recuperado. O prompt instrui o modelo a responder apenas com base nos trechos fornecidos e a sinalizar informações ausentes. Isso elimina o incentivo do modelo de inventar detalhes plausíveis.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre RAG e fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O RAG recupera conhecimento no momento da consulta e o adiciona ao prompt. O fine-tuning modifica os parâmetros do modelo permanentemente. RAG é melhor para dados dinâmicos; fine-tuning para comportamento estável.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RAG funciona com qualquer modelo de linguagem?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. RAG é agnóstico ao modelo. Qualquer LLM que aceite um prompt com contexto pode usar documentos recuperados. Isso inclui GPT-5.6, Claude Opus, Gemini, modelos open-source como Llama e modelos locais via Ollama.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o tamanho ideal de fragmento para RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para a maioria dos casos: 200–500 palavras por fragmento com sobreposição de 10–20% entre fragmentos adjacentes. Fragmentos menores (50–100 palavras) melhoram a precisão; fragmentos maiores (500+ palavras) fornecem mais contexto, mas arriscam incluir trechos irrelevantes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é um limiar de relevância no RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Um limite de pontuação de similaridade. Se a similaridade de um documento recuperado estiver abaixo do limiar (por exemplo, 0,7 de similaridade de cosseno), ele não é passado ao LLM. Isso evita que contexto de baixa qualidade confunda o modelo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RAG é melhor do que uma janela de contexto grande?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para coleções massivas de documentos, sim. RAG busca milhões de documentos em milissegundos via similaridade semântica. Janelas de contexto grandes são mais caras e exigem saber de antemão quais documentos incluir.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso combinar RAG com fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Faça fine-tuning de um modelo para melhorar estilo, tom ou comportamento de domínio. Em seguida, use RAG para ancorá-lo em fatos atuais. Isso cria o melhor dos dois: comportamento consistente + ancoragem factual.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como evito ataques de injeção de prompt no RAG?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Valide o conteúdo recuperado antes de incluí-lo no prompt. Use delimitadores claros entre as instruções do sistema e o texto recuperado. Nunca trate o conteúdo recuperado como instruções executáveis. Monitore padrões suspeitos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RAG precisa de um banco de dados vetorial?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não para coleções pequenas. A busca por palavras-chave BM25 funciona para menos de 10.000 documentos sem vetores. Para similaridade semântica em coleções maiores, um banco de dados vetorial (Weaviate, Pinecone, Chroma, Milvus) é essencial.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O que é RAG (Retrieval-Augmented Generation)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG é uma técnica em que um sistema de IA recupera documentos relevantes de uma base de conhecimento antes de gerar uma resposta. Em vez de depender do que o modelo memorizou durante o treinamento, a resposta é ancorada em documentos que você fornece e controla.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais bancos de dados vetoriais funcionam melhor para RAG em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As opções mais utilizadas são Pinecone (gerenciado, fácil de iniciar), Weaviate (open-source, flexível), Chroma (leve, local) e Milvus (escala empresarial). Para residência de dados na UE, Weaviate ou Chroma auto-hospedados são preferidos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar RAG com LLMs locais como o Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. O RAG é agnóstico ao modelo. Você recupera documentos usando qualquer modelo de embedding e passa o contexto recuperado para qualquer LLM — mantendo todos os dados no seu próprio hardware.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O RAG funciona com GPT-5.6, Claude e Gemini?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Os três aceitam contexto recuperado no prompt. O Claude Opus 5 é particularmente eficaz em sinalizar quando o contexto recuperado não contém a resposta, em vez de alucinar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o pipeline RAG para um sistema em produção?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ingestão, fragmentação, embedding, armazenamento vetorial, embedding de consulta, busca semântica, filtragem de relevância, construção do prompt, geração pelo LLM, resposta com citações de fontes. Cada etapa pode ser testada e atualizada de forma independente.',
+            },
+          },
         ],
       },
       sections: {
@@ -1553,6 +1887,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Posso combinar RAG com fine-tuning?', a: 'Sim. Faça fine-tuning de um modelo para melhorar estilo, tom ou comportamento de domínio. Em seguida, use RAG para ancorá-lo em fatos atuais. Isso cria o melhor dos dois: comportamento consistente + ancoragem factual.' },
             { q: 'Como evito ataques de injeção de prompt no RAG?', a: 'Valide o conteúdo recuperado antes de incluí-lo no prompt. Use delimitadores claros entre as instruções do sistema e o texto recuperado. Nunca trate o conteúdo recuperado como instruções executáveis. Monitore padrões suspeitos.' },
             { q: 'RAG precisa de um banco de dados vetorial?', a: 'Não para coleções pequenas. A busca por palavras-chave BM25 funciona para menos de 10.000 documentos sem vetores. Para similaridade semântica em coleções maiores, um banco de dados vetorial (Weaviate, Pinecone, Chroma, Milvus) é essencial.' },
+            { q: 'O que é RAG (Retrieval-Augmented Generation)?', a: 'RAG é uma técnica em que um sistema de IA recupera documentos relevantes de uma base de conhecimento antes de gerar uma resposta. Em vez de depender do que o modelo memorizou durante o treinamento, a resposta é ancorada em documentos que você fornece e controla.' },
+            { q: 'Quais bancos de dados vetoriais funcionam melhor para RAG em 2026?', a: 'As opções mais utilizadas são Pinecone (gerenciado, fácil de iniciar), Weaviate (open-source, flexível), Chroma (leve, local) e Milvus (escala empresarial). Para residência de dados na UE, Weaviate ou Chroma auto-hospedados são preferidos.' },
+            { q: 'Posso usar RAG com LLMs locais como o Ollama?', a: 'Sim. O RAG é agnóstico ao modelo. Você recupera documentos usando qualquer modelo de embedding e passa o contexto recuperado para qualquer LLM — mantendo todos os dados no seu próprio hardware.' },
+            { q: 'O RAG funciona com GPT-5.6, Claude e Gemini?', a: 'Sim. Os três aceitam contexto recuperado no prompt. O Claude Opus 5 é particularmente eficaz em sinalizar quando o contexto recuperado não contém a resposta, em vez de alucinar.' },
+            { q: 'Qual é o pipeline RAG para um sistema em produção?', a: 'Ingestão, fragmentação, embedding, armazenamento vetorial, embedding de consulta, busca semântica, filtragem de relevância, construção do prompt, geração pelo LLM, resposta com citações de fontes. Cada etapa pode ser testada e atualizada de forma independente.' },
           ],
         },
       },

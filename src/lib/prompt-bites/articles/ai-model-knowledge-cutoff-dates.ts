@@ -141,27 +141,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions About AI Knowledge Cutoff Dates',
         faqs: [
-          {
-            q: 'What is a knowledge cutoff date in AI?',
-            a: 'A knowledge cutoff date is the date after which an AI model has no training data. Events, product releases, research papers, or any information published after the cutoff are invisible to the model. The model cannot know these things exist unless it can search the live web or is given the information in the prompt.',
-          },
-          {
-            q: 'What is the difference between a knowledge cutoff and live search?',
-            a: 'A knowledge cutoff is a property of the model\'s training data — a fixed frozen date. Live search is a capability layered on top of the model that lets it retrieve current web pages at query time. ChatGPT (Bing), Gemini (Google), and Grok (X) have live search by default. Claude requires explicit tool activation. Local LLMs have no live search by default — you must build a RAG pipeline to add it.',
-          },
-          {
-            q: 'Do local LLMs ever update their knowledge?',
-            a: 'No. A local LLM\'s knowledge is frozen at its training cutoff and stays frozen indefinitely. To give a local LLM access to newer information, you must either: (1) fine-tune or retrain the model on newer data (expensive), or (2) build a RAG (Retrieval-Augmented Generation) pipeline that fetches relevant documents at query time and injects them into the prompt. See our guide to <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">local RAG pipelines</a>.',
-          },
-          {
-            q: 'Which AI models can see today\'s news and current events?',
-            a: 'ChatGPT (uses Bing by default in paid tiers), Gemini 3.1 Pro (uses Google by default), and Grok 4.6 (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.',
-          },
-          {
-            q: 'Is the ChatGPT cutoff date the same as what it knows right now?',
-            a: 'No. ChatGPT (the product) has both a training cutoff date and a live Bing search capability. For recent factual queries, it searches Bing and augments its answer with current results — so what it "knows" at query time can be much newer than the training cutoff. The training cutoff still matters for: nuanced understanding of events (not just facts), contextual knowledge woven into its reasoning, and any information not indexed by Bing.',
-          },
-        ],
+            { q: 'What is a knowledge cutoff date in AI?', a: 'A knowledge cutoff date is the date after which an AI model has no training data. Events, product releases, research papers, or any information published after the cutoff are invisible to the model. The model cannot know these things exist unless it can search the live web or is given the information in the prompt.' },
+            { q: 'What is the difference between a knowledge cutoff and live search?', a: 'A knowledge cutoff is a property of the model\'s training data — a fixed frozen date. Live search is a capability layered on top of the model that lets it retrieve current web pages at query time. ChatGPT (Bing), Gemini (Google), and Grok (X) have live search by default. Claude requires explicit tool activation. Local LLMs have no live search by default — you must build a RAG pipeline to add it.' },
+            { q: 'Do local LLMs ever update their knowledge?', a: 'No. A local LLM\'s knowledge is frozen at its training cutoff and stays frozen indefinitely. To give a local LLM access to newer information, you must either: (1) fine-tune or retrain the model on newer data (expensive), or (2) build a RAG (Retrieval-Augmented Generation) pipeline that fetches relevant documents at query time and injects them into the prompt. See our guide to <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">local RAG pipelines</a>.' },
+            { q: 'Which AI models can see today\'s news and current events?', a: 'ChatGPT (uses Bing by default in paid tiers), Gemini 3.1 Pro (uses Google by default), and Grok 4.6 (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.' },
+            { q: 'Is the ChatGPT cutoff date the same as what it knows right now?', a: 'No. ChatGPT (the product) has both a training cutoff date and a live Bing search capability. For recent factual queries, it searches Bing and augments its answer with current results — so what it "knows" at query time can be much newer than the training cutoff. The training cutoff still matters for: nuanced understanding of events (not just facts), contextual knowledge woven into its reasoning, and any information not indexed by Bing.' },
+          ],
       },
     },
     schema: {
@@ -194,47 +179,47 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is a knowledge cutoff date in AI?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A knowledge cutoff date is the date after which an AI model has no training data. Events, product releases, or any information published after the cutoff are invisible to the model unless it can search the live web or is given the information in the prompt.',
+          {
+            '@type': 'Question',
+            'name': 'What is a knowledge cutoff date in AI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A knowledge cutoff date is the date after which an AI model has no training data. Events, product releases, research papers, or any information published after the cutoff are invisible to the model. The model cannot know these things exist unless it can search the live web or is given the information in the prompt.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the difference between a knowledge cutoff and live search?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A knowledge cutoff is fixed in the model\'s training. Live search is a capability added on top — ChatGPT uses Bing, Gemini uses Google, Grok uses X. Local LLMs have no live search by default; their cutoff is an absolute hard limit.',
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between a knowledge cutoff and live search?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A knowledge cutoff is a property of the model\'s training data — a fixed frozen date. Live search is a capability layered on top of the model that lets it retrieve current web pages at query time. ChatGPT (Bing), Gemini (Google), and Grok (X) have live search by default. Claude requires explicit tool activation. Local LLMs have no live search by default — you must build a RAG pipeline to add it.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which AI models can see today\'s news?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT (Bing, default on paid tiers), Gemini 3.1 Pro (Google, default), and Grok 4.6 (X, default in the consumer app) can access current information. Perplexity is web-native. Claude requires explicit developer tool activation. All local LLMs (Llama, Qwen, Gemma, Phi) have no search access by default.',
+          {
+            '@type': 'Question',
+            'name': 'Do local LLMs ever update their knowledge?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. A local LLM\'s knowledge is frozen at its training cutoff and stays frozen indefinitely. To give a local LLM access to newer information, you must either: (1) fine-tune or retrain the model on newer data (expensive), or (2) build a RAG (Retrieval-Augmented Generation) pipeline that fetches relevant documents at query time and injects them into the prompt. See our guide to <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">local RAG pipelines</a>.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do local LLMs ever update their knowledge?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. A local LLM\'s knowledge is permanently frozen at its training cutoff. To give it access to current information, you must build a RAG (Retrieval-Augmented Generation) pipeline that injects relevant documents into the prompt at query time.',
+          {
+            '@type': 'Question',
+            'name': 'Which AI models can see today\'s news and current events?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (uses Bing by default in paid tiers), Gemini 3.1 Pro (uses Google by default), and Grok 4.6 (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is the ChatGPT knowledge cutoff the same as what it actually knows?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No — ChatGPT uses Bing to search for current facts, so it can answer questions about events after its training cutoff. But the training cutoff still limits the depth of its contextual understanding for any topic that postdates it.',
+          {
+            '@type': 'Question',
+            'name': 'Is the ChatGPT cutoff date the same as what it knows right now?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. ChatGPT (the product) has both a training cutoff date and a live Bing search capability. For recent factual queries, it searches Bing and augments its answer with current results — so what it "knows" at query time can be much newer than the training cutoff. The training cutoff still matters for: nuanced understanding of events (not just facts), contextual knowledge woven into its reasoning, and any information not indexed by Bing.',
+            },
           },
-        },
-      ],
+        ],
       relatedBites: {
         id: 'related-articles',
         title: 'Related Guides',

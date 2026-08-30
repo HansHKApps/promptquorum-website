@@ -86,106 +86,170 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'What is the RTF Framework?',
-            acceptedAnswer: {
+            'name': 'What does RTF stand for?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF = Role, Task, Format. A three-component prompt structure: Role defines who the model is (e.g., "senior data analyst"), Task states what to do, and Format specifies how the output should be structured. It works across all major models.',
+              'text': 'RTF stands for Role, Task, Format — a three-part prompt structure where Role defines who the model should act as, Task specifies what the model should do, and Format describes the structure of the desired output.',
             },
           },
           {
             '@type': 'Question',
-            name: 'When should I use RTF instead of CO-STAR or SPECS?',
-            acceptedAnswer: {
+            'name': 'How is RTF different from CO-STAR?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Use RTF for routine, repeatable tasks (summaries, code reviews, emails, reports). Upgrade to CO-STAR when tone/audience are critical, SPECS when you need strict schemas and constraints, and TRACE when reasoning transparency matters.',
+              'text': 'RTF is minimal and focused on three fields: Role, Task, Format. CO-STAR is more comprehensive, adding Context, Style, Audience, and Tone. Use RTF for quick, straightforward tasks; use CO-STAR when audience and tone matter.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Is RTF the same as "just telling the model what to do"?',
-            acceptedAnswer: {
+            'name': 'When should I use RTF?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'No. RTF forces explicit specification of three things: who the model is (Role), what task it solves, and how the output must be structured (Format). This structure eliminates ambiguity and improves consistency across models and runs.',
+              'text': 'Use RTF when you need a structured output from a clearly defined role. Examples: summarizing meetings, generating code, writing emails in a specific format, or creating documentation. RTF is ideal for template-based workflows.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How does RTF compare to Chain-of-Thought?',
-            acceptedAnswer: {
+            'name': 'Can I combine RTF with other frameworks?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Chain-of-Thought improves reasoning by asking models to "think step by step." RTF structures the output format and role. They are complementary—you can combine them: use RTF to define role and format, then add "think step by step" for complex reasoning tasks.',
+              'text': 'Yes. You can use RTF for initial output generation, then apply RISEN for iterative refinement. Or combine RTF with Chain-of-Thought to add reasoning. Mix and match frameworks for complex workflows.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Can I use RTF with local models like Ollama?',
-            acceptedAnswer: {
+            'name': 'What if I\'m not sure what Role to specify?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Yes. RTF works with any LLM, including local models run via Ollama or LM Studio. Simpler models (Mistral Small, Llama 3.3) may be less consistent with complex Format fields, but RTF still improves output quality.',
+              'text': 'Start with the simplest role that fits the task: "You are a technical writer," "You are a product manager," or "You are a Python expert." Be specific but not overly elaborate. Test different roles to see which produces better results.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What is the most common RTF mistake?',
-            acceptedAnswer: {
+            'name': 'Does the order of Role, Task, Format matter?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Leaving Format implicit or vague. Without an explicit Format field (e.g., "3 bullet points, max 50 words each"), models default to prose paragraphs. Always specify Format.',
+              'text': 'The traditional order is Role → Task → Format, but the model will understand your intent regardless of order. However, keeping this standard order makes prompts easier to read and template. Consistency matters more than strict order.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How does RTF help with consistency?',
-            acceptedAnswer: {
+            'name': 'Can RTF work with all language models?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'By specifying Role, Task, and Format explicitly, you reduce the model\'s ambiguity about what you want. This makes output more consistent across models, runs, and team members reusing the prompt.',
+              'text': 'Yes. RTF is framework-agnostic. It works with GPT-5.6, Claude, Gemini, open-source models like Llama 3.2, and local models via Ollama or LM Studio. The principles apply universally to any instruction-following LLM.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Should I save RTF prompts?',
-            acceptedAnswer: {
+            'name': 'How do I write a good Format specification?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Yes. A well-written RTF prompt for a recurring task (weekly summary, code review, email draft) should be saved as a template and reused. This is RTF\'s biggest advantage over writing prompts from scratch each time.',
+              'text': 'Be specific: instead of "Format: nice output," write "Format: 5 bullet points, each under 15 words." Specify structure (bullet points, paragraphs, code blocks, JSON), length (word count, number of items), and tone (formal, casual, technical).',
             },
           },
           {
             '@type': 'Question',
-            name: 'Can RTF enforce strict constraints like JSON output?',
-            acceptedAnswer: {
+            'name': 'What is the RTF Framework?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Partially. RTF can request "JSON format" in the Format field, and modern models (GPT-5.6, Claude) usually comply. For 100% strict schema enforcement, use SPECS (which includes explicit constraints) or structured output APIs.',
+              'text': 'RTF = Role, Task, Format. A three-component prompt structure: Role defines who the model is (e.g., "senior data analyst"), Task states what to do, and Format specifies how the output should be structured. It works across all major models.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How does PromptQuorum use RTF?',
-            acceptedAnswer: {
+            'name': 'When should I use RTF instead of CO-STAR or SPECS?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorum includes RTF as a built-in framework template. Users fill in Role, Task, and Format fields, and PromptQuorum dispatches the same prompt across 25+ models (GPT-5.6, Claude, Gemini, local models) for comparison and A/B testing.',
+              'text': 'Use RTF for routine, repeatable tasks (summaries, code reviews, emails, reports). Upgrade to CO-STAR when tone/audience are critical, SPECS when you need strict schemas and constraints, and TRACE when reasoning transparency matters.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What does the RTF framework help you do when prompting AI?',
-            acceptedAnswer: {
+            'name': 'Is RTF the same as "just telling the model what to do"?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF helps you structure prompts consistently by separating concerns into three fields: who the model is (Role), what task it solves (Task), and how the output should be formatted (Format). This eliminates vagueness and makes prompts reusable templates.',
+              'text': 'No. RTF forces explicit specification of three things: who the model is (Role), what task it solves, and how the output must be structured (Format). This structure eliminates ambiguity and improves consistency across models and runs.',
             },
           },
           {
             '@type': 'Question',
-            name: 'What does RTF stand for in prompt engineering?',
-            acceptedAnswer: {
+            'name': 'How does RTF compare to Chain-of-Thought?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF stands for Role, Task, Format—the three essential components of a lightweight prompt structure. Role defines the model\'s persona, Task defines the action, and Format defines the output structure. Together they create the minimal framework needed for consistent results.',
+              'text': 'Chain-of-Thought improves reasoning by asking models to "think step by step." RTF structures the output format and role. They are complementary—you can combine them: use RTF to define role and format, then add "think step by step" for complex reasoning tasks.',
             },
           },
           {
             '@type': 'Question',
-            name: 'How does the RTF framework compare to CO-STAR for prompt engineering?',
-            acceptedAnswer: {
+            'name': 'Can I use RTF with local models like Ollama?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF has 3 components (Role, Task, Format) and is minimal. CO-STAR has 6 components (Context, Objective, Style, Tone, Audience, Response) and is comprehensive. Use RTF for routine tasks; use CO-STAR when tone/audience/style are critical. RTF is your default; CO-STAR is your upgrade.',
+              'text': 'Yes. RTF works with any LLM, including local models run via Ollama or LM Studio. Simpler models (Mistral Small, Llama 3.3) may be less consistent with complex Format fields, but RTF still improves output quality.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the most common RTF mistake?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Leaving Format implicit or vague. Without an explicit Format field (e.g., "3 bullet points, max 50 words each"), models default to prose paragraphs. Always specify Format.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does RTF help with consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'By specifying Role, Task, and Format explicitly, you reduce the model\'s ambiguity about what you want. This makes output more consistent across models, runs, and team members reusing the prompt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I save RTF prompts?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. A well-written RTF prompt for a recurring task (weekly summary, code review, email draft) should be saved as a template and reused. This is RTF\'s biggest advantage over writing prompts from scratch each time.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can RTF enforce strict constraints like JSON output?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Partially. RTF can request "JSON format" in the Format field, and modern models (GPT-5.6, Claude) usually comply. For 100% strict schema enforcement, use SPECS (which includes explicit constraints) or structured output APIs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does PromptQuorum use RTF?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum includes RTF as a built-in framework template. Users fill in Role, Task, and Format fields, and PromptQuorum dispatches the same prompt across 25+ models (GPT-5.6, Claude, Gemini, local models) for comparison and A/B testing.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What does the RTF framework help you do when prompting AI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTF helps you structure prompts consistently by separating concerns into three fields: who the model is (Role), what task it solves (Task), and how the output should be formatted (Format). This eliminates vagueness and makes prompts reusable templates.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What does RTF stand for in prompt engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTF stands for Role, Task, Format—the three essential components of a lightweight prompt structure. Role defines the model\'s persona, Task defines the action, and Format defines the output structure. Together they create the minimal framework needed for consistent results.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does the RTF framework compare to CO-STAR for prompt engineering?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTF has 3 components (Role, Task, Format) and is minimal. CO-STAR has 6 components (Context, Objective, Style, Tone, Audience, Response) and is comprehensive. Use RTF for routine tasks; use CO-STAR when tone/audience/style are critical. RTF is your default; CO-STAR is your upgrade.',
             },
           },
         ],
@@ -440,38 +504,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            {
-              q: 'What does RTF stand for?',
-              a: 'RTF stands for Role, Task, Format — a three-part prompt structure where Role defines who the model should act as, Task specifies what the model should do, and Format describes the structure of the desired output.',
-            },
-            {
-              q: 'How is RTF different from CO-STAR?',
-              a: 'RTF is minimal and focused on three fields: Role, Task, Format. CO-STAR is more comprehensive, adding Context, Style, Audience, and Tone. Use RTF for quick, straightforward tasks; use CO-STAR when audience and tone matter.',
-            },
-            {
-              q: 'When should I use RTF?',
-              a: 'Use RTF when you need a structured output from a clearly defined role. Examples: summarizing meetings, generating code, writing emails in a specific format, or creating documentation. RTF is ideal for template-based workflows.',
-            },
-            {
-              q: 'Can I combine RTF with other frameworks?',
-              a: 'Yes. You can use RTF for initial output generation, then apply RISEN for iterative refinement. Or combine RTF with Chain-of-Thought to add reasoning. Mix and match frameworks for complex workflows.',
-            },
-            {
-              q: 'What if I\'m not sure what Role to specify?',
-              a: 'Start with the simplest role that fits the task: "You are a technical writer," "You are a product manager," or "You are a Python expert." Be specific but not overly elaborate. Test different roles to see which produces better results.',
-            },
-            {
-              q: 'Does the order of Role, Task, Format matter?',
-              a: 'The traditional order is Role → Task → Format, but the model will understand your intent regardless of order. However, keeping this standard order makes prompts easier to read and template. Consistency matters more than strict order.',
-            },
-            {
-              q: 'Can RTF work with all language models?',
-              a: 'Yes. RTF is framework-agnostic. It works with GPT-5.6, Claude, Gemini, open-source models like Llama 3.2, and local models via Ollama or LM Studio. The principles apply universally to any instruction-following LLM.',
-            },
-            {
-              q: 'How do I write a good Format specification?',
-              a: 'Be specific: instead of "Format: nice output," write "Format: 5 bullet points, each under 15 words." Specify structure (bullet points, paragraphs, code blocks, JSON), length (word count, number of items), and tone (formal, casual, technical).',
-            },
+            { q: 'What does RTF stand for?', a: 'RTF stands for Role, Task, Format — a three-part prompt structure where Role defines who the model should act as, Task specifies what the model should do, and Format describes the structure of the desired output.' },
+            { q: 'How is RTF different from CO-STAR?', a: 'RTF is minimal and focused on three fields: Role, Task, Format. CO-STAR is more comprehensive, adding Context, Style, Audience, and Tone. Use RTF for quick, straightforward tasks; use CO-STAR when audience and tone matter.' },
+            { q: 'When should I use RTF?', a: 'Use RTF when you need a structured output from a clearly defined role. Examples: summarizing meetings, generating code, writing emails in a specific format, or creating documentation. RTF is ideal for template-based workflows.' },
+            { q: 'Can I combine RTF with other frameworks?', a: 'Yes. You can use RTF for initial output generation, then apply RISEN for iterative refinement. Or combine RTF with Chain-of-Thought to add reasoning. Mix and match frameworks for complex workflows.' },
+            { q: 'What if I\'m not sure what Role to specify?', a: 'Start with the simplest role that fits the task: "You are a technical writer," "You are a product manager," or "You are a Python expert." Be specific but not overly elaborate. Test different roles to see which produces better results.' },
+            { q: 'Does the order of Role, Task, Format matter?', a: 'The traditional order is Role → Task → Format, but the model will understand your intent regardless of order. However, keeping this standard order makes prompts easier to read and template. Consistency matters more than strict order.' },
+            { q: 'Can RTF work with all language models?', a: 'Yes. RTF is framework-agnostic. It works with GPT-5.6, Claude, Gemini, open-source models like Llama 3.2, and local models via Ollama or LM Studio. The principles apply universally to any instruction-following LLM.' },
+            { q: 'How do I write a good Format specification?', a: 'Be specific: instead of "Format: nice output," write "Format: 5 bullet points, each under 15 words." Specify structure (bullet points, paragraphs, code blocks, JSON), length (word count, number of items), and tone (formal, casual, technical).' },
+            { q: 'What is the RTF Framework?', a: 'RTF = Role, Task, Format. A three-component prompt structure: Role defines who the model is (e.g., "senior data analyst"), Task states what to do, and Format specifies how the output should be structured. It works across all major models.' },
+            { q: 'When should I use RTF instead of CO-STAR or SPECS?', a: 'Use RTF for routine, repeatable tasks (summaries, code reviews, emails, reports). Upgrade to CO-STAR when tone/audience are critical, SPECS when you need strict schemas and constraints, and TRACE when reasoning transparency matters.' },
+            { q: 'Is RTF the same as "just telling the model what to do"?', a: 'No. RTF forces explicit specification of three things: who the model is (Role), what task it solves, and how the output must be structured (Format). This structure eliminates ambiguity and improves consistency across models and runs.' },
+            { q: 'How does RTF compare to Chain-of-Thought?', a: 'Chain-of-Thought improves reasoning by asking models to "think step by step." RTF structures the output format and role. They are complementary—you can combine them: use RTF to define role and format, then add "think step by step" for complex reasoning tasks.' },
+            { q: 'Can I use RTF with local models like Ollama?', a: 'Yes. RTF works with any LLM, including local models run via Ollama or LM Studio. Simpler models (Mistral Small, Llama 3.3) may be less consistent with complex Format fields, but RTF still improves output quality.' },
+            { q: 'What is the most common RTF mistake?', a: 'Leaving Format implicit or vague. Without an explicit Format field (e.g., "3 bullet points, max 50 words each"), models default to prose paragraphs. Always specify Format.' },
+            { q: 'How does RTF help with consistency?', a: 'By specifying Role, Task, and Format explicitly, you reduce the model\'s ambiguity about what you want. This makes output more consistent across models, runs, and team members reusing the prompt.' },
+            { q: 'Should I save RTF prompts?', a: 'Yes. A well-written RTF prompt for a recurring task (weekly summary, code review, email draft) should be saved as a template and reused. This is RTF\'s biggest advantage over writing prompts from scratch each time.' },
+            { q: 'Can RTF enforce strict constraints like JSON output?', a: 'Partially. RTF can request "JSON format" in the Format field, and modern models (GPT-5.6, Claude) usually comply. For 100% strict schema enforcement, use SPECS (which includes explicit constraints) or structured output APIs.' },
+            { q: 'How does PromptQuorum use RTF?', a: 'PromptQuorum includes RTF as a built-in framework template. Users fill in Role, Task, and Format fields, and PromptQuorum dispatches the same prompt across 25+ models (GPT-5.6, Claude, Gemini, local models) for comparison and A/B testing.' },
+            { q: 'What does the RTF framework help you do when prompting AI?', a: 'RTF helps you structure prompts consistently by separating concerns into three fields: who the model is (Role), what task it solves (Task), and how the output should be formatted (Format). This eliminates vagueness and makes prompts reusable templates.' },
+            { q: 'What does RTF stand for in prompt engineering?', a: 'RTF stands for Role, Task, Format—the three essential components of a lightweight prompt structure. Role defines the model\'s persona, Task defines the action, and Format defines the output structure. Together they create the minimal framework needed for consistent results.' },
+            { q: 'How does the RTF framework compare to CO-STAR for prompt engineering?', a: 'RTF has 3 components (Role, Task, Format) and is minimal. CO-STAR has 6 components (Context, Objective, Style, Tone, Audience, Response) and is comprehensive. Use RTF for routine tasks; use CO-STAR when tone/audience/style are critical. RTF is your default; CO-STAR is your upgrade.' },
           ],
         },
         relatedReading: {
@@ -546,98 +599,162 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Was ist das RTF-Framework?',
-            acceptedAnswer: {
+            'name': 'Wofür steht RTF?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF = Role, Task, Format. Eine dreiteilige Prompt-Struktur: Role definiert, wer das Modell ist (z. B. „leitender Datenanalyst"), Task gibt an, was zu tun ist, und Format legt fest, wie die Ausgabe strukturiert sein soll. Es funktioniert über alle großen Modelle.',
+              'text': 'RTF steht für Role, Task, Format — eine dreiteilige Prompt-Struktur, wobei Role definiert, wer das Modell sein sollte, Task spezifiziert, was das Modell tun sollte, und Format beschreibt die Struktur der gewünschten Ausgabe.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Wann sollte ich RTF statt CO-STAR oder SPECS verwenden?',
-            acceptedAnswer: {
+            'name': 'Wie unterscheidet sich RTF von CO-STAR?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Verwenden Sie RTF für Routine- und wiederholbare Aufgaben (Zusammenfassungen, Code-Reviews, E-Mails, Berichte). Wechseln Sie zu CO-STAR, wenn Ton und Zielgruppe kritisch sind, zu SPECS, wenn Sie strenge Schemas und Constraints benötigen, und zu TRACE, wenn Transparenz bei der Begründung wichtig ist.',
+              'text': 'RTF ist minimal und konzentriert sich auf drei Felder: Role, Task, Format. CO-STAR ist umfassender und fügt Context, Style, Audience und Tone hinzu. Verwenden Sie RTF für schnelle, unkomplizierte Aufgaben; verwenden Sie CO-STAR, wenn Publikum und Ton wichtig sind.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Ist RTF dasselbe wie „dem Modell einfach zu sagen, was es tun soll"?',
-            acceptedAnswer: {
+            'name': 'Wann sollte ich RTF verwenden?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein. RTF erzwingt die explizite Spezifikation von drei Dingen: wer das Modell ist (Role), welche Aufgabe es löst und wie die Ausgabe strukturiert sein muss (Format). Diese Struktur beseitigt Mehrdeutigkeiten und verbessert die Konsistenz über Modelle und Durchläufe hinweg.',
+              'text': 'Verwenden Sie RTF, wenn Sie strukturierte Ausgabe von einer klar definierten Rolle benötigen. Beispiele: Zusammenfassung von Meetings, Code-Generierung, Schreiben von E-Mails in einem bestimmten Format oder Erstellung von Dokumentation. RTF ist ideal für Template-basierte Workflows.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Wie vergleicht sich RTF mit Chain-of-Thought?',
-            acceptedAnswer: {
+            'name': 'Kann ich RTF mit anderen Frameworks kombinieren?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Chain-of-Thought verbessert die Begründung, indem es Modelle auffordert, „Schritt für Schritt zu denken". RTF strukturiert das Output-Format und die Rolle. Sie sind komplementär — Sie können sie kombinieren: Verwenden Sie RTF, um Rolle und Format zu definieren, und fügen Sie dann „Schritt für Schritt denken" für komplexe Reasoning-Aufgaben hinzu.',
+              'text': 'Ja. Sie können RTF für die anfängliche Ausgabegenerierung verwenden und dann RISEN für iterative Verfeinerung anwenden. Oder kombinieren Sie RTF mit Chain-of-Thought, um Argumentation hinzuzufügen. Mischen Sie Frameworks für komplexe Workflows.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Kann ich RTF mit lokalen Modellen wie Ollama verwenden?',
-            acceptedAnswer: {
+            'name': 'Was ist, wenn ich unsicher bin, welche Rolle ich angeben soll?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja. RTF funktioniert mit jedem LLM, einschließlich lokaler Modelle, die über Ollama oder LM Studio ausgeführt werden. Einfachere Modelle (Mistral Small, Llama 3.3) können bei komplexen Format-Feldern weniger konsistent sein, aber RTF verbessert dennoch die Output-Qualität.',
+              'text': 'Beginnen Sie mit der einfachsten Rolle, die zur Aufgabe passt: „Sie sind ein technischer Schreiber", „Sie sind ein Produktmanager" oder „Sie sind ein Python-Experte". Seien Sie spezifisch, aber nicht übermäßig ausarbeitet. Testen Sie verschiedene Rollen, um zu sehen, welche bessere Ergebnisse liefert.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Was ist der häufigste RTF-Fehler?',
-            acceptedAnswer: {
+            'name': 'Ist die Reihenfolge von Role, Task, Format wichtig?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Format implicit oder vage zu lassen. Ohne ein explizites Format-Feld (z. B. „3 Aufzählungspunkte, maximal 50 Wörter pro Punkt") wählen Modelle standardmäßig Prosa-Absätze. Geben Sie immer Format an.',
+              'text': 'Die traditionelle Reihenfolge ist Role → Task → Format, aber das Modell wird Ihre Absicht unabhängig von der Reihenfolge verstehen. Jedoch erleichtert die Beibehaltung dieser Standardreihenfolge das Lesen und Template-Erstellen von Prompts. Konsistenz ist wichtiger als strikte Reihenfolge.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Wie hilft RTF bei der Konsistenz?',
-            acceptedAnswer: {
+            'name': 'Funktioniert RTF mit allen Sprachmodellen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Durch die explizite Spezifikation von Role, Task und Format reduzieren Sie die Mehrdeutigkeit des Modells über das, was Sie möchten. Dies macht die Ausgabe konsistenter über Modelle, Durchläufe und Teamkollegen, die den Prompt wiederverwenden.',
+              'text': 'Ja. RTF ist Framework-unabhängig. Es funktioniert mit GPT-5.6, Claude, Gemini, Open-Source-Modellen wie Llama 3.2 und lokalen Modellen über Ollama oder LM Studio. Die Prinzipien gelten universell für alle Befehls-befolgenden LLMs.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Sollte ich RTF-Prompts speichern?',
-            acceptedAnswer: {
+            'name': 'Wie schreibe ich eine gute Format-Spezifikation?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja. Ein gut geschriebener RTF-Prompt für eine wiederkehrende Aufgabe (wöchentliche Zusammenfassung, Code-Review, E-Mail-Entwurf) sollte als Vorlage gespeichert und wiederverwendet werden. Das ist RTFs größter Vorteil gegenüber dem Schreiben von Prompts von Grund auf.',
+              'text': 'Seien Sie spezifisch: Statt „Format: schöne Ausgabe" schreiben Sie „Format: 5 Aufzählungspunkte, jeweils unter 15 Worten". Geben Sie die Struktur (Aufzählungspunkte, Absätze, Codeblöcke, JSON), Länge (Wortanzahl, Anzahl der Elemente) und Ton (formal, lässig, technisch) an.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Kann RTF strikte Constraints wie JSON-Ausgabe erzwingen?',
-            acceptedAnswer: {
+            'name': 'Was ist das RTF-Framework?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Teilweise. RTF kann im Format-Feld „JSON-Format" anfordern, und moderne Modelle (GPT-5.6, Claude) halten sich normalerweise daran. Für 100%ige strikte Schema-Erzwingung verwenden Sie SPECS (mit expliziten Constraints) oder strukturierte Output-APIs.',
+              'text': 'RTF = Role, Task, Format. Eine dreiteilige Prompt-Struktur: Role definiert, wer das Modell ist (z. B. „leitender Datenanalyst"), Task gibt an, was zu tun ist, und Format legt fest, wie die Ausgabe strukturiert sein soll. Es funktioniert über alle großen Modelle.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Wie verwendet PromptQuorum RTF?',
-            acceptedAnswer: {
+            'name': 'Wann sollte ich RTF statt CO-STAR oder SPECS verwenden?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorum enthält RTF als integrierte Framework-Vorlage. Benutzer füllen die Felder Role, Task und Format aus, und PromptQuorum sendet denselben Prompt über 25+ Modelle (GPT-5.6, Claude, Gemini, lokale Modelle) für Vergleich und A/B-Tests.',
+              'text': 'Verwenden Sie RTF für Routine- und wiederholbare Aufgaben (Zusammenfassungen, Code-Reviews, E-Mails, Berichte). Wechseln Sie zu CO-STAR, wenn Ton und Zielgruppe kritisch sind, zu SPECS, wenn Sie strenge Schemas und Constraints benötigen, und zu TRACE, wenn Transparenz bei der Begründung wichtig ist.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Muss ich bei der Verwendung von RTF die DSGVO beachten?',
-            acceptedAnswer: {
+            'name': 'Ist RTF dasselbe wie „dem Modell einfach zu sagen, was es tun soll"?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja. RTF-Prompts, die sensible Daten enthalten, müssen DSGVO-konform sein. Verwenden Sie RTF mit Datenschutzvorkehrungen: Vermeiden Sie die Speicherung persönlicher Daten in Prompt-Templates, nutzen Sie lokale Modelle für sensitive Daten und dokumentieren Sie die Verarbeitung nach DSGVO Artikel 28 und BSI-Grundschutz-Katalogen.',
+              'text': 'Nein. RTF erzwingt die explizite Spezifikation von drei Dingen: wer das Modell ist (Role), welche Aufgabe es löst und wie die Ausgabe strukturiert sein muss (Format). Diese Struktur beseitigt Mehrdeutigkeiten und verbessert die Konsistenz über Modelle und Durchläufe hinweg.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Ist RTF für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: {
+            'name': 'Wie vergleicht sich RTF mit Chain-of-Thought?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Absolut. RTF ist ideal für Mittelstands-Unternehmen: Es erzwingt strukturierte, präzise Kommunikation (die deutsche Unternehmen schätzen), funktioniert mit lokalen Modellen für Datenschutz, und ist einfach genug, damit Mitarbeiter es ohne umfangreiches Training nutzen können. DSGVO- und BSI-Grundschutz-konforme Nutzung ist durch die Struktur von RTF natürlich unterstützt.',
+              'text': 'Chain-of-Thought verbessert die Begründung, indem es Modelle auffordert, „Schritt für Schritt zu denken". RTF strukturiert das Output-Format und die Rolle. Sie sind komplementär — Sie können sie kombinieren: Verwenden Sie RTF, um Rolle und Format zu definieren, und fügen Sie dann „Schritt für Schritt denken" für komplexe Reasoning-Aufgaben hinzu.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich RTF mit lokalen Modellen wie Ollama verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. RTF funktioniert mit jedem LLM, einschließlich lokaler Modelle, die über Ollama oder LM Studio ausgeführt werden. Einfachere Modelle (Mistral Small, Llama 3.3) können bei komplexen Format-Feldern weniger konsistent sein, aber RTF verbessert dennoch die Output-Qualität.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der häufigste RTF-Fehler?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Format implicit oder vage zu lassen. Ohne ein explizites Format-Feld (z. B. „3 Aufzählungspunkte, maximal 50 Wörter pro Punkt") wählen Modelle standardmäßig Prosa-Absätze. Geben Sie immer Format an.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie hilft RTF bei der Konsistenz?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Durch die explizite Spezifikation von Role, Task und Format reduzieren Sie die Mehrdeutigkeit des Modells über das, was Sie möchten. Dies macht die Ausgabe konsistenter über Modelle, Durchläufe und Teamkollegen, die den Prompt wiederverwenden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich RTF-Prompts speichern?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Ein gut geschriebener RTF-Prompt für eine wiederkehrende Aufgabe (wöchentliche Zusammenfassung, Code-Review, E-Mail-Entwurf) sollte als Vorlage gespeichert und wiederverwendet werden. Das ist RTFs größter Vorteil gegenüber dem Schreiben von Prompts von Grund auf.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann RTF strikte Constraints wie JSON-Ausgabe erzwingen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Teilweise. RTF kann im Format-Feld „JSON-Format" anfordern, und moderne Modelle (GPT-5.6, Claude) halten sich normalerweise daran. Für 100%ige strikte Schema-Erzwingung verwenden Sie SPECS (mit expliziten Constraints) oder strukturierte Output-APIs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie verwendet PromptQuorum RTF?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum enthält RTF als integrierte Framework-Vorlage. Benutzer füllen die Felder Role, Task und Format aus, und PromptQuorum sendet denselben Prompt über 25+ Modelle (GPT-5.6, Claude, Gemini, lokale Modelle) für Vergleich und A/B-Tests.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von RTF die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. RTF-Prompts, die sensible Daten enthalten, müssen DSGVO-konform sein. Verwenden Sie RTF mit Datenschutzvorkehrungen: Vermeiden Sie die Speicherung persönlicher Daten in Prompt-Templates, nutzen Sie lokale Modelle für sensitive Daten und dokumentieren Sie die Verarbeitung nach DSGVO Artikel 28 und BSI-Grundschutz-Katalogen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist RTF für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Absolut. RTF ist ideal für Mittelstands-Unternehmen: Es erzwingt strukturierte, präzise Kommunikation (die deutsche Unternehmen schätzen), funktioniert mit lokalen Modellen für Datenschutz, und ist einfach genug, damit Mitarbeiter es ohne umfangreiches Training nutzen können. DSGVO- und BSI-Grundschutz-konforme Nutzung ist durch die Struktur von RTF natürlich unterstützt.',
             },
           },
         ],
@@ -892,38 +1009,26 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            {
-              q: 'Wofür steht RTF?',
-              a: 'RTF steht für Role, Task, Format — eine dreiteilige Prompt-Struktur, wobei Role definiert, wer das Modell sein sollte, Task spezifiziert, was das Modell tun sollte, und Format beschreibt die Struktur der gewünschten Ausgabe.',
-            },
-            {
-              q: 'Wie unterscheidet sich RTF von CO-STAR?',
-              a: 'RTF ist minimal und konzentriert sich auf drei Felder: Role, Task, Format. CO-STAR ist umfassender und fügt Context, Style, Audience und Tone hinzu. Verwenden Sie RTF für schnelle, unkomplizierte Aufgaben; verwenden Sie CO-STAR, wenn Publikum und Ton wichtig sind.',
-            },
-            {
-              q: 'Wann sollte ich RTF verwenden?',
-              a: 'Verwenden Sie RTF, wenn Sie strukturierte Ausgabe von einer klar definierten Rolle benötigen. Beispiele: Zusammenfassung von Meetings, Code-Generierung, Schreiben von E-Mails in einem bestimmten Format oder Erstellung von Dokumentation. RTF ist ideal für Template-basierte Workflows.',
-            },
-            {
-              q: 'Kann ich RTF mit anderen Frameworks kombinieren?',
-              a: 'Ja. Sie können RTF für die anfängliche Ausgabegenerierung verwenden und dann RISEN für iterative Verfeinerung anwenden. Oder kombinieren Sie RTF mit Chain-of-Thought, um Argumentation hinzuzufügen. Mischen Sie Frameworks für komplexe Workflows.',
-            },
-            {
-              q: 'Was ist, wenn ich unsicher bin, welche Rolle ich angeben soll?',
-              a: 'Beginnen Sie mit der einfachsten Rolle, die zur Aufgabe passt: „Sie sind ein technischer Schreiber", „Sie sind ein Produktmanager" oder „Sie sind ein Python-Experte". Seien Sie spezifisch, aber nicht übermäßig ausarbeitet. Testen Sie verschiedene Rollen, um zu sehen, welche bessere Ergebnisse liefert.',
-            },
-            {
-              q: 'Ist die Reihenfolge von Role, Task, Format wichtig?',
-              a: 'Die traditionelle Reihenfolge ist Role → Task → Format, aber das Modell wird Ihre Absicht unabhängig von der Reihenfolge verstehen. Jedoch erleichtert die Beibehaltung dieser Standardreihenfolge das Lesen und Template-Erstellen von Prompts. Konsistenz ist wichtiger als strikte Reihenfolge.',
-            },
-            {
-              q: 'Funktioniert RTF mit allen Sprachmodellen?',
-              a: 'Ja. RTF ist Framework-unabhängig. Es funktioniert mit GPT-5.6, Claude, Gemini, Open-Source-Modellen wie Llama 3.2 und lokalen Modellen über Ollama oder LM Studio. Die Prinzipien gelten universell für alle Befehls-befolgenden LLMs.',
-            },
-            {
-              q: 'Wie schreibe ich eine gute Format-Spezifikation?',
-              a: 'Seien Sie spezifisch: Statt „Format: schöne Ausgabe" schreiben Sie „Format: 5 Aufzählungspunkte, jeweils unter 15 Worten". Geben Sie die Struktur (Aufzählungspunkte, Absätze, Codeblöcke, JSON), Länge (Wortanzahl, Anzahl der Elemente) und Ton (formal, lässig, technisch) an.',
-            },
+            { q: 'Wofür steht RTF?', a: 'RTF steht für Role, Task, Format — eine dreiteilige Prompt-Struktur, wobei Role definiert, wer das Modell sein sollte, Task spezifiziert, was das Modell tun sollte, und Format beschreibt die Struktur der gewünschten Ausgabe.' },
+            { q: 'Wie unterscheidet sich RTF von CO-STAR?', a: 'RTF ist minimal und konzentriert sich auf drei Felder: Role, Task, Format. CO-STAR ist umfassender und fügt Context, Style, Audience und Tone hinzu. Verwenden Sie RTF für schnelle, unkomplizierte Aufgaben; verwenden Sie CO-STAR, wenn Publikum und Ton wichtig sind.' },
+            { q: 'Wann sollte ich RTF verwenden?', a: 'Verwenden Sie RTF, wenn Sie strukturierte Ausgabe von einer klar definierten Rolle benötigen. Beispiele: Zusammenfassung von Meetings, Code-Generierung, Schreiben von E-Mails in einem bestimmten Format oder Erstellung von Dokumentation. RTF ist ideal für Template-basierte Workflows.' },
+            { q: 'Kann ich RTF mit anderen Frameworks kombinieren?', a: 'Ja. Sie können RTF für die anfängliche Ausgabegenerierung verwenden und dann RISEN für iterative Verfeinerung anwenden. Oder kombinieren Sie RTF mit Chain-of-Thought, um Argumentation hinzuzufügen. Mischen Sie Frameworks für komplexe Workflows.' },
+            { q: 'Was ist, wenn ich unsicher bin, welche Rolle ich angeben soll?', a: 'Beginnen Sie mit der einfachsten Rolle, die zur Aufgabe passt: „Sie sind ein technischer Schreiber", „Sie sind ein Produktmanager" oder „Sie sind ein Python-Experte". Seien Sie spezifisch, aber nicht übermäßig ausarbeitet. Testen Sie verschiedene Rollen, um zu sehen, welche bessere Ergebnisse liefert.' },
+            { q: 'Ist die Reihenfolge von Role, Task, Format wichtig?', a: 'Die traditionelle Reihenfolge ist Role → Task → Format, aber das Modell wird Ihre Absicht unabhängig von der Reihenfolge verstehen. Jedoch erleichtert die Beibehaltung dieser Standardreihenfolge das Lesen und Template-Erstellen von Prompts. Konsistenz ist wichtiger als strikte Reihenfolge.' },
+            { q: 'Funktioniert RTF mit allen Sprachmodellen?', a: 'Ja. RTF ist Framework-unabhängig. Es funktioniert mit GPT-5.6, Claude, Gemini, Open-Source-Modellen wie Llama 3.2 und lokalen Modellen über Ollama oder LM Studio. Die Prinzipien gelten universell für alle Befehls-befolgenden LLMs.' },
+            { q: 'Wie schreibe ich eine gute Format-Spezifikation?', a: 'Seien Sie spezifisch: Statt „Format: schöne Ausgabe" schreiben Sie „Format: 5 Aufzählungspunkte, jeweils unter 15 Worten". Geben Sie die Struktur (Aufzählungspunkte, Absätze, Codeblöcke, JSON), Länge (Wortanzahl, Anzahl der Elemente) und Ton (formal, lässig, technisch) an.' },
+            { q: 'Was ist das RTF-Framework?', a: 'RTF = Role, Task, Format. Eine dreiteilige Prompt-Struktur: Role definiert, wer das Modell ist (z. B. „leitender Datenanalyst"), Task gibt an, was zu tun ist, und Format legt fest, wie die Ausgabe strukturiert sein soll. Es funktioniert über alle großen Modelle.' },
+            { q: 'Wann sollte ich RTF statt CO-STAR oder SPECS verwenden?', a: 'Verwenden Sie RTF für Routine- und wiederholbare Aufgaben (Zusammenfassungen, Code-Reviews, E-Mails, Berichte). Wechseln Sie zu CO-STAR, wenn Ton und Zielgruppe kritisch sind, zu SPECS, wenn Sie strenge Schemas und Constraints benötigen, und zu TRACE, wenn Transparenz bei der Begründung wichtig ist.' },
+            { q: 'Ist RTF dasselbe wie „dem Modell einfach zu sagen, was es tun soll"?', a: 'Nein. RTF erzwingt die explizite Spezifikation von drei Dingen: wer das Modell ist (Role), welche Aufgabe es löst und wie die Ausgabe strukturiert sein muss (Format). Diese Struktur beseitigt Mehrdeutigkeiten und verbessert die Konsistenz über Modelle und Durchläufe hinweg.' },
+            { q: 'Wie vergleicht sich RTF mit Chain-of-Thought?', a: 'Chain-of-Thought verbessert die Begründung, indem es Modelle auffordert, „Schritt für Schritt zu denken". RTF strukturiert das Output-Format und die Rolle. Sie sind komplementär — Sie können sie kombinieren: Verwenden Sie RTF, um Rolle und Format zu definieren, und fügen Sie dann „Schritt für Schritt denken" für komplexe Reasoning-Aufgaben hinzu.' },
+            { q: 'Kann ich RTF mit lokalen Modellen wie Ollama verwenden?', a: 'Ja. RTF funktioniert mit jedem LLM, einschließlich lokaler Modelle, die über Ollama oder LM Studio ausgeführt werden. Einfachere Modelle (Mistral Small, Llama 3.3) können bei komplexen Format-Feldern weniger konsistent sein, aber RTF verbessert dennoch die Output-Qualität.' },
+            { q: 'Was ist der häufigste RTF-Fehler?', a: 'Format implicit oder vage zu lassen. Ohne ein explizites Format-Feld (z. B. „3 Aufzählungspunkte, maximal 50 Wörter pro Punkt") wählen Modelle standardmäßig Prosa-Absätze. Geben Sie immer Format an.' },
+            { q: 'Wie hilft RTF bei der Konsistenz?', a: 'Durch die explizite Spezifikation von Role, Task und Format reduzieren Sie die Mehrdeutigkeit des Modells über das, was Sie möchten. Dies macht die Ausgabe konsistenter über Modelle, Durchläufe und Teamkollegen, die den Prompt wiederverwenden.' },
+            { q: 'Sollte ich RTF-Prompts speichern?', a: 'Ja. Ein gut geschriebener RTF-Prompt für eine wiederkehrende Aufgabe (wöchentliche Zusammenfassung, Code-Review, E-Mail-Entwurf) sollte als Vorlage gespeichert und wiederverwendet werden. Das ist RTFs größter Vorteil gegenüber dem Schreiben von Prompts von Grund auf.' },
+            { q: 'Kann RTF strikte Constraints wie JSON-Ausgabe erzwingen?', a: 'Teilweise. RTF kann im Format-Feld „JSON-Format" anfordern, und moderne Modelle (GPT-5.6, Claude) halten sich normalerweise daran. Für 100%ige strikte Schema-Erzwingung verwenden Sie SPECS (mit expliziten Constraints) oder strukturierte Output-APIs.' },
+            { q: 'Wie verwendet PromptQuorum RTF?', a: 'PromptQuorum enthält RTF als integrierte Framework-Vorlage. Benutzer füllen die Felder Role, Task und Format aus, und PromptQuorum sendet denselben Prompt über 25+ Modelle (GPT-5.6, Claude, Gemini, lokale Modelle) für Vergleich und A/B-Tests.' },
+            { q: 'Muss ich bei der Verwendung von RTF die DSGVO beachten?', a: 'Ja. RTF-Prompts, die sensible Daten enthalten, müssen DSGVO-konform sein. Verwenden Sie RTF mit Datenschutzvorkehrungen: Vermeiden Sie die Speicherung persönlicher Daten in Prompt-Templates, nutzen Sie lokale Modelle für sensitive Daten und dokumentieren Sie die Verarbeitung nach DSGVO Artikel 28 und BSI-Grundschutz-Katalogen.' },
+            { q: 'Ist RTF für den deutschen Mittelstand geeignet?', a: 'Absolut. RTF ist ideal für Mittelstands-Unternehmen: Es erzwingt strukturierte, präzise Kommunikation (die deutsche Unternehmen schätzen), funktioniert mit lokalen Modellen für Datenschutz, und ist einfach genug, damit Mitarbeiter es ohne umfangreiches Training nutzen können. DSGVO- und BSI-Grundschutz-konforme Nutzung ist durch die Struktur von RTF natürlich unterstützt.' },
           ],
         },
         relatedReading: {
@@ -2037,82 +2142,138 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Qu\'est-ce que le Framework RTF ?',
-            acceptedAnswer: {
+            'name': 'Que signifie RTF ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF = Role, Task, Format. Une structure de prompt à trois composants : Role définit qui est le modèle (par exemple « analyste de données senior »), Task indique quoi faire, et Format précise comment la sortie doit être structurée. Fonctionne sur tous les modèles majeurs.',
+              'text': 'RTF signifie Role, Task, Format — une structure de prompt en trois parties où Role définit le rôle que le modèle devrait tenir, Task spécifie ce que le modèle devrait faire, et Format décrit la structure de la sortie désirée.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quand dois-je utiliser RTF au lieu de CO-STAR ou SPECS ?',
-            acceptedAnswer: {
+            'name': 'Comment RTF diffère-t-il de CO-STAR ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Utilisez RTF pour les tâches courantes et répétables (résumés, revues de code, e-mails, rapports). Passez à CO-STAR quand le ton et l\'audience sont critiques, à SPECS quand vous avez besoin de schémas stricts, et à TRACE quand la transparence du raisonnement compte.',
+              'text': 'RTF est minimal et se concentre sur trois champs : Role, Task, Format. CO-STAR est plus complet, ajoutant Context, Style, Audience et Tone. Utilisez RTF pour les tâches rapides et simples ; utilisez CO-STAR quand le public et le ton importent.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF est-il la même chose que « simplement dire au modèle quoi faire » ?',
-            acceptedAnswer: {
+            'name': 'Quand dois-je utiliser RTF ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Non. RTF impose la spécification explicite de trois éléments : qui est le modèle (Role), quelle tâche il résout, et comment la sortie doit être structurée (Format). Cette structure élimine l\'ambiguïté et améliore la cohérence sur les modèles et les exécutions.',
+              'text': 'Utilisez RTF quand vous avez besoin d\'une sortie structurée d\'un rôle clairement défini. Exemples : résumer des réunions, générer du code, rédiger des e-mails dans un format spécifique, ou créer de la documentation. RTF est idéal pour les workflows basés sur des modèles.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Comment RTF se compare-t-il à Chain-of-Thought ?',
-            acceptedAnswer: {
+            'name': 'Puis-je combiner RTF avec d\'autres frameworks ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Chain-of-Thought améliore le raisonnement en demandant aux modèles de « penser étape par étape ». RTF structure le format de sortie et le rôle. Ils sont complémentaires — vous pouvez les combiner : utilisez RTF pour définir le rôle et le format, puis ajoutez « penser étape par étape » pour les tâches complexes.',
+              'text': 'Oui. Vous pouvez utiliser RTF pour la génération de sortie initiale, puis appliquer RISEN pour le raffinement itératif. Ou combinez RTF avec Chain-of-Thought pour ajouter du raisonnement. Mélangez et assortissez les frameworks pour les workflows complexes.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Puis-je utiliser RTF avec des modèles locaux comme Ollama ?',
-            acceptedAnswer: {
+            'name': 'Que faire si je ne suis pas sûr du rôle à spécifier ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Oui. RTF fonctionne avec n\'importe quel LLM, y compris les modèles locaux exécutés via Ollama ou LM Studio. Les modèles plus simples peuvent être moins cohérents avec des champs Format complexes, mais RTF améliore toujours la qualité de sortie.',
+              'text': 'Commencez par le rôle le plus simple qui convient à la tâche : « Vous êtes un rédacteur technique », « Vous êtes un chef de produit » ou « Vous êtes un expert Python ». Soyez spécifique mais pas excessivement détaillé. Testez différents rôles pour voir lequel produit de meilleurs résultats.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quelle est l\'erreur RTF la plus courante ?',
-            acceptedAnswer: {
+            'name': 'L\'ordre de Role, Task, Format importe-t-il ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Laisser le Format implicite ou vague. Sans champ Format explicite (par exemple « 3 points à retenir, max 50 mots chacun »), les modèles par défaut produisent des paragraphes en prose. Spécifiez toujours le Format.',
+              'text': 'L\'ordre traditionnel est Role → Task → Format, mais le modèle comprendra votre intention indépendamment de l\'ordre. Cependant, maintenir cet ordre standard rend les prompts plus faciles à lire et à templater. La cohérence importe plus que l\'ordre strict.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Comment RTF aide-t-il à la cohérence ?',
-            acceptedAnswer: {
+            'name': 'RTF fonctionne-t-il avec tous les modèles de langage ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'En spécifiant explicitement Role, Task et Format, vous réduisez l\'ambiguïté du modèle. Cela rend la sortie plus cohérente sur les modèles, les exécutions et les collègues réutilisant le prompt.',
+              'text': 'Oui. RTF est indépendant du framework. Il fonctionne avec GPT-5.6, Claude, Gemini, les modèles open-source comme Llama 3.2, et les modèles locaux via Ollama ou LM Studio. Les principes s\'appliquent universellement à tous les LLMs qui suivent les instructions.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Dois-je enregistrer les prompts RTF ?',
-            acceptedAnswer: {
+            'name': 'Comment rédiger une bonne spécification Format ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Oui. Un bon prompt RTF pour une tâche récurrente (résumé hebdomadaire, revue de code, brouillon d\'e-mail) doit être enregistré comme modèle et réutilisé. C\'est l\'avantage majeur de RTF par rapport à écrire des prompts à partir de zéro.',
+              'text': 'Soyez spécifique : au lieu de « Format : belle sortie », écrivez « Format : 5 points de liste, chacun moins de 15 mots ». Spécifiez la structure (points de liste, paragraphes, blocs de code, JSON), la longueur (nombre de mots, nombre d\'éléments) et le ton (formel, décontracté, technique).',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF peut-il imposer des contraintes strictes comme la sortie JSON ?',
-            acceptedAnswer: {
+            'name': 'Qu\'est-ce que le Framework RTF ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Partiellement. RTF peut demander « format JSON » dans le champ Format, et les modèles modernes (GPT-5.6, Claude) s\'y conforment généralement. Pour 100% d\'imposition stricte de schéma, utilisez SPECS ou les APIs de sortie structurée.',
+              'text': 'RTF = Role, Task, Format. Une structure de prompt à trois composants : Role définit qui est le modèle (par exemple « analyste de données senior »), Task indique quoi faire, et Format précise comment la sortie doit être structurée. Fonctionne sur tous les modèles majeurs.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Comment PromptQuorum utilise RTF ?',
-            acceptedAnswer: {
+            'name': 'Quand dois-je utiliser RTF au lieu de CO-STAR ou SPECS ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorum inclut RTF comme modèle de framework intégré. Les utilisateurs remplissent les champs Role, Task et Format, et PromptQuorum distribue le même prompt sur 25+ modèles pour comparaison et tests A/B.',
+              'text': 'Utilisez RTF pour les tâches courantes et répétables (résumés, revues de code, e-mails, rapports). Passez à CO-STAR quand le ton et l\'audience sont critiques, à SPECS quand vous avez besoin de schémas stricts, et à TRACE quand la transparence du raisonnement compte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF est-il la même chose que « simplement dire au modèle quoi faire » ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. RTF impose la spécification explicite de trois éléments : qui est le modèle (Role), quelle tâche il résout, et comment la sortie doit être structurée (Format). Cette structure élimine l\'ambiguïté et améliore la cohérence sur les modèles et les exécutions.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment RTF se compare-t-il à Chain-of-Thought ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thought améliore le raisonnement en demandant aux modèles de « penser étape par étape ». RTF structure le format de sortie et le rôle. Ils sont complémentaires — vous pouvez les combiner : utilisez RTF pour définir le rôle et le format, puis ajoutez « penser étape par étape » pour les tâches complexes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser RTF avec des modèles locaux comme Ollama ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. RTF fonctionne avec n\'importe quel LLM, y compris les modèles locaux exécutés via Ollama ou LM Studio. Les modèles plus simples peuvent être moins cohérents avec des champs Format complexes, mais RTF améliore toujours la qualité de sortie.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est l\'erreur RTF la plus courante ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Laisser le Format implicite ou vague. Sans champ Format explicite (par exemple « 3 points à retenir, max 50 mots chacun »), les modèles par défaut produisent des paragraphes en prose. Spécifiez toujours le Format.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je enregistrer les prompts RTF ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Un bon prompt RTF pour une tâche récurrente (résumé hebdomadaire, revue de code, brouillon d\'e-mail) doit être enregistré comme modèle et réutilisé. C\'est l\'avantage majeur de RTF par rapport à écrire des prompts à partir de zéro.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF peut-il imposer des contraintes strictes comme la sortie JSON ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Partiellement. RTF peut demander « format JSON » dans le champ Format, et les modèles modernes (GPT-5.6, Claude) s\'y conforment généralement. Pour 100% d\'imposition stricte de schéma, utilisez SPECS ou les APIs de sortie structurée.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment PromptQuorum utilise RTF ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum inclut RTF comme modèle de framework intégré. Les utilisateurs remplissent les champs Role, Task et Format, et PromptQuorum distribue le même prompt sur 25+ modèles pour comparaison et tests A/B.',
             },
           },
         ],
@@ -2367,38 +2528,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
-            {
-              q: 'Que signifie RTF ?',
-              a: 'RTF signifie Role, Task, Format — une structure de prompt en trois parties où Role définit le rôle que le modèle devrait tenir, Task spécifie ce que le modèle devrait faire, et Format décrit la structure de la sortie désirée.',
-            },
-            {
-              q: 'Comment RTF diffère-t-il de CO-STAR ?',
-              a: 'RTF est minimal et se concentre sur trois champs : Role, Task, Format. CO-STAR est plus complet, ajoutant Context, Style, Audience et Tone. Utilisez RTF pour les tâches rapides et simples ; utilisez CO-STAR quand le public et le ton importent.',
-            },
-            {
-              q: 'Quand dois-je utiliser RTF ?',
-              a: 'Utilisez RTF quand vous avez besoin d\'une sortie structurée d\'un rôle clairement défini. Exemples : résumer des réunions, générer du code, rédiger des e-mails dans un format spécifique, ou créer de la documentation. RTF est idéal pour les workflows basés sur des modèles.',
-            },
-            {
-              q: 'Puis-je combiner RTF avec d\'autres frameworks ?',
-              a: 'Oui. Vous pouvez utiliser RTF pour la génération de sortie initiale, puis appliquer RISEN pour le raffinement itératif. Ou combinez RTF avec Chain-of-Thought pour ajouter du raisonnement. Mélangez et assortissez les frameworks pour les workflows complexes.',
-            },
-            {
-              q: 'Que faire si je ne suis pas sûr du rôle à spécifier ?',
-              a: 'Commencez par le rôle le plus simple qui convient à la tâche : « Vous êtes un rédacteur technique », « Vous êtes un chef de produit » ou « Vous êtes un expert Python ». Soyez spécifique mais pas excessivement détaillé. Testez différents rôles pour voir lequel produit de meilleurs résultats.',
-            },
-            {
-              q: 'L\'ordre de Role, Task, Format importe-t-il ?',
-              a: 'L\'ordre traditionnel est Role → Task → Format, mais le modèle comprendra votre intention indépendamment de l\'ordre. Cependant, maintenir cet ordre standard rend les prompts plus faciles à lire et à templater. La cohérence importe plus que l\'ordre strict.',
-            },
-            {
-              q: 'RTF fonctionne-t-il avec tous les modèles de langage ?',
-              a: 'Oui. RTF est indépendant du framework. Il fonctionne avec GPT-5.6, Claude, Gemini, les modèles open-source comme Llama 3.2, et les modèles locaux via Ollama ou LM Studio. Les principes s\'appliquent universellement à tous les LLMs qui suivent les instructions.',
-            },
-            {
-              q: 'Comment rédiger une bonne spécification Format ?',
-              a: 'Soyez spécifique : au lieu de « Format : belle sortie », écrivez « Format : 5 points de liste, chacun moins de 15 mots ». Spécifiez la structure (points de liste, paragraphes, blocs de code, JSON), la longueur (nombre de mots, nombre d\'éléments) et le ton (formel, décontracté, technique).',
-            },
+            { q: 'Que signifie RTF ?', a: 'RTF signifie Role, Task, Format — une structure de prompt en trois parties où Role définit le rôle que le modèle devrait tenir, Task spécifie ce que le modèle devrait faire, et Format décrit la structure de la sortie désirée.' },
+            { q: 'Comment RTF diffère-t-il de CO-STAR ?', a: 'RTF est minimal et se concentre sur trois champs : Role, Task, Format. CO-STAR est plus complet, ajoutant Context, Style, Audience et Tone. Utilisez RTF pour les tâches rapides et simples ; utilisez CO-STAR quand le public et le ton importent.' },
+            { q: 'Quand dois-je utiliser RTF ?', a: 'Utilisez RTF quand vous avez besoin d\'une sortie structurée d\'un rôle clairement défini. Exemples : résumer des réunions, générer du code, rédiger des e-mails dans un format spécifique, ou créer de la documentation. RTF est idéal pour les workflows basés sur des modèles.' },
+            { q: 'Puis-je combiner RTF avec d\'autres frameworks ?', a: 'Oui. Vous pouvez utiliser RTF pour la génération de sortie initiale, puis appliquer RISEN pour le raffinement itératif. Ou combinez RTF avec Chain-of-Thought pour ajouter du raisonnement. Mélangez et assortissez les frameworks pour les workflows complexes.' },
+            { q: 'Que faire si je ne suis pas sûr du rôle à spécifier ?', a: 'Commencez par le rôle le plus simple qui convient à la tâche : « Vous êtes un rédacteur technique », « Vous êtes un chef de produit » ou « Vous êtes un expert Python ». Soyez spécifique mais pas excessivement détaillé. Testez différents rôles pour voir lequel produit de meilleurs résultats.' },
+            { q: 'L\'ordre de Role, Task, Format importe-t-il ?', a: 'L\'ordre traditionnel est Role → Task → Format, mais le modèle comprendra votre intention indépendamment de l\'ordre. Cependant, maintenir cet ordre standard rend les prompts plus faciles à lire et à templater. La cohérence importe plus que l\'ordre strict.' },
+            { q: 'RTF fonctionne-t-il avec tous les modèles de langage ?', a: 'Oui. RTF est indépendant du framework. Il fonctionne avec GPT-5.6, Claude, Gemini, les modèles open-source comme Llama 3.2, et les modèles locaux via Ollama ou LM Studio. Les principes s\'appliquent universellement à tous les LLMs qui suivent les instructions.' },
+            { q: 'Comment rédiger une bonne spécification Format ?', a: 'Soyez spécifique : au lieu de « Format : belle sortie », écrivez « Format : 5 points de liste, chacun moins de 15 mots ». Spécifiez la structure (points de liste, paragraphes, blocs de code, JSON), la longueur (nombre de mots, nombre d\'éléments) et le ton (formel, décontracté, technique).' },
+            { q: 'Qu\'est-ce que le Framework RTF ?', a: 'RTF = Role, Task, Format. Une structure de prompt à trois composants : Role définit qui est le modèle (par exemple « analyste de données senior »), Task indique quoi faire, et Format précise comment la sortie doit être structurée. Fonctionne sur tous les modèles majeurs.' },
+            { q: 'Quand dois-je utiliser RTF au lieu de CO-STAR ou SPECS ?', a: 'Utilisez RTF pour les tâches courantes et répétables (résumés, revues de code, e-mails, rapports). Passez à CO-STAR quand le ton et l\'audience sont critiques, à SPECS quand vous avez besoin de schémas stricts, et à TRACE quand la transparence du raisonnement compte.' },
+            { q: 'RTF est-il la même chose que « simplement dire au modèle quoi faire » ?', a: 'Non. RTF impose la spécification explicite de trois éléments : qui est le modèle (Role), quelle tâche il résout, et comment la sortie doit être structurée (Format). Cette structure élimine l\'ambiguïté et améliore la cohérence sur les modèles et les exécutions.' },
+            { q: 'Comment RTF se compare-t-il à Chain-of-Thought ?', a: 'Chain-of-Thought améliore le raisonnement en demandant aux modèles de « penser étape par étape ». RTF structure le format de sortie et le rôle. Ils sont complémentaires — vous pouvez les combiner : utilisez RTF pour définir le rôle et le format, puis ajoutez « penser étape par étape » pour les tâches complexes.' },
+            { q: 'Puis-je utiliser RTF avec des modèles locaux comme Ollama ?', a: 'Oui. RTF fonctionne avec n\'importe quel LLM, y compris les modèles locaux exécutés via Ollama ou LM Studio. Les modèles plus simples peuvent être moins cohérents avec des champs Format complexes, mais RTF améliore toujours la qualité de sortie.' },
+            { q: 'Quelle est l\'erreur RTF la plus courante ?', a: 'Laisser le Format implicite ou vague. Sans champ Format explicite (par exemple « 3 points à retenir, max 50 mots chacun »), les modèles par défaut produisent des paragraphes en prose. Spécifiez toujours le Format.' },
+            { q: 'Dois-je enregistrer les prompts RTF ?', a: 'Oui. Un bon prompt RTF pour une tâche récurrente (résumé hebdomadaire, revue de code, brouillon d\'e-mail) doit être enregistré comme modèle et réutilisé. C\'est l\'avantage majeur de RTF par rapport à écrire des prompts à partir de zéro.' },
+            { q: 'RTF peut-il imposer des contraintes strictes comme la sortie JSON ?', a: 'Partiellement. RTF peut demander « format JSON » dans le champ Format, et les modèles modernes (GPT-5.6, Claude) s\'y conforment généralement. Pour 100% d\'imposition stricte de schéma, utilisez SPECS ou les APIs de sortie structurée.' },
+            { q: 'Comment PromptQuorum utilise RTF ?', a: 'PromptQuorum inclut RTF comme modèle de framework intégré. Les utilisateurs remplissent les champs Role, Task et Format, et PromptQuorum distribue le même prompt sur 25+ modèles pour comparaison et tests A/B.' },
           ],
         },
         relatedReading: {
@@ -2472,82 +2618,146 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'RTFフレームワークとは何ですか？',
-            acceptedAnswer: {
+            'name': 'RTFは何の略ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF = Role、Task、Format。3要素のプロンプト構造です。Roleはモデルの役割（例：「シニアデータアナリスト」）、Taskは実行内容、Formatは出力形式を指定します。すべての主要LLMモデルで動作します。',
+              'text': 'RTFはRole、Task、Format — 3部構成のプロンプト構造で、Roleはモデルが何を演じるべきかを定義、Taskはモデルが何をするべきかを指定、Formatは希望する出力の構造を説明します。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTFをCO-STARやSPECSの代わりに使うべき場合は？',
-            acceptedAnswer: {
+            'name': 'RTFはCO-STARとどう異なりますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'ルーティン的で反復可能なタスク（要約、コードレビュー、メール、レポート）にRTFを使用します。トーンやオーディエンスが重要ならCO-STAR、厳密なスキーマが必要ならSPECS、推論の透明性が重要ならTRACEに切り替えます。',
+              'text': 'RTFは最小限で3つのフィールドに焦点：Role、Task、Format。CO-STARはより包括的で、Context、Style、Audience、Toneを追加。クイック・ストレートな課題はRTF；聴衆とトーンが重要ならCO-STAR。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTFは「単にモデルに何をするか言うこと」と同じですか？',
-            acceptedAnswer: {
+            'name': 'RTFいつ使うべきですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'いいえ。RTFは3つのことを明示的に指定します：モデルが誰なのか（Role）、どんなタスクを解くのか、出力をどう構造化するか（Format）。この構造は曖昧性をなくし、モデル間や実行間の一貫性を高めます。',
+              'text': 'Role明確に定義された構造化出力が必要なときRTF使用。例：会議要約、コード生成、特定形式のメール作成、ドキュメント作成。RTFはテンプレートベースワークフロー向き。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTFはChain-of-Thoughtとどう違いますか？',
-            acceptedAnswer: {
+            'name': 'RTFを他のフレームワークと組み合わせられますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Chain-of-Thoughtは「ステップバイステップ考えて」と促すことで推論を改善します。RTFは出力フォーマットとロールを構造化します。相補的です。両方組み合わせられます：RTFでロール・フォーマットを定義し、複雑なタスクに「ステップバイステップ」を追加します。',
+              'text': 'はい。初期出力生成にRTF使って、反復精化にRISEN適用。またはChain-of-Thoughtと組み合わせ推論追加。複雑ワークフロー向けフレームワーク混在。',
             },
           },
           {
             '@type': 'Question',
-            name: 'OllamaのようなローカルモデルでRTFを使えますか？',
-            acceptedAnswer: {
+            'name': 'Roleを何にするか不確かな場合？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'はい。RTFはすべてのLLMで動作します。OllamaやLM Studioで実行するローカルモデルも含まれます。シンプルなモデルは複雑なFormat設定では一貫性が低いかもしれませんが、RTFはなお出力品質を改善します。',
+              'text': 'タスク合致する最小Roleで開始：「技術ライター」、「プロダクトマネージャー」、「Pythonエキスパート」。具体的だが過度詳細なし。異なるRoleテストして、より良い結果見つける。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTFの最も一般的なミスは何ですか？',
-            acceptedAnswer: {
+            'name': 'Role、Task、Formatの順序が重要ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Formatを曖昧または暗黙的にすること。明示的なFormat指定（例：「各3ポイント、最大50語」）がないと、モデルはデフォルトで散文段落を出力します。常にFormatを指定してください。',
+              'text': 'standard順序 Role → Task → Formatですが、モデルは順序関係なく意図理解。しかし標準順序保持で、プロンプト読みやすく、テンプレート化容易。一貫性が厳密順序より重要。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTFはどう一貫性を高めますか？',
-            acceptedAnswer: {
+            'name': '全LLMでRTF機能しますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Role、Task、Formatを明示的に指定することで、モデルの曖昧性が減ります。結果として、複数モデル、複数実行、チームメンバー再利用での出力の一貫性が向上します。',
+              'text': 'はい。RTFフレームワーク独立。GPT-5.6、Claude、Gemini、Llama 3.2のようなOSS、OllamaやLM Studio経由ローカルモデル動作。原則全指示従順LLMに汎用。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTFプロンプトを保存すべきですか？',
-            acceptedAnswer: {
+            'name': '良いFormat仕様をどう書きますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'はい。定期的なタスク（週次サマリー、コードレビュー、メール下書き）のRTFプロンプトはテンプレートとして保存・再利用すべきです。毎回ゼロから書くより大きな利点です。',
+              'text': '具体的に："Format：いい出力"ではなく"Format：5箇条書き、各15語以下"。構造指定（箇条、段落、コードブロック、JSON）、長さ（語数、項目数）、トーン（フォーマル、カジュアル、技術的）。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTFはJSON出力のような厳密なConstraintを強制できますか？',
-            acceptedAnswer: {
+            'name': 'RTFフレームワークとは何ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'ある程度。Format フィールドで「JSONフォーマット」をリクエストでき、最新モデル（GPT-5.6、Claude）は通常対応します。100%の厳密スキーマ強制にはSPECSまたは構造化出力APIを使用してください。',
+              'text': 'RTF = Role、Task、Format。3要素のプロンプト構造です。Roleはモデルの役割（例：「シニアデータアナリスト」）、Taskは実行内容、Formatは出力形式を指定します。すべての主要LLMモデルで動作します。',
             },
           },
           {
             '@type': 'Question',
-            name: 'PromptQuorumはRTFをどう使用していますか？',
-            acceptedAnswer: {
+            'name': 'RTFをCO-STARやSPECSの代わりに使うべき場合は？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorumはRTFを組み込みフレームワークテンプレートとして含みます。ユーザーはRole、Task、Formatフィールドを入力し、PromptQuorumは同じプロンプトを25+のモデルにディスパッチして比較・A/Bテストします。',
+              'text': 'ルーティン的で反復可能なタスク（要約、コードレビュー、メール、レポート）にRTFを使用します。トーンやオーディエンスが重要ならCO-STAR、厳密なスキーマが必要ならSPECS、推論の透明性が重要ならTRACEに切り替えます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTFは「単にモデルに何をするか言うこと」と同じですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。RTFは3つのことを明示的に指定します：モデルが誰なのか（Role）、どんなタスクを解くのか、出力をどう構造化するか（Format）。この構造は曖昧性をなくし、モデル間や実行間の一貫性を高めます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTFはChain-of-Thoughtとどう違いますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chain-of-Thoughtは「ステップバイステップ考えて」と促すことで推論を改善します。RTFは出力フォーマットとロールを構造化します。相補的です。両方組み合わせられます：RTFでロール・フォーマットを定義し、複雑なタスクに「ステップバイステップ」を追加します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'OllamaのようなローカルモデルでRTFを使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。RTFはすべてのLLMで動作します。OllamaやLM Studioで実行するローカルモデルも含まれます。シンプルなモデルは複雑なFormat設定では一貫性が低いかもしれませんが、RTFはなお出力品質を改善します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTFの最も一般的なミスは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Formatを曖昧または暗黙的にすること。明示的なFormat指定（例：「各3ポイント、最大50語」）がないと、モデルはデフォルトで散文段落を出力します。常にFormatを指定してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTFはどう一貫性を高めますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Role、Task、Formatを明示的に指定することで、モデルの曖昧性が減ります。結果として、複数モデル、複数実行、チームメンバー再利用での出力の一貫性が向上します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTFプロンプトを保存すべきですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。定期的なタスク（週次サマリー、コードレビュー、メール下書き）のRTFプロンプトはテンプレートとして保存・再利用すべきです。毎回ゼロから書くより大きな利点です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTFはJSON出力のような厳密なConstraintを強制できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ある程度。Format フィールドで「JSONフォーマット」をリクエストでき、最新モデル（GPT-5.6、Claude）は通常対応します。100%の厳密スキーマ強制にはSPECSまたは構造化出力APIを使用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PromptQuorumはRTFをどう使用していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorumはRTFを組み込みフレームワークテンプレートとして含みます。ユーザーはRole、Task、Formatフィールドを入力し、PromptQuorumは同じプロンプトを25+のモデルにディスパッチして比較・A/Bテストします。',
             },
           },
         ],
@@ -2801,38 +3011,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            {
-              q: 'RTFは何の略ですか？',
-              a: 'RTFはRole、Task、Format — 3部構成のプロンプト構造で、Roleはモデルが何を演じるべきかを定義、Taskはモデルが何をするべきかを指定、Formatは希望する出力の構造を説明します。',
-            },
-            {
-              q: 'RTFはCO-STARとどう異なりますか？',
-              a: 'RTFは最小限で3つのフィールドに焦点：Role、Task、Format。CO-STARはより包括的で、Context、Style、Audience、Toneを追加。クイック・ストレートな課題はRTF；聴衆とトーンが重要ならCO-STAR。',
-            },
-            {
-              q: 'RTFいつ使うべきですか？',
-              a: 'Role明確に定義された構造化出力が必要なときRTF使用。例：会議要約、コード生成、特定形式のメール作成、ドキュメント作成。RTFはテンプレートベースワークフロー向き。',
-            },
-            {
-              q: 'RTFを他のフレームワークと組み合わせられますか？',
-              a: 'はい。初期出力生成にRTF使って、反復精化にRISEN適用。またはChain-of-Thoughtと組み合わせ推論追加。複雑ワークフロー向けフレームワーク混在。',
-            },
-            {
-              q: 'Roleを何にするか不確かな場合？',
-              a: 'タスク合致する最小Roleで開始：「技術ライター」、「プロダクトマネージャー」、「Pythonエキスパート」。具体的だが過度詳細なし。異なるRoleテストして、より良い結果見つける。',
-            },
-            {
-              q: 'Role、Task、Formatの順序が重要ですか？',
-              a: 'standard順序 Role → Task → Formatですが、モデルは順序関係なく意図理解。しかし標準順序保持で、プロンプト読みやすく、テンプレート化容易。一貫性が厳密順序より重要。',
-            },
-            {
-              q: '全LLMでRTF機能しますか？',
-              a: 'はい。RTFフレームワーク独立。GPT-5.6、Claude、Gemini、Llama 3.2のようなOSS、OllamaやLM Studio経由ローカルモデル動作。原則全指示従順LLMに汎用。',
-            },
-            {
-              q: '良いFormat仕様をどう書きますか？',
-              a: '具体的に："Format：いい出力"ではなく"Format：5箇条書き、各15語以下"。構造指定（箇条、段落、コードブロック、JSON）、長さ（語数、項目数）、トーン（フォーマル、カジュアル、技術的）。',
-            },
+            { q: 'RTFは何の略ですか？', a: 'RTFはRole、Task、Format — 3部構成のプロンプト構造で、Roleはモデルが何を演じるべきかを定義、Taskはモデルが何をするべきかを指定、Formatは希望する出力の構造を説明します。' },
+            { q: 'RTFはCO-STARとどう異なりますか？', a: 'RTFは最小限で3つのフィールドに焦点：Role、Task、Format。CO-STARはより包括的で、Context、Style、Audience、Toneを追加。クイック・ストレートな課題はRTF；聴衆とトーンが重要ならCO-STAR。' },
+            { q: 'RTFいつ使うべきですか？', a: 'Role明確に定義された構造化出力が必要なときRTF使用。例：会議要約、コード生成、特定形式のメール作成、ドキュメント作成。RTFはテンプレートベースワークフロー向き。' },
+            { q: 'RTFを他のフレームワークと組み合わせられますか？', a: 'はい。初期出力生成にRTF使って、反復精化にRISEN適用。またはChain-of-Thoughtと組み合わせ推論追加。複雑ワークフロー向けフレームワーク混在。' },
+            { q: 'Roleを何にするか不確かな場合？', a: 'タスク合致する最小Roleで開始：「技術ライター」、「プロダクトマネージャー」、「Pythonエキスパート」。具体的だが過度詳細なし。異なるRoleテストして、より良い結果見つける。' },
+            { q: 'Role、Task、Formatの順序が重要ですか？', a: 'standard順序 Role → Task → Formatですが、モデルは順序関係なく意図理解。しかし標準順序保持で、プロンプト読みやすく、テンプレート化容易。一貫性が厳密順序より重要。' },
+            { q: '全LLMでRTF機能しますか？', a: 'はい。RTFフレームワーク独立。GPT-5.6、Claude、Gemini、Llama 3.2のようなOSS、OllamaやLM Studio経由ローカルモデル動作。原則全指示従順LLMに汎用。' },
+            { q: '良いFormat仕様をどう書きますか？', a: '具体的に："Format：いい出力"ではなく"Format：5箇条書き、各15語以下"。構造指定（箇条、段落、コードブロック、JSON）、長さ（語数、項目数）、トーン（フォーマル、カジュアル、技術的）。' },
+            { q: 'RTFフレームワークとは何ですか？', a: 'RTF = Role、Task、Format。3要素のプロンプト構造です。Roleはモデルの役割（例：「シニアデータアナリスト」）、Taskは実行内容、Formatは出力形式を指定します。すべての主要LLMモデルで動作します。' },
+            { q: 'RTFをCO-STARやSPECSの代わりに使うべき場合は？', a: 'ルーティン的で反復可能なタスク（要約、コードレビュー、メール、レポート）にRTFを使用します。トーンやオーディエンスが重要ならCO-STAR、厳密なスキーマが必要ならSPECS、推論の透明性が重要ならTRACEに切り替えます。' },
+            { q: 'RTFは「単にモデルに何をするか言うこと」と同じですか？', a: 'いいえ。RTFは3つのことを明示的に指定します：モデルが誰なのか（Role）、どんなタスクを解くのか、出力をどう構造化するか（Format）。この構造は曖昧性をなくし、モデル間や実行間の一貫性を高めます。' },
+            { q: 'RTFはChain-of-Thoughtとどう違いますか？', a: 'Chain-of-Thoughtは「ステップバイステップ考えて」と促すことで推論を改善します。RTFは出力フォーマットとロールを構造化します。相補的です。両方組み合わせられます：RTFでロール・フォーマットを定義し、複雑なタスクに「ステップバイステップ」を追加します。' },
+            { q: 'OllamaのようなローカルモデルでRTFを使えますか？', a: 'はい。RTFはすべてのLLMで動作します。OllamaやLM Studioで実行するローカルモデルも含まれます。シンプルなモデルは複雑なFormat設定では一貫性が低いかもしれませんが、RTFはなお出力品質を改善します。' },
+            { q: 'RTFの最も一般的なミスは何ですか？', a: 'Formatを曖昧または暗黙的にすること。明示的なFormat指定（例：「各3ポイント、最大50語」）がないと、モデルはデフォルトで散文段落を出力します。常にFormatを指定してください。' },
+            { q: 'RTFはどう一貫性を高めますか？', a: 'Role、Task、Formatを明示的に指定することで、モデルの曖昧性が減ります。結果として、複数モデル、複数実行、チームメンバー再利用での出力の一貫性が向上します。' },
+            { q: 'RTFプロンプトを保存すべきですか？', a: 'はい。定期的なタスク（週次サマリー、コードレビュー、メール下書き）のRTFプロンプトはテンプレートとして保存・再利用すべきです。毎回ゼロから書くより大きな利点です。' },
+            { q: 'RTFはJSON出力のような厳密なConstraintを強制できますか？', a: 'ある程度。Format フィールドで「JSONフォーマット」をリクエストでき、最新モデル（GPT-5.6、Claude）は通常対応します。100%の厳密スキーマ強制にはSPECSまたは構造化出力APIを使用してください。' },
+            { q: 'PromptQuorumはRTFをどう使用していますか？', a: 'PromptQuorumはRTFを組み込みフレームワークテンプレートとして含みます。ユーザーはRole、Task、Formatフィールドを入力し、PromptQuorumは同じプロンプトを25+のモデルにディスパッチして比較・A/Bテストします。' },
           ],
         },
         relatedReading: {
@@ -2933,98 +3129,162 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'RTF框架是什么？',
-            acceptedAnswer: {
+            'name': 'RTF代表什么？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF = Role、Task、Format。一种三部分的提示词结构：Role定义模型是谁（例如"资深数据分析师"），Task说明要做什么，Format指定输出应如何结构化。适用于所有主要模型。',
+              'text': 'RTF代表Role、Task、Format — 一个三部分的提示词结构，其中Role定义模型应该扮演的角色，Task指定模型应该做什么，Format描述所需输出的结构。',
             },
           },
           {
             '@type': 'Question',
-            name: '何时应该使用RTF而不是CO-STAR或SPECS？',
-            acceptedAnswer: {
+            'name': 'RTF与CO-STAR有何不同？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '对于日常的、重复性的任务（摘要、代码审查、电子邮件、报告）使用RTF。当语气/受众至关重要时升级到CO-STAR，当需要严格的模式和约束时使用SPECS，当推理透明度很重要时使用TRACE。',
+              'text': 'RTF最小化并专注于三个字段：Role、Task、Format。CO-STAR更全面，添加了Context、Style、Audience和Tone。对于快速直接的任务使用RTF；当受众和语调很重要时使用CO-STAR。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF是否与"只是告诉模型做什么"相同？',
-            acceptedAnswer: {
+            'name': '何时应该使用RTF？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '不是。RTF强制显式指定三项内容：模型是谁（Role）、解决什么任务，以及输出必须如何结构化（Format）。这种结构消除了歧义，提高了跨模型和运行之间的一致性。',
+              'text': '当您需要来自明确定义的角色的结构化输出时使用RTF。示例：总结会议、生成代码、以特定格式编写电子邮件或创建文档。RTF非常适合基于模板的工作流。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF与Chain-of-Thought相比如何？',
-            acceptedAnswer: {
+            'name': '我可以将RTF与其他框架结合吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Chain-of-Thought通过要求模型"逐步思考"来改进推理。RTF构建输出格式和角色。两者是互补的——您可以结合它们：使用RTF定义角色和格式，然后为复杂推理任务添加"逐步思考"。',
+              'text': '可以。您可以使用RTF进行初始输出生成，然后应用RISEN进行迭代细化。或者将RTF与Chain-of-Thought结合来添加推理。混合搭配框架来处理复杂的工作流。',
             },
           },
           {
             '@type': 'Question',
-            name: '我能将RTF与Ollama等本地模型一起使用吗？',
-            acceptedAnswer: {
+            'name': '如果我不确定应该指定什么角色怎么办？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '可以。RTF适用于任何LLM，包括通过Ollama或LM Studio运行的本地模型。较简单的模型（Mistral Small、Llama 3.3）可能在复杂Format字段上不够一致，但RTF仍能改进输出质量。',
+              'text': '从最适合该任务的最简单角色开始："您是一位技术作家"、"您是一位产品经理"或"您是一位Python专家"。要具体但不要过度详细。测试不同的角色以查看哪个产生更好的结果。',
             },
           },
           {
             '@type': 'Question',
-            name: '最常见的RTF错误是什么？',
-            acceptedAnswer: {
+            'name': 'Role、Task、Format的顺序重要吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '让Format含糊不清或隐含。没有显式的Format字段（例如"3个要点，每个最多50个词"），模型默认为散文段落。始终指定Format。',
+              'text': '传统顺序是Role → Task → Format，但模型无论顺序如何都会理解您的意图。但是，保持这个标准顺序可以使提示词更容易读和模板化。一致性比严格的顺序更重要。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF如何帮助提高一致性？',
-            acceptedAnswer: {
+            'name': 'RTF可以与所有语言模型一起工作吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '通过显式指定Role、Task和Format，您减少了模型对您想要什么的歧义。这使输出跨模型、运行和重复使用提示词的团队成员更加一致。',
+              'text': '可以。RTF与框架无关。它适用于GPT-5.6、Claude、Gemini、Llama 3.2等开源模型，以及通过Ollama或LM Studio的本地模型。这些原则普遍适用于任何遵循指令的LLM。',
             },
           },
           {
             '@type': 'Question',
-            name: '我应该保存RTF提示词吗？',
-            acceptedAnswer: {
+            'name': '我如何编写一个好的Format规范？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '应该。编写好的RTF提示词来处理定期任务（每周摘要、代码审查、电子邮件草稿）应该保存为模板并重复使用。这是RTF相对于每次从头写提示词的最大优势。',
+              'text': '要具体：不是"Format：好的输出"，而是写"Format：5个要点，每个少于15个字"。指定结构（要点、段落、代码块、JSON）、长度（字数、项目数）和语调（正式、随意、技术性）。',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF能否强制执行严格的约束，如JSON输出？',
-            acceptedAnswer: {
+            'name': 'RTF框架是什么？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '部分可以。RTF可以在Format字段中请求"JSON格式"，现代模型（GPT-5.6、Claude）通常会遵守。为了100%严格的模式强制执行，使用SPECS（包含显式约束）或结构化输出API。',
+              'text': 'RTF = Role、Task、Format。一种三部分的提示词结构：Role定义模型是谁（例如"资深数据分析师"），Task说明要做什么，Format指定输出应如何结构化。适用于所有主要模型。',
             },
           },
           {
             '@type': 'Question',
-            name: 'PromptQuorum如何使用RTF？',
-            acceptedAnswer: {
+            'name': '何时应该使用RTF而不是CO-STAR或SPECS？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorum将RTF作为内置框架模板包含在内。用户填入Role、Task和Format字段，PromptQuorum将相同的提示词分发到25个以上的模型（GPT-5.6、Claude、Gemini、本地模型），用于比较和A/B测试。',
+              'text': '对于日常的、重复性的任务（摘要、代码审查、电子邮件、报告）使用RTF。当语气/受众至关重要时升级到CO-STAR，当需要严格的模式和约束时使用SPECS，当推理透明度很重要时使用TRACE。',
             },
           },
           {
             '@type': 'Question',
-            name: '使用RTF和本地模型部署需要遵守数据安全法吗？',
-            acceptedAnswer: {
+            'name': 'RTF是否与"只是告诉模型做什么"相同？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '是的。中国2021年数据安全法要求企业在处理敏感数据时采取保护措施。本地推理（通过Ollama、LM Studio等本地运行模型）满足数据安全法的关键合规要求，因为数据在组织内部处理，不会跨境传输。使用RTF框架定义清晰的数据处理角色和格式有助于确保符合合规要求。',
+              'text': '不是。RTF强制显式指定三项内容：模型是谁（Role）、解决什么任务，以及输出必须如何结构化（Format）。这种结构消除了歧义，提高了跨模型和运行之间的一致性。',
             },
           },
           {
             '@type': 'Question',
-            name: '本地RTF提示词如何满足企业合规要求？',
-            acceptedAnswer: {
+            'name': 'RTF与Chain-of-Thought相比如何？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '金融、医疗、法律等行业的企业需要处理受监管的数据。RTF框架通过明确定义数据处理的角色（谁在处理）、任务（处理什么）和格式（输出如何管理）来支持合规。本地推理确保数据不离开企业网络，结合明确的RTF提示词结构，企业可以满足中国CAC（网络安全审查）、网络安全法和行业特定合规要求。',
+              'text': 'Chain-of-Thought通过要求模型"逐步思考"来改进推理。RTF构建输出格式和角色。两者是互补的——您可以结合它们：使用RTF定义角色和格式，然后为复杂推理任务添加"逐步思考"。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我能将RTF与Ollama等本地模型一起使用吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。RTF适用于任何LLM，包括通过Ollama或LM Studio运行的本地模型。较简单的模型（Mistral Small、Llama 3.3）可能在复杂Format字段上不够一致，但RTF仍能改进输出质量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '最常见的RTF错误是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '让Format含糊不清或隐含。没有显式的Format字段（例如"3个要点，每个最多50个词"），模型默认为散文段落。始终指定Format。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF如何帮助提高一致性？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通过显式指定Role、Task和Format，您减少了模型对您想要什么的歧义。这使输出跨模型、运行和重复使用提示词的团队成员更加一致。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我应该保存RTF提示词吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '应该。编写好的RTF提示词来处理定期任务（每周摘要、代码审查、电子邮件草稿）应该保存为模板并重复使用。这是RTF相对于每次从头写提示词的最大优势。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF能否强制执行严格的约束，如JSON输出？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '部分可以。RTF可以在Format字段中请求"JSON格式"，现代模型（GPT-5.6、Claude）通常会遵守。为了100%严格的模式强制执行，使用SPECS（包含显式约束）或结构化输出API。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PromptQuorum如何使用RTF？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum将RTF作为内置框架模板包含在内。用户填入Role、Task和Format字段，PromptQuorum将相同的提示词分发到25个以上的模型（GPT-5.6、Claude、Gemini、本地模型），用于比较和A/B测试。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '使用RTF和本地模型部署需要遵守数据安全法吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。中国2021年数据安全法要求企业在处理敏感数据时采取保护措施。本地推理（通过Ollama、LM Studio等本地运行模型）满足数据安全法的关键合规要求，因为数据在组织内部处理，不会跨境传输。使用RTF框架定义清晰的数据处理角色和格式有助于确保符合合规要求。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地RTF提示词如何满足企业合规要求？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '金融、医疗、法律等行业的企业需要处理受监管的数据。RTF框架通过明确定义数据处理的角色（谁在处理）、任务（处理什么）和格式（输出如何管理）来支持合规。本地推理确保数据不离开企业网络，结合明确的RTF提示词结构，企业可以满足中国CAC（网络安全审查）、网络安全法和行业特定合规要求。',
             },
           },
         ],
@@ -3317,38 +3577,26 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            {
-              q: 'RTF代表什么？',
-              a: 'RTF代表Role、Task、Format — 一个三部分的提示词结构，其中Role定义模型应该扮演的角色，Task指定模型应该做什么，Format描述所需输出的结构。',
-            },
-            {
-              q: 'RTF与CO-STAR有何不同？',
-              a: 'RTF最小化并专注于三个字段：Role、Task、Format。CO-STAR更全面，添加了Context、Style、Audience和Tone。对于快速直接的任务使用RTF；当受众和语调很重要时使用CO-STAR。',
-            },
-            {
-              q: '何时应该使用RTF？',
-              a: '当您需要来自明确定义的角色的结构化输出时使用RTF。示例：总结会议、生成代码、以特定格式编写电子邮件或创建文档。RTF非常适合基于模板的工作流。',
-            },
-            {
-              q: '我可以将RTF与其他框架结合吗？',
-              a: '可以。您可以使用RTF进行初始输出生成，然后应用RISEN进行迭代细化。或者将RTF与Chain-of-Thought结合来添加推理。混合搭配框架来处理复杂的工作流。',
-            },
-            {
-              q: '如果我不确定应该指定什么角色怎么办？',
-              a: '从最适合该任务的最简单角色开始："您是一位技术作家"、"您是一位产品经理"或"您是一位Python专家"。要具体但不要过度详细。测试不同的角色以查看哪个产生更好的结果。',
-            },
-            {
-              q: 'Role、Task、Format的顺序重要吗？',
-              a: '传统顺序是Role → Task → Format，但模型无论顺序如何都会理解您的意图。但是，保持这个标准顺序可以使提示词更容易读和模板化。一致性比严格的顺序更重要。',
-            },
-            {
-              q: 'RTF可以与所有语言模型一起工作吗？',
-              a: '可以。RTF与框架无关。它适用于GPT-5.6、Claude、Gemini、Llama 3.2等开源模型，以及通过Ollama或LM Studio的本地模型。这些原则普遍适用于任何遵循指令的LLM。',
-            },
-            {
-              q: '我如何编写一个好的Format规范？',
-              a: '要具体：不是"Format：好的输出"，而是写"Format：5个要点，每个少于15个字"。指定结构（要点、段落、代码块、JSON）、长度（字数、项目数）和语调（正式、随意、技术性）。',
-            },
+            { q: 'RTF代表什么？', a: 'RTF代表Role、Task、Format — 一个三部分的提示词结构，其中Role定义模型应该扮演的角色，Task指定模型应该做什么，Format描述所需输出的结构。' },
+            { q: 'RTF与CO-STAR有何不同？', a: 'RTF最小化并专注于三个字段：Role、Task、Format。CO-STAR更全面，添加了Context、Style、Audience和Tone。对于快速直接的任务使用RTF；当受众和语调很重要时使用CO-STAR。' },
+            { q: '何时应该使用RTF？', a: '当您需要来自明确定义的角色的结构化输出时使用RTF。示例：总结会议、生成代码、以特定格式编写电子邮件或创建文档。RTF非常适合基于模板的工作流。' },
+            { q: '我可以将RTF与其他框架结合吗？', a: '可以。您可以使用RTF进行初始输出生成，然后应用RISEN进行迭代细化。或者将RTF与Chain-of-Thought结合来添加推理。混合搭配框架来处理复杂的工作流。' },
+            { q: '如果我不确定应该指定什么角色怎么办？', a: '从最适合该任务的最简单角色开始："您是一位技术作家"、"您是一位产品经理"或"您是一位Python专家"。要具体但不要过度详细。测试不同的角色以查看哪个产生更好的结果。' },
+            { q: 'Role、Task、Format的顺序重要吗？', a: '传统顺序是Role → Task → Format，但模型无论顺序如何都会理解您的意图。但是，保持这个标准顺序可以使提示词更容易读和模板化。一致性比严格的顺序更重要。' },
+            { q: 'RTF可以与所有语言模型一起工作吗？', a: '可以。RTF与框架无关。它适用于GPT-5.6、Claude、Gemini、Llama 3.2等开源模型，以及通过Ollama或LM Studio的本地模型。这些原则普遍适用于任何遵循指令的LLM。' },
+            { q: '我如何编写一个好的Format规范？', a: '要具体：不是"Format：好的输出"，而是写"Format：5个要点，每个少于15个字"。指定结构（要点、段落、代码块、JSON）、长度（字数、项目数）和语调（正式、随意、技术性）。' },
+            { q: 'RTF框架是什么？', a: 'RTF = Role、Task、Format。一种三部分的提示词结构：Role定义模型是谁（例如"资深数据分析师"），Task说明要做什么，Format指定输出应如何结构化。适用于所有主要模型。' },
+            { q: '何时应该使用RTF而不是CO-STAR或SPECS？', a: '对于日常的、重复性的任务（摘要、代码审查、电子邮件、报告）使用RTF。当语气/受众至关重要时升级到CO-STAR，当需要严格的模式和约束时使用SPECS，当推理透明度很重要时使用TRACE。' },
+            { q: 'RTF是否与"只是告诉模型做什么"相同？', a: '不是。RTF强制显式指定三项内容：模型是谁（Role）、解决什么任务，以及输出必须如何结构化（Format）。这种结构消除了歧义，提高了跨模型和运行之间的一致性。' },
+            { q: 'RTF与Chain-of-Thought相比如何？', a: 'Chain-of-Thought通过要求模型"逐步思考"来改进推理。RTF构建输出格式和角色。两者是互补的——您可以结合它们：使用RTF定义角色和格式，然后为复杂推理任务添加"逐步思考"。' },
+            { q: '我能将RTF与Ollama等本地模型一起使用吗？', a: '可以。RTF适用于任何LLM，包括通过Ollama或LM Studio运行的本地模型。较简单的模型（Mistral Small、Llama 3.3）可能在复杂Format字段上不够一致，但RTF仍能改进输出质量。' },
+            { q: '最常见的RTF错误是什么？', a: '让Format含糊不清或隐含。没有显式的Format字段（例如"3个要点，每个最多50个词"），模型默认为散文段落。始终指定Format。' },
+            { q: 'RTF如何帮助提高一致性？', a: '通过显式指定Role、Task和Format，您减少了模型对您想要什么的歧义。这使输出跨模型、运行和重复使用提示词的团队成员更加一致。' },
+            { q: '我应该保存RTF提示词吗？', a: '应该。编写好的RTF提示词来处理定期任务（每周摘要、代码审查、电子邮件草稿）应该保存为模板并重复使用。这是RTF相对于每次从头写提示词的最大优势。' },
+            { q: 'RTF能否强制执行严格的约束，如JSON输出？', a: '部分可以。RTF可以在Format字段中请求"JSON格式"，现代模型（GPT-5.6、Claude）通常会遵守。为了100%严格的模式强制执行，使用SPECS（包含显式约束）或结构化输出API。' },
+            { q: 'PromptQuorum如何使用RTF？', a: 'PromptQuorum将RTF作为内置框架模板包含在内。用户填入Role、Task和Format字段，PromptQuorum将相同的提示词分发到25个以上的模型（GPT-5.6、Claude、Gemini、本地模型），用于比较和A/B测试。' },
+            { q: '使用RTF和本地模型部署需要遵守数据安全法吗？', a: '是的。中国2021年数据安全法要求企业在处理敏感数据时采取保护措施。本地推理（通过Ollama、LM Studio等本地运行模型）满足数据安全法的关键合规要求，因为数据在组织内部处理，不会跨境传输。使用RTF框架定义清晰的数据处理角色和格式有助于确保符合合规要求。' },
+            { q: '本地RTF提示词如何满足企业合规要求？', a: '金融、医疗、法律等行业的企业需要处理受监管的数据。RTF框架通过明确定义数据处理的角色（谁在处理）、任务（处理什么）和格式（输出如何管理）来支持合规。本地推理确保数据不离开企业网络，结合明确的RTF提示词结构，企业可以满足中国CAC（网络安全审查）、网络安全法和行业特定合规要求。' },
           ],
         },
         relatedReading: {
@@ -3451,106 +3699,170 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'RTF 프레임워크란 무엇입니까?',
-            acceptedAnswer: {
+            'name': 'RTF는 무엇을 의미합니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF = Role, Task, Format. 세 가지 구성 요소의 프롬프트 구조입니다. Role은 모델의 역할을 정의하고(예: "시니어 데이터 분석가"), Task는 수행할 작업을 명시하며, Format은 출력의 구조화 방식을 지정합니다. 모든 주요 모델에서 작동합니다.',
+              'text': 'RTF는 Role, Task, Format을 의미합니다 — 세 부분으로 구성된 프롬프트 구조로, Role은 모델이 어떤 역할을 해야 하는지, Task는 모델이 무엇을 해야 하는지, Format은 원하는 출력의 구조를 설명합니다.',
             },
           },
           {
             '@type': 'Question',
-            name: 'CO-STAR나 SPECS 대신 RTF를 언제 사용해야 합니까?',
-            acceptedAnswer: {
+            'name': 'RTF는 CO-STAR와 어떻게 다릅니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '일상적이고 반복 가능한 작업(요약, 코드 리뷰, 이메일, 보고서)에는 RTF를 사용하십시오. 어조/대상이 중요한 경우 CO-STAR로, 엄격한 스키마와 제약이 필요한 경우 SPECS로, 추론 투명성이 중요한 경우 TRACE로 업그레이드하십시오.',
+              'text': 'RTF는 세 가지 필드(Role, Task, Format)에 초점을 맞춘 최소화된 구조입니다. CO-STAR는 Context, Style, Audience, Tone을 추가하여 더 포괄적입니다. 빠르고 간단한 작업에는 RTF를, 대상과 어조가 중요한 경우에는 CO-STAR를 사용하십시오.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF는 "모델에게 할 일을 말하는 것"과 같습니까?',
-            acceptedAnswer: {
+            'name': 'RTF를 언제 사용해야 합니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '아닙니다. RTF는 세 가지를 명시적으로 지정하도록 강제합니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 구조화 방식(Format)입니다. 이 구조는 모호함을 제거하고 모델과 실행 전반에 걸쳐 일관성을 향상시킵니다.',
+              'text': '명확하게 정의된 역할에서 구조화된 출력이 필요할 때 RTF를 사용하십시오. 예시: 회의 요약, 코드 생성, 특정 형식의 이메일 작성, 문서 작성. RTF는 템플릿 기반 워크플로에 이상적입니다.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF는 Chain-of-Thought와 어떻게 비교됩니까?',
-            acceptedAnswer: {
+            'name': 'RTF를 다른 프레임워크와 결합할 수 있습니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Chain-of-Thought는 모델에게 "단계적으로 생각하도록" 요청하여 추론을 향상시킵니다. RTF는 출력 형식과 역할을 구조화합니다. 이 둘은 상호 보완적입니다. RTF로 역할과 형식을 정의한 다음, 복잡한 추론 작업을 위해 "단계적으로 생각하십시오"를 추가할 수 있습니다.',
+              'text': '예. RTF를 초기 출력 생성에 사용한 다음 RISEN을 반복적 개선에 적용할 수 있습니다. 또는 RTF와 Chain-of-Thought를 결합하여 추론을 추가할 수 있습니다. 복잡한 워크플로에는 프레임워크를 혼합하여 사용하십시오.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Ollama와 같은 로컬 모델과 RTF를 사용할 수 있습니까?',
-            acceptedAnswer: {
+            'name': '어떤 Role을 지정해야 할지 확실하지 않은 경우에는 어떻게 해야 합니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '예. RTF는 Ollama나 LM Studio를 통해 실행되는 로컬 모델을 포함한 모든 LLM에서 작동합니다. 단순한 모델(Mistral Small, Llama 3.3)은 복잡한 Format 필드에서 일관성이 떨어질 수 있지만, RTF는 여전히 출력 품질을 향상시킵니다.',
+              'text': '작업에 맞는 가장 단순한 역할로 시작하십시오: "당신은 기술 작가입니다", "당신은 프로덕트 매니저입니다", 또는 "당신은 Python 전문가입니다." 구체적이되 지나치게 정교하게 하지 마십시오. 어떤 역할이 더 나은 결과를 만드는지 보기 위해 여러 역할을 테스트하십시오.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF에서 가장 흔한 실수는 무엇입니까?',
-            acceptedAnswer: {
+            'name': 'Role, Task, Format의 순서가 중요합니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Format을 암묵적으로 두거나 모호하게 남겨 두는 것입니다. 명시적인 Format 필드(예: "최대 50단어씩 3개의 글머리표")가 없으면 모델은 산문 단락을 기본값으로 사용합니다. 항상 Format을 지정하십시오.',
+              'text': '전통적인 순서는 Role → Task → Format이지만, 모델은 순서에 상관없이 의도를 이해합니다. 그러나 이 표준 순서를 유지하면 프롬프트를 읽고 템플릿화하기 더 쉬워집니다. 엄격한 순서보다 일관성이 더 중요합니다.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF는 일관성에 어떻게 도움이 됩니까?',
-            acceptedAnswer: {
+            'name': 'RTF는 모든 언어 모델과 함께 작동합니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Role, Task, Format을 명시적으로 지정함으로써 모델이 원하는 것에 대한 모호함을 줄입니다. 이를 통해 모델, 실행, 그리고 프롬프트를 재사용하는 팀원 전반에 걸쳐 출력이 더 일관성 있게 됩니다.',
+              'text': '예. RTF는 프레임워크에 독립적입니다. GPT-5.6, Claude, Gemini, Llama 3.2와 같은 오픈소스 모델, 그리고 Ollama나 LM Studio를 통한 로컬 모델과 함께 작동합니다. 원칙은 명령을 따르는 모든 LLM에 보편적으로 적용됩니다.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF 프롬프트를 저장해야 합니까?',
-            acceptedAnswer: {
+            'name': '좋은 Format 명세는 어떻게 작성합니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '예. 반복 작업(주간 요약, 코드 리뷰, 이메일 초안)을 위해 잘 작성된 RTF 프롬프트는 템플릿으로 저장하여 재사용해야 합니다. 이것이 매번 프롬프트를 처음부터 작성하는 것에 비해 RTF의 가장 큰 장점입니다.',
+              'text': '구체적으로 작성하십시오: "Format: 좋은 출력" 대신 "Format: 각 15단어 이내의 5개 글머리표"라고 작성하십시오. 구조(글머리표, 단락, 코드 블록, JSON), 길이(단어 수, 항목 수), 어조(공식, 격식 없음, 기술적)를 지정하십시오.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF는 JSON 출력과 같은 엄격한 제약을 적용할 수 있습니까?',
-            acceptedAnswer: {
+            'name': 'RTF 프레임워크란 무엇입니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '부분적으로 가능합니다. RTF는 Format 필드에서 "JSON 형식"을 요청할 수 있으며, 최신 모델(GPT-5.6, Claude)은 일반적으로 이에 따릅니다. 100% 엄격한 스키마 적용을 위해서는 SPECS(명시적 제약 필드 포함) 또는 구조화된 출력 API를 사용하십시오.',
+              'text': 'RTF = Role, Task, Format. 세 가지 구성 요소의 프롬프트 구조입니다. Role은 모델의 역할을 정의하고(예: "시니어 데이터 분석가"), Task는 수행할 작업을 명시하며, Format은 출력의 구조화 방식을 지정합니다. 모든 주요 모델에서 작동합니다.',
             },
           },
           {
             '@type': 'Question',
-            name: 'PromptQuorum은 RTF를 어떻게 사용합니까?',
-            acceptedAnswer: {
+            'name': 'CO-STAR나 SPECS 대신 RTF를 언제 사용해야 합니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'PromptQuorum은 RTF를 내장 프레임워크 템플릿으로 포함합니다. 사용자는 Role, Task, Format 필드를 작성하고, PromptQuorum은 비교 및 A/B 테스트를 위해 동일한 프롬프트를 25개 이상의 모델(GPT-5.6, Claude, Gemini, 로컬 모델)에 디스패치합니다.',
+              'text': '일상적이고 반복 가능한 작업(요약, 코드 리뷰, 이메일, 보고서)에는 RTF를 사용하십시오. 어조/대상이 중요한 경우 CO-STAR로, 엄격한 스키마와 제약이 필요한 경우 SPECS로, 추론 투명성이 중요한 경우 TRACE로 업그레이드하십시오.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF 프레임워크는 AI 프롬프팅 시 무엇을 도와줍니까?',
-            acceptedAnswer: {
+            'name': 'RTF는 "모델에게 할 일을 말하는 것"과 같습니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF는 세 가지 필드로 관심사를 분리하여 프롬프트를 일관성 있게 구조화하도록 도와줍니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 형식화 방식(Format)입니다. 이를 통해 모호함이 제거되고 프롬프트가 재사용 가능한 템플릿이 됩니다.',
+              'text': '아닙니다. RTF는 세 가지를 명시적으로 지정하도록 강제합니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 구조화 방식(Format)입니다. 이 구조는 모호함을 제거하고 모델과 실행 전반에 걸쳐 일관성을 향상시킵니다.',
             },
           },
           {
             '@type': 'Question',
-            name: '프롬프트 엔지니어링에서 RTF는 무엇을 의미합니까?',
-            acceptedAnswer: {
+            'name': 'RTF는 Chain-of-Thought와 어떻게 비교됩니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF는 Role, Task, Format을 의미합니다. 경량 프롬프트 구조의 세 가지 필수 구성 요소입니다. Role은 모델의 페르소나를 정의하고, Task는 행동을 정의하며, Format은 출력 구조를 정의합니다. 함께 일관된 결과를 위해 필요한 최소한의 프레임워크를 만들어 냅니다.',
+              'text': 'Chain-of-Thought는 모델에게 "단계적으로 생각하도록" 요청하여 추론을 향상시킵니다. RTF는 출력 형식과 역할을 구조화합니다. 이 둘은 상호 보완적입니다. RTF로 역할과 형식을 정의한 다음, 복잡한 추론 작업을 위해 "단계적으로 생각하십시오"를 추가할 수 있습니다.',
             },
           },
           {
             '@type': 'Question',
-            name: 'RTF 프레임워크는 프롬프트 엔지니어링에서 CO-STAR와 어떻게 비교됩니까?',
-            acceptedAnswer: {
+            'name': 'Ollama와 같은 로컬 모델과 RTF를 사용할 수 있습니까?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'RTF는 3개의 구성 요소(Role, Task, Format)를 가지며 최소화되어 있습니다. CO-STAR는 6개의 구성 요소(Context, Objective, Style, Tone, Audience, Response)를 가지며 포괄적입니다. 일상 작업에는 RTF를, 어조/대상/스타일이 중요한 경우에는 CO-STAR를 사용하십시오. RTF는 기본값이고 CO-STAR는 업그레이드입니다.',
+              'text': '예. RTF는 Ollama나 LM Studio를 통해 실행되는 로컬 모델을 포함한 모든 LLM에서 작동합니다. 단순한 모델(Mistral Small, Llama 3.3)은 복잡한 Format 필드에서 일관성이 떨어질 수 있지만, RTF는 여전히 출력 품질을 향상시킵니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF에서 가장 흔한 실수는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Format을 암묵적으로 두거나 모호하게 남겨 두는 것입니다. 명시적인 Format 필드(예: "최대 50단어씩 3개의 글머리표")가 없으면 모델은 산문 단락을 기본값으로 사용합니다. 항상 Format을 지정하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF는 일관성에 어떻게 도움이 됩니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Role, Task, Format을 명시적으로 지정함으로써 모델이 원하는 것에 대한 모호함을 줄입니다. 이를 통해 모델, 실행, 그리고 프롬프트를 재사용하는 팀원 전반에 걸쳐 출력이 더 일관성 있게 됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF 프롬프트를 저장해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. 반복 작업(주간 요약, 코드 리뷰, 이메일 초안)을 위해 잘 작성된 RTF 프롬프트는 템플릿으로 저장하여 재사용해야 합니다. 이것이 매번 프롬프트를 처음부터 작성하는 것에 비해 RTF의 가장 큰 장점입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF는 JSON 출력과 같은 엄격한 제약을 적용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '부분적으로 가능합니다. RTF는 Format 필드에서 "JSON 형식"을 요청할 수 있으며, 최신 모델(GPT-5.6, Claude)은 일반적으로 이에 따릅니다. 100% 엄격한 스키마 적용을 위해서는 SPECS(명시적 제약 필드 포함) 또는 구조화된 출력 API를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'PromptQuorum은 RTF를 어떻게 사용합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptQuorum은 RTF를 내장 프레임워크 템플릿으로 포함합니다. 사용자는 Role, Task, Format 필드를 작성하고, PromptQuorum은 비교 및 A/B 테스트를 위해 동일한 프롬프트를 25개 이상의 모델(GPT-5.6, Claude, Gemini, 로컬 모델)에 디스패치합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF 프레임워크는 AI 프롬프팅 시 무엇을 도와줍니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTF는 세 가지 필드로 관심사를 분리하여 프롬프트를 일관성 있게 구조화하도록 도와줍니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 형식화 방식(Format)입니다. 이를 통해 모호함이 제거되고 프롬프트가 재사용 가능한 템플릿이 됩니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '프롬프트 엔지니어링에서 RTF는 무엇을 의미합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTF는 Role, Task, Format을 의미합니다. 경량 프롬프트 구조의 세 가지 필수 구성 요소입니다. Role은 모델의 페르소나를 정의하고, Task는 행동을 정의하며, Format은 출력 구조를 정의합니다. 함께 일관된 결과를 위해 필요한 최소한의 프레임워크를 만들어 냅니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTF 프레임워크는 프롬프트 엔지니어링에서 CO-STAR와 어떻게 비교됩니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTF는 3개의 구성 요소(Role, Task, Format)를 가지며 최소화되어 있습니다. CO-STAR는 6개의 구성 요소(Context, Objective, Style, Tone, Audience, Response)를 가지며 포괄적입니다. 일상 작업에는 RTF를, 어조/대상/스타일이 중요한 경우에는 CO-STAR를 사용하십시오. RTF는 기본값이고 CO-STAR는 업그레이드입니다.',
             },
           },
         ],
@@ -3805,38 +4117,27 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
-            {
-              q: 'RTF는 무엇을 의미합니까?',
-              a: 'RTF는 Role, Task, Format을 의미합니다 — 세 부분으로 구성된 프롬프트 구조로, Role은 모델이 어떤 역할을 해야 하는지, Task는 모델이 무엇을 해야 하는지, Format은 원하는 출력의 구조를 설명합니다.',
-            },
-            {
-              q: 'RTF는 CO-STAR와 어떻게 다릅니까?',
-              a: 'RTF는 세 가지 필드(Role, Task, Format)에 초점을 맞춘 최소화된 구조입니다. CO-STAR는 Context, Style, Audience, Tone을 추가하여 더 포괄적입니다. 빠르고 간단한 작업에는 RTF를, 대상과 어조가 중요한 경우에는 CO-STAR를 사용하십시오.',
-            },
-            {
-              q: 'RTF를 언제 사용해야 합니까?',
-              a: '명확하게 정의된 역할에서 구조화된 출력이 필요할 때 RTF를 사용하십시오. 예시: 회의 요약, 코드 생성, 특정 형식의 이메일 작성, 문서 작성. RTF는 템플릿 기반 워크플로에 이상적입니다.',
-            },
-            {
-              q: 'RTF를 다른 프레임워크와 결합할 수 있습니까?',
-              a: '예. RTF를 초기 출력 생성에 사용한 다음 RISEN을 반복적 개선에 적용할 수 있습니다. 또는 RTF와 Chain-of-Thought를 결합하여 추론을 추가할 수 있습니다. 복잡한 워크플로에는 프레임워크를 혼합하여 사용하십시오.',
-            },
-            {
-              q: '어떤 Role을 지정해야 할지 확실하지 않은 경우에는 어떻게 해야 합니까?',
-              a: '작업에 맞는 가장 단순한 역할로 시작하십시오: "당신은 기술 작가입니다", "당신은 프로덕트 매니저입니다", 또는 "당신은 Python 전문가입니다." 구체적이되 지나치게 정교하게 하지 마십시오. 어떤 역할이 더 나은 결과를 만드는지 보기 위해 여러 역할을 테스트하십시오.',
-            },
-            {
-              q: 'Role, Task, Format의 순서가 중요합니까?',
-              a: '전통적인 순서는 Role → Task → Format이지만, 모델은 순서에 상관없이 의도를 이해합니다. 그러나 이 표준 순서를 유지하면 프롬프트를 읽고 템플릿화하기 더 쉬워집니다. 엄격한 순서보다 일관성이 더 중요합니다.',
-            },
-            {
-              q: 'RTF는 모든 언어 모델과 함께 작동합니까?',
-              a: '예. RTF는 프레임워크에 독립적입니다. GPT-5.6, Claude, Gemini, Llama 3.2와 같은 오픈소스 모델, 그리고 Ollama나 LM Studio를 통한 로컬 모델과 함께 작동합니다. 원칙은 명령을 따르는 모든 LLM에 보편적으로 적용됩니다.',
-            },
-            {
-              q: '좋은 Format 명세는 어떻게 작성합니까?',
-              a: '구체적으로 작성하십시오: "Format: 좋은 출력" 대신 "Format: 각 15단어 이내의 5개 글머리표"라고 작성하십시오. 구조(글머리표, 단락, 코드 블록, JSON), 길이(단어 수, 항목 수), 어조(공식, 격식 없음, 기술적)를 지정하십시오.',
-            },
+            { q: 'RTF는 무엇을 의미합니까?', a: 'RTF는 Role, Task, Format을 의미합니다 — 세 부분으로 구성된 프롬프트 구조로, Role은 모델이 어떤 역할을 해야 하는지, Task는 모델이 무엇을 해야 하는지, Format은 원하는 출력의 구조를 설명합니다.' },
+            { q: 'RTF는 CO-STAR와 어떻게 다릅니까?', a: 'RTF는 세 가지 필드(Role, Task, Format)에 초점을 맞춘 최소화된 구조입니다. CO-STAR는 Context, Style, Audience, Tone을 추가하여 더 포괄적입니다. 빠르고 간단한 작업에는 RTF를, 대상과 어조가 중요한 경우에는 CO-STAR를 사용하십시오.' },
+            { q: 'RTF를 언제 사용해야 합니까?', a: '명확하게 정의된 역할에서 구조화된 출력이 필요할 때 RTF를 사용하십시오. 예시: 회의 요약, 코드 생성, 특정 형식의 이메일 작성, 문서 작성. RTF는 템플릿 기반 워크플로에 이상적입니다.' },
+            { q: 'RTF를 다른 프레임워크와 결합할 수 있습니까?', a: '예. RTF를 초기 출력 생성에 사용한 다음 RISEN을 반복적 개선에 적용할 수 있습니다. 또는 RTF와 Chain-of-Thought를 결합하여 추론을 추가할 수 있습니다. 복잡한 워크플로에는 프레임워크를 혼합하여 사용하십시오.' },
+            { q: '어떤 Role을 지정해야 할지 확실하지 않은 경우에는 어떻게 해야 합니까?', a: '작업에 맞는 가장 단순한 역할로 시작하십시오: "당신은 기술 작가입니다", "당신은 프로덕트 매니저입니다", 또는 "당신은 Python 전문가입니다." 구체적이되 지나치게 정교하게 하지 마십시오. 어떤 역할이 더 나은 결과를 만드는지 보기 위해 여러 역할을 테스트하십시오.' },
+            { q: 'Role, Task, Format의 순서가 중요합니까?', a: '전통적인 순서는 Role → Task → Format이지만, 모델은 순서에 상관없이 의도를 이해합니다. 그러나 이 표준 순서를 유지하면 프롬프트를 읽고 템플릿화하기 더 쉬워집니다. 엄격한 순서보다 일관성이 더 중요합니다.' },
+            { q: 'RTF는 모든 언어 모델과 함께 작동합니까?', a: '예. RTF는 프레임워크에 독립적입니다. GPT-5.6, Claude, Gemini, Llama 3.2와 같은 오픈소스 모델, 그리고 Ollama나 LM Studio를 통한 로컬 모델과 함께 작동합니다. 원칙은 명령을 따르는 모든 LLM에 보편적으로 적용됩니다.' },
+            { q: '좋은 Format 명세는 어떻게 작성합니까?', a: '구체적으로 작성하십시오: "Format: 좋은 출력" 대신 "Format: 각 15단어 이내의 5개 글머리표"라고 작성하십시오. 구조(글머리표, 단락, 코드 블록, JSON), 길이(단어 수, 항목 수), 어조(공식, 격식 없음, 기술적)를 지정하십시오.' },
+            { q: 'RTF 프레임워크란 무엇입니까?', a: 'RTF = Role, Task, Format. 세 가지 구성 요소의 프롬프트 구조입니다. Role은 모델의 역할을 정의하고(예: "시니어 데이터 분석가"), Task는 수행할 작업을 명시하며, Format은 출력의 구조화 방식을 지정합니다. 모든 주요 모델에서 작동합니다.' },
+            { q: 'CO-STAR나 SPECS 대신 RTF를 언제 사용해야 합니까?', a: '일상적이고 반복 가능한 작업(요약, 코드 리뷰, 이메일, 보고서)에는 RTF를 사용하십시오. 어조/대상이 중요한 경우 CO-STAR로, 엄격한 스키마와 제약이 필요한 경우 SPECS로, 추론 투명성이 중요한 경우 TRACE로 업그레이드하십시오.' },
+            { q: 'RTF는 "모델에게 할 일을 말하는 것"과 같습니까?', a: '아닙니다. RTF는 세 가지를 명시적으로 지정하도록 강제합니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 구조화 방식(Format)입니다. 이 구조는 모호함을 제거하고 모델과 실행 전반에 걸쳐 일관성을 향상시킵니다.' },
+            { q: 'RTF는 Chain-of-Thought와 어떻게 비교됩니까?', a: 'Chain-of-Thought는 모델에게 "단계적으로 생각하도록" 요청하여 추론을 향상시킵니다. RTF는 출력 형식과 역할을 구조화합니다. 이 둘은 상호 보완적입니다. RTF로 역할과 형식을 정의한 다음, 복잡한 추론 작업을 위해 "단계적으로 생각하십시오"를 추가할 수 있습니다.' },
+            { q: 'Ollama와 같은 로컬 모델과 RTF를 사용할 수 있습니까?', a: '예. RTF는 Ollama나 LM Studio를 통해 실행되는 로컬 모델을 포함한 모든 LLM에서 작동합니다. 단순한 모델(Mistral Small, Llama 3.3)은 복잡한 Format 필드에서 일관성이 떨어질 수 있지만, RTF는 여전히 출력 품질을 향상시킵니다.' },
+            { q: 'RTF에서 가장 흔한 실수는 무엇입니까?', a: 'Format을 암묵적으로 두거나 모호하게 남겨 두는 것입니다. 명시적인 Format 필드(예: "최대 50단어씩 3개의 글머리표")가 없으면 모델은 산문 단락을 기본값으로 사용합니다. 항상 Format을 지정하십시오.' },
+            { q: 'RTF는 일관성에 어떻게 도움이 됩니까?', a: 'Role, Task, Format을 명시적으로 지정함으로써 모델이 원하는 것에 대한 모호함을 줄입니다. 이를 통해 모델, 실행, 그리고 프롬프트를 재사용하는 팀원 전반에 걸쳐 출력이 더 일관성 있게 됩니다.' },
+            { q: 'RTF 프롬프트를 저장해야 합니까?', a: '예. 반복 작업(주간 요약, 코드 리뷰, 이메일 초안)을 위해 잘 작성된 RTF 프롬프트는 템플릿으로 저장하여 재사용해야 합니다. 이것이 매번 프롬프트를 처음부터 작성하는 것에 비해 RTF의 가장 큰 장점입니다.' },
+            { q: 'RTF는 JSON 출력과 같은 엄격한 제약을 적용할 수 있습니까?', a: '부분적으로 가능합니다. RTF는 Format 필드에서 "JSON 형식"을 요청할 수 있으며, 최신 모델(GPT-5.6, Claude)은 일반적으로 이에 따릅니다. 100% 엄격한 스키마 적용을 위해서는 SPECS(명시적 제약 필드 포함) 또는 구조화된 출력 API를 사용하십시오.' },
+            { q: 'PromptQuorum은 RTF를 어떻게 사용합니까?', a: 'PromptQuorum은 RTF를 내장 프레임워크 템플릿으로 포함합니다. 사용자는 Role, Task, Format 필드를 작성하고, PromptQuorum은 비교 및 A/B 테스트를 위해 동일한 프롬프트를 25개 이상의 모델(GPT-5.6, Claude, Gemini, 로컬 모델)에 디스패치합니다.' },
+            { q: 'RTF 프레임워크는 AI 프롬프팅 시 무엇을 도와줍니까?', a: 'RTF는 세 가지 필드로 관심사를 분리하여 프롬프트를 일관성 있게 구조화하도록 도와줍니다. 모델의 역할(Role), 해결할 작업(Task), 그리고 출력의 형식화 방식(Format)입니다. 이를 통해 모호함이 제거되고 프롬프트가 재사용 가능한 템플릿이 됩니다.' },
+            { q: '프롬프트 엔지니어링에서 RTF는 무엇을 의미합니까?', a: 'RTF는 Role, Task, Format을 의미합니다. 경량 프롬프트 구조의 세 가지 필수 구성 요소입니다. Role은 모델의 페르소나를 정의하고, Task는 행동을 정의하며, Format은 출력 구조를 정의합니다. 함께 일관된 결과를 위해 필요한 최소한의 프레임워크를 만들어 냅니다.' },
+            { q: 'RTF 프레임워크는 프롬프트 엔지니어링에서 CO-STAR와 어떻게 비교됩니까?', a: 'RTF는 3개의 구성 요소(Role, Task, Format)를 가지며 최소화되어 있습니다. CO-STAR는 6개의 구성 요소(Context, Objective, Style, Tone, Audience, Response)를 가지며 포괄적입니다. 일상 작업에는 RTF를, 어조/대상/스타일이 중요한 경우에는 CO-STAR를 사용하십시오. RTF는 기본값이고 CO-STAR는 업그레이드입니다.' },
           ],
         },
         relatedReading: {

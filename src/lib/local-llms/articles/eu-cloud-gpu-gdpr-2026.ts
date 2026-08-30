@@ -348,47 +348,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'Is Hetzner GDPR-compliant by default?',
-            a: 'Hetzner is a German company with German data centres and provides a Data Processing Agreement (DPA) immediately — this significantly simplifies GDPR documentation. For EU-internal inference workloads with no third-country transfer, the typical Schrems-II exposure does not apply. Your own legal assessment for your specific use case is recommended. Affiliate program ends June 15, 2026 — plan accordingly.',
-          },
-          {
-            q: 'Can I use AWS EU regions for GDPR personal data?',
-            a: 'Legally possible, but only with Supplementary Measures: updated SCCs, Transfer Impact Assessment, encryption at rest (customer-managed keys), and ongoing monitoring of US law changes.',
-          },
-          {
-            q: 'What is Schrems II and why does it matter?',
-            a: 'CJEU 2020 ruling invalidating Privacy Shield. Means US-headquartered providers face structural legal exposure under US surveillance law, regardless of server location.',
-          },
-          {
-            q: 'Do all EU cloud GPU providers offer DPAs?',
-            a: 'Yes. All seven listed providers offer DPAs. Quality varies: Hetzner offers simple DPA; Scaleway/OVHcloud offer enterprise-negotiable terms; Mistral offers API-specific DPA.',
-          },
-          {
-            q: 'Which EU provider has the most H100 availability?',
-            a: 'Scaleway, followed by OVHcloud. Nebius growing H100 inventory fast (Q3 2026 expansion planned). Hetzner has limited H100.',
-          },
-          {
-            q: 'Is Mistral La Plateforme cheaper than cloud GPU?',
-            a: 'Depends on workload. Heavy inference (millions of tokens/day): cloud GPU can be cheaper. Light/variable: Mistral La Plateforme (pay-per-token) is simpler and cheaper.',
-          },
-          {
-            q: 'Can I switch from US to EU cloud GPU without rewriting code?',
-            a: 'Mostly yes. Standard Python libraries (PyTorch, TensorFlow) work identically. Provider-specific APIs (SageMaker, Vertex) require refactoring.',
-          },
-          {
-            q: 'What happens to Hetzner credits after June 15, 2026?',
-            a: 'No. PromptQuorum has no affiliate contract or financial relationship with Hetzner or any other provider listed here. Links are editorial only — PromptQuorum receives no payment per click or signup. Hetzner did end their own referral program on June 15, 2026. Verify all current pricing and offers directly at hetzner.com.',
-          },
-          {
-            q: 'Is STACKIT only for large enterprises?',
-            a: 'Effectively yes. Requires enterprise contracts (typical €10K–€50K/month minimum). Not suitable for startups or small teams.',
-          },
-          {
-            q: 'Does the EU AI Act affect cloud GPU selection?',
-            a: 'Yes, for high-risk systems. EU-native providers simplify audit trail and jurisdiction requirements. US clouds complicate AI Act compliance.',
-          },
-        ],
+            { q: 'Is Hetzner GDPR-compliant by default?', a: 'Hetzner is a German company with German data centres and provides a Data Processing Agreement (DPA) immediately — this significantly simplifies GDPR documentation. For EU-internal inference workloads with no third-country transfer, the typical Schrems-II exposure does not apply. Your own legal assessment for your specific use case is recommended. Affiliate program ends June 15, 2026 — plan accordingly.' },
+            { q: 'Can I use AWS EU regions for GDPR personal data?', a: 'Legally possible, but only with Supplementary Measures: updated SCCs, Transfer Impact Assessment, encryption at rest (customer-managed keys), and ongoing monitoring of US law changes.' },
+            { q: 'What is Schrems II and why does it matter?', a: 'CJEU 2020 ruling invalidating Privacy Shield. Means US-headquartered providers face structural legal exposure under US surveillance law, regardless of server location.' },
+            { q: 'Do all EU cloud GPU providers offer DPAs?', a: 'Yes. All seven listed providers offer DPAs. Quality varies: Hetzner offers simple DPA; Scaleway/OVHcloud offer enterprise-negotiable terms; Mistral offers API-specific DPA.' },
+            { q: 'Which EU provider has the most H100 availability?', a: 'Scaleway, followed by OVHcloud. Nebius growing H100 inventory fast (Q3 2026 expansion planned). Hetzner has limited H100.' },
+            { q: 'Is Mistral La Plateforme cheaper than cloud GPU?', a: 'Depends on workload. Heavy inference (millions of tokens/day): cloud GPU can be cheaper. Light/variable: Mistral La Plateforme (pay-per-token) is simpler and cheaper.' },
+            { q: 'Can I switch from US to EU cloud GPU without rewriting code?', a: 'Mostly yes. Standard Python libraries (PyTorch, TensorFlow) work identically. Provider-specific APIs (SageMaker, Vertex) require refactoring.' },
+            { q: 'What happens to Hetzner credits after June 15, 2026?', a: 'No. PromptQuorum has no affiliate contract or financial relationship with Hetzner or any other provider listed here. Links are editorial only — PromptQuorum receives no payment per click or signup. Hetzner did end their own referral program on June 15, 2026. Verify all current pricing and offers directly at hetzner.com.' },
+            { q: 'Is STACKIT only for large enterprises?', a: 'Effectively yes. Requires enterprise contracts (typical €10K–€50K/month minimum). Not suitable for startups or small teams.' },
+            { q: 'Does the EU AI Act affect cloud GPU selection?', a: 'Yes, for high-risk systems. EU-native providers simplify audit trail and jurisdiction requirements. US clouds complicate AI Act compliance.' },
+            { q: 'What is Schrems II?', a: 'CJEU 2020 ruling invalidating Privacy Shield, restricting US-EU data transfers.' },
+          ],
       },
       sourceVerification: {
         id: 'source-verification',
@@ -431,10 +402,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Is Hetzner GDPR-compliant by default?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. German company, German data centers, DPA available immediately.' } },
-        { '@type': 'Question', name: 'What is Schrems II?', acceptedAnswer: { '@type': 'Answer', text: 'CJEU 2020 ruling invalidating Privacy Shield, restricting US-EU data transfers.' } },
-        { '@type': 'Question', name: 'Which EU provider has the most H100 availability?', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway, followed by OVHcloud.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Is Hetzner GDPR-compliant by default?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hetzner is a German company with German data centres and provides a Data Processing Agreement (DPA) immediately — this significantly simplifies GDPR documentation. For EU-internal inference workloads with no third-country transfer, the typical Schrems-II exposure does not apply. Your own legal assessment for your specific use case is recommended. Affiliate program ends June 15, 2026 — plan accordingly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use AWS EU regions for GDPR personal data?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Legally possible, but only with Supplementary Measures: updated SCCs, Transfer Impact Assessment, encryption at rest (customer-managed keys), and ongoing monitoring of US law changes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is Schrems II and why does it matter?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CJEU 2020 ruling invalidating Privacy Shield. Means US-headquartered providers face structural legal exposure under US surveillance law, regardless of server location.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do all EU cloud GPU providers offer DPAs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. All seven listed providers offer DPAs. Quality varies: Hetzner offers simple DPA; Scaleway/OVHcloud offer enterprise-negotiable terms; Mistral offers API-specific DPA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which EU provider has the most H100 availability?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Scaleway, followed by OVHcloud. Nebius growing H100 inventory fast (Q3 2026 expansion planned). Hetzner has limited H100.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Mistral La Plateforme cheaper than cloud GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depends on workload. Heavy inference (millions of tokens/day): cloud GPU can be cheaper. Light/variable: Mistral La Plateforme (pay-per-token) is simpler and cheaper.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I switch from US to EU cloud GPU without rewriting code?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mostly yes. Standard Python libraries (PyTorch, TensorFlow) work identically. Provider-specific APIs (SageMaker, Vertex) require refactoring.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What happens to Hetzner credits after June 15, 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. PromptQuorum has no affiliate contract or financial relationship with Hetzner or any other provider listed here. Links are editorial only — PromptQuorum receives no payment per click or signup. Hetzner did end their own referral program on June 15, 2026. Verify all current pricing and offers directly at hetzner.com.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is STACKIT only for large enterprises?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Effectively yes. Requires enterprise contracts (typical €10K–€50K/month minimum). Not suitable for startups or small teams.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does the EU AI Act affect cloud GPU selection?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, for high-risk systems. EU-native providers simplify audit trail and jurisdiction requirements. US clouds complicate AI Act compliance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is Schrems II?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CJEU 2020 ruling invalidating Privacy Shield, restricting US-EU data transfers.',
+            },
+          },
+        ],
     },
   },
   es: {
@@ -720,47 +776,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas Frecuentes',
         faqs: [
-          {
-            q: '¿Hetzner cumple el RGPD por defecto?',
-            a: 'Hetzner es una empresa alemana con centros de datos alemanes y proporciona inmediatamente un acuerdo de tratamiento de datos (ATD) — esto simplifica considerablemente la documentación del RGPD. Para cargas de trabajo de inferencia intra-UE sin transferencia a terceros países, la exposición típica de Schrems-II no se aplica. Se recomienda realizar una evaluación jurídica propia para su caso de uso específico. El programa de afiliados termina el 15 de junio de 2026 — planifícalo.',
-          },
-          {
-            q: '¿Puedo usar las regiones EU de AWS para datos personales bajo el RGPD?',
-            a: 'Legalmente posible, pero solo con Medidas Suplementarias: SCCs actualizadas, Evaluación de Impacto de Transferencia, cifrado en reposo (claves gestionadas por el cliente) y monitoreo continuo de cambios en la ley de EE.UU.',
-          },
-          {
-            q: '¿Qué es Schrems II y por qué importa?',
-            a: 'Sentencia del TJUE 2020 que invalidó el Privacy Shield. Significa que los proveedores con sede en EE.UU. enfrentan exposición legal estructural bajo la ley de vigilancia estadounidense, independientemente de la ubicación del servidor.',
-          },
-          {
-            q: '¿Todos los proveedores de GPU cloud EU ofrecen DPA?',
-            a: 'Sí. Los siete proveedores listados ofrecen DPA. La calidad varía: Hetzner ofrece DPA simple; Scaleway/OVHcloud ofrecen términos negociables para empresas; Mistral ofrece DPA específico para API.',
-          },
-          {
-            q: '¿Qué proveedor EU tiene mayor disponibilidad de H100?',
-            a: 'Scaleway, seguido de OVHcloud. Nebius aumenta rápidamente su inventario de H100 (expansión planificada Q3 2026). Hetzner tiene H100 limitado.',
-          },
-          {
-            q: '¿Mistral La Plateforme es más barato que el GPU cloud?',
-            a: 'Depende de la carga de trabajo. Inferencia intensiva (millones de tokens/día): el GPU cloud puede ser más barato. Ligero/variable: Mistral La Plateforme (pago por token) es más simple y económico.',
-          },
-          {
-            q: '¿Puedo cambiar de GPU cloud de EE.UU. a EU sin reescribir código?',
-            a: 'En su mayoría sí. Las librerías estándar de Python (PyTorch, TensorFlow) funcionan de forma idéntica. Las APIs específicas del proveedor (SageMaker, Vertex) requieren refactorización.',
-          },
-          {
-            q: '¿PromptQuorum tiene un acuerdo de afiliados con Hetzner?',
-            a: 'No. PromptQuorum no tiene contrato de afiliados ni relación financiera con Hetzner ni con ningún otro proveedor listado. Los enlaces son editoriales: PromptQuorum no recibe pago por clic ni por registro. Hetzner finalizó su propio programa de referidos el 15 de junio de 2026. Verifica precios y ofertas actuales directamente en hetzner.com.',
-          },
-          {
-            q: '¿STACKIT es solo para grandes empresas?',
-            a: 'En la práctica, sí. Requiere contratos empresariales (mínimo típico €10K–€50K/mes). No adecuado para startups o equipos pequeños.',
-          },
-          {
-            q: '¿El Acta de IA de la UE afecta la elección de GPU cloud?',
-            a: 'Sí, para sistemas de alto riesgo. Los proveedores nativos de la UE simplifican los requisitos de pista de auditoría y jurisdicción. Las clouds de EE.UU. complican el cumplimiento del Acta de IA.',
-          },
-        ],
+            { q: '¿Hetzner cumple el RGPD por defecto?', a: 'Hetzner es una empresa alemana con centros de datos alemanes y proporciona inmediatamente un acuerdo de tratamiento de datos (ATD) — esto simplifica considerablemente la documentación del RGPD. Para cargas de trabajo de inferencia intra-UE sin transferencia a terceros países, la exposición típica de Schrems-II no se aplica. Se recomienda realizar una evaluación jurídica propia para su caso de uso específico. El programa de afiliados termina el 15 de junio de 2026 — planifícalo.' },
+            { q: '¿Puedo usar las regiones EU de AWS para datos personales bajo el RGPD?', a: 'Legalmente posible, pero solo con Medidas Suplementarias: SCCs actualizadas, Evaluación de Impacto de Transferencia, cifrado en reposo (claves gestionadas por el cliente) y monitoreo continuo de cambios en la ley de EE.UU.' },
+            { q: '¿Qué es Schrems II y por qué importa?', a: 'Sentencia del TJUE 2020 que invalidó el Privacy Shield. Significa que los proveedores con sede en EE.UU. enfrentan exposición legal estructural bajo la ley de vigilancia estadounidense, independientemente de la ubicación del servidor.' },
+            { q: '¿Todos los proveedores de GPU cloud EU ofrecen DPA?', a: 'Sí. Los siete proveedores listados ofrecen DPA. La calidad varía: Hetzner ofrece DPA simple; Scaleway/OVHcloud ofrecen términos negociables para empresas; Mistral ofrece DPA específico para API.' },
+            { q: '¿Qué proveedor EU tiene mayor disponibilidad de H100?', a: 'Scaleway, seguido de OVHcloud. Nebius aumenta rápidamente su inventario de H100 (expansión planificada Q3 2026). Hetzner tiene H100 limitado.' },
+            { q: '¿Mistral La Plateforme es más barato que el GPU cloud?', a: 'Depende de la carga de trabajo. Inferencia intensiva (millones de tokens/día): el GPU cloud puede ser más barato. Ligero/variable: Mistral La Plateforme (pago por token) es más simple y económico.' },
+            { q: '¿Puedo cambiar de GPU cloud de EE.UU. a EU sin reescribir código?', a: 'En su mayoría sí. Las librerías estándar de Python (PyTorch, TensorFlow) funcionan de forma idéntica. Las APIs específicas del proveedor (SageMaker, Vertex) requieren refactorización.' },
+            { q: '¿PromptQuorum tiene un acuerdo de afiliados con Hetzner?', a: 'No. PromptQuorum no tiene contrato de afiliados ni relación financiera con Hetzner ni con ningún otro proveedor listado. Los enlaces son editoriales: PromptQuorum no recibe pago por clic ni por registro. Hetzner finalizó su propio programa de referidos el 15 de junio de 2026. Verifica precios y ofertas actuales directamente en hetzner.com.' },
+            { q: '¿STACKIT es solo para grandes empresas?', a: 'En la práctica, sí. Requiere contratos empresariales (mínimo típico €10K–€50K/mes). No adecuado para startups o equipos pequeños.' },
+            { q: '¿El Acta de IA de la UE afecta la elección de GPU cloud?', a: 'Sí, para sistemas de alto riesgo. Los proveedores nativos de la UE simplifican los requisitos de pista de auditoría y jurisdicción. Las clouds de EE.UU. complican el cumplimiento del Acta de IA.' },
+            { q: '¿Qué es Schrems II?', a: 'Sentencia del TJUE 2020 que invalidó el Privacy Shield, restringiendo las transferencias de datos UE-EE.UU.' },
+          ],
       },
       sourceVerification: {
         id: 'source-verification',
@@ -803,10 +830,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: '¿Hetzner cumple el RGPD por defecto?', acceptedAnswer: { '@type': 'Answer', text: 'Hetzner es una empresa alemana con centros de datos alemanes y proporciona inmediatamente un acuerdo de tratamiento de datos (ATD) — esto simplifica considerablemente la documentación del RGPD. Para cargas de trabajo de inferencia intra-UE sin transferencia a terceros países, la exposición típica de Schrems-II no se aplica. Se recomienda una evaluación jurídica propia para su caso de uso específico.' } },
-        { '@type': 'Question', name: '¿Qué es Schrems II?', acceptedAnswer: { '@type': 'Answer', text: 'Sentencia del TJUE 2020 que invalidó el Privacy Shield, restringiendo las transferencias de datos UE-EE.UU.' } },
-        { '@type': 'Question', name: '¿Qué proveedor EU tiene mayor disponibilidad de H100?', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway, seguido de OVHcloud. Nebius aumenta rápidamente su inventario de H100 (Q3 2026 planificado).' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Hetzner cumple el RGPD por defecto?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hetzner es una empresa alemana con centros de datos alemanes y proporciona inmediatamente un acuerdo de tratamiento de datos (ATD) — esto simplifica considerablemente la documentación del RGPD. Para cargas de trabajo de inferencia intra-UE sin transferencia a terceros países, la exposición típica de Schrems-II no se aplica. Se recomienda realizar una evaluación jurídica propia para su caso de uso específico. El programa de afiliados termina el 15 de junio de 2026 — planifícalo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar las regiones EU de AWS para datos personales bajo el RGPD?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Legalmente posible, pero solo con Medidas Suplementarias: SCCs actualizadas, Evaluación de Impacto de Transferencia, cifrado en reposo (claves gestionadas por el cliente) y monitoreo continuo de cambios en la ley de EE.UU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es Schrems II y por qué importa?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sentencia del TJUE 2020 que invalidó el Privacy Shield. Significa que los proveedores con sede en EE.UU. enfrentan exposición legal estructural bajo la ley de vigilancia estadounidense, independientemente de la ubicación del servidor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Todos los proveedores de GPU cloud EU ofrecen DPA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Los siete proveedores listados ofrecen DPA. La calidad varía: Hetzner ofrece DPA simple; Scaleway/OVHcloud ofrecen términos negociables para empresas; Mistral ofrece DPA específico para API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué proveedor EU tiene mayor disponibilidad de H100?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Scaleway, seguido de OVHcloud. Nebius aumenta rápidamente su inventario de H100 (expansión planificada Q3 2026). Hetzner tiene H100 limitado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Mistral La Plateforme es más barato que el GPU cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende de la carga de trabajo. Inferencia intensiva (millones de tokens/día): el GPU cloud puede ser más barato. Ligero/variable: Mistral La Plateforme (pago por token) es más simple y económico.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo cambiar de GPU cloud de EE.UU. a EU sin reescribir código?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En su mayoría sí. Las librerías estándar de Python (PyTorch, TensorFlow) funcionan de forma idéntica. Las APIs específicas del proveedor (SageMaker, Vertex) requieren refactorización.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿PromptQuorum tiene un acuerdo de afiliados con Hetzner?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. PromptQuorum no tiene contrato de afiliados ni relación financiera con Hetzner ni con ningún otro proveedor listado. Los enlaces son editoriales: PromptQuorum no recibe pago por clic ni por registro. Hetzner finalizó su propio programa de referidos el 15 de junio de 2026. Verifica precios y ofertas actuales directamente en hetzner.com.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿STACKIT es solo para grandes empresas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En la práctica, sí. Requiere contratos empresariales (mínimo típico €10K–€50K/mes). No adecuado para startups o equipos pequeños.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿El Acta de IA de la UE afecta la elección de GPU cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, para sistemas de alto riesgo. Los proveedores nativos de la UE simplifican los requisitos de pista de auditoría y jurisdicción. Las clouds de EE.UU. complican el cumplimiento del Acta de IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es Schrems II?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sentencia del TJUE 2020 que invalidó el Privacy Shield, restringiendo las transferencias de datos UE-EE.UU.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1103,47 +1215,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'هل Hetzner ممتثل لـ GDPR افتراضياً؟',
-            a: 'هيتزنر شركة ألمانية تمتلك مراكز بيانات ألمانية وتقدم اتفاقية معالجة البيانات (DPA) على الفور — مما يبسط توثيق اللائحة العامة لحماية البيانات بشكل كبير. بالنسبة لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة، لا ينطبق خطر Schrems-II النموذجي. يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة.',
-          },
-          {
-            q: 'هل يمكنني استخدام مناطق AWS في الاتحاد الأوروبي لبيانات شخصية بموجب GDPR؟',
-            a: 'ممكن قانونياً، لكن فقط بتدابير تكميلية: SCC محدَّثة، تقييم أثر النقل، تشفير عند التخزين (مفاتيح يديرها العميل)، ومراقبة مستمرة للتغييرات في قانون الولايات المتحدة.',
-          },
-          {
-            q: 'ما Schrems II ولماذا يهم؟',
-            a: 'حكم محكمة العدل الأوروبية 2020 الذي أبطل درع الخصوصية. يعني أن المزودين الذين مقرهم الولايات المتحدة يواجهون تعرّضاً قانونياً بنيوياً بموجب قانون المراقبة الأمريكي، بغض النظر عن موقع الخادم.',
-          },
-          {
-            q: 'هل يقدّم جميع مزودي GPU السحابية في الاتحاد الأوروبي DPA؟',
-            a: 'نعم. يقدّم المزودون السبعة المدرجون DPA. تختلف الجودة: يقدّم Hetzner DPA بسيطاً؛ يقدّم Scaleway/OVHcloud شروطاً قابلة للتفاوض للمؤسسات؛ يقدّم Mistral DPA خاصاً بـ API.',
-          },
-          {
-            q: 'أي مزود في الاتحاد الأوروبي لديه أعلى توافر لـ H100؟',
-            a: 'Scaleway، يليه OVHcloud. يزيد Nebius مخزونه من H100 بسرعة (توسّع مخطط له الربع الثالث 2026). لدى Hetzner توافر محدود لـ H100.',
-          },
-          {
-            q: 'هل Mistral La Plateforme أرخص من GPU السحابية؟',
-            a: 'يعتمد على عبء العمل. استدلال مكثف (ملايين الرموز/يومياً): قد تكون GPU السحابية أرخص. خفيف/متغير: Mistral La Plateforme (دفع لكل رمز) أبسط وأرخص.',
-          },
-          {
-            q: 'هل يمكنني الانتقال من GPU سحابية أمريكية إلى الاتحاد الأوروبي دون إعادة كتابة الكود؟',
-            a: 'غالباً نعم. تعمل مكتبات Python القياسية (PyTorch، TensorFlow) بشكل متطابق. تتطلب واجهات API الخاصة بالمزود (SageMaker، Vertex) إعادة هيكلة.',
-          },
-          {
-            q: 'ماذا يحدث لأرصدة Hetzner بعد 15 يونيو 2026؟',
-            a: 'لا. لا يمتلك PromptQuorum أي عقد إحالة أو علاقة مالية مع Hetzner أو أي مزود آخر مدرج هنا. الروابط تحريرية فقط — لا يتلقى PromptQuorum أي دفع مقابل النقر أو التسجيل. أنهت Hetzner برنامج الإحالة الخاص بها في 15 يونيو 2026. تحقق من الأسعار والعروض الحالية مباشرةً على hetzner.com.',
-          },
-          {
-            q: 'هل STACKIT للمؤسسات الكبيرة فقط؟',
-            a: 'عملياً، نعم. يتطلب عقوداً مؤسسية (حد أدنى نموذجي 10 آلاف–50 ألف يورو/شهرياً). غير مناسب للشركات الناشئة أو الفرق الصغيرة.',
-          },
-          {
-            q: 'هل يؤثر قانون الذكاء الاصطناعي للاتحاد الأوروبي على اختيار GPU السحابية؟',
-            a: 'نعم، للأنظمة عالية الخطورة. يبسّط المزودون الأصليون في الاتحاد الأوروبي متطلبات مسار التدقيق والاختصاص. تعقّد سحابات الولايات المتحدة الامتثال لقانون الذكاء الاصطناعي.',
-          },
-        ],
+            { q: 'هل Hetzner ممتثل لـ GDPR افتراضياً؟', a: 'هيتزنر شركة ألمانية تمتلك مراكز بيانات ألمانية وتقدم اتفاقية معالجة البيانات (DPA) على الفور — مما يبسط توثيق اللائحة العامة لحماية البيانات بشكل كبير. بالنسبة لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة، لا ينطبق خطر Schrems-II النموذجي. يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة.' },
+            { q: 'هل يمكنني استخدام مناطق AWS في الاتحاد الأوروبي لبيانات شخصية بموجب GDPR؟', a: 'ممكن قانونياً، لكن فقط بتدابير تكميلية: SCC محدَّثة، تقييم أثر النقل، تشفير عند التخزين (مفاتيح يديرها العميل)، ومراقبة مستمرة للتغييرات في قانون الولايات المتحدة.' },
+            { q: 'ما Schrems II ولماذا يهم؟', a: 'حكم محكمة العدل الأوروبية 2020 الذي أبطل درع الخصوصية. يعني أن المزودين الذين مقرهم الولايات المتحدة يواجهون تعرّضاً قانونياً بنيوياً بموجب قانون المراقبة الأمريكي، بغض النظر عن موقع الخادم.' },
+            { q: 'هل يقدّم جميع مزودي GPU السحابية في الاتحاد الأوروبي DPA؟', a: 'نعم. يقدّم المزودون السبعة المدرجون DPA. تختلف الجودة: يقدّم Hetzner DPA بسيطاً؛ يقدّم Scaleway/OVHcloud شروطاً قابلة للتفاوض للمؤسسات؛ يقدّم Mistral DPA خاصاً بـ API.' },
+            { q: 'أي مزود في الاتحاد الأوروبي لديه أعلى توافر لـ H100؟', a: 'Scaleway، يليه OVHcloud. يزيد Nebius مخزونه من H100 بسرعة (توسّع مخطط له الربع الثالث 2026). لدى Hetzner توافر محدود لـ H100.' },
+            { q: 'هل Mistral La Plateforme أرخص من GPU السحابية؟', a: 'يعتمد على عبء العمل. استدلال مكثف (ملايين الرموز/يومياً): قد تكون GPU السحابية أرخص. خفيف/متغير: Mistral La Plateforme (دفع لكل رمز) أبسط وأرخص.' },
+            { q: 'هل يمكنني الانتقال من GPU سحابية أمريكية إلى الاتحاد الأوروبي دون إعادة كتابة الكود؟', a: 'غالباً نعم. تعمل مكتبات Python القياسية (PyTorch، TensorFlow) بشكل متطابق. تتطلب واجهات API الخاصة بالمزود (SageMaker، Vertex) إعادة هيكلة.' },
+            { q: 'ماذا يحدث لأرصدة Hetzner بعد 15 يونيو 2026؟', a: 'لا. لا يمتلك PromptQuorum أي عقد إحالة أو علاقة مالية مع Hetzner أو أي مزود آخر مدرج هنا. الروابط تحريرية فقط — لا يتلقى PromptQuorum أي دفع مقابل النقر أو التسجيل. أنهت Hetzner برنامج الإحالة الخاص بها في 15 يونيو 2026. تحقق من الأسعار والعروض الحالية مباشرةً على hetzner.com.' },
+            { q: 'هل STACKIT للمؤسسات الكبيرة فقط؟', a: 'عملياً، نعم. يتطلب عقوداً مؤسسية (حد أدنى نموذجي 10 آلاف–50 ألف يورو/شهرياً). غير مناسب للشركات الناشئة أو الفرق الصغيرة.' },
+            { q: 'هل يؤثر قانون الذكاء الاصطناعي للاتحاد الأوروبي على اختيار GPU السحابية؟', a: 'نعم، للأنظمة عالية الخطورة. يبسّط المزودون الأصليون في الاتحاد الأوروبي متطلبات مسار التدقيق والاختصاص. تعقّد سحابات الولايات المتحدة الامتثال لقانون الذكاء الاصطناعي.' },
+          ],
       },
       sourceVerification: {
         id: 'source-verification',
@@ -1187,10 +1269,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'هل Hetzner ممتثل لـ GDPR افتراضياً؟', acceptedAnswer: { '@type': 'Answer', text: 'هيتزنر شركة ألمانية تمتلك مراكز بيانات ألمانية وتقدم اتفاقية معالجة البيانات (DPA) على الفور — مما يبسط توثيق اللائحة العامة لحماية البيانات بشكل كبير. بالنسبة لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة، لا ينطبق خطر Schrems-II النموذجي. يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة.' } },
-        { '@type': 'Question', name: 'ما Schrems II؟', acceptedAnswer: { '@type': 'Answer', text: 'حكم محكمة العدل الأوروبية 2020 الذي أبطل درع الخصوصية، مقيّداً عمليات نقل البيانات بين الاتحاد الأوروبي والولايات المتحدة.' } },
-        { '@type': 'Question', name: 'أي مزود في الاتحاد الأوروبي لديه أعلى توافر لـ H100؟', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway، يليه OVHcloud. يزيد Nebius مخزونه من H100 بسرعة (الربع الثالث 2026 مخطط له).' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل Hetzner ممتثل لـ GDPR افتراضياً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'هيتزنر شركة ألمانية تمتلك مراكز بيانات ألمانية وتقدم اتفاقية معالجة البيانات (DPA) على الفور — مما يبسط توثيق اللائحة العامة لحماية البيانات بشكل كبير. بالنسبة لأعباء عمل الاستنتاج داخل الاتحاد الأوروبي دون نقل إلى دول ثالثة، لا ينطبق خطر Schrems-II النموذجي. يُنصح بإجراء تقييم قانوني خاص لحالتك الاستخدامية المحددة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام مناطق AWS في الاتحاد الأوروبي لبيانات شخصية بموجب GDPR؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ممكن قانونياً، لكن فقط بتدابير تكميلية: SCC محدَّثة، تقييم أثر النقل، تشفير عند التخزين (مفاتيح يديرها العميل)، ومراقبة مستمرة للتغييرات في قانون الولايات المتحدة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما Schrems II ولماذا يهم؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'حكم محكمة العدل الأوروبية 2020 الذي أبطل درع الخصوصية. يعني أن المزودين الذين مقرهم الولايات المتحدة يواجهون تعرّضاً قانونياً بنيوياً بموجب قانون المراقبة الأمريكي، بغض النظر عن موقع الخادم.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يقدّم جميع مزودي GPU السحابية في الاتحاد الأوروبي DPA؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يقدّم المزودون السبعة المدرجون DPA. تختلف الجودة: يقدّم Hetzner DPA بسيطاً؛ يقدّم Scaleway/OVHcloud شروطاً قابلة للتفاوض للمؤسسات؛ يقدّم Mistral DPA خاصاً بـ API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي مزود في الاتحاد الأوروبي لديه أعلى توافر لـ H100؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Scaleway، يليه OVHcloud. يزيد Nebius مخزونه من H100 بسرعة (توسّع مخطط له الربع الثالث 2026). لدى Hetzner توافر محدود لـ H100.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Mistral La Plateforme أرخص من GPU السحابية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد على عبء العمل. استدلال مكثف (ملايين الرموز/يومياً): قد تكون GPU السحابية أرخص. خفيف/متغير: Mistral La Plateforme (دفع لكل رمز) أبسط وأرخص.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني الانتقال من GPU سحابية أمريكية إلى الاتحاد الأوروبي دون إعادة كتابة الكود؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'غالباً نعم. تعمل مكتبات Python القياسية (PyTorch، TensorFlow) بشكل متطابق. تتطلب واجهات API الخاصة بالمزود (SageMaker، Vertex) إعادة هيكلة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يحدث لأرصدة Hetzner بعد 15 يونيو 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. لا يمتلك PromptQuorum أي عقد إحالة أو علاقة مالية مع Hetzner أو أي مزود آخر مدرج هنا. الروابط تحريرية فقط — لا يتلقى PromptQuorum أي دفع مقابل النقر أو التسجيل. أنهت Hetzner برنامج الإحالة الخاص بها في 15 يونيو 2026. تحقق من الأسعار والعروض الحالية مباشرةً على hetzner.com.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل STACKIT للمؤسسات الكبيرة فقط؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'عملياً، نعم. يتطلب عقوداً مؤسسية (حد أدنى نموذجي 10 آلاف–50 ألف يورو/شهرياً). غير مناسب للشركات الناشئة أو الفرق الصغيرة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يؤثر قانون الذكاء الاصطناعي للاتحاد الأوروبي على اختيار GPU السحابية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، للأنظمة عالية الخطورة. يبسّط المزودون الأصليون في الاتحاد الأوروبي متطلبات مسار التدقيق والاختصاص. تعقّد سحابات الولايات المتحدة الامتثال لقانون الذكاء الاصطناعي.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -3175,47 +3334,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'Hetzner는 기본적으로 GDPR을 준수합니까?',
-            a: 'Hetzner는 독일 데이터 센터를 보유한 독일 회사로, 즉시 데이터 처리 계약(DPA)을 제공합니다 — 이는 GDPR 문서화를 크게 간소화합니다. 제3국 이전 없는 EU 내부 추론 워크로드의 경우 일반적인 Schrems-II 노출은 적용되지 않습니다. 특정 사용 사례에 대한 자체 법적 평가를 권장합니다.',
-          },
-          {
-            q: 'GDPR 개인 데이터에 AWS EU 리전을 사용할 수 있습니까?',
-            a: '법적으로 가능하지만 보충 조치가 필요합니다: 업데이트된 SCC, 이전 영향 평가, 저장 데이터 암호화(고객 관리 키), 미국법 변경에 대한 지속적인 모니터링.',
-          },
-          {
-            q: 'Schrems II란 무엇이며 왜 중요합니까?',
-            a: 'Privacy Shield를 무효화한 CJEU 2020 판결입니다. 서버 위치에 관계없이 미국 본사 공급업체는 미국 감시법에 따라 구조적 법적 노출을 받습니다.',
-          },
-          {
-            q: '모든 EU 클라우드 GPU 공급업체가 DPA를 제공합니까?',
-            a: '예. 나열된 7개 공급업체 모두 DPA를 제공합니다. 품질은 다양합니다: Hetzner는 간단한 DPA 제공, Scaleway/OVHcloud는 엔터프라이즈 협상 가능 조건 제공, Mistral은 API 특화 DPA 제공.',
-          },
-          {
-            q: '어떤 EU 공급업체가 H100 가용성이 가장 높습니까?',
-            a: 'Scaleway, 그 다음 OVHcloud. Nebius는 H100 재고가 빠르게 증가하고 있습니다(2026년 Q3 확장 예정). Hetzner는 H100이 제한적입니다.',
-          },
-          {
-            q: 'Mistral La Plateforme이 클라우드 GPU보다 저렴합니까?',
-            a: '워크로드에 따라 다릅니다. 대규모 추론(일일 수백만 토큰): 클라우드 GPU가 더 저렴할 수 있습니다. 소규모/가변적: Mistral La Plateforme(토큰당 과금)이 더 간단하고 저렴합니다.',
-          },
-          {
-            q: '코드를 다시 작성하지 않고 미국에서 EU 클라우드 GPU로 전환할 수 있습니까?',
-            a: '대부분 가능합니다. 표준 Python 라이브러리(PyTorch, TensorFlow)는 동일하게 작동합니다. 공급업체 특화 API(SageMaker, Vertex)는 리팩토링이 필요합니다.',
-          },
-          {
-            q: '2026년 6월 15일 이후 Hetzner 크레딧은 어떻게 됩니까?',
-            a: '아니요. PromptQuorum은 Hetzner 또는 이 페이지에 나열된 다른 어떤 제공업체와도 제휴 계약이나 금전적 관계가 없습니다. 모든 링크는 편집 목적이며 — PromptQuorum은 클릭이나 가입에 대한 수수료를 받지 않습니다. Hetzner는 2026년 6월 15일에 자체 추천 프로그램을 종료했습니다. 최신 가격 및 혜택은 hetzner.com에서 직접 확인하세요.',
-          },
-          {
-            q: 'STACKIT는 대형 기업 전용입니까?',
-            a: '사실상 그렇습니다. 엔터프라이즈 계약이 필요합니다(일반적으로 월 €10K–€50K 최소). 스타트업이나 소규모 팀에는 적합하지 않습니다.',
-          },
-          {
-            q: 'EU AI 법이 클라우드 GPU 선택에 영향을 줍니까?',
-            a: '예, 고위험 시스템에 대해. EU 네이티브 공급업체는 감사 추적 및 관할권 요건을 단순화합니다. 미국 클라우드는 AI 법 준수를 복잡하게 만듭니다.',
-          },
-        ],
+            { q: 'Hetzner는 기본적으로 GDPR을 준수합니까?', a: 'Hetzner는 독일 데이터 센터를 보유한 독일 회사로, 즉시 데이터 처리 계약(DPA)을 제공합니다 — 이는 GDPR 문서화를 크게 간소화합니다. 제3국 이전 없는 EU 내부 추론 워크로드의 경우 일반적인 Schrems-II 노출은 적용되지 않습니다. 특정 사용 사례에 대한 자체 법적 평가를 권장합니다.' },
+            { q: 'GDPR 개인 데이터에 AWS EU 리전을 사용할 수 있습니까?', a: '법적으로 가능하지만 보충 조치가 필요합니다: 업데이트된 SCC, 이전 영향 평가, 저장 데이터 암호화(고객 관리 키), 미국법 변경에 대한 지속적인 모니터링.' },
+            { q: 'Schrems II란 무엇이며 왜 중요합니까?', a: 'Privacy Shield를 무효화한 CJEU 2020 판결입니다. 서버 위치에 관계없이 미국 본사 공급업체는 미국 감시법에 따라 구조적 법적 노출을 받습니다.' },
+            { q: '모든 EU 클라우드 GPU 공급업체가 DPA를 제공합니까?', a: '예. 나열된 7개 공급업체 모두 DPA를 제공합니다. 품질은 다양합니다: Hetzner는 간단한 DPA 제공, Scaleway/OVHcloud는 엔터프라이즈 협상 가능 조건 제공, Mistral은 API 특화 DPA 제공.' },
+            { q: '어떤 EU 공급업체가 H100 가용성이 가장 높습니까?', a: 'Scaleway, 그 다음 OVHcloud. Nebius는 H100 재고가 빠르게 증가하고 있습니다(2026년 Q3 확장 예정). Hetzner는 H100이 제한적입니다.' },
+            { q: 'Mistral La Plateforme이 클라우드 GPU보다 저렴합니까?', a: '워크로드에 따라 다릅니다. 대규모 추론(일일 수백만 토큰): 클라우드 GPU가 더 저렴할 수 있습니다. 소규모/가변적: Mistral La Plateforme(토큰당 과금)이 더 간단하고 저렴합니다.' },
+            { q: '코드를 다시 작성하지 않고 미국에서 EU 클라우드 GPU로 전환할 수 있습니까?', a: '대부분 가능합니다. 표준 Python 라이브러리(PyTorch, TensorFlow)는 동일하게 작동합니다. 공급업체 특화 API(SageMaker, Vertex)는 리팩토링이 필요합니다.' },
+            { q: '2026년 6월 15일 이후 Hetzner 크레딧은 어떻게 됩니까?', a: '아니요. PromptQuorum은 Hetzner 또는 이 페이지에 나열된 다른 어떤 제공업체와도 제휴 계약이나 금전적 관계가 없습니다. 모든 링크는 편집 목적이며 — PromptQuorum은 클릭이나 가입에 대한 수수료를 받지 않습니다. Hetzner는 2026년 6월 15일에 자체 추천 프로그램을 종료했습니다. 최신 가격 및 혜택은 hetzner.com에서 직접 확인하세요.' },
+            { q: 'STACKIT는 대형 기업 전용입니까?', a: '사실상 그렇습니다. 엔터프라이즈 계약이 필요합니다(일반적으로 월 €10K–€50K 최소). 스타트업이나 소규모 팀에는 적합하지 않습니다.' },
+            { q: 'EU AI 법이 클라우드 GPU 선택에 영향을 줍니까?', a: '예, 고위험 시스템에 대해. EU 네이티브 공급업체는 감사 추적 및 관할권 요건을 단순화합니다. 미국 클라우드는 AI 법 준수를 복잡하게 만듭니다.' },
+          ],
       },
       sourceVerification: {
         id: 'source-verification',
@@ -3258,10 +3387,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Hetzner는 기본적으로 GDPR을 준수합니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 독일 회사, 독일 데이터 센터, 즉시 DPA 제공.' } },
-        { '@type': 'Question', name: 'Schrems II란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Privacy Shield를 무효화한 CJEU 2020 판결로, EU-미국 데이터 이전을 제한합니다.' } },
-        { '@type': 'Question', name: '어떤 EU 공급업체가 H100 가용성이 가장 높습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Scaleway, 그 다음 OVHcloud.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Hetzner는 기본적으로 GDPR을 준수합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hetzner는 독일 데이터 센터를 보유한 독일 회사로, 즉시 데이터 처리 계약(DPA)을 제공합니다 — 이는 GDPR 문서화를 크게 간소화합니다. 제3국 이전 없는 EU 내부 추론 워크로드의 경우 일반적인 Schrems-II 노출은 적용되지 않습니다. 특정 사용 사례에 대한 자체 법적 평가를 권장합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'GDPR 개인 데이터에 AWS EU 리전을 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '법적으로 가능하지만 보충 조치가 필요합니다: 업데이트된 SCC, 이전 영향 평가, 저장 데이터 암호화(고객 관리 키), 미국법 변경에 대한 지속적인 모니터링.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Schrems II란 무엇이며 왜 중요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Privacy Shield를 무효화한 CJEU 2020 판결입니다. 서버 위치에 관계없이 미국 본사 공급업체는 미국 감시법에 따라 구조적 법적 노출을 받습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '모든 EU 클라우드 GPU 공급업체가 DPA를 제공합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. 나열된 7개 공급업체 모두 DPA를 제공합니다. 품질은 다양합니다: Hetzner는 간단한 DPA 제공, Scaleway/OVHcloud는 엔터프라이즈 협상 가능 조건 제공, Mistral은 API 특화 DPA 제공.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '어떤 EU 공급업체가 H100 가용성이 가장 높습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Scaleway, 그 다음 OVHcloud. Nebius는 H100 재고가 빠르게 증가하고 있습니다(2026년 Q3 확장 예정). Hetzner는 H100이 제한적입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mistral La Plateforme이 클라우드 GPU보다 저렴합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '워크로드에 따라 다릅니다. 대규모 추론(일일 수백만 토큰): 클라우드 GPU가 더 저렴할 수 있습니다. 소규모/가변적: Mistral La Plateforme(토큰당 과금)이 더 간단하고 저렴합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '코드를 다시 작성하지 않고 미국에서 EU 클라우드 GPU로 전환할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '대부분 가능합니다. 표준 Python 라이브러리(PyTorch, TensorFlow)는 동일하게 작동합니다. 공급업체 특화 API(SageMaker, Vertex)는 리팩토링이 필요합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026년 6월 15일 이후 Hetzner 크레딧은 어떻게 됩니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니요. PromptQuorum은 Hetzner 또는 이 페이지에 나열된 다른 어떤 제공업체와도 제휴 계약이나 금전적 관계가 없습니다. 모든 링크는 편집 목적이며 — PromptQuorum은 클릭이나 가입에 대한 수수료를 받지 않습니다. Hetzner는 2026년 6월 15일에 자체 추천 프로그램을 종료했습니다. 최신 가격 및 혜택은 hetzner.com에서 직접 확인하세요.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'STACKIT는 대형 기업 전용입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '사실상 그렇습니다. 엔터프라이즈 계약이 필요합니다(일반적으로 월 €10K–€50K 최소). 스타트업이나 소규모 팀에는 적합하지 않습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'EU AI 법이 클라우드 GPU 선택에 영향을 줍니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 고위험 시스템에 대해. EU 네이티브 공급업체는 감사 추적 및 관할권 요건을 단순화합니다. 미국 클라우드는 AI 법 준수를 복잡하게 만듭니다.',
+            },
+          },
+        ],
     },
   },
 };

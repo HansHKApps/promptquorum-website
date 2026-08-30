@@ -1130,50 +1130,17 @@ schema: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            {
-              q: 'Was ist der größte lokale LLM-Trend 2026?',
-              a: 'Kleinere Modelle erzielen Jahr für Jahr höhere Qualität pro Parameter. Architekturverbesserungen — bessere Aufmerksamkeit, synthetische Trainingsdaten, Parameterfreigabe — steigern Qualität ohne Modellgröße zu erhöhen. Siehe [Sind kleine Sprachmodelle die richtige Wahl für Ihren Anwendungsfall?](/de/prompt-bites/local-ai-trend-2027-small-language-models) für die Deployment-Analyse.',
-            },
-            {
-              q: 'Können Smartphones 2026 lokale LLMs durchführen?',
-              a: 'Ja — iPhones mit A18-Chips und Android-Telefone mit Snapdragon X Elite führen 1–3B-Modelle mit 15–30 Token/Sek. aus. Praktisch für Zusammenfassung, Q&A und kurze Prompts. 7B-Modelle auf Smartphones benötigen 2027+ Hardware (Apple A19, Snapdragon X3). LM Studio und Ollama laufen nicht auf iOS/Android — dedizierte Mobile-Frameworks (llama.cpp iOS, MLC LLM) werden benötigt.',
-            },
-            {
-              q: 'Was sind Reasoning-Modelle und wie unterscheiden sie sich von Standard-LLMs?',
-              a: 'Reasoning-Modelle (DeepSeek-R1, OpenAI o1) generieren explizite Chain-of-Thought-Schritte vor der Antwort. Dies verbessert Genauigkeit bei Mathematik, Logik und Multi-Schritt-Aufgaben um 15–30%. Kompromiss: 3–5× mehr Tokens pro Antwort — langsamer und VRAM-intensiver. Lokale Optionen: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 oder Mac Studio M5 Max).',
-            },
-            {
-              q: 'Wann wird Fine-Tuning von lokalen LLMs einfach?',
-              a: 'Ende 2026 bis 2027. Unsloth und Axolotl erfordern derzeit Kommandozeilen-Kenntnisse; No-Code GUI Fine-Tuning-Plattformen sind aktiv in Entwicklung, und die Trainingszeiten dürften mit reifender Toolchain weiter sinken. Siehe [No-Code Fine-Tuning: Wie nah sind wir dran?](/de/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) für die vollständige Workflow-Analyse.',
-            },
-            {
-              q: 'Wie viele Unternehmen führen lokale LLMs bis 2027 durch?',
-              a: 'Regulierte Branchen (Banking, Healthcare, Recht) sind die frühesten On-Prem-Adopter, teilweise getrieben durch Datenresidenz-Anforderungen, gefolgt von Mid-Market und SMBs, sobald Hardware-Kosten weiter fallen. Zu den Compliance-Treibern siehe [Data Sovereignty and Compliance: The 2027 Outlook](/de/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
-            },
-            {
-              q: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs 2026?',
-              a: 'Lokale Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. Die Lücke schließt sich — 2024–2025 sahen ~10–15% Benchmark-Verbesserungen pro Jahr. Volle Parität für 70B-Modelle vs. GPT-5.5 Klasse wird nicht vor 2027–2028 erwartet.',
-            },
-            {
-              q: 'Ist lokale LLM-Inferenz schnell genug für Real-Time-Anwendungen?',
-              a: 'Nicht für <500ms Latenz-Anforderungen. RTX 4090 erzeugt ~150 Token/Sek. auf 7B-Modellen — geeignet für Chat (1–2 Sek. Antworten), aber nicht für Sub-500ms Pipelines. Für Real-Time-Anwendungsfälle bleiben Cloud-APIs (OpenAI, Anthropic) überlegen. Lokale Inferenz ist beste für Batch-Workloads, datenschutz-sensitive Analyse und kostensensitive Produktion.',
-            },
-            {
-              q: 'Welche Hardware führt 2027 lokale LLMs durch?',
-              a: 'Bis 2027: 7B-Modelle auf Smartphones (Apple A19, Snapdragon X3), 70B-Modelle auf Consumer-Desktops mit 32 GB VRAM (RTX 5090-Nachfolger erwartet ~2.699 €). Dieser Teil der Vorhersage ist bereits eingetreten: Apples Mac Studio M5 Ultra, im August 2026 aktualisiert, bietet bis zu 512 GB unified memory — genug, um 200B+-Parameter-Modelle nativ auf einem einzigen Gerät auszuführen. Dieselbe Aktualisierung brachte neue Mac mini- und Mac Studio-Konfigurationen unterhalb der Ultra-Stufe. Hardware-Bodenpreis fällt ~30% pro Jahr in Cost-per-Performance.',
-            },
-            {
-              q: 'Beschleunigt sich die lokale LLM-Adoption 2026?',
-              a: 'Ja. In Q1–Q2 2026 stieg Unternehmensinteresse an On-Premises-Inferenz um 40–60% basierend auf Gartner/IDC-Umfragen. Treiber: (1) Datenschutzgesetze (GDPR, China DSL) werden durchgesetzt, (2) GPU-Preise fallen 20–30%, (3) Open-Source-Qualitätslücke schließt sich. Bis Ende 2026 werden alle großen Tech-Unternehmen (Microsoft, Google, Meta) Enterprise On-Prem LLM-Angebote gestartet haben. Adoptionsverzögerung für SMBs bleibt (Kosten, Komplexität), aber 2027 ist der Inflektionspunkt.',
-            },
-            {
-              q: 'Muss ich bei lokalen LLMs die DSGVO beachten?',
-              a: 'Ja, vor allem bei sensiblen Daten. DSGVO Artikel 28 (Datenverarbeitung) erfordert Vertragsbedingungen für alle Verarbeiter. Lokale Inferenz erfüllt Datenschutz-by-Design (Artikel 25): Daten verlassen Ihr System nicht, keine Cloud-Übertragung, keine Drittparteien-Zugriff. BSI-Grundschutz-Kataloge (für deutsche Unternehmen) empfehlen lokale Inferenz für vertrauliche Operationen. 2027: Compliance wird automatisierter (Audit-Logging, Zugriffskontrollen) durch verwaltete On-Prem-Plattformen.',
-            },
-            {
-              q: 'Sind lokale LLMs für deutsche Mittelstands-Unternehmen geeignet?',
-              a: 'Sehr geeignet für SMEs mit sensiblen Daten (Finanzen, Medizin, Recht). Vorteile: (1) BSI-Grundschutz Compliance built-in (kein Cloud-Audit nötig), (2) Break-even bei 500M–1B Tokens/Jahr mit RTX 4070 Ti (650 €), (3) Kulturelle Bevorzugung in Deutschland/DACH für Datenkontrolle. Beispiele: Banken (Kreditrisiko-Analyse), Kanzleien (Vertragsanalyse), Medizin (Diagnose-Support). Herausforderung: Technische Fachkompetenz. Lösung: 2026–2027 Managed-Service-Provider mit DACH-Präsenz (Infra-Unterstützung).',
-            },
+            { q: 'Was ist der größte lokale LLM-Trend 2026?', a: 'Kleinere Modelle erzielen Jahr für Jahr höhere Qualität pro Parameter. Architekturverbesserungen — bessere Aufmerksamkeit, synthetische Trainingsdaten, Parameterfreigabe — steigern Qualität ohne Modellgröße zu erhöhen. Siehe [Sind kleine Sprachmodelle die richtige Wahl für Ihren Anwendungsfall?](/de/prompt-bites/local-ai-trend-2027-small-language-models) für die Deployment-Analyse.' },
+            { q: 'Können Smartphones 2026 lokale LLMs durchführen?', a: 'Ja — iPhones mit A18-Chips und Android-Telefone mit Snapdragon X Elite führen 1–3B-Modelle mit 15–30 Token/Sek. aus. Praktisch für Zusammenfassung, Q&A und kurze Prompts. 7B-Modelle auf Smartphones benötigen 2027+ Hardware (Apple A19, Snapdragon X3). LM Studio und Ollama laufen nicht auf iOS/Android — dedizierte Mobile-Frameworks (llama.cpp iOS, MLC LLM) werden benötigt.' },
+            { q: 'Was sind Reasoning-Modelle und wie unterscheiden sie sich von Standard-LLMs?', a: 'Reasoning-Modelle (DeepSeek-R1, OpenAI o1) generieren explizite Chain-of-Thought-Schritte vor der Antwort. Dies verbessert Genauigkeit bei Mathematik, Logik und Multi-Schritt-Aufgaben um 15–30%. Kompromiss: 3–5× mehr Tokens pro Antwort — langsamer und VRAM-intensiver. Lokale Optionen: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 oder Mac Studio M5 Max).' },
+            { q: 'Wann wird Fine-Tuning von lokalen LLMs einfach?', a: 'Ende 2026 bis 2027. Unsloth und Axolotl erfordern derzeit Kommandozeilen-Kenntnisse; No-Code GUI Fine-Tuning-Plattformen sind aktiv in Entwicklung, und die Trainingszeiten dürften mit reifender Toolchain weiter sinken. Siehe [No-Code Fine-Tuning: Wie nah sind wir dran?](/de/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) für die vollständige Workflow-Analyse.' },
+            { q: 'Wie viele Unternehmen führen lokale LLMs bis 2027 durch?', a: 'Regulierte Branchen (Banking, Healthcare, Recht) sind die frühesten On-Prem-Adopter, teilweise getrieben durch Datenresidenz-Anforderungen, gefolgt von Mid-Market und SMBs, sobald Hardware-Kosten weiter fallen. Zu den Compliance-Treibern siehe [Data Sovereignty and Compliance: The 2027 Outlook](/de/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).' },
+            { q: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs 2026?', a: 'Lokale Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. Die Lücke schließt sich — 2024–2025 sahen ~10–15% Benchmark-Verbesserungen pro Jahr. Volle Parität für 70B-Modelle vs. GPT-5.5 Klasse wird nicht vor 2027–2028 erwartet.' },
+            { q: 'Ist lokale LLM-Inferenz schnell genug für Real-Time-Anwendungen?', a: 'Nicht für <500ms Latenz-Anforderungen. RTX 4090 erzeugt ~150 Token/Sek. auf 7B-Modellen — geeignet für Chat (1–2 Sek. Antworten), aber nicht für Sub-500ms Pipelines. Für Real-Time-Anwendungsfälle bleiben Cloud-APIs (OpenAI, Anthropic) überlegen. Lokale Inferenz ist beste für Batch-Workloads, datenschutz-sensitive Analyse und kostensensitive Produktion.' },
+            { q: 'Welche Hardware führt 2027 lokale LLMs durch?', a: 'Bis 2027: 7B-Modelle auf Smartphones (Apple A19, Snapdragon X3), 70B-Modelle auf Consumer-Desktops mit 32 GB VRAM (RTX 5090-Nachfolger erwartet ~2.699 €). Dieser Teil der Vorhersage ist bereits eingetreten: Apples Mac Studio M5 Ultra, im August 2026 aktualisiert, bietet bis zu 512 GB unified memory — genug, um 200B+-Parameter-Modelle nativ auf einem einzigen Gerät auszuführen. Dieselbe Aktualisierung brachte neue Mac mini- und Mac Studio-Konfigurationen unterhalb der Ultra-Stufe. Hardware-Bodenpreis fällt ~30% pro Jahr in Cost-per-Performance.' },
+            { q: 'Beschleunigt sich die lokale LLM-Adoption 2026?', a: 'Ja. In Q1–Q2 2026 stieg Unternehmensinteresse an On-Premises-Inferenz um 40–60% basierend auf Gartner/IDC-Umfragen. Treiber: (1) Datenschutzgesetze (GDPR, China DSL) werden durchgesetzt, (2) GPU-Preise fallen 20–30%, (3) Open-Source-Qualitätslücke schließt sich. Bis Ende 2026 werden alle großen Tech-Unternehmen (Microsoft, Google, Meta) Enterprise On-Prem LLM-Angebote gestartet haben. Adoptionsverzögerung für SMBs bleibt (Kosten, Komplexität), aber 2027 ist der Inflektionspunkt.' },
+            { q: 'Muss ich bei lokalen LLMs die DSGVO beachten?', a: 'Ja, vor allem bei sensiblen Daten. DSGVO Artikel 28 (Datenverarbeitung) erfordert Vertragsbedingungen für alle Verarbeiter. Lokale Inferenz erfüllt Datenschutz-by-Design (Artikel 25): Daten verlassen Ihr System nicht, keine Cloud-Übertragung, keine Drittparteien-Zugriff. BSI-Grundschutz-Kataloge (für deutsche Unternehmen) empfehlen lokale Inferenz für vertrauliche Operationen. 2027: Compliance wird automatisierter (Audit-Logging, Zugriffskontrollen) durch verwaltete On-Prem-Plattformen.' },
+            { q: 'Sind lokale LLMs für deutsche Mittelstands-Unternehmen geeignet?', a: 'Sehr geeignet für SMEs mit sensiblen Daten (Finanzen, Medizin, Recht). Vorteile: (1) BSI-Grundschutz Compliance built-in (kein Cloud-Audit nötig), (2) Break-even bei 500M–1B Tokens/Jahr mit RTX 4070 Ti (650 €), (3) Kulturelle Bevorzugung in Deutschland/DACH für Datenkontrolle. Beispiele: Banken (Kreditrisiko-Analyse), Kanzleien (Vertragsanalyse), Medizin (Diagnose-Support). Herausforderung: Technische Fachkompetenz. Lösung: 2026–2027 Managed-Service-Provider mit DACH-Präsenz (Infra-Unterstützung).' },
           ],
         },
         relatedReading: {
@@ -1234,58 +1201,91 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Was ist der größte lokale LLM-Trend 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Kleinere Modelle erzielen Jahr für Jahr höhere Qualität pro Parameter. Architekturverbesserungen sind die Treiber, nicht Größe.' },
+            'name': 'Was ist der größte lokale LLM-Trend 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Kleinere Modelle erzielen Jahr für Jahr höhere Qualität pro Parameter. Architekturverbesserungen — bessere Aufmerksamkeit, synthetische Trainingsdaten, Parameterfreigabe — steigern Qualität ohne Modellgröße zu erhöhen. Siehe [Sind kleine Sprachmodelle die richtige Wahl für Ihren Anwendungsfall?](/de/prompt-bites/local-ai-trend-2027-small-language-models) für die Deployment-Analyse.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Können Smartphones 2026 lokale LLMs durchführen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja — iPhones mit A18-Chips und Android mit Snapdragon X Elite führen 1–3B mit 15–30 Token/Sek. aus. 7B benötigt 2027+ Hardware. Dedizierte Mobile-Frameworks (llama.cpp iOS, MLC LLM) erforderlich.' },
+            'name': 'Können Smartphones 2026 lokale LLMs durchführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja — iPhones mit A18-Chips und Android-Telefone mit Snapdragon X Elite führen 1–3B-Modelle mit 15–30 Token/Sek. aus. Praktisch für Zusammenfassung, Q&A und kurze Prompts. 7B-Modelle auf Smartphones benötigen 2027+ Hardware (Apple A19, Snapdragon X3). LM Studio und Ollama laufen nicht auf iOS/Android — dedizierte Mobile-Frameworks (llama.cpp iOS, MLC LLM) werden benötigt.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Was sind Reasoning-Modelle und wie unterscheiden sie sich?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Reasoning-Modelle generieren Chain-of-Thought-Schritte vor Antwort. Verbessert Genauigkeit um 15–30%. Kompromiss: 3–5× mehr Tokens, langsamer. Lokale Optionen: DeepSeek-R1 7B, QwQ-32B.' },
+            'name': 'Was sind Reasoning-Modelle und wie unterscheiden sie sich von Standard-LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Reasoning-Modelle (DeepSeek-R1, OpenAI o1) generieren explizite Chain-of-Thought-Schritte vor der Antwort. Dies verbessert Genauigkeit bei Mathematik, Logik und Multi-Schritt-Aufgaben um 15–30%. Kompromiss: 3–5× mehr Tokens pro Antwort — langsamer und VRAM-intensiver. Lokale Optionen: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 oder Mac Studio M5 Max).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Wann wird Fine-Tuning von lokalen LLMs einfach?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ende 2026 bis 2027. No-Code GUI-Plattformen in Entwicklung. Unsloth und Axolotl erfordern derzeit Kommandozeile; Trainingszeiten dürften mit reifender Toolchain weiter sinken.' },
+            'name': 'Wann wird Fine-Tuning von lokalen LLMs einfach?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ende 2026 bis 2027. Unsloth und Axolotl erfordern derzeit Kommandozeilen-Kenntnisse; No-Code GUI Fine-Tuning-Plattformen sind aktiv in Entwicklung, und die Trainingszeiten dürften mit reifender Toolchain weiter sinken. Siehe [No-Code Fine-Tuning: Wie nah sind wir dran?](/de/prompt-bites/local-ai-trend-2027-no-code-fine-tuning) für die vollständige Workflow-Analyse.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Wie viele Unternehmen führen bis 2027 lokale LLMs durch?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Regulierte Branchen (Banking, Healthcare, Recht) sind die frühesten On-Prem-Adopter, teilweise getrieben durch Datenresidenz-Anforderungen. Mid-Market und SMBs folgen, sobald Hardware-Kosten fallen.' },
+            'name': 'Wie viele Unternehmen führen lokale LLMs bis 2027 durch?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Regulierte Branchen (Banking, Healthcare, Recht) sind die frühesten On-Prem-Adopter, teilweise getrieben durch Datenresidenz-Anforderungen, gefolgt von Mid-Market und SMBs, sobald Hardware-Kosten weiter fallen. Zu den Compliance-Treibern siehe [Data Sovereignty and Compliance: The 2027 Outlook](/de/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Lokale Modelle hinken um 20–30% hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89%. Schließt sich ~10–15% pro Jahr. Volle Parität erwartet nicht vor 2027–2028.' },
+            'name': 'Was ist die Qualitätslücke zwischen lokalen und Cloud-LLMs 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lokale Open-Source-Modelle hinken proprietären Cloud-Modellen um 20–30% in Benchmarks hinterher. Llama 3.3 70B: 80% MMLU vs GPT-5.5: 89% MMLU. Die Lücke schließt sich — 2024–2025 sahen ~10–15% Benchmark-Verbesserungen pro Jahr. Volle Parität für 70B-Modelle vs. GPT-5.5 Klasse wird nicht vor 2027–2028 erwartet.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Ist lokale LLM-Inferenz schnell genug für Real-Time?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Nicht für <500ms. RTX 4090: ~150 Token/Sek. auf 7B. Gut für Chat (1–2 Sek.), nicht für Sub-500ms Pipelines. Lokal beste für Batch, datenschutzsensitiv, kostensensitiv.' },
+            'name': 'Ist lokale LLM-Inferenz schnell genug für Real-Time-Anwendungen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht für <500ms Latenz-Anforderungen. RTX 4090 erzeugt ~150 Token/Sek. auf 7B-Modellen — geeignet für Chat (1–2 Sek. Antworten), aber nicht für Sub-500ms Pipelines. Für Real-Time-Anwendungsfälle bleiben Cloud-APIs (OpenAI, Anthropic) überlegen. Lokale Inferenz ist beste für Batch-Workloads, datenschutz-sensitive Analyse und kostensensitive Produktion.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Welche Hardware 2027 für lokale LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: '7B auf Smartphones (A19, Snapdragon X3), 70B auf Consumer-Desktop 32 GB VRAM. Apple Mac Studio M5 Ultra (bis 512 GB, seit Aug. 2026) für 200B+ nativ. Hardware-Bodenpreis fällt ~30% pro Jahr.' },
+            'name': 'Welche Hardware führt 2027 lokale LLMs durch?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bis 2027: 7B-Modelle auf Smartphones (Apple A19, Snapdragon X3), 70B-Modelle auf Consumer-Desktops mit 32 GB VRAM (RTX 5090-Nachfolger erwartet ~2.699 €). Dieser Teil der Vorhersage ist bereits eingetreten: Apples Mac Studio M5 Ultra, im August 2026 aktualisiert, bietet bis zu 512 GB unified memory — genug, um 200B+-Parameter-Modelle nativ auf einem einzigen Gerät auszuführen. Dieselbe Aktualisierung brachte neue Mac mini- und Mac Studio-Konfigurationen unterhalb der Ultra-Stufe. Hardware-Bodenpreis fällt ~30% pro Jahr in Cost-per-Performance.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Beschleunigt sich lokale LLM-Adoption 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja, 40–60% Anstieg Q1–Q2 2026. Treiber: Datenschutzgesetze durchgesetzt, GPU-Preise -20–30%, Open-Source-Qualität besser. Alle großen Tech-Unternehmen starten On-Prem-Angebote. 2027 SMB-Inflektionspunkt.' },
+            'name': 'Beschleunigt sich die lokale LLM-Adoption 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. In Q1–Q2 2026 stieg Unternehmensinteresse an On-Premises-Inferenz um 40–60% basierend auf Gartner/IDC-Umfragen. Treiber: (1) Datenschutzgesetze (GDPR, China DSL) werden durchgesetzt, (2) GPU-Preise fallen 20–30%, (3) Open-Source-Qualitätslücke schließt sich. Bis Ende 2026 werden alle großen Tech-Unternehmen (Microsoft, Google, Meta) Enterprise On-Prem LLM-Angebote gestartet haben. Adoptionsverzögerung für SMBs bleibt (Kosten, Komplexität), aber 2027 ist der Inflektionspunkt.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Muss ich bei lokalen LLMs die DSGVO beachten?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. DSGVO Artikel 28 und 25 (Datenschutz by Design) anwendbar. Lokale Inferenz erfüllt automatisch: Daten verlassen System nicht, keine Cloud-Übertragung, keine Drittparteien. BSI-Grundschutz empfohlen für deutsche Unternehmen. 2027: Audit-Logging und Zugriffskontrolle automatisiert.' },
+            'name': 'Muss ich bei lokalen LLMs die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, vor allem bei sensiblen Daten. DSGVO Artikel 28 (Datenverarbeitung) erfordert Vertragsbedingungen für alle Verarbeiter. Lokale Inferenz erfüllt Datenschutz-by-Design (Artikel 25): Daten verlassen Ihr System nicht, keine Cloud-Übertragung, keine Drittparteien-Zugriff. BSI-Grundschutz-Kataloge (für deutsche Unternehmen) empfehlen lokale Inferenz für vertrauliche Operationen. 2027: Compliance wird automatisierter (Audit-Logging, Zugriffskontrollen) durch verwaltete On-Prem-Plattformen.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Sind lokale LLMs für deutsche Mittelstands-Unternehmen geeignet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Sehr geeignet für SMEs mit sensiblen Daten (Finanzen, Medizin, Recht). Vorteile: BSI-Grundschutz built-in, Break-even 500M–1B Tokens/Jahr, Datenkontrolle. Herausforderung: technische Expertise. Lösung: Managed Services mit DACH-Präsenz ab 2026–2027.' },
+            'name': 'Sind lokale LLMs für deutsche Mittelstands-Unternehmen geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sehr geeignet für SMEs mit sensiblen Daten (Finanzen, Medizin, Recht). Vorteile: (1) BSI-Grundschutz Compliance built-in (kein Cloud-Audit nötig), (2) Break-even bei 500M–1B Tokens/Jahr mit RTX 4070 Ti (650 €), (3) Kulturelle Bevorzugung in Deutschland/DACH für Datenkontrolle. Beispiele: Banken (Kreditrisiko-Analyse), Kanzleien (Vertragsanalyse), Medizin (Diagnose-Support). Herausforderung: Technische Fachkompetenz. Lösung: 2026–2027 Managed-Service-Provider mit DACH-Präsenz (Infra-Unterstützung).',
+            },
           },
         ],
       },

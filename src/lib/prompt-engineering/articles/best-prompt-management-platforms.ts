@@ -2671,87 +2671,103 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'プロンプト管理とは何ですか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'プロンプト管理は、プロンプトを保存、バージョニング、本番環境にデプロイすることです。次の問題を解決します: どこに保存するか（データベース）、どうバージョニングするか（バージョン管理）、どうデプロイするか（API）、誰がアクセスできるか（権限）。',
+          {
+            '@type': 'Question',
+            'name': 'プロンプト管理とは何ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'プロンプト管理は、プロンプトを保存、バージョニング、本番環境にデプロイすることです。次の問題を解決: どこに保存（DB）、どうバージョニング（VCS）、どうデプロイ（API）、誰がアクセス（権限）。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'なぜプロンプト管理プラットフォームが必要ですか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'プラットフォームなしだと、チームはノートブックでアドホックにプロンプトを編集し、履歴を失い、悪い変更を戻せず、監査証跡がありません。プラットフォームは、バージョン管理とapprovalワークフローで安全な反復を可能にします。',
+          {
+            '@type': 'Question',
+            'name': 'なぜプロンプト管理プラットフォームが必要?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'なしだと、チームはアドホックに編集、履歴を失う、悪い変更を戻せない。プラットフォームは、バージョン管理とapprovalワークフローで安全な反復を実現。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHubとVellumの違いは何ですか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptHubはGitのようなバージョニング（開発重視）。VellumはProduction Deployment（デプロイ重視）。多くのチームは両方を使う: 開発ではPromptHub、本番ではVellum。',
+          {
+            '@type': 'Question',
+            'name': 'PromptHubとVellumの違い?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptHubはGitのようなバージョニング（開発重視）。Vellumはデプロイ（デプロイ重視）。多くのチームは両方使う。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHubはチームレビューに対応していますか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'はい。PromptHubはPull Request、Code Review、Approvalワークフローを持ちます（GitHubのように）。ガバナンスとコンプライアンスに必須です。',
+          {
+            '@type': 'Question',
+            'name': 'PromptHubはチームレビューに対応?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Pull Request、Code Review、Approvalワークフロー完備。ガバナンス必須。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHubは本番環境にデプロイできますか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptHubはプロンプト取得用のREST APIを提供しますが、デプロイ基盤（A/Bテスト、監視）は管理しません。その場合はVellumを使用してください。',
+          {
+            '@type': 'Question',
+            'name': 'PromptHubは本番にデプロイできる?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'REST API提供しますが、デプロイ基盤（A/Bテスト、監視）は管理しません。Vellum使用。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptLayerは何に使いますか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptLayerはすべてのLLM APIコール（リクエスト、レスポンス、コスト）をロギングします。これはObservabilityです。分析、デバッグ、コスト追跡に使用します。',
+          {
+            '@type': 'Question',
+            'name': 'PromptLayerの用途?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'すべてのLLM APIコール（リクエスト、レスポンス、費用）をロギング。Observabilityです。分析とコスト追跡に使用。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'これらのプラットフォームを組み合わせられますか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'はい。典型的なスタック: PromptHub（開発） → Vellum（本番） → PromptLayer（ロギング） → LangSmith（チェーンのトレース）。',
+          {
+            '@type': 'Question',
+            'name': 'プラットフォームを組み合わせられる?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。PromptHub（開発） → Vellum（本番） → PromptLayer（ロギング） → LangSmith（トレース）。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'プロンプトデータベースを自分で構築すべきですか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '構築には2～4週間のエンジニアリング作業が必要です（バージョニング、API、権限、監査ログ）。プラットフォームはこれをすべて提供します。購入する方が早くて安いです。',
+          {
+            '@type': 'Question',
+            'name': 'プロンプトDBを自分で構築?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2～4週間のエンジニアリングが必要。プラットフォームはすべて提供。購入する方が安い。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '日本でのデータ保護とMETI対応について',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '日本で個人情報を処理する場合、個人情報保護法（APPI）の遵守が必須です。ローカルで推論を実行すると、データ主権と処理義務を満たします。METI AI Governance 2024ガイドラインを確認してください。',
+          {
+            '@type': 'Question',
+            'name': '日本でのデータ保護とMETI対応?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '個人情報保護法（APPI）遵守が必須。ローカル推論でデータ主権と処理義務を満たします。METI AI Governance 2024確認。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '日本の中堅企業に適していますか?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'はい。PromptHubとVellumは日本企業で使用されています。情報セキュリティスタンダード（ISO 27001など）を確認してください。無料ティア（PromptLayer、LangSmith）は小規模チームに予算優しいです。エンタープライズ向けデプロイメントはエンタープライズプランで対応。',
+          {
+            '@type': 'Question',
+            'name': '日本の中堅企業に適している?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。PromptHub、Vellum は日本で使用。ISO 27001など情報セキュリティ標準確認。無料ティアは小規模チーム向け。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'PromptLayerは何に使いますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptLayerはすべてのLLM APIコール（リクエスト、レスポンス、コスト）をロギングします。これはObservabilityです。分析、デバッグ、コスト追跡に使用します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'プロンプトデータベースを自分で構築すべきですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '構築には2～4週間のエンジニアリング作業が必要です（バージョニング、API、権限、監査ログ）。プラットフォームはこれをすべて提供します。購入する方が早くて安いです。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2950,47 +2966,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'プロンプト管理とは何ですか?',
-            a: 'プロンプト管理は、プロンプトを保存、バージョニング、本番環境にデプロイすることです。次の問題を解決: どこに保存（DB）、どうバージョニング（VCS）、どうデプロイ（API）、誰がアクセス（権限）。',
-          },
-          {
-            q: 'なぜプロンプト管理プラットフォームが必要?',
-            a: 'なしだと、チームはアドホックに編集、履歴を失う、悪い変更を戻せない。プラットフォームは、バージョン管理とapprovalワークフローで安全な反復を実現。',
-          },
-          {
-            q: 'PromptHubとVellumの違い?',
-            a: 'PromptHubはGitのようなバージョニング（開発重視）。Vellumはデプロイ（デプロイ重視）。多くのチームは両方使う。',
-          },
-          {
-            q: 'PromptHubはチームレビューに対応?',
-            a: 'はい。Pull Request、Code Review、Approvalワークフロー完備。ガバナンス必須。',
-          },
-          {
-            q: 'PromptHubは本番にデプロイできる?',
-            a: 'REST API提供しますが、デプロイ基盤（A/Bテスト、監視）は管理しません。Vellum使用。',
-          },
-          {
-            q: 'PromptLayerの用途?',
-            a: 'すべてのLLM APIコール（リクエスト、レスポンス、費用）をロギング。Observabilityです。分析とコスト追跡に使用。',
-          },
-          {
-            q: 'プラットフォームを組み合わせられる?',
-            a: 'はい。PromptHub（開発） → Vellum（本番） → PromptLayer（ロギング） → LangSmith（トレース）。',
-          },
-          {
-            q: 'プロンプトDBを自分で構築?',
-            a: '2～4週間のエンジニアリングが必要。プラットフォームはすべて提供。購入する方が安い。',
-          },
-          {
-            q: '日本でのデータ保護とMETI対応?',
-            a: '個人情報保護法（APPI）遵守が必須。ローカル推論でデータ主権と処理義務を満たします。METI AI Governance 2024確認。',
-          },
-          {
-            q: '日本の中堅企業に適している?',
-            a: 'はい。PromptHub、Vellum は日本で使用。ISO 27001など情報セキュリティ標準確認。無料ティアは小規模チーム向け。',
-          },
-        ],
+            { q: 'プロンプト管理とは何ですか?', a: 'プロンプト管理は、プロンプトを保存、バージョニング、本番環境にデプロイすることです。次の問題を解決: どこに保存（DB）、どうバージョニング（VCS）、どうデプロイ（API）、誰がアクセス（権限）。' },
+            { q: 'なぜプロンプト管理プラットフォームが必要?', a: 'なしだと、チームはアドホックに編集、履歴を失う、悪い変更を戻せない。プラットフォームは、バージョン管理とapprovalワークフローで安全な反復を実現。' },
+            { q: 'PromptHubとVellumの違い?', a: 'PromptHubはGitのようなバージョニング（開発重視）。Vellumはデプロイ（デプロイ重視）。多くのチームは両方使う。' },
+            { q: 'PromptHubはチームレビューに対応?', a: 'はい。Pull Request、Code Review、Approvalワークフロー完備。ガバナンス必須。' },
+            { q: 'PromptHubは本番にデプロイできる?', a: 'REST API提供しますが、デプロイ基盤（A/Bテスト、監視）は管理しません。Vellum使用。' },
+            { q: 'PromptLayerの用途?', a: 'すべてのLLM APIコール（リクエスト、レスポンス、費用）をロギング。Observabilityです。分析とコスト追跡に使用。' },
+            { q: 'プラットフォームを組み合わせられる?', a: 'はい。PromptHub（開発） → Vellum（本番） → PromptLayer（ロギング） → LangSmith（トレース）。' },
+            { q: 'プロンプトDBを自分で構築?', a: '2～4週間のエンジニアリングが必要。プラットフォームはすべて提供。購入する方が安い。' },
+            { q: '日本でのデータ保護とMETI対応?', a: '個人情報保護法（APPI）遵守が必須。ローカル推論でデータ主権と処理義務を満たします。METI AI Governance 2024確認。' },
+            { q: '日本の中堅企業に適している?', a: 'はい。PromptHub、Vellum は日本で使用。ISO 27001など情報セキュリティ標準確認。無料ティアは小規模チーム向け。' },
+            { q: 'PromptLayerは何に使いますか?', a: 'PromptLayerはすべてのLLM APIコール（リクエスト、レスポンス、コスト）をロギングします。これはObservabilityです。分析、デバッグ、コスト追跡に使用します。' },
+            { q: 'プロンプトデータベースを自分で構築すべきですか?', a: '構築には2～4週間のエンジニアリング作業が必要です（バージョニング、API、権限、監査ログ）。プラットフォームはこれをすべて提供します。購入する方が早くて安いです。' },
+          ],
       },
       sources: {
         id: 'sources',
@@ -3080,87 +3068,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '什么是提示词管理?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '提示词管理是存储、版本控制和将提示词部署到生产环境的过程，涉及团队协作。它解决: 在哪里存储（数据库）、如何版本控制（版本管理）、如何部署（API）、谁有访问权限（权限）。',
+          {
+            '@type': 'Question',
+            'name': '什么是提示词管理?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词管理是存储、版本控制和将提示词部署到生产环境的过程。解决: 存储位置（数据库）、版本控制方式（版本管理）、部署方式（API）、访问权限（权限）。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '为什么需要提示词管理平台?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '没有平台的情况下，团队在笔记本中临时编辑提示词、丢失历史记录、无法回滚坏的更改、没有审计跟踪。平台通过版本控制和批准工作流实现安全迭代。',
+          {
+            '@type': 'Question',
+            'name': '为什么需要提示词管理平台?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '没有平台，团队编辑、丢失历史、无法回滚、没有审计。平台通过版本控制和批准工作流实现安全迭代。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHub和Vellum有什么区别?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptHub是Git风格版本控制（开发焦点）。Vellum是生产部署（部署焦点）。许多团队两者都用: 开发用PromptHub、生产用Vellum。',
+          {
+            '@type': 'Question',
+            'name': 'PromptHub和Vellum有什么区别?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptHub是Git风格版本控制（开发焦点）。Vellum是部署（部署焦点）。许多团队两者都用。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHub支持团队审查吗?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '是的。PromptHub具有拉取请求、代码审查和批准工作流，就像GitHub一样。治理和合规性必需。',
+          {
+            '@type': 'Question',
+            'name': 'PromptHub支持团队审查吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。拉取请求、代码审查、批准工作流。治理必需。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHub能部署到生产环境吗?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptHub提供REST API来获取提示词，但不管理部署基础设施（A/B测试、监控）。使用Vellum实现。',
+          {
+            '@type': 'Question',
+            'name': 'PromptHub能部署到生产吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptHub提供REST API，但不管理部署基础设施（A/B测试、监控）。使用Vellum。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptLayer用来做什么?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptLayer记录每个LLM API调用（请求、响应、成本）以实现可观察性。用于分析、调试和成本跟踪。',
+          {
+            '@type': 'Question',
+            'name': 'PromptLayer用来做什么?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptLayer记录每个LLM API调用及成本。用于分析、调试和成本跟踪。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '可以组合这些平台吗?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '可以。常见堆栈: PromptHub（开发）→ Vellum（生产）→ PromptLayer（日志）→ LangSmith（追踪）。',
+          {
+            '@type': 'Question',
+            'name': '可以组合这些平台吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。PromptHub（开发）→ Vellum（生产）→ PromptLayer（日志）→ LangSmith（追踪）。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '应该自己构建提示词数据库吗?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '构建需要2-4周工程工作量（版本控制、API、权限、审计日志）。平台开箱即用。购买更快更便宜。',
+          {
+            '@type': 'Question',
+            'name': '应该自己构建?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '需要2-4周工程工作。平台开箱即用。购买更便宜。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '中国企业需要遵守什么数据法规?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '《数据安全法》（2021）要求对敏感数据分类保护。本地推理满足数据主权和处理义务。验证供应商的数据处理协议。',
+          {
+            '@type': 'Question',
+            'name': '中国企业需要遵守什么法规?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '《数据安全法》（2021）要求对敏感数据分类保护。本地推理满足数据主权。验证供应商合规性。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '这些平台适合亚太地区企业吗?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '是的。PromptHub和Vellum被亚太企业广泛使用。大型企业应验证MLAI框架合规性和本地数据残留要求。免费层适合中小团队。',
+          {
+            '@type': 'Question',
+            'name': '这些平台适合亚太企业吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。PromptHub和Vellum在亚太广泛使用。验证本地合规要求和数据残留要求。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '应该自己构建提示词数据库吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '构建需要2-4周工程工作量（版本控制、API、权限、审计日志）。平台开箱即用。购买更快更便宜。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3354,47 +3350,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: '什么是提示词管理?',
-            a: '提示词管理是存储、版本控制和将提示词部署到生产环境的过程。解决: 存储位置（数据库）、版本控制方式（版本管理）、部署方式（API）、访问权限（权限）。',
-          },
-          {
-            q: '为什么需要提示词管理平台?',
-            a: '没有平台，团队编辑、丢失历史、无法回滚、没有审计。平台通过版本控制和批准工作流实现安全迭代。',
-          },
-          {
-            q: 'PromptHub和Vellum有什么区别?',
-            a: 'PromptHub是Git风格版本控制（开发焦点）。Vellum是部署（部署焦点）。许多团队两者都用。',
-          },
-          {
-            q: 'PromptHub支持团队审查吗?',
-            a: '是的。拉取请求、代码审查、批准工作流。治理必需。',
-          },
-          {
-            q: 'PromptHub能部署到生产吗?',
-            a: 'PromptHub提供REST API，但不管理部署基础设施（A/B测试、监控）。使用Vellum。',
-          },
-          {
-            q: 'PromptLayer用来做什么?',
-            a: 'PromptLayer记录每个LLM API调用及成本。用于分析、调试和成本跟踪。',
-          },
-          {
-            q: '可以组合这些平台吗?',
-            a: '可以。PromptHub（开发）→ Vellum（生产）→ PromptLayer（日志）→ LangSmith（追踪）。',
-          },
-          {
-            q: '应该自己构建?',
-            a: '需要2-4周工程工作。平台开箱即用。购买更便宜。',
-          },
-          {
-            q: '中国企业需要遵守什么法规?',
-            a: '《数据安全法》（2021）要求对敏感数据分类保护。本地推理满足数据主权。验证供应商合规性。',
-          },
-          {
-            q: '这些平台适合亚太企业吗?',
-            a: '是的。PromptHub和Vellum在亚太广泛使用。验证本地合规要求和数据残留要求。',
-          },
-        ],
+            { q: '什么是提示词管理?', a: '提示词管理是存储、版本控制和将提示词部署到生产环境的过程。解决: 存储位置（数据库）、版本控制方式（版本管理）、部署方式（API）、访问权限（权限）。' },
+            { q: '为什么需要提示词管理平台?', a: '没有平台，团队编辑、丢失历史、无法回滚、没有审计。平台通过版本控制和批准工作流实现安全迭代。' },
+            { q: 'PromptHub和Vellum有什么区别?', a: 'PromptHub是Git风格版本控制（开发焦点）。Vellum是部署（部署焦点）。许多团队两者都用。' },
+            { q: 'PromptHub支持团队审查吗?', a: '是的。拉取请求、代码审查、批准工作流。治理必需。' },
+            { q: 'PromptHub能部署到生产吗?', a: 'PromptHub提供REST API，但不管理部署基础设施（A/B测试、监控）。使用Vellum。' },
+            { q: 'PromptLayer用来做什么?', a: 'PromptLayer记录每个LLM API调用及成本。用于分析、调试和成本跟踪。' },
+            { q: '可以组合这些平台吗?', a: '可以。PromptHub（开发）→ Vellum（生产）→ PromptLayer（日志）→ LangSmith（追踪）。' },
+            { q: '应该自己构建?', a: '需要2-4周工程工作。平台开箱即用。购买更便宜。' },
+            { q: '中国企业需要遵守什么法规?', a: '《数据安全法》（2021）要求对敏感数据分类保护。本地推理满足数据主权。验证供应商合规性。' },
+            { q: '这些平台适合亚太企业吗?', a: '是的。PromptHub和Vellum在亚太广泛使用。验证本地合规要求和数据残留要求。' },
+            { q: '应该自己构建提示词数据库吗?', a: '构建需要2-4周工程工作量（版本控制、API、权限、审计日志）。平台开箱即用。购买更快更便宜。' },
+          ],
       },
       sources: {
         id: 'sources',

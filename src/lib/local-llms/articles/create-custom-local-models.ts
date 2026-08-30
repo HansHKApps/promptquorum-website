@@ -1230,6 +1230,7 @@ schema: {
             { q: 'O fine-tuning consegue igualar a qualidade de um modelo pré-treinado?', a: 'Modelos com fine-tuning podem superar o desempenho do modelo base em seu domínio específico, mas não alcançarão a amplitude de conhecimento de um modelo pré-treinado maior. Faça fine-tuning quando a precisão específica do domínio importa mais que a amplitude.' },
             { q: 'Quantos dados preciso para fazer fine-tuning de forma eficaz?', a: 'Mínimo 500–1.000 exemplos para um modelo utilizável; 5.000+ para qualidade de produção. A qualidade dos dados importa mais que a quantidade.' },
             { q: 'Posso fazer fine-tuning em português?', a: 'Sim. Use dados de treinamento em PT-BR. Modelos multilíngues (Aya, Qwen) são melhores pontos de partida para fine-tuning em português do que modelos treinados principalmente em inglês.' },
+            { q: 'Quando devo considerar o pré-treinamento em vez do fine-tuning?', a: 'Apenas se: (1) você tem mais de 10 bilhões de tokens de dados únicos, (2) o fine-tuning falha consistentemente em atingir seu objetivo de precisão, (3) o orçamento é maior que $50.000, e (4) você precisa de um modelo proprietário para vantagem competitiva. Para 99% das organizações, o fine-tuning é a escolha correta.' },
           ],
         },
         relatedReading: {
@@ -1286,9 +1287,38 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'O fine-tuning consegue igualar a qualidade de um modelo pré-treinado?', acceptedAnswer: { '@type': 'Answer', text: 'Modelos com fine-tuning podem superar o desempenho do modelo base em seu domínio específico, mas não alcançarão a amplitude de conhecimento de um modelo pré-treinado maior. Faça fine-tuning quando a precisão específica do domínio importa mais que a amplitude.' } },
-          { '@type': 'Question', name: 'Quantos dados preciso para fazer fine-tuning de forma eficaz?', acceptedAnswer: { '@type': 'Answer', text: 'Mínimo 500–1.000 exemplos para um modelo utilizável; 5.000+ para qualidade de produção. A qualidade dos dados importa mais que a quantidade — 1.000 exemplos de alta qualidade superam 50.000 de baixa qualidade.' } },
-          { '@type': 'Question', name: 'Quando devo considerar o pré-treinamento em vez do fine-tuning?', acceptedAnswer: { '@type': 'Answer', text: 'Apenas se: (1) você tem mais de 10 bilhões de tokens de dados únicos, (2) o fine-tuning falha consistentemente em atingir seu objetivo de precisão, (3) o orçamento é maior que $50.000, e (4) você precisa de um modelo proprietário para vantagem competitiva. Para 99% das organizações, o fine-tuning é a escolha correta.' } },
+          {
+            '@type': 'Question',
+            'name': 'O fine-tuning consegue igualar a qualidade de um modelo pré-treinado?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Modelos com fine-tuning podem superar o desempenho do modelo base em seu domínio específico, mas não alcançarão a amplitude de conhecimento de um modelo pré-treinado maior. Faça fine-tuning quando a precisão específica do domínio importa mais que a amplitude.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quantos dados preciso para fazer fine-tuning de forma eficaz?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mínimo 500–1.000 exemplos para um modelo utilizável; 5.000+ para qualidade de produção. A qualidade dos dados importa mais que a quantidade.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso fazer fine-tuning em português?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Use dados de treinamento em PT-BR. Modelos multilíngues (Aya, Qwen) são melhores pontos de partida para fine-tuning em português do que modelos treinados principalmente em inglês.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quando devo considerar o pré-treinamento em vez do fine-tuning?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apenas se: (1) você tem mais de 10 bilhões de tokens de dados únicos, (2) o fine-tuning falha consistentemente em atingir seu objetivo de precisão, (3) o orçamento é maior que $50.000, e (4) você precisa de um modelo proprietário para vantagem competitiva. Para 99% das organizações, o fine-tuning é a escolha correta.',
+            },
+          },
         ],
       },
     },
@@ -1760,66 +1790,66 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?',
-            acceptedAnswer: {
+            'name': 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Les modèles fine-tunés peuvent dépasser les performances du modèle de base sur votre domaine spécifique, mais ne correspondent pas à la largeur de connaissance d\'un modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur des documents juridiques surpassera Llama 3.3 70B sur les tâches juridiques, mais sous-performera sur les connaissances générales. Fine-tuner quand la précision spécifique au domaine compte plus que l\'étendue.',
+              'text': 'Les modèles fine-tunés peuvent surpasser modèle base votre domaine spécifique, mais ne correspondent pas largeur connaissance modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur documents juridiques surpassera Llama 3.3 70B sur tâches juridiques, mais sous-performera sur connaissances générales. Fine-tuner quand précision domaine compte plus que largeur.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Combien de données dois-je utiliser pour fine-tuner efficacement ?',
-            acceptedAnswer: {
+            'name': 'Combien de données me dois-je utiliser pour fine-tuner efficacement ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Minimum 500–1 000 exemples pour un modèle utilisable ; 5 000+ pour qualité production. La qualité des données compte plus que la quantité — 1 000 exemples de haute qualité dépassent 50 000 de faible qualité. Utilisez LoRA pour petits ensembles (500–2 000 exemples) et fine-tuning complet seulement avec 10 000+ exemples.',
+              'text': 'Minimum 500–1 000 exemples modèle utilisable ; 5 000+ qualité production. Qualité données compte plus quantité — 1 000 exemples haute qualité dépassent 50 000 faible qualité. Utilisez LoRA petits ensembles (500–2 000 exemples) et fine-tuning complet seulement 10 000+ exemples.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quelle est la différence entre LoRA et le fine-tuning complet ?',
-            acceptedAnswer: {
+            'name': 'Quelle est la différence entre LoRA et le fine-tuning complet ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'LoRA (Low-Rank Adaptation) met à jour seulement 1–2% des poids du modèle, le rendant 4× plus rapide et nécessitant 80–90% moins de VRAM. Le fine-tuning complet met à jour tous les poids et offre de meilleurs résultats marginaux (~2–5% amélioration) mais nécessite beaucoup de puissance calcul. Utilisez LoRA pour la plupart des projets ; fine-tuning complet seulement avec budget.',
+              'text': 'LoRA (Low-Rank Adaptation) met à jour seulement 1–2% poids modèle, le rendant 4× plus rapide et nécessitant 80–90% moins VRAM. Fine-tuning complet met à jour tous poids et offre meilleurs résultats marginaux (~2–5% amélioration) mais nécessite calcul significatif. Utilisez LoRA plupart projets ; fine-tuning complet seulement budget.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quand devrais-je considérer le pre-training au lieu du fine-tuning ?',
-            acceptedAnswer: {
+            'name': 'Quand devrais-je considérer le pre-training au lieu du fine-tuning ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Seulement si : (1) vous avez >10 milliards tokens de données uniques, (2) fine-tuning échoue régulièrement atteindre votre cible précision, (3) budget >50 000 €, (4) vous avez besoin d\'un modèle propriétaire avantage compétitif. Pour 99% organisations, fine-tuning est le bon choix.',
+              'text': 'Seulement si : (1) vous avez >10 milliards tokens données uniques, (2) fine-tuning échoue régulièrement atteindre votre cible précision, (3) budget >50 000 €, (4) vous avez besoin modèle propriétaire avantage compétitif. Pour 99% organisations, fine-tuning est le bon choix.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Comment évaluer si mon modèle personnalisé est prêt production ?',
-            acceptedAnswer: {
+            'name': 'Comment évaluer si mon modèle personnalisé est prêt production ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Testez sur 3 dimensions : (1) Métriques spécifiques tâche (précision, F1, BLEU), (2) Comparaison benchmark (exécutez sur MMLU ou HumanEval), (3) Métriques métier (améliore-t-il vraiment les résultats ?). Si votre modèle fine-tuné surpasse base modèle 5–10% sur votre tâche, c\'est prêt production.',
+              'text': 'Testez sur 3 dimensions : (1) Métriques spécifiques tâche (précision, F1, BLEU), (2) Comparaison benchmark (exécutez sur MMLU ou HumanEval pour comparer modèle base), (3) Métriques métier (améliore-t-il vraiment résultats ?). Si votre modèle fine-tuné surpasse modèle base 5–10% votre tâche, c\'est prêt production.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Puis-je combiner fine-tuning et prompt engineering meilleurs résultats ?',
-            acceptedAnswer: {
+            'name': 'Puis-je combiner fine-tuning et prompt engineering pour meilleurs résultats ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Oui — c\'est une meilleure pratique. Fine-tuning gère changements structurels (langage domaine, format) ; prompt engineering gère cas spécifiques. Modèle juridique fine-tuné + bonne ingénierie prompt surpassera l\'un ou l\'autre seul. Commencez optimisation prompt (gratuit), puis fine-tuning si nécessaire.',
+              'text': 'Oui — c\'est meilleure pratique. Fine-tuning gère changements structurels (langage domaine, format) ; prompt engineering gère cas spécifiques. Modèle juridique fine-tuné + bonne ingénierie prompt surpassera l\'un ou l\'autre seul. Commencez optimisation prompt (gratuit), puis fine-tuning si nécessaire.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Quel framework devrais-je utiliser pour fine-tuning ?',
-            acceptedAnswer: {
+            'name': 'Quel framework devrais-je utiliser pour fine-tuning ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Unsloth (jusqu\'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
+              'text': 'Unsloth (jusqu\'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
             },
           },
           {
             '@type': 'Question',
-            name: 'Comment savoir si pre-training vaut le coût ?',
-            acceptedAnswer: {
+            'name': 'Comment savoir si pre-training vaut le coût ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Faites ce calcul : (1) Estimez écart qualité fine-tuning sur votre tâche (ex. fine-tuning atteint 85%, pre-training pourrait 92%). (2) Quantifiez valeur métier par point précision (ex. +1% = 10k€ revenue). (3) Si (50k€ coût) < (valeur 7% amélioration), pré-entraîner. Sinon, fine-tuner.',
+              'text': 'Faites ce calcul : (1) Estimez écart qualité fine-tuning votre tâche (ex. fine-tuning atteint 85%, pre-training pourrait 92%). (2) Quantifiez valeur métier par point précision (ex. +1% = 10 000€ revenue). (3) Si (50 000€ coût pre-training) < (valeur 7% amélioration), pré-entraîner. Sinon, fine-tuner.',
             },
           },
         ],
@@ -2024,38 +2054,14 @@ schema: {
           id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
-            {
-              q: 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?',
-              a: 'Les modèles fine-tunés peuvent surpasser modèle base votre domaine spécifique, mais ne correspondent pas largeur connaissance modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur documents juridiques surpassera Llama 3.3 70B sur tâches juridiques, mais sous-performera sur connaissances générales. Fine-tuner quand précision domaine compte plus que largeur.',
-            },
-            {
-              q: 'Combien de données me dois-je utiliser pour fine-tuner efficacement ?',
-              a: 'Minimum 500–1 000 exemples modèle utilisable ; 5 000+ qualité production. Qualité données compte plus quantité — 1 000 exemples haute qualité dépassent 50 000 faible qualité. Utilisez LoRA petits ensembles (500–2 000 exemples) et fine-tuning complet seulement 10 000+ exemples.',
-            },
-            {
-              q: 'Quelle est la différence entre LoRA et le fine-tuning complet ?',
-              a: 'LoRA (Low-Rank Adaptation) met à jour seulement 1–2% poids modèle, le rendant 4× plus rapide et nécessitant 80–90% moins VRAM. Fine-tuning complet met à jour tous poids et offre meilleurs résultats marginaux (~2–5% amélioration) mais nécessite calcul significatif. Utilisez LoRA plupart projets ; fine-tuning complet seulement budget.',
-            },
-            {
-              q: 'Quand devrais-je considérer le pre-training au lieu du fine-tuning ?',
-              a: 'Seulement si : (1) vous avez >10 milliards tokens données uniques, (2) fine-tuning échoue régulièrement atteindre votre cible précision, (3) budget >50 000 €, (4) vous avez besoin modèle propriétaire avantage compétitif. Pour 99% organisations, fine-tuning est le bon choix.',
-            },
-            {
-              q: 'Comment évaluer si mon modèle personnalisé est prêt production ?',
-              a: 'Testez sur 3 dimensions : (1) Métriques spécifiques tâche (précision, F1, BLEU), (2) Comparaison benchmark (exécutez sur MMLU ou HumanEval pour comparer modèle base), (3) Métriques métier (améliore-t-il vraiment résultats ?). Si votre modèle fine-tuné surpasse modèle base 5–10% votre tâche, c\'est prêt production.',
-            },
-            {
-              q: 'Puis-je combiner fine-tuning et prompt engineering pour meilleurs résultats ?',
-              a: 'Oui — c\'est meilleure pratique. Fine-tuning gère changements structurels (langage domaine, format) ; prompt engineering gère cas spécifiques. Modèle juridique fine-tuné + bonne ingénierie prompt surpassera l\'un ou l\'autre seul. Commencez optimisation prompt (gratuit), puis fine-tuning si nécessaire.',
-            },
-            {
-              q: 'Quel framework devrais-je utiliser pour fine-tuning ?',
-              a: 'Unsloth (jusqu\'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.',
-            },
-            {
-              q: 'Comment savoir si pre-training vaut le coût ?',
-              a: 'Faites ce calcul : (1) Estimez écart qualité fine-tuning votre tâche (ex. fine-tuning atteint 85%, pre-training pourrait 92%). (2) Quantifiez valeur métier par point précision (ex. +1% = 10 000€ revenue). (3) Si (50 000€ coût pre-training) < (valeur 7% amélioration), pré-entraîner. Sinon, fine-tuner.',
-            },
+            { q: 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?', a: 'Les modèles fine-tunés peuvent surpasser modèle base votre domaine spécifique, mais ne correspondent pas largeur connaissance modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur documents juridiques surpassera Llama 3.3 70B sur tâches juridiques, mais sous-performera sur connaissances générales. Fine-tuner quand précision domaine compte plus que largeur.' },
+            { q: 'Combien de données me dois-je utiliser pour fine-tuner efficacement ?', a: 'Minimum 500–1 000 exemples modèle utilisable ; 5 000+ qualité production. Qualité données compte plus quantité — 1 000 exemples haute qualité dépassent 50 000 faible qualité. Utilisez LoRA petits ensembles (500–2 000 exemples) et fine-tuning complet seulement 10 000+ exemples.' },
+            { q: 'Quelle est la différence entre LoRA et le fine-tuning complet ?', a: 'LoRA (Low-Rank Adaptation) met à jour seulement 1–2% poids modèle, le rendant 4× plus rapide et nécessitant 80–90% moins VRAM. Fine-tuning complet met à jour tous poids et offre meilleurs résultats marginaux (~2–5% amélioration) mais nécessite calcul significatif. Utilisez LoRA plupart projets ; fine-tuning complet seulement budget.' },
+            { q: 'Quand devrais-je considérer le pre-training au lieu du fine-tuning ?', a: 'Seulement si : (1) vous avez >10 milliards tokens données uniques, (2) fine-tuning échoue régulièrement atteindre votre cible précision, (3) budget >50 000 €, (4) vous avez besoin modèle propriétaire avantage compétitif. Pour 99% organisations, fine-tuning est le bon choix.' },
+            { q: 'Comment évaluer si mon modèle personnalisé est prêt production ?', a: 'Testez sur 3 dimensions : (1) Métriques spécifiques tâche (précision, F1, BLEU), (2) Comparaison benchmark (exécutez sur MMLU ou HumanEval pour comparer modèle base), (3) Métriques métier (améliore-t-il vraiment résultats ?). Si votre modèle fine-tuné surpasse modèle base 5–10% votre tâche, c\'est prêt production.' },
+            { q: 'Puis-je combiner fine-tuning et prompt engineering pour meilleurs résultats ?', a: 'Oui — c\'est meilleure pratique. Fine-tuning gère changements structurels (langage domaine, format) ; prompt engineering gère cas spécifiques. Modèle juridique fine-tuné + bonne ingénierie prompt surpassera l\'un ou l\'autre seul. Commencez optimisation prompt (gratuit), puis fine-tuning si nécessaire.' },
+            { q: 'Quel framework devrais-je utiliser pour fine-tuning ?', a: 'Unsloth (jusqu\'à 2× plus rapide, [selon unsloth.ai](https://github.com/unslothai/unsloth)), Axolotl (flexible), et Hugging Face Transformers (officiel, très documenté) sont options principales. Unsloth recommandé pour vitesse ; Axolotl pour configurations multi-GPU. Tous supportent LoRA et fonctionnent avec Ollama déploiement.' },
+            { q: 'Comment savoir si pre-training vaut le coût ?', a: 'Faites ce calcul : (1) Estimez écart qualité fine-tuning votre tâche (ex. fine-tuning atteint 85%, pre-training pourrait 92%). (2) Quantifiez valeur métier par point précision (ex. +1% = 10 000€ revenue). (3) Si (50 000€ coût pre-training) < (valeur 7% amélioration), pré-entraîner. Sinon, fine-tuner.' },
           ],
         },
         regionalContext: {
@@ -2148,66 +2154,66 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？',
-            acceptedAnswer: {
+            'name': 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Fine-tune モデルは特定ドメインでベースモデルパフォーマンスを上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有の精度が幅より重要な場合、fine-tune してください。',
+              'text': 'Fine-tune モデルは特定ドメインでベースモデル機能を上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有精度が幅より重要な場合、fine-tune してください。',
             },
           },
           {
             '@type': 'Question',
-            name: '効果的に fine-tune するにはどのくらいデータが必要ですか？',
-            acceptedAnswer: {
+            'name': '効果的に fine-tune するにはどのくらいデータが必要ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '最小 500～1,000 サンプルで使用可能なモデル；5,000+ は本番品質。データ品質は数量より重要です—1,000 高品質サンプルは 50,000 低品質サンプルに勝ります。小さいデータセット (500～2,000 サンプル) では LoRA、10,000+ サンプルでのみ完全な fine-tuning を使用します。',
+              'text': '最小 500～1,000 サンプルで使用可能なモデル；5,000+ は本番品質。データ品質は量より重要—1,000 高品質サンプルは 50,000 低品質サンプルに勝ります。小さいデータセット（500～2,000 サンプル）では LoRA、10,000+ サンプルでのみ完全な fine-tuning を使用。',
             },
           },
           {
             '@type': 'Question',
-            name: 'LoRA と完全な fine-tuning の違いは何ですか？',
-            acceptedAnswer: {
+            'name': 'LoRA と完全な fine-tuning の違いは何ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'LoRA (Low-Rank Adaptation) はモデルウェイトの 1～2% のみ更新し、4 倍高速で 80～90% 少ない VRAM が必要です。完全な fine-tuning はすべてのウェイトを更新し、わずかに良い結果 (~2～5% 精度向上) を与えますが、大量の計算が必要です。ほとんどのプロジェクトでは LoRA、予算がある場合のみ完全な fine-tuning を使用します。',
+              'text': 'LoRA（Low-Rank Adaptation）はモデルウェイトの 1～2% のみ更新し、4 倍高速で 80～90% 少ない VRAM が必要。完全な fine-tuning はすべてのウェイトを更新し、わずかに良い結果（~2～5% 精度向上）を与えますが大量計算が必要。ほとんどのプロジェクトでは LoRA；完全な fine-tuning は予算がある場合のみ。',
             },
           },
           {
             '@type': 'Question',
-            name: 'fine-tuning ではなく pre-training を検討すべきですか？',
-            acceptedAnswer: {
+            'name': 'fine-tuning ではなく pre-training を検討すべきですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '次の場合のみ：(1) 100 億以上トークン固有データがある、(2) fine-tuning が精度目標に達しない、(3) 予算が 50,000 ドル以上、(4) 競争上の優位性が必要。99% の組織では fine-tuning が正しい選択です。',
+              'text': '次の場合のみ：(1) 100 億以上ユニークトークンがある、(2) fine-tuning が精度目標に達しない、(3) 予算が 50,000 ドル以上、(4) 競争上の優位性が必要。99% の組織では fine-tuning が正しい選択。',
             },
           },
           {
             '@type': 'Question',
-            name: 'カスタムモデルが本番で準備完了かどうかを評価するにはどうすればよいですか？',
-            acceptedAnswer: {
+            'name': 'カスタムモデルが本番対応かどうかを評価するにはどうすればよいですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '3 つの次元でテストします：(1) タスク固有メトリクス (精度、F1、BLEU)、(2) ベンチマーク比較 (MMLU または HumanEval で実行)、(3) ビジネスメトリクス (実際の結果を改善していますか?)。Fine-tune モデルがベースモデルをタスク上で 5～10% 上回っている場合、本番準備完了です。',
+              'text': '3 つの次元でテスト：(1) タスク固有メトリクス（精度、F1、BLEU）、(2) ベンチマーク比較（MMLU または HumanEval で実行）、(3) ビジネスメトリクス（実際の結果を改善していますか？）。Fine-tune モデルがベースモデルを 5-10% 上回る場合、本番対応。',
             },
           },
           {
             '@type': 'Question',
-            name: 'Fine-tuning とプロンプトエンジニアリングを組み合わせてより良い結果を得ることができますか？',
-            acceptedAnswer: {
+            'name': 'Fine-tuning とプロンプトエンジニアリングを組み合わせてより良い結果を得ることができますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'はい—これはベストプラクティスです。Fine-tuning は構造的変更 (ドメイン言語、形式) を処理します；プロンプトエンジニアリングは特定のユースケースを処理します。Fine-tune 法的モデル + 優れたプロンプトエンジニアリングはどちらか単独より優れています。プロンプト最適化 (無料) で始め、必要に応じて fine-tune します。',
+              'text': 'はい—ベストプラクティス。Fine-tuning は構造的変更（ドメイン言語、形式）を処理；プロンプトエンジニアリングは特定ユースケース処理。Fine-tune 法的モデル + 優れたプロンプトエンジニアリングはどちらか単独より優れています。プロンプト最適化（無料）で始め、必要に応じて fine-tune。',
             },
           },
           {
             '@type': 'Question',
-            name: 'Fine-tuning に使用すべきフレームワークは何ですか？',
-            acceptedAnswer: {
+            'name': 'Fine-tuning に使用すべきフレームワークは何ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Unsloth (最大2×高速、[unsloth.ai参照](https://github.com/unslothai/unsloth))、Axolotl (柔軟)、および Hugging Face Transformers (公式、最も文書化) が主要オプションです。Unsloth は速度、Axolotl はマルチ GPU セットアップに推奨。すべて LoRA をサポートし、Ollama デプロイメントで機能します。',
+              'text': 'Unsloth（最大2×高速、[unsloth.ai参照](https://github.com/unslothai/unsloth)）、Axolotl（柔軟）、Hugging Face Transformers（公式、最も文書化）が主要オプション。速度なら Unsloth；マルチ GPU セットアップなら Axolotl 推奨。すべて LoRA サポート、Ollama デプロイメント対応。',
             },
           },
           {
             '@type': 'Question',
-            name: 'Pre-training がコスト価値があるかどうかを知るにはどうすればよいですか？',
-            acceptedAnswer: {
+            'name': 'Pre-training がコスト価値があるかどうかを知るにはどうすればよいですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'この計算を実行します：(1) タスク上の fine-tuning 品質ギャップを推定（例えば、fine-tuning は 85% に達し、pre-training は 92% に達する可能性があります）。(2) 精度ポイントごとのビジネス価値を定量化（例えば、+1% = $10k 収入）。(3) ($50k pre-training コスト) < (7% 改善の価値) の場合、pre-train。そうでない場合は fine-tune。',
+              'text': 'この計算を実行：(1) タスク上の fine-tuning 品質ギャップを推定（ex. fine-tuning は 85%、pre-training は 92%）。(2) 精度ポイントごとのビジネス価値を定量化（ex. +1% = $10k 収入）。(3) ($50k pre-training コスト) < (7% 改善価値) なら pre-train。そうでなければ fine-tune。',
             },
           },
         ],
@@ -2412,38 +2418,14 @@ schema: {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            {
-              q: 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？',
-              a: 'Fine-tune モデルは特定ドメインでベースモデル機能を上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有精度が幅より重要な場合、fine-tune してください。',
-            },
-            {
-              q: '効果的に fine-tune するにはどのくらいデータが必要ですか？',
-              a: '最小 500～1,000 サンプルで使用可能なモデル；5,000+ は本番品質。データ品質は量より重要—1,000 高品質サンプルは 50,000 低品質サンプルに勝ります。小さいデータセット（500～2,000 サンプル）では LoRA、10,000+ サンプルでのみ完全な fine-tuning を使用。',
-            },
-            {
-              q: 'LoRA と完全な fine-tuning の違いは何ですか？',
-              a: 'LoRA（Low-Rank Adaptation）はモデルウェイトの 1～2% のみ更新し、4 倍高速で 80～90% 少ない VRAM が必要。完全な fine-tuning はすべてのウェイトを更新し、わずかに良い結果（~2～5% 精度向上）を与えますが大量計算が必要。ほとんどのプロジェクトでは LoRA；完全な fine-tuning は予算がある場合のみ。',
-            },
-            {
-              q: 'fine-tuning ではなく pre-training を検討すべきですか？',
-              a: '次の場合のみ：(1) 100 億以上ユニークトークンがある、(2) fine-tuning が精度目標に達しない、(3) 予算が 50,000 ドル以上、(4) 競争上の優位性が必要。99% の組織では fine-tuning が正しい選択。',
-            },
-            {
-              q: 'カスタムモデルが本番対応かどうかを評価するにはどうすればよいですか？',
-              a: '3 つの次元でテスト：(1) タスク固有メトリクス（精度、F1、BLEU）、(2) ベンチマーク比較（MMLU または HumanEval で実行）、(3) ビジネスメトリクス（実際の結果を改善していますか？）。Fine-tune モデルがベースモデルを 5-10% 上回る場合、本番対応。',
-            },
-            {
-              q: 'Fine-tuning とプロンプトエンジニアリングを組み合わせてより良い結果を得ることができますか？',
-              a: 'はい—ベストプラクティス。Fine-tuning は構造的変更（ドメイン言語、形式）を処理；プロンプトエンジニアリングは特定ユースケース処理。Fine-tune 法的モデル + 優れたプロンプトエンジニアリングはどちらか単独より優れています。プロンプト最適化（無料）で始め、必要に応じて fine-tune。',
-            },
-            {
-              q: 'Fine-tuning に使用すべきフレームワークは何ですか？',
-              a: 'Unsloth（最大2×高速、[unsloth.ai参照](https://github.com/unslothai/unsloth)）、Axolotl（柔軟）、Hugging Face Transformers（公式、最も文書化）が主要オプション。速度なら Unsloth；マルチ GPU セットアップなら Axolotl 推奨。すべて LoRA サポート、Ollama デプロイメント対応。',
-            },
-            {
-              q: 'Pre-training がコスト価値があるかどうかを知るにはどうすればよいですか？',
-              a: 'この計算を実行：(1) タスク上の fine-tuning 品質ギャップを推定（ex. fine-tuning は 85%、pre-training は 92%）。(2) 精度ポイントごとのビジネス価値を定量化（ex. +1% = $10k 収入）。(3) ($50k pre-training コスト) < (7% 改善価値) なら pre-train。そうでなければ fine-tune。',
-            },
+            { q: 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？', a: 'Fine-tune モデルは特定ドメインでベースモデル機能を上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有精度が幅より重要な場合、fine-tune してください。' },
+            { q: '効果的に fine-tune するにはどのくらいデータが必要ですか？', a: '最小 500～1,000 サンプルで使用可能なモデル；5,000+ は本番品質。データ品質は量より重要—1,000 高品質サンプルは 50,000 低品質サンプルに勝ります。小さいデータセット（500～2,000 サンプル）では LoRA、10,000+ サンプルでのみ完全な fine-tuning を使用。' },
+            { q: 'LoRA と完全な fine-tuning の違いは何ですか？', a: 'LoRA（Low-Rank Adaptation）はモデルウェイトの 1～2% のみ更新し、4 倍高速で 80～90% 少ない VRAM が必要。完全な fine-tuning はすべてのウェイトを更新し、わずかに良い結果（~2～5% 精度向上）を与えますが大量計算が必要。ほとんどのプロジェクトでは LoRA；完全な fine-tuning は予算がある場合のみ。' },
+            { q: 'fine-tuning ではなく pre-training を検討すべきですか？', a: '次の場合のみ：(1) 100 億以上ユニークトークンがある、(2) fine-tuning が精度目標に達しない、(3) 予算が 50,000 ドル以上、(4) 競争上の優位性が必要。99% の組織では fine-tuning が正しい選択。' },
+            { q: 'カスタムモデルが本番対応かどうかを評価するにはどうすればよいですか？', a: '3 つの次元でテスト：(1) タスク固有メトリクス（精度、F1、BLEU）、(2) ベンチマーク比較（MMLU または HumanEval で実行）、(3) ビジネスメトリクス（実際の結果を改善していますか？）。Fine-tune モデルがベースモデルを 5-10% 上回る場合、本番対応。' },
+            { q: 'Fine-tuning とプロンプトエンジニアリングを組み合わせてより良い結果を得ることができますか？', a: 'はい—ベストプラクティス。Fine-tuning は構造的変更（ドメイン言語、形式）を処理；プロンプトエンジニアリングは特定ユースケース処理。Fine-tune 法的モデル + 優れたプロンプトエンジニアリングはどちらか単独より優れています。プロンプト最適化（無料）で始め、必要に応じて fine-tune。' },
+            { q: 'Fine-tuning に使用すべきフレームワークは何ですか？', a: 'Unsloth（最大2×高速、[unsloth.ai参照](https://github.com/unslothai/unsloth)）、Axolotl（柔軟）、Hugging Face Transformers（公式、最も文書化）が主要オプション。速度なら Unsloth；マルチ GPU セットアップなら Axolotl 推奨。すべて LoRA サポート、Ollama デプロイメント対応。' },
+            { q: 'Pre-training がコスト価値があるかどうかを知るにはどうすればよいですか？', a: 'この計算を実行：(1) タスク上の fine-tuning 品質ギャップを推定（ex. fine-tuning は 85%、pre-training は 92%）。(2) 精度ポイントごとのビジネス価値を定量化（ex. +1% = $10k 収入）。(3) ($50k pre-training コスト) < (7% 改善価値) なら pre-train。そうでなければ fine-tune。' },
           ],
         },
         regionalContext: {

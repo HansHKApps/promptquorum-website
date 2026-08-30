@@ -95,19 +95,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Can I fine-tune a 14B model for under $1?',
-            a: 'A complete, high-quality fine-tuning run on a 14B model takes 4–8 hours at minimum, costing $1.76–$3.52 on a RunPod A40 spot ($0.44/hr). Under $1 is achievable for a quick 1–2 hour proof-of-concept run (500–1000 training steps), but you\'ll likely need more steps for production-quality results. Budget $3–8 for a production fine-tuning job on a 14B model.',
-          },
-          {
-            q: 'What software do I need for QLoRA fine-tuning on a cloud GPU?',
-            a: 'The fastest setup: use RunPod\'s pre-built Unsloth template (Python environment with CUDA, PyTorch, Hugging Face PEFT, and Unsloth pre-installed). For manual setup: install Python 3.11+, torch, transformers, peft, trl, and unsloth. Then write a training script using Unsloth\'s FastLanguageModel class. Total setup time with the template: under 5 minutes.',
-          },
-          {
-            q: 'Is fine-tuning worth it vs using a larger base model?',
-            a: 'For domain-specific tasks (medical notes, legal documents, company-specific formats), fine-tuning a 7B–14B model often outperforms a generic 70B model at a fraction of the inference cost. For general-purpose tasks where the base model already performs well, fine-tuning adds minimal value. The sweet spot: fine-tune when you have >500 domain-specific examples and want consistent output formatting.',
-          },
-        ],
+            { q: 'Can I fine-tune a 14B model for under $1?', a: 'A complete, high-quality fine-tuning run on a 14B model takes 4–8 hours at minimum, costing $1.76–$3.52 on a RunPod A40 spot ($0.44/hr). Under $1 is achievable for a quick 1–2 hour proof-of-concept run (500–1000 training steps), but you\'ll likely need more steps for production-quality results. Budget $3–8 for a production fine-tuning job on a 14B model.' },
+            { q: 'What software do I need for QLoRA fine-tuning on a cloud GPU?', a: 'The fastest setup: use RunPod\'s pre-built Unsloth template (Python environment with CUDA, PyTorch, Hugging Face PEFT, and Unsloth pre-installed). For manual setup: install Python 3.11+, torch, transformers, peft, trl, and unsloth. Then write a training script using Unsloth\'s FastLanguageModel class. Total setup time with the template: under 5 minutes.' },
+            { q: 'Is fine-tuning worth it vs using a larger base model?', a: 'For domain-specific tasks (medical notes, legal documents, company-specific formats), fine-tuning a 7B–14B model often outperforms a generic 70B model at a fraction of the inference cost. For general-purpose tasks where the base model already performs well, fine-tuning adds minimal value. The sweet spot: fine-tune when you have >500 domain-specific examples and want consistent output formatting.' },
+            { q: 'What is the cheapest cloud GPU for fine-tuning a local LLM?', a: 'RunPod RTX 4090 spot at $0.28–0.44/hr and Vast.ai RTX 4090 at $0.32–0.48/hr are the cheapest options for QLoRA fine-tuning. A typical run costs $1–2 total.' },
+          ],
       },
       relatedReading: {
         title: 'Related Guides',
@@ -123,23 +115,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the cheapest cloud GPU for fine-tuning a local LLM?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod RTX 4090 spot at $0.28–0.44/hr and Vast.ai RTX 4090 at $0.32–0.48/hr are the cheapest options for QLoRA fine-tuning. A typical run costs $1–2 total.',
+          {
+            '@type': 'Question',
+            'name': 'Can I fine-tune a 14B model for under $1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A complete, high-quality fine-tuning run on a 14B model takes 4–8 hours at minimum, costing $1.76–$3.52 on a RunPod A40 spot ($0.44/hr). Under $1 is achievable for a quick 1–2 hour proof-of-concept run (500–1000 training steps), but you\'ll likely need more steps for production-quality results. Budget $3–8 for a production fine-tuning job on a 14B model.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I fine-tune a 14B model for under $1?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A proof-of-concept run (500–1000 steps) costs under $1. A production-quality fine-tuning job on a 14B model costs $3–8 total.',
+          {
+            '@type': 'Question',
+            'name': 'What software do I need for QLoRA fine-tuning on a cloud GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The fastest setup: use RunPod\'s pre-built Unsloth template (Python environment with CUDA, PyTorch, Hugging Face PEFT, and Unsloth pre-installed). For manual setup: install Python 3.11+, torch, transformers, peft, trl, and unsloth. Then write a training script using Unsloth\'s FastLanguageModel class. Total setup time with the template: under 5 minutes.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Is fine-tuning worth it vs using a larger base model?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For domain-specific tasks (medical notes, legal documents, company-specific formats), fine-tuning a 7B–14B model often outperforms a generic 70B model at a fraction of the inference cost. For general-purpose tasks where the base model already performs well, fine-tuning adds minimal value. The sweet spot: fine-tune when you have >500 domain-specific examples and want consistent output formatting.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the cheapest cloud GPU for fine-tuning a local LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090 spot at $0.28–0.44/hr and Vast.ai RTX 4090 at $0.32–0.48/hr are the cheapest options for QLoRA fine-tuning. A typical run costs $1–2 total.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -237,15 +245,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Kann ich ein 14B-Modell für unter 1 $ fine-tunen?',
-            a: 'Ein vollständiger hochwertiger Fine-Tuning-Lauf auf einem 14B-Modell dauert mindestens 4–8 Stunden und kostet 1,76–3,52 $ auf einem RunPod A40 Spot (0,44 $/Stunde). Unter 1 $ ist für einen schnellen Proof-of-Concept-Lauf (500–1000 Trainingsschritte) erreichbar. Budget: 3–8 $ für einen Produktions-Fine-Tuning-Job auf einem 14B-Modell.',
-          },
-          {
-            q: 'Welche Software brauche ich für QLoRA-Fine-Tuning auf einer Cloud-GPU?',
-            a: 'Schnellste Einrichtung: RunPods vorinstalliertes Unsloth-Template nutzen. Für manuelle Einrichtung: Python 3.11+, torch, transformers, peft, trl und unsloth installieren. Trainingsscript mit Unsloth\'s FastLanguageModel-Klasse schreiben. Setup-Zeit mit dem Template: unter 5 Minuten.',
-          },
-        ],
+            { q: 'Kann ich ein 14B-Modell für unter 1 $ fine-tunen?', a: 'Ein vollständiger hochwertiger Fine-Tuning-Lauf auf einem 14B-Modell dauert mindestens 4–8 Stunden und kostet 1,76–3,52 $ auf einem RunPod A40 Spot (0,44 $/Stunde). Unter 1 $ ist für einen schnellen Proof-of-Concept-Lauf (500–1000 Trainingsschritte) erreichbar. Budget: 3–8 $ für einen Produktions-Fine-Tuning-Job auf einem 14B-Modell.' },
+            { q: 'Welche Software brauche ich für QLoRA-Fine-Tuning auf einer Cloud-GPU?', a: 'Schnellste Einrichtung: RunPods vorinstalliertes Unsloth-Template nutzen. Für manuelle Einrichtung: Python 3.11+, torch, transformers, peft, trl und unsloth installieren. Trainingsscript mit Unsloth\'s FastLanguageModel-Klasse schreiben. Setup-Zeit mit dem Template: unter 5 Minuten.' },
+            { q: 'Was ist die günstigste Cloud-GPU für Fine-Tuning eines lokalen LLMs?', a: 'RunPod RTX 4090 Spot bei 0,28–0,44 $/Stunde und Vast.ai RTX 4090 bei 0,32–0,48 $/Stunde. Ein typischer Lauf kostet 1–2 $ gesamt.' },
+          ],
       },
       relatedReading: {
         title: 'Verwandte Leitfäden',
@@ -261,12 +264,31 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist die günstigste Cloud-GPU für Fine-Tuning eines lokalen LLMs?',
-          acceptedAnswer: { '@type': 'Answer', text: 'RunPod RTX 4090 Spot bei 0,28–0,44 $/Stunde und Vast.ai RTX 4090 bei 0,32–0,48 $/Stunde. Ein typischer Lauf kostet 1–2 $ gesamt.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein 14B-Modell für unter 1 $ fine-tunen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein vollständiger hochwertiger Fine-Tuning-Lauf auf einem 14B-Modell dauert mindestens 4–8 Stunden und kostet 1,76–3,52 $ auf einem RunPod A40 Spot (0,44 $/Stunde). Unter 1 $ ist für einen schnellen Proof-of-Concept-Lauf (500–1000 Trainingsschritte) erreichbar. Budget: 3–8 $ für einen Produktions-Fine-Tuning-Job auf einem 14B-Modell.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Software brauche ich für QLoRA-Fine-Tuning auf einer Cloud-GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Schnellste Einrichtung: RunPods vorinstalliertes Unsloth-Template nutzen. Für manuelle Einrichtung: Python 3.11+, torch, transformers, peft, trl und unsloth installieren. Trainingsscript mit Unsloth\'s FastLanguageModel-Klasse schreiben. Setup-Zeit mit dem Template: unter 5 Minuten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist die günstigste Cloud-GPU für Fine-Tuning eines lokalen LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090 Spot bei 0,28–0,44 $/Stunde und Vast.ai RTX 4090 bei 0,32–0,48 $/Stunde. Ein typischer Lauf kostet 1–2 $ gesamt.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -362,15 +384,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Puis-je fine-tuner un modèle 14B pour moins de 1 $ ?',
-            a: 'Un run complet de haute qualité sur un modèle 14B prend au minimum 4–8 heures, coûtant 1,76–3,52 $ sur un A40 spot RunPod (0,44 $/h). Moins de 1 $ est possible pour un proof-of-concept rapide (500–1000 étapes). Budget : 3–8 $ pour un job de fine-tuning en production sur un modèle 14B.',
-          },
-          {
-            q: 'Quel logiciel faut-il pour le fine-tuning QLoRA sur un GPU cloud ?',
-            a: 'Setup le plus rapide : utiliser le template Unsloth pré-construit de RunPod. Pour un setup manuel : installer Python 3.11+, torch, transformers, peft, trl et unsloth. Écrire un script avec la classe FastLanguageModel d\'Unsloth. Temps de setup avec le template : moins de 5 minutes.',
-          },
-        ],
+            { q: 'Puis-je fine-tuner un modèle 14B pour moins de 1 $ ?', a: 'Un run complet de haute qualité sur un modèle 14B prend au minimum 4–8 heures, coûtant 1,76–3,52 $ sur un A40 spot RunPod (0,44 $/h). Moins de 1 $ est possible pour un proof-of-concept rapide (500–1000 étapes). Budget : 3–8 $ pour un job de fine-tuning en production sur un modèle 14B.' },
+            { q: 'Quel logiciel faut-il pour le fine-tuning QLoRA sur un GPU cloud ?', a: 'Setup le plus rapide : utiliser le template Unsloth pré-construit de RunPod. Pour un setup manuel : installer Python 3.11+, torch, transformers, peft, trl et unsloth. Écrire un script avec la classe FastLanguageModel d\'Unsloth. Temps de setup avec le template : moins de 5 minutes.' },
+            { q: 'Quel est le GPU cloud le moins cher pour fine-tuner un LLM local ?', a: 'RunPod RTX 4090 spot à 0,28–0,44 $/h et Vast.ai RTX 4090 à 0,32–0,48 $/h. Un run type coûte 1–2 $ au total.' },
+          ],
       },
       relatedReading: {
         title: 'Guides associés',
@@ -386,12 +403,31 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Quel est le GPU cloud le moins cher pour fine-tuner un LLM local ?',
-          acceptedAnswer: { '@type': 'Answer', text: 'RunPod RTX 4090 spot à 0,28–0,44 $/h et Vast.ai RTX 4090 à 0,32–0,48 $/h. Un run type coûte 1–2 $ au total.' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Puis-je fine-tuner un modèle 14B pour moins de 1 $ ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un run complet de haute qualité sur un modèle 14B prend au minimum 4–8 heures, coûtant 1,76–3,52 $ sur un A40 spot RunPod (0,44 $/h). Moins de 1 $ est possible pour un proof-of-concept rapide (500–1000 étapes). Budget : 3–8 $ pour un job de fine-tuning en production sur un modèle 14B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel logiciel faut-il pour le fine-tuning QLoRA sur un GPU cloud ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Setup le plus rapide : utiliser le template Unsloth pré-construit de RunPod. Pour un setup manuel : installer Python 3.11+, torch, transformers, peft, trl et unsloth. Écrire un script avec la classe FastLanguageModel d\'Unsloth. Temps de setup avec le template : moins de 5 minutes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est le GPU cloud le moins cher pour fine-tuner un LLM local ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090 spot à 0,28–0,44 $/h et Vast.ai RTX 4090 à 0,32–0,48 $/h. Un run type coûte 1–2 $ au total.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -487,15 +523,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: '14Bモデルを1ドル以下でファインチューニングできますか？',
-            a: '14Bモデルの完全な高品質ファインチューニング実行は最低4〜8時間かかり、RunPod A40スポット（0.44ドル/時）で1.76〜3.52ドルかかります。1ドル以下は素早いPoC実行（500〜1000学習ステップ）なら可能。本番品質の14Bモデルファインチューニングには3〜8ドルの予算を見込んでください。',
-          },
-          {
-            q: 'クラウドGPUでQLoRAファインチューニングに必要なソフトウェアは？',
-            a: '最速のセットアップ：RunPodのUnslothテンプレートを使用（Python、CUDA、PyTorch、Hugging Face PEFT、Unsloth事前インストール済み）。セットアップ時間：5分未満。',
-          },
-        ],
+            { q: '14Bモデルを1ドル以下でファインチューニングできますか？', a: '14Bモデルの完全な高品質ファインチューニング実行は最低4〜8時間かかり、RunPod A40スポット（0.44ドル/時）で1.76〜3.52ドルかかります。1ドル以下は素早いPoC実行（500〜1000学習ステップ）なら可能。本番品質の14Bモデルファインチューニングには3〜8ドルの予算を見込んでください。' },
+            { q: 'クラウドGPUでQLoRAファインチューニングに必要なソフトウェアは？', a: '最速のセットアップ：RunPodのUnslothテンプレートを使用（Python、CUDA、PyTorch、Hugging Face PEFT、Unsloth事前インストール済み）。セットアップ時間：5分未満。' },
+            { q: 'ローカルLLMのファインチューニングに最安のクラウドGPUは何ですか？', a: 'RunPod RTX 4090スポット（0.28〜0.44ドル/時）とVast.ai RTX 4090（0.32〜0.48ドル/時）。典型的な実行は合計1〜2ドル。' },
+          ],
       },
       relatedReading: {
         title: '関連ガイド',
@@ -511,12 +542,31 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ローカルLLMのファインチューニングに最安のクラウドGPUは何ですか？',
-          acceptedAnswer: { '@type': 'Answer', text: 'RunPod RTX 4090スポット（0.28〜0.44ドル/時）とVast.ai RTX 4090（0.32〜0.48ドル/時）。典型的な実行は合計1〜2ドル。' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '14Bモデルを1ドル以下でファインチューニングできますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '14Bモデルの完全な高品質ファインチューニング実行は最低4〜8時間かかり、RunPod A40スポット（0.44ドル/時）で1.76〜3.52ドルかかります。1ドル以下は素早いPoC実行（500〜1000学習ステップ）なら可能。本番品質の14Bモデルファインチューニングには3〜8ドルの予算を見込んでください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'クラウドGPUでQLoRAファインチューニングに必要なソフトウェアは？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最速のセットアップ：RunPodのUnslothテンプレートを使用（Python、CUDA、PyTorch、Hugging Face PEFT、Unsloth事前インストール済み）。セットアップ時間：5分未満。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMのファインチューニングに最安のクラウドGPUは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090スポット（0.28〜0.44ドル/時）とVast.ai RTX 4090（0.32〜0.48ドル/時）。典型的な実行は合計1〜2ドル。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -612,19 +662,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: '14B模型能否在1美元以下完成微调？',
-            a: '14B模型的完整高质量微调运行至少需要4–8小时，在RunPod A40竞价（0.44美元/小时）上成本为1.76–3.52美元。1美元以下适合快速概念验证（500–1000训练步骤）。14B模型的生产级微调作业预算3–8美元。',
-          },
-          {
-            q: '云GPU上QLoRA微调需要什么软件？',
-            a: '最快的设置：使用RunPod预构建的Unsloth模板（预装Python、CUDA、PyTorch、Hugging Face PEFT和Unsloth）。使用模板设置时间：不到5分钟。',
-          },
-          {
-            q: '微调和直接用更大基础模型相比是否值得？',
-            a: '对于专业领域任务（医疗记录、法律文件、公司特定格式），微调7B–14B模型的效果往往超过通用70B模型，推理成本却只有其一小部分。有500个以上领域特定样本且需要一致输出格式时，微调是最佳选择。',
-          },
-        ],
+            { q: '14B模型能否在1美元以下完成微调？', a: '14B模型的完整高质量微调运行至少需要4–8小时，在RunPod A40竞价（0.44美元/小时）上成本为1.76–3.52美元。1美元以下适合快速概念验证（500–1000训练步骤）。14B模型的生产级微调作业预算3–8美元。' },
+            { q: '云GPU上QLoRA微调需要什么软件？', a: '最快的设置：使用RunPod预构建的Unsloth模板（预装Python、CUDA、PyTorch、Hugging Face PEFT和Unsloth）。使用模板设置时间：不到5分钟。' },
+            { q: '微调和直接用更大基础模型相比是否值得？', a: '对于专业领域任务（医疗记录、法律文件、公司特定格式），微调7B–14B模型的效果往往超过通用70B模型，推理成本却只有其一小部分。有500个以上领域特定样本且需要一致输出格式时，微调是最佳选择。' },
+            { q: '微调本地LLM最便宜的云GPU是什么？', a: 'RunPod RTX 4090竞价（0.28–0.44美元/小时）和Vast.ai RTX 4090（0.32–0.48美元/小时）。典型运行合计1–2美元。' },
+          ],
       },
       relatedReading: {
         title: '相关指南',
@@ -640,17 +682,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '微调本地LLM最便宜的云GPU是什么？',
-          acceptedAnswer: { '@type': 'Answer', text: 'RunPod RTX 4090竞价（0.28–0.44美元/小时）和Vast.ai RTX 4090（0.32–0.48美元/小时）。典型运行合计1–2美元。' },
-        },
-        {
-          '@type': 'Question',
-          name: '微调和直接用更大基础模型相比是否值得？',
-          acceptedAnswer: { '@type': 'Answer', text: '有500个以上领域特定样本时，微调7B–14B模型通常优于通用70B模型，且推理成本大幅降低。' },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '14B模型能否在1美元以下完成微调？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '14B模型的完整高质量微调运行至少需要4–8小时，在RunPod A40竞价（0.44美元/小时）上成本为1.76–3.52美元。1美元以下适合快速概念验证（500–1000训练步骤）。14B模型的生产级微调作业预算3–8美元。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '云GPU上QLoRA微调需要什么软件？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最快的设置：使用RunPod预构建的Unsloth模板（预装Python、CUDA、PyTorch、Hugging Face PEFT和Unsloth）。使用模板设置时间：不到5分钟。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '微调和直接用更大基础模型相比是否值得？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对于专业领域任务（医疗记录、法律文件、公司特定格式），微调7B–14B模型的效果往往超过通用70B模型，推理成本却只有其一小部分。有500个以上领域特定样本且需要一致输出格式时，微调是最佳选择。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '微调本地LLM最便宜的云GPU是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090竞价（0.28–0.44美元/小时）和Vast.ai RTX 4090（0.32–0.48美元/小时）。典型运行合计1–2美元。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -759,19 +823,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: '¿Puedo hacer fine-tuning de un modelo 14B por menos de $1?',
-            a: 'Un run completo de fine-tuning de alta calidad en un modelo 14B tarda un mínimo de 4–8 horas, costando $1.76–$3.52 en un A40 spot de RunPod ($0.44/hora). Menos de $1 es alcanzable para un run rápido de prueba de concepto (500–1000 pasos de entrenamiento). Presupuesta $3–8 para un job de fine-tuning de producción en un modelo 14B.',
-          },
-          {
-            q: '¿Qué software necesito para fine-tuning QLoRA en una GPU cloud?',
-            a: 'La configuración más rápida: usa la plantilla Unsloth preconfigurada de RunPod (entorno Python con CUDA, PyTorch, Hugging Face PEFT y Unsloth preinstalados). Para configuración manual: instala Python 3.11+, torch, transformers, peft, trl y unsloth. Tiempo de configuración con la plantilla: menos de 5 minutos.',
-          },
-          {
-            q: '¿Vale la pena el fine-tuning frente a usar un modelo base más grande?',
-            a: 'Para tareas específicas de dominio (notas médicas, documentos legales, formatos específicos de empresa), hacer fine-tuning de un modelo 7B–14B a menudo supera a un modelo genérico de 70B a una fracción del coste de inferencia. El punto óptimo: hacer fine-tuning cuando tienes más de 500 ejemplos específicos del dominio y quieres formato de salida consistente.',
-          },
-        ],
+            { q: '¿Puedo hacer fine-tuning de un modelo 14B por menos de $1?', a: 'Un run completo de fine-tuning de alta calidad en un modelo 14B tarda un mínimo de 4–8 horas, costando $1.76–$3.52 en un A40 spot de RunPod ($0.44/hora). Menos de $1 es alcanzable para un run rápido de prueba de concepto (500–1000 pasos de entrenamiento). Presupuesta $3–8 para un job de fine-tuning de producción en un modelo 14B.' },
+            { q: '¿Qué software necesito para fine-tuning QLoRA en una GPU cloud?', a: 'La configuración más rápida: usa la plantilla Unsloth preconfigurada de RunPod (entorno Python con CUDA, PyTorch, Hugging Face PEFT y Unsloth preinstalados). Para configuración manual: instala Python 3.11+, torch, transformers, peft, trl y unsloth. Tiempo de configuración con la plantilla: menos de 5 minutos.' },
+            { q: '¿Vale la pena el fine-tuning frente a usar un modelo base más grande?', a: 'Para tareas específicas de dominio (notas médicas, documentos legales, formatos específicos de empresa), hacer fine-tuning de un modelo 7B–14B a menudo supera a un modelo genérico de 70B a una fracción del coste de inferencia. El punto óptimo: hacer fine-tuning cuando tienes más de 500 ejemplos específicos del dominio y quieres formato de salida consistente.' },
+            { q: '¿Cuál es la GPU cloud más barata para fine-tuning de un LLM local?', a: 'RunPod RTX 4090 spot a $0.28–0.44/hora y Vast.ai RTX 4090 a $0.32–0.48/hora. Un run típico cuesta $1–2 en total.' },
+          ],
       },
       relatedReading: {
         title: 'Guías relacionadas',
@@ -787,23 +843,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Cuál es la GPU cloud más barata para fine-tuning de un LLM local?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod RTX 4090 spot a $0.28–0.44/hora y Vast.ai RTX 4090 a $0.32–0.48/hora. Un run típico cuesta $1–2 en total.',
+          {
+            '@type': 'Question',
+            'name': '¿Puedo hacer fine-tuning de un modelo 14B por menos de $1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un run completo de fine-tuning de alta calidad en un modelo 14B tarda un mínimo de 4–8 horas, costando $1.76–$3.52 en un A40 spot de RunPod ($0.44/hora). Menos de $1 es alcanzable para un run rápido de prueba de concepto (500–1000 pasos de entrenamiento). Presupuesta $3–8 para un job de fine-tuning de producción en un modelo 14B.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Puedo hacer fine-tuning de un modelo 14B por menos de $1?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Un run de prueba de concepto (500–1000 pasos) cuesta menos de $1. Un job de fine-tuning de producción en un modelo 14B cuesta $3–8 en total.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué software necesito para fine-tuning QLoRA en una GPU cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La configuración más rápida: usa la plantilla Unsloth preconfigurada de RunPod (entorno Python con CUDA, PyTorch, Hugging Face PEFT y Unsloth preinstalados). Para configuración manual: instala Python 3.11+, torch, transformers, peft, trl y unsloth. Tiempo de configuración con la plantilla: menos de 5 minutos.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Vale la pena el fine-tuning frente a usar un modelo base más grande?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para tareas específicas de dominio (notas médicas, documentos legales, formatos específicos de empresa), hacer fine-tuning de un modelo 7B–14B a menudo supera a un modelo genérico de 70B a una fracción del coste de inferencia. El punto óptimo: hacer fine-tuning cuando tienes más de 500 ejemplos específicos del dominio y quieres formato de salida consistente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la GPU cloud más barata para fine-tuning de un LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090 spot a $0.28–0.44/hora y Vast.ai RTX 4090 a $0.32–0.48/hora. Un run típico cuesta $1–2 en total.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -911,19 +983,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'Posso fazer fine-tuning de um modelo 14B por menos de $1?',
-            a: 'Uma execução completa de alta qualidade em um modelo 14B leva no mínimo 4–8 horas, custando $1,76–$3,52 em um RunPod A40 spot ($0,44/hora). Abaixo de $1 é possível para uma execução rápida de prova de conceito (500–1000 passos de treinamento), mas você provavelmente precisará de mais passos para resultados de qualidade de produção. Orçe $3–8 para um trabalho de fine-tuning de produção em um modelo 14B.',
-          },
-          {
-            q: 'Qual software preciso para fine-tuning QLoRA em uma GPU cloud?',
-            a: 'A configuração mais rápida: use o template Unsloth pré-configurado do RunPod (ambiente Python com CUDA, PyTorch, Hugging Face PEFT e Unsloth pré-instalados). Para configuração manual: instale Python 3.11+, torch, transformers, peft, trl e unsloth. Em seguida, escreva um script de treinamento usando a classe FastLanguageModel do Unsloth. Tempo total de configuração com o template: menos de 5 minutos.',
-          },
-          {
-            q: 'Vale a pena fazer fine-tuning em vez de usar um modelo base maior?',
-            a: 'Para tarefas específicas de domínio (notas médicas, documentos jurídicos, formatos específicos da empresa), fazer fine-tuning de um modelo 7B–14B frequentemente supera um modelo genérico de 70B a uma fração do custo de inferência. Para tarefas de propósito geral onde o modelo base já tem bom desempenho, o fine-tuning agrega valor mínimo. O ponto ideal: faça fine-tuning quando você tiver mais de 500 exemplos específicos do domínio e quiser formatação de saída consistente.',
-          },
-        ],
+            { q: 'Posso fazer fine-tuning de um modelo 14B por menos de $1?', a: 'Uma execução completa de alta qualidade em um modelo 14B leva no mínimo 4–8 horas, custando $1,76–$3,52 em um RunPod A40 spot ($0,44/hora). Abaixo de $1 é possível para uma execução rápida de prova de conceito (500–1000 passos de treinamento), mas você provavelmente precisará de mais passos para resultados de qualidade de produção. Orçe $3–8 para um trabalho de fine-tuning de produção em um modelo 14B.' },
+            { q: 'Qual software preciso para fine-tuning QLoRA em uma GPU cloud?', a: 'A configuração mais rápida: use o template Unsloth pré-configurado do RunPod (ambiente Python com CUDA, PyTorch, Hugging Face PEFT e Unsloth pré-instalados). Para configuração manual: instale Python 3.11+, torch, transformers, peft, trl e unsloth. Em seguida, escreva um script de treinamento usando a classe FastLanguageModel do Unsloth. Tempo total de configuração com o template: menos de 5 minutos.' },
+            { q: 'Vale a pena fazer fine-tuning em vez de usar um modelo base maior?', a: 'Para tarefas específicas de domínio (notas médicas, documentos jurídicos, formatos específicos da empresa), fazer fine-tuning de um modelo 7B–14B frequentemente supera um modelo genérico de 70B a uma fração do custo de inferência. Para tarefas de propósito geral onde o modelo base já tem bom desempenho, o fine-tuning agrega valor mínimo. O ponto ideal: faça fine-tuning quando você tiver mais de 500 exemplos específicos do domínio e quiser formatação de saída consistente.' },
+            { q: 'Qual é a GPU cloud mais barata para fine-tuning de um LLM local?', a: 'RunPod RTX 4090 spot a $0,28–0,44/hora e Vast.ai RTX 4090 a $0,32–0,48/hora. Uma execução típica custa $1–2 no total.' },
+          ],
       },
       relatedReading: {
         title: 'Guias relacionados',
@@ -939,23 +1003,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qual é a GPU cloud mais barata para fine-tuning de um LLM local?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod RTX 4090 spot a $0,28–0,44/hora e Vast.ai RTX 4090 a $0,32–0,48/hora. Uma execução típica custa $1–2 no total.',
+          {
+            '@type': 'Question',
+            'name': 'Posso fazer fine-tuning de um modelo 14B por menos de $1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Uma execução completa de alta qualidade em um modelo 14B leva no mínimo 4–8 horas, custando $1,76–$3,52 em um RunPod A40 spot ($0,44/hora). Abaixo de $1 é possível para uma execução rápida de prova de conceito (500–1000 passos de treinamento), mas você provavelmente precisará de mais passos para resultados de qualidade de produção. Orçe $3–8 para um trabalho de fine-tuning de produção em um modelo 14B.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Posso fazer fine-tuning de um modelo 14B por menos de $1?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Uma execução de prova de conceito (500–1000 passos) custa menos de $1. Um trabalho de fine-tuning de produção em um modelo 14B custa $3–8 no total.',
+          {
+            '@type': 'Question',
+            'name': 'Qual software preciso para fine-tuning QLoRA em uma GPU cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A configuração mais rápida: use o template Unsloth pré-configurado do RunPod (ambiente Python com CUDA, PyTorch, Hugging Face PEFT e Unsloth pré-instalados). Para configuração manual: instale Python 3.11+, torch, transformers, peft, trl e unsloth. Em seguida, escreva um script de treinamento usando a classe FastLanguageModel do Unsloth. Tempo total de configuração com o template: menos de 5 minutos.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Vale a pena fazer fine-tuning em vez de usar um modelo base maior?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para tarefas específicas de domínio (notas médicas, documentos jurídicos, formatos específicos da empresa), fazer fine-tuning de um modelo 7B–14B frequentemente supera um modelo genérico de 70B a uma fração do custo de inferência. Para tarefas de propósito geral onde o modelo base já tem bom desempenho, o fine-tuning agrega valor mínimo. O ponto ideal: faça fine-tuning quando você tiver mais de 500 exemplos específicos do domínio e quiser formatação de saída consistente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a GPU cloud mais barata para fine-tuning de um LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090 spot a $0,28–0,44/hora e Vast.ai RTX 4090 a $0,32–0,48/hora. Uma execução típica custa $1–2 no total.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1063,19 +1143,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: 'هل يمكنني الضبط الدقيق لنموذج 14B بأقل من دولار واحد؟',
-            a: 'تستغرق جلسة الضبط الدقيق الكاملة عالية الجودة لنموذج 14B 4–8 ساعات على الأقل، بتكلفة 1.76–3.52 دولار على RunPod A40 الفوري (0.44 دولار/ساعة). أقل من دولار ممكن لجلسة سريعة لإثبات المفهوم (500–1,000 خطوة تدريب)، لكنك ستحتاج على الأرجح إلى المزيد من الخطوات للحصول على نتائج جاهزة للإنتاج. خصّص ميزانية 3–8 دولارات لمهمة ضبط دقيق احترافية على نموذج 14B.',
-          },
-          {
-            q: 'ما البرنامج الذي أحتاجه للضبط الدقيق QLoRA على معالج رسومات سحابي؟',
-            a: 'أسرع إعداد: استخدم قالب Unsloth المُهيّأ مسبقاً من RunPod (بيئة Python مع CUDA وPyTorch وHugging Face PEFT وUnsloth مُثبَّتَيْن مسبقاً). للإعداد اليدوي: ثبّت Python 3.11+‎ وtorch وtransformers وpeft وtrl وunsloth. وقت الإعداد مع القالب: أقل من 5 دقائق.',
-          },
-          {
-            q: 'هل يستحق الضبط الدقيق الأمر مقارنةً باستخدام نموذج أساسي أكبر؟',
-            a: 'للمهام الخاصة بمجال معين (ملاحظات طبية، وثائق قانونية، تنسيقات خاصة بالشركة)، يتفوق الضبط الدقيق لنموذج 7B–14B في أغلب الأحيان على نموذج عام بـ70B بجزء بسيط من تكلفة الاستدلال. النقطة المثلى: قم بالضبط الدقيق عندما لديك أكثر من 500 مثال خاص بالمجال وتريد تنسيق إخراج متسقاً.',
-          },
-        ],
+            { q: 'هل يمكنني الضبط الدقيق لنموذج 14B بأقل من دولار واحد؟', a: 'تستغرق جلسة الضبط الدقيق الكاملة عالية الجودة لنموذج 14B 4–8 ساعات على الأقل، بتكلفة 1.76–3.52 دولار على RunPod A40 الفوري (0.44 دولار/ساعة). أقل من دولار ممكن لجلسة سريعة لإثبات المفهوم (500–1,000 خطوة تدريب)، لكنك ستحتاج على الأرجح إلى المزيد من الخطوات للحصول على نتائج جاهزة للإنتاج. خصّص ميزانية 3–8 دولارات لمهمة ضبط دقيق احترافية على نموذج 14B.' },
+            { q: 'ما البرنامج الذي أحتاجه للضبط الدقيق QLoRA على معالج رسومات سحابي؟', a: 'أسرع إعداد: استخدم قالب Unsloth المُهيّأ مسبقاً من RunPod (بيئة Python مع CUDA وPyTorch وHugging Face PEFT وUnsloth مُثبَّتَيْن مسبقاً). للإعداد اليدوي: ثبّت Python 3.11+‎ وtorch وtransformers وpeft وtrl وunsloth. وقت الإعداد مع القالب: أقل من 5 دقائق.' },
+            { q: 'هل يستحق الضبط الدقيق الأمر مقارنةً باستخدام نموذج أساسي أكبر؟', a: 'للمهام الخاصة بمجال معين (ملاحظات طبية، وثائق قانونية، تنسيقات خاصة بالشركة)، يتفوق الضبط الدقيق لنموذج 7B–14B في أغلب الأحيان على نموذج عام بـ70B بجزء بسيط من تكلفة الاستدلال. النقطة المثلى: قم بالضبط الدقيق عندما لديك أكثر من 500 مثال خاص بالمجال وتريد تنسيق إخراج متسقاً.' },
+            { q: 'ما أرخص معالج رسومات سحابي للضبط الدقيق للنماذج اللغوية الكبيرة المحلية؟', a: 'RunPod RTX 4090 الفوري بـ0.28–0.44 دولار/ساعة وVast.ai RTX 4090 بـ0.32–0.48 دولار/ساعة. تكلف الجلسة النموذجية 1–2 دولار إجمالاً.' },
+          ],
       },
       relatedReading: {
         title: 'أدلة ذات صلة',
@@ -1091,23 +1163,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما أرخص معالج رسومات سحابي للضبط الدقيق للنماذج اللغوية الكبيرة المحلية؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod RTX 4090 الفوري بـ0.28–0.44 دولار/ساعة وVast.ai RTX 4090 بـ0.32–0.48 دولار/ساعة. تكلف الجلسة النموذجية 1–2 دولار إجمالاً.',
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني الضبط الدقيق لنموذج 14B بأقل من دولار واحد؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تستغرق جلسة الضبط الدقيق الكاملة عالية الجودة لنموذج 14B 4–8 ساعات على الأقل، بتكلفة 1.76–3.52 دولار على RunPod A40 الفوري (0.44 دولار/ساعة). أقل من دولار ممكن لجلسة سريعة لإثبات المفهوم (500–1,000 خطوة تدريب)، لكنك ستحتاج على الأرجح إلى المزيد من الخطوات للحصول على نتائج جاهزة للإنتاج. خصّص ميزانية 3–8 دولارات لمهمة ضبط دقيق احترافية على نموذج 14B.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكنني الضبط الدقيق لنموذج 14B بأقل من دولار واحد؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'جلسة إثبات المفهوم (500–1,000 خطوة) تكلف أقل من دولار. مهمة الضبط الدقيق الاحترافية على نموذج 14B تكلف 3–8 دولارات إجمالاً.',
+          {
+            '@type': 'Question',
+            'name': 'ما البرنامج الذي أحتاجه للضبط الدقيق QLoRA على معالج رسومات سحابي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'أسرع إعداد: استخدم قالب Unsloth المُهيّأ مسبقاً من RunPod (بيئة Python مع CUDA وPyTorch وHugging Face PEFT وUnsloth مُثبَّتَيْن مسبقاً). للإعداد اليدوي: ثبّت Python 3.11+‎ وtorch وtransformers وpeft وtrl وunsloth. وقت الإعداد مع القالب: أقل من 5 دقائق.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يستحق الضبط الدقيق الأمر مقارنةً باستخدام نموذج أساسي أكبر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'للمهام الخاصة بمجال معين (ملاحظات طبية، وثائق قانونية، تنسيقات خاصة بالشركة)، يتفوق الضبط الدقيق لنموذج 7B–14B في أغلب الأحيان على نموذج عام بـ70B بجزء بسيط من تكلفة الاستدلال. النقطة المثلى: قم بالضبط الدقيق عندما لديك أكثر من 500 مثال خاص بالمجال وتريد تنسيق إخراج متسقاً.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما أرخص معالج رسومات سحابي للضبط الدقيق للنماذج اللغوية الكبيرة المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090 الفوري بـ0.28–0.44 دولار/ساعة وVast.ai RTX 4090 بـ0.32–0.48 دولار/ساعة. تكلف الجلسة النموذجية 1–2 دولار إجمالاً.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1216,19 +1304,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-          {
-            q: '$1 미만으로 14B 모델을 파인튜닝할 수 있습니까?',
-            a: '14B 모델의 고품질 전체 파인튜닝 실행은 최소 4–8시간이 소요되며, RunPod A40 스팟($0.44/시간)에서 $1.76–$3.52의 비용이 발생합니다. $1 미만은 빠른 개념 검증 실행(500–1,000 학습 스텝)에서는 달성 가능합니다. 14B 모델의 프로덕션 파인튜닝 작업에는 $3–8의 예산을 잡으십시오.',
-          },
-          {
-            q: '클라우드 GPU에서 QLoRA 파인튜닝을 위해 어떤 소프트웨어가 필요합니까?',
-            a: '가장 빠른 설정: RunPod의 사전 구성된 Unsloth 템플릿을 사용하십시오 (CUDA, PyTorch, Hugging Face PEFT, Unsloth이 사전 설치된 Python 환경). 수동 설정의 경우: Python 3.11+, torch, transformers, peft, trl, unsloth를 설치하십시오. 템플릿을 사용한 총 설정 시간: 5분 미만.',
-          },
-          {
-            q: '더 큰 기본 모델을 사용하는 것과 비교하여 파인튜닝이 가치 있습니까?',
-            a: '도메인별 작업(의료 노트, 법률 문서, 회사별 형식)의 경우, 7B–14B 모델 파인튜닝이 일반적인 70B 모델보다 추론 비용의 일부로 더 나은 성능을 보이는 경우가 많습니다. 최적의 시점: 500개 이상의 도메인별 예시가 있고 일관된 출력 형식이 필요할 때 파인튜닝하십시오.',
-          },
-        ],
+            { q: '$1 미만으로 14B 모델을 파인튜닝할 수 있습니까?', a: '14B 모델의 고품질 전체 파인튜닝 실행은 최소 4–8시간이 소요되며, RunPod A40 스팟($0.44/시간)에서 $1.76–$3.52의 비용이 발생합니다. $1 미만은 빠른 개념 검증 실행(500–1,000 학습 스텝)에서는 달성 가능합니다. 14B 모델의 프로덕션 파인튜닝 작업에는 $3–8의 예산을 잡으십시오.' },
+            { q: '클라우드 GPU에서 QLoRA 파인튜닝을 위해 어떤 소프트웨어가 필요합니까?', a: '가장 빠른 설정: RunPod의 사전 구성된 Unsloth 템플릿을 사용하십시오 (CUDA, PyTorch, Hugging Face PEFT, Unsloth이 사전 설치된 Python 환경). 수동 설정의 경우: Python 3.11+, torch, transformers, peft, trl, unsloth를 설치하십시오. 템플릿을 사용한 총 설정 시간: 5분 미만.' },
+            { q: '더 큰 기본 모델을 사용하는 것과 비교하여 파인튜닝이 가치 있습니까?', a: '도메인별 작업(의료 노트, 법률 문서, 회사별 형식)의 경우, 7B–14B 모델 파인튜닝이 일반적인 70B 모델보다 추론 비용의 일부로 더 나은 성능을 보이는 경우가 많습니다. 최적의 시점: 500개 이상의 도메인별 예시가 있고 일관된 출력 형식이 필요할 때 파인튜닝하십시오.' },
+            { q: '로컬 LLM 파인튜닝을 위한 가장 저렴한 클라우드 GPU는 무엇입니까?', a: 'RunPod RTX 4090 스팟 $0.28–0.44/시간 및 Vast.ai RTX 4090 $0.32–0.48/시간. 일반적인 실행 비용은 총 $1–2입니다.' },
+          ],
       },
       relatedReading: {
         title: '관련 가이드',
@@ -1244,23 +1324,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '로컬 LLM 파인튜닝을 위한 가장 저렴한 클라우드 GPU는 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod RTX 4090 스팟 $0.28–0.44/시간 및 Vast.ai RTX 4090 $0.32–0.48/시간. 일반적인 실행 비용은 총 $1–2입니다.',
+          {
+            '@type': 'Question',
+            'name': '$1 미만으로 14B 모델을 파인튜닝할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '14B 모델의 고품질 전체 파인튜닝 실행은 최소 4–8시간이 소요되며, RunPod A40 스팟($0.44/시간)에서 $1.76–$3.52의 비용이 발생합니다. $1 미만은 빠른 개념 검증 실행(500–1,000 학습 스텝)에서는 달성 가능합니다. 14B 모델의 프로덕션 파인튜닝 작업에는 $3–8의 예산을 잡으십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '$1 미만으로 14B 모델을 파인튜닝할 수 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '개념 검증 실행(500–1,000 스텝)은 $1 미만입니다. 14B 모델의 프로덕션 파인튜닝 작업은 총 $3–8입니다.',
+          {
+            '@type': 'Question',
+            'name': '클라우드 GPU에서 QLoRA 파인튜닝을 위해 어떤 소프트웨어가 필요합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '가장 빠른 설정: RunPod의 사전 구성된 Unsloth 템플릿을 사용하십시오 (CUDA, PyTorch, Hugging Face PEFT, Unsloth이 사전 설치된 Python 환경). 수동 설정의 경우: Python 3.11+, torch, transformers, peft, trl, unsloth를 설치하십시오. 템플릿을 사용한 총 설정 시간: 5분 미만.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '더 큰 기본 모델을 사용하는 것과 비교하여 파인튜닝이 가치 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '도메인별 작업(의료 노트, 법률 문서, 회사별 형식)의 경우, 7B–14B 모델 파인튜닝이 일반적인 70B 모델보다 추론 비용의 일부로 더 나은 성능을 보이는 경우가 많습니다. 최적의 시점: 500개 이상의 도메인별 예시가 있고 일관된 출력 형식이 필요할 때 파인튜닝하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM 파인튜닝을 위한 가장 저렴한 클라우드 GPU는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod RTX 4090 스팟 $0.28–0.44/시간 및 Vast.ai RTX 4090 $0.32–0.48/시간. 일반적인 실행 비용은 총 $1–2입니다.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

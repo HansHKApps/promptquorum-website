@@ -1777,140 +1777,148 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Sind lokale LLMs langsamer als Cloud APIs?',
-            acceptedAnswer: {
+            'name': 'Sind lokale LLMs langsamer als Cloud APIs?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja, lokale LLMs sind deutlich langsamer. CPU-Inferenz erzeugt 10–25 Token pro Sekunde, während Cloud APIs (GPT-5.6) 80–150 Token pro Sekunde erreichen. Selbst mit GPU (RTX 4090) erreichen Sie nur 130–160 Token/s. Cloud ist 4–10× schneller für Echtzeitanwendungen.'
-            }
+              'text': 'Ja, deutlich. CPU-Inferenz = 10–25 Token/s, Cloud = 80–150 Token/s. Für Echtzeit-Chat ist lokal zu langsam. Für Batch-Verarbeitung ist lokal OK.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Kann ich ein 70B-Modell auf meinem Laptop ausführen?',
-            acceptedAnswer: {
+            'name': 'Kann ich ein 70B-Modell auf meinem Laptop ausführen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein. 70B-Modelle erfordern mindestens 40 GB RAM oder VRAM. Ein typischer Laptop mit 16 GB RAM kann höchstens ein 13B-Modell mit Komprimierung ausführen. Für 70B-Modelle benötigen Sie einen Mac Studio, einen Workstation oder Multi-GPU-Setup (Kosten: 3.300 €+).'
-            }
+              'text': 'Nein. 70B-Modelle benötigen mindestens 40 GB RAM/VRAM. Ein typischer Laptop mit 16 GB kann maximal 13B-Modelle mit Quantisierung ausführen.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Welche lokalen Modelle sind am besten?',
-            acceptedAnswer: {
+            'name': 'Welche lokalen Modelle sind am besten?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Für 16 GB RAM: Llama 3.3 13B oder Mistral Small (Qualität ≈ GPT-5.6 Luna). Für 40 GB RAM: Llama 3.3 70B oder Qwen 72B (Qualität ≈ GPT-4). Verwenden Sie Q4_K_M-Quantisierung für optimale Effizienz. Für beste Qualität nutzen Sie Cloud APIs (GPT-5.6, Claude Sonnet 5).'
-            }
+              'text': 'Llama 3.3 13B oder Mistral Small für 16 GB RAM (≈ GPT-5.6 Luna). Llama 3.3 70B für 40 GB RAM (≈ GPT-4). Für beste Qualität: Cloud APIs (GPT-5.6, Claude).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Kann ich ein lokales Modell offline verwenden?',
-            acceptedAnswer: {
+            'name': 'Kann ich lokal offline arbeiten?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja, das ist der Hauptvorteil. Nach dem Download läuft alles lokal — kein Internet notwendig. Aber der Download dauert 20–40 Minuten plus Einrichtung. Cloud APIs erfordern immer Internetverbindung, bieten aber automatische Updates und Verfügbarkeitsgarantien.'
-            }
+              'text': 'Ja, das ist der Hauptvorteil. Nach Download läuft alles lokal ohne Internet. Cloud APIs brauchen immer Netzwerk.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Was ist das maximale Kontextfenster für lokale Modelle?',
-            acceptedAnswer: {
+            'name': 'Was ist das maximale Kontextfenster lokal?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Die meisten lokalen Modelle unterstützen 4K–32K Token Kontext. Llama 3.3 hat standardmäßig 4K, kann aber auf 32K erweitert werden. Cloud APIs bieten viel mehr: GPT-5.6 = 128K, Claude Sonnet 5 = 200K. Für große Dokumente ist Cloud besser.'
-            }
+              'text': 'Typischerweise 4K–32K Token. Cloud APIs bieten 128K–200K (GPT-5.6, Claude). Für lange Dokumente ist Cloud besser.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Benötige ich eine GPU für lokale LLMs?',
-            acceptedAnswer: {
+            'name': 'Benötige ich eine GPU für lokale LLMs?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein, aber eine GPU ist stark empfohlen. CPU-Inferenz ist 10–50× langsamer. Mit einer GPU (RTX 4090, RTX 4070) erreichen Sie 50–160 Token/s. Ohne GPU (reiner CPU): 10–25 Token/s, was für Echtzeit-Chat unbrauchbar ist.'
-            }
+              'text': 'Nein, aber stark empfohlen. CPU = 10–25 Token/s (sehr langsam). GPU = 50–160 Token/s (nutzbar). Ohne GPU ist Echtzeit-Chat nicht praktikabel.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Was kostet ein lokales Modell?',
-            acceptedAnswer: {
+            'name': 'Was kostet ein lokales Modell?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Kostenlos zum Download und Ausführen (Ollama ist kostenlos). Hardware ist teuer: GPU (RTX 4090, seit 2026 ausgelaufen) = 2.900–3.800 €+ auf dem Gebrauchtmarkt, Mac Studio = 2.999 €+ (M5 Max, Stand August 2026; die Spitzenkonfiguration mit 512 GB, M5 Ultra, startet ab 6.599 €). Cloud APIs: €0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger; für hochfrequente Nutzung kann lokale Hardware rentabel sein.'
-            }
+              'text': 'Download kostenlos, Hardware teuer (2.900–3.800 € für GPU, Gebraucht). Cloud: €0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Sollte ich Ollama oder LM Studio verwenden?',
-            acceptedAnswer: {
+            'name': 'Ollama oder LM Studio?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ollama ist CLI-basiert, schneller, einfacher zu automatisieren. LM Studio hat eine GUI, besser für Anfänger. Für Production und APIs: Ollama. Für explorative Experimente: LM Studio. Beide führen die gleichen Modelle aus (Llama, Mistral, Qwen).'
-            }
+              'text': 'Ollama = CLI, schneller, für Automation. LM Studio = GUI, für Anfänger. Beide führen dieselben Modelle aus.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Kann ich GPT-5.6 lokal ausführen?',
-            acceptedAnswer: {
+            'name': 'Kann ich GPT-5.6 lokal ausführen?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein, OpenAI stellt GPT-5.6-Gewichte nicht zur Verfügung. Sie können GPT-5.6 nur über die OpenAI API verwenden. Es gibt lokale Open-Source-Alternativen (Llama 3.3 70B, Qwen 72B), die ähnliche (aber nicht identische) Qualität bieten. Für garantierte GPT-5.6-Qualität: Cloud API.'
-            }
+              'text': 'Nein, OpenAI gibt Gewichte nicht frei. Lokale Alternativen (Llama 70B, Qwen 72B) sind ähnlich gut, aber nicht identisch.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Wie lange dauert das Setup eines lokalen Modells?',
-            acceptedAnswer: {
+            'name': 'Wie lange dauert das Setup eines lokalen Modells?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Gesamtzeit: 20–40 Minuten. (1) Ollama/LM Studio installieren: 2–3 Min. (2) 7B-Modell herunterladen (4 GB): 5–10 Min. (3) GPU konfigurieren (optional, CUDA/Metal): 5–10 Min. Cloud APIs: 5 Minuten von Anfang bis zum ersten API-Aufruf.'
-            }
+              'text': '20–40 Minuten (Ollama install + Model download + GPU config). Cloud: 5 Minuten. Cloud ist schneller zum Einstieg.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?',
-            acceptedAnswer: {
+            'name': 'Soll ich ein lokales LLM oder eine Cloud API verwenden?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja, besonders bei personenbezogenen Daten. DSGVO Artikel 28 (Datenverarbeitung) gilt auch für lokale LLMs, wenn Sie Kundendaten eingeben. Lokale Inferenz erfüllt Anforderungen der Datenneutralität besser als Cloud, aber: Sie müssen Datenschutzerklärungen aktualisieren, Datenfluss dokumentieren, und gegebenenfalls TOM (technische und organisatorische Maßnahmen) implementieren. BSI-Grundschutz-Kataloge empfehlen lokale Verarbeitung für Klassifizierung „INTERN" und höher.'
-            }
+              'text': 'Lokales LLM, wenn Datenschutz kritisch ist. Cloud, wenn Geschwindigkeit oder aktuelle Informationen kritisch sind. Unsicher? Testen Sie beide mit PromptQuorum — senden Sie einen Prompt gleichzeitig an lokales Ollama und 25+ Cloud-Modelle, um die Qualität für Ihre spezifische Aufgabe zu vergleichen.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Ist ein lokales Modell für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: {
+            'name': 'Ist lokales LLM schneller als Cloud API?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ja, mit Vorbehalten. Vorteil: Datenhoheit (DSGVO-konform, BSI-Grundschutz-Anforderungen). Nachteil: IT-Wartungsaufwand, Hardwarekosten, niedrigere Qualität. Empfehlung für Mittelstand: Ollama + Llama 3.3 13B auf einem lokalen Server oder dedizierten GPU für interne Textverarbeitung (Dokumente, E-Mails, Reports). Für kundengerichtete Anwendungen: Cloud APIs mit DPA (Datenverarbeitungsvertrag) sind sicherer und wartungsärmer.'
-            }
+              'text': 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.900–3.800 € auf dem Gebrauchtmarkt.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Soll ich ein lokales LLM oder eine Cloud API verwenden?',
-            acceptedAnswer: {
+            'name': 'Ist lokales LLM günstiger als Cloud?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Lokales LLM, wenn Datenschutz kritisch ist. Cloud, wenn Geschwindigkeit oder aktuelle Informationen kritisch sind. Unsicher? Testen Sie beide mit PromptQuorum — senden Sie einen Prompt gleichzeitig an lokales Ollama und 25+ Cloud-Modelle, um die Qualität für Ihre spezifische Aufgabe zu vergleichen.'
-            }
+              'text': 'Hängt von der Nutzung ab. Lokal kostet 900–2.200 € Hardware-Vorlauf. Cloud kostet $5–50/Monat. Für leichte Nutzer (<100.000 Token/Monat) ist Cloud günstiger. Für schwere Nutzer (>10 Mio. Token/Monat) amortisiert sich lokal in 6–12 Monaten.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Ist lokales LLM schneller als Cloud API?',
-            acceptedAnswer: {
+            'name': 'Wann sollte ich lokales LLM statt Cloud verwenden?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.900–3.800 € auf dem Gebrauchtmarkt.'
-            }
+              'text': 'Lokal verwenden wenn: Datenschutz kritisch (keine Daten verlassen das Gerät), ausreichend Hardware (16+ GB RAM oder 40+ GB für 70B), keine Echtzeitinformationen benötigt, und Setup-Komplexität akzeptabel. Cloud verwenden wenn: Geschwindigkeit kritisch, Echtzeit-Datenzugriff nötig, Hardware limitiert (<8 GB RAM), oder Frontier-Level-Reasoning benötigt.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Ist lokales LLM günstiger als Cloud?',
-            acceptedAnswer: {
+            'name': 'Was sind die Hauptbeschränkungen von lokalen LLMs?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Hängt von der Nutzung ab. Lokal kostet 900–2.200 € Hardware-Vorlauf. Cloud kostet $5–50/Monat. Für leichte Nutzer (<100.000 Token/Monat) ist Cloud günstiger. Für schwere Nutzer (>10 Mio. Token/Monat) amortisiert sich lokal in 6–12 Monaten.'
-            }
+              'text': 'Sechs Hauptbeschränkungen: (1) Niedrigere Qualität bei komplexem Reasoning vs. Frontier-Cloud-Modelle, (2) 4–10× langsamere Inferenz auf Consumer-Hardware, (3) Hohe Hardware-Anforderungen (900–2.200 € Vorlauf), (4) Kein Zugriff auf Echtzeitinformation (Training-Cutoff), (5) Setup-Komplexität (20–40 Minuten vs. 5 Minuten Cloud), (6) Begrenztes Kontextfenster (4K–128K Token lokal vs. 1M+ in Cloud).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Wann sollte ich lokales LLM statt Cloud verwenden?',
-            acceptedAnswer: {
+            'name': 'Sollte ich Ollama oder LM Studio verwenden?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Lokal verwenden wenn: Datenschutz kritisch (keine Daten verlassen das Gerät), ausreichend Hardware (16+ GB RAM oder 40+ GB für 70B), keine Echtzeitinformationen benötigt, und Setup-Komplexität akzeptabel. Cloud verwenden wenn: Geschwindigkeit kritisch, Echtzeit-Datenzugriff nötig, Hardware limitiert (<8 GB RAM), oder Frontier-Level-Reasoning benötigt.'
-            }
+              'text': 'Ollama ist CLI-basiert, schneller, einfacher zu automatisieren. LM Studio hat eine GUI, besser für Anfänger. Für Production und APIs: Ollama. Für explorative Experimente: LM Studio. Beide führen die gleichen Modelle aus (Llama, Mistral, Qwen).',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Was sind die Hauptbeschränkungen von lokalen LLMs?',
-            acceptedAnswer: {
+            'name': 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Sechs Hauptbeschränkungen: (1) Niedrigere Qualität bei komplexem Reasoning vs. Frontier-Cloud-Modelle, (2) 4–10× langsamere Inferenz auf Consumer-Hardware, (3) Hohe Hardware-Anforderungen (900–2.200 € Vorlauf), (4) Kein Zugriff auf Echtzeitinformation (Training-Cutoff), (5) Setup-Komplexität (20–40 Minuten vs. 5 Minuten Cloud), (6) Begrenztes Kontextfenster (4K–128K Token lokal vs. 1M+ in Cloud).'
-            }
-          }
+              'text': 'Ja, besonders bei personenbezogenen Daten. DSGVO Artikel 28 (Datenverarbeitung) gilt auch für lokale LLMs, wenn Sie Kundendaten eingeben. Lokale Inferenz erfüllt Anforderungen der Datenneutralität besser als Cloud, aber: Sie müssen Datenschutzerklärungen aktualisieren, Datenfluss dokumentieren, und gegebenenfalls TOM (technische und organisatorische Maßnahmen) implementieren. BSI-Grundschutz-Kataloge empfehlen lokale Verarbeitung für Klassifizierung „INTERN" und höher.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist ein lokales Modell für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, mit Vorbehalten. Vorteil: Datenhoheit (DSGVO-konform, BSI-Grundschutz-Anforderungen). Nachteil: IT-Wartungsaufwand, Hardwarekosten, niedrigere Qualität. Empfehlung für Mittelstand: Ollama + Llama 3.3 13B auf einem lokalen Server oder dedizierten GPU für interne Textverarbeitung (Dokumente, E-Mails, Reports). Für kundengerichtete Anwendungen: Cloud APIs mit DPA (Datenverarbeitungsvertrag) sind sicherer und wartungsärmer.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -2267,66 +2275,24 @@ schema: {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            {
-              q: 'Sind lokale LLMs langsamer als Cloud APIs?',
-              a: 'Ja, deutlich. CPU-Inferenz = 10–25 Token/s, Cloud = 80–150 Token/s. Für Echtzeit-Chat ist lokal zu langsam. Für Batch-Verarbeitung ist lokal OK.'
-            },
-            {
-              q: 'Kann ich ein 70B-Modell auf meinem Laptop ausführen?',
-              a: 'Nein. 70B-Modelle benötigen mindestens 40 GB RAM/VRAM. Ein typischer Laptop mit 16 GB kann maximal 13B-Modelle mit Quantisierung ausführen.'
-            },
-            {
-              q: 'Welche lokalen Modelle sind am besten?',
-              a: 'Llama 3.3 13B oder Mistral Small für 16 GB RAM (≈ GPT-5.6 Luna). Llama 3.3 70B für 40 GB RAM (≈ GPT-4). Für beste Qualität: Cloud APIs (GPT-5.6, Claude).'
-            },
-            {
-              q: 'Kann ich lokal offline arbeiten?',
-              a: 'Ja, das ist der Hauptvorteil. Nach Download läuft alles lokal ohne Internet. Cloud APIs brauchen immer Netzwerk.'
-            },
-            {
-              q: 'Was ist das maximale Kontextfenster lokal?',
-              a: 'Typischerweise 4K–32K Token. Cloud APIs bieten 128K–200K (GPT-5.6, Claude). Für lange Dokumente ist Cloud besser.'
-            },
-            {
-              q: 'Benötige ich eine GPU für lokale LLMs?',
-              a: 'Nein, aber stark empfohlen. CPU = 10–25 Token/s (sehr langsam). GPU = 50–160 Token/s (nutzbar). Ohne GPU ist Echtzeit-Chat nicht praktikabel.'
-            },
-            {
-              q: 'Was kostet ein lokales Modell?',
-              a: 'Download kostenlos, Hardware teuer (2.900–3.800 € für GPU, Gebraucht). Cloud: €0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger.'
-            },
-            {
-              q: 'Ollama oder LM Studio?',
-              a: 'Ollama = CLI, schneller, für Automation. LM Studio = GUI, für Anfänger. Beide führen dieselben Modelle aus.'
-            },
-            {
-              q: 'Kann ich GPT-5.6 lokal ausführen?',
-              a: 'Nein, OpenAI gibt Gewichte nicht frei. Lokale Alternativen (Llama 70B, Qwen 72B) sind ähnlich gut, aber nicht identisch.'
-            },
-            {
-              q: 'Wie lange dauert das Setup eines lokalen Modells?',
-              a: '20–40 Minuten (Ollama install + Model download + GPU config). Cloud: 5 Minuten. Cloud ist schneller zum Einstieg.'
-            },
-            {
-              q: 'Soll ich ein lokales LLM oder eine Cloud API verwenden?',
-              a: 'Lokales LLM, wenn Datenschutz kritisch ist. Cloud, wenn Geschwindigkeit oder aktuelle Informationen kritisch sind. Unsicher? Testen Sie beide mit PromptQuorum — senden Sie einen Prompt gleichzeitig an lokales Ollama und 25+ Cloud-Modelle, um die Qualität für Ihre spezifische Aufgabe zu vergleichen.'
-            },
-            {
-              q: 'Ist lokales LLM schneller als Cloud API?',
-              a: 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.900–3.800 € auf dem Gebrauchtmarkt.'
-            },
-            {
-              q: 'Ist lokales LLM günstiger als Cloud?',
-              a: 'Hängt von der Nutzung ab. Lokal kostet 900–2.200 € Hardware-Vorlauf. Cloud kostet $5–50/Monat. Für leichte Nutzer (<100.000 Token/Monat) ist Cloud günstiger. Für schwere Nutzer (>10 Mio. Token/Monat) amortisiert sich lokal in 6–12 Monaten.'
-            },
-            {
-              q: 'Wann sollte ich lokales LLM statt Cloud verwenden?',
-              a: 'Lokal verwenden wenn: Datenschutz kritisch (keine Daten verlassen das Gerät), ausreichend Hardware (16+ GB RAM oder 40+ GB für 70B), keine Echtzeitinformationen benötigt, und Setup-Komplexität akzeptabel. Cloud verwenden wenn: Geschwindigkeit kritisch, Echtzeit-Datenzugriff nötig, Hardware limitiert (<8 GB RAM), oder Frontier-Level-Reasoning benötigt.'
-            },
-            {
-              q: 'Was sind die Hauptbeschränkungen von lokalen LLMs?',
-              a: 'Sechs Hauptbeschränkungen: (1) Niedrigere Qualität bei komplexem Reasoning vs. Frontier-Cloud-Modelle, (2) 4–10× langsamere Inferenz auf Consumer-Hardware, (3) Hohe Hardware-Anforderungen (900–2.200 € Vorlauf), (4) Kein Zugriff auf Echtzeitinformation (Training-Cutoff), (5) Setup-Komplexität (20–40 Minuten vs. 5 Minuten Cloud), (6) Begrenztes Kontextfenster (4K–128K Token lokal vs. 1M+ in Cloud).'
-            }
+            { q: 'Sind lokale LLMs langsamer als Cloud APIs?', a: 'Ja, deutlich. CPU-Inferenz = 10–25 Token/s, Cloud = 80–150 Token/s. Für Echtzeit-Chat ist lokal zu langsam. Für Batch-Verarbeitung ist lokal OK.' },
+            { q: 'Kann ich ein 70B-Modell auf meinem Laptop ausführen?', a: 'Nein. 70B-Modelle benötigen mindestens 40 GB RAM/VRAM. Ein typischer Laptop mit 16 GB kann maximal 13B-Modelle mit Quantisierung ausführen.' },
+            { q: 'Welche lokalen Modelle sind am besten?', a: 'Llama 3.3 13B oder Mistral Small für 16 GB RAM (≈ GPT-5.6 Luna). Llama 3.3 70B für 40 GB RAM (≈ GPT-4). Für beste Qualität: Cloud APIs (GPT-5.6, Claude).' },
+            { q: 'Kann ich lokal offline arbeiten?', a: 'Ja, das ist der Hauptvorteil. Nach Download läuft alles lokal ohne Internet. Cloud APIs brauchen immer Netzwerk.' },
+            { q: 'Was ist das maximale Kontextfenster lokal?', a: 'Typischerweise 4K–32K Token. Cloud APIs bieten 128K–200K (GPT-5.6, Claude). Für lange Dokumente ist Cloud besser.' },
+            { q: 'Benötige ich eine GPU für lokale LLMs?', a: 'Nein, aber stark empfohlen. CPU = 10–25 Token/s (sehr langsam). GPU = 50–160 Token/s (nutzbar). Ohne GPU ist Echtzeit-Chat nicht praktikabel.' },
+            { q: 'Was kostet ein lokales Modell?', a: 'Download kostenlos, Hardware teuer (2.900–3.800 € für GPU, Gebraucht). Cloud: €0,01–0,10 pro 1.000 Token. Für kleine bis mittlere Volumen ist Cloud günstiger.' },
+            { q: 'Ollama oder LM Studio?', a: 'Ollama = CLI, schneller, für Automation. LM Studio = GUI, für Anfänger. Beide führen dieselben Modelle aus.' },
+            { q: 'Kann ich GPT-5.6 lokal ausführen?', a: 'Nein, OpenAI gibt Gewichte nicht frei. Lokale Alternativen (Llama 70B, Qwen 72B) sind ähnlich gut, aber nicht identisch.' },
+            { q: 'Wie lange dauert das Setup eines lokalen Modells?', a: '20–40 Minuten (Ollama install + Model download + GPU config). Cloud: 5 Minuten. Cloud ist schneller zum Einstieg.' },
+            { q: 'Soll ich ein lokales LLM oder eine Cloud API verwenden?', a: 'Lokales LLM, wenn Datenschutz kritisch ist. Cloud, wenn Geschwindigkeit oder aktuelle Informationen kritisch sind. Unsicher? Testen Sie beide mit PromptQuorum — senden Sie einen Prompt gleichzeitig an lokales Ollama und 25+ Cloud-Modelle, um die Qualität für Ihre spezifische Aufgabe zu vergleichen.' },
+            { q: 'Ist lokales LLM schneller als Cloud API?', a: 'Nein. Cloud APIs erzeugen 80–150 Token/s. Lokale LLMs auf CPU erzeugen 10–25 Token/s — 4–10× langsamer. GPU hilft: NVIDIA RTX 4090 erreicht 130–160 Token/s, entspricht Cloud, kostet aber 2.900–3.800 € auf dem Gebrauchtmarkt.' },
+            { q: 'Ist lokales LLM günstiger als Cloud?', a: 'Hängt von der Nutzung ab. Lokal kostet 900–2.200 € Hardware-Vorlauf. Cloud kostet $5–50/Monat. Für leichte Nutzer (<100.000 Token/Monat) ist Cloud günstiger. Für schwere Nutzer (>10 Mio. Token/Monat) amortisiert sich lokal in 6–12 Monaten.' },
+            { q: 'Wann sollte ich lokales LLM statt Cloud verwenden?', a: 'Lokal verwenden wenn: Datenschutz kritisch (keine Daten verlassen das Gerät), ausreichend Hardware (16+ GB RAM oder 40+ GB für 70B), keine Echtzeitinformationen benötigt, und Setup-Komplexität akzeptabel. Cloud verwenden wenn: Geschwindigkeit kritisch, Echtzeit-Datenzugriff nötig, Hardware limitiert (<8 GB RAM), oder Frontier-Level-Reasoning benötigt.' },
+            { q: 'Was sind die Hauptbeschränkungen von lokalen LLMs?', a: 'Sechs Hauptbeschränkungen: (1) Niedrigere Qualität bei komplexem Reasoning vs. Frontier-Cloud-Modelle, (2) 4–10× langsamere Inferenz auf Consumer-Hardware, (3) Hohe Hardware-Anforderungen (900–2.200 € Vorlauf), (4) Kein Zugriff auf Echtzeitinformation (Training-Cutoff), (5) Setup-Komplexität (20–40 Minuten vs. 5 Minuten Cloud), (6) Begrenztes Kontextfenster (4K–128K Token lokal vs. 1M+ in Cloud).' },
+            { q: 'Sollte ich Ollama oder LM Studio verwenden?', a: 'Ollama ist CLI-basiert, schneller, einfacher zu automatisieren. LM Studio hat eine GUI, besser für Anfänger. Für Production und APIs: Ollama. Für explorative Experimente: LM Studio. Beide führen die gleichen Modelle aus (Llama, Mistral, Qwen).' },
+            { q: 'Muss ich bei der Verwendung von lokalen LLMs die DSGVO beachten?', a: 'Ja, besonders bei personenbezogenen Daten. DSGVO Artikel 28 (Datenverarbeitung) gilt auch für lokale LLMs, wenn Sie Kundendaten eingeben. Lokale Inferenz erfüllt Anforderungen der Datenneutralität besser als Cloud, aber: Sie müssen Datenschutzerklärungen aktualisieren, Datenfluss dokumentieren, und gegebenenfalls TOM (technische und organisatorische Maßnahmen) implementieren. BSI-Grundschutz-Kataloge empfehlen lokale Verarbeitung für Klassifizierung „INTERN" und höher.' },
+            { q: 'Ist ein lokales Modell für den deutschen Mittelstand geeignet?', a: 'Ja, mit Vorbehalten. Vorteil: Datenhoheit (DSGVO-konform, BSI-Grundschutz-Anforderungen). Nachteil: IT-Wartungsaufwand, Hardwarekosten, niedrigere Qualität. Empfehlung für Mittelstand: Ollama + Llama 3.3 13B auf einem lokalen Server oder dedizierten GPU für interne Textverarbeitung (Dokumente, E-Mails, Reports). Für kundengerichtete Anwendungen: Cloud APIs mit DPA (Datenverarbeitungsvertrag) sind sicherer und wartungsärmer.' },
           ]
         },
         sources: {
@@ -2434,124 +2400,148 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'Les LLMs locaux sont-ils plus lents que les Cloud APIs ?',
-            acceptedAnswer: {
+            'name': 'Les LLMs locaux sont-ils plus lents que Cloud APIs ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Oui, considérablement. L\'inférence CPU génère 10–25 tokens par seconde, tandis que les Cloud APIs (GPT-5.6) en génèrent 80–150. Même avec GPU (RTX 4090), vous n\'atteindrez que 130–160 tokens/s. Cloud est 4–10 fois plus rapide pour les applications temps réel.'
-            }
+              'text': 'Oui, beaucoup. CPU = 10–25 tokens/s, cloud = 80–150 tokens/s. Pour chat temps réel, local trop lent. Pour batch, local OK.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Puis-je exécuter un modèle 70B sur mon portable ?',
-            acceptedAnswer: {
+            'name': 'Puis-je exécuter modèle 70B sur mon portable ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Non. Les modèles 70B exigent au minimum 40 GB RAM ou VRAM. Un portable typique avec 16 GB peut exécuter au maximum un modèle 13B comprimé. Pour les 70B, vous avez besoin d\'un Mac Studio, d\'une station de travail ou d\'une configuration multi-GPU (coût : 3.000 $+).'
-            }
+              'text': 'Non. Modèles 70B exigent 40 GB RAM/VRAM minimum. Portable 16 GB peut exécuter max modèles 13B comprimés.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Quels sont les meilleurs LLMs locaux ?',
-            acceptedAnswer: {
+            'name': 'Quels meilleurs LLMs locaux ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Pour 16 GB RAM : Llama 3.3 13B ou Mistral Small (qualité ≈ GPT-5.6 Luna). Pour 40 GB RAM : Llama 3.3 70B ou Qwen 72B (qualité ≈ GPT-4). Utilisez la quantification Q4_K_M pour une efficacité optimale. Pour la meilleure qualité : Cloud APIs (GPT-5.6, Claude Sonnet 5).'
-            }
+              'text': 'Llama 3.3 13B ou Mistral Small pour 16 GB (≈ GPT-5.6 Luna). Llama 3.3 70B pour 40 GB (≈ GPT-4). Pour meilleure qualité : Cloud APIs.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Puis-je utiliser un modèle local hors ligne ?',
-            acceptedAnswer: {
+            'name': 'Puis-je utiliser local hors ligne ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Oui, c\'est l\'avantage principal. Après le téléchargement, tout fonctionne localement — pas d\'Internet requis. Cloud APIs nécessitent toujours une connexion réseau, mais offrent mises à jour automatiques et garanties de disponibilité.'
-            }
+              'text': 'Oui, avantage principal. Après téléchargement, tout local sans Internet. Cloud APIs toujours besoin réseau.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Quelle est la fenêtre de contexte maximale pour les LLMs locaux ?',
-            acceptedAnswer: {
+            'name': 'Fenêtre contexte max local ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'La plupart des modèles locaux supportent 4K–32K tokens de contexte. Llama 3.3 a 4K par défaut, mais peut être étendu à 32K. Les Cloud APIs offrent bien plus : GPT-5.6 = 128K, Claude Sonnet 5 = 200K. Pour les gros documents, Cloud est mieux.'
-            }
+              'text': 'Typiquement 4K–32K tokens. Cloud APIs offrent 128K–200K (GPT-5.6, Claude). Cloud mieux pour gros documents.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Ai-je besoin d\'un GPU pour les LLMs locaux ?',
-            acceptedAnswer: {
+            'name': 'Ai-je besoin GPU pour LLMs locaux ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Non, mais vivement recommandé. L\'inférence CPU est 10–50 fois plus lente. Avec un GPU (RTX 4090, RTX 4070), vous atteignez 50–160 tokens/s. Sans GPU (CPU pur) : 10–25 tokens/s, impraticable pour le chat en temps réel.'
-            }
+              'text': 'Non mais vivement recommandé. CPU = 10–25 tokens/s (très lent). GPU = 50–160 tokens/s (utilisable). Sans GPU, chat temps réel impratique.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Quel est le coût d\'un LLM local ?',
-            acceptedAnswer: {
+            'name': 'Quel coût LLM local ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Téléchargement gratuit et exécution gratuite (Ollama est gratuit). Matériel coûteux : GPU (RTX 4090, fin de vie) = 2 900–3 800 €+ marché de l\'occasion, Mac Studio = 2 999 €+ (M5 Max, situation en août 2026 ; la configuration haut de gamme de 512 Go, M5 Ultra, démarre à 6 599 €). Cloud APIs : 0,01–0,10 € par 1.000 tokens. Pour volumes petits à moyens, Cloud est moins cher.'
-            }
+              'text': 'Download gratuit, matériel cher (2 310 €+ GPU). Cloud : $0.01–0.10 par 1.000 tokens. Petits volumes, cloud moins cher.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Dois-je utiliser Ollama ou LM Studio ?',
-            acceptedAnswer: {
+            'name': 'Ollama ou LM Studio ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ollama est basé CLI, plus rapide, plus facile à automatiser. LM Studio a une GUI, mieux pour les débutants. Pour production et APIs : Ollama. Pour expérimentation exploratoire : LM Studio. Les deux exécutent les mêmes modèles (Llama, Mistral, Qwen).'
-            }
+              'text': 'Ollama = CLI, rapide, automation. LM Studio = GUI, débutants. Tous deux exécutent mêmes modèles.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Puis-je exécuter GPT-5.6 localement ?',
-            acceptedAnswer: {
+            'name': 'Puis-je exécuter GPT-5.6 localement ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Non, OpenAI ne fournit pas les poids GPT-5.6. Vous ne pouvez utiliser GPT-5.6 que via l\'API OpenAI. Il existe des alternatives open-source locales (Llama 3.3 70B, Qwen 72B) offrant qualité similaire (mais non identique). Pour qualité GPT-5.6 garantie : Cloud API.'
-            }
+              'text': 'Non, OpenAI ne fournit pas poids. Alternatives local (Llama 70B, Qwen 72B) similaires, non identiques.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Combien de temps prend la configuration d\'un LLM local ?',
-            acceptedAnswer: {
+            'name': 'Temps config LLM local ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Temps total : 20–40 minutes. (1) Installer Ollama/LM Studio : 2–3 min. (2) Télécharger modèle 7B (4 GB) : 5–10 min. (3) Configurer GPU (optionnel, CUDA/Metal) : 5–10 min. Cloud APIs : 5 minutes de début à premier appel API.'
-            }
+              'text': '20–40 min total (install + download + GPU config). Cloud : 5 min. Cloud plus rapide onboarding.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Dois-je utiliser un LLM local ou une Cloud API ?',
-            acceptedAnswer: {
+            'name': 'Dois-je utiliser un LLM local ou une Cloud API ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Local si la confidentialité est critique. Cloud si la vitesse ou les données en temps réel sont critiques. Incertain ? Testez les deux avec PromptQuorum — envoyez un prompt à votre Ollama local et 25+ modèles cloud simultanément pour comparer la qualité sur votre tâche spécifique.'
-            }
+              'text': 'Local si la confidentialité est critique. Cloud si la vitesse ou les données en temps réel sont critiques. Incertain ? Testez les deux avec PromptQuorum — envoyez un prompt à votre Ollama local et 25+ modèles cloud simultanément pour comparer la qualité sur votre tâche spécifique.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Un LLM local est-il plus rapide qu\'une Cloud API ?',
-            acceptedAnswer: {
+            'name': 'Un LLM local est-il plus rapide qu\'une Cloud API ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Non. Les APIs cloud génèrent 80–150 tokens/s. Les LLMs locaux sur CPU génèrent 10–25 tokens/s — 4–10× plus lents. Le GPU aide : NVIDIA RTX 4090 atteint 130–160 tokens/s, égale le cloud, mais coûte 2 900–3 800 € sur le marché de l\'occasion.'
-            }
+              'text': 'Non. Les APIs cloud génèrent 80–150 tokens/s. Les LLMs locaux sur CPU génèrent 10–25 tokens/s — 4–10× plus lents. Le GPU aide : NVIDIA RTX 4090 atteint 130–160 tokens/s, égale le cloud, mais coûte 2 310 €+.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Un LLM local est-il moins cher que le cloud ?',
-            acceptedAnswer: {
+            'name': 'Un LLM local est-il moins cher que le cloud ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Cela dépend de l\'utilisation. Local coûte 900–2 200 € matériel initial. Cloud coûte $5–50/mois. Pour les utilisateurs légers (<100K tokens/mois), cloud est moins cher. Pour les utilisateurs intensifs (>10M tokens/mois), local s\'amortit en 6–12 mois.'
-            }
+              'text': 'Cela dépend de l\'utilisation. Local coûte 900–2 200 € matériel initial. Cloud coûte $5–50/mois. Pour les utilisateurs légers (<100K tokens/mois), cloud est moins cher. Pour les utilisateurs intensifs (>10M tokens/mois), local s\'amortit en 6–12 mois.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Quand devrais-je utiliser un LLM local au lieu du cloud ?',
-            acceptedAnswer: {
+            'name': 'Quand devrais-je utiliser un LLM local au lieu du cloud ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Utilisez local quand : la confidentialité est critique (les données ne quittent jamais l\'appareil), vous avez du matériel adéquat (16+ GB RAM ou 40+ GB pour 70B), vous n\'avez pas besoin d\'information en temps réel, et la complexité de configuration est acceptable. Utilisez cloud quand : la vitesse est critique, l\'accès aux données en temps réel est nécessaire, le matériel est limité (<8 GB RAM), ou vous avez besoin de raisonnement frontier-level.'
-            }
+              'text': 'Utilisez local quand : la confidentialité est critique (les données ne quittent jamais l\'appareil), vous avez du matériel adéquat (16+ GB RAM ou 40+ GB pour 70B), vous n\'avez pas besoin d\'information en temps réel, et la complexité de configuration est acceptable. Utilisez cloud quand : la vitesse est critique, l\'accès aux données en temps réel est nécessaire, le matériel est limité (<8 GB RAM), ou vous avez besoin de raisonnement frontier-level.',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Quelles sont les principales limitations des LLMs locaux ?',
-            acceptedAnswer: {
+            'name': 'Quelles sont les principales limitations des LLMs locaux ?',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Six limitations principales : (1) Qualité inférieure en raisonnement complexe vs modèles cloud frontier, (2) Inférence 4–10× plus lente sur matériel client, (3) Exigences matérielles élevées (900–2.200 € initial), (4) Pas d\'accès aux informations en temps réel (date de coupure d\'entraînement), (5) Complexité de configuration (20–40 minutes vs 5 minutes cloud), (6) Fenêtre de contexte limitée (4K–128K tokens local vs 1M+ en cloud).'
-            }
-          }
+              'text': 'Six limitations principales : (1) Qualité inférieure en raisonnement complexe vs modèles cloud frontier, (2) Inférence 4–10× plus lente sur matériel client, (3) Exigences matérielles élevées (900–2.200 € initial), (4) Pas d\'accès aux informations en temps réel (date de coupure d\'entraînement), (5) Complexité de configuration (20–40 minutes vs 5 minutes cloud), (6) Fenêtre de contexte limitée (4K–128K tokens local vs 1M+ en cloud).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la fenêtre de contexte maximale pour les LLMs locaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La plupart des modèles locaux supportent 4K–32K tokens de contexte. Llama 3.3 a 4K par défaut, mais peut être étendu à 32K. Les Cloud APIs offrent bien plus : GPT-5.6 = 128K, Claude Sonnet 5 = 200K. Pour les gros documents, Cloud est mieux.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je utiliser Ollama ou LM Studio ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama est basé CLI, plus rapide, plus facile à automatiser. LM Studio a une GUI, mieux pour les débutants. Pour production et APIs : Ollama. Pour expérimentation exploratoire : LM Studio. Les deux exécutent les mêmes modèles (Llama, Mistral, Qwen).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien de temps prend la configuration d\'un LLM local ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Temps total : 20–40 minutes. (1) Installer Ollama/LM Studio : 2–3 min. (2) Télécharger modèle 7B (4 GB) : 5–10 min. (3) Configurer GPU (optionnel, CUDA/Metal) : 5–10 min. Cloud APIs : 5 minutes de début à premier appel API.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -2909,66 +2899,24 @@ schema: {
           id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
-            {
-              q: 'Les LLMs locaux sont-ils plus lents que Cloud APIs ?',
-              a: 'Oui, beaucoup. CPU = 10–25 tokens/s, cloud = 80–150 tokens/s. Pour chat temps réel, local trop lent. Pour batch, local OK.'
-            },
-            {
-              q: 'Puis-je exécuter modèle 70B sur mon portable ?',
-              a: 'Non. Modèles 70B exigent 40 GB RAM/VRAM minimum. Portable 16 GB peut exécuter max modèles 13B comprimés.'
-            },
-            {
-              q: 'Quels meilleurs LLMs locaux ?',
-              a: 'Llama 3.3 13B ou Mistral Small pour 16 GB (≈ GPT-5.6 Luna). Llama 3.3 70B pour 40 GB (≈ GPT-4). Pour meilleure qualité : Cloud APIs.'
-            },
-            {
-              q: 'Puis-je utiliser local hors ligne ?',
-              a: 'Oui, avantage principal. Après téléchargement, tout local sans Internet. Cloud APIs toujours besoin réseau.'
-            },
-            {
-              q: 'Fenêtre contexte max local ?',
-              a: 'Typiquement 4K–32K tokens. Cloud APIs offrent 128K–200K (GPT-5.6, Claude). Cloud mieux pour gros documents.'
-            },
-            {
-              q: 'Ai-je besoin GPU pour LLMs locaux ?',
-              a: 'Non mais vivement recommandé. CPU = 10–25 tokens/s (très lent). GPU = 50–160 tokens/s (utilisable). Sans GPU, chat temps réel impratique.'
-            },
-            {
-              q: 'Quel coût LLM local ?',
-              a: 'Download gratuit, matériel cher (2 310 €+ GPU). Cloud : $0.01–0.10 par 1.000 tokens. Petits volumes, cloud moins cher.'
-            },
-            {
-              q: 'Ollama ou LM Studio ?',
-              a: 'Ollama = CLI, rapide, automation. LM Studio = GUI, débutants. Tous deux exécutent mêmes modèles.'
-            },
-            {
-              q: 'Puis-je exécuter GPT-5.6 localement ?',
-              a: 'Non, OpenAI ne fournit pas poids. Alternatives local (Llama 70B, Qwen 72B) similaires, non identiques.'
-            },
-            {
-              q: 'Temps config LLM local ?',
-              a: '20–40 min total (install + download + GPU config). Cloud : 5 min. Cloud plus rapide onboarding.'
-            },
-            {
-              q: 'Dois-je utiliser un LLM local ou une Cloud API ?',
-              a: 'Local si la confidentialité est critique. Cloud si la vitesse ou les données en temps réel sont critiques. Incertain ? Testez les deux avec PromptQuorum — envoyez un prompt à votre Ollama local et 25+ modèles cloud simultanément pour comparer la qualité sur votre tâche spécifique.'
-            },
-            {
-              q: 'Un LLM local est-il plus rapide qu\'une Cloud API ?',
-              a: 'Non. Les APIs cloud génèrent 80–150 tokens/s. Les LLMs locaux sur CPU génèrent 10–25 tokens/s — 4–10× plus lents. Le GPU aide : NVIDIA RTX 4090 atteint 130–160 tokens/s, égale le cloud, mais coûte 2 310 €+.'
-            },
-            {
-              q: 'Un LLM local est-il moins cher que le cloud ?',
-              a: 'Cela dépend de l\'utilisation. Local coûte 900–2 200 € matériel initial. Cloud coûte $5–50/mois. Pour les utilisateurs légers (<100K tokens/mois), cloud est moins cher. Pour les utilisateurs intensifs (>10M tokens/mois), local s\'amortit en 6–12 mois.'
-            },
-            {
-              q: 'Quand devrais-je utiliser un LLM local au lieu du cloud ?',
-              a: 'Utilisez local quand : la confidentialité est critique (les données ne quittent jamais l\'appareil), vous avez du matériel adéquat (16+ GB RAM ou 40+ GB pour 70B), vous n\'avez pas besoin d\'information en temps réel, et la complexité de configuration est acceptable. Utilisez cloud quand : la vitesse est critique, l\'accès aux données en temps réel est nécessaire, le matériel est limité (<8 GB RAM), ou vous avez besoin de raisonnement frontier-level.'
-            },
-            {
-              q: 'Quelles sont les principales limitations des LLMs locaux ?',
-              a: 'Six limitations principales : (1) Qualité inférieure en raisonnement complexe vs modèles cloud frontier, (2) Inférence 4–10× plus lente sur matériel client, (3) Exigences matérielles élevées (900–2.200 € initial), (4) Pas d\'accès aux informations en temps réel (date de coupure d\'entraînement), (5) Complexité de configuration (20–40 minutes vs 5 minutes cloud), (6) Fenêtre de contexte limitée (4K–128K tokens local vs 1M+ en cloud).'
-            }
+            { q: 'Les LLMs locaux sont-ils plus lents que Cloud APIs ?', a: 'Oui, beaucoup. CPU = 10–25 tokens/s, cloud = 80–150 tokens/s. Pour chat temps réel, local trop lent. Pour batch, local OK.' },
+            { q: 'Puis-je exécuter modèle 70B sur mon portable ?', a: 'Non. Modèles 70B exigent 40 GB RAM/VRAM minimum. Portable 16 GB peut exécuter max modèles 13B comprimés.' },
+            { q: 'Quels meilleurs LLMs locaux ?', a: 'Llama 3.3 13B ou Mistral Small pour 16 GB (≈ GPT-5.6 Luna). Llama 3.3 70B pour 40 GB (≈ GPT-4). Pour meilleure qualité : Cloud APIs.' },
+            { q: 'Puis-je utiliser local hors ligne ?', a: 'Oui, avantage principal. Après téléchargement, tout local sans Internet. Cloud APIs toujours besoin réseau.' },
+            { q: 'Fenêtre contexte max local ?', a: 'Typiquement 4K–32K tokens. Cloud APIs offrent 128K–200K (GPT-5.6, Claude). Cloud mieux pour gros documents.' },
+            { q: 'Ai-je besoin GPU pour LLMs locaux ?', a: 'Non mais vivement recommandé. CPU = 10–25 tokens/s (très lent). GPU = 50–160 tokens/s (utilisable). Sans GPU, chat temps réel impratique.' },
+            { q: 'Quel coût LLM local ?', a: 'Download gratuit, matériel cher (2 310 €+ GPU). Cloud : $0.01–0.10 par 1.000 tokens. Petits volumes, cloud moins cher.' },
+            { q: 'Ollama ou LM Studio ?', a: 'Ollama = CLI, rapide, automation. LM Studio = GUI, débutants. Tous deux exécutent mêmes modèles.' },
+            { q: 'Puis-je exécuter GPT-5.6 localement ?', a: 'Non, OpenAI ne fournit pas poids. Alternatives local (Llama 70B, Qwen 72B) similaires, non identiques.' },
+            { q: 'Temps config LLM local ?', a: '20–40 min total (install + download + GPU config). Cloud : 5 min. Cloud plus rapide onboarding.' },
+            { q: 'Dois-je utiliser un LLM local ou une Cloud API ?', a: 'Local si la confidentialité est critique. Cloud si la vitesse ou les données en temps réel sont critiques. Incertain ? Testez les deux avec PromptQuorum — envoyez un prompt à votre Ollama local et 25+ modèles cloud simultanément pour comparer la qualité sur votre tâche spécifique.' },
+            { q: 'Un LLM local est-il plus rapide qu\'une Cloud API ?', a: 'Non. Les APIs cloud génèrent 80–150 tokens/s. Les LLMs locaux sur CPU génèrent 10–25 tokens/s — 4–10× plus lents. Le GPU aide : NVIDIA RTX 4090 atteint 130–160 tokens/s, égale le cloud, mais coûte 2 310 €+.' },
+            { q: 'Un LLM local est-il moins cher que le cloud ?', a: 'Cela dépend de l\'utilisation. Local coûte 900–2 200 € matériel initial. Cloud coûte $5–50/mois. Pour les utilisateurs légers (<100K tokens/mois), cloud est moins cher. Pour les utilisateurs intensifs (>10M tokens/mois), local s\'amortit en 6–12 mois.' },
+            { q: 'Quand devrais-je utiliser un LLM local au lieu du cloud ?', a: 'Utilisez local quand : la confidentialité est critique (les données ne quittent jamais l\'appareil), vous avez du matériel adéquat (16+ GB RAM ou 40+ GB pour 70B), vous n\'avez pas besoin d\'information en temps réel, et la complexité de configuration est acceptable. Utilisez cloud quand : la vitesse est critique, l\'accès aux données en temps réel est nécessaire, le matériel est limité (<8 GB RAM), ou vous avez besoin de raisonnement frontier-level.' },
+            { q: 'Quelles sont les principales limitations des LLMs locaux ?', a: 'Six limitations principales : (1) Qualité inférieure en raisonnement complexe vs modèles cloud frontier, (2) Inférence 4–10× plus lente sur matériel client, (3) Exigences matérielles élevées (900–2.200 € initial), (4) Pas d\'accès aux informations en temps réel (date de coupure d\'entraînement), (5) Complexité de configuration (20–40 minutes vs 5 minutes cloud), (6) Fenêtre de contexte limitée (4K–128K tokens local vs 1M+ en cloud).' },
+            { q: 'Quelle est la fenêtre de contexte maximale pour les LLMs locaux ?', a: 'La plupart des modèles locaux supportent 4K–32K tokens de contexte. Llama 3.3 a 4K par défaut, mais peut être étendu à 32K. Les Cloud APIs offrent bien plus : GPT-5.6 = 128K, Claude Sonnet 5 = 200K. Pour les gros documents, Cloud est mieux.' },
+            { q: 'Dois-je utiliser Ollama ou LM Studio ?', a: 'Ollama est basé CLI, plus rapide, plus facile à automatiser. LM Studio a une GUI, mieux pour les débutants. Pour production et APIs : Ollama. Pour expérimentation exploratoire : LM Studio. Les deux exécutent les mêmes modèles (Llama, Mistral, Qwen).' },
+            { q: 'Combien de temps prend la configuration d\'un LLM local ?', a: 'Temps total : 20–40 minutes. (1) Installer Ollama/LM Studio : 2–3 min. (2) Télécharger modèle 7B (4 GB) : 5–10 min. (3) Configurer GPU (optionnel, CUDA/Metal) : 5–10 min. Cloud APIs : 5 minutes de début à premier appel API.' },
           ]
         },
         sources: {
@@ -3079,124 +3027,140 @@ schema: {
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'ローカルLLMはCloud APIより遅いですか？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMはCloud APIより遅いですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'はい、かなり遅いです。CPU推論で毎秒10–25トークン生成します。Cloud API（GPT-5.6）は80–150トークン/秒です。GPU（RTX 4090）でも130–160トークン/秒にしかなりません。クラウドは4–10倍高速です。'
-            }
+              'text': 'はい、かなり。CPU = 10–25トークン/秒、クラウド = 80–150トークン/秒。リアルタイムチャットはローカル遅い。バッチ処理はローカルOK。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ノートパソコンで70Bモデルを実行できますか？',
-            acceptedAnswer: {
+            'name': 'ノートパソコンで70Bモデルは実行できますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'いいえ。70Bモデルは最低40 GB RAM/VRAM が必要です。16 GBのノートパソコンは13Bモデルに圧縮しても実行できません。70Bモデルには Mac Studio、ワークステーション、または複数GPU設定（¥450,000+）が必要です。'
-            }
+              'text': 'いいえ。70Bモデルは40 GB RAM/VRAM 最小。16 GBノートパソコンは13Bモデル圧縮が限界。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ベストなローカルLLMはどれですか？',
-            acceptedAnswer: {
+            'name': 'ベストなローカルLLMはどれですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '16 GB RAM の場合 ： Llama 3.3 13B または Mistral Small（品質 ≈ GPT-5.6 Luna）。40 GB RAM の場合 ： Llama 3.3 70B または Qwen 72B（品質 ≈ GPT-4）。最適な効率には Q4_K_M 量子化を使用します。最高品質：Cloud API（GPT-5.6、Claude Sonnet 5）。'
-            }
+              'text': 'Llama 3.3 13B または Mistral Small（16GB；≈GPT-5.6 Luna）。Llama 3.3 70B（40GB；≈GPT-4）。最高品質：Cloud API。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルモデルをオフラインで使用できますか？',
-            acceptedAnswer: {
+            'name': 'ローカルをオフラインで使用できますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'はい、これが主な利点です。ダウンロード後、すべてローカルで実行 — インターネット不要。Cloud API は常にネットワーク接続が必要ですが、自動更新と可用性保証を提供します。'
-            }
+              'text': 'はい、主な利点。ダウンロード後ローカル実行 — インターネット不要。Cloud API は常にネット必須。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMの最大コンテキストウィンドウはいくつですか？',
-            acceptedAnswer: {
+            'name': 'ローカルコンテキスト最大サイズは？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'ほとんどのローカルモデルは 4K–32K トークンコンテキストをサポートします。Llama 3.3 はデフォルト 4K ですが 32K に拡張可能。Cloud API ははるかに大きい ： GPT-5.6 = 128K、Claude Sonnet 5 = 200K。大きなドキュメントはクラウドがより良いです。'
-            }
+              'text': 'ふつう4K–32Kトークン。クラウドAPI = 128K–200K（GPT-5.6、Claude）。大きいドキュメントはクラウド。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMに GPU が必要ですか？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMに GPU が必要ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'いいえ、でも強く推奨します。CPU推論は10–50倍遅い。GPU（RTX 4090、RTX 4070）で50–160トークン/秒に達します。GPU なし（CPU のみ）：10–25トークン/秒で、リアルタイムチャットに不実用的です。'
-            }
+              'text': '不要ですが強く推奨。CPU = 10–25トークン/秒（とても遅い）。GPU = 50–160トークン/秒（使える）。リアルタイムチャット GPU 必須。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMはいくら かかりますか？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMはいくら かかりますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '無料ダウンロード＆実行（Ollama は無料）。ハードウェア高い ： GPU（RTX 4090、2026年に販売終了）= ¥337,000–¥438,000（中古市場）、Mac Studio = ¥419,800+（M5 Max、2026年8月時点。512GBの最上位構成M5 Ultraは¥949,800から）。Cloud API ： 1,000トークン当たり ¥1.7–1.7。小～中規模ボリューム、Cloud がお得です。'
-            }
+              'text': 'ダウンロード＆実行無料。ハード高い（GPU ¥270,000+）。Cloud： $0.01–0.10 / 1Kトークン。少量ボリュームはクラウド安い。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'Ollama か LM Studio どちらを使いますか？',
-            acceptedAnswer: {
+            'name': 'Ollama か LM Studio どちらですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'Ollama は CLI ベース、高速、自動化しやすい。LM Studio は GUI、初心者向け。本番環境と API： Ollama。探索的実験 ： LM Studio。両方同じモデル実行（Llama、Mistral、Qwen）。'
-            }
+              'text': 'Ollama = CLI、高速、自動化簡単。LM Studio = GUI、初級者。本番 = Ollama。試験 = LM Studio。同じモデル実行。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'GPT-5.6 をローカルで実行できますか？',
-            acceptedAnswer: {
+            'name': 'GPT-5.6 をローカルで実行できますか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'いいえ、OpenAI は GPT-5.6 ウェイトを提供していません。GPT-5.6 は OpenAI API 経由だけ。ローカルオープンソース代替案（Llama 3.3 70B、Qwen 72B）は同様の品質（非同一）。GPT-5.6 品質保証：Cloud API。'
-            }
+              'text': 'いいえ、OpenAI は重みを提供しません。GPT-5.6 は OpenAI API のみ。ローカル代替案（Llama 70B、Qwen 72B）似た、非同一。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMのセットアップに何分かかりますか？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMセットアップの時間は？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '合計 ： 20–40分。(1) Ollama/LM Studio インストール ： 2–3分。(2) 7Bモデルダウンロード（4 GB） ： 5–10分。(3) GPU 設定（オプション、CUDA/Metal） ： 5–10分。Cloud API ： 最初のAPI呼び出しまで5分。'
-            }
+              'text': '20–40分合計。(1) インストール 2–3分。(2) ダウンロード 5–10分。(3) GPU 設定（オプション） 5–10分。Cloud ： 5分。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMそれともCloud APIを使うべき？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMそれともCloud APIを使うべき？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'プライバシーが重要ならローカル。速度またはリアルタイムデータが重要ならCloud。迷っていますか？PromptQuorumで両方テストしてください。1つのプロンプトをローカルOllamaと25+個のクラウドモデルに同時に送信して、特定のタスクで品質を比較します。'
-            }
+              'text': 'プライバシーが重要ならローカル。速度またはリアルタイムデータが重要ならCloud。迷っていますか？PromptQuorumで両方テストしてください。1つのプロンプトをローカルOllamaと25+個のクラウドモデルに同時に送信して、特定のタスクで品質を比較します。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMはCloud APIより速いですか？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMはCloud APIより速いですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'いいえ。Cloud API は毎秒80–150トークン生成します。ローカルLLMのCPUは毎秒10–25トークン生成 —4–10倍遅い。GPUが役立つ ： NVIDIA RTX 4090は毎秒130–160トークンに達し、クラウドと並びますが、¥337,000–¥438,000（中古市場）費用です。'
-            }
+              'text': 'いいえ。Cloud API は毎秒80–150トークン生成します。ローカルLLMのCPUは毎秒10–25トークン生成 —4–10倍遅い。GPUが役立つ ： NVIDIA RTX 4090は毎秒130–160トークンに達し、クラウドと並びますが、¥270,000+費用です。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMはクラウドより安いですか？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMはクラウドより安いですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '使用方法による。ローカルは¥120,000–300,000ハードウェア初期費用。クラウドは月$5–50。軽度ユーザー(<100Kトークン/月)はクラウドが安い。ヘビーユーザー(>1000万トークン/月)は6–12ヶ月でローカルが元を取ります。'
-            }
+              'text': '使用方法による。ローカルは¥120,000–300,000ハードウェア初期費用。クラウドは月$5–50。軽度ユーザー(<100Kトークン/月)はクラウドが安い。ヘビーユーザー(>1000万トークン/月)は6–12ヶ月でローカルが元を取ります。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMをクラウドの代わりに使うべき時は？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMをクラウドの代わりに使うべき時は？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: 'ローカル使用時 ：プライバシーが重要(デバイスからデータが出ない)、十分なハードウェア(16+ GB RAM または70B用40+ GB)がある、リアルタイム情報が不要、セットアップの複雑さが許容できる。クラウド使用時 ： 速度が重要、リアルタイムデータアクセスが必要、ハードウェアが制限(<8 GB RAM)、またはフロンティアレベルの推論が必要。'
-            }
+              'text': 'ローカル使用時 ：プライバシーが重要(デバイスからデータが出ない)、十分なハードウェア(16+ GB RAM または70B用40+ GB)がある、リアルタイム情報が不要、セットアップの複雑さが許容できる。クラウド使用時 ： 速度が重要、リアルタイムデータアクセスが必要、ハードウェアが制限(<8 GB RAM)、またはフロンティアレベルの推論が必要。',
+            },
           },
           {
             '@type': 'Question',
-            name: 'ローカルLLMの主な制限は何ですか？',
-            acceptedAnswer: {
+            'name': 'ローカルLLMの主な制限は何ですか？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '6つの主な制限 ： (1) フロンティアクラウドモデル対複雑な推論品質が低い、(2) コンシューマーハードウェアでの推論が4–10倍遅い、(3) ハードウェア要件が高い(¥120,000–300,000初期費用)、(4) リアルタイム情報アクセスなし(トレーニングカットオフ日)、(5) セットアップの複雑さ(クラウド5分対20–40分)、(6) コンテキストウィンドウが制限(ローカル4K–128Kトークン対クラウド1M+)。'
-            }
-          }
+              'text': '6つの主な制限 ： (1) フロンティアクラウドモデル対複雑な推論品質が低い、(2) コンシューマーハードウェアでの推論が4–10倍遅い、(3) ハードウェア要件が高い(¥120,000–300,000初期費用)、(4) リアルタイム情報アクセスなし(トレーニングカットオフ日)、(5) セットアップの複雑さ(クラウド5分対20–40分)、(6) コンテキストウィンドウが制限(ローカル4K–128Kトークン対クラウド1M+)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMの最大コンテキストウィンドウはいくつですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどのローカルモデルは 4K–32K トークンコンテキストをサポートします。Llama 3.3 はデフォルト 4K ですが 32K に拡張可能。Cloud API ははるかに大きい ： GPT-5.6 = 128K、Claude Sonnet 5 = 200K。大きなドキュメントはクラウドがより良いです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMのセットアップに何分かかりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '合計 ： 20–40分。(1) Ollama/LM Studio インストール ： 2–3分。(2) 7Bモデルダウンロード（4 GB） ： 5–10分。(3) GPU 設定（オプション、CUDA/Metal） ： 5–10分。Cloud API ： 最初のAPI呼び出しまで5分。',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -3554,66 +3518,23 @@ schema: {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            {
-              q: 'ローカルLLMはCloud APIより遅いですか？',
-              a: 'はい、かなり。CPU = 10–25トークン/秒、クラウド = 80–150トークン/秒。リアルタイムチャットはローカル遅い。バッチ処理はローカルOK。'
-            },
-            {
-              q: 'ノートパソコンで70Bモデルは実行できますか？',
-              a: 'いいえ。70Bモデルは40 GB RAM/VRAM 最小。16 GBノートパソコンは13Bモデル圧縮が限界。'
-            },
-            {
-              q: 'ベストなローカルLLMはどれですか？',
-              a: 'Llama 3.3 13B または Mistral Small（16GB；≈GPT-5.6 Luna）。Llama 3.3 70B（40GB；≈GPT-4）。最高品質：Cloud API。'
-            },
-            {
-              q: 'ローカルをオフラインで使用できますか？',
-              a: 'はい、主な利点。ダウンロード後ローカル実行 — インターネット不要。Cloud API は常にネット必須。'
-            },
-            {
-              q: 'ローカルコンテキスト最大サイズは？',
-              a: 'ふつう4K–32Kトークン。クラウドAPI = 128K–200K（GPT-5.6、Claude）。大きいドキュメントはクラウド。'
-            },
-            {
-              q: 'ローカルLLMに GPU が必要ですか？',
-              a: '不要ですが強く推奨。CPU = 10–25トークン/秒（とても遅い）。GPU = 50–160トークン/秒（使える）。リアルタイムチャット GPU 必須。'
-            },
-            {
-              q: 'ローカルLLMはいくら かかりますか？',
-              a: 'ダウンロード＆実行無料。ハード高い（GPU ¥270,000+）。Cloud： $0.01–0.10 / 1Kトークン。少量ボリュームはクラウド安い。'
-            },
-            {
-              q: 'Ollama か LM Studio どちらですか？',
-              a: 'Ollama = CLI、高速、自動化簡単。LM Studio = GUI、初級者。本番 = Ollama。試験 = LM Studio。同じモデル実行。'
-            },
-            {
-              q: 'GPT-5.6 をローカルで実行できますか？',
-              a: 'いいえ、OpenAI は重みを提供しません。GPT-5.6 は OpenAI API のみ。ローカル代替案（Llama 70B、Qwen 72B）似た、非同一。'
-            },
-            {
-              q: 'ローカルLLMセットアップの時間は？',
-              a: '20–40分合計。(1) インストール 2–3分。(2) ダウンロード 5–10分。(3) GPU 設定（オプション） 5–10分。Cloud ： 5分。'
-            },
-            {
-              q: 'ローカルLLMそれともCloud APIを使うべき？',
-              a: 'プライバシーが重要ならローカル。速度またはリアルタイムデータが重要ならCloud。迷っていますか？PromptQuorumで両方テストしてください。1つのプロンプトをローカルOllamaと25+個のクラウドモデルに同時に送信して、特定のタスクで品質を比較します。'
-            },
-            {
-              q: 'ローカルLLMはCloud APIより速いですか？',
-              a: 'いいえ。Cloud API は毎秒80–150トークン生成します。ローカルLLMのCPUは毎秒10–25トークン生成 —4–10倍遅い。GPUが役立つ ： NVIDIA RTX 4090は毎秒130–160トークンに達し、クラウドと並びますが、¥270,000+費用です。'
-            },
-            {
-              q: 'ローカルLLMはクラウドより安いですか？',
-              a: '使用方法による。ローカルは¥120,000–300,000ハードウェア初期費用。クラウドは月$5–50。軽度ユーザー(<100Kトークン/月)はクラウドが安い。ヘビーユーザー(>1000万トークン/月)は6–12ヶ月でローカルが元を取ります。'
-            },
-            {
-              q: 'ローカルLLMをクラウドの代わりに使うべき時は？',
-              a: 'ローカル使用時 ：プライバシーが重要(デバイスからデータが出ない)、十分なハードウェア(16+ GB RAM または70B用40+ GB)がある、リアルタイム情報が不要、セットアップの複雑さが許容できる。クラウド使用時 ： 速度が重要、リアルタイムデータアクセスが必要、ハードウェアが制限(<8 GB RAM)、またはフロンティアレベルの推論が必要。'
-            },
-            {
-              q: 'ローカルLLMの主な制限は何ですか？',
-              a: '6つの主な制限 ： (1) フロンティアクラウドモデル対複雑な推論品質が低い、(2) コンシューマーハードウェアでの推論が4–10倍遅い、(3) ハードウェア要件が高い(¥120,000–300,000初期費用)、(4) リアルタイム情報アクセスなし(トレーニングカットオフ日)、(5) セットアップの複雑さ(クラウド5分対20–40分)、(6) コンテキストウィンドウが制限(ローカル4K–128Kトークン対クラウド1M+)。'
-            }
+            { q: 'ローカルLLMはCloud APIより遅いですか？', a: 'はい、かなり。CPU = 10–25トークン/秒、クラウド = 80–150トークン/秒。リアルタイムチャットはローカル遅い。バッチ処理はローカルOK。' },
+            { q: 'ノートパソコンで70Bモデルは実行できますか？', a: 'いいえ。70Bモデルは40 GB RAM/VRAM 最小。16 GBノートパソコンは13Bモデル圧縮が限界。' },
+            { q: 'ベストなローカルLLMはどれですか？', a: 'Llama 3.3 13B または Mistral Small（16GB；≈GPT-5.6 Luna）。Llama 3.3 70B（40GB；≈GPT-4）。最高品質：Cloud API。' },
+            { q: 'ローカルをオフラインで使用できますか？', a: 'はい、主な利点。ダウンロード後ローカル実行 — インターネット不要。Cloud API は常にネット必須。' },
+            { q: 'ローカルコンテキスト最大サイズは？', a: 'ふつう4K–32Kトークン。クラウドAPI = 128K–200K（GPT-5.6、Claude）。大きいドキュメントはクラウド。' },
+            { q: 'ローカルLLMに GPU が必要ですか？', a: '不要ですが強く推奨。CPU = 10–25トークン/秒（とても遅い）。GPU = 50–160トークン/秒（使える）。リアルタイムチャット GPU 必須。' },
+            { q: 'ローカルLLMはいくら かかりますか？', a: 'ダウンロード＆実行無料。ハード高い（GPU ¥270,000+）。Cloud： $0.01–0.10 / 1Kトークン。少量ボリュームはクラウド安い。' },
+            { q: 'Ollama か LM Studio どちらですか？', a: 'Ollama = CLI、高速、自動化簡単。LM Studio = GUI、初級者。本番 = Ollama。試験 = LM Studio。同じモデル実行。' },
+            { q: 'GPT-5.6 をローカルで実行できますか？', a: 'いいえ、OpenAI は重みを提供しません。GPT-5.6 は OpenAI API のみ。ローカル代替案（Llama 70B、Qwen 72B）似た、非同一。' },
+            { q: 'ローカルLLMセットアップの時間は？', a: '20–40分合計。(1) インストール 2–3分。(2) ダウンロード 5–10分。(3) GPU 設定（オプション） 5–10分。Cloud ： 5分。' },
+            { q: 'ローカルLLMそれともCloud APIを使うべき？', a: 'プライバシーが重要ならローカル。速度またはリアルタイムデータが重要ならCloud。迷っていますか？PromptQuorumで両方テストしてください。1つのプロンプトをローカルOllamaと25+個のクラウドモデルに同時に送信して、特定のタスクで品質を比較します。' },
+            { q: 'ローカルLLMはCloud APIより速いですか？', a: 'いいえ。Cloud API は毎秒80–150トークン生成します。ローカルLLMのCPUは毎秒10–25トークン生成 —4–10倍遅い。GPUが役立つ ： NVIDIA RTX 4090は毎秒130–160トークンに達し、クラウドと並びますが、¥270,000+費用です。' },
+            { q: 'ローカルLLMはクラウドより安いですか？', a: '使用方法による。ローカルは¥120,000–300,000ハードウェア初期費用。クラウドは月$5–50。軽度ユーザー(<100Kトークン/月)はクラウドが安い。ヘビーユーザー(>1000万トークン/月)は6–12ヶ月でローカルが元を取ります。' },
+            { q: 'ローカルLLMをクラウドの代わりに使うべき時は？', a: 'ローカル使用時 ：プライバシーが重要(デバイスからデータが出ない)、十分なハードウェア(16+ GB RAM または70B用40+ GB)がある、リアルタイム情報が不要、セットアップの複雑さが許容できる。クラウド使用時 ： 速度が重要、リアルタイムデータアクセスが必要、ハードウェアが制限(<8 GB RAM)、またはフロンティアレベルの推論が必要。' },
+            { q: 'ローカルLLMの主な制限は何ですか？', a: '6つの主な制限 ： (1) フロンティアクラウドモデル対複雑な推論品質が低い、(2) コンシューマーハードウェアでの推論が4–10倍遅い、(3) ハードウェア要件が高い(¥120,000–300,000初期費用)、(4) リアルタイム情報アクセスなし(トレーニングカットオフ日)、(5) セットアップの複雑さ(クラウド5分対20–40分)、(6) コンテキストウィンドウが制限(ローカル4K–128Kトークン対クラウド1M+)。' },
+            { q: 'ローカルLLMの最大コンテキストウィンドウはいくつですか？', a: 'ほとんどのローカルモデルは 4K–32K トークンコンテキストをサポートします。Llama 3.3 はデフォルト 4K ですが 32K に拡張可能。Cloud API ははるかに大きい ： GPT-5.6 = 128K、Claude Sonnet 5 = 200K。大きなドキュメントはクラウドがより良いです。' },
+            { q: 'ローカルLLMのセットアップに何分かかりますか？', a: '合計 ： 20–40分。(1) Ollama/LM Studio インストール ： 2–3分。(2) 7Bモデルダウンロード（4 GB） ： 5–10分。(3) GPU 設定（オプション、CUDA/Metal） ： 5–10分。Cloud API ： 最初のAPI呼び出しまで5分。' },
           ]
         },
         sources: {
@@ -3722,56 +3643,134 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: '本地LLM比Cloud API慢吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，明显慢。CPU推理每秒生成10–25个token。Cloud API（GPT-5.6）每秒生成80–150个token。即使用GPU（RTX 4090）也只能达到130–160 token/秒。云的速度快4–10倍。' } },
-          { '@type': 'Question', name: '我能在笔记本电脑上运行70B模型吗？', acceptedAnswer: { '@type': 'Answer', text: '不能。70B模型至少需要40 GB RAM或VRAM。具有16 GB的笔记本电脑最多只能运行压缩的13B模型。70B模型需要Mac Studio、工作站或多GPU设置（成本：$3,000+）。' } },
-          { '@type': 'Question', name: '最好的本地LLM是什么？', acceptedAnswer: { '@type': 'Answer', text: '16 GB RAM：Llama 3.3 13B或Mistral Small（质量≈GPT-5.6 Luna）。40 GB RAM：Llama 3.3 70B或Qwen 72B（质量≈GPT-4）。使用Q4_K_M量子化以获得最佳效率。最高质量：Cloud API（GPT-5.6、Claude Sonnet 5）。' } },
-          { '@type': 'Question', name: '我能离线使用本地模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，这是主要优势。下载后，一切在本地运行——不需要互联网。Cloud API始终需要网络连接，但提供自动更新和可用性保证。' } },
-          { '@type': 'Question', name: '本地LLM的最大上下文窗口是多少？', acceptedAnswer: { '@type': 'Answer', text: '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.6 = 128K，Claude Sonnet 5 = 200K。大文档云更好。' } },
-          { '@type': 'Question', name: '本地LLM需要GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '不需要，但强烈推荐。CPU推理慢10–50倍。带GPU（RTX 4090、RTX 4070）可达50–160 token/秒。仅CPU：10–25 token/秒，实时聊天不可行。' } },
-          { '@type': 'Question', name: '本地LLM要花多少钱？', acceptedAnswer: { '@type': 'Answer', text: '免费下载和运行（Ollama免费）。硬件贵：GPU（RTX 4090，2026年已停产）= $2,000–$2,600（二手市场），Mac Studio = $2,499+（M5 Max起售价，截至2026年8月；顶配512GB的M5 Ultra起售价为$5,499）。Cloud API：每1,000 token $0.01–0.10。小到中等规模的云更便宜。' } },
-          { '@type': 'Question', name: '我应该用Ollama还是LM Studio？', acceptedAnswer: { '@type': 'Answer', text: 'Ollama是CLI，更快，易于自动化。LM Studio有GUI，适合初学者。生产和API：Ollama。探索性实验：LM Studio。两者运行相同的模型。' } },
-          { '@type': 'Question', name: '我能在本地运行GPT-5.6吗？', acceptedAnswer: { '@type': 'Answer', text: '不能，OpenAI不提供GPT-5.6权重。GPT-5.6仅通过OpenAI API提供。本地开源替代方案（Llama 3.3 70B、Qwen 72B）提供类似质量（非完全相同）。GPT-5.6质量保证：Cloud API。' } },
-          { '@type': 'Question', name: '设置本地LLM需要多长时间？', acceptedAnswer: { '@type': 'Answer', text: '总共20–40分钟。(1)安装Ollama/LM Studio：2–3分钟。(2)下载7B模型（4 GB）：5–10分钟。(3)配置GPU（可选，CUDA/Metal）：5–10分钟。Cloud API：从开始到第一次API调用5分钟。' } },
           {
             '@type': 'Question',
-            name: '我应该使用本地LLM还是云API？',
-            acceptedAnswer: {
+            'name': '本地LLM比Cloud API慢吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '如果隐私至关重要则使用本地。如果速度或实时数据至关重要则使用云。不确定？用PromptQuorum测试两者——同时将一个prompt发送到本地Ollama和25+个云模型，比较您特定任务的质量。'
-            }
+              'text': '是的，明显。CPU = 10–25 token/秒，云= 80–150 token/秒。实时聊天本地太慢。批处理本地OK。',
+            },
           },
           {
             '@type': 'Question',
-            name: '本地LLM比云API快吗？',
-            acceptedAnswer: {
+            'name': '我能在笔记本上运行70B模型吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '不快。云API每秒生成80–150个token。本地LLM在CPU上每秒生成10–25个token——慢4–10倍。GPU帮助：NVIDIA RTX 4090达到每秒130–160个token，与云相当，但成本$2,000–$2,600（二手市场）。'
-            }
+              'text': '不能。70B需要40 GB RAM/VRAM最少。16 GB笔记本最多只能运行压缩13B。',
+            },
           },
           {
             '@type': 'Question',
-            name: '本地LLM比云便宜吗？',
-            acceptedAnswer: {
+            'name': '最好的本地LLM是什么？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '取决于使用量。本地成本$800–2,000硬件初期费用。云成本月$5–50。轻度用户(<100K tokens/月)云更便宜。重度用户(>1000万tokens/月)本地在6–12个月内回本。'
-            }
+              'text': 'Llama 3.3 13B或Mistral Small（16GB；≈GPT-5.6 Luna）。Llama 3.3 70B（40GB；≈GPT-4）。最高质量：Cloud API。',
+            },
           },
           {
             '@type': 'Question',
-            name: '何时应该使用本地LLM而不是云？',
-            acceptedAnswer: {
+            'name': '我能离线使用本地LLM吗？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '使用本地时：隐私至关重要(数据不离开设备)、有足够硬件(16+ GB RAM或70B用40+ GB)、不需要实时信息、可接受设置复杂性。使用云时：速度至关重要、需要实时数据访问、硬件受限(<8 GB RAM)、或需要前沿级推理。'
-            }
+              'text': '可以，主要优势。下载后本地运行——不需互联网。云API总是需网络。',
+            },
           },
           {
             '@type': 'Question',
-            name: '本地LLM的主要限制是什么？',
-            acceptedAnswer: {
+            'name': '本地上下文最大多少？',
+            'acceptedAnswer': {
               '@type': 'Answer',
-              text: '六个主要限制：(1)复杂推理对前沿云模型质量更低、(2)消费硬件推理慢4–10倍、(3)硬件要求高($800–2,000初期)、(4)无实时信息访问(训练截止日期)、(5)设置复杂性(20–40分钟对云5分钟)、(6)上下文窗口受限(本地4K–128K tokens对云1M+)。'
-            }
-          }
+              'text': '通常4K–32K token。云API = 128K–200K（GPT-5.6、Claude）。大文件云更好。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM需要GPU吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需但强烈推荐。CPU = 10–25 token/秒（太慢）。GPU = 50–160 token/秒（可用）。实时聊天GPU必需。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM要花多少钱？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '下载运行免费。硬件贵（GPU ¥270,000+）。云：每1K token $0.01–0.10。小量云更便宜。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '用Ollama还是LM Studio？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ollama = CLI、快速、易自动化。LM Studio = GUI、初学者。生产 = Ollama。试验 = LM Studio。两者运行相同模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '能在本地运行GPT-5.6吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能，OpenAI不提供GPT-5.6权重。GPT-5.6只通过OpenAI API。本地替代方案（Llama 70B、Qwen 72B）相似、非完全相同。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '设置本地LLM需多久？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '总共20–40分钟。(1)安装2–3分钟。(2)下载5–10分钟。(3)GPU配置（可选）5–10分钟。云：5分钟。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我应该使用本地LLM还是云API？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '如果隐私至关重要则使用本地。如果速度或实时数据至关重要则使用云。不确定？用PromptQuorum测试两者——同时将一个prompt发送到本地Ollama和25+个云模型，比较您特定任务的质量。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM比云API快吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不快。云API每秒生成80–150个token。本地LLM在CPU上每秒生成10–25个token——慢4–10倍。GPU帮助：NVIDIA RTX 4090达到每秒130–160个token，与云相当，但成本$1,600+。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM比云便宜吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '取决于使用量。本地成本$800–2,000硬件初期费用。云成本月$5–50。轻度用户(<100K tokens/月)云更便宜。重度用户(>1000万tokens/月)本地在6–12个月内回本。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '何时应该使用本地LLM而不是云？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '使用本地时：隐私至关重要(数据不离开设备)、有足够硬件(16+ GB RAM或70B用40+ GB)、不需要实时信息、可接受设置复杂性。使用云时：速度至关重要、需要实时数据访问、硬件受限(<8 GB RAM)、或需要前沿级推理。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM的主要限制是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '六个主要限制：(1)复杂推理对前沿云模型质量更低、(2)消费硬件推理慢4–10倍、(3)硬件要求高($800–2,000初期)、(4)无实时信息访问(训练截止日期)、(5)设置复杂性(20–40分钟对云5分钟)、(6)上下文窗口受限(本地4K–128K tokens对云1M+)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM的最大上下文窗口是多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.6 = 128K，Claude Sonnet 5 = 200K。大文档云更好。',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -4113,7 +4112,8 @@ schema: {
             { q: '本地LLM比云API快吗？', a: '不快。云API每秒生成80–150个token。本地LLM在CPU上每秒生成10–25个token——慢4–10倍。GPU帮助：NVIDIA RTX 4090达到每秒130–160个token，与云相当，但成本$1,600+。' },
             { q: '本地LLM比云便宜吗？', a: '取决于使用量。本地成本$800–2,000硬件初期费用。云成本月$5–50。轻度用户(<100K tokens/月)云更便宜。重度用户(>1000万tokens/月)本地在6–12个月内回本。' },
             { q: '何时应该使用本地LLM而不是云？', a: '使用本地时：隐私至关重要(数据不离开设备)、有足够硬件(16+ GB RAM或70B用40+ GB)、不需要实时信息、可接受设置复杂性。使用云时：速度至关重要、需要实时数据访问、硬件受限(<8 GB RAM)、或需要前沿级推理。' },
-            { q: '本地LLM的主要限制是什么？', a: '六个主要限制：(1)复杂推理对前沿云模型质量更低、(2)消费硬件推理慢4–10倍、(3)硬件要求高($800–2,000初期)、(4)无实时信息访问(训练截止日期)、(5)设置复杂性(20–40分钟对云5分钟)、(6)上下文窗口受限(本地4K–128K tokens对云1M+)。' }
+            { q: '本地LLM的主要限制是什么？', a: '六个主要限制：(1)复杂推理对前沿云模型质量更低、(2)消费硬件推理慢4–10倍、(3)硬件要求高($800–2,000初期)、(4)无实时信息访问(训练截止日期)、(5)设置复杂性(20–40分钟对云5分钟)、(6)上下文窗口受限(本地4K–128K tokens对云1M+)。' },
+            { q: '本地LLM的最大上下文窗口是多少？', a: '大多数本地模型支持4K–32K token上下文。Llama 3.3默认4K，但可扩展至32K。Cloud API提供更多：GPT-5.6 = 128K，Claude Sonnet 5 = 200K。大文档云更好。' },
           ]
         },
         sources: {

@@ -153,6 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What is the best notebook for local LLMs?', a: '"Notebook" and "laptop" refer to the same device category. The best notebook for local LLMs in 2026 is the MacBook Pro M5 Pro ($2,199, 24 GB unified memory) — 45–60 tok/s on Qwen3 14B, completely silent. Best Windows notebook: RTX 5080 gaming notebook (~$2,799, 16 GB VRAM). Avoid thin ultrabooks — integrated graphics deliver only 1–2 tok/s.' },
             { q: 'What is the cheapest laptop for running local LLMs?', a: 'The RTX 5070 laptop (~$1,899, 8 GB GDDR7 VRAM) is the cheapest current option, limited to 7B models at Q4 — enough for most coding-assistant and chat use cases. For 7B–13B headroom, step up to the RTX 5070 Ti (~$2,499, 12 GB VRAM). A used 2023-era RTX 4070 laptop ($800–1,100 on eBay) is cheaper still but 30–50% slower.' },
             { q: 'Can I train or fine-tune an LLM on a laptop?', a: 'Training a model from scratch is not practical on any laptop. Fine-tuning a small model (up to ~7B) via LoRA or QLoRA is possible on a laptop with 12+ GB VRAM (RTX 5070 Ti or better) or 24 GB unified memory (MacBook Pro M5 Pro), but expect it to take hours, not minutes. For anything beyond LoRA fine-tuning of small models, use a desktop or cloud GPU instead — this guide covers running (inference), not training.' },
+            { q: 'What laptops work best for local LLM inference in 2026?', a: 'MacBook Pro M5 Pro ($2,199, 24 GB unified memory) is the top pick — 45–60 tok/s on 14B, completely silent. RTX 5080 laptop (~$2,799, 16 GB VRAM) is the best Windows option at ~70 tok/s on 7B. RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best mid-range Windows pick at ~50 tok/s, or RTX 5070 (~$1,899, 8 GB VRAM) for the cheapest option.' },
           ],
         },
         'relatedReading': {
@@ -212,88 +213,88 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is the MacBook Pro M5 Pro good for local LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes — it is the best quiet laptop for local LLMs in 2026. The 24 GB unified memory configuration ($2,199) runs Qwen3 14B at Q4 with 45–60 tok/s and no fan noise. Upgrade to 36 GB ($2,999) for comfortable 30B model headroom.'
-            }
+              'text': 'Yes — it is the best laptop for local LLMs in 2026. The 24 GB unified memory configuration ($2,199) runs Qwen3 14B at Q4 with 45–60 tok/s and no fan noise. Upgrade to 36 GB ($2,999) for comfortable 30B model headroom.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Which Windows laptop is best for running LLMs locally in 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The RTX 5080 laptop (~$2,799, 16 GB GDDR7 VRAM) is the top Windows pick — ~70 tok/s on Llama 3.1 8B Q4. The RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best mid-range option at ~50 tok/s. The RTX 5070 laptop (~$1,899, 8 GB VRAM) is the cheapest option, limited to 7B models.'
-            }
+              'text': 'The RTX 5080 laptop (~$2,799, 16 GB GDDR7 VRAM) is the top Windows pick — ~70 tok/s on Llama 3.1 8B Q4. The RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best mid-range option at ~50 tok/s. The RTX 5070 laptop (~$1,899, 8 GB VRAM) is the cheapest option, limited to 7B models.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I run 14B models on an RTX 5070 Ti laptop?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. The RTX 5070 Ti has 12 GB VRAM, which fits Qwen3 14B at Q4 comfortably. At Q8 (higher quality), 14B requires ~14 GB — you would need the RTX 5080 (16 GB) for Q8 on 14B.'
-            }
+              'text': 'Yes. The RTX 5070 Ti has 12 GB VRAM, which fits Qwen3 14B at Q4 comfortably. At Q8 (higher quality), 14B requires ~14 GB — you would need the RTX 5080 (16 GB) for Q8 on 14B.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Should I buy a gaming laptop or a mini PC for local LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mini PC: cheaper, faster, more upgradeable, runs cooler. Gaming laptop: portable but thermal-limited. If you need portability, get MacBook Pro M5 Pro or an RTX 5080 laptop. If you stay at a desk, a desktop with RTX 4060 Ti 16GB outperforms any laptop and costs less.'
-            }
+              'text': 'Mini PC: cheaper, faster, more upgradeable, runs cooler. Gaming laptop: portable but thermal-limited. If you need portability, get MacBook Pro M5 Pro or an RTX 5080 laptop. If you stay at a desk, a desktop with RTX 4060 Ti 16GB outperforms any laptop and costs less.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I run a 7B model on battery on a Windows gaming laptop?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Technically yes, but the GPU switches to iGPU on battery. Inference drops to 2–4 tok/s (unusable for real work). MacBook Pro M5 Pro on battery delivers ~40 tok/s — much better for battery inference.'
-            }
+              'text': 'Technically yes, but the GPU switches to iGPU on battery. Inference drops to 2–4 tok/s (unusable for real work). MacBook Pro M5 Pro on battery delivers ~40 tok/s — much better for battery inference.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is the best Apple laptop for local LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) for most users. MacBook Pro M5 Max 14" ($3,199+, 36 GB) for 30B–70B models. MacBook Pro M5 Max 16" ($3,499+, 64 GB) for researchers running 70B at Q8.'
-            }
+              'text': 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) for most users. MacBook Pro M5 Max 14" ($3,199+, 36 GB) for 30B–70B models. MacBook Pro M5 Max 16" ($3,499+, 64 GB) for researchers running 70B at Q8.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Are 2023 RTX 4070 laptops still worth buying for LLMs in 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Only at a significant used discount ($800–1,100 on eBay). New RTX 5070 Ti laptops (~$2,499) are 30–50% faster for LLM inference. If you already own an RTX 4070 laptop, it still runs 7B–13B models adequately.'
-            }
-          },
-          {
-            '@type': 'Question',
-            'name': 'What laptops work best for local LLM inference in 2026?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'MacBook Pro M5 Pro ($2,199, 24 GB unified memory) is the top pick — 45–60 tok/s on 14B, completely silent. RTX 5080 laptop (~$2,799, 16 GB VRAM) is the best Windows option at ~70 tok/s on 7B. RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best mid-range Windows pick at ~50 tok/s, or RTX 5070 (~$1,899, 8 GB VRAM) for the cheapest option.'
-            }
+              'text': 'Only at a significant used discount ($800–1,100 on eBay). New RTX 5070 Ti laptops (~$2,499) are 30–50% faster for LLM inference. If you already own an RTX 4070 laptop, it still runs 7B–13B models adequately.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is the best notebook for local LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '"Notebook" and "laptop" refer to the same device category. The best notebook for local LLMs in 2026 is the MacBook Pro M5 Pro ($2,199, 24 GB unified memory) — 45–60 tok/s on Qwen3 14B, completely silent. Best Windows notebook: RTX 5080 gaming notebook (~$2,799, 16 GB VRAM). Avoid thin ultrabooks — integrated graphics deliver only 1–2 tok/s.'
-            }
+              'text': '"Notebook" and "laptop" refer to the same device category. The best notebook for local LLMs in 2026 is the MacBook Pro M5 Pro ($2,199, 24 GB unified memory) — 45–60 tok/s on Qwen3 14B, completely silent. Best Windows notebook: RTX 5080 gaming notebook (~$2,799, 16 GB VRAM). Avoid thin ultrabooks — integrated graphics deliver only 1–2 tok/s.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is the cheapest laptop for running local LLMs?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The RTX 5070 laptop (~$1,899, 8 GB GDDR7 VRAM) is the cheapest current option, limited to 7B models at Q4 — enough for most coding-assistant and chat use cases. For 7B–13B headroom, step up to the RTX 5070 Ti (~$2,499, 12 GB VRAM). A used 2023-era RTX 4070 laptop ($800–1,100 on eBay) is cheaper still but 30–50% slower.'
-            }
+              'text': 'The RTX 5070 laptop (~$1,899, 8 GB GDDR7 VRAM) is the cheapest current option, limited to 7B models at Q4 — enough for most coding-assistant and chat use cases. For 7B–13B headroom, step up to the RTX 5070 Ti (~$2,499, 12 GB VRAM). A used 2023-era RTX 4070 laptop ($800–1,100 on eBay) is cheaper still but 30–50% slower.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I train or fine-tune an LLM on a laptop?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Training a model from scratch is not practical on any laptop. Fine-tuning a small model (up to ~7B) via LoRA or QLoRA is possible on a laptop with 12+ GB VRAM (RTX 5070 Ti or better) or 24 GB unified memory (MacBook Pro M5 Pro), but expect it to take hours, not minutes. For anything beyond LoRA fine-tuning of small models, use a desktop or cloud GPU instead — this guide covers running (inference), not training.'
-            }
+              'text': 'Training a model from scratch is not practical on any laptop. Fine-tuning a small model (up to ~7B) via LoRA or QLoRA is possible on a laptop with 12+ GB VRAM (RTX 5070 Ti or better) or 24 GB unified memory (MacBook Pro M5 Pro), but expect it to take hours, not minutes. For anything beyond LoRA fine-tuning of small models, use a desktop or cloud GPU instead — this guide covers running (inference), not training.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What laptops work best for local LLM inference in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro ($2,199, 24 GB unified memory) is the top pick — 45–60 tok/s on 14B, completely silent. RTX 5080 laptop (~$2,799, 16 GB VRAM) is the best Windows option at ~70 tok/s on 7B. RTX 5070 Ti laptop (~$2,499, 12 GB VRAM) is the best mid-range Windows pick at ~50 tok/s, or RTX 5070 (~$1,899, 8 GB VRAM) for the cheapest option.',
+            },
           },
         ],
       },
@@ -455,6 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '¿Vale la pena comprar laptops RTX 4070 de 2023 para LLMs en 2026?', a: 'Solo con un descuento de segunda mano importante ($800–1,100 en eBay). Las nuevas laptops RTX 5070 Ti (~$2,499) son un 30–50% más rápidas para inferencia LLM. Si ya tienes una laptop RTX 4070, sigue ejecutando modelos de 7B–13B de forma adecuada.' },
             { q: '¿Cuál es la laptop más barata para ejecutar LLMs locales?', a: 'La laptop RTX 5070 (~$1,899, 8 GB de VRAM GDDR7) es la opción actual más barata, limitada a modelos de 7B en Q4 — suficiente para la mayoría de casos de asistente de código y chat. Para margen de 7B–13B, sube a la RTX 5070 Ti (~$2,499, 12 GB de VRAM). Una laptop RTX 4070 usada de 2023 ($800–1,100 en eBay) es aún más barata pero un 30–50% más lenta.' },
             { q: '¿Puedo entrenar o hacer fine-tuning de un LLM en una laptop?', a: 'Entrenar un modelo desde cero no es viable en ninguna laptop. Hacer fine-tuning de un modelo pequeño (hasta ~7B) con LoRA o QLoRA es posible en una laptop con 12+ GB de VRAM (RTX 5070 Ti o superior) o 24 GB de memoria unificada (MacBook Pro M5 Pro), pero espera que tarde horas, no minutos. Para cualquier cosa más allá de fine-tuning con LoRA en modelos pequeños, usa un equipo de escritorio o GPU en la nube — esta guía cubre la ejecución (inferencia), no el entrenamiento.' },
+            { q: '¿Qué laptops funcionan mejor para inferencia LLM local en 2026?', a: 'La MacBook Pro M5 Pro ($2,199, 24 GB de memoria unificada) es la mejor opción — 45–60 tok/s en 14B, completamente silenciosa. La laptop RTX 5080 (~$2,799, 16 GB de VRAM) es la mejor opción Windows, a ~70 tok/s en 7B. La laptop RTX 5070 Ti (~$2,499, 12 GB de VRAM) es la mejor opción de gama media, a ~50 tok/s, o la RTX 5070 (~$1,899, 8 GB) como la más barata.' },
           ],
         },
         'relatedReading': {
@@ -508,16 +510,86 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'es',
         url: 'https://www.promptquorum.com/es/local-llms/best-laptops-local-llm',
         mainEntity: [
-          { '@type': 'Question', name: '¿Es buena la MacBook Pro M5 Pro para LLMs locales?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, es la mejor laptop silenciosa para LLMs locales en 2026. La configuración de 24 GB de memoria unificada ($2,199) ejecuta Qwen3 14B en Q4 a 45–60 tok/s y sin ruido de ventilador. Sube a 36 GB ($2,999) para un margen cómodo en modelos de 30B.' }},
-          { '@type': 'Question', name: '¿Cuál es la mejor laptop Windows para ejecutar LLMs localmente en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'La laptop RTX 5080 (~$2,799, 16 GB de VRAM GDDR7) es la mejor opción Windows — ~70 tok/s en Llama 3.1 8B Q4. La laptop RTX 5070 Ti (~$2,499, 12 GB de VRAM) es la mejor opción de gama media, a ~50 tok/s. La laptop RTX 5070 (~$1,899, 8 GB de VRAM) es la más barata, limitada a 7B.' }},
-          { '@type': 'Question', name: '¿Puedo ejecutar modelos de 14B en una laptop RTX 5070 Ti?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. La RTX 5070 Ti tiene 12 GB de VRAM, que acomodan Qwen3 14B en Q4 con holgura. En Q8 (mayor calidad), 14B requiere ~14 GB — necesitarías la RTX 5080 (16 GB) para Q8 en 14B.' }},
-          { '@type': 'Question', name: '¿Debo comprar una laptop gaming o un mini PC para LLMs locales?', acceptedAnswer: { '@type': 'Answer', text: 'Mini PC: más barato, más rápido, más actualizable, funciona más fresco. Laptop gaming: portátil pero limitada por el calor. Si necesitas portabilidad, elige la MacBook Pro M5 Pro o una laptop RTX 5080. Si te quedas en el escritorio, un equipo de escritorio con RTX 4060 Ti 16GB supera a cualquier laptop y cuesta menos.' }},
-          { '@type': 'Question', name: '¿Puedo ejecutar un modelo de 7B con batería en una laptop gaming Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Técnicamente sí, pero la GPU cambia a la iGPU con batería. La inferencia cae a 2–4 tok/s (inutilizable para trabajo real). La MacBook Pro M5 Pro con batería ofrece ~40 tok/s — mucho mejor para inferencia con batería.' }},
-          { '@type': 'Question', name: '¿Cuál es la mejor laptop Apple para LLMs locales?', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) para la mayoría de los usuarios. MacBook Pro M5 Max 14" ($3,199+, 36 GB) para modelos de 30B–70B. MacBook Pro M5 Max 16" ($3,499+, 64 GB) para investigadores que ejecutan 70B en Q8.' }},
-          { '@type': 'Question', name: '¿Vale la pena comprar laptops RTX 4070 de 2023 para LLMs en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Solo con un descuento de segunda mano importante ($800–1,100 en eBay). Las nuevas laptops RTX 5070 Ti (~$2,499) son un 30–50% más rápidas para inferencia LLM. Si ya tienes una laptop RTX 4070, sigue ejecutando modelos de 7B–13B de forma adecuada.' }},
-          { '@type': 'Question', name: '¿Qué laptops funcionan mejor para inferencia LLM local en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'La MacBook Pro M5 Pro ($2,199, 24 GB de memoria unificada) es la mejor opción — 45–60 tok/s en 14B, completamente silenciosa. La laptop RTX 5080 (~$2,799, 16 GB de VRAM) es la mejor opción Windows, a ~70 tok/s en 7B. La laptop RTX 5070 Ti (~$2,499, 12 GB de VRAM) es la mejor opción de gama media, a ~50 tok/s, o la RTX 5070 (~$1,899, 8 GB) como la más barata.' }},
-          { '@type': 'Question', name: '¿Cuál es la laptop más barata para ejecutar LLMs locales?', acceptedAnswer: { '@type': 'Answer', text: 'La laptop RTX 5070 (~$1,899, 8 GB de VRAM GDDR7) es la opción actual más barata, limitada a modelos de 7B en Q4 — suficiente para la mayoría de casos de asistente de código y chat. Para margen de 7B–13B, sube a la RTX 5070 Ti (~$2,499, 12 GB de VRAM). Una laptop RTX 4070 usada de 2023 ($800–1,100 en eBay) es aún más barata pero un 30–50% más lenta.' }},
-          { '@type': 'Question', name: '¿Puedo entrenar o hacer fine-tuning de un LLM en una laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Entrenar un modelo desde cero no es viable en ninguna laptop. Hacer fine-tuning de un modelo pequeño (hasta ~7B) con LoRA o QLoRA es posible en una laptop con 12+ GB de VRAM (RTX 5070 Ti o superior) o 24 GB de memoria unificada (MacBook Pro M5 Pro), pero espera que tarde horas, no minutos. Para cualquier cosa más allá de fine-tuning con LoRA en modelos pequeños, usa un equipo de escritorio o GPU en la nube — esta guía cubre la ejecución (inferencia), no el entrenamiento.' }},
+          {
+            '@type': 'Question',
+            'name': '¿Es buena la MacBook Pro M5 Pro para LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, es la mejor laptop silenciosa para LLMs locales en 2026. La configuración de 24 GB de memoria unificada ($2,199) ejecuta Qwen3 14B en Q4 a 45–60 tok/s y sin ruido de ventilador. Sube a 36 GB ($2,999) para un margen cómodo en modelos de 30B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor laptop Windows para ejecutar LLMs localmente en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La laptop RTX 5080 (~$2,799, 16 GB de VRAM GDDR7) es la mejor opción Windows — ~70 tok/s en Llama 3.1 8B Q4. La laptop RTX 5070 Ti (~$2,499, 12 GB de VRAM) es la mejor opción de gama media, a ~50 tok/s. La laptop RTX 5070 (~$1,899, 8 GB de VRAM) es la opción más barata, limitada a modelos de 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar modelos de 14B en una laptop RTX 5070 Ti?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. La RTX 5070 Ti tiene 12 GB de VRAM, que acomodan Qwen3 14B en Q4 con holgura. En Q8 (mayor calidad), 14B requiere ~14 GB — necesitarías la RTX 5080 (16 GB) para Q8 en 14B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo comprar una laptop gaming o un mini PC para LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mini PC: más barato, más rápido, más actualizable, funciona más fresco. Laptop gaming: portátil pero limitada por el calor. Si necesitas portabilidad, elige la MacBook Pro M5 Pro o una laptop RTX 5080. Si te quedas en el escritorio, un equipo de escritorio con RTX 4060 Ti 16GB supera a cualquier laptop y cuesta menos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar un modelo de 7B con batería en una laptop gaming Windows?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Técnicamente sí, pero la GPU cambia a la iGPU con batería. La inferencia cae a 2–4 tok/s (inutilizable para trabajo real). La MacBook Pro M5 Pro con batería ofrece ~40 tok/s — mucho mejor para inferencia con batería.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la mejor laptop Apple para LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) para la mayoría de los usuarios. MacBook Pro M5 Max 14" ($3,199+, 36 GB) para modelos de 30B–70B. MacBook Pro M5 Max 16" ($3,499+, 64 GB) para investigadores que ejecutan 70B en Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Vale la pena comprar laptops RTX 4070 de 2023 para LLMs en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo con un descuento de segunda mano importante ($800–1,100 en eBay). Las nuevas laptops RTX 5070 Ti (~$2,499) son un 30–50% más rápidas para inferencia LLM. Si ya tienes una laptop RTX 4070, sigue ejecutando modelos de 7B–13B de forma adecuada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la laptop más barata para ejecutar LLMs locales?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La laptop RTX 5070 (~$1,899, 8 GB de VRAM GDDR7) es la opción actual más barata, limitada a modelos de 7B en Q4 — suficiente para la mayoría de casos de asistente de código y chat. Para margen de 7B–13B, sube a la RTX 5070 Ti (~$2,499, 12 GB de VRAM). Una laptop RTX 4070 usada de 2023 ($800–1,100 en eBay) es aún más barata pero un 30–50% más lenta.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo entrenar o hacer fine-tuning de un LLM en una laptop?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Entrenar un modelo desde cero no es viable en ninguna laptop. Hacer fine-tuning de un modelo pequeño (hasta ~7B) con LoRA o QLoRA es posible en una laptop con 12+ GB de VRAM (RTX 5070 Ti o superior) o 24 GB de memoria unificada (MacBook Pro M5 Pro), pero espera que tarde horas, no minutos. Para cualquier cosa más allá de fine-tuning con LoRA en modelos pequeños, usa un equipo de escritorio o GPU en la nube — esta guía cubre la ejecución (inferencia), no el entrenamiento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué laptops funcionan mejor para inferencia LLM local en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La MacBook Pro M5 Pro ($2,199, 24 GB de memoria unificada) es la mejor opción — 45–60 tok/s en 14B, completamente silenciosa. La laptop RTX 5080 (~$2,799, 16 GB de VRAM) es la mejor opción Windows, a ~70 tok/s en 7B. La laptop RTX 5070 Ti (~$2,499, 12 GB de VRAM) es la mejor opción de gama media, a ~50 tok/s, o la RTX 5070 (~$1,899, 8 GB) como la más barata.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -679,6 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'هل لا تزال أجهزة لابتوب RTX 4070 من 2023 تستحق الشراء لنماذج LLM في 2026؟', a: 'فقط بخصم كبير على المستعمل ($800–1,100 على eBay). أجهزة لابتوب RTX 5070 Ti الجديدة (~$2,499) أسرع بنسبة 30–50% في استدلال نماذج LLM. إذا كنت تملك بالفعل لابتوب RTX 4070، فإنه لا يزال يشغّل نماذج 7B–13B بشكل مقبول.' },
             { q: 'ما هو أرخص لابتوب لتشغيل نماذج LLM المحلية؟', a: 'لابتوب RTX 5070 (~$1,899، 8 GB GDDR7 VRAM) هو الخيار الأرخص حالياً، ومحدود بنماذج 7B بتكميم Q4 — يكفي لمعظم استخدامات مساعد الأكواد والدردشة. لمساحة 7B–13B، انتقل إلى RTX 5070 Ti (~$2,499، 12 GB VRAM). لابتوب RTX 4070 مستعمل من 2023 ($800–1,100 على eBay) أرخص لكنه أبطأ بنسبة 30–50%.' },
             { q: 'هل يمكنني تدريب أو ضبط نموذج LLM بدقة على لابتوب؟', a: 'تدريب نموذج من الصفر غير عملي على أي لابتوب. الضبط الدقيق لنموذج صغير (حتى ~7B) باستخدام LoRA أو QLoRA ممكن على لابتوب بـ 12+ GB VRAM (RTX 5070 Ti أو أفضل) أو 24 GB ذاكرة موحدة (MacBook Pro M5 Pro)، لكن توقّع أن يستغرق ساعات وليس دقائق. لأي شيء يتجاوز الضبط الدقيق بـ LoRA لنماذج صغيرة، استخدم سطح مكتب أو GPU سحابية بدلاً من ذلك — يغطي هذا الدليل التشغيل (الاستدلال)، لا التدريب.' },
+            { q: 'ما هي أجهزة اللابتوب الأفضل للاستدلال المحلي لنماذج LLM في 2026؟', a: 'MacBook Pro M5 Pro ($2,199، ذاكرة موحدة 24 GB) هو الخيار الأول — 45–60 tok/s على نماذج 14B، صامت تماماً. لابتوب RTX 5080 (~$2,799، 16 GB VRAM) هو أفضل خيار Windows بسرعة ~70 tok/s على نماذج 7B. لابتوب RTX 5070 Ti (~$2,499، 12 GB VRAM) هو أفضل خيار متوسط الفئة بسرعة ~50 tok/s، أو RTX 5070 (~$1,899، 8 GB) كالأرخص.' },
           ],
         },
         'relatedReading': {
@@ -732,16 +805,86 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'ar',
         url: 'https://www.promptquorum.com/ar/local-llms/best-laptops-local-llm',
         mainEntity: [
-          { '@type': 'Question', name: 'هل MacBook Pro M5 Pro جيد لنماذج LLM المحلية؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم — إنه أفضل لابتوب صامت لنماذج LLM المحلية في 2026. يشغّل إعداد الذاكرة الموحدة 24 GB ($2,199) نموذج Qwen3 14B بتكميم Q4 بسرعة 45–60 tok/s وبلا ضجيج مراوح. رقِّ إلى 36 GB ($2,999) لمساحة مريحة لنماذج 30B.' }},
-          { '@type': 'Question', name: 'ما هو أفضل لابتوب Windows لتشغيل نماذج LLM محلياً في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'لابتوب RTX 5080 (~$2,799، 16 GB GDDR7 VRAM) هو الخيار الأول لنظام Windows — ~70 tok/s على Llama 3.1 8B بتكميم Q4. لابتوب RTX 5070 Ti (~$2,499، 12 GB VRAM) هو أفضل خيار متوسط الفئة بسرعة ~50 tok/s. لابتوب RTX 5070 (~$1,899، 8 GB VRAM) هو الأرخص، ومحدود بنماذج 7B.' }},
-          { '@type': 'Question', name: 'هل يمكنني تشغيل نماذج 14B على لابتوب RTX 5070 Ti؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يمتلك RTX 5070 Ti سعة 12 GB VRAM، وهي تتسع لـ Qwen3 14B بتكميم Q4 بأريحية. عند Q8 (جودة أعلى)، يتطلب 14B نحو 14 GB — ستحتاج إلى RTX 5080 (16 GB) لتشغيل 14B بتكميم Q8.' }},
-          { '@type': 'Question', name: 'هل أشتري لابتوب ألعاب أم mini PC لنماذج LLM المحلية؟', acceptedAnswer: { '@type': 'Answer', text: 'mini PC: أرخص، وأسرع، وأكثر قابلية للترقية، وأبرد. لابتوب الألعاب: محمول لكنه محدود حرارياً. إذا كنت بحاجة إلى التنقّل، اختر MacBook Pro M5 Pro أو لابتوب RTX 5080. إذا كنت تبقى عند مكتب، فإن سطح مكتب بـ RTX 4060 Ti 16GB يتفوق على أي لابتوب ويكلّف أقل.' }},
-          { '@type': 'Question', name: 'هل يمكنني تشغيل نموذج 7B على البطارية في لابتوب ألعاب Windows؟', acceptedAnswer: { '@type': 'Answer', text: 'تقنياً نعم، لكن GPU تتحول إلى iGPU على البطارية. يهبط الاستدلال إلى 2–4 tok/s (غير صالح للعمل الفعلي). يقدّم MacBook Pro M5 Pro على البطارية ~40 tok/s — أفضل بكثير للاستدلال على البطارية.' }},
-          { '@type': 'Question', name: 'ما هو أفضل لابتوب من Apple لنماذج LLM المحلية؟', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro 14" ($2,199، 24 GB) لمعظم المستخدمين. MacBook Pro M5 Max 14" ($3,199+، 36 GB) لنماذج 30B–70B. MacBook Pro M5 Max 16" ($3,499+، 64 GB) للباحثين الذين يشغّلون نماذج 70B بتكميم Q8.' }},
-          { '@type': 'Question', name: 'هل لا تزال أجهزة لابتوب RTX 4070 من 2023 تستحق الشراء لنماذج LLM في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'فقط بخصم كبير على المستعمل ($800–1,100 على eBay). أجهزة لابتوب RTX 5070 Ti الجديدة (~$2,499) أسرع بنسبة 30–50% في استدلال نماذج LLM. إذا كنت تملك بالفعل لابتوب RTX 4070، فإنه لا يزال يشغّل نماذج 7B–13B بشكل مقبول.' }},
-          { '@type': 'Question', name: 'ما هي أجهزة اللابتوب الأفضل للاستدلال المحلي لنماذج LLM في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro ($2,199، ذاكرة موحدة 24 GB) هو الخيار الأول — 45–60 tok/s على نماذج 14B، صامت تماماً. لابتوب RTX 5080 (~$2,799، 16 GB VRAM) هو أفضل خيار Windows بسرعة ~70 tok/s على نماذج 7B. لابتوب RTX 5070 Ti (~$2,499، 12 GB VRAM) هو أفضل خيار متوسط الفئة بسرعة ~50 tok/s، أو RTX 5070 (~$1,899، 8 GB) كالأرخص.' }},
-          { '@type': 'Question', name: 'ما هو أرخص لابتوب لتشغيل نماذج LLM المحلية؟', acceptedAnswer: { '@type': 'Answer', text: 'لابتوب RTX 5070 (~$1,899، 8 GB GDDR7 VRAM) هو الخيار الأرخص حالياً، ومحدود بنماذج 7B بتكميم Q4 — يكفي لمعظم استخدامات مساعد الأكواد والدردشة. لمساحة 7B–13B، انتقل إلى RTX 5070 Ti (~$2,499، 12 GB VRAM). لابتوب RTX 4070 مستعمل من 2023 ($800–1,100 على eBay) أرخص لكنه أبطأ بنسبة 30–50%.' }},
-          { '@type': 'Question', name: 'هل يمكنني تدريب أو ضبط نموذج LLM بدقة على لابتوب؟', acceptedAnswer: { '@type': 'Answer', text: 'تدريب نموذج من الصفر غير عملي على أي لابتوب. الضبط الدقيق لنموذج صغير (حتى ~7B) باستخدام LoRA أو QLoRA ممكن على لابتوب بـ 12+ GB VRAM (RTX 5070 Ti أو أفضل) أو 24 GB ذاكرة موحدة (MacBook Pro M5 Pro)، لكن توقّع أن يستغرق ساعات وليس دقائق. لأي شيء يتجاوز الضبط الدقيق بـ LoRA لنماذج صغيرة، استخدم سطح مكتب أو GPU سحابية بدلاً من ذلك — يغطي هذا الدليل التشغيل (الاستدلال)، لا التدريب.' }},
+          {
+            '@type': 'Question',
+            'name': 'هل MacBook Pro M5 Pro جيد لنماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — إنه أفضل لابتوب صامت لنماذج LLM المحلية في 2026. يشغّل إعداد الذاكرة الموحدة 24 GB ($2,199) نموذج Qwen3 14B بتكميم Q4 بسرعة 45–60 tok/s وبلا ضجيج مراوح. رقِّ إلى 36 GB ($2,999) لمساحة مريحة لنماذج 30B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أفضل لابتوب Windows لتشغيل نماذج LLM محلياً في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لابتوب RTX 5080 (~$2,799، 16 GB GDDR7 VRAM) هو الخيار الأول لنظام Windows — ~70 tok/s على Llama 3.1 8B بتكميم Q4. لابتوب RTX 5070 Ti (~$2,499، 12 GB VRAM) هو أفضل خيار متوسط الفئة بسرعة ~50 tok/s. لابتوب RTX 5070 (~$1,899، 8 GB VRAM) هو الخيار الأرخص، ومحدود بنماذج 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نماذج 14B على لابتوب RTX 5070 Ti؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يمتلك RTX 5070 Ti سعة 12 GB VRAM، وهي تتسع لـ Qwen3 14B بتكميم Q4 بأريحية. عند Q8 (جودة أعلى)، يتطلب 14B نحو 14 GB — ستحتاج إلى RTX 5080 (16 GB) لتشغيل 14B بتكميم Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أشتري لابتوب ألعاب أم mini PC لنماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'mini PC: أرخص، وأسرع، وأكثر قابلية للترقية، وأبرد. لابتوب الألعاب: محمول لكنه محدود حرارياً. إذا كنت بحاجة إلى التنقّل، اختر MacBook Pro M5 Pro أو لابتوب RTX 5080. إذا كنت تبقى عند مكتب، فإن سطح مكتب بـ RTX 4060 Ti 16GB يتفوق على أي لابتوب ويكلّف أقل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نموذج 7B على البطارية في لابتوب ألعاب Windows؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تقنياً نعم، لكن GPU تتحول إلى iGPU على البطارية. يهبط الاستدلال إلى 2–4 tok/s (غير صالح للعمل الفعلي). يقدّم MacBook Pro M5 Pro على البطارية ~40 tok/s — أفضل بكثير للاستدلال على البطارية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أفضل لابتوب من Apple لنماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro 14" ($2,199، 24 GB) لمعظم المستخدمين. MacBook Pro M5 Max 14" ($3,199+، 36 GB) لنماذج 30B–70B. MacBook Pro M5 Max 16" ($3,499+، 64 GB) للباحثين الذين يشغّلون نماذج 70B بتكميم Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لا تزال أجهزة لابتوب RTX 4070 من 2023 تستحق الشراء لنماذج LLM في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'فقط بخصم كبير على المستعمل ($800–1,100 على eBay). أجهزة لابتوب RTX 5070 Ti الجديدة (~$2,499) أسرع بنسبة 30–50% في استدلال نماذج LLM. إذا كنت تملك بالفعل لابتوب RTX 4070، فإنه لا يزال يشغّل نماذج 7B–13B بشكل مقبول.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هو أرخص لابتوب لتشغيل نماذج LLM المحلية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لابتوب RTX 5070 (~$1,899، 8 GB GDDR7 VRAM) هو الخيار الأرخص حالياً، ومحدود بنماذج 7B بتكميم Q4 — يكفي لمعظم استخدامات مساعد الأكواد والدردشة. لمساحة 7B–13B، انتقل إلى RTX 5070 Ti (~$2,499، 12 GB VRAM). لابتوب RTX 4070 مستعمل من 2023 ($800–1,100 على eBay) أرخص لكنه أبطأ بنسبة 30–50%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تدريب أو ضبط نموذج LLM بدقة على لابتوب؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تدريب نموذج من الصفر غير عملي على أي لابتوب. الضبط الدقيق لنموذج صغير (حتى ~7B) باستخدام LoRA أو QLoRA ممكن على لابتوب بـ 12+ GB VRAM (RTX 5070 Ti أو أفضل) أو 24 GB ذاكرة موحدة (MacBook Pro M5 Pro)، لكن توقّع أن يستغرق ساعات وليس دقائق. لأي شيء يتجاوز الضبط الدقيق بـ LoRA لنماذج صغيرة، استخدم سطح مكتب أو GPU سحابية بدلاً من ذلك — يغطي هذا الدليل التشغيل (الاستدلال)، لا التدريب.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما هي أجهزة اللابتوب الأفضل للاستدلال المحلي لنماذج LLM في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro ($2,199، ذاكرة موحدة 24 GB) هو الخيار الأول — 45–60 tok/s على نماذج 14B، صامت تماماً. لابتوب RTX 5080 (~$2,799، 16 GB VRAM) هو أفضل خيار Windows بسرعة ~70 tok/s على نماذج 7B. لابتوب RTX 5070 Ti (~$2,499، 12 GB VRAM) هو أفضل خيار متوسط الفئة بسرعة ~50 tok/s، أو RTX 5070 (~$1,899، 8 GB) كالأرخص.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -957,16 +1100,78 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'pt-BR',
         url: 'https://www.promptquorum.com/pt/local-llms/best-laptops-local-llm',
         mainEntity: [
-          { '@type': 'Question', name: 'O MacBook Pro M5 Pro é bom para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — é o melhor notebook silencioso para LLMs locais em 2026. A configuração de 24 GB de memória unificada (US$ 2.199) roda o Qwen3 14B com Q4 a 45–60 tok/s e sem ruído de ventoinha. Faça upgrade para 36 GB (US$ 2.999) para folga confortável em modelos 30B.' }},
-          { '@type': 'Question', name: 'Qual notebook Windows é o melhor para rodar LLMs localmente em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'O notebook RTX 5080 (~US$ 2.799, 16 GB de VRAM GDDR7) é a melhor escolha Windows — ~70 tok/s no Llama 3.1 8B Q4. O notebook RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM) é a melhor opção faixa intermediária, a ~50 tok/s. O notebook RTX 5070 (~US$ 1.899, 8 GB de VRAM) é o mais barato, limitado a 7B.' }},
-          { '@type': 'Question', name: 'Posso rodar modelos 14B em um notebook RTX 5070 Ti?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O RTX 5070 Ti tem 12 GB de VRAM, que acomodam o Qwen3 14B com Q4 confortavelmente. Em Q8 (qualidade maior), 14B exige ~14 GB — você precisaria do RTX 5080 (16 GB) para Q8 em 14B.' }},
-          { '@type': 'Question', name: 'Devo comprar um notebook gamer ou um mini PC para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Mini PC: mais barato, mais rápido, mais atualizável, esquenta menos. Notebook gamer: portátil, mas limitado pela térmica. Se você precisa de portabilidade, escolha o MacBook Pro M5 Pro ou um notebook RTX 5080. Se você fica numa mesa, um desktop com RTX 4060 Ti 16GB supera qualquer notebook e custa menos.' }},
-          { '@type': 'Question', name: 'Posso rodar um modelo 7B na bateria de um notebook gamer Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Tecnicamente sim, mas a GPU muda para a iGPU na bateria. A inferência cai para 2–4 tok/s (inviável para trabalho real). O MacBook Pro M5 Pro na bateria entrega ~40 tok/s — bem melhor para inferência na bateria.' }},
-          { '@type': 'Question', name: 'Qual é o melhor notebook Apple para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro 14" (US$ 2.199, 24 GB) para a maioria dos usuários. MacBook Pro M5 Max 14" (US$ 3.199+, 36 GB) para modelos 30B–70B. MacBook Pro M5 Max 16" (US$ 3.499+, 64 GB) para pesquisadores que rodam 70B com Q8.' }},
-          { '@type': 'Question', name: 'Notebooks RTX 4070 de 2023 ainda valem a pena para LLMs em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Só com desconto significativo no usado (US$ 800–1.100 no eBay). Os novos notebooks RTX 5070 Ti (~US$ 2.499) são 30–50% mais rápidos para inferência de LLM. Se você já tem um notebook RTX 4070, ele ainda roda modelos 7B–13B de forma adequada.' }},
-          { '@type': 'Question', name: 'Quais notebooks funcionam melhor para inferência de LLM local em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'O MacBook Pro M5 Pro (US$ 2.199, 24 GB de memória unificada) é a melhor escolha — 45–60 tok/s em 14B, totalmente silencioso. O notebook RTX 5080 (~US$ 2.799, 16 GB de VRAM) é a melhor opção Windows, a ~70 tok/s em 7B. O notebook RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM) é a melhor escolha faixa intermediária Windows, a ~50 tok/s, ou o RTX 5070 (~US$ 1.899, 8 GB) como mais barato.' }},
-          { '@type': 'Question', name: 'Qual é o notebook mais barato para rodar LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'O notebook RTX 5070 (~US$ 1.899, 8 GB de VRAM GDDR7) é a opção mais barata atualmente, limitada a modelos 7B com Q4 — suficiente para a maioria dos casos de assistente de código e chat. Para folga de 7B–13B, suba para o RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM). Um notebook RTX 4070 usado de 2023 (US$ 800–1.100 no eBay) é mais barato ainda, mas 30–50% mais lento.' }},
-          { '@type': 'Question', name: 'Posso treinar ou fazer fine-tuning de um LLM em um notebook?', acceptedAnswer: { '@type': 'Answer', text: 'Treinar um modelo do zero não é viável em nenhum notebook. Fazer fine-tuning de um modelo pequeno (até ~7B) via LoRA ou QLoRA é possível em um notebook com 12+ GB de VRAM (RTX 5070 Ti ou melhor) ou 24 GB de memória unificada (MacBook Pro M5 Pro), mas espere que leve horas, não minutos. Para qualquer coisa além de fine-tuning com LoRA em modelos pequenos, use um desktop ou GPU em nuvem — este guia cobre a execução (inferência), não o treinamento.' }},
+          {
+            '@type': 'Question',
+            'name': 'O MacBook Pro M5 Pro é bom para LLMs locais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim — é o melhor notebook silencioso para LLMs locais em 2026. A configuração de 24 GB de memória unificada (US$ 2.199) roda o Qwen3 14B com Q4 a 45–60 tok/s e sem ruído de ventoinha. Faça upgrade para 36 GB (US$ 2.999) para folga confortável em modelos 30B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual notebook Windows é o melhor para rodar LLMs localmente em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O notebook RTX 5080 (~US$ 2.799, 16 GB de VRAM GDDR7) é a melhor escolha Windows — ~70 tok/s no Llama 3.1 8B Q4. O notebook RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM) é a melhor opção faixa intermediária, a ~50 tok/s. O notebook RTX 5070 (~US$ 1.899, 8 GB de VRAM) é a opção mais barata, limitada a modelos 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar modelos 14B em um notebook RTX 5070 Ti?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. O RTX 5070 Ti tem 12 GB de VRAM, que acomodam o Qwen3 14B com Q4 confortavelmente. Em Q8 (qualidade maior), 14B exige ~14 GB — você precisaria do RTX 5080 (16 GB) para Q8 em 14B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devo comprar um notebook gamer ou um mini PC para LLMs locais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mini PC: mais barato, mais rápido, mais atualizável, esquenta menos. Notebook gamer: portátil, mas limitado pela térmica. Se você precisa de portabilidade, escolha o MacBook Pro M5 Pro ou um notebook RTX 5080. Se você fica numa mesa, um desktop com RTX 4060 Ti 16GB supera qualquer notebook e custa menos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar um modelo 7B na bateria de um notebook gamer Windows?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Tecnicamente sim, mas a GPU muda para a iGPU na bateria. A inferência cai para 2–4 tok/s (inviável para trabalho real). O MacBook Pro M5 Pro na bateria entrega ~40 tok/s — bem melhor para inferência na bateria.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o melhor notebook Apple para LLMs locais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro 14" (US$ 2.199, 24 GB) para a maioria dos usuários. MacBook Pro M5 Max 14" (US$ 3.199+, 36 GB) para modelos 30B–70B. MacBook Pro M5 Max 16" (US$ 3.499+, 64 GB) para pesquisadores que rodam 70B com Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Notebooks RTX 4070 de 2023 ainda valem a pena para LLMs em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Só com desconto significativo no usado (US$ 800–1.100 no eBay). Os novos notebooks RTX 5070 Ti (~US$ 2.499) são 30–50% mais rápidos para inferência de LLM. Se você já tem um notebook RTX 4070, ele ainda roda modelos 7B–13B de forma adequada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o notebook mais barato para rodar LLMs locais?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O notebook RTX 5070 (~US$ 1.899, 8 GB de VRAM GDDR7) é a opção mais barata atualmente, limitada a modelos 7B com Q4 — suficiente para a maioria dos casos de assistente de código e chat. Para folga de 7B–13B, suba para o RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM). Um notebook RTX 4070 usado de 2023 (US$ 800–1.100 no eBay) é mais barato ainda, mas 30–50% mais lento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso treinar ou fazer fine-tuning de um LLM em um notebook?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Treinar um modelo do zero não é viável em nenhum notebook. Fazer fine-tuning de um modelo pequeno (até ~7B) via LoRA ou QLoRA é possível em um notebook com 12+ GB de VRAM (RTX 5070 Ti ou melhor) ou 24 GB de memória unificada (MacBook Pro M5 Pro), mas espere que leve horas, não minutos. Para qualquer coisa além de fine-tuning com LoRA em modelos pequenos, use um desktop ou GPU em nuvem — este guia cobre a execução (inferência), não o treinamento.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1180,16 +1385,78 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'de',
         url: 'https://www.promptquorum.com/de/local-llms/best-laptops-local-llm',
         mainEntity: [
-          { '@type': 'Question', name: 'Ist das MacBook Pro M5 Pro gut für lokale LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — es ist 2026 der beste leise Laptop für lokale LLMs. Die Konfiguration mit 24 GB Unified Memory ($2,199) führt Qwen3 14B in Q4 mit 45–60 tok/s und ohne Lüftergeräusch aus. Auf 36 GB ($2,999) aufrüsten für komfortablen Spielraum bei 30B-Modellen.' }},
-          { '@type': 'Question', name: 'Welcher Windows-Laptop eignet sich 2026 am besten zum lokalen Ausführen von LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Der RTX 5080 Laptop (~$2,799, 16 GB GDDR7 VRAM) ist die beste Windows-Wahl — ~70 tok/s bei Llama 3.1 8B Q4. Der RTX 5070 Ti Laptop (~$2,499, 12 GB VRAM) ist die beste Mittelklasse-Option mit ~50 tok/s. Der RTX 5070 Laptop (~$1,899, 8 GB VRAM) ist die günstigste Option, beschränkt auf 7B.' }},
-          { '@type': 'Question', name: 'Kann ich 14B-Modelle auf einem RTX 5070 Ti Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Der RTX 5070 Ti hat 12 GB VRAM, was Qwen3 14B in Q4 komfortabel fasst. In Q8 (höhere Qualität) benötigt 14B ~14 GB — dafür bräuchten Sie den RTX 5080 (16 GB) für Q8 bei 14B.' }},
-          { '@type': 'Question', name: 'Sollte ich einen Gaming-Laptop oder einen Mini-PC für lokale LLMs kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'Mini-PC: günstiger, schneller, besser aufrüstbar, läuft kühler. Gaming-Laptop: portabel, aber thermisch limitiert. Wenn Sie Portabilität brauchen, holen Sie sich ein MacBook Pro M5 Pro oder einen RTX 5080 Laptop. Wenn Sie am Schreibtisch bleiben, übertrifft ein Desktop mit RTX 4060 Ti 16GB jeden Laptop und kostet weniger.' }},
-          { '@type': 'Question', name: 'Kann ich ein 7B-Modell im Akkubetrieb auf einem Windows-Gaming-Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Technisch ja, aber die GPU schaltet im Akkubetrieb auf iGPU. Die Inferenz fällt auf 2–4 tok/s (unbrauchbar für echte Arbeit). Das MacBook Pro M5 Pro liefert im Akkubetrieb ~40 tok/s — deutlich besser für Akku-Inferenz.' }},
-          { '@type': 'Question', name: 'Was ist der beste Apple-Laptop für lokale LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) für die meisten Nutzer. MacBook Pro M5 Max 14" ($3,199+, 36 GB) für 30B–70B-Modelle. MacBook Pro M5 Max 16" ($3,499+, 64 GB) für Forscher, die 70B in Q8 ausführen.' }},
-          { '@type': 'Question', name: 'Lohnt sich der Kauf von RTX 4070 Laptops aus 2023 im Jahr 2026 noch für LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Nur mit erheblichem Gebrauchtrabatt ($800–1,100 auf eBay). Neue RTX 5070 Ti Laptops (~$2,499) sind 30–50% schneller bei der LLM-Inferenz. Wenn Sie bereits einen RTX 4070 Laptop besitzen, führt er 7B–13B-Modelle weiterhin angemessen aus.' }},
-          { '@type': 'Question', name: 'Welche Laptops eignen sich 2026 am besten für lokale LLM-Inferenz?', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro ($2,199, 24 GB Unified Memory) ist die beste Wahl — 45–60 tok/s bei 14B, vollständig lautlos. Der RTX 5080 Laptop (~$2,799, 16 GB VRAM) ist die beste Windows-Option mit ~70 tok/s bei 7B. Der RTX 5070 Ti Laptop (~$2,499, 12 GB VRAM) ist die beste Windows-Mittelklasse-Wahl mit ~50 tok/s, oder der RTX 5070 (~$1,899, 8 GB) als günstigste Option.' }},
-          { '@type': 'Question', name: 'Was ist der günstigste Laptop zum Ausführen lokaler LLMs?', acceptedAnswer: { '@type': 'Answer', text: 'Der RTX 5070 Laptop (~$1,899, 8 GB GDDR7 VRAM) ist aktuell die günstigste Option, beschränkt auf 7B-Modelle in Q4 — ausreichend für die meisten Code-Assistenten- und Chat-Anwendungen. Für Spielraum bei 7B–13B steigen Sie auf den RTX 5070 Ti (~$2,499, 12 GB VRAM) um. Ein gebrauchter RTX 4070 Laptop aus 2023 ($800–1,100 auf eBay) ist noch günstiger, aber 30–50% langsamer.' }},
-          { '@type': 'Question', name: 'Kann ich ein LLM auf einem Laptop trainieren oder fine-tunen?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Modell von Grund auf zu trainieren ist auf keinem Laptop praktikabel. Fine-Tuning eines kleinen Modells (bis ~7B) über LoRA oder QLoRA ist auf einem Laptop mit 12+ GB VRAM (RTX 5070 Ti oder besser) oder 24 GB Unified Memory (MacBook Pro M5 Pro) möglich, aber rechnen Sie mit Stunden, nicht Minuten. Für alles über LoRA-Fine-Tuning kleiner Modelle hinaus nutzen Sie einen Desktop oder eine Cloud-GPU — dieser Guide behandelt das Ausführen (Inferenz), nicht das Training.' }},
+          {
+            '@type': 'Question',
+            'name': 'Ist das MacBook Pro M5 Pro gut für lokale LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja — es ist 2026 der beste leise Laptop für lokale LLMs. Die Konfiguration mit 24 GB Unified Memory ($2,199) führt Qwen3 14B in Q4 mit 45–60 tok/s und ohne Lüftergeräusch aus. Auf 36 GB ($2,999) aufrüsten für komfortablen Spielraum bei 30B-Modellen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welcher Windows-Laptop eignet sich 2026 am besten zum lokalen Ausführen von LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der RTX 5080 Laptop (~$2,799, 16 GB GDDR7 VRAM) ist die beste Windows-Wahl — ~70 tok/s bei Llama 3.1 8B Q4. Der RTX 5070 Ti Laptop (~$2,499, 12 GB VRAM) ist die beste Mittelklasse-Option mit ~50 tok/s. Der RTX 5070 Laptop (~$1,899, 8 GB VRAM) ist die günstigste Option, beschränkt auf 7B-Modelle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich 14B-Modelle auf einem RTX 5070 Ti Laptop ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Der RTX 5070 Ti hat 12 GB VRAM, was Qwen3 14B in Q4 komfortabel fasst. In Q8 (höhere Qualität) benötigt 14B ~14 GB — dafür bräuchten Sie den RTX 5080 (16 GB) für Q8 bei 14B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich einen Gaming-Laptop oder einen Mini-PC für lokale LLMs kaufen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mini-PC: günstiger, schneller, besser aufrüstbar, läuft kühler. Gaming-Laptop: portabel, aber thermisch limitiert. Wenn Sie Portabilität brauchen, holen Sie sich ein MacBook Pro M5 Pro oder einen RTX 5080 Laptop. Wenn Sie am Schreibtisch bleiben, übertrifft ein Desktop mit RTX 4060 Ti 16GB jeden Laptop und kostet weniger.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein 7B-Modell im Akkubetrieb auf einem Windows-Gaming-Laptop ausführen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Technisch ja, aber die GPU schaltet im Akkubetrieb auf iGPU. Die Inferenz fällt auf 2–4 tok/s (unbrauchbar für echte Arbeit). Das MacBook Pro M5 Pro liefert im Akkubetrieb ~40 tok/s — deutlich besser für Akku-Inferenz.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der beste Apple-Laptop für lokale LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) für die meisten Nutzer. MacBook Pro M5 Max 14" ($3,199+, 36 GB) für 30B–70B-Modelle. MacBook Pro M5 Max 16" ($3,499+, 64 GB) für Forscher, die 70B in Q8 ausführen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Lohnt sich der Kauf von RTX 4070 Laptops aus 2023 im Jahr 2026 noch für LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur mit erheblichem Gebrauchtrabatt ($800–1,100 auf eBay). Neue RTX 5070 Ti Laptops (~$2,499) sind 30–50% schneller bei der LLM-Inferenz. Wenn Sie bereits einen RTX 4070 Laptop besitzen, führt er 7B–13B-Modelle weiterhin angemessen aus.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der günstigste Laptop zum Ausführen lokaler LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Der RTX 5070 Laptop (~$1,899, 8 GB GDDR7 VRAM) ist aktuell die günstigste Option, beschränkt auf 7B-Modelle in Q4 — ausreichend für die meisten Code-Assistenten- und Chat-Anwendungen. Für Spielraum bei 7B–13B steigen Sie auf den RTX 5070 Ti (~$2,499, 12 GB VRAM) um. Ein gebrauchter RTX 4070 Laptop aus 2023 ($800–1,100 auf eBay) ist noch günstiger, aber 30–50% langsamer.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich ein LLM auf einem Laptop trainieren oder fine-tunen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein Modell von Grund auf zu trainieren ist auf keinem Laptop praktikabel. Fine-Tuning eines kleinen Modells (bis ~7B) über LoRA oder QLoRA ist auf einem Laptop mit 12+ GB VRAM (RTX 5070 Ti oder besser) oder 24 GB Unified Memory (MacBook Pro M5 Pro) möglich, aber rechnen Sie mit Stunden, nicht Minuten. Für alles über LoRA-Fine-Tuning kleiner Modelle hinaus nutzen Sie einen Desktop oder eine Cloud-GPU — dieser Guide behandelt das Ausführen (Inferenz), nicht das Training.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1403,16 +1670,78 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'fr',
         url: 'https://www.promptquorum.com/fr/local-llms/best-laptops-local-llm',
         mainEntity: [
-          { '@type': 'Question', name: 'Le MacBook Pro M5 Pro est-il bon pour les LLM locaux?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — c\'est le meilleur ordinateur portable silencieux pour les LLM locaux en 2026. La configuration 24 GB de mémoire unifiée ($2,199) exécute Qwen3 14B en Q4 à 45–60 tok/s sans bruit de ventilateur. Passez à 36 GB ($2,999) pour une marge confortable sur les modèles 30B.' }},
-          { '@type': 'Question', name: 'Quel ordinateur portable Windows est le meilleur pour exécuter des LLM en local en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'L\'ordinateur portable RTX 5080 (~$2,799, 16 GB VRAM GDDR7) est le meilleur choix Windows — ~70 tok/s sur Llama 3.1 8B Q4. L\'ordinateur portable RTX 5070 Ti (~$2,499, 12 GB VRAM) est la meilleure option milieu de gamme à ~50 tok/s. L\'ordinateur portable RTX 5070 (~$1,899, 8 GB VRAM) est le moins cher, limité aux modèles 7B.' }},
-          { '@type': 'Question', name: 'Puis-je exécuter des modèles 14B sur un ordinateur portable RTX 5070 Ti?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Le RTX 5070 Ti a 12 GB VRAM, ce qui accueille confortablement Qwen3 14B en Q4. En Q8 (qualité supérieure), 14B nécessite ~14 GB — il vous faudrait le RTX 5080 (16 GB) pour du Q8 en 14B.' }},
-          { '@type': 'Question', name: 'Dois-je acheter un ordinateur portable gaming ou un mini-PC pour les LLM locaux?', acceptedAnswer: { '@type': 'Answer', text: 'Mini-PC : moins cher, plus rapide, plus améliorable, tourne plus frais. Ordinateur portable gaming : portable mais limité thermiquement. Si vous avez besoin de mobilité, prenez un MacBook Pro M5 Pro ou un ordinateur portable RTX 5080. Si vous restez à un bureau, un ordinateur de bureau avec RTX 4060 Ti 16GB surpasse tout ordinateur portable et coûte moins cher.' }},
-          { '@type': 'Question', name: 'Puis-je exécuter un modèle 7B sur batterie sur un ordinateur portable gaming Windows?', acceptedAnswer: { '@type': 'Answer', text: 'Techniquement oui, mais le GPU bascule vers l\'iGPU sur batterie. L\'inférence chute à 2–4 tok/s (inutilisable pour un vrai travail). Le MacBook Pro M5 Pro sur batterie délivre ~40 tok/s — bien meilleur pour l\'inférence sur batterie.' }},
-          { '@type': 'Question', name: 'Quel est le meilleur ordinateur portable Apple pour les LLM locaux?', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) pour la plupart des utilisateurs. MacBook Pro M5 Max 14" ($3,199+, 36 GB) pour les modèles 30B–70B. MacBook Pro M5 Max 16" ($3,499+, 64 GB) pour les chercheurs exécutant 70B en Q8.' }},
-          { '@type': 'Question', name: 'Les ordinateurs portables RTX 4070 de 2023 valent-ils encore la peine pour les LLM en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Seulement avec une remise d\'occasion importante ($800–1,100 sur eBay). Les nouveaux ordinateurs portables RTX 5070 Ti (~$2,499) sont 30–50% plus rapides pour l\'inférence LLM. Si vous possédez déjà un ordinateur portable RTX 4070, il exécute encore correctement les modèles 7B–13B.' }},
-          { '@type': 'Question', name: 'Quels ordinateurs portables fonctionnent le mieux pour l\'inférence LLM locale en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Le MacBook Pro M5 Pro ($2,199, 24 GB de mémoire unifiée) est le meilleur choix — 45–60 tok/s sur 14B, totalement silencieux. L\'ordinateur portable RTX 5080 (~$2,799, 16 GB VRAM) est la meilleure option Windows à ~70 tok/s sur 7B. L\'ordinateur portable RTX 5070 Ti (~$2,499, 12 GB VRAM) est le meilleur choix Windows milieu de gamme à ~50 tok/s, ou le RTX 5070 (~$1,899, 8 GB) comme le moins cher.' }},
-          { '@type': 'Question', name: 'Quel est l\'ordinateur portable le moins cher pour exécuter des LLM locaux?', acceptedAnswer: { '@type': 'Answer', text: 'L\'ordinateur portable RTX 5070 (~$1,899, 8 GB VRAM GDDR7) est actuellement l\'option la moins chère, limitée aux modèles 7B en Q4 — suffisant pour la plupart des cas d\'assistant de code et de chat. Pour une marge 7B–13B, passez au RTX 5070 Ti (~$2,499, 12 GB VRAM). Un ordinateur portable RTX 4070 d\'occasion de 2023 ($800–1,100 sur eBay) est encore moins cher mais 30–50% plus lent.' }},
-          { '@type': 'Question', name: 'Puis-je entraîner ou affiner un LLM sur un ordinateur portable?', acceptedAnswer: { '@type': 'Answer', text: 'Entraîner un modèle depuis zéro n\'est pas réalisable sur un ordinateur portable. Affiner un petit modèle (jusqu\'à ~7B) via LoRA ou QLoRA est possible sur un ordinateur portable avec 12+ GB VRAM (RTX 5070 Ti ou mieux) ou 24 GB de mémoire unifiée (MacBook Pro M5 Pro), mais attendez-vous à ce que cela prenne des heures, pas des minutes. Pour tout ce qui dépasse l\'affinage LoRA de petits modèles, utilisez un ordinateur de bureau ou un GPU cloud — ce guide couvre l\'exécution (inférence), pas l\'entraînement.' }},
+          {
+            '@type': 'Question',
+            'name': 'Le MacBook Pro M5 Pro est-il bon pour les LLM locaux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui — c\'est le meilleur ordinateur portable silencieux pour les LLM locaux en 2026. La configuration 24 GB de mémoire unifiée ($2,199) exécute Qwen3 14B en Q4 à 45–60 tok/s sans bruit de ventilateur. Passez à 36 GB ($2,999) pour une marge confortable sur les modèles 30B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel ordinateur portable Windows est le meilleur pour exécuter des LLM en local en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'ordinateur portable RTX 5080 (~$2,799, 16 GB VRAM GDDR7) est le meilleur choix Windows — ~70 tok/s sur Llama 3.1 8B Q4. L\'ordinateur portable RTX 5070 Ti (~$2,499, 12 GB VRAM) est la meilleure option milieu de gamme à ~50 tok/s. L\'ordinateur portable RTX 5070 (~$1,899, 8 GB VRAM) est l\'option la moins chère, limitée aux modèles 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je exécuter des modèles 14B sur un ordinateur portable RTX 5070 Ti?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Le RTX 5070 Ti a 12 GB VRAM, ce qui accueille confortablement Qwen3 14B en Q4. En Q8 (qualité supérieure), 14B nécessite ~14 GB — il vous faudrait le RTX 5080 (16 GB) pour du Q8 en 14B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je acheter un ordinateur portable gaming ou un mini-PC pour les LLM locaux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mini-PC : moins cher, plus rapide, plus améliorable, tourne plus frais. Ordinateur portable gaming : portable mais limité thermiquement. Si vous avez besoin de mobilité, prenez un MacBook Pro M5 Pro ou un ordinateur portable RTX 5080. Si vous restez à un bureau, un ordinateur de bureau avec RTX 4060 Ti 16GB surpasse tout ordinateur portable et coûte moins cher.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je exécuter un modèle 7B sur batterie sur un ordinateur portable gaming Windows?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Techniquement oui, mais le GPU bascule vers l\'iGPU sur batterie. L\'inférence chute à 2–4 tok/s (inutilisable pour un vrai travail). Le MacBook Pro M5 Pro sur batterie délivre ~40 tok/s — bien meilleur pour l\'inférence sur batterie.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est le meilleur ordinateur portable Apple pour les LLM locaux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro 14" ($2,199, 24 GB) pour la plupart des utilisateurs. MacBook Pro M5 Max 14" ($3,199+, 36 GB) pour les modèles 30B–70B. MacBook Pro M5 Max 16" ($3,499+, 64 GB) pour les chercheurs exécutant 70B en Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les ordinateurs portables RTX 4070 de 2023 valent-ils encore la peine pour les LLM en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Seulement avec une remise d\'occasion importante ($800–1,100 sur eBay). Les nouveaux ordinateurs portables RTX 5070 Ti (~$2,499) sont 30–50% plus rapides pour l\'inférence LLM. Si vous possédez déjà un ordinateur portable RTX 4070, il exécute encore correctement les modèles 7B–13B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'ordinateur portable le moins cher pour exécuter des LLM locaux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'ordinateur portable RTX 5070 (~$1,899, 8 GB VRAM GDDR7) est actuellement l\'option la moins chère, limitée aux modèles 7B en Q4 — suffisant pour la plupart des cas d\'assistant de code et de chat. Pour une marge 7B–13B, passez au RTX 5070 Ti (~$2,499, 12 GB VRAM). Un ordinateur portable RTX 4070 d\'occasion de 2023 ($800–1,100 sur eBay) est encore moins cher mais 30–50% plus lent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je entraîner ou affiner un LLM sur un ordinateur portable?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Entraîner un modèle depuis zéro n\'est pas réalisable sur un ordinateur portable. Affiner un petit modèle (jusqu\'à ~7B) via LoRA ou QLoRA est possible sur un ordinateur portable avec 12+ GB VRAM (RTX 5070 Ti ou mieux) ou 24 GB de mémoire unifiée (MacBook Pro M5 Pro), mais attendez-vous à ce que cela prenne des heures, pas des minutes. Pour tout ce qui dépasse l\'affinage LoRA de petits modèles, utilisez un ordinateur de bureau ou un GPU cloud — ce guide couvre l\'exécution (inférence), pas l\'entraînement.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1574,6 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '2023年のRTX 4070ノートは2026年にLLM用としてまだ買う価値がある?', a: '中古で大幅に割引された場合のみ(eBayで$800～1,100)。新品のRTX 5070 Tiノート(～$2,499)はLLM推論で30～50%高速です。すでにRTX 4070ノートを所有しているなら、7B～13Bモデルは十分に動作します。' },
             { q: 'ローカルLLM実行に最も安いノートパソコンは?', a: 'RTX 5070ノート(～$1,899、8 GB GDDR7 VRAM)が現時点で最安の選択肢で、Q4の7Bモデルに限定されますが、大半のコーディングアシスタントやチャット用途には十分です。7B～13Bに余裕を持たせるならRTX 5070 Ti(～$2,499、12 GB VRAM)へ。2023年の中古RTX 4070ノート(eBayで$800～1,100)はさらに安価ですが30～50%低速です。' },
             { q: 'ノートパソコンでLLMを訓練やファインチューニングできる?', a: 'ゼロからのモデル訓練はどのノートパソコンでも現実的ではありません。小型モデル(～7Bまで)のLoRAやQLoRAによるファインチューニングは、12 GB以上のVRAM(RTX 5070 Ti以上)または24 GB統合メモリ(MacBook Pro M5 Pro)を搭載したノートで可能ですが、数分でなく数時間かかると想定してください。小型モデルのLoRAファインチューニングを超える作業には、デスクトップかクラウドGPUを使用してください ― 本ガイドが扱うのは実行(推論)であり、訓練ではありません。' },
+            { q: '2026年にローカルLLM推論向けで最適なノートは?', a: 'MacBook Pro M5 Pro($2,199、24 GB統合メモリ)が最良候補 ― 14Bで45～60 tok/s、完全に静音。RTX 5080ノート(～$2,799、16 GB VRAM)は7Bで～70 tok/sのWindows最適解。RTX 5070 Tiノート(～$2,499、12 GB VRAM)は～50 tok/sでWindowsミドルレンジの最良候補、最安ならRTX 5070(～$1,899、8 GB)。' },
           ],
         },
         'relatedReading': {
@@ -1626,16 +1956,86 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'ja',
         url: 'https://www.promptquorum.com/ja/local-llms/best-laptops-local-llm',
         mainEntity: [
-          { '@type': 'Question', name: 'MacBook Pro M5 ProはローカルLLMに適している?', acceptedAnswer: { '@type': 'Answer', text: 'はい ― 2026年時点でローカルLLMに最適な静音ノートです。24 GB統合メモリ構成($2,199)はQwen3 14BをQ4で45～60 tok/s、ファン音なしで実行。30Bモデルに余裕を持たせるなら36 GB($2,999)へ。' }},
-          { '@type': 'Question', name: '2026年にローカルでLLMを実行するのに最適なWindowsノートは?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5080ノート(～$2,799、16 GB GDDR7 VRAM)がWindowsの最良候補 ― Llama 3.1 8B Q4で～70 tok/s。RTX 5070 Tiノート(～$2,499、12 GB VRAM)は～50 tok/sでミドルレンジの最適解。RTX 5070ノート(～$1,899、8 GB VRAM)は最安で、7Bモデルに限定。' }},
-          { '@type': 'Question', name: 'RTX 5070 Tiノートで14Bモデルは実行できる?', acceptedAnswer: { '@type': 'Answer', text: 'はい。RTX 5070 Tiは12 GB VRAMで、Qwen3 14BをQ4で余裕を持って収められます。Q8(高品質)では14Bに～14 GB必要なので、14BをQ8で動かすにはRTX 5080(16 GB)が必要です。' }},
-          { '@type': 'Question', name: 'ローカルLLMにはゲーミングノートとミニPCのどちらを買うべき?', acceptedAnswer: { '@type': 'Answer', text: 'ミニPC: より安く、速く、拡張性が高く、発熱も低い。ゲーミングノート: 携帯性はあるが熱制約あり。携帯性が必要ならMacBook Pro M5 ProかRTX 5080ノートを。机に据え置くなら、RTX 4060 Ti 16GB搭載デスクトップがどのノートより高性能で安価です。' }},
-          { '@type': 'Question', name: 'Windowsゲーミングノートのバッテリーで7Bモデルは実行できる?', acceptedAnswer: { '@type': 'Answer', text: '技術的には可能ですが、バッテリーではGPUがiGPUに切替わります。推論は2～4 tok/s(本格作業には実用不可)に低下。MacBook Pro M5 Proはバッテリーで～40 tok/sを出せ、バッテリー推論ははるかに快適です。' }},
-          { '@type': 'Question', name: 'ローカルLLMに最適なAppleノートは?', acceptedAnswer: { '@type': 'Answer', text: 'ほとんどのユーザーにはMacBook Pro M5 Pro 14"($2,199、24 GB)。30B～70BモデルにはMacBook Pro M5 Max 14"($3,199～、36 GB)。70BをQ8で動かす研究者にはMacBook Pro M5 Max 16"($3,499～、64 GB)。' }},
-          { '@type': 'Question', name: '2023年のRTX 4070ノートは2026年にLLM用としてまだ買う価値がある?', acceptedAnswer: { '@type': 'Answer', text: '中古で大幅に割引された場合のみ(eBayで$800～1,100)。新品のRTX 5070 Tiノート(～$2,499)はLLM推論で30～50%高速です。すでにRTX 4070ノートを所有しているなら、7B～13Bモデルは十分に動作します。' }},
-          { '@type': 'Question', name: '2026年にローカルLLM推論向けで最適なノートは?', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro($2,199、24 GB統合メモリ)が最良候補 ― 14Bで45～60 tok/s、完全に静音。RTX 5080ノート(～$2,799、16 GB VRAM)は7Bで～70 tok/sのWindows最適解。RTX 5070 Tiノート(～$2,499、12 GB VRAM)は～50 tok/sでWindowsミドルレンジの最良候補、最安ならRTX 5070(～$1,899、8 GB)。' }},
-          { '@type': 'Question', name: 'ローカルLLM実行に最も安いノートパソコンは?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5070ノート(～$1,899、8 GB GDDR7 VRAM)が現時点で最安の選択肢で、Q4の7Bモデルに限定されますが、大半のコーディングアシスタントやチャット用途には十分です。7B～13Bに余裕を持たせるならRTX 5070 Ti(～$2,499、12 GB VRAM)へ。2023年の中古RTX 4070ノート(eBayで$800～1,100)はさらに安価ですが30～50%低速です。' }},
-          { '@type': 'Question', name: 'ノートパソコンでLLMを訓練やファインチューニングできる?', acceptedAnswer: { '@type': 'Answer', text: 'ゼロからのモデル訓練はどのノートパソコンでも現実的ではありません。小型モデル(～7Bまで)のLoRAやQLoRAによるファインチューニングは、12 GB以上のVRAM(RTX 5070 Ti以上)または24 GB統合メモリ(MacBook Pro M5 Pro)を搭載したノートで可能ですが、数分でなく数時間かかると想定してください。小型モデルのLoRAファインチューニングを超える作業には、デスクトップかクラウドGPUを使用してください ― 本ガイドが扱うのは実行(推論)であり、訓練ではありません。' }},
+          {
+            '@type': 'Question',
+            'name': 'MacBook Pro M5 ProはローカルLLMに適している?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい ― 2026年時点でローカルLLMに最適な静音ノートです。24 GB統合メモリ構成($2,199)はQwen3 14BをQ4で45～60 tok/s、ファン音なしで実行。30Bモデルに余裕を持たせるなら36 GB($2,999)へ。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年にローカルでLLMを実行するのに最適なWindowsノートは?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 5080ノート(～$2,799、16 GB GDDR7 VRAM)がWindowsの最良候補 ― Llama 3.1 8B Q4で～70 tok/s。RTX 5070 Tiノート(～$2,499、12 GB VRAM)は～50 tok/sでミドルレンジの最適解。RTX 5070ノート(～$1,899、8 GB VRAM)は最安で、7Bモデルに限定。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5070 Tiノートで14Bモデルは実行できる?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。RTX 5070 Tiは12 GB VRAMで、Qwen3 14BをQ4で余裕を持って収められます。Q8(高品質)では14Bに～14 GB必要なので、14BをQ8で動かすにはRTX 5080(16 GB)が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMにはゲーミングノートとミニPCのどちらを買うべき?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ミニPC: より安く、速く、拡張性が高く、発熱も低い。ゲーミングノート: 携帯性はあるが熱制約あり。携帯性が必要ならMacBook Pro M5 ProかRTX 5080ノートを。机に据え置くなら、RTX 4060 Ti 16GB搭載デスクトップがどのノートより高性能で安価です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Windowsゲーミングノートのバッテリーで7Bモデルは実行できる?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '技術的には可能ですが、バッテリーではGPUがiGPUに切替わります。推論は2～4 tok/s(本格作業には実用不可)に低下。MacBook Pro M5 Proはバッテリーで～40 tok/sを出せ、バッテリー推論ははるかに快適です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMに最適なAppleノートは?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどのユーザーにはMacBook Pro M5 Pro 14"($2,199、24 GB)。30B～70BモデルにはMacBook Pro M5 Max 14"($3,199～、36 GB)。70BをQ8で動かす研究者にはMacBook Pro M5 Max 16"($3,499～、64 GB)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2023年のRTX 4070ノートは2026年にLLM用としてまだ買う価値がある?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '中古で大幅に割引された場合のみ(eBayで$800～1,100)。新品のRTX 5070 Tiノート(～$2,499)はLLM推論で30～50%高速です。すでにRTX 4070ノートを所有しているなら、7B～13Bモデルは十分に動作します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLM実行に最も安いノートパソコンは?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 5070ノート(～$1,899、8 GB GDDR7 VRAM)が現時点で最安の選択肢で、Q4の7Bモデルに限定されますが、大半のコーディングアシスタントやチャット用途には十分です。7B～13Bに余裕を持たせるならRTX 5070 Ti(～$2,499、12 GB VRAM)へ。2023年の中古RTX 4070ノート(eBayで$800～1,100)はさらに安価ですが30～50%低速です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ノートパソコンでLLMを訓練やファインチューニングできる?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ゼロからのモデル訓練はどのノートパソコンでも現実的ではありません。小型モデル(～7Bまで)のLoRAやQLoRAによるファインチューニングは、12 GB以上のVRAM(RTX 5070 Ti以上)または24 GB統合メモリ(MacBook Pro M5 Pro)を搭載したノートで可能ですが、数分でなく数時間かかると想定してください。小型モデルのLoRAファインチューニングを超える作業には、デスクトップかクラウドGPUを使用してください ― 本ガイドが扱うのは実行(推論)であり、訓練ではありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年にローカルLLM推論向けで最適なノートは?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro($2,199、24 GB統合メモリ)が最良候補 ― 14Bで45～60 tok/s、完全に静音。RTX 5080ノート(～$2,799、16 GB VRAM)は7Bで～70 tok/sのWindows最適解。RTX 5070 Tiノート(～$2,499、12 GB VRAM)は～50 tok/sでWindowsミドルレンジの最良候補、最安ならRTX 5070(～$1,899、8 GB)。',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1797,6 +2197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '2023年的RTX 4070笔记本在2026年还值得为LLM购买吗?', a: '只有在大幅折扣的二手价（eBay上$800–1,100）才值得。新RTX 5070 Ti笔记本 (~$2,499) 的LLM推理快30–50%。如果你已拥有RTX 4070笔记本，它仍能充分运行7B–13B模型。' },
             { q: '运行本地LLM最便宜的笔记本是什么?', a: 'RTX 5070笔记本 (~$1,899, 8 GB GDDR7 VRAM) 是目前最便宜的选择，限于Q4量化的7B模型——足以满足大多数代码助手和聊天场景。若需7B–13B的余量，可升级到RTX 5070 Ti (~$2,499, 12 GB VRAM)。2023年二手RTX 4070笔记本（eBay上$800–1,100）更便宜，但速度慢30–50%。' },
             { q: '能在笔记本电脑上训练或微调LLM吗?', a: '从零训练模型在任何笔记本电脑上都不现实。使用LoRA或QLoRA对小模型（最多~7B）进行微调，在拥有12 GB以上VRAM（RTX 5070 Ti或更高）或24 GB统一内存（MacBook Pro M5 Pro）的笔记本上是可行的，但预计需要数小时而非几分钟。若需求超出小模型的LoRA微调，请改用台式机或云GPU——本指南涵盖的是运行（推理），而非训练。' },
+            { q: '2026年本地LLM推理最佳笔记本是?', a: 'MacBook Pro M5 Pro ($2,199, 24 GB统一内存) 是首选——14B上45–60 tok/s，完全静音。RTX 5080笔记本 (~$2,799, 16 GB VRAM) 是最佳Windows选择，7B上~70 tok/s。RTX 5070 Ti笔记本 (~$2,499, 12 GB VRAM) 是最佳Windows中端选择，~50 tok/s，最便宜可选RTX 5070 (~$1,899, 8 GB)。' },
           ],
         },
         'relatedReading': {
@@ -1849,16 +2250,86 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         inLanguage: 'zh',
         url: 'https://www.promptquorum.com/zh/local-llms/best-laptops-local-llm',
         mainEntity: [
-          { '@type': 'Question', name: 'MacBook Pro M5 Pro适合本地LLM吗?', acceptedAnswer: { '@type': 'Answer', text: '是的——它是2026年本地LLM的最佳静音笔记本。24 GB统一内存配置 ($2,199) 在Q4运行Qwen3 14B达45–60 tok/s且无风扇噪音。升级到36 GB ($2,999) 可从容运行30B模型。' }},
-          { '@type': 'Question', name: '2026年哪款Windows笔记本最适合本地运行LLM?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5080笔记本 (~$2,799, 16 GB GDDR7 VRAM) 是Windows首选——在Q4量化的Llama 3.1 8B上~70 tok/s。RTX 5070 Ti笔记本 (~$2,499, 12 GB VRAM) 是最佳中端选择，~50 tok/s。RTX 5070笔记本 (~$1,899, 8 GB VRAM) 是最便宜的选择，限于7B模型。' }},
-          { '@type': 'Question', name: '能在RTX 5070 Ti笔记本上运行14B模型吗?', acceptedAnswer: { '@type': 'Answer', text: '可以。RTX 5070 Ti有12 GB VRAM，可从容容纳Q4量化的Qwen3 14B。在Q8（更高质量）下，14B需要~14 GB——你需要RTX 5080 (16 GB) 才能跑Q8的14B。' }},
-          { '@type': 'Question', name: '本地LLM该买游戏笔记本还是迷你PC?', acceptedAnswer: { '@type': 'Answer', text: '迷你PC: 更便宜、更快、更易升级、运行更凉。游戏笔记本: 便携但受热限制。若需便携，选MacBook Pro M5 Pro或RTX 5080笔记本。若固定在桌面，配RTX 4060 Ti 16GB的台式机性能超过任何笔记本且更便宜。' }},
-          { '@type': 'Question', name: '能用电池在Windows游戏笔记本上运行7B模型吗?', acceptedAnswer: { '@type': 'Answer', text: '技术上可以，但电池上GPU切换到集成显卡。推理跌到2–4 tok/s（无法实际使用）。MacBook Pro M5 Pro电池运行可达~40 tok/s——电池推理体验好得多。' }},
-          { '@type': 'Question', name: '本地LLM运行最好的Apple笔记本是?', acceptedAnswer: { '@type': 'Answer', text: '大多数用户选MacBook Pro M5 Pro 14" ($2,199, 24 GB)。运行30B–70B模型选MacBook Pro M5 Max 14" ($3,199+, 36 GB)。运行Q8的70B的研究人员选MacBook Pro M5 Max 16" ($3,499+, 64 GB)。' }},
-          { '@type': 'Question', name: '2023年的RTX 4070笔记本在2026年还值得为LLM购买吗?', acceptedAnswer: { '@type': 'Answer', text: '只有在大幅折扣的二手价（eBay上$800–1,100）才值得。新RTX 5070 Ti笔记本 (~$2,499) 的LLM推理快30–50%。如果你已拥有RTX 4070笔记本，它仍能充分运行7B–13B模型。' }},
-          { '@type': 'Question', name: '2026年本地LLM推理最佳笔记本是?', acceptedAnswer: { '@type': 'Answer', text: 'MacBook Pro M5 Pro ($2,199, 24 GB统一内存) 是首选——14B上45–60 tok/s，完全静音。RTX 5080笔记本 (~$2,799, 16 GB VRAM) 是最佳Windows选择，7B上~70 tok/s。RTX 5070 Ti笔记本 (~$2,499, 12 GB VRAM) 是最佳Windows中端选择，~50 tok/s，最便宜可选RTX 5070 (~$1,899, 8 GB)。' }},
-          { '@type': 'Question', name: '运行本地LLM最便宜的笔记本是什么?', acceptedAnswer: { '@type': 'Answer', text: 'RTX 5070笔记本 (~$1,899, 8 GB GDDR7 VRAM) 是目前最便宜的选择，限于Q4量化的7B模型——足以满足大多数代码助手和聊天场景。若需7B–13B的余量，可升级到RTX 5070 Ti (~$2,499, 12 GB VRAM)。2023年二手RTX 4070笔记本（eBay上$800–1,100）更便宜，但速度慢30–50%。' }},
-          { '@type': 'Question', name: '能在笔记本电脑上训练或微调LLM吗?', acceptedAnswer: { '@type': 'Answer', text: '从零训练模型在任何笔记本电脑上都不现实。使用LoRA或QLoRA对小模型（最多~7B）进行微调，在拥有12 GB以上VRAM（RTX 5070 Ti或更高）或24 GB统一内存（MacBook Pro M5 Pro）的笔记本上是可行的，但预计需要数小时而非几分钟。若需求超出小模型的LoRA微调，请改用台式机或云GPU——本指南涵盖的是运行（推理），而非训练。' }},
+          {
+            '@type': 'Question',
+            'name': 'MacBook Pro M5 Pro适合本地LLM吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的——它是2026年本地LLM的最佳静音笔记本。24 GB统一内存配置 ($2,199) 在Q4运行Qwen3 14B达45–60 tok/s且无风扇噪音。升级到36 GB ($2,999) 可从容运行30B模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年哪款Windows笔记本最适合本地运行LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 5080笔记本 (~$2,799, 16 GB GDDR7 VRAM) 是Windows首选——在Q4量化的Llama 3.1 8B上~70 tok/s。RTX 5070 Ti笔记本 (~$2,499, 12 GB VRAM) 是最佳中端选择，~50 tok/s。RTX 5070笔记本 (~$1,899, 8 GB VRAM) 是最便宜的选择，限于7B模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '能在RTX 5070 Ti笔记本上运行14B模型吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。RTX 5070 Ti有12 GB VRAM，可从容容纳Q4量化的Qwen3 14B。在Q8（更高质量）下，14B需要~14 GB——你需要RTX 5080 (16 GB) 才能跑Q8的14B。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM该买游戏笔记本还是迷你PC?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '迷你PC: 更便宜、更快、更易升级、运行更凉。游戏笔记本: 便携但受热限制。若需便携，选MacBook Pro M5 Pro或RTX 5080笔记本。若固定在桌面，配RTX 4060 Ti 16GB的台式机性能超过任何笔记本且更便宜。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '能用电池在Windows游戏笔记本上运行7B模型吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '技术上可以，但电池上GPU切换到集成显卡。推理跌到2–4 tok/s（无法实际使用）。MacBook Pro M5 Pro电池运行可达~40 tok/s——电池推理体验好得多。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '本地LLM运行最好的Apple笔记本是?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '大多数用户选MacBook Pro M5 Pro 14" ($2,199, 24 GB)。运行30B–70B模型选MacBook Pro M5 Max 14" ($3,199+, 36 GB)。运行Q8的70B的研究人员选MacBook Pro M5 Max 16" ($3,499+, 64 GB)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2023年的RTX 4070笔记本在2026年还值得为LLM购买吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只有在大幅折扣的二手价（eBay上$800–1,100）才值得。新RTX 5070 Ti笔记本 (~$2,499) 的LLM推理快30–50%。如果你已拥有RTX 4070笔记本，它仍能充分运行7B–13B模型。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行本地LLM最便宜的笔记本是什么?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RTX 5070笔记本 (~$1,899, 8 GB GDDR7 VRAM) 是目前最便宜的选择，限于Q4量化的7B模型——足以满足大多数代码助手和聊天场景。若需7B–13B的余量，可升级到RTX 5070 Ti (~$2,499, 12 GB VRAM)。2023年二手RTX 4070笔记本（eBay上$800–1,100）更便宜，但速度慢30–50%。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '能在笔记本电脑上训练或微调LLM吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '从零训练模型在任何笔记本电脑上都不现实。使用LoRA或QLoRA对小模型（最多~7B）进行微调，在拥有12 GB以上VRAM（RTX 5070 Ti或更高）或24 GB统一内存（MacBook Pro M5 Pro）的笔记本上是可行的，但预计需要数小时而非几分钟。若需求超出小模型的LoRA微调，请改用台式机或云GPU——本指南涵盖的是运行（推理），而非训练。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '2026年本地LLM推理最佳笔记本是?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MacBook Pro M5 Pro ($2,199, 24 GB统一内存) 是首选——14B上45–60 tok/s，完全静音。RTX 5080笔记本 (~$2,799, 16 GB VRAM) 是最佳Windows选择，7B上~70 tok/s。RTX 5070 Ti笔记本 (~$2,499, 12 GB VRAM) 是最佳Windows中端选择，~50 tok/s，最便宜可选RTX 5070 (~$1,899, 8 GB)。',
+            },
+          },
         ],
       },
       itemListSchema: {

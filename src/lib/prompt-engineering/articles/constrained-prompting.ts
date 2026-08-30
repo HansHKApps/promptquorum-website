@@ -409,17 +409,94 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'de',
         mainEntity: [
-          { '@type': 'Question', name: 'Was ist Constrained Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Constrained Prompting ist die Praxis, explizite Regeln – Format, Länge, Inhalt und Sicherheitsgrenzen – direkt in einen Prompt zu integrieren, um KI-Ausgaben vorhersehbar und wiederverwendbar zu machen. Statt „schreibe eine Zusammenfassung" geben Sie vor: 150 Wörter, JSON-Format, keine Konkurrenten-Namen, muss einen Call-to-Action enthalten.' } },
-          { '@type': 'Question', name: 'Was sind die fünf Constraint-Typen?', acceptedAnswer: { '@type': 'Answer', text: 'Die fünf Haupt-Constraint-Typen sind: (1) Strukturell – erforderliche Überschriften, Tabellen, JSON mit spezifischen Schlüsseln. (2) Inhalt – erforderliche Abschnitte, verbotene Themen. (3) Stil – Ton, Lesenlevel, Terminologie. (4) Länge – Wort- oder Zeichenlimits. (5) Sicherheit – keine medizinischen Ratschläge, personenbezogenen Daten oder rechtlichen Schlussfolgerungen.' } },
-          { '@type': 'Question', name: 'Wie zwingt man ein Modell, gültiges JSON auszugeben?', acceptedAnswer: { '@type': 'Answer', text: 'Geben Sie das genaue JSON-Schema im Prompt vor: „Geben Sie JSON genau in diesem Format zurück: { \\"finding\\": \\"...\\" }". Kombinieren Sie dies mit „Geben Sie nur JSON aus, keinen anderen Text." GPT-5.6 unterstützt auch einen JSON-Modus über die API, der gültiges JSON auf API-Ebene erzwingt.' } },
-          { '@type': 'Question', name: 'Funktioniert Constrained Prompting auf GPT-5.6, Claude und Gemini?', acceptedAnswer: { '@type': 'Answer', text: 'Ja – alle drei unterstützen Constrained Prompting. GPT-5.6 und Claude Sonnet 5 befolgen strikte Format-Constraints (JSON, Tabellen, Wortlimits) mit etwa 95% Adhärenzrate bei gut formulierten Prompts. Alle drei bieten auch API-Level Constraint-Durchsetzung via Structured Outputs, die gültiges JSON-Schema auf Modell-Ebene garantiert. Gemini 3.1 Pro schneidet ähnlich ab, kann aber mehrdeutige Constraints unterschiedlich interpretieren. Testen Sie immer über Modelle hinweg.' } },
-          { '@type': 'Question', name: 'Was ist der Unterschied zwischen Constrained Prompting und Few-Shot Prompting?', acceptedAnswer: { '@type': 'Answer', text: 'Constrained Prompting fügt explizite Regeln in Textform hinzu (Format, Länge, Inhaltsrestriktionen). Few-Shot Prompting stellt ausgearbeitete Beispiele bereit, die implizit zeigen, was produziert werden soll. Die beiden funktionieren gut zusammen: nutzen Sie ein Few-Shot-Beispiel, um das Ausgabemuster zu zeigen, dann fügen Sie Constraints für strengere Durchsetzung hinzu.' } },
-          { '@type': 'Question', name: 'Wann sollten Sie Constrained Prompting NICHT verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Vermeiden Sie strukturelle Constraints bei offenen kreativen Aufgaben (Brainstorming, Ideation, Fiction). Über-Constraining kreativer Prompts erzeugt formularhafte, minderwertige Ausgaben. Verwenden Sie Ton- und Stil-Constraints für kreative Aufgaben, aber erlauben Sie strukturelle Freiheit.' } },
-          { '@type': 'Question', name: 'Wie viele Constraints können Sie in einem Prompt stapeln?', acceptedAnswer: { '@type': 'Answer', text: 'Praktisch funktionieren 3–5 Constraints gut. Beyond 5–6 beginnen Modelle, niedrig priorisierte Constraints stillschweigend zu ignorieren. Wenn Sie mehr als 5 benötigen, listen Sie sie in Prioritätsordnung auf und geben Sie explizit an: „Falls Constraints konfligieren, wenden Sie sie in dieser Reihenfolge an: (1) Sicherheit, (2) Format, (3) Länge."' } },
-          { '@type': 'Question', name: 'Muss ich bei der Verwendung von Constrained Prompting die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, die DSGVO ist relevant, wenn Constrained Prompting bei der Verarbeitung personenbezogener Daten eingesetzt wird. Gemäß DSGVO Artikel 28 müssen Sie Datenverarbeitungsvereinbarungen (DPA) mit Ihrem KI-Anbieter abschließen. Für Unternehmen im DACH-Raum empfehlen die BSI-Grundschutz-Kataloge, lokale oder private KI-Modelle für die Verarbeitung sensibler Daten zu verwenden. Stellen Sie sicher, dass Ihre Prompts und deren Ausgaben keine unkontrollierten personenbezogenen Daten über externe APIs enthalten.' } },
-          { '@type': 'Question', name: 'Ist Constrained Prompting für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Absolut. Constrained Prompting ist besonders wertvoll für deutsche Mittelstandsunternehmen, da es standardisierte, wiederverwendbare Prompt-Vorlagen ermöglicht – ideal für ressourcenbegrenzte Teams. Mit PromptQuorum können Sie Constraints über mehrere Modelle hinweg testen, um das beste Preis-Leistungs-Verhältnis für Ihr Unternehmen zu finden. Mittelstandsunternehmen in regulierten Branchen (Finanzen, Versicherung, Gesundheit) profitieren besonders von den Sicherheits- und Compliance-Constraints.' } },
-          { '@type': 'Question', name: 'Bietet Constrained Prompting Schutz vor Injection-Angriffen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, Constraints können Injection-Angriffe reduzieren, indem sie die Ausgabe auf ein vordefiniertes Format beschränken. Wenn Sie beispielsweise fordern, dass die Ausgabe JSON sein muss, können Injection-Versuche, die Befehle eingeben, nicht in der erwarteten JSON-Struktur erfolgen. Aber Constraints sind kein vollständiger Sicherheitsersatz – kombinieren Sie sie immer mit Input-Validierung und Promptinjektion-Abwehr auf Systemebene.' } },
-          { '@type': 'Question', name: 'Funktioniert Constrained Prompting mit lokalen Modellen wie Llama?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Lokale Modelle wie Llama 3.2, Mistral und Qwen unterstützen Constrained Prompting über Prompt-Level-Constraints genauso wie Proprietary-Modelle. Die Compliance-Raten können unterschiedlich sein – kleinere Modelle (< 13B) haben niedrigere Adhärenzsätze bei komplexen Constraints. API-Level Structured Outputs sind bei lokalen Modellen nicht immer verfügbar – verwenden Sie also Prompt-Level-Constraints als primäre Strategie.' } },
+          {
+            '@type': 'Question',
+            'name': 'Was ist Constrained Prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Constrained Prompting ist die Praxis, explizite Regeln – Format, Länge, Inhalt und Sicherheitsgrenzen – direkt in einen Prompt zu integrieren, um KI-Ausgaben vorhersehbar und wiederverwendbar zu machen. Statt „schreibe eine Zusammenfassung" geben Sie vor: 150 Wörter, JSON-Format, keine Konkurrenten-Namen, muss einen Call-to-Action enthalten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was sind die fünf Constraint-Typen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die fünf Haupt-Constraint-Typen sind: (1) Strukturell – erforderliche Überschriften, Tabellen, JSON mit spezifischen Schlüsseln. (2) Inhalt – erforderliche Abschnitte, verbotene Themen. (3) Stil – Ton, Lesenlevel, Terminologie. (4) Länge – Wort- oder Zeichenlimits. (5) Sicherheit – keine medizinischen Ratschläge, personenbezogenen Daten oder rechtlichen Schlussfolgerungen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie zwingt man ein Modell, gültiges JSON auszugeben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Geben Sie das genaue JSON-Schema im Prompt vor: „Geben Sie JSON genau in diesem Format zurück: { \\"finding\\": \\"...\\" }". Kombinieren Sie dies mit „Geben Sie nur JSON aus, keinen anderen Text." GPT-5.6 unterstützt auch einen JSON-Modus über die API, der gültiges JSON auf API-Ebene erzwingt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert Constrained Prompting auf GPT-5.6, Claude und Gemini?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja – alle drei unterstützen Constrained Prompting. GPT-5.6 und Claude Opus 5 befolgen strikte Format-Constraints (JSON, Tabellen, Wortlimits) mit etwa 95% Adhärenzrate bei gut formulierten Prompts. Gemini 3.1 Pro schneidet ähnlich ab, kann aber mehrdeutige Constraints unterschiedlich interpretieren. Testen Sie immer über Modelle hinweg.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was ist der Unterschied zwischen Constrained Prompting und Few-Shot Prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Constrained Prompting fügt explizite Regeln in Textform hinzu (Format, Länge, Inhaltsrestriktionen). Few-Shot Prompting stellt ausgearbeitete Beispiele bereit, die implizit zeigen, was produziert werden soll. Die beiden funktionieren gut zusammen: nutzen Sie ein Few-Shot-Beispiel, um das Ausgabemuster zu zeigen, dann fügen Sie Constraints für strengere Durchsetzung hinzu.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wann sollten Sie Constrained Prompting NICHT verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vermeiden Sie strukturelle Constraints bei offenen kreativen Aufgaben (Brainstorming, Ideation, Fiction). Über-Constraining kreativer Prompts erzeugt formularhafte, minderwertige Ausgaben. Verwenden Sie Ton- und Stil-Constraints für kreative Aufgaben, aber erlauben Sie strukturelle Freiheit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viele Constraints können Sie in einem Prompt stapeln?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Praktisch funktionieren 3–5 Constraints gut. Beyond 5–6 beginnen Modelle, niedrig priorisierte Constraints stillschweigend zu ignorieren. Wenn Sie mehr als 5 benötigen, listen Sie sie in Prioritätsordnung auf und geben Sie explizit an: „Falls Constraints konfligieren, wenden Sie sie in dieser Reihenfolge an: (1) Sicherheit, (2) Format, (3) Länge."',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei der Verwendung von Constrained Prompting die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, die DSGVO ist relevant, wenn Constrained Prompting bei der Verarbeitung personenbezogener Daten eingesetzt wird. Gemäß DSGVO Artikel 28 müssen Sie Datenverarbeitungsvereinbarungen (DPA) mit Ihrem KI-Anbieter abschließen. Für Unternehmen im DACH-Raum empfehlen die BSI-Grundschutz-Kataloge, lokale oder private KI-Modelle für die Verarbeitung sensibler Daten zu verwenden. Stellen Sie sicher, dass Ihre Prompts und deren Ausgaben keine unkontrollierten personenbezogenen Daten über externe APIs enthalten.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Constrained Prompting für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Absolut. Constrained Prompting ist besonders wertvoll für deutsche Mittelstandsunternehmen, da es standardisierte, wiederverwendbare Prompt-Vorlagen ermöglicht – ideal für ressourcenbegrenzte Teams. Mit PromptQuorum können Sie Constraints über mehrere Modelle hinweg testen, um das beste Preis-Leistungs-Verhältnis für Ihr Unternehmen zu finden. Mittelstandsunternehmen in regulierten Branchen (Finanzen, Versicherung, Gesundheit) profitieren besonders von den Sicherheits- und Compliance-Constraints.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Bietet Constrained Prompting Schutz vor Injection-Angriffen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, Constraints können Injection-Angriffe reduzieren, indem sie die Ausgabe auf ein vordefiniertes Format beschränken. Wenn Sie beispielsweise fordern, dass die Ausgabe JSON sein muss, können Injection-Versuche, die Befehle eingeben, nicht in der erwarteten JSON-Struktur erfolgen. Aber Constraints sind kein vollständiger Sicherheitsersatz – kombinieren Sie sie immer mit Input-Validierung und Promptinjektion-Abwehr auf Systemebene.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Funktioniert Constrained Prompting mit lokalen Modellen wie Llama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Lokale Modelle wie Llama 3.2, Mistral und Qwen unterstützen Constrained Prompting über Prompt-Level-Constraints genauso wie Proprietary-Modelle. Die Compliance-Raten können unterschiedlich sein – kleinere Modelle (< 13B) haben niedrigere Adhärenzsätze bei komplexen Constraints. API-Level Structured Outputs sind bei lokalen Modellen nicht immer verfügbar – verwenden Sie also Prompt-Level-Constraints als primäre Strategie.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -670,6 +747,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Wie viele Constraints können Sie in einem Prompt stapeln?', a: 'Praktisch funktionieren 3–5 Constraints gut. Beyond 5–6 beginnen Modelle, niedrig priorisierte Constraints stillschweigend zu ignorieren. Wenn Sie mehr als 5 benötigen, listen Sie sie in Prioritätsordnung auf und geben Sie explizit an: „Falls Constraints konfligieren, wenden Sie sie in dieser Reihenfolge an: (1) Sicherheit, (2) Format, (3) Länge."' },
             { q: 'Muss ich bei der Verwendung von Constrained Prompting die DSGVO beachten?', a: 'Ja, die DSGVO ist relevant, wenn Constrained Prompting bei der Verarbeitung personenbezogener Daten eingesetzt wird. Gemäß DSGVO Artikel 28 müssen Sie Datenverarbeitungsvereinbarungen (DPA) mit Ihrem KI-Anbieter abschließen. Für Unternehmen im DACH-Raum empfehlen die BSI-Grundschutz-Kataloge, lokale oder private KI-Modelle für die Verarbeitung sensibler Daten zu verwenden. Stellen Sie sicher, dass Ihre Prompts und deren Ausgaben keine unkontrollierten personenbezogenen Daten über externe APIs enthalten.' },
             { q: 'Ist Constrained Prompting für den deutschen Mittelstand geeignet?', a: 'Absolut. Constrained Prompting ist besonders wertvoll für deutsche Mittelstandsunternehmen, da es standardisierte, wiederverwendbare Prompt-Vorlagen ermöglicht – ideal für ressourcenbegrenzte Teams. Mit PromptQuorum können Sie Constraints über mehrere Modelle hinweg testen, um das beste Preis-Leistungs-Verhältnis für Ihr Unternehmen zu finden. Mittelstandsunternehmen in regulierten Branchen (Finanzen, Versicherung, Gesundheit) profitieren besonders von den Sicherheits- und Compliance-Constraints.' },
+            { q: 'Bietet Constrained Prompting Schutz vor Injection-Angriffen?', a: 'Ja, Constraints können Injection-Angriffe reduzieren, indem sie die Ausgabe auf ein vordefiniertes Format beschränken. Wenn Sie beispielsweise fordern, dass die Ausgabe JSON sein muss, können Injection-Versuche, die Befehle eingeben, nicht in der erwarteten JSON-Struktur erfolgen. Aber Constraints sind kein vollständiger Sicherheitsersatz – kombinieren Sie sie immer mit Input-Validierung und Promptinjektion-Abwehr auf Systemebene.' },
+            { q: 'Funktioniert Constrained Prompting mit lokalen Modellen wie Llama?', a: 'Ja. Lokale Modelle wie Llama 3.2, Mistral und Qwen unterstützen Constrained Prompting über Prompt-Level-Constraints genauso wie Proprietary-Modelle. Die Compliance-Raten können unterschiedlich sein – kleinere Modelle (< 13B) haben niedrigere Adhärenzsätze bei komplexen Constraints. API-Level Structured Outputs sind bei lokalen Modellen nicht immer verfügbar – verwenden Sie also Prompt-Level-Constraints als primäre Strategie.' },
           ],
         },
         sources: {
@@ -1769,17 +1848,119 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '@type': 'FAQPage',
     inLanguage: 'fr',
     mainEntity: [
-      { '@type': 'Question', name: 'Qu\'est-ce que le prompting avec contraintes ?', acceptedAnswer: { '@type': 'Answer', text: 'Le prompting avec contraintes est la pratique d\'ajouter des règles explicites — format, longueur, contenu et limites de sécurité — directement dans un prompt pour rendre les outputs IA prévisibles et réutilisables. Au lieu de « rédige un résumé », vous spécifiez : 150 mots, format JSON, pas de noms concurrents, doit inclure un appel à l\'action.' } },
-      { '@type': 'Question', name: 'Quels sont les cinq types de contraintes ?', acceptedAnswer: { '@type': 'Answer', text: 'Les cinq principaux types de contraintes sont : (1) Structurel — en-têtes obligatoires, tableaux, JSON avec clés spécifiques. (2) Contenu — sections obligatoires, sujets interdits. (3) Style — ton, niveau de lecture, terminologie. (4) Longueur — limites de mots ou de caractères. (5) Sécurité — éviter les conseils médicaux, données personnelles, conclusions juridiques.' } },
-      { '@type': 'Question', name: 'Comment forcer un modèle à produire du JSON valide ?', acceptedAnswer: { '@type': 'Answer', text: 'Fournissez le schéma JSON exact dans le prompt : « Retournez JSON exactement dans ce format : { \"finding\": \"...\" } ». Combinez avec « Produisez uniquement JSON, pas d\'autre texte. » GPT-5.6 supporte aussi un mode JSON via l\'API qui applique le JSON valide au niveau API.' } },
-      { '@type': 'Question', name: 'Le prompting avec contraintes fonctionne-t-il sur GPT-5.6, Claude et Gemini ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — tous les trois supportent le prompting avec contraintes. GPT-5.6 et Claude Sonnet 5 respectent les contraintes de format stricte (JSON, tableaux, limites de mots) avec ~95% de conformité sur les prompts bien formés. Tous les trois supportent aussi Structured Outputs au niveau API pour ~100% de conformité de schéma JSON. Gemini 3.1 Pro obtient des résultats similaires mais peut interpréter différemment les contraintes ambiguës. Testez toujours sur plusieurs modèles.' } },
-      { '@type': 'Question', name: 'Quelle est la différence entre prompting avec contraintes et prompting few-shot ?', acceptedAnswer: { '@type': 'Answer', text: 'Le prompting avec contraintes ajoute des règles explicites en texte (format, longueur, restrictions de contenu). Le prompting few-shot fournit des exemples qui montrent implicitement ce qu\'il faut produire. Les deux fonctionnent bien ensemble : utilisez un exemple few-shot pour montrer le pattern de sortie, puis ajoutez des contraintes pour une application stricte.' } },
-      { '@type': 'Question', name: 'Quand ne PAS utiliser le prompting avec contraintes ?', acceptedAnswer: { '@type': 'Answer', text: 'Évitez les contraintes structurelles sur les tâches créatives ouvertes (brainstorming, idéation, fiction). Sur-contraindre les prompts créatifs produit du contenu formulaire et de faible qualité. Utilisez les contraintes de ton et de style pour les tâches créatives, mais autorisez la liberté structurelle.' } },
-      { '@type': 'Question', name: 'Combien de contraintes pouvez-vous empiler dans un prompt ?', acceptedAnswer: { '@type': 'Answer', text: 'Pratiquement, 3–5 contraintes fonctionnent bien. Au-delà de 5–6, les modèles commencent à ignorer silencieusement les contraintes de faible priorité sans avertissement. Si vous avez besoin de plus de 5, listez-les par ordre de priorité et indiquez explicitement : « Si les contraintes entrent en conflit, appliquez-les dans cet ordre : (1) sécurité, (2) format, (3) longueur. »' } },
-      { '@type': 'Question', name: 'Le prompting avec contraintes ralentit-il les réponses des LLM ?', acceptedAnswer: { '@type': 'Answer', text: 'Légèrement. Une contrainte stricte limite l\'espace de recherche du modèle, ce qui peut accélérer la génération. Mais l\'intention explicite du modèle (« Parse this into JSON ») ajoute un peu de latence. Dans la plupart des cas (< 100 ms), ce coût est acceptable pour la fiabilité.' } },
-      { '@type': 'Question', name: 'Tous les modèles supportent-ils les contraintes ?', acceptedAnswer: { '@type': 'Answer', text: 'Les modèles modernes (GPT-5.6, Claude Sonnet 5, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la conformité varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et vos cas d\'usage spécifiques.' } },
-      { '@type': 'Question', name: 'Devrais-je mettre la contrainte dans le prompt système ou utilisateur ?', acceptedAnswer: { '@type': 'Answer', text: 'Les deux fonctionnent, mais avec des différences : le prompt système (instructions) donne une conformité plus cohérente et globale. Le prompt utilisateur (contenu) permet des contraintes spécifiques au message. Meilleure pratique : mettez la contrainte générale (format, type) dans le prompt système ; mettez les contraintes spécifiques au contexte (données, limites) dans le prompt utilisateur.' } },
-    ],
+          {
+            '@type': 'Question',
+            'name': 'Les contraintes ralentissent-elles les réponses des LLM ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Légèrement. Une contrainte stricte limite l\'espace de recherche du modèle, ce qui peut accélérer la génération. Mais l\'intention explicite du modèle (« Parse this into JSON ») ajoute un peu de latence. Dans la plupart des cas (< 100 ms), ce coût est accepté pour la fiabilité. Mesurez votre cas d\'usage.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Tous les modèles supportent-ils les contraintes ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les modèles modernes (GPT-5.6, Claude Sonnet 5, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la compliance varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et cas d\'usage spécifiques.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je mettre la contrainte dans le prompt système ou utilisateur ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les deux fonctionnent, mais avec des différences : system prompt (instructions) donne une compliance plus cohérente et globale. User prompt (contenu) permet des contraintes spécifiques au message. Meilleure pratique : mettez la contrainte générale (format, type) dans le system prompt ; mettez les contraintes spécifiques au contexte (données, limites) dans le user prompt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que faire si le modèle ignore ma contrainte ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Escalade graduée : 1) Reformulez la contrainte plus explicitement (au lieu de « Sois structuré », « Réponds TOUJOURS en JSON valide »). 2) Ajouter un exemple au prompt : « Voici un exemple : { sentiment: \'positif\', score: 0.9 } ». 3) Changez de modèle vers un plus performant (GPT-5.6 au lieu de 3.5, Llama 70B au lieu de 8B). 4) Fine-tuning sur des exemples structurés (coûteux mais fiable à l\'échelle).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les contraintes affectent-elles la qualité du contenu ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, mais positivement : une contrainte bien conçue réduit le bruit et force le modèle à se concentrer. Une contrainte mal conçue (trop restrictive) peut réduire la créativité ou ignorer le contexte. Pour du contenu créatif (fiction, copywriting), gardez les contraintes light (longueur, ton). Pour de la données (extraction, classification), rendez les contraintes strictes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je combiner le prompting avec contraintes et le fine-tuning ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Absolument, et c\'est une meilleure pratique : fine-tuning prépare le modèle à comprendre votre domaine et votre style. Les contraintes forcent chaque réponse dans le format exact que vous besoin. Ensemble, ils donnent la plus haute fiabilité et qualité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La CNIL pose-t-elle des restrictions sur les contraintes d\'IA dans les données professionnelles ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La CNIL recommande le recours à des solutions d\'IA locales ou contrôlées pour le traitement de données professionnelles sensibles (données financières, médicales, juridiques). Les contraintes de format aident à isoler ou anonymiser les données sensibles dans les prompts, mais elles ne remplacent pas une architecture complète de protection des données. Consultez la CNIL si vous traitez des données sensibles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le prompting avec contraintes ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le prompting avec contraintes est la pratique d\'ajouter des règles explicites — format, longueur, contenu et limites de sécurité — directement dans un prompt pour rendre les outputs IA prévisibles et réutilisables. Au lieu de « rédige un résumé », vous spécifiez : 150 mots, format JSON, pas de noms concurrents, doit inclure un appel à l\'action.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quels sont les cinq types de contraintes ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les cinq principaux types de contraintes sont : (1) Structurel — en-têtes obligatoires, tableaux, JSON avec clés spécifiques. (2) Contenu — sections obligatoires, sujets interdits. (3) Style — ton, niveau de lecture, terminologie. (4) Longueur — limites de mots ou de caractères. (5) Sécurité — éviter les conseils médicaux, données personnelles, conclusions juridiques.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment forcer un modèle à produire du JSON valide ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Fournissez le schéma JSON exact dans le prompt : « Retournez JSON exactement dans ce format : { \"finding\": \"...\" } ». Combinez avec « Produisez uniquement JSON, pas d\'autre texte. » GPT-5.6 supporte aussi un mode JSON via l\'API qui applique le JSON valide au niveau API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Le prompting avec contraintes fonctionne-t-il sur GPT-5.6, Claude et Gemini ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui — tous les trois supportent le prompting avec contraintes. GPT-5.6 et Claude Sonnet 5 respectent les contraintes de format stricte (JSON, tableaux, limites de mots) avec ~95% de conformité sur les prompts bien formés. Tous les trois supportent aussi Structured Outputs au niveau API pour ~100% de conformité de schéma JSON. Gemini 3.1 Pro obtient des résultats similaires mais peut interpréter différemment les contraintes ambiguës. Testez toujours sur plusieurs modèles.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre prompting avec contraintes et prompting few-shot ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le prompting avec contraintes ajoute des règles explicites en texte (format, longueur, restrictions de contenu). Le prompting few-shot fournit des exemples qui montrent implicitement ce qu\'il faut produire. Les deux fonctionnent bien ensemble : utilisez un exemple few-shot pour montrer le pattern de sortie, puis ajoutez des contraintes pour une application stricte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quand ne PAS utiliser le prompting avec contraintes ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Évitez les contraintes structurelles sur les tâches créatives ouvertes (brainstorming, idéation, fiction). Sur-contraindre les prompts créatifs produit du contenu formulaire et de faible qualité. Utilisez les contraintes de ton et de style pour les tâches créatives, mais autorisez la liberté structurelle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien de contraintes pouvez-vous empiler dans un prompt ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pratiquement, 3–5 contraintes fonctionnent bien. Au-delà de 5–6, les modèles commencent à ignorer silencieusement les contraintes de faible priorité sans avertissement. Si vous avez besoin de plus de 5, listez-les par ordre de priorité et indiquez explicitement : « Si les contraintes entrent en conflit, appliquez-les dans cet ordre : (1) sécurité, (2) format, (3) longueur. »',
+            },
+          },
+        ],
   },
   howToSchema: {
     '@context': 'https://schema.org',
@@ -2002,35 +2183,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq',
       title: 'Questions fréquentes',
       faqs: [
-        {
-          q: 'Les contraintes ralentissent-elles les réponses des LLM ?',
-          a: 'Légèrement. Une contrainte stricte limite l\'espace de recherche du modèle, ce qui peut accélérer la génération. Mais l\'intention explicite du modèle (« Parse this into JSON ») ajoute un peu de latence. Dans la plupart des cas (< 100 ms), ce coût est accepté pour la fiabilité. Mesurez votre cas d\'usage.'
-        },
-        {
-          q: 'Tous les modèles supportent-ils les contraintes ?',
-          a: 'Les modèles modernes (GPT-5.6, Claude Sonnet 5, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la compliance varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et cas d\'usage spécifiques.'
-        },
-        {
-          q: 'Dois-je mettre la contrainte dans le prompt système ou utilisateur ?',
-          a: 'Les deux fonctionnent, mais avec des différences : system prompt (instructions) donne une compliance plus cohérente et globale. User prompt (contenu) permet des contraintes spécifiques au message. Meilleure pratique : mettez la contrainte générale (format, type) dans le system prompt ; mettez les contraintes spécifiques au contexte (données, limites) dans le user prompt.'
-        },
-        {
-          q: 'Que faire si le modèle ignore ma contrainte ?',
-          a: 'Escalade graduée : 1) Reformulez la contrainte plus explicitement (au lieu de « Sois structuré », « Réponds TOUJOURS en JSON valide »). 2) Ajouter un exemple au prompt : « Voici un exemple : { sentiment: \'positif\', score: 0.9 } ». 3) Changez de modèle vers un plus performant (GPT-5.6 au lieu de 3.5, Llama 70B au lieu de 8B). 4) Fine-tuning sur des exemples structurés (coûteux mais fiable à l\'échelle).'
-        },
-        {
-          q: 'Les contraintes affectent-elles la qualité du contenu ?',
-          a: 'Oui, mais positivement : une contrainte bien conçue réduit le bruit et force le modèle à se concentrer. Une contrainte mal conçue (trop restrictive) peut réduire la créativité ou ignorer le contexte. Pour du contenu créatif (fiction, copywriting), gardez les contraintes light (longueur, ton). Pour de la données (extraction, classification), rendez les contraintes strictes.'
-        },
-        {
-          q: 'Puis-je combiner le prompting avec contraintes et le fine-tuning ?',
-          a: 'Absolument, et c\'est une meilleure pratique : fine-tuning prépare le modèle à comprendre votre domaine et votre style. Les contraintes forcent chaque réponse dans le format exact que vous besoin. Ensemble, ils donnent la plus haute fiabilité et qualité.'
-        },
-        {
-          q: 'La CNIL pose-t-elle des restrictions sur les contraintes d\'IA dans les données professionnelles ?',
-          a: 'La CNIL recommande le recours à des solutions d\'IA locales ou contrôlées pour le traitement de données professionnelles sensibles (données financières, médicales, juridiques). Les contraintes de format aident à isoler ou anonymiser les données sensibles dans les prompts, mais elles ne remplacent pas une architecture complète de protection des données. Consultez la CNIL si vous traitez des données sensibles.'
-        }
-      ]
+            { q: 'Les contraintes ralentissent-elles les réponses des LLM ?', a: 'Légèrement. Une contrainte stricte limite l\'espace de recherche du modèle, ce qui peut accélérer la génération. Mais l\'intention explicite du modèle (« Parse this into JSON ») ajoute un peu de latence. Dans la plupart des cas (< 100 ms), ce coût est accepté pour la fiabilité. Mesurez votre cas d\'usage.' },
+            { q: 'Tous les modèles supportent-ils les contraintes ?', a: 'Les modèles modernes (GPT-5.6, Claude Sonnet 5, Llama 3.2, Mistral) supportent bien les contraintes de format et les énumérés. Mais plus la contrainte est complexe (schémas imbriqués profonds, logique sémantique), plus la compliance varie. Les petits modèles (< 7B) sont moins fiables. Testez votre modèle et cas d\'usage spécifiques.' },
+            { q: 'Dois-je mettre la contrainte dans le prompt système ou utilisateur ?', a: 'Les deux fonctionnent, mais avec des différences : system prompt (instructions) donne une compliance plus cohérente et globale. User prompt (contenu) permet des contraintes spécifiques au message. Meilleure pratique : mettez la contrainte générale (format, type) dans le system prompt ; mettez les contraintes spécifiques au contexte (données, limites) dans le user prompt.' },
+            { q: 'Que faire si le modèle ignore ma contrainte ?', a: 'Escalade graduée : 1) Reformulez la contrainte plus explicitement (au lieu de « Sois structuré », « Réponds TOUJOURS en JSON valide »). 2) Ajouter un exemple au prompt : « Voici un exemple : { sentiment: \'positif\', score: 0.9 } ». 3) Changez de modèle vers un plus performant (GPT-5.6 au lieu de 3.5, Llama 70B au lieu de 8B). 4) Fine-tuning sur des exemples structurés (coûteux mais fiable à l\'échelle).' },
+            { q: 'Les contraintes affectent-elles la qualité du contenu ?', a: 'Oui, mais positivement : une contrainte bien conçue réduit le bruit et force le modèle à se concentrer. Une contrainte mal conçue (trop restrictive) peut réduire la créativité ou ignorer le contexte. Pour du contenu créatif (fiction, copywriting), gardez les contraintes light (longueur, ton). Pour de la données (extraction, classification), rendez les contraintes strictes.' },
+            { q: 'Puis-je combiner le prompting avec contraintes et le fine-tuning ?', a: 'Absolument, et c\'est une meilleure pratique : fine-tuning prépare le modèle à comprendre votre domaine et votre style. Les contraintes forcent chaque réponse dans le format exact que vous besoin. Ensemble, ils donnent la plus haute fiabilité et qualité.' },
+            { q: 'La CNIL pose-t-elle des restrictions sur les contraintes d\'IA dans les données professionnelles ?', a: 'La CNIL recommande le recours à des solutions d\'IA locales ou contrôlées pour le traitement de données professionnelles sensibles (données financières, médicales, juridiques). Les contraintes de format aident à isoler ou anonymiser les données sensibles dans les prompts, mais elles ne remplacent pas une architecture complète de protection des données. Consultez la CNIL si vous traitez des données sensibles.' },
+            { q: 'Qu\'est-ce que le prompting avec contraintes ?', a: 'Le prompting avec contraintes est la pratique d\'ajouter des règles explicites — format, longueur, contenu et limites de sécurité — directement dans un prompt pour rendre les outputs IA prévisibles et réutilisables. Au lieu de « rédige un résumé », vous spécifiez : 150 mots, format JSON, pas de noms concurrents, doit inclure un appel à l\'action.' },
+            { q: 'Quels sont les cinq types de contraintes ?', a: 'Les cinq principaux types de contraintes sont : (1) Structurel — en-têtes obligatoires, tableaux, JSON avec clés spécifiques. (2) Contenu — sections obligatoires, sujets interdits. (3) Style — ton, niveau de lecture, terminologie. (4) Longueur — limites de mots ou de caractères. (5) Sécurité — éviter les conseils médicaux, données personnelles, conclusions juridiques.' },
+            { q: 'Comment forcer un modèle à produire du JSON valide ?', a: 'Fournissez le schéma JSON exact dans le prompt : « Retournez JSON exactement dans ce format : { \"finding\": \"...\" } ». Combinez avec « Produisez uniquement JSON, pas d\'autre texte. » GPT-5.6 supporte aussi un mode JSON via l\'API qui applique le JSON valide au niveau API.' },
+            { q: 'Le prompting avec contraintes fonctionne-t-il sur GPT-5.6, Claude et Gemini ?', a: 'Oui — tous les trois supportent le prompting avec contraintes. GPT-5.6 et Claude Sonnet 5 respectent les contraintes de format stricte (JSON, tableaux, limites de mots) avec ~95% de conformité sur les prompts bien formés. Tous les trois supportent aussi Structured Outputs au niveau API pour ~100% de conformité de schéma JSON. Gemini 3.1 Pro obtient des résultats similaires mais peut interpréter différemment les contraintes ambiguës. Testez toujours sur plusieurs modèles.' },
+            { q: 'Quelle est la différence entre prompting avec contraintes et prompting few-shot ?', a: 'Le prompting avec contraintes ajoute des règles explicites en texte (format, longueur, restrictions de contenu). Le prompting few-shot fournit des exemples qui montrent implicitement ce qu\'il faut produire. Les deux fonctionnent bien ensemble : utilisez un exemple few-shot pour montrer le pattern de sortie, puis ajoutez des contraintes pour une application stricte.' },
+            { q: 'Quand ne PAS utiliser le prompting avec contraintes ?', a: 'Évitez les contraintes structurelles sur les tâches créatives ouvertes (brainstorming, idéation, fiction). Sur-contraindre les prompts créatifs produit du contenu formulaire et de faible qualité. Utilisez les contraintes de ton et de style pour les tâches créatives, mais autorisez la liberté structurelle.' },
+            { q: 'Combien de contraintes pouvez-vous empiler dans un prompt ?', a: 'Pratiquement, 3–5 contraintes fonctionnent bien. Au-delà de 5–6, les modèles commencent à ignorer silencieusement les contraintes de faible priorité sans avertissement. Si vous avez besoin de plus de 5, listez-les par ordre de priorité et indiquez explicitement : « Si les contraintes entrent en conflit, appliquez-les dans cet ordre : (1) sécurité, (2) format, (3) longueur. »' },
+          ]
     },
     sources: {
       id: 'sources',

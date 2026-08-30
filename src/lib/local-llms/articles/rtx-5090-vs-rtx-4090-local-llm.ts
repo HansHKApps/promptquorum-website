@@ -158,16 +158,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Is the RTX 4090 still available new in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. NVIDIA discontinued the RTX 40-series in 2026. Every RTX 4090 for sale now is used, and prices have climbed to ~$2,000-2,600 due to EOL scarcity plus knock-on demand from the RTX 50-series\' own GDDR7 shortage.' } },
-          { '@type': 'Question', 'name': 'Is RTX 5090 worth it for running Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Depends more on price than ever. 4090 gives you 36 tok/s for ~$2,000-2,600 used. 5090 gives ~52 tok/s but costs $4,300-$5,000+ street as of August 2026. Worth it for continuous 70B use; a used 4090 is the pragmatic choice otherwise.' } },
-          { '@type': 'Question', 'name': 'Should I buy RTX 5090 or two RTX 4090s?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Two used 4090s (~$4,000-5,200 total) beat one 5090 (~$4,300-5,000+ street) on speed and flexibility. You can run multiple models in parallel. 5090 is simpler and still in production, but two-GPU used sourcing has no warranty.' } },
-          { '@type': 'Question', 'name': 'Does RTX 5090 have better VRAM than 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. RTX 5090 has 32GB GDDR7 vs RTX 4090\'s 24GB GDDR6X. The 8GB extra matters for running 34B Q8 models. For 7B-13B inference, 24GB is sufficient either way.' } },
-          { '@type': 'Question', 'name': 'Will 5090 prices drop back to its $1,999 MSRP?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only once the 2026 GDDR7 memory shortage eases — there is no fixed timeline. Street pricing is currently $4,300-$5,000+, more than double MSRP.' } },
-          { '@type': 'Question', 'name': 'Can I use RTX 5090 with a 750W power supply?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Barely. RTX 5090 draws 575W alone. Pair with a 850W or 1000W PSU to avoid voltage sag under load.' } },
-          { '@type': 'Question', 'name': 'Is RTX 5080 a better value than 5090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Often, yes — 5080 is roughly 80% of 5090\'s speed at a meaningfully lower price, though it is also subject to 2026 GDDR7 shortage-driven price inflation. For local LLMs, 5080 is usually the sweet spot.' } },
-          { '@type': 'Question', 'name': 'Is the RTX 5090 overkill for a 14B model?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes, for most use cases. A 14B Q4 model needs ~9GB VRAM and runs at ~55-65 tok/s on a 4090 — already fast. A used 4090 (or even a 3090) is far more cost-effective for 14B inference, especially at current 5090 street prices.' } },
-          { '@type': 'Question', 'name': 'Does the RTX 5090 laptop GPU have 32GB VRAM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. The RTX 5090 Laptop GPU has 24GB GDDR7 (reduced from the desktop\'s 32GB due to power and thermal constraints). It is significantly slower than the desktop 5090 but still faster than a 4090 on the same task.' } },
-          { '@type': 'Question', 'name': 'How much faster is 5090 on multimodal models like Qwen-VL 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Similar 20-25% lift. Multimodal compute is still memory-bound, so the bandwidth advantage of 5090 helps, but not dramatically.' } },
+          {
+            '@type': 'Question',
+            'name': 'Is the RTX 4090 still available new in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. NVIDIA discontinued the RTX 40-series in 2026. Every RTX 4090 for sale now is used, and prices have climbed to ~$2,000-2,600 due to EOL scarcity plus knock-on demand from the RTX 50-series\' own GDDR7 shortage.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is RTX 5090 worth it for running Llama 3.3 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depends more on price than ever. 4090 gives you ~36 tok/s on 70B Q4, which is usable, for ~$2,000-2,600 used. 5090 gives ~52 tok/s — 40% faster — but street price is $4,300-$5,000+ as of August 2026. Worth it if you\'re running 70B continuously and can\'t tolerate the slower card; a used 4090 is the pragmatic choice otherwise.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I buy RTX 5090 or two RTX 4090s?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Two used 4090s (~$4,000-5,200 total, EOL/used-only) beat one 5090 (~$4,300-5,000+ street) on raw 70B speed (~72 tok/s combined vs ~52). But two-GPU setups add complexity — tensor parallelism, driver overhead, used-only sourcing with no warranty. 5090 is simpler, still in production, and adds 32GB unified VRAM for 34B Q8 use cases.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does RTX 5090 have better VRAM than 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. RTX 5090 has 32GB GDDR7, RTX 4090 has 24GB GDDR6X. The 8GB extra lets 5090 run 34B Q8 models (~28GB needed) without squeezing. Both cards cannot fit 70B Q4 (~38-40GB) without splitting across GPUs. This VRAM gap is unrelated to the 4090\'s discontinuation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is the RTX 5090 overkill for a 14B model?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, for most use cases. A 14B Q4 model needs ~9GB VRAM and runs at ~55-65 tok/s on a 4090 — already fast. The 5090 would give ~65-75 tok/s, a marginal improvement. A used 4090 (or even a 3090) is far more cost-effective for 14B inference, especially at current 5090 street prices.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does the RTX 5090 laptop GPU have 32GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. The RTX 5090 Laptop GPU has 24GB GDDR7 (reduced from the desktop\'s 32GB due to power and thermal constraints). It\'s significantly slower than the desktop 5090 but still faster than a 4090 on the same task.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Will 5090 prices drop back to its $1,999 MSRP?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Only once the 2026 GDDR7 memory shortage eases — there\'s no fixed timeline. As of August 2026, street pricing sits at $4,300-$5,000+, more than double MSRP. The RTX 4090\'s own price history is a reminder that used pricing doesn\'t only trend downward: it fell from $1,499 (2022 launch) to a low of ~$999 used, then rebounded to ~$2,000-2,600 after its 2026 discontinuation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use RTX 5090 with a 750W power supply?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Barely. RTX 5090 draws 575W alone. Pair with a 850W or 1000W PSU to avoid voltage sag under load.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is RTX 5080 a better value than 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Often, yes — 5080 is roughly 80% of 5090\'s speed at a meaningfully lower price, though it is also subject to GDDR7 shortage-driven price inflation in 2026. For local LLMs, 5080 is usually the sweet spot unless you specifically need the 5090\'s 32GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much faster is 5090 on multimodal models like Qwen-VL 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Similar 20-25% lift. Multimodal compute is still memory-bound, so the bandwidth advantage of 5090 helps, but not dramatically.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -341,16 +411,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '¿Se sigue vendiendo nueva la RTX 4090 en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. NVIDIA descontinuó la serie RTX 40 en 2026. Toda RTX 4090 a la venta ahora es usada, y los precios han subido a ~$2.000-2.600 por la escasez EOL más la demanda derivada de la escasez de GDDR7 de la serie RTX 50.' } },
-          { '@type': 'Question', 'name': '¿Vale la pena la RTX 5090 para ejecutar Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Depende más del precio que nunca. La 4090 da 36 tok/seg por ~$2.000-2.600 usada. La 5090 da ~52 tok/seg pero cuesta $4.300-$5.000+ de calle en agosto de 2026. Vale la pena para uso continuo de 70B; una 4090 usada es la opción práctica en otros casos.' } },
-          { '@type': 'Question', 'name': '¿Debo comprar una RTX 5090 o dos RTX 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Dos 4090 usadas (~$4.000-5.200 en total) superan a una 5090 (~$4.300-5.000+ de calle) en velocidad y flexibilidad. La 5090 es más sencilla y sigue en producción, pero las 4090 usadas no tienen garantía.' } },
-          { '@type': 'Question', 'name': '¿La RTX 5090 tiene más VRAM que la 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. La RTX 5090 tiene 32 GB GDDR7 frente a los 24 GB GDDR6X de la RTX 4090. Los 8 GB extra importan para modelos de 34B Q8. Para inferencia de 7B-13B, 24 GB es suficiente en cualquier caso.' } },
-          { '@type': 'Question', 'name': '¿Bajará el precio de la 5090 hasta su PVP de $1.999?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Solo cuando se alivie la escasez de memoria GDDR7 de 2026 — no hay fecha fija. El precio de calle actual es de $4.300-$5.000+, más del doble del PVP.' } },
-          { '@type': 'Question', 'name': '¿Puedo usar la RTX 5090 con una fuente de alimentación de 750 W?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Con dificultades. La RTX 5090 consume 575 W por sí sola. Usa una fuente de 850 W o 1000 W para evitar caídas de tensión bajo carga.' } },
-          { '@type': 'Question', 'name': '¿La RTX 5080 ofrece mejor valor que la 5090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A menudo sí — la 5080 ronda el 80% de la velocidad de la 5090 a un precio bastante menor, aunque también sujeta a la inflación de precios por la escasez de GDDR7 de 2026. Para LLMs locales, la 5080 suele ser el punto óptimo.' } },
-          { '@type': 'Question', 'name': '¿Es excesiva la RTX 5090 para un modelo de 14B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, en la mayoría de los casos. Un modelo de 14B Q4 necesita ~9 GB de VRAM y corre a ~55-65 tok/seg en una 4090 — ya es rápido. Una 4090 usada (o incluso una 3090) es mucho más rentable para inferencia de 14B, especialmente a los precios actuales de la 5090.' } },
-          { '@type': 'Question', 'name': '¿Tiene la GPU portátil RTX 5090 32 GB de VRAM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. La RTX 5090 Laptop GPU tiene 24 GB GDDR7 (reducidos desde los 32 GB de la versión de escritorio por límites de potencia y térmicos). Es notablemente más lenta que la 5090 de escritorio, pero sigue siendo más rápida que una 4090 en la misma tarea.' } },
-          { '@type': 'Question', 'name': '¿Cuánto más rápida es la 5090 en modelos multimodales como Qwen-VL 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Una mejora similar del 20-25%. El cómputo multimodal sigue siendo limitado por la memoria, por lo que la ventaja de ancho de banda de la 5090 ayuda, pero no de forma dramática.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Se sigue vendiendo nueva la RTX 4090 en 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. NVIDIA descontinuó la serie RTX 40 en 2026. Toda RTX 4090 a la venta ahora es usada, y los precios han subido a ~$2.000-2.600 por la escasez EOL más la demanda derivada de la propia escasez de GDDR7 de la serie RTX 50.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Vale la pena la RTX 5090 para ejecutar Llama 3.3 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende más del precio que nunca. La 4090 te da ~36 tok/seg por ~$2.000-2.600 usada. La 5090 da ~52 tok/seg pero cuesta $4.300-$5.000+ de calle en agosto de 2026. Vale la pena si usas 70B de forma continua; una 4090 usada es la opción práctica en otros casos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debo comprar una RTX 5090 o dos RTX 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Dos 4090 usadas (~$4.000-5.200 en total) superan a una 5090 (~$4.300-5.000+ de calle) en velocidad bruta en 70B (~72 tok/seg combinados frente a ~52). Pero el montaje de dos GPU añade complejidad — paralelismo de tensores, sin garantía por ser usadas. La 5090 es más sencilla y sigue en producción, y añade 32 GB de VRAM unificada para 34B Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Tiene la RTX 5090 más VRAM que la 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. La RTX 5090 tiene 32 GB GDDR7, la RTX 4090 tiene 24 GB GDDR6X. Los 8 GB extra permiten ejecutar modelos de 34B Q8 (~28 GB necesarios) sin apuros. Ninguna de las dos cabe con 70B Q4 (~38-40 GB) sin repartir entre GPUs. Esta diferencia de VRAM no tiene relación con la descontinuación de la 4090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es excesiva la RTX 5090 para un modelo de 14B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, en la mayoría de los casos. Un modelo de 14B Q4 necesita ~9 GB de VRAM y corre a ~55-65 tok/seg en una 4090 — ya es rápido. La 5090 daría ~65-75 tok/seg, una mejora marginal. Una 4090 usada (o incluso una 3090) es mucho más rentable para inferencia de 14B, especialmente a los precios actuales de la 5090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Tiene la GPU portátil RTX 5090 32 GB de VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. La RTX 5090 Laptop GPU tiene 24 GB GDDR7 (reducidos desde los 32 GB de la versión de escritorio por límites de potencia y térmicos). Es notablemente más lenta que la 5090 de escritorio, pero sigue siendo más rápida que una 4090 en la misma tarea.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Bajará el precio de la 5090 hasta su PVP de $1.999?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo cuando se alivie la escasez de memoria GDDR7 de 2026 — no hay una fecha fija. El precio de calle actual es de $4.300-$5.000+, más del doble del PVP. El historial de precios de la 4090 recuerda que el mercado de usados no siempre baja: cayó de $1.499 (lanzamiento en 2022) a un mínimo de ~$999 usada, y luego rebotó a ~$2.000-2.600 tras su descontinuación en 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar la RTX 5090 con una fuente de alimentación de 750 W?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Con dificultades. La RTX 5090 consume 575 W por sí sola. Usa una fuente de 850 W o 1000 W para evitar caídas de tensión bajo carga.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿La RTX 5080 ofrece mejor valor que la 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A menudo sí — la 5080 ronda el 80% de la velocidad de la 5090 a un precio bastante menor, aunque también está sujeta a la inflación de precios por la escasez de GDDR7 de 2026. Para LLMs locales, la 5080 suele ser el punto óptimo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto más rápida es la 5090 en modelos multimodales como Qwen-VL 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Una mejora similar del 20-25%. El cómputo multimodal sigue siendo limitado por la memoria, por lo que la ventaja de ancho de banda de la 5090 ayuda, pero no de forma dramática.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -524,16 +664,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'هل RTX 4090 لا تزال تُباع جديدة في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. أوقفت NVIDIA إنتاج سلسلة RTX 40 في 2026. كل بطاقة RTX 4090 معروضة للبيع الآن مستعملة، وارتفعت الأسعار إلى ~$2,000-2,600 بسبب ندرة التوقف وطلب سلسلة RTX 50 على GDDR7.' } },
-          { '@type': 'Question', 'name': 'هل تستحق RTX 5090 العناء لتشغيل Llama 3 70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يعتمد على السعر أكثر من أي وقت مضى. تمنحك 4090 نسبة 36 token/ثانية بسعر ~$2,000-2,600 مستعملة. تمنحك 5090 نسبة ~52 token/ثانية لكن بسعر سوق $4,300-$5,000+ في أغسطس 2026.' } },
-          { '@type': 'Question', 'name': 'هل أشتري RTX 5090 واحدة أم RTX 4090 اثنتين؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'بطاقتا 4090 مستعملتان (~$4,000-5,200 إجمالًا) تتفوقان على 5090 واحدة (~$4,300-5,000+ في السوق) في السرعة والمرونة. لـ 5090 إعداد أبسط وما زالت قيد الإنتاج، لكن بطاقتي 4090 المستعملتين بدون ضمان.' } },
-          { '@type': 'Question', 'name': 'هل لـ RTX 5090 ذاكرة VRAM أكثر من 4090؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. RTX 5090 لديها 32 GB GDDR7 مقابل 24 GB GDDR6X لـ RTX 4090. الفارق البالغ 8 GB مهم لنماذج 34B Q8. لاستدلال 7B-13B، تكفي 24 GB في الحالتين.' } },
-          { '@type': 'Question', 'name': 'هل ستنخفض أسعار 5090 إلى سعرها الرسمي البالغ $1,999؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'فقط عندما يخفّ نقص ذاكرة GDDR7 في 2026 — لا يوجد جدول زمني محدد. سعر السوق الحالي هو $4,300-$5,000+، أكثر من ضعف السعر الرسمي.' } },
-          { '@type': 'Question', 'name': 'هل يمكنني استخدام RTX 5090 مع مزوّد طاقة 750 واط؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'بصعوبة. تستهلك RTX 5090 575 واط بمفردها. استخدم مزوّد طاقة 850 واط أو 1000 واط لتجنّب انخفاض الجهد تحت الحمل.' } },
-          { '@type': 'Question', 'name': 'هل تقدّم RTX 5080 قيمة أفضل من 5090؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'غالبًا نعم — تبلغ 5080 نحو 80% من سرعة 5090 بسعر أقل بكثير، رغم أنها معرضة أيضًا لتضخم الأسعار الناتج عن نقص GDDR7 في 2026. لنماذج LLM المحلية، 5080 عادة ما تكون النقطة المثلى.' } },
-          { '@type': 'Question', 'name': 'هل RTX 5090 مبالغ فيها لنموذج 14B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، في معظم الحالات. يحتاج نموذج 14B Q4 إلى ~9 GB من VRAM ويعمل بسرعة ~55-65 token/ثانية على 4090 — وهو سريع بالفعل. 4090 المستعملة (أو حتى 3090) أكثر جدوى اقتصاديًا لاستدلال 14B، خاصة بأسعار 5090 الحالية.' } },
-          { '@type': 'Question', 'name': 'هل لبطاقة RTX 5090 المخصصة للحواسيب المحمولة 32GB من VRAM؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا. تحتوي RTX 5090 Laptop GPU على 24GB GDDR7 (أقل من 32GB في نسخة سطح المكتب بسبب قيود الطاقة والحرارة). أبطأ بكثير من نسخة سطح المكتب لكنها لا تزال أسرع من 4090 في نفس المهمة.' } },
-          { '@type': 'Question', 'name': 'كم أسرع 5090 في النماذج متعددة الوسائط مثل Qwen-VL 70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تحسّن مماثل بنسبة 20-25%. تظل الحوسبة متعددة الوسائط محدودة بالذاكرة، لذا تساعد أفضلية عرض النطاق في 5090، لكن ليس بشكل كبير.' } },
+          {
+            '@type': 'Question',
+            'name': 'هل RTX 4090 لا تزال تُباع جديدة في 2026؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. أوقفت NVIDIA إنتاج سلسلة RTX 40 في 2026. كل بطاقة RTX 4090 معروضة للبيع الآن مستعملة، وارتفعت الأسعار إلى ~$2,000-2,600 بسبب ندرة التوقف بالإضافة إلى الطلب الناتج عن نقص GDDR7 الخاص بسلسلة RTX 50.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تستحق RTX 5090 العناء لتشغيل Llama 3.3 70B؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد على السعر أكثر من أي وقت مضى. تمنحك 4090 نسبة ~36 token/ثانية بسعر ~$2,000-2,600 مستعملة. تمنحك 5090 نسبة ~52 token/ثانية لكن بسعر سوق $4,300-$5,000+ في أغسطس 2026. تستحق العناء للاستخدام المستمر لـ 70B؛ 4090 مستعملة هي الخيار العملي في غير ذلك.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أشتري RTX 5090 واحدة أم RTX 4090 اثنتين؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بطاقتا 4090 مستعملتان (~$4,000-5,200 إجمالًا) تتفوقان على 5090 واحدة (~$4,300-5,000+ في السوق) في السرعة الخام على 70B (~72 token/ثانية مجتمعة مقابل ~52). لكن إعداد بطاقتين يضيف تعقيدًا — توازي البطاقات، وبدون ضمان لأنها مستعملة. 5090 أبسط وما زالت قيد الإنتاج، وتضيف 32 GB من VRAM موحدة لحالات استخدام 34B Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لـ RTX 5090 ذاكرة VRAM أكثر من 4090؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. RTX 5090 لديها 32 GB GDDR7، وRTX 4090 لديها 24 GB GDDR6X. الفارق البالغ 8 GB يتيح تشغيل نماذج 34B Q8 (~28 GB مطلوبة) دون ضغط. لا تستوعب أي من البطاقتين 70B Q4 (~38-40 GB) دون التوزيع بين بطاقتين. هذا الفارق في VRAM لا علاقة له بتوقف إنتاج 4090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل RTX 5090 مبالغ فيها لنموذج 14B؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، في معظم الحالات. يحتاج نموذج 14B Q4 إلى ~9 GB من VRAM ويعمل بسرعة ~55-65 token/ثانية على 4090 — وهو سريع بالفعل. ستمنح 5090 نسبة ~65-75 token/ثانية، وهو تحسّن هامشي. 4090 المستعملة (أو حتى 3090) أكثر جدوى اقتصاديًا لاستدلال 14B، خاصة بأسعار 5090 الحالية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لبطاقة RTX 5090 المخصصة للحواسيب المحمولة 32GB من VRAM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. تحتوي RTX 5090 Laptop GPU على 24GB GDDR7 (أقل من 32GB في نسخة سطح المكتب بسبب قيود الطاقة والحرارة). أبطأ بكثير من نسخة سطح المكتب لكنها لا تزال أسرع من 4090 في نفس المهمة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل ستنخفض أسعار 5090 إلى سعرها الرسمي البالغ $1,999؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'فقط عندما يخفّ نقص ذاكرة GDDR7 في 2026 — لا يوجد جدول زمني محدد. سعر السوق الحالي هو $4,300-$5,000+، أكثر من ضعف السعر الرسمي. يذكّرنا تاريخ أسعار 4090 بأن سوق المستعمل لا يتجه دائمًا للانخفاض: هبطت من $1,499 (إطلاق 2022) إلى أدنى مستوى ~$999 مستعملة، ثم ارتدت إلى ~$2,000-2,600 بعد توقف إنتاجها في 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام RTX 5090 مع مزوّد طاقة 750 واط؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بصعوبة. تستهلك RTX 5090 575 واط بمفردها. استخدم مزوّد طاقة 850 واط أو 1000 واط لتجنّب انخفاض الجهد تحت الحمل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تقدّم RTX 5080 قيمة أفضل من 5090؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'غالبًا نعم — تبلغ 5080 نحو 80% من سرعة 5090 بسعر أقل بكثير، رغم أنها معرضة أيضًا لتضخم الأسعار الناتج عن نقص GDDR7 في 2026. لنماذج LLM المحلية، 5080 عادة ما تكون النقطة المثلى.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم أسرع 5090 في النماذج متعددة الوسائط مثل Qwen-VL 70B؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تحسّن مماثل بنسبة 20-25%. تظل الحوسبة متعددة الوسائط محدودة بالذاكرة، لذا تساعد أفضلية عرض النطاق في 5090، لكن ليس بشكل كبير.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -697,16 +907,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Wird die RTX 4090 2026 noch neu verkauft?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. NVIDIA hat die RTX-40-Serie 2026 eingestellt. Jede RTX 4090 im Handel ist jetzt gebraucht, und die Preise sind auf ~$2.000-2.600 gestiegen — durch die EOL-Knappheit sowie die Nachfrage aus der GDDR7-Knappheit der RTX-50-Serie.' } },
-          { '@type': 'Question', 'name': 'Lohnt sich RTX 5090 zum Ausführen von Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Hängt mehr denn je vom Preis ab. 4090 gibt Ihnen 36 Token/s für ~$2.000-2.600 gebraucht. 5090 gibt ~52 Token/s, kostet aber $4.300-$5.000+ Straßenpreis (Stand August 2026).' } },
-          { '@type': 'Question', 'name': 'Sollte ich RTX 5090 oder zwei RTX 4090er kaufen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Zwei gebrauchte 4090er (~$4.000-5.200 insgesamt) schlagen eine 5090 (~$4.300-5.000+ Straßenpreis) bei Geschwindigkeit und Flexibilität. 5090 hat einfacheres Setup und wird weiter produziert, aber die 4090er kommen ohne Garantie.' } },
-          { '@type': 'Question', 'name': 'Hat RTX 5090 besseres VRAM als 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. RTX 5090 hat 32GB GDDR7 gegenüber 24GB GDDR6X bei der RTX 4090. Die 8GB extra sind relevant für 34B Q8 Modelle. Für 7B–13B-Inferenz reichen 24GB in beiden Fällen.' } },
-          { '@type': 'Question', 'name': 'Werden 5090-Preise auf die UVP von $1.999 fallen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Erst wenn sich die GDDR7-Speicherknappheit 2026 entspannt — dafür gibt es keinen festen Zeitplan. Der aktuelle Straßenpreis liegt bei $4.300-$5.000+, mehr als das Doppelte der UVP.' } },
-          { '@type': 'Question', 'name': 'Kann ich RTX 5090 mit 750W Stromversorgung nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kaum. RTX 5090 verbraucht allein 575W. Kombinieren Sie mit 850W oder 1000W PSU, um Spannungsabfälle unter Last zu vermeiden.' } },
-          { '@type': 'Question', 'name': 'Ist RTX 5080 besser als 5090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oft ja — 5080 erreicht rund 80% der 5090-Geschwindigkeit zu einem deutlich niedrigeren Preis, ist aber ebenfalls von der knappheitsbedingten Preisinflation 2026 betroffen. Für lokale LLMs ist 5080 meist der Sweet Spot.' } },
-          { '@type': 'Question', 'name': 'Ist die RTX 5090 für ein 14B-Modell überdimensioniert?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, in den meisten Fällen. Ein 14B Q4 Modell braucht ~9GB VRAM und läuft auf einer 4090 bereits mit ~55-65 Token/s — bereits schnell. Eine gebrauchte 4090 (oder sogar eine 3090) ist für 14B-Inferenz deutlich wirtschaftlicher, gerade bei den aktuellen 5090-Preisen.' } },
-          { '@type': 'Question', 'name': 'Hat die RTX 5090 Laptop-GPU 32GB VRAM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein. Die RTX 5090 Laptop GPU hat 24GB GDDR7 (reduziert von den 32GB der Desktop-Version wegen Strom- und Wärmegrenzen). Sie ist deutlich langsamer als die Desktop-5090, aber immer noch schneller als eine 4090 bei derselben Aufgabe.' } },
-          { '@type': 'Question', 'name': 'Wie viel schneller ist 5090 auf Multimodal-Modellen wie Qwen-VL 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ähnliche 20–25% Steigerung. Multimodal-Compute ist noch speichergebunden, daher hilft der Bandbreiten-Vorteil der 5090, aber nicht dramatisch.' } },
+          {
+            '@type': 'Question',
+            'name': 'Wird die RTX 4090 2026 noch neu verkauft?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. NVIDIA hat die RTX-40-Serie 2026 eingestellt. Jede RTX 4090 im Handel ist jetzt gebraucht, und die Preise sind auf ~$2.000-2.600 gestiegen — durch die EOL-Knappheit sowie die Nachfrage, die von der eigenen GDDR7-Knappheit der RTX-50-Serie ausgeht.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Lohnt sich RTX 5090 zum Ausführen von Llama 3.3 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hängt mehr denn je vom Preis ab. 4090 gibt Ihnen ~36 Token/s für ~$2.000-2.600 gebraucht. 5090 gibt ~52 Token/s, kostet aber $4.300-$5.000+ Straßenpreis (Stand August 2026). Lohnt sich bei durchgehender 70B-Nutzung; ansonsten ist eine gebrauchte 4090 die pragmatische Wahl.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich RTX 5090 oder zwei RTX 4090er kaufen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Zwei gebrauchte 4090er (~$4.000-5.200 insgesamt) schlagen eine 5090 (~$4.300-5.000+ Straßenpreis) bei roher 70B-Geschwindigkeit (~72 Token/s kombiniert). 5090 hat einfacheres Setup und wird weiter produziert, aber zwei gebrauchte 4090er kommen ohne Garantie.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Hat RTX 5090 besseres VRAM als 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. RTX 5090 hat 32GB GDDR7 gegenüber 24GB GDDR6X bei der RTX 4090. Die 8GB extra erlauben 34B Q8 Modelle (~28GB benötigt) ohne Engpass. Beide Karten passen kein 70B Q4 (~38-40GB) ohne Aufteilung auf mehrere GPUs. Dieser VRAM-Unterschied hat nichts mit der Einstellung der 4090 zu tun.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist die RTX 5090 für ein 14B-Modell überdimensioniert?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, in den meisten Fällen. Ein 14B Q4 Modell braucht ~9GB VRAM und läuft auf einer 4090 bereits mit ~55-65 Token/s — bereits schnell. Die 5090 würde ~65-75 Token/s liefern, eine geringe Verbesserung. Eine gebrauchte 4090 (oder sogar eine 3090) ist für 14B-Inferenz deutlich wirtschaftlicher, gerade bei den aktuellen 5090-Preisen.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Hat die RTX 5090 Laptop-GPU 32GB VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. Die RTX 5090 Laptop GPU hat 24GB GDDR7 (reduziert von den 32GB der Desktop-Version wegen Strom- und Wärmegrenzen). Sie ist deutlich langsamer als die Desktop-5090, aber immer noch schneller als eine 4090 bei derselben Aufgabe.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Werden 5090-Preise auf die UVP von $1.999 fallen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Erst wenn sich die GDDR7-Speicherknappheit 2026 entspannt — dafür gibt es keinen festen Zeitplan. Der aktuelle Straßenpreis liegt bei $4.300-$5.000+, mehr als das Doppelte der UVP. Die Preisgeschichte der 4090 zeigt, dass Gebrauchtpreise nicht immer nur sinken: Sie fiel von $1.499 (Launch 2022) auf ein Tief von ~$999 gebraucht und stieg nach der Einstellung 2026 wieder auf ~$2.000-2.600.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich RTX 5090 mit 750W Stromversorgung nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Kaum. RTX 5090 verbraucht allein 575W. Kombinieren Sie mit 850W oder 1000W PSU, um Spannungsabfälle unter Last zu vermeiden.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist RTX 5080 besser als 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oft ja — 5080 erreicht rund 80% der 5090-Geschwindigkeit zu einem deutlich niedrigeren Preis, ist aber ebenfalls von der knappheitsbedingten Preisinflation 2026 betroffen. Für lokale LLMs ist 5080 meist der Sweet Spot.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie viel schneller ist 5090 auf Multimodal-Modellen wie Qwen-VL 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ähnliche 20–25% Steigerung. Multimodal-Compute ist noch speichergebunden, daher hilft der Bandbreiten-Vorteil der 5090, aber nicht dramatisch.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -880,16 +1160,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'La RTX 4090 se vend-elle encore neuve en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. NVIDIA a arrêté la série RTX 40 en 2026. Chaque RTX 4090 en vente aujourd\'hui est d\'occasion, et les prix ont grimpé à ~2 000-2 600 $ à cause de la rareté liée à l\'arrêt et de la demande induite par la pénurie de GDDR7 de la série RTX 50.' } },
-          { '@type': 'Question', 'name': 'La RTX 5090 vaut-elle le coup pour exécuter Llama 3 70B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Cela dépend plus que jamais du prix. La 4090 donne 36 tok/sec pour ~2 000-2 600 $ d\'occasion. La 5090 donne ~52 tok/sec mais coûte 4 300-5 000 $+ de prix de rue en août 2026.' } },
-          { '@type': 'Question', 'name': 'Dois-je acheter une RTX 5090 ou deux RTX 4090 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Deux 4090 d\'occasion (~4 000-5 200 $ au total) battent une seule 5090 (~4 300-5 000 $+ de prix de rue) en vitesse et en flexibilité. La 5090 est plus simple et reste en production, mais les 4090 d\'occasion n\'ont pas de garantie.' } },
-          { '@type': 'Question', 'name': 'La RTX 5090 a-t-elle plus de VRAM que la 4090 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. La RTX 5090 dispose de 32 Go GDDR7 contre 24 Go GDDR6X pour la RTX 4090. Les 8 Go supplémentaires comptent pour les modèles de 34B Q8. Pour l\'inférence 7B-13B, 24 Go suffisent dans les deux cas.' } },
-          { '@type': 'Question', 'name': 'Le prix de la 5090 va-t-il redescendre à son prix public de 1 999 $ ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Seulement quand la pénurie de mémoire GDDR7 de 2026 s\'atténuera — il n\'y a pas de calendrier fixe. Le prix de rue actuel est de 4 300-5 000 $+, plus du double du prix public.' } },
-          { '@type': 'Question', 'name': 'Puis-je utiliser la RTX 5090 avec une alimentation de 750 W ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Difficilement. La RTX 5090 consomme 575 W à elle seule. Associez-la à une alimentation de 850 W ou 1000 W pour éviter les chutes de tension en charge.' } },
-          { '@type': 'Question', 'name': 'La RTX 5080 offre-t-elle un meilleur rapport qualité-prix que la 5090 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Souvent oui — la 5080 atteint environ 80% de la vitesse de la 5090 à un prix nettement inférieur, bien qu\'elle soit elle aussi sujette à l\'inflation des prix liée à la pénurie de GDDR7 de 2026. Pour les LLM locaux, la 5080 est généralement le point d\'équilibre optimal.' } },
-          { '@type': 'Question', 'name': 'La RTX 5090 est-elle excessive pour un modèle de 14B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, dans la plupart des cas. Un modèle de 14B Q4 nécessite ~9 Go de VRAM et tourne à ~55-65 tok/sec sur une 4090 — déjà rapide. Une 4090 d\'occasion (voire une 3090) est bien plus rentable pour l\'inférence de 14B, surtout aux prix actuels de la 5090.' } },
-          { '@type': 'Question', 'name': 'La RTX 5090 pour ordinateur portable a-t-elle 32 Go de VRAM ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. La RTX 5090 Laptop GPU dispose de 24 Go GDDR7 (réduits par rapport aux 32 Go de la version bureau à cause des contraintes de puissance et thermiques). Elle est nettement plus lente que la 5090 de bureau, mais reste plus rapide qu\'une 4090 sur la même tâche.' } },
-          { '@type': 'Question', 'name': 'De combien la 5090 est-elle plus rapide sur des modèles multimodaux comme Qwen-VL 70B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Un gain similaire de 20-25%. Le calcul multimodal reste limité par la mémoire, donc l\'avantage de bande passante de la 5090 aide, mais pas de façon spectaculaire.' } },
+          {
+            '@type': 'Question',
+            'name': 'La RTX 4090 se vend-elle encore neuve en 2026 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. NVIDIA a arrêté la série RTX 40 en 2026. Chaque RTX 4090 en vente aujourd\'hui est d\'occasion, et les prix ont grimpé à ~2 000-2 600 $ à cause de la rareté liée à l\'arrêt, en plus de la demande induite par la propre pénurie de GDDR7 de la série RTX 50.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La RTX 5090 vaut-elle le coup pour exécuter Llama 3.3 70B ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cela dépend plus que jamais du prix. La 4090 donne ~36 tok/sec pour ~2 000-2 600 $ d\'occasion. La 5090 donne ~52 tok/sec mais coûte 4 300-5 000 $+ de prix de rue en août 2026. Ça vaut le coup pour un usage continu du 70B ; une 4090 d\'occasion est le choix pragmatique sinon.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je acheter une RTX 5090 ou deux RTX 4090 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Deux 4090 d\'occasion (~4 000-5 200 $ au total) battent une seule 5090 (~4 300-5 000 $+ de prix de rue) en vitesse brute sur le 70B (~72 tok/sec combinés contre ~52). Mais une configuration bi-GPU ajoute de la complexité — parallélisme tensoriel, pas de garantie pour les cartes d\'occasion. La 5090 est plus simple et reste en production, et apporte 32 Go de VRAM unifiée pour le 34B Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La RTX 5090 a-t-elle plus de VRAM que la 4090 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. La RTX 5090 dispose de 32 Go GDDR7 contre 24 Go GDDR6X pour la RTX 4090. Les 8 Go supplémentaires permettent d\'exécuter des modèles de 34B Q8 (~28 Go nécessaires) sans être à l\'étroit. Aucune des deux cartes ne peut contenir un 70B Q4 (~38-40 Go) sans répartition sur plusieurs GPU. Cet écart de VRAM n\'a aucun lien avec l\'arrêt de production de la 4090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La RTX 5090 est-elle excessive pour un modèle de 14B ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, dans la plupart des cas. Un modèle de 14B Q4 nécessite ~9 Go de VRAM et tourne à ~55-65 tok/sec sur une 4090 — déjà rapide. La 5090 donnerait ~65-75 tok/sec, une amélioration marginale. Une 4090 d\'occasion (voire une 3090) est bien plus rentable pour l\'inférence de 14B, surtout aux prix actuels de la 5090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La RTX 5090 pour ordinateur portable a-t-elle 32 Go de VRAM ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. La RTX 5090 Laptop GPU dispose de 24 Go GDDR7 (réduits par rapport aux 32 Go de la version bureau à cause des contraintes de puissance et thermiques). Elle est nettement plus lente que la 5090 de bureau, mais reste plus rapide qu\'une 4090 sur la même tâche.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Le prix de la 5090 va-t-il redescendre à son prix public de 1 999 $ ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Seulement quand la pénurie de mémoire GDDR7 de 2026 s\'atténuera — il n\'y a pas de calendrier fixe. Le prix de rue actuel est de 4 300-5 000 $+, plus du double du prix public. L\'historique de la 4090 rappelle que le marché de l\'occasion ne baisse pas toujours : elle est passée de 1 499 $ (lancement 2022) à un plancher de ~999 $ d\'occasion, puis a rebondi à ~2 000-2 600 $ après son arrêt en 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser la RTX 5090 avec une alimentation de 750 W ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Difficilement. La RTX 5090 consomme 575 W à elle seule. Associez-la à une alimentation de 850 W ou 1000 W pour éviter les chutes de tension en charge.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La RTX 5080 offre-t-elle un meilleur rapport qualité-prix que la 5090 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Souvent oui — la 5080 atteint environ 80% de la vitesse de la 5090 à un prix nettement inférieur, bien qu\'elle soit elle aussi sujette à l\'inflation des prix liée à la pénurie de GDDR7 de 2026. Pour les LLM locaux, la 5080 est généralement le point d\'équilibre optimal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'De combien la 5090 est-elle plus rapide sur des modèles multimodaux comme Qwen-VL 70B ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un gain similaire de 20-25%. Le calcul multimodal reste limité par la mémoire, donc l\'avantage de bande passante de la 5090 aide, mais pas de façon spectaculaire.',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -1063,16 +1413,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'RTX 4090は2026年もまだ新品で販売されていますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。NVIDIAは2026年にRTX 40シリーズの生産を終了しました。現在販売されているRTX 4090はすべて中古で、価格は約$2,000-2,600まで上昇しています。' } },
-          { '@type': 'Question', 'name': 'Llama 3 70Bの実行にRTX 5090は価値がありますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '価格次第という要素がこれまで以上に強まっています。4090は中古約$2,000-2,600で36 tok/秒を提供します。5090は約52 tok/秒を提供しますが、2026年8月時点の実売価格は$4,300-$5,000以上です。' } },
-          { '@type': 'Question', 'name': 'RTX 5090を1枚買うべきか、RTX 4090を2枚買うべきか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '中古4090を2枚(合計約$4,000-5,200)は、単一の5090(実売約$4,300-5,000以上)を速度と柔軟性で上回ります。5090はより簡単で生産が続いていますが、中古の4090には保証がありません。' } },
-          { '@type': 'Question', 'name': 'RTX 5090は4090よりVRAMが多いですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。RTX 5090は32GB GDDR7を、RTX 4090は24GB GDDR6Xを搭載しています。8GBの追加分は34B Q8モデルにとって重要です。7B-13B推論では、どちらの場合も24GBで十分です。' } },
-          { '@type': 'Question', 'name': '5090の価格は希望小売価格の$1,999まで下がりますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年のGDDR7メモリ不足が緩和されない限り下がりません — 明確な時期は決まっていません。現在の実売価格は$4,300-$5,000以上と、希望小売価格の2倍以上です。' } },
-          { '@type': 'Question', 'name': 'RTX 5090を750Wの電源で使用できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ぎりぎりです。RTX 5090単体で575Wを消費します。負荷時の電圧降下を避けるため、850Wまたは1000Wの電源と組み合わせてください。' } },
-          { '@type': 'Question', 'name': 'RTX 5080は5090より価値がありますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '多くの場合そうです — 5080は5090の速度の約80%をかなり低い価格で実現しますが、2026年のGDDR7不足による価格上昇の影響も受けています。ローカルLLMには、5080が通常最適なバランスポイントです。' } },
-          { '@type': 'Question', 'name': '14BモデルにRTX 5090はオーバースペックですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ほとんどの場合、はい。14B Q4モデルは約9GBのVRAMを必要とし、4090上で既に高速な約55-65 tok/秒で動作します。中古4090(あるいは3090でさえ)の方が14B推論には遥かに費用対効果が高く、現在の5090の価格では特にそうです。' } },
-          { '@type': 'Question', 'name': 'RTX 5090ラップトップGPUは32GBのVRAMを搭載していますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'いいえ。RTX 5090 Laptop GPUは電力と熱の制約により、デスクトップ版の32GBから減らされた24GB GDDR7を搭載しています。デスクトップの5090よりかなり遅いですが、同じタスクでも4090よりは依然として高速です。' } },
-          { '@type': 'Question', 'name': 'Qwen-VL 70Bのようなマルチモーダルモデルで5090はどれくらい高速ですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '同様に20-25%の向上があります。マルチモーダル計算は依然としてメモリに制約されるため、5090の帯域幅優位性は役立ちますが、劇的ではありません。' } },
+          {
+            '@type': 'Question',
+            'name': 'RTX 4090は2026年もまだ新品で販売されていますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。NVIDIAは2026年にRTX 40シリーズの生産を終了しました。現在販売されているRTX 4090はすべて中古で、EOLの希少性とRTX 50シリーズ自体のGDDR7不足による需要増加により、価格は約$2,000-2,600まで上昇しています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Llama 3.3 70Bの実行にRTX 5090は価値がありますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '価格次第という要素がこれまで以上に強まっています。4090は中古約$2,000-2,600で約36 tok/秒を提供します。5090は約52 tok/秒を提供しますが、2026年8月時点の実売価格は$4,300-$5,000以上です。70Bを継続的に使用するなら価値がありますが、それ以外なら中古4090が現実的な選択です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090を1枚買うべきか、RTX 4090を2枚買うべきか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '中古4090を2枚(合計約$4,000-5,200)は、単一の5090(実売約$4,300-5,000以上)を70Bの生の速度(合計約72 tok/秒対約52)で上回ります。しかしデュアルGPU構成はテンソル並列などの複雑さを伴い、中古カードには保証がありません。5090はより簡単で生産が続いており、34B Q8向けに32GBの統合VRAMを提供します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090は4090よりVRAMが多いですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。RTX 5090は32GB GDDR7を、RTX 4090は24GB GDDR6Xを搭載しています。8GBの追加分により34B Q8モデル(約28GB必要)を余裕を持って実行できます。どちらのカードも複数GPUに分割せずに70B Q4(約38-40GB必要)を収めることはできません。このVRAMの差は4090の生産終了とは無関係です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '14BモデルにRTX 5090はオーバースペックですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほとんどの場合、はい。14B Q4モデルは約9GBのVRAMを必要とし、4090上で既に高速な約55-65 tok/秒で動作します。5090なら約65-75 tok/秒となりますが、改善はわずかです。中古4090(あるいは3090でさえ)の方が14B推論には遥かに費用対効果が高く、現在の5090の価格では特にそうです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090ラップトップGPUは32GBのVRAMを搭載していますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。RTX 5090 Laptop GPUは電力と熱の制約により、デスクトップ版の32GBから減らされた24GB GDDR7を搭載しています。デスクトップの5090よりかなり遅いですが、同じタスクでも4090よりは依然として高速です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '5090の価格は希望小売価格の$1,999まで下がりますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年のGDDR7メモリ不足が緩和されない限り下がりません — 明確な時期は決まっていません。現在の実売価格は$4,300-$5,000以上と、希望小売価格の2倍以上です。4090の価格推移を見ると、中古市場は必ずしも下落するとは限らないことがわかります。2022年の発売時の$1,499から中古最低約$999まで下落した後、2026年の生産終了後に約$2,000-2,600まで再び上昇しました。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090を750Wの電源で使用できますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ぎりぎりです。RTX 5090単体で575Wを消費します。負荷時の電圧降下を避けるため、850Wまたは1000Wの電源と組み合わせてください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5080は5090より価値がありますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '多くの場合そうです — 5080は5090の速度の約80%をかなり低い価格で実現しますが、2026年のGDDR7不足による価格上昇の影響も受けています。ローカルLLMには、5080が通常最適なバランスポイントです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen-VL 70Bのようなマルチモーダルモデルで5090はどれくらい高速ですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '同様に20-25%の向上があります。マルチモーダル計算は依然としてメモリに制約されるため、5090の帯域幅優位性は役立ちますが、劇的ではありません。',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -1246,16 +1666,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '2026年RTX 4090还能买到全新的吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '不能。NVIDIA已于2026年停产RTX 40系列。现在出售的每一张RTX 4090都是二手的，价格已升至约$2,000-2,600——原因是停产稀缺性和RTX 50系列自身GDDR7短缺带来的需求外溢。' } },
-          { '@type': 'Question', 'name': '运行Llama 3 70B值得买RTX 5090吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '现在比以往任何时候都更取决于价格。4090以约$2,000-2,600的二手价提供36 tok/秒。5090提供约52 tok/秒，但截至2026年8月市场价为$4,300-$5,000以上。' } },
-          { '@type': 'Question', 'name': '应该买一张RTX 5090还是两张RTX 4090？', 'acceptedAnswer': { '@type': 'Answer', 'text': '两张二手4090(总计约$4,000-5,200)在速度和灵活性上优于单张5090(市场价约$4,300-5,000以上)。5090配置更简单且仍在生产，但二手4090没有保修。' } },
-          { '@type': 'Question', 'name': 'RTX 5090的显存比4090多吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的。RTX 5090拥有32GB GDDR7，而RTX 4090为24GB GDDR6X。多出的8GB对34B Q8模型很重要。对于7B-13B推理，两者的24GB都足够。' } },
-          { '@type': 'Question', 'name': '5090的价格会跌回$1,999的建议零售价吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '只有当2026年的GDDR7内存短缺缓解后才会——目前没有确定的时间表。当前市场价为$4,300-$5,000以上，超过建议零售价的两倍。' } },
-          { '@type': 'Question', 'name': '我可以用750W电源使用RTX 5090吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '勉强可以。RTX 5090单卡功耗为575W。请搭配850W或1000W电源，以避免负载下的电压骤降。' } },
-          { '@type': 'Question', 'name': 'RTX 5080比5090更值得购买吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '对大多数人来说是的——5080的速度约为5090的80%，价格却低得多，尽管它同样受到2026年GDDR7短缺导致的价格上涨影响。对于本地LLM，5080通常是最佳性价比选择。' } },
-          { '@type': 'Question', 'name': '对于14B模型来说RTX 5090是否过剩？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在大多数情况下是的。14B Q4模型需要约9GB显存，在4090上已能以约55-65 tok/秒运行——已经很快。二手4090(甚至3090)对于14B推理的性价比要高得多，尤其是在目前的5090价格下。' } },
-          { '@type': 'Question', 'name': 'RTX 5090笔记本电脑显卡有32GB显存吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '没有。RTX 5090 Laptop GPU由于功耗和散热限制，显存被削减至24GB GDDR7(桌面版为32GB)。它比桌面版5090慢得多，但在同一任务上仍比4090快。' } },
-          { '@type': 'Question', 'name': '在Qwen-VL 70B等多模态模型上5090快多少？', 'acceptedAnswer': { '@type': 'Answer', 'text': '同样有20-25%的提升。多模态计算仍然受显存带宽限制，因此5090的带宽优势有帮助，但不算显著。' } },
+          {
+            '@type': 'Question',
+            'name': '2026年RTX 4090还能买到全新的吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能。NVIDIA已于2026年停产RTX 40系列。现在出售的每一张RTX 4090都是二手的，价格已升至约$2,000-2,600——原因是停产导致的稀缺性，以及RTX 50系列自身GDDR7短缺带来的需求外溢。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '运行Llama 3.3 70B值得买RTX 5090吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '现在比以往任何时候都更取决于价格。4090以约$2,000-2,600的二手价提供约36 tok/秒。5090提供约52 tok/秒，但截至2026年8月市场价为$4,300-$5,000以上。如果持续运行70B则值得；否则二手4090是更务实的选择。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '应该买一张RTX 5090还是两张RTX 4090？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '两张二手4090(总计约$4,000-5,200)在70B原始速度上(合计约72 tok/秒对约52 tok/秒)优于单张5090(市场价约$4,300-5,000以上)。但双GPU配置增加了复杂性——张量并行、二手卡无保修。5090配置更简单且仍在生产，并为34B Q8场景提供32GB统一显存。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090的显存比4090多吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。RTX 5090拥有32GB GDDR7，而RTX 4090为24GB GDDR6X。多出的8GB使5090能够宽裕地运行34B Q8模型(需约28GB)。两张卡都无法在不跨GPU拆分的情况下容纳70B Q4(需约38-40GB)。这一显存差异与4090的停产无关。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '对于14B模型来说RTX 5090是否过剩？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在大多数情况下是的。14B Q4模型需要约9GB显存，在4090上已能以约55-65 tok/秒运行——已经很快。5090将提供约65-75 tok/秒，提升有限。二手4090(甚至3090)对于14B推理的性价比要高得多，尤其是在目前的5090价格下。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090笔记本电脑显卡有32GB显存吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '没有。RTX 5090 Laptop GPU由于功耗和散热限制，显存被削减至24GB GDDR7(桌面版为32GB)。它比桌面版5090慢得多，但在同一任务上仍比4090快。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '5090的价格会跌回$1,999的建议零售价吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只有当2026年的GDDR7内存短缺缓解后才会——目前没有确定的时间表。当前市场价为$4,300-$5,000以上，超过建议零售价的两倍。4090的价格历史提醒我们，二手市场价格并非总是只跌不涨：它从2022年发布时的$1,499跌至二手最低约$999，之后在2026年停产后又反弹至约$2,000-2,600。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '我可以用750W电源使用RTX 5090吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '勉强可以。RTX 5090单卡功耗为575W。请搭配850W或1000W电源，以避免负载下的电压骤降。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5080比5090更值得购买吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '对大多数人来说是的——5080的速度约为5090的80%，价格却低得多，尽管它同样受到2026年GDDR7短缺导致的价格上涨影响。对于本地LLM，5080通常是最佳性价比选择。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '在Qwen-VL 70B等多模态模型上5090快多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '同样有20-25%的提升。多模态计算仍然受显存带宽限制，因此5090的带宽优势有帮助，但不算显著。',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -1429,16 +1919,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'A RTX 4090 ainda é vendida nova em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. A NVIDIA descontinuou a série RTX 40 em 2026. Toda RTX 4090 à venda hoje é usada, e os preços subiram para ~$2.000-2.600 por causa da escassez de fim de linha somada à demanda da escassez de GDDR7 da série RTX 50.' } },
-          { '@type': 'Question', 'name': 'Vale a pena a RTX 5090 para rodar o Llama 3 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Depende mais do preço do que nunca. A 4090 entrega 36 tok/seg por ~$2.000-2.600 usada. A 5090 entrega ~52 tok/seg, mas custa $4.300-$5.000+ de preço de mercado em agosto de 2026.' } },
-          { '@type': 'Question', 'name': 'Devo comprar uma RTX 5090 ou duas RTX 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Duas 4090 usadas (~$4.000-5.200 no total) superam uma 5090 (~$4.300-5.000+ de preço de mercado) em velocidade e flexibilidade. A 5090 tem configuração mais simples e continua em produção, mas as 4090 usadas não têm garantia.' } },
-          { '@type': 'Question', 'name': 'A RTX 5090 tem mais VRAM que a 4090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. A RTX 5090 tem 32 GB GDDR7 contra 24 GB GDDR6X da RTX 4090. Os 8 GB extras importam para modelos 34B Q8. Para inferência 7B-13B, 24 GB são suficientes nos dois casos.' } },
-          { '@type': 'Question', 'name': 'O preço da 5090 vai cair até o preço sugerido de $1.999?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Só quando a escassez de memória GDDR7 de 2026 diminuir — não há prazo definido. O preço de mercado atual é de $4.300-$5.000+, mais que o dobro do preço sugerido.' } },
-          { '@type': 'Question', 'name': 'Posso usar a RTX 5090 com uma fonte de 750 W?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Por pouco. A RTX 5090 consome 575 W sozinha. Combine com uma fonte de 850 W ou 1000 W para evitar queda de tensão sob carga.' } },
-          { '@type': 'Question', 'name': 'A RTX 5080 tem melhor custo-benefício que a 5090?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Na maioria dos casos, sim — a 5080 chega a cerca de 80% da velocidade da 5090 por um preço bem menor, embora também esteja sujeita à inflação de preços da escassez de GDDR7 de 2026. Para LLMs locais, a 5080 costuma ser o ponto ideal.' } },
-          { '@type': 'Question', 'name': 'A RTX 5090 é exagero para um modelo de 14B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, na maioria dos casos. Um modelo de 14B Q4 precisa de ~9 GB de VRAM e roda a ~55-65 tok/seg numa 4090 — já rápido. Uma 4090 usada (ou até uma 3090) é bem mais econômica para inferência de 14B, especialmente nos preços atuais da 5090.' } },
-          { '@type': 'Question', 'name': 'A GPU da RTX 5090 para notebook tem 32 GB de VRAM?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Não. A RTX 5090 Laptop GPU tem 24 GB GDDR7 (reduzidos dos 32 GB da versão de mesa por limitações de energia e térmicas). É bem mais lenta que a 5090 de mesa, mas ainda mais rápida que uma 4090 na mesma tarefa.' } },
-          { '@type': 'Question', 'name': 'Quanto mais rápida é a 5090 em modelos multimodais como o Qwen-VL 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Um ganho semelhante de 20-25%. O processamento multimodal ainda é limitado por memória, então a vantagem de largura de banda da 5090 ajuda, mas não de forma dramática.' } },
+          {
+            '@type': 'Question',
+            'name': 'A RTX 4090 ainda é vendida nova em 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. A NVIDIA descontinuou a série RTX 40 em 2026. Toda RTX 4090 à venda hoje é usada, e os preços subiram para ~$2.000-2.600 por causa da escassez de fim de linha somada à demanda gerada pela própria escassez de GDDR7 da série RTX 50.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Vale a pena a RTX 5090 para rodar o Llama 3.3 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende mais do preço do que nunca. A 4090 entrega ~36 tok/seg por ~$2.000-2.600 usada. A 5090 entrega ~52 tok/seg, mas custa $4.300-$5.000+ de preço de mercado em agosto de 2026. Vale a pena para uso contínuo de 70B; uma 4090 usada é a escolha mais prática nos demais casos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devo comprar uma RTX 5090 ou duas RTX 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Duas 4090 usadas (~$4.000-5.200 no total) superam uma 5090 (~$4.300-5.000+ de preço de mercado) em velocidade bruta no 70B (~72 tok/seg combinados contra ~52). Mas uma configuração de duas GPUs adiciona complexidade — paralelismo de tensores, sem garantia por serem usadas. A 5090 é mais simples e continua em produção, e traz 32 GB de VRAM unificada para casos de 34B Q8.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A RTX 5090 tem mais VRAM que a 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. A RTX 5090 tem 32 GB GDDR7 contra 24 GB GDDR6X da RTX 4090. Os 8 GB extras permitem rodar modelos 34B Q8 (~28 GB necessários) sem aperto. Nenhuma das duas placas cabe com 70B Q4 (~38-40 GB) sem dividir entre GPUs. Essa diferença de VRAM não tem relação com a descontinuação da 4090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A RTX 5090 é exagero para um modelo de 14B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, na maioria dos casos. Um modelo de 14B Q4 precisa de ~9 GB de VRAM e roda a ~55-65 tok/seg numa 4090 — já rápido. A 5090 daria ~65-75 tok/seg, uma melhora marginal. Uma 4090 usada (ou até uma 3090) é bem mais econômica para inferência de 14B, especialmente nos preços atuais da 5090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A GPU da RTX 5090 para notebook tem 32 GB de VRAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. A RTX 5090 Laptop GPU tem 24 GB GDDR7 (reduzidos dos 32 GB da versão de mesa por limitações de energia e térmicas). É bem mais lenta que a 5090 de mesa, mas ainda mais rápida que uma 4090 na mesma tarefa.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O preço da 5090 vai cair até o preço sugerido de $1.999?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Só quando a escassez de memória GDDR7 de 2026 diminuir — não há prazo definido. O preço de mercado atual é de $4.300-$5.000+, mais que o dobro do preço sugerido. O histórico de preços da 4090 lembra que o mercado usado nem sempre cai: ela foi de $1.499 (lançamento em 2022) para um mínimo de ~$999 usada, e depois voltou a subir para ~$2.000-2.600 após sua descontinuação em 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar a RTX 5090 com uma fonte de 750 W?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Por pouco. A RTX 5090 consome 575 W sozinha. Combine com uma fonte de 850 W ou 1000 W para evitar queda de tensão sob carga.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'A RTX 5080 tem melhor custo-benefício que a 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Na maioria dos casos, sim — a 5080 chega a cerca de 80% da velocidade da 5090 por um preço bem menor, embora também esteja sujeita à inflação de preços causada pela escassez de GDDR7 de 2026. Para LLMs locais, a 5080 costuma ser o ponto ideal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quanto mais rápida é a 5090 em modelos multimodais como o Qwen-VL 70B?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Um ganho semelhante de 20-25%. O processamento multimodal ainda é limitado por memória, então a vantagem de largura de banda da 5090 ajuda, mas não de forma dramática.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -1612,16 +2172,86 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'RTX 4090은 2026년에도 신품으로 판매되나요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '아니요. NVIDIA는 2026년에 RTX 40 시리즈 생산을 중단했습니다. 현재 판매되는 모든 RTX 4090은 중고이며, 가격은 약 $2,000~2,600까지 올랐습니다.' } },
-          { '@type': 'Question', 'name': 'Llama 3 70B 실행을 위해 RTX 5090이 가치 있나요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '그 어느 때보다 가격에 좌우됩니다. 4090은 중고 약 $2,000~2,600에 36 tok/sec를 제공합니다. 5090은 약 52 tok/sec를 제공하지만 2026년 8월 기준 실거래가는 $4,300~$5,000+입니다.' } },
-          { '@type': 'Question', 'name': 'RTX 5090 하나와 RTX 4090 두 장 중 어느 것이 더 나은가요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '중고 4090 두 장(총 약 $4,000~5,200)은 단일 5090(실거래가 약 $4,300~5,000+)을 속도와 유연성 면에서 앞섭니다. 5090은 더 간단하고 여전히 생산 중이지만, 중고 4090에는 보증이 없습니다.' } },
-          { '@type': 'Question', 'name': 'RTX 5090이 4090보다 VRAM이 더 많은가요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '네. RTX 5090은 32GB GDDR7을, RTX 4090은 24GB GDDR6X를 탑재합니다. 추가된 8GB는 34B Q8 모델에서 중요합니다. 7B~13B 추론에서는 어느 쪽이든 24GB로 충분합니다.' } },
-          { '@type': 'Question', 'name': '5090 가격이 정가 $1,999까지 내려갈까요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026년 GDDR7 메모리 부족이 완화되어야 가능하며, 정해진 시점은 없습니다. 현재 실거래가는 $4,300~$5,000+로 정가의 두 배를 넘습니다.' } },
-          { '@type': 'Question', 'name': 'RTX 5090을 750W 파워 서플라이와 함께 사용할 수 있나요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '간신히 가능합니다. RTX 5090 단독으로 575W를 소모합니다. 부하 시 전압 강하를 방지하려면 850W 또는 1000W PSU를 사용하십시오.' } },
-          { '@type': 'Question', 'name': 'RTX 5080이 5090보다 가성비가 더 좋은가요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '대부분의 경우 그렇습니다. 5080은 5090 속도의 약 80%를 상당히 낮은 가격에 제공하지만, 이 역시 2026년 GDDR7 부족으로 인한 가격 상승의 영향을 받습니다. 로컬 LLM 기준으로 5080이 보통 최적의 선택입니다.' } },
-          { '@type': 'Question', 'name': '14B 모델에 RTX 5090은 과스펙인가요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '대부분의 경우 그렇습니다. 14B Q4 모델은 약 9GB의 VRAM이 필요하며 4090에서 이미 빠른 약 55~65 tok/sec로 실행됩니다. 중고 4090(또는 3090)이 14B 추론에 훨씬 더 경제적이며, 특히 현재 5090 가격을 고려하면 더욱 그렇습니다.' } },
-          { '@type': 'Question', 'name': 'RTX 5090 노트북 GPU도 32GB VRAM을 탑재하나요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '아니요. RTX 5090 Laptop GPU는 전력 및 발열 제약으로 인해 데스크톱 버전의 32GB에서 줄어든 24GB GDDR7을 탑재합니다. 데스크톱 5090보다 훨씬 느리지만 동일한 작업에서 4090보다는 여전히 빠릅니다.' } },
-          { '@type': 'Question', 'name': 'Qwen-VL 70B 같은 멀티모달 모델에서 5090은 얼마나 더 빠른가요?', 'acceptedAnswer': { '@type': 'Answer', 'text': '유사하게 20~25% 향상됩니다. 멀티모달 연산도 여전히 메모리 바운드이므로 5090의 대역폭 우위가 도움이 되지만, 극적인 차이는 아닙니다.' } },
+          {
+            '@type': 'Question',
+            'name': 'RTX 4090은 2026년에도 신품으로 판매되나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니요. NVIDIA는 2026년에 RTX 40 시리즈 생산을 중단했습니다. 현재 판매되는 모든 RTX 4090은 중고이며, EOL로 인한 희소성과 RTX 50 시리즈 자체의 GDDR7 부족에 따른 수요까지 겹쳐 가격이 약 $2,000~2,600까지 올랐습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Llama 3.3 70B 실행을 위해 RTX 5090이 가치 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '그 어느 때보다 가격에 좌우됩니다. 4090은 중고 약 $2,000~2,600에 약 36 tok/sec를 제공합니다. 5090은 약 52 tok/sec를 제공하지만 2026년 8월 기준 실거래가는 $4,300~$5,000+입니다. 70B를 지속적으로 사용한다면 가치가 있고, 그렇지 않다면 중고 4090이 현실적인 선택입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090 하나와 RTX 4090 두 장 중 어느 것이 더 나은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '중고 4090 두 장(총 약 $4,000~5,200)은 단일 5090(실거래가 약 $4,300~5,000+)을 70B 원속도 기준(합산 약 72 tok/sec 대 약 52)에서 앞섭니다. 하지만 듀얼 GPU 구성은 텐서 병렬화 등 복잡성이 추가되고, 중고 카드에는 보증이 없습니다. 5090은 더 간단하고 여전히 생산 중이며, 34B Q8 용도로 32GB 통합 VRAM을 제공합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090이 4090보다 VRAM이 더 많은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. RTX 5090은 32GB GDDR7을, RTX 4090은 24GB GDDR6X를 탑재합니다. 추가된 8GB 덕분에 34B Q8 모델(약 28GB 필요)을 여유 있게 실행할 수 있습니다. 두 카드 모두 여러 GPU로 분할하지 않으면 70B Q4(약 38~40GB 필요)를 수용할 수 없습니다. 이 VRAM 차이는 4090의 단종과는 무관합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '14B 모델에 RTX 5090은 과스펙인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '대부분의 경우 그렇습니다. 14B Q4 모델은 약 9GB의 VRAM이 필요하며 4090에서 이미 빠른 약 55~65 tok/sec로 실행됩니다. 5090이라면 약 65~75 tok/sec를 제공하겠지만 개선폭은 미미합니다. 중고 4090(또는 3090)이 14B 추론에 훨씬 더 경제적이며, 특히 현재 5090 가격을 고려하면 더욱 그렇습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090 노트북 GPU도 32GB VRAM을 탑재하나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아니요. RTX 5090 Laptop GPU는 전력 및 발열 제약으로 인해 데스크톱 버전의 32GB에서 줄어든 24GB GDDR7을 탑재합니다. 데스크톱 5090보다 훨씬 느리지만 동일한 작업에서 4090보다는 여전히 빠릅니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '5090 가격이 정가 $1,999까지 내려갈까요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 GDDR7 메모리 부족이 완화되어야 가능하며, 정해진 시점은 없습니다. 현재 실거래가는 $4,300~$5,000+로 정가의 두 배를 넘습니다. 4090의 가격 추이를 보면 중고 시장이 항상 하락하는 것은 아님을 알 수 있습니다. 2022년 출시 당시 $1,499에서 중고 최저 약 $999까지 떨어졌다가, 2026년 단종 이후 다시 약 $2,000~2,600까지 반등했습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5090을 750W 파워 서플라이와 함께 사용할 수 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '간신히 가능합니다. RTX 5090 단독으로 575W를 소모합니다. 부하 시 전압 강하를 방지하려면 850W 또는 1000W PSU를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RTX 5080이 5090보다 가성비가 더 좋은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '대부분의 경우 그렇습니다. 5080은 5090 속도의 약 80%를 상당히 낮은 가격에 제공하지만, 이 역시 2026년 GDDR7 부족으로 인한 가격 상승의 영향을 받습니다. 로컬 LLM 기준으로 5080이 보통 최적의 선택입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen-VL 70B 같은 멀티모달 모델에서 5090은 얼마나 더 빠른가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '유사하게 20~25% 향상됩니다. 멀티모달 연산도 여전히 메모리 바운드이므로 5090의 대역폭 우위가 도움이 되지만, 극적인 차이는 아닙니다.',
+            },
+          },
         ]
       },
       itemListSchema: {

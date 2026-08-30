@@ -53,44 +53,116 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Can I add more users without buying new hardware?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Up to 20-30 concurrent users per GPU. Beyond that, add a second RTX 4090 and rebalance the load with nginx. One RTX 4090 handles approximately 5 tokens/sec per concurrent user.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I handle model updates (new Llama 3 variant)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Download the new model on a separate machine and test it before deployment. vLLM supports hot-swapping models by pausing new requests, finishing in-flight queries, and swapping model files with zero downtime.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I use Kubernetes for team deployment?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not needed for fewer than 50 users. Plain Docker + docker-compose is simpler, more transparent, and requires less operational overhead. Kubernetes adds complexity without corresponding benefit for small teams.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I bill users based on tokens?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, via showback reports using Prometheus metrics. Track tokens per user per day and allocate server costs proportionally. Decide your policy first: shared cost across the team, or chargeback to individual departments.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What if a user accidentally deletes data on the server?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Run daily backups of all input/output logs to external storage. Use RAID 6 configuration (survives 2 concurrent drive failures) for hardware redundancy. Test recovery procedures monthly to ensure backups are valid.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I integrate with Slack/Teams for easy access?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Build a Slack bot that calls the vLLM API and returns responses in the channel. Popular integration: use an OpenAI API wrapper for Slack, compatible with vLLM OpenAI-compatible endpoint.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'How much does a team local LLM server cost compared to cloud APIs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 LLM 서버의 사용자 인증을 어떻게 설정합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 비용 귀속을 위해 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 비용 귀속을 위해 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 설정에서 GPU가 고장나면 어떻게 됩니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버 설정의 경우 RAID 스토리지가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버 설정의 경우 RAID 스토리지가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '새 하드웨어를 구매하지 않고 더 많은 사용자를 추가할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '네, GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 GPU 카드를 추가하고 로드 밸런서를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 토큰/초를 처리합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네, GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 GPU 카드를 추가하고 로드 밸런서를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 토큰/초를 처리합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 설정에서 모델 업데이트를 어떻게 처리합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청을 일시 중지하고 진행 중인 쿼리를 완료한 후 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청을 일시 중지하고 진행 중인 쿼리를 완료한 후 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 로컬 LLM 배포에 Kubernetes를 사용해야 합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '50명 미만의 경우 불필요합니다. 일반 Docker + docker-compose가 더 간단하고 오버헤드가 적습니다. Kubernetes는 소규모 팀에 이점 없이 복잡성만 추가합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '50명 미만의 경우 불필요합니다. 일반 Docker + docker-compose가 더 간단하고 오버헤드가 적습니다. Kubernetes는 소규모 팀에 이점 없이 복잡성만 추가합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '토큰 사용량에 따라 팀원에게 비용을 청구할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '네, 쇼백 보고서를 통해 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적한 후 서버 비용을 비례 배분하십시오. 먼저 정책을 결정하십시오: 공유 비용 또는 부서별 비용 청구.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네, 쇼백 보고서를 통해 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적한 후 서버 비용을 비례 배분하십시오. 먼저 정책을 결정하십시오: 공유 비용 또는 부서별 비용 청구.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 서버에서 사용자 데이터와 로그를 어떻게 백업합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업이 유효한지 확인하기 위해 매월 복구를 테스트하십시오.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업이 유효한지 확인하기 위해 매월 복구를 테스트하십시오.',
+            },
+          },
         ]
       },
       toc: [
@@ -213,6 +285,14 @@ schema: {
             { q: 'Can I bill users based on tokens?', a: 'Yes, via showback reports using Prometheus metrics. Track tokens per user per day and allocate server costs proportionally. Decide your policy first: shared cost across the team, or chargeback to individual departments.' },
             { q: 'What if a user accidentally deletes data on the server?', a: 'Run daily backups of all input/output logs to external storage. Use RAID 6 configuration (survives 2 concurrent drive failures) for hardware redundancy. Test recovery procedures monthly to ensure backups are valid.' },
             { q: 'Can I integrate with Slack/Teams for easy access?', a: 'Yes. Build a Slack bot that calls the vLLM API and returns responses in the channel. Popular integration: use an OpenAI API wrapper for Slack, compatible with vLLM OpenAI-compatible endpoint.' },
+            { q: 'How much does a team local LLM server cost compared to cloud APIs?', a: '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.' },
+            { q: '팀 LLM 서버의 사용자 인증을 어떻게 설정합니까?', a: '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 비용 귀속을 위해 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.' },
+            { q: '팀 설정에서 GPU가 고장나면 어떻게 됩니까?', a: '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버 설정의 경우 RAID 스토리지가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.' },
+            { q: '새 하드웨어를 구매하지 않고 더 많은 사용자를 추가할 수 있습니까?', a: '네, GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 GPU 카드를 추가하고 로드 밸런서를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 토큰/초를 처리합니다.' },
+            { q: '팀 설정에서 모델 업데이트를 어떻게 처리합니까?', a: '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청을 일시 중지하고 진행 중인 쿼리를 완료한 후 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.' },
+            { q: '팀 로컬 LLM 배포에 Kubernetes를 사용해야 합니까?', a: '50명 미만의 경우 불필요합니다. 일반 Docker + docker-compose가 더 간단하고 오버헤드가 적습니다. Kubernetes는 소규모 팀에 이점 없이 복잡성만 추가합니다.' },
+            { q: '토큰 사용량에 따라 팀원에게 비용을 청구할 수 있습니까?', a: '네, 쇼백 보고서를 통해 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적한 후 서버 비용을 비례 배분하십시오. 먼저 정책을 결정하십시오: 공유 비용 또는 부서별 비용 청구.' },
+            { q: '팀 서버에서 사용자 데이터와 로그를 어떻게 백업합니까?', a: '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업이 유효한지 확인하기 위해 매월 복구를 테스트하십시오.' },
           ],
         },
         'relatedReading': {
@@ -299,54 +379,92 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Kann ich mehr Benutzer ohne neue Hardware hinzufügen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Bis zu 20-30 pro GPU. Danach GPU hinzufügen. 1 RTX 4090 verarbeitet ungefähr 5 Token/Sek pro gleichzeitigem Benutzer.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie handhabe ich Modell-Updates (neue Llama 3 Variante)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Auf separater Maschine herunterladen, testen, austauschen. vLLM unterstützt Hot-Swapping Modelle mit 0 Ausfallzeit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sollte ich Kubernetes für Team-Bereitstellung verwenden?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nicht erforderlich für <50 Benutzer. Einfaches Docker + docker-compose ist einfacher. Kubernetes fügt Overhead hinzu.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Benutzer basierend auf Tokens fakturieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, über Showback-Berichte. Entscheiden Sie aber Richtlinie zuerst (geteilte Kosten vs. Kostenumlegung pro Abteilung).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was wenn ein Benutzer versehentlich Daten auf dem Server löscht?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Backups. Tägliches Backup aller Ein-/Ausgabe-Logs in externen Speicher. RAID-6 für Redundanz.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich mit Slack/Teams für einfachen Zugriff integrieren?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Slack-Bot ruft vLLM API auf, gibt Antwort zurück. Beliebte Integration: OpenAI API-Wrapper für Slack.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'Wie viel kostet ein lokaler Team-LLM-Server vs. Cloud-APIs?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Einzelner Server: 2.500 € Hardware + 50 €/Monat Strom (600 €/Jahr) vs. 1.000+€/Monat Cloud-APIs (12.000+€/Jahr). Amortisationszeit: 2-3 Monate für aktive Teams.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Einzelner Server: 2.500 € Hardware + 50 €/Monat Strom (600 €/Jahr) vs. 1.000+€/Monat Cloud-APIs (12.000+€/Jahr). Amortisationszeit: 2-3 Monate für aktive Teams.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Wie richte ich Benutzer-Authentifizierung für einen Team-LLM-Server ein?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'OAuth 2.0 mit SSO (Active Directory / Okta) für Enterprise. Einfache Token-Auth für KMU. Alle Abfragen werden mit Benutzer-ID, Zeitstempel und Token-Zahl für Kostenattribution protokolliert.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OAuth 2.0 mit SSO (Active Directory / Okta) für Enterprise. Einfache Token-Auth für KMU. Alle Abfragen werden mit Benutzer-ID, Zeitstempel und Token-Zahl für Kostenattribution protokolliert.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Was passiert, wenn eine GPU in einem Team-Setup ausfällt?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Verwenden Sie ein Dual-GPU-Cluster mit Load Balancer: Falls GPU 0 ausfällt, werden alle Anfragen automatisch zu GPU 1 weitergeleitet. Keine Ausfallzeit. Für Single-Server-Setups schützt RAID-Speicher Daten, aber GPU-Failover erfordert Redundanz.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Kann ich mehr Benutzer ohne neue Hardware hinzufügen?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, bis zu 20-30 gleichzeitige Benutzer pro GPU. Danach fügen Sie eine GPU-Karte hinzu und balancieren den Load Balancer um. Eine RTX 4090 verarbeitet ungefähr 5 Token/Sek pro gleichzeitigem Benutzer.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Wie handhabe ich Modell-Updates in einem Team-Setup?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Laden Sie das neue Modell auf separater Maschine herunter, testen, dann austauschen. vLLM unterstützt Hot-Swapping von Modellen mit Null-Ausfallzeit durch Pausieren neuer Anfragen, Fertigstellung laufender Abfragen, dann Austausch von Modelldateien.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Sollte ich Kubernetes für Team-Local-LLM-Bereitstellung verwenden?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein, nicht erforderlich für weniger als 50 Benutzer. Einfaches Docker + docker-compose ist einfacher und erfordert weniger Overhead. Kubernetes fügt Komplexität ohne Nutzen für kleine Teams hinzu.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'Kann ich Team-Mitglieder basierend auf Token-Nutzung fakturieren?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, über Showback-Berichte. Verwenden Sie Prometheus-Metriken zum Tracking von Token pro Benutzer pro Tag, dann Kostenallokation proportional. Entscheiden Sie Richtlinie zuerst: geteilte Kosten oder abteilungsweise Kostenumlegung.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Verwenden Sie ein Dual-GPU-Cluster mit Load Balancer: Falls GPU 0 ausfällt, werden alle Anfragen automatisch zu GPU 1 weitergeleitet. Keine Ausfallzeit. Für Single-Server-Setups schützt RAID-Speicher Daten, aber GPU-Failover erfordert Redundanz.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Wie sichere ich Benutzerdaten und Protokolle auf einem Team-Server?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Führen Sie täglich Backups aller Ein-/Ausgabeprotokolle in externen Speicher aus. Verwenden Sie RAID-6-Redundanz (übersteht 2 gleichzeitige Laufwerkausfälle). Testen Sie Recovery monatlich, um Backup-Gültigkeit sicherzustellen.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Führen Sie täglich Backups aller Ein-/Ausgabeprotokolle in externen Speicher aus. Verwenden Sie RAID-6-Redundanz (übersteht 2 gleichzeitige Laufwerkausfälle). Testen Sie Recovery monatlich, um Backup-Gültigkeit sicherzustellen.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Wie messe und tracke ich Benutzer-Nutzung für Kosten-Chargeback?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Jede API-Anfrage enthält Benutzer-ID, IP, Anfragegröße und Antwortgröße. Prometheus scrapen alle 15 Sekunden für Latenz-, Tokens/Sek- und Queue-Metriken. Aggregieren pro Benutzer pro Tag für proportionale Kostenattribution.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Jede API-Anfrage enthält Benutzer-ID, IP, Anfragegröße und Antwortgröße. Prometheus scrapen alle 15 Sekunden für Latenz-, Tokens/Sek- und Queue-Metriken. Aggregieren pro Benutzer pro Tag für proportionale Kostenattribution.',
+            },
           },
-          {
-            '@type': 'Question',
-            'name': 'Kann ich lokalen LLM-Server mit Slack/Teams für einfachen Zugriff integrieren?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Bauen Sie einen Slack-Bot, der vLLM API aufruft und Antworten im Channel zurückgibt. Beliebte Integration: OpenAI API-Wrapper für Slack, kompatibel mit vLLM OpenAI-kompatibler API.' }
-          }
         ]
       },
       toc: [
@@ -458,6 +576,11 @@ schema: {
             { q: 'Kann ich Benutzer basierend auf Tokens fakturieren?', a: 'Ja, über Showback-Berichte. Entscheiden Sie aber Richtlinie zuerst (geteilte Kosten vs. Kostenumlegung pro Abteilung).' },
             { q: 'Was wenn ein Benutzer versehentlich Daten auf dem Server löscht?', a: 'Backups. Tägliches Backup aller Ein-/Ausgabe-Logs in externen Speicher. RAID-6 für Redundanz.' },
             { q: 'Kann ich mit Slack/Teams für einfachen Zugriff integrieren?', a: 'Ja. Slack-Bot ruft vLLM API auf, gibt Antwort zurück. Beliebte Integration: OpenAI API-Wrapper für Slack.' },
+            { q: 'Wie viel kostet ein lokaler Team-LLM-Server vs. Cloud-APIs?', a: 'Einzelner Server: 2.500 € Hardware + 50 €/Monat Strom (600 €/Jahr) vs. 1.000+€/Monat Cloud-APIs (12.000+€/Jahr). Amortisationszeit: 2-3 Monate für aktive Teams.' },
+            { q: 'Wie richte ich Benutzer-Authentifizierung für einen Team-LLM-Server ein?', a: 'OAuth 2.0 mit SSO (Active Directory / Okta) für Enterprise. Einfache Token-Auth für KMU. Alle Abfragen werden mit Benutzer-ID, Zeitstempel und Token-Zahl für Kostenattribution protokolliert.' },
+            { q: 'Was passiert, wenn eine GPU in einem Team-Setup ausfällt?', a: 'Verwenden Sie ein Dual-GPU-Cluster mit Load Balancer: Falls GPU 0 ausfällt, werden alle Anfragen automatisch zu GPU 1 weitergeleitet. Keine Ausfallzeit. Für Single-Server-Setups schützt RAID-Speicher Daten, aber GPU-Failover erfordert Redundanz.' },
+            { q: 'Wie sichere ich Benutzerdaten und Protokolle auf einem Team-Server?', a: 'Führen Sie täglich Backups aller Ein-/Ausgabeprotokolle in externen Speicher aus. Verwenden Sie RAID-6-Redundanz (übersteht 2 gleichzeitige Laufwerkausfälle). Testen Sie Recovery monatlich, um Backup-Gültigkeit sicherzustellen.' },
+            { q: 'Wie messe und tracke ich Benutzer-Nutzung für Kosten-Chargeback?', a: 'Jede API-Anfrage enthält Benutzer-ID, IP, Anfragegröße und Antwortgröße. Prometheus scrapen alle 15 Sekunden für Latenz-, Tokens/Sek- und Queue-Metriken. Aggregieren pro Benutzer pro Tag für proportionale Kostenattribution.' },
           ],
         },
         'relatedReading': {
@@ -541,16 +664,102 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Combien coûte un serveur LLM local en équipe comparé aux API cloud?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Serveur unique: 2 500 € matériel + 50 €/mois électricité (600 €/an) contre 1 000+€/mois API cloud (12 000+€/an). Période d\'amortissement: 2-3 mois pour les équipes actives.' } },
-          { '@type': 'Question', 'name': 'Comment configurer l\'authentification utilisateur pour un serveur LLM en équipe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'OAuth 2.0 avec SSO (Active Directory / Okta) pour enterprise. Authentification simple par token pour PME. Toutes les requêtes sont enregistrées avec ID utilisateur, timestamp et nombre de tokens pour l\'attribution des coûts.' } },
-          { '@type': 'Question', 'name': 'Que se passe-t-il si un GPU tombe en panne dans un setup en équipe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Utilisez un cluster dual-GPU avec load balancer: si GPU 0 tombe en panne, toutes les requêtes sont automatiquement routées vers GPU 1. Zéro temps d\'arrêt. Pour les setups single-server, RAID protège les données mais le failover GPU nécessite de la redondance.' } },
-          { '@type': 'Question', 'name': 'Puis-je ajouter plus d\'utilisateurs sans acheter du nouveau matériel?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, jusqu\'à 20-30 utilisateurs concurrents par GPU. Au-delà, ajoutez une carte GPU et rééquilibrez le load balancer. Un RTX 4090 gère environ 5 tokens/sec par utilisateur concurrent.' } },
-          { '@type': 'Question', 'name': 'Comment gérer les mises à jour de modèles dans un setup en équipe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Téléchargez le nouveau modèle sur une machine séparée, testez, puis échangez. vLLM supporte le hot-swapping de modèles avec zéro temps d\'arrêt en pausant les nouvelles requêtes et finissant les requêtes en vol.' } },
-          { '@type': 'Question', 'name': 'Devrais-je utiliser Kubernetes pour le déploiement LLM en équipe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non, pas nécessaire pour moins de 50 utilisateurs. Docker + docker-compose est plus simple et exige moins de surcharge. Kubernetes ajoute de la complexité sans bénéfice pour les petites équipes.' } },
-          { '@type': 'Question', 'name': 'Puis-je facturer les utilisateurs en équipe en fonction de l\'utilisation des tokens?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, via des rapports de showback. Utilisez Prometheus pour tracker les tokens par utilisateur par jour, puis allocez les coûts proportionnellement. Décidez d\'abord la politique: coûts partagés ou facturation par département.' } },
-          { '@type': 'Question', 'name': 'Comment sauvegarder les données et logs des utilisateurs sur un serveur en équipe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Exécutez des sauvegardes quotidiennes de tous les logs entrée/sortie vers un stockage externe. Utilisez la redondance RAID-6 (tolère 2 défaillances simultanées de disques). Testez la récupération mensuellement pour assurer la validité des sauvegardes.' } },
-          { '@type': 'Question', 'name': 'Comment puis-je mesurer et tracker l\'utilisation des utilisateurs pour la facturation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Chaque requête API contient l\'ID utilisateur, l\'IP, la taille de la requête et la taille de la réponse. Prometheus scrape toutes les 15 secondes pour les métriques de latence, tokens/sec et queue. Agrégez par utilisateur par jour pour l\'attribution proportionnelle des coûts.' } },
-          { '@type': 'Question', 'name': 'Puis-je intégrer le serveur LLM local avec Slack/Teams pour un accès facile?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Construisez un bot Slack qui appelle l\'API vLLM et retourne les réponses dans le channel. Intégration populaire: wrapper OpenAI API pour Slack, compatible avec l\'endpoint compatible OpenAI de vLLM.' } }
+          {
+            '@type': 'Question',
+            'name': 'Puis-je ajouter plus d\'utilisateurs sans acheter du nouveau matériel?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Jusqu\'à 20-30 par GPU. Au-delà, ajoutez un GPU. 1 RTX 4090 gère environ 5 tok/sec par utilisateur concurrent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment gérer les mises à jour de modèles (nouvelle variante Llama 3)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Téléchargez sur une machine séparée, testez, échangez. vLLM supporte le hot-swapping de modèles avec zéro temps d\'arrêt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Devrais-je utiliser Kubernetes pour le déploiement en équipe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non pour <50 utilisateurs. Docker + docker-compose est plus simple. Kubernetes ajoute de la complexité sans bénéfice.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je facturer les utilisateurs en fonction des tokens?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, via rapports de showback. Mais décidez d\'abord la politique (coûts partagés vs facturation par département).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Et si un utilisateur supprime accidentellement les données du serveur?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sauvegardes. Sauvegardez quotidiennement tous les logs entrée/sortie en stockage externe. RAID-6 pour la redondance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je intégrer avec Slack/Teams pour un accès facile?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Bot Slack appelle l\'API vLLM, retourne réponse. Intégration populaire: wrapper OpenAI API pour Slack.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien coûte un serveur LLM local en équipe comparé aux API cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Serveur unique: 2 500 € matériel + 50 €/mois électricité (600 €/an) contre 1 000+€/mois API cloud (12 000+€/an). Période d\'amortissement: 2-3 mois pour les équipes actives.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment configurer l\'authentification utilisateur pour un serveur LLM en équipe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'OAuth 2.0 avec SSO (Active Directory / Okta) pour enterprise. Authentification simple par token pour PME. Toutes les requêtes sont enregistrées avec ID utilisateur, timestamp et nombre de tokens pour l\'attribution des coûts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que se passe-t-il si un GPU tombe en panne dans un setup en équipe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Utilisez un cluster dual-GPU avec load balancer: si GPU 0 tombe en panne, toutes les requêtes sont automatiquement routées vers GPU 1. Zéro temps d\'arrêt. Pour les setups single-server, RAID protège les données mais le failover GPU nécessite de la redondance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment gérer les mises à jour de modèles dans un setup en équipe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Téléchargez le nouveau modèle sur une machine séparée, testez, puis échangez. vLLM supporte le hot-swapping de modèles avec zéro temps d\'arrêt en pausant les nouvelles requêtes et finissant les requêtes en vol.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment sauvegarder les données et logs des utilisateurs sur un serveur en équipe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exécutez des sauvegardes quotidiennes de tous les logs entrée/sortie vers un stockage externe. Utilisez la redondance RAID-6 (tolère 2 défaillances simultanées de disques). Testez la récupération mensuellement pour assurer la validité des sauvegardes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment puis-je mesurer et tracker l\'utilisation des utilisateurs pour la facturation?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Chaque requête API contient l\'ID utilisateur, l\'IP, la taille de la requête et la taille de la réponse. Prometheus scrape toutes les 15 secondes pour les métriques de latence, tokens/sec et queue. Agrégez par utilisateur par jour pour l\'attribution proportionnelle des coûts.',
+            },
+          },
         ]
       },
       toc: [
@@ -662,6 +871,12 @@ schema: {
             { q: 'Puis-je facturer les utilisateurs en fonction des tokens?', a: 'Oui, via rapports de showback. Mais décidez d\'abord la politique (coûts partagés vs facturation par département).' },
             { q: 'Et si un utilisateur supprime accidentellement les données du serveur?', a: 'Sauvegardes. Sauvegardez quotidiennement tous les logs entrée/sortie en stockage externe. RAID-6 pour la redondance.' },
             { q: 'Puis-je intégrer avec Slack/Teams pour un accès facile?', a: 'Oui. Bot Slack appelle l\'API vLLM, retourne réponse. Intégration populaire: wrapper OpenAI API pour Slack.' },
+            { q: 'Combien coûte un serveur LLM local en équipe comparé aux API cloud?', a: 'Serveur unique: 2 500 € matériel + 50 €/mois électricité (600 €/an) contre 1 000+€/mois API cloud (12 000+€/an). Période d\'amortissement: 2-3 mois pour les équipes actives.' },
+            { q: 'Comment configurer l\'authentification utilisateur pour un serveur LLM en équipe?', a: 'OAuth 2.0 avec SSO (Active Directory / Okta) pour enterprise. Authentification simple par token pour PME. Toutes les requêtes sont enregistrées avec ID utilisateur, timestamp et nombre de tokens pour l\'attribution des coûts.' },
+            { q: 'Que se passe-t-il si un GPU tombe en panne dans un setup en équipe?', a: 'Utilisez un cluster dual-GPU avec load balancer: si GPU 0 tombe en panne, toutes les requêtes sont automatiquement routées vers GPU 1. Zéro temps d\'arrêt. Pour les setups single-server, RAID protège les données mais le failover GPU nécessite de la redondance.' },
+            { q: 'Comment gérer les mises à jour de modèles dans un setup en équipe?', a: 'Téléchargez le nouveau modèle sur une machine séparée, testez, puis échangez. vLLM supporte le hot-swapping de modèles avec zéro temps d\'arrêt en pausant les nouvelles requêtes et finissant les requêtes en vol.' },
+            { q: 'Comment sauvegarder les données et logs des utilisateurs sur un serveur en équipe?', a: 'Exécutez des sauvegardes quotidiennes de tous les logs entrée/sortie vers un stockage externe. Utilisez la redondance RAID-6 (tolère 2 défaillances simultanées de disques). Testez la récupération mensuellement pour assurer la validité des sauvegardes.' },
+            { q: 'Comment puis-je mesurer et tracker l\'utilisation des utilisateurs pour la facturation?', a: 'Chaque requête API contient l\'ID utilisateur, l\'IP, la taille de la requête et la taille de la réponse. Prometheus scrape toutes les 15 secondes pour les métriques de latence, tokens/sec et queue. Agrégez par utilisateur par jour pour l\'attribution proportionnelle des coûts.' },
           ],
         },
         'relatedReading': {
@@ -745,16 +960,102 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'チームローカルLLMサーバーはクラウドAPIと比べていくらかかりますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '単一サーバー: $2,500ハードウェア + $50/月電力（$600/年）対クラウドAPI $1,000+/月（$12,000+/年）。回収期間: アクティブなチームで2～3か月。' } },
-          { '@type': 'Question', 'name': 'チームLLMサーバーのユーザー認証をセットアップするにはどうすればよいですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'エンタープライズ向けOAuth 2.0 + SSO（Active Directory / Okta）。SMB向け簡単なトークン認証。すべてのクエリはユーザーID、タイムスタンプ、生成トークン数で記録されます。' } },
-          { '@type': 'Question', 'name': 'チームセットアップでGPUがダウンした場合はどうなりますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ロードバランサー付きデュアルGPUクラスタを使用: GPU 0がダウンすると、すべてのリクエストは自動的にGPU 1にルーティングされます。ダウンタイムなし。単一サーバーセットアップでは、RAID ストレージがデータを保護しますが、GPU フェイルオーバーは冗長性が必要です。' } },
-          { '@type': 'Question', 'name': '新しいハードウェアを購入せずにより多くのユーザーを追加できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、GPU当たり20～30の同時ユーザーまで。それ以上の場合はGPUカードを追加し、ロードバランサーを再バランスします。1つのRTX 4090は同時ユーザーあたり約5トークン/秒を処理します。' } },
-          { '@type': 'Question', 'name': 'チームセットアップでモデル更新をどのように処理しますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '別のマシンで新しいモデルをダウンロード、テスト、スワップイン。vLLMはゼロダウンタイムでのモデルホットスワップをサポートします。' } },
-          { '@type': 'Question', 'name': 'チームデプロイにKubernetesを使うべきですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '50ユーザー未満の場合は不要です。Docker + docker-composeのほうがシンプルでオーバーヘッドが少ないです。Kubernetesは小さなチームに対して複雑さを追加するだけです。' } },
-          { '@type': 'Question', 'name': 'トークン使用量に基づいてユーザーに請求できますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、ショーバックレポート経由。Prometheusメトリクスを使用してユーザーあたりトークン/日を追跡し、サーバーコストを比例配分します。ポリシーを最初に決定: 共有コストまたは部門別チャージバック。' } },
-          { '@type': 'Question', 'name': 'チームサーバーのユーザーデータとログをバックアップするにはどうすればよいですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'すべての入出力ログを外部ストレージに毎日バックアップします。RAID 6冗長性を使用します（2台の同時ドライブ障害に耐えます）。毎月リカバリーをテストしてバックアップの有効性を確保します。' } },
-          { '@type': 'Question', 'name': '請求用ユーザー使用量を測定・追跡するにはどうすればよいですか?', 'acceptedAnswer': { '@type': 'Answer', 'text': '各APIリクエストにはユーザーID、IP、リクエストサイズ、レスポンスサイズが含まれます。Prometheusは15秒ごとに遅延、トークン/秒、キュー長のメトリクスをスクレイプします。ユーザー/日ごとに集計して比例配分コスト配分を行います。' } },
-          { '@type': 'Question', 'name': 'ローカルLLMサーバーをSlack/Teamsと統合して簡単にアクセスできますか?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。vLLM APIを呼び出してチャネルにレスポンスを返すSlackボットを構築します。人気の統合: SlackのOpenAI APIラッパー。vLLMのOpenAI互換エンドポイントと互換性があります。' } }
+          {
+            '@type': 'Question',
+            'name': '新しいハードウェアなしでより多くのユーザーを追加できますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPU当たり20～30まで。それ以上はGPUカード追加、ロードバランサー再バランス。1× RTX 4090は同時ユーザーあたり約5 tok/s処理。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'モデル更新（新Llama 3バリアント）をどのように処理しますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '別マシンでダウンロード、テスト、スワップイン。vLLMはゼロダウンタイムのモデルホットスワップをサポート。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームデプロイにKubernetesを使うべきですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '50ユーザー未満では不要。Docker + docker-composeがシンプル。Kubernetesは複雑さ追加するだけ。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'トークンに基づいてユーザーに請求できますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、ショーバックレポート経由。ただし最初にポリシー決定: 共有コスト対部門別チャージバック。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ユーザーが誤ってサーバーデータを削除した場合は?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'バックアップ。外部ストレージへ毎日入出力ログバックアップ。RAID-6冗長性。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Slack/Teamsと統合して簡単アクセスできますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Slack ボットがvLLM APIを呼び出してチャネルに返す。人気統合: Slack用OpenAI APIラッパー。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームローカルLLMサーバーはクラウドAPIと比べていくらかかりますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '単一サーバー: $2,500ハードウェア + $50/月電力（$600/年）対クラウドAPI $1,000+/月（$12,000+/年）。回収期間: アクティブなチームで2～3か月。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームLLMサーバーのユーザー認証をセットアップするにはどうすればよいですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'エンタープライズ向けOAuth 2.0 + SSO（Active Directory / Okta）。SMB向け簡単なトークン認証。すべてのクエリはユーザーID、タイムスタンプ、生成トークン数で記録されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームセットアップでGPUがダウンした場合はどうなりますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ロードバランサー付きデュアルGPUクラスタを使用: GPU 0がダウンすると、すべてのリクエストは自動的にGPU 1にルーティングされます。ダウンタイムなし。単一サーバーセットアップでは、RAID ストレージがデータを保護しますが、GPU フェイルオーバーは冗長性が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームセットアップでモデル更新をどのように処理しますか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '別のマシンで新しいモデルをダウンロード、テスト、スワップイン。vLLMはゼロダウンタイムでのモデルホットスワップをサポートします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'チームサーバーのユーザーデータとログをバックアップするにはどうすればよいですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'すべての入出力ログを外部ストレージに毎日バックアップします。RAID 6冗長性を使用します（2台の同時ドライブ障害に耐えます）。毎月リカバリーをテストしてバックアップの有効性を確保します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '請求用ユーザー使用量を測定・追跡するにはどうすればよいですか?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '各APIリクエストにはユーザーID、IP、リクエストサイズ、レスポンスサイズが含まれます。Prometheusは15秒ごとに遅延、トークン/秒、キュー長のメトリクスをスクレイプします。ユーザー/日ごとに集計して比例配分コスト配分を行います。',
+            },
+          },
         ]
       },
       toc: [
@@ -866,6 +1167,12 @@ schema: {
             { q: 'トークンに基づいてユーザーに請求できますか?', a: 'はい、ショーバックレポート経由。ただし最初にポリシー決定: 共有コスト対部門別チャージバック。' },
             { q: 'ユーザーが誤ってサーバーデータを削除した場合は?', a: 'バックアップ。外部ストレージへ毎日入出力ログバックアップ。RAID-6冗長性。' },
             { q: 'Slack/Teamsと統合して簡単アクセスできますか?', a: 'はい。Slack ボットがvLLM APIを呼び出してチャネルに返す。人気統合: Slack用OpenAI APIラッパー。' },
+            { q: 'チームローカルLLMサーバーはクラウドAPIと比べていくらかかりますか?', a: '単一サーバー: $2,500ハードウェア + $50/月電力（$600/年）対クラウドAPI $1,000+/月（$12,000+/年）。回収期間: アクティブなチームで2～3か月。' },
+            { q: 'チームLLMサーバーのユーザー認証をセットアップするにはどうすればよいですか?', a: 'エンタープライズ向けOAuth 2.0 + SSO（Active Directory / Okta）。SMB向け簡単なトークン認証。すべてのクエリはユーザーID、タイムスタンプ、生成トークン数で記録されます。' },
+            { q: 'チームセットアップでGPUがダウンした場合はどうなりますか?', a: 'ロードバランサー付きデュアルGPUクラスタを使用: GPU 0がダウンすると、すべてのリクエストは自動的にGPU 1にルーティングされます。ダウンタイムなし。単一サーバーセットアップでは、RAID ストレージがデータを保護しますが、GPU フェイルオーバーは冗長性が必要です。' },
+            { q: 'チームセットアップでモデル更新をどのように処理しますか?', a: '別のマシンで新しいモデルをダウンロード、テスト、スワップイン。vLLMはゼロダウンタイムでのモデルホットスワップをサポートします。' },
+            { q: 'チームサーバーのユーザーデータとログをバックアップするにはどうすればよいですか?', a: 'すべての入出力ログを外部ストレージに毎日バックアップします。RAID 6冗長性を使用します（2台の同時ドライブ障害に耐えます）。毎月リカバリーをテストしてバックアップの有効性を確保します。' },
+            { q: '請求用ユーザー使用量を測定・追跡するにはどうすればよいですか?', a: '各APIリクエストにはユーザーID、IP、リクエストサイズ、レスポンスサイズが含まれます。Prometheusは15秒ごとに遅延、トークン/秒、キュー長のメトリクスをスクレイプします。ユーザー/日ごとに集計して比例配分コスト配分を行います。' },
           ],
         },
         'relatedReading': {
@@ -949,16 +1256,102 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': '团队本地LLM服务器与云API相比成本如何?', 'acceptedAnswer': { '@type': 'Answer', 'text': '单一服务器: $2,500硬件 + $50/月电力（$600/年）对比云API $1,000+/月（$12,000+/年）。回本期: 活跃团队2-3个月。' } },
-          { '@type': 'Question', 'name': '如何为团队LLM服务器设置用户认证?', 'acceptedAnswer': { '@type': 'Answer', 'text': '企业级OAuth 2.0 + SSO（Active Directory / Okta）。中小企业简单令牌认证。所有查询都记录用户ID、时间戳和生成令牌数用于成本分配。' } },
-          { '@type': 'Question', 'name': '团队设置中GPU故障会发生什么?', 'acceptedAnswer': { '@type': 'Answer', 'text': '使用带负载均衡器的双GPU集群: GPU 0故障时，所有请求自动路由到GPU 1。无停机时间。单一服务器设置中，RAID存储保护数据但GPU故障转移需要冗余。' } },
-          { '@type': 'Question', 'name': '无需购买新硬件可以添加更多用户吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的，每个GPU最多20-30个。超过此数后添加GPU卡并重新平衡负载均衡器。一个RTX 4090每个并发用户处理约5令牌/秒。' } },
-          { '@type': 'Question', 'name': '如何在团队设置中处理模型更新?', 'acceptedAnswer': { '@type': 'Answer', 'text': '在独立机器上下载新模型、测试、交换。vLLM支持零停机时间模型热交换。' } },
-          { '@type': 'Question', 'name': '团队部署应该使用Kubernetes吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '少于50用户无需使用。Docker + docker-compose更简单、开销更少。Kubernetes为小团队增加复杂性而无益。' } },
-          { '@type': 'Question', 'name': '可以根据令牌使用量对用户计费吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以，通过回现报告。使用Prometheus追踪每用户/日令牌，按比例分配服务器成本。首先决定策略: 共享成本或部门级成本分摊。' } },
-          { '@type': 'Question', 'name': '如何备份团队服务器上的用户数据和日志?', 'acceptedAnswer': { '@type': 'Answer', 'text': '将所有输入/输出日志每日备份到外部存储。使用RAID-6冗余（容许2个同时硬盘故障）。每月测试恢复确保备份有效。' } },
-          { '@type': 'Question', 'name': '如何测量和追踪用户使用情况以计费?', 'acceptedAnswer': { '@type': 'Answer', 'text': '每个API请求都包含用户ID、IP、请求大小和响应大小。Prometheus每15秒抓取延迟、令牌/秒和队列长度指标。按用户/日汇总用于按比例成本分配。' } },
-          { '@type': 'Question', 'name': '可以将本地LLM服务器与Slack/Teams集成以便于访问吗?', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。构建Slack机器人调用vLLM API并在频道中返回响应。流行集成: Slack的OpenAI API封装。与vLLM兼容OpenAI的端点兼容。' } }
+          {
+            '@type': 'Question',
+            'name': '无需购买新硬件可以添加更多用户吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '每个GPU最多20-30个。超过此数后添加GPU卡并重新平衡负载均衡器。一个RTX 4090每个并发用户处理约5令牌/秒。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何处理模型更新（新Llama 3变体）?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在独立机器上下载、测试、交换。vLLM支持零停机时间模型热交换。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '团队部署应该使用Kubernetes吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '少于50用户无需。Docker + docker-compose更简单。Kubernetes增加开销。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '可以根据令牌对用户计费吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以，通过回现报告。但首先决定策略（共享成本对部门成本分摊）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '用户误删服务器数据会怎样?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '备份。将所有输入/输出日志每日备份到外部存储。RAID-6冗余。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '可以与Slack/Teams集成以便于访问吗?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。Slack机器人调用vLLM API在频道中返回响应。流行集成: Slack的OpenAI API封装。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '团队本地LLM服务器与云API相比成本如何?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '单一服务器: $2,500硬件 + $50/月电力（$600/年）对比云API $1,000+/月（$12,000+/年）。回本期: 活跃团队2-3个月。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何为团队LLM服务器设置用户认证?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '企业级OAuth 2.0 + SSO（Active Directory / Okta）。中小企业简单令牌认证。所有查询都记录用户ID、时间戳和生成令牌数用于成本分配。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '团队设置中GPU故障会发生什么?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '使用带负载均衡器的双GPU集群: GPU 0故障时，所有请求自动路由到GPU 1。无停机时间。单一服务器设置中，RAID存储保护数据但GPU故障转移需要冗余。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何在团队设置中处理模型更新?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在独立机器上下载新模型、测试、交换。vLLM支持零停机时间模型热交换。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何备份团队服务器上的用户数据和日志?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '将所有输入/输出日志每日备份到外部存储。使用RAID-6冗余（容许2个同时硬盘故障）。每月测试恢复确保备份有效。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如何测量和追踪用户使用情况以计费?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '每个API请求都包含用户ID、IP、请求大小和响应大小。Prometheus每15秒抓取延迟、令牌/秒和队列长度指标。按用户/日汇总用于按比例成本分配。',
+            },
+          },
         ]
       },
       toc: [
@@ -1070,6 +1463,12 @@ schema: {
             { q: '可以根据令牌对用户计费吗?', a: '可以，通过回现报告。但首先决定策略（共享成本对部门成本分摊）。' },
             { q: '用户误删服务器数据会怎样?', a: '备份。将所有输入/输出日志每日备份到外部存储。RAID-6冗余。' },
             { q: '可以与Slack/Teams集成以便于访问吗?', a: '可以。Slack机器人调用vLLM API在频道中返回响应。流行集成: Slack的OpenAI API封装。' },
+            { q: '团队本地LLM服务器与云API相比成本如何?', a: '单一服务器: $2,500硬件 + $50/月电力（$600/年）对比云API $1,000+/月（$12,000+/年）。回本期: 活跃团队2-3个月。' },
+            { q: '如何为团队LLM服务器设置用户认证?', a: '企业级OAuth 2.0 + SSO（Active Directory / Okta）。中小企业简单令牌认证。所有查询都记录用户ID、时间戳和生成令牌数用于成本分配。' },
+            { q: '团队设置中GPU故障会发生什么?', a: '使用带负载均衡器的双GPU集群: GPU 0故障时，所有请求自动路由到GPU 1。无停机时间。单一服务器设置中，RAID存储保护数据但GPU故障转移需要冗余。' },
+            { q: '如何在团队设置中处理模型更新?', a: '在独立机器上下载新模型、测试、交换。vLLM支持零停机时间模型热交换。' },
+            { q: '如何备份团队服务器上的用户数据和日志?', a: '将所有输入/输出日志每日备份到外部存储。使用RAID-6冗余（容许2个同时硬盘故障）。每月测试恢复确保备份有效。' },
+            { q: '如何测量和追踪用户使用情况以计费?', a: '每个API请求都包含用户ID、IP、请求大小和响应大小。Prometheus每15秒抓取延迟、令牌/秒和队列长度指标。按用户/日汇总用于按比例成本分配。' },
           ],
         },
         'relatedReading': {
@@ -1155,44 +1554,84 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': '¿Puedo agregar más usuarios sin comprar hardware nuevo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Hasta 20-30 usuarios simultáneos por GPU. Más allá, agrega una segunda RTX 4090 y reequilibra la carga con nginx. Una RTX 4090 maneja aproximadamente 5 tokens/seg por usuario simultáneo.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo gestiono las actualizaciones de modelos (nueva variante de Llama 3)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Descarga el nuevo modelo en una máquina separada y pruébalo antes del despliegue. vLLM soporta el hot-swapping de modelos pausando nuevas solicitudes, terminando las consultas en curso y cambiando los archivos del modelo con cero tiempo de inactividad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Debería usar Kubernetes para el despliegue en equipo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No es necesario para menos de 50 usuarios. Docker + docker-compose es más simple, más transparente y requiere menos sobrecarga operativa. Kubernetes agrega complejidad sin beneficio correspondiente para equipos pequeños.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo facturar a los usuarios según los tokens?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, mediante informes de showback usando métricas de Prometheus. Rastrea los tokens por usuario por día y asigna los costos del servidor proporcionalmente. Define tu política primero: costo compartido en todo el equipo o chargeback por departamento.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué pasa si un usuario elimina accidentalmente datos del servidor?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Realiza copias de seguridad diarias de todos los registros de entrada/salida en almacenamiento externo. Usa configuración RAID-6 (tolera 2 fallos simultáneos de disco) para redundancia de hardware. Prueba los procedimientos de recuperación mensualmente para asegurarte de que las copias de seguridad sean válidas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo integrar con Slack/Teams para acceso sencillo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Construye un bot de Slack que llame a la API de vLLM y devuelva respuestas en el canal. Integración popular: usa un wrapper de OpenAI API para Slack, compatible con el endpoint compatible con OpenAI de vLLM.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '¿Cuánto cuesta un servidor LLM local en equipo comparado con las APIs en la nube?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Un servidor individual: $2.500 en hardware + $50/mes en electricidad ($600/año) frente a $1.000+/mes en APIs en la nube ($12.000+/año). Período de amortización: 2-3 meses para equipos activos.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un servidor individual: $2.500 en hardware + $50/mes en electricidad ($600/año) frente a $1.000+/mes en APIs en la nube ($12.000+/año). Período de amortización: 2-3 meses para equipos activos.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cómo configuro la autenticación de usuarios para un servidor LLM en equipo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Usa OAuth 2.0 con SSO (Active Directory / Okta) para enterprise. Autenticación simple por token para pymes. Todas las consultas se registran con ID de usuario, marca de tiempo y recuento de tokens para la atribución de costos.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa OAuth 2.0 con SSO (Active Directory / Okta) para enterprise. Autenticación simple por token para pymes. Todas las consultas se registran con ID de usuario, marca de tiempo y recuento de tokens para la atribución de costos.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Qué ocurre si una GPU falla en un entorno de equipo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Usa un clúster dual-GPU con load balancer: si la GPU 0 falla, todas las solicitudes se enrutan automáticamente a la GPU 1. Sin tiempo de inactividad. En configuraciones de servidor único, el almacenamiento RAID protege los datos, pero el failover de GPU requiere redundancia.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Puedo agregar más usuarios sin comprar hardware nuevo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, hasta 20-30 usuarios simultáneos por GPU. Más allá de eso, agrega una tarjeta GPU y reequilibra el load balancer. Una RTX 4090 maneja aproximadamente 5 tokens/seg por usuario simultáneo.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Cómo gestiono las actualizaciones de modelos en un entorno de equipo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Descarga el nuevo modelo en una máquina separada, pruébalo y luego intercámbialo. vLLM soporta el hot-swapping de modelos con cero tiempo de inactividad pausando nuevas solicitudes, terminando las consultas en curso y luego intercambiando los archivos del modelo.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Debería usar Kubernetes para el despliegue de LLM en equipo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'No, no es necesario para menos de 50 usuarios. Docker + docker-compose es más simple y requiere menos sobrecarga. Kubernetes agrega complejidad sin beneficio para equipos pequeños.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Puedo facturar a los miembros del equipo según el uso de tokens?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, mediante informes de showback. Usa métricas de Prometheus para rastrear tokens por usuario por día, luego asigna los costos del servidor proporcionalmente. Define la política primero: costo compartido o chargeback por departamento.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa un clúster dual-GPU con load balancer: si la GPU 0 falla, todas las solicitudes se enrutan automáticamente a la GPU 1. Sin tiempo de inactividad. En configuraciones de servidor único, el almacenamiento RAID protege los datos, pero el failover de GPU requiere redundancia.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cómo hago copias de seguridad de datos de usuarios y registros en un servidor de equipo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Realiza copias de seguridad diarias de todos los registros de entrada/salida en almacenamiento externo. Usa redundancia RAID-6 (tolera 2 fallos simultáneos de disco). Prueba la recuperación mensualmente para asegurarte de que las copias de seguridad sean válidas.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Realiza copias de seguridad diarias de todos los registros de entrada/salida en almacenamiento externo. Usa redundancia RAID-6 (tolera 2 fallos simultáneos de disco). Prueba la recuperación mensualmente para asegurarte de que las copias de seguridad sean válidas.',
+            },
+          },
         ]
       },
       toc: [
@@ -1314,6 +1753,10 @@ schema: {
             { q: '¿Puedo facturar a los usuarios según los tokens?', a: 'Sí, mediante informes de showback usando métricas de Prometheus. Rastrea los tokens por usuario por día y asigna los costos del servidor proporcionalmente. Define tu política primero: costo compartido en todo el equipo o chargeback por departamento.' },
             { q: '¿Qué pasa si un usuario elimina accidentalmente datos del servidor?', a: 'Realiza copias de seguridad diarias de todos los registros de entrada/salida en almacenamiento externo. Usa configuración RAID-6 (tolera 2 fallos simultáneos de disco) para redundancia de hardware. Prueba los procedimientos de recuperación mensualmente para asegurarte de que las copias de seguridad sean válidas.' },
             { q: '¿Puedo integrar con Slack/Teams para acceso sencillo?', a: 'Sí. Construye un bot de Slack que llame a la API de vLLM y devuelva respuestas en el canal. Integración popular: usa un wrapper de OpenAI API para Slack, compatible con el endpoint compatible con OpenAI de vLLM.' },
+            { q: '¿Cuánto cuesta un servidor LLM local en equipo comparado con las APIs en la nube?', a: 'Un servidor individual: $2.500 en hardware + $50/mes en electricidad ($600/año) frente a $1.000+/mes en APIs en la nube ($12.000+/año). Período de amortización: 2-3 meses para equipos activos.' },
+            { q: '¿Cómo configuro la autenticación de usuarios para un servidor LLM en equipo?', a: 'Usa OAuth 2.0 con SSO (Active Directory / Okta) para enterprise. Autenticación simple por token para pymes. Todas las consultas se registran con ID de usuario, marca de tiempo y recuento de tokens para la atribución de costos.' },
+            { q: '¿Qué ocurre si una GPU falla en un entorno de equipo?', a: 'Usa un clúster dual-GPU con load balancer: si la GPU 0 falla, todas las solicitudes se enrutan automáticamente a la GPU 1. Sin tiempo de inactividad. En configuraciones de servidor único, el almacenamiento RAID protege los datos, pero el failover de GPU requiere redundancia.' },
+            { q: '¿Cómo hago copias de seguridad de datos de usuarios y registros en un servidor de equipo?', a: 'Realiza copias de seguridad diarias de todos los registros de entrada/salida en almacenamiento externo. Usa redundancia RAID-6 (tolera 2 fallos simultáneos de disco). Prueba la recuperación mensualmente para asegurarte de que las copias de seguridad sean válidas.' },
           ],
         },
         'relatedReading': {
@@ -1400,44 +1843,92 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'هل يمكنني إضافة المزيد من المستخدمين دون شراء عتاد جديد؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'حتى 20-30 مستخدمًا متزامنًا لكل GPU. بعد ذلك، أضف RTX 4090 ثانية وأعِد موازنة الحمل بـnginx. تتعامل RTX 4090 مع حوالي 5 رموز/ثانية لكل مستخدم متزامن.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أدير تحديثات النماذج (متغيّر جديد من Llama 3)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نزّل النموذج الجديد على جهاز منفصل واختبره قبل النشر. يدعم vLLM التبديل السريع للنماذج عبر إيقاف الطلبات الجديدة مؤقتًا، وإنهاء الاستعلامات الجارية، وتبديل ملفات النموذج بصفر وقت تعطل.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يجب أن أستخدم Kubernetes للنشر في الفريق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ليس ضروريًا لأقل من 50 مستخدمًا. Docker + docker-compose أبسط وأكثر شفافية ويتطلب عبئًا تشغيليًا أقل. يضيف Kubernetes تعقيدًا دون فائدة مقابلة للفرق الصغيرة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني محاسبة المستخدمين بناءً على الرموز؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، عبر تقارير showback باستخدام مقاييس Prometheus. تتبّع الرموز لكل مستخدم يوميًا ووزّع تكاليف الخادم تناسبيًا. حدّد سياستك أولًا: تكلفة مشتركة عبر الفريق أو chargeback حسب القسم.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يحدث إذا حذف مستخدم بيانات من الخادم عن طريق الخطأ؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اعمل نسخًا احتياطية يومية لجميع سجلات المدخلات/المخرجات على تخزين خارجي. استخدم إعداد RAID-6 (يتحمل عطل قرصين متزامنين) لتكرار العتاد. اختبر إجراءات الاستعادة شهريًا للتأكد من صلاحية النسخ الاحتياطية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني التكامل مع Slack/Teams للوصول السهل؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. ابنِ بوت Slack يستدعي واجهة API لـvLLM ويُعيد الردود في القناة. تكامل شائع: استخدم غلاف OpenAI API لـSlack، متوافق مع نقطة النهاية المتوافقة مع OpenAI في vLLM.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'كم يكلّف خادم LLM محلي للفريق مقارنة بواجهات API السحابية؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'خادم فردي: 2,500$ عتاد + 50$ شهريًا كهرباء (600$ سنويًا) مقابل 1,000$+ شهريًا في واجهات API السحابية (12,000$+ سنويًا). فترة الاسترداد: 2-3 أشهر للفرق النشطة.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'خادم فردي: 2,500$ عتاد + 50$ شهريًا كهرباء (600$ سنويًا) مقابل 1,000$+ شهريًا في واجهات API السحابية (12,000$+ سنويًا). فترة الاسترداد: 2-3 أشهر للفرق النشطة.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'كيف أُعِدّ مصادقة المستخدمين لخادم LLM للفريق؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'استخدم OAuth 2.0 مع SSO (Active Directory / Okta) للمؤسسات. مصادقة بسيطة بالرمز للشركات الصغيرة والمتوسطة. تُسجَّل جميع الاستعلامات بمعرّف المستخدم والطابع الزمني وعدد الرموز (tokens) لعزو التكاليف.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم OAuth 2.0 مع SSO (Active Directory / Okta) للمؤسسات. مصادقة بسيطة بالرمز للشركات الصغيرة والمتوسطة. تُسجَّل جميع الاستعلامات بمعرّف المستخدم والطابع الزمني وعدد الرموز (tokens) لعزو التكاليف.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ماذا يحدث إذا تعطّلت GPU في بيئة فريق؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'استخدم عنقودًا ثنائي GPU مع موازن أحمال: إذا تعطّلت GPU 0، تُوجَّه جميع الطلبات تلقائيًا إلى GPU 1. بلا وقت تعطل. في إعدادات الخادم الواحد، يحمي تخزين RAID البيانات، لكن تجاوز فشل GPU يتطلب تكرارًا.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل يمكنني إضافة المزيد من المستخدمين دون شراء عتاد جديد؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، حتى 20-30 مستخدمًا متزامنًا لكل GPU. بعد ذلك، أضف بطاقة GPU وأعِد موازنة موازن الأحمال. تتعامل RTX 4090 مع حوالي 5 رموز/ثانية لكل مستخدم متزامن.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم عنقودًا ثنائي GPU مع موازن أحمال: إذا تعطّلت GPU 0، تُوجَّه جميع الطلبات تلقائيًا إلى GPU 1. بلا وقت تعطل. في إعدادات الخادم الواحد، يحمي تخزين RAID البيانات، لكن تجاوز فشل GPU يتطلب تكرارًا.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'كيف أدير تحديثات النماذج في بيئة فريق؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نزّل النموذج الجديد على جهاز منفصل، واختبره، ثم بدّله. يدعم vLLM التبديل السريع للنماذج بصفر وقت تعطل عبر إيقاف الطلبات الجديدة مؤقتًا، وإنهاء الاستعلامات الجارية، ثم تبديل ملفات النموذج.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل يجب أن أستخدم Kubernetes لنشر LLM في الفريق؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'لا، ليس ضروريًا لأقل من 50 مستخدمًا. Docker + docker-compose أبسط ويتطلب عبئًا أقل. يضيف Kubernetes تعقيدًا دون فائدة للفرق الصغيرة.' }
-          },
-          {
-            '@type': 'Question',
-            'name': 'هل يمكنني محاسبة أعضاء الفريق بناءً على استخدام الرموز؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، عبر تقارير showback. استخدم مقاييس Prometheus لتتبع الرموز لكل مستخدم يوميًا، ثم وزّع تكاليف الخادم تناسبيًا. حدّد السياسة أولًا: تكلفة مشتركة أو chargeback حسب القسم.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نزّل النموذج الجديد على جهاز منفصل، واختبره، ثم بدّله. يدعم vLLM التبديل السريع للنماذج بصفر وقت تعطل عبر إيقاف الطلبات الجديدة مؤقتًا، وإنهاء الاستعلامات الجارية، ثم تبديل ملفات النموذج.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'كيف أعمل نسخًا احتياطية لبيانات المستخدمين والسجلات على خادم الفريق؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'اعمل نسخًا احتياطية يومية لجميع سجلات المدخلات/المخرجات على تخزين خارجي. استخدم تكرار RAID-6 (يتحمل عطل قرصين متزامنين). اختبر الاستعادة شهريًا للتأكد من صلاحية النسخ الاحتياطية.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اعمل نسخًا احتياطية يومية لجميع سجلات المدخلات/المخرجات على تخزين خارجي. استخدم تكرار RAID-6 (يتحمل عطل قرصين متزامنين). اختبر الاستعادة شهريًا للتأكد من صلاحية النسخ الاحتياطية.',
+            },
+          },
         ]
       },
       toc: [
@@ -1559,6 +2050,11 @@ schema: {
             { q: 'هل يمكنني محاسبة المستخدمين بناءً على الرموز؟', a: 'نعم، عبر تقارير showback باستخدام مقاييس Prometheus. تتبّع الرموز لكل مستخدم يوميًا ووزّع تكاليف الخادم تناسبيًا. حدّد سياستك أولًا: تكلفة مشتركة عبر الفريق أو chargeback حسب القسم.' },
             { q: 'ماذا يحدث إذا حذف مستخدم بيانات من الخادم عن طريق الخطأ؟', a: 'اعمل نسخًا احتياطية يومية لجميع سجلات المدخلات/المخرجات على تخزين خارجي. استخدم إعداد RAID-6 (يتحمل عطل قرصين متزامنين) لتكرار العتاد. اختبر إجراءات الاستعادة شهريًا للتأكد من صلاحية النسخ الاحتياطية.' },
             { q: 'هل يمكنني التكامل مع Slack/Teams للوصول السهل؟', a: 'نعم. ابنِ بوت Slack يستدعي واجهة API لـvLLM ويُعيد الردود في القناة. تكامل شائع: استخدم غلاف OpenAI API لـSlack، متوافق مع نقطة النهاية المتوافقة مع OpenAI في vLLM.' },
+            { q: 'كم يكلّف خادم LLM محلي للفريق مقارنة بواجهات API السحابية؟', a: 'خادم فردي: 2,500$ عتاد + 50$ شهريًا كهرباء (600$ سنويًا) مقابل 1,000$+ شهريًا في واجهات API السحابية (12,000$+ سنويًا). فترة الاسترداد: 2-3 أشهر للفرق النشطة.' },
+            { q: 'كيف أُعِدّ مصادقة المستخدمين لخادم LLM للفريق؟', a: 'استخدم OAuth 2.0 مع SSO (Active Directory / Okta) للمؤسسات. مصادقة بسيطة بالرمز للشركات الصغيرة والمتوسطة. تُسجَّل جميع الاستعلامات بمعرّف المستخدم والطابع الزمني وعدد الرموز (tokens) لعزو التكاليف.' },
+            { q: 'ماذا يحدث إذا تعطّلت GPU في بيئة فريق؟', a: 'استخدم عنقودًا ثنائي GPU مع موازن أحمال: إذا تعطّلت GPU 0، تُوجَّه جميع الطلبات تلقائيًا إلى GPU 1. بلا وقت تعطل. في إعدادات الخادم الواحد، يحمي تخزين RAID البيانات، لكن تجاوز فشل GPU يتطلب تكرارًا.' },
+            { q: 'كيف أدير تحديثات النماذج في بيئة فريق؟', a: 'نزّل النموذج الجديد على جهاز منفصل، واختبره، ثم بدّله. يدعم vLLM التبديل السريع للنماذج بصفر وقت تعطل عبر إيقاف الطلبات الجديدة مؤقتًا، وإنهاء الاستعلامات الجارية، ثم تبديل ملفات النموذج.' },
+            { q: 'كيف أعمل نسخًا احتياطية لبيانات المستخدمين والسجلات على خادم الفريق؟', a: 'اعمل نسخًا احتياطية يومية لجميع سجلات المدخلات/المخرجات على تخزين خارجي. استخدم تكرار RAID-6 (يتحمل عطل قرصين متزامنين). اختبر الاستعادة شهريًا للتأكد من صلاحية النسخ الاحتياطية.' },
           ],
         },
         'relatedReading': {
@@ -1777,44 +2273,100 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': '새 하드웨어를 구입하지 않고 사용자를 추가할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 두 번째 RTX 4090을 추가하고 nginx로 부하를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 tok/s를 처리합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '모델 업데이트(새 Llama 3 변형 등)를 어떻게 처리합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '배포 전에 별도의 기기에서 새 모델을 다운로드하고 테스트하십시오. vLLM은 새 요청을 일시 중지하고, 진행 중인 쿼리를 완료한 후 모델 파일을 교체함으로써 다운타임 없이 모델 핫 스와핑을 지원합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '팀 배포에 Kubernetes를 사용해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '50명 미만의 사용자에게는 필요하지 않습니다. 일반 Docker + docker-compose가 더 단순하고 투명하며 운영 오버헤드가 적습니다. Kubernetes는 소규모 팀에게는 상응하는 이점 없이 복잡성만 추가합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '토큰을 기반으로 사용자에게 청구할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네, Prometheus 메트릭을 사용한 쇼백 보고서를 통해 가능합니다. 사용자당 하루 토큰 수를 추적하고 서버 비용을 비례적으로 할당하십시오. 먼저 정책을 결정하십시오: 팀 전체 공유 비용 또는 개별 부서별 비용 청구.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '사용자가 실수로 서버의 데이터를 삭제하면 어떻게 됩니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '모든 입출력 로그의 일일 백업을 외부 스토리지에 실행하십시오. 하드웨어 이중화를 위해 RAID 6 구성(동시 드라이브 2개 장애에도 생존)을 사용하십시오. 백업이 유효한지 확인하기 위해 월별로 복구 절차를 테스트하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Slack/Teams와 통합하여 쉽게 접근할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. vLLM API를 호출하고 채널에 응답을 반환하는 Slack 봇을 구축하십시오. 인기 있는 통합: vLLM의 OpenAI 호환 엔드포인트와 호환되는 Slack용 OpenAI API 래퍼를 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '팀 로컬 LLM 서버 비용은 클라우드 API와 비교하면 얼마입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 LLM 서버의 사용자 인증을 어떻게 설정합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'GPU가 팀 설정에서 고장나면 어떻게 됩니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버의 경우 RAID가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '새 하드웨어 없이 더 많은 사용자를 추가할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '네, GPU당 최대 20~30명의 동시 사용자까지 가능합니다. 그 이상이면 GPU 카드를 추가하고 로드 밸런서를 재조정하십시오. RTX 4090 하나는 동시 사용자당 약 5 토큰/초를 처리합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버의 경우 RAID가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 설정에서 모델 업데이트를 어떻게 처리합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청 일시 중지 후 진행 중인 쿼리를 완료하고 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.' }
-          },
-          {
-            '@type': 'Question',
-            'name': '팀 로컬 LLM 배포에 Kubernetes를 사용해야 합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '50명 미만의 경우 불필요합니다. 일반 Docker + docker-compose가 더 간단하고 오버헤드가 적습니다. Kubernetes는 소규모 팀에 이점 없이 복잡성만 추가합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청 일시 중지 후 진행 중인 쿼리를 완료하고 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': '토큰 사용량에 따라 팀원에게 비용을 청구할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '네, 쇼백 보고서로 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적 후 서버 비용을 비례 배분하십시오. 정책 먼저 결정: 공유 비용 또는 부서별 비용 청구.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네, 쇼백 보고서로 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적 후 서버 비용을 비례 배분하십시오. 정책 먼저 결정: 공유 비용 또는 부서별 비용 청구.',
+            },
           },
           {
             '@type': 'Question',
             'name': '팀 서버에서 사용자 데이터와 로그를 어떻게 백업합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업 유효성 확인을 위해 매월 복구를 테스트하십시오.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업 유효성 확인을 위해 매월 복구를 테스트하십시오.',
+            },
+          },
         ]
       },
       toc: [
@@ -1936,6 +2488,12 @@ schema: {
             { q: '토큰을 기반으로 사용자에게 청구할 수 있습니까?', a: '네, Prometheus 메트릭을 사용한 쇼백 보고서를 통해 가능합니다. 사용자당 하루 토큰 수를 추적하고 서버 비용을 비례적으로 할당하십시오. 먼저 정책을 결정하십시오: 팀 전체 공유 비용 또는 개별 부서별 비용 청구.' },
             { q: '사용자가 실수로 서버의 데이터를 삭제하면 어떻게 됩니까?', a: '모든 입출력 로그의 일일 백업을 외부 스토리지에 실행하십시오. 하드웨어 이중화를 위해 RAID 6 구성(동시 드라이브 2개 장애에도 생존)을 사용하십시오. 백업이 유효한지 확인하기 위해 월별로 복구 절차를 테스트하십시오.' },
             { q: 'Slack/Teams와 통합하여 쉽게 접근할 수 있습니까?', a: '네. vLLM API를 호출하고 채널에 응답을 반환하는 Slack 봇을 구축하십시오. 인기 있는 통합: vLLM의 OpenAI 호환 엔드포인트와 호환되는 Slack용 OpenAI API 래퍼를 사용하십시오.' },
+            { q: '팀 로컬 LLM 서버 비용은 클라우드 API와 비교하면 얼마입니까?', a: '단일 서버 설정: 하드웨어 $2,500 + 전기 $50/월($600/년) 대 클라우드 API $1,000+/월($12,000+/년). 활성 팀의 회수 기간: 2~3개월.' },
+            { q: '팀 LLM 서버의 사용자 인증을 어떻게 설정합니까?', a: '엔터프라이즈는 SSO(Active Directory / Okta)와 OAuth 2.0 사용. 중소기업 팀은 간단한 토큰 인증 사용. 모든 쿼리는 사용자 ID, 타임스탬프, 토큰 수와 함께 기록됩니다.' },
+            { q: 'GPU가 팀 설정에서 고장나면 어떻게 됩니까?', a: '로드 밸런서가 있는 이중 GPU 클러스터 사용: GPU 0이 고장나면 모든 요청이 GPU 1로 자동 라우팅됩니다. 다운타임 없음. 단일 서버의 경우 RAID가 데이터를 보호하지만 GPU 장애 복구에는 이중화가 필요합니다.' },
+            { q: '팀 설정에서 모델 업데이트를 어떻게 처리합니까?', a: '별도 머신에서 새 모델 다운로드 후 테스트하고 교체하십시오. vLLM은 새 요청 일시 중지 후 진행 중인 쿼리를 완료하고 모델 파일을 교체하는 방식으로 다운타임 없이 핫 스왑을 지원합니다.' },
+            { q: '토큰 사용량에 따라 팀원에게 비용을 청구할 수 있습니까?', a: '네, 쇼백 보고서로 가능합니다. Prometheus 메트릭으로 사용자당 일일 토큰을 추적 후 서버 비용을 비례 배분하십시오. 정책 먼저 결정: 공유 비용 또는 부서별 비용 청구.' },
+            { q: '팀 서버에서 사용자 데이터와 로그를 어떻게 백업합니까?', a: '모든 입출력 로그를 외부 스토리지에 매일 백업하십시오. RAID 6 이중화(동시 드라이브 2개 장애 생존) 사용. 백업 유효성 확인을 위해 매월 복구를 테스트하십시오.' },
           ],
         },
         'relatedReading': {

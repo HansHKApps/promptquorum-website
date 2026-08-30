@@ -339,39 +339,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'Which Chinese cloud GPU provider is cheapest?',
-            a: 'AutoDL is the cheapest of the three: an A100 80 GB is ¥5.98/hr versus ¥8–12/hr on Alibaba Cloud PAI and ¥7.5–10/hr on Tencent Cloud TI, and its RTX 4090/RTX 3090 rates undercut both enterprise platforms as well. AutoDL bills per second with no contract, which matters most for burst or development workloads. → [Check current AutoDL GPU prices](https://www.autodl.com)',
-          },
-          {
-            q: 'Which Chinese cloud GPU provider is best for Qwen?',
-            a: 'Alibaba Cloud PAI. Its PAI-EAS inference runtime, co-developed by the Alibaba DAMO Academy Qwen team, runs Qwen models 20–30% faster than standard Ollama on the same hardware — a real advantage for production Qwen inference, not just a marketing claim, since the same team that trains Qwen built the runtime. → [Get Alibaba Cloud offer](https://www.alibabacloud.com)',
-          },
-          {
-            q: 'Can I use Alibaba Cloud GPU from outside China?',
-            a: 'Yes. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) accepts international credit cards (Visa, Mastercard, American Express) and provides an English-language console — the easiest onboarding of the three providers for non-Chinese users, since AutoDL and Tencent Cloud\'s domestic portals expect a Chinese bank card or Alipay. Note that the International portal and the China domestic portal have separate accounts and different pricing — the International portal is slightly more expensive but easier to set up. → [Get Alibaba Cloud offer](https://www.alibabacloud.com)',
-          },
-          {
-            q: 'How does a foreigner without a Chinese bank account pay with Alipay for AutoDL or Tencent Cloud?',
-            a: 'You don\'t need a Chinese bank account. Register in the Alipay app with a passport and a foreign phone number, then link an eligible international Visa or Mastercard directly — this direct card-linking has replaced the older TourCard prepaid workaround for most users. If direct linking fails for your card, Alipay\'s TourCard option lets you prepay from an international card into a 90-day Alipay balance instead. Once Alipay is set up this way, it works the same for AutoDL and Tencent Cloud\'s domestic checkout as a Chinese bank card would. This still only solves payment — it doesn\'t give you an English-language console; for that, use [Alibaba Cloud International](https://www.alibabacloud.com) instead.',
-          },
-          {
-            q: 'Is AutoDL reliable enough for production inference?',
-            a: 'AutoDL is designed for research and development, not production-grade inference. It lacks formal SLAs and spot instances can be preempted with short notice. For production inference with guaranteed availability, use Alibaba Cloud PAI or Tencent Cloud TI with on-demand instances. AutoDL is best for fine-tuning runs, development, and cost-sensitive batch processing where occasional interruptions are acceptable.',
-          },
-          {
-            q: 'How does Alibaba Cloud\'s Qwen inference compare to running Ollama myself?',
-            a: 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware (tested: A100 80 GB, Qwen3 72B). The speedup comes from the PAI-EAS inference runtime developed by the Alibaba DAMO Academy Qwen team, which includes Qwen-specific optimizations like specialized attention kernels and KV-cache tuning that are not in the public Ollama build.',
-          },
-          {
-            q: 'Is there a free tier for testing Chinese cloud GPU?',
-            a: 'Alibaba Cloud and Tencent Cloud both run new-account credit promotions from time to time (check the current offer on each provider\'s signup page — amounts change and are not guaranteed). AutoDL provides a small free GPU credit for new accounts (roughly 1–2 hours of A100 time, or several hours on cheaper cards). None offer a permanently free GPU tier — all GPU usage is metered.',
-          },
-          {
-            q: 'What is the best GPU for Qwen3 72B on Chinese cloud platforms?',
-            a: 'A100 80 GB is the recommended GPU for single-card Qwen3 72B inference — it fits the full model in VRAM at BF16 precision without quantization. At Q4_K_M quantization, Qwen3 72B (43.5 GB) also fits on an A100 40 GB, at slightly lower quality. H100 80 GB is 25–35% faster than A100 80 GB but costs 2–2.5× more per hour — only worth the premium for sustained high-throughput production workloads.',
-          },
-        ],
+            { q: 'Which Chinese cloud GPU provider is cheapest?', a: 'AutoDL is the cheapest of the three: an A100 80 GB is ¥5.98/hr versus ¥8–12/hr on Alibaba Cloud PAI and ¥7.5–10/hr on Tencent Cloud TI, and its RTX 4090/RTX 3090 rates undercut both enterprise platforms as well. AutoDL bills per second with no contract, which matters most for burst or development workloads. → [Check current AutoDL GPU prices](https://www.autodl.com)' },
+            { q: 'Which Chinese cloud GPU provider is best for Qwen?', a: 'Alibaba Cloud PAI. Its PAI-EAS inference runtime, co-developed by the Alibaba DAMO Academy Qwen team, runs Qwen models 20–30% faster than standard Ollama on the same hardware — a real advantage for production Qwen inference, not just a marketing claim, since the same team that trains Qwen built the runtime. → [Get Alibaba Cloud offer](https://www.alibabacloud.com)' },
+            { q: 'Can I use Alibaba Cloud GPU from outside China?', a: 'Yes. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) accepts international credit cards (Visa, Mastercard, American Express) and provides an English-language console — the easiest onboarding of the three providers for non-Chinese users, since AutoDL and Tencent Cloud\'s domestic portals expect a Chinese bank card or Alipay. Note that the International portal and the China domestic portal have separate accounts and different pricing — the International portal is slightly more expensive but easier to set up. → [Get Alibaba Cloud offer](https://www.alibabacloud.com)' },
+            { q: 'How does a foreigner without a Chinese bank account pay with Alipay for AutoDL or Tencent Cloud?', a: 'You don\'t need a Chinese bank account. Register in the Alipay app with a passport and a foreign phone number, then link an eligible international Visa or Mastercard directly — this direct card-linking has replaced the older TourCard prepaid workaround for most users. If direct linking fails for your card, Alipay\'s TourCard option lets you prepay from an international card into a 90-day Alipay balance instead. Once Alipay is set up this way, it works the same for AutoDL and Tencent Cloud\'s domestic checkout as a Chinese bank card would. This still only solves payment — it doesn\'t give you an English-language console; for that, use [Alibaba Cloud International](https://www.alibabacloud.com) instead.' },
+            { q: 'Is AutoDL reliable enough for production inference?', a: 'AutoDL is designed for research and development, not production-grade inference. It lacks formal SLAs and spot instances can be preempted with short notice. For production inference with guaranteed availability, use Alibaba Cloud PAI or Tencent Cloud TI with on-demand instances. AutoDL is best for fine-tuning runs, development, and cost-sensitive batch processing where occasional interruptions are acceptable.' },
+            { q: 'How does Alibaba Cloud\'s Qwen inference compare to running Ollama myself?', a: 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware (tested: A100 80 GB, Qwen3 72B). The speedup comes from the PAI-EAS inference runtime developed by the Alibaba DAMO Academy Qwen team, which includes Qwen-specific optimizations like specialized attention kernels and KV-cache tuning that are not in the public Ollama build.' },
+            { q: 'Is there a free tier for testing Chinese cloud GPU?', a: 'Alibaba Cloud and Tencent Cloud both run new-account credit promotions from time to time (check the current offer on each provider\'s signup page — amounts change and are not guaranteed). AutoDL provides a small free GPU credit for new accounts (roughly 1–2 hours of A100 time, or several hours on cheaper cards). None offer a permanently free GPU tier — all GPU usage is metered.' },
+            { q: 'What is the best GPU for Qwen3 72B on Chinese cloud platforms?', a: 'A100 80 GB is the recommended GPU for single-card Qwen3 72B inference — it fits the full model in VRAM at BF16 precision without quantization. At Q4_K_M quantization, Qwen3 72B (43.5 GB) also fits on an A100 40 GB, at slightly lower quality. H100 80 GB is 25–35% faster than A100 80 GB but costs 2–2.5× more per hour — only worth the premium for sustained high-throughput production workloads.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -389,71 +365,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Which Chinese cloud GPU provider is cheapest?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL is the cheapest of the three: an A100 80 GB is ¥5.98/hr versus ¥8–12/hr on Alibaba Cloud PAI and ¥7.5–10/hr on Tencent Cloud TI, with cheaper RTX 4090/RTX 3090 rates too. AutoDL bills per second with no contract.',
+          {
+            '@type': 'Question',
+            'name': 'Which Chinese cloud GPU provider is cheapest?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL is the cheapest of the three: an A100 80 GB is ¥5.98/hr versus ¥8–12/hr on Alibaba Cloud PAI and ¥7.5–10/hr on Tencent Cloud TI, and its RTX 4090/RTX 3090 rates undercut both enterprise platforms as well. AutoDL bills per second with no contract, which matters most for burst or development workloads. → [Check current AutoDL GPU prices](https://www.autodl.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which Chinese cloud GPU provider is best for Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud PAI. Its PAI-EAS runtime, co-developed by the Alibaba DAMO Academy Qwen team, runs Qwen models 20–30% faster than standard Ollama on the same hardware.',
+          {
+            '@type': 'Question',
+            'name': 'Which Chinese cloud GPU provider is best for Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI. Its PAI-EAS inference runtime, co-developed by the Alibaba DAMO Academy Qwen team, runs Qwen models 20–30% faster than standard Ollama on the same hardware — a real advantage for production Qwen inference, not just a marketing claim, since the same team that trains Qwen built the runtime. → [Get Alibaba Cloud offer](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use Alibaba Cloud GPU from outside China?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Alibaba Cloud International (alibabacloud.com) accepts international credit cards and provides an English-language console. Note that International and China domestic portals have separate accounts and slightly different pricing.',
+          {
+            '@type': 'Question',
+            'name': 'Can I use Alibaba Cloud GPU from outside China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) accepts international credit cards (Visa, Mastercard, American Express) and provides an English-language console — the easiest onboarding of the three providers for non-Chinese users, since AutoDL and Tencent Cloud\'s domestic portals expect a Chinese bank card or Alipay. Note that the International portal and the China domestic portal have separate accounts and different pricing — the International portal is slightly more expensive but easier to set up. → [Get Alibaba Cloud offer](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does a foreigner without a Chinese bank account pay with Alipay for AutoDL or Tencent Cloud?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No Chinese bank account is needed. Register in the Alipay app with a passport and a foreign phone number, then link an eligible international Visa or Mastercard directly. If direct linking fails, Alipay\'s TourCard option allows prepaying from an international card into a 90-day Alipay balance instead.',
+          {
+            '@type': 'Question',
+            'name': 'How does a foreigner without a Chinese bank account pay with Alipay for AutoDL or Tencent Cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'You don\'t need a Chinese bank account. Register in the Alipay app with a passport and a foreign phone number, then link an eligible international Visa or Mastercard directly — this direct card-linking has replaced the older TourCard prepaid workaround for most users. If direct linking fails for your card, Alipay\'s TourCard option lets you prepay from an international card into a 90-day Alipay balance instead. Once Alipay is set up this way, it works the same for AutoDL and Tencent Cloud\'s domestic checkout as a Chinese bank card would. This still only solves payment — it doesn\'t give you an English-language console; for that, use [Alibaba Cloud International](https://www.alibabacloud.com) instead.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is AutoDL reliable enough for production inference?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL is designed for research and development. It lacks formal SLAs and spot instances can be preempted. For production with guaranteed availability, use Alibaba Cloud PAI or Tencent Cloud TI with on-demand instances.',
+          {
+            '@type': 'Question',
+            'name': 'Is AutoDL reliable enough for production inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL is designed for research and development, not production-grade inference. It lacks formal SLAs and spot instances can be preempted with short notice. For production inference with guaranteed availability, use Alibaba Cloud PAI or Tencent Cloud TI with on-demand instances. AutoDL is best for fine-tuning runs, development, and cost-sensitive batch processing where occasional interruptions are acceptable.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does Alibaba Cloud PAI compare to running Ollama for Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware. The speedup comes from Qwen-specific optimizations in the PAI-EAS runtime developed by the Alibaba DAMO Academy Qwen team.',
+          {
+            '@type': 'Question',
+            'name': 'How does Alibaba Cloud\'s Qwen inference compare to running Ollama myself?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware (tested: A100 80 GB, Qwen3 72B). The speedup comes from the PAI-EAS inference runtime developed by the Alibaba DAMO Academy Qwen team, which includes Qwen-specific optimizations like specialized attention kernels and KV-cache tuning that are not in the public Ollama build.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is there a free tier for testing Chinese cloud GPU?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud: ¥300 free credit (~30–40 hours of A10 inference). Tencent Cloud: similar promotional credits. AutoDL: ¥10 free credit (2–4 hours of A100). No permanently free GPU tier on any platform.',
+          {
+            '@type': 'Question',
+            'name': 'Is there a free tier for testing Chinese cloud GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud and Tencent Cloud both run new-account credit promotions from time to time (check the current offer on each provider\'s signup page — amounts change and are not guaranteed). AutoDL provides a small free GPU credit for new accounts (roughly 1–2 hours of A100 time, or several hours on cheaper cards). None offer a permanently free GPU tier — all GPU usage is metered.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What GPU is best for Qwen3 72B on Chinese clouds?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A100 80 GB is recommended for Qwen3 72B — fits the full model at BF16 without quantization. At Q4_K_M, it also fits on A100 40 GB. H100 80 GB is 25–35% faster but costs 2–2.5× more per hour.',
+          {
+            '@type': 'Question',
+            'name': 'What is the best GPU for Qwen3 72B on Chinese cloud platforms?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A100 80 GB is the recommended GPU for single-card Qwen3 72B inference — it fits the full model in VRAM at BF16 precision without quantization. At Q4_K_M quantization, Qwen3 72B (43.5 GB) also fits on an A100 40 GB, at slightly lower quality. H100 80 GB is 25–35% faster than A100 80 GB but costs 2–2.5× more per hour — only worth the premium for sustained high-throughput production workloads.',
+            },
           },
-        },
-      ],
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -782,39 +758,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Qué proveedor de GPU en la nube china es el más barato?',
-            a: 'AutoDL es el más barato de los tres: un A100 80 GB cuesta ¥5,98/h frente a ¥8–12/h en Alibaba Cloud PAI y ¥7,5–10/h en Tencent Cloud TI, y sus tarifas de RTX 4090/RTX 3090 también son más bajas que las de las dos plataformas empresariales. AutoDL factura por segundo sin contrato, lo que importa más para cargas de trabajo en ráfaga o de desarrollo. → [Consulta precios de AutoDL](https://www.autodl.com)',
-          },
-          {
-            q: '¿Qué proveedor de GPU en la nube china es el mejor para Qwen?',
-            a: 'Alibaba Cloud PAI. Su runtime de inferencia PAI-EAS, codesarrollado por el equipo Qwen de Alibaba DAMO Academy, ejecuta modelos Qwen un 20–30 % más rápido que Ollama estándar en el mismo hardware — una ventaja real para inferencia Qwen en producción, no solo una afirmación de marketing, ya que el mismo equipo que entrena Qwen construyó el runtime. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com)',
-          },
-          {
-            q: '¿Puedo usar Alibaba Cloud GPU desde fuera de China?',
-            a: 'Sí. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) acepta tarjetas de crédito internacionales (Visa, Mastercard, American Express) y ofrece una consola en inglés — el registro más sencillo de los tres proveedores para usuarios no chinos, ya que AutoDL y Tencent Cloud requieren tarjeta bancaria china o Alipay en sus portales domésticos. Ten en cuenta que el portal internacional y el portal doméstico chino tienen cuentas separadas y precios distintos — el portal internacional es ligeramente más caro, pero más fácil de configurar. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com)',
-          },
-          {
-            q: '¿Cómo paga con Alipay alguien sin cuenta bancaria china, para usar AutoDL o Tencent Cloud?',
-            a: 'No necesitas una cuenta bancaria china. Regístrate en la app de Alipay con tu pasaporte y un número de teléfono extranjero, y vincula directamente una tarjeta Visa o Mastercard internacional elegible — esta vinculación directa ha sustituido a la antigua opción prepago TourCard para la mayoría de usuarios. Si la vinculación directa falla con tu tarjeta, la opción TourCard de Alipay permite prepagar desde una tarjeta internacional a un saldo de Alipay válido por 90 días. Una vez configurado así, Alipay funciona igual que una tarjeta bancaria china en el checkout doméstico de AutoDL y Tencent Cloud. Esto solo resuelve el pago — no te da una consola en inglés; para eso, usa [Alibaba Cloud International](https://www.alibabacloud.com).',
-          },
-          {
-            q: '¿Es AutoDL suficientemente fiable para inferencia en producción?',
-            a: 'AutoDL está diseñado para investigación y desarrollo, no para inferencia de grado productivo. Carece de SLA formales y las instancias spot pueden ser interrumpidas con poco aviso. Para inferencia en producción con disponibilidad garantizada, usa Alibaba Cloud PAI o Tencent Cloud TI con instancias bajo demanda. AutoDL es ideal para ejecuciones de ajuste fino, desarrollo y procesamiento por lotes sensible al coste donde las interrupciones ocasionales son aceptables.',
-          },
-          {
-            q: '¿Cómo se compara la inferencia Qwen de Alibaba Cloud con ejecutar Ollama por mi cuenta?',
-            a: 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente (probado: A100 80 GB, Qwen3 72B). La aceleración proviene del runtime de inferencia PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy, que incluye optimizaciones específicas de Qwen como kernels de atención especializados y ajuste de KV-cache que no están en la compilación pública de Ollama.',
-          },
-          {
-            q: '¿Existe un nivel gratuito para probar GPU en la nube china?',
-            a: 'Alibaba Cloud y Tencent Cloud suelen ofrecer promociones de crédito para cuentas nuevas (consulta la oferta vigente en la página de registro de cada proveedor — los importes cambian y no están garantizados). AutoDL ofrece un pequeño crédito gratuito de GPU para cuentas nuevas (aproximadamente 1–2 horas de A100, o varias horas en tarjetas más económicas). Ninguno ofrece un nivel de GPU permanentemente gratuito — todo el uso de GPU es tarifado.',
-          },
-          {
-            q: '¿Qué GPU es mejor para Qwen3 72B en plataformas de nube china?',
-            a: 'A100 80 GB es la GPU recomendada para inferencia de Qwen3 72B en una sola tarjeta — cabe el modelo completo en VRAM con precisión BF16 sin cuantización. Con cuantización Q4_K_M, Qwen3 72B (43,5 GB) también cabe en un A100 40 GB, con una calidad ligeramente inferior. H100 80 GB es un 25–35 % más rápido que A100 80 GB, pero cuesta 2–2,5 veces más por hora — solo vale la prima para cargas de trabajo de producción sostenida de alto rendimiento.',
-          },
-        ],
+            { q: '¿Qué proveedor de GPU en la nube china es el más barato?', a: 'AutoDL es el más barato de los tres: un A100 80 GB cuesta ¥5,98/h frente a ¥8–12/h en Alibaba Cloud PAI y ¥7,5–10/h en Tencent Cloud TI, y sus tarifas de RTX 4090/RTX 3090 también son más bajas que las de las dos plataformas empresariales. AutoDL factura por segundo sin contrato, lo que importa más para cargas de trabajo en ráfaga o de desarrollo. → [Consulta precios de AutoDL](https://www.autodl.com)' },
+            { q: '¿Qué proveedor de GPU en la nube china es el mejor para Qwen?', a: 'Alibaba Cloud PAI. Su runtime de inferencia PAI-EAS, codesarrollado por el equipo Qwen de Alibaba DAMO Academy, ejecuta modelos Qwen un 20–30 % más rápido que Ollama estándar en el mismo hardware — una ventaja real para inferencia Qwen en producción, no solo una afirmación de marketing, ya que el mismo equipo que entrena Qwen construyó el runtime. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: '¿Puedo usar Alibaba Cloud GPU desde fuera de China?', a: 'Sí. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) acepta tarjetas de crédito internacionales (Visa, Mastercard, American Express) y ofrece una consola en inglés — el registro más sencillo de los tres proveedores para usuarios no chinos, ya que AutoDL y Tencent Cloud requieren tarjeta bancaria china o Alipay en sus portales domésticos. Ten en cuenta que el portal internacional y el portal doméstico chino tienen cuentas separadas y precios distintos — el portal internacional es ligeramente más caro, pero más fácil de configurar. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: '¿Cómo paga con Alipay alguien sin cuenta bancaria china, para usar AutoDL o Tencent Cloud?', a: 'No necesitas una cuenta bancaria china. Regístrate en la app de Alipay con tu pasaporte y un número de teléfono extranjero, y vincula directamente una tarjeta Visa o Mastercard internacional elegible — esta vinculación directa ha sustituido a la antigua opción prepago TourCard para la mayoría de usuarios. Si la vinculación directa falla con tu tarjeta, la opción TourCard de Alipay permite prepagar desde una tarjeta internacional a un saldo de Alipay válido por 90 días. Una vez configurado así, Alipay funciona igual que una tarjeta bancaria china en el checkout doméstico de AutoDL y Tencent Cloud. Esto solo resuelve el pago — no te da una consola en inglés; para eso, usa [Alibaba Cloud International](https://www.alibabacloud.com).' },
+            { q: '¿Es AutoDL suficientemente fiable para inferencia en producción?', a: 'AutoDL está diseñado para investigación y desarrollo, no para inferencia de grado productivo. Carece de SLA formales y las instancias spot pueden ser interrumpidas con poco aviso. Para inferencia en producción con disponibilidad garantizada, usa Alibaba Cloud PAI o Tencent Cloud TI con instancias bajo demanda. AutoDL es ideal para ejecuciones de ajuste fino, desarrollo y procesamiento por lotes sensible al coste donde las interrupciones ocasionales son aceptables.' },
+            { q: '¿Cómo se compara la inferencia Qwen de Alibaba Cloud con ejecutar Ollama por mi cuenta?', a: 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente (probado: A100 80 GB, Qwen3 72B). La aceleración proviene del runtime de inferencia PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy, que incluye optimizaciones específicas de Qwen como kernels de atención especializados y ajuste de KV-cache que no están en la compilación pública de Ollama.' },
+            { q: '¿Existe un nivel gratuito para probar GPU en la nube china?', a: 'Alibaba Cloud y Tencent Cloud suelen ofrecer promociones de crédito para cuentas nuevas (consulta la oferta vigente en la página de registro de cada proveedor — los importes cambian y no están garantizados). AutoDL ofrece un pequeño crédito gratuito de GPU para cuentas nuevas (aproximadamente 1–2 horas de A100, o varias horas en tarjetas más económicas). Ninguno ofrece un nivel de GPU permanentemente gratuito — todo el uso de GPU es tarifado.' },
+            { q: '¿Qué GPU es mejor para Qwen3 72B en plataformas de nube china?', a: 'A100 80 GB es la GPU recomendada para inferencia de Qwen3 72B en una sola tarjeta — cabe el modelo completo en VRAM con precisión BF16 sin cuantización. Con cuantización Q4_K_M, Qwen3 72B (43,5 GB) también cabe en un A100 40 GB, con una calidad ligeramente inferior. H100 80 GB es un 25–35 % más rápido que A100 80 GB, pero cuesta 2–2,5 veces más por hora — solo vale la prima para cargas de trabajo de producción sostenida de alto rendimiento.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -831,71 +783,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Qué proveedor de GPU en la nube china es el más barato?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL es el más barato: un A100 80 GB cuesta ¥5,98/h frente a ¥8–12/h en Alibaba Cloud PAI y ¥7,5–10/h en Tencent Cloud TI.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué proveedor de GPU en la nube china es el más barato?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL es el más barato de los tres: un A100 80 GB cuesta ¥5,98/h frente a ¥8–12/h en Alibaba Cloud PAI y ¥7,5–10/h en Tencent Cloud TI, y sus tarifas de RTX 4090/RTX 3090 también son más bajas que las de las dos plataformas empresariales. AutoDL factura por segundo sin contrato, lo que importa más para cargas de trabajo en ráfaga o de desarrollo. → [Consulta precios de AutoDL](https://www.autodl.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué proveedor de GPU en la nube china es el mejor para Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud PAI. Su runtime PAI-EAS ejecuta modelos Qwen un 20–30 % más rápido que Ollama estándar en el mismo hardware.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué proveedor de GPU en la nube china es el mejor para Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI. Su runtime de inferencia PAI-EAS, codesarrollado por el equipo Qwen de Alibaba DAMO Academy, ejecuta modelos Qwen un 20–30 % más rápido que Ollama estándar en el mismo hardware — una ventaja real para inferencia Qwen en producción, no solo una afirmación de marketing, ya que el mismo equipo que entrena Qwen construyó el runtime. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Puedo usar Alibaba Cloud GPU desde fuera de China?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sí. Alibaba Cloud International (alibabacloud.com) acepta tarjetas de crédito internacionales y ofrece una consola en inglés. Ten en cuenta que los portales internacional y doméstico chino tienen cuentas separadas y precios ligeramente distintos.',
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar Alibaba Cloud GPU desde fuera de China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) acepta tarjetas de crédito internacionales (Visa, Mastercard, American Express) y ofrece una consola en inglés — el registro más sencillo de los tres proveedores para usuarios no chinos, ya que AutoDL y Tencent Cloud requieren tarjeta bancaria china o Alipay en sus portales domésticos. Ten en cuenta que el portal internacional y el portal doméstico chino tienen cuentas separadas y precios distintos — el portal internacional es ligeramente más caro, pero más fácil de configurar. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cómo paga con Alipay alguien sin cuenta bancaria china?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No se necesita cuenta bancaria china. Regístrate en Alipay con pasaporte y un número de teléfono extranjero, y vincula directamente una tarjeta Visa o Mastercard internacional. Si falla la vinculación directa, la opción TourCard permite prepagar desde una tarjeta internacional a un saldo de Alipay válido por 90 días.',
+          {
+            '@type': 'Question',
+            'name': '¿Cómo paga con Alipay alguien sin cuenta bancaria china, para usar AutoDL o Tencent Cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No necesitas una cuenta bancaria china. Regístrate en la app de Alipay con tu pasaporte y un número de teléfono extranjero, y vincula directamente una tarjeta Visa o Mastercard internacional elegible — esta vinculación directa ha sustituido a la antigua opción prepago TourCard para la mayoría de usuarios. Si la vinculación directa falla con tu tarjeta, la opción TourCard de Alipay permite prepagar desde una tarjeta internacional a un saldo de Alipay válido por 90 días. Una vez configurado así, Alipay funciona igual que una tarjeta bancaria china en el checkout doméstico de AutoDL y Tencent Cloud. Esto solo resuelve el pago — no te da una consola en inglés; para eso, usa [Alibaba Cloud International](https://www.alibabacloud.com).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Es AutoDL suficientemente fiable para inferencia en producción?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL está diseñado para investigación y desarrollo. Carece de SLA formales y las instancias spot pueden ser interrumpidas. Para producción con disponibilidad garantizada, usa Alibaba Cloud PAI o Tencent Cloud TI con instancias bajo demanda.',
+          {
+            '@type': 'Question',
+            'name': '¿Es AutoDL suficientemente fiable para inferencia en producción?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL está diseñado para investigación y desarrollo, no para inferencia de grado productivo. Carece de SLA formales y las instancias spot pueden ser interrumpidas con poco aviso. Para inferencia en producción con disponibilidad garantizada, usa Alibaba Cloud PAI o Tencent Cloud TI con instancias bajo demanda. AutoDL es ideal para ejecuciones de ajuste fino, desarrollo y procesamiento por lotes sensible al coste donde las interrupciones ocasionales son aceptables.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cómo se compara Alibaba Cloud PAI con ejecutar Ollama para Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente. La aceleración proviene de optimizaciones específicas de Qwen en el runtime PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy.',
+          {
+            '@type': 'Question',
+            'name': '¿Cómo se compara la inferencia Qwen de Alibaba Cloud con ejecutar Ollama por mi cuenta?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente (probado: A100 80 GB, Qwen3 72B). La aceleración proviene del runtime de inferencia PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy, que incluye optimizaciones específicas de Qwen como kernels de atención especializados y ajuste de KV-cache que no están en la compilación pública de Ollama.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Existe un nivel gratuito para probar GPU en la nube china?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud: ¥300 de crédito gratuito (~30–40 horas de inferencia A10). Tencent Cloud: créditos promocionales similares. AutoDL: ¥10 de crédito gratuito (2–4 horas de A100). Ninguna plataforma ofrece un nivel de GPU permanentemente gratuito.',
+          {
+            '@type': 'Question',
+            'name': '¿Existe un nivel gratuito para probar GPU en la nube china?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud y Tencent Cloud suelen ofrecer promociones de crédito para cuentas nuevas (consulta la oferta vigente en la página de registro de cada proveedor — los importes cambian y no están garantizados). AutoDL ofrece un pequeño crédito gratuito de GPU para cuentas nuevas (aproximadamente 1–2 horas de A100, o varias horas en tarjetas más económicas). Ninguno ofrece un nivel de GPU permanentemente gratuito — todo el uso de GPU es tarifado.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué GPU es mejor para Qwen3 72B en plataformas de nube china?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A100 80 GB es la recomendada para Qwen3 72B — cabe el modelo completo en BF16 sin cuantización. Con Q4_K_M, también cabe en A100 40 GB. H100 80 GB es un 25–35 % más rápido pero cuesta 2–2,5 veces más por hora.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué GPU es mejor para Qwen3 72B en plataformas de nube china?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A100 80 GB es la GPU recomendada para inferencia de Qwen3 72B en una sola tarjeta — cabe el modelo completo en VRAM con precisión BF16 sin cuantización. Con cuantización Q4_K_M, Qwen3 72B (43,5 GB) también cabe en un A100 40 GB, con una calidad ligeramente inferior. H100 80 GB es un 25–35 % más rápido que A100 80 GB, pero cuesta 2–2,5 veces más por hora — solo vale la prima para cargas de trabajo de producción sostenida de alto rendimiento.',
+            },
           },
-        },
-      ],
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1221,39 +1173,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'أي مزوّد GPU سحابي صيني هو الأرخص؟',
-            a: 'AutoDL هو الأرخص بين الثلاثة: A100 80 GB بـ ¥5.98/ساعة مقابل ¥8–12/ساعة على Alibaba Cloud PAI و¥7.5–10/ساعة على Tencent Cloud TI. ← [تحقّق من أسعار AutoDL](https://www.autodl.com)',
-          },
-          {
-            q: 'أي مزوّد GPU سحابي صيني هو الأفضل لـ Qwen؟',
-            a: 'Alibaba Cloud PAI. بيئته PAI-EAS تشغّل نماذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على العتاد نفسه. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com)',
-          },
-          {
-            q: 'هل يمكنني استخدام Alibaba Cloud GPU من خارج الصين؟',
-            a: 'نعم. يقبل Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) بطاقات الائتمان الدولية (Visa، Mastercard، American Express) ويقدّم لوحة تحكم بالإنجليزية. لاحظ أن البوابة الدولية والبوابة المحلية الصينية لهما حسابات منفصلة وأسعار مختلفة — البوابة الدولية أغلى قليلًا، لكنها أسهل في الإعداد للمستخدمين غير الصينيين. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com)',
-          },
-          {
-            q: 'كيف يدفع شخص ليس لديه حساب مصرفي صيني عبر Alipay لاستخدام AutoDL أو Tencent Cloud؟',
-            a: 'لا تحتاج إلى حساب مصرفي صيني. سجّل في تطبيق Alipay بجواز سفرك ورقم هاتف أجنبي، ثم اربط بطاقة Visa أو Mastercard دولية مؤهَّلة مباشرة — هذا الربط المباشر حلّ محل خيار الدفع المسبق TourCard القديم لمعظم المستخدمين. إذا فشل الربط المباشر مع بطاقتك، يتيح لك خيار TourCard من Alipay الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا. بمجرد إعداد Alipay بهذه الطريقة، يعمل عند الدفع المحلي لـ AutoDL وTencent Cloud مثل البطاقة المصرفية الصينية تمامًا. هذا يحل مشكلة الدفع فقط — ولا يمنحك لوحة تحكم بالإنجليزية؛ لذلك استخدم [Alibaba Cloud International](https://www.alibabacloud.com) بدلاً من ذلك.',
-          },
-          {
-            q: 'هل AutoDL موثوق بما يكفي للاستدلال في الإنتاج؟',
-            a: 'AutoDL مصمَّم للبحث والتطوير، لا للاستدلال على مستوى الإنتاج. يفتقر إلى SLA رسمي وقد تُقطع نسخ spot بإشعار قصير. للاستدلال في الإنتاج بتوافر مضمون، استخدم Alibaba Cloud PAI أو Tencent Cloud TI بنسخ عند الطلب. يُعد AutoDL مثاليًا لتشغيلات الضبط الدقيق والتطوير والمعالجة الدُفعية الحساسة للتكلفة حيث تكون الانقطاعات العرضية مقبولة.',
-          },
-          {
-            q: 'كيف يُقارن استدلال Qwen لدى Alibaba Cloud بتشغيل Ollama بنفسي؟',
-            a: 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ (مُختبَر: A100 80 GB، Qwen3 72B). يأتي التسريع من بيئة استدلال PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy، والتي تتضمن تحسينات خاصة بـ Qwen مثل أنوية انتباه متخصصة وضبط KV-cache غير الموجودة في البناء العام لـ Ollama.',
-          },
-          {
-            q: 'هل توجد طبقة مجانية لتجربة GPU في السحابة الصينية؟',
-            a: 'يقدّم Alibaba Cloud رصيدًا مجانيًا بقيمة ¥300 للحسابات الجديدة (عبر [intl.aliyun.com](https://www.alibabacloud.com) للمستخدمين الدوليين)، يكفي لنحو 30–40 ساعة استدلال A10. ويقدّم Tencent Cloud أرصدة ترويجية مماثلة للمستخدمين الجدد. ويوفّر AutoDL رصيد GPU مجاني بقيمة ¥10 (2–4 ساعات من وقت A100). لا يقدّم أي منهم طبقة GPU مجانية دائمًا — كل استخدام GPU مُسعَّر.',
-          },
-          {
-            q: 'أي GPU أفضل لـ Qwen3 72B على منصات السحابة الصينية؟',
-            a: 'A100 80 GB هو الـ GPU الموصى به لاستدلال Qwen3 72B على كرت واحد — يتسع للنموذج كاملًا في VRAM بدقة BF16 دون تكميم. مع تكميم Q4_K_M، يتسع Qwen3 72B (43.5 GB) أيضًا في A100 40 GB، بجودة أدنى قليلًا. H100 80 GB أسرع بنسبة 25–35% من A100 80 GB، لكنه يكلف 2–2.5 ضعفًا لكل ساعة — يستحق العلاوة فقط لأحمال الإنتاج المستدامة عالية الإنتاجية.',
-          },
-        ],
+            { q: 'أي مزوّد GPU سحابي صيني هو الأرخص؟', a: 'AutoDL هو الأرخص بين الثلاثة: A100 80 GB بـ ¥5.98/ساعة مقابل ¥8–12/ساعة على Alibaba Cloud PAI و¥7.5–10/ساعة على Tencent Cloud TI. ← [تحقّق من أسعار AutoDL](https://www.autodl.com)' },
+            { q: 'أي مزوّد GPU سحابي صيني هو الأفضل لـ Qwen؟', a: 'Alibaba Cloud PAI. بيئته PAI-EAS تشغّل نماذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على العتاد نفسه. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: 'هل يمكنني استخدام Alibaba Cloud GPU من خارج الصين؟', a: 'نعم. يقبل Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) بطاقات الائتمان الدولية (Visa، Mastercard، American Express) ويقدّم لوحة تحكم بالإنجليزية. لاحظ أن البوابة الدولية والبوابة المحلية الصينية لهما حسابات منفصلة وأسعار مختلفة — البوابة الدولية أغلى قليلًا، لكنها أسهل في الإعداد للمستخدمين غير الصينيين. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: 'كيف يدفع شخص ليس لديه حساب مصرفي صيني عبر Alipay لاستخدام AutoDL أو Tencent Cloud؟', a: 'لا تحتاج إلى حساب مصرفي صيني. سجّل في تطبيق Alipay بجواز سفرك ورقم هاتف أجنبي، ثم اربط بطاقة Visa أو Mastercard دولية مؤهَّلة مباشرة — هذا الربط المباشر حلّ محل خيار الدفع المسبق TourCard القديم لمعظم المستخدمين. إذا فشل الربط المباشر مع بطاقتك، يتيح لك خيار TourCard من Alipay الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا. بمجرد إعداد Alipay بهذه الطريقة، يعمل عند الدفع المحلي لـ AutoDL وTencent Cloud مثل البطاقة المصرفية الصينية تمامًا. هذا يحل مشكلة الدفع فقط — ولا يمنحك لوحة تحكم بالإنجليزية؛ لذلك استخدم [Alibaba Cloud International](https://www.alibabacloud.com) بدلاً من ذلك.' },
+            { q: 'هل AutoDL موثوق بما يكفي للاستدلال في الإنتاج؟', a: 'AutoDL مصمَّم للبحث والتطوير، لا للاستدلال على مستوى الإنتاج. يفتقر إلى SLA رسمي وقد تُقطع نسخ spot بإشعار قصير. للاستدلال في الإنتاج بتوافر مضمون، استخدم Alibaba Cloud PAI أو Tencent Cloud TI بنسخ عند الطلب. يُعد AutoDL مثاليًا لتشغيلات الضبط الدقيق والتطوير والمعالجة الدُفعية الحساسة للتكلفة حيث تكون الانقطاعات العرضية مقبولة.' },
+            { q: 'كيف يُقارن استدلال Qwen لدى Alibaba Cloud بتشغيل Ollama بنفسي؟', a: 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ (مُختبَر: A100 80 GB، Qwen3 72B). يأتي التسريع من بيئة استدلال PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy، والتي تتضمن تحسينات خاصة بـ Qwen مثل أنوية انتباه متخصصة وضبط KV-cache غير الموجودة في البناء العام لـ Ollama.' },
+            { q: 'هل توجد طبقة مجانية لتجربة GPU في السحابة الصينية؟', a: 'يقدّم Alibaba Cloud رصيدًا مجانيًا بقيمة ¥300 للحسابات الجديدة (عبر [intl.aliyun.com](https://www.alibabacloud.com) للمستخدمين الدوليين)، يكفي لنحو 30–40 ساعة استدلال A10. ويقدّم Tencent Cloud أرصدة ترويجية مماثلة للمستخدمين الجدد. ويوفّر AutoDL رصيد GPU مجاني بقيمة ¥10 (2–4 ساعات من وقت A100). لا يقدّم أي منهم طبقة GPU مجانية دائمًا — كل استخدام GPU مُسعَّر.' },
+            { q: 'أي GPU أفضل لـ Qwen3 72B على منصات السحابة الصينية؟', a: 'A100 80 GB هو الـ GPU الموصى به لاستدلال Qwen3 72B على كرت واحد — يتسع للنموذج كاملًا في VRAM بدقة BF16 دون تكميم. مع تكميم Q4_K_M، يتسع Qwen3 72B (43.5 GB) أيضًا في A100 40 GB، بجودة أدنى قليلًا. H100 80 GB أسرع بنسبة 25–35% من A100 80 GB، لكنه يكلف 2–2.5 ضعفًا لكل ساعة — يستحق العلاوة فقط لأحمال الإنتاج المستدامة عالية الإنتاجية.' },
+            { q: 'كيف يدفع شخص بلا حساب مصرفي صيني عبر Alipay؟', a: 'لا حاجة لحساب مصرفي صيني. سجّل في Alipay بجواز سفر ورقم هاتف أجنبي، واربط مباشرة بطاقة Visa أو Mastercard دولية مؤهَّلة. إذا فشل الربط المباشر، يتيح خيار TourCard الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -1271,71 +1200,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'أي مزوّد GPU سحابي صيني هو الأرخص؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL هو الأرخص: A100 80 GB بـ ¥5.98/ساعة مقابل ¥8–12/ساعة على Alibaba Cloud PAI و¥7.5–10/ساعة على Tencent Cloud TI.',
+          {
+            '@type': 'Question',
+            'name': 'أي مزوّد GPU سحابي صيني هو الأرخص؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL هو الأرخص بين الثلاثة: A100 80 GB بـ ¥5.98/ساعة مقابل ¥8–12/ساعة على Alibaba Cloud PAI و¥7.5–10/ساعة على Tencent Cloud TI. ← [تحقّق من أسعار AutoDL](https://www.autodl.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'أي مزوّد GPU سحابي صيني هو الأفضل لـ Qwen؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud PAI. بيئته PAI-EAS تشغّل نماذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على العتاد نفسه.',
+          {
+            '@type': 'Question',
+            'name': 'أي مزوّد GPU سحابي صيني هو الأفضل لـ Qwen؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI. بيئته PAI-EAS تشغّل نماذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على العتاد نفسه. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكنني استخدام Alibaba Cloud GPU من خارج الصين؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'نعم. يقبل Alibaba Cloud International (intl.aliyun.com) بطاقات الائتمان الدولية ويقدّم لوحة تحكم بالإنجليزية. لاحظ أن البوابتين الدولية والمحلية الصينية لهما حسابات منفصلة وأسعار مختلفة قليلًا.',
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام Alibaba Cloud GPU من خارج الصين؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يقبل Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) بطاقات الائتمان الدولية (Visa، Mastercard، American Express) ويقدّم لوحة تحكم بالإنجليزية. لاحظ أن البوابة الدولية والبوابة المحلية الصينية لهما حسابات منفصلة وأسعار مختلفة — البوابة الدولية أغلى قليلًا، لكنها أسهل في الإعداد للمستخدمين غير الصينيين. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كيف يدفع شخص بلا حساب مصرفي صيني عبر Alipay؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا حاجة لحساب مصرفي صيني. سجّل في Alipay بجواز سفر ورقم هاتف أجنبي، واربط مباشرة بطاقة Visa أو Mastercard دولية مؤهَّلة. إذا فشل الربط المباشر، يتيح خيار TourCard الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا.',
+          {
+            '@type': 'Question',
+            'name': 'كيف يدفع شخص ليس لديه حساب مصرفي صيني عبر Alipay لاستخدام AutoDL أو Tencent Cloud؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا تحتاج إلى حساب مصرفي صيني. سجّل في تطبيق Alipay بجواز سفرك ورقم هاتف أجنبي، ثم اربط بطاقة Visa أو Mastercard دولية مؤهَّلة مباشرة — هذا الربط المباشر حلّ محل خيار الدفع المسبق TourCard القديم لمعظم المستخدمين. إذا فشل الربط المباشر مع بطاقتك، يتيح لك خيار TourCard من Alipay الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا. بمجرد إعداد Alipay بهذه الطريقة، يعمل عند الدفع المحلي لـ AutoDL وTencent Cloud مثل البطاقة المصرفية الصينية تمامًا. هذا يحل مشكلة الدفع فقط — ولا يمنحك لوحة تحكم بالإنجليزية؛ لذلك استخدم [Alibaba Cloud International](https://www.alibabacloud.com) بدلاً من ذلك.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل AutoDL موثوق بما يكفي للاستدلال في الإنتاج؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL مصمَّم للبحث والتطوير. يفتقر إلى SLA رسمي وقد تُقطع نسخ spot. للإنتاج بتوافر مضمون، استخدم Alibaba Cloud PAI أو Tencent Cloud TI بنسخ عند الطلب.',
+          {
+            '@type': 'Question',
+            'name': 'هل AutoDL موثوق بما يكفي للاستدلال في الإنتاج؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL مصمَّم للبحث والتطوير، لا للاستدلال على مستوى الإنتاج. يفتقر إلى SLA رسمي وقد تُقطع نسخ spot بإشعار قصير. للاستدلال في الإنتاج بتوافر مضمون، استخدم Alibaba Cloud PAI أو Tencent Cloud TI بنسخ عند الطلب. يُعد AutoDL مثاليًا لتشغيلات الضبط الدقيق والتطوير والمعالجة الدُفعية الحساسة للتكلفة حيث تكون الانقطاعات العرضية مقبولة.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كيف يُقارن Alibaba Cloud PAI بتشغيل Ollama لـ Qwen؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ. يأتي التسريع من تحسينات خاصة بـ Qwen في بيئة PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy.',
+          {
+            '@type': 'Question',
+            'name': 'كيف يُقارن استدلال Qwen لدى Alibaba Cloud بتشغيل Ollama بنفسي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ (مُختبَر: A100 80 GB، Qwen3 72B). يأتي التسريع من بيئة استدلال PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy، والتي تتضمن تحسينات خاصة بـ Qwen مثل أنوية انتباه متخصصة وضبط KV-cache غير الموجودة في البناء العام لـ Ollama.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل توجد طبقة مجانية لتجربة GPU في السحابة الصينية؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud: رصيد مجاني بقيمة ¥300 (نحو 30–40 ساعة استدلال A10). Tencent Cloud: أرصدة ترويجية مماثلة. AutoDL: رصيد مجاني بقيمة ¥10 (2–4 ساعات من A100). لا تقدّم أي منصة طبقة GPU مجانية دائمًا.',
+          {
+            '@type': 'Question',
+            'name': 'هل توجد طبقة مجانية لتجربة GPU في السحابة الصينية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يقدّم Alibaba Cloud رصيدًا مجانيًا بقيمة ¥300 للحسابات الجديدة (عبر [intl.aliyun.com](https://www.alibabacloud.com) للمستخدمين الدوليين)، يكفي لنحو 30–40 ساعة استدلال A10. ويقدّم Tencent Cloud أرصدة ترويجية مماثلة للمستخدمين الجدد. ويوفّر AutoDL رصيد GPU مجاني بقيمة ¥10 (2–4 ساعات من وقت A100). لا يقدّم أي منهم طبقة GPU مجانية دائمًا — كل استخدام GPU مُسعَّر.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'أي GPU أفضل لـ Qwen3 72B على منصات السحابة الصينية؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A100 80 GB هو الموصى به لـ Qwen3 72B — يتسع للنموذج كاملًا بـ BF16 دون تكميم. مع Q4_K_M، يتسع أيضًا في A100 40 GB. H100 80 GB أسرع بنسبة 25–35% لكنه يكلف 2–2.5 ضعفًا لكل ساعة.',
+          {
+            '@type': 'Question',
+            'name': 'أي GPU أفضل لـ Qwen3 72B على منصات السحابة الصينية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A100 80 GB هو الـ GPU الموصى به لاستدلال Qwen3 72B على كرت واحد — يتسع للنموذج كاملًا في VRAM بدقة BF16 دون تكميم. مع تكميم Q4_K_M، يتسع Qwen3 72B (43.5 GB) أيضًا في A100 40 GB، بجودة أدنى قليلًا. H100 80 GB أسرع بنسبة 25–35% من A100 80 GB، لكنه يكلف 2–2.5 ضعفًا لكل ساعة — يستحق العلاوة فقط لأحمال الإنتاج المستدامة عالية الإنتاجية.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'كيف يدفع شخص بلا حساب مصرفي صيني عبر Alipay؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا حاجة لحساب مصرفي صيني. سجّل في Alipay بجواز سفر ورقم هاتف أجنبي، واربط مباشرة بطاقة Visa أو Mastercard دولية مؤهَّلة. إذا فشل الربط المباشر، يتيح خيار TourCard الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -1664,39 +1601,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'Qual provedor de GPU em nuvem chinesa é o mais barato?',
-            a: 'O AutoDL é o mais barato dos três: uma A100 80 GB custa ¥5,98/h contra ¥8–12/h no Alibaba Cloud PAI e ¥7,5–10/h no Tencent Cloud TI, com tarifas de RTX 4090/RTX 3090 também mais baixas. O AutoDL cobra por segundo, sem contrato. → [Ver preços do AutoDL](https://www.autodl.com)',
-          },
-          {
-            q: 'Qual provedor de GPU em nuvem chinesa é o melhor para Qwen?',
-            a: 'O Alibaba Cloud PAI. Seu runtime PAI-EAS, codesenvolvido pela equipe Qwen da Alibaba DAMO Academy, executa modelos Qwen 20–30% mais rápido que o Ollama padrão no mesmo hardware. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com)',
-          },
-          {
-            q: 'Posso usar o Alibaba Cloud GPU de fora da China?',
-            a: 'Sim. O Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) aceita cartões de crédito internacionais (Visa, Mastercard, American Express) e oferece um console em inglês — o cadastro mais simples dos três provedores para usuários não chineses, já que AutoDL e Tencent Cloud exigem cartão bancário chinês ou Alipay em seus portais domésticos. Observe que o portal internacional e o portal doméstico chinês têm contas separadas e preços distintos. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com)',
-          },
-          {
-            q: 'Como alguém sem conta bancária chinesa paga com Alipay para usar AutoDL ou Tencent Cloud?',
-            a: 'Você não precisa de conta bancária chinesa. Cadastre-se no app do Alipay com passaporte e um número de telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional elegível — essa vinculação direta substituiu a antiga opção pré-paga TourCard para a maioria dos usuários. Se a vinculação direta falhar com seu cartão, a opção TourCard do Alipay permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias. Depois de configurado assim, o Alipay funciona igual a um cartão bancário chinês no checkout doméstico do AutoDL e do Tencent Cloud. Isso resolve só o pagamento — não te dá um console em inglês; para isso, use o [Alibaba Cloud International](https://www.alibabacloud.com).',
-          },
-          {
-            q: 'O AutoDL é confiável o suficiente para inferência em produção?',
-            a: 'O AutoDL foi projetado para pesquisa e desenvolvimento, não para inferência de nível produtivo. Faltam SLAs formais e as instâncias spot podem ser interrompidas com pouco aviso. Para inferência em produção com disponibilidade garantida, use Alibaba Cloud PAI ou Tencent Cloud TI com instâncias sob demanda. O AutoDL é ideal para execuções de fine-tuning, desenvolvimento e processamento em lote sensível a custo, em que interrupções ocasionais são aceitáveis.',
-          },
-          {
-            q: 'Como a inferência Qwen do Alibaba Cloud se compara a rodar o Ollama por conta própria?',
-            a: 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente (testado: A100 80 GB, Qwen3 72B). A aceleração vem do runtime de inferência PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy, que inclui otimizações específicas do Qwen como kernels de atenção especializados e ajuste de KV-cache que não estão na compilação pública do Ollama.',
-          },
-          {
-            q: 'Existe um nível gratuito para testar GPU na nuvem chinesa?',
-            a: 'O Alibaba Cloud oferece ¥300 de crédito gratuito para novas contas (via [intl.aliyun.com](https://www.alibabacloud.com) para usuários internacionais), suficiente para cerca de 30–40 horas de inferência A10. O Tencent Cloud oferece créditos promocionais semelhantes para novos usuários. O AutoDL fornece ¥10 de crédito de GPU gratuito (2–4 horas de A100). Nenhum oferece um nível de GPU permanentemente gratuito — todo uso de GPU é tarifado.',
-          },
-          {
-            q: 'Qual GPU é melhor para o Qwen3 72B em plataformas de nuvem chinesa?',
-            a: 'A A100 80 GB é a GPU recomendada para inferência do Qwen3 72B em uma única placa — o modelo completo cabe na VRAM em precisão BF16 sem quantização. Com quantização Q4_K_M, o Qwen3 72B (43,5 GB) também cabe em uma A100 40 GB, com qualidade um pouco inferior. A H100 80 GB é 25–35% mais rápida que a A100 80 GB, mas custa 2–2,5 vezes mais por hora — só vale o prêmio para cargas de produção sustentada de alta vazão.',
-          },
-        ],
+            { q: 'Qual provedor de GPU em nuvem chinesa é o mais barato?', a: 'O AutoDL é o mais barato dos três: uma A100 80 GB custa ¥5,98/h contra ¥8–12/h no Alibaba Cloud PAI e ¥7,5–10/h no Tencent Cloud TI, com tarifas de RTX 4090/RTX 3090 também mais baixas. O AutoDL cobra por segundo, sem contrato. → [Ver preços do AutoDL](https://www.autodl.com)' },
+            { q: 'Qual provedor de GPU em nuvem chinesa é o melhor para Qwen?', a: 'O Alibaba Cloud PAI. Seu runtime PAI-EAS, codesenvolvido pela equipe Qwen da Alibaba DAMO Academy, executa modelos Qwen 20–30% mais rápido que o Ollama padrão no mesmo hardware. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: 'Posso usar o Alibaba Cloud GPU de fora da China?', a: 'Sim. O Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) aceita cartões de crédito internacionais (Visa, Mastercard, American Express) e oferece um console em inglês — o cadastro mais simples dos três provedores para usuários não chineses, já que AutoDL e Tencent Cloud exigem cartão bancário chinês ou Alipay em seus portais domésticos. Observe que o portal internacional e o portal doméstico chinês têm contas separadas e preços distintos. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: 'Como alguém sem conta bancária chinesa paga com Alipay para usar AutoDL ou Tencent Cloud?', a: 'Você não precisa de conta bancária chinesa. Cadastre-se no app do Alipay com passaporte e um número de telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional elegível — essa vinculação direta substituiu a antiga opção pré-paga TourCard para a maioria dos usuários. Se a vinculação direta falhar com seu cartão, a opção TourCard do Alipay permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias. Depois de configurado assim, o Alipay funciona igual a um cartão bancário chinês no checkout doméstico do AutoDL e do Tencent Cloud. Isso resolve só o pagamento — não te dá um console em inglês; para isso, use o [Alibaba Cloud International](https://www.alibabacloud.com).' },
+            { q: 'O AutoDL é confiável o suficiente para inferência em produção?', a: 'O AutoDL foi projetado para pesquisa e desenvolvimento, não para inferência de nível produtivo. Faltam SLAs formais e as instâncias spot podem ser interrompidas com pouco aviso. Para inferência em produção com disponibilidade garantida, use Alibaba Cloud PAI ou Tencent Cloud TI com instâncias sob demanda. O AutoDL é ideal para execuções de fine-tuning, desenvolvimento e processamento em lote sensível a custo, em que interrupções ocasionais são aceitáveis.' },
+            { q: 'Como a inferência Qwen do Alibaba Cloud se compara a rodar o Ollama por conta própria?', a: 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente (testado: A100 80 GB, Qwen3 72B). A aceleração vem do runtime de inferência PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy, que inclui otimizações específicas do Qwen como kernels de atenção especializados e ajuste de KV-cache que não estão na compilação pública do Ollama.' },
+            { q: 'Existe um nível gratuito para testar GPU na nuvem chinesa?', a: 'O Alibaba Cloud oferece ¥300 de crédito gratuito para novas contas (via [intl.aliyun.com](https://www.alibabacloud.com) para usuários internacionais), suficiente para cerca de 30–40 horas de inferência A10. O Tencent Cloud oferece créditos promocionais semelhantes para novos usuários. O AutoDL fornece ¥10 de crédito de GPU gratuito (2–4 horas de A100). Nenhum oferece um nível de GPU permanentemente gratuito — todo uso de GPU é tarifado.' },
+            { q: 'Qual GPU é melhor para o Qwen3 72B em plataformas de nuvem chinesa?', a: 'A A100 80 GB é a GPU recomendada para inferência do Qwen3 72B em uma única placa — o modelo completo cabe na VRAM em precisão BF16 sem quantização. Com quantização Q4_K_M, o Qwen3 72B (43,5 GB) também cabe em uma A100 40 GB, com qualidade um pouco inferior. A H100 80 GB é 25–35% mais rápida que a A100 80 GB, mas custa 2–2,5 vezes mais por hora — só vale o prêmio para cargas de produção sustentada de alta vazão.' },
+            { q: 'Como pagar com Alipay sem conta bancária chinesa?', a: 'Não é preciso conta bancária chinesa. Cadastre-se no Alipay com passaporte e telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional. Se a vinculação direta falhar, a opção TourCard permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -1713,71 +1627,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qual provedor de GPU em nuvem chinesa é o mais barato?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O AutoDL é o mais barato: uma A100 80 GB custa ¥5,98/h contra ¥8–12/h no Alibaba Cloud PAI e ¥7,5–10/h no Tencent Cloud TI.',
+          {
+            '@type': 'Question',
+            'name': 'Qual provedor de GPU em nuvem chinesa é o mais barato?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O AutoDL é o mais barato dos três: uma A100 80 GB custa ¥5,98/h contra ¥8–12/h no Alibaba Cloud PAI e ¥7,5–10/h no Tencent Cloud TI, com tarifas de RTX 4090/RTX 3090 também mais baixas. O AutoDL cobra por segundo, sem contrato. → [Ver preços do AutoDL](https://www.autodl.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qual provedor de GPU em nuvem chinesa é o melhor para Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O Alibaba Cloud PAI. Seu runtime PAI-EAS executa modelos Qwen 20–30% mais rápido que o Ollama padrão no mesmo hardware.',
+          {
+            '@type': 'Question',
+            'name': 'Qual provedor de GPU em nuvem chinesa é o melhor para Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Alibaba Cloud PAI. Seu runtime PAI-EAS, codesenvolvido pela equipe Qwen da Alibaba DAMO Academy, executa modelos Qwen 20–30% mais rápido que o Ollama padrão no mesmo hardware. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Posso usar o Alibaba Cloud GPU de fora da China?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sim. O Alibaba Cloud International (intl.aliyun.com) aceita cartões de crédito internacionais e oferece um console em inglês. Observe que os portais internacional e doméstico chinês têm contas separadas e preços um pouco distintos.',
+          {
+            '@type': 'Question',
+            'name': 'Posso usar o Alibaba Cloud GPU de fora da China?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. O Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) aceita cartões de crédito internacionais (Visa, Mastercard, American Express) e oferece um console em inglês — o cadastro mais simples dos três provedores para usuários não chineses, já que AutoDL e Tencent Cloud exigem cartão bancário chinês ou Alipay em seus portais domésticos. Observe que o portal internacional e o portal doméstico chinês têm contas separadas e preços distintos. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Como pagar com Alipay sem conta bancária chinesa?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não é preciso conta bancária chinesa. Cadastre-se no Alipay com passaporte e telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional. Se a vinculação direta falhar, a opção TourCard permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias.',
+          {
+            '@type': 'Question',
+            'name': 'Como alguém sem conta bancária chinesa paga com Alipay para usar AutoDL ou Tencent Cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Você não precisa de conta bancária chinesa. Cadastre-se no app do Alipay com passaporte e um número de telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional elegível — essa vinculação direta substituiu a antiga opção pré-paga TourCard para a maioria dos usuários. Se a vinculação direta falhar com seu cartão, a opção TourCard do Alipay permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias. Depois de configurado assim, o Alipay funciona igual a um cartão bancário chinês no checkout doméstico do AutoDL e do Tencent Cloud. Isso resolve só o pagamento — não te dá um console em inglês; para isso, use o [Alibaba Cloud International](https://www.alibabacloud.com).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O AutoDL é confiável o suficiente para inferência em produção?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O AutoDL foi projetado para pesquisa e desenvolvimento. Faltam SLAs formais e as instâncias spot podem ser interrompidas. Para produção com disponibilidade garantida, use Alibaba Cloud PAI ou Tencent Cloud TI com instâncias sob demanda.',
+          {
+            '@type': 'Question',
+            'name': 'O AutoDL é confiável o suficiente para inferência em produção?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O AutoDL foi projetado para pesquisa e desenvolvimento, não para inferência de nível produtivo. Faltam SLAs formais e as instâncias spot podem ser interrompidas com pouco aviso. Para inferência em produção com disponibilidade garantida, use Alibaba Cloud PAI ou Tencent Cloud TI com instâncias sob demanda. O AutoDL é ideal para execuções de fine-tuning, desenvolvimento e processamento em lote sensível a custo, em que interrupções ocasionais são aceitáveis.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Como o Alibaba Cloud PAI se compara a rodar o Ollama para Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente. A aceleração vem de otimizações específicas do Qwen no runtime PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy.',
+          {
+            '@type': 'Question',
+            'name': 'Como a inferência Qwen do Alibaba Cloud se compara a rodar o Ollama por conta própria?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente (testado: A100 80 GB, Qwen3 72B). A aceleração vem do runtime de inferência PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy, que inclui otimizações específicas do Qwen como kernels de atenção especializados e ajuste de KV-cache que não estão na compilação pública do Ollama.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Existe um nível gratuito para testar GPU na nuvem chinesa?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud: ¥300 de crédito gratuito (~30–40 horas de inferência A10). Tencent Cloud: créditos promocionais semelhantes. AutoDL: ¥10 de crédito gratuito (2–4 horas de A100). Nenhuma plataforma oferece um nível de GPU permanentemente gratuito.',
+          {
+            '@type': 'Question',
+            'name': 'Existe um nível gratuito para testar GPU na nuvem chinesa?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Alibaba Cloud oferece ¥300 de crédito gratuito para novas contas (via [intl.aliyun.com](https://www.alibabacloud.com) para usuários internacionais), suficiente para cerca de 30–40 horas de inferência A10. O Tencent Cloud oferece créditos promocionais semelhantes para novos usuários. O AutoDL fornece ¥10 de crédito de GPU gratuito (2–4 horas de A100). Nenhum oferece um nível de GPU permanentemente gratuito — todo uso de GPU é tarifado.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qual GPU é melhor para o Qwen3 72B em plataformas de nuvem chinesa?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A A100 80 GB é a recomendada para o Qwen3 72B — o modelo completo cabe em BF16 sem quantização. Com Q4_K_M, também cabe em uma A100 40 GB. A H100 80 GB é 25–35% mais rápida, mas custa 2–2,5 vezes mais por hora.',
+          {
+            '@type': 'Question',
+            'name': 'Qual GPU é melhor para o Qwen3 72B em plataformas de nuvem chinesa?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A A100 80 GB é a GPU recomendada para inferência do Qwen3 72B em uma única placa — o modelo completo cabe na VRAM em precisão BF16 sem quantização. Com quantização Q4_K_M, o Qwen3 72B (43,5 GB) também cabe em uma A100 40 GB, com qualidade um pouco inferior. A H100 80 GB é 25–35% mais rápida que a A100 80 GB, mas custa 2–2,5 vezes mais por hora — só vale o prêmio para cargas de produção sustentada de alta vazão.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Como pagar com Alipay sem conta bancária chinesa?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não é preciso conta bancária chinesa. Cadastre-se no Alipay com passaporte e telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional. Se a vinculação direta falhar, a opção TourCard permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -2030,13 +1952,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Welcher chinesische Cloud-GPU-Anbieter ist am günstigsten?', a: 'AutoDL ist am günstigsten: eine A100 80 GB kostet ¥5,98/Std. gegenüber ¥8–12/Std. bei Alibaba Cloud PAI und ¥7,5–10/Std. bei Tencent Cloud TI. → [AutoDL-Preise ansehen](https://www.autodl.com)' },
-          { q: 'Welcher chinesische Cloud-GPU-Anbieter ist am besten für Qwen?', a: 'Alibaba Cloud PAI. Die PAI-EAS-Laufzeit läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf derselben Hardware. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)' },
-          { q: 'Kann ich Alibaba Cloud GPU von außerhalb Chinas nutzen?', a: 'Ja. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) akzeptiert internationale Kreditkarten (Visa, Mastercard, American Express) und bietet eine englischsprachige Konsole. Das International-Portal und das China-Inlandsportal haben separate Konten und unterschiedliche Preise — das International-Portal ist etwas teurer, aber für Nicht-China-Nutzer einfacher einzurichten. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)' },
-          { q: 'Wie zahlt jemand ohne chinesisches Bankkonto per Alipay für AutoDL oder Tencent Cloud?', a: 'Sie brauchen kein chinesisches Bankkonto. Registrieren Sie sich in der Alipay-App mit Reisepass und ausländischer Telefonnummer und verknüpfen Sie direkt eine berechtigte internationale Visa- oder Mastercard — diese direkte Kartenverknüpfung hat die frühere TourCard-Prepaid-Lösung für die meisten Nutzer abgelöst. Schlägt die direkte Verknüpfung fehl, erlaubt die TourCard-Option von Alipay das Aufladen eines 90 Tage gültigen Alipay-Guthabens von einer internationalen Karte aus. Einmal so eingerichtet, funktioniert Alipay beim inländischen Checkout von AutoDL und Tencent Cloud genauso wie eine chinesische Bankkarte. Das löst nur die Zahlung — für eine englischsprachige Konsole nutzen Sie stattdessen [Alibaba Cloud International](https://www.alibabacloud.com).' },
-          { q: 'Wie vergleicht sich Alibaba Cloud PAI mit eigenem Ollama-Betrieb für Qwen?', a: 'Alibaba Cloud PAI-EAS läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf vergleichbarer Hardware (getestet: A100 80 GB, Qwen3 72B). Der Geschwindigkeitsvorteil kommt aus der PAI-EAS-Inferenz-Runtime, die vom Alibaba DAMO Academy Qwen-Team entwickelt wurde.' },
-          { q: 'Gibt es eine kostenlose Testmöglichkeit für chinesische Cloud-GPUs?', a: 'Alibaba Cloud: ¥300 Startguthaben für neue Konten über [intl.aliyun.com](https://www.alibabacloud.com) (ca. 30–40 Stunden A10-Inferenz). Tencent Cloud: ähnliche Promotions für neue Nutzer. AutoDL: ¥10 GPU-Guthaben (2–4 Stunden A100). Kein dauerhaft kostenloses GPU-Kontingent bei keinem Anbieter.' },
-        ],
+            { q: 'Welcher chinesische Cloud-GPU-Anbieter ist am günstigsten?', a: 'AutoDL ist am günstigsten: eine A100 80 GB kostet ¥5,98/Std. gegenüber ¥8–12/Std. bei Alibaba Cloud PAI und ¥7,5–10/Std. bei Tencent Cloud TI. → [AutoDL-Preise ansehen](https://www.autodl.com)' },
+            { q: 'Welcher chinesische Cloud-GPU-Anbieter ist am besten für Qwen?', a: 'Alibaba Cloud PAI. Die PAI-EAS-Laufzeit läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf derselben Hardware. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)' },
+            { q: 'Kann ich Alibaba Cloud GPU von außerhalb Chinas nutzen?', a: 'Ja. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) akzeptiert internationale Kreditkarten (Visa, Mastercard, American Express) und bietet eine englischsprachige Konsole. Das International-Portal und das China-Inlandsportal haben separate Konten und unterschiedliche Preise — das International-Portal ist etwas teurer, aber für Nicht-China-Nutzer einfacher einzurichten. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)' },
+            { q: 'Wie zahlt jemand ohne chinesisches Bankkonto per Alipay für AutoDL oder Tencent Cloud?', a: 'Sie brauchen kein chinesisches Bankkonto. Registrieren Sie sich in der Alipay-App mit Reisepass und ausländischer Telefonnummer und verknüpfen Sie direkt eine berechtigte internationale Visa- oder Mastercard — diese direkte Kartenverknüpfung hat die frühere TourCard-Prepaid-Lösung für die meisten Nutzer abgelöst. Schlägt die direkte Verknüpfung fehl, erlaubt die TourCard-Option von Alipay das Aufladen eines 90 Tage gültigen Alipay-Guthabens von einer internationalen Karte aus. Einmal so eingerichtet, funktioniert Alipay beim inländischen Checkout von AutoDL und Tencent Cloud genauso wie eine chinesische Bankkarte. Das löst nur die Zahlung — für eine englischsprachige Konsole nutzen Sie stattdessen [Alibaba Cloud International](https://www.alibabacloud.com).' },
+            { q: 'Wie vergleicht sich Alibaba Cloud PAI mit eigenem Ollama-Betrieb für Qwen?', a: 'Alibaba Cloud PAI-EAS läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf vergleichbarer Hardware (getestet: A100 80 GB, Qwen3 72B). Der Geschwindigkeitsvorteil kommt aus der PAI-EAS-Inferenz-Runtime, die vom Alibaba DAMO Academy Qwen-Team entwickelt wurde.' },
+            { q: 'Gibt es eine kostenlose Testmöglichkeit für chinesische Cloud-GPUs?', a: 'Alibaba Cloud: ¥300 Startguthaben für neue Konten über [intl.aliyun.com](https://www.alibabacloud.com) (ca. 30–40 Stunden A10-Inferenz). Tencent Cloud: ähnliche Promotions für neue Nutzer. AutoDL: ¥10 GPU-Guthaben (2–4 Stunden A100). Kein dauerhaft kostenloses GPU-Kontingent bei keinem Anbieter.' },
+          ],
       },
       internalLinks: {
         id: 'see-also',
@@ -2052,11 +1974,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Welcher chinesische Cloud-GPU-Anbieter ist am günstigsten?', acceptedAnswer: { '@type': 'Answer', text: 'AutoDL: eine A100 80 GB kostet ¥5,98/Std. gegenüber ¥8–12/Std. bei Alibaba Cloud PAI und ¥7,5–10/Std. bei Tencent Cloud TI.' } },
-        { '@type': 'Question', name: 'Welcher chinesische Cloud-GPU-Anbieter ist am besten für Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'Alibaba Cloud PAI — die PAI-EAS-Laufzeit ist 20–30 % schneller als Standard-Ollama auf derselben Hardware.' } },
-        { '@type': 'Question', name: 'Kann ich Alibaba Cloud GPU von außerhalb Chinas nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Alibaba Cloud International (alibabacloud.com) akzeptiert internationale Kreditkarten und bietet eine englischsprachige Konsole.' } },
-        { '@type': 'Question', name: 'Wie zahlt man ohne chinesisches Bankkonto per Alipay?', acceptedAnswer: { '@type': 'Answer', text: 'Kein chinesisches Bankkonto nötig. Registrierung in Alipay mit Reisepass und ausländischer Telefonnummer, dann direkte Verknüpfung einer internationalen Visa- oder Mastercard. Schlägt das fehl, erlaubt die TourCard-Option das Aufladen eines 90 Tage gültigen Alipay-Guthabens von einer internationalen Karte.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Welcher chinesische Cloud-GPU-Anbieter ist am günstigsten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL ist am günstigsten: eine A100 80 GB kostet ¥5,98/Std. gegenüber ¥8–12/Std. bei Alibaba Cloud PAI und ¥7,5–10/Std. bei Tencent Cloud TI. → [AutoDL-Preise ansehen](https://www.autodl.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welcher chinesische Cloud-GPU-Anbieter ist am besten für Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI. Die PAI-EAS-Laufzeit läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf derselben Hardware. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Kann ich Alibaba Cloud GPU von außerhalb Chinas nutzen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) akzeptiert internationale Kreditkarten (Visa, Mastercard, American Express) und bietet eine englischsprachige Konsole. Das International-Portal und das China-Inlandsportal haben separate Konten und unterschiedliche Preise — das International-Portal ist etwas teurer, aber für Nicht-China-Nutzer einfacher einzurichten. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie zahlt jemand ohne chinesisches Bankkonto per Alipay für AutoDL oder Tencent Cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sie brauchen kein chinesisches Bankkonto. Registrieren Sie sich in der Alipay-App mit Reisepass und ausländischer Telefonnummer und verknüpfen Sie direkt eine berechtigte internationale Visa- oder Mastercard — diese direkte Kartenverknüpfung hat die frühere TourCard-Prepaid-Lösung für die meisten Nutzer abgelöst. Schlägt die direkte Verknüpfung fehl, erlaubt die TourCard-Option von Alipay das Aufladen eines 90 Tage gültigen Alipay-Guthabens von einer internationalen Karte aus. Einmal so eingerichtet, funktioniert Alipay beim inländischen Checkout von AutoDL und Tencent Cloud genauso wie eine chinesische Bankkarte. Das löst nur die Zahlung — für eine englischsprachige Konsole nutzen Sie stattdessen [Alibaba Cloud International](https://www.alibabacloud.com).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie vergleicht sich Alibaba Cloud PAI mit eigenem Ollama-Betrieb für Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI-EAS läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf vergleichbarer Hardware (getestet: A100 80 GB, Qwen3 72B). Der Geschwindigkeitsvorteil kommt aus der PAI-EAS-Inferenz-Runtime, die vom Alibaba DAMO Academy Qwen-Team entwickelt wurde.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Gibt es eine kostenlose Testmöglichkeit für chinesische Cloud-GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud: ¥300 Startguthaben für neue Konten über [intl.aliyun.com](https://www.alibabacloud.com) (ca. 30–40 Stunden A10-Inferenz). Tencent Cloud: ähnliche Promotions für neue Nutzer. AutoDL: ¥10 GPU-Guthaben (2–4 Stunden A100). Kein dauerhaft kostenloses GPU-Kontingent bei keinem Anbieter.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -2294,13 +2260,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quel fournisseur cloud GPU chinois est le moins cher ?', a: 'AutoDL est le moins cher : une A100 80 Go coûte ¥5,98/h contre ¥8–12/h chez Alibaba Cloud PAI et ¥7,5–10/h chez Tencent Cloud TI. → [Voir les prix AutoDL](https://www.autodl.com)' },
-          { q: 'Quel fournisseur cloud GPU chinois est le meilleur pour Qwen ?', a: 'Alibaba Cloud PAI. Son runtime PAI-EAS exécute les modèles Qwen 20–30 % plus vite qu\'Ollama standard sur le même matériel. → [Voir l\'offre Alibaba Cloud](https://www.alibabacloud.com)' },
-          { q: 'Puis-je utiliser Alibaba Cloud GPU depuis l\'extérieur de la Chine ?', a: 'Oui. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) accepte les cartes bancaires internationales (Visa, Mastercard, American Express) et propose une console en anglais. Le portail International et le portail domestique chinois ont des comptes séparés et des tarifs légèrement différents. → [Voir l\'offre Alibaba Cloud](https://www.alibabacloud.com)' },
-          { q: 'Comment payer via Alipay sans compte bancaire chinois, pour utiliser AutoDL ou Tencent Cloud ?', a: 'Aucun compte bancaire chinois n\'est nécessaire. Inscrivez-vous dans l\'app Alipay avec un passeport et un numéro de téléphone étranger, puis liez directement une carte Visa ou Mastercard internationale éligible — cette liaison directe a remplacé l\'ancienne option prépayée TourCard pour la plupart des utilisateurs. Si la liaison directe échoue avec votre carte, l\'option TourCard d\'Alipay permet de prépayer depuis une carte internationale vers un solde Alipay valable 90 jours. Une fois configuré ainsi, Alipay fonctionne comme une carte bancaire chinoise au paiement domestique d\'AutoDL et de Tencent Cloud. Cela ne résout que le paiement — pas de console en anglais ; pour cela, utilisez plutôt [Alibaba Cloud International](https://www.alibabacloud.com).' },
-          { q: 'AutoDL est-il fiable pour la production ?', a: 'AutoDL est conçu pour la recherche et le développement. Il manque de SLA formels et les instances spot peuvent être interrompues. Pour la production, utilisez Alibaba Cloud PAI ou Tencent Cloud TI avec des instances on-demand.' },
-          { q: 'Y a-t-il un accès gratuit pour tester les GPU cloud chinois ?', a: 'Alibaba Cloud : ¥300 de crédit gratuit pour les nouveaux comptes ([intl.aliyun.com](https://www.alibabacloud.com)), soit ~30–40 heures d\'inférence A10. AutoDL : ¥10 de crédit GPU (2–4 heures d\'A100). Aucun niveau gratuit permanent sur aucune plateforme.' },
-        ],
+            { q: 'Quel fournisseur cloud GPU chinois est le moins cher ?', a: 'AutoDL est le moins cher : une A100 80 Go coûte ¥5,98/h contre ¥8–12/h chez Alibaba Cloud PAI et ¥7,5–10/h chez Tencent Cloud TI. → [Voir les prix AutoDL](https://www.autodl.com)' },
+            { q: 'Quel fournisseur cloud GPU chinois est le meilleur pour Qwen ?', a: 'Alibaba Cloud PAI. Son runtime PAI-EAS exécute les modèles Qwen 20–30 % plus vite qu\'Ollama standard sur le même matériel. → [Voir l\'offre Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: 'Puis-je utiliser Alibaba Cloud GPU depuis l\'extérieur de la Chine ?', a: 'Oui. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) accepte les cartes bancaires internationales (Visa, Mastercard, American Express) et propose une console en anglais. Le portail International et le portail domestique chinois ont des comptes séparés et des tarifs légèrement différents. → [Voir l\'offre Alibaba Cloud](https://www.alibabacloud.com)' },
+            { q: 'Comment payer via Alipay sans compte bancaire chinois, pour utiliser AutoDL ou Tencent Cloud ?', a: 'Aucun compte bancaire chinois n\'est nécessaire. Inscrivez-vous dans l\'app Alipay avec un passeport et un numéro de téléphone étranger, puis liez directement une carte Visa ou Mastercard internationale éligible — cette liaison directe a remplacé l\'ancienne option prépayée TourCard pour la plupart des utilisateurs. Si la liaison directe échoue avec votre carte, l\'option TourCard d\'Alipay permet de prépayer depuis une carte internationale vers un solde Alipay valable 90 jours. Une fois configuré ainsi, Alipay fonctionne comme une carte bancaire chinoise au paiement domestique d\'AutoDL et de Tencent Cloud. Cela ne résout que le paiement — pas de console en anglais ; pour cela, utilisez plutôt [Alibaba Cloud International](https://www.alibabacloud.com).' },
+            { q: 'AutoDL est-il fiable pour la production ?', a: 'AutoDL est conçu pour la recherche et le développement. Il manque de SLA formels et les instances spot peuvent être interrompues. Pour la production, utilisez Alibaba Cloud PAI ou Tencent Cloud TI avec des instances on-demand.' },
+            { q: 'Y a-t-il un accès gratuit pour tester les GPU cloud chinois ?', a: 'Alibaba Cloud : ¥300 de crédit gratuit pour les nouveaux comptes ([intl.aliyun.com](https://www.alibabacloud.com)), soit ~30–40 heures d\'inférence A10. AutoDL : ¥10 de crédit GPU (2–4 heures d\'A100). Aucun niveau gratuit permanent sur aucune plateforme.' },
+          ],
       },
       internalLinks: {
         id: 'see-also',
@@ -2316,11 +2282,55 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'Quel fournisseur cloud GPU chinois est le moins cher ?', acceptedAnswer: { '@type': 'Answer', text: 'AutoDL : une A100 80 Go coûte ¥5,98/h contre ¥8–12/h chez Alibaba Cloud PAI et ¥7,5–10/h chez Tencent Cloud TI.' } },
-        { '@type': 'Question', name: 'Quel fournisseur cloud GPU chinois est le meilleur pour Qwen ?', acceptedAnswer: { '@type': 'Answer', text: 'Alibaba Cloud PAI — son runtime PAI-EAS est 20–30 % plus rapide qu\'Ollama standard sur le même matériel.' } },
-        { '@type': 'Question', name: 'Puis-je utiliser Alibaba Cloud depuis l\'extérieur de la Chine ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Alibaba Cloud International accepte les cartes internationales et propose une console en anglais.' } },
-        { '@type': 'Question', name: 'Comment payer via Alipay sans compte bancaire chinois ?', acceptedAnswer: { '@type': 'Answer', text: 'Aucun compte bancaire chinois n\'est nécessaire. Inscription dans Alipay avec passeport et numéro de téléphone étranger, puis liaison directe d\'une carte Visa ou Mastercard internationale. En cas d\'échec, l\'option TourCard permet de prépayer depuis une carte internationale vers un solde Alipay valable 90 jours.' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Quel fournisseur cloud GPU chinois est le moins cher ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL est le moins cher : une A100 80 Go coûte ¥5,98/h contre ¥8–12/h chez Alibaba Cloud PAI et ¥7,5–10/h chez Tencent Cloud TI. → [Voir les prix AutoDL](https://www.autodl.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel fournisseur cloud GPU chinois est le meilleur pour Qwen ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI. Son runtime PAI-EAS exécute les modèles Qwen 20–30 % plus vite qu\'Ollama standard sur le même matériel. → [Voir l\'offre Alibaba Cloud](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser Alibaba Cloud GPU depuis l\'extérieur de la Chine ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) accepte les cartes bancaires internationales (Visa, Mastercard, American Express) et propose une console en anglais. Le portail International et le portail domestique chinois ont des comptes séparés et des tarifs légèrement différents. → [Voir l\'offre Alibaba Cloud](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment payer via Alipay sans compte bancaire chinois, pour utiliser AutoDL ou Tencent Cloud ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aucun compte bancaire chinois n\'est nécessaire. Inscrivez-vous dans l\'app Alipay avec un passeport et un numéro de téléphone étranger, puis liez directement une carte Visa ou Mastercard internationale éligible — cette liaison directe a remplacé l\'ancienne option prépayée TourCard pour la plupart des utilisateurs. Si la liaison directe échoue avec votre carte, l\'option TourCard d\'Alipay permet de prépayer depuis une carte internationale vers un solde Alipay valable 90 jours. Une fois configuré ainsi, Alipay fonctionne comme une carte bancaire chinoise au paiement domestique d\'AutoDL et de Tencent Cloud. Cela ne résout que le paiement — pas de console en anglais ; pour cela, utilisez plutôt [Alibaba Cloud International](https://www.alibabacloud.com).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AutoDL est-il fiable pour la production ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL est conçu pour la recherche et le développement. Il manque de SLA formels et les instances spot peuvent être interrompues. Pour la production, utilisez Alibaba Cloud PAI ou Tencent Cloud TI avec des instances on-demand.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Y a-t-il un accès gratuit pour tester les GPU cloud chinois ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud : ¥300 de crédit gratuit pour les nouveaux comptes ([intl.aliyun.com](https://www.alibabacloud.com)), soit ~30–40 heures d\'inférence A10. AutoDL : ¥10 de crédit GPU (2–4 heures d\'A100). Aucun niveau gratuit permanent sur aucune plateforme.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -2558,13 +2568,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'どの中国クラウドGPUプロバイダーが最も安いですか？', a: 'AutoDLが最も安く、A100 80GBは¥5.98/時間です（Alibaba Cloud PAIは¥8〜12/時間、テンセントクラウドTIは¥7.5〜10/時間）。→ [AutoDLの料金を見る](https://www.autodl.com)' },
-          { q: 'どの中国クラウドGPUプロバイダーがQwenに最も適していますか？', a: 'Alibaba Cloud PAIです。PAI-EASランタイムは同一ハードウェアで標準Ollamaより20〜30%高速にQwenモデルを実行します。→ [Alibaba Cloudの特典を見る](https://www.alibabacloud.com)' },
-          { q: '中国外からAlibaba Cloud GPUを使えますか？', a: 'はい。Alibaba Cloud International（[alibabacloud.com](https://www.alibabacloud.com)）は国際クレジットカード（Visa、Mastercard、American Express）に対応し、英語コンソールを提供します。国際版と中国国内版は別アカウントで、若干価格が異なります。→ [Alibaba Cloudの特典を見る](https://www.alibabacloud.com)' },
-          { q: '中国の銀行口座を持たない外国人がAutoDLやテンセントクラウド利用のためAlipayで支払うにはどうすればいいですか？', a: '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayアプリに登録し、対応する海外発行のVisaまたはMastercardを直接紐付けます——この直接紐付けにより、従来のTourCardプリペイド方式は多くのユーザーにとって不要になりました。カードの直接紐付けに失敗した場合は、Alipayの「TourCard」オプションで海外カードから90日間有効なAlipay残高にチャージすることもできます。こうして設定したAlipayは、AutoDLやテンセントクラウドの国内決済で中国の銀行カードと同じように使えます。ただしこれは支払い手段の解決にすぎず、英語コンソールは得られません——それには代わりに[Alibaba Cloud International](https://www.alibabacloud.com)を利用してください。' },
-          { q: 'AutoDLは本番推論に使えますか？', a: 'AutoDLは研究・開発向けで、正式なSLAがなく、スポットインスタンスは予告なく中断される可能性があります。本番環境にはAlibaba Cloud PAIまたはテンセントクラウドTIのオンデマンドインスタンスが適しています。' },
-          { q: 'Alibaba Cloud PAIはQwen推論でOllamaより何倍速いですか？', a: 'PAI-EASはA100 80GB上でQwen3 72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。' },
-        ],
+            { q: 'どの中国クラウドGPUプロバイダーが最も安いですか？', a: 'AutoDLが最も安く、A100 80GBは¥5.98/時間です（Alibaba Cloud PAIは¥8〜12/時間、テンセントクラウドTIは¥7.5〜10/時間）。→ [AutoDLの料金を見る](https://www.autodl.com)' },
+            { q: 'どの中国クラウドGPUプロバイダーがQwenに最も適していますか？', a: 'Alibaba Cloud PAIです。PAI-EASランタイムは同一ハードウェアで標準Ollamaより20〜30%高速にQwenモデルを実行します。→ [Alibaba Cloudの特典を見る](https://www.alibabacloud.com)' },
+            { q: '中国外からAlibaba Cloud GPUを使えますか？', a: 'はい。Alibaba Cloud International（[alibabacloud.com](https://www.alibabacloud.com)）は国際クレジットカード（Visa、Mastercard、American Express）に対応し、英語コンソールを提供します。国際版と中国国内版は別アカウントで、若干価格が異なります。→ [Alibaba Cloudの特典を見る](https://www.alibabacloud.com)' },
+            { q: '中国の銀行口座を持たない外国人がAutoDLやテンセントクラウド利用のためAlipayで支払うにはどうすればいいですか？', a: '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayアプリに登録し、対応する海外発行のVisaまたはMastercardを直接紐付けます——この直接紐付けにより、従来のTourCardプリペイド方式は多くのユーザーにとって不要になりました。カードの直接紐付けに失敗した場合は、Alipayの「TourCard」オプションで海外カードから90日間有効なAlipay残高にチャージすることもできます。こうして設定したAlipayは、AutoDLやテンセントクラウドの国内決済で中国の銀行カードと同じように使えます。ただしこれは支払い手段の解決にすぎず、英語コンソールは得られません——それには代わりに[Alibaba Cloud International](https://www.alibabacloud.com)を利用してください。' },
+            { q: 'AutoDLは本番推論に使えますか？', a: 'AutoDLは研究・開発向けで、正式なSLAがなく、スポットインスタンスは予告なく中断される可能性があります。本番環境にはAlibaba Cloud PAIまたはテンセントクラウドTIのオンデマンドインスタンスが適しています。' },
+            { q: 'Alibaba Cloud PAIはQwen推論でOllamaより何倍速いですか？', a: 'PAI-EASはA100 80GB上でQwen3 72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。' },
+            { q: '中国の銀行口座なしでAlipayで支払うには？', a: '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayに登録し、海外発行のVisaまたはMastercardを直接紐付けます。失敗した場合は、TourCardオプションで海外カードから90日間有効なAlipay残高にチャージできます。' },
+          ],
       },
       internalLinks: {
         id: 'see-also',
@@ -2580,11 +2591,63 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'どの中国クラウドGPUプロバイダーが最も安いですか？', acceptedAnswer: { '@type': 'Answer', text: 'AutoDLが最も安く、A100 80GBは¥5.98/時間です（Alibaba Cloud PAIは¥8〜12/時間、テンセントクラウドTIは¥7.5〜10/時間）。' } },
-        { '@type': 'Question', name: 'どの中国クラウドGPUプロバイダーがQwenに最も適していますか？', acceptedAnswer: { '@type': 'Answer', text: 'Alibaba Cloud PAIです。PAI-EASランタイムは同一ハードウェアで標準Ollamaより20〜30%高速です。' } },
-        { '@type': 'Question', name: '中国外からAlibaba Cloud GPUを使えますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Alibaba Cloud International（alibabacloud.com）は国際クレジットカード対応で英語コンソール提供。' } },
-        { '@type': 'Question', name: '中国の銀行口座なしでAlipayで支払うには？', acceptedAnswer: { '@type': 'Answer', text: '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayに登録し、海外発行のVisaまたはMastercardを直接紐付けます。失敗した場合は、TourCardオプションで海外カードから90日間有効なAlipay残高にチャージできます。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'どの中国クラウドGPUプロバイダーが最も安いですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDLが最も安く、A100 80GBは¥5.98/時間です（Alibaba Cloud PAIは¥8〜12/時間、テンセントクラウドTIは¥7.5〜10/時間）。→ [AutoDLの料金を見る](https://www.autodl.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'どの中国クラウドGPUプロバイダーがQwenに最も適していますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAIです。PAI-EASランタイムは同一ハードウェアで標準Ollamaより20〜30%高速にQwenモデルを実行します。→ [Alibaba Cloudの特典を見る](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国外からAlibaba Cloud GPUを使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Alibaba Cloud International（[alibabacloud.com](https://www.alibabacloud.com)）は国際クレジットカード（Visa、Mastercard、American Express）に対応し、英語コンソールを提供します。国際版と中国国内版は別アカウントで、若干価格が異なります。→ [Alibaba Cloudの特典を見る](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国の銀行口座を持たない外国人がAutoDLやテンセントクラウド利用のためAlipayで支払うにはどうすればいいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayアプリに登録し、対応する海外発行のVisaまたはMastercardを直接紐付けます——この直接紐付けにより、従来のTourCardプリペイド方式は多くのユーザーにとって不要になりました。カードの直接紐付けに失敗した場合は、Alipayの「TourCard」オプションで海外カードから90日間有効なAlipay残高にチャージすることもできます。こうして設定したAlipayは、AutoDLやテンセントクラウドの国内決済で中国の銀行カードと同じように使えます。ただしこれは支払い手段の解決にすぎず、英語コンソールは得られません——それには代わりに[Alibaba Cloud International](https://www.alibabacloud.com)を利用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AutoDLは本番推論に使えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDLは研究・開発向けで、正式なSLAがなく、スポットインスタンスは予告なく中断される可能性があります。本番環境にはAlibaba Cloud PAIまたはテンセントクラウドTIのオンデマンドインスタンスが適しています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Alibaba Cloud PAIはQwen推論でOllamaより何倍速いですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PAI-EASはA100 80GB上でQwen3 72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国の銀行口座なしでAlipayで支払うには？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayに登録し、海外発行のVisaまたはMastercardを直接紐付けます。失敗した場合は、TourCardオプションで海外カードから90日間有効なAlipay残高にチャージできます。',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -2827,15 +2890,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '哪家中国云GPU服务商最便宜？', a: 'AutoDL最便宜：A100 80GB为¥5.98/时，而阿里云PAI为¥8-12/时、腾讯云TI为¥7.5-10/时。→ [查看AutoDL价格](https://www.autodl.com)' },
-          { q: '哪家中国云GPU服务商最适合Qwen？', a: '阿里云PAI。其PAI-EAS运行时在同等硬件上比标准Ollama快20-30%运行Qwen模型。→ [查看阿里云优惠](https://www.alibabacloud.com)' },
-          { q: '海外用户能使用阿里云GPU吗？', a: '可以。阿里云国际版（[alibabacloud.com](https://www.alibabacloud.com)）接受国际信用卡（Visa、Mastercard、American Express），提供英文控制台。国际版和国内版账号独立，价格略有差异——国际版略贵但对非中国用户开通更便捷。→ [查看阿里云优惠](https://www.alibabacloud.com)' },
-          { q: '没有中国银行账户的外国用户，如何用支付宝为AutoDL或腾讯云付款？', a: '不需要中国银行账户。用护照和境外手机号注册支付宝App，然后直接绑定符合条件的境外Visa或Mastercard卡——对大多数用户来说，这种直接绑卡方式已经取代了早期的TourCard预付卡方案。如果直接绑卡失败，支付宝的TourCard选项可以用境外卡预付充值到一个90天有效期的支付宝余额账户。这样设置好之后，支付宝在AutoDL和腾讯云的国内结账流程中，使用体验和中国银行卡完全一样。不过这只解决了支付问题——并不能获得英文控制台；如需英文控制台，请改用[阿里云国际版](https://www.alibabacloud.com)。' },
-          { q: 'AutoDL适合生产环境推理吗？', a: 'AutoDL定位研究和开发，没有正式SLA，现货实例可能被抢占。生产环境建议使用阿里云PAI或腾讯云TI的按需实例，两者提供企业级SLA。AutoDL最适合微调、开发和可接受偶尔中断的批处理任务。' },
-          { q: '阿里云PAI比自己运行Ollama快多少？', a: '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen3 72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。' },
-          { q: '有免费试用中国云GPU的方式吗？', a: '阿里云和腾讯云会不定期为新账户推出免费额度活动（具体金额请以各平台[alibabacloud.com](https://www.alibabacloud.com)、[cloud.tencent.com](https://cloud.tencent.com)注册页面的当前活动为准）。AutoDL为新账户提供小额GPU体验额度（约1-2小时A100，或更便宜显卡的数小时）。三家均无永久免费GPU配额。' },
-          { q: 'Qwen3 72B在中国云平台上用什么GPU最合适？', a: 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen3 72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。' },
-        ],
+            { q: '哪家中国云GPU服务商最便宜？', a: 'AutoDL最便宜：A100 80GB为¥5.98/时，而阿里云PAI为¥8-12/时、腾讯云TI为¥7.5-10/时。→ [查看AutoDL价格](https://www.autodl.com)' },
+            { q: '哪家中国云GPU服务商最适合Qwen？', a: '阿里云PAI。其PAI-EAS运行时在同等硬件上比标准Ollama快20-30%运行Qwen模型。→ [查看阿里云优惠](https://www.alibabacloud.com)' },
+            { q: '海外用户能使用阿里云GPU吗？', a: '可以。阿里云国际版（[alibabacloud.com](https://www.alibabacloud.com)）接受国际信用卡（Visa、Mastercard、American Express），提供英文控制台。国际版和国内版账号独立，价格略有差异——国际版略贵但对非中国用户开通更便捷。→ [查看阿里云优惠](https://www.alibabacloud.com)' },
+            { q: '没有中国银行账户的外国用户，如何用支付宝为AutoDL或腾讯云付款？', a: '不需要中国银行账户。用护照和境外手机号注册支付宝App，然后直接绑定符合条件的境外Visa或Mastercard卡——对大多数用户来说，这种直接绑卡方式已经取代了早期的TourCard预付卡方案。如果直接绑卡失败，支付宝的TourCard选项可以用境外卡预付充值到一个90天有效期的支付宝余额账户。这样设置好之后，支付宝在AutoDL和腾讯云的国内结账流程中，使用体验和中国银行卡完全一样。不过这只解决了支付问题——并不能获得英文控制台；如需英文控制台，请改用[阿里云国际版](https://www.alibabacloud.com)。' },
+            { q: 'AutoDL适合生产环境推理吗？', a: 'AutoDL定位研究和开发，没有正式SLA，现货实例可能被抢占。生产环境建议使用阿里云PAI或腾讯云TI的按需实例，两者提供企业级SLA。AutoDL最适合微调、开发和可接受偶尔中断的批处理任务。' },
+            { q: '阿里云PAI比自己运行Ollama快多少？', a: '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen3 72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。' },
+            { q: '有免费试用中国云GPU的方式吗？', a: '阿里云和腾讯云会不定期为新账户推出免费额度活动（具体金额请以各平台[alibabacloud.com](https://www.alibabacloud.com)、[cloud.tencent.com](https://cloud.tencent.com)注册页面的当前活动为准）。AutoDL为新账户提供小额GPU体验额度（约1-2小时A100，或更便宜显卡的数小时）。三家均无永久免费GPU配额。' },
+            { q: 'Qwen3 72B在中国云平台上用什么GPU最合适？', a: 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen3 72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。' },
+            { q: '没有中国银行账户如何用支付宝付款？', a: '不需要中国银行账户。用护照和境外手机号注册支付宝，直接绑定境外Visa或Mastercard卡。若绑卡失败，可用TourCard选项将境外卡预付充值到90天有效期的支付宝余额。' },
+          ],
       },
       internalLinks: {
         id: 'see-also',
@@ -2851,13 +2915,79 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: '哪家中国云GPU服务商最便宜？', acceptedAnswer: { '@type': 'Answer', text: 'AutoDL最便宜：A100 80GB为¥5.98/时，而阿里云PAI为¥8-12/时、腾讯云TI为¥7.5-10/时。' } },
-        { '@type': 'Question', name: '哪家中国云GPU服务商最适合Qwen？', acceptedAnswer: { '@type': 'Answer', text: '阿里云PAI——其PAI-EAS运行时在同等硬件上比标准Ollama快20-30%。' } },
-        { '@type': 'Question', name: '海外用户能使用阿里云GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。阿里云国际版（alibabacloud.com）接受国际信用卡，提供英文控制台。' } },
-        { '@type': 'Question', name: '没有中国银行账户如何用支付宝付款？', acceptedAnswer: { '@type': 'Answer', text: '不需要中国银行账户。用护照和境外手机号注册支付宝，直接绑定境外Visa或Mastercard卡。若绑卡失败，可用TourCard选项将境外卡预付充值到90天有效期的支付宝余额。' } },
-        { '@type': 'Question', name: '阿里云PAI比Ollama快多少？', acceptedAnswer: { '@type': 'Answer', text: 'PAI-EAS在A100 80GB上运行Qwen3 72B比标准Ollama快20-30%（22-28 tok/s对16-20 tok/s）。' } },
-        { '@type': 'Question', name: '有免费试用中国云GPU的方式吗？', acceptedAnswer: { '@type': 'Answer', text: '阿里云和腾讯云会不定期推出新账户优惠（请以各平台注册页面的最新信息为准）。AutoDL提供小额新账户GPU体验额度。三家均无永久免费GPU配额。' } },
-      ],
+          {
+            '@type': 'Question',
+            'name': '哪家中国云GPU服务商最便宜？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL最便宜：A100 80GB为¥5.98/时，而阿里云PAI为¥8-12/时、腾讯云TI为¥7.5-10/时。→ [查看AutoDL价格](https://www.autodl.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪家中国云GPU服务商最适合Qwen？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '阿里云PAI。其PAI-EAS运行时在同等硬件上比标准Ollama快20-30%运行Qwen模型。→ [查看阿里云优惠](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '海外用户能使用阿里云GPU吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '可以。阿里云国际版（[alibabacloud.com](https://www.alibabacloud.com)）接受国际信用卡（Visa、Mastercard、American Express），提供英文控制台。国际版和国内版账号独立，价格略有差异——国际版略贵但对非中国用户开通更便捷。→ [查看阿里云优惠](https://www.alibabacloud.com)',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '没有中国银行账户的外国用户，如何用支付宝为AutoDL或腾讯云付款？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需要中国银行账户。用护照和境外手机号注册支付宝App，然后直接绑定符合条件的境外Visa或Mastercard卡——对大多数用户来说，这种直接绑卡方式已经取代了早期的TourCard预付卡方案。如果直接绑卡失败，支付宝的TourCard选项可以用境外卡预付充值到一个90天有效期的支付宝余额账户。这样设置好之后，支付宝在AutoDL和腾讯云的国内结账流程中，使用体验和中国银行卡完全一样。不过这只解决了支付问题——并不能获得英文控制台；如需英文控制台，请改用[阿里云国际版](https://www.alibabacloud.com)。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AutoDL适合生产环境推理吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL定位研究和开发，没有正式SLA，现货实例可能被抢占。生产环境建议使用阿里云PAI或腾讯云TI的按需实例，两者提供企业级SLA。AutoDL最适合微调、开发和可接受偶尔中断的批处理任务。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '阿里云PAI比自己运行Ollama快多少？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen3 72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '有免费试用中国云GPU的方式吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '阿里云和腾讯云会不定期为新账户推出免费额度活动（具体金额请以各平台[alibabacloud.com](https://www.alibabacloud.com)、[cloud.tencent.com](https://cloud.tencent.com)注册页面的当前活动为准）。AutoDL为新账户提供小额GPU体验额度（约1-2小时A100，或更便宜显卡的数小时）。三家均无永久免费GPU配额。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qwen3 72B在中国云平台上用什么GPU最合适？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen3 72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '没有中国银行账户如何用支付宝付款？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不需要中国银行账户。用护照和境外手机号注册支付宝，直接绑定境外Visa或Mastercard卡。若绑卡失败，可用TourCard选项将境外卡预付充值到90天有效期的支付宝余额。',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',
@@ -3177,39 +3307,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: '어떤 중국 클라우드 GPU 공급자가 가장 저렴합니까?',
-            a: 'AutoDL이 세 곳 중 가장 저렴합니다: A100 80 GB가 ¥5.98/시간으로, Alibaba Cloud PAI(¥8–12/시간)와 Tencent Cloud TI(¥7.5–10/시간)보다 낮습니다. RTX 4090/RTX 3090 요금도 두 기업급 플랫폼보다 저렴합니다. → [AutoDL 가격 확인하기](https://www.autodl.com)',
-          },
-          {
-            q: '어떤 중국 클라우드 GPU 공급자가 Qwen에 가장 적합합니까?',
-            a: 'Alibaba Cloud PAI입니다. Alibaba DAMO Academy Qwen 팀이 공동 개발한 PAI-EAS 런타임은 동일 하드웨어에서 표준 Ollama보다 Qwen 모델을 20–30% 빠르게 실행합니다 — Qwen을 직접 개발한 팀이 만든 런타임이므로 실질적인 이점입니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com)',
-          },
-          {
-            q: '중국 외부에서 Alibaba Cloud GPU를 사용할 수 있습니까?',
-            a: '네. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com))은 국제 신용카드(Visa, Mastercard, American Express)를 허용하며 영문 콘솔을 제공합니다 — AutoDL과 Tencent Cloud의 국내 포털은 중국 은행 카드나 Alipay가 필요하므로, 비중국 사용자에게는 세 공급자 중 가장 쉬운 가입 절차입니다. International 포털과 중국 국내 포털은 별도 계정이며 가격이 다릅니다 — International 포털이 약간 더 비싸지만 설정하기 더 쉽습니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com)',
-          },
-          {
-            q: '중국 은행 계좌가 없는 외국인이 AutoDL이나 Tencent Cloud를 이용하려면 Alipay로 어떻게 결제합니까?',
-            a: '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay 앱에 가입한 뒤, 사용 가능한 해외 Visa 또는 Mastercard 카드를 직접 연결하면 됩니다 — 이 직접 카드 연결 방식이 대부분의 사용자에게 기존의 TourCard 선불 방식을 대체했습니다. 카드 직접 연결이 실패하는 경우, Alipay의 TourCard 옵션을 이용해 해외 카드로 90일간 유효한 Alipay 잔액을 충전할 수 있습니다. 이렇게 설정하면 Alipay는 AutoDL과 Tencent Cloud의 국내 결제에서 중국 은행 카드와 동일하게 작동합니다. 다만 이는 결제 문제만 해결할 뿐 영문 콘솔은 제공하지 않습니다 — 영문 콘솔이 필요하면 대신 [Alibaba Cloud International](https://www.alibabacloud.com)을 이용하십시오.',
-          },
-          {
-            q: 'AutoDL은 프로덕션 추론에 충분히 신뢰할 수 있습니까?',
-            a: 'AutoDL은 연구 및 개발용으로 설계되었으며 프로덕션급 추론에는 적합하지 않습니다. 공식 SLA가 없으며 스팟 인스턴스는 짧은 예고로 선점될 수 있습니다. 가용성이 보장된 프로덕션 추론에는 온디맨드 인스턴스로 Alibaba Cloud PAI 또는 Tencent Cloud TI를 사용하십시오. AutoDL은 간헐적 중단이 허용되는 파인튜닝, 개발, 비용 민감형 배치 처리에 가장 적합합니다.',
-          },
-          {
-            q: 'Alibaba Cloud의 Qwen 추론은 직접 Ollama를 실행하는 것과 어떻게 다릅니까?',
-            a: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen3 72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.',
-          },
-          {
-            q: '중국 클라우드 GPU를 테스트할 수 있는 무료 티어가 있습니까?',
-            a: 'Alibaba Cloud와 Tencent Cloud는 신규 계정에 프로모션 크레딧을 수시로 제공합니다 (정확한 금액은 각 공급자의 가입 페이지에서 현재 진행 중인 프로모션을 확인하세요 — 금액은 변동되며 보장되지 않습니다). AutoDL은 신규 계정에 소액의 무료 GPU 크레딧을 제공합니다 (A100 기준 약 1–2시간, 더 저렴한 카드는 더 긴 시간). 영구 무료 GPU 티어를 제공하는 플랫폼은 없으며 모든 GPU 사용량은 과금됩니다.',
-          },
-          {
-            q: '중국 클라우드 플랫폼에서 Qwen3 72B에 가장 적합한 GPU는 무엇입니까?',
-            a: 'A100 80 GB가 단일 카드 Qwen3 72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen3 72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.',
-          },
-        ],
+            { q: '어떤 중국 클라우드 GPU 공급자가 가장 저렴합니까?', a: 'AutoDL이 세 곳 중 가장 저렴합니다: A100 80 GB가 ¥5.98/시간으로, Alibaba Cloud PAI(¥8–12/시간)와 Tencent Cloud TI(¥7.5–10/시간)보다 낮습니다. RTX 4090/RTX 3090 요금도 두 기업급 플랫폼보다 저렴합니다. → [AutoDL 가격 확인하기](https://www.autodl.com)' },
+            { q: '어떤 중국 클라우드 GPU 공급자가 Qwen에 가장 적합합니까?', a: 'Alibaba Cloud PAI입니다. Alibaba DAMO Academy Qwen 팀이 공동 개발한 PAI-EAS 런타임은 동일 하드웨어에서 표준 Ollama보다 Qwen 모델을 20–30% 빠르게 실행합니다 — Qwen을 직접 개발한 팀이 만든 런타임이므로 실질적인 이점입니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com)' },
+            { q: '중국 외부에서 Alibaba Cloud GPU를 사용할 수 있습니까?', a: '네. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com))은 국제 신용카드(Visa, Mastercard, American Express)를 허용하며 영문 콘솔을 제공합니다 — AutoDL과 Tencent Cloud의 국내 포털은 중국 은행 카드나 Alipay가 필요하므로, 비중국 사용자에게는 세 공급자 중 가장 쉬운 가입 절차입니다. International 포털과 중국 국내 포털은 별도 계정이며 가격이 다릅니다 — International 포털이 약간 더 비싸지만 설정하기 더 쉽습니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com)' },
+            { q: '중국 은행 계좌가 없는 외국인이 AutoDL이나 Tencent Cloud를 이용하려면 Alipay로 어떻게 결제합니까?', a: '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay 앱에 가입한 뒤, 사용 가능한 해외 Visa 또는 Mastercard 카드를 직접 연결하면 됩니다 — 이 직접 카드 연결 방식이 대부분의 사용자에게 기존의 TourCard 선불 방식을 대체했습니다. 카드 직접 연결이 실패하는 경우, Alipay의 TourCard 옵션을 이용해 해외 카드로 90일간 유효한 Alipay 잔액을 충전할 수 있습니다. 이렇게 설정하면 Alipay는 AutoDL과 Tencent Cloud의 국내 결제에서 중국 은행 카드와 동일하게 작동합니다. 다만 이는 결제 문제만 해결할 뿐 영문 콘솔은 제공하지 않습니다 — 영문 콘솔이 필요하면 대신 [Alibaba Cloud International](https://www.alibabacloud.com)을 이용하십시오.' },
+            { q: 'AutoDL은 프로덕션 추론에 충분히 신뢰할 수 있습니까?', a: 'AutoDL은 연구 및 개발용으로 설계되었으며 프로덕션급 추론에는 적합하지 않습니다. 공식 SLA가 없으며 스팟 인스턴스는 짧은 예고로 선점될 수 있습니다. 가용성이 보장된 프로덕션 추론에는 온디맨드 인스턴스로 Alibaba Cloud PAI 또는 Tencent Cloud TI를 사용하십시오. AutoDL은 간헐적 중단이 허용되는 파인튜닝, 개발, 비용 민감형 배치 처리에 가장 적합합니다.' },
+            { q: 'Alibaba Cloud의 Qwen 추론은 직접 Ollama를 실행하는 것과 어떻게 다릅니까?', a: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen3 72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.' },
+            { q: '중국 클라우드 GPU를 테스트할 수 있는 무료 티어가 있습니까?', a: 'Alibaba Cloud와 Tencent Cloud는 신규 계정에 프로모션 크레딧을 수시로 제공합니다 (정확한 금액은 각 공급자의 가입 페이지에서 현재 진행 중인 프로모션을 확인하세요 — 금액은 변동되며 보장되지 않습니다). AutoDL은 신규 계정에 소액의 무료 GPU 크레딧을 제공합니다 (A100 기준 약 1–2시간, 더 저렴한 카드는 더 긴 시간). 영구 무료 GPU 티어를 제공하는 플랫폼은 없으며 모든 GPU 사용량은 과금됩니다.' },
+            { q: '중국 클라우드 플랫폼에서 Qwen3 72B에 가장 적합한 GPU는 무엇입니까?', a: 'A100 80 GB가 단일 카드 Qwen3 72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen3 72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.' },
+            { q: '중국 은행 계좌 없이 Alipay로 결제하려면?', a: '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay에 가입한 뒤 해외 Visa 또는 Mastercard를 직접 연결하면 됩니다. 실패할 경우 TourCard 옵션으로 해외 카드에서 90일간 유효한 Alipay 잔액을 충전할 수 있습니다.' },
+            { q: 'Alibaba Cloud PAI는 Qwen 추론에서 Ollama보다 얼마나 빠릅니까?', a: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다. 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 런타임의 Qwen 특화 최적화에서 비롯됩니다.' },
+          ],
       },
       updateLog: {
         id: 'update-log',
@@ -3227,71 +3335,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '어떤 중국 클라우드 GPU 공급자가 가장 저렴합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL이 가장 저렴합니다: A100 80 GB가 ¥5.98/시간으로 Alibaba Cloud PAI(¥8–12/시간), Tencent Cloud TI(¥7.5–10/시간)보다 낮습니다.',
+          {
+            '@type': 'Question',
+            'name': '어떤 중국 클라우드 GPU 공급자가 가장 저렴합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL이 세 곳 중 가장 저렴합니다: A100 80 GB가 ¥5.98/시간으로, Alibaba Cloud PAI(¥8–12/시간)와 Tencent Cloud TI(¥7.5–10/시간)보다 낮습니다. RTX 4090/RTX 3090 요금도 두 기업급 플랫폼보다 저렴합니다. → [AutoDL 가격 확인하기](https://www.autodl.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '어떤 중국 클라우드 GPU 공급자가 Qwen에 가장 적합합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud PAI — PAI-EAS 런타임이 동일 하드웨어에서 표준 Ollama보다 20–30% 빠릅니다.',
+          {
+            '@type': 'Question',
+            'name': '어떤 중국 클라우드 GPU 공급자가 Qwen에 가장 적합합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI입니다. Alibaba DAMO Academy Qwen 팀이 공동 개발한 PAI-EAS 런타임은 동일 하드웨어에서 표준 Ollama보다 Qwen 모델을 20–30% 빠르게 실행합니다 — Qwen을 직접 개발한 팀이 만든 런타임이므로 실질적인 이점입니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '중국 외부에서 Alibaba Cloud GPU를 사용할 수 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud International (alibabacloud.com)은 국제 신용카드를 허용하며 영문 콘솔을 제공합니다. International 포털과 중국 국내 포털은 별도 계정이며 가격이 약간 다릅니다.',
+          {
+            '@type': 'Question',
+            'name': '중국 외부에서 Alibaba Cloud GPU를 사용할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com))은 국제 신용카드(Visa, Mastercard, American Express)를 허용하며 영문 콘솔을 제공합니다 — AutoDL과 Tencent Cloud의 국내 포털은 중국 은행 카드나 Alipay가 필요하므로, 비중국 사용자에게는 세 공급자 중 가장 쉬운 가입 절차입니다. International 포털과 중국 국내 포털은 별도 계정이며 가격이 다릅니다 — International 포털이 약간 더 비싸지만 설정하기 더 쉽습니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com)',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '중국 은행 계좌 없이 Alipay로 결제하려면?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay에 가입한 뒤 해외 Visa 또는 Mastercard를 직접 연결하면 됩니다. 실패할 경우 TourCard 옵션으로 해외 카드에서 90일간 유효한 Alipay 잔액을 충전할 수 있습니다.',
+          {
+            '@type': 'Question',
+            'name': '중국 은행 계좌가 없는 외국인이 AutoDL이나 Tencent Cloud를 이용하려면 Alipay로 어떻게 결제합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay 앱에 가입한 뒤, 사용 가능한 해외 Visa 또는 Mastercard 카드를 직접 연결하면 됩니다 — 이 직접 카드 연결 방식이 대부분의 사용자에게 기존의 TourCard 선불 방식을 대체했습니다. 카드 직접 연결이 실패하는 경우, Alipay의 TourCard 옵션을 이용해 해외 카드로 90일간 유효한 Alipay 잔액을 충전할 수 있습니다. 이렇게 설정하면 Alipay는 AutoDL과 Tencent Cloud의 국내 결제에서 중국 은행 카드와 동일하게 작동합니다. 다만 이는 결제 문제만 해결할 뿐 영문 콘솔은 제공하지 않습니다 — 영문 콘솔이 필요하면 대신 [Alibaba Cloud International](https://www.alibabacloud.com)을 이용하십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AutoDL은 프로덕션 추론에 충분히 신뢰할 수 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AutoDL은 연구 및 개발용으로 설계되었습니다. 공식 SLA가 없으며 스팟 인스턴스는 선점될 수 있습니다. 프로덕션 환경에는 온디맨드 인스턴스로 Alibaba Cloud PAI 또는 Tencent Cloud TI를 사용하십시오.',
+          {
+            '@type': 'Question',
+            'name': 'AutoDL은 프로덕션 추론에 충분히 신뢰할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'AutoDL은 연구 및 개발용으로 설계되었으며 프로덕션급 추론에는 적합하지 않습니다. 공식 SLA가 없으며 스팟 인스턴스는 짧은 예고로 선점될 수 있습니다. 가용성이 보장된 프로덕션 추론에는 온디맨드 인스턴스로 Alibaba Cloud PAI 또는 Tencent Cloud TI를 사용하십시오. AutoDL은 간헐적 중단이 허용되는 파인튜닝, 개발, 비용 민감형 배치 처리에 가장 적합합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Alibaba Cloud PAI는 Qwen 추론에서 Ollama보다 얼마나 빠릅니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다. 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 런타임의 Qwen 특화 최적화에서 비롯됩니다.',
+          {
+            '@type': 'Question',
+            'name': 'Alibaba Cloud의 Qwen 추론은 직접 Ollama를 실행하는 것과 어떻게 다릅니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen3 72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '중국 클라우드 GPU를 테스트할 수 있는 무료 티어가 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Alibaba Cloud와 Tencent Cloud는 신규 계정에 프로모션 크레딧을 수시로 제공합니다(금액은 가입 페이지에서 확인). AutoDL은 소액의 무료 GPU 크레딧을 제공합니다. 영구 무료 GPU 티어를 제공하는 플랫폼은 없습니다.',
+          {
+            '@type': 'Question',
+            'name': '중국 클라우드 GPU를 테스트할 수 있는 무료 티어가 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud와 Tencent Cloud는 신규 계정에 프로모션 크레딧을 수시로 제공합니다 (정확한 금액은 각 공급자의 가입 페이지에서 현재 진행 중인 프로모션을 확인하세요 — 금액은 변동되며 보장되지 않습니다). AutoDL은 신규 계정에 소액의 무료 GPU 크레딧을 제공합니다 (A100 기준 약 1–2시간, 더 저렴한 카드는 더 긴 시간). 영구 무료 GPU 티어를 제공하는 플랫폼은 없으며 모든 GPU 사용량은 과금됩니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '중국 클라우드 플랫폼에서 Qwen3 72B에 최적의 GPU는 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A100 80 GB가 Qwen3 72B에 권장됩니다 — 양자화 없이 BF16로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 A100 40 GB에도 가능합니다. H100 80 GB는 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다.',
+          {
+            '@type': 'Question',
+            'name': '중국 클라우드 플랫폼에서 Qwen3 72B에 가장 적합한 GPU는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A100 80 GB가 단일 카드 Qwen3 72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen3 72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '중국 은행 계좌 없이 Alipay로 결제하려면?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay에 가입한 뒤 해외 Visa 또는 Mastercard를 직접 연결하면 됩니다. 실패할 경우 TourCard 옵션으로 해외 카드에서 90일간 유효한 Alipay 잔액을 충전할 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Alibaba Cloud PAI는 Qwen 추론에서 Ollama보다 얼마나 빠릅니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다. 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 런타임의 Qwen 특화 최적화에서 비롯됩니다.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',

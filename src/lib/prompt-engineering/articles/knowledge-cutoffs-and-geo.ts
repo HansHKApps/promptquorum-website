@@ -85,71 +85,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is an AI knowledge cutoff date?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'An AI knowledge cutoff date is the date after which the model\'s training data ends. The model has no information about events, products, research, or any other content published after this date. Cloud models can partially compensate via built-in web search; local LLMs cannot — their cutoff is absolute.',
+          {
+            '@type': 'Question',
+            'name': 'What is an AI knowledge cutoff date?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A knowledge cutoff date is the date after which the model\'s training data ends. The model has zero information about events, products, research, or content published after this date. Cloud models can partially compensate via web search; local LLMs cannot.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Why does ChatGPT seem to know about recent events even though its base model has a training cutoff?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT (the product) searches Bing by default in paid tiers and augments its responses with current search results. This means it can answer factual questions about recent events even though the underlying model\'s training data has a fixed cutoff (GPT-5.6 training cutoff is Feb 2026; legacy GPT-4o ends Oct 2023). The training cutoff still limits contextual understanding of post-cutoff topics.',
+          {
+            '@type': 'Question',
+            'name': 'Why does ChatGPT know about recent events if its cutoff is October 2023?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (the product) searches Bing by default in paid tiers and synthesizes current search results with its training-data reasoning. The underlying GPT-4o model still has an October 2023 training cutoff — what you\'re seeing is the search layer, not updated training data.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do local LLMs like Llama and Qwen ever receive knowledge updates?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. A local LLM\'s knowledge is permanently frozen at its training cutoff. When a new model version is released (e.g. Llama 4 Scout replacing Llama 3.3), it has a new cutoff — but the running model on your machine does not update itself. To access current information, you must build a RAG (Retrieval-Augmented Generation) pipeline that fetches documents at query time and injects them into the model\'s context window.',
+          {
+            '@type': 'Question',
+            'name': 'Do local LLMs like Llama and Qwen ever receive knowledge updates?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — not automatically. A local LLM\'s knowledge is permanently frozen at its training cutoff. Each new model release (Llama 4 Scout, Qwen3 14B) has a different cutoff, but the copy running on your machine has fixed knowledge. To get current information, build a RAG pipeline.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is GEO and how does it relate to knowledge cutoffs?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GEO (Generative Engine Optimization) is the practice of making your brand or content appear in AI-generated answers. For cloud AI models, GEO overlaps with SEO — if your content ranks well in Bing, Google, or X search, it can be retrieved and cited by ChatGPT, Gemini, or Grok. For local LLMs, GEO through search is impossible because the model never searches the web. The only way to reach a local LLM deployment is via RAG pipelines built by the organization running the model.',
+          {
+            '@type': 'Question',
+            'name': 'What is GEO and how does it relate to knowledge cutoffs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO (Generative Engine Optimization) is the discipline of making your content appear in AI-generated answers. For cloud AI, GEO works through search optimization — rank in Bing/Google and you get cited. For local LLMs, this is structurally impossible because the model never searches. Local LLM GEO requires RAG pipelines at the deploying organization.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which AI model has the most recent knowledge cutoff date?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Among verified primary-source cutoffs: Claude Opus 5 and GPT-5.6 share the most recent reliable cutoffs, May 2026 and Feb 2026 respectively. Grok 4.6 is also Feb 2026. Gemini 3.1 Pro is January 2025. DeepSeek-V3 is July 2024. Gemma 3 27B is August 2024. Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models including Llama 4, Qwen3, and Mistral Large have not publicly disclosed exact cutoff dates.',
+          {
+            '@type': 'Question',
+            'name': 'Which AI model has the most recent knowledge cutoff date (verified)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Among primary-source verified cutoffs: Claude Opus 5 has the most recent reliable cutoff at May 2026, with GPT-5.6 and Grok 4.6 both close behind at February 2026. Gemini 3.1 Pro is January 2025. DeepSeek-V3 and Gemma 3 27B are around July–August 2024. Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models (Llama 4, Qwen3, Mistral Large) have not publicly disclosed exact dates.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use SEO to appear in Llama or Qwen answers?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Search engine optimization cannot influence a locally-run LLM because the model never performs a web search. To appear in local LLM outputs, you must either: (1) have been in the model\'s training data before its cutoff, or (2) be included via RAG pipelines built by whoever is deploying the model. This is a fundamentally different channel from traditional SEO or cloud AI GEO.',
+          {
+            '@type': 'Question',
+            'name': 'Can I use SEO to appear in Llama or Qwen answers?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The only paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which cloud AI models search the live web by default?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT uses Bing by default (paid tiers). Gemini 3.1 Pro uses Google Search by default. Grok 4.6 searches X (Twitter) by default in the consumer app. Perplexity is web-search-native for every query. Claude requires explicit developer tool activation and does not search by default. DeepSeek and Mistral Large have no default search. All local LLMs (Llama, Qwen, Gemma, Phi, Mistral open weights) have no search capability.',
+          {
+            '@type': 'Question',
+            'name': 'How should I fact-check an AI answer about something that might be affected by the cutoff?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Three signals suggest a cutoff risk: (1) the topic involves specific versions, prices, people, or events; (2) you asked about something in a fast-moving industry; (3) the AI answer lacks citations. When any of these apply, verify against a primary source — the model\'s confident tone is not a reliability indicator.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'What should I do if I need current information from a local LLM?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Build a RAG (Retrieval-Augmented Generation) pipeline. A RAG system retrieves relevant current documents — from a web search, internal database, or document store — at query time and injects them into the LLM\'s context window before generating a response. Popular local RAG tools include LlamaIndex, LangChain, and Ollama with a retrieval layer. The LLM then reasons over the injected documents rather than relying solely on frozen training data.',
+          {
+            '@type': 'Question',
+            'name': 'Is there a way to tell from an AI\'s answer whether it used live search?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Often yes: Perplexity always shows source citations. Gemini shows a Google search icon when grounding is used. Grok indicates X search results. ChatGPT shows a globe icon and can be prompted to show sources. Claude does not search by default, so no indicator is needed. Local LLMs never search, so no indicator exists — the answer is always from training data.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Why does ChatGPT seem to know about recent events even though its base model has a training cutoff?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (the product) searches Bing by default in paid tiers and augments its responses with current search results. This means it can answer factual questions about recent events even though the underlying model\'s training data has a fixed cutoff (GPT-5.6 training cutoff is Feb 2026; legacy GPT-4o ends Oct 2023). The training cutoff still limits contextual understanding of post-cutoff topics.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which cloud AI models search the live web by default?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT uses Bing by default (paid tiers). Gemini 3.1 Pro uses Google Search by default. Grok 4.6 searches X (Twitter) by default in the consumer app. Perplexity is web-search-native for every query. Claude requires explicit developer tool activation and does not search by default. DeepSeek and Mistral Large have no default search. All local LLMs (Llama, Qwen, Gemma, Phi, Mistral open weights) have no search capability.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What should I do if I need current information from a local LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Build a RAG (Retrieval-Augmented Generation) pipeline. A RAG system retrieves relevant current documents — from a web search, internal database, or document store — at query time and injects them into the LLM\'s context window before generating a response. Popular local RAG tools include LlamaIndex, LangChain, and Ollama with a retrieval layer. The LLM then reasons over the injected documents rather than relying solely on frozen training data.',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -359,39 +383,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'What is an AI knowledge cutoff date?',
-            a: 'A knowledge cutoff date is the date after which the model\'s training data ends. The model has zero information about events, products, research, or content published after this date. Cloud models can partially compensate via web search; local LLMs cannot.',
-          },
-          {
-            q: 'Why does ChatGPT know about recent events if its cutoff is October 2023?',
-            a: 'ChatGPT (the product) searches Bing by default in paid tiers and synthesizes current search results with its training-data reasoning. The underlying GPT-4o model still has an October 2023 training cutoff — what you\'re seeing is the search layer, not updated training data.',
-          },
-          {
-            q: 'Do local LLMs like Llama and Qwen ever receive knowledge updates?',
-            a: 'No — not automatically. A local LLM\'s knowledge is permanently frozen at its training cutoff. Each new model release (Llama 4 Scout, Qwen3 14B) has a different cutoff, but the copy running on your machine has fixed knowledge. To get current information, build a RAG pipeline.',
-          },
-          {
-            q: 'What is GEO and how does it relate to knowledge cutoffs?',
-            a: 'GEO (Generative Engine Optimization) is the discipline of making your content appear in AI-generated answers. For cloud AI, GEO works through search optimization — rank in Bing/Google and you get cited. For local LLMs, this is structurally impossible because the model never searches. Local LLM GEO requires RAG pipelines at the deploying organization.',
-          },
-          {
-            q: 'Which AI model has the most recent knowledge cutoff date (verified)?',
-            a: 'Among primary-source verified cutoffs: Claude Opus 5 has the most recent reliable cutoff at May 2026, with GPT-5.6 and Grok 4.6 both close behind at February 2026. Gemini 3.1 Pro is January 2025. DeepSeek-V3 and Gemma 3 27B are around July–August 2024. Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models (Llama 4, Qwen3, Mistral Large) have not publicly disclosed exact dates.',
-          },
-          {
-            q: 'Can I use SEO to appear in Llama or Qwen answers?',
-            a: 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The only paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.',
-          },
-          {
-            q: 'How should I fact-check an AI answer about something that might be affected by the cutoff?',
-            a: 'Three signals suggest a cutoff risk: (1) the topic involves specific versions, prices, people, or events; (2) you asked about something in a fast-moving industry; (3) the AI answer lacks citations. When any of these apply, verify against a primary source — the model\'s confident tone is not a reliability indicator.',
-          },
-          {
-            q: 'Is there a way to tell from an AI\'s answer whether it used live search?',
-            a: 'Often yes: Perplexity always shows source citations. Gemini shows a Google search icon when grounding is used. Grok indicates X search results. ChatGPT shows a globe icon and can be prompted to show sources. Claude does not search by default, so no indicator is needed. Local LLMs never search, so no indicator exists — the answer is always from training data.',
-          },
-        ],
+            { q: 'What is an AI knowledge cutoff date?', a: 'A knowledge cutoff date is the date after which the model\'s training data ends. The model has zero information about events, products, research, or content published after this date. Cloud models can partially compensate via web search; local LLMs cannot.' },
+            { q: 'Why does ChatGPT know about recent events if its cutoff is October 2023?', a: 'ChatGPT (the product) searches Bing by default in paid tiers and synthesizes current search results with its training-data reasoning. The underlying GPT-4o model still has an October 2023 training cutoff — what you\'re seeing is the search layer, not updated training data.' },
+            { q: 'Do local LLMs like Llama and Qwen ever receive knowledge updates?', a: 'No — not automatically. A local LLM\'s knowledge is permanently frozen at its training cutoff. Each new model release (Llama 4 Scout, Qwen3 14B) has a different cutoff, but the copy running on your machine has fixed knowledge. To get current information, build a RAG pipeline.' },
+            { q: 'What is GEO and how does it relate to knowledge cutoffs?', a: 'GEO (Generative Engine Optimization) is the discipline of making your content appear in AI-generated answers. For cloud AI, GEO works through search optimization — rank in Bing/Google and you get cited. For local LLMs, this is structurally impossible because the model never searches. Local LLM GEO requires RAG pipelines at the deploying organization.' },
+            { q: 'Which AI model has the most recent knowledge cutoff date (verified)?', a: 'Among primary-source verified cutoffs: Claude Opus 5 has the most recent reliable cutoff at May 2026, with GPT-5.6 and Grok 4.6 both close behind at February 2026. Gemini 3.1 Pro is January 2025. DeepSeek-V3 and Gemma 3 27B are around July–August 2024. Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models (Llama 4, Qwen3, Mistral Large) have not publicly disclosed exact dates.' },
+            { q: 'Can I use SEO to appear in Llama or Qwen answers?', a: 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The only paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.' },
+            { q: 'How should I fact-check an AI answer about something that might be affected by the cutoff?', a: 'Three signals suggest a cutoff risk: (1) the topic involves specific versions, prices, people, or events; (2) you asked about something in a fast-moving industry; (3) the AI answer lacks citations. When any of these apply, verify against a primary source — the model\'s confident tone is not a reliability indicator.' },
+            { q: 'Is there a way to tell from an AI\'s answer whether it used live search?', a: 'Often yes: Perplexity always shows source citations. Gemini shows a Google search icon when grounding is used. Grok indicates X search results. ChatGPT shows a globe icon and can be prompted to show sources. Claude does not search by default, so no indicator is needed. Local LLMs never search, so no indicator exists — the answer is always from training data.' },
+            { q: 'Why does ChatGPT seem to know about recent events even though its base model has a training cutoff?', a: 'ChatGPT (the product) searches Bing by default in paid tiers and augments its responses with current search results. This means it can answer factual questions about recent events even though the underlying model\'s training data has a fixed cutoff (GPT-5.6 training cutoff is Feb 2026; legacy GPT-4o ends Oct 2023). The training cutoff still limits contextual understanding of post-cutoff topics.' },
+            { q: 'Which cloud AI models search the live web by default?', a: 'ChatGPT uses Bing by default (paid tiers). Gemini 3.1 Pro uses Google Search by default. Grok 4.6 searches X (Twitter) by default in the consumer app. Perplexity is web-search-native for every query. Claude requires explicit developer tool activation and does not search by default. DeepSeek and Mistral Large have no default search. All local LLMs (Llama, Qwen, Gemma, Phi, Mistral open weights) have no search capability.' },
+            { q: 'What should I do if I need current information from a local LLM?', a: 'Build a RAG (Retrieval-Augmented Generation) pipeline. A RAG system retrieves relevant current documents — from a web search, internal database, or document store — at query time and injects them into the LLM\'s context window before generating a response. Popular local RAG tools include LlamaIndex, LangChain, and Ollama with a retrieval layer. The LLM then reasons over the injected documents rather than relying solely on frozen training data.' },
+          ],
       },
       relatedReading: {
           title: 'Related Reading',
@@ -483,71 +486,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'AI 지식 마감 날짜란 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AI 지식 마감 날짜는 모델의 학습 데이터가 끝나는 날짜입니다. 모델은 이 날짜 이후에 발생한 사건, 제품, 연구, 콘텐츠에 대한 정보가 전혀 없습니다. 클라우드 모델은 내장 웹 검색을 통해 부분적으로 보완할 수 있지만, 로컬 LLM은 그렇지 않아 마감 날짜가 절대적입니다.',
+          {
+            '@type': 'Question',
+            'name': 'AI 지식 마감 날짜란 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '지식 마감 날짜는 모델의 학습 데이터가 끝나는 날짜입니다. 모델은 이 날짜 이후에 발생한 이벤트, 제품, 연구, 또는 콘텐츠에 대한 정보가 전혀 없습니다. 클라우드 모델은 웹 검색을 통해 부분적으로 보완할 수 있지만, 로컬 LLM은 그렇지 않습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '기본 모델의 학습 마감이 있음에도 ChatGPT가 최근 이벤트를 아는 이유는 무엇입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과로 응답을 보완합니다. 즉, 기본 모델의 학습 데이터에 고정된 마감 날짜(GPT-5.6 학습 마감은 2026년 2월; 레거시 GPT-4o는 2023년 10월)가 있더라도 최근 이벤트에 대한 사실 질문에 답할 수 있습니다. 학습 마감은 여전히 마감 이후 주제에 대한 맥락적 이해를 제한합니다.',
+          {
+            '@type': 'Question',
+            'name': 'ChatGPT의 마감이 2023년 10월이라면 왜 최근 이벤트를 알고 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과와 학습 데이터 추론을 합성합니다. 기본 GPT-4o 모델은 여전히 2023년 10월 학습 마감 날짜를 가지고 있습니다 — 보이는 것은 검색 레이어이지 업데이트된 학습 데이터가 아닙니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '아닙니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 새 모델 버전이 출시될 때(예: Llama 4 Scout)는 새로운 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 모델은 스스로 업데이트되지 않습니다. 현재 정보에 접근하려면 쿼리 시 문서를 가져와 모델의 컨텍스트 윈도우에 주입하는 RAG(검색 증강 생성) 파이프라인을 구축해야 합니다.',
+          {
+            '@type': 'Question',
+            'name': 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다 — 자동으로는 안 됩니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 각 새로운 모델 릴리스(Llama 4 Scout, Qwen3 14B)는 다른 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 복사본은 고정된 지식을 가집니다. 현재 정보를 얻으려면 RAG 파이프라인을 구축하십시오.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GEO(생성형 엔진 최적화)는 브랜드 또는 콘텐츠를 AI 생성 답변에 노출시키는 실천입니다. 클라우드 AI 모델에서 GEO는 SEO와 겹칩니다 — Bing, Google, X 검색에서 좋은 순위를 얻으면 ChatGPT, Gemini, Grok에 인용될 수 있습니다. 로컬 LLM의 경우 모델이 웹을 검색하지 않으므로 검색을 통한 GEO는 불가능합니다. 로컬 LLM에 도달하는 유일한 방법은 해당 모델을 운영하는 조직이 구축한 RAG 파이프라인을 통해서입니다.',
+          {
+            '@type': 'Question',
+            'name': 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO(생성형 엔진 최적화)는 콘텐츠를 AI 생성 답변에 노출시키는 분야입니다. 클라우드 AI의 경우 GEO는 검색 최적화를 통해 작동합니다 — Bing/Google에서 순위를 얻으면 인용됩니다. 로컬 LLM의 경우 모델이 검색하지 않기 때문에 이것은 구조적으로 불가능합니다. 로컬 LLM GEO는 배포 조직의 RAG 파이프라인이 필요합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '가장 최근 지식 마감 날짜를 가진 AI 모델은 어느 것입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '검증된 1차 출처 마감 날짜 중: Claude Opus 5가 2026년 5월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, GPT-5.6과 Grok 4.6이 각각 2026년 2월로 그 뒤를 잇습니다. Gemini 3.1 Pro는 2025년 1월. DeepSeek-V3은 2024년 7월. Gemma 3 27B는 2024년 8월. Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4, Qwen3, Mistral Large를 포함한 여러 현재 모델은 정확한 마감 날짜를 공개적으로 공시하지 않았습니다.',
+          {
+            '@type': 'Question',
+            'name': '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '1차 출처 검증 마감 날짜 중: Claude Opus 5가 2026년 5월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, GPT-5.6과 Grok 4.6이 2026년 2월로 근접합니다. Gemini 3.1 Pro는 2025년 1월. DeepSeek-V3와 Gemma 3 27B는 2024년 7월~8월경. Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4, Qwen3, Mistral Large를 포함한 여러 현재 모델은 정확한 날짜를 공개적으로 공시하지 않았습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '아닙니다. 검색 엔진 최적화는 로컬에서 실행되는 LLM에 영향을 줄 수 없습니다. 모델이 웹 검색을 수행하지 않기 때문입니다. 로컬 LLM 출력에 나타나려면: (1) 마감 날짜 이전에 모델의 학습 데이터에 포함되어 있었거나, (2) 모델을 배포하는 조직이 구축한 RAG 파이프라인에 포함되어야 합니다. 이것은 전통적인 SEO나 클라우드 AI GEO와 근본적으로 다른 채널입니다.',
+          {
+            '@type': 'Question',
+            'name': 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 유일한 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '기본적으로 실시간 웹을 검색하는 클라우드 AI 모델은 어느 것입니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT는 기본적으로 Bing을 검색합니다(유료 티어). Gemini 3.1 Pro는 기본적으로 Google 검색을 사용합니다. Grok 4.6은 일반 소비자용 앱에서 기본적으로 X(Twitter)를 검색합니다. Perplexity는 모든 쿼리에 웹 검색 네이티브입니다. Claude는 명시적인 개발자 도구 활성화가 필요하며 기본적으로 검색하지 않습니다. DeepSeek과 Mistral Large는 기본 검색이 없습니다. 모든 로컬 LLM(Llama, Qwen, Gemma, Phi, Mistral 오픈 웨이트)은 검색 기능이 없습니다.',
+          {
+            '@type': 'Question',
+            'name': '마감 날짜의 영향을 받을 수 있는 AI 답변을 어떻게 사실 확인해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '세 가지 신호가 마감 위험을 시사합니다: (1) 주제가 특정 버전, 가격, 인물, 또는 이벤트를 포함; (2) 빠르게 변화하는 산업의 것을 물어봄; (3) AI 답변에 인용이 없음. 이 중 어느 하나가 적용되면 1차 출처에서 확인하십시오 — 모델의 자신감 있는 어조는 신뢰도 지표가 아닙니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '로컬 LLM에서 현재 정보가 필요할 때 어떻게 해야 합니까?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RAG(검색 증강 생성) 파이프라인을 구축하십시오. RAG 시스템은 쿼리 시 — 웹 검색, 내부 데이터베이스, 또는 문서 저장소에서 — 관련 최신 문서를 검색하여 응답을 생성하기 전에 LLM의 컨텍스트 윈도우에 주입합니다. 인기 있는 로컬 RAG 도구로는 LlamaIndex, LangChain, 검색 레이어가 있는 Ollama 등이 있습니다. LLM은 동결된 학습 데이터에만 의존하는 대신 주입된 문서를 기반으로 추론합니다.',
+          {
+            '@type': 'Question',
+            'name': 'AI 답변에서 실시간 검색을 사용했는지 알 수 있는 방법이 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '종종 그렇습니다: Perplexity는 항상 출처 인용을 표시합니다. Gemini는 그라운딩이 사용될 때 Google 검색 아이콘을 표시합니다. Grok은 X 검색 결과를 나타냅니다. ChatGPT는 지구본 아이콘을 표시하며 출처를 표시하도록 요청할 수 있습니다. Claude는 기본적으로 검색하지 않으므로 지표가 필요 없습니다. 로컬 LLM은 검색하지 않으므로 지표가 없습니다 — 답변은 항상 학습 데이터에서 나옵니다.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '기본 모델의 학습 마감이 있음에도 ChatGPT가 최근 이벤트를 아는 이유는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과로 응답을 보완합니다. 즉, 기본 모델의 학습 데이터에 고정된 마감 날짜(GPT-5.6 학습 마감은 2026년 2월; 레거시 GPT-4o는 2023년 10월)가 있더라도 최근 이벤트에 대한 사실 질문에 답할 수 있습니다. 학습 마감은 여전히 마감 이후 주제에 대한 맥락적 이해를 제한합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '기본적으로 실시간 웹을 검색하는 클라우드 AI 모델은 어느 것입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT는 기본적으로 Bing을 검색합니다(유료 티어). Gemini 3.1 Pro는 기본적으로 Google 검색을 사용합니다. Grok 4.6은 일반 소비자용 앱에서 기본적으로 X(Twitter)를 검색합니다. Perplexity는 모든 쿼리에 웹 검색 네이티브입니다. Claude는 명시적인 개발자 도구 활성화가 필요하며 기본적으로 검색하지 않습니다. DeepSeek과 Mistral Large는 기본 검색이 없습니다. 모든 로컬 LLM(Llama, Qwen, Gemma, Phi, Mistral 오픈 웨이트)은 검색 기능이 없습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 LLM에서 현재 정보가 필요할 때 어떻게 해야 합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG(검색 증강 생성) 파이프라인을 구축하십시오. RAG 시스템은 쿼리 시 — 웹 검색, 내부 데이터베이스, 또는 문서 저장소에서 — 관련 최신 문서를 검색하여 응답을 생성하기 전에 LLM의 컨텍스트 윈도우에 주입합니다. 인기 있는 로컬 RAG 도구로는 LlamaIndex, LangChain, 검색 레이어가 있는 Ollama 등이 있습니다. LLM은 동결된 학습 데이터에만 의존하는 대신 주입된 문서를 기반으로 추론합니다.',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -757,39 +784,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'AI 지식 마감 날짜란 무엇입니까?',
-            a: '지식 마감 날짜는 모델의 학습 데이터가 끝나는 날짜입니다. 모델은 이 날짜 이후에 발생한 이벤트, 제품, 연구, 또는 콘텐츠에 대한 정보가 전혀 없습니다. 클라우드 모델은 웹 검색을 통해 부분적으로 보완할 수 있지만, 로컬 LLM은 그렇지 않습니다.',
-          },
-          {
-            q: 'ChatGPT의 마감이 2023년 10월이라면 왜 최근 이벤트를 알고 있습니까?',
-            a: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과와 학습 데이터 추론을 합성합니다. 기본 GPT-4o 모델은 여전히 2023년 10월 학습 마감 날짜를 가지고 있습니다 — 보이는 것은 검색 레이어이지 업데이트된 학습 데이터가 아닙니다.',
-          },
-          {
-            q: 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?',
-            a: '아닙니다 — 자동으로는 안 됩니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 각 새로운 모델 릴리스(Llama 4 Scout, Qwen3 14B)는 다른 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 복사본은 고정된 지식을 가집니다. 현재 정보를 얻으려면 RAG 파이프라인을 구축하십시오.',
-          },
-          {
-            q: 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?',
-            a: 'GEO(생성형 엔진 최적화)는 콘텐츠를 AI 생성 답변에 노출시키는 분야입니다. 클라우드 AI의 경우 GEO는 검색 최적화를 통해 작동합니다 — Bing/Google에서 순위를 얻으면 인용됩니다. 로컬 LLM의 경우 모델이 검색하지 않기 때문에 이것은 구조적으로 불가능합니다. 로컬 LLM GEO는 배포 조직의 RAG 파이프라인이 필요합니다.',
-          },
-          {
-            q: '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?',
-            a: '1차 출처 검증 마감 날짜 중: Claude Opus 5가 2026년 5월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, GPT-5.6과 Grok 4.6이 2026년 2월로 근접합니다. Gemini 3.1 Pro는 2025년 1월. DeepSeek-V3와 Gemma 3 27B는 2024년 7월~8월경. Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4, Qwen3, Mistral Large를 포함한 여러 현재 모델은 정확한 날짜를 공개적으로 공시하지 않았습니다.',
-          },
-          {
-            q: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?',
-            a: '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 유일한 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.',
-          },
-          {
-            q: '마감 날짜의 영향을 받을 수 있는 AI 답변을 어떻게 사실 확인해야 합니까?',
-            a: '세 가지 신호가 마감 위험을 시사합니다: (1) 주제가 특정 버전, 가격, 인물, 또는 이벤트를 포함; (2) 빠르게 변화하는 산업의 것을 물어봄; (3) AI 답변에 인용이 없음. 이 중 어느 하나가 적용되면 1차 출처에서 확인하십시오 — 모델의 자신감 있는 어조는 신뢰도 지표가 아닙니다.',
-          },
-          {
-            q: 'AI 답변에서 실시간 검색을 사용했는지 알 수 있는 방법이 있습니까?',
-            a: '종종 그렇습니다: Perplexity는 항상 출처 인용을 표시합니다. Gemini는 그라운딩이 사용될 때 Google 검색 아이콘을 표시합니다. Grok은 X 검색 결과를 나타냅니다. ChatGPT는 지구본 아이콘을 표시하며 출처를 표시하도록 요청할 수 있습니다. Claude는 기본적으로 검색하지 않으므로 지표가 필요 없습니다. 로컬 LLM은 검색하지 않으므로 지표가 없습니다 — 답변은 항상 학습 데이터에서 나옵니다.',
-          },
-        ],
+            { q: 'AI 지식 마감 날짜란 무엇입니까?', a: '지식 마감 날짜는 모델의 학습 데이터가 끝나는 날짜입니다. 모델은 이 날짜 이후에 발생한 이벤트, 제품, 연구, 또는 콘텐츠에 대한 정보가 전혀 없습니다. 클라우드 모델은 웹 검색을 통해 부분적으로 보완할 수 있지만, 로컬 LLM은 그렇지 않습니다.' },
+            { q: 'ChatGPT의 마감이 2023년 10월이라면 왜 최근 이벤트를 알고 있습니까?', a: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과와 학습 데이터 추론을 합성합니다. 기본 GPT-4o 모델은 여전히 2023년 10월 학습 마감 날짜를 가지고 있습니다 — 보이는 것은 검색 레이어이지 업데이트된 학습 데이터가 아닙니다.' },
+            { q: 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?', a: '아닙니다 — 자동으로는 안 됩니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 각 새로운 모델 릴리스(Llama 4 Scout, Qwen3 14B)는 다른 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 복사본은 고정된 지식을 가집니다. 현재 정보를 얻으려면 RAG 파이프라인을 구축하십시오.' },
+            { q: 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?', a: 'GEO(생성형 엔진 최적화)는 콘텐츠를 AI 생성 답변에 노출시키는 분야입니다. 클라우드 AI의 경우 GEO는 검색 최적화를 통해 작동합니다 — Bing/Google에서 순위를 얻으면 인용됩니다. 로컬 LLM의 경우 모델이 검색하지 않기 때문에 이것은 구조적으로 불가능합니다. 로컬 LLM GEO는 배포 조직의 RAG 파이프라인이 필요합니다.' },
+            { q: '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?', a: '1차 출처 검증 마감 날짜 중: Claude Opus 5가 2026년 5월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, GPT-5.6과 Grok 4.6이 2026년 2월로 근접합니다. Gemini 3.1 Pro는 2025년 1월. DeepSeek-V3와 Gemma 3 27B는 2024년 7월~8월경. Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4, Qwen3, Mistral Large를 포함한 여러 현재 모델은 정확한 날짜를 공개적으로 공시하지 않았습니다.' },
+            { q: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?', a: '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 유일한 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.' },
+            { q: '마감 날짜의 영향을 받을 수 있는 AI 답변을 어떻게 사실 확인해야 합니까?', a: '세 가지 신호가 마감 위험을 시사합니다: (1) 주제가 특정 버전, 가격, 인물, 또는 이벤트를 포함; (2) 빠르게 변화하는 산업의 것을 물어봄; (3) AI 답변에 인용이 없음. 이 중 어느 하나가 적용되면 1차 출처에서 확인하십시오 — 모델의 자신감 있는 어조는 신뢰도 지표가 아닙니다.' },
+            { q: 'AI 답변에서 실시간 검색을 사용했는지 알 수 있는 방법이 있습니까?', a: '종종 그렇습니다: Perplexity는 항상 출처 인용을 표시합니다. Gemini는 그라운딩이 사용될 때 Google 검색 아이콘을 표시합니다. Grok은 X 검색 결과를 나타냅니다. ChatGPT는 지구본 아이콘을 표시하며 출처를 표시하도록 요청할 수 있습니다. Claude는 기본적으로 검색하지 않으므로 지표가 필요 없습니다. 로컬 LLM은 검색하지 않으므로 지표가 없습니다 — 답변은 항상 학습 데이터에서 나옵니다.' },
+            { q: '기본 모델의 학습 마감이 있음에도 ChatGPT가 최근 이벤트를 아는 이유는 무엇입니까?', a: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과로 응답을 보완합니다. 즉, 기본 모델의 학습 데이터에 고정된 마감 날짜(GPT-5.6 학습 마감은 2026년 2월; 레거시 GPT-4o는 2023년 10월)가 있더라도 최근 이벤트에 대한 사실 질문에 답할 수 있습니다. 학습 마감은 여전히 마감 이후 주제에 대한 맥락적 이해를 제한합니다.' },
+            { q: '기본적으로 실시간 웹을 검색하는 클라우드 AI 모델은 어느 것입니까?', a: 'ChatGPT는 기본적으로 Bing을 검색합니다(유료 티어). Gemini 3.1 Pro는 기본적으로 Google 검색을 사용합니다. Grok 4.6은 일반 소비자용 앱에서 기본적으로 X(Twitter)를 검색합니다. Perplexity는 모든 쿼리에 웹 검색 네이티브입니다. Claude는 명시적인 개발자 도구 활성화가 필요하며 기본적으로 검색하지 않습니다. DeepSeek과 Mistral Large는 기본 검색이 없습니다. 모든 로컬 LLM(Llama, Qwen, Gemma, Phi, Mistral 오픈 웨이트)은 검색 기능이 없습니다.' },
+            { q: '로컬 LLM에서 현재 정보가 필요할 때 어떻게 해야 합니까?', a: 'RAG(검색 증강 생성) 파이프라인을 구축하십시오. RAG 시스템은 쿼리 시 — 웹 검색, 내부 데이터베이스, 또는 문서 저장소에서 — 관련 최신 문서를 검색하여 응답을 생성하기 전에 LLM의 컨텍스트 윈도우에 주입합니다. 인기 있는 로컬 RAG 도구로는 LlamaIndex, LangChain, 검색 레이어가 있는 Ollama 등이 있습니다. LLM은 동결된 학습 데이터에만 의존하는 대신 주입된 문서를 기반으로 추론합니다.' },
+          ],
       },
       relatedReading: {
           title: '관련 읽기',
@@ -881,71 +887,79 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'O que é uma data de corte de conhecimento de IA?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A data de corte de conhecimento é a data até a qual os dados de treinamento do modelo terminam. O modelo não tem nenhuma informação sobre eventos, produtos, pesquisas ou conteúdos publicados após essa data. Modelos em nuvem podem compensar parcialmente com busca web, mas LLMs locais não — tornando a data de corte absoluta.',
+          {
+            '@type': 'Question',
+            'name': 'O que é uma data de corte de conhecimento de IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A data de corte de conhecimento é a data após a qual os dados de treinamento do modelo terminam. O modelo não tem nenhuma informação sobre eventos, produtos, pesquisas ou conteúdos ocorridos após essa data. Modelos em nuvem podem compensar parcialmente via busca web, mas LLMs locais não.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Por que o ChatGPT conhece eventos recentes mesmo tendo data de corte de outubro de 2023?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, complementando respostas com resultados de busca atuais. O modelo base GPT-5.6 tem data de corte de fevereiro de 2026; o legado GPT-4o tem outubro de 2023. O que você vê é a camada de busca, não dados de treinamento atualizados.',
+          {
+            '@type': 'Question',
+            'name': 'Se o corte do ChatGPT é outubro de 2023, por que ele conhece eventos recentes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, sintetizando resultados de busca atuais com a inferência dos dados de treinamento. O modelo GPT-4o base ainda tem data de corte de outubro de 2023 — o que você vê é a camada de busca, não dados de treinamento atualizados.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para acessar informações atuais, você precisa construir um pipeline RAG (Geração Aumentada por Recuperação).',
+          {
+            '@type': 'Question',
+            'name': 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não — não automaticamente. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para obter informações atuais, construa um pipeline RAG.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'O que é GEO e como se relaciona com datas de corte?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GEO (Otimização de Motor Generativo) é a prática de fazer sua marca ou conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO se sobrepõe ao SEO. Para LLMs locais, o modelo não busca na web, então GEO via busca é estruturalmente impossível. O único caminho é por meio de pipelines RAG construídos pela organização que implanta o modelo.',
+          {
+            '@type': 'Question',
+            'name': 'O que é GEO e como se relaciona com datas de corte?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO (Otimização de Motor Generativo) é a área de fazer conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO funciona via otimização de busca. Para LLMs locais, isso é estruturalmente impossível porque o modelo não busca. GEO de LLM local requer pipeline RAG da organização implantadora.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qual modelo de IA tem a data de corte de conhecimento verificada mais recente?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Claude Opus 5 tem a data de corte confiável mais recente em maio de 2026, com GPT-5.6 e Grok 4.6 logo atrás, ambos em fevereiro de 2026. Gemini 3.1 Pro: janeiro de 2025. DeepSeek-V3: julho de 2024. Gemma 3 27B: agosto de 2024. Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023.',
+          {
+            '@type': 'Question',
+            'name': 'Qual modelo de IA tem a data de corte verificada mais recente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Claude Opus 5 tem a data de corte confiável mais recente em maio de 2026, com GPT-5.6 e Grok 4.6 em fevereiro de 2026. Gemini 3.1 Pro: janeiro de 2025. DeepSeek-V3 e Gemma 3 27B: julho-agosto de 2024. Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Posso usar SEO para aparecer em respostas do Llama ou Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Não. SEO não pode influenciar LLMs implantados localmente porque o modelo não faz busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes da data de corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.',
+          {
+            '@type': 'Question',
+            'name': 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Como verificar factualmente respostas de IA que podem ser afetadas por datas de corte?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.',
+          {
+            '@type': 'Question',
+            'name': 'Como verificar faticamente respostas de IA afetadas por datas de corte?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Como saber se uma resposta de IA usou busca ao vivo?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — respostas sempre vêm dos dados de treinamento.',
+          {
+            '@type': 'Question',
+            'name': 'Como saber se uma resposta de IA usou busca ao vivo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — as respostas sempre vêm dos dados de treinamento.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Por que o ChatGPT conhece eventos recentes mesmo tendo data de corte de outubro de 2023?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, complementando respostas com resultados de busca atuais. O modelo base GPT-5.6 tem data de corte de fevereiro de 2026; o legado GPT-4o tem outubro de 2023. O que você vê é a camada de busca, não dados de treinamento atualizados.',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -1155,39 +1169,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'O que é uma data de corte de conhecimento de IA?',
-            a: 'A data de corte de conhecimento é a data após a qual os dados de treinamento do modelo terminam. O modelo não tem nenhuma informação sobre eventos, produtos, pesquisas ou conteúdos ocorridos após essa data. Modelos em nuvem podem compensar parcialmente via busca web, mas LLMs locais não.',
-          },
-          {
-            q: 'Se o corte do ChatGPT é outubro de 2023, por que ele conhece eventos recentes?',
-            a: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, sintetizando resultados de busca atuais com a inferência dos dados de treinamento. O modelo GPT-4o base ainda tem data de corte de outubro de 2023 — o que você vê é a camada de busca, não dados de treinamento atualizados.',
-          },
-          {
-            q: 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?',
-            a: 'Não — não automaticamente. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para obter informações atuais, construa um pipeline RAG.',
-          },
-          {
-            q: 'O que é GEO e como se relaciona com datas de corte?',
-            a: 'GEO (Otimização de Motor Generativo) é a área de fazer conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO funciona via otimização de busca. Para LLMs locais, isso é estruturalmente impossível porque o modelo não busca. GEO de LLM local requer pipeline RAG da organização implantadora.',
-          },
-          {
-            q: 'Qual modelo de IA tem a data de corte verificada mais recente?',
-            a: 'Claude Opus 5 tem a data de corte confiável mais recente em maio de 2026, com GPT-5.6 e Grok 4.6 em fevereiro de 2026. Gemini 3.1 Pro: janeiro de 2025. DeepSeek-V3 e Gemma 3 27B: julho-agosto de 2024. Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023.',
-          },
-          {
-            q: 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?',
-            a: 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.',
-          },
-          {
-            q: 'Como verificar faticamente respostas de IA afetadas por datas de corte?',
-            a: 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.',
-          },
-          {
-            q: 'Como saber se uma resposta de IA usou busca ao vivo?',
-            a: 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — as respostas sempre vêm dos dados de treinamento.',
-          },
-        ],
+            { q: 'O que é uma data de corte de conhecimento de IA?', a: 'A data de corte de conhecimento é a data após a qual os dados de treinamento do modelo terminam. O modelo não tem nenhuma informação sobre eventos, produtos, pesquisas ou conteúdos ocorridos após essa data. Modelos em nuvem podem compensar parcialmente via busca web, mas LLMs locais não.' },
+            { q: 'Se o corte do ChatGPT é outubro de 2023, por que ele conhece eventos recentes?', a: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, sintetizando resultados de busca atuais com a inferência dos dados de treinamento. O modelo GPT-4o base ainda tem data de corte de outubro de 2023 — o que você vê é a camada de busca, não dados de treinamento atualizados.' },
+            { q: 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?', a: 'Não — não automaticamente. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para obter informações atuais, construa um pipeline RAG.' },
+            { q: 'O que é GEO e como se relaciona com datas de corte?', a: 'GEO (Otimização de Motor Generativo) é a área de fazer conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO funciona via otimização de busca. Para LLMs locais, isso é estruturalmente impossível porque o modelo não busca. GEO de LLM local requer pipeline RAG da organização implantadora.' },
+            { q: 'Qual modelo de IA tem a data de corte verificada mais recente?', a: 'Claude Opus 5 tem a data de corte confiável mais recente em maio de 2026, com GPT-5.6 e Grok 4.6 em fevereiro de 2026. Gemini 3.1 Pro: janeiro de 2025. DeepSeek-V3 e Gemma 3 27B: julho-agosto de 2024. Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023.' },
+            { q: 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?', a: 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.' },
+            { q: 'Como verificar faticamente respostas de IA afetadas por datas de corte?', a: 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.' },
+            { q: 'Como saber se uma resposta de IA usou busca ao vivo?', a: 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — as respostas sempre vêm dos dados de treinamento.' },
+            { q: 'Por que o ChatGPT conhece eventos recentes mesmo tendo data de corte de outubro de 2023?', a: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, complementando respostas com resultados de busca atuais. O modelo base GPT-5.6 tem data de corte de fevereiro de 2026; o legado GPT-4o tem outubro de 2023. O que você vê é a camada de busca, não dados de treinamento atualizados.' },
+          ],
       },
       relatedReading: {
           title: 'Leitura relacionada',
@@ -1279,71 +1270,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'AI知識カットオフ日とは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AI知識カットオフ日とは、モデルの学習データが終わる日付のことです。モデルはその日付以降に発生したイベント、製品、研究、その他のコンテンツに関する情報を一切持っていません。クラウドモデルは組み込みのウェブ検索で部分的に補うことができますが、ローカルLLMはできません — カットオフは絶対的です。',
+          {
+            '@type': 'Question',
+            'name': 'AI知識カットオフ日とは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '知識カットオフ日とは、モデルの学習データが終わる日付のことです。モデルはその日付以降に発生したイベント、製品、研究、またはコンテンツに関する情報をまったく持っていません。クラウドモデルはウェブ検索で部分的に補うことができますが、ローカルLLMはできません。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ベースモデルにトレーニングカットオフがあるのに、ChatGPTが最近の出来事を知っているのはなぜですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果で回答を補強します。これにより、基盤モデルの学習データに固定されたカットオフ日（GPT-5.6は2026年2月、レガシーGPT-4oは2023年10月）があっても、最近のイベントについての質問に答えられます。ただし、カットオフ以降のトピックに関する文脈的理解は依然として制限されます。',
+          {
+            '@type': 'Question',
+            'name': 'ChatGPTのカットオフが2023年10月なのに最近の出来事を知っているのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果を学習データの推論と合わせて統合します。基盤のGPT-4oモデルは依然として2023年10月のトレーニングカットオフを持っています — あなたが見ているのは検索レイヤーであり、更新された学習データではありません。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'LlamaやQwenのようなローカルLLMは知識のアップデートを受け取りますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。ローカルLLMの知識はトレーニングカットオフ時点で永久に凍結されます。新しいモデルバージョン（Llama 4 ScoutなどがLlama 3.3に取って代わる場合）には新しいカットオフがありますが、マシン上で実行中のモデルは自動更新されません。現在の情報にアクセスするには、クエリ時にドキュメントを取得してモデルのコンテキストウィンドウに注入するRAG（検索拡張生成）パイプラインを構築する必要があります。',
+          {
+            '@type': 'Question',
+            'name': 'LlamaやQwenのようなローカルLLMは知識のアップデートを受け取りますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ — 自動的にはありません。ローカルLLMの知識はトレーニングカットオフ時点で永久に凍結されます。新しいモデルリリース（Llama 4 Scout、Qwen3 14B）はそれぞれ異なるカットオフを持ちますが、マシン上で実行中のコピーは固定された知識を持ちます。現在の情報を得るにはRAGパイプラインを構築してください。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'GEOとは何ですか？知識カットオフとどう関係しますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GEO（生成エンジン最適化）とは、ブランドやコンテンツをAI生成回答に露出させる取り組みです。クラウドAIモデルでは、GEOはSEOと重なります — Bing、Google、XでランクインすればChatGPT、Gemini、Grokに引用される可能性があります。ローカルLLMでは、モデルがウェブを検索しないため、検索経由のGEOは構造的に不可能です。ローカルLLMにリーチする唯一の方法は、そのモデルを運用する組織が構築したRAGパイプラインを通じることです。',
+          {
+            '@type': 'Question',
+            'name': 'GEOとは何ですか？知識カットオフとどう関係しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO（生成エンジン最適化）とは、コンテンツをAI生成回答に露出させる分野です。クラウドAIでは、GEOは検索最適化を通じて機能します — Bing/Googleで順位を得ることで引用されます。ローカルLLMでは、モデルが検索しないため、これは構造的に不可能です。ローカルLLMのGEOはデプロイ組織のRAGパイプラインが必要です。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '最も新しい知識カットオフ日を持つAIモデルはどれですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '一次情報源で検証済みのカットオフ日の中では：Claude Opus 5が2026年5月という最も新しい信頼性の高いカットオフを持ち、GPT-5.6とGrok 4.6がそれぞれ2026年2月で続きます。Gemini 3.1 Proは2025年1月。DeepSeek-V3は2024年7月。Gemma 3 27Bは2024年8月。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Llama 4、Qwen3、Mistral Largeを含む複数の現行モデルは正確なカットオフ日を公式に開示していません。',
+          {
+            '@type': 'Question',
+            'name': '検証済みの中で最も新しい知識カットオフ日を持つAIモデルはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '一次情報源で検証済みのカットオフの中では：Claude Opus 5が2026年5月という最も新しい信頼性の高いカットオフを持ち、GPT-5.6とGrok 4.6が2026年2月で近接しています。Gemini 3.1 Proは2025年1月。DeepSeek-V3とGemma 3 27Bは2024年7～8月ごろ。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Llama 4、Qwen3、Mistral Largeを含む複数の現行モデルは正確な日付を公式に開示していません。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'SEOを使ってLlamaやQwenの回答に露出できますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'いいえ。検索エンジン最適化はローカルでデプロイされたLLMに影響を与えることができません。モデルがウェブ検索を行わないからです。ローカルLLMの出力に登場するには：(1) カットオフ前にモデルの学習データに含まれていたか、(2) モデルをデプロイしている組織が構築したRAGパイプラインに含まれる必要があります。これは従来のSEOやクラウドAIのGEOとは根本的に異なるチャネルです。',
+          {
+            '@type': 'Question',
+            'name': 'SEOを使ってLlamaやQwenの回答に露出できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。唯一の経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'デフォルトでライブウェブを検索するクラウドAIモデルはどれですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPTはデフォルトでBingを検索します（有料プラン）。Gemini 3.1 ProはデフォルトでGoogle検索を使用します。Grok 4.6はコンシューマー向けアプリではデフォルトでX（Twitter）を検索します。Perplexityはすべてのクエリでウェブ検索ネイティブです。Claudeは明示的な開発者ツールの有効化が必要で、デフォルトでは検索しません。DeepSeekとMistral Largeにはデフォルト検索がありません。すべてのローカルLLM（Llama、Qwen、Gemma、Phi、Mistralオープンウェイト）には検索機能がありません。',
+          {
+            '@type': 'Question',
+            'name': 'カットオフの影響を受ける可能性があるAI回答をどうやってファクトチェックすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'カットオフリスクを示す3つのシグナル：(1) トピックが特定のバージョン、価格、人物、またはイベントを含む；(2) 変化の速い業界について尋ねている；(3) AI回答に引用がない。これらのいずれかが当てはまる場合、一次情報源で確認してください — モデルの自信に満ちたトーンは信頼性の指標ではありません。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ローカルLLMで現在の情報が必要な場合はどうすればよいですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RAG（検索拡張生成）パイプラインを構築してください。RAGシステムは、クエリ時にウェブ検索、内部データベース、またはドキュメントストアから関連する最新ドキュメントを取得し、回答生成の前にLLMのコンテキストウィンドウに注入します。人気のローカルRAGツールにはLlamaIndex、LangChain、検索レイヤーを備えたOllamaなどがあります。LLMは凍結された学習データだけに依存するのではなく、注入されたドキュメントを基に推論を行います。',
+          {
+            '@type': 'Question',
+            'name': 'AI回答がライブ検索を使ったかどうかわかりますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '多くの場合はわかります：Perplexityは常にソース引用を表示します。GeminiはグラウンディングとGoogle検索アイコンを表示します。GrokはXの検索結果を示します。ChatGPTは地球儀アイコンを表示し、ソースを表示するよう求めることができます。Claudeはデフォルトで検索しないため、インジケーターは不要です。ローカルLLMは決して検索しないため、インジケーターは存在しません — 回答は常に学習データから来ています。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'ベースモデルにトレーニングカットオフがあるのに、ChatGPTが最近の出来事を知っているのはなぜですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果で回答を補強します。これにより、基盤モデルの学習データに固定されたカットオフ日（GPT-5.6は2026年2月、レガシーGPT-4oは2023年10月）があっても、最近のイベントについての質問に答えられます。ただし、カットオフ以降のトピックに関する文脈的理解は依然として制限されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'デフォルトでライブウェブを検索するクラウドAIモデルはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPTはデフォルトでBingを検索します（有料プラン）。Gemini 3.1 ProはデフォルトでGoogle検索を使用します。Grok 4.6はコンシューマー向けアプリではデフォルトでX（Twitter）を検索します。Perplexityはすべてのクエリでウェブ検索ネイティブです。Claudeは明示的な開発者ツールの有効化が必要で、デフォルトでは検索しません。DeepSeekとMistral Largeにはデフォルト検索がありません。すべてのローカルLLM（Llama、Qwen、Gemma、Phi、Mistralオープンウェイト）には検索機能がありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMで現在の情報が必要な場合はどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RAG（検索拡張生成）パイプラインを構築してください。RAGシステムは、クエリ時にウェブ検索、内部データベース、またはドキュメントストアから関連する最新ドキュメントを取得し、回答生成の前にLLMのコンテキストウィンドウに注入します。人気のローカルRAGツールにはLlamaIndex、LangChain、検索レイヤーを備えたOllamaなどがあります。LLMは凍結された学習データだけに依存するのではなく、注入されたドキュメントを基に推論を行います。',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -1553,39 +1568,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: 'よくある質問',
         faqs: [
-          {
-            q: 'AI知識カットオフ日とは何ですか？',
-            a: '知識カットオフ日とは、モデルの学習データが終わる日付のことです。モデルはその日付以降に発生したイベント、製品、研究、またはコンテンツに関する情報をまったく持っていません。クラウドモデルはウェブ検索で部分的に補うことができますが、ローカルLLMはできません。',
-          },
-          {
-            q: 'ChatGPTのカットオフが2023年10月なのに最近の出来事を知っているのはなぜですか？',
-            a: 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果を学習データの推論と合わせて統合します。基盤のGPT-4oモデルは依然として2023年10月のトレーニングカットオフを持っています — あなたが見ているのは検索レイヤーであり、更新された学習データではありません。',
-          },
-          {
-            q: 'LlamaやQwenのようなローカルLLMは知識のアップデートを受け取りますか？',
-            a: 'いいえ — 自動的にはありません。ローカルLLMの知識はトレーニングカットオフ時点で永久に凍結されます。新しいモデルリリース（Llama 4 Scout、Qwen3 14B）はそれぞれ異なるカットオフを持ちますが、マシン上で実行中のコピーは固定された知識を持ちます。現在の情報を得るにはRAGパイプラインを構築してください。',
-          },
-          {
-            q: 'GEOとは何ですか？知識カットオフとどう関係しますか？',
-            a: 'GEO（生成エンジン最適化）とは、コンテンツをAI生成回答に露出させる分野です。クラウドAIでは、GEOは検索最適化を通じて機能します — Bing/Googleで順位を得ることで引用されます。ローカルLLMでは、モデルが検索しないため、これは構造的に不可能です。ローカルLLMのGEOはデプロイ組織のRAGパイプラインが必要です。',
-          },
-          {
-            q: '検証済みの中で最も新しい知識カットオフ日を持つAIモデルはどれですか？',
-            a: '一次情報源で検証済みのカットオフの中では：Claude Opus 5が2026年5月という最も新しい信頼性の高いカットオフを持ち、GPT-5.6とGrok 4.6が2026年2月で近接しています。Gemini 3.1 Proは2025年1月。DeepSeek-V3とGemma 3 27Bは2024年7～8月ごろ。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Llama 4、Qwen3、Mistral Largeを含む複数の現行モデルは正確な日付を公式に開示していません。',
-          },
-          {
-            q: 'SEOを使ってLlamaやQwenの回答に露出できますか？',
-            a: 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。唯一の経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。',
-          },
-          {
-            q: 'カットオフの影響を受ける可能性があるAI回答をどうやってファクトチェックすればよいですか？',
-            a: 'カットオフリスクを示す3つのシグナル：(1) トピックが特定のバージョン、価格、人物、またはイベントを含む；(2) 変化の速い業界について尋ねている；(3) AI回答に引用がない。これらのいずれかが当てはまる場合、一次情報源で確認してください — モデルの自信に満ちたトーンは信頼性の指標ではありません。',
-          },
-          {
-            q: 'AI回答がライブ検索を使ったかどうかわかりますか？',
-            a: '多くの場合はわかります：Perplexityは常にソース引用を表示します。GeminiはグラウンディングとGoogle検索アイコンを表示します。GrokはXの検索結果を示します。ChatGPTは地球儀アイコンを表示し、ソースを表示するよう求めることができます。Claudeはデフォルトで検索しないため、インジケーターは不要です。ローカルLLMは決して検索しないため、インジケーターは存在しません — 回答は常に学習データから来ています。',
-          },
-        ],
+            { q: 'AI知識カットオフ日とは何ですか？', a: '知識カットオフ日とは、モデルの学習データが終わる日付のことです。モデルはその日付以降に発生したイベント、製品、研究、またはコンテンツに関する情報をまったく持っていません。クラウドモデルはウェブ検索で部分的に補うことができますが、ローカルLLMはできません。' },
+            { q: 'ChatGPTのカットオフが2023年10月なのに最近の出来事を知っているのはなぜですか？', a: 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果を学習データの推論と合わせて統合します。基盤のGPT-4oモデルは依然として2023年10月のトレーニングカットオフを持っています — あなたが見ているのは検索レイヤーであり、更新された学習データではありません。' },
+            { q: 'LlamaやQwenのようなローカルLLMは知識のアップデートを受け取りますか？', a: 'いいえ — 自動的にはありません。ローカルLLMの知識はトレーニングカットオフ時点で永久に凍結されます。新しいモデルリリース（Llama 4 Scout、Qwen3 14B）はそれぞれ異なるカットオフを持ちますが、マシン上で実行中のコピーは固定された知識を持ちます。現在の情報を得るにはRAGパイプラインを構築してください。' },
+            { q: 'GEOとは何ですか？知識カットオフとどう関係しますか？', a: 'GEO（生成エンジン最適化）とは、コンテンツをAI生成回答に露出させる分野です。クラウドAIでは、GEOは検索最適化を通じて機能します — Bing/Googleで順位を得ることで引用されます。ローカルLLMでは、モデルが検索しないため、これは構造的に不可能です。ローカルLLMのGEOはデプロイ組織のRAGパイプラインが必要です。' },
+            { q: '検証済みの中で最も新しい知識カットオフ日を持つAIモデルはどれですか？', a: '一次情報源で検証済みのカットオフの中では：Claude Opus 5が2026年5月という最も新しい信頼性の高いカットオフを持ち、GPT-5.6とGrok 4.6が2026年2月で近接しています。Gemini 3.1 Proは2025年1月。DeepSeek-V3とGemma 3 27Bは2024年7～8月ごろ。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Llama 4、Qwen3、Mistral Largeを含む複数の現行モデルは正確な日付を公式に開示していません。' },
+            { q: 'SEOを使ってLlamaやQwenの回答に露出できますか？', a: 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。唯一の経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。' },
+            { q: 'カットオフの影響を受ける可能性があるAI回答をどうやってファクトチェックすればよいですか？', a: 'カットオフリスクを示す3つのシグナル：(1) トピックが特定のバージョン、価格、人物、またはイベントを含む；(2) 変化の速い業界について尋ねている；(3) AI回答に引用がない。これらのいずれかが当てはまる場合、一次情報源で確認してください — モデルの自信に満ちたトーンは信頼性の指標ではありません。' },
+            { q: 'AI回答がライブ検索を使ったかどうかわかりますか？', a: '多くの場合はわかります：Perplexityは常にソース引用を表示します。GeminiはグラウンディングとGoogle検索アイコンを表示します。GrokはXの検索結果を示します。ChatGPTは地球儀アイコンを表示し、ソースを表示するよう求めることができます。Claudeはデフォルトで検索しないため、インジケーターは不要です。ローカルLLMは決して検索しないため、インジケーターは存在しません — 回答は常に学習データから来ています。' },
+            { q: 'ベースモデルにトレーニングカットオフがあるのに、ChatGPTが最近の出来事を知っているのはなぜですか？', a: 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果で回答を補強します。これにより、基盤モデルの学習データに固定されたカットオフ日（GPT-5.6は2026年2月、レガシーGPT-4oは2023年10月）があっても、最近のイベントについての質問に答えられます。ただし、カットオフ以降のトピックに関する文脈的理解は依然として制限されます。' },
+            { q: 'デフォルトでライブウェブを検索するクラウドAIモデルはどれですか？', a: 'ChatGPTはデフォルトでBingを検索します（有料プラン）。Gemini 3.1 ProはデフォルトでGoogle検索を使用します。Grok 4.6はコンシューマー向けアプリではデフォルトでX（Twitter）を検索します。Perplexityはすべてのクエリでウェブ検索ネイティブです。Claudeは明示的な開発者ツールの有効化が必要で、デフォルトでは検索しません。DeepSeekとMistral Largeにはデフォルト検索がありません。すべてのローカルLLM（Llama、Qwen、Gemma、Phi、Mistralオープンウェイト）には検索機能がありません。' },
+            { q: 'ローカルLLMで現在の情報が必要な場合はどうすればよいですか？', a: 'RAG（検索拡張生成）パイプラインを構築してください。RAGシステムは、クエリ時にウェブ検索、内部データベース、またはドキュメントストアから関連する最新ドキュメントを取得し、回答生成の前にLLMのコンテキストウィンドウに注入します。人気のローカルRAGツールにはLlamaIndex、LangChain、検索レイヤーを備えたOllamaなどがあります。LLMは凍結された学習データだけに依存するのではなく、注入されたドキュメントを基に推論を行います。' },
+          ],
       },
       relatedReading: {
           title: '関連記事',
@@ -1677,71 +1671,79 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما هو تاريخ انقطاع معرفة الذكاء الاصطناعي؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'تاريخ انقطاع المعرفة هو التاريخ الذي تنتهي عنده بيانات تدريب النموذج. لا يمتلك النموذج أي معلومات عن الأحداث والمنتجات والأبحاث أو المحتوى بعد هذا التاريخ. يمكن لنماذج السحابة التعويض جزئيًا عبر البحث على الويب، لكن نماذج LLM المحلية لا تستطيع.',
+          {
+            '@type': 'Question',
+            'name': 'ما هو تاريخ انقطاع معرفة الذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تاريخ انقطاع المعرفة هو التاريخ الذي تنتهي عنده بيانات تدريب النموذج. لا يمتلك النموذج أي معلومات عن الأحداث أو المنتجات أو المحتوى بعد هذا التاريخ. يمكن لنماذج السحابة التعويض جزئيًا، لكن نماذج LLM المحلية لا تستطيع.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'لماذا يعرف ChatGPT الأحداث الأخيرة رغم أن تاريخ انقطاعه أكتوبر 2023؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-5.6 تاريخ انقطاعه فبراير 2026؛ GPT-4o القديم أكتوبر 2023. ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.',
+          {
+            '@type': 'Question',
+            'name': 'إذا كان انقطاع ChatGPT في أكتوبر 2023، لماذا يعرف الأحداث الأخيرة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-4o لا يزال بتاريخ انقطاع أكتوبر 2023 — ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل تتلقى نماذج LLM المحلية كـLlama أو Qwen تحديثات للمعرفة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا. معرفة نماذج LLM المحلية تتجمّد بصفة دائمة عند تاريخ انقطاع التدريب. للوصول إلى معلومات حالية، تحتاج إلى بناء خط أنابيب RAG.',
+          {
+            '@type': 'Question',
+            'name': 'هل تتلقى نماذج LLM المحلية كـLlama أو Qwen تحديثات للمعرفة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. معرفة نماذج LLM المحلية تتجمّد بصفة دائمة عند تاريخ انقطاع التدريب. للحصول على معلومات حالية، ابنِ خط أنابيب RAG.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'ما هو GEO وعلاقته بتواريخ الانقطاع؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو محتواك يظهر في إجابات الذكاء الاصطناعي. لذكاء اصطناعي السحابة، GEO يتداخل مع SEO. لنماذج LLM المحلية، هذا مستحيل هيكليًا لأن النموذج لا يبحث. GEO لـLLM المحلي يتطلب خط أنابيب RAG من المنظمة المنشِرة.',
+          {
+            '@type': 'Question',
+            'name': 'ما هو GEO وعلاقته بتواريخ الانقطاع؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو محتواك يظهر في إجابات الذكاء الاصطناعي. لذكاء اصطناعي السحابة، GEO يتداخل مع SEO. لنماذج LLM المحلية، هذا مستحيل هيكليًا لأن النموذج لا يبحث.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع معرفة موثّق؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Claude Opus 5 لديه أحدث تاريخ انقطاع موثوق في مايو 2026، ويليه GPT-5.6 وGrok 4.6 عند فبراير 2026 لكل منهما. Gemini 3.1 Pro: يناير 2025. DeepSeek-V3: يوليو 2024. Gemma 3 27B: أغسطس 2024. Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023.',
+          {
+            '@type': 'Question',
+            'name': 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع موثّق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Claude Opus 5 لديه أحدث تاريخ انقطاع موثوق في مايو 2026، ويليه GPT-5.6 وGrok 4.6 عند فبراير 2026. Gemini 3.1 Pro: يناير 2025. Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكنني استخدام SEO للظهور في إجابات Llama أو Qwen؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لا. SEO لا يستطيع التأثير في نماذج LLM المنشورة محليًا لأن النموذج لا يبحث في الويب. المسارات الوحيدة: (1) أن تكون في بيانات التدريب قبل تاريخ الانقطاع، أو (2) أن تُضمَّن في خط أنابيب RAG للمنظمة المنشِرة.',
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام SEO للظهور في إجابات Llama أو Qwen؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا. SEO لا يستطيع التأثير في نماذج LLM المنشورة محليًا لأن النموذج لا يبحث في الويب.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كيف أتحقق من صحة إجابات الذكاء الاصطناعي المتأثرة بتواريخ الانقطاع؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ثلاثة مؤشرات تشير إلى خطر الانقطاع: (1) الموضوع يتضمن إصدارات محددة أو أسعارًا؛ (2) تسأل عن قطاع يتغير بسرعة؛ (3) إجابة الذكاء الاصطناعي خالية من الاستشهادات. تحقق دائمًا من المصادر الأولية.',
+          {
+            '@type': 'Question',
+            'name': 'كيف أتحقق من صحة إجابات الذكاء الاصطناعي المتأثرة بتواريخ الانقطاع؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ثلاثة مؤشرات: (1) الموضوع يتضمن إصدارات أو أسعارًا محددة؛ (2) قطاع يتغير بسرعة؛ (3) لا استشهادات في الإجابة. تحقق دائمًا من المصادر الأولية.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كيف أعرف إذا كانت إجابة ذكاء اصطناعي استخدمت البحث المباشر؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Perplexity دائمًا يعرض استشهادات بالمصادر. Gemini يعرض أيقونة Google Search عند التأريض. Grok يشير إلى نتائج بحث X. ChatGPT يعرض أيقونة كرة أرضية. Claude لا يبحث افتراضيًا. نماذج LLM المحلية لا تبحث أبدًا.',
+          {
+            '@type': 'Question',
+            'name': 'كيف أعرف إذا كانت إجابة الذكاء الاصطناعي استخدمت البحث المباشر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Perplexity دائمًا يعرض استشهادات. Gemini يعرض أيقونة Google Search. Grok يشير إلى نتائج X. ChatGPT يعرض أيقونة كرة أرضية. Claude لا يبحث افتراضيًا. نماذج LLM المحلية لا تبحث أبدًا.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'لماذا يعرف ChatGPT الأحداث الأخيرة رغم أن تاريخ انقطاعه أكتوبر 2023؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-5.6 تاريخ انقطاعه فبراير 2026؛ GPT-4o القديم أكتوبر 2023. ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -1951,39 +1953,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'ما هو تاريخ انقطاع معرفة الذكاء الاصطناعي؟',
-            a: 'تاريخ انقطاع المعرفة هو التاريخ الذي تنتهي عنده بيانات تدريب النموذج. لا يمتلك النموذج أي معلومات عن الأحداث أو المنتجات أو المحتوى بعد هذا التاريخ. يمكن لنماذج السحابة التعويض جزئيًا، لكن نماذج LLM المحلية لا تستطيع.',
-          },
-          {
-            q: 'إذا كان انقطاع ChatGPT في أكتوبر 2023، لماذا يعرف الأحداث الأخيرة؟',
-            a: 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-4o لا يزال بتاريخ انقطاع أكتوبر 2023 — ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.',
-          },
-          {
-            q: 'هل تتلقى نماذج LLM المحلية كـLlama أو Qwen تحديثات للمعرفة؟',
-            a: 'لا. معرفة نماذج LLM المحلية تتجمّد بصفة دائمة عند تاريخ انقطاع التدريب. للحصول على معلومات حالية، ابنِ خط أنابيب RAG.',
-          },
-          {
-            q: 'ما هو GEO وعلاقته بتواريخ الانقطاع؟',
-            a: 'GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو محتواك يظهر في إجابات الذكاء الاصطناعي. لذكاء اصطناعي السحابة، GEO يتداخل مع SEO. لنماذج LLM المحلية، هذا مستحيل هيكليًا لأن النموذج لا يبحث.',
-          },
-          {
-            q: 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع موثّق؟',
-            a: 'Claude Opus 5 لديه أحدث تاريخ انقطاع موثوق في مايو 2026، ويليه GPT-5.6 وGrok 4.6 عند فبراير 2026. Gemini 3.1 Pro: يناير 2025. Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023.',
-          },
-          {
-            q: 'هل يمكنني استخدام SEO للظهور في إجابات Llama أو Qwen؟',
-            a: 'لا. SEO لا يستطيع التأثير في نماذج LLM المنشورة محليًا لأن النموذج لا يبحث في الويب.',
-          },
-          {
-            q: 'كيف أتحقق من صحة إجابات الذكاء الاصطناعي المتأثرة بتواريخ الانقطاع؟',
-            a: 'ثلاثة مؤشرات: (1) الموضوع يتضمن إصدارات أو أسعارًا محددة؛ (2) قطاع يتغير بسرعة؛ (3) لا استشهادات في الإجابة. تحقق دائمًا من المصادر الأولية.',
-          },
-          {
-            q: 'كيف أعرف إذا كانت إجابة الذكاء الاصطناعي استخدمت البحث المباشر؟',
-            a: 'Perplexity دائمًا يعرض استشهادات. Gemini يعرض أيقونة Google Search. Grok يشير إلى نتائج X. ChatGPT يعرض أيقونة كرة أرضية. Claude لا يبحث افتراضيًا. نماذج LLM المحلية لا تبحث أبدًا.',
-          },
-        ],
+            { q: 'ما هو تاريخ انقطاع معرفة الذكاء الاصطناعي؟', a: 'تاريخ انقطاع المعرفة هو التاريخ الذي تنتهي عنده بيانات تدريب النموذج. لا يمتلك النموذج أي معلومات عن الأحداث أو المنتجات أو المحتوى بعد هذا التاريخ. يمكن لنماذج السحابة التعويض جزئيًا، لكن نماذج LLM المحلية لا تستطيع.' },
+            { q: 'إذا كان انقطاع ChatGPT في أكتوبر 2023، لماذا يعرف الأحداث الأخيرة؟', a: 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-4o لا يزال بتاريخ انقطاع أكتوبر 2023 — ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.' },
+            { q: 'هل تتلقى نماذج LLM المحلية كـLlama أو Qwen تحديثات للمعرفة؟', a: 'لا. معرفة نماذج LLM المحلية تتجمّد بصفة دائمة عند تاريخ انقطاع التدريب. للحصول على معلومات حالية، ابنِ خط أنابيب RAG.' },
+            { q: 'ما هو GEO وعلاقته بتواريخ الانقطاع؟', a: 'GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو محتواك يظهر في إجابات الذكاء الاصطناعي. لذكاء اصطناعي السحابة، GEO يتداخل مع SEO. لنماذج LLM المحلية، هذا مستحيل هيكليًا لأن النموذج لا يبحث.' },
+            { q: 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع موثّق؟', a: 'Claude Opus 5 لديه أحدث تاريخ انقطاع موثوق في مايو 2026، ويليه GPT-5.6 وGrok 4.6 عند فبراير 2026. Gemini 3.1 Pro: يناير 2025. Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023.' },
+            { q: 'هل يمكنني استخدام SEO للظهور في إجابات Llama أو Qwen؟', a: 'لا. SEO لا يستطيع التأثير في نماذج LLM المنشورة محليًا لأن النموذج لا يبحث في الويب.' },
+            { q: 'كيف أتحقق من صحة إجابات الذكاء الاصطناعي المتأثرة بتواريخ الانقطاع؟', a: 'ثلاثة مؤشرات: (1) الموضوع يتضمن إصدارات أو أسعارًا محددة؛ (2) قطاع يتغير بسرعة؛ (3) لا استشهادات في الإجابة. تحقق دائمًا من المصادر الأولية.' },
+            { q: 'كيف أعرف إذا كانت إجابة الذكاء الاصطناعي استخدمت البحث المباشر؟', a: 'Perplexity دائمًا يعرض استشهادات. Gemini يعرض أيقونة Google Search. Grok يشير إلى نتائج X. ChatGPT يعرض أيقونة كرة أرضية. Claude لا يبحث افتراضيًا. نماذج LLM المحلية لا تبحث أبدًا.' },
+            { q: 'لماذا يعرف ChatGPT الأحداث الأخيرة رغم أن تاريخ انقطاعه أكتوبر 2023؟', a: 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-5.6 تاريخ انقطاعه فبراير 2026؛ GPT-4o القديم أكتوبر 2023. ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.' },
+          ],
       },
       relatedReading: {
           title: 'قراءة ذات صلة',
@@ -2075,71 +2054,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce qu\'une date de coupure de connaissance IA ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Une date de coupure de connaissance est la date après laquelle les données d\'entraînement du modèle s\'arrêtent. Le modèle n\'a aucune information sur les événements, produits, recherches ou tout autre contenu publié après cette date. Les modèles cloud peuvent partiellement compenser via une recherche web intégrée ; les LLM locaux ne le peuvent pas — leur coupure est absolue.',
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce qu\'une date de coupure de connaissance IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Une date de coupure de connaissance est la date après laquelle les données d\'entraînement du modèle s\'arrêtent. Le modèle n\'a aucune information sur les événements, produits, recherches ou contenu publiés après cette date. Les modèles cloud peuvent partiellement compenser via la recherche web ; les LLM locaux ne le peuvent pas.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Pourquoi ChatGPT semble-t-il connaître des événements récents alors que son modèle de base a une date de coupure d\'entraînement ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et enrichit ses réponses avec des résultats de recherche actuels. Cela signifie qu\'il peut répondre à des questions factuelles sur des événements récents même si les données d\'entraînement du modèle sous-jacent ont une coupure fixe (la coupure d\'entraînement de GPT-5.6 est février 2026 ; le GPT-4o héritage se termine en octobre 2023). La coupure d\'entraînement limite toujours la compréhension contextuelle des sujets postérieurs à la coupure.',
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi ChatGPT connaît-il des événements récents si sa coupure est octobre 2023 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et synthétise les résultats de recherche actuels avec son raisonnement issu des données d\'entraînement. Le modèle GPT-4o sous-jacent a toujours une coupure d\'entraînement d\'octobre 2023 — ce que vous voyez est la couche de recherche, pas des données d\'entraînement mises à jour.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Les LLM locaux comme Llama et Qwen reçoivent-ils des mises à jour de connaissance ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non. La connaissance d\'un LLM local est définitivement figée à sa date de coupure d\'entraînement. Lorsqu\'une nouvelle version du modèle est publiée (par ex. Llama 4 Scout remplaçant Llama 3.3), elle a une nouvelle coupure — mais le modèle en cours d\'exécution sur votre machine ne se met pas à jour automatiquement. Pour accéder aux informations actuelles, vous devez construire un pipeline RAG (Génération Augmentée par Récupération) qui récupère les documents au moment de la requête et les injecte dans la fenêtre de contexte du modèle.',
+          {
+            '@type': 'Question',
+            'name': 'Les LLM locaux comme Llama et Qwen reçoivent-ils des mises à jour de connaissance ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non — pas automatiquement. La connaissance d\'un LLM local est définitivement figée à sa coupure d\'entraînement. Chaque nouvelle version (Llama 4 Scout, Qwen3 14B) a une coupure différente, mais la copie sur votre machine a une connaissance fixe. Pour obtenir des informations actuelles, construisez un pipeline RAG.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce que le GEO et quel est son rapport avec les dates de coupure ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Le GEO (Generative Engine Optimization ou Optimisation pour les Moteurs Génératifs) est la pratique qui consiste à faire apparaître votre marque ou contenu dans les réponses générées par l\'IA. Pour les modèles IA cloud, le GEO chevauche le SEO — si votre contenu est bien classé dans Bing, Google ou X, il peut être récupéré et cité par ChatGPT, Gemini ou Grok. Pour les LLM locaux, le GEO via la recherche est impossible car le modèle ne fait jamais de recherche web. Le seul moyen d\'atteindre un déploiement LLM local est via des pipelines RAG construits par l\'organisation qui exécute le modèle.',
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le GEO et quel est son rapport avec les dates de coupure ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le GEO (Generative Engine Optimization) est la discipline qui consiste à faire apparaître votre contenu dans les réponses générées par l\'IA. Pour l\'IA cloud, le GEO fonctionne via l\'optimisation de recherche — classez-vous dans Bing/Google et vous serez cité. Pour les LLM locaux, c\'est structurellement impossible car le modèle ne fait jamais de recherche. Le GEO pour les LLM locaux nécessite des pipelines RAG chez l\'organisation qui déploie le modèle.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quel modèle IA a la date de coupure de connaissance la plus récente ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Parmi les coupures vérifiées par source primaire : Claude Opus 5 a la coupure fiable la plus récente à mai 2026, suivi de près par GPT-5.6 et Grok 4.6, tous deux à février 2026. Gemini 3.1 Pro est janvier 2025. DeepSeek-V3 est juillet 2024. Gemma 3 27B est août 2024. Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Plusieurs modèles actuels dont Llama 4, Qwen3 et Mistral Large n\'ont pas divulgué publiquement de dates de coupure exactes.',
+          {
+            '@type': 'Question',
+            'name': 'Quel modèle IA a la date de coupure de connaissance la plus récente (vérifiée) ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parmi les coupures vérifiées par source primaire : Claude Opus 5 a la coupure fiable la plus récente à mai 2026, avec GPT-5.6 et Grok 4.6 tous deux à février 2026. Gemini 3.1 Pro est janvier 2025. DeepSeek-V3 et Gemma 3 27B sont autour de juillet–août 2024. Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Plusieurs modèles actuels (Llama 4, Qwen3, Mistral Large) n\'ont pas divulgué de dates exactes publiquement.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Non. L\'optimisation pour les moteurs de recherche ne peut pas influencer un LLM exécuté localement car le modèle n\'effectue jamais de recherche web. Pour apparaître dans les sorties d\'un LLM local, vous devez soit : (1) avoir été présent dans les données d\'entraînement du modèle avant sa coupure, soit (2) être inclus via des pipelines RAG construits par l\'organisation qui déploie le modèle. C\'est un canal fondamentalement différent du SEO traditionnel ou du GEO pour l\'IA cloud.',
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les seuls chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quels modèles IA cloud effectuent une recherche sur le web en direct par défaut ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT utilise Bing par défaut (niveaux payants). Gemini 3.1 Pro utilise Google Search par défaut. Grok 4.6 recherche sur X (Twitter) par défaut dans l\'app grand public. Perplexity est natif de la recherche web pour chaque requête. Claude nécessite une activation explicite d\'outil par le développeur et ne recherche pas par défaut. DeepSeek et Mistral Large n\'ont pas de recherche par défaut. Tous les LLM locaux (Llama, Qwen, Gemma, Phi, poids ouverts Mistral) n\'ont aucune capacité de recherche.',
+          {
+            '@type': 'Question',
+            'name': 'Comment vérifier une réponse IA sur quelque chose qui pourrait être affecté par la coupure ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Trois signaux indiquent un risque de coupure : (1) le sujet implique des versions spécifiques, des prix, des personnes ou des événements ; (2) vous avez interrogé sur quelque chose dans un secteur en évolution rapide ; (3) la réponse IA manque de citations. Quand l\'un de ces éléments s\'applique, vérifiez auprès d\'une source primaire — le ton confiant du modèle n\'est pas un indicateur de fiabilité.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Que faire si j\'ai besoin d\'informations actuelles depuis un LLM local ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Construisez un pipeline RAG (Génération Augmentée par Récupération). Un système RAG récupère les documents actuels pertinents — depuis une recherche web, une base de données interne ou un entrepôt de documents — au moment de la requête et les injecte dans la fenêtre de contexte du LLM avant de générer une réponse. Les outils RAG locaux populaires incluent LlamaIndex, LangChain et Ollama avec une couche de récupération. Le LLM raisonne alors sur les documents injectés plutôt que de s\'appuyer uniquement sur des données d\'entraînement figées.',
+          {
+            '@type': 'Question',
+            'name': 'Peut-on voir dans la réponse d\'une IA si elle a utilisé la recherche en direct ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Souvent oui : Perplexity montre toujours des citations de sources. Gemini affiche une icône Google Search quand le grounding est utilisé. Grok indique les résultats de recherche X. ChatGPT affiche une icône globe et peut être invité à montrer ses sources. Claude ne recherche pas par défaut, donc aucun indicateur n\'est nécessaire. Les LLM locaux ne font jamais de recherche, donc aucun indicateur n\'existe — la réponse provient toujours des données d\'entraînement.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi ChatGPT semble-t-il connaître des événements récents alors que son modèle de base a une date de coupure d\'entraînement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et enrichit ses réponses avec des résultats de recherche actuels. Cela signifie qu\'il peut répondre à des questions factuelles sur des événements récents même si les données d\'entraînement du modèle sous-jacent ont une coupure fixe (la coupure d\'entraînement de GPT-5.6 est février 2026 ; le GPT-4o héritage se termine en octobre 2023). La coupure d\'entraînement limite toujours la compréhension contextuelle des sujets postérieurs à la coupure.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quels modèles IA cloud effectuent une recherche sur le web en direct par défaut ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT utilise Bing par défaut (niveaux payants). Gemini 3.1 Pro utilise Google Search par défaut. Grok 4.6 recherche sur X (Twitter) par défaut dans l\'app grand public. Perplexity est natif de la recherche web pour chaque requête. Claude nécessite une activation explicite d\'outil par le développeur et ne recherche pas par défaut. DeepSeek et Mistral Large n\'ont pas de recherche par défaut. Tous les LLM locaux (Llama, Qwen, Gemma, Phi, poids ouverts Mistral) n\'ont aucune capacité de recherche.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que faire si j\'ai besoin d\'informations actuelles depuis un LLM local ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Construisez un pipeline RAG (Génération Augmentée par Récupération). Un système RAG récupère les documents actuels pertinents — depuis une recherche web, une base de données interne ou un entrepôt de documents — au moment de la requête et les injecte dans la fenêtre de contexte du LLM avant de générer une réponse. Les outils RAG locaux populaires incluent LlamaIndex, LangChain et Ollama avec une couche de récupération. Le LLM raisonne alors sur les documents injectés plutôt que de s\'appuyer uniquement sur des données d\'entraînement figées.',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -2349,39 +2352,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: 'Questions fréquentes',
         faqs: [
-          {
-            q: 'Qu\'est-ce qu\'une date de coupure de connaissance IA ?',
-            a: 'Une date de coupure de connaissance est la date après laquelle les données d\'entraînement du modèle s\'arrêtent. Le modèle n\'a aucune information sur les événements, produits, recherches ou contenu publiés après cette date. Les modèles cloud peuvent partiellement compenser via la recherche web ; les LLM locaux ne le peuvent pas.',
-          },
-          {
-            q: 'Pourquoi ChatGPT connaît-il des événements récents si sa coupure est octobre 2023 ?',
-            a: 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et synthétise les résultats de recherche actuels avec son raisonnement issu des données d\'entraînement. Le modèle GPT-4o sous-jacent a toujours une coupure d\'entraînement d\'octobre 2023 — ce que vous voyez est la couche de recherche, pas des données d\'entraînement mises à jour.',
-          },
-          {
-            q: 'Les LLM locaux comme Llama et Qwen reçoivent-ils des mises à jour de connaissance ?',
-            a: 'Non — pas automatiquement. La connaissance d\'un LLM local est définitivement figée à sa coupure d\'entraînement. Chaque nouvelle version (Llama 4 Scout, Qwen3 14B) a une coupure différente, mais la copie sur votre machine a une connaissance fixe. Pour obtenir des informations actuelles, construisez un pipeline RAG.',
-          },
-          {
-            q: 'Qu\'est-ce que le GEO et quel est son rapport avec les dates de coupure ?',
-            a: 'Le GEO (Generative Engine Optimization) est la discipline qui consiste à faire apparaître votre contenu dans les réponses générées par l\'IA. Pour l\'IA cloud, le GEO fonctionne via l\'optimisation de recherche — classez-vous dans Bing/Google et vous serez cité. Pour les LLM locaux, c\'est structurellement impossible car le modèle ne fait jamais de recherche. Le GEO pour les LLM locaux nécessite des pipelines RAG chez l\'organisation qui déploie le modèle.',
-          },
-          {
-            q: 'Quel modèle IA a la date de coupure de connaissance la plus récente (vérifiée) ?',
-            a: 'Parmi les coupures vérifiées par source primaire : Claude Opus 5 a la coupure fiable la plus récente à mai 2026, avec GPT-5.6 et Grok 4.6 tous deux à février 2026. Gemini 3.1 Pro est janvier 2025. DeepSeek-V3 et Gemma 3 27B sont autour de juillet–août 2024. Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Plusieurs modèles actuels (Llama 4, Qwen3, Mistral Large) n\'ont pas divulgué de dates exactes publiquement.',
-          },
-          {
-            q: 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?',
-            a: 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les seuls chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.',
-          },
-          {
-            q: 'Comment vérifier une réponse IA sur quelque chose qui pourrait être affecté par la coupure ?',
-            a: 'Trois signaux indiquent un risque de coupure : (1) le sujet implique des versions spécifiques, des prix, des personnes ou des événements ; (2) vous avez interrogé sur quelque chose dans un secteur en évolution rapide ; (3) la réponse IA manque de citations. Quand l\'un de ces éléments s\'applique, vérifiez auprès d\'une source primaire — le ton confiant du modèle n\'est pas un indicateur de fiabilité.',
-          },
-          {
-            q: 'Peut-on voir dans la réponse d\'une IA si elle a utilisé la recherche en direct ?',
-            a: 'Souvent oui : Perplexity montre toujours des citations de sources. Gemini affiche une icône Google Search quand le grounding est utilisé. Grok indique les résultats de recherche X. ChatGPT affiche une icône globe et peut être invité à montrer ses sources. Claude ne recherche pas par défaut, donc aucun indicateur n\'est nécessaire. Les LLM locaux ne font jamais de recherche, donc aucun indicateur n\'existe — la réponse provient toujours des données d\'entraînement.',
-          },
-        ],
+            { q: 'Qu\'est-ce qu\'une date de coupure de connaissance IA ?', a: 'Une date de coupure de connaissance est la date après laquelle les données d\'entraînement du modèle s\'arrêtent. Le modèle n\'a aucune information sur les événements, produits, recherches ou contenu publiés après cette date. Les modèles cloud peuvent partiellement compenser via la recherche web ; les LLM locaux ne le peuvent pas.' },
+            { q: 'Pourquoi ChatGPT connaît-il des événements récents si sa coupure est octobre 2023 ?', a: 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et synthétise les résultats de recherche actuels avec son raisonnement issu des données d\'entraînement. Le modèle GPT-4o sous-jacent a toujours une coupure d\'entraînement d\'octobre 2023 — ce que vous voyez est la couche de recherche, pas des données d\'entraînement mises à jour.' },
+            { q: 'Les LLM locaux comme Llama et Qwen reçoivent-ils des mises à jour de connaissance ?', a: 'Non — pas automatiquement. La connaissance d\'un LLM local est définitivement figée à sa coupure d\'entraînement. Chaque nouvelle version (Llama 4 Scout, Qwen3 14B) a une coupure différente, mais la copie sur votre machine a une connaissance fixe. Pour obtenir des informations actuelles, construisez un pipeline RAG.' },
+            { q: 'Qu\'est-ce que le GEO et quel est son rapport avec les dates de coupure ?', a: 'Le GEO (Generative Engine Optimization) est la discipline qui consiste à faire apparaître votre contenu dans les réponses générées par l\'IA. Pour l\'IA cloud, le GEO fonctionne via l\'optimisation de recherche — classez-vous dans Bing/Google et vous serez cité. Pour les LLM locaux, c\'est structurellement impossible car le modèle ne fait jamais de recherche. Le GEO pour les LLM locaux nécessite des pipelines RAG chez l\'organisation qui déploie le modèle.' },
+            { q: 'Quel modèle IA a la date de coupure de connaissance la plus récente (vérifiée) ?', a: 'Parmi les coupures vérifiées par source primaire : Claude Opus 5 a la coupure fiable la plus récente à mai 2026, avec GPT-5.6 et Grok 4.6 tous deux à février 2026. Gemini 3.1 Pro est janvier 2025. DeepSeek-V3 et Gemma 3 27B sont autour de juillet–août 2024. Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Plusieurs modèles actuels (Llama 4, Qwen3, Mistral Large) n\'ont pas divulgué de dates exactes publiquement.' },
+            { q: 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?', a: 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les seuls chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.' },
+            { q: 'Comment vérifier une réponse IA sur quelque chose qui pourrait être affecté par la coupure ?', a: 'Trois signaux indiquent un risque de coupure : (1) le sujet implique des versions spécifiques, des prix, des personnes ou des événements ; (2) vous avez interrogé sur quelque chose dans un secteur en évolution rapide ; (3) la réponse IA manque de citations. Quand l\'un de ces éléments s\'applique, vérifiez auprès d\'une source primaire — le ton confiant du modèle n\'est pas un indicateur de fiabilité.' },
+            { q: 'Peut-on voir dans la réponse d\'une IA si elle a utilisé la recherche en direct ?', a: 'Souvent oui : Perplexity montre toujours des citations de sources. Gemini affiche une icône Google Search quand le grounding est utilisé. Grok indique les résultats de recherche X. ChatGPT affiche une icône globe et peut être invité à montrer ses sources. Claude ne recherche pas par défaut, donc aucun indicateur n\'est nécessaire. Les LLM locaux ne font jamais de recherche, donc aucun indicateur n\'existe — la réponse provient toujours des données d\'entraînement.' },
+            { q: 'Pourquoi ChatGPT semble-t-il connaître des événements récents alors que son modèle de base a une date de coupure d\'entraînement ?', a: 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et enrichit ses réponses avec des résultats de recherche actuels. Cela signifie qu\'il peut répondre à des questions factuelles sur des événements récents même si les données d\'entraînement du modèle sous-jacent ont une coupure fixe (la coupure d\'entraînement de GPT-5.6 est février 2026 ; le GPT-4o héritage se termine en octobre 2023). La coupure d\'entraînement limite toujours la compréhension contextuelle des sujets postérieurs à la coupure.' },
+            { q: 'Quels modèles IA cloud effectuent une recherche sur le web en direct par défaut ?', a: 'ChatGPT utilise Bing par défaut (niveaux payants). Gemini 3.1 Pro utilise Google Search par défaut. Grok 4.6 recherche sur X (Twitter) par défaut dans l\'app grand public. Perplexity est natif de la recherche web pour chaque requête. Claude nécessite une activation explicite d\'outil par le développeur et ne recherche pas par défaut. DeepSeek et Mistral Large n\'ont pas de recherche par défaut. Tous les LLM locaux (Llama, Qwen, Gemma, Phi, poids ouverts Mistral) n\'ont aucune capacité de recherche.' },
+            { q: 'Que faire si j\'ai besoin d\'informations actuelles depuis un LLM local ?', a: 'Construisez un pipeline RAG (Génération Augmentée par Récupération). Un système RAG récupère les documents actuels pertinents — depuis une recherche web, une base de données interne ou un entrepôt de documents — au moment de la requête et les injecte dans la fenêtre de contexte du LLM avant de générer une réponse. Les outils RAG locaux populaires incluent LlamaIndex, LangChain et Ollama avec une couche de récupération. Le LLM raisonne alors sur les documents injectés plutôt que de s\'appuyer uniquement sur des données d\'entraînement figées.' },
+          ],
       },
       relatedReading: {
         title: 'Lectures connexes',
@@ -2473,71 +2455,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist ein KI-Wissens-Cutoff-Datum?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ein KI-Wissens-Cutoff-Datum ist das Datum, nach dem die Trainingsdaten des Modells enden. Das Modell hat keinerlei Informationen über Ereignisse, Produkte, Forschungsergebnisse oder andere Inhalte, die nach diesem Datum veröffentlicht wurden. Cloud-Modelle können dies teilweise über die integrierte Websuche kompensieren; lokale LLMs können das nicht — ihr Cutoff ist absolut.',
+          {
+            '@type': 'Question',
+            'name': 'Was ist ein KI-Wissens-Cutoff-Datum?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ein Wissens-Cutoff-Datum ist das Datum, nach dem die Trainingsdaten des Modells enden. Das Modell hat keinerlei Informationen über Ereignisse, Produkte, Forschungsergebnisse oder Inhalte, die nach diesem Datum veröffentlicht wurden. Cloud-Modelle können dies teilweise über Websuche kompensieren; lokale LLMs können das nicht.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Warum scheint ChatGPT aktuelle Ereignisse zu kennen, obwohl sein Basismodell einen Trainings-Cutoff hat?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT (das Produkt) durchsucht standardmäßig Bing in bezahlten Tarifen und ergänzt seine Antworten mit aktuellen Suchergebnissen. Dadurch kann es sachliche Fragen zu aktuellen Ereignissen beantworten, obwohl die Trainingsdaten des zugrundeliegenden Modells einen festen Cutoff haben (GPT-5.6 Trainings-Cutoff ist Feb 2026; Legacy GPT-4o endet Okt 2023). Der Trainings-Cutoff schränkt nach wie vor das kontextuelle Verständnis von Themen nach dem Cutoff ein.',
+          {
+            '@type': 'Question',
+            'name': 'Warum kennt ChatGPT aktuelle Ereignisse, wenn sein Cutoff Oktober 2023 ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (das Produkt) durchsucht in bezahlten Tarifen standardmäßig Bing und synthetisiert aktuelle Suchergebnisse mit seinen Trainingsdaten. Das zugrundeliegende GPT-4o-Modell hat weiterhin einen Trainings-Cutoff vom Oktober 2023 — was gezeigt wird, ist die Suchschicht, keine aktualisierten Trainingsdaten.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Erhalten lokale LLMs wie Llama und Qwen jemals Wissensaktualisierungen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein. Das Wissen eines lokalen LLMs ist permanent auf seinen Trainings-Cutoff eingefroren. Wenn eine neue Modellversion veröffentlicht wird (z. B. Llama 4 Scout als Nachfolger von Llama 3.3), hat sie einen neuen Cutoff — aber das auf dem eigenen Rechner laufende Modell aktualisiert sich nicht selbst. Um auf aktuelle Informationen zuzugreifen, muss eine RAG-Pipeline (Retrieval-Augmented Generation) aufgebaut werden, die Dokumente zur Abfragezeit abruft und in das Kontextfenster des Modells einfügt.',
+          {
+            '@type': 'Question',
+            'name': 'Erhalten lokale LLMs wie Llama und Qwen jemals Wissensaktualisierungen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein — nicht automatisch. Das Wissen eines lokalen LLMs ist permanent auf seinen Trainings-Cutoff eingefroren. Jede neue Modellversion (Llama 4 Scout, Qwen3 14B) hat einen anderen Cutoff, aber die auf dem eigenen Rechner laufende Kopie hat festes Wissen. Für aktuelle Informationen eine RAG-Pipeline aufbauen.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was ist GEO und wie hängt es mit Wissensgrenzen zusammen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GEO (Generative Engine Optimization) ist die Praxis, dafür zu sorgen, dass die eigene Marke oder Inhalte in KI-generierten Antworten erscheinen. Bei Cloud-KI-Modellen überschneidet sich GEO mit SEO — wenn Inhalte in Bing, Google oder X gut ranken, können sie von ChatGPT, Gemini oder Grok abgerufen und zitiert werden. Bei lokalen LLMs ist GEO über Suche strukturell unmöglich, weil das Modell nie das Web durchsucht. Der einzige Weg, ein lokales LLM-Deployment zu erreichen, führt über RAG-Pipelines, die von der Organisation erstellt wurden, die das Modell betreibt.',
+          {
+            '@type': 'Question',
+            'name': 'Was ist GEO und wie hängt es mit Wissensgrenzen zusammen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO (Generative Engine Optimization) ist die Disziplin, eigene Inhalte in KI-generierten Antworten erscheinen zu lassen. Bei Cloud-KI funktioniert GEO über Suchoptimierung — in Bing/Google ranken und zitiert werden. Bei lokalen LLMs ist dies strukturell unmöglich, weil das Modell nie sucht. Lokales LLM-GEO erfordert RAG-Pipelines bei der einsetzenden Organisation.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Welches KI-Modell hat das aktuellste Wissens-Cutoff-Datum?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Unter den verifizierten Primärquellen-Cutoffs: Claude Opus 5 hat mit Mai 2026 den aktuellsten zuverlässigen Cutoff, dicht gefolgt von GPT-5.6 und Grok 4.6, beide Februar 2026. Gemini 3.1 Pro ist Januar 2025. DeepSeek-V3 ist Juli 2024. Gemma 3 27B ist August 2024. Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Mehrere aktuelle Modelle — darunter Llama 4, Qwen3 und Mistral Large — haben keine genauen Cutoff-Daten öffentlich bekannt gegeben.',
+          {
+            '@type': 'Question',
+            'name': 'Welches KI-Modell hat das aktuellste verifizierte Wissens-Cutoff-Datum?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5 hat mit Mai 2026 den aktuellsten zuverlässigen Cutoff, mit GPT-5.6 und Grok 4.6 knapp dahinter bei Februar 2026. Gemini 3.1 Pro ist Januar 2025. DeepSeek-V3 und Gemma 3 27B liegen bei Juli–August 2024. Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Mehrere aktuelle Modelle (Llama 4, Qwen3, Mistral Large) haben keine genauen Daten öffentlich bekannt gegeben.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nein. Suchmaschinenoptimierung kann einen lokal betriebenen LLM nicht beeinflussen, weil das Modell nie eine Websuche durchführt. Um in lokalen LLM-Ausgaben zu erscheinen, muss man entweder: (1) vor dem Cutoff in den Trainingsdaten des Modells vorhanden gewesen sein, oder (2) über RAG-Pipelines eingebunden werden, die von demjenigen erstellt wurden, der das Modell betreibt.',
+          {
+            '@type': 'Question',
+            'name': 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die einzigen Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Welche Cloud-KI-Modelle durchsuchen standardmäßig das Live-Web?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT nutzt standardmäßig Bing (bezahlte Tarife). Gemini 3.1 Pro nutzt standardmäßig Google Suche. Grok 4.6 durchsucht in der Verbraucher-App standardmäßig X (Twitter). Perplexity ist websuche-nativ für jede Anfrage. Claude erfordert explizite Entwickler-Tool-Aktivierung und sucht standardmäßig nicht. DeepSeek und Mistral Large haben keine Standard-Suche. Alle lokalen LLMs (Llama, Qwen, Gemma, Phi, Mistral Open Weights) haben keine Suchfähigkeit.',
+          {
+            '@type': 'Question',
+            'name': 'Wie sollte eine KI-Antwort zu Faktencheck unterzogen werden, die vom Cutoff betroffen sein könnte?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Drei Signale deuten auf ein Cutoff-Risiko hin: (1) Das Thema betrifft spezifische Versionen, Preise, Personen oder Ereignisse; (2) es wurde nach etwas in einer schnelllebigen Branche gefragt; (3) die KI-Antwort enthält keine Zitate. Wenn eines dieser Zeichen zutrifft, anhand einer Primärquelle verifizieren — der selbstbewusste Ton des Modells ist kein Zuverlässigkeitsindikator.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was sollte ich tun, wenn ich aktuelle Informationen von einem lokalen LLM benötige?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Eine RAG-Pipeline (Retrieval-Augmented Generation) aufbauen. Ein RAG-System ruft zur Abfragezeit relevante aktuelle Dokumente ab — aus einer Websuche, internen Datenbank oder einem Dokumentenspeicher — und fügt sie in das Kontextfenster des LLMs ein, bevor eine Antwort generiert wird. Beliebte lokale RAG-Tools sind LlamaIndex, LangChain und Ollama mit einer Abrufschicht. Der LLM argumentiert dann über die eingefügten Dokumente, anstatt sich ausschließlich auf eingefrorene Trainingsdaten zu stützen.',
+          {
+            '@type': 'Question',
+            'name': 'Gibt es eine Möglichkeit, anhand einer KI-Antwort zu erkennen, ob Live-Suche verwendet wurde?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oft ja: Perplexity zeigt immer Quellenangaben. Gemini zeigt ein Google-Such-Symbol, wenn Grounding genutzt wird. Grok weist auf X-Suchergebnisse hin. ChatGPT zeigt ein Globus-Symbol und kann aufgefordert werden, Quellen zu zeigen. Claude sucht standardmäßig nicht, daher ist kein Indikator nötig. Lokale LLMs suchen nie, daher gibt es keinen Indikator — die Antwort stammt immer aus den Trainingsdaten.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Warum scheint ChatGPT aktuelle Ereignisse zu kennen, obwohl sein Basismodell einen Trainings-Cutoff hat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (das Produkt) durchsucht standardmäßig Bing in bezahlten Tarifen und ergänzt seine Antworten mit aktuellen Suchergebnissen. Dadurch kann es sachliche Fragen zu aktuellen Ereignissen beantworten, obwohl die Trainingsdaten des zugrundeliegenden Modells einen festen Cutoff haben (GPT-5.6 Trainings-Cutoff ist Feb 2026; Legacy GPT-4o endet Okt 2023). Der Trainings-Cutoff schränkt nach wie vor das kontextuelle Verständnis von Themen nach dem Cutoff ein.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Welche Cloud-KI-Modelle durchsuchen standardmäßig das Live-Web?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT nutzt standardmäßig Bing (bezahlte Tarife). Gemini 3.1 Pro nutzt standardmäßig Google Suche. Grok 4.6 durchsucht in der Verbraucher-App standardmäßig X (Twitter). Perplexity ist websuche-nativ für jede Anfrage. Claude erfordert explizite Entwickler-Tool-Aktivierung und sucht standardmäßig nicht. DeepSeek und Mistral Large haben keine Standard-Suche. Alle lokalen LLMs (Llama, Qwen, Gemma, Phi, Mistral Open Weights) haben keine Suchfähigkeit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Was sollte ich tun, wenn ich aktuelle Informationen von einem lokalen LLM benötige?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Eine RAG-Pipeline (Retrieval-Augmented Generation) aufbauen. Ein RAG-System ruft zur Abfragezeit relevante aktuelle Dokumente ab — aus einer Websuche, internen Datenbank oder einem Dokumentenspeicher — und fügt sie in das Kontextfenster des LLMs ein, bevor eine Antwort generiert wird. Beliebte lokale RAG-Tools sind LlamaIndex, LangChain und Ollama mit einer Abrufschicht. Der LLM argumentiert dann über die eingefügten Dokumente, anstatt sich ausschließlich auf eingefrorene Trainingsdaten zu stützen.',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -2747,39 +2753,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          {
-            q: 'Was ist ein KI-Wissens-Cutoff-Datum?',
-            a: 'Ein Wissens-Cutoff-Datum ist das Datum, nach dem die Trainingsdaten des Modells enden. Das Modell hat keinerlei Informationen über Ereignisse, Produkte, Forschungsergebnisse oder Inhalte, die nach diesem Datum veröffentlicht wurden. Cloud-Modelle können dies teilweise über Websuche kompensieren; lokale LLMs können das nicht.',
-          },
-          {
-            q: 'Warum kennt ChatGPT aktuelle Ereignisse, wenn sein Cutoff Oktober 2023 ist?',
-            a: 'ChatGPT (das Produkt) durchsucht in bezahlten Tarifen standardmäßig Bing und synthetisiert aktuelle Suchergebnisse mit seinen Trainingsdaten. Das zugrundeliegende GPT-4o-Modell hat weiterhin einen Trainings-Cutoff vom Oktober 2023 — was gezeigt wird, ist die Suchschicht, keine aktualisierten Trainingsdaten.',
-          },
-          {
-            q: 'Erhalten lokale LLMs wie Llama und Qwen jemals Wissensaktualisierungen?',
-            a: 'Nein — nicht automatisch. Das Wissen eines lokalen LLMs ist permanent auf seinen Trainings-Cutoff eingefroren. Jede neue Modellversion (Llama 4 Scout, Qwen3 14B) hat einen anderen Cutoff, aber die auf dem eigenen Rechner laufende Kopie hat festes Wissen. Für aktuelle Informationen eine RAG-Pipeline aufbauen.',
-          },
-          {
-            q: 'Was ist GEO und wie hängt es mit Wissensgrenzen zusammen?',
-            a: 'GEO (Generative Engine Optimization) ist die Disziplin, eigene Inhalte in KI-generierten Antworten erscheinen zu lassen. Bei Cloud-KI funktioniert GEO über Suchoptimierung — in Bing/Google ranken und zitiert werden. Bei lokalen LLMs ist dies strukturell unmöglich, weil das Modell nie sucht. Lokales LLM-GEO erfordert RAG-Pipelines bei der einsetzenden Organisation.',
-          },
-          {
-            q: 'Welches KI-Modell hat das aktuellste verifizierte Wissens-Cutoff-Datum?',
-            a: 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5 hat mit Mai 2026 den aktuellsten zuverlässigen Cutoff, mit GPT-5.6 und Grok 4.6 knapp dahinter bei Februar 2026. Gemini 3.1 Pro ist Januar 2025. DeepSeek-V3 und Gemma 3 27B liegen bei Juli–August 2024. Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Mehrere aktuelle Modelle (Llama 4, Qwen3, Mistral Large) haben keine genauen Daten öffentlich bekannt gegeben.',
-          },
-          {
-            q: 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?',
-            a: 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die einzigen Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.',
-          },
-          {
-            q: 'Wie sollte eine KI-Antwort zu Faktencheck unterzogen werden, die vom Cutoff betroffen sein könnte?',
-            a: 'Drei Signale deuten auf ein Cutoff-Risiko hin: (1) Das Thema betrifft spezifische Versionen, Preise, Personen oder Ereignisse; (2) es wurde nach etwas in einer schnelllebigen Branche gefragt; (3) die KI-Antwort enthält keine Zitate. Wenn eines dieser Zeichen zutrifft, anhand einer Primärquelle verifizieren — der selbstbewusste Ton des Modells ist kein Zuverlässigkeitsindikator.',
-          },
-          {
-            q: 'Gibt es eine Möglichkeit, anhand einer KI-Antwort zu erkennen, ob Live-Suche verwendet wurde?',
-            a: 'Oft ja: Perplexity zeigt immer Quellenangaben. Gemini zeigt ein Google-Such-Symbol, wenn Grounding genutzt wird. Grok weist auf X-Suchergebnisse hin. ChatGPT zeigt ein Globus-Symbol und kann aufgefordert werden, Quellen zu zeigen. Claude sucht standardmäßig nicht, daher ist kein Indikator nötig. Lokale LLMs suchen nie, daher gibt es keinen Indikator — die Antwort stammt immer aus den Trainingsdaten.',
-          },
-        ],
+            { q: 'Was ist ein KI-Wissens-Cutoff-Datum?', a: 'Ein Wissens-Cutoff-Datum ist das Datum, nach dem die Trainingsdaten des Modells enden. Das Modell hat keinerlei Informationen über Ereignisse, Produkte, Forschungsergebnisse oder Inhalte, die nach diesem Datum veröffentlicht wurden. Cloud-Modelle können dies teilweise über Websuche kompensieren; lokale LLMs können das nicht.' },
+            { q: 'Warum kennt ChatGPT aktuelle Ereignisse, wenn sein Cutoff Oktober 2023 ist?', a: 'ChatGPT (das Produkt) durchsucht in bezahlten Tarifen standardmäßig Bing und synthetisiert aktuelle Suchergebnisse mit seinen Trainingsdaten. Das zugrundeliegende GPT-4o-Modell hat weiterhin einen Trainings-Cutoff vom Oktober 2023 — was gezeigt wird, ist die Suchschicht, keine aktualisierten Trainingsdaten.' },
+            { q: 'Erhalten lokale LLMs wie Llama und Qwen jemals Wissensaktualisierungen?', a: 'Nein — nicht automatisch. Das Wissen eines lokalen LLMs ist permanent auf seinen Trainings-Cutoff eingefroren. Jede neue Modellversion (Llama 4 Scout, Qwen3 14B) hat einen anderen Cutoff, aber die auf dem eigenen Rechner laufende Kopie hat festes Wissen. Für aktuelle Informationen eine RAG-Pipeline aufbauen.' },
+            { q: 'Was ist GEO und wie hängt es mit Wissensgrenzen zusammen?', a: 'GEO (Generative Engine Optimization) ist die Disziplin, eigene Inhalte in KI-generierten Antworten erscheinen zu lassen. Bei Cloud-KI funktioniert GEO über Suchoptimierung — in Bing/Google ranken und zitiert werden. Bei lokalen LLMs ist dies strukturell unmöglich, weil das Modell nie sucht. Lokales LLM-GEO erfordert RAG-Pipelines bei der einsetzenden Organisation.' },
+            { q: 'Welches KI-Modell hat das aktuellste verifizierte Wissens-Cutoff-Datum?', a: 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5 hat mit Mai 2026 den aktuellsten zuverlässigen Cutoff, mit GPT-5.6 und Grok 4.6 knapp dahinter bei Februar 2026. Gemini 3.1 Pro ist Januar 2025. DeepSeek-V3 und Gemma 3 27B liegen bei Juli–August 2024. Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Mehrere aktuelle Modelle (Llama 4, Qwen3, Mistral Large) haben keine genauen Daten öffentlich bekannt gegeben.' },
+            { q: 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?', a: 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die einzigen Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.' },
+            { q: 'Wie sollte eine KI-Antwort zu Faktencheck unterzogen werden, die vom Cutoff betroffen sein könnte?', a: 'Drei Signale deuten auf ein Cutoff-Risiko hin: (1) Das Thema betrifft spezifische Versionen, Preise, Personen oder Ereignisse; (2) es wurde nach etwas in einer schnelllebigen Branche gefragt; (3) die KI-Antwort enthält keine Zitate. Wenn eines dieser Zeichen zutrifft, anhand einer Primärquelle verifizieren — der selbstbewusste Ton des Modells ist kein Zuverlässigkeitsindikator.' },
+            { q: 'Gibt es eine Möglichkeit, anhand einer KI-Antwort zu erkennen, ob Live-Suche verwendet wurde?', a: 'Oft ja: Perplexity zeigt immer Quellenangaben. Gemini zeigt ein Google-Such-Symbol, wenn Grounding genutzt wird. Grok weist auf X-Suchergebnisse hin. ChatGPT zeigt ein Globus-Symbol und kann aufgefordert werden, Quellen zu zeigen. Claude sucht standardmäßig nicht, daher ist kein Indikator nötig. Lokale LLMs suchen nie, daher gibt es keinen Indikator — die Antwort stammt immer aus den Trainingsdaten.' },
+            { q: 'Warum scheint ChatGPT aktuelle Ereignisse zu kennen, obwohl sein Basismodell einen Trainings-Cutoff hat?', a: 'ChatGPT (das Produkt) durchsucht standardmäßig Bing in bezahlten Tarifen und ergänzt seine Antworten mit aktuellen Suchergebnissen. Dadurch kann es sachliche Fragen zu aktuellen Ereignissen beantworten, obwohl die Trainingsdaten des zugrundeliegenden Modells einen festen Cutoff haben (GPT-5.6 Trainings-Cutoff ist Feb 2026; Legacy GPT-4o endet Okt 2023). Der Trainings-Cutoff schränkt nach wie vor das kontextuelle Verständnis von Themen nach dem Cutoff ein.' },
+            { q: 'Welche Cloud-KI-Modelle durchsuchen standardmäßig das Live-Web?', a: 'ChatGPT nutzt standardmäßig Bing (bezahlte Tarife). Gemini 3.1 Pro nutzt standardmäßig Google Suche. Grok 4.6 durchsucht in der Verbraucher-App standardmäßig X (Twitter). Perplexity ist websuche-nativ für jede Anfrage. Claude erfordert explizite Entwickler-Tool-Aktivierung und sucht standardmäßig nicht. DeepSeek und Mistral Large haben keine Standard-Suche. Alle lokalen LLMs (Llama, Qwen, Gemma, Phi, Mistral Open Weights) haben keine Suchfähigkeit.' },
+            { q: 'Was sollte ich tun, wenn ich aktuelle Informationen von einem lokalen LLM benötige?', a: 'Eine RAG-Pipeline (Retrieval-Augmented Generation) aufbauen. Ein RAG-System ruft zur Abfragezeit relevante aktuelle Dokumente ab — aus einer Websuche, internen Datenbank oder einem Dokumentenspeicher — und fügt sie in das Kontextfenster des LLMs ein, bevor eine Antwort generiert wird. Beliebte lokale RAG-Tools sind LlamaIndex, LangChain und Ollama mit einer Abrufschicht. Der LLM argumentiert dann über die eingefügten Dokumente, anstatt sich ausschließlich auf eingefrorene Trainingsdaten zu stützen.' },
+          ],
       },
       relatedReading: {
         title: 'Weiterführende Lektüre',
@@ -2871,71 +2856,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '什么是AI知识截止日期？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AI知识截止日期是指模型训练数据结束的日期。模型对该日期之后发生的事件、产品、研究或任何内容一无所知。云端模型可通过内置网络搜索进行部分补偿；本地LLM则不能——其截止日期是绝对的。',
+          {
+            '@type': 'Question',
+            'name': '什么是AI知识截止日期？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '知识截止日期是指模型训练数据结束的日期。模型对该日期之后发生的事件、产品、研究或内容一无所知。云端模型可通过网络搜索进行部分补偿；本地LLM则不能。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '为什么ChatGPT似乎知道最近发生的事情，即使其基础模型有训练截止日期？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT（产品）在付费层默认搜索Bing，并以当前搜索结果补充其回答。这意味着即便底层模型的训练数据有固定截止（GPT-5.6训练截止为2026年2月；旧版GPT-4o截止为2023年10月），它也能回答近期事件的事实性问题。训练截止仍会限制模型对截止后话题的语境理解。',
+          {
+            '@type': 'Question',
+            'name': '如果ChatGPT的截止日期是2023年10月，为什么它知道近期发生的事情？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT（产品）在付费层默认搜索Bing，并将当前搜索结果与训练数据推理综合。底层GPT-4o模型的训练截止日期仍为2023年10月——您看到的是搜索层，而非更新的训练数据。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '像Llama和Qwen这样的本地LLM会收到知识更新吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '不会。本地LLM的知识在训练截止时就永久冻结了。当新模型版本发布时（例如Llama 4 Scout替代Llama 3.3），它有新的截止日期——但运行在您机器上的模型不会自我更新。要访问当前信息，您必须构建一个RAG（检索增强生成）管道，在查询时获取文档并注入模型的上下文窗口。',
+          {
+            '@type': 'Question',
+            'name': '像Llama和Qwen这样的本地LLM会收到知识更新吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不会——不会自动更新。本地LLM的知识在训练截止日期时就永久冻结。每个新模型版本（Llama 4 Scout、Qwen3 14B）有不同的截止日期，但运行在您机器上的副本具有固定知识。要获取当前信息，请构建RAG管道。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '什么是GEO，它与知识截止日期有何关联？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'GEO（生成式引擎优化）是使您的品牌或内容出现在AI生成回答中的实践。对于云端AI模型，GEO与SEO重叠——如果您的内容在Bing、Google或X搜索中排名靠前，就能被ChatGPT、Gemini或Grok检索并引用。对于本地LLM，通过搜索实现GEO是不可能的，因为模型从不搜索网络。触达本地LLM部署的唯一途径是通过运行该模型的组织构建的RAG管道。',
+          {
+            '@type': 'Question',
+            'name': '什么是GEO，它与知识截止日期有何关联？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GEO（生成式引擎优化）是使内容出现在AI生成回答中的学科。对于云端AI，GEO通过搜索优化实现——在Bing/Google排名靠前就能被引用。对于本地LLM，这在结构上是不可能的，因为模型从不搜索。本地LLM GEO需要部署组织的RAG管道。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '哪个AI模型拥有最新的知识截止日期？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '在已验证的一手资料截止日期中：Claude Opus 5拥有最新的可靠截止日期——2026年5月，GPT-5.6和Grok 4.6紧随其后，均为2026年2月。Gemini 3.1 Pro为2025年1月。DeepSeek-V3为2024年7月。Gemma 3 27B为2024年8月。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。包括Llama 4、Qwen3和Mistral Large在内的多个当前模型尚未公开披露确切截止日期。',
+          {
+            '@type': 'Question',
+            'name': '哪个AI模型拥有最新的已验证知识截止日期？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '在一手资料已验证截止日期中：Claude Opus 5拥有最新的可靠截止日期——2026年5月，GPT-5.6和Grok 4.6同为2026年2月，紧随其后。Gemini 3.1 Pro为2025年1月。DeepSeek-V3和Gemma 3 27B约为2024年7月至8月。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。包括Llama 4、Qwen3和Mistral Large在内的多个当前模型尚未公开披露确切日期。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '我能用SEO让自己出现在Llama或Qwen的回答中吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '不能。搜索引擎优化无法影响本地运行的LLM，因为该模型从不执行网络搜索。要出现在本地LLM输出中，您必须：（1）在模型训练截止前已出现在其训练数据中，或（2）通过部署该模型的组织构建的RAG管道被纳入。这与传统SEO或云端AI GEO是根本不同的渠道。',
+          {
+            '@type': 'Question',
+            'name': '我能用SEO让自己出现在Llama或Qwen的回答中吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。唯一的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '哪些云端AI模型默认搜索实时网络？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT默认使用Bing（付费层）。Gemini 3.1 Pro默认使用Google搜索。Grok 4.6在消费级应用中默认搜索X（Twitter）。Perplexity对每个查询都进行网络搜索。Claude需要明确的开发者工具激活，默认不搜索。DeepSeek和Mistral Large没有默认搜索。所有本地LLM（Llama、Qwen、Gemma、Phi、Mistral开源权重）均无搜索能力。',
+          {
+            '@type': 'Question',
+            'name': '如何对可能受截止日期影响的AI回答进行事实核查？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '三个信号提示截止风险：（1）话题涉及特定版本、价格、人物或事件；（2）您询问的是快速变化行业的内容；（3）AI回答缺乏引用。任何一个适用时，请通过一手资料核实——模型自信的语气不是可靠性指标。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '如果我需要从本地LLM获取当前信息，该怎么办？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '构建RAG（检索增强生成）管道。RAG系统在查询时从网络搜索、内部数据库或文档存储中检索相关当前文档，并在生成响应前将其注入LLM的上下文窗口。流行的本地RAG工具包括LlamaIndex、LangChain以及带检索层的Ollama。LLM随后基于注入的文档进行推理，而不是仅依赖冻结的训练数据。',
+          {
+            '@type': 'Question',
+            'name': '有没有办法从AI的回答判断它是否使用了实时搜索？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '通常有：Perplexity始终显示来源引用。Gemini在使用接地功能时会显示Google搜索图标。Grok会标注X搜索结果。ChatGPT会显示地球图标，并可提示其展示来源。Claude默认不搜索，因此无需指示。本地LLM从不搜索，所以不存在任何指示——答案始终来自训练数据。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '为什么ChatGPT似乎知道最近发生的事情，即使其基础模型有训练截止日期？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT（产品）在付费层默认搜索Bing，并以当前搜索结果补充其回答。这意味着即便底层模型的训练数据有固定截止（GPT-5.6训练截止为2026年2月；旧版GPT-4o截止为2023年10月），它也能回答近期事件的事实性问题。训练截止仍会限制模型对截止后话题的语境理解。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪些云端AI模型默认搜索实时网络？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT默认使用Bing（付费层）。Gemini 3.1 Pro默认使用Google搜索。Grok 4.6在消费级应用中默认搜索X（Twitter）。Perplexity对每个查询都进行网络搜索。Claude需要明确的开发者工具激活，默认不搜索。DeepSeek和Mistral Large没有默认搜索。所有本地LLM（Llama、Qwen、Gemma、Phi、Mistral开源权重）均无搜索能力。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '如果我需要从本地LLM获取当前信息，该怎么办？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '构建RAG（检索增强生成）管道。RAG系统在查询时从网络搜索、内部数据库或文档存储中检索相关当前文档，并在生成响应前将其注入LLM的上下文窗口。流行的本地RAG工具包括LlamaIndex、LangChain以及带检索层的Ollama。LLM随后基于注入的文档进行推理，而不是仅依赖冻结的训练数据。',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -3145,39 +3154,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: '常见问题',
         faqs: [
-          {
-            q: '什么是AI知识截止日期？',
-            a: '知识截止日期是指模型训练数据结束的日期。模型对该日期之后发生的事件、产品、研究或内容一无所知。云端模型可通过网络搜索进行部分补偿；本地LLM则不能。',
-          },
-          {
-            q: '如果ChatGPT的截止日期是2023年10月，为什么它知道近期发生的事情？',
-            a: 'ChatGPT（产品）在付费层默认搜索Bing，并将当前搜索结果与训练数据推理综合。底层GPT-4o模型的训练截止日期仍为2023年10月——您看到的是搜索层，而非更新的训练数据。',
-          },
-          {
-            q: '像Llama和Qwen这样的本地LLM会收到知识更新吗？',
-            a: '不会——不会自动更新。本地LLM的知识在训练截止日期时就永久冻结。每个新模型版本（Llama 4 Scout、Qwen3 14B）有不同的截止日期，但运行在您机器上的副本具有固定知识。要获取当前信息，请构建RAG管道。',
-          },
-          {
-            q: '什么是GEO，它与知识截止日期有何关联？',
-            a: 'GEO（生成式引擎优化）是使内容出现在AI生成回答中的学科。对于云端AI，GEO通过搜索优化实现——在Bing/Google排名靠前就能被引用。对于本地LLM，这在结构上是不可能的，因为模型从不搜索。本地LLM GEO需要部署组织的RAG管道。',
-          },
-          {
-            q: '哪个AI模型拥有最新的已验证知识截止日期？',
-            a: '在一手资料已验证截止日期中：Claude Opus 5拥有最新的可靠截止日期——2026年5月，GPT-5.6和Grok 4.6同为2026年2月，紧随其后。Gemini 3.1 Pro为2025年1月。DeepSeek-V3和Gemma 3 27B约为2024年7月至8月。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。包括Llama 4、Qwen3和Mistral Large在内的多个当前模型尚未公开披露确切日期。',
-          },
-          {
-            q: '我能用SEO让自己出现在Llama或Qwen的回答中吗？',
-            a: '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。唯一的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。',
-          },
-          {
-            q: '如何对可能受截止日期影响的AI回答进行事实核查？',
-            a: '三个信号提示截止风险：（1）话题涉及特定版本、价格、人物或事件；（2）您询问的是快速变化行业的内容；（3）AI回答缺乏引用。任何一个适用时，请通过一手资料核实——模型自信的语气不是可靠性指标。',
-          },
-          {
-            q: '有没有办法从AI的回答判断它是否使用了实时搜索？',
-            a: '通常有：Perplexity始终显示来源引用。Gemini在使用接地功能时会显示Google搜索图标。Grok会标注X搜索结果。ChatGPT会显示地球图标，并可提示其展示来源。Claude默认不搜索，因此无需指示。本地LLM从不搜索，所以不存在任何指示——答案始终来自训练数据。',
-          },
-        ],
+            { q: '什么是AI知识截止日期？', a: '知识截止日期是指模型训练数据结束的日期。模型对该日期之后发生的事件、产品、研究或内容一无所知。云端模型可通过网络搜索进行部分补偿；本地LLM则不能。' },
+            { q: '如果ChatGPT的截止日期是2023年10月，为什么它知道近期发生的事情？', a: 'ChatGPT（产品）在付费层默认搜索Bing，并将当前搜索结果与训练数据推理综合。底层GPT-4o模型的训练截止日期仍为2023年10月——您看到的是搜索层，而非更新的训练数据。' },
+            { q: '像Llama和Qwen这样的本地LLM会收到知识更新吗？', a: '不会——不会自动更新。本地LLM的知识在训练截止日期时就永久冻结。每个新模型版本（Llama 4 Scout、Qwen3 14B）有不同的截止日期，但运行在您机器上的副本具有固定知识。要获取当前信息，请构建RAG管道。' },
+            { q: '什么是GEO，它与知识截止日期有何关联？', a: 'GEO（生成式引擎优化）是使内容出现在AI生成回答中的学科。对于云端AI，GEO通过搜索优化实现——在Bing/Google排名靠前就能被引用。对于本地LLM，这在结构上是不可能的，因为模型从不搜索。本地LLM GEO需要部署组织的RAG管道。' },
+            { q: '哪个AI模型拥有最新的已验证知识截止日期？', a: '在一手资料已验证截止日期中：Claude Opus 5拥有最新的可靠截止日期——2026年5月，GPT-5.6和Grok 4.6同为2026年2月，紧随其后。Gemini 3.1 Pro为2025年1月。DeepSeek-V3和Gemma 3 27B约为2024年7月至8月。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。包括Llama 4、Qwen3和Mistral Large在内的多个当前模型尚未公开披露确切日期。' },
+            { q: '我能用SEO让自己出现在Llama或Qwen的回答中吗？', a: '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。唯一的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。' },
+            { q: '如何对可能受截止日期影响的AI回答进行事实核查？', a: '三个信号提示截止风险：（1）话题涉及特定版本、价格、人物或事件；（2）您询问的是快速变化行业的内容；（3）AI回答缺乏引用。任何一个适用时，请通过一手资料核实——模型自信的语气不是可靠性指标。' },
+            { q: '有没有办法从AI的回答判断它是否使用了实时搜索？', a: '通常有：Perplexity始终显示来源引用。Gemini在使用接地功能时会显示Google搜索图标。Grok会标注X搜索结果。ChatGPT会显示地球图标，并可提示其展示来源。Claude默认不搜索，因此无需指示。本地LLM从不搜索，所以不存在任何指示——答案始终来自训练数据。' },
+            { q: '为什么ChatGPT似乎知道最近发生的事情，即使其基础模型有训练截止日期？', a: 'ChatGPT（产品）在付费层默认搜索Bing，并以当前搜索结果补充其回答。这意味着即便底层模型的训练数据有固定截止（GPT-5.6训练截止为2026年2月；旧版GPT-4o截止为2023年10月），它也能回答近期事件的事实性问题。训练截止仍会限制模型对截止后话题的语境理解。' },
+            { q: '哪些云端AI模型默认搜索实时网络？', a: 'ChatGPT默认使用Bing（付费层）。Gemini 3.1 Pro默认使用Google搜索。Grok 4.6在消费级应用中默认搜索X（Twitter）。Perplexity对每个查询都进行网络搜索。Claude需要明确的开发者工具激活，默认不搜索。DeepSeek和Mistral Large没有默认搜索。所有本地LLM（Llama、Qwen、Gemma、Phi、Mistral开源权重）均无搜索能力。' },
+            { q: '如果我需要从本地LLM获取当前信息，该怎么办？', a: '构建RAG（检索增强生成）管道。RAG系统在查询时从网络搜索、内部数据库或文档存储中检索相关当前文档，并在生成响应前将其注入LLM的上下文窗口。流行的本地RAG工具包括LlamaIndex、LangChain以及带检索层的Ollama。LLM随后基于注入的文档进行推理，而不是仅依赖冻结的训练数据。' },
+          ],
       },
       relatedReading: {
         title: '相关阅读',
@@ -3269,71 +3257,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Qué es una fecha de corte del conocimiento de la IA?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Una fecha de corte del conocimiento es la fecha tras la cual los datos de entrenamiento del modelo terminan. El modelo no tiene información sobre eventos, productos, investigaciones ni ningún otro contenido publicado después de esa fecha. Los modelos en la nube pueden compensar parcialmente mediante búsqueda web integrada; los LLM locales no pueden — su corte es absoluto.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué es una fecha de corte del conocimiento de la IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Una fecha de corte del conocimiento es la fecha tras la cual los datos de entrenamiento del modelo terminan. El modelo no tiene información alguna sobre eventos, productos, investigaciones ni contenido publicado después de esa fecha. Los modelos en la nube pueden compensar parcialmente mediante búsqueda web; los LLM locales no pueden.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Por qué ChatGPT parece conocer eventos recientes aunque su modelo base tiene una fecha de corte de entrenamiento?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y enriquece sus respuestas con resultados de búsqueda actuales. Esto significa que puede responder preguntas factuales sobre eventos recientes aunque los datos de entrenamiento del modelo subyacente tengan un corte fijo (el corte de entrenamiento de GPT-5.6 es febrero de 2026; el GPT-4o heredado termina en octubre de 2023). El corte de entrenamiento sigue limitando la comprensión contextual de los temas posteriores al corte.',
+          {
+            '@type': 'Question',
+            'name': '¿Por qué ChatGPT conoce eventos recientes si su corte es octubre de 2023?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y sintetiza los resultados de búsqueda actuales con su razonamiento basado en datos de entrenamiento. El modelo GPT-4o subyacente sigue teniendo un corte de entrenamiento de octubre de 2023 — lo que ve es la capa de búsqueda, no datos de entrenamiento actualizados.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Reciben actualizaciones de conocimiento los LLM locales como Llama y Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. El conocimiento de un LLM local está permanentemente congelado en su fecha de corte de entrenamiento. Cuando se publica una nueva versión del modelo (por ejemplo, Llama 4 Scout sustituyendo a Llama 3.3), tiene un nuevo corte — pero el modelo en ejecución en su máquina no se actualiza automáticamente. Para acceder a información actual, debe construir un pipeline RAG (Generación Aumentada por Recuperación) que obtenga documentos en el momento de la consulta y los inyecte en la ventana de contexto del modelo.',
+          {
+            '@type': 'Question',
+            'name': '¿Reciben actualizaciones de conocimiento los LLM locales como Llama y Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No — no de forma automática. El conocimiento de un LLM local está permanentemente congelado en su corte de entrenamiento. Cada nueva versión del modelo (Llama 4 Scout, Qwen3 14B) tiene un corte diferente, pero la copia en ejecución en su máquina tiene un conocimiento fijo. Para obtener información actual, construya un pipeline RAG.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué es el GEO y cómo se relaciona con las fechas de corte del conocimiento?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'El GEO (Generative Engine Optimization u Optimización para Motores Generativos) es la práctica de lograr que su marca o contenido aparezca en las respuestas generadas por IA. Para los modelos de IA en la nube, el GEO se solapa con el SEO — si su contenido se posiciona bien en Bing, Google o X, puede ser recuperado y citado por ChatGPT, Gemini o Grok. Para los LLM locales, el GEO a través de la búsqueda es imposible porque el modelo nunca busca en la web. La única forma de llegar a un despliegue de LLM local es a través de pipelines RAG construidos por la organización que ejecuta el modelo.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué es el GEO y cómo se relaciona con las fechas de corte?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El GEO (Generative Engine Optimization) es la disciplina de lograr que su contenido aparezca en las respuestas generadas por IA. Para la IA en la nube, el GEO funciona a través de la optimización de búsqueda — posiciónese en Bing/Google y será citado. Para los LLM locales, esto es estructuralmente imposible porque el modelo nunca realiza búsquedas. El GEO para LLM locales requiere pipelines RAG en la organización que despliega el modelo.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Entre los cortes verificados por fuente primaria: Claude Opus 5 tiene el corte fiable más reciente en mayo de 2026, seguido de cerca por GPT-5.6 y Grok 4.6, ambos en febrero de 2026. Gemini 3.1 Pro es enero de 2025. DeepSeek-V3 es julio de 2024. Gemma 3 27B es agosto de 2024. Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Varios modelos actuales, incluidos Llama 4, Qwen3 y Mistral Large, no han divulgado públicamente fechas de corte exactas.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente (verificada)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Entre los cortes verificados por fuente primaria: Claude Opus 5 tiene el corte fiable más reciente en mayo de 2026, con GPT-5.6 y Grok 4.6 muy cerca, ambos en febrero de 2026. Gemini 3.1 Pro es enero de 2025. DeepSeek-V3 y Gemma 3 27B están alrededor de julio–agosto de 2024. Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Varios modelos actuales (Llama 4, Qwen3, Mistral Large) no han divulgado fechas exactas públicamente.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. La optimización para motores de búsqueda no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Para aparecer en las salidas de un LLM local, debe: (1) haber estado en los datos de entrenamiento del modelo antes de su corte, o (2) ser incluido a través de pipelines RAG construidos por quien despliegue el modelo. Este es un canal fundamentalmente diferente al SEO tradicional o al GEO para IA en la nube.',
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los únicos caminos son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué modelos de IA en la nube realizan búsquedas en la web en vivo de forma predeterminada?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ChatGPT usa Bing de forma predeterminada (planes de pago). Gemini 3.1 Pro usa Google Search de forma predeterminada. Grok 4.6 busca en X (Twitter) de forma predeterminada en la app para consumidores. Perplexity es nativo de la búsqueda web para cada consulta. Claude requiere activación explícita de herramienta por parte del desarrollador y no realiza búsquedas de forma predeterminada. DeepSeek y Mistral Large no tienen búsqueda predeterminada. Todos los LLM locales (Llama, Qwen, Gemma, Phi, pesos abiertos de Mistral) no tienen capacidad de búsqueda.',
+          {
+            '@type': 'Question',
+            'name': '¿Cómo verifico una respuesta de IA sobre algo que podría estar afectado por el corte?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Tres señales indican riesgo de corte: (1) el tema involucra versiones específicas, precios, personas o eventos; (2) preguntó sobre algo en un sector de rápida evolución; (3) la respuesta de IA carece de citas. Cuando alguna de estas aplique, verifique con una fuente primaria — el tono confiado del modelo no es un indicador de fiabilidad.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué debo hacer si necesito información actual de un LLM local?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Construya un pipeline RAG (Generación Aumentada por Recuperación). Un sistema RAG recupera documentos actuales relevantes — desde una búsqueda web, una base de datos interna o un almacén de documentos — en el momento de la consulta y los inyecta en la ventana de contexto del LLM antes de generar una respuesta. Las herramientas RAG locales populares incluyen LlamaIndex, LangChain y Ollama con una capa de recuperación. El LLM entonces razona sobre los documentos inyectados en lugar de depender únicamente de datos de entrenamiento congelados.',
+          {
+            '@type': 'Question',
+            'name': '¿Hay alguna manera de saber a partir de la respuesta de una IA si utilizó búsqueda en vivo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A menudo sí: Perplexity siempre muestra citas de fuentes. Gemini muestra un ícono de Google Search cuando se usa grounding. Grok indica resultados de búsqueda en X. ChatGPT muestra un ícono de globo terráqueo y puede solicitársele que muestre las fuentes. Claude no busca de forma predeterminada, por lo que no se necesita indicador. Los LLM locales nunca buscan, así que no existe ningún indicador — la respuesta siempre proviene de los datos de entrenamiento.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Por qué ChatGPT parece conocer eventos recientes aunque su modelo base tiene una fecha de corte de entrenamiento?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y enriquece sus respuestas con resultados de búsqueda actuales. Esto significa que puede responder preguntas factuales sobre eventos recientes aunque los datos de entrenamiento del modelo subyacente tengan un corte fijo (el corte de entrenamiento de GPT-5.6 es febrero de 2026; el GPT-4o heredado termina en octubre de 2023). El corte de entrenamiento sigue limitando la comprensión contextual de los temas posteriores al corte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelos de IA en la nube realizan búsquedas en la web en vivo de forma predeterminada?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ChatGPT usa Bing de forma predeterminada (planes de pago). Gemini 3.1 Pro usa Google Search de forma predeterminada. Grok 4.6 busca en X (Twitter) de forma predeterminada en la app para consumidores. Perplexity es nativo de la búsqueda web para cada consulta. Claude requiere activación explícita de herramienta por parte del desarrollador y no realiza búsquedas de forma predeterminada. DeepSeek y Mistral Large no tienen búsqueda predeterminada. Todos los LLM locales (Llama, Qwen, Gemma, Phi, pesos abiertos de Mistral) no tienen capacidad de búsqueda.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué debo hacer si necesito información actual de un LLM local?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Construya un pipeline RAG (Generación Aumentada por Recuperación). Un sistema RAG recupera documentos actuales relevantes — desde una búsqueda web, una base de datos interna o un almacén de documentos — en el momento de la consulta y los inyecta en la ventana de contexto del LLM antes de generar una respuesta. Las herramientas RAG locales populares incluyen LlamaIndex, LangChain y Ollama con una capa de recuperación. El LLM entonces razona sobre los documentos inyectados en lugar de depender únicamente de datos de entrenamiento congelados.',
+            },
+          },
+        ],
     },
     sections: {
       tldr: {
@@ -3543,39 +3555,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq-knowledge-cutoffs',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Qué es una fecha de corte del conocimiento de la IA?',
-            a: 'Una fecha de corte del conocimiento es la fecha tras la cual los datos de entrenamiento del modelo terminan. El modelo no tiene información alguna sobre eventos, productos, investigaciones ni contenido publicado después de esa fecha. Los modelos en la nube pueden compensar parcialmente mediante búsqueda web; los LLM locales no pueden.',
-          },
-          {
-            q: '¿Por qué ChatGPT conoce eventos recientes si su corte es octubre de 2023?',
-            a: 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y sintetiza los resultados de búsqueda actuales con su razonamiento basado en datos de entrenamiento. El modelo GPT-4o subyacente sigue teniendo un corte de entrenamiento de octubre de 2023 — lo que ve es la capa de búsqueda, no datos de entrenamiento actualizados.',
-          },
-          {
-            q: '¿Reciben actualizaciones de conocimiento los LLM locales como Llama y Qwen?',
-            a: 'No — no de forma automática. El conocimiento de un LLM local está permanentemente congelado en su corte de entrenamiento. Cada nueva versión del modelo (Llama 4 Scout, Qwen3 14B) tiene un corte diferente, pero la copia en ejecución en su máquina tiene un conocimiento fijo. Para obtener información actual, construya un pipeline RAG.',
-          },
-          {
-            q: '¿Qué es el GEO y cómo se relaciona con las fechas de corte?',
-            a: 'El GEO (Generative Engine Optimization) es la disciplina de lograr que su contenido aparezca en las respuestas generadas por IA. Para la IA en la nube, el GEO funciona a través de la optimización de búsqueda — posiciónese en Bing/Google y será citado. Para los LLM locales, esto es estructuralmente imposible porque el modelo nunca realiza búsquedas. El GEO para LLM locales requiere pipelines RAG en la organización que despliega el modelo.',
-          },
-          {
-            q: '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente (verificada)?',
-            a: 'Entre los cortes verificados por fuente primaria: Claude Opus 5 tiene el corte fiable más reciente en mayo de 2026, con GPT-5.6 y Grok 4.6 muy cerca, ambos en febrero de 2026. Gemini 3.1 Pro es enero de 2025. DeepSeek-V3 y Gemma 3 27B están alrededor de julio–agosto de 2024. Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Varios modelos actuales (Llama 4, Qwen3, Mistral Large) no han divulgado fechas exactas públicamente.',
-          },
-          {
-            q: '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?',
-            a: 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los únicos caminos son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.',
-          },
-          {
-            q: '¿Cómo verifico una respuesta de IA sobre algo que podría estar afectado por el corte?',
-            a: 'Tres señales indican riesgo de corte: (1) el tema involucra versiones específicas, precios, personas o eventos; (2) preguntó sobre algo en un sector de rápida evolución; (3) la respuesta de IA carece de citas. Cuando alguna de estas aplique, verifique con una fuente primaria — el tono confiado del modelo no es un indicador de fiabilidad.',
-          },
-          {
-            q: '¿Hay alguna manera de saber a partir de la respuesta de una IA si utilizó búsqueda en vivo?',
-            a: 'A menudo sí: Perplexity siempre muestra citas de fuentes. Gemini muestra un ícono de Google Search cuando se usa grounding. Grok indica resultados de búsqueda en X. ChatGPT muestra un ícono de globo terráqueo y puede solicitársele que muestre las fuentes. Claude no busca de forma predeterminada, por lo que no se necesita indicador. Los LLM locales nunca buscan, así que no existe ningún indicador — la respuesta siempre proviene de los datos de entrenamiento.',
-          },
-        ],
+            { q: '¿Qué es una fecha de corte del conocimiento de la IA?', a: 'Una fecha de corte del conocimiento es la fecha tras la cual los datos de entrenamiento del modelo terminan. El modelo no tiene información alguna sobre eventos, productos, investigaciones ni contenido publicado después de esa fecha. Los modelos en la nube pueden compensar parcialmente mediante búsqueda web; los LLM locales no pueden.' },
+            { q: '¿Por qué ChatGPT conoce eventos recientes si su corte es octubre de 2023?', a: 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y sintetiza los resultados de búsqueda actuales con su razonamiento basado en datos de entrenamiento. El modelo GPT-4o subyacente sigue teniendo un corte de entrenamiento de octubre de 2023 — lo que ve es la capa de búsqueda, no datos de entrenamiento actualizados.' },
+            { q: '¿Reciben actualizaciones de conocimiento los LLM locales como Llama y Qwen?', a: 'No — no de forma automática. El conocimiento de un LLM local está permanentemente congelado en su corte de entrenamiento. Cada nueva versión del modelo (Llama 4 Scout, Qwen3 14B) tiene un corte diferente, pero la copia en ejecución en su máquina tiene un conocimiento fijo. Para obtener información actual, construya un pipeline RAG.' },
+            { q: '¿Qué es el GEO y cómo se relaciona con las fechas de corte?', a: 'El GEO (Generative Engine Optimization) es la disciplina de lograr que su contenido aparezca en las respuestas generadas por IA. Para la IA en la nube, el GEO funciona a través de la optimización de búsqueda — posiciónese en Bing/Google y será citado. Para los LLM locales, esto es estructuralmente imposible porque el modelo nunca realiza búsquedas. El GEO para LLM locales requiere pipelines RAG en la organización que despliega el modelo.' },
+            { q: '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente (verificada)?', a: 'Entre los cortes verificados por fuente primaria: Claude Opus 5 tiene el corte fiable más reciente en mayo de 2026, con GPT-5.6 y Grok 4.6 muy cerca, ambos en febrero de 2026. Gemini 3.1 Pro es enero de 2025. DeepSeek-V3 y Gemma 3 27B están alrededor de julio–agosto de 2024. Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Varios modelos actuales (Llama 4, Qwen3, Mistral Large) no han divulgado fechas exactas públicamente.' },
+            { q: '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?', a: 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los únicos caminos son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.' },
+            { q: '¿Cómo verifico una respuesta de IA sobre algo que podría estar afectado por el corte?', a: 'Tres señales indican riesgo de corte: (1) el tema involucra versiones específicas, precios, personas o eventos; (2) preguntó sobre algo en un sector de rápida evolución; (3) la respuesta de IA carece de citas. Cuando alguna de estas aplique, verifique con una fuente primaria — el tono confiado del modelo no es un indicador de fiabilidad.' },
+            { q: '¿Hay alguna manera de saber a partir de la respuesta de una IA si utilizó búsqueda en vivo?', a: 'A menudo sí: Perplexity siempre muestra citas de fuentes. Gemini muestra un ícono de Google Search cuando se usa grounding. Grok indica resultados de búsqueda en X. ChatGPT muestra un ícono de globo terráqueo y puede solicitársele que muestre las fuentes. Claude no busca de forma predeterminada, por lo que no se necesita indicador. Los LLM locales nunca buscan, así que no existe ningún indicador — la respuesta siempre proviene de los datos de entrenamiento.' },
+            { q: '¿Por qué ChatGPT parece conocer eventos recientes aunque su modelo base tiene una fecha de corte de entrenamiento?', a: 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y enriquece sus respuestas con resultados de búsqueda actuales. Esto significa que puede responder preguntas factuales sobre eventos recientes aunque los datos de entrenamiento del modelo subyacente tengan un corte fijo (el corte de entrenamiento de GPT-5.6 es febrero de 2026; el GPT-4o heredado termina en octubre de 2023). El corte de entrenamiento sigue limitando la comprensión contextual de los temas posteriores al corte.' },
+            { q: '¿Qué modelos de IA en la nube realizan búsquedas en la web en vivo de forma predeterminada?', a: 'ChatGPT usa Bing de forma predeterminada (planes de pago). Gemini 3.1 Pro usa Google Search de forma predeterminada. Grok 4.6 busca en X (Twitter) de forma predeterminada en la app para consumidores. Perplexity es nativo de la búsqueda web para cada consulta. Claude requiere activación explícita de herramienta por parte del desarrollador y no realiza búsquedas de forma predeterminada. DeepSeek y Mistral Large no tienen búsqueda predeterminada. Todos los LLM locales (Llama, Qwen, Gemma, Phi, pesos abiertos de Mistral) no tienen capacidad de búsqueda.' },
+            { q: '¿Qué debo hacer si necesito información actual de un LLM local?', a: 'Construya un pipeline RAG (Generación Aumentada por Recuperación). Un sistema RAG recupera documentos actuales relevantes — desde una búsqueda web, una base de datos interna o un almacén de documentos — en el momento de la consulta y los inyecta en la ventana de contexto del LLM antes de generar una respuesta. Las herramientas RAG locales populares incluyen LlamaIndex, LangChain y Ollama con una capa de recuperación. El LLM entonces razona sobre los documentos inyectados en lugar de depender únicamente de datos de entrenamiento congelados.' },
+          ],
       },
       relatedReading: {
         title: 'Lecturas relacionadas',

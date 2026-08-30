@@ -77,16 +77,110 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Using Q8_0 quantization instead of Q4_K_M', acceptedAnswer: { '@type': 'Answer', text: 'Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3-5× slower. Always use Q4_K_M as the default for sub-4B models.' } },
-          { '@type': 'Question', name: 'Running a base model instead of the instruct variant', acceptedAnswer: { '@type': 'Answer', text: 'Base models (e.g., llama3.2:3b-text) are pre-fine-tuning checkpoints trained to predict the next token in text. They do not follow instructions. When you ask a base model "What is 2+2?", it may complete the sentence as a quiz rather than answer "4". Always use the instruct variant: llama3.2:3b (Ollama defaults to instruct for named models).' } },
-          { '@type': 'Question', name: 'Expecting 7B model quality from a 3B model', acceptedAnswer: { '@type': 'Answer', text: 'A 3B model at 68% MMLU (Phi-4 Mini) performs similarly to a 2023-era GPT-3.5 Mini on general tasks. Complex reasoning chains, long-form writing, and nuanced code generation will produce noticeably lower quality than a 7B model. If output quality is insufficient, upgrade to a 7B model -- the RAM difference is ~2 GB (2.5 GB → 4.5 GB).' } },
-          { '@type': 'Question', name: 'What is the smallest local LLM that produces useful output?', acceptedAnswer: { '@type': 'Answer', text: 'As of August 2026, the practical minimum for useful output is a 3B model at Q4_K_M quantization. Models below 2B effective parameters struggle with multi-step instructions and complex reasoning. For tasks like summarization and simple Q&A, Gemma 4 E2B is usable. For anything more complex, start with a 3B model.' } },
-          { '@type': 'Question', name: 'Can a 3B model run on a phone?', acceptedAnswer: { '@type': 'Answer', text: 'Yes -- Llama 3.2 1B and 3B are designed for on-device mobile deployment. Meta provides optimized builds for iOS (via MLC LLM) and Android. Inference on a modern phone produces 15-30 tok/sec for 1B models. LM Studio and Ollama do not currently run on iOS or Android -- mobile requires separate frameworks.' } },
-          { '@type': 'Question', name: 'Are small models good for summarization?', acceptedAnswer: { '@type': 'Answer', text: 'Yes -- summarization is one of the strongest use cases for small models. Gemma 4 E2B and Llama 3.2 3B reliably produce accurate summaries, and both now share a 128K context window with Phi-4 Mini, so document length is rarely the limiting factor.' } },
-          { '@type': 'Question', name: 'How much faster is a small model than a 7B model on the same hardware?', acceptedAnswer: { '@type': 'Answer', text: 'Meaningfully faster on CPU, though the exact multiple depends on hardware and quantization -- Google\'s own figures for Gemma 4 E2B on a Raspberry Pi 5 show ~7.6 tok/sec decode, and independent x86 CPU reports range 8-48 tok/sec depending on quantization. On a GPU, the speed advantage narrows. Always check current figures on your specific hardware rather than assuming a fixed multiplier.' } },
-          { '@type': 'Question', name: 'Do small models support function calling?', acceptedAnswer: { '@type': 'Answer', text: 'Some do. Qwen3 3B supports function calling and JSON mode. Llama 3.2 3B has basic tool use support. Check each model\'s own documentation before building a pipeline that depends on structured output, since support varies by version.' } },
-          { '@type': 'Question', name: 'Which small model is best for languages other than English?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 3B supports 29 languages natively including Chinese, Japanese, Korean, and Arabic. Phi-4 Mini is primarily English-optimized. For non-English tasks at the small model scale, Qwen3 3B is the clear choice.' } },
-          { '@type': 'Question', name: 'What is the difference between Phi-4 Mini and Llama 3.2 3B for everyday tasks?', acceptedAnswer: { '@type': 'Answer', text: 'Phi-4 Mini outperforms Llama 3.2 3B on reasoning and coding (68% vs 58% MMLU, 70% vs 60% HumanEval) at nearly identical RAM. Llama 3.2 3B has broader community support and more fine-tunes available. Choose Phi-4 Mini for structured reasoning; Llama 3.2 3B for general chat and compatibility.' } },
+          {
+            '@type': 'Question',
+            'name': 'What is the smallest local LLM that produces useful output?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As of August 2026, the practical minimum for useful output is a 3B model at Q4_K_M quantization. Llama 3.2 1B produces coherent single sentences but struggles with multi-step instructions, longer responses, and complex reasoning. Gemma 4 E2B (2.3B effective) is more capable than that -- usable for summarization and simple Q&A, and its 128K context handles longer documents. For anything more complex, start with a 3B model.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can a 3B model run on a phone?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes -- Llama 3.2 1B and 3B are specifically designed for on-device mobile deployment. Meta provides optimized builds for iOS (via MLC LLM) and Android. Inference on a modern phone (Snapdragon 8 Gen 3 or Apple A17 Pro) produces 15-30 tok/sec for 1B models. LM Studio and Ollama do not currently run on iOS or Android -- mobile requires separate frameworks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are small models good for summarization?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes -- summarization is one of the strongest use cases for small models. Gemma 4 E2B and Llama 3.2 3B reliably produce accurate summaries, and Gemma 4 E2B\'s upgrade to a 128K context window (from the older Gemma 2\'s 8K) means document length is rarely the limiting factor at this scale anymore.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much faster is a 2B model than a 7B model on the same hardware?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Meaningfully faster on CPU, though the multiple depends heavily on hardware and quantization -- Google\'s own figures for Gemma 4 E2B show ~7.6 tok/sec decode on a Raspberry Pi 5, while independent x86 CPU reports range 8-48 tok/sec depending on quantization level. On a GPU, the speed advantage narrows because GPU throughput is less constrained by model size. Check current benchmarks for your specific hardware rather than assuming a fixed multiplier.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do small models support function calling?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Some do. Qwen3 3B supports function calling and JSON mode. Llama 3.2 3B has basic tool use support. Check each model\'s own documentation before building a pipeline that depends on structured output, since support varies by version.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which small model is best for languages other than English?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 3B supports 29 languages natively including Chinese, Japanese, Korean, and Arabic. Phi-4 Mini is primarily English-optimized. For non-English tasks at the small model scale, Qwen3 3B is the clear choice. See [Qwen vs Llama vs Mistral multilingual comparison](/local-llms/qwen-vs-llama-vs-mistral) for a full language comparison.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between Phi-4 Mini and Llama 3.2 3B for everyday tasks?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Phi-4 Mini outperforms Llama 3.2 3B on reasoning, math, and coding (68% vs 58% MMLU, 70% vs 60% HumanEval) at nearly identical RAM (2.5 GB each). For everyday tasks -- Q&A, summarization, simple explanations -- the quality gap is noticeable but not dramatic. Llama 3.2 3B has broader community support and more fine-tunes available. Choose Phi-4 Mini for structured reasoning; Llama 3.2 3B for general chat and broader compatibility.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run two small models simultaneously?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, if total RAM permits. Two 3B models at Q4_K_M use ~5 GB combined -- feasible on an 8 GB machine with a lean OS. Ollama loads one model at a time per process by default. Run two Ollama instances on different ports (OLLAMA_HOST=:11434 and OLLAMA_HOST=:11435) to serve two models in parallel. This is useful for A/B testing outputs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do small models work for RAG (retrieval-augmented generation)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes for simple RAG. Llama 3.2 3B and Phi-4 Mini can answer questions over retrieved document chunks reliably. For RAG over large knowledge bases requiring multi-hop reasoning, 7B+ models perform more consistently. GPT4All\'s LocalDocs feature uses a 3B model for document Q&A and works well for personal document collections.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Phi-4 Mini better than Llama 3.2 3B for coding?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Phi-4 Mini scores 70% on HumanEval vs 60% for Llama 3.2 3B -- a meaningful 10-point gap at this scale. For coding assistance on 4-6 GB RAM machines, Phi-4 Mini is the recommended choice. For multilingual coding (non-Python), Qwen3 3B at 65% HumanEval is competitive with Phi-4 Mini while also supporting function calling.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Using Q8_0 quantization instead of Q4_K_M',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3-5× slower. Always use Q4_K_M as the default for sub-4B models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Running a base model instead of the instruct variant',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Base models (e.g., llama3.2:3b-text) are pre-fine-tuning checkpoints trained to predict the next token in text. They do not follow instructions. When you ask a base model "What is 2+2?", it may complete the sentence as a quiz rather than answer "4". Always use the instruct variant: llama3.2:3b (Ollama defaults to instruct for named models).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Expecting 7B model quality from a 3B model',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A 3B model at 68% MMLU (Phi-4 Mini) performs similarly to a 2023-era GPT-3.5 Mini on general tasks. Complex reasoning chains, long-form writing, and nuanced code generation will produce noticeably lower quality than a 7B model. If output quality is insufficient, upgrade to a 7B model -- the RAM difference is ~2 GB (2.5 GB → 4.5 GB).',
+            },
+          },
         ],
       },
       sections: {
@@ -248,46 +342,19 @@ schema: {
           id: 'faq',
           title: 'Common Questions About Small Local LLM Models',
           faqs: [
-            {
-              q: 'What is the smallest local LLM that produces useful output?',
-              a: 'As of August 2026, the practical minimum for useful output is a 3B model at Q4_K_M quantization. Llama 3.2 1B produces coherent single sentences but struggles with multi-step instructions, longer responses, and complex reasoning. Gemma 4 E2B (2.3B effective) is more capable than that -- usable for summarization and simple Q&A, and its 128K context handles longer documents. For anything more complex, start with a 3B model.',
-            },
-            {
-              q: 'Can a 3B model run on a phone?',
-              a: 'Yes -- Llama 3.2 1B and 3B are specifically designed for on-device mobile deployment. Meta provides optimized builds for iOS (via MLC LLM) and Android. Inference on a modern phone (Snapdragon 8 Gen 3 or Apple A17 Pro) produces 15-30 tok/sec for 1B models. LM Studio and Ollama do not currently run on iOS or Android -- mobile requires separate frameworks.',
-            },
-            {
-              q: 'Are small models good for summarization?',
-              a: 'Yes -- summarization is one of the strongest use cases for small models. Gemma 4 E2B and Llama 3.2 3B reliably produce accurate summaries, and Gemma 4 E2B\'s upgrade to a 128K context window (from the older Gemma 2\'s 8K) means document length is rarely the limiting factor at this scale anymore.',
-            },
-            {
-              q: 'How much faster is a 2B model than a 7B model on the same hardware?',
-              a: 'Meaningfully faster on CPU, though the multiple depends heavily on hardware and quantization -- Google\'s own figures for Gemma 4 E2B show ~7.6 tok/sec decode on a Raspberry Pi 5, while independent x86 CPU reports range 8-48 tok/sec depending on quantization level. On a GPU, the speed advantage narrows because GPU throughput is less constrained by model size. Check current benchmarks for your specific hardware rather than assuming a fixed multiplier.',
-            },
-            {
-              q: 'Do small models support function calling?',
-              a: 'Some do. Qwen3 3B supports function calling and JSON mode. Llama 3.2 3B has basic tool use support. Check each model\'s own documentation before building a pipeline that depends on structured output, since support varies by version.',
-            },
-            {
-              q: 'Which small model is best for languages other than English?',
-              a: 'Qwen3 3B supports 29 languages natively including Chinese, Japanese, Korean, and Arabic. Phi-4 Mini is primarily English-optimized. For non-English tasks at the small model scale, Qwen3 3B is the clear choice. See [Qwen vs Llama vs Mistral multilingual comparison](/local-llms/qwen-vs-llama-vs-mistral) for a full language comparison.',
-            },
-            {
-              q: 'What is the difference between Phi-4 Mini and Llama 3.2 3B for everyday tasks?',
-              a: 'Phi-4 Mini outperforms Llama 3.2 3B on reasoning, math, and coding (68% vs 58% MMLU, 70% vs 60% HumanEval) at nearly identical RAM (2.5 GB each). For everyday tasks -- Q&A, summarization, simple explanations -- the quality gap is noticeable but not dramatic. Llama 3.2 3B has broader community support and more fine-tunes available. Choose Phi-4 Mini for structured reasoning; Llama 3.2 3B for general chat and broader compatibility.',
-            },
-            {
-              q: 'Can I run two small models simultaneously?',
-              a: 'Yes, if total RAM permits. Two 3B models at Q4_K_M use ~5 GB combined -- feasible on an 8 GB machine with a lean OS. Ollama loads one model at a time per process by default. Run two Ollama instances on different ports (OLLAMA_HOST=:11434 and OLLAMA_HOST=:11435) to serve two models in parallel. This is useful for A/B testing outputs.',
-            },
-            {
-              q: 'Do small models work for RAG (retrieval-augmented generation)?',
-              a: 'Yes for simple RAG. Llama 3.2 3B and Phi-4 Mini can answer questions over retrieved document chunks reliably. For RAG over large knowledge bases requiring multi-hop reasoning, 7B+ models perform more consistently. GPT4All\'s LocalDocs feature uses a 3B model for document Q&A and works well for personal document collections.',
-            },
-            {
-              q: 'Is Phi-4 Mini better than Llama 3.2 3B for coding?',
-              a: 'Yes. Phi-4 Mini scores 70% on HumanEval vs 60% for Llama 3.2 3B -- a meaningful 10-point gap at this scale. For coding assistance on 4-6 GB RAM machines, Phi-4 Mini is the recommended choice. For multilingual coding (non-Python), Qwen3 3B at 65% HumanEval is competitive with Phi-4 Mini while also supporting function calling.',
-            },
+            { q: 'What is the smallest local LLM that produces useful output?', a: 'As of August 2026, the practical minimum for useful output is a 3B model at Q4_K_M quantization. Llama 3.2 1B produces coherent single sentences but struggles with multi-step instructions, longer responses, and complex reasoning. Gemma 4 E2B (2.3B effective) is more capable than that -- usable for summarization and simple Q&A, and its 128K context handles longer documents. For anything more complex, start with a 3B model.' },
+            { q: 'Can a 3B model run on a phone?', a: 'Yes -- Llama 3.2 1B and 3B are specifically designed for on-device mobile deployment. Meta provides optimized builds for iOS (via MLC LLM) and Android. Inference on a modern phone (Snapdragon 8 Gen 3 or Apple A17 Pro) produces 15-30 tok/sec for 1B models. LM Studio and Ollama do not currently run on iOS or Android -- mobile requires separate frameworks.' },
+            { q: 'Are small models good for summarization?', a: 'Yes -- summarization is one of the strongest use cases for small models. Gemma 4 E2B and Llama 3.2 3B reliably produce accurate summaries, and Gemma 4 E2B\'s upgrade to a 128K context window (from the older Gemma 2\'s 8K) means document length is rarely the limiting factor at this scale anymore.' },
+            { q: 'How much faster is a 2B model than a 7B model on the same hardware?', a: 'Meaningfully faster on CPU, though the multiple depends heavily on hardware and quantization -- Google\'s own figures for Gemma 4 E2B show ~7.6 tok/sec decode on a Raspberry Pi 5, while independent x86 CPU reports range 8-48 tok/sec depending on quantization level. On a GPU, the speed advantage narrows because GPU throughput is less constrained by model size. Check current benchmarks for your specific hardware rather than assuming a fixed multiplier.' },
+            { q: 'Do small models support function calling?', a: 'Some do. Qwen3 3B supports function calling and JSON mode. Llama 3.2 3B has basic tool use support. Check each model\'s own documentation before building a pipeline that depends on structured output, since support varies by version.' },
+            { q: 'Which small model is best for languages other than English?', a: 'Qwen3 3B supports 29 languages natively including Chinese, Japanese, Korean, and Arabic. Phi-4 Mini is primarily English-optimized. For non-English tasks at the small model scale, Qwen3 3B is the clear choice. See [Qwen vs Llama vs Mistral multilingual comparison](/local-llms/qwen-vs-llama-vs-mistral) for a full language comparison.' },
+            { q: 'What is the difference between Phi-4 Mini and Llama 3.2 3B for everyday tasks?', a: 'Phi-4 Mini outperforms Llama 3.2 3B on reasoning, math, and coding (68% vs 58% MMLU, 70% vs 60% HumanEval) at nearly identical RAM (2.5 GB each). For everyday tasks -- Q&A, summarization, simple explanations -- the quality gap is noticeable but not dramatic. Llama 3.2 3B has broader community support and more fine-tunes available. Choose Phi-4 Mini for structured reasoning; Llama 3.2 3B for general chat and broader compatibility.' },
+            { q: 'Can I run two small models simultaneously?', a: 'Yes, if total RAM permits. Two 3B models at Q4_K_M use ~5 GB combined -- feasible on an 8 GB machine with a lean OS. Ollama loads one model at a time per process by default. Run two Ollama instances on different ports (OLLAMA_HOST=:11434 and OLLAMA_HOST=:11435) to serve two models in parallel. This is useful for A/B testing outputs.' },
+            { q: 'Do small models work for RAG (retrieval-augmented generation)?', a: 'Yes for simple RAG. Llama 3.2 3B and Phi-4 Mini can answer questions over retrieved document chunks reliably. For RAG over large knowledge bases requiring multi-hop reasoning, 7B+ models perform more consistently. GPT4All\'s LocalDocs feature uses a 3B model for document Q&A and works well for personal document collections.' },
+            { q: 'Is Phi-4 Mini better than Llama 3.2 3B for coding?', a: 'Yes. Phi-4 Mini scores 70% on HumanEval vs 60% for Llama 3.2 3B -- a meaningful 10-point gap at this scale. For coding assistance on 4-6 GB RAM machines, Phi-4 Mini is the recommended choice. For multilingual coding (non-Python), Qwen3 3B at 65% HumanEval is competitive with Phi-4 Mini while also supporting function calling.' },
+            { q: 'Using Q8_0 quantization instead of Q4_K_M', a: 'Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3-5× slower. Always use Q4_K_M as the default for sub-4B models.' },
+            { q: 'Running a base model instead of the instruct variant', a: 'Base models (e.g., llama3.2:3b-text) are pre-fine-tuning checkpoints trained to predict the next token in text. They do not follow instructions. When you ask a base model "What is 2+2?", it may complete the sentence as a quiz rather than answer "4". Always use the instruct variant: llama3.2:3b (Ollama defaults to instruct for named models).' },
+            { q: 'Expecting 7B model quality from a 3B model', a: 'A 3B model at 68% MMLU (Phi-4 Mini) performs similarly to a 2023-era GPT-3.5 Mini on general tasks. Complex reasoning chains, long-form writing, and nuanced code generation will produce noticeably lower quality than a 7B model. If output quality is insufficient, upgrade to a 7B model -- the RAM difference is ~2 GB (2.5 GB → 4.5 GB).' },
           ],
         },
         sources: {
@@ -370,16 +437,110 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Usar cuantización Q8_0 en lugar de Q4_K_M', acceptedAnswer: { '@type': 'Answer', text: 'Q8_0 requiere casi el doble de RAM que Q4_K_M con una mejora mínima de calidad a pequeña escala. Un modelo Llama 3.2 3B con Q8_0 necesita ~3,8 GB de RAM frente a ~2,5 GB con Q4_K_M. En una máquina de 4 GB, Q8_0 puede activar el uso de swap y hacer la inferencia 3-5 veces más lenta. Usa siempre Q4_K_M como valor predeterminado para modelos sub-4B.' } },
-          { '@type': 'Question', name: 'Ejecutar un modelo base en lugar de la variante instruct', acceptedAnswer: { '@type': 'Answer', text: 'Los modelos base (por ejemplo, llama3.2:3b-text) son puntos de control previos al ajuste fino, entrenados para predecir el siguiente token en el texto. No siguen instrucciones. Cuando le preguntas a un modelo base "¿Cuánto es 2+2?", puede completar la frase como un cuestionario en lugar de responder "4". Usa siempre la variante instruct: llama3.2:3b (Ollama usa instruct por defecto para los modelos con nombre).' } },
-          { '@type': 'Question', name: 'Esperar calidad de modelo 7B de un modelo 3B', acceptedAnswer: { '@type': 'Answer', text: 'Un modelo 3B con 68% en MMLU (Phi-4 Mini) tiene un rendimiento similar al GPT-4o mini de 2023 en tareas generales. Las cadenas de razonamiento complejas, la escritura extensa y la generación de código matizado producirán una calidad notablemente inferior a la de un modelo 7B. Si la calidad de salida es insuficiente, actualiza a un modelo 7B -- la diferencia de RAM es ~2 GB (2,5 GB → 4,5 GB).' } },
-          { '@type': 'Question', name: '¿Cuál es el LLM local más pequeño que produce resultados útiles?', acceptedAnswer: { '@type': 'Answer', text: 'A partir de abril de 2026, el mínimo práctico para resultados útiles es un modelo 3B con cuantización Q4_K_M. Los modelos por debajo de 2B parámetros tienen dificultades con instrucciones de varios pasos y razonamiento complejo. Para tareas como resumen y preguntas y respuestas simples, Gemma 4 E2B es usable. Para cualquier cosa más compleja, comienza con un modelo 3B.' } },
-          { '@type': 'Question', name: '¿Puede un modelo 3B ejecutarse en un teléfono?', acceptedAnswer: { '@type': 'Answer', text: 'Sí -- Llama 3.2 1B y 3B están diseñados para implementación móvil en el dispositivo. Meta proporciona compilaciones optimizadas para iOS (a través de MLC LLM) y Android. La inferencia en un teléfono moderno produce 15-30 tok/seg para modelos 1B. LM Studio y Ollama no se ejecutan actualmente en iOS o Android -- el móvil requiere frameworks separados.' } },
-          { '@type': 'Question', name: '¿Son los modelos pequeños buenos para el resumen?', acceptedAnswer: { '@type': 'Answer', text: 'Sí -- el resumen es uno de los casos de uso más fuertes para los modelos pequeños. Gemma 4 E2B y Llama 3.2 3B producen resúmenes precisos de textos de hasta ~4.000 palabras de forma confiable. Para documentos más largos, usa un modelo con una ventana de contexto grande como Phi-4 Mini o Llama 3.2 3B (ambos con 128K tokens).' } },
-          { '@type': 'Question', name: '¿Cuánto más rápido es un modelo 2B que un modelo 7B en el mismo hardware?', acceptedAnswer: { '@type': 'Answer', text: 'Depende mucho del hardware y la cuantización -- Google reporta ~7,6 tok/seg (decodificación) para Gemma 4 E2B en una Raspberry Pi 5, mientras que pruebas independientes en CPU x86 van de 8 a 48 tok/seg. La diferencia de velocidad es más notable en máquinas solo con CPU.' } },
-          { '@type': 'Question', name: '¿Los modelos pequeños admiten llamadas a funciones?', acceptedAnswer: { '@type': 'Answer', text: 'Algunos sí. Qwen3 3B admite llamadas a funciones y modo JSON. Llama 3.2 3B tiene soporte básico de uso de herramientas. Gemma 4 E2B no admite llamadas a funciones. Consulta la documentación del modelo antes de crear un pipeline que dependa de salida estructurada.' } },
-          { '@type': 'Question', name: '¿Qué modelo pequeño es mejor para idiomas distintos del inglés?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 3B admite 29 idiomas de forma nativa, incluyendo chino, japonés, coreano y árabe. Gemma 4 E2B y Phi-4 Mini están optimizados principalmente para inglés. Para tareas en otros idiomas a escala de modelo pequeño, Qwen3 3B es la elección clara.' } },
-          { '@type': 'Question', name: '¿Cuál es la diferencia entre Phi-4 Mini y Llama 3.2 3B para tareas cotidianas?', acceptedAnswer: { '@type': 'Answer', text: 'Phi-4 Mini supera a Llama 3.2 3B en razonamiento y código (68% vs 58% en MMLU, 70% vs 60% en HumanEval) con casi idéntica RAM. Llama 3.2 3B tiene mayor soporte de la comunidad y más ajustes finos disponibles. Elige Phi-4 Mini para razonamiento estructurado; Llama 3.2 3B para chat general y compatibilidad.' } },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el LLM local más pequeño que produce resultados útiles?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A partir de abril de 2026, el mínimo práctico para resultados útiles es un modelo 3B con cuantización Q4_K_M. Los modelos por debajo de 2B parámetros (Llama 3.2 1B, Gemma 4 E2B) producen frases coherentes pero tienen dificultades con instrucciones de varios pasos, respuestas más largas y razonamiento complejo. Para tareas como resumen y preguntas y respuestas simples, Gemma 4 E2B es usable. Para cualquier cosa más compleja, comienza con un modelo 3B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puede un modelo 3B ejecutarse en un teléfono?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí -- Llama 3.2 1B y 3B están específicamente diseñados para implementación móvil en el dispositivo. Meta proporciona compilaciones optimizadas para iOS (a través de MLC LLM) y Android. La inferencia en un teléfono moderno (Snapdragon 8 Gen 3 o Apple A17 Pro) produce 15-30 tok/seg para modelos 1B. LM Studio y Ollama no se ejecutan actualmente en iOS o Android -- el móvil requiere frameworks separados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Son los modelos pequeños buenos para el resumen?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí -- el resumen es uno de los casos de uso más fuertes para los modelos pequeños. Gemma 4 E2B y Llama 3.2 3B producen resúmenes precisos de textos de hasta ~4.000 palabras (su límite de contexto práctico para salida de calidad) de forma confiable. Para documentos más largos, usa un modelo con una ventana de contexto grande como Phi-4 Mini o Llama 3.2 3B (ambos con 128K tokens).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto más rápido es un modelo 2B que un modelo 7B en el mismo hardware?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende mucho del hardware y la cuantización -- Google reporta ~7,6 tok/seg (decodificación) para Gemma 4 E2B en una Raspberry Pi 5, mientras que pruebas independientes en CPU x86 van de 8 a 48 tok/seg. En una GPU, la ventaja de velocidad se reduce porque el rendimiento de la GPU está menos limitado por el tamaño del modelo. La diferencia de velocidad es más notable en máquinas solo con CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Los modelos pequeños admiten llamadas a funciones?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Algunos sí. Qwen3 3B admite llamadas a funciones y modo JSON. Llama 3.2 3B tiene soporte básico de uso de herramientas. Gemma 4 E2B no admite llamadas a funciones. Consulta la documentación del modelo antes de crear un pipeline que dependa de salida estructurada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué modelo pequeño es mejor para idiomas distintos del inglés?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 3B admite 29 idiomas de forma nativa, incluyendo chino, japonés, coreano y árabe. Gemma 4 E2B y Phi-4 Mini están optimizados principalmente para inglés. Para tareas en otros idiomas a escala de modelo pequeño, Qwen3 3B es la elección clara. Consulta la [comparación multilingüe Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) para una comparación completa de idiomas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la diferencia entre Phi-4 Mini y Llama 3.2 3B para tareas cotidianas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Phi-4 Mini supera a Llama 3.2 3B en razonamiento, matemáticas y código (68% vs 58% en MMLU, 70% vs 60% en HumanEval) con casi idéntica RAM (2,5 GB cada uno). Para tareas cotidianas -- preguntas y respuestas, resumen, explicaciones simples -- la brecha de calidad es notable pero no dramática. Llama 3.2 3B tiene mayor soporte de la comunidad y más ajustes finos disponibles. Elige Phi-4 Mini para razonamiento estructurado; Llama 3.2 3B para chat general y mayor compatibilidad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo ejecutar dos modelos pequeños simultáneamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, si la RAM total lo permite. Dos modelos 3B con Q4_K_M usan ~5 GB combinados -- factible en una máquina de 8 GB con un sistema operativo ligero. Ollama carga un modelo a la vez por proceso de forma predeterminada. Ejecuta dos instancias de Ollama en diferentes puertos (OLLAMA_HOST=:11434 y OLLAMA_HOST=:11435) para servir dos modelos en paralelo. Esto es útil para pruebas A/B de salidas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Los modelos pequeños funcionan para RAG (generación aumentada por recuperación)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí para RAG simple. Llama 3.2 3B y Phi-4 Mini pueden responder preguntas sobre fragmentos de documentos recuperados de forma confiable. Para RAG sobre grandes bases de conocimiento que requieren razonamiento de múltiples saltos, los modelos de 7B o más rinden de forma más consistente. La función LocalDocs de GPT4All usa un modelo 3B para preguntas y respuestas sobre documentos y funciona bien para colecciones de documentos personales.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es Phi-4 Mini mejor que Llama 3.2 3B para código?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Phi-4 Mini obtiene un 70% en HumanEval frente al 60% de Llama 3.2 3B -- una brecha significativa de 10 puntos a esta escala. Para asistencia con código en máquinas de 4-6 GB de RAM, Phi-4 Mini es la opción recomendada. Para código en múltiples idiomas (no Python), Qwen3 3B con un 65% en HumanEval es competitivo con Phi-4 Mini y también admite llamadas a funciones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Usar cuantización Q8_0 en lugar de Q4_K_M',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8_0 requiere casi el doble de RAM que Q4_K_M con una mejora mínima de calidad a pequeña escala. Un modelo Llama 3.2 3B con Q8_0 necesita ~3,8 GB de RAM frente a ~2,5 GB con Q4_K_M. En una máquina de 4 GB, Q8_0 puede activar el uso de swap y hacer la inferencia 3-5 veces más lenta. Usa siempre Q4_K_M como valor predeterminado para modelos sub-4B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ejecutar un modelo base en lugar de la variante instruct',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los modelos base (por ejemplo, llama3.2:3b-text) son puntos de control previos al ajuste fino, entrenados para predecir el siguiente token en el texto. No siguen instrucciones. Cuando le preguntas a un modelo base "¿Cuánto es 2+2?", puede completar la frase como un cuestionario en lugar de responder "4". Usa siempre la variante instruct: llama3.2:3b (Ollama usa instruct por defecto para los modelos con nombre).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Esperar calidad de modelo 7B de un modelo 3B',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un modelo 3B con 68% en MMLU (Phi-4 Mini) tiene un rendimiento similar al GPT-4o mini de 2023 en tareas generales. Las cadenas de razonamiento complejas, la escritura extensa y la generación de código matizado producirán una calidad notablemente inferior a la de un modelo 7B. Si la calidad de salida es insuficiente, actualiza a un modelo 7B -- la diferencia de RAM es ~2 GB (2,5 GB → 4,5 GB).',
+            },
+          },
         ],
       },
       sections: {
@@ -540,46 +701,19 @@ schema: {
           id: 'faq',
           title: 'Preguntas comunes sobre los modelos LLM locales pequeños',
           faqs: [
-            {
-              q: '¿Cuál es el LLM local más pequeño que produce resultados útiles?',
-              a: 'A partir de abril de 2026, el mínimo práctico para resultados útiles es un modelo 3B con cuantización Q4_K_M. Los modelos por debajo de 2B parámetros (Llama 3.2 1B, Gemma 4 E2B) producen frases coherentes pero tienen dificultades con instrucciones de varios pasos, respuestas más largas y razonamiento complejo. Para tareas como resumen y preguntas y respuestas simples, Gemma 4 E2B es usable. Para cualquier cosa más compleja, comienza con un modelo 3B.',
-            },
-            {
-              q: '¿Puede un modelo 3B ejecutarse en un teléfono?',
-              a: 'Sí -- Llama 3.2 1B y 3B están específicamente diseñados para implementación móvil en el dispositivo. Meta proporciona compilaciones optimizadas para iOS (a través de MLC LLM) y Android. La inferencia en un teléfono moderno (Snapdragon 8 Gen 3 o Apple A17 Pro) produce 15-30 tok/seg para modelos 1B. LM Studio y Ollama no se ejecutan actualmente en iOS o Android -- el móvil requiere frameworks separados.',
-            },
-            {
-              q: '¿Son los modelos pequeños buenos para el resumen?',
-              a: 'Sí -- el resumen es uno de los casos de uso más fuertes para los modelos pequeños. Gemma 4 E2B y Llama 3.2 3B producen resúmenes precisos de textos de hasta ~4.000 palabras (su límite de contexto práctico para salida de calidad) de forma confiable. Para documentos más largos, usa un modelo con una ventana de contexto grande como Phi-4 Mini o Llama 3.2 3B (ambos con 128K tokens).',
-            },
-            {
-              q: '¿Cuánto más rápido es un modelo 2B que un modelo 7B en el mismo hardware?',
-              a: 'Depende mucho del hardware y la cuantización -- Google reporta ~7,6 tok/seg (decodificación) para Gemma 4 E2B en una Raspberry Pi 5, mientras que pruebas independientes en CPU x86 van de 8 a 48 tok/seg. En una GPU, la ventaja de velocidad se reduce porque el rendimiento de la GPU está menos limitado por el tamaño del modelo. La diferencia de velocidad es más notable en máquinas solo con CPU.',
-            },
-            {
-              q: '¿Los modelos pequeños admiten llamadas a funciones?',
-              a: 'Algunos sí. Qwen3 3B admite llamadas a funciones y modo JSON. Llama 3.2 3B tiene soporte básico de uso de herramientas. Gemma 4 E2B no admite llamadas a funciones. Consulta la documentación del modelo antes de crear un pipeline que dependa de salida estructurada.',
-            },
-            {
-              q: '¿Qué modelo pequeño es mejor para idiomas distintos del inglés?',
-              a: 'Qwen3 3B admite 29 idiomas de forma nativa, incluyendo chino, japonés, coreano y árabe. Gemma 4 E2B y Phi-4 Mini están optimizados principalmente para inglés. Para tareas en otros idiomas a escala de modelo pequeño, Qwen3 3B es la elección clara. Consulta la [comparación multilingüe Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) para una comparación completa de idiomas.',
-            },
-            {
-              q: '¿Cuál es la diferencia entre Phi-4 Mini y Llama 3.2 3B para tareas cotidianas?',
-              a: 'Phi-4 Mini supera a Llama 3.2 3B en razonamiento, matemáticas y código (68% vs 58% en MMLU, 70% vs 60% en HumanEval) con casi idéntica RAM (2,5 GB cada uno). Para tareas cotidianas -- preguntas y respuestas, resumen, explicaciones simples -- la brecha de calidad es notable pero no dramática. Llama 3.2 3B tiene mayor soporte de la comunidad y más ajustes finos disponibles. Elige Phi-4 Mini para razonamiento estructurado; Llama 3.2 3B para chat general y mayor compatibilidad.',
-            },
-            {
-              q: '¿Puedo ejecutar dos modelos pequeños simultáneamente?',
-              a: 'Sí, si la RAM total lo permite. Dos modelos 3B con Q4_K_M usan ~5 GB combinados -- factible en una máquina de 8 GB con un sistema operativo ligero. Ollama carga un modelo a la vez por proceso de forma predeterminada. Ejecuta dos instancias de Ollama en diferentes puertos (OLLAMA_HOST=:11434 y OLLAMA_HOST=:11435) para servir dos modelos en paralelo. Esto es útil para pruebas A/B de salidas.',
-            },
-            {
-              q: '¿Los modelos pequeños funcionan para RAG (generación aumentada por recuperación)?',
-              a: 'Sí para RAG simple. Llama 3.2 3B y Phi-4 Mini pueden responder preguntas sobre fragmentos de documentos recuperados de forma confiable. Para RAG sobre grandes bases de conocimiento que requieren razonamiento de múltiples saltos, los modelos de 7B o más rinden de forma más consistente. La función LocalDocs de GPT4All usa un modelo 3B para preguntas y respuestas sobre documentos y funciona bien para colecciones de documentos personales.',
-            },
-            {
-              q: '¿Es Phi-4 Mini mejor que Llama 3.2 3B para código?',
-              a: 'Sí. Phi-4 Mini obtiene un 70% en HumanEval frente al 60% de Llama 3.2 3B -- una brecha significativa de 10 puntos a esta escala. Para asistencia con código en máquinas de 4-6 GB de RAM, Phi-4 Mini es la opción recomendada. Para código en múltiples idiomas (no Python), Qwen3 3B con un 65% en HumanEval es competitivo con Phi-4 Mini y también admite llamadas a funciones.',
-            },
+            { q: '¿Cuál es el LLM local más pequeño que produce resultados útiles?', a: 'A partir de abril de 2026, el mínimo práctico para resultados útiles es un modelo 3B con cuantización Q4_K_M. Los modelos por debajo de 2B parámetros (Llama 3.2 1B, Gemma 4 E2B) producen frases coherentes pero tienen dificultades con instrucciones de varios pasos, respuestas más largas y razonamiento complejo. Para tareas como resumen y preguntas y respuestas simples, Gemma 4 E2B es usable. Para cualquier cosa más compleja, comienza con un modelo 3B.' },
+            { q: '¿Puede un modelo 3B ejecutarse en un teléfono?', a: 'Sí -- Llama 3.2 1B y 3B están específicamente diseñados para implementación móvil en el dispositivo. Meta proporciona compilaciones optimizadas para iOS (a través de MLC LLM) y Android. La inferencia en un teléfono moderno (Snapdragon 8 Gen 3 o Apple A17 Pro) produce 15-30 tok/seg para modelos 1B. LM Studio y Ollama no se ejecutan actualmente en iOS o Android -- el móvil requiere frameworks separados.' },
+            { q: '¿Son los modelos pequeños buenos para el resumen?', a: 'Sí -- el resumen es uno de los casos de uso más fuertes para los modelos pequeños. Gemma 4 E2B y Llama 3.2 3B producen resúmenes precisos de textos de hasta ~4.000 palabras (su límite de contexto práctico para salida de calidad) de forma confiable. Para documentos más largos, usa un modelo con una ventana de contexto grande como Phi-4 Mini o Llama 3.2 3B (ambos con 128K tokens).' },
+            { q: '¿Cuánto más rápido es un modelo 2B que un modelo 7B en el mismo hardware?', a: 'Depende mucho del hardware y la cuantización -- Google reporta ~7,6 tok/seg (decodificación) para Gemma 4 E2B en una Raspberry Pi 5, mientras que pruebas independientes en CPU x86 van de 8 a 48 tok/seg. En una GPU, la ventaja de velocidad se reduce porque el rendimiento de la GPU está menos limitado por el tamaño del modelo. La diferencia de velocidad es más notable en máquinas solo con CPU.' },
+            { q: '¿Los modelos pequeños admiten llamadas a funciones?', a: 'Algunos sí. Qwen3 3B admite llamadas a funciones y modo JSON. Llama 3.2 3B tiene soporte básico de uso de herramientas. Gemma 4 E2B no admite llamadas a funciones. Consulta la documentación del modelo antes de crear un pipeline que dependa de salida estructurada.' },
+            { q: '¿Qué modelo pequeño es mejor para idiomas distintos del inglés?', a: 'Qwen3 3B admite 29 idiomas de forma nativa, incluyendo chino, japonés, coreano y árabe. Gemma 4 E2B y Phi-4 Mini están optimizados principalmente para inglés. Para tareas en otros idiomas a escala de modelo pequeño, Qwen3 3B es la elección clara. Consulta la [comparación multilingüe Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) para una comparación completa de idiomas.' },
+            { q: '¿Cuál es la diferencia entre Phi-4 Mini y Llama 3.2 3B para tareas cotidianas?', a: 'Phi-4 Mini supera a Llama 3.2 3B en razonamiento, matemáticas y código (68% vs 58% en MMLU, 70% vs 60% en HumanEval) con casi idéntica RAM (2,5 GB cada uno). Para tareas cotidianas -- preguntas y respuestas, resumen, explicaciones simples -- la brecha de calidad es notable pero no dramática. Llama 3.2 3B tiene mayor soporte de la comunidad y más ajustes finos disponibles. Elige Phi-4 Mini para razonamiento estructurado; Llama 3.2 3B para chat general y mayor compatibilidad.' },
+            { q: '¿Puedo ejecutar dos modelos pequeños simultáneamente?', a: 'Sí, si la RAM total lo permite. Dos modelos 3B con Q4_K_M usan ~5 GB combinados -- factible en una máquina de 8 GB con un sistema operativo ligero. Ollama carga un modelo a la vez por proceso de forma predeterminada. Ejecuta dos instancias de Ollama en diferentes puertos (OLLAMA_HOST=:11434 y OLLAMA_HOST=:11435) para servir dos modelos en paralelo. Esto es útil para pruebas A/B de salidas.' },
+            { q: '¿Los modelos pequeños funcionan para RAG (generación aumentada por recuperación)?', a: 'Sí para RAG simple. Llama 3.2 3B y Phi-4 Mini pueden responder preguntas sobre fragmentos de documentos recuperados de forma confiable. Para RAG sobre grandes bases de conocimiento que requieren razonamiento de múltiples saltos, los modelos de 7B o más rinden de forma más consistente. La función LocalDocs de GPT4All usa un modelo 3B para preguntas y respuestas sobre documentos y funciona bien para colecciones de documentos personales.' },
+            { q: '¿Es Phi-4 Mini mejor que Llama 3.2 3B para código?', a: 'Sí. Phi-4 Mini obtiene un 70% en HumanEval frente al 60% de Llama 3.2 3B -- una brecha significativa de 10 puntos a esta escala. Para asistencia con código en máquinas de 4-6 GB de RAM, Phi-4 Mini es la opción recomendada. Para código en múltiples idiomas (no Python), Qwen3 3B con un 65% en HumanEval es competitivo con Phi-4 Mini y también admite llamadas a funciones.' },
+            { q: 'Usar cuantización Q8_0 en lugar de Q4_K_M', a: 'Q8_0 requiere casi el doble de RAM que Q4_K_M con una mejora mínima de calidad a pequeña escala. Un modelo Llama 3.2 3B con Q8_0 necesita ~3,8 GB de RAM frente a ~2,5 GB con Q4_K_M. En una máquina de 4 GB, Q8_0 puede activar el uso de swap y hacer la inferencia 3-5 veces más lenta. Usa siempre Q4_K_M como valor predeterminado para modelos sub-4B.' },
+            { q: 'Ejecutar un modelo base en lugar de la variante instruct', a: 'Los modelos base (por ejemplo, llama3.2:3b-text) son puntos de control previos al ajuste fino, entrenados para predecir el siguiente token en el texto. No siguen instrucciones. Cuando le preguntas a un modelo base "¿Cuánto es 2+2?", puede completar la frase como un cuestionario en lugar de responder "4". Usa siempre la variante instruct: llama3.2:3b (Ollama usa instruct por defecto para los modelos con nombre).' },
+            { q: 'Esperar calidad de modelo 7B de un modelo 3B', a: 'Un modelo 3B con 68% en MMLU (Phi-4 Mini) tiene un rendimiento similar al GPT-4o mini de 2023 en tareas generales. Las cadenas de razonamiento complejas, la escritura extensa y la generación de código matizado producirán una calidad notablemente inferior a la de un modelo 7B. Si la calidad de salida es insuficiente, actualiza a un modelo 7B -- la diferencia de RAM es ~2 GB (2,5 GB → 4,5 GB).' },
           ],
         },
         sources: {
@@ -664,16 +798,110 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'استخدام تكميم Q8_0 بدلًا من Q4_K_M', acceptedAnswer: { '@type': 'Answer', text: 'يتطلب Q8_0 ضعف RAM تقريبًا مقارنة بـ Q4_K_M مع تحسّن جودة ضئيل على النطاق الصغير. نموذج Llama 3.2 3B بـ Q8_0 يحتاج ~3.8 GB من RAM مقابل ~2.5 GB بـ Q4_K_M. على جهاز بذاكرة 4 GB، قد يُفعّل Q8_0 استخدام swap ويجعل الاستدلال أبطأ بـ 3-5 مرات. استخدم دائمًا Q4_K_M كقيمة افتراضية للنماذج أقل من 4B.' } },
-          { '@type': 'Question', name: 'تشغيل نموذج أساسي بدلًا من نسخة instruct', acceptedAnswer: { '@type': 'Answer', text: 'النماذج الأساسية (مثل llama3.2:3b-text) هي نقاط تحقق قبل الضبط الدقيق، مدرّبة للتنبؤ بالـ token التالي في النص. لا تتبع التعليمات. عندما تسأل نموذجًا أساسيًا "كم 2+2؟"، قد يكمل الجملة كاختبار بدلًا من الإجابة بـ "4". استخدم دائمًا نسخة instruct: llama3.2:3b (يستخدم Ollama instruct افتراضيًا للنماذج المسمّاة).' } },
-          { '@type': 'Question', name: 'توقّع جودة نموذج 7B من نموذج 3B', acceptedAnswer: { '@type': 'Answer', text: 'نموذج 3B بنسبة 68% في MMLU (Phi-4 Mini) يؤدي بشكل مماثل لـ GPT-4o mini لعام 2023 في المهام العامة. سلاسل الاستدلال المعقدة والكتابة المطوّلة وتوليد الشيفرة الدقيق ستنتج جودة أدنى بوضوح من نموذج 7B. إذا كانت جودة المخرجات غير كافية، فرقِّ إلى نموذج 7B -- فرق RAM ~2 GB (2.5 GB ← 4.5 GB).' } },
-          { '@type': 'Question', name: 'ما أصغر نموذج LLM محلي ينتج نتائج مفيدة؟', acceptedAnswer: { '@type': 'Answer', text: 'اعتبارًا من أبريل 2026، الحد الأدنى العملي لنتائج مفيدة هو نموذج 3B بتكميم Q4_K_M. النماذج أقل من 2B معاملات تواجه صعوبة مع التعليمات متعددة الخطوات والاستدلال المعقد. لمهام مثل التلخيص والأسئلة والأجوبة البسيطة، Gemma 4 E2B قابل للاستخدام. لأي شيء أكثر تعقيدًا، ابدأ بنموذج 3B.' } },
-          { '@type': 'Question', name: 'هل يمكن لنموذج 3B العمل على هاتف؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم -- صُمم Llama 3.2 1B و3B للنشر المحمول على الجهاز. توفّر Meta بناءات محسّنة لـ iOS (عبر MLC LLM) وAndroid. ينتج الاستدلال على هاتف حديث 15-30 tok/ثانية لنماذج 1B. لا يعمل LM Studio وOllama حاليًا على iOS أو Android -- يتطلب المحمول أطر عمل منفصلة.' } },
-          { '@type': 'Question', name: 'هل النماذج الصغيرة جيدة للتلخيص؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم -- التلخيص أحد أقوى حالات استخدام النماذج الصغيرة. ينتج Gemma 4 E2B وLlama 3.2 3B ملخصات دقيقة لنصوص تصل إلى ~4000 كلمة بشكل موثوق. للمستندات الأطول، استخدم نموذجًا بنافذة سياق كبيرة مثل Phi-4 Mini أو Llama 3.2 3B (كلاهما بـ 128K token).' } },
-          { '@type': 'Question', name: 'كم أسرع نموذج 2B من نموذج 7B على العتاد نفسه؟', acceptedAnswer: { '@type': 'Answer', text: 'يعتمد ذلك بشدة على العتاد والتكميم -- تقرّر Google نحو 7.6 tok/ثانية (فك الترميز) لـ Gemma 4 E2B على Raspberry Pi 5، بينما تتراوح اختبارات مستقلة على معالجات x86 بين 8 و48 tok/ثانية. فرق السرعة أكثر وضوحًا على الأجهزة التي تعتمد CPU فقط.' } },
-          { '@type': 'Question', name: 'هل تدعم النماذج الصغيرة استدعاء الدوال؟', acceptedAnswer: { '@type': 'Answer', text: 'بعضها نعم. يدعم Qwen3 3B استدعاء الدوال ووضع JSON. يملك Llama 3.2 3B دعمًا أساسيًا لاستخدام الأدوات. لا يدعم Gemma 4 E2B استدعاء الدوال. راجع وثائق النموذج قبل بناء مسار يعتمد على مخرجات منظّمة.' } },
-          { '@type': 'Question', name: 'أي نموذج صغير أفضل للغات غير الإنجليزية؟', acceptedAnswer: { '@type': 'Answer', text: 'يدعم Qwen3 3B 29 لغة بشكل أصلي، بما في ذلك الصينية واليابانية والكورية والعربية. Gemma 4 E2B وPhi-4 Mini محسّنان أساسًا للإنجليزية. لمهام اللغات الأخرى على نطاق النموذج الصغير، Qwen3 3B هو الخيار الواضح.' } },
-          { '@type': 'Question', name: 'ما الفرق بين Phi-4 Mini وLlama 3.2 3B للمهام اليومية؟', acceptedAnswer: { '@type': 'Answer', text: 'يتفوق Phi-4 Mini على Llama 3.2 3B في الاستدلال والبرمجة (68% مقابل 58% في MMLU، 70% مقابل 60% في HumanEval) بذاكرة RAM متطابقة تقريبًا. يملك Llama 3.2 3B دعمًا مجتمعيًا أكبر ومزيدًا من عمليات الضبط الدقيق المتاحة. اختر Phi-4 Mini للاستدلال المنظّم؛ وLlama 3.2 3B للدردشة العامة والتوافق.' } },
+          {
+            '@type': 'Question',
+            'name': 'ما أصغر نموذج LLM محلي ينتج نتائج مفيدة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اعتبارًا من أبريل 2026، الحد الأدنى العملي لنتائج مفيدة هو نموذج 3B بتكميم Q4_K_M. النماذج أقل من 2B معاملات (Llama 3.2 1B، Gemma 4 E2B) تنتج جملًا متماسكة لكنها تواجه صعوبة مع التعليمات متعددة الخطوات، والاستجابات الأطول، والاستدلال المعقد. لمهام مثل التلخيص والأسئلة والأجوبة البسيطة، Gemma 4 E2B قابل للاستخدام. لأي شيء أكثر تعقيدًا، ابدأ بنموذج 3B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن لنموذج 3B العمل على هاتف؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم -- صُمم Llama 3.2 1B و3B تحديدًا للنشر المحمول على الجهاز. توفّر Meta بناءات محسّنة لـ iOS (عبر MLC LLM) وAndroid. ينتج الاستدلال على هاتف حديث (Snapdragon 8 Gen 3 أو Apple A17 Pro) 15-30 tok/ثانية لنماذج 1B. لا يعمل LM Studio وOllama حاليًا على iOS أو Android -- يتطلب المحمول أطر عمل منفصلة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل النماذج الصغيرة جيدة للتلخيص؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم -- التلخيص أحد أقوى حالات استخدام النماذج الصغيرة. ينتج Gemma 4 E2B وLlama 3.2 3B ملخصات دقيقة لنصوص تصل إلى ~4000 كلمة (حد سياقها العملي لمخرجات جيدة) بشكل موثوق. للمستندات الأطول، استخدم نموذجًا بنافذة سياق كبيرة مثل Phi-4 Mini أو Llama 3.2 3B (كلاهما بـ 128K token).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كم أسرع نموذج 2B من نموذج 7B على العتاد نفسه؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد ذلك بشدة على العتاد والتكميم -- تقرّر Google نحو 7.6 tok/ثانية (فك الترميز) لـ Gemma 4 E2B على Raspberry Pi 5، بينما تتراوح اختبارات مستقلة على معالجات x86 بين 8 و48 tok/ثانية. على GPU، يتقلّص فارق السرعة لأن أداء GPU أقل تقييدًا بحجم النموذج. فرق السرعة أكثر وضوحًا على الأجهزة التي تعتمد CPU فقط.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تدعم النماذج الصغيرة استدعاء الدوال؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بعضها نعم. يدعم Qwen3 3B استدعاء الدوال ووضع JSON. يملك Llama 3.2 3B دعمًا أساسيًا لاستخدام الأدوات. لا يدعم Gemma 4 E2B استدعاء الدوال. راجع وثائق النموذج قبل بناء مسار يعتمد على مخرجات منظّمة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي نموذج صغير أفضل للغات غير الإنجليزية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يدعم Qwen3 3B 29 لغة بشكل أصلي، بما في ذلك الصينية واليابانية والكورية والعربية. Gemma 4 E2B وPhi-4 Mini محسّنان أساسًا للإنجليزية. لمهام اللغات الأخرى على نطاق النموذج الصغير، Qwen3 3B هو الخيار الواضح. راجع [مقارنة Qwen vs Llama vs Mistral متعددة اللغات](/ar/local-llms/qwen-vs-llama-vs-mistral) لمقارنة كاملة للغات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين Phi-4 Mini وLlama 3.2 3B للمهام اليومية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يتفوق Phi-4 Mini على Llama 3.2 3B في الاستدلال والرياضيات والبرمجة (68% مقابل 58% في MMLU، 70% مقابل 60% في HumanEval) بذاكرة RAM متطابقة تقريبًا (2.5 GB لكل منهما). للمهام اليومية -- الأسئلة والأجوبة، والتلخيص، والشروحات البسيطة -- فجوة الجودة ملحوظة لكنها غير جذرية. يملك Llama 3.2 3B دعمًا مجتمعيًا أكبر ومزيدًا من عمليات الضبط الدقيق المتاحة. اختر Phi-4 Mini للاستدلال المنظّم؛ وLlama 3.2 3B للدردشة العامة والتوافق الأكبر.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني تشغيل نموذجين صغيرين في الوقت نفسه؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، إذا سمحت RAM الإجمالية. نموذجان 3B بـ Q4_K_M يستخدمان ~5 GB مجتمعين -- ممكن على جهاز بذاكرة 8 GB بنظام تشغيل خفيف. يحمّل Ollama نموذجًا واحدًا في كل مرة لكل عملية افتراضيًا. شغّل نسختين من Ollama على منفذين مختلفين (OLLAMA_HOST=:11434 وOLLAMA_HOST=:11435) لتقديم نموذجين بالتوازي. هذا مفيد لاختبار A/B للمخرجات.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تصلح النماذج الصغيرة لـ RAG (التوليد المعزّز بالاسترجاع)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم لـ RAG البسيط. يستطيع Llama 3.2 3B وPhi-4 Mini الإجابة عن أسئلة حول مقاطع مستندات مُسترجعة بشكل موثوق. لـ RAG على قواعد معرفة كبيرة تتطلب استدلالًا متعدد القفزات، تؤدي نماذج 7B أو أكبر بثبات أعلى. تستخدم ميزة LocalDocs في GPT4All نموذج 3B للأسئلة والأجوبة عن المستندات وتعمل جيدًا لمجموعات المستندات الشخصية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل Phi-4 Mini أفضل من Llama 3.2 3B للبرمجة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يحصل Phi-4 Mini على 70% في HumanEval مقابل 60% لـ Llama 3.2 3B -- فجوة كبيرة قدرها 10 نقاط على هذا النطاق. للمساعدة في البرمجة على أجهزة بذاكرة 4-6 GB، Phi-4 Mini هو الخيار الموصى به. للبرمجة بلغات متعددة (غير Python)، Qwen3 3B بنسبة 65% في HumanEval منافس لـ Phi-4 Mini ويدعم أيضًا استدعاء الدوال.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'استخدام تكميم Q8_0 بدلًا من Q4_K_M',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يتطلب Q8_0 ضعف RAM تقريبًا مقارنة بـ Q4_K_M مع تحسّن جودة ضئيل على النطاق الصغير. نموذج Llama 3.2 3B بـ Q8_0 يحتاج ~3.8 GB من RAM مقابل ~2.5 GB بـ Q4_K_M. على جهاز بذاكرة 4 GB، قد يُفعّل Q8_0 استخدام swap ويجعل الاستدلال أبطأ بـ 3-5 مرات. استخدم دائمًا Q4_K_M كقيمة افتراضية للنماذج أقل من 4B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'تشغيل نموذج أساسي بدلًا من نسخة instruct',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'النماذج الأساسية (مثل llama3.2:3b-text) هي نقاط تحقق قبل الضبط الدقيق، مدرّبة للتنبؤ بالـ token التالي في النص. لا تتبع التعليمات. عندما تسأل نموذجًا أساسيًا "كم 2+2؟"، قد يكمل الجملة كاختبار بدلًا من الإجابة بـ "4". استخدم دائمًا نسخة instruct: llama3.2:3b (يستخدم Ollama instruct افتراضيًا للنماذج المسمّاة).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'توقّع جودة نموذج 7B من نموذج 3B',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نموذج 3B بنسبة 68% في MMLU (Phi-4 Mini) يؤدي بشكل مماثل لـ GPT-4o mini لعام 2023 في المهام العامة. سلاسل الاستدلال المعقدة والكتابة المطوّلة وتوليد الشيفرة الدقيق ستنتج جودة أدنى بوضوح من نموذج 7B. إذا كانت جودة المخرجات غير كافية، فرقِّ إلى نموذج 7B -- فرق RAM ~2 GB (2.5 GB ← 4.5 GB).',
+            },
+          },
         ],
       },
       sections: {
@@ -834,46 +1062,19 @@ schema: {
           id: 'faq',
           title: 'أسئلة شائعة حول نماذج LLM المحلية الصغيرة',
           faqs: [
-            {
-              q: 'ما أصغر نموذج LLM محلي ينتج نتائج مفيدة؟',
-              a: 'اعتبارًا من أبريل 2026، الحد الأدنى العملي لنتائج مفيدة هو نموذج 3B بتكميم Q4_K_M. النماذج أقل من 2B معاملات (Llama 3.2 1B، Gemma 4 E2B) تنتج جملًا متماسكة لكنها تواجه صعوبة مع التعليمات متعددة الخطوات، والاستجابات الأطول، والاستدلال المعقد. لمهام مثل التلخيص والأسئلة والأجوبة البسيطة، Gemma 4 E2B قابل للاستخدام. لأي شيء أكثر تعقيدًا، ابدأ بنموذج 3B.',
-            },
-            {
-              q: 'هل يمكن لنموذج 3B العمل على هاتف؟',
-              a: 'نعم -- صُمم Llama 3.2 1B و3B تحديدًا للنشر المحمول على الجهاز. توفّر Meta بناءات محسّنة لـ iOS (عبر MLC LLM) وAndroid. ينتج الاستدلال على هاتف حديث (Snapdragon 8 Gen 3 أو Apple A17 Pro) 15-30 tok/ثانية لنماذج 1B. لا يعمل LM Studio وOllama حاليًا على iOS أو Android -- يتطلب المحمول أطر عمل منفصلة.',
-            },
-            {
-              q: 'هل النماذج الصغيرة جيدة للتلخيص؟',
-              a: 'نعم -- التلخيص أحد أقوى حالات استخدام النماذج الصغيرة. ينتج Gemma 4 E2B وLlama 3.2 3B ملخصات دقيقة لنصوص تصل إلى ~4000 كلمة (حد سياقها العملي لمخرجات جيدة) بشكل موثوق. للمستندات الأطول، استخدم نموذجًا بنافذة سياق كبيرة مثل Phi-4 Mini أو Llama 3.2 3B (كلاهما بـ 128K token).',
-            },
-            {
-              q: 'كم أسرع نموذج 2B من نموذج 7B على العتاد نفسه؟',
-              a: 'يعتمد ذلك بشدة على العتاد والتكميم -- تقرّر Google نحو 7.6 tok/ثانية (فك الترميز) لـ Gemma 4 E2B على Raspberry Pi 5، بينما تتراوح اختبارات مستقلة على معالجات x86 بين 8 و48 tok/ثانية. على GPU، يتقلّص فارق السرعة لأن أداء GPU أقل تقييدًا بحجم النموذج. فرق السرعة أكثر وضوحًا على الأجهزة التي تعتمد CPU فقط.',
-            },
-            {
-              q: 'هل تدعم النماذج الصغيرة استدعاء الدوال؟',
-              a: 'بعضها نعم. يدعم Qwen3 3B استدعاء الدوال ووضع JSON. يملك Llama 3.2 3B دعمًا أساسيًا لاستخدام الأدوات. لا يدعم Gemma 4 E2B استدعاء الدوال. راجع وثائق النموذج قبل بناء مسار يعتمد على مخرجات منظّمة.',
-            },
-            {
-              q: 'أي نموذج صغير أفضل للغات غير الإنجليزية؟',
-              a: 'يدعم Qwen3 3B 29 لغة بشكل أصلي، بما في ذلك الصينية واليابانية والكورية والعربية. Gemma 4 E2B وPhi-4 Mini محسّنان أساسًا للإنجليزية. لمهام اللغات الأخرى على نطاق النموذج الصغير، Qwen3 3B هو الخيار الواضح. راجع [مقارنة Qwen vs Llama vs Mistral متعددة اللغات](/ar/local-llms/qwen-vs-llama-vs-mistral) لمقارنة كاملة للغات.',
-            },
-            {
-              q: 'ما الفرق بين Phi-4 Mini وLlama 3.2 3B للمهام اليومية؟',
-              a: 'يتفوق Phi-4 Mini على Llama 3.2 3B في الاستدلال والرياضيات والبرمجة (68% مقابل 58% في MMLU، 70% مقابل 60% في HumanEval) بذاكرة RAM متطابقة تقريبًا (2.5 GB لكل منهما). للمهام اليومية -- الأسئلة والأجوبة، والتلخيص، والشروحات البسيطة -- فجوة الجودة ملحوظة لكنها غير جذرية. يملك Llama 3.2 3B دعمًا مجتمعيًا أكبر ومزيدًا من عمليات الضبط الدقيق المتاحة. اختر Phi-4 Mini للاستدلال المنظّم؛ وLlama 3.2 3B للدردشة العامة والتوافق الأكبر.',
-            },
-            {
-              q: 'هل يمكنني تشغيل نموذجين صغيرين في الوقت نفسه؟',
-              a: 'نعم، إذا سمحت RAM الإجمالية. نموذجان 3B بـ Q4_K_M يستخدمان ~5 GB مجتمعين -- ممكن على جهاز بذاكرة 8 GB بنظام تشغيل خفيف. يحمّل Ollama نموذجًا واحدًا في كل مرة لكل عملية افتراضيًا. شغّل نسختين من Ollama على منفذين مختلفين (OLLAMA_HOST=:11434 وOLLAMA_HOST=:11435) لتقديم نموذجين بالتوازي. هذا مفيد لاختبار A/B للمخرجات.',
-            },
-            {
-              q: 'هل تصلح النماذج الصغيرة لـ RAG (التوليد المعزّز بالاسترجاع)؟',
-              a: 'نعم لـ RAG البسيط. يستطيع Llama 3.2 3B وPhi-4 Mini الإجابة عن أسئلة حول مقاطع مستندات مُسترجعة بشكل موثوق. لـ RAG على قواعد معرفة كبيرة تتطلب استدلالًا متعدد القفزات، تؤدي نماذج 7B أو أكبر بثبات أعلى. تستخدم ميزة LocalDocs في GPT4All نموذج 3B للأسئلة والأجوبة عن المستندات وتعمل جيدًا لمجموعات المستندات الشخصية.',
-            },
-            {
-              q: 'هل Phi-4 Mini أفضل من Llama 3.2 3B للبرمجة؟',
-              a: 'نعم. يحصل Phi-4 Mini على 70% في HumanEval مقابل 60% لـ Llama 3.2 3B -- فجوة كبيرة قدرها 10 نقاط على هذا النطاق. للمساعدة في البرمجة على أجهزة بذاكرة 4-6 GB، Phi-4 Mini هو الخيار الموصى به. للبرمجة بلغات متعددة (غير Python)، Qwen3 3B بنسبة 65% في HumanEval منافس لـ Phi-4 Mini ويدعم أيضًا استدعاء الدوال.',
-            },
+            { q: 'ما أصغر نموذج LLM محلي ينتج نتائج مفيدة؟', a: 'اعتبارًا من أبريل 2026، الحد الأدنى العملي لنتائج مفيدة هو نموذج 3B بتكميم Q4_K_M. النماذج أقل من 2B معاملات (Llama 3.2 1B، Gemma 4 E2B) تنتج جملًا متماسكة لكنها تواجه صعوبة مع التعليمات متعددة الخطوات، والاستجابات الأطول، والاستدلال المعقد. لمهام مثل التلخيص والأسئلة والأجوبة البسيطة، Gemma 4 E2B قابل للاستخدام. لأي شيء أكثر تعقيدًا، ابدأ بنموذج 3B.' },
+            { q: 'هل يمكن لنموذج 3B العمل على هاتف؟', a: 'نعم -- صُمم Llama 3.2 1B و3B تحديدًا للنشر المحمول على الجهاز. توفّر Meta بناءات محسّنة لـ iOS (عبر MLC LLM) وAndroid. ينتج الاستدلال على هاتف حديث (Snapdragon 8 Gen 3 أو Apple A17 Pro) 15-30 tok/ثانية لنماذج 1B. لا يعمل LM Studio وOllama حاليًا على iOS أو Android -- يتطلب المحمول أطر عمل منفصلة.' },
+            { q: 'هل النماذج الصغيرة جيدة للتلخيص؟', a: 'نعم -- التلخيص أحد أقوى حالات استخدام النماذج الصغيرة. ينتج Gemma 4 E2B وLlama 3.2 3B ملخصات دقيقة لنصوص تصل إلى ~4000 كلمة (حد سياقها العملي لمخرجات جيدة) بشكل موثوق. للمستندات الأطول، استخدم نموذجًا بنافذة سياق كبيرة مثل Phi-4 Mini أو Llama 3.2 3B (كلاهما بـ 128K token).' },
+            { q: 'كم أسرع نموذج 2B من نموذج 7B على العتاد نفسه؟', a: 'يعتمد ذلك بشدة على العتاد والتكميم -- تقرّر Google نحو 7.6 tok/ثانية (فك الترميز) لـ Gemma 4 E2B على Raspberry Pi 5، بينما تتراوح اختبارات مستقلة على معالجات x86 بين 8 و48 tok/ثانية. على GPU، يتقلّص فارق السرعة لأن أداء GPU أقل تقييدًا بحجم النموذج. فرق السرعة أكثر وضوحًا على الأجهزة التي تعتمد CPU فقط.' },
+            { q: 'هل تدعم النماذج الصغيرة استدعاء الدوال؟', a: 'بعضها نعم. يدعم Qwen3 3B استدعاء الدوال ووضع JSON. يملك Llama 3.2 3B دعمًا أساسيًا لاستخدام الأدوات. لا يدعم Gemma 4 E2B استدعاء الدوال. راجع وثائق النموذج قبل بناء مسار يعتمد على مخرجات منظّمة.' },
+            { q: 'أي نموذج صغير أفضل للغات غير الإنجليزية؟', a: 'يدعم Qwen3 3B 29 لغة بشكل أصلي، بما في ذلك الصينية واليابانية والكورية والعربية. Gemma 4 E2B وPhi-4 Mini محسّنان أساسًا للإنجليزية. لمهام اللغات الأخرى على نطاق النموذج الصغير، Qwen3 3B هو الخيار الواضح. راجع [مقارنة Qwen vs Llama vs Mistral متعددة اللغات](/ar/local-llms/qwen-vs-llama-vs-mistral) لمقارنة كاملة للغات.' },
+            { q: 'ما الفرق بين Phi-4 Mini وLlama 3.2 3B للمهام اليومية؟', a: 'يتفوق Phi-4 Mini على Llama 3.2 3B في الاستدلال والرياضيات والبرمجة (68% مقابل 58% في MMLU، 70% مقابل 60% في HumanEval) بذاكرة RAM متطابقة تقريبًا (2.5 GB لكل منهما). للمهام اليومية -- الأسئلة والأجوبة، والتلخيص، والشروحات البسيطة -- فجوة الجودة ملحوظة لكنها غير جذرية. يملك Llama 3.2 3B دعمًا مجتمعيًا أكبر ومزيدًا من عمليات الضبط الدقيق المتاحة. اختر Phi-4 Mini للاستدلال المنظّم؛ وLlama 3.2 3B للدردشة العامة والتوافق الأكبر.' },
+            { q: 'هل يمكنني تشغيل نموذجين صغيرين في الوقت نفسه؟', a: 'نعم، إذا سمحت RAM الإجمالية. نموذجان 3B بـ Q4_K_M يستخدمان ~5 GB مجتمعين -- ممكن على جهاز بذاكرة 8 GB بنظام تشغيل خفيف. يحمّل Ollama نموذجًا واحدًا في كل مرة لكل عملية افتراضيًا. شغّل نسختين من Ollama على منفذين مختلفين (OLLAMA_HOST=:11434 وOLLAMA_HOST=:11435) لتقديم نموذجين بالتوازي. هذا مفيد لاختبار A/B للمخرجات.' },
+            { q: 'هل تصلح النماذج الصغيرة لـ RAG (التوليد المعزّز بالاسترجاع)؟', a: 'نعم لـ RAG البسيط. يستطيع Llama 3.2 3B وPhi-4 Mini الإجابة عن أسئلة حول مقاطع مستندات مُسترجعة بشكل موثوق. لـ RAG على قواعد معرفة كبيرة تتطلب استدلالًا متعدد القفزات، تؤدي نماذج 7B أو أكبر بثبات أعلى. تستخدم ميزة LocalDocs في GPT4All نموذج 3B للأسئلة والأجوبة عن المستندات وتعمل جيدًا لمجموعات المستندات الشخصية.' },
+            { q: 'هل Phi-4 Mini أفضل من Llama 3.2 3B للبرمجة؟', a: 'نعم. يحصل Phi-4 Mini على 70% في HumanEval مقابل 60% لـ Llama 3.2 3B -- فجوة كبيرة قدرها 10 نقاط على هذا النطاق. للمساعدة في البرمجة على أجهزة بذاكرة 4-6 GB، Phi-4 Mini هو الخيار الموصى به. للبرمجة بلغات متعددة (غير Python)، Qwen3 3B بنسبة 65% في HumanEval منافس لـ Phi-4 Mini ويدعم أيضًا استدعاء الدوال.' },
+            { q: 'استخدام تكميم Q8_0 بدلًا من Q4_K_M', a: 'يتطلب Q8_0 ضعف RAM تقريبًا مقارنة بـ Q4_K_M مع تحسّن جودة ضئيل على النطاق الصغير. نموذج Llama 3.2 3B بـ Q8_0 يحتاج ~3.8 GB من RAM مقابل ~2.5 GB بـ Q4_K_M. على جهاز بذاكرة 4 GB، قد يُفعّل Q8_0 استخدام swap ويجعل الاستدلال أبطأ بـ 3-5 مرات. استخدم دائمًا Q4_K_M كقيمة افتراضية للنماذج أقل من 4B.' },
+            { q: 'تشغيل نموذج أساسي بدلًا من نسخة instruct', a: 'النماذج الأساسية (مثل llama3.2:3b-text) هي نقاط تحقق قبل الضبط الدقيق، مدرّبة للتنبؤ بالـ token التالي في النص. لا تتبع التعليمات. عندما تسأل نموذجًا أساسيًا "كم 2+2؟"، قد يكمل الجملة كاختبار بدلًا من الإجابة بـ "4". استخدم دائمًا نسخة instruct: llama3.2:3b (يستخدم Ollama instruct افتراضيًا للنماذج المسمّاة).' },
+            { q: 'توقّع جودة نموذج 7B من نموذج 3B', a: 'نموذج 3B بنسبة 68% في MMLU (Phi-4 Mini) يؤدي بشكل مماثل لـ GPT-4o mini لعام 2023 في المهام العامة. سلاسل الاستدلال المعقدة والكتابة المطوّلة وتوليد الشيفرة الدقيق ستنتج جودة أدنى بوضوح من نموذج 7B. إذا كانت جودة المخرجات غير كافية، فرقِّ إلى نموذج 7B -- فرق RAM ~2 GB (2.5 GB ← 4.5 GB).' },
           ],
         },
         sources: {
@@ -956,16 +1157,110 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Usar quantização Q8_0 em vez de Q4_K_M', acceptedAnswer: { '@type': 'Answer', text: 'O Q8_0 exige quase o dobro de RAM do Q4_K_M com uma melhora mínima de qualidade em pequena escala. Um modelo Llama 3.2 3B com Q8_0 precisa de ~3,8 GB de RAM ante ~2,5 GB com Q4_K_M. Em uma máquina de 4 GB, o Q8_0 pode acionar o uso de swap e deixar a inferência 3-5 vezes mais lenta. Use sempre Q4_K_M como padrão para modelos sub-4B.' } },
-          { '@type': 'Question', name: 'Rodar um modelo base em vez da variante instruct', acceptedAnswer: { '@type': 'Answer', text: 'Os modelos base (por exemplo, llama3.2:3b-text) são checkpoints anteriores ao fine-tuning, treinados para prever o próximo token no texto. Eles não seguem instruções. Quando você pergunta a um modelo base "Quanto é 2+2?", ele pode completar a frase como um quiz em vez de responder "4". Use sempre a variante instruct: llama3.2:3b (o Ollama usa instruct por padrão para os modelos com nome).' } },
-          { '@type': 'Question', name: 'Esperar qualidade de modelo 7B de um modelo 3B', acceptedAnswer: { '@type': 'Answer', text: 'Um modelo 3B com 68% no MMLU (Phi-4 Mini) tem desempenho semelhante ao GPT-4o mini de 2023 em tarefas gerais. As cadeias de raciocínio complexas, a escrita extensa e a geração de código sofisticado terão qualidade notavelmente inferior à de um modelo 7B. Se a qualidade da saída for insuficiente, faça upgrade para um modelo 7B -- a diferença de RAM é de ~2 GB (2,5 GB → 4,5 GB).' } },
-          { '@type': 'Question', name: 'Qual é o menor LLM local que produz resultados úteis?', acceptedAnswer: { '@type': 'Answer', text: 'A partir de abril de 2026, o mínimo prático para resultados úteis é um modelo 3B com quantização Q4_K_M. Os modelos abaixo de 2B parâmetros têm dificuldade com instruções de várias etapas e raciocínio complexo. Para tarefas como resumo e perguntas e respostas simples, o Gemma 4 E2B é usável. Para qualquer coisa mais complexa, comece com um modelo 3B.' } },
-          { '@type': 'Question', name: 'Um modelo 3B pode rodar em um celular?', acceptedAnswer: { '@type': 'Answer', text: 'Sim -- Llama 3.2 1B e 3B são projetados para implantação móvel no dispositivo. A Meta fornece compilações otimizadas para iOS (via MLC LLM) e Android. A inferência em um celular moderno produz 15-30 tok/seg para modelos 1B. O LM Studio e o Ollama atualmente não rodam em iOS ou Android -- o mobile exige frameworks separados.' } },
-          { '@type': 'Question', name: 'Os modelos pequenos são bons para resumo?', acceptedAnswer: { '@type': 'Answer', text: 'Sim -- o resumo é um dos casos de uso mais fortes para os modelos pequenos. O Gemma 4 E2B e o Llama 3.2 3B produzem resumos precisos de textos de até ~4.000 palavras de forma confiável. Para documentos mais longos, use um modelo com uma janela de contexto grande como o Phi-4 Mini ou o Llama 3.2 3B (ambos com 128K tokens).' } },
-          { '@type': 'Question', name: 'Quanto mais rápido é um modelo 2B que um modelo 7B no mesmo hardware?', acceptedAnswer: { '@type': 'Answer', text: 'Depende muito do hardware e da quantização -- o Google reporta ~7,6 tok/seg (decodificação) para o Gemma 4 E2B em um Raspberry Pi 5, enquanto testes independentes em CPU x86 variam de 8 a 48 tok/seg. A diferença de velocidade é mais notável em máquinas apenas com CPU.' } },
-          { '@type': 'Question', name: 'Os modelos pequenos suportam chamadas de função?', acceptedAnswer: { '@type': 'Answer', text: 'Alguns sim. O Qwen3 3B suporta chamadas de função e modo JSON. O Llama 3.2 3B tem suporte básico ao uso de ferramentas. O Gemma 4 E2B não suporta chamadas de função. Consulte a documentação do modelo antes de criar um pipeline que dependa de saída estruturada.' } },
-          { '@type': 'Question', name: 'Qual modelo pequeno é melhor para idiomas diferentes do inglês?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3 3B suporta 29 idiomas nativamente, incluindo chinês, japonês, coreano e árabe. O Gemma 4 E2B e o Phi-4 Mini são otimizados principalmente para inglês. Para tarefas em outros idiomas em escala de modelo pequeno, o Qwen3 3B é a escolha clara.' } },
-          { '@type': 'Question', name: 'Qual é a diferença entre Phi-4 Mini e Llama 3.2 3B para tarefas do dia a dia?', acceptedAnswer: { '@type': 'Answer', text: 'O Phi-4 Mini supera o Llama 3.2 3B em raciocínio e código (68% vs 58% no MMLU, 70% vs 60% no HumanEval) com RAM quase idêntica. O Llama 3.2 3B tem maior suporte da comunidade e mais fine-tunes disponíveis. Escolha o Phi-4 Mini para raciocínio estruturado; o Llama 3.2 3B para chat geral e compatibilidade.' } },
+          {
+            '@type': 'Question',
+            'name': 'Qual é o menor LLM local que produz resultados úteis?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A partir de abril de 2026, o mínimo prático para resultados úteis é um modelo 3B com quantização Q4_K_M. Os modelos abaixo de 2B parâmetros (Llama 3.2 1B, Gemma 4 E2B) produzem frases coerentes, mas têm dificuldade com instruções de várias etapas, respostas mais longas e raciocínio complexo. Para tarefas como resumo e perguntas e respostas simples, o Gemma 4 E2B é usável. Para qualquer coisa mais complexa, comece com um modelo 3B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Um modelo 3B pode rodar em um celular?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim -- Llama 3.2 1B e 3B são especificamente projetados para implantação móvel no dispositivo. A Meta fornece compilações otimizadas para iOS (via MLC LLM) e Android. A inferência em um celular moderno (Snapdragon 8 Gen 3 ou Apple A17 Pro) produz 15-30 tok/seg para modelos 1B. O LM Studio e o Ollama atualmente não rodam em iOS ou Android -- o mobile exige frameworks separados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Os modelos pequenos são bons para resumo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim -- o resumo é um dos casos de uso mais fortes para os modelos pequenos. O Gemma 4 E2B e o Llama 3.2 3B produzem resumos precisos de textos de até ~4.000 palavras (seu limite de contexto prático para saída de qualidade) de forma confiável. Para documentos mais longos, use um modelo com uma janela de contexto grande como o Phi-4 Mini ou o Llama 3.2 3B (ambos com 128K tokens).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quanto mais rápido é um modelo 2B que um modelo 7B no mesmo hardware?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende muito do hardware e da quantização -- o Google reporta ~7,6 tok/seg (decodificação) para o Gemma 4 E2B em um Raspberry Pi 5, enquanto testes independentes em CPU x86 variam de 8 a 48 tok/seg. Em uma GPU, a vantagem de velocidade diminui porque a vazão da GPU é menos limitada pelo tamanho do modelo. A diferença de velocidade é mais notável em máquinas apenas com CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Os modelos pequenos suportam chamadas de função?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Alguns sim. O Qwen3 3B suporta chamadas de função e modo JSON. O Llama 3.2 3B tem suporte básico ao uso de ferramentas. O Gemma 4 E2B não suporta chamadas de função. Consulte a documentação do modelo antes de criar um pipeline que dependa de saída estruturada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual modelo pequeno é melhor para idiomas diferentes do inglês?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Qwen3 3B suporta 29 idiomas nativamente, incluindo chinês, japonês, coreano e árabe. O Gemma 4 E2B e o Phi-4 Mini são otimizados principalmente para inglês. Para tarefas em outros idiomas em escala de modelo pequeno, o Qwen3 3B é a escolha clara. Consulte a [comparação multilíngue Qwen vs Llama vs Mistral](/pt/local-llms/qwen-vs-llama-vs-mistral) para uma comparação completa de idiomas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual é a diferença entre Phi-4 Mini e Llama 3.2 3B para tarefas do dia a dia?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Phi-4 Mini supera o Llama 3.2 3B em raciocínio, matemática e código (68% vs 58% no MMLU, 70% vs 60% no HumanEval) com RAM quase idêntica (2,5 GB cada). Para tarefas do dia a dia -- perguntas e respostas, resumo, explicações simples -- a diferença de qualidade é notável, mas não dramática. O Llama 3.2 3B tem maior suporte da comunidade e mais fine-tunes disponíveis. Escolha o Phi-4 Mini para raciocínio estruturado; o Llama 3.2 3B para chat geral e maior compatibilidade.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso rodar dois modelos pequenos simultaneamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, se a RAM total permitir. Dois modelos 3B com Q4_K_M usam ~5 GB combinados -- viável em uma máquina de 8 GB com um sistema operacional leve. O Ollama carrega um modelo por vez por processo, por padrão. Rode duas instâncias do Ollama em portas diferentes (OLLAMA_HOST=:11434 e OLLAMA_HOST=:11435) para servir dois modelos em paralelo. Isso é útil para testes A/B de saídas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Os modelos pequenos funcionam para RAG (geração aumentada por recuperação)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim para RAG simples. O Llama 3.2 3B e o Phi-4 Mini conseguem responder perguntas sobre fragmentos de documentos recuperados de forma confiável. Para RAG sobre grandes bases de conhecimento que exigem raciocínio de múltiplos saltos, os modelos de 7B ou mais rendem de forma mais consistente. O recurso LocalDocs do GPT4All usa um modelo 3B para perguntas e respostas sobre documentos e funciona bem para coleções de documentos pessoais.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O Phi-4 Mini é melhor que o Llama 3.2 3B para código?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. O Phi-4 Mini obtém 70% no HumanEval ante 60% do Llama 3.2 3B -- uma diferença significativa de 10 pontos nessa escala. Para assistência com código em máquinas de 4-6 GB de RAM, o Phi-4 Mini é a opção recomendada. Para código em vários idiomas (não Python), o Qwen3 3B com 65% no HumanEval é competitivo com o Phi-4 Mini e também suporta chamadas de função.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Usar quantização Q8_0 em vez de Q4_K_M',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Q8_0 exige quase o dobro de RAM do Q4_K_M com uma melhora mínima de qualidade em pequena escala. Um modelo Llama 3.2 3B com Q8_0 precisa de ~3,8 GB de RAM ante ~2,5 GB com Q4_K_M. Em uma máquina de 4 GB, o Q8_0 pode acionar o uso de swap e deixar a inferência 3-5 vezes mais lenta. Use sempre Q4_K_M como padrão para modelos sub-4B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Rodar um modelo base em vez da variante instruct',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Os modelos base (por exemplo, llama3.2:3b-text) são checkpoints anteriores ao fine-tuning, treinados para prever o próximo token no texto. Eles não seguem instruções. Quando você pergunta a um modelo base "Quanto é 2+2?", ele pode completar a frase como um quiz em vez de responder "4". Use sempre a variante instruct: llama3.2:3b (o Ollama usa instruct por padrão para os modelos com nome).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Esperar qualidade de modelo 7B de um modelo 3B',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Um modelo 3B com 68% no MMLU (Phi-4 Mini) tem desempenho semelhante ao GPT-4o mini de 2023 em tarefas gerais. As cadeias de raciocínio complexas, a escrita extensa e a geração de código sofisticado terão qualidade notavelmente inferior à de um modelo 7B. Se a qualidade da saída for insuficiente, faça upgrade para um modelo 7B -- a diferença de RAM é de ~2 GB (2,5 GB → 4,5 GB).',
+            },
+          },
         ],
       },
       sections: {
@@ -1126,46 +1421,19 @@ schema: {
           id: 'faq',
           title: 'Perguntas comuns sobre os modelos LLM locais pequenos',
           faqs: [
-            {
-              q: 'Qual é o menor LLM local que produz resultados úteis?',
-              a: 'A partir de abril de 2026, o mínimo prático para resultados úteis é um modelo 3B com quantização Q4_K_M. Os modelos abaixo de 2B parâmetros (Llama 3.2 1B, Gemma 4 E2B) produzem frases coerentes, mas têm dificuldade com instruções de várias etapas, respostas mais longas e raciocínio complexo. Para tarefas como resumo e perguntas e respostas simples, o Gemma 4 E2B é usável. Para qualquer coisa mais complexa, comece com um modelo 3B.',
-            },
-            {
-              q: 'Um modelo 3B pode rodar em um celular?',
-              a: 'Sim -- Llama 3.2 1B e 3B são especificamente projetados para implantação móvel no dispositivo. A Meta fornece compilações otimizadas para iOS (via MLC LLM) e Android. A inferência em um celular moderno (Snapdragon 8 Gen 3 ou Apple A17 Pro) produz 15-30 tok/seg para modelos 1B. O LM Studio e o Ollama atualmente não rodam em iOS ou Android -- o mobile exige frameworks separados.',
-            },
-            {
-              q: 'Os modelos pequenos são bons para resumo?',
-              a: 'Sim -- o resumo é um dos casos de uso mais fortes para os modelos pequenos. O Gemma 4 E2B e o Llama 3.2 3B produzem resumos precisos de textos de até ~4.000 palavras (seu limite de contexto prático para saída de qualidade) de forma confiável. Para documentos mais longos, use um modelo com uma janela de contexto grande como o Phi-4 Mini ou o Llama 3.2 3B (ambos com 128K tokens).',
-            },
-            {
-              q: 'Quanto mais rápido é um modelo 2B que um modelo 7B no mesmo hardware?',
-              a: 'Depende muito do hardware e da quantização -- o Google reporta ~7,6 tok/seg (decodificação) para o Gemma 4 E2B em um Raspberry Pi 5, enquanto testes independentes em CPU x86 variam de 8 a 48 tok/seg. Em uma GPU, a vantagem de velocidade diminui porque a vazão da GPU é menos limitada pelo tamanho do modelo. A diferença de velocidade é mais notável em máquinas apenas com CPU.',
-            },
-            {
-              q: 'Os modelos pequenos suportam chamadas de função?',
-              a: 'Alguns sim. O Qwen3 3B suporta chamadas de função e modo JSON. O Llama 3.2 3B tem suporte básico ao uso de ferramentas. O Gemma 4 E2B não suporta chamadas de função. Consulte a documentação do modelo antes de criar um pipeline que dependa de saída estruturada.',
-            },
-            {
-              q: 'Qual modelo pequeno é melhor para idiomas diferentes do inglês?',
-              a: 'O Qwen3 3B suporta 29 idiomas nativamente, incluindo chinês, japonês, coreano e árabe. O Gemma 4 E2B e o Phi-4 Mini são otimizados principalmente para inglês. Para tarefas em outros idiomas em escala de modelo pequeno, o Qwen3 3B é a escolha clara. Consulte a [comparação multilíngue Qwen vs Llama vs Mistral](/pt/local-llms/qwen-vs-llama-vs-mistral) para uma comparação completa de idiomas.',
-            },
-            {
-              q: 'Qual é a diferença entre Phi-4 Mini e Llama 3.2 3B para tarefas do dia a dia?',
-              a: 'O Phi-4 Mini supera o Llama 3.2 3B em raciocínio, matemática e código (68% vs 58% no MMLU, 70% vs 60% no HumanEval) com RAM quase idêntica (2,5 GB cada). Para tarefas do dia a dia -- perguntas e respostas, resumo, explicações simples -- a diferença de qualidade é notável, mas não dramática. O Llama 3.2 3B tem maior suporte da comunidade e mais fine-tunes disponíveis. Escolha o Phi-4 Mini para raciocínio estruturado; o Llama 3.2 3B para chat geral e maior compatibilidade.',
-            },
-            {
-              q: 'Posso rodar dois modelos pequenos simultaneamente?',
-              a: 'Sim, se a RAM total permitir. Dois modelos 3B com Q4_K_M usam ~5 GB combinados -- viável em uma máquina de 8 GB com um sistema operacional leve. O Ollama carrega um modelo por vez por processo, por padrão. Rode duas instâncias do Ollama em portas diferentes (OLLAMA_HOST=:11434 e OLLAMA_HOST=:11435) para servir dois modelos em paralelo. Isso é útil para testes A/B de saídas.',
-            },
-            {
-              q: 'Os modelos pequenos funcionam para RAG (geração aumentada por recuperação)?',
-              a: 'Sim para RAG simples. O Llama 3.2 3B e o Phi-4 Mini conseguem responder perguntas sobre fragmentos de documentos recuperados de forma confiável. Para RAG sobre grandes bases de conhecimento que exigem raciocínio de múltiplos saltos, os modelos de 7B ou mais rendem de forma mais consistente. O recurso LocalDocs do GPT4All usa um modelo 3B para perguntas e respostas sobre documentos e funciona bem para coleções de documentos pessoais.',
-            },
-            {
-              q: 'O Phi-4 Mini é melhor que o Llama 3.2 3B para código?',
-              a: 'Sim. O Phi-4 Mini obtém 70% no HumanEval ante 60% do Llama 3.2 3B -- uma diferença significativa de 10 pontos nessa escala. Para assistência com código em máquinas de 4-6 GB de RAM, o Phi-4 Mini é a opção recomendada. Para código em vários idiomas (não Python), o Qwen3 3B com 65% no HumanEval é competitivo com o Phi-4 Mini e também suporta chamadas de função.',
-            },
+            { q: 'Qual é o menor LLM local que produz resultados úteis?', a: 'A partir de abril de 2026, o mínimo prático para resultados úteis é um modelo 3B com quantização Q4_K_M. Os modelos abaixo de 2B parâmetros (Llama 3.2 1B, Gemma 4 E2B) produzem frases coerentes, mas têm dificuldade com instruções de várias etapas, respostas mais longas e raciocínio complexo. Para tarefas como resumo e perguntas e respostas simples, o Gemma 4 E2B é usável. Para qualquer coisa mais complexa, comece com um modelo 3B.' },
+            { q: 'Um modelo 3B pode rodar em um celular?', a: 'Sim -- Llama 3.2 1B e 3B são especificamente projetados para implantação móvel no dispositivo. A Meta fornece compilações otimizadas para iOS (via MLC LLM) e Android. A inferência em um celular moderno (Snapdragon 8 Gen 3 ou Apple A17 Pro) produz 15-30 tok/seg para modelos 1B. O LM Studio e o Ollama atualmente não rodam em iOS ou Android -- o mobile exige frameworks separados.' },
+            { q: 'Os modelos pequenos são bons para resumo?', a: 'Sim -- o resumo é um dos casos de uso mais fortes para os modelos pequenos. O Gemma 4 E2B e o Llama 3.2 3B produzem resumos precisos de textos de até ~4.000 palavras (seu limite de contexto prático para saída de qualidade) de forma confiável. Para documentos mais longos, use um modelo com uma janela de contexto grande como o Phi-4 Mini ou o Llama 3.2 3B (ambos com 128K tokens).' },
+            { q: 'Quanto mais rápido é um modelo 2B que um modelo 7B no mesmo hardware?', a: 'Depende muito do hardware e da quantização -- o Google reporta ~7,6 tok/seg (decodificação) para o Gemma 4 E2B em um Raspberry Pi 5, enquanto testes independentes em CPU x86 variam de 8 a 48 tok/seg. Em uma GPU, a vantagem de velocidade diminui porque a vazão da GPU é menos limitada pelo tamanho do modelo. A diferença de velocidade é mais notável em máquinas apenas com CPU.' },
+            { q: 'Os modelos pequenos suportam chamadas de função?', a: 'Alguns sim. O Qwen3 3B suporta chamadas de função e modo JSON. O Llama 3.2 3B tem suporte básico ao uso de ferramentas. O Gemma 4 E2B não suporta chamadas de função. Consulte a documentação do modelo antes de criar um pipeline que dependa de saída estruturada.' },
+            { q: 'Qual modelo pequeno é melhor para idiomas diferentes do inglês?', a: 'O Qwen3 3B suporta 29 idiomas nativamente, incluindo chinês, japonês, coreano e árabe. O Gemma 4 E2B e o Phi-4 Mini são otimizados principalmente para inglês. Para tarefas em outros idiomas em escala de modelo pequeno, o Qwen3 3B é a escolha clara. Consulte a [comparação multilíngue Qwen vs Llama vs Mistral](/pt/local-llms/qwen-vs-llama-vs-mistral) para uma comparação completa de idiomas.' },
+            { q: 'Qual é a diferença entre Phi-4 Mini e Llama 3.2 3B para tarefas do dia a dia?', a: 'O Phi-4 Mini supera o Llama 3.2 3B em raciocínio, matemática e código (68% vs 58% no MMLU, 70% vs 60% no HumanEval) com RAM quase idêntica (2,5 GB cada). Para tarefas do dia a dia -- perguntas e respostas, resumo, explicações simples -- a diferença de qualidade é notável, mas não dramática. O Llama 3.2 3B tem maior suporte da comunidade e mais fine-tunes disponíveis. Escolha o Phi-4 Mini para raciocínio estruturado; o Llama 3.2 3B para chat geral e maior compatibilidade.' },
+            { q: 'Posso rodar dois modelos pequenos simultaneamente?', a: 'Sim, se a RAM total permitir. Dois modelos 3B com Q4_K_M usam ~5 GB combinados -- viável em uma máquina de 8 GB com um sistema operacional leve. O Ollama carrega um modelo por vez por processo, por padrão. Rode duas instâncias do Ollama em portas diferentes (OLLAMA_HOST=:11434 e OLLAMA_HOST=:11435) para servir dois modelos em paralelo. Isso é útil para testes A/B de saídas.' },
+            { q: 'Os modelos pequenos funcionam para RAG (geração aumentada por recuperação)?', a: 'Sim para RAG simples. O Llama 3.2 3B e o Phi-4 Mini conseguem responder perguntas sobre fragmentos de documentos recuperados de forma confiável. Para RAG sobre grandes bases de conhecimento que exigem raciocínio de múltiplos saltos, os modelos de 7B ou mais rendem de forma mais consistente. O recurso LocalDocs do GPT4All usa um modelo 3B para perguntas e respostas sobre documentos e funciona bem para coleções de documentos pessoais.' },
+            { q: 'O Phi-4 Mini é melhor que o Llama 3.2 3B para código?', a: 'Sim. O Phi-4 Mini obtém 70% no HumanEval ante 60% do Llama 3.2 3B -- uma diferença significativa de 10 pontos nessa escala. Para assistência com código em máquinas de 4-6 GB de RAM, o Phi-4 Mini é a opção recomendada. Para código em vários idiomas (não Python), o Qwen3 3B com 65% no HumanEval é competitivo com o Phi-4 Mini e também suporta chamadas de função.' },
+            { q: 'Usar quantização Q8_0 em vez de Q4_K_M', a: 'O Q8_0 exige quase o dobro de RAM do Q4_K_M com uma melhora mínima de qualidade em pequena escala. Um modelo Llama 3.2 3B com Q8_0 precisa de ~3,8 GB de RAM ante ~2,5 GB com Q4_K_M. Em uma máquina de 4 GB, o Q8_0 pode acionar o uso de swap e deixar a inferência 3-5 vezes mais lenta. Use sempre Q4_K_M como padrão para modelos sub-4B.' },
+            { q: 'Rodar um modelo base em vez da variante instruct', a: 'Os modelos base (por exemplo, llama3.2:3b-text) são checkpoints anteriores ao fine-tuning, treinados para prever o próximo token no texto. Eles não seguem instruções. Quando você pergunta a um modelo base "Quanto é 2+2?", ele pode completar a frase como um quiz em vez de responder "4". Use sempre a variante instruct: llama3.2:3b (o Ollama usa instruct por padrão para os modelos com nome).' },
+            { q: 'Esperar qualidade de modelo 7B de um modelo 3B', a: 'Um modelo 3B com 68% no MMLU (Phi-4 Mini) tem desempenho semelhante ao GPT-4o mini de 2023 em tarefas gerais. As cadeias de raciocínio complexas, a escrita extensa e a geração de código sofisticado terão qualidade notavelmente inferior à de um modelo 7B. Se a qualidade da saída for insuficiente, faça upgrade para um modelo 7B -- a diferença de RAM é de ~2 GB (2,5 GB → 4,5 GB).' },
           ],
         },
         sources: {
@@ -1903,16 +2171,110 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Q4_K_M 대신 Q8_0 양자화를 사용하는 경우', acceptedAnswer: { '@type': 'Answer', text: 'Q8_0은 소형 모델에서 품질 개선이 미미함에도 Q4_K_M 대비 거의 두 배의 RAM을 필요로 합니다. Q8_0의 Llama 3.2 3B 모델은 Q4_K_M의 ~2.5 GB 대비 ~3.8 GB의 RAM이 필요합니다. RAM 4 GB 기기에서 Q8_0은 스왑 사용을 유발하여 추론 속도를 3~5배 느리게 만들 수 있습니다. 4B 미만 모델에는 항상 Q4_K_M을 기본값으로 사용하십시오.' } },
-          { '@type': 'Question', name: 'instruct 버전 대신 베이스 모델을 실행하는 경우', acceptedAnswer: { '@type': 'Answer', text: '베이스 모델(예: llama3.2:3b-text)은 파인튜닝 이전의 체크포인트로, 텍스트의 다음 토큰을 예측하도록 학습된 모델입니다. 이 모델은 지시를 따르지 않습니다. 베이스 모델에 "2+2는 무엇입니까?"라고 물으면 "4"라고 답하는 대신 퀴즈 형식으로 문장을 완성할 수 있습니다. 항상 instruct 버전을 사용하십시오: llama3.2:3b (Ollama는 이름이 지정된 모델에 대해 기본적으로 instruct를 사용합니다).' } },
-          { '@type': 'Question', name: '3B 모델에 7B 모델 수준의 품질을 기대하는 경우', acceptedAnswer: { '@type': 'Answer', text: 'MMLU 68%의 3B 모델(Phi-4 Mini)은 일반 작업에서 2023년 GPT-3.5 Mini와 유사한 성능을 보입니다. 복잡한 추론 연쇄, 장문 작성, 세밀한 코드 생성은 7B 모델보다 눈에 띄게 낮은 품질을 보일 것입니다. 출력 품질이 충분하지 않다면 7B 모델로 업그레이드하십시오 -- RAM 차이는 약 2 GB(2.5 GB → 4.5 GB)입니다.' } },
-          { '@type': 'Question', name: '유용한 출력을 생성하는 가장 작은 로컬 LLM은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '2026년 4월 기준으로, 유용한 출력을 위한 실질적인 최소 사양은 Q4_K_M 양자화의 3B 모델입니다. 2B 미만 파라미터 모델은 다단계 지시 사항과 복잡한 추론에 어려움을 겪습니다. 요약이나 간단한 Q&A와 같은 작업에는 Gemma 4 E2B가 사용 가능합니다. 더 복잡한 작업에는 3B 모델부터 시작하십시오.' } },
-          { '@type': 'Question', name: '3B 모델을 스마트폰에서 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예 -- Llama 3.2 1B와 3B는 온디바이스 모바일 배포를 위해 설계되었습니다. Meta는 iOS(MLC LLM 경유)와 Android용 최적화 빌드를 제공합니다. 최신 스마트폰에서의 추론은 1B 모델 기준 초당 15~30 토큰을 생성합니다. LM Studio와 Ollama는 현재 iOS 및 Android에서 실행되지 않으며, 모바일에는 별도의 프레임워크가 필요합니다.' } },
-          { '@type': 'Question', name: '소형 모델은 요약 작업에 적합합니까?', acceptedAnswer: { '@type': 'Answer', text: '예 -- 요약은 소형 모델의 가장 강력한 사용 사례 중 하나입니다. Gemma 4 E2B와 Llama 3.2 3B는 약 4,000단어까지의 텍스트 요약을 안정적으로 생성합니다. 더 긴 문서의 경우 Phi-4 Mini나 Llama 3.2 3B(둘 다 128K 토큰)와 같이 큰 컨텍스트 창을 가진 모델을 사용하십시오.' } },
-          { '@type': 'Question', name: '동일한 하드웨어에서 2B 모델은 7B 모델보다 얼마나 빠릅니까?', acceptedAnswer: { '@type': 'Answer', text: '하드웨어와 양자화에 따라 크게 달라집니다 -- Google은 Raspberry Pi 5에서 Gemma 4 E2B의 디코딩 속도를 초당 약 7.6토큰으로 보고했으며, 독립적인 x86 CPU 테스트에서는 초당 8~48토큰 범위를 보입니다. GPU에서는 속도 차이가 줄어듭니다. 속도 차이는 CPU 전용 기기에서 가장 두드러집니다.' } },
-          { '@type': 'Question', name: '소형 모델은 함수 호출을 지원합니까?', acceptedAnswer: { '@type': 'Answer', text: '일부 모델은 지원합니다. Qwen3 3B는 함수 호출과 JSON 모드를 지원합니다. Llama 3.2 3B는 기본적인 도구 사용을 지원합니다. Gemma 4 E2B는 함수 호출을 지원하지 않습니다. 구조화된 출력에 의존하는 파이프라인을 구축하기 전에 모델 문서를 확인하십시오.' } },
-          { '@type': 'Question', name: '영어 외 언어에 가장 적합한 소형 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 3B는 중국어, 일본어, 한국어, 아랍어를 포함하여 29개 언어를 기본으로 지원합니다. Gemma 4 E2B와 Phi-4 Mini는 주로 영어에 최적화되어 있습니다. 소형 모델 규모에서 비영어 작업에는 Qwen3 3B가 명확한 선택입니다.' } },
-          { '@type': 'Question', name: '일상적인 작업에서 Phi-4 Mini와 Llama 3.2 3B의 차이는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Phi-4 Mini는 거의 동일한 RAM(각 2.5 GB)으로 추론과 코딩에서 Llama 3.2 3B를 능가합니다(MMLU 68% 대 58%, HumanEval 70% 대 60%). Llama 3.2 3B는 더 넓은 커뮤니티 지원과 더 많은 파인튜닝 모델을 갖추고 있습니다. 구조화된 추론에는 Phi-4 Mini를, 일반 채팅과 광범위한 호환성에는 Llama 3.2 3B를 선택하십시오.' } },
+          {
+            '@type': 'Question',
+            'name': '유용한 출력을 생성하는 가장 작은 로컬 LLM은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 4월 기준으로, 유용한 출력을 위한 실질적인 최소 사양은 Q4_K_M 양자화의 3B 모델입니다. 2B 미만 파라미터 모델(Llama 3.2 1B, Gemma 4 E2B)은 일관성 있는 단일 문장을 생성하지만 다단계 지시, 긴 응답, 복잡한 추론에 어려움을 겪습니다. 요약이나 간단한 Q&A와 같은 작업에는 Gemma 4 E2B가 사용 가능합니다. 더 복잡한 작업에는 3B 모델부터 시작하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '3B 모델을 스마트폰에서 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예 -- Llama 3.2 1B와 3B는 온디바이스 모바일 배포를 위해 특별히 설계되었습니다. Meta는 iOS(MLC LLM 경유)와 Android용 최적화 빌드를 제공합니다. 최신 스마트폰(Snapdragon 8 Gen 3 또는 Apple A17 Pro)에서의 추론은 1B 모델 기준 초당 15~30 토큰을 생성합니다. LM Studio와 Ollama는 현재 iOS 및 Android에서 실행되지 않으며, 모바일에는 별도의 프레임워크가 필요합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '소형 모델은 요약 작업에 적합합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예 -- 요약은 소형 모델의 가장 강력한 사용 사례 중 하나입니다. Gemma 4 E2B와 Llama 3.2 3B는 약 4,000단어까지의 텍스트 요약을(품질 출력의 실질적 컨텍스트 한계) 안정적으로 생성합니다. 더 긴 문서의 경우 Phi-4 Mini나 Llama 3.2 3B(둘 다 128K 토큰)와 같이 큰 컨텍스트 창을 가진 모델을 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '동일한 하드웨어에서 2B 모델은 7B 모델보다 얼마나 빠릅니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '하드웨어와 양자화에 따라 크게 달라집니다 -- Google은 Raspberry Pi 5에서 Gemma 4 E2B의 디코딩 속도를 초당 약 7.6토큰으로 보고했으며, 독립적인 x86 CPU 테스트에서는 초당 8~48토큰 범위를 보입니다. GPU에서는 GPU 처리량이 모델 크기에 덜 제약받기 때문에 속도 이점이 줄어듭니다. 속도 차이는 CPU 전용 기기에서 가장 두드러집니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '소형 모델은 함수 호출을 지원합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '일부 모델은 지원합니다. Qwen3 3B는 함수 호출과 JSON 모드를 지원합니다. Llama 3.2 3B는 기본적인 도구 사용을 지원합니다. Gemma 4 E2B는 함수 호출을 지원하지 않습니다. 구조화된 출력에 의존하는 파이프라인을 구축하기 전에 모델 문서를 확인하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '영어 외 언어에 가장 적합한 소형 모델은 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3 3B는 중국어, 일본어, 한국어, 아랍어를 포함하여 29개 언어를 기본으로 지원합니다. Gemma 4 E2B와 Phi-4 Mini는 주로 영어에 최적화되어 있습니다. 소형 모델 규모에서 비영어 작업에는 Qwen3 3B가 명확한 선택입니다. 전체 언어 비교는 [Qwen vs Llama vs Mistral 다국어 비교](/ko/local-llms/qwen-vs-llama-vs-mistral)를 참조하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '일상적인 작업에서 Phi-4 Mini와 Llama 3.2 3B의 차이는 무엇입니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Phi-4 Mini는 거의 동일한 RAM(각 2.5 GB)으로 추론, 수학, 코딩에서 Llama 3.2 3B를 능가합니다(MMLU 68% 대 58%, HumanEval 70% 대 60%). Q&A, 요약, 간단한 설명 등 일상적인 작업에서는 품질 차이가 눈에 띄지만 극적이지는 않습니다. Llama 3.2 3B는 더 넓은 커뮤니티 지원과 더 많은 파인튜닝 모델을 갖추고 있습니다. 구조화된 추론에는 Phi-4 Mini를, 일반 채팅과 광범위한 호환성에는 Llama 3.2 3B를 선택하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '두 개의 소형 모델을 동시에 실행할 수 있습니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예, 총 RAM이 허용하는 경우 가능합니다. Q4_K_M의 3B 모델 두 개는 합쳐서 ~5 GB를 사용합니다 -- 경량 OS를 갖춘 8 GB 기기에서 실행 가능합니다. Ollama는 기본적으로 프로세스당 한 번에 하나의 모델을 로드합니다. 두 개의 Ollama 인스턴스를 다른 포트에서 실행하여(OLLAMA_HOST=:11434 및 OLLAMA_HOST=:11435) 두 모델을 병렬로 제공할 수 있습니다. 이는 출력 A/B 테스트에 유용합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '소형 모델은 RAG(검색 증강 생성)에 적합합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '간단한 RAG에는 적합합니다. Llama 3.2 3B와 Phi-4 Mini는 검색된 문서 청크에 대한 질문에 안정적으로 답변할 수 있습니다. 멀티홉 추론이 필요한 대규모 지식 베이스에 대한 RAG의 경우 7B 이상 모델이 더 일관성 있게 성능을 발휘합니다. GPT4All의 LocalDocs 기능은 문서 Q&A에 3B 모델을 사용하며 개인 문서 컬렉션에 잘 작동합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '코딩에서 Phi-4 Mini가 Llama 3.2 3B보다 우수합니까?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. Phi-4 Mini는 HumanEval에서 70%를 기록하는 반면 Llama 3.2 3B는 60%입니다 -- 이 규모에서 의미 있는 10포인트 차이입니다. RAM 4~6 GB 기기에서 코딩 지원에는 Phi-4 Mini가 권장됩니다. 다국어 코딩(Python 외)의 경우 HumanEval 65%의 Qwen3 3B가 함수 호출도 지원하면서 Phi-4 Mini와 경쟁력 있는 성능을 보입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_K_M 대신 Q8_0 양자화를 사용하는 경우',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q8_0은 소형 모델에서 품질 개선이 미미함에도 Q4_K_M 대비 거의 두 배의 RAM을 필요로 합니다. Q8_0의 Llama 3.2 3B 모델은 Q4_K_M의 ~2.5 GB 대비 ~3.8 GB의 RAM이 필요합니다. RAM 4 GB 기기에서 Q8_0은 스왑 사용을 유발하여 추론 속도를 3~5배 느리게 만들 수 있습니다. 4B 미만 모델에는 항상 Q4_K_M을 기본값으로 사용하십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'instruct 버전 대신 베이스 모델을 실행하는 경우',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '베이스 모델(예: llama3.2:3b-text)은 파인튜닝 이전의 체크포인트로, 텍스트의 다음 토큰을 예측하도록 학습된 모델입니다. 이 모델은 지시를 따르지 않습니다. 베이스 모델에 "2+2는 무엇입니까?"라고 물으면 "4"라고 답하는 대신 퀴즈 형식으로 문장을 완성할 수 있습니다. 항상 instruct 버전을 사용하십시오: llama3.2:3b (Ollama는 이름이 지정된 모델에 대해 기본적으로 instruct를 사용합니다).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '3B 모델에 7B 모델 수준의 품질을 기대하는 경우',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'MMLU 68%의 3B 모델(Phi-4 Mini)은 일반 작업에서 2023년 GPT-3.5 Mini와 유사한 성능을 보입니다. 복잡한 추론 연쇄, 장문 작성, 세밀한 코드 생성은 7B 모델보다 눈에 띄게 낮은 품질을 보일 것입니다. 출력 품질이 충분하지 않다면 7B 모델로 업그레이드하십시오 -- RAM 차이는 약 2 GB(2.5 GB → 4.5 GB)입니다.',
+            },
+          },
         ],
       },
       sections: {
@@ -2073,46 +2435,19 @@ schema: {
           id: 'faq',
           title: '소형 로컬 LLM 모델에 대한 일반적인 질문',
           faqs: [
-            {
-              q: '유용한 출력을 생성하는 가장 작은 로컬 LLM은 무엇입니까?',
-              a: '2026년 4월 기준으로, 유용한 출력을 위한 실질적인 최소 사양은 Q4_K_M 양자화의 3B 모델입니다. 2B 미만 파라미터 모델(Llama 3.2 1B, Gemma 4 E2B)은 일관성 있는 단일 문장을 생성하지만 다단계 지시, 긴 응답, 복잡한 추론에 어려움을 겪습니다. 요약이나 간단한 Q&A와 같은 작업에는 Gemma 4 E2B가 사용 가능합니다. 더 복잡한 작업에는 3B 모델부터 시작하십시오.',
-            },
-            {
-              q: '3B 모델을 스마트폰에서 실행할 수 있습니까?',
-              a: '예 -- Llama 3.2 1B와 3B는 온디바이스 모바일 배포를 위해 특별히 설계되었습니다. Meta는 iOS(MLC LLM 경유)와 Android용 최적화 빌드를 제공합니다. 최신 스마트폰(Snapdragon 8 Gen 3 또는 Apple A17 Pro)에서의 추론은 1B 모델 기준 초당 15~30 토큰을 생성합니다. LM Studio와 Ollama는 현재 iOS 및 Android에서 실행되지 않으며, 모바일에는 별도의 프레임워크가 필요합니다.',
-            },
-            {
-              q: '소형 모델은 요약 작업에 적합합니까?',
-              a: '예 -- 요약은 소형 모델의 가장 강력한 사용 사례 중 하나입니다. Gemma 4 E2B와 Llama 3.2 3B는 약 4,000단어까지의 텍스트 요약을(품질 출력의 실질적 컨텍스트 한계) 안정적으로 생성합니다. 더 긴 문서의 경우 Phi-4 Mini나 Llama 3.2 3B(둘 다 128K 토큰)와 같이 큰 컨텍스트 창을 가진 모델을 사용하십시오.',
-            },
-            {
-              q: '동일한 하드웨어에서 2B 모델은 7B 모델보다 얼마나 빠릅니까?',
-              a: '하드웨어와 양자화에 따라 크게 달라집니다 -- Google은 Raspberry Pi 5에서 Gemma 4 E2B의 디코딩 속도를 초당 약 7.6토큰으로 보고했으며, 독립적인 x86 CPU 테스트에서는 초당 8~48토큰 범위를 보입니다. GPU에서는 GPU 처리량이 모델 크기에 덜 제약받기 때문에 속도 이점이 줄어듭니다. 속도 차이는 CPU 전용 기기에서 가장 두드러집니다.',
-            },
-            {
-              q: '소형 모델은 함수 호출을 지원합니까?',
-              a: '일부 모델은 지원합니다. Qwen3 3B는 함수 호출과 JSON 모드를 지원합니다. Llama 3.2 3B는 기본적인 도구 사용을 지원합니다. Gemma 4 E2B는 함수 호출을 지원하지 않습니다. 구조화된 출력에 의존하는 파이프라인을 구축하기 전에 모델 문서를 확인하십시오.',
-            },
-            {
-              q: '영어 외 언어에 가장 적합한 소형 모델은 무엇입니까?',
-              a: 'Qwen3 3B는 중국어, 일본어, 한국어, 아랍어를 포함하여 29개 언어를 기본으로 지원합니다. Gemma 4 E2B와 Phi-4 Mini는 주로 영어에 최적화되어 있습니다. 소형 모델 규모에서 비영어 작업에는 Qwen3 3B가 명확한 선택입니다. 전체 언어 비교는 [Qwen vs Llama vs Mistral 다국어 비교](/ko/local-llms/qwen-vs-llama-vs-mistral)를 참조하십시오.',
-            },
-            {
-              q: '일상적인 작업에서 Phi-4 Mini와 Llama 3.2 3B의 차이는 무엇입니까?',
-              a: 'Phi-4 Mini는 거의 동일한 RAM(각 2.5 GB)으로 추론, 수학, 코딩에서 Llama 3.2 3B를 능가합니다(MMLU 68% 대 58%, HumanEval 70% 대 60%). Q&A, 요약, 간단한 설명 등 일상적인 작업에서는 품질 차이가 눈에 띄지만 극적이지는 않습니다. Llama 3.2 3B는 더 넓은 커뮤니티 지원과 더 많은 파인튜닝 모델을 갖추고 있습니다. 구조화된 추론에는 Phi-4 Mini를, 일반 채팅과 광범위한 호환성에는 Llama 3.2 3B를 선택하십시오.',
-            },
-            {
-              q: '두 개의 소형 모델을 동시에 실행할 수 있습니까?',
-              a: '예, 총 RAM이 허용하는 경우 가능합니다. Q4_K_M의 3B 모델 두 개는 합쳐서 ~5 GB를 사용합니다 -- 경량 OS를 갖춘 8 GB 기기에서 실행 가능합니다. Ollama는 기본적으로 프로세스당 한 번에 하나의 모델을 로드합니다. 두 개의 Ollama 인스턴스를 다른 포트에서 실행하여(OLLAMA_HOST=:11434 및 OLLAMA_HOST=:11435) 두 모델을 병렬로 제공할 수 있습니다. 이는 출력 A/B 테스트에 유용합니다.',
-            },
-            {
-              q: '소형 모델은 RAG(검색 증강 생성)에 적합합니까?',
-              a: '간단한 RAG에는 적합합니다. Llama 3.2 3B와 Phi-4 Mini는 검색된 문서 청크에 대한 질문에 안정적으로 답변할 수 있습니다. 멀티홉 추론이 필요한 대규모 지식 베이스에 대한 RAG의 경우 7B 이상 모델이 더 일관성 있게 성능을 발휘합니다. GPT4All의 LocalDocs 기능은 문서 Q&A에 3B 모델을 사용하며 개인 문서 컬렉션에 잘 작동합니다.',
-            },
-            {
-              q: '코딩에서 Phi-4 Mini가 Llama 3.2 3B보다 우수합니까?',
-              a: '예. Phi-4 Mini는 HumanEval에서 70%를 기록하는 반면 Llama 3.2 3B는 60%입니다 -- 이 규모에서 의미 있는 10포인트 차이입니다. RAM 4~6 GB 기기에서 코딩 지원에는 Phi-4 Mini가 권장됩니다. 다국어 코딩(Python 외)의 경우 HumanEval 65%의 Qwen3 3B가 함수 호출도 지원하면서 Phi-4 Mini와 경쟁력 있는 성능을 보입니다.',
-            },
+            { q: '유용한 출력을 생성하는 가장 작은 로컬 LLM은 무엇입니까?', a: '2026년 4월 기준으로, 유용한 출력을 위한 실질적인 최소 사양은 Q4_K_M 양자화의 3B 모델입니다. 2B 미만 파라미터 모델(Llama 3.2 1B, Gemma 4 E2B)은 일관성 있는 단일 문장을 생성하지만 다단계 지시, 긴 응답, 복잡한 추론에 어려움을 겪습니다. 요약이나 간단한 Q&A와 같은 작업에는 Gemma 4 E2B가 사용 가능합니다. 더 복잡한 작업에는 3B 모델부터 시작하십시오.' },
+            { q: '3B 모델을 스마트폰에서 실행할 수 있습니까?', a: '예 -- Llama 3.2 1B와 3B는 온디바이스 모바일 배포를 위해 특별히 설계되었습니다. Meta는 iOS(MLC LLM 경유)와 Android용 최적화 빌드를 제공합니다. 최신 스마트폰(Snapdragon 8 Gen 3 또는 Apple A17 Pro)에서의 추론은 1B 모델 기준 초당 15~30 토큰을 생성합니다. LM Studio와 Ollama는 현재 iOS 및 Android에서 실행되지 않으며, 모바일에는 별도의 프레임워크가 필요합니다.' },
+            { q: '소형 모델은 요약 작업에 적합합니까?', a: '예 -- 요약은 소형 모델의 가장 강력한 사용 사례 중 하나입니다. Gemma 4 E2B와 Llama 3.2 3B는 약 4,000단어까지의 텍스트 요약을(품질 출력의 실질적 컨텍스트 한계) 안정적으로 생성합니다. 더 긴 문서의 경우 Phi-4 Mini나 Llama 3.2 3B(둘 다 128K 토큰)와 같이 큰 컨텍스트 창을 가진 모델을 사용하십시오.' },
+            { q: '동일한 하드웨어에서 2B 모델은 7B 모델보다 얼마나 빠릅니까?', a: '하드웨어와 양자화에 따라 크게 달라집니다 -- Google은 Raspberry Pi 5에서 Gemma 4 E2B의 디코딩 속도를 초당 약 7.6토큰으로 보고했으며, 독립적인 x86 CPU 테스트에서는 초당 8~48토큰 범위를 보입니다. GPU에서는 GPU 처리량이 모델 크기에 덜 제약받기 때문에 속도 이점이 줄어듭니다. 속도 차이는 CPU 전용 기기에서 가장 두드러집니다.' },
+            { q: '소형 모델은 함수 호출을 지원합니까?', a: '일부 모델은 지원합니다. Qwen3 3B는 함수 호출과 JSON 모드를 지원합니다. Llama 3.2 3B는 기본적인 도구 사용을 지원합니다. Gemma 4 E2B는 함수 호출을 지원하지 않습니다. 구조화된 출력에 의존하는 파이프라인을 구축하기 전에 모델 문서를 확인하십시오.' },
+            { q: '영어 외 언어에 가장 적합한 소형 모델은 무엇입니까?', a: 'Qwen3 3B는 중국어, 일본어, 한국어, 아랍어를 포함하여 29개 언어를 기본으로 지원합니다. Gemma 4 E2B와 Phi-4 Mini는 주로 영어에 최적화되어 있습니다. 소형 모델 규모에서 비영어 작업에는 Qwen3 3B가 명확한 선택입니다. 전체 언어 비교는 [Qwen vs Llama vs Mistral 다국어 비교](/ko/local-llms/qwen-vs-llama-vs-mistral)를 참조하십시오.' },
+            { q: '일상적인 작업에서 Phi-4 Mini와 Llama 3.2 3B의 차이는 무엇입니까?', a: 'Phi-4 Mini는 거의 동일한 RAM(각 2.5 GB)으로 추론, 수학, 코딩에서 Llama 3.2 3B를 능가합니다(MMLU 68% 대 58%, HumanEval 70% 대 60%). Q&A, 요약, 간단한 설명 등 일상적인 작업에서는 품질 차이가 눈에 띄지만 극적이지는 않습니다. Llama 3.2 3B는 더 넓은 커뮤니티 지원과 더 많은 파인튜닝 모델을 갖추고 있습니다. 구조화된 추론에는 Phi-4 Mini를, 일반 채팅과 광범위한 호환성에는 Llama 3.2 3B를 선택하십시오.' },
+            { q: '두 개의 소형 모델을 동시에 실행할 수 있습니까?', a: '예, 총 RAM이 허용하는 경우 가능합니다. Q4_K_M의 3B 모델 두 개는 합쳐서 ~5 GB를 사용합니다 -- 경량 OS를 갖춘 8 GB 기기에서 실행 가능합니다. Ollama는 기본적으로 프로세스당 한 번에 하나의 모델을 로드합니다. 두 개의 Ollama 인스턴스를 다른 포트에서 실행하여(OLLAMA_HOST=:11434 및 OLLAMA_HOST=:11435) 두 모델을 병렬로 제공할 수 있습니다. 이는 출력 A/B 테스트에 유용합니다.' },
+            { q: '소형 모델은 RAG(검색 증강 생성)에 적합합니까?', a: '간단한 RAG에는 적합합니다. Llama 3.2 3B와 Phi-4 Mini는 검색된 문서 청크에 대한 질문에 안정적으로 답변할 수 있습니다. 멀티홉 추론이 필요한 대규모 지식 베이스에 대한 RAG의 경우 7B 이상 모델이 더 일관성 있게 성능을 발휘합니다. GPT4All의 LocalDocs 기능은 문서 Q&A에 3B 모델을 사용하며 개인 문서 컬렉션에 잘 작동합니다.' },
+            { q: '코딩에서 Phi-4 Mini가 Llama 3.2 3B보다 우수합니까?', a: '예. Phi-4 Mini는 HumanEval에서 70%를 기록하는 반면 Llama 3.2 3B는 60%입니다 -- 이 규모에서 의미 있는 10포인트 차이입니다. RAM 4~6 GB 기기에서 코딩 지원에는 Phi-4 Mini가 권장됩니다. 다국어 코딩(Python 외)의 경우 HumanEval 65%의 Qwen3 3B가 함수 호출도 지원하면서 Phi-4 Mini와 경쟁력 있는 성능을 보입니다.' },
+            { q: 'Q4_K_M 대신 Q8_0 양자화를 사용하는 경우', a: 'Q8_0은 소형 모델에서 품질 개선이 미미함에도 Q4_K_M 대비 거의 두 배의 RAM을 필요로 합니다. Q8_0의 Llama 3.2 3B 모델은 Q4_K_M의 ~2.5 GB 대비 ~3.8 GB의 RAM이 필요합니다. RAM 4 GB 기기에서 Q8_0은 스왑 사용을 유발하여 추론 속도를 3~5배 느리게 만들 수 있습니다. 4B 미만 모델에는 항상 Q4_K_M을 기본값으로 사용하십시오.' },
+            { q: 'instruct 버전 대신 베이스 모델을 실행하는 경우', a: '베이스 모델(예: llama3.2:3b-text)은 파인튜닝 이전의 체크포인트로, 텍스트의 다음 토큰을 예측하도록 학습된 모델입니다. 이 모델은 지시를 따르지 않습니다. 베이스 모델에 "2+2는 무엇입니까?"라고 물으면 "4"라고 답하는 대신 퀴즈 형식으로 문장을 완성할 수 있습니다. 항상 instruct 버전을 사용하십시오: llama3.2:3b (Ollama는 이름이 지정된 모델에 대해 기본적으로 instruct를 사용합니다).' },
+            { q: '3B 모델에 7B 모델 수준의 품질을 기대하는 경우', a: 'MMLU 68%의 3B 모델(Phi-4 Mini)은 일반 작업에서 2023년 GPT-3.5 Mini와 유사한 성능을 보입니다. 복잡한 추론 연쇄, 장문 작성, 세밀한 코드 생성은 7B 모델보다 눈에 띄게 낮은 품질을 보일 것입니다. 출력 품질이 충분하지 않다면 7B 모델로 업그레이드하십시오 -- RAM 차이는 약 2 GB(2.5 GB → 4.5 GB)입니다.' },
           ],
         },
         sources: {

@@ -343,39 +343,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: 'What is an AI code review bot?',
-            a: 'It is a service that connects to your Git platform — GitHub, GitLab, Bitbucket or Azure DevOps — and automatically comments on pull requests, flagging bugs, security issues and style violations before a human reviewer looks at the diff. It runs as a Git app or a CI step and posts inline comments plus a summary.',
-          },
-          {
-            q: 'Is CodeRabbit better than Greptile?',
-            a: 'CodeRabbit is better for teams needing broad Git platform support and predictable per-seat billing. Greptile is better for teams whose escaped bugs come from cross-file breakage, because it indexes the whole repository rather than diffing one PR in isolation. Neither is universally better — the right pick depends on your platform mix and your bug profile.',
-          },
-          {
-            q: 'How much does an AI code review bot cost per month?',
-            a: 'As of August 2026, CodeRabbit is $24 per user per month on Pro billed annually and $48 on Pro Plus. Greptile has a free tier with 50 credits a month and a $30 per seat per month Pro tier with $1 per extra credit. Qodo\'s Pro Team is $30 a month for up to 30 users, drawing on prepaid credits at $0.012 each. For Greptile and Qodo the real monthly cost depends on review volume, not seat count.',
-          },
-          {
-            q: 'Do any of them have a free tier?',
-            a: 'Yes, more than the marketing suggests. Greptile has a free Starter tier with 50 credits a month for one developer across unlimited repositories. CodeRabbit is free forever on public repositories and gives every plan a 14-day trial. Qodo has no permanent free plan but offers a 14-day trial with no card and a free programme for qualifying open-source projects.',
-          },
-          {
-            q: 'Which one can I run on-premises?',
-            a: 'Qodo is the most explicit: single-tenant SaaS or fully on-premises deployment with bring-your-own-LLM-key. CodeRabbit and Greptile both offer self-hosting at their Enterprise tiers, but with less public documentation, so confirm the specifics with their sales teams before assuming it clears your security review.',
-          },
-          {
-            q: 'Is Qodo the same company as CodiumAI?',
-            a: 'Yes. Qodo is CodiumAI\'s rebrand; the existing products and integrations carried over under the new name.',
-          },
-          {
-            q: 'Which tool has the best false-positive rate?',
-            a: 'None of the three publishes an independently audited false-positive rate as of August 2026. Any specific percentage you find in a third-party review should be treated as unverified until the vendor discloses its testing methodology. Run your own pilot on your own codebase instead — it is the only number that describes your situation.',
-          },
-          {
-            q: 'Do any of them have an affiliate programme?',
-            a: 'Only CodeRabbit, through Dub, paying $30 per qualified developer signup — that programme is live and checkable. Greptile\'s "Partners" page is a technology-integration list, and Qodo\'s "Super Qodoer" programme is a community ambassador stipend rather than commission on sales. PromptQuorum is not enrolled in any of them; the links on this page earn nothing.',
-          },
-        ],
+            { q: 'What is an AI code review bot?', a: 'It is a service that connects to your Git platform — GitHub, GitLab, Bitbucket or Azure DevOps — and automatically comments on pull requests, flagging bugs, security issues and style violations before a human reviewer looks at the diff. It runs as a Git app or a CI step and posts inline comments plus a summary.' },
+            { q: 'Is CodeRabbit better than Greptile?', a: 'CodeRabbit is better for teams needing broad Git platform support and predictable per-seat billing. Greptile is better for teams whose escaped bugs come from cross-file breakage, because it indexes the whole repository rather than diffing one PR in isolation. Neither is universally better — the right pick depends on your platform mix and your bug profile.' },
+            { q: 'How much does an AI code review bot cost per month?', a: 'As of August 2026, CodeRabbit is $24 per user per month on Pro billed annually and $48 on Pro Plus. Greptile has a free tier with 50 credits a month and a $30 per seat per month Pro tier with $1 per extra credit. Qodo\'s Pro Team is $30 a month for up to 30 users, drawing on prepaid credits at $0.012 each. For Greptile and Qodo the real monthly cost depends on review volume, not seat count.' },
+            { q: 'Do any of them have a free tier?', a: 'Yes, more than the marketing suggests. Greptile has a free Starter tier with 50 credits a month for one developer across unlimited repositories. CodeRabbit is free forever on public repositories and gives every plan a 14-day trial. Qodo has no permanent free plan but offers a 14-day trial with no card and a free programme for qualifying open-source projects.' },
+            { q: 'Which one can I run on-premises?', a: 'Qodo is the most explicit: single-tenant SaaS or fully on-premises deployment with bring-your-own-LLM-key. CodeRabbit and Greptile both offer self-hosting at their Enterprise tiers, but with less public documentation, so confirm the specifics with their sales teams before assuming it clears your security review.' },
+            { q: 'Is Qodo the same company as CodiumAI?', a: 'Yes. Qodo is CodiumAI\'s rebrand; the existing products and integrations carried over under the new name.' },
+            { q: 'Which tool has the best false-positive rate?', a: 'None of the three publishes an independently audited false-positive rate as of August 2026. Any specific percentage you find in a third-party review should be treated as unverified until the vendor discloses its testing methodology. Run your own pilot on your own codebase instead — it is the only number that describes your situation.' },
+            { q: 'Do any of them have an affiliate programme?', a: 'Only CodeRabbit, through Dub, paying $30 per qualified developer signup — that programme is live and checkable. Greptile\'s "Partners" page is a technology-integration list, and Qodo\'s "Super Qodoer" programme is a community ambassador stipend rather than commission on sales. PromptQuorum is not enrolled in any of them; the links on this page earn nothing.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -438,47 +414,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is an AI code review bot?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A service that connects to your Git platform and automatically comments on pull requests, flagging bugs, security issues and style violations before a human reviewer looks at the diff.',
+          {
+            '@type': 'Question',
+            'name': 'What is an AI code review bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It is a service that connects to your Git platform — GitHub, GitLab, Bitbucket or Azure DevOps — and automatically comments on pull requests, flagging bugs, security issues and style violations before a human reviewer looks at the diff. It runs as a Git app or a CI step and posts inline comments plus a summary.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does an AI code review bot cost per month?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit is $24/user/month on Pro billed annually and $48 on Pro Plus. Greptile is free for 50 credits/month and $30/seat/month on Pro. Qodo Pro Team is $30/month for up to 30 users at $0.012 per credit.',
+          {
+            '@type': 'Question',
+            'name': 'Is CodeRabbit better than Greptile?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit is better for teams needing broad Git platform support and predictable per-seat billing. Greptile is better for teams whose escaped bugs come from cross-file breakage, because it indexes the whole repository rather than diffing one PR in isolation. Neither is universally better — the right pick depends on your platform mix and your bug profile.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do any AI code review tools have a free tier?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Greptile has a free Starter tier with 50 credits a month. CodeRabbit is free forever on public repositories. Qodo has no permanent free plan but offers a 14-day trial and a free open-source programme.',
+          {
+            '@type': 'Question',
+            'name': 'How much does an AI code review bot cost per month?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'As of August 2026, CodeRabbit is $24 per user per month on Pro billed annually and $48 on Pro Plus. Greptile has a free tier with 50 credits a month and a $30 per seat per month Pro tier with $1 per extra credit. Qodo\'s Pro Team is $30 a month for up to 30 users, drawing on prepaid credits at $0.012 each. For Greptile and Qodo the real monthly cost depends on review volume, not seat count.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Which AI code review tool can run on-premises?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qodo offers single-tenant SaaS or fully on-premises deployment with bring-your-own-LLM-key. CodeRabbit and Greptile offer self-hosting at their Enterprise tiers with less public documentation.',
+          {
+            '@type': 'Question',
+            'name': 'Do any of them have a free tier?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, more than the marketing suggests. Greptile has a free Starter tier with 50 credits a month for one developer across unlimited repositories. CodeRabbit is free forever on public repositories and gives every plan a 14-day trial. Qodo has no permanent free plan but offers a 14-day trial with no card and a free programme for qualifying open-source projects.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do any of these tools have an affiliate programme?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Only CodeRabbit, through Dub, paying $30 per qualified signup. Greptile\'s partners page is a technology-integration list and Qodo\'s Super Qodoer programme is a community stipend, not commission.',
+          {
+            '@type': 'Question',
+            'name': 'Which one can I run on-premises?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo is the most explicit: single-tenant SaaS or fully on-premises deployment with bring-your-own-LLM-key. CodeRabbit and Greptile both offer self-hosting at their Enterprise tiers, but with less public documentation, so confirm the specifics with their sales teams before assuming it clears your security review.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Is Qodo the same company as CodiumAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Qodo is CodiumAI\'s rebrand; the existing products and integrations carried over under the new name.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which tool has the best false-positive rate?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'None of the three publishes an independently audited false-positive rate as of August 2026. Any specific percentage you find in a third-party review should be treated as unverified until the vendor discloses its testing methodology. Run your own pilot on your own codebase instead — it is the only number that describes your situation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do any of them have an affiliate programme?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Only CodeRabbit, through Dub, paying $30 per qualified developer signup — that programme is live and checkable. Greptile\'s "Partners" page is a technology-integration list, and Qodo\'s "Super Qodoer" programme is a community ambassador stipend rather than commission on sales. PromptQuorum is not enrolled in any of them; the links on this page earn nothing.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -835,47 +835,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufige Fragen',
         faqs: [
-          {
-            q: 'Was ist ein KI-Code-Review-Bot?',
-            a: 'Es ist ein Dienst, der sich mit Ihrer Git-Plattform verbindet — GitHub, GitLab, Bitbucket oder Azure DevOps — und Pull Requests automatisch kommentiert: Er meldet Fehler, Sicherheitsprobleme und Stilverstöße, bevor ein Mensch den Diff ansieht. Er läuft als Git-App oder CI-Schritt und hinterlässt Inline-Kommentare samt Zusammenfassung.',
-          },
-          {
-            q: 'Ist CodeRabbit besser als Greptile?',
-            a: 'CodeRabbit ist besser für Teams, die breite Git-Plattformunterstützung und planbare Abrechnung pro Platz brauchen. Greptile ist besser für Teams, deren entwichene Fehler aus dateiübergreifenden Brüchen stammen, weil es das gesamte Repository indexiert statt einen PR isoliert zu vergleichen. Keines ist generell besser — die richtige Wahl hängt von Ihrem Plattformmix und Ihrem Fehlerprofil ab.',
-          },
-          {
-            q: 'Was kostet ein KI-Code-Review-Bot pro Monat?',
-            a: 'Stand August 2026 kostet CodeRabbit 24 $ pro Nutzer und Monat im Pro-Tarif bei jährlicher Abrechnung und 48 $ im Pro Plus. Greptile hat eine kostenlose Stufe mit 50 Credits pro Monat und einen Pro-Tarif für 30 $ pro Platz und Monat mit 1 $ je zusätzlichem Credit. Qodos Pro Team liegt bei 30 $ pro Monat für bis zu 30 Nutzer, abgerechnet über vorausbezahlte Credits zu je 0,012 $. Bei Greptile und Qodo hängen die realen Monatskosten vom Review-Volumen ab, nicht von der Platzzahl.',
-          },
-          {
-            q: 'Gibt es bei einem der drei eine kostenlose Stufe?',
-            a: 'Ja, und mehr, als das Marketing vermuten lässt. Greptile hat eine kostenlose Starter-Stufe mit 50 Credits pro Monat für einen Entwickler über unbegrenzt viele Repositories. CodeRabbit ist auf öffentlichen Repositories dauerhaft kostenlos und gibt jedem Tarif 14 Tage Test. Qodo hat keinen dauerhaft kostenlosen Tarif, bietet aber 14 Tage Test ohne Karte und ein kostenloses Programm für qualifizierte Open-Source-Projekte.',
-          },
-          {
-            q: 'Welches lässt sich on-premises betreiben?',
-            a: 'Qodo ist am eindeutigsten: Single-Tenant-SaaS oder vollständiges On-Premises-Deployment mit eigenem LLM-Schlüssel. CodeRabbit und Greptile bieten Selbstbetrieb in ihren Enterprise-Stufen, allerdings mit weniger öffentlicher Dokumentation — klären Sie die Details mit dem Vertrieb, bevor Sie annehmen, dass Ihre Sicherheitsprüfung damit bestanden ist.',
-          },
-          {
-            q: 'Ist Qodo dasselbe Unternehmen wie CodiumAI?',
-            a: 'Ja. Qodo ist die Umbenennung von CodiumAI; die bestehenden Produkte und Integrationen wurden unter dem neuen Namen fortgeführt.',
-          },
-          {
-            q: 'Welches Tool hat die beste False-Positive-Rate?',
-            a: 'Keiner der drei Anbieter veröffentlicht Stand August 2026 eine unabhängig geprüfte False-Positive-Rate. Jede konkrete Prozentangabe in einer Drittquelle sollte als unbestätigt gelten, solange der Anbieter seine Testmethodik nicht offenlegt. Führen Sie stattdessen ein eigenes Pilotprojekt an Ihrer Codebasis durch — das ist die einzige Zahl, die Ihre Situation beschreibt.',
-          },
-          {
-            q: 'Hat eines der Tools ein Partnerprogramm?',
-            a: 'Nur CodeRabbit, über Dub, mit 30 $ je qualifizierter Entwickleranmeldung — dieses Programm ist aktiv und überprüfbar. Greptiles „Partners"-Seite ist eine Liste technischer Integrationen, und Qodos „Super Qodoer" ist ein Community-Stipendium statt einer Umsatzprovision. PromptQuorum nimmt an keinem davon teil; die Links auf dieser Seite bringen nichts ein.',
-          },
-          {
-            q: 'Muss ich bei einem KI-Code-Review-Bot die DSGVO beachten?',
-            a: 'Ja, sobald Ihr Quellcode personenbezogene Daten enthält — und das ist häufiger der Fall als gedacht: Testfixtures mit echten Kundendaten, Kommentare mit Namen, Zugangsdaten in der Historie. Sie benötigen mit dem Anbieter einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und wenn Diffs an ein Modell außerhalb des EWR gehen, ist das eine Drittlandübermittlung nach Art. 44–49. Prüfen Sie außerdem, ob der Anbieter Ihren Code zum Training verwendet; die Antwort gehört schriftlich in den Vertrag. Qodos On-Premises-Betrieb mit eigenem Schlüssel umgeht beide Fragen, weil Code und Modellaufruf im eigenen Haus bleiben.',
-          },
-          {
-            q: 'Ist ein KI-Code-Review-Bot für den deutschen Mittelstand geeignet?',
-            a: 'Für mittelständische Entwicklungsteams ist der Einstieg meist über die kostenlosen Wege am sinnvollsten: CodeRabbit auf öffentlichen Repositories oder Greptiles 50 Credits pro Monat, um an echtem Code zu prüfen, ob die Kommentare überhaupt tragen. Bei internen Repositories mit Kundendaten wird die Frage schnell zur Beschaffungsfrage — dann führt der Weg zu Qodo mit On-Premises-Betrieb oder zu einem selbst gehosteten Reviewer gegen ein lokales Modell. Rechnen Sie in jedem Fall mit Abrechnung in US-Dollar und klären Sie das Reverse-Charge-Verfahren mit Ihrer Buchhaltung.',
-          },
-        ],
+            { q: 'Was ist ein KI-Code-Review-Bot?', a: 'Es ist ein Dienst, der sich mit Ihrer Git-Plattform verbindet — GitHub, GitLab, Bitbucket oder Azure DevOps — und Pull Requests automatisch kommentiert: Er meldet Fehler, Sicherheitsprobleme und Stilverstöße, bevor ein Mensch den Diff ansieht. Er läuft als Git-App oder CI-Schritt und hinterlässt Inline-Kommentare samt Zusammenfassung.' },
+            { q: 'Ist CodeRabbit besser als Greptile?', a: 'CodeRabbit ist besser für Teams, die breite Git-Plattformunterstützung und planbare Abrechnung pro Platz brauchen. Greptile ist besser für Teams, deren entwichene Fehler aus dateiübergreifenden Brüchen stammen, weil es das gesamte Repository indexiert statt einen PR isoliert zu vergleichen. Keines ist generell besser — die richtige Wahl hängt von Ihrem Plattformmix und Ihrem Fehlerprofil ab.' },
+            { q: 'Was kostet ein KI-Code-Review-Bot pro Monat?', a: 'Stand August 2026 kostet CodeRabbit 24 $ pro Nutzer und Monat im Pro-Tarif bei jährlicher Abrechnung und 48 $ im Pro Plus. Greptile hat eine kostenlose Stufe mit 50 Credits pro Monat und einen Pro-Tarif für 30 $ pro Platz und Monat mit 1 $ je zusätzlichem Credit. Qodos Pro Team liegt bei 30 $ pro Monat für bis zu 30 Nutzer, abgerechnet über vorausbezahlte Credits zu je 0,012 $. Bei Greptile und Qodo hängen die realen Monatskosten vom Review-Volumen ab, nicht von der Platzzahl.' },
+            { q: 'Gibt es bei einem der drei eine kostenlose Stufe?', a: 'Ja, und mehr, als das Marketing vermuten lässt. Greptile hat eine kostenlose Starter-Stufe mit 50 Credits pro Monat für einen Entwickler über unbegrenzt viele Repositories. CodeRabbit ist auf öffentlichen Repositories dauerhaft kostenlos und gibt jedem Tarif 14 Tage Test. Qodo hat keinen dauerhaft kostenlosen Tarif, bietet aber 14 Tage Test ohne Karte und ein kostenloses Programm für qualifizierte Open-Source-Projekte.' },
+            { q: 'Welches lässt sich on-premises betreiben?', a: 'Qodo ist am eindeutigsten: Single-Tenant-SaaS oder vollständiges On-Premises-Deployment mit eigenem LLM-Schlüssel. CodeRabbit und Greptile bieten Selbstbetrieb in ihren Enterprise-Stufen, allerdings mit weniger öffentlicher Dokumentation — klären Sie die Details mit dem Vertrieb, bevor Sie annehmen, dass Ihre Sicherheitsprüfung damit bestanden ist.' },
+            { q: 'Ist Qodo dasselbe Unternehmen wie CodiumAI?', a: 'Ja. Qodo ist die Umbenennung von CodiumAI; die bestehenden Produkte und Integrationen wurden unter dem neuen Namen fortgeführt.' },
+            { q: 'Welches Tool hat die beste False-Positive-Rate?', a: 'Keiner der drei Anbieter veröffentlicht Stand August 2026 eine unabhängig geprüfte False-Positive-Rate. Jede konkrete Prozentangabe in einer Drittquelle sollte als unbestätigt gelten, solange der Anbieter seine Testmethodik nicht offenlegt. Führen Sie stattdessen ein eigenes Pilotprojekt an Ihrer Codebasis durch — das ist die einzige Zahl, die Ihre Situation beschreibt.' },
+            { q: 'Hat eines der Tools ein Partnerprogramm?', a: 'Nur CodeRabbit, über Dub, mit 30 $ je qualifizierter Entwickleranmeldung — dieses Programm ist aktiv und überprüfbar. Greptiles „Partners"-Seite ist eine Liste technischer Integrationen, und Qodos „Super Qodoer" ist ein Community-Stipendium statt einer Umsatzprovision. PromptQuorum nimmt an keinem davon teil; die Links auf dieser Seite bringen nichts ein.' },
+            { q: 'Muss ich bei einem KI-Code-Review-Bot die DSGVO beachten?', a: 'Ja, sobald Ihr Quellcode personenbezogene Daten enthält — und das ist häufiger der Fall als gedacht: Testfixtures mit echten Kundendaten, Kommentare mit Namen, Zugangsdaten in der Historie. Sie benötigen mit dem Anbieter einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und wenn Diffs an ein Modell außerhalb des EWR gehen, ist das eine Drittlandübermittlung nach Art. 44–49. Prüfen Sie außerdem, ob der Anbieter Ihren Code zum Training verwendet; die Antwort gehört schriftlich in den Vertrag. Qodos On-Premises-Betrieb mit eigenem Schlüssel umgeht beide Fragen, weil Code und Modellaufruf im eigenen Haus bleiben.' },
+            { q: 'Ist ein KI-Code-Review-Bot für den deutschen Mittelstand geeignet?', a: 'Für mittelständische Entwicklungsteams ist der Einstieg meist über die kostenlosen Wege am sinnvollsten: CodeRabbit auf öffentlichen Repositories oder Greptiles 50 Credits pro Monat, um an echtem Code zu prüfen, ob die Kommentare überhaupt tragen. Bei internen Repositories mit Kundendaten wird die Frage schnell zur Beschaffungsfrage — dann führt der Weg zu Qodo mit On-Premises-Betrieb oder zu einem selbst gehosteten Reviewer gegen ein lokales Modell. Rechnen Sie in jedem Fall mit Abrechnung in US-Dollar und klären Sie das Reverse-Charge-Verfahren mit Ihrer Buchhaltung.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -938,55 +908,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Was ist ein KI-Code-Review-Bot?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ein Dienst, der sich mit Ihrer Git-Plattform verbindet und Pull Requests automatisch kommentiert — er meldet Fehler, Sicherheitsprobleme und Stilverstöße, bevor ein Mensch den Diff ansieht.',
+          {
+            '@type': 'Question',
+            'name': 'Was ist ein KI-Code-Review-Bot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es ist ein Dienst, der sich mit Ihrer Git-Plattform verbindet — GitHub, GitLab, Bitbucket oder Azure DevOps — und Pull Requests automatisch kommentiert: Er meldet Fehler, Sicherheitsprobleme und Stilverstöße, bevor ein Mensch den Diff ansieht. Er läuft als Git-App oder CI-Schritt und hinterlässt Inline-Kommentare samt Zusammenfassung.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Was kostet ein KI-Code-Review-Bot pro Monat?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit kostet 24 $/Nutzer/Monat im Pro-Tarif bei jährlicher Abrechnung und 48 $ im Pro Plus. Greptile ist mit 50 Credits/Monat kostenlos und kostet 30 $/Platz/Monat im Pro. Qodo Pro Team liegt bei 30 $/Monat für bis zu 30 Nutzer zu 0,012 $ je Credit.',
+          {
+            '@type': 'Question',
+            'name': 'Ist CodeRabbit besser als Greptile?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit ist besser für Teams, die breite Git-Plattformunterstützung und planbare Abrechnung pro Platz brauchen. Greptile ist besser für Teams, deren entwichene Fehler aus dateiübergreifenden Brüchen stammen, weil es das gesamte Repository indexiert statt einen PR isoliert zu vergleichen. Keines ist generell besser — die richtige Wahl hängt von Ihrem Plattformmix und Ihrem Fehlerprofil ab.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Gibt es bei KI-Code-Review-Tools eine kostenlose Stufe?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Greptile hat eine kostenlose Starter-Stufe mit 50 Credits pro Monat. CodeRabbit ist auf öffentlichen Repositories dauerhaft kostenlos. Qodo hat keinen dauerhaft kostenlosen Tarif, bietet aber 14 Tage Test und ein kostenloses Open-Source-Programm.',
+          {
+            '@type': 'Question',
+            'name': 'Was kostet ein KI-Code-Review-Bot pro Monat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Stand August 2026 kostet CodeRabbit 24 $ pro Nutzer und Monat im Pro-Tarif bei jährlicher Abrechnung und 48 $ im Pro Plus. Greptile hat eine kostenlose Stufe mit 50 Credits pro Monat und einen Pro-Tarif für 30 $ pro Platz und Monat mit 1 $ je zusätzlichem Credit. Qodos Pro Team liegt bei 30 $ pro Monat für bis zu 30 Nutzer, abgerechnet über vorausbezahlte Credits zu je 0,012 $. Bei Greptile und Qodo hängen die realen Monatskosten vom Review-Volumen ab, nicht von der Platzzahl.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Welches KI-Code-Review-Tool lässt sich on-premises betreiben?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qodo bietet Single-Tenant-SaaS oder vollständiges On-Premises-Deployment mit eigenem LLM-Schlüssel. CodeRabbit und Greptile bieten Selbstbetrieb in ihren Enterprise-Stufen mit weniger öffentlicher Dokumentation.',
+          {
+            '@type': 'Question',
+            'name': 'Gibt es bei einem der drei eine kostenlose Stufe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, und mehr, als das Marketing vermuten lässt. Greptile hat eine kostenlose Starter-Stufe mit 50 Credits pro Monat für einen Entwickler über unbegrenzt viele Repositories. CodeRabbit ist auf öffentlichen Repositories dauerhaft kostenlos und gibt jedem Tarif 14 Tage Test. Qodo hat keinen dauerhaft kostenlosen Tarif, bietet aber 14 Tage Test ohne Karte und ein kostenloses Programm für qualifizierte Open-Source-Projekte.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Muss ich bei einem KI-Code-Review-Bot die DSGVO beachten?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja, sobald der Quellcode personenbezogene Daten enthält. Sie brauchen einen Auftragsverarbeitungsvertrag nach Art. 28, und Diffs an ein Modell außerhalb des EWR sind eine Drittlandübermittlung nach Art. 44–49. Qodos On-Premises-Betrieb mit eigenem Schlüssel umgeht beide Fragen.',
+          {
+            '@type': 'Question',
+            'name': 'Welches lässt sich on-premises betreiben?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo ist am eindeutigsten: Single-Tenant-SaaS oder vollständiges On-Premises-Deployment mit eigenem LLM-Schlüssel. CodeRabbit und Greptile bieten Selbstbetrieb in ihren Enterprise-Stufen, allerdings mit weniger öffentlicher Dokumentation — klären Sie die Details mit dem Vertrieb, bevor Sie annehmen, dass Ihre Sicherheitsprüfung damit bestanden ist.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ist ein KI-Code-Review-Bot für den deutschen Mittelstand geeignet?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Ja — der Einstieg gelingt am besten über die kostenlosen Wege (CodeRabbit auf öffentlichen Repos, Greptiles 50 Credits). Bei internen Repositories mit Kundendaten führt der Weg zu Qodo mit On-Premises-Betrieb oder einem selbst gehosteten Reviewer gegen ein lokales Modell.',
+          {
+            '@type': 'Question',
+            'name': 'Ist Qodo dasselbe Unternehmen wie CodiumAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja. Qodo ist die Umbenennung von CodiumAI; die bestehenden Produkte und Integrationen wurden unter dem neuen Namen fortgeführt.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Welches Tool hat die beste False-Positive-Rate?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Keiner der drei Anbieter veröffentlicht Stand August 2026 eine unabhängig geprüfte False-Positive-Rate. Jede konkrete Prozentangabe in einer Drittquelle sollte als unbestätigt gelten, solange der Anbieter seine Testmethodik nicht offenlegt. Führen Sie stattdessen ein eigenes Pilotprojekt an Ihrer Codebasis durch — das ist die einzige Zahl, die Ihre Situation beschreibt.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Hat eines der Tools ein Partnerprogramm?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nur CodeRabbit, über Dub, mit 30 $ je qualifizierter Entwickleranmeldung — dieses Programm ist aktiv und überprüfbar. Greptiles „Partners"-Seite ist eine Liste technischer Integrationen, und Qodos „Super Qodoer" ist ein Community-Stipendium statt einer Umsatzprovision. PromptQuorum nimmt an keinem davon teil; die Links auf dieser Seite bringen nichts ein.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Muss ich bei einem KI-Code-Review-Bot die DSGVO beachten?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ja, sobald Ihr Quellcode personenbezogene Daten enthält — und das ist häufiger der Fall als gedacht: Testfixtures mit echten Kundendaten, Kommentare mit Namen, Zugangsdaten in der Historie. Sie benötigen mit dem Anbieter einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO, und wenn Diffs an ein Modell außerhalb des EWR gehen, ist das eine Drittlandübermittlung nach Art. 44–49. Prüfen Sie außerdem, ob der Anbieter Ihren Code zum Training verwendet; die Antwort gehört schriftlich in den Vertrag. Qodos On-Premises-Betrieb mit eigenem Schlüssel umgeht beide Fragen, weil Code und Modellaufruf im eigenen Haus bleiben.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist ein KI-Code-Review-Bot für den deutschen Mittelstand geeignet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Für mittelständische Entwicklungsteams ist der Einstieg meist über die kostenlosen Wege am sinnvollsten: CodeRabbit auf öffentlichen Repositories oder Greptiles 50 Credits pro Monat, um an echtem Code zu prüfen, ob die Kommentare überhaupt tragen. Bei internen Repositories mit Kundendaten wird die Frage schnell zur Beschaffungsfrage — dann führt der Weg zu Qodo mit On-Premises-Betrieb oder zu einem selbst gehosteten Reviewer gegen ein lokales Modell. Rechnen Sie in jedem Fall mit Abrechnung in US-Dollar und klären Sie das Reverse-Charge-Verfahren mit Ihrer Buchhaltung.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1343,39 +1345,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Qué es un bot de revisión de código con IA?',
-            a: 'Es un servicio que se conecta a tu plataforma Git —GitHub, GitLab, Bitbucket o Azure DevOps— y comenta automáticamente los pull requests, señalando fallos, problemas de seguridad e infracciones de estilo antes de que una persona mire el diff. Funciona como aplicación Git o paso de CI y publica comentarios en línea más un resumen.',
-          },
-          {
-            q: '¿Es CodeRabbit mejor que Greptile?',
-            a: 'CodeRabbit es mejor para equipos que necesitan amplio soporte de plataformas Git y facturación previsible por puesto. Greptile es mejor para equipos cuyos fallos escapados vienen de roturas entre archivos, porque indexa el repositorio completo en lugar de comparar un PR aislado. Ninguna es mejor universalmente: depende de tu mezcla de plataformas y de tu perfil de fallos.',
-          },
-          {
-            q: '¿Cuánto cuesta al mes un bot de revisión de código con IA?',
-            a: 'En agosto de 2026, CodeRabbit cuesta 24 $ por usuario y mes en Pro con facturación anual y 48 $ en Pro Plus. Greptile tiene un plan gratuito con 50 créditos al mes y un plan Pro de 30 $ por puesto y mes con 1 $ por crédito adicional. Pro Team de Qodo son 30 $ al mes para hasta 30 usuarios, con créditos prepago a 0,012 $ cada uno. En Greptile y Qodo el coste mensual real depende del volumen de revisiones, no del número de puestos.',
-          },
-          {
-            q: '¿Alguna tiene plan gratuito?',
-            a: 'Sí, más de lo que sugiere el marketing. Greptile tiene un plan Starter gratuito con 50 créditos al mes para un desarrollador en repositorios ilimitados. CodeRabbit es gratis para siempre en repositorios públicos y da una prueba de 14 días en todos los planes. Qodo no tiene plan gratuito permanente, pero ofrece prueba de 14 días sin tarjeta y un programa gratuito para proyectos open source que califiquen.',
-          },
-          {
-            q: '¿Cuál puedo ejecutar on-premise?',
-            a: 'Qodo es la más explícita: SaaS single-tenant o despliegue totalmente on-premise con clave de LLM propia. CodeRabbit y Greptile ofrecen autoalojamiento en sus planes Enterprise, pero con menos documentación pública, así que confirma los detalles con sus equipos de ventas antes de dar por hecho que supera tu revisión de seguridad.',
-          },
-          {
-            q: '¿Qodo es la misma empresa que CodiumAI?',
-            a: 'Sí. Qodo es el cambio de marca de CodiumAI; los productos e integraciones existentes se mantuvieron con el nuevo nombre.',
-          },
-          {
-            q: '¿Cuál tiene la mejor tasa de falsos positivos?',
-            a: 'Ninguna de las tres publica una tasa de falsos positivos auditada de forma independiente a agosto de 2026. Cualquier porcentaje concreto que encuentres en una reseña de terceros debe considerarse no verificado mientras el proveedor no revele su metodología de prueba. Haz tu propia prueba piloto sobre tu propia base de código: es el único número que describe tu situación.',
-          },
-          {
-            q: '¿Alguna tiene programa de afiliados?',
-            a: 'Solo CodeRabbit, a través de Dub, pagando 30 $ por registro cualificado de desarrollador; ese programa está activo y es verificable. La página "Partners" de Greptile es una lista de integraciones tecnológicas, y el programa "Super Qodoer" de Qodo es una ayuda para embajadores de la comunidad, no una comisión sobre ventas. PromptQuorum no está inscrito en ninguno; los enlaces de esta página no generan nada.',
-          },
-        ],
+            { q: '¿Qué es un bot de revisión de código con IA?', a: 'Es un servicio que se conecta a tu plataforma Git —GitHub, GitLab, Bitbucket o Azure DevOps— y comenta automáticamente los pull requests, señalando fallos, problemas de seguridad e infracciones de estilo antes de que una persona mire el diff. Funciona como aplicación Git o paso de CI y publica comentarios en línea más un resumen.' },
+            { q: '¿Es CodeRabbit mejor que Greptile?', a: 'CodeRabbit es mejor para equipos que necesitan amplio soporte de plataformas Git y facturación previsible por puesto. Greptile es mejor para equipos cuyos fallos escapados vienen de roturas entre archivos, porque indexa el repositorio completo en lugar de comparar un PR aislado. Ninguna es mejor universalmente: depende de tu mezcla de plataformas y de tu perfil de fallos.' },
+            { q: '¿Cuánto cuesta al mes un bot de revisión de código con IA?', a: 'En agosto de 2026, CodeRabbit cuesta 24 $ por usuario y mes en Pro con facturación anual y 48 $ en Pro Plus. Greptile tiene un plan gratuito con 50 créditos al mes y un plan Pro de 30 $ por puesto y mes con 1 $ por crédito adicional. Pro Team de Qodo son 30 $ al mes para hasta 30 usuarios, con créditos prepago a 0,012 $ cada uno. En Greptile y Qodo el coste mensual real depende del volumen de revisiones, no del número de puestos.' },
+            { q: '¿Alguna tiene plan gratuito?', a: 'Sí, más de lo que sugiere el marketing. Greptile tiene un plan Starter gratuito con 50 créditos al mes para un desarrollador en repositorios ilimitados. CodeRabbit es gratis para siempre en repositorios públicos y da una prueba de 14 días en todos los planes. Qodo no tiene plan gratuito permanente, pero ofrece prueba de 14 días sin tarjeta y un programa gratuito para proyectos open source que califiquen.' },
+            { q: '¿Cuál puedo ejecutar on-premise?', a: 'Qodo es la más explícita: SaaS single-tenant o despliegue totalmente on-premise con clave de LLM propia. CodeRabbit y Greptile ofrecen autoalojamiento en sus planes Enterprise, pero con menos documentación pública, así que confirma los detalles con sus equipos de ventas antes de dar por hecho que supera tu revisión de seguridad.' },
+            { q: '¿Qodo es la misma empresa que CodiumAI?', a: 'Sí. Qodo es el cambio de marca de CodiumAI; los productos e integraciones existentes se mantuvieron con el nuevo nombre.' },
+            { q: '¿Cuál tiene la mejor tasa de falsos positivos?', a: 'Ninguna de las tres publica una tasa de falsos positivos auditada de forma independiente a agosto de 2026. Cualquier porcentaje concreto que encuentres en una reseña de terceros debe considerarse no verificado mientras el proveedor no revele su metodología de prueba. Haz tu propia prueba piloto sobre tu propia base de código: es el único número que describe tu situación.' },
+            { q: '¿Alguna tiene programa de afiliados?', a: 'Solo CodeRabbit, a través de Dub, pagando 30 $ por registro cualificado de desarrollador; ese programa está activo y es verificable. La página "Partners" de Greptile es una lista de integraciones tecnológicas, y el programa "Super Qodoer" de Qodo es una ayuda para embajadores de la comunidad, no una comisión sobre ventas. PromptQuorum no está inscrito en ninguno; los enlaces de esta página no generan nada.' },
+            { q: '¿Alguna herramienta de revisión de código con IA tiene plan gratuito?', a: 'Greptile tiene un plan Starter gratuito con 50 créditos al mes. CodeRabbit es gratis para siempre en repositorios públicos. Qodo no tiene plan gratuito permanente, pero ofrece prueba de 14 días y un programa gratuito de open source.' },
+            { q: '¿Qué herramienta de revisión de código con IA puede ejecutarse on-premise?', a: 'Qodo ofrece SaaS single-tenant o despliegue totalmente on-premise con clave de LLM propia. CodeRabbit y Greptile ofrecen autoalojamiento en sus planes Enterprise con menos documentación pública.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1438,47 +1418,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Qué es un bot de revisión de código con IA?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Un servicio que se conecta a tu plataforma Git y comenta automáticamente los pull requests, señalando fallos, problemas de seguridad e infracciones de estilo antes de que una persona mire el diff.',
+          {
+            '@type': 'Question',
+            'name': '¿Qué es un bot de revisión de código con IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es un servicio que se conecta a tu plataforma Git —GitHub, GitLab, Bitbucket o Azure DevOps— y comenta automáticamente los pull requests, señalando fallos, problemas de seguridad e infracciones de estilo antes de que una persona mire el diff. Funciona como aplicación Git o paso de CI y publica comentarios en línea más un resumen.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Cuánto cuesta al mes un bot de revisión de código con IA?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit cuesta 24 $/usuario/mes en Pro con facturación anual y 48 $ en Pro Plus. Greptile es gratis con 50 créditos/mes y 30 $/puesto/mes en Pro. Pro Team de Qodo son 30 $/mes para hasta 30 usuarios a 0,012 $ por crédito.',
+          {
+            '@type': 'Question',
+            'name': '¿Es CodeRabbit mejor que Greptile?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit es mejor para equipos que necesitan amplio soporte de plataformas Git y facturación previsible por puesto. Greptile es mejor para equipos cuyos fallos escapados vienen de roturas entre archivos, porque indexa el repositorio completo en lugar de comparar un PR aislado. Ninguna es mejor universalmente: depende de tu mezcla de plataformas y de tu perfil de fallos.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Alguna herramienta de revisión de código con IA tiene plan gratuito?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Greptile tiene un plan Starter gratuito con 50 créditos al mes. CodeRabbit es gratis para siempre en repositorios públicos. Qodo no tiene plan gratuito permanente, pero ofrece prueba de 14 días y un programa gratuito de open source.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuánto cuesta al mes un bot de revisión de código con IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En agosto de 2026, CodeRabbit cuesta 24 $ por usuario y mes en Pro con facturación anual y 48 $ en Pro Plus. Greptile tiene un plan gratuito con 50 créditos al mes y un plan Pro de 30 $ por puesto y mes con 1 $ por crédito adicional. Pro Team de Qodo son 30 $ al mes para hasta 30 usuarios, con créditos prepago a 0,012 $ cada uno. En Greptile y Qodo el coste mensual real depende del volumen de revisiones, no del número de puestos.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Qué herramienta de revisión de código con IA puede ejecutarse on-premise?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qodo ofrece SaaS single-tenant o despliegue totalmente on-premise con clave de LLM propia. CodeRabbit y Greptile ofrecen autoalojamiento en sus planes Enterprise con menos documentación pública.',
+          {
+            '@type': 'Question',
+            'name': '¿Alguna tiene plan gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, más de lo que sugiere el marketing. Greptile tiene un plan Starter gratuito con 50 créditos al mes para un desarrollador en repositorios ilimitados. CodeRabbit es gratis para siempre en repositorios públicos y da una prueba de 14 días en todos los planes. Qodo no tiene plan gratuito permanente, pero ofrece prueba de 14 días sin tarjeta y un programa gratuito para proyectos open source que califiquen.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Alguna de estas herramientas tiene programa de afiliados?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Solo CodeRabbit, a través de Dub, pagando 30 $ por registro cualificado. La página de partners de Greptile es una lista de integraciones y el programa Super Qodoer de Qodo es una ayuda a la comunidad, no una comisión.',
+          {
+            '@type': 'Question',
+            'name': '¿Cuál puedo ejecutar on-premise?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo es la más explícita: SaaS single-tenant o despliegue totalmente on-premise con clave de LLM propia. CodeRabbit y Greptile ofrecen autoalojamiento en sus planes Enterprise, pero con menos documentación pública, así que confirma los detalles con sus equipos de ventas antes de dar por hecho que supera tu revisión de seguridad.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Qodo es la misma empresa que CodiumAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Qodo es el cambio de marca de CodiumAI; los productos e integraciones existentes se mantuvieron con el nuevo nombre.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál tiene la mejor tasa de falsos positivos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ninguna de las tres publica una tasa de falsos positivos auditada de forma independiente a agosto de 2026. Cualquier porcentaje concreto que encuentres en una reseña de terceros debe considerarse no verificado mientras el proveedor no revele su metodología de prueba. Haz tu propia prueba piloto sobre tu propia base de código: es el único número que describe tu situación.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Alguna tiene programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Solo CodeRabbit, a través de Dub, pagando 30 $ por registro cualificado de desarrollador; ese programa está activo y es verificable. La página "Partners" de Greptile es una lista de integraciones tecnológicas, y el programa "Super Qodoer" de Qodo es una ayuda para embajadores de la comunidad, no una comisión sobre ventas. PromptQuorum no está inscrito en ninguno; los enlaces de esta página no generan nada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Alguna herramienta de revisión de código con IA tiene plan gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Greptile tiene un plan Starter gratuito con 50 créditos al mes. CodeRabbit es gratis para siempre en repositorios públicos. Qodo no tiene plan gratuito permanente, pero ofrece prueba de 14 días y un programa gratuito de open source.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué herramienta de revisión de código con IA puede ejecutarse on-premise?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo ofrece SaaS single-tenant o despliegue totalmente on-premise con clave de LLM propia. CodeRabbit y Greptile ofrecen autoalojamiento en sus planes Enterprise con menos documentación pública.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -1835,39 +1855,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions frequentes',
         faqs: [
-          {
-            q: 'Qu\'est-ce qu\'un bot de revue de code IA ?',
-            a: 'C\'est un service qui se connecte a votre plateforme Git — GitHub, GitLab, Bitbucket ou Azure DevOps — et commente automatiquement les pull requests, signalant bugs, problemes de securite et manquements de style avant qu\'un humain ne regarde le diff. Il fonctionne comme application Git ou etape de CI et publie des commentaires en ligne ainsi qu\'un resume.',
-          },
-          {
-            q: 'CodeRabbit est-il meilleur que Greptile ?',
-            a: 'CodeRabbit convient mieux aux equipes qui ont besoin d\'une large prise en charge des plateformes Git et d\'une facturation previsible au poste. Greptile convient mieux aux equipes dont les bugs echappes viennent de ruptures entre fichiers, car il indexe le depot entier au lieu de comparer un PR isolement. Aucun n\'est meilleur dans l\'absolu : cela depend de votre melange de plateformes et de votre profil de bugs.',
-          },
-          {
-            q: 'Combien coute un bot de revue de code IA par mois ?',
-            a: 'En aout 2026, CodeRabbit coute 24 $ par utilisateur et par mois en Pro avec facturation annuelle et 48 $ en Pro Plus. Greptile propose une offre gratuite de 50 credits par mois et une offre Pro a 30 $ par poste et par mois avec 1 $ par credit supplementaire. Pro Team de Qodo est a 30 $ par mois jusqu\'a 30 utilisateurs, adosse a des credits prepayes a 0,012 $ piece. Pour Greptile et Qodo, le cout mensuel reel depend du volume de revues et non du nombre de postes.',
-          },
-          {
-            q: 'L\'un d\'eux a-t-il une offre gratuite ?',
-            a: 'Oui, davantage que ne le laisse penser la communication. Greptile a une offre Starter gratuite avec 50 credits par mois pour un developpeur sur un nombre illimite de depots. CodeRabbit est gratuit a vie sur les depots publics et accorde un essai de 14 jours a toutes ses offres. Qodo n\'a pas d\'offre gratuite permanente mais propose un essai de 14 jours sans carte et un programme gratuit pour les projets open source eligibles.',
-          },
-          {
-            q: 'Lequel puis-je heberger en interne ?',
-            a: 'Qodo est le plus explicite : SaaS single-tenant ou deploiement entierement on-premise avec votre propre cle LLM. CodeRabbit et Greptile proposent l\'auto-hebergement a leurs offres Enterprise, mais avec moins de documentation publique : confirmez les details avec leurs equipes commerciales avant de supposer que cela passera votre revue de securite.',
-          },
-          {
-            q: 'Qodo est-il la meme societe que CodiumAI ?',
-            a: 'Oui. Qodo est le changement de nom de CodiumAI ; les produits et integrations existants ont ete conserves sous le nouveau nom.',
-          },
-          {
-            q: 'Lequel a le meilleur taux de faux positifs ?',
-            a: 'Aucun des trois ne publie de taux de faux positifs audite independamment en aout 2026. Tout pourcentage precis trouve dans une analyse tierce doit etre considere comme non verifie tant que l\'editeur n\'a pas publie sa methodologie de test. Menez plutot votre propre pilote sur votre propre base de code : c\'est le seul chiffre qui decrive votre situation.',
-          },
-          {
-            q: 'L\'un d\'eux a-t-il un programme d\'affiliation ?',
-            a: 'Seulement CodeRabbit, via Dub, avec 30 $ par inscription de developpeur qualifiee — ce programme est actif et verifiable. La page « Partners » de Greptile est une liste d\'integrations techniques, et le programme « Super Qodoer » de Qodo est une bourse d\'ambassadeurs communautaires plutot qu\'une commission sur ventes. PromptQuorum n\'est inscrit a aucun d\'eux ; les liens de cette page ne rapportent rien.',
-          },
-        ],
+            { q: 'Qu\'est-ce qu\'un bot de revue de code IA ?', a: 'C\'est un service qui se connecte a votre plateforme Git — GitHub, GitLab, Bitbucket ou Azure DevOps — et commente automatiquement les pull requests, signalant bugs, problemes de securite et manquements de style avant qu\'un humain ne regarde le diff. Il fonctionne comme application Git ou etape de CI et publie des commentaires en ligne ainsi qu\'un resume.' },
+            { q: 'CodeRabbit est-il meilleur que Greptile ?', a: 'CodeRabbit convient mieux aux equipes qui ont besoin d\'une large prise en charge des plateformes Git et d\'une facturation previsible au poste. Greptile convient mieux aux equipes dont les bugs echappes viennent de ruptures entre fichiers, car il indexe le depot entier au lieu de comparer un PR isolement. Aucun n\'est meilleur dans l\'absolu : cela depend de votre melange de plateformes et de votre profil de bugs.' },
+            { q: 'Combien coute un bot de revue de code IA par mois ?', a: 'En aout 2026, CodeRabbit coute 24 $ par utilisateur et par mois en Pro avec facturation annuelle et 48 $ en Pro Plus. Greptile propose une offre gratuite de 50 credits par mois et une offre Pro a 30 $ par poste et par mois avec 1 $ par credit supplementaire. Pro Team de Qodo est a 30 $ par mois jusqu\'a 30 utilisateurs, adosse a des credits prepayes a 0,012 $ piece. Pour Greptile et Qodo, le cout mensuel reel depend du volume de revues et non du nombre de postes.' },
+            { q: 'L\'un d\'eux a-t-il une offre gratuite ?', a: 'Oui, davantage que ne le laisse penser la communication. Greptile a une offre Starter gratuite avec 50 credits par mois pour un developpeur sur un nombre illimite de depots. CodeRabbit est gratuit a vie sur les depots publics et accorde un essai de 14 jours a toutes ses offres. Qodo n\'a pas d\'offre gratuite permanente mais propose un essai de 14 jours sans carte et un programme gratuit pour les projets open source eligibles.' },
+            { q: 'Lequel puis-je heberger en interne ?', a: 'Qodo est le plus explicite : SaaS single-tenant ou deploiement entierement on-premise avec votre propre cle LLM. CodeRabbit et Greptile proposent l\'auto-hebergement a leurs offres Enterprise, mais avec moins de documentation publique : confirmez les details avec leurs equipes commerciales avant de supposer que cela passera votre revue de securite.' },
+            { q: 'Qodo est-il la meme societe que CodiumAI ?', a: 'Oui. Qodo est le changement de nom de CodiumAI ; les produits et integrations existants ont ete conserves sous le nouveau nom.' },
+            { q: 'Lequel a le meilleur taux de faux positifs ?', a: 'Aucun des trois ne publie de taux de faux positifs audite independamment en aout 2026. Tout pourcentage precis trouve dans une analyse tierce doit etre considere comme non verifie tant que l\'editeur n\'a pas publie sa methodologie de test. Menez plutot votre propre pilote sur votre propre base de code : c\'est le seul chiffre qui decrive votre situation.' },
+            { q: 'L\'un d\'eux a-t-il un programme d\'affiliation ?', a: 'Seulement CodeRabbit, via Dub, avec 30 $ par inscription de developpeur qualifiee — ce programme est actif et verifiable. La page « Partners » de Greptile est une liste d\'integrations techniques, et le programme « Super Qodoer » de Qodo est une bourse d\'ambassadeurs communautaires plutot qu\'une commission sur ventes. PromptQuorum n\'est inscrit a aucun d\'eux ; les liens de cette page ne rapportent rien.' },
+            { q: 'Les outils de revue de code IA ont-ils une offre gratuite ?', a: 'Greptile a une offre Starter gratuite avec 50 credits par mois. CodeRabbit est gratuit a vie sur les depots publics. Qodo n\'a pas d\'offre gratuite permanente mais propose un essai de 14 jours et un programme open source gratuit.' },
+            { q: 'Quel outil de revue de code IA peut fonctionner on-premise ?', a: 'Qodo propose un SaaS single-tenant ou un deploiement entierement on-premise avec cle LLM propre. CodeRabbit et Greptile proposent l\'auto-hebergement a leurs offres Enterprise avec moins de documentation publique.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -1930,47 +1928,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Qu\'est-ce qu\'un bot de revue de code IA ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Un service qui se connecte a votre plateforme Git et commente automatiquement les pull requests, signalant bugs, problemes de securite et manquements de style avant qu\'un humain ne regarde le diff.',
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce qu\'un bot de revue de code IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'C\'est un service qui se connecte a votre plateforme Git — GitHub, GitLab, Bitbucket ou Azure DevOps — et commente automatiquement les pull requests, signalant bugs, problemes de securite et manquements de style avant qu\'un humain ne regarde le diff. Il fonctionne comme application Git ou etape de CI et publie des commentaires en ligne ainsi qu\'un resume.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Combien coute un bot de revue de code IA par mois ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit coute 24 $/utilisateur/mois en Pro avec facturation annuelle et 48 $ en Pro Plus. Greptile est gratuit avec 50 credits/mois et 30 $/poste/mois en Pro. Pro Team de Qodo est a 30 $/mois jusqu\'a 30 utilisateurs a 0,012 $ le credit.',
+          {
+            '@type': 'Question',
+            'name': 'CodeRabbit est-il meilleur que Greptile ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit convient mieux aux equipes qui ont besoin d\'une large prise en charge des plateformes Git et d\'une facturation previsible au poste. Greptile convient mieux aux equipes dont les bugs echappes viennent de ruptures entre fichiers, car il indexe le depot entier au lieu de comparer un PR isolement. Aucun n\'est meilleur dans l\'absolu : cela depend de votre melange de plateformes et de votre profil de bugs.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Les outils de revue de code IA ont-ils une offre gratuite ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Greptile a une offre Starter gratuite avec 50 credits par mois. CodeRabbit est gratuit a vie sur les depots publics. Qodo n\'a pas d\'offre gratuite permanente mais propose un essai de 14 jours et un programme open source gratuit.',
+          {
+            '@type': 'Question',
+            'name': 'Combien coute un bot de revue de code IA par mois ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En aout 2026, CodeRabbit coute 24 $ par utilisateur et par mois en Pro avec facturation annuelle et 48 $ en Pro Plus. Greptile propose une offre gratuite de 50 credits par mois et une offre Pro a 30 $ par poste et par mois avec 1 $ par credit supplementaire. Pro Team de Qodo est a 30 $ par mois jusqu\'a 30 utilisateurs, adosse a des credits prepayes a 0,012 $ piece. Pour Greptile et Qodo, le cout mensuel reel depend du volume de revues et non du nombre de postes.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quel outil de revue de code IA peut fonctionner on-premise ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qodo propose un SaaS single-tenant ou un deploiement entierement on-premise avec cle LLM propre. CodeRabbit et Greptile proposent l\'auto-hebergement a leurs offres Enterprise avec moins de documentation publique.',
+          {
+            '@type': 'Question',
+            'name': 'L\'un d\'eux a-t-il une offre gratuite ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, davantage que ne le laisse penser la communication. Greptile a une offre Starter gratuite avec 50 credits par mois pour un developpeur sur un nombre illimite de depots. CodeRabbit est gratuit a vie sur les depots publics et accorde un essai de 14 jours a toutes ses offres. Qodo n\'a pas d\'offre gratuite permanente mais propose un essai de 14 jours sans carte et un programme gratuit pour les projets open source eligibles.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ces outils ont-ils un programme d\'affiliation ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Seulement CodeRabbit, via Dub, avec 30 $ par inscription qualifiee. La page partners de Greptile est une liste d\'integrations et le programme Super Qodoer de Qodo est une bourse communautaire, pas une commission.',
+          {
+            '@type': 'Question',
+            'name': 'Lequel puis-je heberger en interne ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo est le plus explicite : SaaS single-tenant ou deploiement entierement on-premise avec votre propre cle LLM. CodeRabbit et Greptile proposent l\'auto-hebergement a leurs offres Enterprise, mais avec moins de documentation publique : confirmez les details avec leurs equipes commerciales avant de supposer que cela passera votre revue de securite.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qodo est-il la meme societe que CodiumAI ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Qodo est le changement de nom de CodiumAI ; les produits et integrations existants ont ete conserves sous le nouveau nom.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Lequel a le meilleur taux de faux positifs ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aucun des trois ne publie de taux de faux positifs audite independamment en aout 2026. Tout pourcentage precis trouve dans une analyse tierce doit etre considere comme non verifie tant que l\'editeur n\'a pas publie sa methodologie de test. Menez plutot votre propre pilote sur votre propre base de code : c\'est le seul chiffre qui decrive votre situation.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'un d\'eux a-t-il un programme d\'affiliation ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Seulement CodeRabbit, via Dub, avec 30 $ par inscription de developpeur qualifiee — ce programme est actif et verifiable. La page « Partners » de Greptile est une liste d\'integrations techniques, et le programme « Super Qodoer » de Qodo est une bourse d\'ambassadeurs communautaires plutot qu\'une commission sur ventes. PromptQuorum n\'est inscrit a aucun d\'eux ; les liens de cette page ne rapportent rien.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les outils de revue de code IA ont-ils une offre gratuite ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Greptile a une offre Starter gratuite avec 50 credits par mois. CodeRabbit est gratuit a vie sur les depots publics. Qodo n\'a pas d\'offre gratuite permanente mais propose un essai de 14 jours et un programme open source gratuit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel outil de revue de code IA peut fonctionner on-premise ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo propose un SaaS single-tenant ou un deploiement entierement on-premise avec cle LLM propre. CodeRabbit et Greptile proposent l\'auto-hebergement a leurs offres Enterprise avec moins de documentation publique.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2327,39 +2365,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          {
-            q: 'O que e um bot de revisao de codigo com IA?',
-            a: 'E um servico que se conecta a sua plataforma Git — GitHub, GitLab, Bitbucket ou Azure DevOps — e comenta pull requests automaticamente, sinalizando bugs, problemas de seguranca e desvios de estilo antes de um humano olhar o diff. Roda como app Git ou etapa de CI e publica comentarios em linha e um resumo.',
-          },
-          {
-            q: 'O CodeRabbit e melhor que o Greptile?',
-            a: 'O CodeRabbit e melhor para times que precisam de amplo suporte a plataformas Git e cobranca previsivel por assento. O Greptile e melhor para times cujos bugs escapados vem de quebras entre arquivos, porque indexa o repositorio inteiro em vez de olhar um PR isolado. Nenhum e melhor em termos absolutos: depende da sua mistura de plataformas e do seu perfil de bugs.',
-          },
-          {
-            q: 'Quanto custa um bot de revisao de codigo com IA por mes?',
-            a: 'Em agosto de 2026, o CodeRabbit custa US$ 24 por usuario/mes no Pro com cobranca anual e US$ 48 no Pro Plus. O Greptile tem plano gratuito com 50 creditos por mes e plano Pro a US$ 30 por assento/mes com US$ 1 por credito adicional. O Pro Team do Qodo custa US$ 30 por mes ate 30 usuarios, sustentado por creditos pre-pagos a US$ 0,012 cada. Para Greptile e Qodo, o custo mensal real depende do volume de revisoes, nao da contagem de assentos.',
-          },
-          {
-            q: 'Algum deles tem plano gratuito?',
-            a: 'Sim, mais do que o marketing sugere. O Greptile tem plano Starter gratuito com 50 creditos por mes para um desenvolvedor em repositorios ilimitados. O CodeRabbit e gratuito para sempre em repositorios publicos e da teste de 14 dias em todos os planos. O Qodo nao tem plano gratuito permanente, mas oferece teste de 14 dias sem cartao e um programa gratuito para projetos open source elegiveis.',
-          },
-          {
-            q: 'Qual deles posso hospedar internamente?',
-            a: 'O Qodo e o mais explicito: SaaS single-tenant ou implantacao totalmente on-premise com sua propria chave de LLM. CodeRabbit e Greptile oferecem auto-hospedagem nos planos Enterprise, mas com menos documentacao publica: confirme os detalhes com as equipes comerciais antes de supor que passara na sua revisao de seguranca.',
-          },
-          {
-            q: 'O Qodo e a mesma empresa que a CodiumAI?',
-            a: 'Sim. Qodo e a renomeacao da CodiumAI; produtos e integracoes existentes foram mantidos sob o novo nome.',
-          },
-          {
-            q: 'Qual tem a melhor taxa de falsos positivos?',
-            a: 'Nenhum dos tres publica taxa de falsos positivos auditada de forma independente em agosto de 2026. Qualquer percentual preciso encontrado em analises de terceiros deve ser tratado como nao verificado ate o fornecedor publicar sua metodologia de teste. Rode seu proprio piloto na sua propria base de codigo: e o unico numero que descreve a sua situacao.',
-          },
-          {
-            q: 'Algum deles tem programa de afiliados?',
-            a: 'Somente o CodeRabbit, via Dub, com US$ 30 por cadastro qualificado de desenvolvedor — esse programa e ativo e verificavel. A pagina "Partners" do Greptile e uma lista de integracoes tecnicas, e o programa "Super Qodoer" do Qodo e uma bolsa de embaixadores comunitarios, nao comissao sobre vendas. A PromptQuorum nao esta inscrita em nenhum deles; os links desta pagina nao geram receita.',
-          },
-        ],
+            { q: 'O que e um bot de revisao de codigo com IA?', a: 'E um servico que se conecta a sua plataforma Git — GitHub, GitLab, Bitbucket ou Azure DevOps — e comenta pull requests automaticamente, sinalizando bugs, problemas de seguranca e desvios de estilo antes de um humano olhar o diff. Roda como app Git ou etapa de CI e publica comentarios em linha e um resumo.' },
+            { q: 'O CodeRabbit e melhor que o Greptile?', a: 'O CodeRabbit e melhor para times que precisam de amplo suporte a plataformas Git e cobranca previsivel por assento. O Greptile e melhor para times cujos bugs escapados vem de quebras entre arquivos, porque indexa o repositorio inteiro em vez de olhar um PR isolado. Nenhum e melhor em termos absolutos: depende da sua mistura de plataformas e do seu perfil de bugs.' },
+            { q: 'Quanto custa um bot de revisao de codigo com IA por mes?', a: 'Em agosto de 2026, o CodeRabbit custa US$ 24 por usuario/mes no Pro com cobranca anual e US$ 48 no Pro Plus. O Greptile tem plano gratuito com 50 creditos por mes e plano Pro a US$ 30 por assento/mes com US$ 1 por credito adicional. O Pro Team do Qodo custa US$ 30 por mes ate 30 usuarios, sustentado por creditos pre-pagos a US$ 0,012 cada. Para Greptile e Qodo, o custo mensal real depende do volume de revisoes, nao da contagem de assentos.' },
+            { q: 'Algum deles tem plano gratuito?', a: 'Sim, mais do que o marketing sugere. O Greptile tem plano Starter gratuito com 50 creditos por mes para um desenvolvedor em repositorios ilimitados. O CodeRabbit e gratuito para sempre em repositorios publicos e da teste de 14 dias em todos os planos. O Qodo nao tem plano gratuito permanente, mas oferece teste de 14 dias sem cartao e um programa gratuito para projetos open source elegiveis.' },
+            { q: 'Qual deles posso hospedar internamente?', a: 'O Qodo e o mais explicito: SaaS single-tenant ou implantacao totalmente on-premise com sua propria chave de LLM. CodeRabbit e Greptile oferecem auto-hospedagem nos planos Enterprise, mas com menos documentacao publica: confirme os detalhes com as equipes comerciais antes de supor que passara na sua revisao de seguranca.' },
+            { q: 'O Qodo e a mesma empresa que a CodiumAI?', a: 'Sim. Qodo e a renomeacao da CodiumAI; produtos e integracoes existentes foram mantidos sob o novo nome.' },
+            { q: 'Qual tem a melhor taxa de falsos positivos?', a: 'Nenhum dos tres publica taxa de falsos positivos auditada de forma independente em agosto de 2026. Qualquer percentual preciso encontrado em analises de terceiros deve ser tratado como nao verificado ate o fornecedor publicar sua metodologia de teste. Rode seu proprio piloto na sua propria base de codigo: e o unico numero que descreve a sua situacao.' },
+            { q: 'Algum deles tem programa de afiliados?', a: 'Somente o CodeRabbit, via Dub, com US$ 30 por cadastro qualificado de desenvolvedor — esse programa e ativo e verificavel. A pagina "Partners" do Greptile e uma lista de integracoes tecnicas, e o programa "Super Qodoer" do Qodo e uma bolsa de embaixadores comunitarios, nao comissao sobre vendas. A PromptQuorum nao esta inscrita em nenhum deles; os links desta pagina nao geram receita.' },
+            { q: 'Ferramentas de revisao de codigo com IA tem plano gratuito?', a: 'O Greptile tem plano Starter gratuito com 50 creditos por mes. O CodeRabbit e gratuito para sempre em repositorios publicos. O Qodo nao tem plano gratuito permanente, mas oferece teste de 14 dias e programa open source gratuito.' },
+            { q: 'Qual ferramenta de revisao de codigo com IA roda on-premise?', a: 'O Qodo oferece SaaS single-tenant ou implantacao totalmente on-premise com chave de LLM propria. CodeRabbit e Greptile oferecem auto-hospedagem nos planos Enterprise com menos documentacao publica.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2422,47 +2438,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'O que e um bot de revisao de codigo com IA?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Um servico que se conecta a sua plataforma Git e comenta pull requests automaticamente, sinalizando bugs, problemas de seguranca e desvios de estilo antes de um humano olhar o diff.',
+          {
+            '@type': 'Question',
+            'name': 'O que e um bot de revisao de codigo com IA?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'E um servico que se conecta a sua plataforma Git — GitHub, GitLab, Bitbucket ou Azure DevOps — e comenta pull requests automaticamente, sinalizando bugs, problemas de seguranca e desvios de estilo antes de um humano olhar o diff. Roda como app Git ou etapa de CI e publica comentarios em linha e um resumo.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quanto custa um bot de revisao de codigo com IA por mes?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O CodeRabbit custa US$ 24/usuario/mes no Pro com cobranca anual e US$ 48 no Pro Plus. O Greptile e gratuito com 50 creditos/mes e US$ 30/assento/mes no Pro. O Pro Team do Qodo custa US$ 30/mes ate 30 usuarios a US$ 0,012 por credito.',
+          {
+            '@type': 'Question',
+            'name': 'O CodeRabbit e melhor que o Greptile?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O CodeRabbit e melhor para times que precisam de amplo suporte a plataformas Git e cobranca previsivel por assento. O Greptile e melhor para times cujos bugs escapados vem de quebras entre arquivos, porque indexa o repositorio inteiro em vez de olhar um PR isolado. Nenhum e melhor em termos absolutos: depende da sua mistura de plataformas e do seu perfil de bugs.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ferramentas de revisao de codigo com IA tem plano gratuito?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O Greptile tem plano Starter gratuito com 50 creditos por mes. O CodeRabbit e gratuito para sempre em repositorios publicos. O Qodo nao tem plano gratuito permanente, mas oferece teste de 14 dias e programa open source gratuito.',
+          {
+            '@type': 'Question',
+            'name': 'Quanto custa um bot de revisao de codigo com IA por mes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Em agosto de 2026, o CodeRabbit custa US$ 24 por usuario/mes no Pro com cobranca anual e US$ 48 no Pro Plus. O Greptile tem plano gratuito com 50 creditos por mes e plano Pro a US$ 30 por assento/mes com US$ 1 por credito adicional. O Pro Team do Qodo custa US$ 30 por mes ate 30 usuarios, sustentado por creditos pre-pagos a US$ 0,012 cada. Para Greptile e Qodo, o custo mensal real depende do volume de revisoes, nao da contagem de assentos.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Qual ferramenta de revisao de codigo com IA roda on-premise?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'O Qodo oferece SaaS single-tenant ou implantacao totalmente on-premise com chave de LLM propria. CodeRabbit e Greptile oferecem auto-hospedagem nos planos Enterprise com menos documentacao publica.',
+          {
+            '@type': 'Question',
+            'name': 'Algum deles tem plano gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, mais do que o marketing sugere. O Greptile tem plano Starter gratuito com 50 creditos por mes para um desenvolvedor em repositorios ilimitados. O CodeRabbit e gratuito para sempre em repositorios publicos e da teste de 14 dias em todos os planos. O Qodo nao tem plano gratuito permanente, mas oferece teste de 14 dias sem cartao e um programa gratuito para projetos open source elegiveis.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Essas ferramentas tem programa de afiliados?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Somente o CodeRabbit, via Dub, com US$ 30 por cadastro qualificado. A pagina partners do Greptile e uma lista de integracoes e o programa Super Qodoer do Qodo e uma bolsa comunitaria, nao comissao.',
+          {
+            '@type': 'Question',
+            'name': 'Qual deles posso hospedar internamente?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Qodo e o mais explicito: SaaS single-tenant ou implantacao totalmente on-premise com sua propria chave de LLM. CodeRabbit e Greptile oferecem auto-hospedagem nos planos Enterprise, mas com menos documentacao publica: confirme os detalhes com as equipes comerciais antes de supor que passara na sua revisao de seguranca.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'O Qodo e a mesma empresa que a CodiumAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Qodo e a renomeacao da CodiumAI; produtos e integracoes existentes foram mantidos sob o novo nome.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual tem a melhor taxa de falsos positivos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Nenhum dos tres publica taxa de falsos positivos auditada de forma independente em agosto de 2026. Qualquer percentual preciso encontrado em analises de terceiros deve ser tratado como nao verificado ate o fornecedor publicar sua metodologia de teste. Rode seu proprio piloto na sua propria base de codigo: e o unico numero que descreve a sua situacao.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Algum deles tem programa de afiliados?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Somente o CodeRabbit, via Dub, com US$ 30 por cadastro qualificado de desenvolvedor — esse programa e ativo e verificavel. A pagina "Partners" do Greptile e uma lista de integracoes tecnicas, e o programa "Super Qodoer" do Qodo e uma bolsa de embaixadores comunitarios, nao comissao sobre vendas. A PromptQuorum nao esta inscrita em nenhum deles; os links desta pagina nao geram receita.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ferramentas de revisao de codigo com IA tem plano gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Greptile tem plano Starter gratuito com 50 creditos por mes. O CodeRabbit e gratuito para sempre em repositorios publicos. O Qodo nao tem plano gratuito permanente, mas oferece teste de 14 dias e programa open source gratuito.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual ferramenta de revisao de codigo com IA roda on-premise?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O Qodo oferece SaaS single-tenant ou implantacao totalmente on-premise com chave de LLM propria. CodeRabbit e Greptile oferecem auto-hospedagem nos planos Enterprise com menos documentacao publica.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2819,39 +2875,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          {
-            q: 'AIコードレビューボットとは何ですか？',
-            a: 'GitHub、GitLab、Bitbucket、Azure DevOpsといったGitプラットフォームに接続し、人が差分を見る前にバグ・セキュリティ上の問題・スタイル違反を指摘するコメントをプルリクエストへ自動投稿するサービスです。Gitアプリまたは CIのステップとして動作し、インラインコメントと要約を投稿します。',
-          },
-          {
-            q: 'CodeRabbitはGreptileより優れていますか？',
-            a: 'CodeRabbitは幅広いGitプラットフォーム対応と予測しやすいシート課金を必要とするチームに向きます。Greptileは見逃しバグの原因がファイル間の破壊にあるチームに向きます。単一のPRを孤立して見るのではなくリポジトリ全体をインデックス化するためです。絶対的にどちらが優れているということはなく、プラットフォーム構成とバグの傾向によります。',
-          },
-          {
-            q: 'AIコードレビューボットの月額はいくらですか？',
-            a: '2026年8月時点で、CodeRabbitは年払いのProが1ユーザー月24ドル、Pro Plusが48ドルです。Greptileには月50クレジットの無料プランと、1シート月30ドルで追加1クレジット1ドルのProプランがあります。QodoのPro Teamは30ユーザーまで月30ドルで、1件0.012ドルの前払いクレジットで支えられています。GreptileとQodoでは、実際の月額はシート数ではなくレビュー件数によって決まります。',
-          },
-          {
-            q: '無料プランはありますか？',
-            a: 'はい、宣伝から受ける印象より充実しています。Greptileには開発者1名・リポジトリ無制限で月50クレジットの無料Starterプランがあります。CodeRabbitは公開リポジトリが永続的に無料で、全プランに14日間の試用が付きます。Qodoに恒久的な無料プランはありませんが、カード不要の14日間試用と、対象のオープンソースプロジェクト向けの無料プログラムがあります。',
-          },
-          {
-            q: '社内でホストできるのはどれですか？',
-            a: 'Qodoが最も明確で、自社LLMキーによるシングルテナントSaaSまたは完全オンプレミス導入に対応します。CodeRabbitとGreptileもEnterpriseプランで自社運用を提供していますが公開情報は少ないため、自社のセキュリティレビューを通ると決めてかからず、営業チームに詳細を確認してください。',
-          },
-          {
-            q: 'QodoはCodiumAIと同じ会社ですか？',
-            a: 'はい。QodoはCodiumAIの社名変更後の名称で、既存の製品と連携は新しい名前のまま維持されています。',
-          },
-          {
-            q: '誤検知率が最も低いのはどれですか？',
-            a: '2026年8月時点で、3製品とも独立監査を受けた誤検知率を公表していません。第三者の分析で見かける具体的な数値は、ベンダーが試験方法を公開するまで未検証として扱ってください。代わりに自社のコードベースで自らパイロットを行ってください。自分たちの状況を表す数値はそれだけです。',
-          },
-          {
-            q: 'アフィリエイトプログラムはありますか？',
-            a: 'CodeRabbitのみで、Dub経由、適格な開発者登録1件につき30ドルです。このプログラムは稼働中で検証可能です。Greptileの「Partners」ページは技術連携の一覧であり、Qodoの「Super Qodoer」プログラムは販売報酬ではなくコミュニティのアンバサダー向け助成です。PromptQuorumはいずれにも登録しておらず、このページのリンクから収益は得ていません。',
-          },
-        ],
+            { q: 'AIコードレビューボットとは何ですか？', a: 'GitHub、GitLab、Bitbucket、Azure DevOpsといったGitプラットフォームに接続し、人が差分を見る前にバグ・セキュリティ上の問題・スタイル違反を指摘するコメントをプルリクエストへ自動投稿するサービスです。Gitアプリまたは CIのステップとして動作し、インラインコメントと要約を投稿します。' },
+            { q: 'CodeRabbitはGreptileより優れていますか？', a: 'CodeRabbitは幅広いGitプラットフォーム対応と予測しやすいシート課金を必要とするチームに向きます。Greptileは見逃しバグの原因がファイル間の破壊にあるチームに向きます。単一のPRを孤立して見るのではなくリポジトリ全体をインデックス化するためです。絶対的にどちらが優れているということはなく、プラットフォーム構成とバグの傾向によります。' },
+            { q: 'AIコードレビューボットの月額はいくらですか？', a: '2026年8月時点で、CodeRabbitは年払いのProが1ユーザー月24ドル、Pro Plusが48ドルです。Greptileには月50クレジットの無料プランと、1シート月30ドルで追加1クレジット1ドルのProプランがあります。QodoのPro Teamは30ユーザーまで月30ドルで、1件0.012ドルの前払いクレジットで支えられています。GreptileとQodoでは、実際の月額はシート数ではなくレビュー件数によって決まります。' },
+            { q: '無料プランはありますか？', a: 'はい、宣伝から受ける印象より充実しています。Greptileには開発者1名・リポジトリ無制限で月50クレジットの無料Starterプランがあります。CodeRabbitは公開リポジトリが永続的に無料で、全プランに14日間の試用が付きます。Qodoに恒久的な無料プランはありませんが、カード不要の14日間試用と、対象のオープンソースプロジェクト向けの無料プログラムがあります。' },
+            { q: '社内でホストできるのはどれですか？', a: 'Qodoが最も明確で、自社LLMキーによるシングルテナントSaaSまたは完全オンプレミス導入に対応します。CodeRabbitとGreptileもEnterpriseプランで自社運用を提供していますが公開情報は少ないため、自社のセキュリティレビューを通ると決めてかからず、営業チームに詳細を確認してください。' },
+            { q: 'QodoはCodiumAIと同じ会社ですか？', a: 'はい。QodoはCodiumAIの社名変更後の名称で、既存の製品と連携は新しい名前のまま維持されています。' },
+            { q: '誤検知率が最も低いのはどれですか？', a: '2026年8月時点で、3製品とも独立監査を受けた誤検知率を公表していません。第三者の分析で見かける具体的な数値は、ベンダーが試験方法を公開するまで未検証として扱ってください。代わりに自社のコードベースで自らパイロットを行ってください。自分たちの状況を表す数値はそれだけです。' },
+            { q: 'アフィリエイトプログラムはありますか？', a: 'CodeRabbitのみで、Dub経由、適格な開発者登録1件につき30ドルです。このプログラムは稼働中で検証可能です。Greptileの「Partners」ページは技術連携の一覧であり、Qodoの「Super Qodoer」プログラムは販売報酬ではなくコミュニティのアンバサダー向け助成です。PromptQuorumはいずれにも登録しておらず、このページのリンクから収益は得ていません。' },
+            { q: 'AIコードレビューツールに無料プランはありますか？', a: 'Greptileには月50クレジットの無料Starterプランがあります。CodeRabbitは公開リポジトリが永続的に無料です。Qodoに恒久的な無料プランはありませんが、14日間の試用と無料のオープンソースプログラムがあります。' },
+            { q: 'オンプレミスで動かせるAIコードレビューツールはどれですか？', a: 'Qodoは自社LLMキーによるシングルテナントSaaSまたは完全オンプレミス導入を提供します。CodeRabbitとGreptileはEnterpriseプランで自社運用を提供しますが、公開情報は多くありません。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -2914,47 +2948,87 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'AIコードレビューボットとは何ですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Gitプラットフォームに接続し、人が差分を見る前にバグ・セキュリティ上の問題・スタイル違反を指摘するコメントをプルリクエストへ自動投稿するサービスです。',
+          {
+            '@type': 'Question',
+            'name': 'AIコードレビューボットとは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GitHub、GitLab、Bitbucket、Azure DevOpsといったGitプラットフォームに接続し、人が差分を見る前にバグ・セキュリティ上の問題・スタイル違反を指摘するコメントをプルリクエストへ自動投稿するサービスです。Gitアプリまたは CIのステップとして動作し、インラインコメントと要約を投稿します。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AIコードレビューボットの月額はいくらですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbitは年払いのProが1ユーザー月24ドル、Pro Plusが48ドルです。Greptileは月50クレジットが無料、Proは1シート月30ドル。QodoのPro Teamは30ユーザーまで月30ドルで、1クレジット0.012ドルです。',
+          {
+            '@type': 'Question',
+            'name': 'CodeRabbitはGreptileより優れていますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbitは幅広いGitプラットフォーム対応と予測しやすいシート課金を必要とするチームに向きます。Greptileは見逃しバグの原因がファイル間の破壊にあるチームに向きます。単一のPRを孤立して見るのではなくリポジトリ全体をインデックス化するためです。絶対的にどちらが優れているということはなく、プラットフォーム構成とバグの傾向によります。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AIコードレビューツールに無料プランはありますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Greptileには月50クレジットの無料Starterプランがあります。CodeRabbitは公開リポジトリが永続的に無料です。Qodoに恒久的な無料プランはありませんが、14日間の試用と無料のオープンソースプログラムがあります。',
+          {
+            '@type': 'Question',
+            'name': 'AIコードレビューボットの月額はいくらですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年8月時点で、CodeRabbitは年払いのProが1ユーザー月24ドル、Pro Plusが48ドルです。Greptileには月50クレジットの無料プランと、1シート月30ドルで追加1クレジット1ドルのProプランがあります。QodoのPro Teamは30ユーザーまで月30ドルで、1件0.012ドルの前払いクレジットで支えられています。GreptileとQodoでは、実際の月額はシート数ではなくレビュー件数によって決まります。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'オンプレミスで動かせるAIコードレビューツールはどれですか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qodoは自社LLMキーによるシングルテナントSaaSまたは完全オンプレミス導入を提供します。CodeRabbitとGreptileはEnterpriseプランで自社運用を提供しますが、公開情報は多くありません。',
+          {
+            '@type': 'Question',
+            'name': '無料プランはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、宣伝から受ける印象より充実しています。Greptileには開発者1名・リポジトリ無制限で月50クレジットの無料Starterプランがあります。CodeRabbitは公開リポジトリが永続的に無料で、全プランに14日間の試用が付きます。Qodoに恒久的な無料プランはありませんが、カード不要の14日間試用と、対象のオープンソースプロジェクト向けの無料プログラムがあります。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'これらのツールにアフィリエイトプログラムはありますか？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbitのみで、Dub経由、適格な登録1件につき30ドルです。GreptileのpartnersページはAPI連携の一覧であり、QodoのSuper Qodoerは報酬ではなくコミュニティ助成です。',
+          {
+            '@type': 'Question',
+            'name': '社内でホストできるのはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodoが最も明確で、自社LLMキーによるシングルテナントSaaSまたは完全オンプレミス導入に対応します。CodeRabbitとGreptileもEnterpriseプランで自社運用を提供していますが公開情報は少ないため、自社のセキュリティレビューを通ると決めてかからず、営業チームに詳細を確認してください。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'QodoはCodiumAIと同じ会社ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。QodoはCodiumAIの社名変更後の名称で、既存の製品と連携は新しい名前のまま維持されています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '誤検知率が最も低いのはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年8月時点で、3製品とも独立監査を受けた誤検知率を公表していません。第三者の分析で見かける具体的な数値は、ベンダーが試験方法を公開するまで未検証として扱ってください。代わりに自社のコードベースで自らパイロットを行ってください。自分たちの状況を表す数値はそれだけです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'アフィリエイトプログラムはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbitのみで、Dub経由、適格な開発者登録1件につき30ドルです。このプログラムは稼働中で検証可能です。Greptileの「Partners」ページは技術連携の一覧であり、Qodoの「Super Qodoer」プログラムは販売報酬ではなくコミュニティのアンバサダー向け助成です。PromptQuorumはいずれにも登録しておらず、このページのリンクから収益は得ていません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AIコードレビューツールに無料プランはありますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Greptileには月50クレジットの無料Starterプランがあります。CodeRabbitは公開リポジトリが永続的に無料です。Qodoに恒久的な無料プランはありませんが、14日間の試用と無料のオープンソースプログラムがあります。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'オンプレミスで動かせるAIコードレビューツールはどれですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodoは自社LLMキーによるシングルテナントSaaSまたは完全オンプレミス導入を提供します。CodeRabbitとGreptileはEnterpriseプランで自社運用を提供しますが、公開情報は多くありません。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3311,39 +3385,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          {
-            q: '什么是 AI 代码审查机器人？',
-            a: '它是一种接入你的 Git 平台（GitHub、GitLab、Bitbucket 或 Azure DevOps）的服务，会在有人查看差异之前自动为拉取请求撰写评论，标记缺陷、安全问题与风格偏差。它以 Git 应用或 CI 步骤的形式运行，发布行内评论与一份摘要。',
-          },
-          {
-            q: 'CodeRabbit 比 Greptile 更好吗？',
-            a: 'CodeRabbit 更适合需要广泛 Git 平台支持与可预测席位计费的团队。Greptile 更适合缺陷逃逸源自跨文件破坏的团队，因为它索引整个仓库而不是孤立地看一个 PR。没有绝对的优劣，取决于你的平台组合与缺陷类型。',
-          },
-          {
-            q: 'AI 代码审查机器人每月要花多少钱？',
-            a: '截至 2026 年 8 月，CodeRabbit 的 Pro 按年付费为每用户每月 24 美元，Pro Plus 为 48 美元。Greptile 提供每月 50 个额度的免费套餐，Pro 为每席位每月 30 美元，额外额度每个 1 美元。Qodo 的 Pro Team 为每月 30 美元、最多 30 名用户，背后是每个 0.012 美元的预付额度。对 Greptile 与 Qodo 而言，实际月度成本取决于审查次数而非席位数量。',
-          },
-          {
-            q: '它们有免费套餐吗？',
-            a: '有，而且比宣传给人的印象更多。Greptile 提供免费 Starter 套餐，为一名开发者在不限数量的仓库上提供每月 50 个额度。CodeRabbit 在公开仓库上永久免费，所有套餐均含 14 天试用。Qodo 没有永久免费套餐，但提供无需信用卡的 14 天试用，以及面向符合条件的开源项目的免费计划。',
-          },
-          {
-            q: '哪一个可以部署在我们自己的环境里？',
-            a: 'Qodo 最为明确：支持自带 LLM 密钥的单租户 SaaS 或完全本地部署。CodeRabbit 与 Greptile 在企业版套餐中提供自托管，但公开文档较少：在认定它能通过你的安全评审之前，请向其销售团队确认细节。',
-          },
-          {
-            q: 'Qodo 和 CodiumAI 是同一家公司吗？',
-            a: '是的。Qodo 是 CodiumAI 更名后的名称；既有产品与集成在新名称下得以保留。',
-          },
-          {
-            q: '哪一个的误报率最低？',
-            a: '截至 2026 年 8 月，三者均未公布经独立审计的误报率。在第三方分析中看到的任何精确百分比，在厂商公布测试方法之前都应视为未经核实。更好的做法是在你自己的代码库上做试点：那是唯一能描述你自身情况的数字。',
-          },
-          {
-            q: '它们有联盟计划吗？',
-            a: '只有 CodeRabbit，通过 Dub，每个合格的开发者注册 30 美元——该计划是在运行且可核实的。Greptile 的 “Partners” 页面是技术集成清单，Qodo 的 “Super Qodoer” 计划是社区大使资助而非销售佣金。PromptQuorum 未加入其中任何一个；本页链接不产生任何收入。',
-          },
-        ],
+            { q: '什么是 AI 代码审查机器人？', a: '它是一种接入你的 Git 平台（GitHub、GitLab、Bitbucket 或 Azure DevOps）的服务，会在有人查看差异之前自动为拉取请求撰写评论，标记缺陷、安全问题与风格偏差。它以 Git 应用或 CI 步骤的形式运行，发布行内评论与一份摘要。' },
+            { q: 'CodeRabbit 比 Greptile 更好吗？', a: 'CodeRabbit 更适合需要广泛 Git 平台支持与可预测席位计费的团队。Greptile 更适合缺陷逃逸源自跨文件破坏的团队，因为它索引整个仓库而不是孤立地看一个 PR。没有绝对的优劣，取决于你的平台组合与缺陷类型。' },
+            { q: 'AI 代码审查机器人每月要花多少钱？', a: '截至 2026 年 8 月，CodeRabbit 的 Pro 按年付费为每用户每月 24 美元，Pro Plus 为 48 美元。Greptile 提供每月 50 个额度的免费套餐，Pro 为每席位每月 30 美元，额外额度每个 1 美元。Qodo 的 Pro Team 为每月 30 美元、最多 30 名用户，背后是每个 0.012 美元的预付额度。对 Greptile 与 Qodo 而言，实际月度成本取决于审查次数而非席位数量。' },
+            { q: '它们有免费套餐吗？', a: '有，而且比宣传给人的印象更多。Greptile 提供免费 Starter 套餐，为一名开发者在不限数量的仓库上提供每月 50 个额度。CodeRabbit 在公开仓库上永久免费，所有套餐均含 14 天试用。Qodo 没有永久免费套餐，但提供无需信用卡的 14 天试用，以及面向符合条件的开源项目的免费计划。' },
+            { q: '哪一个可以部署在我们自己的环境里？', a: 'Qodo 最为明确：支持自带 LLM 密钥的单租户 SaaS 或完全本地部署。CodeRabbit 与 Greptile 在企业版套餐中提供自托管，但公开文档较少：在认定它能通过你的安全评审之前，请向其销售团队确认细节。' },
+            { q: 'Qodo 和 CodiumAI 是同一家公司吗？', a: '是的。Qodo 是 CodiumAI 更名后的名称；既有产品与集成在新名称下得以保留。' },
+            { q: '哪一个的误报率最低？', a: '截至 2026 年 8 月，三者均未公布经独立审计的误报率。在第三方分析中看到的任何精确百分比，在厂商公布测试方法之前都应视为未经核实。更好的做法是在你自己的代码库上做试点：那是唯一能描述你自身情况的数字。' },
+            { q: '它们有联盟计划吗？', a: '只有 CodeRabbit，通过 Dub，每个合格的开发者注册 30 美元——该计划是在运行且可核实的。Greptile 的 “Partners” 页面是技术集成清单，Qodo 的 “Super Qodoer” 计划是社区大使资助而非销售佣金。PromptQuorum 未加入其中任何一个；本页链接不产生任何收入。' },
+            { q: 'AI 代码审查工具有免费套餐吗？', a: 'Greptile 提供每月 50 个额度的免费 Starter 套餐。CodeRabbit 在公开仓库上永久免费。Qodo 没有永久免费套餐，但提供 14 天试用与免费的开源计划。' },
+            { q: '哪款 AI 代码审查工具可以本地部署？', a: 'Qodo 提供自带 LLM 密钥的单租户 SaaS 或完全本地部署。CodeRabbit 与 Greptile 在企业版套餐中提供自托管，但公开文档较少。' },
+            { q: '这些工具有联盟计划吗？', a: '只有 CodeRabbit，通过 Dub，每个合格注册 30 美元。Greptile 的 partners 页面是集成清单，Qodo 的 Super Qodoer 是社区资助而非佣金。' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3406,47 +3459,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '什么是 AI 代码审查机器人？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '一种接入你的 Git 平台的服务，会在有人查看差异之前自动为拉取请求撰写评论，标记缺陷、安全问题与风格偏差。',
+          {
+            '@type': 'Question',
+            'name': '什么是 AI 代码审查机器人？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '它是一种接入你的 Git 平台（GitHub、GitLab、Bitbucket 或 Azure DevOps）的服务，会在有人查看差异之前自动为拉取请求撰写评论，标记缺陷、安全问题与风格偏差。它以 Git 应用或 CI 步骤的形式运行，发布行内评论与一份摘要。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AI 代码审查机器人每月要花多少钱？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit 的 Pro 按年付费为每用户每月 24 美元，Pro Plus 为 48 美元。Greptile 每月 50 个额度免费，Pro 为每席位每月 30 美元。Qodo 的 Pro Team 为每月 30 美元、30 用户以内，每额度 0.012 美元。',
+          {
+            '@type': 'Question',
+            'name': 'CodeRabbit 比 Greptile 更好吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit 更适合需要广泛 Git 平台支持与可预测席位计费的团队。Greptile 更适合缺陷逃逸源自跨文件破坏的团队，因为它索引整个仓库而不是孤立地看一个 PR。没有绝对的优劣，取决于你的平台组合与缺陷类型。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AI 代码审查工具有免费套餐吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Greptile 提供每月 50 个额度的免费 Starter 套餐。CodeRabbit 在公开仓库上永久免费。Qodo 没有永久免费套餐，但提供 14 天试用与免费的开源计划。',
+          {
+            '@type': 'Question',
+            'name': 'AI 代码审查机器人每月要花多少钱？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '截至 2026 年 8 月，CodeRabbit 的 Pro 按年付费为每用户每月 24 美元，Pro Plus 为 48 美元。Greptile 提供每月 50 个额度的免费套餐，Pro 为每席位每月 30 美元，额外额度每个 1 美元。Qodo 的 Pro Team 为每月 30 美元、最多 30 名用户，背后是每个 0.012 美元的预付额度。对 Greptile 与 Qodo 而言，实际月度成本取决于审查次数而非席位数量。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '哪款 AI 代码审查工具可以本地部署？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qodo 提供自带 LLM 密钥的单租户 SaaS 或完全本地部署。CodeRabbit 与 Greptile 在企业版套餐中提供自托管，但公开文档较少。',
+          {
+            '@type': 'Question',
+            'name': '它们有免费套餐吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '有，而且比宣传给人的印象更多。Greptile 提供免费 Starter 套餐，为一名开发者在不限数量的仓库上提供每月 50 个额度。CodeRabbit 在公开仓库上永久免费，所有套餐均含 14 天试用。Qodo 没有永久免费套餐，但提供无需信用卡的 14 天试用，以及面向符合条件的开源项目的免费计划。',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '这些工具有联盟计划吗？',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: '只有 CodeRabbit，通过 Dub，每个合格注册 30 美元。Greptile 的 partners 页面是集成清单，Qodo 的 Super Qodoer 是社区资助而非佣金。',
+          {
+            '@type': 'Question',
+            'name': '哪一个可以部署在我们自己的环境里？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo 最为明确：支持自带 LLM 密钥的单租户 SaaS 或完全本地部署。CodeRabbit 与 Greptile 在企业版套餐中提供自托管，但公开文档较少：在认定它能通过你的安全评审之前，请向其销售团队确认细节。',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qodo 和 CodiumAI 是同一家公司吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '是的。Qodo 是 CodiumAI 更名后的名称；既有产品与集成在新名称下得以保留。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪一个的误报率最低？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '截至 2026 年 8 月，三者均未公布经独立审计的误报率。在第三方分析中看到的任何精确百分比，在厂商公布测试方法之前都应视为未经核实。更好的做法是在你自己的代码库上做试点：那是唯一能描述你自身情况的数字。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '它们有联盟计划吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只有 CodeRabbit，通过 Dub，每个合格的开发者注册 30 美元——该计划是在运行且可核实的。Greptile 的 “Partners” 页面是技术集成清单，Qodo 的 “Super Qodoer” 计划是社区大使资助而非销售佣金。PromptQuorum 未加入其中任何一个；本页链接不产生任何收入。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AI 代码审查工具有免费套餐吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Greptile 提供每月 50 个额度的免费 Starter 套餐。CodeRabbit 在公开仓库上永久免费。Qodo 没有永久免费套餐，但提供 14 天试用与免费的开源计划。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '哪款 AI 代码审查工具可以本地部署？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo 提供自带 LLM 密钥的单租户 SaaS 或完全本地部署。CodeRabbit 与 Greptile 在企业版套餐中提供自托管，但公开文档较少。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '这些工具有联盟计划吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '只有 CodeRabbit，通过 Dub，每个合格注册 30 美元。Greptile 的 partners 页面是集成清单，Qodo 的 Super Qodoer 是社区资助而非佣金。',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -3803,39 +3904,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          {
-            q: 'ما روبوت مراجعة الكود بالذكاء الاصطناعي؟',
-            a: 'هو خدمة تتصل بمنصة Git لديك — GitHub أو GitLab أو Bitbucket أو Azure DevOps — وتعلّق تلقائيًا على طلبات السحب، فتشير إلى الأخطاء والمشكلات الأمنية ومخالفات النمط قبل أن ينظر أي شخص إلى ملف الفروق. ويعمل بوصفه تطبيق Git أو خطوة ضمن التكامل المستمر، وينشر تعليقات في صلب الكود وملخصًا.',
-          },
-          {
-            q: 'هل CodeRabbit أفضل من Greptile؟',
-            a: 'CodeRabbit أنسب للفرق التي تحتاج دعمًا واسعًا لمنصات Git وفوترة مقاعد يسهل توقعها. وGreptile أنسب للفرق التي تنشأ أخطاؤها المتسربة من أعطال تمتد عبر الملفات، لأنها تفهرس المستودع بأكمله بدل النظر إلى طلب سحب واحد بمعزل عن سياقه. ولا توجد أفضلية مطلقة: الأمر يتوقف على مزيج منصاتك وطبيعة أخطائك.',
-          },
-          {
-            q: 'كم يكلّف روبوت مراجعة الكود بالذكاء الاصطناعي شهريًا؟',
-            a: 'حتى أغسطس 2026، تكلّف CodeRabbit أربعة وعشرين دولارًا للمستخدم شهريًا في خطة Pro بالفوترة السنوية، و48 دولارًا في Pro Plus. ولدى Greptile خطة مجانية بخمسين رصيدًا شهريًا وخطة Pro بثلاثين دولارًا للمقعد شهريًا مع دولار لكل رصيد إضافي. وخطة Pro Team من Qodo بثلاثين دولارًا شهريًا حتى 30 مستخدمًا، مدعومة بأرصدة مدفوعة مقدمًا بسعر 0.012 دولار للرصيد. وبالنسبة إلى Greptile وQodo، تعتمد التكلفة الشهرية الفعلية على حجم المراجعات لا على عدد المقاعد.',
-          },
-          {
-            q: 'هل لدى أي منها خطة مجانية؟',
-            a: 'نعم، وأكثر مما توحي به الرسائل التسويقية. لدى Greptile خطة Starter مجانية بخمسين رصيدًا شهريًا لمطور واحد على عدد غير محدود من المستودعات. وCodeRabbit مجانية إلى الأبد على المستودعات العامة وتمنح تجربة 14 يومًا في كل خططها. ولا توجد لدى Qodo خطة مجانية دائمة، لكنها تقدّم تجربة 14 يومًا دون بطاقة وبرنامجًا مجانيًا لمشاريع المصدر المفتوح المؤهلة.',
-          },
-          {
-            q: 'أيها يمكنني استضافته داخليًا؟',
-            a: 'Qodo هي الأوضح: خدمة سحابية أحادية المستأجر أو نشر محلي بالكامل بمفتاح نموذجك الخاص. وتقدّم CodeRabbit وGreptile الاستضافة الذاتية في خطط المؤسسات، لكن بوثائق عامة أقل: تحقق من التفاصيل مع فرق المبيعات قبل افتراض اجتيازها مراجعتك الأمنية.',
-          },
-          {
-            q: 'هل Qodo هي الشركة نفسها CodiumAI؟',
-            a: 'نعم. Qodo هو الاسم الجديد لشركة CodiumAI بعد إعادة التسمية؛ وقد جرى الإبقاء على المنتجات والتكاملات القائمة تحت الاسم الجديد.',
-          },
-          {
-            q: 'أيها لديه أفضل معدل إيجابيات كاذبة؟',
-            a: 'لا تنشر أي من الأدوات الثلاث معدل إيجابيات كاذبة خضع لتدقيق مستقل حتى أغسطس 2026. وأي نسبة دقيقة تجدها في تحليل طرف ثالث ينبغي التعامل معها على أنها غير موثقة إلى أن ينشر المورّد منهجية اختباره. والأجدى تشغيل تجربتك الخاصة على قاعدة الكود لديك: فهذا هو الرقم الوحيد الذي يصف حالتك.',
-          },
-          {
-            q: 'هل لدى أي منها برنامج تسويق بالعمولة؟',
-            a: 'CodeRabbit وحدها، عبر منصة Dub، بثلاثين دولارًا لكل تسجيل مطور مؤهل — وهذا البرنامج قائم ويمكن التحقق منه. أما صفحة «Partners» لدى Greptile فهي قائمة تكاملات تقنية، وبرنامج «Super Qodoer» لدى Qodo منحة سفراء مجتمعيين لا عمولة مبيعات. ومنصة PromptQuorum ليست مسجلة في أي منها؛ وروابط هذه الصفحة لا تدرّ أي عائد.',
-          },
-        ],
+            { q: 'ما روبوت مراجعة الكود بالذكاء الاصطناعي؟', a: 'هو خدمة تتصل بمنصة Git لديك — GitHub أو GitLab أو Bitbucket أو Azure DevOps — وتعلّق تلقائيًا على طلبات السحب، فتشير إلى الأخطاء والمشكلات الأمنية ومخالفات النمط قبل أن ينظر أي شخص إلى ملف الفروق. ويعمل بوصفه تطبيق Git أو خطوة ضمن التكامل المستمر، وينشر تعليقات في صلب الكود وملخصًا.' },
+            { q: 'هل CodeRabbit أفضل من Greptile؟', a: 'CodeRabbit أنسب للفرق التي تحتاج دعمًا واسعًا لمنصات Git وفوترة مقاعد يسهل توقعها. وGreptile أنسب للفرق التي تنشأ أخطاؤها المتسربة من أعطال تمتد عبر الملفات، لأنها تفهرس المستودع بأكمله بدل النظر إلى طلب سحب واحد بمعزل عن سياقه. ولا توجد أفضلية مطلقة: الأمر يتوقف على مزيج منصاتك وطبيعة أخطائك.' },
+            { q: 'كم يكلّف روبوت مراجعة الكود بالذكاء الاصطناعي شهريًا؟', a: 'حتى أغسطس 2026، تكلّف CodeRabbit أربعة وعشرين دولارًا للمستخدم شهريًا في خطة Pro بالفوترة السنوية، و48 دولارًا في Pro Plus. ولدى Greptile خطة مجانية بخمسين رصيدًا شهريًا وخطة Pro بثلاثين دولارًا للمقعد شهريًا مع دولار لكل رصيد إضافي. وخطة Pro Team من Qodo بثلاثين دولارًا شهريًا حتى 30 مستخدمًا، مدعومة بأرصدة مدفوعة مقدمًا بسعر 0.012 دولار للرصيد. وبالنسبة إلى Greptile وQodo، تعتمد التكلفة الشهرية الفعلية على حجم المراجعات لا على عدد المقاعد.' },
+            { q: 'هل لدى أي منها خطة مجانية؟', a: 'نعم، وأكثر مما توحي به الرسائل التسويقية. لدى Greptile خطة Starter مجانية بخمسين رصيدًا شهريًا لمطور واحد على عدد غير محدود من المستودعات. وCodeRabbit مجانية إلى الأبد على المستودعات العامة وتمنح تجربة 14 يومًا في كل خططها. ولا توجد لدى Qodo خطة مجانية دائمة، لكنها تقدّم تجربة 14 يومًا دون بطاقة وبرنامجًا مجانيًا لمشاريع المصدر المفتوح المؤهلة.' },
+            { q: 'أيها يمكنني استضافته داخليًا؟', a: 'Qodo هي الأوضح: خدمة سحابية أحادية المستأجر أو نشر محلي بالكامل بمفتاح نموذجك الخاص. وتقدّم CodeRabbit وGreptile الاستضافة الذاتية في خطط المؤسسات، لكن بوثائق عامة أقل: تحقق من التفاصيل مع فرق المبيعات قبل افتراض اجتيازها مراجعتك الأمنية.' },
+            { q: 'هل Qodo هي الشركة نفسها CodiumAI؟', a: 'نعم. Qodo هو الاسم الجديد لشركة CodiumAI بعد إعادة التسمية؛ وقد جرى الإبقاء على المنتجات والتكاملات القائمة تحت الاسم الجديد.' },
+            { q: 'أيها لديه أفضل معدل إيجابيات كاذبة؟', a: 'لا تنشر أي من الأدوات الثلاث معدل إيجابيات كاذبة خضع لتدقيق مستقل حتى أغسطس 2026. وأي نسبة دقيقة تجدها في تحليل طرف ثالث ينبغي التعامل معها على أنها غير موثقة إلى أن ينشر المورّد منهجية اختباره. والأجدى تشغيل تجربتك الخاصة على قاعدة الكود لديك: فهذا هو الرقم الوحيد الذي يصف حالتك.' },
+            { q: 'هل لدى أي منها برنامج تسويق بالعمولة؟', a: 'CodeRabbit وحدها، عبر منصة Dub، بثلاثين دولارًا لكل تسجيل مطور مؤهل — وهذا البرنامج قائم ويمكن التحقق منه. أما صفحة «Partners» لدى Greptile فهي قائمة تكاملات تقنية، وبرنامج «Super Qodoer» لدى Qodo منحة سفراء مجتمعيين لا عمولة مبيعات. ومنصة PromptQuorum ليست مسجلة في أي منها؛ وروابط هذه الصفحة لا تدرّ أي عائد.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -3898,47 +3975,71 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'ما روبوت مراجعة الكود بالذكاء الاصطناعي؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'خدمة تتصل بمنصة Git لديك وتعلّق تلقائيًا على طلبات السحب، فتشير إلى الأخطاء والمشكلات الأمنية ومخالفات النمط قبل أن ينظر أي شخص إلى ملف الفروق.',
+          {
+            '@type': 'Question',
+            'name': 'ما روبوت مراجعة الكود بالذكاء الاصطناعي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'هو خدمة تتصل بمنصة Git لديك — GitHub أو GitLab أو Bitbucket أو Azure DevOps — وتعلّق تلقائيًا على طلبات السحب، فتشير إلى الأخطاء والمشكلات الأمنية ومخالفات النمط قبل أن ينظر أي شخص إلى ملف الفروق. ويعمل بوصفه تطبيق Git أو خطوة ضمن التكامل المستمر، وينشر تعليقات في صلب الكود وملخصًا.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'كم يكلّف روبوت مراجعة الكود بالذكاء الاصطناعي شهريًا؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'تكلّف CodeRabbit 24 دولارًا للمستخدم شهريًا في Pro بالفوترة السنوية و48 دولارًا في Pro Plus. وGreptile مجانية بخمسين رصيدًا شهريًا وبثلاثين دولارًا للمقعد في Pro. وخطة Pro Team من Qodo بثلاثين دولارًا شهريًا حتى 30 مستخدمًا بسعر 0.012 دولار للرصيد.',
+          {
+            '@type': 'Question',
+            'name': 'هل CodeRabbit أفضل من Greptile؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit أنسب للفرق التي تحتاج دعمًا واسعًا لمنصات Git وفوترة مقاعد يسهل توقعها. وGreptile أنسب للفرق التي تنشأ أخطاؤها المتسربة من أعطال تمتد عبر الملفات، لأنها تفهرس المستودع بأكمله بدل النظر إلى طلب سحب واحد بمعزل عن سياقه. ولا توجد أفضلية مطلقة: الأمر يتوقف على مزيج منصاتك وطبيعة أخطائك.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل لأدوات مراجعة الكود بالذكاء الاصطناعي خطة مجانية؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'لدى Greptile خطة Starter مجانية بخمسين رصيدًا شهريًا. وCodeRabbit مجانية إلى الأبد على المستودعات العامة. ولا توجد لدى Qodo خطة مجانية دائمة، لكنها تقدّم تجربة 14 يومًا وبرنامج مصدر مفتوح مجانيًا.',
+          {
+            '@type': 'Question',
+            'name': 'كم يكلّف روبوت مراجعة الكود بالذكاء الاصطناعي شهريًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'حتى أغسطس 2026، تكلّف CodeRabbit أربعة وعشرين دولارًا للمستخدم شهريًا في خطة Pro بالفوترة السنوية، و48 دولارًا في Pro Plus. ولدى Greptile خطة مجانية بخمسين رصيدًا شهريًا وخطة Pro بثلاثين دولارًا للمقعد شهريًا مع دولار لكل رصيد إضافي. وخطة Pro Team من Qodo بثلاثين دولارًا شهريًا حتى 30 مستخدمًا، مدعومة بأرصدة مدفوعة مقدمًا بسعر 0.012 دولار للرصيد. وبالنسبة إلى Greptile وQodo، تعتمد التكلفة الشهرية الفعلية على حجم المراجعات لا على عدد المقاعد.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'أي أداة لمراجعة الكود بالذكاء الاصطناعي تعمل محليًا؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'تقدّم Qodo خدمة سحابية أحادية المستأجر أو نشرًا محليًا بالكامل بمفتاح نموذج لغوي خاص بك. وتقدّم CodeRabbit وGreptile الاستضافة الذاتية في خطط المؤسسات بوثائق عامة أقل.',
+          {
+            '@type': 'Question',
+            'name': 'هل لدى أي منها خطة مجانية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، وأكثر مما توحي به الرسائل التسويقية. لدى Greptile خطة Starter مجانية بخمسين رصيدًا شهريًا لمطور واحد على عدد غير محدود من المستودعات. وCodeRabbit مجانية إلى الأبد على المستودعات العامة وتمنح تجربة 14 يومًا في كل خططها. ولا توجد لدى Qodo خطة مجانية دائمة، لكنها تقدّم تجربة 14 يومًا دون بطاقة وبرنامجًا مجانيًا لمشاريع المصدر المفتوح المؤهلة.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل لهذه الأدوات برامج تسويق بالعمولة؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit وحدها، عبر منصة Dub، بثلاثين دولارًا لكل تسجيل مؤهل. أما صفحة الشركاء لدى Greptile فقائمة تكاملات، وبرنامج Super Qodoer لدى Qodo منحة مجتمعية لا عمولة.',
+          {
+            '@type': 'Question',
+            'name': 'أيها يمكنني استضافته داخليًا؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo هي الأوضح: خدمة سحابية أحادية المستأجر أو نشر محلي بالكامل بمفتاح نموذجك الخاص. وتقدّم CodeRabbit وGreptile الاستضافة الذاتية في خطط المؤسسات، لكن بوثائق عامة أقل: تحقق من التفاصيل مع فرق المبيعات قبل افتراض اجتيازها مراجعتك الأمنية.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل Qodo هي الشركة نفسها CodiumAI؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. Qodo هو الاسم الجديد لشركة CodiumAI بعد إعادة التسمية؛ وقد جرى الإبقاء على المنتجات والتكاملات القائمة تحت الاسم الجديد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أيها لديه أفضل معدل إيجابيات كاذبة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لا تنشر أي من الأدوات الثلاث معدل إيجابيات كاذبة خضع لتدقيق مستقل حتى أغسطس 2026. وأي نسبة دقيقة تجدها في تحليل طرف ثالث ينبغي التعامل معها على أنها غير موثقة إلى أن ينشر المورّد منهجية اختباره. والأجدى تشغيل تجربتك الخاصة على قاعدة الكود لديك: فهذا هو الرقم الوحيد الذي يصف حالتك.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لدى أي منها برنامج تسويق بالعمولة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit وحدها، عبر منصة Dub، بثلاثين دولارًا لكل تسجيل مطور مؤهل — وهذا البرنامج قائم ويمكن التحقق منه. أما صفحة «Partners» لدى Greptile فهي قائمة تكاملات تقنية، وبرنامج «Super Qodoer» لدى Qodo منحة سفراء مجتمعيين لا عمولة مبيعات. ومنصة PromptQuorum ليست مسجلة في أي منها؛ وروابط هذه الصفحة لا تدرّ أي عائد.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -4295,39 +4396,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'AI 코드 리뷰 봇이란 무엇인가요?',
-            a: 'GitHub, GitLab, Bitbucket, Azure DevOps 같은 Git 플랫폼에 연결되어, 사람이 diff를 보기 전에 버그·보안 문제·스타일 위반을 짚어내는 코멘트를 풀 리퀘스트에 자동으로 남기는 서비스입니다. Git 앱이나 CI 단계로 동작하며 인라인 코멘트와 요약을 게시합니다.',
-          },
-          {
-            q: 'CodeRabbit이 Greptile보다 나은가요?',
-            a: 'CodeRabbit은 폭넓은 Git 플랫폼 지원과 예측 가능한 좌석 과금이 필요한 팀에 더 맞습니다. Greptile은 놓친 버그가 파일 간 파손에서 비롯되는 팀에 더 맞는데, 풀 리퀘스트 하나를 따로 보지 않고 저장소 전체를 인덱싱하기 때문입니다. 절대적인 우열은 없으며 플랫폼 구성과 버그의 성격에 달려 있습니다.',
-          },
-          {
-            q: 'AI 코드 리뷰 봇의 월 비용은 얼마인가요?',
-            a: '2026년 8월 기준 CodeRabbit은 연간 결제 Pro가 사용자당 월 24달러, Pro Plus가 48달러입니다. Greptile은 월 50크레딧 무료 플랜과 좌석당 월 30달러에 추가 크레딧 개당 1달러인 Pro 플랜이 있습니다. Qodo의 Pro Team은 30명까지 월 30달러이며 개당 0.012달러의 선불 크레딧으로 뒷받침됩니다. Greptile과 Qodo는 실제 월 비용이 좌석 수가 아니라 리뷰 건수에 달려 있습니다.',
-          },
-          {
-            q: '무료 플랜이 있는 제품이 있나요?',
-            a: '네, 홍보에서 받는 인상보다 많습니다. Greptile에는 개발자 1명에게 저장소 무제한으로 월 50크레딧을 주는 무료 Starter 플랜이 있습니다. CodeRabbit은 공개 저장소에서 영구 무료이며 모든 플랜에 14일 체험을 제공합니다. Qodo에는 영구 무료 플랜이 없지만 카드 없는 14일 체험과 자격을 갖춘 오픈소스 프로젝트를 위한 무료 프로그램이 있습니다.',
-          },
-          {
-            q: '자체 환경에 설치할 수 있는 것은 어느 것인가요?',
-            a: 'Qodo가 가장 명확합니다. 자체 LLM 키를 쓰는 싱글 테넌트 SaaS 또는 완전 온프레미스 배포를 지원합니다. CodeRabbit과 Greptile도 엔터프라이즈 플랜에서 자체 호스팅을 제공하지만 공개 문서가 적으므로, 보안 검토를 통과하리라 단정하지 말고 영업팀에 세부 사항을 확인하세요.',
-          },
-          {
-            q: 'Qodo는 CodiumAI와 같은 회사인가요?',
-            a: '네. Qodo는 CodiumAI가 사명을 바꾼 이름이며, 기존 제품과 연동은 새 이름 아래 그대로 유지되었습니다.',
-          },
-          {
-            q: '오탐률이 가장 낮은 것은 어느 것인가요?',
-            a: '2026년 8월 기준 세 제품 모두 독립 감사를 거친 오탐률을 공개하지 않습니다. 제3자 분석에서 본 구체적인 수치는 벤더가 시험 방법론을 공개하기 전까지 검증되지 않은 것으로 취급해야 합니다. 그보다 자신의 코드베이스에서 직접 파일럿을 돌리세요. 여러분의 상황을 설명하는 숫자는 그것뿐입니다.',
-          },
-          {
-            q: '제휴 프로그램이 있는 제품이 있나요?',
-            a: 'CodeRabbit뿐이며 Dub을 통해 적격 개발자 가입 1건당 30달러입니다. 이 프로그램은 실제로 운영 중이며 검증 가능합니다. Greptile의 "Partners" 페이지는 기술 연동 목록이고, Qodo의 "Super Qodoer" 프로그램은 판매 수수료가 아니라 커뮤니티 앰배서더 지원금입니다. PromptQuorum은 어느 곳에도 등록되어 있지 않으며 이 페이지의 링크로 수익을 얻지 않습니다.',
-          },
-        ],
+            { q: 'AI 코드 리뷰 봇이란 무엇인가요?', a: 'GitHub, GitLab, Bitbucket, Azure DevOps 같은 Git 플랫폼에 연결되어, 사람이 diff를 보기 전에 버그·보안 문제·스타일 위반을 짚어내는 코멘트를 풀 리퀘스트에 자동으로 남기는 서비스입니다. Git 앱이나 CI 단계로 동작하며 인라인 코멘트와 요약을 게시합니다.' },
+            { q: 'CodeRabbit이 Greptile보다 나은가요?', a: 'CodeRabbit은 폭넓은 Git 플랫폼 지원과 예측 가능한 좌석 과금이 필요한 팀에 더 맞습니다. Greptile은 놓친 버그가 파일 간 파손에서 비롯되는 팀에 더 맞는데, 풀 리퀘스트 하나를 따로 보지 않고 저장소 전체를 인덱싱하기 때문입니다. 절대적인 우열은 없으며 플랫폼 구성과 버그의 성격에 달려 있습니다.' },
+            { q: 'AI 코드 리뷰 봇의 월 비용은 얼마인가요?', a: '2026년 8월 기준 CodeRabbit은 연간 결제 Pro가 사용자당 월 24달러, Pro Plus가 48달러입니다. Greptile은 월 50크레딧 무료 플랜과 좌석당 월 30달러에 추가 크레딧 개당 1달러인 Pro 플랜이 있습니다. Qodo의 Pro Team은 30명까지 월 30달러이며 개당 0.012달러의 선불 크레딧으로 뒷받침됩니다. Greptile과 Qodo는 실제 월 비용이 좌석 수가 아니라 리뷰 건수에 달려 있습니다.' },
+            { q: '무료 플랜이 있는 제품이 있나요?', a: '네, 홍보에서 받는 인상보다 많습니다. Greptile에는 개발자 1명에게 저장소 무제한으로 월 50크레딧을 주는 무료 Starter 플랜이 있습니다. CodeRabbit은 공개 저장소에서 영구 무료이며 모든 플랜에 14일 체험을 제공합니다. Qodo에는 영구 무료 플랜이 없지만 카드 없는 14일 체험과 자격을 갖춘 오픈소스 프로젝트를 위한 무료 프로그램이 있습니다.' },
+            { q: '자체 환경에 설치할 수 있는 것은 어느 것인가요?', a: 'Qodo가 가장 명확합니다. 자체 LLM 키를 쓰는 싱글 테넌트 SaaS 또는 완전 온프레미스 배포를 지원합니다. CodeRabbit과 Greptile도 엔터프라이즈 플랜에서 자체 호스팅을 제공하지만 공개 문서가 적으므로, 보안 검토를 통과하리라 단정하지 말고 영업팀에 세부 사항을 확인하세요.' },
+            { q: 'Qodo는 CodiumAI와 같은 회사인가요?', a: '네. Qodo는 CodiumAI가 사명을 바꾼 이름이며, 기존 제품과 연동은 새 이름 아래 그대로 유지되었습니다.' },
+            { q: '오탐률이 가장 낮은 것은 어느 것인가요?', a: '2026년 8월 기준 세 제품 모두 독립 감사를 거친 오탐률을 공개하지 않습니다. 제3자 분석에서 본 구체적인 수치는 벤더가 시험 방법론을 공개하기 전까지 검증되지 않은 것으로 취급해야 합니다. 그보다 자신의 코드베이스에서 직접 파일럿을 돌리세요. 여러분의 상황을 설명하는 숫자는 그것뿐입니다.' },
+            { q: '제휴 프로그램이 있는 제품이 있나요?', a: 'CodeRabbit뿐이며 Dub을 통해 적격 개발자 가입 1건당 30달러입니다. 이 프로그램은 실제로 운영 중이며 검증 가능합니다. Greptile의 "Partners" 페이지는 기술 연동 목록이고, Qodo의 "Super Qodoer" 프로그램은 판매 수수료가 아니라 커뮤니티 앰배서더 지원금입니다. PromptQuorum은 어느 곳에도 등록되어 있지 않으며 이 페이지의 링크로 수익을 얻지 않습니다.' },
+            { q: 'AI 코드 리뷰 도구에 무료 플랜이 있나요?', a: 'Greptile에는 월 50크레딧 무료 Starter 플랜이 있습니다. CodeRabbit은 공개 저장소에서 영구 무료입니다. Qodo에는 영구 무료 플랜이 없지만 14일 체험과 무료 오픈소스 프로그램이 있습니다.' },
+            { q: '온프레미스로 실행할 수 있는 AI 코드 리뷰 도구는 무엇인가요?', a: 'Qodo는 자체 LLM 키를 쓰는 싱글 테넌트 SaaS 또는 완전 온프레미스 배포를 제공합니다. CodeRabbit과 Greptile은 엔터프라이즈 플랜에서 자체 호스팅을 제공하지만 공개 문서가 적습니다.' },
+            { q: '이 도구들에 제휴 프로그램이 있나요?', a: 'CodeRabbit뿐이며 Dub을 통해 적격 가입 1건당 30달러입니다. Greptile의 파트너 페이지는 연동 목록이고 Qodo의 Super Qodoer는 수수료가 아니라 커뮤니티 지원금입니다.' },
+          ],
       },
       verdict: {
         id: 'verdict',
@@ -4390,47 +4470,95 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'AI 코드 리뷰 봇이란 무엇인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Git 플랫폼에 연결되어, 사람이 diff를 보기 전에 버그·보안 문제·스타일 위반을 짚어내는 코멘트를 풀 리퀘스트에 자동으로 남기는 서비스입니다.',
+          {
+            '@type': 'Question',
+            'name': 'AI 코드 리뷰 봇이란 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'GitHub, GitLab, Bitbucket, Azure DevOps 같은 Git 플랫폼에 연결되어, 사람이 diff를 보기 전에 버그·보안 문제·스타일 위반을 짚어내는 코멘트를 풀 리퀘스트에 자동으로 남기는 서비스입니다. Git 앱이나 CI 단계로 동작하며 인라인 코멘트와 요약을 게시합니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AI 코드 리뷰 봇의 월 비용은 얼마인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit은 연간 결제 Pro가 사용자당 월 24달러, Pro Plus가 48달러입니다. Greptile은 월 50크레딧 무료, Pro는 좌석당 월 30달러입니다. Qodo의 Pro Team은 30명까지 월 30달러, 크레딧당 0.012달러입니다.',
+          {
+            '@type': 'Question',
+            'name': 'CodeRabbit이 Greptile보다 나은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit은 폭넓은 Git 플랫폼 지원과 예측 가능한 좌석 과금이 필요한 팀에 더 맞습니다. Greptile은 놓친 버그가 파일 간 파손에서 비롯되는 팀에 더 맞는데, 풀 리퀘스트 하나를 따로 보지 않고 저장소 전체를 인덱싱하기 때문입니다. 절대적인 우열은 없으며 플랫폼 구성과 버그의 성격에 달려 있습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'AI 코드 리뷰 도구에 무료 플랜이 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Greptile에는 월 50크레딧 무료 Starter 플랜이 있습니다. CodeRabbit은 공개 저장소에서 영구 무료입니다. Qodo에는 영구 무료 플랜이 없지만 14일 체험과 무료 오픈소스 프로그램이 있습니다.',
+          {
+            '@type': 'Question',
+            'name': 'AI 코드 리뷰 봇의 월 비용은 얼마인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 8월 기준 CodeRabbit은 연간 결제 Pro가 사용자당 월 24달러, Pro Plus가 48달러입니다. Greptile은 월 50크레딧 무료 플랜과 좌석당 월 30달러에 추가 크레딧 개당 1달러인 Pro 플랜이 있습니다. Qodo의 Pro Team은 30명까지 월 30달러이며 개당 0.012달러의 선불 크레딧으로 뒷받침됩니다. Greptile과 Qodo는 실제 월 비용이 좌석 수가 아니라 리뷰 건수에 달려 있습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '온프레미스로 실행할 수 있는 AI 코드 리뷰 도구는 무엇인가요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Qodo는 자체 LLM 키를 쓰는 싱글 테넌트 SaaS 또는 완전 온프레미스 배포를 제공합니다. CodeRabbit과 Greptile은 엔터프라이즈 플랜에서 자체 호스팅을 제공하지만 공개 문서가 적습니다.',
+          {
+            '@type': 'Question',
+            'name': '무료 플랜이 있는 제품이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네, 홍보에서 받는 인상보다 많습니다. Greptile에는 개발자 1명에게 저장소 무제한으로 월 50크레딧을 주는 무료 Starter 플랜이 있습니다. CodeRabbit은 공개 저장소에서 영구 무료이며 모든 플랜에 14일 체험을 제공합니다. Qodo에는 영구 무료 플랜이 없지만 카드 없는 14일 체험과 자격을 갖춘 오픈소스 프로젝트를 위한 무료 프로그램이 있습니다.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '이 도구들에 제휴 프로그램이 있나요?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'CodeRabbit뿐이며 Dub을 통해 적격 가입 1건당 30달러입니다. Greptile의 파트너 페이지는 연동 목록이고 Qodo의 Super Qodoer는 수수료가 아니라 커뮤니티 지원금입니다.',
+          {
+            '@type': 'Question',
+            'name': '자체 환경에 설치할 수 있는 것은 어느 것인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo가 가장 명확합니다. 자체 LLM 키를 쓰는 싱글 테넌트 SaaS 또는 완전 온프레미스 배포를 지원합니다. CodeRabbit과 Greptile도 엔터프라이즈 플랜에서 자체 호스팅을 제공하지만 공개 문서가 적으므로, 보안 검토를 통과하리라 단정하지 말고 영업팀에 세부 사항을 확인하세요.',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Qodo는 CodiumAI와 같은 회사인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '네. Qodo는 CodiumAI가 사명을 바꾼 이름이며, 기존 제품과 연동은 새 이름 아래 그대로 유지되었습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '오탐률이 가장 낮은 것은 어느 것인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026년 8월 기준 세 제품 모두 독립 감사를 거친 오탐률을 공개하지 않습니다. 제3자 분석에서 본 구체적인 수치는 벤더가 시험 방법론을 공개하기 전까지 검증되지 않은 것으로 취급해야 합니다. 그보다 자신의 코드베이스에서 직접 파일럿을 돌리세요. 여러분의 상황을 설명하는 숫자는 그것뿐입니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '제휴 프로그램이 있는 제품이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit뿐이며 Dub을 통해 적격 개발자 가입 1건당 30달러입니다. 이 프로그램은 실제로 운영 중이며 검증 가능합니다. Greptile의 "Partners" 페이지는 기술 연동 목록이고, Qodo의 "Super Qodoer" 프로그램은 판매 수수료가 아니라 커뮤니티 앰배서더 지원금입니다. PromptQuorum은 어느 곳에도 등록되어 있지 않으며 이 페이지의 링크로 수익을 얻지 않습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'AI 코드 리뷰 도구에 무료 플랜이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Greptile에는 월 50크레딧 무료 Starter 플랜이 있습니다. CodeRabbit은 공개 저장소에서 영구 무료입니다. Qodo에는 영구 무료 플랜이 없지만 14일 체험과 무료 오픈소스 프로그램이 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '온프레미스로 실행할 수 있는 AI 코드 리뷰 도구는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qodo는 자체 LLM 키를 쓰는 싱글 테넌트 SaaS 또는 완전 온프레미스 배포를 제공합니다. CodeRabbit과 Greptile은 엔터프라이즈 플랜에서 자체 호스팅을 제공하지만 공개 문서가 적습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '이 도구들에 제휴 프로그램이 있나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CodeRabbit뿐이며 Dub을 통해 적격 가입 1건당 30달러입니다. Greptile의 파트너 페이지는 연동 목록이고 Qodo의 Super Qodoer는 수수료가 아니라 커뮤니티 지원금입니다.',
+            },
+          },
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',

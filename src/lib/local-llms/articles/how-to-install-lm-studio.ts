@@ -151,22 +151,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'troubleshooting',
           title: 'Troubleshooting Common LM Studio Issues',
           faqs: [
-            {
-              q: 'LM Studio says "Not enough memory to load model"',
-              a: 'The model requires more RAM than is available. Close other applications to free memory, or select a smaller quantization (Q3_K_S instead of Q4_K_M). As a rule: multiply the model file size by 1.2 to estimate the RAM needed. A 4.5 GB file needs ~5.4 GB free RAM.',
-            },
-            {
-              q: 'The model is generating very slowly (under 5 tokens/sec)',
-              a: 'The model is running entirely on CPU. Check GPU Layers in the right panel -- if it shows 0, your GPU is not being used. On macOS, LM Studio enables Metal (GPU) automatically for Apple Silicon. On Windows/Linux with NVIDIA, ensure your driver is up to date and increase GPU Layers to the maximum value shown.',
-            },
-            {
-              q: 'I cannot find a specific model in the LM Studio search',
-              a: 'LM Studio searches Hugging Face for GGUF files. If a model is not appearing, try searching by the Hugging Face repository name directly (e.g., "bartowski/Llama-3.1-8B-Instruct-GGUF"). Some newer models may not be indexed yet.',
-            },
-            {
-              q: 'The local server returns "model not found" errors',
-              a: 'A model must be loaded in the Local Server tab before the server can respond. Open the Local Server tab, select a model from the dropdown, and click Start Server. The model name in API requests can be any string -- LM Studio uses whichever model is currently loaded.',
-            },
+            { q: 'LM Studio says "Not enough memory to load model"', a: 'The model requires more RAM than is available. Close other applications to free memory, or select a smaller quantization (Q3_K_S instead of Q4_K_M). As a rule: multiply the model file size by 1.2 to estimate the RAM needed. A 4.5 GB file needs ~5.4 GB free RAM.' },
+            { q: 'The model is generating very slowly (under 5 tokens/sec)', a: 'The model is running entirely on CPU. Check GPU Layers in the right panel -- if it shows 0, your GPU is not being used. On macOS, LM Studio enables Metal (GPU) automatically for Apple Silicon. On Windows/Linux with NVIDIA, ensure your driver is up to date and increase GPU Layers to the maximum value shown.' },
+            { q: 'I cannot find a specific model in the LM Studio search', a: 'LM Studio searches Hugging Face for GGUF files. If a model is not appearing, try searching by the Hugging Face repository name directly (e.g., "bartowski/Llama-3.1-8B-Instruct-GGUF"). Some newer models may not be indexed yet.' },
+            { q: 'The local server returns "model not found" errors', a: 'A model must be loaded in the Local Server tab before the server can respond. Open the Local Server tab, select a model from the dropdown, and click Start Server. The model name in API requests can be any string -- LM Studio uses whichever model is currently loaded.' },
+            { q: 'How do I download LM Studio?', a: 'Go to lmstudio.ai and click the download button for your OS. Available for macOS (Apple Silicon + Intel), Windows 10/11, and Linux (AppImage).' },
+            { q: 'What are the minimum requirements for LM Studio?', a: 'Minimum: 8GB RAM, macOS 13.6, Windows 10, or Ubuntu 22.04. No GPU required -- Apple Silicon Macs and NVIDIA/AMD GPUs are supported for acceleration.' },
+            { q: 'How do I find and download models in LM Studio?', a: 'Click the Search tab (magnifying glass) in the sidebar, search for a model name (e.g., "llama 3.1"), select a quantization level (Q4_K_M for 8GB RAM), and click the download arrow.' },
+            { q: 'What quantization should I use in LM Studio with 8GB RAM?', a: 'Q4_K_M is the recommended quantization for 8GB RAM systems. It gives the best balance of model quality and memory usage for 7B models (~4.5GB file size).' },
+            { q: 'Does LM Studio include an OpenAI-compatible API?', a: 'Yes. Enable the Local Server tab in LM Studio to start an OpenAI-compatible API at http://localhost:1234. Any OpenAI SDK app can connect using this URL as the base_url.' },
+            { q: 'How is LM Studio different from Ollama?', a: 'LM Studio is GUI-first: browse models, manage settings, and chat through a visual interface. Ollama is CLI-first: faster to set up for developers, but requires terminal commands. Both use llama.cpp under the hood.' },
+            { q: 'Can I use LM Studio on Linux?', a: 'Yes. Download the .AppImage file from lmstudio.ai. Make it executable: chmod +x LM-Studio-*.AppImage and run it. No system installation is needed -- it runs as a portable app.' },
+            { q: 'Is LM Studio free?', a: 'LM Studio is free for personal use. It is developed by LM Studio, Inc. Commercial use requires a paid license. All downloaded models are free depending on their individual licenses.' },
+            { q: 'How do I enable GPU acceleration in LM Studio?', a: 'On NVIDIA: ensure CUDA drivers are installed. On AMD: ROCm is required. On Apple Silicon: Metal is used automatically. Go to Settings → GPU in LM Studio to verify GPU is detected and layers are offloaded.' },
+            { q: 'What is the difference between Q4_K_M and Q5_K_M in LM Studio?', a: 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with ~1% quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.' },
           ],
         },
         nextSteps: {
@@ -231,54 +229,116 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'LM Studio says "Not enough memory to load model"',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The model requires more RAM than is available. Close other applications to free memory, or select a smaller quantization (Q3_K_S instead of Q4_K_M). As a rule: multiply the model file size by 1.2 to estimate the RAM needed. A 4.5 GB file needs ~5.4 GB free RAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'The model is generating very slowly (under 5 tokens/sec)',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The model is running entirely on CPU. Check GPU Layers in the right panel -- if it shows 0, your GPU is not being used. On macOS, LM Studio enables Metal (GPU) automatically for Apple Silicon. On Windows/Linux with NVIDIA, ensure your driver is up to date and increase GPU Layers to the maximum value shown.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'I cannot find a specific model in the LM Studio search',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio searches Hugging Face for GGUF files. If a model is not appearing, try searching by the Hugging Face repository name directly (e.g., "bartowski/Llama-3.1-8B-Instruct-GGUF"). Some newer models may not be indexed yet.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'The local server returns "model not found" errors',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A model must be loaded in the Local Server tab before the server can respond. Open the Local Server tab, select a model from the dropdown, and click Start Server. The model name in API requests can be any string -- LM Studio uses whichever model is currently loaded.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'How do I download LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Go to lmstudio.ai and click the download button for your OS. Available for macOS (Apple Silicon + Intel), Windows 10/11, and Linux (AppImage).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Go to lmstudio.ai and click the download button for your OS. Available for macOS (Apple Silicon + Intel), Windows 10/11, and Linux (AppImage).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What are the minimum requirements for LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum: 8GB RAM, macOS 13.6, Windows 10, or Ubuntu 22.04. No GPU required -- Apple Silicon Macs and NVIDIA/AMD GPUs are supported for acceleration.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Minimum: 8GB RAM, macOS 13.6, Windows 10, or Ubuntu 22.04. No GPU required -- Apple Silicon Macs and NVIDIA/AMD GPUs are supported for acceleration.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How do I find and download models in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Click the Search tab (magnifying glass) in the sidebar, search for a model name (e.g., "llama 3.1"), select a quantization level (Q4_K_M for 8GB RAM), and click the download arrow.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Click the Search tab (magnifying glass) in the sidebar, search for a model name (e.g., "llama 3.1"), select a quantization level (Q4_K_M for 8GB RAM), and click the download arrow.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What quantization should I use in LM Studio with 8GB RAM?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M is the recommended quantization for 8GB RAM systems. It gives the best balance of model quality and memory usage for 7B models (~4.5GB file size).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M is the recommended quantization for 8GB RAM systems. It gives the best balance of model quality and memory usage for 7B models (~4.5GB file size).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Does LM Studio include an OpenAI-compatible API?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Enable the Local Server tab in LM Studio to start an OpenAI-compatible API at http://localhost:1234. Any OpenAI SDK app can connect using this URL as the base_url.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Enable the Local Server tab in LM Studio to start an OpenAI-compatible API at http://localhost:1234. Any OpenAI SDK app can connect using this URL as the base_url.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How is LM Studio different from Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio is GUI-first: browse models, manage settings, and chat through a visual interface. Ollama is CLI-first: faster to set up for developers, but requires terminal commands. Both use llama.cpp under the hood.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio is GUI-first: browse models, manage settings, and chat through a visual interface. Ollama is CLI-first: faster to set up for developers, but requires terminal commands. Both use llama.cpp under the hood.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Can I use LM Studio on Linux?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Download the .AppImage file from lmstudio.ai. Make it executable: chmod +x LM-Studio-*.AppImage and run it. No system installation is needed -- it runs as a portable app.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Download the .AppImage file from lmstudio.ai. Make it executable: chmod +x LM-Studio-*.AppImage and run it. No system installation is needed -- it runs as a portable app.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Is LM Studio free?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio is free for personal use. It is developed by LM Studio, Inc. Commercial use requires a paid license. All downloaded models are free depending on their individual licenses.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio is free for personal use. It is developed by LM Studio, Inc. Commercial use requires a paid license. All downloaded models are free depending on their individual licenses.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'How do I enable GPU acceleration in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'On NVIDIA: ensure CUDA drivers are installed. On AMD: ROCm is required. On Apple Silicon: Metal is used automatically. Go to Settings → GPU in LM Studio to verify GPU is detected and layers are offloaded.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'On NVIDIA: ensure CUDA drivers are installed. On AMD: ROCm is required. On Apple Silicon: Metal is used automatically. Go to Settings → GPU in LM Studio to verify GPU is detected and layers are offloaded.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'What is the difference between Q4_K_M and Q5_K_M in LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with ~1% quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M uses 4-bit quantization (~4.5GB for 7B) with ~1% quality loss. Q5_K_M uses 5-bit (~5.7GB) with minimal loss. Use Q4_K_M for 8GB RAM; Q5_K_M or Q6_K for 16GB RAM systems.',
+            },
+          },
         ]
       },
     },
@@ -424,38 +484,24 @@ schema: {
           id: 'troubleshooting',
           title: 'Solución de problemas comunes en LM Studio',
           faqs: [
-            {
-              q: '¿Cómo instalo LM Studio en Ubuntu o Linux Mint?',
-              a: 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 22.04 o equivalente; se recomienda Ubuntu 24.04.',
-            },
-            {
-              q: '¿Dónde está el .exe de LM Studio para Windows?',
-              a: 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\\\LM-Studio y no pide permisos de administrador. El mínimo es Windows 10; se recomienda Windows 11.',
-            },
-            {
-              q: '¿Cómo instalo LM Studio en Mac?',
-              a: 'Descarga el archivo .dmg desde lmstudio.ai, ábrelo y arrastra LM Studio a la carpeta Aplicaciones. La primera vez que lo abras, macOS mostrará un aviso de seguridad: apruébalo en Preferencias del Sistema → Privacidad y Seguridad. El mínimo es macOS 13.6 y se recomienda macOS 14 o posterior.',
-            },
-            {
-              q: '¿Se llama LM Studio o LLM Studio?',
-              a: 'El nombre correcto es LM Studio, sin la segunda L. "LLM Studio", "LMStudio" y "LM Estudio" son variantes que mucha gente escribe al buscarlo, pero el producto y su web oficial son LM Studio (lmstudio.ai). Si buscas el instalador con otro nombre puede que no llegues a la descarga oficial, así que conviene comprobar el dominio antes de descargar nada.',
-            },
-            {
-              q: 'LM Studio muestra "Not enough memory to load model"',
-              a: 'El modelo requiere más RAM de la disponible. Cierra otras aplicaciones para liberar memoria o selecciona una cuantización menor (Q3_K_S en lugar de Q4_K_M). Como regla general: multiplica el tamaño del archivo del modelo por 1.2 para estimar la RAM necesaria. Un archivo de 4.5 GB necesita ~5.4 GB de RAM libre.',
-            },
-            {
-              q: 'El modelo genera texto muy lentamente (menos de 5 tokens/seg)',
-              a: 'El modelo está ejecutándose completamente en CPU. Comprueba GPU Layers en el panel derecho -- si muestra 0, tu GPU no se está usando. En macOS, LM Studio activa Metal (GPU) automáticamente para Apple Silicon. En Windows/Linux con NVIDIA, asegúrate de tener el driver actualizado y aumenta GPU Layers al valor máximo que se muestre.',
-            },
-            {
-              q: 'No encuentro un modelo específico en la búsqueda de LM Studio',
-              a: 'LM Studio busca archivos GGUF en Hugging Face. Si un modelo no aparece, intenta buscar directamente por el nombre del repositorio de Hugging Face (por ejemplo, "bartowski/Llama-3.1-8B-Instruct-GGUF"). Es posible que algunos modelos más recientes aún no estén indexados.',
-            },
-            {
-              q: 'El servidor local devuelve errores "model not found"',
-              a: 'Es necesario que haya un modelo cargado en la pestaña Local Server antes de que el servidor pueda responder. Abre la pestaña Local Server, selecciona un modelo en el menú desplegable y haz clic en Start Server. El nombre del modelo en las solicitudes de API puede ser cualquier cadena -- LM Studio usa el modelo que esté cargado en ese momento.',
-            },
+            { q: '¿Cómo instalo LM Studio en Ubuntu o Linux Mint?', a: 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 22.04 o equivalente; se recomienda Ubuntu 24.04.' },
+            { q: '¿Dónde está el .exe de LM Studio para Windows?', a: 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\\\LM-Studio y no pide permisos de administrador. El mínimo es Windows 10; se recomienda Windows 11.' },
+            { q: '¿Cómo instalo LM Studio en Mac?', a: 'Descarga el archivo .dmg desde lmstudio.ai, ábrelo y arrastra LM Studio a la carpeta Aplicaciones. La primera vez que lo abras, macOS mostrará un aviso de seguridad: apruébalo en Preferencias del Sistema → Privacidad y Seguridad. El mínimo es macOS 13.6 y se recomienda macOS 14 o posterior.' },
+            { q: '¿Se llama LM Studio o LLM Studio?', a: 'El nombre correcto es LM Studio, sin la segunda L. "LLM Studio", "LMStudio" y "LM Estudio" son variantes que mucha gente escribe al buscarlo, pero el producto y su web oficial son LM Studio (lmstudio.ai). Si buscas el instalador con otro nombre puede que no llegues a la descarga oficial, así que conviene comprobar el dominio antes de descargar nada.' },
+            { q: 'LM Studio muestra "Not enough memory to load model"', a: 'El modelo requiere más RAM de la disponible. Cierra otras aplicaciones para liberar memoria o selecciona una cuantización menor (Q3_K_S en lugar de Q4_K_M). Como regla general: multiplica el tamaño del archivo del modelo por 1.2 para estimar la RAM necesaria. Un archivo de 4.5 GB necesita ~5.4 GB de RAM libre.' },
+            { q: 'El modelo genera texto muy lentamente (menos de 5 tokens/seg)', a: 'El modelo está ejecutándose completamente en CPU. Comprueba GPU Layers en el panel derecho -- si muestra 0, tu GPU no se está usando. En macOS, LM Studio activa Metal (GPU) automáticamente para Apple Silicon. En Windows/Linux con NVIDIA, asegúrate de tener el driver actualizado y aumenta GPU Layers al valor máximo que se muestre.' },
+            { q: 'No encuentro un modelo específico en la búsqueda de LM Studio', a: 'LM Studio busca archivos GGUF en Hugging Face. Si un modelo no aparece, intenta buscar directamente por el nombre del repositorio de Hugging Face (por ejemplo, "bartowski/Llama-3.1-8B-Instruct-GGUF"). Es posible que algunos modelos más recientes aún no estén indexados.' },
+            { q: 'El servidor local devuelve errores "model not found"', a: 'Es necesario que haya un modelo cargado en la pestaña Local Server antes de que el servidor pueda responder. Abre la pestaña Local Server, selecciona un modelo en el menú desplegable y haz clic en Start Server. El nombre del modelo en las solicitudes de API puede ser cualquier cadena -- LM Studio usa el modelo que esté cargado en ese momento.' },
+            { q: '¿Cómo descargo LM Studio?', a: 'Ve a lmstudio.ai y haz clic en el botón de descarga para tu sistema operativo. Disponible para macOS (Apple Silicon + Intel), Windows 10/11 y Linux (AppImage).' },
+            { q: '¿Cuáles son los requisitos mínimos para LM Studio?', a: 'Mínimo: 8 GB de RAM, macOS 13.6, Windows 10 o Ubuntu 22.04. No se requiere GPU -- los Mac con Apple Silicon y las GPU NVIDIA/AMD son compatibles para acelerar la inferencia.' },
+            { q: '¿Cómo busco y descargo modelos en LM Studio?', a: 'Haz clic en la pestaña Search (lupa) en la barra lateral, busca el nombre del modelo (por ejemplo, "llama 3.1"), selecciona un nivel de cuantización (Q4_K_M para 8 GB de RAM) y haz clic en la flecha de descarga.' },
+            { q: '¿Qué cuantización debo usar en LM Studio con 8 GB de RAM?', a: 'Q4_K_M es la cuantización recomendada para sistemas con 8 GB de RAM. Ofrece el mejor equilibrio entre calidad del modelo y uso de memoria para modelos 7B (~4.5 GB de tamaño de archivo).' },
+            { q: '¿LM Studio incluye una API compatible con OpenAI?', a: 'Sí. Activa la pestaña Local Server en LM Studio para iniciar una API compatible con OpenAI en http://localhost:1234. Cualquier app con el SDK de OpenAI puede conectarse usando esta URL como base_url.' },
+            { q: '¿En qué se diferencia LM Studio de Ollama?', a: 'LM Studio prioriza la interfaz gráfica: explora modelos, gestiona ajustes y chatea desde una interfaz visual. Ollama prioriza la línea de comandos: configuración más rápida para desarrolladores, pero requiere comandos de terminal. Ambos usan llama.cpp internamente.' },
+            { q: '¿Puedo usar LM Studio en Linux?', a: 'Sí. Descarga el archivo .AppImage desde lmstudio.ai. Hazlo ejecutable: chmod +x LM-Studio-*.AppImage y ejecútalo. No se necesita instalación en el sistema -- funciona como app portátil.' },
+            { q: '¿LM Studio es gratuito?', a: 'LM Studio es gratuito para uso personal. Lo desarrolla LM Studio, Inc. El uso comercial requiere una licencia de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.' },
+            { q: '¿Cómo activo la aceleración GPU en LM Studio?', a: 'En NVIDIA: asegúrate de tener los drivers CUDA instalados. En AMD: se requiere ROCm. En Apple Silicon: Metal se usa automáticamente. Ve a Configuración → GPU en LM Studio para verificar que la GPU está detectada y que las capas se están descargando.' },
+            { q: '¿Cuál es la diferencia entre Q4_K_M y Q5_K_M en LM Studio?', a: 'Q4_K_M usa cuantización de 4 bits (~4.5 GB para 7B) con una pérdida de calidad de ~1%. Q5_K_M usa 5 bits (~5.7 GB) con pérdida mínima. Usa Q4_K_M para 8 GB de RAM; Q5_K_M o Q6_K para sistemas con 16 GB de RAM.' },
           ],
         },
         nextSteps: {
@@ -520,54 +566,148 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': '¿Cómo instalo LM Studio en Ubuntu o Linux Mint?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 22.04 o equivalente; se recomienda Ubuntu 24.04.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Dónde está el .exe de LM Studio para Windows?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\\\LM-Studio y no pide permisos de administrador. El mínimo es Windows 10; se recomienda Windows 11.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo instalo LM Studio en Mac?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Descarga el archivo .dmg desde lmstudio.ai, ábrelo y arrastra LM Studio a la carpeta Aplicaciones. La primera vez que lo abras, macOS mostrará un aviso de seguridad: apruébalo en Preferencias del Sistema → Privacidad y Seguridad. El mínimo es macOS 13.6 y se recomienda macOS 14 o posterior.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Se llama LM Studio o LLM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El nombre correcto es LM Studio, sin la segunda L. "LLM Studio", "LMStudio" y "LM Estudio" son variantes que mucha gente escribe al buscarlo, pero el producto y su web oficial son LM Studio (lmstudio.ai). Si buscas el instalador con otro nombre puede que no llegues a la descarga oficial, así que conviene comprobar el dominio antes de descargar nada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio muestra "Not enough memory to load model"',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El modelo requiere más RAM de la disponible. Cierra otras aplicaciones para liberar memoria o selecciona una cuantización menor (Q3_K_S en lugar de Q4_K_M). Como regla general: multiplica el tamaño del archivo del modelo por 1.2 para estimar la RAM necesaria. Un archivo de 4.5 GB necesita ~5.4 GB de RAM libre.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'El modelo genera texto muy lentamente (menos de 5 tokens/seg)',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'El modelo está ejecutándose completamente en CPU. Comprueba GPU Layers en el panel derecho -- si muestra 0, tu GPU no se está usando. En macOS, LM Studio activa Metal (GPU) automáticamente para Apple Silicon. En Windows/Linux con NVIDIA, asegúrate de tener el driver actualizado y aumenta GPU Layers al valor máximo que se muestre.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'No encuentro un modelo específico en la búsqueda de LM Studio',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio busca archivos GGUF en Hugging Face. Si un modelo no aparece, intenta buscar directamente por el nombre del repositorio de Hugging Face (por ejemplo, "bartowski/Llama-3.1-8B-Instruct-GGUF"). Es posible que algunos modelos más recientes aún no estén indexados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'El servidor local devuelve errores "model not found"',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Es necesario que haya un modelo cargado en la pestaña Local Server antes de que el servidor pueda responder. Abre la pestaña Local Server, selecciona un modelo en el menú desplegable y haz clic en Start Server. El nombre del modelo en las solicitudes de API puede ser cualquier cadena -- LM Studio usa el modelo que esté cargado en ese momento.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '¿Cómo descargo LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ve a lmstudio.ai y haz clic en el botón de descarga para tu sistema operativo. Disponible para macOS (Apple Silicon + Intel), Windows 10/11 y Linux (AppImage).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ve a lmstudio.ai y haz clic en el botón de descarga para tu sistema operativo. Disponible para macOS (Apple Silicon + Intel), Windows 10/11 y Linux (AppImage).',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cuáles son los requisitos mínimos para LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Mínimo: 8 GB de RAM, macOS 13.6, Windows 10 o Ubuntu 22.04. No se requiere GPU -- los Mac con Apple Silicon y las GPU NVIDIA/AMD son compatibles para acelerar la inferencia.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mínimo: 8 GB de RAM, macOS 13.6, Windows 10 o Ubuntu 22.04. No se requiere GPU -- los Mac con Apple Silicon y las GPU NVIDIA/AMD son compatibles para acelerar la inferencia.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cómo busco y descargo modelos en LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Haz clic en la pestaña Search (lupa) en la barra lateral, busca el nombre del modelo (por ejemplo, "llama 3.1"), selecciona un nivel de cuantización (Q4_K_M para 8 GB de RAM) y haz clic en la flecha de descarga.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Haz clic en la pestaña Search (lupa) en la barra lateral, busca el nombre del modelo (por ejemplo, "llama 3.1"), selecciona un nivel de cuantización (Q4_K_M para 8 GB de RAM) y haz clic en la flecha de descarga.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Qué cuantización debo usar en LM Studio con 8 GB de RAM?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M es la cuantización recomendada para sistemas con 8 GB de RAM. Ofrece el mejor equilibrio entre calidad del modelo y uso de memoria para modelos 7B (~4.5 GB de tamaño de archivo).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M es la cuantización recomendada para sistemas con 8 GB de RAM. Ofrece el mejor equilibrio entre calidad del modelo y uso de memoria para modelos 7B (~4.5 GB de tamaño de archivo).',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿LM Studio incluye una API compatible con OpenAI?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Activa la pestaña Local Server en LM Studio para iniciar una API compatible con OpenAI en http://localhost:1234. Cualquier app con el SDK de OpenAI puede conectarse usando esta URL como base_url.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Activa la pestaña Local Server en LM Studio para iniciar una API compatible con OpenAI en http://localhost:1234. Cualquier app con el SDK de OpenAI puede conectarse usando esta URL como base_url.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿En qué se diferencia LM Studio de Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio prioriza la interfaz gráfica: explora modelos, gestiona ajustes y chatea desde una interfaz visual. Ollama prioriza la línea de comandos: configuración más rápida para desarrolladores, pero requiere comandos de terminal. Ambos usan llama.cpp internamente.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio prioriza la interfaz gráfica: explora modelos, gestiona ajustes y chatea desde una interfaz visual. Ollama prioriza la línea de comandos: configuración más rápida para desarrolladores, pero requiere comandos de terminal. Ambos usan llama.cpp internamente.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Puedo usar LM Studio en Linux?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Descarga el archivo .AppImage desde lmstudio.ai. Hazlo ejecutable: chmod +x LM-Studio-*.AppImage y ejecútalo. No se necesita instalación en el sistema -- funciona como app portátil.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Descarga el archivo .AppImage desde lmstudio.ai. Hazlo ejecutable: chmod +x LM-Studio-*.AppImage y ejecútalo. No se necesita instalación en el sistema -- funciona como app portátil.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿LM Studio es gratuito?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio es gratuito para uso personal. Lo desarrolla LM Studio, Inc. El uso comercial requiere una licencia de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio es gratuito para uso personal. Lo desarrolla LM Studio, Inc. El uso comercial requiere una licencia de pago. Todos los modelos descargados son gratuitos según sus licencias individuales.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cómo activo la aceleración GPU en LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'En NVIDIA: asegúrate de tener los drivers CUDA instalados. En AMD: se requiere ROCm. En Apple Silicon: Metal se usa automáticamente. Ve a Configuración → GPU en LM Studio para verificar que la GPU está detectada y que las capas se están descargando.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'En NVIDIA: asegúrate de tener los drivers CUDA instalados. En AMD: se requiere ROCm. En Apple Silicon: Metal se usa automáticamente. Ve a Configuración → GPU en LM Studio para verificar que la GPU está detectada y que las capas se están descargando.',
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cuál es la diferencia entre Q4_K_M y Q5_K_M en LM Studio?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M usa cuantización de 4 bits (~4.5 GB para 7B) con una pérdida de calidad de ~1%. Q5_K_M usa 5 bits (~5.7 GB) con pérdida mínima. Usa Q4_K_M para 8 GB de RAM; Q5_K_M o Q6_K para sistemas con 16 GB de RAM.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M usa cuantización de 4 bits (~4.5 GB para 7B) con una pérdida de calidad de ~1%. Q5_K_M usa 5 bits (~5.7 GB) con pérdida mínima. Usa Q4_K_M para 8 GB de RAM; Q5_K_M o Q6_K para sistemas con 16 GB de RAM.',
+            },
+          },
         ]
       },
     },
@@ -713,22 +853,20 @@ schema: {
           id: 'troubleshooting',
           title: 'حل المشكلات الشائعة في LM Studio',
           faqs: [
-            {
-              q: 'يعرض LM Studio "Not enough memory to load model"',
-              a: 'يتطلب النموذج RAM أكثر من المتاحة. أغلق تطبيقات أخرى لتحرير الذاكرة أو اختر تكميمًا أقل (Q3_K_S بدلًا من Q4_K_M). كقاعدة عامة: اضرب حجم ملف النموذج في 1.2 لتقدير RAM اللازمة. يحتاج ملف بسعة 4.5 GB إلى ~5.4 GB من RAM المتاحة.',
-            },
-            {
-              q: 'يولّد النموذج النص ببطء شديد (أقل من 5 tokens/ثانية)',
-              a: 'يعمل النموذج بالكامل على CPU. تحقّق من GPU Layers في اللوحة اليمنى -- إذا أظهرت 0، فإن GPU لديك لا يُستخدم. على macOS، يفعّل LM Studio تلقائيًا Metal (GPU) لـ Apple Silicon. وعلى Windows/Linux مع NVIDIA، تأكّد من تحديث التعريف وزِد GPU Layers إلى الحد الأقصى المعروض.',
-            },
-            {
-              q: 'لا أجد نموذجًا محددًا في بحث LM Studio',
-              a: 'يبحث LM Studio عن ملفات GGUF في Hugging Face. إذا لم يظهر نموذج، فجرّب البحث مباشرةً باسم مستودع Hugging Face (مثل "bartowski/Llama-3.1-8B-Instruct-GGUF"). قد لا تكون بعض النماذج الأحدث مفهرسة بعد.',
-            },
-            {
-              q: 'يعيد الخادم المحلي أخطاء "model not found"',
-              a: 'يلزم تحميل نموذج في تبويب Local Server قبل أن يتمكن الخادم من الاستجابة. افتح تبويب Local Server، اختر نموذجًا من القائمة المنسدلة وانقر Start Server. ويمكن أن يكون اسم النموذج في طلبات API أي نص -- يستخدم LM Studio النموذج المحمّل في تلك اللحظة.',
-            },
+            { q: 'يعرض LM Studio "Not enough memory to load model"', a: 'يتطلب النموذج RAM أكثر من المتاحة. أغلق تطبيقات أخرى لتحرير الذاكرة أو اختر تكميمًا أقل (Q3_K_S بدلًا من Q4_K_M). كقاعدة عامة: اضرب حجم ملف النموذج في 1.2 لتقدير RAM اللازمة. يحتاج ملف بسعة 4.5 GB إلى ~5.4 GB من RAM المتاحة.' },
+            { q: 'يولّد النموذج النص ببطء شديد (أقل من 5 tokens/ثانية)', a: 'يعمل النموذج بالكامل على CPU. تحقّق من GPU Layers في اللوحة اليمنى -- إذا أظهرت 0، فإن GPU لديك لا يُستخدم. على macOS، يفعّل LM Studio تلقائيًا Metal (GPU) لـ Apple Silicon. وعلى Windows/Linux مع NVIDIA، تأكّد من تحديث التعريف وزِد GPU Layers إلى الحد الأقصى المعروض.' },
+            { q: 'لا أجد نموذجًا محددًا في بحث LM Studio', a: 'يبحث LM Studio عن ملفات GGUF في Hugging Face. إذا لم يظهر نموذج، فجرّب البحث مباشرةً باسم مستودع Hugging Face (مثل "bartowski/Llama-3.1-8B-Instruct-GGUF"). قد لا تكون بعض النماذج الأحدث مفهرسة بعد.' },
+            { q: 'يعيد الخادم المحلي أخطاء "model not found"', a: 'يلزم تحميل نموذج في تبويب Local Server قبل أن يتمكن الخادم من الاستجابة. افتح تبويب Local Server، اختر نموذجًا من القائمة المنسدلة وانقر Start Server. ويمكن أن يكون اسم النموذج في طلبات API أي نص -- يستخدم LM Studio النموذج المحمّل في تلك اللحظة.' },
+            { q: 'كيف أنزّل LM Studio؟', a: 'اذهب إلى lmstudio.ai وانقر زر التنزيل لنظام تشغيلك. متاح لـ macOS (Apple Silicon + Intel) و Windows 10/11 و Linux (AppImage).' },
+            { q: 'ما الحد الأدنى لمتطلبات LM Studio؟', a: 'الحد الأدنى: 8 GB من RAM، macOS 13.6، Windows 10 أو Ubuntu 22.04. لا حاجة لـ GPU -- أجهزة Mac بـ Apple Silicon وبطاقات NVIDIA/AMD مدعومة لتسريع الاستدلال.' },
+            { q: 'كيف أبحث عن نماذج وأنزّلها في LM Studio؟', a: 'انقر تبويب Search (العدسة) في الشريط الجانبي، وابحث باسم النموذج (مثل "llama 3.1")، واختر مستوى تكميم (Q4_K_M لـ 8 GB من RAM)، وانقر سهم التنزيل.' },
+            { q: 'أي تكميم أستخدم في LM Studio مع 8 GB من RAM؟', a: 'Q4_K_M هو التكميم الموصى به للأنظمة بسعة 8 GB من RAM. يقدّم أفضل توازن بين جودة النموذج واستخدام الذاكرة لنماذج 7B (~4.5 GB حجم ملف).' },
+            { q: 'هل يتضمن LM Studio API متوافقًا مع OpenAI؟', a: 'نعم. فعّل تبويب Local Server في LM Studio لبدء API متوافق مع OpenAI على http://localhost:1234. ويستطيع أي تطبيق يستخدم SDK الخاص بـ OpenAI الاتصال باستخدام هذا العنوان كـ base_url.' },
+            { q: 'بماذا يختلف LM Studio عن Ollama؟', a: 'يعطي LM Studio الأولوية للواجهة الرسومية: استكشف النماذج وأدر الإعدادات وحادث من واجهة مرئية. ويعطي Ollama الأولوية لسطر الأوامر: إعداد أسرع للمطورين، لكنه يتطلب أوامر طرفية. وكلاهما يستخدم llama.cpp داخليًا.' },
+            { q: 'هل يمكنني استخدام LM Studio على Linux؟', a: 'نعم. نزّل ملف .AppImage من lmstudio.ai. اجعله قابلًا للتنفيذ: chmod +x LM-Studio-*.AppImage وشغّله. لا حاجة لتثبيت على النظام -- يعمل كتطبيق محمول.' },
+            { q: 'هل LM Studio مجاني؟', a: 'LM Studio مجاني للاستخدام الشخصي. واعتبارًا من أبريل 2026، تطوّره LM Studio, Inc. ويتطلب الاستخدام التجاري ترخيصًا مدفوعًا. وجميع النماذج المنزَّلة مجانية وفق تراخيصها الفردية.' },
+            { q: 'كيف أفعّل تسريع GPU في LM Studio؟', a: 'على NVIDIA: تأكّد من تثبيت تعريفات CUDA. على AMD: يلزم ROCm. على Apple Silicon: يُستخدم Metal تلقائيًا. اذهب إلى الإعدادات ← GPU في LM Studio للتحقق من اكتشاف GPU ومن أن الطبقات تُنزَّل.' },
+            { q: 'ما الفرق بين Q4_K_M و Q5_K_M في LM Studio؟', a: 'يستخدم Q4_K_M تكميم 4 بت (~4.5 GB لـ 7B) بفقدان جودة ~1%. ويستخدم Q5_K_M 5 بت (~5.7 GB) بفقدان ضئيل. استخدم Q4_K_M لـ 8 GB من RAM؛ و Q5_K_M أو Q6_K للأنظمة بسعة 16 GB من RAM.' },
           ],
         },
         nextSteps: {
@@ -793,54 +931,116 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'يعرض LM Studio "Not enough memory to load model"',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يتطلب النموذج RAM أكثر من المتاحة. أغلق تطبيقات أخرى لتحرير الذاكرة أو اختر تكميمًا أقل (Q3_K_S بدلًا من Q4_K_M). كقاعدة عامة: اضرب حجم ملف النموذج في 1.2 لتقدير RAM اللازمة. يحتاج ملف بسعة 4.5 GB إلى ~5.4 GB من RAM المتاحة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'يولّد النموذج النص ببطء شديد (أقل من 5 tokens/ثانية)',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعمل النموذج بالكامل على CPU. تحقّق من GPU Layers في اللوحة اليمنى -- إذا أظهرت 0، فإن GPU لديك لا يُستخدم. على macOS، يفعّل LM Studio تلقائيًا Metal (GPU) لـ Apple Silicon. وعلى Windows/Linux مع NVIDIA، تأكّد من تحديث التعريف وزِد GPU Layers إلى الحد الأقصى المعروض.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'لا أجد نموذجًا محددًا في بحث LM Studio',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يبحث LM Studio عن ملفات GGUF في Hugging Face. إذا لم يظهر نموذج، فجرّب البحث مباشرةً باسم مستودع Hugging Face (مثل "bartowski/Llama-3.1-8B-Instruct-GGUF"). قد لا تكون بعض النماذج الأحدث مفهرسة بعد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'يعيد الخادم المحلي أخطاء "model not found"',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يلزم تحميل نموذج في تبويب Local Server قبل أن يتمكن الخادم من الاستجابة. افتح تبويب Local Server، اختر نموذجًا من القائمة المنسدلة وانقر Start Server. ويمكن أن يكون اسم النموذج في طلبات API أي نص -- يستخدم LM Studio النموذج المحمّل في تلك اللحظة.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'كيف أنزّل LM Studio؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'اذهب إلى lmstudio.ai وانقر زر التنزيل لنظام تشغيلك. متاح لـ macOS (Apple Silicon + Intel) و Windows 10/11 و Linux (AppImage).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'اذهب إلى lmstudio.ai وانقر زر التنزيل لنظام تشغيلك. متاح لـ macOS (Apple Silicon + Intel) و Windows 10/11 و Linux (AppImage).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما الحد الأدنى لمتطلبات LM Studio؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'الحد الأدنى: 8 GB من RAM، macOS 13.6، Windows 10 أو Ubuntu 22.04. لا حاجة لـ GPU -- أجهزة Mac بـ Apple Silicon وبطاقات NVIDIA/AMD مدعومة لتسريع الاستدلال.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الحد الأدنى: 8 GB من RAM، macOS 13.6، Windows 10 أو Ubuntu 22.04. لا حاجة لـ GPU -- أجهزة Mac بـ Apple Silicon وبطاقات NVIDIA/AMD مدعومة لتسريع الاستدلال.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'كيف أبحث عن نماذج وأنزّلها في LM Studio؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'انقر تبويب Search (العدسة) في الشريط الجانبي، وابحث باسم النموذج (مثل "llama 3.1")، واختر مستوى تكميم (Q4_K_M لـ 8 GB من RAM)، وانقر سهم التنزيل.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'انقر تبويب Search (العدسة) في الشريط الجانبي، وابحث باسم النموذج (مثل "llama 3.1")، واختر مستوى تكميم (Q4_K_M لـ 8 GB من RAM)، وانقر سهم التنزيل.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'أي تكميم أستخدم في LM Studio مع 8 GB من RAM؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M هو التكميم الموصى به للأنظمة بسعة 8 GB من RAM. يقدّم أفضل توازن بين جودة النموذج واستخدام الذاكرة لنماذج 7B (~4.5 GB حجم ملف).' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M هو التكميم الموصى به للأنظمة بسعة 8 GB من RAM. يقدّم أفضل توازن بين جودة النموذج واستخدام الذاكرة لنماذج 7B (~4.5 GB حجم ملف).',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل يتضمن LM Studio API متوافقًا مع OpenAI؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. فعّل تبويب Local Server في LM Studio لبدء API متوافق مع OpenAI على http://localhost:1234. ويستطيع أي تطبيق يستخدم SDK الخاص بـ OpenAI الاتصال باستخدام هذا العنوان كـ base_url.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. فعّل تبويب Local Server في LM Studio لبدء API متوافق مع OpenAI على http://localhost:1234. ويستطيع أي تطبيق يستخدم SDK الخاص بـ OpenAI الاتصال باستخدام هذا العنوان كـ base_url.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'بماذا يختلف LM Studio عن Ollama؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'يعطي LM Studio الأولوية للواجهة الرسومية: استكشف النماذج وأدر الإعدادات وحادث من واجهة مرئية. ويعطي Ollama الأولوية لسطر الأوامر: إعداد أسرع للمطورين، لكنه يتطلب أوامر طرفية. وكلاهما يستخدم llama.cpp داخليًا.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعطي LM Studio الأولوية للواجهة الرسومية: استكشف النماذج وأدر الإعدادات وحادث من واجهة مرئية. ويعطي Ollama الأولوية لسطر الأوامر: إعداد أسرع للمطورين، لكنه يتطلب أوامر طرفية. وكلاهما يستخدم llama.cpp داخليًا.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل يمكنني استخدام LM Studio على Linux؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. نزّل ملف .AppImage من lmstudio.ai. اجعله قابلًا للتنفيذ: chmod +x LM-Studio-*.AppImage وشغّله. لا حاجة لتثبيت على النظام -- يعمل كتطبيق محمول.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. نزّل ملف .AppImage من lmstudio.ai. اجعله قابلًا للتنفيذ: chmod +x LM-Studio-*.AppImage وشغّله. لا حاجة لتثبيت على النظام -- يعمل كتطبيق محمول.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'هل LM Studio مجاني؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio مجاني للاستخدام الشخصي. واعتبارًا من أبريل 2026، تطوّره LM Studio, Inc. ويتطلب الاستخدام التجاري ترخيصًا مدفوعًا. وجميع النماذج المنزَّلة مجانية وفق تراخيصها الفردية.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio مجاني للاستخدام الشخصي. واعتبارًا من أبريل 2026، تطوّره LM Studio, Inc. ويتطلب الاستخدام التجاري ترخيصًا مدفوعًا. وجميع النماذج المنزَّلة مجانية وفق تراخيصها الفردية.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'كيف أفعّل تسريع GPU في LM Studio؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'على NVIDIA: تأكّد من تثبيت تعريفات CUDA. على AMD: يلزم ROCm. على Apple Silicon: يُستخدم Metal تلقائيًا. اذهب إلى الإعدادات ← GPU في LM Studio للتحقق من اكتشاف GPU ومن أن الطبقات تُنزَّل.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'على NVIDIA: تأكّد من تثبيت تعريفات CUDA. على AMD: يلزم ROCm. على Apple Silicon: يُستخدم Metal تلقائيًا. اذهب إلى الإعدادات ← GPU في LM Studio للتحقق من اكتشاف GPU ومن أن الطبقات تُنزَّل.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'ما الفرق بين Q4_K_M و Q5_K_M في LM Studio؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'يستخدم Q4_K_M تكميم 4 بت (~4.5 GB لـ 7B) بفقدان جودة ~1%. ويستخدم Q5_K_M 5 بت (~5.7 GB) بفقدان ضئيل. استخدم Q4_K_M لـ 8 GB من RAM؛ و Q5_K_M أو Q6_K للأنظمة بسعة 16 GB من RAM.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يستخدم Q4_K_M تكميم 4 بت (~4.5 GB لـ 7B) بفقدان جودة ~1%. ويستخدم Q5_K_M 5 بت (~5.7 GB) بفقدان ضئيل. استخدم Q4_K_M لـ 8 GB من RAM؛ و Q5_K_M أو Q6_K للأنظمة بسعة 16 GB من RAM.',
+            },
+          },
         ]
       },
     },
@@ -2490,22 +2690,20 @@ schema: {
           id: 'troubleshooting',
           title: 'LM Studio 일반적인 문제 해결',
           faqs: [
-            {
-              q: 'LM Studio에서 "메모리가 부족하여 모델을 로드할 수 없습니다"라고 표시됩니다',
-              a: '선택한 모델이 사용 가능한 RAM보다 더 많은 메모리를 필요로 합니다. 다른 애플리케이션을 종료하여 메모리를 확보하거나, 더 작은 양자화(Q4_K_M 대신 Q3_K_S)를 선택하십시오. 기준으로: 모델 파일 크기에 1.2를 곱하면 필요한 RAM을 추정할 수 있습니다. 4.5 GB 파일은 약 5.4 GB의 여유 RAM이 필요합니다.',
-            },
-            {
-              q: '모델 생성 속도가 매우 느립니다 (초당 5 토큰 미만)',
-              a: '모델이 완전히 CPU에서 실행되고 있습니다. 오른쪽 패널에서 GPU Layers를 확인하십시오 -- 0으로 표시되면 GPU가 사용되지 않는 것입니다. macOS에서 LM Studio는 Apple Silicon용 Metal(GPU)을 자동으로 활성화합니다. NVIDIA가 탑재된 Windows/Linux에서는 드라이버가 최신 상태인지 확인하고 GPU Layers를 표시된 최대값으로 늘리십시오.',
-            },
-            {
-              q: 'LM Studio 검색에서 특정 모델을 찾을 수 없습니다',
-              a: 'LM Studio는 GGUF 파일에 대해 Hugging Face를 검색합니다. 모델이 표시되지 않는 경우 Hugging Face 리포지토리 이름으로 직접 검색해 보십시오(예: "bartowski/Llama-3.1-8B-Instruct-GGUF"). 일부 최신 모델은 아직 인덱싱되지 않았을 수 있습니다.',
-            },
-            {
-              q: '로컬 서버가 "model not found" 오류를 반환합니다',
-              a: '서버가 응답하려면 로컬 서버 탭에 모델이 로드되어 있어야 합니다. 로컬 서버 탭을 열고 드롭다운에서 모델을 선택한 후 Start Server를 클릭하십시오. API 요청의 모델 이름은 어떤 문자열이든 상관없습니다 -- LM Studio는 현재 로드된 모델을 사용합니다.',
-            },
+            { q: 'LM Studio에서 "메모리가 부족하여 모델을 로드할 수 없습니다"라고 표시됩니다', a: '선택한 모델이 사용 가능한 RAM보다 더 많은 메모리를 필요로 합니다. 다른 애플리케이션을 종료하여 메모리를 확보하거나, 더 작은 양자화(Q4_K_M 대신 Q3_K_S)를 선택하십시오. 기준으로: 모델 파일 크기에 1.2를 곱하면 필요한 RAM을 추정할 수 있습니다. 4.5 GB 파일은 약 5.4 GB의 여유 RAM이 필요합니다.' },
+            { q: '모델 생성 속도가 매우 느립니다 (초당 5 토큰 미만)', a: '모델이 완전히 CPU에서 실행되고 있습니다. 오른쪽 패널에서 GPU Layers를 확인하십시오 -- 0으로 표시되면 GPU가 사용되지 않는 것입니다. macOS에서 LM Studio는 Apple Silicon용 Metal(GPU)을 자동으로 활성화합니다. NVIDIA가 탑재된 Windows/Linux에서는 드라이버가 최신 상태인지 확인하고 GPU Layers를 표시된 최대값으로 늘리십시오.' },
+            { q: 'LM Studio 검색에서 특정 모델을 찾을 수 없습니다', a: 'LM Studio는 GGUF 파일에 대해 Hugging Face를 검색합니다. 모델이 표시되지 않는 경우 Hugging Face 리포지토리 이름으로 직접 검색해 보십시오(예: "bartowski/Llama-3.1-8B-Instruct-GGUF"). 일부 최신 모델은 아직 인덱싱되지 않았을 수 있습니다.' },
+            { q: '로컬 서버가 "model not found" 오류를 반환합니다', a: '서버가 응답하려면 로컬 서버 탭에 모델이 로드되어 있어야 합니다. 로컬 서버 탭을 열고 드롭다운에서 모델을 선택한 후 Start Server를 클릭하십시오. API 요청의 모델 이름은 어떤 문자열이든 상관없습니다 -- LM Studio는 현재 로드된 모델을 사용합니다.' },
+            { q: 'LM Studio는 어떻게 다운로드합니까?', a: 'lmstudio.ai로 이동하여 운영 체제에 맞는 다운로드 버튼을 클릭하십시오. macOS(Apple Silicon + Intel), Windows 10/11, Linux(AppImage)용으로 제공됩니다.' },
+            { q: 'LM Studio의 최소 요구 사항은 무엇입니까?', a: '최소: RAM 8GB, macOS 13.6, Windows 10 또는 Ubuntu 22.04. GPU는 필수가 아닙니다 -- Apple Silicon Mac과 NVIDIA/AMD GPU는 가속을 위해 지원됩니다.' },
+            { q: 'LM Studio에서 모델을 어떻게 찾고 다운로드합니까?', a: '사이드바의 검색 탭(돋보기 아이콘)을 클릭하고, 모델 이름(예: "llama 3.1")을 검색한 후, 양자화 수준(RAM 8GB의 경우 Q4_K_M)을 선택하고 다운로드 화살표를 클릭하십시오.' },
+            { q: 'RAM 8GB에서는 어떤 양자화를 사용해야 합니까?', a: 'Q4_K_M이 RAM 8GB 시스템에 권장되는 양자화입니다. 7B 모델(파일 크기 약 4.5GB)에서 모델 품질과 메모리 사용량 사이의 최적 균형을 제공합니다.' },
+            { q: 'LM Studio는 OpenAI 호환 API를 포함합니까?', a: '예. LM Studio에서 로컬 서버 탭을 활성화하면 http://localhost:1234에서 OpenAI 호환 API가 시작됩니다. OpenAI SDK를 사용하는 모든 앱이 이 URL을 base_url로 사용하여 연결할 수 있습니다.' },
+            { q: 'LM Studio는 Ollama와 어떻게 다릅니까?', a: 'LM Studio는 GUI 중심입니다: 시각적 인터페이스를 통해 모델을 탐색하고, 설정을 관리하고, 채팅합니다. Ollama는 CLI 중심입니다: 개발자에게는 설정이 더 빠르지만 터미널 명령어가 필요합니다. 둘 다 내부적으로 llama.cpp를 사용합니다.' },
+            { q: 'Linux에서 LM Studio를 사용할 수 있습니까?', a: '예. lmstudio.ai에서 .AppImage 파일을 다운로드하십시오. chmod +x LM-Studio-*.AppImage로 실행 권한을 부여하고 실행하십시오. 시스템 설치가 필요하지 않습니다 -- 휴대용 앱으로 실행됩니다.' },
+            { q: 'LM Studio는 무료입니까?', a: 'LM Studio는 개인 사용에 한해 무료입니다. LM Studio, Inc.에서 개발합니다. 상업적 사용에는 유료 라이선스가 필요합니다. 다운로드한 모델은 각자의 라이선스에 따라 무료로 사용할 수 있습니다.' },
+            { q: 'LM Studio에서 GPU 가속을 어떻게 활성화합니까?', a: 'NVIDIA: CUDA 드라이버가 설치되어 있는지 확인하십시오. AMD: ROCm이 필요합니다. Apple Silicon: Metal이 자동으로 사용됩니다. LM Studio의 설정 → GPU에서 GPU가 감지되고 레이어가 오프로드되는지 확인하십시오.' },
+            { q: 'LM Studio에서 Q4_K_M과 Q5_K_M의 차이는 무엇입니까?', a: 'Q4_K_M은 4비트 양자화(7B 기준 약 4.5GB)를 사용하며 품질 손실은 약 1%입니다. Q5_K_M은 5비트(약 5.7GB)를 사용하며 손실이 최소화됩니다. RAM 8GB에는 Q4_K_M을, RAM 16GB 시스템에는 Q5_K_M 또는 Q6_K를 사용하십시오.' },
           ],
         },
         nextSteps: {
@@ -2570,54 +2768,116 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'LM Studio에서 "메모리가 부족하여 모델을 로드할 수 없습니다"라고 표시됩니다',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '선택한 모델이 사용 가능한 RAM보다 더 많은 메모리를 필요로 합니다. 다른 애플리케이션을 종료하여 메모리를 확보하거나, 더 작은 양자화(Q4_K_M 대신 Q3_K_S)를 선택하십시오. 기준으로: 모델 파일 크기에 1.2를 곱하면 필요한 RAM을 추정할 수 있습니다. 4.5 GB 파일은 약 5.4 GB의 여유 RAM이 필요합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '모델 생성 속도가 매우 느립니다 (초당 5 토큰 미만)',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '모델이 완전히 CPU에서 실행되고 있습니다. 오른쪽 패널에서 GPU Layers를 확인하십시오 -- 0으로 표시되면 GPU가 사용되지 않는 것입니다. macOS에서 LM Studio는 Apple Silicon용 Metal(GPU)을 자동으로 활성화합니다. NVIDIA가 탑재된 Windows/Linux에서는 드라이버가 최신 상태인지 확인하고 GPU Layers를 표시된 최대값으로 늘리십시오.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio 검색에서 특정 모델을 찾을 수 없습니다',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio는 GGUF 파일에 대해 Hugging Face를 검색합니다. 모델이 표시되지 않는 경우 Hugging Face 리포지토리 이름으로 직접 검색해 보십시오(예: "bartowski/Llama-3.1-8B-Instruct-GGUF"). 일부 최신 모델은 아직 인덱싱되지 않았을 수 있습니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '로컬 서버가 "model not found" 오류를 반환합니다',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '서버가 응답하려면 로컬 서버 탭에 모델이 로드되어 있어야 합니다. 로컬 서버 탭을 열고 드롭다운에서 모델을 선택한 후 Start Server를 클릭하십시오. API 요청의 모델 이름은 어떤 문자열이든 상관없습니다 -- LM Studio는 현재 로드된 모델을 사용합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': 'LM Studio는 어떻게 다운로드합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'lmstudio.ai로 이동하여 운영 체제에 맞는 다운로드 버튼을 클릭하십시오. macOS(Apple Silicon + Intel), Windows 10/11, Linux(AppImage)용으로 제공됩니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'lmstudio.ai로 이동하여 운영 체제에 맞는 다운로드 버튼을 클릭하십시오. macOS(Apple Silicon + Intel), Windows 10/11, Linux(AppImage)용으로 제공됩니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio의 최소 요구 사항은 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '최소: RAM 8GB, macOS 13.6, Windows 10 또는 Ubuntu 22.04. GPU는 필수가 아닙니다 -- Apple Silicon Mac과 NVIDIA/AMD GPU는 가속을 위해 지원됩니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '최소: RAM 8GB, macOS 13.6, Windows 10 또는 Ubuntu 22.04. GPU는 필수가 아닙니다 -- Apple Silicon Mac과 NVIDIA/AMD GPU는 가속을 위해 지원됩니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 모델을 어떻게 찾고 다운로드합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '사이드바의 검색 탭(돋보기 아이콘)을 클릭하고, 모델 이름(예: "llama 3.1")을 검색한 후, 양자화 수준(RAM 8GB의 경우 Q4_K_M)을 선택하고 다운로드 화살표를 클릭하십시오.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '사이드바의 검색 탭(돋보기 아이콘)을 클릭하고, 모델 이름(예: "llama 3.1")을 검색한 후, 양자화 수준(RAM 8GB의 경우 Q4_K_M)을 선택하고 다운로드 화살표를 클릭하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'RAM 8GB에서는 어떤 양자화를 사용해야 합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M이 RAM 8GB 시스템에 권장되는 양자화입니다. 7B 모델(파일 크기 약 4.5GB)에서 모델 품질과 메모리 사용량 사이의 최적 균형을 제공합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M이 RAM 8GB 시스템에 권장되는 양자화입니다. 7B 모델(파일 크기 약 4.5GB)에서 모델 품질과 메모리 사용량 사이의 최적 균형을 제공합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio는 OpenAI 호환 API를 포함합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '예. LM Studio에서 로컬 서버 탭을 활성화하면 http://localhost:1234에서 OpenAI 호환 API가 시작됩니다. OpenAI SDK를 사용하는 모든 앱이 이 URL을 base_url로 사용하여 연결할 수 있습니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. LM Studio에서 로컬 서버 탭을 활성화하면 http://localhost:1234에서 OpenAI 호환 API가 시작됩니다. OpenAI SDK를 사용하는 모든 앱이 이 URL을 base_url로 사용하여 연결할 수 있습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio는 Ollama와 어떻게 다릅니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio는 GUI 중심입니다: 시각적 인터페이스를 통해 모델을 탐색하고, 설정을 관리하고, 채팅합니다. Ollama는 CLI 중심입니다: 개발자에게는 설정이 더 빠르지만 터미널 명령어가 필요합니다. 둘 다 내부적으로 llama.cpp를 사용합니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio는 GUI 중심입니다: 시각적 인터페이스를 통해 모델을 탐색하고, 설정을 관리하고, 채팅합니다. Ollama는 CLI 중심입니다: 개발자에게는 설정이 더 빠르지만 터미널 명령어가 필요합니다. 둘 다 내부적으로 llama.cpp를 사용합니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'Linux에서 LM Studio를 사용할 수 있습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '예. lmstudio.ai에서 .AppImage 파일을 다운로드하십시오. chmod +x LM-Studio-*.AppImage로 실행 권한을 부여하고 실행하십시오. 시스템 설치가 필요하지 않습니다 -- 휴대용 앱으로 실행됩니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '예. lmstudio.ai에서 .AppImage 파일을 다운로드하십시오. chmod +x LM-Studio-*.AppImage로 실행 권한을 부여하고 실행하십시오. 시스템 설치가 필요하지 않습니다 -- 휴대용 앱으로 실행됩니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio는 무료입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'LM Studio는 개인 사용에 한해 무료입니다. LM Studio, Inc.에서 개발합니다. 상업적 사용에는 유료 라이선스가 필요합니다. 다운로드한 모델은 각자의 라이선스에 따라 무료로 사용할 수 있습니다.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio는 개인 사용에 한해 무료입니다. LM Studio, Inc.에서 개발합니다. 상업적 사용에는 유료 라이선스가 필요합니다. 다운로드한 모델은 각자의 라이선스에 따라 무료로 사용할 수 있습니다.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 GPU 가속을 어떻게 활성화합니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'NVIDIA: CUDA 드라이버가 설치되어 있는지 확인하십시오. AMD: ROCm이 필요합니다. Apple Silicon: Metal이 자동으로 사용됩니다. LM Studio의 설정 → GPU에서 GPU가 감지되고 레이어가 오프로드되는지 확인하십시오.' }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'NVIDIA: CUDA 드라이버가 설치되어 있는지 확인하십시오. AMD: ROCm이 필요합니다. Apple Silicon: Metal이 자동으로 사용됩니다. LM Studio의 설정 → GPU에서 GPU가 감지되고 레이어가 오프로드되는지 확인하십시오.',
+            },
           },
           {
             '@type': 'Question',
             'name': 'LM Studio에서 Q4_K_M과 Q5_K_M의 차이는 무엇입니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_M은 4비트 양자화(7B 기준 약 4.5GB)를 사용하며 품질 손실은 약 1%입니다. Q5_K_M은 5비트(약 5.7GB)를 사용하며 손실이 최소화됩니다. RAM 8GB에는 Q4_K_M을, RAM 16GB 시스템에는 Q5_K_M 또는 Q6_K를 사용하십시오.' }
-          }
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M은 4비트 양자화(7B 기준 약 4.5GB)를 사용하며 품질 손실은 약 1%입니다. Q5_K_M은 5비트(약 5.7GB)를 사용하며 손실이 최소화됩니다. RAM 8GB에는 Q4_K_M을, RAM 16GB 시스템에는 Q5_K_M 또는 Q6_K를 사용하십시오.',
+            },
+          },
         ]
       },
     },
