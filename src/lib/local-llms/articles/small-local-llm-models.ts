@@ -1599,7 +1599,7 @@ schema: {
       publishDate: '2026-04-04',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-02-27',
-      leadAnswerBlock: '**小型本地大模型（10亿至40亿参数）可以在 4–8 GB 内存的机器上运行，仅用 CPU 就能达到每秒 30–70 个 token，足以支撑实时对话。**',
+      leadAnswerBlock: '**本地小模型（10亿至40亿参数的本地模型）可以在 4–8 GB 内存的机器上运行，仅用 CPU 就能达到每秒 30–70 个 token，足以支撑实时对话。下面按性能给出本地小模型推荐与排行榜，最强的一款是 Phi-4 Mini。**',
       readTime: '8分钟',
       educationalLevel: 'Beginner',
 schema: {
