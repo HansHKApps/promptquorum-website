@@ -51,7 +51,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
   zh: '按VRAM档位划分的最佳本地LLM 2026：Ollama、LM Studio与硬件指南',
   es: 'Mejores LLMs Locales por Nivel de VRAM 2026: Ollama, LM Studio y Guía de Hardware',
   pt: 'Melhores LLMs Locais por Nível de VRAM 2026: Ollama, LM Studio e Guia de Hardware',
-  ko: 'VRAM 등급별 최고의 로컬 LLM 2026: Ollama, LM Studio 및 하드웨어 가이드',
+  ko: '로컬 LLM 순위·추천 2026: 모델 성능 비교, Ollama, LM Studio 및 하드웨어 가이드',
   ar: 'أفضل ⁨LLM⁩ محلي حسب مستوى ⁨VRAM⁩ ⁨2026⁩: ⁨Ollama⁩ وLM Studio ودليل الأجهزة',
 }
 
@@ -63,7 +63,7 @@ const HUB_HERO_DESC: Record<string, string> = {
   zh: '本地LLM是完全在你自己的电脑上运行的大语言模型——无需联网、没有API费用，数据也不会离开你的设备。新手只需安装Ollama，用8GB内存即可在10分钟内运行Llama 3.2 3B或Qwen3 4B；以下指南为各种预算评选最佳模型、GPU和工具。',
   es: 'Los LLMs locales son grandes modelos de lenguaje que se ejecutan por completo en tu propio ordenador, sin conexión a Internet, sin tarifas de API y sin que ningún dato salga de tu máquina. Si empiezas, instala Ollama y ejecuta Llama 3.2 3B o Qwen3 4B con 8 GB de RAM en menos de 10 minutos; las guías siguientes clasifican los mejores modelos, GPUs y herramientas para cada presupuesto.',
   pt: 'Os LLMs locais são grandes modelos de linguagem que rodam inteiramente no seu próprio computador — sem conexão à Internet, sem taxas de API e sem que nenhum dado saia da sua máquina. Se está a começar, instale o Ollama e rode o Llama 3.2 3B ou o Qwen3 4B com 8 GB de RAM em menos de 10 minutos; os guias abaixo classificam os melhores modelos, GPUs e ferramentas para cada orçamento.',
-  ko: '로컬 LLM은 인터넷 연결, API 요금, 데이터 전송 없이 전적으로 자신의 컴퓨터에서 실행되는 대규모 언어 모델입니다. 처음이라면 Ollama를 설치하고 8GB RAM으로 Llama 3.2 3B 또는 Qwen3 4B를 10분 이내에 실행할 수 있습니다. 아래 가이드는 모든 예산에 맞는 최고의 모델, GPU, 도구를 정리합니다.',
+  ko: '로컬 LLM은 인터넷 연결, API 요금, 데이터 전송 없이 전적으로 자신의 컴퓨터에서 실행되는 대규모 언어 모델입니다. 로컬 AI와 로컬 LLM은 같은 것을 가리킵니다. 처음이라면 Ollama를 설치하고 8GB RAM으로 Llama 3.2 3B 또는 Qwen3 4B를 10분 이내에 실행할 수 있습니다. 아래 가이드는 VRAM 등급별 순위와 추천으로, 모델 종류와 성능을 가성비까지 비교합니다.',
   ar: 'النماذج اللغوية ⁨LLM⁩ المحلية هي نماذج لغوية كبيرة تعمل بالكامل على جهازك الخاص — بلا اتصال إنترنت، وبلا رسوم ⁨API⁩، وبلا خروج أي بيانات من جهازك. إذا كنت مبتدئًا، ثبّت ⁨Ollama⁩ وشغّل ⁨Llama 3.2 3B⁩ أو ⁨Qwen3 4B⁩ بذاكرة ⁨8 GB RAM⁩ في أقل من 10 دقائق؛ الأدلة أدناه تصنّف أفضل النماذج وبطاقات ⁨GPU⁩ والأدوات لكل ميزانية.',
 }
 
