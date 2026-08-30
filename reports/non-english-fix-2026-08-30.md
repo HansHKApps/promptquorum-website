@@ -8,7 +8,7 @@ Scores are the geo-meta-optimizer 10-point perfect-page rubric.
 | # | Page | Before | After | Δ | Diagnosis | Baseline (clicks / impr / CTR / pos) |
 |---|---|---|---|---|---|---|
 | 1 | `/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics` | 5/10 | 9/10 | **+4** | B2 | 596 / 9,008 / 6.6% / 5.3 |
-| 2 | `/de/local-llms` (hub) | 8/10 | 9/10 | **+1** | A | 273 / 7,883 / 3.5% / 4.9 |
+| 2 | `/de/local-llms` (hub) | 8/10 | **10/10** | **+2** | A | 273 / 7,883 / 3.5% / 4.9 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -78,7 +78,7 @@ Hub page, not an article: metadata in `src/translations.ts`, body copy in
 
 | # | Criterion | Before | After |
 |---|---|---|---|
-| 1 | Title covers top-3 query terms | ❌ | ❌ |
+| 1 | Title covers top-3 query terms | ❌ | ✅ |
 | 2 | Title has required entity | ✅ | ✅ |
 | 3 | Year handled correctly | ✅ | ✅ |
 | 4 | Meta answers intent in first 80 chars | ❌ | ✅ |
@@ -88,7 +88,7 @@ Hub page, not an article: metadata in `src/translations.ts`, body copy in
 | 8 | Title length + form (Rule 2d) | ✅ | ✅ |
 | 9 | Rule 4 entity naming | ✅ | ✅ |
 | 10 | Rules 33 + 36 opening block | ✅ | ✅ |
-| | **Total** | **8/10** | **9/10** |
+| | **Total** | **8/10** | **10/10** |
 
 ### Diagnosis A — body ahead of title
 
@@ -121,19 +121,27 @@ Meanwhile the split by query type is stark:
   **0 occurrences** in the German body).
 - Stale `Mai 2026` stripped from the German Ollama-models FAQ heading and answer.
 
-### #1 still red — open decision
+### #1 fixed — English term in the German title
 
 The page's single biggest query is the **English** string `local llm`: 554 impressions (32% of
 all listed), position 4.1, 3.6% CTR. With `local llms`, `llm local`, `local llm pc` and the typo
-tail it is ~700 impressions. A German title carries no English, so criterion #1 fails strictly.
-Fixing it means putting `Local-LLM` into a German title — a brand-voice call, not a data call.
+tail it is ~700 impressions. Final title: `Beste lokale LLMs 2026: Local-LLM-Modelle im
+Vergleich` (54 chars) — `Local-LLM-Modelle` is a natural German compound, so the English term is
+carried without reading as stuffing. `Hardware` was traded out (36 impr, 0 clicks).
 
-### Out-of-scope defect found
+### Month sweep — all 8 locales of the hub
 
-`Was sind die besten Ollama-Modelle im Mai 2026?` was stale. The same FAQ carries a **May 2026**
-heading in **en, fr, ja, zh** too (`LocalLLMsHub.tsx` lines ~1083, ~1207, ~1265, ~1323). The
-month-drift validator misses these because they are not in trailing-stamp position. Only `de`
-was fixed here — the English hub alone gets 46,114 impressions/month.
+`validate-month-drift.mjs` only catches trailing-stamp position, so these survived the
+2026-08-28 sweep:
+
+- **Stale FAQ heading + answer** `best Ollama models in May 2026` — fixed in all 8 locales that
+  had it (en, de, fr, es, pt, ja, zh, ar; ko does not carry this FAQ).
+- **`As of May 2026` body snapshots** in the "what is a local LLM" answer — removed in en, de,
+  fr, ja, zh and rephrased to a non-dated claim, per the standing no-month-snapshot rule.
+- One `{/* New in May 2026 */}` code comment relabelled.
+
+`LocalLLMsHub.tsx` now contains **zero** month references. The English hub alone carries 46,114
+impressions/month, so this reaches well beyond the German page.
 
 ### Projected impact (NOT measured)
 

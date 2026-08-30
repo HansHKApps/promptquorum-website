@@ -1080,8 +1080,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama: run `ollama pull <model-name>` again — it downloads only changed layers. LM Studio: open the model browser, find the updated version, and download it. Old GGUF files are not automatically removed — delete them manually from ~/.ollama/models (Ollama) or ~/Library/Application Support/LM Studio/models (macOS) to free disk space. Model updates from Meta, Alibaba, and Mistral typically arrive within 24–48 hours of official release.'
     },
     {
-      q: 'What are the best Ollama models in May 2026?',
-      a: 'Top Ollama models for May 2026: Llama 4 Scout 17B (best overall on 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (best coding, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (strong reasoning on RTX 3060, 8 GB VRAM), and DeepSeek-R2 8B (best math/logic, 5 GB VRAM). Run any model with `ollama run <name>` after pulling.'
+      q: 'What are the best Ollama models in 2026?',
+      a: 'Top Ollama models for 2026: Llama 4 Scout 17B (best overall on 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (best coding, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (strong reasoning on RTX 3060, 8 GB VRAM), and DeepSeek-R2 8B (best math/logic, 5 GB VRAM). Run any model with `ollama run <name>` after pulling.'
     },
     {
       q: 'What is the best local LLM for an RTX 3060 12 GB VRAM?',
@@ -1204,8 +1204,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama : exécutez `ollama pull <model-name>` à nouveau — il télécharge uniquement les couches modifiées. LM Studio : ouvrez le navigateur de modèles, trouvez la version mise à jour et téléchargez-la. Les anciens fichiers GGUF ne sont pas supprimés automatiquement — supprimez-les manuellement de ~/.ollama/models (Ollama) ou ~/Library/Application Support/LM Studio/models (macOS) pour libérer de l\'espace disque. Les mises à jour de modèles de Meta, Alibaba et Mistral arrivent généralement 24–48 heures après la sortie officielle.'
     },
     {
-      q: 'Quels sont les meilleurs modèles Ollama en mai 2026 ?',
-      a: 'Top modèles Ollama mai 2026 : Llama 4 Scout 17B (meilleure qualité sur 12 Go VRAM, `ollama pull llama4:scout`), Qwen3 8B (meilleur code, 5 Go VRAM), Gemma 3 12B (raisonnement puissant sur RTX 3060, 8 Go VRAM), DeepSeek-R2 8B (maths/logique, 5 Go VRAM).'
+      q: 'Quels sont les meilleurs modèles Ollama en 2026 ?',
+      a: 'Top modèles Ollama 2026 : Llama 4 Scout 17B (meilleure qualité sur 12 Go VRAM, `ollama pull llama4:scout`), Qwen3 8B (meilleur code, 5 Go VRAM), Gemma 3 12B (raisonnement puissant sur RTX 3060, 8 Go VRAM), DeepSeek-R2 8B (maths/logique, 5 Go VRAM).'
     },
     {
       q: 'Quel est le meilleur LLM local pour une RTX 3060 12 Go ?',
@@ -1262,8 +1262,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama: `ollama pull <model-name>`を再実行します — 変更されたレイヤーのみをダウンロードします。LM Studio: モデルブラウザを開き、更新版を見つけてダウンロードします。古いGGUFファイルは自動削除されません — ~/.ollama/models（Ollama）または~/Library/Application Support/LM Studio/models（macOS）から手動で削除してディスク容量を解放します。Meta、Alibaba、Mistralのモデル更新は通常、公式リリースの24–48時間以内に利用可能になります。'
     },
     {
-      q: '2026年5月のベストOllamaモデルは？',
-      a: '2026年5月トップOllamaモデル：Llama 4 Scout 17B（12 GB VRAMで最高品質、`ollama pull llama4:scout`）、Qwen3 8B（最高コーディング、5 GB VRAM）、Gemma 3 12B（RTX 3060で強力な推論、8 GB VRAM）、DeepSeek-R2 8B（数学・論理最強、5 GB VRAM）。'
+      q: '2026年のベストOllamaモデルは？',
+      a: '2026年トップOllamaモデル：Llama 4 Scout 17B（12 GB VRAMで最高品質、`ollama pull llama4:scout`）、Qwen3 8B（最高コーディング、5 GB VRAM）、Gemma 3 12B（RTX 3060で強力な推論、8 GB VRAM）、DeepSeek-R2 8B（数学・論理最強、5 GB VRAM）。'
     },
     {
       q: 'RTX 3060 12 GB VRAMに最適なローカルLLMは？',
@@ -1320,8 +1320,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama：再次运行`ollama pull <model-name>`— 仅下载更改的层。LM Studio：打开模型浏览器，找到更新版本并下载。旧的GGUF文件不会自动删除— 从~/.ollama/models（Ollama）或~/Library/Application Support/LM Studio/models（macOS）手动删除以释放磁盘空间。Meta、Alibaba和Mistral的模型更新通常在官方发布后24–48小时内推出。'
     },
     {
-      q: '2026年5月最佳Ollama模型是什么？',
-      a: '2026年5月顶级Ollama模型：Llama 4 Scout 17B（12 GB VRAM最佳综合质量，`ollama pull llama4:scout`）、Qwen3 8B（最佳编程，5 GB VRAM）、Gemma 3 12B（RTX 3060上强大推理，8 GB VRAM）、DeepSeek-R2 8B（数学逻辑最强，5 GB VRAM）。'
+      q: '2026年最佳Ollama模型是什么？',
+      a: '2026年顶级Ollama模型：Llama 4 Scout 17B（12 GB VRAM最佳综合质量，`ollama pull llama4:scout`）、Qwen3 8B（最佳编程，5 GB VRAM）、Gemma 3 12B（RTX 3060上强大推理，8 GB VRAM）、DeepSeek-R2 8B（数学逻辑最强，5 GB VRAM）。'
     },
     {
       q: 'RTX 3060 12 GB最适合哪款本地LLM？',
@@ -1378,8 +1378,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama: ejecuta `ollama pull <nombre-modelo>` de nuevo — solo descarga las capas modificadas. LM Studio: abre el explorador de modelos, encuentra la versión actualizada y descárgala. Los archivos GGUF antiguos no se eliminan automáticamente — bórralos manualmente de ~/.ollama/models (Ollama) o ~/Library/Application Support/LM Studio/models (macOS) para liberar espacio. Las actualizaciones de Meta, Alibaba y Mistral suelen estar disponibles en 24–48 horas tras el lanzamiento oficial.'
     },
     {
-      q: '¿Cuáles son los mejores modelos de Ollama en mayo de 2026?',
-      a: 'Top modelos Ollama mayo 2026: Llama 4 Scout 17B (mejor calidad global con 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (mejor código, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (razonamiento potente en RTX 3060, 8 GB VRAM) y DeepSeek-R2 8B (mejor matemáticas/lógica, 5 GB VRAM). Ejecuta cualquier modelo con `ollama run <nombre>` tras descargarlo.'
+      q: '¿Cuáles son los mejores modelos de Ollama en 2026?',
+      a: 'Top modelos Ollama 2026: Llama 4 Scout 17B (mejor calidad global con 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (mejor código, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (razonamiento potente en RTX 3060, 8 GB VRAM) y DeepSeek-R2 8B (mejor matemáticas/lógica, 5 GB VRAM). Ejecuta cualquier modelo con `ollama run <nombre>` tras descargarlo.'
     },
     {
       q: '¿Cuál es el mejor LLM local para una RTX 3060 con 12 GB VRAM?',
@@ -1436,8 +1436,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Ollama: rode `ollama pull <model-name>` novamente — ele baixa apenas as camadas alteradas. LM Studio: abra o navegador de modelos, encontre a versão atualizada e baixe-a. Os arquivos GGUF antigos não são removidos automaticamente — apague-os manualmente em ~/.ollama/models (Ollama) ou ~/Library/Application Support/LM Studio/models (macOS) para liberar espaço em disco. As atualizações de modelos da Meta, Alibaba e Mistral normalmente chegam em 24–48 horas após o lançamento oficial.'
     },
     {
-      q: 'Quais são os melhores modelos Ollama em maio de 2026?',
-      a: 'Top modelos Ollama de maio de 2026: Llama 4 Scout 17B (melhor geral em 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (melhor código, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (raciocínio forte na RTX 3060, 8 GB VRAM) e DeepSeek-R2 8B (melhor em matemática/lógica, 5 GB VRAM). Rode qualquer modelo com `ollama run <name>` após baixá-lo.'
+      q: 'Quais são os melhores modelos Ollama em 2026?',
+      a: 'Top modelos Ollama de 2026: Llama 4 Scout 17B (melhor geral em 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (melhor código, `ollama pull qwen3:8b`, 5 GB VRAM), Gemma 3 12B (raciocínio forte na RTX 3060, 8 GB VRAM) e DeepSeek-R2 8B (melhor em matemática/lógica, 5 GB VRAM). Rode qualquer modelo com `ollama run <name>` após baixá-lo.'
     },
     {
       q: 'Qual é o melhor LLM local para uma RTX 3060 12 GB VRAM?',
@@ -1494,8 +1494,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: '⁨Ollama⁩: شغّل `ollama pull <model-name>` مجددًا — يُنزَّل فقط الطبقات المتغيّرة. ⁨LM Studio⁩: افتح متصفّح النماذج، وابحث عن الإصدار المحدَّث، ونزّله. لا تُحذف ملفات ⁨GGUF⁩ القديمة تلقائيًا — احذفها يدويًا من `~/.ollama/models` (⁨Ollama⁩) أو `~/Library/Application Support/LM Studio/models` (⁨macOS⁩) لتحرير مساحة القرص. عادةً ما تصل تحديثات النماذج من ⁨Meta⁩ و⁨Alibaba⁩ و⁨Mistral⁩ خلال 24-48 ساعة من الإصدار الرسمي.'
     },
     {
-      q: 'ما أفضل نماذج ⁨Ollama⁩ في مايو 2026؟',
-      a: 'أفضل نماذج ⁨Ollama⁩ لمايو 2026: ⁨Llama 4 Scout 17B⁩ (الأفضل عمومًا بذاكرة ⁨12 GB VRAM⁩، `ollama pull llama4:scout`)، ⁨Qwen3 8B⁩ (الأفضل للبرمجة، `ollama pull qwen3:8b`، ⁨5 GB VRAM⁩)، ⁨Gemma 3 12B⁩ (استدلال قوي على ⁨RTX 3060⁩، ⁨8 GB VRAM⁩)، و⁨DeepSeek-R2 8B⁩ (الأفضل للرياضيات والمنطق، ⁨5 GB VRAM⁩). شغّل أي نموذج بالأمر `ollama run <name>` بعد سحبه.'
+      q: 'ما أفضل نماذج ⁨Ollama⁩ في 2026؟',
+      a: 'أفضل نماذج ⁨Ollama⁩ لعام 2026: ⁨Llama 4 Scout 17B⁩ (الأفضل عمومًا بذاكرة ⁨12 GB VRAM⁩، `ollama pull llama4:scout`)، ⁨Qwen3 8B⁩ (الأفضل للبرمجة، `ollama pull qwen3:8b`، ⁨5 GB VRAM⁩)، ⁨Gemma 3 12B⁩ (استدلال قوي على ⁨RTX 3060⁩، ⁨8 GB VRAM⁩)، و⁨DeepSeek-R2 8B⁩ (الأفضل للرياضيات والمنطق، ⁨5 GB VRAM⁩). شغّل أي نموذج بالأمر `ollama run <name>` بعد سحبه.'
     },
     {
       q: 'ما أفضل نموذج محلي لبطاقة ⁨RTX 3060⁩ بذاكرة ⁨12 GB VRAM⁩؟',
@@ -1741,7 +1741,7 @@ const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
   en: [
     {
       q: 'What is a local LLM?',
-      a: 'A local LLM is a large language model that runs entirely on your own hardware — CPU, GPU, or Apple Silicon — without sending data to external servers. You download the model file (typically 2–40 GB) and run it using a tool like Ollama or LM Studio. As of May 2026, the most popular local LLM is Meta Llama 4 Scout 17B, which runs on machines with 10 GB VRAM at 10–80 tokens/sec.',
+      a: 'A local LLM is a large language model that runs entirely on your own hardware — CPU, GPU, or Apple Silicon — without sending data to external servers. You download the model file (typically 2–40 GB) and run it using a tool like Ollama or LM Studio. The most widely used local LLM is Meta Llama 4 Scout 17B, which runs on machines with 10 GB VRAM at 10–80 tokens/sec.',
     },
     {
       q: 'Is a local LLM better than ChatGPT?',
@@ -1767,7 +1767,7 @@ const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
   de: [
     {
       q: 'Was ist ein lokales LLM?',
-      a: 'Ein lokales LLM ist ein großes Sprachmodell, das vollständig auf Ihrer eigenen Hardware läuft — CPU, GPU oder Apple Silicon —, ohne Daten an externe Server zu senden. Sie laden die Modelldatei (typischerweise 2–40 GB) herunter und führen sie mit einem Tool wie Ollama oder LM Studio aus. Stand Mai 2026 ist Meta Llama 4 Scout 17B das beliebteste lokale LLM; es läuft auf Geräten mit 10 GB VRAM mit 10–80 Tokens/Sek.',
+      a: 'Ein lokales LLM ist ein großes Sprachmodell, das vollständig auf Ihrer eigenen Hardware läuft — CPU, GPU oder Apple Silicon —, ohne Daten an externe Server zu senden. Sie laden die Modelldatei (typischerweise 2–40 GB) herunter und führen sie mit einem Tool wie Ollama oder LM Studio aus. Das meistgenutzte lokale LLM ist Meta Llama 4 Scout 17B; es läuft auf Geräten mit 10 GB VRAM mit 10–80 Tokens/Sek.',
     },
     {
       q: 'Ist ein lokales LLM besser als ChatGPT?',
@@ -1793,7 +1793,7 @@ const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
   fr: [
     {
       q: "Qu'est-ce qu'un LLM local ?",
-      a: "Un LLM local est un grand modèle de langage qui s'exécute entièrement sur votre propre matériel — CPU, GPU ou Apple Silicon — sans envoyer de données à des serveurs externes. Vous téléchargez le fichier du modèle (généralement 2 à 40 Go) et l'exécutez avec un outil comme Ollama ou LM Studio. En mai 2026, le LLM local le plus populaire est Meta Llama 4 Scout 17B, qui fonctionne sur des machines avec 10 Go de VRAM à 10–80 tokens/s.",
+      a: "Un LLM local est un grand modèle de langage qui s'exécute entièrement sur votre propre matériel — CPU, GPU ou Apple Silicon — sans envoyer de données à des serveurs externes. Vous téléchargez le fichier du modèle (généralement 2 à 40 Go) et l'exécutez avec un outil comme Ollama ou LM Studio. Le LLM local le plus utilisé est Meta Llama 4 Scout 17B, qui fonctionne sur des machines avec 10 Go de VRAM à 10–80 tokens/s.",
     },
     {
       q: 'Un LLM local est-il meilleur que ChatGPT ?',
@@ -1819,7 +1819,7 @@ const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
   ja: [
     {
       q: 'ローカルLLMとは何ですか?',
-      a: 'ローカルLLMとは、CPU・GPU・Apple Siliconなど、お使いのハードウェア上で完全に動作する大規模言語モデルです。外部サーバーへデータを送信しません。モデルファイル(通常2〜40GB)をダウンロードし、OllamaやLM Studioなどのツールで実行します。2026年5月時点で最も人気のあるローカルLLMはMeta Llama 4 Scout 17Bで、10GB VRAMのマシンで10〜80トークン/秒で動作します。',
+      a: 'ローカルLLMとは、CPU・GPU・Apple Siliconなど、お使いのハードウェア上で完全に動作する大規模言語モデルです。外部サーバーへデータを送信しません。モデルファイル(通常2〜40GB)をダウンロードし、OllamaやLM Studioなどのツールで実行します。最も広く使われているローカルLLMはMeta Llama 4 Scout 17Bで、10GB VRAMのマシンで10〜80トークン/秒で動作します。',
     },
     {
       q: 'ローカルLLMはChatGPTより優れていますか?',
@@ -1845,7 +1845,7 @@ const HUB_FAQS_BOTTOM: Record<string, { q: string; a: string }[]> = {
   zh: [
     {
       q: '什么是本地LLM?',
-      a: '本地LLM是完全在您自己的硬件上运行的大语言模型——CPU、GPU或Apple Silicon均可——不会将数据发送到外部服务器。您下载模型文件(通常2–40 GB),然后使用Ollama或LM Studio等工具运行。截至2026年5月,最受欢迎的本地LLM是Meta Llama 4 Scout 17B,可在10 GB VRAM的设备上以10–80 tokens/秒的速度运行。',
+      a: '本地LLM是完全在您自己的硬件上运行的大语言模型——CPU、GPU或Apple Silicon均可——不会将数据发送到外部服务器。您下载模型文件(通常2–40 GB),然后使用Ollama或LM Studio等工具运行。使用最广泛的本地LLM是Meta Llama 4 Scout 17B,可在10 GB VRAM的设备上以10–80 tokens/秒的速度运行。',
     },
     {
       q: '本地LLM比ChatGPT更好吗?',
@@ -2243,7 +2243,7 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           </Link>
         </div>
 
-        {/* New in May 2026 */}
+        {/* Recently added */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold text-text-primary mb-6">
             {HUB_NEW_APRIL_HEADING[lang] ?? HUB_NEW_APRIL_HEADING['en']}
