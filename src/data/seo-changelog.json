@@ -1538,5 +1538,30 @@
       "ctr": 0.06438356164383562,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "d627bed8-f28b-4383-8df0-95642923a426",
+    "slug": "/zh/local-llms/small-local-llm-models",
+    "date": "2026-08-30T12:58:34.735Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026年最佳小型本地LLM：5大模型性能完整对比",
+        "new": "本地小模型推荐 2026：5大小型LLM排行与对比"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年4-8GB RAM最佳5大小型本地LLM完整对比：Phi-4 Mini（68% MMLU）、Gemma 4 E2B（MMLU Pro 60%，128K上下文）、Qwen3（编码最优）、Llama 3.2（通用推荐）。",
+        "new": "本地小模型推荐与排行：Phi-4 Mini（68% MMLU）、Gemma 4 E2B（MMLU Pro 60%，128K上下文）、Qwen3（编码最优）、Llama 3.2（通用）。4-8GB 内存即可运行，含性能对比。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: page used 小型 (38x) while searchers type 小模型 (~100 impr); 推荐 cluster 52 impr with only 4 mentions; 排行/排名 28 impr with 1. Also fixed a FAQPage policy issue — de/ja/zh faqSchema carried DIFFERENT questions from the visible FAQs, including 2 zh entries not on the page at all. 7/10 -> 10/10",
+    "baseline": {
+      "position": 4.4,
+      "impressions": 1403,
+      "clicks": 113,
+      "ctr": 0.08054169636493229,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
