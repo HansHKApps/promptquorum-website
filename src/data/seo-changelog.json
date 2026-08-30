@@ -1261,5 +1261,47 @@
       "ctr": 0.024429315178213857,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "24589aa6-b762-4d6f-8980-de6196619d9a",
+    "slug": "/zh/local-llms/local-llm-hardware-guide-2026",
+    "date": "2026-08-30T09:04:47.519Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "按显存划分的本地LLM硬件要求：8、16和24 GB GPU的最佳模型，以及70B和GLM-5.3的精确需求。RTX 50系列、Apple M5、2026年7月价格。",
+        "new": "按显存划分的本地LLM硬件要求：8、16和24 GB GPU的最佳模型，以及70B和GLM-5.3的精确需求。RTX 50系列、Apple M5。"
+      }
+    ],
+    "reason": "month-drift fix: stale 'July 2026 prices' clause survived the 2026-08-28 sweep in ja/zh/ko only — en/es/ar/pt/de/fr metas were already clean. Classic locale drift; validator misses it (not trailing-stamp form).",
+    "baseline": null
+  },
+  {
+    "id": "58e1dfdd-6ed0-4c4a-bd5a-5b0044ac9144",
+    "slug": "/ja/local-llms/local-llm-hardware-guide-2026",
+    "date": "2026-08-30T09:04:47.614Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.3をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5、2026年7月価格。",
+        "new": "VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.3をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5。"
+      }
+    ],
+    "reason": "month-drift fix: stale 'July 2026 prices' clause survived the 2026-08-28 sweep in ja/zh/ko only — en/es/ar/pt/de/fr metas were already clean. Classic locale drift; validator misses it (not trailing-stamp form).",
+    "baseline": null
+  },
+  {
+    "id": "8487fda1-100f-4bca-b30f-65ee1757a1a7",
+    "slug": "/ko/local-llms/local-llm-hardware-guide-2026",
+    "date": "2026-08-30T09:04:47.709Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.3에 정확히 필요한 사양. RTX 50 시리즈, Apple M5, 2026년 7월 가격.",
+        "new": "VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.3에 정확히 필요한 사양. RTX 50 시리즈, Apple M5."
+      }
+    ],
+    "reason": "month-drift fix: stale 'July 2026 prices' clause survived the 2026-08-28 sweep in ja/zh/ko only — en/es/ar/pt/de/fr metas were already clean. Classic locale drift; validator misses it (not trailing-stamp form).",
+    "baseline": null
   }
 ]
