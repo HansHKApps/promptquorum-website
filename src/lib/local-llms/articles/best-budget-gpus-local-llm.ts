@@ -16,12 +16,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'GPU Buying Guides',
       title: 'Best Budget GPU for Local LLMs 2026: RTX 3060 12GB & Alternatives',
       seoTitle: 'Best Budget GPU for Local LLMs 2026: RTX 3060 12GB',
-      intro: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec — all at Q4 quantization.** (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.) The 6GB variant is limited to 3B models only. As of July 2026, the RTX 3060 12GB ($170–220 used) remains the best used budget GPU for local LLMs, and the RTX 5060 Ti 16GB (~$390–400 new) is now the best new-card budget pick: 12GB+ VRAM fits every 7B-8B model at Q4/Q5 and most dense 13B-14B models at Q4. (Note: Llama 4 Scout is a 17B-active/109B-total MoE that needs ~55 GB at Q4 — it does not fit 12 GB normally.) This guide covers exactly which models run on each VRAM tier, with real speeds and practical setups.',
+      intro: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec — all at Q4 quantization.** (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.) The 6GB variant is limited to 3B models only. The RTX 3060 12GB ($170–220 used) remains the best used budget GPU for local LLMs, and the RTX 5060 Ti 16GB (~$390–400 new) is now the best new-card budget pick: 12GB+ VRAM fits every 7B-8B model at Q4/Q5 and most dense 13B-14B models at Q4. (Note: Llama 4 Scout is a 17B-active/109B-total MoE that needs ~55 GB at Q4 — it does not fit 12 GB normally.) This guide covers exactly which models run on each VRAM tier, with real speeds and practical setups.',
       metaDescription: 'Best budget GPU for local LLMs 2026: RTX 3060 12GB ($170–220 used) runs Qwen3 14B at 9–12 tok/s. New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT. Full speed table.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-en.webp',
       publishDate: '2026-04-05',
       dateModified: '2026-07-29',
-      leadAnswerBlock: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec. The 6GB variant handles 3B models only. Best used budget GPU for local LLMs in 2026 at $170–220 used; RTX 5060 Ti 16GB (~$390–400 new) is the best new-card pick.**',
+      leadAnswerBlock: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec. The 6GB variant handles 3B models only. It is the cheapest GPU worth buying for local LLMs and local AI in 2026 at $170–220 used; RTX 5060 Ti 16GB (~$390–400 new) is the best new-card pick and the most cost-effective affordable route overall.**',
       quickAnswerTop: {
         question: 'What is the best budget GPU for local LLMs in 2026?',
         answer: 'RTX 3060 12 GB ($170–220 used) is the best used budget GPU for local LLMs in 2026 — runs Qwen3 14B at 9–12 tok/s at Q4, handles all 7B-8B models, and fits within a $220 budget. For $390–400 new, the RTX 5060 Ti 16 GB is the current-generation budget pick with more VRAM headroom, while the RTX 4070 Super 12 GB runs the same 7B-14B models 20–30% faster.',
@@ -211,6 +211,7 @@ rows: [
             { q: 'How does the AMD 6800XT compare to the RTX 4070 for AI inference?', a: 'AMD RX 6800 XT (16 GB) beats RTX 4070 (12 GB) on VRAM and gaming performance but lags on LLM inference speed (15-20% slower). ROCm driver setup for llama.cpp is also more complex than CUDA. For pure LLM work, RTX 4070 is easier; for gaming + LLMs, 6800 XT offers better value.' },
             { q: 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?', a: 'Used RTX 3090 (24 GB, ~$450-500) = $18-20 per GB. Used RTX 3060 (12 GB, ~$150-180) = $12-15 per GB. RTX 4070 Ti (12 GB, ~$600 new) = $50 per GB. Best value: RTX 3060 12GB used. Most capacity per dollar: RTX 3090 24GB used. Balance price + power: RTX 4070 new.' },
             { q: 'Can I use an AMD RX 6700 or 6800 XT instead of NVIDIA for local LLMs?', a: 'Yes, but AMD ROCm driver support for ONNX Runtime is weaker than NVIDIA CUDA. Expect more setup friction. NVIDIA is safer for budget builds.' },
+            { q: 'What is the cheapest GPU for LLM inference?', a: 'The RTX 3060 12GB at roughly $170–220 used, and nothing else on the affordable end comes close on cost per usable GB of VRAM. Cheaper cards exist, but below 12GB the model sizes worth running stop fitting, so a cheaper card is not a cheaper way to run local AI — it is a card that cannot do the job. If you want new rather than used, the RTX 5060 Ti 16GB at roughly $390–400 is the most cost-effective new option. One scope note: this page ranks consumer cards for a single machine. Cheapest GPU inference at production scale is a different question, decided by throughput per watt and per rack unit rather than sticker price.' },
           ],
         },
         'relatedReading': {
@@ -392,6 +393,14 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Yes, but AMD ROCm driver support for ONNX Runtime is weaker than NVIDIA CUDA. Expect more setup friction. NVIDIA is safer for budget builds.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the cheapest GPU for LLM inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The RTX 3060 12GB at roughly $170–220 used, and nothing else on the affordable end comes close on cost per usable GB of VRAM. Cheaper cards exist, but below 12GB the model sizes worth running stop fitting, so a cheaper card is not a cheaper way to run local AI — it is a card that cannot do the job. If you want new rather than used, the RTX 5060 Ti 16GB at roughly $390–400 is the most cost-effective new option. One scope note: this page ranks consumer cards for a single machine. Cheapest GPU inference at production scale is a different question, decided by throughput per watt and per rack unit rather than sticker price.',
             },
           },
         ]
