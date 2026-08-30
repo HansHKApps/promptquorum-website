@@ -79,6 +79,15 @@ import { article as a_best_workstation_build_local_ai_2026 } from './articles/be
 import { article as a_best_local_llm_ide_plugins_2026 } from './articles/best-local-llm-ide-plugins-2026'
 import { article as a_best_rag_tools_for_business_documents_2026 } from './articles/best-rag-tools-for-business-documents-2026'
 import { article as a_wechat_bot_local_llm_personal_assistant_2026 } from './articles/wechat-bot-local-llm-personal-assistant-2026'
+import { article as a_melhor_hospedagem_site_brasil_2026 } from './articles/melhor-hospedagem-site-brasil-2026'
+import { article as a_best_web_hosting_arab_gulf_2026 } from './articles/best-web-hosting-arab-gulf-2026'
+import { article as a_best_web_hosting_korea_2026 } from './articles/best-web-hosting-korea-2026'
+import { article as a_best_web_hosting_2026 } from './articles/best-web-hosting-2026'
+import { article as a_beste_webhosting_anbieter_deutschland_2026 } from './articles/beste-webhosting-anbieter-deutschland-2026'
+import { article as a_meilleur_hebergeur_web_france_2026 } from './articles/meilleur-hebergeur-web-france-2026'
+import { article as a_mejor_hosting_web_espana_latinoamerica_2026 } from './articles/mejor-hosting-web-espana-latinoamerica-2026'
+import { article as a_best_web_hosting_japan_2026 } from './articles/best-web-hosting-japan-2026'
+import { article as a_best_web_hosting_china_2026 } from './articles/best-web-hosting-china-2026'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
@@ -156,4 +165,13 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud':                a_local_ai_video_generation_vs_cloud,
   'local-ai-image-generation-vs-cloud':                a_local_ai_image_generation_vs_cloud,
+  'melhor-hospedagem-site-brasil-2026':                a_melhor_hospedagem_site_brasil_2026,
+  'best-web-hosting-arab-gulf-2026':                   a_best_web_hosting_arab_gulf_2026,
+  'best-web-hosting-korea-2026':                       a_best_web_hosting_korea_2026,
+  'best-web-hosting-2026':                             a_best_web_hosting_2026,
+  'beste-webhosting-anbieter-deutschland-2026':        a_beste_webhosting_anbieter_deutschland_2026,
+  'meilleur-hebergeur-web-france-2026':                a_meilleur_hebergeur_web_france_2026,
+  'mejor-hosting-web-espana-latinoamerica-2026':       a_mejor_hosting_web_espana_latinoamerica_2026,
+  'best-web-hosting-japan-2026':                       a_best_web_hosting_japan_2026,
+  'best-web-hosting-china-2026':                       a_best_web_hosting_china_2026,
 }

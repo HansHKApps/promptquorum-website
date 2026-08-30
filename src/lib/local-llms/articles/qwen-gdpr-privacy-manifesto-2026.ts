@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'cumplimiento RGPD LLM local 2026',
     leadAnswerBlock: '**Los LLMs locales de pesos abiertos son la única arquitectura de IA que elimina por diseño el riesgo de transferencia transfronteriza del Artículo 44 del RGPD. Qwen3.8-27B (Apache 2.0 para la mayoría de los tamaños, 90,3% LiveCodeBench v6) iguala el rendimiento de los modelos frontera en la nube mientras mantiene todos los datos en hardware de la UE. La Ley de IA de la UE 2026 añade nuevos requisitos de transparencia y documentación que favorecen los despliegues locales frente a las APIs en la nube de caja negra.**',
     quickAnswerTop: {
-      en: {
+      es: {
         question: 'Why are open-weight local LLMs like Qwen better for GDPR compliance?',
         answer: 'May 2026: Cloud AI APIs transfer your prompts to US, Chinese, or other non-EU servers. GDPR Article 44 requires legal justification (adequacy decision or SCCs) for these transfers. Local LLMs keep all data on your hardware — no transfer, no Article 44 obligation. Qwen3.8-27B (Apache 2.0) runs on 24 GB VRAM with 90.3% LiveCodeBench v6 — the same quality as frontier cloud models, with zero cross-border data risk.',
         bullets: [

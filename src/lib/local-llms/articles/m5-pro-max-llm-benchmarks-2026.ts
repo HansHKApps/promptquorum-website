@@ -309,7 +309,7 @@ print(f"Time to first token: ~{elapsed - tokens * (elapsed/tokens):.2f}s")`,
     targetKeywords: ['benchmarks M5 Pro', 'benchmarks M5 Max', 'comparativa tok/s', 'rendimiento LLM Apple Silicon'],
     leadAnswerBlock: '**M5 Pro (307 GB/s) alcanza 50–60 tok/s en Llama 3.1 8B Q4; M5 Max (614 GB/s) alcanza 100–120 tok/s en el mismo modelo gracias al doble de ancho de banda. En modelos 70B, M5 Pro llega a 8–12 tok/s (Q4), M5 Max llega a 15–20 tok/s (Q5). La ventaja de 2× en ancho de banda se traduce directamente en 2× de velocidad de generación. Whisper large-v3 funciona a 10–12× tiempo real en M5 Pro, 12–14× en M5 Max (aceleración Metal).**',
     quickAnswerTop: {
-      en: {
+      es: {
         question: 'How fast is M5 Pro vs M5 Max for local LLM inference?',
         answer: 'M5 Pro (64GB): Llama 3.1 8B Q4 at 50–60 tok/s; 70B Q4 at 8–12 tok/s. M5 Max (128GB): Llama 3.1 8B Q4 at 100–120 tok/s; 70B Q5 at 15–20 tok/s. M5 Max is roughly 2× faster due to double the memory bandwidth (614 GB/s vs 307 GB/s).',
         bullets: [

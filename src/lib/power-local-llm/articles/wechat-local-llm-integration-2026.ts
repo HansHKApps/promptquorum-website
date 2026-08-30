@@ -1177,7 +1177,7 @@ while True:
     leadAnswerBlock:
       '**Conecta WeChat a un LLM local ejecutando Ollama en un mini PC siempre activo, luego enruta los mensajes de WeChat a la API HTTP de Ollama mediante WeChatFerry (Windows) o un listener de webhook. Qwen3 7B Q4_K_M es el mejor modelo para chats en chino en WeChat: tokenización CJK nativa, 5.5 GB de VRAM y 8–15 tok/s en hardware modesto.**',
     quickAnswerTop: {
-      en: {
+      es: {
         question: 'How do I connect WeChat to a local LLM?',
         answer:
           'Run Ollama on a mini PC (or localhost), install WeChatFerry to intercept WeChat PC client messages, write a Python bridge that sends messages to Ollama\'s HTTP API at localhost:11434, and return the LLM response to the chat. Qwen3 7B Q4_K_M is the recommended model for Chinese-language chat.',

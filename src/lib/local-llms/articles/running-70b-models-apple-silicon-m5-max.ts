@@ -446,7 +446,7 @@ for chunk in stream_generate(model, tokenizer, "Explain quantum computing", max_
     ctaText: '¿Ejecutas Llama 3.3 70B en local en tu M5 Max? Compara tus respuestas locales con GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro y otros 22 modelos cloud con PromptQuorum — verifica que tu inversión de $4,000 en hardware alcanza calidad cloud para tus tareas de razonamiento, programación y escritura. Todo en un solo envío.',
     leadAnswerBlock: '**M5 Max 128GB ejecuta Llama 3.3 70B a 15–20 tok/s (Q4_K_M) o 12–16 tok/s (Q5_K_M). 70B Q5 obtiene 86.1 en MMLU — a solo un 3% de GPT-5.6 (88.7) — mientras corre en local a $0/mes. Es el único hardware de consumo que carga modelos 70B sin configuraciones multi-GPU complejas. La configuración toma menos de 10 minutos con Ollama.**',
     quickAnswerTop: {
-      en: {
+      es: {
         question: 'Can I run 70B models on M5 Max 128GB?',
         answer: 'Yes. Llama 3.3 70B Q5_K_M runs at 12–16 tok/s. Q4_K_M at 15–20 tok/s. Q8_0 at 8–12 tok/s (lossless quality). All fit in 128GB unified memory. Setup is 10 minutes with Ollama. 70B Q5 matches GPT-5.6 quality within 3% on standard benchmarks.',
         bullets: [

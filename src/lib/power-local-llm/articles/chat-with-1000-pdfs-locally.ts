@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Standardeinstellungen scheitern bei 5.000-8.000 Chunks, weil die Abrufgenauigkeit sinkt, wenn der Vektorindex RAM überschreitet und naive Cosinus-Suche lexikalisch ähnliche aber semantisch falsche Chunks zurückgibt. Um über 1.000 PDFs zu skalieren, benötigen Sie drei von vier: (1) Hybrid-Suche (BM25 + Vektor), (2) einen Reranker-Pass über die Top-50-Kandidaten, (3) Metadaten-Filterung, um den Suchraum vorzuverengen, (4) hierarchisches Abrufen (Summary-Index + Chunk-Index). Wählen Sie die Architektur nach Bestandsgröße: 100-1.000 Dokumente → AnythingLLM optimiert; 1.000-5.000 → LlamaIndex lokal mit hierarchischen Indizes; 5.000-10.000 → benutzerdefiniert Ollama + ChromaDB mit Hybrid-Suche; 10.000+ → Ollama + Qdrant mit Metadaten-Filterung und Reranker.**',
     quickAnswerTop: {
-      en: {
+      de: {
         question: 'How do I build a local RAG system that handles 1,000 to 10,000+ PDFs?',
         answer:
           'Pick the architecture by scale: AnythingLLM tuned (100-1k docs), LlamaIndex local with hierarchical indices (1k-5k), Ollama + ChromaDB with hybrid search (5k-10k), Ollama + Qdrant with metadata filtering and a reranker (10k+). Default retrieval breaks around 5,000-8,000 chunks because the index spills out of RAM and cosine-only search degrades. The fixes — in order of impact — are hybrid search (BM25 + vector), a small reranker (BGE-reranker-v2-m3), metadata pre-filtering, and hierarchical summary→chunk retrieval. Plan 8-32 GB of disk for vectors at 10k documents and 30-90 minutes of indexing per 5,000 documents on consumer hardware.',
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Les paramètres par défaut échouent à 5.000-8.000 chunks car la précision du récupérateur baisse quand l\'index vectoriel dépasse la RAM et la recherche cosinus seule retourne des chunks lexicalement similaires mais sémantiquement erronés. Pour évoluer au-delà de 1.000 PDF, vous avez besoin de trois éléments parmi : (1) recherche hybride (BM25 + vecteur), (2) un passage reranker sur les 50 meilleurs candidats, (3) filtrage par métadonnées pour réduire l\'espace de recherche, (4) récupération hiérarchique (index résumé + index chunk). Choisissez l\'architecture selon la taille du corpus : 100-1.000 docs → AnythingLLM ajusté ; 1.000-5.000 → LlamaIndex local avec indices hiérarchiques ; 5.000-10.000 → Ollama+ChromaDB personnalisé avec recherche hybride ; 10.000+ → Ollama+Qdrant avec filtrage par métadonnées et reranker.**',
     quickAnswerTop: {
-      en: {
+      fr: {
         question: 'How do I build a local RAG system that handles 1,000 to 10,000+ PDFs?',
         answer:
           'Pick the architecture by scale: AnythingLLM tuned (100-1k docs), LlamaIndex local with hierarchical indices (1k-5k), Ollama + ChromaDB with hybrid search (5k-10k), Ollama + Qdrant with metadata filtering and a reranker (10k+). Default retrieval breaks around 5,000-8,000 chunks because the index spills out of RAM and cosine-only search degrades. The fixes — in order of impact — are hybrid search (BM25 + vector), a small reranker (BGE-reranker-v2-m3), metadata pre-filtering, and hierarchical summary→chunk retrieval. Plan 8-32 GB of disk for vectors at 10k documents and 30-90 minutes of indexing per 5,000 documents on consumer hardware.',
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**デフォルト設定は5,000~8,000チャンクで失敗します。理由：ベクトルインデックスがRAMを超過し、コサイン単独検索は字句的に類似だが意味的に誤ったチャンクを返すからです。1,000 PDF超へスケーリングするには、以下のうち3つが必要です：(1) ハイブリッド検索（BM25 + ベクトル）、(2) Top-50候補へのリランカーパス、(3) メタデータフィルタリングで検索空間を限定、(4) 階層検索（サマリインデックス+チャンクインデックス）。コーパスサイズで選択：100~1,000ドキュメント → AnythingLLM調整版; 1,000~5,000 → LlamaIndex階層インデックス; 5,000~10,000 → Ollama+ChromaDBカスタム+ハイブリッド; 10,000+ → Ollama+Qdrant+メタデータフィルタリング+リランカー。**',
     quickAnswerTop: {
-      en: {
+      ja: {
         question: 'How do I build a local RAG system that handles 1,000 to 10,000+ PDFs?',
         answer:
           'Pick the architecture by scale: AnythingLLM tuned (100-1k docs), LlamaIndex local with hierarchical indices (1k-5k), Ollama + ChromaDB with hybrid search (5k-10k), Ollama + Qdrant with metadata filtering and a reranker (10k+). Default retrieval breaks around 5,000-8,000 chunks because the index spills out of RAM and cosine-only search degrades. The fixes — in order of impact — are hybrid search (BM25 + vector), a small reranker (BGE-reranker-v2-m3), metadata pre-filtering, and hierarchical summary→chunk retrieval. Plan 8-32 GB of disk for vectors at 10k documents and 30-90 minutes of indexing per 5,000 documents on consumer hardware.',
@@ -3007,7 +3007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Los ajustes predeterminados fallan a los 5.000-8.000 chunks porque el recall de recuperación cae cuando el índice vectorial supera la RAM y la búsqueda coseno básica devuelve chunks léxicamente similares pero semánticamente incorrectos. Para escalar más allá de 1.000 PDFs necesitas tres de los siguientes: (1) búsqueda híbrida (BM25 + vector), (2) un paso reranker sobre los 50 mejores candidatos, (3) filtrado de metadatos para reducir el espacio de búsqueda, (4) recuperación jerárquica (índice de resúmenes + índice de chunks). Elige la arquitectura según el tamaño del corpus: 100-1.000 docs → AnythingLLM ajustado; 1.000-5.000 → LlamaIndex local con índices jerárquicos; 5.000-10.000 → Ollama + ChromaDB personalizado con búsqueda híbrida; 10.000+ → Ollama + Qdrant con filtrado de metadatos y un reranker.**',
     quickAnswerTop: {
-      en: {
+      es: {
         question: 'How do I build a local RAG system that handles 1,000 to 10,000+ PDFs?',
         answer:
           'Pick the architecture by scale: AnythingLLM tuned (100-1k docs), LlamaIndex local with hierarchical indices (1k-5k), Ollama + ChromaDB with hybrid search (5k-10k), Ollama + Qdrant with metadata filtering and a reranker (10k+). Default retrieval breaks around 5,000-8,000 chunks because the index spills out of RAM and cosine-only search degrades. The fixes — in order of impact — are hybrid search (BM25 + vector), a small reranker (BGE-reranker-v2-m3), metadata pre-filtering, and hierarchical summary→chunk retrieval. Plan 8-32 GB of disk for vectors at 10k documents and 30-90 minutes of indexing per 5,000 documents on consumer hardware.',

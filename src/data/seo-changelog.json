@@ -1393,5 +1393,25 @@
       "ctr": 0.03506884681583477,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "3c5c22d1-74f2-468c-8483-cc6fc9f795e7",
+    "slug": "/de/local-llms/qwen-local-deployment-guide-2026",
+    "date": "2026-08-30T12:19:46.914Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder und Qwen2-VL lokal betreiben 2026. VRAM-Anforderungen, Ollama + LM Studio Setup, Q4_K_M-Benchmarks und Hardware-Tier-Guide.",
+        "new": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers."
+      }
+    ],
+    "reason": "geo-meta-optimizer: every listed query has 0 clicks at pos 6-9. Meta was 176 chars (truncated) and opened with a model list, not an answer. Model-version drift: qwen 3.7/3.8 draw 38 impr with zero body coverage. Added 4 FAQs (version guidance, 27B VRAM, ollama command, 12GB). 7/10 -> 10/10",
+    "baseline": {
+      "position": 5.4,
+      "impressions": 3803,
+      "clicks": 43,
+      "ctr": 0.011306863002892454,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
