@@ -83,4 +83,10 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
 
   // TIER 3 extension — Legislation moat: GB plug-in solar route (SI 2026/848, in force 2026-08-27)
   'plug-in-balcony-solar-uk-rules':               'plug-in-balcony-solar-uk-rules',                    // BSOL-52
+
+  // TIER 6 extension — Company profiles (noindex until authorized — see published.ts)
+  'renogy-balcony-solar':                         'renogy-balcony-solar',                             // BSOL-53
+  'allpowers-balcony-solar':                      'allpowers-balcony-solar',                          // BSOL-54
+  'jackery-balcony-solar':                        'jackery-balcony-solar',                            // BSOL-55
+  'bluetti-balcony-solar':                        'bluetti-balcony-solar',                            // BSOL-56
 }

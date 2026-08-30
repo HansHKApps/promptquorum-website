@@ -92,6 +92,14 @@ import { article as a_meyer_burger_solarwatt_heckert_balcony_solar } from './art
 // TIER 3 extension — GB plug-in solar legislation + buying guide (BSOL-52)
 import { article as a_plug_in_balcony_solar_uk_rules } from './articles/plug-in-balcony-solar-uk-rules'
 
+// TIER 6 extension — Company profiles (BSOL-53..54, noindex until authorized — see published.ts)
+import { article as a_renogy_balcony_solar } from './articles/renogy-balcony-solar'
+import { article as a_allpowers_balcony_solar } from './articles/allpowers-balcony-solar'
+
+// TIER 6 extension — Company profiles (BSOL-55..56, noindex until authorized — see published.ts)
+import { article as a_jackery_balcony_solar } from './articles/jackery-balcony-solar'
+import { article as a_bluetti_balcony_solar } from './articles/bluetti-balcony-solar'
+
 export const balconySolarContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   // TIER 1 — Hub + core money pages (all 5 authored, EN-only)
   'what-is-balcony-solar':                    a_what_is_balcony_solar,
@@ -168,4 +176,10 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
 
   // TIER 3 extension — GB plug-in solar legislation + buying guide
   'plug-in-balcony-solar-uk-rules':                    a_plug_in_balcony_solar_uk_rules,
+
+  // TIER 6 extension — Company profiles (noindex until authorized — see published.ts)
+  'renogy-balcony-solar':                              a_renogy_balcony_solar,
+  'allpowers-balcony-solar':                           a_allpowers_balcony_solar,
+  'jackery-balcony-solar':                             a_jackery_balcony_solar,
+  'bluetti-balcony-solar':                             a_bluetti_balcony_solar,
 }
