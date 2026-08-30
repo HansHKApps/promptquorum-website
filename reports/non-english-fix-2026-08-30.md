@@ -18,6 +18,7 @@ every page.
 | 2 | `/de/local-llms` (hub) | 8/10 | **10/10** | **+2** | A | 273 / 7,883 / 3.5% / 4.9 |
 | 3 | `/ko/local-llms/what-are-local-llms` | 5/10 | **10/10** | **+5** | C | 183 / 7,491 / 2.4% / 5.9 |
 | 4 | `/zh/local-llms/local-llm-hardware-guide-2026` | 10/10 | 10/10 | 0 | **E** | 0 / 109 / 0% / 8.7 |
+| 5 | `/de/smart-home/best-mini-pc-home-assistant-local-ai` | 9/10 | **10/10** | **+1** | A | 235 / 6,517 / 3.6% / 6.3 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -289,3 +290,52 @@ subject is volatile GPU street pricing. Needs a decision, not a side-effect.
 
 **~0 clicks.** There is no CTR to recover from 4 relevant impressions. Honest answer: this page
 did not need this pipeline.
+
+## Page 5 — /de/smart-home/best-mini-pc-home-assistant-local-ai
+
+**9/10 → 10/10.** Only #6 (FAQ long-tail) was red. Diagnosis A — body ahead of title.
+
+### The CTR split
+
+The same page, same position band, 4x apart on CTR depending on one word:
+
+| Query | Impr | CTR | Pos |
+|---|---|---|---|
+| `home assistant mini pc empfehlung` | 23 | **13%** | 5.2 |
+| `mini pc für home assistant empfehlung` | 24 | **12.5%** | 3.8 |
+| `bester rechner für home assistant` | 31 | **9.7%** | 4.6 |
+| `mini pc für home assistant 2026` | 99 | **8.1%** | 1.9 |
+| `mini pc für home assistant` (head) | **686** | 2.9% | 6.0 |
+| `mini pc home assistant` | 443 | 2.0% | 7.1 |
+
+### Defects found
+
+- **Meta was 197 characters.** Google truncates ~155, so the GEEKOM A9 Max pick and
+  "Direkt verglichen" never displayed at all.
+- **`Rechner` appeared 0 times** — the everyday German word for computer. ~85 impressions across
+  `bester rechner für home assistant` (9.7% CTR), `rechner für home assistant` (32 impr, **0%**),
+  `welcher rechner für home assistant` (18, 0%).
+- **`vorinstalliert` 0 times** — 37 impressions across two variants, one at 0%.
+- **`lüfterlos` 0 times** — 33 impressions.
+- **`Home Assistant Green` 0 times** — the official HA hardware, and the single most obvious
+  comparison a buyer makes. `home assistant green oder mini pc` ranks position 4.0.
+- **`N100` 0 times** (N150 covered 25x).
+- Only 5 FAQs, and a manually-authored `faqSchema` that had to be kept in sync.
+
+### Fixed
+
+- Meta rewritten to **155 chars**, carrying `Rechner` and `Empfehlung`
+- FAQs **5 → 12** in both `faqs[]` and `faqSchema.mainEntity[]`: HA Green vs Mini-PC,
+  vorinstalliert, worauf beim Kauf achten, lüfterlos, welcher Rechner, N100 vs N150, KI-Server
+- All figures sourced from the article's own `costAndPower` section (N150 6 W TDP, 5–10 W idle,
+  15–25 W under load, Ryzen 45–70 W) — nothing invented
+- Honest correction embedded: the article calls N150 units "nahezu lautlos", so the lüfterlos FAQ
+  says plainly that they are **not** fanless, rather than claiming a spec the page does not support
+
+### Projected impact
+
+The zero-click clusters total ~225 impressions (Rechner 85, kaufen 41, vorinstalliert 37,
+lüfterlos 33, mini ki server 29). The head query alone is 686 impressions at 2.9% against 12-13%
+on `Empfehlung` phrasing.
+
+**Projected ~+45-80 clicks/month.**

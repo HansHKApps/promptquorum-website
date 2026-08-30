@@ -1303,5 +1303,25 @@
     ],
     "reason": "month-drift fix: stale 'July 2026 prices' clause survived the 2026-08-28 sweep in ja/zh/ko only — en/es/ar/pt/de/fr metas were already clean. Classic locale drift; validator misses it (not trailing-stamp form).",
     "baseline": null
+  },
+  {
+    "id": "3b51b317-38a9-4804-975b-5a094324211d",
+    "slug": "/de/smart-home/best-mini-pc-home-assistant-local-ai",
+    "date": "2026-08-30T09:14:20.360Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~650 €) für Frigate + ein 7B-Modell; Intel-N150-Geräte (~180–230 €) fürs Budget; GEEKOM A9 Max (~1.099 €+) für On-Device-KI. Direkt verglichen.",
+        "new": "Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~650 €) für Frigate plus 7B-Modell, Intel-N150-Rechner ab ~180 € fürs Budget. Empfehlung nach Bedarf."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta was 197 chars (truncated ~155, so the GEEKOM pick never displayed). Rewritten to 155 with 'Rechner' (~85 impr, 0 clicks) and 'Empfehlung' (Empfehlung queries convert at 12-13%). FAQs 5->12 covering the zero-click tail. Perfect-page 9/10 -> 10/10",
+    "baseline": {
+      "position": 6.3,
+      "impressions": 6517,
+      "clicks": 235,
+      "ctr": 0.03605953659659353,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
