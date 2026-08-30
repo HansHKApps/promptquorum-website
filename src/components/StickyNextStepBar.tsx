@@ -16,7 +16,7 @@ export function StickyNextStepBar({ label, href, lang, triggerElementId = 'facts
   const [dismissed, setDismissed] = useState(false)
   const observed = useRef(false)
 
-  const destination = lang === 'en' ? href : `/${lang}${href}`
+  const destination = lang === 'en' || href.startsWith(`/${lang}/`) ? href : `/${lang}${href}`
 
   useEffect(() => {
     if (observed.current) return

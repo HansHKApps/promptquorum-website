@@ -160,7 +160,7 @@ function GoDeeper({ parentArticle, siblingBites, siblingTitles, lang }: {
             {GO_DEEPER_HEADING[lang]}
           </p>
           <Link
-            href={`${langPrefix}${parentArticle}`}
+            href={parentArticle.startsWith(`/${lang}/`) ? parentArticle : `${langPrefix}${parentArticle}`}
             className="text-sm font-semibold text-primary hover:underline"
           >
             {READ_FULL_GUIDE[lang]}

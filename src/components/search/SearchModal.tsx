@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useRouter } from 'next/navigation'
 import { useSearch } from './useSearch'
 import { orderByRelevance, type SearchEntry } from './search-utils'
@@ -18,6 +19,10 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
   const t = translations[lang as keyof typeof translations] || translations.en
   const { search, loadIndex, isLoaded, getPopular } = useSearch(lang)
   const [query, setQuery] = useState('')
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   const [activeIndex, setActiveIndex] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
   const listRef = useRef<HTMLDivElement>(null)
@@ -116,9 +121,9 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
     setActiveIndex(0)
   }, [query])
 
-  if (!isOpen) return null
+  if (!isOpen || !mounted) return null
 
-  return (
+  return createPortal(
     <>
       {/* Backdrop (desktop only) */}
       <div
@@ -273,6 +278,7 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
           </div>
         )}
       </div>
-    </>
+    </>,
+    document.body,
   )
 }

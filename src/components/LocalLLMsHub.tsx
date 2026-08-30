@@ -36,7 +36,7 @@ function renderDescription(text: string, lang: Language): React.ReactNode {
     if (boldMatch) return <strong key={i}>{boldMatch[1]}</strong>
     const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
     if (linkMatch) {
-      const href = lang !== 'en' ? `/${lang}${linkMatch[2]}` : linkMatch[2]
+      const href = lang !== 'en' && !linkMatch[2].startsWith(`/${lang}/`) ? `/${lang}${linkMatch[2]}` : linkMatch[2]
       return <Link key={i} href={href} className="text-primary hover:underline">{linkMatch[1]}</Link>
     }
     return part
