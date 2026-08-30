@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyingGuide: {
         id: 'buying-guide',
         title: 'Buying Guide: Recommended Hardware Per Use Case',
-        content: 'These are the specific hardware choices we recommend as of August 2026, with current pricing.',
+        content: 'These are the specific hardware choices we recommend with current pricing.',
         callouts: [
           { type: 'note', text: 'PromptQuorum earns no commission from these links. Apple Store and Amazon links are provided for reference pricing. Always verify current prices before purchase.' },
         ],
@@ -428,6 +428,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What is the minimum Apple Mac for running 70B models?', a: 'Mac Studio M4 Max with 64GB unified memory (~$3,199). Llama 3 70B Q4_K_M needs ~38GB — the M4 Max 64GB fits it with headroom. MacBook Pro M5 Max 128GB also works for portable 70B. The new Mac Studio M5 Ultra (from $5,499, 96GB) ships Sept 22, 2026 and roughly doubles 70B throughput.' },
             { q: 'Is Apple M5 Max better than RTX 4090 for local LLMs?', a: 'Depends on model size. For 7B: RTX 4090 wins (150 tok/s vs 75 tok/s). For 70B: M5 Max 128GB wins by default — RTX 4090 cannot load 70B at all. For training: NVIDIA wins by a wide margin.' },
             { q: 'How does the new Apple M5 Ultra compare to the RTX 5090?', a: 'Apple announced the Mac Studio with M5 Ultra on August 25, 2026 — it starts at $5,499 for 96GB unified memory (256GB is $9,499; a 512GB configuration ships late October). Early figures show ~40–52 tok/s on Llama 3.3 70B, a model the RTX 5090\'s 32GB VRAM cannot load at all. For models that fit in 32GB, the RTX 5090 is still faster per token; for 70B+ models, the M5 Ultra has no consumer NVIDIA equivalent.' },
+            { q: 'What is the NVIDIA equivalent of an M5 Max GPU?', a: 'There is no clean equivalent, because the two win on different axes. On raw compute the RTX 5090 is faster, which is why it leads on small models. On memory the comparison inverts: the 5090 has 32 GB of VRAM and cannot load a 70B model at usable quantization, while an M5 Max shares its unified memory with the GPU and can. It is also worth remembering the M5 Max is a laptop chip \u2014 it ships in the MacBook Pro and runs on battery \u2014 while the RTX 5090 is a desktop card with a power budget to match. If your work is small models and throughput, the NVIDIA card wins; if it is large models on a laptop, nothing NVIDIA sells in a portable is equivalent.' },
+            { q: 'How does the M3 Ultra compare to the RTX 5090?', a: 'The structural trade-off is the same as with the M5 Ultra: the 32 GB of VRAM on the RTX 5090 is the binding constraint for 70B-class models, and any Ultra-tier Apple chip sidesteps that with unified memory. What differs is speed \u2014 the M3 Ultra is the previous Ultra generation and is slower than the M5 Ultra figures benchmarked on this page. We have not measured M3 Ultra tok/s ourselves, so rather than quote a number we did not test, run llama-bench on the machine you actually have; it ships with llama.cpp and gives exact figures for your own configuration.' },
           ],
       },
       sources: {
@@ -558,6 +560,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Apple announced the Mac Studio with M5 Ultra on August 25, 2026 — it starts at $5,499 for 96GB unified memory (256GB is $9,499; a 512GB configuration ships late October). Early figures show ~40–52 tok/s on Llama 3.3 70B, a model the RTX 5090\'s 32GB VRAM cannot load at all. For models that fit in 32GB, the RTX 5090 is still faster per token; for 70B+ models, the M5 Ultra has no consumer NVIDIA equivalent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the NVIDIA equivalent of an M5 Max GPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'There is no clean equivalent, because the two win on different axes. On raw compute the RTX 5090 is faster, which is why it leads on small models. On memory the comparison inverts: the 5090 has 32 GB of VRAM and cannot load a 70B model at usable quantization, while an M5 Max shares its unified memory with the GPU and can. It is also worth remembering the M5 Max is a laptop chip \u2014 it ships in the MacBook Pro and runs on battery \u2014 while the RTX 5090 is a desktop card with a power budget to match. If your work is small models and throughput, the NVIDIA card wins; if it is large models on a laptop, nothing NVIDIA sells in a portable is equivalent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How does the M3 Ultra compare to the RTX 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The structural trade-off is the same as with the M5 Ultra: the 32 GB of VRAM on the RTX 5090 is the binding constraint for 70B-class models, and any Ultra-tier Apple chip sidesteps that with unified memory. What differs is speed \u2014 the M3 Ultra is the previous Ultra generation and is slower than the M5 Ultra figures benchmarked on this page. We have not measured M3 Ultra tok/s ourselves, so rather than quote a number we did not test, run llama-bench on the machine you actually have; it ships with llama.cpp and gives exact figures for your own configuration.',
             },
           },
         ],
