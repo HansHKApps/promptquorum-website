@@ -1113,5 +1113,19 @@
     ],
     "reason": "Page 46 batch: 130 total queries, large real volume (best japanese llm 37 impr 5.4% CTR, japanese llm models 45 impr, best local llm for japanese 2026 41 impr pos 3.0 0% CTR). Title wasted ~30 of 59 chars on a | Prompt Bites | PromptQuorum suffix instead of matching query phrasing. Separately found translation is a massive combined sub-theme (~87 impr across 7 query variants: japanese translation, japanese to english, japanese to chinese, etc.) with only one buried sentence mentioning it, no dedicated FAQ. Fixed title/meta and added a translation-specific FAQ (Qwen3 7B as the multilingual pick) to all 9 locales.",
     "baseline": null
+  },
+  {
+    "id": "a1a48694-e1e4-466c-bba7-489c385584d4",
+    "slug": "/local-llms/open-webui-vs-sillytavern",
+    "date": "2026-08-30T07:09:42.377Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales)",
+        "old": "Article establishes backend choice doesn't matter for speed but never gave a direct recommendation FAQ",
+        "new": "Added What is the best backend for SillyTavern? FAQ to all 9 locales"
+      }
+    ],
+    "reason": "Page 47: main open webui vs sillytavern comparison queries already convert well (3.2-20% CTR on several variants). Real gap: best backend for sillytavern + supported backends 2026 + sillytavern vllm + sillytavern vs lm studio (~23 impr combined, 0% CTR) ask for a direct recommendation, not just confirmation that Ollama/vLLM/llama.cpp are all supported. Added a direct FAQ (Ollama simplest, vLLM highest throughput, llama.cpp most control) consistent with the article's established backend-agnostic stance.",
+    "baseline": null
   }
 ]
