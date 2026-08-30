@@ -6,6 +6,7 @@
     "dev": "next dev",
     "validate-translations": "node scripts/validate-translation-integrity.mjs",
     "validate-affiliate-disclosure": "node scripts/validate-affiliate-disclosure.mjs",
+    "validate-meta-budgets": "node scripts/validate-meta-budgets.mjs",
     "verify:locales": "node scripts/check-locale-coverage.mjs",
     "validate:models": "node scripts/validate-model-names.mjs --paths=src/lib --warn-only",
     "validate:models:strict": "node scripts/validate-model-names.mjs --paths=src/lib",
