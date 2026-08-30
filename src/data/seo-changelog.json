@@ -1413,5 +1413,30 @@
       "ctr": 0.011306863002892454,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "b2312ab8-b77a-4349-b50b-369028afaeea",
+    "slug": "/de/local-llms/best-local-llms-for-coding",
+    "date": "2026-08-30T12:27:43.736Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste Coding-LLMs 2026: Kimi K2.6, Qwen, Devstral",
+        "new": "Beste lokale Coding-LLMs 2026: Kimi K2.6, Qwen, Devstral"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Kimi K2.6 führt mit 58.6 SWE-Bench Pro, Qwen 3.6 27B erreicht 77,2% SWE-bench, Devstral 24B für agentic Coding. VRAM, Tempo und Benchmarks via Ollama.",
+        "new": "Kimi K2.6 führt mit 58.6 SWE-Bench Pro, Qwen 3.6 27B erreicht 77,2% SWE-bench, Devstral 24B für agentic Coding. Lokal via Ollama: VRAM, Tempo, Benchmarks."
+      }
+    ],
+    "reason": "geo-meta-optimizer: 'lokal' was absent from title AND meta while the lokal query cluster is ~100 impr — including 'bestes lokales llm für coding' at POSITION 1.2 with 26 impressions and ZERO clicks. Ranking #1 and losing every click because the snippet did not say local. 9/10 -> 10/10",
+    "baseline": {
+      "position": 4.3,
+      "impressions": 3526,
+      "clicks": 110,
+      "ctr": 0.03119682359614294,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
