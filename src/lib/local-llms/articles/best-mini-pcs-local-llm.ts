@@ -2435,7 +2435,7 @@ schema: {
         '7B 추론을 위해 통합 GPU가 탑재된 완제품 미니 PC를 구매하는 것. 통합 GPU는 초당 1~2 토큰인 반면, RTX 5060 Ti는 초당 25 토큰을 처리합니다.',
         '완전한 독립형 GPU 속도를 기대하며 TB3 eGPU 독을 선택하는 것. eGPU는 PCIe 대역폭이 15~25% 감소하여 7B 기준 초당 15 토큰 대신 12 토큰을 기대해야 합니다.',
         '어떤 미니 PC 케이스에도 풀사이즈 ATX PSU가 들어간다고 가정하는 것. Mini-ITX는 SFX 또는 TFX 폼 팩터 PSU가 필요합니다.',
-        '[RAM 용량 확인](/prompt-bites/how-much-ram-for-7b-model)을 건너뛰는 것 — 여유 RAM이 8GB에 불과하면 7B 모델 로딩 시 스왑 스레싱으로 5~10배의 속도 저하가 발생합니다.',
+        '[RAM 용량 확인](/ko/prompt-bites/how-much-ram-for-7b-model)을 건너뛰는 것 — 여유 RAM이 8GB에 불과하면 7B 모델 로딩 시 스왑 스레싱으로 5~10배의 속도 저하가 발생합니다.',
         'GPU 길이를 주문 전 측정하지 않는 것 — RTX 5070 제품군의 길이는 210mm에서 242mm까지 다양합니다. 사용 중인 케이스의 슬롯 한계를 반드시 확인하시기 바랍니다.',
       ],
     },
@@ -2469,7 +2469,7 @@ schema: {
         '[로컬 LLM을 위한 최고의 저가형 GPU](/ko/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs 중고 Quadro 카드 VRAM 및 가격 비교',
         '[노트북에서 로컬 LLM 가이드](/ko/local-llms/local-llm-on-laptop) — 전력 제한 하드웨어에서의 열 관리 및 배터리 수명',
         '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M이 표준인 이유와 양자화가 VRAM 요구사항을 줄이는 방법',
-        '[로컬 LLM에 필요한 RAM 용량?](/prompt-bites/how-much-ram-for-7b-model) — GPU VRAM이 부족할 때의 시스템 RAM 요구사항과 오프로딩',
+        '[로컬 LLM에 필요한 RAM 용량?](/ko/prompt-bites/how-much-ram-for-7b-model) — GPU VRAM이 부족할 때의 시스템 RAM 요구사항과 오프로딩',
       ],
     },
     sources: {

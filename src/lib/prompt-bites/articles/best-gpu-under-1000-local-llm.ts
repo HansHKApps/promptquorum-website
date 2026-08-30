@@ -842,9 +842,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM을 위한 600달러 이하 최적의 GPU](/prompt-bites/best-gpu-under-600-local-llm) — 그 아래 등급: RTX 4060 Ti 16GB',
-          '[70B 모델을 위한 최적의 RTX 4090 설정](/prompt-bites/best-rtx-4090-setup-70b-models) — 실제로 70B 모델을 구동하는 데 필요한 것',
-          '[2026년 로컬 LLM GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 전체 예산 등급 비교',
+          '[로컬 LLM을 위한 600달러 이하 최적의 GPU](/ko/prompt-bites/best-gpu-under-600-local-llm) — 그 아래 등급: RTX 4060 Ti 16GB',
+          '[70B 모델을 위한 최적의 RTX 4090 설정](/ko/prompt-bites/best-rtx-4090-setup-70b-models) — 실제로 70B 모델을 구동하는 데 필요한 것',
+          '[2026년 로컬 LLM GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 전체 예산 등급 비교',
         ],
       },
     },

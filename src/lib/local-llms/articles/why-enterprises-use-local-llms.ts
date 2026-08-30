@@ -2147,7 +2147,7 @@ schema: {
             },
             {
               q: '클라우드 규모가 필요하지만 GDPR 컴플라이언스도 요구될 때는 어떻게 해야 합니까?',
-              a: '클라우드가 필요한 경우, [EU GDPR 준수 제공업체 →](/local-llms/eu-cloud-gpu-gdpr-2026)도 옵션입니다. Hetzner, Scaleway, OVHcloud, Nebius는 EU 데이터 거주지와 완전한 GDPR 준수를 제공합니다.',
+              a: '클라우드가 필요한 경우, [EU GDPR 준수 제공업체 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)도 옵션입니다. Hetzner, Scaleway, OVHcloud, Nebius는 EU 데이터 거주지와 완전한 GDPR 준수를 제공합니다.',
             },
             {
               q: '클라우드 임베딩을 로컬 LLM과 함께 사용할 수 있습니까?',
@@ -2163,10 +2163,10 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[온프레미스 에어갭 로컬 LLM](/local-llms/on-prem-air-gapped-local-llm) -- 인터넷 없는 격리 배포.',
-            '[엔터프라이즈 컴플라이언스 로컬 LLM](/local-llms/enterprise-compliance-local-llms) -- 상세 컴플라이언스 가이드.',
-            '[엔터프라이즈 로컬 LLM 확장](/local-llms/scaling-local-llms-enterprise) -- 다중 사용자 프로덕션 설정.',
-            '[기업용 RAG 로컬 LLM](/local-llms/corporate-rag-local-llms) -- 조직을 위한 문서 Q&A.',
+            '[온프레미스 에어갭 로컬 LLM](/ko/local-llms/on-prem-air-gapped-local-llm) -- 인터넷 없는 격리 배포.',
+            '[엔터프라이즈 컴플라이언스 로컬 LLM](/ko/local-llms/enterprise-compliance-local-llms) -- 상세 컴플라이언스 가이드.',
+            '[엔터프라이즈 로컬 LLM 확장](/ko/local-llms/scaling-local-llms-enterprise) -- 다중 사용자 프로덕션 설정.',
+            '[기업용 RAG 로컬 LLM](/ko/local-llms/corporate-rag-local-llms) -- 조직을 위한 문서 Q&A.',
             '[로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측](/ko/local-llms/future-of-local-llms) -- 로컬 LLM의 미래',
           ],
         },

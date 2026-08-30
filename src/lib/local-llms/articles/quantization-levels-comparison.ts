@@ -1999,12 +1999,12 @@ schema: {
         'relatedReading': {
           title: '관련 읽기 자료',
           items: [
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained)',
-            '[로컬 LLM에 VRAM이 얼마나 필요합니까?](/local-llms/how-much-vram-local-llm)',
-            '[로컬 LLM을 위한 최고의 저예산 GPU](/local-llms/best-budget-gpus-local-llm)',
-            '[저사양 PC를 위한 가장 빠른 로컬 LLM](/local-llms/fastest-local-llms-low-end-pcs)',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — GPU 선택, VRAM 등급, CPU 추론 벤치마크',
-            '[2026 최고의 코딩용 로컬 LLM](/local-llms/best-local-llms-for-coding) — 코딩 특화 모델 벤치마크 및 FIM 지원 비교',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)',
+            '[로컬 LLM에 VRAM이 얼마나 필요합니까?](/ko/local-llms/how-much-vram-local-llm)',
+            '[로컬 LLM을 위한 최고의 저예산 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
+            '[저사양 PC를 위한 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — GPU 선택, VRAM 등급, CPU 추론 벤치마크',
+            '[2026 최고의 코딩용 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — 코딩 특화 모델 벤치마크 및 FIM 지원 비교',
           ],
         },
         'sources': {

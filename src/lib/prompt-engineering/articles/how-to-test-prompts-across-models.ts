@@ -2036,7 +2036,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'why-differ',
         title: '모델마다 프롬프트가 다르게 동작하는 이유',
         content: [
-          '**모델마다 지시를 파싱하는 방식이 다릅니다.** GPT-5.5는 시스템 프롬프트와 JSON 지시에 엄격합니다. [Claude Opus 5](/prompt-engineering/how-to-evaluate-prompt-quality)은 비공식적인 표현에 더 관대하지만 더 강력한 안전 거부를 적용합니다. Gemini 3.5 Pro는 가장 큰 컨텍스트 창을 가지고 있지만 긴 문서에서 집중을 잃을 수 있습니다. Llama는 가볍지만 복잡한 다단계 추론에 어려움을 겪습니다.',
+          '**모델마다 지시를 파싱하는 방식이 다릅니다.** GPT-5.5는 시스템 프롬프트와 JSON 지시에 엄격합니다. [Claude Opus 5](/ko/prompt-engineering/how-to-evaluate-prompt-quality)은 비공식적인 표현에 더 관대하지만 더 강력한 안전 거부를 적용합니다. Gemini 3.5 Pro는 가장 큰 컨텍스트 창을 가지고 있지만 긴 문서에서 집중을 잃을 수 있습니다. Llama는 가볍지만 복잡한 다단계 추론에 어려움을 겪습니다.',
           '이러한 차이는 각 모델의 훈련 데이터, 정렬 기술, 설계 철학을 반영한 것으로 버그가 아닙니다. GPT-5.5에 최적화된 프롬프트가 Claude에서 조용히 실패하여 그럴듯해 보이지만 잘못된 출력을 생성할 수 있습니다. 여러 모델에서의 테스트를 통해 이러한 격차를 프로덕션 전에 발견할 수 있습니다.',
         ],
         callouts: [
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '멀티 모델 프롬프트 테스트란?',
         content: [
           '**멀티 모델 테스트는 동일한 프롬프트와 테스트 세트를 여러 모델에 동시에 전송하고, 출력을 비교하여 호환성 격차를 파악합니다.** 프로세스: 10–20개의 대표적인 입력(정상 경로 + 엣지 케이스 + 적대적 예시)을 준비합니다. 하나의 프롬프트를 작성하여 GPT-5.5, Claude, Gemini, Llama에서 변경 없이 테스트합니다. 모든 모델을 병렬로 실행합니다(몇 시간이 아닌 몇 초). 출력을 검토하고 차이를 발견합니다. 루브릭에 따라 각 출력을 평가합니다.',
-          '결과: 프로덕션 배포 전에 어떤 모델이 프롬프트와 호환되는지, 그리고 어떤 모델이 수정된 프롬프트나 다른 모델을 필요로 하는지 파악할 수 있습니다. 평가 프레임워크에 대한 자세한 내용은 [프롬프트 평가 지표](/prompt-engineering/prompt-evaluation-metrics)를 참조하십시오.',
+          '결과: 프로덕션 배포 전에 어떤 모델이 프롬프트와 호환되는지, 그리고 어떤 모델이 수정된 프롬프트나 다른 모델을 필요로 하는지 파악할 수 있습니다. 평가 프레임워크에 대한 자세한 내용은 [프롬프트 평가 지표](/ko/prompt-engineering/prompt-evaluation-metrics)를 참조하십시오.',
         ],
         snippets: [
           { type: 'in-one-sentence', text: '멀티 모델 프롬프트 테스트는 동일한 프롬프트와 테스트 케이스를 GPT-5.5, Claude, Gemini, Llama에 동시에 전송하여 배포 전에 어떤 모델이 올바르고 형식이 잘 갖춰진 출력을 생성하는지 파악합니다.' },
@@ -2082,7 +2082,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**1. 명시적인 출력 형식.** 시스템 프롬프트에서 JSON 스키마, XML 태그, 또는 마크다운 구조를 지정하십시오. "원하는 형식으로 결과를 반환하세요"는 피하십시오 — 모델마다 기본 형식이 다릅니다.',
           '**2. 시스템 프롬프트와 사용자 메시지를 분리하십시오.** 역할, 제약, 출력 스키마에는 시스템 프롬프트를 사용하십시오. 실제 요청에는 사용자 메시지를 사용하십시오. 모델은 이러한 입력을 다르게 처리합니다 — 혼합하면 공급자 간 이식성이 낮아집니다.',
           '**3. 모델 특정 문구를 피하십시오.** "GPT-4 AI로서"나 "당신은 Claude입니다" 같은 문구는 모델을 혼란스럽게 하고 예상치 못한 거부를 유발할 수 있습니다. 모델이 아닌 작업을 설명하는 프롬프트를 작성하십시오.',
-          '**4. 퓨샷 예시를 사용하십시오.** 엣지 케이스를 다루는 2–3개의 입력/출력 쌍을 제공하십시오. 언어 지시를 무시하는 모델도 시연된 패턴은 따르는 경우가 많습니다. 각 접근 방식이 효과적인 경우에 대해서는 [제로샷 vs 퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot)을 참조하십시오.',
+          '**4. 퓨샷 예시를 사용하십시오.** 엣지 케이스를 다루는 2–3개의 입력/출력 쌍을 제공하십시오. 언어 지시를 무시하는 모델도 시연된 패턴은 따르는 경우가 많습니다. 각 접근 방식이 효과적인 경우에 대해서는 [제로샷 vs 퓨샷 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot)을 참조하십시오.',
           '**5. 스키마에 따라 출력을 검증하십시오.** JSON 출력을 프로그래밍 방식으로 파싱하여 스키마와 비교하십시오. 시각적 검사에 의존하지 마십시오 — 형식이 잘못된 중괄호와 누락된 필수 필드는 시각적 검토를 통과하지만 다운스트림 파이프라인을 중단시킵니다.',
         ],
         callouts: [
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '비용 대 품질: 모델 트레이드오프',
         content: [
           '**비용과 품질의 트레이드오프는 작업 유형에 따라 다릅니다.** JSON 출력 작업의 경우, GPT-5.5는 입력 $5/M, 출력 $15/M으로 가장 높은 신뢰성(~95% 유효 JSON)을 제공하지만 비용도 가장 높습니다. 문서 분석과 같은 입력 집약적 작업의 경우, Claude Opus 5은 입력 $3/M으로 ~90% JSON 신뢰성에서 40%를 절감합니다 — 대부분의 파이프라인에 합리적인 트레이드오프입니다. 긴 컨텍스트 작업(100K+ 토큰)의 경우, Gemini 3.5 Pro의 1M 창이 입력 $3.50/M, 출력 $10.50/M으로 유일하게 실용적인 클라우드 옵션입니다.',
-          '비용 최적화를 위해 계층 라우팅을 사용하십시오: 정상 경로 요청을 Gemini 3.5 Pro 또는 Llama로 라우팅하고, GPT-5.5와 Claude Opus 5은 엣지 케이스와 안전 중요 경로를 위해 예약하십시오. 배포 파이프라인에 비용 제어를 통합하는 방법은 [CI/CD에서 빌드 품질 검사](/prompt-engineering/build-quality-checks)를 참조하십시오.',
+          '비용 최적화를 위해 계층 라우팅을 사용하십시오: 정상 경로 요청을 Gemini 3.5 Pro 또는 Llama로 라우팅하고, GPT-5.5와 Claude Opus 5은 엣지 케이스와 안전 중요 경로를 위해 예약하십시오. 배포 파이프라인에 비용 제어를 통합하는 방법은 [CI/CD에서 빌드 품질 검사](/ko/prompt-engineering/build-quality-checks)를 참조하십시오.',
         ],
         callouts: [
           { type: 'info', label: '규모에서의 입력 비용', text: 'Claude Opus 5은 입력 토큰 1M당 $3인 반면 GPT-5.5는 $5입니다. 요청당 10K 입력 토큰을 전송하는 프롬프트를 월 1M 요청에 사용할 경우, 입력 비용만으로 월 $20,000의 차이가 발생합니다.' },
@@ -2174,12 +2174,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          '[프롬프트 평가 지표: 무엇을 측정하고 어떻게 측정할 것인가](/prompt-engineering/prompt-evaluation-metrics)',
-          '[프롬프트 품질 평가: 실용적인 프레임워크](/prompt-engineering/how-to-evaluate-prompt-quality)',
-          '[빌드 품질 검사: CI/CD에서 AI 환각 포착](/prompt-engineering/build-quality-checks)',
-          '[GPT vs Claude vs Gemini: 2026년에 사용할 모델은?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)',
-          '[구조화된 출력 및 JSON 모드: 신뢰할 수 있는 LLM 형식](/prompt-engineering/structured-output-and-json-mode)',
-          '[제로샷 vs 퓨샷 프롬프팅: 예시를 사용하는 경우](/prompt-engineering/zero-shot-vs-few-shot)',
+          '[프롬프트 평가 지표: 무엇을 측정하고 어떻게 측정할 것인가](/ko/prompt-engineering/prompt-evaluation-metrics)',
+          '[프롬프트 품질 평가: 실용적인 프레임워크](/ko/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[빌드 품질 검사: CI/CD에서 AI 환각 포착](/ko/prompt-engineering/build-quality-checks)',
+          '[GPT vs Claude vs Gemini: 2026년에 사용할 모델은?](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)',
+          '[구조화된 출력 및 JSON 모드: 신뢰할 수 있는 LLM 형식](/ko/prompt-engineering/structured-output-and-json-mode)',
+          '[제로샷 vs 퓨샷 프롬프팅: 예시를 사용하는 경우](/ko/prompt-engineering/zero-shot-vs-few-shot)',
         ],
       },
       faq: {

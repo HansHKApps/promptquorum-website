@@ -2318,12 +2318,12 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- Q4_K_M이 다양한 컨텍스트 길이에서 RAM에 미치는 영향과 사용할 양자화 방법',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 소비자용 하드웨어에서 128K 컨텍스트 모델 실행을 위한 RAM 및 GPU 요구 사항',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 커스텀 컨텍스트 길이를 위한 Modelfile 설정을 포함한 완전한 설치 가이드',
-            '[최고의 로컬 LLM 2026](/local-llms/best-local-llms-2026) -- 목록의 모든 모델에 대한 컨텍스트 창 세부 정보를 포함한 전체 모델 순위',
-            '[노트북에서 로컬 LLM](/local-llms/local-llm-on-laptop) -- 제한된 노트북 하드웨어에서 긴 컨텍스트 추론을 위한 실용적인 RAM 관리',
-            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) -- 긴 컨텍스트 KV 캐시를 위한 불충분한 RAM으로 인한 OOM 오류 수정',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4_K_M이 다양한 컨텍스트 길이에서 RAM에 미치는 영향과 사용할 양자화 방법',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 소비자용 하드웨어에서 128K 컨텍스트 모델 실행을 위한 RAM 및 GPU 요구 사항',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 커스텀 컨텍스트 길이를 위한 Modelfile 설정을 포함한 완전한 설치 가이드',
+            '[최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026) -- 목록의 모든 모델에 대한 컨텍스트 창 세부 정보를 포함한 전체 모델 순위',
+            '[노트북에서 로컬 LLM](/ko/local-llms/local-llm-on-laptop) -- 제한된 노트북 하드웨어에서 긴 컨텍스트 추론을 위한 실용적인 RAM 관리',
+            '[로컬 LLM 설정 문제 해결](/ko/local-llms/troubleshooting-local-llm-setup) -- 긴 컨텍스트 KV 캐시를 위한 불충분한 RAM으로 인한 OOM 오류 수정',
           ],
         },
         faqSection: {

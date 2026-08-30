@@ -2534,7 +2534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whyTRACEMatters: {
           title: 'TRACE 프레임워크가 중요한 이유',
           content: [
-            '**TRACE 프레임워크는 추론 경로를 명시적으로 만듦으로써 모델 결과물에 대한 맹목적인 신뢰를 줄이기 때문에 중요합니다.** 모델이 각 단계를 설명하면 잘못 이해된 요구사항, 약한 가정, 또는 논리의 공백을 조기에 발견할 수 있습니다. 이는 더 넓은 [chain-of-thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) 원칙과 연결됩니다. TRACE는 그 기법의 구조화되고 재현 가능한 형태입니다.',
+            '**TRACE 프레임워크는 추론 경로를 명시적으로 만듦으로써 모델 결과물에 대한 맹목적인 신뢰를 줄이기 때문에 중요합니다.** 모델이 각 단계를 설명하면 잘못 이해된 요구사항, 약한 가정, 또는 논리의 공백을 조기에 발견할 수 있습니다. 이는 더 넓은 [chain-of-thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) 원칙과 연결됩니다. TRACE는 그 기법의 구조화되고 재현 가능한 형태입니다.',
             '다음과 같은 경우에 특히 유용합니다:',
           ],
           items: [
@@ -2546,7 +2546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         fiveStages: {
           title: 'TRACE의 다섯 단계는 무엇인가',
           content: [
-            '**좋은 TRACE 프롬프트는 작업과 모델 전반에 걸쳐 추론 흔적이 일관되도록 각 단계에서 모델이 수행해야 할 작업을 명확히 지시합니다.** 단계를 명확하게 유지하면서 하나의 메시지로 압축할 수 있습니다. 단순한 작업의 경우 [zero-shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot)이 더 빠릅니다. 감사 가능성이 필요한 경우에 TRACE를 사용하십시오.',
+            '**좋은 TRACE 프롬프트는 작업과 모델 전반에 걸쳐 추론 흔적이 일관되도록 각 단계에서 모델이 수행해야 할 작업을 명확히 지시합니다.** 단계를 명확하게 유지하면서 하나의 메시지로 압축할 수 있습니다. 단순한 작업의 경우 [zero-shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot)이 더 빠릅니다. 감사 가능성이 필요한 경우에 TRACE를 사용하십시오.',
             '일반적인 단계 정의:',
           ],
           items: [
@@ -2608,9 +2608,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**워크플로의 각 단계에 프레임워크를 정렬하여 TRACE 프레임워크를 다른 프레임워크와 결합해야 합니다. 추론에는 TRACE를, 초안 작성이나 형식화에는 다른 것을 사용하십시오.** 실용적인 패턴은 다음과 같습니다:',
           ],
           items: [
-            '콘텐츠나 옵션을 초안 작성하는 데 생성 지향 프레임워크(예: [CO-STAR](/prompt-engineering/co-star-framework) 또는 CRAFT)를 사용합니다.',
+            '콘텐츠나 옵션을 초안 작성하는 데 생성 지향 프레임워크(예: [CO-STAR](/ko/prompt-engineering/co-star-framework) 또는 CRAFT)를 사용합니다.',
             '선택을 분석하거나, 가정을 검증하거나, 결정을 정당화해야 할 때 TRACE로 전환합니다.',
-            '새로운 문제를 추론하는 것이 아니라 초안을 반복적으로 개선해야 한다면 [RISEN](/prompt-engineering/risen-framework)을 사용합니다.',
+            '새로운 문제를 추론하는 것이 아니라 초안을 반복적으로 개선해야 한다면 [RISEN](/ko/prompt-engineering/risen-framework)을 사용합니다.',
             '최종 결과물이 엄격한 구조나 스키마를 따라야 하는 경우 선택적으로 사양 스타일 프레임워크(예: SPECS)로 마무리합니다.',
           ],
           columns: ['Framework', '가장 적합한 용도', 'TRACE와 함께 사용하는 경우'],
@@ -2671,11 +2671,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'TRACE 프레임워크는 더 넓은 추론 기법 위에 구축됩니다. 이해를 심화하기 위한 관련 가이드를 소개합니다:',
           ],
           items: [
-            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 모델에게 단계적으로 추론하도록 요청하는 기초 기법.',
-            '[RISEN 프레임워크](/prompt-engineering/risen-framework) — 추론과 함께 반복적 개선이 필요할 때 사용하십시오.',
-            '[CO-STAR 프레임워크](/prompt-engineering/co-star-framework) — 초안 작성 및 생성 작업을 위한 보완 프레임워크.',
-            '[Zero-Shot vs Few-Shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — TRACE가 과도하고 더 간단한 기법으로 충분한 경우를 이해하십시오.',
-            '[프롬프트 엔지니어링 기초](/prompt-engineering/what-is-prompt-engineering) — 프롬프트를 효과적으로 구조화하기 위한 기초 가이드.',
+            '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 모델에게 단계적으로 추론하도록 요청하는 기초 기법.',
+            '[RISEN 프레임워크](/ko/prompt-engineering/risen-framework) — 추론과 함께 반복적 개선이 필요할 때 사용하십시오.',
+            '[CO-STAR 프레임워크](/ko/prompt-engineering/co-star-framework) — 초안 작성 및 생성 작업을 위한 보완 프레임워크.',
+            '[Zero-Shot vs Few-Shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot) — TRACE가 과도하고 더 간단한 기법으로 충분한 경우를 이해하십시오.',
+            '[프롬프트 엔지니어링 기초](/ko/prompt-engineering/what-is-prompt-engineering) — 프롬프트를 효과적으로 구조화하기 위한 기초 가이드.',
           ],
         },
 

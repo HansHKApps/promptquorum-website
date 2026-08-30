@@ -1931,10 +1931,10 @@ schema: {
       id: 'related-reading',
       title: '관련 자료',
       items: [
-        '[최고의 로컬 LLM 프런트엔드](/local-llms/best-local-llm-frontends) -- Open WebUI에는 내장 RAG 기능이 있습니다.',
-        '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 임베딩을 위한 설정.',
-        '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- RAG용 추론 엔진.',
-        '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- RAG 파이프라인에서 API를 통해 LLM 사용.',
+        '[최고의 로컬 LLM 프런트엔드](/ko/local-llms/best-local-llm-frontends) -- Open WebUI에는 내장 RAG 기능이 있습니다.',
+        '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 임베딩을 위한 설정.',
+        '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- RAG용 추론 엔진.',
+        '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- RAG 파이프라인에서 API를 통해 LLM 사용.',
       ],
     },
     sources: {

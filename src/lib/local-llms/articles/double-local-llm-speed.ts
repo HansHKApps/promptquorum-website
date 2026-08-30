@@ -2160,9 +2160,9 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 엔진 비교.',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 하드웨어 튜닝.',
-            '[멀티 GPU 로컬 LLM](/local-llms/multi-gpu-local-llms) -- 확장 기법.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 엔진 비교.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 하드웨어 튜닝.',
+            '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 확장 기법.',
           ],
         },
         sources: {

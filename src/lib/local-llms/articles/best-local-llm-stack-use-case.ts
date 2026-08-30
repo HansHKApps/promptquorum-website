@@ -2354,7 +2354,7 @@ schema: {
     'writing': {
       id: 'writing',
       content: [
-        '**최적 스택: [Ollama](/local-llms/how-to-install-ollama) + [OpenWebUI](/local-llms/open-webui-vs-sillytavern) + 마크다운 편집기**',
+        '**최적 스택: [Ollama](/ko/local-llms/how-to-install-ollama) + [OpenWebUI](/ko/local-llms/open-webui-vs-sillytavern) + 마크다운 편집기**',
         '이 스택을 선택하는 이유: OpenWebUI는 최고의 채팅 UX를 제공합니다. 코딩이 필요하지 않습니다. 컨텍스트 창 유연성(4K~32K)은 장문 글쓰기에서 LM Studio보다 뛰어납니다. 작가에게 클라우드 API보다 경제적입니다.',
       ],
       numberedItems: [
@@ -2411,7 +2411,7 @@ for filename, review in reviews:
       id: 'rag',
       content: [
         '**최적 스택: LlamaIndex + Ollama/vLLM + Qdrant + FastAPI UI**',
-        '이 스택을 선택하는 이유: [LlamaIndex](/local-llms/local-rag-2026)는 청킹 + 검색을 처리합니다. Qdrant는 빠르고, 로컬에서 실행되며, 프라이버시를 보호합니다. Ollama는 임베딩을 무료로 제공하거나 vLLM을 LLM 추론에 사용할 수 있습니다.',
+        '이 스택을 선택하는 이유: [LlamaIndex](/ko/local-llms/local-rag-2026)는 청킹 + 검색을 처리합니다. Qdrant는 빠르고, 로컬에서 실행되며, 프라이버시를 보호합니다. Ollama는 임베딩을 무료로 제공하거나 vLLM을 LLM 추론에 사용할 수 있습니다.',
       ],
       numberedItems: [
         'LlamaIndex 설치(`pip install llama-index`).',
@@ -2426,7 +2426,7 @@ for filename, review in reviews:
       id: 'agents',
       content: [
         '**최적 스택: LangGraph + vLLM + 도구 정의**',
-        '이 스택을 선택하는 이유: [LangGraph](/local-llms/local-ai-agents-langgraph-ollama)는 구조화된 에이전트 플로를 제공합니다. vLLM은 순차적 LLM 호출 10회 이상에도 충분히 빠릅니다. 도구 사용이 명시적이고 디버그 가능합니다.',
+        '이 스택을 선택하는 이유: [LangGraph](/ko/local-llms/local-ai-agents-langgraph-ollama)는 구조화된 에이전트 플로를 제공합니다. vLLM은 순차적 LLM 호출 10회 이상에도 충분히 빠릅니다. 도구 사용이 명시적이고 디버그 가능합니다.',
       ],
       numberedItems: [
         'LangGraph 설치(`pip install langchain langgraph`).',
@@ -2494,13 +2494,13 @@ for filename, review in reviews:
     'relatedReading': {
       title: '관련 읽을거리',
       items: [
-        '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) — 코딩 스택을 위한 IDE 선택(Cursor, Continue.dev, Cody).',
-        '[2026년 코딩용 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — Qwen3-Coder 대 DeepSeek-Coder HumanEval 순위.',
-        '[2026년 로컬 RAG 설정](/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollama 완전 구현 가이드.',
-        '[LangGraph로 로컬 LLM 에이전트 구축](/local-llms/local-ai-agents-langgraph-ollama) — 단계별 예시가 포함된 에이전트 워크플로 프레임워크.',
-        '[Ollama 대 LM Studio](/local-llms/ollama-vs-lm-studio) — 백엔드 비교: CLI 대 GUI, 속도, 배치 처리.',
-        '[Open WebUI 대 SillyTavern](/local-llms/open-webui-vs-sillytavern) — 채팅 UI 비교: 전문적 vs 롤플레이.',
-        '[로컬 LLM에 VRAM이 얼마나 필요합니까?](/local-llms/how-much-vram-local-llm) — 모델 크기 및 사용 사례별 하드웨어 요구 사항.',
+        '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/ko/local-llms/best-ai-coding-assistant-local-llm) — 코딩 스택을 위한 IDE 선택(Cursor, Continue.dev, Cody).',
+        '[2026년 코딩용 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — Qwen3-Coder 대 DeepSeek-Coder HumanEval 순위.',
+        '[2026년 로컬 RAG 설정](/ko/local-llms/local-rag-2026) — LlamaIndex + Qdrant + Ollama 완전 구현 가이드.',
+        '[LangGraph로 로컬 LLM 에이전트 구축](/ko/local-llms/local-ai-agents-langgraph-ollama) — 단계별 예시가 포함된 에이전트 워크플로 프레임워크.',
+        '[Ollama 대 LM Studio](/ko/local-llms/ollama-vs-lm-studio) — 백엔드 비교: CLI 대 GUI, 속도, 배치 처리.',
+        '[Open WebUI 대 SillyTavern](/ko/local-llms/open-webui-vs-sillytavern) — 채팅 UI 비교: 전문적 vs 롤플레이.',
+        '[로컬 LLM에 VRAM이 얼마나 필요합니까?](/ko/local-llms/how-much-vram-local-llm) — 모델 크기 및 사용 사례별 하드웨어 요구 사항.',
       ],
     },
     'commonMistakes': {

@@ -1520,13 +1520,13 @@ schema: {
         'relatedReading': {
           title: '관련 읽을거리',
           items: [
-            '[로컬 LLM 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) — 로컬 코드 리뷰 모델을 VS Code 또는 JetBrains에 통합하는 IDE 도구(Cursor, Continue.dev)',
-            '[코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — 7B, 14B, 32B, 70B 티어에서의 코딩 모델 전체 벤치마크 비교',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — 코드 리뷰 파이프라인에 사용되는 32B 및 70B 모델의 Q4_K_M RAM 요구 사항',
-            '[소비자 하드웨어에서 70B 모델 실행 방법](/local-llms/70b-models-consumer-hardware) — 코드 리뷰를 위해 Llama 3.3 70B를 로컬에서 실행하기 위한 VRAM 및 하드웨어 요구 사항',
-            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) — 로컬 코드 리뷰 모델을 VS Code, Cursor 또는 CI/CD 파이프라인에 연결',
-            '[2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026) — 코딩 벤치마크를 포함한 모든 작업 유형에 걸친 전체 모델 순위',
-            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) — 코드 리뷰를 위해 32B 또는 70B 모델 실행 시 OOM 오류 수정',
+            '[로컬 LLM 최고의 AI 코딩 어시스턴트](/ko/local-llms/best-ai-coding-assistant-local-llm) — 로컬 코드 리뷰 모델을 VS Code 또는 JetBrains에 통합하는 IDE 도구(Cursor, Continue.dev)',
+            '[코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — 7B, 14B, 32B, 70B 티어에서의 코딩 모델 전체 벤치마크 비교',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — 코드 리뷰 파이프라인에 사용되는 32B 및 70B 모델의 Q4_K_M RAM 요구 사항',
+            '[소비자 하드웨어에서 70B 모델 실행 방법](/ko/local-llms/70b-models-consumer-hardware) — 코드 리뷰를 위해 Llama 3.3 70B를 로컬에서 실행하기 위한 VRAM 및 하드웨어 요구 사항',
+            '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) — 로컬 코드 리뷰 모델을 VS Code, Cursor 또는 CI/CD 파이프라인에 연결',
+            '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 코딩 벤치마크를 포함한 모든 작업 유형에 걸친 전체 모델 순위',
+            '[로컬 LLM 설정 문제 해결](/ko/local-llms/troubleshooting-local-llm-setup) — 코드 리뷰를 위해 32B 또는 70B 모델 실행 시 OOM 오류 수정',
           ],
         },
         'faqSection': {

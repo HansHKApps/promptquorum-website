@@ -2403,7 +2403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
         title: '프롬프트 취약성의 원인은 무엇인가?',
-        content: '**프롬프트 취약성의 대부분은 프롬프트가 작성되고 테스트되는 방식의 다섯 가지 패턴에서 비롯됩니다.** 가장 일반적인 두 가지인 암묵적 형식 기대와 해피 패스 전용 테스트가 프로덕션 실패의 대부분을 차지합니다. 이러한 원인을 이해하는 것이 [프롬프트 품질 평가 및 개선](/prompt-engineering/how-to-evaluate-prompt-quality)의 첫 번째 단계입니다.',
+        content: '**프롬프트 취약성의 대부분은 프롬프트가 작성되고 테스트되는 방식의 다섯 가지 패턴에서 비롯됩니다.** 가장 일반적인 두 가지인 암묵적 형식 기대와 해피 패스 전용 테스트가 프로덕션 실패의 대부분을 차지합니다. 이러한 원인을 이해하는 것이 [프롬프트 품질 평가 및 개선](/ko/prompt-engineering/how-to-evaluate-prompt-quality)의 첫 번째 단계입니다.',
         items: [
           '**암묵적 형식 기대** — 프롬프트가 특정 출력 형식(JSON, 글머리 목록, 예/아니오)을 요청하지만 이를 강제하지 않습니다. 모델이 서문을 추가하거나 표현을 바꾸게 만드는 입력 변형이 다운스트림 파싱을 깨뜨립니다.',
           '**해피 패스 전용 테스트** — 프롬프트는 항상 작동하는 3~5개의 수동으로 선별된 예시에 대해 검증됩니다. 엣지 케이스인 빈 입력, 매우 긴 텍스트, 모호한 표현은 테스트되지 않습니다.',
@@ -2420,8 +2420,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '프롬프트 취약성을 어떻게 줄이는가?',
         content: '**일곱 가지 기법이 위의 다섯 가지 근본 원인을 해결하고 전체 실패 모드 범위를 포괄합니다.** 순서대로 적용하십시오. 앞의 기법들이 가장 일반적인 실패를 처리합니다. 프로덕션 코드베이스에서 형식 관련 취약성(자유 텍스트를 파싱하며 특정 형태를 기대하는 프롬프트)은 분류 및 추출 작업에서 조용한 실패의 대부분을 차지합니다. 구조화된 출력 강제(기법 1)가 이 클래스를 완전히 처리합니다.',
         numberedItems: [
-          '**구조화된 출력 강제** — 모델에게 "JSON으로 응답"하도록 요청하는 대신 [JSON 모드 또는 네이티브 구조화된 출력 API](/prompt-engineering/structured-output-and-json-mode)를 사용하십시오. 형식 강제는 신뢰성 부담을 프롬프트에서 API 레이어로 이동시킵니다.',
-          '**명시적 few-shot 예시 추가** — 엣지 케이스 하나를 포함하여 올바른 동작을 보여주는 2~3개의 입력/출력 쌍을 포함하십시오. 예시는 지시문만 있는 프롬프트보다 모델의 동작을 더 안정적으로 고정합니다. 자세한 가이드는 [제로샷 vs. few-shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot)을 참조하십시오.',
+          '**구조화된 출력 강제** — 모델에게 "JSON으로 응답"하도록 요청하는 대신 [JSON 모드 또는 네이티브 구조화된 출력 API](/ko/prompt-engineering/structured-output-and-json-mode)를 사용하십시오. 형식 강제는 신뢰성 부담을 프롬프트에서 API 레이어로 이동시킵니다.',
+          '**명시적 few-shot 예시 추가** — 엣지 케이스 하나를 포함하여 올바른 동작을 보여주는 2~3개의 입력/출력 쌍을 포함하십시오. 예시는 지시문만 있는 프롬프트보다 모델의 동작을 더 안정적으로 고정합니다. 자세한 가이드는 [제로샷 vs. few-shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot)을 참조하십시오.',
           '**방어적 지시문 작성** — 입력이 누락되거나, 모호하거나, 범위를 벗어났을 때 모델이 해야 할 일을 지정하십시오. 예: "날짜를 찾을 수 없으면 `null`을 반환하십시오. 추측하지 마십시오." 이것 없이는 모델이 그럴듯한 기본값으로 공백을 채웁니다.',
           '**입력 파라미터화** — 하드코딩된 값과 인라인 예시를 명명된 변수(`{{customer_name}}`, `{{document_text}}`)로 교체하십시오. 파라미터화된 프롬프트는 체계적으로 테스트하기 더 쉽고 예시 값에 대한 우발적 과적합을 방지합니다.',
           '**배포 전 회귀 테스트 세트 구축** — 예상 분포와 5개 이상의 엣지 케이스를 포괄하는 20개 이상의 테스트 케이스를 수집하십시오. 모든 모델 업그레이드 또는 프롬프트 변경 전에 테스트 세트를 실행하십시오.',
@@ -2478,7 +2478,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**패러프레이즈 테스트** — 5~10개의 테스트 입력을 다른 표현으로 바꾸고 출력이 일관성을 유지하는지 측정하십시오. 취약한 프롬프트는 패러프레이즈 전반에서 높은 분산을 보입니다.',
           '**엣지 케이스 테스트** — 빈 입력, 최대 길이 입력, 영어가 아닌 텍스트, 특수 문자, 그리고 범위 내에 있지만 비정상적인 입력을 테스트하십시오. 이를 통해 암묵적 가정이 드러납니다.',
           '**온도 변경** — 동일한 입력을 온도 0.0, 0.5, 1.0에서 실행하십시오. 강건한 프롬프트는 범위 전반에서 일관된 구조를 보이고, 취약한 프롬프트는 더 높은 온도에서 형식이 깨집니다.',
-          '**모델 교체 테스트** — 동일한 프롬프트와 테스트 케이스를 두 개 이상의 모델에서 실행하십시오. 분기된 출력은 모델별 과적합을 나타냅니다. 프레임워크는 [모델 전반에서 프롬프트 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models)을 참조하십시오.',
+          '**모델 교체 테스트** — 동일한 프롬프트와 테스트 케이스를 두 개 이상의 모델에서 실행하십시오. 분기된 출력은 모델별 과적합을 나타냅니다. 프레임워크는 [모델 전반에서 프롬프트 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models)을 참조하십시오.',
           '**모든 업데이트 전 회귀 실행** — 각 모델 버전 변경, 시스템 프롬프트 업데이트, 또는 프롬프트 편집 후에 전체 테스트 세트를 실행하십시오. 회귀 패턴을 추적하기 위해 테스트 카테고리(형식, 콘텐츠, 엣지 케이스)별 통과율을 기록하십시오.',
         ],
         callouts: [
@@ -2560,7 +2560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '모든 모델에서 동일한 프롬프트를 사용해야 합니까?',
-            a: '테스트 없이는 사용하지 마십시오. 모델은 지시문 준수, 기본 출력 형식, 거절 동작이 다릅니다. 하나의 모델에 맞게 조정된 프롬프트는 다른 모델에서 구조적으로 다른 출력을 생성할 수 있습니다. 프로덕션 트래픽을 전환하기 전에 새 모델에 대해 회귀 테스트 세트를 실행하십시오. 크로스 모델 테스트 프레임워크는 [모델 전반에서 프롬프트 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models)을 참조하십시오.',
+            a: '테스트 없이는 사용하지 마십시오. 모델은 지시문 준수, 기본 출력 형식, 거절 동작이 다릅니다. 하나의 모델에 맞게 조정된 프롬프트는 다른 모델에서 구조적으로 다른 출력을 생성할 수 있습니다. 프로덕션 트래픽을 전환하기 전에 새 모델에 대해 회귀 테스트 세트를 실행하십시오. 크로스 모델 테스트 프레임워크는 [모델 전반에서 프롬프트 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models)을 참조하십시오.',
           },
           {
             q: '회귀 테스트는 얼마나 자주 실행해야 합니까?',
@@ -2568,7 +2568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '프롬프트 취약성과 프롬프트 주입의 차이는 무엇입니까?',
-            a: '프롬프트 취약성은 신뢰성 실패입니다. 프롬프트가 테스트 분포를 벗어난 합법적인 입력 변형에서 깨집니다. 프롬프트 주입은 보안 실패입니다. 악의적인 행위자가 의도적으로 프롬프트 지시문을 무시하도록 입력을 조작합니다. 둘 다 프롬프트 설계 결함이지만, 취약성은 강건성 기법으로 해결되는 반면 주입은 입력 위생 처리와 권한 분리가 필요합니다. 주입별 완화에 대해서는 [프롬프트 주입 및 보안](/prompt-engineering/prompt-injection-and-security)을 참조하십시오.',
+            a: '프롬프트 취약성은 신뢰성 실패입니다. 프롬프트가 테스트 분포를 벗어난 합법적인 입력 변형에서 깨집니다. 프롬프트 주입은 보안 실패입니다. 악의적인 행위자가 의도적으로 프롬프트 지시문을 무시하도록 입력을 조작합니다. 둘 다 프롬프트 설계 결함이지만, 취약성은 강건성 기법으로 해결되는 반면 주입은 입력 위생 처리와 권한 분리가 필요합니다. 주입별 완화에 대해서는 [프롬프트 주입 및 보안](/ko/prompt-engineering/prompt-injection-and-security)을 참조하십시오.',
           },
         ],
       },
@@ -2576,12 +2576,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 읽기 자료',
         items: [
-          '[프롬프트 품질 평가 방법](/prompt-engineering/how-to-evaluate-prompt-quality) — 세 가지 구성 요소 프레임워크: 정확성, 일관성, 지시 준수율',
-          '[모델 전반에서 프롬프트 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — GPT, Claude, Gemini에서 동일한 테스트 세트를 실행하고 통과율 비교',
-          '[프롬프트 평가 지표](/prompt-engineering/prompt-evaluation-metrics) — 통과율, BLEU, 의미론적 유사성, LLM-as-judge 채점 방법',
-          '[구조화된 출력 및 JSON 모드](/prompt-engineering/structured-output-and-json-mode) — GPT, Claude, Gemini를 위한 API 레벨 형식 강제',
-          '[제로샷 vs. Few-shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 프로덕션 신뢰성을 위해 언제 예시를 사용하고 얼마나 많이 사용할지',
-          '[프롬프트 주입 및 보안](/prompt-engineering/prompt-injection-and-security) — 프롬프트 기반 시스템을 위한 입력 위생 처리 및 권한 분리',
+          '[프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 세 가지 구성 요소 프레임워크: 정확성, 일관성, 지시 준수율',
+          '[모델 전반에서 프롬프트 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT, Claude, Gemini에서 동일한 테스트 세트를 실행하고 통과율 비교',
+          '[프롬프트 평가 지표](/ko/prompt-engineering/prompt-evaluation-metrics) — 통과율, BLEU, 의미론적 유사성, LLM-as-judge 채점 방법',
+          '[구조화된 출력 및 JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode) — GPT, Claude, Gemini를 위한 API 레벨 형식 강제',
+          '[제로샷 vs. Few-shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot) — 프로덕션 신뢰성을 위해 언제 예시를 사용하고 얼마나 많이 사용할지',
+          '[프롬프트 주입 및 보안](/ko/prompt-engineering/prompt-injection-and-security) — 프롬프트 기반 시스템을 위한 입력 위생 처리 및 권한 분리',
         ],
       },
       sources: {

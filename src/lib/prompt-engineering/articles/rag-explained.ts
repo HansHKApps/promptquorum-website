@@ -2700,9 +2700,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'why-rag-matters',
           title: 'RAG가 중요한 이유',
           content: [
-            '**RAG가 중요한 이유는 [환각](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)을 줄이고 답변을 최신 상태로 유지하기 때문입니다.** 순수 언어 모델은 특히 전문적이거나 최신 주제에서 자신 있게 세부 사항을 꾸며낼 수 있습니다. RAG를 사용하면 답변이 사용자가 제어하는 검색된 문서에 고정됩니다.',
+            '**RAG가 중요한 이유는 [환각](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)을 줄이고 답변을 최신 상태로 유지하기 때문입니다.** 순수 언어 모델은 특히 전문적이거나 최신 주제에서 자신 있게 세부 사항을 꾸며낼 수 있습니다. RAG를 사용하면 답변이 사용자가 제어하는 검색된 문서에 고정됩니다.',
             'RAG는 또한 개인정보 보호 및 거버넌스 측면에서 중요합니다. 민감한 데이터로 모델을 파인튜닝하는 대신, 해당 데이터를 사용자 자신의 스토어에 유지하고 쿼리 시점에 관련 스니펫만 모델에 제공할 수 있습니다. 이렇게 하면 모델이 사용자의 콘텐츠를 영구적으로 흡수하지 않으면서도 추론할 수 있습니다.',
-            '검색하려는 문서가 인프라를 벗어날 수 없는 경우, 전체 RAG 파이프라인을 사용자 자신의 하드웨어에서 실행할 수 있습니다. GDPR 준수 아키텍처, 감사 로깅, 배포 패턴은 [비즈니스 데이터를 위한 로컬 RAG](/power-local-llm/local-rag-for-private-business-data)를 참조하십시오.',
+            '검색하려는 문서가 인프라를 벗어날 수 없는 경우, 전체 RAG 파이프라인을 사용자 자신의 하드웨어에서 실행할 수 있습니다. GDPR 준수 아키텍처, 감사 로깅, 배포 패턴은 [비즈니스 데이터를 위한 로컬 RAG](/ko/power-local-llm/local-rag-for-private-business-data)를 참조하십시오.',
           ],
         },
         howItWorks: {
@@ -2710,7 +2710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'RAG 시스템 단계별 작동 원리',
           content: [
             '**일반적인 RAG 시스템은 수집, 인덱싱, 검색, 생성의 네 가지 주요 단계를 거칩니다.** 각 단계는 독립적으로 조정할 수 있습니다.',
-            '로컬 모델로 PDF에서 이 파이프라인을 실행하는 단계별 안내는 [PDF에서 로컬 RAG 단계별 실행](/power-local-llm/local-rag-on-your-pdfs-step-by-step)을 참조하십시오.',
+            '로컬 모델로 PDF에서 이 파이프라인을 실행하는 단계별 안내는 [PDF에서 로컬 RAG 단계별 실행](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step)을 참조하십시오.',
           ],
           callouts: [
             { type: 'info', label: '검색이 병목 지점', text: '대부분의 RAG 실패는 검색 실패입니다 — 잘못된 문서가 반환되거나 임계값을 통과하는 문서가 없습니다. 전체 파이프라인을 평가하기 전에 20개의 대표 쿼리로 검색기를 독립적으로 테스트하십시오. 검색이 제대로 작동하지 않으면 생성기를 개선해도 도움이 되지 않습니다.' }
@@ -2731,7 +2731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'rag-vs-fine-tuning',
           title: 'RAG 대 파인튜닝: 각각을 언제 사용해야 하는가',
           content: [
-            '**RAG와 [파인튜닝](/prompt-engineering/prompt-engineering-vs-fine-tuning)은 서로 다른 문제를 해결하며, 대안으로 취급하기보다 결합했을 때 가장 잘 작동합니다.** RAG를 먼저 사용하십시오. 파인튜닝은 RAG가 프롬프팅을 통해 제공할 수 없는 일관된 행동 변화가 필요한 경우에만 추가하십시오.',
+            '**RAG와 [파인튜닝](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning)은 서로 다른 문제를 해결하며, 대안으로 취급하기보다 결합했을 때 가장 잘 작동합니다.** RAG를 먼저 사용하십시오. 파인튜닝은 RAG가 프롬프팅을 통해 제공할 수 없는 일관된 행동 변화가 필요한 경우에만 추가하십시오.',
           ],
           callouts: [
             { type: 'info', label: 'RAG 먼저, 파인튜닝은 나중에', text: 'RAG는 되돌릴 수 있습니다 — 문서 스토어를 업데이트하면 답변이 즉시 변경되며, 재학습 비용이 없습니다. 파인튜닝은 영구적입니다 — 모델 파라미터를 수정하며 되돌리려면 새로운 학습 실행이 필요합니다. RAG로 시작하십시오. 파인튜닝은 RAG가 프롬프팅만으로 일관된 행동 변화를 만들어낼 수 없을 때만 추가하십시오.' }
@@ -2786,7 +2786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '하나의 모델 또는 서비스로 문서를 임베딩 및 검색하고, 다른 것으로 답변을 생성하십시오.',
-            '검색된 문맥에 추론 중심 프롬프트(예: [chain-of-thought](/prompt-engineering/chain-of-thought-prompting) 또는 [TRACE](/prompt-engineering/trace-framework) 스타일 구조)를 적용하십시오.',
+            '검색된 문맥에 추론 중심 프롬프트(예: [chain-of-thought](/ko/prompt-engineering/chain-of-thought-prompting) 또는 [TRACE](/ko/prompt-engineering/trace-framework) 스타일 구조)를 적용하십시오.',
             '여러 모델에서 동일한 RAG 프롬프트를 실행하여 각각이 동일한 문서를 얼마나 잘 활용하는지 비교하십시오.',
           ],
         },
@@ -2827,7 +2827,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               mistake: '생성 품질과 별도로 검색 품질을 테스트하지 않음',
               problem: '답변이 잘못된 경우 잘못은 생성(모델 추론)이 아닌 검색(잘못된 문서 반환)에 있을 수 있습니다. 별도 테스트 없이는 문제를 격리할 수 없습니다.',
-              fix: '전체 파이프라인을 평가하기 전에 20개의 대표 쿼리로 검색기를 테스트하십시오. 확인할 사항: 올바른 문서가 반환됩니까? 답변이 포함되어 있습니까? 그런 다음 [프롬프트 품질 평가 기술](/prompt-engineering/how-to-evaluate-prompt-quality)을 사용하여 생성 정확도를 별도로 측정하십시오.'
+              fix: '전체 파이프라인을 평가하기 전에 20개의 대표 쿼리로 검색기를 테스트하십시오. 확인할 사항: 올바른 문서가 반환됩니까? 답변이 포함되어 있습니까? 그런 다음 [프롬프트 품질 평가 기술](/ko/prompt-engineering/how-to-evaluate-prompt-quality)을 사용하여 생성 정확도를 별도로 측정하십시오.'
             },
             {
               mistake: '메타데이터 필터 무시',
@@ -2852,13 +2852,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '관련 읽기',
           items: [
-            '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — RAG 검색 문맥으로 작동하는 프롬프트 설계를 위한 기본 개념',
-            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 검색된 문서에서 복잡한 다단계 추론을 위해 chain-of-thought와 RAG를 결합',
-            '[프롬프트 인젝션 및 보안](/prompt-engineering/prompt-injection-and-security) — 검색된 문서를 통한 간접 프롬프트 인젝션이 주요 RAG 보안 위험',
-            '[오픈소스 대 독점 LLM](/prompt-engineering/open-source-vs-proprietary-llms) — RAG 파이프라인의 생성 단계를 위한 클라우드 대 로컬 LLM 선택',
-            '[2026년 최고의 프롬프트 엔지니어링 도구](/prompt-engineering/best-prompt-engineering-tools-2026) — Braintrust, Arize, LangSmith를 포함한 RAG 파이프라인 테스트 및 평가 도구',
-            '[AI 한계 — LLM이 할 수 없는 것](/prompt-engineering/ai-limitations-what-llms-cant-do) — LLM 지식 차단 및 환각 한계를 극복하기 위해 RAG가 필요한 이유 이해',
-            '[빌드 품질 검사](/prompt-engineering/build-quality-checks) — 환각 감지 및 소스 검증을 포함한 RAG 출력 검증 패턴',
+            '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — RAG 검색 문맥으로 작동하는 프롬프트 설계를 위한 기본 개념',
+            '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 검색된 문서에서 복잡한 다단계 추론을 위해 chain-of-thought와 RAG를 결합',
+            '[프롬프트 인젝션 및 보안](/ko/prompt-engineering/prompt-injection-and-security) — 검색된 문서를 통한 간접 프롬프트 인젝션이 주요 RAG 보안 위험',
+            '[오픈소스 대 독점 LLM](/ko/prompt-engineering/open-source-vs-proprietary-llms) — RAG 파이프라인의 생성 단계를 위한 클라우드 대 로컬 LLM 선택',
+            '[2026년 최고의 프롬프트 엔지니어링 도구](/ko/prompt-engineering/best-prompt-engineering-tools-2026) — Braintrust, Arize, LangSmith를 포함한 RAG 파이프라인 테스트 및 평가 도구',
+            '[AI 한계 — LLM이 할 수 없는 것](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — LLM 지식 차단 및 환각 한계를 극복하기 위해 RAG가 필요한 이유 이해',
+            '[빌드 품질 검사](/ko/prompt-engineering/build-quality-checks) — 환각 감지 및 소스 검증을 포함한 RAG 출력 검증 패턴',
             '[RAG Explicado (Português)](/pt/prompt-engineering/rag-explained) — 이 가이드의 포르투갈어 버전',
           '[AI 지식 차단 날짜, 실시간 검색 및 GEO: 완전한 가이드](/ko/prompt-engineering/knowledge-cutoffs-and-geo) — 로컬 LLM이 SEO로 도달할 수 없는 이유와 클라우드 및 로컬 AI를 위한 GEO 전략',
         ],
@@ -2872,7 +2872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'RAG와 파인튜닝의 차이점은 무엇입니까?', a: 'RAG는 쿼리 시점에 외부 지식을 검색하여 프롬프트에 추가합니다. 파인튜닝은 추가 학습을 통해 모델의 파라미터를 영구적으로 수정합니다. RAG는 자주 변경되는 데이터에 더 적합하고, 파인튜닝은 일관된 행동이나 스타일을 모델에 가르치는 데 더 적합합니다.' },
             { q: '2026년 RAG에 가장 적합한 벡터 데이터베이스는 무엇입니까?', a: '가장 널리 사용되는 옵션은 Pinecone(관리형, 시작이 용이), Weaviate(오픈소스, 유연함), Chroma(경량, 로컬), Milvus(엔터프라이즈 규모)입니다. EU 데이터 거주를 위해서는 자체 호스팅 Weaviate 또는 Chroma가 선호됩니다.' },
             { q: 'RAG의 최적 청크 크기는 얼마입니까?', a: '인접 청크 간 10~20% 중복을 포함한 청크당 200~500단어가 대부분의 사용 사례에서 잘 작동합니다. 더 작은 청크(100단어 미만)는 문맥을 잃고, 더 큰 청크(1,000단어 초과)는 검색 정밀도를 낮춥니다. 특정 도메인의 대표적인 쿼리로 테스트하십시오.' },
-            { q: 'Ollama 같은 로컬 LLM과 RAG를 사용할 수 있습니까?', a: '예. RAG는 모델 무관입니다. 임베딩 모델을 사용하여 문서를 검색한 다음, Ollama 또는 LM Studio를 통해 로컬에서 실행되는 LLaMA 4 Scout이나 Mistral을 포함하여 모든 LLM에 검색된 문맥을 전달할 수 있습니다. 로컬 하드웨어에 배포하기 전에 [로컬 LLM VRAM 계산기](/local-llms/vram-calculator-local-llm)로 GPU 용량을 확인하십시오. 이렇게 하면 모든 데이터가 사용자 자신의 하드웨어에 유지됩니다.' },
+            { q: 'Ollama 같은 로컬 LLM과 RAG를 사용할 수 있습니까?', a: '예. RAG는 모델 무관입니다. 임베딩 모델을 사용하여 문서를 검색한 다음, Ollama 또는 LM Studio를 통해 로컬에서 실행되는 LLaMA 4 Scout이나 Mistral을 포함하여 모든 LLM에 검색된 문맥을 전달할 수 있습니다. 로컬 하드웨어에 배포하기 전에 [로컬 LLM VRAM 계산기](/ko/local-llms/vram-calculator-local-llm)로 GPU 용량을 확인하십시오. 이렇게 하면 모든 데이터가 사용자 자신의 하드웨어에 유지됩니다.' },
             { q: 'RAG는 GPT-5.6, Claude, Gemini와 작동합니까?', a: '예. 세 가지 모두 프롬프트에서 검색된 문맥을 받아들입니다. Claude Opus 5은 검색된 문맥에 답변이 없을 때 환각하는 대신 이를 표시하는 데 특히 효과적입니다. GPT-5.6는 밀도 높은 문맥에서 더 간결한 답변을 생성합니다.' },
             { q: 'RAG에서 관련성 임계값이란 무엇입니까?', a: '검색된 문서가 이 값 미만이면 LLM에 전달되지 않는 유사도 점수 임계값입니다. 코사인 유사도 임계값 0.7은 쿼리와 70% 이상 시맨틱 매칭되는 문서만 포함됨을 의미합니다. 이 임계값 미만의 문서는 환각된 답변 대신 "지식 베이스에서 찾을 수 없습니다" 응답을 유발합니다.' },
             { q: 'RAG가 큰 컨텍스트 창보다 낫습니까?', a: '대규모 문서 세트의 경우 그렇습니다. RAG는 시맨틱 유사도를 통해 수백만 개의 문서를 밀리초 단위로 검색하며, 전체 지식 베이스가 아닌 관련 청크만 전달하므로 쿼리당 비용이 적게 듭니다.' },

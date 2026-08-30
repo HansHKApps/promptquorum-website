@@ -1956,12 +1956,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       image: '/images/best-laptops-local-llm-comparison-table-hero-ko.webp',
       imageCaption: '로컬 LLM 노트북 비교: MacBook Pro M5 Pro($2,199, 24 GB 통합 메모리, 45~60 tok/s) 대 RTX 5080 노트북(~$2,799, 16 GB VRAM, ~70 tok/s) 대 RTX 5070 Ti 노트북(~$2,499, 12 GB VRAM), Ollama와 LM Studio로 테스트.',
       items: [
-        '**MacBook Pro M5 Pro 14" ($2,199, 24 GB 통합):** 로컬 LLM에 가장 적합한 전체 최고 노트북. Qwen3 14B Q4에서 45~60 tok/s. 완전 무소음. 일반 사용 시 배터리 10~12시간 (LLM 부하 시 3~4시간). 참고: [로컬 LLM을 위한 Apple Silicon vs GPU vs CPU](/local-llms/gpu-vs-cpu-vs-apple-silicon).',
-        '**MacBook Pro M5 Pro 16" ($2,499, 24 GB 통합):** 14"와 동일한 칩에 더 큰 화면과 더 큰 배터리. 30B 모델 여유를 위해 36 GB ($2,999) 추가. 참고: [Apple Silicon M5 Max에서 70B 모델 실행](/local-llms/running-70b-models-apple-silicon-m5-max).',
+        '**MacBook Pro M5 Pro 14" ($2,199, 24 GB 통합):** 로컬 LLM에 가장 적합한 전체 최고 노트북. Qwen3 14B Q4에서 45~60 tok/s. 완전 무소음. 일반 사용 시 배터리 10~12시간 (LLM 부하 시 3~4시간). 참고: [로컬 LLM을 위한 Apple Silicon vs GPU vs CPU](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon).',
+        '**MacBook Pro M5 Pro 16" ($2,499, 24 GB 통합):** 14"와 동일한 칩에 더 큰 화면과 더 큰 배터리. 30B 모델 여유를 위해 36 GB ($2,999) 추가. 참고: [Apple Silicon M5 Max에서 70B 모델 실행](/ko/local-llms/running-70b-models-apple-silicon-m5-max).',
         '**RTX 5080 노트북 (~$2,799, 16 GB GDDR7):** LLM용 최고의 Windows 노트북. Llama 3.1 8B Q4에서 ~70 tok/s. 16 GB VRAM은 Q8의 14B 모델을 여유 있게 수용. ASUS ROG Strix, MSI Titan, Lenovo Legion 라인업에서 구매 가능.',
         '**RTX 5070 Ti 노트북 (~$2,499, 12 GB GDDR7):** 최고의 중급형 Windows 선택. 7B에서 ~50 tok/s. 12 GB VRAM은 Q8의 7B~13B, Q4의 30B를 처리. ASUS ROG, Razer Blade, Dell Alienware 라인업에서 구매 가능.',
         '**RTX 5070 노트북 (~$1,899, 8 GB GDDR7):** 가장 저렴한 Windows 옵션. 8 GB VRAM으로 Q4의 7B 모델로 제한되지만, 대부분의 코딩 어시스턴트 및 채팅 용도에는 충분합니다. 5080/5070 Ti와 동일한 ASUS ROG, MSI, Lenovo Legion 라인업에서 구매 가능.',
-        '**MacBook Pro M5 Max 14" ($3,199+, 36 GB 통합):** 이동 중 30B~70B 모델을 실행하는 연구자용. Llama 3.1 70B Q4에서 40~60 tok/s. 참고: [Apple Silicon M5 Max에서 70B 모델 실행](/local-llms/running-70b-models-apple-silicon-m5-max).',
+        '**MacBook Pro M5 Max 14" ($3,199+, 36 GB 통합):** 이동 중 30B~70B 모델을 실행하는 연구자용. Llama 3.1 70B Q4에서 40~60 tok/s. 참고: [Apple Silicon M5 Max에서 70B 모델 실행](/ko/local-llms/running-70b-models-apple-silicon-m5-max).',
       ],
     },
     'perf-gap': {
@@ -2026,11 +2026,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'related-reading',
       title: '관련 읽을거리',
       items: [
-        '[노트북에서 로컬 LLM 실행: 설정 가이드](/local-llms/local-llm-on-laptop)',
-        '[로컬 LLM 최고 미니 PC](/local-llms/best-mini-pcs-local-llm)',
-        '[$2,000 이하 로컬 LLM PC 빌드](/local-llms/local-llm-workstation-build)',
-        '[필요한 VRAM 용량은?](/local-llms/how-much-vram-local-llm)',
-        '[MacBook Pro M5 Max 심층 분석: Apple Silicon 로컬 LLM 비교](/local-llms/apple-silicon-m5-local-llm) — MacBook Pro 16" M5 Max 64GB 및 128GB 모델의 성능 벤치마크.',
+        '[노트북에서 로컬 LLM 실행: 설정 가이드](/ko/local-llms/local-llm-on-laptop)',
+        '[로컬 LLM 최고 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)',
+        '[$2,000 이하 로컬 LLM PC 빌드](/ko/local-llms/local-llm-workstation-build)',
+        '[필요한 VRAM 용량은?](/ko/local-llms/how-much-vram-local-llm)',
+        '[MacBook Pro M5 Max 심층 분석: Apple Silicon 로컬 LLM 비교](/ko/local-llms/apple-silicon-m5-local-llm) — MacBook Pro 16" M5 Max 64GB 및 128GB 모델의 성능 벤치마크.',
       ],
     },
     'sources': {

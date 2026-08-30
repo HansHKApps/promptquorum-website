@@ -2204,10 +2204,10 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[다중 GPU 로컬 LLM](/local-llms/multi-gpu-local-llms) -- 단일 머신 다중 GPU 설정.',
-            '[로컬 LLM 전력 소비](/local-llms/local-llm-power-consumption) -- 하드웨어 및 인프라 비용.',
-            '[기업용 RAG 로컬 LLM](/local-llms/corporate-rag-local-llms) -- 규모에서의 문서 Q&A.',
-            '[엔터프라이즈 컴플라이언스 로컬 LLM](/local-llms/enterprise-compliance-local-llms) -- 확장된 배포에서의 컴플라이언스 제어.',
+            '[다중 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 단일 머신 다중 GPU 설정.',
+            '[로컬 LLM 전력 소비](/ko/local-llms/local-llm-power-consumption) -- 하드웨어 및 인프라 비용.',
+            '[기업용 RAG 로컬 LLM](/ko/local-llms/corporate-rag-local-llms) -- 규모에서의 문서 Q&A.',
+            '[엔터프라이즈 컴플라이언스 로컬 LLM](/ko/local-llms/enterprise-compliance-local-llms) -- 확장된 배포에서의 컴플라이언스 제어.',
           ],
         },
         sources: {

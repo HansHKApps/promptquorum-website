@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 대 R1: 이 표는 R1 전용입니다',
         content: [
-          '**DeepSeek-R1은 이 명령어가 설치하는 추론 계열이며, DeepSeek-V3는 별도의 채팅 모델입니다.** 이 디스틸에서 V3 경험을 기대하지 마십시오 — 이들은 수학과 논리에 대한 단계별 추론을 보여주도록 조정되어 있습니다. 또한 V3는 671B MoE이며 소비자 하드웨어에서 실행할 수 없습니다. [DeepSeek V3 하드웨어 바이트](/prompt-bites/deepseek-v3-local-hardware-requirements)를 참조하십시오.',
+          '**DeepSeek-R1은 이 명령어가 설치하는 추론 계열이며, DeepSeek-V3는 별도의 채팅 모델입니다.** 이 디스틸에서 V3 경험을 기대하지 마십시오 — 이들은 수학과 논리에 대한 단계별 추론을 보여주도록 조정되어 있습니다. 또한 V3는 671B MoE이며 소비자 하드웨어에서 실행할 수 없습니다. [DeepSeek V3 하드웨어 바이트](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)를 참조하십시오.',
           '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
         ],
       },
@@ -1057,9 +1057,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: '관련 가이드',
         items: [
-          '[DeepSeek-R1 디스틸 VRAM 치트시트](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 양자화별(Q4_K_M, Q8, FP16) 각 디스틸과 VRAM 및 최소 GPU',
-          '[2026 최고의 로컬 추론 모델: DeepSeek-R1 순위](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 벤치마크와 등급이 포함된 전체 순위 가이드',
-          '[DeepSeek V3 로컬 하드웨어 요구 사항](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 채팅 모델 대응판',
+          '[DeepSeek-R1 디스틸 VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 양자화별(Q4_K_M, Q8, FP16) 각 디스틸과 VRAM 및 최소 GPU',
+          '[2026 최고의 로컬 추론 모델: DeepSeek-R1 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 벤치마크와 등급이 포함된 전체 순위 가이드',
+          '[DeepSeek V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 채팅 모델 대응판',
         ],
       },
     },

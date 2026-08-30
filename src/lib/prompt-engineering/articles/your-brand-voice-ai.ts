@@ -2772,7 +2772,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '브랜드 보이스 AI란 무엇입니까?',
           content: [
             '**브랜드 보이스 AI는 새로운 모델이 아닌 조건화 레이어입니다.** 이것은 범용 AI 모델 위의 레이어로, 예시에서 귀사의 특정 톤, 스타일, 어휘를 학습한 다음 생성하거나 검토하는 모든 콘텐츠에 해당 규칙을 적용합니다.',
-            '범용 모델은 인터넷 전체로 훈련되므로 기본 톤이 중립적이고 약간 미국식이며 종종 일반적인 경향이 있습니다. 브랜드 보이스 레이어는 이 동작을 좁힙니다. 기존 이메일, 랜딩 페이지, 광고, 소셜 포스트를 분석하여 문장 길이, 격식체, 유머, 단어 선택의 패턴을 추출합니다. Jasper의 Brand Voice, HubSpot의 브랜드 보이스 설정, Copy.ai의 Brand Voice와 같은 시스템은 모두 이 패턴을 따릅니다. 샘플 카피를 제공하면 재사용 가능한 보이스 프로필을 구축하고, 단일 설정이나 [프롬프트](/prompt-engineering/what-is-prompt-engineering)로 새 콘텐츠에 해당 프로필을 적용할 수 있습니다.',
+            '범용 모델은 인터넷 전체로 훈련되므로 기본 톤이 중립적이고 약간 미국식이며 종종 일반적인 경향이 있습니다. 브랜드 보이스 레이어는 이 동작을 좁힙니다. 기존 이메일, 랜딩 페이지, 광고, 소셜 포스트를 분석하여 문장 길이, 격식체, 유머, 단어 선택의 패턴을 추출합니다. Jasper의 Brand Voice, HubSpot의 브랜드 보이스 설정, Copy.ai의 Brand Voice와 같은 시스템은 모두 이 패턴을 따릅니다. 샘플 카피를 제공하면 재사용 가능한 보이스 프로필을 구축하고, 단일 설정이나 [프롬프트](/ko/prompt-engineering/what-is-prompt-engineering)로 새 콘텐츠에 해당 프로필을 적용할 수 있습니다.',
             '실질적으로 브랜드 보이스 AI는 새로운 모델이 아닙니다. 이미 사용 중인 모델을 "모든 사람처럼 들리는" 것이 아닌 "귀사처럼 들리도록" 조건화하는 구조화된 방법입니다.',
           ],
           snippets: [
@@ -2852,7 +2852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**스타일 가이드라인:** 얼마나 격식적인지, "우리"를 사용하는지 "나"를 사용하는지, 유머를 사용하는지 여부, 전문 용어 처리 방법.',
             '**어휘 가이드라인:** 선호하는 단어와 문구("고객" 대 "사용자," "스마트한 계획" 대 "보장된 절약") 및 절대 보고 싶지 않은 단어("게임체인저," "성장 해킹" 등).',
             '**온톤 예시:** 명확하게 온브랜드인 짧은 발췌문.',
-            '**오프톤 예시:** 피해야 할 것을 보여주는 발췌문(너무 과장된, 너무 딱딱한, 너무 영업적), AI가 대조를 통해 학습할 수 있도록. 팀을 위한 재사용 가능한 [프롬프트 라이브러리](/prompt-engineering/build-a-prompt-library)로 저장하십시오.',
+            '**오프톤 예시:** 피해야 할 것을 보여주는 발췌문(너무 과장된, 너무 딱딱한, 너무 영업적), AI가 대조를 통해 학습할 수 있도록. 팀을 위한 재사용 가능한 [프롬프트 라이브러리](/ko/prompt-engineering/build-a-prompt-library)로 저장하십시오.',
           ],
           callouts: [
             { type: 'Pro Tip', label: '오프톤 예시 활용', text: '온브랜드 샘플과 함께 항상 오프브랜드 반례 3~5개를 포함하십시오. AI는 해야 할 것과 하지 말아야 할 것 모두를 학습합니다. 대조가 보이스 패턴을 크게 선명하게 합니다.' },
@@ -2884,7 +2884,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**최고의 카피만 제공:** 약하거나 일관성 없는 콘텐츠를 예시로 포함하면 AI가 그 결점을 충실하게 재현합니다.',
             '**명시적인 "절대 사용하지 말 것" 목록:** 프롬프트에서 적용하는 금지 문구 및 톤의 짧은 블랙리스트(예: "낚시성 제목 금지," "과장된 약속 금지," "속어 금지").',
-            '**배치 [보이스 QA](/prompt-engineering/how-to-evaluate-prompt-quality):** AI 자체를 사용하여 대규모 콘텐츠 세트(블로그 인트로 20개, 광고 변형 50개)를 스캔하여 정의된 톤에서 벗어난 라인을 표시하고 사람이 빠르게 수정할 수 있도록 합니다.',
+            '**배치 [보이스 QA](/ko/prompt-engineering/how-to-evaluate-prompt-quality):** AI 자체를 사용하여 대규모 콘텐츠 세트(블로그 인트로 20개, 광고 변형 50개)를 스캔하여 정의된 톤에서 벗어난 라인을 표시하고 사람이 빠르게 수정할 수 있도록 합니다.',
             '**중요한 곳에 사람의 검토:** 고위험 콘텐츠(법률, 의료, 금융)의 경우 AI를 초안 작성 및 QA 도구로 취급하며, 완전히 자율적인 작성자로 취급하지 않습니다.',
             '**정기적인 재훈련:** 브랜드가 발전함에 따라 주기적으로 예시와 규칙을 갱신하여 AI가 새로운 포지셔닝이나 메시지에 뒤처지지 않도록 합니다.',
           ],
@@ -2895,7 +2895,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         guardrailsConclusion: {
           content: [
-            '생성, QA, 검토 단계 전반에 걸쳐 [프롬프트 체이닝](/prompt-engineering/prompt-chaining)과 함께 이렇게 사용하면, 브랜드 보이스 AI는 보이스를 "AI처럼 느껴지는" 무언가로 평탄화하는 대신 강화하고 확장합니다.',
+            '생성, QA, 검토 단계 전반에 걸쳐 [프롬프트 체이닝](/ko/prompt-engineering/prompt-chaining)과 함께 이렇게 사용하면, 브랜드 보이스 AI는 보이스를 "AI처럼 느껴지는" 무언가로 평탄화하는 대신 강화하고 확장합니다.',
           ],
         },
 
@@ -2970,12 +2970,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[페르소나 프롬프팅: AI에게 목소리와 개성 부여하기](/prompt-engineering/persona-prompting) — 일관된 캐릭터와 톤을 위한 직접 관련 기법',
-            '[네거티브 프롬프팅: 오프톤 예시와 금지 문구](/prompt-engineering/negative-prompting) — 브랜드 보이스 훈련의 "피해야 할 것" 측면',
-            '[팀을 위한 프롬프트 라이브러리 구축](/prompt-engineering/build-a-prompt-library) — 재사용 가능한 브랜드 보이스 지침 블록 저장 및 공유',
-            '[출력 제어: 스타일, 포맷, 길이](/prompt-engineering/control-the-output) — 출력 스타일 및 포맷 규칙 적용 방법',
-            '[콘텐츠 팀을 위한 프롬프트 엔지니어링](/prompt-engineering/prompt-engineering-for-content-teams) — 다인원 팀 전반에 브랜드 보이스 프롬프트 적용',
-            '[SEO와 AI의 만남: 순위에 오르고 전환되는 콘텐츠 작성](/prompt-engineering/seo-meets-ai) — 브랜드 보이스와 SEO 요건 결합',
+            '[페르소나 프롬프팅: AI에게 목소리와 개성 부여하기](/ko/prompt-engineering/persona-prompting) — 일관된 캐릭터와 톤을 위한 직접 관련 기법',
+            '[네거티브 프롬프팅: 오프톤 예시와 금지 문구](/ko/prompt-engineering/negative-prompting) — 브랜드 보이스 훈련의 "피해야 할 것" 측면',
+            '[팀을 위한 프롬프트 라이브러리 구축](/ko/prompt-engineering/build-a-prompt-library) — 재사용 가능한 브랜드 보이스 지침 블록 저장 및 공유',
+            '[출력 제어: 스타일, 포맷, 길이](/ko/prompt-engineering/control-the-output) — 출력 스타일 및 포맷 규칙 적용 방법',
+            '[콘텐츠 팀을 위한 프롬프트 엔지니어링](/ko/prompt-engineering/prompt-engineering-for-content-teams) — 다인원 팀 전반에 브랜드 보이스 프롬프트 적용',
+            '[SEO와 AI의 만남: 순위에 오르고 전환되는 콘텐츠 작성](/ko/prompt-engineering/seo-meets-ai) — 브랜드 보이스와 SEO 요건 결합',
           ],
         },
 

@@ -2172,7 +2172,7 @@ schema: {
           content: 'Ollama 터미널 채팅은 테스트에 유용하지만, 실제 활용 사례 대부분에는 더 나은 인터페이스가 필요합니다:',
           items: [
             '**Open WebUI**: Ollama를 위한 완전한 기능의 웹 UI입니다. Docker로 실행하십시오: `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`. http://localhost:3000에서 접속할 수 있습니다.',
-            '**LM Studio**: 데스크탑 GUI를 선호하신다면 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)에서 전체 설정 과정을 확인하십시오. LM Studio의 내장 채팅 인터페이스는 세련되고 대화 기록을 지원합니다.',
+            '**LM Studio**: 데스크탑 GUI를 선호하신다면 [LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio)에서 전체 설정 과정을 확인하십시오. LM Studio의 내장 채팅 인터페이스는 세련되고 대화 기록을 지원합니다.',
             '**API 연동**: `localhost:11434`의 Ollama API는 OpenAI SDK와 호환됩니다. OpenAI base URL을 수용하는 모든 애플리케이션을 로컬 모델에 연결할 수 있습니다.',
             '**VS Code / Cursor**: Continue.dev 같은 확장 프로그램이 Ollama에 연결되어 편집기 내에서 직접 로컬 AI 코딩 지원을 제공합니다.',
           ],
@@ -2216,7 +2216,7 @@ schema: {
             },
             {
               q: '로컬 LLM은 디스크 공간을 얼마나 차지하나요?',
-              a: '`llama3.2:1b`는 1.3 GB, `llama3.2:3b`는 2 GB, `llama3.1:8b`는 4.7 GB입니다. 이는 Ollama가 저장하는 압축 크기입니다. 추론을 위해 RAM에 로드될 때 크기가 달라집니다(자세한 내용은 [로컬 LLM에 필요한 VRAM](/local-llms/how-much-vram-local-llm) 참조).',
+              a: '`llama3.2:1b`는 1.3 GB, `llama3.2:3b`는 2 GB, `llama3.1:8b`는 4.7 GB입니다. 이는 Ollama가 저장하는 압축 크기입니다. 추론을 위해 RAM에 로드될 때 크기가 달라집니다(자세한 내용은 [로컬 LLM에 필요한 VRAM](/ko/local-llms/how-much-vram-local-llm) 참조).',
             },
             {
               q: '인터넷 연결 없이 로컬 LLM을 사용할 수 있나요?',
@@ -2228,13 +2228,13 @@ schema: {
             },
             {
               q: 'Ollama로 처음 시도해볼 최적의 모델은 무엇인가요?',
-              a: '`ollama pull llama3.2:3b` — 용량이 2 GB이고 최신 노트북에서 실행되며 적절한 답변을 제공합니다. Ollama가 권장하는 시작점입니다. 사용해본 후 하드웨어에 맞는 대안을 확인하려면 [초보자를 위한 최적 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
+              a: '`ollama pull llama3.2:3b` — 용량이 2 GB이고 최신 노트북에서 실행되며 적절한 답변을 제공합니다. Ollama가 권장하는 시작점입니다. 사용해본 후 하드웨어에 맞는 대안을 확인하려면 [초보자를 위한 최적 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
             },
           ],
         },
         nextSteps: {
           title: '첫 실행 이후 다음 단계',
-          content: '로컬 LLM이 정상적으로 작동하고 있다면 이제 다양한 활용 가능성을 탐색해 보십시오. 하드웨어에 가장 적합한 모델을 파악하려면 [초보자를 위한 최적 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오. 노트북 특화 성능 팁은 [노트북에서 로컬 LLM 실행하기](/local-llms/local-llm-on-laptop)를 확인하십시오. 프라이버시 및 보안 모범 사례는 [로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist)를 참조하십시오.',
+          content: '로컬 LLM이 정상적으로 작동하고 있다면 이제 다양한 활용 가능성을 탐색해 보십시오. 하드웨어에 가장 적합한 모델을 파악하려면 [초보자를 위한 최적 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models)을 참조하십시오. 노트북 특화 성능 팁은 [노트북에서 로컬 LLM 실행하기](/ko/local-llms/local-llm-on-laptop)를 확인하십시오. 프라이버시 및 보안 모범 사례는 [로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist)를 참조하십시오.',
         },
         sources: {
           id: 'sources',
@@ -2260,12 +2260,12 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 설치 및 설정',
-            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) — GUI 대안',
-            '[초보자를 위한 최적 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) — 하드웨어별 모델 추천',
-            '[로컬 LLM이란 무엇인가?](/local-llms/what-are-local-llms) — 핵심 개념 및 작동 원리',
-            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) — 느린 추론, GPU 미감지, 일반적인 오류 수정',
-            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) — 실행 중인 Ollama를 Python 및 다른 애플리케이션에 연결',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 설치 및 설정',
+            '[LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio) — GUI 대안',
+            '[초보자를 위한 최적 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 하드웨어별 모델 추천',
+            '[로컬 LLM이란 무엇인가?](/ko/local-llms/what-are-local-llms) — 핵심 개념 및 작동 원리',
+            '[로컬 LLM 설정 문제 해결](/ko/local-llms/troubleshooting-local-llm-setup) — 느린 추론, GPU 미감지, 일반적인 오류 수정',
+            '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) — 실행 중인 Ollama를 Python 및 다른 애플리케이션에 연결',
             '첫 번째 로컬 LLM이 실행되고 있습니다. 이제 효과적으로 프롬프트하는 방법을 배워보십시오: [프롬프트 엔지니어링이란](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering)에서 기초를 학습할 수 있습니다.',
           ],
         },

@@ -2700,7 +2700,7 @@ schema: {
         },
         {
           q: 'RAG에 가장 적합한 프론트엔드는 무엇입니까?',
-          a: 'Open WebUI가 가장 성숙한 RAG 구현을 갖추고 있습니다. 문서를 업로드하면 모델이 해당 문서를 기반으로 질문에 답합니다. 고급 RAG 워크플로우에 대해서는 [최고의 로컬 RAG 도구](/local-llms/best-local-rag-tools)를 참조하십시오.',
+          a: 'Open WebUI가 가장 성숙한 RAG 구현을 갖추고 있습니다. 문서를 업로드하면 모델이 해당 문서를 기반으로 질문에 답합니다. 고급 RAG 워크플로우에 대해서는 [최고의 로컬 RAG 도구](/ko/local-llms/best-local-rag-tools)를 참조하십시오.',
         },
         {
           q: '프론트엔드가 전혀 필요합니까?',
@@ -2732,11 +2732,11 @@ schema: {
       id: 'related-reading',
       title: '관련 읽기',
       items: [
-        '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 기본 모델 엔진을 위한 설정 가이드.',
-        '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 가장 인기 있는 두 가지 로컬 LLM 도구 비교.',
-        '[최고의 로컬 RAG 도구](/local-llms/best-local-rag-tools) -- Open WebUI RAG 및 기타 문서 기반 LLM 도구에 대한 심층 분석.',
-        '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- 코드에서 직접 API를 사용하는 방법.',
-        '[VS Code 및 Cursor와 함께하는 로컬 LLM](/local-llms/local-llms-with-vscode-cursor) -- Continue.dev 및 VS Code 통합 설정.',
+        '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 기본 모델 엔진을 위한 설정 가이드.',
+        '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) -- 가장 인기 있는 두 가지 로컬 LLM 도구 비교.',
+        '[최고의 로컬 RAG 도구](/ko/local-llms/best-local-rag-tools) -- Open WebUI RAG 및 기타 문서 기반 LLM 도구에 대한 심층 분석.',
+        '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- 코드에서 직접 API를 사용하는 방법.',
+        '[VS Code 및 Cursor와 함께하는 로컬 LLM](/ko/local-llms/local-llms-with-vscode-cursor) -- Continue.dev 및 VS Code 통합 설정.',
         '[Melhores Interfaces para LLMs Locais (Português)](/pt/local-llms/best-local-llm-frontends) — versão em português deste guia',
       ],
     },

@@ -4227,7 +4227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/langsmith-vs-helicone-vs-langfuse-overview-hero-ko.webp',
     title: 'LangSmith vs Helicone vs Langfuse vs PromptLayer (2026년)',
     seoTitle: 'LangSmith vs Helicone vs Langfuse: 2026년 비교',
-    intro: '**LangSmith, Helicone, Langfuse, PromptLayer는 이미 프로덕션에서 실행 중인 prompt의 로그를 기록하고 추적하며 비용을 모니터링합니다. 이는 배포 전 prompt 테스트 및 평가와는 다른 작업입니다.** 배포 전 테스트와 평가를 찾고 계신다면 [prompt 테스트 및 평가 도구 가이드](/prompt-engineering/best-prompt-testing-evaluation-tools)를, 배포 전 prompt 정리 및 버전 관리가 병목이라면 [최고의 prompt 관리 플랫폼](/prompt-engineering/best-prompt-management-platforms)을 참조하십시오. 이 가이드는 prompt가 프로덕션에 배포된 이후 발생하는 일 — 누가 호출하는지, 비용이 얼마인지, 어디에서 문제가 생기는지 — 를 다룹니다.',
+    intro: '**LangSmith, Helicone, Langfuse, PromptLayer는 이미 프로덕션에서 실행 중인 prompt의 로그를 기록하고 추적하며 비용을 모니터링합니다. 이는 배포 전 prompt 테스트 및 평가와는 다른 작업입니다.** 배포 전 테스트와 평가를 찾고 계신다면 [prompt 테스트 및 평가 도구 가이드](/ko/prompt-engineering/best-prompt-testing-evaluation-tools)를, 배포 전 prompt 정리 및 버전 관리가 병목이라면 [최고의 prompt 관리 플랫폼](/ko/prompt-engineering/best-prompt-management-platforms)을 참조하십시오. 이 가이드는 prompt가 프로덕션에 배포된 이후 발생하는 일 — 누가 호출하는지, 비용이 얼마인지, 어디에서 문제가 생기는지 — 를 다룹니다.',
     metaDescription: 'LangSmith($39/시트+사용량), Langfuse(무료 셀프 호스팅 또는 $29/월 Core), Helicone($79/월 Pro 프록시), PromptLayer($49/월)를 프로덕션 LLM 추적 및 비용 모니터링 기준으로 비교합니다.',
     ogTitle: '프로덕션 LLM 관찰 가능성: LangSmith vs Helicone vs Langfuse vs PromptLayer',
     ogDescription: 'LangSmith는 LangChain을 깊이 추적합니다. Langfuse는 무료로 셀프 호스팅됩니다. Helicone은 한 줄짜리 프록시입니다. PromptLayer는 경량 로거입니다. 어떤 것이 귀하의 스택에 맞습니까?',
@@ -4288,7 +4288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '이 도구들이 하는 일(그리고 하지 않는 일)',
         content: [
           '**LangSmith, Helicone, Langfuse, PromptLayer는 프로덕션 LLM 관찰 가능성 플랫폼입니다 — 애플리케이션이 API 호출을 실행한 후 이를 기록하고, 다단계 체인을 추적하며, 시간에 따른 비용과 지연 시간을 추적합니다.** 이들은 "이것이 프로덕션에서 실행되었을 때 무슨 일이 있었는가?"라는 질문에 답합니다.',
-          '이는 "배포 전에 이 prompt가 좋은가?"와는 다른 질문입니다 — 배포 전 테스트와 평가는 Promptfoo, Braintrust, Vellum 같은 도구의 역할이며, [prompt 테스트 및 평가 도구 2026](/prompt-engineering/best-prompt-testing-evaluation-tools)에서 다룹니다. 배포 전 prompt 버전 관리와 팀 공유는 [최고의 prompt 관리 플랫폼](/prompt-engineering/best-prompt-management-platforms)에서 다룹니다. 이 페이지의 도구들은 prompt가 실제로 배포되고 실사용자가 호출하기 시작하는 순간부터 제 역할을 하기 시작합니다.',
+          '이는 "배포 전에 이 prompt가 좋은가?"와는 다른 질문입니다 — 배포 전 테스트와 평가는 Promptfoo, Braintrust, Vellum 같은 도구의 역할이며, [prompt 테스트 및 평가 도구 2026](/ko/prompt-engineering/best-prompt-testing-evaluation-tools)에서 다룹니다. 배포 전 prompt 버전 관리와 팀 공유는 [최고의 prompt 관리 플랫폼](/ko/prompt-engineering/best-prompt-management-platforms)에서 다룹니다. 이 페이지의 도구들은 prompt가 실제로 배포되고 실사용자가 호출하기 시작하는 순간부터 제 역할을 하기 시작합니다.',
           '겹치는 부분: 4개 도구 모두 어느 정도의 평가 및 데이터셋 기능을 제공합니다. prompt가 프로덕션에서 문제를 일으켰다는 사실을 아는 것보다, 얼마나 심각한지 점수화할 수 있는 편이 더 유용하기 때문입니다. 하지만 여기서 채점은 부차적인 기능이지 핵심 기능이 아닙니다 — 핵심 작업은 실시간 트래픽에 대한 추적, 로깅, 비용 가시성입니다.',
           '공개 사항: 이 페이지의 각 공급업체 링크(LangSmith, Langfuse, Helicone, PromptLayer)는 해당 공급업체 자체 사이트로 직접 연결됩니다. 이는 단순한 제품 링크이며 — 4개 도구 중 현재 공개된 제휴 또는 커미션 프로그램을 운영하는 곳은 없으므로, 이 안내 외에 공개할 현재 제휴 관계는 없습니다.',
         ],
@@ -4345,7 +4345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**[LangSmith](https://www.langchain.com/pricing-langsmith)는 LangChain 자체의 관찰 가능성 플랫폼입니다 — LangChain과 LangGraph 애플리케이션에 대해 추적이 자동으로 이루어지며, 이미 이 프레임워크 위에서 구축 중이라면 여기 소개된 도구 중 설정이 가장 적게 필요합니다.** LangChain 생태계 밖에서도 LangSmith는 SDK를 통해 계속 작동하지만, 자동 추적이라는 이점은 사라집니다. 무료 Developer 등급으로 시작할 수 있습니다 — 첫 5,000건 추적/월까지는 카드 등록이 필요 없습니다.',
           '무료 Developer 등급: 시트 1개, 월 최대 5,000건 기본 추적, 이후 사용량 기반 과금. Plus 등급: $39/시트/월, 시트 무제한, 월 최대 10,000건 기본 추적 포함, 이후 추가 사용량 기반 과금 — LangChain Compute Unit(LCU)당 $1.50, LangChain Storage Unit(LSU)당 $1.00으로 Engine, Fleet, Deployment, Sandbox 사용량을 측정합니다. Enterprise는 셀프 호스팅 또는 하이브리드 배포, SSO, RBAC를 지원하는 맞춤 견적입니다.',
           '최고의 팀 기능: LLM-as-judge 채점을 갖춘 데이터셋 기반 평가, 저장된 추적 기록에 대한 회귀 테스트, 그리고 평가와 버전 관리가 한 곳에 모이도록 하는 prompt hub 통합입니다. 트레이드오프: 가장 깊은 가치는 LangChain/LangGraph에 특화되어 있습니다 — 다른 프레임워크를 사용하는 팀은 유능하지만 일반적인 추적기를 얻을 뿐, LangChain 사용자가 경험하는 통합된 경험은 얻지 못합니다.',
-          'LangChain을 표준으로 삼을지 아직 고민 중인 팀이라면, 프레임워크에 특화된 관찰 가능성 스택에 발을 들이기 전에 [GPT, Claude, Gemini 중 무엇을 선택해야 할까](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)를 참조하십시오.',
+          'LangChain을 표준으로 삼을지 아직 고민 중인 팀이라면, 프레임워크에 특화된 관찰 가능성 스택에 발을 들이기 전에 [GPT, Claude, Gemini 중 무엇을 선택해야 할까](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)를 참조하십시오.',
         ],
         items: [
           'LangChain과 LangGraph에 대한 자동 추적 — 이 프레임워크로 구축한 체인은 수동 계측이 필요 없음',
@@ -4529,7 +4529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'skip-this-if',
         title: '이런 경우 건너뛰십시오…',
         content: [
-          '아직 프로덕션에 배포된 LLM 기능이 하나도 없다면 이 4개 도구를 모두 건너뛰십시오 — 배포 전 테스트와 평가(Promptfoo, Braintrust, Vellum — [prompt 테스트 및 평가 도구 2026](/prompt-engineering/best-prompt-testing-evaluation-tools) 참조)는 배포하기 전에 실제로 존재하는 문제를 해결하지만, 관찰 가능성 도구는 아직 없는 문제를 해결합니다. 추적할 프로덕션 트래픽이 없는 상태에서 추적을 설정하는 것은 설정 시간을 낭비하는 것이며, 여기 소개된 무료 등급은 충분히 관대해서 실제로 실시간 트래픽이 생긴 뒤에 나중에 추가하더라도 하루 정도의 통합 작업만 들면 됩니다.',
+          '아직 프로덕션에 배포된 LLM 기능이 하나도 없다면 이 4개 도구를 모두 건너뛰십시오 — 배포 전 테스트와 평가(Promptfoo, Braintrust, Vellum — [prompt 테스트 및 평가 도구 2026](/ko/prompt-engineering/best-prompt-testing-evaluation-tools) 참조)는 배포하기 전에 실제로 존재하는 문제를 해결하지만, 관찰 가능성 도구는 아직 없는 문제를 해결합니다. 추적할 프로덕션 트래픽이 없는 상태에서 추적을 설정하는 것은 설정 시간을 낭비하는 것이며, 여기 소개된 무료 등급은 충분히 관대해서 실제로 실시간 트래픽이 생긴 뒤에 나중에 추가하더라도 하루 정도의 통합 작업만 들면 됩니다.',
         ],
       },
       commonMistakes: {
@@ -4632,12 +4632,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[prompt 테스트 및 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval](/prompt-engineering/best-prompt-testing-evaluation-tools) — 배포 전 테스트와 평가, 프로덕션 추적 이전 단계',
-          '[최고의 prompt 관리 플랫폼 2026](/prompt-engineering/best-prompt-management-platforms) — 배포 전 prompt 버전 관리와 팀 공유',
-          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — 배포 전 인접 도구 스택',
-          '[GPT, Claude, Gemini 중 무엇을 선택해야 할까](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 프로덕션 추적을 계측하기 전에 올바른 모델을 선택하십시오',
-          '[prompt 평가 지표: 정확도, 관련성, 지연 시간](/prompt-engineering/prompt-evaluation-metrics) — LangSmith와 Langfuse의 LLM-as-judge 채점 뒤에 있는 지표',
-          '[프로덕션 환경의 prompt 거버넌스](/prompt-engineering/prompt-governance-in-production) — 추적과 모니터링이 이미 갖춰진 이후의 팀 프로세스',
+          '[prompt 테스트 및 평가 도구 2026: Promptfoo vs Braintrust vs DeepEval](/ko/prompt-engineering/best-prompt-testing-evaluation-tools) — 배포 전 테스트와 평가, 프로덕션 추적 이전 단계',
+          '[최고의 prompt 관리 플랫폼 2026](/ko/prompt-engineering/best-prompt-management-platforms) — 배포 전 prompt 버전 관리와 팀 공유',
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026)](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — 배포 전 인접 도구 스택',
+          '[GPT, Claude, Gemini 중 무엇을 선택해야 할까](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 프로덕션 추적을 계측하기 전에 올바른 모델을 선택하십시오',
+          '[prompt 평가 지표: 정확도, 관련성, 지연 시간](/ko/prompt-engineering/prompt-evaluation-metrics) — LangSmith와 Langfuse의 LLM-as-judge 채점 뒤에 있는 지표',
+          '[프로덕션 환경의 prompt 거버넌스](/ko/prompt-engineering/prompt-governance-in-production) — 추적과 모니터링이 이미 갖춰진 이후의 팀 프로세스',
         ],
       },
       sources: {

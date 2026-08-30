@@ -2335,10 +2335,10 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) -- 설치 가이드.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 상세 비교.',
-            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- API 문서.',
-            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 추론 엔진.',
+            '[LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio) -- 설치 가이드.',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) -- 상세 비교.',
+            '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- API 문서.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 추론 엔진.',
           ],
         },
         sources: {

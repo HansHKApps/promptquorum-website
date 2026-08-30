@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Arabic is the native language of over 300 million speakers across the Gulf, Levant, and North Africa.** For enterprise AI in the UAE, Saudi Arabia, Qatar, Egypt, and beyond, Arabic-language quality is a practical requirement — not an afterthought.',
           '**MSA vs. dialectal Arabic.** Modern Standard Arabic (الفصحى / MSA) is the formal written standard used in media, government, and education. Regional dialects (Gulf, Egyptian, Levantine, Moroccan) differ substantially — a model trained only on MSA may misread Gulf dialect inputs. Enterprise use cases should test both.',
-          '**Data sovereignty is the second driver.** Gulf regulators (UAE PDPL, Saudi Arabia NDMO) restrict cross-border personal data transfers. Sending Arabic customer or patient data to US-hosted cloud APIs creates transfer risk. Running Arabic NLP locally eliminates that risk. See our [UAE PDPL data sovereignty guide](/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+          '**Data sovereignty is the second driver.** Gulf regulators (UAE PDPL, Saudi Arabia NDMO) restrict cross-border personal data transfers. Sending Arabic customer or patient data to US-hosted cloud APIs creates transfer risk. Running Arabic NLP locally eliminates that risk. See our [UAE PDPL data sovereignty guide](/ko/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           '**"Translated-English" quality gap.** Many general-purpose LLMs claim Arabic support but were fine-tuned primarily on translated English data. Tokenization for Arabic can be inefficient (Arabic script requires proper right-to-left tokenization). Truly bilingual models like Jais and Falcon-H1-Arabic are trained natively on Arabic corpora.',
         ],
       },
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which Arabic LLM is best for UAE government deployments?',
-            a: 'Falcon-H1-Arabic 7B (from TII, Abu Dhabi) and Jais 30B (from Core42/G42, Abu Dhabi) are both UAE-native models with provenance from UAE government-affiliated research institutions. For sovereignty and auditability, these are the most aligned choices. Both can be deployed on-premise without any data leaving UAE infrastructure. See our [UAE PDPL data sovereignty guide](/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
+            a: 'Falcon-H1-Arabic 7B (from TII, Abu Dhabi) and Jais 30B (from Core42/G42, Abu Dhabi) are both UAE-native models with provenance from UAE government-affiliated research institutions. For sovereignty and auditability, these are the most aligned choices. Both can be deployed on-premise without any data leaving UAE infrastructure. See our [UAE PDPL data sovereignty guide](/ko/local-llms/uae-pdpl-data-sovereignty-local-ai-2026).',
           },
           {
             q: 'How do I handle Gulf Arabic dialect vs. MSA in prompts?',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What hardware do I need to run Jais 30B locally?',
-            a: 'At Q4_K_M quantization, Jais 30B requires an estimated 18-20 GB VRAM (estimate — no official benchmark). An NVIDIA RTX 4090 (24 GB) can run it at Q4 with moderate context; an A100 40 GB handles it comfortably at FP16. For production throughput, two RTX 4090s in multi-GPU mode or a single A100/H100 is recommended. See our [VRAM calculator guide](/local-llms/vram-calculator-local-llm).',
+            a: 'At Q4_K_M quantization, Jais 30B requires an estimated 18-20 GB VRAM (estimate — no official benchmark). An NVIDIA RTX 4090 (24 GB) can run it at Q4 with moderate context; an A100 40 GB handles it comfortably at FP16. For production throughput, two RTX 4090s in multi-GPU mode or a single A100/H100 is recommended. See our [VRAM calculator guide](/ko/local-llms/vram-calculator-local-llm).',
           },
         ],
       },
@@ -280,12 +280,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[UAE PDPL & Data Sovereignty: Running AI On-Premise for Compliance](/local-llms/uae-pdpl-data-sovereignty-local-ai-2026) — UAE data protection law and local AI compliance',
-          '[Multilingual Local LLMs: Best Models for Non-English Languages](/local-llms/multilingual-local-llms) — Broader multilingual model comparison',
-          '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) — On-premise deployment security',
-          '[Ollama vs. LM Studio: Which Is Best?](/local-llms/ollama-vs-lm-studio) — Tool choice for Arabic model deployment',
-          '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) — Calculate hardware requirements',
-          '[ALLaM, AceGPT & the Best Saudi Arabic Local LLMs (2026)](/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi Arabic LLMs and ALLaM 2026',
+          '[UAE PDPL & Data Sovereignty: Running AI On-Premise for Compliance](/ko/local-llms/uae-pdpl-data-sovereignty-local-ai-2026) — UAE data protection law and local AI compliance',
+          '[Multilingual Local LLMs: Best Models for Non-English Languages](/ko/local-llms/multilingual-local-llms) — Broader multilingual model comparison',
+          '[Local LLM Security & Privacy Checklist](/ko/local-llms/local-llm-security-privacy-checklist) — On-premise deployment security',
+          '[Ollama vs. LM Studio: Which Is Best?](/ko/local-llms/ollama-vs-lm-studio) — Tool choice for Arabic model deployment',
+          '[VRAM Calculator for Local LLMs](/ko/local-llms/vram-calculator-local-llm) — Calculate hardware requirements',
+          '[ALLaM, AceGPT & the Best Saudi Arabic Local LLMs (2026)](/ko/local-llms/best-saudi-arabic-local-llms-allam-2026) -- Saudi Arabic LLMs and ALLaM 2026',
         ],
       },
       sources: {

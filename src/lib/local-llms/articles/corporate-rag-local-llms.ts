@@ -2239,10 +2239,10 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 RAG 2026](/local-llms/local-rag-2026) -- 완전한 RAG 구현 가이드.',
-            '[로컬 LLM 엔터프라이즈 확장](/local-llms/scaling-local-llms-enterprise) -- 다중 사용자 인프라.',
-            '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms) -- 비즈니스 사례.',
-            '[엔터프라이즈 컴플라이언스 로컬 LLM](/local-llms/enterprise-compliance-local-llms) -- 문서 처리를 위한 컴플라이언스.',
+            '[로컬 RAG 2026](/ko/local-llms/local-rag-2026) -- 완전한 RAG 구현 가이드.',
+            '[로컬 LLM 엔터프라이즈 확장](/ko/local-llms/scaling-local-llms-enterprise) -- 다중 사용자 인프라.',
+            '[기업이 로컬 LLM을 사용하는 이유](/ko/local-llms/why-enterprises-use-local-llms) -- 비즈니스 사례.',
+            '[엔터프라이즈 컴플라이언스 로컬 LLM](/ko/local-llms/enterprise-compliance-local-llms) -- 문서 처리를 위한 컴플라이언스.',
           ],
         },
         sources: {

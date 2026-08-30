@@ -1456,7 +1456,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '시스템 프롬프트는 전체 세션에 걸쳐 모델의 역할, 제약 조건, 행동 방식을 정의하며, 한 번 설정되어 모든 요청에 적용됩니다',
           '사용자 프롬프트는 각 상호작용에서 특정 작업을 정의하며, 사용자가 제공하고 매 요청마다 변경됩니다',
           '시스템 프롬프트는 GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro에 대한 PromptQuorum 테스트 기준으로 행동 일관성의 약 70%를 차지하며, 사용자 프롬프트는 특정 출력 결과를 형성합니다',
-          'ChatGPT 및 Claude와 같은 앱의 보이지 않는 시스템 프롬프트에는 숨겨진 로직이 포함되어 있습니다 — [PromptQuorum이 이를 모두 표시해 드립니다](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)',
+          'ChatGPT 및 Claude와 같은 앱의 보이지 않는 시스템 프롬프트에는 숨겨진 로직이 포함되어 있습니다 — [PromptQuorum이 이를 모두 표시해 드립니다](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference#promptquorum)',
           'Ollama, LM Studio를 사용하는 로컬 LLM의 숨겨진 시스템 프롬프트는 디버깅 문제를 일으킵니다 — 투명성으로 해결됩니다',
           '잘못된 시스템 프롬프트는 사용자 프롬프트에 더 많은 부담을 주지만, 훌륭한 시스템 프롬프트는 모든 사용자 프롬프트를 더 잘 작동하게 만듭니다',
         ],
@@ -1465,7 +1465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whereTheyLive: {
         title: 'API 스택에서 시스템 프롬프트와 사용자 프롬프트의 위치',
         content: [
-          '**시스템 프롬프트는 애플리케이션 레이어에, 사용자 프롬프트는 상호작용 레이어에 존재합니다.** OpenAI API를 통해 GPT-5.6를 호출할 때, 엔드포인트는 두 가지 별도 입력을 받습니다: `system`(영구 지침)과 `messages`(요청별 사용자 입력). 이는 Anthropic API를 통한 Claude Sonnet 5, Google API를 통한 Gemini 3.5 Pro, 그리고 [Ollama](/prompt-engineering/context-windows-explained-why-ai-forgets) 또는 LM Studio를 통해 실행하는 로컬 LLM에서도 동일합니다.',
+          '**시스템 프롬프트는 애플리케이션 레이어에, 사용자 프롬프트는 상호작용 레이어에 존재합니다.** OpenAI API를 통해 GPT-5.6를 호출할 때, 엔드포인트는 두 가지 별도 입력을 받습니다: `system`(영구 지침)과 `messages`(요청별 사용자 입력). 이는 Anthropic API를 통한 Claude Sonnet 5, Google API를 통한 Gemini 3.5 Pro, 그리고 [Ollama](/ko/prompt-engineering/context-windows-explained-why-ai-forgets) 또는 LM Studio를 통해 실행하는 로컬 LLM에서도 동일합니다.',
           '모든 모델은 시스템 + 사용자 프롬프트 패턴을 지원합니다:',
         ],
         items: [
@@ -1547,7 +1547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**제약 우선 설계:** 모델이 해야 할 것보다 해서는 안 되는 것을 먼저 나열하십시오. "통계를 만들지 마십시오," "과장법을 사용하지 마십시오," "미등록 기능을 제안하지 마십시오" — 명시적 거부는 일관된 경계를 만듭니다.',
           '**형식 명세:** 모든 시스템 프롬프트는 출력 형식을 정의해야 합니다: JSON, Markdown, 글머리 목록, 번호가 매겨진 단계, 또는 일반 텍스트. 형식 명세 없는 시스템 프롬프트는 모든 사용자 프롬프트에서 반복적으로 형식을 지정하도록 강제합니다.',
           '**범위 경계:** 처리할 요청의 범위를 정의하십시오. "API 질문에만 답하십시오," "Python 조언을 제공하십시오," "문제 해결을 지원하십시오" — 명확한 범위는 도메인 외 답변을 방지합니다.',
-          '**여러 모델에 걸친 테스트:** 배포 전에 [GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro 등 여러 모델](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)에서 시스템 프롬프트를 테스트하십시오. 일부 모델은 제약 조건에 더 엄격하고, 다른 모델은 스타일을 다르게 해석합니다. 강력한 시스템 프롬프트는 세 가지 모두에서 일관되게 작동합니다.',
+          '**여러 모델에 걸친 테스트:** 배포 전에 [GPT-5.6, Claude Sonnet 5, Gemini 3.5 Pro 등 여러 모델](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)에서 시스템 프롬프트를 테스트하십시오. 일부 모델은 제약 조건에 더 엄격하고, 다른 모델은 스타일을 다르게 해석합니다. 강력한 시스템 프롬프트는 세 가지 모두에서 일관되게 작동합니다.',
         ],
       },
 

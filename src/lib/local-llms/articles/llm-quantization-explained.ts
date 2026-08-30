@@ -5230,7 +5230,7 @@ schema: {
             '**RAM 6 GB (가장 일반적인 노트북/데스크톱)**: Q4_K_M을 사용하십시오. Q4_K_M으로 양자화된 7B 모델은 약 4.5 GB로, OS와 브라우저용 1.5 GB가 남습니다.',
             '**코딩 또는 수학 작업의 경우**: Q4_K_M 예산이 있더라도 Q5_K_M 이상을 사용하십시오. 양자화 효과(1–3% 손실)는 정밀한 수치 추론에서 가장 두드러집니다. Q5_K_M Qwen3-Coder와 인터넷 차단 운용을 결합한 완전한 에어갭 코딩 설정은 [인터넷 없는 로컬 코딩 LLM](/ko/power-local-llm/local-coding-llm-without-internet)을 참고하십시오.',
             '**양자화 + 온도(temperature) 트레이드오프**: 온도 0.3의 Q4_K_M 모델은 온도 1.0의 전체 정밀도(FP16) 모델보다 더 결정론적인 출력을 생성합니다. 독립적인 조정을 위해서는 [온도와 top-p: AI 창의성 제어](https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity)를 참고하십시오.',
-            '**스마트 홈 및 엣지 디바이스**: Q4_K_M (4–8 GB VRAM)은 미니 PC에서 상시 가동되는 홈 자동화 AI의 최적 선택입니다. [스마트 홈 최고의 로컬 LLM 모델 →](/smart-home/best-local-llm-models-smart-home)을 참고하십시오.',
+            '**스마트 홈 및 엣지 디바이스**: Q4_K_M (4–8 GB VRAM)은 미니 PC에서 상시 가동되는 홈 자동화 AI의 최적 선택입니다. [스마트 홈 최고의 로컬 LLM 모델 →](/ko/smart-home/best-local-llm-models-smart-home)을 참고하십시오.',
           ],
         },
         lmStudio: {

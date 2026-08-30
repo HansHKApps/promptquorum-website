@@ -3808,7 +3808,7 @@ schema: {
           title: '노트북에서 LLM을 실행해야 하는 경우',
           items: [
             '✅ **로컬 LLM을 사용하는 경우:** 완전한 데이터 프라이버시가 필요한 경우, 오프라인으로 작업하는 경우, API 비용이 없어야 하는 경우',
-            '❌ **사용하지 말아야 하는 경우:** 복잡한 추론에서 높은 정확도가 필요한 경우, 긴 컨텍스트(100k+ 토큰)가 필요한 경우, 빠른 배치 처리가 필요한 경우 — [로컬 LLM 한계](/local-llms/local-llm-limitations)를 참조하십시오',
+            '❌ **사용하지 말아야 하는 경우:** 복잡한 추론에서 높은 정확도가 필요한 경우, 긴 컨텍스트(100k+ 토큰)가 필요한 경우, 빠른 배치 처리가 필요한 경우 — [로컬 LLM 한계](/ko/local-llms/local-llm-limitations)를 참조하십시오',
           ],
         },
         canYouRun: {
@@ -3817,7 +3817,7 @@ schema: {
           content: [
             '**네 -- 적절한 모델 크기를 선택하면 됩니다.** 8GB RAM 노트북에서 Q4_K_M 양자화의 7B 모델을 실행하면 CPU에서 10~25토큰/초, Apple Silicon에서 50~80토큰/초를 낼 수 있습니다. 클라우드 API보다 느리지만 대화형 사용에는 충분합니다.',
             '대부분의 8GB 노트북에서 실질적인 상한선은 7B 모델입니다. Q4_K_M의 13B 모델은 약 9GB RAM이 필요하며 — 기술적으로 16GB 기기에서 실행 가능하지만 OS와 다른 애플리케이션을 위한 여유 공간이 거의 없습니다.',
-            '하드웨어 계층별(CPU 전용부터 16GB VRAM까지) 상세 속도 벤치마크는 **[저사양 PC를 위한 가장 빠른 로컬 LLM](/local-llms/fastest-local-llms-low-end-pcs)**에서 확인하십시오 — 각 계층의 양자화 트레이드오프와 Ollama 명령어가 포함되어 있습니다.',
+            '하드웨어 계층별(CPU 전용부터 16GB VRAM까지) 상세 속도 벤치마크는 **[저사양 PC를 위한 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)**에서 확인하십시오 — 각 계층의 양자화 트레이드오프와 Ollama 명령어가 포함되어 있습니다.',
           ],
           image: '/images/ollama-terminal.svg',
           imageCaption: 'MacBook에서 Ollama로 Mistral Small 실행 중 -- Q4_K_M 양자화로 CPU에서 22토큰/초.',
@@ -3844,9 +3844,9 @@ schema: {
           id: 'who-can-run',
           title: '노트북에서 로컬 LLM을 실행할 수 있는 사람은 누구입니까?',
           items: [
-            '**초보자** → [LM Studio](/local-llms/how-to-install-lm-studio) + 3B 모델',
-            '**중급자** → [Ollama](/local-llms/how-to-install-ollama) + 7B 모델',
-            '**고급 사용자** → [양자화 튜닝](/local-llms/llm-quantization-explained)과 함께 13B 사용',
+            '**초보자** → [LM Studio](/ko/local-llms/how-to-install-lm-studio) + 3B 모델',
+            '**중급자** → [Ollama](/ko/local-llms/how-to-install-ollama) + 7B 모델',
+            '**고급 사용자** → [양자화 튜닝](/ko/local-llms/llm-quantization-explained)과 함께 13B 사용',
             '❌ **노트북을 사용하지 말아야 하는 경우:** 실시간 API가 필요한 경우 (vLLM 서버 사용), 대용량 데이터셋을 처리하는 경우 (클라우드 GPU 사용)',
           ],
         },
@@ -3860,7 +3860,7 @@ schema: {
             { 'Model': 'Llama 3.3 13B', 'RAM Required': '16GB 이상', 'Speed': '느림 (5~10토큰/초)', 'Quality': '더 높음', 'Best Use': '고급 작업, 복잡한 추론' },
           ],
           columns: ['Model', 'RAM Required', 'Speed', 'Quality', 'Best Use'],
-          note: 'Q4_K_M 메모리 예시: Mistral Small fp16 = 14GB; Q4_K_M = 4.5GB (~68% 절감). 평균 노트북의 CPU 지연 시간: 13B의 경우 1~3토큰/초, 7B의 경우 10~25토큰/초, 3B의 경우 25~45토큰/초. → [VRAM 계산기](/local-llms/vram-calculator-local-llm)',
+          note: 'Q4_K_M 메모리 예시: Mistral Small fp16 = 14GB; Q4_K_M = 4.5GB (~68% 절감). 평균 노트북의 CPU 지연 시간: 13B의 경우 1~3토큰/초, 7B의 경우 10~25토큰/초, 3B의 경우 25~45토큰/초. → [VRAM 계산기](/ko/local-llms/vram-calculator-local-llm)',
         },
         ram8vs16: {
           id: '8gb-vs-16gb',
@@ -3876,7 +3876,7 @@ schema: {
         bestModels: {
           id: 'best-models',
           title: '노트북에서 가장 잘 실행되는 로컬 LLM 모델은 무엇입니까?',
-          content: '이 모델들은 노트북의 제약 조건에 맞게 특별히 선정되었습니다 -- 품질, RAM 사용량, 지속적인 생성 속도의 균형을 고려하였습니다. 다양한 모델과 노트북 구성에 대한 VRAM 요구 사항에 대한 자세한 안내는 [VRAM 요구 사항 가이드 →](/ko/local-llms/how-much-vram-local-llm)를 참조하십시오. [Ollama](/local-llms/how-to-install-ollama)를 설치하면 단 하나의 명령어로 이 모델들을 실행할 수 있습니다. GPU 없이 실행하십니까? 전용 가이드를 참조하십시오: **[최고의 CPU 전용 로컬 LLM 2026](/ko/local-llms/best-cpu-only-llm)**.',
+          content: '이 모델들은 노트북의 제약 조건에 맞게 특별히 선정되었습니다 -- 품질, RAM 사용량, 지속적인 생성 속도의 균형을 고려하였습니다. 다양한 모델과 노트북 구성에 대한 VRAM 요구 사항에 대한 자세한 안내는 [VRAM 요구 사항 가이드 →](/ko/local-llms/how-much-vram-local-llm)를 참조하십시오. [Ollama](/ko/local-llms/how-to-install-ollama)를 설치하면 단 하나의 명령어로 이 모델들을 실행할 수 있습니다. GPU 없이 실행하십니까? 전용 가이드를 참조하십시오: **[최고의 CPU 전용 로컬 LLM 2026](/ko/local-llms/best-cpu-only-llm)**.',
           rows: [
             { 'Model': 'Llama 3.2 3B', 'RAM': '2.5GB', 'Speed (CPU)': '25~45토큰/초', 'Quality': '보통', 'Best For': '8GB 노트북, 빠른 작업' },
             { 'Model': 'Phi-4-mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20~35토큰/초', 'Quality': '보통~높음', 'Best For': '8GB 노트북, 추론/코딩' },
@@ -3896,8 +3896,8 @@ schema: {
             '노트북 하드웨어는 모델 크기를 제한하지만, 프롬프트 엔지니어링은 출력 품질의 한계를 없애 줍니다. 구조화된 프롬프트를 사용한 7B 모델은 잘못 프롬프트된 13B 모델보다 지속적으로 더 나은 성능을 발휘합니다. 소형 모델에 최적화된 기법은 [프롬프트 엔지니어링 가이드](https://www.promptquorum.com/prompt-engineering)를 참조하십시오.',
           ],
           items: [
-            '🥇 **전체 최고:** [Ollama](/local-llms/how-to-install-ollama) — 가장 빠른 설정, 광범위한 모델 지원',
-            '🥈 **초보자에게 최고:** [LM Studio](/local-llms/how-to-install-lm-studio) — GUI 방식, 터미널 불필요',
+            '🥇 **전체 최고:** [Ollama](/ko/local-llms/how-to-install-ollama) — 가장 빠른 설정, 광범위한 모델 지원',
+            '🥈 **초보자에게 최고:** [LM Studio](/ko/local-llms/how-to-install-lm-studio) — GUI 방식, 터미널 불필요',
             '🥉 **저용량 RAM (8GB)에 최고:** Llama 3.2 3B (Q4)',
             '⚡ **성능 최고:** Mistral Small (Q5 또는 Q6)',
             '💡 **모르겠다면:** Ollama + Llama 3.2 3B Q4로 시작하십시오',
@@ -3928,7 +3928,7 @@ schema: {
           title: '로컬 LLM을 위한 노트북은 데스크탑에 비해 충분합니까?',
           content: [
             '**노트북은 3B~13B 모델을 효과적으로 실행하지만, 더 나은 냉각 시스템과 전용 GPU 덕분에 데스크탑이 성능 면에서 우세합니다.** RTX 4090(24GB VRAM)이 탑재된 데스크탑은 70B 모델을 40~60토큰/초로 실행하지만, 동일한 작업을 노트북에서는 CPU 추론으로 1~3토큰/초에 처리해야 합니다.',
-            '노트북은 이동성과 실험적 사용에 활용하십시오. 대형 모델(13B 이상), 지속적인 작업 부하, 또는 프로덕션 추론에는 데스크탑을 사용하십시오. 플랫폼 선택에 대한 전체 비용 및 성능 분석은 [로컬 LLM을 위한 노트북 vs 데스크탑 구매 가이드](/local-llms/laptop-vs-desktop-local-llm)를 참조하십시오.',
+            '노트북은 이동성과 실험적 사용에 활용하십시오. 대형 모델(13B 이상), 지속적인 작업 부하, 또는 프로덕션 추론에는 데스크탑을 사용하십시오. 플랫폼 선택에 대한 전체 비용 및 성능 분석은 [로컬 LLM을 위한 노트북 vs 데스크탑 구매 가이드](/ko/local-llms/laptop-vs-desktop-local-llm)를 참조하십시오.',
           ],
         },
         thermals: {
@@ -3958,7 +3958,7 @@ schema: {
         quantization: {
           id: 'quantization-tips',
           title: '노트북에서 어떤 양자화 수준을 사용해야 합니까?',
-          content: '[양자화](/local-llms/llm-quantization-explained)는 모델 정밀도를 줄여 RAM과 연산 요구 사항을 낮춥니다. 노트북의 경우 Q4_K_M이 권장 기본값입니다:',
+          content: '[양자화](/ko/local-llms/llm-quantization-explained)는 모델 정밀도를 줄여 RAM과 연산 요구 사항을 낮춥니다. 노트북의 경우 Q4_K_M이 권장 기본값입니다:',
           rows: [
             { 'Quantization': 'Q2_K', 'RAM vs Full': '~25%', 'Quality Loss': '높음 -- 눈에 띄는 품질 저하', 'Use Case': '극히 낮은 RAM에서만' },
             { 'Quantization': 'Q3_K_S', 'RAM vs Full': '~35%', 'Quality Loss': '보통', 'Use Case': '4GB 미만 RAM' },
@@ -4004,7 +4004,7 @@ schema: {
             },
             {
               q: '로컬 LLM을 실행하려면 노트북에 전용 GPU가 필요합니까?',
-              a: '아니요. 주요 로컬 LLM 도구(Ollama, LM Studio, GPT4All)는 CPU만으로도 실행됩니다. 전용 GPU는 추론 속도를 크게 높여 주지만, 3B~7B 모델은 CPU만으로도 10~30토큰/초에서 실용적으로 사용 가능합니다. CPU에 최적화된 모델 추천은 [최고의 초보자용 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
+              a: '아니요. 주요 로컬 LLM 도구(Ollama, LM Studio, GPT4All)는 CPU만으로도 실행됩니다. 전용 GPU는 추론 속도를 크게 높여 주지만, 3B~7B 모델은 CPU만으로도 10~30토큰/초에서 실용적으로 사용 가능합니다. CPU에 최적화된 모델 추천은 [최고의 초보자용 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
             },
             {
               q: '8GB MacBook에서 실행할 수 있는 가장 빠른 로컬 LLM은 무엇입니까?',
@@ -4080,16 +4080,16 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[최고의 초보자용 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) -- 노트북에 최적화된 소형 모델',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 설치 가이드',
-            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) -- GUI 기반 설치 프로그램',
-            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) -- 성능 및 오류 수정',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- Q4_K_M vs Q8_0 vs Q5_K_M 심층 분석',
-            '[4GB 미만의 소형 로컬 LLM 모델](/local-llms/small-local-llm-models) -- 8GB 노트북용 3B 모델',
-            '[로컬 LLM을 위한 노트북 vs 데스크탑 2026](/local-llms/laptop-vs-desktop-local-llm) -- 구매 가이드: 성능 비교, 비용 분석, 어떤 플랫폼을 살지.',
-            '[Mac에서 MLX vs Ollama vs llama.cpp 2026](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon 프레임워크 비교: 속도, 설정 시간, 에코시스템 트레이드오프.',
-            '[70B 모델을 로컬에서 가장 저렴하게 실행하는 방법](/prompt-bites/cheapest-way-to-run-70b-model-locally) -- 노트북이 70B를 처리할 수 있는 경우: M3 Max의 Q3_K_S vs CPU 오프로딩.',
-            '[500달러 미만 최고의 로컬 LLM 추론 GPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026) -- MacBook 및 Windows 노트북을 위한 eGPU 업그레이드 경로.',
+            '[최고의 초보자용 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) -- 노트북에 최적화된 소형 모델',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 설치 가이드',
+            '[LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio) -- GUI 기반 설치 프로그램',
+            '[로컬 LLM 설정 문제 해결](/ko/local-llms/troubleshooting-local-llm-setup) -- 성능 및 오류 수정',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4_K_M vs Q8_0 vs Q5_K_M 심층 분석',
+            '[4GB 미만의 소형 로컬 LLM 모델](/ko/local-llms/small-local-llm-models) -- 8GB 노트북용 3B 모델',
+            '[로컬 LLM을 위한 노트북 vs 데스크탑 2026](/ko/local-llms/laptop-vs-desktop-local-llm) -- 구매 가이드: 성능 비교, 비용 분석, 어떤 플랫폼을 살지.',
+            '[Mac에서 MLX vs Ollama vs llama.cpp 2026](/ko/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon 프레임워크 비교: 속도, 설정 시간, 에코시스템 트레이드오프.',
+            '[70B 모델을 로컬에서 가장 저렴하게 실행하는 방법](/ko/prompt-bites/cheapest-way-to-run-70b-model-locally) -- 노트북이 70B를 처리할 수 있는 경우: M3 Max의 Q3_K_S vs CPU 오프로딩.',
+            '[500달러 미만 최고의 로컬 LLM 추론 GPU (2026)](/ko/local-llms/best-gpu-for-llm-inference-under-500-2026) -- MacBook 및 Windows 노트북을 위한 eGPU 업그레이드 경로.',
           ],
         },
       },

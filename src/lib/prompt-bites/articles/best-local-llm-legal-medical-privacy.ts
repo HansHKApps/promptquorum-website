@@ -852,9 +852,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM이 GDPR 준수에 도움이 될 수 있는가?](/prompt-bites/can-local-llm-help-gdpr) — 동등한 EU 프라이버시 프레이밍',
-          '[Qwen은 GDPR을 준수하는가?](/prompt-bites/is-qwen-gdpr-compliant) — 특정 모델의 규정 준수 프로필',
-          '[문서 요약을 위한 최적의 로컬 LLM](/prompt-bites/best-local-llm-document-summarization) — 긴 법률 또는 의료 문서 처리하기',
+          '[로컬 LLM이 GDPR 준수에 도움이 될 수 있는가?](/ko/prompt-bites/can-local-llm-help-gdpr) — 동등한 EU 프라이버시 프레이밍',
+          '[Qwen은 GDPR을 준수하는가?](/ko/prompt-bites/is-qwen-gdpr-compliant) — 특정 모델의 규정 준수 프로필',
+          '[문서 요약을 위한 최적의 로컬 LLM](/ko/prompt-bites/best-local-llm-document-summarization) — 긴 법률 또는 의료 문서 처리하기',
         ],
       },
     },

@@ -1781,7 +1781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[브라질 포르투갈어를 위한 최고의 로컬 LLM (2026)](/ko/local-llms/best-local-llms-portuguese-language-2026) — 어떤 모델이 최고의 PT-BR 출력을 생성하며 어떻게 실행하는가',
-          '[Local AI and LGPD — English Version](/local-llms/local-llm-lgpd-compliance-brazil-2026)',
+          '[Local AI and LGPD — English Version](/ko/local-llms/local-llm-lgpd-compliance-brazil-2026)',
           '[IA Local e LGPD — Versão em Português](/pt/local-llms/local-llm-lgpd-compliance-brazil-2026)',
           '[로컬 LLM 보안 및 개인정보 보호 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) — 로컬 AI 배포 강화하기',
           '[엔터프라이즈 규정 준수: GDPR, HIPAA, SOC2](/ko/local-llms/enterprise-compliance-local-llms) — 로컬 LLM이 다른 규제 프레임워크에 어떻게 대응하는가',

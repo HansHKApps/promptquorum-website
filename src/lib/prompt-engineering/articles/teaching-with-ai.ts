@@ -4002,7 +4002,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         localLLMs: {
           title: '사립학교 AI: 데이터 프라이버시를 위한 로컬 LLM',
           content: [
-            '엄격한 데이터 프라이버시 요구 사항이 있는 학교 — 특히 GDPR에 따른 EU 학교 — 의 경우, [Ollama](/local-llms/how-to-install-ollama)를 통한 로컬 LLM은 데이터 외부 유출이 없는 대안을 제공합니다. 16GB RAM을 갖춘 학교 노트북으로 Qwen3 8B 또는 Llama 4 Scout를 로컬에서 실행하여 학생 데이터가 기기를 벗어나지 않고 수업 계획 생성과 형성 평가 피드백을 처리할 수 있습니다. 최신 클라우드 모델보다 품질이 낮지만 일상적인 계획 과제에는 충분합니다. 설정 안내는 [로컬 LLM이란?](/local-llms/what-are-local-llms)을 참조하십시오.',
+            '엄격한 데이터 프라이버시 요구 사항이 있는 학교 — 특히 GDPR에 따른 EU 학교 — 의 경우, [Ollama](/ko/local-llms/how-to-install-ollama)를 통한 로컬 LLM은 데이터 외부 유출이 없는 대안을 제공합니다. 16GB RAM을 갖춘 학교 노트북으로 Qwen3 8B 또는 Llama 4 Scout를 로컬에서 실행하여 학생 데이터가 기기를 벗어나지 않고 수업 계획 생성과 형성 평가 피드백을 처리할 수 있습니다. 최신 클라우드 모델보다 품질이 낮지만 일상적인 계획 과제에는 충분합니다. 설정 안내는 [로컬 LLM이란?](/ko/local-llms/what-are-local-llms)을 참조하십시오.',
           ],
         },
         promptStructure: {
@@ -4010,7 +4010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '교육 과제에 맞는 프롬프트 작성 방법',
           content: [
             '**학년 수준, 과목, 학습 목표, 사전 지식, 시간 제약, 출력 형식을 명시하는 구조화된 교사 프롬프트는 편집 없이 교실에서 바로 사용할 수 있는 자료를 생성합니다. 반면 비구조화된 프롬프트는 30분 이상의 수정이 필요한 일반적인 초안을 생성합니다.**',
-            '[프롬프트 엔지니어링](/prompt-engineering/what-is-prompt-engineering)은 AI 출력을 안내하는 정확하고 구조화된 지침을 작성하는 기술입니다. 교사에게 있어 사용 가능한 AI 결과물과 사용할 수 없는 결과물의 차이는 거의 항상 모델의 역량이 아니라 프롬프트의 구체성에 있습니다.',
+            '[프롬프트 엔지니어링](/ko/prompt-engineering/what-is-prompt-engineering)은 AI 출력을 안내하는 정확하고 구조화된 지침을 작성하는 기술입니다. 교사에게 있어 사용 가능한 AI 결과물과 사용할 수 없는 결과물의 차이는 거의 항상 모델의 역량이 아니라 프롬프트의 구체성에 있습니다.',
           ],
           snippets: [
             { type: 'in-plain-terms', text: 'AI 프롬프트는 요리 레시피와 같이 생각하세요: 모호한 프롬프트("맛있는 것 만들어줘")는 일관성 없는 결과를 낳고; 상세한 프롬프트("다크 초콜릿으로 350°F에서 35분 동안 초콜릿 케이크 굽기")는 신뢰할 수 있는 결과를 낳습니다.' },
@@ -4046,7 +4046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '평가 피드백을 위한 AI 프롬프트 작성 방법',
           content: [
             '**형성 평가를 위해서는 루브릭 기준을 프롬프트에 직접 포함하여 AI가 귀하의 채점 기준을 이해하고 모든 학생 제출물에 일관되게 적용하도록 하십시오.**',
-            'Claude Sonnet 5의 1M 토큰 [컨텍스트 창](/prompt-engineering/context-windows-explained-why-ai-forgets)은 단일 세션에서 전체 학급의 에세이를 처리합니다 — 약 800 표준 페이지 — 대형 학급 교사에게 일괄 피드백 생성을 실용적으로 만듭니다. GPT-5.6는 세션당 약 800페이지(1M 토큰)를 처리하며, 어떤 교실 작업량에도 충분합니다.',
+            'Claude Sonnet 5의 1M 토큰 [컨텍스트 창](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)은 단일 세션에서 전체 학급의 에세이를 처리합니다 — 약 800 표준 페이지 — 대형 학급 교사에게 일괄 피드백 생성을 실용적으로 만듭니다. GPT-5.6는 세션당 약 800페이지(1M 토큰)를 처리하며, 어떤 교실 작업량에도 충분합니다.',
           ],
           blockquote: '당신은 경험 많은 7학년 영어 교사입니다. 이 루브릭을 사용하여 이 학생의 논증 에세이를 분석하세요: 명확한 논제(4점), 증거가 있는 세 가지 지지 논거(12점), 반론 인정(4점), 형식적 전환(3점), 논제를 강화하는 결론(3점). 각 기준에 대해: 점수를 명시하고, 관련 문장을 인용하며, 하나의 구체적인 개선 제안을 작성하세요. 26점 만점 총점.',
           callouts: [
@@ -4075,7 +4075,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-detectable-is-ai-cheating-in-schools',
           title: '학교에서 AI 부정행위는 얼마나 탐지 가능한가?',
           content: [
-            '**현재 AI 탐지 도구는 동료 검토 연구에서 15–30%의 위양성률을 보이므로 고위험 학업 청렴도 결정에는 신뢰할 수 없으며 — 많은 학생들이 [AI 환각](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)을 탐지를 회피하기 위해 전략적으로 사용합니다.**',
+            '**현재 AI 탐지 도구는 동료 검토 연구에서 15–30%의 위양성률을 보이므로 고위험 학업 청렴도 결정에는 신뢰할 수 없으며 — 많은 학생들이 [AI 환각](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)을 탐지를 회피하기 위해 전략적으로 사용합니다.**',
             '학업 청렴도는 AI 지원 교육에서 핵심 과제입니다. 도입 규모가 정책과 탐지 기술 모두를 앞질렀습니다. 학생 도입은 광범위합니다: 설문 조사에 따르면 학생의 60–92%가 학습에 AI를 사용하지만, 허용되는 사용에 관한 기관 정책은 다양합니다.',
             '탐지 문제에는 세 가지 중요한 층위가 있습니다:',
           ],
@@ -4138,15 +4138,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — 효과적인 AI 지침 뒤에 있는 기본 원칙',
-            '[AI로 더 나은 코드 작성하기](/prompt-engineering/write-better-code-with-ai) — 구조화된 프롬프트가 신뢰할 수 있는 AI 결과물을 생성하는 방법, 수업 계획 및 평가 생성에 적용 가능',
-            '[AI 한계 — LLM이 할 수 없는 것](/prompt-engineering/ai-limitations-what-llms-cant-do) — AI 환각이 교육 도구에 영향을 미치는 이유와 이를 극복하는 방법',
-            '[AI 기반 연구](/prompt-engineering/ai-powered-research) — 학생 및 교사 연구 과제에 적용 가능한 AI 생성 콘텐츠 검증 워크플로우',
-            '[페르소나 프롬프팅](/prompt-engineering/persona-prompting) — "경험 많은 5학년 교사"와 같은 역할 정의가 AI 결과물 품질과 일관성을 변화시키는 방법',
-            '[사고 연쇄 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — Khanmigo와 같은 소크라테스식 AI 튜터의 기반이 되는 추론 기술',
-            '[제약 프롬프팅](/prompt-engineering/constrained-prompting) — 교육 자료에서 AI 출력 형식 제어에 필수적',
-            '[추출 및 요약](/prompt-engineering/extract-and-summarise) — 교실에서 AI 지원 읽기 이해 및 문서 분석 기술',
-            '[모든 프롬프트에 필요한 5가지 구성 요소](/prompt-engineering/5-building-blocks-every-prompt-needs) — 교사 프롬프트 프레임워크가 기반하는 보편적인 프롬프트 구조',
+            '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 효과적인 AI 지침 뒤에 있는 기본 원칙',
+            '[AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai) — 구조화된 프롬프트가 신뢰할 수 있는 AI 결과물을 생성하는 방법, 수업 계획 및 평가 생성에 적용 가능',
+            '[AI 한계 — LLM이 할 수 없는 것](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — AI 환각이 교육 도구에 영향을 미치는 이유와 이를 극복하는 방법',
+            '[AI 기반 연구](/ko/prompt-engineering/ai-powered-research) — 학생 및 교사 연구 과제에 적용 가능한 AI 생성 콘텐츠 검증 워크플로우',
+            '[페르소나 프롬프팅](/ko/prompt-engineering/persona-prompting) — "경험 많은 5학년 교사"와 같은 역할 정의가 AI 결과물 품질과 일관성을 변화시키는 방법',
+            '[사고 연쇄 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — Khanmigo와 같은 소크라테스식 AI 튜터의 기반이 되는 추론 기술',
+            '[제약 프롬프팅](/ko/prompt-engineering/constrained-prompting) — 교육 자료에서 AI 출력 형식 제어에 필수적',
+            '[추출 및 요약](/ko/prompt-engineering/extract-and-summarise) — 교실에서 AI 지원 읽기 이해 및 문서 분석 기술',
+            '[모든 프롬프트에 필요한 5가지 구성 요소](/ko/prompt-engineering/5-building-blocks-every-prompt-needs) — 교사 프롬프트 프레임워크가 기반하는 보편적인 프롬프트 구조',
           ],
         },
         howToStart: {

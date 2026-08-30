@@ -3148,7 +3148,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**다국어 프롬프팅은 번역이 아닙니다. 모델이 학습한 분포의 다른 영역을 활성화하는 것입니다.** LLM은 텍스트를 공유 임베딩 공간에서 토크나이즈하고 표현하지만, 학습 데이터는 편향되어 있습니다. 대부분의 LLM 학습에 사용된 CommonCrawl은 약 46%가 영어, 약 6%가 독일어, 약 5%가 프랑스어, 약 3%가 중국어입니다. 학습 데이터 비중이 1% 미만인 언어(예: 대부분의 아프리카 언어, 많은 남아시아 언어)는 예측 불가능하게 작동합니다.',
           '프랑스어로 프롬프팅하면 모델은 프랑스어 학습 데이터에서 나온 패턴에 의존합니다. 프랑스어 데이터는 학습 코퍼스의 약 5%에 불과하므로, 영어 프롬프트에 비해 모델이 활용할 수 있는 학습된 연관성이 더 적습니다. 이는 추론 정확도 저하, 지시 이행 불일치, 높은 환각률, 예측 불가능한 출력 품질로 나타납니다.',
-          'LLM이 실제로 언어 패턴을 학습하는 방법을 더 자세히 알아보려면 [LLM이 실제로 작동하는 방식](/prompt-engineering/how-llms-actually-work)을 참조하십시오.',
+          'LLM이 실제로 언어 패턴을 학습하는 방법을 더 자세히 알아보려면 [LLM이 실제로 작동하는 방식](/ko/prompt-engineering/how-llms-actually-work)을 참조하십시오.',
         ],
         snippets: [
           { type: 'in-plain-terms', text: '이렇게 생각해 보십시오. LLM은 수십억 권의 책, 웹사이트, 기사를 통해 영어를 배웠고, 수백만 개의 자료를 통해 프랑스어를 배웠습니다. 프랑스어로 질문하면 모델이 참조할 수 있는 예시가 더 적기 때문에 더 많은 실수를 합니다. 이는 평생 사용해온 언어와 몇 주만 공부한 언어로 수학 문제를 푸는 것과 같습니다.' },
@@ -3177,7 +3177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '스크립트별 토큰 비용',
         content: [
           '**동일한 1,000단어 콘텐츠가 아랍어로는 영어보다 토큰이 46% 더 많이 소요되고, 일본어로는 30% 더 많이 소요되어 API 비용이 직접적으로 증가합니다.** 토큰 효율은 스크립트와 언어군에 따라 크게 다릅니다. 이는 API 비용과 컨텍스트 윈도우 예산 모두에 영향을 미칩니다.',
-          '다국어 워크플로우에서 토큰 예산을 편성하는 방법에 대한 자세한 내용은 [토큰, 비용 및 한도](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)를 참조하십시오.',
+          '다국어 워크플로우에서 토큰 예산을 편성하는 방법에 대한 자세한 내용은 [토큰, 비용 및 한도](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)를 참조하십시오.',
         ],
         columns: ['언어', '스크립트', '토큰(근사)', '영어 대비', 'API 비용 배수'],
         rows: [
@@ -3201,7 +3201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '이유가 무엇입니까? LLM의 지시 이행 능력 대부분은 영어 RLHF(인간 피드백 강화 학습) 데이터로 학습되었습니다. 복잡한 시스템 수준 지침(서식 규칙, 페르소나, 연쇄 사고 지시)은 영어로 작성될 때 더 안정적으로 이행됩니다. 영어 지침은 모델의 핵심 추론 경로의 일부입니다.',
           '그러나 스타일 지침(격식 수준, 문화적 어조, 예의 수준)은 대상 언어로 작성하는 것이 가장 좋습니다. "격식체 프랑스어"나 "정중한 일본어"가 실제로 어떤 의미인지에 대한 원어민의 기대를 이해하는 데 의존하기 때문입니다.',
           '**의사결정 트리:** 복잡한 추론/서식 규칙 → 영어 시스템 프롬프트. 격식 수준(Sie, Vous, 경어) → 대상 언어. 페르소나 정의 → 영어 + 대상 언어 샘플 하나. 출력 언어 명시 → 항상 시스템 프롬프트에 명시: "Respond in formal Japanese (丁寧語 / です・ます体)."',
-          '자세한 내용은 [시스템 프롬프트 vs. 사용자 프롬프트](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)를 참조하십시오.',
+          '자세한 내용은 [시스템 프롬프트 vs. 사용자 프롬프트](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)를 참조하십시오.',
         ],
         callouts: [
           { type: 'warning', label: '흔한 실수', text: '시스템 프롬프트와 사용자 지침 모두를 대상 언어로 작성하면 추론 정확도가 저하되는 경우가 많습니다. 논리에는 영어를, 어조에는 대상 언어를 사용하십시오.' },
@@ -3266,7 +3266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'LLM이 단계별로 추론할 때 가장 큰 학습 코퍼스(영어)의 패턴에 의존합니다. 일본어나 아랍어와 같은 저자원 언어에서 전적으로 추론이 이루어지도록 강제하면, 해당 언어에서 학습된 추론 패턴이 더 적기 때문에 정확도가 떨어집니다. 영어 CoT와 원어민 언어 출력을 조합하는 하이브리드 접근 방식이 최선입니다.',
           '**템플릿:** `Think through this step by step in English, then write your final answer in Japanese. Question: [question]`',
           '**결정 기준:** 다단계 추론이 필요한 경우, 대상 언어가 3단계 이상인 경우, 지연 시간보다 정확도가 중요한 경우 → 영어 CoT 사용. 추론 깊이보다 어조와 격식이 중요한 경우, 대상 언어가 1–2단계인 경우 → 원어민 언어 CoT 사용.',
-          '심층 분석: [연쇄 사고 프롬프팅: LLM이 추론 과정을 보여주도록 하는 방법](/prompt-engineering/chain-of-thought-prompting).',
+          '심층 분석: [연쇄 사고 프롬프팅: LLM이 추론 과정을 보여주도록 하는 방법](/ko/prompt-engineering/chain-of-thought-prompting).',
         ],
         callouts: [
           { type: 'warning', label: '주의', text: '교차 언어 CoT는 3단계 언어에서는 효과적이지만 4단계 언어에서는 모델을 혼란스럽게 만들 수 있습니다. 이 접근 방식을 본격적으로 사용하기 전에 항상 소규모 샘플로 테스트하십시오.' },
@@ -3279,7 +3279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**퓨샷 예시는 작업과 동일한 언어로 작성해야 합니다. 언어가 다른 퓨샷 예시는 2–3단계 언어에서 출력 정확도를 15–20% 저하시킵니다(Shi et al., 2023).** 퓨샷 예시는 모델에게 서식, 어조, 패턴을 가르칩니다. 예시가 영어로 되어 있고 작업이 프랑스어일 때, 모델은 상충되는 신호를 받습니다.',
           '**두 가지 전략:** (1) 원어민 퓨샷 — 모든 예시를 대상 언어로 작성(품질 최우선). (2) 제로샷 + 명시적 지침 — 예시 없이 영어로 명확한 스타일/서식 규칙만 제공(원어민 예시가 없을 때 최선). 영어 예시 + 프랑스어 작업 혼용은 피하십시오. 이는 최악의 결과를 낳습니다.',
-          '전체 결정 프레임워크는 [퓨샷 vs. 제로샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot)을 참조하십시오.',
+          '전체 결정 프레임워크는 [퓨샷 vs. 제로샷 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot)을 참조하십시오.',
         ],
         callouts: [
           { type: 'insight', label: '핵심 포인트', text: '소스 언어 불일치가 문제입니다. 영어 예시는 모델에게 영어 서식을 학습시키고, 그 후 모델은 동시에 언어를 전환하고 서식을 추론해야 합니다. 이중 인지 부하가 출력 품질을 저하시킵니다.' },
@@ -3394,11 +3394,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          '[시스템 프롬프트 vs. 사용자 프롬프트: 무엇이 어디로 가야 합니까?](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 언어 지침이 어디에 위치해야 하는지 이해',
-          '[토큰, 비용 및 한도: 실용적인 가이드](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 비영어 입력에 대한 토큰 예산 계산',
-          '[연쇄 사고 프롬프팅: LLM이 추론 과정을 보여주도록 하는 방법](/prompt-engineering/chain-of-thought-prompting) — 교차 언어 CoT 기법',
-          '[퓨샷 vs. 제로샷 프롬프팅: 언제 무엇을 사용합니까?](/prompt-engineering/zero-shot-vs-few-shot) — 다국어 작업에 대한 예시 전략 선택',
-          '[작업에 적합한 AI 모델은 무엇입니까?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 언어 및 작업별 모델 선택',
+          '[시스템 프롬프트 vs. 사용자 프롬프트: 무엇이 어디로 가야 합니까?](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 언어 지침이 어디에 위치해야 하는지 이해',
+          '[토큰, 비용 및 한도: 실용적인 가이드](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 비영어 입력에 대한 토큰 예산 계산',
+          '[연쇄 사고 프롬프팅: LLM이 추론 과정을 보여주도록 하는 방법](/ko/prompt-engineering/chain-of-thought-prompting) — 교차 언어 CoT 기법',
+          '[퓨샷 vs. 제로샷 프롬프팅: 언제 무엇을 사용합니까?](/ko/prompt-engineering/zero-shot-vs-few-shot) — 다국어 작업에 대한 예시 전략 선택',
+          '[작업에 적합한 AI 모델은 무엇입니까?](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 언어 및 작업별 모델 선택',
         ],
       },
       sources: {

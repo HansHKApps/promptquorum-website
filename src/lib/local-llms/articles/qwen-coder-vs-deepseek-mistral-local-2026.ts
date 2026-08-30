@@ -1525,10 +1525,10 @@ DEEPSEEK_MODEL=deepseek-chat
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년 전체 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
-          '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/local-llms/run-qwen-locally-guide-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년 전체 비교](/ko/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/ko/local-llms/run-qwen-locally-guide-2026)',
           '[PromptQuorum에서 모델 비교하기](/compare)',
-          '[2026년 코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding)',
+          '[2026년 코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)',
           '[PromptQuorum 대기자 목록 등록](/waitlist)',
         ],
       },

@@ -2869,12 +2869,12 @@ schema: {
           id: 'related-reading',
           title: '관련 문서',
           items: [
-            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 멀티 GPU를 지원하는 추론 엔진.',
-            '[24GB VRAM에서 70B 모델 실행](/local-llms/run-70b-models-24gb-vram) -- CPU 오프로딩을 활용한 멀티 GPU 대안.',
-            '[로컬 LLM을 위한 최고의 GPU](/local-llms/best-gpus-for-local-llms) -- GPU 선택 가이드: RTX 4060부터 RTX 4090까지.',
-            '[로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm) -- 모델 크기 및 양자화에 따른 VRAM 요구 사항.',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 완전한 하드웨어 빌드 권장 사항.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 멀티 GPU를 지원하는 추론 툴 비교.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 멀티 GPU를 지원하는 추론 엔진.',
+            '[24GB VRAM에서 70B 모델 실행](/ko/local-llms/run-70b-models-24gb-vram) -- CPU 오프로딩을 활용한 멀티 GPU 대안.',
+            '[로컬 LLM을 위한 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) -- GPU 선택 가이드: RTX 4060부터 RTX 4090까지.',
+            '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm) -- 모델 크기 및 양자화에 따른 VRAM 요구 사항.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 완전한 하드웨어 빌드 권장 사항.',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) -- 멀티 GPU를 지원하는 추론 툴 비교.',
           ],
         },
         sources: {

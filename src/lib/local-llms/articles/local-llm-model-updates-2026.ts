@@ -2309,7 +2309,7 @@ schema: {
         },
         q12026: {
           title: '2026년 Q1에 출시된 로컬 LLM 모델은 무엇입니까?',
-          content: '2026년 4월 기준, 2026년 1월~4월 사이에 출시된 주목할 만한 오픈 웨이트 모델들입니다. 아래의 모든 모델은 다양한 양자화 형식으로 제공됩니다 -- Q4 대비 Q5 트레이드오프에 대한 자세한 내용은 [양자화 가이드](/local-llms/llm-quantization-explained)를 참조하십시오.',
+          content: '2026년 4월 기준, 2026년 1월~4월 사이에 출시된 주목할 만한 오픈 웨이트 모델들입니다. 아래의 모든 모델은 다양한 양자화 형식으로 제공됩니다 -- Q4 대비 Q5 트레이드오프에 대한 자세한 내용은 [양자화 가이드](/ko/local-llms/llm-quantization-explained)를 참조하십시오.',
           image: '/images/q1-2026-model-releases-timeline-en.svg',
           imageCaption: '2026년 Q1 로컬 LLM 출시 타임라인: Phi-4 Mini (1월, 3.8B), Gemma 3 (2월, 모든 크기에서 비전 지원), Llama 4 Scout (3월, MoE 아키텍처), Mistral Small 3.2 (4월). 모두 오픈 웨이트 발표 후 며칠 내에 Ollama에 출시되었습니다.',
           rows: [
@@ -2347,7 +2347,7 @@ schema: {
           id: 'quality-improvement',
           title: '2024년부터 2026년까지 로컬 LLM 품질은 얼마나 향상되었습니까?',
           content: [
-            '**로컬에서 실행 가능한 모델 품질의 2년간 향상은 상당합니다.** 2026년 4월 기준, 7B 모델(Qwen3 7B, MMLU 74%)은 2024년 초 13B 모델의 벤치마크 성능과 동등합니다. 70B 모델(Llama 3.3 70B, MMLU 82%)은 GPT-4 (2023년) 성능과 동등한데, 3년 전에는 수십억 달러의 서버 인프라가 필요하던 모델이 이제 Mac Studio에서 실행됩니다. 각 모델 클래스에 맞는 하드웨어 추천은 [로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
+            '**로컬에서 실행 가능한 모델 품질의 2년간 향상은 상당합니다.** 2026년 4월 기준, 7B 모델(Qwen3 7B, MMLU 74%)은 2024년 초 13B 모델의 벤치마크 성능과 동등합니다. 70B 모델(Llama 3.3 70B, MMLU 82%)은 GPT-4 (2023년) 성능과 동등한데, 3년 전에는 수십억 달러의 서버 인프라가 필요하던 모델이 이제 Mac Studio에서 실행됩니다. 각 모델 클래스에 맞는 하드웨어 추천은 [로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
           ],
           image: '/images/llm-quality-improvement-2024-2026-en.svg',
           imageCaption: '로컬 LLM 품질 향상 2024~2026: 7B급 모델은 MMLU 64% (Mistral Small, 2024년 초)에서 74% (Qwen3 7B, 2026년 4월)로 향상되었습니다. 70B급은 75% (Llama 3.3 70B)에서 82~84% (Llama 3.3 70B 및 Qwen3 72B)로 향상되었습니다. 18~24개월마다 로컬 모델 품질이 한 세대 발전합니다.',
@@ -2391,12 +2391,12 @@ schema: {
           id: 'related',
           title: '관련 자료',
           items: [
-            '[최고의 로컬 LLM 2026](/local-llms/best-local-llms-2026) -- 2026년 전체 출시 모델을 포함한 작업, 하드웨어, 품질별 상위 5개 모델의 현재 순위.',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- 새 모델 출시 버전 다운로드 시 Q4_K_M 대비 Q5_K_M 이해.',
-            '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) -- 최신 2026년 데이터를 포함한 세 주요 모델 패밀리의 전체 벤치마크 비교.',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 다운로드 전에 하드웨어가 최신 모델 출시를 지원하는지 확인.',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- Ollama를 업데이트하고 올바른 버전 태그로 최신 모델을 가져오기.',
-            '[Ollama의 상위 오픈 소스 모델](/local-llms/top-open-source-models-ollama) -- pull 명령어와 성능 데이터가 포함된 사용 가능한 모델의 전체 라이브러리.',
+            '[최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026) -- 2026년 전체 출시 모델을 포함한 작업, 하드웨어, 품질별 상위 5개 모델의 현재 순위.',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- 새 모델 출시 버전 다운로드 시 Q4_K_M 대비 Q5_K_M 이해.',
+            '[Qwen vs Llama vs Mistral](/ko/local-llms/qwen-vs-llama-vs-mistral) -- 최신 2026년 데이터를 포함한 세 주요 모델 패밀리의 전체 벤치마크 비교.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 다운로드 전에 하드웨어가 최신 모델 출시를 지원하는지 확인.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- Ollama를 업데이트하고 올바른 버전 태그로 최신 모델을 가져오기.',
+            '[Ollama의 상위 오픈 소스 모델](/ko/local-llms/top-open-source-models-ollama) -- pull 명령어와 성능 데이터가 포함된 사용 가능한 모델의 전체 라이브러리.',
             '[로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측](/ko/local-llms/future-of-local-llms) -- 로컬 LLM의 미래',
           ],
         },

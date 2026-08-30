@@ -667,9 +667,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[Ollama 대 LM Studio](/prompt-bites/ollama-vs-lm-studio) — 두 단일 사용자 로컬 도구 비교',
-          '[GGUF 대 GPTQ 대 AWQ](/prompt-bites/gguf-vs-gptq-vs-awq) — 각 도구가 기대하는 형식',
-          '[Ollama를 위한 최적의 프론트엔드](/prompt-bites/best-frontend-for-ollama) — Ollama와 채팅 UI 결합하기',
+          '[Ollama 대 LM Studio](/ko/prompt-bites/ollama-vs-lm-studio) — 두 단일 사용자 로컬 도구 비교',
+          '[GGUF 대 GPTQ 대 AWQ](/ko/prompt-bites/gguf-vs-gptq-vs-awq) — 각 도구가 기대하는 형식',
+          '[Ollama를 위한 최적의 프론트엔드](/ko/prompt-bites/best-frontend-for-ollama) — Ollama와 채팅 UI 결합하기',
         ],
       },
     },

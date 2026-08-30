@@ -1968,7 +1968,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '역할 프롬프팅: 모델에게 특정 전문가(예: 데이터 분석가 또는 제품 매니저)로 "행동하도록" 요청합니다.',
           '단계별 추론: 최종 답변 전에 중간 단계나 설명을 요청합니다.',
-          '[퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot): 동작을 고정하기 위해 여러 입력-출력 예시를 제공합니다.',
+          '[퓨샷 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot): 동작을 고정하기 위해 여러 입력-출력 예시를 제공합니다.',
           '구조화된 출력: 글머리 목록, 표, JSON 등 정해진 형식으로 답변을 요청합니다.',
           '반복적 개선: 모델 자체 출력을 수정 및 개선을 위한 입력으로 재사용합니다.',
         ],
@@ -2002,12 +2002,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'using-with-others',
         title: 'Google 가이드를 다른 프레임워크와 함께 사용하기',
         content: [
-          '**Google 프롬프팅 가이드는 [CO-STAR](/prompt-bites/co-star-prompt-framework), SPECS, RISEN, TRACE 같은 고수준 프레임워크와 함께 작동하는 저수준 기법 모음으로 취급해야 합니다.** 이 가이드는 지침을 어떻게 표현할지를 알려 주고, 프레임워크는 전체 워크플로를 어떻게 구성할지를 알려 줍니다.',
+          '**Google 프롬프팅 가이드는 [CO-STAR](/ko/prompt-bites/co-star-prompt-framework), SPECS, RISEN, TRACE 같은 고수준 프레임워크와 함께 작동하는 저수준 기법 모음으로 취급해야 합니다.** 이 가이드는 지침을 어떻게 표현할지를 알려 주고, 프레임워크는 전체 워크플로를 어떻게 구성할지를 알려 줍니다.',
           '실용적인 접근 방법은 다음과 같습니다:',
         ],
         items: [
           'CO-STAR 또는 SPECS 같은 프레임워크를 사용하여 태스크의 전체 구조를 정의하십시오.',
-          '그 구조 안에서 Google 프롬프팅 원칙을 적용하십시오: 명시적 역할, 명확한 제약, [퓨샷 예시](/prompt-engineering/zero-shot-vs-few-shot), 필요 시 단계별 추론.',
+          '그 구조 안에서 Google 프롬프팅 원칙을 적용하십시오: 명시적 역할, 명확한 제약, [퓨샷 예시](/ko/prompt-engineering/zero-shot-vs-few-shot), 필요 시 단계별 추론.',
           'PromptQuorum에서 결합된 프롬프트를 여러 모델로 실행하여 일관되게 동작하는지 검증하십시오.',
         ],
         callouts: [
@@ -2053,7 +2053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**명확하고 구체적으로 작성하십시오: 모호한 지침을 피하십시오.** "AI에 대해 알려 주십시오" 대신 "컴퓨터 과학 학생에게 적합한 기술적 수준으로 대규모 언어 모델(LLM)이 어떻게 텍스트를 생성하는지 설명하십시오"라고 요청하십시오. 이렇게 하면 모호함이 제거됩니다.',
           '**원하는 출력 형식의 예시를 제공하십시오.** 모델이 모방해야 할 샘플 답변이나 코드 예시를 보여 주십시오. 예시는 설명보다 더 잘 가르칩니다. 잘 선택된 예시 하나는 10줄의 지침보다 가치 있습니다.',
           '**도움이 된다면 모델에게 "역할"을 부여하십시오.** 예: "당신은 재무 어드바이저입니다. 고액 자산가에게 세금 손실 수확을 설명하십시오." 역할은 어조와 세부 수준을 안내합니다. 역할은 창의적 태스크에 특히 유용합니다.',
-          '**복잡한 태스크에는 단계별 추론을 사용하십시오.** 모델에게 답변하기 전에 "단계별로 생각"하도록 요청하십시오. 이렇게 하면 신중한 검토가 이루어지고 오류를 포착합니다. [Gemini 3.1 Pro](/prompt-engineering/googles-prompting-guide), GPT-5.6, Claude Opus 5에서 모두 작동합니다.',
+          '**복잡한 태스크에는 단계별 추론을 사용하십시오.** 모델에게 답변하기 전에 "단계별로 생각"하도록 요청하십시오. 이렇게 하면 신중한 검토가 이루어지고 오류를 포착합니다. [Gemini 3.1 Pro](/ko/prompt-engineering/googles-prompting-guide), GPT-5.6, Claude Opus 5에서 모두 작동합니다.',
           '**대규모 배포 전에 다양한 입력으로 프롬프트를 테스트하십시오.** 한 예시에서 작동하는 프롬프트가 엣지 케이스에서 실패할 수 있습니다. 다양한 시나리오에서 검증하십시오. PromptQuorum을 사용하여 여러 모델과 입력 유형에 동시에 테스트하십시오.',
         ],
         callouts: [

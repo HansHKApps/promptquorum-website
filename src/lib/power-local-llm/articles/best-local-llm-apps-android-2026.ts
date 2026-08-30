@@ -4464,7 +4464,7 @@ snippetBlocks: [
         id: 'which-app',
         title: '어떤 앱을 선택해야 합니까?',
         content:
-          '**올바른 앱은 기기의 칩셋과 단순함 대비 커스터마이징을 얼마나 중시하느냐에 따라 다릅니다.** Android 사용자들은 세련된 네이티브 경험(PocketPal AI, Layla)을 원하는 사람과 최대 제어(Ollama via Termux, Maid)를 원하는 사람으로 명확히 나뉩니다. iPhone과 달리 Android는 둘 다 가능합니다. 다양한 기기에서 모델 크기와 RAM 요구사항이 어떻게 연관되는지 더 잘 이해하려면 [VRAM 요구사항 가이드 →](/local-llms/how-much-vram-local-llm)를 참조하십시오.',
+          '**올바른 앱은 기기의 칩셋과 단순함 대비 커스터마이징을 얼마나 중시하느냐에 따라 다릅니다.** Android 사용자들은 세련된 네이티브 경험(PocketPal AI, Layla)을 원하는 사람과 최대 제어(Ollama via Termux, Maid)를 원하는 사람으로 명확히 나뉩니다. iPhone과 달리 Android는 둘 다 가능합니다. 다양한 기기에서 모델 크기와 RAM 요구사항이 어떻게 연관되는지 더 잘 이해하려면 [VRAM 요구사항 가이드 →](/ko/local-llms/how-much-vram-local-llm)를 참조하십시오.',
         snippetBlocks: [
           {
             type: 'plain-terms',

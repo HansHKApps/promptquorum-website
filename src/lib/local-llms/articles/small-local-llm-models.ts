@@ -1919,7 +1919,7 @@ schema: {
           content: [
             '**소형 로컬 LLM은 일반적으로 40억 개 미만의 파라미터를 가진 모델로 정의됩니다.** Q4_K_M 양자화에서 이러한 모델은 1.5~3 GB의 RAM을 필요로 합니다 -- RAM 4~8 GB의 보급형 노트북 제약 조건 내에서 충분히 실행 가능합니다.',
             '2026년 4월 기준, 소형 모델은 빠른 요약, 간단한 Q&A, 코드 스니펫 설명, 짧은 텍스트 번역, 분류 작업에 적합합니다. 다단계 추론, 복잡한 코드 생성, 장문의 일관된 문서 작성에는 적합하지 않습니다.',
-            '3B 모델과 7B 모델 간의 품질 차이는 상당합니다 -- GPT-4o mini와 GPT-5.5 간의 차이에 거의 해당합니다. RAM 8 GB 사용자의 경우, 기기에 여유가 있다면 Q4_K_M의 7B 모델이 거의 항상 더 나은 선택입니다. 7B 모델 추천은 [초보자를 위한 최고 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
+            '3B 모델과 7B 모델 간의 품질 차이는 상당합니다 -- GPT-4o mini와 GPT-5.5 간의 차이에 거의 해당합니다. RAM 8 GB 사용자의 경우, 기기에 여유가 있다면 Q4_K_M의 7B 모델이 거의 항상 더 나은 선택입니다. 7B 모델 추천은 [초보자를 위한 최고 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
           ],
         },
         modelSelectionGuide: {
@@ -2042,12 +2042,12 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[초보자를 위한 최고 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) -- RAM 8 GB가 가용하고 3B에서 품질을 높여야 할 때의 7B 모델 추천',
-            '[첫 번째 로컬 LLM 실행하기](/local-llms/run-first-local-llm) -- Ollama로 이 페이지의 모든 모델을 10분 이내에 내려받고 실행하는 단계별 가이드',
-            '[노트북에서 로컬 LLM 실행](/local-llms/local-llm-on-laptop) -- 제약된 하드웨어에서 지속적인 추론을 위한 열 관리 및 배터리 관리',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- Q4_K_M이 기본값인 이유와 극도로 RAM이 제한된 경우 Q3_K_M을 고려할 시점',
-            '[코딩에 최적인 로컬 LLM](/local-llms/best-local-llms-for-coding) -- Qwen3 3B가 복잡한 작업에 충분하지 않을 때의 7B 이상 규모 코딩 특화 모델',
-            '[로컬 LLM 설정 문제 해결](/local-llms/troubleshooting-local-llm-setup) -- 저용량 RAM 기기에서 흔히 발생하는 OOM 오류, 느린 추론, 모델 로딩 실패 수정',
+            '[초보자를 위한 최고 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) -- RAM 8 GB가 가용하고 3B에서 품질을 높여야 할 때의 7B 모델 추천',
+            '[첫 번째 로컬 LLM 실행하기](/ko/local-llms/run-first-local-llm) -- Ollama로 이 페이지의 모든 모델을 10분 이내에 내려받고 실행하는 단계별 가이드',
+            '[노트북에서 로컬 LLM 실행](/ko/local-llms/local-llm-on-laptop) -- 제약된 하드웨어에서 지속적인 추론을 위한 열 관리 및 배터리 관리',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4_K_M이 기본값인 이유와 극도로 RAM이 제한된 경우 Q3_K_M을 고려할 시점',
+            '[코딩에 최적인 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) -- Qwen3 3B가 복잡한 작업에 충분하지 않을 때의 7B 이상 규모 코딩 특화 모델',
+            '[로컬 LLM 설정 문제 해결](/ko/local-llms/troubleshooting-local-llm-setup) -- 저용량 RAM 기기에서 흔히 발생하는 OOM 오류, 느린 추론, 모델 로딩 실패 수정',
             '[소비자 하드웨어를 위한 최고의 7B 모델](/ko/local-llms/best-7b-models-consumer-hardware) -- 소비자 하드웨어를 위한 최고의 7B 모델',
           ],
         },
@@ -2077,7 +2077,7 @@ schema: {
             },
             {
               q: '영어 외 언어에 가장 적합한 소형 모델은 무엇입니까?',
-              a: 'Qwen3 3B는 중국어, 일본어, 한국어, 아랍어를 포함하여 29개 언어를 기본으로 지원합니다. Gemma 4 E2B와 Phi-4 Mini는 주로 영어에 최적화되어 있습니다. 소형 모델 규모에서 비영어 작업에는 Qwen3 3B가 명확한 선택입니다. 전체 언어 비교는 [Qwen vs Llama vs Mistral 다국어 비교](/local-llms/qwen-vs-llama-vs-mistral)를 참조하십시오.',
+              a: 'Qwen3 3B는 중국어, 일본어, 한국어, 아랍어를 포함하여 29개 언어를 기본으로 지원합니다. Gemma 4 E2B와 Phi-4 Mini는 주로 영어에 최적화되어 있습니다. 소형 모델 규모에서 비영어 작업에는 Qwen3 3B가 명확한 선택입니다. 전체 언어 비교는 [Qwen vs Llama vs Mistral 다국어 비교](/ko/local-llms/qwen-vs-llama-vs-mistral)를 참조하십시오.',
             },
             {
               q: '일상적인 작업에서 Phi-4 Mini와 Llama 3.2 3B의 차이는 무엇입니까?',

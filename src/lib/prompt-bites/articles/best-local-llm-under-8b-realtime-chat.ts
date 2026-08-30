@@ -660,9 +660,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[6GB VRAM을 위한 최적의 로컬 LLM](/prompt-bites/best-local-llm-6gb-vram) — 이 모델 등급을 위한 하드웨어 산정',
-          '[로컬 RAG를 위한 최적의 임베딩 모델](/prompt-bites/best-embedding-model-local-rag) — 작은 채팅 모델과 검색 결합하기',
-          '[7B 모델을 로컬에서 파인튜닝하려면 어떤 하드웨어가 필요한가?](/prompt-bites/fine-tuning-7b-model-locally-hardware) — 작은 모델을 더 커스터마이징하기',
+          '[6GB VRAM을 위한 최적의 로컬 LLM](/ko/prompt-bites/best-local-llm-6gb-vram) — 이 모델 등급을 위한 하드웨어 산정',
+          '[로컬 RAG를 위한 최적의 임베딩 모델](/ko/prompt-bites/best-embedding-model-local-rag) — 작은 채팅 모델과 검색 결합하기',
+          '[7B 모델을 로컬에서 파인튜닝하려면 어떤 하드웨어가 필요한가?](/ko/prompt-bites/fine-tuning-7b-model-locally-hardware) — 작은 모델을 더 커스터마이징하기',
         ],
       },
     },

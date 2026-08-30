@@ -2520,7 +2520,7 @@ schema: {
             'Linux: 명령어 하나로 모든 것을 설치합니다 -- `curl -fsSL https://ollama.com/install.sh | sh`.',
             '최소 요구 사항: 3B 모델에는 4 GB RAM, 7B 모델에는 8 GB RAM. 시작하는 데 GPU는 필요하지 않습니다.',
             'Ollama는 `http://localhost:11434`에서 OpenAI 호환 REST API를 제공합니다 -- OpenAI SDK 앱이라면 코드 변경 없이 사용할 수 있습니다.',
-            '👉 **설치 전에 로컬 실행이 귀하의 사용 사례에 적합한지 확인하십시오** — 클라우드가 로컬 추론보다 나은 경우는 [로컬 LLM vs 클라우드 API](/local-llms/local-llm-limitations)를 참조하십시오.',
+            '👉 **설치 전에 로컬 실행이 귀하의 사용 사례에 적합한지 확인하십시오** — 클라우드가 로컬 추론보다 나은 경우는 [로컬 LLM vs 클라우드 API](/ko/local-llms/local-llm-limitations)를 참조하십시오.',
           ],
         },
         beforeYouInstall: {
@@ -2537,7 +2537,7 @@ schema: {
           content: [
             '**Ollama는 대형 언어 모델을 로컬에서 실행하는 오픈 소스 추론 엔진입니다.** 모델 관리, llama.cpp 추론 백엔드, OpenAI 호환 REST API를 단일 경량 애플리케이션으로 패키징합니다. Python, conda 환경, CUDA 설정이 필요하지 않습니다.',
             'Ollama는 Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 및 100개 이상의 다른 모델을 원클릭으로 다운로드할 수 있는 큐레이션된 모델 라이브러리(ollama.com/library)를 유지 관리합니다. 모델은 한 번 다운로드되어 디스크에 캐시됩니다 -- 이후 실행은 5초 이내에 시작됩니다.',
-            'Ollama의 대안은 [로컬 LLM 원클릭 설치 프로그램](/local-llms/local-llm-one-click-installers)을 참조하십시오. Ollama와 LM Studio의 비교는 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참조하십시오.',
+            'Ollama의 대안은 [로컬 LLM 원클릭 설치 프로그램](/ko/local-llms/local-llm-one-click-installers)을 참조하십시오. Ollama와 LM Studio의 비교는 [LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio)을 참조하십시오.',
           ],
         },
         installMac: {
@@ -2640,7 +2640,7 @@ schema: {
             },
             {
               q: '모델 실행 시 "error: model requires more system memory"가 표시됩니다',
-              a: '모델이 사용 가능한 RAM보다 큽니다. 더 작은 양자화를 시도하십시오: 기본 Q4_K_M 대신 `ollama run llama3.2-instruct-q4_0`을 사용하십시오. 또는 `llama3.2:3b`와 같은 더 작은 모델로 전환하십시오. RAM에 맞는 권장 사항은 [초보자를 위한 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
+              a: '모델이 사용 가능한 RAM보다 큽니다. 더 작은 양자화를 시도하십시오: 기본 Q4_K_M 대신 `ollama run llama3.2-instruct-q4_0`을 사용하십시오. 또는 `llama3.2:3b`와 같은 더 작은 모델로 전환하십시오. RAM에 맞는 권장 사항은 [초보자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models)을 참조하십시오.',
             },
             {
               q: 'Ollama가 실행 중인데 GPU가 사용되지 않습니다',
@@ -2654,7 +2654,7 @@ schema: {
         },
         nextSteps: {
           title: 'Ollama 설치 후 무엇을 해야 합니까?',
-          content: 'Ollama가 실행되면 다음 단계는 [첫 번째 로컬 LLM 실행](/local-llms/run-first-local-llm)으로 프롬프팅, 컨텍스트 길이, 로컬 추론 속도에서 무엇을 기대할 수 있는지 이해하는 것입니다. 하드웨어에 적합한 최고의 모델을 선택하려면 [초보자를 위한 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models)을 참조하십시오. 터미널 대신 그래픽 채팅 인터페이스를 선호하는 경우 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)에서 데스크톱 앱 대안을 다루고 있습니다.',
+          content: 'Ollama가 실행되면 다음 단계는 [첫 번째 로컬 LLM 실행](/ko/local-llms/run-first-local-llm)으로 프롬프팅, 컨텍스트 길이, 로컬 추론 속도에서 무엇을 기대할 수 있는지 이해하는 것입니다. 하드웨어에 적합한 최고의 모델을 선택하려면 [초보자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models)을 참조하십시오. 터미널 대신 그래픽 채팅 인터페이스를 선호하는 경우 [LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio)에서 데스크톱 앱 대안을 다루고 있습니다.',
         },
         sources: {
           id: 'sources',
@@ -2677,12 +2677,12 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[로컬 LLM 개발자 스택](/local-llms/local-llm-developer-stack) -- 완전한 개발 환경 구축: CLI → API 서버 → 프로덕션 멀티 GPU.',
-            '[로컬 LLM이란 무엇입니까?](/local-llms/what-are-local-llms) -- 정의 및 핵심 개념',
-            '[첫 번째 로컬 LLM 실행](/local-llms/run-first-local-llm) -- 설치 후 다음 단계',
-            '[초보자를 위한 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) -- 하드웨어별 모델 권장 사항',
-            '[로컬 LLM 원클릭 설치 프로그램](/local-llms/local-llm-one-click-installers) -- Ollama의 대안 도구',
-            '[Mac 2026에서 MLX vs Ollama vs llama.cpp](/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon용 프레임워크 비교: 속도, 설정 시간 및 생태계 트레이드오프.',
+            '[로컬 LLM 개발자 스택](/ko/local-llms/local-llm-developer-stack) -- 완전한 개발 환경 구축: CLI → API 서버 → 프로덕션 멀티 GPU.',
+            '[로컬 LLM이란 무엇입니까?](/ko/local-llms/what-are-local-llms) -- 정의 및 핵심 개념',
+            '[첫 번째 로컬 LLM 실행](/ko/local-llms/run-first-local-llm) -- 설치 후 다음 단계',
+            '[초보자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) -- 하드웨어별 모델 권장 사항',
+            '[로컬 LLM 원클릭 설치 프로그램](/ko/local-llms/local-llm-one-click-installers) -- Ollama의 대안 도구',
+            '[Mac 2026에서 MLX vs Ollama vs llama.cpp](/ko/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon용 프레임워크 비교: 속도, 설정 시간 및 생태계 트레이드오프.',
             'Ollama가 설치되어 준비되었습니다. 다음 과제: 좋은 결과를 얻는 프롬프트 작성. 여기서 시작하세요: [프롬프트 엔지니어링이란](https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering)에서 평이한 언어로 기초를 다룹니다.',
           '[로컬 LLM 모델 업데이트 2026](/ko/local-llms/local-llm-model-updates-2026) -- 올해 Ollama용으로 출시된 모든 주요 오픈 웨이트 모델의 완전한 타임라인.',
         ],

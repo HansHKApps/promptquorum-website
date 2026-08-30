@@ -2024,7 +2024,7 @@ schema: {
             },
             {
               q: 'GDPR을 충족하면서 클라우드 규모가 필요한 경우 어떻게 합니까?',
-              a: 'GDPR 준수가 필요한 클라우드 워크로드의 경우, Hetzner, Scaleway, OVHcloud, Nebius 및 기타 GDPR 준수 제공업체를 Schrems II 전체 분석과 함께 다루는 [EU 클라우드 GPU 비교 →](/local-llms/eu-cloud-gpu-gdpr-2026)를 참조하십시오.',
+              a: 'GDPR 준수가 필요한 클라우드 워크로드의 경우, Hetzner, Scaleway, OVHcloud, Nebius 및 기타 GDPR 준수 제공업체를 Schrems II 전체 분석과 함께 다루는 [EU 클라우드 GPU 비교 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)를 참조하십시오.',
             },
           ],
         },
@@ -2032,10 +2032,10 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기 자료',
           items: [
-            '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms) -- 비즈니스 사례.',
-            '[온프레미스 에어갭 로컬 LLM](/local-llms/on-prem-air-gapped-local-llm) -- 기밀 데이터를 위한 최고 수준의 보안.',
-            '[로컬 LLM 기업 확장](/local-llms/scaling-local-llms-enterprise) -- 컴플라이언스 통제를 갖춘 프로덕션 배포.',
-            '[로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist) -- 컴플라이언스 검증 단계.',
+            '[기업이 로컬 LLM을 사용하는 이유](/ko/local-llms/why-enterprises-use-local-llms) -- 비즈니스 사례.',
+            '[온프레미스 에어갭 로컬 LLM](/ko/local-llms/on-prem-air-gapped-local-llm) -- 기밀 데이터를 위한 최고 수준의 보안.',
+            '[로컬 LLM 기업 확장](/ko/local-llms/scaling-local-llms-enterprise) -- 컴플라이언스 통제를 갖춘 프로덕션 배포.',
+            '[로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) -- 컴플라이언스 검증 단계.',
             '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
           ],
         },

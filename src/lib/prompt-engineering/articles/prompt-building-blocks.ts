@@ -3277,7 +3277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block1Link: {
-          content: '모델이 지시 사항을 더 잘 따르게 됨에 따라 역할 프롬프팅이 어떻게 발전했는지 이해하려면 [프롬프트 엔지니어링의 발전](/prompt-engineering/how-prompt-engineering-evolved)을 참조하십시오.',
+          content: '모델이 지시 사항을 더 잘 따르게 됨에 따라 역할 프롬프팅이 어떻게 발전했는지 이해하려면 [프롬프트 엔지니어링의 발전](/ko/prompt-engineering/how-prompt-engineering-evolved)을 참조하십시오.',
         },
 
         block2: {
@@ -3296,7 +3296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block2Link: {
-          content: '지시 사항은 예시 제공 여부와 직접 상호 작용합니다 — 각 접근 방식이 언제 가장 효과적인지는 [제로샷 vs. 퓨샷: 어느 접근 방식이 더 나은 결과를 얻는가?](/prompt-engineering/zero-shot-vs-few-shot)를 참조하십시오.',
+          content: '지시 사항은 예시 제공 여부와 직접 상호 작용합니다 — 각 접근 방식이 언제 가장 효과적인지는 [제로샷 vs. 퓨샷: 어느 접근 방식이 더 나은 결과를 얻는가?](/ko/prompt-engineering/zero-shot-vs-few-shot)를 참조하십시오.',
         },
 
         block3: {
@@ -3315,7 +3315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block3Link: {
-          content: '예시를 사용해야 할 때와 생략해야 할 때에 대한 전체 설명은 [제로샷 vs. 퓨샷: 어느 접근 방식이 더 나은 결과를 얻는가?](/prompt-engineering/zero-shot-vs-few-shot)를 참조하십시오.',
+          content: '예시를 사용해야 할 때와 생략해야 할 때에 대한 전체 설명은 [제로샷 vs. 퓨샷: 어느 접근 방식이 더 나은 결과를 얻는가?](/ko/prompt-engineering/zero-shot-vs-few-shot)를 참조하십시오.',
         },
 
         block4: {
@@ -3335,7 +3335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block4Links: {
-          content: '제외를 사용하여 결과물을 형성하는 기법은 [부정 프롬프팅: AI에게 하지 말아야 할 것을 알려주기](/prompt-engineering/negative-prompting)를 참조하십시오. 제약 없는 프롬프트가 더 많이 환각하는 이유는 [AI 환각: AI가 사실을 만들어내는 이유](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)를 참조하십시오.',
+          content: '제외를 사용하여 결과물을 형성하는 기법은 [부정 프롬프팅: AI에게 하지 말아야 할 것을 알려주기](/ko/prompt-engineering/negative-prompting)를 참조하십시오. 제약 없는 프롬프트가 더 많이 환각하는 이유는 [AI 환각: AI가 사실을 만들어내는 이유](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)를 참조하십시오.',
         },
 
         block4ProTip: {
@@ -3361,7 +3361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         block5Link: {
-          content: '다양한 모델에서의 JSON 모드 및 구조화된 출력에 대한 전체 가이드는 [구조화된 출력 및 JSON 모드: AI가 사용 가능한 데이터를 반환하도록 하기](/prompt-engineering/structured-output-and-json-mode)를 참조하십시오.',
+          content: '다양한 모델에서의 JSON 모드 및 구조화된 출력에 대한 전체 가이드는 [구조화된 출력 및 JSON 모드: AI가 사용 가능한 데이터를 반환하도록 하기](/ko/prompt-engineering/structured-output-and-json-mode)를 참조하십시오.',
         },
 
         template: {
@@ -3383,7 +3383,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         templateLocalLLMLinks: {
           id: 'local-llm-cross-links',
-          content: '더 작은 컨텍스트 창을 가진 로컬 모델에 특별히 최적화된 프롬프트 기법은 [로컬 LLM을 위한 프롬프트 엔지니어링](/local-llms/prompt-engineering-for-local-models)을 참조하십시오. 5블록 구조를 가장 안정적으로 따르는 로컬 모델 비교는 오픈 소스 모델 비교를 참조하십시오.',
+          content: '더 작은 컨텍스트 창을 가진 로컬 모델에 특별히 최적화된 프롬프트 기법은 [로컬 LLM을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models)을 참조하십시오. 5블록 구조를 가장 안정적으로 따르는 로컬 모델 비교는 오픈 소스 모델 비교를 참조하십시오.',
         },
 
         systemVsUser: {
@@ -3421,7 +3421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         frameworksLinks: {
-          content: 'PromptQuorum에는 작업 유형에 따라 다른 구성으로 이러한 블록을 미리 채우는 9개의 내장 프레임워크가 포함되어 있습니다. 프레임워크별 가이드는 [어떤 프롬프트 프레임워크를 사용해야 합니까?](/prompt-engineering/which-prompt-framework-should-you-use), [CRAFT 프레임워크](/prompt-engineering/craft-framework), [CO-STAR 프레임워크](/prompt-engineering/co-star-framework)를 참조하십시오.',
+          content: 'PromptQuorum에는 작업 유형에 따라 다른 구성으로 이러한 블록을 미리 채우는 9개의 내장 프레임워크가 포함되어 있습니다. 프레임워크별 가이드는 [어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-prompt-framework-should-you-use), [CRAFT 프레임워크](/ko/prompt-engineering/craft-framework), [CO-STAR 프레임워크](/ko/prompt-engineering/co-star-framework)를 참조하십시오.',
         },
 
         frameworksDidYouKnow: {
@@ -3497,15 +3497,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[프롬프트 엔지니어링의 발전](/prompt-engineering/how-prompt-engineering-evolved) — 초기 지시 사항 준수 모델에서 오늘날의 추론 가능한 시스템까지: 프롬프팅 기법이 모델 역량과 함께 어떻게 공진화했는가.',
-            '[제로샷 vs. 퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 예시를 사용해야 할 때와 생략해야 할 때: 작업에 맞는 올바른 프롬프팅 접근 방식 선택.',
-            '[부정 프롬프팅: AI에게 하지 말아야 할 것을 알려주기](/prompt-engineering/negative-prompting) — 실행 중인 제약 조건: 포함보다 제외가 결과물을 더 안정적으로 형성하는 방법.',
-            '[AI 환각: AI가 사실을 만들어내는 이유](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 제약 조건과 예시가 중요한 이유: 환각의 근본 원인과 증거 기반 방어.',
-            '[구조화된 출력 및 JSON 모드](/prompt-engineering/structured-output-and-json-mode) — 출력 형식을 정밀하게 지정하기: 모델 전반에서의 JSON 모드, Markdown 표, 기타 구조화된 접근 방식.',
-            '[어떤 프롬프트 프레임워크를 사용해야 합니까?](/prompt-engineering/which-prompt-framework-should-you-use) — CRAFT, CO-STAR, SPECS 및 기타 비교: 사용 사례에 맞는 프레임워크 선택.',
-            '[페르소나 프롬프팅](/prompt-engineering/persona-prompting) — 블록 1(역할 및 맥락)에 대한 심층 분석, 7가지 하위 구성 요소: 페르소나 선택이 결과물 품질과 일관성에 어떤 영향을 미치는가.',
-            '[제약 프롬프팅](/prompt-engineering/constrained-prompting) — API 수준 적용을 포함한 블록 4(제약 조건)에 대한 심층 분석: 유효한 결과물을 보장하는 강력한 제약 조건.',
-            '[프롬프트 체이닝](/prompt-engineering/prompt-chaining) — 다단계 워크플로에서 5가지 블록을 적용하는 방법: 복잡한 작업을 순차적 프롬프트로 분해하기.',
+            '[프롬프트 엔지니어링의 발전](/ko/prompt-engineering/how-prompt-engineering-evolved) — 초기 지시 사항 준수 모델에서 오늘날의 추론 가능한 시스템까지: 프롬프팅 기법이 모델 역량과 함께 어떻게 공진화했는가.',
+            '[제로샷 vs. 퓨샷 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot) — 예시를 사용해야 할 때와 생략해야 할 때: 작업에 맞는 올바른 프롬프팅 접근 방식 선택.',
+            '[부정 프롬프팅: AI에게 하지 말아야 할 것을 알려주기](/ko/prompt-engineering/negative-prompting) — 실행 중인 제약 조건: 포함보다 제외가 결과물을 더 안정적으로 형성하는 방법.',
+            '[AI 환각: AI가 사실을 만들어내는 이유](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 제약 조건과 예시가 중요한 이유: 환각의 근본 원인과 증거 기반 방어.',
+            '[구조화된 출력 및 JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode) — 출력 형식을 정밀하게 지정하기: 모델 전반에서의 JSON 모드, Markdown 표, 기타 구조화된 접근 방식.',
+            '[어떤 프롬프트 프레임워크를 사용해야 합니까?](/ko/prompt-engineering/which-prompt-framework-should-you-use) — CRAFT, CO-STAR, SPECS 및 기타 비교: 사용 사례에 맞는 프레임워크 선택.',
+            '[페르소나 프롬프팅](/ko/prompt-engineering/persona-prompting) — 블록 1(역할 및 맥락)에 대한 심층 분석, 7가지 하위 구성 요소: 페르소나 선택이 결과물 품질과 일관성에 어떤 영향을 미치는가.',
+            '[제약 프롬프팅](/ko/prompt-engineering/constrained-prompting) — API 수준 적용을 포함한 블록 4(제약 조건)에 대한 심층 분석: 유효한 결과물을 보장하는 강력한 제약 조건.',
+            '[프롬프트 체이닝](/ko/prompt-engineering/prompt-chaining) — 다단계 워크플로에서 5가지 블록을 적용하는 방법: 복잡한 작업을 순차적 프롬프트로 분해하기.',
             '[AI로 브랜드 보이스 구현하기: 프롬프트 가이드](/ko/prompt-engineering/your-brand-voice-ai)',
           ],
         },

@@ -2473,9 +2473,9 @@ LOCAL_LLM_MODEL=qwen3.6:27b
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek — 2026년 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek — 2026년 비교](/ko/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[EU 기업들이 로컬 Qwen으로 전환하는 이유](/blog/eu-companies-local-qwen-gdpr-shift)',
-          '[Qwen Coder vs DeepSeek vs Mistral — 2026년 코딩 벤치마크](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
+          '[Qwen Coder vs DeepSeek vs Mistral — 2026년 코딩 벤치마크](/ko/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[로컬 AI 프로덕션 배포: 개인정보 우선 고객 서비스 에이전트 구축](https://www.youtube.com/watch?v=W1f9bWj4pAE) — Rob Braxman의 하드웨어 트레이드오프, 메모리 관리 및 자체 호스팅 AI 에이전트의 실제 성능을 다룬 사례 연구.',
           '[모든 로컬 LLM 가이드 보기](/local-llms)',
           '[PromptQuorum 대기자 명단 등록](/waitlist)',

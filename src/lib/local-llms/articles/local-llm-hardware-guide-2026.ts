@@ -5646,7 +5646,7 @@ schema: {
           id: 'vram-math',
           title: 'VRAM 요구 사항은 어떻게 계산합니까?',
           content: [
-            '**VRAM 요구 사항은 세 가지 요소에 따라 달라집니다: 모델 크기(파라미터 수), 양자화(가중치당 비트 수), 그리고 추론 모드.** 아래 공식을 사용하여 GPU 메모리가 충분한지 확인하십시오. 인터랙티브 계산기는 [로컬 LLM VRAM 계산기](/local-llms/vram-calculator-local-llm)를 참조하십시오.',
+            '**VRAM 요구 사항은 세 가지 요소에 따라 달라집니다: 모델 크기(파라미터 수), 양자화(가중치당 비트 수), 그리고 추론 모드.** 아래 공식을 사용하여 GPU 메모리가 충분한지 확인하십시오. 인터랙티브 계산기는 [로컬 LLM VRAM 계산기](/ko/local-llms/vram-calculator-local-llm)를 참조하십시오.',
             '**공식:**',
             '```text\nVRAM (GB) = (모델 크기 × 양자화 비트 수) ÷ 8\n```',
             '**양자화 값:** FP16 = 16비트, Q8_0 = 8비트, Q5_K_M = 5비트, Q4_K_M = 4비트. 실용적인 최적 지점은 Q4_K_M입니다 — K 양자화 방식의 4비트 가중치를 사용하며, NVIDIA GPU가 구형 Q4_0 포맷보다 더 효율적으로 가속합니다.',
@@ -5692,7 +5692,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: '어떤 GPU 티어가 귀하의 워크로드에 적합합니까?',
-          content: '**2026년 7월 기준으로 NVIDIA GPU는 모든 가격대에서 로컬 LLM 추론에 가장 높은 tok/sec를 제공합니다.** 아래 각 티어에서 구체적인 모델 권장 사항을 확인하십시오. 자세한 벤치마크 비교는 [로컬 LLM 최고 GPU 가이드](/local-llms/best-gpus-for-local-llms)를 참조하십시오.',
+          content: '**2026년 7월 기준으로 NVIDIA GPU는 모든 가격대에서 로컬 LLM 추론에 가장 높은 tok/sec를 제공합니다.** 아래 각 티어에서 구체적인 모델 권장 사항을 확인하십시오. 자세한 벤치마크 비교는 [로컬 LLM 최고 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)를 참조하십시오.',
           columns: ['티어', 'GPU', 'VRAM', '최적 용도', '속도'],
           rows: [
             { '티어': '예산형($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12GB', '최적 용도': '7~13B 모델', '속도': '~80 tok/s' },
@@ -5713,7 +5713,7 @@ schema: {
           title: 'VRAM 티어별 최적 로컬 LLM',
           content: [
             '**GPU의 VRAM 티어별 빠른 참조 목록입니다:**',
-            '아래에 나열된 모든 모델은 오픈 가중치로 — 다운로드하고, 파인튜닝하고, 로컬에서 무료로 실행할 수 있습니다. 오픈 가중치와 독점 API 중 선택을 고려하신다면 다양한 토큰 볼륨에서의 비용 및 성능 트레이드오프에 대해 [오픈소스 vs 독점 LLM 비교](/prompt-engineering/open-source-vs-proprietary-llms)를 참조하십시오.',
+            '아래에 나열된 모든 모델은 오픈 가중치로 — 다운로드하고, 파인튜닝하고, 로컬에서 무료로 실행할 수 있습니다. 오픈 가중치와 독점 API 중 선택을 고려하신다면 다양한 토큰 볼륨에서의 비용 및 성능 트레이드오프에 대해 [오픈소스 vs 독점 LLM 비교](/ko/prompt-engineering/open-source-vs-proprietary-llms)를 참조하십시오.',
             '하드웨어가 실행 가능한 모델을 결정하고, 프롬프트 엔지니어링이 성능 수준을 결정합니다. 7B 모델에서 잘 구조화된 프롬프트는 70B 모델의 부주의한 프롬프트를 능가하는 경우가 많습니다. 파라미터 수에 상관없이 출력 품질을 최대화하는 기법은 [완전한 프롬프트 엔지니어링 가이드](https://www.promptquorum.com/prompt-engineering)를 참조하십시오.',
           ],
           items: [
@@ -5781,7 +5781,7 @@ schema: {
           title: '24GB VRAM(RTX 4090)에서 실제로 작동하는 70B 모델은?',
           content: [
             '**RTX 4090은 24GB VRAM을 탑재하고 있습니다 — 대부분의 70B 모델을 허용 가능한 품질로 실행하기에는 충분하지 않습니다.** Llama 3.3 70B Q4_K_M은 약 39GB가 필요합니다. 흔한 오해는 "Q4는 작다"는 것입니다 — 70B 파라미터에서 Q4조차 큽니다.',
-            '단일 RTX 4090에서 최선의 전략은 27~32B 모델로, 강력한 품질을 제공하며 편안하게 맞습니다. Q4_K_M의 Qwen 3.6 27B는 최고의 밀집 코딩 모델입니다(SWE-bench 77.2%). 진정한 70B @ Q4+를 위해서는 2× RTX 4090 또는 48GB 서버 GPU가 필요합니다. 고급 기법은 [24GB VRAM에서 70B 모델 실행하는 방법](/local-llms/run-70b-models-24gb-vram)을 참조하십시오.',
+            '단일 RTX 4090에서 최선의 전략은 27~32B 모델로, 강력한 품질을 제공하며 편안하게 맞습니다. Q4_K_M의 Qwen 3.6 27B는 최고의 밀집 코딩 모델입니다(SWE-bench 77.2%). 진정한 70B @ Q4+를 위해서는 2× RTX 4090 또는 48GB 서버 GPU가 필요합니다. 고급 기법은 [24GB VRAM에서 70B 모델 실행하는 방법](/ko/local-llms/run-70b-models-24gb-vram)을 참조하십시오.',
           ],
           rows: [
             { '모델': 'Qwen 3.6 27B', '양자화': 'Q4_K_M', 'VRAM 필요': '~16GB', '24GB 적합?': '✅ 예', '속도(RTX 4090)': '55 tok/sec', '비고': '최고 밀집 코딩 모델, SWE-bench 77.2%' },
@@ -5803,7 +5803,7 @@ schema: {
           id: 'cpu-ram',
           title: 'CPU와 RAM은 얼마나 필요합니까?',
           content: [
-            '**전용 GPU가 있는 경우 CPU와 RAM은 부차적인 구성 요소입니다.** GPU가 행렬 연산을 처리하고, CPU/RAM은 컨텍스트 준비를 담당합니다. GPU vs CPU vs Apple Silicon 추론 속도에 대한 전체 비교는 [GPU vs CPU vs Apple Silicon 가이드](/local-llms/gpu-vs-cpu-vs-apple-silicon)를 참조하십시오.',
+            '**전용 GPU가 있는 경우 CPU와 RAM은 부차적인 구성 요소입니다.** GPU가 행렬 연산을 처리하고, CPU/RAM은 컨텍스트 준비를 담당합니다. GPU vs CPU vs Apple Silicon 추론 속도에 대한 전체 비교는 [GPU vs CPU vs Apple Silicon 가이드](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)를 참조하십시오.',
             '**최소 CPU**: 8코어 프로세서(Intel Core i7 14세대, AMD Ryzen 7 7700X 또는 최신형). 구형 CPU는 20%+ 지연을 추가합니다.',
             '**RAM**: 최소 16GB(GPU 포함). GPU 없이 실행하는 경우 32GB+ 권장. GPU가 있을 때 RAM은 모델 크기를 직접 제한하지 않습니다.',
             '**스토리지**: 모델 파일 및 OS를 위한 500GB SSD. M.2 NVMe 권장(더 빠른 모델 로딩).',
@@ -5815,7 +5815,7 @@ schema: {
           content: [
             '**GPU 없이 16GB 시스템 RAM이 있는 컴퓨터에서는 CPU 추론으로 3B~7B 모델을 초당 8~20 토큰으로 실행할 수 있습니다.** 병목 현상은 RAM 용량이 아닌 메모리 대역폭입니다 — CPU는 GPU보다 훨씬 낮은 대역폭을 가지고 있어 추론이 5~10배 느린 이유입니다.',
             '16GB 시스템 RAM에서 실용적인 규칙은: 모델 파일 크기 + 4GB OS 오버헤드 ≤ 16GB. Q4_K_M의 7B 모델(4.9GB)은 맞지만 긴 컨텍스트를 위한 여유 공간이 거의 없습니다. 아래 표는 2026년 7월 기준 현실적인 옵션을 보여줍니다.',
-            'CPU 전용, 4GB, 6GB, 8GB VRAM 티어별 실제 벤치마크를 포함한 완전한 속도 최적화 모델 가이드는 **[저사양 PC용 가장 빠른 로컬 LLM](/local-llms/fastest-local-llms-low-end-pcs)**을 참조하십시오.',
+            'CPU 전용, 4GB, 6GB, 8GB VRAM 티어별 실제 벤치마크를 포함한 완전한 속도 최적화 모델 가이드는 **[저사양 PC용 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)**을 참조하십시오.',
           ],
           rows: [
             { '모델': 'Gemma 2 2B', '양자화': 'Q8_0', 'RAM 사용': '~2.7GB', '속도(Ryzen 9 7950X)': '28 tok/sec', '최적 용도': '가장 빠름, 최소 RAM', '비고': 'OS를 위해 13GB 여유' },
@@ -5849,7 +5849,7 @@ schema: {
         budgetBuilds: {
           id: 'budget-builds',
           title: '어떤 하드웨어 빌드를 구매해야 합니까?',
-          content: '**로컬 LLM 컴퓨터를 처음부터 구축한다면 GPU를 우선순위에 두고 그다음 CPU와 RAM을 선택하십시오.** 세 가지 현실적인 구성이 있습니다. 멀티 GPU 빌드에 대해서는 [멀티 GPU 로컬 LLM 가이드](/local-llms/multi-gpu-local-llms)를 참조하십시오. 홈 자동화 설정에서는 컴팩트 미니 PC가 전체 데스크톱 빌드보다 더 적합한 경우가 많습니다 — [로컬 AI가 탑재된 Home Assistant용 최고의 미니 PC →](/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
+          content: '**로컬 LLM 컴퓨터를 처음부터 구축한다면 GPU를 우선순위에 두고 그다음 CPU와 RAM을 선택하십시오.** 세 가지 현실적인 구성이 있습니다. 멀티 GPU 빌드에 대해서는 [멀티 GPU 로컬 LLM 가이드](/ko/local-llms/multi-gpu-local-llms)를 참조하십시오. 홈 자동화 설정에서는 컴팩트 미니 PC가 전체 데스크톱 빌드보다 더 적합한 경우가 많습니다 — [로컬 AI가 탑재된 Home Assistant용 최고의 미니 PC →](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
           rows: [
             { '예산': '$1500 (입문)', 'GPU': 'RTX 4070 Ti', 'CPU': 'i7 13700', 'RAM': '16GB', '모델': '7~13B', '평가': '현실적' },
             { '예산': '$2500 (탄탄)', 'GPU': 'RTX 4080', 'CPU': 'i7 14700K', 'RAM': '32GB', '모델': '13~30B', '평가': '권장' },
@@ -5869,7 +5869,7 @@ schema: {
             '- **클라우드**: 일반적인 개발자 사용에 월 $5~50(Llama API 또는 GPT-5.5 mini)',
             '가벼운 사용자(월 100,000 토큰 미만)의 경우 클라우드 API는 월 $5~10이며 하드웨어가 필요 없습니다. 헤비 사용자(월 1,000만 토큰 초과)의 경우 로컬은 6~12개월 내에 손익분기점에 도달합니다.',
             '**[로컬 vs 클라우드 전체 비용 및 성능 트레이드오프 비교](https://www.promptquorum.com/local-llms/local-llm-limitations)**를 통해 손익분기점을 찾으십시오. 많은 개발자들이 실제 사용 패턴에서는 클라우드가 더 저렴하다는 것을 발견합니다.',
-            '권장 VRAM 티어 이하에서 쇼핑하고 계십니까? [저사양 PC용 최고의 로컬 AI 앱](/power-local-llm/best-local-ai-app-low-end-pc)에서 8GB 이하에서 실제로 실행되는 모델 및 앱 조합을 확인하십시오.',
+            '권장 VRAM 티어 이하에서 쇼핑하고 계십니까? [저사양 PC용 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-ai-app-low-end-pc)에서 8GB 이하에서 실제로 실행되는 모델 및 앱 조합을 확인하십시오.',
           ],
         },
         llamaCppSpeed: {
@@ -5965,7 +5965,7 @@ schema: {
             '**전원 공급 장치와 냉각을 무시하는 것.** RTX 4090은 575W를 소비합니다. 1200W PSU와 좋은 케이스 냉각이 필요합니다.',
             '**구형 GPU가 작동할 것이라고 생각하는 것.** RTX 2080은 RTX 4070 Ti보다 10배 느립니다. 최신 GPU 아키텍처는 이전 세대보다 현저히 뛰어납니다.',
             '**모델 가중치 외에도 KV 캐시 VRAM을 고려하지 않는 것:** Q4_K_M의 7B 모델은 4.7GB 가중치입니다 — 하지만 32K 컨텍스트 창을 추가하면 KV 캐시가 ~4GB를 더 추가하여 총 ~8.7GB가 됩니다. 8GB 카드에서는 OOM 오류가 발생합니다. 컨텍스트 길이에 따라 항상 모델 크기에 25~100%를 추가하십시오.',
-            '**하드웨어 비용만을 유일한 비용으로 처리하는 것:** 16GB+ RAM 또는 전용 GPU를 구매할 여유가 없다면 클라우드 API는 저볼륨 사용에 더 저렴합니다($0.01~0.05 per 1K 토큰). 전체 트레이드오프는 [로컬 LLM vs 클라우드: 비용 분석](/local-llms/local-llm-limitations)을 참조하십시오.',
+            '**하드웨어 비용만을 유일한 비용으로 처리하는 것:** 16GB+ RAM 또는 전용 GPU를 구매할 여유가 없다면 클라우드 API는 저볼륨 사용에 더 저렴합니다($0.01~0.05 per 1K 토큰). 전체 트레이드오프는 [로컬 LLM vs 클라우드: 비용 분석](/ko/local-llms/local-llm-limitations)을 참조하십시오.',
           ],
         },
         regionalContext: {
@@ -6047,25 +6047,25 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM VRAM 계산기](/local-llms/vram-calculator-local-llm) -- 인터랙티브 계산기: 모든 모델, 양자화, GPU에 대한 정확한 VRAM.',
-            '[2026년 로컬 LLM 노트북 vs 데스크톱](/local-llms/laptop-vs-desktop-local-llm) -- 성능, tok/sec당 비용, 하드웨어 구매 가이드.',
-            '[AMD Ryzen AI Max+ 미니 PC (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) -- 컴팩트 시스템: 64~128GB 통합 메모리, 50 TOPS NPU — 30~70B 모델용.',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- Q4_K_M vs Q8_0 VRAM 표와 품질 트레이드오프',
-            '[소비자 하드웨어에서 70B 모델 실행하는 방법](/local-llms/70b-models-consumer-hardware) -- 레이어 오프로딩, 듀얼 GPU 설정, 성능 기대치',
-            '[2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026) -- MMLU 및 HumanEval 벤치마크와 함께 각 크기 티어에서 최상위 모델',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 모든 GPU 티어에 권장되는 러너로 5분 만에 하드웨어 설정',
-            '[노트북에서의 로컬 LLM](/local-llms/local-llm-on-laptop) -- 데스크톱 빌드 대비 노트북 추론을 위한 열 관리 및 RAM 팁',
-            '[소형 로컬 LLM 모델](/local-llms/small-local-llm-models) -- 유용한 출력을 생성하는 4~8GB VRAM 컴퓨터용 4B 미만 모델',
-            '[2026년 코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek 벤치마크 비교',
-            '[로컬 LLM을 위한 프롬프트 엔지니어링](/local-llms/prompt-engineering-for-local-models) -- 로컬 모델 제약에 맞게 프롬프트 최적화',
-            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) -- DeepSeek-R1 및 Qwen3에서 추론 품질 향상',
-            '[Apple Silicon 로컬 LLM 완전 가이드](/local-llms/apple-silicon-local-llm-guide-2026) -- M1부터 M5 Max까지: 통합 메모리, Metal GPU, 칩 티어별 프레임워크 선택.',
-            '[Mac에서 Ollama: Apple Silicon 설정 가이드 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- 2분 만에 실행: Metal GPU 자동 검증을 갖춘 원 커맨드 설치.',
-            '[2026년 로컬 LLM용 Apple Silicon M5](/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs M5 Max 심층 분석: 307~614GB/s 대역폭, 실제 벤치마크, Mac Studio vs MacBook Pro.',
-            '[2026년 Apple Silicon에서의 Whisper](/local-llms/apple-silicon-whisper-metal-benchmark) -- Metal 및 Core ML을 통한 M1~M5 STT 벤치마크: large-v3에서 10× 실시간.',
-            '[$500 이하 로컬 LLM 추론 최고의 GPU (2026)](/local-llms/best-gpu-for-llm-inference-under-500-2026) -- RTX 4060 Ti 16GB vs RX 7900 GRE: tok/sec per 달러 순위.',
-            '[2026년 로컬 LLM용 최고의 AI 워크스테이션 빌드](/power-local-llm/best-workstation-build-local-ai-2026) -- 70B 추론을 위한 전체 부품 목록: GPU, CPU, RAM, PSU.',
-            '[DeepSeek v3 로컬 하드웨어 요구 사항](/prompt-bites/deepseek-v3-local-hardware-requirements) -- DeepSeek v3 전체 및 양자화 변형을 실행하는 최소 VRAM.',
+            '[로컬 LLM VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) -- 인터랙티브 계산기: 모든 모델, 양자화, GPU에 대한 정확한 VRAM.',
+            '[2026년 로컬 LLM 노트북 vs 데스크톱](/ko/local-llms/laptop-vs-desktop-local-llm) -- 성능, tok/sec당 비용, 하드웨어 구매 가이드.',
+            '[AMD Ryzen AI Max+ 미니 PC (2026)](/ko/local-llms/best-amd-mini-pc-local-llm-2026) -- 컴팩트 시스템: 64~128GB 통합 메모리, 50 TOPS NPU — 30~70B 모델용.',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4_K_M vs Q8_0 VRAM 표와 품질 트레이드오프',
+            '[소비자 하드웨어에서 70B 모델 실행하는 방법](/ko/local-llms/70b-models-consumer-hardware) -- 레이어 오프로딩, 듀얼 GPU 설정, 성능 기대치',
+            '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) -- MMLU 및 HumanEval 벤치마크와 함께 각 크기 티어에서 최상위 모델',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 모든 GPU 티어에 권장되는 러너로 5분 만에 하드웨어 설정',
+            '[노트북에서의 로컬 LLM](/ko/local-llms/local-llm-on-laptop) -- 데스크톱 빌드 대비 노트북 추론을 위한 열 관리 및 RAM 팁',
+            '[소형 로컬 LLM 모델](/ko/local-llms/small-local-llm-models) -- 유용한 출력을 생성하는 4~8GB VRAM 컴퓨터용 4B 미만 모델',
+            '[2026년 코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek 벤치마크 비교',
+            '[로컬 LLM을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models) -- 로컬 모델 제약에 맞게 프롬프트 최적화',
+            '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) -- DeepSeek-R1 및 Qwen3에서 추론 품질 향상',
+            '[Apple Silicon 로컬 LLM 완전 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026) -- M1부터 M5 Max까지: 통합 메모리, Metal GPU, 칩 티어별 프레임워크 선택.',
+            '[Mac에서 Ollama: Apple Silicon 설정 가이드 2026](/ko/local-llms/ollama-on-mac-apple-silicon-setup-2026) -- 2분 만에 실행: Metal GPU 자동 검증을 갖춘 원 커맨드 설치.',
+            '[2026년 로컬 LLM용 Apple Silicon M5](/ko/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs M5 Max 심층 분석: 307~614GB/s 대역폭, 실제 벤치마크, Mac Studio vs MacBook Pro.',
+            '[2026년 Apple Silicon에서의 Whisper](/ko/local-llms/apple-silicon-whisper-metal-benchmark) -- Metal 및 Core ML을 통한 M1~M5 STT 벤치마크: large-v3에서 10× 실시간.',
+            '[$500 이하 로컬 LLM 추론 최고의 GPU (2026)](/ko/local-llms/best-gpu-for-llm-inference-under-500-2026) -- RTX 4060 Ti 16GB vs RX 7900 GRE: tok/sec per 달러 순위.',
+            '[2026년 로컬 LLM용 최고의 AI 워크스테이션 빌드](/ko/power-local-llm/best-workstation-build-local-ai-2026) -- 70B 추론을 위한 전체 부품 목록: GPU, CPU, RAM, PSU.',
+            '[DeepSeek v3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) -- DeepSeek v3 전체 및 양자화 변형을 실행하는 최소 VRAM.',
             '[로컬 LLM 하드웨어 가이드 2026 (포르투갈어)](/pt/local-llms/local-llm-hardware-guide-2026) — 이 가이드의 포르투갈어 버전',
             '[2026년 최고의 로컬 추론 모델: DeepSeek-R1 Distill 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 하드웨어 티어별(7B~70B) DeepSeek-R1 Distill 비교, 벤치마크 데이터 및 Ollama 설정 가이드.',
             '[MRAM과 인메모리 컴퓨팅: 온디바이스 AI의 다음 도약?](/ko/local-llms/mram-in-memory-computing-local-ai-2026) -- AI를 위한 MRAM과 인메모리 컴퓨팅',

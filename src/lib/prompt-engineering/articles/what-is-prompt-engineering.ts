@@ -2846,7 +2846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Fundamentals: AI Hallucinations — Why AI Makes Things Up] — LLM의 핵심 한계 이해',
             '[Techniques: Chain-of-Thought Prompting — Make AI Show Its Reasoning] — 정확도를 향상시키는 단계별 기법',
             '[Frameworks: CO-STAR Framework] — 기본 요소를 검증된 순서로 구성하는 구조화된 템플릿',
-            '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — 모든 LLM이 공유하는 여덟 가지 구조적 제약과 각각에 대한 엔지니어링 해결책',
+            '[AI Limitations: What LLMs Can\'t Do](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — 모든 LLM이 공유하는 여덟 가지 구조적 제약과 각각에 대한 엔지니어링 해결책',
             '[O Que É Engenharia de Prompts (Português)](/pt/prompt-engineering/what-is-prompt-engineering) — 이 가이드의 포르투갈어 버전',
             '[AI로 가르치기: 교육자를 위한 프롬프트 전략](/ko/prompt-engineering/teaching-with-ai)',
           ],

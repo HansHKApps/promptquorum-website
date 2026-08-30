@@ -2342,12 +2342,12 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 예산에 맞는 완전한 GPU 및 CPU 권장 사항.',
-            '[로컬 LLM 최고의 GPU](/local-llms/best-gpus-for-local-llms) -- RTX 4090, 4080, 4070 Ti 벤치마크 및 비용 분석.',
-            '[24 GB VRAM에서 70B 모델 실행하기](/local-llms/run-70b-models-24gb-vram) -- 대형 모델을 위한 양자화 및 오프로딩 기법.',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- Q4, Q5, Q8 형식과 품질 절충점에 대한 심층 분석.',
-            '[로컬 LLM 전력 소비](/local-llms/local-llm-power-consumption) -- PSU, 냉각 및 전기 비용 분석.',
-            '[멀티 GPU 로컬 LLM](/local-llms/multi-gpu-local-llms) -- 70B 이상 모델을 위한 레이어 분할 및 분산 추론.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 예산에 맞는 완전한 GPU 및 CPU 권장 사항.',
+            '[로컬 LLM 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) -- RTX 4090, 4080, 4070 Ti 벤치마크 및 비용 분석.',
+            '[24 GB VRAM에서 70B 모델 실행하기](/ko/local-llms/run-70b-models-24gb-vram) -- 대형 모델을 위한 양자화 및 오프로딩 기법.',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4, Q5, Q8 형식과 품질 절충점에 대한 심층 분석.',
+            '[로컬 LLM 전력 소비](/ko/local-llms/local-llm-power-consumption) -- PSU, 냉각 및 전기 비용 분석.',
+            '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 70B 이상 모델을 위한 레이어 분할 및 분산 추론.',
           ],
         },
         sources: {

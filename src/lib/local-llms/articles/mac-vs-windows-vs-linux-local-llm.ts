@@ -2171,11 +2171,11 @@ schema: {
         'relatedReading': {
           title: '관련 읽기',
           items: [
-            '[노트북에서 로컬 LLM: 최고의 모델과 설정](/local-llms/local-llm-on-laptop) — GPU 없이 MacBook Air에서 Llama 모델을 실행하는 방법.',
-            '[로컬 LLM을 위한 GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) — GPU를 구매할 시기와 건너뛸 시기.',
-            '[로컬 LLM을 위한 최고의 미니 PC](/local-llms/best-mini-pcs-local-llm) — 24/7 추론을 위한 소형 Linux 서버.',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — RTX, Mac, Linux 하드웨어 완전 분석.',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 세 OS에 대한 단계별 설정 가이드.',
+            '[노트북에서 로컬 LLM: 최고의 모델과 설정](/ko/local-llms/local-llm-on-laptop) — GPU 없이 MacBook Air에서 Llama 모델을 실행하는 방법.',
+            '[로컬 LLM을 위한 GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon) — GPU를 구매할 시기와 건너뛸 시기.',
+            '[로컬 LLM을 위한 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm) — 24/7 추론을 위한 소형 Linux 서버.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — RTX, Mac, Linux 하드웨어 완전 분석.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 세 OS에 대한 단계별 설정 가이드.',
             'NVIDIA CUDA vs AMD ROCm: 로컬 LLM을 위한 GPU 드라이버 — 어떤 GPU 드라이버를 선택할 것인가.',
           ],
         },

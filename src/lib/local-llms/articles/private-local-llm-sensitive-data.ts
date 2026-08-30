@@ -1853,7 +1853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Factor': '침해 책임', 'Local LLM': '$0(데이터가 귀하의 통제에서 벗어나지 않음). 보험 불필요.', 'Cloud API': '$50K-$5M+(벤더 침해 = HIPAA/GDPR 하에서 피해 당사자에게 귀하가 책임을 짐).' },
           ],
           columns: ['Factor', 'Local LLM', 'Cloud API'],
-          callout: '온프레미스가 너무 제한적인 경우, [EU GDPR 준수 클라우드 GPU 제공업체 →](/local-llms/eu-cloud-gpu-gdpr-2026)가 클라우드 규모와 완전한 컴플라이언스를 모두 요구하는 시나리오에 중간 경로를 제공합니다.',
+          callout: '온프레미스가 너무 제한적인 경우, [EU GDPR 준수 클라우드 GPU 제공업체 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)가 클라우드 규모와 완전한 컴플라이언스를 모두 요구하는 시나리오에 중간 경로를 제공합니다.',
         },
         'audit': {
           title: '감사 로깅 및 데이터 거버넌스',
@@ -1894,12 +1894,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'relatedReading': {
           title: '관련 자료',
           items: [
-            '[팀을 위한 로컬 LLM 설정](/local-llms/local-llm-setup-for-teams)',
-            '[안전한 오프라인 로컬 LLM 워크플로우](/local-llms/secure-offline-local-llm-workflow)',
-            '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms)',
-            '[로컬 LLM을 통한 엔터프라이즈 컴플라이언스](/local-llms/enterprise-compliance-local-llms)',
-            '[컴플라이언스급 LLM 배포를 위한 하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)',
-            '[민감한 데이터 처리를 위한 VRAM 용량](/local-llms/how-much-vram-local-llm)',
+            '[팀을 위한 로컬 LLM 설정](/ko/local-llms/local-llm-setup-for-teams)',
+            '[안전한 오프라인 로컬 LLM 워크플로우](/ko/local-llms/secure-offline-local-llm-workflow)',
+            '[기업이 로컬 LLM을 사용하는 이유](/ko/local-llms/why-enterprises-use-local-llms)',
+            '[로컬 LLM을 통한 엔터프라이즈 컴플라이언스](/ko/local-llms/enterprise-compliance-local-llms)',
+            '[컴플라이언스급 LLM 배포를 위한 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)',
+            '[민감한 데이터 처리를 위한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)',
             '[LLM Local para Dados Sensíveis (Português)](/pt/local-llms/private-local-llm-sensitive-data) — versão em português deste guia',
           ],
         },

@@ -1983,9 +1983,9 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 더 나은 하드웨어를 구입하십시오.',
-            '[멀티 GPU 로컬 LLM](/local-llms/multi-gpu-local-llms) -- 레이어 분할을 사용하십시오.',
-            '[코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) -- 소형 모델로도 충분한 경우가 많습니다.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 더 나은 하드웨어를 구입하십시오.',
+            '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 레이어 분할을 사용하십시오.',
+            '[코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) -- 소형 모델로도 충분한 경우가 많습니다.',
           '[70B 모델에 VRAM이 얼마나 필요한가?](/ko/prompt-bites/vram-for-70b-model) -- 빠른 참조: 하드웨어 옵션, tok/s 및 비용 비교.',
         ],
         },

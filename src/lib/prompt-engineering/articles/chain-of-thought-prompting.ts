@@ -3489,7 +3489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '언제 Chain-of-thought가 도움이 되는가 (그리고 언제 아닌가)',
       content: [
         '**Chain-of-thought 프롬프팅은 명확한 단계로 자연스럽게 나뉘는 작업에서 가장 도움이 되지만, 모든 프롬프트에 필요한 것은 아닙니다.** 목적지만큼 경로가 중요할 때 빛을 발합니다.',
-        'Chain-of-thought 추론은 도구 호출이 있는 에이전트가 다단계 작업에서 신뢰성을 갖추게 하는 핵심입니다. MCP를 활용한 로컬 에이전트 스택에 대해서는 [MCP를 활용한 로컬 AI 에이전트](/power-local-llm/local-ai-agents-with-mcp-2026)를 참조하세요.',
+        'Chain-of-thought 추론은 도구 호출이 있는 에이전트가 다단계 작업에서 신뢰성을 갖추게 하는 핵심입니다. MCP를 활용한 로컬 에이전트 스택에 대해서는 [MCP를 활용한 로컬 AI 에이전트](/ko/power-local-llm/local-ai-agents-with-mcp-2026)를 참조하세요.',
         '좋은 사용 사례는 다음과 같습니다:',
       ],
       items: [

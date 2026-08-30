@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[Mac Mini M4가 로컬 LLM에 적합합니까?](/ko/prompt-bites/mac-mini-m4-local-llm) — 동일한 아키텍처를 갖춘 데스크탑 동등 제품',
-          '[2026 로컬 LLM용 GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 별도의 NVIDIA 시스템 경로를 위한 자료',
+          '[2026 로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 별도의 NVIDIA 시스템 경로를 위한 자료',
           '[1,000달러 미만의 최고의 저렴한 AI 노트북](/ko/prompt-bites/best-budget-ai-laptop-under-1000) — 엔트리 레벨의 Apple 이외 대안',
           '[로컬 LLM을 위한 최고의 미니 PC](/ko/prompt-bites/best-mini-pc-for-local-llm) — 데스크탑 미니 PC 대 MacBook 통합 메모리',
         ],

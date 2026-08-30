@@ -1603,7 +1603,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { type: 'warning', text: 'RTX 3090 24GB(중고) — 어떤 중고 시장이든 오래된 고사양 카드 상당수가 장시간 고강도로 사용되었을 가능성이 큽니다. 가능하면 직접 카드를 점검하거나 가동 이력을 요청하고, 구매 전 더 높은 전력 소비를 전기 요금 예산에 반영하십시오.' },
         ],
         items: [
-          '모든 예산대에 걸친 GPU 선택에 대한 더 넓은 맥락은 [로컬 LLM용 최고 가성비 GPU 가이드](/local-llms/best-budget-gpus-local-llm)를 참조하십시오.',
+          '모든 예산대에 걸친 GPU 선택에 대한 더 넓은 맥락은 [로컬 LLM용 최고 가성비 GPU 가이드](/ko/local-llms/best-budget-gpus-local-llm)를 참조하십시오.',
           '수입 비용이 높은 다른 시장의 GPU 가격 비교는 [일본 로컬 LLM 최고 가성비 GPU](/ko/prompt-bites/best-gpu-local-llm-japan-price)를 참조하십시오.',
         ],
       },

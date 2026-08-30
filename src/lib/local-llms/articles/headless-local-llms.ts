@@ -1536,10 +1536,10 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- Ollama 설정.',
-            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 엔진 비교.',
-            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- API 문서.',
-            '[로컬 LLM 하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026) -- 하드웨어 요구 사항.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- Ollama 설정.',
+            '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 엔진 비교.',
+            '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- API 문서.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) -- 하드웨어 요구 사항.',
           ],
         },
         sources: {

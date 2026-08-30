@@ -2136,10 +2136,10 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[최고의 로컬 RAG 도구](/local-llms/best-local-rag-tools) -- 벡터 데이터베이스 및 프레임워크.',
+            '[최고의 로컬 RAG 도구](/ko/local-llms/best-local-rag-tools) -- 벡터 데이터베이스 및 프레임워크.',
             '[프롬프트 엔지니어링 가이드](/prompt-engineering) -- RAG를 위한 프롬프트 최적화.',
-            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- RAG를 API로 노출.',
-            '[로컬 LLM LoRA 파인튜닝](/local-llms/fine-tuning-local-llms-lora) -- 파인튜닝과 RAG 결합.',
+            '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- RAG를 API로 노출.',
+            '[로컬 LLM LoRA 파인튜닝](/ko/local-llms/fine-tuning-local-llms-lora) -- 파인튜닝과 RAG 결합.',
             '[RAG Local 2026 (Português)](/pt/local-llms/local-rag-2026) — versão em português deste guia',
           ],
         },

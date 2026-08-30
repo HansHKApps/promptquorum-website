@@ -2584,7 +2584,7 @@ schema: {
           id: 'thermals',
           title: '열 제한이 노트북을 비실용적으로 만듭니까?',
           content: [
-            '**노트북은 냉각 용량이 제한적입니다.** CPU + GPU가 풀로드로 작동하면 고온과 스로틀링이 발생합니다. MacBook Pro M5 Max: 15-18분 후 열 스로틀링(추정); M4 Max: 18-22분 후. 모델별 요구사항은 [로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm)을 참고하십시오.',
+            '**노트북은 냉각 용량이 제한적입니다.** CPU + GPU가 풀로드로 작동하면 고온과 스로틀링이 발생합니다. MacBook Pro M5 Max: 15-18분 후 열 스로틀링(추정); M4 Max: 18-22분 후. 모델별 요구사항은 [로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)을 참고하십시오.',
             '게임용 노트북: 더 나은 냉각 성능을 갖추고 있지만, 지속적인 부하에서 30-45분 후에도 스로틀링이 발생합니다.',
             '해결책: 노트북은 24/7 서비스가 아닌 짧은 세션(채팅, 실험)에 사용하십시오. M5 Max는 사용 가능 시간을 15-18분으로 늘렸으나, M4 Max(18-22분 지속, 더 빠른 최고 속도)에 비해 소폭 개선에 불과합니다.',
           ],
@@ -2612,7 +2612,7 @@ schema: {
           items: [
             '여러 장소에서 작업하며 이동성이 필요한 경우.',
             '짧은 추론 세션(채팅, 실험)을 실행하는 경우.',
-            '이미 고사양 MacBook 또는 게임용 노트북을 보유한 경우. 기기가 요구사항을 충족하는지 [로컬 LLM 하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)에서 확인하십시오.',
+            '이미 고사양 MacBook 또는 게임용 노트북을 보유한 경우. 기기가 요구사항을 충족하는지 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)에서 확인하십시오.',
           ],
         },
         desktopChoose: {
@@ -2620,7 +2620,7 @@ schema: {
           title: '데스크톱을 선택하는 경우는 언제입니까?',
           content: '데스크톱을 선택하는 경우:',
           items: [
-            '70B 모델을 실행하거나 80+ tok/sec가 필요한 경우. [로컬 LLM에 최적인 GPU 가이드](/local-llms/best-gpus-for-local-llms)에서 RTX 4070 Ti부터 4090까지 다룹니다.',
+            '70B 모델을 실행하거나 80+ tok/sec가 필요한 경우. [로컬 LLM에 최적인 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)에서 RTX 4070 Ti부터 4090까지 다룹니다.',
             '24/7 서비스(API, 배치 처리)를 운영하는 경우.',
             '비용 효율성을 우선시하는 경우.',
             '열 스로틀링을 피하고 싶은 경우.',
@@ -2757,14 +2757,14 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — CPU, GPU, RAM에 대한 전체 하드웨어 권장 사항.',
-            '[로컬 LLM에 최적인 GPU](/local-llms/best-gpus-for-local-llms) — GPU 선택 가이드: RTX 4060부터 RTX 5090, AMD 및 Apple Silicon 포함.',
-            '[로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm) — 모델 크기 및 양자화 수준별 VRAM 요구사항.',
-            '[로컬 LLM 전력 소비](/local-llms/local-llm-power-consumption) — 노트북과 데스크톱의 열 및 전력 관련 사항.',
-            '[로컬 LLM 양자화 방법](/local-llms/llm-quantization-explained) — Q4/Q8 양자화로 제한된 VRAM에서 더 큰 모델 실행.',
-            '[Ollama용 최고의 오픈소스 모델](/local-llms/top-open-source-models-ollama) — 하드웨어 등급별 최고의 Llama, Qwen, Mistral 모델.',
-            '[로컬 LLM을 위한 프롬프트 엔지니어링](/local-llms/prompt-engineering-for-local-models) — 하드웨어 제약이 있는 로컬 모델을 위한 프롬프트 최적화.',
-            '[코딩용 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — 하드웨어 등급별 최적의 코딩 모델.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — CPU, GPU, RAM에 대한 전체 하드웨어 권장 사항.',
+            '[로컬 LLM에 최적인 GPU](/ko/local-llms/best-gpus-for-local-llms) — GPU 선택 가이드: RTX 4060부터 RTX 5090, AMD 및 Apple Silicon 포함.',
+            '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm) — 모델 크기 및 양자화 수준별 VRAM 요구사항.',
+            '[로컬 LLM 전력 소비](/ko/local-llms/local-llm-power-consumption) — 노트북과 데스크톱의 열 및 전력 관련 사항.',
+            '[로컬 LLM 양자화 방법](/ko/local-llms/llm-quantization-explained) — Q4/Q8 양자화로 제한된 VRAM에서 더 큰 모델 실행.',
+            '[Ollama용 최고의 오픈소스 모델](/ko/local-llms/top-open-source-models-ollama) — 하드웨어 등급별 최고의 Llama, Qwen, Mistral 모델.',
+            '[로컬 LLM을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models) — 하드웨어 제약이 있는 로컬 모델을 위한 프롬프트 최적화.',
+            '[코딩용 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — 하드웨어 등급별 최적의 코딩 모델.',
           ],
         },
         sources: {

@@ -2419,9 +2419,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**추론 모델은 최종 답변 전에 명시적인 사고의 연쇄(chain-of-thought)를 생성하도록 학습된 LLM으로, 같은 크기의 표준 채팅 모델보다 수학, 논리, 다단계 문제에서 훨씬 강력합니다.** DeepSeek-R1 증류 모델은 추론 모델입니다: 응답 안에서 "소리 내어 생각"하며, 답을 확정하기 전에 단계를 점검하고 수정합니다.',
           '대가는 지연 시간과 장황함입니다. 추론 모델은 문제를 풀어 나가는 데 추가 token을 소비하므로, 답변 하나에 수 초와 수백 개의 가시적 추론 token이 걸릴 수 있습니다. 수학 증명이나 논리 퍼즐에는 바로 그것이 필요하지만, 빠른 사실 조회에는 시간 낭비입니다.',
-          '사람들이 혼동하는 구분: DeepSeek-V3는 채팅 모델이고, DeepSeek-R1은 추론 모델입니다. 아키텍처 계보는 공유하지만 서로 다른 작업에 맞춰 튜닝되어 있습니다. 대화형 답변을 원하면 V3를, 단계별 문제 해결을 원하면 R1 또는 그 증류 모델 중 하나를 사용하십시오. 증류가 무엇을 유지하고 무엇을 잃는지는 [DeepSeek-R1 대 증류 모델](/power-local-llm/deepseek-r1-vs-distills-explained-2026)에서 정확히 설명합니다.',
+          '사람들이 혼동하는 구분: DeepSeek-V3는 채팅 모델이고, DeepSeek-R1은 추론 모델입니다. 아키텍처 계보는 공유하지만 서로 다른 작업에 맞춰 튜닝되어 있습니다. 대화형 답변을 원하면 V3를, 단계별 문제 해결을 원하면 R1 또는 그 증류 모델 중 하나를 사용하십시오. 증류가 무엇을 유지하고 무엇을 잃는지는 [DeepSeek-R1 대 증류 모델](/ko/power-local-llm/deepseek-r1-vs-distills-explained-2026)에서 정확히 설명합니다.',
           '**업데이트:** DeepSeek의 플래그십 라인은 이후 DeepSeek-V4(Flash 및 Pro)로 이동했으며, 2026년 8월 정식 출시되어 MIT 라이선스의 오픈 웨이트로 제공됩니다 — V4-Flash는 2026년 7월 31일, V4-Pro는 2026년 8월 12~13일에 출시되었습니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 여전히 로컬 추론의 실용적 선택지입니다. V4-Pro는 총 1.6조 파라미터 / 활성 490억 파라미터 모델로, 양자화하더라도 약 48~80GB의 VRAM이 필요합니다 — 단일 소비자용 카드가 아니라 멀티 GPU 영역입니다. 그런 하드웨어를 보유하고 있고 최신 범용 아키텍처를 원한다면 V4를 검토할 가치가 있습니다. 단일 GPU에서의 추론에는 아래의 증류 모델이 여전히 정답입니다.',
-          '이 모델들을 실행하는 더 깊은 입문을 위해서는 [로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026)과 [LLM 양자화 설명](/local-llms/llm-quantization-explained)부터 시작하십시오. 이 가이드가 의존하는 VRAM 계산을 다룹니다.',
+          '이 모델들을 실행하는 더 깊은 입문을 위해서는 [로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)과 [LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)부터 시작하십시오. 이 가이드가 의존하는 VRAM 계산을 다룹니다.',
         ],
         snippetBlocks: [
           {
@@ -2552,7 +2552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '빠른 사실 조회에는 피하십시오 — 가시적인 사고의 연쇄는 채팅 모델이 즉시 반환하는 답에 token과 시간을 낭비합니다.',
           '개방형 대화에는 피하십시오 — 추론 모델은 대화가 아니라 정답이 있는 문제에 맞춰 튜닝되어 있습니다.',
-          '순수 코딩 처리량에는 피하십시오 — 코드 생성은 [DeepSeek vs Qwen 코딩 가이드](/power-local-llm/deepseek-vs-qwen-coding-local-2026)로 가십시오; 이 페이지는 추론만 다룹니다.',
+          '순수 코딩 처리량에는 피하십시오 — 코드 생성은 [DeepSeek vs Qwen 코딩 가이드](/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026)로 가십시오; 이 페이지는 추론만 다룹니다.',
           '지연 시간이 중요할 때는 피하십시오 — 1초 미만 응답이 필요하면 더 작은 채팅 모델이 낫습니다.',
           '작업이 수학, 논리, 다단계 계획, 또는 풀이 과정을 보여 주는 것이 정확성을 높이는 무엇이든일 때 추론 모델을 사용하십시오.',
         ],
@@ -2569,7 +2569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setup: {
         id: 'setup',
         title: '설정: 등급별 Ollama 빠른 시작',
-        content: '모든 증류 모델은 단일 Ollama 명령어로 설치되고 실행됩니다(모두 기본 Q4_K_M). 아직 설치하지 않았다면 Ollama를 먼저 설치하십시오 — [Ollama 설치 방법](/local-llms/how-to-install-ollama)을 참고하십시오. 그런 다음 등급에 맞는 명령어를 선택하십시오:',
+        content: '모든 증류 모델은 단일 Ollama 명령어로 설치되고 실행됩니다(모두 기본 Q4_K_M). 아직 설치하지 않았다면 Ollama를 먼저 설치하십시오 — [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을 참고하십시오. 그런 다음 등급에 맞는 명령어를 선택하십시오:',
         codeBlock: 'ollama run deepseek-r1:1.5b   # edge / CPU\nollama run deepseek-r1:7b     # 8 GB VRAM\nollama run deepseek-r1:8b     # 8 GB VRAM (Llama base)\nollama run deepseek-r1:14b    # 16 GB VRAM — recommended\nollama run deepseek-r1:32b    # 24 GB VRAM — beats o1-mini\nollama run deepseek-r1:70b    # dual-GPU / 48 GB',
         codeLanguage: 'bash',
         note: '모델이 로드된 후 온도를 0.6으로 설정하고 시스템 프롬프트를 비워 두십시오(위의 설정 프로 팁 참고). GPU별 모델 매칭과 양자화별 정확한 VRAM은 관련 가이드의 두 Bite 레퍼런스를 참고하십시오.',
@@ -2619,14 +2619,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-articles',
         title: '관련 가이드',
         items: [
-          '[DeepSeek-R1 대 증류 모델: 실제로 무엇을 잃는가](/power-local-llm/deepseek-r1-vs-distills-explained-2026) — 671B 풀 R1 대비 증류가 무엇을 유지하고 무엇을 잃는지',
-          '[당신의 GPU에 가장 좋은 DeepSeek 증류 모델](/prompt-bites/best-deepseek-distill-for-your-gpu) — 정확한 Ollama 명령어가 포함된 GPU-증류 모델 조회 표',
-          '[DeepSeek-R1 증류 모델 VRAM 치트시트](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 양자화(Q4_K_M, Q8, FP16)별 모든 증류 모델과 VRAM, 최소 GPU',
-          '[로컬 DeepSeek은 중국 데이터 문제를 해결하는가?](/local-llms/deepseek-local-china-data-privacy-2026) — 호스팅 대 자체 호스팅 데이터 흐름, 균형 잡힌 시각',
-          '[DeepSeek 오프라인 실행 2026: 자체 호스팅 설정](/power-local-llm/deepseek-offline-china-self-hosted-2026) — 모델 선택을 포함한 완전 오프라인 추론',
-          '[로컬에서 코딩을 위한 DeepSeek vs Qwen](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — 이 추론 가이드가 의도적으로 제외한 코딩 비교',
-          '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — 모든 등급의 GPU, VRAM, 빌드 가이드',
-          '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — Q4_K_M, Q8, FP16이 VRAM 계산을 바꾸는 이유',
+          '[DeepSeek-R1 대 증류 모델: 실제로 무엇을 잃는가](/ko/power-local-llm/deepseek-r1-vs-distills-explained-2026) — 671B 풀 R1 대비 증류가 무엇을 유지하고 무엇을 잃는지',
+          '[당신의 GPU에 가장 좋은 DeepSeek 증류 모델](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) — 정확한 Ollama 명령어가 포함된 GPU-증류 모델 조회 표',
+          '[DeepSeek-R1 증류 모델 VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 양자화(Q4_K_M, Q8, FP16)별 모든 증류 모델과 VRAM, 최소 GPU',
+          '[로컬 DeepSeek은 중국 데이터 문제를 해결하는가?](/ko/local-llms/deepseek-local-china-data-privacy-2026) — 호스팅 대 자체 호스팅 데이터 흐름, 균형 잡힌 시각',
+          '[DeepSeek 오프라인 실행 2026: 자체 호스팅 설정](/ko/power-local-llm/deepseek-offline-china-self-hosted-2026) — 모델 선택을 포함한 완전 오프라인 추론',
+          '[로컬에서 코딩을 위한 DeepSeek vs Qwen](/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026) — 이 추론 가이드가 의도적으로 제외한 코딩 비교',
+          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 등급의 GPU, VRAM, 빌드 가이드',
+          '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M, Q8, FP16이 VRAM 계산을 바꾸는 이유',
         ],
       },
       updateLog: {

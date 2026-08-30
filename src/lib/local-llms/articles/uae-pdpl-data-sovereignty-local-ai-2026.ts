@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Option 1 — Self-hosted on-premise GPU server.** Deploy an NVIDIA RTX 4090 or A100 server in your UAE data center. Run Ollama or vLLM with Falcon 3-7B, Llama 3.1-8B, or Qwen3-8B. Full sovereignty: your hardware, your jurisdiction.',
           '**Option 2 — UAE-based cloud GPU.** Use a cloud GPU provider with data centers physically located in the UAE (G42 Cloud, Microsoft Azure UAE North, AWS Middle East UAE). Data stays in-country. Check DPA scope carefully — Azure UAE North operates under Microsoft UAE terms, verify PDPL compliance with provider.',
-          '**Option 3 — Airgapped on-premise system.** For maximum sovereignty (government, defence, financial regulators): pull model weights once, airgap the server, run offline. No outbound internet at inference time. See [On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm).',
+          '**Option 3 — Airgapped on-premise system.** For maximum sovereignty (government, defence, financial regulators): pull model weights once, airgap the server, run offline. No outbound internet at inference time. See [On-Prem Air-Gapped Local LLM](/ko/local-llms/on-prem-air-gapped-local-llm).',
           '**Option 4 — Hybrid: local inference, cloud fine-tuning.** Fine-tune on anonymized or synthetic data (cloud acceptable for non-personal), deploy fine-tuned weights locally. Reduces transfer risk while leveraging cloud compute for model training.',
           '**Recommended models for UAE sovereign deployment:** Falcon 3 (1B–10B, TII Abu Dhabi — native UAE model), Jais (13B–30B, Core42/G42/MBZUAI — Arabic-English, Abu Dhabi), Llama 3.1 (8B–70B, Meta, Apache 2.0), Qwen3 (8B–32B, multilingual including Arabic).',
         ],
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which open-weight AI models are best for sovereign UAE deployment?',
-            a: 'Three strong options: Falcon 3 (1B–10B, from Technology Innovation Institute, Abu Dhabi — a UAE-native model family), Jais (13B–30B, from Core42/G42/MBZUAI, Abu Dhabi — Arabic-English bilingual), and Llama 3.1 (8B–70B, Meta, Apache 2.0). All can be deployed on-premise with Ollama or vLLM. Falcon and Jais are particularly aligned with UAE AI sovereignty goals. See our [Best Arabic Local LLMs guide](/local-llms/best-arabic-local-llms-2026).',
+            a: 'Three strong options: Falcon 3 (1B–10B, from Technology Innovation Institute, Abu Dhabi — a UAE-native model family), Jais (13B–30B, from Core42/G42/MBZUAI, Abu Dhabi — Arabic-English bilingual), and Llama 3.1 (8B–70B, Meta, Apache 2.0). All can be deployed on-premise with Ollama or vLLM. Falcon and Jais are particularly aligned with UAE AI sovereignty goals. See our [Best Arabic Local LLMs guide](/ko/local-llms/best-arabic-local-llms-2026).',
           },
         ],
       },
@@ -328,11 +328,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Enterprise Compliance: GDPR, HIPAA, SOC2 and AI Regulations](/local-llms/enterprise-compliance-local-llms) — Comparison with global compliance frameworks',
-          '[On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm) — Maximum sovereignty for classified or regulated deployments',
-          '[Best Arabic Local LLMs: Jais, Falcon & Running Arabic AI On-Premise](/local-llms/best-arabic-local-llms-2026) — Arabic-language sovereign AI models',
-          '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) — Compliance verification checklist',
-          '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Business and compliance case',
+          '[Enterprise Compliance: GDPR, HIPAA, SOC2 and AI Regulations](/ko/local-llms/enterprise-compliance-local-llms) — Comparison with global compliance frameworks',
+          '[On-Prem Air-Gapped Local LLM](/ko/local-llms/on-prem-air-gapped-local-llm) — Maximum sovereignty for classified or regulated deployments',
+          '[Best Arabic Local LLMs: Jais, Falcon & Running Arabic AI On-Premise](/ko/local-llms/best-arabic-local-llms-2026) — Arabic-language sovereign AI models',
+          '[Local LLM Security & Privacy Checklist](/ko/local-llms/local-llm-security-privacy-checklist) — Compliance verification checklist',
+          '[Why Enterprises Use Local LLMs](/ko/local-llms/why-enterprises-use-local-llms) — Business and compliance case',
         ],
       },
       sources: {

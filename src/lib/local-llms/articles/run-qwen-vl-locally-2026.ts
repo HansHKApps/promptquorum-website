@@ -2876,7 +2876,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
         ],
         columns: ['Model', 'VRAM (Q4)', 'Ollama tag', 'Best For'],
         tableFormat: true,
-        note: 'Q4_K_M은 권장 양자화로 최고의 품질 대 크기 비율을 제공합니다. 대부분의 사용자는 Qwen2-VL 7B로 시작해야 합니다: 8 GB GPU에 맞으며 이 가이드의 모든 사용 사례를 처리합니다. VRAM이 6 GB 미만인 경우에만 2B 모델로 내려가십시오. Q4가 품질에 미치는 영향에 대해서는 [LLM 양자화 설명](/local-llms/llm-quantization-explained)을 참조하십시오.',
+        note: 'Q4_K_M은 권장 양자화로 최고의 품질 대 크기 비율을 제공합니다. 대부분의 사용자는 Qwen2-VL 7B로 시작해야 합니다: 8 GB GPU에 맞으며 이 가이드의 모든 사용 사례를 처리합니다. VRAM이 6 GB 미만인 경우에만 2B 모델로 내려가십시오. Q4가 품질에 미치는 영향에 대해서는 [LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)을 참조하십시오.',
       },
       hardware: {
         id: 'hardware',
@@ -2899,7 +2899,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
         image: '/images/run-qwen-vl-locally-2026-ollama-setup-steps-ko.svg',
         imageCaption: 'Ollama로 Qwen2-VL을 설정하는 5단계: Ollama 설치, qwen2-vl:7b(~6 GB) 다운로드, 실행 및 이미지 첨부, API로 전송, CJK OCR 확인 — 8 GB VRAM GPU에서 10분 미만.',
         content: [
-          'Ollama는 Qwen2-VL을 로컬로 실행하는 가장 빠른 방법입니다. 모델을 다운로드하고, 양자화를 관리하며, localhost:11434에 API를 노출합니다. [ollama.com](https://ollama.com/download)에서 설치하거나, 처음 사용하시는 경우 [Ollama 설치 방법](/local-llms/how-to-install-ollama)에서 시작하십시오.',
+          'Ollama는 Qwen2-VL을 로컬로 실행하는 가장 빠른 방법입니다. 모델을 다운로드하고, 양자화를 관리하며, localhost:11434에 API를 노출합니다. [ollama.com](https://ollama.com/download)에서 설치하거나, 처음 사용하시는 경우 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)에서 시작하십시오.',
         ],
         numberedItems: [
           { title: 'Ollama 설치', whyItMatters: 'Ollama는 모델 다운로드, GGUF 형식, 로컬 API를 처리합니다. macOS, Linux, Windows에서 사용 가능합니다.' },
@@ -2946,7 +2946,7 @@ ollama run qwen2-vl:7b
         id: 'lm-studio-setup',
         title: 'LM Studio로 Qwen2-VL 설정',
         content: [
-          'LM Studio는 CLI 명령 없이 그래픽 인터페이스를 통해 Qwen2-VL을 실행합니다. Windows 사용자 및 GUI를 선호하는 분들에게 권장되는 경로입니다. [lmstudio.ai](https://lmstudio.ai)에서 다운로드하거나, [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참조하십시오.',
+          'LM Studio는 CLI 명령 없이 그래픽 인터페이스를 통해 Qwen2-VL을 실행합니다. Windows 사용자 및 GUI를 선호하는 분들에게 권장되는 경로입니다. [lmstudio.ai](https://lmstudio.ai)에서 다운로드하거나, [LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio)을 참조하십시오.',
         ],
         numberedItems: [
           { title: 'LM Studio 다운로드 및 설치', whyItMatters: '로컬 모델 추론을 위한 무료 크로스 플랫폼 GUI. 터미널이 필요 없습니다.' },
@@ -3039,7 +3039,7 @@ ollama run qwen2-vl:7b
         ],
         columns: ['Model', 'VRAM (Q4)', 'OCR / CJK', 'Max Resolution', 'Best For'],
         tableFormat: true,
-        note: '다섯 모델 모두 Ollama를 통해 실행됩니다 (InternVL 2.5는 커뮤니티 빌드를 통해). Moondream 2 및 청구서 추출 벤치마크를 포함한 전체 로컬 비전 모델 조사는 [로컬 비전 모델 비교](/power-local-llm/local-vision-models-llava-ollama-2026)를 참조하십시오. 확신이 없다면 Qwen2-VL 7B부터 시작하십시오: 6 GB의 VRAM으로 OCR, 문서, 일반 Q&A를 모두 처리합니다.',
+        note: '다섯 모델 모두 Ollama를 통해 실행됩니다 (InternVL 2.5는 커뮤니티 빌드를 통해). Moondream 2 및 청구서 추출 벤치마크를 포함한 전체 로컬 비전 모델 조사는 [로컬 비전 모델 비교](/ko/power-local-llm/local-vision-models-llava-ollama-2026)를 참조하십시오. 확신이 없다면 Qwen2-VL 7B부터 시작하십시오: 6 GB의 VRAM으로 OCR, 문서, 일반 Q&A를 모두 처리합니다.',
       },
       promptquorum: {
         id: 'promptquorum',
@@ -3083,11 +3083,11 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[Qwen 3 로컬 실행 방법](/local-llms/run-qwen-locally-guide-2026) — 텍스트 모델 동반 가이드: Qwen 3 언어 모델을 위한 Ollama 및 LM Studio 설정.',
-          '[로컬 비전 모델 비교: LLaVA, Llama 3.2 Vision, MiniCPM-V](/power-local-llm/local-vision-models-llava-ollama-2026) — 벤치마크와 함께 모든 로컬 비전 모델의 전체 조사.',
-          '[다중 모달 로컬 LLM: 비전, 오디오, 텍스트](/local-llms/multimodal-local-llms) — 멀티모달 모델을 로컬로 실행하는 것에 대한 광범위한 개요.',
-          '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) — Qwen 텍스트 모델과 대안 모델 비교.',
-          '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — 로컬 추론을 위한 VRAM 및 GPU 요구 사항.',
+          '[Qwen 3 로컬 실행 방법](/ko/local-llms/run-qwen-locally-guide-2026) — 텍스트 모델 동반 가이드: Qwen 3 언어 모델을 위한 Ollama 및 LM Studio 설정.',
+          '[로컬 비전 모델 비교: LLaVA, Llama 3.2 Vision, MiniCPM-V](/ko/power-local-llm/local-vision-models-llava-ollama-2026) — 벤치마크와 함께 모든 로컬 비전 모델의 전체 조사.',
+          '[다중 모달 로컬 LLM: 비전, 오디오, 텍스트](/ko/local-llms/multimodal-local-llms) — 멀티모달 모델을 로컬로 실행하는 것에 대한 광범위한 개요.',
+          '[Qwen vs Llama vs Mistral](/ko/local-llms/qwen-vs-llama-vs-mistral) — Qwen 텍스트 모델과 대안 모델 비교.',
+          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 로컬 추론을 위한 VRAM 및 GPU 요구 사항.',
           '[모든 로컬 LLM 가이드 보기](/local-llms)',
         ],
       },
@@ -3099,7 +3099,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
           { q: 'Qwen2-VL이 OCR에서 LLaVA보다 낫습니까?', a: '예, 특히 비영어 텍스트에서 그렇습니다. Qwen2-VL은 MiniCPM-V 2.6과 동등하며, 중국어·일본어·한국어 OCR에서 LLaVA 1.6 및 Llama 3.2 Vision 11B를 능가합니다. 네이티브 4096×4096 해상도는 LLaVA 1.6이 672×672로 제한되는 동안 다운샘플링 없이 고해상도 스캔을 읽습니다. LLaVA는 여전히 가장 큰 커뮤니티와 가장 많은 튜토리얼을 보유하고 있습니다.' },
           { q: 'Qwen2-VL이 PDF를 직접 읽을 수 있습니까?', a: '아니요. 어떤 로컬 비전 모델도 PDF 입력을 직접 수신하지 않습니다. pdf2image 또는 pypdfium2를 사용하여 각 PDF 페이지를 PNG 또는 JPEG 이미지로 먼저 변환한 후, 각 페이지를 별도의 이미지 요청으로 전송하십시오. 10페이지 PDF의 경우 10개의 이미지 쿼리를 전송하고 결과를 합칩니다.' },
           { q: 'Ollama를 통해 Qwen2-VL에 이미지를 어떻게 전송합니까?', a: '두 가지 방법이 있습니다. 대화형 모드 (`ollama run qwen2-vl:7b`)에서는 프롬프트에 이미지 파일 경로를 입력하면 Ollama가 이를 감지하여 이미지를 로드합니다. API를 통해서는 base64로 인코딩된 `images` 배열과 함께 /api/generate에 POST 요청을 보내십시오. base64 문자열에는 `data:` 접두사가 포함되지 않아야 합니다.' },
-          { q: 'Qwen2-VL이 완전히 오프라인으로 실행됩니까?', a: '예. 일회성 모델 다운로드 후 Qwen2-VL은 사용자 기기에서 완전히 실행됩니다 — API 키와 클라우드 계정이 필요 없습니다. 어떤 이미지도 어디에도 업로드되지 않아 문서 처리가 사용자 인프라 내에 유지됩니다. 규정 준수 의미에 대해서는 [Qwen 로컬 GDPR 설정 가이드](/local-llms/qwen-local-gdpr-setup-guide-2026)를 참조하십시오.' },
+          { q: 'Qwen2-VL이 완전히 오프라인으로 실행됩니까?', a: '예. 일회성 모델 다운로드 후 Qwen2-VL은 사용자 기기에서 완전히 실행됩니다 — API 키와 클라우드 계정이 필요 없습니다. 어떤 이미지도 어디에도 업로드되지 않아 문서 처리가 사용자 인프라 내에 유지됩니다. 규정 준수 의미에 대해서는 [Qwen 로컬 GDPR 설정 가이드](/ko/local-llms/qwen-local-gdpr-setup-guide-2026)를 참조하십시오.' },
           { q: 'Qwen2-VL이 한 번에 처리할 수 있는 이미지는 몇 개입니까?', a: '요청당 최대 8개의 이미지 — 로컬 비전 모델 중 가장 높은 다중 이미지 처리 용량입니다. 이로 인해 문서 버전 비교, 차이 발견, 또는 초당 1 프레임으로 샘플링된 짧은 비디오 요약에 적합합니다.' },
           { q: 'Qwen2-VL 또는 Llama 3.2 Vision — 어느 것을 선택해야 합니까?', a: '중국어, 일본어, 한국어 문서, 고해상도 스캔, 또는 작은 글꼴의 경우 Qwen2-VL을 선택하십시오 — Llama 3.2 Vision 11B의 8 GB 대비 7B가 6 GB의 VRAM에 맞기 때문이기도 합니다. 두 모델이 비슷한 영어 전용 일반 사진 Q&A에는 Llama 3.2 Vision 11B를 선택하십시오.' },
           { q: 'OCR 출력에서 문자가 깨지는 이유는 무엇입니까?', a: '거의 항상 저해상도 스캔 때문입니다. Qwen2-VL은 4096×4096까지 네이티브로 읽으므로, 150–300 DPI로 문서를 재스캔하면 보통 깨지거나 누락된 문자가 수정됩니다. 저품질 입력은 모든 로컬 비전 모델에서 OCR 오류의 가장 큰 단일 원인입니다.' },
