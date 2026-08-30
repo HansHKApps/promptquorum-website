@@ -17,6 +17,7 @@ every page.
 | 1 | `/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics` | 5/10 | **10/10** | **+5** | B2 | 596 / 9,008 / 6.6% / 5.3 |
 | 2 | `/de/local-llms` (hub) | 8/10 | **10/10** | **+2** | A | 273 / 7,883 / 3.5% / 4.9 |
 | 3 | `/ko/local-llms/what-are-local-llms` | 5/10 | **10/10** | **+5** | C | 183 / 7,491 / 2.4% / 5.9 |
+| 4 | `/zh/local-llms/local-llm-hardware-guide-2026` | 10/10 | 10/10 | 0 | **E** | 0 / 109 / 0% / 8.7 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -230,3 +231,61 @@ across the three pages. Moving it toward the ~5% the same page already earns on 
 would be **~+100/mo** on its own.
 
 **Projected ~+120-160 clicks/month.**
+
+## Page 4 — /zh/local-llms/local-llm-hardware-guide-2026
+
+**Score 10/10 before and after. The rubric had nothing to fix, and that is the finding.**
+
+### Diagnosis E — wrong page ranking
+
+Total Chinese search presence: **109 impressions, 0 clicks.** Of that, **105 (96%) come from one
+query: `十三月 硬件要求`** at position 8.7.
+
+`十三月` (UNDECEMBER / 末日余烬) is a dark-fantasy ARPG **video game**. Those searchers want a
+game's system requirements. Zero clicks is the correct outcome — our local-LLM hardware guide is
+the wrong result, and no title or meta change should try to win that query.
+
+Stripping it out, the page's real Chinese footprint is **4 impressions**: `15gb`, `4070s`,
+`哪個好`, `硬體需求` — one each, zero clicks.
+
+### The number that matters
+
+| | Impressions |
+|---|---|
+| `/local-llms/local-llm-hardware-guide-2026` (English) | **68,193** |
+| `/zh/local-llms/local-llm-hardware-guide-2026` | **109** |
+
+The Chinese version of the site's single biggest page by impressions is invisible — a ~600x gap.
+That is not a metadata problem and cannot be fixed by this pipeline.
+
+### Contributing factor found: hreflang says `zh`, content is Simplified
+
+`OUTPUT_LOCALE` in `src/lib/i18n/constants.ts` is `{ pt: 'pt-BR', ko: 'ko' }` — Chinese is emitted
+as bare **`hreflang="zh"`**. The zh blocks are 100% Simplified (378 Simplified markers, 0
+Traditional in this file's zh block).
+
+But Google's Chinese-language traffic is largely **Traditional** (Taiwan, Hong Kong) — mainland
+China does not use Google. Two of this page's five queries are Traditional: `硬體需求`, `哪個好`.
+
+Declaring `zh-Hans` would let Google match Simplified-preferring users properly instead of
+treating the page as generic Chinese. This affects **every Chinese page on the site**, not just
+this one. Not changed here — it is a site-wide routing decision.
+
+### Fixed
+
+Stale `2026年7月价格` ("July 2026 prices") in the meta description — present in **ja, zh and ko
+only**; en/es/ar/pt/de/fr were already cleaned. Genuine locale drift, invisible to
+`validate-month-drift.mjs` because it is not trailing-stamp form.
+
+### Flagged, not changed
+
+~93 `as of July 2026` price disclaimers in **body prose**, uniform across all nine locales
+(en 11, es 11, ar 12, pt 11, de 11, fr 12, ja 11, zh 9, ko 5). Uniform means editorial
+convention, not drift — stripping one locale would create drift. The standing no-month-snapshot
+rule says they should go, but that is a 9-locale editorial pass on a `monthly`-tier page whose
+subject is volatile GPU street pricing. Needs a decision, not a side-effect.
+
+### Projected impact
+
+**~0 clicks.** There is no CTR to recover from 4 relevant impressions. Honest answer: this page
+did not need this pipeline.
