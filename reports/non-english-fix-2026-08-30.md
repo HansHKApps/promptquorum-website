@@ -19,6 +19,7 @@ every page.
 | 3 | `/ko/local-llms/what-are-local-llms` | 5/10 | **10/10** | **+5** | C | 183 / 7,491 / 2.4% / 5.9 |
 | 4 | `/zh/local-llms/local-llm-hardware-guide-2026` | 10/10 | 10/10 | 0 | **E** | 0 / 109 / 0% / 8.7 |
 | 5 | `/de/smart-home/best-mini-pc-home-assistant-local-ai` | 9/10 | **10/10** | **+1** | A | 235 / 6,517 / 3.6% / 6.3 |
+| 6 | `/de/local-llms/llm-quantization-explained` | 7/10 | **10/10** | **+3** | C | 48 / 2,415 / 2.0% / 3.7 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -339,3 +340,81 @@ lüfterlos 33, mini ki server 29). The head query alone is 686 impressions at 2.
 on `Empfehlung` phrasing.
 
 **Projected ~+45-80 clicks/month.**
+
+## Page 6 — /de/local-llms/llm-quantization-explained
+
+**7/10 → 10/10.** Red before: #4 (meta 188 chars, opened with a list not an answer),
+#6 (Q4_K_XL uncovered), #10 (mandatory snippetBlocks absent).
+
+The page was already well built for its query set — `whatIsQ4KM`, `compareQ40Q4KM`,
+`compareQ4KMQ4KS`, `compareQ80Q8KXL` sections, Q4_K_M 126x, 17 FAQs. The gaps were narrow:
+
+- **`Q4_K_XL` had zero mentions in all nine locales**, while `q4_k_m vs q4_k_xl` is 21
+  impressions at 0 clicks. The XL family was covered at Q8 only.
+- **Meta was 188 chars** and led with four vs-pairs instead of an answer.
+- **snippetBlocks missing in 6 of 9 locales** (only en and pt had them).
+
+### The head query is probably not a CTR problem
+
+`q4_k_m` draws **332 impressions at 0.9% CTR from position 3.4**. That gap is too large for a
+title defect. A bare technical token like `q4_k_m` is exactly the query shape Google answers with
+an AI Overview, so the click is consumed above our result. The meta now leads with a *decision*
+(which quant to pick for your VRAM) rather than restating the definition an AIO already gave —
+that is the only lever metadata has here, and it will not fully close a gap of this size.
+
+---
+
+# Cross-cutting fixes (requested 2026-08-30, all committed)
+
+## 1. Q4_K_XL + snippetBlocks across all 9 locales — DONE (`e12cf2de2`)
+
+Structural defects are locale-independent; fixing them in one language was the wrong scope.
+All 9 locales now have the `compareQ4KMQ4KXL` section, 4 new FAQs mirrored into `faqSchema`, and
+snippetBlocks. Also repaired drift introduced by the de-only pass (de had faqs=21 vs
+faqSchema=17). Verified per locale: `faqs count == faqSchema Question count`.
+
+## 2. snippetBlocks backfill — VALIDATOR SHIPPED, BACKFILL NOT DONE (`0c4e8f8fb`)
+
+**The flat "1,818 missing blocks" number was misleading. It is cluster-level adoption, not drift:**
+
+| Cluster | Missing / blocks | |
+|---|---|---|
+| `prompt-engineering` | **712 / 712** | **100% — never adopted the convention** |
+| `prompt-bites` | 669 / 1,106 | 60% |
+| `balcony-solar` | 252 / 459 | 54% |
+| `power-local-llm` | 73 / 639 | 11% |
+| `local-llms` | 112 / 1,222 | 9% |
+| `smart-home` | 0 / 459 | **fully compliant** |
+
+`smart-home` proves the convention is achievable; `prompt-engineering` never started.
+
+**What shipped:** `scripts/validate-snippet-blocks.mjs` + `npm run validate-snippet-blocks`.
+Report-only by design — filling a snippetBlock means writing a one-sentence extractable answer
+and a plain-language restatement *in that block's own language*. That cannot be generated
+mechanically, and a hard-failing hook would only drive people to `--no-verify`.
+
+**What did NOT ship: the 1,818 summaries themselves.** Bulk-generating them would mean inventing
+~3,600 sentences across nine languages with no per-page grounding — the exact thing the
+geo-translation rule forbids. This is a per-cluster content project, and `prompt-engineering` is
+the whole first phase of it.
+
+## 3. Korean internal links — DONE (`c9ba2ad29`)
+
+1,097 links prefixed across 148 files. Korean blocks had Korean anchor text pointing at
+unprefixed URLs, dropping readers onto the English page; ko was the only locale below 100%
+(37% bare). Every target resolved through its cluster's `slugs.ts` and confirmed to have a ko
+block first, so none lands on a `/ko/` URL serving English.
+
+**5 files held back**, tripping the table-cell hook on pre-existing full-sentence cells in their
+de/es/fr/pt/ar blocks — content this change does not touch:
+`local-llm-pc-build-1000.ts`, `local-llm-pc-build-2000.ts`,
+`elevenlabs-vs-local-tts-piper-xtts.ts`, `prompts-for-reliable-structured-data.ts`,
+`seo-meets-ai.ts`. Clearing them means converting those sections to `itemHeadings: true`, a
+rendering change in every locale.
+
+## 4. hreflang `zh-Hans` — DONE (`608bbd0e4`)
+
+`OUTPUT_LOCALE` now emits `zh-Hans` instead of bare `zh`. The zh blocks are Simplified (zero
+Traditional-only characters), but bare `zh` reads as generic Chinese to Google — which
+mis-serves the Traditional TW/HK audience that makes up most Chinese-language Google traffic.
+Affects every Chinese URL via `toOutputLocale()`.
