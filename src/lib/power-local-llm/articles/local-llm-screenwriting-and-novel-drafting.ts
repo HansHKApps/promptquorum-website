@@ -2484,16 +2484,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Integrações de ferramentas para escritores',
         content:
           '**O Ollama expõe uma API compatível com OpenAI em localhost à qual se conecta um ecossistema crescente de ferramentas voltadas para escritores.** As integrações abaixo representam as opções mais consolidadas a partir de 2026.',
-        columns: ['Herramienta', 'Integración', 'Ideal para'],
+        columns: ['Ferramenta', 'Integração', 'Ideal para'],
         rows: [
-          { 'Herramienta': 'Obsidian', 'Integración': 'Plugin Copilot ou Smart Connections → API do Ollama. Consulte [Obsidian + plugins de LLM local](/pt/power-local-llm/local-llm-with-obsidian-2026) para o guia detalhado sobre quais plugins do Obsidian funcionam melhor com o Ollama.', 'Ideal para': 'Escritores que já usam o Obsidian para notas + manuscrito; geração integrada no mesmo app sem trocar de contexto' },
-          { 'Herramienta': 'Scrivener', 'Integración': 'Script externo por meio da API do Ollama → colar no documento', 'Ideal para': 'Escritores que estruturam romances no Scrivener; rascunhos de IA colados na estrutura de projeto existente' },
-          { 'Herramienta': 'VS Code', 'Integración': 'Extensão Continue.dev → backend do Ollama', 'Ideal para': 'Escritores técnicos e designers de narrativas para videogames confortáveis em um editor de código' },
-          { 'Herramienta': 'SillyTavern', 'Integración': 'API compatível com OpenAI → Ollama', 'Ideal para': 'Ficção do tipo roleplay e redação guiada por fichas de personagens; memória persistente de personagens' },
-          { 'Herramienta': 'Terminal puro', 'Integración': '`ollama run [model]` ou curl para a API do Ollama', 'Ideal para': 'Fluxos de trabalho scriptáveis; escritores que querem controle máximo com mínima sobrecarga de interface' },
-          { 'Herramienta': 'LM Studio', 'Integración': 'Interface de chat integrada + API de servidor local', 'Ideal para': 'Escritores que querem um gerenciador de modelos com GUI sem instalar o Ollama separadamente' },
-          { 'Herramienta': 'NovelCrafter', 'Integración': 'Integração de IA incorporada; suporta endpoints compatíveis com OpenAI (apontando para o Ollama)', 'Ideal para': 'Escritores que querem assistência de IA em nível de capítulo dentro de um único app focado em romances; a mais próxima de uma "ferramenta de escrita de romances nativa de IA" em 2026' },
-          { 'Herramienta': 'Plottr', 'Integración': 'Fluxo de trabalho manual: estruture romances no Plottr, cole cenas/beats no Ollama externamente', 'Ideal para': 'Ficção de gênero com muito enredo (mistério, thriller, fantasia) onde o traçado estrutural do enredo é o eixo do fluxo de trabalho' },
+          { 'Ferramenta': 'Obsidian', 'Integração': 'Plugin Copilot ou Smart Connections → API do Ollama. Consulte [Obsidian + plugins de LLM local](/pt/power-local-llm/local-llm-with-obsidian-2026) para o guia detalhado sobre quais plugins do Obsidian funcionam melhor com o Ollama.', 'Ideal para': 'Escritores que já usam o Obsidian para notas + manuscrito; geração integrada no mesmo app sem trocar de contexto' },
+          { 'Ferramenta': 'Scrivener', 'Integração': 'Script externo por meio da API do Ollama → colar no documento', 'Ideal para': 'Escritores que estruturam romances no Scrivener; rascunhos de IA colados na estrutura de projeto existente' },
+          { 'Ferramenta': 'VS Code', 'Integração': 'Extensão Continue.dev → backend do Ollama', 'Ideal para': 'Escritores técnicos e designers de narrativas para videogames confortáveis em um editor de código' },
+          { 'Ferramenta': 'SillyTavern', 'Integração': 'API compatível com OpenAI → Ollama', 'Ideal para': 'Ficção do tipo roleplay e redação guiada por fichas de personagens; memória persistente de personagens' },
+          { 'Ferramenta': 'Terminal puro', 'Integração': '`ollama run [model]` ou curl para a API do Ollama', 'Ideal para': 'Fluxos de trabalho scriptáveis; escritores que querem controle máximo com mínima sobrecarga de interface' },
+          { 'Ferramenta': 'LM Studio', 'Integração': 'Interface de chat integrada + API de servidor local', 'Ideal para': 'Escritores que querem um gerenciador de modelos com GUI sem instalar o Ollama separadamente' },
+          { 'Ferramenta': 'NovelCrafter', 'Integração': 'Integração de IA incorporada; suporta endpoints compatíveis com OpenAI (apontando para o Ollama)', 'Ideal para': 'Escritores que querem assistência de IA em nível de capítulo dentro de um único app focado em romances; a mais próxima de uma "ferramenta de escrita de romances nativa de IA" em 2026' },
+          { 'Ferramenta': 'Plottr', 'Integração': 'Fluxo de trabalho manual: estruture romances no Plottr, cole cenas/beats no Ollama externamente', 'Ideal para': 'Ficção de gênero com muito enredo (mistério, thriller, fantasia) onde o traçado estrutural do enredo é o eixo do fluxo de trabalho' },
         ],
         callouts: [
           {
@@ -2508,14 +2508,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendações de modelos para trabalhos de formato longo',
         content:
           '**A redação de formato longo tem requisitos de modelo diferentes dos da ficção de formato curto.** A aderência ao contexto, a consistência no seguimento de instruções ao longo de sessões extensas e a capacidade de manter a voz em múltiplas chamadas de geração são os fatores decisivos. Para o panorama mais amplo de modelos em todos os casos de uso, consulte [Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026).',
-        columns: ['Tarea', 'Modelo recomendado', 'Por qué'],
+        columns: ['Tarefa', 'Modelo recomendado', 'Por quê'],
         rows: [
-          { 'Tarea': 'Redação de romance (principal)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Melhor aderência ao contexto e seguimento de instruções para trabalhos de formato longo de múltiplas sessões; voz mais consistente' },
-          { 'Tarea': 'Redação de roteiro', 'Modelo recomendado': 'Llama 3.3 70B ou Mistral Large', 'Por qué': 'Llama 3.3 para dinâmicas de personagens complexas; Mistral Large para aderência consistente ao formato na saída Fountain' },
-          { 'Tarea': 'Geração de beat sheet / esboço', 'Modelo recomendado': 'Qwen3 32B', 'Por qué': 'Geração estrutural forte; segue de forma confiável prompts de esboço com listas numeradas e restrições rígidas' },
-          { 'Tarea': 'Passagens de diálogo', 'Modelo recomendado': 'Command A+', 'Por qué': 'Melhor registro de fala naturalista e diferenciação de voz de personagem em trocas estendidas' },
-          { 'Tarea': 'Revisão (estrutural)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Melhor em seguir restrições estruturais específicas nomeadas em instruções de reescrita' },
-          { 'Tarea': 'Ficção madura / sombria', 'Modelo recomendado': 'Hermes 3 Llama 3.3 70B', 'Por qué': 'Mesma base que o Llama 3.3 70B; fine-tune sem censura; aderência ao contexto idêntica para trabalhos de formato longo' },
+          { 'Tarefa': 'Redação de romance (principal)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Melhor aderência ao contexto e seguimento de instruções para trabalhos de formato longo de múltiplas sessões; voz mais consistente' },
+          { 'Tarefa': 'Redação de roteiro', 'Modelo recomendado': 'Llama 3.3 70B ou Mistral Large', 'Por quê': 'Llama 3.3 para dinâmicas de personagens complexas; Mistral Large para aderência consistente ao formato na saída Fountain' },
+          { 'Tarefa': 'Geração de beat sheet / esboço', 'Modelo recomendado': 'Qwen3 32B', 'Por quê': 'Geração estrutural forte; segue de forma confiável prompts de esboço com listas numeradas e restrições rígidas' },
+          { 'Tarefa': 'Passagens de diálogo', 'Modelo recomendado': 'Command A+', 'Por quê': 'Melhor registro de fala naturalista e diferenciação de voz de personagem em trocas estendidas' },
+          { 'Tarefa': 'Revisão (estrutural)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Melhor em seguir restrições estruturais específicas nomeadas em instruções de reescrita' },
+          { 'Tarefa': 'Ficção madura / sombria', 'Modelo recomendado': 'Hermes 3 Llama 3.3 70B', 'Por quê': 'Mesma base que o Llama 3.3 70B; fine-tune sem censura; aderência ao contexto idêntica para trabalhos de formato longo' },
         ],
       },
       commonMistakes: {
