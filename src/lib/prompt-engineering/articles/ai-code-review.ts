@@ -192,10 +192,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'What AI Code Review Actually Does',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI code review is a first-pass filter that surfaces logic bugs, security issues and standards violations the moment a pull request opens, so human reviewers spend their time on logic and architecture instead of variable naming.' },
+            { type: 'in-plain-terms', text: 'Think of it as a spellchecker for code. It catches the obvious problems before a colleague ever looks at your pull request, so the human review can be about whether the approach is right rather than whether you forgot a null check.' },
+          ],
           content: [
             'AI code review tools analyse pull requests, detect logic bugs, flag security vulnerabilities, enforce coding standards, and generate actionable fix suggestions — operating in seconds rather than the hours required for manual peer review.',
             'Traditional peer code review is the single most time-consuming task in software development workflows, requiring senior engineers to context-switch between their own work and evaluating others\' code. AI code review tools integrate directly into CI/CD pipelines and pull request workflows — GitHub, GitLab, Bitbucket, and Azure DevOps — and begin analysing code the moment a PR is opened, without waiting for a human reviewer to become available.',
-            'In one sentence: AI code review is not a replacement for human judgment — it is a first-pass filter that surfaces issues before human reviewers arrive, so engineers spend review time on logic and architecture rather than variable naming.',
           ],
         },
 
@@ -521,6 +524,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'Was KI Code Review wirklich tut',
+          snippets: [
+            { type: 'in-one-sentence', text: 'KI Code Review ist ein Filter in erster Instanz, der Logikfehler, Sicherheitsprobleme und Standardverstöße bereits beim Öffnen eines Pull Requests sichtbar macht, damit menschliche Reviewer ihre Zeit für Logik und Architektur statt für Variablennamen aufwenden.' },
+            { type: 'in-plain-terms', text: 'Stellen Sie es sich wie eine Rechtschreibprüfung für Code vor. Sie fängt die offensichtlichen Probleme ab, bevor eine Kollegin überhaupt in den Pull Request schaut — das menschliche Review kann sich dann darauf konzentrieren, ob der Ansatz stimmt, statt auf eine vergessene Null-Prüfung.' },
+          ],
           content: [
             'KI Code Review Tools analysieren Pull Requests, erkennen Logik-Bugs, kennzeichnen Sicherheitsschwachstellen, erzwingen Coding Standards und generieren actionable Fix-Vorschläge — arbeiten in Sekunden statt der Stunden für manuelle Peer Reviews.',
             'Traditionelle Peer-Code-Review ist die zeitaufwendigste Aufgabe in Software-Entwicklungs-Workflows. KI Code Review Tools integrieren sich direkt in CI/CD-Pipelines und Pull-Request-Workflows.',
@@ -955,6 +962,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'Qué hace realmente la revisión de código con IA',
+          snippets: [
+            { type: 'in-one-sentence', text: 'La revisión de código con IA es un filtro de primera pasada que detecta errores de lógica, problemas de seguridad y violaciones de estándares en cuanto se abre un pull request, para que los revisores humanos dediquen su tiempo a la lógica y la arquitectura en lugar de a los nombres de variables.' },
+            { type: 'in-plain-terms', text: 'Piénsalo como un corrector ortográfico para código. Detecta los problemas evidentes antes de que un compañero mire tu pull request, así la revisión humana trata sobre si el enfoque es correcto y no sobre si olvidaste comprobar un null.' },
+          ],
           content: [
             'Las herramientas de revisión de código con IA analizan pull requests, detectan bugs de lógica, señalan vulnerabilidades de seguridad, aplican estándares de codificación y generan sugerencias de corrección accionables — funcionando en segundos en lugar de las horas que requiere la revisión manual por pares.',
             'La revisión de código por pares tradicional es la tarea más consume tiempo en los flujos de trabajo de desarrollo de software, requiriendo que los ingenieros senior cambien de contexto entre su propio trabajo y evaluar el código de otros. Las herramientas de revisión de código con IA se integran directamente en pipelines CI/CD y flujos de trabajo de pull request — GitHub, GitLab, Bitbucket y Azure DevOps — y comienzan a analizar el código en el momento en que se abre un PR, sin esperar a que un revisor humano esté disponible.',
@@ -1423,6 +1434,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'ما تفعله مراجعة الكود بالذكاء الاصطناعي فعليًا',
+          snippets: [
+            { type: 'in-one-sentence', text: 'مراجعة الكود بالذكاء الاصطناعي هي مرشِّح أولي يكشف أخطاء المنطق والثغرات الأمنية ومخالفات المعايير لحظة فتح pull request، ليصرف المراجعون البشريون وقتهم على المنطق والبنية بدلاً من تسمية المتغيرات.' },
+            { type: 'in-plain-terms', text: 'اعتبرها مدقِّقاً إملائياً للكود. تلتقط المشكلات الواضحة قبل أن ينظر زميلك إلى الـ pull request أصلاً، فتصبح المراجعة البشرية عن صحة النهج لا عن فحص null منسي.' },
+          ],
           content: [
             'تحلل أدوات مراجعة الكود بالذكاء الاصطناعي طلبات السحب وتكتشف أخطاء المنطق وتُشير إلى ثغرات الأمان وتُطبِّق معايير الترميز وتولِّد اقتراحات إصلاح قابلة للتنفيذ — تعمل في ثوانٍ بدلًا من الساعات التي تتطلبها المراجعة اليدوية من الأقران.',
             'مراجعة الكود من الأقران التقليدية هي المهمة الأكثر استهلاكًا للوقت في سير عمل تطوير البرمجيات، تتطلب من المهندسين الكبار تبديل السياق بين عملهم الخاص وتقييم كود الآخرين. تندمج أدوات مراجعة الكود بالذكاء الاصطناعي مباشرةً في خطوط CI/CD وسير عمل طلبات السحب — GitHub وGitLab وBitbucket وAzure DevOps — وتبدأ تحليل الكود في اللحظة التي يُفتَح فيها طلب السحب، دون انتظار توفر مراجع بشري.',
@@ -1890,6 +1905,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'O que a revisão de código com IA realmente faz',
+          snippets: [
+            { type: 'in-one-sentence', text: 'A revisão de código com IA é um filtro de primeira passagem que expõe bugs de lógica, problemas de segurança e violações de padrões no momento em que um pull request é aberto, para que os revisores humanos gastem o tempo deles com lógica e arquitetura em vez de nomes de variáveis.' },
+            { type: 'in-plain-terms', text: 'Pense nela como um corretor ortográfico para código. Ela pega os problemas óbvios antes de um colega sequer olhar o seu pull request, então a revisão humana passa a ser sobre se a abordagem está certa, e não sobre uma verificação de null esquecida.' },
+          ],
           content: [
             'As ferramentas de revisão de código com IA analisam pull requests, detectam bugs de lógica, sinalizam vulnerabilidades de segurança, aplicam padrões de codificação e geram sugestões de correção acionáveis — operando em segundos em vez das horas exigidas pela revisão manual por pares.',
             'A revisão de código por pares tradicional é a tarefa mais demorada nos fluxos de trabalho de desenvolvimento de software, exigindo que engenheiros sênior alternem entre seu próprio trabalho e a avaliação do código de outros. As ferramentas de revisão de código com IA se integram diretamente em pipelines CI/CD e fluxos de trabalho de pull request — GitHub, GitLab, Bitbucket e Azure DevOps — e começam a analisar o código no momento em que um PR é aberto, sem esperar que um revisor humano esteja disponível.',
@@ -2219,6 +2238,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'Ce que la Révision de Code par IA Fait Réellement',
+          snippets: [
+            { type: 'in-one-sentence', text: 'La révision de code par IA est un filtre de premier passage qui révèle les bugs de logique, les failles de sécurité et les écarts aux standards dès l\'ouverture d\'une pull request, afin que les relecteurs humains consacrent leur temps à la logique et à l\'architecture plutôt qu\'au nommage des variables.' },
+            { type: 'in-plain-terms', text: 'Voyez-la comme un correcteur orthographique pour le code. Elle intercepte les problèmes évidents avant même qu\'un collègue ouvre votre pull request : la relecture humaine porte alors sur la pertinence de l\'approche, pas sur un test de null oublié.' },
+          ],
           content: [
             'Les outils de révision de code par IA analysent les pull requests, détectent les bugs de logique, signalent les failles de sécurité, appliquent les normes de codage et génèrent des suggestions de correctifs exploitables — fonctionnent en secondes au lieu des heures pour les révisions manuelles.',
             'La révision manuelle du code par les pairs est la tâche la plus chronophage dans les workflows de développement logiciel. Les outils de révision de code par IA s\'intègrent directement dans les pipelines CI/CD et les workflows des pull requests.',
@@ -2514,6 +2537,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'AI コードレビューが実際にすること',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI コードレビューは、pull request が開かれた時点でロジックのバグ、セキュリティ上の問題、規約違反を洗い出す一次フィルターであり、人間のレビュアーは変数名ではなくロジックと設計に時間を使えるようになります。' },
+            { type: 'in-plain-terms', text: 'コード版のスペルチェッカーだと考えてください。同僚が pull request を見る前に明らかな問題を拾うため、人間のレビューは「null チェックの漏れ」ではなく「その方針が妥当か」に集中できます。' },
+          ],
           content: [
             'AI コードレビューツールはプルリクエストを分析し、ロジックバグを検出し、セキュリティ脆弱性を特定し、コーディング標準を強制し、実行可能なフィックス提案を生成——手動ピアレビューの時間ではなく秒単位で動作します。',
             'トラディショナルなピアコードレビューはソフトウェア開発ワークフローで最も時間のかかるタスクです。AI コードレビューツールは CI/CD パイプラインとプルリクエストワークフローに直接統合されます。',
@@ -2809,6 +2836,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-it-does',
           title: 'AI 代码审查实际做什么',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI 代码审查是一道初筛：在 pull request 打开的那一刻就暴露逻辑缺陷、安全问题和规范违规，让人工审查者把时间花在逻辑和架构上，而不是变量命名。' },
+            { type: 'in-plain-terms', text: '可以把它看作代码版的拼写检查。在同事翻开你的 pull request 之前，它就把显而易见的问题挑出来了，于是人工审查讨论的是方案对不对，而不是你是否漏了一个 null 判断。' },
+          ],
           content: [
             'AI 代码审查工具分析拉取请求，检测逻辑错误，标记安全漏洞，强制编码标准，生成可执行的修复建议——在几秒内而不是手动审查的数小时。',
             '传统的同行代码审查是软件开发工作流中耗时最多的任务。AI 代码审查工具直接集成到 CI/CD 管道和拉取请求工作流中。',
@@ -3243,6 +3274,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         id: 'what-it-does',
         title: 'AI 코드 리뷰가 실제로 하는 일',
+        snippets: [
+          { type: 'in-one-sentence', text: 'AI 코드 리뷰는 pull request가 열리는 즉시 로직 버그, 보안 문제, 규약 위반을 드러내는 1차 필터이며, 사람 리뷰어는 변수명 대신 로직과 아키텍처에 시간을 쓸 수 있습니다.' },
+          { type: 'in-plain-terms', text: '코드용 맞춤법 검사기라고 생각하시면 됩니다. 동료가 pull request를 열어 보기도 전에 명백한 문제를 걸러 내므로, 사람의 리뷰는 null 검사를 빠뜨렸는지가 아니라 접근 방식이 타당한지에 집중할 수 있습니다.' },
+        ],
         content: [
           'AI 코드 리뷰 도구는 풀 리퀘스트를 분석하고, 로직 버그를 감지하며, 보안 취약점을 표시하고, 코딩 표준을 적용하며, 실행 가능한 수정 제안을 생성합니다 — 수동 동료 리뷰에 필요한 시간 대신 초 단위로 작동합니다.',
           '전통적인 동료 코드 리뷰는 소프트웨어 개발 워크플로우에서 가장 시간이 많이 소요되는 작업으로, 시니어 엔지니어들이 자신의 작업과 다른 사람의 코드를 평가하는 사이에서 컨텍스트를 전환해야 합니다. AI 코드 리뷰 도구는 CI/CD 파이프라인과 풀 리퀘스트 워크플로우 — GitHub, GitLab, Bitbucket, Azure DevOps — 에 직접 통합되어 PR이 열리는 순간 코드 분석을 시작합니다.',
