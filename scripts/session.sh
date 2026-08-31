@@ -37,7 +37,11 @@ die() { echo "error: $*" >&2; exit 1; }
 # them into $ROOT/<slug> would create that directory and make `git worktree add`
 # fail on an already-existing path.
 port_for() {
-  local slug="$1" f="$ROOT/.ports/$slug"
+  # NOTE: separate `local` statements on purpose. `local a="$1" b="$ROOT/$a"`
+  # expands $a before it is assigned in this scope, so b silently picks up an
+  # outer variable of the same name — or fails as unbound under `set -u`.
+  local slug="$1"
+  local f="$ROOT/.ports/$slug"
   [ -f "$f" ] && { cat "$f"; return; }
   local taken=" "
   for pf in "$ROOT"/.ports/*; do [ -f "$pf" ] && taken="$taken$(cat "$pf") "; done
