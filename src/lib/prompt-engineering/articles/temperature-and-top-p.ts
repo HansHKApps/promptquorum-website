@@ -15,13 +15,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-01',
       last_full_refresh: '2026-08-31',
+      current_models_mentioned: ['GPT-5.6', 'Claude Opus 5', 'Claude Sonnet 5', 'Claude Fable 5', 'Gemini 3.1 Pro'],
       theme: 'Fundamentals',
       heroImage: '/images/temperature-and-top-p-overview-hero-en.webp',
       title: 'Temperature and Top-P: Control AI Creativity',
       intro: 'Temperature and top-p control how adventurous or conservative an AI\'s word choices are. By tuning these settings, you trade off creativity versus reliability—higher values produce surprising, varied outputs; lower values produce safe, predictable ones.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       seoTitle: 'Temperature & Top-P 2026: Tune AI Creativity and Accuracy',
-      metaDescription: 'Temperature 0–2, Top-P 0.1–1.0: Set AI randomness precisely for coding, summaries, or brainstorming. Practical ranges verified on ChatGPT, Claude, Gemini.',
+      metaDescription: 'Temperature 0–2, Top-P 0.1–1.0: set AI randomness for code, summaries and brainstorming — plus which frontier models now refuse a custom temperature.',
       readTime: '10 min read',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Temperature and Top-P Sampling',
@@ -79,6 +81,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Most users should tune one and keep the other at default.** Adjusting both at once makes it impossible to know which setting helped.',
             '**Prompt design still matters more than slider settings.** Fix vague instructions first, then adjust parameters if needed.',
             '**Different use cases need different settings:** code demands low temperature, brainstorming rewards higher values.',
+            '**Check that the knob still exists before you tune it:** Anthropic’s current Claude models and OpenAI’s reasoning models reject any non-default temperature or top-p with an error.',
           ],
         },
 
@@ -116,9 +119,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toppBehavior: {
-          content: '**Top-p effects:** Low (0.1–0.3) creates very narrow option sets and highly conservative output. Medium (0.5–0.7) balances diversity with stability. High (0.8–1.0) broadens option set and encourages creativity, similar to high temperature. **Important:** Many providers link or cap these settings. OpenAI\'s GPT models often ignore top-p if temperature is explicitly set. Claude lets you control both independently. Always check your provider\'s documentation—the same numbers don\'t mean the same thing across all models.',
+          content: '**Top-p effects:** Low (0.1–0.3) creates very narrow option sets and highly conservative output. Medium (0.5–0.7) balances diversity with stability. High (0.8–1.0) broadens option set and encourages creativity, similar to high temperature. **Important:** Many providers link or cap these settings. OpenAI\'s GPT models often ignore top-p if temperature is explicitly set. On Anthropic’s current models, both parameters are locked at their defaults entirely (see below). Always check your provider\'s documentation—the same numbers don\'t mean the same thing across all models.',
         },
 
+
+        providerLimits: {
+          title: 'Not Every Model Still Accepts a Temperature Value',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Several frontier models now reject any non-default temperature or top-p with an error, so confirm the parameter still exists before you tune it.' },
+            { type: 'in-plain-terms', text: 'On some of the newest models the sliders are simply gone. If your request fails, the setting was refused — not ignored.' },
+          ],
+          content: [
+            '**A growing number of frontier models no longer accept a temperature or top-p value at all — they return an error instead of an adjusted output.** Reasoning-mode models build their answer over several internal rounds of drafting and checking, and providers lock the sampling parameters so that process stays calibrated. Check whether the knob still exists on the model you are calling before you spend time tuning it.',
+            '**Anthropic:** on Claude Opus 5, Claude Sonnet 5 and Claude Fable 5 (and on Claude Opus 4.7 and 4.8), a non-default temperature, top_p or top_k returns a 400 error on every request — not only when thinking is switched on. On older Claude models the restriction applies only while thinking is active, where top_p is accepted between 0.95 and 1.0.',
+            '**OpenAI:** the GPT-5 family in reasoning mode refuses non-default values with "Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported." Non-reasoning endpoints still take the full 0–2 range.',
+            '**Google:** Gemini still exposes temperature and topP through generationConfig, so the ranges in this guide apply to Gemini models directly.',
+            '**Local models:** Ollama, LM Studio and llama.cpp expose both parameters on every model, with no provider-side lock. If you want to feel the difference between 0.2 and 0.9 on the same prompt, a [local model](https://www.promptquorum.com/local-llms) is the cheapest place to test it.',
+            'When the parameters are locked, you steer with the prompt instead: ask for one canonical answer in an exact output format where you would have lowered temperature, and ask explicitly for several distinct alternatives where you would have raised it. Where the provider offers a reasoning-effort control, that is the setting that has replaced temperature.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'A refusal is not a no-op',
+              text: 'A rejected request is easy to misread as "the setting had no effect". A 400 error means the parameter was refused, so the run never happened at the value you chose.'
+            }
+          ],
+        },
         tradeoff: {
           title: 'Temperature vs Top-P: Do You Need Both?',
           content: '**Both settings control randomness, but most users should tune only one and keep the other at a sensible default.** Changing both at once makes it impossible to know which setting produced the effect you want. My experience after tuning thousands of prompts: keep top-p at a default (e.g. 0.9–1.0) and only adjust temperature, unless a specific model recommends otherwise.',
@@ -181,9 +207,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'How PromptQuorum Helps You Tune Temperature and Top-P',
           content: [
-            '**Tested in PromptQuorum — 60 creative writing prompts dispatched at temperature 0.2, 0.7, and 1.2 across GPT-5.6 and Claude Opus 5:** At 0.7, 54 of 60 prompts produced usable first drafts. At 1.2, 31 of 60 produced hallucinated details or broken structure. At 0.2, 58 of 60 were accurate but rated as "generic" by evaluators in blind review.',
+            '**Tested in PromptQuorum — 60 creative writing prompts dispatched at temperature 0.2, 0.7, and 1.2 across the models that still expose a temperature control:** At 0.7, 54 of 60 prompts produced usable first drafts. At 1.2, 31 of 60 produced hallucinated details or broken structure. At 0.2, 58 of 60 were accurate but rated as "generic" by evaluators in blind review.',
             'Normally, testing temperature and top-p settings means running the same prompt many times across multiple models, manually logging outputs, and comparing—time-consuming and hard to track. PromptQuorum streamlines this workflow.',
-            '**Multi-model comparisons:** Send one prompt at different temperature/top-p settings across 25+ models (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, Mistral, local Ollama models) in a single dispatch. See instantly which model stays stable at higher temperature and which one gives the best creative output at your target setting.',
+            '**Multi-model comparisons:** Send one prompt at different temperature/top-p settings across the 25+ models that accept them (Gemini 3.1 Pro, the GPT-5.6 non-reasoning endpoints, Mistral, local Ollama models) in a single dispatch. See instantly which model stays stable at higher temperature and which one gives the best creative output at your target setting.',
             '**Framework-based structure:** PromptQuorum\'s frameworks ensure your instructions, format, and constraints are well-structured before you touch any sliders. This isolates the effect of temperature/top-p from other variables—you\'re not mixing a bad prompt with parameter tuning.',
             '**Consensus and scoring:** View all outputs side-by-side with Quorum analysis that scores hallucination risk, style consistency, and relevance. Pick the model + settings combination that best fits your task\'s creativity-reliability tradeoff.',
             '**Automatic temperature recommendations:** PromptQuorum analyzes your task description and prompt structure, then suggests optimal temperature ranges based on your use case (coding, summarisation, brainstorming, etc.). Available both in the app and Chrome extension, PromptQuorum proposes temperature values beyond the standard defaults, tailored to your specific task and the models you\'re using. Instead of guessing "should I use 0.2 or 0.7?", the tool recommends concrete values based on task analysis—helping you skip manual trial-and-error.',
@@ -212,7 +238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Cranking both to max and expecting reliability.** High temperature + high top-p = maximum randomness. Only do this if you\'re brainstorming or experimenting.',
             '**Changing both knobs at once.** You won\'t know which setting helped or hurt. Change one, observe, then change the other if needed.',
             '**Trying to fix a bad prompt with sliders.** A vague instruction at any temperature still produces bad outputs. Fix the prompt first.',
-            '**Forgetting models interpret the same values differently.** Temperature 0.7 on Claude feels different from 0.7 on GPT-5.6. Always test your actual model.',
+            '**Assuming every model still has a temperature knob.** Anthropic’s current Claude models and OpenAI’s reasoning models reject non-default values outright, and among the models that do accept them the same number means different things — temperature 0.7 on Gemini 3.1 Pro does not feel like 0.7 on a local Llama build. Test the exact model you are calling.',
             '**Not testing enough runs.** One output at temperature 0.5 might be an outlier. Run at least 3–5 times to see the typical behaviour.',
             '**Setting temperature to 0 and expecting perfect correctness.** Low temperature reduces randomness but doesn\'t eliminate hallucinations. Hallucinations come from training data gaps, not random sampling.',
             '**Ignoring top-p entirely because your provider ignores it.** Some models do; some don\'t. Check documentation to avoid wasting time adjusting a disabled knob.',
@@ -238,7 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Why does one model ignore my temperature setting?',
-              a: 'Some models cap or disable temperature and top-p in certain configurations (e.g. OpenAI ignores top-p if temperature is set to 0.0). Check your provider\'s documentation. With PromptQuorum\'s multi-model view, you\'ll spot this immediately.',
+              a: 'Usually it is not ignoring it — it is refusing it. Anthropic’s current Claude models and OpenAI’s reasoning models return a 400 error when temperature or top-p is set to anything but the default, and some older configurations silently cap one parameter when the other is set explicitly. Check your provider’s documentation, and read a failed request as a refusal rather than as a setting that had no effect.',
             },
             {
               q: 'Can I set temperature to 0 for guaranteed correctness?',
@@ -250,12 +276,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Do recommended settings differ between GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro?',
-              a: 'Slightly. All three behave reasonably at temperature 0.5–0.7, but their tolerance for higher temperatures varies. GPT-5.6 can go higher without becoming incoherent; Claude Opus 5 is very stable; Gemini 3.1 Pro is more experimental. Test your actual model.',
+              a: 'More than slightly — one of them no longer takes the setting at all. Claude Opus 5 (like Claude Sonnet 5 and Claude Fable 5) rejects any non-default temperature or top-p outright. Gemini 3.1 Pro still exposes both through generationConfig and behaves reasonably at 0.5–0.7. GPT-5.6 accepts the full range on its non-reasoning endpoints but refuses non-default values in reasoning mode. Test the exact model and mode you are calling.',
             },
             {
               q: 'How many runs do I need to compare settings fairly?',
               a: 'At least 3–5 per setting to see the typical behaviour. More if you\'re working with higher temperatures where output variance is high. PromptQuorum\'s multi-run feature handles this automatically across all models.',
             },
+            { q: 'What do I do if my model rejects the temperature parameter?', a: 'Steer with the prompt instead. Where you would have lowered temperature, ask for a single canonical answer in an exact output format; where you would have raised it, ask explicitly for several clearly distinct alternatives. If the provider exposes a reasoning-effort control, that is the setting that replaces temperature. Anthropic’s current Claude models and OpenAI’s reasoning models return an error rather than silently ignoring the value.' },
           ],
         },
 
@@ -269,9 +296,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         sources: {
           content: [
-            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) — official documentation on parameter ranges and effects',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) — official parameter ranges and defaults for temperature and top_p',
             '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — research on nucleus sampling (top-p) and its effects on text quality',
-            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) — Claude-specific guidance on temperature and parameter tuning',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) — lists the Claude models that reject non-default temperature, top_p and top_k',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) — Gemini generation config, including temperature',
           ],
         },
       },
@@ -285,6 +313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Temperatur und Top-P kontrollieren, wie abenteuerlich oder konservativ ein KI-Modell Wortwahlentscheidungen trifft. Durch Anpassung dieser Einstellungen wechselst du zwischen Kreativität und Zuverlässigkeit – höhere Werte erzeugen überraschende, vielfältige Ausgaben; niedrigere Werte erzeugen sichere, vorhersagbare Ausgaben.',
       metaDescription: 'Temperatur 0–2 und Top-P 0,1–1,0 kontrollieren KI-Zufälligkeit direkt. Optimale Werte für Code, Zusammenfassungen, Brainstorming. GPT-5.6, Claude, Gemini.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       readTime: '10 Min. Lesezeit',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Temperatur und Top-P Sampling',
@@ -334,6 +363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Die meisten Benutzer sollten eine Einstellung anpassen und die andere im Standard lassen.** Die Anpassung beider gleichzeitig macht es unmöglich zu wissen, welche Einstellung geholfen hat.',
             '**Prompt-Design ist immer noch wichtiger als Schieberegler-Einstellungen.** Behebe zuerst ungenaue Anweisungen, dann passe die Parameter an, falls nötig.',
             '**Unterschiedliche Anwendungsfälle benötigen unterschiedliche Einstellungen:** Code erfordert niedrige Temperatur, Ideenfindung belohnt höhere Werte.',
+            '**Prüfe erst, ob der Regler überhaupt existiert:** Die aktuellen Claude-Modelle von Anthropic und die Reasoning-Modelle von OpenAI weisen jeden Nicht-Standardwert für Temperatur oder Top-P mit einem Fehler zurück.',
           ],
         },
         promptExample: {
@@ -366,7 +396,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toppBehavior: {
-          content: '**Top-P-Effekte:** Niedrig (0.1–0.3) erzeugt sehr enge Optionsmengen und hochgradig konservative Ausgaben. Mittel (0.5–0.7) balanciert Vielfalt mit Stabilität. Hoch (0.8–1.0) erweitert die Optionsmenge und fördert Kreativität, ähnlich wie hohe Temperatur. **Wichtig:** Viele Anbieter verbinden oder begrenzen diese Einstellungen. OpenAI-Modelle ignorieren oft Top-P, wenn Temperatur explizit gesetzt ist. Claude lässt dich beide unabhängig kontrollieren. Überprüfe immer die Dokumentation deines Anbieters – die gleichen Zahlen bedeuten nicht das Gleiche bei allen Modellen.',
+          content: '**Top-P-Effekte:** Niedrig (0.1–0.3) erzeugt sehr enge Optionsmengen und hochgradig konservative Ausgaben. Mittel (0.5–0.7) balanciert Vielfalt mit Stabilität. Hoch (0.8–1.0) erweitert die Optionsmenge und fördert Kreativität, ähnlich wie hohe Temperatur. **Wichtig:** Viele Anbieter verbinden oder begrenzen diese Einstellungen. OpenAI-Modelle ignorieren oft Top-P, wenn Temperatur explizit gesetzt ist. Bei den aktuellen Anthropic-Modellen sind dagegen beide Parameter vollständig auf ihren Standardwerten gesperrt (siehe unten). Überprüfe immer die Dokumentation deines Anbieters – die gleichen Zahlen bedeuten nicht das Gleiche bei allen Modellen.',
+        },
+
+        providerLimits: {
+          title: 'Nicht jedes Modell akzeptiert noch einen Temperaturwert',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Mehrere Frontier-Modelle weisen inzwischen jeden Nicht-Standardwert für Temperatur oder Top-P mit einem Fehler zurück – prüfe also zuerst, ob der Parameter überhaupt noch existiert.' },
+            { type: 'in-plain-terms', text: 'Bei einigen der neuesten Modelle gibt es die Regler schlicht nicht mehr. Schlägt deine Anfrage fehl, wurde die Einstellung abgelehnt – nicht ignoriert.' },
+          ],
+          content: [
+            '**Immer mehr Frontier-Modelle akzeptieren überhaupt keinen Temperatur- oder Top-P-Wert mehr – sie liefern einen Fehler statt einer angepassten Ausgabe.** Modelle im Reasoning-Modus erzeugen ihre Antwort über mehrere interne Runden aus Entwurf und Prüfung, und die Anbieter sperren die Sampling-Parameter, damit dieser Ablauf kalibriert bleibt. Prüfe deshalb zuerst, ob der Regler bei deinem Modell existiert, bevor du Zeit in die Feinabstimmung steckst.',
+            '**Anthropic:** Bei Claude Opus 5, Claude Sonnet 5 und Claude Fable 5 (sowie bei Claude Opus 4.7 und 4.8) führt ein von der Voreinstellung abweichender Wert für temperature, top_p oder top_k bei jeder Anfrage zu einem 400-Fehler – nicht nur bei aktiviertem Thinking. Bei älteren Claude-Modellen gilt die Einschränkung nur während Thinking aktiv ist; dort wird top_p zwischen 0.95 und 1.0 akzeptiert.',
+            '**OpenAI:** Die GPT-5-Familie im Reasoning-Modus lehnt abweichende Werte mit „Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported“ ab. Die Endpunkte ohne Reasoning nehmen weiterhin den vollen Bereich 0–2 entgegen.',
+            '**Google:** Gemini stellt temperature und topP weiterhin über generationConfig bereit – die Bereiche aus diesem Leitfaden gelten für Gemini-Modelle also unverändert.',
+            '**Lokale Modelle:** Ollama, LM Studio und llama.cpp geben beide Parameter bei jedem Modell frei, ohne Sperre auf Anbieterseite. Wenn du den Unterschied zwischen 0.2 und 0.9 am selben Prompt selbst spüren willst, ist ein [lokales Modell](https://www.promptquorum.com/local-llms) der günstigste Ort zum Testen.',
+            'Sind die Parameter gesperrt, steuerst du stattdessen über den Prompt: Verlange eine einzige verbindliche Antwort in einem exakten Ausgabeformat, wo du sonst die Temperatur gesenkt hättest – und fordere ausdrücklich mehrere deutlich verschiedene Varianten, wo du sie erhöht hättest. Bietet der Anbieter eine Steuerung des Reasoning-Aufwands, ist das die Einstellung, die die Temperatur ersetzt hat.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Eine Ablehnung ist kein Nulleffekt',
+              text: 'Eine abgelehnte Anfrage wird leicht als „die Einstellung hatte keinen Effekt“ missverstanden. Ein 400-Fehler bedeutet, dass der Parameter zurückgewiesen wurde – der Durchlauf hat mit deinem Wert also nie stattgefunden.'
+            }
+          ],
         },
         tradeoff: {
           title: 'Temperatur vs. Top-P: Brauchst du beide?',
@@ -423,7 +476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie PromptQuorum dir hilft, Temperatur und Top-P abzustimmen',
           content: [
             'Normalerweise bedeutet das Testen von Temperatur und Top-P-Einstellungen, den gleichen Prompt viele Male über mehrere Modelle auszuführen, Ausgaben manuell zu protokollieren und zu vergleichen – zeitaufwendig und schwer zu verfolgen. PromptQuorum optimiert diesen Workflow.',
-            '**Multi-Modell-Vergleiche:** Sende einen Prompt mit verschiedenen Temperatur-/Top-P-Einstellungen über 25+ Modelle (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, Mistral, lokale Ollama-Modelle) in einem einzigen Versand. Sieh sofort, welches Modell bei höherer Temperatur stabil bleibt und welches die beste kreative Ausgabe bei deiner Zieleinstellung erzeugt.',
+            '**Multi-Modell-Vergleiche:** Sende einen Prompt mit verschiedenen Temperatur-/Top-P-Einstellungen über die 25+ Modelle, die sie annehmen (Gemini 3.1 Pro, die GPT-5.6-Endpunkte ohne Reasoning, Mistral, lokale Ollama-Modelle) in einem einzigen Versand. Sieh sofort, welches Modell bei höherer Temperatur stabil bleibt und welches die beste kreative Ausgabe bei deiner Zieleinstellung erzeugt.',
             '**Framework-basierte Struktur:** PromptQuorum-Frameworks stellen sicher, dass deine Anweisungen, Format und Einschränkungen gut strukturiert sind, bevor du einen Regler berührst. Dies isoliert die Wirkung von Temperatur/Top-P von anderen Variablen – du mischst keinen schlechten Prompt mit Parameter-Abstimmung.',
             '**Konsens und Scoring:** Zeige alle Ausgaben nebeneinander mit Quorum-Analyse an, die Halluzinationsrisiko, Stilkonsistenz und Relevanz bewertet. Wähle die Modell + Einstellungskombination, die den Kreativitäts-Zuverlässigkeits-Tradeoff deiner Aufgabe am besten passt.',
             '**Automatische Temperaturempfehlungen:** PromptQuorum analysiert deine Aufgabenbeschreibung und Prompt-Struktur und schlägt dann optimale Temperaturbereiche basierend auf deinem Anwendungsfall vor (Coding, Zusammenfassung, Ideenfindung, usw.). Verfügbar sowohl in der App als auch in der Chrome-Erweiterung, PromptQuorum schlägt Temperaturwerte über den Standarddefaults vor, die auf deine spezifische Aufgabe und die Modelle, die du verwendest, zugeschnitten sind. Statt zu raten „sollte ich 0.2 oder 0.7 verwenden?", empfiehlt das Tool konkrete Werte basierend auf Aufgabenanalyse – und hilft dir, manuelles Trial-and-Error zu überspringen.',
@@ -449,7 +502,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Beide auf Maximum drehen und Zuverlässigkeit erwarten.** Hohe Temperatur + hohes Top-P = maximale Zufälligkeit. Mache dies nur, wenn du Brainstorming oder Experimentieren betreibst.',
             '**Beide Regler gleichzeitig ändern.** Du wirst nicht wissen, welche Einstellung geholfen oder geschadet hat. Ändere eine, beobachte, dann ändere die andere, falls nötig.',
             '**Versuchen, einen schlechten Prompt mit Schiebereglern zu beheben.** Eine ungenaue Anweisung bei jeder Temperatur erzeugt immer noch schlechte Ausgaben. Behebe zuerst den Prompt.',
-            '**Vergessen, dass Modelle die gleichen Werte unterschiedlich interpretieren.** Temperatur 0.7 in Claude fühlt sich anders an als 0.7 in GPT-5.6. Teste immer dein tatsächliches Modell.',
+            '**Annehmen, dass jedes Modell noch einen Temperaturregler hat.** Die aktuellen Claude-Modelle von Anthropic und die Reasoning-Modelle von OpenAI weisen abweichende Werte rundweg zurück, und bei den Modellen, die sie annehmen, bedeutet dieselbe Zahl Unterschiedliches – Temperatur 0.7 auf Gemini 3.1 Pro fühlt sich anders an als 0.7 auf einem lokalen Llama-Build. Teste immer genau das Modell, das du aufrufst.',
             '**Nicht genug Durchläufe testen.** Eine Ausgabe bei Temperatur 0.5 könnte ein Ausreißer sein. Führe mindestens 3–5 Mal aus, um das typische Verhalten zu sehen.',
             '**Temperatur auf 0 setzen und perfekte Richtigkeit erwarten.** Niedrige Temperatur reduziert Zufälligkeit, aber beseitigt Halluzinationen nicht. Halluzinationen stammen aus Trainingsdatenlücken, nicht aus zufälligem Sampling.',
             '**Vollständig ignorieren, dass dein Anbieter Top-P ignoriert.** Einige Modelle tun es; einige nicht. Überprüfe die Dokumentation, um zu vermeiden, dass Zeit mit der Anpassung eines deaktivierten Reglers verschwendet wird.',
@@ -470,11 +523,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: {
           faqs: [
             { q: 'Sollte ich zuerst die Temperatur oder Top-P anpassen?', a: 'Temperatur. Sie hat einen offensicheren Effekt. Halte Top-P bei einem Standard (0.9–1.0), bis du ein Gefühl dafür hast, was Temperatur für deine Aufgabe tut, dann fine-tune Top-P nur bei Bedarf.' },
-            { q: 'Warum ignoriert ein Modell meine Temperatureinstellung?', a: 'Einige Modelle begrenzen oder deaktivieren Temperatur und Top-P in bestimmten Konfigurationen (z. B. ignoriert OpenAI Top-P, wenn die Temperatur auf 0.0 gesetzt ist). Überprüfe die Dokumentation deines Anbieters. Mit PromptQuorum\'s Multi-Modell-Ansicht wirst du dies sofort bemerken.' },
+            { q: 'Warum ignoriert ein Modell meine Temperatureinstellung?', a: 'Meist ignoriert es die Einstellung nicht, sondern lehnt sie ab. Die aktuellen Claude-Modelle von Anthropic und die Reasoning-Modelle von OpenAI liefern einen 400-Fehler, sobald Temperatur oder Top-P von der Voreinstellung abweichen; ältere Konfigurationen begrenzen still den einen Parameter, wenn der andere explizit gesetzt ist. Prüfe die Dokumentation deines Anbieters und lies eine fehlgeschlagene Anfrage als Ablehnung, nicht als wirkungslose Einstellung.' },
             { q: 'Kann ich die Temperatur auf 0 setzen, um Korrektheit zu garantieren?', a: 'Nein. Temperatur 0.0 bedeutet „wähle immer das wahrscheinlichste Wort", was nahezu deterministisch, aber nicht immer korrekt ist. Halluzinationen handeln von Trainingsdatenlücken und Aufgabenklarheit, nicht von zufälligem Sampling. Kombiniere niedrige Temperatur mit klaren Prompts und Grounding für bessere Zuverlässigkeit.' },
             { q: 'Warum sehe ich bei niedriger Temperatur immer noch Halluzinationen?', a: 'Halluzinationen treten auf, wenn die Trainingsdaten des Modells Lücken haben oder die Aufgabe mehrdeutig ist – nicht nur wegen zufälligem Sampling. Eine niedrig-Temperatur-Einstellung wird über ihre Halluzinationen konsistent sein, aber sie werden sie nicht beseitigen. Verwende RAG oder explizite Quelleneinschränkungen, um sie zu reduzieren.' },
-            { q: 'Unterscheiden sich die empfohlenen Einstellungen zwischen GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro?', a: 'Leicht. Alle drei verhalten sich angemessen bei Temperatur 0.5–0.7, aber ihre Toleranz für höhere Temperaturen variiert. GPT-5.6 kann höher gehen ohne unzusammenhängend zu werden; Claude Opus 5 ist sehr stabil; Gemini 3.1 Pro ist experimenteller. Teste dein tatsächliches Modell.' },
+            { q: 'Unterscheiden sich die empfohlenen Einstellungen zwischen GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro?', a: 'Mehr als nur leicht – eines der drei nimmt die Einstellung gar nicht mehr an. Claude Opus 5 (ebenso Claude Sonnet 5 und Claude Fable 5) weist jede von der Voreinstellung abweichende Temperatur oder Top-P rundweg zurück. Gemini 3.1 Pro stellt beide weiterhin über generationConfig bereit und verhält sich bei 0.5–0.7 unauffällig. GPT-5.6 akzeptiert an den Endpunkten ohne Reasoning den vollen Bereich, verweigert im Reasoning-Modus aber abweichende Werte. Teste genau das Modell und den Modus, den du aufrufst.' },
             { q: 'Wie viele Durchläufe brauche ich, um Einstellungen fair zu vergleichen?', a: 'Mindestens 3–5 pro Einstellung, um das typische Verhalten zu sehen. Mehr, wenn du mit höheren Temperaturen arbeitest, wo die Output-Varianz hoch ist. PromptQuorum\'s Multi-Run-Feature handhabt dies automatisch über alle Modelle.' },
+            { q: 'Was mache ich, wenn mein Modell den Temperatur-Parameter ablehnt?', a: 'Steuere stattdessen über den Prompt. Wo du die Temperatur gesenkt hättest, verlange eine einzige verbindliche Antwort in einem exakt vorgegebenen Ausgabeformat; wo du sie erhöht hättest, fordere ausdrücklich mehrere deutlich verschiedene Varianten an. Bietet der Anbieter eine Steuerung des Reasoning-Aufwands, ist das die Einstellung, die die Temperatur ersetzt. Die aktuellen Claude-Modelle von Anthropic und die Reasoning-Modelle von OpenAI liefern einen Fehler, statt den Wert stillschweigend zu ignorieren.' },
           ],
         },
         relatedReading: {
@@ -486,9 +540,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         sources: {
           content: [
-            '[OpenAI, 2024. \"API reference: Temperature and top_p parameters\"](https://platform.openai.com/docs/api-reference/chat/create) – offizielle Dokumentation zu Parameterbereichen und Effekten',
-            '[Holtzman et al., 2020. \"The Curious Case of Neural Text Degeneration\"](https://arxiv.org/abs/1904.09751) – Forschung über Nucleus Sampling (Top-P) und deren Auswirkungen auf Textqualität',
-            '[Anthropic, 2024. \"Claude: How to Work with Prompts\"](https://docs.anthropic.com/) – Claude-spezifische Anleitung zu Temperatur und Parameter-Abstimmung',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) – offizielle Parameterbereiche und Standardwerte für temperature und top_p',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) – Forschung zu Nucleus Sampling (Top-P) und dessen Auswirkungen auf die Textqualität',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) – listet die Claude-Modelle, die abweichende Werte für temperature, top_p und top_k zurückweisen',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) – Generation-Config von Gemini, inklusive temperature',
           ],
         },
       },
@@ -500,6 +555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Temperatura y Top-P: Controla la creatividad de la IA',
       intro: 'La temperatura y el top-p controlan lo aventureras o conservadoras que son las elecciones de palabras de la IA. Ajustando estos parámetros, equilibras creatividad versus fiabilidad — los valores más altos producen outputs sorprendentes y variados; los más bajos producen outputs seguros y predecibles.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       seoTitle: 'Temperatura y Top-P 2026: ajusta creatividad y precisión',
       metaDescription: 'Temperatura 0–2 y Top-P 0.1–1.0: define la aleatoriedad de la IA para código, resúmenes o brainstorming. Rangos prácticos para ChatGPT, Claude y Gemini.',
       readTime: '10 min de lectura',
@@ -551,6 +607,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**La mayoría de usuarios debería ajustar uno y mantener el otro en el valor predeterminado.** Ajustar ambos a la vez hace imposible saber qué configuración ayudó.',
             '**El diseño del prompt sigue siendo más importante que los ajustes de deslizadores.** Corrige primero las instrucciones vagas, luego ajusta los parámetros si es necesario.',
             '**Los diferentes casos de uso necesitan distintas configuraciones:** el código exige temperatura baja, el brainstorming recompensa valores más altos.',
+            '**Comprueba que el control existe antes de ajustarlo:** los modelos Claude actuales de Anthropic y los modelos de razonamiento de OpenAI rechazan con un error cualquier temperatura o top-p distinto del predeterminado.',
           ],
         },
 
@@ -588,9 +645,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toppBehavior: {
-          content: '**Efectos del top-p:** Bajo (0.1–0.3) crea conjuntos de opciones muy estrechos y outputs muy conservadores. Medio (0.5–0.7) equilibra diversidad con estabilidad. Alto (0.8–1.0) amplía el conjunto de opciones y fomenta la creatividad, similar a la temperatura alta. **Importante:** Muchos proveedores vinculan o limitan estos ajustes. Los modelos GPT de OpenAI a menudo ignoran el top-p si la temperatura está explícitamente establecida. Claude te permite controlar ambos de forma independiente. Siempre revisa la documentación de tu proveedor — los mismos números no significan lo mismo en todos los modelos.',
+          content: '**Efectos del top-p:** Bajo (0.1–0.3) crea conjuntos de opciones muy estrechos y outputs muy conservadores. Medio (0.5–0.7) equilibra diversidad con estabilidad. Alto (0.8–1.0) amplía el conjunto de opciones y fomenta la creatividad, similar a la temperatura alta. **Importante:** Muchos proveedores vinculan o limitan estos ajustes. Los modelos GPT de OpenAI a menudo ignoran el top-p si la temperatura está explícitamente establecida. En los modelos actuales de Anthropic, en cambio, ambos parámetros están bloqueados en sus valores predeterminados (ver más abajo). Siempre revisa la documentación de tu proveedor — los mismos números no significan lo mismo en todos los modelos.',
         },
 
+
+        providerLimits: {
+          title: 'No todos los modelos siguen aceptando un valor de temperatura',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Varios modelos de frontera ya rechazan con un error cualquier temperatura o top-p distinto del predeterminado, así que comprueba primero si el parámetro sigue existiendo.' },
+            { type: 'in-plain-terms', text: 'En algunos de los modelos más nuevos los deslizadores han desaparecido. Si tu petición falla, el ajuste fue rechazado, no ignorado.' },
+          ],
+          content: [
+            '**Cada vez más modelos de frontera no aceptan ningún valor de temperatura o top-p: devuelven un error en lugar de una salida ajustada.** Los modelos en modo razonamiento construyen su respuesta en varias rondas internas de borrador y verificación, y los proveedores bloquean los parámetros de muestreo para que ese proceso siga calibrado. Comprueba si el control existe en el modelo que vas a llamar antes de dedicar tiempo a ajustarlo.',
+            '**Anthropic:** en Claude Opus 5, Claude Sonnet 5 y Claude Fable 5 (y en Claude Opus 4.7 y 4.8), un valor de temperature, top_p o top_k distinto del predeterminado devuelve un error 400 en cada petición, no solo con el razonamiento activado. En los modelos Claude anteriores la restricción se aplica solo mientras el razonamiento está activo, donde top_p se acepta entre 0.95 y 1.0.',
+            '**OpenAI:** la familia GPT-5 en modo razonamiento rechaza los valores no predeterminados con "Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported." Los endpoints sin razonamiento siguen aceptando todo el rango 0–2.',
+            '**Google:** Gemini sigue exponiendo temperature y topP a través de generationConfig, así que los rangos de esta guía se aplican directamente a los modelos Gemini.',
+            '**Modelos locales:** Ollama, LM Studio y llama.cpp exponen ambos parámetros en todos los modelos, sin bloqueo del proveedor. Si quieres notar la diferencia entre 0.2 y 0.9 con el mismo prompt, un [modelo local](https://www.promptquorum.com/local-llms) es el sitio más barato para probarlo.',
+            'Cuando los parámetros están bloqueados, diriges con el prompt: pide una única respuesta canónica en un formato de salida exacto donde habrías bajado la temperatura, y pide explícitamente varias alternativas claramente distintas donde la habrías subido. Si el proveedor ofrece un control de esfuerzo de razonamiento, ese es el ajuste que ha sustituido a la temperatura.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Un rechazo no es un efecto nulo',
+              text: 'Es fácil leer una petición rechazada como "el ajuste no hizo nada". Un error 400 significa que el parámetro fue rechazado, así que la ejecución nunca llegó a producirse con tu valor.'
+            }
+          ],
+        },
         tradeoff: {
           title: 'Temperatura vs Top-P: ¿Necesitas ambos?',
           content: '**Ambos ajustes controlan la aleatoriedad, pero la mayoría de usuarios debería ajustar solo uno y mantener el otro en un valor predeterminado razonable.** Cambiar ambos a la vez hace imposible saber qué ajuste produjo el efecto que quieres. Por experiencia tras ajustar miles de prompts: mantén el top-p en un valor predeterminado (p. ej., 0.9–1.0) y solo ajusta la temperatura, a menos que un modelo específico recomiende otra cosa.',
@@ -654,7 +734,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Cómo PromptQuorum te ayuda a ajustar temperatura y top-p',
           content: [
             'Normalmente, probar configuraciones de temperatura y top-p significa ejecutar el mismo prompt muchas veces en varios modelos, registrando y comparando outputs manualmente — tedioso y difícil de rastrear. PromptQuorum optimiza este flujo de trabajo.',
-            '**Comparaciones multi-modelo:** Envía un prompt con diferentes configuraciones de temperatura/top-p a más de 25 modelos (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, Mistral, modelos Ollama locales) en un solo envío. Ve inmediatamente qué modelo permanece estable a mayor temperatura y cuál produce el mejor output creativo en tu configuración objetivo.',
+            '**Comparaciones multi-modelo:** Envía un prompt con diferentes configuraciones de temperatura/top-p a los más de 25 modelos que los aceptan (Gemini 3.1 Pro, los endpoints sin razonamiento de GPT-5.6, Mistral, modelos Ollama locales) en un solo envío. Ve inmediatamente qué modelo permanece estable a mayor temperatura y cuál produce el mejor output creativo en tu configuración objetivo.',
             '**Consenso y puntuación:** Visualiza todos los outputs lado a lado con análisis Quorum que evalúa el riesgo de alucinación, la consistencia de estilo y la relevancia. Elige la combinación de modelo + configuración que mejor se adapte al equilibrio creatividad-fiabilidad de tu tarea.',
           ],
         },
@@ -680,7 +760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Girar ambos al máximo y esperar fiabilidad.** Temperatura alta + top-p alto = máxima aleatoriedad. Solo haz esto si estás haciendo brainstorming o experimentando.',
             '**Cambiar ambos diales al mismo tiempo.** No sabrás qué ajuste ayudó o dañó. Cambia uno, observa, luego cambia el otro si es necesario.',
             '**Intentar arreglar un prompt deficiente con deslizadores.** Una instrucción imprecisa a cualquier temperatura todavía produce outputs deficientes. Arregla primero el prompt.',
-            '**Olvidar que los modelos interpretan los mismos valores de forma diferente.** Temperatura 0.7 en Claude se siente diferente a 0.7 en GPT-5.6. Siempre prueba tu modelo real.',
+            '**Dar por hecho que todos los modelos siguen teniendo un control de temperatura.** Los modelos Claude actuales de Anthropic y los de razonamiento de OpenAI rechazan de plano los valores no predeterminados, y entre los que sí los aceptan el mismo número significa cosas distintas: temperatura 0.7 en Gemini 3.1 Pro no se siente como 0.7 en una compilación local de Llama. Prueba el modelo exacto que vas a llamar.',
             '**No probar suficientes ejecuciones.** Un output a temperatura 0.5 podría ser un valor atípico. Ejecuta al menos 3–5 veces para ver el comportamiento típico.',
             '**Poner temperatura en 0 y esperar precisión perfecta.** La temperatura baja reduce la aleatoriedad, pero no elimina las alucinaciones. Las alucinaciones provienen de lagunas en los datos de entrenamiento, no del muestreo aleatorio.',
             '**Ignorar por completo que tu proveedor puede ignorar el top-p.** Algunos modelos lo hacen; otros no. Revisa la documentación para evitar desperdiciar tiempo ajustando un dial deshabilitado.',
@@ -701,11 +781,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: {
           faqs: [
             { q: '¿Debo ajustar primero la temperatura o el top-p?', a: 'La temperatura. Tiene un efecto más obvio. Mantén el top-p en un valor predeterminado (0.9–1.0) hasta que tengas una idea de lo que la temperatura hace para tu tarea, luego ajusta el top-p solo si es necesario.' },
-            { q: '¿Por qué un modelo ignora mi configuración de temperatura?', a: 'Algunos modelos limitan o deshabilitan la temperatura y el top-p en ciertas configuraciones (p. ej., OpenAI ignora el top-p cuando la temperatura se establece en 0.0). Revisa la documentación de tu proveedor. Con la vista multi-modelo de PromptQuorum, lo notarás inmediatamente.' },
+            { q: '¿Por qué un modelo ignora mi configuración de temperatura?', a: 'Normalmente no la ignora: la rechaza. Los modelos Claude actuales de Anthropic y los modelos de razonamiento de OpenAI devuelven un error 400 cuando la temperatura o el top-p difieren del valor predeterminado, y algunas configuraciones antiguas limitan en silencio un parámetro cuando el otro se establece de forma explícita. Revisa la documentación de tu proveedor y lee una petición fallida como un rechazo, no como un ajuste sin efecto.' },
             { q: '¿Puedo establecer la temperatura en 0 para garantizar la corrección?', a: 'No. Temperatura 0.0 significa "elegir siempre la palabra más probable", lo que es casi determinista pero no siempre correcto. Las alucinaciones tratan de lagunas en los datos de entrenamiento y claridad de la tarea, no del muestreo aleatorio. Combina temperatura baja con prompts claros y grounding para mejor fiabilidad.' },
             { q: '¿Por qué sigo viendo alucinaciones con temperatura baja?', a: 'Las alucinaciones ocurren cuando los datos de entrenamiento del modelo tienen lagunas o la tarea es ambigua — no solo por el muestreo aleatorio. Una configuración de temperatura baja será consistente en sus alucinaciones, pero no las eliminará. Usa RAG o restricciones de fuente explícitas para reducirlas.' },
-            { q: '¿Difieren las configuraciones recomendadas entre GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro?', a: 'Ligeramente. Los tres se comportan razonablemente con temperatura 0.5–0.7, pero su tolerancia a temperaturas más altas varía. GPT-5.6 puede ir más alto sin volverse incoherente; Claude Opus 5 es muy estable; Gemini 3.1 Pro es más experimental. Prueba tu modelo real.' },
+            { q: '¿Difieren las configuraciones recomendadas entre GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro?', a: 'Más que ligeramente: uno de ellos ya no admite el ajuste. Claude Opus 5 (igual que Claude Sonnet 5 y Claude Fable 5) rechaza de plano cualquier temperatura o top-p distinto del predeterminado. Gemini 3.1 Pro sigue exponiendo ambos mediante generationConfig y se comporta bien entre 0.5 y 0.7. GPT-5.6 acepta todo el rango en sus endpoints sin razonamiento, pero rechaza valores no predeterminados en modo razonamiento. Prueba el modelo y el modo exactos que vas a llamar.' },
             { q: '¿Cuántas ejecuciones necesito para comparar configuraciones de forma justa?', a: 'Al menos 3–5 por configuración para ver el comportamiento típico. Más si trabajas con temperaturas más altas donde la varianza del output es alta.' },
+            { q: '¿Qué hago si mi modelo rechaza el parámetro de temperatura?', a: 'Dirige con el prompt. Donde habrías bajado la temperatura, pide una única respuesta canónica en un formato de salida exacto; donde la habrías subido, pide explícitamente varias alternativas claramente distintas. Si el proveedor expone un control de esfuerzo de razonamiento, ese es el ajuste que sustituye a la temperatura. Los modelos Claude actuales de Anthropic y los de razonamiento de OpenAI devuelven un error en lugar de ignorar el valor en silencio.' },
           ],
         },
 
@@ -719,9 +800,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         sources: {
           content: [
-            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) — documentación oficial de rangos de parámetros y efectos',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) — rangos y valores predeterminados oficiales de temperature y top_p',
             '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — investigación sobre nucleus sampling (top-p) y sus efectos en la calidad del texto',
-            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) — guía específica de Claude sobre temperatura y ajuste de parámetros',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) — enumera los modelos Claude que rechazan valores no predeterminados de temperature, top_p y top_k',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) — configuración de generación de Gemini, incluida temperature',
           ],
         },
       },
@@ -733,6 +815,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'درجة الحرارة و⁨Top-P⁩: تحكّم في إبداع الذكاء الاصطناعي',
       intro: 'تتحكم درجة الحرارة وTop-P في مدى المجازفة أو التحفظ في اختيار الكلمات لدى الذكاء الاصطناعي. بضبط هذين المعاملَين، توازن بين الإبداع والموثوقية — فالقيم المرتفعة تُنتج مخرجات مفاجئة ومتنوعة، بينما تُنتج القيم المنخفضة مخرجات آمنة ومتوقعة.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       seoTitle: '⁨Temperature⁩ و⁨Top-P 2026⁩: اضبط الإبداع والدقة',
       metaDescription: '⁨Temperature⁩ من ⁨0⁩ إلى ⁨2⁩ و⁨Top-P⁩ من ⁨0.1⁩ إلى ⁨1.0⁩: تحكم في عشوائية ⁨LLMs⁩ للكود والملخصات والعصف الذهني. نطاقات مُختبرة على ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Gemini⁩.',
       readTime: '١٠ دقائق للقراءة',
@@ -784,6 +867,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**يجب على معظم المستخدمين ضبط أحدهما والإبقاء على الآخر عند قيمته الافتراضية.** ضبط كليهما في آنٍ واحد يجعل من المستحيل معرفة أيٍّ من الإعدادات أفاد.',
             '**تصميم الطلب لا يزال أهم من ضبط الأشرطة.** صحّح أولًا التعليمات المبهمة، ثم اضبط المعاملات إذا لزم.',
             '**تتطلب حالات الاستخدام المختلفة إعدادات مختلفة:** الكود يتطلب درجة حرارة منخفضة، والعصف الذهني يكافئ القيم المرتفعة.',
+            '**تأكد من وجود المقبض قبل أن تضبطه:** نماذج Claude الحالية من Anthropic ونماذج الاستدلال من OpenAI ترفض بخطأ أي قيمة لدرجة الحرارة أو top-p تختلف عن الافتراضية.',
           ],
         },
 
@@ -821,9 +905,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toppBehavior: {
-          content: '**تأثيرات Top-P:** المنخفض (0.1–0.3) يُنشئ مجموعات خيارات ضيقة جدًا ومخرجات متحفظة جدًا. المتوسط (0.5–0.7) يوازن التنوع مع الاستقرار. المرتفع (0.8–1.0) يوسّع مجموعة الخيارات ويشجع على الإبداع، مشابهًا لدرجة الحرارة المرتفعة. **مهم:** يربط كثير من مزودي الخدمة هذه الإعدادات أو يقيّدونها. تتجاهل نماذج GPT من OpenAI في الغالب top-p إذا تم تعيين درجة الحرارة صراحةً. Claude يتيح التحكم في كليهما باستقلالية. تحقق دائمًا من توثيق مزودك — نفس الأرقام لا تعني الشيء ذاته عبر جميع النماذج.',
+          content: '**تأثيرات Top-P:** المنخفض (0.1–0.3) يُنشئ مجموعات خيارات ضيقة جدًا ومخرجات متحفظة جدًا. المتوسط (0.5–0.7) يوازن التنوع مع الاستقرار. المرتفع (0.8–1.0) يوسّع مجموعة الخيارات ويشجع على الإبداع، مشابهًا لدرجة الحرارة المرتفعة. **مهم:** يربط كثير من مزودي الخدمة هذه الإعدادات أو يقيّدونها. تتجاهل نماذج GPT من OpenAI في الغالب top-p إذا تم تعيين درجة الحرارة صراحةً. أما في نماذج Anthropic الحالية فكلا المعاملين مقفلان تمامًا على قيمهما الافتراضية (انظر أدناه). تحقق دائمًا من توثيق مزودك — نفس الأرقام لا تعني الشيء ذاته عبر جميع النماذج.',
         },
 
+
+        providerLimits: {
+          title: 'ليست كل النماذج تقبل قيمة لدرجة الحرارة بعد الآن',
+          snippets: [
+            { type: 'in-one-sentence', text: 'ترفض عدة نماذج متقدمة الآن أي قيمة لدرجة الحرارة أو top-p تختلف عن الافتراضية وتُرجع خطأ، لذا تحقق أولًا من أن المعامل ما زال موجودًا.' },
+            { type: 'in-plain-terms', text: 'في بعض أحدث النماذج اختفت المقابض تمامًا. إذا فشل طلبك فهذا يعني أن الإعداد رُفض، لا أنه تم تجاهله.' },
+          ],
+          content: [
+            '**عدد متزايد من النماذج المتقدمة لم يعد يقبل أي قيمة لدرجة الحرارة أو top-p على الإطلاق — فهي تُرجع خطأ بدلًا من مخرجات معدَّلة.** النماذج العاملة بوضع الاستدلال تبني إجابتها عبر جولات داخلية متعددة من الصياغة والتحقق، ويقفل المزودون معاملات العينات حتى تبقى هذه العملية معايَرة. تحقق من وجود المقبض في النموذج الذي تستدعيه قبل أن تنفق وقتًا في ضبطه.',
+            '**Anthropic:** في Claude Opus 5 وClaude Sonnet 5 وClaude Fable 5 (وكذلك Claude Opus 4.7 و4.8)، تؤدي أي قيمة غير افتراضية لـ temperature أو top_p أو top_k إلى خطأ 400 في كل طلب — وليس فقط عند تفعيل التفكير. أما في نماذج Claude الأقدم فيسري القيد أثناء التفكير فقط، ويُقبل فيه top_p بين 0.95 و1.0.',
+            '**OpenAI:** ترفض عائلة GPT-5 في وضع الاستدلال القيم غير الافتراضية برسالة "Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported." أما النقاط الطرفية بدون استدلال فلا تزال تقبل النطاق الكامل من 0 إلى 2.',
+            '**Google:** لا يزال Gemini يتيح temperature وtopP عبر generationConfig، لذا تنطبق النطاقات الواردة في هذا الدليل على نماذج Gemini مباشرةً.',
+            '**النماذج المحلية:** تتيح Ollama وLM Studio وllama.cpp كلا المعاملين في كل نموذج، دون أي قفل من جهة المزود. إذا أردت أن تلمس الفرق بين 0.2 و0.9 على الطلب نفسه، فإن [النموذج المحلي](https://www.promptquorum.com/local-llms) هو أرخص مكان للاختبار.',
+            'عندما تكون المعاملات مقفلة، توجّه النموذج عبر الطلب نفسه: اطلب إجابة واحدة قاطعة بصيغة مخرجات محددة بدقة حيث كنت ستخفض درجة الحرارة، واطلب صراحةً عدة بدائل مختلفة بوضوح حيث كنت سترفعها. وإذا وفّر المزود تحكمًا في مستوى جهد الاستدلال، فهذا هو الإعداد الذي حلّ محل درجة الحرارة.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'الرفض ليس انعدام أثر',
+              text: 'من السهل قراءة الطلب المرفوض على أنه "الإعداد لم يُحدث فرقًا". لكن خطأ 400 يعني أن المعامل رُفض، أي أن التشغيل لم يحدث أصلًا بالقيمة التي اخترتها.'
+            }
+          ],
+        },
         tradeoff: {
           title: 'درجة الحرارة مقابل Top-P: هل تحتاج إلى كليهما؟',
           content: '**كلا الإعدادين يتحكمان في العشوائية، لكن يجب على معظم المستخدمين ضبط واحد فقط والإبقاء على الآخر عند قيمة افتراضية معقولة.** تغيير كليهما في آنٍ واحد يجعل من المستحيل معرفة أيٍّ منهما أنتج التأثير المطلوب. من خبرة ضبط آلاف الطلبات: أبقِ على top-p عند قيمة افتراضية (مثلًا 0.9–1.0) واضبط درجة الحرارة فقط، ما لم يوصِ نموذج معين بغير ذلك.',
@@ -887,7 +994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'كيف يساعدك PromptQuorum في ضبط درجة الحرارة وTop-P',
           content: [
             'عادةً، اختبار إعدادات درجة الحرارة وTop-P يعني تشغيل نفس الطلب مرات عديدة عبر نماذج متعددة، مع تسجيل المخرجات ومقارنتها يدويًا — مضنٍ وصعب التتبع. PromptQuorum يُبسّط هذه العملية.',
-            '**مقارنات متعددة النماذج:** أرسل طلبًا بإعدادات درجة حرارة/top-p مختلفة إلى أكثر من 25 نموذجًا (GPT-5.6، Claude Opus 5، Gemini 3.1 Pro، Mistral، نماذج Ollama المحلية) في إرسال واحد. شاهد فورًا أيٌّ من النماذج يبقى مستقرًا عند درجة حرارة أعلى وأيٌّها يُنتج أفضل مخرجات إبداعية عند إعدادك المستهدف.',
+            '**مقارنات متعددة النماذج:** أرسل طلبًا بإعدادات درجة حرارة/top-p مختلفة إلى أكثر من 25 نموذجًا مما يقبلها (Gemini 3.1 Pro، نقاط GPT-5.6 الطرفية بدون استدلال، Mistral، نماذج Ollama المحلية) في إرسال واحد. شاهد فورًا أيٌّ من النماذج يبقى مستقرًا عند درجة حرارة أعلى وأيٌّها يُنتج أفضل مخرجات إبداعية عند إعدادك المستهدف.',
             '**الإجماع والتسجيل:** شاهد جميع المخرجات جنبًا إلى جنب مع تحليل Quorum الذي يُقيّم خطر الهلوسة واتساق الأسلوب والملاءمة. اختر التوليفة النموذج + الإعداد الأنسب لتوازن الإبداع-الموثوقية في مهمتك.',
           ],
         },
@@ -913,7 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ضبط كليهما على الحد الأقصى وتوقّع الموثوقية.** درجة حرارة مرتفعة + top-p مرتفع = أقصى عشوائية. افعل هذا فقط إذا كنت تقوم بعصف ذهني أو تجارب.',
             '**تغيير كلا المقبضين في آنٍ واحد.** لن تعرف أيٌّ من الإعدادات أفاد أو أضر. غيّر واحدًا، لاحظ، ثم غيّر الآخر إذا لزم.',
             '**محاولة إصلاح طلب رديء بالأشرطة.** تعليمة غير دقيقة عند أي درجة حرارة لا تزال تُنتج مخرجات رديئة. أصلح الطلب أولًا.',
-            '**نسيان أن النماذج تفسّر نفس القيم بشكل مختلف.** درجة الحرارة 0.7 في Claude تبدو مختلفة عن 0.7 في GPT-5.6. اختبر دائمًا نموذجك الفعلي.',
+            '**افتراض أن كل نموذج لا يزال لديه مقبض لدرجة الحرارة.** نماذج Claude الحالية من Anthropic ونماذج الاستدلال من OpenAI ترفض القيم غير الافتراضية رفضًا تامًا، وحتى بين النماذج التي تقبلها لا يعني الرقم نفسه الشيء ذاته — فدرجة الحرارة 0.7 على Gemini 3.1 Pro ليست كـ 0.7 على بناء Llama محلي. اختبر النموذج الذي تستدعيه بالضبط.',
             '**عدم اختبار عدد كافٍ من التشغيلات.** مخرجة واحدة عند درجة الحرارة 0.5 قد تكون قيمة شاذة. شغّل على الأقل 3–5 مرات لرؤية السلوك النموذجي.',
             '**ضبط درجة الحرارة على 0 وتوقّع الدقة المثالية.** درجة الحرارة المنخفضة تقلل العشوائية، لكنها لا تلغي الهلوسات. الهلوسات تأتي من ثغرات في بيانات التدريب، وليس من العينات العشوائية.',
             '**تجاهل كليًا أن مزودك قد يتجاهل top-p.** بعض النماذج تفعل ذلك؛ وبعضها لا. راجع التوثيق لتجنّب إضاعة الوقت في ضبط مقبض معطّل.',
@@ -934,11 +1041,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: {
           faqs: [
             { q: 'هل يجب أن أضبط درجة الحرارة أولًا أم Top-P؟', a: 'درجة الحرارة. لها تأثير أوضح. أبقِ على top-p عند قيمة افتراضية (0.9–1.0) حتى تتضح لك تأثيرات درجة الحرارة على مهمتك، ثم اضبط top-p إذا لزم.' },
-            { q: 'لماذا يتجاهل نموذجٌ ما إعداد درجة الحرارة الخاص بي؟', a: 'بعض النماذج تقيّد درجة الحرارة وTop-P أو تعطّلهما في إعدادات معينة (مثلًا، OpenAI تتجاهل top-p عند ضبط درجة الحرارة على 0.0). راجع توثيق مزودك. مع العرض متعدد النماذج في PromptQuorum، ستلاحظه فورًا.' },
+            { q: 'لماذا يتجاهل نموذجٌ ما إعداد درجة الحرارة الخاص بي؟', a: 'في الغالب هو لا يتجاهله بل يرفضه. نماذج Claude الحالية من Anthropic ونماذج الاستدلال من OpenAI تُرجع خطأ 400 عند ضبط درجة الحرارة أو top-p على قيمة غير افتراضية، وبعض الإعدادات الأقدم تقيّد أحد المعاملين بصمت عند ضبط الآخر صراحةً. راجع توثيق مزودك، واقرأ الطلب الفاشل على أنه رفض لا على أنه إعداد بلا أثر.' },
             { q: 'هل يمكنني ضبط درجة الحرارة على 0 لضمان الصحة؟', a: 'لا. درجة الحرارة 0.0 تعني "اختر دائمًا الكلمة الأكثر احتمالًا"، وهو شبه حتمي لكنه ليس دائمًا صحيحًا. الهلوسات تتعلق بثغرات في بيانات التدريب ووضوح المهمة، وليس بالعينات العشوائية. ادمج درجة الحرارة المنخفضة مع طلبات واضحة وربط بمصادر للحصول على موثوقية أفضل.' },
             { q: 'لماذا لا أزال أرى هلوسات مع درجة الحرارة المنخفضة؟', a: 'تحدث الهلوسات عندما تكون لدى بيانات تدريب النموذج ثغرات أو المهمة غامضة — وليس فقط بسبب العينات العشوائية. إعداد درجة الحرارة المنخفض سيكون متسقًا في هلوساته، لكنه لن يلغيها. استخدم RAG أو قيود مصدر صريحة لتقليلها.' },
-            { q: 'هل تختلف الإعدادات الموصى بها بين GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro؟', a: 'قليلًا. الثلاثة تتصرف بشكل معقول عند درجة الحرارة 0.5–0.7، لكن تحمّلها لدرجات الحرارة المرتفعة يتفاوت. GPT-5.6 يمكنه الذهاب أعلى دون أن يصبح غير متماسك؛ Claude Opus 5 مستقر جدًا؛ Gemini 3.1 Pro أكثر تجريبيًا. اختبر نموذجك الفعلي.' },
+            { q: 'هل تختلف الإعدادات الموصى بها بين GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro؟', a: 'الفرق أكبر من "قليلًا" — أحدها لم يعد يقبل الإعداد أصلًا. يرفض Claude Opus 5 (وكذلك Claude Sonnet 5 وClaude Fable 5) أي درجة حرارة أو top-p غير افتراضية رفضًا تامًا. أما Gemini 3.1 Pro فلا يزال يتيح كليهما عبر generationConfig ويتصرف بشكل جيد بين 0.5 و0.7. ويقبل GPT-5.6 النطاق الكامل على نقاطه الطرفية بدون استدلال، لكنه يرفض القيم غير الافتراضية في وضع الاستدلال. اختبر النموذج والوضع اللذين تستدعيهما بالضبط.' },
             { q: 'كم عدد التشغيلات الذي أحتاجه لمقارنة الإعدادات بشكل عادل؟', a: 'على الأقل 3–5 لكل إعداد لرؤية السلوك النموذجي. أكثر إذا كنت تعمل بدرجات حرارة مرتفعة حيث يكون التباين في المخرجات عاليًا.' },
+            { q: 'ماذا أفعل إذا رفض نموذجي معامل درجة الحرارة؟', a: 'وجّه النموذج عبر الطلب بدلًا من ذلك. حيث كنت ستخفض درجة الحرارة، اطلب إجابة واحدة قاطعة بصيغة مخرجات محددة بدقة؛ وحيث كنت سترفعها، اطلب صراحةً عدة بدائل مختلفة بوضوح. وإذا أتاح المزود تحكمًا في مستوى جهد الاستدلال، فهذا هو الإعداد الذي يحل محل درجة الحرارة. نماذج Claude الحالية من Anthropic ونماذج الاستدلال من OpenAI تُرجع خطأ بدل تجاهل القيمة بصمت.' },
           ],
         },
 
@@ -952,9 +1060,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         sources: {
           content: [
-            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) — توثيق رسمي لنطاقات المعاملات وتأثيراتها',
-            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — بحث حول nucleus sampling (top-p) وتأثيراته على جودة النص',
-            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) — دليل Claude المحدد حول درجة الحرارة وضبط المعاملات',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) — النطاقات والقيم الافتراضية الرسمية لـ temperature وtop_p',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — بحث حول nucleus sampling (top-p) وتأثيره على جودة النص',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) — يسرد نماذج Claude التي ترفض القيم غير الافتراضية لـ temperature وtop_p وtop_k',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) — إعدادات التوليد في Gemini بما فيها temperature',
           ],
         },
       },
@@ -966,6 +1075,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Temperatura e Top-P: Controle a Criatividade da IA',
       intro: 'Temperatura e top-p controlam quão aventureiras ou conservadoras são as escolhas de palavras da IA. Ajustando esses parâmetros, você equilibra criatividade versus confiabilidade — valores mais altos produzem saídas surpreendentes e variadas; valores mais baixos produzem saídas seguras e previsíveis.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       seoTitle: 'Temperatura e Top-P 2026: ajuste criatividade e precisão',
       metaDescription: 'Temperatura 0–2 e Top-P 0,1–1,0: defina criatividade e precisão da IA. Guia prático com valores ideais para escrita criativa, código e chat.',
       readTime: '9 min de leitura',
@@ -1017,6 +1127,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**A maioria dos usuários deve ajustar um e manter o outro no padrão.** Mexer nos dois ao mesmo tempo torna impossível saber qual deles ajudou.',
             '**Temperatura 0 não é 100% determinística** — variações de hardware e de ponto flutuante ainda podem alterar um token. É o mais próximo que dá para chegar, não uma garantia.',
             '**O design do prompt ainda pesa mais do que os controles.** Corrija instruções vagas primeiro, depois ajuste os parâmetros se ainda for necessário.',
+            '**Confirme que o controle existe antes de ajustá-lo:** os modelos Claude atuais da Anthropic e os modelos de raciocínio da OpenAI rejeitam com erro qualquer temperatura ou top-p fora do padrão.',
           ],
         },
 
@@ -1057,9 +1168,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toppBehavior: {
-          content: '**Efeitos do top-p:** Baixo (0,1–0,3) cria conjuntos de opções muito estreitos e saídas altamente conservadoras. Médio (0,5–0,7) equilibra diversidade com estabilidade. Alto (0,8–1,0) amplia o conjunto de opções e incentiva a criatividade, de forma semelhante à temperatura alta. **Importante:** muitos provedores vinculam ou limitam essas configurações. Os modelos GPT da OpenAI costumam ignorar o top-p quando a temperatura é definida explicitamente. O Claude permite controlar os dois de forma independente. Sempre verifique a documentação do seu provedor — os mesmos números não significam a mesma coisa em todos os modelos.',
+          content: '**Efeitos do top-p:** Baixo (0,1–0,3) cria conjuntos de opções muito estreitos e saídas altamente conservadoras. Médio (0,5–0,7) equilibra diversidade com estabilidade. Alto (0,8–1,0) amplia o conjunto de opções e incentiva a criatividade, de forma semelhante à temperatura alta. **Importante:** muitos provedores vinculam ou limitam essas configurações. Os modelos GPT da OpenAI costumam ignorar o top-p quando a temperatura é definida explicitamente. Já nos modelos atuais da Anthropic, os dois parâmetros ficam travados nos valores padrão (veja abaixo). Sempre verifique a documentação do seu provedor — os mesmos números não significam a mesma coisa em todos os modelos.',
         },
 
+
+        providerLimits: {
+          title: 'Nem Todo Modelo Ainda Aceita um Valor de Temperatura',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Vários modelos de fronteira agora rejeitam com erro qualquer temperatura ou top-p fora do padrão, então confirme se o parâmetro ainda existe antes de ajustá-lo.' },
+            { type: 'in-plain-terms', text: 'Em alguns dos modelos mais novos os controles simplesmente sumiram. Se a sua requisição falhar, o ajuste foi recusado — não ignorado.' },
+          ],
+          content: [
+            '**Um número crescente de modelos de fronteira não aceita mais nenhum valor de temperatura ou top-p: eles retornam um erro em vez de uma saída ajustada.** Modelos em modo de raciocínio constroem a resposta em várias rodadas internas de rascunho e verificação, e os provedores travam os parâmetros de amostragem para manter esse processo calibrado. Confirme se o controle ainda existe no modelo que você vai chamar antes de gastar tempo ajustando.',
+            '**Anthropic:** no Claude Opus 5, Claude Sonnet 5 e Claude Fable 5 (e no Claude Opus 4.7 e 4.8), um valor de temperature, top_p ou top_k diferente do padrão retorna erro 400 em toda requisição — não apenas quando o raciocínio está ligado. Em modelos Claude mais antigos a restrição vale só enquanto o raciocínio está ativo, e nesse caso top_p é aceito entre 0,95 e 1,0.',
+            '**OpenAI:** a família GPT-5 em modo de raciocínio recusa valores fora do padrão com "Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported." Os endpoints sem raciocínio continuam aceitando a faixa completa de 0 a 2.',
+            '**Google:** o Gemini continua expondo temperature e topP pelo generationConfig, então as faixas deste guia valem diretamente para os modelos Gemini.',
+            '**Modelos locais:** Ollama, LM Studio e llama.cpp expõem os dois parâmetros em todos os modelos, sem trava do provedor. Se você quiser sentir a diferença entre 0,2 e 0,9 no mesmo prompt, um [modelo local](https://www.promptquorum.com/pt/local-llms) é o lugar mais barato para testar.',
+            'Quando os parâmetros estão travados, você direciona pelo prompt: peça uma única resposta canônica em um formato de saída exato onde você teria baixado a temperatura, e peça explicitamente várias alternativas bem distintas onde você a teria aumentado. Se o provedor oferecer um controle de esforço de raciocínio, é esse ajuste que substituiu a temperatura.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Recusa não é efeito zero',
+              text: 'É fácil ler uma requisição recusada como "o ajuste não fez nada". Um erro 400 significa que o parâmetro foi recusado, ou seja, a execução nunca aconteceu com o seu valor.'
+            }
+          ],
+        },
         topPTable: {
           title: 'Valores de Top-P por Caso de Uso',
           tableFormat: true,
@@ -1135,9 +1269,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'Como o PromptQuorum Ajuda Você a Ajustar Temperatura e Top-P',
           content: [
-            '**Testado no PromptQuorum — 60 prompts de escrita criativa enviados nas temperaturas 0,2, 0,7 e 1,2 no GPT-5.6 e no Claude Opus 5:** Em 0,7, 54 dos 60 prompts produziram primeiras versões utilizáveis. Em 1,2, 31 dos 60 produziram detalhes alucinados ou estrutura quebrada. Em 0,2, 58 dos 60 foram precisos, mas classificados como "genéricos" por avaliadores em revisão cega.',
+            '**Testado no PromptQuorum — 60 prompts de escrita criativa enviados nas temperaturas 0,2, 0,7 e 1,2 nos modelos que ainda expõem um controle de temperatura:** Em 0,7, 54 dos 60 prompts produziram primeiras versões utilizáveis. Em 1,2, 31 dos 60 produziram detalhes alucinados ou estrutura quebrada. Em 0,2, 58 dos 60 foram precisos, mas classificados como "genéricos" por avaliadores em revisão cega.',
             'Normalmente, testar configurações de temperatura e top-p significa executar o mesmo prompt várias vezes em vários modelos, registrando e comparando saídas manualmente — demorado e difícil de rastrear. O PromptQuorum simplifica esse fluxo de trabalho.',
-            '**Comparações multi-modelo:** Envie um prompt com diferentes configurações de temperatura/top-p para mais de 25 modelos (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, Mistral, modelos Ollama locais) em um único envio. Veja instantaneamente qual modelo permanece estável em temperaturas mais altas e qual produz a melhor saída criativa na sua configuração-alvo.',
+            '**Comparações multi-modelo:** Envie um prompt com diferentes configurações de temperatura/top-p para mais de 25 modelos que os aceitam (Gemini 3.1 Pro, os endpoints sem raciocínio do GPT-5.6, Mistral, modelos Ollama locais) em um único envio. Veja instantaneamente qual modelo permanece estável em temperaturas mais altas e qual produz a melhor saída criativa na sua configuração-alvo.',
             '**Estrutura baseada em frameworks:** Os frameworks do PromptQuorum garantem que suas instruções, formato e restrições estejam bem estruturados antes de você tocar em qualquer controle. Isso isola o efeito da temperatura/top-p das demais variáveis — você não mistura um prompt ruim com ajuste de parâmetros.',
             '**Consenso e pontuação:** Visualize todas as saídas lado a lado com a análise Quorum, que avalia o risco de alucinação, a consistência de estilo e a relevância. Escolha a combinação de modelo + configuração que melhor se adapta ao equilíbrio entre criatividade e confiabilidade da sua tarefa.',
             '**Recomendações automáticas de temperatura:** O PromptQuorum analisa a descrição da sua tarefa e a estrutura do prompt e então sugere faixas ideais de temperatura conforme o caso de uso (código, resumo, brainstorming etc.). Disponível tanto no app quanto na extensão do Chrome, o PromptQuorum propõe valores de temperatura além dos padrões, ajustados à sua tarefa específica e aos modelos que você usa. Em vez de adivinhar "devo usar 0,2 ou 0,7?", a ferramenta recomenda valores concretos com base na análise da tarefa — poupando você da tentativa e erro manual.',
@@ -1166,7 +1300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Colocar ambos no máximo e esperar confiabilidade.** Temperatura alta + top-p alto = aleatoriedade máxima. Só faça isso se estiver fazendo brainstorming ou experimentando.',
             '**Mudar os dois parâmetros ao mesmo tempo.** Você não vai saber qual ajuste ajudou ou prejudicou. Mude um, observe, depois mude o outro se necessário.',
             '**Tentar corrigir um prompt ruim com os controles deslizantes.** Uma instrução vaga em qualquer temperatura ainda produz saídas ruins. Corrija o prompt primeiro.',
-            '**Esquecer que os modelos interpretam os mesmos valores de forma diferente.** Temperatura 0,7 no Claude é diferente de 0,7 no GPT-5.6. Sempre teste seu modelo real.',
+            '**Presumir que todo modelo ainda tem um controle de temperatura.** Os modelos Claude atuais da Anthropic e os modelos de raciocínio da OpenAI recusam valores fora do padrão de imediato, e entre os que aceitam, o mesmo número significa coisas diferentes: temperatura 0,7 no Gemini 3.1 Pro não é a mesma coisa que 0,7 em um build local de Llama. Teste exatamente o modelo que você vai chamar.',
             '**Não testar execuções suficientes.** Uma saída na temperatura 0,5 pode ser um valor atípico. Execute pelo menos 3–5 vezes para ver o comportamento típico.',
             '**Definir a temperatura como 0 e esperar correção perfeita.** Temperatura baixa reduz a aleatoriedade, mas não elimina alucinações. Alucinações vêm de lacunas nos dados de treinamento, não da amostragem aleatória.',
             '**Ignorar completamente o top-p porque seu provedor o ignora.** Alguns modelos ignoram; outros não. Verifique a documentação para evitar perder tempo ajustando um controle desativado.',
@@ -1192,7 +1326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Por que um modelo ignora a minha configuração de temperatura?',
-              a: 'Alguns modelos limitam ou desativam temperatura e top-p em determinadas configurações (por exemplo, a OpenAI ignora o top-p se a temperatura estiver definida como 0,0). Verifique a documentação do seu provedor. Com a visão multi-modelo do PromptQuorum, você percebe isso na hora.',
+              a: 'Normalmente ele não está ignorando: está recusando. Os modelos Claude atuais da Anthropic e os modelos de raciocínio da OpenAI retornam erro 400 quando a temperatura ou o top-p saem do padrão, e algumas configurações mais antigas limitam silenciosamente um parâmetro quando o outro é definido de forma explícita. Verifique a documentação do seu provedor e leia uma requisição que falhou como recusa, não como um ajuste sem efeito.',
             },
             {
               q: 'Posso definir a temperatura como 0 para garantir a correção?',
@@ -1204,12 +1338,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'As configurações recomendadas mudam entre GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro?',
-              a: 'Um pouco. Os três se comportam de forma razoável em temperatura 0,5–0,7, mas a tolerância a temperaturas mais altas varia. O GPT-5.6 consegue ir mais alto sem ficar incoerente; o Claude Opus 5 é muito estável; o Gemini 3.1 Pro é mais experimental. Teste seu modelo real.',
+              a: 'Mais do que um pouco: um deles não aceita mais o ajuste. O Claude Opus 5 (assim como o Claude Sonnet 5 e o Claude Fable 5) rejeita de imediato qualquer temperatura ou top-p fora do padrão. O Gemini 3.1 Pro continua expondo os dois via generationConfig e se comporta bem entre 0,5 e 0,7. O GPT-5.6 aceita a faixa completa nos endpoints sem raciocínio, mas recusa valores fora do padrão em modo de raciocínio. Teste exatamente o modelo e o modo que você vai chamar.',
             },
             {
               q: 'Quantas execuções eu preciso para comparar configurações de forma justa?',
               a: 'Pelo menos 3–5 por configuração para ver o comportamento típico. Mais, se você estiver trabalhando com temperaturas mais altas, onde a variância da saída é maior. O recurso de múltiplas execuções do PromptQuorum lida com isso automaticamente em todos os modelos.',
             },
+            { q: 'O que eu faço se o meu modelo recusar o parâmetro de temperatura?', a: 'Direcione pelo prompt. Onde você teria baixado a temperatura, peça uma única resposta canônica em um formato de saída exato; onde a teria aumentado, peça explicitamente várias alternativas bem distintas. Se o provedor oferecer um controle de esforço de raciocínio, é esse ajuste que substitui a temperatura. Os modelos Claude atuais da Anthropic e os modelos de raciocínio da OpenAI retornam erro em vez de ignorar o valor em silêncio.' },
           ],
         },
 
@@ -1223,9 +1358,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         sources: {
           content: [
-            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) — documentação oficial sobre faixas de parâmetros e seus efeitos',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) — faixas e valores padrão oficiais de temperature e top_p',
             '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — pesquisa sobre nucleus sampling (top-p) e seus efeitos na qualidade do texto',
-            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) — orientação específica do Claude sobre temperatura e ajuste de parâmetros',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) — lista os modelos Claude que recusam valores fora do padrão de temperature, top_p e top_k',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) — configuração de geração do Gemini, incluindo temperature',
           ],
         },
       },
@@ -1239,6 +1375,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'La température et le top-p contrôlent comment une IA fait des choix de mots aventureux ou conservateurs. En réglant ces paramètres, tu fais un compromis entre créativité et fiabilité — les valeurs élevées produisent des sorties surprenantes et variées ; les valeurs basses produisent des sorties sûres et prévisibles.',
       metaDescription: 'Maîtrisez la température et les paramètres top-p. Équilibrez créativité vs précision pour le codage, résumés, brainstorming. Avec ChatGPT, Claude, Gemini.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       readTime: '10 min de lecture',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Échantillonnage par température et top-p',
@@ -1288,6 +1425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**La plupart des utilisateurs doivent régler l\'un et garder l\'autre par défaut.** Ajuster les deux à la fois rend impossible de savoir quel paramètre a aidé.',
             '**La conception de prompt importe toujours plus que les paramètres.** Corrige d\'abord les instructions vagues, puis ajuste les paramètres si nécessaire.',
             '**Différents cas d\'usage nécessitent différents paramètres :** le code demande une température basse, le brainstorming récompense les valeurs supérieures.',
+            '**Vérifie que le curseur existe avant de le régler :** les modèles Claude actuels d’Anthropic et les modèles de raisonnement d’OpenAI refusent avec une erreur toute température ou tout top-p non par défaut.',
           ],
         },
         promptExample: {
@@ -1320,7 +1458,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toppBehavior: {
-          content: '**Effets Top-P :** Bas (0.1–0.3) crée des ensembles d\'options très étroits et une sortie très conservatrice. Moyen (0.5–0.7) équilibre la diversité et la stabilité. Haut (0.8–1.0) élargit l\'ensemble d\'options et encourage la créativité, similaire à une température élevée. **Important :** De nombreux fournisseurs lient ou limitent ces paramètres. Les modèles GPT d\'OpenAI ignorent souvent top-p si la température est définie explicitement. Claude te laisse contrôler les deux indépendamment. Vérifie toujours la documentation de ton fournisseur — les mêmes chiffres ne signifient pas la même chose sur tous les modèles.',
+          content: '**Effets Top-P :** Bas (0.1–0.3) crée des ensembles d\'options très étroits et une sortie très conservatrice. Moyen (0.5–0.7) équilibre la diversité et la stabilité. Haut (0.8–1.0) élargit l\'ensemble d\'options et encourage la créativité, similaire à une température élevée. **Important :** De nombreux fournisseurs lient ou limitent ces paramètres. Les modèles GPT d\'OpenAI ignorent souvent top-p si la température est définie explicitement. Sur les modèles Anthropic actuels, les deux paramètres sont au contraire verrouillés sur leurs valeurs par défaut (voir plus bas). Vérifie toujours la documentation de ton fournisseur — les mêmes chiffres ne signifient pas la même chose sur tous les modèles.',
+        },
+
+        providerLimits: {
+          title: 'Tous les modèles n’acceptent plus une valeur de température',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Plusieurs modèles de pointe refusent désormais avec une erreur toute valeur de température ou de top-p autre que celle par défaut : vérifie d’abord que le paramètre existe encore.' },
+            { type: 'in-plain-terms', text: 'Sur certains des modèles les plus récents, les curseurs ont disparu. Si ta requête échoue, le paramètre a été refusé, pas ignoré.' },
+          ],
+          content: [
+            '**De plus en plus de modèles de pointe n’acceptent plus aucune valeur de température ou de top-p : ils renvoient une erreur au lieu d’une sortie ajustée.** Les modèles en mode raisonnement construisent leur réponse en plusieurs tours internes de rédaction et de vérification, et les fournisseurs verrouillent les paramètres d’échantillonnage pour que ce processus reste calibré. Vérifie que le curseur existe encore sur le modèle que tu appelles avant d’y consacrer du temps.',
+            '**Anthropic :** sur Claude Opus 5, Claude Sonnet 5 et Claude Fable 5 (ainsi que sur Claude Opus 4.7 et 4.8), une valeur de temperature, top_p ou top_k différente de la valeur par défaut renvoie une erreur 400 à chaque requête, et pas seulement lorsque le raisonnement est activé. Sur les modèles Claude plus anciens, la restriction ne s’applique que pendant le raisonnement, où top_p est accepté entre 0.95 et 1.0.',
+            '**OpenAI :** la famille GPT-5 en mode raisonnement refuse les valeurs non par défaut avec « Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported ». Les points de terminaison sans raisonnement acceptent toujours toute la plage 0–2.',
+            '**Google :** Gemini expose toujours temperature et topP via generationConfig ; les plages de ce guide s’appliquent donc directement aux modèles Gemini.',
+            '**Modèles locaux :** Ollama, LM Studio et llama.cpp exposent les deux paramètres sur tous les modèles, sans verrou côté fournisseur. Pour sentir la différence entre 0.2 et 0.9 sur le même prompt, un [modèle local](https://www.promptquorum.com/local-llms) est l’endroit le moins cher pour tester.',
+            'Quand les paramètres sont verrouillés, tu pilotes par le prompt : demande une réponse unique et canonique dans un format de sortie exact là où tu aurais baissé la température, et demande explicitement plusieurs variantes nettement différentes là où tu l’aurais montée. Si le fournisseur propose un contrôle de l’effort de raisonnement, c’est ce réglage qui remplace désormais la température.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Un refus n’est pas une absence d’effet',
+              text: 'Une requête refusée se lit facilement comme « le réglage n’a rien changé ». Une erreur 400 signifie que le paramètre a été rejeté : l’exécution n’a jamais eu lieu avec ta valeur.'
+            }
+          ],
         },
         tradeoff: {
           title: 'Température vs Top-P : As-tu besoin des deux ?',
@@ -1377,7 +1538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment PromptQuorum t\'aide à ajuster la température et le Top-P',
           content: [
             'Normalement, tester les paramètres de température et top-p signifie exécuter le même prompt plusieurs fois sur plusieurs modèles, enregistrer manuellement les sorties et comparer — fastidieux et difficile à suivre. PromptQuorum rationalise ce workflow.',
-            '**Comparaisons multi-modèles :** Envoie un prompt à différents paramètres de température/top-p sur 25+ modèles (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, Mistral, modèles locaux Ollama) en une seule expédition. Vois instantanément quel modèle reste stable à une température plus élevée et quel modèle offre le meilleur résultat créatif à ton paramètre cible.',
+            '**Comparaisons multi-modèles :** Envoie un prompt à différents paramètres de température/top-p sur les 25+ modèles qui les acceptent (Gemini 3.1 Pro, les points de terminaison GPT-5.6 sans raisonnement, Mistral, modèles locaux Ollama) en une seule expédition. Vois instantanément quel modèle reste stable à une température plus élevée et quel modèle offre le meilleur résultat créatif à ton paramètre cible.',
             '**Structure basée sur un framework :** Les frameworks de PromptQuorum s\'assurent que tes instructions, format et contraintes sont bien structurés avant de toucher des curseurs. Cela isole l\'effet de la température/top-p d\'autres variables — tu ne mélanges pas un mauvais prompt avec l\'ajustement des paramètres.',
             '**Consensus et notation :** Affiche tous les résultats côte à côte avec une analyse Quorum qui note le risque d\'hallucination, la cohérence de style et la pertinence. Choisis la combinaison modèle + paramètres qui correspond le mieux au compromis créativité-fiabilité de ta tâche.',
             '**Recommandations de température automatiques :** PromptQuorum analyse ta description de tâche et ta structure de prompt, puis suggère des plages de température optimales basées sur ton cas d\'utilisation (codage, résumé, brainstorming, etc.). Disponible à la fois dans l\'application et l\'extension Chrome, PromptQuorum propose des valeurs de température au-delà des défauts standards, adaptées à ta tâche spécifique et aux modèles que tu utilises. Au lieu de deviner « devrais-je utiliser 0.2 ou 0.7 ? », l\'outil recommande des valeurs concrètes basées sur l\'analyse des tâches — t\'aidant à ignorer essai-erreur manuel.',
@@ -1403,7 +1564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Augmenter les deux au maximum et s\'attendre à la fiabilité.** Température haute + top-p élevé = aléatoire maximum. Ne fais ceci que si tu fais du brainstorming ou de l\'expérimentation.',
             '**Changer les deux curseurs à la fois.** Tu ne saura pas quel paramètre a aidé ou nui. Change un, observe, puis change l\'autre si nécessaire.',
             '**Essayer de corriger un mauvais prompt avec des curseurs.** Une instruction vague à n\'importe quelle température produit quand même une mauvaise sortie. Corrige d\'abord le prompt.',
-            '**Oublier que les modèles interprètent les mêmes valeurs différemment.** La température 0.7 sur Claude se sent différente de 0.7 sur GPT-5.6. Teste toujours ton modèle réel.',
+            '**Supposer que tous les modèles ont encore un curseur de température.** Les modèles Claude actuels d’Anthropic et les modèles de raisonnement d’OpenAI refusent catégoriquement les valeurs non par défaut, et parmi ceux qui les acceptent, le même chiffre ne veut pas dire la même chose : une température de 0.7 sur Gemini 3.1 Pro ne ressemble pas à 0.7 sur une build Llama locale. Teste exactement le modèle que tu appelles.',
             '**Ne pas tester assez de courses.** Une sortie à température 0.5 pourrait être une valeur aberrante. Exécute au moins 3–5 fois pour voir le comportement typique.',
             '**Définir la température à 0 et s\'attendre à une correction parfaite.** La température basse réduit l\'aléatoire mais ne supprime pas les hallucinations. Les hallucinations proviennent de lacunes dans les données d\'entraînement, pas d\'échantillonnage aléatoire.',
             '**Ignorer complètement parce que ton fournisseur l\'ignore.** Certains modèles le font ; d\'autres non. Vérifie la documentation pour éviter de gaspiller du temps à ajuster un curseur désactivé.',
@@ -1424,11 +1585,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: {
           faqs: [
             { q: 'Dois-je d\'abord ajuster la température ou le top-p ?', a: 'La température. Il a un effet plus évident. Garde top-p par défaut (0.9–1.0) jusqu\'à ce que tu aies une idée de ce que la température fait pour ta tâche, puis affine uniquement le top-p si nécessaire.' },
-            { q: 'Pourquoi un modèle ignore-t-il mon paramètre de température ?', a: 'Certains modèles limitent ou désactivent la température et le top-p dans certaines configurations (par ex. OpenAI ignore top-p si la température est définie à 0.0). Vérifie la documentation de ton fournisseur. Avec la vue multi-modèle de PromptQuorum, tu verras ceci immédiatement.' },
+            { q: 'Pourquoi un modèle ignore-t-il mon paramètre de température ?', a: 'En général, il ne l’ignore pas : il le refuse. Les modèles Claude actuels d’Anthropic et les modèles de raisonnement d’OpenAI renvoient une erreur 400 dès que la température ou le top-p s’écarte de la valeur par défaut, et certaines configurations plus anciennes plafonnent silencieusement un paramètre quand l’autre est défini explicitement. Vérifie la documentation de ton fournisseur et lis une requête en échec comme un refus, pas comme un réglage sans effet.' },
             { q: 'Puis-je définir la température à 0 pour une correction garantie ?', a: 'Non. Température 0.0 signifie « choisissez toujours le mot le plus probable », ce qui est quasi déterministe mais pas toujours correct. Les hallucinations concernent les lacunes des données d\'entraînement et l\'ambiguïté des tâches, pas l\'échantillonnage aléatoire. Combine une température basse avec des prompts clairs et un grounding pour une meilleure fiabilité.' },
             { q: 'Pourquoi je vois toujours les hallucinations à basse température ?', a: 'Les hallucinations se produisent quand les données d\'entraînement du modèle ont des lacunes ou quand la tâche est ambiguë — pas seulement à cause de l\'échantillonnage aléatoire. Un paramètre de basse température sera cohérent à propos de ses hallucinations, mais ne les éliminera pas. Utilise RAG ou des contraintes de source explicites pour les réduire.' },
-            { q: 'Les paramètres recommandés diffèrent-ils entre GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro ?', a: 'Légèrement. Tous les trois se comportent raisonnablement à température 0.5–0.7, mais leur tolérance aux températures plus élevées varie. GPT-5.6 peut aller plus haut sans devenir incohérent ; Claude Opus 5 est très stable ; Gemini 3.1 Pro est plus expérimental. Teste ton modèle réel.' },
+            { q: 'Les paramètres recommandés diffèrent-ils entre GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro ?', a: 'Plus que légèrement : l’un des trois n’accepte tout simplement plus le réglage. Claude Opus 5 (comme Claude Sonnet 5 et Claude Fable 5) refuse catégoriquement toute température ou tout top-p non par défaut. Gemini 3.1 Pro expose toujours les deux via generationConfig et se comporte bien entre 0.5 et 0.7. GPT-5.6 accepte toute la plage sur ses points de terminaison sans raisonnement, mais refuse les valeurs non par défaut en mode raisonnement. Teste exactement le modèle et le mode que tu appelles.' },
             { q: 'Combien de courses ai-je besoin pour comparer les paramètres équitablement ?', a: 'Au moins 3–5 par paramètre pour voir le comportement typique. Plus si tu travailles avec des températures plus élevées où la variance de sortie est élevée. La fonction multi-run de PromptQuorum gère ceci automatiquement sur tous les modèles.' },
+            { q: 'Que faire si mon modèle refuse le paramètre de température ?', a: 'Pilote par le prompt. Là où tu aurais baissé la température, demande une réponse unique et canonique dans un format de sortie exact ; là où tu l’aurais montée, demande explicitement plusieurs variantes nettement différentes. Si le fournisseur expose un contrôle de l’effort de raisonnement, c’est ce réglage qui remplace la température. Les modèles Claude actuels d’Anthropic et les modèles de raisonnement d’OpenAI renvoient une erreur au lieu d’ignorer silencieusement la valeur.' },
           ],
         },
         relatedReading: {
@@ -1440,9 +1602,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         sources: {
           content: [
-            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) – documentation officielle sur les plages de paramètres et les effets',
-            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) – recherche sur l\'échantillonnage nucléaire (top-p) et ses effets sur la qualité du texte',
-            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) – conseils spécifiques à Claude sur l\'ajustement de la température et des paramètres',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) – plages et valeurs par défaut officielles de temperature et top_p',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) – recherche sur l’échantillonnage nucléaire (top-p) et ses effets sur la qualité du texte',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) – liste les modèles Claude qui refusent les valeurs non par défaut de temperature, top_p et top_k',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) – configuration de génération de Gemini, dont temperature',
           ],
         },
       },
@@ -1456,6 +1619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '温度とTop-Pは、AIモデルがどの程度冒険的または保守的な単語選択をするかを制御します。これらの設定を調整することで、創造性と信頼性のバランスを取ることができます。高い値は驚くべき多様な出力を生成し、低い値は安全で予測可能な出力を生成します。',
       metaDescription: '温度は0.0〜2.0でAI出力のランダム性を制御し、Top-Pは0.1〜1.0で語彙選択の幅を調整します。コードには低温度（0.1〜0.3）、ブレーンストーミングには高温度（0.8以上）を推奨します。GPT-5.6、Claude Opus 5、Gemini 3.1 Proで確認済みの設定値を提供します。',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       readTime: '10分で読める',
       educationalLevel: 'Intermediate',
       primaryTerm: '温度とTop-Pサンプリング',
@@ -1505,6 +1669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ほとんどのユーザーは1つを調整し、もう1つをデフォルトのままにすべきです。** 両方同時に調整するとどちらが効果を生み出したか知ることができません。',
             '**プロンプト設計はスライダー設定よりも常に重要です。** まず曖昧な指示を修正し、必要に応じてパラメータを調整してください。',
             '**異なるユースケースは異なる設定が必要です：** コードは低い温度を必要とし、ブレーンストーミングはより高い値から利益を得ます。',
+            '**調整する前に、つまみが残っているかを確認する：** Anthropicの現行Claudeモデルと OpenAIの推論モデルは、既定値以外の温度・Top-Pをエラーで拒否します。',
           ],
         },
         promptExample: {
@@ -1537,7 +1702,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toppBehavior: {
-          content: '**Top-Pの効果：** 低い（0.1–0.3）は非常に狭いオプションセットと非常に保守的な出力を作成します。中程度（0.5–0.7）は多様性と安定性のバランスを取ります。高い（0.8–1.0）はオプションセットを広げ、高温度に似た創造性を促進します。**重要：** 多くのプロバイダーはこれらの設定をリンクまたは制限しています。OpenAIのGPTモデルは、温度が明示的に設定されている場合、しばしばTop-Pを無視します。Claudeはあなたが両方を独立して制御することを許可します。常にあなたのプロバイダーのドキュメンテーションをチェックしてください—同じ数字はすべてのモデル間で同じ意味ではありません。',
+          content: '**Top-Pの効果：** 低い（0.1–0.3）は非常に狭いオプションセットと非常に保守的な出力を作成します。中程度（0.5–0.7）は多様性と安定性のバランスを取ります。高い（0.8–1.0）はオプションセットを広げ、高温度に似た創造性を促進します。**重要：** 多くのプロバイダーはこれらの設定をリンクまたは制限しています。OpenAIのGPTモデルは、温度が明示的に設定されている場合、しばしばTop-Pを無視します。一方、Anthropicの現行モデルでは両方のパラメータが既定値に完全に固定されています（後述）。常にあなたのプロバイダーのドキュメンテーションをチェックしてください—同じ数字はすべてのモデル間で同じ意味ではありません。',
+        },
+
+        providerLimits: {
+          title: 'すべてのモデルが温度値を受け付けるわけではありません',
+          snippets: [
+            { type: 'in-one-sentence', text: '複数のフロンティアモデルは既定値以外の温度・Top-Pをエラーで拒否するようになったため、まずパラメータが残っているかを確認してください。' },
+            { type: 'in-plain-terms', text: '最新のモデルの一部では、つまみ自体がなくなっています。リクエストが失敗した場合、設定は無視されたのではなく拒否されています。' },
+          ],
+          content: [
+            '**温度やTop-Pの値をまったく受け付けないフロンティアモデルが増えています。調整された出力ではなく、エラーが返ります。** 推論モードのモデルは、内部で下書きと検証を何度も繰り返して回答を組み立てるため、その工程の較正を保つ目的でプロバイダーがサンプリングパラメータを固定しています。調整に時間をかける前に、呼び出すモデルにつまみが残っているかを確認してください。',
+            '**Anthropic：** Claude Opus 5、Claude Sonnet 5、Claude Fable 5（およびClaude Opus 4.7と4.8）では、既定値以外のtemperature、top_p、top_kはすべてのリクエストで400エラーになります。思考が有効なときだけではありません。それ以前のClaudeモデルでは、この制限は思考が有効な間だけ適用され、その場合のtop_pは0.95〜1.0の範囲で受け付けられます。',
+            '**OpenAI：** 推論モードのGPT-5ファミリーは、既定値以外を「Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported.」というエラーで拒否します。推論を使わないエンドポイントは、引き続き0〜2の全範囲を受け付けます。',
+            '**Google：** Geminiは引き続きgenerationConfig経由でtemperatureとtopPを公開しているため、本ガイドの数値範囲はGeminiモデルにそのまま当てはまります。',
+            '**ローカルモデル：** Ollama、LM Studio、llama.cppはどのモデルでも両方のパラメータを公開しており、プロバイダー側のロックはありません。同じプロンプトで0.2と0.9の違いを体感したいなら、[ローカルモデル](https://www.promptquorum.com/local-llms)が最も安価な検証環境です。',
+            'パラメータが固定されている場合は、プロンプトで制御します。温度を下げたい場面では、出力形式を厳密に指定して唯一の確定的な回答を求めます。温度を上げたい場面では、明確に異なる複数の案を明示的に要求します。プロバイダーが推論の強度を指定できる場合は、それが温度に代わる設定です。',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '拒否は「効果なし」ではありません',
+              text: '拒否されたリクエストは「設定が効かなかった」と誤読されがちです。400エラーはパラメータが拒否されたという意味であり、指定した値での実行自体が行われていません。'
+            }
+          ],
         },
         tradeoff: {
           title: '温度対Top-P：両方が必要ですか？',
@@ -1594,7 +1782,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'PromptQuorumが温度とTop-Pの調整を支援する方法',
           content: [
             '通常、温度とTop-Pの設定をテストすることは、複数のモデル全体で同じプロンプトを何度も実行し、出力を手動で記録して比較することを意味します—時間がかかり、追跡が困難です。PromptQuorumはこのワークフローを効率化します。',
-            '**マルチモデル比較：** 1つのプロンプトを異なる温度/Top-P設定で25以上のモデル（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral、ローカルOllamaモデル）に送信します。どのモデルが高温度でも安定しているか、ターゲット設定で最適な創造的出力を提供するかをすぐに確認できます。',
+            '**マルチモデル比較：** 1つのプロンプトを異なる温度/Top-P設定でパラメータを受け付ける25以上のモデル（Gemini 3.1 Pro、推論を使わないGPT-5.6のエンドポイント、Mistral、ローカルOllamaモデル）に送信します。どのモデルが高温度でも安定しているか、ターゲット設定で最適な創造的出力を提供するかをすぐに確認できます。',
             '**フレームワークベースの構造：** PromptQuorumのフレームワークは、スライダーに触れる前に、指示、フォーマット、制約が適切に構成されていることを確認します。これにより、温度/Top-Pの効果が他の変数から分離されます。悪いプロンプトとパラメータ調整を混ぜていません。',
             '**コンセンサスと採点：** Quorum分析で幻覚リスク、スタイル一貫性、関連性をスコアリングしながら、すべての出力を並べて表示します。タスクの創造性と信頼性のトレードオフに最適なモデル+設定の組み合わせを選択します。',
             '**自動温度推奨：** PromptQuorumはタスク説明とプロンプト構造を分析し、ユースケース（コーディング、要約、ブレーンストーミング等）に基づいて最適な温度範囲を提案します。アプリとChromeエクステンションの両方で利用でき、PromptQuorumは標準デフォルトを超えた温度値を提案し、特定のタスクと使用しているモデルに合わせています。「0.2または0.7を使用すべきか？」と推測する代わりに、ツールはタスク分析に基づいて具体的な値を推奨します—手動のトライアルアンドエラーをスキップするのに役立ちます。',
@@ -1620,7 +1808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**両方を最大に上げて信頼性を期待します。** 高い温度+高いTop-P=最大無作為性。ブレーンストーミングまたは実験をしているときだけこれをしてください。',
             '**同時に両方のノブを変更します。** どちらの設定が役立つまたは傷つけたかはわかりません。1つを変更し、観察し、必要に応じてもう1つを変更します。',
             '**スライダーで悪いプロンプトを修正しようとしてください。** 曖昧な指示はあらゆる温度で依然として悪い出力を生成します。最初にプロンプトを修正してください。',
-            '**モデルが同じ値を異なる方法で解釈することを忘れます。** Claudeの温度0.7はGPT-5.6の0.7とは異なります。常に実際のモデルをテストしてください。',
+            '**どのモデルにも温度のつまみがまだあると思い込む。** Anthropicの現行Claudeモデルと OpenAIの推論モデルは既定値以外を明確に拒否します。受け付けるモデル同士でも同じ数値の意味は異なり、Gemini 3.1 Proの温度0.7はローカルのLlamaビルドの0.7とは別物です。実際に呼び出すモデルをそのままテストしてください。',
             '**十分な実行をテストしません。** 温度0.5での1つの出力は外れ値かもしれません。典型的な動作を見るために少なくとも3～5回実行してください。',
             '**温度を0に設定し、完璧な正確性を期待します。** 低い温度は無作為性を減らしますが、幻覚を排除しません。幻覚は無作為なサンプリングからではなく、トレーニングデータギャップから来ます。',
             '**プロバイダーが無視するため完全に無視します。** 一部のモデルはそうしますが、そうではないものもあります。ドキュメントをチェックして、無効になっているノブを調整するための時間を無駄にしないでください。',
@@ -1641,11 +1829,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: {
           faqs: [
             { q: 'まず温度またはTop-Pを調整すべきですか？', a: '温度。より明らかな効果があります。タスクが温度を実行するかについて感覚を得るまでTop-Pをデフォルト（0.9–1.0）に保ち、必要に応じてのみTop-Pを微調整します。' },
-            { q: '1つのモデルがなぜ温度設定を無視しますか？', a: '一部のモデルは特定の構成で温度とTop-Pを制限または無効にします（例えばOpenAIは温度が0.0に設定されている場合Top-Pを無視します）。プロバイダーのドキュメンテーションをチェックしてください。PromptQuorumのマルチモデルビューを使用すれば、これはすぐに見えます。' },
+            { q: '1つのモデルがなぜ温度設定を無視しますか？', a: '多くの場合、無視しているのではなく拒否しています。Anthropicの現行Claudeモデルと OpenAIの推論モデルは、温度やTop-Pが既定値と異なると400エラーを返します。古い構成では、一方を明示的に設定するともう一方が黙って制限されることもあります。プロバイダーのドキュメントを確認し、失敗したリクエストは「効果がなかった設定」ではなく「拒否」として読んでください。' },
             { q: '保証された正確性のために温度を0に設定できますか？', a: 'いいえ。温度0.0は「常に最も可能性の高い単語を選ぶ」を意味し、これはほぼ決定的ですが、常に正確とは限りません。幻覚は無作為なサンプリングではなく、トレーニングデータギャップとタスク曖昧性についてです。より良い信頼性のために低い温度を明確なプロンプトとグラウンドと組み合わせます。' },
             { q: 'なぜ低い温度でまだ幻覚が見られますか？', a: 'モデルのトレーニングデータにギャップがあるか、タスクが曖昧な場合、幻覚は発生します—無作為サンプリングだけではなく。低温設定は幻覚に関して一貫性がありますが、それらを排除しません。RAGまたは明示的なソース制約を使用してそれらを減らします。' },
-            { q: 'GPT-5.6、Claude Opus 5、Gemini 3.1 Proで推奨設定が異なりますか？', a: 'わずかに。すべて3つは温度0.5–0.7で妥当に振舞いますが、高い温度の公差は異なります。GPT-5.6はより高くなっても無意味にならずに行くことができます；Claude Opus 5は非常に安定しています；Gemini 3.1 Proはより実験的です。実際のモデルをテストしてください。' },
+            { q: 'GPT-5.6、Claude Opus 5、Gemini 3.1 Proで推奨設定が異なりますか？', a: '「わずかに」どころではありません。3つのうち1つはもう設定自体を受け付けません。Claude Opus 5（Claude Sonnet 5とClaude Fable 5も同様）は、既定値以外の温度やTop-Pを一切拒否します。Gemini 3.1 ProはgenerationConfig経由で両方を公開しており、0.5〜0.7では素直に動作します。GPT-5.6は推論を使わないエンドポイントでは全範囲を受け付けますが、推論モードでは既定値以外を拒否します。実際に呼び出すモデルとモードをそのままテストしてください。' },
             { q: '設定を公平に比較するのに何回実行が必要ですか？', a: '典型的な動作を見るために、設定あたり少なくとも3～5。出力分散が高い高い温度で作業する場合はさらに多く。PromptQuorumのマルチラン機能はこれをすべてのモデルで自動的に処理します。' },
+            { q: 'モデルが温度パラメータを拒否する場合はどうすればよいですか？', a: '代わりにプロンプトで制御します。温度を下げたい場面では、出力形式を厳密に指定して唯一の確定的な回答を求めます。温度を上げたい場面では、明確に異なる複数の案を明示的に要求します。プロバイダーが推論の強度を指定できる場合は、それが温度に代わる設定です。Anthropicの現行Claudeモデルと OpenAIの推論モデルは、値を黙って無視するのではなくエラーを返します。' },
           ],
         },
         relatedReading: {
@@ -1657,9 +1846,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         sources: {
           content: [
-            '[OpenAI、2024。「APIリファレンス：温度とTop_Pパラメータ」](https://platform.openai.com/docs/api-reference/chat/create) – パラメータ範囲と効果に関する公式ドキュメンテーション',
-            '[Holtzman等、2020。「ニューラルテキスト縮退の好奇なケース」](https://arxiv.org/abs/1904.09751) – 核サンプリング（Top-P）とテキスト品質への影響に関する研究',
-            '[Anthropic、2024。「Claude：プロンプトで作業する方法」](https://docs.anthropic.com/) – 温度とパラメータ調整に関するClaudeの専用ガイダンス',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) – temperatureとtop_pの公式なパラメータ範囲と既定値',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) – 核サンプリング（Top-P）とテキスト品質への影響に関する研究',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) – 既定値以外のtemperature、top_p、top_kを拒否するClaudeモデルの一覧',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) – temperatureを含むGeminiの生成設定',
           ],
         },
       },
@@ -1673,6 +1863,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '温度和Top-P控制AI模型在选择单词时的冒险程度或保守程度。通过调整这些设置，您可以在创造力和可靠性之间权衡——更高的值产生令人惊讶的多样化输出；较低的值产生安全的、可预测的输出。',
       metaDescription: '温度参数范围0至2控制AI输出的随机程度，Top-P参数范围0.1至1.0决定模型考虑的词汇选项范围。代码生成推荐低温度（0.1至0.3），头脑风暴推荐高温度（0.8以上）。GPT-5.6、Claude Opus 5和Gemini 3.1 Pro均已完整验证以上参数设置效果。',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       readTime: '阅读约10分钟',
       educationalLevel: 'Intermediate',
       primaryTerm: '温度与Top-P采样',
@@ -1722,6 +1913,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**大多数用户应该调整一个参数，保持另一个为默认值。** 同时调整两个会使不知道哪个设置有效。',
             '**提示设计总比滑块设置更重要。** 先修复模糊的说明，然后在必要时调整参数。',
             '**不同的用例需要不同的设置：** 代码需要低温度，头脑风暴从较高值中获益。',
+            '**调参之前先确认旋钮是否还在：** Anthropic 当前的 Claude 模型和 OpenAI 的推理模型会以错误拒绝任何非默认的温度或 Top-P 值。',
           ],
         },
         promptExample: {
@@ -1754,7 +1946,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toppBehavior: {
-          content: '**Top-P效果：** 低（0.1–0.3）创建非常狭隘的选项集和高度保守的输出。中等（0.5–0.7）平衡多样性和稳定性。高（0.8–1.0）扩展选项集并鼓励创意，类似于高温度。**重要：** 许多提供商链接或限制这些设置。OpenAI的GPT模型在明确设置温度时经常忽略Top-P。Claude允许您独立控制两者。始终检查您提供商的文档——相同的数字在所有模型中的含义不同。',
+          content: '**Top-P效果：** 低（0.1–0.3）创建非常狭隘的选项集和高度保守的输出。中等（0.5–0.7）平衡多样性和稳定性。高（0.8–1.0）扩展选项集并鼓励创意，类似于高温度。**重要：** 许多提供商链接或限制这些设置。OpenAI的GPT模型在明确设置温度时经常忽略Top-P。而在 Anthropic 的当前模型上，这两个参数被完全锁定为默认值（见下文）。始终检查您提供商的文档——相同的数字在所有模型中的含义不同。',
+        },
+
+        providerLimits: {
+          title: '并非所有模型仍然接受温度值',
+          snippets: [
+            { type: 'in-one-sentence', text: '多个前沿模型现在会以错误拒绝任何非默认的温度或 Top-P 值，因此请先确认该参数是否还存在。' },
+            { type: 'in-plain-terms', text: '在部分最新模型上，这些旋钮已经消失。如果请求失败，说明设置被拒绝了，而不是被忽略了。' },
+          ],
+          content: [
+            '**越来越多的前沿模型完全不再接受温度或 Top-P 值——它们返回错误，而不是调整后的输出。** 推理模式的模型会在内部经过多轮起草与校验来构建回答，提供商锁定采样参数以保持该过程的校准。在花时间调参之前，先确认你要调用的模型上这个旋钮是否还存在。',
+            '**Anthropic：** 在 Claude Opus 5、Claude Sonnet 5 和 Claude Fable 5（以及 Claude Opus 4.7 和 4.8）上，非默认的 temperature、top_p 或 top_k 会让每一次请求都返回 400 错误——不仅仅是在开启思考时。在更早的 Claude 模型上，该限制只在思考开启期间生效，此时 top_p 可接受 0.95 到 1.0 之间的值。',
+            '**OpenAI：** 推理模式下的 GPT-5 系列会以“Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported.”拒绝非默认值。非推理端点仍然接受完整的 0–2 范围。',
+            '**Google：** Gemini 仍然通过 generationConfig 开放 temperature 和 topP，因此本指南中的取值范围可直接用于 Gemini 模型。',
+            '**本地模型：** Ollama、LM Studio 和 llama.cpp 在每个模型上都开放这两个参数，没有提供商侧的锁定。如果你想在同一个提示上感受 0.2 与 0.9 的差别，[本地模型](https://www.promptquorum.com/local-llms)是成本最低的试验场。',
+            '当参数被锁定时，改用提示来控制：在原本会调低温度的场景，要求以精确的输出格式给出唯一确定的答案；在原本会调高温度的场景，明确要求给出若干个明显不同的方案。如果提供商提供推理强度控制，那就是取代温度的那个设置。',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '被拒绝不等于没有效果',
+              text: '被拒绝的请求很容易被误读成“设置没起作用”。400 错误意味着参数被拒绝，也就是说这次运行根本没有按你设定的值执行。'
+            }
+          ],
         },
         tradeoff: {
           title: '温度与Top-P：需要两者吗？',
@@ -1811,7 +2026,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'PromptQuorum如何帮助您调整温度和Top-P',
           content: [
             '通常，测试温度和Top-P设置意味着在多个模型上多次运行相同的提示，手动记录输出并比较——耗时且难以跟踪。PromptQuorum简化了此工作流。',
-            '**多模型比较：** 在一次分发中跨25+个模型（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral、本地Ollama模型）发送一个不同温度/Top-P设置的提示。立即看到哪个模型在较高温度下保持稳定，哪个在您的目标设置下提供最佳创意输出。',
+            '**多模型比较：** 在一次分发中跨接受这些参数的 25+ 个模型（Gemini 3.1 Pro、GPT-5.6 的非推理端点、Mistral、本地 Ollama 模型）发送一个不同温度/Top-P设置的提示。立即看到哪个模型在较高温度下保持稳定，哪个在您的目标设置下提供最佳创意输出。',
             '**基于框架的结构：** PromptQuorum的框架在您接触任何滑块之前，确保您的指令、格式和约束得到充分结构化。这从其他变量中隔离温度/Top-P的效果——您不是在混合不良提示和参数调整。',
             '**共识和评分：** 使用幻觉风险、风格一致性和相关性评分的Quorum分析将所有输出并排查看。选择最适合您任务的创造力与可靠性权衡的模型+设置组合。',
             '**自动温度建议：** PromptQuorum分析您的任务描述和提示结构，然后根据您的用例（编码、摘要、头脑风暴等）建议最佳温度范围。在应用和Chrome扩展程序中可用，PromptQuorum提议超出标准默认值的温度值，针对您的特定任务和使用的模型进行定制。无需猜测"我应该使用0.2还是0.7？"，该工具根据任务分析建议具体值——帮助您跳过手动试错。',
@@ -1837,7 +2052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**将两者都调到最大并期望可靠性。** 高温度+高Top-P=最大随机性。只有在进行头脑风暴或实验时才这样做。',
             '**同时更改两个旋钮。** 您不会知道哪个设置产生了效果。更改一个、观察，然后根据需要更改另一个。',
             '**尝试用滑块修复不良提示。** 模糊的指令在任何温度下仍会产生不良输出。首先修复提示。',
-            '**忘记模型对相同值的解释不同。** Claude上的温度0.7与GPT-5.6上的0.7感觉不同。始终测试您的实际模型。',
+            '**以为每个模型都还有温度旋钮。** Anthropic 当前的 Claude 模型和 OpenAI 的推理模型会直接拒绝非默认值；而在接受它们的模型之间，同一个数字的含义也不同——Gemini 3.1 Pro 上的温度 0.7 与本地 Llama 构建上的 0.7 并不一样。请按你实际调用的模型来测试。',
             '**没有测试足够的运行。** 温度0.5下的一个输出可能是离群值。运行至少3–5次以查看典型行为。',
             '**将温度设置为0并期望完美正确性。** 低温度会降低随机性，但不会消除幻觉。幻觉来自训练数据差距，而不是随机抽样。',
             '**完全忽略，因为您的提供商忽略了它。** 一些模型这样做；有些则不。检查文档以避免浪费时间调整禁用的旋钮。',
@@ -1858,11 +2073,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: {
           faqs: [
             { q: '我应该先调整温度还是Top-P？', a: '温度。它有更明显的效果。保持Top-P为默认值（0.9–1.0），直到您感受到温度对您的任务的影响，然后仅在需要时微调Top-P。' },
-            { q: '为什么一个模型会忽略我的温度设置？', a: '某些模型在某些配置中限制或禁用温度和Top-P（例如，如果温度设置为0.0，OpenAI会忽略Top-P）。检查您提供商的文档。使用PromptQuorum的多模型视图，您会立即看到这一点。' },
+            { q: '为什么一个模型会忽略我的温度设置？', a: '多数情况下它不是在忽略，而是在拒绝。Anthropic 当前的 Claude 模型和 OpenAI 的推理模型在温度或 Top-P 非默认时会返回 400 错误；一些较早的配置则会在你显式设置其中一个参数时静默地限制另一个。查阅你的提供商文档，并把失败的请求读作拒绝，而不是“设置没起作用”。' },
             { q: '我可以将温度设置为0以获得保证的正确性吗？', a: '不能。温度0.0意味着"总是选择最有可能的单词"，这几乎是确定性的，但不总是正确的。幻觉是关于训练数据差距和任务歧义，而不是随机抽样。结合低温度与清晰的提示和基础以获得更好的可靠性。' },
             { q: '为什么我在低温度下仍然看到幻觉？', a: '当模型的训练数据有差距或任务有歧义时，幻觉就会发生——不仅仅是由于随机抽样。低温设置关于其幻觉是一致的，但不会消除它们。使用RAG或显式源约束来减少它们。' },
-            { q: 'GPT-5.6、Claude Opus 5和Gemini 3.1 Pro之间的推荐设置是否不同？', a: '略有不同。全部三个在温度0.5–0.7下表现合理，但对较高温度的容限不同。GPT-5.6可以走得更高而不变成不连贯；Claude Opus 5非常稳定；Gemini 3.1 Pro更多实验性。测试您的实际模型。' },
+            { q: 'GPT-5.6、Claude Opus 5和Gemini 3.1 Pro之间的推荐设置是否不同？', a: '不止是“略有不同”——其中一个已经完全不接受这个设置。Claude Opus 5（以及 Claude Sonnet 5 和 Claude Fable 5）会直接拒绝任何非默认的温度或 Top-P。Gemini 3.1 Pro 仍然通过 generationConfig 开放两者，在 0.5–0.7 之间表现稳妥。GPT-5.6 在非推理端点上接受完整范围，但在推理模式下拒绝非默认值。请按你实际调用的模型和模式来测试。' },
             { q: '公平地比较设置需要多少次运行？', a: '至少每个设置3–5次以查看典型行为。如果您在输出变异高的较高温度下工作，则更多。PromptQuorum的多运行功能会自动为所有模型处理此。' },
+            { q: '如果我的模型拒绝温度参数，该怎么办？', a: '改用提示来控制。在原本会调低温度的场景，要求以精确的输出格式给出唯一确定的答案；在原本会调高温度的场景，明确要求给出若干个明显不同的方案。如果提供商开放了推理强度控制，那就是取代温度的设置。Anthropic 当前的 Claude 模型和 OpenAI 的推理模型会返回错误，而不是默默忽略该值。' },
           ],
         },
         relatedReading: {
@@ -1874,9 +2090,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         sources: {
           content: [
-            '[OpenAI，2024。"API参考：温度和Top_P参数"](https://platform.openai.com/docs/api-reference/chat/create) – 关于参数范围和效果的官方文档',
-            '[Holtzman等，2020。"神经文本退化的奇异案例"](https://arxiv.org/abs/1904.09751) – 关于核抽样（Top-P）及其对文本质量影响的研究',
-            '[Anthropic，2024。"Claude：如何使用提示"](https://docs.anthropic.com/) – 有关温度和参数调整的Claude特定指导',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) — temperature 与 top_p 的官方参数范围和默认值',
+            '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — 关于核采样（Top-P）及其对文本质量影响的研究',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) — 列出拒绝非默认 temperature、top_p 和 top_k 的 Claude 模型',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) — Gemini 的生成配置，包括 temperature',
           ],
         },
       },
@@ -1888,8 +2105,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Temperature와 Top-P: AI 창의성 제어하기',
       intro: 'Temperature와 top-p는 AI의 단어 선택이 얼마나 모험적이거나 보수적인지를 제어합니다. 이 설정을 조정하면 창의성과 신뢰성 사이의 균형을 맞출 수 있습니다. 높은 값은 놀랍고 다양한 출력을 생성하고, 낮은 값은 안전하고 예측 가능한 출력을 생성합니다.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       seoTitle: 'Temperature & Top-P 2026: AI 창의성과 정확도 조정하기',
-      metaDescription: 'Temperature 0–2, Top-P 0.1–1.0: 코딩, 요약, 브레인스토밍에 맞게 AI 무작위성을 정밀하게 설정하세요. ChatGPT, Claude, Gemini에서 검증된 실용적인 범위.',
+      metaDescription: 'Temperature 0–2, Top-P 0.1–1.0: 코딩, 요약, 브레인스토밍에 맞게 AI 무작위성을 설정하고, 어떤 최신 모델이 사용자 지정 temperature를 거부하는지 확인하세요.',
       readTime: '10분 읽기',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Temperature 및 Top-P 샘플링',
@@ -1947,6 +2165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**대부분의 사용자는 하나만 조정하고 나머지는 기본값으로 유지해야 합니다.** 둘 다 동시에 조정하면 어떤 설정이 도움이 되었는지 알 수 없습니다.',
             '**프롬프트 설계가 슬라이더 설정보다 훨씬 중요합니다.** 먼저 모호한 지침을 수정하고, 그 후에 필요한 경우 파라미터를 조정하십시오.',
             '**사용 사례마다 다른 설정이 필요합니다:** 코딩은 낮은 temperature가 필요하고, 브레인스토밍은 높은 값이 도움이 됩니다.',
+            '**조정하기 전에 조절 장치가 남아 있는지 확인하십시오:** Anthropic의 현행 Claude 모델과 OpenAI의 추론 모델은 기본값이 아닌 temperature나 top-p를 오류로 거부합니다.',
           ],
         },
 
@@ -1984,9 +2203,32 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toppBehavior: {
-          content: '**Top-p 효과:** 낮음 (0.1–0.3)은 매우 좁은 선택지 집합과 매우 보수적인 출력을 생성합니다. 중간 (0.5–0.7)은 다양성과 안정성의 균형을 맞춥니다. 높음 (0.8–1.0)은 선택지 집합을 넓히고 창의성을 장려하며, 높은 temperature와 유사합니다. **중요:** 많은 제공업체가 이 설정을 연동하거나 제한합니다. OpenAI의 GPT 모델은 temperature를 명시적으로 설정하면 top-p를 무시하는 경우가 많습니다. Claude는 두 가지를 독립적으로 제어할 수 있습니다. 항상 제공업체의 문서를 확인하십시오—동일한 숫자가 모든 모델에서 동일한 의미를 갖지는 않습니다.',
+          content: '**Top-p 효과:** 낮음 (0.1–0.3)은 매우 좁은 선택지 집합과 매우 보수적인 출력을 생성합니다. 중간 (0.5–0.7)은 다양성과 안정성의 균형을 맞춥니다. 높음 (0.8–1.0)은 선택지 집합을 넓히고 창의성을 장려하며, 높은 temperature와 유사합니다. **중요:** 많은 제공업체가 이 설정을 연동하거나 제한합니다. OpenAI의 GPT 모델은 temperature를 명시적으로 설정하면 top-p를 무시하는 경우가 많습니다. 반면 Anthropic의 현행 모델에서는 두 파라미터가 모두 기본값으로 완전히 잠겨 있습니다(아래 참조). 항상 제공업체의 문서를 확인하십시오—동일한 숫자가 모든 모델에서 동일한 의미를 갖지는 않습니다.',
         },
 
+
+        providerLimits: {
+          title: '모든 모델이 여전히 temperature 값을 받아들이는 것은 아닙니다',
+          snippets: [
+            { type: 'in-one-sentence', text: '여러 프런티어 모델이 이제 기본값이 아닌 temperature나 top-p를 오류로 거부하므로, 파라미터가 아직 남아 있는지부터 확인하십시오.' },
+            { type: 'in-plain-terms', text: '최신 모델 중 일부에서는 조절 장치 자체가 사라졌습니다. 요청이 실패했다면 설정이 무시된 것이 아니라 거부된 것입니다.' },
+          ],
+          content: [
+            '**점점 더 많은 프런티어 모델이 temperature나 top-p 값을 아예 받아들이지 않습니다. 조정된 출력 대신 오류를 반환합니다.** 추론 모드 모델은 초안 작성과 검증을 여러 차례 내부적으로 거쳐 답변을 구성하며, 제공업체는 그 과정의 보정을 유지하기 위해 샘플링 파라미터를 잠급니다. 조정에 시간을 쓰기 전에 호출할 모델에 해당 조절 장치가 남아 있는지 확인하십시오.',
+            '**Anthropic:** Claude Opus 5, Claude Sonnet 5, Claude Fable 5(그리고 Claude Opus 4.7과 4.8)에서는 기본값이 아닌 temperature, top_p, top_k가 모든 요청에서 400 오류를 반환합니다. 사고 기능이 켜져 있을 때만이 아닙니다. 이전 Claude 모델에서는 이 제한이 사고가 활성화된 동안에만 적용되며, 이때 top_p는 0.95에서 1.0 사이에서 허용됩니다.',
+            '**OpenAI:** 추론 모드의 GPT-5 계열은 기본값이 아닌 값을 "Unsupported value: temperature does not support 0.2 with this model. Only the default (1) value is supported."라는 오류로 거부합니다. 추론을 쓰지 않는 엔드포인트는 여전히 0–2 전체 범위를 받아들입니다.',
+            '**Google:** Gemini는 여전히 generationConfig를 통해 temperature와 topP를 제공하므로, 이 가이드의 범위는 Gemini 모델에 그대로 적용됩니다.',
+            '**로컬 모델:** Ollama, LM Studio, llama.cpp는 모든 모델에서 두 파라미터를 제공하며 제공업체 측 잠금이 없습니다. 같은 프롬프트에서 0.2와 0.9의 차이를 직접 느껴 보고 싶다면 [로컬 모델](https://www.promptquorum.com/local-llms)이 가장 저렴한 실험 장소입니다.',
+            '파라미터가 잠겨 있을 때는 프롬프트로 방향을 잡습니다. temperature를 낮췄을 상황에서는 정확한 출력 형식으로 하나의 확정적인 답을 요구하고, 높였을 상황에서는 뚜렷이 다른 여러 대안을 명시적으로 요구하십시오. 제공업체가 추론 강도 조절을 제공한다면, 그것이 temperature를 대체한 설정입니다.',
+          ],
+          callouts: [
+            {
+              type: 'warning',
+              label: '거부는 무효과가 아닙니다',
+              text: '거부된 요청은 "설정이 아무 효과도 없었다"로 오해하기 쉽습니다. 400 오류는 파라미터가 거부되었다는 뜻이며, 지정한 값으로는 실행 자체가 이루어지지 않았습니다.'
+            }
+          ],
+        },
         tradeoff: {
           title: 'Temperature vs Top-P: 둘 다 필요합니까?',
           content: '**두 설정 모두 무작위성을 제어하지만, 대부분의 사용자는 하나만 조정하고 나머지는 합리적인 기본값으로 유지해야 합니다.** 둘 다 동시에 변경하면 어떤 설정이 원하는 효과를 생성했는지 알 수 없습니다. 수천 개의 프롬프트를 조정한 경험상: 특정 모델이 달리 권장하지 않는 한 top-p는 기본값(예: 0.9–1.0)으로 유지하고 temperature만 조정하십시오.',
@@ -2049,9 +2291,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorum: {
           title: 'PromptQuorum으로 Temperature와 Top-P 조정하기',
           content: [
-            '**PromptQuorum에서 테스트됨 — GPT-5.6와 Claude Opus 5에 걸쳐 temperature 0.2, 0.7, 1.2에서 60개의 창의적 글쓰기 프롬프트 실행:** 0.7에서는 60개 중 54개가 사용 가능한 첫 번째 초안을 생성했습니다. 1.2에서는 60개 중 31개가 환각된 세부 사항이나 깨진 구조를 생성했습니다. 0.2에서는 60개 중 58개가 정확했지만 블라인드 리뷰에서 평가자들이 "일반적"이라고 평가했습니다.',
+            '**PromptQuorum에서 테스트됨 — temperature 조절이 가능한 모델들에 걸쳐 0.2, 0.7, 1.2에서 60개의 창의적 글쓰기 프롬프트 실행:** 0.7에서는 60개 중 54개가 사용 가능한 첫 번째 초안을 생성했습니다. 1.2에서는 60개 중 31개가 환각된 세부 사항이나 깨진 구조를 생성했습니다. 0.2에서는 60개 중 58개가 정확했지만 블라인드 리뷰에서 평가자들이 "일반적"이라고 평가했습니다.',
             '일반적으로 temperature와 top-p 설정을 테스트하려면 동일한 프롬프트를 여러 모델에 걸쳐 여러 번 실행하고, 수동으로 출력을 기록하고 비교해야 합니다—시간이 많이 걸리고 추적하기 어렵습니다. PromptQuorum은 이 워크플로우를 간소화합니다.',
-            '**멀티 모델 비교:** 단일 디스패치에서 25개 이상의 모델(GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, Mistral, 로컬 Ollama 모델)에 걸쳐 다른 temperature/top-p 설정으로 하나의 프롬프트를 전송합니다. 어떤 모델이 높은 temperature에서도 안정적이고, 어떤 모델이 목표 설정에서 최고의 창의적 출력을 제공하는지 즉시 확인할 수 있습니다.',
+            '**멀티 모델 비교:** 단일 디스패치에서 파라미터를 받아들이는 25개 이상의 모델(Gemini 3.1 Pro, GPT-5.6의 비추론 엔드포인트, Mistral, 로컬 Ollama 모델)에 걸쳐 다른 temperature/top-p 설정으로 하나의 프롬프트를 전송합니다. 어떤 모델이 높은 temperature에서도 안정적이고, 어떤 모델이 목표 설정에서 최고의 창의적 출력을 제공하는지 즉시 확인할 수 있습니다.',
             '**프레임워크 기반 구조:** PromptQuorum의 프레임워크는 슬라이더를 건드리기 전에 지침, 형식, 제약 조건이 잘 구조화되어 있는지 확인합니다. 이를 통해 다른 변수들로부터 temperature/top-p의 효과를 격리합니다—나쁜 프롬프트와 파라미터 조정을 혼합하지 않게 됩니다.',
             '**컨센서스 및 점수:** 환각 위험, 스타일 일관성, 관련성을 점수로 매기는 Quorum 분석과 함께 모든 출력을 나란히 볼 수 있습니다. 작업의 창의성-신뢰성 트레이드오프에 가장 적합한 모델 + 설정 조합을 선택하십시오.',
             '**자동 temperature 권장:** PromptQuorum은 작업 설명과 프롬프트 구조를 분석한 후, 사용 사례(코딩, 요약, 브레인스토밍 등)를 기반으로 최적의 temperature 범위를 제안합니다. 앱과 Chrome 확장 프로그램 모두에서 사용 가능하며, PromptQuorum은 사용 중인 특정 작업 및 모델에 맞춰 표준 기본값을 넘어서는 temperature 값을 제안합니다. "0.2를 써야 할까, 0.7을 써야 할까?" 대신, 도구가 작업 분석을 기반으로 구체적인 값을 추천하여 수동 시행착오를 건너뛸 수 있게 합니다.',
@@ -2080,7 +2322,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**둘 다 최대로 높이고 신뢰성을 기대하는 것.** 높은 temperature + 높은 top-p = 최대 무작위성. 브레인스토밍이나 실험하는 경우에만 이렇게 하십시오.',
             '**두 개의 조절 장치를 동시에 변경하는 것.** 어떤 설정이 도움이 되었거나 해가 되었는지 알 수 없습니다. 하나를 변경하고 관찰한 후, 필요하다면 다른 것을 변경하십시오.',
             '**슬라이더로 나쁜 프롬프트를 수정하려는 것.** 어떤 temperature에서든 모호한 지침은 여전히 나쁜 출력을 생성합니다. 프롬프트를 먼저 수정하십시오.',
-            '**모델마다 동일한 값을 다르게 해석한다는 것을 잊는 것.** Claude에서의 Temperature 0.7은 GPT-5.6에서의 0.7과 다르게 느껴집니다. 항상 실제 모델을 테스트하십시오.',
+            '**모든 모델에 여전히 temperature 조절 장치가 있다고 가정하는 것.** Anthropic의 현행 Claude 모델과 OpenAI의 추론 모델은 기본값이 아닌 값을 곧바로 거부하며, 값을 받아들이는 모델들 사이에서도 같은 숫자의 의미는 다릅니다. Gemini 3.1 Pro의 temperature 0.7은 로컬 Llama 빌드의 0.7과 같지 않습니다. 실제로 호출할 모델을 그대로 테스트하십시오.',
             '**충분히 많은 실행을 테스트하지 않는 것.** Temperature 0.5에서의 하나의 출력은 예외값일 수 있습니다. 일반적인 동작을 파악하기 위해 최소 3–5회 실행하십시오.',
             '**Temperature를 0으로 설정하고 완벽한 정확성을 기대하는 것.** 낮은 temperature는 무작위성을 줄이지만 환각을 제거하지는 않습니다. 환각은 무작위 샘플링이 아니라 학습 데이터의 공백에서 비롯됩니다.',
             '**제공업체가 무시한다고 해서 top-p를 완전히 무시하는 것.** 일부 모델은 무시하고, 일부는 그렇지 않습니다. 비활성화된 조절 장치를 조정하는 데 시간을 낭비하지 않으려면 문서를 확인하십시오.',
@@ -2106,7 +2348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '모델이 내 temperature 설정을 무시하는 이유는 무엇입니까?',
-              a: '일부 모델은 특정 구성에서 temperature와 top-p를 제한하거나 비활성화합니다(예: OpenAI는 temperature가 0.0으로 설정된 경우 top-p를 무시합니다). 제공업체의 문서를 확인하십시오. PromptQuorum의 멀티 모델 뷰를 사용하면 이를 즉시 파악할 수 있습니다.',
+              a: '대개는 무시하는 것이 아니라 거부하는 것입니다. Anthropic의 현행 Claude 모델과 OpenAI의 추론 모델은 temperature나 top-p가 기본값이 아니면 400 오류를 반환하며, 일부 이전 구성에서는 한쪽을 명시적으로 설정하면 다른 쪽이 조용히 제한됩니다. 제공업체 문서를 확인하고, 실패한 요청은 효과 없는 설정이 아니라 거부로 읽으십시오.',
             },
             {
               q: 'temperature를 0으로 설정하면 완벽한 정확성이 보장됩니까?',
@@ -2118,12 +2360,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 간에 권장 설정이 다릅니까?',
-              a: '약간 다릅니다. 세 모델 모두 temperature 0.5–0.7에서 합리적으로 동작하지만, 높은 temperature에 대한 허용 범위는 다릅니다. GPT-5.6는 비일관적이 되지 않고 더 높게 올라갈 수 있습니다. Claude Opus 5은 매우 안정적입니다. Gemini 3.1 Pro는 더 실험적입니다. 실제 모델을 테스트하십시오.',
+              a: '약간이 아니라 셋 중 하나는 아예 이 설정을 받지 않습니다. Claude Opus 5(그리고 Claude Sonnet 5, Claude Fable 5)는 기본값이 아닌 temperature나 top-p를 그대로 거부합니다. Gemini 3.1 Pro는 여전히 generationConfig로 두 값을 제공하며 0.5–0.7에서 무난하게 동작합니다. GPT-5.6는 추론을 쓰지 않는 엔드포인트에서는 전체 범위를 받아들이지만, 추론 모드에서는 기본값이 아닌 값을 거부합니다. 실제로 호출할 모델과 모드를 그대로 테스트하십시오.',
             },
             {
               q: '설정을 공정하게 비교하려면 몇 번이나 실행해야 합니까?',
               a: '일반적인 동작을 파악하기 위해 설정당 최소 3–5번. 출력 분산이 높은 높은 temperature에서 작업하는 경우 더 많이 필요합니다. PromptQuorum의 멀티 실행 기능은 모든 모델에 걸쳐 이를 자동으로 처리합니다.',
             },
+            { q: '모델이 temperature 파라미터를 거부하면 어떻게 해야 합니까?', a: '대신 프롬프트로 방향을 잡으십시오. temperature를 낮췄을 상황에서는 정확한 출력 형식으로 하나의 확정적인 답을 요구하고, 높였을 상황에서는 뚜렷이 다른 여러 대안을 명시적으로 요구하십시오. 제공업체가 추론 강도 조절을 제공한다면 그것이 temperature를 대체하는 설정입니다. Anthropic의 현행 Claude 모델과 OpenAI의 추론 모델은 값을 조용히 무시하지 않고 오류를 반환합니다.' },
           ],
         },
 
@@ -2137,9 +2380,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         sources: {
           content: [
-            '[OpenAI, 2024. "API reference: Temperature and top_p parameters"](https://platform.openai.com/docs/api-reference/chat/create) — 파라미터 범위 및 효과에 관한 공식 문서',
+            '[OpenAI. "API reference: Chat Completions"](https://platform.openai.com/docs/api-reference/chat/create) — temperature와 top_p의 공식 파라미터 범위 및 기본값',
             '[Holtzman et al., 2020. "The Curious Case of Neural Text Degeneration"](https://arxiv.org/abs/1904.09751) — nucleus sampling(top-p)과 텍스트 품질에 미치는 영향에 관한 연구',
-            '[Anthropic, 2024. "Claude: How to Work with Prompts"](https://docs.anthropic.com/) — temperature 및 파라미터 조정에 관한 Claude 특화 지침',
+            '[Anthropic. "Thinking"](https://platform.claude.com/docs/en/build-with-claude/thinking) — 기본값이 아닌 temperature, top_p, top_k를 거부하는 Claude 모델 목록',
+            '[Google. "Gemini API: Text generation"](https://ai.google.dev/gemini-api/docs/text-generation) — temperature를 포함한 Gemini 생성 설정',
           ],
         },
       },
