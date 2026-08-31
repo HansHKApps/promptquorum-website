@@ -395,6 +395,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Häufig gestellte Fragen', anchor: '#faq' }
   ],
   sections: {
+    quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ Kurzüberblick',
+          items: [
+            '**PromptQuorum** — sendet einen Prompt gleichzeitig an über 25 Modelle; ideal für die Modellauswahl, bevor Sie sich auf einen Stack festlegen (kostenlos)',
+            '**Braintrust** — Evaluation und Observability; LLM-Judges, menschliches Feedback, Tracing im Produktivbetrieb; kostenlos / 249 $/Monat Pro',
+            '**Confident AI** — über 50 integrierte Evaluationsmetriken und Red Teaming; Braintrust-Alternative mit geringeren Tracing-Kosten; 200 $/Monat Starter',
+            '**Vellum** — Produktiv-Deployment mit Workflow-Builder, A/B-Tests, RAG und Monitoring; kostenlos / ab 50 $/Monat Pro',
+            '**Promptfoo** — Open-Source-Testing für CI/CD; YAML-Konfiguration, Integration mit GitHub Actions; vollständig kostenlos',
+            '**PromptHub** — Prompt-Versionierung im Git-Stil; Branching, Review-Workflows, Zusammenarbeit im Team; kostenlos / 20 $/Nutzer/Monat',
+            '**LangSmith** — natives Tracing für LangChain-Anwendungen; protokolliert jeden Chain-Schritt, Modellaufruf und Kostenposten; Developer kostenlos / Plus 39 $/Seat/Monat'
+          ]
+        },
     keyTakeaways: {
       isTldr: true,
       items: [
@@ -1858,6 +1871,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Questions fréquemment posées', anchor: '#faq' }
   ],
   sections: {
+    quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ En bref',
+          items: [
+            '**PromptQuorum** — envoie un même prompt à plus de 25 modèles simultanément ; idéal pour choisir un modèle avant de figer sa stack (gratuit)',
+            '**Braintrust** — évaluation et observabilité ; juges LLM, retours humains, tracing en production ; gratuit / 249 $/mois en Pro',
+            '**Confident AI** — plus de 50 métriques d\'évaluation intégrées et red teaming ; alternative à Braintrust avec un coût de tracing plus faible ; 200 $/mois en Starter',
+            '**Vellum** — déploiement en production avec constructeur de workflows, tests A/B, RAG et monitoring ; gratuit / à partir de 50 $/mois en Pro',
+            '**Promptfoo** — tests open source pour CI/CD ; configuration YAML, intégration GitHub Actions ; entièrement gratuit',
+            '**PromptHub** — versionnage de prompts façon Git ; branches, workflows de revue, collaboration d\'équipe ; gratuit / 20 $/utilisateur/mois',
+            '**LangSmith** — tracing natif pour les applications LangChain ; journalise chaque étape de chaîne, appel de modèle et coût ; Developer gratuit / Plus 39 $/siège/mois'
+          ]
+        },
     keyTakeaways: { isTldr: true, items: ['**PromptQuorum :** Dispatch vers 25+ modèles — idéal pour comparer plusieurs LLM', '**Braintrust :** Évaluation + observabilité (juges LLM, feedback humain, tracing production, contrôles CI/CD) — Gratuit / 249 $/mois Pro',
 '**Confident AI :** Évaluation automatisée avec 50+ métriques intégrées et red teaming — 200 $/mois Starter (sièges illimités)', '**Vellum :** Déploiement en production avec monitoring et tests A/B — gratuit / à partir de 50 $/mois', '**Promptfoo :** Tests open-source gratuits pour les pipelines CI/CD', '**PromptHub :** Versioning style Git avec collaboration en équipe — Gratuit / 20 $/utilisateur/mois', '**LangSmith :** Observabilité et tracing pour LangChain — gratuit avec options premium', '**Stratégie :** Commencez avec PromptQuorum + Promptfoo (gratuits), ajoutez le versioning tôt, l\'évaluation seulement si nécessaire'] },
     whichProblem: { id: 'which-problem-each-tool-solves', title: 'Quel problème résout chaque outil ?', content: '**Les équipes de prompt engineering font face à cinq goulots classiques : (1) évaluer la qualité (précision, ton, factualité), (2) tester automatiquement en CI/CD, (3) versionner et revenir à une version antérieure, (4) déployer en production avec monitoring, (5) comparer et dispatcher vers plusieurs modèles.** Chaque outil se spécialise sur un ou deux. L\'appairage correct économise des mois et prévient les défaillances coûteuses.', image: '/images/best-pe-tools-2026-bottlenecks-to-tools-fr.svg', imageCaption: '5 goulots d\'étranglement mappés aux outils spécialisés : Braintrust (évaluation), Promptfoo (tests), PromptHub (versioning), Vellum (déploiement), LangSmith (observabilité).' },
@@ -1994,6 +2020,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ]
   },
   sections: {
+    quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ クイックファクト',
+          items: [
+            '**PromptQuorum** — 1つのプロンプトを25以上のモデルへ同時送信。スタックを確定する前のモデル選定に最適（無料）',
+            '**Braintrust** — 評価とオブザーバビリティ。LLM judge、人間のフィードバック、本番環境のトレーシング。無料 / Pro 249ドル/月',
+            '**Confident AI** — 50以上の組み込み評価メトリクスとレッドチーミング。トレーシングコストが低いBraintrustの代替。Starter 200ドル/月',
+            '**Vellum** — ワークフロービルダー、A/Bテスト、RAG、モニタリングを備えた本番デプロイ。無料 / Pro 50ドル/月から',
+            '**Promptfoo** — オープンソースのCI/CDテスト。YAML設定、GitHub Actions連携。完全無料',
+            '**PromptHub** — Gitスタイルのプロンプトバージョニング。ブランチ、レビューワークフロー、チーム協業。無料 / 20ドル/ユーザー/月',
+            '**LangSmith** — LangChainアプリ向けのネイティブトレーシング。チェーンの各ステップ、モデル呼び出し、コストを記録。Developer無料 / Plus 39ドル/シート/月'
+          ]
+        },
     keyTakeaways: {
       isTldr: true,
       items: [
@@ -2324,6 +2363,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ]
   },
   sections: {
+    quickFacts: {
+          id: 'quick-facts',
+          title: '⚡ 快速概览',
+          items: [
+            '**PromptQuorum** —— 把同一条提示词同时分发给25个以上的模型；在确定技术栈之前做模型选型最合适（免费）',
+            '**Braintrust** —— 评估与可观测性；LLM评审、人工反馈、生产环境追踪；免费 / Pro 249美元/月',
+            '**Confident AI** —— 50多项内置评估指标和红队测试；追踪成本更低的Braintrust替代方案；Starter 200美元/月',
+            '**Vellum** —— 面向生产的部署，含工作流构建器、A/B测试、RAG和监控；免费 / Pro 50美元/月起',
+            '**Promptfoo** —— 开源的CI/CD测试；YAML配置，集成GitHub Actions；完全免费',
+            '**PromptHub** —— Git风格的提示词版本管理；分支、评审流程、团队协作；免费 / 20美元/用户/月',
+            '**LangSmith** —— 面向LangChain应用的原生追踪；记录每个链路步骤、模型调用和成本；Developer免费 / Plus 39美元/席位/月'
+          ]
+        },
     keyTakeaways: {
       isTldr: true,
       items: [

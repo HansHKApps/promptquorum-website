@@ -662,6 +662,57 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Testen Sie beide in PromptQuorum auf Ihrem Anwendungsfall.** Vergleichen Sie, wie GPT-5.6, Claude Opus 4,7, Gemini 3,1 Pro und Mistral Large Ihren spezifischen ToT oder ReAct Prompt handhaben. Sie sehen, welcher Modell-Reasoning-Stil am besten zu Ihrer Aufgabe passt.',
         ],
       },
+      commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Häufige Fehler',
+          mistakes: [
+            {
+              mistake: 'ToT für einfache Aufgaben einsetzen',
+              problem: 'ToT verursacht das 2- bis 5-Fache an Token-Kosten. Für eine Aufgabe wie „Fasse diese E-Mail zusammen" ist lineares Chain-of-Thought schneller, günstiger und ebenso genau. ToT lohnt sich nur, wenn das Problem tatsächlich mehrere gangbare Wege hat.',
+              fix: 'Testen Sie zuerst mit Chain-of-Thought. Liegt die Genauigkeit über 90 %, steigen Sie nicht auf ToT um.',
+            },
+            {
+              mistake: 'Zu viele Verzweigungen anfordern',
+              problem: '„Erzeuge 10 Ansätze" überfordert die Fähigkeit des Modells, sinnvoll zu bewerten. Ab etwa 5 Verzweigungen sinkt die Bewertungsqualität, und das Modell beginnt, Füllmaterial zu produzieren.',
+              fix: '3 bis 5 Verzweigungen sind der ideale Bereich. Bei komplexen Problemen nehmen Sie 3, bei kreativem Brainstorming 5.',
+            },
+            {
+              mistake: 'ReAct ohne echte Werkzeuge',
+              problem: 'Simuliertes ReAct, bei dem sich das Modell die Ergebnisse der Aktionen nur ausdenkt, ist schwächer als echtes ReAct mit tatsächlichen API- und Tool-Aufrufen. Simulierte Aktionen halluzinieren weiterhin Daten.',
+              fix: 'Nutzen Sie für ReAct im Produktivbetrieb ein Agenten-Framework (LangChain, CrewAI) mit echten Tool-Bindings. Für Exploration und Prototyping genügt simuliertes ReAct.',
+            },
+            {
+              mistake: 'Keine Bewertungskriterien in ToT',
+              problem: '„Wähle den besten Ansatz" ohne Kriterien führt dazu, dass das Modell zufällig oder nach Standardpräferenz wählt. Ohne explizite Kriterien ist der Bewertungsschritt der Verzweigung bedeutungslos.',
+              fix: 'Geben Sie 3 bis 5 Bewertungskriterien vor: „Bewerte jede Verzweigung nach Machbarkeit (1–5), Kosten (1–5) und Umsetzungsdauer (1–5). Wähle die höchste Gesamtpunktzahl."',
+            },
+            {
+              mistake: 'ToT und ReAct bei jedem Problem kombinieren',
+              problem: 'Die Kombination ist mächtig, aber teuer und langsam. Die meisten Probleme brauchen eine der beiden Techniken, nicht beide.',
+              fix: 'Nehmen Sie ToT für Fragen der Art „welche Strategie". Nehmen Sie ReAct für Aufgaben der Art „Informationen finden und daraus schließen". Kombinieren Sie nur, wenn Sie beides brauchen: „welche Strategie — und jede Strategie benötigt Daten zur Bewertung".',
+            },
+            {
+              mistake: 'Auswahlkriterien für Verzweigungen in ToT nicht benennen',
+              problem: 'Modelle hören oft nach dem Erzeugen der Verzweigungen auf, ohne klar zu sagen, warum sie sich für eine entscheiden. Eine implizite Auswahl ist schwach und schwer nachvollziehbar.',
+              fix: 'Fordern Sie eine explizite Begründung: „Gib nach der Bewertung jeder Verzweigung an: Verzweigung A erreicht X bei Kriterium Y, weil [Begründung]. Endgültige Wahl: Verzweigung Z wegen [Gesamtpunktzahl und Begründung]."',
+            },
+            {
+              mistake: 'ReAct ohne Beobachtungsschleifen einsetzen',
+              problem: 'Das Modell denkt nach, führt eine Aktion aus und macht sofort weiter, ohne innezuhalten und das Ergebnis zu beobachten. Damit geht der Nutzen der Rückmeldung aus der realen Welt verloren.',
+              fix: 'Erzwingen Sie die Schleife: „Halte nach jeder Aktion an und gib an: Beobachtung: [was du gelernt hast]. Aktualisierte Überlegung: [wie das deinen Ansatz verändert]. Nächste Aktion: [was du anders machst]."',
+            },
+            {
+              mistake: 'ToT-Verzweigungen ins Thema abdriften lassen',
+              problem: 'Ohne klare Vorgaben erzeugt das Modell womöglich fantasievolle, aber irrelevante Verzweigungen, die zur Lösung des ursprünglichen Problems nichts beitragen.',
+              fix: 'Setzen Sie Grenzen für die Verzweigungen: „Erzeuge 3 Ansätze für [konkretes Problem]. Jeder Ansatz muss [Rahmenbedingung] unmittelbar adressieren. Verfolge keine Nebenschauplätze oder Randeffekte."',
+            },
+            {
+              mistake: 'Für jedes Problem gleich viele Verzweigungen verwenden',
+              problem: 'Bei einfachen Problemen mit 3 Verzweigungen zeigt sich oft eine klar dominante Option — das verschwendet Token-Budget. Bei komplexen Problemen mit nur 2 Verzweigungen gehen wichtige Alternativen verloren.',
+              fix: 'Passen Sie die Anzahl der Verzweigungen an die Komplexität an: 2 für binäre Entscheidungen, 3 für typische Probleme, 4 bis 5 für offene kreative Arbeit, 1 (also reines CoT) für einfache Aufgaben.',
+            },
+          ],
+        },
       inPromptQuorum: {
         id: 'in-promptquorum',
         title: 'Tree-of-Thought und ReAct in PromptQuorum',
@@ -1941,6 +1992,57 @@ Réponse finale : [conclusion synthétisée]`,
           'Testez les deux patterns côte à côte dans PromptQuorum sur GPT-5.6, Claude Opus 5, Gemini 3.1 Pro',
         ],
       },
+      commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erreurs fréquentes',
+          mistakes: [
+            {
+              mistake: 'Utiliser ToT pour des tâches simples',
+              problem: 'ToT multiplie le coût en tokens par 2 à 5. Pour une tâche du type « résume cet e-mail », le chain-of-thought linéaire est plus rapide, moins cher et tout aussi précis. ToT n\'est rentable que si le problème comporte réellement plusieurs pistes viables.',
+              fix: 'Testez d\'abord avec le chain-of-thought. Si la précision dépasse 90 %, ne passez pas à ToT.',
+            },
+            {
+              mistake: 'Demander trop de branches',
+              problem: '« Génère 10 approches » dépasse la capacité du modèle à évaluer de façon pertinente. Au-delà de 5 branches, la qualité de l\'évaluation chute et le modèle se met à produire du remplissage.',
+              fix: '3 à 5 branches constituent la zone idéale. Pour les problèmes complexes, utilisez-en 3 ; pour un brainstorming créatif, 5.',
+            },
+            {
+              mistake: 'ReAct sans véritables outils',
+              problem: 'Un ReAct simulé, où le modèle imagine le résultat des actions, est plus faible qu\'un ReAct réel appelant de véritables API ou outils. Les actions simulées continuent d\'halluciner des données.',
+              fix: 'Pour du ReAct en production, utilisez un framework d\'agents (LangChain, CrewAI) avec de vrais bindings d\'outils. Le ReAct simulé convient à l\'exploration et au prototypage.',
+            },
+            {
+              mistake: 'Aucun critère d\'évaluation dans ToT',
+              problem: '« Choisis la meilleure approche » sans critères conduit le modèle à choisir au hasard ou par préférence par défaut. Sans critères explicites, l\'étape d\'évaluation des branches perd tout son sens.',
+              fix: 'Précisez 3 à 5 critères : « Évalue chaque branche sur la faisabilité (1-5), le coût (1-5), le délai de mise en œuvre (1-5). Retiens le score total le plus élevé. »',
+            },
+            {
+              mistake: 'Combiner ToT et ReAct sur chaque problème',
+              problem: 'La combinaison est puissante mais coûteuse et lente. La plupart des problèmes n\'appellent qu\'une seule technique, pas les deux.',
+              fix: 'Utilisez ToT pour les questions « quelle stratégie ». Utilisez ReAct pour les problèmes « trouver de l\'information et raisonner ». Ne combinez que si vous avez besoin des deux : « quelle stratégie, sachant que chaque stratégie nécessite des données pour être évaluée ».',
+            },
+            {
+              mistake: 'Ne pas préciser les critères de sélection des branches dans ToT',
+              problem: 'Les modèles s\'arrêtent souvent après avoir généré les branches sans indiquer clairement pourquoi ils en retiennent une. Une sélection implicite est faible et difficile à auditer.',
+              fix: 'Exigez un raisonnement explicite : « Après avoir évalué chaque branche, indique : la branche A obtient X sur le critère Y parce que [raison]. Choix final : branche Z en raison de [score total et justification]. »',
+            },
+            {
+              mistake: 'Utiliser ReAct sans boucle d\'observation',
+              problem: 'Le modèle raisonne, exécute une action, puis enchaîne immédiatement sans s\'arrêter pour observer le résultat. Le bénéfice du retour du monde réel est perdu.',
+              fix: 'Imposez la boucle : « Après chaque action, ARRÊTE-TOI et indique : Observation : [ce que tu as appris]. Raisonnement mis à jour : [en quoi cela change ton approche]. Action suivante : [ce que tu feras différemment]. »',
+            },
+            {
+              mistake: 'Laisser les branches ToT dériver hors sujet',
+              problem: 'Sans contraintes claires, le modèle peut produire des branches imaginatives mais hors sujet, qui n\'aident en rien à résoudre le problème initial.',
+              fix: 'Fixez des limites : « Génère 3 approches pour [problème précis]. Chaque approche doit répondre directement à [contrainte]. N\'explore pas d\'idées tangentes ni d\'effets secondaires. »',
+            },
+            {
+              mistake: 'Utiliser le même nombre de branches pour tous les problèmes',
+              problem: 'Sur un problème simple, 3 branches font souvent apparaître une option dominante et gaspillent du budget en tokens. Sur un problème complexe, 2 branches seulement risquent d\'écarter des alternatives importantes.',
+              fix: 'Adaptez le nombre de branches à la complexité : 2 pour une décision binaire, 3 pour un problème classique, 4 à 5 pour un travail créatif ouvert, 1 (simple CoT) pour une tâche simple.',
+            },
+          ],
+        },
       inPromptQuorum: {
         title: 'Dans PromptQuorum',
         content: 'Testez les patterns ToT et ReAct côte à côte sur GPT-5.6, Claude Opus 5/Sonnet 5, Gemini 3.1 Pro. Mesurez le coût en tokens, la qualité de sortie et la latence sans exposer les données à plusieurs APIs.',
@@ -2262,6 +2364,57 @@ Final Answer: [総合結論]`,
           'PromptQuorum で両パターンを GPT-5.6、Claude Opus 5、Gemini 3.1 Pro で並べてテスト',
         ],
       },
+      commonMistakes: {
+          id: 'common-mistakes',
+          title: 'よくある間違い',
+          mistakes: [
+            {
+              mistake: '単純なタスクにToTを使う',
+              problem: 'ToTはトークンコストを2〜5倍にします。「このメールを要約して」のようなタスクでは、線形のchain-of-thoughtの方が速く、安く、精度も同等です。ToTが割に合うのは、問題に本当に複数の有力な経路がある場合だけです。',
+              fix: 'まずchain-of-thoughtでテストしてください。精度が90%を超えるなら、ToTに切り替える必要はありません。',
+            },
+            {
+              mistake: '分岐を求めすぎる',
+              problem: '「10個のアプローチを生成して」と指示すると、モデルが意味のある評価をする能力を超えてしまいます。5分岐を超えると評価の質が落ち、モデルは埋め草のような選択肢を出し始めます。',
+              fix: '3〜5分岐が最適な範囲です。複雑な問題では3、創造的なブレインストーミングでは5を使ってください。',
+            },
+            {
+              mistake: '実際のツールなしでReActを使う',
+              problem: 'モデルがアクションの結果を想像する「シミュレートされたReAct」は、実際のAPIやツールを呼び出す本物のReActより弱くなります。シミュレートされたアクションは依然としてデータをハルシネーションします。',
+              fix: '本番環境のReActでは、実際のツールバインディングを持つエージェントフレームワーク（LangChain、CrewAI）を使ってください。シミュレートされたReActは探索やプロトタイピングには十分です。',
+            },
+            {
+              mistake: 'ToTに評価基準がない',
+              problem: '基準なしで「最良のアプローチを選んで」と指示すると、モデルはランダムに、あるいは既定の好みで選びます。明示的な基準がなければ、分岐の評価ステップは無意味です。',
+              fix: '3〜5個の評価基準を指定してください。「各分岐を実現可能性（1-5）、コスト（1-5）、実装までの時間（1-5）で評価し、合計点が最も高いものを選んでください。」',
+            },
+            {
+              mistake: 'あらゆる問題でToTとReActを組み合わせる',
+              problem: 'この組み合わせは強力ですが、高コストで低速です。ほとんどの問題では、両方ではなく一方の技術で足ります。',
+              fix: '「どの戦略か」という問題にはToTを使います。「情報を探して推論する」問題にはReActを使います。組み合わせるのは両方が必要なときだけです。たとえば「どの戦略か、かつ各戦略の評価にデータが必要」という場合です。',
+            },
+            {
+              mistake: 'ToTで分岐の選択基準を明示しない',
+              problem: 'モデルは分岐を生成した後で止まってしまい、なぜある分岐を選んだのかを明確に述べないことがよくあります。暗黙の選択は根拠が弱く、監査も困難です。',
+              fix: '明示的な推論を要求してください。「各分岐を評価した後、次を述べてください。分岐Aは基準Yで X点、理由は[理由]。最終選択：分岐Z、理由は[合計点と根拠]。」',
+            },
+            {
+              mistake: '観察ループなしでReActを使う',
+              problem: 'モデルが推論し、アクションを実行した直後に、結果を観察せずそのまま進んでしまいます。これでは実世界からのフィードバックという利点が失われます。',
+              fix: 'ループを強制してください。「各アクションの後に停止し、次を述べてください。観察：[何が分かったか]。更新した推論：[それによりアプローチがどう変わるか]。次のアクション：[何を変えて実行するか]。」',
+            },
+            {
+              mistake: 'ToTの分岐が本題から逸れるのを放置する',
+              problem: '明確な制約がないと、モデルは独創的ではあるが無関係な分岐を生成し、元の問題の解決に役立たないことがあります。',
+              fix: '分岐の境界を設定してください。「[具体的な問題]に対するアプローチを3つ生成してください。各アプローチは[制約]に直接対応する必要があります。周辺的なアイデアや副次的な影響は扱わないでください。」',
+            },
+            {
+              mistake: 'すべての問題で同じ分岐数を使う',
+              problem: '単純な問題を3分岐にすると、1つが明らかに優位となりトークン予算を無駄にします。複雑な問題を2分岐に絞ると、重要な代替案を見落とす可能性があります。',
+              fix: '分岐数を問題の複雑さに合わせてください。二者択一なら2、典型的な問題なら3、自由度の高い創造的作業なら4〜5、単純なタスクなら1（CoTのみ）です。',
+            },
+          ],
+        },
       inPromptQuorum: {
         title: 'PromptQuorum で',
         content: 'ToT と ReAct パターンを GPT-5.6、Claude Opus 5/Sonnet 5、Gemini 3.1 Pro で並べてテスト。トークンコスト、出力品質、レイテンシを測定。複数 API にデータ露出なし。',
@@ -2398,6 +2551,57 @@ Final Answer: [総合結論]`,
       promptExamples: { id: 'prompt-examples', title: '提示示例', promptExamples: [{ bad: '帮我为 SaaS 产品制定营销策略。', good: '为我们的 SaaS 产品生成正好 3 种营销策略。按以下比较每种：成本、覆盖范围、实施时间、预期转化率。评估每个，分配分数，选择最优。', badLabel: '模糊', goodLabel: '结构化树思考' }, { bad: '研究 GPU RTX 5090 性能。', good: '推理：哪些来源比较 RTX 5090 GPU？行动：执行 2026 GPU 基准 Web 搜索。观察：[基准结果]。推理：关键点是什么？行动：提取延迟和功耗。最终答案：[综合]', badLabel: '无结构', goodLabel: '明确观察的 ReAct' }, { bad: '修复代码。', good: '推理：错误是什么？行动：运行代码，显示输出。观察：[错误：KeyError 第 42 行]。推理：键丢失，需要添加键存在检查。行动：更新代码。观察：[无错误，正常输出]。最终答案：修复的代码，有解释。', badLabel: '非迭代', goodLabel: '调试用迭代 ReAct' }] },
       tokenCost: { id: 'token-cost', title: 'Token 成本', content: ['ToT：因为模型生成多个分支后再选择，所以基线输出 token 的 2-5 倍。', 'ReAct：工具调用数可变（每个行动/观察轮次添加 token）。', '成本示例（Claude Opus 5 上 $0.025/1M 输出 token）：生成 5,000 token 的复杂 ToT = 每次运行约 $0.125。', '高容量指导：在战略决策上有选择地使用 ToT；日常任务优先使用线性 CoT。'] },
       howToStart: { id: 'how-to-start', title: '入门方法', numberedItems: ['战略/计划 → 使用带明确分支数和评估标准的 ToT', '带工具的研究/调试 → 使用 ReAct（或只在前沿模型上使用原生工具使用）', '组合：计划阶段用 ToT，选定分支内的执行用 ReAct', '在 PromptQuorum 上跨 GPT-5.6、Claude Opus 5、Gemini 3.1 Pro 并行测试两种模式'] },
+      commonMistakes: {
+          id: 'common-mistakes',
+          title: '常见错误',
+          mistakes: [
+            {
+              mistake: '对简单任务使用ToT',
+              problem: 'ToT会让token成本增加2–5倍。对于"总结这封邮件"这类任务，线性的chain-of-thought更快、更便宜，准确率也相当。只有当问题确实存在多条可行路径时，ToT才划算。',
+              fix: '先用chain-of-thought测试。如果准确率超过90%，就不要升级到ToT。',
+            },
+            {
+              mistake: '要求过多分支',
+              problem: '"生成10种方案"会超出模型进行有效评估的能力。超过5个分支后，评估质量下降，模型可能开始产出凑数的选项。',
+              fix: '3–5个分支是最佳区间。复杂问题用3个，创意头脑风暴用5个。',
+            },
+            {
+              mistake: '没有真实工具就使用ReAct',
+              problem: '模拟式ReAct（模型自行想象动作结果）比真实ReAct（模型调用实际API或工具）要弱。模拟动作仍然会凭空编造数据。',
+              fix: '生产环境的ReAct请使用带有真实工具绑定的智能体框架（LangChain、CrewAI）。模拟式ReAct适合探索和原型验证。',
+            },
+            {
+              mistake: 'ToT中缺少评估标准',
+              problem: '不给标准就说"选出最佳方案"，模型会随机选择或按默认偏好选择。没有明确标准，分支评估这一步就失去了意义。',
+              fix: '指定3–5条评估标准："按可行性（1-5）、成本（1-5）、实施周期（1-5）评估每个分支，选择总分最高的一个。"',
+            },
+            {
+              mistake: '在每个问题上都把ToT和ReAct组合起来',
+              problem: '这种组合很强大，但成本高、速度慢。大多数问题只需要其中一种技术，而不是两种。',
+              fix: '"该用哪种策略"类问题用ToT。"查找信息并进行推理"类问题用ReAct。只有两者都需要时才组合，例如"该用哪种策略，且每种策略都需要数据来评估"。',
+            },
+            {
+              mistake: 'ToT中未说明分支选择标准',
+              problem: '模型常常在生成分支后就停下，不清楚说明为什么选择其中某一个。隐含的选择依据薄弱，也难以审查。',
+              fix: '要求给出明确推理："评估完每个分支后，请说明：分支A在标准Y上得X分，理由是[原因]。最终选择：分支Z，理由是[总分与依据]。"',
+            },
+            {
+              mistake: '使用ReAct时没有观察循环',
+              problem: '模型完成推理、执行动作后立刻继续，不停下来观察结果。这就丢失了来自真实反馈的价值。',
+              fix: '强制执行循环："每次动作之后，停下并说明：观察：[你了解到了什么]。更新后的推理：[这如何改变你的方案]。下一步动作：[你将如何调整]。"',
+            },
+            {
+              mistake: '任由ToT分支偏离主题',
+              problem: '没有明确约束时，模型可能生成富有想象力但不相关的分支，对解决原始问题毫无帮助。',
+              fix: '设定分支边界："针对[具体问题]生成3种方案。每种方案都必须直接回应[约束条件]。不要探讨旁枝话题或副作用。"',
+            },
+            {
+              mistake: '所有问题都用相同的分支数量',
+              problem: '简单问题用3个分支时，往往有一个明显占优，白白浪费token预算。复杂问题只用2个分支，则可能遗漏重要的备选方案。',
+              fix: '让分支数量匹配问题复杂度：二选一决策用2个，典型问题用3个，开放式创意工作用4–5个，简单任务用1个（即纯CoT）。',
+            },
+          ],
+        },
       inPromptQuorum: { title: '在 PromptQuorum 中', content: '跨 GPT-5.6、Claude Opus 5/Sonnet 5、Gemini 3.1 Pro 并行测试 ToT 和 ReAct 模式。测量 token 成本、输出质量和延迟，无需向多个 API 暴露数据。' },
       relatedReading: { title: '相关阅读', items: [{ title: 'Chain-of-Thought 提示', url: '/zh/prompt-engineering/chain-of-thought-prompting' }, { title: '什么是提示工程？', url: '/zh/prompt-engineering/what-is-prompt-engineering' }, { title: 'Few-Shot 提示', url: '/zh/prompt-engineering/zero-shot-vs-few-shot' }, { title: '约束提示', url: '/zh/prompt-engineering/constrained-prompting' }, { title: 'GPT、Claude 还是 Gemini？如何选择合适的模型', url: '/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model' }, { title: '提示注入和安全', url: '/zh/prompt-engineering/prompt-injection-and-security' }] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [{ q: '树思考提示是什么？', a: '树思考指示模型探索多条推理路径（如决策树分支），评估每条，然后在给出最终答案前选择最佳路径。与线性 CoT 不同，树思考明确创建并比较多个选项。' }, { q: 'ReAct 提示是什么？', a: 'ReAct（推理+行动）是一个提示框架，其中模型在推理步骤和行动（工具调用、搜索、查找）之间交替。每次行动后，模型观察结果并更新其推理。这个模式是现代 AI 代理的基础。' }, { q: '树思考与 Chain-of-Thought 有何不同？', a: 'Chain-of-Thought 遵循单一线性推理路径。树思考分支为多条路径、评估并选择最优。可以这样想：CoT 是走一条路，ToT 是探索分岔口后再选择要走的路。' }, { q: '2026 年还需要手动格式化 ReAct 吗？', a: '在具有原生工具使用的前沿模型（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）上不需要。这些模型自动实现循环。手动 Thought:/Action:/Observation: 格式化对于没有工具使用的开源权重模型或教学目的仍然有用。' }, { q: '我可以结合树思考和 ReAct 吗？', a: '可以。在战略层面使用 ToT 来探索和比较多个方法，然后在选定分支内使用 ReAct 处理需要工具交互或数据查找的步骤。这在复杂的规划任务中很常见。' }, { q: '哪些模型最适合树思考？', a: '具有扩展思维/推理模式的模型最自然地处理 ToT：Claude Opus 5（扩展思维）、GPT-5.6（推理模式）和 Gemini 3.1 Pro（深度思维）。这些模型可以在内部探索多个分支。' }, { q: 'ReAct 的实际应用是什么？', a: '所有现代 AI 代理都是 ReAct 循环：Claude Code（推理代码→编辑→运行测试→观察→迭代）、研究助手（思考问题→Web 搜索→阅读结果→综合）、支持机器人（思考请求→查询知识库→设计响应→验证）。模式从简单查找扩展到数小时的自主会话。' }, { q: '树思考如何影响 Token 成本？', a: '树思考使用明显更多的 token，因为模型生成多个分支后再选择。计划使用标准 CoT 提示输出 token 的 2-5 倍。在 $0.025/1M 输出 token（Claude Opus 5），生成 5,000 token 的复杂 ToT 每次运行成本约为 $0.125。为高容量使用进行预算。' }, { q: '中国企业如何确保树思考和 ReAct 的合规性？', a: '根据中国 2021 年《数据安全法》，本地推理满足数据驻留和处理合规要求。树思考和 ReAct 在本地部署模型上支持金融、医疗和法律部门的法规要求，无需将敏感数据发送到外部 API。' }, { q: '我可以在生产环境中使用树思考和 ReAct 吗？', a: '可以。ReAct 是生产 AI 代理（Claude Code、OpenAI Codex）的基本模式。树思考用于复杂的战略决策。为额外的 token 成本进行预算，并在生产案例中测试模型行为。' }] },
