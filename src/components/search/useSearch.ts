@@ -10,7 +10,18 @@ type FuseResult = import('fuse.js').FuseResult<SearchEntry>
 // threshold 0.3, not 0.5: at 0.5 a typo like "nvidea" fuzzy-matched 1,669 of 3,176
 // indexed entries (half the site) including totally unrelated titles. 0.3 keeps
 // real typo tolerance while cutting that to the genuinely relevant handful.
-const MAX_SCORE = 0.5
+//
+// MAX_SCORE 0.3 with ignoreFieldNorm, NOT 0.5 with fieldNormWeight 1.5.
+// fieldNormWeight penalises matches in long fields, and this site's titles are
+// long ("Install Ollama: 2-Minute Setup for macOS, Windows & Linux"). That
+// penalty pushed EXACT substring matches above the old 0.5 cutoff, which then
+// discarded them: "install ollama" scored 0.516 against its own article and
+// returned nothing. 12 of 40 realistic queries — "rtx 4060", "16gb", "docker",
+// "linux", "system prompt" among them — returned zero results that way, and the
+// model-number filter below was unreachable dead code because nothing survived
+// to reach it. Without the field-norm penalty that same match scores 0.016; the
+// tighter 0.3 cutoff keeps junk queries empty and "nvidea" to the NVIDIA handful.
+const MAX_SCORE = 0.3
 const FUSE_OPTIONS: import('fuse.js').IFuseOptions<SearchEntry> = {
   keys: [
     { name: 'title', weight: 3 },
@@ -23,7 +34,7 @@ const FUSE_OPTIONS: import('fuse.js').IFuseOptions<SearchEntry> = {
   includeMatches: true,
   ignoreLocation: true,
   minMatchCharLength: 2,
-  fieldNormWeight: 1.5,
+  ignoreFieldNorm: true,
 }
 
 // --- Query hardening -------------------------------------------------------
@@ -73,6 +84,23 @@ function shortPrefixRank(e: SearchEntry, nq: string): number | null {
   if (tokenize(`${e.description ?? ''} ${e.section ?? ''}`).some((t) => t.startsWith(nq))) return 0.2
   return null
 }
+
+// Fuse matches the query as ONE pattern, so a natural-language question like
+// "how to run llama locally" only matches a title containing that whole phrase
+// — nothing did, so it returned zero. When the phrase finds nothing, fall back
+// to searching each meaningful token and keeping only documents that match ALL
+// of them. AND semantics (not OR) is what stops this flooding the list.
+const STOP_WORDS = new Set([
+  'how', 'to', 'the', 'a', 'an', 'of', 'for', 'and', 'or', 'in', 'on', 'is',
+  'it', 'my', 'me', 'i', 'with', 'what', 'which', 'best', 'can', 'do', 'does',
+  'you', 'your', 'run', 'use', 'are', 'be', 'get', 'that', 'this',
+])
+
+// Content-bearing tokens of a multi-word query, stop words removed.
+const contentTokens = (q: string): string[] =>
+  norm(q)
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter((t) => t.length >= 3 && !STOP_WORDS.has(t))
 
 // Native-language hardware terms and brand transliterations aren't present in
 // the indexed fields — articles use the literal "GPU"/"NVIDIA" — so searching
@@ -174,10 +202,40 @@ export function useSearch(lang: string) {
       // no title truly matches the model, an empty result is the correct answer.
       const mts = modelTokens(q)
       if (mts.length > 0) {
-        raw = raw.filter((r) => mts.every((tk) => titleHasModelToken(r.item.title, tk)))
+        // A model query matching no title is genuinely empty — never widen it
+        // with the token fallback below, which would reintroduce the exact
+        // "4060 returns 3060 articles" confusion this filter prevents.
+        return raw.filter((r) => mts.every((tk) => titleHasModelToken(r.item.title, tk)))
       }
 
-      return raw
+      if (raw.length > 0) return raw
+
+      // Phrase found nothing: retry token-wise, keeping only docs matching EVERY
+      // content token, scored by their worst per-token score — a document is
+      // only as good as its weakest match.
+      const tokens = contentTokens(q)
+      if (tokens.length < 2) return raw
+
+      let acc: Map<string, FuseResult> | null = null
+      for (const token of tokens) {
+        const hits = new Map(
+          data.fuse
+            .search(token)
+            .filter((r) => (r.score ?? 1) <= MAX_SCORE)
+            .map((r) => [r.item.id, r] as const),
+        )
+        if (!acc) {
+          acc = new Map(hits)
+        } else {
+          for (const [id, prev] of [...acc]) {
+            const hit = hits.get(id)
+            if (!hit) acc.delete(id)
+            else acc.set(id, { ...prev, score: Math.max(prev.score ?? 1, hit.score ?? 1) })
+          }
+        }
+        if (acc.size === 0) return []
+      }
+      return acc ? Array.from(acc.values()) : []
     },
     [],
   )

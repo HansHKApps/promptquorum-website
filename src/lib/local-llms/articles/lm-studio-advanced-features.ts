@@ -1093,6 +1093,7 @@ schema: {
     ja: {
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-ja.webp',
+      title: 'LM Studio高度な機能 2026: GPU設定、LoRA、ファインチューニング',
       seoTitle: 'LM Studio高度な機能 2026: GPU、API、ファインチューニング',
       metaDescription: 'LM Studio高度な機能：GPU最適化、コンテキストウィンドウ、API、LoRAファインチューニング、バッチ推論。デベロッパーガイド。無料。',
       publishDate: '2026-04-04',
@@ -1267,6 +1268,7 @@ schema: {
     zh: {
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-zh.webp',
+      title: 'LM Studio 高级功能 2026：GPU 设置、LoRA 与微调',
       seoTitle: 'LM Studio高级功能 2026: GPU、API、微调',
       metaDescription: 'LM Studio高级功能：GPU优化、上下文窗口、API、LoRA微调和批量推理。开发者指南。免费。',
       publishDate: '2026-04-04',

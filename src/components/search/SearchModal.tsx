@@ -233,6 +233,7 @@ export function SearchModal({ isOpen, onClose, lang }: Props) {
                 <SearchResultItem
                   key={result.item.id}
                   result={result}
+                  index={i}
                   isActive={activeIndex === i}
                   onMouseEnter={() => setActiveIndex(i)}
                   onClick={() => handleSelect(result.item)}
