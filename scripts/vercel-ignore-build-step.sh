@@ -63,9 +63,18 @@ fi
 # ---------------------------------------------------------------------------
 # Gate 2: production build throttle (token-free)
 # ---------------------------------------------------------------------------
+# Preview deployments are not used here — every pushed branch was producing a
+# preview build nobody looked at, burning build minutes and cluttering the
+# Vercel dashboard. Skip them by default. Opt in per-commit with [preview].
 if [ "${VERCEL_ENV:-}" != "production" ]; then
-  echo "Not a production build (VERCEL_ENV=${VERCEL_ENV:-unset}); throttle not applied. Proceeding."
-  exit 1
+  case "${VERCEL_GIT_COMMIT_MESSAGE:-}" in
+    *"[preview]"*)
+      echo "[preview] flag found; building this preview deployment."
+      exit 1
+      ;;
+  esac
+  echo "Preview deployment (VERCEL_ENV=${VERCEL_ENV:-unset}); previews are disabled — add [preview] to the commit message to build one. Skipping."
+  exit 0
 fi
 
 case "${VERCEL_GIT_COMMIT_MESSAGE:-}" in
