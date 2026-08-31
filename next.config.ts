@@ -89,6 +89,89 @@ const nextConfig: NextConfig = {
         destination: '/image-license',
         permanent: true,
       },
+      // Web hosting consolidation (2026-08-31): eight per-country slugs were
+      // merged into the single multi-language page /power-local-llm/best-web-hosting-2026,
+      // where each locale block is its own native local edition.
+      {
+        source: '/power-local-llm/beste-webhosting-anbieter-deutschland-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/beste-webhosting-anbieter-deutschland-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/meilleur-hebergeur-web-france-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/meilleur-hebergeur-web-france-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/mejor-hosting-web-espana-latinoamerica-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/mejor-hosting-web-espana-latinoamerica-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/melhor-hospedagem-site-brasil-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/melhor-hospedagem-site-brasil-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/best-web-hosting-japan-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/best-web-hosting-japan-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/best-web-hosting-china-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/best-web-hosting-china-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/best-web-hosting-korea-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/best-web-hosting-korea-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/best-web-hosting-arab-gulf-2026',
+        destination: '/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/best-web-hosting-arab-gulf-2026',
+        destination: '/:lang/power-local-llm/best-web-hosting-2026',
+        permanent: true,
+      },
     ]
   },
   async rewrites() {

@@ -2670,7 +2670,7 @@
       "images": [
         {
           "url": "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-en.svg",
-          "title": "Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs as of August 2026, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA."
+          "title": "Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA."
         },
         {
           "url": "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg",
@@ -4015,7 +4015,7 @@
       "images": [
         {
           "url": "/images/context-windows-chart.svg",
-          "title": "Context window comparison: As of May 2026, all three frontier models support 1M tokens — context window parity has arrived. Gemini 2.5 Pro previously led with 2M."
+          "title": "Context window comparison: All three frontier models support 1M tokens — context window parity has arrived. Gemini 2.5 Pro previously led with 2M."
         },
         {
           "url": "/images/model-strengths-radar.svg",
@@ -7380,90 +7380,21 @@
       ],
       "images": []
     },
-    "melhor-hospedagem-site-brasil-2026": {
-      "dateModified": "2026-08-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-08-30",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "pt"
-      ],
-      "images": []
-    },
-    "best-web-hosting-arab-gulf-2026": {
-      "dateModified": "2026-08-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-08-30",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "ar"
-      ],
-      "images": []
-    },
-    "best-web-hosting-korea-2026": {
-      "dateModified": "2026-08-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-08-30",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "ko"
-      ],
-      "images": []
-    },
     "best-web-hosting-2026": {
       "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-08-30",
       "hasSections": true,
       "langs": [
-        "en"
-      ],
-      "images": []
-    },
-    "beste-webhosting-anbieter-deutschland-2026": {
-      "dateModified": "2026-08-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-08-30",
-      "hasSections": true,
-      "langs": [
         "en",
-        "de"
-      ],
-      "images": []
-    },
-    "meilleur-hebergeur-web-france-2026": {
-      "dateModified": "2026-08-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-08-30",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "fr"
-      ],
-      "images": []
-    },
-    "best-web-hosting-japan-2026": {
-      "dateModified": "2026-08-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-08-30",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "ja"
-      ],
-      "images": []
-    },
-    "best-web-hosting-china-2026": {
-      "dateModified": "2026-08-30",
-      "lastFactChecked": null,
-      "publishDate": "2026-08-30",
-      "hasSections": true,
-      "langs": [
-        "en",
-        "zh"
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     }
@@ -11538,7 +11469,7 @@
         },
         {
           "url": "/images/balcony-solar-global-market-overview-us-states-en.svg",
-          "title": "Confirmed enacted as of July 2026 — roughly 30 additional states have introduced but not passed bills."
+          "title": "Confirmed enacted — roughly 30 additional states have introduced but not passed bills."
         },
         {
           "url": "/images/balcony-solar-global-market-overview-uk-status-en.svg",
@@ -12212,6 +12143,178 @@
         "ko"
       ],
       "images": []
+    },
+    "renogy-balcony-solar": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/renogy-balcony-solar-snapshot-en.svg",
+          "title": "Founded 2010 in the US by Dr. Yi Li; privately held, headquartered in Ontario, California; reportedly reached unicorn status in 2022."
+        },
+        {
+          "url": "/images/renogy-balcony-solar-timeline-en.svg",
+          "title": "Founding year and founder confirmed; exact launch dates for individual kit lines were not confirmed on a primary source."
+        },
+        {
+          "url": "/images/renogy-balcony-solar-lineup-en.svg",
+          "title": "Renogy kits output DC through a charge controller, not AC that plugs directly into a wall outlet — the defining difference from dedicated balcony solar hardware."
+        },
+        {
+          "url": "/images/renogy-balcony-solar-markets-en.svg",
+          "title": "Renogy sells nationally in the US and internationally; it is not confirmed to be subject to the state-by-state plug-in solar legislation that gates grid-tied balcony kits."
+        },
+        {
+          "url": "/images/renogy-balcony-solar-position-en.svg",
+          "title": "Renogy designs and sells its own panels, batteries, and charge controllers directly to consumers, but is absent from the microinverter/grid-tie layer that defines dedicated balcony solar brands."
+        },
+        {
+          "url": "/images/renogy-balcony-solar-certification-en.svg",
+          "title": "No UL 3700 or VDE-AR-N 4105 grid-connection certification claim was found for any Renogy product in this research."
+        }
+      ]
+    },
+    "allpowers-balcony-solar": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/allpowers-balcony-solar-snapshot-en.svg",
+          "title": "Incorporated in Hong Kong; manufacturing roots reported in Guangzhou, China; founding year disputed (2008 or 2010); reportedly linked to Aoneng Group."
+        },
+        {
+          "url": "/images/allpowers-balcony-solar-timeline-en.svg",
+          "title": "Founding year disputed between sources; exact launch dates for individual power station models were not confirmed on a primary source."
+        },
+        {
+          "url": "/images/allpowers-balcony-solar-lineup-en.svg",
+          "title": "The R4000 is a portable battery charged by solar panels through an MPPT controller, not a grid-tied microinverter — it does not export power directly into a home's electrical panel."
+        },
+        {
+          "url": "/images/allpowers-balcony-solar-markets-en.svg",
+          "title": "ALLPOWERS ships to 30+ countries and regions via region-specific affiliate programs; its portable power stations are not confirmed to be subject to the state-by-state plug-in solar legislation that gates grid-tied balcony kits."
+        },
+        {
+          "url": "/images/allpowers-balcony-solar-position-en.svg",
+          "title": "ALLPOWERS sells finished portable power stations and solar panels directly to consumers; whether it designs its own battery and control hardware in-house was not confirmed in this research."
+        },
+        {
+          "url": "/images/allpowers-balcony-solar-certification-en.svg",
+          "title": "No UL 3700 or VDE-AR-N 4105 grid-connection certification claim was found for any ALLPOWERS product in this research."
+        }
+      ]
+    },
+    "jackery-balcony-solar": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/jackery-balcony-solar-snapshot-en.svg",
+          "title": "Founded 2012 in Shenzhen by Sun Zhongwei; parent company Shenzhen Huabao New Energy Co., Ltd. has been publicly listed on the Shenzhen Stock Exchange since September 2022."
+        },
+        {
+          "url": "/images/jackery-balcony-solar-timeline-en.svg",
+          "title": "Founding year, 2016 product pivot, and September 2022 IPO date are verified; exact launch dates for individual balcony-solar SKUs vary by market and were not confirmed against a single primary source."
+        },
+        {
+          "url": "/images/jackery-balcony-solar-lineup-en.svg",
+          "title": "US Explorer + SolarSaga pairing is off-grid (charges a battery); EU HomePower/SolarVault line is grid-tied (feeds a wall outlet, capped at 800W AC in Germany)."
+        },
+        {
+          "url": "/images/jackery-balcony-solar-markets-en.svg",
+          "title": "Jackery's off-grid Explorer/SolarSaga line ships nationally in the US; its grid-tied HomePower/SolarVault line is sold in Germany and other EU markets, not confirmed sold in any US plug-in-solar state."
+        },
+        {
+          "url": "/images/jackery-balcony-solar-position-en.svg",
+          "title": "Jackery designs its own power-station and inverter hardware across two separate product lines and sells direct — the same dual role as EcoFlow and Anker SOLIX."
+        },
+        {
+          "url": "/images/jackery-balcony-solar-certification-en.svg",
+          "title": "VDE-AR-N 4105 compliance is Jackery's own stated claim for its EU grid-tied line — not independently re-verified against the certifying body in this research pass."
+        }
+      ]
+    },
+    "bluetti-balcony-solar": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/bluetti-balcony-solar-snapshot-en.svg",
+          "title": "R&D team established 2009 in Shenzhen per BLUETTI's own company history; consumer brand launch (2019) and founder names come from secondary sources not independently re-verified in this research."
+        },
+        {
+          "url": "/images/bluetti-balcony-solar-timeline-en.svg",
+          "title": "R&D founding (2009) and first lithium storage station (2011) are BLUETTI's own stated history; consumer-brand launch year and founder names come from secondary sources and were not independently re-verified."
+        },
+        {
+          "url": "/images/bluetti-balcony-solar-lineup-en.svg",
+          "title": "US AC-series pairs with solar panels off-grid (charges a battery); EU Balco series is grid-tied (feeds a wall outlet, capped at 800W AC in Germany)."
+        },
+        {
+          "url": "/images/bluetti-balcony-solar-markets-en.svg",
+          "title": "BLUETTI's off-grid AC-series ships nationally in the US; its grid-tied Balco series is sold in Germany and France only, not confirmed sold in any US plug-in-solar state."
+        },
+        {
+          "url": "/images/bluetti-balcony-solar-position-en.svg",
+          "title": "BLUETTI designs its own power-station, battery, and inverter hardware across two separate product lines and sells direct — the same dual role as EcoFlow, Anker SOLIX, and Jackery."
+        },
+        {
+          "url": "/images/bluetti-balcony-solar-certification-en.svg",
+          "title": "BLUETTI's Balco series is built to comply with Germany's 800W balcony-solar output cap — a market-requirement claim, not independently re-verified against a specific certifying body in this research pass."
+        }
+      ]
     }
   },
   "blog": {

@@ -46,7 +46,6 @@ const LANG_CODES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 // EN + its own market language by design. ko/pt/ar coverage for those markets is
 // served by the sibling regional pages below, not by adding those blocks here.
 const LOCALE_GAP_ALLOWLIST = new Set([
-  'src/lib/power-local-llm/articles/mejor-hosting-web-espana-latinoamerica-2026.ts',
 ])
 
 // Non-article files that live in the articles dirs but are not article data.
