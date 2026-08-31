@@ -428,7 +428,65 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Verwenden Sie Negatives Prompting sparsam—es kann das Modell manchmal verwirren.** Positive Anleitung („schreiben Sie klar und technisch") funktioniert oft besser als schweres negatives Prompting („sei nicht vage, vereinfache nicht, lass keine Details weg"). Balancieren Sie beide Ansätze.',
       ],
     },
-    zusatzFaqs: {
+    calloutBoxes: {
+          title: 'Wichtige Hinweise',
+          id: 'callouts',
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Leitplanken sind keine Richtlinien',
+              text: 'Negatives Prompting ist eine technische Maßnahme, kein Ersatz für Richtlinien. Es verhindert einige Fehler, kann aber menschliches Urteilsvermögen, rechtliche Prüfung oder Compliance-Prozesse nicht ersetzen. Nutzen Sie es als eine Schicht von mehreren, nicht als einzige Schicht.',
+            },
+            {
+              type: 'pro-tip',
+              label: 'Zu jedem „Nicht" gehört ein „Stattdessen"',
+              text: 'Alleinstehende Negative verwirren Modelle („Sei nicht vage"). Gepaarte Negative lenken sie („Sei nicht vage; werde konkret mit Datumsangaben, Zahlen und Beispielen"). Jede Einschränkung wirkt besser mit einer positiven Alternative.',
+            },
+            {
+              type: 'key-point',
+              label: 'Maximal 3–5 Einschränkungen — mehr überfordert das Modell',
+              text: 'Ab 5–6 negativen Einschränkungen beginnen Modelle, sich selbst infrage zu stellen oder Einschränkungen ganz zu ignorieren. Umfangreiche Listen (7 und mehr) können zu übervorsichtigen, unvollständigen oder ausweichenden Ausgaben führen. Bleiben Sie fokussiert.',
+            },
+            {
+              type: 'did-you-know',
+              label: 'Compliance-Teams lieben wiederverwendbare Leitplanken',
+              text: 'Sobald Sie regulatorische, markenbezogene oder sicherheitsrelevante Einschränkungen als wiederverwendbare Blöcke für Negatives Prompting festhalten, werden Audits einfacher. Sie können belegen, dass jede Ausgabe dieselben Leitplanken durchlaufen hat — das ist bei Prüfungen bares Gold wert.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Häufige Fehler beim Negatives Prompting',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Zu viele negative Einschränkungen formulieren',
+              problem: 'Mehr als 5–6 „Nicht-Tun"-Regeln überfordern das Modell. Es beginnt, sich selbst infrage zu stellen, einzelne Einschränkungen zu ignorieren oder übervorsichtige Ausgaben zu produzieren.',
+              fix: 'Begrenzen Sie sich auf 3–5 fokussierte Einschränkungen pro Prompt. Fassen Sie verwandte Regeln zusammen: „Verwenden Sie niemals Hype-Wörter (disruptiv, revolutionär, bahnbrechend)" zählt als eine Einschränkung.',
+            },
+            {
+              mistake: 'Negative ohne positive Alternative verwenden',
+              problem: '„Sei nicht vage" ohne den Zusatz „sondern werde konkret mit Datumsangaben und Zahlen" lässt das Modell raten.',
+              fix: 'Paaren Sie immer: „Verwenden Sie keine vage Sprache. Nennen Sie stattdessen konkrete Datumsangaben, Zahlen oder messbare Ergebnisse."',
+            },
+            {
+              mistake: 'Weiche negative Formulierungen verwenden',
+              problem: '„Versuchen Sie zu vermeiden", „möglichst nicht", „wenn möglich überspringen" werden als Vorschläge gelesen, nicht als Regeln. Modelle ignorieren sie.',
+              fix: 'Verwenden Sie harte Negative: „darf nicht", „niemals", „nicht", „untersagt". Harter Sprache folgen Modelle.',
+            },
+            {
+              mistake: 'Unerfüllbare Einschränkungen setzen',
+              problem: '„Erwähne niemals den Wettbewerber", obwohl ein Vergleich nötig ist, erzeugt eine unmögliche Erwartung.',
+              fix: 'Formulieren Sie Einschränkungen konkret und realistisch. Beispiel: „Nennen Sie keine Wettbewerber; verweisen Sie stattdessen auf Funktionen."',
+            },
+            {
+              mistake: 'Einschränkungen nicht über Modelle hinweg testen',
+              problem: 'GPT-5.5, Claude und Gemini reagieren unterschiedlich empfindlich auf Einschränkungen. Was auf einem Modell perfekt funktioniert, wird auf einem anderen ignoriert oder überzogen angewendet.',
+              fix: 'Testen Sie Ihre negativen Prompts auf allen Zielmodellen. Dokumentieren Sie die Unterschiede. Passen Sie die Einschränkungen bei Bedarf je Modell an.',
+            },
+          ],
+        },
+        faqSection: {
+      id: 'faq',
       title: 'Häufig Gestellte Fragen zum Negatives Prompting in DACH',
       content: [
         'Zwei zusätzliche Fragen zu DSGVO-Compliance und Enterprise-Herausforderungen:',
@@ -447,7 +505,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Wie teste ich, ob meine negativen Constraints funktionieren?', a: 'Führen Sie denselben Prompt 3–5 mal aus und überprüfen Sie, ob begrenzte Elemente erscheinen. Testen Sie für kritische Constraints über mehrere Modelle mit PromptQuorum Multi-Modell-Dispatch. Wenn ein Modell eine Regel konsistent verletzt, verstärken Sie die Formulierung von „vermeiden" zu „darf nicht" oder „niemals".' },
           ],
     },
-  },
+        relatedReading: {
+          title: 'Weiterführende Artikel',
+          id: 'related-reading',
+          items: [
+            { title: 'Prompt Injection und Sicherheit', url: '/de/prompt-engineering/prompt-injection-and-security' },
+            { title: 'Constrained Prompting', url: '/de/prompt-engineering/constrained-prompting' },
+            { title: 'Prompts über Modelle hinweg testen', url: '/de/prompt-engineering/how-to-test-prompts-across-models' },
+            { title: 'Die Single-Step-Prompt-Methode', url: '/de/prompt-engineering/the-single-step-prompt-method' },
+          ],
+        },
+        sources: {
+          title: 'Quellen',
+          id: 'sources',
+          items: [
+            'Ye, J., et al. (2023). „In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — wie Modelle Einschränkungen über lange Eingaben hinweg verarbeiten und anwenden.',
+          ],
+        },
+      },
   howToSchema: {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -1697,7 +1772,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Pour les expériences rapides et à faible risque, gardez le guidage négatif léger. Quand les prompts mûrissent en workflows de production, la liste des règles « ne pas faire » s\'agrandit généralement.',
       ],
     },
-    whatYouCanConstrain: {
+    useNote: {
+          content: [
+            'Bien utilisé, le prompting négatif transforme les erreurs passées en garde-fous réutilisables.',
+          ],
+        },
+        whatYouCanConstrain: {
       id: 'what-you-can-constrain',
       title: 'Ce Que Vous Pouvez Contraindre',
       content: [
@@ -1779,7 +1859,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       ],
     },
-    example: {
+    combiningNote: {
+          content: [
+            'Combiner instructions positives et négatives vous donne une spécification de prompt bien plus serrée.',
+          ],
+        },
+        example: {
       id: 'example',
       title: 'Exemple : Sans et Avec Guidage Négatif',
       content: [
@@ -1820,7 +1905,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Utilisez le guidage négatif avec parcimonie—il peut parfois confondre le modèle.** La guidance positive (« écrivez clairement et techniquement ») fonctionne souvent mieux que les négatifs lourds (« ne soyez pas vague, ne simplifiez pas, n\'omettez pas les détails »). Équilibrez les deux approches.',
       ],
     },
-    inPromptQuorum: {
+    productionNote: {
+          content: [
+            'Pour des essais rapides et sans enjeu, vous pouvez rester léger sur le prompting négatif. À mesure que les prompts deviennent des workflows de production, votre liste de règles « à ne pas faire » s\'allonge généralement.',
+          ],
+        },
+        inPromptQuorum: {
       title: 'Guidage Négatif dans PromptQuorum',
       content: [
         '**PromptQuorum est un outil de dispatch multi-modèles où le guidage négatif peut être intégré dans des frameworks réutilisables au lieu d\'être réécrit chaque fois.** Vous définissez les contraintes négatives standards une fois et les attachez à de nombreuses tâches.',
@@ -1837,7 +1927,64 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'En traitant le guidage négatif comme part de votre architecture de prompt, PromptQuorum vous aide à convertir les erreurs passées en contraintes durables et réutilisables.',
       ],
     },
-    faqSection: {
+    calloutBoxes: {
+          title: 'Points d\'attention',
+          id: 'callouts',
+          callouts: [
+            {
+              type: 'warning',
+              label: 'Des garde-fous ne sont pas une politique',
+              text: 'Le prompting négatif est un contrôle technique, pas un substitut à une politique. Il évite certaines défaillances mais ne remplace ni le jugement humain, ni la revue juridique, ni les processus de conformité. Utilisez-le comme une couche parmi d\'autres, jamais comme la seule.',
+            },
+            {
+              type: 'pro-tip',
+              label: 'Associez chaque « ne pas » à un « faites plutôt »',
+              text: 'Les négations isolées désorientent les modèles (« ne sois pas vague »). Les négations associées les guident (« ne sois pas vague ; sois précis avec des dates, des chiffres et des exemples »). Toute contrainte fonctionne mieux avec une alternative positive.',
+            },
+            {
+              type: 'key-point',
+              label: '3 à 5 contraintes maximum — au-delà, le modèle décroche',
+              text: 'Au-delà de 5 ou 6 contraintes négatives, les modèles commencent à douter d\'eux-mêmes ou à ignorer purement et simplement les contraintes. Les listes chargées (7 et plus) peuvent produire des sorties trop prudentes, incomplètes ou évasives. Restez concentré.',
+            },
+            {
+              type: 'did-you-know',
+              label: 'Les équipes conformité adorent les garde-fous réutilisables',
+              text: 'Une fois vos contraintes réglementaires, de marque ou de sécurité codifiées en blocs de prompting négatif réutilisables, les audits deviennent plus simples. Vous pouvez prouver que chaque sortie est passée par les mêmes garde-fous — un atout considérable en audit.',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'Erreurs fréquentes avec le prompting négatif',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: 'Écrire trop de contraintes négatives',
+              problem: 'Au-delà de 5 ou 6 règles « à ne pas faire », le modèle sature. Il se met à douter, à ignorer certaines contraintes ou à produire une sortie excessivement prudente.',
+              fix: 'Limitez-vous à 3 à 5 contraintes ciblées par prompt. Regroupez les règles proches : « N\'utilise jamais de mots de hype (disruptif, révolutionnaire, game-changer) » compte pour une seule contrainte.',
+            },
+            {
+              mistake: 'Poser des négations sans alternative positive',
+              problem: 'Dire « ne sois pas vague » sans préciser « sois plutôt précis avec des dates et des chiffres » laisse le modèle deviner.',
+              fix: 'Associez toujours les deux : « N\'utilise pas de formulations vagues. Inclus plutôt des dates précises, des chiffres ou des résultats mesurables. »',
+            },
+            {
+              mistake: 'Employer des négations trop douces',
+              problem: '« Essaie d\'éviter », « de préférence pas », « si possible, saute » sont lus comme des suggestions, pas comme des règles. Les modèles les ignorent.',
+              fix: 'Employez des négations fermes : « ne doit pas », « jamais », « ne pas », « interdit ». Les modèles suivent un langage ferme.',
+            },
+            {
+              mistake: 'Fixer des contraintes irréalisables',
+              problem: '« Ne mentionne jamais le concurrent » alors qu\'une comparaison est nécessaire crée une attente impossible à satisfaire.',
+              fix: 'Rendez les contraintes précises et réalistes. Exemple : « Ne nomme pas les concurrents ; réfère-toi plutôt à leurs fonctionnalités. »',
+            },
+            {
+              mistake: 'Ne pas tester les contraintes sur plusieurs modèles',
+              problem: 'GPT-5.5, Claude et Gemini n\'ont pas la même sensibilité aux contraintes. Une contrainte qui fonctionne parfaitement sur l\'un peut être ignorée ou sur-appliquée sur un autre.',
+              fix: 'Testez vos prompts négatifs sur tous les modèles visés. Documentez les écarts de respect des consignes. Ajustez les contraintes modèle par modèle si nécessaire.',
+            },
+          ],
+        },
+        faqSection: {
       id: 'faq',
       title: 'Questions Fréquemment Posées',
       faqs: [
@@ -2057,7 +2204,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '迅速で低リスク実験の場合、ネガティブプロンプティングは軽く保つことができます。プロンプトが本番ワークフローになるにつれて、「してはいけないこと」ルールのリストは通常増えます',
       ],
     },
-    whatYouCanConstrain: {
+    useNote: {
+          content: [
+            'うまく使えば、ネガティブプロンプティングは過去の失敗を再利用可能なガードレールに変えられます。',
+          ],
+        },
+        whatYouCanConstrain: {
       id: 'what-you-can-constrain',
       title: '制約できる内容',
       content: [
@@ -2139,7 +2291,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       ],
     },
-    example: {
+    combiningNote: {
+          content: [
+            '肯定的な指示と否定的な指示を組み合わせると、プロンプトの仕様がはるかに引き締まります。',
+          ],
+        },
+        example: {
       id: 'example',
       title: '例：ネガティブプロンプティングなし／あり',
       content: [
@@ -2180,7 +2337,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**ネガティブプロンプティングを控えめに使用します。時々モデルを混乱させることがあります。** ポジティブガイダンス（「明確かつ技術的に書く」）はヘビーネガティブより効果的です。両方のアプローチのバランスをとります。',
       ],
     },
-    inPromptQuorum: {
+    productionNote: {
+          content: [
+            'リスクの低い簡単な実験では、ネガティブプロンプティングは軽めで構いません。プロンプトが本番のワークフローへ育っていくにつれて、「してはいけない」ルールのリストは通常増えていきます。',
+          ],
+        },
+        inPromptQuorum: {
       title: 'PromptQuorumでのネガティブプロンプティング',
       content: [
         '**PromptQuorumはマルチモデルディスパッチツールです。ネガティブプロンプティングを毎回書き直すのではなく、再利用可能なフレームワークに組み込むことができます。** 標準ネガティブ制約を一度定義し、多くのタスクに添付します。',
@@ -2197,7 +2359,64 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'ネガティブプロンプティングをプロンプトアーキテクチャの一部として扱うことで、PromptQuorumはあなたが過去の間違いを永続的で再利用可能な制約に変換するのを助けます。',
       ],
     },
-    faqSection: {
+    calloutBoxes: {
+          title: '重要なポイント',
+          id: 'callouts',
+          callouts: [
+            {
+              type: 'warning',
+              label: 'ガードレールはポリシーではありません',
+              text: 'ネガティブプロンプティングは技術的な制御であり、ポリシーの代わりにはなりません。一部の失敗は防げますが、人間の判断、法務レビュー、コンプライアンスプロセスを置き換えることはできません。複数ある防御層の1つとして使い、唯一の層にはしないでください。',
+            },
+            {
+              type: 'pro-tip',
+              label: '「するな」には必ず「代わりにこうしろ」を添える',
+              text: '対になっていない否定はモデルを混乱させます（「曖昧にするな」）。対になった否定はモデルを導きます（「曖昧にせず、日付・数値・具体例で明確に書くこと」）。どの制約も、肯定的な代替案があるほうがうまく機能します。',
+            },
+            {
+              type: 'key-point',
+              label: '制約は最大3〜5個 — それ以上はモデルが破綻します',
+              text: '否定的な制約が5〜6個を超えると、モデルは自分の出力を疑い始めるか、制約を完全に無視し始めます。制約が多すぎるリスト（7個以上）は、過度に慎重で不完全、あるいは回避的な出力を生む可能性があります。焦点を絞ってください。',
+            },
+            {
+              type: 'did-you-know',
+              label: 'コンプライアンス部門は再利用可能なガードレールを歓迎します',
+              text: '規制・ブランド・安全に関する制約を再利用可能なネガティブプロンプティングのブロックとして体系化すると、監査が容易になります。すべての出力が同じガードレールを通過したことを証明できるからです。これは監査において非常に大きな価値を持ちます。',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: 'ネガティブプロンプティングでよくある間違い',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: '否定的な制約を書きすぎる',
+              problem: '「してはいけない」ルールが5〜6個を超えるとモデルは処理しきれなくなります。自分の出力を疑い始めたり、一部の制約を無視したり、過度に慎重な出力を生成したりします。',
+              fix: '1つのプロンプトにつき、焦点を絞った制約3〜5個に抑えてください。関連するルールはまとめます。「誇張表現（破壊的、革命的、ゲームチェンジャー）は絶対に使わないこと」で1つの制約と数えます。',
+            },
+            {
+              mistake: '肯定的な代替案を示さずに否定だけを書く',
+              problem: '「曖昧にするな」とだけ言い、「代わりに日付と数値で具体的に書け」と伝えなければ、モデルは推測するしかありません。',
+              fix: '必ず対にしてください。「曖昧な表現は使わないこと。代わりに、具体的な日付、数値、測定可能な成果を含めること。」',
+            },
+            {
+              mistake: '弱い否定表現を使う',
+              problem: '「なるべく避けて」「できれば控えて」「可能なら飛ばして」は、ルールではなく提案として解釈されます。モデルはこれらを無視します。',
+              fix: '強い否定を使ってください。「してはならない」「決して〜しない」「〜するな」「禁止」。強い表現にはモデルが従います。',
+            },
+            {
+              mistake: '達成不可能な制約を設定する',
+              problem: '比較が必要な場面で「競合には一切言及するな」と指定すると、実現不可能な要求になります。',
+              fix: '制約は具体的かつ現実的にしてください。例：「競合の社名は挙げないこと。代わりに機能に言及すること。」',
+            },
+            {
+              mistake: '複数モデルで制約をテストしない',
+              problem: 'GPT-5.5、Claude、Geminiでは制約への反応の敏感さが異なります。あるモデルで完璧に機能する制約が、別のモデルでは無視されたり過剰に適用されたりします。',
+              fix: '対象とするすべてのモデルでネガティブプロンプトをテストしてください。遵守状況の違いを記録します。必要に応じてモデルごとに制約を調整します。',
+            },
+          ],
+        },
+        faqSection: {
       id: 'faq',
       title: 'よくある質問',
       faqs: [
@@ -2360,6 +2579,63 @@ export const article: Partial<Record<Language, PEArticle>> = {
         practicalSuggestions: { title: '实用建议：在中国商业环境中的应用', content: ['消极提示法在国内商业场景中特别有价值。以下是几个务实的建议，帮助您在SaaS、电商、金融科技和供应链等领域有效应用：'], items: ['在SaaS销售描述中：禁用"最先进""全球领先"等绝对化表述。使用"支持""可以帮助"等更保守的措辞，符合国内消费者预期。', '在电商文案中：不能涉及"包治百病"等医疗声称、避免"国外品质"暗示、禁用虚假折扣承诺。', '在金融内容中：不能给出个人投资建议、避免"稳赚不赔"表述、必须清晰标注风险信息。', '在供应链和企业服务中：不能夸大效率提升比例（如"提升300%"）、避免未经验证的案例数字、明确标注假设条件。', '在API文档和开发者指南中：禁止模糊的技术描述、要求所有性能声明必须附带基准数据、避免与开源项目的不当对标。'] },
         howToStart: { title: '如何开始使用消极提示法', numberedItems: ['**第一步：列出您不要的具体内容——特定词汇、语气、风格或做法。** 例如：不使用营销术语、不做虚假承诺、不提及竞争对手品牌。', '**第二步：用明确的禁止性语言表述规则——"不要""必须不""永远不要"。** 模糊的表述如"尽量避免"效果较差。应该直接说："永远不要使用"颠覆""改变游戏规则"或"AI赋能"这样的词。"', '**第三步：提供反面案例——展示给模型看您明确不要什么样的输出。** 例如："不要这样写：\'用我们的AI方案突飞猛进。\'不要这样：\'我们的尖端平台采用机器学习。\'应该这样：[给出正面范文]。"', '**第四步：正负指导相结合——不仅说要避免什么，还要说做什么。** 例如："不要用营销语言。改为专注于具体、可量化的业务收益。"', '**第五步：适度使用消极提示——过多的禁止规则可能混淆模型。** 正面指导（"用清晰、专业的技术语言"）通常比严苛的禁令（"不要含糊、不要简化、不要遗漏细节"）更有效。要在两者之间找到平衡。'] },
         implementationChecklist: { title: '实施清单：确保消极提示法有效执行', content: ['为了确保消极提示法真正有效，建议按照以下清单逐项检查：'], items: ['□ 列出过去出现过至少2-3次的具体错误或不符合预期的输出。', '□ 将这些错误翻译成明确的"不要"规则，用中文直接、无歧义地表述。', '□ 对每条规则提供至少一个反面例子（错误的做法）和一个正面例子（正确的做法）。', '□ 在提示中同时包含3-5条正面指导（您期望看到的做法）。', '□ 在生产前用2-3个实际工作任务测试这些规则，验证模型的遵守程度。', '□ 定期回顾输出结果，如发现新的错误模式，及时补充和更新"不要"规则。'] },
+        calloutBoxes: {
+          title: '重点提示',
+          id: 'callouts',
+          callouts: [
+            {
+              type: 'warning',
+              label: '护栏不等于制度',
+              text: '负面提示词是一种技术手段，不能替代制度。它能防止部分失误，但无法取代人的判断、法务审查或合规流程。请把它当作多层防护中的一层，而不是唯一一层。',
+            },
+            {
+              type: 'pro-tip',
+              label: '每条"不要"都要配一条"改为这样做"',
+              text: '孤立的否定会让模型困惑（"不要含糊"）。成对的否定则能给出方向（"不要含糊；请给出具体的日期、数字和示例"）。每条约束配上正面替代方案后效果都更好。',
+            },
+            {
+              type: 'key-point',
+              label: '最多3–5条约束——再多就会拖垮模型',
+              text: '超过5–6条负面约束后，模型会开始自我怀疑，或者干脆忽略约束。约束清单过长（7条以上）可能产出过于保守、不完整或回避性的结果。请保持聚焦。',
+            },
+            {
+              type: 'did-you-know',
+              label: '合规团队偏爱可复用的护栏',
+              text: '一旦你把监管、品牌或安全方面的约束固化成可复用的负面提示词模块，审计就会变得轻松。你可以证明每一条输出都经过了同一套护栏——这在审计中极有价值。',
+            },
+          ],
+        },
+        commonMistakes: {
+          title: '负面提示词的常见错误',
+          id: 'common-mistakes',
+          mistakes: [
+            {
+              mistake: '写了过多负面约束',
+              problem: '超过5–6条"不要"规则会让模型不堪重负。它会开始自我怀疑、忽略部分约束，或者产出过于保守的内容。',
+              fix: '每条提示词限制在3–5条聚焦的约束内。把相关规则合并："绝不使用夸大词汇（颠覆、革命性、划时代）"算作一条约束。',
+            },
+            {
+              mistake: '只给否定却不给正面替代方案',
+              problem: '只说"不要含糊"，却不说"改为给出具体日期和数字"，会让模型只能靠猜。',
+              fix: '始终成对给出："不要使用含糊的表述。请改为写出具体的日期、数字或可衡量的结果。"',
+            },
+            {
+              mistake: '使用语气偏软的否定表述',
+              problem: '"尽量避免"、"最好不要"、"可以的话跳过"会被理解成建议而不是规则，模型会忽略它们。',
+              fix: '使用强硬的否定："不得"、"绝不"、"不要"、"禁止"。模型会遵守强硬的措辞。',
+            },
+            {
+              mistake: '设置无法达成的约束',
+              problem: '在必须做对比时却要求"绝不提及竞争对手"，会造成不可能实现的预期。',
+              fix: '让约束具体且现实。示例："不要点名竞争对手；改为描述其能力。"',
+            },
+            {
+              mistake: '没有跨模型测试约束',
+              problem: 'GPT-5.5、Claude和Gemini对约束的敏感度不同。在一个模型上完美生效的约束，在另一个模型上可能被忽略或过度执行。',
+              fix: '在所有目标模型上测试你的负面提示词。记录各模型的遵守差异。必要时为每个模型分别调整约束。',
+            },
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: '常见问题',
@@ -2380,6 +2656,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
               q: '消极提示法与内容过滤相同吗？',
               a: '不同。内容过滤是在生成之后检测并拦截不需要的输出，而消极提示法是在生成之前就明确告诉模型要避免什么，从源头防止不需要的输出。过滤发生在下游，消极提示法则在问题出现之前就加以预防。',
             },
+          ],
+        },
+        relatedReading: {
+          title: '延伸阅读',
+          id: 'related-reading',
+          items: [
+            { title: '提示词注入与安全', url: '/zh/prompt-engineering/prompt-injection-and-security' },
+            { title: '受约束的提示词', url: '/zh/prompt-engineering/constrained-prompting' },
+            { title: '如何跨模型测试提示词', url: '/zh/prompt-engineering/how-to-test-prompts-across-models' },
+            { title: '单步提示词方法', url: '/zh/prompt-engineering/the-single-step-prompt-method' },
+          ],
+        },
+        sources: {
+          title: '来源',
+          id: 'sources',
+          items: [
+            'Ye, J., 等（2023）。"In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 —— 模型如何在长输入中处理并应用约束。',
           ],
         },
       },
