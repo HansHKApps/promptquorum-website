@@ -66,6 +66,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptOptimization: {
         id: 'what-is-prompt-optimization',
         title: 'What Is Prompt Optimization for Teams?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Team prompt optimization is measuring prompt changes against a shared evaluation set rather than individual judgement, so an improvement can be demonstrated instead of argued about.' },
+          { type: 'in-plain-terms', text: 'Alone, you change a prompt and decide it reads better. On a team that is just an opinion. An evaluation set turns it into a number everyone can check — and stops the endless debate about whose wording is nicer.' },
+        ],
         content: [
           '**Prompt optimization is the systematic process of improving AI prompts through structured iteration, variant testing, and output measurement — distinct from one-off prompt writing.** When one engineer tweaks a prompt and shares it verbally, improvements are not reproducible or comparable. When a team adopts systematic optimization, all engineers edit the same prompt library, compare variants against the same test dataset, and track which changes actually improve quality.',
           'What makes team optimization different from individual work: shared prompt libraries that multiple engineers edit simultaneously, review workflows that prevent unauthorized changes to production prompts, A/B experiments that measure real-world impact, and audit trails for compliance. Individual prompt tweaking is fast but fragile; team optimization is slower to set up but scales.',
@@ -994,6 +998,10 @@ tests:
       whatIsPromptOptimization: {
         id: 'what-is-prompt-optimization',
         title: '¿Qué es la optimización de prompts para equipos?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'La optimización de prompts en equipo consiste en medir los cambios contra un conjunto de evaluación compartido en lugar del criterio individual, de modo que una mejora se demuestre en vez de discutirse.' },
+          { type: 'in-plain-terms', text: 'Solo, cambias un prompt y decides que se lee mejor. En equipo eso es una opinión. Un conjunto de evaluación lo convierte en un número que cualquiera puede comprobar, y acaba con el debate eterno sobre quién redacta mejor.' },
+        ],
         content: [
           '**La optimización de prompts es el proceso sistemático de mejorar los prompts de IA mediante iteración estructurada, testing de variantes y medición del output — distinto de la escritura puntual de prompts.** Cuando un ingeniero ajusta un prompt y lo comparte verbalmente, las mejoras no son reproducibles ni comparables. Cuando un equipo adopta la optimización sistemática, todos los ingenieros editan la misma biblioteca de prompts, comparan variantes contra el mismo dataset de test y rastrean qué cambios mejoran realmente la calidad.',
           'Lo que hace que la optimización en equipo sea diferente del trabajo individual: bibliotecas de prompts compartidas que múltiples ingenieros editan simultáneamente, flujos de revisión que evitan cambios no autorizados en los prompts de producción, experimentos A/B que miden el impacto en el mundo real y trazas de auditoría para cumplimiento. El ajuste individual de prompts es rápido pero frágil; la optimización en equipo es más lenta de configurar pero escala.',
@@ -1469,6 +1477,10 @@ tests:
       whatIsPromptOptimization: {
         id: 'what-is-prompt-optimization',
         title: 'O que é otimização de prompts para equipes?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'A otimização de prompts em equipe consiste em medir as mudanças contra um conjunto de avaliação compartilhado em vez do julgamento individual, para que uma melhoria seja demonstrada em vez de debatida.' },
+          { type: 'in-plain-terms', text: 'Sozinho, você muda um prompt e decide que ficou melhor. Em equipe, isso é opinião. Um conjunto de avaliação transforma aquilo em um número que qualquer um confere, e encerra a discussão infinita sobre quem escreve melhor.' },
+        ],
         content: [
           '**A otimização de prompts é o processo sistemático de melhorar os prompts de IA por meio de iteração estruturada, testes de variantes e medição da saída — diferente da escrita pontual de prompts.** Quando um engenheiro ajusta um prompt e o compartilha verbalmente, as melhorias não são reproduzíveis nem comparáveis. Quando uma equipe adota a otimização sistemática, todos os engenheiros editam a mesma biblioteca de prompts, comparam variantes contra o mesmo dataset de teste e rastreiam quais mudanças realmente melhoram a qualidade.',
           'O que torna a otimização em equipe diferente do trabalho individual: bibliotecas de prompts compartilhadas que múltiplos engenheiros editam simultaneamente, fluxos de revisão que evitam mudanças não autorizadas nos prompts de produção, experimentos A/B que medem o impacto no mundo real e trilhas de auditoria para conformidade. O ajuste individual de prompts é rápido mas frágil; a otimização em equipe é mais lenta de configurar, mas escala.',
@@ -2738,6 +2750,10 @@ tests:
       whatIsPromptOptimization: {
         id: 'what-is-prompt-optimization',
         title: '什么是团队提示优化?',
+        snippets: [
+          { type: 'in-one-sentence', text: '团队层面的提示词优化，是用共享的评测集来衡量每次改动，而不是靠个人判断，这样「变好了」可以被证明，而不是被争论。' },
+          { type: 'in-plain-terms', text: '一个人做事，改完提示词觉得读着更顺，就算过了。放到团队里，那只是个人意见。有了评测集，它就变成人人都能复核的数字，也就不必再没完没了地争谁写得更好。' },
+        ],
         content: [
           '**提示优化是通过结构化迭代、变体测试和输出测量来系统性改进AI提示的过程 — 不同于一次性提示编写。** 当一个工程师调整提示并口头分享时，改进无法重现或对比。当团队采纳系统化优化时，所有工程师编辑同一提示库、针对同一测试数据集对比变体、跟踪哪些变化真正改善质量。',
           '团队优化与个人工作的区别：多个工程师同时编辑的共享提示库、防止未授权更改生产提示的审查工作流、衡量真实影响的A/B实验、合规性审计日志。个人提示调整速度快但脆弱；团队优化初期设置慢但可扩展。',
@@ -3220,6 +3236,10 @@ tests:
       whatIsPromptOptimization: {
         id: 'what-is-prompt-optimization',
         title: 'ما هو تحسين التعليمات للفرق؟',
+        snippets: [
+          { type: 'in-one-sentence', text: 'تحسين البرومبتات على مستوى الفريق يعني قياس التغييرات مقابل مجموعة تقييم مشتركة بدلاً من الاعتماد على الحكم الفردي، بحيث يُبرهَن على التحسّن لا أن يكون محل جدال.' },
+          { type: 'in-plain-terms', text: 'وحدك، تغيّر البرومبت فتقرر أنه صار أفضل. أما في الفريق فذلك مجرد رأي. مجموعة التقييم تحوّله إلى رقم يستطيع الجميع مراجعته، وتنهي الجدال الذي لا ينتهي حول صياغة مَن أجمل.' },
+        ],
         content: [
           '**تحسين التعليمات هو العملية المنهجية لتحسين تعليمات الذكاء الاصطناعي من خلال التكرار المنظم واختبار المتغيرات وقياس المخرجات — وهو مختلف عن كتابة التعليمات المتفرقة.** عندما يضبط مهندس تعليمةً ويشاركها شفهياً، لا يكون التحسين قابلاً للتكرار أو المقارنة. حين يتبنى فريق التحسين المنهجي، يتمكن جميع المهندسين من تحرير نفس مكتبة التعليمات ومقارنة المتغيرات على نفس مجموعة بيانات الاختبار وتتبع التغييرات التي تُحسّن الجودة فعلاً.',
           'ما يجعل التحسين الجماعي مختلفاً عن العمل الفردي: مكتبات تعليمات مشتركة يحررها مهندسون متعددون في آنٍ واحد، وسير عمل مراجعة تمنع التغييرات غير المصرح بها على تعليمات الإنتاج، وتجارب A/B تقيس الأثر في العالم الحقيقي، ومسارات مراجعة للامتثال. ضبط التعليمات الفردي سريع لكنه هش؛ التحسين الجماعي أبطأ في الإعداد لكنه قابل للتوسع.',
@@ -3693,6 +3713,10 @@ tests:
       whatIsPromptOptimization: {
         id: 'what-is-prompt-optimization',
         title: '팀을 위한 프롬프트 최적화란?',
+        snippets: [
+          { type: 'in-one-sentence', text: '팀 단위 프롬프트 최적화란 개인의 판단이 아니라 공유된 평가 세트를 기준으로 변경 사항을 측정하는 것이며, 그래야 개선을 논쟁이 아니라 입증으로 다룰 수 있습니다.' },
+          { type: 'in-plain-terms', text: '혼자라면 프롬프트를 고치고 더 잘 읽힌다고 판단하면 그만입니다. 팀에서는 그것이 의견일 뿐입니다. 평가 세트는 그것을 누구나 확인할 수 있는 숫자로 바꾸고, 누구의 표현이 더 낫냐는 끝없는 논쟁을 멈춰 줍니다.' },
+        ],
         content: [
           '**프롬프트 최적화는 구조화된 반복, 변형 테스트, 출력 측정을 통해 AI 프롬프트를 체계적으로 개선하는 프로세스입니다 — 즉흥적인 프롬프트 작성과는 다릅니다.** 엔지니어가 프롬프트를 조정하고 구두로 공유할 때 개선 사항은 재현하거나 비교할 수 없습니다. 팀이 체계적인 최적화를 채택하면 모든 엔지니어가 동일한 프롬프트 라이브러리를 편집하고, 동일한 테스트 데이터셋을 기준으로 변형을 비교하며, 어떤 변경이 실제로 품질을 향상시키는지 추적합니다.',
           '팀 최적화가 개인 작업과 다른 점: 여러 엔지니어가 동시에 편집하는 공유 프롬프트 라이브러리, 프로덕션 프롬프트의 무단 변경을 방지하는 검토 워크플로, 실제 영향을 측정하는 A/B 실험, 컴플라이언스를 위한 감사 추적. 개인적인 프롬프트 조정은 빠르지만 취약합니다; 팀 최적화는 설정에 시간이 더 걸리지만 확장 가능합니다.',

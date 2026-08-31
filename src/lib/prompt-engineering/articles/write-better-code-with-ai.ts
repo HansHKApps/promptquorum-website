@@ -227,10 +227,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         directAnswer: {
           title: 'The Direct Answer: Prompt Quality Determines Code Quality',
+          snippets: [
+            { type: 'in-one-sentence', text: 'The developer\'s job has shifted from writing every line to writing instructions an AI executes, so output quality tracks how precisely the prompt states the interface, constraints and edge cases.' },
+            { type: 'in-plain-terms', text: 'The model writes the code; you decide what it should do. Vague in, vague out — the same request that would make a junior developer ask three clarifying questions is the one that produces confidently wrong code here.' },
+          ],
           content: [
             '**The output of any AI coding session is only as good as the instruction you give — a vague prompt produces vague code, a structured prompt produces production-ready code.** Large Language Models (LLMs) — the class of neural networks behind GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro — do not "understand" your project; they predict the next most likely token based on patterns learned from billions of lines of code.',
             'This means your prompt is an architectural contract, not a casual question. When you specify the programming language, expected inputs/outputs, and edge cases to handle, you consistently receive code closer to production-ready.',
-            'In one sentence: The developer\'s job has shifted from writing every line to writing instructions that an AI executes — the skill is prompt engineering, not keyboarding speed.',
             'These prompting techniques apply identically to local coding stacks. To replace a cloud assistant with an open-source pairing of Continue.dev + Ollama + Qwen3-Coder, see [Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm).',
           ],
         },
@@ -728,6 +731,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         zusammenfassung: {
           title: 'Zusammenfassung',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Die Aufgabe von Entwicklerinnen und Entwicklern hat sich vom Schreiben jeder Zeile zum Schreiben von Anweisungen verlagert, die eine KI ausführt — die Qualität des Ergebnisses folgt daher der Präzision, mit der Schnittstelle, Einschränkungen und Sonderfälle im Prompt stehen.' },
+            { type: 'in-plain-terms', text: 'Das Modell schreibt den Code, Sie entscheiden, was er tun soll. Vage hinein, vage heraus: Genau die Anfrage, bei der eine Junior-Entwicklerin drei Rückfragen stellen würde, erzeugt hier selbstbewusst falschen Code.' },
+          ],
           content: [
             'Sie werden in diesem Guide lernen, wie Sie KI-Code-Generierung in deutsch/europäischen Entwicklungs-Teams einsetzen, mit besonderem Fokus auf Datenschutz und Sicherheit.',
           ],
@@ -1095,6 +1102,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         zusammenfassung: {
           title: 'Resumen',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El trabajo de quien programa ha pasado de escribir cada línea a escribir instrucciones que ejecuta una IA, así que la calidad del resultado depende de con cuánta precisión el prompt define la interfaz, las restricciones y los casos límite.' },
+            { type: 'in-plain-terms', text: 'El modelo escribe el código; tú decides qué debe hacer. Si entra vago, sale vago: la misma petición que haría a un junior plantear tres preguntas es la que aquí produce código incorrecto con toda seguridad.' },
+          ],
           content: [
             'Aprenderás en esta guía cómo usar la generación de código con IA en entornos de desarrollo hispanohablantes, con enfoque especial en la privacidad de datos y la seguridad.',
           ],
@@ -1392,6 +1403,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         zusammenfassung: {
           title: 'ملخص',
+          snippets: [
+            { type: 'in-one-sentence', text: 'تحوّل عمل المطوّر من كتابة كل سطر إلى كتابة تعليمات ينفّذها الذكاء الاصطناعي، ولذلك تتبع جودة الناتج مدى دقة وصف البرومبت للواجهة والقيود والحالات الطرفية.' },
+            { type: 'in-plain-terms', text: 'النموذج يكتب الشيفرة، وأنت تقرر ما ينبغي أن تفعله. مدخلات مبهمة تعني مخرجات مبهمة: الطلب نفسه الذي يدفع مطوّراً مبتدئاً لطرح ثلاثة أسئلة توضيحية هو الذي يُنتج هنا شيفرة خاطئة بثقة.' },
+          ],
           content: [
             'ستتعلم في هذا الدليل كيفية استخدام توليد الكود بالذكاء الاصطناعي مع التركيز الخاص على خصوصية البيانات والأمان.',
           ],
@@ -1729,6 +1744,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         directAnswer: {
           id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'A resposta direta: a qualidade do prompt determina a qualidade do código',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O trabalho de quem programa passou de escrever cada linha para escrever instruções que uma IA executa, então a qualidade do resultado acompanha o quanto o prompt define com precisão a interface, as restrições e os casos limite.' },
+            { type: 'in-plain-terms', text: 'O modelo escreve o código; você decide o que ele deve fazer. Entrada vaga, saída vaga: o mesmo pedido que faria um desenvolvedor júnior levantar três perguntas é o que aqui produz código errado com toda a confiança.' },
+          ],
           content: [
             '**A saída de qualquer sessão de codificação com IA é tão boa quanto a instrução que você dá — um prompt vago produz código vago, um prompt estruturado produz código pronto para produção.** LLMs não "entendem" seu projeto; eles preveem o próximo token mais provável com base em padrões aprendidos de bilhões de linhas de código.',
             'Isso significa que seu prompt é um contrato de arquitetura, não uma pergunta casual. Quando você especifica a linguagem de programação, as entradas/saídas esperadas e os casos extremos, você obtém código consistentemente mais próximo de estar pronto para produção.',
@@ -2125,6 +2144,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         directAnswer: {
           id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'La Réponse Directe : La Qualité des Prompts Détermine la Qualité du Code',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Le métier de développeur est passé de l\'écriture de chaque ligne à la rédaction d\'instructions exécutées par une IA : la qualité du résultat suit donc la précision avec laquelle le prompt décrit l\'interface, les contraintes et les cas limites.' },
+            { type: 'in-plain-terms', text: 'Le modèle écrit le code ; vous décidez de ce qu\'il doit faire. Entrée floue, sortie floue : la demande qui ferait poser trois questions à un développeur junior est celle qui produit ici du code faux avec assurance.' },
+          ],
           content: [
             '**La sortie de toute session de codage IA est aussi bonne que l\'instruction que vous donnez — un prompt vague produit du code vague, un prompt structuré produit du code prêt pour la production.** Les modèles de langage de grande taille (LLM) — la classe de réseaux de neurones derrière GPT-5, Claude 4.8 Opus et Gemini 3 Pro — ne « comprennent » pas votre projet ; ils prédisent le token le plus probable basé sur les patterns appris de milliards de lignes de code.',
             'Cela signifie que votre prompt est un contrat architectural, pas une question improvisée. Quand vous précisez le langage de programmation, les entrées/sorties attendues et les cas limites à gérer, vous recevez systématiquement du code plus proche d\'être prêt pour la production.',
@@ -2602,6 +2625,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         おすすめの使い方: {
           title: 'おすすめの使い方',
+          snippets: [
+            { type: 'in-one-sentence', text: '開発者の仕事は、すべての行を書くことから、AI が実行する指示を書くことへと移りました。したがって成果物の品質は、インターフェース・制約・エッジケースをプロンプトがどれだけ正確に述べているかに追随します。' },
+            { type: 'in-plain-terms', text: 'コードを書くのはモデルで、何をすべきかを決めるのはあなたです。曖昧に頼めば曖昧に返ってきます。新人開発者なら三つは質問し返すような依頼こそ、ここでは自信満々の誤ったコードを生みます。' },
+          ],
           items: [
             'METI ガイドラインに準拠した開発：Ollama 経由でローカル実行する LLaMA モデルを使用し、コードがサーバーを離れないようにしてください。',
             'チーム内の承認プロセスの統合：AI が生成したコードが上司や品質保証チームの事前承認を必須にし、責任の明確化を図ってください。',
@@ -3059,6 +3086,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         directAnswer: {
           id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: '直接答案：提示词质量决定代码质量',
+          snippets: [
+            { type: 'in-one-sentence', text: '开发者的工作已经从逐行写代码，转向编写由 AI 执行的指令；因此产出质量取决于提示词把接口、约束和边界情况说得有多准确。' },
+            { type: 'in-plain-terms', text: '代码由模型来写，做什么则由你来定。输入含糊，输出就含糊——同样一句需求，如果放在初级开发者面前会引出三个追问，放在这里就会变成一段笃定却错误的代码。' },
+          ],
           content: [
             '**任何AI编码会话的输出质量只取决于你给出的指令 — 模糊的提示词会产生模糊的代码，结构化的提示词会产生生产就绪的代码。** 大语言模型（LLM） — GPT-5、Claude 4.8 Opus和Gemini 3 Pro等神经网络类别 — 不"理解"你的项目；它们根据从数十亿行代码学习到的模式预测下一个最可能的token。',
             '这意味着你的提示词是一个架构合约，而不是随意的问题。当你指定编程语言、预期的输入/输出和要处理的边界情况时，你始终会收到更接近生产就绪的代码。',
@@ -3525,6 +3556,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         directAnswer: {
           id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: '직접 답변: 프롬프트 품질이 코드 품질을 결정합니다',
+          snippets: [
+            { type: 'in-one-sentence', text: '개발자의 일은 모든 줄을 직접 작성하는 것에서 AI가 실행할 지시를 작성하는 것으로 옮겨 갔으며, 따라서 결과물의 품질은 프롬프트가 인터페이스와 제약, 예외 상황을 얼마나 정확히 기술했는지를 따라갑니다.' },
+            { type: 'in-plain-terms', text: '코드는 모델이 쓰고, 무엇을 할지는 여러분이 정합니다. 모호하게 넣으면 모호하게 나옵니다. 신입 개발자라면 세 가지는 되물었을 요청이, 여기서는 확신에 찬 잘못된 코드로 돌아옵니다.' },
+          ],
           content: [
             '**AI 코딩 세션의 출력은 제공하는 지시만큼만 좋습니다 — 모호한 프롬프트는 모호한 코드를 생성하고, 구조화된 프롬프트는 프로덕션 준비 코드를 생성합니다.** 대형 언어 모델(LLM) — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro를 뒷받침하는 신경망 계열 — 은 사용자의 프로젝트를 "이해"하지 않습니다. 수십억 줄의 코드에서 학습한 패턴을 기반으로 다음으로 가장 가능성 있는 토큰을 예측합니다.',
             '이는 프롬프트가 단순한 질문이 아닌 아키텍처 계약임을 의미합니다. 프로그래밍 언어, 예상 입출력, 처리할 엣지 케이스를 명시하면 프로덕션에 더 가까운 코드를 일관되게 받을 수 있습니다.',
