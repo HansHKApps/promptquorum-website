@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-01',
       last_full_refresh: '2026-08-31',
-      current_models_mentioned: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'Llama 3.3 70B', 'Qwen 3', 'Mistral Small', 'Mistral Large', 'DeepSeek'],
+      current_models_mentioned: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'Llama 3.1 8B', 'Qwen3.6', 'Mistral Small 4', 'Mistral Large 3', 'DeepSeek-V4'],
       theme: 'Fundamentals',
       heroImage: '/images/how-llms-actually-work-overview-hero-en.webp',
       title: 'How LLMs Actually Work: Tokens, Attention, and Inference',
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How Transformer Attention Works',
           content: [
             '**The transformer architecture uses a mechanism called self-attention to determine how much each token should "pay attention" to every other token in the sequence when computing its representation.** For each token, the model computes three vectors — Query (Q), Key (K), and Value (V) — and calculates attention scores as dot products between Q and K, scaled and normalized with softmax.',
-            'Multi-head attention runs this process in parallel across multiple "heads" — Llama 3.3 70B uses 64 attention heads per layer, and head counts for closed frontier models are not published — each learning different relationship patterns. Some heads specialize in syntactic relationships (subject-verb), others in semantic similarity, others in coreference (matching pronouns to nouns).',
+            'Multi-head attention runs this process in parallel across multiple "heads" — Llama 3.1 8B uses 32 attention heads per layer, and head counts for closed frontier models are not published — each learning different relationship patterns. Some heads specialize in syntactic relationships (subject-verb), others in semantic similarity, others in coreference (matching pronouns to nouns).',
             'A key practical implication: the "lost in the middle" effect. Research from Liu et al. (2023) at Stanford shows that LLMs systematically underweight information in the middle of long contexts. For prompts exceeding ~2,000 tokens, place critical instructions in the system prompt (beginning) and repeat the most important constraint at the end of the user message.',
           ],
         },
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { Model: 'GPT-5.6 (OpenAI)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
             { Model: 'Claude Opus 5 (Anthropic)', 'Context window': '200,000 tokens', 'Approximate word equivalent': '~150,000 words', 'Practical document limit': '~300-page PDF' },
             { Model: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2,000,000 tokens', 'Approximate word equivalent': '~1,500,000 words', 'Practical document limit': '~3,000-page PDF' },
-            { Model: 'Llama 3.3 70B (Meta, via Ollama)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
+            { Model: 'Llama 3.1 8B (Meta, via Ollama)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
           ],
         },
 
@@ -387,9 +387,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLM Architecture Differences by Region',
           content: [
             '**LLM architecture and performance vary significantly by training data composition, tokenization strategy, and regulatory constraints across regions.** Understanding these differences is critical for teams deploying models globally.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) achieves superior tokenization efficiency for CJK (Chinese, Japanese, Korean) scripts** — using approximately 0.3 tokens per character for Mandarin Chinese compared to GPT-5.6\'s 0.5 tokens per character. This 40% reduction in token count directly reduces API costs and latency for Asian language applications. Qwen\'s training data includes 20% CJK content, optimizing the tokenizer for scripts where character-to-semantic density is highest.',
-            '**Mistral Small and Mistral Large are explicitly architected for European deployment**, with training data filtered to comply with the GDPR, the EU AI Act, and EU regulations on data retention and model transparency. Unlike models trained primarily on unfiltered web data, Mistral documents data sourcing and excludes EU citizens\' personal information from training, making it the default choice for regulated industries in Europe (banking, healthcare, legal tech).',
-            '**DeepSeek\'s architecture reflects its training composition**: 70% of pretraining data is in Chinese and English, 15% in code, 15% in other languages. This ratio produces a model biased toward Chinese language fluency and code-generation speed, with substantially lower performance on low-resource languages. The token distribution and attention patterns are optimized for the frequency patterns in Mandarin Chinese, not English.',
+            '**[Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization) achieves superior tokenization efficiency for CJK (Chinese, Japanese, Korean) scripts** — using approximately 0.3 tokens per character for Mandarin Chinese compared to GPT-5.6\'s 0.5 tokens per character. This 40% reduction in token count directly reduces API costs and latency for Asian language applications. Qwen\'s training data includes 20% CJK content, optimizing the tokenizer for scripts where character-to-semantic density is highest.',
+            '**Mistral Small 4 and Mistral Large 3 are explicitly architected for European deployment**, with training data filtered to comply with the GDPR, the EU AI Act, and EU regulations on data retention and model transparency. Unlike models trained primarily on unfiltered web data, Mistral documents data sourcing and excludes EU citizens\' personal information from training, making it the default choice for regulated industries in Europe (banking, healthcare, legal tech).',
+            '**DeepSeek-V4\'s architecture reflects its training composition**: pretraining is weighted heavily toward Chinese and English, with a substantial code fraction and comparatively little data in other languages. This ratio produces a model biased toward Chinese language fluency and code-generation speed, with substantially lower performance on low-resource languages. The token distribution and attention patterns are optimized for the frequency patterns in Mandarin Chinese, not English.',
           ],
         },
 
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie der Transformer-Attention-Mechanismus funktioniert',
           content: [
             '**Die Transformer-Architektur verwendet einen Mechanismus namens Self-Attention, um zu bestimmen, wie stark jedes Token bei der Berechnung seiner Repräsentation auf alle anderen Tokens in der Sequenz "achten" soll.** Für jedes Token berechnet das Modell drei Vektoren — Query (Q), Key (K) und Value (V) — und ermittelt Attention-Scores als Skalarprodukte von Q und K, skaliert und normiert mit Softmax.',
-            'Multi-Head-Attention führt diesen Prozess parallel über mehrere "Heads" aus — Llama 3.3 70B nutzt 64 Attention-Heads pro Schicht, und für geschlossene Frontier-Modelle werden die Head-Zahlen nicht veröffentlicht —, wobei jeder Head unterschiedliche Beziehungsmuster erlernt. Einige Heads spezialisieren sich auf syntaktische Beziehungen (Subjekt-Verb), andere auf semantische Ähnlichkeit, wieder andere auf Koreferenzen (Pronomen auf Substantive beziehen).',
+            'Multi-Head-Attention führt diesen Prozess parallel über mehrere "Heads" aus — Llama 3.1 8B nutzt 32 Attention-Heads pro Schicht, und für geschlossene Frontier-Modelle werden die Head-Zahlen nicht veröffentlicht —, wobei jeder Head unterschiedliche Beziehungsmuster erlernt. Einige Heads spezialisieren sich auf syntaktische Beziehungen (Subjekt-Verb), andere auf semantische Ähnlichkeit, wieder andere auf Koreferenzen (Pronomen auf Substantive beziehen).',
             'Eine wichtige praktische Konsequenz: der "Lost in the Middle"-Effekt. Forschungen von Liu et al. (2023) an der Stanford University zeigen, dass LLMs Informationen in der Mitte langer Kontexte systematisch untergewichten. Bei Prompts mit mehr als ~2.000 Tokens sollten kritische Anweisungen im System-Prompt (Anfang) platziert und die wichtigste Einschränkung am Ende der Nutzernachricht wiederholt werden.',
           ],
         },
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { Modell: 'GPT-5.6 (OpenAI)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
             { Modell: 'Claude Opus 5 (Anthropic)', Kontextfenster: '200.000 Tokens', 'Ungefähres Wortäquivalent': '~150.000 Wörter', 'Praktisches Dokumentenlimit': '~300-seitiges PDF' },
             { Modell: 'Gemini 3.1 Pro (Google DeepMind)', Kontextfenster: '2.000.000 Tokens', 'Ungefähres Wortäquivalent': '~1.500.000 Wörter', 'Praktisches Dokumentenlimit': '~3.000-seitiges PDF' },
-            { Modell: 'Llama 3.3 70B (Meta, via Ollama)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
+            { Modell: 'Llama 3.1 8B (Meta, via Ollama)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
           ],
         },
         implications: {
@@ -633,9 +633,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLM-Architekturunterschiede nach Region',
           content: [
             '**LLM-Architektur und -Leistung variieren je nach Trainingsdatenzusammensetzung, Tokenisierungsstrategie und regulatorischen Anforderungen erheblich zwischen Regionen.** Das Verstehen dieser Unterschiede ist entscheidend für Teams, die Modelle global einsetzen.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) erreicht überlegene Tokenisierungseffizienz für CJK-Skripte (Chinesisch, Japanisch, Koreanisch)** — mit etwa 0,3 Tokens pro Zeichen für Mandarin-Chinesisch im Vergleich zu GPT-5.6s 0,5 Tokens pro Zeichen. Diese 40-prozentige Reduktion der Token-Anzahl senkt direkt die API-Kosten und Latenz für asiatischsprachige Anwendungen. Qwens Trainingsdaten umfassen 20 % CJK-Inhalte und optimieren den Tokenizer für Skripte, bei denen die Zeichen-zu-Semantik-Dichte am höchsten ist.',
-            '**Mistral Small und Mistral Large sind explizit für den europäischen Einsatz konzipiert**, mit Trainingsdaten, die für die Einhaltung der DSGVO, des EU AI Act und der EU-Vorschriften zu Datenspeicherung und Modelltransparenz gefiltert wurden. Im Gegensatz zu Modellen, die primär auf ungefilterten Webdaten trainiert wurden, dokumentiert Mistral die Datenherkunft und schließt personenbezogene Daten von EU-Bürgern aus dem Training aus, was es zur Standardwahl für regulierte Branchen in Europa (Banken, Gesundheitswesen, Legal Tech) macht.',
-            '**DeepSeeks Architektur spiegelt seine Trainingszusammensetzung wider**: 70 % der Vortrainingsdaten sind auf Chinesisch und Englisch, 15 % auf Code, 15 % auf anderen Sprachen. Dieses Verhältnis erzeugt ein Modell mit Bias zugunsten chinesischer Sprachflüssigkeit und Code-Generierungsgeschwindigkeit, mit deutlich geringerer Leistung bei ressourcenarmen Sprachen. Die Token-Verteilung und Attention-Muster sind für die Frequenzmuster im Mandarin-Chinesischen optimiert, nicht für Englisch.',
+            '**[Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization) erreicht überlegene Tokenisierungseffizienz für CJK-Skripte (Chinesisch, Japanisch, Koreanisch)** — mit etwa 0,3 Tokens pro Zeichen für Mandarin-Chinesisch im Vergleich zu GPT-5.6s 0,5 Tokens pro Zeichen. Diese 40-prozentige Reduktion der Token-Anzahl senkt direkt die API-Kosten und Latenz für asiatischsprachige Anwendungen. Qwens Trainingsdaten umfassen 20 % CJK-Inhalte und optimieren den Tokenizer für Skripte, bei denen die Zeichen-zu-Semantik-Dichte am höchsten ist.',
+            '**Mistral Small 4 und Mistral Large 3 sind explizit für den europäischen Einsatz konzipiert**, mit Trainingsdaten, die für die Einhaltung der DSGVO, des EU AI Act und der EU-Vorschriften zu Datenspeicherung und Modelltransparenz gefiltert wurden. Im Gegensatz zu Modellen, die primär auf ungefilterten Webdaten trainiert wurden, dokumentiert Mistral die Datenherkunft und schließt personenbezogene Daten von EU-Bürgern aus dem Training aus, was es zur Standardwahl für regulierte Branchen in Europa (Banken, Gesundheitswesen, Legal Tech) macht.',
+            '**DeepSeek-V4s Architektur spiegelt seine Trainingszusammensetzung wider**: Die Vortrainingsdaten sind stark auf Chinesisch und Englisch gewichtet, mit einem erheblichen Code-Anteil und vergleichsweise wenig Material in anderen Sprachen. Dieses Verhältnis erzeugt ein Modell mit Bias zugunsten chinesischer Sprachflüssigkeit und Code-Generierungsgeschwindigkeit, mit deutlich geringerer Leistung bei ressourcenarmen Sprachen. Die Token-Verteilung und Attention-Muster sind für die Frequenzmuster im Mandarin-Chinesischen optimiert, nicht für Englisch.',
           ],
         },
         relatedReading: {
@@ -825,7 +825,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Cómo funciona el transformer attention',
           content: [
             '**La arquitectura transformer usa un mecanismo llamado self-attention para determinar cuánto debe "prestar atención" cada token a todos los demás tokens de la secuencia al calcular su representación.** Para cada token, el modelo calcula tres vectores — Query (Q), Key (K) y Value (V) — y calcula puntuaciones de attention como productos escalares entre Q y K, escalados y normalizados con softmax.',
-            'El multi-head attention ejecuta este proceso en paralelo en múltiples "cabezas" — Llama 3.3 70B usa 64 cabezas de attention por capa, y los modelos frontier cerrados no publican su número de cabezas —, cada una aprendiendo diferentes patrones de relación. Algunas cabezas se especializan en relaciones sintácticas (sujeto-verbo), otras en similitud semántica, otras en correferencia (relacionar pronombres con sustantivos).',
+            'El multi-head attention ejecuta este proceso en paralelo en múltiples "cabezas" — Llama 3.1 8B usa 32 cabezas de attention por capa, y los modelos frontier cerrados no publican su número de cabezas —, cada una aprendiendo diferentes patrones de relación. Algunas cabezas se especializan en relaciones sintácticas (sujeto-verbo), otras en similitud semántica, otras en correferencia (relacionar pronombres con sustantivos).',
             'Una implicación práctica clave: el efecto "lost in the middle". La investigación de Liu et al. (2023) en Stanford muestra que los LLMs subestiman sistemáticamente la información en el medio de contextos largos. Para prompts de más de ~2.000 tokens, coloca las instrucciones críticas en el system prompt (al inicio) y repite la restricción más importante al final del user message.',
           ],
         },
@@ -870,7 +870,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { Modelo: 'GPT-5.6 (OpenAI)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
             { Modelo: 'Claude Opus 5 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado en palabras': '~150.000 palabras', 'Límite práctico de documento': '~PDF de 300 páginas' },
             { Modelo: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2.000.000 tokens', 'Equivalente aproximado en palabras': '~1.500.000 palabras', 'Límite práctico de documento': '~PDF de 3.000 páginas' },
-            { Modelo: 'Llama 3.3 70B (Meta, vía Ollama)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
+            { Modelo: 'Llama 3.1 8B (Meta, vía Ollama)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
           ],
         },
         implications: {
@@ -911,9 +911,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Diferencias de arquitectura LLM por región',
           content: [
             '**La arquitectura y el rendimiento de los LLMs varían significativamente según la composición de los datos de entrenamiento, la estrategia de tokenización y las restricciones regulatorias entre regiones.** Entender estas diferencias es fundamental para los equipos que despliegan modelos globalmente.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) logra una eficiencia de tokenización superior para scripts CJK (chino, japonés, coreano)** — usando aproximadamente 0.3 tokens por carácter para el chino mandarín, frente a los 0.5 tokens por carácter de GPT-5.6. Esta reducción del 40% en el número de tokens reduce directamente los costes de la API y la latencia para aplicaciones en idiomas asiáticos. Los datos de entrenamiento de Qwen incluyen un 20% de contenido CJK, lo que optimiza el tokenizador para las escrituras donde la densidad carácter-significado es mayor.',
-            '**Mistral Small y Mistral Large están explícitamente diseñados para el despliegue europeo**, con datos de entrenamiento filtrados para cumplir con el RGPD, la Ley de IA de la UE y las regulaciones de la UE sobre retención de datos y transparencia de modelos. A diferencia de los modelos entrenados principalmente con datos web sin filtrar, Mistral documenta el origen de los datos y excluye del entrenamiento la información personal de ciudadanos de la UE, lo que lo convierte en la opción por defecto para sectores regulados en Europa (banca, sanidad, legal tech).',
-            '**La arquitectura de DeepSeek refleja su composición de entrenamiento**: el 70% de los datos de pretraining están en chino e inglés, el 15% en código, el 15% en otros idiomas. Esta proporción produce un modelo sesgado hacia la fluidez en chino y la velocidad de generación de código, con un rendimiento notablemente inferior en idiomas de bajos recursos. La distribución de tokens y los patrones de attention están optimizados para los patrones de frecuencia del chino mandarín, no del inglés.',
+            '**[Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization) logra una eficiencia de tokenización superior para scripts CJK (chino, japonés, coreano)** — usando aproximadamente 0.3 tokens por carácter para el chino mandarín, frente a los 0.5 tokens por carácter de GPT-5.6. Esta reducción del 40% en el número de tokens reduce directamente los costes de la API y la latencia para aplicaciones en idiomas asiáticos. Los datos de entrenamiento de Qwen incluyen un 20% de contenido CJK, lo que optimiza el tokenizador para las escrituras donde la densidad carácter-significado es mayor.',
+            '**Mistral Small 4 y Mistral Large 3 están explícitamente diseñados para el despliegue europeo**, con datos de entrenamiento filtrados para cumplir con el RGPD, la Ley de IA de la UE y las regulaciones de la UE sobre retención de datos y transparencia de modelos. A diferencia de los modelos entrenados principalmente con datos web sin filtrar, Mistral documenta el origen de los datos y excluye del entrenamiento la información personal de ciudadanos de la UE, lo que lo convierte en la opción por defecto para sectores regulados en Europa (banca, sanidad, legal tech).',
+            '**La arquitectura de DeepSeek-V4 refleja su composición de entrenamiento**: los datos de pretraining están fuertemente ponderados hacia el chino y el inglés, con una fracción considerable de código y comparativamente pocos datos en otros idiomas. Esta proporción produce un modelo sesgado hacia la fluidez en chino y la velocidad de generación de código, con un rendimiento notablemente inferior en idiomas de bajos recursos. La distribución de tokens y los patrones de attention están optimizados para los patrones de frecuencia del chino mandarín, no del inglés.',
           ],
         },
         relatedReading: {
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'كيف يعمل انتباه المحوّل',
           content: [
             '**تستخدم بنية المحوّل آلية تُسمى الانتباه الذاتي لتحديد مقدار "انتباه" كل رمز لجميع الرموز الأخرى في التسلسل عند حساب تمثيله.** لكل رمز، يحسب النموذج ثلاثة متجهات — الاستعلام (Q) والمفتاح (K) والقيمة (V) — ويحسب نتائج الانتباه كضرب نقطي بين Q وK، مُقيَّساً ومُطبَّعاً بـsoftmax.',
-            'يُشغّل الانتباه متعدد الرؤوس هذه العملية بالتوازي عبر رؤوس متعددة — يستخدم Llama 3.3 70B عدد 64 رأس انتباه لكل طبقة، ولا تُنشر أعداد الرؤوس للنماذج الحدّية المغلقة —، يتعلم كل منها أنماط علاقات مختلفة. تتخصص بعض الرؤوس في العلاقات النحوية (الفاعل-الفعل)، وأخرى في التشابه الدلالي، وأخرى في الإحالة المشتركة (ربط الضمائر بالأسماء).',
+            'يُشغّل الانتباه متعدد الرؤوس هذه العملية بالتوازي عبر رؤوس متعددة — يستخدم Llama 3.1 8B عدد 32 رأس انتباه لكل طبقة، ولا تُنشر أعداد الرؤوس للنماذج الحدّية المغلقة —، يتعلم كل منها أنماط علاقات مختلفة. تتخصص بعض الرؤوس في العلاقات النحوية (الفاعل-الفعل)، وأخرى في التشابه الدلالي، وأخرى في الإحالة المشتركة (ربط الضمائر بالأسماء).',
             'إحدى التداعيات العملية الرئيسية: تأثير "الضياع في المنتصف". تُظهر أبحاث Liu et al. (2023) في ستانفورد أن نماذج LLM تُقلّل منهجياً من المعلومات الموجودة في منتصف السياقات الطويلة. للتلقيحات التي تتجاوز ~2,000 رمز، ضع التعليمات الحاسمة في التلقيح النظامي (البداية) وكرّر القيد الأهم في نهاية رسالة المستخدم.',
           ],
         },
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'النموذج': 'GPT-5.6 (OpenAI)', 'نافذة السياق': '128,000 رمز', 'ما يعادله تقريباً بالكلمات': '~96,000 كلمة', 'الحد العملي للمستند': '~PDF من 200 صفحة' },
             { 'النموذج': 'Claude Opus 5 (Anthropic)', 'نافذة السياق': '200,000 رمز', 'ما يعادله تقريباً بالكلمات': '~150,000 كلمة', 'الحد العملي للمستند': '~PDF من 300 صفحة' },
             { 'النموذج': 'Gemini 3.1 Pro (Google DeepMind)', 'نافذة السياق': '2,000,000 رمز', 'ما يعادله تقريباً بالكلمات': '~1,500,000 كلمة', 'الحد العملي للمستند': '~PDF من 3,000 صفحة' },
-            { 'النموذج': 'Llama 3.3 70B (Meta، عبر Ollama)', 'نافذة السياق': '128,000 رمز', 'ما يعادله تقريباً بالكلمات': '~96,000 كلمة', 'الحد العملي للمستند': '~PDF من 200 صفحة' },
+            { 'النموذج': 'Llama 3.1 8B (Meta، عبر Ollama)', 'نافذة السياق': '128,000 رمز', 'ما يعادله تقريباً بالكلمات': '~96,000 كلمة', 'الحد العملي للمستند': '~PDF من 200 صفحة' },
           ],
         },
         implications: {
@@ -1187,9 +1187,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'الاختلافات المعمارية لنماذج LLM حسب المنطقة',
           content: [
             '**تتباين بنية نماذج LLM وأداؤها تبايناً ملحوظاً بحسب تكوين بيانات التدريب واستراتيجية التحليل إلى رموز والقيود التنظيمية عبر المناطق.** إن فهم هذه الاختلافات جوهري للفرق التي تنشر نماذج عالمياً.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) يحقق كفاءة تحليل رموز متفوقة للنصوص CJK (الصينية، اليابانية، الكورية)** — مستخدماً حوالي 0.3 رمز لكل حرف للصينية الماندرينية، مقابل 0.5 رمز لكل حرف لـGPT-5.6. هذا التخفيض بنسبة 40% في عدد الرموز يُقلّل مباشرةً من تكاليف الواجهة البرمجية والكمون للتطبيقات باللغات الآسيوية. تتضمّن بيانات تدريب Qwen نسبة 20% من محتوى CJK، ما يجعل المُرمِّز مُحسَّناً للنصوص التي تبلغ فيها كثافة المعنى لكل حرف أعلى مستوياتها.',
-            '**صُمّم Mistral Small وMistral Large صراحةً للنشر الأوروبي**، مع بيانات تدريب مُصفَّاة للامتثال للائحة الأوروبية لحماية البيانات (GDPR) وقانون الذكاء الاصطناعي الأوروبي ولوائح الاتحاد الأوروبي بشأن الاحتفاظ بالبيانات وشفافية النماذج. وخلافاً للنماذج المُدرَّبة أساساً على بيانات ويب غير مُصفَّاة، توثّق Mistral مصادر بياناتها وتستبعد المعلومات الشخصية لمواطني الاتحاد الأوروبي من التدريب، ما يجعلها الخيار الافتراضي للقطاعات المُنظَّمة في أوروبا (المصارف والرعاية الصحية والتقنيات القانونية).',
-            '**تعكس بنية DeepSeek تكوين تدريبه**: 70% من بيانات التدريب المسبق بالصينية والإنجليزية، و15% كود، و15% لغات أخرى. تُنتج هذه النسبة نموذجاً منحازاً نحو الطلاقة بالصينية وسرعة توليد الكود، مع أداء أدنى بوضوح في اللغات محدودة الموارد. وقد جرى تحسين توزيع الرموز وأنماط الانتباه وفق أنماط التكرار في الصينية الماندرينية لا الإنجليزية.',
+            '**[Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization) يحقق كفاءة تحليل رموز متفوقة للنصوص CJK (الصينية، اليابانية، الكورية)** — مستخدماً حوالي 0.3 رمز لكل حرف للصينية الماندرينية، مقابل 0.5 رمز لكل حرف لـGPT-5.6. هذا التخفيض بنسبة 40% في عدد الرموز يُقلّل مباشرةً من تكاليف الواجهة البرمجية والكمون للتطبيقات باللغات الآسيوية. تتضمّن بيانات تدريب Qwen نسبة 20% من محتوى CJK، ما يجعل المُرمِّز مُحسَّناً للنصوص التي تبلغ فيها كثافة المعنى لكل حرف أعلى مستوياتها.',
+            '**صُمّم Mistral Small 4 وMistral Large 3 صراحةً للنشر الأوروبي**، مع بيانات تدريب مُصفَّاة للامتثال للائحة الأوروبية لحماية البيانات (GDPR) وقانون الذكاء الاصطناعي الأوروبي ولوائح الاتحاد الأوروبي بشأن الاحتفاظ بالبيانات وشفافية النماذج. وخلافاً للنماذج المُدرَّبة أساساً على بيانات ويب غير مُصفَّاة، توثّق Mistral مصادر بياناتها وتستبعد المعلومات الشخصية لمواطني الاتحاد الأوروبي من التدريب، ما يجعلها الخيار الافتراضي للقطاعات المُنظَّمة في أوروبا (المصارف والرعاية الصحية والتقنيات القانونية).',
+            '**تعكس بنية DeepSeek-V4 تكوين تدريبه**: تميل بيانات التدريب المسبق بقوة نحو الصينية والإنجليزية، مع نسبة كبيرة من الكود وقدر ضئيل نسبياً من اللغات الأخرى. تُنتج هذه النسبة نموذجاً منحازاً نحو الطلاقة بالصينية وسرعة توليد الكود، مع أداء أدنى بوضوح في اللغات محدودة الموارد. وقد جرى تحسين توزيع الرموز وأنماط الانتباه وفق أنماط التكرار في الصينية الماندرينية لا الإنجليزية.',
           ],
         },
         relatedReading: {
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment fonctionne le mécanisme d\'attention transformer',
           content: [
             '**L\'architecture transformer utilise un mécanisme appelé self-attention pour déterminer dans quelle mesure chaque token doit « faire attention » à tous les autres tokens de la séquence lors du calcul de sa représentation.** Pour chaque token, le modèle calcule trois vecteurs — Query (Q), Key (K) et Value (V) — et calcule les scores d\'attention comme des produits scalaires entre Q et K, mis à l\'échelle et normalisés avec softmax.',
-            'L\'attention multi-têtes exécute ce processus en parallèle sur plusieurs « têtes » — Llama 3.3 70B utilise 64 têtes d\'attention par couche, et les modèles frontier fermés ne publient pas leur nombre de têtes —, chacune apprenant différents patterns de relations. Certaines têtes se spécialisent dans les relations syntaxiques (sujet-verbe), d\'autres dans la similarité sémantique, d\'autres encore dans la coréférence (faire correspondre les pronoms aux noms).',
+            'L\'attention multi-têtes exécute ce processus en parallèle sur plusieurs « têtes » — Llama 3.1 8B utilise 32 têtes d\'attention par couche, et les modèles frontier fermés ne publient pas leur nombre de têtes —, chacune apprenant différents patterns de relations. Certaines têtes se spécialisent dans les relations syntaxiques (sujet-verbe), d\'autres dans la similarité sémantique, d\'autres encore dans la coréférence (faire correspondre les pronoms aux noms).',
             'Une implication pratique majeure : l\'effet « lost in the middle ». Les recherches de Liu et al. (2023) à Stanford montrent que les LLMs sous-pondèrent systématiquement les informations au milieu des longs contextes. Pour les prompts dépassant ~2 000 tokens, placez les instructions critiques dans le system prompt (début) et répétez la contrainte la plus importante à la fin du message utilisateur.',
           ],
         },
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { Modèle: 'GPT-5.6 (OpenAI)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
             { Modèle: 'Claude Opus 5 (Anthropic)', 'Fenêtre de contexte': '200 000 tokens', 'Équivalent en mots approximatif': '~150 000 mots', 'Limite pratique pour les documents': '~300 pages PDF' },
             { Modèle: 'Gemini 3.1 Pro (Google DeepMind)', 'Fenêtre de contexte': '2 000 000 tokens', 'Équivalent en mots approximatif': '~1 500 000 mots', 'Limite pratique pour les documents': '~3 000 pages PDF' },
-            { Modèle: 'Llama 3.3 70B (Meta, via Ollama)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
+            { Modèle: 'Llama 3.1 8B (Meta, via Ollama)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
           ],
         },
         implications: {
@@ -1462,9 +1462,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Différences d\'architecture LLM par région',
           content: [
             '**L\'architecture et les performances des LLMs varient considérablement selon la composition des données d\'entraînement, la stratégie de tokenisation et les contraintes réglementaires d\'une région à l\'autre.** Comprendre ces différences est crucial pour les équipes déployant des modèles à l\'échelle mondiale.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) atteint une efficacité de tokenisation supérieure pour les scripts CJK (chinois, japonais, coréen)** — utilisant environ 0,3 token par caractère pour le mandarin comparé à 0,5 token par caractère pour GPT-5.6. Cette réduction de 40 % du nombre de tokens réduit directement les coûts API et la latence pour les applications en langues asiatiques. Les données d\'entraînement de Qwen comprennent 20 % de contenu CJK, optimisant le tokeniseur pour les scripts où la densité caractère-sémantique est la plus élevée.',
-            '**Mistral Small et Mistral Large sont explicitement conçus pour le déploiement européen**, avec des données d\'entraînement filtrées pour respecter le RGPD, le règlement européen sur l\'IA (AI Act) et les réglementations de l\'UE sur la conservation des données et la transparence des modèles. Contrairement aux modèles entraînés principalement sur des données web non filtrées, Mistral documente les sources de données et exclut les informations personnelles des citoyens de l\'UE de l\'entraînement, ce qui en fait le choix par défaut pour les secteurs réglementés en Europe (banque, santé, legal tech).',
-            '**L\'architecture de DeepSeek reflète sa composition d\'entraînement** : 70 % des données de pré-entraînement sont en chinois et en anglais, 15 % en code, 15 % dans d\'autres langues. Ce ratio produit un modèle biaisé vers la fluidité en langue chinoise et la vitesse de génération de code, avec des performances nettement inférieures sur les langues à faibles ressources. La distribution des tokens et les patterns d\'attention sont optimisés pour les patterns de fréquence du mandarin, pas de l\'anglais.',
+            '**[Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization) atteint une efficacité de tokenisation supérieure pour les scripts CJK (chinois, japonais, coréen)** — utilisant environ 0,3 token par caractère pour le mandarin comparé à 0,5 token par caractère pour GPT-5.6. Cette réduction de 40 % du nombre de tokens réduit directement les coûts API et la latence pour les applications en langues asiatiques. Les données d\'entraînement de Qwen comprennent 20 % de contenu CJK, optimisant le tokeniseur pour les scripts où la densité caractère-sémantique est la plus élevée.',
+            '**Mistral Small 4 et Mistral Large 3 sont explicitement conçus pour le déploiement européen**, avec des données d\'entraînement filtrées pour respecter le RGPD, le règlement européen sur l\'IA (AI Act) et les réglementations de l\'UE sur la conservation des données et la transparence des modèles. Contrairement aux modèles entraînés principalement sur des données web non filtrées, Mistral documente les sources de données et exclut les informations personnelles des citoyens de l\'UE de l\'entraînement, ce qui en fait le choix par défaut pour les secteurs réglementés en Europe (banque, santé, legal tech).',
+            '**L\'architecture de DeepSeek-V4 reflète sa composition d\'entraînement** : les données de pré-entraînement sont fortement pondérées vers le chinois et l\'anglais, avec une part importante de code et comparativement peu de données dans d\'autres langues. Ce ratio produit un modèle biaisé vers la fluidité en langue chinoise et la vitesse de génération de code, avec des performances nettement inférieures sur les langues à faibles ressources. La distribution des tokens et les patterns d\'attention sont optimisés pour les patterns de fréquence du mandarin, pas de l\'anglais.',
           ],
         },
         relatedReading: {
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'トランスフォーマー注意メカニズムがどのように機能するか',
           content: [
             '**トランスフォーマーアーキテクチャはセルフアテンションと呼ばれるメカニズムを使用して、シーケンス内のすべての他のトークンに「注意を払う」各トークンの程度を決定します。** 各トークンのために、モデルは3つのベクトル — クエリ（Q）、キー（K）、値（V） — を計算し、QとKのドット積として注意スコアを決定し、ソフトマックスでスケーリングと正規化します。',
-            'マルチヘッド注意は複数の「ヘッド」にわたってこのプロセスを並列に実行します（Llama 3.3 70Bは1層あたり64個の注意ヘッドを使用します。クローズドなフロンティアモデルのヘッド数は公開されていません）。各ヘッドは異なる関係パターンを学習します。いくつかのヘッドは構文関係（主語-動詞）に専門化し、他は意味論的な類似性に、他は照応（代名詞を名詞に関連付ける）。',
+            'マルチヘッド注意は複数の「ヘッド」にわたってこのプロセスを並列に実行します（Llama 3.1 8Bは1層あたり32個の注意ヘッドを使用します。クローズドなフロンティアモデルのヘッド数は公開されていません）。各ヘッドは異なる関係パターンを学習します。いくつかのヘッドは構文関係（主語-動詞）に専門化し、他は意味論的な類似性に、他は照応（代名詞を名詞に関連付ける）。',
             '重要な実際の結果：「Lost in the Middle」効果。Stanford Universityの Liu et al.（2023）の研究は、LLMが長いコンテキストの真ん中の情報を体系的に下重することを示しています。プロンプトに〜2,000を超えるトークンがある場合、重要な指示をシステムプロンプト（開始）に配置し、最も重要な制約をユーザーメッセージの終わりで繰り返します。',
           ],
         },
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'モデル': 'GPT-5.6（OpenAI）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
             { 'モデル': 'Claude Opus 5（Anthropic）', 'コンテキストウィンドウ': '200,000トークン', '概算単語相当': '〜150,000単語', '実用的なドキュメント制限': '〜300ページのPDF' },
             { 'モデル': 'Gemini 3.1 Pro（Google DeepMind）', 'コンテキストウィンドウ': '2,000,000トークン', '概算単語相当': '〜1,500,000単語', '実用的なドキュメント制限': '〜3,000ページのPDF' },
-            { 'モデル': 'Llama 3.3 70B（Meta、Ollamaより）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
+            { 'モデル': 'Llama 3.1 8B（Meta、Ollamaより）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
           ],
         },
 
@@ -1747,9 +1747,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLMアーキテクチャ地域別の違い',
           content: [
             '**LLMアーキテクチャとパフォーマンスは、トレーニングデータの構成、トークン化戦略、地域全体の規制要件によって大きく異なります。** グローバルモデルを展開するチームにとって、これらの違いを理解することは重要です。',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)はCJKスクリプト（中国語、日本語、韓国語）の優れたトークン化効率を達成しています** — 標準中国語で約0.3トークン/文字対GPT-5.6の0.5トークン/文字。このトークンの40％削減は、アジア言語のアプリケーションのAPIコストと遅延を直接削減します。Qwenのトレーニングデータには20％のCJK含量が含まれており、文字対セマンティック密度が最も高いスクリプトのトークン化器を最適化します。',
-            '**Mistral SmallおよびMistral LargeはEU展開用に明示的に設計されており、GDPR、EU AI法、およびデータストレージとモデルの透明性に関するEU規制のコンプライアンスのためにフィルターされたトレーニングデータがあります。** 主に無フィルタWebデータで訓練されたモデルとは異なり、Mistralはデータの出所を文書化し、トレーニングからEU市民の個人データを除外しており、ヨーロッパの規制産業（銀行、医療、法務技術）の標準選択になります。',
-            '**DeepSeekのアーキテクチャはトレーニング構成に反映されています**：事前訓練データの70％は中国語と英語、15％はコード、15％は他の言語です。この比率は、中国語の言語流暢性とコード生成速度を優先するモデルを作成し、リソース貧弱言語で明らかに低いパフォーマンスがあります。トークン分布と注意パターンは、英語ではなく標準中国語の周波数パターンに対して最適化されています。',
+            '**[Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization)はCJKスクリプト（中国語、日本語、韓国語）の優れたトークン化効率を達成しています** — 標準中国語で約0.3トークン/文字対GPT-5.6の0.5トークン/文字。このトークンの40％削減は、アジア言語のアプリケーションのAPIコストと遅延を直接削減します。Qwenのトレーニングデータには20％のCJK含量が含まれており、文字対セマンティック密度が最も高いスクリプトのトークン化器を最適化します。',
+            '**Mistral Small 4およびMistral Large 3はEU展開用に明示的に設計されており、GDPR、EU AI法、およびデータストレージとモデルの透明性に関するEU規制のコンプライアンスのためにフィルターされたトレーニングデータがあります。** 主に無フィルタWebデータで訓練されたモデルとは異なり、Mistralはデータの出所を文書化し、トレーニングからEU市民の個人データを除外しており、ヨーロッパの規制産業（銀行、医療、法務技術）の標準選択になります。',
+            '**DeepSeek-V4のアーキテクチャはトレーニング構成に反映されています**：事前訓練データは中国語と英語に大きく偏っており、コードの比率も高く、その他の言語は比較的わずかです。この比率は、中国語の言語流暢性とコード生成速度を優先するモデルを作成し、リソース貧弱言語で明らかに低いパフォーマンスがあります。トークン分布と注意パターンは、英語ではなく標準中国語の周波数パターンに対して最適化されています。',
           ],
         },
 
@@ -1944,7 +1944,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Transformer注意力机制如何工作',
           content: [
             '**Transformer架构使用一种称为自注意力的机制来确定每个令牌在计算其表示时应"关注"序列中所有其他令牌的程度。** 对于每个令牌，模型计算三个向量——查询（Q）、键（K）和值（V）——并将注意力分数计算为Q和K的点积，用softmax进行缩放和归一化。',
-            '多头注意力在多个"头"上并行运行此过程（Llama 3.3 70B 每层使用 64 个注意力头；闭源前沿模型的注意力头数量并未公开），每个头学习不同的关系模式。一些头专注于句法关系（主语-动词），其他头关注语义相似性，还有一些关注共指（将代词与名词关联）。',
+            '多头注意力在多个"头"上并行运行此过程（Llama 3.1 8B 每层使用 32 个注意力头；闭源前沿模型的注意力头数量并未公开），每个头学习不同的关系模式。一些头专注于句法关系（主语-动词），其他头关注语义相似性，还有一些关注共指（将代词与名词关联）。',
             '一个重要的实际结果："Lost in the Middle"效应。Stanford University的Liu et al.（2023）的研究表明，LLM系统性地低估长上下文中间的信息。对于超过约2,000个令牌的提示，将关键指令放在系统提示（开头）中，并在用户消息结尾重复最重要的约束。',
           ],
         },
@@ -1992,7 +1992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '模型': 'GPT-5.6（OpenAI）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
             { '模型': 'Claude Opus 5（Anthropic）', '上下文窗口': '200,000令牌', '近似单词当量': '约150,000词', '实际文档限制': '约300页PDF' },
             { '模型': 'Gemini 3.1 Pro（Google DeepMind）', '上下文窗口': '2,000,000令牌', '近似单词当量': '约1,500,000词', '实际文档限制': '约3,000页PDF' },
-            { '模型': 'Llama 3.3 70B（Meta，通过Ollama）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
+            { '模型': 'Llama 3.1 8B（Meta，通过Ollama）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
           ],
         },
 
@@ -2036,9 +2036,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLM架构的地区差异',
           content: [
             '**LLM架构和性能因训练数据构成、令牌化策略和法规要求在不同地区存在显著差异。** 对于全球部署模型的团队来说，理解这些差异至关重要。',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)在CJK脚本（中文、日文、韩文）上实现了卓越的令牌化效率** — 普通话中文约0.3令牌/字符，而GPT-5.6为0.5令牌/字符。这40%的令牌减少直接降低了亚洲语言应用的API成本和延迟。Qwen的训练数据包含20%的CJK内容，优化了字符与语义密度最高的脚本的令牌化器。',
-            '**Mistral Small和Mistral Large专为欧盟部署设计**，训练数据经过过滤以符合GDPR、欧盟《人工智能法案》以及欧盟关于数据存储和模型透明度的法规。与主要在未过滤网络数据上训练的模型不同，Mistral记录数据来源并从训练中排除欧盟公民的个人数据，使其成为欧洲受监管行业（银行、医疗保健、法律技术）的标准选择。',
-            '**DeepSeek的架构反映了其训练构成**：预训练数据的70%是中文和英文，15%是代码，15%是其他语言。这一比例产生了一个优先考虑中文语言流畅性和代码生成速度的模型，在资源匮乏的语言上性能明显较低。令牌分布和注意力模式针对普通话中文的频率模式优化，而非英语。',
+            '**[Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization)在CJK脚本（中文、日文、韩文）上实现了卓越的令牌化效率** — 普通话中文约0.3令牌/字符，而GPT-5.6为0.5令牌/字符。这40%的令牌减少直接降低了亚洲语言应用的API成本和延迟。Qwen的训练数据包含20%的CJK内容，优化了字符与语义密度最高的脚本的令牌化器。',
+            '**Mistral Small 4和Mistral Large 3专为欧盟部署设计**，训练数据经过过滤以符合GDPR、欧盟《人工智能法案》以及欧盟关于数据存储和模型透明度的法规。与主要在未过滤网络数据上训练的模型不同，Mistral记录数据来源并从训练中排除欧盟公民的个人数据，使其成为欧洲受监管行业（银行、医疗保健、法律技术）的标准选择。',
+            '**DeepSeek-V4的架构反映了其训练构成**：预训练数据大幅偏向中文和英文，代码占比也相当高，其他语言的数据则相对较少。这一比例产生了一个优先考虑中文语言流畅性和代码生成速度的模型，在资源匮乏的语言上性能明显较低。令牌分布和注意力模式针对普通话中文的频率模式优化，而非英语。',
           ],
         },
 
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Como o Transformer Attention Funciona',
           content: [
             '**A arquitetura transformer usa um mecanismo chamado self-attention para determinar quanto cada token deve "prestar atenção" a todos os outros tokens da sequência ao calcular sua representação.** Para cada token, o modelo calcula três vetores — Query (Q), Key (K) e Value (V) — e calcula pontuações de atenção como produtos escalares entre Q e K, escalados e normalizados com softmax.',
-            'O multi-head attention executa esse processo em paralelo em múltiplas "cabeças" — o Llama 3.3 70B usa 64 cabeças de atenção por camada, e os modelos frontier fechados não publicam a contagem de cabeças —, cada uma aprendendo padrões de relacionamento diferentes. Algumas cabeças se especializam em relações sintáticas (sujeito-verbo), outras em similaridade semântica, outras em correferência (associar pronomes a substantivos).',
+            'O multi-head attention executa esse processo em paralelo em múltiplas "cabeças" — o Llama 3.1 8B usa 32 cabeças de atenção por camada, e os modelos frontier fechados não publicam a contagem de cabeças —, cada uma aprendendo padrões de relacionamento diferentes. Algumas cabeças se especializam em relações sintáticas (sujeito-verbo), outras em similaridade semântica, outras em correferência (associar pronomes a substantivos).',
             'Uma implicação prática fundamental: o efeito "lost in the middle". Pesquisas de Liu et al. (2023) em Stanford mostram que os LLMs sistematicamente subponderam informações no meio de contextos longos. Para prompts com mais de ~2.000 tokens, coloque as instruções críticas no system prompt (início) e repita a restrição mais importante no final da mensagem do usuário.',
           ],
         },
@@ -2277,7 +2277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { Modelo: 'GPT-5.6 (OpenAI)', 'Context window': '128.000 tokens', 'Equivalente aproximado em palavras': '~96.000 palavras', 'Limite prático de documento': '~PDF de 200 páginas' },
             { Modelo: 'Claude Opus 5 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado em palavras': '~150.000 palavras', 'Limite prático de documento': '~PDF de 300 páginas' },
             { Modelo: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2.000.000 tokens', 'Equivalente aproximado em palavras': '~1.500.000 palavras', 'Limite prático de documento': '~PDF de 3.000 páginas' },
-            { Modelo: 'Llama 3.3 70B (Meta, via Ollama)', 'Context window': '128.000 tokens', 'Equivalente aproximado em palavras': '~96.000 palavras', 'Limite prático de documento': '~PDF de 200 páginas' },
+            { Modelo: 'Llama 3.1 8B (Meta, via Ollama)', 'Context window': '128.000 tokens', 'Equivalente aproximado em palavras': '~96.000 palavras', 'Limite prático de documento': '~PDF de 200 páginas' },
           ],
         },
         implications: {
@@ -2318,9 +2318,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Diferenças de Arquitetura LLM por Região',
           content: [
             '**A arquitetura e o desempenho dos LLMs variam significativamente pela composição dos dados de treinamento, estratégia de tokenização e restrições regulatórias entre regiões.** Compreender essas diferenças é fundamental para equipes que implantam modelos globalmente.',
-            '**O [Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) alcança eficiência de tokenização superior para scripts CJK (chinês, japonês, coreano)** — usando aproximadamente 0,3 tokens por caractere para o mandarim comparado a 0,5 tokens por caractere do GPT-5.6. Essa redução de 40% no número de tokens reduz diretamente os custos da API e a latência para aplicações em idiomas asiáticos. Os dados de treinamento do Qwen incluem 20% de conteúdo CJK, otimizando o tokenizador para scripts onde a densidade caractere-semântica é maior.',
-            '**O Mistral Small e o Mistral Large são explicitamente projetados para implantação europeia**, com dados de treinamento filtrados para conformidade com o RGPD, a Lei de IA da UE e os regulamentos da UE sobre retenção de dados e transparência de modelos. Ao contrário de modelos treinados principalmente em dados web não filtrados, o Mistral documenta a origem dos dados e exclui informações pessoais de cidadãos da UE do treinamento, tornando-o a escolha padrão para setores regulados na Europa (bancos, saúde, legal tech).',
-            '**A arquitetura do DeepSeek reflete sua composição de treinamento**: 70% dos dados de pré-treinamento estão em chinês e inglês, 15% em código, 15% em outros idiomas. Essa proporção produz um modelo com viés para fluência em chinês e velocidade de geração de código, com desempenho substancialmente menor em idiomas de poucos recursos. A distribuição de tokens e os padrões de atenção são otimizados para os padrões de frequência do mandarim, não do inglês.',
+            '**O [Qwen3.6](/prompt-engineering/prompt-engineering-glossary#tokenization) alcança eficiência de tokenização superior para scripts CJK (chinês, japonês, coreano)** — usando aproximadamente 0,3 tokens por caractere para o mandarim comparado a 0,5 tokens por caractere do GPT-5.6. Essa redução de 40% no número de tokens reduz diretamente os custos da API e a latência para aplicações em idiomas asiáticos. Os dados de treinamento do Qwen incluem 20% de conteúdo CJK, otimizando o tokenizador para scripts onde a densidade caractere-semântica é maior.',
+            '**O Mistral Small 4 e o Mistral Large 3 são explicitamente projetados para implantação europeia**, com dados de treinamento filtrados para conformidade com o RGPD, a Lei de IA da UE e os regulamentos da UE sobre retenção de dados e transparência de modelos. Ao contrário de modelos treinados principalmente em dados web não filtrados, o Mistral documenta a origem dos dados e exclui informações pessoais de cidadãos da UE do treinamento, tornando-o a escolha padrão para setores regulados na Europa (bancos, saúde, legal tech).',
+            '**A arquitetura do DeepSeek-V4 reflete sua composição de treinamento**: os dados de pré-treinamento são fortemente ponderados para chinês e inglês, com uma fração considerável de código e comparativamente poucos dados em outros idiomas. Essa proporção produz um modelo com viés para fluência em chinês e velocidade de geração de código, com desempenho substancialmente menor em idiomas de poucos recursos. A distribuição de tokens e os padrões de atenção são otimizados para os padrões de frequência do mandarim, não do inglês.',
           ],
         },
         relatedReading: {
@@ -2511,7 +2511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '트랜스포머 어텐션 작동 방식',
           content: [
             '**트랜스포머 아키텍처는 셀프 어텐션이라는 메커니즘을 사용하여 각 토큰이 자신의 표현을 계산할 때 시퀀스의 다른 모든 토큰에 얼마나 "주의를 기울여야" 하는지를 결정합니다.** 각 토큰에 대해 모델은 쿼리(Q), 키(K), 값(V)이라는 세 개의 벡터를 계산하고, Q와 K의 내적으로 어텐션 점수를 계산한 뒤 소프트맥스로 스케일링 및 정규화합니다.',
-            '멀티헤드 어텐션은 이 과정을 여러 "헤드"에서 병렬로 실행합니다(Llama 3.3 70B는 레이어당 64개의 어텐션 헤드를 사용하며, 비공개 최신 모델의 헤드 수는 공개되지 않습니다). 각 헤드는 서로 다른 관계 패턴을 학습합니다. 일부 헤드는 구문적 관계(주어-동사), 다른 헤드는 의미적 유사성, 또 다른 헤드는 공참조(대명사를 명사와 연결)에 특화됩니다.',
+            '멀티헤드 어텐션은 이 과정을 여러 "헤드"에서 병렬로 실행합니다(Llama 3.1 8B는 레이어당 32개의 어텐션 헤드를 사용하며, 비공개 최신 모델의 헤드 수는 공개되지 않습니다). 각 헤드는 서로 다른 관계 패턴을 학습합니다. 일부 헤드는 구문적 관계(주어-동사), 다른 헤드는 의미적 유사성, 또 다른 헤드는 공참조(대명사를 명사와 연결)에 특화됩니다.',
             '핵심적인 실제 시사점은 "중간 손실" 효과입니다. Stanford University의 Liu et al.(2023) 연구에 따르면 LLM은 긴 컨텍스트의 중간 부분에 있는 정보를 체계적으로 과소 평가합니다. 2,000 토큰을 초과하는 프롬프트의 경우 중요한 지시사항을 시스템 프롬프트(처음)에 배치하고 가장 중요한 제약 조건을 사용자 메시지 끝에 반복하십시오.',
           ],
         },
@@ -2556,7 +2556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '모델': 'GPT-5.6 (OpenAI)', '컨텍스트 윈도우': '128,000 토큰', '대략적인 단어 수 환산': '약 96,000단어', '실용적인 문서 한계': '약 200페이지 PDF' },
             { '모델': 'Claude Opus 5 (Anthropic)', '컨텍스트 윈도우': '200,000 토큰', '대략적인 단어 수 환산': '약 150,000단어', '실용적인 문서 한계': '약 300페이지 PDF' },
             { '모델': 'Gemini 3.1 Pro (Google DeepMind)', '컨텍스트 윈도우': '2,000,000 토큰', '대략적인 단어 수 환산': '약 1,500,000단어', '실용적인 문서 한계': '약 3,000페이지 PDF' },
-            { '모델': 'Llama 3.3 70B (Meta, Ollama 경유)', '컨텍스트 윈도우': '128,000 토큰', '대략적인 단어 수 환산': '약 96,000단어', '실용적인 문서 한계': '약 200페이지 PDF' },
+            { '모델': 'Llama 3.1 8B (Meta, Ollama 경유)', '컨텍스트 윈도우': '128,000 토큰', '대략적인 단어 수 환산': '약 96,000단어', '실용적인 문서 한계': '약 200페이지 PDF' },
           ],
         },
         implications: {
@@ -2596,9 +2596,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '지역별 LLM 아키텍처 차이',
           content: [
             '**LLM의 아키텍처와 성능은 학습 데이터 구성, 토크나이제이션 전략, 규제 제약 등에 따라 지역별로 크게 다릅니다.** 이러한 차이를 이해하는 것은 모델을 전 세계적으로 배포하는 팀에게 매우 중요합니다.',
-            '**[Qwen 3](/ko/prompt-engineering/prompt-engineering-glossary#tokenization)은 CJK(중국어, 일본어, 한국어) 스크립트에 대한 뛰어난 토크나이제이션 효율성을 달성합니다** — 만다린 중국어에서 문자당 약 0.3 토큰을 사용하는 반면 GPT-5.6는 문자당 0.5 토큰을 사용합니다. 이 40% 토큰 감소는 아시아 언어 애플리케이션의 API 비용과 지연 시간을 직접적으로 줄여 줍니다. Qwen의 학습 데이터는 20%가 CJK 콘텐츠로 구성되어 있어, 문자 대 의미 밀도가 가장 높은 스크립트에 맞게 토크나이저를 최적화합니다.',
-            '**Mistral Small과 Mistral Large는 유럽 배포를 위해 명시적으로 설계되었으며**, 학습 데이터는 GDPR, EU AI 법, 데이터 보존 및 모델 투명성에 관한 EU 규정을 준수하도록 필터링되었습니다. 필터링되지 않은 웹 데이터를 주로 학습에 사용하는 모델과 달리, Mistral은 데이터 출처를 문서화하고 EU 시민의 개인 정보를 학습에서 제외시켜, 유럽의 규제 산업(은행, 의료, 법률 기술)에서 기본 선택지가 되었습니다.',
-            '**DeepSeek의 아키텍처는 학습 구성을 반영합니다**: 사전 학습 데이터의 70%가 중국어와 영어, 15%가 코드, 15%가 기타 언어입니다. 이 비율은 중국어 언어 유창성과 코드 생성 속도에 편향된 모델을 만들어 내며, 저자원 언어에서는 성능이 크게 떨어집니다. 토큰 분포와 어텐션 패턴은 영어가 아닌 만다린 중국어의 빈도 패턴에 최적화되어 있습니다.',
+            '**[Qwen3.6](/ko/prompt-engineering/prompt-engineering-glossary#tokenization)은 CJK(중국어, 일본어, 한국어) 스크립트에 대한 뛰어난 토크나이제이션 효율성을 달성합니다** — 만다린 중국어에서 문자당 약 0.3 토큰을 사용하는 반면 GPT-5.6는 문자당 0.5 토큰을 사용합니다. 이 40% 토큰 감소는 아시아 언어 애플리케이션의 API 비용과 지연 시간을 직접적으로 줄여 줍니다. Qwen의 학습 데이터는 20%가 CJK 콘텐츠로 구성되어 있어, 문자 대 의미 밀도가 가장 높은 스크립트에 맞게 토크나이저를 최적화합니다.',
+            '**Mistral Small 4과 Mistral Large 3는 유럽 배포를 위해 명시적으로 설계되었으며**, 학습 데이터는 GDPR, EU AI 법, 데이터 보존 및 모델 투명성에 관한 EU 규정을 준수하도록 필터링되었습니다. 필터링되지 않은 웹 데이터를 주로 학습에 사용하는 모델과 달리, Mistral은 데이터 출처를 문서화하고 EU 시민의 개인 정보를 학습에서 제외시켜, 유럽의 규제 산업(은행, 의료, 법률 기술)에서 기본 선택지가 되었습니다.',
+            '**DeepSeek-V4의 아키텍처는 학습 구성을 반영합니다**: 사전 학습 데이터는 중국어와 영어에 크게 치우쳐 있고, 코드 비중도 상당하며, 그 외 언어의 데이터는 상대적으로 적습니다. 이 비율은 중국어 언어 유창성과 코드 생성 속도에 편향된 모델을 만들어 내며, 저자원 언어에서는 성능이 크게 떨어집니다. 토큰 분포와 어텐션 패턴은 영어가 아닌 만다린 중국어의 빈도 패턴에 최적화되어 있습니다.',
           ],
         },
         relatedReading: {

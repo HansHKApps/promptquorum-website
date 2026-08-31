@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-01',
       last_full_refresh: '2026-08-31',
-      current_models_mentioned: ['Claude Opus 5', 'GPT-5.6', 'Gemini 3.1 Pro', 'Llama 3.1 8B', 'Qwen 3', 'DeepSeek V3'],
+      current_models_mentioned: ['Claude Opus 5', 'GPT-5.6', 'Gemini 3.1 Pro', 'Llama 3.1 8B', 'Qwen3.6', 'DeepSeek-V4'],
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-en.webp',
       title: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Does AI coding assistance work the same way in all programming languages?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 3 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
+              text: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen3.6 (Alibaba) or DeepSeek-V4 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
             },
           },
           {
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Task': 'Multi-language projects (CJK)',
-              'Best Model': 'Qwen 3 (Alibaba)',
+              'Best Model': 'Qwen3.6 (Alibaba)',
               'Why': 'Faster token processing for Chinese/Japanese/Korean scripts',
             },
             {
@@ -401,8 +401,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         globalContext: {
           title: 'How Does AI Coding Vary by Region?',
           content: [
-            '**European development teams increasingly adopt Mistral AI (developed in France) for coding tasks where EU AI Act compliance and data residency matter.** Mistral Large and Mistral Small are available for local deployment via Ollama, ensuring no code leaves on-premise infrastructure — critical under GDPR for teams processing sensitive source code.',
-            'Chinese enterprises widely use Qwen 3 (Alibaba) and DeepSeek V3 as open-source alternatives to GPT-series models, particularly for projects requiring CJK language support or full on-premise deployment under China\'s Interim Measures for Generative AI (2023).',
+            '**European development teams increasingly adopt Mistral AI (developed in France) for coding tasks where EU AI Act compliance and data residency matter.** Mistral Large 3 and Mistral Small 4 are available for local deployment via Ollama, ensuring no code leaves on-premise infrastructure — critical under GDPR for teams processing sensitive source code.',
+            'Chinese enterprises widely use Qwen3.6 (Alibaba) and DeepSeek-V4 as open-source alternatives to GPT-series models, particularly for projects requiring CJK language support or full on-premise deployment under China\'s Interim Measures for Generative AI (2023).',
             'Japanese enterprises operating under METI data governance guidelines often prefer Ollama-based local model deployment. Llama 3.1 8B, running locally via Ollama, requires 8GB RAM and produces zero external API calls — meeting strict data residency requirements.',
           ],
         },
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Does AI coding assistance work the same way in all programming languages?',
-              a: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen 3 (Alibaba) or DeepSeek V3 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
+              a: 'No. AI tools are trained primarily on English-language codebases, meaning Python and JavaScript receive the strongest support. For Japanese (kanji/kana), Chinese, or other CJK-heavy projects, Qwen3.6 (Alibaba) or DeepSeek-V4 provide faster token processing because their tokenizers handle CJK scripts at a better ratio than Western-trained models.',
             },
             {
               q: 'What temperature should I use for AI code generation?',
@@ -641,7 +641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.',
+              'text': 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen3.6 (Alibaba) oder DeepSeek-V4 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.',
             },
           },
           {
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5.6 senden?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie Llama 3.1 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.',
+              'text': 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie Llama 3.1 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large 3 (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek-V4 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.',
             },
           },
           {
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (Llama 3.1, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.',
+              'text': 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large 3 (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (Llama 3.1, Mistral Small 4) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.',
             },
           },
         ],
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Strukturierte Prompts sind nicht optional** — Sie sind das einzige Werkzeug, das Ihre Absicht klar an das Modell kommuniziert. Ein Prompt ohne Constraints, Output-Format und Edge-Case-Handling wird halluzinierter Code sein. Entwickler in Deutschlands Fintech- und Automotive-Sektoren berichten, dass strukturierte Prompts ihre Bug-Rate von 45% auf unter 20% reduzieren.',
-            '**DSGVO Compliance bedeutet lokale Modelle für sensible Codebasen** — Wenn Ihr Code personenbezogene Daten verarbeitet oder unter EU AI Act "Hochrisiko"-Klassifizierung fällt, vermeiden Sie Cloud-APIs. Ollama mit Mistral Small oder Llama 3.1 8B auf lokalen Servern erfüllt Artikel 32 DSGVO Requirements für technische Schutzmaßnahmen.',
+            '**DSGVO Compliance bedeutet lokale Modelle für sensible Codebasen** — Wenn Ihr Code personenbezogene Daten verarbeitet oder unter EU AI Act "Hochrisiko"-Klassifizierung fällt, vermeiden Sie Cloud-APIs. Ollama mit Mistral Small 4 oder Llama 3.1 8B auf lokalen Servern erfüllt Artikel 32 DSGVO Requirements für technische Schutzmaßnahmen.',
             '**Security-Linting und Multi-Modell-Cross-Checks sind Basislinie, nicht optional** — 45% des KI-generierten Codes hat Sicherheitsprobleme. Bandit für Python, ESLint für JavaScript und PromptQuorum für Multi-Modell-Vergleich sind das Minimum für Production Code.'
           ],
         },
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Aufgabe': 'Multi-Sprachen-Projekte (CJK)',
-              'Bestes Modell': 'Qwen 3 (Alibaba)',
+              'Bestes Modell': 'Qwen3.6 (Alibaba)',
               'Warum': 'Schnellere Token-Verarbeitung für Chinesisch/Japanisch/Koreanisch-Skripte',
             },
             {
@@ -927,8 +927,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-does-ai-coding-vary-by-region',
           title: 'Wie variiert KI-Programmierung regional',
           content: [
-            '**Europäische Entwicklungs-Teams adoptieren zunehmend Mistral AI (in Frankreich entwickelt) für Programmieraufgaben, wo EU AI Act Compliance und Data Residency zählen.** Mistral Large und Mistral Small sind verfügbar für lokales Deployment über Ollama, gewährleisten kein Code verlässt On-Premise Infrastruktur — kritisch unter GDPR für Teams, die sensible Quellcode verarbeiten. Die BSI TR-03183 Richtlinie (Deutschland) empfiehlt für Hochrisiko-Code-Generierung in staatlichen Stellen lokale Modelle mit Offline-Architektur und keine Cloud-APIs.',
-            'Chinesische Enterprises nutzen weit verbreitet Qwen 3 (Alibaba) und DeepSeek V3 als Open-Source-Alternativen zu GPT-Serie Modellen, besonders für Projekte, die CJK-Sprachen-Unterstützung oder vollständiges On-Premise-Deployment unter Chinas Interim Measures for Generative AI (2023) erfordern.',
+            '**Europäische Entwicklungs-Teams adoptieren zunehmend Mistral AI (in Frankreich entwickelt) für Programmieraufgaben, wo EU AI Act Compliance und Data Residency zählen.** Mistral Large 3 und Mistral Small 4 sind verfügbar für lokales Deployment über Ollama, gewährleisten kein Code verlässt On-Premise Infrastruktur — kritisch unter GDPR für Teams, die sensible Quellcode verarbeiten. Die BSI TR-03183 Richtlinie (Deutschland) empfiehlt für Hochrisiko-Code-Generierung in staatlichen Stellen lokale Modelle mit Offline-Architektur und keine Cloud-APIs.',
+            'Chinesische Enterprises nutzen weit verbreitet Qwen3.6 (Alibaba) und DeepSeek-V4 als Open-Source-Alternativen zu GPT-Serie Modellen, besonders für Projekte, die CJK-Sprachen-Unterstützung oder vollständiges On-Premise-Deployment unter Chinas Interim Measures for Generative AI (2023) erfordern.',
             'Japanische Enterprises, die unter METI Daten-Governance-Richtlinien operieren, bevorzugen oft Ollama-basiertes lokales Modell-Deployment. Llama 3.1 8B, lokal über Ollama laufend, erfordert 8GB RAM und erzeugt null externe API-Aufrufe — erfüllt strikte Daten-Residency-Requirements.',
           ],
         },
@@ -977,14 +977,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Ist KI-generierter Code sicher, direkt zu deployen?', a: 'Nein. KI führt Sicherheitslücken in 45% der generierten Code-Fälle ein, inklusive unsicherer Implementierungen und halluzinierten Package-Namen, die Supply-Chain-Angriffe ermöglichen. Aller KI-generierter Code muss von einem Entwickler überprüft und mit einem Security-Linter (z.B. Bandit für Python, ESLint Security für JavaScript) gescannt werden, bevor Production-Deployment.' },
             { q: 'Wie viel schneller sind Entwickler, die KI-Programmier-Tools nutzen?', a: 'Entwickler, die KI-Programmier-Assistenten nutzen, schließen in kontrollierten Studien 126% mehr Projekte pro Woche ab als manuelle Codierer. Eine 2025 METR-Feldstudie zeigte jedoch, dass erfahrene Entwickler 19% länger brauchten bei Aufgaben, die komplexe Codebase-Integration erfordern — der Produktivitäts-Zuwachs ist aufgabenabhängig und erfordert strukturierte Prompt-Disziplin.' },
             { q: 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging?', a: 'Chain-of-Thought (CoT) Prompting fordert das Modell auf, jeden Schritt seiner Argumentation zu verfolgen, bevor es den endgültigen Output erzeugt. Beim Debugging bedeutet das, das Modell identifiziert die genaue Operation, die den falschen Wert erzeugt, macht den Fehler tracierbar und korrigierbar, statt eine vollständige Output-Regeneration zu erfordern.' },
-            { q: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?', a: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.' },
+            { q: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?', a: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen3.6 (Alibaba) oder DeepSeek-V4 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.' },
             { q: 'Welche Temperature sollte ich für KI-Code-Generierung nutzen?', a: 'Setzen Sie Temperature auf 0,1–0,2 für Production-Code-Generierung. Das erzeugt deterministischen, konservativen Output mit minimaler zufälliger Variation. Nutzen Sie Temperature 0,7–0,9 nur, wenn Sie algorithmische Ansätze brainstormen, wo Sie diverse Optionen zum Evaluieren wollen — nicht, wenn Sie Code schreiben, der deployed wird.' },
             { q: 'Was sind halluzinierte Dependencies in KI-Programmierung?', a: 'Halluzinierte Dependencies sind Paket- oder Bibliotheksnamen, die das Modell empfiehlt, aber tatsächlich nicht existieren. Eine akademische Studie fand, dass LLMs etwa 20% der Zeit nicht-existente Bibliotheken empfehlen. Angreifer nutzen das über Slopsquatting aus — registrieren den halluzierten Paketnamen auf PyPI oder npm mit schädlichem Code darin. Verifizieren Sie immer jedes von KI empfohlene Package, bevor Sie installieren, indem Sie das Official Repository prüfen.' },
             { q: 'Kann ich KI-Programmier-Tools mit lokalen LLMs für Datenschutz nutzen?', a: 'Ja. Llama 3.1 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5.6 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.' },
             { q: 'Wie schreibe ich einen System-Prompt für KI-Programmier-Tools?', a: 'Definieren Sie vier Dinge in Ihrem System-Prompt: (1) die technische Rolle ("Senior Python Backend Engineer"), (2) den Tech Stack und verbotene Bibliotheken, (3) Code-Style-Regeln ("TypeScript strict mode, kein any"), (4) Output-Format ("nur Code zurückgeben, keine Prosa"). Speichern Sie das als projektweite Regel in Cursor, Claude Code oder Ihren IDE KI-Einstellungen, damit es über alle Sessions gilt.' },
             { q: 'Erzeugt GitHub Copilot oder Cursor weniger Bugs?', a: 'Cursor erzeugt weniger Format-Fehler mit ~10–15% Halluzinations-Rate vs. Copilots ~15–20%, hauptsächlich weil Cursor projekt-weite RAG (Retrieval-Augmented Generation) Indexierung nutzt, um Ihren bestehenden Codebase zu verstehen. Bei Single-File-Boilerplate-Aufgaben ist der Gap gering. Bei Multi-File-Refactoring, wo Architektur-Konsistenz zählt, erzeugt Cursors Codebase-Kontext messbar weniger Integrationsfehler. Beide benötigen Security-Linting bevor Deployment.' },
-            { q: 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5.6 senden?', a: 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie Llama 3.1 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.' },
-            { q: 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?', a: 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (Llama 3.1, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.' },
+            { q: 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5.6 senden?', a: 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie Llama 3.1 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large 3 (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek-V4 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.' },
+            { q: 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?', a: 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large 3 (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (Llama 3.1, Mistral Small 4) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.' },
           ],
         },
         sources: {
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Tarea': 'Corrección de bugs', 'Mejor modelo': 'Claude Opus 5', 'Por qué': 'Salida de rastreo paso a paso superior para la depuración multi-archivo' },
             { 'Tarea': 'Diseño de algoritmos', 'Mejor modelo': 'GPT-5.6', 'Por qué': 'Ligera ventaja en soluciones algorítmicas creativas' },
             { 'Tarea': 'Análisis de documentos largos/código base', 'Mejor modelo': 'Gemini 3.1 Pro', 'Por qué': 'Maneja contextos de hasta 2M tokens' },
-            { 'Tarea': 'Proyectos multilingüe (CJK)', 'Mejor modelo': 'Qwen 3 (Alibaba)', 'Por qué': 'Procesamiento de tokens más rápido para escrituras CJK' },
+            { 'Tarea': 'Proyectos multilingüe (CJK)', 'Mejor modelo': 'Qwen3.6 (Alibaba)', 'Por qué': 'Procesamiento de tokens más rápido para escrituras CJK' },
             { 'Tarea': 'Inferencia local (privacidad)', 'Mejor modelo': 'Llama 3.1 8B mediante Ollama', 'Por qué': 'Cero datos salen de tu máquina; el modelo 8B requiere 8 GB de RAM' },
           ],
         },
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Los equipos de desarrollo europeos adoptan cada vez más Mistral AI (desarrollado en Francia) para tareas de programación donde el cumplimiento de la Ley de IA de la UE y la residencia de datos importan.**',
             '**España y Latinoamérica:** Para equipos de desarrollo en España, la LOPD-GDD se aplica cuando el código procesa datos personales de usuarios. Los equipos latinoamericanos deben verificar las regulaciones locales (LGPD en Brasil, Ley 1581 en Colombia, LFPDPPP en México) antes de enviar código fuente con datos de usuarios a APIs de IA en la nube.',
-            'Las empresas chinas usan Qwen 3 (Alibaba) y DeepSeek V3 como alternativas de código abierto, especialmente para proyectos que requieren soporte de idiomas CJK o despliegue on-premise completo.',
+            'Las empresas chinas usan Qwen3.6 (Alibaba) y DeepSeek-V4 como alternativas de código abierto, especialmente para proyectos que requieren soporte de idiomas CJK o despliegue on-premise completo.',
           ],
         },
         commonMistakes: {
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'المهمة': 'إصلاح الأخطاء', 'أفضل نموذج': 'Claude Opus 5', 'السبب': 'مخرجات تتبع خطوة بخطوة أفضل للتصحيح متعدد الملفات' },
             { 'المهمة': 'تصميم الخوارزميات', 'أفضل نموذج': 'GPT-5.6', 'السبب': 'ميزة طفيفة في الحلول الخوارزمية الإبداعية' },
             { 'المهمة': 'تحليل المستندات الطويلة/قاعدة الكود', 'أفضل نموذج': 'Gemini 3.1 Pro', 'السبب': 'يتعامل مع سياقات تصل إلى 2 مليون رمز' },
-            { 'المهمة': 'مشاريع متعددة اللغات (CJK)', 'أفضل نموذج': 'Qwen 3 (Alibaba)', 'السبب': 'معالجة رموز أسرع لنصوص CJK' },
+            { 'المهمة': 'مشاريع متعددة اللغات (CJK)', 'أفضل نموذج': 'Qwen3.6 (Alibaba)', 'السبب': 'معالجة رموز أسرع لنصوص CJK' },
             { 'المهمة': 'الاستدلال المحلي (الخصوصية)', 'أفضل نموذج': 'Llama 3.1 8B عبر Ollama', 'السبب': 'لا تغادر أي بيانات جهازك؛ نموذج 8B يتطلب 8 جيجابايت من الذاكرة' },
           ],
         },
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**الفرق الأوروبية تتبنى بشكل متزايد Mistral AI (المطوّر في فرنسا) لمهام البرمجة حيث يهم الامتثال لقانون الذكاء الاصطناعي الأوروبي وإقامة البيانات.**',
             '**إسبانيا وأمريكا اللاتينية:** للفرق في إسبانيا، ينطبق LOPD-GDD عندما يعالج الكود بيانات شخصية للمستخدمين. الفرق اللاتينية أمريكية يجب التحقق من اللوائح المحلية (LGPD في البرازيل، القانون 1581 في كولومبيا، LFPDPPP في المكسيك) قبل إرسال كود مصدر يحتوي بيانات مستخدمين إلى APIs الذكاء الاصطناعي السحابية.',
-            'الشركات الصينية تستخدم Qwen 3 (Alibaba) وDeepSeek V3 كبدائل مفتوحة المصدر، خاصةً للمشاريع التي تتطلب دعم لغات CJK أو النشر الكامل محليًا.',
+            'الشركات الصينية تستخدم Qwen3.6 (Alibaba) وDeepSeek-V4 كبدائل مفتوحة المصدر، خاصةً للمشاريع التي تتطلب دعم لغات CJK أو النشر الكامل محليًا.',
           ],
         },
         commonMistakes: {
@@ -1823,7 +1823,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'A assistência de IA funciona igual em todas as linguagens de programação?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Não. As ferramentas de IA são treinadas principalmente em bases de código em inglês, o que significa que Python e JavaScript recebem o suporte mais forte. Para projetos com muito conteúdo CJK (japonês, chinês, coreano), Qwen 3 (Alibaba) ou DeepSeek V3 oferecem processamento de tokens mais rápido porque seus tokenizadores lidam melhor com esses scripts.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Não. As ferramentas de IA são treinadas principalmente em bases de código em inglês, o que significa que Python e JavaScript recebem o suporte mais forte. Para projetos com muito conteúdo CJK (japonês, chinês, coreano), Qwen3.6 (Alibaba) ou DeepSeek-V4 oferecem processamento de tokens mais rápido porque seus tokenizadores lidam melhor com esses scripts.' },
           },
           {
             '@type': 'Question',
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Tarefa': 'Correção de bugs', 'Melhor modelo': 'Claude Opus 5', 'Por quê': 'Saída de rastreamento passo a passo superior para depuração de múltiplos arquivos' },
             { 'Tarefa': 'Design de algoritmos', 'Melhor modelo': 'GPT-5.6', 'Por quê': 'Ligeira vantagem em soluções algorítmicas criativas' },
             { 'Tarefa': 'Análise de documentos longos/base de código', 'Melhor modelo': 'Gemini 3.1 Pro', 'Por quê': 'Lida com contextos de até 2M tokens' },
-            { 'Tarefa': 'Projetos multilíngues (CJK)', 'Melhor modelo': 'Qwen 3 (Alibaba)', 'Por quê': 'Processamento de tokens mais rápido para scripts chinês/japonês/coreano' },
+            { 'Tarefa': 'Projetos multilíngues (CJK)', 'Melhor modelo': 'Qwen3.6 (Alibaba)', 'Por quê': 'Processamento de tokens mais rápido para scripts chinês/japonês/coreano' },
             { 'Tarefa': 'Inferência local (privacidade)', 'Melhor modelo': 'Llama 3.1 8B via Ollama', 'Por quê': 'Zero dados saem da sua máquina; o modelo 8B requer 8 GB de RAM' },
           ],
         },
@@ -1973,9 +1973,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-does-ai-coding-vary-by-region',
           title: 'Como a codificação com IA varia por região?',
           content: [
-            '**Equipes de desenvolvimento brasileiras que tratam dados pessoais em código-fonte precisam avaliar a inferência local antes de enviar trechos a serviços de nuvem estrangeiros.** A LGPD (Lei 13.709/2018) exige medidas técnicas de proteção no tratamento de dados pessoais, e a transferência internacional depende das regras do Capítulo V e das decisões da ANPD. Llama 3.1 8B e Mistral Small rodando via Ollama em infraestrutura própria não geram nenhuma chamada de API externa.',
-            'Equipes europeias adotam cada vez mais a Mistral AI (desenvolvida na França) para tarefas de codificação em que a conformidade com o AI Act da UE e a residência de dados importam. Mistral Large e Mistral Small podem ser implantadas localmente via Ollama, garantindo que nenhum código saia da infraestrutura on-premise.',
-            'Empresas chinesas usam amplamente Qwen 3 (Alibaba) e DeepSeek V3 como alternativas open source, sobretudo em projetos que exigem suporte a CJK ou implantação totalmente on-premise. Já empresas japonesas sob as diretrizes de governança de dados do METI costumam preferir modelos locais via Ollama pelo mesmo motivo de residência de dados.',
+            '**Equipes de desenvolvimento brasileiras que tratam dados pessoais em código-fonte precisam avaliar a inferência local antes de enviar trechos a serviços de nuvem estrangeiros.** A LGPD (Lei 13.709/2018) exige medidas técnicas de proteção no tratamento de dados pessoais, e a transferência internacional depende das regras do Capítulo V e das decisões da ANPD. Llama 3.1 8B e Mistral Small 4 rodando via Ollama em infraestrutura própria não geram nenhuma chamada de API externa.',
+            'Equipes europeias adotam cada vez mais a Mistral AI (desenvolvida na França) para tarefas de codificação em que a conformidade com o AI Act da UE e a residência de dados importam. Mistral Large 3 e Mistral Small 4 podem ser implantadas localmente via Ollama, garantindo que nenhum código saia da infraestrutura on-premise.',
+            'Empresas chinesas usam amplamente Qwen3.6 (Alibaba) e DeepSeek-V4 como alternativas open source, sobretudo em projetos que exigem suporte a CJK ou implantação totalmente on-premise. Já empresas japonesas sob as diretrizes de governança de dados do METI costumam preferir modelos locais via Ollama pelo mesmo motivo de residência de dados.',
           ],
         },
         commonMistakes: {
@@ -2022,7 +2022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Posso usar ferramentas de codificação com IA com LLMs locais para privacidade?', a: 'Sim. Llama 3.1 8B rodando via Ollama em uma máquina com 8 GB de RAM gera zero chamadas de API externas. É adequado para bases de código com algoritmos proprietários ou código que não pode sair da sua infraestrutura.' },
             { q: 'Quanto mais rápidos são os desenvolvedores que usam ferramentas de codificação com IA?', a: 'Desenvolvedores que usam assistentes de codificação com IA concluem 126% mais projetos por semana do que programadores manuais em estudos controlados. No entanto, um estudo de campo do METR de 2025 constatou que desenvolvedores experientes levaram 19% mais tempo em tarefas que exigem integração complexa com a base de código — o ganho de produtividade depende da tarefa e exige disciplina de prompt estruturado.' },
             { q: 'Como o prompting Chain-of-Thought melhora a depuração de código?', a: 'O prompting Chain-of-Thought (CoT) pede que o modelo percorra cada etapa do seu raciocínio antes de produzir a saída final. Na depuração, isso significa que o modelo identifica a operação exata que produz o valor intermediário incorreto, tornando o erro rastreável e corrigível em vez de exigir a regeneração completa da saída.' },
-            { q: 'A assistência de IA funciona igual em todas as linguagens de programação?', a: 'Não. As ferramentas de IA são treinadas principalmente em bases de código em inglês, o que significa que Python e JavaScript recebem o suporte mais forte. Para projetos com muito conteúdo CJK (japonês, chinês, coreano), Qwen 3 (Alibaba) ou DeepSeek V3 oferecem processamento de tokens mais rápido porque seus tokenizadores lidam melhor com esses scripts.' },
+            { q: 'A assistência de IA funciona igual em todas as linguagens de programação?', a: 'Não. As ferramentas de IA são treinadas principalmente em bases de código em inglês, o que significa que Python e JavaScript recebem o suporte mais forte. Para projetos com muito conteúdo CJK (japonês, chinês, coreano), Qwen3.6 (Alibaba) ou DeepSeek-V4 oferecem processamento de tokens mais rápido porque seus tokenizadores lidam melhor com esses scripts.' },
             { q: 'Como escrevo um system prompt para ferramentas de codificação com IA?', a: 'Defina quatro coisas no seu system prompt: (1) a função técnica ("Senior Python Backend Engineer"), (2) a stack e as bibliotecas proibidas, (3) as regras de estilo de código ("TypeScript em modo estrito, sem any"), (4) o formato de saída ("retorne apenas código, sem prosa"). Salve isso como regra de nível de projeto no Cursor, no Claude Code ou nas configurações de IA da sua IDE para que valha em todas as sessões.' },
             { q: 'O GitHub Copilot ou o Cursor produz menos bugs?', a: 'O Cursor produz menos erros de formato, com taxa de alucinação de ~10–15% contra ~15–20% do Copilot, principalmente porque usa indexação RAG de nível de projeto para entender a base de código existente. Em tarefas de arquivo único a diferença é pequena. Em refatorações de múltiplos arquivos, onde a consistência arquitetural importa, o contexto de base de código do Cursor gera menos erros de integração. Ambos exigem linting de segurança antes do deploy.' },
             { q: 'Posso enviar código-fonte relevante para a LGPD a modelos de IA na nuvem?', a: 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use Llama 3.1 8B via Ollama para inferência local sem chamadas de API externas.' },
@@ -2183,7 +2183,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
+              'text': 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen3.6 (Alibaba) ou DeepSeek-V4 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.',
             },
           },
           {
@@ -2231,7 +2231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5.6, Claude Opus 5). Utilisez à la place une approche locale : Llama 3.1 8B via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.',
+              'text': 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5.6, Claude Opus 5). Utilisez à la place une approche locale : Llama 3.1 8B via Ollama, Mistral Large 3 en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.',
             },
           },
           {
@@ -2319,7 +2319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Tâche': 'Projets multi-langues (CJK)',
-              'Meilleur Modèle': 'Qwen 3 (Alibaba)',
+              'Meilleur Modèle': 'Qwen3.6 (Alibaba)',
               'Pourquoi': 'Traitement plus rapide des tokens pour les scripts chinois/japonais/coréens',
             },
             {
@@ -2459,8 +2459,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-does-ai-coding-vary-by-region',
           title: 'Comment le Codage IA Varie par Région',
           content: [
-            '**Les équipes de développement européennes adoptent de plus en plus Mistral AI (développé en France) pour les tâches de codage où la conformité à la loi sur l\'IA de l\'UE et la résidence des données comptent.** Mistral Large et Mistral Small sont disponibles pour le déploiement local via Ollama, assurant qu\'aucun code ne quitte l\'infrastructure on-premise — critique sous le RGPD pour les équipes traitant du code source sensible.',
-            'Les entreprises chinoises utilisent largement Qwen 3 (Alibaba) et DeepSeek V3 comme alternatives open-source aux modèles de la série GPT, particulièrement pour les projets nécessitant le support du langage CJK ou le déploiement fully on-premise sous les Mesures Intérimaires de la Chine pour l\'IA Générative (2023).',
+            '**Les équipes de développement européennes adoptent de plus en plus Mistral AI (développé en France) pour les tâches de codage où la conformité à la loi sur l\'IA de l\'UE et la résidence des données comptent.** Mistral Large 3 et Mistral Small 4 sont disponibles pour le déploiement local via Ollama, assurant qu\'aucun code ne quitte l\'infrastructure on-premise — critique sous le RGPD pour les équipes traitant du code source sensible.',
+            'Les entreprises chinoises utilisent largement Qwen3.6 (Alibaba) et DeepSeek-V4 comme alternatives open-source aux modèles de la série GPT, particulièrement pour les projets nécessitant le support du langage CJK ou le déploiement fully on-premise sous les Mesures Intérimaires de la Chine pour l\'IA Générative (2023).',
             'Les entreprises japonaises opérant sous les directives de gouvernance des données METI préfèrent souvent le déploiement local du modèle basé sur Ollama. Llama 3.1 8B, s\'exécutant localement via Ollama, nécessite 8 GB de RAM et produit zéro appels API externes — répondant aux exigences strictes de résidence des données.',
           ],
         },
@@ -2509,13 +2509,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Le code généré par l\'IA est-il sûr de déployer directement ?', a: 'Non. L\'IA introduit des vulnérabilités de sécurité dans 45 % des cas de code généré, y compris les implémentations insécurisées et les noms de packages halluccinés qui permettent les attaques de la chaîne d\'approvisionnement. Tout code généré par l\'IA doit être examiné par un développeur et scanné avec un linter de sécurité (par exemple Bandit pour Python, ESLint Security pour JavaScript) avant le déploiement en production.' },
             { q: 'À quel point les développeurs utilisant les outils de codage IA sont-ils plus rapides ?', a: 'Les développeurs utilisant les assistants de codage IA complètent 126 % plus de projets par semaine que les codeurs manuels dans les études contrôlées. Cependant, une étude de terrain METR 2025 a trouvé que les développeurs expérimentés prenaient 19 % plus de temps sur les tâches nécessitant une intégration complexe de la codebase — le gain de productivité dépend de la tâche et nécessite une discipline de prompt structuré.' },
             { q: 'Comment le chain-of-thought prompting améliore-t-il le débogage du code ?', a: 'Le Chain-of-Thought (CoT) prompting demande au modèle de tracer chaque étape de son raisonnement avant de produire la sortie finale. Pour le débogage, cela signifie que le modèle identifie l\'opération exacte qui produit la valeur intermédiaire incorrecte, rendant l\'erreur traçable et corrigible plutôt que de nécessiter une régénération complète de la sortie.' },
-            { q: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?', a: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.' },
+            { q: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?', a: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen3.6 (Alibaba) ou DeepSeek-V4 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.' },
             { q: 'Quelle température devrais-je utiliser pour la génération de code IA ?', a: 'Réglez la température sur 0,1–0,2 pour la génération de code en production. Cela produit une sortie déterministe et conservative avec une variation aléatoire minimale. Utilisez la température 0,7–0,9 uniquement lors du brainstorming d\'approches algorithmiques où vous voulez des options diversifiées à évaluer — pas lors de l\'écriture de code qui sera déployé.' },
             { q: 'Qu\'est-ce que les dépendances halluccinées dans le codage IA ?', a: 'Les dépendances halluccinées sont des noms de packages ou de bibliothèques que le modèle recommande mais qui n\'existent pas réellement. Une étude académique 2024 a trouvé que les LLM recommandent des bibliothèques inexistantes approximativement 20 % du temps. Les attaquants exploitent cela via slopsquatting — enregistrant le nom de package hallucciné sur PyPI ou npm avec du code malveillant à l\'intérieur. Vérifiez toujours tout package suggéré par l\'IA avant d\'installer en consultant le dépôt officiel.' },
             { q: 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?', a: 'Oui. Llama 3.1 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5.6 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.' },
             { q: 'Comment écrire un prompt système pour les outils de codage IA ?', a: 'Définissez quatre choses dans votre prompt système : (1) le rôle technique (« ingénieur backend Python senior »), (2) la pile technologique et les bibliothèques interdites, (3) les règles de style de code (« Mode strict TypeScript, pas de types any »), (4) le format de sortie (« retournez uniquement le code, pas de prose »). Conservez ceci comme une règle au niveau du projet dans Cursor, Claude Code ou vos paramètres d\'IA IDE pour qu\'il s\'applique à toutes les sessions.' },
             { q: 'GitHub Copilot ou Cursor produisent-ils moins de bugs ?', a: 'Cursor utilise l\'indexage RAG (Retrieval-Augmented Generation) au niveau du projet pour comprendre votre codebase entière, réduisant les hallucinations par rapport au contexte au niveau du fichier uniquement de GitHub Copilot. Pour les tâches de boilerplate à fichier unique, la différence est minimale. Pour la refactorisation multi-fichiers où la cohérence architecturale compte, le contexte conscient de codebase de Cursor produit moins d\'erreurs d\'intégration. Les deux nécessitent le linting de sécurité avant le déploiement.' },
-            { q: 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?', a: 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5.6, Claude Opus 5). Utilisez à la place une approche locale : Llama 3.1 8B via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.' },
+            { q: 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?', a: 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5.6, Claude Opus 5). Utilisez à la place une approche locale : Llama 3.1 8B via Ollama, Mistral Large 3 en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.' },
             { q: 'Quels sont les risques de conformité du CNIL avec les outils de codage IA ?', a: 'La CNIL (Commission Nationale de l\'Informatique et des Libertés) exige un Contrat de Traitement des Données (DPA) avec tout fournisseur cloud traitant des données personnelles. La plupart des outils de codage IA n\'offrent pas de DPA pour les entreprises de moins de 100 employés. Mitigation : (1) utilisez des modèles locaux, (2) anonymisez le code avant de le soumettre à l\'IA, (3) établissez un DPA signé avec OpenAI/Anthropic, ou (4) obtenez une exemption écrite de votre officiel de conformité.' },
           ],
         },
@@ -2673,7 +2673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI コーディング支援はすべてのプログラミング言語で同じように機能しますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'いいえ。AI ツールは主に英語のコードベースで訓練されているため、Python と JavaScript が最も強いサポートを受けています。日本語（漢字・ひらがな）、中国語、またはその他の CJK 集約的なプロジェクトの場合、Qwen 3（Alibaba）または DeepSeek V3 は CJK スクリプトの処理が優れています。',
+              text: 'いいえ。AI ツールは主に英語のコードベースで訓練されているため、Python と JavaScript が最も強いサポートを受けています。日本語（漢字・ひらがな）、中国語、またはその他の CJK 集約的なプロジェクトの場合、Qwen3.6（Alibaba）または DeepSeek-V4 は CJK スクリプトの処理が優れています。',
             },
           },
           {
@@ -2791,7 +2791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'タスク': 'バグ修正', '推奨モデル': 'Claude Opus 5', '理由': 'ステップバイステップトレース出力が優秀' },
             { 'タスク': 'アルゴリズム設計', '推奨モデル': 'GPT-5.6', '理由': '強力な推論能力' },
             { 'タスク': '長いドキュメント分析', '推奨モデル': 'Gemini 3.1 Pro', '理由': '2M トークンのコンテキスト処理' },
-            { 'タスク': '多言語プロジェクト（CJK）', '推奨モデル': 'Qwen 3（Alibaba）', '理由': '高速トークン処理' },
+            { 'タスク': '多言語プロジェクト（CJK）', '推奨モデル': 'Qwen3.6（Alibaba）', '理由': '高速トークン処理' },
             { 'タスク': 'ローカル推論（プライバシー）', '推奨モデル': 'Llama 3.1 8B（Ollama経由）', '理由': 'ゼロのデータが外に出ない' },
           ],
         },
@@ -2886,9 +2886,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-does-ai-coding-vary-by-region',
           title: 'AIコーディングは地域によってどう異なるか',
           content: [
-            '**ヨーロッパ開発チームは、EU AI法コンプライアンスとデータ常駐が重要なコーディングタスク向けに、Mistral AI（フランス開発）の採用がますます増えています。** Mistral Large と Mistral Small は Ollama 経由でローカルデプロイが可能です。',
+            '**ヨーロッパ開発チームは、EU AI法コンプライアンスとデータ常駐が重要なコーディングタスク向けに、Mistral AI（フランス開発）の採用がますます増えています。** Mistral Large 3 と Mistral Small 4 は Ollama 経由でローカルデプロイが可能です。',
             'METI データガバナンスガイドラインで運営する日本企業は、多くの場合、Ollama ベースのローカルモデルデプロイを選好。Llama 3.1 8B は 8GB RAM が必要で、ゼロの外部 API 呼び出しを生成します。',
-            '中国企業は GPT シリーズ モデルへのオープンソース代替案として、Qwen 3（Alibaba）と DeepSeek V3 を広く使用しています。',
+            '中国企業は GPT シリーズ モデルへのオープンソース代替案として、Qwen3.6（Alibaba）と DeepSeek-V4 を広く使用しています。',
           ],
         },
         commonMistakes: {
@@ -2951,7 +2951,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI コーディング支援はすべてのプログラミング言語で同じように機能しますか？',
-              a: 'いいえ。Python と JavaScript が最強。CJK プロジェクトには Qwen 3 や DeepSeek V3。',
+              a: 'いいえ。Python と JavaScript が最強。CJK プロジェクトには Qwen3.6 や DeepSeek-V4。',
             },
             {
               q: 'AI コード生成に何の Temperature を使用すべきですか？',
@@ -3133,7 +3133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'AI编码协助是否在所有编程语言中工作方式相同？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen 3（阿里巴巴）或DeepSeek V3提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。',
+              'text': '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen3.6（阿里巴巴）或DeepSeek-V4提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。',
             },
           },
           {
@@ -3178,10 +3178,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '在中国开发中，使用Qwen 3或DeepSeek V3有什么特别考虑？',
+            'name': '在中国开发中，使用Qwen3.6或DeepSeek-V4有什么特别考虑？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen 3和DeepSeek V3。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。',
+              'text': '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen3.6和DeepSeek-V4。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。',
             },
           },
         ],
@@ -3261,7 +3261,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               '任务': '多语言项目（CJK）',
-              '最佳模型': 'Qwen 3（阿里巴巴）',
+              '最佳模型': 'Qwen3.6（阿里巴巴）',
               '原因': '对中文/日文/韩文脚本的更快token处理',
             },
             {
@@ -3400,8 +3400,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-does-ai-coding-vary-by-region',
           title: 'AI编码在不同地区如何变化？',
           content: [
-            '**欧洲开发团队越来越多地采用Mistral AI（在法国开发）进行编码任务，其中EU AI Act合规性和数据驻留很重要。** Mistral Large和Mistral Small可通过Ollama本地部署，确保没有代码离开本地基础设施 — 对于处理敏感源代码的团队在GDPR下至关重要。',
-            '中国企业广泛使用Qwen 3（阿里巴巴）和DeepSeek V3作为GPT系列模型的开源替代品，特别是对于需要CJK语言支持的项目或根据中国2023年《生成式人工智能服务管理暂行办法》要求完全本地部署的项目。',
+            '**欧洲开发团队越来越多地采用Mistral AI（在法国开发）进行编码任务，其中EU AI Act合规性和数据驻留很重要。** Mistral Large 3和Mistral Small 4可通过Ollama本地部署，确保没有代码离开本地基础设施 — 对于处理敏感源代码的团队在GDPR下至关重要。',
+            '中国企业广泛使用Qwen3.6（阿里巴巴）和DeepSeek-V4作为GPT系列模型的开源替代品，特别是对于需要CJK语言支持的项目或根据中国2023年《生成式人工智能服务管理暂行办法》要求完全本地部署的项目。',
             '在METI数据治理指南下运营的日本企业通常倾向于基于Ollama的本地模型部署。Llama 3.1 8B通过Ollama本地运行，需要8GB RAM，产生零外部API调用 — 满足严格的数据驻留要求。',
           ],
         },
@@ -3450,13 +3450,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'AI生成的代码可以直接部署吗？', a: '不行。AI在45%的生成代码中引入安全漏洞，包括不安全的实现和幻觉包名，这可能导致供应链攻击。所有AI生成的代码在生产部署前必须由开发人员审查，并使用安全检查工具扫描（例如Python的Bandit、JavaScript的ESLint Security）。' },
             { q: '使用AI编码工具的开发人员速度快多少？', a: '在对照研究中，使用AI编码助手的开发人员每周完成的项目比手动编码人员多126%。但是，2025年METR实地研究发现，经验丰富的开发人员在需要复杂代码库集成的任务上花费的时间长19% — 生产率提升是任务相关的，需要结构化提示学科。' },
             { q: '思路链提示词如何改进代码调试？', a: '思路链（CoT）提示词要求模型在生成最终输出前逐步追踪其推理过程。对于调试，这意味着模型识别产生不正确中间值的确切操作，使错误可追踪和可纠正，而不是需要完整输出重新生成。' },
-            { q: 'AI编码协助是否在所有编程语言中工作方式相同？', a: '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen 3（阿里巴巴）或DeepSeek V3提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。' },
+            { q: 'AI编码协助是否在所有编程语言中工作方式相同？', a: '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen3.6（阿里巴巴）或DeepSeek-V4提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。' },
             { q: '我应该为AI代码生成使用什么温度？', a: '对于生产代码生成，将温度设置为0.1–0.2。这产生确定性、保守的输出，最少随机变化。仅在你想要多样选项进行评估的算法方法头脑风暴时使用温度0.7–0.9 — 不是在编写要部署的代码时。' },
             { q: 'AI编码中的幻觉依赖是什么？', a: '幻觉依赖是模型推荐但实际不存在的包或库名称。2024年学术研究发现LLM在约20%的时间内推荐不存在的库。攻击者通过"仓鼠撞库"（slopsquatting）利用这一点 — 在PyPI或npm上注册幻觉包名称，其中包含恶意代码。在安装前，始终通过检查官方存储库验证任何AI建议的包。' },
             { q: '我能否使用本地LLM的AI编码工具来保护隐私？', a: '可以。Llama 3.1 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5.6或Claude，但对于模板和简单函数是可接受的。' },
             { q: '我如何为AI编码工具编写系统提示？', a: '在系统提示中定义四件事：(1)技术角色（"资深Python后端工程师"）、(2)技术堆栈和禁止库、(3)代码风格规则（"TypeScript严格模式，没有any类型"）、(4)输出格式（"只返回代码，没有说明"）。在Cursor、Claude Code或你的IDE的AI设置中将其作为项目级规则持久化，以便它适用于所有会话。' },
             { q: 'GitHub Copilot或Cursor会产生更少的错误吗？', a: 'Cursor使用项目级RAG（检索增强生成）索引来理解你的整个代码库，与GitHub Copilot的仅文件级上下文相比减少了幻觉。对于单文件模板任务，差距很小。对于多文件重构（其中架构一致性很重要），Cursor的代码库感知上下文会产生更少的集成错误。两者都在部署前需要安全检查。' },
-            { q: '在中国开发中，使用Qwen 3或DeepSeek V3有什么特别考虑？', a: '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen 3和DeepSeek V3。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。' },
+            { q: '在中国开发中，使用Qwen3.6或DeepSeek-V4有什么特别考虑？', a: '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen3.6和DeepSeek-V4。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。' },
           ],
         },
         sources: {
@@ -3611,7 +3611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI 코딩 지원은 모든 프로그래밍 언어에서 동일하게 작동합니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '아닙니다. AI 도구는 주로 영어 코드베이스로 훈련되어 Python과 JavaScript에서 가장 강력한 지원을 제공합니다. 일본어(한자/가나), 중국어 또는 기타 CJK 중심 프로젝트의 경우, Qwen 3 (Alibaba) 또는 DeepSeek V3는 서양 훈련 모델보다 더 나은 비율로 CJK 스크립트를 처리하는 토크나이저 덕분에 더 빠른 토큰 처리를 제공합니다.',
+              text: '아닙니다. AI 도구는 주로 영어 코드베이스로 훈련되어 Python과 JavaScript에서 가장 강력한 지원을 제공합니다. 일본어(한자/가나), 중국어 또는 기타 CJK 중심 프로젝트의 경우, Qwen3.6 (Alibaba) 또는 DeepSeek-V4는 서양 훈련 모델보다 더 나은 비율로 CJK 스크립트를 처리하는 토크나이저 덕분에 더 빠른 토큰 처리를 제공합니다.',
             },
           },
           {
@@ -3731,7 +3731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               '작업': '다국어 프로젝트 (CJK)',
-              '최적 모델': 'Qwen 3 (Alibaba)',
+              '최적 모델': 'Qwen3.6 (Alibaba)',
               '이유': '중국어/일본어/한국어 스크립트에 대한 더 빠른 토큰 처리',
             },
             {
@@ -3869,8 +3869,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-does-ai-coding-vary-by-region',
           title: 'AI 코딩은 지역마다 어떻게 다릅니까?',
           content: [
-            '**유럽 개발 팀은 EU AI Act 준수와 데이터 거주지가 중요한 코딩 작업에서 점점 더 Mistral AI(프랑스 개발)를 채택하고 있습니다.** Mistral Large와 Mistral Small은 Ollama를 통한 로컬 배포로 이용할 수 있으며, 코드가 온프레미스 인프라를 벗어나지 않도록 보장합니다 — 민감한 소스 코드를 처리하는 팀에게는 GDPR 하에서 중요합니다.',
-            '중국 기업들은 특히 CJK 언어 지원이나 중국의 생성형 AI 임시 조치(2023)에 따른 완전한 온프레미스 배포가 필요한 프로젝트에서 GPT 시리즈 모델의 오픈 소스 대안으로 Qwen 3 (Alibaba)와 DeepSeek V3를 널리 사용합니다.',
+            '**유럽 개발 팀은 EU AI Act 준수와 데이터 거주지가 중요한 코딩 작업에서 점점 더 Mistral AI(프랑스 개발)를 채택하고 있습니다.** Mistral Large 3와 Mistral Small 4은 Ollama를 통한 로컬 배포로 이용할 수 있으며, 코드가 온프레미스 인프라를 벗어나지 않도록 보장합니다 — 민감한 소스 코드를 처리하는 팀에게는 GDPR 하에서 중요합니다.',
+            '중국 기업들은 특히 CJK 언어 지원이나 중국의 생성형 AI 임시 조치(2023)에 따른 완전한 온프레미스 배포가 필요한 프로젝트에서 GPT 시리즈 모델의 오픈 소스 대안으로 Qwen3.6 (Alibaba)와 DeepSeek-V4를 널리 사용합니다.',
             'METI 데이터 거버넌스 지침에 따라 운영되는 일본 기업들은 종종 Ollama 기반 로컬 모델 배포를 선호합니다. Ollama를 통해 로컬에서 실행되는 Llama 3.1 8B는 8GB RAM이 필요하며 외부 API 호출을 생성하지 않아 엄격한 데이터 거주지 요건을 충족합니다.',
           ],
         },
@@ -3933,7 +3933,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'AI 코딩 지원은 모든 프로그래밍 언어에서 동일하게 작동합니까?',
-              a: '아닙니다. AI 도구는 주로 영어 코드베이스로 훈련되어 Python과 JavaScript에서 가장 강력한 지원을 제공합니다. 일본어(한자/가나), 중국어 또는 기타 CJK 중심 프로젝트의 경우, Qwen 3 (Alibaba) 또는 DeepSeek V3는 서양 훈련 모델보다 더 나은 비율로 CJK 스크립트를 처리하는 토크나이저 덕분에 더 빠른 토큰 처리를 제공합니다.',
+              a: '아닙니다. AI 도구는 주로 영어 코드베이스로 훈련되어 Python과 JavaScript에서 가장 강력한 지원을 제공합니다. 일본어(한자/가나), 중국어 또는 기타 CJK 중심 프로젝트의 경우, Qwen3.6 (Alibaba) 또는 DeepSeek-V4는 서양 훈련 모델보다 더 나은 비율로 CJK 스크립트를 처리하는 토크나이저 덕분에 더 빠른 토큰 처리를 제공합니다.',
             },
             {
               q: 'AI 코드 생성에 어떤 temperature를 사용해야 합니까?',
