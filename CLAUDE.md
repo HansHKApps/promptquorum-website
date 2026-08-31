@@ -157,6 +157,33 @@ This script (`scripts/brand-images.mjs`) is idempotent — it skips files that a
 
 **Why:** Images are scraped, shared, and used by AI systems without context. The corner mark and SVG `<metadata>` block (dc:creator, dc:rights, dc:source) are the only persistent attribution signals that survive outside the page.
 
+## Parallel Sessions — ALWAYS use a session worktree
+
+**Never run two Claude sessions in `/Users/hanskuepper/promptquorum-website` at the same time.** A git checkout has one working tree, one index and one HEAD, so parallel sessions corrupt each other. This is not theoretical — on 2026-08-31 it caused, in one afternoon: one session's `git commit` silently swallowing another's staged file deletions, a branch switch that deleted a third session's test file mid-run, and `next build` failing with "Another next build process is already running".
+
+**Start every parallel task with its own worktree:**
+
+```bash
+scripts/session.sh start <task-name>   # own directory, branch, and port
+scripts/session.sh list                # what is running
+scripts/session.sh finish <task-name>  # merge to main, push, clean up
+scripts/session.sh drop <task-name>    # abandon (branch archived, recoverable)
+```
+
+`start` prints the directory, branch (`session/<name>`) and an allocated port. Run Claude Code in that directory and nowhere else.
+
+**Rules inside a session worktree:**
+
+- Work only in your own directory. Never `cd` to the main repo.
+- Use the port `start` gave you — every session gets a distinct one.
+- Dev server: `npx next dev --webpack --port <yours>`. **`npm run dev` is broken** — Turbopack cannot resolve `next/font/google` and every route 500s.
+- Build via `scripts/with-build-lock.sh npm run build`, never bare `npm run build`. Worktrees isolate git, not RAM: each build takes a ~4 GB heap, so the lock caps concurrent builds (default 2) and the rest queue instead of swapping.
+- Test against a production build (`npx next start --port <yours>`), not the dev server — Playwright against dev is flaky and ~7x slower.
+- Never use bare `git stash` / `git stash pop`; the stash stack is shared across worktrees.
+- Commit with explicit paths (`git commit --only <paths>`) as a second line of defence.
+
+**Capacity on this machine (24 GB RAM, 12 cores):** 8 concurrent sessions is comfortable. The limit is memory during builds, which the build lock already handles; editing, type-checking and dev servers are cheap. Disk is ~1 GB per worktree via APFS copy-on-write clones.
+
 ## Git Workflow
 
 - Branch: `feature/[name]` for all new work, `fix/` for bugs
