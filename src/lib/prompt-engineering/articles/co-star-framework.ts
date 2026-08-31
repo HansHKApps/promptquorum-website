@@ -3365,7 +3365,31 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sections: {
-        'tldr': {
+        quickFacts: {
+          title: '快速概览',
+          items: [
+            '**CO-STAR =** Context（背景）、Objective（目标）、Style（风格）、Tone（语调）、Audience（受众）、Response（回应）',
+            '**最适合：** 多重约束的沟通类任务（文档、说明性内容、上手引导、备忘录）',
+            '**要素数量：** 6个——多于APE（3个），与CRAFT（5个）和SPECS（5个）相当',
+            '**最小可用组合：** 背景 + 目标 + 回应（6选3）',
+            '**核心优势：** 对受众和语调的把控——CO-STAR是最以受众为中心的框架',
+            '**适用于：** 所有语言模型——云端和本地均可',
+          ],
+        },
+        usingCOSTARWithOthers: {
+          title: '把CO-STAR与其他框架搭配使用',
+          content: [
+            '**要把CO-STAR框架和其他提示词框架放在一起用，就给每一个在工作流中分配清晰的角色。** CO-STAR最擅长受众和结构同样重要的多重约束沟通类任务。',
+            '一个简单的分工策略是：',
+          ],
+          items: [
+            '结构化说明、指南和沟通类内容用CO-STAR。',
+            '专注于特定渠道的纯营销和品牌调性时用CRAFT。',
+            '需要严格格式的产出（例如报告或JSON）时，用单步式或规格式框架。',
+            '希望模型展示中间思考过程时，用分析–规划–执行这类偏推理的框架。',
+          ],
+        },
+        keyTakeaways: {
           isTldr: true,
           title: '核心要点',
           items: [
@@ -3388,7 +3412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '• **Response（回应）** — 输出的精确格式和结构（例如：返回JSON、分步骤编号、包含代码示例）',
           ],
         },
-        'whyCOSTAR': {
+        whyCOSTARWorks: {
           title: '为什么CO-STAR框架有效？',
           content: [
             'AI模型基于概率——它们预测最可能的下一个词，而不是"理解"你的意思。歧义会导致随机或不相关的输出。CO-STAR通过消除歧义来解决这个问题：',
@@ -3398,7 +3422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**跨模型工作** — 对GPT、Claude、Gemini、开源模型同样有效',
           ],
         },
-        'costarComponents': {
+        components: {
           title: 'CO-STAR的6个组件详解',
           items: [
             '**Context（背景）** — 提供必要的信息和约束。示例：「我是一家SaaS创业公司，销售给小型企业。」',
@@ -3442,6 +3466,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**测试跨模型** — 相同的CO-STAR提示在GPT、Claude、Gemini上会产生不同的结果。测试你的关键提示在多个模型上的表现。',
           ],
         },
+        howToStart: {
+          title: '如何使用CO-STAR框架',
+          numberedItems: [
+            '**背景：** 提供模型需要的相关背景信息。示例："我们提供一个SaaS平台，正在新增API。许多客户是非技术型的商务用户。"',
+            '**目标：** 用一句话说明你想要什么。示例："解释什么是API以及它为什么重要，方式上要减少畏惧感、鼓励采用。"',
+            '**风格：** 指定结构。示例："使用带H2标题和要点列表的短小段落。包含一个简单的现实类比。"',
+            '**语调：** 定义声音和情绪基调。示例："清晰、令人安心、不带技术腔。避免行话；必要的技术术语要解释。"',
+            '**受众：** 说明谁会阅读产出以及他们的知识水平。示例："没有编程背景的商务用户和管理者。"',
+            '**回应：** 说明确切的格式、长度和交付物。示例："700–900字的文章，包含引言、3–4个主要小节，以及一个邀请他们联系客户经理的结尾。"',
+          ],
+        },
         'commonMistakes': {
           title: '常见错误',
           items: [
@@ -3451,7 +3486,35 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**错误4：Response不够具体** — 说"返回JSON"还不够。不说明哪些字段会产生随机或缺失的数据。修复：给出精确的JSON模式或示例。',
           ],
         },
-        'howitworks': {
+        whenToUse: {
+          title: '什么时候使用CO-STAR框架',
+          content: [
+            '**当你面对的是多重约束任务，受众、结构和语调同时都很重要时，就应该使用CO-STAR框架。** 这涵盖了产品、市场、客户成功和教育领域的许多常见工作流。',
+            '典型使用场景：',
+          ],
+          items: [
+            '撰写产品文档或上手引导指南。',
+            '为非专业受众创作科普文章或说明性内容。',
+            '起草结构化的内部备忘录、战略笔记或政策文件。',
+            '准备语调必须保持一致的客服话术模板或帮助中心内容。',
+          ],
+        },
+        howToWrite: {
+          title: '实践中如何撰写CO-STAR提示词',
+          content: [
+            '**把CO-STAR提示词想象成填写一份六行的简报，然后作为一条指令一起发出，撰写起来就很直接。** 你可以把这个模式存起来，之后只改动细节就能复用到不同任务上。',
+            '通用模板如下：',
+          ],
+          items: [
+            '背景：[正在发生什么、这件事关于什么、相关的背景信息。]',
+            '目标：[这条提示词唯一的首要目标。]',
+            '风格：[偏好的结构，例如要点列表、叙述式或分步说明。]',
+            '语调：[你想要的声音和情绪基调。]',
+            '受众：[谁会读这份内容，他们已经知道些什么。]',
+            '回应：[确切的格式、长度和任何特殊要求。]',
+          ],
+        },
+        howPQImplements: {
           title: 'PromptQuorum中的CO-STAR',
           content: [
             'PromptQuorum集成了CO-STAR框架作为内置选项，使用户能够：',
@@ -3462,7 +3525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '• 保存和重复使用CO-STAR模板以处理重复的任务',
           ],
         },
-        'costarVsNoFramework': {
+        badVsGoodExample: {
           title: '使用CO-STAR vs不使用框架',
           content: [
             '**不使用框架（非结构化）：**',
