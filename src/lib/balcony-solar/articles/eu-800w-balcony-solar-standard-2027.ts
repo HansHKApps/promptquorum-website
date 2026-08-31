@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Der 800-Watt-Balkonkraftwerk-Standard: EU-Harmonisierung erklärt (2027)',
     seoTitle: 'Der 800-Watt-Balkonkraftwerk-Standard: EU-Harmonisierung erklärt (2027)',
     intro: 'Deutschlands 800-Watt-Grenze für Balkonkraftwerke, im Dezember 2025 mit der DIN VDE V 0126-95 endgültig festgelegt, bringt das Land in Einklang mit einem De-facto-EU-Standard, den Frankreich, Österreich, Belgien und die Niederlande bereits anwenden — statt einen neuen Präzedenzfall zu setzen, dem andere folgen. Diese Seite verfolgt, wie sich diese Angleichung ausbreitet — auch wenn Griechenlands eigener Rahmen, derzeit in öffentlicher Konsultation nach Gesetz 5299/2026 bis zum 20. Juli 2026, einen strengeren „Zero-Feed-in"-Ansatz verfolgt statt einfach das Modell von Frankreich/Österreich/Belgien/den Niederlanden zu übernehmen, angetrieben von der EU-Richtlinie über die Gesamtenergieeffizienz von Gebäuden (EPBD). Nicht jeder Mitgliedstaat gleicht sich an: Schweden und Ungarn bleiben klare Ausnahmen.',
-    metaDescription: 'Frankreich, Österreich, Belgien und die Niederlande erlauben bereits 800-Watt-Balkonkraftwerke mit einfacher, meldepflichtiger Registrierung. Deutschland ist diesem Standard im Dezember 2025 beigetreten — Griechenland befindet sich derzeit in öffentlicher Konsultation zu einem strengeren Zero-Feed-in-Rahmen (Gesetz 5299/2026, bis 20. Juli 2026), angetrieben durch die Ausweitung der EPBD auf Fassaden und Balkone.',
+    metaDescription: 'Frankreich, Österreich, Belgien und die Niederlande erlauben bereits 800-Watt-Balkonkraftwerke mit einfacher, meldepflichtiger Registrierung.',
     publishDate: '2026-07-18',
     dateModified: '2026-07-18',
     readTime: '6 Min. Lesezeit',

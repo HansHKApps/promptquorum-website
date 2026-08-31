@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'La GPU con mejor relación calidad-precio para LLMs locales a precios de EAU/Golfo en 2026',
     seoTitle: 'Mejor GPU para LLM local en los EAU 2026 | Prompt Bites',
     metaDescription:
-      'La RTX 3060 12 GB ofrece la mejor relación calidad-precio para LLMs locales en los EAU (aprox. 260–330 € nueva, equivalente a AED 1.100–1.400). Los precios minoristas del Golfo superan el MSRP de EE. UU. — compara precios reales en AED, no USD convertidos.',
+      'La RTX 3060 12 GB ofrece la mejor relación calidad-precio para LLMs locales en los EAU (aprox. 260–330 € nueva, equivalente a AED 1.100–1.400).',
     publishDate: '2026-07-14',
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',

@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Balkonkraftwerke in Brasilien: Statusbericht 2027',
     seoTitle: 'Balkonkraftwerke in Brasilien: Statusbericht 2027',
     intro: 'Brasilien hat einen der weltweit größten Märkte für dezentrale Solarstromerzeugung (geração distribuída) — doch diese Infrastruktur und Marktkultur ist nicht speziell auf steckerfertige Balkonkraftwerke ausgerichtet. Diese Seite ist ein Statusbericht zu genau dieser Lücke: Für direkt an die Steckdose angeschlossene, steckerfertige Balkonkraftwerke existiert noch keine eigene Regelung, obwohl der allgemeine Rahmen für dezentrale Erzeugung, unter den sie fallen würden, gut etabliert und stark genutzt ist.',
-    metaDescription: 'Brasiliens Lei 14.300/2022 regelt die micro- und mini-geração distribuída und baut auf der früheren Resolução Normativa 482/2012 der ANEEL auf. Für steckerfertige Balkonkraftwerke existiert laut MIT Technology Review Brasil (Mai 2026) jedoch keine eigene Regelung — obwohl Brasilien allein Anfang 2025 mehr als 5 GW an dezentraler Erzeugung hinzugefügt hat.',
+    metaDescription: 'Brasiliens Lei 14.300/2022 regelt die micro- und mini-geração distribuída und baut auf der früheren Resolução Normativa 482/2012 der ANEEL auf.',
     publishDate: '2026-07-18',
     dateModified: '2026-07-18',
     readTime: '6 Min. Lesezeit',
