@@ -1,12 +1,14 @@
 # TASK 2026-09-01 — Finish Rule 12 snippet blocks across prompt-engineering
 
-Carried over from 2026-08-31. **38 of 82 prompt-engineering articles still have no snippet blocks.**
+Carried over from 2026-08-31. **Updated end of day: 5 of 82 articles still have no snippet blocks** (was 43 at the start of the day; 38 were completed).
+
+Group A below is **DONE** — those branches merged on 2026-08-31 and the files were finished the same day. Only the five in "What actually remains" are open.
 
 ## What this is
 
 `docs/GEO_WRITING_GUIDELINES.md` **Rule 12** requires at least two LLM snippet blocks per article — one `in-one-sentence` (technical precision, Rule 12a) and one `in-plain-terms` (analogy / non-technical, Rule 12b). They exist so AI summarisers and TTS systems can lift a clean definition off the page.
 
-44 of 82 articles now have them. 38 do not.
+77 of 82 articles now have them. 5 do not.
 
 ## Read these first
 
@@ -131,3 +133,28 @@ Consequence: snippet blocks added to the `en:` block of a framework article file
 `frameworksData.ts` contains **0 snippets**, and `src/app/frameworks/[slug]/page.tsx` has no snippet rendering at all. So giving EN framework pages Rule 12 blocks is a **renderer change plus a content change in a second data source**, not a copy-paste of what was done for the other articles. Scope it separately.
 
 Note `frameworksData.ts` has previously held uncommitted work from other sessions (a CRAFT rewrite) — check `git status` and `git branch -a` before editing it.
+
+
+---
+
+## END-OF-DAY STATUS 2026-08-31 — read this first
+
+**38 articles completed and deployed.** Group A (the six contended ones) was finished after those branches merged; Group B was worked through in batches. All merged to main and shipped.
+
+### What actually remains — 5 articles
+
+| Article | Why it is blocked |
+|---|---|
+| `prompt-engineering-glossary` | A term list with no prose section to anchor a snippet to. Needs a structural decision, not a snippet. |
+| `ape-framework` | Its de/fr/ja/zh blocks have no article body — see the locale-parity section above. A snippet on an empty page is decoration. |
+| `structured-output-json-mode` | Locale blocks stored as single long lines; `add_snippets.py` refuses rather than guess a position. |
+| `best-tools-structured-output` | Same single-line locale structure. |
+| `prompt-engineering-vs-rag` | Same single-line locale structure. |
+
+The three single-line files need either a hand edit per locale or an inserter that can target a position inside a long line. The inserter refusing is correct behaviour — do not loosen it to "nearest match".
+
+### Priority order for tomorrow
+
+1. **The 11 starved-locale articles** (section above). `/de/prompt-engineering/ape-framework` still serves German readers an English FAQ. This is the highest-value item and it is content authoring, not tooling.
+2. **EN framework pages** — `frameworksData.ts` has no snippet field and `frameworks/[slug]/page.tsx` no renderer for one; six framework articles have blocks in eight languages but not English.
+3. The five articles above.
