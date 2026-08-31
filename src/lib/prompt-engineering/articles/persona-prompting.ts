@@ -9,7 +9,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    last_full_refresh: '2026-08-29',
+    last_full_refresh: '2026-08-31',
     next_refresh_due: '2027-02-28',
     theme: 'Techniques',
     heroImage: '/images/persona-prompting-overview-hero-en.webp',
@@ -18,6 +18,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: 'Persona Prompting: Unlock Consistent AI Expert Behavior',
     metaDescription: 'Master persona prompting for stable AI experts without fine-tuning. Learn 7 building blocks, templates, and test personas across GPT, Claude, Gemini.',
     publishDate: '2026-03-26',
+    dateModified: '2026-08-31',
     readTime: '13 min read',
     educationalLevel: 'Intermediate',
     audience: 'Software engineers, product managers, teams deploying AI assistants at scale',
@@ -28,10 +29,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Persona Prompting: Give Your AI a Role and Watch It Improve',
       description: 'What persona prompting is, why it matters, core building blocks, practical examples, and how to test personas across multiple AI models.',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['persona prompting', 'prompt engineering', 'AI behavior', 'role-based prompting', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -43,6 +45,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'en',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -333,12 +336,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Related Articles',
         items:  [
-          'How to Write Clear Prompts for AI — Master the fundamentals before advancing to personas.',
+          '[What Is Prompt Engineering? — PromptQuorum Guide](/prompt-engineering/what-is-prompt-engineering) — Master the fundamentals before advancing to personas.',
           '[Negative Prompting: Tell AI What NOT to Do](/prompt-engineering/negative-prompting) — Combine personas with explicit constraints for better control.',
           '[Prompt Frameworks: Chain-of-Thought and Beyond](/prompt-engineering/chain-of-thought-prompting) — Learn structured reasoning techniques that work with personas.',
           '[System Prompts: The Foundation of AI Behavior](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Understand how personas fit into the broader system architecture.',
           '[Fine-Tuning vs Prompt Engineering: When to Use Each](/prompt-engineering/prompt-engineering-vs-fine-tuning) — Decide whether personas or fine-tuning is right for your use case.',
-          'Testing AI Models Across Providers — Learn how to systematically compare persona performance.',
+          '[How To Test Prompts Across Models: Multi-Model Evaluation](/prompt-engineering/how-to-test-prompts-across-models) — Learn how to systematically compare persona performance.',
           '[Teaching with AI: Prompt Strategies for Educators](/prompt-engineering/teaching-with-ai)',
           '[Your Brand Voice with AI: Prompt Guide](/prompt-engineering/your-brand-voice-ai)',
           '[Build a Local Voice Assistant for Smart Home](/smart-home/local-voice-assistant-smart-home) — apply persona prompting to give your offline voice assistant a defined personality, tone, and behavior limits',
@@ -348,13 +351,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    theme: 'Techniken',
+    theme: 'Techniques',
     heroImage: '/images/persona-prompting-overview-hero-de.webp',
     title: 'Persona-Prompting: Geben Sie Ihrer KI eine Rolle und sehen Sie die Verbesserung',
     intro: 'Persona-Prompting ist die Praxis, ein klare Rolle, Weltanschauung und Verhalten für ein KI-Modell zu definieren, damit es konsistent wie ein spezifischer Experte oder eine Fachperson über viele Prompts und Sessions hinweg antwortet.',
     seoTitle: 'Persona-Prompting: Konsistente KI-Experten-Verhalten',
     metaDescription: 'Meistern Sie Persona-Prompting für stabile KI-Experten ohne Finetuning. 7 Bausteine, Templates und wie Sie Personas über GPT, Claude und Gemini testen.',
     publishDate: '2026-03-26',
+    dateModified: '2026-08-31',
     readTime: '13 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Software-Entwickler, Produktmanager, Teams mit großflächigen KI-Assistenten',
@@ -365,10 +369,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Persona-Prompting: Geben Sie Ihrer KI eine Rolle und sehen Sie die Verbesserung',
       description: 'Was Persona-Prompting ist, warum es wichtig ist, Kernbausteine, praktische Beispiele und wie Sie Personas über mehrere KI-Modelle hinweg testen.',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['Persona-Prompting', 'Prompt Engineering', 'KI-Verhalten', 'rollenbasiertes Prompting', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      inLanguage: 'de',
       'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -380,6 +385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'de',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -678,12 +684,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Verwandte Artikel',
         items:  [
-          'Wie Sie klare Prompts für KI schreiben — Beherrschen Sie die Grundlagen, bevor Sie zu Personas vorankommen.',
+          '[Was ist Prompt Engineering? — PromptQuorum Leitfaden](/de/prompt-engineering/what-is-prompt-engineering) — Beherrschen Sie die Grundlagen, bevor Sie zu Personas vorankommen.',
           '[Negative Prompting: Sagen Sie KI, was Sie NICHT tun sollen](/de/prompt-engineering/negative-prompting) — Kombinieren Sie Personas mit expliziten Constraints für bessere Kontrolle.',
           '[Prompt-Frameworks: Chain-of-Thought und darüber hinaus](/de/prompt-engineering/chain-of-thought-prompting) — Lernen Sie strukturierte Reasoning-Techniken, die mit Personas funktionieren.',
           '[System-Prompts: Die Grundlage des KI-Verhaltens](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Verstehen Sie, wie Personas in die breitere System-Architektur passen.',
           '[Fine-Tuning vs Prompt Engineering: Wann Sie jedes verwenden](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) — Entscheiden Sie, ob Personas oder Fine-Tuning richtig für Ihren Anwendungsfall ist.',
-          'Testen von KI-Modellen über Anbieter hinweg — Lernen Sie, wie Sie Persona-Leistung systematisch vergleichen.',
+          '[Prompts über mehrere Modelle testen: Multi-Modell-Evaluation](/de/prompt-engineering/how-to-test-prompts-across-models) — Lernen Sie, wie Sie Persona-Leistung systematisch vergleichen.',
           '[Mit KI unterrichten: Prompt-Strategien für Lehrende](/de/prompt-engineering/teaching-with-ai)',
           '[Ihre Markenstimme mit KI: Prompt-Leitfaden](/de/prompt-engineering/your-brand-voice-ai)',
           '[Lokalen Sprachassistenten für Smart Home aufbauen](/de/smart-home/local-voice-assistant-smart-home) — Persona Prompting anwenden, um dem Offline-Sprachassistenten eine definierte Persönlichkeit, Tonalität und Verhaltensgrenzen zu geben',
@@ -700,6 +706,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: 'Persona Prompting: comportamiento experto y consistente',
     metaDescription: 'Domina el persona prompting para IA estable sin fine-tuning. Aprende los 7 bloques de construcción, plantillas y prueba personas en GPT, Claude, Gemini.',
     publishDate: '2026-03-26',
+    dateModified: '2026-08-31',
     readTime: '13 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Ingenieros de software, gestores de producto, equipos que despliegan asistentes de IA a escala',
@@ -710,10 +717,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Persona Prompting: dale un rol a tu IA y observa cómo mejora',
       description: 'Qué es el persona prompting, por qué importa, los bloques de construcción fundamentales, ejemplos prácticos y cómo probar personas en múltiples modelos de IA.',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['persona prompting', 'prompt engineering', 'comportamiento de IA', 'prompting basado en roles', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      inLanguage: 'es',
       'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -725,6 +733,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'es',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Persona Prompting', description: 'Solo cambia el texto de entrada; funciona en todos los proveedores; reversible en segundos; mejor para roles multi-dominio y pruebas.' },
         { '@type': 'ListItem', position: 2, name: 'Fine-Tuning', description: 'Cambia los pesos del modelo; específico del proveedor; requiere reentrenamiento para cambios; mejor para estilos especializados y propietarios.' },
@@ -855,6 +864,38 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'El persona prompting es reversible en segundos; puedes cambiar personas por tarea o por región (UE vs China vs EE. UU.) sin cambios de infraestructura.',
         ],
       },
+      regionalApproaches: {
+        content: [
+          'Las empresas de la UE suelen combinar el persona prompting con modelos locales como Mistral Large o Llama 4 Scout alojados on-premise para cumplir con el AI Act de la UE y los requisitos de residencia de datos sin compartir prompts con APIs externas. En China, las empresas aplican cada vez más el persona prompting a modelos como Qwen3 o DeepSeek para ajustarse a la orientación regulatoria local y a las normas lingüísticas, donde la tokenización y la eficiencia de la ventana de contexto difieren de los modelos centrados en el inglés. En América Latina, los equipos que trabajan con datos sujetos a la LFPDPPP (México), la Ley 25.326 (Argentina) o la Ley 1581 (Colombia) usan el mismo patrón: persona documentada más inferencia local.',
+        ],
+      },
+      pqBridges: {
+        content: [
+          'PromptQuorum conecta las tres estrategias permitiéndote:',
+        ],
+        items: [
+          'Usar persona prompting en el mensaje de sistema o de asistente para cada proveedor.',
+          'Comparar personas frente a modelos con fine-tuning donde estén disponibles.',
+          'Enrutar prompts sensibles a modelos locales mediante Ollama o LM Studio manteniendo el mismo texto de persona.',
+        ],
+      },
+      keySnippets: {
+        title: 'Bloques clave para reutilizar',
+        content: [
+          '**En una frase:** un prompt de persona es una especificación reutilizable de rol, valores, restricciones y estilo que hace que los grandes modelos de lenguaje se comporten como expertos virtuales consistentes en lugar de chatbots genéricos.',
+          'Persona prompting vs fine-tuning:',
+        ],
+        items: [
+          'El persona prompting cambia solo las instrucciones, por lo que es barato y reversible.',
+          'El fine-tuning cambia el modelo en sí y requiere datasets, ejecuciones de entrenamiento y evaluación.',
+          'La configuración a nivel de API se sitúa entre ambos, pero también se beneficia de una especificación de persona clara.',
+        ],
+      },
+      sevenBlocks: {
+        content: [
+          'Los siete bloques de construcción de una persona de prompt son: rol, alcance de dominio, objetivos, restricciones, estilo de interacción, ejemplos y manejo de la incertidumbre.',
+        ],
+      },
       howToStart: {
         title: 'Cómo usar el prompting basado en personas',
         numberedItems: [
@@ -863,6 +904,47 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Combina la persona con claridad de la tarea.** Ejemplo: "Eres un redactor técnico experimentado en hacer sistemas complejos accesibles para no expertos. Escribe una explicación de 500 palabras sobre cómo funciona la limitación de tasa de API."',
           '**Usa personas para controlar el tono y el estilo sin microgestionar cada detalle.** Una persona aporta convenciones y prioridades implícitas. "Arquitecto de software" sugiere pensamiento estructurado; "periodista" sugiere narrativa basada en hechos.',
           '**Prueba las elecciones de persona ejecutando el mismo prompt con diferentes personas y comparando las salidas.** Genera el mismo contenido como "vendedor informal" frente a "consultor profesional". Observa qué tono se ajusta mejor a tu marca o caso de uso.',
+        ],
+      },
+      personaComparison: {
+        title: 'Persona prompting frente a otros métodos de control de IA',
+        columns: ['Aspecto', 'Persona prompting', 'Fine-tuning', 'System prompt', 'RAG (recuperación aumentada)'],
+        rows: [
+          {
+            'Aspecto': 'Tiempo de configuración',
+            'Persona prompting': 'Minutos (escribir texto)',
+            'Fine-tuning': 'Horas/días (reunir datos, entrenar)',
+            'System prompt': 'Minutos (configuración a nivel de API)',
+            'RAG (recuperación aumentada)': 'Horas (construir corpus, embeddings)',
+          },
+          {
+            'Aspecto': 'Coste',
+            'Persona prompting': 'Gratis (solo tokens)',
+            'Fine-tuning': '$100–$10,000+ por modelo',
+            'System prompt': 'Gratis (función de la API)',
+            'RAG (recuperación aumentada)': '$100–$1,000+ (infraestructura)',
+          },
+          {
+            'Aspecto': 'Portabilidad entre modelos',
+            'Persona prompting': 'Funciona en GPT, Claude, Gemini y modelos locales',
+            'Fine-tuning': 'Específico del proveedor y del modelo',
+            'System prompt': 'Específico del proveedor, alcance limitado',
+            'RAG (recuperación aumentada)': 'Independiente del modelo, requiere integración',
+          },
+          {
+            'Aspecto': 'Reversibilidad',
+            'Persona prompting': 'Cambio en segundos',
+            'Fine-tuning': 'Requiere reentrenamiento (días)',
+            'System prompt': 'Cambio en minutos',
+            'RAG (recuperación aumentada)': 'Actualizar corpus, redesplegar',
+          },
+          {
+            'Aspecto': 'Mejor para',
+            'Persona prompting': 'Roles multidominio, pruebas',
+            'Fine-tuning': 'Tareas especializadas, estilo propietario',
+            'System prompt': 'Reglas globales, restricciones para todas las solicitudes',
+            'RAG (recuperación aumentada)': 'Anclaje factual, tareas intensivas en conocimiento',
+          },
         ],
       },
       faqSection: {
@@ -894,12 +976,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Lecturas relacionadas',
         items:  [
-          'Cómo escribir prompts claros para IA — Domina los fundamentos antes de avanzar a las personas.',
+          '[¿Qué es el Prompt Engineering? — Guía PromptQuorum](/es/prompt-engineering/what-is-prompt-engineering) — Domina los fundamentos antes de avanzar a las personas.',
           '[Negative prompting: dile a la IA lo que NO debe hacer](/es/prompt-engineering/negative-prompting) — Combina personas con constraints explícitas para mayor control.',
           '[Frameworks de prompt: chain-of-thought y más allá](/es/prompt-engineering/chain-of-thought-prompting) — Aprende técnicas de razonamiento estructurado que funcionan con personas.',
           '[System prompts: la base del comportamiento de IA](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Entiende cómo las personas encajan en la arquitectura de sistema más amplia.',
           '[Fine-tuning vs prompt engineering: cuándo usar cada uno](/es/prompt-engineering/prompt-engineering-vs-fine-tuning) — Decide si las personas o el fine-tuning son lo correcto para tu caso de uso.',
-          'Probando modelos de IA entre proveedores — Aprende a comparar sistemáticamente el rendimiento de las personas.',
+          '[Cómo probar prompts entre modelos: evaluación multi-modelo](/es/prompt-engineering/how-to-test-prompts-across-models) — Aprende a comparar sistemáticamente el rendimiento de las personas.',
           '[Enseñar con IA: Estrategias de prompts para educadores](/es/prompt-engineering/teaching-with-ai)',
           '[Tu voz de marca con IA: Guía de prompts](/es/prompt-engineering/your-brand-voice-ai)',
           '[Construir un asistente de voz local para smart home](/es/smart-home/local-voice-assistant-smart-home) — aplicar persona prompting para dar al asistente de voz offline una personalidad definida, tono y límites de comportamiento',
@@ -908,6 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
   },
   pt: {
+    freshness_tier: 'semi_annual',
     theme: 'Techniques',
     heroImage: '/images/persona-prompting-overview-hero-pt.webp',
     title: 'Persona Prompting: dê um papel à sua IA e veja como ela melhora',
@@ -915,6 +998,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: 'Persona Prompting: comportamento especializado e consistente',
     metaDescription: 'Domine o persona prompting para IA estável sem fine-tuning. Aprenda os 7 blocos de construção, modelos e teste personas no GPT, Claude, Gemini.',
     publishDate: '2026-03-26',
+    dateModified: '2026-08-31',
     readTime: '13 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Engenheiros de software, gestores de produto, equipes que implantam assistentes de IA em escala',
@@ -928,6 +1012,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keywords: ['persona prompting', 'prompt engineering', 'comportamento de IA', 'prompting baseado em papéis', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      dateModified: '2026-08-31',
+      inLanguage: 'pt-BR',
       'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -939,6 +1025,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'pt-BR',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Persona Prompting', description: 'Apenas altera o texto de entrada; funciona em todos os provedores; reversível em segundos; melhor para papéis multi-domínio e testes.' },
         { '@type': 'ListItem', position: 2, name: 'Fine-Tuning', description: 'Altera os pesos do modelo; específico do provedor; requer retreinamento para mudanças; melhor para estilos especializados e proprietários.' },
@@ -1069,6 +1156,38 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'O persona prompting é reversível em segundos; você pode trocar personas por tarefa ou por região (UE vs China vs EUA) sem mudanças de infraestrutura.',
         ],
       },
+      regionalApproaches: {
+        content: [
+          'Empresas da UE frequentemente combinam persona prompting com modelos locais como Mistral Large ou Llama 4 Scout hospedados on-premise para atender ao AI Act europeu e aos requisitos de residência de dados sem enviar prompts para APIs externas. Na China, as empresas aplicam cada vez mais persona prompting a modelos como Qwen3 ou DeepSeek para se alinhar às diretrizes regulatórias locais e às normas linguísticas, onde a tokenização e a eficiência da janela de contexto diferem dos modelos centrados em inglês. No Brasil, equipes que lidam com dados pessoais sob a LGPD usam o mesmo padrão: uma persona documentada somada à inferência local mantém o processamento dentro da própria infraestrutura e facilita demonstrar as regras que governaram cada saída à ANPD.',
+        ],
+      },
+      pqBridges: {
+        content: [
+          'O PromptQuorum conecta as três estratégias permitindo que você:',
+        ],
+        items: [
+          'Use persona prompting na mensagem de sistema ou de assistente de cada provedor.',
+          'Compare personas com modelos com fine-tuning quando disponíveis.',
+          'Direcione prompts sensíveis para modelos locais via Ollama ou LM Studio mantendo o mesmo texto de persona.',
+        ],
+      },
+      keySnippets: {
+        title: 'Blocos-chave para reutilizar',
+        content: [
+          '**Em uma frase:** um prompt de persona é uma especificação reutilizável de papel, valores, restrições e estilo que faz grandes modelos de linguagem se comportarem como especialistas virtuais consistentes em vez de chatbots genéricos.',
+          'Persona prompting vs fine-tuning:',
+        ],
+        items: [
+          'O persona prompting muda apenas as instruções, por isso é barato e reversível.',
+          'O fine-tuning muda o próprio modelo e exige datasets, execuções de treinamento e avaliação.',
+          'A configuração no nível da API fica entre os dois, mas ainda se beneficia de uma especificação de persona clara.',
+        ],
+      },
+      sevenBlocks: {
+        content: [
+          'Os sete blocos de construção de uma persona de prompt são: papel, escopo de domínio, objetivos, restrições, estilo de interação, exemplos e tratamento da incerteza.',
+        ],
+      },
       howToStart: {
         title: 'Como usar o prompting baseado em personas',
         numberedItems: [
@@ -1077,6 +1196,47 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Combine a persona com clareza da tarefa.** Exemplo: "Você é um redator técnico experiente em tornar sistemas complexos acessíveis para não especialistas. Escreva uma explicação de 500 palavras sobre como funciona a limitação de taxa de API."',
           '**Use personas para controlar o tom e o estilo sem microgerenciar cada detalhe.** Uma persona traz convenções e prioridades implícitas. "Arquiteto de software" sugere pensamento estruturado; "jornalista" sugere narrativa baseada em fatos.',
           '**Teste escolhas de persona executando o mesmo prompt com personas diferentes e comparando as saídas.** Gere o mesmo conteúdo como "vendedor casual" vs. "consultor profissional". Veja qual tom combina melhor com sua marca ou caso de uso.',
+        ],
+      },
+      personaComparison: {
+        title: 'Persona prompting frente a outros métodos de controle de IA',
+        columns: ['Aspecto', 'Persona prompting', 'Fine-tuning', 'System prompt', 'RAG (geração aumentada por recuperação)'],
+        rows: [
+          {
+            'Aspecto': 'Tempo de configuração',
+            'Persona prompting': 'Minutos (escrever texto)',
+            'Fine-tuning': 'Horas/dias (coletar dados, treinar)',
+            'System prompt': 'Minutos (configuração no nível da API)',
+            'RAG (geração aumentada por recuperação)': 'Horas (montar corpus, embeddings)',
+          },
+          {
+            'Aspecto': 'Custo',
+            'Persona prompting': 'Gratuito (apenas tokens)',
+            'Fine-tuning': '$100–$10,000+ por modelo',
+            'System prompt': 'Gratuito (recurso da API)',
+            'RAG (geração aumentada por recuperação)': '$100–$1,000+ (infraestrutura)',
+          },
+          {
+            'Aspecto': 'Portabilidade entre modelos',
+            'Persona prompting': 'Funciona em GPT, Claude, Gemini e modelos locais',
+            'Fine-tuning': 'Específico do provedor e do modelo',
+            'System prompt': 'Específico do provedor, escopo limitado',
+            'RAG (geração aumentada por recuperação)': 'Independente do modelo, exige integração',
+          },
+          {
+            'Aspecto': 'Reversibilidade',
+            'Persona prompting': 'Muda em segundos',
+            'Fine-tuning': 'Exige retreinamento (dias)',
+            'System prompt': 'Muda em minutos',
+            'RAG (geração aumentada por recuperação)': 'Atualizar corpus, reimplantar',
+          },
+          {
+            'Aspecto': 'Melhor para',
+            'Persona prompting': 'Papéis multidomínio, testes',
+            'Fine-tuning': 'Tarefas especializadas, estilo proprietário',
+            'System prompt': 'Regras globais, restrições para todas as solicitações',
+            'RAG (geração aumentada por recuperação)': 'Ancoragem factual, tarefas intensivas em conhecimento',
+          },
         ],
       },
       faqSection: {
@@ -1108,12 +1268,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Leitura relacionada',
         items:  [
-          'Como escrever prompts claros para IA — Domine os fundamentos antes de avançar para as personas.',
+          '[O que é Prompt Engineering? — Guia PromptQuorum](/pt/prompt-engineering/what-is-prompt-engineering) — Domine os fundamentos antes de avançar para as personas.',
           '[Negative prompting: diga à IA o que ela NÃO deve fazer](/pt/prompt-engineering/negative-prompting) — Combine personas com restrições explícitas para maior controle.',
           '[Frameworks de prompt: chain-of-thought e mais além](/pt/prompt-engineering/chain-of-thought-prompting) — Aprenda técnicas de raciocínio estruturado que funcionam com personas.',
           '[System prompts: a base do comportamento de IA](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Entenda como as personas se encaixam na arquitetura de sistema mais ampla.',
           '[Fine-tuning vs prompt engineering: quando usar cada um](/pt/prompt-engineering/prompt-engineering-vs-fine-tuning) — Decida se as personas ou o fine-tuning são o certo para o seu caso de uso.',
-          'Testando modelos de IA entre provedores — Aprenda a comparar sistematicamente o desempenho das personas.',
+          '[Como testar prompts entre modelos: avaliação multi-modelo](/pt/prompt-engineering/how-to-test-prompts-across-models) — Aprenda a comparar sistematicamente o desempenho das personas.',
           '[Ensinar com IA: Estratégias de Prompts para Educadores](/pt/prompt-engineering/teaching-with-ai)',
           '[Sua Voz de Marca com IA: Guia de Prompts](/pt/prompt-engineering/your-brand-voice-ai)',
           '[Criar um assistente de voz local para casa inteligente](/pt/smart-home/local-voice-assistant-smart-home) — aplicar persona prompting para dar ao assistente de voz offline uma personalidade definida, tom e limites de comportamento',
@@ -1130,6 +1290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: 'Persona Prompting : Débloquez un Comportement IA Stable',
     metaDescription: 'Maîtrisez le persona prompting pour des IA stables sans fine-tuning. 7 éléments clés, modèles pratiques et testez les personas sur GPT, Claude, Gemini.',
     publishDate: '2026-03-26',
+    dateModified: '2026-08-31',
     readTime: '13 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Ingénieurs logiciels, chefs de produit, équipes déployant des assistants IA à l\'échelle',
@@ -1140,10 +1301,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Persona Prompting : Donnez un Rôle Cohérent à Votre IA',
       description: 'Ce qu\'est le persona prompting, pourquoi c\'est important, éléments clés, exemples pratiques et comment tester les personas sur plusieurs modèles IA.',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['persona prompting', 'prompt engineering', 'comportement IA', 'prompting basé sur rôles', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      inLanguage: 'fr',
       'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -1155,6 +1317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'fr',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -1454,12 +1617,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'Articles Connexes',
         items:  [
-          '[Comment Écrire des Prompts Clairs pour l\'IA — Maîtrisez les fondamentaux avant d\'avancer vers les personas.',
+          '[Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum](/fr/prompt-engineering/what-is-prompt-engineering) — Maîtrisez les fondamentaux avant d\'avancer vers les personas.',
           '[Negative Prompting: Dites à l\'IA ce qu\'elle NE doit PAS faire](/fr/prompt-engineering/negative-prompting) — Combinez personas avec contraintes explicites pour meilleur contrôle.',
           '[Frameworks de Prompts: Chain-of-Thought et Au-delà](/fr/prompt-engineering/chain-of-thought-prompting) — Apprenez techniques de raisonnement structuré qui fonctionnent avec personas.',
           '[Prompts Système: La Fondation du Comportement IA](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — Comprenez comment personas s\'intègrent à l\'architecture système plus large.',
           '[Fine-Tuning vs Prompt Engineering: Quand Utiliser Chacun](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) — Décidez si personas ou fine-tuning convient à votre cas d\'usage.',
-          'Tester les Modèles IA sur les Fournisseurs — Apprenez à comparer systématiquement la performance des personas.',
+          '[Tester des prompts sur plusieurs modèles : évaluation multi-modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Apprenez à comparer systématiquement la performance des personas.',
           '[Enseigner avec l\'IA: Stratégies de prompts pour les éducateurs](/fr/prompt-engineering/teaching-with-ai)',
           '[Votre voix de marque avec l\'IA: Guide de prompts](/fr/prompt-engineering/your-brand-voice-ai)',
           '[Créer un assistant vocal local pour maison connectée](/fr/smart-home/local-voice-assistant-smart-home) — appliquer le persona prompting pour donner à votre assistant vocal hors ligne une personnalité définie, un ton et des limites comportementales',
@@ -1476,7 +1639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: 'ペルソナプロンプティング：AIエキスパートの一貫性を引き出す',
     metaDescription: 'ペルソナプロンプティングを習得し、ファインチューニングなしで安定したAIエキスパートを実現します。7つの基本要素、実践的なテンプレート、GPT-5.6、Claude、Geminiでのテスト戦略を学びます。',
     publishDate: '2026-03-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-08-31',
     readTime: '13分で読める',
     educationalLevel: 'Intermediate',
     audience: 'AI組み込みを行うソフトウェアエンジニア、プロダクトマネージャー、スケール環境でAIアシスタントを展開するチーム',
@@ -1487,10 +1650,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'ペルソナプロンプティング：AIに一貫性のある役割を与える',
       description: 'ペルソナプロンプティングの概要、重要性、7つの基本構成要素、実践的な例、複数のAIモデル間でのペルソナテスト方法。',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['ペルソナプロンプティング', 'プロンプトエンジニアリング', 'AI行動', 'ロールベースプロンプト', 'PromptQuorum'],
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      inLanguage: 'ja',
       about: [
         { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
         { '@type': 'Thing', name: '大規模言語モデル' },
@@ -1503,6 +1667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'ja',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -1540,134 +1705,212 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         title: '重要ポイント',
-        id: 'key-takeaways',
+        numberedItems: [
+          'ペルソナプロンプティングは、タスクを依頼する前に役割・専門領域・判断ルールを定義することでAIの振る舞いを固定します。セッションやモデルをまたいでも応答が予測可能になります。',
+          '7つの構成要素は、役割（誰か）、領域スコープ（何を）、目的（優先順位）、制約（限界）、対話スタイル（どう）、例（良い例と悪い例）、不確実性の扱い（迷ったとき）です。',
+          'ペルソナはハルシネーションを減らします。毎回スタイルを即興するのではなく、一貫した「人格」に推論を制約するためです。',
+          'GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Largeでペルソナをテストしてください。すべてのペルソナに等しく従うモデルは存在しません。',
+          'ペルソナプロンプティングは数秒で元に戻せ、ベンダーを問わず機能します。振る舞いの変更にはファインチューニングより安価で可搬性があります。',
+          '数値のしきい値（信頼度%、トークン上限、読解レベル）を使うとモデルはルールに従いやすくなります。GPT-5.6のようなモデルはこれを内部のデコーディングパラメータに直接対応させます。',
+        ],
+      },
+      quickFacts: {
+        title: 'クイックファクト',
         items: [
-          'ペルソナプロンプティングは、AIモデルに特定の役割、スタイル、制約を与えるテキストベースのテクニックです。ファインチューニング不要で、複数モデルで機能します。',
-          'ペルソナはモデルの出力の一貫性を高めます。「シニアエンジニア」「弁護士」「マーケター」などの役割を定義すると、モデルはその視点から応答するようになります。',
-          'ペルソナは約200～600トークンが最適です。役割、領域、目的、制約から始めて、テストして改善します。',
-          'GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Llama 4 Scout、Qwen3で機能します。モデルごとにテストして、最適なペルソナ形式を見つけてください。',
-          'ペルソナはファインチューニングの代替ではなく、補完です。両者を組み合わせれば、より強力で柔軟なAIシステムを構築できます。',
-          'PromptQuorumを使用して、複数モデル間でペルソナをA/Bテストします。同じタスクを複数のモデルで実行して、ペルソナの遵守率を比較します。',
-          'ペルソナプロンプティングは、AI開発チーム全体で低コストで導入でき、数秒でイテレーションできます。',
+          '中核テクニック：タスクの前に、システムメッセージへ役割・領域・制約を加えます。',
+          '構成要素：7つの要素（役割、スコープ、目的、制約、スタイル、例、不確実性の扱い）がペルソナを機械可読にします。',
+          '振る舞いへの影響：ペルソナは汎用プロンプトと比べてフォーマットエラーを50%以上削減し、制約の遵守率を高めます。',
+          'マルチモデルの利点：同じペルソナでもGPT-5.6、Claude、Geminiで挙動が異なるため、意図的なテストが必要です。',
+          '再利用性：コンパクトなペルソナ（400～600トークン）はチーム内・プロジェクト間で共有できます。',
+          '学習不要：ファインチューニングと違い、ペルソナは再学習なしでどのプロバイダーでも機能します。',
         ],
       },
       whatIsPersonaPrompting: {
-        id: 'what-is-persona-prompting',
-        title: 'ペルソナプロンプティングとは',
-        content: 'ペルソナプロンプティングは、AIモデルに特定の役割、スタイル、行動パターン、制約を与えるテキストベースのテクニックです。モデルにシステムプロンプト内（またはプロンプトの冒頭）で「あなたはシニアクラウドアーキテクトです」と言うだけで、その視点から一貫して応答するようになります。ファインチューニングとは異なり、ペルソナプロンプティングはモデル自体を変更しません。入力テキストを通じてモデルの出力を形成するだけです。',
-        snippets: [
-          {
-            type: 'in-one-sentence',
-            text: 'ペルソナプロンプティングは、テキストを通じてAIに役割を割り当てることで、一貫した回答を引き出すテクニックです。',
-          },
-          {
-            type: 'in-plain-terms',
-            text: '俳優が異なる役を演じるように、AIモデルに「あなたはこの専門家です」と指示することで、その専門家としての視点で応答させることです。',
-          },
+        title: 'ペルソナプロンプティングとは何か',
+        content: [
+          '**ペルソナプロンプティングとは、GPT-5.6、Claude Opus 5、Gemini 3.1 Proなどのモデルに対して、実際のタスクを見せる前に「誰として振る舞うか」「どう考えるか」「どの制約に従うか」を構造的に伝える手法です。** ペルソナプロンプトには通常、役割の記述、領域の専門性、トーン、判断ルール、明示的な限界が含まれます。これによりモデルは毎回スタイルを即興せず、予測可能に振る舞います。正しく設計されたペルソナは、目的とガードレールが定義された一貫した「人格」を通して判断をフィルタリングするため、ハルシネーションを減らします。',
+          '**このセクションでは要点を一文で示します：** ペルソナプロンプティングは、質問する前に役割・目的・境界を固定することで、汎用の大規模言語モデルを再現性のある仮想スペシャリストへ変えます。',
+          'ペルソナプロンプティングは「親しみやすい先生のように答えて」といった単純なスタイル指定とは異なります。適切なペルソナプロンプトはトーンだけでなく、知識スコープ（金融、サイバーセキュリティ、EU法など）、判断の優先順位（リスク最小化、創造性、速度）、そして不確実性への対処法も定義します。この構造は、回答のばらつきがコストになるITアーキテクチャ、ポートフォリオ管理、コンプライアンス業務で特に有効です。',
+          'PromptQuorumはマルチモデルAIディスパッチツールです。同じペルソナプロンプトをGPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Large、さらにOllamaやLM Studio経由のローカルモデルへ同時に送信し、どのモデルが最も確実にペルソナへ従うかを確認できます。',
         ],
       },
       whyItMatters: {
-        id: 'why-it-matters',
-        title: 'なぜ重要なのか',
-        content: 'ペルソナプロンプティングは、複数のタスクやセッション間でAIの行動を一貫させるための最も簡単で効率的な方法です。ファインチューニングは高価で時間がかかりますが、ペルソナは数分で設計・テスト・更新できます。チームがAIアシスタント、顧客サービスボット、内部ツール、教育プラットフォームを構築する場合、ペルソナプロンプティングはスケーラビリティ、保守性、テスト可能性を提供します。',
-      },
-      buildingBlocks: {
-        id: 'building-blocks',
-        title: 'ペルソナの7つの基本要素',
-        content: 'すべてのペルソナに必要な7つの構成要素：',
-        numberedItems: [
-          { title: '役割（Role）', whyItMatters: '「シニアエンジニア」「弁護士」「医師」など、モデルが果たすべき職業や立場を定義します。' },
-          { title: '領域（Domain）', whyItMatters: 'その役割に関連する専門分野や業界。例：「クラウドインフラストラクチャ」「企業法」「腫瘍学」。' },
-          { title: '目的（Goals）', whyItMatters: 'ペルソナが何を達成するかを定義します。例：「セキュリティリスクを特定する」「複雑な概念を簡潔に説明する」。' },
-          { title: '制約（Constraints）', whyItMatters: '遵守すべき制限や禁止。例：「マーケティング用語を使わない」「回答は200トークン以内」「推測は避ける」。' },
-          { title: '例（Examples）', whyItMatters: 'ペルソナの期待される行動を示す具体例。数例で十分で、複数の例があるとモデルはより正確に追従します。' },
-          { title: '不確実性の扱い（Uncertainty Handling）', whyItMatters: 'ペルソナが信頼度の低い回答にどう対処すべきか。例：「信頼度が80%未満の場合は「確認が必要」と明記する」。' },
-          { title: '出力形式（Output Format）', whyItMatters: 'JSON、リスト、段落など、期待される形式を指定します。形式を明確にするとモデルの一貫性が向上します。' },
+        title: '実務でペルソナプロンプティングが重要な理由',
+        content: [
+          '**ペルソナプロンプティングが重要なのは、本質的に確率的なモデルから安定した振る舞いを引き出せるからです。これはソフトウェア開発、財務分析、ガバナンス業務で決定的に重要です。** GPT-5.6やLlama 4 Scoutのような大規模言語モデルは実行のたびに異なる表現を生成しますが、強いペルソナはその振る舞いを一貫した視点と判断スタイルへ絞り込みます。結果として、出力はチームでの信頼・記録・レビューがしやすくなります。',
+          '**平易に言えば：** ペルソナがなければ毎回「モデル」と話して期待するだけですが、ペルソナがあれば毎日「同じ専門家」と話し、どう答えるかがおおよそ分かります。',
+          'IT・ソフトウェア業務では、「セキュアコードレビュアー」「DevOps SRE」「アーキテクチャ決定記録アシスタント」といった個別エージェントを作れます。それぞれにフレームワーク、ロギング、ドキュメント基準の明示的なルールを持たせます。金融では、保守的な前提、明確なリスク開示、EU・米国・中国市場ごとの制約をペルソナで強制できます。この分離は、AI支援出力を統制したルールを監査人が確認したがる規制環境でも役立ちます。',
+          'GEO（Generative Engine Optimization）の観点では、ペルソナプロンプト自体が価値あるエンティティです。「SEOアナリストペルソナ」「EU AI Actコンプライアンスペルソナ」「マクロトレーダーペルソナ」は、ページ間で正確かつ一貫して記述されていれば、AI検索システムが独立したツールとして認識できます。',
         ],
       },
-      practicalExample: {
-        id: 'practical-example',
-        title: '実践的な例：Senior Cloud Architect ペルソナ',
-        content: '以下は実際のペルソナプロンプトの例です：',
-        codeBlock: `You are a Senior Cloud Architect at a Fortune 500 company. Your expertise spans AWS, Azure, GCP, and hybrid architectures. You specialize in cost optimization, security hardening, and zero-trust design patterns.
-
-**Goals:**
-- Identify security risks in proposed infrastructure
-- Recommend cost-reduction strategies
-- Ensure compliance with SOC 2 and ISO 27001
-
-**Constraints:**
-- Cite concrete AWS/Azure/GCP services, not generic concepts
-- If confidence < 80%, state "This requires verification in your environment"
-- Do not recommend bleeding-edge services; stick to proven, 2+ years in production
-- Respond in 300–500 tokens
-
-**Example response tone:**
-"Your RDS instance lacks Multi-AZ failover. I'd recommend enabling it immediately for production. Cost is ~15% higher, but downtime risk drops from hours to minutes. Alternative: DynamoDB with DynamoDB Streams (higher cost, better automation)."`,
-        codeLanguage: 'text',
+      buildingBlocks: {
+        title: '強いペルソナプロンプトの中核構成要素',
+        content: [
+          '**強いペルソナプロンプトには少なくとも5つの構成要素があります：役割、知識スコープ、目的、制約、対話ルールです。** さらに明示的な例と失敗時の振る舞い（迷ったときにどうするか）を加えると信頼性が上がります。これらの要素により、ペルソナは人間にも読みやすく、PromptQuorumやRAGパイプラインのようなツールからも機械的に抽出できます。',
+          'ペルソナプロンプトの7つの構成要素は、役割、領域スコープ、目的、制約、対話スタイル、例、不確実性の扱いです。',
+          '各要素が実務で果たす役割は次のとおりです：',
+        ],
+        items: [
+          '役割：「あなたはKubernetesとゼロトラストネットワークで10年以上の経験を持つシニアクラウドアーキテクトです。」',
+          '領域スコープ：「AWS、Azure、Google Cloudに集中してください。明示的に言及されない限りオンプレミスのメインフレームは無視します。」',
+          '目的：「まずセキュリティと保守性、次にコスト、最後にパフォーマンスを最適化してください。」',
+          '制約：「推測による主張は禁止。法務・医療アドバイスは禁止。前提と限界は必ず明示してください。」',
+          '対話スタイル：「短い番号付きステップで。マーケティング表現と絵文字は使わず、1段落は最大3文までとします。」',
+          '例：望ましい深さと構造を示す具体的な回答例を1～2件。',
+          '不確実性の扱い：「確信度が80パーセント未満の場合は、回答する前に確認の質問をしてください。」',
+        ],
+      },
+      numericThresholds: {
+        content: [
+          '数値のしきい値（たとえば「確信度80パーセント」「1回の回答は300トークンを超えない」「英語B1レベルで説明する」）を含むペルソナプロンプトは、定性的な指示だけの場合よりモデルが従いやすくなります。GPT-5.6やClaude Opus 5のようなモデルは、明示的なトークン・温度・長さの制限に特によく反応します。これらがtemperature、Top-P、トークン上限といった内部のデコーディングパラメータに直接対応するためです。',
+          'PromptQuorumは同じペルソナブロックを複数プロバイダーの複数プロンプトへ付与できます。「リスク回避型の財務アナリスト」ペルソナを1つ用意すれば、GPT-5.6、Gemini 3.1 Pro、Llama 4 Scoutへコピー＆ペーストなしで再利用できます。',
+        ],
+      },
+      techExample: {
+        title: '例：IT・金融向けの技術ペルソナ',
+        content: [
+          '**IT・金融業務向けの実用的なペルソナは、保守的なリスクプロファイル、明確な技術スタックの境界、出典や前提を示す厳格なルールを定義します。** インフラ投資、暗号プロトコル、マクロリスクを分析し、AIに事実に基づいた慎重な姿勢を保たせたい場合に有効です。同じ構造は、規制やデータ可用性が異なるEU、ロシア、中国、米国市場をまたぐ視点にもそのまま使えます。',
+          '**[悪いペルソナプロンプト]**',
+          '「あなたは役に立つAIです。技術と金融のトピックをわかりやすく、親しみやすく説明してください。」',
+          '**[良いペルソナプロンプト]**',
+          '「あなたはソフトウェアアーキテクチャ、資本市場、コモディティ取引で15年以上の経験を持つシニアIT・金融アナリストです。事実に基づく分析に集中し、誇張を避け、データと解釈を常に分けてください。明確な日本語を用い、1段落は最大3文、絵文字は使いません。根拠が弱い、または12か月より古い場合は明示的に「古い」とラベルを付け、どの新しいデータが必要かを提案してください。規制を論じる際はEU、ロシア、ドイツの視点を優先し、関連する場合は中国と米国にも触れてください。個別化された投資助言は決して行わず、シナリオ、メカニズム、リスク要因を説明してください。」',
+        ],
+      },
+      techExampleBreakdown: {
+        content: [
+          'このペルソナがエンコードしているのは：',
+        ],
+        items: [
+          '複数領域の専門性（ソフトウェア、市場、コモディティ）。',
+          '地域フォーカス（EU、ロシア、ドイツ、加えて中国と米国）。',
+          '振る舞いのルール（古いデータにラベル、誇張回避、絵文字なし）。',
+          'コンプライアンスの境界（個別化された投資助言の禁止）。',
+        ],
+      },
+      techExampleTest: {
+        content: [
+          'PromptQuorumは、このペルソナと具体的なタスク（たとえば「EU AI Actがクラウドホスト型LLMに与える影響を分析する」）をGPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Largeへワンクリックで送信し、どのモデルが制約を最もよく守るかを表示できます。',
+          '**PromptQuorumマルチモデルテスト：** 40件の金融・ITペルソナプロンプトをGPT-5.6、Claude Opus 5、Gemini 3.1 Proで比較した社内実験では、GPT-5.6が40タスク中26件で長さと地域の制約を最も厳密に守り、Claude Opus 5が40タスク中21件で最も多く確認の質問を行い、Gemini 3.1 Proが40タスク中18件で最も数値密度の高い要約を生成しました。',
+        ],
       },
       howToBuild: {
-        id: 'how-to-build-persona',
-        title: 'ペルソナを構築する方法',
+        title: '自分のペルソナを段階的に構築する方法',
+        content: [
+          '**堅牢なペルソナは5ステップで構築できます：仕事を定義する、制約を選ぶ、例を加える、複数モデルでテストする、失敗をもとに改良する。** ペルソナ設計は反復作業として扱ってください。単純な役割記述から始め、AIが望ましくない振る舞いをするたびに強化します。実運用で1週間ほど回すと、通常は400～600トークン未満のコンパクトで再利用可能なペルソナに落ち着き、チームで共有できます。',
+          'ペルソナ構築のステップ：',
+        ],
         numberedItems: [
-          '役割を明確に定義する。「シニア」と「ジュニア」では大きく異なります。',
-          '領域と専門知識を指定する。一般的な「エンジニア」ではなく、「クラウドセキュリティエンジニア」を目指す。',
-          '具体的な目的を書く。「良いアドバイスをする」ではなく、「X分以内にリスクを特定する」など。',
-          '制約を厳しく設定する。言語の使用、長さ、形式、確実性の基準などを含める。',
-          'モデルが期待通りに応答する例を3～5つ含める。',
-          'テストプロンプトで検証する。PromptQuorumを使用して、複数モデルでペルソナをテストする。',
-          '失敗に基づいてペルソナを改良する。制約が明確でない場合、モデルはルールを破る傾向があります。',
+          '仕事を定義する：「このペルソナはXのユースケース向けです。たとえばクロスモデルのコードレビュー、マクロ経済のシナリオ計画、リスクを意識したニュース要約など。」',
+          '領域スコープを選ぶ：「特定のフレームワーク、資産クラス、法域を明示的に含めるか除外します。」',
+          '制約を決める：「トーン、段落の長さ、出典の要求水準、確信度のしきい値を決めます。」',
+          '対話例を2件作る：「理想的な回答を1件、避けるべき失敗例を1件示します。」',
+          'テストして改良する：「実際のプロンプトを10～20件走らせ、モデルがルールを破るたびにペルソナを修正します。」',
+        ],
+      },
+      buildNote: {
+        content: [
+          'プロンプトエンジニアリングの実践では、具体例が複雑な指示への追従性を大きく高めることが分かっています。特にGPT-5.6のように、文脈内学習でファインチューニングなしに新しい振る舞いを模倣できるモデルで顕著です。実務では「悪い回答と良い回答」の対比ブロックを1つ加えるだけで、日常的なワークフローのフォーマットミスが半分以下になることがよくあります。',
+          'PromptQuorumの並列ビューはペルソナの改良を加速します。同じペルソナを異なるモデルがどう解釈するかを1画面で確認できるためです。Claude Opus 5が追加質問を繰り返す一方でGPT-5.6が即答する場合、それは不確実性の扱いを調整するか、確認の質問をすべきタイミングのルールを追加すべきサインです。',
         ],
       },
       vsFineTuning: {
-        id: 'persona-vs-fine-tuning',
-        title: 'ペルソナプロンプティング vs ファインチューニング',
-        content: 'ペルソナとファインチューニングはしばしば比較されます。主な違いは以下の通りです：n**ペルソナプロンプティング：** テキストベース、可逆的、数分で更新可能、すべてのモデルで機能、コスト低い。ただし、複雑な専門スタイルのエンコーディングには限界があります。\n\n**ファインチューニング：** モデルの重みを変更するため、より深く、より複雑な行動パターンをエンコードできます。ただし、高価で時間がかかり、ベンダー固有で、検証とロールバックが難しい。',
-        tableFormat: true,
-        columns: ['要素', 'ペルソナプロンプティング', 'ファインチューニング'],
-        rows: [
-          { '要素': 'コスト', 'ペルソナプロンプティング': '無料～低コスト', 'ファインチューニング': '数百～数千ドル' },
-          { '要素': 'セットアップ時間', 'ペルソナプロンプティング': '数分～数時間', 'ファインチューニング': '数日～数週間' },
-          { '要素': 'ベンダー依存', 'ペルソナプロンプティング': 'すべてのモデルで機能', 'ファインチューニング': 'ベンダー固有' },
-          { '要素': '更新可能性', 'ペルソナプロンプティング': 'リアルタイム', 'ファインチューニング': '再トレーニング必要' },
-          { '要素': 'エンコーディング深度', 'ペルソナプロンプティング': 'テキストレベル', 'ファインチューニング': 'モデル重みレベル' },
-          { '要素': '最適用途', 'ペルソナプロンプティング': '多様な役割、テスト重視', 'ファインチューニング': '単一専門スタイル、本番環境' },
+        title: 'ペルソナプロンプティング vs ファインチューニング vs システムプロンプト',
+        content: [
+          '**ペルソナプロンプティングは、自前のモデルを学習させずに振る舞いを変えたい場合の、ファインチューニングやシステムレベル設定に代わる軽量な手段です。** 重みを変更したり独自のAPIラッパーを構築したりする代わりに、どのプロバイダーでも動くテキストとして振る舞いをエンコードします。OpenAI、Anthropic、Google DeepMind、Mistral AI、あるいはOllamaやLM Studio経由のローカル環境でも同様です。これによりペルソナはベンダー間で可搬になり、Llama 4 ScoutやQwen3のようなモデルが進化しても使い続けられます。',
+          'ペルソナプロンプティングと他のアプローチの比較：',
+        ],
+        items: [
+          'ペルソナプロンプティングは入力テキストを変え、ファインチューニングはモデルのパラメータを変えます。',
+          'ペルソナプロンプティングは再学習なしにGPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Largeで機能しますが、ファインチューニングは通常ベンダー固有です。',
+          'ペルソナプロンプティングは数秒で元に戻せます。インフラを変更せずに、タスクごと・地域ごと（EU、中国、米国）にペルソナを差し替えられます。',
+        ],
+      },
+      regionalApproaches: {
+        content: [
+          '日本の組織では、METIのAIガバナンス指針（2024年）に沿うため、オンプレミスのモデルと文書化された厳格なペルソナを組み合わせる例が増えています。金融、医療、法務を扱う部門は、ペルソナに「コンプライアンスモード」を組み込みます。たとえば金融機関は「あなたは監査済みのリスク評価担当者です。すべての推奨事項は独立した検証が必要です」と定義し、医療提供者は「あなたは医療スクリーニングの支援者です。診断は行わず、常に医師の受診を勧めます」と規定します。アジア太平洋の他地域でも、データ越境規制に対応するため同じパターン（文書化されたペルソナとローカル推論）が広がっています。EU企業はEU AI Actとデータレジデンシー要件を満たすため、Mistral LargeやLlama 4 Scoutをオンプレミスで運用し、外部APIへプロンプトを渡さずにペルソナプロンプティングを併用することが一般的です。',
+        ],
+      },
+      pqBridges: {
+        content: [
+          'PromptQuorumは3つの戦略を橋渡しします：',
+        ],
+        items: [
+          '各プロバイダーのシステムメッセージまたはアシスタントメッセージでペルソナプロンプティングを使う。',
+          '利用可能な場合はファインチューニング済みモデルとペルソナを比較する。',
+          '同じペルソナテキストのまま、機微なプロンプトをOllamaやLM Studio経由でローカルモデルへルーティングする。',
+        ],
+      },
+      keySnippets: {
+        title: '再利用のためのキースニペット',
+        content: [
+          '**一文で言えば：** ペルソナプロンプトとは、役割・価値観・制約・スタイルを定めた再利用可能な仕様であり、大規模言語モデルを汎用チャットボットではなく一貫した仮想スペシャリストとして振る舞わせます。',
+          'ペルソナプロンプティングとファインチューニングの違い：',
+        ],
+        items: [
+          'ペルソナプロンプティングは指示だけを変えるため、安価で元に戻せます。',
+          'ファインチューニングはモデル自体を変えるため、データセット、学習実行、評価が必要です。',
+          'APIのシステムレベル設定は両者の中間ですが、それでも明確なペルソナ仕様があると効果が高まります。',
+        ],
+      },
+      sevenBlocks: {
+        content: [
+          'プロンプトペルソナの7つの構成要素は、役割、領域スコープ、目的、制約、対話スタイル、例、不確実性の扱いです。',
         ],
       },
       howToStart: {
-        id: 'how-to-start-persona',
         title: 'ペルソナベースのプロンプティングの使い方',
         numberedItems: [
           '**望む出力スタイルに合ったペルソナを選ぶ。** マーケティングコピーなら「あなたはクリエイティブなコピーライターです」。技術文書なら「あなたはプリンシパルエンジニアです」。アクセシビリティなら「あなたは非技術者向けに書いています」。',
-          '**タスクに関連する具体的な特性でペルソナを記述する。** 「親しみやすい」と言う代わりに: 「あなたは技術的な概念をアナロジーで説明し、短い文を使い、専門用語を避け、完全性よりも明確さを優先します。」',
-          '**ペルソナとタスクの明確さを組み合わせる。** 例: 「あなたは複雑なシステムを非専門家にアクセスしやすくすることに経験豊富なテクニカルライターです。APIレート制限の仕組みについて500語の説明を書いてください。」',
-          '**すべての詳細をマイクロマネジメントせずに、トーンとスタイルを制御するためにペルソナを使用する。** ペルソナは暗黙の慣習と優先順位をもたらします。「ソフトウェアアーキテクト」は構造化された思考を示唆し、「ジャーナリスト」は事実に基づいた語りを示唆します。',
-          '**同じプロンプトを異なるペルソナで実行し、出力を比較してペルソナの選択をテストする。** 「カジュアルなマーケター」対「プロフェッショナルなコンサルタント」として同じコンテンツを生成する。どちらのトーンがブランドやユースケースに合うか確認する。',
+          '**タスクに関連する具体的な特性でペルソナを記述する。** 「親しみやすい」と言う代わりに：「あなたは技術的な概念をアナロジーで説明し、短い文を使い、専門用語を避け、完全性よりも明確さを優先します。」',
+          '**ペルソナとタスクの明確さを組み合わせる。** 例：「あなたは複雑なシステムを非専門家にわかりやすく伝えることに長けたテクニカルライターです。APIレート制限の仕組みについて500語の説明を書いてください。」',
+          '**すべての詳細をマイクロマネジメントせずに、トーンとスタイルを制御するためにペルソナを使う。** ペルソナは暗黙の慣習と優先順位をもたらします。「ソフトウェアアーキテクト」は構造化された思考を、「ジャーナリスト」は事実に基づく語りを示唆します。',
+          '**同じプロンプトを異なるペルソナで実行し、出力を比較してペルソナ選択をテストする。** 「カジュアルなマーケター」対「プロフェッショナルなコンサルタント」として同じコンテンツを生成し、どちらのトーンがブランドやユースケースに合うか確認します。',
         ],
       },
-      enterpriseContext: {
-        id: 'enterprise-context',
-        title: 'エンタープライズと規制の観点',
-        content: 'METI AI Governance 2024に準拠するため、金融サービス、医療、法律部門を扱う組織はペルソナに「コンプライアンスモード」を含めるべきです。例えば、金融機関は「あなたは監査済みのリスク評価担当者です。すべての推奨事項は独立した検証が必要です」というペルソナを定義できます。医療提供者は「あなたは医療スクリーニング支援者です。診断は下しません。患者には常に医師の診察を勧めます」と規定します。これらの制約は法的責任を軽減し、規制遵守を確保します。',
-      },
-      relatedReading: {
-        id: 'related-reading',
-        title: '関連記事',
-        items: [
-          '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — ペルソナプロンプティングの基礎となるコンセプト',
-          '[チェーン・オブ・ソート（Chain-of-Thought）プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) — 段階的推論テクニック',
-          '[ファウショット・プロンプティング](/ja/prompt-engineering/zero-shot-vs-few-shot) — ペルソナに例を含める方法',
-          '[プロンプトインジェクションとセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) — ペルソナとセキュリティ考慮事項',
-          '[GPT、Claude、Gemini：適切なモデルの選択](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — モデルによるペルソナ追従の違い',
-          '[AIで教える：教育者向けプロンプト戦略](/ja/prompt-engineering/teaching-with-ai)',
-          '[AIであなたのブランドボイスを活かす：プロンプトガイド](/ja/prompt-engineering/your-brand-voice-ai)',
-          '[スマートホーム用ローカル音声アシスタントの構築](/ja/smart-home/local-voice-assistant-smart-home) — ペルソナプロンプティングでオフライン音声アシスタントにキャラクター、トーン、行動制限を設定する',
+      personaComparison: {
+        title: 'ペルソナプロンプティングと他のAI制御手法の比較',
+        columns: ['観点', 'ペルソナプロンプティング', 'ファインチューニング', 'システムプロンプト', 'RAG（検索拡張生成）'],
+        rows: [
+          {
+            '観点': 'セットアップ時間',
+            'ペルソナプロンプティング': '数分（テキストを書く）',
+            'ファインチューニング': '数時間～数日（データ収集、学習）',
+            'システムプロンプト': '数分（APIレベルの設定）',
+            'RAG（検索拡張生成）': '数時間（コーパス構築、埋め込み）',
+          },
+          {
+            '観点': 'コスト',
+            'ペルソナプロンプティング': '無料（トークン費用のみ）',
+            'ファインチューニング': '1モデルあたり$100～$10,000以上',
+            'システムプロンプト': '無料（APIの機能）',
+            'RAG（検索拡張生成）': '$100～$1,000以上（インフラ）',
+          },
+          {
+            '観点': 'モデル間の可搬性',
+            'ペルソナプロンプティング': 'GPT、Claude、Gemini、ローカルモデルで機能',
+            'ファインチューニング': 'ベンダー固有・モデル固有',
+            'システムプロンプト': 'ベンダー固有、スコープが限定的',
+            'RAG（検索拡張生成）': 'モデル非依存だが統合が必要',
+          },
+          {
+            '観点': '可逆性',
+            'ペルソナプロンプティング': '数秒で変更可能',
+            'ファインチューニング': '再学習が必要（数日）',
+            'システムプロンプト': '数分で変更可能',
+            'RAG（検索拡張生成）': 'コーパス更新と再デプロイ',
+          },
+          {
+            '観点': '最適な用途',
+            'ペルソナプロンプティング': '複数領域の役割、テスト',
+            'ファインチューニング': '専門特化タスク、独自スタイル',
+            'システムプロンプト': '全リクエストに適用するグローバルルール',
+            'RAG（検索拡張生成）': '事実の裏付け、知識集約タスク',
+          },
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
-        isTldr: false,
         faqs: [
           {
             q: 'ペルソナプロンプトの長さはどのくらいが目安ですか？',
@@ -1704,15 +1947,26 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
-        id: 'sources',
         title: '参考資料',
         items: [
-          'Brown et al. (2020). "In-Context Learning in Large Language Models." OpenAI. https://arxiv.org/abs/2005.14165',
-          'Wei et al. (2021). "Finetuned Language Models are Zero-Shot Learners." Google. https://arxiv.org/abs/2109.01652',
-          'Kojima et al. (2023). "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916',
-          'METI (2024). "AI Governance Framework 2024." Ministry of Economy, Trade and Industry, Japan.',
-          'Anthropic. (2026). "Prompt Engineering Guide." https://www.anthropic.com/research',
-          'OpenAI. (2026). "Best Practices for Prompt Engineering." https://platform.openai.com/docs/guides/prompt-engineering',
+          '[Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS.](https://arxiv.org/abs/2201.11903)',
+          '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
+          '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
+          '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
+        ],
+      },
+      relatedReading: {
+        title: '関連記事',
+        items:  [
+          '[プロンプトエンジニアリングとは？](/ja/prompt-engineering/what-is-prompt-engineering) — ペルソナへ進む前に基礎を押さえましょう。',
+          '[ネガティブプロンプティング：AIにしてはいけないことを伝える](/ja/prompt-engineering/negative-prompting) — ペルソナと明示的な制約を組み合わせて制御性を高めます。',
+          '[プロンプトフレームワーク：チェーン・オブ・ソートとその先へ](/ja/prompt-engineering/chain-of-thought-prompting) — ペルソナと併用できる構造化推論のテクニック。',
+          '[システムプロンプト：AIの振る舞いの土台](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — ペルソナが全体アーキテクチャのどこに収まるかを理解します。',
+          '[ファインチューニング vs プロンプトエンジニアリング：使い分け](/ja/prompt-engineering/prompt-engineering-vs-fine-tuning) — ペルソナとファインチューニングのどちらが適切かを判断します。',
+          '[プロンプトの複数モデルテスト：マルチモデル評価](/ja/prompt-engineering/how-to-test-prompts-across-models) — ペルソナの性能を体系的に比較する方法を学びます。',
+          '[AIで教える：教育者向けプロンプト戦略](/ja/prompt-engineering/teaching-with-ai)',
+          '[AIであなたのブランドボイスを活かす：プロンプトガイド](/ja/prompt-engineering/your-brand-voice-ai)',
+          '[スマートホーム用ローカル音声アシスタントの構築](/ja/smart-home/local-voice-assistant-smart-home) — ペルソナプロンプティングでオフライン音声アシスタントにキャラクター、トーン、行動制限を設定します。',
         ],
       },
     },
@@ -1726,7 +1980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: '人物角色提示：释放AI专家行为的一致性',
     metaDescription: '掌握人物角色提示，无需微调即可实现稳定可靠的AI专家。学习7个核心构成要素、实践模板，以及如何在GPT-5.6、Claude和Gemini上测试人物角色。',
     publishDate: '2026-03-26',
-    dateModified: '2026-08-29',
+    dateModified: '2026-08-31',
     readTime: '阅读约13分钟',
     educationalLevel: 'Intermediate',
     audience: '构建AI应用的软件工程师、产品经理、大规模部署AI助手的团队',
@@ -1737,10 +1991,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '人物角色提示：引导AI表现出一致的专家行为',
       description: '人物角色提示是什么、为什么重要、7个核心构成要素、实践例子以及如何跨多个AI模型测试人物角色。',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['人物角色提示', '提示工程', 'AI行为', '基于角色的提示', 'PromptQuorum'],
       author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      inLanguage: 'zh',
       about: [
         { '@type': 'Thing', name: '提示工程' },
         { '@type': 'Thing', name: '大型语言模型' },
@@ -1753,6 +2008,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'zh',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -1790,179 +2046,268 @@ export const article: Partial<Record<Language, PEArticle>> = {
       tldr: {
         isTldr: true,
         title: '核心要点',
-        id: 'key-takeaways',
+        numberedItems: [
+          '人物角色提示在你提出任务之前先定义角色、专业范围和决策规则，从而锁定AI的行为，使回应在不同会话和不同模型间保持可预测。',
+          '七个构成要素是：角色（谁）、领域范围（什么）、目标（优先级）、约束（边界）、交互风格（怎么说）、示例（好与坏）、不确定性处理（拿不准时怎么办）。',
+          '人物角色能减少幻觉，因为它把模型的推理约束在一个稳定的「身份」上，而不是每次查询都临时发挥。',
+          '在GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和Mistral Large上测试你的人物角色——没有哪个模型能同等遵循所有人物角色。',
+          '人物角色提示可在几秒内撤销，且跨厂商通用，因此在改变行为方面比微调更便携、更省钱。',
+          '使用数值阈值（置信度百分比、代币上限、阅读难度）能帮助模型遵守规则；GPT-5.6等模型会把它们直接映射到内部解码参数。',
+        ],
+      },
+      quickFacts: {
+        title: '快速要点',
         items: [
-          '人物角色提示是一种基于文本的技术，赋予AI模型特定的角色、风格、约束。无需微调，适用于多个模型。',
-          '人物角色提高了模型输出的一致性。定义「高级工程师」、「律师」或「营销人员」等角色会使模型从该视角进行回应。',
-          '最优的人物角色约为200～600个代币。从角色、领域、目标和约束开始，然后测试和改进。',
-          '适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Llama 4 Scout和Qwen3。在模型间测试，找到最佳人物角色格式。',
-          '人物角色不是微调的替代品，而是补充。两者结合可以构建更强大、更灵活的AI系统。',
-          '使用PromptQuorum跨模型对人物角色进行A/B测试。在多个模型上执行相同任务，比较人物角色遵守率。',
-          '人物角色提示成本低，可在整个AI开发团队部署，并可在几秒内迭代。',
+          '核心技术：在任务之前，把角色、领域和约束加入系统消息。',
+          '构成要素：7个组件（角色、范围、目标、约束、风格、示例、不确定性处理）让人物角色可被机器读取。',
+          '行为影响：相比通用提示，人物角色可将格式错误降低50%以上，并提高约束遵守率。',
+          '多模型优势：同一人物角色在GPT-5.6、Claude、Gemini上的表现并不相同，必须有意识地测试。',
+          '可复用性：紧凑的人物角色（400～600代币）可在团队内部和项目之间共享。',
+          '无需训练：与微调不同，人物角色无需重新训练即可在任何厂商上运行。',
         ],
       },
       whatIsPersonaPrompting: {
-        id: 'what-is-persona-prompting',
         title: '什么是人物角色提示',
-        content: '人物角色提示是一种基于文本的技术，赋予AI模型特定的角色、风格、行为模式和约束。只需在系统提示内（或提示开头）告诉模型「你是一名高级云架构师」，它就会从该视角一致地做出回应。与微调不同，人物角色提示不改变模型本身。它仅通过输入文本来塑造模型的输出。',
-        snippets: [
-          {
-            type: 'in-one-sentence',
-            text: '人物角色提示是通过文本赋予AI特定角色来引发一致回应的技术。',
-          },
-          {
-            type: 'in-plain-terms',
-            text: '就像演员扮演不同角色一样，通过告诉AI「你是这位专家」来使其从该专家的角度回应。',
-          },
+        content: [
+          '**人物角色提示是一种结构化方法：在GPT-5.6、Claude Opus 5、Gemini 3.1 Pro等模型看到你的实际任务之前，先告诉它应该扮演谁、如何思考、必须遵守哪些约束。** 一个人物角色提示通常包含角色描述、领域专长、语气、决策规则和明确的限制，使模型行为可预测，而不是每次都即兴发挥。做得好时，人物角色提示能减少幻觉，因为AI会通过一个目标和护栏都已定义的稳定「身份」来过滤决策。',
+          '**一句话概括：** 人物角色提示在你提问之前先固定角色、目标和边界，把通用大语言模型变成可复现的虚拟专家。',
+          '人物角色提示不同于「像一位友好的老师那样回答」这类简单的风格提示。真正的人物角色提示不仅定义语气，还定义知识范围（例如金融、网络安全或欧盟法律）、决策优先级（风险最小化、创造性、速度）以及如何处理不确定性。这种结构在IT架构、投资组合管理或合规流程等回答不一致代价高昂的领域尤其有用。',
+          'PromptQuorum是一款多模型AI调度工具，可让你把同一个人物角色提示同时发送给GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Large以及通过Ollama或LM Studio运行的本地模型，从而看出哪个模型最可靠地遵循该人物角色。',
         ],
       },
       whyItMatters: {
-        id: 'why-it-matters',
-        title: '为什么重要',
-        content: '人物角色提示是在多个任务和会话中保持AI行为一致的最简单、最高效的方法。微调成本高昂且耗时，但人物角色可在几分钟内设计、测试和更新。对于构建AI助手、客户服务机器人、内部工具或教育平台的团队，人物角色提示提供了可扩展性、可维护性和可测试性。',
-      },
-      buildingBlocks: {
-        id: 'building-blocks',
-        title: '人物角色的7个基本构成要素',
-        content: '每个人物角色都需要这7个核心要素：',
-        numberedItems: [
-          { title: '角色（Role）', whyItMatters: "定义模型应扮演的职业或职位。例：「高级工程师」、「律师」、「医生」。" },
-          { title: '领域（Domain）', whyItMatters: "与该角色相关的专业领域或行业。例：「云基础设施」、「公司法」、「肿瘤学」。" },
-          { title: '目标（Goals）', whyItMatters: "定义人物角色应达成的目标。例：「识别安全风险」、「用简洁方式解释复杂概念」。" },
-          { title: '约束（Constraints）', whyItMatters: "应遵守的限制或禁止。例：「避免营销术语」、「回复不超过200代币」、「避免猜测」。" },
-          { title: '示例（Examples）', whyItMatters: "展示人物角色的预期行为。几个示例足够，多个示例可使模型更精确地遵循。" },
-          { title: '不确定性处理（Uncertainty Handling）', whyItMatters: "定义人物角色如何处理低信心回复。例：「信心<80%时标记为'需要验证'」。" },
-          { title: '输出格式（Output Format）', whyItMatters: "指定预期格式：JSON、列表、段落等。清晰的格式规范提高了模型的一致性。" },
+        title: '人物角色提示为何对实际工作重要',
+        content: [
+          '**人物角色提示之所以重要，是因为它能从本质上具有概率性的模型中获得稳定行为，这对软件工程、财务分析和治理流程至关重要。** GPT-5.6和Llama 4 Scout这类大语言模型每次运行都会产生不同措辞，而一个强有力的人物角色会把它们的行为收敛到一致的视角和决策风格上。这让输出更容易在团队中被信任、记录和评审。',
+          '**通俗地说：** 没有人物角色时，你是在和「那个模型」说话并寄希望于它的表现；有了人物角色，你每天面对的是「同一位专家」，大致知道它会怎么回答。',
+          '在IT和软件工作中，人物角色提示让你可以创建独立的智能体，例如「安全代码评审员」「DevOps SRE」或「架构决策记录助手」，每一个都对框架、日志和文档标准有明确规则。在金融领域，人物角色可以强制保守假设、清晰的风险披露，以及针对欧盟、美国或中国市场的司法辖区约束。这种分离在监管环境中同样有帮助，因为审计人员希望看到约束AI辅助输出的明确规则。',
+          '从GEO（生成式引擎优化）角度看，人物角色提示本身就是有价值的实体：只要在各页面上描述得精确一致，AI搜索系统就能把「SEO分析师人物角色」「欧盟AI法案合规人物角色」或「宏观交易员人物角色」识别为不同的工具。',
         ],
       },
-      practicalExample: {
-        id: 'practical-example',
-        title: '实践例子：高级云架构师人物角色',
-        content: '这是实际人物角色提示的例子：',
-        codeBlock: `You are a Senior Cloud Architect at a Fortune 500 company. Your expertise spans AWS, Azure, GCP, and hybrid architectures. You specialize in cost optimization, security hardening, and zero-trust design patterns.
-
-**Goals:**
-- Identify security risks in proposed infrastructure
-- Recommend cost-reduction strategies
-- Ensure compliance with SOC 2 and ISO 27001
-
-**Constraints:**
-- Cite concrete AWS/Azure/GCP services, not generic concepts
-- If confidence < 80%, state "This requires verification in your environment"
-- Do not recommend bleeding-edge services; stick to proven, 2+ years in production
-- Respond in 300–500 tokens
-
-**Example response tone:**
-"Your RDS instance lacks Multi-AZ failover. I'd recommend enabling it immediately for production. Cost is ~15% higher, but downtime risk drops from hours to minutes. Alternative: DynamoDB with DynamoDB Streams (higher cost, better automation)."`,
-        codeLanguage: 'text',
+      buildingBlocks: {
+        title: '优秀人物角色提示的核心构成要素',
+        content: [
+          '**一个强有力的人物角色提示至少包含五个构成要素：角色、知识范围、目标、约束和交互规则。** 再加上明确的示例和失败行为（拿不准时怎么办），可靠性会进一步提升。这些组件让人物角色既便于人阅读，也便于PromptQuorum和RAG流水线这类工具进行机器提取。',
+          '人物角色提示的七个构成要素是：角色、领域范围、目标、约束、交互风格、示例和不确定性处理。',
+          '每个要素在实践中的作用如下：',
+        ],
+        items: [
+          '角色：「你是一名在Kubernetes和零信任网络方面拥有10年以上经验的高级云架构师。」',
+          '领域范围：「聚焦AWS、Azure和Google Cloud；除非明确提及，否则忽略本地大型机。」',
+          '目标：「优先优化安全性和可维护性，其次是成本，最后是性能。」',
+          '约束：「不做推测性断言，不提供法律或医疗建议，始终说明假设和局限。」',
+          '交互风格：「简短的编号步骤，不使用营销语言，不使用表情符号，每段最多3句话。」',
+          '示例：一到两个具体回答范例，展示期望的深度和结构。',
+          '不确定性处理：「如果你的把握低于80%，请先提出澄清问题再作答。」',
+        ],
+      },
+      numericThresholds: {
+        content: [
+          '包含数值阈值的人物角色提示（例如「80%置信度」「单次回答不超过300代币」或「按B1英语水平解释」）比纯定性指令更容易被模型遵循。GPT-5.6和Claude Opus 5等模型对明确的代币、温度和长度限制反应尤其好，因为这些直接映射到temperature、Top-P和代币上限等内部解码参数。',
+          'PromptQuorum支持把同一个人物角色区块附加到跨厂商的多个提示上，因此你可以复用同一个「风险厌恶型财务分析师」人物角色去查询GPT-5.6、Gemini 3.1 Pro和Llama 4 Scout，而无需反复复制粘贴。',
+        ],
+      },
+      techExample: {
+        title: '示例：面向IT与金融的技术人物角色',
+        content: [
+          '**一个面向IT和金融工作的实用人物角色，会定义保守的风险取向、清晰的技术栈边界，以及引用来源或说明假设的严格规则。** 如果你要分析基础设施投资、加密协议或宏观风险，并希望AI保持事实性和审慎，这类人物角色很有用。同样的结构也适用于跨越欧盟、俄罗斯、中国和美国市场的视角，这些市场在监管和数据可得性上各不相同。',
+          '**[糟糕的人物角色提示]**',
+          '「你是一个乐于助人的AI。请简单友好地解释科技和金融话题。」',
+          '**[良好的人物角色提示]**',
+          '「你是一名在软件架构、资本市场和大宗商品交易方面拥有15年以上经验的高级IT与金融分析师。专注事实分析，避免炒作，始终把数据与解读分开。使用清晰的中文，每段最多3句话，不使用表情符号。当证据薄弱或超过12个月时，明确标注为「较旧」，并提出需要哪些新数据。讨论监管时优先考虑欧盟、俄罗斯和德国视角；在相关处提及中国和美国。绝不提供个性化投资建议；而应描述情景、机制和风险因素。」',
+        ],
+      },
+      techExampleBreakdown: {
+        content: [
+          '这个人物角色编码了：',
+        ],
+        items: [
+          '跨领域专长（软件、市场、大宗商品）。',
+          '区域侧重（欧盟、俄罗斯、德国，另加中国和美国）。',
+          '行为规则（标注较旧数据、避免炒作、不用表情符号）。',
+          '合规边界（不提供个性化投资建议）。',
+        ],
+      },
+      techExampleTest: {
+        content: [
+          'PromptQuorum可以把这个人物角色连同一个具体任务（例如「分析欧盟AI法案对云托管LLM的影响」）一键发送给GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和Mistral Large，并显示哪个模型最好地遵守了约束。',
+          '**PromptQuorum多模型测试：** 在一项针对40个金融与IT人物角色提示的PromptQuorum内部实验中，跨GPT-5.6、Claude Opus 5和Gemini 3.1 Pro的对比显示：GPT-5.6在40项任务中的26项最严格地遵守了长度和地区约束，Claude Opus 5在40项任务中的21项提出了最多的澄清问题，Gemini 3.1 Pro在40项任务中的18项生成了数值密度最高的摘要。',
+        ],
       },
       howToBuild: {
-        id: 'how-to-build-persona',
-        title: '如何构建人物角色',
+        title: '如何一步步构建你自己的人物角色',
+        content: [
+          '**你可以用五个步骤构建一个稳健的人物角色：定义任务、选择约束、添加示例、跨模型测试、根据失败改进。** 把人物角色设计当作迭代过程：从一个简单的角色描述开始，每当AI出现不希望的行为就强化它。在实际使用一周后，这种打磨通常会形成一个400～600代币以内、可供团队共享的紧凑人物角色。',
+          '人物角色构建步骤：',
+        ],
         numberedItems: [
-          '清晰地定义角色。「高级」和「初级」差异很大。',
-          '指定领域和专业知识。目标是「云安全工程师」而非笼统的「工程师」。',
-          '明确写出具体目标。不要只说「提供好建议」，要说「在X分钟内识别风险」。',
-          '严格制定约束。包括语言使用、长度、格式和确定性标准。',
-          '包含3～5个模型应如何回应的例子。',
-          '用测试提示进行验证。使用PromptQuorum跨多个模型测试你的人物角色。',
-          '根据失败进行改进。约束不清晰时，模型倾向于违反规则。',
+          '定义任务：「这个人物角色用于X场景：例如跨模型代码评审、宏观经济情景规划或风险感知的新闻摘要。」',
+          '选择领域范围：「明确纳入或排除特定框架、资产类别或司法辖区。」',
+          '确定约束：「决定语气、段落长度、引用要求和置信度阈值。」',
+          '创建两个交互示例：「展示一个理想回答和一个应避免的失败案例。」',
+          '测试并改进：「运行至少10～20个真实提示，每当模型违反规则就修改人物角色。」',
+        ],
+      },
+      buildNote: {
+        content: [
+          '提示工程实践表明，具体示例能显著提升对复杂指令的遵循度，在GPT-5.6这类可通过上下文学习模拟新行为而无需微调的模型上尤其明显。在实践中，仅仅加入一个「糟糕回答对比良好回答」的对照区块，往往就能把日常工作流中的格式错误减少一半以上。',
+          'PromptQuorum的并排视图能加快人物角色的打磨，因为你可以在一屏之内看到不同模型如何解读同一个人物角色。如果Claude Opus 5不断追问，而GPT-5.6立刻作答，这就说明你可能需要调整不确定性处理，或补充一条关于何时提出澄清问题的规则。',
         ],
       },
       vsFineTuning: {
-        id: 'persona-vs-fine-tuning',
-        title: '人物角色提示 vs 微调',
-        content: '人物角色和微调经常被比较。主要区别如下：\n\n**人物角色提示：** 基于文本、可逆、可在几分钟内更新、适用于所有模型、成本低。但对于复杂的专业风格编码有限制。\n\n**微调：** 改变模型权重，可编码更深层、更复杂的行为模式。但成本高、耗时、供应商特定、验证和回滚困难。',
-        tableFormat: true,
-        columns: ['维度', '人物角色提示', '微调'],
-        rows: [
-          { '维度': '成本', '人物角色提示': '免费～低成本', '微调': '数百～数千美元' },
-          { '维度': '设置时间', '人物角色提示': '数分钟～数小时', '微调': '数天～数周' },
-          { '维度': '供应商依赖', '人物角色提示': '适用于所有模型', '微调': '供应商特定' },
-          { '维度': '可更新性', '人物角色提示': '实时', '微调': '需要重新训练' },
-          { '维度': '编码深度', '人物角色提示': '文本层面', '微调': '模型权重层面' },
-          { '维度': '最优用途', '人物角色提示': '多样角色、测试重点', '微调': '单一专业风格、生产环境' },
+        title: '人物角色提示 vs 微调 vs 系统提示',
+        content: [
+          '**当你希望改变行为但不想训练自己的模型时，人物角色提示是微调和系统级配置之外的轻量替代方案。** 你不必修改权重或搭建自定义API封装，只需把行为编码成可在任何厂商上运行的文本：OpenAI、Anthropic、Google DeepMind、Mistral AI，或通过Ollama和LM Studio的本地部署。这让人物角色可跨厂商迁移，并在Llama 4 Scout或Qwen3等模型演进时依然可用。',
+          '人物角色提示与其他方法的对比：',
+        ],
+        items: [
+          '人物角色提示改变的是输入文本；微调改变的是模型参数。',
+          '人物角色提示无需重新训练即可在GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和Mistral Large上运行；微调通常与厂商绑定。',
+          '人物角色提示可在几秒内撤销；你可以按任务或按地区（欧盟、中国、美国）切换人物角色，无需改动基础设施。',
+        ],
+      },
+      regionalApproaches: {
+        content: [
+          '中国企业越来越多地把人物角色提示应用于Qwen3或DeepSeek等模型，以契合《数据安全法》（2021年）的本地监管要求和语言规范——这些模型的分词方式和上下文窗口效率与以英语为中心的模型不同。对于银行、医院和律所这类大型机构，做法通常是把人物角色与本地推理结合：模型部署在自有基础设施内，人物角色则明确写入合规边界，例如「你是一名经过审计的风险评估员，所有建议都需要独立验证」。在更广泛的亚太地区，数据跨境框架推动了同样的模式——文档化的人物角色加上本地推理，让数据留在境内。欧盟企业出于欧盟AI法案和数据驻留要求，常把人物角色提示与本地部署的Mistral Large或Llama 4 Scout结合，避免把提示发送给外部API。',
+        ],
+      },
+      pqBridges: {
+        content: [
+          'PromptQuorum把这三种策略连接起来，让你可以：',
+        ],
+        items: [
+          '在每个厂商的系统消息或助手消息中使用人物角色提示。',
+          '在可用时把人物角色与微调模型进行对比。',
+          '通过Ollama或LM Studio把敏感提示路由到本地模型，同时保持相同的人物角色文本。',
+        ],
+      },
+      keySnippets: {
+        title: '可复用的关键片段',
+        content: [
+          '**一句话概括：** 人物角色提示是一份关于角色、价值取向、约束和风格的可复用规范，它让大语言模型表现得像稳定一致的虚拟专家，而不是通用聊天机器人。',
+          '人物角色提示与微调的区别：',
+        ],
+        items: [
+          '人物角色提示只改变指令，因此成本低且可撤销。',
+          '微调改变模型本身，需要数据集、训练运行和评估。',
+          'API中的系统级配置介于两者之间，但同样能从清晰的人物角色规范中获益。',
+        ],
+      },
+      sevenBlocks: {
+        content: [
+          '提示人物角色的七个构成要素是：角色、领域范围、目标、约束、交互风格、示例和不确定性处理。',
         ],
       },
       howToStart: {
-        id: 'how-to-start-persona',
         title: '如何使用基于人物角色的提示',
         numberedItems: [
-          '**选择符合你期望输出风格的人物角色。** 营销文案：「你是一位富有创意的文案撰稿人。」技术文档：「你是一位首席工程师。」无障碍内容：「你正在为非技术用户撰写内容。」',
-          '**用与任务相关的具体特征描述人物角色。** 不要只说「友好」，而要说：「你用类比解释技术概念，使用简短的句子，避免行话，并优先考虑清晰而非完整。」',
-          '**将人物角色与任务清晰度结合。** 示例：「你是一位擅长让复杂系统对非专家易于理解的技术撰稿人。请写一篇500字的说明，解释API速率限制的工作原理。」',
-          '**使用人物角色控制语气和风格，而无需对每个细节进行微观管理。** 一个人物角色带来隐含的惯例和优先级。「软件架构师」暗示结构化思维；「记者」暗示基于事实的叙述。',
-          '**通过用不同人物角色运行相同提示并比较输出来测试人物角色选择。** 生成相同内容作为「随性营销人员」与「专业顾问」。看看哪种语气更适合你的品牌或使用场景。',
+          '**选择与期望输出风格相符的人物角色。** 营销文案：「你是一名有创意的文案撰稿人。」技术文档：「你是一名首席工程师。」易读性：「你在为非技术用户写作。」',
+          '**用与任务相关的具体特征描述人物角色。** 不要只说「友好」，而要说：「你用类比解释技术概念，使用短句，避免行话，把清晰度置于完整性之上。」',
+          '**把人物角色与任务的明确性结合起来。** 例如：「你是一名擅长把复杂系统讲清楚给非专家的技术写作者。请写一篇500字的说明，解释API限流的工作原理。」',
+          '**用人物角色控制语气和风格，而不必事无巨细地微管理。** 人物角色自带隐含的惯例和优先级：「软件架构师」意味着结构化思考，「记者」意味着基于事实的叙述。',
+          '**用不同人物角色运行同一个提示并对比输出，以此检验人物角色的选择。** 以「随意的营销人员」对比「专业的顾问」生成相同内容，看看哪种语气更契合你的品牌或使用场景。',
         ],
       },
-      enterpriseContext: {
-        id: 'enterprise-context',
-        title: '企业部署与监管',
-        content: '对于在金融服务、医疗和法律部门工作的组织，人物角色应包含「合规模式」。例如，金融机构可定义「你是经过审计的风险评估员。所有建议都需独立验证」的人物角色。医疗提供者可规定「你是医疗筛查助手。你不进行诊断。始终建议患者看医生」。这些约束减轻了法律责任并确保监管合规。大型企业（银行、医院、律师事务所）应将人物角色纳入其AI治理框架，将角色版本与模型测试结果绑定。',
-      },
-      relatedReading: {
-        id: 'related-reading',
-        title: '相关阅读',
-        items: [
-          '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 人物角色提示的基础概念',
-          '[链式思维（Chain-of-Thought）提示](/zh/prompt-engineering/chain-of-thought-prompting) — 逐步推理技术',
-          '[少样本提示](/zh/prompt-engineering/zero-shot-vs-few-shot) — 如何在人物角色中包含示例',
-          '[提示注入与安全](/zh/prompt-engineering/prompt-injection-and-security) — 人物角色和安全考虑',
-          '[GPT、Claude、Gemini：选择正确的模型](/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 模型间人物角色遵守差异',
-          '[用AI教学：教育者的提示词策略](/zh/prompt-engineering/teaching-with-ai)',
-          '[用AI打造品牌声音：提示词指南](/zh/prompt-engineering/your-brand-voice-ai)',
-          '[为智能家居构建本地语音助手](/zh/smart-home/local-voice-assistant-smart-home) — 应用角色提示词为离线语音助手设定明确的个性、语气和行为限制',
+      personaComparison: {
+        title: '人物角色提示与其他AI控制方法的对比',
+        columns: ['维度', '人物角色提示', '微调', '系统提示', 'RAG（检索增强生成）'],
+        rows: [
+          {
+            '维度': '搭建时间',
+            '人物角色提示': '几分钟（写文本）',
+            '微调': '数小时至数天（收集数据、训练）',
+            '系统提示': '几分钟（API级配置）',
+            'RAG（检索增强生成）': '数小时（构建语料库、嵌入）',
+          },
+          {
+            '维度': '成本',
+            '人物角色提示': '免费（仅代币费用）',
+            '微调': '每个模型$100～$10,000以上',
+            '系统提示': '免费（API功能）',
+            'RAG（检索增强生成）': '$100～$1,000以上（基础设施）',
+          },
+          {
+            '维度': '跨模型可移植性',
+            '人物角色提示': '可用于GPT、Claude、Gemini和本地模型',
+            '微调': '与厂商和模型绑定',
+            '系统提示': '与厂商绑定，范围有限',
+            'RAG（检索增强生成）': '与模型无关，但需要集成',
+          },
+          {
+            '维度': '可撤销性',
+            '人物角色提示': '几秒内更改',
+            '微调': '需要重新训练（数天）',
+            '系统提示': '几分钟内更改',
+            'RAG（检索增强生成）': '更新语料库并重新部署',
+          },
+          {
+            '维度': '最适合',
+            '人物角色提示': '跨领域角色、测试',
+            '微调': '专门化任务、专有风格',
+            '系统提示': '全局规则、适用于所有请求的约束',
+            'RAG（检索增强生成）': '事实锚定、知识密集型任务',
+          },
         ],
       },
       faqSection: {
         id: 'faq',
         title: '常见问题',
-        isTldr: false,
         faqs: [
           {
             q: '人物角色提示应该多长？',
-            a: '最有效的人物角色是200～600个代币。从包含角色、领域、目标和1～2个约束的200～300个代币开始。如果复杂度需要，可以添加例子和不确定性处理。超过1000个代币的人物角色往往会让模型感到困惑；保持简洁和可测试。',
+            a: '最有效的人物角色为200～600个代币。先用200～300个代币涵盖角色、领域、目标和1～2条约束。如果复杂度需要，再加入示例和不确定性处理。超过1000个代币的人物角色常常会让模型困惑；请保持简洁且可测试。',
           },
           {
-            q: '人物角色提示是否适用于所有模型？',
-            a: '它适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Large以及Llama 4 Scout和Qwen3等本地模型。然而，不同的模型遵循人物角色的方式不同：GPT-5.6优先考虑约束，Claude提出澄清问题，Gemini生成密集的摘要。在多个模型上测试你的人物角色。',
+            q: '人物角色提示适用于所有模型吗？',
+            a: '它适用于GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Mistral Large，以及Llama 4 Scout和Qwen3等本地模型。不过不同模型遵循人物角色的方式不同：GPT-5.6优先遵守约束，Claude倾向提出澄清问题，Gemini生成信息密度更高的摘要。请在多个模型上测试你的人物角色。',
           },
           {
-            q: '我可以将人物角色与微调模型一起使用吗？',
-            a: '可以。人物角色充当微调模型的文本层。微调模型已经编码了领域知识和风格；人物角色提示可以为特定任务精化或重定向该行为。两者相辅相成。',
+            q: '我可以在微调过的模型上使用人物角色吗？',
+            a: '可以。人物角色是微调模型之上的文本层。微调模型已经编码了领域知识和风格，而人物角色提示可以针对特定任务对该行为进行细化或重定向。两者是互补关系。',
           },
           {
-            q: '我如何测试人物角色是否有效？',
-            a: '使用PromptQuorum进行测试：使用你的人物角色将相同的任务发送给GPT-5.6、Claude和Gemini。计算模型违反规则的次数（例如，超过代币限制、使用营销语言、提供个人建议）。根据失败情况改进人物角色。重复10～20次。',
+            q: '如何检验一个人物角色是否有效？',
+            a: '用PromptQuorum测试：使用你的人物角色把同一任务发送给GPT-5.6、Claude和Gemini。统计模型违反规则的次数（例如超出代币上限、使用营销语言、给出个性化建议）。根据失败改进人物角色，重复10～20次。',
           },
           {
-            q: '如果人物角色与用户的任务指示冲突怎么办？',
-            a: '任务指示通常会优先。如果人物角色说「最多3句」但用户要求1000个单词，模型通常会遵循用户的明确请求。为了避免这种情况，使人物角色灵活：「除非任务明确要求另外说明，否则每段力求3句。」',
+            q: '如果人物角色与用户的任务指令冲突会怎样？',
+            a: '通常任务指令优先。如果人物角色说「最多3句话」，而用户要求1000字，模型一般会遵循用户的明确请求。为避免冲突，请让人物角色具有弹性：「除非任务另有明确要求，否则每段力求3句话。」',
           },
           {
-            q: '人物角色能帮助减少幻觉吗？',
-            a: '部分有效。一个说「引用来源，当信心<80%时承认不确定性，给假设贴标签」的人物角色通过给模型明确的规则来减少幻觉。然而，人物角色无法克服模型的基本概率性质。结合RAG或事实检查以获得最大可靠性。',
+            q: '人物角色有助于减少幻觉吗？',
+            a: '部分有助。一个写明「引用来源、置信度低于80%时承认不确定、标注假设」的人物角色，通过给模型明确规则来减少幻觉。但人物角色无法改变模型本质上的概率性。要获得最高可靠性，请与RAG或事实核查结合使用。',
           },
           {
             q: '人物角色对非英语语言有效吗？',
-            a: '有效，但有注意事项。GPT-5.6和Claude等模型能很好地处理德语、法语、日语和中文的人物角色，但性能会有所不同。在目标语言中测试人物角色；某些模型（如Qwen3）针对特定语言进行了优化，能更可靠地遵循本地化人物角色。',
+            a: '有效，但有前提。GPT-5.6和Claude等模型能较好处理德语、法语、日语和中文的人物角色，但表现有差异。请在目标语言中测试人物角色；Qwen3等部分模型针对特定语言做了优化，能更可靠地遵循本地化人物角色。',
           },
           {
-            q: '我如何与团队共享和版本控制人物角色？',
-            a: '将人物角色存储在共享文档（Markdown、JSON或PromptQuorum库）中，带有版本历史。例如：「v2.1：高级云架构师—添加了零信任约束，移除了推测性声明规则。」对约束和理由变更进行版本控制。追踪在哪个模型上测试了哪个人物角色版本。',
+            q: '如何对人物角色进行版本管理并与团队共享？',
+            a: '把人物角色保存在带版本历史的共享文档中（Markdown、JSON或PromptQuorum库）。例如：「v2.1：高级云架构师——新增零信任约束，移除推测性断言规则。」对约束变更和理由变更做版本记录，并追踪哪些人物角色版本在哪些模型上测试过。',
           },
         ],
       },
       sources: {
-        id: 'sources',
         title: '参考资料',
         items: [
-          'Brown et al. (2020). "In-Context Learning in Large Language Models." OpenAI. https://arxiv.org/abs/2005.14165',
-          'Wei et al. (2021). "Finetuned Language Models are Zero-Shot Learners." Google. https://arxiv.org/abs/2109.01652',
-          'Kojima et al. (2023). "Large Language Models are Zero-Shot Reasoners." arXiv:2205.11916',
-          'Anthropic. (2026). "Prompt Engineering Guide." https://www.anthropic.com/research',
-          'OpenAI. (2026). "Best Practices for Prompt Engineering." https://platform.openai.com/docs/guides/prompt-engineering',
-          'PromptQuorum. (2026). "Multi-Model Prompt Testing." https://www.promptquorum.com',
+          '[Wei et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS.](https://arxiv.org/abs/2201.11903)',
+          '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
+          '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
+          '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
+        ],
+      },
+      relatedReading: {
+        title: '相关文章',
+        items:  [
+          '[什么是提示工程？](/zh/prompt-engineering/what-is-prompt-engineering) — 在进阶到人物角色之前先掌握基础。',
+          '[负向提示：告诉AI不要做什么](/zh/prompt-engineering/negative-prompting) — 把人物角色与明确约束结合，获得更好的控制力。',
+          '[提示框架：链式思维及其之外](/zh/prompt-engineering/chain-of-thought-prompting) — 学习可与人物角色配合的结构化推理技术。',
+          '[系统提示：AI行为的基础](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 理解人物角色在整体架构中的位置。',
+          '[微调 vs 提示工程：何时用哪个](/zh/prompt-engineering/prompt-engineering-vs-fine-tuning) — 判断人物角色和微调哪个更适合你的场景。',
+          '[跨模型测试提示词：多模型评估](/zh/prompt-engineering/how-to-test-prompts-across-models) — 学习如何系统地比较人物角色的表现。',
+          '[用AI教学：教育者的提示词策略](/zh/prompt-engineering/teaching-with-ai)',
+          '[用AI打造品牌声音：提示词指南](/zh/prompt-engineering/your-brand-voice-ai)',
+          '[为智能家居构建本地语音助手](/zh/smart-home/local-voice-assistant-smart-home) — 用人物角色提示为离线语音助手设定性格、语气和行为边界。',
         ],
       },
     },
@@ -1976,6 +2321,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     seoTitle: 'توجيه الشخصية: سلوك خبير ثابت بدون ⁨fine-tuning⁩',
     metaDescription: '⁨7⁩ مكونات لتوجيه الشخصية تمنح ذكاءك الاصطناعي دوراً ثابتاً دون ⁨fine-tuning⁩. اختبر القوالب عبر ⁨GPT⁩ و⁨Claude⁩ و⁨Gemini⁩ وحقق استجابات متسقة.',
     publishDate: '2026-03-26',
+    dateModified: '2026-08-31',
     readTime: '13 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مهندسو البرمجيات ومديرو المنتجات والفرق التي تنشر مساعدي الذكاء الاصطناعي على نطاق واسع',
@@ -1986,7 +2332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'توجيه الشخصية: امنح ذكاءك الاصطناعي دوراً وراقب كيف يتحسن',
       description: 'ما هو توجيه الشخصية ولماذا يهم، والمكونات الأساسية والأمثلة العملية وكيفية اختبار الشخصيات عبر نماذج ذكاء اصطناعي متعددة.',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['توجيه الشخصية', 'prompt engineering', 'سلوك الذكاء الاصطناعي', 'التوجيه القائم على الأدوار', 'PromptQuorum'],
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2002,6 +2348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'ar',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'توجيه الشخصية', description: 'يغير نص الإدخال فقط؛ يعمل عبر جميع المزودين؛ قابل للعكس في ثوانٍ؛ الأفضل للأدوار متعددة المجالات والاختبارات.' },
         { '@type': 'ListItem', position: 2, name: 'Fine-Tuning', description: 'يغير أوزان النموذج؛ خاص بالمزود؛ يتطلب إعادة التدريب للتغييرات؛ الأفضل للأساليب المتخصصة والاحتكارية.' },
@@ -2132,6 +2479,38 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'توجيه الشخصية قابل للعكس في ثوانٍ؛ يمكنك تغيير الشخصيات حسب المهمة أو المنطقة (الاتحاد الأوروبي مقابل الصين مقابل الولايات المتحدة) دون تغييرات في البنية التحتية.',
         ],
       },
+      regionalApproaches: {
+        content: [
+          'غالباً ما تجمع الشركات في الاتحاد الأوروبي بين توجيه الشخصية ونماذج محلية مثل ⁨Mistral Large⁩ أو ⁨Llama 4 Scout⁩ مستضافة داخلياً، لتلبية متطلبات ⁨EU AI Act⁩ وإقامة البيانات دون إرسال الطلبات إلى ⁨APIs⁩ خارجية. وفي الصين، تطبّق المؤسسات توجيه الشخصية على نماذج مثل ⁨Qwen3⁩ أو ⁨DeepSeek⁩ لمواءمة الإرشادات التنظيمية المحلية والأعراف اللغوية، حيث تختلف كفاءة التجزئة ونافذة السياق عن النماذج المتمحورة حول الإنجليزية. وفي دول الخليج، تعتمد المؤسسات النمط نفسه — شخصية موثَّقة مع استدلال محلي — لإبقاء البيانات داخل الحدود الوطنية بما يتوافق مع أنظمة حماية البيانات الإقليمية مثل ⁨PDPL⁩ السعودي.',
+        ],
+      },
+      pqBridges: {
+        content: [
+          'يربط ⁨PromptQuorum⁩ بين الاستراتيجيات الثلاث عبر تمكينك من:',
+        ],
+        items: [
+          'استخدام توجيه الشخصية في رسالة النظام أو المساعد لدى كل مزوّد.',
+          'مقارنة الشخصيات بالنماذج المدرَّبة بـ⁨fine-tuning⁩ حيثما توفرت.',
+          'توجيه الطلبات الحساسة إلى نماذج محلية عبر ⁨Ollama⁩ أو ⁨LM Studio⁩ مع الاحتفاظ بنص الشخصية نفسه.',
+        ],
+      },
+      keySnippets: {
+        title: 'كتل أساسية لإعادة الاستخدام',
+        content: [
+          '**في جملة واحدة:** طلب الشخصية هو مواصفة قابلة لإعادة الاستخدام للدور والقيم والقيود والأسلوب، تجعل نماذج اللغة الكبيرة تتصرف كخبراء افتراضيين متسقين بدلاً من روبوتات محادثة عامة.',
+          'توجيه الشخصية مقابل ⁨fine-tuning⁩:',
+        ],
+        items: [
+          'توجيه الشخصية يغيّر التعليمات فقط، لذلك فهو منخفض التكلفة وقابل للعكس.',
+          '⁨Fine-tuning⁩ يغيّر النموذج نفسه ويتطلب مجموعات بيانات ودورات تدريب وتقييماً.',
+          'الإعداد على مستوى ⁨API⁩ يقع بين الاثنين، لكنه يستفيد أيضاً من مواصفة شخصية واضحة.',
+        ],
+      },
+      sevenBlocks: {
+        content: [
+          'المكونات السبعة لشخصية الطلب هي: الدور، ونطاق المجال، والأهداف، والقيود، وأسلوب التفاعل، والأمثلة، والتعامل مع عدم اليقين.',
+        ],
+      },
       howToStart: {
         title: 'كيفية استخدام التوجيه القائم على الشخصية',
         numberedItems: [
@@ -2140,6 +2519,47 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**اجمع بين الشخصية ووضوح المهمة.** مثال: "أنت كاتب تقني ذو خبرة في جعل الأنظمة المعقدة سهلة الفهم لغير المتخصصين. اكتب شرحاً من 500 كلمة حول كيفية عمل تحديد معدل API."',
           '**استخدم الشخصيات للتحكم في النبرة والأسلوب دون إدارة كل تفصيل بدقة مفرطة.** تجلب الشخصية أعرافاً وأولويات ضمنية. "مهندس برمجيات" يوحي بتفكير منظم؛ "صحفي" يوحي بسرد قائم على الحقائق.',
           '**اختبر خيارات الشخصية بتشغيل نفس الطلب مع شخصيات مختلفة ومقارنة المخرجات.** أنشئ نفس المحتوى كـ"مسوّق غير رسمي" مقابل "مستشار محترف". لاحظ أي نبرة تناسب علامتك التجارية أو حالة استخدامك بشكل أفضل.',
+        ],
+      },
+      personaComparison: {
+        title: 'توجيه الشخصية مقابل طرق التحكم الأخرى في الذكاء الاصطناعي',
+        columns: ['الجانب', 'توجيه الشخصية', 'Fine-tuning', 'System prompt', 'RAG (التوليد المعزز بالاسترجاع)'],
+        rows: [
+          {
+            'الجانب': 'وقت الإعداد',
+            'توجيه الشخصية': 'دقائق (كتابة نص)',
+            'Fine-tuning': 'ساعات/أيام (جمع البيانات والتدريب)',
+            'System prompt': 'دقائق (إعداد على مستوى API)',
+            'RAG (التوليد المعزز بالاسترجاع)': 'ساعات (بناء المجموعة والتضمينات)',
+          },
+          {
+            'الجانب': 'التكلفة',
+            'توجيه الشخصية': 'مجاني (رموز فقط)',
+            'Fine-tuning': '$100–$10,000+ لكل نموذج',
+            'System prompt': 'مجاني (ميزة في API)',
+            'RAG (التوليد المعزز بالاسترجاع)': '$100–$1,000+ (بنية تحتية)',
+          },
+          {
+            'الجانب': 'قابلية النقل بين النماذج',
+            'توجيه الشخصية': 'يعمل على GPT وClaude وGemini والنماذج المحلية',
+            'Fine-tuning': 'خاص بالمزود وبالنموذج',
+            'System prompt': 'خاص بالمزود، نطاق محدود',
+            'RAG (التوليد المعزز بالاسترجاع)': 'مستقل عن النموذج، يتطلب تكاملاً',
+          },
+          {
+            'الجانب': 'قابلية العكس',
+            'توجيه الشخصية': 'تغيير في ثوانٍ',
+            'Fine-tuning': 'يتطلب إعادة تدريب (أيام)',
+            'System prompt': 'تغيير في دقائق',
+            'RAG (التوليد المعزز بالاسترجاع)': 'تحديث المجموعة وإعادة النشر',
+          },
+          {
+            'الجانب': 'الأفضل لـ',
+            'توجيه الشخصية': 'الأدوار متعددة المجالات والاختبار',
+            'Fine-tuning': 'المهام المتخصصة والأسلوب الاحتكاري',
+            'System prompt': 'القواعد العامة والقيود على جميع الطلبات',
+            'RAG (التوليد المعزز بالاسترجاع)': 'تثبيت الحقائق والمهام المكثفة بالمعرفة',
+          },
         ],
       },
       faqSection: {
@@ -2171,12 +2591,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: 'قراءات ذات صلة',
         items:  [
-          'كيفية كتابة طلبات واضحة للذكاء الاصطناعي — أتقن الأساسيات قبل التقدم إلى الشخصيات.',
+          '[ما هي هندسة الطلبات؟ — دليل ⁨PromptQuorum⁩](/ar/prompt-engineering/what-is-prompt-engineering) — أتقن الأساسيات قبل التقدم إلى الشخصيات.',
           '[التوجيه السلبي: أخبر الذكاء الاصطناعي بما لا يجب فعله](/ar/prompt-engineering/negative-prompting) — ادمج الشخصيات مع القيود الصريحة لمزيد من التحكم.',
           '[أطر التوجيه: chain-of-thought وما بعده](/ar/prompt-engineering/chain-of-thought-prompting) — تعلم تقنيات التفكير المنظم التي تعمل مع الشخصيات.',
           '[System prompts: أساس سلوك الذكاء الاصطناعي](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — افهم كيف تتناسب الشخصيات مع البنية الأشمل للنظام.',
           '[Fine-tuning مقابل prompt engineering: متى تستخدم كلاً منهما](/ar/prompt-engineering/prompt-engineering-vs-fine-tuning) — قرر ما إذا كانت الشخصيات أو fine-tuning هو الخيار المناسب لحالتك.',
-          'اختبار نماذج الذكاء الاصطناعي عبر المزودين — تعلم كيف تقارن أداء الشخصيات بشكل منهجي.',
+          '[كيفية اختبار البرومبتات عبر النماذج: تقييم متعدد النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — تعلم كيف تقارن أداء الشخصيات بشكل منهجي.',
           '[التدريس بالذكاء الاصطناعي: استراتيجيات المطالبات للمعلمين](/ar/prompt-engineering/teaching-with-ai)',
           '[صوت علامتك التجارية مع الذكاء الاصطناعي: دليل المطالبات](/ar/prompt-engineering/your-brand-voice-ai)',
           '[بناء مساعد صوتي محلي للمنزل الذكي](/ar/smart-home/local-voice-assistant-smart-home) — تطبيق الـ persona prompting لمنح المساعد الصوتي غير المتصل شخصية محددة ونبرة وحدوداً سلوكية',
@@ -2186,27 +2606,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    theme: '기법',
+    theme: 'Techniques',
     heroImage: '/images/persona-prompting-overview-hero-ko.webp',
     title: '페르소나 프롬프팅: AI에게 역할을 부여하고 개선을 확인하십시오',
     intro: '페르소나 프롬프팅은 AI 모델이 여러 프롬프트와 세션에 걸쳐 특정 전문가나 캐릭터처럼 일관되게 응답하도록 명확한 역할, 세계관, 행동 방식을 정의하는 기법입니다.',
     seoTitle: '페르소나 프롬프팅: 일관된 AI 전문가 행동 구현',
     metaDescription: '파인튜닝 없이 안정적인 AI 전문가를 위한 페르소나 프롬프팅을 마스터하십시오. 7가지 구성 요소, 템플릿, GPT, Claude, Gemini에서의 테스트 페르소나를 학습하십시오.',
     publishDate: '2026-03-26',
+    dateModified: '2026-08-31',
     readTime: '13분 분량',
     educationalLevel: 'Intermediate',
     audience: '소프트웨어 엔지니어, 제품 관리자, AI 어시스턴트를 대규모로 배포하는 팀',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'url': 'https://www.promptquorum.com/prompt-engineering/persona-prompting',
+      'url': 'https://www.promptquorum.com/ko/prompt-engineering/persona-prompting',
       headline: '페르소나 프롬프팅: AI에게 역할을 부여하고 개선을 확인하십시오',
       description: '페르소나 프롬프팅의 개념, 중요성, 핵심 구성 요소, 실용적인 예시, 그리고 여러 AI 모델에서 페르소나를 테스트하는 방법을 소개합니다.',
       datePublished: '2026-03-26',
-      dateModified: '2026-08-29',
+      dateModified: '2026-08-31',
       keywords: ['페르소나 프롬프팅', '프롬프트 엔지니어링', 'AI 행동', '역할 기반 프롬프팅', 'PromptQuorum'],
-      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      inLanguage: 'ko',
       'proficiencyLevel': 'Intermediate',
       about: [
         { '@type': 'Thing', name: '프롬프트 엔지니어링' },
@@ -2218,6 +2640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       numberOfItems: 5,
+      inLanguage: 'ko',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -2508,12 +2931,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: '관련 기사',
         items:  [
-          'AI를 위한 명확한 프롬프트 작성 방법 — 페르소나로 발전하기 전에 기초를 마스터하십시오.',
+          '[프롬프트 엔지니어링이란? — PromptQuorum 가이드](/ko/prompt-engineering/what-is-prompt-engineering) — 페르소나로 발전하기 전에 기초를 마스터하십시오.',
           '[네거티브 프롬프팅: AI에게 하지 말아야 할 것을 알려주십시오](/ko/prompt-engineering/negative-prompting) — 더 나은 제어를 위해 페르소나와 명시적 제약 조건을 결합하십시오.',
           '[프롬프트 프레임워크: 사고 연쇄와 그 이상](/ko/prompt-engineering/chain-of-thought-prompting) — 페르소나와 함께 작동하는 구조화된 추론 기법을 학습하십시오.',
           '[시스템 프롬프트: AI 행동의 기초](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 페르소나가 더 넓은 시스템 아키텍처에 어떻게 맞는지 이해하십시오.',
           '[파인튜닝 대 프롬프트 엔지니어링: 각각 언제 사용할지](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning) — 페르소나 또는 파인튜닝이 사용 사례에 적합한지 결정하십시오.',
-          '공급업체 간 AI 모델 테스트 — 페르소나 성능을 체계적으로 비교하는 방법을 학습하십시오.',
+          '[여러 모델에서 프롬프트 테스트하는 방법: 멀티 모델 평가](/ko/prompt-engineering/how-to-test-prompts-across-models) — 페르소나 성능을 체계적으로 비교하는 방법을 학습하십시오.',
           '[AI로 가르치기: 교육자를 위한 프롬프트 전략](/ko/prompt-engineering/teaching-with-ai)',
           '[AI로 브랜드 보이스 구현하기: 프롬프트 가이드](/ko/prompt-engineering/your-brand-voice-ai)',
           '[스마트 홈을 위한 로컬 음성 어시스턴트 구축](/ko/smart-home/local-voice-assistant-smart-home) — 페르소나 프롬프팅을 적용하여 오프라인 음성 어시스턴트에 정의된 개성, 어조 및 행동 한계 부여',
