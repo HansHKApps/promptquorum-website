@@ -71,6 +71,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: 'Why Support Prompts Need Extra Constraints',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Support prompts answer customers directly, so they need explicit limits on scope, tone and escalation — an invented policy or a confident wrong refund rule reaches a real person immediately.' },
+          { type: 'in-plain-terms', text: 'Everywhere else, a bad answer wastes your time. In support it reaches a customer. That is why the prompt has to say what the agent must not promise and when to hand over to a human, not just how to sound friendly.' },
+        ],
         content: [
           '**Support prompts require more constraints than most prompt types because the cost of failure is not limited to a suboptimal output — it extends to policy violations, legal liability, and customer relationship damage.** Three reasons support prompts demand a different design approach:',
         ],
@@ -262,6 +266,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: 'Warum Support-Prompts extra Einschränkungen brauchen',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Support-Prompts antworten Kundinnen und Kunden direkt und brauchen daher ausdrückliche Grenzen für Umfang, Tonfall und Eskalation — eine erfundene Richtlinie oder eine selbstbewusst falsche Erstattungsregel erreicht sofort einen echten Menschen.' },
+          { type: 'in-plain-terms', text: 'Überall sonst kostet eine schlechte Antwort nur Ihre Zeit. Im Support erreicht sie eine Kundin. Deshalb muss der Prompt festlegen, was nicht versprochen werden darf und wann an einen Menschen übergeben wird — nicht nur, wie freundlich es klingen soll.' },
+        ],
         content: [
           '**Support-Prompts erfordern mehr Einschränkungen als die meisten anderen Prompt-Typen, weil die Fehlerkosten nicht auf eine suboptimale Ausgabe beschränkt sind — sie erstrecken sich auf Richtlinienverletzungen, rechtliche Haftung und Schäden an Kundenbeziehungen.** Drei Gründe für einen anderen Design-Ansatz:',
         ],
@@ -431,6 +439,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: 'Por qué los prompts de soporte necesitan restricciones adicionales',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Los prompts de soporte responden directamente a clientes, así que necesitan límites explícitos de alcance, tono y escalado: una política inventada o una regla de reembolso equivocada llega de inmediato a una persona real.' },
+          { type: 'in-plain-terms', text: 'En cualquier otro sitio, una mala respuesta te hace perder el tiempo. En soporte llega a un cliente. Por eso el prompt debe decir qué no se puede prometer y cuándo pasar a un humano, no solo cómo sonar amable.' },
+        ],
         content: [
           '**Los prompts de soporte requieren más restricciones que la mayoría de los tipos de prompts porque el coste del fallo no se limita a una salida subóptima — se extiende a violaciones de políticas, responsabilidad legal y daño a las relaciones con los clientes.** Tres razones por las que los prompts de soporte exigen un enfoque de diseño diferente:',
         ],
@@ -601,6 +613,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: 'Por que os prompts de suporte precisam de restrições adicionais',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Prompts de suporte respondem diretamente a clientes, então precisam de limites explícitos de escopo, tom e escalonamento: uma política inventada ou uma regra de reembolso errada chega na hora a uma pessoa real.' },
+          { type: 'in-plain-terms', text: 'Em qualquer outro lugar, uma resposta ruim custa o seu tempo. No suporte, ela chega ao cliente. Por isso o prompt precisa dizer o que não pode ser prometido e quando passar para um humano, não apenas como soar simpático.' },
+        ],
         content: [
           '**Os prompts de suporte requerem mais restrições do que a maioria dos tipos de prompts porque o custo da falha não se limita a uma saída subótima — se estende a violações de políticas, responsabilidade legal e danos aos relacionamentos com clientes.** Três razões pelas quais os prompts de suporte exigem uma abordagem de design diferente:',
         ],
@@ -772,6 +788,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: "Pourquoi les prompts support nécessitent des contraintes supplémentaires",
+        snippets: [
+          { type: 'in-one-sentence', text: 'Les prompts support répondent directement aux clients : ils exigent donc des limites explicites de périmètre, de ton et d\'escalade, car une politique inventée ou une règle de remboursement erronée atteint aussitôt une vraie personne.' },
+          { type: 'in-plain-terms', text: 'Ailleurs, une mauvaise réponse vous fait perdre du temps. Au support, elle atteint un client. D\'où la nécessité de préciser dans le prompt ce qui ne doit pas être promis et quand passer la main à un humain, pas seulement comment rester aimable.' },
+        ],
         content: [
           "**Les prompts support nécessitent plus de contraintes que la plupart des types de prompts car le coût de l'échec ne se limite pas à une sortie sous-optimale — il s'étend aux violations de politique, à la responsabilité légale et aux dommages aux relations clients.** Trois raisons pour lesquelles les prompts support exigent une approche de conception différente :",
         ],
@@ -938,6 +958,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: 'サポートプロンプトに追加制約が必要な理由',
+        snippets: [
+          { type: 'in-one-sentence', text: 'サポート用プロンプトは顧客に直接応答するため、対応範囲・口調・エスカレーションについて明示的な制限が必要です。存在しない規定や自信ありげな誤った返金ルールは、そのまま実在の人物に届きます。' },
+          { type: 'in-plain-terms', text: '他の場面なら、悪い回答が奪うのは自分の時間だけです。サポートでは顧客に届きます。だからこそプロンプトには、何を約束してはならないか、どの時点で人間に引き継ぐかを書く必要があります。丁寧な口調の指定だけでは足りません。' },
+        ],
         content: [
           '**サポートプロンプトは、失敗のコストが準最適な出力にとどまらず、ポリシー違反、法的責任、顧客関係へのダメージにまで及ぶため、ほとんどのプロンプトタイプより多くの制約が必要です。** 3つの理由：',
         ],
@@ -1125,6 +1149,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: '为什么支持提示词需要额外约束',
+        snippets: [
+          { type: 'in-one-sentence', text: '客服提示词直接面向客户作答，因此必须对处理范围、语气和转人工设定明确边界——一条凭空编出的政策或说得笃定却错误的退款规则，会立刻送到真实的人面前。' },
+          { type: 'in-plain-terms', text: '在别的场景，回答错了只是浪费你自己的时间；在客服场景，它直接送到客户手上。所以提示词必须写清楚哪些承诺不能给、什么时候转交人工，而不只是要求语气亲切。' },
+        ],
         content: [
           '**支持提示词需要比大多数提示词类型更多的约束，因为失败的代价不仅限于次优输出——还延伸到策略违规、法律责任和客户关系损害。** 三个支持提示词需要不同设计方法的原因：',
         ],
@@ -1272,6 +1300,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: 'لماذا تحتاج برومبتات الدعم إلى قيود إضافية',
+        snippets: [
+          { type: 'in-one-sentence', text: 'برومبتات الدعم تجيب العملاء مباشرة، ولذلك تحتاج حدوداً صريحة للنطاق والنبرة والتصعيد؛ فسياسة مختلَقة أو قاعدة استرداد خاطئة تُقال بثقة تصل فوراً إلى شخص حقيقي.' },
+          { type: 'in-plain-terms', text: 'في أي سياق آخر، تكلّفك الإجابة السيئة وقتك أنت. أما في الدعم فتصل إلى عميل. لذلك يجب أن ينص البرومبت على ما لا يجوز الوعد به ومتى يُحال الأمر إلى موظف بشري، لا على نبرة الود فحسب.' },
+        ],
         content: [
           '**تتطلب برومبتات الدعم قيوداً أكثر من معظم أنواع البرومبتات لأن تكلفة الفشل لا تقتصر على مخرج دون المستوى الأمثل — بل تمتد إلى انتهاكات السياسات والمسؤولية القانونية والضرر بعلاقات العملاء.** ثلاثة أسباب تجعل برومبتات الدعم تستدعي نهج تصميم مختلفاً:',
         ],
@@ -1461,6 +1493,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       support_constraints: {
         id: 'support-constraints',
         title: '지원 프롬프트에 추가 제약이 필요한 이유',
+        snippets: [
+          { type: 'in-one-sentence', text: '고객 지원 프롬프트는 고객에게 직접 답변하므로 범위와 어조, 상담원 전환에 대한 명시적 제약이 필요합니다. 지어낸 정책이나 확신에 찬 잘못된 환불 규정은 곧바로 실제 사람에게 전달됩니다.' },
+          { type: 'in-plain-terms', text: '다른 곳에서는 잘못된 답변이 내 시간을 낭비할 뿐입니다. 지원 업무에서는 그 답이 고객에게 도착합니다. 그래서 프롬프트에는 무엇을 약속해서는 안 되는지, 언제 사람에게 넘겨야 하는지를 적어야 합니다. 친절한 어조 지정만으로는 부족합니다.' },
+        ],
         content: [
           '**지원 프롬프트는 실패의 대가가 차선적인 출력에 그치지 않고 정책 위반, 법적 책임, 고객 관계 손상으로 이어지기 때문에 대부분의 프롬프트 유형보다 더 많은 제약이 필요합니다.** 지원 프롬프트가 다른 설계 접근 방식을 요구하는 세 가지 이유:',
         ],
