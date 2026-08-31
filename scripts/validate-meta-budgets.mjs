@@ -96,9 +96,14 @@ function splitLangBlocks(content) {
  * an escaped \' is one character to a reader, and \uXXXX escapes are one glyph.
  */
 function readField(blockText, key) {
-  const re = new RegExp(`(?<![A-Za-z0-9_])${key}:\\s*'`);
+  // Values may be single-quoted, double-quoted or backticked. French blocks in
+  // particular use double quotes so the text can contain an apostrophe
+  // ("L'énergie solaire..."), and reading only single quotes silently skipped
+  // 82 fields, 69 of them French.
+  const re = new RegExp(`(?<![A-Za-z0-9_])${key}:\\s*(['"\`])`);
   const m = re.exec(blockText);
   if (!m) return null;
+  const quote = m[1];
   let i = m.index + m[0].length;
   let out = '';
   while (i < blockText.length) {
@@ -109,7 +114,7 @@ function readField(blockText, key) {
       }
       out += blockText[i + 1]; i += 2; continue;
     }
-    if (c === "'") return out;
+    if (c === quote) return out;
     out += c; i += 1;
   }
   return null;
