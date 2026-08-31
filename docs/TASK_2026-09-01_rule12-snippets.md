@@ -117,3 +117,17 @@ tree-of-thought-react.ts             en=17  starved: zh=17
 Verify each case at source before authoring — `python3 parity.py <file>` lists per-locale section keys. Note that several PE pages are client-rendered, so `curl | grep "<h2"` returns 0 even for healthy pages; do not use that as the check. Compare source section counts, or render against a local production build.
 
 This is an "author the missing language" job (PAGE_UPDATER Step 5.5 / geo-translation Step 5.5), not a mechanical fix. Scope it before starting: `braintrust-vs-prompthub-vs-vellum` and `ape-framework` each need four full locale bodies.
+
+---
+
+## ALSO FOUND — EN framework pages render from a different source
+
+The six framework articles (`rtf`, `co-star`, `craft`, `specs`, `trace`, `ape`, plus `google-prompt` and `single-prompt-line`) serve their **EN canonical URL from `src/lib/frameworksData.ts` via `src/app/frameworks/[slug]/page.tsx`** — not from the prompt-engineering article files.
+
+`/prompt-engineering/co-star-framework` 308-redirects to `/frameworks/co-star`. The non-EN locales (`/de/prompt-engineering/co-star-framework` etc.) still render from the PE article file.
+
+Consequence: snippet blocks added to the `en:` block of a framework article file are **not rendered on the EN page**. Confirmed — `/frameworks/co-star` shows zero snippet callouts while `/de/prompt-engineering/co-star-framework` shows both.
+
+`frameworksData.ts` contains **0 snippets**, and `src/app/frameworks/[slug]/page.tsx` has no snippet rendering at all. So giving EN framework pages Rule 12 blocks is a **renderer change plus a content change in a second data source**, not a copy-paste of what was done for the other articles. Scope it separately.
+
+Note `frameworksData.ts` has previously held uncommitted work from other sessions (a CRAFT rewrite) — check `git status` and `git branch -a` before editing it.
