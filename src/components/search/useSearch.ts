@@ -3,7 +3,7 @@
 import { useCallback, useRef, useState } from 'react'
 import type Fuse from 'fuse.js'
 import type { SearchEntry } from './search-utils'
-import { normalizeUnits } from './search-utils'
+import { effectiveScore, normalizeUnits } from './search-utils'
 
 type FuseResult = import('fuse.js').FuseResult<SearchEntry>
 
@@ -164,7 +164,7 @@ export function useSearch(lang: string) {
     return cache.get(lang)!
   }, [allEntries, lang])
 
-  const dedupeSlice = (results: FuseResult[]): FuseResult[] => {
+  const dedupeSlice = (results: FuseResult[], query: string): FuseResult[] => {
     // Index is already locale-scoped, so each articleKey appears once per query;
     // when merging a query with its synonym expansions the same article can recur,
     // so keep the best (lowest) score per key, then sort and cap.
@@ -174,8 +174,13 @@ export function useSearch(lang: string) {
       const prev = seen.get(key)
       if (!prev || (result.score ?? Infinity) < (prev.score ?? Infinity)) seen.set(key, result)
     }
+    // Rank by effectiveScore (which boosts an exact title match) BEFORE the cap,
+    // not after. Sorting on the raw Fuse score first let description-only matches
+    // occupy the 20 slots and pushed genuine title matches out entirely — for
+    // "prompt engineering" and "llama", 3 title matches were cut that way. The
+    // modal re-applies the same ordering, so this only changes WHICH 20 survive.
     return Array.from(seen.values())
-      .sort((a, b) => (a.score ?? Infinity) - (b.score ?? Infinity))
+      .sort((a, b) => effectiveScore(a, query) - effectiveScore(b, query))
       .slice(0, 20)
   }
 
@@ -251,7 +256,7 @@ export function useSearch(lang: string) {
       // term (e.g. "carte graphique" → also search "gpu"), then merge.
       const queries = [q, ...synonymExpansions(norm(q))]
       const merged = queries.flatMap((sq) => runOne(sq, data))
-      return dedupeSlice(merged)
+      return dedupeSlice(merged, q)
     },
     [getLocaleData, runOne],
   )
