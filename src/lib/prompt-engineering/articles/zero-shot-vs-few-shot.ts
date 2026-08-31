@@ -34,6 +34,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsZeroShot: {
           title: 'What Zero Shot Prompting Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Zero-shot prompting asks the model to perform a task from the instruction alone, with no worked examples, relying entirely on what it learned during training.' },
+            { type: 'in-plain-terms', text: 'You just ask. No demonstrations, no samples — like handing a task to a capable new colleague and trusting they have done something similar before. It is fast and cheap, and it works until the task has a format or edge case they cannot guess.' },
+          ],
           content: [
             '**Zero shot prompting asks the model to solve a task using only a clear instruction and no in-prompt examples.** The model leans on its general knowledge and instruction-following capabilities learned during pre-training and alignment.',
             'Zero shot is fast to set up because you do not need to design or curate example pairs. It works well for broad tasks such as generic Q&A, simple classification, summarization, or straightforward translation where the instructions alone are usually enough.',
@@ -157,6 +161,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsZeroShot: {
       title: 'Was Zero-Shot Prompting ist',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Zero-Shot Prompting fordert das Modell auf, eine Aufgabe allein aus der Anweisung zu lösen, ohne durchgearbeitete Beispiele, und stützt sich dabei vollständig auf das im Training Gelernte.' },
+        { type: 'in-plain-terms', text: 'Sie fragen einfach. Keine Demonstrationen, keine Muster — so, als gäben Sie einer fähigen neuen Kollegin eine Aufgabe und vertrauten darauf, dass sie Ähnliches schon gemacht hat. Das ist schnell und günstig und funktioniert, bis ein Format oder ein Sonderfall auftaucht, den sie nicht erraten kann.' },
+      ],
       content: [
         '**Zero-Shot Prompting beauftragt das Modell, eine Aufgabe nur mit einer klaren Anweisung und ohne Beispiele zu lösen.** Das Modell verlässt sich auf sein Allgemeinwissen und seine Fähigkeiten zur Befolgung von Anweisungen, die während des Vortrainings und der Ausrichtung erlernt wurden.',
         'Zero-Shot ist schnell zu implementieren, da Sie keine Beispielpaare entwerfen oder kuratieren müssen. Es funktioniert gut für breite Aufgaben wie allgemeine Fragen und Antworten, einfache Klassifizierung, Zusammenfassung oder unkomplizierte Übersetzung, wobei die Anweisungen allein normalerweise ausreichen.',
@@ -300,6 +308,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsZeroShot: {
       title: 'Qué es el Zero-Shot Prompting',
+      snippets: [
+        { type: 'in-one-sentence', text: 'El zero-shot prompting pide al modelo que resuelva una tarea solo a partir de la instrucción, sin ejemplos resueltos, apoyándose por completo en lo aprendido durante el entrenamiento.' },
+        { type: 'in-plain-terms', text: 'Simplemente preguntas. Sin demostraciones ni muestras, como darle una tarea a un compañero nuevo y capaz confiando en que ya ha hecho algo parecido. Es rápido y barato, y funciona hasta que aparece un formato o un caso límite que no puede adivinar.' },
+      ],
       content: [
         '**El Zero-Shot Prompting le pide al modelo que resuelva una tarea usando solo una instrucción clara y sin ejemplos en el prompt.** El modelo se apoya en su conocimiento general y en sus capacidades de seguimiento de instrucciones aprendidas durante el preentrenamiento y la alineación.',
         'El Zero-Shot es rápido de implementar porque no necesitas diseñar ni seleccionar pares de ejemplos. Funciona bien para tareas amplias como preguntas y respuestas generales, clasificación simple, resumen o traducción directa, donde las instrucciones por sí solas suelen ser suficientes.',
@@ -424,6 +436,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsZeroShot: {
       title: 'ما هي الطلبات Zero-Shot؟',
+      snippets: [
+        { type: 'in-one-sentence', text: 'يطلب أسلوب zero-shot من النموذج إنجاز المهمة انطلاقاً من التعليمة وحدها، دون أمثلة محلولة، معتمداً كلياً على ما تعلّمه أثناء التدريب.' },
+        { type: 'in-plain-terms', text: 'أنت تسأل فحسب. لا عروض توضيحية ولا عيّنات، تماماً كأن تُسند مهمة إلى زميل جديد كفء وتثق بأنه أنجز شيئاً مشابهاً من قبل. أسلوب سريع وزهيد، ويظل ناجحاً إلى أن تظهر صيغة أو حالة طرفية لا يمكنه تخمينها.' },
+      ],
       content: [
         '**تطلب الطلبات Zero-Shot من النموذج حل مهمة باستخدام تعليمات واضحة فقط دون أي أمثلة في الطلب.** يعتمد النموذج على معرفته العامة وقدرات اتباع التعليمات المكتسبة خلال مرحلتَي التدريب المسبق والمحاذاة.',
         'يسهل إعداد Zero-Shot لأنك لا تحتاج إلى تصميم أزواج أمثلة أو تنظيمها. يعمل بشكل جيد في المهام العامة كالأسئلة والأجوبة العامة والتصنيف البسيط والتلخيص والترجمة المباشرة، حيث تكفي التعليمات وحدها في الغالب.',
@@ -548,6 +564,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsZeroShot: {
       title: 'O que é Zero-Shot Prompting',
+      snippets: [
+        { type: 'in-one-sentence', text: 'O zero-shot prompting pede que o modelo execute uma tarefa apenas a partir da instrução, sem exemplos resolvidos, apoiando-se inteiramente no que aprendeu durante o treinamento.' },
+        { type: 'in-plain-terms', text: 'Você simplesmente pergunta. Sem demonstrações nem amostras, como passar uma tarefa para um colega novo e competente confiando que ele já fez algo parecido. É rápido e barato, e funciona até aparecer um formato ou um caso limite que ele não consegue adivinhar.' },
+      ],
       content: [
         '**O Zero-Shot Prompting pede ao modelo que resolva uma tarefa usando apenas uma instrução clara e sem exemplos no prompt.** O modelo se apoia em seu conhecimento geral e nas capacidades de seguimento de instruções aprendidas durante o pré-treinamento e o alinhamento.',
         'Zero-Shot é rápido de configurar porque você não precisa projetar ou curar pares de exemplos. Funciona bem para tarefas amplas como P&R genérica, classificação simples, sumarização ou tradução direta, onde as instruções sozinhas geralmente são suficientes.',
@@ -669,6 +689,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsZeroShot: {
       title: 'Qu\'est-ce que le Zero-Shot Prompting',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Le zero-shot prompting demande au modèle d\'exécuter une tâche à partir de la seule consigne, sans exemple résolu, en s\'appuyant entièrement sur ce qu\'il a appris à l\'entraînement.' },
+        { type: 'in-plain-terms', text: 'Vous posez simplement la question. Aucune démonstration, aucun échantillon : comme confier une tâche à un nouveau collègue compétent en supposant qu\'il a déjà fait quelque chose de similaire. Rapide et économique, jusqu\'au format ou au cas limite qu\'il ne peut pas deviner.' },
+      ],
       content: [
         '**Le Zero-Shot Prompting demande au modèle de résoudre une tâche avec une instruction claire et aucun exemple.** Le modèle s\'appuie sur ses connaissances générales et ses capacités de suivi d\'instructions acquises lors de la pré-formation et de l\'alignement.',
         'Zero-Shot est rapide à mettre en place car vous n\'avez pas besoin de concevoir ou de curationner des paires d\'exemples. Il fonctionne bien pour les tâches générales comme les questions-réponses génériques, la classification simple, la résumé ou la traduction directe, où les instructions seules suffisent généralement.',
@@ -804,6 +828,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsZeroShot: {
       title: 'ゼロショットプロンプティングとは何か',
+      snippets: [
+        { type: 'in-one-sentence', text: 'ゼロショットプロンプティングとは、解答例を一切示さず指示だけでモデルにタスクを実行させる手法であり、学習時に獲得した知識だけに依拠します。' },
+        { type: 'in-plain-terms', text: 'ただ尋ねるだけです。実演もサンプルもなく、有能な新しい同僚に「似たことはやったことがあるはず」と信じて仕事を任せるのに近い方法です。速くて安価ですが、相手が推測できない形式や例外が出てきた時点で通用しなくなります。' },
+      ],
       content: [
         '**ゼロショットプロンプティングは、プロンプト内の例を使わず、明確な指示だけでモデルにタスクを解かせる手法です。** モデルは、事前学習とアラインメント中に学習した一般的な知識と指示実行能力に依存します。',
         'ゼロショットは設定が迅速です。例のペアを設計・厳選する必要がないため、汎用的なタスク（一般的なQ&A、簡単な分類、要約、素直な翻訳など）で指示だけで十分な場合に適しています。',
@@ -961,6 +989,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsZeroShot: {
       title: '什么是零样本提示',
+      snippets: [
+        { type: 'in-one-sentence', text: '零样本提示只凭指令让模型完成任务，不提供任何示例，完全依赖模型在训练阶段习得的知识。' },
+        { type: 'in-plain-terms', text: '你直接问就行。没有演示，也没有样例——就像把任务交给一位能干的新同事，相信他以前做过类似的事。这种方式又快又省，直到出现他猜不到的格式或边缘情况为止。' },
+      ],
       content: [
         '**零样本提示要求模型仅使用清晰的指令完成任务，不需要提示中的示例。** 模型依赖于在预训练和对齐过程中学习的一般知识和遵循指令的能力。',
         '零样本快速易用，因为您不需要设计或精选示例对。对于广泛的任务（如通用问答、简单分类、摘要或直接翻译），仅凭指令通常足以实现良好结果。',
@@ -1097,6 +1129,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsZeroShot: {
           title: 'Zero-Shot 프롬프팅이란 무엇입니까',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Zero-Shot 프롬프팅은 풀이 예시 없이 지시문만으로 모델에게 작업을 수행하게 하는 방식이며, 학습 과정에서 습득한 지식에만 의존합니다.' },
+            { type: 'in-plain-terms', text: '그냥 물어보는 방식입니다. 시연도 샘플도 없이, 유능한 신입 동료에게 비슷한 일을 해 봤으리라 믿고 업무를 맡기는 것과 같습니다. 빠르고 저렴하지만, 상대가 짐작할 수 없는 형식이나 예외가 등장하는 순간 한계에 부딪힙니다.' },
+          ],
           content: [
             '**Zero-shot 프롬프팅은 프롬프트 내 예시 없이 명확한 지시문만으로 모델이 작업을 수행하도록 요청하는 방식입니다.** 모델은 사전 학습과 정렬(alignment) 과정에서 습득한 일반 지식 및 지시 수행 능력에 의존합니다.',
             'Zero-shot은 예시 쌍을 설계하거나 선별할 필요가 없으므로 설정이 빠릅니다. 일반 Q&A, 단순 분류, 요약, 또는 지시문만으로도 충분한 간단한 번역과 같이 범용적인 작업에 적합합니다.',
