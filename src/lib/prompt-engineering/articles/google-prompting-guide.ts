@@ -93,6 +93,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsGoogle: {
         id: 'what-is-google',
         title: 'What Is Google\'s Prompting Guide?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Google\'s prompting guide is the company\'s own published guidance for writing prompts for Gemini, organised around stating a persona, a task, the context and the desired format.' },
+          { type: 'in-plain-terms', text: 'It is the manufacturer\'s manual. Google trained the model, so its advice tells you what Gemini was actually tuned to respond to — useful precisely because it is not a third party guessing from the outside.' },
+        ],
         content: [
           '**Google\'s Prompting Guide is a collection of patterns and best practices for prompting Gemini and other large language models, focused on specificity, structure, and safety rather than clever phrasing.** The guide translates research from Google DeepMind into concrete rules that non-experts can follow. It covers how to define roles, provide context, constrain outputs, and handle tasks such as reasoning, coding, and data extraction.',
           'In practice, the guide functions like a catalog of prompt recipes. Each recipe shows how to phrase instructions, what to avoid, and how to add examples so that the model\'s behavior becomes more predictable. These patterns work not only for Gemini 3.1 Pro but also for models such as [GPT-5.6](https://openai.com), Claude Opus 5, and local models like [Ollama](https://ollama.com), because the underlying principles are general.',
@@ -358,6 +362,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsGoogle: {
         id: 'what-is-google',
         title: 'Was ist der Google Prompting Guide?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Der Google Prompting Guide ist die von Google selbst veröffentlichte Anleitung zum Schreiben von Prompts für Gemini, aufgebaut um Persona, Aufgabe, Kontext und gewünschtes Format.' },
+          { type: 'in-plain-terms', text: 'Es ist das Handbuch des Herstellers. Google hat das Modell trainiert, also sagt Ihnen diese Anleitung, worauf Gemini tatsächlich abgestimmt wurde — wertvoll gerade deshalb, weil hier niemand von außen rät.' },
+        ],
         content: [
           '**Der Google Prompting Guide ist eine Sammlung von Patterns und Best Practices für Prompting von Gemini und anderen großen Sprachmodellen, fokussiert auf Spezifität, Struktur und Sicherheit statt auf clevere Formulierung.** Der Guide übersetzt Forschung von Google DeepMind in konkrete Regeln, die Nicht-Experten folgen können. Er behandelt die Definition von Rollen, das Bereitstellen von Kontext, das Einschränken von Outputs und die Handhabung von Aufgaben wie Reasoning, Kodierung und Datenextraktion.',
           'In der Praxis funktioniert der Guide wie ein Katalog von Prompt-Rezepten. Jedes Rezept zeigt, wie man Anweisungen formuliert, was zu vermeiden ist und wie man Beispiele hinzufügt, damit das Modellverhalten vorhersagbar wird. Diese Patterns funktionieren nicht nur für Gemini 3,1 Pro, sondern auch für Modelle wie [GPT-5.6](https://openai.com), Claude Opus 5 und lokale Modelle wie [Ollama](https://ollama.com), weil die zugrundeliegenden Prinzipien allgemein sind.',
@@ -623,6 +631,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsGoogle: {
         id: 'what-is-google',
         title: 'Qu\'est-ce que le Guide Google pour la Rédaction de Prompts ?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Le guide de Google est la documentation publiée par Google pour rédiger des prompts destinés à Gemini, structurée autour d\'une persona, d\'une tâche, du contexte et du format attendu.' },
+          { type: 'in-plain-terms', text: 'C\'est le manuel du constructeur. Google a entraîné le modèle : ses conseils indiquent donc ce à quoi Gemini a réellement été réglé, ce qui vaut précisément parce qu\'il ne s\'agit pas d\'un tiers qui devine de l\'extérieur.' },
+        ],
         content: [
           '**Le Guide Google pour la Rédaction de Prompts est une collection de patterns et bonnes pratiques pour prompting de Gemini et autres grands modèles de langage, concentrée sur la spécificité, la structure et la sécurité plutôt que sur les formulations élégantes.** Le guide traduit la recherche de Google DeepMind en règles concrètes que les non-experts peuvent suivre. Il couvre comment définir les rôles, fournir du contexte, contraindre les sorties et traiter des tâches comme le raisonnement, le codage et l\'extraction de données.',
           'En pratique, le guide fonctionne comme un catalogue de recettes de prompts. Chaque recette montre comment formuler les instructions, ce qu\'il faut éviter et comment ajouter des exemples afin que le comportement du modèle devienne plus prévisible. Ces patterns ne fonctionnent pas seulement pour Gemini 3.1 Pro mais aussi pour des modèles comme [GPT-5.6](https://openai.com), Claude Opus 5 et des modèles locaux comme [Ollama](https://ollama.com), parce que les principes sous-jacents sont généraux.',
@@ -1124,6 +1136,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsGoogle: {
         id: 'what-is-google',
         title: '¿Qué es la Guía de Prompts de Google?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'La guía de prompts de Google es la documentación que la propia Google publica para escribir prompts destinados a Gemini, organizada en torno a persona, tarea, contexto y formato deseado.' },
+          { type: 'in-plain-terms', text: 'Es el manual del fabricante. Google entrenó el modelo, así que su consejo te dice a qué se ajustó realmente Gemini: vale justamente porque no es un tercero adivinando desde fuera.' },
+        ],
         content: [
           '**La Guía de Prompts de Google es una colección de patrones y mejores prácticas para hacer prompts a Gemini y otros modelos de lenguaje de gran escala, centrada en la especificidad, la estructura y la seguridad más que en la formulación ingeniosa.** La guía traduce la investigación de Google DeepMind en reglas concretas que los no expertos pueden seguir. Abarca cómo definir roles, proporcionar contexto, restringir salidas y manejar tareas como el razonamiento, la codificación y la extracción de datos.',
           'En la práctica, la guía funciona como un catálogo de recetas de prompts. Cada receta muestra cómo formular las instrucciones, qué evitar y cómo añadir ejemplos para que el comportamiento del modelo sea más predecible. Estos patrones funcionan no solo para Gemini 3.1 Pro, sino también para modelos como [GPT-5.6](https://openai.com), Claude Opus 5 y modelos locales como [Ollama](https://ollama.com), porque los principios subyacentes son generales.',
@@ -1394,6 +1410,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsGoogle: {
         id: 'what-is-google',
         title: 'O que é o Guia de Prompts do Google?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'O guia de prompts do Google é a documentação publicada pela própria Google para escrever prompts destinados ao Gemini, organizada em torno de persona, tarefa, contexto e formato desejado.' },
+          { type: 'in-plain-terms', text: 'É o manual do fabricante. A Google treinou o modelo, então a orientação dela diz a que o Gemini foi de fato ajustado — vale justamente por não ser um terceiro adivinhando de fora.' },
+        ],
         content: [
           '**O Guia de Prompts do Google é uma coleção de padrões e melhores práticas para criar prompts para o Gemini e outros modelos de linguagem de grande escala, com foco em especificidade, estrutura e segurança em vez de formulação engenhosa.** O guia traduz pesquisas do Google DeepMind em regras concretas que não especialistas podem seguir. Ele abrange como definir papéis, fornecer contexto, restringir saídas e lidar com tarefas como raciocínio, codificação e extração de dados.',
           'Na prática, o guia funciona como um catálogo de receitas de prompts. Cada receita mostra como formular as instruções, o que evitar e como adicionar exemplos para que o comportamento do modelo se torne mais previsível. Esses padrões funcionam não apenas para o Gemini 3.1 Pro, mas também para modelos como [GPT-5.6](https://openai.com), Claude Opus 5 e modelos locais como o [Ollama](https://ollama.com), porque os princípios subjacentes são gerais.',
@@ -1665,6 +1685,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsGoogle: {
         id: 'what-is-google',
         title: 'ما هو دليل Google للمطالبات؟',
+        snippets: [
+          { type: 'in-one-sentence', text: 'دليل Google للمطالبات هو الإرشادات التي تنشرها Google نفسها لكتابة برومبتات موجَّهة إلى Gemini، وهو منظَّم حول تحديد الشخصية والمهمة والسياق والصيغة المطلوبة.' },
+          { type: 'in-plain-terms', text: 'إنه دليل الشركة المصنِّعة. فـ Google هي من درّب النموذج، ولذلك تخبرك إرشاداتها بما ضُبط عليه Gemini فعلاً؛ وقيمتها نابعة تحديداً من أنها ليست تخميناً من طرف خارجي.' },
+        ],
         content: [
           '**دليل Google للمطالبات هو مجموعة من الأنماط وأفضل الممارسات لمطالبة Gemini وغيره من نماذج اللغة الكبيرة، مع التركيز على الخصوصية والبنية والسلامة أكثر من الصياغة الذكية.** يُترجم الدليل أبحاث Google DeepMind إلى قواعد ملموسة يمكن لغير المتخصصين اتباعها. يشمل كيفية تحديد الأدوار وتقديم السياق وتقييد المخرجات ومعالجة مهام كالتفكير والبرمجة واستخراج البيانات.',
           'في التطبيق العملي، يعمل الدليل كفهرس من وصفات المطالبات. تُوضح كل وصفة كيفية صياغة التعليمات، وما ينبغي تجنبه، وكيفية إضافة أمثلة لجعل سلوك النموذج أكثر توقعاً. تعمل هذه الأنماط ليس فقط مع Gemini 3.1 Pro، بل أيضاً مع نماذج مثل [GPT-5.6](https://openai.com) وClaude Opus 5 والنماذج المحلية مثل [Ollama](https://ollama.com)، لأن المبادئ الأساسية عامة.',
@@ -1936,6 +1960,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsGoogle: {
         id: 'what-is-google',
         title: 'Google 프롬프팅 가이드란 무엇입니까?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Google 프롬프팅 가이드는 Gemini용 프롬프트 작성을 위해 Google이 직접 공개한 지침이며, 페르소나와 과업, 맥락, 원하는 형식을 명시하는 구조로 구성되어 있습니다.' },
+          { type: 'in-plain-terms', text: '제조사가 낸 설명서입니다. 모델을 훈련한 주체가 Google이므로, 이 지침은 Gemini가 실제로 무엇에 맞춰 조정되었는지 알려 줍니다. 외부에서 추측한 자료가 아니라는 점이 바로 이 가이드의 가치입니다.' },
+        ],
         content: [
           '**Google 프롬프팅 가이드는 영리한 표현보다 구체성, 구조, 안전을 중심으로 Gemini 및 기타 대규모 언어 모델을 프롬프팅하기 위한 패턴과 모범 사례 모음입니다.** 이 가이드는 Google DeepMind의 연구를 비전문가도 따를 수 있는 구체적인 규칙으로 변환합니다. 역할 정의, 컨텍스트 제공, 출력 제약, 추론·코딩·데이터 추출 같은 태스크 처리 방법을 다룹니다.',
           '실무에서 이 가이드는 프롬프트 레시피 카탈로그처럼 기능합니다. 각 레시피는 지침을 어떻게 표현하는지, 무엇을 피해야 하는지, 모델 동작이 더 예측 가능해지도록 예시를 어떻게 추가하는지를 보여 줍니다. 이러한 패턴은 Gemini 3.1 Pro뿐 아니라 [GPT-5.6](https://openai.com), Claude Opus 5, [Ollama](https://ollama.com) 같은 로컬 모델에도 작동합니다. 기저 원칙이 보편적이기 때문입니다.',

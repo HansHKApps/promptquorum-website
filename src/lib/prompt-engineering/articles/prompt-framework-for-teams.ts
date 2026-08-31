@@ -91,6 +91,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: 'Should Your Team Use a Framework at All?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'A prompt framework is worth adopting once several people write prompts for the same product, because its value is shared vocabulary and reviewability rather than better output from any single prompt.' },
+          { type: 'in-plain-terms', text: 'One person does not need a framework; they need a good prompt. The moment a second and third person start writing prompts for the same product, you need a shared shape — otherwise every prompt is someone\'s personal style and nobody can review anyone else\'s.' },
+        ],
         content: [
           '**Teams with 1–2 people writing simple prompts for a single use case can skip a formal framework — the overhead is not justified.** Teams with 3 or more people, multiple use cases, or inconsistent output quality should standardize on one framework before adding more people.',
           'The cost of not using a framework scales with team size. Two people can align on prompt style informally. At five people, output inconsistency increases to the point where reviews become contentious and model comparison tests become hard to interpret because prompts vary too much.',
@@ -270,6 +274,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: 'Braucht Ihr Team überhaupt ein Framework?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Ein Prompt-Framework lohnt sich, sobald mehrere Personen Prompts für dasselbe Produkt schreiben, denn sein Nutzen liegt in gemeinsamem Vokabular und Überprüfbarkeit, nicht in besserer Ausgabe eines einzelnen Prompts.' },
+          { type: 'in-plain-terms', text: 'Eine einzelne Person braucht kein Framework, sondern einen guten Prompt. Sobald eine zweite und dritte Person Prompts für dasselbe Produkt schreiben, brauchen Sie eine gemeinsame Form — sonst ist jeder Prompt der persönliche Stil einer Person und niemand kann den der anderen prüfen.' },
+        ],
         content: [
           '**Teams mit 1–2 Personen, die einfache Prompts für einen einzelnen Anwendungsfall schreiben, können auf ein formales Framework verzichten — der Aufwand ist nicht gerechtfertigt.** Teams mit 3 oder mehr Personen, mehreren Anwendungsfällen oder inkonsistenter Ausgabequalität sollten sich auf ein Framework standardisieren, bevor weitere Personen hinzukommen.',
           'Die Kosten des Fehlens eines Frameworks skalieren mit der Teamgröße. Zwei Personen können sich informell auf einen Prompt-Stil einigen. Bei fünf Personen nimmt die Ausgabeinkonsistenz so weit zu, dass Reviews kontrovers werden und Modellvergleichstests schwer zu interpretieren sind.',
@@ -447,6 +455,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: '¿Tu equipo necesita un framework?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Un framework de prompts merece la pena en cuanto varias personas escriben prompts para el mismo producto, porque su valor está en el vocabulario compartido y la revisabilidad, no en mejorar la salida de un prompt aislado.' },
+          { type: 'in-plain-terms', text: 'Una sola persona no necesita un framework, necesita un buen prompt. En cuanto una segunda y una tercera empiezan a escribir prompts para el mismo producto, hace falta una forma común: si no, cada prompt es el estilo personal de alguien y nadie puede revisar el de los demás.' },
+        ],
         content: [
           '**Los equipos de 1–2 personas que escriben prompts simples para un único caso de uso pueden prescindir de un framework formal — la sobrecarga no está justificada.** Los equipos con 3 o más personas, múltiples casos de uso o calidad de salida inconsistente deberían estandarizar en un framework antes de añadir más personas.',
           'El coste de no usar un framework escala con el tamaño del equipo. Dos personas pueden alinearse informalmente en el estilo del prompt. A cinco personas, la inconsistencia de la salida aumenta hasta el punto en que las revisiones se vuelven contenciosas.',
@@ -465,7 +477,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { Framework: 'CRAFT', 'Ideal para': 'Contenido, marketing, escritura creativa, voz de marca', 'Evitar cuando': 'Salida técnica o estructurada donde el rol y el formato son menos relevantes', 'Tiempo de incorporación': '1 hora' },
           { Framework: 'RISEN', 'Ideal para': 'Escritura instructional, material de formación, explicaciones educativas', 'Evitar cuando': 'Tareas creativas abiertas sin pasos o metas definidos', 'Tiempo de incorporación': '1.5 horas' },
           { Framework: 'RTF', 'Ideal para': 'Documentación técnica, extracción de datos estructurados, referencias de API', 'Evitar cuando': 'Escritura narrativa, creativa o persuasiva donde el formato es menos importante', 'Tiempo de incorporación': '1 hora' },
-          { Framework: 'Personalizado', 'Ideal para': 'Flujos de trabajo específicos de dominio con 3+ componentes únicos que ningún framework estándar cubre', 'Evitar cuando': 'Un framework existente se adapta con ajustes menores — el personalizado añade coste de construcción y mantenimiento', 'Tiempo de incorporación': '4–8 horas para construir' },
+          { Framework: 'Personalizado', 'Ideal para': 'Flujos de trabajo específicos de dominio con 3+ componentes únicos que ningún framework estándar cubre', 'Evitar cuando': 'Un framework existente sirve con ajustes menores — el propio añade coste de construcción y mantenimiento', 'Tiempo de incorporación': '4–8 horas para construir' },
         ],
       },
       costar: {
@@ -632,6 +644,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: 'Sua equipe precisa de um framework?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Um framework de prompts vale a pena assim que várias pessoas escrevem prompts para o mesmo produto, porque o valor dele está no vocabulário compartilhado e na revisabilidade, não em melhorar a saída de um prompt isolado.' },
+          { type: 'in-plain-terms', text: 'Uma pessoa sozinha não precisa de framework, precisa de um bom prompt. No momento em que uma segunda e uma terceira começam a escrever prompts para o mesmo produto, você precisa de um formato comum — senão cada prompt vira o estilo pessoal de alguém e ninguém consegue revisar o do outro.' },
+        ],
         content: [
           '**Equipes de 1–2 pessoas que escrevem prompts simples para um único caso de uso podem dispensar um framework formal — a sobrecarga não é justificada.** Equipes com 3 ou mais pessoas, múltiplos casos de uso ou qualidade de saída inconsistente devem se padronizar em um framework antes de adicionar mais pessoas.',
           'O custo de não usar um framework escala com o tamanho da equipe. Duas pessoas podem se alinhar informalmente no estilo do prompt. Com cinco pessoas, a inconsistência da saída aumenta a ponto de as revisões se tornarem conflituosas.',
@@ -650,7 +666,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { Framework: 'CRAFT', 'Ideal para': 'Conteúdo, marketing, escrita criativa, voz de marca', 'Evitar quando': 'Saída técnica ou estruturada onde papel e formato são menos relevantes', 'Tempo de integração': '1 hora' },
           { Framework: 'RISEN', 'Ideal para': 'Escrita instrucional, material de formação, explicações educacionais', 'Evitar quando': 'Tarefas criativas abertas sem etapas ou metas definidas', 'Tempo de integração': '1,5 horas' },
           { Framework: 'RTF', 'Ideal para': 'Documentação técnica, extração de dados estruturados, referências de API', 'Evitar quando': 'Escrita narrativa, criativa ou persuasiva onde o formato é menos importante', 'Tempo de integração': '1 hora' },
-          { Framework: 'Personalizado', 'Ideal para': 'Fluxos de trabalho específicos de domínio com 3+ componentes únicos que nenhum framework padrão cobre', 'Evitar quando': 'Um framework existente se encaixa com ajustes menores — o personalizado adiciona custo de construção e manutenção', 'Tempo de integração': '4–8 horas para construir' },
+          { Framework: 'Personalizado', 'Ideal para': 'Fluxos de trabalho específicos de domínio com 3+ componentes únicos que nenhum framework padrão cobre', 'Evitar quando': 'Um framework existente serve com ajustes menores — o próprio adiciona custo de construção e manutenção', 'Tempo de integração': '4–8 horas para construir' },
         ],
       },
       costar: {
@@ -817,6 +833,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: 'Votre équipe a-t-elle besoin d\'un framework ?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Un framework de prompts devient utile dès que plusieurs personnes en rédigent pour le même produit, car sa valeur tient au vocabulaire partagé et à la relecture, non à une meilleure sortie pour un prompt isolé.' },
+          { type: 'in-plain-terms', text: 'Une personne seule n\'a pas besoin d\'un framework, mais d\'un bon prompt. Dès qu\'une deuxième et une troisième écrivent pour le même produit, il faut une forme commune : sinon chaque prompt reflète le style de son auteur et personne ne peut relire celui des autres.' },
+        ],
         content: [
           '**Les équipes de 1 à 2 personnes écrivant des prompts simples pour un seul cas d\'usage peuvent se passer d\'un framework formel — la charge n\'est pas justifiée.** Les équipes de 3 personnes ou plus, avec plusieurs cas d\'usage ou une qualité de sortie incohérente, devraient se standardiser sur un framework avant d\'agrandir l\'équipe.',
           'Le coût de l\'absence de framework évolue avec la taille de l\'équipe. Deux personnes peuvent s\'aligner informellement sur un style de prompt. À cinq personnes, l\'incohérence des sorties augmente au point où les révisions deviennent conflictuelles.',
@@ -993,6 +1013,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: 'チームにフレームワークは必要ですか？',
+        snippets: [
+          { type: 'in-one-sentence', text: 'プロンプトフレームワークが有効になるのは、同じプロダクト向けに複数人がプロンプトを書き始めた時点です。その価値は個々のプロンプトの出力向上ではなく、共通の語彙とレビュー可能性にあります。' },
+          { type: 'in-plain-terms', text: '一人ならフレームワークは要りません。必要なのは良いプロンプトです。同じプロダクトに二人目、三人目が関わり始めた瞬間に共通の型が要ります。そうでなければ、すべてのプロンプトが個人の書き癖になり、互いにレビューできなくなります。' },
+        ],
         content: [
           '**単一のユースケースに対して単純なプロンプトを書く1〜2人のチームは、正式なフレームワークをスキップできます——オーバーヘッドは正当化されません。** 3人以上のチーム、複数のユースケース、または一貫性のない出力品質を持つチームは、チームを拡大する前に一つのフレームワークに標準化すべきです。',
           'フレームワークなしのコストはチームサイズに応じてスケールします。2人は非公式に合わせることができます。5人になると、出力の不一致が増加し、レビューが論争的になり、プロンプトが大きく異なるためモデル比較テストが解釈しにくくなります。',
@@ -1171,6 +1195,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: '团队是否需要框架？',
+        snippets: [
+          { type: 'in-one-sentence', text: '当多人开始为同一个产品编写提示词时，提示词框架才真正值得采用；它的价值在于统一术语和可评审性，而不是让某一条提示词的输出更好。' },
+          { type: 'in-plain-terms', text: '一个人不需要框架，需要的是一条好提示词。可一旦第二个、第三个人也开始为同一个产品写提示词，就需要共同的结构——否则每条提示词都是某个人的个人风格，谁也没法评审别人的东西。' },
+        ],
         content: [
           '**为单一用例编写简单Prompt的1到2人团队可以跳过正式框架——开销不合理。** 拥有3人或以上、多个用例或输出质量不一致的团队应该在扩大团队规模之前标准化到一个框架。',
           '没有框架的成本随团队规模而增长。两个人可以非正式地统一Prompt风格。到了五个人，输出不一致性增加到审查变得有争议、模型比较测试因为Prompt差异太大而难以解释的程度。',
@@ -1350,6 +1378,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: '팀에 프레임워크가 필요합니까?',
+        snippets: [
+          { type: 'in-one-sentence', text: '프롬프트 프레임워크는 여러 사람이 같은 제품을 위해 프롬프트를 작성하기 시작할 때 도입할 가치가 생깁니다. 그 가치는 개별 프롬프트의 출력 향상이 아니라 공통 어휘와 검토 가능성에 있기 때문입니다.' },
+          { type: 'in-plain-terms', text: '혼자라면 프레임워크가 아니라 좋은 프롬프트가 필요합니다. 하지만 같은 제품에 두 번째, 세 번째 사람이 프롬프트를 쓰기 시작하는 순간 공통된 틀이 필요해집니다. 그렇지 않으면 모든 프롬프트가 각자의 개인 스타일이 되어 서로 검토할 수 없게 됩니다.' },
+        ],
         content: [
           '**단일 사용 사례를 위한 단순한 prompt를 작성하는 1-2명의 팀은 공식 프레임워크를 생략할 수 있습니다 — 오버헤드가 정당화되지 않습니다.** 3명 이상, 여러 사용 사례, 또는 일관성 없는 출력 품질을 가진 팀은 더 많은 사람을 추가하기 전에 하나의 프레임워크로 표준화해야 합니다.',
           '프레임워크 없이 발생하는 비용은 팀 규모에 따라 증가합니다. 두 사람은 비공식적으로 prompt 스타일을 조율할 수 있습니다. 5명이 되면 출력 불일치가 심해져 리뷰가 논쟁적이 되고 모델 비교 테스트가 해석하기 어려워집니다.',
@@ -1536,6 +1568,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       framework_vs_no_framework: {
         id: 'framework_vs_no_framework',
         title: 'هل يحتاج فريقك إلى إطار عمل؟',
+        snippets: [
+          { type: 'in-one-sentence', text: 'يصبح إطار عمل البرومبت جديراً بالتبنّي حالما يكتب عدة أشخاص برومبتات للمنتج نفسه، إذ تكمن قيمته في توحيد المصطلحات وقابلية المراجعة لا في تحسين مخرجات برومبت مفرد.' },
+          { type: 'in-plain-terms', text: 'الشخص الواحد لا يحتاج إطار عمل، بل برومبتاً جيداً. لكن ما إن يبدأ شخص ثانٍ وثالث بالكتابة للمنتج نفسه حتى تحتاج إلى شكل مشترك؛ وإلا صار كل برومبت أسلوباً شخصياً ولم يعد بوسع أحد مراجعة عمل الآخر.' },
+        ],
         content: [
           '**الفرق المكونة من 1–2 شخص والتي تكتب prompts بسيطة لحالة استخدام واحدة يمكنها الاستغناء عن إطار عمل رسمي — التكلفة لا تبرر الفائدة.** أما الفرق المكونة من 3 أشخاص أو أكثر، أو تلك التي لديها حالات استخدام متعددة أو جودة مخرجات غير متسقة، فينبغي توحيد إطار العمل قبل إضافة مزيد من الأعضاء.',
           'تتزايد تكلفة عدم استخدام إطار عمل مع حجم الفريق. يستطيع شخصان التوافق بشكل غير رسمي على أسلوب الـ prompt. أما مع خمسة أشخاص، فتتصاعد تناقضات المخرجات لدرجة تجعل المراجعات موضع خلاف.',

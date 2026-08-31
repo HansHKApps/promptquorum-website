@@ -379,6 +379,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         quickFacts: {
           title: 'Quick Facts: AI Geopolitics at a Glance',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI capability is concentrated in a small number of countries and companies because it depends on advanced chips, large capital and scarce expertise, which turns model access into a matter of national policy rather than only product choice.' },
+            { type: 'in-plain-terms', text: 'Which model you can use increasingly depends on where you are. Export controls, data-residency rules and national AI programmes decide what is available in a given country — which is why the same tool can be routine in one market and unavailable in another.' },
+          ],
           items: [
             '**EU AI Act:** World\'s first binding AI law. The Digital Omnibus entered into force July 27, 2026, deferring standalone high-risk AI (Annex III) compliance from August 2, 2026 to December 2, 2027, and product-embedded high-risk AI (Annex I) to August 2, 2028. Article 50 transparency duties (AI disclosure, deepfake and AI-content labeling) still took effect on schedule August 2, 2026. Fines: up to €35 million or 7% of global annual revenue.',
             '**US AI Policy:** No federal AI law. Trump Administration pursuing state law preemption via EO 14365 (December 2025) and the National Framework (March 2026). The FTC issued its EO-mandated proposed policy statement on AI accuracy and state-law preemption on July 7, 2026 — four months after its March 11 deadline — and closed public comment July 31, 2026. Neither the TRUMP AMERICA AI Act nor the Democratic GUARDRAILS Act counter-proposal has passed Congress; both remain discussion drafts.',
@@ -1252,6 +1256,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         quickFacts: {
           title: 'Kurzübersicht: KI-Geopolitik auf einen Blick',
+          snippets: [
+            { type: 'in-one-sentence', text: 'KI-Fähigkeiten konzentrieren sich auf wenige Länder und Unternehmen, weil sie fortgeschrittene Chips, viel Kapital und knappe Expertise erfordern — dadurch wird der Zugang zu Modellen zur nationalen Politikfrage und nicht nur zur Produktentscheidung.' },
+            { type: 'in-plain-terms', text: 'Welches Modell Sie nutzen können, hängt zunehmend davon ab, wo Sie sind. Exportkontrollen, Vorgaben zur Datenhaltung und nationale KI-Programme bestimmen, was in einem Land verfügbar ist — weshalb dasselbe Werkzeug in einem Markt alltäglich und in einem anderen nicht zu haben ist.' },
+          ],
           items: [
             '**EU AI Act:** Weltweit erstes verbindliches KI-Gesetz. Das Digital Omnibus trat am 27. Juli 2026 in Kraft und verschiebt die Konformitätsfrist für eigenständige Hochrisiko-KI (Anhang III) vom 2. August 2026 auf den 2. Dezember 2027; produktintegrierte Hochrisiko-KI (Anhang I) verschiebt sich auf den 2. August 2028. Die Transparenzpflichten nach Artikel 50 (KI-Kennzeichnung, Deepfake-Offenlegung) traten dagegen planmäßig am 2. August 2026 in Kraft. Geldstrafen: bis zu 35 Mio. EUR oder 7% des weltweiten Jahresumsatzes.',
             '**US-KI-Politik:** Kein bundesweites KI-Gesetz. Die Trump-Administration verfolgt eine Vorrangstellung des Bundesrechts gegenüber Landesgesetzen über EO 14365 (Dezember 2025) und das National Framework (März 2026). Die FTC veröffentlichte ihre von der EO vorgeschriebene Grundsatzerklärung zu KI-Genauigkeit und Bundesvorrang erst am 7. Juli 2026 — vier Monate nach der Frist vom 11. März — und schloss die öffentliche Konsultation am 31. Juli 2026 ab. Weder der TRUMP AMERICA AI Act noch der demokratische Gegenentwurf GUARDRAILS Act wurde vom Kongress verabschiedet; beide bleiben Diskussionsentwürfe.',
@@ -2017,6 +2025,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         quickFacts: {
           title: 'Datos rápidos: Geopolítica de la IA de un vistazo',
+          snippets: [
+            { type: 'in-one-sentence', text: 'La capacidad en IA se concentra en unos pocos países y empresas porque depende de chips avanzados, mucho capital y experiencia escasa, lo que convierte el acceso a los modelos en una cuestión de política nacional y no solo de elección de producto.' },
+            { type: 'in-plain-terms', text: 'Qué modelo puedes usar depende cada vez más de dónde estés. Los controles de exportación, las normas de residencia de datos y los programas nacionales de IA deciden qué hay disponible en cada país: por eso la misma herramienta es rutinaria en un mercado e inaccesible en otro.' },
+          ],
           items: [
             '**EU AI Act:** Primera ley de IA vinculante del mundo. El Ómnibus Digital entró en vigor el 27 de julio de 2026, aplazando el cumplimiento de la IA de alto riesgo independiente (Anexo III) del 2 de agosto de 2026 al 2 de diciembre de 2027, y la IA de alto riesgo integrada en productos (Anexo I) al 2 de agosto de 2028. Los deberes de transparencia del Artículo 50 (divulgación de IA, etiquetado de deepfakes) entraron en vigor según lo previsto el 2 de agosto de 2026. Multas: hasta €35 millones o el 7% de los ingresos anuales globales.',
             '**Política de IA de EE.UU.:** Sin ley federal de IA. La administración Trump persigue la preemption de leyes estatales mediante la EO 14365 (diciembre de 2025) y el Marco Nacional (marzo de 2026). La FTC emitió su declaración de política sobre precisión de la IA y preemption estatal, exigida por la orden ejecutiva, el 7 de julio de 2026 — cuatro meses después de su plazo del 11 de marzo — y cerró el período de comentarios públicos el 31 de julio de 2026. Ni la TRUMP AMERICA AI Act ni la contrapropuesta demócrata GUARDRAILS Act han sido aprobadas por el Congreso; ambas siguen siendo borradores de discusión.',
@@ -2791,6 +2803,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         quickFacts: {
           title: 'حقائق سريعة: جيوسياسة الذكاء الاصطناعي في لمحة',
+          snippets: [
+            { type: 'in-one-sentence', text: 'تتركز قدرات الذكاء الاصطناعي في عدد قليل من الدول والشركات لأنها تعتمد على رقائق متقدمة ورؤوس أموال ضخمة وخبرات نادرة، ما يحوّل الوصول إلى النماذج إلى مسألة سياسة وطنية لا مجرد اختيار منتج.' },
+            { type: 'in-plain-terms', text: 'صار النموذج الذي يمكنك استخدامه مرتبطاً أكثر فأكثر بمكان وجودك. فضوابط التصدير وقواعد توطين البيانات والبرامج الوطنية للذكاء الاصطناعي تحدد ما هو متاح في كل بلد؛ ولهذا تكون الأداة نفسها اعتيادية في سوق وغير متوفرة في أخرى.' },
+          ],
           items: [
             '**قانون الذكاء الاصطناعي الأوروبي:** أول قانون ملزم للذكاء الاصطناعي في العالم. دخلت الحزمة الرقمية الشاملة حيّز التنفيذ في 27 يوليو 2026، مؤجّلةً امتثال الذكاء الاصطناعي عالي المخاطر المستقل (الملحق الثالث) من 2 أغسطس 2026 إلى 2 ديسمبر 2027، والذكاء الاصطناعي عالي المخاطر المدمج في المنتجات (الملحق الأول) إلى 2 أغسطس 2028. أما واجبات الشفافية بموجب المادة 50 (الإفصاح عن الذكاء الاصطناعي، وسم المحتوى المزيّف العميق) فقد دخلت حيّز التنفيذ كما هو مقرر في 2 أغسطس 2026. الغرامات: تصل إلى 35 مليون يورو أو 7% من الإيرادات السنوية العالمية.',
             '**سياسة الذكاء الاصطناعي الأمريكية:** لا يوجد قانون فيدرالي للذكاء الاصطناعي. تسعى إدارة ترامب إلى إلغاء القوانين الولائية عبر المرسوم 14365 (ديسمبر 2025) والإطار الوطني (مارس 2026). أصدرت لجنة التجارة الفيدرالية (FTC) بيانها السياسي المُلزَم بموجب المرسوم بشأن دقة الذكاء الاصطناعي وإلغاء القوانين الولائية في 7 يوليو 2026 — بعد أربعة أشهر من موعده النهائي في 11 مارس — وأغلقت فترة التعليقات العامة في 31 يوليو 2026. لم يُقرّ الكونغرس بعد مشروع قانون TRUMP AMERICA AI Act ولا مشروع القانون المضاد GUARDRAILS Act الديمقراطي؛ كلاهما لا يزال مسودة نقاش.',
@@ -3865,6 +3881,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: 'Points clés : la géopolitique de l\'IA en un coup d\'œil',
+          snippets: [
+            { type: 'in-one-sentence', text: 'La capacité en IA se concentre dans quelques pays et entreprises car elle dépend de puces avancées, de capitaux importants et d\'une expertise rare, ce qui fait de l\'accès aux modèles une question de politique nationale et non seulement de choix produit.' },
+            { type: 'in-plain-terms', text: 'Le modèle auquel vous avez accès dépend de plus en plus de l\'endroit où vous êtes. Contrôles à l\'export, règles de résidence des données et programmes nationaux décident de ce qui est disponible dans un pays : d\'où un même outil banal sur un marché et introuvable sur un autre.' },
+          ],
           items: [
             '**AI Act européen :** première loi contraignante sur l\'IA au monde. L\'Omnibus numérique est entré en vigueur le 27 juillet 2026, reportant la conformité de l\'IA à haut risque autonome (Annexe III) du 2 août 2026 au 2 décembre 2027, et celle de l\'IA à haut risque intégrée aux produits (Annexe I) au 2 août 2028. Les obligations de transparence de l\'article 50 (divulgation IA, étiquetage des deepfakes) sont, elles, entrées en vigueur comme prévu le 2 août 2026. Amendes : jusqu\'à 35 M€ ou 7 % du chiffre d\'affaires mondial.',
             '**Politique IA américaine :** aucune loi fédérale sur l\'IA. L\'administration Trump cherche à faire prévaloir le droit fédéral sur les lois des États via l\'Executive Order 14365 (décembre 2025) et le National Framework (mars 2026). La FTC a publié sa déclaration de politique imposée par le décret sur la précision de l\'IA et la préemption des lois des États le 7 juillet 2026 — avec quatre mois de retard sur l\'échéance du 11 mars — et a clos la consultation publique le 31 juillet 2026. Ni le TRUMP AMERICA AI Act ni sa contre-proposition démocrate, le GUARDRAILS Act, n\'ont été adoptés par le Congrès ; les deux restent à l\'état de projet.',
@@ -4822,6 +4842,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: 'クイックファクト：AI地政学の全体像',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI の能力は少数の国と企業に集中しています。先端半導体、巨額の資本、希少な専門人材を必要とするためであり、その結果、モデルへのアクセスは製品選択にとどまらず国家政策の問題になっています。' },
+            { type: 'in-plain-terms', text: 'どのモデルを使えるかは、どこにいるかに左右されるようになってきました。輸出規制、データ所在地の規則、各国の AI 政策が、その国で何が利用できるかを決めます。同じツールがある市場では当たり前に使え、別の市場では使えないのはそのためです。' },
+          ],
           items: [
             '**EU AI法：** 世界初の拘束力のあるAI法。デジタル・オムニバスは2026年7月27日に発効し、単独型ハイリスクAI（附属書III）の適用を2026年8月2日から2027年12月2日へ延期、製品組み込み型ハイリスクAI（附属書I）は2028年8月2日へ延期された。一方、第50条の透明性義務（AI利用の開示、ディープフェイクの表示）は予定どおり2026年8月2日に施行された。罰金は最大3,500万ユーロまたは世界年間売上高の7%。',
             '**米国のAI政策：** 連邦AI法は存在しない。トランプ政権は大統領令14365号（2025年12月）と国家フレームワーク（2026年3月）を通じて州法への連邦優先を推進。FTCは大統領令が義務付けたAIの正確性と州法優先に関する政策声明を、3月11日の期限から4カ月遅れの2026年7月7日に公表し、2026年7月31日にパブリックコメントを締め切った。TRUMP AMERICA AI法も、民主党側の対抗法案GUARDRAILS法も議会を通過しておらず、いずれも議論案の段階にとどまっている。',
@@ -5742,6 +5766,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         quickFacts: {
           title: '速览：AI地缘政治要点',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI 能力集中在少数国家与企业手中，因为它依赖先进芯片、巨额资本和稀缺人才；这使得能否用上某个模型成为国家政策问题，而不只是选型问题。' },
+            { type: 'in-plain-terms', text: '你能用哪个模型，越来越取决于你在哪里。出口管制、数据本地化规定和各国的 AI 计划，决定了一个国家能拿到什么——同一件工具，在一个市场稀松平常，在另一个市场却根本用不上。' },
+          ],
           items: [
             '**EU AI法案：** 全球首部具有约束力的AI法律。Digital Omnibus已于2026年7月27日生效，将独立高风险AI（附件III）的合规期限从2026年8月2日推迟至2027年12月2日，产品内嵌型高风险AI（附件I）推迟至2028年8月2日。第50条透明度义务（AI披露、深度伪造标识）仍按原计划于2026年8月2日生效。罚款：最高€3500万或全球年营业额的7%。',
             '**美国AI政策：** 无联邦AI法。特朗普政府正通过EO 14365（2025年12月）及《国家框架》（2026年3月）推动联邦法优先于州法。FTC已于2026年7月7日发布该行政令要求的AI准确性与州法优先政策声明——较3月11日的期限晚了近四个月——并于2026年7月31日结束公众意见征询。TRUMP AMERICA AI Act与民主党提出的对案GUARDRAILS Act均未获国会通过，两者仍停留在讨论草案阶段。',
@@ -6581,6 +6609,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         quickFacts: {
           title: 'Fatos rápidos: Geopolítica da IA em resumo',
+          snippets: [
+            { type: 'in-one-sentence', text: 'A capacidade em IA se concentra em poucos países e empresas porque depende de chips avançados, muito capital e expertise escassa, o que transforma o acesso aos modelos em questão de política nacional e não apenas de escolha de produto.' },
+            { type: 'in-plain-terms', text: 'Qual modelo você pode usar depende cada vez mais de onde você está. Controles de exportação, regras de residência de dados e programas nacionais de IA definem o que está disponível em cada país — por isso a mesma ferramenta é corriqueira em um mercado e indisponível em outro.' },
+          ],
           items: [
             '**EU AI Act:** Primeira lei vinculante de IA do mundo. O Omnibus Digital entrou em vigor em 27 de julho de 2026, adiando a conformidade da IA de alto risco autônoma (Anexo III) de 2 de agosto de 2026 para 2 de dezembro de 2027, e a IA de alto risco embutida em produtos (Anexo I) para 2 de agosto de 2028. Os deveres de transparência do Artigo 50 (divulgação de IA, rotulagem de deepfakes) entraram em vigor conforme programado em 2 de agosto de 2026. Multas: até €35 milhões ou 7% da receita anual global.',
             '**Política de IA dos EUA:** Sem lei federal de IA. Administração Trump busca a preempção de leis estaduais via EO 14365 (dezembro de 2025) e o Framework Nacional (março de 2026). A FTC emitiu sua declaração de política sobre precisão da IA e preempção estadual, exigida pela ordem executiva, em 7 de julho de 2026 — quatro meses após o prazo de 11 de março — e encerrou o período de comentários públicos em 31 de julho de 2026. Nem o TRUMP AMERICA AI Act nem a contraproposta democrata GUARDRAILS Act foram aprovados pelo Congresso; ambos permanecem como minutas de discussão.',
@@ -7241,6 +7273,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '핵심 사실: AI 지정학 한눈에 보기',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI 역량은 소수의 국가와 기업에 집중되어 있습니다. 첨단 반도체와 막대한 자본, 희소한 전문성이 필요하기 때문이며, 그 결과 모델에 대한 접근은 제품 선택을 넘어 국가 정책의 문제가 됩니다.' },
+            { type: 'in-plain-terms', text: '어떤 모델을 쓸 수 있는지가 점점 어디에 있느냐에 좌우됩니다. 수출 통제와 데이터 주재 규정, 각국의 AI 정책이 그 나라에서 무엇을 쓸 수 있는지를 결정합니다. 같은 도구가 한 시장에서는 일상적이고 다른 시장에서는 아예 없는 이유입니다.' },
+          ],
           items: [
             '**EU AI법:** 세계 최초의 구속력 있는 AI 법률. 디지털 옴니버스가 2026년 7월 27일 발효되어, 단독형 고위험 AI(부속서 III)의 준수 기한이 2026년 8월 2일에서 2027년 12월 2일로, 제품 내장형 고위험 AI(부속서 I)는 2028년 8월 2일로 연기되었습니다. 제50조 투명성 의무(AI 고지, 딥페이크 표시)는 예정대로 2026년 8월 2일 시행되었습니다. 과태료: 최대 €3,500만 또는 전 세계 연간 매출의 7%.',
             '**미국 AI 정책:** 연방 AI 법률 없음. 트럼프 행정부는 행정명령 14365(2025년 12월)와 국가 프레임워크(2026년 3월)를 통해 주법 선점을 추진 중입니다. FTC는 행정명령이 요구한 AI 정확성 및 주법 선점에 관한 정책 성명을 3월 11일 기한에서 4개월 늦은 2026년 7월 7일에 발표했으며, 2026년 7월 31일 공개 의견 수렴을 마감했습니다. TRUMP AMERICA AI법과 민주당의 대응 법안인 GUARDRAILS법 모두 의회를 통과하지 못했으며, 여전히 논의 초안 단계에 머물러 있습니다.',

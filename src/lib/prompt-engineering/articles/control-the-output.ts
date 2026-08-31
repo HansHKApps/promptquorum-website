@@ -117,11 +117,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: 'What Are the Three Levels of Output Control?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Output control comes in three levels — prompt instructions, structured schemas, and constrained decoding — and the level should match the task rather than always defaulting to the strictest one.' },
+            { type: 'in-plain-terms', text: 'Think of it as how tightly you hold the steering wheel. A plain instruction is fine for most trips. A schema keeps you in lane when the format really matters. Constrained decoding welds the wheel in place: safe, but the model can no longer steer around a problem.' },
+          ],
           content: [
             'Output control operates at three distinct levels — prompt-based, schema-based, and constrained decoding — each offering progressively stronger format guarantees at progressively higher trade-offs against reasoning quality.',
             'Prompt-based formatting instructs the model through natural language ("Return JSON with fields: name, email, score"). This works 80–95% of the time but fails silently on edge cases with no type guarantees, requiring error-handling for the 5–20% of malformed responses. Schema-based approaches (function calling / tool use) define output structure formally at 95–99% compliance — but the schema remains a strong hint, not an absolute constraint. Native constrained decoding uses finite state machines to mask invalid tokens at generation time, producing 100% schema-valid output with mathematical certainty.',
             'The two-stage approach — letting Claude Opus 5 (Anthropic) or GPT-5.6 (OpenAI) reason freely in Stage 1, then feeding output into a small specialist structuring model (Osmosis-Structure-0.6B, trained on 500K synthetic unstructured → structured transformations) in Stage 2 — achieves format guarantees without the reasoning quality penalty of constrained decoding.',
-            'In one sentence: Match the level of output constraint to the task — use constrained decoding only when format correctness matters more than reasoning depth.',
           ],
           columns: ['Level', 'Compliance Rate', 'Reasoning Impact', 'Best For'],
           rows: [
@@ -508,6 +511,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: 'Was sind die drei Ebenen der Ausgabekontrolle?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Ausgabekontrolle gibt es in drei Stufen — Prompt-Anweisungen, strukturierte Schemata und Constrained Decoding — und die Stufe sollte zur Aufgabe passen, statt standardmäßig immer die strengste zu wählen.' },
+            { type: 'in-plain-terms', text: 'Stellen Sie es sich vor wie den Griff ums Lenkrad. Für die meisten Fahrten genügt eine einfache Anweisung. Ein Schema hält Sie in der Spur, wenn das Format wirklich zählt. Constrained Decoding schweißt das Lenkrad fest: sicher, aber das Modell kann Problemen nicht mehr ausweichen.' },
+          ],
           content: [
             'Ausgabekontrolle funktioniert auf drei unterschiedlichen Ebenen — prompt-basiert, schema-basiert und Constrained Decoding — wobei jede Ebene progressiv stärkere Formatgarantien bei progressiv höheren Trade-offs gegenüber der Reasoning-Qualität bietet.',
             'Prompt-basierte Formatierung weist das Modell durch natürliche Sprache an ("Return JSON with fields: name, email, score"). Dies funktioniert in 80–95 % der Fälle, schlägt aber bei Sonderfällen lautlos fehl, ohne Typgarantien, und erfordert Fehlerbehandlung für die 5–20 % fehlerhafter Antworten. Schema-basierte Ansätze (Function Calling / Tool Use) definieren die Ausgabestruktur formal bei 95–99 % Compliance — das Schema bleibt jedoch ein starker Hinweis, keine absolute Einschränkung. Natives Constrained Decoding verwendet endliche Automaten, um ungültige Tokens zur Generierungszeit zu maskieren und produziert 100 % schema-valide Ausgaben mit mathematischer Sicherheit.',
@@ -886,6 +893,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: '¿Cuáles son los tres niveles de control de salida?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El control de salida tiene tres niveles — instrucciones en el prompt, esquemas estructurados y constrained decoding — y el nivel debe ajustarse a la tarea en lugar de recurrir siempre al más estricto.' },
+            { type: 'in-plain-terms', text: 'Piénsalo como la fuerza con la que agarras el volante. Una instrucción simple basta para la mayoría de los trayectos. Un esquema te mantiene en el carril cuando el formato importa de verdad. El constrained decoding suelda el volante: seguro, pero el modelo ya no puede esquivar un problema.' },
+          ],
           content: [
             'El control de salida opera en tres niveles distintos — basado en prompt, basado en schema y constrained decoding — cada uno ofreciendo garantías de formato progresivamente más fuertes con compensaciones progresivamente mayores frente a la calidad de razonamiento.',
             'El formato basado en prompt instruye al modelo mediante lenguaje natural ("Devuelve JSON con campos: nombre, email, puntuación"). Esto funciona entre el 80–95 % del tiempo, pero falla silenciosamente en casos límite sin garantías de tipo, requiriendo manejo de errores para el 5–20 % de respuestas malformadas. Los enfoques basados en schema (function calling / tool use) definen la estructura de salida formalmente con un 95–99 % de cumplimiento — pero el schema sigue siendo una sugerencia fuerte, no una constraint absoluta. El constrained decoding nativo usa máquinas de estados finita para enmascarar tokens inválidos en tiempo de generación, produciendo el 100 % de salidas válidas según el schema con certeza matemática.',
@@ -1235,6 +1246,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: 'ما هي المستويات الثلاثة للتحكم في المخرجات؟',
+          snippets: [
+            { type: 'in-one-sentence', text: 'يأتي التحكم في المخرجات على ثلاثة مستويات — تعليمات الاستفسار، والمخططات المهيكلة، وconstrained decoding — وينبغي أن يناسب المستوى المهمة بدلاً من اللجوء دائماً إلى الأشد صرامة.' },
+            { type: 'in-plain-terms', text: 'تخيّل الأمر كمقدار إحكام قبضتك على المِقود. تكفي تعليمة بسيطة لمعظم الرحلات. ويبقيك المخطط داخل المسار حين يكون التنسيق مهماً فعلاً. أما constrained decoding فيلحم المِقود في مكانه: آمن، لكن النموذج لم يعد قادراً على تفادي أي مشكلة.' },
+          ],
           content: [
             'يعمل التحكم في المخرجات على ثلاثة مستويات متمايزة — القائم على الموجّه والقائم على المخطط والفك المقيّد — حيث يقدّم كل منها ضمانات تنسيق أقوى تدريجيًّا مع مقايضات أكبر تدريجيًّا في مقابل جودة الاستدلال.',
             'التنسيق القائم على الموجّه يُعطي النموذج تعليمات بلغة طبيعية ("أعِد JSON بالحقول: الاسم والبريد الإلكتروني والنتيجة"). يعمل هذا في ٨٠-٩٥٪ من الحالات، لكنه يفشل صامتًا في الحالات الحدية. الأساليب القائمة على المخطط (استدعاء الوظائف/استخدام الأدوات) تُعرّف بنية المخرجات رسميًّا بتوافق ٩٥-٩٩٪. الفك المقيّد الأصلي يستخدم آلات حالات محدودة لإخفاء الرموز غير الصالحة في وقت التوليد، منتجًا ١٠٠٪ من المخرجات الصالحة وفق المخطط.',
@@ -1582,6 +1597,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: 'Quais são os três níveis de controle de saída?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O controle de saída tem três níveis — instruções no prompt, schemas estruturados e constrained decoding — e o nível deve corresponder à tarefa, em vez de recorrer sempre ao mais rígido.' },
+            { type: 'in-plain-terms', text: 'Pense em quão firme você segura o volante. Uma instrução simples dá conta da maioria dos trajetos. Um schema mantém você na faixa quando o formato realmente importa. O constrained decoding solda o volante: seguro, mas o modelo não consegue mais desviar de um problema.' },
+          ],
           content: [
             'O controle de saída opera em três níveis distintos — baseado em prompt, baseado em schema e constrained decoding — cada um oferecendo garantias de formato progressivamente mais fortes com compensações progressivamente maiores em relação à qualidade de raciocínio.',
             'O formato baseado em prompt instrui o modelo por linguagem natural ("Retorne JSON com campos: nome, email, pontuação"). Isso funciona 80–95% das vezes, mas falha silenciosamente em casos extremos sem garantias de tipo, exigindo tratamento de erros para 5–20% de respostas malformadas. As abordagens baseadas em schema (function calling / tool use) definem a estrutura de saída formalmente com 95–99% de conformidade. O constrained decoding nativo usa máquinas de estados finita para mascarar tokens inválidos em tempo de geração, produzindo 100% de saídas válidas segundo o schema com certeza matemática.',
@@ -1936,6 +1955,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: 'Quels sont les trois niveaux de contrôle des sorties ?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Le contrôle des sorties comporte trois niveaux — instructions dans le prompt, schémas structurés et constrained decoding — et le niveau doit correspondre à la tâche plutôt que de viser systématiquement le plus strict.' },
+            { type: 'in-plain-terms', text: 'Voyez cela comme la fermeté de votre prise sur le volant. Une simple consigne suffit pour la plupart des trajets. Un schéma vous maintient dans la voie quand le format compte vraiment. Le constrained decoding soude le volant : sûr, mais le modèle ne peut plus contourner un problème.' },
+          ],
           content: [
             'Le contrôle des sorties opère à trois niveaux distincts — par prompt, par schéma et decoding contraint — chacun offrant des garanties de format progressivement plus fortes, au prix de compromis progressivement plus élevés sur la qualité du raisonnement.',
             'Le formatage par prompt instruit le modèle en langage naturel ("Return JSON with fields: name, email, score"). Cela fonctionne dans 80–95 % des cas mais échoue silencieusement sur les cas limites, sans garantie de type, nécessitant une gestion d\'erreurs pour les 5–20 % de réponses malformées. Les approches par schéma (function calling / tool use) définissent formellement la structure de sortie à 95–99 % de conformité — mais le schéma reste une suggestion forte, pas une contrainte absolue. Le decoding contraint natif utilise des automates à états finis pour masquer les tokens invalides lors de la génération, produisant des sorties valides à 100 % avec certitude mathématique.',
@@ -2317,6 +2340,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: '出力制御の3つのレベルとは？',
+          snippets: [
+            { type: 'in-one-sentence', text: '出力制御にはプロンプトによる指示、構造化スキーマ、constrained decoding という3つのレベルがあり、常に最も厳格なものを選ぶのではなく、タスクに合わせてレベルを選ぶべきです。' },
+            { type: 'in-plain-terms', text: 'ハンドルをどれだけ強く握るかだと考えてください。多くの場面では簡単な指示で十分です。形式が本当に重要なときはスキーマが車線を保ちます。constrained decoding はハンドルを固定してしまうため、安全ではあるものの、モデルは問題を避けて曲がることができなくなります。' },
+          ],
           content: [
             '出力制御はプロンプトベース、スキーマベース、制約デコードの3つの異なるレベルで機能します。各レベルは推論品質とのトレードオフを高めながら、段階的に強固なフォーマット保証を提供します。',
             'プロンプトベースのフォーマットは自然言語でモデルに指示します（"Return JSON with fields: name, email, score"）。これは80〜95%の確率で機能しますが、型保証がなくエッジケースでサイレントに失敗し、不正なレスポンスの5〜20%にエラー処理が必要です。スキーマベースアプローチ（function calling / tool use）は95〜99%のコンプライアンスでフォーマット構造を正式に定義しますが、スキーマは絶対的な制約ではなく強力なヒントにとどまります。ネイティブ制約デコードは有限状態機械を使用して生成時に無効なトークンをマスクし、数学的確実性で100%スキーマ準拠の出力を生成します。',
@@ -2698,6 +2725,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: '输出控制的三个级别是什么？',
+          snippets: [
+            { type: 'in-one-sentence', text: '输出控制分为三个级别——提示词指令、结构化 schema 和 constrained decoding——应根据任务选择级别，而不是一律采用最严格的那一档。' },
+            { type: 'in-plain-terms', text: '可以把它想成握方向盘的力度。多数情况下一句普通指令就够了；当格式确实关键时，schema 能让你保持在车道内；而 constrained decoding 相当于把方向盘焊死：安全，但模型再也无法绕开问题。' },
+          ],
           content: [
             '输出控制在三个不同级别上运作——基于Prompt、基于Schema和受限解码——每个级别在对推理质量的权衡逐步增加的同时，提供逐步更强的格式保证。',
             '基于Prompt的格式化通过自然语言指示模型（"返回JSON，字段包括：name、email、score"）。这80%至95%的情况下有效，但在边缘情况下会静默失败，无类型保证，需要为5%至20%的格式错误响应进行错误处理。基于Schema的方法（函数调用/工具使用）以95%至99%的合规率正式定义输出结构——但Schema仍是强提示而非绝对约束。原生受限解码使用有限状态机在生成时屏蔽无效词元，以数学确定性生成100%符合Schema的输出。',
@@ -3072,6 +3103,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'three-levels',
           title: '출력 제어의 세 가지 수준이란?',
+          snippets: [
+            { type: 'in-one-sentence', text: '출력 제어에는 프롬프트 지시, 구조화된 schema, constrained decoding이라는 세 가지 수준이 있으며, 항상 가장 엄격한 방식을 선택하기보다 작업에 맞는 수준을 골라야 합니다.' },
+            { type: 'in-plain-terms', text: '핸들을 얼마나 세게 잡을지로 생각하시면 됩니다. 대부분의 경우에는 간단한 지시로 충분합니다. 형식이 정말 중요할 때는 schema가 차선을 지켜 줍니다. constrained decoding은 핸들을 고정해 버리므로 안전하지만, 모델이 문제를 피해 방향을 틀 수 없게 됩니다.' },
+          ],
           content: [
             '출력 제어는 프롬프트 기반, 스키마 기반, 제약 디코딩의 세 가지 서로 다른 수준에서 작동합니다. 각 수준은 추론 품질에 대한 트레이드오프가 점진적으로 높아지는 대신 점진적으로 강력한 형식 보장을 제공합니다.',
             '프롬프트 기반 형식은 자연어로 모델에 지시합니다("Return JSON with fields: name, email, score"). 이 방법은 80~95%의 경우에 작동하지만 형식 보장 없이 엣지 케이스에서 조용히 실패하므로, 잘못된 형식의 응답 5~20%에 대한 오류 처리가 필요합니다. 스키마 기반 접근 방식(함수 호출/도구 사용)은 95~99% 준수율로 출력 구조를 공식적으로 정의하지만, 스키마는 절대적인 제약이 아닌 강력한 힌트에 그칩니다. 네이티브 제약 디코딩은 생성 시 무효 토큰을 마스킹하는 유한 상태 기계를 사용하여 수학적 확실성으로 100% 스키마 유효 출력을 생성합니다.',

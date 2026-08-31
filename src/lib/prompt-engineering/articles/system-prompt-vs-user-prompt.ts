@@ -90,6 +90,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       definition: {
         title: 'System Prompt vs User Prompt: The Core Difference',
+        snippets: [
+          { type: 'in-one-sentence', text: 'A system prompt defines how the model behaves for an entire session; a user prompt defines what it should do for one specific request.' },
+          { type: 'in-plain-terms', text: 'The system prompt is the job description; the user prompt is today\'s task. You write the job description once and it holds all day — which is why persistent rules belong there and not repeated at the top of every message.' },
+        ],
         content: [
           '**A system prompt defines how the AI thinks for an entire session; a user prompt defines what it does for that specific request.** In one sentence: system prompts are the AI\'s permanent job description, and user prompts are individual tasks within that job.',
           'Every LLM conversation has both. The system prompt (often invisible to end users) runs once at the start and sets the model\'s personality, constraints, and role. The user prompt runs per-request and specifies the task or question. Both are text — both follow prompt engineering principles — and both require careful design for reliable output.',
@@ -427,6 +431,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       howToStart: {
         title: "Wie man einen effektiven System Prompt in 5 Schritten schreibt",
+        snippets: [
+          { type: 'in-one-sentence', text: 'Ein System Prompt legt fest, wie sich das Modell während einer ganzen Sitzung verhält; ein User Prompt legt fest, was es für eine einzelne Anfrage tun soll.' },
+          { type: 'in-plain-terms', text: 'Der System Prompt ist die Stellenbeschreibung, der User Prompt die heutige Aufgabe. Die Stellenbeschreibung schreiben Sie einmal, und sie gilt den ganzen Tag — dauerhafte Regeln gehören deshalb dorthin und nicht an den Anfang jeder Nachricht.' },
+        ],
         numberedItems: [
         "**Definieren Sie die Rolle explizit:** Beginnen Sie mit einer klaren, domänenspezifischen Rollenbeschreibung.",
         "**Schreiben Sie Einschränkungen vor Fähigkeiten:** Legen Sie zuerst fest, was das Modell nicht tun darf.",
@@ -704,6 +712,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       howToStart: {
         title: "Cómo Escribir un System Prompt Efectivo en 5 Pasos",
+        snippets: [
+          { type: 'in-one-sentence', text: 'Un system prompt define cómo se comporta el modelo durante toda una sesión; un user prompt define qué debe hacer en una petición concreta.' },
+          { type: 'in-plain-terms', text: 'El system prompt es la descripción del puesto; el user prompt, la tarea de hoy. La descripción se escribe una vez y vale para toda la jornada: por eso las reglas permanentes van ahí y no repetidas al principio de cada mensaje.' },
+        ],
         numberedItems: [
         "**Define el rol explícitamente:** Comienza con una declaración de rol clara y específica del dominio.",
         "**Escribe las restricciones antes que las capacidades:** Indica primero lo que el modelo no debe hacer.",
@@ -900,6 +912,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       howToStart: {
         title: "如何在5个步骤中编写有效的系统提示词",
+        snippets: [
+          { type: 'in-one-sentence', text: '系统提示词定义模型在整个会话中的行为方式，用户提示词则定义它在某一次具体请求中要做什么。' },
+          { type: 'in-plain-terms', text: '系统提示词是岗位说明书，用户提示词是今天的任务。岗位说明书写一次就管一整天——所以长期有效的规则应该放在那里，而不是在每条消息开头重复一遍。' },
+        ],
         numberedItems: [
         "**明确定义角色：** 以清晰、特定领域的角色陈述开头。",
         "**先写限制条件，后写能力：** 首先说明模型不应该做什么。",
@@ -1076,6 +1092,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       definition: {
         title: "System Prompt vs User Prompt: A Diferença Central",
+        snippets: [
+          { type: 'in-one-sentence', text: 'Um system prompt define como o modelo se comporta durante toda uma sessão; um user prompt define o que ele deve fazer em uma solicitação específica.' },
+          { type: 'in-plain-terms', text: 'O system prompt é a descrição do cargo; o user prompt é a tarefa de hoje. A descrição do cargo você escreve uma vez e ela vale o dia inteiro — por isso as regras permanentes ficam ali, e não repetidas no início de cada mensagem.' },
+        ],
         content: [
           "**Um system prompt define como a IA pensa durante toda uma sessão; um user prompt define o que ela faz para essa solicitação específica.** Em uma frase: system prompts são a descrição de cargo permanente da IA, e user prompts são tarefas individuais dentro desse cargo.",
           "Cada conversa com LLM tem ambos. O system prompt (frequentemente invisível para usuários finais) é executado uma vez no início e define a personalidade, restrições e papel do modelo. O user prompt é executado por solicitação e especifica a tarefa ou pergunta.",
@@ -1277,6 +1297,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       howToStart: {
         title: "كيفية كتابة System Prompt فعّال في 5 خطوات",
+        snippets: [
+          { type: 'in-one-sentence', text: 'يحدد الـ system prompt سلوك النموذج طوال الجلسة كاملة، بينما يحدد الـ user prompt ما ينبغي فعله في طلب بعينه.' },
+          { type: 'in-plain-terms', text: 'الـ system prompt هو الوصف الوظيفي، والـ user prompt هو مهمة اليوم. تكتب الوصف الوظيفي مرة واحدة فيسري طوال اليوم؛ ولهذا توضع القواعد الدائمة هناك لا في مطلع كل رسالة.' },
+        ],
         numberedItems: [
         "**حدد الدور بوضوح:** ابدأ ببيان دور واضح وخاص بالمجال.",
         "**اكتب القيود قبل القدرات:** حدد أولاً ما لا يجب على النموذج فعله.",
@@ -1443,6 +1467,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       definition: {
         title: '시스템 프롬프트 vs 사용자 프롬프트: 핵심 차이',
+        snippets: [
+          { type: 'in-one-sentence', text: '시스템 프롬프트는 세션 전체에서 모델이 어떻게 행동할지를 정의하고, 사용자 프롬프트는 특정 요청 하나에서 무엇을 해야 하는지를 정의합니다.' },
+          { type: 'in-plain-terms', text: '시스템 프롬프트는 직무 기술서이고, 사용자 프롬프트는 오늘의 업무입니다. 직무 기술서는 한 번 쓰면 하루 종일 유효합니다. 그래서 지속적으로 적용될 규칙은 그곳에 두어야 하며, 메시지마다 앞부분에 반복할 필요가 없습니다.' },
+        ],
         content: [
           '**시스템 프롬프트는 전체 세션에 걸쳐 AI가 어떻게 사고할지를 정의하고, 사용자 프롬프트는 특정 요청에 대해 무엇을 할지를 정의합니다.** 한 문장으로 정리하면: 시스템 프롬프트는 AI의 영구적인 직무 기술서이고, 사용자 프롬프트는 그 직무 내의 개별 업무입니다.',
           '모든 LLM 대화에는 두 가지 모두 존재합니다. 시스템 프롬프트(최종 사용자에게는 보통 보이지 않음)는 세션 시작 시 한 번 실행되어 모델의 페르소나, 제약 조건, 역할을 설정합니다. 사용자 프롬프트는 요청별로 실행되어 작업 또는 질문을 지정합니다. 두 가지 모두 텍스트이며, 프롬프트 엔지니어링 원칙을 따르고, 신뢰할 수 있는 출력을 위해 신중한 설계가 필요합니다.',

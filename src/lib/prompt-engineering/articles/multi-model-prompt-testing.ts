@@ -79,6 +79,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: 'Why Should You Test Prompts Across Multiple Models?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'A prompt tuned on one model encodes that model\'s quirks, so testing the same prompt across several models separates instructions that genuinely work from wording that merely suited one system.' },
+          { type: 'in-plain-terms', text: 'If you only ever test on one model, you cannot tell a good prompt from one that happens to please that model. Running it across three is the difference between a recipe that works in any kitchen and one that only works on your stove.' },
+        ],
         content: [
           '**Testing prompts across multiple models is necessary because each model has a different training distribution, which produces different defaults for verbosity, format, and instruction-following.** A prompt that reliably returns a clean JSON object on GPT-5.6 may return a markdown explanation with embedded JSON on Claude Sonnet 5 — breaking downstream parsing.',
           'Three reasons to run multi-model tests before deploying any prompt to production:',
@@ -323,6 +327,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: 'Warum sollten Sie Prompts über mehrere Modelle hinweg testen?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Ein auf ein Modell optimierter Prompt kodiert dessen Eigenheiten; derselbe Prompt über mehrere Modelle hinweg getestet trennt daher Anweisungen, die wirklich funktionieren, von Formulierungen, die nur einem System entgegenkamen.' },
+          { type: 'in-plain-terms', text: 'Wer immer nur auf einem Modell testet, kann einen guten Prompt nicht von einem unterscheiden, der diesem Modell zufällig gefällt. Über drei Modelle zu testen ist der Unterschied zwischen einem Rezept, das in jeder Küche gelingt, und einem, das nur auf Ihrem Herd funktioniert.' },
+        ],
         content: [
           '**Das Testen von Prompts über mehrere Modelle ist notwendig, weil jedes Modell eine andere Trainingsverteilung hat, die unterschiedliche Standardwerte für Ausführlichkeit, Format und Instruktionsbefolgung erzeugt.** Drei Gründe, vor jedem Produktions-Deployment Multi-Modell-Tests durchzuführen:',
         ],
@@ -496,6 +504,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: '¿Por qué probar prompts en múltiples modelos?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Un prompt ajustado a un solo modelo codifica las manías de ese modelo, así que probar el mismo prompt en varios separa las instrucciones que funcionan de verdad de la redacción que simplemente le venía bien a un sistema.' },
+          { type: 'in-plain-terms', text: 'Si solo pruebas en un modelo, no puedes distinguir un buen prompt de uno que casualmente le gusta a ese modelo. Probarlo en tres es la diferencia entre una receta que sale en cualquier cocina y una que solo funciona en tu fogón.' },
+        ],
         content: [
           '**Probar prompts en múltiples modelos es necesario porque cada modelo tiene una distribución de entrenamiento diferente, lo que produce valores predeterminados distintos para verbosidad, formato y seguimiento de instrucciones.** Un prompt que devuelve de forma fiable un objeto JSON limpio en GPT-5.6 puede devolver una explicación en markdown con JSON incrustado en Claude Sonnet 5, rompiendo el parseo posterior.',
           'Tres razones para ejecutar pruebas multi-modelo antes de desplegar cualquier prompt en producción:',
@@ -739,6 +751,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: 'Por que testar prompts em múltiplos modelos?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Um prompt ajustado a um único modelo carrega as manias daquele modelo, então testar o mesmo prompt em vários separa as instruções que realmente funcionam da redação que apenas agradava a um sistema.' },
+          { type: 'in-plain-terms', text: 'Se você só testa em um modelo, não consegue distinguir um bom prompt de um que por acaso agrada àquele modelo. Rodar em três é a diferença entre uma receita que dá certo em qualquer cozinha e uma que só funciona no seu fogão.' },
+        ],
         content: [
           '**Testar prompts em múltiplos modelos é necessário porque cada modelo tem uma distribuição de treinamento diferente, o que produz padrões distintos para verbosidade, formato e seguimento de instruções.** Um prompt que retorna de forma confiável um objeto JSON limpo no GPT-5.6 pode retornar uma explicação em markdown com JSON embutido no Claude Sonnet 5 — quebrando o processamento subsequente.',
           'Três razões para executar testes multi-modelo antes de implantar qualquer prompt em produção:',
@@ -983,6 +999,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: "Pourquoi tester des prompts sur plusieurs modèles ?",
+        snippets: [
+          { type: 'in-one-sentence', text: 'Un prompt ajusté sur un seul modèle encode les particularités de ce modèle ; tester le même prompt sur plusieurs sépare donc les instructions réellement efficaces des formulations qui convenaient simplement à un système.' },
+          { type: 'in-plain-terms', text: 'Si vous ne testez que sur un modèle, impossible de distinguer un bon prompt d\'un prompt qui plaît par hasard à ce modèle. L\'essayer sur trois, c\'est la différence entre une recette qui réussit dans n\'importe quelle cuisine et une qui ne marche que sur votre plaque.' },
+        ],
         content: [
           "**Tester des prompts sur plusieurs modèles est nécessaire parce que chaque modèle a une distribution d'entraînement différente qui produit des valeurs par défaut différentes pour la verbosité, le format et le suivi des instructions.** Trois raisons de réaliser des tests multi-modèles avant tout déploiement en production :",
         ],
@@ -1156,6 +1176,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: 'なぜ複数のモデルでプロンプトをテストすべきなのか？',
+        snippets: [
+          { type: 'in-one-sentence', text: '一つのモデルに合わせて調整したプロンプトは、そのモデル固有の癖を取り込んでしまうため、同じプロンプトを複数のモデルで試すことで、本当に有効な指示と特定のシステムにたまたま合っていた表現とを切り分けられます。' },
+          { type: 'in-plain-terms', text: '一つのモデルでしか試さなければ、良いプロンプトなのか、そのモデルの好みに合っただけなのかを区別できません。三つのモデルで試すことは、どの台所でも作れるレシピと、自宅のコンロでしか成功しないレシピの違いに相当します。' },
+        ],
         content: [
           '**複数のモデルでプロンプトをテストすることが必要なのは、各モデルが異なる学習データ分布を持ち、冗長性、フォーマット、指示の遵守に異なるデフォルト値を生成するからです。** 本番デプロイ前にマルチモデルテストを実施する3つの理由：',
         ],
@@ -1311,6 +1335,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: '为什么要在多个模型上测试提示词？',
+        snippets: [
+          { type: 'in-one-sentence', text: '只针对一个模型调优的提示词会把该模型的怪癖一并写进去；在多个模型上测试同一条提示词，才能把真正有效的指令与只是恰好迎合某个系统的措辞区分开。' },
+          { type: 'in-plain-terms', text: '如果你只在一个模型上测试，就分不清这是一条好提示词，还是它恰好合了那个模型的口味。放到三个模型上跑，相当于区分「在任何厨房都能做成的菜谱」和「只在你家灶台上才成功的菜谱」。' },
+        ],
         content: [
           '**在多个模型上测试提示词是必要的，因为每个模型具有不同的训练数据分布，会产生不同的详细程度、格式和指令遵守默认值。** 在任何生产部署前进行多模型测试的3个原因：',
         ],
@@ -1503,6 +1531,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: 'لماذا تختبر الـ prompts عبر نماذج متعددة؟',
+        snippets: [
+          { type: 'in-one-sentence', text: 'البرومبت المضبوط على نموذج واحد يحمل في طيّاته خصوصيات ذلك النموذج، ولذلك يفصل اختبار البرومبت نفسه عبر عدة نماذج بين التعليمات الفعّالة حقاً والصياغة التي وافقت نظاماً بعينه فحسب.' },
+          { type: 'in-plain-terms', text: 'إن اختبرت على نموذج واحد فقط، لن تستطيع التمييز بين برومبت جيد وآخر صادف أن راق لذلك النموذج. تشغيله على ثلاثة نماذج هو الفرق بين وصفة تنجح في أي مطبخ وأخرى لا تنجح إلا على موقدك أنت.' },
+        ],
         content: [
           '**اختبار الـ prompts عبر نماذج متعددة ضروري لأن لكل نموذج توزيع تدريب مختلف يُنتج إعدادات افتراضية متباينة للإسهاب والتنسيق واتباع التعليمات.** prompt يُعيد بشكل موثوق كائن JSON نظيفًا على GPT-5.6 قد يُعيد شرحًا بصيغة markdown مع JSON مضمّن على Claude Sonnet 5 — مما يُعطّل التحليل اللاحق.',
           'ثلاثة أسباب لإجراء اختبارات متعددة النماذج قبل نشر أي prompt في بيئة الإنتاج:',
@@ -1747,6 +1779,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       why_test_multi_model: {
         id: 'why-test-multi-model',
         title: '여러 모델에서 프롬프트를 테스트해야 하는 이유',
+        snippets: [
+          { type: 'in-one-sentence', text: '한 모델에 맞춰 다듬은 프롬프트에는 그 모델 특유의 습성이 함께 담기므로, 같은 프롬프트를 여러 모델에서 시험해야 실제로 효과가 있는 지시와 특정 시스템에 우연히 맞았을 뿐인 표현을 구분할 수 있습니다.' },
+          { type: 'in-plain-terms', text: '한 모델에서만 테스트하면 좋은 프롬프트인지, 그저 그 모델의 취향에 맞았을 뿐인지 구별할 수 없습니다. 세 모델에서 돌려 보는 것은 어느 주방에서나 되는 레시피와 우리 집 화구에서만 되는 레시피를 가르는 차이입니다.' },
+        ],
         content: [
           '**여러 모델에서 프롬프트를 테스트하는 것이 필요한 이유는 각 모델이 다른 학습 데이터 분포를 가지고 있어 상세도, 서식, 지시 준수에 대한 기본값이 달라지기 때문입니다.** GPT-5.6에서 깔끔한 JSON 객체를 안정적으로 반환하는 프롬프트가 Claude Sonnet 5에서는 JSON이 포함된 마크다운 설명을 반환하여 후속 파싱을 중단시킬 수 있습니다.',
           '프로덕션에 프롬프트를 배포하기 전에 멀티모델 테스트를 실행해야 하는 세 가지 이유:',

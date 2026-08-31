@@ -144,6 +144,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-are-the-5-building-blocks',
           title: 'What Are the 5 Building Blocks of a Prompt?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'A reliable prompt is built from five parts — role, task, context, constraints and output format — and most weak results trace back to one of them being missing rather than to the wording.' },
+            { type: 'in-plain-terms', text: 'Think of it as a work brief. Who should the model be, what exactly should it do, what does it need to know, what are the limits, and what should the answer look like? Leave one out and you get the vague answer you would get from a colleague handed the same half-brief.' },
+          ],
           content: [
             '**The 5 building blocks every prompt needs are: Role & Context, Task / Instruction, Input & Examples, Constraints, and Output Format.** These five components are the minimum structure that separates a reliable, repeatable prompt from a vague question that produces inconsistent results.',
             'Each block solves a different failure mode. Role & Context tells the model who it is and what situation it is in. Task / Instruction tells it exactly what to do. Input & Examples give it the raw material and teaching signal. Constraints set the rules. Output Format specifies the shape of the answer. Together, they leave the model with nothing left to guess.',
@@ -607,6 +611,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-are-the-5-building-blocks',
           title: 'Was sind die 5 Bausteine eines Prompts?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Ein verlässlicher Prompt besteht aus fünf Teilen — Rolle, Aufgabe, Kontext, Einschränkungen und Ausgabeformat — und schwache Ergebnisse gehen meist darauf zurück, dass einer davon fehlt, nicht auf die Formulierung.' },
+            { type: 'in-plain-terms', text: 'Stellen Sie es sich wie ein Briefing vor. Wer soll das Modell sein, was genau soll es tun, was muss es wissen, wo sind die Grenzen, und wie soll die Antwort aussehen? Fehlt ein Punkt, bekommen Sie genau die vage Antwort, die auch eine Kollegin mit halbem Briefing liefern würde.' },
+          ],
           content: [
             '**Die 5 Bausteine, die jeder Prompt benötigt, sind: Rolle & Kontext, Aufgabe / Anweisung, Eingabe & Beispiele, Einschränkungen und Ausgabeformat.** Diese fünf Komponenten sind die Mindeststruktur, die einen zuverlässigen, wiederholbaren Prompt von einer vagen Frage unterscheidet, die inkonsistente Ergebnisse liefert.',
             'Jeder Baustein löst einen anderen Fehlertyp. Rolle & Kontext sagt dem Modell, wer es ist und in welcher Situation es sich befindet. Aufgabe / Anweisung sagt ihm genau, was zu tun ist. Eingabe & Beispiele geben ihm das Rohmaterial und das Lernmuster. Einschränkungen setzen die Regeln. Ausgabeformat legt die Form der Antwort fest. Zusammen lassen sie dem Modell nichts mehr zum Raten übrig.',
@@ -1045,6 +1053,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         definition: {
           title: '¿Cuáles son los 5 bloques de construcción de un prompt?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Un prompt fiable se compone de cinco partes — rol, tarea, contexto, restricciones y formato de salida — y los resultados flojos suelen deberse a que falta una de ellas, no a cómo está redactado.' },
+            { type: 'in-plain-terms', text: 'Piénsalo como un encargo de trabajo. Quién debe ser el modelo, qué tiene que hacer exactamente, qué necesita saber, cuáles son los límites y qué aspecto debe tener la respuesta. Si omites uno, obtienes la respuesta vaga que te daría un compañero con medio encargo.' },
+          ],
           content: [
             '**Los 5 bloques de construcción que todo prompt necesita son: rol y contexto, tarea/instrucción, input y ejemplos, restricciones y formato de output.** Estos cinco componentes son la estructura mínima que distingue un prompt fiable y repetible de una pregunta vaga que produce resultados inconsistentes.',
             'Cada bloque resuelve un tipo de error diferente. Rol y contexto le dice al modelo quién es y en qué situación está. Tarea/instrucción le dice exactamente qué hacer. Input y ejemplos le dan el material en bruto y el patrón de aprendizaje. Las restricciones establecen las reglas. El formato de output fija la forma de la respuesta. Juntos, no dejan nada al azar para el modelo.',
@@ -1389,6 +1401,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         definition: {
           title: 'ما هي المكونات الخمسة لبرومبت؟',
+          snippets: [
+            { type: 'in-one-sentence', text: 'يتكوّن البرومبت الموثوق من خمسة أجزاء — الدور، والمهمة، والسياق، والقيود، وصيغة المخرجات — وغالباً ما تعود النتائج الضعيفة إلى غياب أحدها لا إلى الصياغة.' },
+            { type: 'in-plain-terms', text: 'تخيّله تكليفاً بعمل. من ينبغي أن يكون النموذج، وما المطلوب منه بالضبط، وما الذي يحتاج معرفته، وما الحدود، وكيف ينبغي أن تبدو الإجابة؟ إن أسقطت عنصراً حصلت على الإجابة المبهمة نفسها التي سيقدّمها زميل تسلّم تكليفاً ناقصاً.' },
+          ],
           content: [
             '**المكونات الخمسة التي يحتاجها كل برومبت هي: الدور والسياق، والمهمة/التعليمات، والمدخلات والأمثلة، والقيود، وتنسيق المخرجات.** هذه المكونات الخمسة هي الهيكل الأدنى الذي يميّز برومبتًا موثوقًا وقابلًا للتكرار عن سؤال مبهم ينتج نتائج غير متسقة.',
             'كل مكوّن يحل نوعًا مختلفًا من الأخطاء. الدور والسياق يخبران النموذج من هو وفي أي موقف يوجد. المهمة/التعليمات تخبره بالضبط ما يجب فعله. المدخلات والأمثلة تمنحانه المادة الخام ونمط التعلم. القيود تضع القواعد. تنسيق المخرجات يثبّت شكل الاستجابة. معًا، لا يتركان شيئًا للنموذج يخمّنه.',
@@ -1729,6 +1745,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Quais são os 5 blocos de construção de um prompt?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Um prompt confiável é formado por cinco partes — papel, tarefa, contexto, restrições e formato de saída — e resultados fracos costumam vir da ausência de uma delas, não da redação.' },
+            { type: 'in-plain-terms', text: 'Pense nisso como um briefing de trabalho. Quem o modelo deve ser, o que exatamente deve fazer, o que precisa saber, quais são os limites e qual deve ser a cara da resposta. Deixe um de fora e você recebe a resposta vaga que um colega daria com meio briefing.' },
+          ],
           content: [
             '**Os 5 blocos de construção que todo prompt precisa são: papel e contexto, tarefa/instrução, entrada e exemplos, restrições e formato de saída.** Esses cinco componentes são a estrutura mínima que distingue um prompt confiável e repetível de uma pergunta vaga que produz resultados inconsistentes.',
             'Cada bloco resolve um tipo diferente de erro. Papel e contexto diz ao modelo quem ele é e em que situação está. Tarefa/instrução diz exatamente o que fazer. Entrada e exemplos dão o material bruto e o padrão de aprendizado. As restrições estabelecem as regras. O formato de saída fixa a forma da resposta. Juntos, não deixam nada ao acaso para o modelo.',
@@ -2098,6 +2118,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-are-the-5-building-blocks',
           title: 'Qu\'est-ce que les 5 éléments fondamentaux d\'un prompt ?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Un prompt fiable repose sur cinq éléments — rôle, tâche, contexte, contraintes et format de sortie — et les résultats médiocres viennent le plus souvent de l\'absence de l\'un d\'eux, non de la formulation.' },
+            { type: 'in-plain-terms', text: 'Voyez cela comme un brief de mission. Qui le modèle doit-il être, que doit-il faire précisément, que doit-il savoir, quelles sont les limites, à quoi doit ressembler la réponse ? Omettez-en un et vous obtenez la réponse vague que donnerait un collègue avec un demi-brief.' },
+          ],
           content: [
             '**Les 5 éléments que chaque prompt nécessite sont : Rôle & Contexte, Tâche / Instruction, Entrée & Exemples, Contraintes et Format de sortie.** Ces cinq composantes constituent la structure minimale qui distingue un prompt fiable et reproductible d\'une question vague qui produit des résultats incohérents.',
             'Chaque élément résout un type d\'erreur différent. Rôle & Contexte dit au modèle qui il est et dans quelle situation il se trouve. Tâche / Instruction lui dit exactement ce qu\'il faut faire. Entrée & Exemples lui donnent la matière première et le motif d\'apprentissage. Contraintes fixent les règles. Format de sortie définit la forme de la réponse. Ensemble, ils ne laissent plus rien au hasard pour le modèle.',
@@ -2587,6 +2611,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-are-the-5-building-blocks',
           title: 'プロンプトの5つの構成要素とは',
+          snippets: [
+            { type: 'in-one-sentence', text: '信頼できるプロンプトは、役割・タスク・文脈・制約・出力形式という5つの要素で構成されており、結果が振るわない原因は言い回しよりも、このいずれかが欠けていることにあります。' },
+            { type: 'in-plain-terms', text: '仕事の依頼書だと考えてください。モデルは誰として振る舞うのか、何をするのか、何を知っておくべきか、どこまでが許容範囲か、答えはどんな形であるべきか。ひとつ欠ければ、中途半端な依頼を受けた同僚と同じく曖昧な答えが返ってきます。' },
+          ],
           content: [
             '**すべてのプロンプトに必要な5つの構成要素は、役割とコンテキスト、タスク/指示、入力と例、制約、出力形式です。** この5つのコンポーネントは、信頼性が高く再現可能なプロンプトと、一貫性を欠く結果を生むぼんやりした質問を区別する最小限の構造です。',
             '各要素は異なる障害モードを解決します。役割とコンテキストはモデルに自分が何であるか、どんな状況にあるかを伝えます。タスク/指示は正確に何をすべきかを伝えます。入力と例は素材と学習シグナルを提供します。制約はルールを設定します。出力形式は答えの形を指定します。合わせることで、モデルが推測すべきことを残しません。',
@@ -2880,6 +2908,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '提示词的5个构建模块是什么？',
+          snippets: [
+            { type: 'in-one-sentence', text: '可靠的提示词由五个部分构成——角色、任务、上下文、约束和输出格式——效果不佳往往源自其中某一项缺失，而不是措辞不好。' },
+            { type: 'in-plain-terms', text: '可以把它当成一份工作交办单。模型该以什么身份出现、具体要做什么、需要知道哪些信息、边界在哪里、答案应该长什么样。少写一项，你得到的就是同事拿到半份交办单时给出的那种含糊回答。' },
+          ],
           content: [
             '**每个提示词必需的5个构建模块是：角色与上下文、任务/指令、输入与示例、约束条件和输出格式。** 这五个组成部分是将可靠、可重复的提示词与产出不一致结果的模糊问题区分开来的最低结构要求。',
             '每个模块解决一种不同的失效模式。角色与上下文告诉模型它是谁以及所处的情境。任务/指令告诉它确切要做什么。输入与示例为其提供原始材料和教学信号。约束条件设定规则。输出格式指定答案的形态。五者合一，让模型无需再猜测任何内容。',
@@ -3226,6 +3258,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'what-are-the-5-building-blocks',
           title: '프롬프트의 5가지 구성 요소란 무엇입니까?',
+          snippets: [
+            { type: 'in-one-sentence', text: '신뢰할 수 있는 프롬프트는 역할, 과업, 맥락, 제약, 출력 형식이라는 다섯 가지 요소로 구성되며, 결과가 부실한 원인은 표현보다 이 중 하나가 빠진 데 있는 경우가 많습니다.' },
+            { type: 'in-plain-terms', text: '업무 지시서라고 생각하시면 됩니다. 모델이 누구여야 하는지, 정확히 무엇을 해야 하는지, 무엇을 알아야 하는지, 한계는 어디까지인지, 답변은 어떤 모습이어야 하는지입니다. 하나라도 빠지면 반쪽짜리 지시를 받은 동료가 내놓을 법한 모호한 답이 돌아옵니다.' },
+          ],
           content: [
             '**프롬프트에 필요한 5가지 구성 요소는 역할 및 맥락, 작업/지시, 입력 및 예시, 제약 조건, 출력 형식입니다.** 이 다섯 가지 구성 요소는 신뢰할 수 있고 반복 가능한 프롬프트를 일관성 없는 결과를 생성하는 모호한 질문과 구별하는 최소한의 구조입니다.',
             '각 블록은 서로 다른 실패 원인을 해결합니다. 역할 및 맥락은 모델에게 자신이 누구이고 어떤 상황에 있는지를 알립니다. 작업/지시는 정확히 무엇을 해야 하는지를 알립니다. 입력 및 예시는 원자재와 학습 신호를 제공합니다. 제약 조건은 규칙을 설정합니다. 출력 형식은 답변의 형태를 지정합니다. 이 다섯 가지를 함께 사용하면 모델이 추측해야 할 것이 없어집니다.',

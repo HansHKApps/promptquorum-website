@@ -82,6 +82,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: 'Quick Facts',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Chain-of-thought prompting asks the model to work through intermediate steps before answering, which improves accuracy on multi-step reasoning at the cost of more tokens and slower responses.' },
+            { type: 'in-plain-terms', text: 'It is telling the model to show its work. Made to reason out loud, it catches its own mistakes partway through instead of blurting a confident guess — which is why it helps on maths and logic and does nothing for looking up a fact.' },
+          ],
           numberedItems: [
             '**Coined:** Wei et al. (2022), Google Brain — NeurIPS 2022 foundational paper',
             '**Key result:** Zero-shot CoT raised PaLM 540B accuracy from 17.7% → 78.7% on MultiArith',
@@ -503,6 +507,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     quickFacts: {
       title: 'Schnellübersicht',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Chain-of-Thought-Prompting fordert das Modell auf, vor der Antwort Zwischenschritte auszuführen, was die Genauigkeit bei mehrstufigem Denken erhöht — auf Kosten von mehr Tokens und langsameren Antworten.' },
+        { type: 'in-plain-terms', text: 'Sie fordern das Modell auf, den Rechenweg zu zeigen. Wer laut denkt, bemerkt eigene Fehler unterwegs, statt eine selbstbewusste Vermutung herauszuschießen. Deshalb hilft es bei Mathematik und Logik — und bringt nichts, wenn nur ein Fakt nachzuschlagen ist.' },
+      ],
       numberedItems: [
         '**Geprägt:** Wei et al. (2022), Google Brain – NeurIPS 2022 Grundlagenpaper',
         '**Schlüsselergebnis:** Zero-shot CoT erhöhte PaLM 540B Genauigkeit von 17,7 % → 78,7 % auf MultiArith',
@@ -925,6 +933,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: 'Datos rápidos',
+      snippets: [
+        { type: 'in-one-sentence', text: 'El chain-of-thought pide al modelo que desarrolle pasos intermedios antes de responder, lo que mejora la precisión en razonamientos de varios pasos a cambio de más tokens y respuestas más lentas.' },
+        { type: 'in-plain-terms', text: 'Es pedirle al modelo que muestre el desarrollo. Al razonar en voz alta detecta sus propios errores a mitad de camino en lugar de soltar una conjetura segura; por eso ayuda en matemáticas y lógica y no aporta nada para consultar un dato.' },
+      ],
       numberedItems: [
         '**Acuñado por:** Wei et al. (2022), Google Brain — artículo fundacional en NeurIPS 2022',
         '**Resultado clave:** CoT zero-shot elevó la precisión de PaLM 540B del 17,7 % al 78,7 % en MultiArith',
@@ -1352,6 +1364,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: 'حقائق سريعة',
+      snippets: [
+        { type: 'in-one-sentence', text: 'يطلب أسلوب سلسلة التفكير من النموذج أن يمرّ بخطوات وسيطة قبل الإجابة، ما يحسّن الدقة في الاستدلال متعدد الخطوات مقابل استهلاك رموز أكثر واستجابات أبطأ.' },
+        { type: 'in-plain-terms', text: 'إنه أن تطلب من النموذج أن يُظهر خطوات حلّه. حين يفكر بصوت مسموع يلتقط أخطاءه في منتصف الطريق بدل أن يطلق تخميناً واثقاً؛ ولهذا يفيد في الرياضيات والمنطق ولا يضيف شيئاً عند البحث عن معلومة.' },
+      ],
       numberedItems: [
         '**صاغه:** Wei وآخرون (2022)، Google Brain — الورقة التأسيسية في NeurIPS 2022',
         '**النتيجة الرئيسية:** رفع CoT بدون أمثلة دقة PaLM 540B من 17.7% إلى 78.7% في MultiArith',
@@ -1779,6 +1795,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: 'Dados rápidos',
+      snippets: [
+        { type: 'in-one-sentence', text: 'O chain-of-thought pede que o modelo percorra etapas intermediárias antes de responder, o que melhora a precisão em raciocínios de várias etapas ao custo de mais tokens e respostas mais lentas.' },
+        { type: 'in-plain-terms', text: 'É pedir que o modelo mostre a conta. Raciocinando em voz alta, ele pega os próprios erros no meio do caminho em vez de soltar um palpite confiante — por isso ajuda em matemática e lógica e não faz diferença para consultar um fato.' },
+      ],
       numberedItems: [
         '**Cunhado por:** Wei et al. (2022), Google Brain — artigo fundacional no NeurIPS 2022',
         '**Resultado-chave:** CoT zero-shot elevou a precisão do PaLM 540B de 17,7% para 78,7% no MultiArith',
@@ -2199,6 +2219,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     quickFacts: {
       title: 'Faits rapides',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Le chain-of-thought demande au modèle de dérouler des étapes intermédiaires avant de répondre, ce qui améliore la justesse sur les raisonnements en plusieurs étapes au prix de plus de tokens et de réponses plus lentes.' },
+        { type: 'in-plain-terms', text: 'C\'est demander au modèle de montrer son raisonnement. En réfléchissant à voix haute, il repère ses propres erreurs en cours de route au lieu de lâcher une supposition assurée : d\'où son utilité en maths et en logique, et son inutilité pour retrouver un fait.' },
+      ],
       numberedItems: [
         '**Initié:** Wei et al. (2022), Google Brain – paper fondateur NeurIPS 2022',
         '**Résultat clé:** Zero-shot CoT a augmenté la précision de PaLM 540B de 17,7 % → 78,7 % sur MultiArith',
@@ -2616,6 +2640,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: 'クイックファクト',
+      snippets: [
+        { type: 'in-one-sentence', text: '思考の連鎖プロンプティングは、回答前に中間ステップを踏ませる手法であり、多段階の推論における正確性を高める一方、トークン消費が増え応答は遅くなります。' },
+        { type: 'in-plain-terms', text: 'モデルに途中式を書かせるということです。声に出して考えさせると、自信満々の当てずっぽうを口にする前に、自分の誤りを途中で拾えます。数学や論理で効く一方、事実を調べるだけの用途では何の役にも立ちません。' },
+      ],
       numberedItems: [
         '**提唱:** Wei et al. (2022)、Google Brain — NeurIPS 2022の基礎論文',
         '**重要な結果:** Zero-shot CoTはPaLM 540Bの精度をMultiArithで17.7% → 78.7%に上昇させた',
@@ -3029,6 +3057,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     quickFacts: {
       title: '快速事实',
+      snippets: [
+        { type: 'in-one-sentence', text: '思维链提示要求模型在作答前先走完中间推理步骤，能提升多步推理的准确率，代价是消耗更多 token、响应更慢。' },
+        { type: 'in-plain-terms', text: '就是让模型把演算过程写出来。被要求出声思考时，它会在半路揪出自己的错误，而不是脱口给出一个笃定的猜测；这也是它对数学和逻辑有效、对查一个事实毫无帮助的原因。' },
+      ],
       numberedItems: [
         '**提出:** Wei et al. (2022)、Google Brain — NeurIPS 2022基础论文',
         '**关键结果:** Zero-shot CoT将PaLM 540B在MultiArith上的精度从17.7% → 78.7%',
@@ -3452,6 +3484,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: '빠른 사실',
+      snippets: [
+        { type: 'in-one-sentence', text: '생각의 사슬 프롬프팅은 답하기 전에 중간 단계를 거치도록 요구하는 방식으로, 다단계 추론의 정확도를 높이는 대신 토큰을 더 쓰고 응답이 느려집니다.' },
+        { type: 'in-plain-terms', text: '모델에게 풀이 과정을 적으라고 하는 것입니다. 소리 내어 생각하게 하면 확신에 찬 추측을 내뱉기 전에 중간에서 스스로 오류를 잡아냅니다. 수학과 논리에는 효과가 있지만 사실을 찾아보는 일에는 아무 도움이 되지 않는 이유입니다.' },
+      ],
       numberedItems: [
         '**최초 제안자:** Wei 외 (2022), Google Brain — NeurIPS 2022 창시 논문',
         '**핵심 결과:** Zero-shot CoT로 PaLM 540B의 MultiArith 정확도가 17.7%에서 78.7%로 향상',

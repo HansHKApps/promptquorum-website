@@ -232,6 +232,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ Quick Facts',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI research tools differ from general chatbots by searching indexed literature semantically and returning citations you can open, rather than generating plausible-sounding references from memory.' },
+            { type: 'in-plain-terms', text: 'A chatbot answers from what it half-remembers; a research tool goes and looks. That is the whole difference, and it is why one can invent a paper that does not exist while the other hands you a link you can click.' },
+          ],
           items: [
             'Elicit covers 138M+ papers and 545,000 clinical trials with semantic (not keyword) search',
             'Average AI hallucination rate: 9.2% for general knowledge, 18.7% for legal, 48% for o4-mini on PersonQA',
@@ -765,6 +769,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ Schnellübersicht',
+          snippets: [
+            { type: 'in-one-sentence', text: 'KI-Recherchewerkzeuge unterscheiden sich von allgemeinen Chatbots dadurch, dass sie indexierte Literatur semantisch durchsuchen und Quellen liefern, die Sie öffnen können, statt plausibel klingende Referenzen aus dem Gedächtnis zu erzeugen.' },
+            { type: 'in-plain-terms', text: 'Ein Chatbot antwortet aus halber Erinnerung; ein Recherchewerkzeug schaut nach. Das ist der ganze Unterschied — und der Grund, warum das eine eine nicht existierende Studie erfinden kann, während das andere Ihnen einen anklickbaren Link gibt.' },
+          ],
           items: [
             'Elicit deckt 138M+ Papiere und 545.000 klinische Versuche mit semantischer (nicht Keyword) Suche ab',
             'Durchschnittliche KI-Halluzinations-Quote: 9,2% für allgemeines Wissen, 18,7% für Recht, 48% für o4-mini auf PersonQA',
@@ -1289,6 +1297,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ Datos rápidos',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Las herramientas de investigación con IA se diferencian de los chatbots generales en que buscan literatura indexada de forma semántica y devuelven citas que puedes abrir, en lugar de generar referencias verosímiles de memoria.' },
+            { type: 'in-plain-terms', text: 'Un chatbot responde desde lo que recuerda a medias; una herramienta de investigación va y lo consulta. Esa es toda la diferencia, y por eso una puede inventarse un artículo inexistente mientras la otra te da un enlace que puedes pulsar.' },
+          ],
           items: [
             'Elicit cubre más de 138M de artículos y 545.000 ensayos clínicos con búsqueda semántica (no por palabras clave)',
             'Tasa media de alucinación de IA: 9,2 % para conocimiento general, 18,7 % para asuntos legales, 48 % para o4-mini en PersonQA',
@@ -1814,6 +1826,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ حقائق سريعة',
+          snippets: [
+            { type: 'in-one-sentence', text: 'تختلف أدوات البحث المدعومة بالذكاء الاصطناعي عن روبوتات الدردشة العامة في أنها تبحث في أدبيات مفهرسة بحثاً دلالياً وتعيد استشهادات يمكنك فتحها، بدلاً من توليد مراجع تبدو معقولة من الذاكرة.' },
+            { type: 'in-plain-terms', text: 'يجيب روبوت الدردشة مما يتذكره جزئياً، أما أداة البحث فتذهب وتتحقق. هذا هو الفارق كله، ولهذا قد يخترع الأول ورقة بحثية غير موجودة بينما يسلّمك الثاني رابطاً قابلاً للنقر.' },
+          ],
           items: [
             'Elicit يغطي أكثر من 138 مليون ورقة و545 ألف تجربة سريرية بالبحث الدلالي (لا بالكلمات المفتاحية)',
             'معدل هلوسة الذكاء الاصطناعي المتوسط: 9.2٪ للمعرفة العامة، 18.7٪ للمسائل القانونية، 48٪ لـ o4-mini في PersonQA',
@@ -2338,6 +2354,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ Dados rápidos',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Ferramentas de pesquisa com IA se diferenciam de chatbots gerais por buscarem literatura indexada de forma semântica e devolverem citações que você pode abrir, em vez de gerar referências plausíveis de memória.' },
+            { type: 'in-plain-terms', text: 'Um chatbot responde a partir do que lembra pela metade; uma ferramenta de pesquisa vai lá e consulta. É toda a diferença, e é por isso que uma pode inventar um artigo que não existe enquanto a outra te entrega um link clicável.' },
+          ],
           items: [
             'Elicit cobre mais de 138M de artigos e 545.000 ensaios clínicos com busca semântica (não por palavras-chave)',
             'Taxa média de alucinação de IA: 9,2% para conhecimento geral, 18,7% para questões jurídicas, 48% para o4-mini no PersonQA',
@@ -2863,6 +2883,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ Faits Rapides',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Les outils de recherche IA se distinguent des chatbots généralistes en interrogeant sémantiquement une littérature indexée et en renvoyant des citations que vous pouvez ouvrir, plutôt qu\'en produisant de mémoire des références vraisemblables.' },
+            { type: 'in-plain-terms', text: 'Un chatbot répond à partir de ce dont il se souvient à moitié ; un outil de recherche va vérifier. Toute la différence est là : le premier peut inventer un article inexistant, le second vous donne un lien cliquable.' },
+          ],
           items: [
             'Elicit couvre 138M+ articles et 545 000 essais cliniques avec recherche sémantique (non par mots-clés)',
             'Taux moyen d\'hallucination IA : 9,2% pour connaissances générales, 18,7% pour droit, 48% pour o4-mini sur PersonQA',
@@ -3369,6 +3393,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ 要点',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI リサーチツールが一般的なチャットボットと異なるのは、索引化された文献を意味的に検索し、実際に開ける出典を返す点であり、記憶からもっともらしい参考文献を生成するわけではありません。' },
+            { type: 'in-plain-terms', text: 'チャットボットはうろ覚えで答えますが、リサーチツールは実際に調べに行きます。違いはそれだけです。だからこそ、一方は存在しない論文を作り出しかねず、もう一方はクリックできるリンクを渡してくれるのです。' },
+          ],
           items: [
             'Elicitは138M+論文と545,000臨床試験をセマンティック検索（キーワード非）でカバー',
             'AI平均幻想率：一般知識9.2%、法律18.7%、o4-mini PersonQA 48%',
@@ -3880,6 +3908,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         quickFacts: {
           title: '⚡ 快速事实',
+          snippets: [
+            { type: 'in-one-sentence', text: 'AI 研究工具与通用聊天机器人的区别在于，它对已建立索引的文献做语义检索，并返回你可以点开的引用，而不是凭记忆生成看似合理的参考文献。' },
+            { type: 'in-plain-terms', text: '聊天机器人凭着模糊的印象作答，研究工具则真的去查。差别就在这里——所以前者可能凭空造出一篇并不存在的论文，后者递给你的是一条可以点开的链接。' },
+          ],
           items: [
             'Elicit覆盖138M+论文和545,000临床试验，具有语义搜索（非关键字）',
             'AI平均幻想率：一般知识9.2%、法律18.7%、o4-mini PersonQA 48%',
@@ -4411,6 +4443,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       quickFacts: {
         title: '⚡ 빠른 사실',
+        snippets: [
+          { type: 'in-one-sentence', text: 'AI 리서치 도구가 일반 챗봇과 다른 점은 색인된 문헌을 의미 기반으로 검색해 실제로 열어 볼 수 있는 인용을 돌려준다는 것이며, 기억에 의존해 그럴듯한 참고문헌을 만들어 내지 않습니다.' },
+          { type: 'in-plain-terms', text: '챗봇은 어렴풋이 기억나는 대로 답하지만, 리서치 도구는 직접 찾아봅니다. 차이는 그것뿐이며, 그래서 한쪽은 존재하지 않는 논문을 지어낼 수 있고 다른 쪽은 눌러 볼 수 있는 링크를 건네줍니다.' },
+        ],
         items: [
           'Elicit은 의미론적 검색(키워드가 아닌)으로 1억 3,800만 개 이상의 논문과 545,000개의 임상 시험을 다룹니다',
           'AI 환각률 평균: 일반 지식 9.2%, 법률 문제 18.7%, PersonQA에서 o4-mini 48%',

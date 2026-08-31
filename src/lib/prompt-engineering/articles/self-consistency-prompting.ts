@@ -73,6 +73,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsSelfConsistency: {
           title: 'What Self-Consistency Prompting Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Self-consistency prompting runs the same question several times at a non-zero temperature and takes the answer that appears most often, using agreement across independent attempts as a proxy for correctness.' },
+            { type: 'in-plain-terms', text: 'Ask the same question five times and go with the answer that keeps coming back. A model can talk itself into a wrong answer once; it is much less likely to make the same wrong turn five times in a row.' },
+          ],
           content: [
             '**Self-consistency prompting means sampling several independent answers to the same prompt and selecting the most consistent conclusion.** Rather than one chain of thought, you get multiple, potentially different chains.',
             'The idea is simple: if the model reasons in several different ways and most paths converge on the same answer, that answer is more trustworthy than a single run. If the paths disagree, you know the problem is ambiguous or difficult and needs closer review.',
@@ -329,6 +333,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsSelfConsistency: {
           title: 'Was ist Self-Consistency Prompting?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Self-Consistency Prompting stellt dieselbe Frage mehrfach bei einer Temperatur über null und nimmt die am häufigsten auftretende Antwort, wobei Übereinstimmung über unabhängige Versuche als Indikator für Korrektheit dient.' },
+            { type: 'in-plain-terms', text: 'Stellen Sie dieselbe Frage fünfmal und nehmen Sie die Antwort, die immer wiederkommt. Ein Modell kann sich einmal in eine falsche Antwort hineinreden — dass es fünfmal hintereinander denselben Fehlschluss zieht, ist deutlich unwahrscheinlicher.' },
+          ],
           content: [
             '**Self-Consistency Prompting bedeutet, mehrere unabhängige Antworten auf die gleiche Aufforderung zu samplen und die konsistenteste Schlussfolgerung auszuwählen.** Anstelle einer Gedankenkette erhalten Sie mehrere, möglicherweise unterschiedliche Ketten.',
             'Die Idee ist einfach: Wenn das Modell auf mehrere verschiedene Arten begründet und die meisten Pfade auf die gleiche Antwort hinweisen, ist diese Antwort zuverlässiger als ein einzelner Durchlauf. Wenn sich die Pfade unterscheiden, wissen Sie, dass das Problem mehrdeutig oder schwierig ist und eine genauere Überprüfung erfordert.',
@@ -669,6 +677,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsSelfConsistency: {
           title: 'Qué es el self-consistency prompting',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El self-consistency prompting lanza la misma pregunta varias veces con temperatura distinta de cero y se queda con la respuesta más frecuente, usando la coincidencia entre intentos independientes como indicio de acierto.' },
+            { type: 'in-plain-terms', text: 'Haz la misma pregunta cinco veces y quédate con la respuesta que se repite. Un modelo puede convencerse a sí mismo de una respuesta equivocada una vez; es mucho menos probable que cometa el mismo error cinco veces seguidas.' },
+          ],
           content: [
             '**El self-consistency prompting significa muestrear varias respuestas independientes al mismo prompt y seleccionar la conclusión más consistente.** En lugar de un solo chain of thought, obtienes múltiples, potencialmente diferentes cadenas.',
             'La idea es simple: si el modelo razona de varias maneras diferentes y la mayoría de los caminos convergen en la misma respuesta, esa respuesta es más confiable que una sola ejecución. Si los caminos difieren, sabes que el problema es ambiguo o difícil y necesita revisión más cercana.',
@@ -1000,6 +1012,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsSelfConsistency: {
           title: 'ما هو برومبت الاتساق الذاتي',
+          snippets: [
+            { type: 'in-one-sentence', text: 'يشغّل برومبت الاتساق الذاتي السؤال نفسه عدة مرات بدرجة حرارة أكبر من الصفر ويأخذ الإجابة الأكثر تكراراً، مستخدماً التوافق بين المحاولات المستقلة مؤشراً على الصحة.' },
+            { type: 'in-plain-terms', text: 'اطرح السؤال نفسه خمس مرات وخذ الإجابة التي تتكرر. قد يقنع النموذج نفسه بإجابة خاطئة مرة واحدة، لكن تكرار الخطأ ذاته خمس مرات متتالية أقل احتمالاً بكثير.' },
+          ],
           content: [
             '**يعني برومبت الاتساق الذاتي أخذ عينات من عدة استجابات مستقلة للبرومبت نفسه واختيار الاستنتاج الأكثر اتساقاً.** بدلاً من سلسلة أفكار واحدة، تحصل على مسارات متعددة، قد تختلف.',
             'الفكرة بسيطة: إذا استدل النموذج بطرق مختلفة متعددة وتقاطعت أغلب المسارات على الإجابة نفسها، فتلك الإجابة أكثر موثوقية من تشغيل واحد. إذا اختلفت المسارات، تعرف أن المشكلة غامضة أو صعبة وتحتاج مراجعة أدق.',
@@ -1310,6 +1326,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsSelfConsistency: {
           title: 'O que é Self-Consistency Prompting',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O self-consistency prompting executa a mesma pergunta várias vezes com temperatura diferente de zero e fica com a resposta mais frequente, usando a concordância entre tentativas independentes como indício de acerto.' },
+            { type: 'in-plain-terms', text: 'Faça a mesma pergunta cinco vezes e fique com a resposta que se repete. Um modelo pode se convencer de uma resposta errada uma vez; é bem menos provável que cometa o mesmo erro cinco vezes seguidas.' },
+          ],
           content: [
             '**Self-consistency prompting significa amostrar várias respostas independentes ao mesmo prompt e selecionar a conclusão mais consistente.** Em vez de um único chain of thought, você obtém múltiplos, potencialmente diferentes caminhos.',
             'A ideia é simples: se o modelo raciocina de várias maneiras diferentes e a maioria dos caminhos converge para a mesma resposta, essa resposta é mais confiável do que uma única execução. Se os caminhos divergem, você sabe que o problema é ambíguo ou difícil e precisa de revisão mais detalhada.',
@@ -1591,6 +1611,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsSelfConsistency: {
           title: 'Qu\'est-ce que le Self-Consistency Prompting ?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Le self-consistency prompting exécute la même question plusieurs fois à une température non nulle et retient la réponse la plus fréquente, l\'accord entre tentatives indépendantes servant d\'indice de justesse.' },
+            { type: 'in-plain-terms', text: 'Posez cinq fois la même question et gardez la réponse qui revient. Un modèle peut se persuader d\'une réponse fausse une fois ; qu\'il commette la même erreur cinq fois d\'affilée est bien moins probable.' },
+          ],
           content: [
             '**Le Self-Consistency Prompting signifie sampler plusieurs réponses indépendantes au même prompt et sélectionner la conclusion la plus cohérente.** Au lieu d\'une seule chaîne de pensée, vous obtenez plusieurs chemins potentiellement différents.',
             'L\'idée est simple : si le modèle raisonne de plusieurs façons différentes et que la plupart des chemins convergent vers la même réponse, cette réponse est plus fiable qu\'un seul passage. Si les chemins divergent, le problème est ambigu ou difficile et nécessite un examen plus approfondi.',
@@ -1899,6 +1923,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsSelfConsistency: {
           id: 'what-is-self-consistency',
           title: 'セルフコンシステンシーとは',
+          snippets: [
+            { type: 'in-one-sentence', text: 'セルフコンシステンシーは、温度をゼロより大きく設定して同じ質問を複数回実行し、最も多く現れた答えを採用する手法で、独立した試行間の一致を正しさの代理指標として用います。' },
+            { type: 'in-plain-terms', text: '同じ質問を5回投げて、繰り返し返ってくる答えを採用します。モデルが一度だけ誤った答えに自信を持つことはありますが、同じ間違いを5回続けて起こす可能性はずっと低くなります。' },
+          ],
           content: [
             '定義：同じ質問に対してLLMに複数の異なる推論経路を生成させ、最後の答えを投票で決定するプロンプト技法です。',
             '論文：Wang et al.（2023）ICLR。Princeton / DeepMind による研究。arXiv:2211.11559',
@@ -2403,6 +2431,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsSelfConsistency: {
           id: 'what-is-self-consistency',
           title: '自洽一致性是什么',
+          snippets: [
+            { type: 'in-one-sentence', text: '自洽一致性提示会在非零温度下多次运行同一个问题，并选取出现次数最多的答案，把多次独立尝试之间的一致性当作正确性的替代指标。' },
+            { type: 'in-plain-terms', text: '把同一个问题问五遍，采用反复出现的那个答案。模型偶尔会说服自己接受一个错误结论，但连续五次都拐进同一个错误弯道的可能性要小得多。' },
+          ],
           content: [
             '定义：同一个提示词用不同的采样参数运行多次，让模型生成不同的推理链，最后用多数投票选择最终答案。',
             '关键论文：Wang et al.（2023）ICLR。Princeton和Google DeepMind团队。arXiv:2211.11559',
@@ -2951,6 +2983,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsSelfConsistency: {
           title: '자기 일관성 프롬프팅이란 무엇인가',
+          snippets: [
+            { type: 'in-one-sentence', text: '자기 일관성 프롬프팅은 0이 아닌 temperature에서 같은 질문을 여러 번 실행한 뒤 가장 자주 나온 답을 채택하며, 독립적인 시도 간의 일치를 정확성의 대리 지표로 사용합니다.' },
+            { type: 'in-plain-terms', text: '같은 질문을 다섯 번 던지고 반복해서 돌아오는 답을 택하는 방식입니다. 모델이 한 번쯤 잘못된 답에 스스로 확신할 수는 있지만, 똑같은 오답을 다섯 번 연속으로 내놓을 가능성은 훨씬 낮습니다.' },
+          ],
           content: [
             '**자기 일관성 프롬프팅은 동일한 프롬프트에 대해 여러 독립적인 답변을 샘플링하고 가장 일관된 결론을 선택하는 것을 의미합니다.** 하나의 chain-of-thought 대신 잠재적으로 다른 여러 chain을 얻습니다.',
             '아이디어는 간단합니다: 모델이 여러 다른 방식으로 추론하고 대부분의 경로가 동일한 답으로 수렴한다면, 그 답은 단일 실행보다 더 신뢰할 수 있습니다. 경로들이 일치하지 않으면, 문제가 모호하거나 어려워 더 면밀한 검토가 필요하다는 것을 알 수 있습니다.',

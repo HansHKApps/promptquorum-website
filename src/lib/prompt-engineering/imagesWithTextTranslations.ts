@@ -3,6 +3,10 @@ import type { PESection } from './content'
 export const imagesWithTextDe: Record<string, PESection> = {
   definition: {
     title: 'Was ist Multimodales Prompting?',
+    snippets: [
+      { type: 'in-one-sentence', text: 'Multimodales Prompting bedeutet, ein Bild an deinen Text-Prompt anzuhängen, damit ein Vision-Language-Modell visuelle Inhalte zusätzlich zu deinen schriftlichen Anweisungen sehen und interpretieren kann.' },
+      { type: 'in-plain-terms', text: 'Statt ein Bild in Worten zu beschreiben und zu hoffen, dass das Modell es sich richtig vorstellt, zeigst du es einfach. Du tippst weiterhin deine Frage — das Bild geht mit, sodass das Modell mit dem arbeitet, was es sieht, statt mit deiner Beschreibung.' },
+    ],
     content: '**Multimodales Prompting kombiniert Text und Bilder in einem einzelnen Prompt, um die KI-Ausgabe zu steuern.** Vision-Language-Modelle (VLMs) – neuronale Netzwerke, die auf Bild- und Textdaten trainiert wurden – verarbeiten diese multimodalen Eingaben, um Fragen zu beantworten, Szenen zu beschreiben, neue Bilder zu generieren oder bestehende zu bearbeiten.\n\nIm Gegensatz zu reinem Text-Prompting ermöglicht multimodales Prompting das Zeigen statt Sagen. Ein Modell kann genau sehen, was du meinst, indem es visuelle Details, räumliche Beziehungen und Farben untersucht, statt sich nur auf schriftliche Beschreibung zu verlassen.',
   },
 
@@ -211,6 +215,10 @@ export const imagesWithTextDe: Record<string, PESection> = {
 export const imagesWithTextFr: Record<string, PESection> = {
   definition: {
     title: 'Qu\'est-ce que le Prompting Multimodal?',
+    snippets: [
+      { type: 'in-one-sentence', text: 'Le prompting multimodal consiste à joindre une image à votre prompt textuel afin qu\'un modèle vision-langage puisse voir et interpréter le contenu visuel en plus de vos instructions écrites.' },
+      { type: 'in-plain-terms', text: 'Plutôt que de décrire une image avec des mots en espérant que le modèle l\'imagine correctement, vous la lui montrez. Vous posez toujours votre question : l\'image l\'accompagne, et le modèle raisonne sur ce qu\'il voit plutôt que sur votre description.' },
+    ],
     content: '**Le prompting multimodal combine du texte et des images dans un seul prompt pour guider la sortie de l\'IA.** Les modèles vision-langage (VLM) – des réseaux de neurones entraînés sur des données d\'image et de texte – traitent ces entrées multimodales pour répondre aux questions, décrire des scènes, générer de nouvelles images ou modifier des images existantes.\n\nContrairement au prompting en texte seul, le prompting multimodal vous permet de montrer plutôt que dire. Un modèle peut voir exactement ce que vous entendez en examinant les détails visuels, les relations spatiales et les couleurs plutôt que de se fier uniquement à la description écrite.',
   },
 
@@ -419,6 +427,10 @@ export const imagesWithTextFr: Record<string, PESection> = {
 export const imagesWithTextJa: Record<string, PESection> = {
   definition: {
     title: 'マルチモーダルプロンプティングとは何か?',
+    snippets: [
+      { type: 'in-one-sentence', text: 'マルチモーダルプロンプティングとは、テキストプロンプトに画像を添付し、ビジョン言語モデルが文章による指示に加えて視覚的な内容を見て解釈できるようにすることです。' },
+      { type: 'in-plain-terms', text: '画像を言葉で説明してモデルが正しく想像してくれることを期待する代わりに、実際に見せます。質問はこれまでどおり入力し、そこに画像が付随するため、モデルは説明ではなく見えているものをもとに判断します。' },
+    ],
     content: '**マルチモーダルプロンプティングは、単一のプロンプトにテキストと画像を組み合わせて、AI出力をガイドすることです。** ビジョン言語モデル(VLM)—画像とテキストの両方のデータで訓練されたニューラルネットワーク—これらのマルチモーダル入力を処理して、質問に回答したり、シーンを説明したり、新しい画像を生成したり、既存の画像を編集したりします。\n\nテキストのみのプロンプティングとは異なり、マルチモーダルプロンプティングは話すのではなく見せることができます。モデルは、書かれた説明だけに頼るのではなく、視覚的な詳細、空間的関係、および色を検査することで、あなたが何を意味するかを正確に見ることができます。',
   },
 
@@ -627,6 +639,10 @@ export const imagesWithTextJa: Record<string, PESection> = {
 export const imagesWithTextEs: Record<string, PESection> = {
   definition: {
     title: '¿Qué es el Prompting Multimodal?',
+    snippets: [
+      { type: 'in-one-sentence', text: 'El prompting multimodal consiste en adjuntar una imagen a tu prompt de texto para que un modelo de visión-lenguaje pueda ver e interpretar el contenido visual además de tus instrucciones escritas.' },
+      { type: 'in-plain-terms', text: 'En lugar de describir una imagen con palabras y esperar que el modelo se la imagine bien, se la muestras. Sigues escribiendo tu pregunta: la imagen va con ella, así que el modelo razona sobre lo que ve y no sobre tu descripción.' },
+    ],
     content: '**El prompting multimodal combina texto e imágenes en un solo prompt para guiar la salida de la IA.** Los modelos de visión-lenguaje (VLM, por sus siglas en inglés) —redes neuronales entrenadas con datos de imagen y texto— procesan estas entradas multimodales para responder preguntas, describir escenas, generar nuevas imágenes o editar las existentes.\n\nA diferencia del prompting solo de texto, el prompting multimodal te permite mostrar en lugar de decir. Un modelo puede ver exactamente lo que quieres decir examinando detalles visuales, relaciones espaciales y colores, en lugar de basarse únicamente en la descripción escrita.',
   },
 
@@ -835,6 +851,10 @@ export const imagesWithTextEs: Record<string, PESection> = {
 export const imagesWithTextZh: Record<string, PESection> = {
   definition: {
     title: '什么是多模态提示?',
+    snippets: [
+      { type: 'in-one-sentence', text: '多模态提示是指在文本提示中附加图像，让视觉语言模型除了理解您的文字指令外，还能直接看到并解读视觉内容。' },
+      { type: 'in-plain-terms', text: '与其用文字描述一张图片、再指望模型想象正确，不如直接把图片给它看。您照常输入问题，图片随之一起发送，模型据此判断的是它看到的内容，而不是您的描述。' },
+    ],
     content: '**多模态提示是在单个提示中组合文本和图像，以指导AI输出。** 视觉语言模型(VLM)—在图像和文本数据上训练的神经网络—处理这些多模态输入来回答问题、描述场景、生成新图像或编辑现有图像。\n\n与纯文本提示不同，多模态提示让您能够展示而非讲述。模型可以通过检查视觉细节、空间关系和颜色来准确看到您的含义，而不仅仅依赖书面描述。',
   },
 
@@ -1043,6 +1063,10 @@ export const imagesWithTextZh: Record<string, PESection> = {
 export const imagesWithTextPt: Record<string, PESection> = {
   definition: {
     title: 'O que é Prompting Multimodal?',
+    snippets: [
+      { type: 'in-one-sentence', text: 'O prompting multimodal consiste em anexar uma imagem ao seu prompt de texto para que um modelo de visão-linguagem consiga ver e interpretar o conteúdo visual além das suas instruções escritas.' },
+      { type: 'in-plain-terms', text: 'Em vez de descrever uma imagem com palavras e torcer para o modelo imaginar direito, você simplesmente mostra a imagem. Você continua escrevendo a sua pergunta: a imagem vai junto, então o modelo raciocina sobre o que enxerga, e não sobre a sua descrição.' },
+    ],
     content: '**O prompting multimodal combina texto e imagens em um único prompt para guiar a saída da IA.** Os modelos de visão-linguagem (VLMs) — redes neurais treinadas em dados de imagem e texto — processam essas entradas multimodais para responder perguntas, descrever cenas, gerar novas imagens ou editar as existentes.\n\nAo contrário do prompting apenas com texto, o prompting multimodal permite mostrar em vez de descrever. Um modelo pode ver exatamente o que você quer dizer examinando detalhes visuais, relações espaciais e cores, em vez de depender apenas da descrição escrita.',
   },
 
@@ -1251,6 +1275,10 @@ export const imagesWithTextPt: Record<string, PESection> = {
 export const imagesWithTextAr: Record<string, PESection> = {
   definition: {
     title: 'ما هو الاستفسار متعدد الوسائط؟',
+    snippets: [
+      { type: 'in-one-sentence', text: 'الاستفسار متعدد الوسائط يعني إرفاق صورة باستفسارك النصي، بحيث يستطيع نموذج الرؤية واللغة رؤية المحتوى المرئي وتفسيره إلى جانب تعليماتك المكتوبة.' },
+      { type: 'in-plain-terms', text: 'بدلاً من وصف الصورة بالكلمات وانتظار أن يتخيلها النموذج بشكل صحيح، تعرضها عليه مباشرة. تكتب سؤالك كالمعتاد، وترافقه الصورة، فيستند النموذج إلى ما يراه لا إلى وصفك.' },
+    ],
     content: '**الاستفسار متعدد الوسائط هو دمج النصوص والصور في استفسار واحد لتوجيه مخرجات الذكاء الاصطناعي.** تُعالج نماذج الرؤية واللغة (VLMs) — الشبكات العصبية المدرَّبة على بيانات الصور والنصوص — هذه المدخلات متعددة الوسائط للإجابة على الأسئلة، ووصف المشاهد، وتوليد صور جديدة، أو تعديل الصور الموجودة.\n\nعلى خلاف الاستفسار النصي البحت، يتيح لك الاستفسار متعدد الوسائط إظهار ما تعنيه بدلاً من مجرد وصفه. يستطيع النموذج رؤية ما تقصده بالضبط من خلال فحص التفاصيل البصرية والعلاقات المكانية والألوان، بدلاً من الاعتماد فقط على الوصف الكتابي.',
   },
 

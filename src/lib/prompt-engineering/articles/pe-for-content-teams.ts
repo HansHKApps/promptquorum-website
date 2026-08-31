@@ -72,6 +72,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: 'What Makes Content Team Prompting Different?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Content teams need prompts that hold a brand voice across many writers and hundreds of pieces, so the hard problem is consistency and reuse rather than getting one good draft.' },
+          { type: 'in-plain-terms', text: 'A single writer can just keep rewriting until it sounds right. A team cannot — five people improvising five prompts produce five different voices. The prompt becomes the style guide, which is why it has to be written down and shared.' },
+        ],
         content: [
           '**Content team prompting differs from developer prompting because quality criteria are subjective, multi-stakeholder, and channel-dependent.** A developer tests a prompt against an exact output format. A content team tests a prompt against brand guidelines, editorial standards, and audience expectations — criteria that must be encoded explicitly or they will not be applied consistently.',
           'Three challenges specific to content team prompt engineering:',
@@ -249,6 +253,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: 'Was macht Content-Team-Prompting besonders?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Content-Teams brauchen Prompts, die eine Markenstimme über viele Autorinnen und Hunderte Beiträge hinweg halten; das schwierige Problem ist daher Konsistenz und Wiederverwendung, nicht ein einzelner guter Entwurf.' },
+          { type: 'in-plain-terms', text: 'Eine einzelne Autorin kann so lange umschreiben, bis es passt. Ein Team kann das nicht — fünf Personen, die fünf Prompts improvisieren, erzeugen fünf Stimmen. Der Prompt wird zum Styleguide, und genau deshalb muss er aufgeschrieben und geteilt werden.' },
+        ],
         content: [
           '**Content-Team-Prompting unterscheidet sich von Entwickler-Prompting, weil Qualitätskriterien subjektiv, mehrstakeholder-orientiert und kanalabhängig sind.** Drei Herausforderungen spezifisch für Content-Teams:',
         ],
@@ -378,6 +386,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: '¿Qué hace diferente el prompting de equipos de contenido?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Los equipos de contenido necesitan prompts que sostengan una voz de marca entre muchos redactores y cientos de piezas, así que el problema difícil es la consistencia y la reutilización, no conseguir un buen borrador.' },
+          { type: 'in-plain-terms', text: 'Una sola redactora puede reescribir hasta que suene bien. Un equipo no: cinco personas improvisando cinco prompts producen cinco voces. El prompt se convierte en la guía de estilo, y por eso hay que escribirlo y compartirlo.' },
+        ],
         content: [
           '**El prompting de equipos de contenido difiere del prompting de desarrolladores porque los criterios de calidad son subjetivos, multi-stakeholder y dependientes del canal.** Tres desafíos específicos del prompt engineering para equipos de contenido:',
         ],
@@ -531,6 +543,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: 'O que torna o prompting de equipes de conteúdo diferente?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Equipes de conteúdo precisam de prompts que sustentem uma voz de marca entre vários redatores e centenas de peças, então o problema difícil é consistência e reúso, não conseguir um bom rascunho.' },
+          { type: 'in-plain-terms', text: 'Uma redatora sozinha pode reescrever até soar certo. Um time não: cinco pessoas improvisando cinco prompts produzem cinco vozes. O prompt vira o guia de estilo, e é por isso que ele precisa estar escrito e compartilhado.' },
+        ],
         content: [
           '**O prompting de equipes de conteúdo difere do prompting de desenvolvedores porque os critérios de qualidade são subjetivos, multi-stakeholder e dependentes do canal.** Três desafios específicos do prompt engineering para equipes de conteúdo:',
         ],
@@ -685,6 +701,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: "Qu'est-ce qui distingue le prompting des équipes contenu ?",
+        snippets: [
+          { type: 'in-one-sentence', text: 'Les équipes contenu ont besoin de prompts capables de tenir une voix de marque sur de nombreux rédacteurs et des centaines de contenus : la difficulté tient à la cohérence et à la réutilisation, pas à obtenir un bon brouillon.' },
+          { type: 'in-plain-terms', text: 'Une rédactrice seule peut réécrire jusqu\'à ce que le ton soit juste. Une équipe non : cinq personnes improvisant cinq prompts produisent cinq voix. Le prompt devient la charte éditoriale, d\'où la nécessité de l\'écrire et de le partager.' },
+        ],
         content: [
           "**Le prompting des équipes contenu diffère du prompting des développeurs parce que les critères qualité sont subjectifs, multi-parties prenantes et dépendants du canal.** Trois défis spécifiques aux équipes contenu :",
         ],
@@ -831,6 +851,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: 'コンテンツチームのプロンプティングが特別な理由は？',
+        snippets: [
+          { type: 'in-one-sentence', text: 'コンテンツチームには、多数の書き手と数百本の記事にわたってブランドの声を保てるプロンプトが必要であり、難しいのは一本の良い草稿を得ることではなく、一貫性と再利用です。' },
+          { type: 'in-plain-terms', text: '書き手が一人なら、しっくりくるまで書き直せば済みます。チームではそうはいきません。五人が五つのプロンプトを即興で作れば、五つの声が生まれます。プロンプトそのものがスタイルガイドになるため、書き出して共有する必要があるのです。' },
+        ],
         content: [
           '**コンテンツチームのプロンプティングが開発者のプロンプティングと異なるのは、品質基準が主観的で、複数のステークホルダーが関与し、チャネルに依存するためです。** コンテンツチームに特有の3つの課題：',
         ],
@@ -977,6 +1001,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: '内容团队的提示词工程有何特别之处？',
+        snippets: [
+          { type: 'in-one-sentence', text: '内容团队需要能在多位作者、数百篇稿件之间维持同一品牌声音的提示词，因此真正棘手的是一致性与复用，而不是写出一篇好初稿。' },
+          { type: 'in-plain-terms', text: '一个人写稿，可以反复改到语感对为止；团队做不到——五个人临场写五条提示词，就会出现五种声音。提示词本身成了风格指南，所以它必须被写下来并共享。' },
+        ],
         content: [
           '**内容团队的提示词工程与开发者提示词工程不同，因为质量标准是主观的、多方利益相关者的和渠道依赖的。** 内容团队提示词工程的3个特有挑战：',
         ],
@@ -1123,6 +1151,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: 'ما الذي يجعل برومبتات فرق المحتوى مختلفة؟',
+        snippets: [
+          { type: 'in-one-sentence', text: 'تحتاج فرق المحتوى إلى برومبتات تحافظ على صوت العلامة عبر كتّاب كثر ومئات المواد، ولذلك تكمن الصعوبة في الاتساق وإعادة الاستخدام لا في الحصول على مسودة جيدة واحدة.' },
+          { type: 'in-plain-terms', text: 'الكاتب الواحد يستطيع إعادة الصياغة حتى يستقيم الأسلوب. أما الفريق فلا: خمسة أشخاص يرتجلون خمسة برومبتات ينتجون خمسة أصوات. يصبح البرومبت نفسه دليل الأسلوب، ولهذا يجب تدوينه ومشاركته.' },
+        ],
         content: [
           '**تختلف برومبتات فرق المحتوى عن برومبتات المطوّرين لأن معايير الجودة ذاتية ومتعددة الأطراف ومرتبطة بالقناة.** ثلاثة تحديات خاصة بهندسة البرومبت لفرق المحتوى:',
         ],
@@ -1311,6 +1343,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       content_team_challenges: {
         id: 'content-team-challenges',
         title: '콘텐츠 팀 프롬프팅이 다른 이유는 무엇입니까?',
+        snippets: [
+          { type: 'in-one-sentence', text: '콘텐츠 팀에는 여러 작성자와 수백 건의 콘텐츠에 걸쳐 브랜드 보이스를 유지하는 프롬프트가 필요하며, 따라서 어려운 문제는 좋은 초안 하나를 얻는 것이 아니라 일관성과 재사용입니다.' },
+          { type: 'in-plain-terms', text: '혼자 쓴다면 마음에 들 때까지 고쳐 쓰면 됩니다. 팀은 그럴 수 없습니다. 다섯 사람이 다섯 개의 프롬프트를 즉흥으로 만들면 목소리도 다섯 개가 됩니다. 프롬프트 자체가 스타일 가이드가 되므로 반드시 문서로 남기고 공유해야 합니다.' },
+        ],
         content: [
           '**콘텐츠 팀 프롬프팅은 품질 기준이 주관적이고 다중 이해관계자적이며 채널에 따라 다르기 때문에 개발자 프롬프팅과 다릅니다.** 개발자는 정확한 출력 형식에 대해 프롬프트를 테스트합니다. 콘텐츠 팀은 브랜드 지침, 편집 기준, 청중 기대치에 대해 프롬프트를 테스트합니다 — 이 기준들은 명시적으로 인코딩하지 않으면 일관되게 적용되지 않습니다.',
           '콘텐츠 팀 프롬프트 엔지니어링에 특유한 세 가지 도전:',

@@ -46,6 +46,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsPromptChaining: {
           title: 'What Prompt Chaining Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt chaining splits one large task into a sequence of smaller prompts, feeding each step\'s output into the next so every stage has a single, checkable job.' },
+            { type: 'in-plain-terms', text: 'It is an assembly line instead of one giant request. Each station does one thing and hands its work along, so when something goes wrong you can see exactly which station broke it — rather than staring at one bad answer with no idea where it went astray.' },
+          ],
           content: [
             '**Prompt chaining means connecting several prompts so that each one performs a focused subtask and passes its result forward.** Instead of asking the model to "do everything at once," you create a sequence such as "analyze → structure → generate → review."',
             'Each step has a clear input, a clear output format, and a narrow responsibility. The chain as a whole behaves more like a pipeline or workflow than a chat, which makes it easier to debug, maintain, and reuse.',
@@ -385,6 +389,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsPromptChaining: {
           title: 'Was ist Prompt Chaining?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt Chaining zerlegt eine große Aufgabe in eine Folge kleinerer Prompts und leitet die Ausgabe jedes Schritts an den nächsten weiter, sodass jede Stufe genau eine überprüfbare Aufgabe hat.' },
+            { type: 'in-plain-terms', text: 'Es ist ein Fließband statt einer einzigen Riesenanfrage. Jede Station erledigt eine Sache und reicht ihr Ergebnis weiter — geht etwas schief, sehen Sie genau, welche Station es verursacht hat, statt vor einer schlechten Antwort zu stehen und zu rätseln, wo es schiefging.' },
+          ],
           content: [
             '**Prompt Chaining bedeutet, mehrere Prompts zu verbinden, sodass jeder eine fokussierte Teilaufgabe ausführt und sein Ergebnis an die nächste weitergibt.** Anstatt das Modell zu bitten, „alles auf einmal zu tun", erstellen Sie eine Abfolge wie „Analyse → Strukturierung → Generierung → Überprüfung".',
             'Jeder Schritt hat eine klare Eingabe, ein klares Ausgabeformat und eine eng begrenzte Verantwortung. Die Kette insgesamt verhält sich mehr wie eine Pipeline oder ein Workflow als ein Chat, was Debugging, Wartung und Wiederverwendung erleichtert.',
@@ -740,6 +748,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsPromptChaining: {
           title: 'Qué es el prompt chaining',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El prompt chaining divide una tarea grande en una secuencia de prompts más pequeños y pasa la salida de cada paso al siguiente, de modo que cada etapa tenga un único trabajo verificable.' },
+            { type: 'in-plain-terms', text: 'Es una cadena de montaje en lugar de una petición gigante. Cada puesto hace una cosa y pasa su trabajo, así que cuando algo falla ves exactamente qué puesto lo rompió, en vez de mirar una respuesta mala sin saber dónde se torció.' },
+          ],
           content: [
             '**El prompt chaining significa conectar varios prompts para que cada uno realice una subtarea enfocada y pase su resultado hacia adelante.** En lugar de pedirle al modelo que "haga todo a la vez", creas una secuencia como "analizar → estructurar → generar → revisar."',
             'Cada paso tiene una entrada clara, un formato de salida claro y una responsabilidad estrecha. La cadena en su conjunto se comporta más como un pipeline o workflow que como un chat, lo que la hace más fácil de depurar, mantener y reutilizar.',
@@ -984,6 +996,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsPromptChaining: {
           title: 'ما هو ربط البرومبتات؟',
+          snippets: [
+            { type: 'in-one-sentence', text: 'يقسّم ربط البرومبتات المهمة الكبيرة إلى سلسلة من الطلبات الأصغر، ويمرّر مخرجات كل خطوة إلى التالية، بحيث تؤدي كل مرحلة عملاً واحداً قابلاً للتحقق.' },
+            { type: 'in-plain-terms', text: 'إنه خط تجميع بدل طلب واحد ضخم. كل محطة تؤدي مهمة واحدة وتمرّر عملها، فإذا اختلّ شيء عرفت بالضبط أي محطة تسببت فيه، بدلاً من التحديق في إجابة رديئة دون معرفة أين انحرفت.' },
+          ],
           content: [
             '**ربط البرومبتات يعني ربط عدة برومبتات بحيث يؤدي كل منها مهمة فرعية مركّزة ويمرر نتيجته إلى الأمام.** بدلًا من مطالبة النموذج بـ"فعل كل شيء دفعة واحدة"، تنشئ تسلسلًا مثل: "تحليل → هيكلة → توليد → مراجعة."',
             'كل خطوة لها مدخلات واضحة وتنسيق مخرجات واضح ومسؤولية محدودة. السلسلة ككل تتصرف كـpipeline أو سير عمل أكثر من كونها محادثة، مما يجعلها أسهل في التصحيح والصيانة وإعادة الاستخدام.',
@@ -1224,6 +1240,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsPromptChaining: {
           title: 'O que é o prompt chaining',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O prompt chaining divide uma tarefa grande em uma sequência de prompts menores e passa a saída de cada etapa para a seguinte, de modo que cada estágio tenha um único trabalho verificável.' },
+            { type: 'in-plain-terms', text: 'É uma linha de montagem em vez de um pedido gigante. Cada posto faz uma coisa e repassa o trabalho, então quando algo dá errado você enxerga exatamente qual posto quebrou, em vez de encarar uma resposta ruim sem saber onde ela se perdeu.' },
+          ],
           content: [
             '**O prompt chaining significa conectar vários prompts para que cada um realize uma subtarefa focada e passe seu resultado para a frente.** Em vez de pedir ao modelo que "faça tudo de uma vez", você cria uma sequência como "analisar → estruturar → gerar → revisar."',
             'Cada etapa tem uma entrada clara, um formato de saída claro e uma responsabilidade estreita. A cadeia como um todo se comporta mais como um pipeline ou fluxo de trabalho do que como um chat, tornando-a mais fácil de depurar, manter e reutilizar.',
@@ -1467,6 +1487,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsPromptChaining: {
           title: 'Ce qu\'est le Chaînage de Prompts',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Le chaînage de prompts découpe une tâche volumineuse en une suite de prompts plus petits et transmet la sortie de chaque étape à la suivante, afin que chaque étape n\'ait qu\'une seule tâche vérifiable.' },
+            { type: 'in-plain-terms', text: 'C\'est une chaîne de montage plutôt qu\'une requête géante. Chaque poste fait une seule chose et transmet son travail : en cas de problème, vous voyez précisément quel poste a échoué, au lieu de fixer une mauvaise réponse sans savoir où elle a dérapé.' },
+          ],
           content: [
             '**Le chaînage de prompts signifie connecter plusieurs prompts afin que chacun exécute une sous-tâche ciblée et transmette son résultat au suivant.** Au lieu de demander au modèle de « tout faire à la fois », vous créez une séquence comme « analyser → structurer → générer → réviser ».',
             'Chaque étape a une entrée claire, un format de sortie clair et une responsabilité étroite. La chaîne dans son ensemble se comporte davantage comme un pipeline ou un workflow que comme un chat, ce qui la rend plus facile à déboguer, maintenir et réutiliser.',
@@ -1741,6 +1765,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsPromptChaining: {
       title: 'プロンプトチェーニングとは',
+      snippets: [
+        { type: 'in-one-sentence', text: 'プロンプトチェーニングは、大きなタスクを小さなプロンプトの連なりに分割し、各ステップの出力を次のステップへ渡すことで、各段階に検証可能な単一の役割を持たせる手法です。' },
+        { type: 'in-plain-terms', text: '巨大な依頼を一度に投げるのではなく、組み立てラインにする発想です。各工程がひとつの作業だけを担って次へ渡すため、問題が起きたときにどの工程が原因かがはっきり分かります。悪い回答をひとつ眺めて原因を推測する必要はありません。' },
+      ],
       content: [
         '**プロンプトチェーニングとは、複数のプロンプトをつなぎ合わせて、それぞれが集中した小さなサブタスクを実行し、その結果を次に渡す手法です。** モデルに「すべてを一度にやってほしい」と指示するのではなく、「分析 → 構造化 → 生成 → レビュー」のような順序を作ります。',
         '各ステップには明確な入力、明確な出力フォーマット、狭い責任範囲があります。チェーン全体は会話というより、パイプラインやワークフローのように機能するため、デバッグ、保守、再利用がより簡単になります。',
@@ -2175,6 +2203,10 @@ zh: {
       sections: {
         whatIsPromptChaining: {
           title: '프롬프트 체이닝이란',
+          snippets: [
+            { type: 'in-one-sentence', text: '프롬프트 체이닝은 큰 작업을 더 작은 프롬프트의 연속으로 나누고 각 단계의 출력을 다음 단계로 넘겨, 모든 단계가 검증 가능한 하나의 역할만 맡도록 하는 방식입니다.' },
+            { type: 'in-plain-terms', text: '거대한 요청 하나 대신 조립 라인을 두는 방식입니다. 각 공정이 한 가지 일만 하고 결과를 넘기므로, 문제가 생겼을 때 어느 공정이 망가뜨렸는지 정확히 보입니다. 나쁜 답변 하나를 놓고 어디서 어긋났는지 추측할 필요가 없습니다.' },
+          ],
           content: [
             '**프롬프트 체이닝은 여러 프롬프트를 연결하여 각 프롬프트가 집중적인 하위 작업을 수행하고 그 결과를 다음 단계로 전달하는 방식입니다.** 모델에게 "모든 것을 한 번에 처리하라"고 요청하는 대신, "분석 → 구조화 → 생성 → 검토"와 같은 순서를 구성합니다.',
             '각 단계에는 명확한 입력, 명확한 출력 형식, 그리고 좁은 책임 범위가 있습니다. 체인 전체는 대화보다는 파이프라인 또는 워크플로처럼 동작하므로, 디버깅·유지 관리·재사용이 더욱 용이합니다.',

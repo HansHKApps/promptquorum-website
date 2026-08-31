@@ -214,6 +214,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: 'What Are the Two AI Summarisation Types and When to Use Each?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Extractive summarisation selects sentences verbatim from the source and cannot introduce a factual error; abstractive summarisation rewrites the material in new wording, reading better but able to distort.' },
+            { type: 'in-plain-terms', text: 'Extractive is highlighting a document with a marker — nothing new can appear. Abstractive is asking someone to retell it in their own words: far more readable, and exactly where a detail can quietly change.' },
+          ],
           content: [
             '**Extractive summarisation copies sentences directly from the source; abstractive summarisation generates new sentences that paraphrase and condense — the two approaches trade factual precision against readability and compression.**',
             'Extractive summarisation — used by tools like Scholarcy — ranks sentences by keyword frequency, position, and information density, then reproduces the top-scoring sentences without modification. Because no new text is generated, factual errors are structurally impossible: the output is always a subset of the source. Abstractive summarisation — used by GPT-5.6 (OpenAI), Claude Sonnet 5 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) — generates new text that synthesises and paraphrases, producing more readable output at the cost of a higher hallucination risk.',
@@ -815,6 +819,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: 'Was sind die zwei KI-Zusammenfassungstypen und wann ist welcher zu verwenden?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Extraktive Zusammenfassung wählt Sätze wörtlich aus der Quelle aus und kann keinen sachlichen Fehler einführen; abstraktive Zusammenfassung formuliert den Inhalt neu, liest sich besser, kann ihn aber verzerren.' },
+            { type: 'in-plain-terms', text: 'Extraktiv ist, ein Dokument mit dem Textmarker zu bearbeiten — Neues kann nicht entstehen. Abstraktiv heißt, jemanden zu bitten, es in eigenen Worten wiederzugeben: deutlich lesbarer, und genau dort kann sich ein Detail unbemerkt verändern.' },
+          ],
           content: [
             '**Extraktive Zusammenfassung kopiert Sätze direkt aus der Quelle; abstraktive Zusammenfassung generiert neue Sätze, die paraphrasieren und verdichten — die zwei Ansätze tauschen faktische Präzision gegen Lesbarkeit und Kompression.**',
             'Extraktive Zusammenfassung — eingesetzt von Tools wie Scholarcy — bewertet Sätze nach Schlüsselworthäufigkeit, Position und Informationsdichte und reproduziert die am höchsten bewerteten Sätze ohne Modifikation. Da kein neuer Text generiert wird, sind faktische Fehler strukturell ausgeschlossen: Die Ausgabe ist stets ein Teilmenge der Quelle. Abstraktive Zusammenfassung — eingesetzt von GPT-5.6 (OpenAI), Claude Sonnet 5 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) — generiert neuen Text, der synthetisiert und paraphrasiert, und liefert lesbarere Ausgaben auf Kosten eines höheren Halluzinationsrisikos.',
@@ -1317,6 +1325,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: '¿Cuáles son los dos tipos de resumen con IA y cuándo usar cada uno?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El resumen extractivo selecciona frases literales del original y no puede introducir un error factual; el resumen abstractivo reescribe el material con palabras nuevas, se lee mejor pero puede distorsionarlo.' },
+            { type: 'in-plain-terms', text: 'Lo extractivo es subrayar un documento con un rotulador: no puede aparecer nada nuevo. Lo abstractivo es pedirle a alguien que lo cuente con sus palabras: mucho más legible, y justo ahí es donde un detalle puede cambiar sin que lo notes.' },
+          ],
           content: [
             '**El resumen extractivo copia oraciones directamente de la fuente; el abstractivo genera nuevas oraciones que parafrasean y condensan — los dos enfoques intercambian precisión factual por legibilidad y compresión.**',
             'El resumen extractivo — usado por herramientas como Scholarcy — clasifica oraciones por frecuencia de palabras clave, posición y densidad de información, luego reproduce las oraciones con mejor puntuación sin modificarlas. Dado que no se genera texto nuevo, los errores fácticos son estructuralmente imposibles. El resumen abstractivo — usado por GPT-5.6, Claude Sonnet 5 y Gemini 3.1 Pro — genera nuevo texto que sintetiza y parafrasea, produciendo salidas más legibles a costa de un mayor riesgo de alucinación.',
@@ -1820,6 +1832,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: 'ما نوعا التلخيص بالذكاء الاصطناعي ومتى تستخدم كلًا منهما؟',
+          snippets: [
+            { type: 'in-one-sentence', text: 'يختار التلخيص الاستخلاصي جملاً حرفية من المصدر ولا يمكنه إدخال خطأ واقعي؛ أما التلخيص التوليدي فيعيد صياغة المادة بكلمات جديدة، فيقرأ بسلاسة أكبر لكنه قادر على تحريفها.' },
+            { type: 'in-plain-terms', text: 'الاستخلاصي أشبه بتظليل مستند بقلم تحديد: لا يمكن أن يظهر شيء جديد. أما التوليدي فأشبه بأن تطلب من أحدهم أن يعيد الحكاية بكلماته: أسهل قراءةً بكثير، وهناك تحديداً يمكن لتفصيل أن يتبدّل بهدوء.' },
+          ],
           content: [
             '**يقوم التلخيص الاستخراجي بنسخ الجمل مباشرةً من المصدر؛ أما التجريدي فيولّد جملًا جديدة تُعيد الصياغة وتُكثّف — يتبادل النهجان الدقة الواقعية مع قابلية القراءة والضغط.**',
             'يُصنّف التلخيص الاستخراجي — المستخدم في أدوات مثل Scholarcy — الجمل حسب تكرار الكلمات المفتاحية والموضع وكثافة المعلومات، ثم يعيد إنتاج الجمل الأعلى تقييمًا دون تعديل. ولأنه لا يُولَّد نص جديد، فالأخطاء الواقعية مستحيلة هيكليًا. أما التلخيص التجريدي — المستخدم في GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro — فيولّد نصًا جديدًا يُركّب ويُعيد الصياغة، منتجًا مخرجات أكثر قابلية للقراءة على حساب خطر أعلى للهلوسة.',
@@ -2315,6 +2331,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: 'Quais são os dois tipos de resumo com IA e quando usar cada um?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O resumo extrativo seleciona frases literais da fonte e não consegue introduzir um erro factual; o resumo abstrativo reescreve o material com palavras novas, lê melhor, mas pode distorcê-lo.' },
+            { type: 'in-plain-terms', text: 'O extrativo é marcar um documento com caneta marca-texto: nada novo pode aparecer. O abstrativo é pedir para alguém recontar com as próprias palavras: bem mais legível, e é exatamente aí que um detalhe pode mudar sem ninguém notar.' },
+          ],
           content: [
             '**O resumo extrativo copia frases diretamente da fonte; o abstrativo gera novas frases que parafraseiam e condensam — as duas abordagens trocam precisão factual por legibilidade e compressão.**',
             'O resumo extrativo — usado por ferramentas como Scholarcy — classifica frases por frequência de palavras-chave, posição e densidade de informação, depois reproduz as frases com melhor pontuação sem modificá-las. Como nenhum texto novo é gerado, erros factuais são estruturalmente impossíveis. O resumo abstrativo — usado por GPT-5.6, Claude Sonnet 5 e Gemini 3.1 Pro — gera novo texto que sintetiza e parafraseia, produzindo saídas mais legíveis a um custo maior de risco de alucinação.',
@@ -2816,6 +2836,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: 'Quels sont les deux types de résumé par IA et quand utiliser chacun ?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Le résumé extractif sélectionne des phrases telles quelles dans la source et ne peut introduire d\'erreur factuelle ; le résumé abstractif reformule le contenu avec de nouveaux mots, plus agréable à lire mais susceptible de le déformer.' },
+            { type: 'in-plain-terms', text: 'L\'extractif revient à surligner un document : rien de nouveau ne peut apparaître. L\'abstractif revient à demander à quelqu\'un de le raconter avec ses mots : bien plus lisible, et c\'est précisément là qu\'un détail peut changer sans bruit.' },
+          ],
           content: [
             '**Le résumé extractif copie les phrases directement de la source ; le résumé abstrait génère de nouvelles phrases qui paraphrasent et condensent — les deux approches échangent la précision factuelle contre la lisibilité et la compression.**',
             'Le résumé extractif — utilisé par des outils comme Scholarcy — classe les phrases par fréquence de mots-clés, position et densité d\'information, puis reproduit les phrases les mieux classées sans modification. Puisqu\'aucun nouveau texte n\'est généré, les erreurs factuelles sont structurellement impossibles : la sortie est toujours un sous-ensemble de la source. Le résumé abstrait — utilisé par GPT-5.6 (OpenAI), Claude Sonnet 5 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) — génère du texte nouveau qui synthétise et paraphrase, produisant une sortie plus lisible au prix d\'un risque d\'hallucination plus élevé.',
@@ -3337,6 +3361,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: '2つのAI要約タイプは何で、それぞれいつ使用するか？',
+          snippets: [
+            { type: 'in-one-sentence', text: '抽出型要約は原文から文をそのまま選び出すため事実誤りを生み得ませんが、生成型要約は内容を新しい言葉で書き直すため読みやすい反面、意味をゆがめる可能性があります。' },
+            { type: 'in-plain-terms', text: '抽出型は文書にマーカーを引く作業で、新しい情報が入り込む余地はありません。生成型は誰かに自分の言葉で語り直してもらうようなもので、はるかに読みやすい一方、細部が静かに変わり得るのはまさにそこです。' },
+          ],
           content: [
             '**抽出型要約はソースから文を直接コピー。抽象型要約は新しい文を生成して言い換えと濃縮 — 2つのアプローチは事実精度と可読性・圧縮をトレードオフ。**',
             '抽出型要約（Scholarcyなどで使用）は文をキーワード頻度、位置、情報密度でランク付けし、最高スコア文を修正なしで再現。新しいテキストは生成されないため、事実のエラーは構造的に不可能。出力は常にソースのサブセット。抽象型要約（GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro）は、合成して言い換える新しいテキストを生成。より読みやすい出力をハルシネーションリスク増加のコストで提供。',
@@ -3860,6 +3888,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'two-summarisation-types',
           title: '两种AI总结类型和何时使用各种？',
+          snippets: [
+            { type: 'in-one-sentence', text: '抽取式摘要直接从原文中挑选原句，不会引入事实错误；生成式摘要则用新的措辞重写内容，读起来更顺，但有可能失真。' },
+            { type: 'in-plain-terms', text: '抽取式就像拿荧光笔在文档上划重点，不会冒出原文没有的东西。生成式则像请人用自己的话复述一遍：可读性好得多，而细节悄悄走样，也正是发生在这里。' },
+          ],
           content: [
             '**抽取式总结直接从源文档复制句子；抽象式总结生成新的释义和压缩句子——两种方法在事实精确性和可读性之间进行权衡。**',
             '抽取式总结——由Scholarcy等工具使用——根据关键词频率、位置和信息密度对句子进行排名，然后再现最高评分的句子而无需修改。由于没有生成新文本，事实错误在结构上是不可能的：输出始终是源的子集。抽象式总结——由GPT-5.6（OpenAI）、Claude Sonnet 5（Anthropic）和Gemini 3.1 Pro（Google DeepMind）使用——生成综合和释义的新文本，以更高的幻觉风险为代价生成更可读的输出。',
@@ -4382,6 +4414,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         id: 'two-summarisation-types',
         title: 'AI 요약의 두 가지 유형과 각각의 사용 시기는 무엇입니까?',
+        snippets: [
+          { type: 'in-one-sentence', text: '추출 요약은 원문에서 문장을 그대로 골라내므로 사실 오류를 만들어 낼 수 없고, 생성 요약은 내용을 새로운 표현으로 다시 쓰기 때문에 읽기는 좋지만 왜곡될 수 있습니다.' },
+          { type: 'in-plain-terms', text: '추출 요약은 문서에 형광펜을 긋는 일과 같아서 없던 내용이 생길 수 없습니다. 생성 요약은 누군가에게 자기 말로 다시 들려 달라고 하는 것과 같습니다. 훨씬 잘 읽히지만, 세부 사항이 조용히 바뀌는 지점도 바로 거기입니다.' },
+        ],
         content: [
           '**추출적 요약은 소스에서 문장을 직접 복사하고, 추상적 요약은 내용을 바꿔 쓰고 압축하는 새 문장을 생성합니다 — 두 접근법은 사실적 정확도와 가독성 및 압축률을 트레이드오프합니다.**',
           '추출적 요약 — Scholarcy 같은 도구에서 사용 — 은 키워드 빈도, 위치, 정보 밀도로 문장을 순위 매긴 다음 수정 없이 가장 높은 점수의 문장을 재현합니다. 새 텍스트가 생성되지 않으므로 사실적 오류가 구조적으로 불가능합니다. 추상적 요약 — GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro에서 사용 — 은 합성하고 바꿔 쓴 새 텍스트를 생성하여 더 읽기 쉬운 출력을 생성하지만 환각 위험이 높아집니다.',

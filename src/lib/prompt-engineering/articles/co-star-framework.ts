@@ -156,6 +156,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCOSTAR: {
           title: 'What the CO-STAR Framework Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CO-STAR is a six-part prompt template — Context, Objective, Style, Tone, Audience, Response — that separates what you want said from how it should sound and who it is for.' },
+            { type: 'in-plain-terms', text: 'Most weak output comes from collapsing three questions into one. CO-STAR pulls them apart: what is the goal, what voice should it use, and who is reading. Answer each and the model stops guessing at the other two.' },
+          ],
           content: [
             '**The CO-STAR Framework is a prompt engineering pattern for complex instructions where you need models to understand not just what to do, but how, for whom, and in which style.** Instead of writing a single vague sentence, you break your prompt into explicit CO-STAR components so that all large language models receive a complete brief.',
             'The acronym typically expands as:',
@@ -576,6 +580,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         wasIstCOSTAR: {
           title: 'Was das CO-STAR-Framework ist',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CO-STAR ist eine sechsteilige Prompt-Vorlage — Kontext, Ziel, Stil, Tonfall, Zielgruppe, Antwortformat — die trennt, was gesagt werden soll, wie es klingen soll und für wen es bestimmt ist.' },
+            { type: 'in-plain-terms', text: 'Schwache Ergebnisse entstehen meist, weil drei Fragen zu einer verschmelzen. CO-STAR trennt sie: Was ist das Ziel, welche Stimme soll es haben, wer liest mit? Beantworten Sie jede — und das Modell muss die anderen beiden nicht mehr erraten.' },
+          ],
           content: [
             '**Das CO-STAR-Framework ist ein Prompt-Engineering-Muster für komplexe Anweisungen, bei denen Modelle nicht nur verstehen sollen, was zu tun ist, sondern wie, für wen und in welchem Stil.** Anstatt einen einzelnen vagen Satz zu schreiben, zerlegen Sie Ihren Prompt in explizite CO-STAR-Komponenten, damit alle großen Sprachmodelle ein vollständiges Briefing erhalten.',
             'Das Akronym wird typischerweise wie folgt erweitert:',
@@ -1037,6 +1045,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCOSTAR: {
           title: 'Qué es el Framework CO-STAR',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CO-STAR es una plantilla de prompt de seis partes — contexto, objetivo, estilo, tono, audiencia y formato de respuesta — que separa qué quieres decir de cómo debe sonar y para quién es.' },
+            { type: 'in-plain-terms', text: 'Casi todo el resultado flojo viene de fundir tres preguntas en una. CO-STAR las separa: cuál es el objetivo, qué voz debe usar y quién lo va a leer. Responde a cada una y el modelo deja de adivinar las otras dos.' },
+          ],
           content: [
             '**El Framework CO-STAR es un patrón de prompt engineering para instrucciones complejas donde necesitas que los modelos entiendan no solo qué hacer, sino cómo, para quién y en qué estilo.** En lugar de escribir una sola oración vaga, divides tu prompt en componentes CO-STAR explícitos para que todos los modelos de lenguaje reciban un brief completo.',
             'El acrónimo se expande típicamente como:',
@@ -1509,6 +1521,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCOSTAR: {
           title: 'ما هو إطار CO-STAR',
+          snippets: [
+            { type: 'in-one-sentence', text: 'إطار CO-STAR قالب برومبت من ستة أجزاء — السياق والهدف والأسلوب والنبرة والجمهور وصيغة الرد — يفصل بين ما تريد قوله وكيف ينبغي أن يبدو ولمن هو موجَّه.' },
+            { type: 'in-plain-terms', text: 'معظم المخرجات الضعيفة تنشأ من دمج ثلاثة أسئلة في سؤال واحد. يفكّكها CO-STAR: ما الهدف، وبأي صوت، ومن القارئ؟ أجب عن كل منها، فيتوقف النموذج عن تخمين الاثنين الآخرين.' },
+          ],
           content: [
             '**إطار CO-STAR هو نمط لهندسة الموجّهات للتعليمات المعقدة حيث تحتاج النماذج إلى فهم ليس فقط ما تفعله، بل كيف، ولمن، وبأي أسلوب.** بدلًا من كتابة جملة واحدة مبهمة، تقسّم موجّهك إلى مكوّنات CO-STAR صريحة حتى تتلقى جميع نماذج اللغة نبذة كاملة.',
             'يتوسع الاختصار عادةً كما يلي:',
@@ -1973,6 +1989,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCOSTAR: {
           title: 'O que é o Framework CO-STAR',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O CO-STAR é um template de prompt de seis partes — contexto, objetivo, estilo, tom, público e formato de resposta — que separa o que você quer dizer de como deve soar e para quem é.' },
+            { type: 'in-plain-terms', text: 'Quase todo resultado fraco vem de juntar três perguntas em uma. O CO-STAR as separa: qual é o objetivo, que voz usar e quem vai ler. Responda cada uma e o modelo para de adivinhar as outras duas.' },
+          ],
           content: [
             '**O Framework CO-STAR é um padrão de prompt engineering para instruções complexas onde você precisa que os modelos entendam não apenas o que fazer, mas como, para quem e em que estilo.** Em vez de escrever uma única frase vaga, você divide seu prompt em componentes CO-STAR explícitos para que todos os modelos de linguagem recebam um briefing completo.',
             'O acrônimo se expande tipicamente como:',
@@ -2441,6 +2461,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         ceQuestCOSTAR: {
           title: 'Ce qu\'est le framework CO-STAR',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CO-STAR est un modèle de prompt en six parties — contexte, objectif, style, ton, audience, format de réponse — qui distingue ce que vous voulez dire de la manière dont cela doit sonner et de la personne à qui cela s\'adresse.' },
+            { type: 'in-plain-terms', text: 'La plupart des sorties médiocres viennent de trois questions fondues en une. CO-STAR les sépare : quel est l\'objectif, quelle voix adopter, qui va lire. Répondez à chacune et le modèle cesse de deviner les deux autres.' },
+          ],
           content: [
             '**Le framework CO-STAR est un pattern d\'ingénierie de prompts pour instructions complexes où vous avez besoin que les modèles comprennent non seulement QUOI faire, mais COMMENT, pour QUI et dans quel STYLE.** Plutôt qu\'écrire une phrase vague, vous décomposez le prompt en composants CO-STAR explicites afin que tous les grands modèles de langage reçoivent un brief complet.',
             'L\'acronyme se développe généralement comme suit:',
@@ -2902,6 +2926,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         ceQuestCOSTAR: {
           title: 'CO-STARフレームワークとは',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CO-STAR は、文脈・目的・文体・トーン・読み手・回答形式という6つの要素からなるプロンプトテンプレートで、「何を伝えるか」と「どう聞こえるべきか」「誰に向けたものか」を切り分けます。' },
+            { type: 'in-plain-terms', text: '出力が振るわない原因の多くは、三つの問いをひとつに畳んでしまうことにあります。CO-STAR はそれを分解します。目的は何か、どんな声で語るか、誰が読むのか。それぞれに答えれば、モデルは残りを推測せずに済みます。' },
+          ],
           content: [
             '**CO-STARフレームワークは、複雑な指示向けのプロンプトエンジニアリングパターンです。モデルに「何をするか」だけでなく、「どのように」「誰のために」「どのようなスタイルで」理解させたいときに使います。** 単一の曖昧な文を書く代わりに、プロンプトを明示的なCO-STAR要素に分解します。すべての大規模言語モデルが完全なブリーフを受け取ります。',
             '「このセクションでは、CO-STARの各要素について詳しく説明します。」',
@@ -3724,6 +3752,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       whatIsCOSTAR: {
         title: 'CO-STAR 프레임워크란 무엇입니까',
+        snippets: [
+          { type: 'in-one-sentence', text: 'CO-STAR는 맥락, 목적, 문체, 어조, 독자, 응답 형식이라는 여섯 요소로 구성된 프롬프트 템플릿으로, 무엇을 말할지와 어떤 느낌이어야 하는지, 누구를 위한 것인지를 분리합니다.' },
+          { type: 'in-plain-terms', text: '결과가 부실한 대부분의 원인은 세 가지 질문을 하나로 뭉뚱그리는 데 있습니다. CO-STAR는 이를 분리합니다. 목적은 무엇인지, 어떤 목소리로 말할지, 누가 읽을지입니다. 각각에 답하면 모델이 나머지 둘을 추측할 필요가 없어집니다.' },
+        ],
         content: [
           '**CO-STAR 프레임워크는 복잡한 지시를 위한 프롬프트 엔지니어링 패턴으로, 모델이 무엇을 해야 하는지뿐만 아니라 어떻게, 누구를 위해, 어떤 스타일로 해야 하는지를 이해해야 하는 경우에 사용됩니다.** 하나의 모호한 문장을 작성하는 대신, 모든 언어 모델이 완전한 브리프를 받을 수 있도록 프롬프트를 명시적인 CO-STAR 구성 요소로 나눕니다.',
           '약어는 일반적으로 다음과 같이 확장됩니다:',
