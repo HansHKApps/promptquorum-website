@@ -116,13 +116,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Glossary-specific overrides for maximum CTR + keyword density
   const isGlossary = slug === 'prompt-engineering-glossary'
   const finalDesc = isGlossary
-    ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.'
+    ? 'Essential glossary: 100+ prompt engineering terms with definitions, real-world examples, and 280+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.'
     : metaDesc
   // og-glossary-mindmap-2026.png (a custom mindmap infographic) was never produced —
   // fall back to the standard per-article generator route until one is created.
   const finalOgImage = ogImageUrl
   const finalTitle = isGlossary
-    ? 'Prompt Engineering Glossary: 100 Terms Defined for 2026'
+    ? 'Prompt Engineering Glossary: 100+ Terms Defined for 2026'
     : pageTitle
 
   // Per-surface metadata: og and twitter can have distinct values
@@ -146,19 +146,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }),
     alternates: generateAlternates(canonicalPath, selectedLang, hasTranslation, availableLangsForMeta, [...PATH_PREFIX_LANGS]),
     openGraph: {
-      title: isGlossary ? 'Prompt Engineering Glossary: 100 Essential Terms (2026)' : ogTitle,
-      description: isGlossary ? 'Essential glossary: 100 prompt engineering terms with definitions, real-world examples, and 400+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.' : ogDesc,
+      title: isGlossary ? 'Prompt Engineering Glossary: 100+ Essential Terms (2026)' : ogTitle,
+      description: isGlossary ? 'Essential glossary: 100+ prompt engineering terms with definitions, real-world examples, and 280+ citations. Core concepts, agents, safety, RAG, evaluation. Free beta.' : ogDesc,
       url: canonicalUrl,
       type: 'article',
       siteName: 'PromptQuorum',
-      images: [{ url: finalOgImage, width: 1200, height: 675, alt: isGlossary ? 'Prompt Engineering Glossary Mind Map 2026 — 100 Essential Terms' : article.title }],
+      images: [{ url: finalOgImage, width: 1200, height: 675, alt: isGlossary ? 'Prompt Engineering Glossary Mind Map 2026 — 100+ Essential Terms' : article.title }],
       publishedTime: article.publishDate,
       modifiedTime: article.dateModified ?? ((article as any).lastFactChecked as string | undefined)?.substring(0, 10) ?? article.publishDate,
     },
     twitter: {
       card: 'summary_large_image',
       site: '@promptquorum',
-      title: isGlossary ? 'Prompt Engineering Glossary (100 Terms)' : twTitle,
+      title: isGlossary ? 'Prompt Engineering Glossary (100+ Terms)' : twTitle,
       description: isGlossary ? 'Chain-of-Thought • RAG • Few-shot • Agents • Temperature • Token Limits. 100 searchable, cited, expert definitions.' : twDesc,
       images: [finalOgImage],
     },
