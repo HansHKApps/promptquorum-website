@@ -169,6 +169,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatAreLimitations: {
           title: 'What Are the Hard Limits of Large Language Models?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Some LLM failures are structural rather than temporary: a model predicts text from patterns, so it cannot verify a fact, know what happened after training, or reliably count and calculate without external tools.' },
+            { type: 'in-plain-terms', text: 'These are not bugs waiting for the next release. A model that generates plausible text has no way to check whether the text is true — so the fix is never a better prompt, it is giving the model a tool that can actually look things up or do the arithmetic.' },
+          ],
           content: [
             '**LLMs have eight structural limitations that no prompt, fine-tune, or model size increase can fully overcome — they require architectural additions to work around.** These limits emerge from the transformer architecture and training process itself, not from poor implementation.',
             'The distinction matters for prompt engineering: limitations require *system design changes* (retrieval tools, memory layers, verification steps), while poor prompt quality is a separate, fixable problem. Conflating the two leads to over-engineering prompts when the real constraint is architectural.',
@@ -557,6 +561,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatAreLimitations: {
           title: 'Was sind die harten Grenzen großer Sprachmodelle?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Manche Schwächen großer Sprachmodelle sind strukturell, nicht vorübergehend: Ein Modell sagt Text anhand von Mustern voraus und kann daher keinen Fakt verifizieren, nichts über die Zeit nach dem Training wissen und ohne externe Werkzeuge nicht zuverlässig zählen oder rechnen.' },
+            { type: 'in-plain-terms', text: 'Das sind keine Fehler, die das nächste Release behebt. Ein Modell, das plausiblen Text erzeugt, kann nicht prüfen, ob dieser Text stimmt. Die Lösung ist deshalb nie ein besserer Prompt, sondern ein Werkzeug, das tatsächlich nachschlagen oder rechnen kann.' },
+          ],
           content: [
             '**LLMs haben acht strukturelle Einschränkungen, die kein Prompt, kein Fine-Tuning und keine Modellgrößenerhöhung vollständig überwinden kann — sie erfordern architektonische Ergänzungen als Workaround.** Diese Grenzen entstehen aus der Transformer-Architektur und dem Trainingsprozess selbst, nicht aus mangelhafter Implementierung.',
             'Die Unterscheidung ist für das Prompt Engineering wichtig: Einschränkungen erfordern *systemische Design-Änderungen* (Retrieval-Tools, Gedächtnisschichten, Verifikationsschritte), während schlechte Prompt-Qualität ein separates, behebbares Problem ist. Beides zu verwechseln führt zu Überengineering von Prompts, wenn die eigentliche Einschränkung architektonischer Natur ist.',
@@ -859,6 +867,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Las 8 limitaciones estructurales de los LLMs',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Algunos fallos de los LLM son estructurales y no temporales: el modelo predice texto a partir de patrones, así que no puede verificar un hecho, saber qué pasó tras su entrenamiento ni contar o calcular de forma fiable sin herramientas externas.' },
+            { type: 'in-plain-terms', text: 'No son errores que arregle la próxima versión. Un modelo que genera texto verosímil no tiene forma de comprobar si ese texto es cierto: por eso la solución nunca es un prompt mejor, sino darle una herramienta que sí pueda consultar o hacer la cuenta.' },
+          ],
           content: [
             '**Los grandes modelos de lenguaje tienen ocho límites estrictos que se aplican independientemente del tamaño del modelo, el proveedor o el enfoque de entrenamiento.** Estos no son errores — son propiedades estructurales de cómo los LLMs están diseñados. Cada workaround a continuación es una solución de producción probada, no una teoría.',
             'Estas restricciones aplican universalmente: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large y todos los modelos de código abierto son igualmente afectados. El prompt engineering puede mitigar el impacto de estas limitaciones pero no puede eliminarlas.',
@@ -1075,6 +1087,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'القيود الهيكلية الثمانية للنماذج اللغوية الكبيرة',
+          snippets: [
+            { type: 'in-one-sentence', text: 'بعض إخفاقات النماذج اللغوية الكبيرة هيكلية لا مؤقتة: فالنموذج يتنبأ بالنص انطلاقاً من الأنماط، ولذلك لا يستطيع التحقق من واقعة، ولا معرفة ما جرى بعد تدريبه، ولا العدّ والحساب بموثوقية دون أدوات خارجية.' },
+            { type: 'in-plain-terms', text: 'هذه ليست عللاً ينتظر إصلاحها في الإصدار القادم. فالنموذج الذي يولّد نصاً معقولاً لا يملك وسيلة للتحقق من صحته؛ ولهذا لا يكون الحل يوماً برومبتاً أفضل، بل منحه أداة تستطيع فعلاً البحث أو إجراء الحساب.' },
+          ],
           content: [
             '**للنماذج اللغوية الكبيرة ثمانية قيود صارمة تُطبَّق بصرف النظر عن حجم النموذج أو المزوِّد أو منهج التدريب.** هذه ليست أخطاءً — بل هي خصائص هيكلية لكيفية تصميم النماذج اللغوية الكبيرة. كل حل مذكور أدناه هو حل إنتاجي مُجرَّب، لا نظرية.',
             'تُطبَّق هذه القيود بشكل شامل: GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وLLaMA 3.1 وMistral Large وجميع النماذج مفتوحة المصدر متأثرة بالقدر ذاته. يمكن لهندسة التعليمات أن تُخفِّف من تأثير هذه القيود لكن لا تستطيع إزالتها.',
@@ -1288,6 +1304,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'As 8 limitações estruturais dos LLMs',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Algumas falhas dos LLMs são estruturais, não temporárias: o modelo prevê texto a partir de padrões, então não consegue verificar um fato, saber o que aconteceu depois do treinamento nem contar e calcular de forma confiável sem ferramentas externas.' },
+            { type: 'in-plain-terms', text: 'Não são bugs esperando a próxima versão. Um modelo que gera texto plausível não tem como conferir se o texto é verdadeiro — por isso a solução nunca é um prompt melhor, e sim dar a ele uma ferramenta que realmente consulte ou faça a conta.' },
+          ],
           content: [
             '**Os grandes modelos de linguagem têm oito limites rígidos que se aplicam independentemente do tamanho do modelo, do fornecedor ou da abordagem de treinamento.** Esses não são bugs — são propriedades estruturais de como os LLMs são projetados. Cada workaround abaixo é uma solução de produção testada, não uma teoria.',
             'Essas restrições se aplicam universalmente: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large e todos os modelos de código aberto são igualmente afetados. O prompt engineering pode mitigar o impacto dessas limitações, mas não pode eliminá-las.',
@@ -1590,6 +1610,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatAreLimitations: {
           title: 'Quelles sont les limites fondamentales des grands modèles de langage ?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Certaines défaillances des grands modèles de langage sont structurelles et non passagères : le modèle prédit du texte à partir de motifs, il ne peut donc pas vérifier un fait, connaître l\'après-entraînement, ni compter ou calculer de façon fiable sans outil externe.' },
+            { type: 'in-plain-terms', text: 'Ce ne sont pas des bogues que la prochaine version corrigera. Un modèle qui produit du texte vraisemblable n\'a aucun moyen de vérifier s\'il est vrai : la solution n\'est donc jamais un meilleur prompt, mais un outil capable de consulter ou de calculer réellement.' },
+          ],
           content: [
             '**Les LLMs ont huit limitations structurelles qu\'aucun prompt, aucun affinage et aucune augmentation de la taille du modèle ne peut surmonter entièrement — elles nécessitent des ajouts architecturaux pour être contournées.** Ces limites émergent de l\'architecture transformer et du processus d\'entraînement lui-même, pas d\'une mauvaise implémentation.',
             'La distinction est importante pour l\'ingénierie des prompts : les limitations nécessitent des *changements de conception système* (outils de récupération, couches de mémoire, étapes de vérification), tandis que la mauvaise qualité des prompts est un problème séparé et corrigeable. Confondre les deux conduit à un sur-engineering des prompts quand la vraie contrainte est architecturale.',
@@ -1978,6 +2002,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     whatAreLimitations: {
       title: '大規模言語モデルの硬い制限は何ですか?',
+      snippets: [
+        { type: 'in-one-sentence', text: '大規模言語モデルの限界の一部は一時的なものではなく構造的です。モデルはパターンから次の語を予測するため、事実を検証することも、学習後に起きた出来事を知ることも、外部ツールなしに数え上げや計算を確実に行うこともできません。' },
+        { type: 'in-plain-terms', text: '次のリリースで直る不具合ではありません。もっともらしい文章を生成する仕組みには、その文章が正しいかを確かめる手段が備わっていないからです。したがって解決策はより良いプロンプトではなく、実際に調べたり計算したりできる道具を与えることです。' },
+      ],
       content: [
         '**LLMには8つの構造的な制限があり、プロンプト、ファインチューン、またはモデルサイズの増加では完全に克服できません — それらはアーキテクチャの追加が必要です。** これらの制限は、実装の不備ではなく、トランスフォーマーアーキテクチャとトレーニングプロセス自体から生じます。',
         'プロンプトエンジニアリングにとって重要な区別は：制限は*システム設計の変更*が必要です（検索ツール、メモリレイヤー、検証ステップ）。一方、低い品質のプロンプトは別の、修正可能な問題です。この2つを混同すると、実際の制約がアーキテクチャにあるときに、プロンプトの過度なエンジニアリングが生じます。',
@@ -2661,6 +2689,10 @@ zh: {
     sections: {
       definition: {
         title: 'LLM의 8가지 구조적 한계',
+        snippets: [
+          { type: 'in-one-sentence', text: 'LLM의 일부 실패는 일시적인 것이 아니라 구조적입니다. 모델은 패턴을 바탕으로 텍스트를 예측하므로 사실을 검증할 수 없고, 학습 이후에 일어난 일을 알 수 없으며, 외부 도구 없이 안정적으로 세거나 계산할 수 없습니다.' },
+          { type: 'in-plain-terms', text: '다음 버전에서 고쳐질 버그가 아닙니다. 그럴듯한 문장을 생성하는 구조에는 그 문장이 참인지 확인할 방법이 없기 때문입니다. 따라서 해법은 더 나은 프롬프트가 아니라, 실제로 찾아보거나 계산할 수 있는 도구를 붙여 주는 것입니다.' },
+        ],
         content: [
           '**대형 언어 모델에는 모델 크기, 제공업체, 학습 방식에 관계없이 적용되는 여덟 가지 엄격한 한계가 있습니다.** 이것들은 버그가 아닙니다 — LLM의 설계 방식에서 비롯된 구조적 특성입니다. 아래의 각 우회법은 이론이 아닌 검증된 프로덕션 해결책입니다.',
           '이러한 제약사항은 보편적으로 적용됩니다: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large 및 모든 오픈소스 모델이 동등하게 영향을 받습니다. 프롬프트 엔지니어링은 이러한 한계의 영향을 완화할 수 있지만 제거할 수는 없습니다.',
