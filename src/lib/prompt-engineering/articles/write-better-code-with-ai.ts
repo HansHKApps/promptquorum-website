@@ -1136,6 +1136,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': 'Alucinación variable. Desplegable localmente. Mejor para investigación y control total de la infraestructura.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: 'La presentación cubre: los 5 elementos de un prompt estructurado (rol, objetivo, restricciones, formato de salida, casos límite), la elección de modelo (Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro), Chain-of-Thought para depurar, los ajustes de temperatura (0,1–0,2 en producción) y la tasa del 45 % de vulnerabilidades. Descarga el PDF como ficha de referencia de generación de código y seguridad con IA.',
       sections: {
         tldr: {
           title: 'Puntos clave',
@@ -1485,6 +1487,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', 'position': 5, 'name': 'Qwen Code', 'description': 'هلوسة متفاوتة. قابل للنشر محليًا. الأفضل للبحث والتحكم الكامل في البنية التحتية.' },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: 'يغطي العرض التقديمي: عناصر الموجّه المنظم الخمسة (الدور، الهدف، القيود، تنسيق المخرجات، الحالات الحدية)، واختيار النموذج (Claude Opus 5 مقابل GPT-5.6 مقابل Gemini 3.1 Pro)، وChain-of-Thought لتصحيح الأخطاء، وإعدادات Temperature (0.1–0.2 للإنتاج)، ونسبة الثغرات البالغة 45%. نزّل ملف PDF كبطاقة مرجعية لتوليد الكود وأمانه بالذكاء الاصطناعي.',
       sections: {
         tldr: {
           title: 'النقاط الرئيسية',
@@ -1838,6 +1842,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
       },
+      gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
+      gammaDescription: 'A apresentação cobre: os 5 elementos de um prompt estruturado (função, objetivo, restrições, formato de saída, casos extremos), a escolha de modelo (Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro), Chain-of-Thought para depuração, os ajustes de temperatura (0,1–0,2 em produção) e a taxa de 45% de vulnerabilidades. Baixe o PDF como cartão de referência de geração de código e segurança com IA.',
       sections: {
         tldr: {
           title: 'Principais conclusões',

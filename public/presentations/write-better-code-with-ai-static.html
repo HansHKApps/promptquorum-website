@@ -588,7 +588,7 @@
                         intro: '',
                         items: [
                             '1. Definiere deine Rolle und Expertise',
-                            '2. Staat das Ziel klar (was zu bauen)',
+                            '2. Formuliere das Ziel klar (was gebaut werden soll)',
                             '3. Spezifiziere Constraints (Frameworks, Bibliotheken)',
                             '4. Definiere Output-Format (nur Code mit Kommentaren)',
                             '5. Liste Edge Cases auf (Nullwerte, Fehler)'
@@ -1177,6 +1177,622 @@
                         href: 'https://www.promptquorum.com'
                     }
                 ]
+            },
+            es: {
+                title: 'Escribir mejor código con IA: prompts, modelos y seguridad 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Escribir mejor código\ncon IA',
+                        subtitle: 'Prompts estructurados, selección de modelo y flujos de seguridad',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=es'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Prompts estructurados: la base',
+                        intro: '5 elementos críticos para mejor código:',
+                        items: [
+                            '<strong>Rol:</strong> "Eres un Senior Python Backend Engineer"',
+                            '<strong>Objetivo:</strong> qué tarea concreta ejecutar',
+                            '<strong>Restricciones:</strong> bibliotecas, frameworks y límites',
+                            '<strong>Formato de salida:</strong> "Devuelve solo código, sin explicación"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Estructura de prompt en 5 pasos',
+                        intro: '',
+                        items: [
+                            '1. Define tu rol y experiencia',
+                            '2. Enuncia el objetivo con claridad (qué construir)',
+                            '3. Especifica las restricciones (frameworks, bibliotecas)',
+                            '4. Define el formato de salida (solo código con comentarios)',
+                            '5. Enumera los casos límite (valores nulos, errores)'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Comparación de modelos para tareas de código',
+                        columns: ['Tarea', 'Mejor modelo', 'Por qué'],
+                        rows: [
+                            { Tarea: 'Componentes React', 'Mejor modelo': 'Claude Opus 5', 'Por qué': 'JSX y props precisos' },
+                            { Tarea: 'Corrección de bugs', 'Mejor modelo': 'Claude Opus 5', 'Por qué': 'Mejores trazas' },
+                            { Tarea: 'Diseño de algoritmos', 'Mejor modelo': 'GPT-5.6', 'Por qué': 'Razonamiento potente' },
+                            { Tarea: 'Análisis de base de código', 'Mejor modelo': 'Gemini 3.1 Pro', 'Por qué': 'Contexto de 2M tokens' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ajustes de temperatura para código',
+                        intro: 'Controla la aleatoriedad de forma estratégica:',
+                        items: [
+                            '<strong>Producción (T=0,1–0,2):</strong> determinista, seguro, consistente',
+                            '<strong>Lluvia de ideas (T=0,7–0,9):</strong> opciones diversas para explorar',
+                            '<strong>Por qué importa:</strong> el valor por defecto 0,7–1,0 es incorrecto para código'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Ventana de contexto por modelo',
+                        columns: ['Modelo', 'Ventana de contexto', 'Implicación'],
+                        rows: [
+                            { Modelo: 'GPT-5.6', 'Ventana de contexto': '128k tokens', 'Implicación': '~96.000 líneas visibles' },
+                            { Modelo: 'Claude Opus 5', 'Ventana de contexto': '1M tokens', 'Implicación': 'Mejor contexto multiarchivo' },
+                            { Modelo: 'Gemini 3.1 Pro', 'Ventana de contexto': '2M tokens', 'Implicación': 'Análisis completo de la base de código' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Chain-of-Thought para depuración',
+                        intro: 'Pide al modelo que razone antes de responder:',
+                        items: [
+                            'Traza la ejecución paso a paso antes de producir código',
+                            'Identifica exactamente dónde se rompe la lógica',
+                            'Hace el error corregible sin regenerar toda la salida'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'La crisis de seguridad: 45 % de vulnerabilidades',
+                        intro: 'Tres modos de fallo críticos:',
+                        items: [
+                            '<strong>Dependencias alucinadas:</strong> 20 % sugiere paquetes inexistentes',
+                            '<strong>Implementaciones inseguras:</strong> inyección SQL, criptografía débil',
+                            '<strong>Casos límite ausentes:</strong> sin comprobación de nulos, excepciones sin tratar'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Estadísticas de calidad y seguridad',
+                        intro: 'Hallazgos clave de investigación:',
+                        items: [
+                            '<strong>45 % del código generado por IA contiene vulnerabilidades</strong> (Veracode 2025)',
+                            '20 % recomienda nombres de paquetes alucinados',
+                            '30–75 % más rápido — pero exige revisión de seguridad antes del despliegue'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 errores comunes que evitar',
+                        intro: '',
+                        items: [
+                            '1. Tratar la salida de IA como lista para producción (revisa y pasa linter siempre)',
+                            '2. Prompts vagos (mejor especificar JWT + bcrypt)',
+                            '3. Ignorar la temperatura (0,7–1,0 por defecto es incorrecto para código)',
+                            '4. Aceptar paquetes alucinados (verifica antes en PyPI/npm)',
+                            '5. No dar contexto del código existente (la IA necesita tus patrones)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Flujo de trabajo: mejor código con IA',
+                        intro: 'Enfoque sistemático en 5 pasos:',
+                        items: [
+                            '1. Define rol y restricciones desde el principio (sin paquetes nuevos)',
+                            '2. Estructura el prompt: rol → objetivo → restricciones → formato → casos límite',
+                            '3. Usa CoT para depurar: "traza la ejecución paso a paso"',
+                            '4. Fija T=0,1–0,2 para código de producción en cada sesión',
+                            '5. Pasa linter de seguridad + verificación multimodelo antes del despliegue'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Preguntas frecuentes clave',
+                        faqs: [
+                            {
+                                q: '¿Cuál es el mejor modelo de IA para código en 2026?',
+                                a: 'Claude Opus 5 (backend, depuración), GPT-5.6 (algoritmos), Gemini 3.1 Pro (bases de código grandes), Llama 3.1 8B (local y privado).'
+                            },
+                            {
+                                q: '¿Es seguro desplegar código generado por IA?',
+                                a: 'No. El 45 % contiene vulnerabilidades. Revisa siempre, pasa un linter y contrasta con varios modelos.'
+                            },
+                            {
+                                q: '¿Cuánto más rápido se trabaja con herramientas de IA?',
+                                a: '126 % más proyectos por semana en estudios, pero depende de la tarea: la integración compleja tarda un 19 % más.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Variaciones regionales y cumplimiento',
+                        intro: 'Tres estrategias clave:',
+                        items: [
+                            '<strong>España/UE (RGPD y LOPD-GDD):</strong> Mistral AI, Ollama local, cero salida de datos',
+                            '<strong>China (PIPL):</strong> Qwen 3, DeepSeek V3, solo on-premise',
+                            '<strong>Japón (METI):</strong> Llama 3.1 8B local, residencia de datos crítica'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Prueba PromptQuorum gratis',
+                        body: 'Comparación multimodelo para detectar alucinaciones antes del despliegue.',
+                        cta: 'Empezar gratis',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            pt: {
+                title: 'Escrever código melhor com IA: prompts, modelos e segurança 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'Escrever código melhor\ncom IA',
+                        subtitle: 'Prompts estruturados, escolha de modelo e fluxos de segurança',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=pt'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Prompts estruturados: a base',
+                        intro: '5 elementos críticos para um código melhor:',
+                        items: [
+                            '<strong>Função:</strong> "Você é um Senior Python Backend Engineer"',
+                            '<strong>Objetivo:</strong> qual tarefa específica executar',
+                            '<strong>Restrições:</strong> bibliotecas, frameworks e limites',
+                            '<strong>Formato de saída:</strong> "Retorne apenas código, sem explicação"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Estrutura de prompt em 5 passos',
+                        intro: '',
+                        items: [
+                            '1. Defina sua função e experiência',
+                            '2. Enuncie o objetivo com clareza (o que construir)',
+                            '3. Especifique as restrições (frameworks, bibliotecas)',
+                            '4. Defina o formato de saída (apenas código com comentários)',
+                            '5. Liste os casos extremos (valores nulos, erros)'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Comparação de modelos para tarefas de código',
+                        columns: ['Tarefa', 'Melhor modelo', 'Por quê'],
+                        rows: [
+                            { Tarefa: 'Componentes React', 'Melhor modelo': 'Claude Opus 5', 'Por quê': 'JSX e props precisos' },
+                            { Tarefa: 'Correção de bugs', 'Melhor modelo': 'Claude Opus 5', 'Por quê': 'Melhores rastreamentos' },
+                            { Tarefa: 'Design de algoritmos', 'Melhor modelo': 'GPT-5.6', 'Por quê': 'Raciocínio forte' },
+                            { Tarefa: 'Análise da base de código', 'Melhor modelo': 'Gemini 3.1 Pro', 'Por quê': 'Contexto de 2M tokens' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Ajustes de temperatura para código',
+                        intro: 'Controle a aleatoriedade de forma estratégica:',
+                        items: [
+                            '<strong>Produção (T=0,1–0,2):</strong> determinístico, seguro, consistente',
+                            '<strong>Brainstorming (T=0,7–0,9):</strong> opções diversas para explorar',
+                            '<strong>Por que importa:</strong> o padrão 0,7–1,0 é errado para código'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'Janela de contexto por modelo',
+                        columns: ['Modelo', 'Janela de contexto', 'Implicação'],
+                        rows: [
+                            { Modelo: 'GPT-5.6', 'Janela de contexto': '128k tokens', 'Implicação': '~96.000 linhas visíveis' },
+                            { Modelo: 'Claude Opus 5', 'Janela de contexto': '1M tokens', 'Implicação': 'Melhor contexto multiarquivo' },
+                            { Modelo: 'Gemini 3.1 Pro', 'Janela de contexto': '2M tokens', 'Implicação': 'Análise completa da base de código' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Chain-of-Thought para depuração',
+                        intro: 'Peça ao modelo que raciocine antes de responder:',
+                        items: [
+                            'Rastreie a execução passo a passo antes de produzir código',
+                            'Identifique exatamente onde a lógica quebra',
+                            'Torna o erro corrigível sem regenerar toda a saída'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'A crise de segurança: 45% de vulnerabilidades',
+                        intro: 'Três modos de falha críticos:',
+                        items: [
+                            '<strong>Dependências alucinadas:</strong> 20% sugerem pacotes inexistentes',
+                            '<strong>Implementações inseguras:</strong> injeção de SQL, criptografia fraca',
+                            '<strong>Casos extremos ausentes:</strong> sem verificação de nulos, exceções não tratadas'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Estatísticas de qualidade e segurança',
+                        intro: 'Principais achados de pesquisa:',
+                        items: [
+                            '<strong>45% do código gerado por IA contém vulnerabilidades</strong> (Veracode 2025)',
+                            '20% recomendam nomes de pacotes alucinados',
+                            '30–75% mais rápido — mas exige revisão de segurança antes do deploy'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 erros comuns a evitar',
+                        intro: '',
+                        items: [
+                            '1. Tratar a saída da IA como pronta para produção (sempre revise e rode o linter)',
+                            '2. Prompts vagos (melhor especificar JWT + bcrypt)',
+                            '3. Ignorar a temperatura (o padrão 0,7–1,0 é errado para código)',
+                            '4. Aceitar pacotes alucinados (verifique antes no PyPI/npm)',
+                            '5. Não dar contexto do código existente (a IA precisa dos seus padrões)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Fluxo de trabalho: código melhor com IA',
+                        intro: 'Abordagem sistemática em 5 passos:',
+                        items: [
+                            '1. Defina função e restrições desde o início (sem pacotes novos)',
+                            '2. Estruture o prompt: função → objetivo → restrições → formato → casos extremos',
+                            '3. Use CoT para depurar: "rastreie a execução passo a passo"',
+                            '4. Defina T=0,1–0,2 para código de produção em toda sessão',
+                            '5. Rode linter de segurança + verificação multimodelo antes do deploy'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'Perguntas frequentes principais',
+                        faqs: [
+                            {
+                                q: 'Qual é o melhor modelo de IA para código em 2026?',
+                                a: 'Claude Opus 5 (backend, depuração), GPT-5.6 (algoritmos), Gemini 3.1 Pro (bases de código grandes), Llama 3.1 8B (local e privado).'
+                            },
+                            {
+                                q: 'É seguro fazer deploy de código gerado por IA?',
+                                a: 'Não. 45% contém vulnerabilidades. Sempre revise, rode um linter e confronte com vários modelos.'
+                            },
+                            {
+                                q: 'Quanto mais rápido se trabalha com ferramentas de IA?',
+                                a: '126% mais projetos por semana em estudos, mas depende da tarefa: integração complexa leva 19% mais tempo.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Variações regionais e conformidade',
+                        intro: 'Três estratégias principais:',
+                        items: [
+                            '<strong>Brasil (LGPD/ANPD):</strong> Llama 3.1 8B ou Mistral Small via Ollama, zero saída de dados',
+                            '<strong>China (PIPL):</strong> Qwen 3, DeepSeek V3, apenas on-premise',
+                            '<strong>Japão (METI):</strong> Llama 3.1 8B local, residência de dados crítica'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'Teste o PromptQuorum gratuitamente',
+                        body: 'Comparação multimodelo para detectar alucinações antes do deploy.',
+                        cta: 'Começar grátis',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ko: {
+                title: 'AI로 더 나은 코드 작성하기: 프롬프트, 모델, 보안 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'AI로 더 나은\n코드 작성하기',
+                        subtitle: '구조화된 프롬프트, 모델 선택, 보안 워크플로',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=ko'
+                    },
+                    {
+                        type: 'list',
+                        h2: '구조화된 프롬프트: 기본기',
+                        intro: '더 나은 코드를 위한 5가지 핵심 요소:',
+                        items: [
+                            '<strong>역할:</strong> "당신은 시니어 Python 백엔드 엔지니어입니다"',
+                            '<strong>목표:</strong> 수행할 구체적인 작업',
+                            '<strong>제약 조건:</strong> 라이브러리, 프레임워크, 한계',
+                            '<strong>출력 형식:</strong> "설명 없이 코드만 반환하세요"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5단계 프롬프트 구조',
+                        intro: '',
+                        items: [
+                            '1. 역할과 전문성을 정의한다',
+                            '2. 목표를 명확히 진술한다 (무엇을 만들 것인가)',
+                            '3. 제약 조건을 지정한다 (프레임워크, 라이브러리)',
+                            '4. 출력 형식을 정의한다 (주석 포함 코드만)',
+                            '5. 엣지 케이스를 나열한다 (널 값, 오류)'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '코딩 작업별 모델 비교',
+                        columns: ['작업', '최적 모델', '이유'],
+                        rows: [
+                            { '작업': 'React 컴포넌트', '최적 모델': 'Claude Opus 5', '이유': '정확한 JSX와 props 처리' },
+                            { '작업': '버그 수정', '최적 모델': 'Claude Opus 5', '이유': '뛰어난 단계별 추적' },
+                            { '작업': '알고리즘 설계', '최적 모델': 'GPT-5.6', '이유': '강력한 추론 능력' },
+                            { '작업': '코드베이스 분석', '최적 모델': 'Gemini 3.1 Pro', '이유': '2M 토큰 컨텍스트' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '코드 생성을 위한 Temperature 설정',
+                        intro: '무작위성을 전략적으로 통제하세요:',
+                        items: [
+                            '<strong>프로덕션 (T=0.1–0.2):</strong> 결정적이고 안전하며 일관적',
+                            '<strong>브레인스토밍 (T=0.7–0.9):</strong> 탐색할 다양한 선택지',
+                            '<strong>중요한 이유:</strong> 기본값 0.7–1.0은 코드에 부적합'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: '모델별 컨텍스트 창',
+                        columns: ['모델', '컨텍스트 창', '의미'],
+                        rows: [
+                            { '모델': 'GPT-5.6', '컨텍스트 창': '128k 토큰', '의미': '약 96,000줄 조회 가능' },
+                            { '모델': 'Claude Opus 5', '컨텍스트 창': '1M 토큰', '의미': '멀티파일 컨텍스트에 유리' },
+                            { '모델': 'Gemini 3.1 Pro', '컨텍스트 창': '2M 토큰', '의미': '전체 코드베이스 분석' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '디버깅을 위한 Chain-of-Thought',
+                        intro: '답변 전에 모델이 추론하도록 요청하세요:',
+                        items: [
+                            '코드를 내놓기 전에 실행을 단계별로 추적하게 한다',
+                            '논리가 깨지는 지점을 정확히 짚어낸다',
+                            '전체 재생성 없이 오류를 수정할 수 있게 된다'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '보안 문제: 45% 취약점 비율',
+                        intro: '세 가지 핵심 실패 유형:',
+                        items: [
+                            '<strong>환각 의존성:</strong> 20% 확률로 존재하지 않는 패키지를 제안',
+                            '<strong>안전하지 않은 구현:</strong> SQL 인젝션, 취약한 암호화',
+                            '<strong>누락된 엣지 케이스:</strong> 널 검사 없음, 처리되지 않은 예외'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '코드 품질 및 보안 통계',
+                        intro: '핵심 연구 결과:',
+                        items: [
+                            '<strong>AI 생성 코드의 45%에 취약점이 존재</strong> (Veracode 2025)',
+                            '20%는 환각된 패키지 이름을 추천',
+                            '30–75% 더 빠르지만 배포 전 보안 검토가 필수'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '피해야 할 5가지 흔한 실수',
+                        intro: '',
+                        items: [
+                            '1. AI 출력을 배포 준비된 코드로 취급 (항상 검토하고 린터 실행)',
+                            '2. 모호한 프롬프트 (JWT + bcrypt처럼 구체적으로 명시)',
+                            '3. Temperature 무시 (기본값 0.7–1.0은 코드에 부적합)',
+                            '4. 환각된 패키지 수용 (PyPI/npm에서 먼저 확인)',
+                            '5. 기존 코드 맥락 미제공 (AI에는 당신의 패턴이 필요)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '워크플로: AI로 더 나은 코드 작성',
+                        intro: '5단계 체계적 접근법:',
+                        items: [
+                            '1. 역할과 제약 조건을 미리 정의한다 (새 패키지 금지)',
+                            '2. 프롬프트를 구조화한다: 역할 → 목표 → 제약 → 형식 → 엣지 케이스',
+                            '3. 디버깅에는 CoT를 쓴다: "실행을 단계별로 추적하세요"',
+                            '4. 매 세션 프로덕션 코드에는 T=0.1–0.2로 설정한다',
+                            '5. 배포 전 보안 린터와 멀티모델 교차 검증을 실행한다'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: '주요 자주 묻는 질문',
+                        faqs: [
+                            {
+                                q: '2026년 코드 작성에 가장 좋은 AI 모델은?',
+                                a: 'Claude Opus 5(백엔드·디버깅), GPT-5.6(알고리즘), Gemini 3.1 Pro(대규모 코드베이스), Llama 3.1 8B(로컬·프라이버시).'
+                            },
+                            {
+                                q: 'AI가 생성한 코드를 바로 배포해도 안전한가요?',
+                                a: '아니요. 45%에 취약점이 있습니다. 항상 검토하고 린터를 실행하며 여러 모델로 교차 확인하세요.'
+                            },
+                            {
+                                q: 'AI 코딩 도구를 쓰면 얼마나 빨라지나요?',
+                                a: '연구에서는 주당 126% 더 많은 프로젝트를 완료했지만 작업에 따라 다릅니다. 복잡한 통합 작업은 19% 더 오래 걸렸습니다.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '지역별 차이와 컴플라이언스',
+                        intro: '세 가지 핵심 전략:',
+                        items: [
+                            '<strong>한국 (개인정보보호법·PIPA):</strong> Ollama 기반 Llama 3.1 8B 로컬 실행, 외부 전송 없음',
+                            '<strong>중국 (PIPL):</strong> Qwen 3, DeepSeek V3, 온프레미스 전용',
+                            '<strong>EU (GDPR):</strong> Mistral AI, 로컬 Ollama, 데이터 유출 없음'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'PromptQuorum 무료로 사용해 보기',
+                        body: '배포 전에 환각을 잡아내는 멀티모델 비교.',
+                        cta: '무료로 시작하기',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
+            },
+            ar: {
+                title: 'كتابة كود أفضل بالذكاء الاصطناعي: الموجّهات والنماذج والأمان 2026',
+                slides: [
+                    {
+                        type: 'title',
+                        h1: 'كتابة كود أفضل\nبالذكاء الاصطناعي',
+                        subtitle: 'موجّهات منظمة، واختيار النموذج، وسير عمل أمني',
+                        link: 'https://www.promptquorum.com/prompt-engineering/write-better-code-with-ai?lang=ar'
+                    },
+                    {
+                        type: 'list',
+                        h2: 'الموجّهات المنظمة: الأساس',
+                        intro: '5 عناصر حاسمة لكود أفضل:',
+                        items: [
+                            '<strong>الدور:</strong> "أنت Senior Python Backend Engineer"',
+                            '<strong>الهدف:</strong> ما المهمة المحددة المطلوب تنفيذها',
+                            '<strong>القيود:</strong> المكتبات والأطر والحدود',
+                            '<strong>تنسيق المخرجات:</strong> "أعد الكود فقط، بدون شرح"'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'بنية الموجّه في 5 خطوات',
+                        intro: '',
+                        items: [
+                            '1. حدّد دورك وخبرتك',
+                            '2. اذكر الهدف بوضوح (ما الذي تبنيه)',
+                            '3. حدّد القيود (الأطر والمكتبات)',
+                            '4. عرّف تنسيق المخرجات (كود فقط مع تعليقات)',
+                            '5. اذكر الحالات الحدية (القيم الفارغة والأخطاء)'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'مقارنة النماذج لمهام البرمجة',
+                        columns: ['المهمة', 'أفضل نموذج', 'السبب'],
+                        rows: [
+                            { 'المهمة': 'مكوّنات React', 'أفضل نموذج': 'Claude Opus 5', 'السبب': 'دقة في JSX والخصائص' },
+                            { 'المهمة': 'إصلاح الأخطاء', 'أفضل نموذج': 'Claude Opus 5', 'السبب': 'أفضل تتبّع خطوة بخطوة' },
+                            { 'المهمة': 'تصميم الخوارزميات', 'أفضل نموذج': 'GPT-5.6', 'السبب': 'استدلال قوي' },
+                            { 'المهمة': 'تحليل قاعدة الكود', 'أفضل نموذج': 'Gemini 3.1 Pro', 'السبب': 'سياق 2M رمز' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'إعدادات Temperature للكود',
+                        intro: 'تحكّم في العشوائية بشكل استراتيجي:',
+                        items: [
+                            '<strong>الإنتاج (T=0.1–0.2):</strong> حتمي وآمن ومتّسق',
+                            '<strong>العصف الذهني (T=0.7–0.9):</strong> خيارات متنوعة للاستكشاف',
+                            '<strong>لماذا يهم:</strong> القيمة الافتراضية 0.7–1.0 غير مناسبة للكود'
+                        ]
+                    },
+                    {
+                        type: 'table',
+                        h2: 'نافذة السياق لكل نموذج',
+                        columns: ['النموذج', 'نافذة السياق', 'المعنى'],
+                        rows: [
+                            { 'النموذج': 'GPT-5.6', 'نافذة السياق': '128k رمز', 'المعنى': 'نحو 96,000 سطر مرئي' },
+                            { 'النموذج': 'Claude Opus 5', 'نافذة السياق': '1M رمز', 'المعنى': 'أفضل لسياق الملفات المتعددة' },
+                            { 'النموذج': 'Gemini 3.1 Pro', 'نافذة السياق': '2M رمز', 'المعنى': 'تحليل كامل لقاعدة الكود' }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'Chain-of-Thought لتصحيح الأخطاء',
+                        intro: 'اطلب من النموذج أن يستدل قبل الإجابة:',
+                        items: [
+                            'تتبّع التنفيذ خطوة بخطوة قبل إنتاج الكود',
+                            'حدّد بدقة أين ينكسر المنطق',
+                            'يجعل الخطأ قابلًا للتصحيح دون إعادة توليد المخرجات كاملة'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'أزمة الأمان: نسبة ثغرات 45%',
+                        intro: 'ثلاثة أنماط فشل حرجة:',
+                        items: [
+                            '<strong>الاعتماديات المُهلوَسة:</strong> 20% تقترح حزمًا غير موجودة',
+                            '<strong>تنفيذات غير آمنة:</strong> حقن SQL وتشفير ضعيف',
+                            '<strong>حالات حدية مفقودة:</strong> لا فحص للقيم الفارغة، واستثناءات غير معالجة'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'إحصاءات جودة الكود والأمان',
+                        intro: 'أبرز نتائج الأبحاث:',
+                        items: [
+                            '<strong>45% من الكود المولَّد بالذكاء الاصطناعي يحتوي ثغرات</strong> (Veracode 2025)',
+                            '20% توصي بأسماء حزم مُهلوَسة',
+                            'أسرع بنسبة 30–75% — لكن المراجعة الأمنية قبل النشر ضرورية'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: '5 أخطاء شائعة يجب تجنّبها',
+                        intro: '',
+                        items: [
+                            '1. اعتبار مخرجات الذكاء الاصطناعي جاهزة للنشر (راجع وشغّل أداة الفحص دائمًا)',
+                            '2. الموجّهات الغامضة (الأفضل تحديد JWT + bcrypt صراحةً)',
+                            '3. تجاهل Temperature (الافتراضي 0.7–1.0 غير مناسب للكود)',
+                            '4. قبول الحزم المُهلوَسة (تحقّق أولًا من PyPI أو npm)',
+                            '5. عدم تقديم سياق الكود الحالي (النموذج يحتاج أنماطك)'
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'سير العمل: كود أفضل بالذكاء الاصطناعي',
+                        intro: 'منهج منظّم من 5 خطوات:',
+                        items: [
+                            '1. عرّف الدور والقيود منذ البداية (بدون حزم جديدة)',
+                            '2. نظّم الموجّه: الدور ← الهدف ← القيود ← التنسيق ← الحالات الحدية',
+                            '3. استخدم CoT للتصحيح: "تتبّع التنفيذ خطوة بخطوة"',
+                            '4. اضبط T=0.1–0.2 لكود الإنتاج في كل جلسة',
+                            '5. شغّل أداة فحص أمني وتحققًا متعدد النماذج قبل النشر'
+                        ]
+                    },
+                    {
+                        type: 'faq',
+                        h2: 'أهم الأسئلة الشائعة',
+                        faqs: [
+                            {
+                                q: 'ما أفضل نموذج ذكاء اصطناعي لكتابة الكود في 2026؟',
+                                a: 'Claude Opus 5 (الواجهة الخلفية والتصحيح)، وGPT-5.6 (الخوارزميات)، وGemini 3.1 Pro (قواعد الكود الكبيرة)، وLlama 3.1 8B (محليًا وبخصوصية).'
+                            },
+                            {
+                                q: 'هل نشر الكود المولَّد بالذكاء الاصطناعي مباشرةً آمن؟',
+                                a: 'لا. 45% منه يحتوي ثغرات. راجعه دائمًا، وشغّل أداة فحص أمني، وقارن بين عدة نماذج.'
+                            },
+                            {
+                                q: 'كم يزداد الإنتاج بأدوات البرمجة بالذكاء الاصطناعي؟',
+                                a: '126% مشاريع أكثر أسبوعيًا في الدراسات، لكن ذلك يعتمد على المهمة: التكامل المعقّد استغرق وقتًا أطول بنسبة 19%.'
+                            }
+                        ]
+                    },
+                    {
+                        type: 'list',
+                        h2: 'الاختلافات الإقليمية والامتثال',
+                        intro: 'ثلاث استراتيجيات أساسية:',
+                        items: [
+                            '<strong>الخليج (PDPL):</strong> Llama 3.1 8B عبر Ollama محليًا، دون خروج أي بيانات',
+                            '<strong>الصين (PIPL):</strong> Qwen 3 وDeepSeek V3، على الخوادم المحلية فقط',
+                            '<strong>الاتحاد الأوروبي (GDPR):</strong> Mistral AI وOllama محليًا، دون تسرّب بيانات'
+                        ]
+                    },
+                    {
+                        type: 'cta',
+                        h2: 'جرّب PromptQuorum مجانًا',
+                        body: 'مقارنة متعددة النماذج لاكتشاف الهلوسة قبل النشر.',
+                        cta: 'ابدأ مجانًا',
+                        href: 'https://www.promptquorum.com'
+                    }
+                ]
             }
         };
 
@@ -1248,7 +1864,7 @@
                     break;
             }
 
-            return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+            return `<div class="slide ${slide.type}" data-lang="${activeLang}">${html}</div>`;
         }
 
         // Main script
@@ -1256,6 +1872,12 @@
         const lang = params.get('lang') || 'en';
         const isPrint = params.get('print') === '1';
         const content = CONTENT[lang] || CONTENT.en;
+        const activeLang = CONTENT[lang] ? lang : 'en';
+
+        // Reflect the rendered language on the document so screen readers,
+        // hyphenation and RTL layout follow the ?lang= parameter.
+        document.documentElement.lang = activeLang;
+        document.documentElement.dir = activeLang === 'ar' ? 'rtl' : 'ltr';
 
         // Update header
         document.getElementById('header-title').textContent = content.title;
