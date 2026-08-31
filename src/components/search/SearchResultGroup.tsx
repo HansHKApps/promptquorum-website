@@ -37,6 +37,7 @@ export function SearchResultGroup({
         <SearchResultItem
           key={result.item.id}
           result={result}
+          index={indexOffset + i}
           isActive={activeIndex === indexOffset + i}
           onMouseEnter={() => onHover(indexOffset + i)}
           onClick={() => onSelect(result.item)}
