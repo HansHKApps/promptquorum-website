@@ -127,6 +127,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'definition',
           title: 'How Prompt Engineering Evolved: A Short Overview',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt engineering moved from trial-and-error phrasing tricks to a documented discipline of reusable patterns, evaluation and version control, as models became capable enough that structure mattered more than clever wording.' },
+            { type: 'in-plain-terms', text: 'It started as folklore — people swapping phrases that seemed to work. As the models got better, the magic words stopped mattering and the structure did: say who, what, and in what format. That shift is what turned a collection of tricks into a craft you can teach.' },
+          ],
           content: [
             '**Prompt engineering evolved from informal trial-and-error text manipulation around GPT-3 in 2020 to a structured discipline with named techniques, frameworks, and tools by 2026.** The arc spans five phases: early few-shot experiments, the ChatGPT moment that brought the skill into mainstream awareness, the development of structured reasoning techniques, the rise of automated prompt optimisation, and the current shift toward context design.',
             'The discipline did not emerge from a single paper or company. It grew from the overlap between research (few-shot learning, chain-of-thought reasoning, RAG), practitioner communities sharing prompt collections online, and the sudden public availability of powerful models that made good prompting immediately rewarding. By 2026, prompt engineering is no longer a niche trick — it is a baseline skill for anyone working with AI systems.',
@@ -436,6 +440,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Wie sich Prompt Engineering entwickelt hat: Ein kurzer Überblick',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt Engineering entwickelte sich von Formulierungstricks nach Versuch und Irrtum zu einer dokumentierten Disziplin aus wiederverwendbaren Mustern, Evaluation und Versionierung, weil bei leistungsfähigeren Modellen die Struktur wichtiger wurde als die geschickte Wortwahl.' },
+            { type: 'in-plain-terms', text: 'Am Anfang war es Folklore: Man tauschte Formulierungen aus, die zu funktionieren schienen. Mit besseren Modellen verloren die Zauberworte an Bedeutung — entscheidend wurde die Struktur: wer, was, in welchem Format. Genau dieser Wandel machte aus einer Trickkiste ein lehrbares Handwerk.' },
+          ],
           content: [
             '**Prompt Engineering entwickelte sich von informellem Trial-and-Error-Textmanipulation rund um GPT-3 im Jahr 2020 zu einer strukturierten Disziplin mit benannten Techniken, Frameworks und Werkzeugen bis 2026.** Der Bogen umfasst fünf Phasen: frühe Few-Shot-Experimente, den ChatGPT-Moment, der die Fähigkeit in das Mainstream-Bewusstsein brachte, die Entwicklung strukturierter Denktechniken, den Aufstieg der automatisierten Prompt-Optimierung und die aktuelle Verschiebung hin zum Kontext-Design.',
             'Die Disziplin entstand nicht aus einem einzigen Paper oder Unternehmen. Sie wuchs aus der Überschneidung von Forschung (Few-Shot-Learning, Chain-of-Thought-Reasoning, RAG), Praktikergemeinschaften, die Prompt-Sammlungen online teilten, und der plötzlichen öffentlichen Verfügbarkeit leistungsfähiger Modelle, die gutes Prompting sofort lohnend machte. Bis 2026 ist Prompt Engineering kein Nischentrick mehr – es ist eine Basisfähigkeit für jeden, der mit KI-Systemen arbeitet.',
@@ -667,6 +675,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Cómo evolucionó el prompt engineering: una breve visión general',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El prompt engineering pasó de trucos de redacción por ensayo y error a una disciplina documentada de patrones reutilizables, evaluación y control de versiones, a medida que los modelos mejoraron y la estructura pasó a importar más que las palabras ingeniosas.' },
+            { type: 'in-plain-terms', text: 'Empezó como folclore: la gente se intercambiaba frases que parecían funcionar. Según mejoraron los modelos, las palabras mágicas dejaron de importar y lo hizo la estructura: quién, qué y en qué formato. Ese giro convirtió un puñado de trucos en un oficio que se puede enseñar.' },
+          ],
           content: [
             '**El prompt engineering evolucionó de una manipulación de texto informal por ensayo y error en torno a GPT-3 en 2020 a una disciplina estructurada con técnicas, frameworks y herramientas con nombre propios para 2026.** El arco abarca cinco fases: los primeros experimentos de few-shot, el momento ChatGPT que trajo la habilidad al conocimiento del público general, el desarrollo de técnicas de razonamiento estructurado, el auge de la optimización automática de prompts y el actual cambio hacia el context design.',
             'La disciplina no surgió de un solo artículo o empresa. Creció a partir de la confluencia de la investigación (few-shot learning, chain-of-thought reasoning, RAG), comunidades de profesionales que compartían colecciones de prompts online y la repentina disponibilidad pública de modelos potentes que hizo que el buen prompting fuera inmediatamente gratificante. Para 2026, el prompt engineering ya no es un truco de nicho — es una habilidad básica para cualquiera que trabaje con sistemas de IA.',
@@ -896,6 +908,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'كيف تطورت هندسة البرومبت: نظرة عامة موجزة',
+          snippets: [
+            { type: 'in-one-sentence', text: 'انتقلت هندسة البرومبت من حيل صياغة قائمة على التجربة والخطأ إلى تخصص موثَّق قوامه أنماط قابلة لإعادة الاستخدام وتقييم وضبط إصدارات، إذ صارت البنية أهم من براعة الألفاظ مع تحسّن النماذج.' },
+            { type: 'in-plain-terms', text: 'بدأت الأمور فولكلوراً: يتبادل الناس عبارات بدت ناجحة. ومع تحسّن النماذج فقدت «الكلمات السحرية» أثرها وحلّت محلها البنية: مَن، وماذا، وبأي صيغة. هذا التحول هو ما حوّل مجموعة حيل إلى حرفة يمكن تعليمها.' },
+          ],
           content: [
             '**تطورت هندسة البرومبت من تلاعب نصي غير رسمي بالتجربة والخطأ حول GPT-3 في 2020 إلى تخصص منظّم مع تقنيات وأطر عمل وأدوات مُسمَّاة بحلول 2026.** القوس يمتد عبر خمس مراحل: التجارب الأولى للـfew-shot، ولحظة ChatGPT التي أحضرت المهارة إلى الوعي العام، وتطوير تقنيات الاستدلال المنظّم، وصعود تحسين البرومبتات التلقائي، والتحوّل الحالي نحو تصميم السياق.',
             'لم ينشأ التخصص من ورقة بحثية أو شركة واحدة. نما من التقاء البحث (few-shot learning وchain-of-thought reasoning وRAG) ومجتمعات الممارسين الذين شاركوا مجموعات برومبتات عبر الإنترنت والتوفر العلني المفاجئ لنماذج قوية جعل البرومبت الجيد مجزيًا على الفور. بحلول 2026، لم تعد هندسة البرومبت حيلة متخصصة — بل مهارة أساسية لكل من يعمل مع أنظمة الذكاء الاصطناعي.',
@@ -1104,6 +1120,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Como o prompt engineering evoluiu: uma visão geral',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O prompt engineering saiu de truques de formulação por tentativa e erro para uma disciplina documentada de padrões reutilizáveis, avaliação e controle de versão, à medida que os modelos melhoraram e a estrutura passou a pesar mais do que a escolha esperta de palavras.' },
+            { type: 'in-plain-terms', text: 'Começou como folclore: as pessoas trocavam frases que pareciam funcionar. Conforme os modelos melhoraram, as palavras mágicas deixaram de importar e a estrutura assumiu: quem, o quê e em que formato. Foi essa virada que transformou um punhado de truques em um ofício que dá para ensinar.' },
+          ],
           content: [
             '**O prompt engineering evoluiu de uma manipulação de texto informal por tentativa e erro em torno do GPT-3 em 2020 para uma disciplina estruturada com técnicas, frameworks e ferramentas nomeados até 2026.** O arco abrange cinco fases: os primeiros experimentos de few-shot, o momento ChatGPT que trouxe a habilidade ao conhecimento do público, o desenvolvimento de técnicas de raciocínio estruturado, a ascensão da otimização automática de prompts e a atual mudança para o context design.',
             'A disciplina não surgiu de um único artigo ou empresa. Cresceu a partir da confluência da pesquisa (few-shot learning, chain-of-thought reasoning, RAG), comunidades de profissionais que compartilhavam coleções de prompts online e a repentina disponibilidade pública de modelos poderosos que tornou o bom prompting imediatamente recompensador. Em 2026, o prompt engineering não é mais um truque de nicho — é uma habilidade básica para qualquer pessoa que trabalha com sistemas de IA.',
@@ -1334,6 +1354,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Comment le prompt engineering a évolué : un bref aperçu',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Le prompt engineering est passé de bricolages de formulation par essais et erreurs à une discipline documentée faite de motifs réutilisables, d\'évaluation et de gestion de versions, la structure primant sur les tournures habiles à mesure que les modèles progressaient.' },
+            { type: 'in-plain-terms', text: 'Cela a commencé comme un folklore : on s\'échangeait des formules qui semblaient marcher. Les modèles progressant, les mots magiques ont cessé de compter au profit de la structure : qui, quoi, sous quel format. Ce basculement a transformé une boîte à astuces en un métier qui s\'enseigne.' },
+          ],
           content: [
             '**Le prompt engineering a évolué d\'une manipulation de texte informelle par essais et erreurs autour de GPT-3 en 2020 vers une discipline structurée avec des techniques nommées, des frameworks et des outils d\'ici 2026.** L\'arc couvre cinq phases : les premières expériences few-shot, le moment ChatGPT qui a amené la compétence dans la conscience du grand public, le développement de techniques de raisonnement structurées, l\'essor de l\'optimisation automatisée des prompts et le glissement actuel vers la conception de contexte.',
             'La discipline n\'a pas émergé d\'un seul article ou d\'une seule entreprise. Elle a grandi à partir du chevauchement entre la recherche (apprentissage few-shot, raisonnement par chaîne de pensée, RAG), les communautés de praticiens partageant des collections de prompts en ligne, et la disponibilité soudaine au grand public de modèles puissants qui rendait le bon prompting immédiatement gratifiant. En 2026, le prompt engineering n\'est plus un truc de niche — c\'est une compétence de base pour quiconque travaille avec des systèmes IA.',
@@ -1566,6 +1590,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '5つのフェーズで分野全体を理解する',
+          snippets: [
+            { type: 'in-one-sentence', text: 'プロンプトエンジニアリングは、試行錯誤による言い回しの工夫から、再利用可能なパターン・評価・バージョン管理を備えた体系的な分野へと移行しました。モデルの性能向上により、巧みな言葉選びよりも構造が重要になったためです。' },
+            { type: 'in-plain-terms', text: '最初は民間伝承のようなものでした。効きそうな言い回しを互いに教え合っていたのです。モデルが賢くなるにつれて「魔法の言葉」は意味を失い、代わりに構造——誰が、何を、どんな形式で——が決め手になりました。この転換が、寄せ集めの小技を教えられる技能へと変えたのです。' },
+          ],
           content: [
             '**プロンプトエンジニアリングは、2020年頃のGPT-3をめぐる非公式な試行錯誤によるテキスト操作から、2026年までに名前の付いたテクニック・フレームワーク・ツールを持つ体系的な分野へと進化しました。** この歩みは5つのフェーズにわたります：初期のフューショット実験・大衆の認識にスキルをもたらしたChatGPTの瞬間・構造化された推論テクニックの発展・自動プロンプト最適化の台頭・そして現在のコンテキストデザインへの移行。',
             'この分野は単一の論文や企業から生まれたのではありません。研究（フューショット学習・思考の連鎖推論・RAG）と、プロンプトコレクションをオンラインで共有する実践者コミュニティと、優れたプロンプティングを即座に報われるものにした強力なモデルの突然の一般公開との重なりから成長しました。2026年現在、プロンプトエンジニアリングはもはやニッチなトリックではありません — AIシステムを扱う誰もが持つべき基本スキルです。',
@@ -1823,6 +1851,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '提示词工程如何演变：简要概述',
+          snippets: [
+            { type: 'in-one-sentence', text: '提示词工程从靠试错摸索措辞的技巧，演变为一门有文档、有可复用模式、有评估与版本管理的学科；随着模型能力提升，结构的重要性超过了措辞是否巧妙。' },
+            { type: 'in-plain-terms', text: '最初它更像口耳相传的偏方，大家互相交换看起来管用的说法。随着模型变强，「咒语」不再奏效，真正起作用的是结构：谁来做、做什么、以什么格式输出。正是这一转变，把一堆小技巧变成了可以传授的手艺。' },
+          ],
           content: [
             '**提示词工程从2020年前后围绕 GPT-3 的非正式试错式文本操作，发展为到2026年具有命名技术、框架和工具的结构化学科。** 这一历程跨越五个阶段：早期少样本实验、将这门技能带入主流视野的 ChatGPT 时刻、结构化推理技术的发展、自动化提示词优化的兴起，以及当前向上下文设计的转变。',
             '这门学科并非源自单一论文或公司。它生长于研究（少样本学习、思维链推理、RAG（检索增强生成））、在网上共享提示词集合的从业者社区，以及强大模型的突然公开可用（这使得高质量提示词立即带来回报）的交汇之处。到2026年，提示词工程不再是一项小众技巧——它已成为任何使用 AI 系统的人的基础技能。',
@@ -2118,6 +2150,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'definition',
           title: '프롬프트 엔지니어링의 진화: 간략한 개요',
+          snippets: [
+            { type: 'in-one-sentence', text: '프롬프트 엔지니어링은 시행착오식 표현 요령에서 재사용 가능한 패턴과 평가, 버전 관리를 갖춘 문서화된 분야로 발전했으며, 모델 성능이 향상되면서 영리한 표현보다 구조가 더 중요해졌습니다.' },
+            { type: 'in-plain-terms', text: '처음에는 효과가 있어 보이는 문구를 서로 주고받는 민간요법에 가까웠습니다. 모델이 좋아지면서 \'마법의 문구\'는 힘을 잃었고, 대신 구조가 중요해졌습니다. 누가, 무엇을, 어떤 형식으로. 바로 이 전환이 잡다한 요령을 가르칠 수 있는 기술로 바꾸어 놓았습니다.' },
+          ],
           content: [
             '**프롬프트 엔지니어링은 2020년 GPT-3를 중심으로 한 비공식적인 시행착오적 텍스트 조작에서 출발하여, 2026년까지 명명된 기법, 프레임워크, 도구를 갖춘 체계적인 학문 분야로 발전하였습니다.** 이 발전 과정은 다섯 단계로 나뉩니다: 초기 퓨샷 실험, 기술을 대중적 인식으로 끌어올린 ChatGPT 시대, 구조화된 추론 기법의 발전, 자동화 프롬프트 최적화의 부상, 그리고 현재의 컨텍스트 설계로의 전환.',
             '이 학문 분야는 단일 논문이나 기업에서 탄생하지 않았습니다. 연구(퓨샷 학습, 연쇄 사고 추론, RAG), 온라인에서 프롬프트 컬렉션을 공유하는 실무자 커뮤니티, 그리고 좋은 프롬프팅을 즉각적으로 보람 있게 만든 강력한 모델의 갑작스러운 공개적 사용 가능성의 교차점에서 성장하였습니다. 2026년 현재, 프롬프트 엔지니어링은 더 이상 틈새 요령이 아니라 AI 시스템을 사용하는 모든 사람에게 필수적인 기본 기술입니다.',

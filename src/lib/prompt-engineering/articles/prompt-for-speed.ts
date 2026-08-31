@@ -43,6 +43,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Why AI Answers Bloat',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Models default to long answers because training rewarded thorough, hedged responses, so brevity has to be requested explicitly through length limits, format constraints and an instruction to skip preamble.' },
+            { type: 'in-plain-terms', text: 'Left alone, the model writes like a student padding an essay to hit a word count. It is not being unhelpful — long looked good during training. Tell it the length and the shape you want and the padding disappears.' },
+          ],
           content: [
             '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro, the fastest answers come from the tightest constraints.',
             'Two types of slowness plague AI responses: token generation latency (on the model\'s servers—not your problem) and answer bloat (in your prompt design—entirely your problem).',
@@ -301,6 +305,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Warum KI-Antworten aufgebläht werden',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Modelle antworten standardmäßig ausführlich, weil im Training gründliche, abgesicherte Antworten belohnt wurden — Kürze müssen Sie daher ausdrücklich über Längenvorgaben, Formatvorgaben und den Hinweis, auf Vorreden zu verzichten, einfordern.' },
+            { type: 'in-plain-terms', text: 'Sich selbst überlassen schreibt das Modell wie ein Student, der einen Aufsatz auf die Mindestwortzahl streckt. Es ist nicht unwillig — Länge sah im Training gut aus. Geben Sie Länge und Form vor, und die Füllsätze verschwinden.' },
+          ],
           content: [
             '**Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht Hardware-Latenz.** Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist. Nach dem Testen von Hunderten von Prompts mit GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro bin ich zu dem Ergebnis gekommen, dass die schnellsten Antworten von den strengsten Einschränkungen kommen.',
             'Zwei Arten von Langsamkeit plagen KI-Antworten: Token-Generierungslatenz (auf den Servern des Modells—nicht dein Problem) und Antwortaufblähtheit (in deinem Prompt-Design—vollständig dein Problem).',
@@ -540,6 +548,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Por qué las respuestas de IA se inflan',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Los modelos responden largo por defecto porque el entrenamiento premió respuestas exhaustivas y con matices, así que la brevedad hay que pedirla de forma explícita con límites de longitud, restricciones de formato y la instrucción de omitir preámbulos.' },
+            { type: 'in-plain-terms', text: 'A su aire, el modelo escribe como un estudiante estirando un ensayo para llegar al número de palabras. No es que no quiera ayudar: durante el entrenamiento, largo quedaba bien. Dile la longitud y la forma que quieres y el relleno desaparece.' },
+          ],
           content: [
             '**La velocidad en prompt engineering significa obtener respuestas de IA concisas y directas mediante un diseño de prompt deliberado — no latencia de hardware.** Tras probar cientos de prompts en GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro, la conclusión es constante: las respuestas más rápidas vienen de las restricciones más ajustadas, no de un modelo "más rápido".',
             'Dos tipos de lentitud afectan a las respuestas de IA: la latencia de generación de tokens (ocurre en los servidores del modelo — no es tu problema) y la inflación de la respuesta (ocurre en el diseño de tu prompt — es enteramente tu problema).',
@@ -778,6 +790,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'لماذا تُنفَّخ إجابات الذكاء الاصطناعي',
+          snippets: [
+            { type: 'in-one-sentence', text: 'تميل النماذج افتراضياً إلى الإجابات المطوّلة لأن التدريب كافأ الردود الشاملة والمتحفظة، ولذلك يجب طلب الإيجاز صراحةً عبر تحديد الطول وقيود الصيغة وتعليمة تجاوز المقدمات.' },
+            { type: 'in-plain-terms', text: 'إن تُرك النموذج وشأنه كتب كطالب يمطّ مقالاً ليبلغ عدد الكلمات المطلوب. ليس تقصيراً منه، فالإطالة بدت جيدة أثناء التدريب. حدّد الطول والشكل المطلوبين، فتختفي الحشوة.' },
+          ],
           content: [
             '**السرعة في هندسة البرومبت تعني الحصول على إجابات ذكاء اصطناعي موجزة ومباشرة عبر تصميم برومبت متعمّد — لا عبر زمن استجابة العتاد.** بعد اختبار مئات البرومبتات على GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro، تظل النتيجة ثابتة: الإجابات الأسرع تأتي من القيود الأكثر إحكامًا، لا من نموذج "أسرع".',
             'نوعان من البطء يُصيبان إجابات الذكاء الاصطناعي: زمن استجابة توليد الرموز (يحدث على خوادم النموذج — ليس مشكلتك) وتضخّم الإجابة (يحدث في تصميم برومبتك — هو مشكلتك بالكامل).',
@@ -1017,6 +1033,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Por que as respostas de IA ficam infladas',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Os modelos respondem longo por padrão porque o treinamento premiou respostas minuciosas e cheias de ressalvas, então a concisão precisa ser pedida explicitamente com limites de tamanho, restrições de formato e a instrução de pular preâmbulos.' },
+            { type: 'in-plain-terms', text: 'Por conta própria, o modelo escreve como um estudante esticando uma redação para bater a contagem de palavras. Não é má vontade: durante o treinamento, longo pegava bem. Diga o tamanho e o formato que você quer e o enchimento some.' },
+          ],
           content: [
             '**Velocidade em prompt engineering significa obter respostas de IA concisas e diretas por meio de um design de prompt deliberado — não latência de hardware.** Depois de testar centenas de prompts no GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro, a conclusão se mantém: as respostas mais rápidas vêm das restrições mais rígidas, não de um modelo "mais rápido".',
             'Dois tipos de lentidão afetam as respostas de IA: latência de geração de tokens (ocorre nos servidores do modelo — não é o seu problema) e inflação da resposta (ocorre no design do seu prompt — é totalmente o seu problema).',
@@ -1241,6 +1261,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Pourquoi les réponses IA sont gonflées',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Les modèles répondent longuement par défaut parce que l\'entraînement récompensait les réponses exhaustives et nuancées ; la concision doit donc être demandée explicitement via des limites de longueur, des contraintes de format et une consigne d\'éviter les préambules.' },
+            { type: 'in-plain-terms', text: 'Livré à lui-même, le modèle écrit comme un étudiant qui étire une dissertation pour atteindre le nombre de mots. Ce n\'est pas de la mauvaise volonté : pendant l\'entraînement, long faisait bonne impression. Indiquez la longueur et la forme voulues, et le remplissage disparaît.' },
+          ],
           content: [
             '**La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle.** La plupart des réponses IA sont lentes à cause d\'un gonflement du prompt, non pas parce que le modèle est lent. Après avoir testé des centaines de prompts sur GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro, j\'ai trouvé que les réponses les plus rapides proviennent des contraintes les plus strictes.',
             'Deux types de lenteur affligent les réponses IA : la latence de génération de tokens (du côté des serveurs du modèle—pas votre problème) et le gonflement de réponse (dans votre conception de prompt—entièrement votre problème).',
@@ -1465,6 +1489,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'AI回答が膨張する理由',
+          snippets: [
+            { type: 'in-one-sentence', text: 'モデルは既定で長く答えます。学習段階で網羅的かつ慎重な回答が高く評価されたためであり、簡潔さは文字数制限・形式の指定・前置きを省く指示によって明示的に求める必要があります。' },
+            { type: 'in-plain-terms', text: '放っておくと、モデルは字数を稼ぐために文章を引き伸ばす学生のように書きます。不親切なのではなく、学習時は長いほうが good とされたのです。望む長さと形を伝えれば、水増しは消えます。' },
+          ],
           content: [
             '**プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。** AI回答が遅いのは、モデルが遅いからではなく、プロンプトの膨張が原因です。GPT-5.6、Claude Opus 5、Gemini 3.1 Proで数百個のプロンプトをテストした経験から、最速の回答は最も厳しい制約から生まれることを発見しました。',
             'AI回答の遅さには2つのタイプがあります：トークン生成レイテンシー（モデルのサーバー側—あなたの問題ではない）と回答膨張（プロンプト設計—完全にあなたの問題）。',
@@ -1690,6 +1718,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'AI回答为何臃肿',
+          snippets: [
+            { type: 'in-one-sentence', text: '模型默认给出冗长回答，是因为训练阶段奖励了周全且留有余地的回应；因此简洁必须通过字数限制、格式约束以及「省略开场白」的指令明确提出。' },
+            { type: 'in-plain-terms', text: '放任不管时，模型写起来就像为凑字数而注水的学生作文。它并非不配合——在训练里，长就是好。把你要的长度和形式讲清楚，注水的部分自然就没了。' },
+          ],
           content: [
             '**提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。** 大多数AI回答缓慢是由于提示词臃肿，而不是模型缓慢。根据在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro上测试数百个提示词的经验，最快的回答来自最严格的约束。',
             'AI回答缓慢有两种类型：令牌生成延迟（在模型服务器端—不是你的问题）和回答臃肿（在你的提示词设计中—完全是你的问题）。',
@@ -1929,6 +1961,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'AI 답변이 부풀려지는 이유',
+          snippets: [
+            { type: 'in-one-sentence', text: '모델은 기본적으로 길게 답합니다. 학습 과정에서 철저하고 신중한 답변이 높은 평가를 받았기 때문이며, 간결함은 분량 제한과 형식 제약, 서두를 생략하라는 지시로 명시적으로 요구해야 합니다.' },
+            { type: 'in-plain-terms', text: '내버려 두면 모델은 분량을 채우려 글을 늘리는 학생처럼 씁니다. 불성실해서가 아니라, 학습 당시에는 긴 답이 좋아 보였기 때문입니다. 원하는 길이와 형식을 알려 주면 군더더기는 사라집니다.' },
+          ],
           content: [
             '**Prompt engineering에서 속도란 하드웨어 지연 시간이 아니라 의도적인 prompt 설계를 통해 간결하고 직접적인 AI 답변을 얻는 것을 의미합니다.** GPT-5.6, Claude Opus 5, Gemini 3.1 Pro에서 수백 개의 prompt를 테스트한 결과, 결론은 일관됩니다: 가장 빠른 답변은 "더 빠른" 모델이 아니라 가장 엄격한 제약에서 나옵니다.',
             'AI 답변에는 두 가지 유형의 지연이 있습니다: 토큰 생성 지연 시간(모델의 서버에서 발생하며, 사용자의 문제가 아님)과 답변 부풀리기(prompt 설계에서 발생하며, 전적으로 사용자의 문제).',

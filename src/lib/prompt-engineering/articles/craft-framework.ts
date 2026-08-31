@@ -46,6 +46,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'What the CRAFT Framework Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CRAFT is a prompt template for creative and marketing work that forces you to state who the model is writing as, who it is writing for, and what the finished output should look like.' },
+            { type: 'in-plain-terms', text: 'It is the difference between telling a copywriter "write something about our product" and giving them a real brief. Name the voice, name the reader, name the format — and you get copy you can reuse instead of something you rewrite from scratch.' },
+          ],
           content: [
             '**The CRAFT Framework is a prompt template for creative and marketing tasks that makes large language models specify who they are writing as, who they are writing for, and how the output should look.** Instead of sending a vague request like "write a post about our product," you define each CRAFT element so models such as GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro can produce consistent, reusable copy. If you\'re new to structured prompting, see [What is Prompt Engineering](/prompt-engineering/what-is-prompt-engineering) for foundational concepts.',
             'The acronym typically expands as:',
@@ -188,6 +192,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'Was das CRAFT-Framework ist',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CRAFT ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die Sie zwingt festzulegen, in wessen Stimme das Modell schreibt, für wen es schreibt und wie das fertige Ergebnis aussehen soll.' },
+            { type: 'in-plain-terms', text: 'Es ist der Unterschied zwischen „schreib mal was über unser Produkt" und einem echten Briefing an eine Texterin. Benennen Sie Stimme, Zielgruppe und Format — dann erhalten Sie Text, den Sie wiederverwenden können, statt einen, den Sie komplett neu schreiben.' },
+          ],
           content: [
             '**Das CRAFT-Framework ist eine Prompt-Vorlage für kreative und Marketing-Aufgaben, die große Sprachmodelle dazu bringt, festzulegen, aus welcher Perspektive sie schreiben, für wen sie schreiben und wie die Ausgabe aussehen soll.** Anstatt eine vage Anfrage wie \"Schreibe einen Beitrag über unser Produkt\" zu stellen, definieren Sie jedes CRAFT-Element, damit Modelle wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro konsistente, wiederverwendbare Texte erzeugen können. Wenn Sie neu in strukturiertem Prompting sind, lesen Sie [Was ist Prompt Engineering](/de/prompt-engineering/what-is-prompt-engineering), um Grundkonzepte zu verstehen.',
             'Das Akronym wird typischerweise wie folgt ausgedehnt:',
@@ -338,6 +346,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'Qué es el Framework CRAFT',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CRAFT es una plantilla de prompt para trabajo creativo y de marketing que te obliga a indicar con qué voz escribe el modelo, para quién escribe y qué aspecto debe tener el resultado final.' },
+            { type: 'in-plain-terms', text: 'Es la diferencia entre decirle a un redactor "escribe algo sobre nuestro producto" y darle un briefing de verdad. Define la voz, el lector y el formato, y obtendrás textos reutilizables en lugar de algo que tendrás que rehacer entero.' },
+          ],
           content: [
             '**El Framework CRAFT es una plantilla de prompt para tareas creativas y de marketing que hace que los modelos de lenguaje especifiquen desde qué perspectiva escriben, para quién escriben y cómo debe verse el resultado.** En lugar de enviar una solicitud vaga como "escribe un post sobre nuestro producto", defines cada elemento CRAFT para que modelos como GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro puedan producir copy consistente y reutilizable. Si eres nuevo en el prompting estructurado, consulta [Qué es el Prompt Engineering](/prompt-engineering/what-is-prompt-engineering) para conceptos fundamentales.',
             'El acrónimo se expande típicamente como:',
@@ -492,6 +504,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'ما هو إطار CRAFT؟',
+          snippets: [
+            { type: 'in-one-sentence', text: 'إطار CRAFT قالب برومبت للأعمال الإبداعية والتسويقية يُلزمك بتحديد الصوت الذي يكتب به النموذج، والجمهور الذي يكتب له، والشكل الذي ينبغي أن يظهر به الناتج النهائي.' },
+            { type: 'in-plain-terms', text: 'إنه الفرق بين أن تقول لكاتب إعلانات «اكتب شيئاً عن منتجنا» وأن تسلّمه موجزاً حقيقياً. حدّد الصوت والقارئ والصيغة، فتحصل على نص صالح لإعادة الاستخدام بدل نص تعيد كتابته من الصفر.' },
+          ],
           content: [
             '**إطار CRAFT هو قالب موجّه للمهام الإبداعية والتسويقية يجعل نماذج اللغة تُحدد من أي منظور تكتب ولمن تكتب وكيف يجب أن يبدو الناتج.** بدلًا من إرسال طلب غامض مثل "اكتب منشورًا عن منتجنا"، تُعرّف كل عنصر من عناصر CRAFT حتى تتمكن نماذج كـGPT-5.6 وClaude Opus 5 وGemini 3.1 Pro من إنتاج نصوص متسقة وقابلة لإعادة الاستخدام.',
             'الاختصار يتوسّع عادةً إلى:',
@@ -645,6 +661,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'O que é o Framework CRAFT',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O CRAFT é um template de prompt para trabalho criativo e de marketing que obriga você a dizer com que voz o modelo escreve, para quem escreve e qual deve ser a cara do resultado final.' },
+            { type: 'in-plain-terms', text: 'É a diferença entre falar para um redator "escreve alguma coisa sobre o nosso produto" e entregar um briefing de verdade. Defina a voz, o leitor e o formato, e você recebe um texto reaproveitável em vez de um que precisa reescrever do zero.' },
+          ],
           content: [
             '**O Framework CRAFT é um modelo de prompt para tarefas criativas e de marketing que faz com que os modelos de linguagem especifiquem de qual perspectiva estão escrevendo, para quem estão escrevendo e como deve parecer o resultado.** Em vez de enviar uma solicitação vaga como "escreva um post sobre nosso produto", você define cada elemento CRAFT para que modelos como GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro possam produzir copy consistente e reutilizável.',
             'O acrônimo se expande tipicamente como:',
@@ -786,6 +806,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'Qu\'est-ce que le framework CRAFT',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CRAFT est un modèle de prompt pour le travail créatif et marketing qui vous oblige à préciser au nom de qui le modèle écrit, pour qui il écrit et à quoi doit ressembler le résultat final.' },
+            { type: 'in-plain-terms', text: 'C\'est la différence entre dire à un rédacteur « écris quelque chose sur notre produit » et lui remettre un vrai brief. Nommez la voix, le lecteur et le format : vous obtenez un texte réutilisable plutôt qu\'un texte à réécrire entièrement.' },
+          ],
           content: [
             '**Le CRAFT Framework est un modèle de prompt pour les tâches créatives et marketing qui pousse les grands modèles de langage à définir qui ils sont, pour qui ils écrivent et comment le résultat doit se présenter.** Au lieu d\'envoyer une demande vague comme \"écris un post sur notre produit\", vous définissez chaque élément CRAFT pour que GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro produisent du texte cohérent et réutilisable. Si vous découvrez le prompting structuré, consultez [Qu\'est-ce que le Prompt Engineering](/fr/prompt-engineering/what-is-prompt-engineering) pour les concepts fondamentaux.',
             'L\'acronyme se divise habituellement ainsi :',
@@ -924,6 +948,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'CRAFTフレームワークとは',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CRAFT は、クリエイティブ・マーケティング業務向けのプロンプトテンプレートであり、モデルが誰の声で書くのか、誰に向けて書くのか、完成物がどのような形であるべきかを明示させます。' },
+            { type: 'in-plain-terms', text: 'コピーライターに「うちの製品について何か書いて」と言うのと、きちんとしたブリーフを渡すのとの違いです。声・読み手・形式を指定すれば、書き直しではなく、そのまま使える原稿が返ってきます。' },
+          ],
           content: [
             '**CRAFTフレームワークは、クリエイティブおよびマーケティングタスク向けのプロンプトテンプレートです。**大規模言語モデルに対して「誰の視点から書くのか」「誰を対象に書くのか」「出力をどのような形式にするのか」を明確に指示します。「我が社の製品について書いて」といったあいまいなリクエストの代わりに、CRAFTの5つの要素を定義することで、GPT-5.6、Claude Opus 5、Gemini 3.1 Proが一貫性のある再利用可能なコピーを生成できます。',
             'プロンプトエンジニアリングが初めての場合は、[プロンプトエンジニアリングとは何か](/ja/prompt-engineering/what-is-prompt-engineering)をご覧ください。',
@@ -1064,6 +1092,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatIsCRAFT: {
           title: 'CRAFT框架是什么',
+          snippets: [
+            { type: 'in-one-sentence', text: 'CRAFT 是一套面向创意与营销工作的提示词模板，它要求你明确模型以谁的口吻写作、写给谁看，以及成稿应当呈现为什么形式。' },
+            { type: 'in-plain-terms', text: '这就好比对文案说「写点关于我们产品的东西」，和递给他一份正经的创意简报之间的差别。把口吻、读者和格式都说清楚，你拿到的是可以直接复用的文案，而不是需要推倒重写的初稿。' },
+          ],
           content: [
             '**CRAFT框架是创意和营销任务的提示模板。**它让大语言模型明确：你以谁的身份写作、为谁写作、输出应该什么样子。与其发送模糊指令（如"为产品写一个帖子"），你定义每个CRAFT元素，让GPT-5.6、Claude Opus 5和Gemini 3.1 Pro生成一致、可复用的文案。',
             '如果你刚开始接触结构化提示，请阅读[什么是提示工程](/zh/prompt-engineering/what-is-prompt-engineering)了解基础概念。',
@@ -1217,6 +1249,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     sections: {
       whatIsCRAFT: {
         title: 'CRAFT 프레임워크란 무엇인가',
+        snippets: [
+          { type: 'in-one-sentence', text: 'CRAFT는 크리에이티브·마케팅 업무를 위한 프롬프트 템플릿으로, 모델이 누구의 목소리로, 누구를 향해 쓰는지와 완성된 결과물이 어떤 형태여야 하는지를 반드시 명시하게 합니다.' },
+          { type: 'in-plain-terms', text: '카피라이터에게 "우리 제품에 대해 뭔가 써 주세요"라고 말하는 것과 제대로 된 브리프를 건네는 것의 차이입니다. 목소리와 독자, 형식을 지정하면 처음부터 다시 쓸 원고가 아니라 그대로 재사용할 수 있는 카피를 얻게 됩니다.' },
+        ],
         content: [
           '**CRAFT 프레임워크는 창의적·마케팅 작업을 위한 프롬프트 템플릿으로, 대형 언어 모델이 누구의 관점에서 쓰는지, 누구를 위해 쓰는지, 결과물이 어떻게 보여야 하는지를 명시하도록 합니다.** "우리 제품에 대한 게시물을 써줘"와 같은 막연한 요청 대신, 각 CRAFT 요소를 정의하여 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 같은 모델이 일관성 있고 재사용 가능한 카피를 생산할 수 있도록 합니다. 구조화된 프롬프팅이 처음이라면 [프롬프트 엔지니어링이란](/ko/prompt-engineering/what-is-prompt-engineering)을 참고하세요.',
           '이 약어는 일반적으로 다음과 같이 확장됩니다:',
