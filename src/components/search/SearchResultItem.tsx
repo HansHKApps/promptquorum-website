@@ -6,17 +6,20 @@ import { HUB_DOT_COLOR, LEVEL_PILL, HUB_LABELS, applyHighlight } from './search-
 
 interface Props {
   result: FuseResult<SearchEntry>
+  /** Position in the flat result list — backs the input's aria-activedescendant. */
+  index: number
   isActive: boolean
   onMouseEnter: () => void
   onClick: () => void
 }
 
-export function SearchResultItem({ result, isActive, onMouseEnter, onClick }: Props) {
+export function SearchResultItem({ result, index, isActive, onMouseEnter, onClick }: Props) {
   const { item, matches } = result
   const titleParts = applyHighlight(item.title, matches, 'title')
 
   return (
     <button
+      id={`search-item-${index}`}
       role="option"
       aria-selected={isActive}
       onMouseEnter={onMouseEnter}
