@@ -120,6 +120,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         quickFacts: {
           id: 'quick-facts',
           title: '⚡ Quick Facts',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt engineering tools split into three jobs — storing and versioning prompts, evaluating them against test cases, and observing them in production — and most teams need the evaluation layer first.' },
+            { type: 'in-plain-terms', text: 'Nobody needs all three on day one. The question is which problem you actually have: nobody knows which prompt is live, nobody can prove a change helped, or nobody notices when it breaks. Buy for that one.' },
+          ],
           items: [
             '**PromptQuorum** — dispatches one prompt to 25+ models simultaneously; best for model selection before committing to a stack (free)',
             '**Braintrust** — evaluation + observability; LLM judges, human feedback, production tracing; Free / $249/mo Pro',
@@ -407,6 +411,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whichProblem: {
       id: 'which-problem-each-tool-solves',
       title: 'Welches Problem löst welches Tool?',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Werkzeuge für Prompt Engineering decken drei Aufgaben ab — Prompts speichern und versionieren, sie gegen Testfälle bewerten und sie im Betrieb beobachten — und die meisten Teams brauchen zuerst die Bewertungsebene.' },
+        { type: 'in-plain-terms', text: 'Niemand braucht am ersten Tag alle drei. Die Frage ist, welches Problem Sie wirklich haben: Niemand weiß, welcher Prompt live ist; niemand kann belegen, dass eine Änderung geholfen hat; oder niemand merkt, wenn etwas kaputtgeht. Kaufen Sie dafür.' },
+      ],
       content: '**Prompt-Engineering-Teams stoßen auf fünf klassische Engpässe: (1) Evaluierung von Output-Qualität (Genauigkeit, Ton, Faktentreue), (2) Automatisierte Tests in CI/CD, (3) Prompt-Versionierung und Rollback, (4) Produktionsbereitstellung mit Monitoring, (5) Multi-Modell-Dispatch und Vergleich.** Jedes der sieben Tools spezialisiert sich auf einen oder zwei dieser Engpässe. Das richtige Tool-Pairing spart Monate an Entwicklung und verhindert teure Produktionsfehler.',
       image: '/images/best-pe-tools-2026-bottlenecks-to-tools-de.svg',
       imageCaption: '5 Prompt-Engineering-Engpässe mappt auf spezialisierte Tools: Braintrust (Evaluierung), Promptfoo (Tests), PromptHub (Versionierung), Vellum (Bereitstellung), LangSmith (Beobachtbarkeit).'
@@ -807,6 +815,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: '⚡ Datos rápidos',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Las herramientas de prompt engineering cubren tres funciones — guardar y versionar prompts, evaluarlos contra casos de prueba y observarlos en producción — y la mayoría de los equipos necesita primero la capa de evaluación.' },
+        { type: 'in-plain-terms', text: 'Nadie necesita las tres desde el primer día. La pregunta es qué problema tienes de verdad: nadie sabe qué prompt está en producción, nadie puede demostrar que un cambio ayudó, o nadie se entera cuando algo se rompe. Compra para eso.' },
+      ],
       items: [
         '**PromptQuorum** — despacha un prompt a 25+ modelos simultáneamente; ideal para selección de modelo antes de comprometerse con un stack (gratis)',
         '**Braintrust** — evaluación + observabilidad; jueces LLM, feedback humano, tracing en producción; Gratis / $249/mes Pro',
@@ -1152,6 +1164,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: '⚡ حقائق سريعة',
+      snippets: [
+        { type: 'in-one-sentence', text: 'تنقسم أدوات هندسة البرومبت إلى ثلاث وظائف — تخزين البرومبتات وإدارة إصداراتها، وتقييمها مقابل حالات اختبار، ومراقبتها في الإنتاج — ومعظم الفرق تحتاج طبقة التقييم أولاً.' },
+        { type: 'in-plain-terms', text: 'لا أحد يحتاج الثلاث جميعاً في اليوم الأول. السؤال هو أي مشكلة تعانيها فعلاً: لا أحد يعرف أي برومبت يعمل الآن، أو لا أحد يستطيع إثبات أن تغييراً ما نفع، أو لا أحد ينتبه حين ينكسر شيء. اشترِ لأجل تلك المشكلة.' },
+      ],
       items: [
         '**PromptQuorum** — يُرسِل تعليمة إلى 25+ نموذج في آنٍ واحد؛ مثالي لاختيار النموذج قبل الالتزام بمجموعة أدوات (مجاني)',
         '**Braintrust** — تقييم + رصد؛ قضاة LLM وتغذية راجعة بشرية وتتبع في الإنتاج؛ مجاني / 249 دولارًا/شهر Pro',
@@ -1567,6 +1583,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: '⚡ Dados rápidos',
+      snippets: [
+        { type: 'in-one-sentence', text: 'As ferramentas de prompt engineering se dividem em três funções — guardar e versionar prompts, avaliá-los contra casos de teste e observá-los em produção — e a maioria das equipes precisa primeiro da camada de avaliação.' },
+        { type: 'in-plain-terms', text: 'Ninguém precisa das três no primeiro dia. A pergunta é qual problema você tem de fato: ninguém sabe qual prompt está no ar, ninguém consegue provar que uma mudança ajudou, ou ninguém percebe quando algo quebra. Compre para esse.' },
+      ],
       items: [
         '**PromptQuorum** — despacha um prompt para 25+ modelos simultaneamente; ideal para seleção de modelo antes de se comprometer com um stack (gratuito)',
         '**Braintrust** — avaliação + observabilidade; juízes LLM, feedback humano, tracing em produção; Gratuito / $249/mês Pro',
@@ -1990,6 +2010,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whichProblem: {
       id: 'which-problem-each-tool-solves',
       title: '各ツールはどの問題を解くのか？',
+      snippets: [
+        { type: 'in-one-sentence', text: 'プロンプトエンジニアリングのツールは、プロンプトの保存とバージョン管理、テストケースによる評価、本番環境での監視という三つの役割に分かれ、多くのチームはまず評価の層を必要とします。' },
+        { type: 'in-plain-terms', text: '初日から三つすべてが必要なチームはありません。問うべきは、実際に抱えている問題はどれかです。どのプロンプトが本番で動いているか誰も知らないのか、変更が効いたと証明できないのか、壊れても誰も気づかないのか。その一つのために選んでください。' },
+      ],
       content: '**Prompt Engineeringチームは5つのボトルネックでブロックされます：** 評価（これは機能しますか？）、テスト（破れますか？）、バージョン管理（どのバージョンが送付されましたか？）、デプロイ（これをどのように提供しますか？）、オブザーバビリティ（なぜ失敗しましたか？）。各ツールは1～2つに特化。',
       image: '/images/best-pe-tools-2026-bottlenecks-to-tools-en.svg',
       imageCaption: '5つのPrompt Engineeringボトルネック——各ツール：Braintrust（評価）、Promptfoo（テスト）、PromptHub（バージョン管理）、Vellum（デプロイ）、LangSmith（オブザーバビリティ）——にマップ。'
@@ -2316,6 +2340,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whichProblem: {
       id: 'which-problem-each-tool-solves',
       title: '各工具解决什么问题？',
+      snippets: [
+        { type: 'in-one-sentence', text: '提示词工程工具大致分为三类职责——存储与版本管理、基于测试用例的评估、上线后的可观测性——而多数团队最先需要的是评估这一层。' },
+        { type: 'in-plain-terms', text: '没有团队第一天就需要三样都上。真正该问的是：你现在到底缺哪一块？是没人说得清线上跑的是哪条提示词，是没人能证明改动确实有效，还是出了问题也没人发现。照着那一块去选。' },
+      ],
       content: '**提示词工程团队被5个瓶颈堵住：** 评估（有效吗？）、测试（会坏吗？）、版本管理（哪个版本上线了？）、部署（如何提供？）、可观测性（为什么失败？）。每个工具专注1-2个。',
       image: '/images/best-pe-tools-2026-bottlenecks-to-tools-en.svg',
       imageCaption: '5个提示词工程瓶颈映射到专业工具：Braintrust（评估）、Promptfoo（测试）、PromptHub（版本管理）、Vellum（部署）、LangSmith（可观测性）。'
@@ -2627,6 +2655,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: {
       id: 'quick-facts',
       title: '⚡ 빠른 사실',
+      snippets: [
+        { type: 'in-one-sentence', text: '프롬프트 엔지니어링 도구는 프롬프트 저장과 버전 관리, 테스트 케이스 기반 평가, 운영 환경 관측이라는 세 가지 역할로 나뉘며, 대부분의 팀에는 평가 계층이 가장 먼저 필요합니다.' },
+        { type: 'in-plain-terms', text: '첫날부터 세 가지가 다 필요한 팀은 없습니다. 물어야 할 것은 지금 실제로 겪는 문제가 무엇이냐입니다. 어떤 프롬프트가 운영 중인지 아무도 모르는지, 변경이 도움이 됐다고 증명할 수 없는지, 망가져도 아무도 알아채지 못하는지. 그 하나를 위해 고르십시오.' },
+      ],
       items: [
         '**PromptQuorum** — 25개 이상의 모델에 동시에 프롬프트를 디스패치합니다. 스택에 투자하기 전에 모델 선택에 이상적입니다 (무료)',
         '**Braintrust** — 평가 + 관찰 가능성. LLM 판사, 인간 피드백, 프로덕션 트레이싱. 무료 / 월 $249 Pro',
