@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-08-31T15:46:20.284Z",
+  "scope": "EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog",
+  "unweighted": {
+    "n": 535,
+    "meanDays": 29.1,
+    "medianDays": 5,
+    "buckets": [
+      {
+        "label": "0-5",
+        "count": 268,
+        "pct": 50.1
+      },
+      {
+        "label": "6-15",
+        "count": 28,
+        "pct": 5.2
+      },
+      {
+        "label": "16-30",
+        "count": 0,
+        "pct": 0
+      },
+      {
+        "label": "31-60",
+        "count": 154,
+        "pct": 28.8
+      },
+      {
+        "label": "61-120",
+        "count": 74,
+        "pct": 13.8
+      },
+      {
+        "label": "121+",
+        "count": 11,
+        "pct": 2.1
+      }
+    ]
+  },
+  "articlesAged90to120": [
+    {
+      "cluster": "prompt-engineering",
+      "slug": "ape-framework",
+      "urlPath": "/prompt-engineering/ape-framework",
+      "ageDays": 119,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "rtf-framework",
+      "urlPath": "/prompt-engineering/rtf-framework",
+      "ageDays": 119,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "self-consistency-prompting",
+      "urlPath": "/prompt-engineering/self-consistency-prompting",
+      "ageDays": 119,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "run-qwen-vl-locally-2026",
+      "urlPath": "/local-llms/run-qwen-vl-locally-2026",
+      "ageDays": 101,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "wechat-local-llm-integration-2026",
+      "urlPath": "/power-local-llm/wechat-local-llm-integration-2026",
+      "ageDays": 97,
+      "dateSource": "dateModified"
+    }
+  ],
+  "warnings": [],
+  "weighted": {
+    "n": 252,
+    "meanDays": 16.5,
+    "medianDays": 4,
+    "buckets": [
+      {
+        "label": "0-5",
+        "impressions": 213692,
+        "pct": 64.4
+      },
+      {
+        "label": "6-15",
+        "impressions": 26913,
+        "pct": 8.1
+      },
+      {
+        "label": "16-30",
+        "impressions": 0,
+        "pct": 0
+      },
+      {
+        "label": "31-60",
+        "impressions": 65465,
+        "pct": 19.7
+      },
+      {
+        "label": "61-120",
+        "impressions": 25137,
+        "pct": 7.6
+      },
+      {
+        "label": "121+",
+        "impressions": 668,
+        "pct": 0.2
+      }
+    ],
+    "unmatchedGscRows": 12,
+    "unmatchedArticles": 283
+  },
+  "byproducts": {
+    "enShareOfImpressions": 72.7,
+    "discardedQueryStringRows": 0,
+    "nonEnRows": 736,
+    "nonEnImpressions": 128612
+  },
+  "priorityRefreshList": []
+}
