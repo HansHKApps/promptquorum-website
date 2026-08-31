@@ -89,3 +89,31 @@ Several existing blocks contradict `geo-translation.md`: it specifies formal *Si
 ## Also open (small)
 
 `imagesWithTextKo` in `src/lib/prompt-engineering/imagesWithTextTranslations.ts` is imported but unused and missing `howToStart` — `ko` uses inline sections instead. Dead code; delete it.
+
+---
+
+## HIGHER PRIORITY — found 2026-08-31 while doing the above
+
+**11 prompt-engineering articles have locale blocks with almost no content.** This is worse than the snippet gap and should be fixed first.
+
+Run `python3 scan_parity.py` (in the `session/prompt-with-images` worktree) to reproduce:
+
+```
+ape-framework.ts                     en=12  starved: de=11 fr=11 ja=11 zh=11  (missing)
+best-pe-tools-2026.ts                en=18  starved: fr=18
+best-prompt-engineering-ides.ts      en=15  starved: ko=15
+braintrust-vs-prompthub-vs-vellum.ts en=15  starved: de=15 fr=15 ja=15 zh=15
+co-star-framework.ts                 en=16  starved: zh=15
+google-prompting-guide.ts            en=13  starved: ja=13 zh=13
+negative-prompting.ts                en=16  starved: zh=15
+single-prompt-method.ts              en=17  starved: pt=9
+structured-output-json-mode.ts       en=23  starved: pt=13
+teaching-with-ai.ts                  en=20  starved: pt=11
+tree-of-thought-react.ts             en=17  starved: zh=17
+```
+
+**Confirmed live for one case:** `/de/prompt-engineering/ape-framework` returns HTTP 200 and renders an FAQ **written in English** ("Frequently Asked Questions", "What does APE stand for") — the German block's only section is `faqSection`, and its content was never translated. The other 11 sections do not exist in the de/fr/ja/zh blocks at all.
+
+Verify each case at source before authoring — `python3 parity.py <file>` lists per-locale section keys. Note that several PE pages are client-rendered, so `curl | grep "<h2"` returns 0 even for healthy pages; do not use that as the check. Compare source section counts, or render against a local production build.
+
+This is an "author the missing language" job (PAGE_UPDATER Step 5.5 / geo-translation Step 5.5), not a mechanical fix. Scope it before starting: `braintrust-vs-prompthub-vs-vellum` and `ape-framework` each need four full locale bodies.
