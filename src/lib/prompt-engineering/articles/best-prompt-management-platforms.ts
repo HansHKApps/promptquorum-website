@@ -196,6 +196,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsPromptManagement: {
         title: 'What is Prompt Management?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Prompt management is treating prompts as versioned production assets — stored outside application code, reviewed before release, and monitored after it — rather than as strings pasted into a codebase.' },
+          { type: 'in-plain-terms', text: 'It is source control for the sentences that drive your product. Without it, nobody can say which wording is live, who changed it, or what the last version did — and a one-word edit ships straight to customers unreviewed.' },
+        ],
         content:
           '**Prompt management platforms solve the "where do I store prompts?" problem.** Without a platform, teams edit prompts in notebooks, lose version history, cannot rollback bad changes, and have no audit trail. Management platforms enable: versioning (track every change), team collaboration (code reviews and approval workflows), deployment (serve prompts to production), and logging (track usage and costs). Most teams still manage prompts manually. Adoption is accelerating as governance and cost tracking become critical.',
       },
@@ -606,6 +610,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsPromptManagement: {
         title: 'Was ist Prompt-Management?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Prompt-Management behandelt Prompts als versionierte Produktionsartefakte — außerhalb des Anwendungscodes gespeichert, vor dem Release geprüft und danach überwacht — statt als Strings, die in eine Codebasis eingefügt werden.' },
+          { type: 'in-plain-terms', text: 'Es ist Versionsverwaltung für die Sätze, die Ihr Produkt steuern. Ohne sie kann niemand sagen, welche Formulierung live ist, wer sie geändert hat oder was die vorige Version tat — und eine Änderung von einem Wort geht ungeprüft an Kundinnen und Kunden.' },
+        ],
         content:
           '**Prompt-Management-Plattformen lösen das „Wo speichere ich Prompts?" Problem.** Ohne eine Plattform bearbeiten Teams Prompts ad-hoc in Notebooks, verlieren den Versionsverlauf, können schlechte Änderungen nicht rückgängig machen und haben keinen Audit Trail. Management-Plattformen ermöglichen: Versionierung (jede Änderung verfolgen), Team-Zusammenarbeit (Code Reviews und Approval Workflows), Deployment (Prompts in Production bereitstellen) und Logging (Nutzung und Kosten verfolgen). Stand Juli 2026 verwalten die meisten Teams Prompts noch manuell. Die Adoption beschleunigt sich, da Governance und Cost Tracking kritisch werden.',
       },
@@ -1018,6 +1026,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptManagement: {
         id: 'what-is-prompt-management',
         title: '¿Qué es la gestión de prompts?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'La gestión de prompts consiste en tratarlos como activos de producción versionados — guardados fuera del código de la aplicación, revisados antes del lanzamiento y monitorizados después — en lugar de como cadenas pegadas en el repositorio.' },
+          { type: 'in-plain-terms', text: 'Es control de versiones para las frases que gobiernan tu producto. Sin él, nadie sabe qué redacción está en producción, quién la cambió ni qué hacía la versión anterior, y un cambio de una palabra llega a los clientes sin revisar.' },
+        ],
         content:
           '**La gestión de prompts es el conjunto de prácticas para almacenar, versionar, revisar y desplegar prompts de IA en equipos.** Sin gestión de prompts, los prompts se almacenan en hojas de cálculo, Slack o en el código — sin historial de versiones, sin flujo de revisión, sin forma de saber qué versión está en producción. Con la gestión de prompts, los prompts se tratan como código: se hace commit, se revisan, se testean y se despliegan con las mismas herramientas que el código de aplicación.',
         items: [
@@ -1468,6 +1480,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptManagement: {
         id: 'what-is-prompt-management',
         title: 'ما هي إدارة البرومبت؟',
+        snippets: [
+          { type: 'in-one-sentence', text: 'إدارة البرومبت تعني التعامل مع البرومبتات بوصفها أصولاً إنتاجية مُدارة بالإصدارات — تُخزَّن خارج شيفرة التطبيق، وتُراجَع قبل الإطلاق وتُراقَب بعده — لا مجرد نصوص تُلصق داخل الشيفرة.' },
+          { type: 'in-plain-terms', text: 'إنها إدارة إصدارات للجُمل التي تُشغّل منتجك. من دونها لا يعرف أحد أي صياغة تعمل الآن، ولا من غيّرها، ولا ماذا كانت تفعل النسخة السابقة، ويصل تعديل من كلمة واحدة إلى العملاء دون مراجعة.' },
+        ],
         content:
           '**إدارة البرومبت هي مجموعة الممارسات المتعلقة بتخزين برومبتات الذكاء الاصطناعي وإصدارها ومراجعتها ونشرها ضمن الفرق.** بدون إدارة البرومبت، تُخزَّن البرومبتات في جداول بيانات أو Slack أو في الشيفرة البرمجية — بدون سجل إصدارات، ولا سير مراجعة، ولا طريقة لمعرفة أي إصدار يعمل في الإنتاج. مع إدارة البرومبت، تُعامَل البرومبتات كشيفرة برمجية: يُودَع عليها، وتُراجَع، وتُختبر، وتُنشر بنفس الأدوات المستخدمة للشيفرة البرمجية.',
         items: [
@@ -1923,6 +1939,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptManagement: {
         id: 'what-is-prompt-management',
         title: 'O que é gestão de prompts?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Gestão de prompts é tratá-los como ativos de produção versionados — guardados fora do código da aplicação, revisados antes do lançamento e monitorados depois — em vez de strings coladas na base de código.' },
+          { type: 'in-plain-terms', text: 'É controle de versão para as frases que comandam o seu produto. Sem isso, ninguém sabe qual redação está no ar, quem mudou nem o que a versão anterior fazia, e uma alteração de uma palavra chega aos clientes sem revisão.' },
+        ],
         content:
           '**A gestão de prompts é o conjunto de práticas para armazenar, versionar, revisar e fazer deploy de prompts de IA em equipes.** Sem gestão de prompts, os prompts ficam armazenados em planilhas, no Slack ou no código — sem histórico de versões, sem fluxo de revisão, sem forma de saber qual versão está em produção. Com a gestão de prompts, os prompts são tratados como código: você faz commit, revisa, testa e faz deploy com as mesmas ferramentas do código da aplicação.',
         items: [
@@ -2382,6 +2402,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsPromptManagement: {
         title: "Qu'est-ce que la gestion des prompts?",
+        snippets: [
+          { type: 'in-one-sentence', text: 'La gestion des prompts consiste à les traiter comme des artefacts de production versionnés — stockés hors du code applicatif, relus avant mise en production et surveillés ensuite — plutôt que comme des chaînes collées dans le dépôt.' },
+          { type: 'in-plain-terms', text: 'C\'est de la gestion de versions pour les phrases qui pilotent votre produit. Sans elle, personne ne sait quelle formulation est en ligne, qui l\'a modifiée ni ce que faisait la précédente, et une retouche d\'un seul mot part chez les clients sans relecture.' },
+        ],
         content:
           "**Les plateformes de gestion des prompts résolvent le problème « où stocker mes prompts? ».** Sans plateforme, les équipes éditent les prompts ad hoc dans les notebooks, perdent l'historique des versions, ne peuvent pas annuler les modifications et n'ont pas de journal d'audit. Les plateformes permettent: versioning (suivre chaque modification), collaboration (code reviews et workflows d'approbation), déploiement (servir les prompts en production) et logging (suivre l'usage et les coûts). En juillet 2026, la plupart des équipes gèrent les prompts manuellement. L'adoption s'accélère avec la gouvernance et le suivi des coûts.",
       },
@@ -2790,6 +2814,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptManagement: {
         id: 'what-is-prompt-management',
         title: 'プロンプト管理とは?',
+        snippets: [
+          { type: 'in-one-sentence', text: 'プロンプト管理とは、プロンプトをコードベースに貼り付けた文字列としてではなく、バージョン管理された本番資産として扱うこと——アプリケーションコードの外に保存し、リリース前にレビューし、リリース後も監視すること——です。' },
+          { type: 'in-plain-terms', text: 'プロダクトを動かしている文章に対するソース管理です。これがないと、どの表現が本番で動いているのか、誰が変更したのか、前のバージョンが何をしていたのかを誰も答えられません。一語の修正がレビューを経ずに顧客へ届いてしまいます。' },
+        ],
         content:
           '**「プロンプトはどこに保存するか」の問題を解決します。**プラットフォームなしだと、チームはノートブックでアドホックに編集、履歴を失う、悪い変更を戻せない、監査証跡がありません。管理プラットフォームは次を実現: バージョニング（変更を追跡）、チーム協業（reviewとapprovalワークフロー）、デプロイメント（本番に提供）、ロギング（使用と費用を追跡）。2026年7月現在、ほとんどのチームは手動でプロンプト管理。ガバナンスとコスト追跡が重要になり、採用が加速。',
       },
@@ -3179,6 +3207,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptManagement: {
         id: 'what-is-prompt-management',
         title: '什么是提示词管理?',
+        snippets: [
+          { type: 'in-one-sentence', text: '提示词管理是把提示词当作有版本的生产资产来对待——存放在应用代码之外、上线前评审、上线后监控——而不是当作粘贴进代码库的字符串。' },
+          { type: 'in-plain-terms', text: '这相当于给驱动你产品的那些句子做版本管理。没有它，没人说得清线上跑的是哪一版措辞、是谁改的、上一版又是什么样；改动一个词，就这样未经评审直接发到了客户面前。' },
+        ],
         content:
           '**提示词管理平台解决"我的提示词存储在哪里"的问题。** 没有平台的情况下，团队在笔记本中临时编辑提示词、丢失版本历史、无法回滚错误更改、没有审计跟踪。管理平台实现: 版本控制（追踪每个变化）、团队协作（代码审查和批准工作流）、部署（将提示词投入生产）、日志（追踪使用和成本）。截至2026年7月，大多数团队仍手动管理提示词。随着治理和成本跟踪变得关键，采用正在加速。',
       },
@@ -3546,6 +3578,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptManagement: {
         id: 'what-is-prompt-management',
         title: '프롬프트 관리란 무엇인가?',
+        snippets: [
+          { type: 'in-one-sentence', text: '프롬프트 관리란 프롬프트를 코드베이스에 붙여 넣은 문자열이 아니라 버전이 관리되는 운영 자산으로 다루는 것입니다. 애플리케이션 코드 바깥에 저장하고, 배포 전에 검토하며, 배포 후에는 모니터링합니다.' },
+          { type: 'in-plain-terms', text: '제품을 움직이는 문장에 대한 형상 관리입니다. 이것이 없으면 지금 어떤 표현이 운영 중인지, 누가 바꿨는지, 이전 버전은 무엇을 했는지 아무도 답할 수 없고, 단어 하나를 고친 변경이 검토 없이 그대로 고객에게 나갑니다.' },
+        ],
         content:
           '**프롬프트 관리는 팀 내에서 AI 프롬프트를 저장, 버전 관리, 검토 및 배포하기 위한 일련의 관행입니다.** 프롬프트 관리 없이는 프롬프트가 스프레드시트, Slack 또는 코드 내에 저장되며 버전 기록, 검토 워크플로우, 어떤 버전이 프로덕션에 있는지 파악할 방법이 없습니다. 프롬프트 관리를 통해 프롬프트는 코드처럼 취급됩니다: 커밋, 검토, 테스트 및 배포가 애플리케이션 코드와 동일한 도구로 이루어집니다.',
         items: [
