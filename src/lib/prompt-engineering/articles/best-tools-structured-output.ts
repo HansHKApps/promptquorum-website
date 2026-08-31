@@ -105,6 +105,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: 'Problems Each Tool Solves',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Structured-output tools solve three distinct problems — enforcing a schema at generation time, validating the result afterwards, and repairing malformed output — and most stacks need only the first two.' },
+          { type: 'in-plain-terms', text: 'Do not shop by feature list. Ask which failure you actually hit: the model ignores your format, or it obeys the format but the values are wrong, or it returns JSON that will not even parse. Each has a different answer.' },
+        ],
         content: '**Structured output requires solving three interdependent problems: schema definition, API enforcement, and validation.** Different tools attack these problems differently. Instructor handles all three in Python with retries. Outlines eliminates the validation step via constrained decoding. Pydantic AI adds type safety for agents. LangChain wraps provider APIs. Marvin prioritizes developer speed. PromptQuorum validates consistency across all models.',
         columns: ['Problem', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -417,6 +421,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: 'Probleme, die jedes Tool löst',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Werkzeuge für strukturierte Ausgabe lösen drei verschiedene Probleme — ein Schema bereits bei der Generierung erzwingen, das Ergebnis anschließend validieren und fehlerhafte Ausgaben reparieren — und die meisten Setups brauchen nur die ersten beiden.' },
+          { type: 'in-plain-terms', text: 'Wählen Sie nicht nach Funktionsliste. Fragen Sie, welcher Fehler bei Ihnen tatsächlich auftritt: Das Modell ignoriert Ihr Format, oder es hält das Format ein, aber die Werte stimmen nicht, oder es liefert JSON, das sich nicht einmal parsen lässt. Jeder Fall verlangt eine andere Antwort.' },
+        ],
         content: '**Structured Output erfordert die Lösung von drei voneinander abhängigen Problemen: Schema-Definition, API-Durchsetzung und Validierung.** Verschiedene Tools gehen diese Probleme unterschiedlich an. Instructor löst alle drei in Python mit Retries. Outlines eliminiert den Validierungsschritt via Constrained Decoding. Pydantic AI fügt Typsicherheit für Agents hinzu. LangChain umhüllt Provider-APIs. Marvin priorisiert Entwicklergeschwindigkeit. PromptQuorum validiert die Konsistenz über alle Modelle.',
         columns: ['Problem', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -771,6 +779,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: 'Problemas que resuelve cada herramienta',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Las herramientas de salida estructurada resuelven tres problemas distintos — imponer un esquema en el momento de la generación, validar el resultado después y reparar salidas malformadas — y la mayoría de los sistemas solo necesita los dos primeros.' },
+          { type: 'in-plain-terms', text: 'No elijas por lista de funciones. Pregúntate qué fallo tienes de verdad: el modelo ignora tu formato, o lo respeta pero los valores están mal, o devuelve un JSON que ni siquiera se puede parsear. Cada caso pide una solución distinta.' },
+        ],
         content: '**El structured output requiere resolver tres problemas interdependientes: definición de esquema, cumplimiento en la API y validación.** Las distintas herramientas atacan estos problemas de formas diferentes. Instructor gestiona los tres en Python con reintentos. Outlines elimina el paso de validación vía constrained decoding. Pydantic AI añade type safety para agentes. LangChain envuelve las APIs de proveedor. Marvin prioriza la velocidad del desarrollador. PromptQuorum valida la consistencia entre todos los modelos.',
         columns: ['Problema', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -1104,6 +1116,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: 'Problemas que cada ferramenta resolve',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Ferramentas de saída estruturada resolvem três problemas distintos — impor um schema no momento da geração, validar o resultado depois e reparar saídas malformadas — e a maioria dos sistemas só precisa dos dois primeiros.' },
+          { type: 'in-plain-terms', text: 'Não escolha por lista de recursos. Pergunte qual falha você realmente tem: o modelo ignora o seu formato, ou respeita o formato mas os valores estão errados, ou devolve um JSON que nem dá para parsear. Cada caso pede uma resposta diferente.' },
+        ],
         content: '**O structured output requer resolver três problemas interdependentes: definição de esquema, conformidade na API e validação.** Diferentes ferramentas atacam esses problemas de formas diferentes. Instructor gerencia os três em Python com tentativas. Outlines elimina a etapa de validação via constrained decoding. Pydantic AI adiciona type safety para agentes. LangChain envolve as APIs do fornecedor. Marvin prioriza a velocidade do desenvolvedor. PromptQuorum valida a consistência entre todos os modelos.',
         columns: ['Problema', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -1417,6 +1433,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: 'Problèmes résolus par chaque outil',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Les outils de sortie structurée résolvent trois problèmes distincts — imposer un schéma dès la génération, valider ensuite le résultat, et réparer une sortie malformée — et la plupart des stacks n\'ont besoin que des deux premiers.' },
+          { type: 'in-plain-terms', text: 'Ne choisissez pas sur une liste de fonctionnalités. Demandez quelle panne vous rencontrez vraiment : le modèle ignore votre format, ou il le respecte mais les valeurs sont fausses, ou il renvoie un JSON qui ne se parse même pas. Chaque cas appelle une réponse différente.' },
+        ],
         content: '**Le Structured Output nécessite de résoudre trois problèmes interdépendants : définition de schéma, application via l\'API et validation.** Différents outils abordent ces problèmes différemment. Instructor gère les trois en Python avec des retries. Outlines élimine l\'étape de validation via le décodage contraint. Pydantic AI ajoute la sécurité de type pour les agents. LangChain enveloppe les APIs des fournisseurs. Marvin priorise la rapidité du développeur. PromptQuorum valide la cohérence sur tous les modèles.',
         columns: ['Problème', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -1736,6 +1756,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: '各ツールが解決する問題',
+        snippets: [
+          { type: 'in-one-sentence', text: '構造化出力のツールは、生成時にスキーマを強制する、生成後に結果を検証する、壊れた出力を修復するという三つの異なる問題を解決しますが、多くの構成で必要になるのは最初の二つだけです。' },
+          { type: 'in-plain-terms', text: '機能一覧で選ばないでください。実際に起きている不具合はどれかを問うべきです。形式を無視されるのか、形式は守られるが値が誤っているのか、そもそもパースできない JSON が返るのか。それぞれ対処法は異なります。' },
+        ],
         content: '**Structured Outputには3つの相互依存する問題の解決が必要です：スキーマ定義、API強制、バリデーション。** 各ツールは異なるアプローチで解決します。InstructorはPythonでリトライを用いて3つすべてを処理。OutlinesはConstrainted Decodingでバリデーションステップを排除。Pydantic AIはエージェントに型安全性を追加。LangChainはProvider APIをラップ。Marvinは開発速度を優先。PromptQuorumは全モデルの一貫性を検証します。',
         columns: ['問題', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -2063,6 +2087,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: '各工具解决的问题',
+        snippets: [
+          { type: 'in-one-sentence', text: '结构化输出工具解决的是三个不同的问题——在生成时强制架构、生成后校验结果、修复格式损坏的输出——而多数技术栈只需要前两项。' },
+          { type: 'in-plain-terms', text: '别照着功能清单选。先问你真正遇到的是哪种故障：模型无视你的格式，还是格式对了但值是错的，又或者返回的 JSON 根本无法解析。这三种情况的解法并不相同。' },
+        ],
         content: '**结构化输出需要解决三个相互依存的问题：模式定义、API强制和验证。** 不同工具以不同方式解决这些问题。Instructor在Python中用重试处理全部三个。Outlines通过约束解码消除了验证步骤。Pydantic AI为Agent添加类型安全性。LangChain封装Provider API。Marvin优先考虑开发速度。PromptQuorum验证所有模型的一致性。',
         columns: ['问题', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -2419,6 +2447,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'tool-problems',
         title: 'المشكلة التي تحلها كل أداة',
+        snippets: [
+          { type: 'in-one-sentence', text: 'تحل أدوات المخرجات المهيكلة ثلاث مشكلات مختلفة — فرض المخطط أثناء التوليد، والتحقق من النتيجة بعده، وإصلاح المخرجات المشوّهة — ولا تحتاج معظم الأنظمة سوى الاثنتين الأوليين.' },
+          { type: 'in-plain-terms', text: 'لا تختر بناءً على قائمة الميزات، بل اسأل عن العطل الذي تواجهه فعلاً: هل يتجاهل النموذج صيغتك، أم يلتزم بها لكن القيم خاطئة، أم يعيد JSON لا يمكن تحليله أصلاً؟ لكل حالة علاج مختلف.' },
+        ],
         content: '**يتطلب structured output حل ثلاث مشكلات مترابطة: تعريف المخطط، والامتثال عبر API، والتحقق.** تعالج الأدوات المختلفة هذه المشكلات بطرق مختلفة. يتعامل Instructor مع الثلاثة في Python مع إعادة المحاولات. يزيل Outlines خطوة التحقق عبر constrained decoding. يضيف Pydantic AI سلامة الأنواع للوكلاء. يغلف LangChain APIs المزودين. يُعطي Marvin الأولوية لسرعة المطور. يتحقق PromptQuorum من الاتساق عبر جميع النماذج.',
         columns: ['المشكلة', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
@@ -2754,6 +2786,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whichProblem: {
         id: 'which-problem-each-tool-solves',
         title: '각 도구가 해결하는 문제',
+        snippets: [
+          { type: 'in-one-sentence', text: '구조화 출력 도구는 생성 시점에 스키마를 강제하는 문제, 생성 후 결과를 검증하는 문제, 손상된 출력을 복구하는 문제라는 세 가지 서로 다른 문제를 해결하며, 대부분의 구성에는 앞의 두 가지만 필요합니다.' },
+          { type: 'in-plain-terms', text: '기능 목록을 보고 고르지 마십시오. 실제로 겪는 실패가 무엇인지 먼저 물어야 합니다. 모델이 형식을 무시하는지, 형식은 지키지만 값이 틀리는지, 아예 파싱조차 되지 않는 JSON을 돌려주는지입니다. 각각 해법이 다릅니다.' },
+        ],
         content: '**Structured output은 세 가지 상호 연관된 문제를 해결해야 합니다: 스키마 정의, API 준수, 유효성 검사.** 서로 다른 도구는 이러한 문제를 다른 방식으로 공격합니다. Instructor는 재시도와 함께 Python에서 세 가지를 모두 관리합니다. Outlines는 constrained decoding을 통해 유효성 검사 단계를 제거합니다. Pydantic AI는 에이전트에 type safety를 추가합니다. LangChain은 공급자 API를 래핑합니다. Marvin은 개발자 속도를 우선시합니다. PromptQuorum은 모든 모델에서 일관성을 검증합니다.',
         columns: ['문제', 'Instructor', 'Outlines', 'Pydantic AI', 'LangChain', 'Marvin'],
         rows: [
