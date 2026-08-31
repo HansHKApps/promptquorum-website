@@ -81,6 +81,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         definition: {
           title: 'Prompt Engineering: Definition and Core Principles',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt engineering is the practice of designing and refining the instructions given to a language model so it produces a specific, repeatable output rather than a plausible guess.' },
+            { type: 'in-plain-terms', text: 'It is learning to brief well. The model is a fast, literal colleague with no memory of your project: say who it should be, what you want, and what the answer should look like, and most of the frustration disappears.' },
+          ],
           content: [
             '**Prompt engineering is the practice of designing and structuring text inputs — called prompts — to get accurate, useful, and repeatable outputs from large language models (LLMs).** It applies to GPT-5.6, Claude Opus 5, Gemini 3.1, and locally-run models via Ollama or LM Studio. The difference between prompt engineering and "just asking AI a question" is the difference between a vague request and a precise instruction with a defined objective, context, and output format.',
             'Today, prompt engineering is a structured discipline with named techniques, reusable frameworks, and measurable outcomes. It is not about tricking AI systems or finding hidden commands — it is about giving a probabilistic model the clearest possible signal of what you need. A well-engineered prompt consistently produces usable output on the first attempt.',
@@ -424,6 +428,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Was ist Prompt Engineering?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt Engineering ist die Praxis, Anweisungen an ein Sprachmodell so zu gestalten und zu verfeinern, dass es eine spezifische, wiederholbare Ausgabe erzeugt statt einer plausiblen Vermutung.' },
+            { type: 'in-plain-terms', text: 'Es bedeutet, gut zu briefen. Das Modell ist eine schnelle, wörtlich nehmende Kollegin ohne Erinnerung an Ihr Projekt: Sagen Sie, wer sie sein soll, was Sie wollen und wie die Antwort aussehen soll — der größte Teil des Ärgers verschwindet.' },
+          ],
           content: [
             '**Prompt Engineering ist die Praxis, Texteingaben – sogenannte Prompts – so zu gestalten und zu strukturieren, dass große Sprachmodelle (LLMs) genaue, nützliche und wiederholbare Ausgaben liefern.** Dies gilt für GPT-5.6, Claude Opus 5, Gemini 3.1 sowie lokal betriebene Modelle über Ollama oder LM Studio. Der Unterschied zwischen Prompt Engineering und „einfach eine Frage an eine KI stellen" ist der Unterschied zwischen einer vagen Anfrage und einer präzisen Anweisung mit klar definiertem Ziel, Kontext und Ausgabeformat.',
             'Heute ist Prompt Engineering eine strukturierte Disziplin mit benannten Techniken, wiederverwendbaren Frameworks und messbaren Ergebnissen. Es geht nicht darum, KI-Systeme zu überlisten oder versteckte Befehle zu finden – es geht darum, einem probabilistischen Modell das klarstmögliche Signal zu geben, was man benötigt. Ein gut entwickelter Prompt liefert konsistent nutzbare Ergebnisse beim ersten Versuch.',
@@ -765,6 +773,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Prompt Engineering: Definición y principios fundamentales',
+          snippets: [
+            { type: 'in-one-sentence', text: 'El prompt engineering es la práctica de diseñar y refinar las instrucciones que se dan a un modelo de lenguaje para que produzca una salida específica y repetible en lugar de una conjetura verosímil.' },
+            { type: 'in-plain-terms', text: 'Consiste en aprender a dar un buen encargo. El modelo es un compañero rápido y literal que no recuerda tu proyecto: dile quién debe ser, qué quieres y qué aspecto debe tener la respuesta, y casi toda la frustración desaparece.' },
+          ],
           content: [
             '**El prompt engineering es la práctica de diseñar y estructurar entradas de texto — llamadas prompts — para obtener outputs precisos, útiles y reproducibles de los grandes modelos de lenguaje (LLMs).** Se aplica a GPT-5.6, Claude Opus 5, Gemini 3.1 y modelos ejecutados localmente mediante Ollama o LM Studio. La diferencia entre el prompt engineering y "simplemente hacerle una pregunta a la IA" es la diferencia entre una solicitud vaga y una instrucción precisa con un objetivo definido, contexto y formato de output.',
             'Hoy en día, el prompt engineering es una disciplina estructurada con técnicas con nombres propios, frameworks reutilizables y resultados medibles. No se trata de engañar a los sistemas de IA ni de encontrar comandos ocultos — se trata de dar a un modelo probabilístico la señal más clara posible de lo que necesitas. Un prompt bien diseñado produce consistentemente un output utilizable en el primer intento.',
@@ -1107,6 +1119,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'هندسة الطلبات: التعريف والمبادئ الأساسية',
+          snippets: [
+            { type: 'in-one-sentence', text: 'هندسة الطلبات هي ممارسة تصميم التعليمات المعطاة لنموذج لغوي وصقلها كي ينتج مخرجاً محدداً وقابلاً للتكرار بدلاً من تخمين يبدو معقولاً.' },
+            { type: 'in-plain-terms', text: 'إنها تعلّم كيف تُحسن التكليف. النموذج زميل سريع وحرفي لا يتذكر مشروعك: أخبره من ينبغي أن يكون، وماذا تريد، وكيف ينبغي أن تبدو الإجابة، فيتلاشى معظم الإحباط.' },
+          ],
           content: [
             '**هندسة الطلبات هي ممارسة تصميم وبناء المدخلات النصية — المسماة طلبات — للحصول على مخرجات دقيقة ومفيدة وقابلة للتكرار من نماذج اللغة الكبيرة (LLMs).** تُطبَّق على GPT-5.6 وClaude Opus 5 وGemini 3.1 والنماذج التي تعمل محليًا عبر Ollama أو LM Studio. الفرق بين هندسة الطلبات و"مجرد طرح سؤال على الذكاء الاصطناعي" هو الفرق بين طلب مبهم وتعليمة دقيقة مع هدف محدد وسياق وتنسيق مخرجات.',
             'اليوم، هندسة الطلبات هي تخصص منظم بتقنيات ذات أسماء محددة وأطر قابلة لإعادة الاستخدام ونتائج قابلة للقياس. لا يتعلق الأمر بخداع أنظمة الذكاء الاصطناعي أو إيجاد أوامر مخفية — بل يتعلق بإعطاء نموذج احتمالي الإشارة الأوضح الممكنة لما تحتاجه. الطلب المصمم جيدًا يُنتج بشكل متسق مخرجات قابلة للاستخدام في المحاولة الأولى.',
@@ -1449,6 +1465,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Prompt Engineering: Definição e princípios fundamentais',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Prompt engineering é a prática de projetar e refinar as instruções dadas a um modelo de linguagem para que ele produza uma saída específica e repetível, em vez de um palpite plausível.' },
+            { type: 'in-plain-terms', text: 'É aprender a passar um bom briefing. O modelo é um colega rápido e literal que não lembra do seu projeto: diga quem ele deve ser, o que você quer e qual deve ser a cara da resposta, e a maior parte da frustração some.' },
+          ],
           content: [
             '**Prompt engineering é a prática de projetar e estruturar entradas de texto — chamadas de prompts — para obter outputs precisos, úteis e reproduzíveis de grandes modelos de linguagem (LLMs).** Aplica-se ao GPT-5.6, Claude Opus 5, Gemini 3.1 e modelos executados localmente via Ollama ou LM Studio. A diferença entre prompt engineering e "simplesmente fazer uma pergunta à IA" é a diferença entre uma solicitação vaga e uma instrução precisa com objetivo definido, contexto e formato de output.',
             'Hoje, prompt engineering é uma disciplina estruturada com técnicas nomeadas, frameworks reutilizáveis e resultados mensuráveis. Não se trata de enganar sistemas de IA ou encontrar comandos ocultos — trata-se de dar a um modelo probabilístico o sinal mais claro possível do que você precisa. Um prompt bem projetado produz consistentemente um output utilizável na primeira tentativa.',
@@ -1755,6 +1775,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Qu\'est-ce que le prompt engineering ?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Le prompt engineering est la pratique consistant à concevoir et affiner les instructions données à un modèle de langage pour qu\'il produise une sortie précise et reproductible plutôt qu\'une supposition plausible.' },
+            { type: 'in-plain-terms', text: 'C\'est apprendre à bien briefer. Le modèle est un collègue rapide et littéral qui ne se souvient pas de votre projet : dites-lui qui il doit être, ce que vous voulez et à quoi doit ressembler la réponse, et l\'essentiel de la frustration disparaît.' },
+          ],
           content: [
             '**Le prompt engineering est la pratique qui consiste à concevoir et à structurer des entrées textuelles — appelées prompts — pour obtenir des résultats précis, utiles et reproductibles des grands modèles de langage (LLM).** Il s\'applique à GPT-5.6, Claude Opus 5, Gemini 3.1 et aux modèles exécutés localement via Ollama ou LM Studio. La différence entre le prompt engineering et le simple fait de « poser une question à une IA » est la même qu\'entre une demande vague et une instruction précise avec un objectif défini, un contexte et un format de sortie.',
             'Aujourd\'hui, le prompt engineering est une discipline structurée avec des techniques nommées, des frameworks réutilisables et des résultats mesurables. Il ne s\'agit pas de tromper les systèmes d\'IA ni de trouver des commandes cachées — il s\'agit de donner à un modèle probabiliste le signal le plus clair possible de ce dont vous avez besoin. Un prompt bien conçu produit de manière constante un résultat utilisable dès la première tentative.',
@@ -2094,6 +2118,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'プロンプトエンジニアリングとは何か？',
+          snippets: [
+            { type: 'in-one-sentence', text: 'プロンプトエンジニアリングとは、言語モデルへの指示を設計し洗練させることで、もっともらしい推測ではなく、具体的で再現可能な出力を得るための実践です。' },
+            { type: 'in-plain-terms', text: 'うまく依頼する技術を身につけることです。モデルはあなたのプロジェクトを覚えていない、速くて字義どおりに受け取る同僚のようなものです。誰として振る舞うか、何が欲しいか、答えはどんな形かを伝えれば、不満の大半は消えます。' },
+          ],
           content: [
             '**プロンプトエンジニアリングとは、大規模言語モデル（LLM）から正確で有用かつ再現性のある出力を得るために、「プロンプト」と呼ばれるテキスト入力を設計・構造化する実践です。** GPT-5.6、Claude Opus 5、Gemini 3.1、そしてOllamaやLM Studioを介してローカルで動作するモデルにも適用されます。プロンプトエンジニアリングと「AIにただ質問する」の違いは、漠然としたリクエストと、明確な目標・コンテキスト・出力形式を備えた精密な指示との違いに等しいです。',
             '現在、プロンプトエンジニアリングは、名前の付いたテクニック・再利用可能なフレームワーク・測定可能な成果を持つ体系的な分野として確立されています。AIシステムを騙したり、隠しコマンドを探したりするものではなく、確率的なモデルに対して、必要なものを可能な限り明確に伝えることが目的です。よく設計されたプロンプトは、初回の試みで一貫して使用可能な出力を生成します。',
@@ -2431,6 +2459,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '什么是提示词工程？',
+          snippets: [
+            { type: 'in-one-sentence', text: '提示词工程是设计并打磨给语言模型的指令，使其产出具体且可复现的结果，而不是一个听起来合理的猜测。' },
+            { type: 'in-plain-terms', text: '说白了，就是学会把活儿交代清楚。模型像一位反应快、又极其字面的同事，而且完全不记得你的项目：告诉它该以什么身份出现、你要什么、答案该长什么样，绝大部分挫败感就消失了。' },
+          ],
           content: [
             '**提示词工程是设计和构建文本输入——称为提示词——的实践，目的是从大型语言模型（LLM）中获得准确、有用且可重复的输出。** 它适用于 GPT-5.6、Claude Opus 5、Gemini 3.1，以及通过 Ollama 或 LM Studio 在本地运行的模型。提示词工程与"随便问 AI 一个问题"的区别，就在于模糊请求与精确指令之间的差距——后者具有明确的目标、上下文和输出格式。',
             '如今，提示词工程已发展为一门具有命名技术、可复用框架和可量化成果的结构化学科。它并非关于欺骗 AI 系统或寻找隐藏指令，而是为概率模型提供尽可能清晰的信号，告知其你需要什么。一个精心设计的提示词能在首次尝试时稳定产出可用的结果。',
@@ -2776,6 +2808,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         definition: {
           title: '프롬프트 엔지니어링: 정의와 핵심 원칙',
+          snippets: [
+            { type: 'in-one-sentence', text: '프롬프트 엔지니어링은 언어 모델에 주는 지시를 설계하고 다듬어, 그럴듯한 추측이 아니라 구체적이고 재현 가능한 결과를 얻어 내는 실무입니다.' },
+            { type: 'in-plain-terms', text: '업무를 잘 설명하는 법을 익히는 일입니다. 모델은 빠르지만 문자 그대로 받아들이며 여러분의 프로젝트를 전혀 기억하지 못하는 동료와 같습니다. 어떤 역할인지, 무엇을 원하는지, 답변이 어떤 형태여야 하는지를 알려 주면 답답함의 대부분이 사라집니다.' },
+          ],
           content: [
             '**프롬프트 엔지니어링은 대형 언어 모델(LLM)에서 정확하고 유용하며 반복 가능한 출력을 얻기 위해 텍스트 입력(프롬프트)을 설계하고 구조화하는 실천입니다.** GPT-5.6, Claude Opus 5, Gemini 3.1, 그리고 Ollama나 LM Studio를 통해 로컬에서 실행되는 모델에 적용됩니다. 프롬프트 엔지니어링과 "AI에게 질문하기"의 차이는 모호한 요청과 명확한 목표, 맥락, 출력 형식이 있는 정확한 지시의 차이입니다.',
             '오늘날 프롬프트 엔지니어링은 명명된 기법, 재사용 가능한 프레임워크, 측정 가능한 결과를 갖춘 구조화된 학문입니다. AI 시스템을 속이거나 숨겨진 명령을 찾는 것이 아닙니다 — 확률적 모델에게 필요한 것이 무엇인지 가능한 한 명확한 신호를 제공하는 것입니다. 잘 엔지니어링된 프롬프트는 첫 시도에서 일관되게 사용 가능한 출력을 생성합니다.',
