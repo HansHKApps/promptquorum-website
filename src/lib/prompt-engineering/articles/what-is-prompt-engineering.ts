@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Was ist Prompt Engineering?',
         description: 'Prompt Engineering: Texteinträge so gestalten, dass zuverlässige, genaue Ausgaben von LLMs wie GPT-5.6, Claude Opus 5 und Gemini 3.1 erzeugt werden.',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['Prompt Engineering', 'KI-Prompting', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -515,6 +515,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
               label: 'Wussten Sie? Der Konsenseffekt',
               text: '92,5 % Konsistenzverbesserung (37→40 von 40) ergibt sich allein aus der Struktur, nicht aus modellspezifischen Parameterungen. Das bedeutet, dass ein gut gestalteter Prompt über alle Anbieter hinweg funktioniert, ohne dass Änderungen erforderlich sind.'
             }
+          ],
+        },
+
+        promptExample: {
+          title: 'Prompt-Struktur in der Praxis',
+          content: [
+            '[Schlechter Prompt] "Fassen Sie diesen Artikel zusammen."',
+            '[Guter Prompt] "Sie sind Research-Analyst. Fassen Sie diesen Artikel in 3 Stichpunkten zusammen. Konzentrieren Sie sich auf die Ergebnisse, nicht auf die Methodik. Jeder Stichpunkt maximal 25 Wörter."',
           ],
         },
 
@@ -1396,7 +1404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'O que é Prompt Engineering?',
         description: 'Prompt engineering: projetar entradas de texto para obter outputs confiáveis e precisos de LLMs. Aprenda técnicas essenciais, frameworks e por que isso importa.',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['prompt engineering', 'prompting de IA', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -1506,6 +1514,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Função / persona:** Uma expertise ou perspectiva definida que o modelo deve adotar — "Aja como um analista de dados sênior" ou "Você é um escritor técnico conciso"',
           ],
         },
+        pqConsensusTest: {
+          title: 'Teste de consenso PromptQuorum: o impacto da estrutura do prompt',
+          content: [
+            '**Testado no PromptQuorum — 40 prompts de sumarização enviados para GPT-5.6, Claude Opus 5 e Gemini 3.1:** prompts sem estrutura produziram respostas inconsistentes em extensão e formato nos três modelos em 37 dos 40 casos. Depois de reescrever os prompts com os cinco blocos de construção acima, os três modelos entregaram respostas consistentes e no formato correto logo na primeira tentativa, em 40 dos 40 casos.',
+            'Esse efeito de consenso — em que prompts estruturados produzem comportamento idêntico em modelos diferentes — é a ideia central da engenharia de prompts. Os cinco blocos funcionam porque exploram o fato de que todos os principais LLMs processam instruções da mesma maneira.',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: 'Você sabia? O efeito de consenso',
+              text: 'A melhoria de 92,5% na consistência (de 37 para 40 de 40) vem apenas da estrutura, e não do ajuste de parâmetros específicos de cada modelo. Isso significa que um único prompt bem elaborado funciona em todos os fornecedores, sem nenhuma modificação.'
+            }
+          ],
+        },
+
+        promptExample: {
+          title: 'Estrutura de prompt na prática',
+          content: [
+            '[Prompt ruim] "Resuma este artigo."',
+            '[Prompt bom] "Você é um analista de pesquisa. Resuma este artigo em 3 tópicos. Foque nos resultados, não na metodologia. Cada tópico deve ter no máximo 25 palavras."',
+          ],
+        },
+
         techniques: {
           title: 'Técnicas comuns de prompt engineering',
           tableFormat: true,
@@ -1539,6 +1570,55 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Framework': 'RISEN', 'Ideal para': 'Escrita instrucional, material de treinamento e conteúdo educacional' },
           ],
         },
+        frameworksLinks: {
+          content: [
+            'Este site documenta dez frameworks — cada um com seu próprio guia explicando quando usá-lo, como estruturar o prompt e exemplos resolvidos. Comece por [Qual framework de prompt você deve usar?](/pt/prompt-engineering/which-prompt-framework-should-you-use) para um guia de decisão. Depois explore [CRAFT](/pt/prompt-engineering/craft-framework), [CO-STAR](/pt/prompt-engineering/co-star-framework), [SPECS](/pt/prompt-engineering/specs-framework) e [RISEN](/pt/prompt-engineering/risen-framework) individualmente.',
+            'O PromptQuorum inclui 9 frameworks nativos e dois espaços para frameworks personalizados. Você pode aplicar qualquer framework diretamente no app, comparar o prompt estruturado com o original e salvar seus próprios templates — veja [Crie seu próprio framework de prompt](/pt/prompt-engineering/build-your-own-prompt-framework).',
+          ],
+        },
+
+        workflow: {
+          title: 'Onde a engenharia de prompts se encaixa no fluxo de trabalho de IA',
+          content: [
+            'A engenharia de prompts não funciona isoladamente. Todo prompt existe dentro de um contexto técnico mais amplo — o modelo escolhido, o orçamento de tokens disponível e a arquitetura do seu sistema de IA afetam o que um prompt consegue alcançar.',
+            'Estas são as principais decisões técnicas que interagem com a engenharia de prompts:',
+          ],
+          items: [
+            '**Escolha do modelo:** GPT-5.6, Claude Opus 5 e Gemini 3.1 respondem de forma diferente ao mesmo prompt. Escolher o modelo certo para a tarefa faz parte do processo de engenharia. Mistral AI (Europa) e Qwen (China) seguem os mesmos princípios de prompting, mas podem exigir especificações de formato de saída ajustadas por diferenças no comportamento de seguir instruções. O mesmo prompt estruturado funciona globalmente em todas as principais famílias de modelos → [GPT, Claude ou Gemini? Como escolher o modelo certo](/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)',
+            '**System prompt vs. user prompt:** o system prompt define instruções persistentes para a sessão inteira; o user prompt é a entrada de cada requisição. Acertar essa divisão determina a consistência em escala → [System prompt vs. user prompt: qual a diferença?](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)',
+            '**Janelas de contexto:** todo modelo tem um limite máximo de tokens para entrada e saída somadas. Prompts longos reduzem o espaço disponível para a resposta do modelo — e os modelos começam a ignorar o conteúdo inicial conforme a janela enche → [Janelas de contexto explicadas: por que a IA esquece](/pt/prompt-engineering/context-windows-explained-why-ai-forgets)',
+            '**Limites de tokens e custo:** prompts precisos e concisos usam menos tokens por chamada, reduzem a latência e mantêm você dentro dos limites de taxa — afetando diretamente o custo em escala → [Tokens, custos e limites: a economia do prompting de IA](/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)',
+            '**Prompting multimodal:** LLMs modernos como GPT-5.6 e Gemini 3.1 aceitam imagens além de texto. Os princípios de engenharia de prompts se aplicam igualmente a entradas de imagem → [Além do texto: como fazer prompts com imagens](/pt/prompt-engineering/beyond-text-how-to-prompt-with-images)',
+            '**Modelos locais vs. na nuvem:** as técnicas de engenharia de prompts se aplicam igualmente a APIs na nuvem e a modelos executados localmente via Ollama ou LM Studio — embora modelos locais possam exigir formatação ajustada por causa de janelas de contexto menores e de um comportamento diferente ao seguir instruções. O PromptQuorum suporta tanto modelos locais (Ollama, LM Studio, vLLM) quanto APIs na nuvem (OpenAI, Anthropic, Google Gemini 3.1) em uma única interface — permitindo alternar entre provedores sem reescrever prompts, ou comparar o mesmo prompt em vários modelos simultaneamente.',
+          ],
+        },
+
+        canDo: {
+          title: 'Limites da engenharia de prompts: o que ela resolve e o que não resolve',
+          content: '**O que a engenharia de prompts melhora de forma confiável:**',
+          items: [
+            'Consistência da saída — o mesmo prompt estruturado produz resultados semelhantes entre execuções e entre membros da equipe',
+            'Redução de alucinações — fundamentação, restrição de fontes e delimitação explícita do escopo reduzem fatos inventados. O recurso Quorum do PromptQuorum executa verificações de consenso entre as respostas dos modelos, detectando alucinações e contradições ao comparar como diferentes modelos respondem ao mesmo prompt estruturado.',
+            'Controle de formato — especificar o formato de saída faz com que os resultados cheguem prontos para uso, e não prontos para edição',
+            'Velocidade de iteração — menos rodadas de esclarecimento e mais acertos já na primeira tentativa',
+            'Portabilidade entre modelos — um prompt bem estruturado funciona em GPT-5.6, Claude Opus 5 e Gemini 3.1 sem precisar ser reescrito',
+          ],
+        },
+
+        cannotDo: {
+          content: '**O que ainda exige outras abordagens:**',
+          items: [
+            '**Acesso a dados privados ou em tempo real:** quando o modelo precisa de documentos, bancos de dados ou informações ao vivo que não cabem em um prompt — use RAG → [RAG explicado: como fundamentar respostas de IA em dados reais](/pt/prompt-engineering/rag-explained)',
+            '**Especialização profunda em um domínio:** quando um modelo precisa adotar de forma confiável um vocabulário ou estilo específico em todas as sessões — use fine-tuning, não prompts',
+            '**Conhecimento ausente:** a engenharia de prompts não consegue dar ao modelo um conhecimento com o qual ele não foi treinado. Se o modelo base desconhece um assunto, nenhum prompt vai ensiná-lo',
+            '**Avaliação sistemática de qualidade:** verificar a qualidade das saídas de IA em escala, ao longo de milhares de execuções, exige pipelines de avaliação e ferramentas que vão além do prompting manual',
+          ],
+        },
+
+        cannotDoNote: {
+          content: 'A engenharia de prompts é a alavanca mais rápida e acessível para melhorar a qualidade das saídas de IA — não exige mudanças de infraestrutura nem retreinamento. Para os problemas que ela não resolve, ela aponta claramente qual é a próxima ferramenta certa.',
+        },
+
         howToStart: {
           title: 'Como começar a aprender prompt engineering',
           content: 'Estas seis etapas levam um iniciante inteligente de zero a produtivo pelo caminho mais curto:',
@@ -1551,6 +1631,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Construa uma biblioteca de prompts para seus casos de uso.** Salve os prompts que funcionam. Refine-os ao longo do tempo. Uma biblioteca de prompts testados para seu domínio específico é um ativo duradouro.',
           ],
         },
+        relatedReading: {
+          title: 'Leitura relacionada',
+          items: [
+            '[Alucinações de IA — por que a IA inventa coisas](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — para entender uma limitação central dos LLMs',
+            '[Chain-of-Thought prompting — faça a IA mostrar seu raciocínio](/pt/prompt-engineering/chain-of-thought-prompting) — a técnica passo a passo que melhora a precisão',
+            '[Framework CO-STAR](/pt/prompt-engineering/co-star-framework) — um template estruturado que organiza os fundamentos em uma sequência comprovada',
+            '[Limitações da IA: o que os LLMs não conseguem fazer](/pt/prompt-engineering/ai-limitations-what-llms-cant-do) — as oito restrições estruturais comuns a todo LLM e a solução de engenharia para cada uma',
+            '[Ensinando com IA: estratégias de prompt para educadores](/pt/prompt-engineering/teaching-with-ai)',
+          ],
+        },
+
         faq: {
           id: 'faq',
           title: 'FAQ: Fundamentos de prompt engineering',
@@ -1621,7 +1712,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Qu\'est-ce que le Prompt Engineering ? — Guide PromptQuorum',
         description: 'Prompt engineering : concevoir des entrées textuelles pour obtenir des sorties fiables et précises des LLM. Apprenez les techniques essentielles, les frameworks et pourquoi cela compte.',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['prompt engineering', 'prompting IA', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -1755,6 +1846,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
               label: 'Saviez-vous ? L\'effet de consensus',
               text: 'Une amélioration de la cohérence de 92,5 % (37→40 sur 40) provient uniquement de la structure, pas des paramétrisations spécifiques aux modèles. Cela signifie qu\'un prompt bien conçu fonctionne sur tous les fournisseurs sans nécessiter de modifications.'
             }
+          ],
+        },
+
+        promptExample: {
+          title: 'La structure du prompt en pratique',
+          content: [
+            '[Mauvais prompt] "Résumez cet article."',
+            '[Bon prompt] "Vous êtes analyste de recherche. Résumez cet article en 3 points. Concentrez-vous sur les résultats, pas sur la méthodologie. Chaque point : 25 mots maximum."',
           ],
         },
 
@@ -1952,7 +2051,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'プロンプトエンジニアリングとは？',
         description: 'プロンプトエンジニアリング：テキスト入力を設計・構造化して、大規模言語モデルから正確で有用かつ再現性のある出力を得る実践。',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['プロンプトエンジニアリング', 'AI プロンプティング', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -2074,6 +2173,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        pqConsensusTest: {
+          title: 'PromptQuorum コンセンサステスト: プロンプト構造の影響',
+          content: [
+            '**PromptQuorum で検証 — 40件の要約プロンプトを GPT-5.6、Claude Opus 5、Gemini 3.1 に送信:** 構造化されていないプロンプトでは、40件中37件で3つのモデルすべてにわたり回答の長さと構造が不揃いになりました。上記の5つの構成要素で書き直したところ、40件中40件で3モデルすべてが初回から一貫した、フォーマット通りの応答を返しました。',
+            'このコンセンサス効果 — 構造化されたプロンプトが異なるモデル間で同一の挙動を生み出す現象 — が、プロンプトエンジニアリングの核心です。5つの構成要素が機能するのは、主要な LLM がいずれも指示を同じ方法で処理するという性質を利用しているためです。',
+          ],
+          callouts: [
+            {
+              type: 'info',
+              label: '豆知識: コンセンサス効果',
+              text: '92.5% の一貫性向上（40件中37→40件）は、モデル固有のパラメータ調整ではなく、構造だけから得られます。つまり、適切に設計されたプロンプト1つが、ベンダーを問わず修正なしで機能するということです。'
+            }
+          ],
+        },
+
+        promptExample: {
+          title: 'プロンプト構造の実践例',
+          content: [
+            '[悪いプロンプト] 「この記事を要約して。」',
+            '[良いプロンプト] 「あなたはリサーチアナリストです。この記事を3つの箇条書きで要約してください。方法論ではなく、調査結果に焦点を当ててください。各項目は25語以内とします。」',
+          ],
+        },
+
         techniques: {
           title: '一般的なプロンプトエンジニアリングテクニック',
           content: '프ロンプトエンジニアリングのテクニックは、特定の出力上の問題を解決するために名前が付けられたパターンです。各テクニックは、一貫性のない形式・誤った推論・低精度・過度な長さなど、それぞれ異なる障害モードに対処します。特定の問題を修正する際は、一度に一つずつ適用してください。',
@@ -2184,6 +2306,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
 
+        relatedReading: {
+          title: '関連記事',
+          items: [
+            '[AIハルシネーション — AIが事実をでっち上げる理由](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — LLM の中核的な限界を理解する',
+            '[Chain-of-Thought プロンプティング — AIに推論過程を示させる](/ja/prompt-engineering/chain-of-thought-prompting) — 精度を高める段階的な手法',
+            '[CO-STAR フレームワーク](/ja/prompt-engineering/co-star-framework) — 基礎を実証済みの順序で整理する構造化テンプレート',
+            '[AIの限界: LLMにできないこと](/ja/prompt-engineering/ai-limitations-what-llms-cant-do) — すべての LLM に共通する8つの構造的制約と、それぞれの回避策',
+            '[AIで教える: 教育者のためのプロンプト戦略](/ja/prompt-engineering/teaching-with-ai)',
+          ],
+        },
+
         faq: {
           id: 'faq',
           title: 'FAQ：プロンプトエンジニアリングの基礎',
@@ -2226,6 +2359,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
         },
+
+        sources: {
+          title: '参考文献・関連資料',
+          items: [
+            'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)" — 段階的な推論が数学・論理タスクにおけるハルシネーションを低減することを示した基礎論文。',
+            'Maynez, J., Narayan, S., Hashimoto, B., & Hardt, D. (2021). "[On Faithfulness and Factuality in Abstractive Summarization](https://aclanthology.org/2021.acl-long.200/)" — ニューラルテキスト生成におけるハルシネーションの発生率とメカニズムに関する実証研究。',
+            'Anthropic (2024). "[Constitutional AI](https://www.anthropic.com/constitutional-ai)" — 原則ベースの学習によって有害な出力とハルシネーションを低減する Anthropic のアプローチ。',
+          ],
+        },
       },
     },
     zh: {
@@ -2246,7 +2388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '什么是提示工程？ — PromptQuorum 指南',
         description: '提示工程：设计文本输入以从 GPT-5.6、Claude Opus 5 和 Gemini 3.1 等大语言模型获得可靠、准确的输出。学习基本技术、框架和为什么这对人工智能输出质量很重要。',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['提示工程', 'AI 提示', '大语言模型', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -2380,6 +2522,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
               label: '你知道吗？共识效应',
               text: '一致性提高了92.5%（37→40满分40），这完全来自结构，与特定于模型的参数设置无关。这意味着精心设计的提示词可在所有供应商中使用，无需修改。'
             }
+          ],
+        },
+
+        promptExample: {
+          title: '提示结构的实际应用',
+          content: [
+            '[糟糕的提示] "总结这篇文章。"',
+            '[优秀的提示] "你是一名研究分析师。用 3 个要点总结这篇文章。聚焦于研究发现，而非方法论。每个要点不超过 25 个字。"',
           ],
         },
 
