@@ -322,6 +322,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             q: 'How do I version and share personas with my team?',
             a: 'Store personas in a shared document (Markdown, JSON, or PromptQuorum library) with version history. Example: "v2.1: Senior Cloud Architect—added zero-trust constraint, removed speculative claims rule." Version constraints and reasoning changes. Track which persona versions were tested on which models.',
           },
+          {
+            q: 'Do data protection rules apply to persona prompts?',
+            a: 'Yes — a persona prompt is input that gets processed like any other, so it should not contain personal data: real names, addresses, health details, or customer identifiers. Keep personas abstract ("a compliance officer at a mid-size insurer") rather than modelled on a specific colleague. If a persona has to encode confidential internal policy, run it against a local model via Ollama or LM Studio so the text never leaves your infrastructure.',
+          },
+          {
+            q: 'Is persona prompting worth it for small and mid-size teams?',
+            a: 'Yes, and usually more so than for large ones — it is the highest-leverage option when there is no ML budget. A persona is a text file: it can be reviewed in a pull request, version-controlled in Git, and audited by a security or legal reviewer without any training infrastructure. Teams with data-sovereignty requirements typically pair a versioned persona with a locally hosted model such as Llama 4 Scout or Qwen3 instead of fine-tuning.',
+          },
         ],
       },
       sources: {
@@ -970,7 +978,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
           '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
           '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
-          '[Documentación de PromptQuorum: Pruebas de Personas Multi-Modelo.](https://www.promptquorum.com/docs/multi-model-testing)',
+          '[Cómo probar prompts entre modelos: evaluación multi-modelo — PromptQuorum.](/es/prompt-engineering/how-to-test-prompts-across-models)',
         ],
       },
       relatedReading: {
@@ -1262,7 +1270,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
           '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
           '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
-          '[Documentação do PromptQuorum: Testes de Personas Multi-Modelo.](https://www.promptquorum.com/docs/multi-model-testing)',
+          '[Como testar prompts entre modelos: avaliação multi-modelo — PromptQuorum.](/pt/prompt-engineering/how-to-test-prompts-across-models)',
         ],
       },
       relatedReading: {
@@ -1611,7 +1619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Kojima et al. (2022). « Large Language Models are Zero-Shot Reasoners. » NeurIPS.](https://arxiv.org/abs/2205.11916)',
           '[Brown et al. (2020). « Language Models are Few-Shot Learners. » OpenAI.](https://arxiv.org/abs/2005.14165)',
           '[Touvron et al. (2023). « LLaMA: Open and Efficient Foundation Language Models. » arXiv.](https://arxiv.org/abs/2302.13971)',
-          '[Documentation PromptQuorum: Test Persona Multi-Modèles.](https://www.promptquorum.com/docs/multi-model-testing)',
+          '[Tester des prompts sur plusieurs modèles : évaluation multi-modèles — PromptQuorum.](/fr/prompt-engineering/how-to-test-prompts-across-models)',
         ],
       },
       relatedReading: {
@@ -1943,6 +1951,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             q: 'ペルソナをチームと共有し、バージョン管理するにはどうすればよいですか？',
             a: 'ペルソナを共有ドキュメント（Markdown、JSON、またはPromptQuorumライブラリ）にバージョン履歴付きで保存してください。例：「v2.1：シニアクラウドアーキテクト—ゼロトラスト制約を追加、推測的主張ルールを削除」。制約の変更と理由の変更をバージョン管理します。どのペルソナバージョンをどのモデルでテストしたかを追跡してください。',
+          },
+          {
+            q: 'ペルソナプロンプトに個人情報保護法は適用されますか？',
+            a: 'はい。ペルソナプロンプトも他の入力と同様に処理されるため、実名、住所、健康情報、顧客IDなどの個人情報を含めるべきではありません。特定の同僚をモデルにするのではなく、「中堅保険会社のコンプライアンス担当者」のように抽象化してください。社内の機密ポリシーをペルソナに埋め込む必要がある場合は、OllamaやLM Studioでローカルモデルに対して実行すれば、テキストが自社インフラの外に出ることはありません。',
+          },
+          {
+            q: 'ペルソナプロンプティングは中小規模のチームにも見合いますか？',
+            a: 'はい。むしろ機械学習の予算がないチームほど費用対効果が高い手法です。ペルソナはテキストファイルなので、プルリクエストでレビューし、Gitでバージョン管理し、セキュリティや法務の担当者が学習基盤なしで監査できます。データ主権の要件があるチームは、ファインチューニングの代わりに、バージョン管理したペルソナとローカルホストのLlama 4 ScoutやQwen3を組み合わせるのが一般的です。',
           },
         ],
       },
@@ -2285,6 +2301,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             q: '如何对人物角色进行版本管理并与团队共享？',
             a: '把人物角色保存在带版本历史的共享文档中（Markdown、JSON或PromptQuorum库）。例如：「v2.1：高级云架构师——新增零信任约束，移除推测性断言规则。」对约束变更和理由变更做版本记录，并追踪哪些人物角色版本在哪些模型上测试过。',
           },
+          {
+            q: '个人信息保护规定适用于人物角色提示吗？',
+            a: '适用。人物角色提示与其他输入一样会被处理，因此不应包含个人信息：真实姓名、住址、健康数据或客户标识。请把人物角色写得抽象一些（例如「一家中型保险公司的合规负责人」），而不要以某位具体同事为原型。如果人物角色必须编码内部机密政策，可通过Ollama或LM Studio在本地模型上运行，这样文本不会离开你自己的基础设施。',
+          },
+          {
+            q: '人物角色提示对中小团队值得吗？',
+            a: '值得，而且对没有机器学习预算的团队收益更高。人物角色本质上是一个文本文件：可以在拉取请求中评审，用Git做版本控制，并由安全或法务人员审计，全程不需要任何训练基础设施。有数据主权要求的团队通常不做微调，而是把版本化的人物角色与本地部署的Llama 4 Scout或Qwen3搭配使用。',
+          },
         ],
       },
       sources: {
@@ -2322,7 +2346,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     metaDescription: '⁨7⁩ مكونات لتوجيه الشخصية تمنح ذكاءك الاصطناعي دوراً ثابتاً دون ⁨fine-tuning⁩. اختبر القوالب عبر ⁨GPT⁩ و⁨Claude⁩ و⁨Gemini⁩ وحقق استجابات متسقة.',
     publishDate: '2026-03-26',
     dateModified: '2026-08-31',
-    readTime: '13 دقائق للقراءة',
+    readTime: '13 دقيقة للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مهندسو البرمجيات ومديرو المنتجات والفرق التي تنشر مساعدي الذكاء الاصطناعي على نطاق واسع',
     schema: {
@@ -2365,9 +2389,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'يُثبّت توجيه الشخصية سلوك الذكاء الاصطناعي بتحديد الدور ونطاق الخبرة وقواعد اتخاذ القرار قبل إرسال مهمتك الفعلية، مما يجعل الاستجابات قابلة للتنبؤ عبر الجلسات والنماذج.',
           'المكونات السبعة هي: الدور (من)، ونطاق المجال (ماذا)، والأهداف (الأولويات)، والقيود (الحدود)، وأسلوب التفاعل (كيف)، والأمثلة (جيد/سيئ)، ومعالجة عدم اليقين (عند الشك).',
           'تقلل الشخصيات الهلوسة لأنها تقيّد تفكير النموذج بـ"هوية" ثابتة بدلاً من ارتجال أسلوب جديد مع كل استفسار.',
-          'اختبر الشخصيات عبر GPT وClaude Opus وGemini Pro وMistral Large لمعرفة أي نموذج يلتزم بها بشكل أفضل — لا يوجد نموذج واحد يتبع جميع الشخصيات بالتساوي.',
+          'اختبر الشخصيات عبر GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وMistral Large لمعرفة أي نموذج يلتزم بها بشكل أفضل — لا يوجد نموذج واحد يتبع جميع الشخصيات بالتساوي.',
           'توجيه الشخصية قابل للعكس في ثوانٍ ويعمل عبر المزودين، مما يجعله محمولاً وأرخص من fine-tuning لتغييرات السلوك.',
-          'استخدم حدوداً رقمية (نسبة الثقة %, حدود الـ token، مستوى القراءة) لمساعدة النماذج على اتباع القواعد؛ تعيّن نماذج مثل GPT هذه مباشرةً إلى معلمات فك الترميز الداخلية.',
+          'استخدم حدوداً رقمية (نسبة الثقة %, حدود الـ token، مستوى القراءة) لمساعدة النماذج على اتباع القواعد؛ تعيّن نماذج مثل GPT-5.6 هذه مباشرةً إلى معلمات فك الترميز الداخلية.',
         ],
       },
       quickFacts: {
@@ -2376,7 +2400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'التقنية الأساسية: أضف الدور والمجال والقيود إلى رسالة النظام قبل المهمة.',
           'مكونات البناء: 7 مكونات (الدور، النطاق، الأهداف، القيود، الأسلوب، الأمثلة، معالجة عدم اليقين) تجعل الشخصيات قابلة للقراءة آلياً.',
           'تأثير السلوك: تقلل الشخصيات أخطاء التنسيق بأكثر من 50% وتزيد الالتزام بالقيود مقارنة بالطلبات العامة.',
-          'ميزة متعددة النماذج: تتصرف الشخصية ذاتها بشكل مختلف في GPT وClaude وGemini — مما يستلزم اختباراً مقصوداً.',
+          'ميزة متعددة النماذج: تتصرف الشخصية ذاتها بشكل مختلف في GPT-5.6 وClaude وGemini — مما يستلزم اختباراً مقصوداً.',
           'قابلية إعادة الاستخدام: الشخصيات المضغوطة (400–600 token) قابلة للمشاركة داخل الفرق وعبر المشاريع.',
           'لا تدريب مطلوب: بخلاف fine-tuning، تعمل الشخصيات مع أي مزود دون إعادة تدريب النموذج.',
         ],
@@ -2384,10 +2408,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPersonaPrompting: {
         title: 'ما هو توجيه الشخصية فعلاً',
         content: [
-          '**توجيه الشخصية هو طريقة منظمة لإخبار GPT أو Claude Opus أو Gemini Pro أو غيرها من النماذج بمن ينبغي أن تتظاهر بأنهم، وكيف ينبغي أن يفكروا، وما هي القيود التي يجب اتباعها قبل رؤية مهمتك الفعلية.** يتضمن طلب الشخصية عادةً وصف الدور وخبرة المجال والنبرة وقواعد اتخاذ القرار والقيود الصريحة لكي يتصرف النموذج بشكل قابل للتنبؤ بدلاً من ارتجال أسلوب جديد في كل مرة.',
+          '**توجيه الشخصية هو طريقة منظمة لإخبار GPT-5.6 أو Claude Opus 5 أو Gemini 3.1 Pro أو غيرها من النماذج بمن ينبغي أن تتظاهر بأنهم، وكيف ينبغي أن يفكروا، وما هي القيود التي يجب اتباعها قبل رؤية مهمتك الفعلية.** يتضمن طلب الشخصية عادةً وصف الدور وخبرة المجال والنبرة وقواعد اتخاذ القرار والقيود الصريحة لكي يتصرف النموذج بشكل قابل للتنبؤ بدلاً من ارتجال أسلوب جديد في كل مرة.',
           '**بجملة واحدة:** يحوّل توجيه الشخصية LLM للأغراض العامة إلى متخصص افتراضي قابل للتكرار بتثبيت دوره وأهدافه وحدوده قبل طرح الأسئلة.',
           'يختلف توجيه الشخصية عن "طلبات الأسلوب" البسيطة مثل "أجب كمدرس ودود." يحدد طلب الشخصية الصحيح ليس فقط النبرة بل أيضاً نطاق المعرفة وأولويات القرار وكيفية التعامل مع عدم اليقين.',
-          'PromptQuorum هي أداة توزيع ذكاء اصطناعي متعددة النماذج تتيح لك اختبار نفس طلب الشخصية في آنٍ واحد مع GPT وClaude Opus وGemini Pro وMistral Large ونماذج محلية عبر Ollama لمعرفة أي نموذج يتبع الشخصية بشكل أكثر موثوقية.',
+          'PromptQuorum هي أداة توزيع ذكاء اصطناعي متعددة النماذج تتيح لك اختبار نفس طلب الشخصية في آنٍ واحد مع GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وMistral Large ونماذج محلية عبر Ollama لمعرفة أي نموذج يتبع الشخصية بشكل أكثر موثوقية.',
         ],
       },
       whyItMatters: {
@@ -2418,7 +2442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       numericThresholds: {
         content: [
           'طلبات الشخصية التي تُشفّر حدوداً رقمية (مثل "ثقة 80%"، "لا تتجاوز 300 token في الرد" أو "اشرح بمستوى اللغة الإنجليزية B1") يسهل على النماذج اتباعها مقارنةً بالتعليمات النوعية البحتة.',
-          'تدعم PromptQuorum إرفاق نفس كتلة الشخصية بطلبات متعددة عبر المزودين، بحيث يمكنك إعادة استخدام شخصية "محلل مالي متحفظ" واحدة عند الاستعلام من GPT وGemini وLLaMA دون النسخ واللصق.',
+          'تدعم PromptQuorum إرفاق نفس كتلة الشخصية بطلبات متعددة عبر المزودين، بحيث يمكنك إعادة استخدام شخصية "محلل مالي متحفظ" واحدة عند الاستعلام من GPT-5.6 وGemini 3.1 Pro وLlama 4 Scout دون النسخ واللصق.',
         ],
       },
       techExample: {
@@ -2444,7 +2468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techExampleTest: {
         content: [
-          'يمكن لـ PromptQuorum إرسال هذه الشخصية مع مهمة محددة (مثل "حلّل تأثير قانون الذكاء الاصطناعي الأوروبي على نماذج LLM المستضافة في السحابة") إلى GPT وClaude Opus وGemini Pro وMistral Large بنقرة واحدة وإظهار أي نموذج يحترم القيود بشكل أفضل.',
+          'يمكن لـ PromptQuorum إرسال هذه الشخصية مع مهمة محددة (مثل "حلّل تأثير قانون الذكاء الاصطناعي الأوروبي على نماذج LLM المستضافة في السحابة") إلى GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وMistral Large بنقرة واحدة وإظهار أي نموذج يحترم القيود بشكل أفضل.',
         ],
       },
       howToBuild: {
@@ -2475,7 +2499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           'يغيّر توجيه الشخصية نص الإدخال؛ يغيّر fine-tuning معلمات النموذج.',
-          'يعمل توجيه الشخصية مع GPT وClaude Opus وGemini Pro وMistral Large دون إعادة تدريب؛ يكون fine-tuning عادةً خاصاً بالمزود.',
+          'يعمل توجيه الشخصية مع GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وMistral Large دون إعادة تدريب؛ يكون fine-tuning عادةً خاصاً بالمزود.',
           'توجيه الشخصية قابل للعكس في ثوانٍ؛ يمكنك تغيير الشخصيات حسب المهمة أو المنطقة (الاتحاد الأوروبي مقابل الصين مقابل الولايات المتحدة) دون تغييرات في البنية التحتية.',
         ],
       },
@@ -2567,15 +2591,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'ما هو الطول المناسب لطلب الشخصية؟', a: 'الشخصيات الأكثر فاعلية تتراوح بين 200–600 token. ابدأ بـ 200–300 token للدور والمجال والأهداف وقيد أو قيدَين. أضف الأمثلة ومعالجة عدم اليقين عندما يتطلب التعقيد ذلك. الشخصيات التي تتجاوز 1000 token كثيراً ما تربك النماذج؛ اجعلها موجزة وقابلة للاختبار.' },
-          { q: 'هل يعمل توجيه الشخصية مع جميع النماذج؟', a: 'يعمل مع GPT وClaude Opus وGemini Pro وMistral Large ونماذج محلية مثل LLaMA وQwen. غير أن النماذج المختلفة تتبع الشخصيات بشكل مختلف: يُعطي GPT الأولوية للقيود، يطرح Claude أسئلة توضيحية، ينشئ Gemini ملخصات رقمية كثيفة. اختبر شخصيتك عبر نماذج متعددة.' },
+          { q: 'هل يعمل توجيه الشخصية مع جميع النماذج؟', a: 'يعمل مع GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وMistral Large ونماذج محلية مثل Llama 4 Scout وQwen3. غير أن النماذج المختلفة تتبع الشخصيات بشكل مختلف: يُعطي GPT-5.6 الأولوية للقيود، يطرح Claude أسئلة توضيحية، ينشئ Gemini ملخصات رقمية كثيفة. اختبر شخصيتك عبر نماذج متعددة.' },
           { q: 'هل يمكنني استخدام الشخصيات مع نماذج مُضبَّطة بـ fine-tuning؟', a: 'نعم. تعمل الشخصيات كطبقة نصية فوق النماذج المُضبَّطة. النموذج المُضبَّط يُشفّر بالفعل معرفة المجال وأسلوبه؛ يمكن لطلب الشخصية تحسين أو إعادة توجيه ذلك السلوك لمهام محددة. الأسلوبان يتكاملان.' },
-          { q: 'كيف أختبر ما إذا كانت الشخصية تعمل؟', a: 'اختبر باستخدام PromptQuorum: أرسل نفس المهمة إلى GPT وClaude وGemini مع شخصيتك. احسب عدد المرات التي يخالف فيها النموذج قاعدة (مثل تجاوز حد الـ token، أو استخدام لغة تسويقية، أو تقديم نصائح شخصية). حسّن الشخصية بناءً على الإخفاقات. كرر ذلك 10–20 مرة.' },
+          { q: 'كيف أختبر ما إذا كانت الشخصية تعمل؟', a: 'اختبر باستخدام PromptQuorum: أرسل نفس المهمة إلى GPT-5.6 وClaude وGemini مع شخصيتك. احسب عدد المرات التي يخالف فيها النموذج قاعدة (مثل تجاوز حد الـ token، أو استخدام لغة تسويقية، أو تقديم نصائح شخصية). حسّن الشخصية بناءً على الإخفاقات. كرر ذلك 10–20 مرة.' },
           { q: 'ما الذي يحدث إذا تعارضت الشخصية مع تعليمات مهمة المستخدم؟', a: 'تعليمات المهمة عادةً ما تُهيمن. إذا قالت الشخصية "3 جمل كحد أقصى" لكن المستخدم طلب 1000 كلمة، فإن النماذج عادةً تتبع طلب المستخدم الصريح. لتجنب ذلك، اجعل الشخصيات مرنة: "استهدف 3 جمل لكل فقرة، ما لم تتطلب المهمة صراحةً خلاف ذلك."' },
           { q: 'هل تساعد الشخصيات في تقليل الهلوسة؟', a: 'جزئياً. الشخصية التي تقول "استشهد بالمصادر، أقرّ بعدم اليقين عندما تكون الثقة أقل من 80%، ضع علامة على الافتراضات" تقلل الهلوسة بمنح النموذج قواعد صريحة. غير أن الشخصيات لا يمكنها إلغاء الطبيعة الاحتمالية الجوهرية للنموذج. ادمجها مع RAG أو التحقق من الحقائق لتحقيق أقصى موثوقية.' },
-          { q: 'هل الشخصيات فاعلة للغات غير الإنجليزية؟', a: 'نعم، وإن كانت ثمة تحفظات. تتعامل نماذج مثل GPT وClaude جيداً مع الشخصيات بالألمانية والفرنسية واليابانية والصينية، لكن الأداء يتفاوت. اختبر شخصيتك باللغة المستهدفة؛ بعض النماذج (مثل Qwen) محسّنة لغات بعينها.' },
+          { q: 'هل الشخصيات فاعلة للغات غير الإنجليزية؟', a: 'نعم، وإن كانت ثمة تحفظات. تتعامل نماذج مثل GPT-5.6 وClaude جيداً مع الشخصيات بالألمانية والفرنسية واليابانية والصينية، لكن الأداء يتفاوت. اختبر شخصيتك باللغة المستهدفة؛ بعض النماذج (مثل Qwen3) محسّنة لغات بعينها.' },
           { q: 'كيف أصنّف الشخصيات وأشاركها مع فريقي؟', a: 'احفظ الشخصيات في مستند مشترك (Markdown أو JSON أو مكتبة PromptQuorum) مع سجل إصدارات. مثال: "v2.1: مهندس سحابة كبير — أُضيف قيد Zero-Trust، حُذفت قاعدة الادعاءات التخمينية." طبّق نظام التحكم في الإصدارات وتتبع مبررات التغييرات.' },
           { q: 'هل يجب مراعاة اللوائح عند استخدام توجيه الشخصية؟', a: 'نعم. توجيه الشخصية هو شكل من أشكال معالجة البيانات. تأكد من أن طلبات الشخصية لا تحتوي على بيانات شخصية حساسة (أسماء، عناوين، بيانات صحية). الاستدلال المحلي للذكاء الاصطناعي (مثل استخدام Ollama على أجهزة محلية) يلبي متطلبات الخصوصية والامتثال.' },
-          { q: 'هل توجيه الشخصية مناسب للشركات متوسطة الحجم؟', a: 'نعم، خاصةً للشركات متوسطة الحجم. يتيح لك توجيه الشخصية تلبية معايير أمن تكنولوجيا المعلومات وتطبيق المتطلبات التنظيمية المحددة (مثل GDPR وNIS2) وإصدارها. تستخدم كثير من الشركات متوسطة الحجم الشخصيات مع نماذج محلية (LLaMA وOllama) للحفاظ على سيادة البيانات.' },
+          { q: 'هل توجيه الشخصية مناسب للشركات متوسطة الحجم؟', a: 'نعم، خاصةً للشركات متوسطة الحجم. يتيح لك توجيه الشخصية تلبية معايير أمن تكنولوجيا المعلومات وتطبيق المتطلبات التنظيمية المحددة (مثل GDPR وNIS2) وإصدارها. تستخدم كثير من الشركات متوسطة الحجم الشخصيات مع نماذج محلية (Llama 4 Scout عبر Ollama) للحفاظ على سيادة البيانات.' },
         ],
       },
       sources: {
@@ -2585,7 +2609,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
           '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
           '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
-          '[وثائق PromptQuorum: اختبار الشخصيات متعدد النماذج.](https://www.promptquorum.com/docs/multi-model-testing)',
+          '[اختبار الطلبات عبر عدة نماذج: التقييم متعدد النماذج — PromptQuorum.](/ar/prompt-engineering/how-to-test-prompts-across-models)',
         ],
       },
       relatedReading: {
@@ -2916,6 +2940,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             q: '팀과 페르소나를 어떻게 버전 관리하고 공유합니까?',
             a: '버전 기록이 있는 공유 문서(Markdown, JSON, 또는 PromptQuorum 라이브러리)에 페르소나를 저장하십시오. 예시: "v2.1: 시니어 클라우드 아키텍트 — 제로 트러스트 제약 추가, 추측성 주장 규칙 제거." 제약 조건과 추론 변경을 버전 관리하십시오. 어떤 페르소나 버전이 어떤 모델에서 테스트되었는지 추적하십시오.',
+          },
+          {
+            q: '페르소나 프롬프트에도 개인정보 보호 규정이 적용됩니까?',
+            a: '적용됩니다. 페르소나 프롬프트도 다른 입력과 동일하게 처리되므로 실명, 주소, 건강 정보, 고객 식별자 같은 개인정보를 포함해서는 안 됩니다. 특정 동료를 모델로 삼는 대신 "중견 보험사의 컴플라이언스 담당자"처럼 추상적으로 작성하십시오. 페르소나에 사내 기밀 정책을 담아야 한다면 Ollama나 LM Studio로 로컬 모델에서 실행하여 텍스트가 자체 인프라를 벗어나지 않도록 하십시오.',
+          },
+          {
+            q: '중소 규모 팀에도 페르소나 프롬프팅이 유용합니까?',
+            a: '유용하며, 오히려 머신러닝 예산이 없는 팀일수록 효과가 큽니다. 페르소나는 텍스트 파일이므로 풀 리퀘스트에서 검토하고, Git으로 버전 관리하고, 학습 인프라 없이도 보안·법무 담당자가 감사할 수 있습니다. 데이터 주권 요건이 있는 팀은 파인튜닝 대신 버전 관리된 페르소나와 로컬 호스팅 모델(Llama 4 Scout 또는 Qwen3)을 함께 사용하는 경우가 많습니다.',
           },
         ],
       },
