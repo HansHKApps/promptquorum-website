@@ -134,6 +134,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'What Is a Token?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'A token is the smallest unit of text a model processes — roughly three to four characters, or about three quarters of an English word — and you are billed for every token in and every token out.' },
+            { type: 'in-plain-terms', text: 'Models do not read words, they read fragments. "ChatGPT" is two tokens, not one. That is why the same sentence costs more in German or Japanese than in English, and why a rambling prompt costs real money before the model has answered anything.' },
+          ],
           content: [
             '**A token is the smallest unit of text an AI model processes, approximately 3–4 characters or ¾ of an English word.** In English text, "ChatGPT" counts as 2 tokens, and "Hello, how are you?" is roughly 5–6 tokens. Other languages tokenise less efficiently — the same phrase in German or Japanese may consume 20–40% more tokens. You are billed for every token in your prompt (input) and every token the model outputs. Understanding tokens is fundamental to [what is prompt engineering](/prompt-engineering/what-is-prompt-engineering) — the practice of structuring your inputs to get reliable outputs.',
             'Models do not "think" in words or characters. Internally, they convert your text into token IDs and process those numerically. This is why tokenisation matters: a single character change can sometimes affect the token boundary, and a poorly organised prompt with redundant words can waste hundreds of tokens without improving output quality.',
@@ -486,6 +490,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '¿Qué es un token?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Un token es la unidad de texto más pequeña que procesa un modelo — unos tres o cuatro caracteres, alrededor de tres cuartos de una palabra en inglés — y se te cobra por cada token de entrada y de salida.' },
+            { type: 'in-plain-terms', text: 'Los modelos no leen palabras, leen fragmentos. "ChatGPT" son dos tokens, no uno. Por eso la misma frase cuesta más en alemán o japonés que en inglés, y por eso un prompt divagante cuesta dinero real antes de que el modelo haya respondido nada.' },
+          ],
           content: [
             '**Un token es la unidad de texto más pequeña que procesa un modelo de IA, aproximadamente 3–4 caracteres o ¾ de una palabra en inglés.** En texto inglés, "ChatGPT" cuenta como 2 tokens, y "Hello, how are you?" son aproximadamente 5–6 tokens. Otros idiomas tokenizan menos eficientemente — la misma frase en alemán o japonés puede consumir un 20–40% más de tokens. Se te cobra por cada token de tu prompt (input) y por cada token que el modelo produce.',
             'Los modelos no "piensan" en palabras o caracteres. Internamente, convierten tu texto en IDs de token y los procesan numéricamente.',
@@ -750,6 +758,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'ما هو الرمز؟',
+          snippets: [
+            { type: 'in-one-sentence', text: 'الرمز (token) هو أصغر وحدة نصية يعالجها النموذج — نحو ثلاثة إلى أربعة محارف، أي ثلاثة أرباع كلمة إنجليزية تقريباً — وتُحاسَب على كل رمز داخل وكل رمز خارج.' },
+            { type: 'in-plain-terms', text: 'النماذج لا تقرأ كلمات بل شظايا. فكلمة "ChatGPT" رمزان لا رمز واحد. لهذا تكلّف الجملة نفسها أكثر بالألمانية أو اليابانية منها بالإنجليزية، ولهذا يكلّفك البرومبت المُطوَّل مالاً حقيقياً قبل أن يجيب النموذج بشيء.' },
+          ],
           content: [
             '**الرمز هو أصغر وحدة نصية يعالجها نموذج الذكاء الاصطناعي — نحو 3–4 أحرف أو ¾ من كلمة إنجليزية.** في النص الإنجليزي، تُعدّ "ChatGPT" رمزَين، و"Hello, how are you?" نحو 5–6 رموز. اللغات الأخرى تُقسَّم بكفاءة أقل — نفس الجملة بالعربية أو اليابانية قد تستهلك 20–40% رموزًا أكثر. يُحتسب عليك كل رمز في طلبك (مدخلات) وكل رمز يُنتجه النموذج.',
             'النماذج لا "تفكر" بالكلمات أو الأحرف. داخليًا، تحوّل النصوص إلى معرّفات رموز وتعالجها رقميًا.',
@@ -1014,6 +1026,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'O que é um token?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Um token é a menor unidade de texto que um modelo processa — cerca de três a quatro caracteres, ou aproximadamente três quartos de uma palavra em inglês — e você é cobrado por cada token de entrada e de saída.' },
+            { type: 'in-plain-terms', text: 'Modelos não leem palavras, leem fragmentos. "ChatGPT" são dois tokens, não um. É por isso que a mesma frase custa mais em alemão ou japonês do que em inglês, e por que um prompt prolixo custa dinheiro de verdade antes de o modelo responder qualquer coisa.' },
+          ],
           content: [
             '**Um token é a menor unidade de texto que um modelo de IA processa — aproximadamente 3–4 caracteres ou ¾ de uma palavra em inglês.** Em texto inglês, "ChatGPT" conta como 2 tokens, e "Hello, how are you?" são aproximadamente 5–6 tokens. Outros idiomas tokenizam com menos eficiência — a mesma frase em alemão ou japonês pode consumir 20–40% mais tokens. Você é cobrado por cada token do seu prompt (entrada) e por cada token que o modelo produz.',
             'Os modelos não "pensam" em palavras ou caracteres. Internamente, convertem seu texto em IDs de token e os processam numericamente.',
@@ -1500,6 +1516,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '토큰이란 무엇인가?',
+          snippets: [
+            { type: 'in-one-sentence', text: '토큰은 모델이 처리하는 가장 작은 텍스트 단위로, 대략 3~4개 문자, 영어 단어 기준으로는 약 4분의 3에 해당하며, 입력 토큰과 출력 토큰 모두에 대해 요금이 부과됩니다.' },
+            { type: 'in-plain-terms', text: '모델은 단어가 아니라 조각을 읽습니다. "ChatGPT"는 하나가 아니라 두 개의 토큰입니다. 같은 문장이 영어보다 독일어나 일본어에서 더 비싼 이유이자, 장황한 프롬프트가 모델이 답하기도 전에 실제 비용을 발생시키는 이유입니다.' },
+          ],
           content: [
             '**토큰은 AI 모델이 처리하는 가장 작은 텍스트 단위로, 약 3~4자 또는 영어 단어의 ¾에 해당합니다.** 영어 텍스트에서 "ChatGPT"는 2개의 토큰으로 계산되며, "Hello, how are you?"는 약 5~6개의 토큰입니다. 다른 언어들은 토큰화 효율이 낮습니다. 독일어나 일본어로 같은 문구는 20~40% 더 많은 토큰을 소비할 수 있습니다. 프롬프트(입력)의 모든 토큰과 모델이 출력하는 모든 토큰에 대해 요금이 청구됩니다. 토큰을 이해하는 것은 [프롬프트 엔지니어링이란 무엇인가](/ko/prompt-engineering/what-is-prompt-engineering)의 기초입니다. 이는 신뢰할 수 있는 출력을 얻기 위해 입력을 구조화하는 실践입니다.',
             '모델은 단어나 문자로 "생각"하지 않습니다. 내부적으로 텍스트를 토큰 ID로 변환하고 수치적으로 처리합니다. 이것이 토큰화가 중요한 이유입니다. 문자 하나를 변경하면 토큰 경계가 바뀔 수 있고, 불필요한 단어가 많은 잘못 구성된 프롬프트는 출력 품질을 개선하지 않으면서 수백 개의 토큰을 낭비할 수 있습니다.',

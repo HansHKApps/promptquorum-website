@@ -52,6 +52,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'What Are Temperature and Top-P?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Temperature controls the sharpness of the model\'s probability distribution — lower values produce deterministic output, higher values increase randomness — while top-p limits sampling to the smallest set of tokens whose probabilities sum to p.' },
+            { type: 'in-plain-terms', text: 'Temperature is the creativity dial. Turn it down to 0 for consistent, predictable answers; turn it up for surprising ones. Top-p is a different lever on the same idea: instead of flattening the odds, it just refuses to consider the long tail of unlikely words.' },
+          ],
           content: [
             '**Temperature is a knob that makes the model\'s output more random (higher) or more deterministic (lower).** At temperature 0.0, the model always picks the single most likely next word—so repeated runs are near-identical, though floating-point and hardware variation can still change the odd token. At temperature 1.0+, the model considers riskier alternatives, producing surprising and varied text.',
             '**Top-p (nucleus sampling) controls how many likely word options the model considers at each step.** Instead of "how random," think of it as "how many plausible choices." At top-p 0.1, the model only considers the very top options until they reach 10% cumulative probability—narrow and safe. At top-p 0.9, it considers a much wider set of possible words—looser and more varied.',
@@ -304,6 +308,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Was sind Temperatur und Top-P?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Die Temperatur steuert die Schärfe der Wahrscheinlichkeitsverteilung des Modells — niedrige Werte erzeugen deterministische Ausgaben, hohe Werte erhöhen die Zufälligkeit — während Top-P das Sampling auf die kleinste Tokenmenge begrenzt, deren Wahrscheinlichkeiten sich zu p summieren.' },
+            { type: 'in-plain-terms', text: 'Die Temperatur ist der Kreativitätsregler. Auf 0 gedreht liefert sie gleichbleibende, vorhersagbare Antworten, hochgedreht überraschende. Top-P ist ein anderer Hebel für dieselbe Idee: Statt die Wahrscheinlichkeiten abzuflachen, schließt es schlicht den langen Schwanz unwahrscheinlicher Wörter aus.' },
+          ],
           content: [
             '**Temperatur ist ein Regler, der die Ausgabe des Modells zufälliger (höher) oder deterministischer (niedriger) macht.** Bei Temperatur 0.0 wählt das Modell immer das wahrscheinlichste nächste Wort – wiederholte Durchläufe sind damit nahezu identisch, wobei Gleitkomma- und Hardware-Abweichungen einzelne Tokens weiterhin verändern können. Bei Temperatur 1.0+ berücksichtigt das Modell riskantere Alternativen und erzeugt überraschende und vielfältige Texte.',
             '**Top-P (Nucleus Sampling) kontrolliert, wie viele wahrscheinliche Wortoptionen das Modell bei jedem Schritt berücksichtigt.** Statt „wie zufällig" denke „wie viele plausible Wahlen." Bei Top-P 0.1 berücksichtigt das Modell nur die Top-Optionen, bis sie 10% kumulative Wahrscheinlichkeit erreichen – eng und sicher. Bei Top-P 0.9 berücksichtigt es einen viel größeren Satz möglicher Wörter – lockerer und vielfältiger.',
@@ -516,6 +524,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '¿Qué son la temperatura y el top-p?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'La temperatura controla la nitidez de la distribución de probabilidad del modelo — valores bajos producen salidas deterministas, valores altos aumentan la aleatoriedad — mientras que el top-p limita el muestreo al conjunto más pequeño de tokens cuyas probabilidades suman p.' },
+            { type: 'in-plain-terms', text: 'La temperatura es el mando de creatividad. Bájalo a 0 para respuestas consistentes y predecibles; súbelo para respuestas sorprendentes. El top-p es otra palanca sobre la misma idea: en vez de aplanar las probabilidades, simplemente se niega a considerar la cola de palabras improbables.' },
+          ],
           content: [
             '**La temperatura es un dial que hace que el output del modelo sea más aleatorio (más alto) o más determinista (más bajo).** A temperatura 0.0, el modelo siempre elige la siguiente palabra más probable, por lo que las ejecuciones repetidas son casi idénticas, aunque la variación de coma flotante y de hardware todavía puede cambiar algún token. A temperatura 1.0+, el modelo considera alternativas más arriesgadas, produciendo texto sorprendente y variado.',
             '**Top-p (nucleus sampling) controla cuántas opciones de palabras probables considera el modelo en cada paso.** En lugar de "qué tan aleatorio", piénsalo como "cuántas opciones plausibles". Con top-p 0.1, el modelo solo considera las opciones más altas hasta que alcanzan el 10% de probabilidad acumulada — estrecho y seguro. Con top-p 0.9, considera un conjunto de palabras posibles mucho más amplio — más libre y variado.',
@@ -745,6 +757,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'ما هما درجة الحرارة وTop-P؟',
+          snippets: [
+            { type: 'in-one-sentence', text: 'تتحكم درجة الحرارة في حِدّة توزيع الاحتمالات لدى النموذج — فالقيم المنخفضة تنتج مخرجات حتمية والقيم المرتفعة تزيد العشوائية — بينما يقصر Top-P أخذ العينات على أصغر مجموعة رموز يبلغ مجموع احتمالاتها p.' },
+            { type: 'in-plain-terms', text: 'درجة الحرارة هي مقبض الإبداع: اخفضها إلى 0 لإجابات ثابتة ومتوقعة، وارفعها لإجابات مفاجئة. أما Top-P فرافعة أخرى للفكرة نفسها: فبدل تسطيح الاحتمالات، يرفض ببساطة النظر في ذيل الكلمات غير المرجّحة.' },
+          ],
           content: [
             '**درجة الحرارة هي مقبض يجعل مخرجات النموذج أكثر عشوائية (مرتفعة) أو أكثر حتمية (منخفضة).** عند درجة الحرارة 0.0، يختار النموذج دائمًا الكلمة التالية الأكثر احتمالًا — لذا تكون عمليات التشغيل المتكررة شبه متطابقة، رغم أن اختلافات الفاصلة العائمة والعتاد قد تغيّر بعض الرموز. عند درجة الحرارة 1.0 فأكثر، يأخذ النموذج في الاعتبار بدائل أكثر جرأة، منتجًا نصًا مفاجئًا ومتنوعًا.',
             '**Top-P (nucleus sampling) يتحكم في عدد خيارات الكلمات المحتملة التي يأخذها النموذج بعين الاعتبار في كل خطوة.** بدلًا من "ما مدى العشوائية"، فكّر فيه كـ "كم عدد الخيارات المعقولة". مع top-p 0.1، يأخذ النموذج في الحسبان الخيارات ذات الاحتمالية الأعلى فحسب حتى تصل إلى 10% من الاحتمالية التراكمية — ضيق وآمن. مع top-p 0.9، يأخذ في الحسبان مجموعة أوسع بكثير من الكلمات الممكنة — أحرّ وأكثر تنوعًا.',
@@ -974,6 +990,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'O que são Temperatura e Top-P?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'A temperatura controla o quão acentuada é a distribuição de probabilidade do modelo — valores baixos produzem saídas determinísticas, valores altos aumentam a aleatoriedade — enquanto o top-p limita a amostragem ao menor conjunto de tokens cujas probabilidades somam p.' },
+            { type: 'in-plain-terms', text: 'A temperatura é o botão de criatividade. Baixe para 0 e você tem respostas consistentes e previsíveis; aumente e elas ficam surpreendentes. O top-p é outra alavanca sobre a mesma ideia: em vez de achatar as probabilidades, ele simplesmente se recusa a considerar a cauda de palavras improváveis.' },
+          ],
           content: [
             '**Temperatura é um controle que torna a saída do modelo mais aleatória (valores altos) ou mais determinística (valores baixos).** Na temperatura 0,0, o modelo sempre escolhe a próxima palavra mais provável — então execuções repetidas ficam quase idênticas, embora variações de ponto flutuante e de hardware ainda possam alterar um token ou outro. Na temperatura 1,0 ou acima, o modelo considera alternativas mais arriscadas, produzindo textos surpreendentes e variados.',
             '**Top-p (nucleus sampling) controla quantas opções de palavras prováveis o modelo considera em cada passo.** Em vez de "quão aleatório", pense em "quantas escolhas plausíveis". Com top-p 0,1, o modelo considera apenas as opções do topo até somarem 10% da probabilidade acumulada — estreito e seguro. Com top-p 0,9, ele considera um conjunto muito mais amplo de palavras possíveis — mais solto e mais variado.',
@@ -1242,6 +1262,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Qu\'est-ce que la température et le Top-P ?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'La température règle la netteté de la distribution de probabilité du modèle — des valeurs basses produisent une sortie déterministe, des valeurs élevées accroissent l\'aléatoire — tandis que le top-p restreint l\'échantillonnage au plus petit ensemble de tokens dont les probabilités totalisent p.' },
+            { type: 'in-plain-terms', text: 'La température est le bouton de créativité : à 0, des réponses constantes et prévisibles ; plus haut, des réponses surprenantes. Le top-p est un autre levier sur la même idée : au lieu d\'aplatir les probabilités, il refuse simplement d\'envisager la longue traîne des mots improbables.' },
+          ],
           content: [
             '**La température est un curseur qui rend la sortie du modèle plus aléatoire (supérieure) ou plus déterministe (inférieure).** À une température de 0.0, le modèle choisit toujours le mot suivant le plus probable : les exécutions répétées sont donc quasi identiques, même si les variations de virgule flottante et de matériel peuvent encore modifier un token. À une température de 1.0+, le modèle envisage des alternatives plus risquées, produisant du texte surprenant et varié.',
             '**Top-P (l\'échantillonnage nucléaire) contrôle combien d\'options de mots probables le modèle envisage à chaque étape.** Au lieu de « comment aléatoire », pense à « combien de choix plausibles ». À top-p 0.1, le modèle ne considère que les meilleures options jusqu\'à ce qu\'elles atteigne 10% de probabilité cumulative — étroit et sûr. À top-p 0.9, il envisage un ensemble beaucoup plus large de mots possibles — plus lâche et varié.',
@@ -1455,6 +1479,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '温度とTop-Pとは何か？',
+          snippets: [
+            { type: 'in-one-sentence', text: '温度はモデルの確率分布の鋭さを制御し、値を下げると決定的な出力に、上げるとランダム性が増します。一方 Top-P は、確率の合計が p になる最小のトークン集合にサンプリングを限定します。' },
+            { type: 'in-plain-terms', text: '温度は創造性のつまみです。0 まで下げれば一貫した予測可能な答えになり、上げれば意外性のある答えになります。Top-P は同じ発想の別のレバーで、確率をならすのではなく、可能性の低い単語の裾野をそもそも候補から外します。' },
+          ],
           content: [
             '**温度はモデルの出力をより無作為（高い）またはより決定的（低い）にするノブです。** 温度0.0では、モデルは常に最も可能性の高い次の単語を選ぶため、実行を繰り返してもほぼ同じ出力になります。ただし浮動小数点演算やハードウェアの差異により、一部のトークンが変わることはあります。温度1.0以上では、モデルはより危険な選択肢を考慮し、驚くべき多様なテキストを生成します。',
             '**Top-P（核サンプリング）は、各ステップでモデルが考慮する可能性のある単語オプションの数を制御します。** 「どの程度無作為か」ではなく、「どの程度の妥当な選択肢があるか」と考えてください。Top-P 0.1では、モデルはわずかな累積確率10%に達するまで最もよい選択肢だけを考慮します。Top-P 0.9では、はるかに広い範囲の可能な単語を考慮します。',
@@ -1668,6 +1696,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: '什么是温度和Top-P？',
+          snippets: [
+            { type: 'in-one-sentence', text: '温度控制模型概率分布的陡峭程度——数值越低输出越确定，越高随机性越强——而 Top-P 则把采样限制在概率累加到 p 的最小 token 集合内。' },
+            { type: 'in-plain-terms', text: '温度就是创造力旋钮：调到 0 得到稳定可预测的回答，调高则会出现意想不到的表达。Top-P 是同一思路的另一个杠杆：它不去压平概率，而是干脆不考虑那条由低概率词构成的长尾。' },
+          ],
           content: [
             '**温度是一个旋钮，使模型的输出更加随机（更高）或更具确定性（更低）。** 在温度0.0下，模型总是选择最有可能的下一个单词——因此重复运行的结果几乎完全一致，但浮点运算和硬件差异仍可能改变个别 token。在温度1.0+时，模型会考虑更多风险较高的替代方案，产生令人惊讶和多样化的文本。',
             '**Top-P（核抽样）控制模型在每一步考虑多少个可能的单词选项。** 与其说"有多随机"，不如说"有多少合理的选择"。在Top-P 0.1时，模型仅考虑顶部选项直到达到10%的累积概率——狭隘且安全。在Top-P 0.9时，它考虑了更广泛的可能单词集——更宽松和多样化。',
@@ -1888,6 +1920,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Temperature와 Top-P란 무엇입니까?',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Temperature는 모델 확률 분포의 뾰족한 정도를 조절하여 값이 낮을수록 결정적인 출력을, 높을수록 무작위성을 만들어 내며, Top-P는 확률의 합이 p가 되는 가장 작은 토큰 집합으로 샘플링 범위를 제한합니다.' },
+            { type: 'in-plain-terms', text: 'Temperature는 창의성 다이얼입니다. 0으로 낮추면 일관되고 예측 가능한 답이 나오고, 높이면 뜻밖의 답이 나옵니다. Top-P는 같은 발상의 다른 레버로, 확률을 평평하게 만드는 대신 가능성이 낮은 단어들의 꼬리를 아예 후보에서 제외합니다.' },
+          ],
           content: [
             '**Temperature는 모델의 출력을 더 무작위적(높음)으로 또는 더 결정론적(낮음)으로 만드는 조절 장치입니다.** Temperature 0.0에서는 모델이 항상 가장 가능성 높은 다음 단어를 선택하므로 반복 실행 시 출력이 거의 동일합니다. 다만 부동소수점 연산과 하드웨어 차이로 일부 토큰은 달라질 수 있습니다. Temperature 1.0 이상에서는 모델이 더 위험한 대안을 고려하여 놀랍고 다양한 텍스트를 생성합니다.',
             '**Top-p(nucleus sampling)는 각 단계에서 모델이 고려하는 단어 후보의 수를 제어합니다.** "얼마나 무작위적인가"가 아니라 "얼마나 많은 그럴듯한 선택지를 고려할 것인가"로 생각하십시오. Top-p 0.1에서는 모델이 누적 확률 10%에 도달할 때까지 최상위 후보만 고려합니다—좁고 안전합니다. Top-p 0.9에서는 훨씬 더 넓은 단어 집합을 고려합니다—더 느슨하고 다양합니다.',
