@@ -9,7 +9,7 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
-      last_full_refresh: '2026-08-29',
+      last_full_refresh: '2026-08-31',
       next_refresh_due: '2027-02-28',
       theme: 'Frameworks',
       heroImage: '/images/which-framework-to-use-overview-hero-en.webp',
@@ -20,13 +20,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Compare prompt frameworks: Chain-of-Thought, ReAct, Tree-of-Thought. Learn pros/cons for each use case and pick the best for your LLM application.',
       readTime: '9 min read',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: 'There is no single best prompt framework. Pick a structure framework — CO-STAR, CRAFT, SPECS, RISEN or TRACE — for how you lay a prompt out, and a reasoning strategy — Chain-of-Thought, ReAct or Tree-of-Thought — for how the model works through it. Most tasks need one of each, not one of the two.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Which Prompt Framework Should You Use?',
         description: 'How to choose the right prompt framework for GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and local models — and how PromptQuorum automates framework selection.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-31',
         'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use',
         keywords: ['prompt frameworks', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -86,6 +87,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Most frameworks decompose a prompt into building blocks such as objective, role, context, constraints, and format. This structure turns a vague request like "help me with this" into a well-specified task with measurable quality. In practice, frameworks are especially helpful when you need reproducible outputs across different models and providers such as OpenAI, Anthropic, and Google DeepMind.',
           ],
         },
+        keyTakeaways: {
+          title: 'Key Takeaways',
+          isTldr: true,
+          items: [
+            '**Structure frameworks and reasoning strategies are different layers.** You usually combine one of each rather than choosing between them.',
+            '**Match the structure framework to the output you care about:** CO-STAR or TRACE for analysis, CRAFT for creative work, SPECS for strict formats, RISEN for iteration.',
+            '**Match the reasoning strategy to the problem shape:** Chain-of-Thought for logic, ReAct for tool and retrieval use, Tree-of-Thought for problems with several viable paths.',
+            '**Test 2–3 candidates on your own task before standardising.** Framework choice is iterative, not permanent.',
+            '**More elaborate frameworks cost more tokens.** Tree-of-Thought is the most expensive of the common options, so reserve it for problems that genuinely branch.',
+          ],
+        },
         frameworksAtAGlance: {
           title: 'The Major Prompt Frameworks at a Glance',
           content: [
@@ -100,6 +112,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Framework': 'RISEN',   'Best for': 'Iteration', 'Core idea': 'Rapidly refine prompts over multiple turns' },
             { 'Framework': 'TRACE',   'Best for': 'Reasoning', 'Core idea': 'Force the model to show Thought, Reasoning, Analysis, Conclusion, Evaluation' },
           ],
+        },
+        reasoningStrategies: {
+          title: 'Structure Frameworks vs Reasoning Strategies',
+          content: [
+            '**The frameworks above govern how you lay a prompt out; reasoning strategies govern how you ask the model to work through it.** They sit at different layers, which is why "CO-STAR or Chain-of-Thought?" is the wrong question — you can and usually should use both at once.',
+            'The three reasoning strategies you will meet most often:',
+          ],
+          columns: ['Strategy', 'Best for', 'Core idea'],
+          rows: [
+            { 'Strategy': 'Chain-of-Thought', 'Best for': 'Logic, maths, multi-step analysis', 'Core idea': 'Ask the model to work through intermediate steps before it commits to an answer' },
+            { 'Strategy': 'ReAct', 'Best for': 'Tool use, retrieval, agents', 'Core idea': 'Alternate reasoning steps with actions such as a search or an API call, feeding each result back in' },
+            { 'Strategy': 'Tree-of-Thought', 'Best for': 'Problems with several viable paths', 'Core idea': 'Explore competing branches, compare them, then commit to the strongest one' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: 'In practice you pair them: CO-STAR to set context and audience, then Chain-of-Thought to force explicit reasoning, then a SPECS-style constraint block to lock the output format. Be aware of the cost — Tree-of-Thought explores multiple branches and so consumes noticeably more tokens than a direct prompt. For the full treatment see [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) and [Tree-of-Thought and ReAct](/prompt-engineering/tree-of-thought-and-react).',
         },
         howToChooseByUseCase: {
           title: 'How to Choose a Framework by Use Case',
@@ -204,6 +233,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[RTF Framework: Role, Task, Format](/prompt-engineering/rtf-framework)',
             '[SPECS Framework](/prompt-engineering/specs-framework)',
             '[Build Your Own Prompt Framework](/prompt-engineering/build-your-own-prompt-framework)',
+            '[CRAFT Framework](/prompt-engineering/craft-framework)',
+            '[TRACE Framework](/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought and ReAct](/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -232,6 +265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'Prompt-Framework 2026: Welches passt zu deiner Aufgabe?',
       metaDescription: 'Chain-of-Thought, ReAct, Tree-of-Thought: Welches Framework passt zu Ihrem LLM-Projekt? Vergleich, Vor- und Nachteile und konkrete Entscheidungshilfen.',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: 'Es gibt kein einzelnes bestes Prompt-Framework. Wähle ein Struktur-Framework — CO-STAR, CRAFT, SPECS, RISEN oder TRACE — für den Aufbau deines Prompts und eine Reasoning-Strategie — Chain-of-Thought, ReAct oder Tree-of-Thought — dafür, wie das Modell die Aufgabe durcharbeitet. Die meisten Aufgaben brauchen je eines von beiden, nicht eines von zwei.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -239,7 +273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Welches Prompt-Framework ist das richtige für Sie? (2026)',
         description: 'Vergleich der wichtigsten Prompt-Frameworks: CO-STAR, CRAFT, SPECS, RISEN, TRACE. Wählen Sie das richtige Framework für GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und lokale Modelle.',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-08-31',
         keywords: ['Prompt-Frameworks', 'Prompt Engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -285,6 +319,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Die meisten Frameworks zerlegen einen Prompt in Bausteine wie Ziel, Rolle, Kontext, Einschränkungen und Format. Diese Struktur verwandelt eine vage Anfrage wie „hilf mir damit" in eine klar spezifizierte Aufgabe mit messbarer Qualität. In der Praxis sind Frameworks besonders hilfreich, wenn Sie reproduzierbare Ausgaben über verschiedene Modelle und Anbieter wie OpenAI, Anthropic und Google DeepMind hinweg benötigen.',
           ],
         },
+        keyTakeaways: {
+          title: 'Wichtigste Erkenntnisse',
+          isTldr: true,
+          items: [
+            '**Struktur-Frameworks und Reasoning-Strategien sind zwei verschiedene Ebenen.** Meist kombinierst du je eines, statt zwischen ihnen zu wählen.',
+            '**Wähle das Struktur-Framework nach dem gewünschten Ergebnis:** CO-STAR oder TRACE für Analysen, CRAFT für kreative Arbeit, SPECS für strikte Formate, RISEN für Iteration.',
+            '**Wähle die Reasoning-Strategie nach der Art des Problems:** Chain-of-Thought für Logik, ReAct für Tool- und Retrieval-Nutzung, Tree-of-Thought für Probleme mit mehreren gangbaren Wegen.',
+            '**Teste 2–3 Kandidaten an deiner eigenen Aufgabe, bevor du dich festlegst.** Die Framework-Wahl ist iterativ, nicht endgültig.',
+            '**Aufwendigere Frameworks kosten mehr Tokens.** Tree-of-Thought ist die teuerste der gängigen Optionen — nutze sie nur für Probleme, die sich wirklich verzweigen.',
+          ],
+        },
         frameworksAtAGlance: {
           title: 'Die wichtigsten Prompt-Frameworks im Überblick',
           content: [
@@ -299,6 +344,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Framework': 'RISEN',   'Am besten für': 'Iteration',         'Kernidee': 'Prompts über mehrere Runden schnell verfeinern' },
             { 'Framework': 'TRACE',   'Am besten für': 'Reasoning',         'Kernidee': 'Modell zur Darstellung von Gedankengang, Reasoning, Analyse, Schlussfolgerung und Bewertung zwingen' },
           ],
+        },
+        reasoningStrategies: {
+          title: 'Struktur-Frameworks vs. Reasoning-Strategien',
+          content: [
+            '**Die obigen Frameworks bestimmen den Aufbau deines Prompts; Reasoning-Strategien bestimmen, wie das Modell die Aufgabe durcharbeiten soll.** Sie liegen auf unterschiedlichen Ebenen — deshalb ist „CO-STAR oder Chain-of-Thought?" die falsche Frage: Du kannst und solltest meist beides gleichzeitig einsetzen.',
+            'Die drei Reasoning-Strategien, die dir am häufigsten begegnen:',
+          ],
+          columns: ['Strategie', 'Am besten für', 'Kernidee'],
+          rows: [
+            { 'Strategie': 'Chain-of-Thought', 'Am besten für': 'Logik, Mathematik, mehrstufige Analysen', 'Kernidee': 'Das Modell soll Zwischenschritte ausformulieren, bevor es sich auf eine Antwort festlegt' },
+            { 'Strategie': 'ReAct', 'Am besten für': 'Tool-Nutzung, Retrieval, Agenten', 'Kernidee': 'Denkschritte wechseln sich mit Aktionen wie Suche oder API-Aufruf ab, deren Ergebnisse zurückfließen' },
+            { 'Strategie': 'Tree-of-Thought', 'Am besten für': 'Probleme mit mehreren gangbaren Wegen', 'Kernidee': 'Konkurrierende Zweige erkunden, vergleichen und sich dann für den stärksten entscheiden' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: 'In der Praxis kombinierst du sie: CO-STAR für Kontext und Zielgruppe, dann Chain-of-Thought für explizites Reasoning, dann ein SPECS-artiger Constraint-Block für das Ausgabeformat. Achte auf die Kosten — Tree-of-Thought erkundet mehrere Zweige und verbraucht daher deutlich mehr Tokens als ein direkter Prompt. Ausführlich behandelt in [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) und [Tree-of-Thought und ReAct](/prompt-engineering/tree-of-thought-and-react).',
         },
         howToChooseByUseCase: {
           title: 'Framework nach Anwendungsfall auswählen',
@@ -402,6 +464,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[RTF-Framework: Role, Task, Format](/de/prompt-engineering/rtf-framework)',
             '[SPECS-Framework](/de/prompt-engineering/specs-framework)',
             '[Ihr eigenes Prompt-Framework erstellen](/de/prompt-engineering/build-your-own-prompt-framework)',
+            '[CRAFT-Framework](/de/prompt-engineering/craft-framework)',
+            '[TRACE-Framework](/de/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought und ReAct](/de/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -431,6 +497,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Compara frameworks de prompts: Chain-of-Thought, ReAct, Tree-of-Thought. Aprende pros/contras para cada caso de uso y elige el mejor para tu aplicación LLM.',
       readTime: '9 min de lectura',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: 'No existe un único mejor framework de prompts. Elige un framework de estructura — CO-STAR, CRAFT, SPECS, RISEN o TRACE — para cómo organizas el prompt, y una estrategia de razonamiento — Chain-of-Thought, ReAct o Tree-of-Thought — para cómo el modelo lo resuelve. La mayoría de las tareas necesitan uno de cada tipo, no uno de los dos.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -439,7 +506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '¿Qué framework de prompts deberías usar?',
         description: 'Cómo elegir el framework de prompt correcto para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y modelos locales — y cómo PromptQuorum automatiza la selección de frameworks.',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-08-31',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -498,6 +565,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'La mayoría de los frameworks descomponen un prompt en bloques de construcción como objetivo, rol, contexto, restricciones y formato. Esta estructura convierte una solicitud vaga como "ayúdame con esto" en una tarea bien especificada con calidad medible. En la práctica, los frameworks son especialmente útiles cuando necesitas outputs reproducibles en diferentes modelos y proveedores como OpenAI, Anthropic y Google DeepMind.',
           ],
         },
+        keyTakeaways: {
+          title: 'Conclusiones Clave',
+          isTldr: true,
+          items: [
+            '**Los frameworks de estructura y las estrategias de razonamiento son capas distintas.** Normalmente combinas uno de cada una en lugar de elegir entre ellas.',
+            '**Elige el framework de estructura según el resultado que te importa:** CO-STAR o TRACE para análisis, CRAFT para trabajo creativo, SPECS para formatos estrictos, RISEN para iteración.',
+            '**Elige la estrategia de razonamiento según la forma del problema:** Chain-of-Thought para lógica, ReAct para uso de herramientas y recuperación, Tree-of-Thought para problemas con varios caminos viables.',
+            '**Prueba 2–3 candidatos en tu propia tarea antes de estandarizar.** La elección de framework es iterativa, no permanente.',
+            '**Los frameworks más elaborados consumen más tokens.** Tree-of-Thought es la opción común más cara, así que resérvala para problemas que realmente se ramifican.',
+          ],
+        },
         frameworksAtAGlance: {
           title: 'Los principales frameworks de prompt de un vistazo',
           content: [
@@ -512,6 +590,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Framework': 'RISEN',   'Mejor para': 'Iteración', 'Idea central': 'Refina prompts rápidamente a través de múltiples turnos' },
             { 'Framework': 'TRACE',   'Mejor para': 'Razonamiento', 'Idea central': 'Obliga al modelo a mostrar Pensamiento, Razonamiento, Análisis, Conclusión, Evaluación' },
           ],
+        },
+        reasoningStrategies: {
+          title: 'Frameworks de Estructura vs Estrategias de Razonamiento',
+          content: [
+            '**Los frameworks anteriores rigen cómo organizas el prompt; las estrategias de razonamiento rigen cómo le pides al modelo que lo resuelva.** Están en capas distintas, y por eso «¿CO-STAR o Chain-of-Thought?» es la pregunta equivocada: puedes, y normalmente debes, usar ambos a la vez.',
+            'Las tres estrategias de razonamiento que encontrarás con más frecuencia:',
+          ],
+          columns: ['Estrategia', 'Mejor para', 'Idea central'],
+          rows: [
+            { 'Estrategia': 'Chain-of-Thought', 'Mejor para': 'Lógica, matemáticas, análisis de varios pasos', 'Idea central': 'Pedir al modelo que desarrolle pasos intermedios antes de comprometerse con una respuesta' },
+            { 'Estrategia': 'ReAct', 'Mejor para': 'Uso de herramientas, recuperación, agentes', 'Idea central': 'Alternar razonamiento y acciones (búsqueda, llamada a una API), reinyectando cada resultado' },
+            { 'Estrategia': 'Tree-of-Thought', 'Mejor para': 'Problemas con varios caminos viables', 'Idea central': 'Explorar ramas que compiten entre sí, compararlas y quedarse con la más sólida' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: 'En la práctica se combinan: CO-STAR para fijar contexto y audiencia, luego Chain-of-Thought para forzar razonamiento explícito, y después un bloque de restricciones estilo SPECS para fijar el formato de salida. Ten presente el coste: Tree-of-Thought explora varias ramas y consume bastantes más tokens que un prompt directo. El tratamiento completo está en [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) y [Tree-of-Thought y ReAct](/prompt-engineering/tree-of-thought-and-react).',
         },
         howToChooseByUseCase: {
           title: 'Cómo elegir un framework por caso de uso',
@@ -616,6 +711,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Framework RTF: Role, Task, Format](/es/prompt-engineering/rtf-framework)',
             '[Framework SPECS](/es/prompt-engineering/specs-framework)',
             '[Crea tu propio framework de prompts](/es/prompt-engineering/build-your-own-prompt-framework)',
+            '[Framework CRAFT](/es/prompt-engineering/craft-framework)',
+            '[Framework TRACE](/es/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought y ReAct](/es/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -645,6 +744,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'قارن بين ⁨5⁩ أطر طلبات: ⁨Chain-of-Thought⁩ و⁨CO-STAR⁩ و⁨CRAFT⁩ و⁨SPECS⁩ و⁨TRACE⁩. تعلّم متى تستخدم كل إطار مع ⁨LLMs⁩ مثل ⁨GPT-5.6⁩ و⁨Claude⁩ و⁨Gemini⁩.',
       readTime: '٩ دقائق للقراءة',
       educationalLevel: 'متوسط',
+      leadAnswerBlock: 'لا يوجد إطار عمل واحد أفضل للمطالبات. اختر إطار بنية — CO-STAR أو CRAFT أو SPECS أو RISEN أو TRACE — لطريقة تنظيم مطالبتك، واختر استراتيجية استدلال — Chain-of-Thought أو ReAct أو Tree-of-Thought — لطريقة معالجة النموذج للمهمة. معظم المهام تحتاج واحدًا من كل نوع، لا واحدًا من الاثنين.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -653,7 +753,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'أي إطار طلب يجب استخدامه؟',
         description: 'كيف تختار إطار الطلب الصحيح لـ GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro والنماذج المحلية — وكيف تُؤتمت PromptQuorum اختيار الأطر.',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-08-31',
         keywords: ['أطر الطلبات', 'هندسة الطلبات', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -712,6 +812,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'معظم الأطر تُقسّم الطلب إلى عناصر بناء كالهدف والدور والسياق والقيود والتنسيق. هذه البنية تحوّل طلبًا مبهمًا كـ"ساعدني في هذا" إلى مهمة مُحددة جيدًا بجودة قابلة للقياس. عمليًا، الأطر مفيدة بشكل خاص عندما تحتاج إلى مخرجات قابلة للتكرار عبر نماذج ومزودين مختلفين كـ OpenAI وAnthropic وGoogle DeepMind.',
           ],
         },
+        keyTakeaways: {
+          title: 'أهم النقاط',
+          isTldr: true,
+          items: [
+            '**أطر البنية واستراتيجيات الاستدلال طبقتان مختلفتان.** غالبًا ما تجمع بين واحدة من كل طبقة بدلًا من الاختيار بينهما.',
+            '**اختر إطار البنية بحسب المخرجات التي تهمك:** CO-STAR أو TRACE للتحليل، وCRAFT للعمل الإبداعي، وSPECS للصيغ الصارمة، وRISEN للتكرار.',
+            '**اختر استراتيجية الاستدلال بحسب طبيعة المشكلة:** Chain-of-Thought للمنطق، وReAct لاستخدام الأدوات والاسترجاع، وTree-of-Thought للمشكلات ذات المسارات المتعددة الممكنة.',
+            '**جرّب مرشَّحين إلى ثلاثة على مهمتك الفعلية قبل التوحيد القياسي.** اختيار الإطار عملية تكرارية وليست نهائية.',
+            '**الأطر الأكثر تفصيلًا تستهلك رموزًا أكثر.** فـ Tree-of-Thought هو الأغلى بين الخيارات الشائعة، لذا احتفظ به للمشكلات التي تتفرّع فعلًا.',
+          ],
+        },
         frameworksAtAGlance: {
           title: 'أطر الطلبات الرئيسية في لمحة',
           content: [
@@ -726,6 +837,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'الإطار': 'RISEN',   'الأفضل لـ': 'التكرار', 'الفكرة الجوهرية': 'يُنقّح الطلبات بسرعة عبر جولات متعددة' },
             { 'الإطار': 'TRACE',   'الأفضل لـ': 'الاستدلال', 'الفكرة الجوهرية': 'يُلزم النموذج بإظهار التفكير والاستدلال والتحليل والاستنتاج والتقييم' },
           ],
+        },
+        reasoningStrategies: {
+          title: 'أطر البنية مقابل استراتيجيات الاستدلال',
+          content: [
+            '**الأطر الواردة أعلاه تحكم طريقة تنظيم مطالبتك، أما استراتيجيات الاستدلال فتحكم الطريقة التي تطلب بها من النموذج معالجة المهمة.** وهما طبقتان مختلفتان، ولذلك فإن سؤال «CO-STAR أم Chain-of-Thought؟» سؤال خاطئ: يمكنك، بل ينبغي عادةً، استخدام الاثنين معًا.',
+            'أكثر ثلاث استراتيجيات استدلال ستصادفها:',
+          ],
+          columns: ['الاستراتيجية', 'الأفضل لـ', 'الفكرة الأساسية'],
+          rows: [
+            { 'الاستراتيجية': 'Chain-of-Thought', 'الأفضل لـ': 'المنطق والرياضيات والتحليل متعدد الخطوات', 'الفكرة الأساسية': 'اطلب من النموذج صياغة الخطوات الوسيطة قبل أن يستقر على إجابة' },
+            { 'الاستراتيجية': 'ReAct', 'الأفضل لـ': 'استخدام الأدوات والاسترجاع والوكلاء', 'الفكرة الأساسية': 'تتناوب خطوات التفكير مع إجراءات مثل البحث أو استدعاء واجهة برمجية، وتُعاد نتيجة كل إجراء إلى النموذج' },
+            { 'الاستراتيجية': 'Tree-of-Thought', 'الأفضل لـ': 'المشكلات ذات المسارات المتعددة الممكنة', 'الفكرة الأساسية': 'استكشاف فروع متنافسة ومقارنتها ثم اعتماد أقواها' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: 'عمليًا تجمع بينها: CO-STAR لضبط السياق والجمهور، ثم Chain-of-Thought لفرض استدلال صريح، ثم كتلة قيود على نمط SPECS لتثبيت صيغة المخرجات. وانتبه للتكلفة: Tree-of-Thought يستكشف فروعًا متعددة ويستهلك رموزًا أكثر بكثير من مطالبة مباشرة. للتفصيل الكامل راجع [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) و[Tree-of-Thought وReAct](/prompt-engineering/tree-of-thought-and-react).',
         },
         howToChooseByUseCase: {
           title: 'كيف تختار إطارًا حسب حالة الاستخدام',
@@ -830,6 +958,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[إطار RTF: الدور والمهمة والتنسيق](/ar/prompt-engineering/rtf-framework)',
             '[إطار SPECS](/ar/prompt-engineering/specs-framework)',
             '[ابنِ إطار الطلبات الخاص بك](/ar/prompt-engineering/build-your-own-prompt-framework)',
+            '[إطار CRAFT](/ar/prompt-engineering/craft-framework)',
+            '[إطار TRACE](/ar/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought Prompting](/ar/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought وReAct](/ar/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -858,6 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Compare frameworks de prompt: Chain-of-Thought, ReAct, Tree-of-Thought. Aprenda prós/contras para cada caso de uso e escolha o melhor para sua aplicação LLM.',
       readTime: '9 min de leitura',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: 'Não existe um único melhor framework de prompt. Escolha um framework de estrutura — CO-STAR, CRAFT, SPECS, RISEN ou TRACE — para como você organiza o prompt, e uma estratégia de raciocínio — Chain-of-Thought, ReAct ou Tree-of-Thought — para como o modelo percorre a tarefa. A maioria das tarefas precisa de um de cada, não de um dos dois.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -866,7 +999,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Qual framework de prompt você deve usar?',
         description: 'Como escolher o framework de prompt certo para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e modelos locais — e como o PromptQuorum automatiza a seleção de frameworks.',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-08-31',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -925,6 +1058,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'A maioria dos frameworks decompõe um prompt em blocos de construção como objetivo, função, contexto, restrições e formato. Essa estrutura transforma uma solicitação vaga como "me ajude com isso" em uma tarefa bem especificada com qualidade mensurável.',
           ],
         },
+        keyTakeaways: {
+          title: 'Principais Conclusões',
+          isTldr: true,
+          items: [
+            '**Frameworks de estrutura e estratégias de raciocínio são camadas diferentes.** Em geral você combina um de cada, em vez de escolher entre eles.',
+            '**Escolha o framework de estrutura pelo resultado que importa:** CO-STAR ou TRACE para análise, CRAFT para trabalho criativo, SPECS para formatos rígidos, RISEN para iteração.',
+            '**Escolha a estratégia de raciocínio pelo formato do problema:** Chain-of-Thought para lógica, ReAct para uso de ferramentas e recuperação, Tree-of-Thought para problemas com vários caminhos viáveis.',
+            '**Teste de 2 a 3 candidatos na sua própria tarefa antes de padronizar.** A escolha de framework é iterativa, não permanente.',
+            '**Frameworks mais elaborados custam mais tokens.** O Tree-of-Thought é a opção comum mais cara, então reserve-o para problemas que realmente se ramificam.',
+          ],
+        },
         frameworksAtAGlance: {
           title: 'Os principais frameworks de prompt em resumo',
           content: [
@@ -939,6 +1083,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Framework': 'RISEN',   'Melhor para': 'Iteração', 'Ideia central': 'Refina prompts rapidamente em múltiplos turnos' },
             { 'Framework': 'TRACE',   'Melhor para': 'Raciocínio', 'Ideia central': 'Obriga o modelo a mostrar Pensamento, Raciocínio, Análise, Conclusão, Avaliação' },
           ],
+        },
+        reasoningStrategies: {
+          title: 'Frameworks de Estrutura vs Estratégias de Raciocínio',
+          content: [
+            '**Os frameworks acima governam como você organiza o prompt; as estratégias de raciocínio governam como você pede ao modelo que percorra a tarefa.** Eles ficam em camadas diferentes, e é por isso que "CO-STAR ou Chain-of-Thought?" é a pergunta errada: você pode, e normalmente deve, usar os dois ao mesmo tempo.',
+            'As três estratégias de raciocínio que você mais vai encontrar:',
+          ],
+          columns: ['Estratégia', 'Melhor para', 'Ideia central'],
+          rows: [
+            { 'Estratégia': 'Chain-of-Thought', 'Melhor para': 'Lógica, matemática, análise de várias etapas', 'Ideia central': 'Pedir ao modelo que desenvolva as etapas intermediárias antes de fechar uma resposta' },
+            { 'Estratégia': 'ReAct', 'Melhor para': 'Uso de ferramentas, recuperação, agentes', 'Ideia central': 'Alternar etapas de raciocínio com ações como busca ou chamada de API, realimentando cada resultado' },
+            { 'Estratégia': 'Tree-of-Thought', 'Melhor para': 'Problemas com vários caminhos viáveis', 'Ideia central': 'Explorar ramos concorrentes, compará-los e então ficar com o mais forte' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: 'Na prática você combina: CO-STAR para definir contexto e público, depois Chain-of-Thought para forçar raciocínio explícito, e então um bloco de restrições no estilo SPECS para travar o formato de saída. Atenção ao custo: o Tree-of-Thought explora vários ramos e consome bem mais tokens do que um prompt direto. O tratamento completo está em [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) e [Tree-of-Thought e ReAct](/prompt-engineering/tree-of-thought-and-react).',
         },
         howToChooseByUseCase: {
           title: 'Como escolher um framework por caso de uso',
@@ -1042,6 +1203,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Framework RTF: Role, Task, Format](/pt/prompt-engineering/rtf-framework)',
             '[Framework SPECS](/pt/prompt-engineering/specs-framework)',
             '[Crie seu próprio framework de prompt](/pt/prompt-engineering/build-your-own-prompt-framework)',
+            '[Framework CRAFT](/pt/prompt-engineering/craft-framework)',
+            '[Framework TRACE](/pt/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought e ReAct](/pt/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -1070,6 +1235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       seoTitle: 'Quel Framework de Prompt 2026 ? Comparatif complet',
       metaDescription: 'Choisir le bon framework de prompts pour GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro. Comparez Chain-of-Thought, ReAct, Tree-of-Thought. Guide pratique avec cas d\'usage et conseils décisionnels pour tous les niveaux.',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: 'Il n\'existe pas de meilleur framework de prompt unique. Choisis un framework de structure — CO-STAR, CRAFT, SPECS, RISEN ou TRACE — pour la façon dont tu organises ton prompt, et une stratégie de raisonnement — Chain-of-Thought, ReAct ou Tree-of-Thought — pour la façon dont le modèle traite la tâche. La plupart des tâches ont besoin d\'un de chaque, pas d\'un des deux.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1077,7 +1243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Quel framework de prompt choisir ? (2026)',
         description: 'Comparaison des frameworks de prompt majeurs : CO-STAR, CRAFT, SPECS, RISEN, TRACE. Choisissez le bon framework pour GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et modèles locaux.',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-08-31',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1172,6 +1338,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'La plupart des frameworks décomposent un prompt en blocs : objectif, rôle, contexte, contraintes et format. Cette structure transforme une demande vague comme « aide-moi avec ça » en tâche précise à qualité mesurable.',
           ],
         },
+        keyTakeaways: {
+          title: 'Points Clés',
+          isTldr: true,
+          items: [
+            '**Les frameworks de structure et les stratégies de raisonnement sont deux couches distinctes.** Tu en combines généralement une de chaque plutôt que de choisir entre les deux.',
+            '**Choisis le framework de structure selon le résultat qui compte :** CO-STAR ou TRACE pour l\'analyse, CRAFT pour le travail créatif, SPECS pour les formats stricts, RISEN pour l\'itération.',
+            '**Choisis la stratégie de raisonnement selon la forme du problème :** Chain-of-Thought pour la logique, ReAct pour l\'usage d\'outils et la recherche, Tree-of-Thought pour les problèmes à plusieurs chemins viables.',
+            '**Teste 2–3 candidats sur ta propre tâche avant de standardiser.** Le choix d\'un framework est itératif, pas définitif.',
+            '**Les frameworks plus élaborés coûtent plus de tokens.** Tree-of-Thought est la plus coûteuse des options courantes : réserve-la aux problèmes qui se ramifient réellement.',
+          ],
+        },
         frameworksAtAGlance: {
           title: 'Les principaux frameworks de prompt en un coup d\'œil',
           content: [
@@ -1186,6 +1363,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Framework': 'RISEN',   'Idéal pour': 'Itération',        'Concept clé': 'Affiner rapidement les prompts sur plusieurs tours' },
             { 'Framework': 'TRACE',   'Idéal pour': 'Raisonnement',     'Concept clé': 'Forcer le modèle à montrer Pensée, Raisonnement, Analyse, Conclusion, Évaluation' },
           ],
+        },
+        reasoningStrategies: {
+          title: 'Frameworks de structure vs stratégies de raisonnement',
+          content: [
+            '**Les frameworks ci-dessus régissent la façon dont tu organises ton prompt ; les stratégies de raisonnement régissent la façon dont tu demandes au modèle de le traiter.** Ils se situent à des couches différentes, et c\'est pourquoi « CO-STAR ou Chain-of-Thought ? » est la mauvaise question : tu peux, et tu devrais généralement, utiliser les deux à la fois.',
+            'Les trois stratégies de raisonnement que tu rencontreras le plus souvent :',
+          ],
+          columns: ['Stratégie', 'Idéal pour', 'Idée centrale'],
+          rows: [
+            { 'Stratégie': 'Chain-of-Thought', 'Idéal pour': 'Logique, mathématiques, analyse en plusieurs étapes', 'Idée centrale': 'Demander au modèle d\'expliciter les étapes intermédiaires avant de s\'engager sur une réponse' },
+            { 'Stratégie': 'ReAct', 'Idéal pour': 'Usage d\'outils, recherche documentaire, agents', 'Idée centrale': 'Alterner raisonnement et actions (recherche, appel d\'API), en réinjectant chaque résultat' },
+            { 'Stratégie': 'Tree-of-Thought', 'Idéal pour': 'Problèmes à plusieurs chemins viables', 'Idée centrale': 'Explorer des branches concurrentes, les comparer, puis retenir la plus solide' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: 'En pratique tu les combines : CO-STAR pour poser le contexte et l\'audience, puis Chain-of-Thought pour imposer un raisonnement explicite, puis un bloc de contraintes façon SPECS pour verrouiller le format de sortie. Attention au coût : Tree-of-Thought explore plusieurs branches et consomme nettement plus de tokens qu\'un prompt direct. Pour le traitement complet, voir [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) et [Tree-of-Thought et ReAct](/prompt-engineering/tree-of-thought-and-react).',
         },
         howToChooseByUseCase: {
           title: 'Choisir un framework selon le cas d\'usage',
@@ -1289,6 +1483,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[Framework RTF : Role, Task, Format](/fr/prompt-engineering/rtf-framework)',
             '[Framework SPECS](/fr/prompt-engineering/specs-framework)',
             '[Créez votre propre framework de prompt](/fr/prompt-engineering/build-your-own-prompt-framework)',
+            '[Framework CRAFT](/fr/prompt-engineering/craft-framework)',
+            '[Framework TRACE](/fr/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought et ReAct](/fr/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -1315,16 +1513,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-24',
       readTime: '9分で読める',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: '唯一最良のプロンプトフレームワークは存在しません。プロンプトの組み立て方には構造フレームワーク（CO-STAR、CRAFT、SPECS、RISEN、TRACE）を、モデルに考えさせる進め方には推論戦略（Chain-of-Thought、ReAct、Tree-of-Thought）を選びます。多くのタスクでは、どちらか一方ではなく、両方から1つずつ組み合わせます。',
       seoTitle: '2026年プロンプトフレームワーク完全ガイド：Chain-of-Thought選択方法と実践活用法',
       metaDescription: 'Chain-of-Thought、ReAct、Tree-of-Thoughtなどプロンプトフレームワークの完全ガイド。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Ollama各モデルでの使い方やタスク別選択方法、各フレームワークのメリット・デメリット比較を詳しく解説。',
-            schema: {
+      schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/ja/prompt-engineering/which-prompt-framework-should-you-use',
         headline: 'どのプロンプトフレームワーク？2026年比較',
         description: 'Chain-of-Thought、ReAct、Tree-of-Thoughtを比較。ユースケース別に選べるフレームワーク。メリット・デメリット解説。',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-08-31',
         keywords: ['プロンプトフレームワーク', 'プロンプトエンジニアリング', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1411,12 +1610,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ]
       },
-            sections: {
+      sections: {
         whatFrameworksDo: {
           title: 'プロンプトフレームワークが実際に行うこと',
           content: [
             '**プロンプトフレームワークは、GPT-5.6、Claude Opus 5、Gemini 3.1 Proおよびその他のモデルが、どの役割を担うべきか、どのコンテキストを使用すべきか、出力をどのようにフォーマットすべきかを正確に把握できるよう、プロンプトに繰り返し使える構造を提供します。** フレームワークはモデルの機能ではなく、モデルとのコミュニケーション方法を制御するテンプレートです。一貫したフレームワークを使用すると、モデルがより明確な目標、制約、出力形式を受け取るため、幻覚リスクが低減されます。',
             'ほとんどのフレームワークは、プロンプトを目的、役割、コンテキスト、制約、フォーマットなどの構成要素に分解します。この構造により、「これを手伝って」のような曖昧なリクエストが、測定可能な品質を持つ明確に指定されたタスクに変換されます。',
+          ],
+        },
+        keyTakeaways: {
+          title: '重要なポイント',
+          isTldr: true,
+          items: [
+            '**構造フレームワークと推論戦略は別のレイヤーです。** どちらかを選ぶのではなく、通常は各レイヤーから1つずつ組み合わせます。',
+            '**構造フレームワークは重視する成果物で選びます。** 分析にはCO-STARまたはTRACE、創作にはCRAFT、厳格な書式にはSPECS、反復にはRISENが向いています。',
+            '**推論戦略は問題の形で選びます。** 論理にはChain-of-Thought、ツール利用や検索にはReAct、有効な道筋が複数ある問題にはTree-of-Thoughtが向いています。',
+            '**標準化する前に、自分のタスクで2〜3個の候補を試してください。** フレームワーク選びは反復的なもので、一度決めたら終わりではありません。',
+            '**手の込んだフレームワークほどトークンを消費します。** Tree-of-Thoughtは一般的な選択肢の中で最もコストが高いため、本当に分岐する問題に絞って使いましょう。',
           ],
         },
         frameworksAtAGlance: {
@@ -1433,6 +1643,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'フレームワーク': 'RISEN',   '最適な用途': '反復改善',          'コアアイデア': '複数ターンにわたってプロンプトを素早く洗練させる' },
             { 'フレームワーク': 'TRACE',   '最適な用途': '推論',              'コアアイデア': '思考・推論・分析・結論・評価を示すようモデルに要求する' },
           ],
+        },
+        reasoningStrategies: {
+          title: '構造フレームワークと推論戦略の違い',
+          content: [
+            '**上記のフレームワークはプロンプトの組み立て方を決めるものであり、推論戦略はモデルにどう考え進めさせるかを決めるものです。** レイヤーが異なるため、「CO-STARかChain-of-Thoughtか」という問い自体が適切ではありません。両方を同時に使えますし、通常はそうすべきです。',
+            '最もよく使われる3つの推論戦略は次のとおりです。',
+          ],
+          columns: ['戦略', '適した用途', '基本的な考え方'],
+          rows: [
+            { '戦略': 'Chain-of-Thought', '適した用途': '論理、数学、多段階の分析', '基本的な考え方': '答えを確定する前に、途中の手順を書き出させる' },
+            { '戦略': 'ReAct', '適した用途': 'ツール利用、検索、エージェント', '基本的な考え方': '思考ステップと、検索やAPI呼び出しなどの行動を交互に行い、その結果を再び入力に戻す' },
+            { '戦略': 'Tree-of-Thought', '適した用途': '有効な道筋が複数ある問題', '基本的な考え方': '競合する分岐を探索して比較し、最も有力なものを採用する' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: '実務では組み合わせて使います。CO-STARで文脈と読み手を設定し、Chain-of-Thoughtで明示的な推論を促し、SPECS形式の制約ブロックで出力書式を固定する、といった具合です。コストにも注意してください。Tree-of-Thoughtは複数の分岐を探索するため、直接的なプロンプトよりトークン消費が目に見えて増えます。詳しくは[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting)と[Tree-of-ThoughtとReAct](/prompt-engineering/tree-of-thought-and-react)を参照してください。',
         },
         howToChooseByUseCase: {
           title: 'ユースケース別フレームワーク選択ガイド',
@@ -1536,6 +1763,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[RTFフレームワーク：Role, Task, Format](/ja/prompt-engineering/rtf-framework)',
             '[SPECSフレームワーク](/ja/prompt-engineering/specs-framework)',
             '[独自のプロンプトフレームワークを作る](/ja/prompt-engineering/build-your-own-prompt-framework)',
+            '[CRAFTフレームワーク](/ja/prompt-engineering/craft-framework)',
+            '[TRACEフレームワーク](/ja/prompt-engineering/trace-framework)',
+            '[Chain-of-Thoughtプロンプティング](/ja/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-ThoughtとReAct](/ja/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -1562,16 +1793,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-24',
       readTime: '阅读约9分钟',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: '不存在唯一最好的提示词框架。用结构框架（CO-STAR、CRAFT、SPECS、RISEN、TRACE）决定提示词怎么组织，用推理策略（Chain-of-Thought、ReAct、Tree-of-Thought）决定模型怎么推进任务。大多数任务需要两类各取其一，而不是二选一。',
       seoTitle: '2026年提示词框架完全指南：选择方法、应用场景与GPT-5.6 Claude Gemini活用方法指南',
       metaDescription: 'Chain-of-Thought、ReAct、Tree-of-Thought等主流提示词框架的完全对比与应用指南。涵盖GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Ollama等主流大语言模型的应用建议。框架优缺点深度分析与对比，企业场景选择方案，实战技巧与最佳实践详细讲解。',
-            schema: {
+      schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/zh/prompt-engineering/which-prompt-framework-should-you-use',
         headline: '选择哪个提示框架？2026年对比',
         description: 'Chain-of-Thought vs ReAct vs Tree-of-Thought框架对比。按用例选择。优缺点解析，推荐决策指南。',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-08-31',
         keywords: ['提示框架', '提示工程', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1666,12 +1898,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ]
       },
-            sections: {
+      sections: {
         whatFrameworksDo: {
           title: '提示词框架的实际作用',
           content: [
             '**提示词框架为您的提示词提供可重复的结构，使GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和其他模型确切知道应扮演什么角色、使用什么上下文以及如何格式化输出。** 框架不是模型功能，而是控制您与模型通信方式的模板。使用一致的框架可以降低幻觉风险，因为模型接收到更清晰的目标、约束和输出格式。',
             '大多数框架将提示词分解为目标、角色、上下文、约束和格式等构建块。这种结构将"帮我处理这个"之类的模糊请求转变为具有可测量质量的明确指定任务。',
+          ],
+        },
+        keyTakeaways: {
+          title: '关键要点',
+          isTldr: true,
+          items: [
+            '**结构框架和推理策略是两个不同的层面。** 通常是各取其一组合使用，而不是二选一。',
+            '**按你最看重的产出选择结构框架：** 分析用 CO-STAR 或 TRACE，创意工作用 CRAFT，严格格式用 SPECS，迭代用 RISEN。',
+            '**按问题的形态选择推理策略：** 逻辑推理用 Chain-of-Thought，工具调用和检索用 ReAct，存在多条可行路径的问题用 Tree-of-Thought。',
+            '**在固定下来之前，先用自己的任务测试 2–3 个候选。** 框架选择是迭代的，不是一锤定音。',
+            '**越复杂的框架消耗越多 token。** Tree-of-Thought 是常见选项中最贵的，请留给真正需要分支探索的问题。',
           ],
         },
         frameworksAtAGlance: {
@@ -1688,6 +1931,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '框架': 'RISEN',   '最适用于': '迭代改进',   '核心理念': '通过多轮对话快速精炼提示词' },
             { '框架': 'TRACE',   '最适用于': '推理任务',   '核心理念': '强制模型展示思维、推理、分析、结论、评估' },
           ],
+        },
+        reasoningStrategies: {
+          title: '结构框架与推理策略的区别',
+          content: [
+            '**上面的框架决定提示词怎么组织，推理策略则决定你让模型怎么推进任务。** 二者处在不同层面，所以"该用 CO-STAR 还是 Chain-of-Thought"本身就是个错问题——你可以、通常也应该同时使用。',
+            '最常遇到的三种推理策略：',
+          ],
+          columns: ['策略', '适用场景', '核心思路'],
+          rows: [
+            { '策略': 'Chain-of-Thought', '适用场景': '逻辑、数学、多步分析', '核心思路': '让模型先写出中间步骤，再给出最终答案' },
+            { '策略': 'ReAct', '适用场景': '工具调用、检索、智能体', '核心思路': '推理步骤与检索、API 调用等动作交替进行，每次结果再回喂给模型' },
+            { '策略': 'Tree-of-Thought', '适用场景': '存在多条可行路径的问题', '核心思路': '探索并比较相互竞争的分支，然后选定最有把握的一条' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: '实际使用中要组合起来：先用 CO-STAR 设定上下文和受众，再用 Chain-of-Thought 强制显式推理，最后用 SPECS 式的约束块锁定输出格式。同时注意成本——Tree-of-Thought 要探索多个分支，token 消耗明显高于直接提示。完整讲解见[Chain-of-Thought 提示法](/prompt-engineering/chain-of-thought-prompting)和[Tree-of-Thought 与 ReAct](/prompt-engineering/tree-of-thought-and-react)。',
         },
         howToChooseByUseCase: {
           title: '按使用场景选择框架',
@@ -1791,6 +2051,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[RTF框架：Role, Task, Format](/zh/prompt-engineering/rtf-framework)',
             '[SPECS框架](/zh/prompt-engineering/specs-framework)',
             '[构建你自己的提示词框架](/zh/prompt-engineering/build-your-own-prompt-framework)',
+            '[CRAFT 框架](/zh/prompt-engineering/craft-framework)',
+            '[TRACE 框架](/zh/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought 提示法](/zh/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought 与 ReAct](/zh/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
@@ -1805,15 +2069,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '框架选择是否影响token消耗？', a: '是的。像Tree-of-Thought这样的复杂框架生成更多推理步骤，消耗更多token。直接提示等简单结构成本低但可能输出质量较低。框架选择涉及质量与成本的权衡。' },
             { q: '我应该坚持一个框架还是在不同框架间切换？', a: '两种方法都混合使用。为不同任务类型构建一个小的已测试框架集（3-5个）并一致地使用它们。但当任务需求或模型能力改变时重新评估您的选择。' },
             { q: '提示词框架与PromptQuorum自动选择器如何关联？', a: 'PromptQuorum的选择器分析您的任务并根据您的描述推荐一个框架。您可以覆盖它、测试替代方案或构建一个针对您的确切需求的自定义框架。' },
-            { q: '什么是最好的提示框架适用于所有任务？', a: '没有通用的最佳框架。Chain-of-Thought用于推理，ReAct用于工具使用，Tree-of-Thought用于复杂多步任务。在您的特定任务上测试框架找到最佳选择。' },
           ],
         },
       },
     },
-  ko: {
+    ko: {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
-    heroImage: '/images/which-framework-to-use-overview-hero-ko.webp',
+      heroImage: '/images/which-framework-to-use-overview-hero-ko.webp',
       title: '어떤 프롬프트 프레임워크를 사용해야 합니까?',
       intro: '올바른 프롬프트 프레임워크는 작업 유형, 경험 수준, 그리고 창의성·정밀도·안정적 추론 중 무엇을 최적화하느냐에 따라 달라집니다. PromptQuorum은 다양한 프레임워크, 자동 선택기, 커스텀 프레임워크 빌더를 앱 내에 직접 제공하여 이 선택을 더욱 쉽게 해 줍니다.',
       publishDate: '2026-03-24',
@@ -1821,13 +2084,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: '프롬프트 프레임워크 비교: Chain-of-Thought, ReAct, Tree-of-Thought. 각 사용 사례별 장단점을 알아보고 LLM 애플리케이션에 가장 적합한 프레임워크를 선택하십시오.',
       readTime: '9분 읽기',
       educationalLevel: 'Intermediate',
+      leadAnswerBlock: '가장 좋은 프롬프트 프레임워크 하나가 따로 있는 것은 아닙니다. 프롬프트를 어떻게 구성할지는 구조 프레임워크(CO-STAR, CRAFT, SPECS, RISEN, TRACE)로 정하고, 모델이 어떻게 풀어 나갈지는 추론 전략(Chain-of-Thought, ReAct, Tree-of-Thought)으로 정하십시오. 대부분의 작업에는 둘 중 하나가 아니라 각각 하나씩이 필요합니다.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '어떤 프롬프트 프레임워크를 사용해야 합니까?',
         description: 'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 로컬 모델에 적합한 프롬프트 프레임워크 선택 방법과 PromptQuorum의 프레임워크 자동 선택 기능을 소개합니다.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-31',
         'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use',
         keywords: ['prompt frameworks', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1887,6 +2151,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '대부분의 프레임워크는 프롬프트를 목표, 역할, 맥락, 제약 조건, 형식과 같은 구성 요소로 분해합니다. 이 구조는 "이것을 도와주세요"와 같은 모호한 요청을 측정 가능한 품질의 명확하게 지정된 작업으로 전환합니다. 실제로 프레임워크는 OpenAI, Anthropic, Google DeepMind와 같은 다양한 모델 및 제공업체에서 재현 가능한 출력이 필요할 때 특히 유용합니다.',
           ],
         },
+        keyTakeaways: {
+          title: '핵심 요약',
+          isTldr: true,
+          items: [
+            '**구조 프레임워크와 추론 전략은 서로 다른 층위입니다.** 둘 중 하나를 고르기보다 보통 각각에서 하나씩 골라 조합합니다.',
+            '**중요하게 여기는 결과물에 맞춰 구조 프레임워크를 고르십시오.** 분석에는 CO-STAR나 TRACE, 창작에는 CRAFT, 엄격한 형식에는 SPECS, 반복 개선에는 RISEN이 맞습니다.',
+            '**문제의 형태에 맞춰 추론 전략을 고르십시오.** 논리 문제에는 Chain-of-Thought, 도구 사용과 검색에는 ReAct, 유효한 경로가 여럿인 문제에는 Tree-of-Thought이 맞습니다.',
+            '**표준으로 굳히기 전에 실제 작업으로 2~3개 후보를 시험해 보십시오.** 프레임워크 선택은 반복적인 과정이지 한 번으로 끝나지 않습니다.',
+            '**정교한 프레임워크일수록 토큰을 더 씁니다.** Tree-of-Thought은 일반적인 선택지 중 가장 비싸므로, 실제로 분기가 필요한 문제에만 쓰십시오.',
+          ],
+        },
         frameworksAtAGlance: {
           title: '주요 프롬프트 프레임워크 한눈에 보기',
           content: [
@@ -1901,6 +2176,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { '프레임워크': 'RISEN',   '최적 용도': '반복 개선', '핵심 아이디어': '여러 차례에 걸쳐 프롬프트를 신속하게 개선합니다' },
             { '프레임워크': 'TRACE',   '최적 용도': '추론', '핵심 아이디어': '모델이 사고(Thought), 추론(Reasoning), 분석(Analysis), 결론(Conclusion), 평가(Evaluation)를 순서대로 보여 주도록 강제합니다' },
           ],
+        },
+        reasoningStrategies: {
+          title: '구조 프레임워크와 추론 전략의 차이',
+          content: [
+            '**위의 프레임워크들은 프롬프트를 어떻게 구성할지를 정하고, 추론 전략은 모델에게 어떻게 풀어 나가게 할지를 정합니다.** 서로 다른 층위에 있기 때문에 "CO-STAR냐 Chain-of-Thought냐"는 잘못된 질문입니다. 둘을 동시에 쓸 수 있고, 보통은 그렇게 해야 합니다.',
+            '가장 자주 만나게 되는 세 가지 추론 전략은 다음과 같습니다.',
+          ],
+          columns: ['전략', '적합한 용도', '핵심 아이디어'],
+          rows: [
+            { '전략': 'Chain-of-Thought', '적합한 용도': '논리, 수학, 여러 단계의 분석', '핵심 아이디어': '답을 확정하기 전에 중간 단계를 풀어 쓰게 합니다' },
+            { '전략': 'ReAct', '적합한 용도': '도구 사용, 검색, 에이전트', '핵심 아이디어': '추론 단계와 검색·API 호출 같은 행동을 번갈아 수행하고 그 결과를 다시 입력으로 넣습니다' },
+            { '전략': 'Tree-of-Thought', '적합한 용도': '유효한 경로가 여럿인 문제', '핵심 아이디어': '경쟁하는 분기들을 탐색·비교한 뒤 가장 유력한 하나를 택합니다' },
+          ],
+        },
+
+        combiningFrameworks: {
+          content: '실제로는 조합해서 씁니다. CO-STAR로 맥락과 독자를 정하고, Chain-of-Thought으로 명시적 추론을 유도한 다음, SPECS식 제약 블록으로 출력 형식을 고정하는 식입니다. 비용도 감안하십시오. Tree-of-Thought은 여러 분기를 탐색하므로 직접 프롬프트보다 토큰을 눈에 띄게 더 씁니다. 자세한 내용은 [Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting)과 [Tree-of-Thought과 ReAct](/prompt-engineering/tree-of-thought-and-react)를 참고하십시오.',
         },
         howToChooseByUseCase: {
           title: '사용 사례별 프레임워크 선택 방법',
@@ -2005,6 +2297,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '[RTF 프레임워크: 역할, 과제, 형식](/ko/prompt-engineering/rtf-framework)',
             '[SPECS 프레임워크](/ko/prompt-engineering/specs-framework)',
             '[나만의 프롬프트 프레임워크 만들기](/ko/prompt-engineering/build-your-own-prompt-framework)',
+            '[CRAFT 프레임워크](/ko/prompt-engineering/craft-framework)',
+            '[TRACE 프레임워크](/ko/prompt-engineering/trace-framework)',
+            '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting)',
+            '[Tree-of-Thought과 ReAct](/ko/prompt-engineering/tree-of-thought-and-react)',
           ],
         },
         faqSection: {
