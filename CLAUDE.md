@@ -170,7 +170,11 @@ scripts/session.sh finish <task-name>  # merge to main, push, clean up
 scripts/session.sh drop <task-name>    # abandon (branch archived, recoverable)
 ```
 
-`start` prints the directory, branch (`session/<name>`) and an allocated port. Run Claude Code in that directory and nowhere else.
+`start` prints the directory, branch (`session/<name>`) and an allocated port.
+
+**Two ways in, both fine:**
+- Preferred: `cd` to the printed directory and run `claude` there.
+- Already running in the shared checkout? Run `session.sh start`, then call the **`EnterWorktree` tool with `path` set to the printed directory** — that moves this session's own working directory into the worktree. Creating the worktree is not enough on its own; without `EnterWorktree` you are still editing the shared checkout.
 
 **Rules inside a session worktree:**
 
