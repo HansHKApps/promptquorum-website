@@ -566,3 +566,115 @@ test.describe('layout', () => {
     expect(overflow).toMatch(/auto|scroll/)
   })
 })
+
+// ---------------------------------------------------------------------------
+// 11. Regression guards for the scoring fix
+//
+// Every query below returned ZERO results before commit 671de315d, because
+// MAX_SCORE=0.5 was applied to a Fuse score inflated by fieldNormWeight: 1.5.
+// Long titles were penalised hard enough that exact substring matches scored
+// above the cutoff and were discarded.
+// ---------------------------------------------------------------------------
+test.describe('regression: queries that used to return nothing', () => {
+  const PREVIOUSLY_BROKEN = [
+    'install ollama',
+    'rtx 4060',
+    '16gb',
+    '16 GB',
+    'raspberry pi',
+    'docker',
+    'linux',
+    'system prompt',
+    'chain of thought',
+    'few shot',
+    'openwebui',
+    'how to run llama locally',
+  ]
+
+  for (const q of PREVIOUSLY_BROKEN) {
+    test(`"${q}" returns results`, async ({ page }) => {
+      await openSearch(page)
+      const res = await query(page, q)
+      expect(await res.count(), `"${q}" returned zero results`).toBeGreaterThan(0)
+    })
+  }
+
+  test('an exact-title query puts that title first', async ({ page }) => {
+    await openSearch(page)
+    for (const [q, expected] of [
+      ['install ollama', 'install ollama'],
+      ['system prompt', 'system prompt'],
+    ] as const) {
+      await query(page, q)
+      const list = await titles(page)
+      expect(list.length, `"${q}" returned nothing`).toBeGreaterThan(0)
+      expect(list[0].toLowerCase()).toContain(expected)
+    }
+  })
+
+  test('natural-language questions fall back to token matching', async ({ page }) => {
+    await openSearch(page)
+    for (const q of ['how to run llama locally', 'what is the best gpu for local llm']) {
+      const res = await query(page, q)
+      expect(await res.count(), `"${q}" returned zero results`).toBeGreaterThan(0)
+    }
+  })
+
+  test('the token fallback still rejects junk, including multi-word junk', async ({ page }) => {
+    await openSearch(page)
+    for (const q of ['zzzqqxwv', 'zzzqqxwv nothing here', 'qwertyuiop asdfghjkl']) {
+      await input(page).fill(q)
+      await page.waitForTimeout(400)
+      expect(await options(page).count(), `junk query "${q}" returned results`).toBe(0)
+    }
+  })
+
+  test('the token fallback never widens a model-number query', async ({ page }) => {
+    await openSearch(page)
+    // "4060" must never pull in 3060 articles via a token-level retry.
+    await query(page, 'rtx 4060')
+    const list = await titles(page)
+    expect(list.length).toBeGreaterThan(0)
+    expect(list[0]).toMatch(/4060/)
+  })
+
+  // "rtx 3090" is deliberately NOT in the list above. No article TITLE mentions
+  // a 3090, and the model-token rule requires a whole-token title match, so an
+  // empty result is the documented correct answer — not a scoring regression.
+  // (It is a content gap: the site has no RTX 3090 article.)
+  test('a model with no matching title correctly returns nothing', async ({ page, request }) => {
+    const idx = await (await request.get('/api/search-index/en')).json()
+    expect(idx.filter((e: any) => /3090/.test(e.title))).toHaveLength(0)
+    await openSearch(page)
+    await input(page).fill('rtx 3090')
+    await page.waitForTimeout(400)
+    expect(await options(page).count()).toBe(0)
+  })
+
+  test('typo tolerance survives the tighter cutoff', async ({ page }) => {
+    await openSearch(page)
+    const res = await query(page, 'ollma')
+    expect(await res.count()).toBeGreaterThan(0)
+    expect((await titles(page)).join(' ').toLowerCase()).toContain('ollama')
+  })
+})
+
+// ---------------------------------------------------------------------------
+// 12. Regression guard: every locale must render a non-empty <h1>
+//
+// lm-studio-advanced-features defined seoTitle but no title in ja and zh, so
+// both locales shipped an empty <h1> and a blank-titled search entry.
+// ---------------------------------------------------------------------------
+test.describe('regression: article titles are never blank', () => {
+  for (const [lang, path] of [
+    ['en', '/local-llms/lm-studio-advanced-features'],
+    ['ja', '/ja/local-llms/lm-studio-advanced-features'],
+    ['zh', '/zh/local-llms/lm-studio-advanced-features'],
+  ] as const) {
+    test(`${lang} page renders a non-empty <h1>`, async ({ page }) => {
+      await page.goto(path, { waitUntil: 'domcontentloaded' })
+      const h1 = (await page.locator('h1').first().textContent()) ?? ''
+      expect(h1.trim(), `${lang} <h1> is empty`).not.toBe('')
+    })
+  }
+})
