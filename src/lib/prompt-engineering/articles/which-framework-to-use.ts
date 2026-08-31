@@ -82,6 +82,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: 'What Prompt Frameworks Actually Do',
+          snippets: [
+            { type: 'in-one-sentence', text: 'A prompt framework is a checklist of fields to fill in, so its benefit is remembering to state the role, constraints and output format rather than any magic in the acronym itself.' },
+            { type: 'in-plain-terms', text: 'The letters are a memory aid, not a spell. Every framework is asking the same handful of questions in a different order — which is why arguing about which acronym is best matters far less than actually answering them.' },
+          ],
           content: [
             '**Prompt frameworks give you a repeatable structure for prompts so that GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and other models know exactly what role to take, what context to use, and how to format outputs.** A framework is not a model feature; it is a template that controls how you talk to the model. When you use a consistent framework, you reduce hallucination risk because the model receives clearer objectives, constraints, and output formats.',
             'Most frameworks decompose a prompt into building blocks such as objective, role, context, constraints, and format. This structure turns a vague request like "help me with this" into a well-specified task with measurable quality. In practice, frameworks are especially helpful when you need reproducible outputs across different models and providers such as OpenAI, Anthropic, and Google DeepMind.',
@@ -314,6 +318,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: 'Was Prompt-Frameworks tatsächlich leisten',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Ein Prompt-Framework ist eine Checkliste auszufüllender Felder; sein Nutzen liegt darin, Rolle, Einschränkungen und Ausgabeformat nicht zu vergessen — nicht in einer Magie des Akronyms selbst.' },
+            { type: 'in-plain-terms', text: 'Die Buchstaben sind eine Merkhilfe, kein Zauberspruch. Jedes Framework stellt dieselbe Handvoll Fragen in anderer Reihenfolge. Deshalb ist der Streit darüber, welches Akronym das beste sei, weit weniger wichtig, als die Fragen tatsächlich zu beantworten.' },
+          ],
           content: [
             '**Prompt-Frameworks geben Ihnen eine wiederholbare Struktur für Prompts, sodass GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und andere Modelle genau wissen, welche Rolle sie einnehmen, welchen Kontext sie verwenden und wie sie Ausgaben formatieren sollen.** Ein Framework ist kein Modellemerkmal; es ist eine Vorlage, die steuert, wie Sie mit dem Modell sprechen. Wenn Sie ein konsistentes Framework verwenden, reduzieren Sie das Halluzinationsrisiko, da das Modell klarere Ziele, Einschränkungen und Ausgabeformate erhält.',
             'Die meisten Frameworks zerlegen einen Prompt in Bausteine wie Ziel, Rolle, Kontext, Einschränkungen und Format. Diese Struktur verwandelt eine vage Anfrage wie „hilf mir damit" in eine klar spezifizierte Aufgabe mit messbarer Qualität. In der Praxis sind Frameworks besonders hilfreich, wenn Sie reproduzierbare Ausgaben über verschiedene Modelle und Anbieter wie OpenAI, Anthropic und Google DeepMind hinweg benötigen.',
@@ -560,6 +568,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: 'Lo que los frameworks de prompt realmente hacen',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Un framework de prompt es una lista de campos que rellenar, así que su beneficio está en acordarse de indicar el rol, las restricciones y el formato de salida, no en una magia del acrónimo en sí.' },
+            { type: 'in-plain-terms', text: 'Las letras son una ayuda para la memoria, no un conjuro. Todos los frameworks hacen el mismo puñado de preguntas en distinto orden: por eso discutir qué acrónimo es mejor importa mucho menos que responderlas de verdad.' },
+          ],
           content: [
             '**Los frameworks de prompt te dan una estructura repetible para los prompts para que GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y otros modelos sepan exactamente qué rol adoptar, qué contexto usar y cómo formatear los outputs.** Un framework no es una característica del modelo; es una plantilla que controla cómo hablas con el modelo. Cuando usas un framework consistente, reduces el riesgo de alucinaciones porque el modelo recibe objetivos, restricciones y formatos de output más claros.',
             'La mayoría de los frameworks descomponen un prompt en bloques de construcción como objetivo, rol, contexto, restricciones y formato. Esta estructura convierte una solicitud vaga como "ayúdame con esto" en una tarea bien especificada con calidad medible. En la práctica, los frameworks son especialmente útiles cuando necesitas outputs reproducibles en diferentes modelos y proveedores como OpenAI, Anthropic y Google DeepMind.',
@@ -807,6 +819,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: 'ما تفعله أطر الطلبات فعلًا',
+          snippets: [
+            { type: 'in-one-sentence', text: 'إطار البرومبت قائمة تحقق من حقول تملؤها، ولذلك تكمن فائدته في تذكيرك بتحديد الدور والقيود وصيغة المخرجات، لا في سحر كامن في الاختصار نفسه.' },
+            { type: 'in-plain-terms', text: 'الحروف وسيلة تذكّر لا تعويذة. كل إطار يطرح الأسئلة القليلة نفسها بترتيب مختلف؛ ولهذا فالجدال حول أي اختصار أفضل أقل أهمية بكثير من الإجابة عن تلك الأسئلة فعلاً.' },
+          ],
           content: [
             '**أطر الطلبات تمنحك بنية متكررة للطلبات حتى يعرف GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وغيرها من النماذج بالضبط أي دور يتبنّون وأي سياق يستخدمون وكيف يُنسّقون المخرجات.** الإطار ليس ميزة في النموذج؛ إنه قالب يتحكم في طريقة حديثك مع النموذج. عند استخدام إطار متسق، تقلّل خطر الهلوسة لأن النموذج يتلقى أهدافًا وقيودًا وتنسيقات مخرجات أوضح.',
             'معظم الأطر تُقسّم الطلب إلى عناصر بناء كالهدف والدور والسياق والقيود والتنسيق. هذه البنية تحوّل طلبًا مبهمًا كـ"ساعدني في هذا" إلى مهمة مُحددة جيدًا بجودة قابلة للقياس. عمليًا، الأطر مفيدة بشكل خاص عندما تحتاج إلى مخرجات قابلة للتكرار عبر نماذج ومزودين مختلفين كـ OpenAI وAnthropic وGoogle DeepMind.',
@@ -1053,6 +1069,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: 'O que os frameworks de prompt realmente fazem',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Um framework de prompt é uma lista de campos a preencher, então o benefício dele está em lembrar você de declarar o papel, as restrições e o formato de saída, e não em alguma mágica do acrônimo em si.' },
+            { type: 'in-plain-terms', text: 'As letras são um apoio de memória, não um feitiço. Todo framework faz o mesmo punhado de perguntas em ordem diferente — por isso discutir qual acrônimo é melhor importa muito menos do que de fato respondê-las.' },
+          ],
           content: [
             '**Frameworks de prompt fornecem uma estrutura repetível para prompts para que GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e outros modelos saibam exatamente qual papel adotar, qual contexto usar e como formatar os outputs.** Um framework não é uma funcionalidade do modelo; é um modelo que controla como você fala com o modelo. Ao usar um framework consistente, você reduz o risco de alucinações porque o modelo recebe objetivos, restrições e formatos de output mais claros.',
             'A maioria dos frameworks decompõe um prompt em blocos de construção como objetivo, função, contexto, restrições e formato. Essa estrutura transforma uma solicitação vaga como "me ajude com isso" em uma tarefa bem especificada com qualidade mensurável.',
@@ -1333,6 +1353,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: 'Ce que font réellement les frameworks de prompt',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Un framework de prompt est une liste de champs à remplir : son intérêt est de vous faire penser au rôle, aux contraintes et au format de sortie, non une quelconque magie de l\'acronyme lui-même.' },
+            { type: 'in-plain-terms', text: 'Les lettres sont un aide-mémoire, pas une formule magique. Tous les frameworks posent la même poignée de questions dans un ordre différent : débattre du meilleur acronyme compte donc bien moins que d\'y répondre vraiment.' },
+          ],
           content: [
             '**Les frameworks de prompt vous donnent une structure répétable pour que GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et autres modèles sachent exactement quel rôle adopter, quel contexte utiliser et comment formater les sorties.** Un framework n\'est pas une fonctionnalité du modèle : c\'est un gabarit qui contrôle la façon dont vous communiquez avec lui. Un framework cohérent réduit le risque d\'hallucination car le modèle reçoit des objectifs, des contraintes et des formats de sortie plus clairs.',
             'La plupart des frameworks décomposent un prompt en blocs : objectif, rôle, contexte, contraintes et format. Cette structure transforme une demande vague comme « aide-moi avec ça » en tâche précise à qualité mesurable.',
@@ -1613,6 +1637,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: 'プロンプトフレームワークが実際に行うこと',
+          snippets: [
+            { type: 'in-one-sentence', text: 'プロンプトフレームワークとは埋めるべき項目のチェックリストであり、その効用は役割・制約・出力形式を書き忘れないことにあります。頭文字そのものに魔法があるわけではありません。' },
+            { type: 'in-plain-terms', text: 'あの頭文字は覚えるための手がかりであって、呪文ではありません。どのフレームワークも同じ数個の問いを順番を変えて尋ねているだけです。だからこそ、どの略語が最良かを論じるより、実際に問いへ答えるほうがはるかに重要です。' },
+          ],
           content: [
             '**プロンプトフレームワークは、GPT-5.6、Claude Opus 5、Gemini 3.1 Proおよびその他のモデルが、どの役割を担うべきか、どのコンテキストを使用すべきか、出力をどのようにフォーマットすべきかを正確に把握できるよう、プロンプトに繰り返し使える構造を提供します。** フレームワークはモデルの機能ではなく、モデルとのコミュニケーション方法を制御するテンプレートです。一貫したフレームワークを使用すると、モデルがより明確な目標、制約、出力形式を受け取るため、幻覚リスクが低減されます。',
             'ほとんどのフレームワークは、プロンプトを目的、役割、コンテキスト、制約、フォーマットなどの構成要素に分解します。この構造により、「これを手伝って」のような曖昧なリクエストが、測定可能な品質を持つ明確に指定されたタスクに変換されます。',
@@ -1901,6 +1929,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: '提示词框架的实际作用',
+          snippets: [
+            { type: 'in-one-sentence', text: '提示词框架本质上是一份待填写的清单，它的价值在于提醒你写清角色、约束和输出格式，而不是缩写本身有什么魔力。' },
+            { type: 'in-plain-terms', text: '那几个字母是记忆辅助，不是咒语。所有框架问的都是同样几个问题，只是顺序不同——所以争论哪个缩写更好，远不如真正把这些问题回答清楚来得重要。' },
+          ],
           content: [
             '**提示词框架为您的提示词提供可重复的结构，使GPT-5.6、Claude Opus 5、Gemini 3.1 Pro和其他模型确切知道应扮演什么角色、使用什么上下文以及如何格式化输出。** 框架不是模型功能，而是控制您与模型通信方式的模板。使用一致的框架可以降低幻觉风险，因为模型接收到更清晰的目标、约束和输出格式。',
             '大多数框架将提示词分解为目标、角色、上下文、约束和格式等构建块。这种结构将"帮我处理这个"之类的模糊请求转变为具有可测量质量的明确指定任务。',
@@ -2146,6 +2178,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         whatFrameworksDo: {
           title: '프롬프트 프레임워크가 실제로 하는 일',
+          snippets: [
+            { type: 'in-one-sentence', text: '프롬프트 프레임워크는 채워야 할 항목의 체크리스트이며, 그 효용은 역할과 제약, 출력 형식을 빠뜨리지 않고 명시하게 하는 데 있습니다. 약어 자체에 마법이 있는 것은 아닙니다.' },
+            { type: 'in-plain-terms', text: '그 글자들은 기억을 돕는 장치이지 주문이 아닙니다. 어떤 프레임워크든 같은 몇 가지 질문을 순서만 바꿔 묻고 있습니다. 그래서 어떤 약어가 더 나은지 다투는 일은, 그 질문에 실제로 답하는 것보다 훨씬 덜 중요합니다.' },
+          ],
           content: [
             '**프롬프트 프레임워크는 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 기타 모델이 어떤 역할을 맡아야 하는지, 어떤 맥락을 사용해야 하는지, 출력 형식을 어떻게 지정해야 하는지 정확히 알 수 있도록 반복 가능한 프롬프트 구조를 제공합니다.** 프레임워크는 모델 기능이 아닙니다. 모델과 소통하는 방식을 제어하는 템플릿입니다. 일관된 프레임워크를 사용하면 모델이 더 명확한 목표, 제약 조건, 출력 형식을 받게 되어 환각 위험을 줄일 수 있습니다.',
             '대부분의 프레임워크는 프롬프트를 목표, 역할, 맥락, 제약 조건, 형식과 같은 구성 요소로 분해합니다. 이 구조는 "이것을 도와주세요"와 같은 모호한 요청을 측정 가능한 품질의 명확하게 지정된 작업으로 전환합니다. 실제로 프레임워크는 OpenAI, Anthropic, Google DeepMind와 같은 다양한 모델 및 제공업체에서 재현 가능한 출력이 필요할 때 특히 유용합니다.',

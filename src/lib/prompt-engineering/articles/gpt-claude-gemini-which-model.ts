@@ -154,6 +154,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'no-single-best-ai-model',
           title: 'No Single "Best" AI Model — Choose by Task',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Frontier models now differ less in raw capability than in where they are strongest, so the useful question is which model fits the task rather than which model ranks highest overall.' },
+            { type: 'in-plain-terms', text: 'Asking which model is best is like asking which vehicle is best. The honest answer is what are you carrying and how far. Benchmarks describe an average; your work is a specific job, and the leaderboard cannot see it.' },
+          ],
           content: [
             '**No single AI model is best for every task. GPT-5.6 excels at tool integration and reasoning; Claude Opus 5 dominates writing and code quality; Gemini 3.1 Pro offers cost-effective performance and deep Google Workspace integration; DeepSeek and Baidu ERNIE are essential for mainland China workloads.**',
             'When you have a new task, the first question should not be "what is the best model?" but rather "which model is best for THIS task, in THIS geography, at THIS budget?" Benchmarks and leaderboards shift every few months. Your actual task — your specific writing style, codebase, customers in China, data sensitivity — should drive the choice.',
@@ -666,6 +670,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'no-single-best-ai-model',
           title: 'Es gibt kein „bestes" KI-Modell — wählen Sie nach Aufgabe',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Führende Modelle unterscheiden sich heute weniger in der reinen Leistungsfähigkeit als darin, wo ihre Stärken liegen; sinnvoll ist daher die Frage, welches Modell zur Aufgabe passt, nicht welches insgesamt am höchsten rangiert.' },
+            { type: 'in-plain-terms', text: 'Zu fragen, welches Modell das beste sei, ist wie zu fragen, welches Fahrzeug das beste sei. Die ehrliche Antwort lautet: Was transportieren Sie, und wie weit? Benchmarks beschreiben einen Durchschnitt — Ihre Arbeit ist ein konkreter Auftrag, den keine Rangliste sieht.' },
+          ],
           content: [
             '**Kein einzelnes KI-Modell ist für jede Aufgabe das beste. GPT-5.6 glänzt bei Tool-Integration und Reasoning; Claude Opus 5 dominiert bei Text- und Code-Qualität; Gemini 3.1 Pro liefert kosteneffiziente Leistung und tiefe Google-Workspace-Integration; DeepSeek und Baidu ERNIE sind für Workloads in Festlandchina unverzichtbar.**',
             'Bei einer neuen Aufgabe lautet die erste Frage nicht „Welches Modell ist das beste?", sondern „Welches Modell ist das beste für DIESE Aufgabe, in DIESER Region, mit DIESEM Budget?" Benchmarks und Ranglisten verschieben sich alle paar Monate. Ihre konkrete Aufgabe — Ihr Schreibstil, Ihre Codebasis, Ihre Kunden in China, Ihre Datensensibilität — sollte die Wahl bestimmen.',
@@ -1178,6 +1186,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'no-single-best-ai-model',
           title: 'Aucun « meilleur » modèle d\'IA — choisissez selon la tâche',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Les modèles de pointe diffèrent aujourd\'hui moins par leur capacité brute que par leurs domaines de force : la question utile est donc quel modèle convient à la tâche, et non lequel domine le classement général.' },
+            { type: 'in-plain-terms', text: 'Demander quel modèle est le meilleur revient à demander quel véhicule est le meilleur. La réponse honnête : que transportez-vous, et sur quelle distance ? Les benchmarks décrivent une moyenne ; votre travail est une mission précise, invisible pour un classement.' },
+          ],
           content: [
             '**Aucun modèle d\'IA n\'est le meilleur pour toutes les tâches. GPT-5.6 excelle en intégration d\'outils et en raisonnement ; Claude Opus 5 domine la qualité rédactionnelle et le code ; Gemini 3.1 Pro offre un excellent rapport coût/performance et une intégration profonde à Google Workspace ; DeepSeek et Baidu ERNIE sont indispensables pour les charges de travail en Chine continentale.**',
             'Face à une nouvelle tâche, la première question n\'est pas « quel est le meilleur modèle ? » mais « quel modèle est le meilleur pour CETTE tâche, dans CETTE zone géographique, avec CE budget ? » Les benchmarks et les classements changent tous les quelques mois. C\'est votre tâche réelle — votre style rédactionnel, votre base de code, vos clients en Chine, la sensibilité de vos données — qui doit guider le choix.',
@@ -1690,6 +1702,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'no-single-best-ai-model',
           title: '「最良のAIモデル」は存在しない — タスクで選ぶ',
+          snippets: [
+            { type: 'in-one-sentence', text: '最先端のモデル同士の差は、いまや純粋な性能よりも「どこが得意か」に表れます。したがって有益な問いは、総合順位で最上位はどれかではなく、そのタスクにどのモデルが合うかです。' },
+            { type: 'in-plain-terms', text: 'どのモデルが最良かという問いは、どの乗り物が最良かと尋ねるのに似ています。正直な答えは「何をどこまで運ぶのか」です。ベンチマークが示すのは平均であり、あなたの仕事は個別の案件です。順位表からはそれが見えません。' },
+          ],
           content: [
             '**すべてのタスクで最良のAIモデルはありません。GPT-5.6はツール連携と推論に強く、Claude Opus 5は文章とコードの品質で優位、Gemini 3.1 Proはコスト効率とGoogle Workspaceとの深い統合が持ち味、DeepSeekとBaidu ERNIEは中国本土のワークロードに不可欠です。**',
             '新しいタスクに取り組むとき、最初の問いは「最良のモデルはどれか」ではなく「このタスク、この地域、この予算で最良のモデルはどれか」であるべきです。ベンチマークやリーダーボードは数か月ごとに入れ替わります。判断の基準になるのは、自分の実際のタスク — 自社の文体、自社のコードベース、中国の顧客、データの機微性 — です。',
@@ -2202,6 +2218,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           id: 'no-single-best-ai-model',
           title: '不存在"最好的 AI 模型"——按任务选',
+          snippets: [
+            { type: 'in-one-sentence', text: '如今前沿模型之间的差异，更多体现在各自擅长的方向，而不是原始能力的高低；因此真正有用的问题是哪个模型适合这项任务，而非哪个模型总排名最高。' },
+            { type: 'in-plain-terms', text: '问哪个模型最好，就像问哪种交通工具最好。诚实的回答是：你要运什么、运多远。榜单给出的是平均值，而你的工作是一件具体的差事，排行榜看不到它。' },
+          ],
           content: [
             '**没有一个 AI 模型在所有任务上都最好。GPT-5.6 强在工具集成和推理；Claude Opus 5 在文字和代码质量上领先；Gemini 3.1 Pro 提供高性价比并与 Google Workspace 深度集成；DeepSeek 和文心一言则是中国大陆业务负载的必选项。**',
             '接到新任务时，第一个问题不该是"哪个模型最好"，而是"在这个任务、这个地区、这个预算下，哪个模型最好"。基准测试和排行榜每隔几个月就会变。真正该决定选型的，是你的实际任务——你的写作风格、你的代码库、你在中国的客户、你的数据敏感度。',
@@ -2769,6 +2789,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         id: 'no-single-best-ai-model',
         title: 'No hay un único "mejor" modelo de IA — Elige según la tarea',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Los modelos de frontera hoy se diferencian menos en capacidad bruta que en dónde son más fuertes, así que la pregunta útil es qué modelo encaja con la tarea, no cuál encabeza la clasificación general.' },
+          { type: 'in-plain-terms', text: 'Preguntar qué modelo es el mejor es como preguntar qué vehículo es el mejor. La respuesta honesta es: qué transportas y hasta dónde. Los benchmarks describen un promedio; tu trabajo es un encargo concreto que ninguna tabla ve.' },
+        ],
         content: [
           '**Ningún modelo de IA es el mejor para todas las tareas. GPT-5.6 destaca en integración de herramientas y razonamiento; Claude Opus 5 domina en escritura y calidad de código; Gemini 3.1 Pro ofrece un rendimiento rentable e integración profunda con Google Workspace; DeepSeek y Baidu ERNIE son esenciales para cargas de trabajo en China continental.**',
           'Cuando tengas una nueva tarea, la primera pregunta no debería ser "¿cuál es el mejor modelo?" sino "¿qué modelo es el mejor para ESTA tarea, en ESTA geografía, con ESTE presupuesto?" Los benchmarks y los rankings cambian cada pocos meses. Tu tarea real — tu estilo de escritura específico, tu base de código, tus clientes en China, la sensibilidad de tus datos — debe guiar la elección.',
@@ -3253,6 +3277,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         id: 'no-single-best-ai-model',
         title: 'Não Existe um Único "Melhor" Modelo de IA — Escolha pela Tarefa',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Os modelos de fronteira hoje diferem menos em capacidade bruta do que em onde são mais fortes, então a pergunta útil é qual modelo se encaixa na tarefa, e não qual lidera o ranking geral.' },
+          { type: 'in-plain-terms', text: 'Perguntar qual modelo é o melhor é como perguntar qual veículo é o melhor. A resposta honesta é: o que você vai levar e até onde. Benchmarks descrevem uma média; o seu trabalho é uma tarefa específica que ranking nenhum enxerga.' },
+        ],
         content: [
           '**Nenhum modelo de IA é o melhor para todas as tarefas. GPT-5.6 se destaca em integração de ferramentas e raciocínio; Claude Opus 5 domina em escrita e qualidade de código; Gemini 3.1 Pro oferece desempenho econômico e integração profunda com Google Workspace; DeepSeek e Baidu ERNIE são essenciais para cargas de trabalho na China continental.**',
           'Quando você tiver uma nova tarefa, a primeira pergunta não deve ser "qual é o melhor modelo?" mas sim "qual modelo é melhor para ESTA tarefa, nesta localização, com ESTE orçamento?" Benchmarks e rankings mudam a cada poucos meses. Sua tarefa real — seu estilo de escrita específico, base de código, clientes na China, sensibilidade dos dados — deve guiar a escolha.',
@@ -3821,6 +3849,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         id: 'no-single-best-ai-model',
         title: 'لا يوجد نموذج ذكاء اصطناعي "أفضل" واحد — اختر حسب المهمة',
+        snippets: [
+          { type: 'in-one-sentence', text: 'صارت النماذج المتقدمة تختلف اليوم في مواضع تفوّقها أكثر مما تختلف في القدرة الخام، ولذلك فالسؤال المفيد هو أي نموذج يناسب المهمة، لا أيها يتصدر الترتيب العام.' },
+          { type: 'in-plain-terms', text: 'السؤال عن أفضل نموذج يشبه السؤال عن أفضل مركبة. والجواب الصادق: ماذا تنقل، وإلى أي مسافة؟ تصف المقاييس متوسطاً عاماً، بينما عملك مهمة بعينها لا تراها لوحة الترتيب.' },
+        ],
         content: [
           '**لا يوجد نموذج ذكاء اصطناعي هو الأفضل لجميع المهام. يتفوق GPT-5.6 في تكامل الأدوات والاستدلال؛ ويهيمن Claude Opus 5 على الكتابة وجودة الكود؛ ويقدم Gemini 3.1 Pro أداءً مقرون بالتكلفة المعقولة وتكاملاً عميقاً مع Google Workspace؛ وDeepSeek وBaidu ERNIE ضروريان لأعباء العمل في البر الرئيسي للصين.**',
           'عندما تواجه مهمة جديدة، لا ينبغي أن يكون سؤالك الأول "ما هو أفضل نموذج؟" بل "أي نموذج هو الأفضل لهذه المهمة تحديداً، في هذه المنطقة الجغرافية، بهذه الميزانية؟" تتغير المعايير والتصنيفات كل بضعة أشهر. مهمتك الحقيقية — أسلوب كتابتك المحدد وقاعدة الكود الخاصة بك وعملاؤك في الصين وحساسية بياناتك — يجب أن توجه الاختيار.',
@@ -4294,6 +4326,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       definition: {
         id: 'no-single-best-ai-model',
         title: '"최고의" AI 모델은 없습니다 — 작업에 따라 선택하십시오',
+        snippets: [
+          { type: 'in-one-sentence', text: '오늘날 프런티어 모델들은 원시 성능보다 어느 영역에 강한지에서 더 큰 차이를 보이므로, 유용한 질문은 종합 순위가 가장 높은 모델이 무엇인가가 아니라 이 작업에 어떤 모델이 맞는가입니다.' },
+          { type: 'in-plain-terms', text: '어떤 모델이 최고냐는 질문은 어떤 탈것이 최고냐고 묻는 것과 같습니다. 솔직한 답은 무엇을 얼마나 멀리 옮기려 하느냐입니다. 벤치마크는 평균을 보여 주지만, 여러분의 업무는 구체적인 일이며 순위표는 그것을 보지 못합니다.' },
+        ],
         content: [
           '**모든 작업에 최적인 단일 AI 모델은 없습니다. GPT-5.6는 도구 통합과 추론에서 탁월하고, Claude Opus 5은 작문 품질과 코드 품질을 지배하며, Gemini 3.1 Pro는 비용 효율적인 성능과 깊은 Google Workspace 통합을 제공하고, DeepSeek와 Baidu ERNIE는 중국 본토 업무에 필수적입니다.**',
           '새로운 작업이 있을 때, 첫 번째 질문은 "최고의 모델은 무엇인가?"가 아니라 "이 작업에, 이 지역에서, 이 예산으로 가장 적합한 모델은 무엇인가?"여야 합니다. 벤치마크와 리더보드는 몇 달마다 바뀝니다. 귀하의 실제 작업 — 귀하 고유의 작문 스타일, 코드베이스, 중국 고객, 데이터 민감도 — 이 선택을 주도해야 합니다.',

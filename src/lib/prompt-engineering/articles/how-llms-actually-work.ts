@@ -242,6 +242,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'What an LLM Actually Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'A large language model is a statistical system that predicts the next token from patterns learned in training — it has no database of facts to look up and no memory of previous conversations.' },
+            { type: 'in-plain-terms', text: 'It is not a search engine with better manners. It is closer to an extremely well-read autocomplete: it produces the words that usually follow, which is why it can be brilliant on familiar ground and confidently wrong just past the edge of it.' },
+          ],
           content: [
             '**An LLM (large language model) is a transformer-based neural network trained to predict the most probable next token given a sequence of input tokens — it is not a database, a search engine, or a reasoning system.** The model learns statistical relationships between tokens by processing hundreds of billions of words from web pages, books, code, and other text during training.',
             'When you type a prompt, the model converts your text into a sequence of numeric token IDs, passes them through dozens of transformer layers, and outputs a probability distribution over its entire vocabulary (typically 50,000–100,000 tokens). It samples one token from that distribution, appends it to the sequence, and repeats until it generates a stop token or hits the output limit.',
@@ -494,6 +498,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Was ein LLM wirklich ist',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Ein großes Sprachmodell ist ein statistisches System, das den nächsten Token aus im Training gelernten Mustern vorhersagt — es besitzt keine Faktendatenbank zum Nachschlagen und keine Erinnerung an frühere Gespräche.' },
+            { type: 'in-plain-terms', text: 'Es ist keine Suchmaschine mit besseren Manieren, sondern eher eine außergewöhnlich belesene Autovervollständigung: Sie erzeugt die Wörter, die üblicherweise folgen. Deshalb ist sie auf vertrautem Terrain brillant und knapp jenseits davon selbstbewusst falsch.' },
+          ],
           content: [
             '**Ein LLM (Large Language Model) ist ein transformerbasiertes neuronales Netz, das darauf trainiert wurde, das wahrscheinlichste nächste Token für eine gegebene Eingabesequenz vorherzusagen — es ist keine Datenbank, keine Suchmaschine und kein Reasoning-System.** Das Modell lernt statistische Beziehungen zwischen Tokens, indem es während des Trainings hunderte Milliarden Wörter aus Webseiten, Büchern, Code und anderen Texten verarbeitet.',
             'Wenn du einen Prompt eingibst, wandelt das Modell deinen Text in eine Folge numerischer Token-IDs um, leitet sie durch dutzende Transformer-Schichten und gibt eine Wahrscheinlichkeitsverteilung über sein gesamtes Vokabular aus (typischerweise 50.000–100.000 Tokens). Es wählt einen Token aus dieser Verteilung aus, hängt ihn an die Sequenz an und wiederholt diesen Vorgang, bis ein Stop-Token erzeugt wird oder das Ausgabelimit erreicht ist.',
@@ -767,6 +775,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Qué es realmente un LLM',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Un modelo de lenguaje grande es un sistema estadístico que predice el siguiente token a partir de patrones aprendidos en el entrenamiento: no tiene una base de datos de hechos que consultar ni memoria de conversaciones anteriores.' },
+            { type: 'in-plain-terms', text: 'No es un buscador con mejores modales. Se parece más a un autocompletado extraordinariamente leído: produce las palabras que suelen venir después. Por eso brilla en terreno conocido y se equivoca con total seguridad justo al pasar ese límite.' },
+          ],
           content: [
             '**Un LLM (large language model) es una red neuronal basada en transformer entrenada para predecir el token más probable dado una secuencia de tokens de entrada — no es una base de datos, un motor de búsqueda ni un sistema de razonamiento.** El modelo aprende relaciones estadísticas entre tokens procesando cientos de miles de millones de palabras de páginas web, libros, código y otros textos durante el entrenamiento.',
             'Cuando escribes un prompt, el modelo convierte tu texto en una secuencia de IDs de token numéricos, los pasa por docenas de capas de transformer y produce una distribución de probabilidad sobre todo su vocabulario (típicamente 50.000–100.000 tokens). Toma muestras de un token de esa distribución, lo añade a la secuencia y repite hasta generar un token de parada o alcanzar el límite de output.',
@@ -1040,6 +1052,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'ما هو نموذج LLM فعلاً',
+          snippets: [
+            { type: 'in-one-sentence', text: 'النموذج اللغوي الكبير نظام إحصائي يتنبأ بالرمز التالي انطلاقاً من أنماط تعلّمها أثناء التدريب؛ فليست لديه قاعدة بيانات حقائق يعود إليها ولا ذاكرة لمحادثات سابقة.' },
+            { type: 'in-plain-terms', text: 'إنه ليس محرك بحث بأخلاق أرقّ، بل أقرب إلى إكمال تلقائي واسع الاطلاع للغاية: يُنتج الكلمات التي تأتي عادةً بعد غيرها. لهذا يبدع في الأرض المألوفة ويخطئ بثقة تامة بمجرد تجاوز حدودها.' },
+          ],
           content: [
             '**نموذج اللغة الكبير (LLM) هو شبكة عصبية قائمة على المحوّل مُدرَّبة للتنبؤ بالرمز الأكثر احتمالاً بناءً على تسلسل من الرموز المُدخَلة — وليس قاعدة بيانات أو محرك بحث أو نظام استدلال.** يتعلم النموذج العلاقات الإحصائية بين الرموز بمعالجة مئات المليارات من الكلمات من صفحات الويب والكتب والأكواد البرمجية وغيرها خلال التدريب.',
             'عندما تكتب تلقيحاً، يحوّل النموذج نصّك إلى تسلسل من معرّفات الرموز الرقمية، ويمرّرها عبر عشرات طبقات المحوّل، ثم يُنتج توزيعاً احتمالياً على كامل مفرداته (عادةً 50,000–100,000 رمز). يأخذ عيّنة من رمز ذلك التوزيع، يضيفه إلى التسلسل، ويكرر حتى يُولّد رمز الإيقاف أو يصل الحد الأقصى للمخرجات.',
@@ -1310,6 +1326,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'Ce qu\'est vraiment un LLM',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Un grand modèle de langage est un système statistique qui prédit le token suivant à partir de motifs appris à l\'entraînement : il n\'a ni base de faits à consulter, ni mémoire des conversations précédentes.' },
+            { type: 'in-plain-terms', text: 'Ce n\'est pas un moteur de recherche mieux élevé, plutôt une autocomplétion extrêmement cultivée : elle produit les mots qui suivent d\'habitude. D\'où son brio en terrain connu et ses erreurs parfaitement assurées dès qu\'on en sort.' },
+          ],
           content: [
             '**Un LLM (grand modèle de langage) est un réseau de neurones basé sur l\'architecture transformer, entraîné pour prédire le token le plus probable suivant une séquence de tokens en entrée — ce n\'est pas une base de données, un moteur de recherche ou un système de raisonnement.** Le modèle apprend des relations statistiques entre les tokens en traitant des centaines de milliards de mots issus de pages web, de livres, de code et d\'autres textes pendant l\'entraînement.',
             'Lorsque vous saisissez un prompt, le modèle convertit votre texte en une séquence d\'identifiants de tokens numériques, les fait passer à travers des dizaines de couches transformer et produit une distribution de probabilités sur l\'ensemble de son vocabulaire (typiquement 50 000 à 100 000 tokens). Il sélectionne un token dans cette distribution, l\'ajoute à la séquence et répète jusqu\'à générer un token d\'arrêt ou atteindre la limite de sortie.',
@@ -1582,6 +1602,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'LLMが本当に何であるか',
+          snippets: [
+            { type: 'in-one-sentence', text: '大規模言語モデルとは、学習で獲得したパターンから次のトークンを予測する統計的なシステムであり、参照できる事実のデータベースも、過去の会話の記憶も持っていません。' },
+            { type: 'in-plain-terms', text: '行儀のよい検索エンジンではありません。むしろ、桁外れに博識なオートコンプリートに近いものです。「普通はこう続く」語を出力するため、慣れた領域では見事に振る舞い、その境界を一歩出た途端に自信満々で間違えます。' },
+          ],
           content: [
             '**LLM（大規模言語モデル）は、トランスフォーマーベースのニューラルネットワークで、与えられた入力シーケンスの最も可能性の高い次のトークンを予測するように訓練されています — データベース、検索エンジン、推論システムではありません。** このモデルは、トレーニング中にWebページ、書籍、コード、その他のテキストから数百億語を処理することで、トークン間の統計的な関係を学習します。',
             'プロンプトを入力すると、モデルはテキストを数値トークンIDのシーケンスに変換し、数十のトランスフォーマーレイヤーを通して渡し、そのボキャブラリー全体（通常50,000〜100,000トークン）上の確率分布を出力します。その分布からトークンを選択し、シーケンスに追加し、停止トークンが生成されるか出力制限に達するまで繰り返します。',
@@ -1867,6 +1891,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'LLM究竟是什么',
+          snippets: [
+            { type: 'in-one-sentence', text: '大语言模型是一个统计系统，它依据训练中习得的模式预测下一个 token——它没有可供查阅的事实数据库，也不保留此前对话的记忆。' },
+            { type: 'in-plain-terms', text: '它不是一个更有礼貌的搜索引擎，更像一个博览群书的自动补全：它给出的是「通常会接在后面」的词。这也解释了为什么它在熟悉的领域表现出色，一旦越过边界就会笃定地出错。' },
+          ],
           content: [
             '**LLM（大型语言模型）是基于Transformer的神经网络，经过训练以预测给定输入序列中最可能出现的下一个令牌——它不是数据库、搜索引擎或推理系统。** 该模型通过在训练期间处理来自网页、书籍、代码和其他文本的数千亿个词汇，学习令牌之间的统计关系。',
             '当您输入提示时，模型将您的文本转换为数字令牌ID序列，通过数十个Transformer层传递，并输出整个词汇表（通常50,000至100,000个令牌）的概率分布。它从该分布中选择一个令牌，将其附加到序列中，然后重复此过程，直到生成停止令牌或达到输出限制。',
@@ -2154,6 +2182,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'O Que é Realmente um LLM',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Um modelo de linguagem grande é um sistema estatístico que prevê o próximo token a partir de padrões aprendidos no treinamento — não possui um banco de dados de fatos para consultar nem memória de conversas anteriores.' },
+            { type: 'in-plain-terms', text: 'Não é um buscador com modos melhores. É mais parecido com um autocompletar extraordinariamente lido: ele produz as palavras que costumam vir depois. Por isso brilha em terreno conhecido e erra com toda a confiança logo depois da fronteira.' },
+          ],
           content: [
             '**Um LLM (large language model) é uma rede neural baseada em transformer treinada para prever o token mais provável dado uma sequência de tokens de entrada — não é um banco de dados, um mecanismo de busca ou um sistema de raciocínio.** O modelo aprende relações estatísticas entre tokens processando centenas de bilhões de palavras de páginas da web, livros, código e outros textos durante o treinamento.',
             'Quando você digita um prompt, o modelo converte seu texto em uma sequência de IDs de token numéricos, passa-os por dezenas de camadas de transformer e produz uma distribuição de probabilidade sobre todo o seu vocabulário (normalmente 50.000–100.000 tokens). Ele seleciona um token dessa distribuição, o acrescenta à sequência e repete até gerar um token de parada ou atingir o limite de saída.',
@@ -2429,6 +2461,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
         definition: {
           title: 'LLM이란 실제로 무엇인가',
+          snippets: [
+            { type: 'in-one-sentence', text: '대규모 언어 모델은 학습 과정에서 익힌 패턴을 바탕으로 다음 토큰을 예측하는 통계적 시스템이며, 조회할 수 있는 사실 데이터베이스도, 이전 대화에 대한 기억도 가지고 있지 않습니다.' },
+            { type: 'in-plain-terms', text: '예의 바른 검색 엔진이 아닙니다. 오히려 엄청나게 많이 읽은 자동 완성에 가깝습니다. 보통 뒤에 오는 단어를 내놓기 때문에, 익숙한 영역에서는 탁월하고 그 경계를 조금만 벗어나면 확신에 차서 틀립니다.' },
+          ],
           content: [
             '**LLM(대규모 언어 모델)은 입력 토큰 시퀀스가 주어졌을 때 다음으로 가장 확률이 높은 토큰을 예측하도록 학습된 트랜스포머 기반 신경망입니다 — 데이터베이스, 검색 엔진, 또는 추론 시스템이 아닙니다.** 모델은 학습 중 웹 페이지, 책, 코드 및 기타 텍스트에서 수천억 개의 단어를 처리함으로써 토큰 간의 통계적 관계를 학습합니다.',
             '프롬프트를 입력하면 모델은 텍스트를 숫자 토큰 ID 시퀀스로 변환하고, 이를 수십 개의 트랜스포머 레이어를 통해 전달한 뒤, 전체 어휘(일반적으로 50,000–100,000개 토큰)에 대한 확률 분포를 출력합니다. 그 분포에서 토큰 하나를 샘플링하여 시퀀스에 추가하고, 정지 토큰이 생성되거나 출력 한계에 도달할 때까지 이 과정을 반복합니다.',
