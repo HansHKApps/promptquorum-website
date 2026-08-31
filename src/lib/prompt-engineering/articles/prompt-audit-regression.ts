@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Team Governance',
     heroImage: '/images/prompt-audit-regression-overview-hero-en.webp',
     title: 'Prompt Audit & Regression Testing: Catch Silent Failures Before Production (2026)',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-31',
     seoTitle: 'Prompt Audit & Regression Testing: Catch Silent Failures',
     metaDescription: 'Build a prompt test suite with golden examples, edge cases, and adversarial inputs. Block deployment when pass rate drops >5%. Promptfoo, Braintrust, PromptQuorum compared.',
     ogDescription: 'Prompt regression testing: 3-component test suite, 5-step audit process, CI/CD gate at 5% threshold. Promptfoo (free), Braintrust (cloud), PromptQuorum (multi-model).',
@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       'High-traffic prompts (>1,000 calls/day) need weekly scheduled audits in addition to CI/CD regression.',
       'Promptfoo is open source and costs $0. Braintrust costs $0–99/month with a collaborative UI.',
       'Prompt regression is silent: no error log, no exception — only worse output quality.',
-      'PromptQuorum runs the same test suite across GPT-5.6, Claude Sonnet 5, and Gemini 2.5 Pro simultaneously.',
+      'PromptQuorum runs the same test suite across GPT-5.6, Claude Sonnet 5, and Gemini 3.1 Pro simultaneously.',
     ],
     toc: [
       { label: 'What Prompt Regression Testing Is', anchor: 'what_is_regression' },
@@ -198,7 +198,7 @@ tests:
           '**Three tools cover most prompt regression testing needs: Promptfoo (open source), Braintrust (cloud platform), and PromptQuorum (multi-model comparison).** Each fits a different team profile.',
           'Promptfoo is open source, runs from the CLI, costs $0, and stores test results locally or in your own storage. It supports YAML-defined test cases, LLM-as-judge scoring, and GitHub Actions integration. Use Promptfoo if you want full local control and your team is comfortable with CLI tooling.',
           'Braintrust is a cloud platform with a collaborative UI, managed scoring infrastructure, and a free tier up to a usage threshold ($0–99/month). It provides a visual diff of prompt versions and team-level access to test history. Use Braintrust if your team needs shared visibility across multiple contributors.',
-          'PromptQuorum runs the same prompt across multiple models simultaneously (e.g., GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro) and surfaces behavioral differences. Use PromptQuorum when you need to verify that a prompt change does not cause divergent behavior across models your application supports. For a head-to-head comparison, see [evaluation platform comparison guide](/prompt-engineering/prompt-evaluation-metrics).',
+          'PromptQuorum runs the same prompt across multiple models simultaneously (e.g., GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro) and surfaces behavioral differences. Use PromptQuorum when you need to verify that a prompt change does not cause divergent behavior across models your application supports. For a head-to-head comparison, see [evaluation platform comparison guide](/prompt-engineering/prompt-evaluation-metrics).',
         ],
         callouts: [
           { type: 'insight', label: 'Multi-model testing matters', text: 'A prompt that passes on GPT-5.6 may silently fail on Claude Sonnet 5. Run your test suite across at least 2 models before shipping any prompt change.' },
@@ -246,7 +246,7 @@ tests:
           { q: 'How often should you audit production prompts?', a: 'Run regression tests on every change (CI/CD), run weekly audits for high-traffic prompts (>1000 calls/day), and run monthly audits for low-traffic prompts (<100 calls/day). Block any deployment where the pass rate drops more than 5% from the established baseline.' },
           { q: 'What is a golden test set?', a: 'A golden test set is a fixed collection of input/output pairs where the expected output has been manually verified as correct. It represents the benchmark your prompt must consistently meet. Start with 10-20 pairs from real production traffic — select cases that cover your most frequent use cases and any known failure modes.' },
           { q: 'How do I know if a prompt regression is significant?', a: 'A regression is significant if the pass rate on your golden test set drops more than 5% from baseline, if any adversarial test that previously passed now fails, or if output format compliance drops on more than 2 of 10 test cases. Use absolute thresholds, not just relative ones — a single adversarial failure on a security-critical prompt is significant regardless of overall pass rate.' },
-          { q: 'Can I use PromptQuorum for regression testing?', a: 'Yes. PromptQuorum dispatches prompts to multiple models simultaneously, which makes it well-suited for multi-model regression testing. You can run a test set against GPT-5.6, Claude Sonnet 5, and Gemini 2.5 Pro in parallel and compare pass rates across models to detect model-specific regressions.' },
+          { q: 'Can I use PromptQuorum for regression testing?', a: 'Yes. PromptQuorum dispatches prompts to multiple models simultaneously, which makes it well-suited for multi-model regression testing. You can run a test set against GPT-5.6, Claude Sonnet 5, and Gemini 3.1 Pro in parallel and compare pass rates across models to detect model-specific regressions.' },
         ],
       },
       related_reading: {
@@ -293,7 +293,7 @@ tests:
       'Hochfrequentierte Prompts (>1.000 Aufrufe/Tag) benötigen wöchentliche Audits zusätzlich zu CI/CD-Regressionstests.',
       'Promptfoo ist Open Source und kostenlos. Braintrust kostet 0–99 $/Monat mit kollaborativer Oberfläche.',
       'Prompt-Regression ist lautlos: kein Fehlerlog, keine Exception — nur schlechtere Ausgabequalität.',
-      'PromptQuorum führt dieselbe Testsuite gleichzeitig auf GPT-5.6, Claude Sonnet 5 und Gemini 2.5 Pro aus.',
+      'PromptQuorum führt dieselbe Testsuite gleichzeitig auf GPT-5.6, Claude Sonnet 5 und Gemini 3.1 Pro aus.',
     ],
     toc: [
       { label: 'Was Prompt-Regressionstests sind', anchor: 'what_is_regression' },
@@ -488,7 +488,7 @@ tests:
           'Ein Prompt-Testset hat drei Komponenten: goldenes Set (10–20 bestätigte gute Beispiele), Edge Cases und adversarielle Eingaben.',
           'Regressionstests bei jeder Änderung via CI/CD. Deployment blockieren, wenn die Bestehensquote mehr als 5 % unter die Baseline fällt.',
           'Promptfoo (kostenlos, Open Source) ist für Teams mit lokalem Kontrollbedarf geeignet. Braintrust (0–99 $/Monat) für Teams mit kollaborativem Sichtbarkeitsbedarf.',
-          'PromptQuorum prüft, ob eine Prompt-Änderung über mehrere Modelle (GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro) konsistentes Verhalten zeigt.',
+          'PromptQuorum prüft, ob eine Prompt-Änderung über mehrere Modelle (GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro) konsistentes Verhalten zeigt.',
         ],
       },
       faq: {
@@ -501,7 +501,7 @@ tests:
           { q: 'Wie oft sollten Produktions-Prompts auditiert werden?', a: 'Regressionstests bei jeder Änderung (CI/CD), wöchentliche Audits für >1.000 Aufrufe/Tag, monatliche für <100 Aufrufe/Tag. Deployment blockieren, wenn Bestehensquote >5% unter Baseline fällt.' },
           { q: 'Was ist ein Golden Test Set?', a: 'Ein Golden Test Set ist eine feste Sammlung von Eingabe-/Ausgabe-Paaren, bei denen die erwartete Ausgabe manuell als korrekt verifiziert wurde. Es ist der Maßstab, den Ihr Prompt konsistent erfüllen muss.' },
           { q: 'Woran erkenne ich, ob eine Prompt-Regression signifikant ist?', a: 'Eine Regression ist signifikant, wenn die Bestehensquote um mehr als 5% sinkt, wenn ein adversarieller Test, der zuvor bestanden hat, jetzt fehlschlägt, oder wenn die Ausgabeformat-Compliance bei mehr als 2 von 10 Testfällen sinkt.' },
-          { q: 'Kann ich PromptQuorum für Regressionstests verwenden?', a: 'Ja. PromptQuorum sendet Prompts gleichzeitig an mehrere Modelle und eignet sich gut für Multi-Modell-Regressionstests. Sie können ein Testset parallel gegen GPT-5.6, Claude Sonnet 5 und Gemini 2.5 Pro ausführen.' },
+          { q: 'Kann ich PromptQuorum für Regressionstests verwenden?', a: 'Ja. PromptQuorum sendet Prompts gleichzeitig an mehrere Modelle und eignet sich gut für Multi-Modell-Regressionstests. Sie können ein Testset parallel gegen GPT-5.6, Claude Sonnet 5 und Gemini 3.1 Pro ausführen.' },
         ],
       },
       related_reading: {
@@ -547,7 +547,7 @@ tests:
       'Los prompts de alto tráfico (>1.000 llamadas/día) necesitan auditorías semanales además de las pruebas de regresión en CI/CD.',
       'Promptfoo es open source y cuesta $0. Braintrust cuesta $0–99/mes con una interfaz colaborativa.',
       'La regresión de prompts es silenciosa: sin log de error, sin excepción — solo menor calidad de salida.',
-      'PromptQuorum ejecuta la misma suite de pruebas simultáneamente en GPT-5.6, Claude Sonnet 5 y Gemini 2.5 Pro.',
+      'PromptQuorum ejecuta la misma suite de pruebas simultáneamente en GPT-5.6, Claude Sonnet 5 y Gemini 3.1 Pro.',
     ],
     toc: [
       { label: 'Qué son las pruebas de regresión de prompts', anchor: 'what_is_regression' },
@@ -711,7 +711,7 @@ tests:
           '**Tres herramientas cubren la mayoría de las necesidades de pruebas de regresión de prompts: Promptfoo (open source), Braintrust (plataforma cloud) y PromptQuorum (comparación multi-modelo).** Cada una encaja con un perfil de equipo diferente.',
           'Promptfoo es open source, se ejecuta desde la CLI, cuesta $0 y almacena los resultados de pruebas localmente o en tu propio almacenamiento. Soporta casos de prueba definidos en YAML, scoring LLM-as-judge e integración con GitHub Actions. Usa Promptfoo si quieres control local total y tu equipo es cómodo con herramientas de línea de comandos.',
           'Braintrust es una plataforma cloud con interfaz colaborativa, infraestructura de scoring gestionada y un nivel gratuito hasta un umbral de uso ($0–99/mes). Proporciona un diff visual de versiones de prompts y acceso a nivel de equipo al historial de pruebas. Usa Braintrust si tu equipo necesita visibilidad compartida entre múltiples colaboradores.',
-          'PromptQuorum ejecuta el mismo prompt en múltiples modelos simultáneamente (por ejemplo, GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro) y detecta diferencias de comportamiento. Usa PromptQuorum cuando necesites verificar que un cambio de prompt no causa comportamiento divergente entre los modelos que soporta tu aplicación. Para una comparación detallada, consulta la [guía de comparación de plataformas de evaluación](/prompt-engineering/prompt-evaluation-metrics).',
+          'PromptQuorum ejecuta el mismo prompt en múltiples modelos simultáneamente (por ejemplo, GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro) y detecta diferencias de comportamiento. Usa PromptQuorum cuando necesites verificar que un cambio de prompt no causa comportamiento divergente entre los modelos que soporta tu aplicación. Para una comparación detallada, consulta la [guía de comparación de plataformas de evaluación](/prompt-engineering/prompt-evaluation-metrics).',
         ],
         callouts: [
           { type: 'insight', label: 'Las pruebas multi-modelo importan', text: 'Un prompt que pasa en GPT-5.6 puede fallar silenciosamente en Claude Sonnet 5. Ejecuta tu suite de pruebas en al menos 2 modelos antes de desplegar cualquier cambio de prompt.' },
@@ -759,7 +759,7 @@ tests:
           { q: '¿Con qué frecuencia se deben auditar los prompts de producción?', a: 'Ejecuta pruebas de regresión en cada cambio (CI/CD), auditorías semanales para prompts de alto tráfico (>1.000 llamadas/día) y auditorías mensuales para prompts de bajo tráfico (<100 llamadas/día). Bloquea cualquier despliegue donde la tasa de éxito caiga más del 5% respecto al baseline establecido.' },
           { q: '¿Qué es un golden test set?', a: 'Un golden test set es una colección fija de pares entrada/salida donde la salida esperada ha sido verificada manualmente como correcta. Representa el benchmark que tu prompt debe cumplir consistentemente. Comienza con 10–20 pares del tráfico real de producción — selecciona casos que cubran tus casos de uso más frecuentes y cualquier modo de fallo conocido.' },
           { q: '¿Cómo sé si una regresión de prompt es significativa?', a: 'Una regresión es significativa si la tasa de éxito en tu golden test set cae más del 5% respecto al baseline, si alguna prueba adversarial que antes pasaba ahora falla, o si el cumplimiento del formato de salida cae en más de 2 de 10 casos de prueba. Usa umbrales absolutos, no solo relativos — un único fallo adversarial en un prompt crítico para la seguridad es significativo independientemente de la tasa global.' },
-          { q: '¿Puedo usar PromptQuorum para las pruebas de regresión?', a: 'Sí. PromptQuorum despacha prompts a múltiples modelos simultáneamente, lo que lo hace adecuado para pruebas de regresión multi-modelo. Puedes ejecutar un conjunto de pruebas contra GPT-5.6, Claude Sonnet 5 y Gemini 2.5 Pro en paralelo y comparar las tasas de éxito entre modelos para detectar regresiones específicas de cada modelo.' },
+          { q: '¿Puedo usar PromptQuorum para las pruebas de regresión?', a: 'Sí. PromptQuorum despacha prompts a múltiples modelos simultáneamente, lo que lo hace adecuado para pruebas de regresión multi-modelo. Puedes ejecutar un conjunto de pruebas contra GPT-5.6, Claude Sonnet 5 y Gemini 3.1 Pro en paralelo y comparar las tasas de éxito entre modelos para detectar regresiones específicas de cada modelo.' },
         ],
       },
       related_reading: {
@@ -804,7 +804,7 @@ tests:
       'Os prompts de alto tráfego (>1.000 chamadas/dia) precisam de auditorias semanais além dos testes de regressão em CI/CD.',
       'O Promptfoo é open source e custa $0. O Braintrust custa $0–99/mês com uma interface colaborativa.',
       'A regressão de prompts é silenciosa: sem log de erro, sem exceção — apenas menor qualidade de saída.',
-      'O PromptQuorum executa a mesma suite de testes simultaneamente no GPT-5.6, Claude Sonnet 5 e Gemini 2.5 Pro.',
+      'O PromptQuorum executa a mesma suite de testes simultaneamente no GPT-5.6, Claude Sonnet 5 e Gemini 3.1 Pro.',
     ],
     toc: [
       { label: 'O que são os testes de regressão de prompts', anchor: 'what_is_regression' },
@@ -968,7 +968,7 @@ tests:
           '**Três ferramentas cobrem a maioria das necessidades de testes de regressão de prompts: Promptfoo (open source), Braintrust (plataforma cloud) e PromptQuorum (comparação multi-modelo).** Cada uma se encaixa em um perfil de equipe diferente.',
           'O Promptfoo é open source, é executado a partir da CLI, custa $0 e armazena os resultados de testes localmente ou em seu próprio armazenamento. Suporta casos de teste definidos em YAML, scoring LLM-as-judge e integração com GitHub Actions. Use o Promptfoo se você quiser controle local total e sua equipe estiver confortável com ferramentas de linha de comando.',
           'O Braintrust é uma plataforma cloud com interface colaborativa, infraestrutura de scoring gerenciada e um nível gratuito até um limite de uso ($0–99/mês). Fornece um diff visual de versões de prompts e acesso no nível de equipe ao histórico de testes. Use o Braintrust se sua equipe precisar de visibilidade compartilhada entre vários colaboradores.',
-          'O PromptQuorum executa o mesmo prompt em vários modelos simultaneamente (por exemplo, GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro) e detecta diferenças de comportamento. Use o PromptQuorum quando precisar verificar que uma mudança de prompt não causa comportamento divergente entre os modelos que sua aplicação suporta. Para uma comparação detalhada, consulte o [guia de comparação de plataformas de avaliação](/prompt-engineering/prompt-evaluation-metrics).',
+          'O PromptQuorum executa o mesmo prompt em vários modelos simultaneamente (por exemplo, GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro) e detecta diferenças de comportamento. Use o PromptQuorum quando precisar verificar que uma mudança de prompt não causa comportamento divergente entre os modelos que sua aplicação suporta. Para uma comparação detalhada, consulte o [guia de comparação de plataformas de avaliação](/prompt-engineering/prompt-evaluation-metrics).',
         ],
         callouts: [
           { type: 'insight', label: 'Os testes multi-modelo importam', text: 'Um prompt que passa no GPT-5.6 pode falhar silenciosamente no Claude Sonnet 5. Execute sua suite de testes em pelo menos 2 modelos antes de implantar qualquer mudança de prompt.' },
@@ -1016,7 +1016,7 @@ tests:
           { q: 'Com que frequência os prompts de produção devem ser auditados?', a: 'Execute testes de regressão a cada mudança (CI/CD), auditorias semanais para prompts de alto tráfego (>1.000 chamadas/dia) e auditorias mensais para prompts de baixo tráfego (<100 chamadas/dia). Bloqueie qualquer implantação onde a taxa de sucesso caia mais de 5% em relação à linha de base estabelecida.' },
           { q: 'O que é um golden test set?', a: 'Um golden test set é uma coleção fixa de pares entrada/saída onde a saída esperada foi verificada manualmente como correta. Representa o benchmark que seu prompt deve cumprir consistentemente. Comece com 10–20 pares do tráfego real de produção — selecione casos que cubram seus casos de uso mais frequentes e qualquer modo de falha conhecido.' },
           { q: 'Como sei se uma regressão de prompt é significativa?', a: 'Uma regressão é significativa se a taxa de sucesso no seu golden test set cair mais de 5% em relação à linha de base, se algum teste adversarial que antes passava agora falha, ou se a conformidade do formato de saída cair em mais de 2 de 10 casos de teste. Use limites absolutos, não apenas relativos — uma única falha adversarial em um prompt crítico para a segurança é significativa independentemente da taxa global.' },
-          { q: 'Posso usar o PromptQuorum para os testes de regressão?', a: 'Sim. O PromptQuorum despacha prompts para vários modelos simultaneamente, o que o torna adequado para testes de regressão multi-modelo. Você pode executar um conjunto de testes em relação ao GPT-5.6, Claude Sonnet 5 e Gemini 2.5 Pro em paralelo e comparar as taxas de sucesso entre modelos para detectar regressões específicas de cada modelo.' },
+          { q: 'Posso usar o PromptQuorum para os testes de regressão?', a: 'Sim. O PromptQuorum despacha prompts para vários modelos simultaneamente, o que o torna adequado para testes de regressão multi-modelo. Você pode executar um conjunto de testes em relação ao GPT-5.6, Claude Sonnet 5 e Gemini 3.1 Pro em paralelo e comparar as taxas de sucesso entre modelos para detectar regressões específicas de cada modelo.' },
         ],
       },
       related_reading: {
@@ -1063,7 +1063,7 @@ tests:
       'Les prompts à fort trafic (>1 000 appels/jour) nécessitent des audits hebdomadaires en plus des tests CI/CD.',
       'Promptfoo est open source et gratuit. Braintrust coûte 0–99 $/mois avec une interface collaborative.',
       'La régression de prompts est silencieuse : aucun log d\'erreur, aucune exception — seulement une moins bonne qualité de sortie.',
-      'PromptQuorum exécute la même suite de tests simultanément sur GPT-5.6, Claude Sonnet 5 et Gemini 2.5 Pro.',
+      'PromptQuorum exécute la même suite de tests simultanément sur GPT-5.6, Claude Sonnet 5 et Gemini 3.1 Pro.',
     ],
     toc: [
       { label: 'Ce qu\'est le test de régression de prompts', anchor: 'what_is_regression' },
@@ -1258,7 +1258,7 @@ tests:
           'Un jeu de tests de prompts comporte trois composantes : ensemble golden (10–20 exemples confirmés), cas limites et entrées adversariales.',
           'Exécutez les tests de régression à chaque modification via CI/CD. Bloquez le déploiement si le taux de réussite chute de plus de 5 % par rapport à la baseline.',
           'Promptfoo (gratuit, open source) convient aux équipes souhaitant le contrôle local. Braintrust (0–99 $/mois) convient aux équipes ayant besoin d\'une visibilité collaborative.',
-          'Utilisez PromptQuorum pour vérifier qu\'une modification de prompt ne provoque pas de comportements divergents entre modèles (GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro).',
+          'Utilisez PromptQuorum pour vérifier qu\'une modification de prompt ne provoque pas de comportements divergents entre modèles (GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro).',
         ],
       },
       faq: {
@@ -1271,7 +1271,7 @@ tests:
           { q: 'À quelle fréquence auditer les prompts en production ?', a: 'Tests de régression à chaque modification (CI/CD), audits hebdomadaires pour >1 000 appels/jour, mensuels pour <100 appels/jour. Bloquer si taux chute de plus de 5% par rapport à la baseline.' },
           { q: 'Qu\'est-ce qu\'un golden test set ?', a: 'Un golden test set est une collection fixe de paires entrée/sortie dont la sortie a été vérifiée manuellement. Il représente le standard que le prompt doit respecter. Commencer avec 10–20 paires issues du trafic réel.' },
           { q: 'Comment savoir si une régression est significative ?', a: 'Une régression est significative si le taux de réussite chute de plus de 5%, si un test adversarial qui passait échoue maintenant, ou si la conformité du format de sortie chute sur plus de 2 cas sur 10.' },
-          { q: 'Puis-je utiliser PromptQuorum pour les tests de régression ?', a: 'Oui. PromptQuorum envoie des prompts à plusieurs modèles simultanément, adapté aux tests multi-modèles. Exécutez un jeu de tests en parallèle contre GPT-5.6, Claude Sonnet 5 et Gemini 2.5 Pro.' },
+          { q: 'Puis-je utiliser PromptQuorum pour les tests de régression ?', a: 'Oui. PromptQuorum envoie des prompts à plusieurs modèles simultanément, adapté aux tests multi-modèles. Exécutez un jeu de tests en parallèle contre GPT-5.6, Claude Sonnet 5 et Gemini 3.1 Pro.' },
         ],
       },
       related_reading: {
@@ -1318,7 +1318,7 @@ tests:
       '高トラフィックのプロンプト（1日1,000回以上）はCI/CDに加えて週次監査が必要です。',
       'Promptfooはオープンソースで無料です。Braintrustは月額0〜99ドルでコラボレーティブUIを提供します。',
       'プロンプト回帰は無音です：エラーログなし、例外なし — 悪化した出力品質のみ。',
-      'PromptQuorumはGPT-5.6、Claude Sonnet 5、Gemini 2.5 Proで同じテストスイートを同時に実行します。',
+      'PromptQuorumはGPT-5.6、Claude Sonnet 5、Gemini 3.1 Proで同じテストスイートを同時に実行します。',
     ],
     toc: [
       { label: 'プロンプト回帰テストとは何か', anchor: 'what_is_regression' },
@@ -1479,7 +1479,7 @@ tests:
         content: [
           '**3つのツールがほとんどのニーズをカバーします：Promptfoo（オープンソース）、Braintrust（クラウドプラットフォーム）、PromptQuorum（マルチモデル比較）。** それぞれ異なるチームプロファイルに適しています。',
           'Promptfooはオープンソースで、CLIから実行でき、無料です。YAMLで定義されたテストケース、LLM-as-judgeスコアリング、GitHub Actions統合をサポートします。',
-          'BraintrustはコラボレーティブUI付きのクラウドプラットフォームで、無料枠あり（月額0〜99ドル）。PromptQuorumは同じプロンプトを複数のモデル（GPT-5.6、Claude Sonnet 5、Gemini 2.5 Pro）で同時に実行します。',
+          'BraintrustはコラボレーティブUI付きのクラウドプラットフォームで、無料枠あり（月額0〜99ドル）。PromptQuorumは同じプロンプトを複数のモデル（GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro）で同時に実行します。',
         ],
         callouts: [
           { type: 'insight', label: 'マルチモデルテストが重要', text: 'GPT-5.6で合格するプロンプトがClaude Sonnet 5で静かに失敗することがあります。変更をデプロイする前に少なくとも2つのモデルでテストスイートを実行してください。' },
@@ -1513,7 +1513,7 @@ tests:
           'プロンプトテストスイートには3つのコンポーネントがあります：ゴールデンセット（10〜20件の確認済みの良好な例）、エッジケース、敵対的入力。',
           'CI/CDで変更のたびに回帰テストを実行します。合格率がベースラインから5%以上低下した場合はデプロイをブロックします。',
           'Promptfoo（無料、オープンソース）はローカル制御を求めるチームに最適です。Braintrust（月額0〜99ドル）は共同の可視性が必要なチームに最適です。',
-          'PromptQuorum を使用して、プロンプトの変更が複数のモデル（GPT-5.6、Claude Sonnet 5、Gemini 2.5 Pro）間で一貫した動作をすることを確認します。',
+          'PromptQuorum を使用して、プロンプトの変更が複数のモデル（GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro）間で一貫した動作をすることを確認します。',
         ],
       },
       faq: {
@@ -1526,7 +1526,7 @@ tests:
           { q: 'どのくらいの頻度で監査すべきですか？', a: '変更のたびにCI/CDでテスト。1日1,000回以上のプロンプトには週次監査、100回未満には月次監査。合格率が5%以上低下した場合はデプロイをブロックします。' },
           { q: 'ゴールデンテストセットとは何ですか？', a: 'ゴールデンテストセットは、期待出力が手動で確認された固定の入力/出力ペアのコレクションです。実際の本番トラフィックから10〜20ペアから始めてください。' },
           { q: '回帰が重大かどうかはどうやって判断しますか？', a: '合格率が5%以上低下した場合、以前に合格した敵対的テストが失敗した場合、または出力形式の準拠が10件中2件以上で低下した場合に重大です。' },
-          { q: 'PromptQuorumを回帰テストに使用できますか？', a: 'はい。PromptQuorumは複数のモデルにプロンプトを同時に送信し、マルチモデル回帰テストに適しています。GPT-5.6、Claude Sonnet 5、Gemini 2.5 Proに対して並行してテストできます。' },
+          { q: 'PromptQuorumを回帰テストに使用できますか？', a: 'はい。PromptQuorumは複数のモデルにプロンプトを同時に送信し、マルチモデル回帰テストに適しています。GPT-5.6、Claude Sonnet 5、Gemini 3.1 Proに対して並行してテストできます。' },
         ],
       },
       related_reading: {
@@ -1573,7 +1573,7 @@ tests:
       '高流量提示词（每天>1,000次调用）除CI/CD外还需要每周审计。',
       'Promptfoo是开源免费的。Braintrust每月0-99美元，提供协作界面。',
       '提示词回归是静默的：没有错误日志，没有异常——只有更差的输出质量。',
-      'PromptQuorum在GPT-5.6、Claude Sonnet 5和Gemini 2.5 Pro上同时运行相同的测试套件。',
+      'PromptQuorum在GPT-5.6、Claude Sonnet 5和Gemini 3.1 Pro上同时运行相同的测试套件。',
     ],
     toc: [
       { label: '什么是提示词回归测试', anchor: 'what_is_regression' },
@@ -1734,7 +1734,7 @@ tests:
         content: [
           '**三种工具涵盖大多数需求：Promptfoo（开源）、Braintrust（云平台）和PromptQuorum（多模型比较）。** 每种适合不同的团队配置。',
           'Promptfoo是开源的，通过CLI运行，费用为零，在本地或自有存储中存储测试结果。支持YAML定义的测试用例、LLM-as-judge评分和GitHub Actions集成。',
-          'Braintrust是具有协作UI的云平台，有免费层（每月0-99美元）。PromptQuorum在多个模型（GPT-5.6、Claude Sonnet 5、Gemini 2.5 Pro）上同时运行相同的提示词，并显示行为差异。',
+          'Braintrust是具有协作UI的云平台，有免费层（每月0-99美元）。PromptQuorum在多个模型（GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro）上同时运行相同的提示词，并显示行为差异。',
         ],
         callouts: [
           { type: 'insight', label: '多模型测试很重要', text: '在GPT-5.6上通过的提示词可能在Claude Sonnet 5上静默失败。在部署任何提示词更改之前，至少在2个模型上运行测试套件。' },
@@ -1768,7 +1768,7 @@ tests:
           '提示词测试套件有三个组成部分：黄金集（10-20个确认的良好示例）、边界情况和对抗性输入。',
           '通过CI/CD在每次更改时运行回归测试。如果通过率从基线下降超过5%，则阻止部署。',
           'Promptfoo（免费、开源）最适合需要本地控制的团队。Braintrust（每月0-99美元）最适合需要协作可见性的团队。',
-          '使用PromptQuorum验证提示词更改不会在多个模型（GPT-5.6、Claude Sonnet 5、Gemini 2.5 Pro）之间导致行为差异。',
+          '使用PromptQuorum验证提示词更改不会在多个模型（GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro）之间导致行为差异。',
         ],
       },
       faq: {
@@ -1781,7 +1781,7 @@ tests:
           { q: '应多久审计一次？', a: '每次更改时CI/CD测试。每天>1,000次每周审计，<100次每月审计。通过率下降>5%阻止部署。' },
           { q: '什么是黄金测试集？', a: '黄金测试集是期望输出已手动验证为正确的固定输入/输出对集合。从实际生产流量的10-20对开始。' },
           { q: '如何判断回归是否重大？', a: '如果通过率下降>5%、之前通过的对抗性测试失败、或格式合规性在10个测试中超过2个下降，则重大。' },
-          { q: '可以用PromptQuorum进行回归测试吗？', a: '可以。PromptQuorum将提示词同时分发给多个模型，适合多模型回归测试。可以并行对GPT-5.6、Claude Sonnet 5和Gemini 2.5 Pro运行测试集。' },
+          { q: '可以用PromptQuorum进行回归测试吗？', a: '可以。PromptQuorum将提示词同时分发给多个模型，适合多模型回归测试。可以并行对GPT-5.6、Claude Sonnet 5和Gemini 3.1 Pro运行测试集。' },
         ],
       },
       related_reading: {
@@ -1827,7 +1827,7 @@ tests:
       'تحتاج الـ Prompts عالية الحركة (أكثر من 1000 استدعاء/يوم) إلى عمليات تدقيق أسبوعية مجدولة إضافةً إلى CI/CD.',
       'Promptfoo مفتوح المصدر ومجاني تمامًا. Braintrust يكلف 0–99 دولارًا شهريًا مع واجهة تعاونية.',
       'انحدار الـ Prompt صامت: لا سجل أخطاء، لا استثناء — فقط جودة مخرجات أسوأ.',
-      'يشغّل PromptQuorum نفس مجموعة الاختبارات على GPT-5.6 وClaude Sonnet 5 وGemini 2.5 Pro في وقت واحد.',
+      'يشغّل PromptQuorum نفس مجموعة الاختبارات على GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro في وقت واحد.',
     ],
     toc: [
       { label: 'ما هو اختبار انحدار الـ Prompt', anchor: 'what_is_regression' },
@@ -1991,7 +1991,7 @@ tests:
           '**تغطي ثلاث أدوات معظم احتياجات اختبار انحدار الـ Prompt: Promptfoo (مفتوح المصدر)، وBraintrust (منصة سحابية)، وPromptQuorum (مقارنة متعددة النماذج).** كل منها يناسب ملف فريق مختلف.',
           'Promptfoo مفتوح المصدر، يعمل من CLI، مجاني ($0)، ويخزن نتائج الاختبارات محليًا أو في تخزينك الخاص. يدعم حالات اختبار محددة بـ YAML، وتقييم LLM-as-judge، والتكامل مع GitHub Actions. استخدم Promptfoo إذا أردت سيطرة محلية كاملة وفريقك مرتاح مع أدوات سطر الأوامر.',
           'Braintrust منصة سحابية بواجهة تعاونية وبنية تحتية مُدارة للتقييم ومستوى مجاني حتى حد معين ($0–99/شهر). توفر مقارنة مرئية لإصدارات الـ Prompt وصول على مستوى الفريق لتاريخ الاختبارات. استخدم Braintrust إذا احتاج فريقك إلى رؤية مشتركة بين متعاونين متعددين.',
-          'يشغّل PromptQuorum نفس الـ Prompt على نماذج متعددة في وقت واحد (مثلًا GPT-5.6 وClaude Sonnet 5 وGemini 2.5 Pro) ويكتشف اختلافات السلوك. استخدم PromptQuorum عندما تحتاج إلى التحقق من أن تغيير الـ Prompt لا يسبب سلوكًا متباينًا بين النماذج التي تدعمها تطبيقاتك. للمقارنة التفصيلية، راجع [دليل مقارنة منصات التقييم](/prompt-engineering/prompt-evaluation-metrics).',
+          'يشغّل PromptQuorum نفس الـ Prompt على نماذج متعددة في وقت واحد (مثلًا GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro) ويكتشف اختلافات السلوك. استخدم PromptQuorum عندما تحتاج إلى التحقق من أن تغيير الـ Prompt لا يسبب سلوكًا متباينًا بين النماذج التي تدعمها تطبيقاتك. للمقارنة التفصيلية، راجع [دليل مقارنة منصات التقييم](/prompt-engineering/prompt-evaluation-metrics).',
         ],
         callouts: [
           { type: 'insight', label: 'الاختبار متعدد النماذج مهم', text: 'Prompt ينجح في GPT-5.6 قد يفشل بصمت في Claude Sonnet 5. شغّل مجموعة الاختبارات على نموذجين على الأقل قبل نشر أي تغيير على الـ Prompt.' },
@@ -2039,7 +2039,7 @@ tests:
           { q: 'كم مرة يجب تدقيق الـ Prompts في الإنتاج؟', a: 'شغّل اختبارات الانحدار عند كل تغيير (CI/CD)، وعمليات تدقيق أسبوعية للـ Prompts عالية الحركة (أكثر من 1000 استدعاء/يوم)، وعمليات تدقيق شهرية للـ Prompts منخفضة الحركة (أقل من 100 استدعاء/يوم). أوقف أي نشر ينخفض فيه معدل النجاح أكثر من 5% مقارنةً بالخط الأساسي المحدد.' },
           { q: 'ما هو الـ Golden Test Set؟', a: 'الـ Golden Test Set هو مجموعة ثابتة من أزواج مدخلات/مخرجات تم التحقق من صحة مخرجاتها يدويًا. يمثل المعيار الذي يجب أن يستوفيه الـ Prompt باتساق. ابدأ بـ 10–20 زوجًا من حركة الإنتاج الحقيقية — اختر حالات تغطي أكثر حالات الاستخدام تكرارًا وأي أنماط إخفاق معروفة.' },
           { q: 'كيف أعرف إذا كان انحدار الـ Prompt مهمًا؟', a: 'الانحدار مهم إذا انخفض معدل نجاح الـ Golden Test Set أكثر من 5% مقارنةً بالخط الأساسي، أو إذا فشل أي اختبار عدائي كان ناجحًا من قبل، أو إذا انخفض التزام تنسيق المخرجات في أكثر من 2 من 10 حالات اختبار. استخدم حدودًا مطلقة وليس نسبية فقط — إخفاق عدائي واحد في Prompt حساس أمنيًا مهم بغض النظر عن المعدل الإجمالي.' },
-          { q: 'هل يمكنني استخدام PromptQuorum لاختبار الانحدار؟', a: 'نعم. يرسل PromptQuorum الـ Prompts إلى نماذج متعددة في وقت واحد، مما يجعله مناسبًا لاختبار الانحدار متعدد النماذج. يمكنك تشغيل مجموعة اختبارات على GPT-5.6 وClaude Sonnet 5 وGemini 2.5 Pro بالتوازي ومقارنة معدلات النجاح عبر النماذج للكشف عن انحدارات خاصة بكل نموذج.' },
+          { q: 'هل يمكنني استخدام PromptQuorum لاختبار الانحدار؟', a: 'نعم. يرسل PromptQuorum الـ Prompts إلى نماذج متعددة في وقت واحد، مما يجعله مناسبًا لاختبار الانحدار متعدد النماذج. يمكنك تشغيل مجموعة اختبارات على GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro بالتوازي ومقارنة معدلات النجاح عبر النماذج للكشف عن انحدارات خاصة بكل نموذج.' },
         ],
       },
       related_reading: {
@@ -2084,7 +2084,7 @@ tests:
       '고트래픽 프롬프트(하루 1,000회 이상 호출)는 CI/CD 회귀 외에 주간 예약 감사가 필요합니다.',
       'Promptfoo는 오픈 소스이며 비용이 $0입니다. Braintrust는 협업 UI와 함께 $0–99/월 비용이 발생합니다.',
       '프롬프트 회귀는 무음입니다: 오류 로그도, 예외도 없고 — 출력 품질만 저하됩니다.',
-      'PromptQuorum은 GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro에서 동일한 테스트 스위트를 동시에 실행합니다.',
+      'PromptQuorum은 GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro에서 동일한 테스트 스위트를 동시에 실행합니다.',
     ],
     toc: [
       { label: '프롬프트 회귀 테스트란 무엇인가', anchor: 'what_is_regression' },
@@ -2255,7 +2255,7 @@ tests:
           '**세 가지 도구가 대부분의 프롬프트 회귀 테스트 요구를 충족합니다: Promptfoo(오픈 소스), Braintrust(클라우드 플랫폼), PromptQuorum(멀티 모델 비교).** 각각 서로 다른 팀 프로필에 적합합니다.',
           'Promptfoo는 오픈 소스이며, CLI에서 실행되고, 비용이 $0이며, 로컬 또는 자체 스토리지에 테스트 결과를 저장합니다. YAML 정의 테스트 케이스, LLM-as-judge 채점, GitHub Actions 통합을 지원합니다. 완전한 로컬 제어를 원하고 팀이 CLI 도구에 익숙한 경우 Promptfoo를 사용하세요.',
           'Braintrust는 협업 UI, 관리형 채점 인프라, 무료 티어(사용량 임계값까지 $0–99/월)를 갖춘 클라우드 플랫폼입니다. 프롬프트 버전의 시각적 diff와 테스트 기록에 대한 팀 수준 액세스를 제공합니다. 팀이 여러 기여자 간에 공유 가시성이 필요한 경우 Braintrust를 사용하세요.',
-          'PromptQuorum은 동일한 프롬프트를 여러 모델에서 동시에 실행하고(예: GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro) 동작 차이를 드러냅니다. 프롬프트 변경이 애플리케이션이 지원하는 모델 전반에서 분기된 동작을 유발하지 않는지 확인해야 할 때 PromptQuorum을 사용하세요. 직접 비교는 [평가 플랫폼 비교 가이드](/ko/prompt-engineering/prompt-evaluation-metrics)를 참조하세요.',
+          'PromptQuorum은 동일한 프롬프트를 여러 모델에서 동시에 실행하고(예: GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro) 동작 차이를 드러냅니다. 프롬프트 변경이 애플리케이션이 지원하는 모델 전반에서 분기된 동작을 유발하지 않는지 확인해야 할 때 PromptQuorum을 사용하세요. 직접 비교는 [평가 플랫폼 비교 가이드](/ko/prompt-engineering/prompt-evaluation-metrics)를 참조하세요.',
         ],
         callouts: [
           { type: 'insight', label: '멀티 모델 테스트가 중요합니다', text: 'GPT-5.6에서 통과하는 프롬프트가 Claude Sonnet 5에서 조용히 실패할 수 있습니다. 프롬프트 변경을 배포하기 전에 최소 2개의 모델에서 테스트 스위트를 실행하세요.' },
@@ -2303,7 +2303,7 @@ tests:
           { q: '프로덕션 프롬프트는 얼마나 자주 감사해야 합니까?', a: '모든 변경 시(CI/CD) 회귀 테스트를 실행하고, 고트래픽 프롬프트(하루 1,000회 이상 호출)는 주간 감사를, 저트래픽 프롬프트(하루 100회 미만 호출)는 월간 감사를 실행하세요. 통과율이 설정된 기준선에서 5% 이상 하락하는 모든 배포를 차단하세요.' },
           { q: '골든 테스트 세트란 무엇입니까?', a: '골든 테스트 세트는 예상 출력이 올바른 것으로 수동으로 검증된 입력/출력 쌍의 고정된 컬렉션입니다. 프롬프트가 일관되게 충족해야 하는 벤치마크를 나타냅니다. 실제 프로덕션 트래픽에서 10-20개의 쌍으로 시작하세요 — 가장 빈번한 사용 사례와 알려진 장애 모드를 다루는 케이스를 선택합니다.' },
           { q: '프롬프트 회귀가 중요한지 어떻게 알 수 있습니까?', a: '골든 테스트 세트의 통과율이 기준선에서 5% 이상 하락하거나, 이전에 통과했던 적대적 테스트가 이제 실패하거나, 10개의 테스트 케이스 중 2개 이상에서 출력 형식 준수가 저하되면 회귀가 중요합니다. 상대적 임계값뿐만 아니라 절대적 임계값을 사용하세요 — 보안이 중요한 프롬프트의 단일 적대적 실패는 전체 통과율에 관계없이 중요합니다.' },
-          { q: '회귀 테스트에 PromptQuorum을 사용할 수 있습니까?', a: '예. PromptQuorum은 여러 모델에 동시에 프롬프트를 발송하므로, 멀티 모델 회귀 테스트에 적합합니다. GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro에 대해 병렬로 테스트 세트를 실행하고 모델 전반의 통과율을 비교하여 모델별 회귀를 감지할 수 있습니다.' },
+          { q: '회귀 테스트에 PromptQuorum을 사용할 수 있습니까?', a: '예. PromptQuorum은 여러 모델에 동시에 프롬프트를 발송하므로, 멀티 모델 회귀 테스트에 적합합니다. GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro에 대해 병렬로 테스트 세트를 실행하고 모델 전반의 통과율을 비교하여 모델별 회귀를 감지할 수 있습니다.' },
         ],
       },
       related_reading: {

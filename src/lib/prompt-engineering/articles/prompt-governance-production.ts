@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Prompt Governance in Production: Roles, Review Gates, and Deployment Rules',
       description: 'Set up prompt governance with 3 roles (Author, Reviewer, Approver), 3 review gates, rollback procedures, and audit trails. NIST AI RMF and EU AI Act compliant.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['prompt governance', 'prompt management', 'production prompts', 'AI governance', 'prompt deployment'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       ownership_model_part2: {
         content: [
-          'Add a Prompt Owner role for high-traffic production prompts. The Prompt Owner is accountable for the prompt\'s live performance across all model versions — GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro — and is the first contact during incidents.',
+          'Add a Prompt Owner role for high-traffic production prompts. The Prompt Owner is accountable for the prompt\'s live performance across all model versions — GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro — and is the first contact during incidents.',
           'Avoid having the same person serve as both Author and Approver. Self-approved prompts have a significantly higher incident rate. If your team is too small for three distinct roles, at minimum require a second person\'s sign-off before any prompt reaches production.',
         ],
         callouts: [
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: purpose-built prompt management with version history, reviewer workflows, and deployment tracking. $0–$49/month depending on team size.',
           'Braintrust: evaluation platform with CI/CD integration. Runs automated quality tests on every PR. Best for teams that already run automated prompt tests.',
           'Vellum: production prompt deployment with traffic management, A/B testing, and live evaluation. Best for high-traffic applications where partial rollouts reduce incident blast radius.',
-          '[PromptQuorum](/features): multi-model testing to confirm a prompt works across GPT-5.6, Claude Sonnet 5, and Gemini 2.5 Pro before deployment. Use during Gate 2 peer review.',
+          '[PromptQuorum](/features): multi-model testing to confirm a prompt works across GPT-5.6, Claude Sonnet 5, and Gemini 3.1 Pro before deployment. Use during Gate 2 peer review.',
         ],
       },
       faq: {
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Prompt-Governance in Produktion: Rollen, Gates & Deployment (2026)',
       description: 'Prompt-Governance mit 3 Rollen, 3 Review-Gates, Rollback-Verfahren und Audit-Trail einrichten. NIST AI RMF und EU AI Act konform.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['Prompt-Governance', 'Prompt-Management', 'Produktions-Prompts', 'KI-Governance', 'Prompt-Deployment'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: Prompt-Management mit Versionsverlauf, Reviewer-Workflows und Deployment-Tracking. 0–49 $/Monat.',
           'Braintrust: Evaluierungsplattform mit CI/CD-Integration. Führt automatisierte Qualitätstests bei jedem PR durch.',
           'Vellum: Produktions-Prompt-Deployment mit Traffic-Management, A/B-Tests und Live-Evaluierung.',
-          'PromptQuorum: Multi-Modell-Tests zur Bestätigung, dass ein Prompt über GPT-5.6, Claude Sonnet 5 und Gemini 2.5 Pro funktioniert.',
+          'PromptQuorum: Multi-Modell-Tests zur Bestätigung, dass ein Prompt über GPT-5.6, Claude Sonnet 5 und Gemini 3.1 Pro funktioniert.',
         ],
       },
       faq: {
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Governance de prompts en producción: roles, gates de revisión y reglas de despliegue',
       description: 'Configura la governance de prompts con 3 roles, 3 gates de revisión, procedimientos de rollback y trazas de auditoría. Conforme con NIST AI RMF y EU AI Act.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['governance de prompts', 'gestión de prompts', 'prompts de producción', 'governance de IA', 'despliegue de prompts'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       ownership_model_part2: {
         content: [
-          'Añade un rol de Propietario de Prompt para prompts de producción de alto tráfico. El Propietario del Prompt es responsable del rendimiento en vivo del prompt en todas las versiones del modelo — GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro — y es el primer contacto durante incidentes.',
+          'Añade un rol de Propietario de Prompt para prompts de producción de alto tráfico. El Propietario del Prompt es responsable del rendimiento en vivo del prompt en todas las versiones del modelo — GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro — y es el primer contacto durante incidentes.',
           'Evita que la misma persona actúe como Autor y Aprobador. Los prompts auto-aprobados tienen una tasa de incidentes significativamente más alta. Si tu equipo es demasiado pequeño para tres roles distintos, requiere como mínimo la firma de una segunda persona antes de que cualquier prompt llegue a producción.',
         ],
         callouts: [
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: gestión de prompts con historial de versiones, flujos de trabajo de revisores y seguimiento de despliegues. $0–$49/mes según el tamaño del equipo.',
           'Braintrust: plataforma de evaluación con integración CI/CD. Ejecuta pruebas de calidad automatizadas en cada PR. Mejor para equipos que ya ejecutan pruebas de prompts automatizadas.',
           'Vellum: despliegue de prompts en producción con gestión de tráfico, pruebas A/B y evaluación en vivo. Mejor para aplicaciones de alto tráfico donde los lanzamientos parciales reducen el radio de impacto de incidentes.',
-          '[PromptQuorum](/features): pruebas multi-modelo para confirmar que un prompt funciona en GPT-5.6, Claude Sonnet 5 y Gemini 2.5 Pro antes del despliegue. Úsalo durante la revisión por pares del Gate 2.',
+          '[PromptQuorum](/features): pruebas multi-modelo para confirmar que un prompt funciona en GPT-5.6, Claude Sonnet 5 y Gemini 3.1 Pro antes del despliegue. Úsalo durante la revisión por pares del Gate 2.',
         ],
       },
       faq: {
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       ownership_model_part2: {
         content: [
-          'Adicione um papel de Proprietário de Prompt para prompts de produção de alto tráfego. O Proprietário do Prompt é responsável pelo desempenho em produção do prompt em todas as versões do modelo — GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro — e é o primeiro contato durante incidentes.',
+          'Adicione um papel de Proprietário de Prompt para prompts de produção de alto tráfego. O Proprietário do Prompt é responsável pelo desempenho em produção do prompt em todas as versões do modelo — GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro — e é o primeiro contato durante incidentes.',
           'Evite que a mesma pessoa atue como Autor e Aprovador. Prompts auto-aprovados têm uma taxa de incidentes significativamente mais alta. Se sua equipe é muito pequena para três papéis distintos, exija no mínimo a assinatura de uma segunda pessoa antes que qualquer prompt chegue à produção.',
         ],
         callouts: [
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: gerenciamento de prompts com histórico de versões, fluxos de trabalho de revisores e rastreamento de implantações. $0–$49/mês conforme o tamanho da equipe.',
           'Braintrust: plataforma de avaliação com integração CI/CD. Executa testes de qualidade automatizados em cada PR. Melhor para equipes que já executam testes automatizados de prompts.',
           'Vellum: implantação de prompts em produção com gerenciamento de tráfego, testes A/B e avaliação em produção. Melhor para aplicações de alto tráfego onde lançamentos parciais reduzem o raio de impacto de incidentes.',
-          '[PromptQuorum](/features): testes multi-modelo para confirmar que um prompt funciona no GPT-5.6, Claude Sonnet 5 e Gemini 2.5 Pro antes da implantação. Use durante a revisão por pares do Gate 2.',
+          '[PromptQuorum](/features): testes multi-modelo para confirmar que um prompt funciona no GPT-5.6, Claude Sonnet 5 e Gemini 3.1 Pro antes da implantação. Use durante a revisão por pares do Gate 2.',
         ],
       },
       faq: {
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Gouvernance des prompts en production : rôles, gates de révision et règles de déploiement',
       description: 'Mettre en place la gouvernance des prompts avec 3 rôles, 3 gates de révision, procédures de rollback et pistes d\'audit. Conforme NIST AI RMF et EU AI Act.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['gouvernance des prompts', 'gestion des prompts', 'prompts de production', 'gouvernance IA', 'déploiement de prompts'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub : gestion des prompts avec historique des versions, workflows de révision et suivi des déploiements.',
           'Braintrust : plateforme d\'évaluation avec intégration CI/CD. Exécute des tests qualité automatisés à chaque PR.',
           'Vellum : déploiement de prompts en production avec gestion du trafic et tests A/B.',
-          'PromptQuorum : tests multi-modèles pour confirmer qu\'un prompt fonctionne sur GPT-5.6, Claude Sonnet 5 et Gemini 2.5 Pro.',
+          'PromptQuorum : tests multi-modèles pour confirmer qu\'un prompt fonctionne sur GPT-5.6, Claude Sonnet 5 et Gemini 3.1 Pro.',
         ],
       },
       faq: {
@@ -1113,7 +1113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '本番環境のPromptガバナンス：役割、レビューゲート、デプロイルール',
       description: '3つの役割、3つのレビューゲート、ロールバック手順、監査証跡でPromptガバナンスを設定。NIST AI RMFおよびEU AI Act準拠。',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['Promptガバナンス', 'Prompt管理', '本番Prompt', 'AIガバナンス', 'Promptデプロイ'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1234,7 +1234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub：バージョン履歴、レビュアーワークフロー、デプロイ追跡を備えた専用Prompt管理。',
           'Braintrust：CI/CD統合の評価プラットフォーム。すべてのPRで自動品質テストを実行。',
           'Vellum：トラフィック管理、A/Bテスト、ライブ評価を備えた本番Promptデプロイ。',
-          'PromptQuorum：デプロイ前にGPT-5.6、Claude Sonnet 5、Gemini 2.5 Proでの動作を確認するマルチモデルテスト。',
+          'PromptQuorum：デプロイ前にGPT-5.6、Claude Sonnet 5、Gemini 3.1 Proでの動作を確認するマルチモデルテスト。',
         ],
       },
       faq: {
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'حوكمة التعليمات في بيئة الإنتاج: الأدوار وبوابات المراجعة وقواعد النشر',
       description: 'أنشئ حوكمة للتعليمات بثلاثة أدوار وثلاث بوابات مراجعة وإجراءات التراجع وسجلات التدقيق. متوافق مع NIST AI RMF وقانون الذكاء الاصطناعي الأوروبي.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['حوكمة التعليمات', 'إدارة التعليمات', 'تعليمات الإنتاج', 'حوكمة الذكاء الاصطناعي', 'نشر التعليمات'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1378,7 +1378,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       ownership_model_part2: {
         content: [
-          'أضف دور مالك التعليمة للتعليمات الإنتاجية عالية الحركة. مالك التعليمة مسؤول عن أداء التعليمة المباشر عبر جميع إصدارات النماذج — GPT-5.6 وClaude Sonnet 5 وGemini 2.5 Pro — وهو جهة الاتصال الأولى أثناء الحوادث.',
+          'أضف دور مالك التعليمة للتعليمات الإنتاجية عالية الحركة. مالك التعليمة مسؤول عن أداء التعليمة المباشر عبر جميع إصدارات النماذج — GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro — وهو جهة الاتصال الأولى أثناء الحوادث.',
           'تجنب أن يتولى الشخص ذاته دور المؤلف والمعتمِد معاً. التعليمات المعتمَدة ذاتياً لديها معدل حوادث أعلى بكثير. إذا كان فريقك صغيراً جداً لثلاثة أدوار منفصلة، اشترط على الأقل موافقة شخص ثانٍ قبل أن تصل أي تعليمة إلى الإنتاج.',
         ],
         callouts: [
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: إدارة التعليمات المخصصة مع سجل الإصدارات وسير عمل المراجع وتتبع النشر. 0–49 دولاراً شهرياً حسب حجم الفريق.',
           'Braintrust: منصة تقييم مع تكامل CI/CD. تشغّل اختبارات جودة آلية عند كل طلب سحب. الأفضل للفرق التي تشغّل اختبارات تعليمات آلية.',
           'Vellum: نشر تعليمات الإنتاج مع إدارة الحركة واختبار A/B والتقييم المباشر. الأفضل للتطبيقات عالية الحركة حيث تقليل نطاق التأثير عبر الإصدارات الجزئية.',
-          '[PromptQuorum](/features): اختبار متعدد النماذج للتأكد من عمل التعليمة عبر GPT-5.6 وClaude Sonnet 5 وGemini 2.5 Pro قبل النشر. استخدمه أثناء مراجعة الأقران في البوابة 2.',
+          '[PromptQuorum](/features): اختبار متعدد النماذج للتأكد من عمل التعليمة عبر GPT-5.6 وClaude Sonnet 5 وGemini 3.1 Pro قبل النشر. استخدمه أثناء مراجعة الأقران في البوابة 2.',
         ],
       },
       faq: {
@@ -1536,7 +1536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '生产环境中的Prompt治理：角色、审查门控与部署规则',
       description: '通过3个角色、3个审查门控、回滚程序和审计记录建立Prompt治理。符合NIST AI RMF和EU AI Act要求。',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['Prompt治理', 'Prompt管理', '生产Prompt', 'AI治理', 'Prompt部署'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub：具备版本历史、审查者工作流和部署跟踪的专用Prompt管理。',
           'Braintrust：具有CI/CD集成的评估平台。在每个PR上运行自动质量测试。',
           'Vellum：具有流量管理、A/B测试和实时评估的生产Prompt部署。',
-          'PromptQuorum：多模型测试，确认Prompt在GPT-5.6、Claude Sonnet 5和Gemini 2.5 Pro上部署前能正常工作。',
+          'PromptQuorum：多模型测试，确认Prompt在GPT-5.6、Claude Sonnet 5和Gemini 3.1 Pro上部署前能正常工作。',
         ],
       },
       faq: {
@@ -1739,7 +1739,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '프롬프트 거버넌스 실전: 역할·검토 게이트·배포 규칙',
       description: '3개 역할, 3개 검토 게이트, 롤백 절차, 감사 추적으로 프롬프트 거버넌스를 구축하십시오. NIST AI RMF 및 EU AI Act 준수.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['프롬프트 거버넌스', '프롬프트 관리', '프로덕션 프롬프트', 'AI 거버넌스', '프롬프트 배포'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       ownership_model_part2: {
         content: [
-          '고트래픽 프로덕션 프롬프트에는 프롬프트 소유자 역할을 추가하십시오. 프롬프트 소유자는 모든 모델 버전(GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro)에 걸친 프롬프트의 라이브 성능에 책임을 지며, 인시던트 발생 시 첫 번째 연락처입니다.',
+          '고트래픽 프로덕션 프롬프트에는 프롬프트 소유자 역할을 추가하십시오. 프롬프트 소유자는 모든 모델 버전(GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro)에 걸친 프롬프트의 라이브 성능에 책임을 지며, 인시던트 발생 시 첫 번째 연락처입니다.',
           '동일인이 작성자와 승인자 역할을 겸임하지 않도록 하십시오. 자체 승인된 프롬프트는 인시던트 발생률이 현저히 높습니다. 팀 규모가 3개 역할을 분리하기에 너무 작다면, 최소한 어떤 프롬프트든 프로덕션에 도달하기 전에 두 번째 사람의 서명을 요구하십시오.',
         ],
         callouts: [
@@ -1877,7 +1877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'PromptHub: 버전 기록, 검토자 워크플로, 배포 추적이 있는 전용 프롬프트 관리. 팀 규모에 따라 월 $0–$49.',
           'Braintrust: CI/CD 통합이 있는 평가 플랫폼. 모든 PR에서 자동화 품질 테스트를 실행합니다. 이미 자동화 프롬프트 테스트를 실행하는 팀에 최적입니다.',
           'Vellum: 트래픽 관리, A/B 테스트, 실시간 평가가 있는 프로덕션 프롬프트 배포. 부분 롤아웃으로 인시던트 폭발 반경을 줄이는 고트래픽 애플리케이션에 최적입니다.',
-          '[PromptQuorum](/features): 배포 전 프롬프트가 GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro에서 작동하는지 확인하기 위한 다중 모델 테스트. 게이트 2 동료 검토 중에 사용하십시오.',
+          '[PromptQuorum](/features): 배포 전 프롬프트가 GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro에서 작동하는지 확인하기 위한 다중 모델 테스트. 게이트 2 동료 검토 중에 사용하십시오.',
         ],
       },
       faq: {

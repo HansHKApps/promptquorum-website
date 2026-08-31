@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'How to Choose a Prompt Framework for Your Team: CO-STAR, CRAFT, RISEN, or Custom?',
       description: 'Choose a prompt framework for your team: CO-STAR for complex multi-step tasks, CRAFT for content, RISEN for instructional, RTF for structured output. Decision matrix by use case.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['prompt framework', 'CO-STAR', 'CRAFT framework', 'RISEN framework', 'RTF framework', 'team prompt framework', 'prompt engineering framework comparison'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -58,7 +58,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '@type': 'Thing', name: 'RTF' },
         { '@type': 'Thing', name: 'GPT-5.6' },
         { '@type': 'Thing', name: 'Claude Sonnet 5' },
-        { '@type': 'Thing', name: 'Gemini 2.5 Pro' },
+        { '@type': 'Thing', name: 'Gemini 3.1 Pro' },
         { '@type': 'Thing', name: 'PromptQuorum' },
         { '@type': 'Thing', name: 'Braintrust' },
         { '@type': 'Thing', name: 'Promptfoo' },
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Wie wählt man ein Prompt-Framework für das Team: CO-STAR, CRAFT, RISEN oder Custom?',
       description: 'Prompt-Framework für Ihr Team wählen: CO-STAR für komplexe mehrstufige Aufgaben, CRAFT für Inhalte, RISEN für Anleitungen, RTF für strukturierten Output. Entscheidungsmatrix nach Anwendungsfall.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['Prompt-Framework', 'CO-STAR', 'CRAFT Framework', 'RISEN Framework', 'RTF Framework', 'Team Prompt Framework', 'Prompt Engineering Framework Vergleich'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Cómo elegir un framework de prompts para tu equipo: ¿CO-STAR, CRAFT, RISEN o personalizado?',
       description: 'Elige un framework de prompts para tu equipo: CO-STAR para tareas complejas, CRAFT para contenido, RISEN para instructional, RTF para salida estructurada. Matriz de decisión por caso de uso.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['framework de prompts', 'CO-STAR', 'CRAFT framework', 'RISEN framework', 'RTF framework', 'framework de prompts para equipos', 'comparación de frameworks'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Comment choisir un framework de prompts pour votre équipe : CO-STAR, CRAFT, RISEN ou Custom ?',
       description: 'Choisir un framework de prompts pour votre équipe : CO-STAR pour les tâches complexes, CRAFT pour le contenu, RISEN pour l\'instructionnel, RTF pour la sortie structurée.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['framework de prompts', 'CO-STAR', 'CRAFT framework', 'RISEN framework', 'RTF framework', 'framework équipe prompts', 'comparaison frameworks prompt engineering'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'チーム向けプロンプトフレームワークの選び方：CO-STAR、CRAFT、RISEN、それともカスタム？',
       description: 'チームのプロンプトフレームワーク選択：複雑なタスクにはCO-STAR、コンテンツにはCRAFT、指示的な内容にはRISEN、構造化出力にはRTF。',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['プロンプトフレームワーク', 'CO-STAR', 'CRAFTフレームワーク', 'RISENフレームワーク', 'RTFフレームワーク', 'チームプロンプトフレームワーク'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '如何为团队选择Prompt框架：CO-STAR、CRAFT、RISEN还是自定义？',
       description: '为团队选择Prompt框架：CO-STAR用于复杂多步骤任务，CRAFT用于内容，RISEN用于指导性写作，RTF用于结构化输出。',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['Prompt框架', 'CO-STAR', 'CRAFT框架', 'RISEN框架', 'RTF框架', '团队Prompt框架', 'Prompt工程框架比较'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -1345,7 +1345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: '팀을 위한 Prompt 프레임워크 선택 방법: CO-STAR, CRAFT, RISEN, 아니면 커스텀?',
       description: '팀을 위한 prompt 프레임워크 선택: 복잡한 다단계 작업에는 CO-STAR, 콘텐츠에는 CRAFT, 지시적 글쓰기에는 RISEN, 구조화된 출력에는 RTF. 사용 사례별 의사결정 매트릭스.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['prompt 프레임워크', 'CO-STAR', 'CRAFT 프레임워크', 'RISEN 프레임워크', 'RTF 프레임워크', '팀 prompt 프레임워크', 'prompt engineering 프레임워크 비교'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
@@ -1535,7 +1535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'كيفية اختيار إطار عمل للـ prompt لفريقك: CO-STAR أم CRAFT أم RISEN أم مخصص؟',
       description: 'اختر إطار عمل prompt لفريقك: CO-STAR للمهام المعقدة، وCRAFT للمحتوى، وRISEN للتعليمات، وRTF للمخرجات المنظمة. مصفوفة قرار حسب حالة الاستخدام.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-31',
       keywords: ['إطار عمل prompt', 'CO-STAR', 'CRAFT framework', 'RISEN framework', 'RTF framework', 'إطار عمل prompt للفرق', 'مقارنة أطر العمل'],
       mentions: [
         { '@type': 'Thing', name: 'CO-STAR' },
