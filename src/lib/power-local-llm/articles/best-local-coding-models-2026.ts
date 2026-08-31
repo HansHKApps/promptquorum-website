@@ -618,6 +618,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Alle sechs Modelle funktionieren lokal** — Unterschiede sind in Größe, Lizenz und Performance, nicht in "funktioniert vs funktioniert nicht".',
           '**Wählen nach bindender Beschränkung** — VRAM-Budget, Kontext-Länge oder Lizenz-Anforderungen, nicht Leaderboard-Rang.',
         ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen3-Coder 30B ist 2026 die Standardwahl; die übrigen Modelle punkten bei Hardware-Passung, Kontextlänge, Lizenzlage oder Sprachabdeckung.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Sechs Open-Weight-Coding-Modelle, kein klarer Gesamtsieger. Qwen3-Coder führt bei den öffentlichen Coding-Benchmarks, DeepSeek beim Kontextfenster, Codestral bei der Geschwindigkeit, Granite bei der Lizenzklarheit, StarCoder bei Nischensprachen. Richtig ist das Modell, dessen größte Einschränkung zu Ihrer größten Einschränkung passt.',
+          },
+        ],
       },
       quickFacts: {
         id: 'quick-facts',
@@ -1051,6 +1062,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Granite Code et StarCoder 2 sont des choix spécialisés** — Granite pour contrat IBM Enterprise; StarCoder 2 pour couverture de langage incroyablement large.',
           '**Les six modèles fonctionnent localement** — les différences sont dans taille, licence et performance, pas "fonctionne vs ne fonctionne pas".',
           '**Choisissez par contrainte bindante** — budget VRAM, longueur contexte ou requirements licence, non par classement leaderboard.',
+        ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen3-Coder 30B est le choix par défaut en 2026 ; les autres se distinguent par l\'adéquation matérielle, la longueur de contexte, la licence ou la couverture des langages.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Six modèles de code à poids ouverts, aucun vainqueur universel. Qwen3-Coder domine sur les benchmarks de code publics, DeepSeek sur la fenêtre de contexte, Codestral sur la vitesse, Granite sur la clarté de licence, StarCoder sur les langages de niche. Le bon choix est celui dont la principale limite correspond à la vôtre.',
+          },
         ],
       },
       quickFacts: {

@@ -1190,10 +1190,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
-          snippetBlocks: [
-            { type: 'one-sentence', text: 'Os melhores LLMs locais para code review são o Qwen3-Coder 32B em precisão geral, o Llama 3.3 70B em análise de segurança, e o DeepSeek-R1 14B em revisão algorítmica; modelos de 7B detectam apenas cerca de 45% dos bugs reais, enquanto modelos de 32B+ detectam 80-88% e são o mínimo prático antes do merge.' },
-            { type: 'plain-terms', text: 'Para revisão de código, o tamanho do modelo importa mais do que na maioria das tarefas -- um modelo pequeno de 7B vai perder mais da metade dos bugs reais, o que não é confiável o bastante antes de mesclar código. Se você quer um modelo local que realmente detecte problemas de forma confiável, 32B ou maior é o ponto de partida realista, com modelos diferentes sendo mais fortes em coisas diferentes: precisão geral, problemas de segurança ou lógica algorítmica.' },
-          ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '代码审查最合适的本地 LLM 是：综合准确度选 Qwen3-Coder 32B，安全分析选 Llama 3.3 70B，算法审查选 DeepSeek-R1 14B。7B 模型只能发现约 45% 的真实缺陷，而 32B 以上模型可发现 80–88%，是合并前审查的实用最低标准。',
+          },
+          {
+            type: 'plain-terms',
+            text: '在代码审查中，模型规模比大多数任务都更重要——小的 7B 模型会漏掉一半以上的真实缺陷，不足以作为合并代码前的依据。若想要一个能稳定发现问题的本地模型，32B 以上才是现实的起点，而各模型强项不同：综合准确度、安全问题，或算法逻辑。',
+          },
+        ],
           items: [
             '**Modelos 7B:** Fracos demais. Detectam ~45% dos bugs — feedback superficial apenas.',
             '**Modelos 13B-14B:** O DeepSeek-R1 14B detecta ~75% dos bugs via chain-of-thought. Aceitável para revisão algorítmica.',

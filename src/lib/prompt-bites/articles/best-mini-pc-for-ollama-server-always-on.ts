@@ -583,6 +583,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mac Mini M5 Pro: 64 GB de memoria unificada es el tope para modelos 30B; el M6 base llega hasta 32 GB — ambos disponibles el 22 de septiembre de 2026',
           'Beelink SER8 es el punto de entrada bajo $400 — 32 GB RAM para 7B y 13B',
         ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'El Minisforum UM890 Pro es el mejor mini PC para un servidor Ollama siempre encendido: combina inferencia rápida por CPU, hasta 96 GB de RAM DDR5 y un consumo inferior a 50 W.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Un mini PC con Ollama puede dar respuestas de IA a toda tu red doméstica las 24 horas consumiendo menos que una bombilla. Más RAM = modelos más grandes. OCuLink = añadir una GPU real sin montar un equipo completo.',
+          },
+        ],
       },
       faq: {
         id: 'faq',
@@ -668,6 +679,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'AOOSTAR GEM12 Pro + eGPU OCuLink desbloqueia aceleração de GPU sem PC de mesa',
           'Mac Mini M5 Pro: 64 GB de memória unificada é o teto para modelos 30B; o M6 base chega a 32 GB — ambos disponíveis em 22 de setembro de 2026',
           'Beelink SER8 é o ponto de entrada abaixo de $400 — 32 GB de RAM para 7B e 13B',
+        ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'O Minisforum UM890 Pro é o melhor mini PC para um servidor Ollama sempre ligado: combina inferência rápida em CPU, até 96 GB de RAM DDR5 e consumo abaixo de 50 W.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Um mini PC com Ollama pode responder com IA para toda a sua rede doméstica 24 horas por dia consumindo menos que uma lâmpada. Mais RAM = modelos maiores. OCuLink = adicionar uma GPU real sem montar um desktop completo.',
+          },
         ],
       },
       faq: {
@@ -889,6 +911,17 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'AOOSTAR GEM12 Pro + eGPU OCuLink يتيح تسريع GPU دون الحاجة لحاسوب مكتبي',
           'Mac Mini M5 Pro: 64 GB ذاكرة موحدة هو الحد الأقصى لنماذج 30B؛ الطراز الأساسي M6 يصل إلى 32 GB فقط — كلاهما متوفر في 22 سبتمبر 2026',
           'Beelink SER8 هو نقطة البداية دون $400 — 32 GB RAM لنماذج 7B و13B',
+        ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'يُعد Minisforum UM890 Pro أفضل كمبيوتر مصغّر لخادم Ollama يعمل على مدار الساعة، إذ يجمع بين استدلال سريع على المعالج وذاكرة DDR5 تصل إلى 96 جيجابايت واستهلاك أقل من 50 واط.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'يمكن لكمبيوتر مصغّر يشغّل Ollama أن يقدّم إجابات الذكاء الاصطناعي لشبكة منزلك بالكامل على مدار الساعة باستهلاك أقل من مصباح إضاءة. ذاكرة أكبر تعني نماذج أكبر، ومنفذ OCuLink يتيح إضافة كرت رسوميات حقيقي دون الحاجة إلى حاسوب مكتبي كامل.',
+          },
         ],
       },
       faq: {

@@ -1998,6 +1998,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '磁盘上的向量DB存储是**每1,000页40-120MB**，取决于块大小和嵌入维度。50,000页语料库仅用于向量需要2-6GB。',
           '对于将超过10,000页的库，考虑使用自定义Ollama + Qdrant或Weaviate堆栈。这三个平台的内置向量存储不是为该规模设计的。',
         ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Open WebUI 是 2026 年本地 LLM 最佳的 RAG 工具——安装最简单、界面最好，同时支持 Ollama 和 OpenAI。团队文档工作区则选 AnythingLLM。',
+          },
+          {
+            type: 'plain-terms',
+            text: '个人或家庭使用选 Open WebUI；需要团队文档工作区选 AnythingLLM；完全内网隔离部署选 PrivateGPT。',
+          },
+        ],
       },
       comparisonTable: {
         id: 'comparison-table',

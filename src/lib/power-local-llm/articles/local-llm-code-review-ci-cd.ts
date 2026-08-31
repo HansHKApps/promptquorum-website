@@ -1119,6 +1119,17 @@ jobs:
           '**遅延は許容できます。** 24 GB GPUでQwen3-Coder 30Bを実行すると、典型的な200行のPRdiffを30秒以内でレビューします。PR著者の待機時間は他のCIジョブが支配し、レビューではありません。',
           '**人間のレビューを完全に置き換えないでください。** ローカルLLMは最初のパストリアージゲートです——明らかな問題を捕捉し、リスクのある変更にフラグを立て、LLMがまだ間違う判断呼び出しについて人間を解放します。',
         ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'セルフホストのローカル LLM によるコードレビューは、有料シート 15〜25 の規模で GitHub Advanced Security より早く投資を回収でき、ソースコードを自社ネットワーク内に留められます。プライバシー要件やシート数の制約があるチームに適した構成です。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'CI での AI コードレビューには 3 つの選択肢があります。GitHub Advanced Security は導入が最も簡単ですが、規模が大きくなると最も高額です。クラウド LLM API（OpenAI、Anthropic）は初期費用が安い一方、差分がすべて第三者に送られます。セルフホストのローカル LLM は構築の手間が最も大きいものの、コードベースを自社の境界内に保てる唯一の選択肢であり、有料シート 15〜25 程度からは年間コストでも最も安くなります。',
+          },
+        ],
       },
       quickFacts: {
         id: 'quick-facts',
@@ -1540,7 +1551,18 @@ jobs:
     quickAnswerTop: { zh: { question: '如何在CI/CD中将本地LLM作为代码审查工具运行？', answer: '建立运行Ollama（或vLLM、llama.cpp）的GPU服务器，使用编码调优模型——Qwen3-Coder 30B是2026年8月的默认选择。在同一网络上添加自托管GitHub Actions运行器，或通过私有网络向现有运行器公开服务器的HTTP端点。编写小的自定义action来获取PR diff，用审查提示POST到LLM端点，解析结构化响应（批准/评论/阻止），并将内联评论发回PR。模型永远不会离开您的边界。action的行为类似于任何其他检查。就硬件而言，单个RTX 4090和Qwen3-Coder 30B处理15-25个开发者；48 GB卡扩展到约50个；超过100个需要H100级或多GPU。', bullets: ['架构：运行Ollama的GPU服务器→可通过网络到达的自托管运行器（或来自云运行器的HTTP）→自定义GitHub Action→PR评论。', '默认堆栈：Ollama + Qwen3-Coder 30B（Apache 2.0）+ 自定义JavaScript或复合action。', '硬件：1×RTX 4090（24 GB）用于15-25开发者；1×L40S/A6000 Ada（48 GB）用于约50个；1×H100或多GPU用于100以上。', '经济学：相比$19/开发者/月的GitHub Advanced Security，转折点约为15-25个付费座位，取决于硬件成本。', '安全性：源代码永不离开网络。可以用数据包捕获证明零外泄。审计表面是1个进程和1个日志。', 'GitLab CI工作方式相同——用运行器代替action，但LLM调用相同。'], updatedDate: '2026-08-27' } },
     toc: [{ label: '关键要点', anchor: '#key-takeaways' }, { label: '重要事实', anchor: '#quick-facts' }, { label: '架构比较', anchor: '#architecture-comparison' }, { label: '推荐堆栈', anchor: '#recommended-stack' }, { label: 'GitHub Actions工作流', anchor: '#workflow' }, { label: '按团队规模的硬件规划', anchor: '#hardware-sizing' }, { label: '构建间的GPU共享', anchor: '#gpu-sharing' }, { label: '与GitHub Advanced Security的成本比较', anchor: '#cost-comparison' }, { label: '安全模型和审计态势', anchor: '#security-model' }, { label: '代码审查提示设计', anchor: '#prompt-design' }, { label: '处理假阳性', anchor: '#false-positives' }, { label: '第二个月的运营陷阱', anchor: '#operational-pitfalls' }, { label: '常见错误', anchor: '#common-mistakes' }, { label: '资源', anchor: '#sources' }, { label: '常见问题', anchor: '#faq' }, { label: '相关阅读', anchor: '#related-reading' }],
     sections: {
-      tldr: { id: 'key-takeaways', isTldr: true, items: ['**架构有三个部分：** 运行Ollama（或vLLM）的GPU服务器→网络可达的CI运行器→POST PR diff并解析结构化判决的自定义action。在GitHub Actions、GitLab CI、Buildkite和Jenkins上形状相同。', '**2026年8月默认堆栈：** Ollama + Qwen3-Coder 30B（Apache 2.0）+ 轻量级自定义GitHub Action。总基础设施：1个GPU盒子，1个运行器。', '**硬件规划：** RTX 4090（24 GB，约$2,000）处理15-25开发者；L40S或A6000 Ada（48 GB，约$7,000-8,000）扩展到50个；H100（80 GB，$25,000+）或多GPU用于100+。', '**经济学在约15-25个付费GitHub Advanced Security座位($19/开发者/月)处转向自托管——RTX 4090构建在该团队规模下5-10个月内收回。', '**安全优势是实际的，不仅仅是营销。** 代码永不离开网络。可用tcpdump证明零外泄。整个审计表面是一个Ollama进程和一个日志文件。', '**假阳性是运营税。** 计划第一个月的调整循环：提示迭代、严重程度阈值，以及审查人反馈获取路径使提示随时间改进。', '**延迟是可接受的。** 24 GB GPU运行Qwen3-Coder 30B在30秒内审查典型的200行PR diff。PR作者等待时间由其他CI工作支配，而非审查。', '**不要完全替换人类审查。** 本地LLM是首轮分流门——它捕捉明显问题、标记风险变更，并解放人类做LLM仍然做错的判断性调用。'] },
+      tldr: { id: 'key-takeaways', isTldr: true, items: ['**架构有三个部分：** 运行Ollama（或vLLM）的GPU服务器→网络可达的CI运行器→POST PR diff并解析结构化判决的自定义action。在GitHub Actions、GitLab CI、Buildkite和Jenkins上形状相同。', '**2026年8月默认堆栈：** Ollama + Qwen3-Coder 30B（Apache 2.0）+ 轻量级自定义GitHub Action。总基础设施：1个GPU盒子，1个运行器。', '**硬件规划：** RTX 4090（24 GB，约$2,000）处理15-25开发者；L40S或A6000 Ada（48 GB，约$7,000-8,000）扩展到50个；H100（80 GB，$25,000+）或多GPU用于100+。', '**经济学在约15-25个付费GitHub Advanced Security座位($19/开发者/月)处转向自托管——RTX 4090构建在该团队规模下5-10个月内收回。', '**安全优势是实际的，不仅仅是营销。** 代码永不离开网络。可用tcpdump证明零外泄。整个审计表面是一个Ollama进程和一个日志文件。', '**假阳性是运营税。** 计划第一个月的调整循环：提示迭代、严重程度阈值，以及审查人反馈获取路径使提示随时间改进。', '**延迟是可接受的。** 24 GB GPU运行Qwen3-Coder 30B在30秒内审查典型的200行PR diff。PR作者等待时间由其他CI工作支配，而非审查。', '**不要完全替换人类审查。** 本地LLM是首轮分流门——它捕捉明显问题、标记风险变更，并解放人类做LLM仍然做错的判断性调用。'],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '自托管的本地 LLM 代码审查在 15–25 个付费席位时比 GitHub Advanced Security 更快收回成本，并且源代码始终留在自己的网络内——适合有隐私要求或席位成本压力的团队。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'CI 中的 AI 代码审查有三种选择。GitHub Advanced Security 最容易启用，但规模化后最贵。云端 LLM API（OpenAI、Anthropic）起步便宜，但每一次代码差异都会发送给第三方。自托管本地 LLM 的搭建成本最高，却是唯一能让代码库不出边界的方案——在大约 15–25 个付费席位时，它的年度成本也成为三者中最低的。',
+          },
+        ],
+      },
       quickFacts: { id: 'quick-facts', title: '重要事实', items: ['**GPU内存需求：** Qwen3-Coder 30B在q4_K_M量子化下最多需要22GB VRAM。24GB（RTX 4090）很紧但可行。如果想要余量，至少使用32GB（RTX 5090）。', '**推论延迟：** 典型PR diff（50-500行）在24 GB卡上为10-30秒。H100级卡将其减少到5-10秒。将审查时间与CI工作的其他部分比较——测试套件和构建通常占主导。', '**并发性：** 单个RTX 4090可通过GPU调度（时间共享）处理约1-3个并发审查。多个并发PR审查增加等待时间，第一个月也增加假阳性。', '**网络架构：** 运行器必须通过专用VPC到达Ollama服务器，或通过Tailscale / WireGuard等私有隧道。不要暴露在互联网上。', '**模型选择：** Qwen3-Coder 30B是2026年8月的代码生成默认值。与DeepSeek Coder V3相当。7B更快但审查质量降低，开发者很快失去信心。', '**存储：** Ollama将模型权重存储在`~/.ollama/models`中。Qwen3-Coder 30B @ q4_K_M约14GB。对于多个模型，计划额外存储。', '**缓存重要性：** 没有基于文件hash + diff hash的缓存，重新审查未更改的文件浪费约80%的推论预算。小缓存层（Redis、SQLite或内存中）大幅减少推论负载。', '**可审计性：** Ollama记录请求体到日志。此日志包含PR diff，所以应用日志轮转（周为单位）和加密。可审计性是安全价值主张的大部分。'] },
       architectureComparison: { id: 'architecture-comparison', title: '架构比较', content: '**有三种架构模式：自托管（Ollama/vLLM）、云API（OpenAI/Anthropic）或混合。每种都有权衡。**', columns: ['架构', '设置复杂度', '成本扩展', '数据隐私', '定制', '推荐用途'], rows: [{ '架构': '自托管（Ollama）', '设置复杂度': '中等', '成本扩展': '15-25开发者时为零', '数据隐私': '网络内代码', '定制': '完全控制', '推荐用途': '大团队，敏感代码，金融/医疗' }, { '架构': '云API（OpenAI）', '设置复杂度': '低', '成本扩展': '与开发者数量线性', '数据隐私': '复制到第三方系统', '定制': '仅提示', '推荐用途': '少于5人团队，公开项目，实验' }, { '架构': '混合', '设置复杂度': '高', '成本扩展': '基于自托管vs API', '数据隐私': '政策可选', '定制': '高', '推荐用途': '大团队，分阶段推出' }], items: ['**自托管（推荐）：** 初始设置（GPU购买、系统管理、安全设置）为中等复杂度。但成本固定，在15-25+开发者时变为主导。代码永不离开网络。完整的提示控制、模型选择和审计。大型团队（25+）的标准。', '**云API：** 通过OpenAI、Anthropic或其他API服务。设置简单——API密钥和自定义GitHub Action。成本按请求单位（令牌/美元）扩展。5人以下团队便宜。大型团队从$2,000/月+开始扩展非常快。代码对第三方系统可见。', '**混合：** 小团队（<25人）从云API开始，随着增长切换到自托管。但支付架构迭代复杂性——版本化提示、管理模型质量差异、计划故障转移。'], callouts: [{ type: 'note', text: '本文关注自托管（Ollama +本地模型）。云API是更好的选择——从设置和成本角度——对于少于5人的团队且代码敏感性低的情况。' }] },
       recommendedStack: { id: 'recommended-stack', title: '推荐堆栈', content: '**2026年8月生产推荐设置是Ollama + Qwen3-Coder 30B。** 它在灵活性、开源许可、推论速度和按团队规模的经济学上取得最好平衡。', items: ['**Ollama：** 服务器推论框架。管理模型加载、量子化、批处理。设置简单、文档好、GPU内存效率好。https://github.com/ollama/ollama', '**Qwen3-Coder 30B：** Alibaba Qwen团队的编码专用模型。Apache 2.0（许可）。256K上下文长度。在一般代码质量、错误检测和安全性上与DeepSeek Coder V3相当。在HuggingFace上可得。', '**自定义GitHub Action（JavaScript）：** 获取PR diff，POST到Ollama HTTP端点，解析JSON响应，发布内联评论。100-200行。无用户依赖。', '**自托管GitHub Actions运行器或私有CI执行器：** 需要运行器或Ollama服务器可达性（同VPC、Tailscale或代理）。云运行器不起作用。', '**安全层（可选）：** Ollama前的反向代理（nginx、Envoy），具有mTLS认证或共享密钥。默认Ollama绑定到localhost。', '**日志管理：** Ollama记录请求体（包含PR diff）。应用syslog、文件轮转或systemd journalctl策略来轮转日志。'], callouts: [{ type: 'tip', text: '设置后，第一个月花时间在提示设计部分（见下文）。模型质量是固定的。假阳性率由提示决定。' }] },

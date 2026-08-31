@@ -1517,6 +1517,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'ローカルで実行されるAIエージェント—LLMを実行して、システムとの対話を自動化する自律ソフトウェア—は実験的段階にあります。単一タスク（コード生成、ドキュメント分析）の場合、確立されたツールが機能します。複数ステップの実務ワークフローについては、Cline + Ollama（Qwen3-Coder）と Continue.dev + 専有モデルが最も信頼できます。LangGraph、AutoGPT、OpenInterpreter、MetaGPT は実運用環境では監視コストが増加し、失敗モードが予測不可能です。',
         isTldr: true,
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Cline + Ollama と Continue.dev Agent は、実際のタスクを確実に完了できる唯一の 2 つのローカルエージェント構成です。LangGraph、OpenInterpreter、MetaGPT はそれぞれ異なる形で失敗し、AutoGPT-local は実用に耐えません。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'リファクタリングや調査タスクを実際に終わらせるローカルエージェントが欲しいなら、Cline か Continue.dev を入れればそれで足ります。他の 4 つは、10 分間動かし続けた現実よりもデモのほうが見栄えがします。',
+          },
+        ],
       },
       quickFacts: {
         title: '主な調査結果',
@@ -2432,6 +2443,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Tool-call可靠性来自模型，不是框架。** Qwen3-Coder 30B、GLM-4.7 32B、Gemma 4 27B 和 Llama 3.3 70B 在任何可靠框架中工作。7B以下的模型在所有框架中都失败。',
           '**监督成本是重要的指标。** "最好的"代理是你实际阅读其批准的——而不是自主运行时间最长的。',
           '**2027年展望：更长期规划会逐步改进。无论演示显示什么，无监督的真实任务自主性今年都不会发生。**',
+        ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Cline + Ollama 和 Continue.dev Agent 是仅有的两个能可靠完成实际任务的本地智能体方案；LangGraph、OpenInterpreter 和 MetaGPT 各有不同的失败方式，AutoGPT-local 则无法使用。',
+          },
+          {
+            type: 'plain-terms',
+            text: '如果你想要一个能真正完成重构或研究任务的本地智能体，装 Cline 或 Continue.dev 就够了。另外四个方案的演示效果，都比让它们实际运行十分钟的结果更好看。',
+          },
         ],
       },
       quickFacts: {

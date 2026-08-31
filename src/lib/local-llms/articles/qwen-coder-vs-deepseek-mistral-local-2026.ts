@@ -321,6 +321,17 @@ DEEPSEEK_MODEL=deepseek-chat
           'Mistral Devstral glaenzt bei agentischen Aufgaben: besser bei mehrstufigem Tool-Einsatz und Multi-Datei-Refactoring.',
           'Dispatch-Strategie: private/DSGVO-Coding-Aufgaben → lokales Qwen 3.6, nicht-sensitive Massenverarbeitung → DeepSeek Coder API.',
         ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen 3.6 27B erreicht lokal 77,2 % auf SWE-bench — gleichauf mit oder besser als Claude Sonnet 5 und GPT-5.6 beim Lösen echter GitHub-Issues.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'SWE-bench prüft, ob eine KI tatsächlich Fehler in echten Open-Source-Projekten wie Django, Flask und NumPy behebt. 77,2 % bedeutet: Das Modell hat 77 von 100 echten GitHub-Issues ohne menschliche Hilfe gelöst.',
+          },
+        ],
       },
       faq: {
         id: 'faq',
@@ -578,6 +589,17 @@ DEEPSEEK_MODEL=deepseek-chat
           'Mistral Devstralはエージェント型タスクで優秀：マルチステップツール使用とマルチファイルリファクタリングで優位。',
           'ディスパッチ戦略：プライベート/GDPR対象のコーディングタスク → ローカルQwen 3.6、非機密の大量生成 → DeepSeek Coder API。',
         ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen 3.6 27B はローカル実行で SWE-bench 77.2% を記録し、実際の GitHub Issue の解決において Claude Sonnet 5 や GPT-5.6 と同等かそれ以上です。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'SWE-bench は、Django や Flask、NumPy といった実在のオープンソースコードベースで AI が実際にバグを修正できるかを測ります。77.2% とは、100 件の実際の GitHub Issue のうち 77 件を人手を借りずに解決したという意味です。',
+          },
+        ],
       },
       faq: {
         id: 'faq',
@@ -613,6 +635,17 @@ DEEPSEEK_MODEL=deepseek-chat
           'DeepSeek Coder是云端成本冠军：$0.14/1M令牌，HumanEval比Qwen低0.5个百分点。',
           'Mistral Devstral擅长智能体任务：在多步骤工具使用和多文件重构上表现更好。',
           '调度策略：私有/GDPR相关代码任务 → 本地Qwen 3.6，非敏感批量生成 → DeepSeek Coder API。',
+        ],
+      
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Qwen 3.6 27B 在本地运行时 SWE-bench 得分 77.2%，在解决真实 GitHub issue 上与 Claude Sonnet 5 和 GPT-5.6 持平甚至更好。',
+          },
+          {
+            type: 'plain-terms',
+            text: 'SWE-bench 测试 AI 能否真正修复 Django、Flask、NumPy 等真实开源项目中的缺陷。77.2% 意味着模型在 100 个真实 GitHub issue 中独立解决了 77 个。',
+          },
         ],
       },
       faq: {
