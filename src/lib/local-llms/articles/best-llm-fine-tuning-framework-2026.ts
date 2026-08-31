@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Together.ai** — LoRA supervised fine-tuning at $0.48/M training tokens up to 16B parameters, $1.50 at 17–69B and $2.90 at 70–100B. Full supervised fine-tuning is considerably more: $1.20, $3.75 and $7.25 across the same tiers. A $4.00 minimum applies per job.',
           '**Fireworks.ai** — LoRA SFT from $0.50/M tokens up to 16B, rising to $10.00 above 300B; full-parameter DPO at the top tier reaches $40.00/M. Its pricing page states plainly: "Serve fine-tuned models for the same price as base models."',
           '**Predibase is no longer a standalone product.** Rubrik announced the acquisition on 25 June 2025, and as of 28 August 2026 predibase.com returns an HTTP 301 redirect to Rubrik\'s Agent Cloud page. Do not send readers to a signup flow that no longer exists.',
-          'Neither Together.ai nor Fireworks.ai has a public affiliate or referral programme that we could find as of August 2026, and neither appears in the major AI-affiliate roundups. Every link on this page is unpaid.',
+          'Neither Together.ai nor Fireworks.ai has a public affiliate or referral programme that we could find, and neither appears in the major AI-affiliate roundups. Every link on this page is unpaid.',
         ],
       },
       bestChoice: {
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do Together.ai or Fireworks.ai have affiliate programmes?',
-            a: 'We found no public affiliate or referral programme for either as of August 2026, and neither appears in the major AI-affiliate programme roundups. Their partner pages describe business integrations rather than creator referral schemes. PromptQuorum earns nothing from the links on this page.',
+            a: 'We found no public affiliate or referral programme for either, and neither appears in the major AI-affiliate programme roundups. Their partner pages describe business integrations rather than creator referral schemes. PromptQuorum earns nothing from the links on this page.',
           },
           {
             q: 'Is cloud fine-tuning more expensive than local?',

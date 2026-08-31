@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM (Magnetoresistive RAM):** Non-volatile memory using magnetic tunnel junctions (MTJ). No refresh required, no standby power drain. Byte-addressable like DRAM.',
           '**In-memory computing:** Perform multiply-accumulate (MAC) operations directly inside the memory array. Eliminates data movement between CPU/GPU and memory — the #1 energy cost in inference.',
           '**Current status:** Samsung SAIT demonstrated on Nature paper (2022) with 98% accuracy on image tasks. SemiFive + ICYTech achieved 8nm eMRAM tape-out (May 2026). No consumer products yet.',
-          '**The catch:** Tape-out ≠ silicon returned ≠ shipped product — the SemiFive/ICYTech chip has not shipped as of August 2026. New academic test chips (IEEE JSSC, 2026) have since published the first real MRAM compute-in-memory efficiency numbers — up to 492.8 TOPS/W — but these are lab silicon, not the SemiFive product. Consumer phones/PCs unlikely before 2029–2031.',
+          '**The catch:** Tape-out ≠ silicon returned ≠ shipped product — the SemiFive/ICYTech chip has not shipped. New academic test chips (IEEE JSSC, 2026) have since published the first real MRAM compute-in-memory efficiency numbers — up to 492.8 TOPS/W — but these are lab silicon, not the SemiFive product. Consumer phones/PCs unlikely before 2029–2031.',
           '**Alternative:** Google TurboQuant (ICLR 2026) compresses KV cache to 3 bits with zero accuracy loss — a software-only approach to the same problem, available now.',
         ],
       },
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**High endurance:** Commercial MRAM achieves 10^10 to 10^14 write cycles. DRAM/SRAM are ~10^16 (effectively unlimited). NAND Flash is 10^3–10^5. MRAM is vastly better than Flash, comparable to DRAM.',
           '**Process integration:** Samsung, TSMC, and others can embed MRAM directly into logic dies at 28nm, 14nm, and smaller nodes.',
         ],
-        note: 'Everspin Technologies is the world\'s leading standalone MRAM supplier — it reported Q2 2026 revenue of $18.7 million (up from $13.2 million a year earlier) and a $40 million U.S. Defense Industrial Base contract, though this growth is driven by industrial, automotive, and defense customers, not AI specifically. Samsung has mass-produced eMRAM (embedded MRAM) since 2019. TSMC, Renesas, Avalanche Technology, and GlobalFoundries also produce MRAM in various nodes. Ainekko, formed from a January 2026 merger with Veevx, is a newer entrant building an MRAM-based embedded memory called iRAM aimed at edge AI accelerators. As of August 2026, STMicroelectronics focuses on other emerging NVMs (e.g., PCRAM) rather than MRAM.',
+        note: 'Everspin Technologies is the world\'s leading standalone MRAM supplier — it reported Q2 2026 revenue of $18.7 million (up from $13.2 million a year earlier) and a $40 million U.S. Defense Industrial Base contract, though this growth is driven by industrial, automotive, and defense customers, not AI specifically. Samsung has mass-produced eMRAM (embedded MRAM) since 2019. TSMC, Renesas, Avalanche Technology, and GlobalFoundries also produce MRAM in various nodes. Ainekko, formed from a January 2026 merger with Veevx, is a newer entrant building an MRAM-based embedded memory called iRAM aimed at edge AI accelerators. STMicroelectronics focuses on other emerging NVMs (e.g., PCRAM) rather than MRAM.',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Battery longevity:** No standby refresh drain on the memory subsystem. For always-on AI features (background listening, privacy-preserving analytics), energy savings are multiplicative.',
           '**Larger models on fixed power budget:** If in-memory computing achieves 2–10× energy efficiency over LPDDR5 + compute separation, phones could run 5B–10B models with the same battery impact as today\'s 1B–2B models.',
         ],
-        note: 'However, these benefits are conditional on MRAM reaching consumer density and cost targets. Current eMRAM is suitable for small caches (1–100 MB embedded in microcontrollers and edge AI SoCs). Phone-scale deployment (8–16 GB unified memory equivalent) would require foundries to solve density and yield challenges that remain unsolved as of August 2026.',
+        note: 'However, these benefits are conditional on MRAM reaching consumer density and cost targets. Current eMRAM is suitable for small caches (1–100 MB embedded in microcontrollers and edge AI SoCs). Phone-scale deployment (8–16 GB unified memory equivalent) would require foundries to solve density and yield challenges that remain unsolved.',
       },
       'timeline': {
         id: 'timeline',
@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is MRAM available to buy now for my PC or phone?',
-            a: 'No. MRAM is in production for industrial microcontrollers, automotive chips, and enterprise storage. For consumer AI, it is R&D only as of August 2026. The SemiFive/ICYTech chip is still at tape-out stage — silicon not yet returned or benchmarked. Consumer deployment realistically 3–5+ years away.',
+            a: 'No. MRAM is in production for industrial microcontrollers, automotive chips, and enterprise storage. For consumer AI, it is R&D only. The SemiFive/ICYTech chip is still at tape-out stage — silicon not yet returned or benchmarked. Consumer deployment realistically 3–5+ years away.',
           },
           {
             q: 'Will MRAM replace my GPU\'s VRAM?',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Did Qualcomm solve the memory bottleneck in 2026?',
-            a: 'Qualcomm announced HBC (High-Bandwidth Compute) under its Dragonfly brand at its 2026 Investors Day — a near-memory architecture that stacks a compute accelerator beneath the LPDDR memory using through-silicon vias (TSV), claiming roughly 6x bandwidth-per-watt versus HBM and 200x capacity-per-watt versus SRAM. Microsoft has since confirmed it will deploy HBC on Azure, and Qualcomm has booked orders from Meta and Microsoft for the Dragonfly AI250/AI300 accelerators — real commercial traction for the roadmap, not a shipped product yet. Three distinctions still matter: HBC is near-memory (compute beside memory), not MRAM in-memory computing (compute inside the memory array); it targets data-center AI accelerators, not phones; and first-generation HBC (AI250) commercial sampling is scheduled for mid-2027, with HBC Gen 2 (AI300) targeted for 2028 — so nothing has shipped as of August 2026. It is a different approach to the same memory-wall problem, not an MRAM breakthrough.',
+            a: 'Qualcomm announced HBC (High-Bandwidth Compute) under its Dragonfly brand at its 2026 Investors Day — a near-memory architecture that stacks a compute accelerator beneath the LPDDR memory using through-silicon vias (TSV), claiming roughly 6x bandwidth-per-watt versus HBM and 200x capacity-per-watt versus SRAM. Microsoft has since confirmed it will deploy HBC on Azure, and Qualcomm has booked orders from Meta and Microsoft for the Dragonfly AI250/AI300 accelerators — real commercial traction for the roadmap, not a shipped product yet. Three distinctions still matter: HBC is near-memory (compute beside memory), not MRAM in-memory computing (compute inside the memory array); it targets data-center AI accelerators, not phones; and first-generation HBC (AI250) commercial sampling is scheduled for mid-2027, with HBC Gen 2 (AI300) targeted for 2028 — so nothing has shipped. It is a different approach to the same memory-wall problem, not an MRAM breakthrough.',
           },
         ],
       },

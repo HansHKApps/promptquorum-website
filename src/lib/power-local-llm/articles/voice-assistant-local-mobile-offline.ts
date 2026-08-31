@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'LLM Farm does not currently expose a Shortcuts action (as of May 2026). To use the iOS Shortcuts pipeline, you will need Private LLM (~£10 one-time) which does expose a "Generate Text" action. The Shortcuts approach is what makes the iPhone path "5 minutes" — without Shortcuts, you have to chain the apps manually.',
+            text: 'LLM Farm does not currently expose a Shortcuts action. To use the iOS Shortcuts pipeline, you will need Private LLM (~£10 one-time) which does expose a "Generate Text" action. The Shortcuts approach is what makes the iPhone path "5 minutes" — without Shortcuts, you have to chain the apps manually.',
           },
         ],
       },

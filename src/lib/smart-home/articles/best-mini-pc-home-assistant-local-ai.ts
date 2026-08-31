@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Check EQ14 price →', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
           { label: 'Check A9 Max price →', url: 'https://www.geekompc.com/geekom-a9-max-mini-pc/', productName: 'GEEKOM A9 Max', productCategory: 'Mini PC' },
         ],
-        note: 'Prices as of August 2026 — mini PC pricing moves quickly and varies by retailer and configuration; confirm the current listing before buying.',
+        note: 'Prices — mini PC pricing moves quickly and varies by retailer and configuration; confirm the current listing before buying.',
       },
       whatYouNeed: {
         id: 'what-you-need',
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         title: 'Comparison',
         content:
-          '**Match the unit to your target model and budget.** Prices, power figures, and connectivity specs are approximate, drawn from manufacturer listings and independent hardware reviews as of August 2026 — confirm the current listing before buying.',
+          '**Match the unit to your target model and budget.** Prices, power figures, and connectivity specs are approximate, drawn from manufacturer listings and independent hardware reviews — confirm the current listing before buying.',
         columns: ['Model', 'CPU', 'GPU/iGPU', 'RAM (as tested / max)', 'Ethernet', 'Storage', 'Approx. price (Aug 2026)', 'Idle / typical power', 'Best for'],
         rows: [
           { 'Model': '[Beelink EQ14](/smart-home/beelink-eq14-local-ai-review)', 'CPU': 'Intel N150', 'GPU/iGPU': 'Intel UHD (integrated)', 'RAM (as tested / max)': '16 GB / 16 GB max (1 SO-DIMM)', 'Ethernet': 'Dual 1GbE', 'Storage': '1x M.2 NVMe SSD', 'Approx. price (Aug 2026)': '~$189–220', 'Idle / typical power': '~5–12W idle, ~15–25W under load', 'Best for': 'HA + a small model' },

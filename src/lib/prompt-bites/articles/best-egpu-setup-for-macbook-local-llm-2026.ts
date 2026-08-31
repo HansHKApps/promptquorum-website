@@ -16,10 +16,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-26',
     dateModified: '2026-07-02',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**MacBooks with Apple Silicon (M2–M5) cannot use eGPUs via Thunderbolt for GPU compute through native macOS — Apple removed Thunderbolt eGPU support in macOS Ventura. However, as of April 2026, Tiny Corp\'s Apple-notarized TinyGPU driver adds NVIDIA/AMD eGPU compute support on Apple Silicon for AI workloads (not Metal, not display). For a fully supported path: use a Mac Mini M4 Pro (48 GB) or an AMD/Intel mini PC with OCuLink instead.**',
+    leadAnswerBlock: '**MacBooks with Apple Silicon (M2–M5) cannot use eGPUs via Thunderbolt for GPU compute through native macOS — Apple removed Thunderbolt eGPU support in macOS Ventura. However, Tiny Corp\'s Apple-notarized TinyGPU driver adds NVIDIA/AMD eGPU compute support on Apple Silicon for AI workloads (not Metal, not display). For a fully supported path: use a Mac Mini M4 Pro (48 GB) or an AMD/Intel mini PC with OCuLink instead.**',
     quickAnswerTop: {
       question: 'Can I use an eGPU with a MacBook for local LLM inference?',
-      answer: 'Native macOS eGPU compute is not supported on Apple Silicon (M2–M5) — Apple dropped Thunderbolt eGPU in macOS Ventura. As of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama and llama.cpp auto-detect it. For a simpler, fully supported path: Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC (UM890 Pro) with OCuLink.',
+      answer: 'Native macOS eGPU compute is not supported on Apple Silicon (M2–M5) — Apple dropped Thunderbolt eGPU in macOS Ventura. Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama and llama.cpp auto-detect it. For a simpler, fully supported path: Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC (UM890 Pro) with OCuLink.',
       bullets: [
         'Apple Silicon MacBooks: native eGPU compute NOT supported (macOS Ventura+)',
         'TinyGPU driver (April 2026, Apple-notarized): enables NVIDIA/AMD CUDA compute on Apple Silicon via TB3/4 or USB4',
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Native macOS eGPU compute support was removed in macOS Ventura (2022) and remains absent — but as of April 2026, Tiny Corp\'s Apple-notarized TinyGPU driver enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt or USB4 for AI workloads including Ollama.',
+            text: 'Native macOS eGPU compute support was removed in macOS Ventura (2022) and remains absent — but, Tiny Corp\'s Apple-notarized TinyGPU driver enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt or USB4 for AI workloads including Ollama.',
           },
           {
             type: 'plain-terms',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             title: 'TinyGPU Driver + eGPU on Apple Silicon Mac (New in 2026)',
-            content: 'As of April 2026, Tiny Corp\'s TinyGPU driver (Apple-signed) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported: NVIDIA Ampere (RTX 3000) or newer; AMD RDNA3 or newer. With an RTX 4090 eGPU, expect ~45–50 tok/s on 8B Q4. This is a third-party driver — not Apple-native Metal support — so expect occasional compatibility updates as macOS evolves.',
+            content: 'Tiny Corp\'s TinyGPU driver (Apple-signed) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported: NVIDIA Ampere (RTX 3000) or newer; AMD RDNA3 or newer. With an RTX 4090 eGPU, expect ~45–50 tok/s on 8B Q4. This is a third-party driver — not Apple-native Metal support — so expect occasional compatibility updates as macOS evolves.',
             affiliateLinks: [
               { label: 'RTX 4090 eGPU on Amazon (for TinyGPU setup)', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
             ],
@@ -101,10 +101,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?', a: 'Yes — as of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported GPUs: NVIDIA Ampere (RTX 3000+) or AMD RDNA3+. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. Note: this is a third-party driver, not native Metal — it does not provide display output. The simpler path if you prefer stability: connect the MacBook to an Ollama server on a separate GPU machine over LAN (set OLLAMA_HOST=0.0.0.0 on the server).' },
+            { q: 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?', a: 'Yes —, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported GPUs: NVIDIA Ampere (RTX 3000+) or AMD RDNA3+. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. Note: this is a third-party driver, not native Metal — it does not provide display output. The simpler path if you prefer stability: connect the MacBook to an Ollama server on a separate GPU machine over LAN (set OLLAMA_HOST=0.0.0.0 on the server).' },
             { q: 'Will Apple bring back eGPU support for Apple Silicon?', a: 'Unlikely. Apple\'s M-series architecture integrates the GPU, CPU, and memory on a single chip — the design philosophy is unified memory, not expandability. Apple has not indicated any plans to restore eGPU compute support. The Mac Pro (2023) with expansion slots is the only Apple product that supports GPU expansion.' },
             { q: 'Can I use an NVIDIA GPU for inference and pipe the output to my MacBook?', a: 'Yes — this is the recommended approach. Run Ollama on a Windows or Linux machine with an NVIDIA GPU, expose it on your LAN (OLLAMA_HOST=0.0.0.0), and connect from your MacBook via Open WebUI, Cursor, Continue, or any OpenAI-compatible client. The MacBook handles the UI; the NVIDIA machine handles the computation.' },
-            { q: 'Can I use an eGPU with a MacBook for local LLM inference?', a: 'Not via native macOS. Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022). However, as of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it. For a fully supported path: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.' },
+            { q: 'Can I use an eGPU with a MacBook for local LLM inference?', a: 'Not via native macOS. Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022). However, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it. For a fully supported path: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.' },
           ],
       },
       relatedReading: {
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes — as of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported GPUs: NVIDIA Ampere (RTX 3000+) or AMD RDNA3+. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. Note: this is a third-party driver, not native Metal — it does not provide display output. The simpler path if you prefer stability: connect the MacBook to an Ollama server on a separate GPU machine over LAN (set OLLAMA_HOST=0.0.0.0 on the server).',
+              'text': 'Yes —, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported GPUs: NVIDIA Ampere (RTX 3000+) or AMD RDNA3+. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. Note: this is a third-party driver, not native Metal — it does not provide display output. The simpler path if you prefer stability: connect the MacBook to an Ollama server on a separate GPU machine over LAN (set OLLAMA_HOST=0.0.0.0 on the server).',
             },
           },
           {
@@ -150,7 +150,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Can I use an eGPU with a MacBook for local LLM inference?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Not via native macOS. Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022). However, as of April 2026, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it. For a fully supported path: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.',
+              'text': 'Not via native macOS. Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022). However, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it. For a fully supported path: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.',
             },
           },
         ],

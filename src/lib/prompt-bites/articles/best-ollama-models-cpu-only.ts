@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'The CPU Speed Reality',
         content: [
-          '<strong>As of May 2026, CPU inference runs at 3–6 tokens per second on a modern 8-core desktop CPU — roughly 5–10× slower than a mid-range GPU.</strong> A 7B model at Q4 produces one word approximately every 200–300 milliseconds on CPU.',
+          '<strong>CPU inference runs at 3–6 tokens per second on a modern 8-core desktop CPU — roughly 5–10× slower than a mid-range GPU.</strong> A 7B model at Q4 produces one word approximately every 200–300 milliseconds on CPU.',
           'This speed is acceptable for two use cases: overnight batch processing such as summarizing documents or classifying data, and single-query lookups where a 30-second wait is acceptable. For interactive chat or real-time code completion, CPU inference is too slow to be practical.',
           'The root constraint is memory bandwidth, not CPU clock speed. Consumer CPUs read RAM at 40–80 GB/s. A dedicated GPU reads VRAM at 400–900 GB/s. LLM inference scales directly with memory bandwidth — which is why even a mid-range GPU produces dramatically faster inference than a high-end CPU.',
         ],

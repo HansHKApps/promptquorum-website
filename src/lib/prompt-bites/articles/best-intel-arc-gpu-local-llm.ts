@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     // retailer/listing (increasingly scarce stock inflates some listings) — presented as
     // "check current price," not a fixed number. RTX 3060 12GB: new $280-400, used $200-300.
     // Ollama note updated: v0.17 (Feb 2026) added native SYCL-based Intel Arc support upstream,
-    // so the old "Ollama's native Arc support is limited as of July 2026" line is now dated —
+    // so the old "Ollama's native Arc support is limited" line is now dated —
     // native support exists but IPEX-LLM remains the more mature/reliable path as of this check.
     leadAnswerBlock: '<strong>The Intel Arc B580 12GB is the best Intel Arc GPU for local LLMs</strong> — its 12GB VRAM fits many 7B-14B quantized models, at a lower price than a comparable NVIDIA card. The catch is software: Intel Arc has no CUDA, so Ollama and llama.cpp need the IPEX-LLM extension or a Vulkan/SYCL backend, both rougher than NVIDIA\'s zero-setup experience.',
     toc: [

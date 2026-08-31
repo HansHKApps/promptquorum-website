@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Cursor Pro vs Continue.dev (discontinued) vs Cline',
         content: [
-          '<strong>Continue.dev was acquired by Cursor on June 18, 2026 and shipped its final v2.0.0 release — no future development.</strong> The table below compares Cursor Pro with the frozen Continue.dev and Cline, the recommended open-source replacement. Pricing as of July 2026.',
+          '<strong>Continue.dev was acquired by Cursor on June 18, 2026 and shipped its final v2.0.0 release — no future development.</strong> The table below compares Cursor Pro with the frozen Continue.dev and Cline, the recommended open-source replacement. Pricing.',
         ],
         columns: ['Feature', 'Cursor Pro', 'Continue.dev (frozen)', 'Cline (replacement)'],
         rows: [

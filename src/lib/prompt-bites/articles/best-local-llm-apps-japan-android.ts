@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'The 3 Best Apps with Japanese Language Support',
         content: [
-          '<strong>As of May 2026, three Android apps support Japanese-language local LLMs on the Japanese Play Store: MLC Chat, PocketPal AI, and Ollama via Termux.</strong> All three run fully offline after the initial model download — no data ever reaches a cloud server, which directly addresses APPI (個人情報保護法, Japan\'s Personal Information Protection Act) compliance for personal conversations.',
+          '<strong>Three Android apps support Japanese-language local LLMs on the Japanese Play Store: MLC Chat, PocketPal AI, and Ollama via Termux.</strong> All three run fully offline after the initial model download — no data ever reaches a cloud server, which directly addresses APPI (個人情報保護法, Japan\'s Personal Information Protection Act) compliance for personal conversations.',
           'MLC Chat offers the fastest time to first token. Its preoptimized model list includes Rinna 3.6B, a lightweight Japanese-native model that fits in 3 GB RAM. On a Xperia 1 VI or Samsung Galaxy S24 with 12 GB RAM, Rinna 3.6B Q4 runs at 6–10 tok/s — comfortable for conversational use. Setup takes under 10 minutes with no command-line experience required.',
           'PocketPal AI, developed by the Hugging Face community, loads any GGUF file directly from Hugging Face. This makes ELYZA-7B and Qwen3 7B available without waiting for an app-curated release. The tradeoff is a slightly longer setup requiring manual model selection. See the <a href="/prompt-bites/run-local-llm-on-xperia-japan" class="text-primary hover:underline">Xperia local LLM guide</a> for device-specific RAM and storage tips.',
         ],
@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'How to Choose the Right Japanese Model',
         content: [
-          '<strong>As of May 2026, three Japanese-capable models cover the practical use cases on mid-range to flagship Android devices.</strong> The right choice depends on your RAM, your primary task, and whether you need multilingual output.',
+          '<strong>Three Japanese-capable models cover the practical use cases on mid-range to flagship Android devices.</strong> The right choice depends on your RAM, your primary task, and whether you need multilingual output.',
           'Rinna 3.6B is the lightweight option: Japanese-native, trained on Japanese web corpus, and runs on 3 GB RAM minimum. It handles casual conversation, text summarization, and short-form generation well. It is the right pick for an Xperia 10 VI (4–6 GB RAM) or any mid-range device where a 7B model would be too slow.',
           'ELYZA-7B delivers the strongest Japanese instruction-following performance at the 7B tier. It requires 6 GB RAM minimum and runs comfortably on a Xperia 5 V, Xperia 1 VI, or Samsung Galaxy S24. Use ELYZA-7B for tasks requiring multi-step instructions, structured output, or nuanced Japanese writing.',
           'Qwen3 7B is the multilingual pick: trained on Japanese, Chinese, and English corpora. It requires 6 GB RAM minimum and produces fluent output in all three languages within a single conversation. Use Qwen3 7B when your workflow spans JA/ZH/EN — for example, translating or summarizing cross-language business documents.',

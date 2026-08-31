@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Matter\'s specification has defined device types for energy-management hardware — solar inverters, battery storage, EV chargers, and heat pumps — since Matter 1.4+ (per the Connectivity Standards Alliance\'s own roadmap announcement), but as of write-time no shipping, Matter-certified inverter, battery, or heat pump product from any manufacturer has been confirmed. This is an early-mover explainer: what the spec defines today, and what to watch for before it becomes a real buying option, not a guide to hardware you can use right now. It also explains how this differs from the monitoring-and-dashboard integrations already covered for balcony solar, which do work today.',
     metaDescription:
-      'Matter defines device types for solar inverters and heat pumps (Matter 1.4+), but no shipping certified products exist yet as of July 2026 — what\'s coming, not what works today.',
+      'Matter defines device types for solar inverters and heat pumps (Matter 1.4+), but no shipping certified products exist yet — what\'s coming, not what works today.',
     twitterDescription:
       'Matter has a spec for solar inverters and heat pumps — but no shipping certified products yet. What the spec defines, and what to watch for.',
     readTime: '7 min read',
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'is matter solar inverter support real',
     ],
     leadAnswerBlock:
-      '**Not yet, as a real buying decision — Matter\'s specification has defined device types for energy management (inverters, batteries, EV chargers, heat pumps) since Matter 1.4+, but as of July 2026 no shipping, Matter-certified product in these categories has been confirmed from any manufacturer.** The Connectivity Standards Alliance\'s own roadmap announcement named these device types as planned additions following Matter 1.3, without naming a single manufacturer or product shipping them today. Treat this article as "what to watch for," not "what you can buy."',
+      '**Not yet, as a real buying decision — Matter\'s specification has defined device types for energy management (inverters, batteries, EV chargers, heat pumps) since Matter 1.4+, but no shipping, Matter-certified product in these categories has been confirmed from any manufacturer.** The Connectivity Standards Alliance\'s own roadmap announcement named these device types as planned additions following Matter 1.3, without naming a single manufacturer or product shipping them today. Treat this article as "what to watch for," not "what you can buy."',
     quickAnswerTop: {
       en: {
         question: 'Can I control my solar inverter or heat pump locally with Matter today?',
@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Not yet, for the specific "Matter-certified inverter/heat pump" scenario. Matter\'s specification has included energy-management device types (inverters, battery storage, EV chargers, heat pumps) since Matter 1.4+, letting a certified device report status and accept commands locally through Home Assistant instead of a manufacturer cloud app — but no shipping, Matter-certified product in these categories was confirmed as of write-time (July 2026), per the Connectivity Standards Alliance\'s own materials. The capability exists in the spec; the products don\'t exist in the market yet.',
         bullets: [
           'Matter has defined device types for inverters, batteries, EV chargers, and heat pumps since Matter 1.4+',
-          'No shipping, Matter-certified product in these categories was confirmed as of July 2026 — this is a spec-ahead-of-market situation, not a buying guide',
+          'No shipping, Matter-certified product in these categories was confirmed — this is a spec-ahead-of-market situation, not a buying guide',
           'Monitoring dashboards (already covered for balcony solar) are a different, working-today approach — this article is about native device-level control, which isn\'t available yet',
           'Check the manufacturer\'s own current documentation before assuming any specific product ships this support',
         ],
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Matter has defined device types for inverters, batteries, EV chargers, and heat pumps since Matter 1.4+, but no shipping Matter-certified product in these categories was confirmed as of July 2026 — this is an early-mover explainer, not a current buying guide.' },
+      { type: 'one-sentence', content: 'Matter has defined device types for inverters, batteries, EV chargers, and heat pumps since Matter 1.4+, but no shipping Matter-certified product in these categories was confirmed — this is an early-mover explainer, not a current buying guide.' },
       { type: 'plain-terms', content: 'Matter is a shared language that smart devices use to talk to a hub like Home Assistant. Matter\'s spec now includes definitions for energy hardware — solar inverters, home batteries, EV chargers, and heat pumps — but defining a device type in the spec isn\'t the same as a manufacturer actually building and certifying a product against it. As of mid-2026, that product side hasn\'t caught up yet.' },
     ],
     sections: {
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Does Matter support solar inverters today?', a: 'The specification does — Matter has included a device type for solar inverters since Matter 1.4+ — but no shipping, Matter-certified inverter product was confirmed as of July 2026, per the Connectivity Standards Alliance\'s own materials. Check your inverter manufacturer\'s current documentation or announcements; don\'t assume support exists just because the spec defines it.' },
+          { q: 'Does Matter support solar inverters today?', a: 'The specification does — Matter has included a device type for solar inverters since Matter 1.4+ — but no shipping, Matter-certified inverter product was confirmed, per the Connectivity Standards Alliance\'s own materials. Check your inverter manufacturer\'s current documentation or announcements; don\'t assume support exists just because the spec defines it.' },
           { q: 'Can I control my heat pump\'s temperature through Home Assistant via Matter?', a: 'Not yet, as of write-time — no confirmed shipping heat pump product implements Matter\'s heat pump device type. Once a manufacturer does ship one, mode and target temperature would become standard Home Assistant entities the same way a Matter thermostat\'s do today.' },
           { q: 'Is this the same as the balcony solar Home Assistant integration guides?', a: 'No. Those guides cover reading inverter data into Home Assistant for monitoring, and work today. This article covers Matter-native device control, a capability defined in the spec but not yet available in any confirmed shipping product.' },
           { q: 'What happens if my inverter isn\'t Matter-certified?', a: 'That describes every inverter on the market as of write-time — none are confirmed Matter-certified for energy device types. Monitoring-only integration (via a manufacturer local API or a CT clamp) is the current working option for usage tracking and basic automation; see the balcony solar cluster\'s integration guides.' },
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Matter for Solar Inverters and Heat Pumps: What\'s Coming (2027)',
-      description: 'Matter defines device types for solar inverters and heat pumps (Matter 1.4+), but no shipping certified products exist yet as of July 2026 — what\'s coming, not what works today.',
+      description: 'Matter defines device types for solar inverters and heat pumps (Matter 1.4+), but no shipping certified products exist yet — what\'s coming, not what works today.',
       url: 'https://www.promptquorum.com/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'Does Matter support solar inverters today?', acceptedAnswer: { '@type': 'Answer', text: 'The specification has included a device type for solar inverters since Matter 1.4+, but no shipping, Matter-certified inverter product was confirmed as of July 2026.' } },
+        { '@type': 'Question', name: 'Does Matter support solar inverters today?', acceptedAnswer: { '@type': 'Answer', text: 'The specification has included a device type for solar inverters since Matter 1.4+, but no shipping, Matter-certified inverter product was confirmed.' } },
         { '@type': 'Question', name: 'Can I control my heat pump\'s temperature through Home Assistant via Matter?', acceptedAnswer: { '@type': 'Answer', text: 'Not yet as of write-time — no confirmed shipping heat pump product implements Matter\'s heat pump device type.' } },
         { '@type': 'Question', name: 'Is this the same as the balcony solar Home Assistant integration guides?', acceptedAnswer: { '@type': 'Answer', text: 'No. Those guides cover reading inverter data into Home Assistant for monitoring and work today. This article covers Matter-native device control, which is not yet available in any confirmed shipping product.' } },
         { '@type': 'Question', name: 'What happens if my inverter isn\'t Matter-certified?', acceptedAnswer: { '@type': 'Answer', text: 'That describes every inverter on the market as of write-time. Monitoring-only integration via a manufacturer local API or a CT clamp is the current working option.' } },

@@ -53,7 +53,7 @@ schema: {
           { '@type': 'HowToStep', 'name': 'Configure GPU Memory', 'text': 'Open Settings → GPU acceleration slider. Adjust from 10-100% of VRAM. Lower values free GPU for other apps; higher values maximize inference speed.' },
           { '@type': 'HowToStep', 'name': 'Adjust Context Window', 'text': 'In Settings, increase context length up to model limits. More context uses more VRAM but allows longer conversations without losing history.' },
           { '@type': 'HowToStep', 'name': 'Enable Local API (Beta)', 'text': 'Activate Local API in Settings to expose OpenAI-compatible endpoints at localhost:1234. Integrate with any OpenAI-compatible client.' },
-          { '@type': 'HowToStep', 'name': 'Set LoRA Fine-Tuning', 'text': 'As of April 2026, LoRA fine-tuning is not built into LM Studio. Use Text-Generation-WebUI or training scripts for fine-tuning workflows.' },
+          { '@type': 'HowToStep', 'name': 'Set LoRA Fine-Tuning', 'text': 'LoRA fine-tuning is not built into LM Studio. Use Text-Generation-WebUI or training scripts for fine-tuning workflows.' },
           { '@type': 'HowToStep', 'name': 'Run Batch Inference', 'text': 'Process multiple prompts at once using batch mode. Useful for evaluation, testing, and large-scale inference tasks.' },
           { '@type': 'HowToStep', 'name': 'Benchmark Performance', 'text': 'Use the Performance tab to measure tokens/second, latency, and VRAM usage. Benchmark after GPU/context changes to validate improvements.' }
         ]
@@ -115,7 +115,7 @@ schema: {
             'name': 'Does LM Studio support LoRA fine-tuning?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'As of April 2026, LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.',
+              'text': 'LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.',
             },
           },
           {
@@ -123,7 +123,7 @@ schema: {
             'name': 'How do I run batch inference in LM Studio?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially as of April 2026.',
+              'text': 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially.',
             },
           },
           {
@@ -197,7 +197,7 @@ schema: {
             'GPU memory can be manually set from 10% to 100% of VRAM -- lower values free up GPU for other apps.',
             'Context window (number of tokens the model can see) can be extended up to model limits, but it uses more VRAM.',
             'Local API (beta) exposes OpenAI-compatible endpoints at localhost:1234 for integration.',
-            'As of April 2026, LoRA fine-tuning is not yet built into LM Studio; use Text-Generation-WebUI or training scripts instead.',
+            'LoRA fine-tuning is not yet built into LM Studio; use Text-Generation-WebUI or training scripts instead.',
           ],
         },
         gpuMemory: {
@@ -231,7 +231,7 @@ schema: {
         localAPI: {
           id: 'local-api',
           title: 'How Do You Enable LM Studio\'s Local API (Beta)?',
-          content: 'LM Studio\'s local API (beta as of April 2026) mimics OpenAI\'s API:',
+          content: 'LM Studio\'s local API (beta) mimics OpenAI\'s API:',
           codeBlock: '# 1. Open LM Studio Settings → Server\n# 2. Turn on "Enable local API server"\n# 3. API runs at http://localhost:1234/v1\n\n# 4. Use it like Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
@@ -245,7 +245,7 @@ schema: {
           id: 'lora-finetuning',
           title: 'Can You Fine-Tune Models With LM Studio?',
           content: [
-            '**As of April 2026, LM Studio does not have built-in LoRA fine-tuning.** For fine-tuning, use:',
+            '**LM Studio does not have built-in LoRA fine-tuning.** For fine-tuning, use:',
             '- **Text-Generation-WebUI** (easiest for LoRA)',
             '- **LLaMA-Factory** (advanced, production-grade)',
             '- **unsloth** (fastest, optimal for VRAM usage)',
@@ -279,7 +279,7 @@ schema: {
           items: [
             '**Lowering GPU allocation too much and blaming slowness on the model.** If you set GPU to 10%, inference will be 5-10× slower because it is running mostly on CPU. Test with 80%+ GPU allocation first.',
             '**Extending context window beyond model support.** Models have maximum supported context lengths. Extending beyond that does not add capability; it just wastes VRAM.',
-            '**Expecting LoRA training in LM Studio.** As of April 2026, it is not available. Use Text-Generation-WebUI or training libraries.',
+            '**Expecting LoRA training in LM Studio.** It is not available. Use Text-Generation-WebUI or training libraries.',
             '**Forgetting that API needs explicit enable.** The local API is off by default. Enable it in Settings → Server.',
           ],
         },
@@ -293,8 +293,8 @@ schema: {
             { q: 'What is the impact of increasing the context window in LM Studio?', a: 'Longer context allows models to remember more conversation history, but increases VRAM usage and latency. A 2K context uses ~2× the VRAM of a 512-token context. Benchmark after each change.' },
             { q: 'Should I use 100% GPU acceleration in LM Studio?', a: 'Not always. Use 100% for maximum speed if only running LM Studio. Reduce to 50-75% if you need VRAM headroom for browsers, IDEs, or other GPU tasks. Measure inference speed at each level.' },
             { q: 'How do I use LM Studio as a backend for other apps?', a: 'Enable Local Server in Settings. It exposes OpenAI-compatible endpoints at localhost:1234. Point any OpenAI SDK (Python, Node.js) to this URL as base_url to use local models.' },
-            { q: 'Does LM Studio support LoRA fine-tuning?', a: 'As of April 2026, LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.' },
-            { q: 'How do I run batch inference in LM Studio?', a: 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially as of April 2026.' },
+            { q: 'Does LM Studio support LoRA fine-tuning?', a: 'LoRA fine-tuning is not built into LM Studio. Use Unsloth or llama.cpp training scripts for fine-tuning. LM Studio can load and run LoRA adapter files from disk.' },
+            { q: 'How do I run batch inference in LM Studio?', a: 'Use the LM Studio Local API with a loop. Send multiple POST requests to /v1/chat/completions with different prompts. LM Studio processes each request sequentially.' },
             { q: 'How do I benchmark my model speed in LM Studio?', a: 'LM Studio shows tokens/sec in the status bar during inference. The Performance tab provides latency metrics, VRAM usage, and generation speed. Run a long prompt to get stable benchmarks.' },
             { q: 'Can I adjust temperature and top-p in LM Studio?', a: 'Yes. Click the Settings icon (gear) on the chat panel to access temperature, top-p, top-k, and repeat penalty sliders. Temperature 0.7 is default; lower values give more deterministic output.' },
             { q: 'How do I load a custom GGUF model in LM Studio?', a: 'Download the .gguf file manually and place it in your LM Studio models directory (~/.lmstudio/models on macOS/Linux). LM Studio scans this folder and lists custom models in the model selector.' },

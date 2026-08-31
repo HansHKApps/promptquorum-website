@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-en.webp',
       title: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
-      intro: '**To write better code with AI in 2026: use a structured prompt (role, objective, constraints, output format, edge cases), set Temperature to 0.1–0.2 for production, route backend tasks to Claude 4.8 and algorithm tasks to GPT-5, and run every output through a security linter before deployment.**\n\nAI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. As of April 2026, Claude 4.8 Opus leads on backend code and bug tracing, GPT-5 leads on algorithm design, and LLaMA 4 via Ollama runs entirely on your own hardware with 8GB RAM.\n\nAI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
+      intro: '**To write better code with AI in 2026: use a structured prompt (role, objective, constraints, output format, edge cases), set Temperature to 0.1–0.2 for production, route backend tasks to Claude 4.8 and algorithm tasks to GPT-5, and run every output through a security linter before deployment.**\n\nAI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. Claude 4.8 Opus leads on backend code and bug tracing, GPT-5 leads on algorithm design, and LLaMA 4 via Ollama runs entirely on your own hardware with 8GB RAM.\n\nAI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
       publishDate: '2026-03-22',
       dateModified: '2026-04-28',
       readTime: '15 min read',
@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelComparison: {
           title: 'Which AI Model to Use for Coding Tasks',
           content: [
-            '**As of April 2026, different models excel at different coding tasks — routing your prompt to the right model reduces errors and token costs.**',
+            '**Different models excel at different coding tasks — routing your prompt to the right model reduces errors and token costs.**',
             'Claude 4.8 Opus (Anthropic) dominates backend code generation, API design, database schemas, and multi-file refactoring. GPT-5 (OpenAI) leads for creative algorithmic solutions and complex step-by-step reasoning. Gemini 3 Pro (Google DeepMind) handles the longest documents with its 2-million-token context window — useful for codebase-wide analysis.',
           ],
           tableFormat: true,
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         security: {
           title: 'The Security Problem: What AI Gets Wrong',
           content: [
-            '**As of April 2026, AI generates code with security vulnerabilities in 45% of cases — a rate that has not improved as models have become more capable.** A 2025 Veracode report found that when given a choice between a secure and insecure implementation, generative AI models chose the insecure option 45% of the time. Academic research confirms this pattern: over 40% of AI-generated code solutions contain [security flaws](/prompt-engineering/prompt-injection-and-security).',
+            '**AI generates code with security vulnerabilities in 45% of cases — a rate that has not improved as models have become more capable.** A 2025 Veracode report found that when given a choice between a secure and insecure implementation, generative AI models chose the insecure option 45% of the time. Academic research confirms this pattern: over 40% of AI-generated code solutions contain [security flaws](/prompt-engineering/prompt-injection-and-security).',
             'The three most critical failure categories:',
           ],
           items: [

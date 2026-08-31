@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Which cloud GPU provider is cheapest in 2026?',
-            a: 'Vast.ai is the cheapest. Its peer-to-peer spot pricing for an RTX 4090 is around $0.35 per hour spot (on-demand ~$0.45–0.55/hr) as of July 2026 — roughly 30-50% below RunPod and Lambda Labs. The trade-off is no uptime guarantee and spot interruptions on 15 seconds notice. RunPod is the cheapest provider that still offers a reliability guarantee.',
+            a: 'Vast.ai is the cheapest. Its peer-to-peer spot pricing for an RTX 4090 is around $0.35 per hour spot (on-demand ~$0.45–0.55/hr) — roughly 30-50% below RunPod and Lambda Labs. The trade-off is no uptime guarantee and spot interruptions on 15 seconds notice. RunPod is the cheapest provider that still offers a reliability guarantee.',
           },
           {
             q: 'Which cloud GPU provider is most reliable?',

@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Japanese Model Comparison Table',
         content: [
-          '<strong>As of May 2026, five local LLMs stand out for Japanese-language tasks: Rinna 3.6B, ELYZA-7B, CyberAgent CALM3-22B, Qwen3 7B, and Phi-4.</strong> Each fills a different hardware and use-case niche. The table below gives you the decision anchor points.',
+          '<strong>Five local LLMs stand out for Japanese-language tasks: Rinna 3.6B, ELYZA-7B, CyberAgent CALM3-22B, Qwen3 7B, and Phi-4.</strong> Each fills a different hardware and use-case niche. The table below gives you the decision anchor points.',
           'Decision shortcut: Use Rinna 3.6B if you have only 4 GB RAM and need Japanese-native conversation. Use ELYZA-7B for structured instruction following on 6 GB hardware. Use Qwen3 7B when you need multilingual output across Japanese, Chinese, and English in a single model.',
         ],
         columns: ['Model', 'Size / Min RAM', 'Best for'],

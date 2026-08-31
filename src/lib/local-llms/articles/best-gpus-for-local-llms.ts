@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'amd-intel',
           title: 'AMD and Intel GPUs: Status in August 2026',
           content: [
-            '**AMD (ROCm):** Improving and competitive on price — RX 7900 XTX matches RTX 4080. ROCm driver support requires more configuration effort than CUDA (as of August 2026, ROCm 6.x) — check the current compatibility list before buying. A strong option if you prefer the AMD ecosystem.',
+            '**AMD (ROCm):** Improving and competitive on price — RX 7900 XTX matches RTX 4080. ROCm driver support requires more configuration effort than CUDA (ROCm 6.x) — check the current compatibility list before buying. A strong option if you prefer the AMD ecosystem.',
             '**Best model for RX 7900 XTX (24 GB):** The same tier as an RTX 4090 — dense 32-34B models at Q5, or Llama 4 Scout at an aggressive 1.78-bit quant — but through ROCm instead of CUDA, and typically 10-20% slower at the same VRAM tier.',
             '**Intel Arc A770**: Too slow for practical LLM use. Not recommended.',
             'Recommendation: Stay with NVIDIA for stability and ecosystem maturity.',
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Should I buy an AMD GPU for local LLMs?',
-              a: "AMD is viable for LLMs in 2026, especially if you prefer the AMD ecosystem. Most LLM frameworks (vLLM, llama.cpp, Ollama) are optimized for CUDA first, and ROCm driver support requires more configuration effort than CUDA (as of August 2026, ROCm 6.x) — check the current compatibility list before buying. AMD's RX 7900 XTX competes well on price.",
+              a: "AMD is viable for LLMs in 2026, especially if you prefer the AMD ecosystem. Most LLM frameworks (vLLM, llama.cpp, Ollama) are optimized for CUDA first, and ROCm driver support requires more configuration effort than CUDA (ROCm 6.x) — check the current compatibility list before buying. AMD's RX 7900 XTX competes well on price.",
             },
             {
               q: 'What is the best GPU for running 70B models locally?',
@@ -240,7 +240,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Should I buy an AMD GPU for local LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: "AMD is viable for LLMs in 2026, especially if you prefer the AMD ecosystem. Most LLM frameworks (vLLM, llama.cpp, Ollama) are optimized for CUDA first, and ROCm driver support requires more configuration effort than CUDA (as of August 2026, ROCm 6.x) — check the current compatibility list before buying. AMD's RX 7900 XTX competes well on price." },
+            acceptedAnswer: { '@type': 'Answer', text: "AMD is viable for LLMs in 2026, especially if you prefer the AMD ecosystem. Most LLM frameworks (vLLM, llama.cpp, Ollama) are optimized for CUDA first, and ROCm driver support requires more configuration effort than CUDA (ROCm 6.x) — check the current compatibility list before buying. AMD's RX 7900 XTX competes well on price." },
           },
           {
             '@type': 'Question',

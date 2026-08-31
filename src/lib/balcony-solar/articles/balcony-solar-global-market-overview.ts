@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usStates: {
         title: 'US: States With Enacted Legislation',
         image: '/images/balcony-solar-global-market-overview-us-states-en.svg',
-        imageCaption: 'Confirmed enacted as of July 2026 — roughly 30 additional states have introduced but not passed bills.',
+        imageCaption: 'Confirmed enacted — roughly 30 additional states have introduced but not passed bills.',
         content: 'As of write-time (2026-07-16), 8 US states have signed balcony solar legislation into law: Utah (the first, HB 340, signed March 2025, effective May 7, 2025), Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, and Connecticut. Two of those 8 are not yet in effect — Colorado takes effect January 1, 2027, and Connecticut takes effect October 1, 2026. New York\'s SUNNY Act has passed the state legislature and awaits only the governor\'s signature. California, Florida, and Texas remain without a law: California\'s SB 868 is stalled in committee, Florida has an explicit legal carve-out against condo balconies, and Texas has no bill at all. There is no federal balcony solar law — if a state is not on either list, its status is undetermined, not automatically legal or illegal.',
       },
       ukStatus: {

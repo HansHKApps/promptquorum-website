@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwarePicks: {
         title: 'Hardware Picks by Category',
-        content: '- **Budget:** [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — entry mini PC for 7B-class models\n- **Mid-range:** [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — 7B–14B experimentation, Home Assistant, 24/7 Ollama server; [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) as a Ryzen alternative\n- **GPU value:** RTX 3090 (used, ~$800–1,300) — best VRAM per dollar for 24GB\n- **GPU performance:** RTX 4090 (~$2,000–2,600, EOL pricing as of August 2026 — the RTX 4090 reached end-of-life in Q2 2026) — fastest single-GPU consumer option, see the [workstation build guide](/local-llms/local-llm-workstation-build)\n- **Apple option:** high-unified-memory Mac for 70B+ models at low power draw — see the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026)\n\nRTX 3090/4090 and Apple hardware links above are plain product/editorial references — PromptQuorum has no affiliate program and earns no commission on any hardware purchase.',
+        content: '- **Budget:** [GMKtec G3 Plus](/smart-home/gmktec-g3-plus-local-ai-review) — entry mini PC for 7B-class models\n- **Mid-range:** [Beelink SER8](/smart-home/beelink-ser8-local-ai-review) — 7B–14B experimentation, Home Assistant, 24/7 Ollama server; [Minisforum UM890 Pro](/smart-home/minisforum-um890-pro-local-ai-review) as a Ryzen alternative\n- **GPU value:** RTX 3090 (used, ~$800–1,300) — best VRAM per dollar for 24GB\n- **GPU performance:** RTX 4090 (~$2,000–2,600, EOL pricing — the RTX 4090 reached end-of-life in Q2 2026) — fastest single-GPU consumer option, see the [workstation build guide](/local-llms/local-llm-workstation-build)\n- **Apple option:** high-unified-memory Mac for 70B+ models at low power draw — see the [Apple Silicon local LLM guide](/local-llms/apple-silicon-local-llm-guide-2026)\n\nRTX 3090/4090 and Apple hardware links above are plain product/editorial references — PromptQuorum has no affiliate program and earns no commission on any hardware purchase.',
       },
       dontBuy: {
         title: 'When You Should NOT Buy Local AI Hardware',
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       cloudProviders: {
         title: 'Cloud GPU Rental Comparison',
-        content: 'Representative RTX 4090-class rates as of August 2026 — always check current pricing before renting, rates change frequently.',
+        content: 'Representative RTX 4090-class rates — always check current pricing before renting, rates change frequently.',
         columns: ['Provider', 'Best For', 'Pricing Model', 'Verdict'],
         rows: [
           { Provider: 'RunPod', 'Best For': 'Reliability, managed pods', 'Pricing Model': 'Per-second, $0.34–0.69/hr', Verdict: 'Solid default for steady workloads' },

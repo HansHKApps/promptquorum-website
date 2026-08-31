@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What is llms.txt and do I need one?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'llms.txt is an emerging standard (analogous to robots.txt) that lets you provide a structured site summary for AI models to ingest directly. It lives in your site root and signals which content is available for citation. As of April 2026, ChatGPT, Perplexity, and Claude all support llms.txt as a crawl hint. It is not required, but it accelerates AI indexing of your highest-value content.',
+              text: 'llms.txt is an emerging standard (analogous to robots.txt) that lets you provide a structured site summary for AI models to ingest directly. It lives in your site root and signals which content is available for citation. ChatGPT, Perplexity, and Claude all support llms.txt as a crawl hint. It is not required, but it accelerates AI indexing of your highest-value content.',
             },
           },
           {
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'What is llms.txt and do I need one?',
-              a: 'llms.txt is an emerging standard (analogous to robots.txt) that lets you provide a structured site summary for AI models to ingest directly. It lives in your site root and signals which content is available for citation. As of April 2026, ChatGPT, Perplexity, and Claude all support llms.txt as a crawl hint. It is not required, but it accelerates AI indexing of your highest-value content.',
+              a: 'llms.txt is an emerging standard (analogous to robots.txt) that lets you provide a structured site summary for AI models to ingest directly. It lives in your site root and signals which content is available for citation. ChatGPT, Perplexity, and Claude all support llms.txt as a crawl hint. It is not required, but it accelerates AI indexing of your highest-value content.',
             },
             {
               q: 'Is GEO different from AEO (Answer Engine Optimization)?',

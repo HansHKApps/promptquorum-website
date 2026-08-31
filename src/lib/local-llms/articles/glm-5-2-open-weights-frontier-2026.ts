@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/glm-5-2-open-weights-frontier-2026-overview-hero-en.webp',
     title: "GLM-5.2: Where Z.ai's Open-Weights Model Stands in Mid-2026 (and Why It Still Won't Run at Home)",
     seoTitle: "GLM-5.2: Open-Weights LLM Standing 2026",
-    intro: 'GLM-5.2, released June 13, 2026 by Z.ai (formerly Zhipu AI), was the highest-scoring open-weights large language model on the independent Artificial Analysis Intelligence Index when it launched — #1 among open models and 4th overall. As of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) has taken the #1 open-weights spot, with GLM-5.2 now ranking second. GLM-5.2 still beats GPT-5.5 on coding benchmarks but trails the current closed-frontier models. This article separates the independent results from Z.ai\'s own claims, tracks GLM-5.2 against Kimi K3 and Z.ai\'s own newer GLM-5.3, and explains why a ~744B-parameter open model is still not something you can run at home.',
+    intro: 'GLM-5.2, released June 13, 2026 by Z.ai (formerly Zhipu AI), was the highest-scoring open-weights large language model on the independent Artificial Analysis Intelligence Index when it launched — #1 among open models and 4th overall. Moonshot AI\'s Kimi K3 (released July 27, 2026) has taken the #1 open-weights spot, with GLM-5.2 now ranking second. GLM-5.2 still beats GPT-5.5 on coding benchmarks but trails the current closed-frontier models. This article separates the independent results from Z.ai\'s own claims, tracks GLM-5.2 against Kimi K3 and Z.ai\'s own newer GLM-5.3, and explains why a ~744B-parameter open model is still not something you can run at home.',
     metaDescription: "GLM-5.2 led open weights at launch; Kimi K3 overtook it in July 2026. GLM-5.2 is now #2, beats GPT-5.5 on coding — its ~744B size still won't run at home.",
     twitterDescription: 'Update: Kimi K3 overtook GLM-5.2 as the #1 open-weights LLM in July 2026. GLM-5.2 is now #2, still beats GPT-5.5 on coding, and its ~744B params still won\'t run on your laptop.',
     publishDate: '2026-06-28',
@@ -30,14 +30,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GLM-5.2 self-host',
       'best open-weights LLM 2026',
     ],
-    leadAnswerBlock: '**GLM-5.2, released June 13, 2026 by Z.ai (formerly Zhipu AI), was the #1 open-weights LLM on the Artificial Analysis Intelligence Index when it launched. As of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top open-weights spot instead, with GLM-5.2 now #2. GLM-5.2 still leads GPT-5.5 on coding and remains behind the closed frontier — and at ~744B parameters, "open and self-hostable" still does not mean "runs on your laptop."**',
+    leadAnswerBlock: '**GLM-5.2, released June 13, 2026 by Z.ai (formerly Zhipu AI), was the #1 open-weights LLM on the Artificial Analysis Intelligence Index when it launched. Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top open-weights spot instead, with GLM-5.2 now #2. GLM-5.2 still leads GPT-5.5 on coding and remains behind the closed frontier — and at ~744B parameters, "open and self-hostable" still does not mean "runs on your laptop."**',
     snippetBlocks: [
       { type: 'one-sentence', text: 'GLM-5.2 was the leading open-weights LLM by independent benchmarks when it launched in June 2026, but Moonshot AI\'s Kimi K3 overtook it in July 2026; GLM-5.2\'s ~744B-parameter size still requires multi-GPU or rented infrastructure, not consumer hardware.' },
       { type: 'plain-terms', text: 'GLM-5.2 is a free-to-download AI model that was the highest-scoring open model when it launched, though a newer model (Kimi K3) has since taken the top spot. GLM-5.2 is very large, so most people cannot run the full version at home — you either rent a powerful GPU or use a heavily shrunk-down version.' },
     ],
     quickAnswerTop: {
       question: 'Is GLM-5.2 still the best open-weights model, and can I self-host it?',
-      answer: 'As of August 2026, GLM-5.2 is no longer the top open-weights model — Moonshot AI\'s Kimi K3 (released July 27, 2026) now holds that spot on the Artificial Analysis Intelligence Index. GLM-5.2 remains the #2 open-weights model, and Z.ai\'s own follow-up GLM-5.3 (August 14, 2026) improves on GLM-5.2\'s coding results but has not yet released public weights. The MIT license lets you self-host GLM-5.2 with no regional limits, but the full ~744B model needs serious hardware. Most individuals run a heavily quantized build or rent a GPU.',
+      answer: 'GLM-5.2 is no longer the top open-weights model — Moonshot AI\'s Kimi K3 (released July 27, 2026) now holds that spot on the Artificial Analysis Intelligence Index. GLM-5.2 remains the #2 open-weights model, and Z.ai\'s own follow-up GLM-5.3 (August 14, 2026) improves on GLM-5.2\'s coding results but has not yet released public weights. The MIT license lets you self-host GLM-5.2 with no regional limits, but the full ~744B model needs serious hardware. Most individuals run a heavily quantized build or rent a GPU.',
       bullets: [
         '#2 open-weights (Artificial Analysis Intelligence Index) — Kimi K3 (Moonshot AI) took #1 in July 2026',
         'MIT license, no regional limits, free to self-host',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '**#2 open-weights, was #1 at launch.** GLM-5.2 scored 51 on the Artificial Analysis Intelligence Index v4.1 when it launched in June 2026 — the top open-weights model at the time. As of August 2026, Moonshot AI\'s **Kimi K3** (57, released July 27, 2026) holds the #1 open-weights spot; GLM-5.2 (now ~52.6 on the updated v4.1.1 index) is #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (44 each).',
+          '**#2 open-weights, was #1 at launch.** GLM-5.2 scored 51 on the Artificial Analysis Intelligence Index v4.1 when it launched in June 2026 — the top open-weights model at the time. Moonshot AI\'s **Kimi K3** (57, released July 27, 2026) holds the #1 open-weights spot; GLM-5.2 (now ~52.6 on the updated v4.1.1 index) is #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (44 each).',
           '**Z.ai already shipped a follow-up, GLM-5.3.** Released August 14, 2026 on the same base model as GLM-5.2 with heavier post-training, GLM-5.3 posts sharply better coding scores (Terminal-Bench 3.0 rose from 4.6 to 28.3). It is available only through Z.ai\'s API and Coding Plan; public weights had not shipped as of this refresh.',
           '**Strong on coding, further behind the closed frontier now.** GLM-5.2 remains ahead of GPT-5.5 on independent coding benchmarks, but Anthropic and OpenAI have both shipped newer closed models since — Claude Opus 5 and GPT-5.6 Sol — that lead GLM-5.2 in head-to-head coding results by a wider margin than their June 2026 predecessors did.',
           '**~744B parameters is still not home-runnable.** It is Mixture-of-Experts (~40B active per token); the full model needs multi-GPU or a rented GPU. Z.ai\'s smaller **GLM-5.3-Flash** (320B total / 18B active, released August 26, 2026, MIT license) is more self-hostable, though still far from a single consumer GPU without heavy quantization.',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'independent-benchmarks',
         title: 'How Good Is GLM-5.2? Independent Benchmarks First',
         content: [
-          '**GLM-5.2 was the highest-scoring open-weights model on the Artificial Analysis Intelligence Index when it launched in June 2026 (51 points, 4th overall). As of August 2026, Moonshot AI\'s Kimi K3 has taken the #1 open-weights spot; GLM-5.2 is now #2 (Artificial Analysis, July–August 2026).**',
+          '**GLM-5.2 was the highest-scoring open-weights model on the Artificial Analysis Intelligence Index when it launched in June 2026 (51 points, 4th overall). Moonshot AI\'s Kimi K3 has taken the #1 open-weights spot; GLM-5.2 is now #2 (Artificial Analysis, July–August 2026).**',
         ],
         rows: [
           { 'Model': 'Claude Fable 5', 'Index v4.1.1': '~62', 'Tier': 'Closed frontier' },
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'DeepSeek V4 Pro', 'Index v4.1.1': '44', 'Tier': 'Open weights' },
         ],
         columns: ['Model', 'Index v4.1.1', 'Tier'],
-        note: 'Independent coding results at launch (June 2026): Terminal-Bench 2.1 — GLM-5.2 scored 81.0 vs Claude Opus 4.8 at 85.0. SWE-bench Pro — GLM-5.2 at 62.1 (Z.ai-reported point value) landed ahead of GPT-5.5\'s 58.6; independent coverage corroborated that ordering. Both Claude Opus 4.8 and GPT-5.5 have since been superseded by Claude Opus 5 and GPT-5.6 Sol, and GLM-5.2 trails both newer closed models by a wider margin than it trailed their predecessors. Separately, Moonshot AI\'s Kimi K3 (2.8T total parameters, ~104B active, released July 27, 2026 under Moonshot\'s modified-MIT Kimi K3 License) now leads GLM-5.2 on the Intelligence Index and on coding benchmarks including FrontierSWE (81.2) and Terminal-Bench 2.0 (88.3). Net verdict as of August 2026: GLM-5.2 remains a top-tier open-weights coding model, but it is no longer the strongest open-weights option available — that is now Kimi K3 — and the gap to the closed frontier has widened since launch (Artificial Analysis; VentureBeat; TechTimes, July–August 2026).',
+        note: 'Independent coding results at launch (June 2026): Terminal-Bench 2.1 — GLM-5.2 scored 81.0 vs Claude Opus 4.8 at 85.0. SWE-bench Pro — GLM-5.2 at 62.1 (Z.ai-reported point value) landed ahead of GPT-5.5\'s 58.6; independent coverage corroborated that ordering. Both Claude Opus 4.8 and GPT-5.5 have since been superseded by Claude Opus 5 and GPT-5.6 Sol, and GLM-5.2 trails both newer closed models by a wider margin than it trailed their predecessors. Separately, Moonshot AI\'s Kimi K3 (2.8T total parameters, ~104B active, released July 27, 2026 under Moonshot\'s modified-MIT Kimi K3 License) now leads GLM-5.2 on the Intelligence Index and on coding benchmarks including FrontierSWE (81.2) and Terminal-Bench 2.0 (88.3). Net verdict: GLM-5.2 remains a top-tier open-weights coding model, but it is no longer the strongest open-weights option available — that is now Kimi K3 — and the gap to the closed frontier has widened since launch (Artificial Analysis; VentureBeat; TechTimes, July–August 2026).',
         image: '/images/glm-5-2-intelligence-index-en.svg',
         imageCaption: 'Artificial Analysis Intelligence Index (August 2026): Claude Fable 5 leads at ~62, Kimi K3 (Moonshot AI) is #1 open weights at 57, GLM-5.2 is #2 open weights at ~52.6 (down from #1 at its June 2026 launch), MiniMax-M3 and DeepSeek V4 Pro both score 44.',
       },
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'pricing',
         title: 'GLM-5.2 Pricing and Cost',
         content: [
-          '**Via the hosted API, GLM-5.2 runs at roughly one-sixth the cost of closed-frontier models (VentureBeat, June 2026).** Reported pricing is approximately $1.4 per 1M input tokens and $4.4 per 1M output tokens (as of June 2026). Factor in the high per-task output (~43,000 tokens) when estimating real workload cost.',
+          '**Via the hosted API, GLM-5.2 runs at roughly one-sixth the cost of closed-frontier models (VentureBeat, June 2026).** Reported pricing is approximately $1.4 per 1M input tokens and $4.4 per 1M output tokens. Factor in the high per-task output (~43,000 tokens) when estimating real workload cost.',
         ],
       },
       decision: {
@@ -212,13 +212,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-            { q: 'Is GLM-5.2 still the best open-weights model right now?', a: 'No — as of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).' },
+            { q: 'Is GLM-5.2 still the best open-weights model right now?', a: 'No —, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).' },
             { q: 'Can I run GLM-5.2 on a normal PC or Mac?', a: 'Not the full model. At ~744B parameters it needs multi-GPU servers or a rented cloud GPU. On consumer hardware you are limited to heavily quantized 1-bit GGUF builds, which trade quality and speed. Z.ai\'s smaller GLM-5.3-Flash (320B total / ~18B active, MIT license) is somewhat more self-hostable but still not consumer-laptop territory. See our hardware guides for what large local models actually require.' },
-            { q: 'Does GLM-5.2 beat GPT-5.5, Claude Opus 4.8, and their successors?', a: 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding (for example SWE-bench Pro and FrontierSWE orderings) while trailing Claude Opus 4.8 in most head-to-head comparisons — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both GPT-5.5 and Claude Opus 4.8 have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors. The accurate summary as of August 2026 is "a strong #2 open-weights model, further from the closed frontier than at launch."' },
+            { q: 'Does GLM-5.2 beat GPT-5.5, Claude Opus 4.8, and their successors?', a: 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding (for example SWE-bench Pro and FrontierSWE orderings) while trailing Claude Opus 4.8 in most head-to-head comparisons — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both GPT-5.5 and Claude Opus 4.8 have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors. The accurate summary is "a strong #2 open-weights model, further from the closed frontier than at launch."' },
             { q: 'Has GLM-5.2 been replaced by GLM-5.3 or Kimi K3?', a: 'GLM-5.2 has not been replaced, but it has been surpassed on two fronts. Z.ai released GLM-5.3 on August 14, 2026 — the same base model with heavier post-training and notably better coding scores — but its public weights had not shipped as of this refresh; it is available only via Z.ai\'s API and Coding Plan. Separately, Moonshot AI\'s Kimi K3 (July 27, 2026) overtook GLM-5.2 as the top open-weights model overall. GLM-5.2 remains a fully self-hostable, independently verified #2 open-weights option.' },
             { q: 'Is GLM-5.2 really free? What is the license?', a: 'GLM-5.2 is released under the MIT license with no regional usage limits, so you can download, self-host, and modify it for free. Running the full model still costs real infrastructure (multi-GPU or rented GPU), and the hosted Z.ai API is a paid service.' },
             { q: 'Is my data safe with GLM-5.2?', a: 'It depends on the deployment path. Self-hosted MIT weights keep all data inside your own boundary. The first-party Z.ai API carries China data-residency considerations flagged by independent coverage, so treat it as you would any third-party cloud endpoint subject to its jurisdiction.' },
-            { q: 'Are GLM-5.2\'s benchmark numbers trustworthy?', a: 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking as of August 2026. Z.ai\'s own coding numbers are company-reported, and reproducibility is contested — the Artificial Analysis writeup notes internal evaluations were reported weaker than published benchmarks. This applies to GLM-5.3\'s reported gains too. Lead with the independent numbers and treat first-party figures as claims.' },
+            { q: 'Are GLM-5.2\'s benchmark numbers trustworthy?', a: 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking. Z.ai\'s own coding numbers are company-reported, and reproducibility is contested — the Artificial Analysis writeup notes internal evaluations were reported weaker than published benchmarks. This applies to GLM-5.3\'s reported gains too. Lead with the independent numbers and treat first-party figures as claims.' },
             { q: 'How much does GLM-5.2 cost to run via API?', a: 'Roughly one-sixth the cost of closed-frontier models. Reported pricing is approximately $1.4 per 1M input tokens and $4.4 per 1M output tokens (June 2026, unchanged as of this refresh). Because GLM-5.2 averages ~43,000 output tokens per task, estimate real cost on your own workload rather than per-token rates alone.' },
             { q: 'What hardware do I need to self-host GLM-5.2 properly?', a: 'For the full model, multi-GPU servers or a rented cloud GPU. Consumer hardware can only run heavily quantized 1-bit GGUF builds. See the Local LLM Hardware Guide 2026, Used GPUs for Local LLMs, and Running 70B Models on Consumer Hardware to size your setup.' },
           ],
@@ -295,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is GLM-5.2 still the best open-weights model right now?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No — as of August 2026, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).',
+              'text': 'No —, Moonshot AI\'s Kimi K3 (released July 27, 2026) holds the top spot on the Artificial Analysis Intelligence Index at 57 points, ahead of GLM-5.2\'s ~52.6. GLM-5.2 was #1 open weights when it launched in June 2026 (51 points) but is now #2, still ahead of MiniMax-M3 and DeepSeek V4 Pro (both 44).',
             },
           },
           {
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Does GLM-5.2 beat GPT-5.5, Claude Opus 4.8, and their successors?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding (for example SWE-bench Pro and FrontierSWE orderings) while trailing Claude Opus 4.8 in most head-to-head comparisons — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both GPT-5.5 and Claude Opus 4.8 have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors. The accurate summary as of August 2026 is "a strong #2 open-weights model, further from the closed frontier than at launch."',
+              'text': 'At launch, independent results put GLM-5.2 ahead of GPT-5.5 on coding (for example SWE-bench Pro and FrontierSWE orderings) while trailing Claude Opus 4.8 in most head-to-head comparisons — for example Terminal-Bench 2.1 (81.0 vs 85.0). Both GPT-5.5 and Claude Opus 4.8 have since been superseded by GPT-5.6 Sol and Claude Opus 5, and GLM-5.2 trails these newer closed models by a wider margin than it trailed their predecessors. The accurate summary is "a strong #2 open-weights model, further from the closed frontier than at launch."',
             },
           },
           {
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Are GLM-5.2\'s benchmark numbers trustworthy?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking as of August 2026. Z.ai\'s own coding numbers are company-reported, and reproducibility is contested — the Artificial Analysis writeup notes internal evaluations were reported weaker than published benchmarks. This applies to GLM-5.3\'s reported gains too. Lead with the independent numbers and treat first-party figures as claims.',
+              'text': 'The independent Artificial Analysis Index corroborates GLM-5.2\'s #2-open-weights ranking. Z.ai\'s own coding numbers are company-reported, and reproducibility is contested — the Artificial Analysis writeup notes internal evaluations were reported weaker than published benchmarks. This applies to GLM-5.3\'s reported gains too. Lead with the independent numbers and treat first-party figures as claims.',
             },
           },
           {

@@ -191,7 +191,7 @@ schema: {
             'Assuming vLLM auto-scales across multiple GPUs. Requires explicit `--tensor-parallel-size` flag.',
             'Forgetting to set CUDA_VISIBLE_DEVICES if multi-GPU. vLLM uses all GPUs by default.',
             'Using Llama 3.3 models in 2026. Meta deprecated Llama 3.3 for commercial use in January 2026. Use Llama 3.1 8B Instruct (Apache 2.0 license, no restrictions).',
-            '**Using Llama 3.3 when Llama 3.3 is available.** Llama 3.1 8B Instruct has better instruction-following and is the recommended default as of July 2026. Use `ollama run llama3.1:8b-instruct`.',
+            '**Using Llama 3.3 when Llama 3.3 is available.** Llama 3.1 8B Instruct has better instruction-following and is the recommended default. Use `ollama run llama3.1:8b-instruct`.',
           ],
         },
         'faqSection': {

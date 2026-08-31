@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       hardwareRecommendation: {
         heading: 'Our Hardware Recommendation: Minisforum UM890 Pro',
-        body: '**The Minisforum UM890 Pro is the right fit specifically if this project is going to grow past a small experiment.** It pairs an AMD Ryzen 9 8945HS (8 cores/16 threads) with Radeon 780M graphics, two DDR5 SO-DIMM slots supporting up to 96 GB, two PCIe 4.0 M.2 SSD slots, and dual 2.5GbE networking. As of August 2026 it runs from $439 barebones to roughly $649 with 32 GB DDR5 and 1 TB storage (US pricing, volatile — check the live price) — Minisforum\'s own store and Amazon both carry it.',
+        body: '**The Minisforum UM890 Pro is the right fit specifically if this project is going to grow past a small experiment.** It pairs an AMD Ryzen 9 8945HS (8 cores/16 threads) with Radeon 780M graphics, two DDR5 SO-DIMM slots supporting up to 96 GB, two PCIe 4.0 M.2 SSD slots, and dual 2.5GbE networking. It runs from $439 barebones to roughly $649 with 32 GB DDR5 and 1 TB storage (US pricing, volatile — check the live price) — Minisforum\'s own store and Amazon both carry it.',
         items: [
           '**RAM headroom is the actual reason to choose it, not raw CPU speed.** A local AI server needs memory for the OS, Ollama, the model itself, conversation history, and — if you add it later — embeddings and a database. 96 GB of ceiling gives real room to grow; a budget N150 box tops out far lower.',
           '**Two SSD slots** let you dedicate one to the OS and applications and a second to models and data, which matters once you\'re running more than one local AI service.',
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       budgetAlternative: {
         heading: 'Budget Alternative: N150 Mini PC',
-        body: '**If the WeChat assistant is genuinely the only serious workload, an N150 mini PC is much cheaper and still gets the job done.** Two real options: the GMKtec G3 Plus (from €159.99 on GMKtec\'s own EU store as of August 2026, or $140–200 on US listings — its RAM is a replaceable DDR4 SO-DIMM up to 32 GB, a real advantage over soldered-RAM rivals) and the Beelink EQ14 (roughly $189–199, dual 2.5GbE networking but capped at a soldered 16 GB). Both use the same Intel N150 CPU as each other, so neither meaningfully outruns the other on this specific workload.',
+        body: '**If the WeChat assistant is genuinely the only serious workload, an N150 mini PC is much cheaper and still gets the job done.** Two real options: the GMKtec G3 Plus (from €159.99 on GMKtec\'s own EU store, or $140–200 on US listings — its RAM is a replaceable DDR4 SO-DIMM up to 32 GB, a real advantage over soldered-RAM rivals) and the Beelink EQ14 (roughly $189–199, dual 2.5GbE networking but capped at a soldered 16 GB). Both use the same Intel N150 CPU as each other, so neither meaningfully outruns the other on this specific workload.',
         items: [
           'Choose an N150 machine if: price matters most, a Qwen3 3B model is genuinely enough for your use case, you want very low power consumption, and the box might also run Home Assistant or other light services alongside the bot.',
           'Choose the UM890 Pro instead if: local AI is the primary workload, you want Qwen3 8B+ to feel responsive, you want 32 GB+ RAM, or you plan to run RAG or multiple local AI services on the same box.',

@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I still buy a used RTX 3090 for under $500 in 2026?',
-            a: 'No — as of July 2026, used RTX 3090 cards trade at $1,000–1,100 on eBay. The price rose significantly from 2024 levels as LLM enthusiasts recognized its 24 GB VRAM value. It is no longer a sub-$500 option. If you need 30B model capability (which requires 24 GB VRAM), budget $1,000+ for a used RTX 3090 or consider an RTX 4080 SUPER (16 GB, ~$850 new) for faster 14B Q8 performance.',
+            a: 'No —, used RTX 3090 cards trade at $1,000–1,100 on eBay. The price rose significantly from 2024 levels as LLM enthusiasts recognized its 24 GB VRAM value. It is no longer a sub-$500 option. If you need 30B model capability (which requires 24 GB VRAM), budget $1,000+ for a used RTX 3090 or consider an RTX 4080 SUPER (16 GB, ~$850 new) for faster 14B Q8 performance.',
           },
           {
             q: 'Does AMD work for running LLMs locally?',

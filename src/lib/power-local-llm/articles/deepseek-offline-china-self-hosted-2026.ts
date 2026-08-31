@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       budgetTiers: {
         id: 'budget-tiers',
         title: 'Hardware Budget by Tier',
-        content: '**Important 2026 context: GPU and VRAM prices have risen substantially over the past year due to memory-market pressure — a used 24 GB card that cost roughly $1,000–1,300 in 2025 was trading closer to $2,200–2,800 as of August 2026.** Budget accordingly rather than assuming last year\'s pricing still holds; the entry 16 GB tier has stayed comparatively stable.',
+        content: '**Important 2026 context: GPU and VRAM prices have risen substantially over the past year due to memory-market pressure — a used 24 GB card that cost roughly $1,000–1,300 in 2025 was trading closer to $2,200–2,800.** Budget accordingly rather than assuming last year\'s pricing still holds; the entry 16 GB tier has stayed comparatively stable.',
         tableFormat: true,
         columns: ['Budget', 'Goal', 'Notes'],
         rows: [

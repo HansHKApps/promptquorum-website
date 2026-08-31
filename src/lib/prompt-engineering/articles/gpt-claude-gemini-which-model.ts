@@ -275,9 +275,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         longContext: {
           id: 'best-for-long-context',
           title: 'Best LLM for long context or large documents 2026?',
-          content: '**As of May 2026, all three frontier models support 1M context tokens (handles ~800 pages). The long-context gap has closed. For tasks requiring more than 1M tokens, consider local models like LLaMA 4 Scout (10M tokens).** Choose based on cost, retrieval precision, and whether you need to load multiple files simultaneously.',
+          content: '**All three frontier models support 1M context tokens (handles ~800 pages). The long-context gap has closed. For tasks requiring more than 1M tokens, consider local models like LLaMA 4 Scout (10M tokens).** Choose based on cost, retrieval precision, and whether you need to load multiple files simultaneously.',
           image: '/images/context-windows-chart.svg',
-          imageCaption: 'Context window comparison: As of May 2026, all three frontier models support 1M tokens — context window parity has arrived. Gemini 2.5 Pro previously led with 2M.',
+          imageCaption: 'Context window comparison: All three frontier models support 1M tokens — context window parity has arrived. Gemini 2.5 Pro previously led with 2M.',
           items: [
             '**Gemini 3.1 Pro (1M tokens):** Load entire codebases, legal document sets, or research archives. Web search integration lets you reference external sources within long context. Best for: due diligence reviews, regulatory analysis, knowledge base search, processing 100+ page PDFs.',
             '**Claude Opus 5 (1M tokens):** Excellent for detailed analysis and extracting nuanced information from long documents. Trade-off: highest cost per token, but quality may reduce revision rounds.',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Assuming context window = quality on long documents',
-              problem: 'As of May 2026, all three frontier models support 1M tokens — context window parity has arrived. Filling a 1M context doesn\'t mean the model uses all of it well. The "lost in the middle" problem means information in the center of very long contexts may be missed.',
+              problem: 'All three frontier models support 1M tokens — context window parity has arrived. Filling a 1M context doesn\'t mean the model uses all of it well. The "lost in the middle" problem means information in the center of very long contexts may be missed.',
               fix: 'For documents over 200 pages, chunk and summarize rather than pasting everything into one prompt, regardless of context window size. For documents requiring >1M tokens, consider local models like LLaMA 4 Scout (10M).',
             },
             {

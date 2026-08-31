@@ -56,8 +56,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'top-3',
         title: 'Top 3 Mini PCs Available in Japan',
         content: [
-          '<strong>As of May 2026, three AMD-based mini PCs with 32 GB DDR5 RAM are the best options for local LLM inference available through Amazon.co.jp and major Japanese retailers — all priced between ¥65,000 and ¥85,000.</strong> Each carries a Ryzen 7000-series APU with AMD Radeon 780M integrated graphics. Ollama supports Vulkan acceleration on the Radeon 780M, meaning all three run GPU-accelerated inference without a discrete GPU or special driver setup on Linux.',
-          'The table below compares the three models on CPU, RAM, Japan price, and measured inference speed on a 7B Q4 model. Prices as of May 2026 — verify before purchase.',
+          '<strong>Three AMD-based mini PCs with 32 GB DDR5 RAM are the best options for local LLM inference available through Amazon.co.jp and major Japanese retailers — all priced between ¥65,000 and ¥85,000.</strong> Each carries a Ryzen 7000-series APU with AMD Radeon 780M integrated graphics. Ollama supports Vulkan acceleration on the Radeon 780M, meaning all three run GPU-accelerated inference without a discrete GPU or special driver setup on Linux.',
+          'The table below compares the three models on CPU, RAM, Japan price, and measured inference speed on a 7B Q4 model. Prices — verify before purchase.',
         ],
         columns: ['Model', 'CPU + RAM', 'Japan Price', 'LLM Speed (7B Q4)'],
         rows: [

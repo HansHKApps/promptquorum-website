@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPT4All** — still the only app with a 4 GB RAM floor and a no-admin install path, but its last release was v3.10.0 on 25 February 2025, so treat it as a fallback rather than a first choice.',
           '**Best model on 8 GB / no-GPU:** Phi-4 Mini 3.8B at Q4_K_M for balance, SmolLM 2 1.7B Q4 for max speed, Llama 3.2 1B Q5 for smoothest chat feel.',
           '**Speed ranking on identical CPU:** llama.cpp > Ollama > Jan > GPT4All. The gap is 15–25%, not 2–3×.',
-          '**As of August 2026, do not run 7B+ models on 8 GB RAM** — context-window pressure plus the operating system itself will trigger swap and crater throughput by 5–10×.',
+          '**Do not run 7B+ models on 8 GB RAM** — context-window pressure plus the operating system itself will trigger swap and crater throughput by 5–10×.',
         ],
       },
       comparisonTable: {
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is GPT4All still safe to install in 2026?',
-            a: 'It installs and runs fine, but its most recent release is v3.10.0 from 25 February 2025 — roughly 18 months without a new build as of August 2026. Practically that means no new model architectures in the bundled catalog and no security patches to the app itself, which matters more on a work machine than a personal one. Use it when its two remaining advantages apply — a 4 GB RAM ceiling, or a locked-down laptop where you cannot install anything needing admin rights — and use Jan otherwise.',
+            a: 'It installs and runs fine, but its most recent release is v3.10.0 from 25 February 2025 — roughly 18 months without a new build. Practically that means no new model architectures in the bundled catalog and no security patches to the app itself, which matters more on a work machine than a personal one. Use it when its two remaining advantages apply — a 4 GB RAM ceiling, or a locked-down laptop where you cannot install anything needing admin rights — and use Jan otherwise.',
           },
           {
             q: 'Can I use a Raspberry Pi for local AI?',

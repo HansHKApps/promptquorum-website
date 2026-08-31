@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quick Facts',
         items: [
           '**What VLMs do:** Accept image + text input → produce text output. Not image generators — these are image *understanders*.',
-          '**Ollama support:** All models in this comparison have official or community Ollama integration as of May 2026.',
+          '**Ollama support:** All models in this comparison have official or community Ollama integration.',
           '**Smallest usable model:** Moondream 2 at 1.9B parameters, ~2 GB VRAM.',
           '**Largest practical local model:** Llama 3.2 Vision 90B at ~64 GB unified memory (Apple M-series or multi-GPU).',
           '**Image input format:** JPEG, PNG, WebP accepted. Max resolution varies by model (typically 1024×1024 to 4096×4096).',

@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'understanding-llama-cpp',
           title: 'Understanding llama.cpp: The Foundation',
           content: [
-            '**llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration.** As of August 2026, it remains the most lightweight and portable inference engine.',
+            '**llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration.** It remains the most lightweight and portable inference engine.',
             '**Why llama.cpp dominates consumer use:**',
             '- Minimal memory overhead -- can run on 8 GB RAM with CPU alone.',
             '- Supports multiple GPU backends (NVIDIA, AMD, Apple Metal, Intel).',
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **Batch processing**: Can process 50-100 prompts simultaneously, serving more users per GPU.',
             '- **Distributed inference**: Split a 70B model across multiple GPUs automatically.',
             '- **Wide model support**: Works with any HuggingFace model (Llama, Qwen, Mistral, Phi, etc.).',
-            'As of August 2026, vLLM remains the most widely deployed production engine, though SGLang (also built on Paged Attention) has gained adoption at the largest scale for its faster structured-output and multi-model serving. The trade-off for vLLM is hardware breadth in practice: it also runs on AMD ROCm, Intel and CPU (and experimentally on Apple Silicon), but NVIDIA remains by far the best-optimised path, and its CPU performance stays well behind llama.cpp.',
+            'VLLM remains the most widely deployed production engine, though SGLang (also built on Paged Attention) has gained adoption at the largest scale for its faster structured-output and multi-model serving. The trade-off for vLLM is hardware breadth in practice: it also runs on AMD ROCm, Intel and CPU (and experimentally on Apple Silicon), but NVIDIA remains by far the best-optimised path, and its CPU performance stays well behind llama.cpp.',
           ],
           codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
           codeLanguage: 'bash',
@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'performance-tokens-per-second',
           title: 'How Fast Is Each Engine? Throughput Comparison?',
           content: [
-            '**Throughput (tokens per second) depends on the model size, hardware, and engine optimization.** As of August 2026, here are real-world benchmarks on consumer hardware:',
+            '**Throughput (tokens per second) depends on the model size, hardware, and engine optimization.** Here are real-world benchmarks on consumer hardware:',
           ],
           rows: [
             { 'Scenario': 'Llama 3.2 3B on RTX 4090 (GPU)', 'llama.cpp': '150 tokens/sec', 'vLLM': '300 tokens/sec (with batching)', 'Text-Gen-WebUI': '150 tokens/sec' },
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'production-deployments',
           title: 'Which Engine for Production Deployments?',
           content: [
-            '**vLLM is the production standard as of August 2026** (alongside SGLang for the largest deployments). Most companies running local LLM APIs in production use vLLM because of its throughput optimization and batching support. A single vLLM instance can serve 50+ concurrent users on one GPU, vs. 1-2 for llama.cpp.',
+            '**vLLM is the production standard** (alongside SGLang for the largest deployments). Most companies running local LLM APIs in production use vLLM because of its throughput optimization and batching support. A single vLLM instance can serve 50+ concurrent users on one GPU, vs. 1-2 for llama.cpp.',
             'However, production choice depends on your constraint:',
             '- **Serving 100+ requests/day with limited GPU**: Use vLLM (best throughput).',
             '- **Serving with only CPU or Apple Silicon**: Use llama.cpp via Ollama (best CPU support).',
@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**EU / GDPR:** For EU enterprise deployments, vLLM running on-premises keeps all inference within EU infrastructure -- no tokens, prompts, or outputs leave your servers. For German BSI IT-Grundschutz compliance, vLLM is the recommended production engine because it provides structured audit logging via Prometheus metrics (/metrics endpoint), and all model versions are pinnable via HuggingFace model IDs for compliance documentation. Mistral models (Mistral AI, France, Apache 2.0) are the EU-preferred choice for vLLM production deployments -- EU origin, clean licence, strong performance. vLLM command: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
             '**Japan (METI):** METI AI governance requires documenting inference infrastructure. vLLM\'s structured Prometheus metrics satisfy audit trail requirements better than llama.cpp\'s stdout logging. For Japanese enterprise deployments, Qwen3 8B via vLLM is the recommended stack -- native Japanese tokenization plus production throughput. vLLM command: `vllm serve Qwen/Qwen3-8B-Instruct`',
-            '**China:** Under China\'s Data Security Law (数据安全法), all inference must remain on-premises for sensitive data. vLLM is compatible with Alibaba Cloud A10 and A100 GPU instances. Qwen3 (Alibaba) models are natively optimized for vLLM and provide the best Chinese-language throughput. For Chinese enterprise production: vLLM + Qwen3 14B on Alibaba Cloud is the standard stack as of August 2026.',
+            '**China:** Under China\'s Data Security Law (数据安全法), all inference must remain on-premises for sensitive data. vLLM is compatible with Alibaba Cloud A10 and A100 GPU instances. Qwen3 (Alibaba) models are natively optimized for vLLM and provide the best Chinese-language throughput. For Chinese enterprise production: vLLM + Qwen3 14B on Alibaba Cloud is the standard stack.',
           ],
         },
         commonMistakes: {

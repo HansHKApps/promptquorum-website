@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Cloud GPU rental prices for LLM inference as of August 2026: RunPod ($0.34–0.69/hr RTX 4090, best reliability), Vast.ai ($0.08–0.59/hr, cheapest interruptible), Lambda Labs ($1.99–2.79/hr A100, $3.29–3.99/hr H100, 99.9% uptime for teams).' },
+          { type: 'one-sentence', text: 'Cloud GPU rental prices for LLM inference: RunPod ($0.34–0.69/hr RTX 4090, best reliability), Vast.ai ($0.08–0.59/hr, cheapest interruptible), Lambda Labs ($1.99–2.79/hr A100, $3.29–3.99/hr H100, 99.9% uptime for teams).' },
           { type: 'plain-terms', text: 'Cloud GPU rental lets you pay by the hour to use a powerful graphics card on someone else\'s server — no hardware to buy. Interruptible instances are cheaper but can be reclaimed at any time; reserved instances are stable and cost more. RTX 4090 and RTX 5090 handle LLM inference; A100/H100 handle training or very high throughput.' },
         ],
         items: [
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quick Comparison Table',
         content: 'Head-to-head pricing and features for LLM inference, checked August 2026. Prices are hourly rates; most providers bill per-second, so actual costs depend on runtime. RTX 5090 listings are newer and less consistently available than RTX 4090 — check current stock on each provider\'s dashboard.',
         image: '/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-en.svg',
-        imageCaption: 'Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs as of August 2026, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA.',
+        imageCaption: 'Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA.',
         columns: ['Provider', 'RTX 4090', 'RTX 5090', 'A100 80GB', 'H100 80GB', 'Uptime SLA', 'Billing', 'Free Credits', 'EU Region'],
         rows: [
           {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: 'You Run LLMs >4 Hours Daily',
-        content: 'At the RunPod RTX 4090 midpoint rate ($0.50/hr): $0.50/hr × 4 hours × 30 days = $60/month. Over 18 months that\'s $1,080 — less than half the cost of an actual RTX 4090 (roughly $2,000–2,600 retail, EOL pricing as of August 2026). If your usage is consistent and predictable, buying is cheaper long-term.',
+        content: 'At the RunPod RTX 4090 midpoint rate ($0.50/hr): $0.50/hr × 4 hours × 30 days = $60/month. Over 18 months that\'s $1,080 — less than half the cost of an actual RTX 4090 (roughly $2,000–2,600 retail, EOL pricing). If your usage is consistent and predictable, buying is cheaper long-term.',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg',
         imageCaption: 'Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $2,000–2,600 RTX 4090 outright (EOL pricing, August 2026), based on 4 hours of daily use. Renting stays cheaper until roughly 4,600 hours (about 38 months), after which owning the GPU costs less than continued RunPod rental.',
         callouts: [
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
             { q: 'RunPod vs Vast.ai vs Lambda Labs: which is cheapest for LLM inference?', a: 'Vast.ai is cheapest on paper ($0.08–0.59/hr RTX 4090) but interruptible. RunPod ($0.34–0.69/hr RTX 4090) is the best balance of price and stability for LLM inference. Lambda Labs ($1.99–3.99/hr A100/H100) has no consumer GPU tier and costs more, but includes managed support and a 99.9% SLA.' },
             { q: 'Does this comparison cover Stable Diffusion and image generation, or only LLM inference?', a: 'The pricing, GPU tiers, and providers in this guide apply to both. Stable Diffusion and other image-generation workloads run on the same RTX 4090/RTX 5090/A100/H100 instances as LLM inference. See the Vast.ai section above for image-generation-specific guidance on spot vs. stable instances.' },
-            { q: 'Is the RTX 5090 available for cloud rental yet?', a: 'Yes, on a growing but still limited number of RunPod and Vast.ai listings as of August 2026. Availability and pricing are less consistent than the established RTX 4090 tier — check current listings on the provider dashboard rather than assuming stock. Lambda Labs does not offer any consumer-tier GPU, including RTX 5090.' },
+            { q: 'Is the RTX 5090 available for cloud rental yet?', a: 'Yes, on a growing but still limited number of RunPod and Vast.ai listings. Availability and pricing are less consistent than the established RTX 4090 tier — check current listings on the provider dashboard rather than assuming stock. Lambda Labs does not offer any consumer-tier GPU, including RTX 5090.' },
             { q: 'Can I pause and resume my instance?', a: 'Yes. RunPod and Vast.ai allow you to pause instances (snapshot saved). Lambda Labs can pause via API. While paused, you pay storage only (negligible cost, typically <$0.01/day).' },
             { q: 'What happens if my instance runs out of disk space?', a: 'The instance will crash. Add an extra disk via provider dashboard and mount to /mnt/ before it fills. Standard practice: monitor disk usage weekly.' },
             { q: 'Can I use these for commercial AI inference?', a: 'Yes, but check provider terms. RunPod and Lambda Labs allow commercial workloads. Vast.ai individual providers may have restrictions — read the listing carefully.' },
@@ -682,7 +682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is the RTX 5090 available for cloud rental yet?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, on a growing but still limited number of RunPod and Vast.ai listings as of August 2026. Availability and pricing are less consistent than the established RTX 4090 tier — check current listings on the provider dashboard rather than assuming stock. Lambda Labs does not offer any consumer-tier GPU, including RTX 5090.',
+              'text': 'Yes, on a growing but still limited number of RunPod and Vast.ai listings. Availability and pricing are less consistent than the established RTX 4090 tier — check current listings on the provider dashboard rather than assuming stock. Lambda Labs does not offer any consumer-tier GPU, including RTX 5090.',
             },
           },
           {

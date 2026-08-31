@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/teaching-with-ai-overview-hero-en.webp',
       title: 'Teaching With AI in 2026: Harvard Study Shows 2× Learning Gains — Tools, Prompts & EU AI Act Guide',
-      intro: '**To teach effectively with AI in 2026: use a structured five-component prompt (role, objective, student context, constraints, output format), choose a tool matched to the task (Khanmigo for tutoring, MagicSchool for lesson planning, Claude Sonnet 5 or GPT-5.6 for content generation), set temperature to 0.1–0.2 for factual content, and — for EU schools — implement Article 4 staff AI literacy training before deploying any high-risk system.** A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time. As of May 2026, 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
+      intro: '**To teach effectively with AI in 2026: use a structured five-component prompt (role, objective, student context, constraints, output format), choose a tool matched to the task (Khanmigo for tutoring, MagicSchool for lesson planning, Claude Sonnet 5 or GPT-5.6 for content generation), set temperature to 0.1–0.2 for factual content, and — for EU schools — implement Article 4 staff AI literacy training before deploying any high-risk system.** A 2024 Harvard randomized controlled trial found AI tutoring produced learning gains more than twice those of active learning classrooms — in 18% less study time., 85% of US teachers and 86% of students used AI during the school year, higher than any other industry. The challenge is not adoption but structure: vague prompts produce unusable outputs, structured prompts save 5–13 hours per week, and EU schools now carry legal obligations under the AI Act for any AI tool that touches student assessment.',
       publishDate: '2026-03-23',
       dateModified: '2026-07-13',
       readTime: '8 min read',
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'AI detection tools have 15–30% false positive rates — they are insufficient as standalone academic integrity enforcement tools',
             'EU AI Act classifies educational AI as high-risk; EU schools must implement AI literacy training for all staff (Article 4, effective 2025)',
             'Students using AI tools achieve 15–35% higher assessment scores across 21 empirical studies; r = 0.781 correlation between AI tool use and outcomes',
-            'As of May 2026, GPT-5.6, Claude Sonnet 5 (Anthropic), and Gemini 3.1 Pro all support 1M-token context windows (~800 pages per session) — context window size is no longer a key differentiator between frontier models',
+            'GPT-5.6, Claude Sonnet 5 (Anthropic), and Gemini 3.1 Pro all support 1M-token context windows (~800 pages per session) — context window size is no longer a key differentiator between frontier models',
           ],
         },
         quickFacts: {
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'What AI Teaching Tools Actually Do',
           content: [
-            '**As of May 2026, AI teaching tools perform four distinct functions: personalized tutoring, lesson plan generation, automated assessment feedback, and administrative task reduction — each requiring a different tool and a different prompt structure.**',
+            '**AI teaching tools perform four distinct functions: personalized tutoring, lesson plan generation, automated assessment feedback, and administrative task reduction — each requiring a different tool and a different prompt structure.**',
             'Intelligent Tutoring Systems (ITS) — the technical category for tools like Khanmigo — adapt difficulty, provide immediate feedback, and guide students through Socratic questioning rather than supplying direct answers. General-purpose LLMs (Large Language Models) like GPT-5.6 (OpenAI) and Claude Sonnet 5 (Anthropic) handle lesson plan generation, rubric creation, and differentiated instruction materials. Administrative AI tools handle attendance summaries, parent communication drafts, and progress reports — the tasks teachers report as the most time-consuming.',
             'In one sentence: prompt engineering for education is not one tool — it is a stack, where each layer serves a specific role in the teaching workflow.',
           ],

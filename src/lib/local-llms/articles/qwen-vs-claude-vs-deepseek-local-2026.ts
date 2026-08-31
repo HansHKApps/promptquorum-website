@@ -146,10 +146,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Benchmark', 'Qwen 3.6 27B', 'Claude Sonnet 5', 'DeepSeek R2'],
         tableFormat: true,
-        note: 'SWE-bench figures for Claude Sonnet 5 and DeepSeek R2 are estimated from public leaderboard data as of May 2026. Qwen 3.6 27B SWE-bench is Alibaba-published.',
+        note: 'SWE-bench figures for Claude Sonnet 5 and DeepSeek R2 are estimated from public leaderboard data. Qwen 3.6 27B SWE-bench is Alibaba-published.',
         callouts: [
           { type: 'tip', text: 'Qwen 3.6 27B outperforms Claude Sonnet 5 on HumanEval (+2.7 pp) and SWE-bench (+5.2 pp). Claude leads on MMLU (+1.7 pp) and MATH (+2.5 pp). For EU coding teams, the local advantage is clearest in software engineering tasks.' },
-          { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data as of May 2026.' },
+          { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data.' },
         ],
         image: '/images/qwen-vs-claude-vs-deepseek-local-2026-benchmark-comparison-en.svg',
         imageCaption: 'Coding benchmark comparison: Qwen 3.6 27B scores 92.1% HumanEval and 77.2% SWE-bench, ahead of Claude Sonnet 5 (89.4%, ~72%) and DeepSeek R2 (91.6%, ~75%).',
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableFormat: true,
         note: 'Hardware amortisation not included. RTX 4090 reached end-of-life in Q2 2026; secondary-market retail now runs €2,000–2,600 (EOL pricing, August 2026). At 300M tokens/month, a single RTX 4090 system (€2,300 hardware, EOL midpoint) pays off in 3 months versus Claude Sonnet 5.',
         items: [
-          '**Worked example — 10-dev EU team, 50M tokens/month:** Claude Sonnet 5 costs €137/month (50M × $3 = $150, ~€140 after currency). Over 12 months, that is €1,680 for prompts alone, plus team labour for prompt engineering and error mitigation. An RTX 4090 system at €2,300 hardware cost (EOL pricing, €2,000–2,600 range as of August 2026), running Qwen 3.6 27B locally, reaches break-even in just 18 months when including OpEx (electricity €50/month, ~€600/year). By year 2, local deployment saves €1,200/year purely on token costs, while also ensuring full GDPR compliance without SCCs.',
+          '**Worked example — 10-dev EU team, 50M tokens/month:** Claude Sonnet 5 costs €137/month (50M × $3 = $150, ~€140 after currency). Over 12 months, that is €1,680 for prompts alone, plus team labour for prompt engineering and error mitigation. An RTX 4090 system at €2,300 hardware cost (EOL pricing, €2,000–2,600 range), running Qwen 3.6 27B locally, reaches break-even in just 18 months when including OpEx (electricity €50/month, ~€600/year). By year 2, local deployment saves €1,200/year purely on token costs, while also ensuring full GDPR compliance without SCCs.',
           '**For higher volumes (100M–300M tokens/month):** Local Qwen reaches ROI within months. A 10-person team generating 100M tokens/month on Claude Sonnet 5 incurs €2,800/month (~€33,600/year). A single RTX 4090 server pays for itself in under 3 months and becomes pure savings thereafter.',
         ],
       },
@@ -280,7 +280,7 @@ dispatch_rules:
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'Is Qwen 3.6 27B better than Claude Sonnet 5?', a: 'On coding benchmarks (HumanEval, SWE-bench), Qwen 3.6 27B outperforms Claude Sonnet 5 as of May 2026: 92.1% vs 89.4% HumanEval, 77.2% vs ~72% SWE-bench. Claude Sonnet 5 leads on MMLU (88.1% vs 86.4%) and MATH (91.2% vs 88.7%). For EU coding workflows, local Qwen 3.6 27B is the better choice. For broad knowledge tasks, Claude Sonnet 5 has the edge.' },
+          { q: 'Is Qwen 3.6 27B better than Claude Sonnet 5?', a: 'On coding benchmarks (HumanEval, SWE-bench), Qwen 3.6 27B outperforms Claude Sonnet 5: 92.1% vs 89.4% HumanEval, 77.2% vs ~72% SWE-bench. Claude Sonnet 5 leads on MMLU (88.1% vs 86.4%) and MATH (91.2% vs 88.7%). For EU coding workflows, local Qwen 3.6 27B is the better choice. For broad knowledge tasks, Claude Sonnet 5 has the edge.' },
           { q: 'Can I use DeepSeek R2 for GDPR-covered data?', a: 'No, without significant legal safeguards. DeepSeek R2 processes data on servers in China. The EU Commission has not issued a China adequacy decision. Using DeepSeek R2 with EU personal data without an adequacy decision or appropriate safeguards (binding corporate rules, SCCs) constitutes a likely GDPR Article 44 violation. Consult your DPO before using DeepSeek R2 for any personal data.' },
           { q: 'What hardware do I need to run Qwen 3.6 27B locally?', a: 'Minimum: RTX 4080 (16 GB VRAM) at Q4_K_M quantization. Recommended: RTX 4090 (24 GB) or Apple Silicon M3 Max with 48 GB unified memory. Following Apple\'s August 25, 2026 refresh (shipping September 22, 2026), the Mac mini M6 (32 GB max, from $899) or Mac mini M5 Pro (64 GB max, from $1,699) are compact inference servers. An RTX 4090 gaming PC runs Qwen 3.6 27B at 35 tokens/second.' },
           { q: 'How can I build a dispatch layer between local and cloud models?', a: 'Use task classification to route prompts to the appropriate model. Define routing rules (e.g., code tasks → local Qwen via Ollama, complex analysis → Claude Sonnet 5 API). Implement dispatch logic in your application layer to handle model selection, fallback, and response aggregation. This architecture optimises for both cost and quality across mixed coding and analysis workloads.' },

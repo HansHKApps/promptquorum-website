@@ -12,14 +12,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       title: 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
       seoTitle: 'Best Ollama & Local LLM Frontends 2026: 8 Compared',
-      intro: 'A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. As of July 2026, Open WebUI leads with 140,000+ GitHub stars (RAG, multimodal, multi-user), Enchanted UI is the top native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux. This guide compares 8 frontends by features, setup time, and use case.',
+      intro: 'A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Open WebUI leads with 140,000+ GitHub stars (RAG, multimodal, multi-user), Enchanted UI is the top native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux. This guide compares 8 frontends by features, setup time, and use case.',
       metaDescription: 'Compare 8 Ollama frontends: Open WebUI (140k+ stars, RAG), Enchanted UI (native Mac/iOS app), Jan AI (offline desktop). 2026 feature table and setup guide.',
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-en.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-07-14',
       next_refresh_due: '2027-01-14',
       last_full_refresh: '2026-07-14',
-      leadAnswerBlock: '**A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. As of July 2026, Open WebUI leads with 140,000+ GitHub stars (RAG, multimodal, multi-user), Enchanted UI is the top native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux.**',
+      leadAnswerBlock: '**A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Open WebUI leads with 140,000+ GitHub stars (RAG, multimodal, multi-user), Enchanted UI is the top native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '11 min read',
       educationalLevel: 'Beginner to Advanced',
@@ -49,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→ Enchanted UI: native macOS/iOS/visionOS app (App Store), 8 GB RAM, no Docker needed',
             '→ Jan AI: desktop app (Windows/macOS/Linux), fully offline, no server setup required',
             '→ Continue.dev: VS Code extension for local coding, but Cursor acquired the project in June 2026 and development has stopped — Tabby is the actively maintained alternative',
-            '→ All top frontends free and open-source as of July 2026',
+            '→ All top frontends free and open-source',
           ],
           updatedDate: '2026-07-14',
         },
@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Enchanted UI** is a native iOS, macOS, and visionOS app (not a browser tool), available on the App Store. Best for Apple users who want a polished ChatGPT-style client for Ollama.',
             '**Jan AI** is a desktop app (Windows, macOS, Linux) with offline sync. No server setup. Popular with non-technical users.',
             '**Continue.dev** is a VS Code extension for inline code suggestions from your local Ollama model — development stopped after Cursor acquired the project in June 2026, so the extension still works but gets no further updates.',
-            'As of July 2026, all top frontends are open-source and free.',
+            'All top frontends are open-source and free.',
           ],
         },
         topFrontends: {
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **Function calling and tools**: Build workflows where the model can call functions or tools.',
             '- **Team collaboration**: Multiple users can share the same instance.',
             '- **Model marketplace**: Browse and download models directly from the UI.',
-            'As of July 2026, the main limitation is that Open WebUI requires Docker, which adds a 5-minute setup overhead. Once running, it adds RAG, multimodal, multi-user, and web search -- features unavailable in lightweight alternatives.',
+            'The main limitation is that Open WebUI requires Docker, which adds a 5-minute setup overhead. Once running, it adds RAG, multimodal, multi-user, and web search -- features unavailable in lightweight alternatives.',
           ],
           callouts: [
             { type: '⚠️ Warning', text: 'Open WebUI requires Docker. If Docker is not installed, add 10-15 minutes to your setup time. Run `docker --version` to check before starting.' },
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-for-speed-enchanted',
           title: 'Why Choose Enchanted UI for a Native Apple App?',
           content: [
-            '**Enchanted UI is a native iOS, macOS, and visionOS app for chatting with your local Ollama model -- install it from the App Store or build it from source, then point it at your Ollama server address.** As of July 2026, the open-source project has 6,000+ GitHub stars and ships under the Apache-2.0 license, making it the most polished native option for Apple hardware in this guide.',
+            '**Enchanted UI is a native iOS, macOS, and visionOS app for chatting with your local Ollama model -- install it from the App Store or build it from source, then point it at your Ollama server address.** The open-source project has 6,000+ GitHub stars and ships under the Apache-2.0 license, making it the most polished native option for Apple hardware in this guide.',
             '**Key features:**',
             '- **Native Apple app**: Runs on iPhone, iPad, Mac, and Apple Vision Pro with a ChatGPT-style interface -- not a browser tab.',
             '- **Multimodal input**: Supports voice prompts and image attachments in addition to text.',
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **GPU and CPU fallback**: Automatically uses GPU if available (including AMD ROCm/HIP acceleration on Linux, added in v0.8.2), falls back to CPU.',
             '- **Private by default**: No account required, no telemetry.',
             '- **Extension marketplace**: Add plugins like RAG, web search, or tools.',
-            'Jan is best for non-technical users who want a polished desktop app. As of July 2026, Jan AI has 41,000+ GitHub stars and full native support on Windows, macOS, and Linux -- it is a mature LM Studio alternative with strong community support.',
+            'Jan is best for non-technical users who want a polished desktop app. Jan AI has 41,000+ GitHub stars and full native support on Windows, macOS, and Linux -- it is a mature LM Studio alternative with strong community support.',
           ],
           callouts: [
             { type: '📌 Key Point', text: 'Jan AI stores models at ~/jan/models -- separate from Ollama\'s model cache. If you use both, downloaded models are not shared and disk usage doubles for any model used in both apps.' },
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Can I use these frontends with LM Studio instead of Ollama?',
-              a: 'Yes. Open WebUI works with any OpenAI-compatible API, including LM Studio\'s API at localhost:1234. As of July 2026, LM Studio\'s REST API has reached a stable v1 release (no longer beta) and also added an Anthropic-compatible endpoint, so either Ollama or LM Studio works as a reliable backend. Change the base URL in settings.',
+              a: 'Yes. Open WebUI works with any OpenAI-compatible API, including LM Studio\'s API at localhost:1234. LM Studio\'s REST API has reached a stable v1 release (no longer beta) and also added an Anthropic-compatible endpoint, so either Ollama or LM Studio works as a reliable backend. Change the base URL in settings.',
             },
             {
               q: 'Which frontend is best for a team of 5+ developers?',
@@ -443,7 +443,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Can I use these frontends with LM Studio instead of Ollama?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Open WebUI works with any OpenAI-compatible API, including LM Studio\'s API at localhost:1234. As of July 2026, LM Studio\'s REST API has reached a stable v1 release (no longer beta). Change the base URL in settings.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Open WebUI works with any OpenAI-compatible API, including LM Studio\'s API at localhost:1234. LM Studio\'s REST API has reached a stable v1 release (no longer beta). Change the base URL in settings.' }
           },
           {
             '@type': 'Question',

@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Yes — Here\'s What\'s Available',
         content: [
-          '<strong>As of May 2026, Ollama supports all major Qwen 3 model sizes from 0.6B to 72B.</strong> Pull any size with a single command: <code>ollama run qwen3:8b</code>. Replace <code>8b</code> with <code>0.6b</code>, <code>1.5b</code>, <code>3b</code>, <code>14b</code>, <code>32b</code>, or <code>72b</code> for other sizes.',
+          '<strong>Ollama supports all major Qwen 3 model sizes from 0.6B to 72B.</strong> Pull any size with a single command: <code>ollama run qwen3:8b</code>. Replace <code>8b</code> with <code>0.6b</code>, <code>1.5b</code>, <code>3b</code>, <code>14b</code>, <code>32b</code>, or <code>72b</code> for other sizes.',
           'Each size is available in multiple quantizations. Q4_K_M is the default and recommended starting point — it delivers the best quality-to-file-size ratio. Q8_0 is available for 7B and 14B if you have the VRAM headroom.',
           'Tool calling is supported natively on all Qwen 3 sizes via the standard Ollama API. No custom Modelfile or special prompt template is required.',
         ],

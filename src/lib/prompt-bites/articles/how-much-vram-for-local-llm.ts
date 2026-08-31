@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'VRAM Requirements by Model Size',
         content: [
-          'As of May 2026, a model\'s VRAM need follows a simple formula: parameter count in billions × 0.7 = approximate GB at Q4 quantization. <strong>A 7B model needs ~4.9 GB for weights, plus 0.5–1 GB of context overhead.</strong> This is why 6 GB is the minimum for the 7–8B tier, and why 12 GB unlocks the 14B tier with breathing room.',
+          'A model\'s VRAM need follows a simple formula: parameter count in billions × 0.7 = approximate GB at Q4 quantization. <strong>A 7B model needs ~4.9 GB for weights, plus 0.5–1 GB of context overhead.</strong> This is why 6 GB is the minimum for the 7–8B tier, and why 12 GB unlocks the 14B tier with breathing room.',
           'Use the table below as a quick decision reference. The "Speed" column assumes Ollama on a desktop GPU running at default context (2048 tokens).',
           '<strong>Always keep 1–2 GB of VRAM free above your model\'s stated needs.</strong> Operating systems, browser tabs, and Ollama\'s runtime consume 500 MB–1 GB even with no model loaded. A 6 GB card running a 5.5 GB model leaves only 500 MB headroom — you\'ll hit out-of-memory errors the moment you increase <code>--num-ctx</code> beyond 2048 tokens. For the 6 GB tier with safe headroom, see <a href="/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">best local LLMs for 6 GB VRAM</a>.',
         ],

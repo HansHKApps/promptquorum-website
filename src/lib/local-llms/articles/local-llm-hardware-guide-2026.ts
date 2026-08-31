@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'dgx-spark',
           title: 'NVIDIA DGX Spark: 128 GB Desktop AI Computer',
           content: [
-            '**The NVIDIA DGX Spark ($4,699 as of February 2026, up from its $3,999 launch price) is a compact 128 GB desktop AI computer that can hold Llama 3.3 70B at Q8_0 entirely in unified memory.** Apple Mac Studio / MacBook Pro with 128 GB and AMD Strix Halo 128 GB systems can do the same, so it is not unique — but it ships with NVIDIA\'s CUDA software stack.',
+            '**The NVIDIA DGX Spark ($4,699, up from its $3,999 launch price) is a compact 128 GB desktop AI computer that can hold Llama 3.3 70B at Q8_0 entirely in unified memory.** Apple Mac Studio / MacBook Pro with 128 GB and AMD Strix Halo 128 GB systems can do the same, so it is not unique — but it ships with NVIDIA\'s CUDA software stack.',
             'Built on the GB10 Grace Blackwell Superchip, the DGX Spark launched in October 2025 with 128 GB LPDDR5x unified memory. Note: its real memory bandwidth is ~273 GB/s, so dense 70B token generation is slow — independent testing (LMSYS) measured roughly 3 tok/sec on Llama 70B. The headline FP4 compute figure does not translate into fast single-stream decoding. The DGX Spark is best suited to large mixture-of-experts models (Llama 4 Scout/Maverick, Kimi K2) where only a fraction of parameters activate per token -- but its 128 GB ceiling is not unlimited: GLM-5.3 (744B total, 40B active, released June 2026) needs ~239 GB even at 2-bit quantization and does not fit a single DGX Spark.',
           ],
           columns: ['Spec', 'Value'],

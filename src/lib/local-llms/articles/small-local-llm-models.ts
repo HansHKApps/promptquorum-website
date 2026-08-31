@@ -220,7 +220,7 @@ schema: {
           title: 'Phi-4 Mini 3.8B -- Best Reasoning Performance in the Sub-4B Class',
           content: [
             '**Microsoft Phi-4 Mini achieves 68% on MMLU and 70% on HumanEval -- scores that exceed many 7B models released before 2025.** This is possible because Phi-4 Mini was trained on a curated synthetic dataset focused on reasoning and problem-solving, rather than broad web text.',
-            'As of August 2026, Phi-4 Mini is the recommended choice for users who primarily need reasoning (math, logic, step-by-step explanations) or coding assistance on hardware with 4-6 GB RAM.',
+            'Phi-4 Mini is the recommended choice for users who primarily need reasoning (math, logic, step-by-step explanations) or coding assistance on hardware with 4-6 GB RAM.',
           ],
           rows: [
             { 'Spec': 'MMLU', 'Value': '68%' },

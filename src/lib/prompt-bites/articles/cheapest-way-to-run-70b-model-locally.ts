@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Easiest: 64GB+ Apple Silicon Mac — the whole model fits in unified memory, no multi-GPU setup',
           'Cheapest absolute hardware: 64–128GB RAM, CPU-only — works, but painfully slow at 1–3 tok/s',
           'Best performance: a high-VRAM multi-GPU system for serious, sustained 70B workloads',
-          'New as of August 2026: the M5 Pro Mac mini (64GB, from $1,699) is the cheapest new Apple Silicon machine that can run 70B — the base M6 Mac mini (32GB max) cannot',
+          'New: the M5 Pro Mac mini (64GB, from $1,699) is the cheapest new Apple Silicon machine that can run 70B — the base M6 Mac mini (32GB max) cannot',
         ],
         updatedDate: '2026-08',
       },

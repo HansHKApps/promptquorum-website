@@ -149,7 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung — HBM4E Speed Lead, LPDDR5X-PIM Validated**: Samsung shipped the industry\'s first 12-layer HBM4E samples on May 29, 2026, at 3.6 TB/s per stack — ahead of SK Hynix\'s HBM4 spec on that metric, though SK still ships more total HBM volume. On the phone side, Samsung presented LPDDR5X-PIM at Hot Chips 2026 (August 25, 2026) as validated, tested silicon: an edge AI accelerator SoC ran Llama-3.1-8B at 81.3 tokens/sec versus 27.0 tokens/sec on standard LPDDR5X (3.01x), with up to 8x internal bandwidth in PIM mode. The chip uses the same 561-ball package as standard LPDDR5X, so it is a drop-in replacement, not a new form factor.',
           '**Competitive Dynamics**: Samsung continues to sample HBM (HBM3E, now HBM4E) but has historically trailed SK on yield and total HBM volume. Samsung\'s positioning for LPDDR5X-PIM is explicit: a complement to HBM, not a replacement — targeting smartphones, AI PCs, and edge accelerators where HBM\'s cost, power draw, and packaging complexity are prohibitive, rather than trying to match HBM bandwidth directly.',
           '**Both companies supply Nvidia**: SK Hynix and Samsung both provide HBM for Nvidia GPU VRAM; standard DRAM (LPDDR/DDR) covers host/CPU memory. Neither supplies the compute (Nvidia designs the GPU cores). The ecosystem stays specialized: design, memory, compute are separate.',
-          '**Timeline**: HBM4 is in mass production now (SK Hynix targeting Q3 2026 for its 16-layer part; Samsung already sampling 12-layer HBM4E). LPDDR5X-PIM is validated silicon as of August 2026, ahead of the 2027-2028 production estimate given at last refresh — expect it in edge AI accelerators before phones. LPDDR6/LPDDR6X-PIM is Samsung\'s next target, with an initial JEDEC spec hoped for later in 2026.'
+          '**Timeline**: HBM4 is in mass production now (SK Hynix targeting Q3 2026 for its 16-layer part; Samsung already sampling 12-layer HBM4E). LPDDR5X-PIM is validated silicon, ahead of the 2027-2028 production estimate given at last refresh — expect it in edge AI accelerators before phones. LPDDR6/LPDDR6X-PIM is Samsung\'s next target, with an initial JEDEC spec hoped for later in 2026.'
         ]
       },
       'on-device-limits': {
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'When does LPDDR6 ship?',
-            a: 'Still estimated 2027-2028 in the Galaxy S27/S28 era, unchanged since last refresh. ~200+ GB/s (2.3x LPDDR5X). It will roughly double on-device token throughput but stays 3–6x slower than HBM3E data-center GPUs. LPDDR5X-PIM, by contrast, is already validated silicon as of August 2026 — it will likely reach edge devices before LPDDR6 does.'
+            a: 'Still estimated 2027-2028 in the Galaxy S27/S28 era, unchanged since last refresh. ~200+ GB/s (2.3x LPDDR5X). It will roughly double on-device token throughput but stays 3–6x slower than HBM3E data-center GPUs. LPDDR5X-PIM, by contrast, is already validated silicon — it will likely reach edge devices before LPDDR6 does.'
           },
           {
             q: 'Why can\'t you put HBM in a phone?',

@@ -87,7 +87,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'performance',
           title: 'What Latency and VRAM Should You Expect?',
           content: [
-            '**Completion latency (time to first token) is critical for IDE experience.** As of April 2026, here are typical numbers:',
+            '**Completion latency (time to first token) is critical for IDE experience.** Here are typical numbers:',
           ],
           rows: [
             { 'Hardware': 'RTX 4090 GPU', 'Model': 'Qwen3-Coder 7B', 'Latency': '0.3-0.5 seconds', 'Throughput': '150 tokens/sec' },

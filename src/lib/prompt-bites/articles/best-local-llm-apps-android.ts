@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'The Three Working Options',
         content: [
           '<strong>Looking for the technical deep-dive?</strong> For performance benchmarks, NPU speed data on real Android phones, and all 6 apps compared — see our <a href="/power-local-llm/best-local-llm-apps-android-2026" class="text-primary hover:underline">in-depth Android local-LLM technical guide</a>. This page gives the quick "which app to install" answer.',
-          '<strong>As of May 2026, there are three practical ways to run a local LLM on Android: MLC Chat (Machine Learning Compilation), Pocketpal AI, and Termux with Ollama.</strong> All three run 100% offline after initial model download — no API key or internet connection required.',
+          '<strong>There are three practical ways to run a local LLM on Android: MLC Chat (Machine Learning Compilation), Pocketpal AI, and Termux with Ollama.</strong> All three run 100% offline after initial model download — no API key or internet connection required.',
           'MLC Chat uses the MLC-LLM compilation framework to pre-optimize model weights for mobile hardware. You download it from Google Play, select a supported model (Llama 3, Gemma, Phi), and the model downloads and runs directly on the device. Setup takes under 10 minutes.',
           'Pocketpal AI is built by the Hugging Face community and supports loading GGUF model files directly from Hugging Face. This means you can run any GGUF-compatible model, not just a prebuilt list. The tradeoff is a slightly more complex setup requiring manual model selection and download.',
         ],

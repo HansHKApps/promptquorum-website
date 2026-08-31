@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/prompt-engineering-for-local-models-overview-hero-en.webp',
       title: 'Prompt Engineering for Local LLMs 2026: CoT & Few-Shot',
       seoTitle: 'Prompt Engineering for Local LLMs 2026: CoT & Few-Shot',
-      intro: 'Local 7B–13B models respond differently to prompts than GPT-5.6 or Claude. They need explicit structure, clearer instructions, and 3–5 few-shot examples where cloud models need 1–2. As of August 2026, proven techniques include chain-of-thought prompting (+10–20% accuracy), role definition, structured output formatting (JSON), and system prompt configuration in Ollama and LM Studio.',
+      intro: 'Local 7B–13B models respond differently to prompts than GPT-5.6 or Claude. They need explicit structure, clearer instructions, and 3–5 few-shot examples where cloud models need 1–2. Proven techniques include chain-of-thought prompting (+10–20% accuracy), role definition, structured output formatting (JSON), and system prompt configuration in Ollama and LM Studio.',
       metaDescription: 'Chain-of-thought boosts 7B accuracy 10–20%. Few-shot (3–5 examples) beats zero-shot by 15–25%. System prompt guide for Ollama & LM Studio.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',

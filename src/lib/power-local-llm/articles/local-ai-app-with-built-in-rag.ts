@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Jan is the only one of the three with fully auditable open-source code (Apache 2.0).** The Documents extension adds RAG without compromising the zero-telemetry posture — embeddings run locally, document chunks never leave the device.',
         items: [
           '**Install path:** download Jan from jan.ai (~380 MB). Then enable the Documents extension from the Hub tab inside the app. The extension is shipped by the Jan team, not a third party.',
-          '**File formats:** PDF, DOCX, TXT, MD. Adding new formats is on the public roadmap as of August 2026.',
+          '**File formats:** PDF, DOCX, TXT, MD. Adding new formats is on the public roadmap.',
           '**Embedding model:** all-MiniLM-L6-v2 (384-dim) ships bundled. Swappable via the extension settings to BAAI/bge-small-en-v1.5 or any sentence-transformers GGUF.',
           '**Chunk control:** chunk size and overlap exposed in the extension settings. Reindex button rebuilds the local LanceDB store.',
           '**Citations:** per-chunk citations with filename. No page numbers in August 2026 — issue #1184 on the Jan GitHub tracks the feature request.',

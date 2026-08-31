@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'scenarios',
         title: 'Which Platform for Your Scenario',
         content: [
-          '**Match your situation to one of these short scenarios — each maps to a platform recommendation based on verified capabilities as of July 2026.**',
+          '**Match your situation to one of these short scenarios — each maps to a platform recommendation based on verified capabilities.**',
         ],
         items: [
           '**"I already run Home Assistant"** → Stay on Home Assistant. Add the MQTT integration or a brand-specific HACS integration for your inverter or battery. No new platform needed.',

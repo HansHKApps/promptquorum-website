@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'privacy': {
           title: 'Privacy & Data Handling',
           content: [
-            '**LM Studio:** All data stays local. No telemetry (as of April 2026). Built-in privacy.',
+            '**LM Studio:** All data stays local. No telemetry. Built-in privacy.',
             '**Jan AI:** All data stays local. No telemetry claims. Both equally private.',
             'Real privacy benefit over cloud APIs: inference never leaves your machine.',
             'Winner: **Tie.** Both are private, but so is Ollama (which is free).',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Is Jan AI truly open-source?', a: 'Yes. Jan AI is MIT-licensed and available on GitHub (janhq/jan). LM Studio is proprietary (free for personal use but closed-source). This makes Jan AI more auditable for privacy-sensitive deployments.' },
             { q: 'Which app is faster -- LM Studio or Jan AI?', a: 'Neither is meaningfully faster than the other. Both use llama.cpp as the inference backend. Speed is determined by your GPU, model size, and quantization level -- not the app layer.' },
             { q: 'Does Jan AI support AMD GPUs?', a: 'Yes, through llama.cpp HIP backend. AMD ROCm support improved in 2025. LM Studio also supports AMD ROCm on Linux. Both require ROCm-compatible drivers (Ubuntu recommended).' },
-            { q: 'Can I use Jan AI for local RAG (Retrieval-Augmented Generation)?', a: 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG as of April 2026.' },
+            { q: 'Can I use Jan AI for local RAG (Retrieval-Augmented Generation)?', a: 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG.' },
           ],
         },
         'relatedReading': {
@@ -322,7 +322,7 @@ schema: {
             'name': 'Can I use Jan AI for local RAG (Retrieval-Augmented Generation)?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG as of April 2026.',
+              'text': 'Yes. Jan AI includes a knowledge base plugin for local RAG. Upload documents and Jan AI indexes them for context. LM Studio does not include RAG.',
             },
           },
         ]

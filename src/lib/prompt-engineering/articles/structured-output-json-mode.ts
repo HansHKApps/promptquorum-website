@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Techniques', heroImage: '/images/structured-output-json-mode-overview-hero-en.webp',
       title: 'Structured Output in LLMs: JSON Mode, Examples, and When to Use It',
-      intro: 'Structured output and JSON mode are the techniques that turn a language model from a chat tool into a component in real software. When AI output is predictable and parseable, you can feed it directly into databases, trigger automations, build dashboards, and chain model calls together without manual cleanup. As of April 2026, JSON mode is natively supported by OpenAI (response_format), Anthropic (tool_use), and Google (responseMimeType) — but reliable structured output still requires careful schema design in the prompt regardless of API enforcement.',
+      intro: 'Structured output and JSON mode are the techniques that turn a language model from a chat tool into a component in real software. When AI output is predictable and parseable, you can feed it directly into databases, trigger automations, build dashboards, and chain model calls together without manual cleanup. JSON mode is natively supported by OpenAI (response_format), Anthropic (tool_use), and Google (responseMimeType) — but reliable structured output still requires careful schema design in the prompt regardless of API enforcement.',
       publishDate: '2026-03-26',
       dateModified: '2026-07-13',
       readTime: '10 min read',
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelComparison: {
           title: 'Model Comparison: JSON Compliance by Provider',
           content: [
-            '**Different models have different levels of native JSON mode support.** As of April 2026, here is how major providers rank:',
+            '**Different models have different levels of native JSON mode support.** Here is how major providers rank:',
           ],
           columns: ['Model', 'Native JSON Mode', 'Prompt-Only Compliance', 'Notes'],
           rows: [

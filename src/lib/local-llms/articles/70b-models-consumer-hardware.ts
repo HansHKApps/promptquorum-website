@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Easiest consumer hardware**: Apple Mac Studio M2 Ultra (64 GB unified) or M5 Max MacBook Pro (64 GB) -- full GPU acceleration, no layer offloading needed.',
             '**NVIDIA option**: RTX 4090 (24 GB VRAM) + 32 GB system RAM with layer offloading in Ollama handles most 70B models, though 20-30% of layers run on CPU.',
             '**CPU-only 70B**: possible on 64 GB RAM but produces 1-3 tok/sec -- marginally usable for batch tasks, not for interactive chat.',
-            'As of August 2026, a 70B model locally still matches GPT-4 (2023) quality and remains the only consumer-accessible path to that quality tier without cloud costs.',
+            'A 70B model locally still matches GPT-4 (2023) quality and remains the only consumer-accessible path to that quality tier without cloud costs.',
           ],
         },
         whatHardware: {
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Apple Silicon uses unified memory -- the CPU and GPU share the same physical memory pool.** An M5 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20-30 tok/sec with no layer offloading overhead.',
             'On NVIDIA hardware, the GPU and system RAM are separate. A 24 GB VRAM GPU can only hold ~60% of a Q4_K_M 70B model; the remaining layers run on CPU, creating a memory bandwidth bottleneck that reduces speed to 10-18 tok/sec.',
-            'As of August 2026, a used Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) remains the cheapest used path to 70B local inference at usable speed. Apple launched a refreshed Mac Studio lineup with M5 Max and M5 Ultra chips in August 2026: the new Mac Studio M5 Max (64 GB, $2,499) is a full-GPU option, and the Mac Studio M5 Ultra (256 GB or 512 GB, from $5,499) doubles unified memory bandwidth to 1.2 TB/sec, comfortably running 70B models at Q8_0 or FP16 with no quality compromise.',
+            'A used Mac Studio M2 Ultra (64 GB, ~$2,000 refurbished) remains the cheapest used path to 70B local inference at usable speed. Apple launched a refreshed Mac Studio lineup with M5 Max and M5 Ultra chips in August 2026: the new Mac Studio M5 Max (64 GB, $2,499) is a full-GPU option, and the Mac Studio M5 Ultra (256 GB or 512 GB, from $5,499) doubles unified memory bandwidth to 1.2 TB/sec, comfortably running 70B models at Q8_0 or FP16 with no quality compromise.',
             '**Apple refreshed the Mac mini on August 25, 2026, shipping September 22, 2026, and it changes the cheapest-new-hardware answer again.** The Mac mini M5 Pro ($1,699 starting) maxes out at 64 GB unified memory with 307 GB/sec bandwidth and Thunderbolt 5 -- enough to run a 70B model at Q4_K_M entirely on GPU, and $800 cheaper than the Mac Studio M5 Max. The base Mac mini M6 ($899 starting) is a different machine: it maxes out at 32 GB unified memory and 170 GB/sec bandwidth, well short of the 40+ GB a 70B model needs, so it cannot run a 70B model at any quantization level. No independent benchmarks exist yet for either chip -- both ship September 22, 2026.',
           ],
         },

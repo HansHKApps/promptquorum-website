@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**European Union (GDPR):** Running a local LLM on a laptop means all inference happens on-device -- no data leaves the machine. This satisfies GDPR Article 25 (data protection by design) and eliminates the need for data processing agreements. Professionals in legal, medical, and finance sectors in the EU can process sensitive client data locally without cloud API compliance overhead.',
             '**Germany (DSGVO / BSI):** BSI-Grundschutz-Kataloge (IT-Grundschutz) recommends local processing for data classified as "vertraulich" (confidential). Laptop-based inference meets these requirements for Mittelstand companies that cannot justify enterprise cloud contracts.',
             '**Japan (APPI):** Japan\'s Act on Protection of Personal Information (APPI, amended 2022) imposes strict rules on transferring personal data overseas. Local LLM inference on a laptop eliminates cross-border transfer risk entirely, making it suitable for Japanese enterprises handling customer data under APPI.',
-            '**United States:** No federal AI data law as of April 2026, but sector-specific rules apply -- HIPAA for healthcare (local inference avoids BAA requirements), FERPA for education, and state-level privacy laws (CCPA in California). Local laptop inference is the safest option for regulated industries.',
+            '**United States:** No federal AI data law, but sector-specific rules apply -- HIPAA for healthcare (local inference avoids BAA requirements), FERPA for education, and state-level privacy laws (CCPA in California). Local laptop inference is the safest option for regulated industries.',
           ],
         },
         faqSection: {

@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsPromptManagement: {
         title: 'What is Prompt Management?',
         content:
-          '**Prompt management platforms solve the "where do I store prompts?" problem.** Without a platform, teams edit prompts in notebooks, lose version history, cannot rollback bad changes, and have no audit trail. Management platforms enable: versioning (track every change), team collaboration (code reviews and approval workflows), deployment (serve prompts to production), and logging (track usage and costs). As of July 2026, most teams still manage prompts manually. Adoption is accelerating as governance and cost tracking become critical.',
+          '**Prompt management platforms solve the "where do I store prompts?" problem.** Without a platform, teams edit prompts in notebooks, lose version history, cannot rollback bad changes, and have no audit trail. Management platforms enable: versioning (track every change), team collaboration (code reviews and approval workflows), deployment (serve prompts to production), and logging (track usage and costs). Most teams still manage prompts manually. Adoption is accelerating as governance and cost tracking become critical.',
       },
       prompthub: {
         title: 'PromptHub: Git-Like Versioning',
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       vellum: {
         title: 'Vellum: Production Deployment',
         content:
-          '**Vellum is the only platform built for production deployments.** A/B test prompts, route traffic between variants (50/50 split, canary rollouts), measure latency and accuracy, then roll out the winner. Includes monitoring dashboard showing performance degradation in real-time. Integrates with most LLM APIs (OpenAI, Anthropic, Cohere). As of July 2026, Vellum\'s public marketing homepage leads with a separate consumer product, a personal AI assistant ("Vellum: Your Personal Intelligence") — confirm the production-deployment plan is still active on your account before signing up.',
+          '**Vellum is the only platform built for production deployments.** A/B test prompts, route traffic between variants (50/50 split, canary rollouts), measure latency and accuracy, then roll out the winner. Includes monitoring dashboard showing performance degradation in real-time. Integrates with most LLM APIs (OpenAI, Anthropic, Cohere). Vellum\'s public marketing homepage leads with a separate consumer product, a personal AI assistant ("Vellum: Your Personal Intelligence") — confirm the production-deployment plan is still active on your account before signing up.',
         numberedItems: [
           'Use Vellum if you ship to users and need production monitoring',
           'A/B testing and canary rollouts built-in',
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Comparison Table: Feature Matrix',
-        content: '**As of July 2026, here is the feature breakdown:**',
+        content: '**Here is the feature breakdown:**',
         columns: [
           'Platform',
           'Versioning',

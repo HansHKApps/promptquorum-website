@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor is the best all-around agentic AI coding assistant for 2026 for most professional developers, GitHub Copilot is the safer default for teams standardized on GitHub or Azure, and Cline is the best free option if you bring your own API key or run a local model.** Windsurf now costs the same as Cursor Pro ($20/month as of August 2026, up from $15 earlier in the year) and no longer wins on price — pick it only if you specifically prefer its Cascade agent flow. No single tool wins every category; pick based on workflow, not marketing claims.',
+      '**Cursor is the best all-around agentic AI coding assistant for 2026 for most professional developers, GitHub Copilot is the safer default for teams standardized on GitHub or Azure, and Cline is the best free option if you bring your own API key or run a local model.** Windsurf now costs the same as Cursor Pro ($20/month, up from $15 earlier in the year) and no longer wins on price — pick it only if you specifically prefer its Cascade agent flow. No single tool wins every category; pick based on workflow, not marketing claims.',
     quickAnswerTop: {
       en: {
         question: 'Which AI coding assistant has the best agent mode in 2026?',
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windsurf: Cascade agent, $20/month Pro (raised from $15 in March 2026) — price parity with Cursor',
           'GitHub Copilot: coding agent tied to GitHub Issues/PRs, $10/month Pro, $39/month Pro+, $100/month Max',
           'Cline: open-source extension, $0 itself — cost is whatever LLM API you connect, or $0 with a local model via Ollama/LM Studio',
-          'None of the four has a standard public affiliate/commission program as of August 2026',
+          'None of the four has a standard public affiliate/commission program',
         ],
         updatedDate: '2026-08-27',
       },
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Windsurf lost its price advantage in 2026.** Its Pro tier rose from $15/month to $20/month in March 2026 — the same price as Cursor Pro. Its Cascade agent flow remains a genuine differentiator if you prefer its UX.',
           '**GitHub Copilot moved to usage-based AI-credit billing on June 1, 2026.** Pro is $10/month with $15 of included AI credits; Pro+ is $39/month; a new Max tier is $100/month. It is the default choice for teams already inside GitHub or Azure DevOps.',
           '**Cline costs $0 itself** — it is an open-source VS Code/JetBrains extension. You pay only for the LLM API tokens you use (OpenAI, Anthropic, OpenRouter, and others), or nothing at all if you point it at a local model via Ollama or LM Studio.',
-          '**None of the four vendors has a standard, checkable public affiliate program as of August 2026** — see the Affiliate Program Status section for what each vendor actually offers (referral credits, technology partnerships, or nothing).',
+          '**None of the four vendors has a standard, checkable public affiliate program** — see the Affiliate Program Status section for what each vendor actually offers (referral credits, technology partnerships, or nothing).',
           '**Pricing in this category has been unusually volatile in 2026.** Cursor, Windsurf, and GitHub Copilot all shifted from flatter subscriptions toward usage/credit metering during the year — treat every dollar figure here as an August 2026 snapshot, not a guarantee.',
         ],
       },
@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor: Best for Agentic Multi-File Work',
         content: [
           '**Cursor is a VS Code fork built around agent mode, with Composer and Cloud Agents as its flagship features for multi-file, multi-step changes.** It supports GPT, Claude, and Gemini models inside the same editor, so you are not locked to one vendor\'s model.',
-          'As of August 2026, Cursor\'s Hobby tier is free with limited agent requests. Pro, Pro+, and Ultra all share a $20/month base subscription, differentiated by included-usage multipliers (Pro+ gives roughly 3x the Pro agent limit, Ultra roughly 20x) — once included usage is consumed, additional usage is billed on-demand. Teams pricing starts at $40/user/month for the Standard tier, with a Premium tier at 5x the Standard agent limit. Enterprise is custom-priced.',
+          'Cursor\'s Hobby tier is free with limited agent requests. Pro, Pro+, and Ultra all share a $20/month base subscription, differentiated by included-usage multipliers (Pro+ gives roughly 3x the Pro agent limit, Ultra roughly 20x) — once included usage is consumed, additional usage is billed on-demand. Teams pricing starts at $40/user/month for the Standard tier, with a Premium tier at 5x the Standard agent limit. Enterprise is custom-priced.',
           'Cursor has a limited-rollout referral program (not a general-purpose affiliate program): eligible referrers get $25 in usage credit per referred paying customer (up to 10 per cycle), and the referred user gets 50% off their first month. This is not a public, universally available commission program — see the Affiliate Program Status section.',
         ],
       },
@@ -191,7 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf: Cascade Agent, Now Under Cognition',
         content: [
-          '**Windsurf runs the Cascade agent flow and, as of August 2026, costs the same as Cursor Pro** — its Pro tier rose from $15/month to $20/month in March 2026, ending what was previously its clearest differentiator (lower price).',
+          '**Windsurf runs the Cascade agent flow and, costs the same as Cursor Pro** — its Pro tier rose from $15/month to $20/month in March 2026, ending what was previously its clearest differentiator (lower price).',
           'Windsurf\'s free tier includes unlimited Tab autocomplete plus a light daily/weekly quota for Cascade agent use — enough for roughly two to three days of active agentic coding before you hit the limit. In March 2026, Windsurf replaced its old monthly credit-pool system (500 credits/month on Pro) with daily and weekly usage quotas that refresh automatically. Max is $200/month; Teams is $40/user/month; Enterprise is custom.',
           'Windsurf is now owned by Cognition, the company behind the autonomous coding agent Devin, following Cognition\'s acquisition of Windsurf\'s team, product, and brand. windsurf.com currently redirects to devin.ai\'s pricing page, and Devin is being integrated directly into the Windsurf editor rather than replacing it outright.',
           'Windsurf\'s referral program gives new signups 250 free flex credits via a referral link — a referral incentive, not a commission-based affiliate program.',
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'GitHub Copilot: Best for GitHub/Azure-Standardized Teams',
         content: [
           '**GitHub Copilot is the safest default for organizations already standardized on GitHub, Azure DevOps, or Microsoft\'s compliance stack**, and its coding agent works directly against GitHub Issues and pull requests rather than as a separate editor experience.',
-          'GitHub moved Copilot to usage-based AI-credit billing on June 1, 2026, replacing flatter per-seat pricing. As of August 2026: Free tier includes 2,000 completions/month; Pro is $10/month with $15 of included AI credits; Pro+ is $39/month with $70 of included AI credits and access to premium models including Claude Opus; a new Max tier at $100/month includes $200 of AI credits and priority access to new models. For organizations, Business is $19/user/month (1,900 AI credits) and Enterprise is $39/user/month (3,900 AI credits, Enterprise Cloud only) — these two tiers did not change price when usage-based billing rolled out, only the underlying credit accounting did.',
+          'GitHub moved Copilot to usage-based AI-credit billing on June 1, 2026, replacing flatter per-seat pricing. Free tier includes 2,000 completions/month; Pro is $10/month with $15 of included AI credits; Pro+ is $39/month with $70 of included AI credits and access to premium models including Claude Opus; a new Max tier at $100/month includes $200 of AI credits and priority access to new models. For organizations, Business is $19/user/month (1,900 AI credits) and Enterprise is $39/user/month (3,900 AI credits, Enterprise Cloud only) — these two tiers did not change price when usage-based billing rolled out, only the underlying credit accounting did.',
           'GitHub runs a Copilot Partner Program, but it is a technology-integration program for building Copilot Chat extensions, not a pay-per-referral affiliate program — hundreds of companies have joined as technology partners, which is a different relationship than an affiliate paying commission on signups.',
         ],
       },
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'affiliate-status',
         title: 'Does Any of These Four Tools Have an Affiliate Program?',
         content:
-          '**As of August 2026, none of the four vendors runs a standard, publicly available, pay-per-referral affiliate program.** What each vendor actually offers is narrower than "affiliate program":',
+          '**None of the four vendors runs a standard, publicly available, pay-per-referral affiliate program.** What each vendor actually offers is narrower than "affiliate program":',
         items: [
           '**Cursor:** a limited-rollout referral program (not universally available) — referrers get $25 usage credit per referred paying customer, referred users get 50% off month one. This is a referral incentive, not a commission-based affiliate program open to publishers.',
           '**Windsurf:** a referral link that gives new signups 250 free flex credits. Also a referral incentive, not an affiliate/commission program.',
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What is the actual difference between Windsurf and Cursor in 2026?',
-            a: 'As of August 2026 the two are priced identically at $20/month for their Pro tiers — Windsurf raised its price from $15 to $20 in March 2026, closing what used to be its main advantage. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents. Pick based on which agent UX you prefer after trying both, not on price.',
+            a: 'The two are priced identically at $20/month for their Pro tiers — Windsurf raised its price from $15 to $20 in March 2026, closing what used to be its main advantage. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents. Pick based on which agent UX you prefer after trying both, not on price.',
           },
           {
             q: 'Does GitHub Copilot support Claude or Gemini models?',
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do Cursor, Windsurf, GitHub Copilot, or Cline pay a commission to writers who recommend them?',
-            a: 'No. As of August 2026, none of the four runs a standard public affiliate/commission program. Cursor and Windsurf each offer a limited referral-credit incentive (not open to general publishers), GitHub runs a technology-integration partner program (not pay-per-referral), and Cline is a community open-source project with no monetization layer. This page carries no affiliate relationship with any of the four.',
+            a: 'No. None of the four runs a standard public affiliate/commission program. Cursor and Windsurf each offer a limited referral-credit incentive (not open to general publishers), GitHub runs a technology-integration partner program (not pay-per-referral), and Cline is a community open-source project with no monetization layer. This page carries no affiliate relationship with any of the four.',
           },
         ],
       },
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'Is Cursor better than GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For agentic multi-file work and model flexibility, Cursor is generally the stronger pick — it supports GPT, Claude, and Gemini and its Composer/Cloud Agents handle larger refactors with less manual steering. GitHub Copilot is the better choice specifically for teams already standardized on GitHub Issues, pull requests, and Azure DevOps, since its coding agent works directly against that workflow rather than as a separate editor.' } },
         { '@type': 'Question', 'name': 'Is there a free AI coding assistant with agent mode?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Cline is completely free and open source with no subscription tier — you pay only for the LLM API tokens you use, or nothing at all if you connect a local model via Ollama or LM Studio.' } },
-        { '@type': 'Question', 'name': 'What is the actual difference between Windsurf and Cursor in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As of August 2026 the two are priced identically at $20/month for their Pro tiers. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'What is the actual difference between Windsurf and Cursor in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The two are priced identically at $20/month for their Pro tiers. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents.' } },
       ],
     },
   },

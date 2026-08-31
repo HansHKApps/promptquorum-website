@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How does the Neural Engine help with LLM?', a: 'Neural Engine (8 TOPS, 16-core) accelerates quantized operations (INT8, Q4). Measurable benefit (~10%) for Q4_K_M models.' },
           { q: 'Can I run multiple models simultaneously on M5 Max 128GB?', a: 'Yes. 128GB allows two 32B models or one 70B plus one 13B running concurrently at decent speed.' },
           { q: 'What\'s typical setup time for local LLM on Mac?', a: '15–30 minutes from cold Mac to running first 70B model via Ollama (including 20–40 min model download on fast internet).' },
-          { q: 'Does Apple Silicon work with all latest models (Llama 4, Qwen 3, etc)?', a: 'As of August 2026: Llama 3.3 ✓, Qwen 3 ✓, Mistral ✓, Gemma ✓, DeepSeek ✓. MLX support expands weekly. Check MLX GitHub for current list.' },
+          { q: 'Does Apple Silicon work with all latest models (Llama 4, Qwen 3, etc)?', a: 'Llama 3.3 ✓, Qwen 3 ✓, Mistral ✓, Gemma ✓, DeepSeek ✓. MLX support expands weekly. Check MLX GitHub for current list.' },
           { q: 'Should I buy Mac mini M6 or Mac mini M5 Pro for local LLM?', a: 'M6 is entry-level (base Mac mini, $899, up to 32GB, 170 GB/s) and not designed for local LLM beyond small models. M5 Pro ($1,699, up to 64GB, 307 GB/s) is the local LLM pick — get M5 Pro if local LLM is the goal.' },
           { q: 'Is refurbished Mac Studio worth considering?', a: 'Yes. Refurbished Apple products carry 1-year warranty and hold 90–95% of original value. Saves 10–15%.' },
         ],

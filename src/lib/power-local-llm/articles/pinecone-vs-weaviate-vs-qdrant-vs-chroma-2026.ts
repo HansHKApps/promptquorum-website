@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**[Qdrant](https://qdrant.tech/pricing/) is open-source (Apache 2.0), written in Rust, and has a genuinely free-forever Qdrant Cloud tier (0.5 vCPU / 1GB RAM / 4GB disk, verified on qdrant.tech/pricing 2026-08-27) with no time limit and no card required.** Self-hosting is free at any scale — you pay only for your own infrastructure.',
           'Free tier: 0.5 vCPU, 1GB RAM, 4GB disk, single-node cluster, free cloud inference with selected embedding models. Standard: usage-based pricing beyond the free tier, dedicated resources, flexible scaling, 99.5% uptime SLA — Qdrant does not publish a flat monthly minimum for Standard, unlike Pinecone or Weaviate. Premium: minimum spend required (amount not published), SSO, private VPC links, 99.9% uptime SLA. Hybrid Cloud and Private Cloud: custom pricing for data-residency and regulatory needs.',
-          'Qdrant\'s GitHub repository shows 34,223 stars as of 2026-08-27 (verified via GitHub\'s public API) — the highest star count of the three open-source options, and Qdrant has raised $50M in funding as of March 2026 to expand its cloud infrastructure.',
+          'Qdrant\'s GitHub repository shows 34,223 stars as of 2026-08-27 (verified via GitHub\'s public API) — the highest star count of the three open-source options, and Qdrant has raised $50M in funding to expand its cloud infrastructure.',
           'Qdrant\'s partner page lists cloud infrastructure partners (AWS, Google Cloud, Microsoft Azure, Oracle Cloud, DigitalOcean, and others for managed deployment) and a startup discount program, not an individual content-creator affiliate program.',
         ],
         items: [

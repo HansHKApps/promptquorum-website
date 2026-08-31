@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'The Benchmark Numbers',
         content: [
-          '<strong>As of May 2026, Qwen 3 Coder 14B leads HumanEval by ~5 points among 14B coding models.</strong> The gap is consistent across Python-specific and TypeScript generation tasks, making Qwen the stronger choice for most web and backend developers.',
+          '<strong>Qwen 3 Coder 14B leads HumanEval by ~5 points among 14B coding models.</strong> The gap is consistent across Python-specific and TypeScript generation tasks, making Qwen the stronger choice for most web and backend developers.',
           'DeepSeek Coder V2 trades that narrow benchmark lead for breadth. It covers 80+ programming languages — including Rust, Swift, Kotlin, and Elixir — while Qwen 3 Coder\'s top-tier performance concentrates on Python, TypeScript, and Go.',
           'Both run on an RTX 3060 12 GB at Q4_K_M quantization, using approximately 10 GB VRAM.',
           'The 5-point HumanEval gap matters more for production code than benchmarks suggest. On a 1,000-line code generation task, that 5-point difference compounds: Qwen 3 Coder produces ~50 fewer syntax errors and ~30 fewer logical bugs than DeepSeek Coder V2 in head-to-head tests on Python and TypeScript. For polyglot work involving Rust or Swift, DeepSeek\'s language breadth offsets this — but for the single-language Python developer, Qwen wins by a clear margin.',

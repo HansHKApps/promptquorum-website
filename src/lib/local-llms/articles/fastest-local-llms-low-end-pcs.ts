@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Models by Use Case',
       title: 'Fastest Local LLMs for Low-End PCs 2026: CPU-Only Guide',
       seoTitle: 'Fastest Local LLMs for Low-End PCs (2026): Ollama, No GPU',
-      intro: '**CPU only, 8 GB RAM: Qwen3 1.7B Q4_K_M hits 25–40 tok/s on a modern i5/Ryzen 5. Phi-4-mini (3.8B) runs 15–25 tok/s and handles coding and reasoning. Every model in this guide runs without a GPU.** As of July 2026, you can run a capable local LLM on an old laptop with no discrete GPU. This guide covers hardware tiers from 4 GB CPU-only up to 16 GB with an Intel Iris iGPU — with Ollama commands for each.',
+      intro: '**CPU only, 8 GB RAM: Qwen3 1.7B Q4_K_M hits 25–40 tok/s on a modern i5/Ryzen 5. Phi-4-mini (3.8B) runs 15–25 tok/s and handles coding and reasoning. Every model in this guide runs without a GPU.** You can run a capable local LLM on an old laptop with no discrete GPU. This guide covers hardware tiers from 4 GB CPU-only up to 16 GB with an Intel Iris iGPU — with Ollama commands for each.',
       metaDescription: 'The fastest local AI model without a GPU: Qwen3 1.7B at 25-40 tok/s in Ollama. Tested lightweight open-source LLMs for 4-16 GB RAM, CPU-only and Intel iGPU.',
       heroImage: '/images/fastest-local-llms-low-end-pcs-speed-by-tier-hero-en.webp',
       twitterDescription: 'CPU-only: Qwen3 1.7B 25–40 tok/s. Phi-4-mini 15–25 tok/s. 8GB RAM no GPU guide. Ollama commands included. July 2026.',

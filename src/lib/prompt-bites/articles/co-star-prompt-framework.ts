@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What CO-STAR Stands For',
         content: [
-          '<strong>CO-STAR is a six-part prompt structure: Context, Objective, Style, Tone, Audience, Response format. As of May 2026, it is one of the most-cited frameworks for structuring complex LLM prompts because it forces the writer to specify each dimension that affects output quality.</strong>',
+          '<strong>CO-STAR is a six-part prompt structure: Context, Objective, Style, Tone, Audience, Response format. It is one of the most-cited frameworks for structuring complex LLM prompts because it forces the writer to specify each dimension that affects output quality.</strong>',
           'The framework was developed to solve a recurring problem in prompt engineering: prompts that are technically clear but miss implicit constraints. When you write "Summarize this document," the model makes assumptions about length, formality, audience, and format. CO-STAR replaces those assumptions with explicit instructions.',
           'Each component targets a different dimension of the output. Context anchors the model in the relevant situation. Objective pins the exact deliverable. Style and Tone control the writing register. Audience calibrates vocabulary and complexity. Response specifies the structural format.',
         ],

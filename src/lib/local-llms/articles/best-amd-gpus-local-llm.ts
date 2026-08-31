@@ -197,7 +197,7 @@ schema: {
             '**Text Generation WebUI:** Excellent AMD ROCm support. Best user experience on AMD. Recommended.',
             '**Llama.cpp:** Native HIP backend. Solid performance. Easiest AMD path. Recommended.',
             '**LM Studio:** NVIDIA only. No AMD support.',
-            'As of April 2026: vLLM + llama.cpp are your AMD paths. Ollama is not reliable.',
+            'vLLM + llama.cpp are your AMD paths. Ollama is not reliable.',
           ],
           image: '/images/best-amd-gpus-local-llm-software-support-hero-en.webp',
           imageCaption: 'llama.cpp and Text Generation WebUI are the reliable AMD paths in 2026 -- Ollama\'s ROCm support remains inconsistent.',

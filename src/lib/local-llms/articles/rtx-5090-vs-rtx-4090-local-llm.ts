@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090 for Local LLM Inference',
       seoTitle: 'RTX 5090 vs RTX 4090 for Local LLMs 2026: 4090 Now EOL',
-      intro: '**The RTX 4090 is now discontinued (EOL) — every unit on the market is used, at prices that have climbed to ~$2,000-2,600 as of August 2026.** The RTX 5090 remains in production, but the 2026 GDDR7 memory shortage has pushed its street price to $4,300-$5,000+, more than double its $1,999 MSRP. For local LLMs, RTX 5090 is still 30-50% faster than RTX 4090 on 70B models and has 8GB more VRAM (32GB vs 24GB). If you already own a 4090, keep it — the upgrade math is worse than ever at current prices. If you need a 70B-capable card and don\'t own one, a used 4090 remains the cheaper way in per token generated, despite the EOL premium.',
+      intro: '**The RTX 4090 is now discontinued (EOL) — every unit on the market is used, at prices that have climbed to ~$2,000-2,600.** The RTX 5090 remains in production, but the 2026 GDDR7 memory shortage has pushed its street price to $4,300-$5,000+, more than double its $1,999 MSRP. For local LLMs, RTX 5090 is still 30-50% faster than RTX 4090 on 70B models and has 8GB more VRAM (32GB vs 24GB). If you already own a 4090, keep it — the upgrade math is worse than ever at current prices. If you need a 70B-capable card and don\'t own one, a used 4090 remains the cheaper way in per token generated, despite the EOL premium.',
       metaDescription: 'RTX 5090 vs RTX 4090 for local LLMs: the RTX 4090 is now discontinued (used-only). Speed, VRAM, cost-per-token, and upgrade guidance for August 2026.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-en.webp',
       publishDate: '2026-04-05',
@@ -57,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'speed-diff',
           title: 'What Are the Raw Speed Differences?',
           content: [
-            '**RTX 5090: 21,760 CUDA cores, 1,457 TFLOPS, ~1,792 GB/s memory bandwidth, 32GB GDDR7. MSRP $1,999, but street pricing is $4,300-$5,000+ as of August 2026 due to the GDDR7 memory shortage.**',
+            '**RTX 5090: 21,760 CUDA cores, 1,457 TFLOPS, ~1,792 GB/s memory bandwidth, 32GB GDDR7. MSRP $1,999, but street pricing is $4,300-$5,000+ due to the GDDR7 memory shortage.**',
             'RTX 4090: 16,384 CUDA cores, 826 TFLOPS, ~1,008 GB/s memory bandwidth, 24GB GDDR6X. **Discontinued (EOL) — NVIDIA has stopped production.** Every unit for sale is used, at ~$2,000-2,600.',
             'Real-world LLM inference (Llama 3.3 70B, Q4, batch=1): RTX 5090 scores ~50-55 tokens/sec, RTX 4090 scores ~36 tokens/sec. **~40-50% faster on 70B models.** These per-card speeds are unchanged by the pricing shifts — only the cost to get them has moved.',
             'For 7B models (memory-bound but smaller weights): RTX 5090 scores ~90 tokens/sec, RTX 4090 scores ~75 tokens/sec. **~20% faster.** The gap is smaller at smaller model sizes.',
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Assumptions About the 5090',
           items: [
             'Assuming the RTX 4090 is still sold new — it isn\'t. NVIDIA discontinued the RTX 40-series in 2026; every 4090 on the market is used, at prices well above where they sat earlier in the year.',
-            'Thinking the RTX 5090\'s $1,999 MSRP is what you\'ll actually pay — as of August 2026, street pricing is $4,300-$5,000+ due to the GDDR7 shortage.',
+            'Thinking the RTX 5090\'s $1,999 MSRP is what you\'ll actually pay —, street pricing is $4,300-$5,000+ due to the GDDR7 shortage.',
             'Thinking 5090 is 2× faster than 4090 — it\'s 40-50% faster on 70B, only ~20% faster on 7B.',
             'Thinking both cards have the same VRAM — they don\'t. 5090 has 32GB, 4090 has 24GB. The 8GB difference matters for 34B Q8 models.',
             'Believing you need 5090 to run 70B models — you don\'t. 4090 runs Llama 3.3 70B Q4 at ~36 tokens/sec. That\'s sufficient for most local inference tasks, and it\'s the cheaper card per token even after its EOL price increase.',
@@ -110,12 +110,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Is the RTX 4090 still available new in 2026?', a: 'No. NVIDIA discontinued the RTX 40-series in 2026. Every RTX 4090 for sale now is used, and prices have climbed to ~$2,000-2,600 due to EOL scarcity plus knock-on demand from the RTX 50-series\' own GDDR7 shortage.' },
-            { q: 'Is RTX 5090 worth it for running Llama 3.3 70B?', a: 'Depends more on price than ever. 4090 gives you ~36 tok/s on 70B Q4, which is usable, for ~$2,000-2,600 used. 5090 gives ~52 tok/s — 40% faster — but street price is $4,300-$5,000+ as of August 2026. Worth it if you\'re running 70B continuously and can\'t tolerate the slower card; a used 4090 is the pragmatic choice otherwise.' },
+            { q: 'Is RTX 5090 worth it for running Llama 3.3 70B?', a: 'Depends more on price than ever. 4090 gives you ~36 tok/s on 70B Q4, which is usable, for ~$2,000-2,600 used. 5090 gives ~52 tok/s — 40% faster — but street price is $4,300-$5,000+. Worth it if you\'re running 70B continuously and can\'t tolerate the slower card; a used 4090 is the pragmatic choice otherwise.' },
             { q: 'Should I buy RTX 5090 or two RTX 4090s?', a: 'Two used 4090s (~$4,000-5,200 total, EOL/used-only) beat one 5090 (~$4,300-5,000+ street) on raw 70B speed (~72 tok/s combined vs ~52). But two-GPU setups add complexity — tensor parallelism, driver overhead, used-only sourcing with no warranty. 5090 is simpler, still in production, and adds 32GB unified VRAM for 34B Q8 use cases.' },
             { q: 'Does RTX 5090 have better VRAM than 4090?', a: 'Yes. RTX 5090 has 32GB GDDR7, RTX 4090 has 24GB GDDR6X. The 8GB extra lets 5090 run 34B Q8 models (~28GB needed) without squeezing. Both cards cannot fit 70B Q4 (~38-40GB) without splitting across GPUs. This VRAM gap is unrelated to the 4090\'s discontinuation.' },
             { q: 'Is the RTX 5090 overkill for a 14B model?', a: 'Yes, for most use cases. A 14B Q4 model needs ~9GB VRAM and runs at ~55-65 tok/s on a 4090 — already fast. The 5090 would give ~65-75 tok/s, a marginal improvement. A used 4090 (or even a 3090) is far more cost-effective for 14B inference, especially at current 5090 street prices.' },
             { q: 'Does the RTX 5090 laptop GPU have 32GB VRAM?', a: 'No. The RTX 5090 Laptop GPU has 24GB GDDR7 (reduced from the desktop\'s 32GB due to power and thermal constraints). It\'s significantly slower than the desktop 5090 but still faster than a 4090 on the same task.' },
-            { q: 'Will 5090 prices drop back to its $1,999 MSRP?', a: 'Only once the 2026 GDDR7 memory shortage eases — there\'s no fixed timeline. As of August 2026, street pricing sits at $4,300-$5,000+, more than double MSRP. The RTX 4090\'s own price history is a reminder that used pricing doesn\'t only trend downward: it fell from $1,499 (2022 launch) to a low of ~$999 used, then rebounded to ~$2,000-2,600 after its 2026 discontinuation.' },
+            { q: 'Will 5090 prices drop back to its $1,999 MSRP?', a: 'Only once the 2026 GDDR7 memory shortage eases — there\'s no fixed timeline. Street pricing sits at $4,300-$5,000+, more than double MSRP. The RTX 4090\'s own price history is a reminder that used pricing doesn\'t only trend downward: it fell from $1,499 (2022 launch) to a low of ~$999 used, then rebounded to ~$2,000-2,600 after its 2026 discontinuation.' },
             { q: 'Can I use RTX 5090 with a 750W power supply?', a: 'Barely. RTX 5090 draws 575W alone. Pair with a 850W or 1000W PSU to avoid voltage sag under load.' },
             { q: 'Is RTX 5080 a better value than 5090?', a: 'Often, yes — 5080 is roughly 80% of 5090\'s speed at a meaningfully lower price, though it is also subject to GDDR7 shortage-driven price inflation in 2026. For local LLMs, 5080 is usually the sweet spot unless you specifically need the 5090\'s 32GB.' },
             { q: 'How much faster is 5090 on multimodal models like Qwen-VL 70B?', a: 'Similar 20-25% lift. Multimodal compute is still memory-bound, so the bandwidth advantage of 5090 helps, but not dramatically.' },
@@ -171,7 +171,7 @@ schema: {
             'name': 'Is RTX 5090 worth it for running Llama 3.3 70B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Depends more on price than ever. 4090 gives you ~36 tok/s on 70B Q4, which is usable, for ~$2,000-2,600 used. 5090 gives ~52 tok/s — 40% faster — but street price is $4,300-$5,000+ as of August 2026. Worth it if you\'re running 70B continuously and can\'t tolerate the slower card; a used 4090 is the pragmatic choice otherwise.',
+              'text': 'Depends more on price than ever. 4090 gives you ~36 tok/s on 70B Q4, which is usable, for ~$2,000-2,600 used. 5090 gives ~52 tok/s — 40% faster — but street price is $4,300-$5,000+. Worth it if you\'re running 70B continuously and can\'t tolerate the slower card; a used 4090 is the pragmatic choice otherwise.',
             },
           },
           {
@@ -211,7 +211,7 @@ schema: {
             'name': 'Will 5090 prices drop back to its $1,999 MSRP?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Only once the 2026 GDDR7 memory shortage eases — there\'s no fixed timeline. As of August 2026, street pricing sits at $4,300-$5,000+, more than double MSRP. The RTX 4090\'s own price history is a reminder that used pricing doesn\'t only trend downward: it fell from $1,499 (2022 launch) to a low of ~$999 used, then rebounded to ~$2,000-2,600 after its 2026 discontinuation.',
+              'text': 'Only once the 2026 GDDR7 memory shortage eases — there\'s no fixed timeline. Street pricing sits at $4,300-$5,000+, more than double MSRP. The RTX 4090\'s own price history is a reminder that used pricing doesn\'t only trend downward: it fell from $1,499 (2022 launch) to a low of ~$999 used, then rebounded to ~$2,000-2,600 after its 2026 discontinuation.',
             },
           },
           {

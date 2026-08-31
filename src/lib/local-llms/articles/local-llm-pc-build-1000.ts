@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**RTX 5060 Ti 8GB ($330):** Fits 7B at Q4 only, and barely — long context windows will overflow VRAM. Not recommended.',
           '**RTX 4060 Ti 16GB (older gen, ~$450 used):** Same VRAM as the 5060 Ti at similar or higher price with lower compute — no reason to prefer it new.',
-          '**RTX 5060 Ti 16GB ($430, this build):** Best VRAM-per-dollar in the 16GB tier as of July 2026.',
+          '**RTX 5060 Ti 16GB ($430, this build):** Best VRAM-per-dollar in the 16GB tier.',
           '**Used RTX 3090 24GB (~$650-750):** More VRAM (fits low-30B models more comfortably) but pushes total build cost past $1,300 and draws significantly more power.',
         ],
       },

@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Qwen 3 Coder 14B Leads on HumanEval',
         content: [
-          '<strong>As of May 2026, Qwen 3 Coder 14B at Q4_K_M quantization scores 78.4% on HumanEval — the highest of any 14B model available through Ollama or llama.cpp.</strong> The model was fine-tuned on over 5 trillion tokens of code-focused data, which distinguishes its performance on multi-step completion and test-case generation.',
+          '<strong>Qwen 3 Coder 14B at Q4_K_M quantization scores 78.4% on HumanEval — the highest of any 14B model available through Ollama or llama.cpp.</strong> The model was fine-tuned on over 5 trillion tokens of code-focused data, which distinguishes its performance on multi-step completion and test-case generation.',
           'DeepSeek Coder 14B scores 75.1% on HumanEval under identical Q4_K_M conditions. The gap is small enough that DeepSeek Coder is a valid choice, particularly if you already have it cached or are familiar with its output style.',
           'StarCoder2 15B is the third pick for open-source code-focused work. Trained on The Stack v2, it scores approximately 73% on HumanEval at ~10 GB VRAM Q4_K_M. Its strengths are open-source contribution tasks, code search across large repositories, and structured refactoring — use cases where its training corpus gives it an edge over general instruction-tuned models.',
         ],

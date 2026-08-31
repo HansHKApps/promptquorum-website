@@ -175,7 +175,7 @@ schema: {
             'name': 'Which Ollama models have the largest context window?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'As of June 2026: Qwen3 (all sizes 4B–30B), Gemma 4 (E2B/26B-A4B/31B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.',
+              'text': 'Qwen3 (all sizes 4B–30B), Gemma 4 (E2B/26B-A4B/31B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.',
             },
           },
           {
@@ -360,7 +360,7 @@ schema: {
           title: 'How Much RAM Does Long Context Processing Require?',
           content: [
             '**RAM usage scales with both model size and context length.** The KV cache (key-value cache) stores attention states for all processed tokens -- this grows linearly with context length.',
-            'As of April 2026, a 7B model at Q4_K_M with 4K context uses ~6 GB RAM. The same model with 32K context uses ~8-9 GB RAM. With 128K context: ~12-16 GB RAM.',
+            'A 7B model at Q4_K_M with 4K context uses ~6 GB RAM. The same model with 32K context uses ~8-9 GB RAM. With 128K context: ~12-16 GB RAM.',
           ],
           rows: [
             { 'Model': 'Llama 3.1 8B Q4_K_M', '4K Context': '~6 GB', '32K Context': '~9 GB', '128K Context': '~14 GB' },
@@ -440,7 +440,7 @@ schema: {
             { q: 'What is the "lost in the middle" problem and how do I avoid it?', a: 'Research shows LLMs reliably retrieve information from the beginning and end of the context window, but miss details from the middle. For a 128K context, content placed at the 40K-80K token mark is most likely to be ignored. To avoid this: either keep important information at the start of the prompt, use RAG to retrieve only relevant chunks, or process long documents in overlapping 16K-32K sections.' },
             { q: 'How do I check what context length Ollama is using?', a: 'Run `ollama show <model>` -- the output lists the parameters including num_ctx. If it shows 2048, Ollama is using the default, not the model\'s full context window. To change it persistently, create a Modelfile with PARAMETER num_ctx 32768 and run ollama create <name> -f Modelfile. Check active sessions with ollama ps.' },
             { q: 'Is long context or RAG better for document question-answering?', a: 'RAG is usually more effective and RAM-efficient than long context for document Q&A. RAG retrieves 3-5 relevant chunks (4K-8K tokens total) from a large corpus and avoids the "lost in the middle" problem. Long context is better when the model needs to understand the entire document structure or when exact ordering and relationships between sections matter. For most practical document Q&A, start with RAG.' },
-            { q: 'Which Ollama models have the largest context window?', a: 'As of June 2026: Qwen3 (all sizes 4B–30B), Gemma 4 (E2B/26B-A4B/31B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.' },
+            { q: 'Which Ollama models have the largest context window?', a: 'Qwen3 (all sizes 4B–30B), Gemma 4 (E2B/26B-A4B/31B), Llama 3.1 (8B/70B), and Mistral Small 3.1 (24B) all support 128K tokens natively. Qwen3 14B Q4_K_M is the recommended choice for 16 GB machines. Ollama\'s Modelfile spec defaults num_ctx to 2048, but the current runtime picks a VRAM-tiered default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) -- set num_ctx explicitly in a Modelfile to access long contexts.' },
             { q: 'How do I run a local LLM with 128K context on 16 GB RAM?', a: 'On 16 GB RAM, Mistral Small 3.1 24B at Q4_K_M with 32K context uses ~17 GB -- exceeds 16 GB. Use Llama 3.1 8B at Q4_K_M with 32K context (~9 GB) or 128K context (~14 GB) for a comfortable fit. Set num_ctx in a Modelfile: PARAMETER num_ctx 32768.' },
           ],
         },

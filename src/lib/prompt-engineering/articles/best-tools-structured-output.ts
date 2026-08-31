@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Type hints become schema — minimal boilerplate',
           'Built-in validation and error handling',
           'Suitable for prototyping and small-to-medium workflows',
-          'Free to use (pricing TBD as of April 2026)'
+          'Free to use (pricing TBD)'
         ]
       },
       promptquorum: {

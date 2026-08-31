@@ -19,12 +19,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Advanced Techniques',
       title: 'Local LLMs for Coding Workflows 2026: Generation, Review, Testing',
       seoTitle: 'Local LLMs for Coding 2026: Kimi K2.6 + SWE-Bench',
-      intro: 'Local LLMs can assist with coding: generating boilerplate, reviewing code, writing tests, and explaining functions. As of July 2026, Kimi K2.6 (58.6 SWE-Bench Pro) and Qwen3.8-27B (61.7% SWE-bench) lead local coding benchmarks — SWE-bench has replaced HumanEval as the primary practical coding benchmark. Speed is slower than cloud (2-5 sec per response), but you keep code private.',
+      intro: 'Local LLMs can assist with coding: generating boilerplate, reviewing code, writing tests, and explaining functions. Kimi K2.6 (58.6 SWE-Bench Pro) and Qwen3.8-27B (61.7% SWE-bench) lead local coding benchmarks — SWE-bench has replaced HumanEval as the primary practical coding benchmark. Speed is slower than cloud (2-5 sec per response), but you keep code private.',
       metaDescription: 'Kimi K2.6 (58.6 SWE-Bench Pro) leads local coding models in July 2026. Generate, review, and test code with Ollama and VS Code. Full benchmark and VRAM guide.',
       heroImage: '/images/local-llms-for-coding-workflows-generation-workflow-hero-en.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**Local LLMs can assist with coding: generating boilerplate, reviewing code, writing tests, and explaining functions. As of July 2026, Kimi K2.6 (58.6 SWE-Bench Pro, MoE) is the top local coding model, followed by Qwen3.8-27B (61.7% SWE-bench) as the best dense option — SWE-bench (real-world GitHub issue resolution) has replaced HumanEval as the primary coding benchmark.**',
+      leadAnswerBlock: '**Local LLMs can assist with coding: generating boilerplate, reviewing code, writing tests, and explaining functions. Kimi K2.6 (58.6 SWE-Bench Pro, MoE) is the top local coding model, followed by Qwen3.8-27B (61.7% SWE-bench) as the best dense option — SWE-bench (real-world GitHub issue resolution) has replaced HumanEval as the primary coding benchmark.**',
       audience: 'Developers setting up local coding AI on consumer hardware',
       readTime: '11 min read',
       educationalLevel: 'Intermediate',
@@ -41,14 +41,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Related Reading', anchor: '#related-reading' },
       ],
       gammaEmbedUrl: '/presentations/local-llms-for-coding-workflows-static.html',
-      gammaDescription: 'The slide deck below covers: best local coding models (Kimi K2.6 58.6 SWE-Bench Pro, Qwen3.8-27B 61.7% SWE-bench), code generation with prompt engineering, code review workflows, test generation, VS Code/Cursor IDE integration, and common mistakes to avoid. Download the PDF as a local coding AI reference card. (Slide deck reflects April 2026 model data; recommendations in the text above are current as of July 2026.)',
+      gammaDescription: 'The slide deck below covers: best local coding models (Kimi K2.6 58.6 SWE-Bench Pro, Qwen3.8-27B 61.7% SWE-bench), code generation with prompt engineering, code review workflows, test generation, VS Code/Cursor IDE integration, and common mistakes to avoid. Download the PDF as a local coding AI reference card. (Slide deck reflects April 2026 model data; recommendations in the text above are current.)',
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Kimi K2.6 (58.6 SWE-Bench Pro, MoE) is the top local coding model as of July 2026, with Qwen3.8-27B (61.7% SWE-bench) as the best dense alternative -- both run locally via Ollama for private code generation, review, and testing.' },
+            { type: 'one-sentence', text: 'Kimi K2.6 (58.6 SWE-Bench Pro, MoE) is the top local coding model, with Qwen3.8-27B (61.7% SWE-bench) as the best dense alternative -- both run locally via Ollama for private code generation, review, and testing.' },
             { type: 'plain-terms', text: "You can use free, open AI models running on your own computer to help write, review, and test code -- similar to GitHub Copilot, but your code never leaves your machine and there's no subscription fee. It's a bit slower than cloud tools, but works well for boilerplate, code review, and test writing." },
           ],
           items: [
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Speed:** 2-5 seconds per suggestion for the largest models (Kimi K2.6, Qwen3.8-27B); under 2 seconds for FIM autocomplete (Codestral 22B, Qwen3 8B). Slower than GitHub Copilot (~300ms).',
             '**Privacy:** Code never leaves your machine. Critical for proprietary codebases.',
             '**Use cases:** Boilerplate generation, code review, test writing, documentation. Not suitable for complex architectural decisions.',
-            'As of July 2026, SWE-bench (real-world GitHub issue resolution) has replaced HumanEval as the primary coding benchmark. Local coding AI is practical for solo developers and small teams.',
+            'SWE-bench (real-world GitHub issue resolution) has replaced HumanEval as the primary coding benchmark. Local coding AI is practical for solo developers and small teams.',
           ],
         },
         bestModels: {
@@ -158,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'Which local LLM is best for coding in 2026?',
-              a: 'As of July 2026: Kimi K2.6 (58.6 SWE-Bench Pro, MoE) for maximum accuracy. Qwen3.8-27B (61.7% SWE-bench) for the best dense-model quality on 24 GB VRAM. Devstral Small 24B for agentic multi-file coding. Codestral 22B for IDE autocomplete. Qwen3 8B for 8 GB VRAM. For MacBook users with Apple Silicon: Qwen3 8B via Ollama runs well on M1 Pro+.',
+              a: 'Kimi K2.6 (58.6 SWE-Bench Pro, MoE) for maximum accuracy. Qwen3.8-27B (61.7% SWE-bench) for the best dense-model quality on 24 GB VRAM. Devstral Small 24B for agentic multi-file coding. Codestral 22B for IDE autocomplete. Qwen3 8B for 8 GB VRAM. For MacBook users with Apple Silicon: Qwen3 8B via Ollama runs well on M1 Pro+.',
             },
             {
               q: 'What is Qwen3\'s HumanEval score for coding?',
@@ -245,7 +245,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Which local LLM is best for coding in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As of July 2026: Kimi K2.6 (58.6 SWE-Bench Pro, MoE) for maximum accuracy. Qwen3.8-27B (61.7% SWE-bench) for the best dense-model quality on 24 GB VRAM. Devstral Small 24B for agentic multi-file coding. Codestral 22B for IDE autocomplete. Qwen3 8B for 8 GB VRAM. For MacBook: Qwen3 8B via Ollama runs well on M1 Pro+.' } },
+          { '@type': 'Question', 'name': 'Which local LLM is best for coding in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 (58.6 SWE-Bench Pro, MoE) for maximum accuracy. Qwen3.8-27B (61.7% SWE-bench) for the best dense-model quality on 24 GB VRAM. Devstral Small 24B for agentic multi-file coding. Codestral 22B for IDE autocomplete. Qwen3 8B for 8 GB VRAM. For MacBook: Qwen3 8B via Ollama runs well on M1 Pro+.' } },
           { '@type': 'Question', 'name': 'What is Qwen3\'s HumanEval score for coding?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B scores approximately 76% on HumanEval (legacy benchmark). Qwen3-Coder 32B scores 87% on HumanEval. As of 2026, SWE-bench has replaced HumanEval as the primary benchmark — Qwen3.8-27B scores 61.7% SWE-bench, Kimi K2.6 scores 58.6 SWE-Bench Pro.' } },
           { '@type': 'Question', 'name': 'How does Kimi K2.6 compare to GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 scores 58.6 on SWE-Bench Pro, competitive with several frontier cloud models on real-world issue resolution. Speed: local is 2–5 seconds vs Copilot\'s ~300ms. Privacy: local keeps code on-device. Cost: local $0/month after hardware; Copilot $228/year.' } },
           { '@type': 'Question', 'name': 'Can I use a local coding LLM in VS Code?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — install Continue.dev (free, open source). Configure to connect to Ollama at localhost:11434. Tab or Ctrl+Shift+\\\\ triggers suggestions. Works with Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B, and all Ollama models.' } },

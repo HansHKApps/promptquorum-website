@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**European languages (German, French, Spanish, Italian)**: Mistral and Llama 3.x are competitive with Qwen3 for EU languages; Qwen3 still leads on code-mixed and formal register tasks.',
             '**Japanese and Korean**: Qwen3 is significantly stronger -- 15-25% better on language-specific benchmarks than Llama 3.x at the same size.',
             '**Chinese (Simplified and Traditional)**: Qwen3 is the dominant model -- trained on the largest Chinese corpus of any open-weight model.',
-            'As of April 2026, no locally-runnable model matches GPT-5.6 or Claude Opus 5 quality in Japanese or Korean for complex tasks. Qwen3 is the best available locally.',
+            'No locally-runnable model matches GPT-5.6 or Claude Opus 5 quality in Japanese or Korean for complex tasks. Qwen3 is the best available locally.',
           ],
         },
         whichSupport: {
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Local LLMs Actually Support Multiple Languages?',
           content: [
             '**"Supporting" a language means more than generating text in that language.** True multilingual support requires: training data in the language (not just translation), tokenization optimized for the language\'s script, and fine-tuning on instruction-following in the language.',
-            'Models that claim multilingual support but were primarily trained on English produce lower-quality output in other languages -- grammatical errors, cultural mismatches, and reduced instruction-following accuracy. As of April 2026, only Qwen3 provides genuine native-quality support for Asian languages locally.',
+            'Models that claim multilingual support but were primarily trained on English produce lower-quality output in other languages -- grammatical errors, cultural mismatches, and reduced instruction-following accuracy. Only Qwen3 provides genuine native-quality support for Asian languages locally.',
           ],
           rows: [
             { 'Model Family': 'Qwen3', 'Native Languages': '29', 'Strong Asian Support': 'Yes', 'Strong EU Support': 'Yes', 'Arabic Support': 'Yes' },
@@ -64,7 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         european: {
           title: 'Which Local LLMs Perform Best for European Languages?',
           content: [
-            '**For German, French, Spanish, Italian, Portuguese, Dutch, and Polish -- Qwen3, Mistral, and Llama 3.x all produce acceptable quality.** Mistral has a particular strength in French due to Mistral AI being a French company with French-language training data emphasis. As of April 2026, German-language benchmarks show Qwen3 8B leading Mistral Small by 8-12% on instruction-following tasks in German.',
+            '**For German, French, Spanish, Italian, Portuguese, Dutch, and Polish -- Qwen3, Mistral, and Llama 3.x all produce acceptable quality.** Mistral has a particular strength in French due to Mistral AI being a French company with French-language training data emphasis. German-language benchmarks show Qwen3 8B leading Mistral Small by 8-12% on instruction-following tasks in German.',
             'For GDPR-sensitive use cases in the EU, running a local model (any family) is preferable to cloud APIs for data residency reasons. German businesses using AI under the EU AI Act (effective February 2025) benefit from local inference for high-risk AI applications. Mistral AI, being a EU company, is preferred by some European organizations on governance grounds regardless of benchmark score.',
           ],
           items: [

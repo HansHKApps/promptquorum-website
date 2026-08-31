@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**LiteLLM’s open-source proxy is free at any volume** — 100+ provider APIs behind one OpenAI-compatible endpoint, with spend tracking, budgets, and rate limiting in the free tier.',
           'OpenRouter charges no subscription but takes ~5.5% on Stripe credit purchases ($0.80 minimum), 5% via crypto, plus a 5% BYOK fee above $25,000/month (pay-as-you-go) or $200,000/month (enterprise).',
           'Portkey was acquired by Palo Alto Networks (completed 29 May 2026) and is being folded into Prisma AIRS — treat it as an enterprise security purchase now.',
-          'LiteLLM’s GitHub repo carries ~57.5k stars and ~11.0k forks as of August 2026 — the clearest public adoption signal of the three.',
+          'LiteLLM’s GitHub repo carries ~57.5k stars and ~11.0k forks — the clearest public adoption signal of the three.',
           'OpenRouter lists 380+ models and is the fastest path from signup to a working multi-model call.',
           'The honest crossover: self-hosting is cheaper the moment 5.5% of your monthly model spend exceeds what you pay to run the proxy.',
           '**Skip a gateway entirely** if you call one provider at low, predictable volume with no second provider planned.',
@@ -387,12 +387,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
             { q: 'What is an LLM API gateway?', a: 'It is a routing layer that gives your application one consistent API for calling multiple LLM providers, typically adding fallback, cost tracking, and rate limiting on top of the raw provider APIs. You call the gateway; it handles provider-specific formatting and authentication. The benefit only materialises once you have more than one provider in production.' },
-            { q: 'Is LiteLLM really free?', a: 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page as of August 2026. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.' },
+            { q: 'Is LiteLLM really free?', a: 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.' },
             { q: 'Does OpenRouter charge per request?', a: 'Not directly. OpenRouter’s fee is on funding your account: roughly 5.5% on Stripe credit purchases with a $0.80 minimum, or 5% via crypto. A separate 5% BYOK fee applies only once monthly BYOK-routed spend exceeds $25,000 on pay-as-you-go or $200,000 on the enterprise tier.' },
             { q: 'Is Portkey still an independent company?', a: 'No. Palo Alto Networks completed its acquisition of Portkey on 29 May 2026 and is integrating it as the core AI gateway inside its Prisma AIRS security platform, per Palo Alto Networks’ own press release. Treat any pre-May-2026 pricing or roadmap information as potentially stale.' },
-            { q: 'Which gateway supports the most providers?', a: 'OpenRouter lists 380+ models on its own site as of August 2026. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.' },
+            { q: 'Which gateway supports the most providers?', a: 'OpenRouter lists 380+ models on its own site. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.' },
             { q: 'Can I self-host Portkey?', a: 'Portkey/Prisma AIRS offered private cloud deployment at the Enterprise tier per pre-acquisition pricing pages. Confirm current self-hosting terms directly with Palo Alto Networks, since acquisition integrations frequently change deployment options in the first year.' },
-            { q: 'Do any of these three have an affiliate program?', a: 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter as of August 2026. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.' },
+            { q: 'Do any of these three have an affiliate program?', a: 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.' },
             { q: 'How do I decide between self-hosting and a hosted gateway?', a: 'Compare 5.5% of your monthly model spend against what it costs you to run a small always-on service. Below that crossover, OpenRouter is cheaper once your time is counted; above it, self-hosted LiteLLM wins on absolute dollars. Add a second test for compliance: if you must be able to state which provider handled a request, self-host regardless of the arithmetic.' },
           ],
       },
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is LiteLLM really free?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page as of August 2026. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.',
+              'text': 'The open-source core is free and self-hosted with no licence fee, per LiteLLM’s own pricing page. There is no per-request markup at any volume. The Enterprise tier — SSO, SCIM, dedicated support, air-gapped deployment — uses custom annual pricing sized to your request volume and includes a 30-day trial.',
             },
           },
           {
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Which gateway supports the most providers?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'OpenRouter lists 380+ models on its own site as of August 2026. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.',
+              'text': 'OpenRouter lists 380+ models on its own site. LiteLLM’s documentation describes 100+ provider integrations — a different unit, since one provider exposes many models. Portkey’s gateway repository has previously advertised 1,600+ LLMs, though that figure should be re-verified given the acquisition.',
             },
           },
           {
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Do any of these three have an affiliate program?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter as of August 2026. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.',
+              'text': 'No checkable public affiliate or referral program was found for LiteLLM, Portkey, or OpenRouter. Every product link on this page is a plain, disclosed product link that earns PromptQuorum nothing. If that changes, this page will be updated with disclosure language matching the actual program terms.',
             },
           },
           {

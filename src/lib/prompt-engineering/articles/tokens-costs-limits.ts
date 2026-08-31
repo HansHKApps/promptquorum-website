@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         'name': 'AI Model Pricing Comparison April 2026',
-        'description': 'Input and output token costs for major AI models as of April 2026',
+        'description': 'Input and output token costs for major AI models',
         'numberOfItems': 6,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'OpenAI GPT-5.6', 'description': 'Input: $5.00/1M tokens. Output: $30.00/1M tokens.' },
@@ -161,8 +161,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pricing: {
           title: 'Pricing Across Cloud Providers',
           content: [
-            'Prices vary dramatically based on model capability. All figures below are public pricing as of April 2026. Note that output tokens typically cost 2–5× more than input tokens — this is where costs accumulate fastest. The right model choice is the biggest cost lever — see [how to pick between GPT-5.6, Claude, and Gemini](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) for detailed comparisons.',
-            'Prices as of April 2026. Verify current rates: [OpenAI pricing](https://openai.com/pricing) · [Anthropic pricing](https://www.anthropic.com/api) · [Google pricing](https://ai.google.dev/pricing)'
+            'Prices vary dramatically based on model capability. All figures below are public pricing. Note that output tokens typically cost 2–5× more than input tokens — this is where costs accumulate fastest. The right model choice is the biggest cost lever — see [how to pick between GPT-5.6, Claude, and Gemini](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) for detailed comparisons.',
+            'Prices. Verify current rates: [OpenAI pricing](https://openai.com/pricing) · [Anthropic pricing](https://www.anthropic.com/api) · [Google pricing](https://ai.google.dev/pricing)'
           ],
           columns: ['Model', 'Input (per 1M tokens)', 'Output (per 1M tokens)'],
           rows: [
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'How much does GPT-5.6 cost per token?',
-              a: 'As of August 2026: GPT-5.6 (Sol tier) costs $5.00 per 1M input tokens and $30.00 per 1M output tokens. GPT-5.6 Luna costs $0.20 per 1M input and $1.20 per 1M output — ~25× cheaper for tasks that don\'t require full GPT-5.6 Sol capability.'
+              a: 'GPT-5.6 (Sol tier) costs $5.00 per 1M input tokens and $30.00 per 1M output tokens. GPT-5.6 Luna costs $0.20 per 1M input and $1.20 per 1M output — ~25× cheaper for tasks that don\'t require full GPT-5.6 Sol capability.'
             },
             {
               q: 'How do rate limits work?',

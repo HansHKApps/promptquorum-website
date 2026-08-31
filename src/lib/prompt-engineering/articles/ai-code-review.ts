@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Why Does Context Window Size Determine Codebase Coverage?',
           content: [
             'A model\'s context window determines how much of your codebase it can analyse simultaneously — the difference between reviewing a single file, a full PR diff, and an entire repository determines which bugs are detectable.',
-            'As of May 2026, the context window gap between models has closed — all three frontier models support 1M tokens. The differentiation is now between cloud models (1M, API-based) and local models (LLaMA 4 Scout at 10M tokens, fully private — no code leaves your infrastructure).',
+            'The context window gap between models has closed — all three frontier models support 1M tokens. The differentiation is now between cloud models (1M, API-based) and local models (LLaMA 4 Scout at 10M tokens, fully private — no code leaves your infrastructure).',
           ],
           columns: ['Model', 'Context Window', 'Lines of Code (approx.)', 'Use Case'],
           rows: [

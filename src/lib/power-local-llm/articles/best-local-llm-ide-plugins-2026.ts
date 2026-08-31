@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Can Continue replace GitHub Copilot entirely for local use?',
-            a: 'As of June 2026, Continue has been acquired by Cursor and v2.0.0-vscode (released June 19, 2026) is the final release; the repo is read-only and Continue-hosted cloud data was deleted after July 15, 2026. The extension still installs and runs offline with Ollama and BYO-LLM, but receives no further development from the original team. For a maintained open-source alternative, Cline is the recommended replacement — it offers the same BYOK model, works in VS Code and the full JetBrains family, and adds agentic file editing. GitHub Copilot Pro costs $10/month with $15/month in AI credits; Cline is free with your own API key.',
+            a: 'Continue has been acquired by Cursor and v2.0.0-vscode (released June 19, 2026) is the final release; the repo is read-only and Continue-hosted cloud data was deleted after July 15, 2026. The extension still installs and runs offline with Ollama and BYO-LLM, but receives no further development from the original team. For a maintained open-source alternative, Cline is the recommended replacement — it offers the same BYOK model, works in VS Code and the full JetBrains family, and adds agentic file editing. GitHub Copilot Pro costs $10/month with $15/month in AI credits; Cline is free with your own API key.',
           },
           {
             q: 'Which plugin works best for multi-file refactoring?',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Can Continue replace GitHub Copilot entirely for local use?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'As of June 2026, Continue was acquired by Cursor and v2.0.0-vscode is its final release (repo read-only, cloud data deleted after July 15, 2026). The extension still runs offline with Ollama, but Cline is now the recommended maintained open-source alternative — free with BYOK, works in VS Code and the full JetBrains family, and adds agentic file editing.',
+            text: 'Continue was acquired by Cursor and v2.0.0-vscode is its final release (repo read-only, cloud data deleted after July 15, 2026). The extension still runs offline with Ollama, but Cline is now the recommended maintained open-source alternative — free with BYOK, works in VS Code and the full JetBrains family, and adds agentic file editing.',
           },
         },
         {

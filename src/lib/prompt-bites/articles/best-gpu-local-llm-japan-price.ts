@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'The RTX 3060 12GB at ~¥45,000 new is the best value GPU for local LLMs in Japan as of August 2026.',
+            text: 'The RTX 3060 12GB at ~¥45,000 new is the best value GPU for local LLMs in Japan.',
           },
           {
             type: 'plain-terms',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'gpus-by-price',
         title: 'GPUs by Price Range in Japan',
         content: [
-          '<strong>As of August 2026, Japan GPU prices run 15–20% above equivalent US prices due to import costs and 10% consumption tax. The four cards below cover every realistic budget for local LLM inference from ~¥27,000 used (RTX 3060 12GB) to ~¥130,000–180,000 used (RTX 3090 24GB).</strong>',
+          '<strong>Japan GPU prices run 15–20% above equivalent US prices due to import costs and 10% consumption tax. The four cards below cover every realistic budget for local LLM inference from ~¥27,000 used (RTX 3060 12GB) to ~¥130,000–180,000 used (RTX 3090 24GB).</strong>',
           'The table below uses August 2026 street prices from Tsukumo, Dospara, and Yodobashi for new cards, and Mercari/Yahoo Auctions midpoints for used. Prices fluctuate — verify before buying.',
         ],
         columns: ['GPU + VRAM', 'New / Used Price (¥)', 'Best for'],

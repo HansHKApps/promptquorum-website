@@ -66,7 +66,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             rank: 2,
             title: 'Vast.ai — Cheapest Spot Market',
-            content: 'Vast.ai is a peer-to-peer GPU marketplace where individual sellers set prices. You can bid on RTX 4090 instances at $0.32–0.48/hr or RTX 3090 (24 GB) at $0.13/hr — a significant price drop as of July 2026 that makes 7B fine-tuning extremely affordable. Savings over RunPod: 20–60%. Caveats: host reliability varies; run checksums before starting. Best for: short fine-tuning runs where interruption risk is acceptable. Not recommended for >12-hour runs without a checkpoint strategy.',
+            content: 'Vast.ai is a peer-to-peer GPU marketplace where individual sellers set prices. You can bid on RTX 4090 instances at $0.32–0.48/hr or RTX 3090 (24 GB) at $0.13/hr — a significant price drop that makes 7B fine-tuning extremely affordable. Savings over RunPod: 20–60%. Caveats: host reliability varies; run checksums before starting. Best for: short fine-tuning runs where interruption risk is acceptable. Not recommended for >12-hour runs without a checkpoint strategy.',
             affiliateLinks: [
               { label: 'Vast.ai GPU Marketplace', url: 'https://vast.ai' },
             ],

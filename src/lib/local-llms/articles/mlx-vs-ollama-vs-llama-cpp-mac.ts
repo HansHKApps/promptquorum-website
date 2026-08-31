@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'freshness',
         title: 'Framework versions and freshness',
         content: [
-          '• Ollama: tested with version 0.32.0 (latest as of July 2026)',
+          '• Ollama: tested with version 0.32.0 (latest)',
           '• MLX: tested with mlx-lm 0.22',
           '• llama.cpp: tested with build from June 2026',
           '• Last verified: 2026-08-28',

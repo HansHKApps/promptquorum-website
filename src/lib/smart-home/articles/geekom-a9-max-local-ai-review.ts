@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RAM: 32 GB DDR5 standard, two SO-DIMM slots, up to 128 GB (user-replaceable)',
           'Local LLM (estimated from specs): 7B–8B comfortable, 13B–14B 4-bit fits; 64–128 GB opens 30B–70B (slow, bandwidth-limited)',
           'NPU (80–86 TOPS total) helps Frigate vision, not LLM speed; the iGPU and RAM bandwidth set LLM latency',
-          'Price: GEEKOM lists $1,299 (HX370/32GB/1TB) to $1,599 (HX470/32GB/2TB) as of August 2026 — a Beelink SER8 covers most needs for $799–849',
+          'Price: GEEKOM lists $1,299 (HX370/32GB/1TB) to $1,599 (HX470/32GB/2TB) — a Beelink SER8 covers most needs for $799–849',
         ],
         updatedDate: '2026-08',
       },
@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'which-config',
         title: 'Which Configuration Should You Buy?',
         content:
-          '**GEEKOM currently sells the A9 Max as HX370/32GB/1TB, HX370/32GB/2TB, and HX470/32GB/2TB, with 64GB and 128GB reachable via the user-replaceable SO-DIMM slots.** Prices below reflect GEEKOM\'s own listing as of August 2026 — always verify the live price and any active discount code before buying.',
+          '**GEEKOM currently sells the A9 Max as HX370/32GB/1TB, HX370/32GB/2TB, and HX470/32GB/2TB, with 64GB and 128GB reachable via the user-replaceable SO-DIMM slots.** Prices below reflect GEEKOM\'s own listing — always verify the live price and any active discount code before buying.',
         columns: ['Configuration', 'Approx. price (Aug 2026)', 'Best for'],
         rows: [
           { Configuration: 'HX370 / 32GB / 1TB', 'Approx. price (Aug 2026)': '$1,299', 'Best for': 'Home Assistant, office, development, small local models — buy if price is the priority' },
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7, dual 2.5GbE, two USB4 ports — well connected for a home server',
           'Runs at a modest 54 W for an always-on box',
           '**Cons**',
-          'Expensive — $1,299–1,599 as of August 2026, well above this review\'s original $1,099–1,299 figure',
+          'Expensive — $1,299–1,599, well above this review\'s original $1,099–1,299 figure',
           'The NPU does not accelerate local LLMs — a common misconception this page exists partly to correct',
           'iGPU + shared-memory design is bandwidth-limited for very large models',
           'Active cooling — it is not silent under sustained load, despite marketing language',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: 'Where to Buy & Current Price',
         content:
-          '**Prices move week to week, so check the live price rather than trusting a fixed figure.** As of August 2026, GEEKOM\'s own store lists the HX370/32GB/1TB configuration at $1,299, HX370/32GB/2TB at $1,399, and the newer HX470/32GB/2TB "2026 Edition" at $1,599 — GEEKOM has also run promotional discount codes on its own store.',
+          '**Prices move week to week, so check the live price rather than trusting a fixed figure.** GEEKOM\'s own store lists the HX370/32GB/1TB configuration at $1,299, HX370/32GB/2TB at $1,399, and the newer HX470/32GB/2TB "2026 Edition" at $1,599 — GEEKOM has also run promotional discount codes on its own store.',
         items: [
           'Confirm the exact SKU (HX 370 vs HX 470, RAM and storage capacity) before ordering — pricing and specs differ, and GEEKOM has sold multiple generations under the "A9 Max" name.',
           'Check for an active discount code at checkout — GEEKOM has run 10–15% off promotions on its own store.',
@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is the current price of the GEEKOM A9 Max?', a: 'GEEKOM\'s own store lists the HX370/32GB/1TB configuration at $1,299, HX370/32GB/2TB at $1,399, and the newer HX470/32GB/2TB "2026 Edition" at $1,599, as of August 2026. This is materially higher than the $1,099–1,299 this review originally quoted — check the live price and any active discount code before buying.' },
+          { q: 'What is the current price of the GEEKOM A9 Max?', a: 'GEEKOM\'s own store lists the HX370/32GB/1TB configuration at $1,299, HX370/32GB/2TB at $1,399, and the newer HX470/32GB/2TB "2026 Edition" at $1,599,. This is materially higher than the $1,099–1,299 this review originally quoted — check the live price and any active discount code before buying.' },
           { q: 'Can the GEEKOM A9 Max run local LLMs?', a: 'Yes. With 32 GB of RAM it comfortably runs a 7B–8B model on Ollama and fits a 13B–14B model at 4-bit quantization with room for context. This is estimated from its verified hardware rather than a fixed benchmark, because speed depends on the model, quantization, and backend.' },
           { q: 'How big a model fits in its RAM?', a: 'At 32 GB, up to a 13B–14B model at 4-bit is realistic. Upgrading to 64 GB opens 30B-class models, and the 128 GB ceiling lets a 70B model load at 4-bit — though very large models run slowly because the iGPU shares system memory and has no dedicated VRAM.' },
           { q: 'Does the NPU make local LLMs faster?', a: 'No. The NPU (80 TOPS total on HX370, 86 TOPS on HX470) accelerates vision and some Windows AI features, but mainstream local-LLM runtimes such as Ollama and llama.cpp run the model on the CPU and Radeon 890M iGPU. Treat the NPU as a benefit for Frigate camera detection, not chat-model speed.' },
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'Review',
       name: 'GEEKOM A9 Max Review (2026): Is It the Best Mini PC for Local AI?',
       reviewBody:
-        'The GEEKOM A9 Max is a premium Ryzen AI 9 mini PC that runs Home Assistant plus a 7B–13B local LLM with a 128 GB RAM ceiling. Priced at $1,299–1,599 as of August 2026 (up from $1,099–1,299 at launch), it is a headroom and future-proofing pick, roughly 1.5–2x a Beelink SER8.',
+        'The GEEKOM A9 Max is a premium Ryzen AI 9 mini PC that runs Home Assistant plus a 7B–13B local LLM with a 128 GB RAM ceiling. Priced at $1,299–1,599 (up from $1,099–1,299 at launch), it is a headroom and future-proofing pick, roughly 1.5–2x a Beelink SER8.',
       datePublished: '2026-07-03',
       dateModified: '2026-08-25',
       author: {

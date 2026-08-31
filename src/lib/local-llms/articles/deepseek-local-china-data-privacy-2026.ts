@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Update Log',
         items: [
           'Published 2026-06-19. Next review due 2026-12-19 (semi-annual freshness tier).',
-          'Facts as of June 2026: DeepSeek privacy policy updated 2026-02-10; Italy Garante block January 2025; investigations in FR, IE, DE, BE, PT. Editorial, evenhanded; no product links.',
+          'Facts: DeepSeek privacy policy updated 2026-02-10; Italy Garante block January 2025; investigations in FR, IE, DE, BE, PT. Editorial, evenhanded; no product links.',
           'Refreshed 2026-08-28: added DeepSeek-V4 (Flash and Pro) as a newer, now-generally-available open-weight generation alongside DeepSeek-V3.2 — same zero-egress self-hosting logic applies, hardware requirements are the only practical difference. No new EU regulatory ruling identified since the June 2026 refresh; existing Garante/CNIL/DPC investigations still stand as described. Next review due 2027-02-28.',
         ],
       },

@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Is the RTX 4060 Ti the same as the RTX 4060?',
-            a: 'No. The RTX 4060 Ti is a separate, higher-tier card available in 8 GB and 16 GB VRAM configurations, priced around $400-430 new as of August 2026. The 16 GB version is a strong pick for local LLMs — see the "Best GPU Under $600" guide. This comparison covers only the standard RTX 4060 (8 GB, non-Ti).',
+            a: 'No. The RTX 4060 Ti is a separate, higher-tier card available in 8 GB and 16 GB VRAM configurations, priced around $400-430 new. The 16 GB version is a strong pick for local LLMs — see the "Best GPU Under $600" guide. This comparison covers only the standard RTX 4060 (8 GB, non-Ti).',
           },
           {
             q: 'Can the RTX 4060 run any LLM at all?',

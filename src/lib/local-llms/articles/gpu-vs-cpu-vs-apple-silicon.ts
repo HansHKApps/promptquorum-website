@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'GPU vs CPU vs Apple Silicon for Local LLMs 2026: Which Wins?',
       heroImage: '/images/gpu-vs-cpu-vs-apple-silicon-overview-hero-en.webp',
       seoTitle: 'GPU vs CPU vs Apple Silicon for Local LLMs (2026)',
-      intro: 'Apple M5 Pro (64 GB, ~$2,399) is the best all-around platform for local LLMs in 2026. It runs 30B+ models in unified memory at 40–60 tok/s with low power draw. NVIDIA RTX 5090 is faster for 7B–14B models but cannot fit 30B+ without CPU offloading. CPU-only is viable for 7B models at 10–20 tok/s on modern hardware. This guide compares all three architectures across memory bandwidth, power draw, cost-per-tok/s, and use cases as of June 2026.',
+      intro: 'Apple M5 Pro (64 GB, ~$2,399) is the best all-around platform for local LLMs in 2026. It runs 30B+ models in unified memory at 40–60 tok/s with low power draw. NVIDIA RTX 5090 is faster for 7B–14B models but cannot fit 30B+ without CPU offloading. CPU-only is viable for 7B models at 10–20 tok/s on modern hardware. This guide compares all three architectures across memory bandwidth, power draw, cost-per-tok/s, and use cases.',
       metaDescription: 'NVIDIA RTX 50-series vs Apple M5 vs CPU-only for local LLMs — real speed comparisons, power draw, and cost per tok/s. One clear winner per budget.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-29',

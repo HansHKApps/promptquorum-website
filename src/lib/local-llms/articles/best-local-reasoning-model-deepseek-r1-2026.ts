@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Update Log',
         items: [
           'Published 2026-06-19. Next review due 2026-12-19 (semi-annual freshness tier).',
-          'Covers the 6 official DeepSeek-R1 distills plus DeepSeek-R1-0528-Qwen3-8B. Verified against published AIME 2024 scores and Q4_K_M VRAM figures as of June 2026.',
+          'Covers the 6 official DeepSeek-R1 distills plus DeepSeek-R1-0528-Qwen3-8B. Verified against published AIME 2024 scores and Q4_K_M VRAM figures.',
           'Refreshed 2026-08-28: clarified DeepSeek-V4 (Flash and Pro) is now generally available (Aug 2026) but, at ~48–80 GB VRAM for V4-Pro, does not change the local-reasoning recommendation — R1 distills remain the practical pick. Added a caveat that OpenAI o1-mini, the benchmark comparator used throughout, was retired from the API in late 2025 (o3-mini and o4-mini have since been retired too); distill AIME 2024/MATH-500 scores are unchanged and reverified. Next review due 2027-02-28.',
         ],
       },

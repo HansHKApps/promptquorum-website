@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         toolCalling: {
           id: 'tool-calling',
           title: 'Tool Calling and Reasoning Comparison',
-          content: 'Tool calling (function calling) allows a model to invoke external APIs and tools in agentic workflows. As of April 2026, all three families support it natively.',
+          content: 'Tool calling (function calling) allows a model to invoke external APIs and tools in agentic workflows. All three families support it natively.',
           rows: [
             { 'Model': 'Qwen3 72B', 'Tool Calling': '✅ Native', 'Reasoning (MATH)': '83%', 'Best For': 'Complex multi-step agents' },
             { 'Model': 'Llama 3.3 70B', 'Tool Calling': '✅ Native', 'Reasoning (MATH)': '77%', 'Best For': 'English-first agent workflows' },

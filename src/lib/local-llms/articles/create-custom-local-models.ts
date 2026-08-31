@@ -364,7 +364,7 @@ schema: {
             '**Europe (GDPR):** Fine-tuning your model on personal data requires data subject consent and documented processing agreements. GDPR Article 5 (data minimization) suggests fine-tuning on anonymized or synthetic data when possible. Pre-trained models on non-EU data may require additional governance before deployment in EU regions.',
             '**Japan (APPI):** Japan\'s Personal Information Protection Act requires explicit consent for training on personal data. Custom models for healthcare or financial services require data residency (processing must occur within Japan). Consider on-premises fine-tuning and deployment.',
             '**China (DSL + CAC):** China\'s Data Security Law and Cyberspace Administration rules require local processing for personal and industrial data. Custom models trained on Chinese data must be trained on Chinese infrastructure. Pre-training models for deployment in China require CAC registration.',
-            '**United States:** No federal LLM regulation (as of August 2026). State-level rules vary; California\'s laws focus on algorithmic transparency. For financial/healthcare models, regulatory bodies (SEC, FDA, CMS) may impose documentation requirements. Consider audit trails for model changes.',
+            '**United States:** No federal LLM regulation. State-level rules vary; California\'s laws focus on algorithmic transparency. For financial/healthcare models, regulatory bodies (SEC, FDA, CMS) may impose documentation requirements. Consider audit trails for model changes.',
           ],
         },
         relatedReading: {

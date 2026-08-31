@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is a CPU-only Ryzen 7 laptop or an RTX 4050/4060 laptop the better pick under $1,000?',
-            a: 'The RTX GPU laptop, if you can find one at a similar price — which is genuinely possible under $1,000 as of August 2026. GPU VRAM matters more than CPU brand for local LLM inference speed. Reserve the CPU-only Ryzen 7 pick for when no suitable GPU deal is available.',
+            a: 'The RTX GPU laptop, if you can find one at a similar price — which is genuinely possible under $1,000. GPU VRAM matters more than CPU brand for local LLM inference speed. Reserve the CPU-only Ryzen 7 pick for when no suitable GPU deal is available.',
           },
           {
             q: 'How much VRAM do I need for local LLMs on a budget laptop?',

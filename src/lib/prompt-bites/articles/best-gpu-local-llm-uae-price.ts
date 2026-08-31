@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-gpu-under-300-local-llm', 'best-gpu-under-600-local-llm', 'best-gpu-local-llm-japan-price', 'best-local-llm-benchmarking-tool'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>The RTX 3060 12GB is the best-value GPU for local LLMs in the UAE, with new units running approximately AED 1,100-1,400 (used approximately AED 700-950) as of July 2026.</strong> Gulf retail pricing generally runs above US MSRP due to import costs and a smaller local retail market, so compare real AED listings from UAE retailers rather than converting US prices at the exchange rate.',
+      '<strong>The RTX 3060 12GB is the best-value GPU for local LLMs in the UAE, with new units running approximately AED 1,100-1,400 (used approximately AED 700-950).</strong> Gulf retail pricing generally runs above US MSRP due to import costs and a smaller local retail market, so compare real AED listings from UAE retailers rather than converting US prices at the exchange rate.',
     toc: [
       { label: 'GPUs by Price Range in the UAE', anchor: '#gpus-by-price' },
       { label: 'Why Gulf GPU Pricing Differs', anchor: '#why-pricing-differs' },
@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       en: {
         question: 'What is the best-value GPU for local LLMs in the UAE?',
         answer:
-          'The RTX 3060 12GB is the best-value GPU for local LLMs in the UAE, at approximately AED 1,100-1,400 new (approximately AED 700-950 used) as of July 2026. Its 12GB of VRAM comfortably runs 7B-class models, and it is widely stocked by UAE electronics retailers.',
+          'The RTX 3060 12GB is the best-value GPU for local LLMs in the UAE, at approximately AED 1,100-1,400 new (approximately AED 700-950 used). Its 12GB of VRAM comfortably runs 7B-class models, and it is widely stocked by UAE electronics retailers.',
         bullets: [
           'RTX 3060 12GB: approx. AED 1,100-1,400 new / AED 700-950 used — best value for 7B-class models.',
           'RTX 4060 Ti 16GB: approx. AED 1,850-2,300 new — step up for 13B-class models with more VRAM headroom.',
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'The RTX 3060 12GB, at approximately AED 1,100-1,400 new, is the best-value GPU for local LLMs in the UAE as of July 2026.',
+            text: 'The RTX 3060 12GB, at approximately AED 1,100-1,400 new, is the best-value GPU for local LLMs in the UAE.',
           },
           {
             type: 'plain-terms',
@@ -74,8 +74,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'gpus-by-price',
         title: 'GPUs by Price Range in the UAE',
         content: [
-          '<strong>As of July 2026, GPU pricing in the UAE and wider Gulf region typically runs above equivalent US MSRP, driven by import costs, UAE VAT (5%), and a smaller, less competitive local retail market.</strong> The GPUs below cover a realistic range of budgets for local LLM inference, from an entry-level 12GB card to a higher-VRAM option for larger models.',
-          'The figures below are approximate AED price ranges based on typical UAE retail and classifieds listings as of July 2026. Prices fluctuate and should be verified against current listings before buying — treat these as planning ranges, not exact quotes.',
+          '<strong>GPU pricing in the UAE and wider Gulf region typically runs above equivalent US MSRP, driven by import costs, UAE VAT (5%), and a smaller, less competitive local retail market.</strong> The GPUs below cover a realistic range of budgets for local LLM inference, from an entry-level 12GB card to a higher-VRAM option for larger models.',
+          'The figures below are approximate AED price ranges based on typical UAE retail and classifieds listings. Prices fluctuate and should be verified against current listings before buying — treat these as planning ranges, not exact quotes.',
         ],
         columns: ['GPU + VRAM', 'Approx. New / Used Price (AED)', 'Best for'],
         rows: [
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which GPU offers the best value for local LLMs in the UAE?',
-            a: 'For most buyers, the RTX 3060 12GB (approximately AED 1,100-1,400 new, approximately AED 700-950 used as of July 2026) offers the best value — its 12GB of VRAM comfortably runs 7B-class models. Step up to the RTX 4060 Ti 16GB (approximately AED 1,850-2,300) if you regularly need to run 13B-class models.',
+            a: 'For most buyers, the RTX 3060 12GB (approximately AED 1,100-1,400 new, approximately AED 700-950 used) offers the best value — its 12GB of VRAM comfortably runs 7B-class models. Step up to the RTX 4060 Ti 16GB (approximately AED 1,850-2,300) if you regularly need to run 13B-class models.',
           },
           {
             q: 'Does UAE VAT apply on top of the listed GPU price?',

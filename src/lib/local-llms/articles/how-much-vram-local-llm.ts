@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **Q5** (5-bit): 1 parameter = 0.625 bytes. ~2% accuracy loss. 84% VRAM savings.',
             '- **Q4** (4-bit): 1 parameter = 0.5 bytes. ~1% accuracy loss. 87.5% VRAM savings.',
             'For most users, Q4 is the sweet spot: imperceptible accuracy loss, 87% smaller VRAM footprint.',
-            'As of April 2026, Q4 is standard. Q5 and Q8 are available if you have extra VRAM and want marginal quality gains.',
+            'Q4 is standard. Q5 and Q8 are available if you have extra VRAM and want marginal quality gains.',
             'VRAM determines model size, but prompt design determines output quality. Techniques like chain-of-thought and few-shot prompting can close the quality gap between smaller and larger models. Explore the full [prompt engineering toolkit](https://www.promptquorum.com/prompt-engineering) to get more from the models your hardware supports. If you have 12–16 GB VRAM and want a concrete coding workload to put that toolkit against, [Replace GitHub Copilot With a Local LLM](/power-local-llm/replace-github-copilot-with-local-llm) maps the Continue.dev + Ollama + Qwen3-Coder stack onto exactly those VRAM tiers.',
           ],
           image: '/images/how-much-vram-local-llm-quantization-tradeoff-hero-en.webp',

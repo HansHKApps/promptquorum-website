@@ -223,7 +223,7 @@ schema: {
             'FP16 = 16 bits, Q8 = 8, Q5 = 5, Q4 = 4 bits',
             'Example: 13B model at Q4 = (13 × 4) ÷ 8 = 6.5 GB',
             'Always add 25% buffer for context, system overhead, and safe margin',
-            'As of August 2026, this formula is accurate within ±10%',
+            'This formula is accurate within ±10%',
           ],
         },
         quickFacts: {
@@ -346,7 +346,7 @@ schema: {
           content: [
             '**The formula is accurate within ±10% for most cases.** Real-world VRAM usage varies based on implementation, model architecture, and inference engine optimizations.',
             'Sources of variation include: different quantization formats (GGUF vs. safetensors vs. AWQ), model architecture (Transformer vs. non-Transformer), and inference engine-specific optimizations (vLLM, llama.cpp, Ollama).',
-            'As of August 2026, treat the formula as a conservative estimate. Always add a 25% safety margin when purchasing GPUs to account for context overhead, batching, and system processes.',
+            'Treat the formula as a conservative estimate. Always add a 25% safety margin when purchasing GPUs to account for context overhead, batching, and system processes.',
           ],
         },
         commonMistakes: {

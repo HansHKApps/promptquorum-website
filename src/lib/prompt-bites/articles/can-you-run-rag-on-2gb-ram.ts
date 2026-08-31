@@ -75,7 +75,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Yes — But Only Tiny Setups Work',
         content: [
-          'At 2 GB RAM, the only viable RAG pipeline uses a 1B-class LLM (Llama 3.2 1B or Phi-3 Mini) with a lightweight embedding model (MiniLM-L6-v2 at ~80 MB) and a flat-file or in-memory vector store. As of May 2026, this works — but only for small personal document sets (under ~200 pages).',
+          'At 2 GB RAM, the only viable RAG pipeline uses a 1B-class LLM (Llama 3.2 1B or Phi-3 Mini) with a lightweight embedding model (MiniLM-L6-v2 at ~80 MB) and a flat-file or in-memory vector store. This works — but only for small personal document sets (under ~200 pages).',
           'The table below shows the RAM footprint of each RAG component at minimum viable settings.',
         ],
         columns: ['Component', 'Memory Use', 'Notes'],

@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'most-popular-models-on-ollama',
           title: 'Which Models Are Most Popular on Ollama in 2026?',
           content: [
-            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of August 2026, the top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since its April 2026 release.',
+            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** The top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since its April 2026 release.',
             'Qwen3 is the fastest-growing model family in the Ollama library, with Qwen3 and the new Qwen3.8 dense variant quickly displacing Qwen2.5. DeepSeek-R1 saw major spikes following its release and remains highly downloaded for reasoning tasks. Dolphin 3.0 (Cognitive Computations, built on Llama 3.1) remains the most-pulled uncensored general-purpose model for users who want an unfiltered local assistant.',
             'Meta released **Llama 4** in April 2026 with Scout (17B active, 109B total, MoE) and Maverick (17B active, 400B total) variants. Llama 4 Scout is now stable in the Ollama library (`ollama pull llama4:scout`). The Llama 4 family uses Mixture-of-Experts (MoE) architecture — Scout needs ~55 GB VRAM at Q4 (it fits 24 GB only at 1.78-bit, ~20 tok/s).',
             'Scout\'s standout features are its 10M-token context window and multimodal input, not consumer-hardware fit. For lightweight setups (8 GB RAM), Llama 3.2 3B remains the easiest first model.',
@@ -202,7 +202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         newApril2026: {
           id: 'new-july-2026',
           title: 'Which Models Were Added to Ollama Most Recently?',
-          content: 'These are the newest models in the Ollama library as of August 2026, newest first. Confirm availability with `ollama pull <model>` before building workflows — new models appear at ollama.com/library within days of release.',
+          content: 'These are the newest models in the Ollama library, newest first. Confirm availability with `ollama pull <model>` before building workflows — new models appear at ollama.com/library within days of release.',
           rows: [
             { 'Model': '[laguna-xs-2.1](https://ollama.com/library/laguna-xs-2.1)', 'Released': 'July 2, 2026', 'Best For': 'Poolside — agentic coding, 33B/3B active MoE, SWE-bench Verified 70.9%, 256K context', 'Ollama Command': 'ollama run laguna-xs-2.1' },
             { 'Model': 'kimi-k2.7-code', 'Released': 'June 2026', 'Best For': 'Moonshot AI — coding-focused agentic model built on Kimi K2.6', 'Ollama Command': 'ollama run kimi-k2.7-code' },
@@ -233,7 +233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         visionModels: {
           id: 'vision-models',
           title: 'Which Ollama Models Support Image Input?',
-          content: 'As of August 2026, these models on Ollama support image input (multimodal): Gemma 4 supports both vision AND tool calling — unique among vision models on Ollama, and now runs nearly 90% faster on Apple Silicon after the July MLX update.',
+          content: 'These models on Ollama support image input (multimodal): Gemma 4 supports both vision AND tool calling — unique among vision models on Ollama, and now runs nearly 90% faster on Apple Silicon after the July MLX update.',
           rows: [
             { 'Model': '[llama3.2-vision:11b](https://ollama.com/library/llama3.3)', 'RAM': '~8 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:11b' },
             { 'Model': '[llama3.2-vision:90b](https://ollama.com/library/llama3.3)', 'RAM': '~55 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:90b' },

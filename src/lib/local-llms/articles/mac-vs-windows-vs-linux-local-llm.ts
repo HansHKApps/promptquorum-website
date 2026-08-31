@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Cost & Comparisons',
       title: 'Mac vs Windows vs Linux for Local LLMs 2026: Apple M5, RTX 5090, and Linux Server Compared',
       seoTitle: 'Mac vs Windows vs Linux for Local LLMs 2026: M5 vs RTX 5090',
-      intro: '**macOS with Apple M5 silicon is the simplest setup — Ollama installs in 6 minutes, runs Llama 3.1 8B at 40–60 tok/sec on M5 Pro with $0 extra hardware. MacBook Pro M5 Max (128 GB, 614 GB/s bandwidth) handles 70B at 25–35 tok/sec — a 4× improvement over M4 Max. Windows with RTX 5090 (32 GB, $2,000) runs 70B at 40–50 tok/sec. Linux is 1–5% faster than Windows on identical hardware and costs $810 total over 3 years for production servers. As of April 2026, the M5 generation closed the speed gap between Apple Silicon and discrete GPUs significantly.**',
+      intro: '**macOS with Apple M5 silicon is the simplest setup — Ollama installs in 6 minutes, runs Llama 3.1 8B at 40–60 tok/sec on M5 Pro with $0 extra hardware. MacBook Pro M5 Max (128 GB, 614 GB/s bandwidth) handles 70B at 25–35 tok/sec — a 4× improvement over M4 Max. Windows with RTX 5090 (32 GB, $2,000) runs 70B at 40–50 tok/sec. Linux is 1–5% faster than Windows on identical hardware and costs $810 total over 3 years for production servers. The M5 generation closed the speed gap between Apple Silicon and discrete GPUs significantly.**',
       metaDescription: 'MacBook Pro M5 Max 128GB: 70B at 25–35 tok/s, 614 GB/s bandwidth. Windows RTX 5090 32GB: 70B at 40–50 tok/s, $2,000. Linux: 1–5% faster, $810 TCO 3 years. Full OS comparison.',
       heroImage: '/images/mac-vs-windows-vs-linux-local-llm-hardware-cost-hero-en.webp',
       publishDate: '2026-04-05',
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Ollama (inference engine): macOS ✓, Windows ✓, Linux ✓.** Identical features across all three.',
             'LM Studio (GUI): macOS ✓, Windows ✓. Linux only via Docker (no native GUI).',
             'vLLM (API server): macOS (limited, Apple Metal only), Windows ✓ (CUDA), Linux ✓ (CUDA/ROCm). Best on Linux.',
-            'NVIDIA CUDA toolkit: Windows ✓, Linux ✓. macOS ✗ (not supported as of April 2026, only Apple Metal).',
+            'NVIDIA CUDA toolkit: Windows ✓, Linux ✓. macOS ✗ (not supported, only Apple Metal).',
             'PyTorch (deep learning framework): macOS ✓ (Apple Metal backend, slower), Windows ✓ (CUDA), Linux ✓ (CUDA/ROCm). Fastest on Linux/Windows with NVIDIA.',
             'Fine-tuning support: macOS (slow CPU-only or via cloud); Windows ✓ (CUDA accelerated); Linux ✓✓ (best support).',
           ],
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Can I use AMD GPUs instead of NVIDIA?',
-              a: 'Windows: Limited (ROCm support improving but 3–6 months behind CUDA). Linux: Excellent ROCm support for RX 7000-series. AMD is 10–20% slower than equivalent NVIDIA for LLM inference as of April 2026. For AMD on Linux: set HSA_OVERRIDE_GFX_VERSION before starting Ollama.',
+              a: 'Windows: Limited (ROCm support improving but 3–6 months behind CUDA). Linux: Excellent ROCm support for RX 7000-series. AMD is 10–20% slower than equivalent NVIDIA for LLM inference. For AMD on Linux: set HSA_OVERRIDE_GFX_VERSION before starting Ollama.',
             },
             {
               q: 'Is Linux harder to set up for beginners?',
@@ -253,7 +253,7 @@ schema: {
         'url': 'https://www.promptquorum.com/local-llms/mac-vs-windows-vs-linux-local-llm',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Can I run Llama 3.3 70B on macOS?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — MacBook Pro M5 Pro (64 GB) runs 70B Q4 at 15–20 tok/sec. M5 Max (128 GB) runs 70B Q8 at 25–35 tok/sec. Mac mini M5 Pro (64 GB, shipping September 22, 2026) uses the same chip and should perform similarly. Mac Studio M5 Max (up to 128 GB) and M5 Ultra (up to 512 GB) handle larger models. The Mac mini M6 (32 GB max) cannot fit 70B; neither can any 32 GB or smaller configuration.' } },
-          { '@type': 'Question', 'name': 'Can I use AMD GPUs instead of NVIDIA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windows: Limited (ROCm support improving but 3–6 months behind CUDA). Linux: Excellent ROCm support for RX 7000-series. AMD is 10–20% slower than equivalent NVIDIA for LLM inference as of April 2026. For AMD on Linux: set HSA_OVERRIDE_GFX_VERSION before starting Ollama.' } },
+          { '@type': 'Question', 'name': 'Can I use AMD GPUs instead of NVIDIA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windows: Limited (ROCm support improving but 3–6 months behind CUDA). Linux: Excellent ROCm support for RX 7000-series. AMD is 10–20% slower than equivalent NVIDIA for LLM inference. For AMD on Linux: set HSA_OVERRIDE_GFX_VERSION before starting Ollama.' } },
           { '@type': 'Question', 'name': 'Is Linux harder to set up for beginners?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. macOS: Ollama.app installs in 6 minutes, no terminal. Windows: 15–20 minutes with NVIDIA driver install. Linux: 40–70 minutes, requires terminal (apt, pip, systemctl). If you are not comfortable with command-line: start with macOS or Windows.' } },
           { '@type': 'Question', 'name': 'Can I switch OS mid-project?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Models are portable — GGUF files work on all OS. Fine-tuned adapters (LoRA) are also portable. Framework code may need minor path updates. Ollama model storage locations differ by OS but model weights are identical.' } },
           { '@type': 'Question', 'name': 'Does macOS use less electricity?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apple Silicon M5 Max under sustained LLM inference draws ~30–40 W. RTX 5090 under load draws ~450 W. Over 3 years at 4 hrs/day active use: M5 Max ~$15 electricity vs RTX 5090 ~$180. macOS wins on power cost, Linux/Windows win on inference speed.' } },

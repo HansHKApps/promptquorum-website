@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'iOS integration by local LLM app: Private LLM and Apple Intelligence support Shortcuts and Siri; PocketPal AI, MLC Chat, and LLM Farm are standalone chat apps with no Shortcuts actions as of 2026. PocketPal AI, MLC Chat, and LLM Farm are open-source.',
         items: [
           '**Private LLM** exposes a "Generate Text with Private LLM" Shortcuts action and a "Hey Siri, ask Private LLM [question]" voice trigger. The most iOS-native of the four chat apps.',
-          '**PocketPal AI** is a standalone chat app — no Shortcuts action, no Siri integration. You open the app and chat. Plans for Shortcuts support are tracked in the GitHub issues but not shipped as of May 2026.',
+          '**PocketPal AI** is a standalone chat app — no Shortcuts action, no Siri integration. You open the app and chat. Plans for Shortcuts support are tracked in the GitHub issues but not shipped.',
           '**MLC Chat** is a reference app for the MLC LLM project — minimal iOS integration. No Shortcuts action.',
           '**LLM Farm** is a standalone chat app — no Shortcuts action.',
           '**Apple Intelligence** integrates with iOS Shortcuts via the "Use Model" action (iOS 18.4+). This routes a prompt to either the on-device 3B model or Private Cloud Compute (configurable). The on-device output can be chained into other Shortcuts actions.',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I sync chat history between iPhone and Mac?',
-            a: 'Not natively in any of these four apps. Chat history is stored locally on each device; there is no iCloud sync feature in PocketPal AI, Private LLM, MLC Chat, or LLM Farm as of May 2026. For cross-device chat history, the practical approach is to run Open WebUI on a home Mac and access it from both iPhone and Mac browsers — Open WebUI stores chat history server-side.',
+            a: 'Not natively in any of these four apps. Chat history is stored locally on each device; there is no iCloud sync feature in PocketPal AI, Private LLM, MLC Chat, or LLM Farm. For cross-device chat history, the practical approach is to run Open WebUI on a home Mac and access it from both iPhone and Mac browsers — Open WebUI stores chat history server-side.',
           },
           {
             q: 'Are these apps available outside the App Store?',

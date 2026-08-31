@@ -19,8 +19,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/where-balcony-solar-doesnt-exist-yet-2027-overview-hero-en.webp',
     title: 'Where Balcony Solar Doesn\'t Exist Yet: Bahrain and Taiwan (2027)',
     seoTitle: 'Where Balcony Solar Doesn\'t Exist Yet: Bahrain and Taiwan (2027)',
-    intro: 'Not every market has a balcony solar story to tell yet. Research into Bahrain and Taiwan found no dedicated plug-in/balcony-solar regulation, market activity, or consumer product culture in either, as of July 2026 — this page reports that absence directly rather than manufacturing a country guide where none is warranted.',
-    metaDescription: 'No plug-in/balcony-solar market, regulation, or product culture was found in Bahrain or Taiwan as of July 2026. Solar activity in both markets is utility/industrial or grid-scale/rooftop-PPA only. This page reports the gap and will be revisited if that changes.',
+    intro: 'Not every market has a balcony solar story to tell yet. Research into Bahrain and Taiwan found no dedicated plug-in/balcony-solar regulation, market activity, or consumer product culture in either, — this page reports that absence directly rather than manufacturing a country guide where none is warranted.',
+    metaDescription: 'No plug-in/balcony-solar market, regulation, or product culture was found in Bahrain or Taiwan. Solar activity in both markets is utility/industrial or grid-scale/rooftop-PPA only. This page reports the gap and will be revisited if that changes.',
     publishDate: '2026-07-18',
     dateModified: '2026-07-18',
     readTime: '3 min read',
@@ -28,11 +28,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Balcony solar market watchers checking whether a market exists in Bahrain or Taiwan',
     primaryTerm: 'balcony solar bahrain taiwan',
     targetKeywords: ['balcony solar bahrain', 'balcony solar taiwan', 'plug-in solar taiwan'],
-    leadAnswerBlock: '**As of July 2026, no dedicated plug-in/balcony-solar market, regulation, or consumer product culture was found in Bahrain or Taiwan.** Bahrain showed no plug-in/balcony solar signal at all; regional Gulf solar activity there (renewable energy certificates, GCCIA grid interconnection) is utility/industrial scale. Taiwan\'s solar policy centers on Taipower feed-in tariffs and 20-year power purchase agreements for grid-scale and rooftop systems — again, no consumer plug-in signal. (Note: the UAE and Saudi Arabia are not covered here — both have their own dedicated, more nascent-but-real regulatory pictures, covered in the Gulf & MENA article linked below, so they don\'t belong in a "no market found" piece.) This page states plainly that no legislative or market activity was found in Bahrain or Taiwan as of the research date, rather than speculating on if or when that might change.',
+    leadAnswerBlock: '**No dedicated plug-in/balcony-solar market, regulation, or consumer product culture was found in Bahrain or Taiwan.** Bahrain showed no plug-in/balcony solar signal at all; regional Gulf solar activity there (renewable energy certificates, GCCIA grid interconnection) is utility/industrial scale. Taiwan\'s solar policy centers on Taipower feed-in tariffs and 20-year power purchase agreements for grid-scale and rooftop systems — again, no consumer plug-in signal. (Note: the UAE and Saudi Arabia are not covered here — both have their own dedicated, more nascent-but-real regulatory pictures, covered in the Gulf & MENA article linked below, so they don\'t belong in a "no market found" piece.) This page states plainly that no legislative or market activity was found in Bahrain or Taiwan as of the research date, rather than speculating on if or when that might change.',
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar available in Bahrain or Taiwan?',
-        answer: 'No dedicated plug-in/balcony-solar market, regulation, or product culture was found in either country as of July 2026. Bahrain showed no balcony solar signal at all in research; regional GCC solar activity there is utility/industrial scale (RECs, GCCIA grid interconnection). Taiwan\'s solar policy is Taipower feed-in-tariff and 20-year PPA contracts for grid-scale/rooftop systems, with no consumer plug-in signal identified.',
+        answer: 'No dedicated plug-in/balcony-solar market, regulation, or product culture was found in either country. Bahrain showed no balcony solar signal at all in research; regional GCC solar activity there is utility/industrial scale (RECs, GCCIA grid interconnection). Taiwan\'s solar policy is Taipower feed-in-tariff and 20-year PPA contracts for grid-scale/rooftop systems, with no consumer plug-in signal identified.',
         bullets: [
           'Bahrain: no plug-in/balcony solar signal found at all; regional GCC solar activity (RECs, GCCIA grid interconnection) is utility/industrial scale',
           'Taiwan: solar policy found is Taipower feed-in-tariff and 20-year PPA contracts for grid-scale/rooftop systems — no plug-in consumer signal found',
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'No dedicated plug-in/balcony-solar market, regulation, or product culture was found in Bahrain or Taiwan as of July 2026 — this page reports that absence directly.',
+          'No dedicated plug-in/balcony-solar market, regulation, or product culture was found in Bahrain or Taiwan — this page reports that absence directly.',
           'Bahrain: no plug-in/balcony solar signal found at all; regional Gulf solar activity there is utility/industrial scale (RECs, GCCIA grid interconnection).',
           'Taiwan: Taipower feed-in-tariff and 20-year PPA contracts govern grid-scale and rooftop solar — no consumer plug-in signal identified.',
           'The UAE and Saudi Arabia are intentionally not covered in this piece — both already have dedicated (if nascent and inconsistent) regulatory coverage in the separate Gulf & MENA article, so they don\'t belong in a "no market found" piece.',
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Can I buy and use balcony solar in Bahrain or Taiwan?', a: 'No dedicated plug-in/balcony-solar regulation, market, or product category was found in either country as of July 2026. Solar activity in both markets is utility/industrial or grid-scale/rooftop-PPA based, not a consumer plug-in category.' },
+          { q: 'Can I buy and use balcony solar in Bahrain or Taiwan?', a: 'No dedicated plug-in/balcony-solar regulation, market, or product category was found in either country. Solar activity in both markets is utility/industrial or grid-scale/rooftop-PPA based, not a consumer plug-in category.' },
           { q: 'Why isn\'t the UAE or Saudi Arabia covered on this page?', a: 'Both already have their own dedicated regulatory coverage — the UAE requires utility approval (NOC) for any grid-tied system with real enforcement (fines up to AED 20,000), and Saudi Arabia\'s ECRA sets an explicit 1kW regulatory floor. See the separate Gulf & MENA article; this "no market found" page only covers countries where no regulatory signal exists at all.' },
           { q: 'Does Bahrain have any balcony solar rules?', a: 'None were found. Bahrain\'s solar activity is utility/industrial scale (renewable energy certificates, GCCIA grid interconnection) — no plug-in/balcony-specific signal was identified.' },
           { q: 'Does Taiwan have plug-in solar rules?', a: 'No consumer plug-in signal was found. Taiwan\'s solar policy (Taipower feed-in tariffs, 20-year PPAs) governs grid-scale and rooftop systems, not a plug-in balcony category.' },

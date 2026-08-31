@@ -155,14 +155,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tableFormat: true,
         callouts: [
           { type: 'note', text: 'SWE-bench scores for DeepSeek Coder and Mistral Devstral are estimated from available leaderboard data. Qwen 3.6 27B and Codestral SWE-bench scores are from official publications.' },
-          { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data as of May 2026.' },
+          { type: 'tip', text: 'DeepSeek\'s model lineup evolves frequently. Verify the current model name and pricing at platform.deepseek.com before deployment. Figures reflect publicly available data.' },
         ],
       },
       costMath: {
         id: 'cost-math',
         title: 'Per-Token Cost Math',
         content: [
-          'The economics of coding LLMs depend on usage volume, task sensitivity, and infrastructure overhead. Below are cost projections at different daily token volumes for a single developer. Note: All power costs are calculated for EU electricity rates (€0.35/kWh), standard for Germany and much of Europe as of May 2026.',
+          'The economics of coding LLMs depend on usage volume, task sensitivity, and infrastructure overhead. Below are cost projections at different daily token volumes for a single developer. Note: All power costs are calculated for EU electricity rates (€0.35/kWh), standard for Germany and much of Europe.',
           'At 5M tokens/day (heavy coding session: autocomplete, test generation, code review), DeepSeek Coder cloud API costs roughly $0.70/day at typical rates. Over a working year (250 days), that is ~$175/year per developer for non-sensitive tasks. An RTX 4090 (end-of-life pricing $2,000–$2,600) running local Qwen 3.6 27B with EU power costs pays for itself in 6–8 years — but the break-even shifts dramatically for teams and GDPR-sensitive code.',
           'For a team of 10 generating 50M tokens/day: cloud API costs ~$7/day (~$1,750/year). An RTX 4090 system per 2 developers (~$4,600 total for the team at EOL pricing) breaks even in 2–3 years, with full GDPR compliance and zero per-token cost thereafter.',
         ],

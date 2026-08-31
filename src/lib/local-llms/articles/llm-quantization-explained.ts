@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**GGUF (GPT-Generated Unified Format) is the single-file standard for quantized LLM weights, containing model weights, metadata, and tokenizer -- used by Ollama, LM Studio, and llama.cpp.** It was created by the llama.cpp project and replaces the older GGML format.',
             'A GGUF file contains: the quantized model weights, all model metadata (architecture, tokenizer, context length), and a format version number. This self-contained design means a single `.gguf` file is everything needed to run the model -- no separate tokenizer files, no configuration JSON.',
-            'As of August 2026, GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
+            'GGUF is the standard format for Ollama, LM Studio, Jan AI, and GPT4All. When you run [`ollama pull llama3.1:8b`](/local-llms/how-to-install-ollama), Ollama downloads a GGUF file internally. When LM Studio shows model file sizes, those are GGUF file sizes.',
             'The quantization level is part of the filename: `Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf` is a Q4_K_M quantized GGUF of Llama 3.1 8B.',
           ],
           image: '/images/gguf-format-structure-en.svg',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'quality-loss',
           title: 'How Much Quality Do You Actually Lose with Quantization?',
           content: [
-            '**Q4_K_M loses 1-3% on MMLU benchmarks vs FP16 -- imperceptible in most practical tasks. Q3_K_S loses 5-10% and is noticeable on math and reasoning.** Quality loss from quantization is measured by comparing benchmark scores between full-precision and quantized versions. As of August 2026, the established findings are:',
+            '**Q4_K_M loses 1-3% on MMLU benchmarks vs FP16 -- imperceptible in most practical tasks. Q3_K_S loses 5-10% and is noticeable on math and reasoning.** Quality loss from quantization is measured by comparing benchmark scores between full-precision and quantized versions. The established findings are:',
             'Quantization reduces memory usage but can degrade output quality. Well-engineered prompts compensate: techniques like few-shot examples and explicit output constraints help quantized models maintain accuracy. See [prompt engineering techniques](https://www.promptquorum.com/prompt-engineering) for methods that work at any quantization level.',
           ],
           items: [

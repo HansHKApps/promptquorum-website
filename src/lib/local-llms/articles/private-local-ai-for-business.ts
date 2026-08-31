@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which open-source models are best for business use?',
-              a: 'For business deployments as of August 2026: Llama 3.3 70B (Meta, Llama Community License — free for commercial use under 700M users), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). For smaller deployments: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. All commercially licensable at no cost. Always verify license before production deployment.',
+              a: 'For business deployments: Llama 3.3 70B (Meta, Llama Community License — free for commercial use under 700M users), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). For smaller deployments: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. All commercially licensable at no cost. Always verify license before production deployment.',
             },
             {
               q: 'What is the latency of on-premises AI vs cloud APIs?',
@@ -245,7 +245,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Which open-source models are best for business use?',
-            acceptedAnswer: { '@type': 'Answer', text: 'As of August 2026: Llama 3.3 70B (Apache 2.0, free commercial use <700M users), Qwen 3 72B (Apache 2.0), Mistral Small 3.1 24B (Apache 2.0). All three are commercially licensable at no cost.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Llama 3.3 70B (Apache 2.0, free commercial use <700M users), Qwen 3 72B (Apache 2.0), Mistral Small 3.1 24B (Apache 2.0). All three are commercially licensable at no cost.' },
           },
           {
             '@type': 'Question',

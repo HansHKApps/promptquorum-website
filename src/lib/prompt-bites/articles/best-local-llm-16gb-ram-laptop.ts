@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Qwen3 8B Is the Best 16 GB Laptop Pick',
         content: [
-          'As of July 2026, on a 16 GB RAM laptop without a discrete GPU, Qwen3 8B at Q4_K_M quantization is the best all-round local LLM. It uses approximately 6 GB of RAM, leaves ~10 GB for the OS and other applications, and runs at ~8–15 tokens per second on a modern x86 CPU. It handles coding, writing, reasoning, and summarization well, and its native 128K context is a bonus for document work.',
+          'On a 16 GB RAM laptop without a discrete GPU, Qwen3 8B at Q4_K_M quantization is the best all-round local LLM. It uses approximately 6 GB of RAM, leaves ~10 GB for the OS and other applications, and runs at ~8–15 tokens per second on a modern x86 CPU. It handles coding, writing, reasoning, and summarization well, and its native 128K context is a bonus for document work.',
           'The table below shows the models worth considering on a 16 GB laptop, ranked by use-case fit.',
         ],
         columns: ['Model', 'RAM Use (Q4_K_M)', 'Speed (best for)'],

@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Side-by-Side VPN Comparison for AI Model Downloads',
         content: [
-          '<strong>All five have audited or verified no-logs policies.</strong> Prices are approximate as of August 2026 — check providers directly for current rates and promotions.',
+          '<strong>All five have audited or verified no-logs policies.</strong> Prices are approximate — check providers directly for current rates and promotions.',
         ],
         columns: ['Provider', 'Jurisdiction', 'No-logs audit', 'Price (approx)', 'Best for', 'Servers'],
         rows: [
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'What is the cheapest VPN for AI model downloads?',
-            a: 'Surfshark and ExpressVPN\'s entry Basic tier are both around $2.49/month on a 2-year plan as of August 2026. Surfshark includes unlimited device connections at that price; ExpressVPN\'s Basic tier caps device count lower than its Advanced/Pro tiers. NordVPN is close behind at ~$3.49/month on a 2-year plan.',
+            a: 'Surfshark and ExpressVPN\'s entry Basic tier are both around $2.49/month on a 2-year plan. Surfshark includes unlimited device connections at that price; ExpressVPN\'s Basic tier caps device count lower than its Advanced/Pro tiers. NordVPN is close behind at ~$3.49/month on a 2-year plan.',
           },
         ],
       },

@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Local LLMs vs ChatGPT Plus 2026: Full Cost Comparison Across 7 Pricing Tiers',
       heroImage: '/images/local-llms-vs-chatgpt-plus-overview-hero-en.webp',
       seoTitle: 'Local LLMs vs ChatGPT Plus 2026: $720 vs $590 3-Year Cost',
-      intro: '**ChatGPT now has 7 pricing tiers as of April 2026 — Free ($0), Go ($8), Plus ($20), Pro $100 (new April 9), Pro $200, Business ($25/user), and Enterprise.** ChatGPT Plus costs $720 over 3 years with access to GPT-5.2 and GPT-5.2 Thinking. A local Llama 3.3 70B setup on an RTX 5060 Ti (16 GB, $400) costs $430–490 total over 3 years. For heavy users (10+ hrs/week), local is 30–50% cheaper over 3 years and 80% cheaper over 5 years. As of August 2026, local Llama 3.3 70B still hits ~82% of GPT-5.2 quality on MMLU — the closest parity between local and cloud models in MMLU benchmarks to date (April 2026; EvalPlus leaderboard).',
+      intro: '**ChatGPT now has 7 pricing tiers — Free ($0), Go ($8), Plus ($20), Pro $100 (new April 9), Pro $200, Business ($25/user), and Enterprise.** ChatGPT Plus costs $720 over 3 years with access to GPT-5.2 and GPT-5.2 Thinking. A local Llama 3.3 70B setup on an RTX 5060 Ti (16 GB, $400) costs $430–490 total over 3 years. For heavy users (10+ hrs/week), local is 30–50% cheaper over 3 years and 80% cheaper over 5 years. Local Llama 3.3 70B still hits ~82% of GPT-5.2 quality on MMLU — the closest parity between local and cloud models in MMLU benchmarks to date (April 2026; EvalPlus leaderboard).',
       metaDescription: 'ChatGPT Plus: $20/mo = $720 over 3 years. Local Llama 3.3 70B on RTX 5060 Ti: $400 GPU + $90 power = $490 total. Breakeven 11 months. 7 ChatGPT tiers compared.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'chatgpt-pricing',
           title: 'What Are All 7 ChatGPT Pricing Tiers in April 2026?',
           content: [
-            '**As of August 2026, ChatGPT still offers the same 7 pricing tiers introduced by April 17, 2026 — the most complex lineup in OpenAI\'s history.** The Pro $100 tier launched on April 9, 2026, bridging the gap between Plus ($20) and the original Pro ($200). All prices verified from chatgpt.com/pricing.',
+            '**ChatGPT still offers the same 7 pricing tiers introduced by April 17, 2026 — the most complex lineup in OpenAI\'s history.** The Pro $100 tier launched on April 9, 2026, bridging the gap between Plus ($20) and the original Pro ($200). All prices verified from chatgpt.com/pricing.',
             'OpenAI added advertising to Free and Go tiers in the US in February 2026. Plus, Pro $100, Pro $200, Business, and Enterprise remain ad-free.',
           ],
           columns: ['Tier', 'Price', 'Models', 'Usage Limits'],
@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Free and Go now have ads (Feb 2026):** OpenAI introduced advertising in the US for Free and Go tiers; Plus and above remain ad-free',
             '**ChatGPT Plus vs API:** The $20/month subscription covers the web UI only. OpenAI API is billed separately: GPT-5.4 costs $0.01/1K input tokens, $0.04/1K output tokens',
-            '**No annual billing:** Plus, Go, and Pro tiers are monthly-only as of April 2026 — no annual discount available',
+            '**No annual billing:** Plus, Go, and Pro tiers are monthly-only — no annual discount available',
             '**ChatGPT Plus subscribers do NOT get API credits.** API access requires a separate OpenAI platform account at platform.openai.com',
           ],
         },
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'local-upfront',
           title: 'What Does a Local LLM Setup Cost in April 2026?',
           content: [
-            '**As of August 2026, three hardware tiers cover the range from casual 7B use to GPT-5.2-class 70B inference — 70B-tier GPU prices have climbed since spring due to a 2026 GDDR7 memory shortage.** All software is free: [Ollama](/local-llms/how-to-install-ollama) (inference engine), Open WebUI (chat interface), and all open-source models (Llama, Qwen, Mistral, Gemma, Phi) are $0 to download and run.',
+            '**Three hardware tiers cover the range from casual 7B use to GPT-5.2-class 70B inference — 70B-tier GPU prices have climbed since spring due to a 2026 GDDR7 memory shortage.** All software is free: [Ollama](/local-llms/how-to-install-ollama) (inference engine), Open WebUI (chat interface), and all open-source models (Llama, Qwen, Mistral, Gemma, Phi) are $0 to download and run.',
           ],
           items: [
             '**Entry-level — 7B models — RTX 4060 Ti 8 GB (used, $220–260):** Runs Llama 3.1 8B, Mistral Small, Gemma 4 9B at 25–60 tok/s. Total build including PC: $700–900.',
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**GPT-5.2 (ChatGPT Plus, April 2026): 87% MMLU, 87% HumanEval — the most capable model in a $20/month subscription.** GPT-5.2 Thinking mode adds deep chain-of-thought for complex math and analysis, included in Plus at 3,000 queries/week.',
             '[Llama 3.3 70B (Meta, December 2024): 80% MMLU, 88% HumanEval](/local-llms/top-open-source-models-ollama) — one of the leading open-source models for local inference. The 5-point MMLU gap with GPT-5.2 is the closest cloud/local gap to date (April 2026; EvalPlus leaderboard). For 80% of business tasks (email, code review, summarization, Q&A), Llama 3.3 70B is sufficient.',
-            'GPT-5.2 Thinking and GPT-5.4 Pro (Pro $100 tier) lead on novel multi-step reasoning, graduate-level math, and autonomous agent tasks. For those use cases, no local model fully competes as of April 2026.',
+            'GPT-5.2 Thinking and GPT-5.4 Pro (Pro $100 tier) lead on novel multi-step reasoning, graduate-level math, and autonomous agent tasks. For those use cases, no local model fully competes.',
           ],
           columns: ['Model', 'Type', 'MMLU', 'HumanEval', 'Notes'],
           rows: [
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Can I cancel ChatGPT Plus anytime?',
-              a: 'Yes. Plus is monthly-only with no annual commitment as of April 2026. Cancel via Settings → Subscription in ChatGPT. Access continues through the end of the paid period. OpenAI does not offer refunds for partial months.',
+              a: 'Yes. Plus is monthly-only with no annual commitment. Cancel via Settings → Subscription in ChatGPT. Access continues through the end of the paid period. OpenAI does not offer refunds for partial months.',
             },
             {
               q: 'What is the electricity cost of running a local LLM in 2026?',
@@ -277,7 +277,7 @@ schema: {
           { '@type': 'Question', 'name': 'What is the breakeven for a local 70B setup vs ChatGPT Plus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Depends on hardware: RTX 4090 used ($1,999 + build) takes ~8 years to break even vs Plus. Mac mini M5 Pro 64 GB ($1,699) takes ~7 years. Framework Desktop 128 GB ($2,199) takes ~9 years. Local 70B is financially justified only if you also need privacy, no rate limits, offline capability, or multi-user access.' } },
           { '@type': 'Question', 'name': 'Does ChatGPT Plus have ads in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. Ads are on Free and Go tiers only (introduced February 2026, US market first). ChatGPT Plus, Pro $100, Pro $200, Business, and Enterprise are all ad-free. OpenAI has stated ads will not be introduced on paid tiers.' } },
           { '@type': 'Question', 'name': 'Which is better for coding: ChatGPT Plus or local Qwen3-Coder?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For general coding: close call. Qwen3-Coder 32B achieves 92.7% HumanEval locally, matching GPT-5.2. For autonomous coding agents and Codex integration, ChatGPT Plus has better tooling. For privacy-sensitive codebases or offline work, Qwen3-Coder 32B local is the right choice.' } },
-          { '@type': 'Question', 'name': 'Can I cancel ChatGPT Plus anytime?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Plus is monthly-only with no annual commitment as of April 2026. Cancel via Settings → Subscription in ChatGPT. Access continues through the end of the paid period. OpenAI does not offer refunds for partial months.' } },
+          { '@type': 'Question', 'name': 'Can I cancel ChatGPT Plus anytime?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Plus is monthly-only with no annual commitment. Cancel via Settings → Subscription in ChatGPT. Access continues through the end of the paid period. OpenAI does not offer refunds for partial months.' } },
           { '@type': 'Question', 'name': 'What is the electricity cost of running a local LLM in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti at active inference: ~180 W. US average $0.14/kWh. Typical use (4 hrs/day active, rest idle): $30–40/year US. EU: 2–3× higher (~$90–120/year). Japan: ~$45/year. China: ~$25/year. 24/7 fully active would cost ~$220/year US — not a realistic usage pattern for most users.' } },
         ],
       },

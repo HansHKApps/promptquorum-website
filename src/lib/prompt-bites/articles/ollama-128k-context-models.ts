@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Which Models Actually Reach 128K',
         content: [
-          '<strong>As of May 2026, most Ollama models advertise 128K context but fewer deliver useful output quality at that length.</strong> The problem is the "lost in the middle" effect: models trained on typical document lengths struggle to attend to information placed deep in a long context.',
+          '<strong>Most Ollama models advertise 128K context but fewer deliver useful output quality at that length.</strong> The problem is the "lost in the middle" effect: models trained on typical document lengths struggle to attend to information placed deep in a long context.',
           'Two models reliably maintain quality at full 128K context on Ollama: <strong>Llama 3.1 8B</strong> (natively trained at 128K) and <strong>Qwen 3 14B</strong> (up to 1M tokens, though VRAM constraints make 128K the practical consumer limit). For most other 7B models, output quality degrades noticeably above 32K tokens.',
           'If your task involves documents longer than 20,000 words, start with Llama 3.1 8B. If you need the strongest long-context quality and have 12+ GB VRAM, Qwen 3 14B is the better choice.',
         ],
