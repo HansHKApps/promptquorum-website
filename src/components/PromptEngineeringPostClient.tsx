@@ -1147,6 +1147,8 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '[Hans Kuepper](/about) 作者 · PromptQuorum创始人，多模型AI调度工具 · PromptQuorum',
     es: 'Por [Hans Kuepper](/about) · Fundador de PromptQuorum, herramienta de despacho multi-modelo · PromptQuorum',
     pt: 'Por [Hans Kuepper](/about) · Fundador do PromptQuorum, ferramenta de despacho multi-modelo de IA · PromptQuorum',
+    ar: 'بقلم [Hans Kuepper](/about) · مؤسس PromptQuorum، أداة إرسال الذكاء الاصطناعي متعددة النماذج · PromptQuorum',
+    ko: '[Hans Kuepper](/about) 저 · PromptQuorum 창립자, 멀티 모델 AI 디스패치 도구 · PromptQuorum',
   },
   lastUpdated: {
     en: 'Last updated:',
@@ -1156,6 +1158,8 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '最后更新:',
     es: 'Última actualización:',
     pt: 'Última atualização:',
+    ar: 'آخر تحديث:',
+    ko: '최종 업데이트:',
   },
   ctaText: {
     en: 'Apply these techniques with a local LLM or your own API keys — PromptQuorum works with any backend.',
@@ -1165,6 +1169,8 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '使用本地LLM或您自己的API密钥应用这些技术 — PromptQuorum适用于任何后端。',
     es: 'Aplica estas técnicas con un LLM local o tus propias claves de API — PromptQuorum funciona con cualquier backend.',
     pt: 'Aplique estas técnicas com um LLM local ou suas próprias chaves de API — o PromptQuorum funciona com qualquer backend.',
+    ar: 'طبّق هذه التقنيات باستخدام LLM محلي أو مفاتيح API الخاصة بك — يعمل PromptQuorum مع أي backend.',
+    ko: '로컬 LLM 또는 직접 보유한 API 키로 이 기법들을 적용하십시오 — PromptQuorum은 모든 백엔드와 함께 작동합니다.',
   },
   ctaButton: {
     en: 'Try PromptQuorum free →',
@@ -1174,6 +1180,8 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '免费试用PromptQuorum →',
     es: 'Prueba PromptQuorum gratis →',
     pt: 'Experimente o PromptQuorum gratuitamente →',
+    ar: 'جرّب PromptQuorum مجانًا ←',
+    ko: 'PromptQuorum 무료 체험 →',
   },
   backLink: {
     en: '← Back to Prompt Engineering',
@@ -1183,9 +1191,12 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '← 返回提示词工程',
     es: '← Volver a Prompt Engineering',
     pt: '← Voltar ao Prompt Engineering',
+    ar: '← العودة إلى Prompt Engineering',
+    ko: '← 프롬프트 엔지니어링으로 돌아가기',
   },
   breadcrumbHome: {
     en: 'Home', de: 'Startseite', fr: 'Accueil', ja: 'ホーム', zh: '主页', es: 'Inicio', pt: 'Início',
+    ar: 'الرئيسية', ko: '홈',
   },
   breadcrumbHub: {
     en: 'Prompt Engineering',
@@ -1195,12 +1206,16 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '提示词工程',
     es: 'Prompt Engineering',
     pt: 'Prompt Engineering',
+    ar: 'Prompt Engineering',
+    ko: '프롬프트 엔지니어링',
   },
   levelLabel: {
     en: 'Level', de: 'Niveau', fr: 'Niveau', ja: 'レベル', zh: '级别', es: 'Nivel', pt: 'Nível',
+    ar: 'المستوى', ko: '수준',
   },
   audienceLabel: {
     en: 'Audience', de: 'Zielgruppe', fr: 'Public', ja: '対象読者', zh: '目标读者', es: 'Audiencia', pt: 'Público',
+    ar: 'الجمهور', ko: '대상 독자',
   },
   quickFactsLabel: {
     en: 'Quick Facts',
@@ -1210,14 +1225,16 @@ const POST_UI: Record<string, Record<string, string>> = {
     zh: '快速事实',
     es: 'Datos rápidos',
     pt: 'Fatos rápidos',
+    ar: 'حقائق سريعة',
+    ko: '핵심 정보',
   },
 }
 
 const LEVEL_DISPLAY: Record<string, Record<string, string>> = {
-  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante' },
-  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário' },
-  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado' },
-  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术', es: 'Técnico', pt: 'Técnico' },
+  Beginner: { en: 'Beginner', de: 'Einsteiger', fr: 'Débutant', ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante', ar: 'مبتدئ', ko: '초급' },
+  Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio', pt: 'Intermediário', ar: 'متوسط', ko: '중급' },
+  Advanced: { en: 'Advanced', de: 'Experte', fr: 'Avancé', ja: '上級', zh: '高级', es: 'Avanzado', pt: 'Avançado', ar: 'متقدم', ko: '고급' },
+  Technical: { en: 'Technical', de: 'Technisch', fr: 'Technique', ja: '技術', zh: '技术', es: 'Técnico', pt: 'Técnico', ar: 'تقني', ko: '기술' },
 }
 
 // Map language codes to their locale strings for date formatting
