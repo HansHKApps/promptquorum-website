@@ -12,16 +12,19 @@ const OG_SLUG = 'write-better-code-with-ai';
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-03-01',
+      last_full_refresh: '2026-08-31',
+      current_models_mentioned: ['Claude Opus 5', 'GPT-5.6', 'Gemini 3.1 Pro', 'Llama 3.1 8B', 'Qwen 3', 'DeepSeek V3'],
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-en.webp',
       title: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
-      intro: '**To write better code with AI in 2026: use a structured prompt (role, objective, constraints, output format, edge cases), set Temperature to 0.1–0.2 for production, route backend tasks to Claude 4.8 and algorithm tasks to GPT-5, and run every output through a security linter before deployment.**\n\nAI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. Claude 4.8 Opus leads on backend code and bug tracing, GPT-5 leads on algorithm design, and LLaMA 4 via Ollama runs entirely on your own hardware with 8GB RAM.\n\nAI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
+      intro: '**To write better code with AI in 2026: use a structured prompt (role, objective, constraints, output format, edge cases), set Temperature to 0.1–0.2 for production, route backend tasks to Claude Opus 5 and algorithm tasks to GPT-5.6, and run every output through a security linter before deployment.**\n\nAI coding tools reduce development time by 30–75% — but only when the developer writes structured prompts, not casual questions. The model\'s output quality is directly determined by how explicitly you specify role, constraints, and expected output. Claude Opus 5 leads on backend code and bug tracing, GPT-5.6 leads on algorithm design, and Llama 3.1 8B via Ollama runs entirely on your own hardware with 8GB RAM.\n\nAI still introduces security vulnerabilities in 45% of generated code — making review and linting non-negotiable before deployment.',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '15 min read',
       seoTitle: 'Write Better Code With AI: Prompts, Models & Security (2026)',
       metaDescription: 'AI cuts coding time 30–75% with structured prompts. Compare Claude, GPT-5.6, and Gemini for code tasks. 45% of AI code has security flaws — learn safe workflows.',
-      lastFactChecked: '2026-04-28 against Claude 4.8 Opus, GPT-5, Gemini 3 Pro release data',
+      lastFactChecked: '2026-08-31 against Claude Opus 5, GPT-5.6, Gemini 3.1 Pro release data',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AI-assisted coding', 'Code generation', 'Prompt engineering'],
       howToName: 'How to Write Prompts That Produce Better Code',
@@ -48,10 +51,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'How to Write Better Code With AI: Prompts, Models, and Security in 2026',
         description: 'Master AI code generation with structured prompts, model comparison, and security workflows. Learn temperature settings, local models, and how to avoid 45% of hallucinations.',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'AI coding, prompt engineering, code generation, Claude, GPT-5, Gemini 3, security vulnerabilities, temperature, context window',
+        keywords: 'AI coding, prompt engineering, code generation, Claude, GPT-5.6, Gemini 3.1, security vulnerabilities, temperature, context window',
         about: [
           { '@type': 'Thing', name: 'AI code generation' },
           { '@type': 'Thing', name: 'Prompt engineering' },
@@ -60,9 +63,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.8 Opus' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
@@ -119,7 +122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What is the best AI model for writing code in 2026?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 5 (Anthropic) produces the most consistent results for backend code, API design, and bug tracing, winning 60–65% of direct comparisons against GPT-5.6 on those tasks. GPT-5.6 (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, LLaMA 3.1 7B running locally via Ollama produces zero external API calls.',
+              text: 'Claude Opus 5 (Anthropic) produces the most consistent results for backend code, API design, and bug tracing, winning 60–65% of direct comparisons against GPT-5.6 on those tasks. GPT-5.6 (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, Llama 3.1 8B running locally via Ollama produces zero external API calls.',
             },
           },
           {
@@ -175,7 +178,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Can I use AI coding tools with local LLMs for privacy?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. LLaMA 3.1 7B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-5.6 or Claude for complex tasks but acceptable for boilerplate and simple functions.',
+              text: 'Yes. Llama 3.1 8B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-5.6 or Claude for complex tasks but acceptable for boilerplate and simple functions.',
             },
           },
           {
@@ -211,7 +214,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
-      gammaDescription: 'The slide deck below covers: 5 structured prompt elements (role, objective, constraints, output format, edge cases), AI model selection (Claude 4.8 Opus vs GPT-5 vs Gemini 3 Pro), Chain-of-Thought prompting for debugging, temperature settings (0.1–0.2 for production), and security vulnerabilities (45% hallucination rate). Download the PDF as an AI Code Generation & Security reference card.',
+      gammaDescription: 'The slide deck below covers: 5 structured prompt elements (role, objective, constraints, output format, edge cases), AI model selection (Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro), Chain-of-Thought prompting for debugging, temperature settings (0.1–0.2 for production), and security vulnerabilities (45% hallucination rate). Download the PDF as an AI Code Generation & Security reference card.',
       sections: {
         tldr: {
           title: 'Key Takeaways',
@@ -222,7 +225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Chain-of-Thought (CoT) prompting — "reason step by step before producing code" — makes the model\'s logic inspectable and reduces debugging errors',
             'AI introduces security vulnerabilities in 45% of generated code; always run security linters before deployment',
             'Set Temperature (T) to 0.1–0.2 for production code; use 0.7–0.9 only for exploratory algorithmic brainstorming',
-            'LLaMA 3.1 7B via Ollama runs locally with 8GB RAM — zero data leaves your machine, suitable for privacy-sensitive codebases',
+            'Llama 3.1 8B via Ollama runs locally with 8GB RAM — zero data leaves your machine, suitable for privacy-sensitive codebases',
           ],
         },
         directAnswer: {
@@ -241,29 +244,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Which AI Model to Use for Coding Tasks',
           content: [
             '**Different models excel at different coding tasks — routing your prompt to the right model reduces errors and token costs.**',
-            'Claude 4.8 Opus (Anthropic) dominates backend code generation, API design, database schemas, and multi-file refactoring. GPT-5 (OpenAI) leads for creative algorithmic solutions and complex step-by-step reasoning. Gemini 3 Pro (Google DeepMind) handles the longest documents with its 2-million-token context window — useful for codebase-wide analysis.',
+            'Claude Opus 5 (Anthropic) dominates backend code generation, API design, database schemas, and multi-file refactoring. GPT-5.6 (OpenAI) leads for creative algorithmic solutions and complex step-by-step reasoning. Gemini 3.1 Pro (Google DeepMind) handles the longest documents with its 2-million-token context window — useful for codebase-wide analysis.',
           ],
           tableFormat: true,
           columns: ['Task', 'Best Model', 'Why'],
           rows: [
             {
               'Task': 'React component generation',
-              'Best Model': 'Claude 4.8 Opus',
+              'Best Model': 'Claude Opus 5',
               'Why': 'Strong performance per Anthropic benchmark releases; accurate JSX and prop handling',
             },
             {
               'Task': 'Bug fixing',
-              'Best Model': 'Claude 4.8 Opus',
+              'Best Model': 'Claude Opus 5',
               'Why': 'Superior step-by-step trace output for debugging multi-file issues',
             },
             {
               'Task': 'Algorithm design',
-              'Best Model': 'GPT-5',
+              'Best Model': 'GPT-5.6',
               'Why': 'Slight edge on creative algorithmic solutions; strong reasoning capabilities',
             },
             {
               'Task': 'Long document/codebase analysis',
-              'Best Model': 'Gemini 3 Pro',
+              'Best Model': 'Gemini 3.1 Pro',
               'Why': 'Handles contexts up to 2M tokens',
             },
             {
@@ -273,7 +276,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Task': 'Local inference (privacy)',
-              'Best Model': 'LLaMA 3.1 via Ollama',
+              'Best Model': 'Llama 3.1 8B via Ollama',
               'Why': 'Zero data leaves your machine; 7B model requires 8GB RAM',
             },
           ],
@@ -365,7 +368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'The Multi-Model Cross-Check Method',
           content: [
             '**Running the same prompt through multiple models simultaneously reduces the chance of accepting a hallucinated dependency or insecure implementation — because independent models rarely fabricate the same specific incorrect detail.**',
-            '[PromptQuorum](/) is a multi-model AI dispatch tool that sends one prompt to multiple AI providers simultaneously and displays all responses side-by-side. When GPT-5, Claude 4.8 Opus, and Gemini 3 Pro recommend the same package name, that convergence is a strong signal the package is real. When they disagree on an implementation approach, that divergence is a signal to investigate before committing.',
+            '[PromptQuorum](/) is a multi-model AI dispatch tool that sends one prompt to multiple AI providers simultaneously and displays all responses side-by-side. When GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro recommend the same package name, that convergence is a strong signal the package is real. When they disagree on an implementation approach, that divergence is a signal to investigate before committing.',
           ],
         },
         parameters: {
@@ -379,17 +382,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Model', 'Context Window', 'Implication'],
           rows: [
             {
-              'Model': 'GPT-5',
+              'Model': 'GPT-5.6',
               'Context Window': '128k tokens',
               'Implication': '~96,000 lines of code visible per session',
             },
             {
-              'Model': 'Claude 4.8 Opus',
-              'Context Window': '200k tokens',
+              'Model': 'Claude Opus 5',
+              'Context Window': '1M tokens',
               'Implication': 'Larger codebase context; better for multi-file refactoring',
             },
             {
-              'Model': 'Gemini 3 Pro',
+              'Model': 'Gemini 3.1 Pro',
               'Context Window': '2M tokens',
               'Implication': 'Full codebase analysis for large projects',
             },
@@ -400,7 +403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**European development teams increasingly adopt Mistral AI (developed in France) for coding tasks where EU AI Act compliance and data residency matter.** Mistral Large and Mistral Small are available for local deployment via Ollama, ensuring no code leaves on-premise infrastructure — critical under GDPR for teams processing sensitive source code.',
             'Chinese enterprises widely use Qwen 3 (Alibaba) and DeepSeek V3 as open-source alternatives to GPT-series models, particularly for projects requiring CJK language support or full on-premise deployment under China\'s Interim Measures for Generative AI (2023).',
-            'Japanese enterprises operating under METI data governance guidelines often prefer Ollama-based local model deployment. LLaMA 4 8B, running locally via Ollama, requires 8GB RAM and produces zero external API calls — meeting strict data residency requirements.',
+            'Japanese enterprises operating under METI data governance guidelines often prefer Ollama-based local model deployment. Llama 3.1 8B, running locally via Ollama, requires 8GB RAM and produces zero external API calls — meeting strict data residency requirements.',
           ],
         },
         commonMistakes: {
@@ -443,7 +446,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'What is the best AI model for writing code in 2026?',
-              a: 'Claude 4.8 Opus (Anthropic) produces the most consistent results for backend code, API design, and bug tracing. GPT-5 (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, LLaMA 4 8B running locally via Ollama produces zero external API calls. Benchmark performance varies by task; we recommend testing all three on your specific use cases.',
+              a: 'Claude Opus 5 (Anthropic) produces the most consistent results for backend code, API design, and bug tracing. GPT-5.6 (OpenAI) has a slight edge for algorithm design and complex reasoning. For privacy-sensitive codebases, Llama 3.1 8B running locally via Ollama produces zero external API calls. Benchmark performance varies by task; we recommend testing all three on your specific use cases.',
             },
             {
               q: 'Is AI-generated code safe to deploy directly?',
@@ -471,7 +474,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Can I use AI coding tools with local LLMs for privacy?',
-              a: 'Yes. LLaMA 4 8B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-5 or Claude for complex tasks but acceptable for boilerplate and simple functions.',
+              a: 'Yes. Llama 3.1 8B running via Ollama on a machine with 8GB RAM produces zero external API calls. All inference happens on your hardware. This is suitable for codebases containing proprietary algorithms, credentials in source files, or any code that cannot leave your infrastructure. Quality is lower than GPT-5.6 or Claude for complex tasks but acceptable for boilerplate and simple functions.',
             },
             {
               q: 'How do I write a system prompt for AI coding tools?',
@@ -498,13 +501,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-de.webp',
       title: 'Besseren Code mit KI schreiben: Prompts, Modelle und Sicherheit 2026',
-      intro: '**Um 2026 besseren Code mit KI zu schreiben: Nutzen Sie einen strukturierten Prompt (Rolle, Ziel, Constraints, Output-Format, Edge Cases), setzen Sie Temperature auf 0,1–0,2 für Production, leiten Sie Backend-Aufgaben zu Claude 4.8 und Algorithmen zu GPT-5, und führen Sie jeden Output durch einen Security-Linter vor dem Deployment durch.**\n\nKI-Programmiertools reduzieren die Entwicklungszeit um 30–75 % — aber nur wenn der Entwickler strukturierte Prompts schreibt, nicht beiläufige Fragen. Die Output-Qualität des Modells hängt direkt davon ab, wie explizit Sie Rolle, Constraints und erwarteten Output spezifizieren. Im April 2026 führt Claude 4.8 Opus bei Backend-Code und Bug-Tracing an, GPT-5 führt bei Algorithmus-Design an, und LLaMA 4 läuft über Ollama vollständig lokal mit 8 GB RAM.\n\nKI führt weiterhin Sicherheitslücken in 45 % des generierten Codes ein — was Review und Linting vor dem Deployment unverzichtbar macht.',
+      intro: '**Um 2026 besseren Code mit KI zu schreiben: Nutzen Sie einen strukturierten Prompt (Rolle, Ziel, Constraints, Output-Format, Edge Cases), setzen Sie Temperature auf 0,1–0,2 für Production, leiten Sie Backend-Aufgaben zu Claude Opus 5 und Algorithmen zu GPT-5.6, und führen Sie jeden Output durch einen Security-Linter vor dem Deployment durch.**\n\nKI-Programmiertools reduzieren die Entwicklungszeit um 30–75 % — aber nur wenn der Entwickler strukturierte Prompts schreibt, nicht beiläufige Fragen. Die Output-Qualität des Modells hängt direkt davon ab, wie explizit Sie Rolle, Constraints und erwarteten Output spezifizieren. Claude Opus 5 führt bei Backend-Code und Bug-Tracing an, GPT-5.6 führt bei Algorithmus-Design an, und Llama 3.1 8B läuft über Ollama vollständig lokal mit 8 GB RAM.\n\nKI führt weiterhin Sicherheitslücken in 45 % des generierten Codes ein — was Review und Linting vor dem Deployment unverzichtbar macht.',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '15 min Lesedauer',
       seoTitle: 'Besserer Code mit KI: Prompts, Modelle & Sicherheit (2026)',
       metaDescription: 'KI verkürzt die Entwicklungszeit um 30–75 % mit strukturierten Prompts. Claude, GPT-5.6 und Gemini im Vergleich. 45 % des KI-Codes hat Sicherheitslücken.',
-      lastFactChecked: '2026-04-28 gegen Claude 4.8 Opus, GPT-5 und Gemini 3 Pro Release-Daten',
+      lastFactChecked: '2026-08-31 gegen Claude Opus 5, GPT-5.6 und Gemini 3.1 Pro Release-Daten',
       educationalLevel: 'Intermediate',
       aboutTopics: ['KI-gestützte Programmierung', 'Code-Generierung', 'Prompt Engineering'],
       howToName: 'Wie man Prompts schreibt, die besseren Code erzeugen',
@@ -532,10 +535,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Besseren Code mit KI schreiben: Prompts, Modelle und Sicherheit 2026',
         description: 'Masterkurs in KI-Code-Generierung mit strukturierten Prompts, Modellvergleich und Security-Workflows. Lernen Sie Temperature-Einstellungen, lokale Modelle und wie Sie 45% der Halluzinationen vermeiden.',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'KI-Programmierung, Prompt Engineering, Code-Generierung, Claude, GPT-5, Gemini 3, Sicherheitslücken, Temperature, Context Window',
+        keywords: 'KI-Programmierung, Prompt Engineering, Code-Generierung, Claude, GPT-5.6, Gemini 3.1, Sicherheitslücken, Temperature, Context Window',
         about: [
           { '@type': 'Thing', name: 'KI-Code-Generierung' },
           { '@type': 'Thing', name: 'Prompt Engineering' },
@@ -544,9 +547,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.8 Opus' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
@@ -606,7 +609,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Was ist das beste KI-Modell zum Code-Schreiben 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Claude 4.8 Opus (Anthropic) erzeugt die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing. GPT-5 (OpenAI) hat einen leichten Vorteil für Algorithmus-Design und komplexe Argumentation. Für datenschutz-sensitive Codebasen erzeugt LLaMA 4 8B, lokal über Ollama laufend, null externe API-Aufrufe. Benchmark-Performance variiert nach Aufgabe; wir empfehlen, alle drei auf Ihren spezifischen Use Cases zu testen.',
+              'text': 'Claude Opus 5 (Anthropic) erzeugt die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing. GPT-5.6 (OpenAI) hat einen leichten Vorteil für Algorithmus-Design und komplexe Argumentation. Für datenschutz-sensitive Codebasen erzeugt Llama 3.1 8B, lokal über Ollama laufend, null externe API-Aufrufe. Benchmark-Performance variiert nach Aufgabe; wir empfehlen, alle drei auf Ihren spezifischen Use Cases zu testen.',
             },
           },
           {
@@ -662,7 +665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Kann ich KI-Programmier-Tools mit lokalen LLMs für Datenschutz nutzen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja. LLaMA 4 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.',
+              'text': 'Ja. Llama 3.1 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5.6 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.',
             },
           },
           {
@@ -683,10 +686,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5 senden?',
+            'name': 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5.6 senden?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie LLaMA 4 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.',
+              'text': 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie Llama 3.1 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.',
             },
           },
           {
@@ -694,7 +697,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (LLaMA 4, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.',
+              'text': 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (Llama 3.1, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.',
             },
           },
         ],
@@ -715,18 +718,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
-      gammaDescription: 'Die Präsentation behandelt: 5 strukturierte Prompt-Elemente (Rolle, Ziel, Constraints, Ausgabeformat, Grenzfälle), KI-Modellauswahl (Claude 4.8 Opus vs GPT-5 vs Gemini 3 Pro), Chain-of-Thought-Prompting für Debugging, Temperatur-Einstellungen (0,1–0,2 für Produktion) und Sicherheitslücken (45% Halluzinationsrate). Laden Sie das PDF als KI-Code-Generierungs- und Sicherheits-Referenzkarte herunter.',
+      gammaDescription: 'Die Präsentation behandelt: 5 strukturierte Prompt-Elemente (Rolle, Ziel, Constraints, Ausgabeformat, Grenzfälle), KI-Modellauswahl (Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro), Chain-of-Thought-Prompting für Debugging, Temperatur-Einstellungen (0,1–0,2 für Produktion) und Sicherheitslücken (45% Halluzinationsrate). Laden Sie das PDF als KI-Code-Generierungs- und Sicherheits-Referenzkarte herunter.',
       sections: {
         tldr: {
           title: 'Schlüsselerkenntnisse',
           isTldr: true,
           items: [
             'KI reduziert Code-Schreib-Zeit um 30–75 % — aber nur, wenn Prompts strukturiert sind mit Rolle, Ziel, Constraints, Output-Format und Edge Cases',
-            'Claude 4.8 Opus (Anthropic) führt bei Backend-Code, API-Design und Bug-Tracing an; GPT-5 (OpenAI) führt bei Algorithmus-Design und Multi-Step-Argumentation an',
+            'Claude Opus 5 (Anthropic) führt bei Backend-Code, API-Design und Bug-Tracing an; GPT-5.6 (OpenAI) führt bei Algorithmus-Design und Multi-Step-Argumentation an',
             'Chain-of-Thought (CoT) Prompting — "schritt für schritt argumentieren, bevor du Code erzeugst" — macht die Logik des Modells inspektierbar und reduziert Debugging-Fehler',
             'KI führt Sicherheitslücken in 45% des generierten Codes ein; führen Sie immer Security-Linter vor dem Deployment durch',
             'Setzen Sie Temperature (T) auf 0,1–0,2 für Production-Code; nutzen Sie 0,7–0,9 nur für exploratives algorithmisches Brainstorming',
-            'LLaMA 4 8B über Ollama läuft lokal mit 8GB RAM — null Daten verlassen Ihre Maschine, geeignet für datenschutz-sensitive Codebasen',
+            'Llama 3.1 8B über Ollama läuft lokal mit 8GB RAM — null Daten verlassen Ihre Maschine, geeignet für datenschutz-sensitive Codebasen',
           ],
         },
         zusammenfassung: {
@@ -740,7 +743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Strukturierte Prompts sind nicht optional** — Sie sind das einzige Werkzeug, das Ihre Absicht klar an das Modell kommuniziert. Ein Prompt ohne Constraints, Output-Format und Edge-Case-Handling wird halluzinierter Code sein. Entwickler in Deutschlands Fintech- und Automotive-Sektoren berichten, dass strukturierte Prompts ihre Bug-Rate von 45% auf unter 20% reduzieren.',
-            '**DSGVO Compliance bedeutet lokale Modelle für sensible Codebasen** — Wenn Ihr Code personenbezogene Daten verarbeitet oder unter EU AI Act "Hochrisiko"-Klassifizierung fällt, vermeiden Sie Cloud-APIs. Ollama mit Mistral Small oder LLaMA 4 8B auf lokalen Servern erfüllt Artikel 32 DSGVO Requirements für technische Schutzmaßnahmen.',
+            '**DSGVO Compliance bedeutet lokale Modelle für sensible Codebasen** — Wenn Ihr Code personenbezogene Daten verarbeitet oder unter EU AI Act "Hochrisiko"-Klassifizierung fällt, vermeiden Sie Cloud-APIs. Ollama mit Mistral Small oder Llama 3.1 8B auf lokalen Servern erfüllt Artikel 32 DSGVO Requirements für technische Schutzmaßnahmen.',
             '**Security-Linting und Multi-Modell-Cross-Checks sind Basislinie, nicht optional** — 45% des KI-generierten Codes hat Sicherheitsprobleme. Bandit für Python, ESLint für JavaScript und PromptQuorum für Multi-Modell-Vergleich sind das Minimum für Production Code.'
           ],
         },
@@ -748,7 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'Die direkte Antwort: Prompt-Qualität bestimmt Code-Qualität',
           content: [
-            '**Der Output jeder KI-Programmier-Session ist nur so gut wie die Anweisung, die du gibst — ein vager Prompt erzeugt vagen Code, ein strukturierter Prompt erzeugt Production-Ready-Code.** Large Language Models (LLMs) — die Klasse neuronaler Netzwerke hinter GPT-5, Claude 4.8 Opus und Gemini 3 Pro — "verstehen" Ihr Projekt nicht; sie sagen das nächste wahrscheinlichste Token basierend auf Mustern vorher, die sie aus Milliarden Codezeilen gelernt haben.',
+            '**Der Output jeder KI-Programmier-Session ist nur so gut wie die Anweisung, die du gibst — ein vager Prompt erzeugt vagen Code, ein strukturierter Prompt erzeugt Production-Ready-Code.** Large Language Models (LLMs) — die Klasse neuronaler Netzwerke hinter GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro — "verstehen" Ihr Projekt nicht; sie sagen das nächste wahrscheinlichste Token basierend auf Mustern vorher, die sie aus Milliarden Codezeilen gelernt haben.',
             'Das bedeutet, Ihr Prompt ist ein Architektur-Vertrag, keine beiläufige Frage. Wenn Sie die Programmiersprache, erwartete Eingaben/Ausgaben und Edge Cases spezifizieren, die Sie handhaben wollen, erhalten Sie durchgehend Code, der näher an Production-Ready ist.',
             'In einem Satz: Die Aufgabe des Entwicklers hat sich verschoben von "jede Zeile schreiben" zu "Anweisungen schreiben, die eine KI ausführt" — die Fähigkeit ist Prompt Engineering, nicht Schreibgeschwindigkeit.',
             'Diese Prompting-Techniken gelten genauso für lokale Coding-Stacks. Um einen Cloud-Assistenten durch das Open-Source-Trio Continue.dev + Ollama + Qwen3-Coder zu ersetzen, siehe [GitHub Copilot durch ein lokales LLM ersetzen](/de/power-local-llm/replace-github-copilot-with-local-llm).',
@@ -758,30 +761,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Welches KI-Modell für Programmieraufgaben nutzen',
           content: [
-            '**Im April 2026 zeichnen sich verschiedene Modelle bei verschiedenen Programmieraufgaben aus — das Routen Ihres Prompts zum richtigen Modell reduziert Fehler und Token-Kosten.**',
-            'Claude 4.8 Opus (Anthropic) dominiert Backend-Code-Generierung, API-Design, Datenbank-Schemas und Multi-File-Refactoring. GPT-5 (OpenAI) führt bei kreativen algorithmischen Lösungen und komplexer Step-by-Step-Argumentation. Gemini 3 Pro (Google DeepMind) handhabt die längsten Dokumente mit seinem 2-Millionen-Token Context Window — nützlich für Codebase-weite Analyse.',
+            '**Verschiedene Modelle zeichnen sich bei verschiedenen Programmieraufgaben aus — das Routen Ihres Prompts zum richtigen Modell reduziert Fehler und Token-Kosten.**',
+            'Claude Opus 5 (Anthropic) dominiert Backend-Code-Generierung, API-Design, Datenbank-Schemas und Multi-File-Refactoring. GPT-5.6 (OpenAI) führt bei kreativen algorithmischen Lösungen und komplexer Step-by-Step-Argumentation. Gemini 3.1 Pro (Google DeepMind) handhabt die längsten Dokumente mit seinem 2-Millionen-Token Context Window — nützlich für Codebase-weite Analyse.',
           ],
           tableFormat: true,
           columns: ['Aufgabe', 'Bestes Modell', 'Warum'],
           rows: [
             {
               'Aufgabe': 'React Component Generierung',
-              'Bestes Modell': 'Claude 4.8 Opus',
+              'Bestes Modell': 'Claude Opus 5',
               'Warum': 'Starke Performance laut Anthropic Benchmark Releases; genaue JSX und Prop-Handhabung',
             },
             {
               'Aufgabe': 'Bug Fixing',
-              'Bestes Modell': 'Claude 4.8 Opus',
+              'Bestes Modell': 'Claude Opus 5',
               'Warum': 'Überlegene Step-by-Step Trace Output für Multi-File-Issue-Debugging',
             },
             {
               'Aufgabe': 'Algorithmus Design',
-              'Bestes Modell': 'GPT-5',
+              'Bestes Modell': 'GPT-5.6',
               'Warum': 'Leichter Vorteil bei kreativen algorithmischen Lösungen; starke Argumentations-Fähigkeiten',
             },
             {
               'Aufgabe': 'Langes Dokument/Codebase Analyse',
-              'Bestes Modell': 'Gemini 3 Pro',
+              'Bestes Modell': 'Gemini 3.1 Pro',
               'Warum': 'Handhabt Kontexte bis zu 2M Tokens',
             },
             {
@@ -791,7 +794,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Aufgabe': 'Lokale Inferenz (Datenschutz)',
-              'Bestes Modell': 'LLaMA 4 über Ollama',
+              'Bestes Modell': 'Llama 3.1 8B über Ollama',
               'Warum': 'Null Daten verlassen Ihre Maschine; 8B Modell erfordert 8GB RAM',
             },
           ],
@@ -875,7 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: 'Das Security-Problem: Was KI falsch versteht',
           content: [
-            '**Im April 2026 erzeugt KI Code mit Sicherheitslücken in 45% der Fälle — eine Rate, die sich nicht verbessert hat, während Modelle leistungsfähiger geworden sind.** Ein 2025 Veracode-Bericht zeigte, dass LLMs sich beim Wählen zwischen einer sicheren und unsicheren Implementierung 45% der Zeit für die unsichere Option entschieden. Akademische Forschung bestätigt diesen Muster: über 40% der KI-generierten Code-Lösungen enthalten [Sicherheitsfehler](/de/prompt-engineering/prompt-injection-and-security).',
+            '**KI erzeugt Code mit Sicherheitslücken in 45% der Fälle — eine Rate, die sich nicht verbessert hat, während Modelle leistungsfähiger geworden sind.** Ein 2025 Veracode-Bericht zeigte, dass LLMs sich beim Wählen zwischen einer sicheren und unsicheren Implementierung 45% der Zeit für die unsichere Option entschieden. Akademische Forschung bestätigt diesen Muster: über 40% der KI-generierten Code-Lösungen enthalten [Sicherheitsfehler](/de/prompt-engineering/prompt-injection-and-security).',
             'Die drei kritischsten Fehler-Kategorien:',
           ],
           items: [
@@ -889,7 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Die Multi-Modell-Cross-Check-Methode',
           content: [
             '**Das Durchführen des gleichen Prompts durch mehrere Modelle gleichzeitig reduziert die Chance, eine halluzinierte Dependency oder unsichere Implementierung zu akzeptieren — weil unabhängige Modelle selten die gleiche spezifische falsche Detail halluzinieren.**',
-            '[PromptQuorum](/de) ist ein Multi-Modell-KI-Dispatch-Tool, das einen Prompt gleichzeitig an mehrere KI-Provider sendet und alle Responses nebeneinander zeigt. Wenn GPT-5, Claude 4.8 Opus und Gemini 3 Pro den gleichen Package-Namen empfehlen, ist diese Konvergenz ein starkes Signal, dass das Package echt ist. Wenn sie bei einem Implementierungs-Ansatz uneins sind, ist diese Divergenz ein Signal, vor dem Committing zu untersuchen.',
+            '[PromptQuorum](/de) ist ein Multi-Modell-KI-Dispatch-Tool, das einen Prompt gleichzeitig an mehrere KI-Provider sendet und alle Responses nebeneinander zeigt. Wenn GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro den gleichen Package-Namen empfehlen, ist diese Konvergenz ein starkes Signal, dass das Package echt ist. Wenn sie bei einem Implementierungs-Ansatz uneins sind, ist diese Divergenz ein Signal, vor dem Committing zu untersuchen.',
           ],
         },
         parameters: {
@@ -904,17 +907,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Modell', 'Kontextfenster', 'Bedeutung'],
           rows: [
             {
-              'Modell': 'GPT-5',
+              'Modell': 'GPT-5.6',
               'Kontextfenster': '128k Tokens',
               'Bedeutung': '~96.000 Codezeilen pro Session sichtbar',
             },
             {
-              'Modell': 'Claude 4.8 Opus',
-              'Kontextfenster': '200k Tokens',
+              'Modell': 'Claude Opus 5',
+              'Kontextfenster': '1M Tokens',
               'Bedeutung': 'Größerer Codebase-Kontext; besser für Multi-File-Refactoring',
             },
             {
-              'Modell': 'Gemini 3 Pro',
+              'Modell': 'Gemini 3.1 Pro',
               'Kontextfenster': '2M Tokens',
               'Bedeutung': 'Volle Codebase-Analyse für große Projekte',
             },
@@ -926,7 +929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Europäische Entwicklungs-Teams adoptieren zunehmend Mistral AI (in Frankreich entwickelt) für Programmieraufgaben, wo EU AI Act Compliance und Data Residency zählen.** Mistral Large und Mistral Small sind verfügbar für lokales Deployment über Ollama, gewährleisten kein Code verlässt On-Premise Infrastruktur — kritisch unter GDPR für Teams, die sensible Quellcode verarbeiten. Die BSI TR-03183 Richtlinie (Deutschland) empfiehlt für Hochrisiko-Code-Generierung in staatlichen Stellen lokale Modelle mit Offline-Architektur und keine Cloud-APIs.',
             'Chinesische Enterprises nutzen weit verbreitet Qwen 3 (Alibaba) und DeepSeek V3 als Open-Source-Alternativen zu GPT-Serie Modellen, besonders für Projekte, die CJK-Sprachen-Unterstützung oder vollständiges On-Premise-Deployment unter Chinas Interim Measures for Generative AI (2023) erfordern.',
-            'Japanische Enterprises, die unter METI Daten-Governance-Richtlinien operieren, bevorzugen oft Ollama-basiertes lokales Modell-Deployment. LLaMA 4 8B, lokal über Ollama laufend, erfordert 8GB RAM und erzeugt null externe API-Aufrufe — erfüllt strikte Daten-Residency-Requirements.',
+            'Japanische Enterprises, die unter METI Daten-Governance-Richtlinien operieren, bevorzugen oft Ollama-basiertes lokales Modell-Deployment. Llama 3.1 8B, lokal über Ollama laufend, erfordert 8GB RAM und erzeugt null externe API-Aufrufe — erfüllt strikte Daten-Residency-Requirements.',
           ],
         },
         commonMistakes: {
@@ -970,18 +973,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            { q: 'Was ist das beste KI-Modell zum Code-Schreiben 2026?', a: 'Claude 4.8 Opus (Anthropic) erzeugt die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing. GPT-5 (OpenAI) hat einen leichten Vorteil für Algorithmus-Design und komplexe Argumentation. Für datenschutz-sensitive Codebasen erzeugt LLaMA 4 8B, lokal über Ollama laufend, null externe API-Aufrufe. Benchmark-Performance variiert nach Aufgabe; wir empfehlen, alle drei auf Ihren spezifischen Use Cases zu testen.' },
+            { q: 'Was ist das beste KI-Modell zum Code-Schreiben 2026?', a: 'Claude Opus 5 (Anthropic) erzeugt die konsistentesten Ergebnisse für Backend-Code, API-Design und Bug-Tracing. GPT-5.6 (OpenAI) hat einen leichten Vorteil für Algorithmus-Design und komplexe Argumentation. Für datenschutz-sensitive Codebasen erzeugt Llama 3.1 8B, lokal über Ollama laufend, null externe API-Aufrufe. Benchmark-Performance variiert nach Aufgabe; wir empfehlen, alle drei auf Ihren spezifischen Use Cases zu testen.' },
             { q: 'Ist KI-generierter Code sicher, direkt zu deployen?', a: 'Nein. KI führt Sicherheitslücken in 45% der generierten Code-Fälle ein, inklusive unsicherer Implementierungen und halluzinierten Package-Namen, die Supply-Chain-Angriffe ermöglichen. Aller KI-generierter Code muss von einem Entwickler überprüft und mit einem Security-Linter (z.B. Bandit für Python, ESLint Security für JavaScript) gescannt werden, bevor Production-Deployment.' },
             { q: 'Wie viel schneller sind Entwickler, die KI-Programmier-Tools nutzen?', a: 'Entwickler, die KI-Programmier-Assistenten nutzen, schließen in kontrollierten Studien 126% mehr Projekte pro Woche ab als manuelle Codierer. Eine 2025 METR-Feldstudie zeigte jedoch, dass erfahrene Entwickler 19% länger brauchten bei Aufgaben, die komplexe Codebase-Integration erfordern — der Produktivitäts-Zuwachs ist aufgabenabhängig und erfordert strukturierte Prompt-Disziplin.' },
             { q: 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging?', a: 'Chain-of-Thought (CoT) Prompting fordert das Modell auf, jeden Schritt seiner Argumentation zu verfolgen, bevor es den endgültigen Output erzeugt. Beim Debugging bedeutet das, das Modell identifiziert die genaue Operation, die den falschen Wert erzeugt, macht den Fehler tracierbar und korrigierbar, statt eine vollständige Output-Regeneration zu erfordern.' },
             { q: 'Funktioniert KI-Programmier-Unterstützung gleich in allen Programmiersprachen?', a: 'Nein. KI-Tools werden hauptsächlich auf englischsprachigen Codebasen trainiert, was bedeutet, dass Python und JavaScript die stärkste Unterstützung bekommen. Für Japanisch (Kanji/Kana), Chinesisch oder andere CJK-schwere Projekte erzeugen Qwen 3 (Alibaba) oder DeepSeek V3 schnellere Token-Verarbeitung, weil ihre Tokenizer CJK-Skripte besser handhaben als westliche Modelle.' },
             { q: 'Welche Temperature sollte ich für KI-Code-Generierung nutzen?', a: 'Setzen Sie Temperature auf 0,1–0,2 für Production-Code-Generierung. Das erzeugt deterministischen, konservativen Output mit minimaler zufälliger Variation. Nutzen Sie Temperature 0,7–0,9 nur, wenn Sie algorithmische Ansätze brainstormen, wo Sie diverse Optionen zum Evaluieren wollen — nicht, wenn Sie Code schreiben, der deployed wird.' },
             { q: 'Was sind halluzinierte Dependencies in KI-Programmierung?', a: 'Halluzinierte Dependencies sind Paket- oder Bibliotheksnamen, die das Modell empfiehlt, aber tatsächlich nicht existieren. Eine akademische Studie fand, dass LLMs etwa 20% der Zeit nicht-existente Bibliotheken empfehlen. Angreifer nutzen das über Slopsquatting aus — registrieren den halluzierten Paketnamen auf PyPI oder npm mit schädlichem Code darin. Verifizieren Sie immer jedes von KI empfohlene Package, bevor Sie installieren, indem Sie das Official Repository prüfen.' },
-            { q: 'Kann ich KI-Programmier-Tools mit lokalen LLMs für Datenschutz nutzen?', a: 'Ja. LLaMA 4 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.' },
+            { q: 'Kann ich KI-Programmier-Tools mit lokalen LLMs für Datenschutz nutzen?', a: 'Ja. Llama 3.1 8B, das über Ollama auf einer Maschine mit 8GB RAM läuft, erzeugt null externe API-Aufrufe. Alle Inferenz läuft auf Ihrer Hardware. Das eignet sich für Codebasen mit proprietären Algorithmen, Credentials in Quelldateien oder Code, der Ihre Infrastruktur nicht verlassen darf. Die Qualität ist niedriger als GPT-5.6 oder Claude für komplexe Aufgaben, aber akzeptabel für Boilerplate und einfache Funktionen.' },
             { q: 'Wie schreibe ich einen System-Prompt für KI-Programmier-Tools?', a: 'Definieren Sie vier Dinge in Ihrem System-Prompt: (1) die technische Rolle ("Senior Python Backend Engineer"), (2) den Tech Stack und verbotene Bibliotheken, (3) Code-Style-Regeln ("TypeScript strict mode, kein any"), (4) Output-Format ("nur Code zurückgeben, keine Prosa"). Speichern Sie das als projektweite Regel in Cursor, Claude Code oder Ihren IDE KI-Einstellungen, damit es über alle Sessions gilt.' },
             { q: 'Erzeugt GitHub Copilot oder Cursor weniger Bugs?', a: 'Cursor erzeugt weniger Format-Fehler mit ~10–15% Halluzinations-Rate vs. Copilots ~15–20%, hauptsächlich weil Cursor projekt-weite RAG (Retrieval-Augmented Generation) Indexierung nutzt, um Ihren bestehenden Codebase zu verstehen. Bei Single-File-Boilerplate-Aufgaben ist der Gap gering. Bei Multi-File-Refactoring, wo Architektur-Konsistenz zählt, erzeugt Cursors Codebase-Kontext messbar weniger Integrationsfehler. Beide benötigen Security-Linting bevor Deployment.' },
-            { q: 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5 senden?', a: 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie LLaMA 4 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.' },
-            { q: 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?', a: 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (LLaMA 4, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.' },
+            { q: 'Darf ich DSGVO-relevanten Quellcode an Cloud-KI-Modelle wie GPT-5.6 senden?', a: 'Nein, wenn personenbezogene Daten verarbeitet werden. DSGVO Artikel 32 verlangt technische Schutzmaßnahmen bei der Verarbeitung personenbezogener Daten. Verwenden Sie Llama 3.1 8B über Ollama für lokale Inferenz ohne externe API-Aufrufe. Für EU-Datenresidenz-Anforderungen: Mistral Large (in Frankreich entwickelt, auf lokalen Servern verfügbar) oder DeepSeek V3 mit On-Premise-Deployment. Dokumentieren Sie Ihre Verarbeitungsaktivitäten im Verzeichnis nach Artikel 30 DSGVO.' },
+            { q: 'Welche KI-Tools erfüllen EU AI Act Anforderungen für sichere Code-Generierung?', a: 'GitHub Copilot und Cursor gelten unter EU AI Act Annex III als "Hochrisiko-KI" in sicherheitskritischen Systemen (z.B. Finanzinfrastruktur, medizinische Geräte) und unterliegen Konformitätsbewertungs-Requirements. Mistral Large (in Paris entwickelt, GDPR-konform) und lokale Ollama-Modelle (Llama 3.1, Mistral Small) unterliegen weniger Auflagen, da sie lokal deployed und auf Ihre Infrastruktur begrenzt sind. Die BSI TR-03183 empfiehlt für deutsche staatliche Stellen: lokale Modelle mit Offline-Architektur für Hochrisiko-Code-Generierung.' },
           ],
         },
         sources: {
@@ -1000,13 +1003,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-es.webp',
       title: 'Cómo Escribir Mejor Código con IA: Prompts, Modelos y Seguridad en 2026',
-      intro: '**Para escribir mejor código con IA en 2026: usa un prompt estructurado (rol, objetivo, restricciones, formato de salida, casos límite), establece la Temperatura en 0,1–0,2 para producción, enruta las tareas de backend a Claude 4.8 y las de algoritmos a GPT-5, y ejecuta cada salida por un linter de seguridad antes del despliegue.**\n\nLas herramientas de programación con IA reducen el tiempo de desarrollo entre un 30 y un 75 % — pero solo cuando el desarrollador escribe prompts estructurados, no preguntas casuales. La calidad de la salida del modelo está determinada directamente por cuán explícitamente especificas el rol, las restricciones y la salida esperada. A partir de abril de 2026, Claude 4.8 Opus lidera en código de backend y rastreo de bugs, GPT-5 lidera en diseño de algoritmos, y LLaMA 4 mediante Ollama se ejecuta completamente en tu propio hardware con 8 GB de RAM.\n\nLa IA todavía introduce vulnerabilidades de seguridad en el 45 % del código generado — haciendo que la revisión y el linting sean innegociables antes del despliegue.',
+      intro: '**Para escribir mejor código con IA en 2026: usa un prompt estructurado (rol, objetivo, restricciones, formato de salida, casos límite), establece la Temperatura en 0,1–0,2 para producción, enruta las tareas de backend a Claude Opus 5 y las de algoritmos a GPT-5.6, y ejecuta cada salida por un linter de seguridad antes del despliegue.**\n\nLas herramientas de programación con IA reducen el tiempo de desarrollo entre un 30 y un 75 % — pero solo cuando el desarrollador escribe prompts estructurados, no preguntas casuales. La calidad de la salida del modelo está determinada directamente por cuán explícitamente especificas el rol, las restricciones y la salida esperada. Claude Opus 5 lidera en código de backend y rastreo de bugs, GPT-5.6 lidera en diseño de algoritmos, y Llama 3.1 8B mediante Ollama se ejecuta completamente en tu propio hardware con 8 GB de RAM.\n\nLa IA todavía introduce vulnerabilidades de seguridad en el 45 % del código generado — haciendo que la revisión y el linting sean innegociables antes del despliegue.',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '15 min de lectura',
       seoTitle: 'Escribir mejor código con IA: prompts, modelos y seguridad',
       metaDescription: 'La IA reduce el tiempo de programación un 30–75 % con prompts estructurados. Compara Claude, GPT-5.6 y Gemini. El 45 % del código de IA tiene fallos.',
-      lastFactChecked: '2026-04-28 contra datos de Claude 4.8 Opus, GPT-5, Gemini 3 Pro',
+      lastFactChecked: '2026-08-31 contra datos de Claude Opus 5, GPT-5.6, Gemini 3.1 Pro',
       educationalLevel: 'Intermediate',
       aboutTopics: ['Programación asistida por IA', 'Generación de código', 'Prompt engineering'],
       howToName: 'Cómo escribir prompts que produzcan mejor código',
@@ -1034,10 +1037,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Cómo Escribir Mejor Código con IA: Prompts, Modelos y Seguridad en 2026',
         description: 'Domina la generación de código con IA con prompts estructurados, comparativa de modelos y flujos de trabajo de seguridad. Aprende ajustes de temperatura, modelos locales y cómo evitar el 45 % de las alucinaciones.',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'programación con IA, prompt engineering, generación de código, Claude, GPT-5, Gemini 3, vulnerabilidades de seguridad, temperatura, ventana de contexto',
+        keywords: 'programación con IA, prompt engineering, generación de código, Claude, GPT-5.6, Gemini 3.1, vulnerabilidades de seguridad, temperatura, ventana de contexto',
         about: [
           { '@type': 'Thing', name: 'Generación de código con IA' },
           { '@type': 'Thing', name: 'Prompt engineering' },
@@ -1066,10 +1069,56 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'es',
         mainEntity: [
-          { '@type': 'Question', name: '¿Cuál es el mejor modelo de IA para escribir código en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Claude 4.8 Opus (Anthropic) ofrece los resultados más consistentes para código de backend, diseño de API y rastreo de bugs, ganando en el 60–65 % de las comparaciones directas con GPT-5. GPT-5 (OpenAI) tiene una ligera ventaja en el diseño de algoritmos. Para bases de código sensibles a la privacidad, LLaMA 4 8B ejecutándose localmente mediante Ollama genera cero llamadas a API externas.' } },
-          { '@type': 'Question', name: '¿Es seguro desplegar el código generado por IA directamente?', acceptedAnswer: { '@type': 'Answer', text: 'No. La IA introduce vulnerabilidades de seguridad en el 45 % de los casos de código generado. Todo el código generado por IA debe ser revisado por un desarrollador y escaneado con un linter de seguridad antes del despliegue en producción.' } },
-          { '@type': 'Question', name: '¿Qué temperatura debo usar para la generación de código con IA?', acceptedAnswer: { '@type': 'Answer', text: 'Establece la Temperatura en 0,1–0,2 para la generación de código de producción. Usa la Temperatura 0,7–0,9 solo cuando estés haciendo lluvia de ideas sobre enfoques algorítmicos.' } },
-          { '@type': 'Question', name: '¿Puedo enviar código fuente relevante para el RGPD a modelos de IA en la nube?', acceptedAnswer: { '@type': 'Answer', text: 'No, si se procesan datos personales. El Artículo 32 del RGPD requiere medidas técnicas de protección en el procesamiento de datos personales. Usa LLaMA 4 8B mediante Ollama para inferencia local sin llamadas a API externas.' } },
+          {
+            '@type': 'Question',
+            name: '¿Cuál es el mejor modelo de IA para escribir código en 2026?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 5 (Anthropic) produce los resultados más consistentes para código de backend, diseño de API y rastreo de bugs. GPT-5.6 (OpenAI) tiene una ligera ventaja en el diseño de algoritmos. Para bases de código sensibles a la privacidad, Llama 3.1 8B ejecutándose localmente mediante Ollama genera cero llamadas a API externas.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Es seguro desplegar el código generado por IA directamente?',
+            acceptedAnswer: { '@type': 'Answer', text: 'No. La IA introduce vulnerabilidades de seguridad en el 45 % de los casos de código generado, incluyendo implementaciones inseguras y nombres de paquetes alucinados. Todo el código generado por IA debe ser revisado y escaneado antes del despliegue en producción.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cuánto más rápidos son los desarrolladores que usan herramientas de programación con IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Los desarrolladores completan un 126 % más de proyectos por semana en estudios controlados. Un estudio de campo METR de 2025 mostró que los desarrolladores experimentados tardaron un 19 % más en tareas que requieren integración compleja de bases de código.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo mejora el prompting Chain-of-Thought la depuración de código?',
+            acceptedAnswer: { '@type': 'Answer', text: 'El prompting CoT pide al modelo que trace cada paso de su razonamiento antes de producir la salida final, identificando la operación exacta que produce el valor incorrecto.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué temperatura debo usar para la generación de código con IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Establece la Temperatura en 0,1–0,2 para la generación de código de producción. Usa la Temperatura 0,7–0,9 solo para lluvia de ideas algorítmica.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Qué son las dependencias alucinadas en la programación con IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Nombres de paquetes o bibliotecas que el modelo recomienda pero que en realidad no existen. La IA recomienda bibliotecas inexistentes el 20 % de las veces. Siempre verifica cada paquete recomendado en PyPI o npm.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo usar herramientas de programación con IA con LLMs locales para la privacidad?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sí. Llama 3.1 8B ejecutándose mediante Ollama en una máquina con 8 GB de RAM genera cero llamadas a API externas. Es adecuado para bases de código con algoritmos propietarios o código que no puede salir de tu infraestructura.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo escribo un system prompt para herramientas de programación con IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Define cuatro cosas en tu system prompt: (1) el rol técnico ("Senior Python Backend Engineer"), (2) el stack técnico y las bibliotecas prohibidas, (3) las reglas de estilo de código ("TypeScript en modo estricto, sin any"), (4) el formato de salida ("devuelve solo código, sin prosa"). Guárdalo como regla de proyecto en Cursor, Claude Code o los ajustes de IA de tu IDE para que se aplique en todas las sesiones.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿GitHub Copilot o Cursor produce menos errores?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Cursor produce menos errores de formato, con una tasa de alucinación de ~10–15 % frente al ~15–20 % de Copilot, principalmente porque usa indexación RAG de nivel de proyecto para entender tu base de código existente. En tareas de un solo archivo la diferencia es mínima. En refactorizaciones de varios archivos, donde importa la consistencia arquitectónica, el contexto de Cursor produce menos errores de integración. Ambos requieren linting de seguridad antes del despliegue.' },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Puedo enviar código fuente relevante para el RGPD a modelos de IA en la nube?',
+            acceptedAnswer: { '@type': 'Answer', text: 'No, si se procesan datos personales. El Artículo 32 del RGPD requiere medidas técnicas de protección. Usa Llama 3.1 8B mediante Ollama para inferencia local. Para España, la LOPD-GDD añade requisitos adicionales.' },
+          },
         ],
       },
       itemListSchema: {
@@ -1093,11 +1142,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'La IA reduce el tiempo de escritura de código entre un 30 y un 75 % — pero solo cuando los prompts están estructurados con rol, objetivo, restricciones, formato de salida y casos límite',
-            'Claude 4.8 Opus (Anthropic) lidera en código de backend, diseño de API y rastreo de bugs; GPT-5 (OpenAI) lidera en diseño de algoritmos y razonamiento multi-paso',
+            'Claude Opus 5 (Anthropic) lidera en código de backend, diseño de API y rastreo de bugs; GPT-5.6 (OpenAI) lidera en diseño de algoritmos y razonamiento multi-paso',
             'El prompting Chain-of-Thought (CoT) — "razona paso a paso antes de generar código" — hace la lógica del modelo inspeccionable y reduce los errores de depuración',
             'La IA introduce vulnerabilidades de seguridad en el 45 % del código generado; siempre ejecuta linters de seguridad antes del despliegue',
             'Establece la Temperatura (T) en 0,1–0,2 para código de producción; usa 0,7–0,9 solo para lluvia de ideas algorítmica exploratoria',
-            'LLaMA 4 8B mediante Ollama se ejecuta localmente con 8 GB de RAM — cero datos salen de tu máquina, adecuado para bases de código sensibles a la privacidad',
+            'Llama 3.1 8B mediante Ollama se ejecuta localmente con 8 GB de RAM — cero datos salen de tu máquina, adecuado para bases de código sensibles a la privacidad',
           ],
         },
         zusammenfassung: {
@@ -1111,7 +1160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Los prompts estructurados no son opcionales** — son la única herramienta que comunica claramente tu intención al modelo. Un prompt sin restricciones, formato de salida y manejo de casos límite producirá código alucinado.',
-            '**El cumplimiento del RGPD significa modelos locales para bases de código sensibles** — si tu código procesa datos personales o cae bajo la clasificación de "alto riesgo" de la Ley de IA de la UE, usa LLaMA 4 8B o Mistral en servidores locales.',
+            '**El cumplimiento del RGPD significa modelos locales para bases de código sensibles** — si tu código procesa datos personales o cae bajo la clasificación de "alto riesgo" de la Ley de IA de la UE, usa Llama 3.1 8B o Mistral en servidores locales.',
             '**El linting de seguridad y las verificaciones cruzadas multi-modelo son la base, no opcionales** — el 45 % del código generado por IA tiene problemas de seguridad.',
           ],
         },
@@ -1128,18 +1177,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Qué modelo de IA usar para tareas de programación',
           content: [
-            '**En abril de 2026, diferentes modelos destacan en diferentes tareas de programación — enrutar tu prompt al modelo correcto reduce errores y costos de tokens.**',
-            'Claude 4.8 Opus (Anthropic) domina la generación de código de backend, el diseño de API, los esquemas de base de datos y la refactorización multi-archivo. GPT-5 (OpenAI) lidera en soluciones algorítmicas creativas. Gemini 3 Pro (Google DeepMind) maneja los documentos más largos con su ventana de contexto de 2 millones de tokens.',
+            '**Diferentes modelos destacan en diferentes tareas de programación — enrutar tu prompt al modelo correcto reduce errores y costos de tokens.**',
+            'Claude Opus 5 (Anthropic) domina la generación de código de backend, el diseño de API, los esquemas de base de datos y la refactorización multi-archivo. GPT-5.6 (OpenAI) lidera en soluciones algorítmicas creativas. Gemini 3.1 Pro (Google DeepMind) maneja los documentos más largos con su ventana de contexto de 2 millones de tokens.',
           ],
           tableFormat: true,
           columns: ['Tarea', 'Mejor modelo', 'Por qué'],
           rows: [
-            { 'Tarea': 'Generación de componentes React', 'Mejor modelo': 'Claude 4.8 Opus', 'Por qué': 'Fuerte rendimiento; manejo preciso de JSX y props' },
-            { 'Tarea': 'Corrección de bugs', 'Mejor modelo': 'Claude 4.8 Opus', 'Por qué': 'Salida de rastreo paso a paso superior para la depuración multi-archivo' },
-            { 'Tarea': 'Diseño de algoritmos', 'Mejor modelo': 'GPT-5', 'Por qué': 'Ligera ventaja en soluciones algorítmicas creativas' },
-            { 'Tarea': 'Análisis de documentos largos/código base', 'Mejor modelo': 'Gemini 3 Pro', 'Por qué': 'Maneja contextos de hasta 2M tokens' },
+            { 'Tarea': 'Generación de componentes React', 'Mejor modelo': 'Claude Opus 5', 'Por qué': 'Fuerte rendimiento; manejo preciso de JSX y props' },
+            { 'Tarea': 'Corrección de bugs', 'Mejor modelo': 'Claude Opus 5', 'Por qué': 'Salida de rastreo paso a paso superior para la depuración multi-archivo' },
+            { 'Tarea': 'Diseño de algoritmos', 'Mejor modelo': 'GPT-5.6', 'Por qué': 'Ligera ventaja en soluciones algorítmicas creativas' },
+            { 'Tarea': 'Análisis de documentos largos/código base', 'Mejor modelo': 'Gemini 3.1 Pro', 'Por qué': 'Maneja contextos de hasta 2M tokens' },
             { 'Tarea': 'Proyectos multilingüe (CJK)', 'Mejor modelo': 'Qwen 3 (Alibaba)', 'Por qué': 'Procesamiento de tokens más rápido para escrituras CJK' },
-            { 'Tarea': 'Inferencia local (privacidad)', 'Mejor modelo': 'LLaMA 4 mediante Ollama', 'Por qué': 'Cero datos salen de tu máquina; el modelo 8B requiere 8 GB de RAM' },
+            { 'Tarea': 'Inferencia local (privacidad)', 'Mejor modelo': 'Llama 3.1 8B mediante Ollama', 'Por qué': 'Cero datos salen de tu máquina; el modelo 8B requiere 8 GB de RAM' },
           ],
         },
         promptStructure: {
@@ -1196,7 +1245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: 'El problema de seguridad: qué malentiende la IA',
           content: [
-            '**En abril de 2026, la IA genera código con vulnerabilidades de seguridad en el 45 % de los casos.** Un informe de Veracode de 2025 mostró que los LLMs eligen la implementación insegura en lugar de la segura el 45 % de las veces.',
+            '**La IA genera código con vulnerabilidades de seguridad en el 45 % de los casos.** Un informe de Veracode de 2025 mostró que los LLMs eligen la implementación insegura en lugar de la segura el 45 % de las veces.',
             'Las tres categorías de error más críticas:',
           ],
           items: [
@@ -1222,9 +1271,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Modelo', 'Ventana de contexto', 'Significado'],
           rows: [
-            { 'Modelo': 'GPT-5', 'Ventana de contexto': '128k tokens', 'Significado': '~96.000 líneas de código visibles por sesión' },
-            { 'Modelo': 'Claude 4.8 Opus', 'Ventana de contexto': '200k tokens', 'Significado': 'Mayor contexto del código base; mejor para refactorización multi-archivo' },
-            { 'Modelo': 'Gemini 3 Pro', 'Ventana de contexto': '2M tokens', 'Significado': 'Análisis completo del código base para proyectos grandes' },
+            { 'Modelo': 'GPT-5.6', 'Ventana de contexto': '128k tokens', 'Significado': '~96.000 líneas de código visibles por sesión' },
+            { 'Modelo': 'Claude Opus 5', 'Ventana de contexto': '1M tokens', 'Significado': 'Mayor contexto del código base; mejor para refactorización multi-archivo' },
+            { 'Modelo': 'Gemini 3.1 Pro', 'Ventana de contexto': '2M tokens', 'Significado': 'Análisis completo del código base para proyectos grandes' },
           ],
         },
         globalContext: {
@@ -1274,14 +1323,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
-            { q: '¿Cuál es el mejor modelo de IA para escribir código en 2026?', a: 'Claude 4.8 Opus (Anthropic) produce los resultados más consistentes para código de backend, diseño de API y rastreo de bugs. GPT-5 (OpenAI) tiene una ligera ventaja en el diseño de algoritmos. Para bases de código sensibles a la privacidad, LLaMA 4 8B ejecutándose localmente mediante Ollama genera cero llamadas a API externas.' },
+            { q: '¿Cuál es el mejor modelo de IA para escribir código en 2026?', a: 'Claude Opus 5 (Anthropic) produce los resultados más consistentes para código de backend, diseño de API y rastreo de bugs. GPT-5.6 (OpenAI) tiene una ligera ventaja en el diseño de algoritmos. Para bases de código sensibles a la privacidad, Llama 3.1 8B ejecutándose localmente mediante Ollama genera cero llamadas a API externas.' },
             { q: '¿Es seguro desplegar el código generado por IA directamente?', a: 'No. La IA introduce vulnerabilidades de seguridad en el 45 % de los casos de código generado, incluyendo implementaciones inseguras y nombres de paquetes alucinados. Todo el código generado por IA debe ser revisado y escaneado antes del despliegue en producción.' },
             { q: '¿Cuánto más rápidos son los desarrolladores que usan herramientas de programación con IA?', a: 'Los desarrolladores completan un 126 % más de proyectos por semana en estudios controlados. Un estudio de campo METR de 2025 mostró que los desarrolladores experimentados tardaron un 19 % más en tareas que requieren integración compleja de bases de código.' },
             { q: '¿Cómo mejora el prompting Chain-of-Thought la depuración de código?', a: 'El prompting CoT pide al modelo que trace cada paso de su razonamiento antes de producir la salida final, identificando la operación exacta que produce el valor incorrecto.' },
             { q: '¿Qué temperatura debo usar para la generación de código con IA?', a: 'Establece la Temperatura en 0,1–0,2 para la generación de código de producción. Usa la Temperatura 0,7–0,9 solo para lluvia de ideas algorítmica.' },
             { q: '¿Qué son las dependencias alucinadas en la programación con IA?', a: 'Nombres de paquetes o bibliotecas que el modelo recomienda pero que en realidad no existen. La IA recomienda bibliotecas inexistentes el 20 % de las veces. Siempre verifica cada paquete recomendado en PyPI o npm.' },
-            { q: '¿Puedo usar herramientas de programación con IA con LLMs locales para la privacidad?', a: 'Sí. LLaMA 4 8B ejecutándose mediante Ollama en una máquina con 8 GB de RAM genera cero llamadas a API externas. Es adecuado para bases de código con algoritmos propietarios o código que no puede salir de tu infraestructura.' },
-            { q: '¿Puedo enviar código fuente relevante para el RGPD a modelos de IA en la nube?', a: 'No, si se procesan datos personales. El Artículo 32 del RGPD requiere medidas técnicas de protección. Usa LLaMA 4 8B mediante Ollama para inferencia local. Para España, la LOPD-GDD añade requisitos adicionales.' },
+            { q: '¿Puedo usar herramientas de programación con IA con LLMs locales para la privacidad?', a: 'Sí. Llama 3.1 8B ejecutándose mediante Ollama en una máquina con 8 GB de RAM genera cero llamadas a API externas. Es adecuado para bases de código con algoritmos propietarios o código que no puede salir de tu infraestructura.' },
+            { q: '¿Cómo escribo un system prompt para herramientas de programación con IA?', a: 'Define cuatro cosas en tu system prompt: (1) el rol técnico ("Senior Python Backend Engineer"), (2) el stack técnico y las bibliotecas prohibidas, (3) las reglas de estilo de código ("TypeScript en modo estricto, sin any"), (4) el formato de salida ("devuelve solo código, sin prosa"). Guárdalo como regla de proyecto en Cursor, Claude Code o los ajustes de IA de tu IDE para que se aplique en todas las sesiones.' },
+            { q: '¿GitHub Copilot o Cursor produce menos errores?', a: 'Cursor produce menos errores de formato, con una tasa de alucinación de ~10–15 % frente al ~15–20 % de Copilot, principalmente porque usa indexación RAG de nivel de proyecto para entender tu base de código existente. En tareas de un solo archivo la diferencia es mínima. En refactorizaciones de varios archivos, donde importa la consistencia arquitectónica, el contexto de Cursor produce menos errores de integración. Ambos requieren linting de seguridad antes del despliegue.' },
+            { q: '¿Puedo enviar código fuente relevante para el RGPD a modelos de IA en la nube?', a: 'No, si se procesan datos personales. El Artículo 32 del RGPD requiere medidas técnicas de protección. Usa Llama 3.1 8B mediante Ollama para inferencia local. Para España, la LOPD-GDD añade requisitos adicionales.' },
           ],
         },
         sources: {
@@ -1301,13 +1352,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-ar.webp',
       title: 'كيف تكتب كودًا أفضل بالذكاء الاصطناعي: الطلبات والنماذج والأمان في ⁨2026⁩',
-      intro: '**لكتابة كود أفضل بالذكاء الاصطناعي في 2026: استخدم طلبًا منظمًا (الدور والهدف والقيود وتنسيق المخرجات والحالات الحدية)، اضبط درجة الحرارة على 0.1–0.2 للإنتاج، وجّه مهام الخلفية إلى Claude 4.8 ومهام الخوارزميات إلى GPT-5، وشغّل كل مخرجة عبر أداة فحص أمني قبل النشر.**\n\nأدوات البرمجة بالذكاء الاصطناعي تقلّص وقت التطوير بنسبة 30–75% — لكن فقط عندما يكتب المطور طلبات منظمة، لا أسئلة عشوائية. جودة مخرجات النموذج تتحدد مباشرةً بمدى صراحتك في تحديد الدور والقيود والمخرجات المتوقعة. اعتبارًا من أبريل 2026، Claude 4.8 Opus يتصدر في كود الخلفية وتتبع الأخطاء، وGPT-5 يتصدر في تصميم الخوارزميات، وLLaMA 4 عبر Ollama يعمل محليًا على جهازك بـ 8 جيجابايت من الذاكرة.\n\nالذكاء الاصطناعي لا يزال يُدخل ثغرات أمنية في 45% من الكود المُولَّد — مما يجعل المراجعة والفحص أمرًا غير قابل للتفاوض قبل النشر.',
+      intro: '**لكتابة كود أفضل بالذكاء الاصطناعي في 2026: استخدم طلبًا منظمًا (الدور والهدف والقيود وتنسيق المخرجات والحالات الحدية)، اضبط درجة الحرارة على 0.1–0.2 للإنتاج، وجّه مهام الخلفية إلى Claude Opus 5 ومهام الخوارزميات إلى GPT-5.6، وشغّل كل مخرجة عبر أداة فحص أمني قبل النشر.**\n\nأدوات البرمجة بالذكاء الاصطناعي تقلّص وقت التطوير بنسبة 30–75% — لكن فقط عندما يكتب المطور طلبات منظمة، لا أسئلة عشوائية. جودة مخرجات النموذج تتحدد مباشرةً بمدى صراحتك في تحديد الدور والقيود والمخرجات المتوقعة. Claude Opus 5 يتصدر في كود الخلفية وتتبع الأخطاء، وGPT-5.6 يتصدر في تصميم الخوارزميات، وLlama 3.1 8B عبر Ollama يعمل محليًا على جهازك بـ 8 جيجابايت من الذاكرة.\n\nالذكاء الاصطناعي لا يزال يُدخل ثغرات أمنية في 45% من الكود المُولَّد — مما يجعل المراجعة والفحص أمرًا غير قابل للتفاوض قبل النشر.',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '١٥ دقيقة للقراءة',
       seoTitle: 'كتابة كود أفضل بالذكاء الاصطناعي ⁨2026⁩: نماذج وأمان',
       metaDescription: 'الذكاء الاصطناعي يقلّص وقت البرمجة بنسبة ⁨30⁩–⁨75%⁩ مع طلبات منظمة. قارن بين ⁨Claude⁩ و⁨GPT-5.6⁩ و⁨Gemini. 45%⁩ من كود الذكاء الاصطناعي يحتوي ثغرات أمنية.',
-      lastFactChecked: '2026-04-28 مقابل بيانات Claude 4.8 Opus وGPT-5 وGemini 3 Pro',
+      lastFactChecked: '2026-08-31 مقابل بيانات Claude Opus 5 وGPT-5.6 وGemini 3.1 Pro',
       educationalLevel: 'متوسط',
       aboutTopics: ['البرمجة بمساعدة الذكاء الاصطناعي', 'توليد الكود', 'هندسة الطلبات'],
       howToName: 'كيف تكتب طلبات تُنتج كودًا أفضل',
@@ -1335,10 +1386,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'كيف تكتب كودًا أفضل بالذكاء الاصطناعي: الطلبات والنماذج والأمان في 2026',
         description: 'أتقن توليد الكود بالذكاء الاصطناعي بطلبات منظمة ومقارنة النماذج ومسارات عمل الأمان. تعلّم إعدادات درجة الحرارة والنماذج المحلية وكيف تتجنب 45% من الهلوسات.',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'البرمجة بالذكاء الاصطناعي، هندسة الطلبات، توليد الكود، Claude، GPT-5، Gemini 3، ثغرات أمنية، درجة الحرارة، نافذة السياق',
+        keywords: 'البرمجة بالذكاء الاصطناعي، هندسة الطلبات، توليد الكود، Claude، GPT-5.6، Gemini 3.1، ثغرات أمنية، درجة الحرارة، نافذة السياق',
         about: [
           { '@type': 'Thing', name: 'توليد الكود بالذكاء الاصطناعي' },
           { '@type': 'Thing', name: 'هندسة الطلبات' },
@@ -1367,10 +1418,56 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         mainEntity: [
-          { '@type': 'Question', name: 'ما أفضل نموذج ذكاء اصطناعي لكتابة الكود في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'Claude 4.8 Opus (Anthropic) يُقدّم أكثر النتائج اتساقًا لكود الخلفية وتصميم API وتتبع الأخطاء، يفوز في 60–65% من المقارنات المباشرة مع GPT-5. GPT-5 (OpenAI) لديه ميزة طفيفة في تصميم الخوارزميات. لقواعد الكود الحساسة للخصوصية، LLaMA 4 8B يعمل محليًا عبر Ollama دون أي استدعاءات API خارجية.' } },
-          { '@type': 'Question', name: 'هل من الآمن نشر الكود المُولَّد بالذكاء الاصطناعي مباشرةً؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. الذكاء الاصطناعي يُدخل ثغرات أمنية في 45% من حالات الكود المُولَّد. جميع الكود المُولَّد بالذكاء الاصطناعي يجب مراجعته من مطوّر وفحصه بأداة أمنية قبل النشر في الإنتاج.' } },
-          { '@type': 'Question', name: 'ما درجة الحرارة التي يجب استخدامها لتوليد الكود بالذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'اضبط درجة الحرارة على 0.1–0.2 لتوليد كود الإنتاج. استخدم درجة الحرارة 0.7–0.9 فقط عند العصف الذهني للمناهج الخوارزمية.' } },
-          { '@type': 'Question', name: 'هل يمكنني إرسال كود مصدر ذي صلة بـ GDPR إلى نماذج ذكاء اصطناعي سحابية؟', acceptedAnswer: { '@type': 'Answer', text: 'لا، إذا كانت البيانات الشخصية تُعالَج. المادة 32 من GDPR تتطلب تدابير تقنية حماية في معالجة البيانات الشخصية. استخدم LLaMA 4 8B عبر Ollama للاستدلال المحلي دون استدعاءات API خارجية.' } },
+          {
+            '@type': 'Question',
+            name: 'ما أفضل نموذج ذكاء اصطناعي لكتابة الكود في 2026؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 5 (Anthropic) يُنتج أكثر النتائج اتساقًا لكود الخلفية وتصميم API وتتبع الأخطاء. GPT-5.6 (OpenAI) لديه ميزة طفيفة في تصميم الخوارزميات. لقواعد الكود الحساسة للخصوصية، Llama 3.1 8B يعمل محليًا عبر Ollama دون أي استدعاءات API خارجية.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل من الآمن نشر الكود المُولَّد بالذكاء الاصطناعي مباشرةً؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'لا. الذكاء الاصطناعي يُدخل ثغرات أمنية في 45% من حالات الكود المُولَّد، بما في ذلك التنفيذات غير الآمنة وأسماء الحزم المُهلوَّسة. جميع الكود المُولَّد بالذكاء الاصطناعي يجب مراجعته وفحصه قبل النشر في الإنتاج.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'بكم مرة أسرع المطورون الذين يستخدمون أدوات البرمجة بالذكاء الاصطناعي؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'المطورون يُكملون 126% مشاريع أكثر في الأسبوع في الدراسات المضبوطة. دراسة ميدانية METR لعام 2025 أظهرت أن المطورين ذوي الخبرة استغرقوا 19% وقتًا أطول في المهام التي تتطلب تكاملًا معقدًا لقاعدة الكود.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'كيف يُحسّن استدعاء Chain-of-Thought تصحيح الكود؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'استدعاء CoT يطلب من النموذج تتبع كل خطوة من خطوات استدلاله قبل إنتاج المخرجات النهائية، مُحددًا العملية الدقيقة التي تُنتج القيمة الخاطئة.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'ما درجة الحرارة التي يجب استخدامها لتوليد الكود بالذكاء الاصطناعي؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'اضبط درجة الحرارة على 0.1–0.2 لتوليد كود الإنتاج. استخدم درجة الحرارة 0.7–0.9 فقط للعصف الذهني الخوارزمي.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'ما هي التبعيات المُهلوَّسة في البرمجة بالذكاء الاصطناعي؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'أسماء الحزم أو المكتبات التي يوصي بها النموذج لكنها في الواقع غير موجودة. الذكاء الاصطناعي يوصي بمكتبات غير موجودة 20% من الوقت. تحقق دائمًا من كل حزمة موصى بها في PyPI أو npm.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يمكنني استخدام أدوات البرمجة بالذكاء الاصطناعي مع نماذج LLM المحلية للخصوصية؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'نعم. Llama 3.1 8B يعمل عبر Ollama على جهاز بذاكرة 8 جيجابايت دون أي استدعاءات API خارجية. مناسب لقواعد الكود التي تحتوي خوارزميات خاصة أو كود لا يستطيع مغادرة بنيتك التحتية.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'كيف أكتب موجّه نظام (system prompt) لأدوات البرمجة بالذكاء الاصطناعي؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'حدّد أربعة أشياء في موجّه النظام: (1) الدور التقني ("Senior Python Backend Engineer")، (2) حزمة التقنيات والمكتبات الممنوعة، (3) قواعد نمط الكود ("TypeScript strict mode، بدون any")، (4) تنسيق المخرجات ("أعد الكود فقط، بدون نثر"). احفظ ذلك كقاعدة على مستوى المشروع في Cursor أو Claude Code أو إعدادات الذكاء الاصطناعي في بيئة التطوير لديك حتى يُطبَّق عبر كل الجلسات.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل ينتج GitHub Copilot أم Cursor أخطاءً أقل؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'ينتج Cursor أخطاء تنسيق أقل بمعدل هلوسة ~10–15% مقابل ~15–20% لـ Copilot، أساسًا لأنه يستخدم فهرسة RAG على مستوى المشروع لفهم قاعدة الكود الحالية. في مهام الملف الواحد يكون الفارق ضئيلًا. أما في إعادة الهيكلة متعددة الملفات، حيث يهم اتساق البنية، فإن سياق قاعدة الكود في Cursor ينتج أخطاء تكامل أقل. وكلاهما يتطلب فحصًا أمنيًا قبل النشر.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'هل يمكنني إرسال كود مصدر ذي صلة بـ GDPR إلى نماذج ذكاء اصطناعي سحابية؟',
+            acceptedAnswer: { '@type': 'Answer', text: 'لا، إذا كانت البيانات الشخصية تُعالَج. المادة 32 من GDPR تتطلب تدابير تقنية حماية. استخدم Llama 3.1 8B عبر Ollama للاستدلال المحلي. للسوق العربية، تحقق من لوائح حماية البيانات المحلية قبل إرسال الكود الحساس.' },
+          },
         ],
       },
       itemListSchema: {
@@ -1394,11 +1491,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'الذكاء الاصطناعي يقلّص وقت كتابة الكود بنسبة 30–75% — لكن فقط عندما تكون الطلبات منظمة بالدور والهدف والقيود وتنسيق المخرجات والحالات الحدية',
-            'Claude 4.8 Opus (Anthropic) يتصدر في كود الخلفية وتصميم API وتتبع الأخطاء؛ GPT-5 (OpenAI) يتصدر في تصميم الخوارزميات والاستدلال متعدد الخطوات',
+            'Claude Opus 5 (Anthropic) يتصدر في كود الخلفية وتصميم API وتتبع الأخطاء؛ GPT-5.6 (OpenAI) يتصدر في تصميم الخوارزميات والاستدلال متعدد الخطوات',
             'استدعاء Chain-of-Thought (CoT) — "استدلّ خطوة بخطوة قبل توليد الكود" — يجعل منطق النموذج قابلًا للفحص ويقلّل أخطاء التصحيح',
             'الذكاء الاصطناعي يُدخل ثغرات أمنية في 45% من الكود المُولَّد؛ شغّل دائمًا أدوات الفحص الأمني قبل النشر',
             'اضبط درجة الحرارة (T) على 0.1–0.2 لكود الإنتاج؛ استخدم 0.7–0.9 فقط للعصف الذهني الخوارزمي الاستكشافي',
-            'LLaMA 4 8B عبر Ollama يعمل محليًا بـ 8 جيجابايت من الذاكرة — لا تغادر أي بيانات جهازك، مناسب لقواعد الكود الحساسة للخصوصية',
+            'Llama 3.1 8B عبر Ollama يعمل محليًا بـ 8 جيجابايت من الذاكرة — لا تغادر أي بيانات جهازك، مناسب لقواعد الكود الحساسة للخصوصية',
           ],
         },
         zusammenfassung: {
@@ -1412,7 +1509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**الطلبات المنظمة ليست اختيارية** — إنها الأداة الوحيدة التي تُوصّل نيّتك بوضوح للنموذج. الطلب بدون قيود وتنسيق مخرجات ومعالجة للحالات الحدية سيُنتج كودًا مُهلوَّسًا.',
-            '**الامتثال لـ GDPR يعني نماذج محلية لقواعد الكود الحساسة** — إذا كان كودك يعالج بيانات شخصية أو يقع ضمن تصنيف "عالي الخطورة" لقانون الذكاء الاصطناعي الأوروبي، استخدم LLaMA 4 8B أو Mistral على خوادم محلية.',
+            '**الامتثال لـ GDPR يعني نماذج محلية لقواعد الكود الحساسة** — إذا كان كودك يعالج بيانات شخصية أو يقع ضمن تصنيف "عالي الخطورة" لقانون الذكاء الاصطناعي الأوروبي، استخدم Llama 3.1 8B أو Mistral على خوادم محلية.',
             '**الفحص الأمني والتحقق المتقاطع متعدد النماذج أساسيان، لا اختياريان** — 45% من الكود المُولَّد بالذكاء الاصطناعي يحتوي مشاكل أمنية.',
           ],
         },
@@ -1429,18 +1526,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'أي نموذج ذكاء اصطناعي يُستخدم لمهام البرمجة',
           content: [
-            '**في أبريل 2026، نماذج مختلفة تتفوق في مهام برمجة مختلفة — توجيه طلبك للنموذج الصحيح يقلّل الأخطاء وتكاليف الرموز.**',
-            'Claude 4.8 Opus (Anthropic) يهيمن على توليد كود الخلفية وتصميم API ومخططات قواعد البيانات وإعادة الهيكلة متعددة الملفات. GPT-5 (OpenAI) يتصدر في الحلول الخوارزمية الإبداعية. Gemini 3 Pro (Google DeepMind) يتعامل مع المستندات الأطول بنافذة سياق 2 مليون رمز.',
+            '**نماذج مختلفة تتفوق في مهام برمجة مختلفة — توجيه طلبك للنموذج الصحيح يقلّل الأخطاء وتكاليف الرموز.**',
+            'Claude Opus 5 (Anthropic) يهيمن على توليد كود الخلفية وتصميم API ومخططات قواعد البيانات وإعادة الهيكلة متعددة الملفات. GPT-5.6 (OpenAI) يتصدر في الحلول الخوارزمية الإبداعية. Gemini 3.1 Pro (Google DeepMind) يتعامل مع المستندات الأطول بنافذة سياق 2 مليون رمز.',
           ],
           tableFormat: true,
           columns: ['المهمة', 'أفضل نموذج', 'السبب'],
           rows: [
-            { 'المهمة': 'توليد مكوّنات React', 'أفضل نموذج': 'Claude 4.8 Opus', 'السبب': 'أداء قوي؛ معالجة دقيقة لـ JSX والـ props' },
-            { 'المهمة': 'إصلاح الأخطاء', 'أفضل نموذج': 'Claude 4.8 Opus', 'السبب': 'مخرجات تتبع خطوة بخطوة أفضل للتصحيح متعدد الملفات' },
-            { 'المهمة': 'تصميم الخوارزميات', 'أفضل نموذج': 'GPT-5', 'السبب': 'ميزة طفيفة في الحلول الخوارزمية الإبداعية' },
-            { 'المهمة': 'تحليل المستندات الطويلة/قاعدة الكود', 'أفضل نموذج': 'Gemini 3 Pro', 'السبب': 'يتعامل مع سياقات تصل إلى 2 مليون رمز' },
+            { 'المهمة': 'توليد مكوّنات React', 'أفضل نموذج': 'Claude Opus 5', 'السبب': 'أداء قوي؛ معالجة دقيقة لـ JSX والـ props' },
+            { 'المهمة': 'إصلاح الأخطاء', 'أفضل نموذج': 'Claude Opus 5', 'السبب': 'مخرجات تتبع خطوة بخطوة أفضل للتصحيح متعدد الملفات' },
+            { 'المهمة': 'تصميم الخوارزميات', 'أفضل نموذج': 'GPT-5.6', 'السبب': 'ميزة طفيفة في الحلول الخوارزمية الإبداعية' },
+            { 'المهمة': 'تحليل المستندات الطويلة/قاعدة الكود', 'أفضل نموذج': 'Gemini 3.1 Pro', 'السبب': 'يتعامل مع سياقات تصل إلى 2 مليون رمز' },
             { 'المهمة': 'مشاريع متعددة اللغات (CJK)', 'أفضل نموذج': 'Qwen 3 (Alibaba)', 'السبب': 'معالجة رموز أسرع لنصوص CJK' },
-            { 'المهمة': 'الاستدلال المحلي (الخصوصية)', 'أفضل نموذج': 'LLaMA 4 عبر Ollama', 'السبب': 'لا تغادر أي بيانات جهازك؛ نموذج 8B يتطلب 8 جيجابايت من الذاكرة' },
+            { 'المهمة': 'الاستدلال المحلي (الخصوصية)', 'أفضل نموذج': 'Llama 3.1 8B عبر Ollama', 'السبب': 'لا تغادر أي بيانات جهازك؛ نموذج 8B يتطلب 8 جيجابايت من الذاكرة' },
           ],
         },
         promptStructure: {
@@ -1497,7 +1594,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: 'مشكلة الأمان: ما يُسيء فهمه الذكاء الاصطناعي',
           content: [
-            '**في أبريل 2026، يُولَّد الذكاء الاصطناعي كودًا يحتوي ثغرات أمنية في 45% من الحالات.** تقرير Veracode لعام 2025 أظهر أن نماذج LLM تختار التنفيذ غير الآمن بدلًا من الآمن 45% من الوقت.',
+            '**يُولِّد الذكاء الاصطناعي كودًا يحتوي ثغرات أمنية في 45% من الحالات.** تقرير Veracode لعام 2025 أظهر أن نماذج LLM تختار التنفيذ غير الآمن بدلًا من الآمن 45% من الوقت.',
             'الفئات الثلاث الأكثر أهمية للأخطاء:',
           ],
           items: [
@@ -1523,9 +1620,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['النموذج', 'نافذة السياق', 'المعنى'],
           rows: [
-            { 'النموذج': 'GPT-5', 'نافذة السياق': '128k رمز', 'المعنى': '~96,000 سطر كود مرئية لكل جلسة' },
-            { 'النموذج': 'Claude 4.8 Opus', 'نافذة السياق': '200k رمز', 'المعنى': 'سياق أكبر لقاعدة الكود؛ أفضل لإعادة الهيكلة متعددة الملفات' },
-            { 'النموذج': 'Gemini 3 Pro', 'نافذة السياق': '2 مليون رمز', 'المعنى': 'تحليل كامل لقاعدة الكود للمشاريع الكبيرة' },
+            { 'النموذج': 'GPT-5.6', 'نافذة السياق': '128k رمز', 'المعنى': '~96,000 سطر كود مرئية لكل جلسة' },
+            { 'النموذج': 'Claude Opus 5', 'نافذة السياق': '1M رمز', 'المعنى': 'سياق أكبر لقاعدة الكود؛ أفضل لإعادة الهيكلة متعددة الملفات' },
+            { 'النموذج': 'Gemini 3.1 Pro', 'نافذة السياق': '2 مليون رمز', 'المعنى': 'تحليل كامل لقاعدة الكود للمشاريع الكبيرة' },
           ],
         },
         globalContext: {
@@ -1575,14 +1672,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
-            { q: 'ما أفضل نموذج ذكاء اصطناعي لكتابة الكود في 2026؟', a: 'Claude 4.8 Opus (Anthropic) يُنتج أكثر النتائج اتساقًا لكود الخلفية وتصميم API وتتبع الأخطاء. GPT-5 (OpenAI) لديه ميزة طفيفة في تصميم الخوارزميات. لقواعد الكود الحساسة للخصوصية، LLaMA 4 8B يعمل محليًا عبر Ollama دون أي استدعاءات API خارجية.' },
+            { q: 'ما أفضل نموذج ذكاء اصطناعي لكتابة الكود في 2026؟', a: 'Claude Opus 5 (Anthropic) يُنتج أكثر النتائج اتساقًا لكود الخلفية وتصميم API وتتبع الأخطاء. GPT-5.6 (OpenAI) لديه ميزة طفيفة في تصميم الخوارزميات. لقواعد الكود الحساسة للخصوصية، Llama 3.1 8B يعمل محليًا عبر Ollama دون أي استدعاءات API خارجية.' },
             { q: 'هل من الآمن نشر الكود المُولَّد بالذكاء الاصطناعي مباشرةً؟', a: 'لا. الذكاء الاصطناعي يُدخل ثغرات أمنية في 45% من حالات الكود المُولَّد، بما في ذلك التنفيذات غير الآمنة وأسماء الحزم المُهلوَّسة. جميع الكود المُولَّد بالذكاء الاصطناعي يجب مراجعته وفحصه قبل النشر في الإنتاج.' },
             { q: 'بكم مرة أسرع المطورون الذين يستخدمون أدوات البرمجة بالذكاء الاصطناعي؟', a: 'المطورون يُكملون 126% مشاريع أكثر في الأسبوع في الدراسات المضبوطة. دراسة ميدانية METR لعام 2025 أظهرت أن المطورين ذوي الخبرة استغرقوا 19% وقتًا أطول في المهام التي تتطلب تكاملًا معقدًا لقاعدة الكود.' },
             { q: 'كيف يُحسّن استدعاء Chain-of-Thought تصحيح الكود؟', a: 'استدعاء CoT يطلب من النموذج تتبع كل خطوة من خطوات استدلاله قبل إنتاج المخرجات النهائية، مُحددًا العملية الدقيقة التي تُنتج القيمة الخاطئة.' },
             { q: 'ما درجة الحرارة التي يجب استخدامها لتوليد الكود بالذكاء الاصطناعي؟', a: 'اضبط درجة الحرارة على 0.1–0.2 لتوليد كود الإنتاج. استخدم درجة الحرارة 0.7–0.9 فقط للعصف الذهني الخوارزمي.' },
             { q: 'ما هي التبعيات المُهلوَّسة في البرمجة بالذكاء الاصطناعي؟', a: 'أسماء الحزم أو المكتبات التي يوصي بها النموذج لكنها في الواقع غير موجودة. الذكاء الاصطناعي يوصي بمكتبات غير موجودة 20% من الوقت. تحقق دائمًا من كل حزمة موصى بها في PyPI أو npm.' },
-            { q: 'هل يمكنني استخدام أدوات البرمجة بالذكاء الاصطناعي مع نماذج LLM المحلية للخصوصية؟', a: 'نعم. LLaMA 4 8B يعمل عبر Ollama على جهاز بذاكرة 8 جيجابايت دون أي استدعاءات API خارجية. مناسب لقواعد الكود التي تحتوي خوارزميات خاصة أو كود لا يستطيع مغادرة بنيتك التحتية.' },
-            { q: 'هل يمكنني إرسال كود مصدر ذي صلة بـ GDPR إلى نماذج ذكاء اصطناعي سحابية؟', a: 'لا، إذا كانت البيانات الشخصية تُعالَج. المادة 32 من GDPR تتطلب تدابير تقنية حماية. استخدم LLaMA 4 8B عبر Ollama للاستدلال المحلي. للسوق العربية، تحقق من لوائح حماية البيانات المحلية قبل إرسال الكود الحساس.' },
+            { q: 'هل يمكنني استخدام أدوات البرمجة بالذكاء الاصطناعي مع نماذج LLM المحلية للخصوصية؟', a: 'نعم. Llama 3.1 8B يعمل عبر Ollama على جهاز بذاكرة 8 جيجابايت دون أي استدعاءات API خارجية. مناسب لقواعد الكود التي تحتوي خوارزميات خاصة أو كود لا يستطيع مغادرة بنيتك التحتية.' },
+            { q: 'كيف أكتب موجّه نظام (system prompt) لأدوات البرمجة بالذكاء الاصطناعي؟', a: 'حدّد أربعة أشياء في موجّه النظام: (1) الدور التقني ("Senior Python Backend Engineer")، (2) حزمة التقنيات والمكتبات الممنوعة، (3) قواعد نمط الكود ("TypeScript strict mode، بدون any")، (4) تنسيق المخرجات ("أعد الكود فقط، بدون نثر"). احفظ ذلك كقاعدة على مستوى المشروع في Cursor أو Claude Code أو إعدادات الذكاء الاصطناعي في بيئة التطوير لديك حتى يُطبَّق عبر كل الجلسات.' },
+            { q: 'هل ينتج GitHub Copilot أم Cursor أخطاءً أقل؟', a: 'ينتج Cursor أخطاء تنسيق أقل بمعدل هلوسة ~10–15% مقابل ~15–20% لـ Copilot، أساسًا لأنه يستخدم فهرسة RAG على مستوى المشروع لفهم قاعدة الكود الحالية. في مهام الملف الواحد يكون الفارق ضئيلًا. أما في إعادة الهيكلة متعددة الملفات، حيث يهم اتساق البنية، فإن سياق قاعدة الكود في Cursor ينتج أخطاء تكامل أقل. وكلاهما يتطلب فحصًا أمنيًا قبل النشر.' },
+            { q: 'هل يمكنني إرسال كود مصدر ذي صلة بـ GDPR إلى نماذج ذكاء اصطناعي سحابية؟', a: 'لا، إذا كانت البيانات الشخصية تُعالَج. المادة 32 من GDPR تتطلب تدابير تقنية حماية. استخدم Llama 3.1 8B عبر Ollama للاستدلال المحلي. للسوق العربية، تحقق من لوائح حماية البيانات المحلية قبل إرسال الكود الحساس.' },
           ],
         },
         sources: {
@@ -1598,12 +1697,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     pt: {
+      freshness_tier: 'semi_annual',
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-pt.webp',
       title: 'Como Escrever Código Melhor com IA: Prompts, Modelos e Segurança em 2026',
-      intro: '**Para escrever código melhor com IA em 2026: use um prompt estruturado (função, objetivo, restrições, formato de saída, casos extremos), defina a Temperatura em 0,1–0,2 para produção, encaminhe tarefas de backend para Claude 4.8 e tarefas de algoritmo para GPT-5, e execute cada saída por um linter de segurança antes do deploy.**\n\nFerramentas de codificação com IA reduzem o tempo de desenvolvimento em 30–75% — mas apenas quando o desenvolvedor escreve prompts estruturados, não perguntas casuais. A qualidade da saída do modelo é diretamente determinada por quão explicitamente você especifica a função, as restrições e a saída esperada. Em abril de 2026, Claude 4.8 Opus lidera em código de backend e rastreamento de bugs, GPT-5 lidera em design de algoritmos, e LLaMA 4 via Ollama roda completamente no seu próprio hardware com 8 GB de RAM.\n\nA IA ainda introduz vulnerabilidades de segurança em 45% do código gerado — tornando a revisão e o linting inegociáveis antes do deploy.',
+      intro: '**Para escrever código melhor com IA em 2026: use um prompt estruturado (função, objetivo, restrições, formato de saída, casos extremos), defina a Temperatura em 0,1–0,2 para produção, encaminhe tarefas de backend para Claude Opus 5 e tarefas de algoritmo para GPT-5.6, e execute cada saída por um linter de segurança antes do deploy.**\n\nFerramentas de codificação com IA reduzem o tempo de desenvolvimento em 30–75% — mas apenas quando o desenvolvedor escreve prompts estruturados, não perguntas casuais. A qualidade da saída do modelo é diretamente determinada por quão explicitamente você especifica a função, as restrições e a saída esperada. Claude Opus 5 lidera em código de backend e rastreamento de bugs, GPT-5.6 lidera em design de algoritmos, e Llama 3.1 8B via Ollama roda completamente no seu próprio hardware com 8 GB de RAM.\n\nA IA ainda introduz vulnerabilidades de segurança em 45% do código gerado — tornando a revisão e o linting inegociáveis antes do deploy.',
       publishDate: '2026-03-22',
+      dateModified: '2026-08-31',
       readTime: '15 min de leitura',
+      lastFactChecked: '2026-08-31 em relação aos dados de lançamento de Claude Opus 5, GPT-5.6 e Gemini 3.1 Pro',
       seoTitle: 'Escrever Código Melhor com IA: Prompts, Modelos e Segurança (2026)',
       metaDescription: 'IA reduz o tempo de codificação em 30–75% com prompts estruturados. Compare Claude, GPT-5.6 e Gemini para tarefas de código. 45% do código de IA tem falhas de segurança — aprenda fluxos de trabalho seguros.',
       educationalLevel: 'Intermediate',
@@ -1634,6 +1736,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'O problema de segurança: o que a IA erra', anchor: '#the-security-problem-what-ai-gets-wrong' },
         { label: 'O método de verificação cruzada multi-modelo', anchor: '#the-multi-model-cross-check-method' },
         { label: 'Como os ajustes de Temperatura e janela de contexto afetam a qualidade do código?', anchor: '#how-do-temperature-and-context-window-settings-affect-code-quality' },
+        { label: 'Como a codificação com IA varia por região?', anchor: '#how-does-ai-coding-vary-by-region' },
         { label: 'Erros comuns ao usar IA para código', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: 'Leitura relacionada', anchor: '#related-reading' },
         { label: 'Fluxo de trabalho passo a passo: escrever código melhor com IA', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
@@ -1649,7 +1752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-22',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'codificação com IA, prompt engineering, geração de código, Claude, GPT-5, Gemini 3, vulnerabilidades de segurança, temperatura, janela de contexto',
+        keywords: 'codificação com IA, prompt engineering, geração de código, Claude, GPT-5.6, Gemini 3.1, vulnerabilidades de segurança, temperatura, janela de contexto',
         about: [
           { '@type': 'Thing', name: 'Geração de código com IA' },
           { '@type': 'Thing', name: 'Prompt engineering' },
@@ -1680,51 +1783,58 @@ export const article: Partial<Record<Language, PEArticle>> = {
         mainEntity: [
           {
             '@type': 'Question',
-            'name': 'Qual é o melhor modelo de IA para escrever código em 2026?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Claude 4.8 Opus (Anthropic) produz os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, LLaMA 4 8B rodando localmente via Ollama gera zero chamadas de API externas.',
-            },
+            name: 'Qual é o melhor modelo de IA para escrever código em 2026?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Claude Opus 5 (Anthropic) produz os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5.6 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, Llama 3.1 8B rodando localmente via Ollama gera zero chamadas de API externas.' },
           },
           {
             '@type': 'Question',
-            'name': 'É seguro fazer deploy de código gerado por IA diretamente?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Não. IA introduz vulnerabilidades de segurança em 45% dos casos de código gerado, incluindo implementações inseguras e nomes de pacotes alucinados. Todo código gerado por IA deve ser revisado e escaneado antes do deploy em produção.',
-            },
+            name: 'É seguro fazer deploy de código gerado por IA diretamente?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Não. IA introduz vulnerabilidades de segurança em 45% dos casos de código gerado, incluindo implementações inseguras e nomes de pacotes alucinados. Todo código gerado por IA deve ser revisado e escaneado antes do deploy em produção.' },
           },
           {
             '@type': 'Question',
-            'name': 'Qual temperatura devo usar para geração de código com IA?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Defina a Temperatura em 0,1–0,2 para geração de código de produção. Use Temperatura 0,7–0,9 apenas para brainstorming algorítmico.',
-            },
+            name: 'Qual temperatura devo usar para geração de código com IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Defina a Temperatura em 0,1–0,2 para geração de código de produção. Use Temperatura 0,7–0,9 apenas para brainstorming algorítmico.' },
           },
           {
             '@type': 'Question',
-            'name': 'O que são dependências alucinadas em codificação com IA?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Nomes de pacotes ou bibliotecas que o modelo recomenda mas que na verdade não existem. IA recomenda bibliotecas inexistentes 20% das vezes. Sempre verifique cada pacote recomendado no PyPI ou npm.',
-            },
+            name: 'O que são dependências alucinadas em codificação com IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Nomes de pacotes ou bibliotecas que o modelo recomenda mas que na verdade não existem. IA recomenda bibliotecas inexistentes 20% das vezes. Sempre verifique cada pacote recomendado no PyPI ou npm.' },
           },
           {
             '@type': 'Question',
-            'name': 'Posso usar ferramentas de codificação com IA com LLMs locais para privacidade?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Sim. LLaMA 4 8B rodando via Ollama em uma máquina com 8 GB de RAM gera zero chamadas de API externas. É adequado para bases de código com algoritmos proprietários ou código que não pode sair da sua infraestrutura.',
-            },
+            name: 'Posso usar ferramentas de codificação com IA com LLMs locais para privacidade?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Sim. Llama 3.1 8B rodando via Ollama em uma máquina com 8 GB de RAM gera zero chamadas de API externas. É adequado para bases de código com algoritmos proprietários ou código que não pode sair da sua infraestrutura.' },
           },
           {
             '@type': 'Question',
-            'name': 'Posso enviar código-fonte relevante para a LGPD a modelos de IA na nuvem?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use LLaMA 4 8B via Ollama para inferência local sem chamadas de API externas.',
-            },
+            name: 'Quanto mais rápidos são os desenvolvedores que usam ferramentas de codificação com IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Desenvolvedores que usam assistentes de codificação com IA concluem 126% mais projetos por semana do que programadores manuais em estudos controlados. No entanto, um estudo de campo do METR de 2025 constatou que desenvolvedores experientes levaram 19% mais tempo em tarefas que exigem integração complexa com a base de código — o ganho de produtividade depende da tarefa e exige disciplina de prompt estruturado.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como o prompting Chain-of-Thought melhora a depuração de código?',
+            acceptedAnswer: { '@type': 'Answer', text: 'O prompting Chain-of-Thought (CoT) pede que o modelo percorra cada etapa do seu raciocínio antes de produzir a saída final. Na depuração, isso significa que o modelo identifica a operação exata que produz o valor intermediário incorreto, tornando o erro rastreável e corrigível em vez de exigir a regeneração completa da saída.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'A assistência de IA funciona igual em todas as linguagens de programação?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Não. As ferramentas de IA são treinadas principalmente em bases de código em inglês, o que significa que Python e JavaScript recebem o suporte mais forte. Para projetos com muito conteúdo CJK (japonês, chinês, coreano), Qwen 3 (Alibaba) ou DeepSeek V3 oferecem processamento de tokens mais rápido porque seus tokenizadores lidam melhor com esses scripts.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Como escrevo um system prompt para ferramentas de codificação com IA?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Defina quatro coisas no seu system prompt: (1) a função técnica ("Senior Python Backend Engineer"), (2) a stack e as bibliotecas proibidas, (3) as regras de estilo de código ("TypeScript em modo estrito, sem any"), (4) o formato de saída ("retorne apenas código, sem prosa"). Salve isso como regra de nível de projeto no Cursor, no Claude Code ou nas configurações de IA da sua IDE para que valha em todas as sessões.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'O GitHub Copilot ou o Cursor produz menos bugs?',
+            acceptedAnswer: { '@type': 'Answer', text: 'O Cursor produz menos erros de formato, com taxa de alucinação de ~10–15% contra ~15–20% do Copilot, principalmente porque usa indexação RAG de nível de projeto para entender a base de código existente. Em tarefas de arquivo único a diferença é pequena. Em refatorações de múltiplos arquivos, onde a consistência arquitetural importa, o contexto de base de código do Cursor gera menos erros de integração. Ambos exigem linting de segurança antes do deploy.' },
+          },
+          {
+            '@type': 'Question',
+            name: 'Posso enviar código-fonte relevante para a LGPD a modelos de IA na nuvem?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use Llama 3.1 8B via Ollama para inferência local sem chamadas de API externas.' },
           },
         ],
       },
@@ -1734,11 +1844,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'IA reduz o tempo de escrita de código em 30–75% — mas apenas quando os prompts são estruturados com função, objetivo, restrições, formato de saída e casos extremos',
-            'Claude 4.8 Opus (Anthropic) lidera em código de backend, design de API e rastreamento de bugs; GPT-5 (OpenAI) lidera em design de algoritmos e raciocínio em múltiplas etapas',
+            'Claude Opus 5 (Anthropic) lidera em código de backend, design de API e rastreamento de bugs; GPT-5.6 (OpenAI) lidera em design de algoritmos e raciocínio em múltiplas etapas',
             'Prompting Chain-of-Thought (CoT) — "raciocine passo a passo antes de gerar código" — torna a lógica do modelo inspecionável e reduz erros de depuração',
             'IA introduz vulnerabilidades de segurança em 45% do código gerado; sempre execute linters de segurança antes do deploy',
             'Defina a Temperatura (T) em 0,1–0,2 para código de produção; use 0,7–0,9 apenas para brainstorming algorítmico exploratório',
-            'LLaMA 4 8B via Ollama roda localmente com 8 GB de RAM — zero dados saem da sua máquina, adequado para bases de código sensíveis à privacidade e conformidade com a LGPD',
+            'Llama 3.1 8B via Ollama roda localmente com 8 GB de RAM — zero dados saem da sua máquina, adequado para bases de código sensíveis à privacidade e conformidade com a LGPD',
           ],
         },
         directAnswer: {
@@ -1757,16 +1867,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Qual modelo de IA usar para tarefas de codificação',
           content: [
-            '**Em abril de 2026, diferentes modelos se destacam em diferentes tarefas de codificação — encaminhar seu prompt para o modelo certo reduz erros e custos de tokens.**',
+            '**Diferentes modelos se destacam em diferentes tarefas de codificação — encaminhar seu prompt para o modelo certo reduz erros e custos de tokens.**',
           ],
           tableFormat: true,
           columns: ['Tarefa', 'Melhor modelo', 'Por quê'],
           rows: [
-            { 'Tarefa': 'Geração de componentes React', 'Melhor modelo': 'Claude 4.8 Opus', 'Por quê': 'Forte desempenho; tratamento preciso de JSX e props' },
-            { 'Tarefa': 'Correção de bugs', 'Melhor modelo': 'Claude 4.8 Opus', 'Por quê': 'Saída de rastreamento passo a passo superior para depuração de múltiplos arquivos' },
-            { 'Tarefa': 'Design de algoritmos', 'Melhor modelo': 'GPT-5', 'Por quê': 'Ligeira vantagem em soluções algorítmicas criativas' },
-            { 'Tarefa': 'Análise de documentos longos/base de código', 'Melhor modelo': 'Gemini 3 Pro', 'Por quê': 'Lida com contextos de até 2M tokens' },
-            { 'Tarefa': 'Inferência local (privacidade)', 'Melhor modelo': 'LLaMA 4 via Ollama', 'Por quê': 'Zero dados saem da sua máquina; o modelo 8B requer 8 GB de RAM' },
+            { 'Tarefa': 'Geração de componentes React', 'Melhor modelo': 'Claude Opus 5', 'Por quê': 'Forte desempenho; tratamento preciso de JSX e props' },
+            { 'Tarefa': 'Correção de bugs', 'Melhor modelo': 'Claude Opus 5', 'Por quê': 'Saída de rastreamento passo a passo superior para depuração de múltiplos arquivos' },
+            { 'Tarefa': 'Design de algoritmos', 'Melhor modelo': 'GPT-5.6', 'Por quê': 'Ligeira vantagem em soluções algorítmicas criativas' },
+            { 'Tarefa': 'Análise de documentos longos/base de código', 'Melhor modelo': 'Gemini 3.1 Pro', 'Por quê': 'Lida com contextos de até 2M tokens' },
+            { 'Tarefa': 'Projetos multilíngues (CJK)', 'Melhor modelo': 'Qwen 3 (Alibaba)', 'Por quê': 'Processamento de tokens mais rápido para scripts chinês/japonês/coreano' },
+            { 'Tarefa': 'Inferência local (privacidade)', 'Melhor modelo': 'Llama 3.1 8B via Ollama', 'Por quê': 'Zero dados saem da sua máquina; o modelo 8B requer 8 GB de RAM' },
           ],
         },
         promptStructure: {
@@ -1815,6 +1926,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Ferramenta': 'GitHub Copilot', 'Taxa de alucinação': '~15–20%', 'Consciência de arquitetura': 'Contexto de nível de arquivo', 'Adequado para': 'Desenvolvedores individuais, código repetitivo' },
             { 'Ferramenta': 'Cursor', 'Taxa de alucinação': '~10–15%', 'Consciência de arquitetura': 'Indexação RAG de nível de projeto', 'Adequado para': 'Equipes que querem um IDE nativo de IA' },
             { 'Ferramenta': 'Claude Code (Anthropic)', 'Taxa de alucinação': 'Baixa em tarefas estruturadas', 'Consciência de arquitetura': 'Contexto completo da base de código', 'Adequado para': 'Backend, refatoração de múltiplos arquivos' },
+            { 'Ferramenta': 'Devin (Cognition AI)', 'Taxa de alucinação': 'Variável', 'Consciência de arquitetura': 'Execução autônoma de tarefas', 'Adequado para': 'Pipelines autônomos de ticket para PR' },
             { 'Ferramenta': 'Qwen Code (Alibaba)', 'Taxa de alucinação': 'Variável', 'Consciência de arquitetura': 'Implantável localmente', 'Adequado para': 'Pesquisa, controle total da infraestrutura' },
           ],
         },
@@ -1822,7 +1934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: 'O problema de segurança: o que a IA erra',
           content: [
-            '**Em abril de 2026, IA gera código com vulnerabilidades de segurança em 45% dos casos.** Um relatório da Veracode de 2025 mostrou que LLMs escolhem a implementação insegura em vez da segura 45% das vezes.',
+            '**A IA gera código com vulnerabilidades de segurança em 45% dos casos.** Um relatório da Veracode de 2025 mostrou que LLMs escolhem a implementação insegura em vez da segura 45% das vezes.',
           ],
           items: [
             '**Dependências alucinadas** — modelos recomendam importar pacotes que não existem. Atacantes exploram isso via "slopsquatting" — registram o nome do pacote alucinado com código malicioso.',
@@ -1846,9 +1958,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Modelo', 'Janela de contexto', 'Significado'],
           rows: [
-            { 'Modelo': 'GPT-5', 'Janela de contexto': '128k tokens', 'Significado': '~96.000 linhas de código visíveis por sessão' },
-            { 'Modelo': 'Claude 4.8 Opus', 'Janela de contexto': '200k tokens', 'Significado': 'Maior contexto da base de código; melhor para refatoração de múltiplos arquivos' },
-            { 'Modelo': 'Gemini 3 Pro', 'Janela de contexto': '2M tokens', 'Significado': 'Análise completa da base de código para projetos grandes' },
+            { 'Modelo': 'GPT-5.6', 'Janela de contexto': '128k tokens', 'Significado': '~96.000 linhas de código visíveis por sessão' },
+            { 'Modelo': 'Claude Opus 5', 'Janela de contexto': '1M tokens', 'Significado': 'Maior contexto da base de código; melhor para refatoração de múltiplos arquivos' },
+            { 'Modelo': 'Gemini 3.1 Pro', 'Janela de contexto': '2M tokens', 'Significado': 'Análise completa da base de código para projetos grandes' },
+          ],
+        },
+        globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
+          title: 'Como a codificação com IA varia por região?',
+          content: [
+            '**Equipes de desenvolvimento brasileiras que tratam dados pessoais em código-fonte precisam avaliar a inferência local antes de enviar trechos a serviços de nuvem estrangeiros.** A LGPD (Lei 13.709/2018) exige medidas técnicas de proteção no tratamento de dados pessoais, e a transferência internacional depende das regras do Capítulo V e das decisões da ANPD. Llama 3.1 8B e Mistral Small rodando via Ollama em infraestrutura própria não geram nenhuma chamada de API externa.',
+            'Equipes europeias adotam cada vez mais a Mistral AI (desenvolvida na França) para tarefas de codificação em que a conformidade com o AI Act da UE e a residência de dados importam. Mistral Large e Mistral Small podem ser implantadas localmente via Ollama, garantindo que nenhum código saia da infraestrutura on-premise.',
+            'Empresas chinesas usam amplamente Qwen 3 (Alibaba) e DeepSeek V3 como alternativas open source, sobretudo em projetos que exigem suporte a CJK ou implantação totalmente on-premise. Já empresas japonesas sob as diretrizes de governança de dados do METI costumam preferir modelos locais via Ollama pelo mesmo motivo de residência de dados.',
           ],
         },
         commonMistakes: {
@@ -1888,12 +2009,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'Qual é o melhor modelo de IA para escrever código em 2026?', a: 'Claude 4.8 Opus (Anthropic) produz os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, LLaMA 4 8B rodando localmente via Ollama gera zero chamadas de API externas.' },
+            { q: 'Qual é o melhor modelo de IA para escrever código em 2026?', a: 'Claude Opus 5 (Anthropic) produz os resultados mais consistentes para código de backend, design de API e rastreamento de bugs. GPT-5.6 (OpenAI) tem ligeira vantagem em design de algoritmos. Para bases de código sensíveis à privacidade, Llama 3.1 8B rodando localmente via Ollama gera zero chamadas de API externas.' },
             { q: 'É seguro fazer deploy de código gerado por IA diretamente?', a: 'Não. IA introduz vulnerabilidades de segurança em 45% dos casos de código gerado, incluindo implementações inseguras e nomes de pacotes alucinados. Todo código gerado por IA deve ser revisado e escaneado antes do deploy em produção.' },
             { q: 'Qual temperatura devo usar para geração de código com IA?', a: 'Defina a Temperatura em 0,1–0,2 para geração de código de produção. Use Temperatura 0,7–0,9 apenas para brainstorming algorítmico.' },
             { q: 'O que são dependências alucinadas em codificação com IA?', a: 'Nomes de pacotes ou bibliotecas que o modelo recomenda mas que na verdade não existem. IA recomenda bibliotecas inexistentes 20% das vezes. Sempre verifique cada pacote recomendado no PyPI ou npm.' },
-            { q: 'Posso usar ferramentas de codificação com IA com LLMs locais para privacidade?', a: 'Sim. LLaMA 4 8B rodando via Ollama em uma máquina com 8 GB de RAM gera zero chamadas de API externas. É adequado para bases de código com algoritmos proprietários ou código que não pode sair da sua infraestrutura.' },
-            { q: 'Posso enviar código-fonte relevante para a LGPD a modelos de IA na nuvem?', a: 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use LLaMA 4 8B via Ollama para inferência local sem chamadas de API externas.' },
+            { q: 'Posso usar ferramentas de codificação com IA com LLMs locais para privacidade?', a: 'Sim. Llama 3.1 8B rodando via Ollama em uma máquina com 8 GB de RAM gera zero chamadas de API externas. É adequado para bases de código com algoritmos proprietários ou código que não pode sair da sua infraestrutura.' },
+            { q: 'Quanto mais rápidos são os desenvolvedores que usam ferramentas de codificação com IA?', a: 'Desenvolvedores que usam assistentes de codificação com IA concluem 126% mais projetos por semana do que programadores manuais em estudos controlados. No entanto, um estudo de campo do METR de 2025 constatou que desenvolvedores experientes levaram 19% mais tempo em tarefas que exigem integração complexa com a base de código — o ganho de produtividade depende da tarefa e exige disciplina de prompt estruturado.' },
+            { q: 'Como o prompting Chain-of-Thought melhora a depuração de código?', a: 'O prompting Chain-of-Thought (CoT) pede que o modelo percorra cada etapa do seu raciocínio antes de produzir a saída final. Na depuração, isso significa que o modelo identifica a operação exata que produz o valor intermediário incorreto, tornando o erro rastreável e corrigível em vez de exigir a regeneração completa da saída.' },
+            { q: 'A assistência de IA funciona igual em todas as linguagens de programação?', a: 'Não. As ferramentas de IA são treinadas principalmente em bases de código em inglês, o que significa que Python e JavaScript recebem o suporte mais forte. Para projetos com muito conteúdo CJK (japonês, chinês, coreano), Qwen 3 (Alibaba) ou DeepSeek V3 oferecem processamento de tokens mais rápido porque seus tokenizadores lidam melhor com esses scripts.' },
+            { q: 'Como escrevo um system prompt para ferramentas de codificação com IA?', a: 'Defina quatro coisas no seu system prompt: (1) a função técnica ("Senior Python Backend Engineer"), (2) a stack e as bibliotecas proibidas, (3) as regras de estilo de código ("TypeScript em modo estrito, sem any"), (4) o formato de saída ("retorne apenas código, sem prosa"). Salve isso como regra de nível de projeto no Cursor, no Claude Code ou nas configurações de IA da sua IDE para que valha em todas as sessões.' },
+            { q: 'O GitHub Copilot ou o Cursor produz menos bugs?', a: 'O Cursor produz menos erros de formato, com taxa de alucinação de ~10–15% contra ~15–20% do Copilot, principalmente porque usa indexação RAG de nível de projeto para entender a base de código existente. Em tarefas de arquivo único a diferença é pequena. Em refatorações de múltiplos arquivos, onde a consistência arquitetural importa, o contexto de base de código do Cursor gera menos erros de integração. Ambos exigem linting de segurança antes do deploy.' },
+            { q: 'Posso enviar código-fonte relevante para a LGPD a modelos de IA na nuvem?', a: 'Não, se dados pessoais forem processados. A LGPD exige medidas técnicas de proteção no processamento de dados pessoais. Use Llama 3.1 8B via Ollama para inferência local sem chamadas de API externas.' },
           ],
         },
         sources: {
@@ -1913,13 +2039,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-fr.webp',
       title: 'Comment Écrire du Code Meilleur avec l\'IA : Prompts, Modèles et Sécurité en 2026',
-      intro: '**Pour écrire du code meilleur avec l\'IA en 2026 : utilisez un prompt structuré (rôle, objectif, contraintes, format de sortie, cas limites), réglez la Température sur 0,1–0,2 pour la production, routez les tâches backend vers Claude 4.8 et les algorithmes vers GPT-5, et exécutez chaque sortie dans un linter de sécurité avant le déploiement.**\n\nLes outils de codage IA réduisent le temps de développement de 30 à 75 % — mais uniquement si le développeur écrit des prompts structurés, pas des questions improvisées. La qualité de sortie du modèle dépend directement de la clarté avec laquelle vous précisez le rôle, les contraintes et la sortie attendue. En avril 2026, Claude 4.8 Opus mène sur le code backend et le débogage, GPT-5 mène sur la conception d\'algorithmes, et LLaMA 4 via Ollama s\'exécute localement avec 8 GB de RAM.\n\nL\'IA introduit encore des vulnérabilités de sécurité dans 45 % du code généré — ce qui rend l\'examen et le linting non négociables avant le déploiement.',
+      intro: '**Pour écrire du code meilleur avec l\'IA en 2026 : utilisez un prompt structuré (rôle, objectif, contraintes, format de sortie, cas limites), réglez la Température sur 0,1–0,2 pour la production, routez les tâches backend vers Claude Opus 5 et les algorithmes vers GPT-5.6, et exécutez chaque sortie dans un linter de sécurité avant le déploiement.**\n\nLes outils de codage IA réduisent le temps de développement de 30 à 75 % — mais uniquement si le développeur écrit des prompts structurés, pas des questions improvisées. La qualité de sortie du modèle dépend directement de la clarté avec laquelle vous précisez le rôle, les contraintes et la sortie attendue. Claude Opus 5 mène sur le code backend et le débogage, GPT-5.6 mène sur la conception d\'algorithmes, et Llama 3.1 8B via Ollama s\'exécute localement avec 8 GB de RAM.\n\nL\'IA introduit encore des vulnérabilités de sécurité dans 45 % du code généré — ce qui rend l\'examen et le linting non négociables avant le déploiement.',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '15 min de lecture',
       seoTitle: 'Coder avec l\'IA : Prompts, Modèles et Sécurité (2026)',
       metaDescription: 'L\'IA réduit le temps de développement de 30 à 75 % avec des prompts structurés. Claude, GPT-5.6 et Gemini comparés. 45 % du code IA contient des failles.',
-      lastFactChecked: '2026-04-28 par rapport aux données de Claude 4.8 Opus, GPT-5 et Gemini 3 Pro',
+      lastFactChecked: '2026-08-31 par rapport aux données de Claude Opus 5, GPT-5.6 et Gemini 3.1 Pro',
       educationalLevel: 'Intermediate',
       aboutTopics: ['Codage assisté par l\'IA', 'Génération de code', 'Ingénierie des prompts'],
       howToName: 'Comment Écrire des Prompts Qui Produisent du Code Meilleur',
@@ -1946,12 +2072,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Comment Écrire du Code Meilleur avec l\'IA : Prompts, Modèles et Sécurité en 2026',
         description: 'Maîtrisez la génération de code IA avec des prompts structurés, la comparaison de modèles et les workflows de sécurité. Apprenez les réglages de température, les modèles locaux et comment éviter 45 % des hallucinations.',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         inLanguage: 'fr',
         url: 'https://www.promptquorum.com/fr/prompt-engineering/write-better-code-with-ai',
-        keywords: 'Codage IA, ingénierie des prompts, génération de code, Claude, GPT-5, Gemini 3, vulnérabilités de sécurité, température, fenêtre de contexte',
+        keywords: 'Codage IA, ingénierie des prompts, génération de code, Claude, GPT-5.6, Gemini 3.1, vulnérabilités de sécurité, température, fenêtre de contexte',
         about: [
           { '@type': 'Thing', name: 'Génération de code par IA' },
           { '@type': 'Thing', name: 'Ingénierie des prompts' },
@@ -1960,9 +2086,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.8 Opus' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Température' },
         ],
@@ -2019,7 +2145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Quel est le meilleur modèle d\'IA pour écrire du code en 2026 ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Claude 4.8 Opus (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, LLaMA 4 8B s\'exécutant localement via Ollama produit zéro appel API externe. Les performances varient selon la tâche ; nous recommandons de tester tous les trois sur vos cas d\'utilisation spécifiques.',
+              'text': 'Claude Opus 5 (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5.6 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, Llama 3.1 8B s\'exécutant localement via Ollama produit zéro appel API externe. Les performances varient selon la tâche ; nous recommandons de tester tous les trois sur vos cas d\'utilisation spécifiques.',
             },
           },
           {
@@ -2075,7 +2201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. LLaMA 4 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.',
+              'text': 'Oui. Llama 3.1 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5.6 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.',
             },
           },
           {
@@ -2099,7 +2225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5, Claude 4.8). Utilisez à la place une approche locale : LLaMA 3.1 via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.',
+              'text': 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5.6, Claude Opus 5). Utilisez à la place une approche locale : Llama 3.1 8B via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.',
             },
           },
           {
@@ -2127,18 +2253,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
-      gammaDescription: 'Le diaporama couvre: 5 éléments de prompts structurés (rôle, objectif, contraintes, format de sortie, cas limites), sélection de modèles IA (Claude 4.8 Opus vs GPT-5 vs Gemini 3 Pro), prompting par chaîne de pensée pour le débogage, paramètres de température (0,1–0,2 pour la production) et vulnérabilités de sécurité (45% taux d\'hallucination). Téléchargez le PDF comme carte de référence de génération de code IA et sécurité.',
+      gammaDescription: 'Le diaporama couvre: 5 éléments de prompts structurés (rôle, objectif, contraintes, format de sortie, cas limites), sélection de modèles IA (Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro), prompting par chaîne de pensée pour le débogage, paramètres de température (0,1–0,2 pour la production) et vulnérabilités de sécurité (45% taux d\'hallucination). Téléchargez le PDF comme carte de référence de génération de code IA et sécurité.',
       sections: {
         tldr: {
           title: 'Points Clés',
           isTldr: true,
           items: [
             'L\'IA réduit le temps de codage de 30–75 % — mais uniquement quand les prompts sont structurés avec rôle, objectif, contraintes, format de sortie et cas limites',
-            'Claude 4.8 Opus (Anthropic) mène sur le code backend, la conception d\'API et le débogage ; GPT-5 (OpenAI) mène sur la conception d\'algorithmes et le raisonnement multi-étapes',
+            'Claude Opus 5 (Anthropic) mène sur le code backend, la conception d\'API et le débogage ; GPT-5.6 (OpenAI) mène sur la conception d\'algorithmes et le raisonnement multi-étapes',
             'Le Chain-of-Thought (CoT) prompting — « raisonner étape par étape avant de produire du code » — rend la logique du modèle inspectable et réduit les erreurs de débogage',
             'L\'IA introduit des vulnérabilités de sécurité dans 45 % du code généré ; exécutez toujours les linters de sécurité avant le déploiement',
             'Réglez la Température (T) sur 0,1–0,2 pour le code en production ; utilisez 0,7–0,9 uniquement pour le brainstorming algorithmique exploratoire',
-            'LLaMA 3.1 7B via Ollama s\'exécute localement avec 8 GB de RAM — zéro donnée ne quitte votre machine, approprié pour les codebases sensibles à la confidentialité',
+            'Llama 3.1 8B via Ollama s\'exécute localement avec 8 GB de RAM — zéro donnée ne quitte votre machine, approprié pour les codebases sensibles à la confidentialité',
           ],
         },
         directAnswer: {
@@ -2149,7 +2275,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'Le modèle écrit le code ; vous décidez de ce qu\'il doit faire. Entrée floue, sortie floue : la demande qui ferait poser trois questions à un développeur junior est celle qui produit ici du code faux avec assurance.' },
           ],
           content: [
-            '**La sortie de toute session de codage IA est aussi bonne que l\'instruction que vous donnez — un prompt vague produit du code vague, un prompt structuré produit du code prêt pour la production.** Les modèles de langage de grande taille (LLM) — la classe de réseaux de neurones derrière GPT-5, Claude 4.8 Opus et Gemini 3 Pro — ne « comprennent » pas votre projet ; ils prédisent le token le plus probable basé sur les patterns appris de milliards de lignes de code.',
+            '**La sortie de toute session de codage IA est aussi bonne que l\'instruction que vous donnez — un prompt vague produit du code vague, un prompt structuré produit du code prêt pour la production.** Les modèles de langage de grande taille (LLM) — la classe de réseaux de neurones derrière GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro — ne « comprennent » pas votre projet ; ils prédisent le token le plus probable basé sur les patterns appris de milliards de lignes de code.',
             'Cela signifie que votre prompt est un contrat architectural, pas une question improvisée. Quand vous précisez le langage de programmation, les entrées/sorties attendues et les cas limites à gérer, vous recevez systématiquement du code plus proche d\'être prêt pour la production.',
             'En une phrase : Le rôle du développeur s\'est déplacé de l\'écriture de chaque ligne à l\'écriture d\'instructions qu\'une IA exécute — la compétence est l\'ingénierie des prompts, pas la vitesse de frappe.',
             'Ces techniques de prompting s\'appliquent à l\'identique aux stacks de code locales. Pour remplacer un assistant cloud par le couple open-source Continue.dev + Ollama + Qwen3-Coder, voir [Remplacer GitHub Copilot par un LLM local](/fr/power-local-llm/replace-github-copilot-with-local-llm).',
@@ -2159,30 +2285,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Quel Modèle d\'IA Utiliser pour le Codage',
           content: [
-            '**En avril 2026, les différents modèles excèlent dans les différentes tâches de codage — router votre prompt vers le bon modèle réduit les erreurs et les coûts en tokens.**',
-            'Claude 4.8 Opus (Anthropic) domine la génération de code backend, la conception d\'API, les schémas de base de données et la refactorisation multi-fichiers. GPT-5 (OpenAI) mène pour les solutions algorithmiques créatives et le raisonnement complexe étape par étape. Gemini 3 Pro (Google DeepMind) gère les plus longs documents avec sa fenêtre de contexte de 2 millions de tokens.',
+            '**Les différents modèles excèlent dans les différentes tâches de codage — router votre prompt vers le bon modèle réduit les erreurs et les coûts en tokens.**',
+            'Claude Opus 5 (Anthropic) domine la génération de code backend, la conception d\'API, les schémas de base de données et la refactorisation multi-fichiers. GPT-5.6 (OpenAI) mène pour les solutions algorithmiques créatives et le raisonnement complexe étape par étape. Gemini 3.1 Pro (Google DeepMind) gère les plus longs documents avec sa fenêtre de contexte de 2 millions de tokens.',
           ],
           tableFormat: true,
           columns: ['Tâche', 'Meilleur Modèle', 'Pourquoi'],
           rows: [
             {
               'Tâche': 'Génération de composant React',
-              'Meilleur Modèle': 'Claude 4.8 Opus',
+              'Meilleur Modèle': 'Claude Opus 5',
               'Pourquoi': 'Performance forte selon les versions de benchmark Anthropic ; gestion précise du JSX et des props',
             },
             {
               'Tâche': 'Correction de bugs',
-              'Meilleur Modèle': 'Claude 4.8 Opus',
+              'Meilleur Modèle': 'Claude Opus 5',
               'Pourquoi': 'Sortie de trace étape par étape supérieure pour déboguer les problèmes multi-fichiers',
             },
             {
               'Tâche': 'Conception d\'algorithmes',
-              'Meilleur Modèle': 'GPT-5',
+              'Meilleur Modèle': 'GPT-5.6',
               'Pourquoi': 'Léger avantage sur les solutions algorithmiques créatives ; capacités de raisonnement fortes',
             },
             {
               'Tâche': 'Analyse long document/codebase',
-              'Meilleur Modèle': 'Gemini 3 Pro',
+              'Meilleur Modèle': 'Gemini 3.1 Pro',
               'Pourquoi': 'Gère les contextes jusqu\'à 2 millions de tokens',
             },
             {
@@ -2192,7 +2318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Tâche': 'Inférence locale (confidentialité)',
-              'Meilleur Modèle': 'LLaMA 3.1 via Ollama',
+              'Meilleur Modèle': 'Llama 3.1 8B via Ollama',
               'Pourquoi': 'Zéro donnée ne quitte votre machine ; le modèle 7B nécessite 8 GB de RAM',
             },
           ],
@@ -2278,7 +2404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: 'Le Problème de Sécurité : Ce que l\'IA ne Comprend Pas',
           content: [
-            '**En avril 2026, l\'IA génère du code avec des vulnérabilités de sécurité dans 45 % des cas — un taux qui ne s\'est pas amélioré à mesure que les modèles sont devenus plus capables.** Un rapport Veracode 2025 a trouvé que quand on donne un choix entre une implémentation sécurisée et insécurisée, les modèles d\'IA génératifs ont choisi l\'option insécurisée 45 % du temps. La recherche académique confirme ce pattern : plus de 40 % des solutions de code générées par l\'IA contiennent des [flaws de sécurité](/fr/prompt-engineering/prompt-injection-and-security).',
+            '**L\'IA génère du code avec des vulnérabilités de sécurité dans 45 % des cas — un taux qui ne s\'est pas amélioré à mesure que les modèles sont devenus plus capables.** Un rapport Veracode 2025 a trouvé que quand on donne un choix entre une implémentation sécurisée et insécurisée, les modèles d\'IA génératifs ont choisi l\'option insécurisée 45 % du temps. La recherche académique confirme ce pattern : plus de 40 % des solutions de code générées par l\'IA contiennent des [flaws de sécurité](/fr/prompt-engineering/prompt-injection-and-security).',
             'Les trois catégories d\'échec les plus critiques :',
           ],
           items: [
@@ -2292,7 +2418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'La Méthode de Vérification Multi-Modèles',
           content: [
             '**Exécuter le même prompt à travers plusieurs modèles simultanément réduit la chance d\'accepter une dépendance halluccinée ou une implémentation insécurisée — car les modèles indépendants fabriquent rarement le même détail incorrect spécifique.**',
-            '[PromptQuorum](/fr) est un outil de dispatch multi-modèles qui envoie un prompt à plusieurs fournisseurs d\'IA simultanément et affiche toutes les réponses côte à côte. Quand GPT-5, Claude 4.8 Opus et Gemini 3 Pro recommandent le même nom de package, cette convergence est un signal fort que le package est réel. Quand ils ne sont pas d\'accord sur une approche d\'implémentation, cette divergence est un signal à investiguer avant de s\'engager.',
+            '[PromptQuorum](/fr) est un outil de dispatch multi-modèles qui envoie un prompt à plusieurs fournisseurs d\'IA simultanément et affiche toutes les réponses côte à côte. Quand GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro recommandent le même nom de package, cette convergence est un signal fort que le package est réel. Quand ils ne sont pas d\'accord sur une approche d\'implémentation, cette divergence est un signal à investiguer avant de s\'engager.',
           ],
         },
         parameters: {
@@ -2307,17 +2433,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['Modèle', 'Fenêtre de Contexte', 'Implication'],
           rows: [
             {
-              'Modèle': 'GPT-5',
+              'Modèle': 'GPT-5.6',
               'Fenêtre de Contexte': '128k tokens',
               'Implication': '~96 000 lignes de code visibles par session',
             },
             {
-              'Modèle': 'Claude 4.8 Opus',
-              'Fenêtre de Contexte': '200k tokens',
+              'Modèle': 'Claude Opus 5',
+              'Fenêtre de Contexte': '1M tokens',
               'Implication': 'Contexte codebase plus large ; meilleur pour la refactorisation multi-fichiers',
             },
             {
-              'Modèle': 'Gemini 3 Pro',
+              'Modèle': 'Gemini 3.1 Pro',
               'Fenêtre de Contexte': '2 millions de tokens',
               'Implication': 'Analyse codebase complète pour les grands projets',
             },
@@ -2329,7 +2455,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**Les équipes de développement européennes adoptent de plus en plus Mistral AI (développé en France) pour les tâches de codage où la conformité à la loi sur l\'IA de l\'UE et la résidence des données comptent.** Mistral Large et Mistral Small sont disponibles pour le déploiement local via Ollama, assurant qu\'aucun code ne quitte l\'infrastructure on-premise — critique sous le RGPD pour les équipes traitant du code source sensible.',
             'Les entreprises chinoises utilisent largement Qwen 3 (Alibaba) et DeepSeek V3 comme alternatives open-source aux modèles de la série GPT, particulièrement pour les projets nécessitant le support du langage CJK ou le déploiement fully on-premise sous les Mesures Intérimaires de la Chine pour l\'IA Générative (2023).',
-            'Les entreprises japonaises opérant sous les directives de gouvernance des données METI préfèrent souvent le déploiement local du modèle basé sur Ollama. LLaMA 4 8B, s\'exécutant localement via Ollama, nécessite 8 GB de RAM et produit zéro appels API externes — répondant aux exigences strictes de résidence des données.',
+            'Les entreprises japonaises opérant sous les directives de gouvernance des données METI préfèrent souvent le déploiement local du modèle basé sur Ollama. Llama 3.1 8B, s\'exécutant localement via Ollama, nécessite 8 GB de RAM et produit zéro appels API externes — répondant aux exigences strictes de résidence des données.',
           ],
         },
         commonMistakes: {
@@ -2373,17 +2499,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Questions Fréquemment Posées',
           faqs: [
-            { q: 'Quel est le meilleur modèle d\'IA pour écrire du code en 2026 ?', a: 'Claude 4.8 Opus (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, LLaMA 4 8B s\'exécutant localement via Ollama produit zéro appel API externe. Les performances varient selon la tâche ; nous recommandons de tester tous les trois sur vos cas d\'utilisation spécifiques.' },
+            { q: 'Quel est le meilleur modèle d\'IA pour écrire du code en 2026 ?', a: 'Claude Opus 5 (Anthropic) produit les résultats les plus cohérents pour le code backend, la conception d\'API et le débogage. GPT-5.6 (OpenAI) a un léger avantage pour la conception d\'algorithmes et le raisonnement complexe. Pour les codebases sensibles à la confidentialité, Llama 3.1 8B s\'exécutant localement via Ollama produit zéro appel API externe. Les performances varient selon la tâche ; nous recommandons de tester tous les trois sur vos cas d\'utilisation spécifiques.' },
             { q: 'Le code généré par l\'IA est-il sûr de déployer directement ?', a: 'Non. L\'IA introduit des vulnérabilités de sécurité dans 45 % des cas de code généré, y compris les implémentations insécurisées et les noms de packages halluccinés qui permettent les attaques de la chaîne d\'approvisionnement. Tout code généré par l\'IA doit être examiné par un développeur et scanné avec un linter de sécurité (par exemple Bandit pour Python, ESLint Security pour JavaScript) avant le déploiement en production.' },
             { q: 'À quel point les développeurs utilisant les outils de codage IA sont-ils plus rapides ?', a: 'Les développeurs utilisant les assistants de codage IA complètent 126 % plus de projets par semaine que les codeurs manuels dans les études contrôlées. Cependant, une étude de terrain METR 2025 a trouvé que les développeurs expérimentés prenaient 19 % plus de temps sur les tâches nécessitant une intégration complexe de la codebase — le gain de productivité dépend de la tâche et nécessite une discipline de prompt structuré.' },
             { q: 'Comment le chain-of-thought prompting améliore-t-il le débogage du code ?', a: 'Le Chain-of-Thought (CoT) prompting demande au modèle de tracer chaque étape de son raisonnement avant de produire la sortie finale. Pour le débogage, cela signifie que le modèle identifie l\'opération exacte qui produit la valeur intermédiaire incorrecte, rendant l\'erreur traçable et corrigible plutôt que de nécessiter une régénération complète de la sortie.' },
             { q: 'L\'assistance au codage IA fonctionne-t-elle de la même façon dans tous les langages de programmation ?', a: 'Non. Les outils d\'IA sont entraînés principalement sur des codebases en anglais, ce qui signifie que Python et JavaScript reçoivent le support le plus fort. Pour les projets japonais (kanji/kana), chinois ou autres projets CJK, Qwen 3 (Alibaba) ou DeepSeek V3 offrent un traitement plus rapide des tokens car leurs tokenizers gèrent mieux les scripts CJK que les modèles entraînés occidentaux.' },
             { q: 'Quelle température devrais-je utiliser pour la génération de code IA ?', a: 'Réglez la température sur 0,1–0,2 pour la génération de code en production. Cela produit une sortie déterministe et conservative avec une variation aléatoire minimale. Utilisez la température 0,7–0,9 uniquement lors du brainstorming d\'approches algorithmiques où vous voulez des options diversifiées à évaluer — pas lors de l\'écriture de code qui sera déployé.' },
             { q: 'Qu\'est-ce que les dépendances halluccinées dans le codage IA ?', a: 'Les dépendances halluccinées sont des noms de packages ou de bibliothèques que le modèle recommande mais qui n\'existent pas réellement. Une étude académique 2024 a trouvé que les LLM recommandent des bibliothèques inexistantes approximativement 20 % du temps. Les attaquants exploitent cela via slopsquatting — enregistrant le nom de package hallucciné sur PyPI ou npm avec du code malveillant à l\'intérieur. Vérifiez toujours tout package suggéré par l\'IA avant d\'installer en consultant le dépôt officiel.' },
-            { q: 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?', a: 'Oui. LLaMA 4 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.' },
+            { q: 'Puis-je utiliser les outils de codage IA avec des LLM locaux pour la confidentialité ?', a: 'Oui. Llama 3.1 8B s\'exécutant via Ollama sur une machine avec 8 GB de RAM produit zéro appel API externe. Toute l\'inférence se produit sur votre matériel. C\'est approprié pour les codebases contenant des algorithmes propriétaires, des credentials dans les fichiers source ou tout code qui ne peut pas quitter votre infrastructure. La qualité est inférieure à GPT-5.6 ou Claude pour les tâches complexes mais acceptable pour le boilerplate et les fonctions simples.' },
             { q: 'Comment écrire un prompt système pour les outils de codage IA ?', a: 'Définissez quatre choses dans votre prompt système : (1) le rôle technique (« ingénieur backend Python senior »), (2) la pile technologique et les bibliothèques interdites, (3) les règles de style de code (« Mode strict TypeScript, pas de types any »), (4) le format de sortie (« retournez uniquement le code, pas de prose »). Conservez ceci comme une règle au niveau du projet dans Cursor, Claude Code ou vos paramètres d\'IA IDE pour qu\'il s\'applique à toutes les sessions.' },
             { q: 'GitHub Copilot ou Cursor produisent-ils moins de bugs ?', a: 'Cursor utilise l\'indexage RAG (Retrieval-Augmented Generation) au niveau du projet pour comprendre votre codebase entière, réduisant les hallucinations par rapport au contexte au niveau du fichier uniquement de GitHub Copilot. Pour les tâches de boilerplate à fichier unique, la différence est minimale. Pour la refactorisation multi-fichiers où la cohérence architecturale compte, le contexte conscient de codebase de Cursor produit moins d\'erreurs d\'intégration. Les deux nécessitent le linting de sécurité avant le déploiement.' },
-            { q: 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?', a: 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5, Claude 4.8). Utilisez à la place une approche locale : LLaMA 3.1 via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.' },
+            { q: 'Le RGPD affecte-t-il l\'utilisation des outils de codage IA en France ?', a: 'Oui. Sous le RGPD, si votre code source contient des données personnelles ou des secrets, vous ne devez pas l\'envoyer à des services cloud tiers (GPT-5.6, Claude Opus 5). Utilisez à la place une approche locale : Llama 3.1 8B via Ollama, Mistral Large en auto-hébergement ou Claude Code avec l\'option de confidentialité activée. Vérifiez les conditions de service du fournisseur et la politique de rétention des données — Anthropic et OpenAI conservent les données de session pendant 30 jours par défaut.' },
             { q: 'Quels sont les risques de conformité du CNIL avec les outils de codage IA ?', a: 'La CNIL (Commission Nationale de l\'Informatique et des Libertés) exige un Contrat de Traitement des Données (DPA) avec tout fournisseur cloud traitant des données personnelles. La plupart des outils de codage IA n\'offrent pas de DPA pour les entreprises de moins de 100 employés. Mitigation : (1) utilisez des modèles locaux, (2) anonymisez le code avant de le soumettre à l\'IA, (3) établissez un DPA signé avec OpenAI/Anthropic, ou (4) obtenez une exemption écrite de votre officiel de conformité.' },
           ],
         },
@@ -2403,13 +2529,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-ja.webp',
       title: 'AIでコード品質を向上させる方法：プロンプト、モデル選択、セキュリティ 2026年版',
-      intro: '**2026年にAIでコード品質を向上させるには：構造化プロンプト（役割、目的、制約、出力形式、エッジケース）を使用し、Temperature を 0.1～0.2 に設定し、バックエンド処理を Claude 4.8 に、アルゴリズム設計を GPT-5 にルーティングし、デプロイ前にセキュリティリンターで検証します。**\n\nAI コーディングツールは開発時間を 30～75% 短縮します。ただし、開発者が構造化プロンプトを記述する場合に限ります。モデルの出力品質は、役割、制約、期待される出力を明示的にどれほど詳しく指定するかに直接左右されます。2026年4月時点では、Claude 4.8 Opus はバックエンドコードとバグトレーシングで優位、GPT-5 はアルゴリズム設計で優位、LLaMA 4（Ollama経由）は 8GB RAM で完全にローカル実行できます。\n\nAI は生成コードの 45% にセキュリティ脆弱性を導入しているため、デプロイ前のレビューとリンティングは必須です。',
+      intro: '**2026年にAIでコード品質を向上させるには：構造化プロンプト（役割、目的、制約、出力形式、エッジケース）を使用し、Temperature を 0.1～0.2 に設定し、バックエンド処理を Claude Opus 5 に、アルゴリズム設計を GPT-5.6 にルーティングし、デプロイ前にセキュリティリンターで検証します。**\n\nAI コーディングツールは開発時間を 30～75% 短縮します。ただし、開発者が構造化プロンプトを記述する場合に限ります。モデルの出力品質は、役割、制約、期待される出力を明示的にどれほど詳しく指定するかに直接左右されます。Claude Opus 5 はバックエンドコードとバグトレーシングで優位、GPT-5.6 はアルゴリズム設計で優位、Llama 3.1 8B（Ollama経由）は 8GB RAM で完全にローカル実行できます。\n\nAI は生成コードの 45% にセキュリティ脆弱性を導入しているため、デプロイ前のレビューとリンティングは必須です。',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '15分で読める',
       seoTitle: 'AIでコード品質向上：プロンプト・モデル・セキュリティ（2026）',
       metaDescription: 'AIは構造化プロンプトで開発時間を30〜75%短縮。Claude・GPT-5.6・Geminiのコーディング性能を比較。AI生成コードの45%にセキュリティ脆弱性 — 安全なワークフローを解説。',
-      lastFactChecked: '2026-04-28: Claude 4.8 Opus, GPT-5, Gemini 3 Pro リリースデータに対して検証済み',
+      lastFactChecked: '2026-08-31: Claude Opus 5, GPT-5.6, Gemini 3.1 Pro リリースデータに対して検証済み',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AIを活用したコーディング', 'コード生成', 'プロンプトエンジニアリング'],
       howToName: 'より良いコードを生成するプロンプトの書き方',
@@ -2436,10 +2562,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AIでコード品質を向上させる方法：プロンプト、モデル選択、セキュリティ 2026年版',
         description: '構造化プロンプト、モデル比較、セキュリティワークフローを使って AI コード生成をマスターしましょう。Temperature 設定、ローカルモデル、45% の幻覚を回避する方法を学びます。',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'AIコーディング, プロンプトエンジニアリング, コード生成, Claude, GPT-5, Gemini 3, セキュリティ脆弱性, Temperature, コンテキストウィンドウ',
+        keywords: 'AIコーディング, プロンプトエンジニアリング, コード生成, Claude, GPT-5.6, Gemini 3.1, セキュリティ脆弱性, Temperature, コンテキストウィンドウ',
         about: [
           { '@type': 'Thing', name: 'AI コード生成' },
           { '@type': 'Thing', name: 'プロンプトエンジニアリング' },
@@ -2448,9 +2574,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.8 Opus' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
@@ -2509,7 +2635,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '2026年でコード記述に最適な AI モデルは何ですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude 4.8 Opus（Anthropic）はバックエンドコード、API 設計、バグトレーシングで最も一貫した結果を生成します。GPT-5（OpenAI）はアルゴリズム設計と複雑な推論に若干の優位性があります。プライバシーに敏感なコードベースの場合、LLaMA 4 8B を Ollama で実行するとゼロの外部 API 呼び出しが生成されます。',
+              text: 'Claude Opus 5（Anthropic）はバックエンドコード、API 設計、バグトレーシングで最も一貫した結果を生成します。GPT-5.6（OpenAI）はアルゴリズム設計と複雑な推論に若干の優位性があります。プライバシーに敏感なコードベースの場合、Llama 3.1 8B を Ollama で実行するとゼロの外部 API 呼び出しが生成されます。',
             },
           },
           {
@@ -2565,7 +2691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'プライバシーのため、ローカル LLM で AI コーディングツールを使用できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'はい。LLaMA 4 8B を Ollama で 8GB RAM マシンで実行すると、ゼロの外部 API 呼び出しが生成されます。これは独占的なアルゴリズムやソースファイルの認証情報を含むコードベースに適しています。',
+              text: 'はい。Llama 3.1 8B を Ollama で 8GB RAM マシンで実行すると、ゼロの外部 API 呼び出しが生成されます。これは独占的なアルゴリズムやソースファイルの認証情報を含むコードベースに適しています。',
             },
           },
           {
@@ -2589,7 +2715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '日本の企業環境で AI コーディングを導入する際の注意点は？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'METI データガバナンスガイドラインに準拠するため、Ollama を使用したローカルモデルデプロイメント（LLaMA 4）を選好してください。ゼロのデータがサーバーを離れません。',
+              text: 'METI データガバナンスガイドラインに準拠するため、Ollama を使用したローカルモデルデプロイメント（Llama 3.1 8B）を選好してください。ゼロのデータがサーバーを離れません。',
             },
           },
         ],
@@ -2609,18 +2735,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
-      gammaDescription: 'スライドデッキは以下をカバーしています: 5つの構造化プロンプト要素（ロール、目的、制約、出力形式、エッジケース）、AIモデル選択（Claude 4.8 Opus vs GPT-5 vs Gemini 3 Pro）、チェーンオブソート・プロンプティング、温度設定（本番環境では0.1～0.2）、セキュリティ脆弱性（45%の幻覚率）。PDFをAIコード生成およびセキュリティリファレンスカードとしてダウンロードしてください。',
+      gammaDescription: 'スライドデッキは以下をカバーしています: 5つの構造化プロンプト要素（ロール、目的、制約、出力形式、エッジケース）、AIモデル選択（Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro）、チェーンオブソート・プロンプティング、温度設定（本番環境では0.1～0.2）、セキュリティ脆弱性（45%の幻覚率）。PDFをAIコード生成およびセキュリティリファレンスカードとしてダウンロードしてください。',
       sections: {
         tldr: {
           title: '主な要点',
           isTldr: true,
           items: [
             'AI はコーディング時間を 30～75% 短縮。役割、目的、制約、出力形式、エッジケースで構造化されたプロンプトが条件',
-            'Claude 4.8 Opus はバックエンドコード、API 設計、バグトレーシングで優位；GPT-5 はアルゴリズム設計で優位',
+            'Claude Opus 5 はバックエンドコード、API 設計、バグトレーシングで優位；GPT-5.6 はアルゴリズム設計で優位',
             'Chain-of-Thought プロンプティングはモデルのロジックを検査可能にし、デバッグエラーを削減',
             'AI は生成コードの 45% にセキュリティ脆弱性を導入。デプロイ前にセキュリティリンター実行必須',
             'Temperature を本番コード用に 0.1～0.2 に設定；0.7～0.9 はアルゴリズムブレーンストーミング用のみ',
-            'LLaMA 3.1 7B を Ollama で 8GB RAM で実行。ゼロのデータがマシンを離れず、プライバシーに敏感なコードベースに適合',
+            'Llama 3.1 8B を Ollama で 8GB RAM で実行。ゼロのデータがマシンを離れず、プライバシーに敏感なコードベースに適合',
           ],
         },
         おすすめの使い方: {
@@ -2630,7 +2756,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: 'コードを書くのはモデルで、何をすべきかを決めるのはあなたです。曖昧に頼めば曖昧に返ってきます。新人開発者なら三つは質問し返すような依頼こそ、ここでは自信満々の誤ったコードを生みます。' },
           ],
           items: [
-            'METI ガイドラインに準拠した開発：Ollama 経由でローカル実行する LLaMA モデルを使用し、コードがサーバーを離れないようにしてください。',
+            'METI ガイドラインに準拠した開発：Ollama 経由でローカル実行する Llama モデルを使用し、コードがサーバーを離れないようにしてください。',
             'チーム内の承認プロセスの統合：AI が生成したコードが上司や品質保証チームの事前承認を必須にし、責任の明確化を図ってください。',
             '国内ツールとの連携：GitHub や Backlog などのツールと Cursor や Claude Code を統合し、IDE レベルでプロンプトテンプレートを永続化してください。',
           ],
@@ -2649,18 +2775,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'コーディングタスクに最適なAIモデルの選び方',
           content: [
-            '**2026年4月時点では、異なるモデルが異なるコーディングタスクで優れています。プロンプトを正しいモデルにルーティングすることで、エラーと トークンコストが削減されます。**',
-            'Claude 4.8 Opus はバックエンドコード生成、API 設計、データベーススキーマ、複数ファイルのリファクタリングで優位です。GPT-5 は創造的なアルゴリズムソリューションと複雑なステップバイステップ推論で優位です。',
+            '**異なるモデルが異なるコーディングタスクで優れています。プロンプトを正しいモデルにルーティングすることで、エラーと トークンコストが削減されます。**',
+            'Claude Opus 5 はバックエンドコード生成、API 設計、データベーススキーマ、複数ファイルのリファクタリングで優位です。GPT-5.6 は創造的なアルゴリズムソリューションと複雑なステップバイステップ推論で優位です。',
           ],
           tableFormat: true,
           columns: ['タスク', '推奨モデル', '理由'],
           rows: [
-            { 'タスク': 'React コンポーネント生成', '推奨モデル': 'Claude 4.8 Opus', '理由': 'JSX と prop 処理が正確' },
-            { 'タスク': 'バグ修正', '推奨モデル': 'Claude 4.8 Opus', '理由': 'ステップバイステップトレース出力が優秀' },
-            { 'タスク': 'アルゴリズム設計', '推奨モデル': 'GPT-5', '理由': '強力な推論能力' },
-            { 'タスク': '長いドキュメント分析', '推奨モデル': 'Gemini 3 Pro', '理由': '2M トークンのコンテキスト処理' },
+            { 'タスク': 'React コンポーネント生成', '推奨モデル': 'Claude Opus 5', '理由': 'JSX と prop 処理が正確' },
+            { 'タスク': 'バグ修正', '推奨モデル': 'Claude Opus 5', '理由': 'ステップバイステップトレース出力が優秀' },
+            { 'タスク': 'アルゴリズム設計', '推奨モデル': 'GPT-5.6', '理由': '強力な推論能力' },
+            { 'タスク': '長いドキュメント分析', '推奨モデル': 'Gemini 3.1 Pro', '理由': '2M トークンのコンテキスト処理' },
             { 'タスク': '多言語プロジェクト（CJK）', '推奨モデル': 'Qwen 3（Alibaba）', '理由': '高速トークン処理' },
-            { 'タスク': 'ローカル推論（プライバシー）', '推奨モデル': 'LLaMA 3.1（Ollama経由）', '理由': 'ゼロのデータが外に出ない' },
+            { 'タスク': 'ローカル推論（プライバシー）', '推奨モデル': 'Llama 3.1 8B（Ollama経由）', '理由': 'ゼロのデータが外に出ない' },
           ],
         },
         promptStructure: {
@@ -2717,7 +2843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: 'セキュリティの問題：AIが誤るところ',
           content: [
-            '**2026年4月時点では、AI はコード生成の 45% でセキュリティ脆弱性を生成します。** 2025年の Veracode レポートでは、安全な実装と不安全な実装の間で選択肢を与えられた場合、生成的 AI モデルは 45% の確率で不安全なオプションを選択することが判明しています。',
+            '**AI はコード生成の 45% でセキュリティ脆弱性を生成します。** 2025年の Veracode レポートでは、安全な実装と不安全な実装の間で選択肢を与えられた場合、生成的 AI モデルは 45% の確率で不安全なオプションを選択することが判明しています。',
             '3つの最も重要な失敗カテゴリ：',
           ],
           items: [
@@ -2745,9 +2871,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['モデル', 'コンテキストウィンドウ', '意味'],
           rows: [
-            { 'モデル': 'GPT-5', 'コンテキストウィンドウ': '128k トークン', '意味': '～96,000行のコードが可視' },
-            { 'モデル': 'Claude 4.8 Opus', 'コンテキストウィンドウ': '200k トークン', '意味': 'より大きなコードベースコンテキスト' },
-            { 'モデル': 'Gemini 3 Pro', 'コンテキストウィンドウ': '2M トークン', '意味': '大規模プロジェクトのための完全な分析' },
+            { 'モデル': 'GPT-5.6', 'コンテキストウィンドウ': '128k トークン', '意味': '～96,000行のコードが可視' },
+            { 'モデル': 'Claude Opus 5', 'コンテキストウィンドウ': '1M トークン', '意味': 'より大きなコードベースコンテキスト' },
+            { 'モデル': 'Gemini 3.1 Pro', 'コンテキストウィンドウ': '2M トークン', '意味': '大規模プロジェクトのための完全な分析' },
           ],
         },
         globalContext: {
@@ -2755,7 +2881,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'AIコーディングは地域によってどう異なるか',
           content: [
             '**ヨーロッパ開発チームは、EU AI法コンプライアンスとデータ常駐が重要なコーディングタスク向けに、Mistral AI（フランス開発）の採用がますます増えています。** Mistral Large と Mistral Small は Ollama 経由でローカルデプロイが可能です。',
-            'METI データガバナンスガイドラインで運営する日本企業は、多くの場合、Ollama ベースのローカルモデルデプロイを選好。LLaMA 4 8B は 8GB RAM が必要で、ゼロの外部 API 呼び出しを生成します。',
+            'METI データガバナンスガイドラインで運営する日本企業は、多くの場合、Ollama ベースのローカルモデルデプロイを選好。Llama 3.1 8B は 8GB RAM が必要で、ゼロの外部 API 呼び出しを生成します。',
             '中国企業は GPT シリーズ モデルへのオープンソース代替案として、Qwen 3（Alibaba）と DeepSeek V3 を広く使用しています。',
           ],
         },
@@ -2803,7 +2929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: '2026年でコード記述に最適な AI モデルは何ですか？',
-              a: 'Claude 4.8 Opus はバックエンドコード、API 設計、バグトレーシングで最も一貫した結果を生成します。GPT-5 はアルゴリズム設計に優位。プライバシーに敏感な場合、LLaMA 4 8B を Ollama で実行。',
+              a: 'Claude Opus 5 はバックエンドコード、API 設計、バグトレーシングで最も一貫した結果を生成します。GPT-5.6 はアルゴリズム設計に優位。プライバシーに敏感な場合、Llama 3.1 8B を Ollama で実行。',
             },
             {
               q: 'AI が生成したコードは直接デプロイしても安全ですか？',
@@ -2831,7 +2957,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'プライバシーのため、ローカル LLM で AI コーディングツールを使用できますか？',
-              a: 'はい。LLaMA 4 8B を Ollama で実行。ゼロの外部 API 呼び出し。',
+              a: 'はい。Llama 3.1 8B を Ollama で実行。ゼロの外部 API 呼び出し。',
             },
             {
               q: 'AI コーディングツール用のシステムプロンプトをどう書きますか？',
@@ -2863,13 +2989,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/write-better-code-with-ai-overview-hero-zh.webp',
       title: '使用AI编写更好的代码：提示词、模型和安全性（2026年）',
-      intro: '**2026年使用AI编写更好的代码的关键：使用结构化提示词（角色、目标、约束条件、输出格式、边界情况），将温度设置为0.1–0.2以用于生产环境，将后端任务路由到Claude 4.8 Opus，将算法任务路由到GPT-5，并在部署前通过安全检查工具运行每个输出。**\n\nAI编码工具将开发时间减少了30–75% — 但前提是开发人员编写结构化提示词，而不是随意提问。模型的输出质量直接取决于你对角色、约束条件和预期输出的明确程度。截至2026年4月，Claude 4.8 Opus在后端代码和bug追踪方面领先，GPT-5在算法设计方面领先，LLaMA 4通过Ollama在你自己的硬件上运行，只需8GB RAM。\n\nAI仍在生成的代码中引入安全漏洞占45% — 使代码审查和检查在部署前成为必不可少的。',
+      intro: '**2026年使用AI编写更好的代码的关键：使用结构化提示词（角色、目标、约束条件、输出格式、边界情况），将温度设置为0.1–0.2以用于生产环境，将后端任务路由到Claude Opus 5，将算法任务路由到GPT-5.6，并在部署前通过安全检查工具运行每个输出。**\n\nAI编码工具将开发时间减少了30–75% — 但前提是开发人员编写结构化提示词，而不是随意提问。模型的输出质量直接取决于你对角色、约束条件和预期输出的明确程度。Claude Opus 5在后端代码和bug追踪方面领先，GPT-5.6在算法设计方面领先，Llama 3.1 8B通过Ollama在你自己的硬件上运行，只需8GB RAM。\n\nAI仍在生成的代码中引入安全漏洞占45% — 使代码审查和检查在部署前成为必不可少的。',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '15分钟阅读',
       seoTitle: '用AI写出更好的代码：提示词、模型与安全（2026）',
       metaDescription: 'AI通过结构化提示词将开发时间缩短30–75%。对比Claude、GPT-5.6和Gemini的编程能力。45%的AI生成代码存在安全漏洞——掌握安全工作流程。',
-      lastFactChecked: '2026-04-28 针对Claude 4.8 Opus、GPT-5、Gemini 3 Pro发布数据',
+      lastFactChecked: '2026-08-31 针对Claude Opus 5、GPT-5.6、Gemini 3.1 Pro发布数据',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AI辅助编码', '代码生成', '提示工程'],
       howToName: '如何编写能产生更好代码的提示词',
@@ -2896,12 +3022,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '使用AI编写更好的代码：提示词、模型和安全性（2026年）',
         description: '掌握AI代码生成，使用结构化提示词、模型对比和安全工作流。学习温度设置、本地模型，以及如何避免45%的幻觉。',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         inLanguage: 'zh',
         url: 'https://www.promptquorum.com/zh/prompt-engineering/write-better-code-with-ai',
-        keywords: 'AI编码，提示工程，代码生成，Claude，GPT-5，Gemini 3，安全漏洞，温度，上下文窗口',
+        keywords: 'AI编码，提示工程，代码生成，Claude，GPT-5.6，Gemini 3.1，安全漏洞，温度，上下文窗口',
         about: [
           { '@type': 'Thing', name: 'AI代码生成' },
           { '@type': 'Thing', name: '提示工程' },
@@ -2910,9 +3036,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.8 Opus' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
@@ -2969,7 +3095,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '2026年编写代码的最佳AI模型是什么？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Claude 4.8 Opus（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，LLaMA 4 8B通过Ollama本地运行产生零外部API调用。基准性能因任务而异；我们建议在你的具体用例上测试所有三个。',
+              'text': 'Claude Opus 5（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5.6（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，Llama 3.1 8B通过Ollama本地运行产生零外部API调用。基准性能因任务而异；我们建议在你的具体用例上测试所有三个。',
             },
           },
           {
@@ -3025,7 +3151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '我能否使用本地LLM的AI编码工具来保护隐私？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '可以。LLaMA 4 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5或Claude，但对于模板和简单函数是可接受的。',
+              'text': '可以。Llama 3.1 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5.6或Claude，但对于模板和简单函数是可接受的。',
             },
           },
           {
@@ -3069,18 +3195,18 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
-      gammaDescription: '幻灯片涵盖：5个结构化提示词元素（角色、目标、约束、输出格式、边界情况）、AI模型选择（Claude 4.8 Opus vs GPT-5 vs Gemini 3 Pro）、思路链提示词用于调试、温度设置（生产环境0.1-0.2）和安全漏洞（45%幻觉率）。将PDF下载为AI代码生成和安全参考卡。',
+      gammaDescription: '幻灯片涵盖：5个结构化提示词元素（角色、目标、约束、输出格式、边界情况）、AI模型选择（Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro）、思路链提示词用于调试、温度设置（生产环境0.1-0.2）和安全漏洞（45%幻觉率）。将PDF下载为AI代码生成和安全参考卡。',
       sections: {
         tldr: {
           title: '关键要点',
           isTldr: true,
           items: [
             'AI将编码时间减少30–75% — 但前提是提示词要结构化，包含角色、目标、约束条件、输出格式和边界情况',
-            'Claude 4.8 Opus（Anthropic）在后端代码、API设计和bug追踪方面领先；GPT-5（OpenAI）在算法设计和多步骤推理方面领先',
+            'Claude Opus 5（Anthropic）在后端代码、API设计和bug追踪方面领先；GPT-5.6（OpenAI）在算法设计和多步骤推理方面领先',
             '思路链（CoT）提示词 — "在生成代码前逐步推理" — 使模型的逻辑可检查，减少调试错误',
             'AI在45%的生成代码中引入安全漏洞；在部署前始终运行安全检查',
             '对于生产代码，将温度（T）设置为0.1–0.2；仅在探索性算法头脑风暴时使用0.7–0.9',
-            'LLaMA 4 8B通过Ollama本地运行，需8GB RAM — 零数据离开你的机器，适合隐私敏感的代码库',
+            'Llama 3.1 8B通过Ollama本地运行，需8GB RAM — 零数据离开你的机器，适合隐私敏感的代码库',
           ],
         },
         directAnswer: {
@@ -3091,7 +3217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { type: 'in-plain-terms', text: '代码由模型来写，做什么则由你来定。输入含糊，输出就含糊——同样一句需求，如果放在初级开发者面前会引出三个追问，放在这里就会变成一段笃定却错误的代码。' },
           ],
           content: [
-            '**任何AI编码会话的输出质量只取决于你给出的指令 — 模糊的提示词会产生模糊的代码，结构化的提示词会产生生产就绪的代码。** 大语言模型（LLM） — GPT-5、Claude 4.8 Opus和Gemini 3 Pro等神经网络类别 — 不"理解"你的项目；它们根据从数十亿行代码学习到的模式预测下一个最可能的token。',
+            '**任何AI编码会话的输出质量只取决于你给出的指令 — 模糊的提示词会产生模糊的代码，结构化的提示词会产生生产就绪的代码。** 大语言模型（LLM） — GPT-5.6、Claude Opus 5和Gemini 3.1 Pro等神经网络类别 — 不"理解"你的项目；它们根据从数十亿行代码学习到的模式预测下一个最可能的token。',
             '这意味着你的提示词是一个架构合约，而不是随意的问题。当你指定编程语言、预期的输入/输出和要处理的边界情况时，你始终会收到更接近生产就绪的代码。',
             '一句话：开发人员的工作已经从编写每一行代码转变为编写AI执行的指令 — 这种技能是提示工程，而不是打字速度。',
             '这些提示技巧同样适用于本地编码栈。要用 Continue.dev + Ollama + Qwen3-Coder 这套开源组合替代云端助手，请参阅[用本地 LLM 替代 GitHub Copilot](/zh/power-local-llm/replace-github-copilot-with-local-llm)。',
@@ -3101,30 +3227,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: '编码任务应该使用哪个AI模型',
           content: [
-            '**截至2026年4月，不同的模型在不同的编码任务中表现出色 — 将你的提示词路由到正确的模型会减少错误和token成本。**',
-            'Claude 4.8 Opus（Anthropic）在后端代码生成、API设计、数据库架构和多文件重构方面占主导地位。GPT-5（OpenAI）在创意算法解决方案和复杂的分步推理方面领先。Gemini 3 Pro（Google DeepMind）以其200万token的上下文窗口处理最长的文档 — 适用于代码库范围的分析。',
+            '**不同的模型在不同的编码任务中表现出色 — 将你的提示词路由到正确的模型会减少错误和token成本。**',
+            'Claude Opus 5（Anthropic）在后端代码生成、API设计、数据库架构和多文件重构方面占主导地位。GPT-5.6（OpenAI）在创意算法解决方案和复杂的分步推理方面领先。Gemini 3.1 Pro（Google DeepMind）以其200万token的上下文窗口处理最长的文档 — 适用于代码库范围的分析。',
           ],
           tableFormat: true,
           columns: ['任务', '最佳模型', '原因'],
           rows: [
             {
               '任务': 'React组件生成',
-              '最佳模型': 'Claude 4.8 Opus',
+              '最佳模型': 'Claude Opus 5',
               '原因': '根据Anthropic基准发布有强大性能；准确的JSX和prop处理',
             },
             {
               '任务': '修复bug',
-              '最佳模型': 'Claude 4.8 Opus',
+              '最佳模型': 'Claude Opus 5',
               '原因': '优越的分步追踪输出用于调试多文件问题',
             },
             {
               '任务': '算法设计',
-              '最佳模型': 'GPT-5',
+              '最佳模型': 'GPT-5.6',
               '原因': '创意算法解决方案的轻微优势；强大的推理能力',
             },
             {
               '任务': '长文档/代码库分析',
-              '最佳模型': 'Gemini 3 Pro',
+              '最佳模型': 'Gemini 3.1 Pro',
               '原因': '处理高达2M个token的上下文',
             },
             {
@@ -3134,7 +3260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               '任务': '本地推理（隐私）',
-              '最佳模型': 'LLaMA 4通过Ollama',
+              '最佳模型': 'Llama 3.1 8B通过Ollama',
               '原因': '零数据离开你的机器；7B模型需要8GB RAM',
             },
           ],
@@ -3219,7 +3345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: '安全问题：AI处理不当的方面',
           content: [
-            '**截至2026年4月，AI在45%的情况下生成含有安全漏洞的代码 — 这个比率随着模型变得更有能力而没有改进。** 一份2025年Veracode报告发现，当在安全和不安全的实现之间做出选择时，生成式AI模型在45%的时间内选择了不安全的选项。学术研究证实了这一模式：超过40%的AI生成代码解决方案包含[安全缺陷](/zh/prompt-engineering/prompt-injection-and-security)。',
+            '**AI在45%的情况下生成含有安全漏洞的代码 — 这个比率随着模型变得更有能力而没有改进。** 一份2025年Veracode报告发现，当在安全和不安全的实现之间做出选择时，生成式AI模型在45%的时间内选择了不安全的选项。学术研究证实了这一模式：超过40%的AI生成代码解决方案包含[安全缺陷](/zh/prompt-engineering/prompt-injection-and-security)。',
             '三个最关键的失败类别：',
           ],
           items: [
@@ -3233,7 +3359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '多模型交叉检验方法',
           content: [
             '**同时通过多个模型运行相同的提示词会减少接受幻觉依赖或不安全实现的机会 — 因为独立的模型很少会编造相同的具体错误细节。**',
-            '[PromptQuorum](/zh)是一个多模型AI分发工具，它同时向多个AI提供商发送一个提示词并并排显示所有响应。当GPT-5、Claude 4.8 Opus和Gemini 3 Pro推荐相同的包名称时，这种汇聚是包是真实的一个强信号。当它们在实现方法上不同意时，那种分歧是部署前调查的信号。',
+            '[PromptQuorum](/zh)是一个多模型AI分发工具，它同时向多个AI提供商发送一个提示词并并排显示所有响应。当GPT-5.6、Claude Opus 5和Gemini 3.1 Pro推荐相同的包名称时，这种汇聚是包是真实的一个强信号。当它们在实现方法上不同意时，那种分歧是部署前调查的信号。',
           ],
         },
         parameters: {
@@ -3248,17 +3374,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['模型', '上下文窗口', '含义'],
           rows: [
             {
-              '模型': 'GPT-5',
+              '模型': 'GPT-5.6',
               '上下文窗口': '128k个token',
               '含义': '每个会话约96,000行代码可见',
             },
             {
-              '模型': 'Claude 4.8 Opus',
-              '上下文窗口': '200k个token',
+              '模型': 'Claude Opus 5',
+              '上下文窗口': '1M个token',
               '含义': '更大的代码库上下文；更好的多文件重构',
             },
             {
-              '模型': 'Gemini 3 Pro',
+              '模型': 'Gemini 3.1 Pro',
               '上下文窗口': '2M个token',
               '含义': '大型项目的完整代码库分析',
             },
@@ -3270,7 +3396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**欧洲开发团队越来越多地采用Mistral AI（在法国开发）进行编码任务，其中EU AI Act合规性和数据驻留很重要。** Mistral Large和Mistral Small可通过Ollama本地部署，确保没有代码离开本地基础设施 — 对于处理敏感源代码的团队在GDPR下至关重要。',
             '中国企业广泛使用Qwen 3（阿里巴巴）和DeepSeek V3作为GPT系列模型的开源替代品，特别是对于需要CJK语言支持的项目或根据中国2023年《生成式人工智能服务管理暂行办法》要求完全本地部署的项目。',
-            '在METI数据治理指南下运营的日本企业通常倾向于基于Ollama的本地模型部署。LLaMA 4 8B通过Ollama本地运行，需要8GB RAM，产生零外部API调用 — 满足严格的数据驻留要求。',
+            '在METI数据治理指南下运营的日本企业通常倾向于基于Ollama的本地模型部署。Llama 3.1 8B通过Ollama本地运行，需要8GB RAM，产生零外部API调用 — 满足严格的数据驻留要求。',
           ],
         },
         commonMistakes: {
@@ -3314,14 +3440,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            { q: '2026年编写代码的最佳AI模型是什么？', a: 'Claude 4.8 Opus（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，LLaMA 4 8B通过Ollama本地运行产生零外部API调用。基准性能因任务而异；我们建议在你的具体用例上测试所有三个。' },
+            { q: '2026年编写代码的最佳AI模型是什么？', a: 'Claude Opus 5（Anthropic）为后端代码、API设计和bug追踪产生最一致的结果。GPT-5.6（OpenAI）在算法设计和复杂推理方面略占优势。对于隐私敏感的代码库，Llama 3.1 8B通过Ollama本地运行产生零外部API调用。基准性能因任务而异；我们建议在你的具体用例上测试所有三个。' },
             { q: 'AI生成的代码可以直接部署吗？', a: '不行。AI在45%的生成代码中引入安全漏洞，包括不安全的实现和幻觉包名，这可能导致供应链攻击。所有AI生成的代码在生产部署前必须由开发人员审查，并使用安全检查工具扫描（例如Python的Bandit、JavaScript的ESLint Security）。' },
             { q: '使用AI编码工具的开发人员速度快多少？', a: '在对照研究中，使用AI编码助手的开发人员每周完成的项目比手动编码人员多126%。但是，2025年METR实地研究发现，经验丰富的开发人员在需要复杂代码库集成的任务上花费的时间长19% — 生产率提升是任务相关的，需要结构化提示学科。' },
             { q: '思路链提示词如何改进代码调试？', a: '思路链（CoT）提示词要求模型在生成最终输出前逐步追踪其推理过程。对于调试，这意味着模型识别产生不正确中间值的确切操作，使错误可追踪和可纠正，而不是需要完整输出重新生成。' },
             { q: 'AI编码协助是否在所有编程语言中工作方式相同？', a: '不是。AI工具主要在英文代码库上进行训练，这意味着Python和JavaScript获得最强支持。对于日文（汉字/假名）、中文或其他CJK密集项目，Qwen 3（阿里巴巴）或DeepSeek V3提供更快的token处理，因为它们的分词器对CJK脚本的处理比率更好。' },
             { q: '我应该为AI代码生成使用什么温度？', a: '对于生产代码生成，将温度设置为0.1–0.2。这产生确定性、保守的输出，最少随机变化。仅在你想要多样选项进行评估的算法方法头脑风暴时使用温度0.7–0.9 — 不是在编写要部署的代码时。' },
             { q: 'AI编码中的幻觉依赖是什么？', a: '幻觉依赖是模型推荐但实际不存在的包或库名称。2024年学术研究发现LLM在约20%的时间内推荐不存在的库。攻击者通过"仓鼠撞库"（slopsquatting）利用这一点 — 在PyPI或npm上注册幻觉包名称，其中包含恶意代码。在安装前，始终通过检查官方存储库验证任何AI建议的包。' },
-            { q: '我能否使用本地LLM的AI编码工具来保护隐私？', a: '可以。LLaMA 4 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5或Claude，但对于模板和简单函数是可接受的。' },
+            { q: '我能否使用本地LLM的AI编码工具来保护隐私？', a: '可以。Llama 3.1 8B通过Ollama在具有8GB RAM的机器上运行产生零外部API调用。所有推理都发生在你的硬件上。这适用于包含专有算法、源文件中的凭据或任何无法离开你基础设施的代码。对于复杂任务，质量低于GPT-5.6或Claude，但对于模板和简单函数是可接受的。' },
             { q: '我如何为AI编码工具编写系统提示？', a: '在系统提示中定义四件事：(1)技术角色（"资深Python后端工程师"）、(2)技术堆栈和禁止库、(3)代码风格规则（"TypeScript严格模式，没有any类型"）、(4)输出格式（"只返回代码，没有说明"）。在Cursor、Claude Code或你的IDE的AI设置中将其作为项目级规则持久化，以便它适用于所有会话。' },
             { q: 'GitHub Copilot或Cursor会产生更少的错误吗？', a: 'Cursor使用项目级RAG（检索增强生成）索引来理解你的整个代码库，与GitHub Copilot的仅文件级上下文相比减少了幻觉。对于单文件模板任务，差距很小。对于多文件重构（其中架构一致性很重要），Cursor的代码库感知上下文会产生更少的集成错误。两者都在部署前需要安全检查。' },
             { q: '在中国开发中，使用Qwen 3或DeepSeek V3有什么特别考虑？', a: '中国企业根据2023年《生成式人工智能服务管理暂行办法》广泛使用Qwen 3和DeepSeek V3。这些模型为CJK脚本提供更快的token处理，可以完全在本地部署。关键考虑：云API可能受到限制，所以本地Ollama部署对合规性很重要。始终验证你的部署是否符合最新的国家AI治理政策。' },
@@ -3343,13 +3469,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
     heroImage: '/images/write-better-code-with-ai-overview-hero-ko.webp',
       title: 'AI로 더 나은 코드 작성하기: 프롬프트, 모델, 그리고 2026년의 보안',
-      intro: '**2026년 AI로 더 나은 코드를 작성하려면: 구조화된 프롬프트(역할, 목표, 제약 조건, 출력 형식, 엣지 케이스)를 사용하고, 프로덕션 환경에서는 Temperature를 0.1–0.2로 설정하며, 백엔드 작업은 Claude 4.8로, 알고리즘 작업은 GPT-5로 라우팅하고, 배포 전에 모든 출력물에 보안 린터를 실행하십시오.**\n\nAI 코딩 도구는 개발 시간을 30–75% 단축시킵니다. 단, 개발자가 단순한 질문이 아닌 구조화된 프롬프트를 작성할 때만 가능합니다. 모델의 출력 품질은 역할, 제약 조건, 예상 출력을 얼마나 명확하게 명시하느냐에 따라 직접적으로 결정됩니다. 2026년 4월 기준으로, Claude 4.8 Opus는 백엔드 코드 및 버그 추적에서 선두를 달리고 있으며, GPT-5는 알고리즘 설계에서 앞서고, Ollama를 통한 LLaMA 4는 8GB RAM으로 사용자의 하드웨어에서 완전히 실행됩니다.\n\nAI는 여전히 생성된 코드의 45%에서 보안 취약점을 도입합니다. 이로 인해 배포 전 검토와 린팅은 협상 불가능한 필수 사항입니다.',
+      intro: '**2026년 AI로 더 나은 코드를 작성하려면: 구조화된 프롬프트(역할, 목표, 제약 조건, 출력 형식, 엣지 케이스)를 사용하고, 프로덕션 환경에서는 Temperature를 0.1–0.2로 설정하며, 백엔드 작업은 Claude Opus 5로, 알고리즘 작업은 GPT-5.6로 라우팅하고, 배포 전에 모든 출력물에 보안 린터를 실행하십시오.**\n\nAI 코딩 도구는 개발 시간을 30–75% 단축시킵니다. 단, 개발자가 단순한 질문이 아닌 구조화된 프롬프트를 작성할 때만 가능합니다. 모델의 출력 품질은 역할, 제약 조건, 예상 출력을 얼마나 명확하게 명시하느냐에 따라 직접적으로 결정됩니다. Claude Opus 5는 백엔드 코드 및 버그 추적에서 선두를 달리고 있으며, GPT-5.6는 알고리즘 설계에서 앞서고, Ollama를 통한 Llama 3.1 8B는 8GB RAM으로 사용자의 하드웨어에서 완전히 실행됩니다.\n\nAI는 여전히 생성된 코드의 45%에서 보안 취약점을 도입합니다. 이로 인해 배포 전 검토와 린팅은 협상 불가능한 필수 사항입니다.',
       publishDate: '2026-03-22',
-      dateModified: '2026-04-28',
+      dateModified: '2026-08-31',
       readTime: '15분 읽기',
       seoTitle: 'AI로 더 나은 코드 작성: 프롬프트, 모델 & 보안 (2026)',
       metaDescription: 'AI는 구조화된 프롬프트로 코딩 시간을 30–75% 단축합니다. 코드 작업에 대한 Claude, GPT-5.6, Gemini를 비교하십시오. AI 코드의 45%에 보안 결함이 있습니다 — 안전한 워크플로우를 배우십시오.',
-      lastFactChecked: '2026-04-28',
+      lastFactChecked: '2026-08-31',
       educationalLevel: 'Intermediate',
       aboutTopics: ['AI 보조 코딩', '코드 생성', '프롬프트 엔지니어링'],
       howToName: '더 나은 코드를 생성하는 프롬프트 작성 방법',
@@ -3376,10 +3502,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI로 더 나은 코드 작성하기: 프롬프트, 모델, 그리고 2026년의 보안',
         description: '구조화된 프롬프트, 모델 비교, 보안 워크플로우로 AI 코드 생성을 마스터하십시오. Temperature 설정, 로컬 모델, 그리고 환각의 45%를 방지하는 방법을 배우십시오.',
         datePublished: '2026-03-22',
-        dateModified: '2026-04-28',
+        dateModified: '2026-08-31',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
-        keywords: 'AI 코딩, 프롬프트 엔지니어링, 코드 생성, Claude, GPT-5, Gemini 3, 보안 취약점, temperature, context window',
+        keywords: 'AI 코딩, 프롬프트 엔지니어링, 코드 생성, Claude, GPT-5.6, Gemini 3.1, 보안 취약점, temperature, context window',
         about: [
           { '@type': 'Thing', name: 'AI 코드 생성' },
           { '@type': 'Thing', name: '프롬프트 엔지니어링' },
@@ -3388,9 +3514,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Code' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5' },
-          { '@type': 'SoftwareApplication', name: 'Claude 4.8 Opus' },
-          { '@type': 'SoftwareApplication', name: 'Gemini 3 Pro' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
+          { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Chain-of-Thought' },
           { '@type': 'Thing', name: 'Temperature' },
         ],
@@ -3447,7 +3573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '2026년 코드 작성에 가장 좋은 AI 모델은 무엇입니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 5 (Anthropic)은 백엔드 코드, API 설계, 버그 추적에서 가장 일관된 결과를 생성하며, 해당 작업에서 GPT-5.6와의 직접 비교에서 60–65% 승률을 기록합니다. GPT-5.6 (OpenAI)는 알고리즘 설계 및 복잡한 추론에서 약간 앞섭니다. 개인 정보 보호가 중요한 코드베이스의 경우, Ollama를 통해 로컬로 실행되는 LLaMA 3.1 7B는 외부 API 호출을 생성하지 않습니다.',
+              text: 'Claude Opus 5 (Anthropic)은 백엔드 코드, API 설계, 버그 추적에서 가장 일관된 결과를 생성하며, 해당 작업에서 GPT-5.6와의 직접 비교에서 60–65% 승률을 기록합니다. GPT-5.6 (OpenAI)는 알고리즘 설계 및 복잡한 추론에서 약간 앞섭니다. 개인 정보 보호가 중요한 코드베이스의 경우, Ollama를 통해 로컬로 실행되는 Llama 3.1 8B는 외부 API 호출을 생성하지 않습니다.',
             },
           },
           {
@@ -3503,7 +3629,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '개인 정보 보호를 위해 로컬 LLM으로 AI 코딩 도구를 사용할 수 있습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '예. 8GB RAM을 갖춘 기기에서 Ollama를 통해 실행되는 LLaMA 3.1 7B는 외부 API 호출을 생성하지 않습니다. 모든 추론은 사용자의 하드웨어에서 이루어집니다. 이는 독점 알고리즘, 소스 파일의 자격 증명, 또는 인프라를 벗어날 수 없는 코드가 포함된 코드베이스에 적합합니다. 품질은 복잡한 작업에서 GPT-5.6나 Claude보다 낮지만 보일러플레이트와 단순 함수에는 적합합니다.',
+              text: '예. 8GB RAM을 갖춘 기기에서 Ollama를 통해 실행되는 Llama 3.1 8B는 외부 API 호출을 생성하지 않습니다. 모든 추론은 사용자의 하드웨어에서 이루어집니다. 이는 독점 알고리즘, 소스 파일의 자격 증명, 또는 인프라를 벗어날 수 없는 코드가 포함된 코드베이스에 적합합니다. 품질은 복잡한 작업에서 GPT-5.6나 Claude보다 낮지만 보일러플레이트와 단순 함수에는 적합합니다.',
             },
           },
           {
@@ -3539,7 +3665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       gammaEmbedUrl: '/presentations/write-better-code-with-ai-static.html',
-      gammaDescription: '아래 슬라이드 덱은 다음을 다룹니다: 5가지 구조화된 프롬프트 요소(역할, 목표, 제약 조건, 출력 형식, 엣지 케이스), AI 모델 선택(Claude 4.8 Opus vs GPT-5 vs Gemini 3 Pro), 디버깅을 위한 Chain-of-Thought 프롬프팅, temperature 설정(프로덕션용 0.1–0.2), 보안 취약점(환각률 45%). PDF를 AI 코드 생성 및 보안 참조 카드로 다운로드하십시오.',
+      gammaDescription: '아래 슬라이드 덱은 다음을 다룹니다: 5가지 구조화된 프롬프트 요소(역할, 목표, 제약 조건, 출력 형식, 엣지 케이스), AI 모델 선택(Claude Opus 5 vs GPT-5.6 vs Gemini 3.1 Pro), 디버깅을 위한 Chain-of-Thought 프롬프팅, temperature 설정(프로덕션용 0.1–0.2), 보안 취약점(환각률 45%). PDF를 AI 코드 생성 및 보안 참조 카드로 다운로드하십시오.',
       sections: {
         tldr: {
           title: '핵심 요점',
@@ -3550,7 +3676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Chain-of-Thought (CoT) 프롬프팅 — "코드를 생성하기 전에 단계별로 추론하십시오" — 모델의 논리를 검사 가능하게 만들고 디버깅 오류를 줄입니다',
             'AI는 생성된 코드의 45%에서 보안 취약점을 도입합니다; 배포 전에 항상 보안 린터를 실행하십시오',
             '프로덕션 코드에는 Temperature (T)를 0.1–0.2로 설정하십시오; 탐색적 알고리즘 브레인스토밍에만 0.7–0.9를 사용하십시오',
-            'Ollama를 통한 LLaMA 3.1 7B는 8GB RAM으로 로컬에서 실행됩니다 — 데이터가 사용자의 기기를 벗어나지 않아 개인 정보 보호가 필요한 코드베이스에 적합합니다',
+            'Ollama를 통한 Llama 3.1 8B는 8GB RAM으로 로컬에서 실행됩니다 — 데이터가 사용자의 기기를 벗어나지 않아 개인 정보 보호가 필요한 코드베이스에 적합합니다',
           ],
         },
         directAnswer: {
@@ -3571,30 +3697,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'which-ai-model-to-use-for-coding-tasks',
           title: '코딩 작업에 사용할 AI 모델',
           content: [
-            '**2026년 4월 기준으로, 각 모델은 서로 다른 코딩 작업에서 뛰어납니다 — 프롬프트를 적절한 모델로 라우팅하면 오류와 토큰 비용을 줄일 수 있습니다.**',
-            'Claude 4.8 Opus (Anthropic)은 백엔드 코드 생성, API 설계, 데이터베이스 스키마, 다중 파일 리팩토링을 지배합니다. GPT-5 (OpenAI)는 창의적인 알고리즘 솔루션과 복잡한 단계별 추론에서 앞섭니다. Gemini 3 Pro (Google DeepMind)는 200만 토큰 컨텍스트 창으로 가장 긴 문서를 처리합니다 — 코드베이스 전체 분석에 유용합니다.',
+            '**각 모델은 서로 다른 코딩 작업에서 뛰어납니다 — 프롬프트를 적절한 모델로 라우팅하면 오류와 토큰 비용을 줄일 수 있습니다.**',
+            'Claude Opus 5 (Anthropic)은 백엔드 코드 생성, API 설계, 데이터베이스 스키마, 다중 파일 리팩토링을 지배합니다. GPT-5.6 (OpenAI)는 창의적인 알고리즘 솔루션과 복잡한 단계별 추론에서 앞섭니다. Gemini 3.1 Pro (Google DeepMind)는 200만 토큰 컨텍스트 창으로 가장 긴 문서를 처리합니다 — 코드베이스 전체 분석에 유용합니다.',
           ],
           tableFormat: true,
           columns: ['작업', '최적 모델', '이유'],
           rows: [
             {
               '작업': 'React 컴포넌트 생성',
-              '최적 모델': 'Claude 4.8 Opus',
+              '최적 모델': 'Claude Opus 5',
               '이유': 'Anthropic 벤치마크 기준 강력한 성능; 정확한 JSX 및 prop 처리',
             },
             {
               '작업': '버그 수정',
-              '최적 모델': 'Claude 4.8 Opus',
+              '최적 모델': 'Claude Opus 5',
               '이유': '다중 파일 문제 디버깅을 위한 우수한 단계별 추적 출력',
             },
             {
               '작업': '알고리즘 설계',
-              '최적 모델': 'GPT-5',
+              '최적 모델': 'GPT-5.6',
               '이유': '창의적인 알고리즘 솔루션에서 약간 앞섬; 강력한 추론 능력',
             },
             {
               '작업': '긴 문서/코드베이스 분석',
-              '최적 모델': 'Gemini 3 Pro',
+              '최적 모델': 'Gemini 3.1 Pro',
               '이유': '최대 2M 토큰의 컨텍스트 처리',
             },
             {
@@ -3604,7 +3730,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               '작업': '로컬 추론 (개인 정보 보호)',
-              '최적 모델': 'LLaMA 3.1 via Ollama',
+              '최적 모델': 'Llama 3.1 8B via Ollama',
               '이유': '데이터가 기기를 벗어나지 않음; 7B 모델은 8GB RAM 필요',
             },
           ],
@@ -3688,7 +3814,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: '보안 문제: AI가 잘못 처리하는 것',
           content: [
-            '**2026년 4월 기준으로, AI는 45%의 경우에서 보안 취약점이 있는 코드를 생성합니다 — 모델이 더 발전해도 개선되지 않은 비율입니다.** 2025년 Veracode 보고서에 따르면 안전한 구현과 안전하지 않은 구현 중 선택이 주어졌을 때, 생성형 AI 모델은 45%의 경우에 안전하지 않은 옵션을 선택했습니다. 학술 연구에서도 이 패턴이 확인됩니다: AI 생성 코드 솔루션의 40% 이상에 [보안 결함](/ko/prompt-engineering/prompt-injection-and-security)이 있습니다.',
+            '**AI는 45%의 경우에서 보안 취약점이 있는 코드를 생성합니다 — 모델이 더 발전해도 개선되지 않은 비율입니다.** 2025년 Veracode 보고서에 따르면 안전한 구현과 안전하지 않은 구현 중 선택이 주어졌을 때, 생성형 AI 모델은 45%의 경우에 안전하지 않은 옵션을 선택했습니다. 학술 연구에서도 이 패턴이 확인됩니다: AI 생성 코드 솔루션의 40% 이상에 [보안 결함](/ko/prompt-engineering/prompt-injection-and-security)이 있습니다.',
             '세 가지 가장 심각한 실패 범주:',
           ],
           items: [
@@ -3702,7 +3828,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '다중 모델 교차 검증 방법',
           content: [
             '**동일한 프롬프트를 여러 모델에 동시에 실행하면 환각된 의존성이나 안전하지 않은 구현을 수용할 가능성이 줄어듭니다 — 독립적인 모델들은 동일한 특정 잘못된 세부 사항을 거의 조작하지 않기 때문입니다.**',
-            '[PromptQuorum](/)은 하나의 프롬프트를 여러 AI 공급자에게 동시에 전송하고 모든 응답을 나란히 표시하는 다중 모델 AI 디스패치 도구입니다. GPT-5, Claude 4.8 Opus, Gemini 3 Pro가 동일한 패키지 이름을 추천할 때, 그 수렴은 패키지가 실제로 존재한다는 강력한 신호입니다. 구현 접근 방식에 대해 의견이 다를 때, 그 분기는 커밋하기 전에 조사해야 할 신호입니다.',
+            '[PromptQuorum](/)은 하나의 프롬프트를 여러 AI 공급자에게 동시에 전송하고 모든 응답을 나란히 표시하는 다중 모델 AI 디스패치 도구입니다. GPT-5.6, Claude Opus 5, Gemini 3.1 Pro가 동일한 패키지 이름을 추천할 때, 그 수렴은 패키지가 실제로 존재한다는 강력한 신호입니다. 구현 접근 방식에 대해 의견이 다를 때, 그 분기는 커밋하기 전에 조사해야 할 신호입니다.',
           ],
         },
         parameters: {
@@ -3717,17 +3843,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
           columns: ['모델', '컨텍스트 창', '의미'],
           rows: [
             {
-              '모델': 'GPT-5',
+              '모델': 'GPT-5.6',
               '컨텍스트 창': '128k 토큰',
               '의미': '세션당 약 96,000줄의 코드 가시',
             },
             {
-              '모델': 'Claude 4.8 Opus',
-              '컨텍스트 창': '200k 토큰',
+              '모델': 'Claude Opus 5',
+              '컨텍스트 창': '1M 토큰',
               '의미': '더 큰 코드베이스 컨텍스트; 다중 파일 리팩토링에 더 적합',
             },
             {
-              '모델': 'Gemini 3 Pro',
+              '모델': 'Gemini 3.1 Pro',
               '컨텍스트 창': '2M 토큰',
               '의미': '대규모 프로젝트의 전체 코드베이스 분석',
             },
@@ -3739,7 +3865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**유럽 개발 팀은 EU AI Act 준수와 데이터 거주지가 중요한 코딩 작업에서 점점 더 Mistral AI(프랑스 개발)를 채택하고 있습니다.** Mistral Large와 Mistral Small은 Ollama를 통한 로컬 배포로 이용할 수 있으며, 코드가 온프레미스 인프라를 벗어나지 않도록 보장합니다 — 민감한 소스 코드를 처리하는 팀에게는 GDPR 하에서 중요합니다.',
             '중국 기업들은 특히 CJK 언어 지원이나 중국의 생성형 AI 임시 조치(2023)에 따른 완전한 온프레미스 배포가 필요한 프로젝트에서 GPT 시리즈 모델의 오픈 소스 대안으로 Qwen 3 (Alibaba)와 DeepSeek V3를 널리 사용합니다.',
-            'METI 데이터 거버넌스 지침에 따라 운영되는 일본 기업들은 종종 Ollama 기반 로컬 모델 배포를 선호합니다. Ollama를 통해 로컬에서 실행되는 LLaMA 4 8B는 8GB RAM이 필요하며 외부 API 호출을 생성하지 않아 엄격한 데이터 거주지 요건을 충족합니다.',
+            'METI 데이터 거버넌스 지침에 따라 운영되는 일본 기업들은 종종 Ollama 기반 로컬 모델 배포를 선호합니다. Ollama를 통해 로컬에서 실행되는 Llama 3.1 8B는 8GB RAM이 필요하며 외부 API 호출을 생성하지 않아 엄격한 데이터 거주지 요건을 충족합니다.',
           ],
         },
         commonMistakes: {
@@ -3785,7 +3911,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: '2026년 코드 작성에 가장 좋은 AI 모델은 무엇입니까?',
-              a: 'Claude 4.8 Opus (Anthropic)은 백엔드 코드, API 설계, 버그 추적에서 가장 일관된 결과를 생성합니다. GPT-5 (OpenAI)는 알고리즘 설계 및 복잡한 추론에서 약간 앞섭니다. 개인 정보 보호가 중요한 코드베이스의 경우, Ollama를 통해 로컬로 실행되는 LLaMA 4 8B는 외부 API 호출을 생성하지 않습니다. 벤치마크 성능은 작업에 따라 다릅니다; 특정 사용 사례에서 세 가지 모두 테스트해 보시기를 권장합니다.',
+              a: 'Claude Opus 5 (Anthropic)은 백엔드 코드, API 설계, 버그 추적에서 가장 일관된 결과를 생성합니다. GPT-5.6 (OpenAI)는 알고리즘 설계 및 복잡한 추론에서 약간 앞섭니다. 개인 정보 보호가 중요한 코드베이스의 경우, Ollama를 통해 로컬로 실행되는 Llama 3.1 8B는 외부 API 호출을 생성하지 않습니다. 벤치마크 성능은 작업에 따라 다릅니다; 특정 사용 사례에서 세 가지 모두 테스트해 보시기를 권장합니다.',
             },
             {
               q: 'AI가 생성한 코드를 바로 배포해도 안전합니까?',
@@ -3813,7 +3939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '개인 정보 보호를 위해 로컬 LLM으로 AI 코딩 도구를 사용할 수 있습니까?',
-              a: '예. 8GB RAM을 갖춘 기기에서 Ollama를 통해 실행되는 LLaMA 4 8B는 외부 API 호출을 생성하지 않습니다. 모든 추론은 사용자의 하드웨어에서 이루어집니다. 이는 독점 알고리즘, 소스 파일의 자격 증명, 또는 인프라를 벗어날 수 없는 코드가 포함된 코드베이스에 적합합니다. 품질은 복잡한 작업에서 GPT-5나 Claude보다 낮지만 보일러플레이트와 단순 함수에는 적합합니다.',
+              a: '예. 8GB RAM을 갖춘 기기에서 Ollama를 통해 실행되는 Llama 3.1 8B는 외부 API 호출을 생성하지 않습니다. 모든 추론은 사용자의 하드웨어에서 이루어집니다. 이는 독점 알고리즘, 소스 파일의 자격 증명, 또는 인프라를 벗어날 수 없는 코드가 포함된 코드베이스에 적합합니다. 품질은 복잡한 작업에서 GPT-5.6나 Claude보다 낮지만 보일러플레이트와 단순 함수에는 적합합니다.',
             },
             {
               q: 'AI 코딩 도구를 위한 시스템 프롬프트를 어떻게 작성합니까?',
@@ -3835,6 +3961,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
       },
-      leadAnswerBlock: '2026년 AI로 더 나은 코드를 작성하려면: 역할, 목표, 제약 조건, 출력 형식, 엣지 케이스를 포함하는 구조화된 프롬프트를 사용하고, 프로덕션 환경에서는 Temperature를 0.1–0.2로 설정하며, 백엔드 작업은 Claude 4.8 Opus로, 알고리즘 작업은 GPT-5로 라우팅하고, 배포 전에 모든 출력물에 보안 린터를 실행하십시오.',
+      leadAnswerBlock: '2026년 AI로 더 나은 코드를 작성하려면: 역할, 목표, 제약 조건, 출력 형식, 엣지 케이스를 포함하는 구조화된 프롬프트를 사용하고, 프로덕션 환경에서는 Temperature를 0.1–0.2로 설정하며, 백엔드 작업은 Claude Opus 5로, 알고리즘 작업은 GPT-5.6로 라우팅하고, 배포 전에 모든 출력물에 보안 린터를 실행하십시오.',
     },
   };
