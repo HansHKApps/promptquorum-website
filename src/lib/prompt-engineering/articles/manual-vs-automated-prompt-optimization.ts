@@ -94,6 +94,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: 'Manual vs Automated: Quick Comparison',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Manual prompt optimization means rewriting prompts by hand from observed failures and stops scaling past roughly fifty production prompts; automated optimization uses frameworks to rewrite them algorithmically but requires labelled data and a metric.' },
+          { type: 'in-plain-terms', text: 'Hand-tuning is like editing each page yourself: precise, and fine until there are too many pages. Automation is hiring an editor who works from a rubric — it handles hundreds, but only if you can write down what good looks like.' },
+        ],
         content: '**Choose based on three factors: prompt count, evaluation data, and scaling needs.** Manual optimization is rewriting a prompt based on test failures — it is direct control but does not scale beyond ~50 production prompts. Automated optimization uses frameworks (DSPy, TextGrad) to rewrite prompts algorithmically — it scales to 100+ but requires labeled data and metrics. A third validation step — running the same prompt across multiple models using a [prompt optimization platform](/features) — confirms which version generalizes best before committing to production.',
         columns: ['Factor', 'Manual Optimization', 'Automated Optimization'],
         rows: [
@@ -303,6 +307,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: 'Manuell vs Automatisiert: Schnellvergleich',
+        snippets: [
+          { type: 'in-one-sentence', text: 'Manuelle Prompt-Optimierung bedeutet, Prompts anhand beobachteter Fehler von Hand zu überarbeiten, und skaliert etwa ab fünfzig Produktions-Prompts nicht mehr; automatisierte Optimierung schreibt sie mit Frameworks algorithmisch um, benötigt dafür aber gelabelte Daten und eine Metrik.' },
+          { type: 'in-plain-terms', text: 'Handarbeit ist, als redigierten Sie jede Seite selbst: präzise — und tragfähig, bis es zu viele Seiten sind. Automatisierung ist wie eine Lektorin, die nach einem Bewertungsraster arbeitet: Sie schafft Hunderte, aber nur, wenn Sie aufschreiben können, was „gut" bedeutet.' },
+        ],
         content: '**Wählen Sie basierend auf drei Faktoren: Prompt-Anzahl, Evaluierungsdaten und Skalierungsbedarf.** Manuelle Optimierung ist das Umschreiben eines Prompts basierend auf Testfehlern — es ist direkte Kontrolle, skaliert aber nicht über ~50 Produktions-Prompts. Automatisierte Optimierung nutzt Frameworks (DSPy, TextGrad), um Prompts algorithmisch umzuschreiben — es skaliert auf 100+, erfordert aber gekennzeichnete Daten und Metriken.',
         columns: ['Faktor', 'Manuelle Optimierung', 'Automatisierte Optimierung'],
         rows: [
@@ -517,6 +525,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: 'Manual vs automatizado: comparativa rápida',
+        snippets: [
+          { type: 'in-one-sentence', text: 'La optimización manual de prompts consiste en reescribirlos a mano a partir de los fallos observados y deja de escalar a partir de unos cincuenta prompts en producción; la automatizada los reescribe algorítmicamente con frameworks, pero exige datos etiquetados y una métrica.' },
+          { type: 'in-plain-terms', text: 'Ajustar a mano es como editar tú mismo cada página: preciso, y suficiente hasta que hay demasiadas páginas. Automatizar es contratar a un editor que trabaja con una rúbrica: cubre cientos, pero solo si puedes poner por escrito qué es un buen resultado.' },
+        ],
         content: '**Elige según tres factores: número de prompts, datos de evaluación y necesidades de escala.** La optimización manual es reescribir un prompt basado en fallos de tests — es control directo pero no escala más allá de ~50 prompts en producción. La optimización automatizada usa frameworks (DSPy, TextGrad) para reescribir prompts algorítmicamente — escala a 100+ pero requiere datos etiquetados y métricas. Un tercer paso de validación — ejecutar el mismo prompt en múltiples modelos usando una [plataforma de optimización de prompts](/features) — confirma qué versión se generaliza mejor antes de comprometerse con producción.',
         columns: ['Factor', 'Optimización manual', 'Optimización automatizada'],
         rows: [
@@ -729,6 +741,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: 'Manual vs automatizado: comparativo rápido',
+        snippets: [
+          { type: 'in-one-sentence', text: 'A otimização manual de prompts consiste em reescrevê-los à mão a partir das falhas observadas e deixa de escalar por volta de cinquenta prompts em produção; a automatizada os reescreve algoritmicamente com frameworks, mas exige dados rotulados e uma métrica.' },
+          { type: 'in-plain-terms', text: 'Ajustar na mão é como editar cada página você mesmo: preciso, e dá conta até haver páginas demais. Automatizar é contratar um editor que trabalha com uma rubrica: cobre centenas, mas só se você conseguir escrever o que conta como bom.' },
+        ],
         content: '**Escolha com base em três fatores: número de prompts, dados de avaliação e necessidades de escala.** A otimização manual é reescrever um prompt com base em falhas de testes — é controle direto, mas não escala além de ~50 prompts em produção. A otimização automatizada usa frameworks (DSPy, TextGrad) para reescrever prompts algoritmicamente — escala para 100+, mas requer dados rotulados e métricas. Um terceiro passo de validação — executar o mesmo prompt em múltiplos modelos usando uma [plataforma de otimização de prompts](/features) — confirma qual versão se generaliza melhor antes de se comprometer com produção.',
         columns: ['Fator', 'Otimização manual', 'Otimização automatizada'],
         rows: [
@@ -941,6 +957,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: 'Manuel vs Automatisé : Comparaison rapide',
+        snippets: [
+          { type: 'in-one-sentence', text: 'L\'optimisation manuelle consiste à réécrire les prompts à la main à partir des échecs observés et cesse de passer à l\'échelle au-delà d\'une cinquantaine de prompts en production ; l\'optimisation automatisée les réécrit algorithmiquement via des frameworks, mais exige des données annotées et une métrique.' },
+          { type: 'in-plain-terms', text: 'Le réglage manuel revient à corriger chaque page vous-même : précis, et suffisant jusqu\'à ce que les pages soient trop nombreuses. L\'automatisation, c\'est engager un relecteur qui suit une grille : il en traite des centaines, à condition que vous sachiez écrire ce qu\'est un bon résultat.' },
+        ],
         content: '**Choisissez selon trois facteurs : nombre de prompts, données d\'évaluation et besoins de scalabilité.** L\'optimisation manuelle est la réécriture d\'un prompt basée sur les échecs de tests — c\'est le contrôle direct mais ne s\'étend pas au-delà de ~50 prompts de production. L\'optimisation automatisée utilise des frameworks (DSPy, TextGrad) pour réécrire les prompts algorithmiquement — elle s\'étend à 100+ mais nécessite données étiquetées et métriques.',
         columns: ['Facteur', 'Optimisation manuelle', 'Optimisation automatisée'],
         rows: [
@@ -1153,6 +1173,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: 'マニュアル vs 自動：クイック比較',
+        snippets: [
+          { type: 'in-one-sentence', text: '手動のプロンプト最適化は、観測された失敗をもとに人手で書き直す方法で、本番プロンプトが50件を超えたあたりから規模に耐えられなくなります。自動最適化はフレームワークによってアルゴリズム的に書き直しますが、ラベル付きデータと評価指標が必要です。' },
+          { type: 'in-plain-terms', text: '手作業は、自分で一ページずつ赤入れするようなものです。正確ですが、ページ数が増えすぎると立ち行きません。自動化は評価基準に従って働く編集者を雇うようなもので、数百件を扱えます。ただし「良い出力とは何か」を明文化できる場合に限られます。' },
+        ],
         content: '**3つの要素で判断：プロンプト数、評価データ、スケーリング必要性。** マニュアル最適化はテスト失敗に基づくプロンプトの書き直し — 直接制御だが~50個の本番プロンプト以上スケールしません。自動最適化はフレームワーク(DSPy、TextGrad)でアルゴリズムがプロンプトを書き直す — 100個以上にスケールするがラベル付きデータとメトリクスが必須。',
         columns: ['要因', 'マニュアル最適化', '自動最適化'],
         rows: [
@@ -1366,6 +1390,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: '手动 vs 自动：快速对比',
+        snippets: [
+          { type: 'in-one-sentence', text: '手动提示词优化是依据观察到的失败逐条人工改写，大约超过五十条生产提示词后便难以为继；自动优化则借助框架以算法方式改写，但需要有标注数据和评估指标。' },
+          { type: 'in-plain-terms', text: '手工调优就像自己逐页校稿：精确，而且在页数不多时完全够用。自动化则像雇一位按评分表工作的编辑，能处理成百上千条——前提是你能把「什么算好」写下来。' },
+        ],
         content: '**根据三个因素判断：提示词数量、评估数据、扩展性需求。** 手动优化是根据测试失败重写提示词——直接控制但无法扩展到50个以上生产提示词。自动优化使用框架（DSPy、TextGrad）算法重写提示词——扩展到100个以上但需要标记数据和指标。',
         columns: ['因素', '手动优化', '自动优化'],
         rows: [
@@ -1578,6 +1606,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: 'يدوي مقابل آلي: مقارنة سريعة',
+        snippets: [
+          { type: 'in-one-sentence', text: 'يعني التحسين اليدوي للبرومبتات إعادة كتابتها يدوياً انطلاقاً من الإخفاقات الملاحَظة، وهو يتوقف عن التوسع بعد نحو خمسين برومبتاً في الإنتاج؛ أما التحسين الآلي فيعيد كتابتها خوارزمياً عبر أطر عمل، لكنه يتطلب بيانات موسومة ومقياساً.' },
+          { type: 'in-plain-terms', text: 'الضبط اليدوي أشبه بتحرير كل صفحة بنفسك: دقيق، ويكفي إلى أن تكثر الصفحات. أما الأتمتة فأشبه بتوظيف محرِّر يعمل وفق جدول تقييم؛ يتولى المئات، شريطة أن تستطيع تدوين ما يُعدّ نتيجة جيدة.' },
+        ],
         content: '**اختر وفق ثلاثة عوامل: عدد الـ prompts، وبيانات التقييم، واحتياجات التوسع.** التحسين اليدوي يعني إعادة كتابة الـ prompt بناءً على إخفاقات الاختبارات — تحكم مباشر لكنه لا يتوسع فوق ~50 prompt في الإنتاج. التحسين الآلي يستخدم frameworks (DSPy وTextGrad) لإعادة كتابة الـ prompts خوارزميًا — يتوسع لـ 100+ لكنه يستلزم بيانات مُصنَّفة ومقاييس. خطوة تحقق ثالثة — تشغيل الـ prompt ذاته على نماذج متعددة عبر [منصة تحسين الـ prompts](/features) — تؤكد أي نسخة تتعمم بشكل أفضل قبل إطلاقها في الإنتاج.',
         columns: ['العامل', 'التحسين اليدوي', 'التحسين الآلي'],
         rows: [
@@ -1790,6 +1822,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       comparison: {
         id: 'manual-vs-automated-comparison',
         title: '수동 vs 자동: 빠른 비교',
+        snippets: [
+          { type: 'in-one-sentence', text: '수동 프롬프트 최적화는 관찰된 실패를 바탕으로 직접 다시 작성하는 방식이며 운영 프롬프트가 약 50개를 넘어가면 확장되지 않습니다. 자동 최적화는 프레임워크로 알고리즘에 따라 다시 작성하지만, 레이블이 붙은 데이터와 평가 지표가 필요합니다.' },
+          { type: 'in-plain-terms', text: '수작업은 모든 페이지를 직접 교정하는 것과 같습니다. 정확하지만 페이지가 너무 많아지면 감당하기 어렵습니다. 자동화는 평가표에 따라 일하는 편집자를 고용하는 셈이어서 수백 건도 처리하지만, \'무엇이 좋은 결과인가\'를 글로 정의할 수 있어야 합니다.' },
+        ],
         content: '**세 가지 요소를 기준으로 선택하십시오: 프롬프트 수, 평가 데이터, 확장 필요성.** 수동 최적화는 테스트 실패를 기반으로 프롬프트를 재작성하는 것으로, 직접 제어할 수 있지만 프로덕션 프롬프트 ~50개 이상으로는 확장되지 않습니다. 자동 최적화는 프레임워크(DSPy, TextGrad)를 사용하여 알고리즘으로 프롬프트를 재작성하며, 100개 이상으로 확장되지만 레이블 데이터와 메트릭이 필요합니다. 세 번째 검증 단계—[프롬프트 최적화 플랫폼](/features)을 이용해 동일한 프롬프트를 여러 모델에서 실행—은 프로덕션으로 확정하기 전에 어느 버전이 가장 잘 일반화되는지 확인합니다.',
         columns: ['요인', '수동 최적화', '자동 최적화'],
         rows: [
