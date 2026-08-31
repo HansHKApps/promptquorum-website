@@ -2259,7 +2259,29 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Para escolas brasileiras: verifique os termos de serviço de cada ferramenta e as políticas de processamento de dados de menores conforme a LGPD (Lei 13.709/2018).',
           ],
         },
-        whatAITeachingToolsDo: {
+        quickFacts: {
+          title: '⚡ Fatos rápidos',
+          items: [
+            '**Resultado do ECA de Harvard:** a tutoria com IA produziu ganhos de aprendizado de 0,73–1,3 DP em relação a salas de aula de aprendizado ativo, em 18% menos tempo (n=194, p < 10⁻⁸)',
+            '**Adoção por professores:** 85% dos professores dos EUA usaram IA no ano letivo de 2024-25',
+            '**Tempo economizado:** prompts estruturados economizam de 5 a 13 horas por semana em planejamento de aulas e tarefas administrativas',
+            '**Problema da detecção de IA:** taxa de falsos positivos de 15% a 30% — não confiável como base isolada para decisões de integridade acadêmica',
+            '**Lei de IA da UE:** IA educacional classificada como de alto risco (Anexo III). Treinamento de alfabetização em IA para o pessoal é obrigatório (Artigo 4, em vigor desde 2025). Reconhecimento de emoções proibido nas escolas.',
+            '**Melhores ferramentas:** Khanmigo (tutoria), MagicSchool (planos de aula), ChatGPT/Claude (conteúdo flexível), NotebookLM (pesquisa ancorada em fontes)',
+          ],
+        },
+        definition: {
+          title: 'O que as ferramentas de ensino com IA realmente fazem',
+          content: [
+            '**As ferramentas de ensino com IA cumprem quatro funções distintas: tutoria personalizada, geração de planos de aula, feedback automatizado de avaliação e redução de tarefas administrativas — cada uma exige uma ferramenta diferente e uma estrutura de prompt diferente.**',
+            'Os Sistemas Tutores Inteligentes (ITS) — a categoria técnica de ferramentas como o Khanmigo — adaptam a dificuldade, dão feedback imediato e conduzem o aluno por meio de questionamento socrático, em vez de fornecer respostas prontas. LLMs de propósito geral como GPT-5.6 (OpenAI) e Claude Sonnet 5 (Anthropic) dão conta da geração de planos de aula, criação de rubricas e materiais de instrução diferenciada. Já as ferramentas administrativas de IA cuidam de resumos de frequência, rascunhos de comunicação com as famílias e relatórios de progresso — justamente as tarefas que os professores apontam como as que mais consomem tempo.',
+            'Em uma frase: prompt engineering para educação não é uma ferramenta, é uma pilha, na qual cada camada cumpre um papel específico no fluxo de trabalho docente.',
+          ],
+          snippets: [
+            { type: 'in-one-sentence', text: 'As ferramentas de ensino com IA incluem sistemas de tutoria (Khanmigo), planejadores de aula (ChatGPT, Claude) e assistentes administrativos — cada um otimizado para tarefas diferentes em sala de aula.' },
+          ],
+        },
+        toolComparison: {
           id: 'what-ai-teaching-tools-actually-do',
           title: 'O que as ferramentas de ensino com IA realmente fazem',
           content: [
@@ -2271,7 +2293,68 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Claude Sonnet 5 / GPT-5.6:** Modelos de propósito geral. Mais flexíveis mas sem proteções incorporadas para uso estudantil.',
           ],
         },
-        fiveComponentPrompt: {
+        toolUseCaseMapping: {
+          title: 'IA na educação: mapa de caso de uso para ferramenta',
+          content: [
+            '**Nem toda ferramenta serve para toda tarefa. Escolha a ferramenta certa para cada caso de uso — modelos diferentes se destacam sob restrições diferentes (janela de contexto, temperatura, custo, velocidade).**',
+          ],
+          columns: ['Caso de uso', 'Ferramenta recomendada', 'Temperatura', 'Tempo economizado'],
+          rows: [
+            {
+              'Caso de uso': 'Criação de plano de aula',
+              'Ferramenta recomendada': 'MagicSchool / GPT-5.6',
+              'Temperatura': '0.1–0.2',
+              'Tempo economizado': '30–60 min por aula',
+            },
+            {
+              'Caso de uso': 'Níveis de leitura diferenciados',
+              'Ferramenta recomendada': 'Claude Sonnet 5',
+              'Temperatura': '0.1–0.2',
+              'Tempo economizado': '15 min por texto',
+            },
+            {
+              'Caso de uso': 'Tutoria de alunos (socrática)',
+              'Ferramenta recomendada': 'Khanmigo',
+              'Temperatura': 'n/a (predefinido)',
+              'Tempo economizado': 'Assíncrono',
+            },
+            {
+              'Caso de uso': 'Feedback alinhado à rubrica',
+              'Ferramenta recomendada': 'Claude Sonnet 5 (contexto de 1M)',
+              'Temperatura': '0.2',
+              'Tempo economizado': 'Horas por conjunto de turma',
+            },
+            {
+              'Caso de uso': 'Rascunhos de comunicação com famílias',
+              'Ferramenta recomendada': 'ChatGPT / GPT-5.6',
+              'Temperatura': '0.3–0.5',
+              'Tempo economizado': '5–10 min por mensagem',
+            },
+            {
+              'Caso de uso': 'Revisão de currículo ou de políticas',
+              'Ferramenta recomendada': 'Gemini 3.1 Pro (contexto de 1M)',
+              'Temperatura': '0.1',
+              'Tempo economizado': 'Horas por documento',
+            },
+          ],
+        },
+        localLLMs: {
+          title: 'IA em escolas privadas: LLMs locais para privacidade de dados',
+          content: [
+            'Para escolas com exigências rígidas de privacidade de dados — no Brasil, sob a LGPD, e na Europa, sob o GDPR — os LLMs locais via [Ollama](/pt/local-llms/how-to-install-ollama) oferecem uma alternativa sem qualquer saída de dados. Um notebook escolar com 16 GB de RAM roda Qwen3 8B ou Llama 4 Scout localmente, dando conta da geração de planos de aula e de feedback formativo sem que nenhum dado de aluno saia do dispositivo. A qualidade é inferior à dos modelos de ponta na nuvem, mas suficiente para tarefas rotineiras de planejamento. Veja [O que são LLMs locais?](/pt/local-llms/what-are-local-llms) para orientações de configuração.',
+          ],
+        },
+        promptStructure: {
+          title: 'Como escrever prompts para tarefas de ensino',
+          content: [
+            '**Um prompt de professor estruturado — que especifica ano escolar, disciplina, objetivo de aprendizagem, conhecimento prévio, restrições de tempo e formato de saída — produz materiais prontos para a sala de aula sem edição; um prompt sem estrutura produz um rascunho genérico que exige mais de 30 minutos de revisão.**',
+            '[Prompt engineering](/pt/prompt-engineering/what-is-prompt-engineering) é a prática de elaborar instruções precisas e estruturadas que orientam a saída da IA. Para professores, a diferença entre um resultado utilizável e um inutilizável está quase sempre na especificidade do prompt, não na capacidade do modelo.',
+          ],
+          snippets: [
+            { type: 'in-plain-terms', text: 'Pense nos prompts de IA como receitas: prompts vagos ("faça algo gostoso") geram resultados inconsistentes; prompts detalhados ("asse um bolo de chocolate a 180°C por 35 minutos com chocolate meio amargo") geram resultados confiáveis.' },
+          ],
+        },
+        promptFramework: {
           id: 'the-five-component-teacher-prompt',
           title: 'O Prompt de Professor de Cinco Componentes',
           content: [
@@ -2285,14 +2368,59 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Formato de saída:** "Markdown: Objetivos (3 pontos), Materiais, Sequência de atividades (cronometradas), Verificações de avaliação."',
           ],
         },
-        doesAITutoringWork: {
+        goodExample: {
+          title: 'O prompt de professor de cinco componentes',
+          content: [
+            'Prompt bom — estrutura de cinco componentes:',
+          ],
+          blockquote: 'Você é um professor experiente de matemática do 5º ano. Crie uma aula de 45 minutos sobre adição de frações com denominadores diferentes. Os alunos entendem frações equivalentes, mas ainda não as somaram. Inclua: um aquecimento de 10 minutos com modelos visuais, 15 minutos de instrução direta com três exemplos resolvidos, 15 minutos de prática em duplas e um bilhete de saída de 5 minutos. Alinhe à habilidade EF05MA07 da BNCC. Gere apenas o plano de aula, com títulos de seção, distribuição de tempo e lista de materiais.',
+          items: [
+            'A versão estruturada produz um documento com seções alinhadas à rubrica, atividades com tempo definido e lista de materiais. Pronto para usar ou refinar — não para reescrever.',
+          ],
+          callouts: [
+            { type: '📌', label: 'Ponto-chave', text: 'Os cinco componentes são: (1) Papel, (2) Objetivo, (3) Contexto do aluno, (4) Restrições, (5) Formato de saída. Usar os cinco de forma consistente economiza de 5 a 13 horas por semana.' },
+          ],
+        },
+        assessmentPrompt: {
+          title: 'Como usar prompts de IA para feedback de avaliação?',
+          content: [
+            '**Para avaliação formativa, inclua os critérios da sua rubrica diretamente no prompt, para que a IA compreenda seus padrões de correção e os aplique de forma consistente a todas as produções dos alunos.**',
+            'A [janela de contexto](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) de 1M de tokens do Claude Sonnet 5 dá conta de conjuntos completos de redações de uma turma em uma única sessão — cerca de 800 páginas padrão — o que torna prático gerar feedback em lote para professores com turmas grandes. O GPT-5.6 processa cerca de 800 páginas por sessão (1M de tokens), suficiente para qualquer carga de trabalho de sala de aula.',
+          ],
+          blockquote: 'Você é um professor experiente de Língua Portuguesa do 7º ano. Analise esta redação argumentativa de aluno usando esta rubrica: tese clara (4 pts), três argumentos de apoio com evidências (12 pts), reconhecimento de contra-argumento (4 pts), transições formais (3 pts), conclusão que reforça a tese (3 pts). Para cada critério: informe a pontuação, cite a frase relevante e escreva uma sugestão específica de melhoria. Pontuação total de 26.',
+          callouts: [
+            { type: '⚠️', label: 'Atenção', text: 'A IA não avalia voz, originalidade ou qualidade subjetiva da escrita de forma confiável — use o feedback da IA para mecânica e estrutura, nunca para notas holísticas de rubrica em critérios subjetivos. Mantenha a nota somativa final humana.' },
+          ],
+        },
+        learningOutcomes: {
           id: 'does-ai-tutoring-improve-learning-outcomes',
           title: 'A tutoria com IA melhora os resultados de aprendizado?',
           content: [
             '**Sim — com nuances importantes.** O estudo de Harvard de 2024 (Kestin et al., n=194) comparou instrução com IA com instrução de aprendizado ativo em física universitária. O grupo de IA: 2,4× maiores ganhos de aprendizado, 18% menos tempo de estudo.',
           ],
         },
-        regionalCompliance: {
+        integrityProblem: {
+          title: 'Quão detectável é o uso indevido de IA nas escolas?',
+          content: [
+            '**As ferramentas atuais de detecção de IA têm taxas de falsos positivos de 15% a 30% em estudos revisados por pares, o que as torna não confiáveis para decisões de alto impacto sobre integridade acadêmica — e muitos alunos usam [alucinações de IA](/pt/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) de forma estratégica para escapar da detecção.**',
+            'A integridade acadêmica é o desafio central da educação assistida por IA. A escala de adoção superou tanto as políticas quanto a tecnologia de detecção. A adoção pelos alunos é ampla: pesquisas apontam que de 60% a 92% dos estudantes usam IA nos estudos, embora as políticas institucionais variem bastante quanto a quais usos são permitidos.',
+            'O problema da detecção tem três camadas críticas:',
+          ],
+          items: [
+            '**Falsos positivos** — quem escreve em inglês como segunda língua é sinalizado em proporção desproporcionalmente maior; estilos de escrita acadêmica estruturada (comuns em áreas técnicas) acionam as ferramentas de detecção de forma recorrente',
+            '**Texto híbrido** — rascunhos de IA substancialmente editados pelo aluno driblam a maioria dos sistemas de detecção',
+            '**Lacuna de políticas** — em 2026, as universidades estão migrando de proibições totais para marcos de transparência e divulgação, exigindo que os alunos citem o auxílio da IA em vez de proibi-lo',
+          ],
+          callouts: [
+            { type: '⚠️', label: 'Atenção', text: 'Falantes não nativos de inglês e alunos com estilo de escrita estruturado são sinalizados em proporção desproporcionalmente maior. Acusar um aluno apenas com base na saída de um detector de IA carrega de 15% a 30% de risco de acusação falsa.' },
+          ],
+        },
+        integrityCloser: {
+          content: [
+            'O consenso institucional que vem se formando: ferramentas de detecção de IA não são a autoridade final. Cada vez mais universidades exigem revisão humana somada à automatizada e adotam normas de divulgação em vez de normas de proibição.',
+          ],
+        },
+        regulatoryContext: {
           id: 'eu-ai-act-schools',
           title: 'Conformidade Legal para Escolas (LGPD e Lei de IA da UE)',
           content: [
@@ -2311,7 +2439,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Itere sobre prompts que não funcionam.** Se a saída for genérica, adicione mais contexto do aluno.',
           ],
         },
-        faqSection: {
+        regulatoryRegionalContext: {
+          title: 'Regulamentações globais de IA na educação',
+          content: [
+            'A Lei de IA da UE proíbe categoricamente sistemas de reconhecimento de emoções em ambientes educacionais — o que afeta diretamente ferramentas que monitoram o engajamento do aluno por análise facial. Instituições de ensino chinesas implantam ferramentas de IA sob as Medidas Provisórias para IA Generativa da China (2023), que exigem que o conteúdo educacional gerado por IA seja rotulado como tal. O Ministério da Educação do Japão (MEXT) publicou orientações em 2023 alertando contra o uso de IA em determinados contextos de avaliação, ao mesmo tempo em que reconhece a IA como competência essencial do estudante. No Brasil, o PL 2338/2023 segue em tramitação e propõe classificação por níveis de risco semelhante à da UE; até sua aprovação, o uso de IA nas escolas é regido pela LGPD e pelas diretrizes da ANPD sobre tratamento de dados de crianças e adolescentes.',
+          ],
+        },
+        commonMistakes: {
+          title: 'Erros comuns ao usar IA na educação',
+          content: [
+            '**Estas cinco armadilhas custam tempo aos professores e podem criar problemas legais ou éticos — todas são fáceis de corrigir com o processo certo.**',
+          ],
+          items: [
+            '**Usar IA como substituta da correção em vez de ferramenta de feedback:** a IA gera notas de rubrica plausíveis, mas não avalia de forma confiável originalidade, voz ou qualidade da argumentação em textos longos. Use IA para feedback formativo em trabalhos de baixo impacto; mantenha o julgamento somativo humano.',
+            '**Prompts sem estrutura para planejamento de aulas:** "faça uma aula sobre fotossíntese" produz uma saída genérica que exige mais tempo de edição do que escrever do zero. Sempre especifique ano escolar, conhecimento prévio, restrições de tempo e formato de saída.',
+            '**Depender demais de detectores de IA para integridade acadêmica:** taxas de falsos positivos de 15% a 30% significam que acusar um aluno apenas com base na saída de um detector carrega de 15% a 30% de chance de acusação falsa. Falantes não nativos de inglês são sinalizados em proporção desproporcionalmente maior.',
+            '**Ignorar as obrigações da LGPD e da Lei de IA da UE:** no Brasil, ferramentas que tratam dados de alunos menores de 18 anos exigem consentimento específico dos responsáveis legais (LGPD, Lei 13.709/2018). Na UE, ferramentas educacionais de IA que influenciam trajetórias de aprendizagem ou avaliação são de alto risco pelo Anexo III, e escolas que as adotam sem o treinamento de alfabetização em IA do Artigo 4 estão em desconformidade.',
+            '**Usar temperatura alta para conteúdo educacional:** a temperatura padrão na maioria das plataformas de IA (0.7–1.0) aumenta o risco de alucinação. Para conteúdo factual de aula, rubricas de avaliação e geração de citações, ajuste a temperatura para 0.1–0.2.',
+            '**Não ensinar os alunos a usar prompts de forma eficaz:** alunos que digitam "escreva minha redação sobre fotossíntese" não aprendem nada. Alunos que digitam "explique fotossíntese em nível de 8º ano e depois me faça perguntas sobre os três conceitos principais" aprendem ativamente. Crie um modelo de prompt de sala de aula que os alunos devam usar em todas as interações com IA. Exija que informem o objetivo de aprendizagem, o que já sabem e em que formato querem a resposta. Isso transforma a IA de atalho em ferramenta de aprendizagem.',
+          ],
+          callouts: [
+            { type: '🛠️', label: 'Boa prática', text: 'Documente todo uso de IA: qual ferramenta, quais configurações (temperatura, contexto) e qual tarefa. Isso cria uma trilha de auditoria para conformidade (Artigo 6 da Lei de IA da UE e princípio da responsabilização da LGPD) e ajuda você a melhorar com o tempo.' },
+          ],
+        },
+        faq: {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
@@ -3615,6 +3766,51 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**最佳工具：** Khanmigo（辅导）、MagicSchool（课程规划）、ChatGPT/Claude（灵活内容）、NotebookLM（基于来源的Q&A）',
           ],
         },
+        toolUseCaseMapping: {
+          title: '教育中的AI：使用场景与工具对照',
+          content: [
+            '**并非所有工具都适合所有任务。请为每个具体场景选择合适的工具——不同模型在不同约束下各有所长（上下文窗口、温度、成本、速度）。**',
+          ],
+          columns: ['使用场景', '推荐工具', '温度', '节省时间'],
+          rows: [
+            {
+              '使用场景': '编写教案',
+              '推荐工具': 'MagicSchool / GPT-5.6',
+              '温度': '0.1–0.2',
+              '节省时间': '每节课30–60分钟',
+            },
+            {
+              '使用场景': '分层阅读难度',
+              '推荐工具': 'Claude Sonnet 5',
+              '温度': '0.1–0.2',
+              '节省时间': '每篇文段15分钟',
+            },
+            {
+              '使用场景': '学生辅导（苏格拉底式）',
+              '推荐工具': 'Khanmigo',
+              '温度': '不适用（预设）',
+              '节省时间': '异步进行',
+            },
+            {
+              '使用场景': '对齐评分量表的反馈',
+              '推荐工具': 'Claude Sonnet 5（100万上下文）',
+              '温度': '0.2',
+              '节省时间': '每个班级作业集数小时',
+            },
+            {
+              '使用场景': '家校沟通草稿',
+              '推荐工具': 'ChatGPT / GPT-5.6',
+              '温度': '0.3–0.5',
+              '节省时间': '每条消息5–10分钟',
+            },
+            {
+              '使用场景': '课程/政策审阅',
+              '推荐工具': 'Gemini 3.1 Pro（100万上下文）',
+              '温度': '0.1',
+              '节省时间': '每份文档数小时',
+            },
+          ],
+        },
         localLLMs: {
           title: '私密学校AI：本地LLM用于数据隐私',
           content: [
@@ -3719,6 +3915,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
 [选择一个：单个段落] / [3点项目符号] / [分步说明] / [对话脚本] / [Markdown大纲]`,
           codeLanguage: 'plaintext',
         },
+        goodExample: {
+          title: '教师提示词的五个组成部分',
+          content: [
+            '优秀的提示词——五段式结构：',
+          ],
+          blockquote: '你是一位经验丰富的五年级数学教师。请设计一节45分钟的课，主题是异分母分数加法。学生已经理解等值分数，但尚未做过分数相加。内容包括：10分钟的可视化模型热身、15分钟的直接讲授（含三个例题精讲）、15分钟的同伴练习，以及5分钟的出门测。对齐Common Core 5.NF.A.1标准。只输出教案本身，包含小节标题、时间分配和教具清单。',
+          items: [
+            '这个结构化版本会生成一份带有对齐评分量表的分节内容、限定时长的活动安排和教具清单的文档。可以直接使用或稍作打磨——而不需要重写。',
+          ],
+          callouts: [
+            { type: '📌', label: '关键要点', text: '这五个组成部分是：（1）角色，（2）目标，（3）学生情况，（4）约束条件，（5）输出格式。持续使用全部五项，每周可节省5–13小时。' },
+          ],
+        },
         assessmentPrompt: {
           id: 'how-do-you-prompt-ai-for-assessment-feedback',
           title: '如何用AI生成评估反馈？',
@@ -3765,6 +3974,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '对于K-12：与其依赖检测器，建立标准框架：「AI允许用于头脑风暴和草稿反馈。最后的工作必须代表学生的思维。」学生知道期望什么会减少不诚实。',
           ],
         },
+        integrityCloser: {
+          content: [
+            '正在形成的机构共识是：AI检测工具并非最终裁定依据。越来越多的高校要求采用"人工加自动"的双重复核，并推行披露规范，而不是一刀切的禁止规范。',
+          ],
+        },
         regulatoryContext: {
           id: 'how-does-the-eu-ai-act-affect-schools',
           title: '中国、亚太和企业的AI监管',
@@ -3782,6 +3996,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '- 人类监督过程（AI不能进行最终评分；必须是建议）',
             '- 透明政策（学生和家长知道如何使用AI及其限制）',
             '- 例外处理和上报路线（当AI做出错误决定时会发生什么）',
+          ],
+        },
+        regulatoryRegionalContext: {
+          title: '全球教育AI监管概览',
+          content: [
+            '欧盟《人工智能法案》明确禁止在教育场景中使用情绪识别系统——这直接影响那些通过面部分析追踪学生专注度的工具。中国的教育机构在《生成式人工智能服务管理暂行办法》（2023）框架下部署AI工具，该办法要求对AI生成的教育内容进行标识。日本文部科学省（MEXT）于2023年发布指引，提醒在某些评估场景中审慎使用AI，同时承认AI能力是学生的一项核心素养。',
           ],
         },
         commonMistakes: {
