@@ -347,7 +347,7 @@
       ]
     },
     "local-llm-security-privacy-checklist": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1313,7 +1313,7 @@
       ]
     },
     "run-70b-models-24gb-vram": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1484,7 +1484,7 @@
       ]
     },
     "local-rag-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1677,7 +1677,7 @@
       ]
     },
     "multimodal-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1796,7 +1796,7 @@
       ]
     },
     "why-enterprises-use-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1859,7 +1859,7 @@
       "images": []
     },
     "scaling-local-llms-enterprise": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1877,7 +1877,7 @@
       "images": []
     },
     "corporate-rag-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
