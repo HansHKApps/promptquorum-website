@@ -98,6 +98,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'What the TRACE Framework Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'TRACE is a reasoning-first prompt pattern that requires the model to show its working rather than only its conclusion, for tasks where how an answer was reached matters as much as the answer.' },
+            { type: 'in-plain-terms', text: 'It is the difference between an answer and a marked exam paper. When you can see the steps, you can spot the one wrong assumption that produced a confident but useless conclusion — instead of having to trust the final number.' },
+          ],
           content: [
             '**The TRACE Framework is a reasoning-first prompt pattern that forces large language models to show their working, not just their final answer.** It is designed for tasks where you care about how the model arrived at a result, such as technical analysis, strategy, or complex troubleshooting.',
             'A common interpretation of TRACE is:',
@@ -375,6 +379,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'Was das TRACE Framework ist',
+          snippets: [
+            { type: 'in-one-sentence', text: 'TRACE ist ein auf Nachvollziehbarkeit ausgelegtes Prompt-Muster, das vom Modell verlangt, seinen Lösungsweg offenzulegen statt nur das Ergebnis — für Aufgaben, bei denen der Weg ebenso zählt wie die Antwort.' },
+            { type: 'in-plain-terms', text: 'Es ist der Unterschied zwischen einem Ergebnis und einer korrigierten Klausur. Wer die Schritte sieht, erkennt die eine falsche Annahme, die zu einem selbstbewussten, aber unbrauchbaren Schluss geführt hat — statt der Endzahl vertrauen zu müssen.' },
+          ],
           content: [
             '**Das TRACE Framework ist ein Reasoning-fokussiertes Prompt-Muster, das große Sprachmodelle dazu zwingt, ihre Arbeitsschritte zu zeigen, nicht nur die Antwort.** Es ist speziell für Aufgaben konzipiert, wo es auf den Weg ankommt, wie das Modell zu einem Ergebnis kam—etwa bei technischen Analysen, Strategien oder komplexem Troubleshooting.',
             'Die fünf Schritte des TRACE Framework sind:',
@@ -769,6 +777,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'Qué es el Framework TRACE',
+          snippets: [
+            { type: 'in-one-sentence', text: 'TRACE es un patrón de prompt centrado en el razonamiento que exige al modelo mostrar su desarrollo y no solo su conclusión, para tareas donde el camino importa tanto como la respuesta.' },
+            { type: 'in-plain-terms', text: 'Es la diferencia entre un resultado y un examen corregido. Si ves los pasos, detectas la suposición equivocada que produjo una conclusión segura pero inservible, en vez de tener que fiarte de la cifra final.' },
+          ],
           content: [
             '**El Framework TRACE es un patrón de prompt centrado en el razonamiento que obliga a los modelos de lenguaje de gran escala a mostrar su trabajo, no solo su respuesta final.** Está diseñado para tareas donde te importa cómo llegó el modelo a un resultado, como análisis técnico, estrategia o resolución de problemas complejos.',
             'Una interpretación común de TRACE es:',
@@ -1075,6 +1087,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'ما هو إطار TRACE',
+          snippets: [
+            { type: 'in-one-sentence', text: 'إطار TRACE نمط برومبت يضع الاستدلال أولاً ويُلزم النموذج بإظهار خطوات عمله لا نتيجته وحدها، وهو مخصص للمهام التي تهمّ فيها كيفية الوصول إلى الإجابة بقدر الإجابة نفسها.' },
+            { type: 'in-plain-terms', text: 'إنه الفرق بين إجابة وورقة امتحان مصحَّحة. حين ترى الخطوات، تلتقط الافتراض الخاطئ الواحد الذي أنتج استنتاجاً واثقاً لكنه عديم الفائدة، بدل أن تضطر للوثوق بالرقم النهائي.' },
+          ],
           content: [
             '**إطار TRACE هو نمط طلب مرتكز على الاستدلال يُلزم نماذج اللغة الكبيرة بإظهار عملها، وليس فقط إجابتها النهائية.** صُمّم للمهام التي تهتم فيها بكيفية وصول النموذج إلى نتيجة، كالتحليل التقني والاستراتيجية وحل المشكلات المعقدة.',
             'التفسير الشائع لـ TRACE هو:',
@@ -1378,6 +1394,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'O que é o Framework TRACE',
+          snippets: [
+            { type: 'in-one-sentence', text: 'O TRACE é um padrão de prompt centrado no raciocínio que exige do modelo mostrar o caminho percorrido, e não apenas a conclusão, para tarefas em que o como pesa tanto quanto a resposta.' },
+            { type: 'in-plain-terms', text: 'É a diferença entre um resultado e uma prova corrigida. Vendo os passos, você identifica a única suposição errada que gerou uma conclusão confiante mas inútil, em vez de ter que confiar no número final.' },
+          ],
           content: [
             '**O Framework TRACE é um padrão de prompt centrado no raciocínio que obriga os grandes modelos de linguagem a mostrar seu trabalho, não apenas sua resposta final.** Ele é projetado para tarefas em que você se importa com como o modelo chegou a um resultado, como análise técnica, estratégia ou solução de problemas complexos.',
             'Uma interpretação comum do TRACE é:',
@@ -1650,6 +1670,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'Qu\'est-ce que le Framework TRACE',
+          snippets: [
+            { type: 'in-one-sentence', text: 'TRACE est un modèle de prompt axé sur le raisonnement qui oblige le modèle à exposer son cheminement et non seulement sa conclusion, pour les tâches où la manière compte autant que la réponse.' },
+            { type: 'in-plain-terms', text: 'C\'est la différence entre un résultat et une copie corrigée. En voyant les étapes, vous repérez l\'hypothèse fausse qui a produit une conclusion assurée mais inutilisable, au lieu de devoir vous fier au chiffre final.' },
+          ],
           content: [
             '**Le Framework TRACE force les modèles à montrer leur travail plutôt que de simplement donner une réponse finale.** C\'est particulièrement utile pour les tâches où vous avez besoin de comprendre comment le modèle a raisonné.',
             'Les cinq étapes du Framework TRACE sont :',
@@ -2009,6 +2033,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'TRACEフレームワークとは',
+          snippets: [
+            { type: 'in-one-sentence', text: 'TRACE は推論を重視したプロンプトパターンであり、モデルに結論だけでなく思考の過程を示させます。答えそのものと同じくらい、どうやってそこに至ったかが重要なタスク向けです。' },
+            { type: 'in-plain-terms', text: '答えだけを見るのと、添削済みの答案を見るのとの違いです。途中の手順が見えれば、自信ありげでも役に立たない結論を生んだ「たった一つの誤った前提」を見つけられます。最終的な数字を信じるしかない状況にはなりません。' },
+          ],
           content: [
             '**TRACEフレームワークは、AIモデルに「どう考えたのか」を詳しく説明させるプロンプト構造です。** 最終的な答えだけでは分からない思考プロセスが可視化されるため、判断の信頼度が著しく向上します。',
             '5つのステップの構成：',
@@ -2398,6 +2426,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'TRACE框架是什么',
+          snippets: [
+            { type: 'in-one-sentence', text: 'TRACE 是一种以推理为先的提示词模式，要求模型展示推导过程而不只是结论，适用于「怎么得出的」与「答案是什么」同等重要的任务。' },
+            { type: 'in-plain-terms', text: '这就像只看一个答案，和看一份批改过的卷子之间的差别。步骤摆在眼前，你就能揪出那个导致结论看似笃定却毫无用处的错误前提，而不必被迫相信最后那个数字。' },
+          ],
           content: [
             '**TRACE框架强制AI模型展示它的思考过程，而不是只给出最终答案。** 这在你需要理解模型是如何得出结论的场景中特别有用。',
             'TRACE的5个步骤是：',
@@ -2817,6 +2849,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         whatIsTRACE: {
           title: 'TRACE 프레임워크란 무엇인가',
+          snippets: [
+            { type: 'in-one-sentence', text: 'TRACE는 추론을 우선하는 프롬프트 패턴으로, 모델이 결론만이 아니라 풀이 과정을 함께 제시하도록 요구합니다. 답에 이른 방식이 답만큼 중요한 작업에 적합합니다.' },
+            { type: 'in-plain-terms', text: '답만 받아 보는 것과 채점된 답안지를 보는 것의 차이입니다. 단계가 보이면, 확신에 차 있지만 쓸모없는 결론을 만들어 낸 잘못된 전제 하나를 찾아낼 수 있습니다. 최종 숫자를 그냥 믿을 수밖에 없는 상황이 아니게 됩니다.' },
+          ],
           content: [
             '**TRACE 프레임워크는 대형 언어 모델이 최종 답변만이 아닌 추론 과정 전체를 보여주도록 강제하는 추론 우선 프롬프트 패턴입니다.** 기술 분석, 전략, 복잡한 문제 해결 등 모델이 결과에 어떻게 도달했는지가 중요한 작업을 위해 설계되었습니다.',
             'TRACE의 일반적인 해석은 다음과 같습니다:',

@@ -68,6 +68,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         whatIsNegativePrompting: {
           id: 'what-is-negative-prompting',
           title: 'What Negative Prompting Is',
+          snippets: [
+            { type: 'in-one-sentence', text: 'Negative prompting states what the output must not contain, and works reliably in image generation while often backfiring with language models, which tend to act on the very thing you named.' },
+            { type: 'in-plain-terms', text: 'Telling a model "don\'t mention pricing" is like telling someone not to think of a pink elephant. Image tools have a real slot for exclusions; text models just see the words. Say what you do want instead.' },
+          ],
           content: [
             '**Negative prompting means adding explicit "do not" rules to your prompts alongside what you want the model to do.** Instead of only describing the target output, you also specify unwanted topics, tones, formats, or mistakes.',
             'These negative instructions can cover banned phrases, prohibited content categories, off-limits opinions, or simply styles you do not want (for example "no jokes," "no emojis," or "avoid hype words"). The clearer the "do not" rules, the easier it is for the model to stay aligned.',
@@ -317,6 +321,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
   sections: {
     whatIsNegativePrompting: {
       title: 'Was ist Negatives Prompting?',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Negatives Prompting benennt, was die Ausgabe nicht enthalten darf; bei der Bildgenerierung funktioniert das zuverlässig, bei Sprachmodellen schlägt es oft fehl, da sie dazu neigen, gerade das Genannte aufzugreifen.' },
+        { type: 'in-plain-terms', text: 'Einem Modell zu sagen „erwähne keine Preise" ist, als bäte man jemanden, nicht an einen rosa Elefanten zu denken. Bildwerkzeuge haben ein echtes Feld für Ausschlüsse, Textmodelle sehen nur die Wörter. Sagen Sie lieber, was Sie wollen.' },
+      ],
       content: [
         '**Negatives Prompting bedeutet, explizite „Nicht-Tun"-Regeln zu Ihren Prompts hinzuzufügen, parallel zu dem, was Sie vom Modell erwarten.** Anstatt nur das gewünschte Ergebnis zu beschreiben, legen Sie auch fest, welche Themen, Töne, Formate oder Fehler zu vermeiden sind.',
         'Diese negativen Anweisungen können verbotene Begriffe, unzulässige Inhaltskategorien, tabuisierte Meinungen oder einfach unerwünschte Stile abdecken (beispielsweise „keine Witze", „keine Emojis", „keine Marketingsprache"). Je expliziter Ihre „Nicht-Tun"-Regeln, desto leichter bleibt das Modell ausgerichtet.',
@@ -621,6 +629,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whatIsNegativePrompting: {
       id: 'what-is-negative-prompting',
       title: 'Qué es el negative prompting',
+      snippets: [
+        { type: 'in-one-sentence', text: 'El negative prompting indica qué no debe aparecer en la salida; funciona de forma fiable en generación de imágenes, pero suele fallar con modelos de lenguaje, que tienden a fijarse justo en aquello que has nombrado.' },
+        { type: 'in-plain-terms', text: 'Decirle a un modelo "no menciones los precios" es como pedirle a alguien que no piense en un elefante rosa. Las herramientas de imagen tienen un campo real para exclusiones; los modelos de texto solo ven las palabras. Di mejor lo que sí quieres.' },
+      ],
       content: [
         '**El negative prompting significa añadir reglas explícitas de "no hacer" a tus prompts junto con lo que quieres que haga el modelo.** En lugar de describir solo la salida objetivo, también especificas temas, tonos, formatos o errores no deseados.',
         'Estas instrucciones negativas pueden cubrir frases prohibidas, categorías de contenido no permitidas, opiniones fuera de límites o simplemente estilos que no quieres (por ejemplo "sin chistes", "sin emojis" o "evita las palabras de hype"). Cuanto más claras sean las reglas de "no hacer", más fácil le resultará al modelo mantenerse alineado.',
@@ -959,6 +971,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whatIsNegativePrompting: {
       id: 'what-is-negative-prompting',
       title: 'ما هو البرومبت السلبي',
+      snippets: [
+        { type: 'in-one-sentence', text: 'يحدد البرومبت السلبي ما يجب ألا يتضمنه الناتج، وهو يعمل بموثوقية في توليد الصور بينما يرتد كثيراً مع نماذج اللغة التي تميل إلى التقاط الشيء نفسه الذي سمّيته.' },
+        { type: 'in-plain-terms', text: 'أن تقول للنموذج «لا تذكر الأسعار» أشبه بأن تطلب من أحدهم ألا يفكر في فيل وردي. أدوات الصور لديها حقل فعلي للاستثناءات، أما نماذج النصوص فلا ترى سوى الكلمات. قل ما تريده بدلاً من ذلك.' },
+      ],
       content: [
         '**البرومبت السلبي يعني إضافة قواعد "لا تفعل" صريحة إلى برومبتاتك جنبًا إلى جنب مع ما تريد من النموذج فعله.** بدلًا من وصف المخرجات المستهدفة فقط، تُحدّد أيضًا المواضيع والنبرات والتنسيقات أو الأخطاء غير المرغوبة.',
         'يمكن أن تغطي هذه التعليمات السلبية العبارات المحظورة وفئات المحتوى غير المسموح بها والآراء الخارجة عن النطاق أو ببساطة الأساليب التي لا تريدها (مثل "بدون نكات"، "بدون رموز تعبيرية"، أو "تجنب الكليشيهات"). كلما كانت قواعد "لا تفعل" أوضح، كان من الأسهل على النموذج البقاء ملتزمًا.',
@@ -1292,6 +1308,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whatIsNegativePrompting: {
       id: 'what-is-negative-prompting',
       title: 'O que é o negative prompting',
+      snippets: [
+        { type: 'in-one-sentence', text: 'O negative prompting declara o que a saída não deve conter; funciona de forma confiável na geração de imagens, mas costuma sair pela culatra com modelos de linguagem, que tendem a agarrar justamente o que você nomeou.' },
+        { type: 'in-plain-terms', text: 'Dizer a um modelo "não mencione preços" é como pedir para alguém não pensar em um elefante rosa. Ferramentas de imagem têm um campo de verdade para exclusões; modelos de texto só enxergam as palavras. Diga o que você quer, em vez disso.' },
+      ],
       content: [
         '**O negative prompting significa adicionar regras explícitas de "não fazer" aos seus prompts junto com o que você quer que o modelo faça.** Em vez de descrever apenas a saída desejada, você também especifica tópicos, tons, formatos ou erros indesejados.',
         'Essas instruções negativas podem cobrir frases proibidas, categorias de conteúdo não permitidas, opiniões fora dos limites ou simplesmente estilos que você não quer (por exemplo "sem piadas", "sem emojis" ou "evite palavras de hype"). Quanto mais claras as regras de "não fazer", mais fácil será para o modelo se manter alinhado.',
@@ -1648,6 +1668,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whatIsNegativePrompting: {
       id: 'what-is-negative-prompting',
       title: 'Qu\'est-ce que le Guidage Négatif',
+      snippets: [
+        { type: 'in-one-sentence', text: 'Le guidage négatif indique ce que la sortie ne doit pas contenir ; il fonctionne de façon fiable en génération d\'images mais se retourne souvent contre vous avec les modèles de langage, qui tendent à saisir précisément ce que vous avez nommé.' },
+        { type: 'in-plain-terms', text: 'Dire à un modèle « ne parle pas des tarifs », c\'est demander à quelqu\'un de ne pas penser à un éléphant rose. Les outils d\'image disposent d\'un vrai champ d\'exclusion ; les modèles de texte ne voient que les mots. Dites plutôt ce que vous voulez.' },
+      ],
       content: [
         '**Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à une invite, aux côtés d\'instructions positives.** Ces règles contraignent le contenu (pas de conseils médicaux), la tonalité (pas de mots hyperboliques), la structure (pas de listes à puces), ou le comportement (jamais fabriquer de données).',
         'Chaque règle agit comme un garde-fou qui prévient les modes de défaillance connus.',
@@ -2004,6 +2028,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whatIsNegativePrompting: {
       id: 'what-is-negative-prompting',
       title: 'ネガティブプロンプティングとは',
+      snippets: [
+        { type: 'in-one-sentence', text: 'ネガティブプロンプティングは出力に含めてはならない要素を指定する手法で、画像生成では確実に機能する一方、言語モデルでは名指しした当のものを拾ってしまい逆効果になりがちです。' },
+        { type: 'in-plain-terms', text: 'モデルに「価格には触れないで」と言うのは、ピンクの象を思い浮かべないでと頼むようなものです。画像ツールには除外専用の入力欄がありますが、テキストモデルには単なる単語にしか見えません。代わりに「してほしいこと」を伝えてください。' },
+      ],
       content: [
         '**ネガティブプロンプティングとは、プロンプトに明示的な「してはいけないこと」ルールを追加することです。** これらのルールはコンテンツ（医学的助言なし）、トーン（大げさな言葉なし）、構造（箇条書きなし）、または振る舞い（データを作らない）を制約します。',
         'それぞれのルールは既知の障害モードを防ぐ保護柵として機能します。',
@@ -2417,6 +2445,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     whatIsNegativePrompting: {
       id: 'what-is-negative-prompting',
       title: '네거티브 프롬프팅이란',
+      snippets: [
+        { type: 'in-one-sentence', text: '네거티브 프롬프팅은 결과물에 포함되어서는 안 되는 요소를 명시하는 방식으로, 이미지 생성에서는 안정적으로 작동하지만 언어 모델에서는 지목한 대상을 오히려 끌어와 역효과를 내는 경우가 많습니다.' },
+        { type: 'in-plain-terms', text: '모델에게 "가격은 언급하지 마세요"라고 말하는 것은 분홍 코끼리를 떠올리지 말라고 부탁하는 것과 같습니다. 이미지 도구에는 제외 항목을 넣는 실제 입력란이 있지만, 텍스트 모델에게는 그저 단어로 보일 뿐입니다. 대신 원하는 것을 말씀하십시오.' },
+      ],
       content: [
         '**네거티브 프롬프팅이란 모델에게 원하는 것을 지시하는 것과 함께 프롬프트에 명시적인 "금지" 규칙을 추가하는 것을 의미합니다.** 목표 출력만 설명하는 대신, 원하지 않는 주제, 어조, 형식 또는 실수도 지정합니다.',
         '이러한 네거티브 지시문은 금지 문구, 금지 콘텐츠 범주, 허용되지 않는 의견 또는 단순히 원하지 않는 스타일(예: "농담 금지", "이모지 금지", "과장 표현 피하기")을 다룰 수 있습니다. "금지" 규칙이 명확할수록 모델이 정렬을 유지하기 쉬워집니다.',
