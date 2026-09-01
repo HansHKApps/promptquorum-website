@@ -1,15 +1,27 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
-import { useSearchParams, usePathname } from 'next/navigation'
-import { Suspense } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
+import { usePathname } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
+import { getLangDir } from '@/lib/i18n/constants'
+import { claimPromptSlot, releasePromptSlot } from '@/lib/promptSlot'
 
 const STORAGE_KEY = 'push_prompt_dismissed_until'
 const SESSION_COUNT_KEY = 'pq_session_count'
 const SESSION_ACTIVE_KEY = 'pq_session_active'
+const TIME_ON_SITE_KEY = 'pq_time_on_site_ms'
+// Permanent, not a suppression window: once someone has actually subscribed we
+// never ask again on this browser.
+const SUBSCRIBED_KEY = 'pq_push_subscribed'
+const SLOT_ID = 'push_prompt'
 const SUPPRESS_DURATION_MS = 90 * 24 * 60 * 60 * 1000 // 3 months
-const NEW_VISITOR_DELAY_MS = 10 * 60 * 1000 // 10 minutes
-const RETURN_VISITOR_DELAY_MS = 30 * 1000 // 30 seconds on return visit
+// Single rule for everyone: 5 minutes of cumulative time on the site, passive or
+// active. Accumulates across page views and visits, so it is real time spent, not
+// "5 minutes since this particular page loaded".
+const REQUIRED_TIME_ON_SITE_MS = 5 * 60 * 1000
+const HEARTBEAT_MS = 5 * 1000
+// A sleeping laptop or a tab left open overnight must not credit hours in one tick.
+const MAX_TICK_MS = 15 * 1000
 
 interface OneSignalType {
   init: (config: {
@@ -75,29 +87,95 @@ const COPY: Record<
     allow: '加入',
     dismiss: '暂不',
   },
+  es: {
+    title: 'Haz que la IA haga lo que realmente quieres',
+    body: 'Técnicas reales. Prompts probados. Cero relleno. En tu navegador en cuanto publicamos.',
+    allow: 'Me apunto',
+    dismiss: 'Quizá más tarde',
+  },
+  pt: {
+    title: 'Faça a IA fazer o que você realmente quer',
+    body: 'Técnicas reais. Prompts testados. Zero enrolação. No seu navegador assim que publicamos.',
+    allow: 'Quero sim',
+    dismiss: 'Talvez depois',
+  },
+  ar: {
+    title: 'اجعل الذكاء الاصطناعي ينفّذ ما تريده فعلاً',
+    body: 'تقنيات حقيقية. مطالبات مُختبرة. بلا حشو. تصلك في متصفحك فور النشر.',
+    allow: 'أنا معكم',
+    dismiss: 'ربما لاحقاً',
+  },
+  ko: {
+    title: 'AI가 진짜 원하는 대로 움직이게',
+    body: '검증된 기법과 실전 프롬프트. 군더더기 없이, 게시되는 순간 브라우저로.',
+    allow: '참여할게요',
+    dismiss: '나중에',
+  },
+}
+
+/**
+ * True if this browser is already a push subscriber, by any of three signals:
+ * our own permanent flag, the live OneSignal SDK state, or a granted browser
+ * permission (which on this site can only come from this banner). The SDK loads
+ * async, so the flag and the permission check are what cover an early render.
+ */
+function isAlreadySubscribed(): boolean {
+  try {
+    if (localStorage.getItem(SUBSCRIBED_KEY) === '1') return true
+  } catch {
+    /* ignore */
+  }
+  try {
+    if (window.OneSignal?.User?.PushSubscription?.optedIn) return true
+  } catch {
+    /* ignore */
+  }
+  try {
+    if (typeof Notification !== 'undefined' && Notification.permission === 'granted') return true
+  } catch {
+    /* ignore */
+  }
+  return false
+}
+
+function markSubscribed(): void {
+  try {
+    localStorage.setItem(SUBSCRIBED_KEY, '1')
+  } catch {
+    /* ignore */
+  }
 }
 
 function PushPromptBannerInner() {
-  const searchParams = useSearchParams()
   const pathname = usePathname()
-
-  // Detect language from query param, pathname, or default to en
-  const rawLang = searchParams?.get('lang') ?? ''
-  let lang = 'en'
-  if (['en', 'de', 'fr', 'ja', 'zh'].includes(rawLang)) {
-    lang = rawLang
-  } else {
-    // Try to detect from pathname (e.g., /de/prompt-bites → de)
-    const pathMatch = pathname?.match(/^\/([a-z]{2})\//)
-    if (pathMatch && ['en', 'de', 'fr', 'ja', 'zh'].includes(pathMatch[1])) {
-      lang = pathMatch[1]
-    }
-  }
+  // Same resolution as the rest of the site: path prefix wins, legacy ?lang= is
+  // handled (and cleaned up) by the hook. The hand-rolled detector this replaces
+  // knew only 5 of the 9 locales and served English to /es/, /pt/, /ar/ and /ko/.
+  const lang = useLang()
+  const dir = getLangDir(lang)
   const c = (COPY[lang as keyof typeof COPY] ?? COPY.en)!
 
   const [visible, setVisible] = useState(false)
+  const visitorTypeRef = useRef<'new' | 'returning'>('new')
 
   useEffect(() => {
+    // Already a subscriber — never ask again, and don't even start the timer.
+    if (isAlreadySubscribed()) {
+      markSubscribed()
+      return
+    }
+
+    // The SDK may resolve after this effect runs; if it reports an existing
+    // subscription, record it permanently and pull the banner if it is up.
+    window.OneSignalDeferred = window.OneSignalDeferred || []
+    window.OneSignalDeferred.push(async (OneSignal: OneSignalType) => {
+      if (OneSignal.User?.PushSubscription?.optedIn) {
+        markSubscribed()
+        setVisible(false)
+        releasePromptSlot(SLOT_ID)
+      }
+    })
+
     try {
       const until = localStorage.getItem(STORAGE_KEY)
       if (until && Date.now() < parseInt(until, 10)) return
@@ -119,27 +197,61 @@ function PushPromptBannerInner() {
       /* ignore */
     }
 
-    const isReturning = sessionCount >= 2
-    const delay = isReturning ? RETURN_VISITOR_DELAY_MS : NEW_VISITOR_DELAY_MS
+    visitorTypeRef.current = sessionCount >= 2 ? 'returning' : 'new'
 
-    // Don't show if already subscribed via OneSignal
-    const checkSubscribed = () => {
+    const readElapsed = () => {
       try {
-        const w = window as Window & { OneSignal?: OneSignalType }
-        if (w.OneSignal?.User?.PushSubscription?.optedIn) return true
+        return parseInt(localStorage.getItem(TIME_ON_SITE_KEY) || '0', 10) || 0
+      } catch {
+        return 0
+      }
+    }
+
+    let elapsed = readElapsed()
+    let last = Date.now()
+
+    const timer = setInterval(() => {
+      const now = Date.now()
+      elapsed += Math.min(now - last, MAX_TICK_MS)
+      last = now
+      try {
+        localStorage.setItem(TIME_ON_SITE_KEY, String(elapsed))
       } catch {
         /* ignore */
       }
-      return false
-    }
 
-    const timer = setTimeout(() => {
-      if (!checkSubscribed()) {
-        setVisible(true)
+      if (elapsed < REQUIRED_TIME_ON_SITE_MS) return
+
+      // Re-check: they may have subscribed during these 5 minutes.
+      if (isAlreadySubscribed()) {
+        clearInterval(timer)
+        return
       }
-    }, delay)
 
-    return () => clearTimeout(timer)
+      // The Google preferred-sources card may already own the screen. Keep the
+      // heartbeat running and try again next tick rather than stacking on it.
+      if (!claimPromptSlot(SLOT_ID)) return
+
+      clearInterval(timer)
+      setVisible(true)
+      try {
+        window.umami?.track('push_prompt_shown', {
+          visitor_type: visitorTypeRef.current,
+          time_on_site_min: Math.round(elapsed / 60000),
+          source_page: pathname,
+          lang,
+        })
+      } catch {
+        /* silent */
+      }
+    }, HEARTBEAT_MS)
+
+    return () => {
+      clearInterval(timer)
+      releasePromptSlot(SLOT_ID)
+    }
+    // Armed once per mount — pathname/lang are only read inside the heartbeat.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const dismiss = useCallback(() => {
@@ -149,7 +261,17 @@ function PushPromptBannerInner() {
       /* ignore */
     }
     setVisible(false)
-  }, [])
+    releasePromptSlot(SLOT_ID)
+    try {
+      window.umami?.track('push_prompt_dismiss', {
+        visitor_type: visitorTypeRef.current,
+        source_page: pathname,
+        lang,
+      })
+    } catch {
+      /* silent */
+    }
+  }, [pathname, lang])
 
   const allow = useCallback(() => {
     try {
@@ -158,15 +280,41 @@ function PushPromptBannerInner() {
       /* ignore */
     }
     setVisible(false)
+    releasePromptSlot(SLOT_ID)
+    try {
+      window.umami?.track('push_prompt_allow', {
+        visitor_type: visitorTypeRef.current,
+        source_page: pathname,
+        lang,
+      })
+    } catch {
+      /* silent */
+    }
     window.OneSignalDeferred = window.OneSignalDeferred || []
     window.OneSignalDeferred.push(async (OneSignal: OneSignalType) => {
       await OneSignal.Notifications?.requestPermission()
       // After permission, tag with language (mirrors OneSignalInit.tsx)
-      if (OneSignal.User.PushSubscription.optedIn) {
+      const optedIn = OneSignal.User.PushSubscription.optedIn
+      if (optedIn) {
+        markSubscribed()
         await OneSignal.User.addTags({ lang })
       }
+      // Separates "clicked our banner" from "actually granted the browser prompt" —
+      // without this the funnel stops at push_prompt_allow and the real opt-in rate
+      // only exists inside OneSignal.
+      try {
+        window.umami?.track('push_prompt_permission', {
+          result: optedIn ? 'granted' : 'not_granted',
+          browser_permission:
+            typeof Notification !== 'undefined' ? Notification.permission : 'unavailable',
+          source_page: pathname,
+          lang,
+        })
+      } catch {
+        /* silent */
+      }
     })
-  }, [lang])
+  }, [pathname, lang])
 
   if (!visible) return null
 
@@ -174,6 +322,7 @@ function PushPromptBannerInner() {
     <div
       role="dialog"
       aria-label="Push notification opt-in"
+      dir={dir}
       style={{
         position: 'fixed',
         bottom: '96px',
@@ -247,9 +396,7 @@ function PushPromptBannerInner() {
 }
 
 export function PushPromptBanner() {
-  return (
-    <Suspense>
-      <PushPromptBannerInner />
-    </Suspense>
-  )
+  // No Suspense boundary needed since useSearchParams() is gone — usePathname()
+  // and useLang() do not suspend.
+  return <PushPromptBannerInner />
 }

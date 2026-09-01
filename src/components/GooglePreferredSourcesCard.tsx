@@ -15,10 +15,12 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLang } from '@/hooks/useLang'
 import { cn } from '@/lib/utils'
+import { claimPromptSlot, releasePromptSlot } from '@/lib/promptSlot'
 
 const DISMISS_KEY = 'pq_google_ps_dismissed_until'
 const DISMISS_DURATION_MS = 14 * 24 * 60 * 60 * 1000
 const SHOW_DELAY_MS = 30 * 1000
+const SLOT_ID = 'google_preferred_sources'
 
 const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/, /\/settings(\/|$)/, /\/preferences(\/|$)/]
 
@@ -155,6 +157,8 @@ export function GooglePreferredSourcesCard() {
     }
 
     timerRef.current = setTimeout(() => {
+      // Never stack on the push opt-in banner — one interruptive prompt at a time.
+      if (!claimPromptSlot(SLOT_ID)) return
       setMountedVisible(true)
       try {
         window.umami?.track('google_preferred_sources_shown', {
@@ -168,8 +172,25 @@ export function GooglePreferredSourcesCard() {
 
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current)
+      releasePromptSlot(SLOT_ID)
     }
   }, [pathname, lang])
+
+  const cancelConfirm = useCallback(
+    (via: 'cancel_button' | 'backdrop') => {
+      setShowConfirm(false)
+      try {
+        window.umami?.track('google_preferred_sources_confirm_cancel', {
+          via,
+          source_page: pathname,
+          lang,
+        })
+      } catch {
+        // silent
+      }
+    },
+    [pathname, lang]
+  )
 
   const dismiss = useCallback(() => {
     try {
@@ -179,6 +200,7 @@ export function GooglePreferredSourcesCard() {
     }
     setDismissed(true)
     setMountedVisible(false)
+    releasePromptSlot(SLOT_ID)
   }, [])
 
   if (dismissed || !mountedVisible || isHiddenPath(pathname)) return null
@@ -194,7 +216,17 @@ export function GooglePreferredSourcesCard() {
           <p className="mt-1.5 text-xs text-text-secondary leading-relaxed">{c.description}</p>
           <div className="mt-3 flex flex-col gap-2">
             <button
-              onClick={() => setShowConfirm(true)}
+              onClick={() => {
+                setShowConfirm(true)
+                try {
+                  window.umami?.track('google_preferred_sources_cta_click', {
+                    source_page: pathname,
+                    lang,
+                  })
+                } catch {
+                  // silent
+                }
+              }}
               className="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               {c.cta}
@@ -243,7 +275,7 @@ export function GooglePreferredSourcesCard() {
         <div
           dir={dir}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-          onClick={() => setShowConfirm(false)}
+          onClick={() => cancelConfirm('backdrop')}
         >
           <div
             className="w-full max-w-sm rounded-lg bg-white p-6 shadow-lg"
@@ -253,7 +285,7 @@ export function GooglePreferredSourcesCard() {
             <p className="mt-3 text-sm text-text-secondary leading-relaxed">{c.confirmBody}</p>
             <div className="mt-6 flex gap-3">
               <button
-                onClick={() => setShowConfirm(false)}
+                onClick={() => cancelConfirm('cancel_button')}
                 className="flex-1 rounded-md border border-gray-200 px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:bg-gray-50"
               >
                 {c.confirmDismiss}
