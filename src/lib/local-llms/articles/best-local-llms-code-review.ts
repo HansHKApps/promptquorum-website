@@ -138,6 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) -- IDE tools (Cursor, Continue.dev) to integrate your local code review model into VS Code or JetBrains',
+            '[Local AI Code Review vs. CodeRabbit](/local-llms/local-ai-code-review-vs-coderabbit-2026) -- whether to wire these models into PR-Agent as a self-hosted alternative to a SaaS review bot, and the honest limits of doing so',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) -- full benchmark comparison of coding models at 7B, 14B, 32B, and 70B tiers',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- RAM requirements at Q4_K_M for 32B and 70B models used in code review pipelines',
             '[How to Run 70B Models on Consumer Hardware](/local-llms/70b-models-consumer-hardware) -- VRAM and hardware requirements for running Llama 3.3 70B locally for code review',

@@ -199,6 +199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) — Choose between Cursor, Continue.dev, Cody and other IDE tools for your coding model.',
+            '[Local AI Code Review vs. CodeRabbit](/local-llms/local-ai-code-review-vs-coderabbit-2026) — Whether a self-hosted Qwen3-Coder + PR-Agent pipeline can replace a SaaS review bot, and the honest trade-offs of each.',
             '[Local LLMs With VS Code and Cursor](/local-llms/local-llms-with-vscode-cursor) — Detailed setup guide for both IDEs',
             '[Prompt Engineering Guide](/prompt-engineering) — Master prompting techniques to improve code generation',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) — Detailed benchmarks and model comparisons',
