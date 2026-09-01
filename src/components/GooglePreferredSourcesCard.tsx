@@ -176,6 +176,22 @@ export function GooglePreferredSourcesCard() {
     }
   }, [pathname, lang])
 
+  const cancelConfirm = useCallback(
+    (via: 'cancel_button' | 'backdrop') => {
+      setShowConfirm(false)
+      try {
+        window.umami?.track('google_preferred_sources_confirm_cancel', {
+          via,
+          source_page: pathname,
+          lang,
+        })
+      } catch {
+        // silent
+      }
+    },
+    [pathname, lang]
+  )
+
   const dismiss = useCallback(() => {
     try {
       localStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_DURATION_MS))
@@ -200,7 +216,17 @@ export function GooglePreferredSourcesCard() {
           <p className="mt-1.5 text-xs text-text-secondary leading-relaxed">{c.description}</p>
           <div className="mt-3 flex flex-col gap-2">
             <button
-              onClick={() => setShowConfirm(true)}
+              onClick={() => {
+                setShowConfirm(true)
+                try {
+                  window.umami?.track('google_preferred_sources_cta_click', {
+                    source_page: pathname,
+                    lang,
+                  })
+                } catch {
+                  // silent
+                }
+              }}
               className="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
               {c.cta}
@@ -249,7 +275,7 @@ export function GooglePreferredSourcesCard() {
         <div
           dir={dir}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-          onClick={() => setShowConfirm(false)}
+          onClick={() => cancelConfirm('backdrop')}
         >
           <div
             className="w-full max-w-sm rounded-lg bg-white p-6 shadow-lg"
@@ -259,7 +285,7 @@ export function GooglePreferredSourcesCard() {
             <p className="mt-3 text-sm text-text-secondary leading-relaxed">{c.confirmBody}</p>
             <div className="mt-6 flex gap-3">
               <button
-                onClick={() => setShowConfirm(false)}
+                onClick={() => cancelConfirm('cancel_button')}
                 className="flex-1 rounded-md border border-gray-200 px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:bg-gray-50"
               >
                 {c.confirmDismiss}
