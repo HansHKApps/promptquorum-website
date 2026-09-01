@@ -194,13 +194,13 @@ schema: {
             '**Usage tracking:** Every query logged with user ID, timestamp, tokens generated (for cost attribution).',
             '**Admin burden:** Minimal (automated monitoring). Scaling event = add GPU card + rebalance (no code changes).',
           ],
-          image: '/public/images/local-llm-cost-comparison.svg',
+          image: '/images/local-llm-cost-comparison.svg',
           imageCaption: 'Year 1: Local LLM costs $3,100 hardware + electricity vs. $12,000–$36,000 for cloud APIs. Year 3+: Monthly cost drops to $120 amortized, saving $16,000+ annually for active teams.',
         },
         'architecture': {
           id: 'architecture',
           title: 'Which Architecture: Single Server or Multi-GPU Cluster?',
-          image: '/public/images/team-llm-architecture-comparison.svg',
+          image: '/images/team-llm-architecture-comparison.svg',
           imageCaption: 'Single vLLM server handles 5-10 users with simple setup but single point of failure. Dual-GPU cluster (10-50 users) provides automatic failover and higher throughput with load balancing.',
           content: [
             '**Single vLLM server (5-10 users):**',
@@ -222,7 +222,7 @@ schema: {
         'auth': {
           id: 'auth',
           title: 'How to Set Up User Authentication & Access Control?',
-          image: '/public/images/team-llm-auth-flow.svg',
+          image: '/images/team-llm-auth-flow.svg',
           imageCaption: 'Simple token-based auth for SMB teams, and OAuth 2.0 with SAML 2.0 for enterprise SSO integration with automatic group assignment and role-based access control.',
           content: [
             '**Simple auth (SMB < 50 users):** API key per user. User sends `Authorization: Bearer $API_KEY` in request header. For compliance, see [enterprise compliance with local LLMs](/local-llms/enterprise-compliance-local-llms).',
@@ -244,7 +244,7 @@ schema: {
         'scaling': {
           id: 'scaling',
           title: 'How to Scale Local LLM Servers as Team Size Grows?',
-          image: '/public/images/team-scaling-progression.svg',
+          image: '/images/team-scaling-progression.svg',
           imageCaption: 'Scaling progression from 5-10 users on single GPU to 100+ users in enterprise multi-region deployment. Hardware requirements and setup time increase with team size.',
           content: [
             '**5-10 users:** 1× RTX 4090. Server: saturated when everyone runs inference simultaneously. Acceptable latency spikes.',
@@ -256,7 +256,7 @@ schema: {
         'monitoring': {
           id: 'monitoring',
           title: 'How to Monitor Performance & Troubleshoot Issues?',
-          image: '/public/images/team-llm-monitoring-dashboard.svg',
+          image: '/images/team-llm-monitoring-dashboard.svg',
           imageCaption: 'Real-time Prometheus metrics dashboard showing GPU utilization, request latency, queue depth, and throughput. Alerts trigger when latency exceeds 2 seconds or queue depth exceeds 10 requests.',
           content: [
             '**Prometheus metrics:** vLLM exports request latency, tokens/sec, queue length. Scrape every 15 sec.',
@@ -1662,13 +1662,13 @@ schema: {
             '**Seguimiento de uso:** Cada consulta registrada con ID de usuario, marca de tiempo y tokens generados (para atribución de costos).',
             '**Carga administrativa:** Mínima (monitoreo automatizado). Evento de escalado = agregar tarjeta GPU + reequilibrar (sin cambios de código).',
           ],
-          image: '/public/images/local-llm-cost-comparison.svg',
+          image: '/images/local-llm-cost-comparison.svg',
           imageCaption: 'Año 1: El LLM local cuesta $3.100 en hardware + electricidad frente a $12.000–$36.000 en APIs en la nube. Año 3+: El costo mensual baja a $120 amortizado, ahorrando más de $16.000 anuales para equipos activos.',
         },
         'architecture': {
           id: 'architecture',
           title: '¿Qué arquitectura: servidor único o clúster multi-GPU?',
-          image: '/public/images/team-llm-architecture-comparison.svg',
+          image: '/images/team-llm-architecture-comparison.svg',
           imageCaption: 'Un servidor vLLM único maneja 5-10 usuarios con configuración sencilla pero con punto único de fallo. El clúster dual-GPU (10-50 usuarios) proporciona failover automático y mayor rendimiento con balanceo de carga.',
           content: [
             '**Servidor vLLM único (5-10 usuarios):**',
@@ -1690,7 +1690,7 @@ schema: {
         'auth': {
           id: 'auth',
           title: '¿Cómo configurar la autenticación de usuarios y el control de acceso?',
-          image: '/public/images/team-llm-auth-flow.svg',
+          image: '/images/team-llm-auth-flow.svg',
           imageCaption: 'Autenticación simple por token para pymes y OAuth 2.0 con SAML 2.0 para integración SSO enterprise con asignación automática de grupos y control de acceso basado en roles.',
           content: [
             '**Autenticación simple (pymes < 50 usuarios):** Clave API por usuario. El usuario envía `Authorization: Bearer $API_KEY` en el encabezado de la solicitud. Para cumplimiento normativo, consulta [compliance enterprise con LLMs locales](/es/local-llms/enterprise-compliance-local-llms).',
@@ -1712,7 +1712,7 @@ schema: {
         'scaling': {
           id: 'scaling',
           title: '¿Cómo escalar servidores LLM locales a medida que crece el equipo?',
-          image: '/public/images/team-scaling-progression.svg',
+          image: '/images/team-scaling-progression.svg',
           imageCaption: 'Progresión de escalado desde 5-10 usuarios en una sola GPU hasta 100+ usuarios en un despliegue enterprise multi-región. Los requisitos de hardware y el tiempo de configuración aumentan con el tamaño del equipo.',
           content: [
             '**5-10 usuarios:** 1× RTX 4090. El servidor se satura cuando todos ejecutan inferencia simultáneamente. Picos de latencia aceptables.',
@@ -1724,7 +1724,7 @@ schema: {
         'monitoring': {
           id: 'monitoring',
           title: '¿Cómo monitorear el rendimiento y solucionar problemas?',
-          image: '/public/images/team-llm-monitoring-dashboard.svg',
+          image: '/images/team-llm-monitoring-dashboard.svg',
           imageCaption: 'Panel de métricas Prometheus en tiempo real con utilización de GPU, latencia de solicitudes, profundidad de cola y rendimiento. Las alertas se activan cuando la latencia supera los 2 segundos o la cola supera las 10 solicitudes.',
           content: [
             '**Métricas Prometheus:** vLLM exporta latencia de solicitudes, tokens/seg y longitud de cola. Recoge datos cada 15 seg.',
@@ -1959,13 +1959,13 @@ schema: {
             '**تتبع الاستخدام:** كل استعلام مُسجَّل بمعرّف المستخدم والطابع الزمني والرموز المولّدة (لعزو التكاليف).',
             '**العبء الإداري:** ضئيل (مراقبة آلية). حدث التوسع = إضافة بطاقة GPU + إعادة الموازنة (دون تغييرات في الشيفرة).',
           ],
-          image: '/public/images/local-llm-cost-comparison.svg',
+          image: '/images/local-llm-cost-comparison.svg',
           imageCaption: 'السنة 1: يكلّف LLM المحلي 3,100$ عتاد + كهرباء مقابل 12,000$–36,000$ في واجهات API السحابية. السنة 3+: تنخفض التكلفة الشهرية إلى 120$ موزّعة، موفّرة أكثر من 16,000$ سنويًا للفرق النشطة.',
         },
         'architecture': {
           id: 'architecture',
           title: 'أي معمارية: خادم واحد أم عنقود متعدد GPU؟',
-          image: '/public/images/team-llm-architecture-comparison.svg',
+          image: '/images/team-llm-architecture-comparison.svg',
           imageCaption: 'يتعامل خادم vLLM واحد مع 5-10 مستخدمين بإعداد بسيط لكن بنقطة فشل واحدة. يوفّر العنقود الثنائي GPU (10-50 مستخدمًا) تجاوز فشل تلقائيًا وإنتاجية أعلى مع موازنة الأحمال.',
           content: [
             '**خادم vLLM واحد (5-10 مستخدمين):**',
@@ -1987,7 +1987,7 @@ schema: {
         'auth': {
           id: 'auth',
           title: 'كيف تُعِدّ مصادقة المستخدمين وضبط الوصول؟',
-          image: '/public/images/team-llm-auth-flow.svg',
+          image: '/images/team-llm-auth-flow.svg',
           imageCaption: 'مصادقة بسيطة بالرمز للشركات الصغيرة والمتوسطة وOAuth 2.0 مع SAML 2.0 لتكامل SSO المؤسسي مع تعيين تلقائي للمجموعات وضبط وصول قائم على الأدوار.',
           content: [
             '**مصادقة بسيطة (شركات صغيرة ومتوسطة < 50 مستخدمًا):** مفتاح API لكل مستخدم. يرسل المستخدم `Authorization: Bearer $API_KEY` في ترويسة الطلب. للامتثال التنظيمي، راجع [الامتثال المؤسسي مع نماذج LLM المحلية](/ar/local-llms/enterprise-compliance-local-llms).',
@@ -2009,7 +2009,7 @@ schema: {
         'scaling': {
           id: 'scaling',
           title: 'كيف توسّع خوادم LLM المحلية مع نمو الفريق؟',
-          image: '/public/images/team-scaling-progression.svg',
+          image: '/images/team-scaling-progression.svg',
           imageCaption: 'تدرّج التوسع من 5-10 مستخدمين على GPU واحدة إلى 100+ مستخدم في نشر مؤسسي متعدد المناطق. تزداد متطلبات العتاد ووقت الإعداد مع حجم الفريق.',
           content: [
             '**5-10 مستخدمين:** 1× RTX 4090. يتشبّع الخادم عندما يُشغّل الجميع الاستدلال في آن واحد. ذروات زمن استجابة مقبولة.',
@@ -2021,7 +2021,7 @@ schema: {
         'monitoring': {
           id: 'monitoring',
           title: 'كيف تراقب الأداء وتحل المشكلات؟',
-          image: '/public/images/team-llm-monitoring-dashboard.svg',
+          image: '/images/team-llm-monitoring-dashboard.svg',
           imageCaption: 'لوحة مقاييس Prometheus في الوقت الفعلي مع استخدام GPU وزمن استجابة الطلبات وعمق الطابور والإنتاجية. تُفعَّل التنبيهات عندما يتجاوز زمن الاستجابة ثانيتين أو يتجاوز الطابور 10 طلبات.',
           content: [
             '**مقاييس Prometheus:** يُصدِّر vLLM زمن استجابة الطلبات والرموز/ث وطول الطابور. اجمع البيانات كل 15 ثانية.',
@@ -2412,13 +2412,13 @@ schema: {
             '**사용량 추적:** 모든 쿼리가 사용자 ID, 타임스탬프, 생성된 토큰 수와 함께 기록됩니다(비용 귀속용).',
             '**관리 부담:** 최소화(자동화된 모니터링). 확장 이벤트 = GPU 카드 추가 + 재조정(코드 변경 없음).',
           ],
-          image: '/public/images/local-llm-cost-comparison.svg',
+          image: '/images/local-llm-cost-comparison.svg',
           imageCaption: '1년차: 로컬 LLM 비용은 하드웨어 + 전기료 $3,100인 반면 클라우드 API는 $12,000~$36,000입니다. 3년차 이후: 월간 비용이 상각 기준 $120으로 줄어들어 활성 팀의 경우 연간 $16,000 이상을 절약할 수 있습니다.',
         },
         'architecture': {
           id: 'architecture',
           title: '어떤 아키텍처를 선택해야 합니까: 단일 서버 또는 멀티 GPU 클러스터?',
-          image: '/public/images/team-llm-architecture-comparison.svg',
+          image: '/images/team-llm-architecture-comparison.svg',
           imageCaption: '단일 vLLM 서버는 간단한 설정으로 5~10명의 사용자를 처리하지만 단일 장애 지점이 존재합니다. 듀얼 GPU 클러스터(10~50명)는 로드 밸런싱을 통해 자동 장애 조치와 높은 처리량을 제공합니다.',
           content: [
             '**단일 vLLM 서버(5~10명):**',
@@ -2440,7 +2440,7 @@ schema: {
         'auth': {
           id: 'auth',
           title: '사용자 인증 및 접근 제어를 어떻게 설정합니까?',
-          image: '/public/images/team-llm-auth-flow.svg',
+          image: '/images/team-llm-auth-flow.svg',
           imageCaption: '중소기업 팀을 위한 간단한 토큰 기반 인증, 자동 그룹 할당 및 역할 기반 접근 제어를 갖춘 엔터프라이즈 SSO 통합을 위한 OAuth 2.0 및 SAML 2.0.',
           content: [
             '**간단한 인증(중소기업, 50명 미만):** 사용자당 API 키. 사용자는 요청 헤더에 `Authorization: Bearer $API_KEY`를 전송합니다. 규정 준수에 대해서는 [로컬 LLM을 통한 엔터프라이즈 규정 준수](/ko/local-llms/enterprise-compliance-local-llms)를 참조하십시오.',
@@ -2462,7 +2462,7 @@ schema: {
         'scaling': {
           id: 'scaling',
           title: '팀 규모가 증가함에 따라 로컬 LLM 서버를 어떻게 확장합니까?',
-          image: '/public/images/team-scaling-progression.svg',
+          image: '/images/team-scaling-progression.svg',
           imageCaption: '단일 GPU에서 5~10명부터 엔터프라이즈 다중 리전 배포에서 100명 이상까지의 확장 과정. 팀 규모가 증가함에 따라 하드웨어 요구 사항과 설정 시간도 증가합니다.',
           content: [
             '**5~10명:** 1× RTX 4090. 서버: 모든 사람이 동시에 추론을 실행할 때 포화 상태. 허용 가능한 지연 시간 급등.',
@@ -2474,7 +2474,7 @@ schema: {
         'monitoring': {
           id: 'monitoring',
           title: '성능을 어떻게 모니터링하고 문제를 해결합니까?',
-          image: '/public/images/team-llm-monitoring-dashboard.svg',
+          image: '/images/team-llm-monitoring-dashboard.svg',
           imageCaption: 'GPU 활용률, 요청 지연 시간, 큐 깊이 및 처리량을 보여주는 실시간 Prometheus 메트릭 대시보드. 지연 시간이 2초를 초과하거나 큐 깊이가 10개 요청을 초과하면 알림이 트리거됩니다.',
           content: [
             '**Prometheus 메트릭:** vLLM이 요청 지연 시간, tokens/sec, 큐 길이를 내보냅니다. 15초마다 스크랩합니다.',
