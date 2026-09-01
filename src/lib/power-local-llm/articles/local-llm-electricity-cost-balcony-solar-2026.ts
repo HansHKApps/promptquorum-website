@@ -1513,4 +1513,254 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'audience': { '@type': 'Audience', 'audienceType': 'Usuarios de LLM local que quieren saber el coste eléctrico real de su equipo y si el solar de balcón puede compensarlo' },
     },
   },
+  pt: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-01',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
+    current_hardware_mentioned: [
+      'RTX 4090',
+      'RTX 3090',
+      'RTX 4070',
+      'Mac Mini M4',
+      'MacBook Pro M4 Max',
+      'EcoFlow STREAM Ultra',
+      'Jackery HomePower 2000 Ultra',
+      'Zendure SolarFlow Hub 2000',
+      'BLUETTI AC180',
+      'BLUETTI AC180P',
+    ],
+    theme: 'Overview & Reference',
+    affiliateDisclosure: true,
+    title: 'Quanto custa em energia rodar um LLM local — e a energia solar de varanda consegue compensar (2026)',
+    seoTitle: 'Custo de energia de LLM local vs. solar de varanda (2026)',
+    intro:
+      'Uma GPU que roda um LLM local algumas horas por dia custa dinheiro real e calculável — cerca de $6,60/mês nos EUA para um uso moderado de 4 horas diárias, ou perto de $60/mês se uma placa que consome muita energia rodar 24 horas por dia. Um sistema solar de varanda de 800 W consegue cobrir com folga o caso moderado em um dia ensolarado de verão, mas não compensa um equipamento pesado e sempre ligado, especialmente no inverno. Este guia detalha o cálculo exato para o hardware comum de LLM local, compara o custo de energia entre EUA e Alemanha, e dimensiona a bateria que você realmente precisaria — com as ressalvas honestas sobre quando a energia solar realmente ajuda e quando não ajuda.',
+    metaDescription:
+      'Custo de energia de um LLM local calculado: consumo de RTX 4090/3090/4070 e Mac Mini M4, custo mensal nos EUA ($0,184/kWh) e na Alemanha (~€0,32/kWh), e se um solar de varanda de 800 W consegue compensar.',
+    twitterDescription:
+      'O que um LLM local realmente custa em energia — consumo de RTX 4090/3090/4070 e Mac Mini M4, custo mensal EUA vs. Alemanha, e se o solar de varanda de 800 W consegue compensar de forma realista.',
+    readTime: '10 min de leitura',
+    educationalLevel: 'Intermediate',
+    audience: 'Usuários de LLM local que querem saber o custo real de energia do seu equipamento e se a energia solar de varanda pode compensá-lo',
+    primaryTerm: 'custo de energia LLM local',
+    targetKeywords: [
+      'custo energia llm local',
+      'custo eletricidade llm 24/7',
+      'solar de varanda para gpu',
+      'compensar eletricidade ia com solar',
+      'calculadora consumo eletrico ia local',
+    ],
+    leadAnswerBlock:
+      '**Uma GPU em repouso que roda um LLM local algumas horas por dia custa cerca de $6,60/mês nos EUA (1,2 kWh/dia a 18,4¢/kWh) — um equipamento pesado rodando 24/7 com uma placa de classe RTX 4090 custa, em vez disso, cerca de $60/mês.** Um sistema solar de varanda de 800 W produz entre 3 e 4,5 kWh em um dia ensolarado de verão, mas apenas entre 0,5 e 1,5 kWh/dia no inverno — cobre com folga o caso de uso moderado no verão, mas não consegue compensar de forma significativa um equipamento pesado sempre ligado, em nenhuma estação. Dimensione sua bateria pelo consumo real da sua GPU, não pela potência nominal do sistema solar.',
+    quickAnswerTop: {
+      pt: {
+        question: 'Quanto custa em energia rodar um LLM local?',
+        answer:
+          'Uma GPU que funciona a 300 W por 4 horas ao dia custa cerca de $6,60/mês nos EUA (1,2 kWh/dia a 18,4¢/kWh) ou entre €11 e 15/mês na Alemanha (1,2 kWh/dia a 25–40 centavos/kWh, dependendo da tarifa). Uma GPU rodando 24/7 a 450 W custa mais perto de $60/mês nos EUA. Um sistema solar de varanda de 800 W consegue compensar o caso moderado no verão, mas não o caso pesado 24/7 em nenhuma estação.',
+        bullets: [
+          'RTX 4090: ~20–33 W em repouso, até 450 W (TBP) em carga',
+          'RTX 3090: ~18–26 W em repouso, ~350 W em carga',
+          'RTX 4070: 10 W em repouso, 186 W de média em jogos, 200 W de TDP nominal',
+          'Mac Mini M4: menos de 5 W em repouso, até ~65 W durante a inferência de LLM',
+          'Solar de varanda 800 W: ~3–4,5 kWh/dia no verão, ~0,5–1,5 kWh/dia no inverno (dados da Alemanha)',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Pontos principais', anchor: 'tldr' },
+      { label: 'Quanta energia o hardware de LLM local consome?', anchor: 'gpu-power' },
+      { label: 'Quanto isso custa por mês?', anchor: 'monthly-cost' },
+      { label: 'O solar de varanda consegue compensar um equipamento de LLM local?', anchor: 'solar-offset' },
+      { label: 'Qual tamanho de bateria você realmente precisa?', anchor: 'battery-sizing' },
+      { label: 'Quem deveria realmente fazer isso?', anchor: 'who-should-do-this' },
+      { label: 'Erros comuns', anchor: 'common-mistakes' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+      { label: 'Fontes', anchor: 'sources' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Um equipamento de LLM local custa cerca de $6,60/mês em energia para uso moderado de 4 horas diárias, ou perto de $60/mês em uso 24/7 — um solar de varanda de 800 W consegue compensar o caso moderado no verão, mas não o caso pesado 24/7 em nenhuma estação.' },
+      { type: 'plain-terms', content: 'kWh (quilowatt-hora) é a unidade em que sua conta de energia é cobrada — uma GPU de 300 watts rodando por 1 hora consome 0,3 kWh. Multiplique watts por horas, divida por 1.000 e multiplique pelo seu preço por kWh para obter o custo. A produção do solar de varanda é medida da mesma forma, então os dois números podem ser comparados diretamente.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Pontos principais',
+        isTldr: true,
+        items: [
+          'Uma GPU rodando 4 horas/dia a 300 W custa cerca de $6,60/mês nos EUA (18,4¢/kWh) ou entre €11 e 15/mês na Alemanha, dependendo da tarifa',
+          'Uma GPU rodando 24/7 a 450 W (classe RTX 4090) custa mais perto de $60/mês nos EUA — quase 10 vezes o caso de uso moderado',
+          'Apple Silicon (Mac Mini M4: menos de 5 W em repouso, ~65 W de pico de inferência) custa uma pequena fração de um equipamento com GPU dedicada',
+          'Um sistema solar de varanda de 800 W produz ~3–4,5 kWh em um dia ensolarado de verão, mas apenas ~0,5–1,5 kWh/dia no inverno — uma variação sazonal de fator 3 a 7',
+          'Dimensione sua bateria pelo consumo diário real da sua GPU, não pela potência nominal de 800 W do sistema solar — os dois números não são comparáveis',
+          'O limite francês para inversores solares plug-in é de 800 W, igual ao da Alemanha — não existe um limite francês separado e mais rígido para essa classe de sistema',
+        ],
+      },
+      gpuPower: {
+        id: 'gpu-power',
+        title: 'Quanta energia o hardware de LLM local realmente consome?',
+        content:
+          '**A diferença entre o consumo em repouso e em carga é o que torna o cálculo de energia não trivial — uma placa pode ficar quase silenciosa por 20 horas ao dia e ainda assim ser o maior item da sua conta se rodar no limite nas outras 4 horas.** Os números abaixo são especificações do fabricante e medições independentes, não um benchmark realizado pela PromptQuorum.',
+        columns: ['Hardware', 'Repouso', 'Carga / Inferência'],
+        rows: [
+          { 'Hardware': 'RTX 4090', 'Repouso': '~20–33 W', 'Carga / Inferência': 'Até 450 W (TBP)' },
+          { 'Hardware': 'RTX 3090', 'Repouso': '~18–26 W', 'Carga / Inferência': '~350 W' },
+          { 'Hardware': 'RTX 4070', 'Repouso': '10 W', 'Carga / Inferência': '186 W médio (TDP nominal 200 W)' },
+          { 'Hardware': 'Mac Mini M4', 'Repouso': 'Menos de 5 W', 'Carga / Inferência': 'Até ~65 W' },
+          { 'Hardware': 'MacBook Pro M4 Max', 'Repouso': 'Dígito único baixo', 'Carga / Inferência': '~40–80 W em inferência; ~110 W de pico do sistema' },
+        ],
+        items: [
+          'RTX 4090: a NVIDIA indica uma Total Board Power de 450 W; medições independentes mostram consumo em repouso entre 18 W (configurações com limite de potência agressivo) e 33 W (Founders Edition), e a carga pode chegar a 400–600 W dependendo da carga de trabalho.',
+          'RTX 3090: o repouso fica em torno de 18–26 W dependendo da configuração de tela; a carga total em jogos ou inferência gira em torno de 350 W, com algumas medições chegando a 365 W.',
+          'RTX 4070: números publicados pela própria NVIDIA — 10 W em repouso, 16 W em reprodução de vídeo, 186 W de média em jogos — contra um TDP nominal de 200 W. Picos reais medidos chegaram a 253 W.',
+          'Mac Mini M4: medido de forma independente com menos de 5 W em repouso e até ~65 W durante a inferência de LLM (uma medição registrou especificamente um pico de 50 W). Um cluster de cinco Mac Minis em inferência a todo vapor consumiu cerca de 200 W no total.',
+          'MacBook Pro M4 Max: a inferência de LLM sozinha consome cerca de 40–80 W; o sistema completo (incluindo a tela) atinge um pico de cerca de 110 W sob a carga combinada mais exigente — a faixa típica de inferência do Apple Silicon (30–70 W) fica bem abaixo dos 300 W ou mais de uma GPU de mesa dedicada.',
+        ],
+      },
+      monthlyCost: {
+        id: 'monthly-cost',
+        title: 'Quanto isso custa por mês?',
+        content:
+          '**A fórmula é a mesma em qualquer lugar: kWh = watts ÷ 1.000 × horas, depois custo = kWh × seu preço por kWh.** A eletricidade residencial dos EUA teve média de cerca de 18,4¢/kWh em meados de 2026 (EIA); a eletricidade residencial alemã é muito menos uniforme — as tarifas para novos clientes ficam em torno de 25–27 centavos/kWh, enquanto a tarifa padrão de "fornecimento básico" (Grundversorgung) pode chegar a 40 centavos/kWh, com a média domiciliar em torno de 31–32 centavos/kWh.',
+        columns: ['Padrão de uso', 'kWh/dia', 'Custo EUA/mês', 'Custo Alemanha/mês'],
+        rows: [
+          { 'Padrão de uso': '300 W, 4 h/dia (moderado)', 'kWh/dia': '1,2 kWh', 'Custo EUA/mês': '~$6,60', 'Custo Alemanha/mês': '~€11–15' },
+          { 'Padrão de uso': '65 W, 4 h/dia (Mac Mini M4)', 'kWh/dia': '0,26 kWh', 'Custo EUA/mês': '~$1,44', 'Custo Alemanha/mês': '~€2,50–3,20' },
+          { 'Padrão de uso': '450 W, 24 h/dia (pesado, contínuo)', 'kWh/dia': '10,8 kWh', 'Custo EUA/mês': '~$59,60', 'Custo Alemanha/mês': '~€100–130' },
+        ],
+        note: 'O número dos EUA usa a média residencial de 18,4¢/kWh reportada pela EIA (meados de 2026); os números da Alemanha usam uma faixa de 25–40 centavos/kWh que reflete a dispersão real das tarifas, não uma taxa única — confira sua própria conta antes de tratar qualquer um dos números como exato.',
+      },
+      solarOffset: {
+        id: 'solar-offset',
+        title: 'O solar de varanda consegue compensar um equipamento de LLM local?',
+        content: [
+          '**Um sistema solar de varanda de 800 W — o limite legal para solar plug-in na Alemanha e, no momento desta publicação, também na França (ambos limitam a saída CA do inversor a 800 W, não a potência dos painéis) — produz entre 3 e 4,5 kWh em um dia claro de verão com painéis voltados para o sul, mas apenas entre 0,5 e 1,5 kWh/dia no inverno.** Essa é uma variação sazonal de fator 3 a 7, causada pelo ângulo do sol e pela duração do dia, não por uma falha do sistema.',
+          'Compare isso com o caso de uso moderado acima: 1,2 kWh/dia de consumo da GPU. No verão, a produção de 3 a 4,5 kWh/dia de um sistema de 800 W cobre isso com excedente real para outros usos domésticos. No inverno, uma produção solar de 0,5 a 1,5 kWh/dia fica abaixo ou mal se iguala a uma demanda de 1,2 kWh/dia — o sistema deixa de ser uma compensação significativa por cerca de um terço do ano na maior parte da Alemanha.',
+          'Para o caso pesado 24/7 — 10,8 kWh/dia —, mesmo o melhor cenário de verão com 4,5 kWh/dia cobre bem menos da metade da carga, e a produção de inverno cobre apenas uma pequena fração dela. O solar pode reduzir de forma significativa a conta de um uso moderado e programado durante o dia de um LLM local. Ele não transforma um equipamento pesado sempre ligado em uma configuração de "IA verde", em nenhuma estação.',
+        ],
+        note: 'Evite combinar solar com um equipamento de LLM local se o seu uso for pesado e sempre ligado — mesmo a melhor produção de verão do limite legal de 800 W plug-in cobre bem menos da metade dessa carga, e quase nada no inverno. O solar é uma compensação real e significativa para uso moderado programado durante o dia; não é uma forma de tornar "verde" a inferência pesada 24/7.',
+      },
+      batterySizing: {
+        id: 'battery-sizing',
+        title: 'Qual tamanho de bateria você realmente precisa?',
+        content:
+          '**Dimensione a bateria pelo consumo diário real da sua GPU em kWh, não pela potência nominal de 800 W do sistema solar — os dois números medem coisas diferentes e não são diretamente comparáveis.** Para o caso moderado de 1,2 kWh/dia, mesmo uma bateria pequena cobre cerca de um dia de armazenamento; para o caso pesado de 10,8 kWh/dia, nenhuma das unidades abaixo chega perto de um dia completo sem empilhar vários módulos de expansão.',
+        columns: ['Bateria', 'Capacidade', 'Preço'],
+        rows: [
+          { 'Bateria': 'BLUETTI AC180', 'Capacidade': '1,15 kWh (1.152 Wh)', 'Preço': '$499' },
+          { 'Bateria': 'BLUETTI AC180P', 'Capacidade': '1,44 kWh (1.440 Wh)', 'Preço': '$649' },
+          { 'Bateria': 'Zendure SolarFlow Hub 2000', 'Capacidade': '1,92 kWh base, expansível a 7,68 kWh (4 módulos)', 'Preço': 'Hub a partir de €399; kits completos a partir de €1.259' },
+          { 'Bateria': 'Jackery HomePower 2000 Ultra', 'Capacidade': '2–8 kWh expansível', 'Preço': '€1.268 (unidade base)' },
+          { 'Bateria': 'EcoFlow STREAM Ultra', 'Capacidade': 'Modular/expansível (verifique a configuração atual)', 'Preço': '$1.279 (preço de tabela $1.899); garantia de 10 anos, 6.000 ciclos com 70% de retenção de capacidade' },
+        ],
+        affiliateLinks: [
+          { label: 'Ver preço do BLUETTI AC180 →', url: 'https://www.bluettipower.com/products/ac180', productName: 'BLUETTI AC180', productCategory: 'Balcony solar battery' },
+          { label: 'Ver preço do BLUETTI AC180P →', url: 'https://www.bluettipower.com/products/ac180p', productName: 'BLUETTI AC180P', productCategory: 'Balcony solar battery' },
+          { label: 'Ver preço do Zendure SolarFlow Hub 2000 →', url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', productName: 'Zendure SolarFlow Hub 2000', productCategory: 'Balcony solar battery' },
+          { label: 'Ver preço do Jackery HomePower 2000 Ultra →', url: 'https://eu.jackery.com/products/homepower-2000-ultra', productName: 'Jackery HomePower 2000 Ultra', productCategory: 'Balcony solar battery' },
+          { label: 'Ver preço do EcoFlow STREAM Ultra →', url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar battery' },
+        ],
+        note: 'Links de produto, sem relação de afiliação atual — links simples para as páginas de produto dos próprios fabricantes. Anker SOLIX e ALLPOWERS não aparecem nesta tabela: não conseguimos verificar a capacidade e o preço atuais no mesmo padrão de duas fontes usado acima, então não publicamos números provisórios para eles. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+      },
+      whoShouldDoThis: {
+        id: 'who-should-do-this',
+        title: 'Quem deveria realmente fazer isso?',
+        content:
+          '**Solar mais bateria para um equipamento de LLM local faz sentido para uso moderado e programado durante o dia em um clima ensolarado — não faz sentido como forma de "tornar verde" a inferência pesada 24/7.**',
+        items: [
+          '**Bom encaixe:** uso de hobby de fim de semana ou à noite (algumas horas por dia), clima ensolarado ou moderado, solar de varanda já instalado ou planejado para outros usos domésticos, disposição para programar tarefas mais pesadas de LLM local para horas de luz solar, usando a energia solar diretamente em vez de armazená-la e descarregá-la.',
+          '**Mau encaixe:** inferência pesada sempre ligada (uma placa de classe RTX 4090 rodando 24/7), padrões de uso concentrados no inverno, apartamentos sem uma varanda ou janela voltada para o sul viável para painéis, ou qualquer pessoa que espere que a combinação elimine totalmente o custo de energia em vez de reduzi-lo de forma significativa.',
+          '**Seja honesto no posicionamento:** um LLM local mais solar de varanda representa uma redução de custo real para uso moderado, não uma alegação de "IA neutra em carbono" para um equipamento que roda no limite o dia todo — o cálculo deste guia não sustenta essa alegação mais forte, e exagerá-la enfraquece o argumento genuíno a favor do cenário de uso moderado.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns',
+        items: [
+          'Comparar a potência nominal do sistema solar (800 W) diretamente com a produção real diária em kWh. Um sistema de 800 W rodando 24 horas na potência nominal daria 19,2 kWh — mas a produção real é de 3 a 4,5 kWh em um bom dia de verão e de 0,5 a 1,5 kWh no inverno, porque o sol não brilha em intensidade máxima por 24 horas.',
+          'Dimensionar uma bateria pela produção do sistema solar em vez de pelo consumo real da GPU. Os dois números (kWh/dia solar e kWh/dia da GPU) precisam ser comparados entre si, não assumidos como automaticamente compatíveis.',
+          'Presumir que um sistema de varanda legalmente limitado a 800 W consegue cobrir totalmente uma GPU de 450 W rodando 24/7. Mesmo a melhor produção de verão (até 4,5 kWh/dia) cobre menos da metade de uma carga de 10,8 kWh/dia, e a produção de inverno cobre apenas uma pequena fração dela.',
+          'Tratar as regras francesas de solar plug-in como muito mais rígidas do que as alemãs só porque os dois países costumam ser discutidos separadamente. Ambos limitam atualmente a saída CA do inversor a 800 W — a diferença específica entre os países está no processo de registro (uma declaração online gratuita ao operador da rede na França; um registro no Marktstammdatenregister na Alemanha), não no limite de potência.',
+          'Ignorar o consumo em repouso da GPU ao estimar o custo mensal. Uma placa em repouso a 20–30 W por 20 horas ao dia adiciona sozinha cerca de 0,4–0,6 kWh/dia — pequeno perto de um cenário de carga pesada 24/7, mas não zero, e vale a pena incluir para um total mensal preciso.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'Quanto custa em energia rodar um LLM local?',
+            a: 'Para uso moderado (uma GPU a 300 W rodando 4 horas ao dia), cerca de $6,60/mês nos EUA a 18,4¢/kWh, ou entre €11 e 15/mês na Alemanha dependendo da tarifa. Para uso pesado 24/7 em uma placa de 450 W, espere algo mais perto de $60/mês nos EUA.',
+          },
+          {
+            q: 'O consumo em repouso da GPU importa para a conta de energia?',
+            a: 'Sim, mas menos do que o consumo em carga. Uma placa em repouso a 20–30 W por 20 horas ao dia consome cerca de 0,4–0,6 kWh — um acréscimo pequeno mas real ao total, especialmente ao longo de um mês inteiro, e vale a pena contá-lo junto com as horas de inferência de fato.',
+          },
+          {
+            q: 'O solar de varanda consegue alimentar totalmente um equipamento de LLM local?',
+            a: 'Para uso moderado e programado durante o dia no verão, sim — a produção de 3 a 4,5 kWh/dia de um sistema de 800 W cobre com folga um consumo de GPU de 1,2 kWh/dia. Para uso pesado 24/7, não, em nenhuma estação — mesmo a melhor produção de verão cobre bem menos da metade de uma carga de 10,8 kWh/dia.',
+          },
+          {
+            q: 'Quanto um sistema solar de varanda de 800 W produz por dia?',
+            a: 'Cerca de 3 a 4,5 kWh em um dia claro de verão com painéis voltados para o sul, e cerca de 0,5 a 1,5 kWh/dia no inverno — uma variação sazonal de fator 3 a 7, baseada em dados de produção solar da Alemanha (o clima alemão é uma referência razoável para grande parte da Europa central e do norte).',
+          },
+          {
+            q: 'Que tamanho de bateria eu preciso para um equipamento de LLM local?',
+            a: 'Dimensione-a pelo consumo diário real em kWh da sua GPU, não pela potência nominal de 800 W do solar. Para um consumo moderado de 1,2 kWh/dia, uma única unidade como o BLUETTI AC180 (1,15 kWh) ou o AC180P (1,44 kWh) cobre cerca de um dia de armazenamento. Para uso pesado 24/7, nenhuma unidade individual desta comparação chega perto — você precisaria empilhar vários módulos de expansão (Zendure SolarFlow até 7,68 kWh, Jackery HomePower 2000 Ultra até 8 kWh).',
+          },
+          {
+            q: 'Um Mac Mini M4 é mais barato de rodar do que uma RTX 4090 para IA local?',
+            a: 'Substancialmente. O Mac Mini M4 consome menos de 5 W em repouso e até ~65 W durante a inferência, contra 20–33 W em repouso e até 450 W em carga da RTX 4090 — com 4 horas de uso ao dia, o Mac Mini custa cerca de $1,44/mês nos EUA contra ~$6,60/mês da RTX 4090, e a diferença aumenta bastante em cargas de trabalho mais pesadas e prolongadas.',
+          },
+          {
+            q: 'A França tem um limite de potência diferente da Alemanha para solar de varanda?',
+            a: 'Não — ambos os países atualmente limitam a saída CA do inversor solar plug-in a 800 W. A diferença entre os dois países é processual: a França usa uma declaração online gratuita ao operador da rede, enquanto a Alemanha usa um registro no Marktstammdatenregister. O limite de potência em si é o mesmo.',
+          },
+          {
+            q: 'Uma "IA local verde" alimentada por solar é realista para uso pesado 24/7?',
+            a: 'Não com um sistema plug-in legalmente limitado a 800 W. O cálculo não sustenta uma alegação de compensação total para um equipamento pesado sempre ligado em nenhuma estação — o solar reduz de forma significativa o custo de energia de um uso moderado e programado durante o dia de um LLM local, mas não elimina o custo de manter uma GPU que consome muita energia rodando sem parar.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        links: [
+          { url: 'https://www.chooseenergy.com/electricity-rates-by-state/', title: 'Electricity Rates by State (2026)', description: 'Dados de preços de eletricidade residencial nos EUA por estado, incluindo a média nacional de ~18,4¢/kWh usada neste guia.' },
+          { url: 'https://www.stromauskunft.de/strompreise/', title: 'Aktuelle Strompreise (Stromauskunft.de)', description: 'Dados de preços de eletricidade residencial alemã por tarifas para novos clientes, média e tarifas de fornecimento básico (Grundversorgung).' },
+          { url: 'https://www.techpowerup.com/306765/nvidia-geforce-rtx-4070-has-an-average-gaming-power-draw-of-186-w', title: 'NVIDIA GeForce RTX 4070 Power Draw', description: 'Cobertura da TechPowerUp sobre os próprios números de consumo da NVIDIA para a RTX 4070 (repouso, reprodução de vídeo, média em jogos).' },
+          { url: 'https://www.xda-developers.com/run-local-llms-one-worlds-priciest-energy-markets/', title: 'Running Local LLMs in a High-Cost Energy Market', description: 'Medição independente do consumo em repouso e inferência do Mac Mini M4, e do consumo de um cluster de várias unidades.' },
+          { url: 'https://de.bluettipower.eu/blogs/solarstrom/balkonkraftwerk-800w-ertrag-pro-tag', title: 'Balkonkraftwerk 800W Ertrag pro Tag', description: 'Dados do mercado alemão sobre a produção diária de um sistema solar de varanda de 800 W ao longo das estações.' },
+          { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — Página oficial do produto', description: 'Capacidade e preço oficiais do Hub 2000 e suas baterias de expansão.' },
+          { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — Página oficial do produto', description: 'Capacidade, preço e especificações de expansão oficiais do HomePower 2000 Ultra.' },
+          { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Página oficial do produto', description: 'Capacidade e preço oficiais da estação de energia portátil AC180.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'Quanto custa em energia rodar um LLM local — e a energia solar de varanda consegue compensar (2026)',
+      'description': 'Custo de energia de um LLM local calculado: consumo de RTX 4090/3090/4070 e Mac Mini M4, custo mensal nos EUA e na Alemanha, e se um solar de varanda de 800 W consegue compensar.',
+      'datePublished': '2026-09-01',
+      'dateModified': '2026-09-01',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+        'sameAs': 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'inLanguage': 'pt-BR',
+      'url': 'https://www.promptquorum.com/pt/power-local-llm/local-llm-electricity-cost-balcony-solar-2026',
+      'articleBody': 'Uma GPU que roda um LLM local algumas horas por dia custa dinheiro real e calculável. Um sistema solar de varanda de 800 W consegue cobrir com folga um uso moderado em um dia ensolarado de verão, mas não compensa um equipamento pesado e sempre ligado, especialmente no inverno.',
+      'educationalLevel': 'Intermediate',
+      'proficiencyLevel': 'Intermediate',
+      'audience': { '@type': 'Audience', 'audienceType': 'Usuários de LLM local que querem saber o custo real de energia do seu equipamento e se a energia solar de varanda pode compensá-lo' },
+    },
+  },
 }
