@@ -416,11 +416,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Uncensored Local LLMs für kreatives Schreiben: Wann Autoren sie brauchen (2026)',
-    seoTitle: 'Unzensierte lokale LLMs für kreatives Schreiben 2026',
+    seoTitle: 'Unzensierte LLMs für Erotik & NSFW-Texte 2026',
     intro:
       'Uncensored lokale LLMs ermöglichen Autoren, reife, moralisch komplexe und düstere Inhalte zu generieren, die Cloud-Dienste ablehnen — ohne dass Daten dein Gerät verlassen. Dieser Leitfaden behandelt die geeigneten Modelle, die Einrichtung über Ollama oder LM Studio, die ethischen Verantwortlichkeiten die auch ohne ToS-Durchsetzung gelten, und die spezifischen Anwendungsfälle, für die Uncensored-Modelle geeignet bzw. ungeeignet sind.',
     metaDescription:
-      'Unzensierte lokale LLMs für kreatives Schreiben: welche Modelle, Ollama-Setup, ethische Pflichten, zulässige Anwendungsfälle und was Autoren beachten müssen.',
+      'Unzensierte lokale LLMs ohne Einschränkungen für Erotik & NSFW-Texte: Hermes 3 vs. Dolphin 3.0, Ollama-Setup und die ethischen Grenzen.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-de.webp',
     twitterDescription:
       'Uncensored lokale LLMs für Belletristik-Autoren — welche Modelle, Ollama-Einrichtung und die echten Ethik-Fragen: Wann sie geeignet sind und welche Verantwortung Autoren trotzdem tragen.',
@@ -785,6 +785,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Welche deutschen Gesetze gelten beim Schreiben von Dark Fiction mit lokalen KI-Modellen?',
             a: 'Drei Gesetze sind besonders relevant: §184b StGB (Kinderpornografie) — absolutes Verbot, gilt auch für KI-generierte Inhalte und fiktionale Rahmungen; §130 StGB (Volksverhetzung) — gilt für Inhalte, die zum Hass gegen Bevölkerungsgruppen aufstacheln; §3 KUG schützt das Recht am eigenen Bild realer Personen. „Lokal generiert" oder „Fiktion" ist in keinem dieser Fälle eine Verteidigung. Für Belletristik, die keine realen Personen, keine Minderjährigen in sexuellen Kontexten und keine Aufstachelung enthält, ist lokale Generierung rechtlich vergleichbar mit dem Schreiben mit jedem anderen Werkzeug.',
           },
+          {
+            q: 'Welche lokalen LLMs haben keine Inhaltsbeschränkungen?',
+            a: 'Die hier vorgestellten unzensierten und "abliterated" Fine-Tunes — darunter Hermes 3 und Dolphin 3.0 — haben die Verweigerungsschicht heraustrainiert bekommen und tragen deshalb keine eigene Inhaltsrichtlinie. Das ist der praktische Unterschied zwischen einem lokalen und einem gehosteten Modell: Ein Cloud-Anbieter setzt bei jeder Anfrage seine Nutzungsbedingungen durch, während ein uneingeschränktes Modell auf dem eigenen Rechner ohne Anbieter in der Schleife läuft und zur Inferenzzeit keine Zensur anwendet. NSFW- und explizite Fiktion werden dadurch nicht blockiert. Was sich nicht ändert, ist das Recht des jeweiligen Landes und die Verantwortung, die mit der Veröffentlichung einhergeht — keine Inhaltsrichtlinie zu haben bedeutet nicht, keine Grenzen zu haben, und der Ethik-Abschnitt weiter unten zeigt, wo diese Grenzen liegen.',
+          },
         ],
       },
       relatedReading: {
@@ -809,11 +813,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'LLM locaux non censurés pour l\'écriture créative : quand les auteurs en ont besoin (2026)',
-    seoTitle: 'LLMs locaux non censurés pour l\'écriture créative 2026',
+    seoTitle: 'LLMs non censurés pour érotisme & NSFW 2026',
     intro:
       'Les LLM locaux non censurés permettent aux auteurs de fiction de générer des contenus matures, moralement complexes et sombres que les services cloud refusent — sans que les données quittent leur machine. Ce guide couvre les modèles à utiliser, leur configuration via Ollama ou LM Studio, les responsabilités éthiques qui s\'appliquent même en l\'absence de conditions d\'utilisation, et les cas d\'usage où les modèles non censurés sont appropriés ou non.',
     metaDescription:
-      'LLM locaux non censurés pour l\'écriture créative : quels modèles utiliser, configuration Ollama, responsabilités éthiques et limites à respecter.',
+      'Meilleurs LLM locaux non censurés, sans restriction de contenu, pour l\'érotisme et le NSFW : Hermes 3 vs Dolphin 3.0, configuration Ollama et les limites éthiques.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-fr.webp',
     twitterDescription:
       'LLM locaux non censurés pour les auteurs de fiction — quels modèles, configuration Ollama et l\'éthique réelle : quand ils sont appropriés et quelles responsabilités subsistent.',
@@ -1185,6 +1189,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Quelles lois françaises s\'appliquent à l\'écriture de dark fiction avec des LLM locaux ?',
             a: 'Trois dispositions sont particulièrement pertinentes : l\'article 227-23 du Code pénal (contenu pédopornographique) — interdiction absolue applicable aux contenus générés par IA et aux cadres fictionnels ; l\'article 24 de la loi du 29 juillet 1881 sur la liberté de la presse (provocation à la haine ou à la discrimination) ; et la loi Informatique et Libertés pour tout contenu impliquant des données personnelles de personnes identifiables. « Généré localement » ou « fiction » ne constitue une défense dans aucun de ces cas. Pour une fiction ne mettant pas en scène de mineurs dans des contextes sexuels, de personnes réelles identifiables ou d\'incitation à la haine, la génération locale est juridiquement comparable à l\'écriture avec n\'importe quel autre outil.',
+          },
+          {
+            q: 'Quels LLM locaux n\'ont aucune restriction de contenu ?',
+            a: 'Les fine-tunes non censurés et « abliterated » présentés ici — dont Hermes 3 et Dolphin 3.0 — ont eu leur couche de refus entraînée pour disparaître, et ne portent donc aucune politique de contenu propre. C\'est la différence pratique entre un modèle local et un modèle hébergé : un fournisseur cloud applique ses conditions d\'utilisation à chaque requête, tandis qu\'un modèle non restreint tournant sur votre propre machine n\'a aucun fournisseur dans la boucle et n\'applique aucune censure au moment de l\'inférence. Le contenu NSFW et la fiction explicite ne sont donc pas bloqués. Ce qui ne change pas, c\'est la loi de votre pays et la responsabilité qui accompagne la publication — l\'absence de politique de contenu n\'équivaut pas à l\'absence de limites, et la section éthique ci-dessous précise où se situent ces limites.',
           },
         ],
       },
@@ -1635,6 +1643,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'これらのモデルは監視されていますか、それとも匿名ですか？',
             a: 'OllamaまたはLM Studio経由でローカルで動作するオープンウェイトモデルには、テレメトリ、リモートロギング、使用状況追跡がありません。モデルの作者（Hermes 3のNous Research、DolphinのCognitive Computations）は生成内容を見ることができません――推論中にサーバーコールバックはありません。テレメトリのリスクがあるのはフロントエンド（SillyTavern、Agnai――両方ともデフォルトでテレメトリなし）またはOSからのみです。インストール後に一度ネットワークモニター（macOSのLittle Snitch、LinuxのWireshark）を実行して確認してください。',
           },
+          {
+            q: 'コンテンツ制限のないローカルLLMはどれですか？',
+            a: '本記事で扱う無検閲・「abliterated」ファインチューン――Hermes 3やDolphin 3.0を含む――は拒否層を追加学習で外してあるため、独自のコンテンツポリシーを持ちません。これがローカルモデルとホスト型モデルの実務上の違いです：クラウドプロバイダーはリクエストごとに利用規約を適用しますが、自分のマシンで動く無規制モデルには介在するプロバイダーがなく、推論時に検閲もかかりません。そのためNSFWや明示的なフィクションはブロックされません。変わらないのは居住地の法律と、公開に伴う責任です――コンテンツポリシーがないことは、限界がないことと同じではありません。その境界線については後述の倫理の節で扱います。',
+          },
         ],
       },
       relatedReading: {
@@ -1659,11 +1671,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: '无审查本地LLM与创意写作：创作者何时需要它们（2026年）',
-    seoTitle: '无审查本地LLM创意写作2026：适用场景与伦理责任',
+    seoTitle: '无限制本地LLM：情色与NSFW创作2026',
     intro:
       '无审查本地LLM允许小说作家生成云服务拒绝的成人向、道德复杂或黑暗内容——数据完全不离开本机。本指南涵盖推荐模型、通过Ollama或LM Studio的配置方法、即使没有服务条款约束仍然适用的真实伦理责任，以及无审查模型适用和不适用的具体使用场景。',
     metaDescription:
-      '无审查本地LLM创意写作：推荐模型、Ollama配置、伦理责任、适用场景，以及创作者应当保持的内容底线。',
+      '不受内容限制的本地LLM，适用于情色与NSFW写作：Hermes 3对比Dolphin 3.0，Ollama配置方法，以及应遵守的伦理底线。',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-zh.webp',
     twitterDescription:
       '小说作家的无审查本地LLM——推荐模型、Ollama配置和真实伦理：何时适用，创作者还负有哪些责任。',
@@ -2030,6 +2042,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '这些模型是否被监控或是匿名的？',
             a: '通过Ollama或LM Studio在本地运行的开放权重模型没有遥测、无远程日志记录、无使用跟踪。模型作者（Hermes 3的Nous Research，Dolphin的Cognitive Computations）无法看到您生成的内容——推理过程中没有服务器回调。唯一的遥测风险来自前端（SillyTavern、Agnai——两者默认无遥测）或操作系统。安装后运行一次网络监视器（macOS上的Little Snitch，Linux上的Wireshark）进行验证。',
           },
+          {
+            q: '哪些本地LLM没有内容限制？',
+            a: '本文介绍的无审查和"abliterated"微调模型——包括Hermes 3和Dolphin 3.0——已通过训练移除了拒绝层，因此不带有任何自身的内容政策。这正是本地模型与托管模型的实际区别：云服务商在每次请求时都会执行其服务条款，而运行在自己机器上的无限制模型没有服务商介入，推理时也不会施加任何审查。因此NSFW和露骨的虚构内容不会被屏蔽。不会改变的是所在地的法律，以及发布内容所伴随的责任——没有内容政策不等于没有底线，下文的伦理部分说明了这些底线具体在哪里。',
+          },
         ],
       },
       relatedReading: {
@@ -2054,11 +2070,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'LLMs locales sin censura para escritura creativa: cuándo los escritores los necesitan (2026)',
-    seoTitle: 'LLMs locales sin censura para escritura creativa 2026',
+    seoTitle: 'LLMs sin censura para erótica y NSFW 2026',
     intro:
       'Los LLMs locales sin censura permiten a los escritores de ficción generar contenido adulto, moralmente complejo y oscuro que los servicios en la nube rechazan, sin que los datos abandonen tu máquina. Esta guía cubre qué modelos usar, cómo configurarlos mediante Ollama o LM Studio, las responsabilidades éticas genuinas que aplican incluso cuando no hay aplicación de términos de servicio, y los casos de uso específicos donde los modelos sin censura son apropiados frente a donde no lo son.',
     metaDescription:
-      'LLMs locales sin censura para escritura creativa: qué modelos usar, configuración en Ollama, ética, casos de uso y los límites que conviene mantener.',
+      'Los mejores LLMs locales sin censura, sin restricciones de contenido, para erótica y NSFW: Hermes 3 vs Dolphin 3.0, configuración en Ollama y los límites éticos.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-es.webp',
     twitterDescription:
       'LLMs locales sin censura para escritores de ficción: qué modelos, configuración en Ollama y la ética real — cuándo son apropiados y qué responsabilidades siguen teniendo los escritores.',
@@ -2424,6 +2440,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Estos modelos están monitoreados o son anónimos?',
             a: 'Los modelos de peso abierto que se ejecutan localmente a través de Ollama o LM Studio no tienen telemetría, no tienen registro remoto ni seguimiento de uso. Los autores del modelo (Nous Research para Hermes 3, Cognitive Computations para Dolphin) no pueden ver lo que generas — no hay ninguna devolución de llamada al servidor durante la inferencia. El único riesgo de telemetría proviene del frontend (SillyTavern, Agnai — ambos sin telemetría por defecto) o del sistema operativo. Ejecuta un monitor de red (Little Snitch en macOS, Wireshark en Linux) una vez después de la instalación para verificarlo.',
           },
+          {
+            q: '¿Qué LLMs locales no tienen restricciones de contenido?',
+            a: 'Los fine-tunes sin censura y "abliterated" que cubre esta guía — entre ellos Hermes 3 y Dolphin 3.0 — han tenido su capa de rechazo entrenada para eliminarse, por lo que no llevan ninguna política de contenido propia. Esa es la diferencia práctica entre un modelo local y uno alojado en la nube: un proveedor cloud aplica sus términos de servicio en cada solicitud, mientras que un modelo sin restricciones que corre en tu propia máquina no tiene ningún proveedor de por medio ni aplica censura alguna durante la inferencia. El contenido NSFW y la ficción explícita, por tanto, no quedan bloqueados. Lo que no cambia es la ley del lugar donde vives y la responsabilidad que conlleva publicar — no tener política de contenido no es lo mismo que no tener límites, y la sección de ética más abajo explica dónde están esos límites.',
+          },
         ],
       },
       relatedReading: {
@@ -2459,11 +2479,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: '창의적 글쓰기를 위한 무검열 로컬 LLM: 작가가 필요로 할 때 (2026)',
-    seoTitle: '창의적 글쓰기 무검열 로컬 LLM 2026',
+    seoTitle: '에로티카 & NSFW 무검열 로컬 LLM 2026',
     intro:
       '무검열 로컬 LLM은 픽션 작가가 클라우드 서비스가 거부하는 성인용, 도덕적으로 복잡한, 어두운 콘텐츠를 생성할 수 있게 합니다 — 데이터가 기기를 떠나지 않습니다. 이 가이드는 사용할 모델, Ollama나 LM Studio를 통한 설정 방법, 서비스 약관 적용이 없을 때도 적용되는 진정한 윤리적 책임, 그리고 무검열 모델이 적합한 특정 사용 사례와 그렇지 않은 경우를 다룹니다.',
     metaDescription:
-      '창의적 글쓰기를 위한 무검열 로컬 LLM: 사용할 모델, Ollama 설정, 윤리, 사용 사례, 유지해야 할 한계.',
+      '콘텐츠 제한이 없는 무검열 로컬 LLM으로 에로티카와 NSFW 글쓰기: Hermes 3 대 Dolphin 3.0, Ollama 설정, 그리고 지켜야 할 윤리적 한계.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ko.webp',
     twitterDescription:
       '픽션 작가를 위한 무검열 로컬 LLM — 어떤 모델, Ollama 설정, 실제 윤리: 언제 적합하며 작가가 여전히 갖는 책임.',
@@ -2829,6 +2849,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '이 모델들은 모니터링되거나 익명입니까?',
             a: 'Ollama나 LM Studio를 통해 로컬에서 실행되는 오픈 웨이트 모델에는 텔레메트리가 없고, 원격 로그가 없으며, 사용량 추적이 없습니다. 모델 저자(Hermes 3용 Nous Research, Dolphin용 Cognitive Computations)는 생성하는 것을 볼 수 없습니다 — 추론 중 서버로의 콜백이 없습니다. 유일한 텔레메트리 위험은 프론트엔드(SillyTavern, Agnai — 둘 다 기본적으로 텔레메트리 없음)나 운영 체제에서 옵니다. 설치 후 한 번 네트워크 모니터(macOS에서 Little Snitch, Linux에서 Wireshark)를 실행하여 확인하십시오.',
           },
+          {
+            q: '콘텐츠 제한이 없는 로컬 LLM은 어떤 것입니까?',
+            a: '이 글에서 다루는 무검열 및 "abliterated" 파인튜닝 모델 — Hermes 3와 Dolphin 3.0을 포함 — 은 거부 레이어를 학습을 통해 제거했기 때문에 자체 콘텐츠 정책을 갖고 있지 않습니다. 이것이 로컬 모델과 호스팅형 모델의 실질적인 차이입니다: 클라우드 제공업체는 모든 요청에 약관을 적용하지만, 자신의 기기에서 실행되는 무제한 모델은 중간에 개입하는 제공업체가 없고 추론 시점에 어떤 검열도 적용되지 않습니다. 따라서 NSFW와 노골적인 픽션이 차단되지 않습니다. 변하지 않는 것은 거주 지역의 법률과 공개에 따르는 책임입니다 — 콘텐츠 정책이 없다는 것이 한계가 없다는 것을 의미하지는 않으며, 그 경계가 어디에 있는지는 아래 윤리 섹션에서 다룹니다.',
+          },
         ],
       },
       relatedReading: {
@@ -2864,11 +2888,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'LLMs locais sem censura para escrita criativa: quando escritores precisam deles em 2026',
-    seoTitle: 'LLMs locais sem censura para escrita criativa 2026',
+    seoTitle: 'LLMs sem censura para erótica e NSFW 2026',
     intro:
       'LLMs locais sem censura permitem que escritores de ficção gerem conteúdo adulto, moralmente complexo e sombrio que os serviços em nuvem recusam — sem que nenhum dado saia da sua máquina. Este guia cobre quais modelos usar, como configurá-los pelo Ollama ou LM Studio, as responsabilidades éticas genuínas que se aplicam mesmo quando não há aplicação de termos de serviço, e os casos de uso específicos em que modelos sem censura são apropriados frente àqueles em que não são.',
     metaDescription:
-      'LLMs locais sem censura para escrita criativa: quais modelos usar, configuração no Ollama, responsabilidades éticas, casos de uso apropriados e os limites que escritores devem manter de qualquer forma.',
+      'Os melhores LLMs locais sem censura, sem restrições de conteúdo, para erótica e NSFW: Hermes 3 vs Dolphin 3.0, configuração no Ollama e os limites éticos.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-pt.webp',
     twitterDescription:
       'LLMs locais sem censura para escritores de ficção — quais modelos, configuração no Ollama e a ética real: quando são apropriados e quais responsabilidades os escritores ainda têm.',
@@ -3234,6 +3258,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Esses modelos são monitorados ou anônimos?',
             a: 'Modelos de peso aberto que rodam localmente pelo Ollama ou LM Studio não têm telemetria, não têm registro remoto nem rastreamento de uso. Os autores do modelo (Nous Research para o Hermes 3, Cognitive Computations para o Dolphin) não podem ver o que você gera — não há nenhum retorno de chamada ao servidor durante a inferência. O único risco de telemetria vem do frontend (SillyTavern, Agnai — ambos sem telemetria por padrão) ou do sistema operacional. Execute um monitor de rede (Little Snitch no macOS, Wireshark no Linux) uma vez após a instalação para verificar.',
           },
+          {
+            q: 'Quais LLMs locais não têm restrições de conteúdo?',
+            a: 'Os fine-tunes sem censura e "abliterated" abordados aqui — incluindo o Hermes 3 e o Dolphin 3.0 — tiveram a camada de recusa removida por treinamento, e por isso não carregam nenhuma política de conteúdo própria. Essa é a diferença prática entre um modelo local e um hospedado: um provedor de nuvem aplica seus termos de serviço em cada requisição, enquanto um modelo sem restrições rodando na sua própria máquina não tem nenhum provedor no meio do caminho e não aplica censura nenhuma no momento da inferência. Conteúdo NSFW e ficção explícita, portanto, não são bloqueados. O que não muda é a lei do lugar onde você vive e a responsabilidade que acompanha a publicação — não ter política de conteúdo não é o mesmo que não ter limites, e a seção de ética abaixo mostra onde esses limites estão.',
+          },
         ],
       },
       relatedReading: {
@@ -3270,11 +3298,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'نماذج ⁨LLM⁩ المحلية بدون قيود للكتابة الإبداعية: متى يحتاجها الكتّاب (⁨2026⁩)',
-    seoTitle: '⁨LLM⁩ محلي بدون قيود للكتابة الإبداعية: دليل ⁨2026⁩',
+    seoTitle: '⁨LLM⁩ بدون قيود للإيروتيكا و⁨NSFW⁩: دليل ⁨2026⁩',
     intro:
       'نماذج LLM المحلية بدون قيود تتيح لكتّاب الخيال توليد محتوى بالغ وأخلاقيًا معقدًا ومظلمًا ترفضه الخدمات السحابية، دون أن تغادر البيانات جهازك. يغطي هذا الدليل: أي النماذج تستخدم، وكيفية إعدادها عبر Ollama أو LM Studio، والمسؤوليات الأخلاقية الحقيقية التي تسري حتى دون تطبيق شروط الخدمة، وحالات الاستخدام المناسبة في مقابل غير المناسبة.',
     metaDescription:
-      'نماذج LLM المحلية بدون قيود تُولّد محتوى خياليًا ناضجًا دون اتصال بالسحابة. إعداد Ollama أو LM Studio، نماذج موصى بها، ومسؤوليات أخلاقية للكتّاب.',
+      'أفضل نماذج ⁨LLM⁩ محلية بدون قيود محتوى، لكتابة الإيروتيكا و⁨NSFW⁩: ⁨Hermes 3⁩ مقابل ⁨Dolphin 3.0⁩، إعداد ⁨Ollama⁩، والحدود الأخلاقية.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ar.webp',
     twitterDescription:
       'نماذج LLM المحلية بدون قيود لكتّاب الخيال: أي النماذج، إعداد Ollama والأخلاقيات الحقيقية — متى تكون مناسبة وما المسؤوليات التي تبقى على الكتّاب.',
@@ -3639,6 +3667,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'هل هذه النماذج مراقَبة أم مجهولة الهوية؟',
             a: 'نماذج الوزن المفتوح التي تعمل محليًا عبر Ollama أو LM Studio لا تحتوي على تتبع ولا تسجيل عن بُعد ولا تتبع استخدام. مؤلفو النماذج (Nous Research لـ Hermes 3، Cognitive Computations لـ Dolphin) لا يمكنهم رؤية ما تولّده — لا استدعاء رجعي للخادم أثناء الاستدلال. مخاطر التتبع الوحيدة تأتي من الواجهة الأمامية (SillyTavern وAgnai — كلاهما بدون تتبع افتراضيًا) أو نظام التشغيل. شغّل مراقب شبكة (Little Snitch على macOS وWireshark على Linux) مرة واحدة بعد التثبيت للتحقق.',
+          },
+          {
+            q: 'ما النماذج المحلية التي لا تحتوي على قيود محتوى؟',
+            a: 'التعديلات الدقيقة بدون قيود ونسخ "abliterated" التي يغطيها هذا الدليل — ومنها Hermes 3 وDolphin 3.0 — أُزيلت منها طبقة الرفض عبر التدريب، ولذلك لا تحمل أي سياسة محتوى خاصة بها. هذا هو الفرق العملي بين نموذج محلي ونموذج مستضاف: مزوّد السحابة يطبّق شروط استخدامه على كل طلب، بينما النموذج بدون قيود الذي يعمل على جهازك لا يوجد فيه أي مزوّد وسيط ولا تُطبَّق أي رقابة وقت الاستدلال. لذلك لا يُحظر محتوى NSFW ولا الخيال الصريح. ما لا يتغيّر هو قانون بلدك والمسؤولية التي تصاحب النشر — عدم وجود سياسة محتوى لا يعني عدم وجود حدود، ويوضّح قسم الأخلاقيات أدناه أين تقع هذه الحدود.',
           },
         ],
       },
