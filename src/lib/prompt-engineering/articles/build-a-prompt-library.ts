@@ -605,7 +605,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ogDescription: 'Ihr Team schreibt dieselben KI-Prompts jeden Tag neu. Eine gemeinsame Prompt-Bibliothek mit getesteten Vorlagen, klarer Zuständigkeit und Versionskontrolle löst genau dieses Problem.',
   twitterDescription: 'Prompt-Bibliothek → getestete Vorlagen → konsistente KI-Ergebnisse. In einer Woche aufbauen. Schritt-für-Schritt-Anleitung.',
   publishDate: '2026-03-24',
-  dateModified: '2026-08-30',
+  dateModified: '2026-09-01',
   readTime: '12 Min. Lesezeit',
   educationalLevel: 'Beginner',
   audience: 'Teamleiter und Praktiker, die KI-Tools einführen',
@@ -638,7 +638,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     description: 'Eine Prompt-Bibliothek ist eine teamweite Sammlung getesteter Anweisungen mit Metadaten, die Ihrem Team hilft, Prompts zu standardisieren, zu teilen und zu verbessern.',
     image: 'https://www.promptquorum.com/og-build-a-prompt-library-de.png',
     datePublished: '2026-03-24',
-    dateModified: '2026-08-30',
+    dateModified: '2026-09-01',
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
@@ -721,7 +721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-5.5" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.',
+              'text': 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-5.6" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.',
             },
           },
           {
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowToStep',
         position: 3,
         name: 'Organisieren Sie nach Aufgabe/Funktion, nicht nach Modell',
-        text: 'Struktur: "Meeting Summaries" → v1.0 (Claude), v1.0 (GPT-5.5) statt "Claude Prompts" → "Meeting Summaries". Modell-Details gehören in Metadaten, nicht in die Ordnerstruktur.',
+        text: 'Struktur: "Meeting Summaries" → v1.0 (Claude), v1.0 (GPT-5.6) statt "Claude Prompts" → "Meeting Summaries". Modell-Details gehören in Metadaten, nicht in die Ordnerstruktur.',
       },
       {
         '@type': 'HowToStep',
@@ -838,7 +838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Qualitätskontrolle: Schlechte Prompts werden durchfallen, gute werden verbessert. Die Qualität steigt kontinuierlich.',
         'Wissen behalten: Wenn jemand das Team verlässt, gehen seine bewährten Prompts nicht mit ihm weg.',
         'A/B-Testing ermöglichen: Compare Versionen (v1.0 vs v1.1), sehen welche besser funktioniert.',
-        'Modell-Experiments vereinfachen: Test the same prompt auf GPT-5.5, Claude, Llama 3.3 — Track welche Model best ist.',
+        'Modell-Experiments vereinfachen: Test the same prompt auf GPT-5.6, Claude, Llama 3.3 — Track welche Model best ist.',
       ],
       callouts: [
         {
@@ -875,7 +875,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Besitzer**: Wer hat ihn geschrieben? Wer ist verantwortlich für Updates?',
         '**Tags**: Kategorien für Suche ("sales", "support", "legal", "content-gen")',
         '**Version**: v1.0, v1.1, v2.0 — mit Change Note (was sich verändert hat)',
-        '**Getestete Modelle**: "Claude 4.6, GPT-5.5" (dies hilft Teams, die richtige Variante zu wählen)',
+        '**Getestete Modelle**: "Claude 4.6, GPT-5.6" (dies hilft Teams, die richtige Variante zu wählen)',
         '**Status**: Draft, Approved, Deprecated (verhindert schlechte Prompts in Produktion)',
       ],
       callouts: [
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Optionale Felder (später hinzufügen)',
       content: 'Fangen Sie mit den 9 Pflichtfeldern oben an. Später können Sie hinzufügen:',
       items: [
-        '**Kostennotizen**: "Dieser Prompt kostet ~0,02 € pro Aufruf bei GPT-5.5"',
+        '**Kostennotizen**: "Dieser Prompt kostet ~0,02 € pro Aufruf bei GPT-5.6"',
         '**Performance-Metriken**: "Latency: <2 seconds", "Token count: ~500"',
         '**Lektionen gelernt**: "Tried few-shot — doesn\'t improve accuracy for this task"',
         '**Abhängigkeiten**: "Needs retrieval_context input (from RAG system)"',
@@ -981,7 +981,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Organisationsstruktur',
       content: 'Egal wo Sie speichern: die Struktur sollte nach **Aufgabe/Funktion** sein, nicht nach Modell.',
       items: [
-        '✅ Richtig: Sales → Email Draft (v1.0 Claude, v1.0 GPT-5.5) → Customer Objection Handling (v1.1 Claude)',
+        '✅ Richtig: Sales → Email Draft (v1.0 Claude, v1.0 GPT-5.6) → Customer Objection Handling (v1.1 Claude)',
         '❌ Falsch: Claude → Sales Prompts → Email Draft',
       ],
     },
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Warum Aufgabe statt Modell?',
       content: 'Wenn Sie nach Modell organisieren, passiert folgendes: Irgendwann möchten Sie einen Prompt auf einem anderen Modell testen. Jetzt müssen Sie die Prompt-Datei kopieren, umbenennen, beide Versionen synchron halten. Das ist Fehler-anfällig und langweilig.',
       items: [
-        'Wenn Sie nach Aufgabe organisieren: "Email Draft" hat Varianten (Claude v1.0, GPT-5.5 v1.0) als klare Einträge. Leicht zu vergleichen, leicht zu aktualisieren.',
+        'Wenn Sie nach Aufgabe organisieren: "Email Draft" hat Varianten (Claude v1.0, GPT-5.6 v1.0) als klare Einträge. Leicht zu vergleichen, leicht zu aktualisieren.',
       ],
     },
     storageTableNote: {
@@ -1113,7 +1113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Wie bringe ich mein Team dazu, tatsächlich zu einer gemeinsamen Prompt-Bibliothek beizutragen?', a: 'Machen Sie den Beitrag so einfach wie möglich: ein Formular oder Git-Template, klare Metadaten-Anforderungen, und monatliche Reviews. Das Wichtigste: Zeigen Sie Mehrwert — Teams tragen bei, wenn sie sehen, dass ihre Prompts genutzt und verbessert werden.' },
             { q: 'Ist eine Prompt-Bibliothek dasselbe wie ein System-Prompt?', a: 'Nein. Ein System-Prompt sind Regeln, die Sie einmal definieren und auf alle Eingaben anwenden. Eine Prompt-Bibliothek ist eine Sammlung von verschiedenen Prompts für verschiedene Aufgaben — jeder mit eigenen Metadaten und Versionen.' },
             { q: 'Wie oft sollte Ihr Team eine Prompt-Bibliothek überprüfen und bereinigen?', a: 'Monatlich ist ideal. Markieren Sie selten genutzte Prompts als Deprecated, fördern Sie verbesserte Versionen zu Approved, und erstellen Sie neue Kategorien, wenn sich die Nutzung verändert. Teams, die monatlich reviewen, haben 20–30 % weniger Bloat nach 6 Monaten.' },
-            { q: 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?', a: 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-5.5" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.' },
+            { q: 'Wie handhabe ich Prompts, die auf einem Modell funktionieren, aber nicht auf einem anderen?', a: 'Taggen Sie jeden Prompt mit getesteten Modellen in den Metadaten. Wenn ein Prompt auf einem neuen Modell nicht funktioniert, erstellen Sie eine Variante — zum Beispiel "Meeting Summary – Claude" und "Meeting Summary – GPT-5.6" — statt einen Prompt zu zwingen, überall zu funktionieren. Multi-Modell-Test-Tools lassen Sie Output vergleichen, bevor Sie einen Prompt zu Approved promovieren.' },
             { q: 'Was ist der Unterschied zwischen einer Prompt-Bibliothek und einer Prompt-Management-Plattform?', a: 'Eine Prompt-Bibliothek ist eine Sammlung strukturierter Prompt-Einträge, die Ihr Team verwaltet — sie kann in einem Git-Repo, einer Tabelle oder einem dedizierten Tool leben. Eine Prompt-Management-Plattform fügt Ausführung, Analysen, Versionskontrolle und Zusammenarbeits-Features auf top der Bibliothek hinzu. Starten Sie mit einer einfachen Bibliothek und upgraden Sie zu einer Plattform, wenn Volumen oder Governance es rechtfertigen.' },
             { q: 'Muss ich bei der Verwendung von PromptQuorum die DSGVO beachten?', a: 'Ja. Wenn Prompt-Templates persönliche Daten enthalten oder referenzieren, muss das Speichertool DSGVO-konform sein. Notion, Airtable und PromptQuorum bieten alle EU-Datenspeicherung an; überprüfen Sie die Einstellungen vor der Aktivierung für sensitive Workflows. Die wichtigste Regel: Speichern Sie echte persönliche Daten nie im Prompt-Body — nutzen Sie Platzhalter wie <CUSTOMER_NAME> und übergeben Sie echte Daten nur im Runtime-Input. Für Article 28 Compliance (Auftragsverarbeitung) benötigen Sie einen Data Processing Agreement.' },
             { q: 'Ist PromptQuorum für den deutschen Mittelstand geeignet?', a: 'Ja. Mittelstand-Unternehmen profitieren von PromptQuorum für Qualitätskontrolle, Wissensmanagement und Governance. PromptQuorum erfüllt SOC 2 Type II Zertifizierung (Stand 2026) und unterstützt DSGVO Article 28 Anforderungen für Auftragsverarbeitung. Nutzen Sie lokale Inference für sensitive Workflows (Finanzen, Medizin, Recht) und Prompt-Verwaltung für breitere Adoption in Teams. BSI-Grundschutz-Kataloge sind mit PromptQuorum EU-based Deployment kompatibel.' },
@@ -2251,7 +2251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ogDescription: 'Votre équipe réécrit les mêmes prompts IA chaque jour. Une bibliothèque partagée avec des modèles testés, un propriétaire clair et un contrôle de version résout ce problème.',
   twitterDescription: 'Bibliothèque de prompts → modèles testés → résultats IA cohérents. Construisez la vôtre en une semaine. Guide complet inclus.',
   publishDate: '2026-03-24',
-  dateModified: '2026-08-30',
+  dateModified: '2026-09-01',
   readTime: '10 min de lecture',
   educationalLevel: 'Beginner',
   audience: 'Responsables d\'équipes et praticiens adoptant les outils IA',
@@ -2284,7 +2284,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     description: 'Une bibliothèque de prompts est une collection d\'instructions testées avec métadonnées que votre équipe partage et améliore ensemble.',
     image: 'https://www.promptquorum.com/og-build-a-prompt-library-fr.png',
     datePublished: '2026-03-24',
-    dateModified: '2026-08-30',
+    dateModified: '2026-09-01',
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
@@ -2367,7 +2367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.5 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.',
+              'text': 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.6 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.',
             },
           },
           {
@@ -2403,7 +2403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowToStep',
         position: 3,
         name: 'Organisez par tâche/fonction, pas par modèle',
-        text: 'Structure : « Résumés de réunion » → v1.0 (Claude), v1.0 (GPT-5.5) au lieu de « Prompts Claude » → « Résumés de réunion ». Les détails du modèle vont dans les métadonnées, pas dans la structure des dossiers.',
+        text: 'Structure : « Résumés de réunion » → v1.0 (Claude), v1.0 (GPT-5.6) au lieu de « Prompts Claude » → « Résumés de réunion ». Les détails du modèle vont dans les métadonnées, pas dans la structure des dossiers.',
       },
       {
         '@type': 'HowToStep',
@@ -2468,7 +2468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Contrôle de qualité : les mauvais prompts sont rejetés, les bons sont améliorés. La qualité s\'améliore continuellement.',
         'Retenez la connaissance : quand quelqu\'un quitte, ses meilleurs prompts restent.',
         'Testez A/B : comparez les versions (v1.0 vs v1.1), voyez laquelle fonctionne mieux.',
-        'Simplifiez les expériences : testez le même prompt sur GPT-5.5, Claude, Llama 3.3 — suivez quel modèle fonctionne best.',
+        'Simplifiez les expériences : testez le même prompt sur GPT-5.6, Claude, Llama 3.3 — suivez quel modèle fonctionne best.',
       ],
       callouts: [
         {
@@ -2505,7 +2505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**Propriétaire** : qui l\'a écrit ? Qui est responsable des mises à jour ?',
         '**Étiquettes** : catégories pour la recherche (« ventes », « support », « légal », « content-gen »)',
         '**Version** : v1.0, v1.1, v2.0 — avec note de changement (ce qui a changé)',
-        '**Modèles testés** : « Claude 4.6, GPT-5.5 » (cela aide les équipes à choisir la bonne variante)',
+        '**Modèles testés** : « Claude 4.6, GPT-5.6 » (cela aide les équipes à choisir la bonne variante)',
         '**Statut** : Brouillon, Approuvé, Déprécié (empêche les mauvais prompts en production)',
       ],
       callouts: [
@@ -2529,7 +2529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Champs optionnels (à ajouter plus tard)',
       content: 'Commencez avec les 9 champs requis ci-dessus. Vous pouvez ajouter plus tard :',
       items: [
-        '**Notes de coût** : « Ce prompt coûte ~0,02 € par appel avec GPT-5.5 »',
+        '**Notes de coût** : « Ce prompt coûte ~0,02 € par appel avec GPT-5.6 »',
         '**Métriques de performance** : « Latence : <2 secondes », « Nombre de tokens : ~500 »',
         '**Leçons apprises** : « Few-shot testé — n\'améliore pas la précision pour cette tâche »',
         '**Dépendances** : « Needs retrieval_context input (from RAG system) »',
@@ -2611,7 +2611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Structure organisationnelle',
       content: 'Où que vous stockiez : la structure doit être par **tâche/fonction**, pas par modèle.',
       items: [
-        '✅ Correct : Ventes → Brouillon d\'email (v1.0 Claude, v1.0 GPT-5.5) → Gestion d\'objections (v1.1 Claude)',
+        '✅ Correct : Ventes → Brouillon d\'email (v1.0 Claude, v1.0 GPT-5.6) → Gestion d\'objections (v1.1 Claude)',
         '❌ Incorrect : Claude → Prompts de ventes → Brouillon d\'email',
       ],
     },
@@ -2620,7 +2620,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Pourquoi tâche plutôt que modèle ?',
       content: 'Si vous organisez par modèle, voici ce qui se passe : à un moment donné, vous voudrez tester un prompt sur un modèle différent. Maintenant vous devez copier le fichier prompt, le renommer, garder les deux versions synchrones. C\'est source d\'erreurs et ennuyeux.',
       items: [
-        'Si vous organisez par tâche : « Brouillon d\'email » a des variantes (Claude v1.0, GPT-5.5 v1.0) comme des entrées claires. Facile à comparer, facile à mettre à jour.',
+        'Si vous organisez par tâche : « Brouillon d\'email » a des variantes (Claude v1.0, GPT-5.6 v1.0) comme des entrées claires. Facile à comparer, facile à mettre à jour.',
       ],
     },
     storageTableNote: {
@@ -2743,7 +2743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Comment amener mon équipe à contribuer réellement ?', a: 'Rendez la contribution aussi simple que possible : un formulaire ou modèle Git, des exigences de métadonnées claires, et des examens mensuels. Le plus important : montrez la valeur — les équipes contribuent quand elles voient que leurs prompts sont utilisés et améliorés.' },
             { q: 'Une bibliothèque de prompts est-elle la même qu\'un system prompt ?', a: 'Non. Un system prompt est un ensemble de règles que vous définissez une fois et appliquez à toutes les entrées. Une bibliothèque de prompts est une collection de différents prompts pour différentes tâches — chacun avec ses propres métadonnées et versions.' },
             { q: 'À quelle fréquence une équipe doit-elle examiner et nettoyer ?', a: 'Mensuellement est idéal. Marquez les prompts peu utilisés comme Dépréciés, promovez les versions améliorées en Approuvé, et créez de nouvelles catégories si l\'utilisation change. Les équipes qui examinent mensuellement ont 20–30 % moins de bloat après 6 mois.' },
-            { q: 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?', a: 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.5 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.' },
+            { q: 'Comment gérer les prompts qui fonctionnent sur un modèle mais pas sur un autre ?', a: 'Étiquetez chaque prompt avec les modèles testés dans les métadonnées. Si un prompt échoue sur un nouveau modèle, créez une variante — par exemple « Résumé de réunion – Claude » et « Résumé de réunion – GPT-5.6 » — au lieu de forcer un prompt à fonctionner partout. Les outils de test multi-modèle vous permettent de comparer les résultats avant de promouvoir.' },
             { q: 'Quelle est la différence entre une bibliothèque de prompts et une plateforme de gestion ?', a: 'Une bibliothèque de prompts est une collection d\'entrées structurées que votre équipe gère — elle peut vivre dans un repo Git, une feuille de calcul ou un outil dédié. Une plateforme de gestion ajoute l\'exécution, les analyses, le contrôle de version et les fonctionnalités de collaboration en plus du concept de bibliothèque. Commencez avec une bibliothèque simple et mettez à niveau vers une plateforme quand le volume ou la gouvernance le justifie.' },
           ],
     },
@@ -2783,7 +2783,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ogDescription: 'チームが毎日同じAIプロンプトをゼロから書いている問題を解決。テスト済みテンプレート、明確なオーナーシップ、バージョン管理を備えた共有プロンプトライブラリの構築ガイド。',
   twitterDescription: 'プロンプトライブラリ → テスト済みテンプレート → 一貫したAI出力。1週間で構築。ステップバイステップガイド。',
   publishDate: '2026-03-24',
-  dateModified: '2026-08-30',
+  dateModified: '2026-09-01',
   readTime: '11分で読める',
   educationalLevel: 'Beginner',
   audience: 'AIツール導入を進めるチームリーダーと実践者',
@@ -2815,7 +2815,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: 'プロンプトライブラリを構築して時間を節約する',
     description: 'プロンプトライブラリは、チームが共有・改善するテストされたプロンプトのメタデータ付き集約です。',
     datePublished: '2026-03-24',
-    dateModified: '2026-08-30',
+    dateModified: '2026-09-01',
     author: { '@type': 'Organization', name: 'PromptQuorum' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
@@ -2898,7 +2898,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'あるモデルで機能するが別では機能しないプロンプトは？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'メタデータでテスト済みモデルをタグ付け。新モデルで失敗なら、一つを無理に全モデルで機能させるのではなく「会議要約 – Claude」と「会議要約 – GPT-5.5」のバリエーション作成。多モデルテストツールで出力比較→昇格。',
+              'text': 'メタデータでテスト済みモデルをタグ付け。新モデルで失敗なら、一つを無理に全モデルで機能させるのではなく「会議要約 – Claude」と「会議要約 – GPT-5.6」のバリエーション作成。多モデルテストツールで出力比較→昇格。',
             },
           },
           {
@@ -2982,7 +2982,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowToStep',
         position: 3,
         name: 'タスク/機能別に整理し、モデル別は避ける',
-        text: '「会議要約」→ v1.0 (Claude)、v1.0 (GPT-5.5) のようにタスク中心の構造にしてください。「Claude プロンプト」→「会議要約」というモデル中心の構成は避けてください。',
+        text: '「会議要約」→ v1.0 (Claude)、v1.0 (GPT-5.6) のようにタスク中心の構造にしてください。「Claude プロンプト」→「会議要約」というモデル中心の構成は避けてください。',
       },
       {
         '@type': 'HowToStep',
@@ -3047,7 +3047,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '品質管理：悪いプロンプトは却下、良いものは継続的に改善。質が上がり続ける。',
         'ナレッジ保持：メンバーが去ってもテスト済みプロンプトは残存。',
         'A/B テスト対応：バージョン比較（v1.0 vs v1.1）で効果的なプロンプトを特定。',
-        'マルチモデル実験：同じプロンプトを GPT-5.5、Claude、Llama 3.3 で試験 — 最適モデル追跡可能。',
+        'マルチモデル実験：同じプロンプトを GPT-5.6、Claude、Llama 3.3 で試験 — 最適モデル追跡可能。',
       ],
       callouts: [
         {
@@ -3084,7 +3084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**所有者**：誰が書いた？アップデートの責任者？',
         '**タグ**：検索カテゴリ（「営業」「サポート」「法務」「コンテンツ生成」）',
         '**バージョン**：v1.0、v1.1、v2.0 — 変更ノート付き',
-        '**テスト済みモデル**：「Claude 4.6、GPT-5.5」（チームが正しいバリエーション選択を支援）',
+        '**テスト済みモデル**：「Claude 4.6、GPT-5.6」（チームが正しいバリエーション選択を支援）',
         '**ステータス**：下書き、承認済み、廃止予定（本番環境への悪いプロンプト進出を防止）',
       ],
       callouts: [
@@ -3108,7 +3108,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'オプションフィールド（後で追加可能）',
       content: '上記の9つの必須フィールドから始めてください。後で以下を追加できます：',
       items: [
-        '**コスト注記**：「このプロンプトは GPT-5.5 で ~0.02 ドル/呼び出し」',
+        '**コスト注記**：「このプロンプトは GPT-5.6 で ~0.02 ドル/呼び出し」',
         '**パフォーマンスメトリクス**：「レイテンシ：<2秒」「トークン数：~500」',
         '**習得事項**：「Few-shot 試験 — このタスクの精度改善なし」',
         '**依存関係**：「RAG システムからの retrieval_context 入力が必要」',
@@ -3190,7 +3190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '組織構造',
       content: 'どこに保存するにせよ：構造は **タスク/機能別** であり、モデル別ではありません。',
       items: [
-        '✅ 正解：営業 → メールドラフト (v1.0 Claude、v1.0 GPT-5.5) → 異議処理 (v1.1 Claude)',
+        '✅ 正解：営業 → メールドラフト (v1.0 Claude、v1.0 GPT-5.6) → 異議処理 (v1.1 Claude)',
         '❌ 不正解：Claude → 営業プロンプト → メールドラフト',
       ],
     },
@@ -3199,7 +3199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'タスク別の理由',
       content: 'モデル別に整理すると：別モデルでプロンプトをテストしたくなったとき、ファイルをコピー、リネーム、両バージョン同期が必要。エラー源でつまらない。',
       items: [
-        'タスク別なら：「メールドラフト」にバリエーション（Claude v1.0、GPT-5.5 v1.0）が明確なエントリ。比較・更新が簡単。',
+        'タスク別なら：「メールドラフト」にバリエーション（Claude v1.0、GPT-5.6 v1.0）が明確なエントリ。比較・更新が簡単。',
       ],
     },
     storageTableNote: {
@@ -3322,7 +3322,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'チームに本当に貢献させるには？', a: '貢献を可能な限りシンプルに：フォーム・Git テンプレート、明確なメタデータ、月次レビュー。最重要：価値を示す — チームはプロンプト使用・改善を見れば投稿。' },
             { q: 'プロンプトライブラリはシステムプロンプトと同じ？', a: 'いいえ。システムプロンプトは一度定義した規則（全入力に適用）。ライブラリは異タスク向け異なるプロンプト集約（各々にメタデータ・バージョン）。' },
             { q: '確認・整理の頻度は？', a: '月 1 回が理想。使用少ないプロンプトを廃止予定に、改善版を承認済みに昇格。月次レビューチームは 6 か月で無駄 20～30% 削減。' },
-            { q: 'あるモデルで機能するが別では機能しないプロンプトは？', a: 'メタデータでテスト済みモデルをタグ付け。新モデルで失敗なら、一つを無理に全モデルで機能させるのではなく「会議要約 – Claude」と「会議要約 – GPT-5.5」のバリエーション作成。多モデルテストツールで出力比較→昇格。' },
+            { q: 'あるモデルで機能するが別では機能しないプロンプトは？', a: 'メタデータでテスト済みモデルをタグ付け。新モデルで失敗なら、一つを無理に全モデルで機能させるのではなく「会議要約 – Claude」と「会議要約 – GPT-5.6」のバリエーション作成。多モデルテストツールで出力比較→昇格。' },
             { q: 'プロンプトライブラリとプロンプト管理プラットフォームの違い？', a: 'ライブラリはチーム管理の構造化プロンプトレコード集約（Git・スプレッドシート・専用ツール）。プラットフォームはライブラリの上に実行・分析・バージョン管理・協業機能追加。シンプルから開始し、ボリューム・ガバナンスでアップグレード。' },
             { q: 'METI AI ガバナンス対応は？', a: '2024 年 METI ガバナンスガイドラインに対応することが推奨。PromptQuorum は日本エンタープライズ展開対応で、ローカル推論・監査ログで企業コンプライアンス要件満たす。機密（金融・医療・法務）はローカル推論、汎用はプラットフォーム活用。' },
             { q: 'エンタープライズセキュリティ下でローカル推論は？', a: 'ローカル推論（LM Studio・Ollama）と PromptQuorum の組み合わせで機密プロンプトのオンプレミス管理可能。メタデータ・標準化は PromptQuorum、実行はローカル環境 — ハイブリッド。データ主権確保しながらライブラリ利点享受。' },
@@ -3368,7 +3368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ogDescription: '你的团队每天都在从零开始重写相同的AI提示词。一个包含测试模板、明确归属和版本控制的共享提示词库可以解决这个问题。以下是构建方法。',
   twitterDescription: '提示词库 → 测试模板 → 一致的AI输出。一周内为团队搭建完成。分步框架指南。',
   publishDate: '2026-03-24',
-  dateModified: '2026-08-30',
+  dateModified: '2026-09-01',
   readTime: '阅读约10分钟',
   educationalLevel: 'Beginner',
   audience: '采用AI工具的团队负责人和从业者',
@@ -3400,7 +3400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: '构建提示词库，节省时间',
     description: '提示词库是您的团队共享和改进的经过测试的指令集合，包含元数据。',
     datePublished: '2026-03-24',
-    dateModified: '2026-08-30',
+    dateModified: '2026-09-01',
     author: { '@type': 'Organization', name: 'PromptQuorum' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
     about: [
@@ -3483,7 +3483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '一个模型有效但另一个无效的提示词如何处理？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-5.5」）而不强制一个提示词处处工作。多模型工具升级前比较输出。',
+              'text': '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-5.6」）而不强制一个提示词处处工作。多模型工具升级前比较输出。',
             },
           },
           {
@@ -3531,7 +3531,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '如何处理在一个模型上有效但在另一个模型上无效的提示词？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-5.5"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。',
+              'text': '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-5.6"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。',
             },
           },
           {
@@ -3567,7 +3567,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@type': 'HowToStep',
         position: 3,
         name: '按任务/功能而非模型组织',
-        text: '结构：「会议总结」→ v1.0 (Claude)、v1.0 (GPT-5.5)，而不是「Claude提示词」→「会议总结」。模型详情属于元数据，不是文件夹结构。',
+        text: '结构：「会议总结」→ v1.0 (Claude)、v1.0 (GPT-5.6)，而不是「Claude提示词」→「会议总结」。模型详情属于元数据，不是文件夹结构。',
       },
       {
         '@type': 'HowToStep',
@@ -3632,7 +3632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '质量控制：坏提示词被过滤，好的被持续改进。质量不断上升。',
         '保留知识：当人离开时，他们验证的提示词保留在库中。',
         'A/B测试：比较版本（v1.0 vs v1.1），看哪个效果更好。',
-        '简化模型实验：在GPT-5.5、Claude、Llama 3.3上测试同一提示词——追踪哪个最佳。',
+        '简化模型实验：在GPT-5.6、Claude、Llama 3.3上测试同一提示词——追踪哪个最佳。',
       ],
       callouts: [
         {
@@ -3669,7 +3669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**所有者**：谁写的？谁负责更新？',
         '**标签**：搜索类别（「销售」「支持」「法律」「内容生成」）',
         '**版本**：v1.0、v1.1、v2.0——附带更改说明',
-        '**已测试模型**：「Claude 4.6、GPT-5.5」（帮助团队选择正确变体）',
+        '**已测试模型**：「Claude 4.6、GPT-5.6」（帮助团队选择正确变体）',
         '**状态**：草稿、已批准、已弃用（防止坏提示词进入生产）',
       ],
       callouts: [
@@ -3693,7 +3693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '可选字段（后来添加）',
       content: '从上面的9个必要字段开始。您可以稍后添加：',
       items: [
-        '**成本说明**：「此提示词在GPT-5.5上成本约0.02美元/调用」',
+        '**成本说明**：「此提示词在GPT-5.6上成本约0.02美元/调用」',
         '**性能指标**：「延迟：<2秒」「令牌计数：~500」',
         '**学到的教训**：「尝试少样本——不改进此任务的准确性」',
         '**依赖关系**：「需要retrieval_context输入（来自RAG系统）」',
@@ -3775,7 +3775,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '组织结构',
       content: '无论存储在哪里：结构应按**任务/功能**，不是按模型。',
       items: [
-        '✅ 正确：销售→邮件草稿(v1.0 Claude、v1.0 GPT-5.5)→异议处理(v1.1 Claude)',
+        '✅ 正确：销售→邮件草稿(v1.0 Claude、v1.0 GPT-5.6)→异议处理(v1.1 Claude)',
         '❌ 错误：Claude→销售提示词→邮件草稿',
       ],
     },
@@ -3784,7 +3784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '为什么按任务而非模型？',
       content: '如果按模型组织，会发生这种情况：您想在另一模型上测试提示词。现在您需要复制、重命名、保持两个版本同步。这容易出错且乏味。',
       items: [
-        '按任务：「邮件草稿」有变体（Claude v1.0、GPT-5.5 v1.0）作为清晰条目。易于比较、易于更新。',
+        '按任务：「邮件草稿」有变体（Claude v1.0、GPT-5.6 v1.0）作为清晰条目。易于比较、易于更新。',
       ],
     },
     storageTableNote: {
@@ -3907,13 +3907,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '如何让团队真实贡献？', a: '让贡献尽简单：表单或Git模板、清晰元数据要求、月审查。最重要：显示价值——团队看到提示词被用和改进时会贡献。' },
             { q: '库与系统提示词相同吗？', a: '不同。系统提示词是一次定义应用到全部输入的规则。库是不同任务的不同提示词集合——各有元数据和版本。' },
             { q: '多久审查和整理一次库？', a: '每月为宜。标记少用提示词为已弃用、升级改进版本为已批准、使用改变时创建新类别。月审查团队6个月内减少20-30%冗余。' },
-            { q: '一个模型有效但另一个无效的提示词如何处理？', a: '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-5.5」）而不强制一个提示词处处工作。多模型工具升级前比较输出。' },
+            { q: '一个模型有效但另一个无效的提示词如何处理？', a: '在元数据中为各提示词标记已测试模型。失败于新模型时，创建变体（如「总结-Claude」和「总结-GPT-5.6」）而不强制一个提示词处处工作。多模型工具升级前比较输出。' },
             { q: '库和管理平台有何区别？', a: '库是团队管理的结构化提示词记录集合(可在Git、表格、专用工具中)。平台在库基础加执行、分析、版本管理、协作。从简单库开始，需要时升级到平台。' },
             { q: '使用PromptQuorum需遵守数据安全法吗？', a: '是的。按数据安全法，敏感数据相关提示词工具必须符合法律。PromptQuorum提供中国部署选项且支持本地推论满足驻留和处理要求。受管制行业用本地推论确保敏感工作流合规。' },
             { q: '企业合规下如何用本地推论？', a: '结合本地推论(LM Studio、Ollama等)和PromptQuorum可在自有基础设施管理敏感提示词。混合：在PromptQuorum管理元数据和标准化，在本地环境执行。既保数据主权又享库优势。' },
             { q: '从零开始构建可用的提示词库需要多长时间？', a: '含10-15个经过测试的提示词的最小库需要2-4周（取决于团队规模）。通过持续使用和月度审查，质量会不断提高。一旦建立，维护每周只需不到1小时。' },
             { q: '如何让团队真正为共享库做贡献？', a: '让贡献尽可能简单：表单或Git模板、清晰的元数据要求、月度审查。最重要的是：展示价值——当团队看到他们的提示词被使用和改进时，他们会贡献。' },
-            { q: '如何处理在一个模型上有效但在另一个模型上无效的提示词？', a: '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-5.5"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。' },
+            { q: '如何处理在一个模型上有效但在另一个模型上无效的提示词？', a: '在元数据中为每个提示词标记已测试的模型。如果提示词在新模型上失败，创建变体（如"会议总结-Claude"和"会议总结-GPT-5.6"），而不是强制一个提示词到处工作。多模型测试工具让您在升级前比较输出。' },
             { q: '提示词库和提示词管理平台有什么区别？', a: '提示词库是您的团队管理的结构化提示词记录的集合——可以存储在Git仓库、电子表格或专用工具中。提示词管理平台在库的基础上增加了执行、分析、版本控制和协作功能。从简单库开始，当需要更多治理时升级到平台。' },
           ],
     },

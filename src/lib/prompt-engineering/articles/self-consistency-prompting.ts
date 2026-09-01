@@ -1271,7 +1271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: '**O self-consistency prompting gera 5–20 caminhos de raciocínio independentes para a mesma pergunta e seleciona a resposta que aparece com mais frequência.** Em vez de confiar em uma única resposta de IA (que pode estar errada), você faz a pergunta várias vezes com temperaturas mais altas e deixa a votação por maioria decidir. Essa técnica simples melhora a precisão em matemática, lógica e análise de múltiplos passos em 15–25 pontos percentuais.',
       leadAnswerBlock: '**Self-consistency prompting: faça ao modelo a mesma pergunta 5–20 vezes com temperatura alta (0,7–1,0) para gerar caminhos de raciocínio diversos, depois escolha a resposta majoritária. A técnica melhorou a precisão em matemática de 56% (chain-of-thought único) para 74% (self-consistency com 40 amostras) no artigo original. Funciona em todos os modelos. Trade-off: 5–20× mais tokens por tarefa.**',
       publishDate: '2026-03-26',
-      dateModified: '2026-08-31',
+      dateModified: '2026-09-01',
       readTime: '12 min de leitura',
       educationalLevel: 'Intermediate',
       audience: 'Desenvolvedores criando pipelines de raciocínio de IA confiáveis, analistas tomando decisões críticas com IA, pesquisadores em prompt engineering',
@@ -1483,6 +1483,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Qual temperatura devo usar para self-consistency?', a: 'Defina temperatura em 0,7–1,0. A técnica requer caminhos de raciocínio diversos — se temperatura for 0 (determinístico), cada amostra produz a saída idêntica e a votação não tem sentido.' },
             { q: 'Como o PromptQuorum se relaciona com self-consistency?', a: 'PromptQuorum aplica o mesmo princípio de consenso entre diferentes modelos em vez de dentro de um. Em vez de perguntar ao mesmo modelo 10 vezes, você pergunta a 5 modelos diferentes uma vez cada e compara suas respostas. Onde concordam, a confiança é alta. Isso captura vieses específicos do modelo que o self-consistency de um único modelo não consegue detectar.' },
             { q: 'Quantas amostras preciso?', a: 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.' },
+            { q: 'O self-consistency funciona em tarefas simples?', a: 'Não de forma significativa. Para buscas factuais, classificação simples ou textos curtos, uma única resposta quase sempre é suficiente e muito mais barata. O self-consistency compensa em tarefas de raciocínio de múltiplos passos — matemática, lógica, planejamento — onde diferentes caminhos de raciocínio podem chegar a respostas diferentes.' },
+            { q: 'Quanto mais custa o self-consistency?', a: 'Aproximadamente 5–20× mais tokens por tarefa, já que você gera de 5 a 20 respostas completas em vez de uma. Para uma resposta que custa R$ 0,05, self-consistency com 10 amostras custa cerca de R$ 0,50. Reserve a técnica para decisões onde o custo extra vale a precisão adicional.' },
+            { q: 'Self-consistency é o mesmo que amostragem "best-of-N"?', a: 'Parecido, mas não idêntico. Best-of-N gera N respostas e seleciona a melhor (geralmente por um avaliador de qualidade). Self-consistency gera N caminhos de raciocínio e escolhe a resposta final mais frequente por votação majoritária — não depende de um avaliador externo, só da concordância entre as amostras.' },
+            { q: 'Posso usar self-consistency com chain-of-thought prompting?', a: 'Sim — essa é a combinação original e mais eficaz. Cada uma das suas N amostras usa raciocínio chain-of-thought, produzindo um caminho de raciocínio completo além da resposta final. Você então vota na resposta final entre as amostras, ignorando as variações no caminho de raciocínio.' },
           ],
         },
       },
@@ -1529,6 +1533,38 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Para a maioria das tarefas, 5–10 amostras fornecem a melhor relação precisão-custo. Comece com 5; aumente para 10–20 apenas para decisões de alto risco.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O self-consistency funciona em tarefas simples?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Não de forma significativa. Para buscas factuais, classificação simples ou textos curtos, uma única resposta quase sempre é suficiente e muito mais barata. O self-consistency compensa em tarefas de raciocínio de múltiplos passos — matemática, lógica, planejamento — onde diferentes caminhos de raciocínio podem chegar a respostas diferentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quanto mais custa o self-consistency?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aproximadamente 5–20× mais tokens por tarefa, já que você gera de 5 a 20 respostas completas em vez de uma. Para uma resposta que custa R$ 0,05, self-consistency com 10 amostras custa cerca de R$ 0,50. Reserve a técnica para decisões onde o custo extra vale a precisão adicional.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Self-consistency é o mesmo que amostragem "best-of-N"?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parecido, mas não idêntico. Best-of-N gera N respostas e seleciona a melhor (geralmente por um avaliador de qualidade). Self-consistency gera N caminhos de raciocínio e escolhe a resposta final mais frequente por votação majoritária — não depende de um avaliador externo, só da concordância entre as amostras.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar self-consistency com chain-of-thought prompting?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim — essa é a combinação original e mais eficaz. Cada uma das suas N amostras usa raciocínio chain-of-thought, produzindo um caminho de raciocínio completo além da resposta final. Você então vota na resposta final entre as amostras, ignorando as variações no caminho de raciocínio.',
             },
           },
         ],

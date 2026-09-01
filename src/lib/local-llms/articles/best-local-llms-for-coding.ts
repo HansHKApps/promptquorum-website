@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-07-01',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       last_full_refresh: '2026-07-29',
       current_models_mentioned: ['Kimi K2.6', 'Kimi K2.7 Code', 'Laguna XS 2.1', 'Qwen 3.6 27B', 'Devstral Small 24B', 'Codestral 22B', 'qwen3-coder:30b', 'gpt-oss:20b', 'Qwen3 8B'],
       current_benchmarks_used: ['SWE-bench', 'SWE-bench Verified', 'SWE-Bench Pro', 'SWE-bench Multilingual', 'HumanEval'],
@@ -684,7 +684,7 @@ schema: {
     },
     es: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       theme: 'Best Models',
       title: 'Mejores LLMs locales para programación 2026: Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'Mejores LLM locales para código 2026: Kimi K2.6, Qwen',
@@ -1350,7 +1350,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية للبرمجة ⁨2026⁩: ⁨Kimi K2.6⁩ مقابل ⁨Qwen⁩ مقابل ⁨Devstral⁩',
       seoTitle: 'أفضل ⁨LLM⁩ للبرمجة ⁨2026⁩: ⁨Kimi K2.6⁩ و⁨Qwen⁩ و⁨Devstral⁩',
@@ -1951,7 +1951,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       theme: 'Best Models',
       title: 'Melhores LLMs locais para programação 2026: Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'Melhor LLM local para código 2026: Kimi K2.6, Qwen',
@@ -2394,7 +2394,7 @@ schema: {
     },
     de: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       theme: 'Beste Modelle',
       title: 'Beste lokale LLMs für Programmierung 2026: Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'Beste lokale Coding-LLMs 2026: Kimi K2.6, Qwen, Devstral',
@@ -2851,7 +2851,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       theme: 'Meilleurs Modèles',
       title: 'Meilleurs LLMs locaux pour la programmation 2026 : Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'Meilleurs LLM locaux pour le code 2026 : Kimi K2.6, Qwen',
@@ -3284,7 +3284,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       theme: 'ベストモデル',
       title: '2026年最高のコーディング用ローカルLLM：Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: 'ローカルLLM コーディング おすすめ 2026：Kimi',
@@ -3652,7 +3652,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'monthly',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       theme: '最佳模型',
       title: '2026年最佳本地编码LLM：Kimi K2.6 vs Qwen vs Devstral',
       seoTitle: '2026年最佳本地编程LLM：Kimi K2.6、Qwen、Devstral',
@@ -4019,7 +4019,7 @@ schema: {
   ko: {
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-07-01',
-      next_refresh_due: '2026-08-28',
+      next_refresh_due: '2026-09-28',
       last_full_refresh: '2026-07-29',
       current_models_mentioned: ['Kimi K2.6', 'Kimi K2.7 Code', 'Laguna XS 2.1', 'Qwen 3.6 27B', 'Devstral Small 24B', 'Codestral 22B', 'qwen3-coder:30b', 'gpt-oss:20b', 'Qwen3 8B'],
       theme: '최고의 모델',

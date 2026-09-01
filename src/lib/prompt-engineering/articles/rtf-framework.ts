@@ -1816,7 +1816,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'O Framework RTF: Papel, Tarefa, Formato (2026)',
         description: 'Como o Framework RTF (Papel, Tarefa, Formato) funciona, quando usá-lo e como o PromptQuorum oferece RTF como opção integrada.',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-29',
+        dateModified: '2026-09-01',
         url: 'https://www.promptquorum.com/pt/prompt-engineering/rtf-framework',
         inLanguage: 'pt-BR',
         keywords: ['Framework RTF', 'Papel Tarefa Formato', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum', 'prompting LLM'],
@@ -1840,6 +1840,24 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'SpeakableSpecification',
           cssSelector: ['.article-intro', '.key-takeaways'],
         },
+      },
+      faqSchema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          { '@type': 'Question', name: 'O que significa RTF?', acceptedAnswer: { '@type': 'Answer', text: 'RTF significa Papel (Role), Tarefa (Task), Formato (Format) — uma estrutura de prompt de três partes onde Papel define quem o modelo deve ser, Tarefa especifica o que o modelo deve fazer, e Formato descreve a estrutura da saída desejada.' } },
+          { '@type': 'Question', name: 'Como RTF é diferente de CO-STAR?', acceptedAnswer: { '@type': 'Answer', text: 'RTF é mínimo e focado em três campos: Papel, Tarefa, Formato. CO-STAR é mais abrangente, adicionando Contexto, Estilo, Audiência e Tom. Use RTF para tarefas rápidas e diretas; use CO-STAR quando audiência e tom importam.' } },
+          { '@type': 'Question', name: 'Quando devo usar RTF?', acceptedAnswer: { '@type': 'Answer', text: 'Use RTF quando precisar de saída estruturada de um papel claramente definido. Exemplos: resumir reuniões, gerar código, escrever e-mails em formato específico ou criar documentação. RTF é ideal para fluxos de trabalho baseados em templates.' } },
+          { '@type': 'Question', name: 'Posso combinar RTF com outros frameworks?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Você pode usar RTF para geração de saída inicial, então aplicar RISEN para refinamento iterativo. Ou combine RTF com Chain-of-Thought para adicionar raciocínio. Misture e combine frameworks para fluxos de trabalho complexos.' } },
+          { '@type': 'Question', name: 'O RTF funciona com todos os modelos de linguagem?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. RTF é agnóstico quanto ao framework. Funciona com GPT-5.6, Claude, Gemini, modelos open-source como Llama 3.2 e modelos locais via Ollama ou LM Studio. Os princípios se aplicam universalmente a qualquer LLM que siga instruções.' } },
+          { '@type': 'Question', name: 'E se eu não souber qual Papel especificar?', acceptedAnswer: { '@type': 'Answer', text: 'Comece com o papel mais simples que se encaixe na tarefa: "Você é um redator técnico", "Você é um gerente de produto" ou "Você é um especialista em Python". Seja específico, mas não excessivamente elaborado. Teste papéis diferentes para ver qual produz melhores resultados.' } },
+          { '@type': 'Question', name: 'A ordem de Papel, Tarefa e Formato importa?', acceptedAnswer: { '@type': 'Answer', text: 'A ordem tradicional é Papel → Tarefa → Formato, mas o modelo entenderá sua intenção independentemente da ordem. Ainda assim, manter essa ordem padrão facilita a leitura e a criação de templates. Consistência importa mais do que ordem estrita.' } },
+          { '@type': 'Question', name: 'Como escrevo uma boa especificação de Formato?', acceptedAnswer: { '@type': 'Answer', text: 'Seja específico: em vez de "Formato: uma saída boa", escreva "Formato: 5 pontos, cada um com menos de 15 palavras". Especifique a estrutura (marcadores, parágrafos, blocos de código, JSON), o tamanho (contagem de palavras, número de itens) e o tom (formal, casual, técnico).' } },
+          { '@type': 'Question', name: 'Quando devo usar RTF em vez de CO-STAR ou SPECS?', acceptedAnswer: { '@type': 'Answer', text: 'Use RTF para tarefas rotineiras e repetíveis (resumos, revisões de código, e-mails, relatórios). Suba para CO-STAR quando tom/audiência forem críticos, para SPECS quando precisar de esquemas e restrições rígidas, e para TRACE quando a transparência do raciocínio importar.' } },
+          { '@type': 'Question', name: 'RTF é a mesma coisa que "simplesmente dizer ao modelo o que fazer"?', acceptedAnswer: { '@type': 'Answer', text: 'Não. RTF força a especificação explícita de três coisas: quem o modelo é (Papel), qual tarefa ele resolve (Tarefa) e como a saída deve ser estruturada (Formato). Essa estrutura elimina a ambiguidade e melhora a consistência entre modelos e execuções.' } },
+          { '@type': 'Question', name: 'Como o RTF se compara ao Chain-of-Thought?', acceptedAnswer: { '@type': 'Answer', text: 'Chain-of-Thought melhora o raciocínio pedindo aos modelos que "pensem passo a passo". RTF estrutura o formato da saída e o papel. São complementares — você pode combiná-los: use RTF para definir papel e formato, depois adicione "pense passo a passo" para tarefas de raciocínio complexo.' } },
+          { '@type': 'Question', name: 'Posso usar RTF com modelos locais como o Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. RTF funciona com qualquer LLM, incluindo modelos locais executados via Ollama ou LM Studio. Modelos mais simples (Mistral Small, Llama 3.3) podem ser menos consistentes com campos de Formato complexos, mas RTF ainda melhora a qualidade da saída.' } },
+        ],
       },
       sections: {
         tldr: {
@@ -2110,6 +2128,34 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               q: 'O RTF funciona com todos os modelos de linguagem?',
               a: 'Sim. RTF é agnóstico quanto ao framework. Funciona com GPT-5.6, Claude, Gemini, modelos open-source como Llama 3.2 e modelos locais via Ollama ou LM Studio. Os princípios se aplicam universalmente a qualquer LLM que siga instruções.',
+            },
+            {
+              q: 'E se eu não souber qual Papel especificar?',
+              a: 'Comece com o papel mais simples que se encaixe na tarefa: "Você é um redator técnico", "Você é um gerente de produto" ou "Você é um especialista em Python". Seja específico, mas não excessivamente elaborado. Teste papéis diferentes para ver qual produz melhores resultados.',
+            },
+            {
+              q: 'A ordem de Papel, Tarefa e Formato importa?',
+              a: 'A ordem tradicional é Papel → Tarefa → Formato, mas o modelo entenderá sua intenção independentemente da ordem. Ainda assim, manter essa ordem padrão facilita a leitura e a criação de templates. Consistência importa mais do que ordem estrita.',
+            },
+            {
+              q: 'Como escrevo uma boa especificação de Formato?',
+              a: 'Seja específico: em vez de "Formato: uma saída boa", escreva "Formato: 5 pontos, cada um com menos de 15 palavras". Especifique a estrutura (marcadores, parágrafos, blocos de código, JSON), o tamanho (contagem de palavras, número de itens) e o tom (formal, casual, técnico).',
+            },
+            {
+              q: 'Quando devo usar RTF em vez de CO-STAR ou SPECS?',
+              a: 'Use RTF para tarefas rotineiras e repetíveis (resumos, revisões de código, e-mails, relatórios). Suba para CO-STAR quando tom/audiência forem críticos, para SPECS quando precisar de esquemas e restrições rígidas, e para TRACE quando a transparência do raciocínio importar.',
+            },
+            {
+              q: 'RTF é a mesma coisa que "simplesmente dizer ao modelo o que fazer"?',
+              a: 'Não. RTF força a especificação explícita de três coisas: quem o modelo é (Papel), qual tarefa ele resolve (Tarefa) e como a saída deve ser estruturada (Formato). Essa estrutura elimina a ambiguidade e melhora a consistência entre modelos e execuções.',
+            },
+            {
+              q: 'Como o RTF se compara ao Chain-of-Thought?',
+              a: 'Chain-of-Thought melhora o raciocínio pedindo aos modelos que "pensem passo a passo". RTF estrutura o formato da saída e o papel. São complementares — você pode combiná-los: use RTF para definir papel e formato, depois adicione "pense passo a passo" para tarefas de raciocínio complexo.',
+            },
+            {
+              q: 'Posso usar RTF com modelos locais como o Ollama?',
+              a: 'Sim. RTF funciona com qualquer LLM, incluindo modelos locais executados via Ollama ou LM Studio. Modelos mais simples (Mistral Small, Llama 3.3) podem ser menos consistentes com campos de Formato complexos, mas RTF ainda melhora a qualidade da saída.',
             },
           ],
         },
