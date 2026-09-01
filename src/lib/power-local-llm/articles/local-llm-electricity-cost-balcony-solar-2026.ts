@@ -2012,4 +2012,253 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'audience': { '@type': 'Audience', 'audienceType': 'مستخدمو LLM المحلي الراغبون في معرفة التكلفة الحقيقية للكهرباء لأجهزتهم وما إذا كانت الطاقة الشمسية للشرفة قادرة على تعويضها' },
     },
   },
+  ko: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-01',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
+    current_hardware_mentioned: [
+      'RTX 4090',
+      'RTX 3090',
+      'RTX 4070',
+      'Mac Mini M4',
+      'MacBook Pro M4 Max',
+      'EcoFlow STREAM Ultra',
+      'Jackery HomePower 2000 Ultra',
+      'Zendure SolarFlow Hub 2000',
+      'BLUETTI AC180',
+      'BLUETTI AC180P',
+    ],
+    theme: 'Overview & Reference',
+    affiliateDisclosure: true,
+    title: '로컬 LLM의 전기 요금은 얼마이며, 발코니 태양광으로 상쇄할 수 있을까 (2026)',
+    seoTitle: '로컬 LLM 전기 요금 대 발코니 태양광 (2026)',
+    intro:
+      '로컬 LLM을 하루 몇 시간 구동하는 GPU는 실제로 계산 가능한 비용이 듭니다 — 미국에서 하루 4시간의 적당한 사용 습관이라면 월 약 $6.60, 전력을 많이 소모하는 카드를 24시간 내내 돌린다면 월 약 $60에 달합니다. 800W 발코니 태양광 시스템은 화창한 여름날에는 적당한 사용 사례를 충분히 감당할 수 있지만, 특히 겨울에는 상시 가동되는 무거운 구성을 상쇄하지 못합니다. 이 가이드는 흔히 쓰이는 로컬 LLM 하드웨어의 정확한 계산을 살펴보고, 미국과 독일의 전기 요금을 비교하며, 실제로 필요한 발코니 배터리 용량을 산정합니다 — 태양광이 정말 도움이 되는 경우와 그렇지 않은 경우에 대한 솔직한 단서와 함께.',
+    metaDescription:
+      '로컬 LLM 전기 요금 계산: RTX 4090/3090/4070과 Mac Mini M4의 전력 소비, 미국($0.184/kWh)과 독일(약 €0.32/kWh)의 월 비용, 800W 발코니 태양광 시스템으로 상쇄할 수 있는지 여부.',
+    twitterDescription:
+      '로컬 LLM이 실제로 드는 전기 요금 — RTX 4090/3090/4070과 Mac Mini M4의 전력 소비, 미국 대 독일 월 비용 비교, 800W 발코니 태양광으로 현실적으로 상쇄할 수 있는지 정리.',
+    readTime: '10분 읽기',
+    educationalLevel: 'Intermediate',
+    audience: '자신의 로컬 LLM 환경의 실제 전기 요금을 알고 싶고 발코니 태양광으로 이를 상쇄할 수 있는지 궁금한 사용자',
+    primaryTerm: '로컬 LLM 전기 요금',
+    targetKeywords: [
+      '로컬 llm 전기 요금',
+      'llm 24시간 가동 전기 요금',
+      'gpu용 발코니 태양광',
+      '태양광으로 ai 전기 요금 상쇄',
+      '로컬 ai 전력 소비 계산기',
+    ],
+    leadAnswerBlock:
+      '**대기 상태의 GPU가 하루 몇 시간 로컬 LLM을 구동하면 미국에서 월 약 $6.60가 듭니다(하루 1.2kWh, 18.4센트/kWh 기준) — RTX 4090급 카드로 24시간 내내 가동되는 무거운 구성이라면 대신 월 약 $60가 듭니다.** 800W 발코니 태양광 시스템은 화창한 여름날에는 약 3~4.5kWh를 생산하지만, 겨울에는 하루 약 0.5~1.5kWh에 그칩니다 — 여름철 적당한 사용 사례는 충분히 감당하지만, 어떤 계절이든 상시 가동되는 무거운 구성을 의미 있게 상쇄하지는 못합니다. 배터리는 태양광 시스템의 정격 출력이 아니라 GPU의 실제 소비 전력에 맞춰 크기를 정하십시오.',
+    quickAnswerTop: {
+      ko: {
+        question: '로컬 LLM을 구동하면 전기 요금이 얼마나 나옵니까?',
+        answer:
+          '300W GPU를 하루 4시간 가동하면 미국에서 18.4센트/kWh 기준 월 약 $6.60, 독일에서는 요금제에 따라 하루 1.2kWh·25~40센트/kWh 기준 월 약 €11~15가 듭니다. 450W 카드를 24시간 내내 가동하면 미국에서는 월 약 $60에 가까워집니다. 800W 발코니 태양광 시스템은 여름철 적당한 사용 사례는 상쇄할 수 있지만, 어떤 계절이든 24시간 가동되는 무거운 사용 사례는 상쇄할 수 없습니다.',
+        bullets: [
+          'RTX 4090: 대기 시 약 20~33W, 부하 시 최대 450W(TBP)',
+          'RTX 3090: 대기 시 약 18~26W, 부하 시 약 350W',
+          'RTX 4070: 대기 시 10W, 평균 게이밍 소비 186W, 정격 TDP 200W',
+          'Mac Mini M4: 대기 시 5W 미만, LLM 추론 시 최대 약 65W',
+          '800W 발코니 태양광: 여름철 하루 약 3~4.5kWh, 겨울철 하루 약 0.5~1.5kWh(독일 데이터 기준)',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: '핵심 내용', anchor: 'tldr' },
+      { label: '로컬 LLM 하드웨어는 전력을 얼마나 소비하는가', anchor: 'gpu-power' },
+      { label: '월 비용은 얼마인가', anchor: 'monthly-cost' },
+      { label: '발코니 태양광으로 로컬 LLM 환경을 상쇄할 수 있는가', anchor: 'solar-offset' },
+      { label: '실제로 필요한 배터리 용량은 얼마인가', anchor: 'battery-sizing' },
+      { label: '실제로 누구에게 적합한가', anchor: 'who-should-do-this' },
+      { label: '흔한 실수', anchor: 'common-mistakes' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+      { label: '출처', anchor: 'sources' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '로컬 LLM 환경은 하루 4시간의 적당한 사용 습관에서 전기 요금이 월 약 $6.60, 24시간 가동 시 월 약 $60가 듭니다 — 800W 발코니 태양광 시스템은 여름철 적당한 사용 사례는 상쇄할 수 있지만, 어떤 계절이든 24시간 가동되는 무거운 사용 사례는 상쇄할 수 없습니다.' },
+      { type: 'plain-terms', content: 'kWh(킬로와트시)는 전기 요금이 부과되는 단위입니다 — 300와트 GPU를 1시간 가동하면 0.3kWh를 소비합니다. 와트 수에 시간을 곱한 뒤 1,000으로 나누고, 여기에 kWh당 전기 요금을 곱하면 비용이 나옵니다. 발코니 태양광 발전량도 같은 단위로 측정되므로 두 수치를 직접 비교할 수 있습니다.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '핵심 내용',
+        isTldr: true,
+        items: [
+          '300W로 하루 4시간 가동되는 GPU는 미국에서 월 약 $6.60(18.4센트/kWh), 독일에서는 요금제에 따라 월 약 €11~15가 듭니다',
+          '450W로 24시간 내내 가동되는 GPU(RTX 4090급)는 미국에서 월 약 $60에 가까워집니다 — 적당한 사용 사례의 거의 10배입니다',
+          'Apple Silicon(Mac Mini M4: 대기 시 5W 미만, 추론 피크 약 65W)은 독립 GPU 구성 대비 극히 일부의 비용으로 운영됩니다',
+          '800W 발코니 태양광 시스템은 화창한 여름날 하루 약 3~4.5kWh를 생산하지만, 겨울에는 하루 약 0.5~1.5kWh에 그칩니다 — 계절 차이가 약 3~7배에 달합니다',
+          '배터리는 태양광 시스템의 800W 정격 출력이 아니라 GPU의 실제 일일 소비 전력에 맞춰 크기를 정해야 합니다 — 두 수치는 직접 비교할 수 없습니다',
+          '프랑스의 플러그인 태양광 인버터 상한선은 독일과 동일한 800W입니다 — 이 기기 등급에 대해 프랑스만의 별도로 더 엄격한 상한선은 존재하지 않습니다',
+        ],
+      },
+      gpuPower: {
+        id: 'gpu-power',
+        title: '로컬 LLM 하드웨어는 실제로 전력을 얼마나 소비하는가',
+        content:
+          '**대기 시와 부하 시 소비 전력의 차이가 전기 요금 계산을 단순하지 않게 만듭니다 — 카드가 하루 20시간 동안 거의 소음 없이 대기하더라도, 나머지 4시간 동안 풀가동된다면 청구서에서 가장 큰 항목이 될 수 있습니다.** 아래 수치는 제조사 사양과 독립적인 측정값이며, PromptQuorum이 직접 실시한 벤치마크가 아닙니다.',
+        columns: ['하드웨어', '대기', '부하 / 추론'],
+        rows: [
+          { '하드웨어': 'RTX 4090', '대기': '약 20~33W', '부하 / 추론': '최대 450W(TBP)' },
+          { '하드웨어': 'RTX 3090', '대기': '약 18~26W', '부하 / 추론': '약 350W' },
+          { '하드웨어': 'RTX 4070', '대기': '10W', '부하 / 추론': '평균 186W(정격 TDP 200W)' },
+          { '하드웨어': 'Mac Mini M4', '대기': '5W 미만', '부하 / 추론': '최대 약 65W' },
+          { '하드웨어': 'MacBook Pro M4 Max', '대기': '한 자릿수 초반', '부하 / 추론': '추론 시 약 40~80W, 시스템 피크 약 110W' },
+        ],
+        items: [
+          'RTX 4090: NVIDIA는 전체 보드 전력(TBP)을 450W로 명시합니다. 독립 측정에 따르면 대기 시 소비 전력은 18W(적극적인 전력 제한 구성)에서 33W(Founders Edition) 사이이며, 부하는 워크로드에 따라 400~600W에 이를 수 있습니다.',
+          'RTX 3090: 대기 시 전력은 디스플레이 구성에 따라 약 18~26W입니다. 게이밍이나 추론 워크로드에서 전체 부하는 약 350W이며, 일부 측정에서는 365W까지 나타났습니다.',
+          'RTX 4070: NVIDIA가 자체 공개한 수치 — 대기 시 10W, 동영상 재생 시 16W, 평균 게이밍 소비 186W — 대비 정격 TDP는 200W입니다. 실측 피크는 253W까지 기록되었습니다.',
+          'Mac Mini M4: 독립적으로 측정한 결과 대기 시 5W 미만, LLM 추론 시 최대 약 65W였습니다(한 측정에서는 구체적으로 50W 피크를 기록). 5대의 Mac Mini로 구성된 클러스터가 전력을 다해 추론할 때 합계 약 200W를 소비했습니다.',
+          'MacBook Pro M4 Max: LLM 추론 자체는 약 40~80W를 소비합니다. 디스플레이를 포함한 전체 시스템은 가장 부하가 큰 복합 작업에서 약 110W의 피크에 도달합니다 — Apple Silicon의 일반적인 추론 소비 전력 범위인 30~70W는 단독 데스크톱 GPU의 300W 이상보다 훨씬 낮습니다.',
+        ],
+      },
+      monthlyCost: {
+        id: 'monthly-cost',
+        title: '월 비용은 얼마인가',
+        content:
+          '**계산식은 어디서나 동일합니다: kWh = 와트 ÷ 1,000 × 시간, 그다음 비용 = kWh × kWh당 요금.** 미국 가정용 전기 요금은 2026년 중반 기준 평균 약 18.4센트/kWh였습니다(EIA). 독일 가정용 전기 요금은 훨씬 균일하지 않습니다 — 신규 고객 요금제는 kWh당 약 25~27센트인 반면, 기본 공급(Grundversorgung) 기본 요금은 kWh당 40센트에 이를 수 있으며, 가구 평균은 kWh당 약 31~32센트입니다.',
+        columns: ['사용 패턴', 'kWh/일', '미국 월 비용', '독일 월 비용'],
+        rows: [
+          { '사용 패턴': '300W, 하루 4시간(적당)', 'kWh/일': '1.2kWh', '미국 월 비용': '약 $6.60', '독일 월 비용': '약 €11~15' },
+          { '사용 패턴': '65W, 하루 4시간(Mac Mini M4)', 'kWh/일': '0.26kWh', '미국 월 비용': '약 $1.44', '독일 월 비용': '약 €2.50~3.20' },
+          { '사용 패턴': '450W, 하루 24시간(무거움, 상시)', 'kWh/일': '10.8kWh', '미국 월 비용': '약 $59.60', '독일 월 비용': '약 €100~130' },
+        ],
+        note: '미국 수치는 EIA가 보고한 가정용 평균 18.4센트/kWh(2026년 중반)를 사용합니다. 독일 수치는 실제 요금제 편차를 반영한 25~40센트/kWh 범위를 사용한 것이며 단일 요율이 아닙니다 — 두 수치 중 어느 쪽이든 정확한 값으로 다루기 전에 본인의 청구서를 확인하십시오.',
+      },
+      solarOffset: {
+        id: 'solar-offset',
+        title: '발코니 태양광으로 로컬 LLM 환경을 상쇄할 수 있는가',
+        content: [
+          '**800W 발코니 태양광 시스템 — 독일에서 플러그인 태양광의 법적 상한선이며, 이 글 작성 시점 기준 프랑스도 마찬가지입니다(두 나라 모두 인버터의 교류 출력을 800W로 제한하며, 패널 출력 자체를 제한하지는 않습니다) — 은 남향 패널로 맑은 여름날에 약 3~4.5kWh를 생산하지만, 겨울에는 하루 약 0.5~1.5kWh에 그칩니다.** 이는 태양의 고도와 낮의 길이에 따른 약 3~7배의 계절 차이이며, 시스템 고장이 아닙니다.',
+          '이를 위의 적당한 사용 사례와 비교해 보십시오: GPU 소비 전력은 하루 1.2kWh입니다. 여름에는 800W 시스템의 하루 3~4.5kWh 발전량이 이를 충당하고도 다른 가정용 전력을 위한 실질적인 여유분이 남습니다. 겨울에는 하루 0.5~1.5kWh의 태양광 발전량이 하루 1.2kWh의 수요에 못 미치거나 겨우 맞먹는 수준입니다 — 독일 대부분 지역에서 이 시스템은 연중 약 3분의 1 동안 의미 있는 상쇄 수단이 되지 못합니다.',
+          '하루 10.8kWh인 무거운 24시간 사용 사례의 경우, 여름철 최상의 발전량인 하루 4.5kWh조차 부하의 절반에 크게 못 미치며, 겨울철 발전량은 그중 극히 일부만 감당합니다. 태양광은 낮 시간에 일정을 맞춘 적당한 로컬 LLM 사용의 전기 요금을 의미 있게 줄일 수 있습니다. 하지만 어떤 계절이든, 상시 가동되는 무거운 구성을 "그린 AI"로 바꾸지는 못합니다.',
+        ],
+        note: '사용량이 무겁고 상시 가동이라면 태양광을 로컬 LLM 환경과 함께 사용하지 마십시오 — 법적 상한선인 800W 플러그인 시스템의 최상의 여름철 발전량조차 그 부하의 절반에 크게 못 미치며, 겨울에는 거의 아무것도 감당하지 못합니다. 태양광은 낮 시간에 일정을 맞춘 적당한 사용에 대해서는 실질적이고 의미 있는 상쇄 수단이지만, 24시간 무거운 추론을 "친환경"으로 만드는 방법은 아닙니다.',
+      },
+      batterySizing: {
+        id: 'battery-sizing',
+        title: '실제로 필요한 배터리 용량은 얼마인가',
+        content:
+          '**배터리는 태양광 시스템의 800W 정격 출력이 아니라 GPU의 실제 일일 kWh 소비량에 맞춰 크기를 정하십시오 — 두 수치는 서로 다른 것을 측정하며 직접 비교할 수 없습니다.** 하루 1.2kWh의 적당한 사용 사례라면 작은 배터리로도 약 하루치 저장 용량을 감당할 수 있습니다. 하루 10.8kWh의 무거운 사용 사례라면, 아래의 어떤 단일 유닛도 여러 확장 모듈을 쌓지 않고서는 하루치 용량에 근접하지 못합니다.',
+        columns: ['배터리', '용량', '가격'],
+        rows: [
+          { '배터리': 'BLUETTI AC180', '용량': '1.15kWh(1,152Wh)', '가격': '$499' },
+          { '배터리': 'BLUETTI AC180P', '용량': '1.44kWh(1,440Wh)', '가격': '$649' },
+          { '배터리': 'Zendure SolarFlow Hub 2000', '용량': '기본 1.92kWh, 최대 7.68kWh까지 확장 가능(모듈 4개)', '가격': '허브 단독 €399부터, 완전한 세트는 €1,259부터' },
+          { '배터리': 'Jackery HomePower 2000 Ultra', '용량': '2~8kWh 확장 가능', '가격': '€1,268(기본 유닛)' },
+          { '배터리': 'EcoFlow STREAM Ultra', '용량': '모듈형/확장 가능(현재 구성 확인 필요)', '가격': '$1,279(정가 $1,899), 10년 보증, 70% 용량 유지 기준 6,000회 충방전' },
+        ],
+        affiliateLinks: [
+          { label: 'BLUETTI AC180 가격 확인 →', url: 'https://www.bluettipower.com/products/ac180', productName: 'BLUETTI AC180', productCategory: 'Balcony solar battery' },
+          { label: 'BLUETTI AC180P 가격 확인 →', url: 'https://www.bluettipower.com/products/ac180p', productName: 'BLUETTI AC180P', productCategory: 'Balcony solar battery' },
+          { label: 'Zendure SolarFlow Hub 2000 가격 확인 →', url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', productName: 'Zendure SolarFlow Hub 2000', productCategory: 'Balcony solar battery' },
+          { label: 'Jackery HomePower 2000 Ultra 가격 확인 →', url: 'https://eu.jackery.com/products/homepower-2000-ultra', productName: 'Jackery HomePower 2000 Ultra', productCategory: 'Balcony solar battery' },
+          { label: 'EcoFlow STREAM Ultra 가격 확인 →', url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar battery' },
+        ],
+        note: '제품 링크이며 현재 제휴 관계는 없습니다 — 제조사 공식 제품 페이지로 연결되는 단순 링크입니다. Anker SOLIX와 ALLPOWERS는 이 표에 포함하지 않았습니다. 위와 동일한 이중 출처 기준으로 현재 용량과 가격을 검증할 수 없었으므로 임시 수치를 게시하지 않습니다.',
+      },
+      whoShouldDoThis: {
+        id: 'who-should-do-this',
+        title: '실제로 누구에게 적합한가',
+        content:
+          '**로컬 LLM 환경을 위한 태양광과 배터리의 조합은 화창한 기후에서 낮 시간에 일정을 맞춘 적당한 사용에는 타당합니다 — 24시간 무거운 추론을 "친환경"으로 만드는 방법으로는 타당하지 않습니다.**',
+        items: [
+          '**적합한 경우:** 주말이나 저녁 시간의 취미 활용(하루 몇 시간 정도), 화창하거나 온화한 기후, 다른 가정용 전력을 위해 이미 설치했거나 계획 중인 발코니 태양광, 무거운 로컬 LLM 작업을 저장 후 방전하기보다 태양광을 직접 사용하기 위해 낮 시간에 일정을 맞출 의향이 있는 경우.',
+          '**적합하지 않은 경우:** 상시 가동되는 무거운 추론(RTX 4090급 카드를 24시간 내내 가동), 겨울철 위주의 사용 패턴, 패널을 설치할 남향 발코니나 창문이 없는 아파트, 또는 이 조합이 전기 요금을 의미 있게 줄이는 정도가 아니라 완전히 없애줄 것으로 기대하는 경우.',
+          '**설명 방식에서 정직할 것:** 로컬 LLM에 발코니 태양광을 더하는 것은 적당한 사용에 대한 실질적인 비용 절감이지, 하루 종일 풀가동되는 구성에 대한 "탄소 중립 AI"라는 주장이 아닙니다 — 이 가이드의 계산은 그 더 강한 주장을 뒷받침하지 않으며, 이를 과장하면 적당한 사용 사례에 대한 진짜 근거 자체가 약해집니다.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '흔한 실수',
+        items: [
+          '태양광 시스템의 정격 출력(800W)을 하루 실제 발전량(kWh)과 직접 비교하는 것. 800W 시스템이 24시간 내내 정격 출력으로 가동된다면 19.2kWh가 되겠지만, 실제 발전량은 좋은 여름날 3~4.5kWh, 겨울에는 0.5~1.5kWh에 불과합니다. 태양이 24시간 내내 최대 강도로 비치지 않기 때문입니다.',
+          '배터리를 GPU의 실제 소비량이 아니라 태양광 시스템의 발전량에 맞춰 크기를 정하는 것. 태양광의 하루 kWh와 GPU의 하루 kWh라는 두 수치는 자동으로 일치한다고 가정할 것이 아니라 서로 비교해야 합니다.',
+          '법적으로 800W로 제한된 발코니 시스템이 24시간 가동되는 450W GPU를 완전히 감당할 수 있다고 가정하는 것. 최상의 여름철 발전량(하루 최대 4.5kWh)조차 하루 10.8kWh 부하의 절반에 크게 못 미치며, 겨울철 발전량은 그중 극히 일부만 감당합니다.',
+          '프랑스와 독일이 흔히 별도로 논의된다는 이유만으로 프랑스의 플러그인 태양광 규정이 독일보다 훨씬 엄격하다고 여기는 것. 두 나라 모두 현재 인버터의 교류 출력을 800W로 제한하고 있습니다 — 국가별 차이는 등록 절차에 있습니다(프랑스는 전력망 운영사에 무료 온라인 신고, 독일은 Marktstammdatenregister 등록). 출력 상한선 자체는 동일합니다.',
+          '월 비용을 추정할 때 GPU의 대기 전력을 무시하는 것. 하루 20시간 동안 20~30W로 대기 상태인 카드는 그것만으로도 하루 약 0.4~0.6kWh를 추가로 소비합니다 — 24시간 풀부하 시나리오에 비하면 작지만 0은 아니며, 정확한 월 합계를 내는 데 고려할 가치가 있습니다.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '로컬 LLM을 구동하면 전기 요금이 얼마나 나옵니까?',
+            a: '적당한 사용(300W GPU를 하루 4시간 가동)의 경우, 미국에서 18.4센트/kWh 기준 월 약 $6.60, 독일에서는 요금제에 따라 월 약 €11~15입니다. 450W 카드로 24시간 무거운 사용을 할 경우, 미국에서는 월 $60에 더 가까워집니다.',
+          },
+          {
+            q: 'GPU의 대기 전력이 전기 요금에 영향을 줍니까?',
+            a: '영향을 주지만 부하 시 소비 전력보다는 적습니다. 하루 20시간 동안 20~30W로 대기 상태인 카드는 약 0.4~0.6kWh를 소비합니다 — 작지만 실질적인 추가 비용이며, 특히 한 달 전체로 보면 실제 추론 시간과 함께 계산할 가치가 있습니다.',
+          },
+          {
+            q: '발코니 태양광으로 로컬 LLM 환경에 완전히 전력을 공급할 수 있습니까?',
+            a: '여름철 낮 시간에 일정을 맞춘 적당한 사용이라면 가능합니다 — 800W 시스템의 하루 3~4.5kWh 발전량은 하루 1.2kWh의 GPU 사용량을 여유 있게 감당합니다. 24시간 무거운 사용이라면 어떤 계절이든 불가능합니다 — 최상의 여름철 발전량조차 하루 10.8kWh 부하의 절반에 크게 못 미칩니다.',
+          },
+          {
+            q: '800W 발코니 태양광 시스템은 하루에 얼마나 발전합니까?',
+            a: '남향 패널로 맑은 여름날에는 약 3~4.5kWh, 겨울에는 하루 약 0.5~1.5kWh입니다 — 태양의 고도와 낮의 길이에 따른 약 3~7배의 계절 차이이며, 독일의 태양광 발전 데이터를 기반으로 합니다(독일의 기후는 중부 및 북부 유럽 대부분 지역에 대한 합리적인 참고 기준입니다).',
+          },
+          {
+            q: '로컬 LLM 환경에는 어느 정도 용량의 배터리가 필요합니까?',
+            a: 'GPU의 실제 일일 kWh 소비량에 맞춰 크기를 정하십시오. 태양광의 800W 정격 출력에 맞추지 마십시오. 하루 1.2kWh의 적당한 사용량이라면 BLUETTI AC180(1.15kWh)이나 AC180P(1.44kWh) 같은 단일 유닛으로 약 하루치 저장 용량을 감당할 수 있습니다. 24시간 무거운 사용의 경우, 이 비교에서 어떤 단일 유닛도 근접하지 못합니다 — 여러 확장 모듈(Zendure SolarFlow 최대 7.68kWh, Jackery HomePower 2000 Ultra 최대 8kWh)을 쌓아야 합니다.',
+          },
+          {
+            q: '로컬 AI 용도로는 Mac Mini M4가 RTX 4090보다 운영 비용이 저렴합니까?',
+            a: '상당히 저렴합니다. Mac Mini M4는 대기 시 5W 미만, 추론 시 최대 약 65W를 소비하는 반면, RTX 4090은 대기 시 20~33W, 부하 시 최대 450W를 소비합니다 — 하루 4시간 사용 기준으로 Mac Mini는 미국에서 월 약 $1.44, RTX 4090은 약 $6.60가 들며, 더 무겁고 더 오래 지속되는 워크로드에서는 이 격차가 크게 벌어집니다.',
+          },
+          {
+            q: '프랑스는 발코니 태양광의 출력 상한선이 독일과 다릅니까?',
+            a: '아닙니다 — 두 나라 모두 현재 플러그인 태양광 인버터의 교류 출력을 800W로 제한하고 있습니다. 두 나라의 차이는 절차상의 것입니다. 프랑스는 전력망 운영사에 무료 온라인 신고를 하고, 독일은 Marktstammdatenregister 등록을 사용합니다. 출력 상한선 자체는 동일합니다.',
+          },
+          {
+            q: '태양광으로 구동되는 "친환경 로컬 AI"는 24시간 무거운 사용에도 현실적입니까?',
+            a: '법적으로 800W로 제한된 플러그인 시스템으로는 현실적이지 않습니다. 어떤 계절이든 상시 가동되는 무거운 구성에 대한 완전한 상쇄 주장을 계산이 뒷받침하지 않습니다 — 태양광은 낮 시간에 일정을 맞춘 적당한 로컬 LLM 사용의 전기 요금을 의미 있게 줄여주지만, 전력을 많이 소모하는 GPU를 쉬지 않고 가동하는 비용을 없애주지는 못합니다.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        links: [
+          { url: 'https://www.chooseenergy.com/electricity-rates-by-state/', title: 'Electricity Rates by State (2026)', description: '이 가이드에서 사용한 약 18.4센트/kWh 전국 평균을 포함한 미국 주별 가정용 전기 요금 데이터.' },
+          { url: 'https://www.stromauskunft.de/strompreise/', title: 'Aktuelle Strompreise (Stromauskunft.de)', description: '신규 고객 요금제, 평균, 기본 공급(Grundversorgung) 요금에 걸친 독일 가정용 전기 요금 데이터.' },
+          { url: 'https://www.techpowerup.com/306765/nvidia-geforce-rtx-4070-has-an-average-gaming-power-draw-of-186-w', title: 'NVIDIA GeForce RTX 4070 Power Draw', description: 'NVIDIA가 자체 공개한 RTX 4070의 소비 전력 수치(대기, 동영상 재생, 평균 게이밍)에 대한 TechPowerUp의 보도.' },
+          { url: 'https://www.xda-developers.com/run-local-llms-one-worlds-priciest-energy-markets/', title: 'Running Local LLMs in a High-Cost Energy Market', description: 'Mac Mini M4의 대기 및 추론 소비 전력, 다중 유닛 클러스터 소비 전력에 대한 독립적인 측정.' },
+          { url: 'https://de.bluettipower.eu/blogs/solarstrom/balkonkraftwerk-800w-ertrag-pro-tag', title: 'Balkonkraftwerk 800W Ertrag pro Tag', description: '계절별 800W 발코니 태양광 시스템의 하루 발전량에 관한 독일 시장 데이터.' },
+          { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — 공식 제품 페이지', description: 'Hub 2000과 그 확장 배터리의 공식 용량 및 가격 정보.' },
+          { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — 공식 제품 페이지', description: 'HomePower 2000 Ultra의 공식 용량, 가격, 확장 사양.' },
+          { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — 공식 제품 페이지', description: '휴대용 전원 AC180의 공식 용량 및 가격 정보.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': '로컬 LLM의 전기 요금은 얼마이며, 발코니 태양광으로 상쇄할 수 있을까 (2026)',
+      'description': '로컬 LLM 전기 요금 계산: RTX 4090/3090/4070과 Mac Mini M4의 전력 소비, 미국과 독일의 월 비용, 800W 발코니 태양광 시스템으로 상쇄할 수 있는지 여부.',
+      'datePublished': '2026-09-01',
+      'dateModified': '2026-09-01',
+      'author': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'inLanguage': 'ko',
+      'url': 'https://www.promptquorum.com/ko/power-local-llm/local-llm-electricity-cost-balcony-solar-2026',
+      'articleBody': '로컬 LLM을 하루 몇 시간 구동하는 GPU는 실제로 계산 가능한 비용이 듭니다. 800W 발코니 태양광 시스템은 화창한 여름날에는 적당한 사용 사례를 충분히 감당할 수 있지만, 특히 겨울에는 상시 가동되는 무거운 구성을 상쇄하지 못합니다.',
+      'educationalLevel': 'Intermediate',
+      'proficiencyLevel': 'Intermediate',
+      'audience': { '@type': 'Audience', 'audienceType': '자신의 로컬 LLM 환경의 실제 전기 요금을 알고 싶고 발코니 태양광으로 이를 상쇄할 수 있는지 궁금한 사용자' },
+    },
+  },
 }
