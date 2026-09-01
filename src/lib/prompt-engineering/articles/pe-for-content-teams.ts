@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Workflows & Automation',
     heroImage: '/images/pe-for-content-teams-overview-hero-en.webp',
     title: 'Prompt Engineering for Content Teams: Templates, Review Flows, and Quality Checks',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-31',
     seoTitle: 'Prompt Engineering for Content Teams: Templates & Reviews',
     metaDescription: 'Content team prompts: brand voice encoding, 5 reusable templates (blog, social, summary, SEO meta, email), editorial review workflow, quality scoring.',
     ogDescription: 'Content team PE guide: how to encode brand voice in prompts, 5 reusable templates (blog draft, social post, summary, SEO meta, email), editorial review workflow, and quality scoring.',

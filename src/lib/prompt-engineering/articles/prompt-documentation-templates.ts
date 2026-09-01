@@ -47,7 +47,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Prompt Documentation Templates: 6 Reusable Formats for Teams',
       description: '6 prompt documentation templates: One-Liner Card, Version Block, Test Suite Header, Decision Log, Change Rationale, API Config Block. Under 10 minutes each.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       keywords: ['prompt documentation', 'prompt templates', 'prompt management', 'prompt engineering team', 'prompt version control'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Prompt-Dokumentationsvorlagen: 6 wiederverwendbare Formate (2026)',
       description: '6 Prompt-Dokumentationsvorlagen: Einzeiler-Karte, Versionsblock, Testsuite-Header, Entscheidungsprotokoll, Änderungsbegründung und API-Konfigurationsblock.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       keywords: ['Prompt-Dokumentation', 'Prompt-Vorlagen', 'Prompt-Management', 'Prompt-Engineering-Team'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -419,7 +419,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Plantillas de documentación de prompts: 6 formatos reutilizables para equipos',
       description: '6 plantillas de documentación de prompts: Tarjeta One-Liner, Bloque de Versión, Encabezado de Suite de Pruebas, Registro de Decisiones, Justificación de Cambio, Bloque de Config API.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       keywords: ['documentación de prompts', 'plantillas de prompts', 'gestión de prompts', 'equipo de prompt engineering'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -606,7 +606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'قوالب توثيق الأوامر: 6 تنسيقات قابلة لإعادة الاستخدام للفرق',
       description: '6 قوالب لتوثيق الأوامر: بطاقة السطر الواحد، كتلة الإصدار، رأس مجموعة الاختبار، سجل القرارات، مبرر التغيير، كتلة تهيئة API.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       keywords: ['توثيق الأوامر', 'قوالب الأوامر', 'إدارة الأوامر', 'فرق هندسة الأوامر'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Modèles de documentation des prompts : 6 formats réutilisables pour les équipes',
       description: '6 modèles de documentation des prompts : Fiche one-liner, Bloc de version, En-tête de suite de tests, Journal de décision, Justification de changement, Bloc de config API.',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       keywords: ['documentation des prompts', 'modèles de prompts', 'gestion des prompts', 'équipe prompt engineering'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Prompt文書化テンプレート：チーム向け6つの再利用可能フォーマット',
       description: 'チーム向け6つのPrompt文書化テンプレート：ワンライナーカード、バージョンブロック、テストスイートヘッダー、決定ログ、変更理由、APIコンフィグブロック。',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       keywords: ['Prompt文書化', 'Promptテンプレート', 'Prompt管理', 'チームプロンプトエンジニアリング'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1346,7 +1346,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'Prompt文档化模板：团队可复用的6种格式',
       description: '6种Prompt文档化模板：单行卡片、版本块、测试套件头、决策日志、变更理由和API配置块。',
       datePublished: '2026-05-02',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       keywords: ['Prompt文档化', 'Prompt模板', 'Prompt管理', '团队提示词工程'],
       mentions: [
         { '@type': 'Thing', name: 'PromptHub' },
@@ -1531,7 +1531,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: '프롬프트 문서화 템플릿: 팀을 위한 6가지 재사용 가능한 형식',
     description: '6가지 프롬프트 문서화 템플릿: One-Liner Card, Version Block, Test Suite Header, Decision Log, Change Rationale, API Config Block. 각각 10분 이내.',
     datePublished: '2026-05-02',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-28',
     keywords: ['프롬프트 문서화', '프롬프트 템플릿', '프롬프트 관리', '프롬프트 엔지니어링 팀', '프롬프트 버전 관리'],
     mentions: [
       { '@type': 'Thing', name: 'PromptHub' },

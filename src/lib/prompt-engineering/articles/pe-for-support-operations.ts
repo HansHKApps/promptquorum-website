@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Workflows & Automation',
     heroImage: '/images/pe-for-support-operations-overview-hero-en.webp',
     title: 'Prompt Engineering for Support Operations: Consistent, Accurate Response Templates',
-    dateModified: '2026-06-20',
+    dateModified: '2026-08-31',
     seoTitle: 'Prompt Engineering for Support Teams: Template Guide',
     metaDescription: 'Design support prompts for triage, escalation, and tone control. Guardrails prevent policy errors. Handoff patterns clarify escalation triggers.',
     ogDescription: 'How support teams use prompt engineering — triage and escalation templates, tone and empathy controls, policy compliance guardrails, edge case testing, and when to hand off to humans.',
