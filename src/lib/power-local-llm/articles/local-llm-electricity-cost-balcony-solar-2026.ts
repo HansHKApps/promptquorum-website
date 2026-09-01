@@ -503,4 +503,254 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'audience': { '@type': 'Audience', 'audienceType': 'Nutzer lokaler LLMs, die die echten Stromkosten ihres Setups kennen wollen und wissen möchten, ob ein Balkonkraftwerk das ausgleichen kann' },
     },
   },
+  fr: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-01',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
+    current_hardware_mentioned: [
+      'RTX 4090',
+      'RTX 3090',
+      'RTX 4070',
+      'Mac Mini M4',
+      'MacBook Pro M4 Max',
+      'EcoFlow STREAM Ultra',
+      'Jackery HomePower 2000 Ultra',
+      'Zendure SolarFlow Hub 2000',
+      'BLUETTI AC180',
+      'BLUETTI AC180P',
+    ],
+    theme: 'Overview & Reference',
+    affiliateDisclosure: true,
+    title: 'Ce que coûte un LLM local en électricité — et si le solaire de balcon peut compenser (2026)',
+    seoTitle: 'LLM local : coût électrique vs. solaire de balcon (2026)',
+    intro:
+      'Un GPU qui fait tourner un LLM local quelques heures par jour coûte de l\'argent réel et calculable — environ 6,60 $/mois aux États-Unis pour une utilisation modérée de 4 heures par jour, ou près de 60 $/mois si une carte gourmande tourne 24h/24. Un système solaire de balcon de 800 W peut largement couvrir le cas modéré par une journée d\'été ensoleillée, mais ne compense pas une installation lourde et permanente, surtout en hiver. Ce guide détaille le calcul exact pour le matériel courant de LLM local, compare les coûts électriques américains et allemands, et dimensionne la batterie dont vous auriez réellement besoin — avec les réserves honnêtes sur les cas où le solaire aide vraiment et ceux où il n\'aide pas.',
+    metaDescription:
+      'Coût électrique d\'un LLM local calculé : consommation RTX 4090/3090/4070 et Mac Mini M4, coût mensuel aux États-Unis (0,184 $/kWh) et en Allemagne (~0,32 €/kWh), et si un solaire de balcon 800 W peut compenser.',
+    twitterDescription:
+      'Ce que coûte réellement un LLM local en électricité — consommation RTX 4090/3090/4070 et Mac Mini M4, coût mensuel États-Unis vs. Allemagne, et si le solaire de balcon 800 W peut réalistement compenser.',
+    readTime: '10 min de lecture',
+    educationalLevel: 'Intermediate',
+    audience: 'Utilisateurs de LLM local voulant connaître le coût électrique réel de leur installation et si le solaire de balcon peut le compenser',
+    primaryTerm: 'coût électrique LLM local',
+    targetKeywords: [
+      'cout electrique llm local',
+      'cout electricite llm 24/7',
+      'solaire de balcon pour gpu',
+      'compenser electricite ia avec solaire',
+      'calculateur consommation electrique ia locale',
+    ],
+    leadAnswerBlock:
+      '**Un GPU au repos qui fait tourner un LLM local quelques heures par jour coûte environ 6,60 $/mois aux États-Unis (1,2 kWh/jour à 18,4 ¢/kWh) — une installation lourde tournant 24h/24 sur une carte de classe RTX 4090 coûte plutôt environ 60 $/mois.** Un système solaire de balcon de 800 W produit environ 3 à 4,5 kWh par une journée d\'été ensoleillée, mais seulement environ 0,5 à 1,5 kWh/jour en hiver — il couvre largement le cas d\'usage modéré en été, mais ne peut compenser de façon significative une installation lourde en permanence, quelle que soit la saison. Dimensionnez votre batterie selon la consommation réelle de votre GPU, pas selon la puissance nominale du système solaire.',
+    quickAnswerTop: {
+      fr: {
+        question: 'Combien coûte en électricité l\'exécution d\'un LLM local ?',
+        answer:
+          'Un GPU fonctionnant à 300 W pendant 4 heures par jour coûte environ 6,60 $/mois aux États-Unis (1,2 kWh/jour à 18,4 ¢/kWh) ou environ 11 à 15 €/mois en Allemagne (1,2 kWh/jour à 25–40 centimes/kWh selon le tarif). Un GPU tournant 24h/24 à 450 W coûte plutôt environ 60 $/mois aux États-Unis. Un système solaire de balcon de 800 W peut compenser le cas modéré en été, mais pas le cas lourd 24h/24, quelle que soit la saison.',
+        bullets: [
+          'RTX 4090 : ~20–33 W au repos, jusqu\'à 450 W (TBP) en charge',
+          'RTX 3090 : ~18–26 W au repos, ~350 W en charge',
+          'RTX 4070 : 10 W au repos, 186 W en moyenne en jeu, 200 W de TDP nominal',
+          'Mac Mini M4 : moins de 5 W au repos, jusqu\'à ~65 W pendant l\'inférence LLM',
+          'Solaire de balcon 800 W : ~3–4,5 kWh/jour en été, ~0,5–1,5 kWh/jour en hiver (données issues d\'Allemagne)',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: 'tldr' },
+      { label: 'Quelle consommation pour le matériel de LLM local ?', anchor: 'gpu-power' },
+      { label: 'Combien ça coûte par mois ?', anchor: 'monthly-cost' },
+      { label: 'Le solaire de balcon peut-il compenser une installation LLM locale ?', anchor: 'solar-offset' },
+      { label: 'Quelle taille de batterie vous faut-il vraiment ?', anchor: 'battery-sizing' },
+      { label: 'Qui devrait vraiment faire ça ?', anchor: 'who-should-do-this' },
+      { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+      { label: 'Questions fréquentes', anchor: 'faq' },
+      { label: 'Sources', anchor: 'sources' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Une installation de LLM local coûte environ 6,60 $/mois en électricité pour un usage modéré de 4 heures par jour, ou près de 60 $/mois en 24h/24 — un système solaire de balcon de 800 W peut compenser le cas modéré en été, mais pas le cas lourd 24h/24, quelle que soit la saison.' },
+      { type: 'plain-terms', content: 'Le kWh (kilowattheure) est l\'unité utilisée pour votre facture d\'électricité — un GPU de 300 watts fonctionnant 1 heure consomme 0,3 kWh. Multipliez les watts par les heures, divisez par 1 000, puis multipliez par votre prix par kWh pour obtenir le coût. La production du solaire de balcon se mesure de la même façon, ce qui permet de comparer directement les deux chiffres.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Points clés',
+        isTldr: true,
+        items: [
+          'Un GPU fonctionnant 4 h/jour à 300 W coûte environ 6,60 $/mois aux États-Unis (18,4 ¢/kWh) ou environ 11–15 €/mois en Allemagne selon le tarif',
+          'Un GPU tournant 24h/24 à 450 W (classe RTX 4090) coûte plutôt environ 60 $/mois aux États-Unis — près de 10 fois le cas d\'usage modéré',
+          'Le silicium Apple (Mac Mini M4 : moins de 5 W au repos, ~65 W en pic d\'inférence) coûte une petite fraction d\'une installation à GPU dédié',
+          'Un système solaire de balcon de 800 W produit ~3–4,5 kWh par une journée d\'été ensoleillée, mais seulement ~0,5–1,5 kWh/jour en hiver — un écart saisonnier d\'un facteur 3 à 7',
+          'Dimensionnez votre batterie selon la consommation quotidienne réelle de votre GPU, pas selon la puissance nominale de 800 W du système solaire — les deux chiffres ne sont pas comparables',
+          'La limite française pour les onduleurs solaires enfichables est de 800 W, la même qu\'en Allemagne — il n\'existe pas de limite française séparée et plus stricte pour cette catégorie de système',
+        ],
+      },
+      gpuPower: {
+        id: 'gpu-power',
+        title: 'Quelle consommation réelle pour le matériel de LLM local ?',
+        content:
+          '**L\'écart entre la consommation au repos et en charge rend le calcul électrique non trivial — une carte peut rester quasi silencieuse 20 heures par jour et rester malgré tout le plus gros poste de votre facture si elle tourne à plein régime les 4 heures restantes.** Les chiffres ci-dessous proviennent des spécifications constructeur et de mesures indépendantes, pas d\'un benchmark réalisé par PromptQuorum.',
+        columns: ['Matériel', 'Repos', 'Charge / Inférence'],
+        rows: [
+          { 'Matériel': 'RTX 4090', 'Repos': '~20–33 W', 'Charge / Inférence': 'Jusqu\'à 450 W (TBP)' },
+          { 'Matériel': 'RTX 3090', 'Repos': '~18–26 W', 'Charge / Inférence': '~350 W' },
+          { 'Matériel': 'RTX 4070', 'Repos': '10 W', 'Charge / Inférence': '186 W en moy. (TDP nominal 200 W)' },
+          { 'Matériel': 'Mac Mini M4', 'Repos': 'Moins de 5 W', 'Charge / Inférence': 'Jusqu\'à ~65 W' },
+          { 'Matériel': 'MacBook Pro M4 Max', 'Repos': 'Chiffre unique bas', 'Charge / Inférence': '~40–80 W en inférence ; ~110 W en pic système' },
+        ],
+        items: [
+          'RTX 4090 : NVIDIA indique une puissance carte totale (TBP) de 450 W ; des mesures indépendantes montrent une consommation au repos entre 18 W (configurations à limitation de puissance agressive) et 33 W (Founders Edition), la charge pouvant atteindre 400–600 W selon la charge de travail.',
+          'RTX 3090 : le repos se situe autour de 18–26 W selon la configuration d\'affichage ; la pleine charge en jeu ou en inférence tourne autour de 350 W, certaines mesures atteignant 365 W.',
+          'RTX 4070 : chiffres publiés par NVIDIA lui-même — 10 W au repos, 16 W en lecture vidéo, 186 W en moyenne en jeu — contre un TDP nominal de 200 W. Des pics réels ont été mesurés jusqu\'à 253 W.',
+          'Mac Mini M4 : mesuré indépendamment à moins de 5 W au repos et jusqu\'à ~65 W pendant l\'inférence LLM (une mesure a spécifiquement relevé un pic de 50 W). Un cluster de cinq Mac Mini en pleine inférence a consommé environ 200 W au total.',
+          'MacBook Pro M4 Max : l\'inférence LLM à elle seule consomme environ 40–80 W ; le système complet (écran compris) plafonne autour de 110 W sous la charge combinée la plus exigeante — la plage d\'inférence typique de 30–70 W du silicium Apple reste bien en dessous des 300 W et plus d\'un GPU de bureau dédié.',
+        ],
+      },
+      monthlyCost: {
+        id: 'monthly-cost',
+        title: 'Combien ça coûte par mois ?',
+        content:
+          '**La formule est la même partout : kWh = watts ÷ 1 000 × heures, puis coût = kWh × votre prix par kWh.** L\'électricité résidentielle américaine s\'établissait en moyenne à environ 18,4 ¢/kWh mi-2026 (EIA) ; l\'électricité résidentielle allemande est bien moins uniforme — les tarifs nouveaux clients tournent autour de 25–27 centimes/kWh tandis que le tarif de secours par défaut (Grundversorgung) peut atteindre 40 centimes/kWh, la moyenne des ménages se situant autour de 31–32 centimes/kWh.',
+        columns: ['Profil d\'usage', 'kWh/jour', 'Coût US/mois', 'Coût DE/mois'],
+        rows: [
+          { 'Profil d\'usage': '300 W, 4 h/jour (modéré)', 'kWh/jour': '1,2 kWh', 'Coût US/mois': '~6,60 $', 'Coût DE/mois': '~11–15 €' },
+          { 'Profil d\'usage': '65 W, 4 h/jour (Mac Mini M4)', 'kWh/jour': '0,26 kWh', 'Coût US/mois': '~1,44 $', 'Coût DE/mois': '~2,50–3,20 €' },
+          { 'Profil d\'usage': '450 W, 24 h/jour (lourd, permanent)', 'kWh/jour': '10,8 kWh', 'Coût US/mois': '~59,60 $', 'Coût DE/mois': '~100–130 €' },
+        ],
+        note: 'Le chiffre US utilise la moyenne résidentielle de 18,4 ¢/kWh rapportée par l\'EIA (mi-2026) ; les chiffres allemands utilisent une fourchette de 25–40 centimes/kWh reflétant la dispersion réelle des tarifs, pas un taux unique — vérifiez votre propre facture avant de considérer l\'un ou l\'autre chiffre comme exact.',
+      },
+      solarOffset: {
+        id: 'solar-offset',
+        title: 'Le solaire de balcon peut-il compenser une installation LLM locale ?',
+        content: [
+          '**Un système solaire de balcon de 800 W — la limite légale pour le solaire enfichable en Allemagne et, à l\'heure actuelle, également en France (les deux limitent la sortie CA de l\'onduleur à 800 W, pas la puissance des panneaux) — produit environ 3 à 4,5 kWh par une journée d\'été claire avec des panneaux orientés au sud, mais seulement environ 0,5 à 1,5 kWh/jour en hiver.** C\'est un écart saisonnier d\'un facteur 3 à 7, dû à l\'angle du soleil et à la durée du jour, pas à un dysfonctionnement du système.',
+          'Comparez cela au cas d\'usage modéré ci-dessus : 1,2 kWh/jour de consommation GPU. En été, les 3 à 4,5 kWh/jour produits par un système de 800 W couvrent cela avec un vrai surplus pour d\'autres usages du foyer. En hiver, une production solaire de 0,5 à 1,5 kWh/jour est inférieure ou tout juste égale à une demande de 1,2 kWh/jour — le système cesse d\'être une compensation significative pendant environ un tiers de l\'année dans la majeure partie de l\'Allemagne.',
+          'Pour le cas lourd 24h/24 — 10,8 kWh/jour — même le meilleur cas d\'été à 4,5 kWh/jour couvre bien moins de la moitié de la charge, et la production hivernale n\'en couvre qu\'une petite fraction. Le solaire peut réduire sensiblement la facture d\'un usage modéré de LLM local programmé en journée. Il ne transforme pas une installation lourde en permanence en une configuration « IA verte », quelle que soit la saison.',
+        ],
+        note: 'Évitez d\'associer le solaire à une installation de LLM local si votre usage est lourd et permanent — même la meilleure production estivale de la limite légale de 800 W enfichable couvre bien moins de la moitié de cette charge, et presque rien en hiver. Le solaire est une compensation réelle et significative pour un usage modéré programmé en journée ; ce n\'est pas un moyen de rendre « verte » une inférence lourde 24h/24.',
+      },
+      batterySizing: {
+        id: 'battery-sizing',
+        title: 'Quelle taille de batterie vous faut-il vraiment ?',
+        content:
+          '**Dimensionnez la batterie selon la consommation quotidienne réelle de votre GPU en kWh, pas selon la puissance nominale de 800 W du système solaire — les deux chiffres mesurent des choses différentes et ne sont pas directement comparables.** Pour le cas modéré à 1,2 kWh/jour, même une petite batterie couvre environ une journée de stockage ; pour le cas lourd à 10,8 kWh/jour, aucune des unités ci-dessous ne s\'en approche sans empiler plusieurs modules d\'extension.',
+        columns: ['Batterie', 'Capacité', 'Prix'],
+        rows: [
+          { 'Batterie': 'BLUETTI AC180', 'Capacité': '1,15 kWh (1 152 Wh)', 'Prix': '499 $' },
+          { 'Batterie': 'BLUETTI AC180P', 'Capacité': '1,44 kWh (1 440 Wh)', 'Prix': '649 $' },
+          { 'Batterie': 'Zendure SolarFlow Hub 2000', 'Capacité': '1,92 kWh de base, extensible à 7,68 kWh (4 modules)', 'Prix': 'Hub à partir de 399 € ; kits complets à partir de 1 259 €' },
+          { 'Batterie': 'Jackery HomePower 2000 Ultra', 'Capacité': '2–8 kWh extensible', 'Prix': '1 268 € (unité de base)' },
+          { 'Batterie': 'EcoFlow STREAM Ultra', 'Capacité': 'Modulaire/extensible (vérifier la configuration actuelle)', 'Prix': '1 279 $ (liste 1 899 $) ; garantie 10 ans, 6 000 cycles à 70 % de capacité retenue' },
+        ],
+        affiliateLinks: [
+          { label: 'Vérifier le prix du BLUETTI AC180 →', url: 'https://www.bluettipower.com/products/ac180', productName: 'BLUETTI AC180', productCategory: 'Balcony solar battery' },
+          { label: 'Vérifier le prix du BLUETTI AC180P →', url: 'https://www.bluettipower.com/products/ac180p', productName: 'BLUETTI AC180P', productCategory: 'Balcony solar battery' },
+          { label: 'Vérifier le prix du Zendure SolarFlow Hub 2000 →', url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', productName: 'Zendure SolarFlow Hub 2000', productCategory: 'Balcony solar battery' },
+          { label: 'Vérifier le prix du Jackery HomePower 2000 Ultra →', url: 'https://eu.jackery.com/products/homepower-2000-ultra', productName: 'Jackery HomePower 2000 Ultra', productCategory: 'Balcony solar battery' },
+          { label: 'Vérifier le prix de l\'EcoFlow STREAM Ultra →', url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar battery' },
+        ],
+        note: 'Liens produits, aucune relation d\'affiliation actuelle — liens simples vers les pages produit des fabricants. Anker SOLIX et ALLPOWERS ne figurent pas dans ce tableau : nous n\'avons pas pu vérifier la capacité et le prix actuels au même niveau à deux sources que ci-dessus, nous ne publions donc pas de chiffres provisoires pour ces marques.',
+      },
+      whoShouldDoThis: {
+        id: 'who-should-do-this',
+        title: 'Qui devrait vraiment faire ça ?',
+        content:
+          '**Solaire plus batterie pour une installation de LLM local a du sens pour un usage modéré programmé en journée dans un climat ensoleillé — pas comme moyen de « verdir » une inférence lourde 24h/24.**',
+        items: [
+          '**Bon profil :** usage de loisir le week-end ou en soirée (quelques heures par jour), climat ensoleillé ou modéré, solaire de balcon déjà installé ou prévu pour d\'autres usages du foyer, volonté de programmer les tâches de LLM local les plus lourdes en journée pour utiliser le solaire directement plutôt que de le stocker et le décharger.',
+          '**Mauvais profil :** inférence lourde en permanence (une carte de classe RTX 4090 tournant 24h/24), usage à dominante hivernale, appartement sans balcon ou fenêtre orientée sud viable pour des panneaux, ou toute personne s\'attendant à ce que la combinaison élimine totalement le coût électrique plutôt que de le réduire sensiblement.',
+          '**Rester honnête sur le positionnement :** un LLM local plus du solaire de balcon représente une vraie réduction de coût pour un usage modéré, pas une prétention « IA neutre en carbone » pour une installation qui tourne à plein régime en permanence — le calcul de ce guide ne soutient pas cette affirmation plus forte, et l\'exagérer affaiblit l\'argument réel du cas d\'usage modéré.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes',
+        items: [
+          'Comparer directement la puissance nominale du système solaire (800 W) à la production réelle en kWh par jour. Un système de 800 W fonctionnant 24 heures à puissance nominale donnerait 19,2 kWh — mais la production réelle est de 3 à 4,5 kWh par bonne journée d\'été et de 0,5 à 1,5 kWh en hiver, car le soleil ne brille pas à pleine intensité pendant 24 heures.',
+          'Dimensionner une batterie selon la production du système solaire plutôt que selon la consommation réelle du GPU. Les deux chiffres (kWh/jour solaire et kWh/jour GPU) doivent être comparés l\'un à l\'autre, pas supposés automatiquement assortis.',
+          'Supposer qu\'un système de balcon limité légalement à 800 W peut couvrir intégralement un GPU de 450 W tournant 24h/24. Même la meilleure production estivale (jusqu\'à 4,5 kWh/jour) couvre moins de la moitié d\'une charge de 10,8 kWh/jour, et la production hivernale n\'en couvre qu\'une petite fraction.',
+          'Considérer les règles françaises du solaire enfichable comme sensiblement plus strictes que les allemandes simplement parce que les deux pays sont souvent discutés séparément. Les deux limitent actuellement la sortie CA de l\'onduleur à 800 W — la différence spécifique à chaque pays réside dans la procédure d\'enregistrement (une déclaration en ligne gratuite auprès du gestionnaire de réseau en France ; un enregistrement au registre Marktstammdatenregister en Allemagne), pas dans la limite de puissance.',
+          'Ignorer la consommation au repos du GPU dans l\'estimation du coût mensuel. Une carte au repos à 20–30 W pendant 20 heures par jour ajoute à elle seule environ 0,4 à 0,6 kWh/jour — peu de chose face à un scénario de charge lourde 24h/24, mais pas nul, et à prendre en compte pour un total mensuel exact.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Questions fréquentes',
+        faqs: [
+          {
+            q: 'Combien coûte en électricité l\'exécution d\'un LLM local ?',
+            a: 'Pour un usage modéré (un GPU à 300 W fonctionnant 4 heures par jour), environ 6,60 $/mois aux États-Unis à 18,4 ¢/kWh, ou environ 11 à 15 €/mois en Allemagne selon le tarif. Pour un usage lourd 24h/24 sur une carte de 450 W, attendez-vous plutôt à environ 60 $/mois aux États-Unis.',
+          },
+          {
+            q: 'La consommation au repos du GPU compte-t-elle dans la facture d\'électricité ?',
+            a: 'Oui, mais moins que la consommation en charge. Une carte au repos à 20–30 W pendant 20 heures par jour consomme environ 0,4 à 0,6 kWh — un ajout modeste mais réel au total, surtout sur un mois complet, et à comptabiliser aux côtés des heures d\'inférence réelle.',
+          },
+          {
+            q: 'Le solaire de balcon peut-il alimenter entièrement une installation de LLM local ?',
+            a: 'Pour un usage modéré programmé en journée en été, oui — les 3 à 4,5 kWh/jour produits par un système de 800 W couvrent confortablement une consommation GPU de 1,2 kWh/jour. Pour un usage lourd 24h/24, non, quelle que soit la saison — même la meilleure production estivale couvre bien moins de la moitié d\'une charge de 10,8 kWh/jour.',
+          },
+          {
+            q: 'Combien produit par jour un système solaire de balcon de 800 W ?',
+            a: 'Environ 3 à 4,5 kWh par une journée d\'été claire avec des panneaux orientés au sud, et environ 0,5 à 1,5 kWh/jour en hiver — un écart saisonnier d\'un facteur 3 à 7, basé sur des données de production solaire allemandes (le climat allemand est un indicateur raisonnable pour une grande partie de l\'Europe centrale et du Nord).',
+          },
+          {
+            q: 'Quelle taille de batterie me faut-il pour une installation de LLM local ?',
+            a: 'Dimensionnez-la selon la consommation quotidienne réelle en kWh de votre GPU, pas selon la puissance nominale de 800 W du solaire. Pour une consommation modérée de 1,2 kWh/jour, une unité seule comme le BLUETTI AC180 (1,15 kWh) ou l\'AC180P (1,44 kWh) couvre environ une journée de stockage. Pour un usage lourd 24h/24, aucune unité seule de ce comparatif ne s\'en approche — il faudrait empiler plusieurs modules d\'extension (Zendure SolarFlow jusqu\'à 7,68 kWh, Jackery HomePower 2000 Ultra jusqu\'à 8 kWh).',
+          },
+          {
+            q: 'Un Mac Mini M4 est-il moins coûteux à faire tourner qu\'une RTX 4090 pour l\'IA locale ?',
+            a: 'Nettement. Le Mac Mini M4 consomme moins de 5 W au repos et jusqu\'à ~65 W pendant l\'inférence, contre 20–33 W au repos et jusqu\'à 450 W en charge pour la RTX 4090 — pour 4 heures d\'usage par jour, le Mac Mini coûte environ 1,44 $/mois aux États-Unis contre ~6,60 $/mois pour la RTX 4090, et l\'écart se creuse nettement pour des charges de travail plus lourdes et plus longues.',
+          },
+          {
+            q: 'La France a-t-elle une limite de puissance différente de l\'Allemagne pour le solaire de balcon ?',
+            a: 'Non — les deux pays limitent actuellement la sortie CA de l\'onduleur enfichable à 800 W. La différence entre les deux pays est procédurale : la France utilise une déclaration en ligne gratuite auprès du gestionnaire de réseau, tandis que l\'Allemagne utilise un enregistrement au registre Marktstammdatenregister. La limite de puissance elle-même est identique.',
+          },
+          {
+            q: 'Une « IA locale verte » alimentée par le solaire est-elle réaliste pour un usage lourd 24h/24 ?',
+            a: 'Pas avec un système enfichable légalement limité à 800 W. Le calcul ne soutient pas une prétention de compensation totale pour une installation lourde en permanence, quelle que soit la saison — le solaire réduit sensiblement le coût électrique d\'un usage modéré de LLM local programmé en journée, mais n\'élimine pas le coût de faire tourner un GPU gourmand en continu.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        links: [
+          { url: 'https://www.chooseenergy.com/electricity-rates-by-state/', title: 'Electricity Rates by State (2026)', description: 'Données de prix de l\'électricité résidentielle américaine par État, incluant la moyenne nationale d\'environ 18,4 ¢/kWh utilisée dans ce guide.' },
+          { url: 'https://www.stromauskunft.de/strompreise/', title: 'Aktuelle Strompreise (Stromauskunft.de)', description: 'Données de prix de l\'électricité résidentielle allemande selon les tarifs nouveaux clients, la moyenne et les tarifs de secours (Grundversorgung).' },
+          { url: 'https://www.techpowerup.com/306765/nvidia-geforce-rtx-4070-has-an-average-gaming-power-draw-of-186-w', title: 'NVIDIA GeForce RTX 4070 Power Draw', description: 'Rapport de TechPowerUp sur les chiffres de consommation officiels de NVIDIA pour la RTX 4070 (repos, lecture vidéo, moyenne en jeu).' },
+          { url: 'https://www.xda-developers.com/run-local-llms-one-worlds-priciest-energy-markets/', title: 'Running Local LLMs in a High-Cost Energy Market', description: 'Mesure indépendante de la consommation au repos et en inférence du Mac Mini M4, et de la consommation d\'un cluster multi-unités.' },
+          { url: 'https://de.bluettipower.eu/blogs/solarstrom/balkonkraftwerk-800w-ertrag-pro-tag', title: 'Balkonkraftwerk 800W Ertrag pro Tag', description: 'Données du marché allemand sur la production quotidienne d\'un système solaire de balcon de 800 W selon les saisons.' },
+          { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — Page produit officielle', description: 'Capacité et prix officiels du Hub 2000 et de ses batteries d\'extension.' },
+          { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — Page produit officielle', description: 'Capacité, prix et spécifications d\'extension officiels du HomePower 2000 Ultra.' },
+          { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Page produit officielle', description: 'Capacité et prix officiels de la station d\'alimentation portable AC180.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'Ce que coûte un LLM local en électricité — et si le solaire de balcon peut compenser (2026)',
+      'description': 'Coût électrique d\'un LLM local calculé : consommation RTX 4090/3090/4070 et Mac Mini M4, coût mensuel aux États-Unis et en Allemagne, et si un solaire de balcon 800 W peut compenser.',
+      'datePublished': '2026-09-01',
+      'dateModified': '2026-09-01',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+        'sameAs': 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'inLanguage': 'fr',
+      'url': 'https://www.promptquorum.com/fr/power-local-llm/local-llm-electricity-cost-balcony-solar-2026',
+      'articleBody': 'Un GPU qui fait tourner un LLM local quelques heures par jour coûte de l\'argent réel et calculable. Un système solaire de balcon de 800 W peut largement couvrir un usage modéré par une journée d\'été ensoleillée, mais ne compense pas une installation lourde et permanente, surtout en hiver.',
+      'educationalLevel': 'Intermediate',
+      'proficiencyLevel': 'Intermediate',
+      'audience': { '@type': 'Audience', 'audienceType': 'Utilisateurs de LLM local voulant connaître le coût électrique réel de leur installation et si le solaire de balcon peut le compenser' },
+    },
+  },
 }
