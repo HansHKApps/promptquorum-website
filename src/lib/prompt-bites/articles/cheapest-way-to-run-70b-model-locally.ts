@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Cheapest Practical: 2× Used RTX 3090',
         content: [
           'Two used RTX 3090 cards (24GB VRAM each) combine to roughly 48GB of usable VRAM with llama.cpp tensor-parallel splitting — enough to fully offload a 70B Q4_K_M model with no CPU fallback. You\'ll need a motherboard with dual x16 PCIe slots and a 1000W+ PSU.',
-          'Used RTX 3090 pricing varies enormously by condition, cooling, and seller — check current listings rather than trusting a fixed number. Buy from a seller with clear photos of the card and, ideally, a mining/gaming-load disclosure.',
+          'Used RTX 3090 pricing varies enormously by condition, cooling, and seller — check current listings rather than trusting a fixed number. Buy from a seller with clear photos of the card and, ideally, a mining/gaming-load disclosure. See <a href="/power-local-llm/rtx-3090-local-llm-buy-or-rent" class="text-primary hover:underline">whether buying beats renting the same card</a> before you commit to two of them.',
           '<strong>Buy it if:</strong> you enjoy building PCs and want the best inference speed per dollar. <strong>Skip it if:</strong> you want a quiet, simple, single-box machine — see the Mac option below instead.',
         ],
         affiliateLinks: [
@@ -199,6 +199,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       relatedReading: {
         title: 'Related Guides',
         items: [
+          '[RTX 3090 for Local LLMs: Buy Used or Rent?](/power-local-llm/rtx-3090-local-llm-buy-or-rent) — the buy-vs-rent break-even math for the card this page recommends',
           '[How Much VRAM Does a 70B Model Need?](/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
           '[DeepSeek R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',

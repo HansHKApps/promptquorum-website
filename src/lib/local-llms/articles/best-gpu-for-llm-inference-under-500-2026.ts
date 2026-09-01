@@ -189,6 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[RTX 3090 for Local LLMs: Buy Used or Rent?](/power-local-llm/rtx-3090-local-llm-buy-or-rent) -- is the 24GB card worth buying used, or cheaper to rent by the hour?',
           '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms) -- best GPUs for local LLMs',
           '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) -- best budget GPUs for local LLMs',
           '[How Much VRAM Do You Need for Local LLMs?](/local-llms/how-much-vram-local-llm) -- how much VRAM do you need?',

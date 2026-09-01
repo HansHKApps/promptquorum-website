@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'When Cloud Makes More Sense Than Local',
         content: [
-          'Cloud GPU rental for 70B inference runs $0.50–$1.50 per hour on RunPod and Lambda Labs. A dual RTX 3090 setup costs $1,500–$2,500 in hardware, which amortizes to cloud costs only after 1,500–3,000 hours of use.',
+          'Cloud GPU rental for 70B inference runs $0.50–$1.50 per hour on RunPod and Lambda Labs. A dual RTX 3090 setup costs $1,500–$2,500 in hardware, which amortizes to cloud costs only after 1,500–3,000 hours of use. See <a href="/power-local-llm/rtx-3090-local-llm-buy-or-rent" class="text-primary hover:underline">the single-card buy-vs-rent breakdown</a> for the same math on one RTX 3090.',
           'For teams or individuals using 70B models fewer than 5 hours per week, cloud rental is both cheaper and easier to maintain. Local 70B is justified for privacy-sensitive use cases (no data leaving your hardware) or sustained high-frequency inference where cloud costs compound quickly. For smaller models that fit on consumer GPUs, see <a href="/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">the VRAM tier guide</a>.',
           'For a full breakdown of 70B deployment strategies, see <a href="/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">how to run 70B models with 24 GB VRAM</a>.',
         ],
@@ -142,6 +142,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       id: 'related-articles',
       title: 'Related Guides',
       items: [
+        '[RTX 3090 for Local LLMs: Buy Used or Rent?](/power-local-llm/rtx-3090-local-llm-buy-or-rent) — should you buy the card this page recommends, or rent it by the hour?',
         '[How Much VRAM Do You Need for a Local LLM?](/prompt-bites/how-much-vram-for-local-llm) — VRAM tier table for all model sizes',
         '[Cheapest Way to Run a 70B Model Locally](/prompt-bites/cheapest-way-to-run-70b-model-locally) — cost path when hardware exceeds budget',
         '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — full hardware guide for 70B-capable builds',
