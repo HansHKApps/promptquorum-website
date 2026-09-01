@@ -112,6 +112,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Web Hosting Series 2026-08-30 — 9 localized pages, en+native per file
   'best-web-hosting-2026',
+
+  // ASUS mini PC + electricity/solar affiliate pages — 2026-09-01
+  'asus-mini-pc-local-ai-2026',
+  'local-llm-electricity-cost-balcony-solar-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
