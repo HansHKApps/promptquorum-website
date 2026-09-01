@@ -1608,5 +1608,30 @@
       "ctr": 0,
       "period": "GSC as pasted 2026-09-01"
     }
+  },
+  {
+    "id": "31b0de95-96fa-402a-8c15-0fd8f36158df",
+    "slug": "/pt/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-09-01T14:38:40.780Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhor GPU econômica para LLMs locais 2026: RTX 3060",
+        "new": "Melhor Placa de Vídeo para IA Local 2026: RTX 3060 (GPU)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 270–300 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Mais barata: RX 6700 XT.",
+        "new": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (R$ 1.800–2.200 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Mais barata: RX 6700 XT."
+      }
+    ],
+    "reason": "geo-meta-optimizer: title now leads with 'placa de vídeo'/'IA local' (matches the top real GSC query, 'melhor placa de video para rodar ia local', which the old GPU/LLM-anglicism title missed). Also fixed a real localization gap surfaced by the query 'rtx 2060 usada preco brasil 2026 olx mercado livre': the entire article priced every GPU in USD for a pt-BR audience. Converted every USD price to real Brazilian market prices researched from Mercado Livre/OLX (used) and Kabum!/Pichau (new) -- not currency-converted, actual local street prices, which run well above naive USD*rate due to Brazilian import taxes. Also swapped US-only retailer names (eBay/Newegg/Best Buy) for Mercado Livre/OLX/Kabum!/Pichau/Terabyte Shop, fixed a stale pre-price-shock BRL figure in one FAQ (R$900-1200, inconsistent with the article's own price-shock narrative), and fixed 'por dolar' -> 'por real gasto'. Left 2 unrelated relatedReading blurbs (Mac Mini M5, AMD mini PC) in USD -- their Brazilian prices belong to those other articles, not guessed here.",
+    "baseline": {
+      "position": 5.8,
+      "impressions": 3208,
+      "clicks": 35,
+      "ctr": 0.010910224438902744,
+      "period": "GSC as pasted 2026-09-01 (page-level); query-level sample was thin (68 impr across 26 rows)"
+    }
   }
 ]
