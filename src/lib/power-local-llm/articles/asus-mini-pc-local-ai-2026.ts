@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-05',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1305,14 +1305,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地AI用ASUS迷你主机：NUC 16 Pro对比ExpertCenter PN55（2026版）',
     seoTitle: '本地AI用ASUS迷你主机：NUC 16 Pro对比PN55（2026版）',
     intro:
-      '2026年,ASUS有两款值得考虑用于本地AI的迷你主机:NUC 16 Pro(Intel Core Ultra Series 3"Panther Lake",最高96GB LPDDR5x)和ExpertCenter PN55(AMD Ryzen AI 9 HX 470,最高96GB DDR5,通过Copilot+认证)。两者都没有在本地LLM规格竞赛中明确胜出——ExpertCenter PN55使用的芯片与Beelink SER10 MAX相同,而两款ASUS机型的RAM上限均为96GB,低于GMKtec EVO-X2和MINISFORUM AI X1 Pro的128GB。ASUS的优势在于Copilot+认证、商用渠道的质保与支持,以及IT采购人员已经熟悉的NUC产品线。本指南基于真实、有据可查的规格与价格比较全部五款机型,并诚实说明这种取舍何时值得。',
+      '2026年本地AI最佳ASUS迷你主机是NUC 16 Pro(Intel Core Ultra Series 3"Panther Lake",Arc B390显卡,视配置最高96GB LPDDR5x或128GB可升级DDR5),综合能力最强;或ExpertCenter PN55(AMD Ryzen AI 9 HX 470,最高96GB DDR5,通过Copilot+认证),起售价最低。如果每美元本地LLM容量是你唯一的标准,请把目光投向ASUS以外:GMKtec EVO-X2(128GB统一内存)和MINISFORUM AI X1 Pro(128GB可升级DDR5,准系统约$759起)在这一具体指标上均优于两款ASUS机型。本指南先给出ASUS内部的购买决策,再进行与这两款机型的完整诚实对比。',
     metaDescription:
-      '本地AI用ASUS迷你主机对比:NUC 16 Pro(约$1,600起,96GB)对比ExpertCenter PN55(约$1,099起,96GB)对比GMKtec EVO-X2、Beelink SER10 MAX和MINISFORUM AI X1 Pro。',
+      '2026年本地AI最佳ASUS迷你主机:NUC 16 Pro对比ExpertCenter PN55,从价格、RAM配置和真实本地LLM容量对比——并说明相对GMKtec EVO-X2、MINISFORUM AI X1 Pro的定位。',
     twitterDescription:
-      '将ASUS NUC 16 Pro和ExpertCenter PN55与GMKtec EVO-X2、Beelink SER10 MAX、MINISFORUM AI X1 Pro进行本地AI对比——数据有据可查,不夸大。',
-    readTime: '阅读约11分钟',
+      '本地AI用ASUS NUC 16 Pro和ExpertCenter PN55:该买哪款、选哪种配置、实际能跑什么模型——以及对GMKtec EVO-X2和MINISFORUM AI X1 Pro的诚实评价。',
+    readTime: '阅读约13分钟',
     educationalLevel: 'Intermediate',
-    audience: '在ASUS迷你主机与精品Ryzen AI Max迷你主机之间为本地LLM推理做选择的买家',
+    audience: '在纠结该买哪款ASUS迷你主机用于本地AI,以及ASUS相比精品Ryzen AI Max迷你主机是否是正确选择的买家',
     primaryTerm: 'ASUS迷你主机 本地AI',
     targetKeywords: [
       'asus mini pc 本地ai',
@@ -1322,16 +1322,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'asus mini pc vs beelink gmktec',
     ],
     leadAnswerBlock:
-      '**ASUS目前并未生产本地LLM推理规格最强的迷你主机——GMKtec EVO-X2(Ryzen AI Max+ 395,128GB统一内存,约$2,199)和MINISFORUM AI X1 Pro(128GB可升级DDR5,准系统约$759起)在RAM上限和价格上均超过ASUS。** ASUS提供的是NUC 16 Pro(Intel Core Ultra Series 3"Panther Lake",最高96GB LPDDR5x,约$1,600起)面向通用本地AI并附带商用质保,以及ExpertCenter PN55(Ryzen AI 9 HX 470,55 TOPS NPU,最高96GB DDR5,通过Copilot+认证,约$1,099起)面向NPU加速的Windows工作负载。如果采购渠道、质保和Copilot+认证比每美元最大RAM更重要,选ASUS。如果唯一标准是原始本地LLM吞吐量,选EVO-X2或AI X1 Pro。',
+      '**ASUS综合最佳:NUC 16 Pro。ASUS性价比最佳:ExpertCenter PN55。大型本地LLM:请考虑ASUS以外的选项。** 如果你特别想要ASUS机型,ExpertCenter PN55(Ryzen AI 9 HX 470,最高96GB DDR5,通过Copilot+认证,约$1,099起)是性价比之选,而NUC 16 Pro(Intel Core Ultra Series 3"Panther Lake",最高96GB LPDDR5x或可升级DDR5配置下128GB,约$1,600起)是能力更强的平台。如果最大本地LLM容量是你唯一的优先级,GMKtec EVO-X2(128GB统一内存,约$2,199)和MINISFORUM AI X1 Pro(128GB可升级DDR5,准系统约$759起)目前更具优势。',
     quickAnswerTop: {
       zh: {
-        question: 'ASUS迷你主机适合运行本地AI模型吗？',
+        question: '2026年本地AI应该买哪款ASUS迷你主机？',
         answer:
-          'ASUS的ExpertCenter PN55(Ryzen AI 9 HX 470,55 TOPS NPU,最高96GB DDR5,约$1,099起)和NUC 16 Pro(Intel Core Ultra Series 3,最高96GB LPDDR5x,约$1,600起)可以用于本地AI,但并非规格领先者——GMKtec EVO-X2(128GB统一内存,约$2,199)和MINISFORUM AI X1 Pro(128GB可升级DDR5,准系统约$759起)目前在本地LLM推理上每美元提供更多RAM。截至2026年9月,尚未发现针对任一ASUS机型的独立Ollama或LM Studio基准测试。',
+          '如果价格是决定因素,购买ASUS ExpertCenter PN55(Ryzen AI 9 HX 470,55 TOPS NPU,最高96GB DDR5,通过Copilot+认证,约$1,099起)。如果想要综合能力最强的ASUS平台,购买ASUS NUC 16 Pro(Intel Core Ultra Series 3,Arc B390显卡,最高96GB LPDDR5x或可升级DDR5配置下128GB,约$1,600起)。如果每美元原始本地LLM容量是你唯一的标准,GMKtec EVO-X2(128GB统一内存,约$2,199)和MINISFORUM AI X1 Pro(128GB可升级DDR5,准系统约$759起)目前均优于两款ASUS机型。',
         bullets: [
-          'ExpertCenter PN55:Ryzen AI 9 HX 470,55 TOPS NPU,最高96GB DDR5,约$1,099起',
-          'NUC 16 Pro:Intel Core Ultra Series 3,最高96GB LPDDR5x,约$1,600起(价格因地区/配置差异很大)',
-          'GMKtec EVO-X2:Ryzen AI Max+ 395,128GB统一内存,约$2,199——目前的RAM上限领先者',
+          'ASUS综合最佳:NUC 16 Pro——Core Ultra Series 3、Arc B390、最高96GB LPDDR5x(DDR5配置下128GB),约$1,600起',
+          'ASUS性价比最佳:ExpertCenter PN55——Ryzen AI 9 HX 470、55 TOPS NPU、最高96GB DDR5、通过Copilot+认证,约$1,099起',
+          '大型本地LLM(非ASUS):GMKtec EVO-X2——128GB统一内存,约$2,199',
           '截至2026年9月,未发现任何ASUS迷你主机的独立Ollama/LM Studio基准测试',
         ],
         updatedDate: '2026-09',
@@ -1339,10 +1339,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: '核心要点', anchor: 'tldr' },
-      { label: '应该买哪款ASUS迷你主机？', anchor: 'which-asus' },
+      { label: '本地AI最佳ASUS迷你主机', anchor: 'buying-guide' },
       { label: '规格与价格对比', anchor: 'comparison' },
+      { label: '这些机型实际能跑什么', anchor: 'llm-capacity' },
+      { label: '该买哪种配置', anchor: 'configurations' },
+      { label: '在哪里购买', anchor: 'where-to-buy' },
       { label: 'ASUS对比Beelink、GMKtec与MINISFORUM', anchor: 'vs-boutique' },
-      { label: '谁应该选择ASUS而非其他？', anchor: 'who-should-buy' },
+      { label: '该不该买ASUS', anchor: 'who-should-buy' },
       { label: '常见错误', anchor: 'common-mistakes' },
       { label: '常见问题', anchor: 'faq' },
       { label: '资料来源', anchor: 'sources' },
@@ -1365,64 +1368,144 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至2026年9月,任一ASUS机型都没有独立的Ollama/LM Studio基准测试——NPU TOPS数值应视为Windows Copilot+功能规格,而非本地LLM推理基准',
         ],
       },
-      whichAsus: {
-        id: 'which-asus',
-        title: '2026年本地AI应该买哪款ASUS迷你主机？',
+      buyingGuide: {
+        id: 'buying-guide',
+        title: '2026年本地AI最佳ASUS迷你主机',
         content:
-          '**如果追求通用本地AI用途下ASUS阵容中最强的单线程与iGPU性能,NUC 16 Pro是首选。如果想以更低价格获得Windows Copilot+功能和NPU加速工作负载,ExpertCenter PN55是首选。** 两者都不是专为本地LLM设计的机型——它们是通用商用/创作型迷你主机,顺带能够胜任本地模型的运行。',
-        items: [
-          '**ASUS NUC 16 Pro** ——Intel Core Ultra Series 3("Panther Lake",最高配至Core Ultra X9 378H)、Intel Arc B390核显、NPU 5标称最高180 TOPS平台综合算力(CPU+GPU+NPU合计,而非NPU单项数值)、最高96GB LPDDR5x-9600。价格因配置而异——欧洲报价从约631欧元(32GB/1TB, Core Ultra X7 358H)到高配约2,542欧元不等。适合人群:希望获得ASUS现有阵容中最新Intel架构与最强核显的买家。',
-          '**ASUS ExpertCenter PN55** ——AMD Ryzen AI 9 HX 470、XDNA 2 NPU标称最高55 TOPS、AMD Radeon 800M显卡、最高96GB DDR5、Wi-Fi 7、通过Copilot+认证。根据经销商和配置不同,价格从约$1,099到$1,349不等。适合人群:相比NUC 16 Pro以更低起售价获得Windows Copilot+功能和NPU加速工作负载(背景虚化、Windows Studio Effects、Recall类功能)的买家。',
-          '**ASUS ExpertCenter PN54 / PN42** ——ASUS较小型的无风扇商用台式机。我们无法以与上述机型相同的双来源标准核实当前规格与价格,因此这里不给出具体数字——请查阅ASUS官方ExpertCenter产品线页面获取当前配置。这两款并未定位为本地AI设备;请将其视为普通办公台式机,不纳入本指南的本地LLM推荐范围。',
-          '**ASUS ROG NUC 2026** ——搭载独立RTX 5080笔记本级GPU的游戏级NUC,价格接近$4,500。这是一个不同的产品类别(真正的独显工作站,而非紧凑型商用迷你主机),不属于这一价位"本地AI迷你主机"推荐的讨论范围——详见下方"常见错误"部分。',
+          '**有两款ASUS机型值得为本地AI考虑。追求综合能力最强的平台选NUC 16 Pro,价格是决定因素则选ExpertCenter PN55。** 两者都不是专为本地LLM设计的机型——它们是通用商用/创作型迷你主机,顺带能够胜任本地模型的运行。如果每美元本地LLM容量是你唯一的优先级,请参见下方与GMKtec、MINISFORUM的诚实对比。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'ASUS NUC 16 Pro',
+            tagline: '本地AI用ASUS综合最佳',
+            verdict:
+              'Intel Core Ultra Series 3("Panther Lake",最高配至Core Ultra X9 378H)、Intel Arc B390核显、NPU 5标称最高180 TOPS平台综合算力(CPU+GPU+NPU合计,而非NPU单项数值)。内存取决于配置:LPDDR5x-9600型号(Core Ultra X7/X9)最高96GB,板载不可升级,速度和能效最佳;DDR5 SO-DIMM型号(Core Ultra 5/7)最高128GB且可升级。Wi-Fi 7,双2.5GbE。价格因配置而异——欧洲报价从约631欧元(32GB/1TB,Core Ultra X7 358H)到高配约2,542欧元不等。',
+            pros: [
+              'ASUS目前迷你主机中最强的核显(Arc B390)',
+              'DDR5 SO-DIMM配置可达128GB——可升级,不同于板载LPDDR5x',
+              '标配Wi-Fi 7与双2.5GbE',
+            ],
+            cons: [
+              '价格因地区和配置差异很大——购买前请核实具体型号',
+              '96GB LPDDR5x配置为板载内存,后续无法升级',
+              '没有独立基准测试确认真实的本地LLM每秒token数',
+            ],
+            affiliateLinks: [
+              { label: '查看价格——ASUS官方商店 →', url: 'https://eshop.asus.com/us/90ar00w2-m00040-asus-nuc-16-pro-mini-pc.html', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
+              { label: '查看价格——Newegg →', url: 'https://www.newegg.com/asus-barebone-systems-intel-core-ultra-7-356h-rnuc16gdku76000u/p/N82E16856110376', productName: 'ASUS NUC 16 Pro(准系统)', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'ASUS ExpertCenter PN55',
+            tagline: '本地AI用ASUS性价比最佳',
+            verdict:
+              'AMD Ryzen AI 9 HX 470、XDNA 2 NPU标称最高55 TOPS、AMD Radeon 800M显卡、最高96GB DDR5、Wi-Fi 7、通过Copilot+认证。根据经销商和配置不同,价格从约$1,099到$1,349不等——是两款ASUS选项中起售价最低的一款。',
+            pros: [
+              '两款支持本地AI的ASUS迷你主机中起售价最低',
+              '通过Copilot+认证——Windows Studio Effects、Recall类功能运行在NPU上',
+              '紧凑、近乎无风扇的商用台式机造型',
+            ],
+            cons: [
+              '上限为96GB DDR5——没有配置能达到NUC 16 Pro DDR5型号的128GB',
+              '与Beelink SER10 MAX使用相同的Ryzen AI 9 HX 470芯片,ASUS的溢价买的是支持和认证,而非独家芯片',
+              '没有独立基准测试确认真实的本地LLM每秒token数',
+            ],
+            affiliateLinks: [
+              { label: '查看价格——ASUS官方商店 →', url: 'https://eshop.asus.com/us/90ms03c1-m000t0-asus-expertcenter-pn55.html', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
+            ],
+          },
         ],
-        affiliateLinks: [
-          { label: '在ASUS.com查看NUC 16 Pro价格 →', url: 'https://www.asus.com/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
-          { label: '在Newegg查看NUC 16 Pro价格 →', url: 'https://www.newegg.com/asus-barebone-systems-intel-core-ultra-7-356h-rnuc16gdku76000u/p/N82E16856110376', productName: 'ASUS NUC 16 Pro(准系统)', productCategory: 'Mini PC' },
-          { label: '在ASUS.com查看ExpertCenter PN55价格 →', url: 'https://www.asus.com/us/displays-desktops/mini-pcs/pn-series/asus-expertcenter-pn55/', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
-        ],
-        note: '产品链接,目前没有任何联盟营销关系——仅为指向厂商官方产品页面的普通链接。ASUS迷你主机价格因地区、经销商和配置差异很大;购买前请核实当前报价。',
+        note: '产品链接,目前没有任何联盟营销关系——仅为指向厂商官方商店页面的普通链接。价格因地区、经销商和配置差异很大;购买前请核实当前报价。',
       },
       comparison: {
         id: 'comparison',
         title: '规格与价格对比:ASUS对比其他机型',
         content:
           '**以下五款机型均基于厂商公布的规格,而非PromptQuorum自行测试的基准数据。** 价格为目前报道的最低配置价格,变动很快——购买前请查看链接中的产品页面。',
-        columns: ['迷你主机', '芯片 / NPU', '最大RAM', '起售价(美元)'],
+        columns: ['迷你主机', '适合场景', '最大RAM', '价格', '结论'],
         rows: [
-          { '迷你主机': 'ASUS NUC 16 Pro', '芯片 / NPU': 'Core Ultra Series 3,NPU 5(综合180 TOPS)', '最大RAM': '96GB LPDDR5x', '起售价(美元)': '约$1,600(差异很大)' },
-          { '迷你主机': 'ASUS ExpertCenter PN55', '芯片 / NPU': 'Ryzen AI 9 HX 470,55 TOPS NPU', '最大RAM': '96GB DDR5', '起售价(美元)': '约$1,099' },
-          { '迷你主机': 'GMKtec EVO-X2', '芯片 / NPU': 'Ryzen AI Max+ 395,综合126 TOPS', '最大RAM': '128GB LPDDR5X', '起售价(美元)': '约$2,199' },
-          { '迷你主机': 'Beelink SER10 MAX', '芯片 / NPU': 'Ryzen AI 9 HX 470,综合86 TOPS', '最大RAM': '64GB DDR5', '起售价(美元)': '约$1,299' },
-          { '迷你主机': 'MINISFORUM AI X1 Pro', '芯片 / NPU': 'Ryzen AI 9 HX 370,80 TOPS NPU', '最大RAM': '128GB DDR5(可升级)', '起售价(美元)': '约$759准系统' },
+          { '迷你主机': 'ASUS NUC 16 Pro', '适合场景': 'ASUS综合最佳', '最大RAM': '96GB／128GB*', '价格': '约$1,600起', '结论': '值得买' },
+          { '迷你主机': 'ASUS ExpertCenter PN55', '适合场景': 'ASUS性价比最佳', '最大RAM': '96GB', '价格': '约$1,099起', '结论': '值得买' },
+          { '迷你主机': 'GMKtec EVO-X2', '适合场景': '最大本地模型', '最大RAM': '128GB', '价格': '约$2,199起', '结论': 'LLM容量最佳' },
+          { '迷你主机': 'MINISFORUM AI X1 Pro', '适合场景': '预算+大内存', '最大RAM': '128GB(可升级)', '价格': '约$759准系统起', '结论': '性价比最佳' },
+          { '迷你主机': 'Beelink SER10 MAX', '适合场景': '与PN55同芯片', '最大RAM': '64GB', '价格': '约$1,299', '结论': '不推荐——RAM更少且无ASUS支持' },
+        ],
+        note: '*NUC 16 Pro:板载LPDDR5x配置(Core Ultra X7/X9)为96GB,可升级DDR5配置(Core Ultra 5/7)为128GB——见上方"该买哪种配置"。产品链接,目前没有任何联盟营销关系;价格变动很快且因经销商而异——购买前请核实。',
+        affiliateLinks: [
+          { label: '查看NUC 16 Pro价格 →', url: 'https://eshop.asus.com/us/90ar00w2-m00040-asus-nuc-16-pro-mini-pc.html', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
+          { label: '查看ExpertCenter PN55价格 →', url: 'https://eshop.asus.com/us/90ms03c1-m000t0-asus-expertcenter-pn55.html', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
+          { label: '查看GMKtec EVO-X2价格 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+          { label: '查看MINISFORUM AI X1 Pro价格 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+          { label: '查看Beelink SER10 MAX价格 →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
+        ],
+      },
+      llmCapacity: {
+        id: 'llm-capacity',
+        title: '这些ASUS机型实际能跑什么',
+        content:
+          '**RAM决定上限,但不能说明设备能否快速运行模型。** 下表显示量化模型加载所需的内存——"能装下"和"跑得快"是两个不同的问题,截至目前两款ASUS机型均没有独立的每秒token数基准测试(见下方"常见错误")。',
+        columns: ['模型规模', '量化', '所需RAM', '96GB配置能装下吗？', '128GB配置能装下吗？'],
+        rows: [
+          { '模型规模': '7B', '量化': 'Q4', '所需RAM': '约5GB', '96GB配置能装下吗？': '可以——余量充足', '128GB配置能装下吗？': '可以——余量充足' },
+          { '模型规模': '14B', '量化': 'Q4', '所需RAM': '约9GB', '96GB配置能装下吗？': '可以——余量充足', '128GB配置能装下吗？': '可以——余量充足' },
+          { '模型规模': '32B', '量化': 'Q4', '所需RAM': '约20GB', '96GB配置能装下吗？': '可以——比较宽松', '128GB配置能装下吗？': '可以——比较宽松' },
+          { '模型规模': '70B', '量化': 'Q4', '所需RAM': '约40–45GB', '96GB配置能装下吗？': '可以——上下文余量较少', '128GB配置能装下吗？': '可以——比较宽松' },
+          { '模型规模': '70B', '量化': 'Q8', '所需RAM': '约75GB以上', '96GB配置能装下吗？': '勉强——余量极少', '128GB配置能装下吗？': '可以——比较宽松' },
+        ],
+        note: 'RAM计算属于量化算术(模型参数量×每权重比特数),不是基准测试——它说明能否装下,而非运行速度。实际每秒token数取决于内存带宽,以及操作系统分配给核显的共享内存比例,截至2026年9月两款ASUS机型均未公布相关独立数据。',
+      },
+      configurations: {
+        id: 'configurations',
+        title: '该买哪种配置',
+        content:
+          '**所选配置比机型名称本身更重要——两款ASUS机型均有多个RAM/存储档位在售,选错档位会浪费预算,或限制你真正想运行的模型规模。**',
+        items: [
+          '**NUC 16 Pro——32GB/1TB(LPDDR5x):** 不建议用于严肃的本地LLM用途。能顺畅运行7B–14B模型,但由于LPDDR5x为板载内存,后续无法升级到32B以上。',
+          '**NUC 16 Pro——64GB–96GB LPDDR5x:** 以高速板载内存运行14B–32B模型的最佳平衡点。如果不需要70B级模型,大多数本地AI买家应该瞄准这一档位。',
+          '**NUC 16 Pro——128GB DDR5(Core Ultra 5/7型号):** 如果最大模型容量比LPDDR5x更快的内存带宽更重要,应选择这一配置——这是唯一能与GMKtec EVO-X2和MINISFORUM AI X1 Pro的RAM上限持平的NUC 16 Pro路径。但这也意味着放弃旗舰级Core Ultra X7/X9芯片,因为128GB DDR5选项配备的是较低阶的Core Ultra 5/7——这是真实的取舍,而非单纯的升级。',
+          '**ExpertCenter PN55——较低RAM档位:** 适合7B–14B模型和Windows Copilot+功能;如果你特别想运行32B以上的模型,这不是合适的配置。',
+          '**ExpertCenter PN55——96GB DDR5(顶配):** 如果你就是想用这款机型做本地AI,这是应该购买的配置——在Q4量化下能相对从容地覆盖到70B。',
+        ],
+        note: '两家厂商都没有针对每个市场公布确切SKU代码与RAM档位的官方对照——购买前请在产品页面核实具体配置,不要只看基础型号名称。',
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: '在哪里购买',
+        content:
+          '**两款机型均确认可从ASUS直接购买。NUC 16 Pro在Newegg还有确认在售的准系统型号;截至2026年9月,我们未找到ExpertCenter PN55在Amazon或Newegg的现行在售信息——这一款请直接在ASUS.com核实。**',
+        items: [
+          '**ASUS NUC 16 Pro:** ASUS官方商店(完整零售配置,ASUS质保)或Newegg(准系统SKU——需自行添加RAM/SSD)。',
+          '**ASUS ExpertCenter PN55:** 截至目前仅ASUS官方商店有售——未发现确认的第三方经销商在售信息。',
         ],
         affiliateLinks: [
-          { label: '查看NUC 16 Pro价格 →', url: 'https://www.asus.com/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
-          { label: '查看ExpertCenter PN55价格 →', url: 'https://www.asus.com/us/displays-desktops/mini-pcs/pn-series/asus-expertcenter-pn55/', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
-          { label: '查看GMKtec EVO-X2价格 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
-          { label: '查看Beelink SER10 MAX价格 →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
-          { label: '查看MINISFORUM AI X1 Pro价格 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+          { label: 'NUC 16 Pro——ASUS官方商店 →', url: 'https://eshop.asus.com/us/90ar00w2-m00040-asus-nuc-16-pro-mini-pc.html', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
+          { label: 'NUC 16 Pro——Newegg(准系统) →', url: 'https://www.newegg.com/asus-barebone-systems-intel-core-ultra-7-356h-rnuc16gdku76000u/p/N82E16856110376', productName: 'ASUS NUC 16 Pro(准系统)', productCategory: 'Mini PC' },
+          { label: 'ExpertCenter PN55——ASUS官方商店 →', url: 'https://eshop.asus.com/us/90ms03c1-m000t0-asus-expertcenter-pn55.html', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
         ],
-        note: '产品链接,目前没有任何联盟营销关系。价格变动很快且因经销商而异——购买前请核实。',
+        note: '产品链接,目前没有任何联盟营销关系。库存和配置选项会变化——请以链接页面为准,而非本表格。',
       },
       vsBoutique: {
         id: 'vs-boutique',
         title: '本地LLM场景下,ASUS与Beelink、GMKtec、MINISFORUM相比如何？',
         content: [
-          '**这种差距是真实存在的,但比"ASUS对比精品品牌"所暗示的要小得多——它主要是RAM上限的差距,而非芯片的差距。** ASUS ExpertCenter PN55和Beelink SER10 MAX使用的是完全相同的AMD Ryzen AI 9 HX 470芯片。Beelink的优势并非更好的硬件——目前它以相近的起售价和大致相同的RAM上限提供这颗芯片(Beelink官网确认为64GB,而ASUS的规格表为96GB)。',
+          '**这种差距是真实存在的,但比"ASUS对比精品品牌"所暗示的要小得多——它主要是RAM上限的差距,而非芯片的差距。** ASUS ExpertCenter PN55和Beelink SER10 MAX使用的是完全相同的AMD Ryzen AI 9 HX 470芯片。Beelink的优势并非更好的硬件——目前它以相近的起售价和更低的RAM上限提供这颗芯片(Beelink官网确认为64GB,而ASUS的规格表为96GB)。就这一具体对比而言,ASUS的PN55在RAM上反而更胜一筹。',
           '真正的规格领先者是GMKtec EVO-X2和MINISFORUM AI X1 Pro,原因各不相同。EVO-X2采用AMD旗舰级Ryzen AI Max+ 395("Strix Halo"),配备明显更大的核显(Radeon 8060S,40个RDNA 3.5计算单元)和128GB板载LPDDR5X内存——其中相当一部分可分配为GPU可寻址内存,这让迷你主机能够运行比典型96GB DDR5机型更大的量化模型。AI X1 Pro以不同方式达到同样的128GB上限:采用可升级的标准DDR5 SO-DIMM内存,而非板载内存,准系统起售价低于800美元。',
-          '目前两款ASUS机型均未搭载Ryzen AI Max+ 395,也没有Panther Lake那种超过96GB加大型核显的完整组合,因而无法在原始本地LLM容量上真正与EVO-X2抗衡。如果你唯一关心的问题是"哪款迷你主机能装下最大的模型",EVO-X2或AI X1 Pro比两款ASUS机型给出的答案更直接。',
+          'ASUS的NUC 16 Pro在128GB DDR5配置上弥补了部分差距,在纯RAM上限上与EVO-X2、AI X1 Pro持平——但这是较低阶的Core Ultra 5/7,而非旗舰级X7/X9芯片,而且仍然缺少EVO-X2那颗更大的核显。如果你唯一关心的问题是"哪款迷你主机能以最好的GPU装下最大的模型",EVO-X2仍然比任何ASUS配置给出的答案更直接。',
         ],
-        note: '如果原始本地LLM的RAM上限和每美元TOPS是你唯一的购买标准,请避开ASUS——GMKtec EVO-X2和MINISFORUM AI X1 Pro在这一具体指标上均优于两款ASUS机型,而AI X1 Pro的起售价还低于ASUS NUC 16 Pro。',
+        note: '如果原始本地LLM的GPU吞吐量是你唯一的购买标准,请避开ASUS——GMKtec EVO-X2更大的核显在这一具体指标上优于两款ASUS机型的任何配置,即便NUC 16 Pro的128GB DDR5配置现在已在RAM本身上与之持平。',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
-        title: '谁应该选择ASUS而非精品迷你主机？',
+        title: '该不该买ASUS',
         content:
-          '**如果采购渠道、质保条款和Copilot+认证对你或你的组织确有实际分量,选择ASUS。如果唯一标准是每美元的最大本地LLM容量,选择GMKtec EVO-X2或MINISFORUM AI X1 Pro。**',
+          '**如果采购渠道、质保条款和Copilot+认证对你或你的组织确有实际分量,或者你已经选择了NUC 16 Pro的128GB DDR5档位且其Arc B390核显已经够用,就选择ASUS。如果唯一标准是每美元的最大本地LLM容量,请改选GMKtec EVO-X2或MINISFORUM AI X1 Pro。**',
         items: [
-          '**以下情况选择ASUS:** 通过已有ASUS供应商关系的商用采购渠道购买;因合规或IT政策原因需要Copilot+认证;相比精品品牌较有限的RMA流程,更看重ASUS标准商用质保和支持渠道;或专门看重Panther Lake的Arc B390核显用于AI与图形混合工作负载。',
-          '**以下情况改选GMKtec EVO-X2或MINISFORUM AI X1 Pro:** 唯一优先事项是单机可运行的最大本地模型;对价格敏感(AI X1 Pro准系统价格低于两款ASUS机型);或不需要商用质保/采购渠道,愿意直接向精品厂商购买。',
+          '**该买NUC 16 Pro的情况:** 想要搭载最新Intel架构的紧凑型Windows AI设备;看重ASUS的商用支持;想要Intel Arc显卡用于AI与图形混合工作负载;或已特意选择128GB DDR5配置以对齐精品竞品的RAM上限。',
+          '**该避开NUC 16 Pro的情况:** 主要想要70B以上本地LLM的最佳速度;想要每美元最大的每秒token数;需要独立NVIDIA GPU;或你实际能买到的配置是96GB板载LPDDR5x档位,而你知道以后会想要更多RAM。',
+          '**该买PN55的情况:** 想要ASUS中起售价最低的紧凑型Windows AI设备;需要Copilot+功能;或所运行的模型不需要超过96GB的RAM。',
+          '**该避开PN55的情况:** 特别想要超过96GB的RAM——没有任何PN55配置能达到NUC 16 Pro的128GB DDR5档位或精品竞品的上限。',
+          '**该改买GMKtec EVO-X2或MINISFORUM AI X1 Pro的情况:** 唯一优先事项是以最佳价格获得单机可运行的最大本地模型;或不需要商用质保/采购渠道,愿意直接向精品厂商购买。',
           '**无论品牌都不适合的情况:** 需要运行的模型超出96–128GB统一/共享内存在可用量化下所能容纳的范围——这属于工作站级GPU或云端租用的使用场景,而非迷你主机的用武之地。',
         ],
       },
@@ -1431,9 +1514,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '购买ASUS本地AI迷你主机时的常见错误',
         items: [
           '把NPU的TOPS数值当作本地LLM每秒token数的替代指标。NPU加速的是特定的Windows Copilot+推理路径(Studio Effects、Recall类功能);而大多数本地LLM工具(Ollama、LM Studio、llama.cpp)运行在CPU和核显上,而非NPU上——因此更高的TOPS数值并不意味着更快的聊天机器人响应速度。',
+          '仅凭型号名称购买NUC 16 Pro,而不核实实际配备的RAM配置。96GB LPDDR5x配置和128GB DDR5配置在芯片档位和可升级性上其实是不同的产品——参见上方"该买哪种配置"。',
           '认为更高的RAM规格意味着全部都能作为GPU可寻址内存用于模型。迷你主机的共享内存中有多少可分配给核显,取决于BIOS设置和操作系统支持,因机型而异——请查阅具体机型的文档,不要假设全部RAM数值都可用。',
           '把ASUS ROG NUC 2026拿来与本指南中的迷你主机比较。它是搭载独立GPU的游戏级NUC,价格接近$4,500——是解决不同问题的不同产品类别,并非这一价位的本地AI迷你主机。',
-          '认为"精品品牌"就自动意味着更好的芯片。Beelink SER10 MAX使用的芯片与ASUS ExpertCenter PN55完全相同,均为Ryzen AI 9 HX 470——本对比中真正的规格差距具体存在于GMKtec EVO-X2和MINISFORUM AI X1 Pro,而非精品品牌整体。',
+          '认为"精品品牌"就自动意味着更好的芯片。Beelink SER10 MAX使用的芯片与ASUS ExpertCenter PN55完全相同,均为Ryzen AI 9 HX 470,且RAM更少(64GB对96GB)——本对比中真正的规格差距具体存在于GMKtec EVO-X2和MINISFORUM AI X1 Pro,而非精品品牌整体。',
           '在比较不同品牌每GB价格时忽略质保与支持条款。一款需要自行采购并安装RAM/SSD、并按精品厂商标准消费级RMA流程发货的更便宜的准系统机型,与拥有成熟支持渠道的商用渠道机型并不是同一维度的比较。',
         ],
       },
@@ -1442,8 +1526,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           {
+            q: '本地AI应该买哪款ASUS迷你主机？',
+            a: 'ExpertCenter PN55(Ryzen AI 9 HX 470,最高96GB DDR5,通过Copilot+认证,约$1,099起)是ASUS中性价比最佳的选择。NUC 16 Pro(Intel Core Ultra Series 3,Arc B390显卡,最高96GB LPDDR5x或可升级DDR5配置下128GB,约$1,600起)是综合能力更强的ASUS平台。如果每美元本地LLM容量是你唯一的优先级,GMKtec EVO-X2和MINISFORUM AI X1 Pro目前均优于两者。',
+          },
+          {
+            q: 'ASUS NUC 16 Pro真的支持128GB RAM吗？',
+            a: '是的,但仅限特定配置。Core Ultra X7/X9型号使用板载LPDDR5x,上限96GB且无法升级。Core Ultra 5/7型号则使用DDR5 SO-DIMM,最高支持128GB且可升级。这两者是不同的芯片档位,而非同一台机器的RAM选项——如果容量对你很重要,购买前请核实具体SKU。',
+          },
+          {
             q: 'ASUS迷你主机适合运行本地AI模型吗？',
-            a: '可以使用,但并非规格领先者。ExpertCenter PN55(Ryzen AI 9 HX 470,最高96GB DDR5)和NUC 16 Pro(Intel Core Ultra Series 3,最高96GB LPDDR5x)都可以通过Ollama或LM Studio运行本地模型,但GMKtec EVO-X2(128GB统一内存)和MINISFORUM AI X1 Pro(128GB可升级DDR5)在这一具体用途上目前每美元提供更多RAM。',
+            a: '可以使用,但并非规格领先者。ExpertCenter PN55(Ryzen AI 9 HX 470,最高96GB DDR5)和NUC 16 Pro(Intel Core Ultra Series 3,最高96GB LPDDR5x或DDR5配置下128GB)都可以通过Ollama或LM Studio运行本地模型,但GMKtec EVO-X2(128GB统一内存,更大核显)和MINISFORUM AI X1 Pro(128GB可升级DDR5)在这一具体用途上目前每美元提供更多RAM和GPU性能。',
           },
           {
             q: 'ASUS ExpertCenter PN55支持Ollama或LM Studio吗？',
@@ -1459,7 +1551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我能在ASUS迷你主机上运行700亿参数的模型吗？',
-            a: '在4比特量化下,700亿参数模型仅加载就需要约40–45GB的RAM/VRAM,在96GB机型上还能为上下文留出余量,但余量小于GMKtec EVO-X2这样的128GB机型。模型可以运行,但相比EVO-X2更大的核显,预计每秒token数会明显更慢,而且没有独立基准测试确认任一ASUS机型的确切吞吐量。',
+            a: '在4比特(Q4)量化下,700亿参数模型仅加载就需要约40–45GB的RAM——在任何ASUS 96GB或128GB配置上都能从容装下,NUC 16 Pro的128GB DDR5档位还能为上下文留出更多余量。在8比特(Q8)量化下大约需要75GB以上,在96GB机型上比较勉强,但128GB则很从容。两种情况下模型都能运行,但相比GMKtec EVO-X2更大的核显,预计每秒token数会明显更慢,而且没有独立基准测试确认ASUS机型的确切吞吐量。',
           },
           {
             q: '在本地LLM方面,GMKtec EVO-X2比ASUS迷你主机更好吗？',
@@ -1480,7 +1572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '资料来源',
         links: [
           { url: 'https://press.asus.com/news/press-releases/expertcenter-pn55-mini-pc-ryzen-ai-copilot-plus/', title: 'ASUS宣布推出ExpertCenter PN55迷你主机', description: 'ASUS官方新闻稿:Ryzen AI 9 HX 470、55 TOPS NPU、最高96GB DDR5、Copilot+认证。' },
-          { url: 'https://www.asus.com/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', title: 'ASUS NUC 16 Pro——官方产品页面', description: 'ASUS官方公布的NUC 16 Pro规格(Core Ultra Series 3、Arc B390、最高96GB LPDDR5x)。' },
+          { url: 'https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', title: 'ASUS NUC 16 Pro——官方产品页面', description: 'ASUS官方公布的NUC 16 Pro规格,包含LPDDR5x(最高96GB,板载)与DDR5 SO-DIMM(最高128GB,可升级)的配置区分。' },
           { url: 'https://www.techpowerup.com/review/asus-nuc-16-pro/', title: 'ASUS NUC 16 Pro评测', description: 'TechPowerUp对NUC 16 Pro的独立评测与基准测试。' },
           { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2——官方产品页面', description: 'GMKtec官方规格:Ryzen AI Max+ 395、Radeon 8060S、最高128GB LPDDR5X。' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review', title: 'GMKtec EVO-X2 AI迷你主机评测', description: 'Tom\'s Hardware对GMKtec EVO-X2的独立评测。' },
@@ -1492,9 +1584,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '本地AI用ASUS迷你主机：NUC 16 Pro对比ExpertCenter PN55（2026版）',
-      'description': '本地AI用ASUS迷你主机对比:NUC 16 Pro(约$1,600起,96GB)对比ExpertCenter PN55(约$1,099起,96GB)对比GMKtec EVO-X2、Beelink SER10 MAX和MINISFORUM AI X1 Pro。',
+      'description': '2026年本地AI最佳ASUS迷你主机:NUC 16 Pro对比ExpertCenter PN55,从价格、RAM配置和真实本地LLM容量对比——并说明相对GMKtec EVO-X2、MINISFORUM AI X1 Pro的定位。',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-05',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1506,10 +1598,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'zh',
       'url': 'https://www.promptquorum.com/zh/power-local-llm/asus-mini-pc-local-ai-2026',
-      'articleBody': '2026年,ASUS有两款值得考虑用于本地AI的迷你主机:NUC 16 Pro和ExpertCenter PN55。两者相对于GMKtec EVO-X2或MINISFORUM AI X1 Pro都没有在本地LLM规格竞赛中明确胜出。',
+      'articleBody': 'ASUS综合最佳:NUC 16 Pro。ASUS性价比最佳:ExpertCenter PN55。大型本地LLM请考虑ASUS以外的GMKtec EVO-X2或MINISFORUM AI X1 Pro。',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
-      'audience': { '@type': 'Audience', 'audienceType': '在ASUS迷你主机与精品Ryzen AI Max迷你主机之间为本地LLM推理做选择的买家' },
+      'audience': { '@type': 'Audience', 'audienceType': '在纠结该买哪款ASUS迷你主机用于本地AI,以及ASUS相比精品Ryzen AI Max迷你主机是否是正确选择的买家' },
       'about': [
         { '@type': 'Thing', 'name': 'ASUS NUC 16 Pro' },
         { '@type': 'Thing', 'name': 'ASUS ExpertCenter PN55' },
