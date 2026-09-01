@@ -376,6 +376,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 Min. Lesezeit',
+      educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
@@ -393,6 +394,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Opus 5' },
           { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: buildOgImageObject(OG_SLUG, 'de'),
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -719,6 +724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Prompt engineering en 2026: diseña entradas de texto para resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT y Claude.',
       publishDate: '2026-03-01',
       readTime: '10 min de lectura',
+      educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
@@ -737,7 +743,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: buildOgImageObject(OG_SLUG, 'es'),
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1064,7 +1072,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'هندسة الطلبات: تصميم المدخلات النصية للحصول على مخرجات موثوقة ودقيقة من نماذج LLM كـ GPT-5.6 وClaude Opus 5 وGemini 3.1. تعلّم التقنيات الأساسية والأطر ولماذا تهم لجودة مخرجات الذكاء الاصطناعي.',
       metaDescription: 'هندسة الطلبات: صمّم المدخلات النصية للحصول على نتائج موثوقة من ⁨LLMs⁩. تعلّم ⁨role prompting⁩ و⁨chain-of-thought⁩ و⁨few-shot⁩ لـ ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Ollama⁩.',
       publishDate: '2026-03-01',
-      readTime: '١٠ دقائق للقراءة',
+      readTime: '10 دقائق للقراءة',
+      educationalLevel: 'Beginner',
       primaryTerm: 'هندسة الطلبات',
       schema: {
         '@context': 'https://schema.org',
@@ -1082,8 +1091,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Opus 5' },
           { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-        publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: buildOgImageObject(OG_SLUG, 'ar'),
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1411,6 +1422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Prompt engineering em 2026: projete entradas de texto para resultados confiáveis de IA. Aprenda role prompting, chain-of-thought e few-shot para ChatGPT, Claude e Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 min de leitura',
+      educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
@@ -1429,7 +1441,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
-        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: buildOgImageObject(OG_SLUG, 'pt'),
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1723,6 +1737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'Le prompt engineering détermine la qualité de vos résultats IA. Apprenez le prompting de rôle, chain-of-thought et few-shot pour ChatGPT, Claude et Ollama.',
       publishDate: '2026-03-01',
       readTime: '10 min de lecture',
+      educationalLevel: 'Beginner',
       primaryTerm: 'Prompt Engineering',
       schema: {
         '@context': 'https://schema.org',
@@ -1740,6 +1755,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Opus 5' },
           { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
+        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: buildOgImageObject(OG_SLUG, 'fr'),
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2066,6 +2085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: 'プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。',
       publishDate: '2026-03-01',
       readTime: '10分で読める',
+      educationalLevel: 'Beginner',
       primaryTerm: 'プロンプトエンジニアリング',
       schema: {
         '@context': 'https://schema.org',
@@ -2083,6 +2103,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Opus 5' },
           { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: buildOgImageObject(OG_SLUG, 'ja'),
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2407,6 +2431,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       metaDescription: '提示工程是决定AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。',
       publishDate: '2026-03-01',
       readTime: '阅读约10分钟',
+      educationalLevel: 'Beginner',
       primaryTerm: '提示工程',
       schema: {
         '@context': 'https://schema.org',
@@ -2424,6 +2449,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Claude Opus 5' },
           { '@type': 'Thing', name: 'Gemini 3.1' },
         ],
+        author: { '@type': 'Organization', name: 'PromptQuorum' },
+        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
+        image: buildOgImageObject(OG_SLUG, 'zh'),
+        'proficiencyLevel': 'Beginner',
       },
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -2755,7 +2784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering',
+        url: 'https://www.promptquorum.com/ko/prompt-engineering/what-is-prompt-engineering',
         inLanguage: 'ko',
         headline: '프롬프트 엔지니어링이란?',
         description: '프롬프트 엔지니어링: LLM에서 신뢰할 수 있고 정확한 출력을 얻기 위해 텍스트 입력을 설계하는 기법. 핵심 기법, 프레임워크, 그리고 그 중요성을 알아보십시오.',
@@ -2779,7 +2808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '프롬프트 엔지니어링 프레임워크',
         inLanguage: 'ko',
         numberOfItems: 5,
-        url: 'https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering',
+        url: 'https://www.promptquorum.com/ko/prompt-engineering/what-is-prompt-engineering',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Single-Line', description: '정확도보다 속도가 중요한 빠른 단일 행 작업.' },
           { '@type': 'ListItem', position: 2, name: 'CRAFT', description: '정해진 톤이 있는 마케팅, 카피라이팅, 창의적 콘텐츠.' },
