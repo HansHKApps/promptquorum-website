@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developpeurs qui construisent des applications RAG',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '15 min de lecture',
     primaryTerm: 'base de donnees vectorielle',
     targetKeywords: [
@@ -1920,7 +1920,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: 'Auto-heberger ou cloud gere',
-        content: '**L auto-hebergement vous donne la maitrise des couts et la residence des donnees, et vous confie la disponibilite, les sauvegardes et la mise a l echelle ; le cloud gere vous les revend.** Dit honnetement, l ecart d argent est plus faible que la plupart des equipes ne l imaginent, et l ecart de temps plus grand.\n\nUn Qdrant ou un Weaviate mononoeud sur une machine modeste fera tourner un million de vecteurs pour environ 40 a 80 dollars d infrastructure par mois. Les equivalents geres se situent dans une fourchette voisine a cette echelle. Ce qui les separe vraiment, ce sont les deux a cinq heures par mois que quelqu un consacre aux correctifs, a la supervision, a la restauration apres un deploiement rate et aux alertes quand un disque se remplit. Valorisez cela au taux horaire reel de votre equipe et la comparaison s inverse le plus souvent.\n\nLes cas ou l auto-hebergement l emporte nettement ne relevent pas d abord de l argent. Ce sont la residence des donnees, une exigence d isolement ou d installation sur site, et un volume assez eleve pour que la facturation a l usage depasse une machine fixe. Le cas ou le gere l emporte nettement, c est une petite equipe sans ingenieur disponible, ou l alternative a payer n est pas d economiser mais de livrer plus tard.',
+        content: '**L auto-hebergement vous donne la maitrise des couts et la residence des donnees, et vous confie la disponibilite, les sauvegardes et la mise a l echelle ; le cloud gere vous les revend.** Dit honnetement, l ecart d argent est plus faible que la plupart des equipes ne l imaginent, et l ecart de temps plus grand.\n\nUn Qdrant ou un Weaviate mononoeud sur une machine modeste fera tourner un million de vecteurs pour environ 40 a 80 dollars d infrastructure par mois. Les equivalents geres se situent dans une fourchette voisine a cette echelle. Ce qui les separe vraiment, ce sont les deux a cinq heures par mois que quelqu un consacre aux correctifs, a la supervision, a la restauration apres un deploiement rate et aux alertes quand un disque se remplit. Valorisez cela au taux horaire reel de votre equipe et la comparaison s inverse le plus souvent.\n\n**L auto-hebergement reste confortable bien au-dela de l echelle d un projet jouet, mais il a un plafond reel.** La documentation de Qdrant sur le dimensionnement des capacites recommande de partitionner (sharder) une collection au-dela d environ 1 million de vecteurs, et les chiffres de consommation memoire publies par l editeur situent un index HNSW entierement en memoire a environ 6 a 7 Go de RAM par million de vecteurs a 1 536 dimensions (la taille des embeddings OpenAI), ou seulement environ 1,2 Go par million si vous acceptez un stockage sur disque (mmap) avec une legere perte de rapidite. En pratique, cela signifie qu un seul noeud bien dimensionne, 32 Go de RAM ou plus, supporte des dizaines de millions de vecteurs avant que la complexite operationnelle d une repartition sur plusieurs noeuds ne devienne rentable ; le mode integre de Chroma est celui dont vous devrez sortir le plus tot, car c est un simple processus Python plutot qu un serveur et il n a jamais ete concu pour un index a l echelle de la production.\n\nLes cas ou l auto-hebergement l emporte nettement ne relevent pas d abord de l argent. Ce sont la residence des donnees, une exigence d isolement ou d installation sur site, et un volume assez eleve pour que la facturation a l usage depasse une machine fixe. Le cas ou le gere l emporte nettement, c est une petite equipe sans ingenieur disponible, ou l alternative a payer n est pas d economiser mais de livrer plus tard.',
+        decisionBlock: {
+          title: 'Auto-heberger ou cloud gere ?',
+          localIf: [
+            'Vous prototypez, apprenez ou exploitez un jeu de donnees petit a moyen — Chroma (integre, gratuit) ou Qdrant auto-heberge ne coute rien de plus qu un petit serveur',
+            'La residence des donnees ou un deploiement isole est une exigence stricte — l index ne quitte jamais votre propre infrastructure',
+            'Vous exploitez deja Kubernetes ou Docker Compose et pouvez absorber 2 a 5 heures d exploitation par mois',
+            'Votre nombre de vecteurs reste confortablement sous la dizaine de millions, la ou un seul noeud bien dimensionne (32 Go de RAM et plus) garde encore l index en memoire — voir les notes de Qdrant sur le dimensionnement des capacites ci-dessus',
+          ],
+          cloudIf: [
+            'Vous n avez pas de capacite DevOps dediee et ne pouvez pas absorber les 2 a 5 heures par mois de correctifs, de supervision et de sauvegardes qu exige l auto-hebergement',
+            'Vous avez besoin d un engagement de disponibilite garanti plutot que du meilleur effort — Pinecone Enterprise offre 99,95 %, Qdrant Premium 99,9 %',
+            'Vous avez besoin de fonctionnalites entreprise des le depart : SSO, journaux d audit, conformite HIPAA, support dedie',
+            'Vous montez en charge au-dela de ce que votre equipe peut exploiter confortablement, et vous preferez une facture previsible a l usage plutot que de recruter ou former pour cela',
+          ],
+          quick: [
+            'Cout nul, sans serveur, prototypage → Chroma integre',
+            'Gratuit en auto-hebergement, meilleur rapport cout/performance a l echelle reelle → Qdrant',
+            'Aucune charge d exploitation, mais vous payez → Pinecone Builder (20 $/mois forfaitaires)',
+            'La precision de la recherche hybride est prioritaire → Weaviate (palier gratuit depuis juin 2026)',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -2231,6 +2252,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Tarifs Qdrant Cloud', description: 'Limites du palier gratuit a vie avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque, plus la facturation a la consommation de Standard et les engagements de 99,5 % et 99,9 %.' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Dimensionnement des capacites Qdrant', description: 'Recommandation officielle de partitionner une collection au-dela d environ 1 million de vecteurs, ainsi que la formule de RAM (vecteurs x dimensions x 4 octets x 1,5) qui sous-tend le plafond d auto-hebergement decrit plus haut.' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant : RAM minimale pour 1 million de vecteurs', description: 'Base des ~6 a 7 Go de RAM par million de vecteurs a 1 536 dimensions (HNSW en memoire), contre ~1,2 Go par million en stockage sur disque (mmap).' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Depot Qdrant', description: 'Compte de 34 242 etoiles, licence Apache-2.0 et Rust comme langage d implementation, lus depuis l API GitHub le 28 aout 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Tarifs Pinecone', description: 'Limites de Starter, Builder, Standard et Enterprise, dont l offre forfaitaire Builder a 20 $ et les minimums mensuels de 50 $ et 500 $.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Page partenaires de Pinecone', description: 'Confirme le programme d affiliation destine aux createurs de contenu, aux cotes des categories partenaires technologiques, solutions et prescripteurs.' },
@@ -2259,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Meilleure base de donnees vectorielle 2026 : Qdrant, Pinecone, Weaviate ou Chroma',
       description: 'Compare Qdrant, Pinecone, Weaviate et Chroma pour le RAG, avec tarifs, licences, nombres d etoiles et limites de paliers gratuits verifies, dont le palier gratuit sans expiration de Weaviate de juin 2026 et Chroma Cloud. Verifie en aout 2026.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/fr/local-llms/best-vector-database-2026',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
