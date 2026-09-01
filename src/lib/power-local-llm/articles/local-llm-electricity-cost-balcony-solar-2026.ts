@@ -253,4 +253,254 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'audience': { '@type': 'Audience', 'audienceType': 'Local-LLM users who want to know the real electricity cost of their setup and whether balcony solar can offset it' },
     },
   },
+  de: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-01',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
+    current_hardware_mentioned: [
+      'RTX 4090',
+      'RTX 3090',
+      'RTX 4070',
+      'Mac Mini M4',
+      'MacBook Pro M4 Max',
+      'EcoFlow STREAM Ultra',
+      'Jackery HomePower 2000 Ultra',
+      'Zendure SolarFlow Hub 2000',
+      'BLUETTI AC180',
+      'BLUETTI AC180P',
+    ],
+    theme: 'Overview & Reference',
+    affiliateDisclosure: true,
+    title: 'Was ein lokales LLM an Strom kostet — und ob ein Balkonkraftwerk das ausgleichen kann (2026)',
+    seoTitle: 'Lokales LLM: Stromkosten vs. Balkonkraftwerk (2026)',
+    intro:
+      'Eine GPU, die ein lokales LLM ein paar Stunden am Tag betreibt, kostet echtes, berechenbares Geld — etwa 6,60 $/Monat in den USA bei einer moderaten 4-Stunden-Gewohnheit, oder rund 60 $/Monat, wenn eine stromhungrige Karte rund um die Uhr läuft. Ein 800-Watt-Balkonkraftwerk kann den moderaten Fall an einem sonnigen Sommertag problemlos decken, gleicht aber keine schwere Dauerlast aus, besonders im Winter. Dieser Ratgeber rechnet die genauen Zahlen für gängige lokale-LLM-Hardware durch, vergleicht US- und deutsche Stromkosten und dimensioniert die Batterie, die Sie tatsächlich bräuchten — mit den ehrlichen Einschränkungen, wann Solar wirklich hilft und wann nicht.',
+    metaDescription:
+      'Stromkosten für lokale LLMs berechnet: RTX 4090/3090/4070 und Mac Mini M4 Verbrauch, US- (0,184 $/kWh) und deutsche (~0,32 €/kWh) Monatskosten, und ob ein 800-W-Balkonkraftwerk das ausgleichen kann.',
+    twitterDescription:
+      'Was ein lokales LLM wirklich an Strom kostet — RTX 4090/3090/4070 und Mac Mini M4 Verbrauch, US- vs. deutsche Monatskosten, und ob ein 800-W-Balkonkraftwerk das realistisch ausgleichen kann.',
+    readTime: '10 Min. Lesezeit',
+    educationalLevel: 'Intermediate',
+    audience: 'Nutzer lokaler LLMs, die die echten Stromkosten ihres Setups kennen wollen und wissen möchten, ob ein Balkonkraftwerk das ausgleichen kann',
+    primaryTerm: 'lokales LLM Stromkosten',
+    targetKeywords: [
+      'lokales llm stromkosten',
+      'llm 24/7 stromverbrauch kosten',
+      'balkonkraftwerk für gpu',
+      'ki stromverbrauch mit solar ausgleichen',
+      'lokale ki stromverbrauch rechner',
+    ],
+    leadAnswerBlock:
+      '**Eine GPU, die im Leerlauf steht und ein paar Stunden am Tag ein lokales LLM betreibt, kostet in den USA etwa 6,60 $/Monat (1,2 kWh/Tag bei 18,4 Cent/kWh) — eine schwere 24/7-Anlage mit einer Karte der RTX-4090-Klasse kostet stattdessen rund 60 $/Monat.** Ein 800-Watt-Balkonkraftwerk erzeugt an einem sonnigen Sommertag etwa 3–4,5 kWh, im Winter aber nur etwa 0,5–1,5 kWh/Tag — es deckt den moderaten Nutzungsfall im Sommer komfortabel, kann eine schwere Dauerlast aber in keiner Jahreszeit sinnvoll ausgleichen. Dimensionieren Sie die Batterie nach dem tatsächlichen Verbrauch Ihrer GPU, nicht nach der Nennleistung der Solaranlage.',
+    quickAnswerTop: {
+      de: {
+        question: 'Wie viel kostet es an Strom, ein lokales LLM zu betreiben?',
+        answer:
+          'Eine GPU, die mit 300 Watt 4 Stunden am Tag läuft, kostet in den USA etwa 6,60 $/Monat (1,2 kWh/Tag bei 18,4 Cent/kWh) oder je nach Tarif rund 11–15 €/Monat in Deutschland (1,2 kWh/Tag bei 25–40 Cent/kWh). Eine GPU, die rund um die Uhr mit 450 Watt läuft, kostet in den USA eher 60 $/Monat. Ein 800-Watt-Balkonkraftwerk kann den moderaten Fall im Sommer ausgleichen, den schweren 24/7-Fall aber in keiner Jahreszeit.',
+        bullets: [
+          'RTX 4090: ca. 20–33 W Leerlauf, bis zu 450 W (TBP) unter Last',
+          'RTX 3090: ca. 18–26 W Leerlauf, ca. 350 W unter Last',
+          'RTX 4070: 10 W Leerlauf, 186 W durchschnittlicher Gaming-Verbrauch, 200 W TDP-Angabe',
+          'Mac Mini M4: unter 5 W Leerlauf, bis zu ca. 65 W bei LLM-Inferenz',
+          '800-W-Balkonkraftwerk: ca. 3–4,5 kWh/Tag im Sommer, ca. 0,5–1,5 kWh/Tag im Winter (deutsche Datenbasis)',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Zusammenfassung', anchor: 'tldr' },
+      { label: 'Wie viel Strom verbraucht lokale-LLM-Hardware?', anchor: 'gpu-power' },
+      { label: 'Was kostet das pro Monat?', anchor: 'monthly-cost' },
+      { label: 'Kann ein Balkonkraftwerk eine lokale LLM-Anlage ausgleichen?', anchor: 'solar-offset' },
+      { label: 'Welche Batteriegröße brauchen Sie wirklich?', anchor: 'battery-sizing' },
+      { label: 'Für wen lohnt sich das wirklich?', anchor: 'who-should-do-this' },
+      { label: 'Häufige Fehler', anchor: 'common-mistakes' },
+      { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+      { label: 'Quellen', anchor: 'sources' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'Eine lokale LLM-Anlage kostet bei moderater 4-Stunden-Nutzung pro Tag etwa 6,60 $/Monat an Strom, im 24/7-Betrieb eher 60 $/Monat — ein 800-Watt-Balkonkraftwerk kann den moderaten Fall im Sommer ausgleichen, den schweren 24/7-Fall aber in keiner Jahreszeit.' },
+      { type: 'plain-terms', content: 'kWh (Kilowattstunde) ist die Einheit, in der Ihre Stromrechnung berechnet wird — eine 300-Watt-GPU, die 1 Stunde läuft, verbraucht 0,3 kWh. Watt mal Stunden geteilt durch 1.000, dann mit Ihrem Strompreis pro kWh multiplizieren, ergibt die Kosten. Der Ertrag eines Balkonkraftwerks wird genauso gemessen, sodass beide Zahlen direkt vergleichbar sind.' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: 'Zusammenfassung',
+        isTldr: true,
+        items: [
+          'Eine GPU, die 4 Stunden/Tag mit 300 W läuft, kostet in den USA etwa 6,60 $/Monat (18,4 Cent/kWh) oder je nach Tarif rund 11–15 €/Monat in Deutschland',
+          'Eine GPU, die rund um die Uhr mit 450 W läuft (RTX-4090-Klasse), kostet in den USA eher 60 $/Monat — fast das Zehnfache des moderaten Nutzungsfalls',
+          'Apple Silicon (Mac Mini M4: unter 5 W Leerlauf, ca. 65 W Inferenz-Spitze) kostet nur einen kleinen Bruchteil einer diskreten-GPU-Anlage im Betrieb',
+          'Ein 800-W-Balkonkraftwerk erzeugt an einem sonnigen Sommertag ca. 3–4,5 kWh, im Winter aber nur ca. 0,5–1,5 kWh/Tag — ein saisonaler Unterschied um den Faktor 3–7',
+          'Dimensionieren Sie die Batterie nach dem tatsächlichen Tagesverbrauch Ihrer GPU, nicht nach der 800-Watt-Nennleistung der Solaranlage — beide Zahlen sind nicht direkt vergleichbar',
+          'Frankreichs Grenzwert für Steckersolar-Wechselrichter liegt bei 800 W, genau wie in Deutschland — es gibt keinen separaten, strengeren französischen Grenzwert für diese Geräteklasse',
+        ],
+      },
+      gpuPower: {
+        id: 'gpu-power',
+        title: 'Wie viel Strom verbraucht lokale-LLM-Hardware wirklich?',
+        content:
+          '**Die Lücke zwischen Leerlauf- und Lastverbrauch macht die Stromrechnung nicht trivial — eine Karte kann 20 Stunden am Tag nahezu lautlos dasitzen und trotzdem der größte einzelne Posten auf Ihrer Rechnung sein, wenn sie die restlichen 4 Stunden unter Volllast läuft.** Die folgenden Zahlen stammen aus Herstellerangaben und unabhängigen Messungen, nicht aus einem von PromptQuorum selbst durchgeführten Benchmark.',
+        columns: ['Hardware', 'Leerlauf', 'Last / Inferenz'],
+        rows: [
+          { 'Hardware': 'RTX 4090', 'Leerlauf': 'ca. 20–33 W', 'Last / Inferenz': 'Bis zu 450 W (TBP)' },
+          { 'Hardware': 'RTX 3090', 'Leerlauf': 'ca. 18–26 W', 'Last / Inferenz': 'ca. 350 W' },
+          { 'Hardware': 'RTX 4070', 'Leerlauf': '10 W', 'Last / Inferenz': '186 W Ø (200 W TDP-Angabe)' },
+          { 'Hardware': 'Mac Mini M4', 'Leerlauf': 'Unter 5 W', 'Last / Inferenz': 'Bis zu ca. 65 W' },
+          { 'Hardware': 'MacBook Pro M4 Max', 'Leerlauf': 'Niedriger einstelliger Bereich', 'Last / Inferenz': 'ca. 40–80 W Inferenz; ca. 110 W Systemspitze' },
+        ],
+        items: [
+          'RTX 4090: NVIDIA gibt eine Total Board Power von 450 W an; unabhängige Messungen zeigen einen Leerlaufverbrauch zwischen 18 W (aggressiv leistungsbegrenzte Konfigurationen) und 33 W (Founders Edition), Last kann je nach Workload 400–600 W erreichen.',
+          'RTX 3090: Leerlauf liegt je nach Display-Konfiguration bei etwa 18–26 W; Volllast unter Gaming- oder Inferenz-Workloads liegt bei etwa 350 W, manche Messungen bis 365 W.',
+          'RTX 4070: NVIDIAs eigene veröffentlichte Zahlen — 10 W Leerlauf, 16 W Videowiedergabe, 186 W durchschnittlicher Gaming-Verbrauch — gegenüber einer TDP-Angabe von 200 W. Reale Spitzenwerte wurden bis zu 253 W gemessen.',
+          'Mac Mini M4: unabhängig gemessen mit unter 5 W im Leerlauf und bis zu ca. 65 W bei LLM-Inferenz (eine Messung ergab konkret eine Spitze von 50 W). Ein Cluster aus fünf Mac Minis unter Inferenzlast zog zusammen etwa 200 W.',
+          'MacBook Pro M4 Max: LLM-Inferenz allein zieht etwa 40–80 W; das Gesamtsystem (inklusive Display) erreicht unter der anspruchsvollsten kombinierten Last eine Spitze von rund 110 W — Apple Silicons typischer Inferenzbereich von 30–70 W liegt deutlich unter den 300+ W einer diskreten Desktop-GPU.',
+        ],
+      },
+      monthlyCost: {
+        id: 'monthly-cost',
+        title: 'Was kostet das pro Monat?',
+        content:
+          '**Die Formel ist überall dieselbe: kWh = Watt ÷ 1.000 × Stunden, dann Kosten = kWh × Ihr Preis pro kWh.** Der US-Haushaltsstrompreis lag Mitte 2026 im Schnitt bei etwa 18,4 Cent/kWh (EIA); deutsche Haushaltsstrompreise sind deutlich uneinheitlicher — Neukundentarife liegen bei etwa 25–27 Cent/kWh, während die Grundversorgung bis zu 40 Cent/kWh kosten kann, mit einem Haushaltsdurchschnitt von etwa 31–32 Cent/kWh.',
+        columns: ['Nutzungsmuster', 'kWh/Tag', 'US-Kosten/Mon.', 'DE-Kosten/Mon.'],
+        rows: [
+          { 'Nutzungsmuster': '300 W, 4 Std./Tag (moderat)', 'kWh/Tag': '1,2 kWh', 'US-Kosten/Mon.': 'ca. 6,60 $', 'DE-Kosten/Mon.': 'ca. 11–15 €' },
+          { 'Nutzungsmuster': '65 W, 4 Std./Tag (Mac Mini M4)', 'kWh/Tag': '0,26 kWh', 'US-Kosten/Mon.': 'ca. 1,44 $', 'DE-Kosten/Mon.': 'ca. 2,50–3,20 €' },
+          { 'Nutzungsmuster': '450 W, 24 Std./Tag (schwer, dauerhaft)', 'kWh/Tag': '10,8 kWh', 'US-Kosten/Mon.': 'ca. 59,60 $', 'DE-Kosten/Mon.': 'ca. 100–130 €' },
+        ],
+        note: 'Die US-Angabe nutzt den von der EIA gemeldeten Haushaltsdurchschnitt von 18,4 Cent/kWh (Mitte 2026); die Deutschland-Angaben nutzen eine Spanne von 25–40 Cent/kWh, die die reale Tarifstreuung abbildet, keinen Einzelwert — prüfen Sie Ihre eigene Rechnung, bevor Sie eine der beiden Zahlen als exakt behandeln.',
+      },
+      solarOffset: {
+        id: 'solar-offset',
+        title: 'Kann ein Balkonkraftwerk eine lokale LLM-Anlage ausgleichen?',
+        content: [
+          '**Ein 800-Watt-Balkonkraftwerk — der gesetzliche Grenzwert für Steckersolar in Deutschland und, Stand jetzt, auch in Frankreich (beide begrenzen die Wechselstrom-Ausgangsleistung des Wechselrichters auf 800 W, nicht die Modulleistung) — erzeugt an einem klaren Sommertag mit südausgerichteten Modulen etwa 3–4,5 kWh, im Winter aber nur etwa 0,5–1,5 kWh/Tag.** Das ist ein saisonaler Unterschied um den Faktor 3–7, bedingt durch Sonnenstand und Tageslänge, keine Fehlfunktion der Anlage.',
+          'Vergleichen Sie das mit dem moderaten Nutzungsfall oben: 1,2 kWh/Tag GPU-Verbrauch. Im Sommer deckt der Ertrag von 3–4,5 kWh/Tag eines 800-W-Systems das mit echtem Überschuss für andere Haushaltsverbraucher. Im Winter unterschreitet oder erreicht ein Solarertrag von 0,5–1,5 kWh/Tag den Bedarf von 1,2 kWh/Tag nur knapp — die Anlage hört für etwa ein Drittel des Jahres in weiten Teilen Deutschlands auf, ein sinnvoller Ausgleich zu sein.',
+          'Für den schweren 24/7-Fall — 10,8 kWh/Tag — deckt selbst der beste Sommerwert von 4,5 kWh/Tag deutlich weniger als die Hälfte der Last, und der Winterertrag deckt nur einen kleinen Bruchteil davon. Solar kann die Kosten für eine moderate, tagsüber geplante lokale-LLM-Gewohnheit spürbar senken. Es macht aus einer schweren Dauerlast-Anlage keine „grüne KI" — in keiner Jahreszeit.',
+        ],
+        note: 'Verzichten Sie auf die Kombination von Solar mit einer lokalen LLM-Anlage, wenn Ihre Nutzung schwer und dauerhaft ist — selbst der beste Sommerertrag des gesetzlich begrenzten 800-Watt-Steckersolarsystems deckt deutlich weniger als die Hälfte dieser Last, im Winter fast nichts davon. Solar ist ein echter, spürbarer Ausgleich für moderate, tagsüber geplante Nutzung — es ist kein Weg, 24/7-Dauerlast „grün" zu machen.',
+      },
+      batterySizing: {
+        id: 'battery-sizing',
+        title: 'Welche Batteriegröße brauchen Sie wirklich?',
+        content:
+          '**Dimensionieren Sie die Batterie nach dem tatsächlichen Tagesverbrauch Ihrer GPU in kWh, nicht nach der 800-Watt-Nennleistung der Solaranlage — beide Zahlen messen unterschiedliche Dinge und sind nicht direkt vergleichbar.** Für den moderaten Fall mit 1,2 kWh/Tag deckt schon eine kleine Batterie etwa einen Tag Speicher ab; für den schweren Fall mit 10,8 kWh/Tag kommt keine der unten genannten Einzeleinheiten auch nur annähernd an einen vollen Tag heran, ohne mehrere Erweiterungsmodule zu stapeln.',
+        columns: ['Batterie', 'Kapazität', 'Preis'],
+        rows: [
+          { 'Batterie': 'BLUETTI AC180', 'Kapazität': '1,15 kWh (1.152 Wh)', 'Preis': '499 $' },
+          { 'Batterie': 'BLUETTI AC180P', 'Kapazität': '1,44 kWh (1.440 Wh)', 'Preis': '649 $' },
+          { 'Batterie': 'Zendure SolarFlow Hub 2000', 'Kapazität': '1,92 kWh Basis, erweiterbar auf 7,68 kWh (4 Module)', 'Preis': 'Hub ab 399 €; Komplettsets ab 1.259 €' },
+          { 'Batterie': 'Jackery HomePower 2000 Ultra', 'Kapazität': '2–8 kWh erweiterbar', 'Preis': '1.268 € (Basisgerät)' },
+          { 'Batterie': 'EcoFlow STREAM Ultra', 'Kapazität': 'Modular/erweiterbar (aktuelle Konfiguration prüfen)', 'Preis': '1.279 $ (Liste 1.899 $); 10 Jahre Garantie, 6.000 Zyklen bei 70 % Restkapazität' },
+        ],
+        affiliateLinks: [
+          { label: 'BLUETTI AC180 Preis prüfen →', url: 'https://www.bluettipower.com/products/ac180', productName: 'BLUETTI AC180', productCategory: 'Balcony solar battery' },
+          { label: 'BLUETTI AC180P Preis prüfen →', url: 'https://www.bluettipower.com/products/ac180p', productName: 'BLUETTI AC180P', productCategory: 'Balcony solar battery' },
+          { label: 'Zendure SolarFlow Hub 2000 Preis prüfen →', url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', productName: 'Zendure SolarFlow Hub 2000', productCategory: 'Balcony solar battery' },
+          { label: 'Jackery HomePower 2000 Ultra Preis prüfen →', url: 'https://eu.jackery.com/products/homepower-2000-ultra', productName: 'Jackery HomePower 2000 Ultra', productCategory: 'Balcony solar battery' },
+          { label: 'EcoFlow STREAM Ultra Preis prüfen →', url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar battery' },
+        ],
+        note: 'Produktlinks, aktuell keine Affiliate-Beziehung — reine Links zu den Produktseiten der Hersteller. Anker SOLIX und ALLPOWERS sind in dieser Tabelle nicht enthalten: Wir konnten aktuelle Kapazität und Preise nicht auf demselben Zwei-Quellen-Niveau wie oben verifizieren und veröffentlichen daher keine Platzhalterzahlen dafür.',
+      },
+      whoShouldDoThis: {
+        id: 'who-should-do-this',
+        title: 'Für wen lohnt sich das wirklich?',
+        content:
+          '**Solar plus Batterie für eine lokale-LLM-Anlage ist sinnvoll bei moderater, tagsüber geplanter Nutzung in einem sonnigen Klima — nicht als Weg, schwere 24/7-Inferenz „grün" zu machen.**',
+        items: [
+          '**Guter Fall:** Wochenend- oder Feierabend-Nutzung als Hobby (ein paar Stunden am Tag), sonniges oder gemäßigtes Klima, bereits vorhandenes oder geplantes Balkonkraftwerk für andere Haushaltsverbraucher, Bereitschaft, aufwendigere lokale-LLM-Aufgaben tagsüber einzuplanen, um Solarstrom direkt zu nutzen statt ihn zu speichern und wieder zu entladen.',
+          '**Schlechter Fall:** schwere Dauerlast-Inferenz (eine Karte der RTX-4090-Klasse rund um die Uhr), winterlastige Nutzungsmuster, Wohnungen ohne nutzbaren südausgerichteten Balkon oder Fenster für Module, oder wer erwartet, dass die Kombination die Stromkosten vollständig eliminiert statt sie spürbar zu senken.',
+          '**Ehrlich bei der Einordnung bleiben:** ein lokales LLM plus Balkonkraftwerk ist bei moderater Nutzung eine echte Kostensenkung, aber keine „CO2-neutrale KI"-Behauptung für eine Anlage, die rund um die Uhr unter Volllast läuft — die Rechnung in diesem Ratgeber stützt diese stärkere Behauptung nicht, und sie zu übertreiben untergräbt das echte Argument für den moderaten Nutzungsfall.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler',
+        items: [
+          'Die Nennleistung der Solaranlage (800 W) direkt mit dem realen Tagesertrag in kWh vergleichen. Ein 800-W-System, das 24 Stunden mit Nennleistung liefe, käme auf 19,2 kWh — der reale Ertrag liegt aber bei 3–4,5 kWh an einem guten Sommertag und 0,5–1,5 kWh im Winter, weil die Sonne nicht 24 Stunden mit voller Intensität scheint.',
+          'Die Batterie nach dem Ertrag der Solaranlage dimensionieren statt nach dem tatsächlichen Verbrauch der GPU. Beide Zahlen (Solar-kWh/Tag und GPU-kWh/Tag) müssen miteinander verglichen werden, nicht automatisch als passend angenommen werden.',
+          'Annehmen, ein gesetzlich auf 800 W begrenztes Balkonkraftwerk könne eine 450-W-GPU im 24/7-Betrieb vollständig decken. Selbst der beste Sommerertrag (bis zu 4,5 kWh/Tag) deckt weniger als die Hälfte einer Last von 10,8 kWh/Tag, und der Winterertrag deckt nur einen kleinen Bruchteil davon.',
+          'Frankreichs Steckersolar-Regeln als deutlich strenger als die deutschen betrachten, nur weil beide Länder oft getrennt diskutiert werden. Beide begrenzen die Wechselstrom-Ausgangsleistung des Wechselrichters aktuell auf 800 W — der länderspezifische Unterschied liegt im Anmeldeverfahren (eine kostenlose Meldung an den Netzbetreiber in Frankreich; eine Registrierung im Marktstammdatenregister in Deutschland), nicht im Leistungslimit.',
+          'Den Leerlaufverbrauch der GPU bei der Schätzung der Monatskosten ignorieren. Eine Karte, die 20 Stunden am Tag mit 20–30 W im Leerlauf läuft, addiert dadurch allein etwa 0,4–0,6 kWh/Tag — klein im Vergleich zum 24/7-Volllast-Szenario, aber nicht null, und für eine genaue Monatssumme relevant.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Wie viel kostet es an Strom, ein lokales LLM zu betreiben?',
+            a: 'Bei moderater Nutzung (eine GPU mit 300 W, 4 Stunden am Tag) etwa 6,60 $/Monat in den USA bei 18,4 Cent/kWh, oder je nach Tarif rund 11–15 €/Monat in Deutschland. Bei schwerer 24/7-Nutzung auf einer 450-W-Karte eher 60 $/Monat in den USA.',
+          },
+          {
+            q: 'Spielt der Leerlaufverbrauch der GPU bei der Stromrechnung eine Rolle?',
+            a: 'Ja, aber weniger als der Lastverbrauch. Eine Karte, die 20 Stunden am Tag mit 20–30 W im Leerlauf läuft, verbraucht dadurch etwa 0,4–0,6 kWh — ein kleiner, aber realer Zusatzposten, besonders über einen ganzen Monat, und es lohnt sich, ihn neben den tatsächlichen Inferenz-Stunden mitzuzählen.',
+          },
+          {
+            q: 'Kann ein Balkonkraftwerk eine lokale LLM-Anlage vollständig mit Strom versorgen?',
+            a: 'Bei moderater, tagsüber geplanter Nutzung im Sommer ja — der Ertrag eines 800-W-Systems von 3–4,5 kWh/Tag deckt eine GPU-Gewohnheit von 1,2 kWh/Tag komfortabel. Bei schwerer 24/7-Nutzung nein, in keiner Jahreszeit — selbst der beste Sommerertrag deckt deutlich weniger als die Hälfte einer Last von 10,8 kWh/Tag.',
+          },
+          {
+            q: 'Wie viel erzeugt ein 800-Watt-Balkonkraftwerk pro Tag?',
+            a: 'Etwa 3–4,5 kWh an einem klaren Sommertag mit südausgerichteten Modulen, und etwa 0,5–1,5 kWh/Tag im Winter — ein saisonaler Unterschied um den Faktor 3–7, basierend auf deutschen Solarertragsdaten (Deutschlands Klima ist ein brauchbarer Anhaltspunkt für weite Teile Mittel- und Nordeuropas).',
+          },
+          {
+            q: 'Welche Batteriegröße brauche ich für eine lokale-LLM-Anlage?',
+            a: 'Dimensionieren Sie sie nach dem tatsächlichen Tagesverbrauch Ihrer GPU in kWh, nicht nach der 800-Watt-Nennleistung der Solaranlage. Für eine moderate Gewohnheit von 1,2 kWh/Tag deckt eine einzelne Einheit wie das BLUETTI AC180 (1,15 kWh) oder AC180P (1,44 kWh) etwa einen Tag Speicher ab. Bei schwerer 24/7-Nutzung kommt keine Einzeleinheit in diesem Vergleich auch nur annähernd heran — Sie bräuchten mehrere Erweiterungsmodule (Zendure SolarFlow bis 7,68 kWh, Jackery HomePower 2000 Ultra bis 8 kWh).',
+          },
+          {
+            q: 'Ist ein Mac Mini M4 günstiger im Betrieb als eine RTX 4090 für lokale KI?',
+            a: 'Deutlich. Der Mac Mini M4 zieht unter 5 W im Leerlauf und bis zu ca. 65 W bei Inferenz, gegenüber 20–33 W Leerlauf und bis zu 450 W unter Last bei der RTX 4090 — bei 4 Stunden Nutzung pro Tag kostet der Mac Mini in den USA etwa 1,44 $/Monat gegenüber ca. 6,60 $/Monat bei der RTX 4090, und der Abstand wächst bei schwereren, länger laufenden Workloads deutlich.',
+          },
+          {
+            q: 'Hat Frankreich einen anderen Leistungsgrenzwert für Balkonkraftwerke als Deutschland?',
+            a: 'Nein — beide begrenzen aktuell die Wechselstrom-Ausgangsleistung des Steckersolar-Wechselrichters auf 800 W. Der Unterschied zwischen beiden Ländern ist verfahrenstechnisch: Frankreich nutzt eine kostenlose Online-Meldung an den Netzbetreiber, Deutschland eine Registrierung im Marktstammdatenregister. Das Leistungslimit selbst ist identisch.',
+          },
+          {
+            q: 'Ist „grüne lokale KI" mit Solarstrom bei schwerer 24/7-Nutzung realistisch?',
+            a: 'Nicht mit einem gesetzlich auf 800 W begrenzten Steckersolarsystem. Die Rechnung stützt keine vollständige Ausgleichsbehauptung für eine schwere Dauerlast-Anlage in keiner Jahreszeit — Solar senkt die Stromkosten einer moderaten, tagsüber geplanten lokalen-LLM-Nutzung spürbar, eliminiert aber nicht die Kosten für eine stromhungrige GPU im Dauerbetrieb.',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        links: [
+          { url: 'https://www.chooseenergy.com/electricity-rates-by-state/', title: 'Electricity Rates by State (2026)', description: 'US-Strompreisdaten nach Bundesstaat, inklusive des in diesem Ratgeber genutzten Durchschnitts von ca. 18,4 Cent/kWh.' },
+          { url: 'https://www.stromauskunft.de/strompreise/', title: 'Aktuelle Strompreise (Stromauskunft.de)', description: 'Deutsche Haushaltsstrompreisdaten über Neukundentarife, Durchschnitt und Grundversorgungstarife hinweg.' },
+          { url: 'https://www.techpowerup.com/306765/nvidia-geforce-rtx-4070-has-an-average-gaming-power-draw-of-186-w', title: 'NVIDIA GeForce RTX 4070 Power Draw', description: 'Berichterstattung von TechPowerUp über NVIDIAs eigene RTX-4070-Verbrauchswerte (Leerlauf, Videowiedergabe, durchschnittlicher Gaming-Verbrauch).' },
+          { url: 'https://www.xda-developers.com/run-local-llms-one-worlds-priciest-energy-markets/', title: 'Running Local LLMs in a High-Cost Energy Market', description: 'Unabhängige Messung von Leerlauf- und Inferenzverbrauch des Mac Mini M4 sowie Stromverbrauch im Mehrgeräte-Cluster.' },
+          { url: 'https://de.bluettipower.eu/blogs/solarstrom/balkonkraftwerk-800w-ertrag-pro-tag', title: 'Balkonkraftwerk 800W Ertrag pro Tag', description: 'Deutsche Marktdaten zum Tagesertrag eines 800-W-Balkonkraftwerks über die Jahreszeiten hinweg.' },
+          { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — Offizielle Produktseite', description: 'Offizielle Kapazitäts- und Preisangaben für den Hub 2000 und seine Erweiterungsbatterien.' },
+          { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — Offizielle Produktseite', description: 'Offizielle Kapazitäts-, Preis- und Erweiterungsangaben für das HomePower 2000 Ultra.' },
+          { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — Offizielle Produktseite', description: 'Offizielle Kapazitäts- und Preisangaben für die Powerstation AC180.' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'Was ein lokales LLM an Strom kostet — und ob ein Balkonkraftwerk das ausgleichen kann (2026)',
+      'description': 'Stromkosten für lokale LLMs berechnet: RTX 4090/3090/4070 und Mac Mini M4 Verbrauch, US- und deutsche Monatskosten, und ob ein 800-W-Balkonkraftwerk das ausgleichen kann.',
+      'datePublished': '2026-09-01',
+      'dateModified': '2026-09-01',
+      'author': {
+        '@type': 'Person',
+        'name': 'Hans Kuepper',
+        'sameAs': 'https://www.linkedin.com/in/hanskuepper/',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'inLanguage': 'de',
+      'url': 'https://www.promptquorum.com/de/power-local-llm/local-llm-electricity-cost-balcony-solar-2026',
+      'articleBody': 'Eine GPU, die ein lokales LLM ein paar Stunden am Tag betreibt, kostet echtes, berechenbares Geld. Ein 800-Watt-Balkonkraftwerk kann den moderaten Nutzungsfall an einem sonnigen Sommertag problemlos decken, gleicht aber keine schwere Dauerlast aus, besonders im Winter.',
+      'educationalLevel': 'Intermediate',
+      'proficiencyLevel': 'Intermediate',
+      'audience': { '@type': 'Audience', 'audienceType': 'Nutzer lokaler LLMs, die die echten Stromkosten ihres Setups kennen wollen und wissen möchten, ob ein Balkonkraftwerk das ausgleichen kann' },
+    },
+  },
 }
