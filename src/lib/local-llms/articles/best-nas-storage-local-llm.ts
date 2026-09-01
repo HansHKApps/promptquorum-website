@@ -8,6 +8,21 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-en.webp',
@@ -250,6 +265,21 @@ schema: {
       },
     },
     es: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-es.webp',
@@ -491,6 +521,21 @@ schema: {
       },
     },
     ar: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-ar.webp',
@@ -735,6 +780,21 @@ schema: {
       },
     },
     de: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-de.webp',
@@ -977,6 +1037,21 @@ schema: {
       },
     },
     fr: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-fr.webp',
@@ -1062,6 +1137,21 @@ schema: {
       },
     },
     ja: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-ja.webp',
@@ -1149,6 +1239,21 @@ schema: {
       },
     },
     zh: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-zh.webp',
@@ -1236,6 +1341,21 @@ schema: {
       },
     },
     pt: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Synology+NAS',
+          productName: 'Synology NAS',
+          productCategory: 'nas',
+          label: 'Synology NAS on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+          productName: 'QNAP TS-464C2U',
+          productCategory: 'nas',
+          label: 'QNAP TS-464C2U on Amazon',
+        },
+      ],
       freshness_tier: 'annual',
       theme: 'Privacy & Business',
       heroImage: '/images/best-nas-storage-local-llm-overview-hero-pt.webp',
@@ -1478,6 +1598,21 @@ schema: {
       },
     },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=Synology+NAS',
+        productName: 'Synology NAS',
+        productCategory: 'nas',
+        label: 'Synology NAS on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=QNAP+TS-464C2U',
+        productName: 'QNAP TS-464C2U',
+        productCategory: 'nas',
+        label: 'QNAP TS-464C2U on Amazon',
+      },
+    ],
       freshness_tier: 'annual',
       theme: '프라이버시 및 비즈니스',
     heroImage: '/images/best-nas-storage-local-llm-overview-hero-ko.webp',

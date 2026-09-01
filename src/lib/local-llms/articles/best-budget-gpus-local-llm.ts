@@ -8,6 +8,21 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
@@ -408,6 +423,21 @@ schema: {
       },
     },
     es: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       freshness_tier: 'monthly',
       theme: 'GPU Buying Guides',
       title: 'Mejor GPU económica para LLMs locales 2026: RTX 3060 12GB',
@@ -763,6 +793,21 @@ rows: [
       },
     },
     ar: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       freshness_tier: 'monthly',
       theme: 'GPU Buying Guides',
       title: 'أفضل ⁨GPU⁩ اقتصادية لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060 12GB⁩',
@@ -1117,6 +1162,21 @@ rows: [
       },
     },
     pt: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       freshness_tier: 'monthly',
       theme: 'GPU Buying Guides',
       title: 'Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB',
@@ -1521,6 +1581,21 @@ rows: [
       },
     },
     de: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
@@ -1796,6 +1871,21 @@ rows: [
         ] },
     },
     fr: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
@@ -2071,6 +2161,21 @@ rows: [
         ] },
     },
     ja: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       theme: 'GPU Buying Guides',
       title: 'ローカルLLM向けの最高のバジェットGPU',
       seoTitle: 'RTX 3060 12GB 2026：Qwen3 14Bを9-12トークン/秒',
@@ -2310,6 +2415,21 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥4
       },
     },
     zh: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+          productName: 'NVIDIA RTX 3060 12GB',
+          productCategory: 'gpu',
+          label: 'RTX 3060 12GB on Newegg',
+        },
+      ],
       theme: 'GPU Buying Guides',
       title: '本地LLM的最佳预算GPU',
       seoTitle: 'RTX 3060 12GB 2026：Qwen3 14B跑9-12令牌/秒',
@@ -2693,6 +2813,21 @@ rows: [
       },
     },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RTX+3060+12GB',
+        productName: 'NVIDIA RTX 3060 12GB',
+        productCategory: 'gpu',
+        label: 'RTX 3060 12GB on Amazon',
+      },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RTX+3060+12GB',
+        productName: 'NVIDIA RTX 3060 12GB',
+        productCategory: 'gpu',
+        label: 'RTX 3060 12GB on Newegg',
+      },
+    ],
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',

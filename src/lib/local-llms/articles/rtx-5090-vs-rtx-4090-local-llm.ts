@@ -8,6 +8,21 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090 for Local LLM Inference',
@@ -253,6 +268,21 @@ schema: {
       },
     },
     es: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090 para Inferencia LLM Local',
@@ -506,6 +536,21 @@ schema: {
       },
     },
     ar: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: '⁨RTX 5090⁩ مقابل ⁨RTX 4090⁩ لاستدلال ⁨LLM⁩ المحلي',
@@ -759,6 +804,21 @@ schema: {
       },
     },
     de: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090 für lokale LLM-Inferenz',
@@ -1002,6 +1062,21 @@ schema: {
       },
     },
     fr: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090 pour l\'inférence LLM locale',
@@ -1255,6 +1330,21 @@ schema: {
       },
     },
     ja: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'ローカルLLM推論向け RTX 5090 vs RTX 4090',
@@ -1508,6 +1598,21 @@ schema: {
       },
     },
     zh: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: '本地LLM推理：RTX 5090 对比 RTX 4090',
@@ -1761,6 +1866,21 @@ schema: {
       },
     },
     pt: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+          productName: 'NVIDIA RTX 5090 32GB',
+          productCategory: 'gpu',
+          label: 'RTX 5090 32GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090 para Inferência de LLM Local',
@@ -2014,6 +2134,21 @@ schema: {
       },
     },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RTX+5090+32GB',
+        productName: 'NVIDIA RTX 5090 32GB',
+        productCategory: 'gpu',
+        label: 'RTX 5090 32GB on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+        productName: 'NVIDIA RTX 4090 24GB',
+        productCategory: 'gpu',
+        label: 'RTX 4090 24GB on Amazon',
+      },
+    ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'RTX 5090 vs RTX 4090: 로컬 LLM 추론에 최적인 GPU는?',

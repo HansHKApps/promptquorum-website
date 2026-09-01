@@ -8,6 +8,21 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       last_full_refresh: '2026-08-26',
@@ -297,6 +312,21 @@ schema: {
       gammaDescription: 'The slide deck below covers: how to choose the best mini PC for local LLM inference in 2026, the August 2026 Mac mini refresh (M6: 32 GB max, M5 Pro: 64 GB max), Framework Desktop 128 GB benchmarks against the previous-generation Mac mini (70B at 20–25 tok/s), GPU mini-ITX compatibility (RTX 5060 Ti sweet spot), and platform value comparison. Download the PDF as a mini PC LLM hardware reference card.',
     },
     de: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       theme: 'Hardware-Einrichtungen',
@@ -587,6 +617,21 @@ schema: {
       gammaDescription: 'Die folgende Präsentation behandelt: Auswahl des besten Mini-PCs für lokale LLM-Inferenz 2026, das Mac-mini-Update vom August 2026 (M6: 32 GB max., M5 Pro: 64 GB max.), Framework Desktop 128 GB Benchmarks gegenüber der vorherigen Mac-mini-Generation (70B mit 20–25 tok/s), GPU-Kompatibilität für Mini-ITX (RTX 5060 Ti als optimale Wahl) sowie Plattform-Preisvergleich. PDF als Mini-PC-LLM-Hardware-Referenzkarte herunterladen.',
     },
     fr: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       theme: 'Configurations matérielles',
@@ -864,6 +909,21 @@ schema: {
       gammaDescription: "La présentation ci-dessous couvre : comment choisir le meilleur mini PC pour l'inférence LLM locale en 2026, le renouvellement du Mac mini d'août 2026 (M6 : 32 Go max, M5 Pro : 64 Go max), les benchmarks du Framework Desktop 128 Go face à la génération Mac mini précédente (70B à 20–25 tok/s), la compatibilité GPU Mini-ITX (RTX 5060 Ti optimal) et la comparaison valeur des plateformes. Téléchargez le PDF comme référence matériel mini PC LLM.",
     },
     ja: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       theme: 'ハードウェア構成',
@@ -1246,6 +1306,21 @@ schema: {
       gammaDescription: '以下のスライドデッキでは、2026年のローカルLLM推論向けミニPC選択ガイド、2026年8月のMac mini刷新（M6：最大32GB、M5 Pro：最大64GB）、旧世代Mac miniとの比較によるFramework Desktop 128 GBのベンチマーク（70Bを20〜25 tok/s）、Mini-ITX向けGPU互換性（RTX 5060 Tiが最適解）、プラットフォームのコスパ比較を解説します。PDFをミニPC LLMハードウェア参照カードとしてダウンロードできます。',
     },
     zh: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       theme: '硬件配置',
@@ -1629,6 +1704,21 @@ schema: {
       gammaDescription: '以下幻灯片涵盖：2026年本地LLM推理迷你PC选购指南、2026年8月Mac mini更新（M6：最高32GB，M5 Pro：最高64GB）、Framework Desktop 128 GB对比上一代Mac mini的基准测试（70B达20–25 tok/s）、Mini-ITX GPU兼容性（RTX 5060 Ti最优选）以及平台性价比对比。下载PDF作为迷你PC LLM硬件参考卡。',
     },
     es: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       theme: 'Hardware Setups',
@@ -1915,6 +2005,21 @@ schema: {
       gammaDescription: 'La presentación a continuación cubre: cómo elegir el mejor mini PC para inferencia LLM local en 2026, la actualización del Mac mini de agosto de 2026 (M6: 32GB máx., M5 Pro: 64GB máx.), benchmarks del Framework Desktop 128 GB frente a la generación anterior de Mac mini (70B a 20–25 tok/s), compatibilidad de GPU Mini-ITX (RTX 5060 Ti como opción óptima) y comparación de valor de plataformas. Descarga el PDF como tarjeta de referencia de hardware mini PC para LLMs.',
     },
     ar: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       theme: 'Hardware Setups',
@@ -2300,6 +2405,21 @@ schema: {
       gammaDescription: 'يغطي العرض التقديمي أدناه: كيفية اختيار أفضل كمبيوتر مصغر لاستدلال LLM المحلي في 2026، تحديث Mac mini في أغسطس 2026 (M6: بحد أقصى 32GB، M5 Pro: بحد أقصى 64GB)، معايير Framework Desktop 128 GB مقارنة بجيل Mac mini السابق (70B بسرعة 20–25 tok/s)، توافق GPU لـ Mini-ITX (RTX 5060 Ti كخيار مثالي)، ومقارنة قيمة المنصات. نزّل ملف PDF كبطاقة مرجعية لعتاد الكمبيوتر المصغر لنماذج LLM.',
     },
     pt: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+          productName: 'Apple Mac Mini M6',
+          productCategory: 'mini-pc',
+          label: 'Mac Mini M6 on Amazon',
+        },
+        {
+          url: 'https://frame.work/desktop',
+          productName: 'Framework Desktop',
+          productCategory: 'mini-pc',
+          label: 'Framework Desktop official site',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-10-21',
       theme: 'Hardware Setups',
@@ -2575,6 +2695,21 @@ schema: {
       },
     },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=Mac+Mini+M6',
+        productName: 'Apple Mac Mini M6',
+        productCategory: 'mini-pc',
+        label: 'Mac Mini M6 on Amazon',
+      },
+      {
+        url: 'https://frame.work/desktop',
+        productName: 'Framework Desktop',
+        productCategory: 'mini-pc',
+        label: 'Framework Desktop official site',
+      },
+    ],
   freshness_tier: 'semi_annual',
   next_refresh_due: '2026-10-21',
   theme: '하드웨어 설정',
