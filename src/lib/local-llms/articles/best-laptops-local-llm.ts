@@ -8,6 +8,27 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware Setups',
       next_refresh_due: '2026-12-19',
@@ -313,6 +334,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     es: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware Setups',
       next_refresh_due: '2026-12-19',
@@ -608,6 +650,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ar: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-12-19',
       theme: 'Hardware Setups',
@@ -904,6 +967,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     // VERIFY: guia de compra de notebooks com preços de referência em USD — mantidos em USD. No varejo brasileiro, com impostos de importação, esses valores ficam bem mais altos em reais. Confirmar disponibilidade/preços BR antes de publicar.
     pt: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-12-19',
       theme: 'Hardware Setups',
@@ -1190,6 +1274,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     de: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-12-19',
       theme: 'Hardware Setups',
@@ -1475,6 +1580,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     fr: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-12-19',
       theme: 'Hardware Setups',
@@ -1760,6 +1886,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     ja: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-12-19',
       theme: 'Hardware Setups',
@@ -2054,6 +2201,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     zh: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+          productName: 'Apple MacBook Pro M5',
+          productCategory: 'laptop',
+          label: 'MacBook Pro M5 on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+          productName: 'ASUS ROG Strix',
+          productCategory: 'laptop',
+          label: 'ASUS ROG Strix on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+          productName: 'Lenovo Legion RTX laptop',
+          productCategory: 'laptop',
+          label: 'Lenovo Legion on Amazon',
+        },
+      ],
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-12-19',
       theme: 'Hardware Setups',
@@ -2348,6 +2516,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=MacBook+Pro+M5',
+        productName: 'Apple MacBook Pro M5',
+        productCategory: 'laptop',
+        label: 'MacBook Pro M5 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=ASUS+ROG+Strix+RTX+laptop',
+        productName: 'ASUS ROG Strix',
+        productCategory: 'laptop',
+        label: 'ASUS ROG Strix on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Lenovo+Legion+RTX+laptop',
+        productName: 'Lenovo Legion RTX laptop',
+        productCategory: 'laptop',
+        label: 'Lenovo Legion on Amazon',
+      },
+    ],
   freshness_tier: 'semi_annual',
   next_refresh_due: '2026-12-19',
   theme: '하드웨어 설정',

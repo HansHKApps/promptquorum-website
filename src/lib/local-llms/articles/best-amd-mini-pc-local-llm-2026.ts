@@ -3,6 +3,27 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared',
@@ -691,6 +712,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Mejor Mini PC AMD para LLM Local 2026: AOOSTAR, Minisforum, Beelink, GMKtec Comparados',
@@ -1248,6 +1290,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'أفضل حاسوب ⁨AMD⁩ مصغر لتشغيل ⁨LLM⁩ محلياً ⁨2026⁩: مقارنة ⁨AOOSTAR⁩ و⁨Minisforum⁩ و⁨Beelink⁩ و⁨GMKtec⁩',
@@ -1805,6 +1868,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-17',
     theme: 'Hardware Setups',
@@ -1940,6 +2024,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Bester AMD Mini-PC für Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec im Vergleich',
@@ -2438,6 +2543,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Meilleur Mini PC AMD pour Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Comparés',
@@ -2938,6 +3064,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: '2026年ローカルLLM向け最強AMDミニPC:AOOSTAR・Minisforum・Beelink・GMKtec徹底比較',
@@ -3413,6 +3560,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: '2026年本地LLM最佳AMD迷你PC:AOOSTAR、Minisforum、Beelink、GMKtec对比评测',
@@ -3888,6 +4056,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12',
+        productName: 'AOOSTAR GEM12',
+        productCategory: 'mini-pc',
+        label: 'AOOSTAR GEM12 on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Minisforum+mini+PC',
+        productName: 'Minisforum mini PC',
+        productCategory: 'mini-pc',
+        label: 'Minisforum mini PC on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=Beelink+mini+PC',
+        productName: 'Beelink mini PC',
+        productCategory: 'mini-pc',
+        label: 'Beelink mini PC on Amazon',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: '하드웨어 설정',
     title: '2026년 로컬 LLM용 최고의 AMD 미니 PC: AOOSTAR, Minisforum, Beelink, GMKtec 비교',

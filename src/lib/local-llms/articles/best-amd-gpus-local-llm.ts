@@ -8,6 +8,21 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       last_full_refresh: '2026-09-01',
       theme: 'GPU Buying Guides',
@@ -287,6 +302,21 @@ schema: {
       },
     },
     es: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'Mejores GPUs AMD para LLMs locales',
@@ -531,6 +561,21 @@ schema: {
       },
     },
     ar: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'أفضل كروت رسوميات ⁨AMD⁩ لنماذج ⁨LLM⁩ المحلية',
@@ -778,6 +823,21 @@ schema: {
       },
     },
     pt: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'GPU Buying Guides',
       title: 'Melhores GPUs AMD para LLMs locais',
@@ -1022,6 +1082,21 @@ schema: {
       },
     },
     de: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       theme: 'GPU-Kaufleitfäden',
       title: 'Beste AMD-GPUs für lokale LLMs',
       seoTitle: 'AMD GPUs für lokale LLMs 2026: ROCm Setup & vLLM',
@@ -1199,6 +1274,21 @@ schema: {
       },
     },
     fr: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       theme: 'Guides d\'achat GPU',
       title: 'Meilleures GPU AMD pour les LLM locaux',
       seoTitle: 'GPU AMD pour LLM locaux 2026: Comparaison ROCm et vLLM',
@@ -1377,6 +1467,21 @@ schema: {
       },
     },
     ja: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       theme: 'GPU 購入ガイド',
       title: 'ローカル LLM 向けベスト AMD GPU 2026',
       seoTitle: 'AMD GPU ローカル LLM 2026：ROCm & vLLM ガイド',
@@ -1558,6 +1663,21 @@ schema: {
       },
     },
     zh: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+          productName: 'AMD Radeon RX 7900 XTX',
+          productCategory: 'gpu',
+          label: 'RX 7900 XTX on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+          productName: 'AMD Radeon RX 7900 XT',
+          productCategory: 'gpu',
+          label: 'RX 7900 XT on Newegg',
+        },
+      ],
       theme: 'GPU 购买指南',
       title: '本地 LLM 最佳 AMD GPU 2026',
       seoTitle: 'AMD GPU 本地 LLM 2026：ROCm vs vLLM 完整对比指南',
@@ -1754,6 +1874,21 @@ schema: {
       },
     },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RX+7900+XTX',
+        productName: 'AMD Radeon RX 7900 XTX',
+        productCategory: 'gpu',
+        label: 'RX 7900 XTX on Amazon',
+      },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RX+7900+XT',
+        productName: 'AMD Radeon RX 7900 XT',
+        productCategory: 'gpu',
+        label: 'RX 7900 XT on Newegg',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: 'GPU 구매 가이드',
     title: '로컬 LLM을 위한 최고의 AMD GPU',

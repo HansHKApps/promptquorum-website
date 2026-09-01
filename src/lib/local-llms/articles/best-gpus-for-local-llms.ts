@@ -8,6 +8,27 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'Best GPUs for Local LLMs in 2026: Complete Benchmark and Selection Guide',
@@ -273,6 +294,27 @@ schema: {
       },
     },
     es: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'Las mejores GPUs para LLMs locales en 2026: Guía completa de benchmarks y selección',
@@ -550,6 +592,27 @@ schema: {
       },
     },
     ar: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'أفضل بطاقات ⁨GPU⁩ لنماذج ⁨LLM⁩ المحلية في ⁨2026⁩: دليل شامل للقياسات والاختيار',
@@ -827,6 +890,27 @@ schema: {
       },
     },
     pt: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'As melhores GPUs para LLMs locais em 2026: guia completo de benchmarks e seleção',
@@ -1058,6 +1142,27 @@ schema: {
       },
     },
     de: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'Die besten GPUs für lokale LLMs 2026: Kompletter Benchmark- und Auswahlführer',
@@ -1323,6 +1428,27 @@ schema: {
       },
     },
     fr: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'Les meilleurs GPU pour LLMs locaux 2026 : Guide complet de benchmark et de sélection',
@@ -1588,6 +1714,27 @@ schema: {
       },
     },
     ja: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: 'ローカルLLM向け最高のGPU 2026年：完全なベンチマーク・選択ガイド',
@@ -1863,6 +2010,27 @@ schema: {
       },
     },
     zh: {
+      affiliateDisclosure: true,
+      affiliateLinks: [
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+          productName: 'NVIDIA RTX 4090 24GB',
+          productCategory: 'gpu',
+          label: 'RTX 4090 24GB on Amazon',
+        },
+        {
+          url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+          productName: 'NVIDIA RTX 4080 16GB',
+          productCategory: 'gpu',
+          label: 'RTX 4080 16GB on Amazon',
+        },
+        {
+          url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+          productName: 'NVIDIA RTX 4070 Ti',
+          productCategory: 'gpu',
+          label: 'RTX 4070 Ti on Newegg',
+        },
+      ],
       freshness_tier: 'semi_annual',
       theme: 'Hardware & Performance',
       title: '2026年本地LLM最佳GPU完整指南：基准测试和选择建议',
@@ -2138,6 +2306,27 @@ schema: {
       },
     },
   ko: {
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      {
+        url: 'https://www.amazon.com/s?k=RTX+4090+24GB',
+        productName: 'NVIDIA RTX 4090 24GB',
+        productCategory: 'gpu',
+        label: 'RTX 4090 24GB on Amazon',
+      },
+      {
+        url: 'https://www.amazon.com/s?k=RTX+4080+16GB',
+        productName: 'NVIDIA RTX 4080 16GB',
+        productCategory: 'gpu',
+        label: 'RTX 4080 16GB on Amazon',
+      },
+      {
+        url: 'https://www.newegg.com/p/pl?d=RTX+4070+Ti',
+        productName: 'NVIDIA RTX 4070 Ti',
+        productCategory: 'gpu',
+        label: 'RTX 4070 Ti on Newegg',
+      },
+    ],
     freshness_tier: 'semi_annual',
     theme: '하드웨어 및 성능',
     title: '2026년 로컬 LLM을 위한 최고의 GPU: 완전한 벤치마크 및 선택 가이드',
