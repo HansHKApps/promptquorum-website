@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-01',
-      last_full_refresh: '2026-08-31',
+      last_full_refresh: '2026-09-01',
       current_models_mentioned: ['GPT-5.6', 'Claude Opus 5', 'Claude Fable 5', 'Gemini 3.1 Pro', 'Gemini 3.7 Flash', 'Gemini 3.5 Flash-Lite', 'DeepSeek-V4', 'Llama 4 Scout'],
       theme: 'Fundamentals',
       heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-en.webp',
@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'GPT, Claude or Gemini: How to Pick the Right AI Model',
         description: 'A practical guide to choosing between GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, DeepSeek, and Baidu ERNIE based on your task, budget, and geography.',
         datePublished: '2026-03-23',
-        dateModified: '2026-08-31',
+        dateModified: '2026-09-01',
         keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'AI model comparison', 'model selection', 'prompt engineering'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Frontier models (most expensive per token):** GPT-5.6 ($5 input / $30 output per million tokens), Claude Opus 5 ($5 input / $25 output per million tokens).',
             '**Cost-effective frontier:** Gemini 3.1 Pro ($2 input / $12 output per million tokens) — the cheapest of the three frontier models.',
-            '**Cost-effective mid-tier:** Gemini 3.7 Flash (~$0.50 input / $3 output per million tokens) and GPT-5.6 Luna ($0.20 input / $1.20 output). Gemini 3.5 Flash-Lite is the efficiency tier below that.',
+            '**Cost-effective mid-tier:** Gemini 3.7 Flash (~$0.75 input / $3.75 output per million tokens) and GPT-5.6 Luna ($0.20 input / $1.20 output). Gemini 3.5 Flash-Lite is the efficiency tier below that.',
             '**Competitive budget models:** DeepSeek-V4 (aggressive pricing), local models via Ollama/LM Studio (free, run on-device).',
             '**Rate limits:** Frontier models often start at 100 req/min; scaled tier can reach 10,000+ req/min. Local models depend on your hardware.',
             '[Learn about context windows and how they affect model selection.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Using a frontier model for every task',
-              problem: 'GPT-5.6 at $5/$30 per million tokens is 10× more expensive than Gemini 3.7 Flash at ~$0.50/$3. Most classification, extraction, and summarization tasks produce identical quality on cheap models.',
+              problem: 'GPT-5.6 at $5/$30 per million tokens is 10× more expensive than Gemini 3.7 Flash at ~$0.75/$3.75. Most classification, extraction, and summarization tasks produce identical quality on cheap models.',
               fix: 'Start with the cheapest model. Upgrade to frontier only when the cheaper model measurably fails on your task.',
             },
             {
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen',
         description: 'Ein praktischer Leitfaden zur Wahl zwischen GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, DeepSeek und Baidu ERNIE — nach Aufgabe, Budget und Region.',
         datePublished: '2026-03-23',
-        dateModified: '2026-08-31',
+        dateModified: '2026-09-01',
         keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'KI-Modellvergleich', 'Modellauswahl', 'Prompt Engineering'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Frontier-Modelle (teuerste pro Token):** GPT-5.6 ($5 Input / $30 Output pro Million Tokens), Claude Opus 5 ($5 Input / $25 Output pro Million Tokens).',
             '**Günstiges Frontier-Modell:** Gemini 3.1 Pro ($2 Input / $12 Output pro Million Tokens) — das günstigste der drei Frontier-Modelle.',
-            '**Kosteneffiziente Mittelklasse:** Gemini 3.7 Flash (ca. $0,50 Input / $3 Output pro Million Tokens) und GPT-5.6 Luna ($0,20 Input / $1,20 Output). Darunter liegt Gemini 3.5 Flash-Lite als Effizienzstufe.',
+            '**Kosteneffiziente Mittelklasse:** Gemini 3.7 Flash (ca. $0,75 Input / $3,75 Output pro Million Tokens) und GPT-5.6 Luna ($0,20 Input / $1,20 Output). Darunter liegt Gemini 3.5 Flash-Lite als Effizienzstufe.',
             '**Preisgünstige Alternativen:** DeepSeek-V4 (aggressive Preise), lokale Modelle über Ollama/LM Studio (kostenlos, laufen auf Ihrer Hardware).',
             '**Rate Limits:** Frontier-Modelle starten oft bei 100 Anfragen/Minute; skalierte Stufen erreichen 10.000+ Anfragen/Minute. Bei lokalen Modellen entscheidet Ihre Hardware.',
             '[Mehr zu Kontextfenstern und ihrer Rolle bei der Modellwahl.](/de/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Für jede Aufgabe ein Frontier-Modell einsetzen',
-              problem: 'GPT-5.6 kostet mit $5/$30 pro Million Tokens rund 10× so viel wie Gemini 3.7 Flash mit ca. $0,50/$3. Die meisten Klassifikations-, Extraktions- und Zusammenfassungsaufgaben liefern auf günstigen Modellen dieselbe Qualität.',
+              problem: 'GPT-5.6 kostet mit $5/$30 pro Million Tokens rund 10× so viel wie Gemini 3.7 Flash mit ca. $0,75/$3,75. Die meisten Klassifikations-, Extraktions- und Zusammenfassungsaufgaben liefern auf günstigen Modellen dieselbe Qualität.',
               fix: 'Beginnen Sie mit dem günstigsten Modell. Steigen Sie erst dann auf ein Frontier-Modell um, wenn das günstigere bei Ihrer Aufgabe messbar scheitert.',
             },
             {
@@ -1080,7 +1080,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'GPT, Claude ou Gemini : comment choisir le bon modèle d\'IA',
         description: 'Un guide pratique pour choisir entre GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, DeepSeek et Baidu ERNIE selon votre tâche, votre budget et votre zone géographique.',
         datePublished: '2026-03-23',
-        dateModified: '2026-08-31',
+        dateModified: '2026-09-01',
         keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'comparaison de modèles d\'IA', 'choix de modèle', 'prompt engineering'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Modèles frontier (les plus chers par token) :** GPT-5.6 (5 $ en entrée / 30 $ en sortie par million de tokens), Claude Opus 5 (5 $ en entrée / 25 $ en sortie par million de tokens).',
             '**Modèle frontier économique :** Gemini 3.1 Pro (2 $ en entrée / 12 $ en sortie par million de tokens) — le moins cher des trois modèles frontier.',
-            '**Milieu de gamme économique :** Gemini 3.7 Flash (environ 0,50 $ en entrée / 3 $ en sortie par million de tokens) et GPT-5.6 Luna (0,20 $ en entrée / 1,20 $ en sortie). En dessous, Gemini 3.5 Flash-Lite constitue le palier d\'efficacité.',
+            '**Milieu de gamme économique :** Gemini 3.7 Flash (environ 0,75 $ en entrée / 3,75 $ en sortie par million de tokens) et GPT-5.6 Luna (0,20 $ en entrée / 1,20 $ en sortie). En dessous, Gemini 3.5 Flash-Lite constitue le palier d\'efficacité.',
             '**Alternatives économiques :** DeepSeek-V4 (tarifs agressifs), modèles locaux via Ollama/LM Studio (gratuits, exécutés sur votre machine).',
             '**Limites de débit :** les modèles frontier démarrent souvent à 100 requêtes/minute ; les paliers étendus atteignent plus de 10 000 requêtes/minute. Pour les modèles locaux, tout dépend de votre matériel.',
             '[En savoir plus sur les fenêtres de contexte et leur influence sur le choix du modèle.](/fr/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -1469,7 +1469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Utiliser un modèle frontier pour toutes les tâches',
-              problem: 'GPT-5.6 à 5 $/30 $ par million de tokens coûte environ 10 fois plus que Gemini 3.7 Flash à environ 0,50 $/3 $. La plupart des tâches de classification, d\'extraction et de résumé donnent une qualité identique sur des modèles bon marché.',
+              problem: 'GPT-5.6 à 5 $/30 $ par million de tokens coûte environ 10 fois plus que Gemini 3.7 Flash à environ 0,75 $/3,75 $. La plupart des tâches de classification, d\'extraction et de résumé donnent une qualité identique sur des modèles bon marché.',
               fix: 'Commencez par le modèle le moins cher. Ne montez vers un modèle frontier que si le modèle économique échoue de façon mesurable sur votre tâche.',
             },
             {
@@ -1596,7 +1596,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'GPT、Claude、Gemini：適切なAIモデルの選び方',
         description: 'タスク、予算、地域に応じてGPT-5.6、Claude Opus 5、Gemini 3.1 Pro、DeepSeek、Baidu ERNIEから選ぶための実務ガイド。',
         datePublished: '2026-03-23',
-        dateModified: '2026-08-31',
+        dateModified: '2026-09-01',
         keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'AIモデル比較', 'モデル選定', 'プロンプトエンジニアリング'],
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -1893,7 +1893,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**フロンティアモデル（トークン単価が最も高い）：** GPT-5.6（100万トークンあたり入力$5／出力$30）、Claude Opus 5（100万トークンあたり入力$5／出力$25）。',
             '**低コストなフロンティアモデル：** Gemini 3.1 Pro（100万トークンあたり入力$2／出力$12） — フロンティア3モデルの中で最も安価です。',
-            '**コスト効率の高い中位モデル：** Gemini 3.7 Flash（100万トークンあたり入力約$0.50／出力$3）とGPT-5.6 Luna（入力$0.20／出力$1.20）。その下の効率重視ティアがGemini 3.5 Flash-Liteです。',
+            '**コスト効率の高い中位モデル：** Gemini 3.7 Flash（100万トークンあたり入力約$0.75／出力$3.75）とGPT-5.6 Luna（入力$0.20／出力$1.20）。その下の効率重視ティアがGemini 3.5 Flash-Liteです。',
             '**価格競争力のある選択肢：** DeepSeek-V4（積極的な価格設定）、Ollama／LM Studio経由のローカルモデル（無料、自分の端末で実行）。',
             '**レート制限：** フロンティアモデルは毎分100リクエストから始まることが多く、上位ティアでは毎分1万リクエスト以上に達します。ローカルモデルはハードウェア次第です。',
             '[コンテキストウィンドウとモデル選定への影響を学ぶ。](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'すべてのタスクでフロンティアモデルを使ってしまう',
-              problem: 'GPT-5.6は100万トークンあたり$5／$30で、約$0.50／$3のGemini 3.7 Flashのおよそ10倍のコストです。分類、抽出、要約の大半は、安価なモデルでも同等の品質が得られます。',
+              problem: 'GPT-5.6は100万トークンあたり$5／$30で、約$0.75／$3.75のGemini 3.7 Flashのおよそ10倍のコストです。分類、抽出、要約の大半は、安価なモデルでも同等の品質が得られます。',
               fix: 'まず最も安いモデルから始めてください。安価なモデルが自分のタスクで明確に失敗したときにだけ、フロンティアモデルへ引き上げます。',
             },
             {
@@ -2112,7 +2112,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'GPT、Claude 还是 Gemini：如何选择合适的 AI 模型',
         description: '一份实用指南，帮你根据任务、预算和地区在 GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、DeepSeek 和文心一言之间做出选择。',
         datePublished: '2026-03-23',
-        dateModified: '2026-08-31',
+        dateModified: '2026-09-01',
         keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'AI 模型对比', '模型选型', '提示工程'],
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -2409,7 +2409,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**前沿模型（每 token 最贵）：** GPT-5.6（每百万 tokens 输入 $5／输出 $30）、Claude Opus 5（每百万 tokens 输入 $5／输出 $25）。',
             '**高性价比前沿模型：** Gemini 3.1 Pro（每百万 tokens 输入 $2／输出 $12）——三个前沿模型中最便宜的。',
-            '**高性价比中端模型：** Gemini 3.7 Flash（每百万 tokens 输入约 $0.50／输出 $3）和 GPT-5.6 Luna（输入 $0.20／输出 $1.20）。再往下的效率档位是 Gemini 3.5 Flash-Lite。',
+            '**高性价比中端模型：** Gemini 3.7 Flash（每百万 tokens 输入约 $0.75／输出 $3.75）和 GPT-5.6 Luna（输入 $0.20／输出 $1.20）。再往下的效率档位是 Gemini 3.5 Flash-Lite。',
             '**价格有竞争力的选项：** DeepSeek-V4（定价激进）、通过 Ollama／LM Studio 运行的本地模型（免费，在自己设备上跑）。',
             '**速率限制：** 前沿模型通常从每分钟 100 次请求起步，扩容档位可达每分钟 1 万次以上。本地模型取决于你的硬件。',
             '[了解上下文窗口及其对模型选型的影响。](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -2501,7 +2501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: '所有任务都用前沿模型',
-              problem: 'GPT-5.6 每百万 tokens $5／$30，大约是 Gemini 3.7 Flash（约 $0.50／$3）的 10 倍。多数分类、抽取和摘要任务在便宜模型上质量完全一样。',
+              problem: 'GPT-5.6 每百万 tokens $5／$30，大约是 Gemini 3.7 Flash（约 $0.75／$3.75）的 10 倍。多数分类、抽取和摘要任务在便宜模型上质量完全一样。',
               fix: '先从最便宜的模型开始。只有当便宜模型在你的任务上明显不行时，才升级到前沿模型。',
             },
             {
@@ -2590,7 +2590,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
-    last_full_refresh: '2026-08-31',
+    last_full_refresh: '2026-09-01',
     theme: 'Fundamentals',
     heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-es.webp',
     title: 'GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto',
@@ -2631,7 +2631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto',
       description: 'Una guía práctica para elegir entre GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, DeepSeek y Baidu ERNIE según tu tarea, presupuesto y geografía.',
       datePublished: '2026-03-23',
-      dateModified: '2026-08-31',
+      dateModified: '2026-09-01',
       keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'comparación de modelos de IA', 'selección de modelos', 'ingeniería de prompts'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -2980,7 +2980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Modelos frontier (más caros por token):** GPT-5.6 ($5 entrada / $30 salida por millón de tokens), Claude Opus 5 ($5 entrada / $25 salida por millón de tokens).',
           '**Frontier rentable:** Gemini 3.1 Pro ($2 entrada / $12 salida por millón de tokens) — el más barato de los tres modelos frontier.',
-          '**Nivel medio rentable:** Gemini 3.7 Flash (~$0.50 entrada / $3 salida por millón de tokens) y GPT-5.6 Luna ($0.20 entrada / $1.20 salida). Gemini 3.5 Flash-Lite es el nivel de eficiencia por debajo.',
+          '**Nivel medio rentable:** Gemini 3.7 Flash (~$0.75 entrada / $3.75 salida por millón de tokens) y GPT-5.6 Luna ($0.20 entrada / $1.20 salida). Gemini 3.5 Flash-Lite es el nivel de eficiencia por debajo.',
           '**Modelos de presupuesto competitivos:** DeepSeek (precios agresivos), modelos locales vía Ollama/LM Studio (gratis, se ejecutan en tu dispositivo).',
           '**Límites de frecuencia:** Los modelos frontier a menudo empiezan en 100 solicitudes/min; el nivel escalado puede alcanzar 10.000+ solicitudes/min. Los modelos locales dependen de tu hardware.',
           '[Aprende sobre las ventanas de contexto y cómo afectan la selección de modelos.](/es/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -3071,7 +3071,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Usar un modelo frontier para todas las tareas',
-            problem: 'GPT-5.6 a $5/$30 por millón de tokens es 10 veces más caro que Gemini 3.7 Flash a ~$0.50/$3. La mayoría de las tareas de clasificación, extracción y resumen producen calidad idéntica en modelos baratos.',
+            problem: 'GPT-5.6 a $5/$30 por millón de tokens es 10 veces más caro que Gemini 3.7 Flash a ~$0.75/$3.75. La mayoría de las tareas de clasificación, extracción y resumen producen calidad idéntica en modelos baratos.',
             fix: 'Empieza con el modelo más barato. Sube a frontier solo cuando el modelo más barato falle de forma medible en tu tarea.',
           },
           {
@@ -3176,7 +3176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'GPT, Claude ou Gemini: Como Escolher o Modelo de IA Certo',
       description: 'Um guia prático para escolher entre GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, DeepSeek e Baidu ERNIE com base na sua tarefa, orçamento e localização.',
       datePublished: '2026-03-23',
-      dateModified: '2026-08-31',
+      dateModified: '2026-09-01',
       keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'comparação de modelos de IA', 'seleção de modelos', 'engenharia de prompts'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -3469,7 +3469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**Modelos frontier (mais caros por token):** GPT-5.6 ($5 entrada / $30 saída por milhão de tokens), Claude Opus 5 ($5 entrada / $25 saída por milhão de tokens).',
           '**Frontier econômico:** Gemini 3.1 Pro ($2 entrada / $12 saída por milhão de tokens) — o mais barato dos três modelos frontier.',
-          '**Nível médio econômico:** Gemini 3.7 Flash (~$0,50 entrada / $3 saída por milhão de tokens) e GPT-5.6 Luna ($0,20 entrada / $1,20 saída). Gemini 3.5 Flash-Lite é o nível de eficiência abaixo desse.',
+          '**Nível médio econômico:** Gemini 3.7 Flash (~$0,75 entrada / $3,75 saída por milhão de tokens) e GPT-5.6 Luna ($0,20 entrada / $1,20 saída). Gemini 3.5 Flash-Lite é o nível de eficiência abaixo desse.',
           '**Modelos de orçamento competitivos:** DeepSeek (preços agressivos), modelos locais via Ollama/LM Studio (gratuito, executados no dispositivo).',
           '**Limites de taxa:** Modelos frontier frequentemente começam em 100 req/min; nível escalado pode chegar a 10.000+ req/min. Modelos locais dependem do seu hardware.',
           '[Aprenda sobre janelas de contexto e como elas afetam a seleção de modelos.](/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -3560,7 +3560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Usar um modelo frontier para todas as tarefas',
-            problem: 'GPT-5.6 a $5/$30 por milhão de tokens é 10× mais caro que Gemini 3.7 Flash a ~$0,50/$3. A maioria das tarefas de classificação, extração e resumo produz qualidade idêntica em modelos baratos.',
+            problem: 'GPT-5.6 a $5/$30 por milhão de tokens é 10× mais caro que Gemini 3.7 Flash a ~$0,75/$3,75. A maioria das tarefas de classificação, extração e resumo produz qualidade idêntica em modelos baratos.',
             fix: 'Comece com o modelo mais barato. Suba para frontier apenas quando o modelo mais barato falhar de forma mensurável na sua tarefa.',
           },
           {
@@ -3651,7 +3651,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
-    last_full_refresh: '2026-08-31',
+    last_full_refresh: '2026-09-01',
     theme: 'Fundamentals',
     heroImage: '/images/gpt-claude-gemini-which-model-overview-hero-ar.webp',
     title: '⁨GPT⁩ أم ⁨Claude⁩ أم ⁨Gemini⁩: كيف تختار نموذج الذكاء الاصطناعي المناسب',
@@ -3692,7 +3692,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'GPT أم Claude أم Gemini: كيف تختار نموذج الذكاء الاصطناعي المناسب',
       description: 'دليل عملي للاختيار بين GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وDeepSeek وBaidu ERNIE حسب مهمتك وميزانيتك وموقعك الجغرافي.',
       datePublished: '2026-03-23',
-      dateModified: '2026-08-31',
+      dateModified: '2026-09-01',
       keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'مقارنة نماذج الذكاء الاصطناعي', 'اختيار النماذج', 'هندسة الاستفسارات'],
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
@@ -4041,7 +4041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**نماذج الحافة (الأغلى لكل رمز):** GPT-5.6 ($5 إدخال / $30 إخراج لكل مليون رمز)، وClaude Opus 5 ($5 إدخال / $25 إخراج لكل مليون رمز).',
           '**نموذج حديث فعّال التكلفة:** Gemini 3.1 Pro ($2 إدخال / $12 إخراج لكل مليون رمز) — الأرخص بين النماذج الحديثة الثلاثة.',
-          '**المستوى المتوسط الفعّال:** Gemini 3.7 Flash (~$0.50 إدخال / $3 إخراج لكل مليون رمز) وGPT-5.6 Luna ($0.20 إدخال / $1.20 إخراج). وGemini 3.5 Flash-Lite هو مستوى الكفاءة الأدنى.',
+          '**المستوى المتوسط الفعّال:** Gemini 3.7 Flash (~$0.75 إدخال / $3.75 إخراج لكل مليون رمز) وGPT-5.6 Luna ($0.20 إدخال / $1.20 إخراج). وGemini 3.5 Flash-Lite هو مستوى الكفاءة الأدنى.',
           '**نماذج الميزانية التنافسية:** DeepSeek (أسعار عدوانية)، والنماذج المحلية عبر Ollama/LM Studio (مجانية، تعمل على جهازك).',
           '**حدود المعدل:** غالباً تبدأ نماذج الحافة بـ100 طلب/دقيقة؛ يمكن أن يصل المستوى المتدرج إلى 10,000+ طلب/دقيقة. تعتمد النماذج المحلية على أجهزتك.',
           '[تعرّف على نوافذ السياق وكيف تؤثر على اختيار النماذج.](/ar/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -4132,7 +4132,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'استخدام نموذج حافة لجميع المهام',
-            problem: 'GPT-5.6 بـ$5/$30 لكل مليون رمز أغلى بـ10 مرات من Gemini 3.7 Flash بـ~$0.50/$3. معظم مهام التصنيف والاستخراج والتلخيص تنتج جودة متطابقة في النماذج الرخيصة.',
+            problem: 'GPT-5.6 بـ$5/$30 لكل مليون رمز أغلى بـ10 مرات من Gemini 3.7 Flash بـ~$0.75/$3.75. معظم مهام التصنيف والاستخراج والتلخيص تنتج جودة متطابقة في النماذج الرخيصة.',
             fix: 'ابدأ بالنموذج الأرخص. ارتقِ إلى الحافة فقط عندما يفشل النموذج الأرخص بشكل قابل للقياس في مهمتك.',
           },
           {
@@ -4233,7 +4233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       inLanguage: 'ko',
       headline: 'GPT, Claude, Gemini: 올바른 AI 모델을 선택하는 방법',
       datePublished: '2026-03-23',
-      dateModified: '2026-08-31',
+      dateModified: '2026-09-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways', 'h2'] },
@@ -4518,7 +4518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '**프런티어 모델(토큰당 가장 비쌈):** GPT-5.6(100만 토큰당 입력 $5 / 출력 $30), Claude Opus 5(100만 토큰당 입력 $5 / 출력 $25).',
           '**비용 효율적인 프런티어:** Gemini 3.1 Pro(100만 토큰당 입력 $2 / 출력 $12) — 세 프런티어 모델 중 가장 저렴합니다.',
-          '**비용 효율적인 중간 티어:** Gemini 3.7 Flash(100만 토큰당 입력 약 $0.50 / 출력 $3)와 GPT-5.6 Luna(입력 $0.20 / 출력 $1.20). 그 아래 효율 티어는 Gemini 3.5 Flash-Lite입니다.',
+          '**비용 효율적인 중간 티어:** Gemini 3.7 Flash(100만 토큰당 입력 약 $0.75 / 출력 $3.75)와 GPT-5.6 Luna(입력 $0.20 / 출력 $1.20). 그 아래 효율 티어는 Gemini 3.5 Flash-Lite입니다.',
           '**경쟁력 있는 예산 모델:** DeepSeek(공격적인 가격), Ollama/LM Studio를 통한 로컬 모델(무료, 기기에서 실행).',
           '**속도 제한:** 프런티어 모델은 종종 분당 100개 요청으로 시작하며, 확장 티어는 분당 10,000개 이상에 도달할 수 있습니다. 로컬 모델은 귀하의 하드웨어에 따라 달라집니다.',
           '[컨텍스트 창과 모델 선택에 미치는 영향에 대해 알아보기.](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)',
@@ -4610,7 +4610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: '모든 작업에 프런티어 모델을 사용하는 것',
-            problem: 'GPT-5.6는 100만 토큰당 $5/$30으로, Gemini 3.7 Flash의 약 $0.50/$3 대비 10배 더 비쌉니다. 대부분의 분류, 추출, 요약 작업은 저렴한 모델에서 동일한 품질을 생성합니다.',
+            problem: 'GPT-5.6는 100만 토큰당 $5/$30으로, Gemini 3.7 Flash의 약 $0.75/$3.75 대비 10배 더 비쌉니다. 대부분의 분류, 추출, 요약 작업은 저렴한 모델에서 동일한 품질을 생성합니다.',
             fix: '가장 저렴한 모델로 시작하십시오. 저렴한 모델이 귀하의 작업에서 측정 가능하게 실패할 때만 프런티어로 업그레이드하십시오.',
           },
           {
