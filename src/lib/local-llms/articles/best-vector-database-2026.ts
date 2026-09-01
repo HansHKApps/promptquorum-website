@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developers building RAG applications',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '15 min read',
     primaryTerm: 'vector database',
     targetKeywords: [
@@ -148,14 +148,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: 'Self-host or managed cloud',
-        content: '**Self-hosting gives you cost control and data residency and hands you uptime, backups and scaling; managed cloud sells you those back.** The honest framing is that the money difference is smaller than most teams expect and the time difference is larger.\n\nA single-node Qdrant or Weaviate on a modest VM will run a million vectors for roughly $40 to $80 a month in infrastructure. The managed equivalents land in a similar band at that scale. What actually separates them is the two to five hours a month somebody spends patching, monitoring, restoring from a bad deploy, and being paged when a disk fills. Price that at your team\'s real hourly rate and the comparison usually inverts.\n\nThe cases where self-hosting clearly wins are not primarily about money. They are data residency, an air-gapped or on-premises requirement, and volume high enough that usage-based billing outruns a fixed VM. The case where managed clearly wins is a small team with no spare engineer, where the alternative to paying is not saving money but shipping later.',
+        content: '**Self-hosting gives you cost control and data residency and hands you uptime, backups and scaling; managed cloud sells you those back.** The honest framing is that the money difference is smaller than most teams expect and the time difference is larger.\n\nA single-node Qdrant or Weaviate on a modest VM will run a million vectors for roughly $40 to $80 a month in infrastructure. The managed equivalents land in a similar band at that scale. What actually separates them is the two to five hours a month somebody spends patching, monitoring, restoring from a bad deploy, and being paged when a disk fills. Price that at your team\'s real hourly rate and the comparison usually inverts.\n\n**Self-hosting stays comfortable well past the "toy project" scale, but it does have a real ceiling.** Qdrant\'s own capacity-planning documentation recommends starting to shard a collection once you are past roughly 1 million vectors, and its memory-consumption benchmarks put a fully in-memory HNSW index at about 6–7 GB of RAM per million vectors at 1,536 dimensions (the OpenAI embedding size), or as little as ~1.2 GB per million if you accept disk-backed (mmap) storage with a small speed cost. In practice that means a single well-specced node — 32 GB RAM or more — holds tens of millions of vectors before multi-node distribution earns its operational complexity; Chroma\'s embedded mode is the one to graduate out of earliest, since it is a single Python process rather than a server and was never meant to carry a production-scale index.\n\nThe cases where self-hosting clearly wins are not primarily about money. They are data residency, an air-gapped or on-premises requirement, and volume high enough that usage-based billing outruns a fixed VM. The case where managed clearly wins is a small team with no spare engineer, where the alternative to paying is not saving money but shipping later.',
+        decisionBlock: {
+          title: 'Self-host or managed cloud?',
+          localIf: [
+            'You are prototyping, learning, or running a small-to-medium dataset — Chroma (embedded, free) or self-hosted Qdrant costs nothing beyond a small VM',
+            'Data residency or an air-gapped deployment is a hard requirement — the index never leaves infrastructure you control',
+            'You already run Kubernetes or Docker Compose and can absorb 2–5 ops hours a month',
+            'Your vector count is comfortably under the tens-of-millions range where a single well-resourced node (32 GB+ RAM) still holds the index in memory — see Qdrant\'s own capacity-planning guidance above',
+          ],
+          cloudIf: [
+            'You have no dedicated DevOps capacity and cannot absorb the 2–5 hours/month of patching, monitoring and backup work self-hosting requires',
+            'You need a guaranteed uptime SLA rather than best-effort — Pinecone Enterprise offers 99.95%, Qdrant Premium 99.9%',
+            'You need enterprise features out of the box: SSO, audit logs, HIPAA compliance, dedicated support',
+            'You are scaling past what your team comfortably operates and would rather pay a predictable, usage-based bill than hire or train for it',
+          ],
+          quick: [
+            'Zero cost, zero server, prototyping → Chroma embedded',
+            'Free self-hosted, best cost-to-performance at real scale → Qdrant',
+            'Zero ops work, will pay for it → Pinecone Builder ($20/mo flat)',
+            'Hybrid search accuracy is the priority → Weaviate (free tier since June 2026)',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
             text: 'Pinecone is the one option here with no self-hosted fallback, and that is a migration consideration rather than a flaw. Moving off Weaviate or Qdrant Cloud means changing where the same engine runs; moving off Pinecone means changing engines and rewriting your queries.',
           },
         ],
-        note: 'Self-host when residency, air-gapping or volume make it necessary. Use managed when engineering hours are scarcer than budget, which for small teams is most of the time.',
+        note: 'Self-host when residency, air-gapping or volume make it necessary — the ceiling is real but far higher than most teams assume. Use managed when engineering hours are scarcer than budget, which for small teams is most of the time.',
       },
       qdrant: {
         id: 'qdrant',
@@ -458,7 +479,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud pricing', description: 'Free-forever tier limits of 0.5 vCPU, 1 GB RAM and 4 GB disk, plus Standard usage-based billing and the 99.5% and 99.9% SLAs.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud pricing', description: 'Free-forever tier limits of 0.5 vCPU, 1 GB RAM and 4 GB disk, plus Standard usage-based billing and the 99.5% and 99.9% SLAs. Re-verified against the live pricing page 1 September 2026, unchanged.' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant capacity planning', description: 'Official guidance on sharding a collection once past roughly 1 million vectors, and the RAM formula (vectors × dimensions × 4 bytes × 1.5) used for the self-hosting ceiling described above.' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: minimal RAM to serve 1M vectors', description: 'Basis for the ~6–7 GB RAM per million 1,536-dimension vectors (in-memory HNSW) versus ~1.2 GB per million with disk-backed (mmap) storage.' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant repository', description: 'Star count of 34,242, Apache-2.0 license and Rust as the implementation language, read from the GitHub API on 28 August 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone pricing', description: 'Starter, Builder, Standard and Enterprise limits including the $20 flat Builder plan and the $50 and $500 monthly minimums.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone partners page', description: 'Confirms the Affiliate Program for content creators alongside Technology, Solution and Referral partner categories.' },
@@ -487,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma',
       description: 'Compares Qdrant, Pinecone, Weaviate and Chroma for RAG, with verified pricing, licenses, star counts and free-tier limits, including Weaviate\'s June 2026 no-expiry free tier and Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/local-llms/best-vector-database-2026',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',

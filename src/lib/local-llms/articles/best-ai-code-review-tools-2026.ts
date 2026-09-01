@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       skipThisIf: {
         id: 'skip-this-if',
         title: 'Skip All Three If…',
-        content: '**If your team merges fewer than five pull requests a week and review turnaround is already same-day, a paid review bot adds cost and comment noise before it adds enough signal to be worth triaging.** The value of automated review scales with volume; below a certain throughput, a human reading the diff is simply faster.\n\nThe same applies if your team already has a strict review culture that catches what matters. Measure your escaped-bug rate first, and only add a bot if that number justifies it. If you want the capability without the subscription, a local model reviewing diffs is a real option — see [best local LLMs for code review](/local-llms/best-local-llms-code-review).',
+        content: '**If your team merges fewer than five pull requests a week and review turnaround is already same-day, a paid review bot adds cost and comment noise before it adds enough signal to be worth triaging.** The value of automated review scales with volume; below a certain throughput, a human reading the diff is simply faster.\n\nThe same applies if your team already has a strict review culture that catches what matters. Measure your escaped-bug rate first, and only add a bot if that number justifies it. If you want the capability without the subscription, a local model reviewing diffs is a real option — see [best local LLMs for code review](/local-llms/best-local-llms-code-review), or [local AI code review vs. CodeRabbit](/local-llms/local-ai-code-review-vs-coderabbit-2026) for the honest trade-offs of building that pipeline yourself.',
         callouts: [
           {
             type: 'tip',
@@ -379,6 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Local AI code review vs. CodeRabbit](/local-llms/local-ai-code-review-vs-coderabbit-2026) — whether a self-hosted Qwen3-Coder + PR-Agent pipeline is a realistic substitute for CodeRabbit, and the honest limits of the DIY route',
           '[Best local LLMs for code review](/local-llms/best-local-llms-code-review) — running review against a local model instead of a SaaS bot',
           '[Best AI coding assistant with a local LLM](/local-llms/best-ai-coding-assistant-local-llm) — the tools that write the diff a review bot reads',
           '[The local LLM developer stack](/local-llms/local-llm-developer-stack) — where review fits in the wider toolchain',
