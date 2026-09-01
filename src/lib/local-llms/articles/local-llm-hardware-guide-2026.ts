@@ -5696,7 +5696,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: '2026年本地LLM硬件：GPU vs 迷你PC vs Mac 对比',
       seoTitle: '2026年本地LLM硬件要求：8GB到70B，按显存划分',
-      intro: '运行本地LLM意味着将模型与GPU的显存相匹配。截至，一个7B模型在Q4_K_M下大约需要4-5 GB显存（标准经验法则：4位精度下每十亿参数约0.6 GB），在Q8下需要8-9 GB，14B模型在Q4_K_M下需要约9 GB，而大多数70B模型需要约40 GB——超过单张RTX 4090（24 GB）的容量。本指南给出每种模型规模的精确硬件要求，然后是8 GB、12 GB、16 GB和24 GB显存档位的最佳模型，本地运行70B（以及规模大得多的GLM-5.3）真正需要什么，16 GB系统内存上的纯CPU推理，MacBook 8 GB的选项，以及今年内存短缺之后的当前GPU价格。',
+      intro: '运行本地LLM意味着将模型与GPU的显存相匹配。一个7B模型在Q4_K_M下大约需要4-5 GB显存（标准经验法则：4位精度下每十亿参数约0.6 GB），在Q8下需要8-9 GB，14B模型在Q4_K_M下需要约9 GB，而大多数70B模型需要约40 GB——超过单张RTX 4090（24 GB）的容量。本指南给出每种模型规模的精确硬件要求，然后是8 GB、12 GB、16 GB和24 GB显存档位的最佳模型，本地运行70B（以及规模大得多的GLM-5.3）真正需要什么，16 GB系统内存上的纯CPU推理，MacBook 8 GB的选项，以及今年内存短缺之后的当前GPU价格。',
       metaDescription: '按显存划分的本地LLM硬件要求：8、16和24 GB GPU的最佳模型，以及70B和GLM-5.3的精确需求。RTX 50系列、Apple M5。',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-zh.webp',
       publishDate: '2026-04-04',
@@ -5882,7 +5882,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: '哪个GPU档位匹配你的工作负载？',
-          content: '**截至，NVIDIA GPU 在所有价位上都为本地LLM推理提供最高的每秒 token 数。** 下面每个档位的小节给出具体的模型推荐。要查看详细的基准对比，请参见[本地LLM最佳GPU指南](/zh/local-llms/best-gpus-for-local-llms)。',
+          content: '**NVIDIA GPU 在所有价位上都为本地LLM推理提供最高的每秒 token 数。** 下面每个档位的小节给出具体的模型推荐。要查看详细的基准对比，请参见[本地LLM最佳GPU指南](/zh/local-llms/best-gpus-for-local-llms)。',
           columns: ['档位', 'GPU', '显存', '最适合', '速度'],
           rows: [
             { '档位': '预算型 (~$585)', 'GPU': 'RTX 5060 Ti', '显存': '16 GB', '最适合': '7-13B 模型', '速度': '~60 tok/s' },
@@ -5894,7 +5894,7 @@ schema: {
             { '档位': '桌面AI ($4,699)', 'GPU': 'NVIDIA DGX Spark', '显存': '128 GB', '最适合': '大型 MoE 模型（不含 GLM-5.3）', '速度': '~3 tok/s (稠密 70B)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: '截至，RTX 50 系列（Blackwell）是当前世代，也是唯一仍在生产的 NVIDIA 消费级卡——RTX 40 系列已停产。RTX 5090（32 GB）是 70B 工作要购买的卡，尽管持续恶化的内存短缺已使街价超过其 $1,999 MSRP 的两倍。' },
+            { type: 'keyPoint', text: 'RTX 50 系列（Blackwell）是当前世代，也是唯一仍在生产的 NVIDIA 消费级卡——RTX 40 系列已停产。RTX 5090（32 GB）是 70B 工作要购买的卡，尽管持续恶化的内存短缺已使街价超过其 $1,999 MSRP 的两倍。' },
           ],
           image: '/images/gpu-tier-comparison-zh.svg',
           imageCaption: 'GPU 档位推荐（街价）：~$585 RTX 5060 Ti（16GB，7-13B，60 tok/s），~$880 RTX 5070（12GB，14B，90 tok/s），~$1,450 RTX 5080（16GB，14-32B，130 tok/s），~$4,300–5,000+ RTX 5090（32GB，70B，200 tok/s），$4,699 DGX Spark（128GB，大型 MoE）。GPU 选择比 CPU 重要 10 倍。',
