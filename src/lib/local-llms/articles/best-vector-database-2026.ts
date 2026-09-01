@@ -2938,7 +2938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'RAGアプリケーションを構築する開発者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '15分で読めます',
     primaryTerm: 'ベクトルデータベース',
     targetKeywords: [
@@ -3073,7 +3073,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: '自己ホストかマネージドか',
-        content: '**自己ホストはコストの制御とデータ所在地を手に入れ、可用性・バックアップ・スケーリングを引き受けることを意味します。マネージドはそれを売り戻してくれます。** 率直に言えば、金額の差は多くのチームが思うより小さく、時間の差は大きいというのが実態です。\n\n控えめなサーバー1台上のQdrantやWeaviateなら、100万ベクトルをインフラ費で月40〜80ドル程度に収められます。同規模ではマネージドの相当プランも似た帯に収まります。実際に両者を分けるのは、パッチ適用、監視、まずいデプロイからの復旧、ディスクが埋まったときの呼び出しに誰かが費やす月2〜5時間です。そこにチームの実際の時給を当てはめると、比較はたいてい逆転します。\n\n自己ホストが明確に勝つ場面は、主に費用の問題ではありません。データ所在地、隔離あるいはオンプレミスの要件、そして従量課金が固定サーバーを追い越すほど高い利用量です。マネージドが明確に勝つのは、余剰の技術者がいない小さなチームで、払わない選択肢が節約ではなく「出荷が遅れる」ことを意味する場合です。',
+        content: '**自己ホストはコストの制御とデータ所在地を手に入れ、可用性・バックアップ・スケーリングを引き受けることを意味します。マネージドはそれを売り戻してくれます。** 率直に言えば、金額の差は多くのチームが思うより小さく、時間の差は大きいというのが実態です。\n\n控えめなサーバー1台上のQdrantやWeaviateなら、100万ベクトルをインフラ費で月40〜80ドル程度に収められます。同規模ではマネージドの相当プランも似た帯に収まります。実際に両者を分けるのは、パッチ適用、監視、まずいデプロイからの復旧、ディスクが埋まったときの呼び出しに誰かが費やす月2〜5時間です。そこにチームの実際の時給を当てはめると、比較はたいてい逆転します。\n\n**自己ホストはおもちゃ規模をはるかに超えても十分快適に動きますが、現実の天井があります。** Qdrantのキャパシティ計画のドキュメントは、コレクションが約100万ベクトルを超えたらシャーディング（分割）することを推奨しており、同社が公開しているメモリ消費量の数値では、1,536次元（OpenAIの埋め込みサイズ）で完全にメモリ上に載るHNSWインデックスが100万ベクトルあたりRAM約6〜7 GBを必要とし、ディスク上のストレージ（mmap）を受け入れて速度をわずかに犠牲にすれば、100万ベクトルあたり約1.2 GBで済むとされています。実務上これは、適切にサイズ設計された単一ノード（RAM 32 GB以上）が、複数ノードへの分割という運用の複雑さを引き受けるだけの価値が出る前に、数千万ベクトルを支えるということです。最も早く卒業することになるのはChromaの組み込みモードで、これはサーバーではなく単なるPythonプロセスであり、そもそも本番規模のインデックス向けに設計されていません。\n\n自己ホストが明確に勝つ場面は、主に費用の問題ではありません。データ所在地、隔離あるいはオンプレミスの要件、そして従量課金が固定サーバーを追い越すほど高い利用量です。マネージドが明確に勝つのは、余剰の技術者がいない小さなチームで、払わない選択肢が節約ではなく「出荷が遅れる」ことを意味する場合です。',
+        decisionBlock: {
+          title: '自己ホストかマネージドか？',
+          localIf: [
+            '試作・学習中、または小〜中規模のデータセットを運用している — Chroma（組み込み・無料）や自己ホストのQdrantなら小さなサーバー以上の費用はかからない',
+            'データ所在地や隔離されたデプロイが厳格な要件である — インデックスが自社インフラから一切出ない',
+            'すでにKubernetesやDocker Composeを運用しており、月2〜5時間の運用工数を吸収できる',
+            'ベクトル数が数千万件を十分下回っている — 適切にサイズ設計された単一ノード（RAM 32 GB以上）ならまだインデックスをメモリ上に保てる水準。上記のQdrantのキャパシティ計画の注記を参照',
+          ],
+          cloudIf: [
+            '専任のDevOps余力がなく、自己ホストが求める月2〜5時間のパッチ適用・監視・バックアップを吸収できない',
+            'ベストエフォートではなく保証された可用性の約定が必要 — Pinecone Enterpriseは99.95%、Qdrant Premiumは99.9%',
+            '最初からエンタープライズ機能が必要 — SSO、監査ログ、HIPAA準拠、専任サポート',
+            'チームが快適に運用できる規模を超えて拡大しており、そのために採用や育成をするより、従量課金の予測可能な請求のほうがよい',
+          ],
+          quick: [
+            '費用ゼロ、サーバーなし、試作向け → Chroma組み込み',
+            '自己ホストは無料、実運用規模でのコスト対性能が最良 → Qdrant',
+            '運用負荷ゼロだが料金は払う → Pinecone Builder（月20ドル定額）',
+            'ハイブリッド検索の精度を最優先 → Weaviate（2026年6月以降は無料枠あり）',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -3384,6 +3405,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '出典',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud の料金', description: '0.5 vCPU・1 GB RAM・4 GBディスクという永続無料枠の上限、Standardの従量課金、99.5%と99.9%の稼働率保証。' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant のキャパシティ計画', description: 'コレクションが約100万ベクトルを超えたらシャーディングするという公式の推奨、および上記の自己ホストの天井の根拠となるRAMの計算式（ベクトル数×次元数×4バイト×1.5）。' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：100万ベクトルに必要な最小RAM', description: '1,536次元（HNSWをメモリ上に保持）で100万ベクトルあたり約6〜7 GBのRAM、ディスク上のストレージ（mmap）なら100万ベクトルあたり約1.2 GBという数値の出典。' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant リポジトリ', description: 'スター34,242件、Apache-2.0ライセンス、実装言語Rust。2026年8月28日にGitHub APIから取得。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone の料金', description: 'Starter・Builder・Standard・Enterpriseの上限。20ドルの定額Builderと月50ドル・月500ドルの最低額を含む。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone パートナーページ', description: '技術・ソリューション・紹介の各パートナー区分と並ぶ、コンテンツ制作者向けアフィリエイトプログラムの確認。' },
@@ -3412,7 +3435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年 最適なベクトルデータベース：Qdrant・Pinecone・Weaviate・Chroma',
       description: 'RAG向けにQdrant、Pinecone、Weaviate、Chromaを比較。確認済みの料金、ライセンス、スター数、無料枠の上限に加え、2026年6月に導入されたWeaviateの無期限無料枠とChroma Cloudを扱います。2026年8月時点で確認。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ja/local-llms/best-vector-database-2026',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
