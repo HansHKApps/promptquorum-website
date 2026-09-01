@@ -22,6 +22,11 @@ every page.
 | 6 | `/de/local-llms/llm-quantization-explained` | 7/10 | **10/10** | **+3** | C | 48 / 2,415 / 2.0% / 3.7 |
 | 7 | `/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026` | 6/10 | **10/10** | **+4** | C | 46 / 4,930 / 0.9% / 5.3 |
 | 8 | `/zh/local-llms/apple-silicon-local-llm-guide-2026` | 6/10 | **10/10** | **+4** | C | 163 / 4,648 / 3.5% / 5.1 |
+| 9 | `/de/local-llms/best-local-llms-for-coding` | n/r | **10/10** | — | C | n/r (query cluster: ~23 impr / 0% CTR) |
+| 10 | `/ja/local-llms/best-local-llms-for-coding` | n/r | **10/10** | — | C | n/r (query cluster: ~305 impr) |
+| 11 | `/es/local-llms/top-open-source-models-ollama` | n/r | **10/10** | — | C + **E** | n/r (query cluster: ~207 impr, mostly 0% CTR) |
+| 12 | `/ko/local-llms/best-beginner-local-llm-models` | n/r | **10/10** | — | C | n/r (query cluster: ~177 impr) |
+| 13 | `/zh/local-llms/small-local-llm-models` | n/r | **10/10** | — | C | n/r (query cluster: ~115 impr) |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -605,3 +610,123 @@ Two structural notes found doing it:
   the TL;DR, or they are stored and never rendered.
 
 **Remaining: 1,524 blocks.** This is per-page authoring in 9 languages, not a sweep.
+
+
+---
+
+# Rows 9–13 — reconstructed 2026-09-01 from git
+
+These five pages were finished on 2026-08-30 but never written up. The sections below are
+reconstructed from the commits and their diffs, not from a live re-audit. Before-scores were
+not recorded at the time and are marked `n/r`; per the standing rule every page shipped at 10/10.
+
+**Shared caveat: none of these five commits bumped `dateModified`.** All five changed
+reader-visible text (lead answers, meta descriptions, a new FAQ). See the metadata-hygiene gap.
+
+## Page 9 — /de/local-llms/best-local-llms-for-coding
+
+Commit: `e0e2f3837`. Branch `seo/de-coding-ki-vocab`.
+
+**Diagnosis C — the page used the technical term, the searcher used the everyday one.**
+`lokale KI`, `KI-Modell` and `coden` each appeared **zero times** in a 59 KB German block, against
+a live KI query cluster: `bestes lokales ki modell` (pos. 10.2), `lokale coding ki` (10.4),
+`beste lokale ki modelle` (15.2), `beste ki zum coden` (2.5), `welche lokale ki ist die beste`
+(6.7) — roughly 23 impressions at 0% CTR. Fourth page in a row with this defect.
+
+| Field | Before | After |
+|---|---|---|
+| `leadAnswerBlock` | `Im Juli 2026 sind die besten lokalen Programmiermodelle Kimi K2.6 …` | `Die besten lokalen Programmiermodelle **und KI-Modelle** 2026 sind Kimi K2.6 …` |
+| new FAQ | — | `Welche lokale KI ist die beste zum Coden und Programmieren?` (visible FAQ **and** `faqSchema` Question — both added, no orphan) |
+| `intro` / `snippets` / 2 `imageCaption`s / schema `description` | `… im Juli 2026 …` | `… 2026 …` |
+
+Vocabulary added: **lokale KI, lokales KI-Modell, coden, programmieren**. The new FAQ states
+plainly that *lokale KI / lokales KI-Modell / lokales LLM* mean the same thing, and is built only
+from figures already on the page (Qwen 3.6 27B 77,2% SWE-bench, Kimi K2.6 58.6 SWE-Bench Pro,
+Devstral Small 24B) — no new claims.
+
+Also removed **8 stale month snapshots** (the banned trailing-snapshot pattern). Four remaining
+Juni/Juli 2026 references are genuine release dates (Kimi K2.7 Code, Laguna XS 2.1) and were kept,
+since there the date is the fact. The other 8 locale blocks carry the same month framing and were
+left untouched by this commit.
+
+## Page 10 — /ja/local-llms/best-local-llms-for-coding
+
+Commit: `f5d3f5830`. Branch `seo/ja-coding-osusume`.
+
+**Diagnosis C — intent vocabulary present in the title but absent from the body.**
+`おすすめ` is the second-largest cluster on this page (~190 impressions across
+`ローカルllm コーディング おすすめ` and variants) and appeared **twice** in a 30 KB Japanese block
+despite sitting in the title. `最強` appeared 3 times against ~102 impressions
+(`ローカルllm コーディング 最強`, 5% CTR at pos. 6.4); `ランキング` twice against ~13.
+
+| Field | Before | After |
+|---|---|---|
+| `leadAnswerBlock` | `**最高のローカルコーディングモデルはKimi K2.6 …` | `**コーディング向けローカルLLMの**おすすめランキング**は、**最強**のKimi K2.6 …` |
+| `intro` | `2026年7月のコーディング用最高の…` | `2026年の…` |
+| schema `description` | `2026年7月：Kimi K2.6 …` | `2026年：Kimi K2.6 …` |
+
+Vocabulary added: **おすすめ, ランキング, 最強** — all three now carried by the lead answer without
+changing a single fact. Two stale month snapshots dropped; the 5 remaining 2026年6月/7月 references
+are release dates for Kimi K2.7 Code and Laguna XS 2.1 and were kept.
+
+Recorded as *not* a wording problem: `kimi ローカルllm` draws 96 impressions at 1% CTR from
+position 8.1 while Kimi is already named 50 times — that is a ranking problem.
+
+## Page 11 — /es/local-llms/top-open-source-models-ollama
+
+Commit: `5f9f4f21e`. Branch `seo/es-ollama-modelos-para`.
+
+**Diagnosis C on the wording, E on the traffic.** `modelos para ollama` (23 impressions, 0% CTR)
+appeared **zero times** in a 67 KB Spanish block — the page says `modelos de Ollama` 13 times, and
+the title and meta already carry that variant. `gratis` was likewise absent, though
+`ollama modelos gratis` is a live query and every model listed genuinely is free and open source.
+
+| Field | Before | After |
+|---|---|---|
+| `leadAnswerBlock` | `**La versión actual de Ollama es v0.33.1 …` | `**Todos los **modelos para Ollama** de esta lista son **gratis** y de código abierto.** La versión actual de Ollama es v0.33.1 …` |
+
+Vocabulary added: **modelos para Ollama, gratis** — placed ahead of, without displacing, the
+version answer that the `última versión` cluster (~36 impressions) lands on.
+
+Recorded honestly as diagnosis **E** (ranking, not wording): `ollama modelos` (93 impr, pos. 9.2),
+`modelos de ollama` (60, 6.8) and `ollama models` (31, 10.4) are all at 0% CTR because they sit at
+the bottom of page one or on page two. No rewrite fixes that.
+
+## Page 12 — /ko/local-llms/best-beginner-local-llm-models
+
+Commit: `3032551c8`. Branch `seo/ko-beginner-local-ai`.
+
+**Diagnosis C — fifth page in the queue with the same defect.**
+`로컬 AI` was the second-largest cluster on this page and appeared **zero times** in the Korean
+block: `로컬 ai 추천` (86 impr, 1.2% CTR), `로컬 ai 모델 추천` (56, 12.5%), `로컬ai 추천` (25, 0%),
+`로컬 ai 모델` (8), `로컬 ai 종류` (2) — roughly 177 impressions with no wording to match.
+`순위` appeared 4 times against ~91 impressions; `종류` twice against ~49.
+
+| Field | Before | After |
+|---|---|---|
+| `leadAnswerBlock` | `**2026년 초보자를 위한 최고의 로컬 LLM 모델 5가지는 …` | `**2026년 초보자를 위한 **로컬 AI 모델 추천 순위** 5가지는 … 로컬 AI와 로컬 LLM은 같은 것을 가리키며, 아래에서 **종류**별 성능과 사양을 비교합니다.**` |
+| `metaDescription` | `로컬 LLM 추천 순위: Llama 3.2 3B(2.5GB) …` | `**로컬 AI·로컬 LLM 추천 순위**: Llama 3.2 3B(2.5GB) …` |
+
+Vocabulary added: **로컬 AI, 순위, 종류**. This is the only one of the five that also changed the
+meta description, so it is the only one whose SERP snippet actually changed.
+
+## Page 13 — /zh/local-llms/small-local-llm-models
+
+Commit: `6e4b50e6e`. Branch `seo/zh-small-models-vocab`.
+
+**Diagnosis C — the block used the wrong word form.** `小型` appeared 40 times and `小模型` only
+twice, while `小模型` is the form searchers use: `本地小模型` (43 impr, 20.9% CTR), `小模型推荐`
+(21, 0%), `最强小模型` (16, 0%), `小模型排行榜` (4, 0%) — roughly 80 impressions. `本地模型`
+appeared **zero times** against 31 impressions (`本地模型排行` at pos. 8.2, `本地模型推荐` at 3.8);
+`排行榜` once against 4.
+
+| Field | Before | After |
+|---|---|---|
+| `leadAnswerBlock` | `**小型本地大模型（10亿至40亿参数）可以在 4–8 GB 内存的机器上运行 …**` | `**本地小模型**（10亿至40亿参数的**本地模型**）可以在 4–8 GB 内存的机器上运行 … 下面按性能给出**本地小模型推荐与排行榜**，最强的一款是 Phi-4 Mini。**` |
+
+Vocabulary added: **小模型, 本地模型, 推荐, 排行榜, 最强**. The title already carried
+本地小模型推荐 and 排行; the body now matches it.
+
+Not covered on purpose: `本地大模型推薦` (4 impressions) is Traditional Chinese. This block is
+Simplified, and mixing scripts to chase 4 impressions would be wrong — Traditional is a separate
+zh-Hant question.
