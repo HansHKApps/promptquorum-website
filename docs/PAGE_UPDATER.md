@@ -76,7 +76,7 @@ A `monthly` page has **two independent update cadences**. Do not conflate them.
 **Rules:**
 - The monthly content refresh is **facts-only**. It does **not** rewrite the title/meta/descriptions.
 - **Exception (always allowed):** if a monthly fact refresh makes the title or meta *contradict* the updated body (Anti-Pattern #6), fix it on the spot — a forced correction is not a scheduled SEO change.
-- The quarterly SEO review **requires GSC data** (Step 0) — it is the heaviest consumer of per-page query/CTR/position signal. Without GSC, skip the SEO review; do not guess at titles.
+- The quarterly SEO review **prefers GSC data** (Step 0) — it is the heaviest consumer of per-page query/CTR/position signal. Without GSC, do NOT skip the review: run the **Data-Free Meta Review** (see Step 0) instead — full field review (length, language, topic match, staleness, completeness) plus judgment optimization across all 9 locale blocks, labeled as data-free in the report. Never invent query data; fields that pass every check get `NO CHANGE`.
 - When `next_refresh_due` and `next_seo_review_due` both fall in the same month, do them together: facts first, then meta.
 - Set `last_seo_review` to the date a review actually ran, and roll `next_seo_review_due` to the next fixed quarter anchor.
 - Quarterly SEO review applies to **`monthly`-tier pages only**. `semi_annual` pages already fold a structural/meta review into their twice-yearly refresh.
@@ -173,7 +173,7 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 
 ### Step 0: Ingest GSC Query Data (MANDATORY FIRST STEP)
 
-**Before touching any content, the operator must provide Google Search Console data for the page being updated.** This is not optional. Without GSC data, the update is a guess. With it, the update is aligned to what real users actually search for.
+**Before touching any content, ask the operator for Google Search Console data for the page being updated.** Asking is not optional. With GSC data, the update is aligned to what real users actually search for. If the operator confirms no GSC data exists (new page, too few impressions), the refresh still runs — in **No-GSC mode**, with the Data-Free Meta Review below replacing the query analyses.
 
 **What to provide:**
 - GSC Performance report filtered to the specific page URL
@@ -204,7 +204,21 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 | 10,506 US impressions, 0 clicks | US queries are likely informational/version-check — check if title signals "latest" or "updated" |
 | Mobile CTR 3.4% vs Desktop CTR 0.07% | Desktop impressions are low-intent bulk queries — don't optimize for them, focus on mobile-intent queries |
 
-**If no GSC data is provided:** Ask the operator for it. Do not proceed with the update without it. A content refresh without search data is guesswork.
+**If no GSC data is provided:** Ask the operator once. If they provide data → run the analyses above. If they confirm none exists → switch to No-GSC mode below and run the FULL refresh process anyway (Steps 1–6 all still run). Never stop the update, and never skip the meta review, because data is missing. Never fabricate query data.
+
+#### No-GSC mode: the Data-Free Meta Review
+
+When no GSC data exists, review the meta fields against the page itself instead of query data. Intent proxy = the page's own content + web research + the freshness tier. For **every locale block** (en, de, fr, ja, zh, es, pt, ar, ko), check and fix:
+
+1. **Length** — title/meta within per-locale limits (incl. CJK counts for ja/zh; use the limits in `/geo-meta-optimizer`).
+2. **Language** — every field in its block's own language; no English leakage into non-EN blocks.
+3. **Topic match** — title/meta/OG reflect the page's actual current content and top recommendation; no contradiction with the body (Anti-Pattern #6, applied per-locale).
+4. **Staleness** — no superseded model names/versions vs `current_models_mentioned`.
+5. **Site rules** — no month names in trailing-stamp position; year where the tier requires it; `| PromptQuorum` suffix only on titles ≤45 chars; no marketing superlatives.
+6. **Completeness** — no missing meta/OG description in any locale block; FAQ schema matches visible content.
+7. **Judgment optimization** — after defects are fixed, weak-but-not-wrong titles/metas MAY be improved by best judgment; fields that pass all checks get `NO CHANGE`.
+
+Label the run `GSC data: NONE — data-free review mode` in the Step 6 report, with a reason on every meta change, so a later GSC-backed review can re-evaluate. The full checklist with report templates lives in the `/updater` skill (Step 0-ALT).
 
 ### Step 1: Read the Entire Page First
 
