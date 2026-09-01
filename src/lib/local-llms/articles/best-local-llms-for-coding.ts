@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Kimi K2.6 leads at 58.6 SWE-Bench Pro, Qwen 3.6 27B hits 77.2% SWE-bench, Devstral 24B wins agentic coding. Compare VRAM, speed and benchmarks on Ollama.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-30',
       leadAnswerBlock: '**In July 2026, the best local coding models are Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT license) for maximum quality, Qwen 3.6 27B (77.2% SWE-bench, best dense model) for balanced performance, and Devstral Small 24B (best for agentic workflows at 24B). Laguna XS 2.1 (Poolside, SWE-bench Verified 70.9%) is the newest long-horizon agentic-coding challenger, and Kimi K2.7 Code (Moonshot AI) is a coding-focused evolution of K2.6. For 8 GB RAM: Qwen3 8B. All run via Ollama locally for offline, private code generation without cloud API costs.** Unlike HumanEval which tests single functions, SWE-bench (solving real GitHub issues) is now the primary benchmark for practical coding in 2026.',
       quickAnswerTop: {
         en: {
@@ -692,7 +692,7 @@ schema: {
       metaDescription: 'Kimi K2.6 lidera con 58.6 SWE-Bench Pro, Qwen 3.6 27B logra 77,2% SWE-bench y Devstral 24B gana en código agéntico. VRAM, velocidad y benchmarks en Ollama.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-30',
       leadAnswerBlock: '**En julio de 2026, los mejores modelos de programación locales son Kimi K2.6 (58.6 SWE-Bench Pro, MoE, licencia MIT modificada) para máxima calidad, Qwen 3.6 27B (77,2% SWE-bench, mejor modelo denso) para rendimiento equilibrado y Devstral Small 24B (mejor para flujos de trabajo agénticos a 24B). Laguna XS 2.1 (Poolside, SWE-bench Verified 70,9%) es el nuevo challenger agéntico de largo alcance, y Kimi K2.7 Code (Moonshot AI) es una evolución de K2.6 enfocada en código. Para 8 GB de RAM: Qwen3 8B. Todos se ejecutan vía Ollama localmente para generación de código sin conexión, privada y sin costos de API en la nube.** A diferencia de HumanEval que evalúa funciones individuales, SWE-bench (resolución de issues reales de GitHub) es ahora el benchmark principal para programación práctica en 2026.',
       quickAnswerTop: {
         en: {
@@ -1358,7 +1358,7 @@ schema: {
       metaDescription: '⁨Kimi K2.6⁩ يتصدر بـ ⁨58.6⁩ في ⁨SWE-Bench Pro⁩، ⁨Qwen 3.6 27B⁩ يبلغ ⁨77.2%⁩ في ⁨SWE-bench⁩، ⁨Devstral 24B⁩ الأفضل للبرمجة الوكيلة. قارن ⁨VRAM⁩ عبر ⁨Ollama⁩.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-30',
       leadAnswerBlock: '**في يوليو 2026، أفضل نماذج البرمجة المحلية هي Kimi K2.6 (58.6 SWE-Bench Pro، MoE، رخصة MIT معدّلة) لأقصى جودة، وQwen 3.6 27B (77.2% SWE-bench، أفضل نموذج كثيف) لأداء متوازن، وDevstral Small 24B (الأفضل لسير العمل الوكيل بحجم 24B). Laguna XS 2.1 (من Poolside، SWE-bench Verified 70.9%) هو أحدث منافس للبرمجة الوكيلة طويلة المدى، وKimi K2.7 Code (Moonshot AI) هو تطوير لـ K2.6 مخصص للبرمجة. لـ 8 GB من RAM: Qwen3 8B. تعمل جميعها عبر Ollama محلياً لتوليد كود دون اتصال وخاص ودون تكاليف API سحابية.** على عكس HumanEval الذي يقيّم الدوال الفردية، أصبح SWE-bench (حل مشكلات GitHub الحقيقية) المعيار الأساسي للبرمجة العملية في 2026.',
       quickAnswerTop: {
         ar: {
@@ -1959,7 +1959,7 @@ schema: {
       metaDescription: 'Kimi K2.6 lidera com 58,6 SWE-Bench Pro, Qwen 3.6 27B atinge 77,2% SWE-bench e Devstral 24B vence em código agêntico. VRAM, velocidade e benchmarks no Ollama.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Em julho de 2026, os melhores modelos de programação locais são Kimi K2.6 (58,6 SWE-Bench Pro, MoE, licença MIT modificada) para qualidade máxima, Qwen 3.6 27B (77,2% SWE-bench, melhor modelo denso) para desempenho equilibrado e Devstral Small 24B (melhor para fluxos de trabalho agênticos a 24B). O Laguna XS 2.1 (Poolside, SWE-bench Verified 70,9%) é o novo desafiante agentivo de longo horizonte, e o Kimi K2.7 Code (Moonshot AI) é uma evolução do K2.6 focada em código. Para 8 GB de RAM: Qwen3 8B. Todos rodam via Ollama localmente para geração de código offline, privada e sem custos de API na nuvem.**',
       quickAnswerTop: {
         en: {
@@ -2402,7 +2402,7 @@ schema: {
       metaDescription: 'Kimi K2.6 führt mit 58.6 SWE-Bench Pro, Qwen 3.6 27B erreicht 77,2% SWE-bench, Devstral 24B für agentic Coding. Lokal via Ollama: VRAM, Tempo, Benchmarks.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-30',
       leadAnswerBlock: '**Die besten lokalen Programmiermodelle und KI-Modelle 2026 sind Kimi K2.6 (58.6 SWE-Bench Pro, MoE, Modified MIT-Lizenz) für maximale Qualität, Qwen 3.6 27B (77,2% SWE-bench, bestes dichtes Modell) für ausgewogene Leistung und Devstral Small 24B (beste für Agentic Workflows bei 24B). Laguna XS 2.1 (Poolside, SWE-bench Verified 70,9%) ist der neueste Agenten-Herausforderer für langfristiges Coding, und Kimi K2.7 Code (Moonshot AI) ist eine Coding-fokussierte Weiterentwicklung von K2.6. Für 8 GB RAM: Qwen3 8B. Alle laufen über Ollama lokal für Offline-, privale Codegenerierung ohne Cloud-API-Kosten.** Im Gegensatz zu HumanEval, das einzelne Funktionen testet, testet SWE-bench (Lösen echter GitHub-Probleme) jetzt die primäre Benchmark für praktisches Programmieren 2026.',
       audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
       readTime: '9 Min. Lesezeit',
@@ -2859,7 +2859,7 @@ schema: {
       metaDescription: 'Kimi K2.6 mène avec 58.6 SWE-Bench Pro, Qwen 3.6 27B atteint 77,2% SWE-bench, Devstral 24B gagne en code agentique. VRAM, vitesse et benchmarks sur Ollama.',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**En juillet 2026, les meilleurs modèles de programmation locaux sont Kimi K2.6 (58.6 SWE-Bench Pro, MoE, licence MIT modifiée) pour la qualité maximale, Qwen 3.6 27B (77,2% SWE-bench, meilleur modèle dense) pour les performances équilibrées et Devstral Small 24B (meilleur pour les workflows agentives à 24B). Laguna XS 2.1 (Poolside, SWE-bench Verified 70,9%) est le nouveau challenger agentique de longue durée, et Kimi K2.7 Code (Moonshot AI) est une évolution de K2.6 axée code. Pour 8 GB RAM : Qwen3 8B. Tous fonctionnent via Ollama localement pour la génération de code hors ligne privée sans frais API cloud.** Contrairement à HumanEval qui teste des fonctions isolées, SWE-bench (résolution de vrais problèmes GitHub) est maintenant le benchmark principal pour la programmation pratique 2026.',
       audience: 'Débutants exécutant leur premier LLM local sur du matériel grand public',
       readTime: '9 min de lecture',
@@ -3292,7 +3292,7 @@ schema: {
       metaDescription: 'コーディング向けローカルLLMのおすすめはKimi K2.6（SWE-Bench Pro 58.6で首位）。Qwen 3.6 27Bは77.2% SWE-bench、Devstral 24Bはエージェント用。VRAM・速度・ベンチマークを比較。',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-30',
       leadAnswerBlock: '**コーディング向けローカルLLMのおすすめランキングは、最強のKimi K2.6（58.6 SWE-Bench Pro、MoE、Modified MIT ライセンス）が最高品質、Qwen 3.6 27B（77.2% SWE-bench、最高の密集モデル）でバランスのとれたパフォーマンス、Devstral Small 24B（24B級エージェントワークフロー最適）です。Laguna XS 2.1（Poolside、SWE-bench Verified 70.9%）は最新の長時間エージェントコーディング対抗モデル、Kimi K2.7 CodeはK2.6のコーディング特化進化版です。8GB RAM：Qwen3 8B。すべて Ollama を介してローカルで実行され、クラウド API コストなしのオフライン プライベート コード生成が可能です。** 単一関数をテストする HumanEval とは異なり、SWE-bench（実際の GitHub 問題の解決）は 2026 年の実践的なコーディングの主要ベンチマークです。',
       audience: 'コンシューマハードウェア上で初めてのローカルLLMを実行している初心者',
       readTime: '9分で読める',
@@ -3592,7 +3592,7 @@ schema: {
         headline: '2026年最高のコーディング用ローカルLLM：Kimi K2.6（58.6 SWE-Bench Pro）vs Qwen 3.6',
         description: '2026年：Kimi K2.6（58.6 SWE-Bench Pro）はコーディング用最高のローカルLLM。Qwen 3.6 27B（77.2% SWE基準）、Devstral 24B、新登場のLaguna XS 2.1との比較。SWE基準がHumanEvalに取って代わります。',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-30',
         url: 'https://www.promptquorum.com/ja/local-llms/best-local-llms-for-coding',
         inLanguage: 'ja',
         author: { '@type': 'Organization', 'name': 'PromptQuorum' },
@@ -3660,7 +3660,7 @@ schema: {
       metaDescription: 'Kimi K2.6以58.6 SWE-Bench Pro领先，Qwen 3.6 27B达77.2% SWE基准，Devstral 24B最适合代理编码。在Ollama上对比VRAM、速度与基准成绩。',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**2026年7月，最佳本地编码模型是Kimi K2.6（58.6 SWE-Bench Pro、MoE、修改版MIT许可证）提供最高品质，Qwen 3.6 27B（77.2% SWE基准、最佳密集模型）提供均衡性能，Devstral Small 24B（24B级代理工作流最佳）。Laguna XS 2.1（Poolside，SWE-bench Verified 70.9%）是最新的长时程代理编码挑战者，Kimi K2.7 Code是K2.6的编程专用进化版。8GB RAM：Qwen3 8B。所有通过Ollama本地运行，无云API成本的离线私密代码生成。** 与测试单个函数的HumanEval不同，SWE基准（解决实际GitHub问题）现在是2026年实际编码的主要基准。',
       audience: '在消费级硬件上运行首个本地LLM的初学者',
       readTime: '阅读约9分钟',
@@ -3959,7 +3959,7 @@ schema: {
         headline: '2026年最佳本地编码LLM：Kimi K2.6（58.6 SWE-Bench Pro）vs Qwen 3.6',
         description: '2026年7月：Kimi K2.6（58.6 SWE-Bench Pro）是最佳本地编码LLM。与Qwen 3.6 27B（77.2% SWE基准）、Devstral 24B及新登场的Laguna XS 2.1对比。SWE基准取代HumanEval。',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-28',
         url: 'https://www.promptquorum.com/zh/local-llms/best-local-llms-for-coding',
         inLanguage: 'zh',
         author: { '@type': 'Organization', 'name': 'PromptQuorum' },
