@@ -753,4 +753,259 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'audience': { '@type': 'Audience', 'audienceType': 'Utilisateurs de LLM local voulant connaître le coût électrique réel de leur installation et si le solaire de balcon peut le compenser' },
     },
   },
+  ja: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-01',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
+    current_hardware_mentioned: [
+      'RTX 4090',
+      'RTX 3090',
+      'RTX 4070',
+      'Mac Mini M4',
+      'MacBook Pro M4 Max',
+      'EcoFlow STREAM Ultra',
+      'Jackery HomePower 2000 Ultra',
+      'Zendure SolarFlow Hub 2000',
+      'BLUETTI AC180',
+      'BLUETTI AC180P',
+    ],
+    theme: 'Overview & Reference',
+    affiliateDisclosure: true,
+    title: 'ローカルLLMの電気代はいくらか — ベランダ太陽光で相殺できるか（2026年）',
+    seoTitle: 'ローカルLLMの電気代とベランダ太陽光（2026年）',
+    intro:
+      'ローカルLLMを1日数時間動かすGPUは、実際に計算できる金額のコストがかかります — 米国では1日4時間の中程度の利用で月額約$6.60、電力を大量に消費するカードを24時間365日動かせば月額約$60になります。800Wのベランダ太陽光システムは晴れた夏の日であれば中程度の利用ケースを十分にカバーできますが、特に冬には常時稼働する重い構成を相殺できません。本ガイドでは、一般的なローカルLLM用ハードウェアの正確な計算を示し、米国とドイツの電気代を比較し、実際に必要となるバッテリーサイズを算出します — 太陽光が本当に役立つ場合と役立たない場合について、正直な留保も添えて。',
+    metaDescription:
+      'ローカルLLMの電気代を計算: RTX 4090/3090/4070とMac Mini M4の消費電力、米国（$0.184/kWh）とドイツ（約€0.32/kWh）の月額コスト、800Wベランダ太陽光で相殺できるか。',
+    twitterDescription:
+      'ローカルLLMの実際の電気代 — RTX 4090/3090/4070とMac Mini M4の消費電力、米国とドイツの月額コスト比較、800Wベランダ太陽光で現実的に相殺できるかを解説。',
+    readTime: '10分で読める',
+    educationalLevel: 'Intermediate',
+    audience: '自分のローカルLLM環境の実際の電気代を知り、ベランダ太陽光で相殺できるかを知りたいユーザー',
+    primaryTerm: 'ローカルLLM 電気代',
+    targetKeywords: [
+      'ローカル llm 電気代',
+      'llm 24時間稼働 電気代',
+      'gpu 用 ベランダ 太陽光',
+      'ai 電気代 太陽光 相殺',
+      'ローカル ai 消費電力 計算',
+    ],
+    leadAnswerBlock:
+      '**アイドル状態のGPUが1日数時間ローカルLLMを動かす場合、米国では月額約$6.60（1日1.2kWh、18.4セント/kWh）かかります — RTX 4090クラスのカードで24時間365日稼働させる重い構成では、代わりに月額約$60になります。** 800Wのベランダ太陽光システムは晴れた夏の日には約3〜4.5kWhを発電しますが、冬には1日わずか約0.5〜1.5kWhしか発電しません — 夏の中程度利用ケースは十分にカバーできますが、どの季節でも常時稼働する重い構成を意味のある形で相殺することはできません。バッテリーは太陽光システムの定格出力ではなく、GPUの実際の消費電力に合わせてサイズを決めてください。',
+    quickAnswerTop: {
+      ja: {
+        question: 'ローカルLLMを動かすと電気代はいくらかかりますか？',
+        answer:
+          '300WのGPUを1日4時間動かすと、米国では18.4セント/kWhで月額約$6.60、ドイツでは料金プランによって1日1.2kWh・25〜40セント/kWh換算で月額約€11〜15かかります。450Wのカードを24時間365日動かす場合は、米国で月額約$60に近くなります。800Wのベランダ太陽光システムは夏の中程度利用ケースなら相殺できますが、どの季節でも24時間稼働の重い利用ケースは相殺できません。',
+        bullets: [
+          'RTX 4090: アイドル時約20〜33W、負荷時最大450W（TBP）',
+          'RTX 3090: アイドル時約18〜26W、負荷時約350W',
+          'RTX 4070: アイドル時10W、平均ゲーミング時186W、定格TDP 200W',
+          'Mac Mini M4: アイドル時5W未満、LLM推論時最大約65W',
+          '800Wベランダ太陽光: 夏は1日約3〜4.5kWh、冬は1日約0.5〜1.5kWh（ドイツのデータに基づく）',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: '重要ポイント', anchor: 'tldr' },
+      { label: 'ローカルLLM用ハードウェアの消費電力はどれくらいか', anchor: 'gpu-power' },
+      { label: '月あたりのコストはいくらか', anchor: 'monthly-cost' },
+      { label: 'ベランダ太陽光でローカルLLM環境を相殺できるか', anchor: 'solar-offset' },
+      { label: '実際に必要なバッテリーサイズはどれくらいか', anchor: 'battery-sizing' },
+      { label: '実際に誰に向いているか', anchor: 'who-should-do-this' },
+      { label: 'よくある間違い', anchor: 'common-mistakes' },
+      { label: 'よくある質問', anchor: 'faq' },
+      { label: '出典', anchor: 'sources' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: 'ローカルLLM環境は1日4時間の中程度利用で電気代が月額約$6.60、24時間稼働なら月額約$60かかる — 800Wのベランダ太陽光システムは夏の中程度利用ケースなら相殺できるが、どの季節でも24時間稼働の重い利用ケースは相殺できない。' },
+      { type: 'plain-terms', content: 'kWh（キロワット時）は電気料金の単位です — 300ワットのGPUを1時間動かすと0.3kWhを消費します。ワット数×時間を1,000で割り、1kWhあたりの電気料金を掛けるとコストになります。ベランダ太陽光の発電量も同じ単位で測定されるため、両者を直接比較できます。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '重要ポイント',
+        isTldr: true,
+        items: [
+          '300Wで1日4時間稼働するGPUは、米国で月額約$6.60（18.4セント/kWh）、ドイツでは料金プランによって月額約€11〜15かかる',
+          '450Wで24時間365日稼働するGPU（RTX 4090クラス）は、米国で月額約$60に近くなる — 中程度利用ケースのほぼ10倍',
+          'Apple Silicon（Mac Mini M4：アイドル時5W未満、推論ピーク約65W）は、単体GPU構成のごく一部のコストで運用できる',
+          '800Wのベランダ太陽光システムは晴れた夏の日には1日約3〜4.5kWh発電するが、冬は1日約0.5〜1.5kWhにとどまる — 季節による差はおよそ3〜7倍',
+          'バッテリーは太陽光システムの800W定格出力ではなく、GPUの実際の1日あたり消費電力に合わせてサイズを決めること — この2つの数値は直接比較できない',
+          'フランスのプラグイン太陽光インバーターの上限はドイツと同じ800Wであり、この機器クラスについてフランス独自のより厳しい上限は存在しない',
+        ],
+      },
+      gpuPower: {
+        id: 'gpu-power',
+        title: 'ローカルLLM用ハードウェアは実際どれくらい電力を消費するか',
+        content:
+          '**アイドル時と負荷時の消費電力の差が、電気代の計算を単純ではなくしています — カードは1日20時間ほぼ無音で待機していても、残り4時間フル稼働すれば、電気料金の中で最大の項目になり得ます。** 以下の数値はメーカー公表値と独立した測定値であり、PromptQuorumが独自に実施したベンチマークではありません。',
+        columns: ['ハードウェア', 'アイドル', '負荷 / 推論'],
+        rows: [
+          { 'ハードウェア': 'RTX 4090', 'アイドル': '約20〜33W', '負荷 / 推論': '最大450W（TBP）' },
+          { 'ハードウェア': 'RTX 3090', 'アイドル': '約18〜26W', '負荷 / 推論': '約350W' },
+          { 'ハードウェア': 'RTX 4070', 'アイドル': '10W', '負荷 / 推論': '平均186W（定格TDP 200W）' },
+          { 'ハードウェア': 'Mac Mini M4', 'アイドル': '5W未満', '負荷 / 推論': '最大約65W' },
+          { 'ハードウェア': 'MacBook Pro M4 Max', 'アイドル': '一桁台前半', '負荷 / 推論': '推論時約40〜80W、システムピーク約110W' },
+        ],
+        items: [
+          'RTX 4090: NVIDIAはTotal Board Powerを450Wと公表。独立した測定では、アイドル時消費電力は18W（積極的な電力制限構成）から33W（Founders Edition）の範囲で、負荷時はワークロードに応じて400〜600Wに達することがある。',
+          'RTX 3090: アイドル時はディスプレイ構成によって約18〜26W。ゲーミングまたは推論ワークロードでのフル負荷は約350W、一部の測定では365Wまで達する。',
+          'RTX 4070: NVIDIA自身が公表した数値 — アイドル時10W、動画再生時16W、平均ゲーミング時186W — に対し、定格TDPは200W。実測ピークは253Wまで確認されている。',
+          'Mac Mini M4: 独立した測定でアイドル時5W未満、LLM推論時最大約65W（ある測定ではピーク50Wを具体的に記録）。5台のMac Miniクラスタが推論を全力実行すると、合計で約200Wを消費した。',
+          'MacBook Pro M4 Max: LLM推論単体では約40〜80Wを消費。ディスプレイを含むシステム全体は、最も負荷の高い複合ワークロード時に約110Wでピークに達する — Apple Siliconの典型的な推論時消費電力30〜70Wは、単体デスクトップGPUの300W超を大きく下回る。',
+        ],
+      },
+      monthlyCost: {
+        id: 'monthly-cost',
+        title: '月あたりのコストはいくらか',
+        content:
+          '**計算式はどこでも同じです：kWh = ワット数 ÷ 1,000 × 時間、コスト = kWh × 1kWhあたりの電気料金。** 米国の家庭用電気料金は2026年半ば時点で平均約18.4セント/kWh（EIA）。ドイツの家庭用電気料金ははるかに不均一で、新規契約向け料金プランはおよそ25〜27セント/kWhである一方、標準供給（Grundversorgung）料金は40セント/kWhに達することもあり、家庭平均はおよそ31〜32セント/kWhとなっています。',
+        columns: ['利用パターン', '1日あたりkWh', '米国月額', 'ドイツ月額'],
+        rows: [
+          { '利用パターン': '300W・1日4時間（中程度）', '1日あたりkWh': '1.2kWh', '米国月額': '約$6.60', 'ドイツ月額': '約€11〜15' },
+          { '利用パターン': '65W・1日4時間（Mac Mini M4）', '1日あたりkWh': '0.26kWh', '米国月額': '約$1.44', 'ドイツ月額': '約€2.50〜3.20' },
+          { '利用パターン': '450W・1日24時間（重い常時稼働）', '1日あたりkWh': '10.8kWh', '米国月額': '約$59.60', 'ドイツ月額': '約€100〜130' },
+        ],
+        note: '米国の数値はEIAが報告する家庭用平均18.4セント/kWh（2026年半ば）を使用。ドイツの数値は実際の料金プランのばらつきを反映した25〜40セント/kWhの幅を使用しており、単一の料率ではありません — いずれの数値も正確な値として扱う前に、ご自身の請求書で確認してください。',
+      },
+      solarOffset: {
+        id: 'solar-offset',
+        title: 'ベランダ太陽光でローカルLLM環境を相殺できるか',
+        content: [
+          '**800Wのベランダ太陽光システム — ドイツにおけるプラグイン太陽光の法的上限であり、本稿執筆時点ではフランスも同様（両国ともインバーターの交流出力を800Wに制限しており、パネル出力そのものではない） — は、南向きパネルで晴れた夏の日に約3〜4.5kWhを発電しますが、冬には1日わずか約0.5〜1.5kWhしか発電しません。** これは日照角と日照時間によるおよそ3〜7倍の季節差であり、システムの故障ではありません。',
+          '上記の中程度利用ケースと比較してみましょう：GPUの消費電力は1日1.2kWhです。夏には、800Wシステムの1日3〜4.5kWhの発電量がこれをカバーし、他の家庭用途に回せる実際の余剰も残ります。冬には、1日0.5〜1.5kWhの太陽光発電量が1日1.2kWhの需要を下回るか、わずかに一致する程度で — ドイツの大部分では、年間のおよそ3分の1の期間、このシステムは意味のある相殺手段ではなくなります。',
+          '1日10.8kWhの重い24時間稼働ケースでは、最良の夏の発電量である1日4.5kWhでも負荷の半分を大きく下回り、冬の発電量はごく一部しかカバーできません。太陽光は、日中にスケジュールした中程度のローカルLLM利用の電気代を実際に大きく削減できます。しかし、どの季節であっても、常時稼働する重い構成を「グリーンAI」にすることはできません。',
+        ],
+        note: '利用が重く常時稼働である場合は、太陽光とローカルLLM環境の組み合わせを避けてください — 法的上限である800Wのプラグイン太陽光システムの最良の夏の発電量でさえ、その負荷の半分を大きく下回り、冬にはほぼ何もカバーできません。太陽光は日中にスケジュールした中程度利用に対する実際の意味ある相殺手段ですが、24時間稼働の重い推論を「グリーン」にする方法ではありません。',
+      },
+      batterySizing: {
+        id: 'battery-sizing',
+        title: '実際に必要なバッテリーサイズはどれくらいか',
+        content:
+          '**バッテリーは太陽光システムの800W定格出力ではなく、GPUの実際の1日あたりkWh消費量に合わせてサイズを決めてください — この2つの数値は異なるものを測定しており、直接比較できません。** 1日1.2kWhの中程度利用ケースでは、小型バッテリーでもおよそ1日分の蓄電をカバーできます。1日10.8kWhの重い利用ケースでは、以下のどの単体ユニットも、複数の拡張モジュールを積み重ねない限り丸1日分には遠く及びません。',
+        columns: ['バッテリー', '容量', '価格'],
+        rows: [
+          { 'バッテリー': 'BLUETTI AC180', '容量': '1.15kWh（1,152Wh）', '価格': '$499' },
+          { 'バッテリー': 'BLUETTI AC180P', '容量': '1.44kWh（1,440Wh）', '価格': '$649' },
+          { 'バッテリー': 'Zendure SolarFlow Hub 2000', '容量': '基本1.92kWh、拡張で最大7.68kWh（4モジュール）', '価格': 'Hub単体は€399から、完全セットは€1,259から' },
+          { 'バッテリー': 'Jackery HomePower 2000 Ultra', '容量': '2〜8kWh拡張可能', '価格': '€1,268（基本ユニット）' },
+          { 'バッテリー': 'EcoFlow STREAM Ultra', '容量': 'モジュール式/拡張可能（現行構成を要確認）', '価格': '$1,279（定価$1,899）、10年保証、70%容量維持で6,000サイクル' },
+        ],
+        affiliateLinks: [
+          { label: 'BLUETTI AC180の価格を確認 →', url: 'https://www.bluettipower.com/products/ac180', productName: 'BLUETTI AC180', productCategory: 'Balcony solar battery' },
+          { label: 'BLUETTI AC180Pの価格を確認 →', url: 'https://www.bluettipower.com/products/ac180p', productName: 'BLUETTI AC180P', productCategory: 'Balcony solar battery' },
+          { label: 'Zendure SolarFlow Hub 2000の価格を確認 →', url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', productName: 'Zendure SolarFlow Hub 2000', productCategory: 'Balcony solar battery' },
+          { label: 'Jackery HomePower 2000 Ultraの価格を確認 →', url: 'https://eu.jackery.com/products/homepower-2000-ultra', productName: 'Jackery HomePower 2000 Ultra', productCategory: 'Balcony solar battery' },
+          { label: 'EcoFlow STREAM Ultraの価格を確認 →', url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar battery' },
+        ],
+        note: '商品リンクであり、現時点でアフィリエイト関係はありません — メーカー公式の製品ページへの単純なリンクです。Anker SOLIXとALLPOWERSはこの表には含まれていません。上記と同じ二重ソース基準で現行の容量・価格を検証できなかったため、これらについては仮の数値を掲載していません。',
+      },
+      whoShouldDoThis: {
+        id: 'who-should-do-this',
+        title: '実際に誰に向いているか',
+        content:
+          '**ローカルLLM環境向けの太陽光＋バッテリーは、日照の良い気候での日中スケジュールされた中程度の利用に対しては理にかなっています — 重い24時間稼働の推論を「グリーン」にする手段としては理にかなっていません。**',
+        items: [
+          '**向いているケース：** 週末や夕方の趣味利用（1日数時間程度）、日照の良いまたは温暖な気候、他の家庭用途向けにすでに設置または計画済みのベランダ太陽光、太陽光を蓄電・放電するのではなく直接使うために重いローカルLLMタスクを日中にスケジュールする意思がある場合。',
+          '**向いていないケース：** 常時稼働する重い推論（RTX 4090クラスのカードを24時間365日稼働）、冬中心の利用パターン、パネルを設置できる南向きのベランダや窓がない住居、または組み合わせによって電気代を大幅削減するのではなく完全に無くせると期待している場合。',
+          '**位置づけについて正直であること：** ローカルLLM＋ベランダ太陽光は中程度利用に対する実際のコスト削減であり、四六時中フル稼働する構成に対する「カーボンニュートラルAI」という主張ではありません — 本ガイドの計算はそのより強い主張を裏付けておらず、それを誇張すると中程度利用ケースに対する本来の正当な主張自体が損なわれます。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'よくある間違い',
+        items: [
+          '太陽光システムの定格出力（800W）を、1日あたりの実際の発電量（kWh）と直接比較してしまう。800Wシステムが24時間定格出力で稼働すれば19.2kWhになりますが、実際の発電量は良い夏の日で3〜4.5kWh、冬は0.5〜1.5kWhにとどまります。太陽が24時間フル強度で照っているわけではないためです。',
+          'バッテリーをGPUの実際の消費量ではなく、太陽光システムの発電量に合わせてサイズを決めてしまう。太陽光の1日あたりkWhとGPUの1日あたりkWhという2つの数値は、自動的に一致すると仮定するのではなく、互いに比較する必要があります。',
+          '法的に800Wに制限されたベランダシステムが、24時間稼働する450WのGPUを完全にカバーできると仮定してしまう。最良の夏の発電量（1日最大4.5kWh）でも、1日10.8kWhの負荷の半分未満しかカバーできず、冬の発電量はごく一部しかカバーできません。',
+          'フランスとドイツが別々に語られることが多いというだけで、フランスのプラグイン太陽光ルールがドイツよりかなり厳しいと考えてしまう。両国とも現在、インバーターの交流出力を800Wに制限しており、国ごとの違いは登録手続き（フランスでは送電事業者への無料オンライン申告、ドイツではMarktstammdatenregisterへの登録）であり、出力上限そのものではありません。',
+          '月額コストを見積もる際にGPUのアイドル時消費電力を無視してしまう。1日20時間、20〜30Wでアイドル状態のカードは、それだけで1日あたり約0.4〜0.6kWhを追加します — 24時間フル負荷のシナリオに比べれば小さいものの、ゼロではなく、正確な月額合計を出すうえで考慮する価値があります。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'ローカルLLMを動かすと電気代はいくらかかりますか？',
+            a: '中程度の利用（300WのGPUを1日4時間稼働）では、米国で18.4セント/kWhとして月額約$6.60、ドイツでは料金プランによって月額約€11〜15です。450Wのカードで24時間365日の重い利用の場合、米国では月額約$60に近くなります。',
+          },
+          {
+            q: 'GPUのアイドル時消費電力は電気代に影響しますか？',
+            a: 'はい、ただし負荷時消費電力ほどではありません。1日20時間、20〜30Wでアイドル状態のカードはそれだけで約0.4〜0.6kWhを消費します — 小さいながらも実際の追加分であり、特に1か月を通すと、実際の推論時間と合わせてカウントする価値があります。',
+          },
+          {
+            q: 'ベランダ太陽光でローカルLLM環境を完全に賄えますか？',
+            a: '夏の日中にスケジュールした中程度利用であれば可能です — 800Wシステムの1日3〜4.5kWhの発電量は、1日1.2kWhのGPU利用を余裕を持ってカバーします。24時間稼働の重い利用の場合はどの季節でも不可能です — 最良の夏の発電量でも1日10.8kWhの負荷の半分を大きく下回ります。',
+          },
+          {
+            q: '800Wのベランダ太陽光システムは1日にどれくらい発電しますか？',
+            a: '南向きパネルで晴れた夏の日には約3〜4.5kWh、冬は1日約0.5〜1.5kWhです — 日照角と日照時間によるおよそ3〜7倍の季節差で、ドイツの太陽光発電データに基づいています（ドイツの気候は中央・北ヨーロッパの多くの地域にとって妥当な目安となります）。',
+          },
+          {
+            q: 'ローカルLLM環境にはどれくらいのバッテリーサイズが必要ですか？',
+            a: '太陽光の800W定格出力ではなく、GPUの実際の1日あたりkWh消費量に合わせてサイズを決めてください。1日1.2kWhの中程度利用であれば、BLUETTI AC180（1.15kWh）やAC180P（1.44kWh）のような単体ユニットでおよそ1日分の蓄電をカバーできます。24時間稼働の重い利用の場合、本比較の単体ユニットではどれも遠く及ばず、複数の拡張モジュール（Zendure SolarFlowで最大7.68kWh、Jackery HomePower 2000 Ultraで最大8kWh）を積み重ねる必要があります。',
+          },
+          {
+            q: 'ローカルAIにおいて、Mac Mini M4はRTX 4090より運用コストが安いですか？',
+            a: 'かなり安くなります。Mac Mini M4はアイドル時5W未満、推論時最大約65Wであるのに対し、RTX 4090はアイドル時20〜33W、負荷時最大450Wです — 1日4時間の利用で、Mac Miniは米国で月額約$1.44、RTX 4090は約$6.60かかり、より重く長時間のワークロードではこの差はさらに大きく広がります。',
+          },
+          {
+            q: 'フランスのベランダ太陽光の出力上限はドイツと異なりますか？',
+            a: 'いいえ — 両国とも現在、プラグイン太陽光インバーターの交流出力を800Wに制限しています。両国の違いは手続き上のものです：フランスは送電事業者への無料オンライン申告、ドイツはMarktstammdatenregisterへの登録を使用します。出力上限そのものは同一です。',
+          },
+          {
+            q: '太陽光による「グリーンなローカルAI」は、24時間稼働の重い利用でも現実的ですか？',
+            a: '法的に800Wに制限されたプラグイン太陽光システムでは現実的ではありません。どの季節であっても、常時稼働する重い構成に対する完全な相殺という主張を、計算は裏付けていません — 太陽光は、日中にスケジュールした中程度のローカルLLM利用の電気代を実際に大きく削減しますが、電力を大量に消費するGPUを絶え間なく稼働させるコストを無くすことはできません。',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        links: [
+          { url: 'https://www.chooseenergy.com/electricity-rates-by-state/', title: 'Electricity Rates by State (2026)', description: '本ガイドで使用した約18.4セント/kWhの全国平均を含む、米国の州別家庭用電気料金データ。' },
+          { url: 'https://www.stromauskunft.de/strompreise/', title: 'Aktuelle Strompreise (Stromauskunft.de)', description: '新規契約向け料金、平均、標準供給（Grundversorgung）料金にわたるドイツの家庭用電気料金データ。' },
+          { url: 'https://www.techpowerup.com/306765/nvidia-geforce-rtx-4070-has-an-average-gaming-power-draw-of-186-w', title: 'NVIDIA GeForce RTX 4070 Power Draw', description: 'NVIDIA自身が公表したRTX 4070の消費電力データ（アイドル、動画再生、平均ゲーミング時）についてのTechPowerUpの報道。' },
+          { url: 'https://www.xda-developers.com/run-local-llms-one-worlds-priciest-energy-markets/', title: 'Running Local LLMs in a High-Cost Energy Market', description: 'Mac Mini M4のアイドル時・推論時消費電力、および複数台クラスタの消費電力の独立測定。' },
+          { url: 'https://de.bluettipower.eu/blogs/solarstrom/balkonkraftwerk-800w-ertrag-pro-tag', title: 'Balkonkraftwerk 800W Ertrag pro Tag', description: '800Wベランダ太陽光システムの季節別1日あたり発電量に関するドイツ市場データ。' },
+          { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000 — 公式製品ページ', description: 'Hub 2000とその拡張バッテリーの公式容量・価格情報。' },
+          { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra — 公式製品ページ', description: 'HomePower 2000 Ultraの公式容量・価格・拡張仕様。' },
+          { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180 — 公式製品ページ', description: 'ポータブル電源AC180の公式容量・価格情報。' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': 'ローカルLLMの電気代はいくらか — ベランダ太陽光で相殺できるか（2026年）',
+      'description': 'ローカルLLMの電気代を計算: RTX 4090/3090/4070とMac Mini M4の消費電力、米国とドイツの月額コスト、800Wベランダ太陽光で相殺できるか。',
+      'datePublished': '2026-09-01',
+      'dateModified': '2026-09-01',
+      'author': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'inLanguage': 'ja',
+      'url': 'https://www.promptquorum.com/ja/power-local-llm/local-llm-electricity-cost-balcony-solar-2026',
+      'articleBody': 'ローカルLLMを1日数時間動かすGPUは、実際に計算できる金額のコストがかかります。800Wのベランダ太陽光システムは晴れた夏の日であれば中程度の利用ケースを十分にカバーできますが、特に冬には常時稼働する重い構成を相殺できません。',
+      'educationalLevel': 'Intermediate',
+      'proficiencyLevel': 'Intermediate',
+      'audience': { '@type': 'Audience', 'audienceType': '自分のローカルLLM環境の実際の電気代を知り、ベランダ太陽光で相殺できるかを知りたいユーザー' },
+      'about': [
+        { '@type': 'Thing', 'name': 'RTX 4090' },
+        { '@type': 'Thing', 'name': 'Mac Mini M4' },
+        { '@type': 'Thing', 'name': 'バルコニー太陽光' },
+      ],
+      'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+    },
+  },
 }
