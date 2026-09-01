@@ -1,15 +1,21 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import { useSearchParams, usePathname } from 'next/navigation'
 import { Suspense } from 'react'
 
 const STORAGE_KEY = 'push_prompt_dismissed_until'
 const SESSION_COUNT_KEY = 'pq_session_count'
 const SESSION_ACTIVE_KEY = 'pq_session_active'
+const TIME_ON_SITE_KEY = 'pq_time_on_site_ms'
 const SUPPRESS_DURATION_MS = 90 * 24 * 60 * 60 * 1000 // 3 months
-const NEW_VISITOR_DELAY_MS = 10 * 60 * 1000 // 10 minutes
-const RETURN_VISITOR_DELAY_MS = 30 * 1000 // 30 seconds on return visit
+// Single rule for everyone: 5 minutes of cumulative time on the site, passive or
+// active. Accumulates across page views and visits, so it is real time spent, not
+// "5 minutes since this particular page loaded".
+const REQUIRED_TIME_ON_SITE_MS = 5 * 60 * 1000
+const HEARTBEAT_MS = 5 * 1000
+// A sleeping laptop or a tab left open overnight must not credit hours in one tick.
+const MAX_TICK_MS = 15 * 1000
 
 interface OneSignalType {
   init: (config: {
@@ -96,6 +102,7 @@ function PushPromptBannerInner() {
   const c = (COPY[lang as keyof typeof COPY] ?? COPY.en)!
 
   const [visible, setVisible] = useState(false)
+  const visitorTypeRef = useRef<'new' | 'returning'>('new')
 
   useEffect(() => {
     try {
@@ -119,8 +126,7 @@ function PushPromptBannerInner() {
       /* ignore */
     }
 
-    const isReturning = sessionCount >= 2
-    const delay = isReturning ? RETURN_VISITOR_DELAY_MS : NEW_VISITOR_DELAY_MS
+    visitorTypeRef.current = sessionCount >= 2 ? 'returning' : 'new'
 
     // Don't show if already subscribed via OneSignal
     const checkSubscribed = () => {
@@ -133,13 +139,48 @@ function PushPromptBannerInner() {
       return false
     }
 
-    const timer = setTimeout(() => {
-      if (!checkSubscribed()) {
-        setVisible(true)
+    const readElapsed = () => {
+      try {
+        return parseInt(localStorage.getItem(TIME_ON_SITE_KEY) || '0', 10) || 0
+      } catch {
+        return 0
       }
-    }, delay)
+    }
 
-    return () => clearTimeout(timer)
+    let elapsed = readElapsed()
+    let last = Date.now()
+
+    const timer = setInterval(() => {
+      const now = Date.now()
+      elapsed += Math.min(now - last, MAX_TICK_MS)
+      last = now
+      try {
+        localStorage.setItem(TIME_ON_SITE_KEY, String(elapsed))
+      } catch {
+        /* ignore */
+      }
+
+      if (elapsed < REQUIRED_TIME_ON_SITE_MS) return
+
+      clearInterval(timer)
+      if (checkSubscribed()) return
+
+      setVisible(true)
+      try {
+        window.umami?.track('push_prompt_shown', {
+          visitor_type: visitorTypeRef.current,
+          time_on_site_min: Math.round(elapsed / 60000),
+          source_page: pathname,
+          lang,
+        })
+      } catch {
+        /* silent */
+      }
+    }, HEARTBEAT_MS)
+
+    return () => clearInterval(timer)
+    // Armed once per mount — pathname/lang are only read inside the heartbeat.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const dismiss = useCallback(() => {
@@ -149,7 +190,16 @@ function PushPromptBannerInner() {
       /* ignore */
     }
     setVisible(false)
-  }, [])
+    try {
+      window.umami?.track('push_prompt_dismiss', {
+        visitor_type: visitorTypeRef.current,
+        source_page: pathname,
+        lang,
+      })
+    } catch {
+      /* silent */
+    }
+  }, [pathname, lang])
 
   const allow = useCallback(() => {
     try {
@@ -158,15 +208,39 @@ function PushPromptBannerInner() {
       /* ignore */
     }
     setVisible(false)
+    try {
+      window.umami?.track('push_prompt_allow', {
+        visitor_type: visitorTypeRef.current,
+        source_page: pathname,
+        lang,
+      })
+    } catch {
+      /* silent */
+    }
     window.OneSignalDeferred = window.OneSignalDeferred || []
     window.OneSignalDeferred.push(async (OneSignal: OneSignalType) => {
       await OneSignal.Notifications?.requestPermission()
       // After permission, tag with language (mirrors OneSignalInit.tsx)
-      if (OneSignal.User.PushSubscription.optedIn) {
+      const optedIn = OneSignal.User.PushSubscription.optedIn
+      if (optedIn) {
         await OneSignal.User.addTags({ lang })
       }
+      // Separates "clicked our banner" from "actually granted the browser prompt" —
+      // without this the funnel stops at push_prompt_allow and the real opt-in rate
+      // only exists inside OneSignal.
+      try {
+        window.umami?.track('push_prompt_permission', {
+          result: optedIn ? 'granted' : 'not_granted',
+          browser_permission:
+            typeof Notification !== 'undefined' ? Notification.permission : 'unavailable',
+          source_page: pathname,
+          lang,
+        })
+      } catch {
+        /* silent */
+      }
     })
-  }, [lang])
+  }, [pathname, lang])
 
   if (!visible) return null
 
