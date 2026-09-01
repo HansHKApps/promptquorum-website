@@ -58,6 +58,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Category 10 — Hardware Buying Guides
   'best-gpu-buying-guide-local-llm-2026':        'best-gpu-buying-guide-local-llm-2026',
+  'rtx-3090-local-llm-buy-or-rent':              'rtx-3090-local-llm-buy-or-rent',
   'best-mac-for-local-ai-2026':                  'best-mac-for-local-ai-2026',
   'cloud-gpu-rental-guide-2026':                 'cloud-gpu-rental-guide-2026',
   'local-ai-workstation-build-guide-2026':       'local-ai-workstation-build-guide-2026',

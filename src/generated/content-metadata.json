@@ -6557,6 +6557,16 @@
         }
       ]
     },
+    "rtx-3090-local-llm-buy-or-rent": {
+      "dateModified": "2026-09-01",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-01",
+      "hasSections": true,
+      "langs": [
+        "en"
+      ],
+      "images": []
+    },
     "run-ai-on-tablet-ipad-android": {
       "dateModified": "2026-07-14",
       "lastFactChecked": null,

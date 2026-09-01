@@ -43,6 +43,7 @@ import { article as a_local_rag_on_your_pdfs_step_by_step } from './articles/loc
 import { article as a_mobile_llm_models_phi4_gemma_smollm } from './articles/mobile-llm-models-phi4-gemma-smollm'
 import { article as a_replace_github_copilot_with_local_llm } from './articles/replace-github-copilot-with-local-llm'
 import { article as a_replace_grammarly_notion_ai_with_local } from './articles/replace-grammarly-notion-ai-with-local'
+import { article as a_rtx_3090_local_llm_buy_or_rent } from './articles/rtx-3090-local-llm-buy-or-rent'
 import { article as a_run_ai_on_tablet_ipad_android } from './articles/run-ai-on-tablet-ipad-android'
 import { article as a_replace_zapier_with_local_ai_agents } from './articles/replace-zapier-with-local-ai-agents'
 import { article as a_easiest_local_ai_app_windows_mac_linux } from './articles/easiest-local-ai-app-windows-mac-linux'
@@ -121,6 +122,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'mobile-llm-models-phi4-gemma-smollm':    a_mobile_llm_models_phi4_gemma_smollm,
   'replace-github-copilot-with-local-llm':  a_replace_github_copilot_with_local_llm,
   'replace-grammarly-notion-ai-with-local': a_replace_grammarly_notion_ai_with_local,
+  'rtx-3090-local-llm-buy-or-rent':         a_rtx_3090_local_llm_buy_or_rent,
   'run-ai-on-tablet-ipad-android':          a_run_ai_on_tablet_ipad_android,
   'replace-zapier-with-local-ai-agents':    a_replace_zapier_with_local_ai_agents,
   'easiest-local-ai-app-windows-mac-linux':       a_easiest_local_ai_app_windows_mac_linux,
