@@ -1932,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-05',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1948,14 +1948,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mini PC ASUS para IA local: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
     seoTitle: 'Mini PC ASUS para IA local: NUC 16 Pro vs. PN55 (2026)',
     intro:
-      'A ASUS vende dois mini PCs que valem a pena considerar para IA local em 2026: o NUC 16 Pro (Intel Core Ultra Series 3 "Panther Lake", até 96 GB de LPDDR5x) e o ExpertCenter PN55 (AMD Ryzen AI 9 HX 470, até 96 GB de DDR5, certificado Copilot+). Nenhum dos dois vence claramente a corrida de especificações para LLMs locais — o ExpertCenter PN55 usa o mesmo chip que o Beelink SER10 MAX, e os dois modelos ASUS têm limite de 96 GB de RAM, contra 128 GB no GMKtec EVO-X2 e no MINISFORUM AI X1 Pro. O que a ASUS oferece em troca é certificação Copilot+, garantia e suporte via canal corporativo, e uma linha NUC que compradores de TI já sabem como adquirir. Este guia compara os cinco equipamentos com especificações e preços verificados, e diz com honestidade quando essa troca vale a pena.',
+      'O melhor mini PC ASUS para IA local em 2026 é o NUC 16 Pro (Intel Core Ultra Series 3 "Panther Lake", gráficos Arc B390, até 96 GB de LPDDR5x ou 128 GB de DDR5 expansível dependendo da configuração), a plataforma mais completa, ou o ExpertCenter PN55 (AMD Ryzen AI 9 HX 470, até 96 GB de DDR5, certificado Copilot+), o preço de entrada mais baixo. Se a capacidade máxima de IA local por dólar for seu único critério, olhe além da ASUS: o GMKtec EVO-X2 (128 GB de memória unificada) e o MINISFORUM AI X1 Pro (128 GB de DDR5 expansível, a partir de ~$759 em barebone) superam os dois equipamentos ASUS exatamente nesse ponto. Este guia traz primeiro a decisão de compra dentro da ASUS, e depois a comparação honesta completa com esses dois.',
     metaDescription:
-      'Mini PC ASUS para IA local comparados: NUC 16 Pro (a partir de ~$1.600, 96 GB) vs. ExpertCenter PN55 (a partir de ~$1.099, 96 GB) vs. GMKtec EVO-X2, Beelink SER10 MAX e MINISFORUM AI X1 Pro.',
+      'Melhor mini PC ASUS para IA local 2026: NUC 16 Pro vs. ExpertCenter PN55, comparados em preço, configuração de RAM e capacidade real de IA local — além do posicionamento frente ao GMKtec EVO-X2 e MINISFORUM AI X1 Pro.',
     twitterDescription:
-      'ASUS NUC 16 Pro e ExpertCenter PN55 comparados ao GMKtec EVO-X2, Beelink SER10 MAX e MINISFORUM AI X1 Pro para IA local — especificações e preços verificados, sem exagero.',
-    readTime: '11 min de leitura',
+      'ASUS NUC 16 Pro e ExpertCenter PN55 para IA local: qual comprar, qual configuração escolher, e o que realmente roda neles — além de um olhar honesto sobre o GMKtec EVO-X2 e o MINISFORUM AI X1 Pro.',
+    readTime: '13 min de leitura',
     educationalLevel: 'Intermediate',
-    audience: 'Compradores decidindo entre um mini PC ASUS e um mini PC boutique Ryzen AI Max para inferência de LLM local',
+    audience: 'Compradores decidindo qual mini PC ASUS comprar para IA local, e se a ASUS é a marca certa frente a um mini PC boutique Ryzen AI Max',
     primaryTerm: 'mini PC ASUS IA local',
     targetKeywords: [
       'asus mini pc ia local',
@@ -1965,16 +1965,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'asus mini pc vs beelink gmktec',
     ],
     leadAnswerBlock:
-      '**A ASUS não fabrica atualmente o mini PC com as melhores especificações para inferência de LLM local — o GMKtec EVO-X2 (Ryzen AI Max+ 395, 128 GB de memória unificada, ~$2.199) e o MINISFORUM AI X1 Pro (128 GB de DDR5 expansível, a partir de ~$759 em barebone) superam a ASUS no limite de RAM e no preço.** O que a ASUS oferece é o NUC 16 Pro (Intel Core Ultra Series 3 "Panther Lake", até 96 GB de LPDDR5x, a partir de ~$1.600) para IA local geral com garantia corporativa, e o ExpertCenter PN55 (Ryzen AI 9 HX 470, NPU de 55 TOPS, até 96 GB de DDR5, certificado Copilot+, a partir de ~$1.099) para cargas de trabalho do Windows aceleradas por NPU. Compre ASUS se o canal de compra, a garantia e a certificação Copilot+ importarem mais do que o RAM máximo por dólar. Compre o EVO-X2 ou o AI X1 Pro se o único critério for o desempenho bruto de LLM local.',
+      '**Melhor ASUS no geral: NUC 16 Pro. Melhor custo-benefício ASUS: ExpertCenter PN55. Para LLMs locais grandes: olhe além da ASUS.** Se você quer especificamente um equipamento ASUS, o ExpertCenter PN55 (Ryzen AI 9 HX 470, até 96 GB de DDR5, certificado Copilot+, a partir de ~$1.099) é a escolha econômica, enquanto o NUC 16 Pro (Intel Core Ultra Series 3 "Panther Lake", até 96 GB de LPDDR5x ou 128 GB em configurações DDR5 expansíveis, a partir de ~$1.600) é a plataforma mais capaz. Se a capacidade máxima de IA local for sua única prioridade, o GMKtec EVO-X2 (128 GB de memória unificada, ~$2.199) e o MINISFORUM AI X1 Pro (128 GB de DDR5 expansível, a partir de ~$759 em barebone) têm a vantagem atualmente.',
     quickAnswerTop: {
       pt: {
-        question: 'Um mini PC ASUS é bom para rodar modelos de IA local?',
+        question: 'Qual mini PC ASUS comprar para IA local em 2026?',
         answer:
-          'O ExpertCenter PN55 da ASUS (Ryzen AI 9 HX 470, NPU de 55 TOPS, até 96 GB de DDR5, a partir de ~$1.099) e o NUC 16 Pro (Intel Core Ultra Series 3, até 96 GB de LPDDR5x, a partir de ~$1.600) são utilizáveis para IA local, mas não são líderes em especificações — o GMKtec EVO-X2 (128 GB de memória unificada, ~$2.199) e o MINISFORUM AI X1 Pro (128 GB de DDR5 expansível, a partir de ~$759 em barebone) oferecem atualmente mais RAM por dólar para inferência de LLM local. Nenhum benchmark independente de Ollama ou LM Studio em qualquer um dos dois equipamentos ASUS foi encontrado até setembro de 2026.',
+          'Compre o ASUS ExpertCenter PN55 (Ryzen AI 9 HX 470, NPU de 55 TOPS, até 96 GB de DDR5, certificado Copilot+, a partir de ~$1.099) se o preço for o fator decisivo. Compre o ASUS NUC 16 Pro (Intel Core Ultra Series 3, gráficos Arc B390, até 96 GB de LPDDR5x ou 128 GB em configurações DDR5 expansíveis, a partir de ~$1.600) para a plataforma ASUS mais completa. Se a capacidade bruta de IA local por dólar for seu único critério, o GMKtec EVO-X2 (128 GB de memória unificada, ~$2.199) e o MINISFORUM AI X1 Pro (128 GB de DDR5 expansível, a partir de ~$759 em barebone) superam atualmente os dois equipamentos ASUS.',
         bullets: [
-          'ExpertCenter PN55: Ryzen AI 9 HX 470, NPU de 55 TOPS, até 96 GB de DDR5, a partir de ~$1.099',
-          'NUC 16 Pro: Intel Core Ultra Series 3, até 96 GB de LPDDR5x, a partir de ~$1.600 (o preço varia muito conforme a configuração)',
-          'GMKtec EVO-X2: Ryzen AI Max+ 395, 128 GB de memória unificada, ~$2.199 — o líder atual em limite de RAM',
+          'Melhor ASUS no geral: NUC 16 Pro — Core Ultra Series 3, Arc B390, até 96 GB de LPDDR5x (ou 128 GB em configurações DDR5), a partir de ~$1.600',
+          'Melhor custo-benefício ASUS: ExpertCenter PN55 — Ryzen AI 9 HX 470, NPU de 55 TOPS, até 96 GB de DDR5, certificado Copilot+, a partir de ~$1.099',
+          'Para LLMs locais grandes (não ASUS): GMKtec EVO-X2 — 128 GB de memória unificada, ~$2.199',
           'Nenhum benchmark independente de Ollama/LM Studio em um mini PC ASUS encontrado até setembro de 2026',
         ],
         updatedDate: '2026-09',
@@ -1982,10 +1982,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Pontos principais', anchor: 'tldr' },
-      { label: 'Qual mini PC ASUS você deveria comprar?', anchor: 'which-asus' },
+      { label: 'Melhor mini PC ASUS para IA local', anchor: 'buying-guide' },
       { label: 'Comparativo de especificações e preços', anchor: 'comparison' },
+      { label: 'O que esses equipamentos rodam de verdade?', anchor: 'llm-capacity' },
+      { label: 'Qual configuração comprar?', anchor: 'configurations' },
+      { label: 'Onde comprar', anchor: 'where-to-buy' },
       { label: 'ASUS vs. Beelink, GMKtec e MINISFORUM', anchor: 'vs-boutique' },
-      { label: 'Quem deveria comprar ASUS em vez disso?', anchor: 'who-should-buy' },
+      { label: 'Comprar ASUS ou não?', anchor: 'who-should-buy' },
       { label: 'Erros comuns', anchor: 'common-mistakes' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
       { label: 'Fontes', anchor: 'sources' },
@@ -2008,64 +2011,144 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não existe benchmark independente de Ollama/LM Studio em nenhum equipamento ASUS até setembro de 2026 — trate os números de TOPS da NPU como uma especificação de recursos do Windows Copilot+, não como um benchmark de LLM local',
         ],
       },
-      whichAsus: {
-        id: 'which-asus',
-        title: 'Qual mini PC ASUS você deveria comprar para IA local em 2026?',
+      buyingGuide: {
+        id: 'buying-guide',
+        title: 'Melhor mini PC ASUS para IA local em 2026',
         content:
-          '**Para uso geral de IA local com o melhor desempenho single-thread e de iGPU da linha ASUS, o NUC 16 Pro é a escolha. Para recursos do Windows Copilot+ e cargas aceleradas por NPU a um preço menor, o ExpertCenter PN55 é a escolha.** Nenhum dos dois é um equipamento especializado em LLM local — ambos são mini PCs corporativos/criativos de uso geral que rodam modelos locais de forma adequada.',
-        items: [
-          '**ASUS NUC 16 Pro** — Intel Core Ultra Series 3 ("Panther Lake", até Core Ultra X9 378H), gráficos integrados Intel Arc B390, NPU 5 avaliada em até 180 TOPS de plataforma combinados (CPU+GPU+NPU juntos, não um número isolado de NPU), até 96 GB de LPDDR5x-9600. Os preços são inconsistentes conforme a configuração — relatados de ~$1.600 (32 GB/1 TB, Core Ultra X7 358H) a ~$2.800 em configurações mais altas nos EUA. Ideal para: compradores que querem a arquitetura Intel mais recente e a iGPU mais potente da linha ASUS atual.',
-          '**ASUS ExpertCenter PN55** — AMD Ryzen AI 9 HX 470, NPU XDNA 2 avaliada em até 55 TOPS, gráficos AMD Radeon 800M, até 96 GB de DDR5, Wi-Fi 7, certificado Copilot+. O preço varia de ~$1.099 a ~$1.349 conforme o revendedor e a configuração. Ideal para: recursos do Windows Copilot+ e cargas aceleradas por NPU (desfoque de fundo, Windows Studio Effects, recursos tipo Recall) a um preço de entrada menor do que o NUC 16 Pro.',
-          '**ASUS ExpertCenter PN54 / PN42** — os desktops corporativos menores e sem ventoinha da ASUS. Não conseguimos verificar especificações e preços atuais com o mesmo padrão de duas fontes usado acima, então não damos números aqui — consulte a página oficial da linha ExpertCenter da ASUS para configurações atuais. Não são posicionados como equipamentos de IA local; trate-os como desktops de escritório gerais, fora do escopo desta recomendação de IA local.',
-          '**ASUS ROG NUC 2026** — um NUC voltado para jogos com GPU dedicada RTX 5080 para notebooks, com preço próximo de $4.500. Trata-se de uma categoria de produto diferente (uma verdadeira estação de trabalho com GPU dedicada, não um mini PC corporativo compacto) e fica fora do escopo de uma recomendação de "mini PC para IA local" nessa faixa de preço — veja a seção Erros comuns abaixo.',
+          '**Dois equipamentos ASUS valem a pena considerar para IA local. Escolha o NUC 16 Pro para a plataforma mais completa, ou o ExpertCenter PN55 se o preço for o fator decisivo.** Nenhum dos dois é um equipamento especializado em LLM local — ambos são mini PCs corporativos/criativos de uso geral que rodam modelos locais de forma adequada. Se a capacidade máxima de IA local por dólar for sua única prioridade, veja a comparação honesta com GMKtec e MINISFORUM mais abaixo.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'ASUS NUC 16 Pro',
+            tagline: 'Melhor ASUS no geral para IA local',
+            verdict:
+              'Intel Core Ultra Series 3 ("Panther Lake", até Core Ultra X9 378H), gráficos integrados Intel Arc B390, NPU 5 avaliada em até 180 TOPS de plataforma combinados (CPU+GPU+NPU juntos, não um número isolado de NPU). A memória depende da configuração: as variantes LPDDR5x-9600 (Core Ultra X7/X9) chegam a 96 GB, soldadas e não expansíveis, para a melhor velocidade e eficiência energética; as variantes DDR5 SO-DIMM (Core Ultra 5/7) chegam a 128 GB e são expansíveis. Wi-Fi 7, 2.5GbE duplo. Os preços são inconsistentes conforme a configuração — relatados de ~$1.600 (32 GB/1 TB, Core Ultra X7 358H) a ~$2.800 em configurações mais altas nos EUA.',
+            pros: [
+              'iGPU mais potente (Arc B390) que a ASUS oferece atualmente em um mini PC',
+              '128 GB alcançáveis em configurações DDR5 SO-DIMM — expansível, diferente do LPDDR5x soldado',
+              'Wi-Fi 7 e 2.5GbE duplo de série',
+            ],
+            cons: [
+              'Preço varia muito por região e configuração — verifique o SKU exato antes de comprar',
+              'A configuração de 96 GB LPDDR5x é soldada e não pode ser expandida depois',
+              'Nenhum benchmark independente confirma os tokens por segundo reais em IA local',
+            ],
+            affiliateLinks: [
+              { label: 'Ver preço — loja oficial da ASUS →', url: 'https://eshop.asus.com/us/90ar00w2-m00040-asus-nuc-16-pro-mini-pc.html', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
+              { label: 'Ver preço — Newegg →', url: 'https://www.newegg.com/asus-barebone-systems-intel-core-ultra-7-356h-rnuc16gdku76000u/p/N82E16856110376', productName: 'ASUS NUC 16 Pro (barebone)', productCategory: 'Mini PC' },
+            ],
+          },
+          {
+            rank: 2,
+            name: 'ASUS ExpertCenter PN55',
+            tagline: 'Melhor custo-benefício ASUS para IA local',
+            verdict:
+              'AMD Ryzen AI 9 HX 470, NPU XDNA 2 avaliada em até 55 TOPS, gráficos AMD Radeon 800M, até 96 GB de DDR5, Wi-Fi 7, certificado Copilot+. O preço varia de ~$1.099 a ~$1.349 conforme o revendedor e a configuração — o preço de entrada mais baixo entre as duas opções ASUS.',
+            pros: [
+              'Preço de entrada mais baixo dos dois mini PCs ASUS capazes de IA local',
+              'Certificado Copilot+ — Windows Studio Effects e recursos tipo Recall rodam na NPU',
+              'Formato compacto, quase sem ventoinha, de desktop corporativo',
+            ],
+            cons: [
+              'Limite de 96 GB de DDR5 — nenhuma configuração chega aos 128 GB dos SKUs DDR5 do NUC 16 Pro',
+              'Mesmo chip Ryzen AI 9 HX 470 do Beelink SER10 MAX, então o valor extra da ASUS compra suporte e certificação, não um chip exclusivo',
+              'Nenhum benchmark independente confirma os tokens por segundo reais em IA local',
+            ],
+            affiliateLinks: [
+              { label: 'Ver preço — loja oficial da ASUS →', url: 'https://eshop.asus.com/us/90ms03c1-m000t0-asus-expertcenter-pn55.html', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
+            ],
+          },
         ],
-        affiliateLinks: [
-          { label: 'Ver preço do NUC 16 Pro — ASUS.com →', url: 'https://www.asus.com/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
-          { label: 'Ver preço do NUC 16 Pro — Newegg →', url: 'https://www.newegg.com/asus-barebone-systems-intel-core-ultra-7-356h-rnuc16gdku76000u/p/N82E16856110376', productName: 'ASUS NUC 16 Pro (barebone)', productCategory: 'Mini PC' },
-          { label: 'Ver preço do ExpertCenter PN55 — ASUS.com →', url: 'https://www.asus.com/us/displays-desktops/mini-pcs/pn-series/asus-expertcenter-pn55/', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
-        ],
-        note: 'Links de produto, sem relação de afiliação atual — links simples para as páginas de produto dos próprios fabricantes. Os preços no Brasil podem variar bastante devido a impostos de importação; confirme o preço atual antes de comprar.',
+        note: 'Links de produto, sem relação de afiliação atual — links simples para as páginas de loja dos próprios fabricantes. Os preços no Brasil podem variar bastante devido a impostos de importação; confirme o preço atual antes de comprar.',
       },
       comparison: {
         id: 'comparison',
         title: 'Comparativo de especificações e preços: ASUS contra o mercado',
         content:
           '**Os cinco equipamentos abaixo se baseiam em especificações publicadas pelo fabricante, não em benchmarks realizados pela PromptQuorum.** Os preços correspondem à configuração mais barata relatada atualmente e mudam rápido — confira a página do produto vinculada antes de comprar.',
-        columns: ['Mini PC', 'Chip / NPU', 'RAM máx.', 'A partir de (USD)'],
+        columns: ['Mini PC', 'Ideal para', 'RAM máx.', 'Preço', 'Veredito'],
         rows: [
-          { 'Mini PC': 'ASUS NUC 16 Pro', 'Chip / NPU': 'Core Ultra Series 3, NPU 5 (180 TOPS combinados)', 'RAM máx.': '96 GB LPDDR5x', 'A partir de (USD)': '~$1.600 (varia muito)' },
-          { 'Mini PC': 'ASUS ExpertCenter PN55', 'Chip / NPU': 'Ryzen AI 9 HX 470, NPU de 55 TOPS', 'RAM máx.': '96 GB DDR5', 'A partir de (USD)': '~$1.099' },
-          { 'Mini PC': 'GMKtec EVO-X2', 'Chip / NPU': 'Ryzen AI Max+ 395, 126 TOPS combinados', 'RAM máx.': '128 GB LPDDR5X', 'A partir de (USD)': '~$2.199' },
-          { 'Mini PC': 'Beelink SER10 MAX', 'Chip / NPU': 'Ryzen AI 9 HX 470, 86 TOPS combinados', 'RAM máx.': '64 GB DDR5', 'A partir de (USD)': '~$1.299' },
-          { 'Mini PC': 'MINISFORUM AI X1 Pro', 'Chip / NPU': 'Ryzen AI 9 HX 370, NPU de 80 TOPS', 'RAM máx.': '128 GB DDR5 (expansível)', 'A partir de (USD)': '~$759 barebone' },
+          { 'Mini PC': 'ASUS NUC 16 Pro', 'Ideal para': 'Melhor ASUS no geral', 'RAM máx.': '96 GB / 128 GB*', 'Preço': 'a partir de ~$1.600', 'Veredito': 'Comprar' },
+          { 'Mini PC': 'ASUS ExpertCenter PN55', 'Ideal para': 'Melhor custo-benefício ASUS', 'RAM máx.': '96 GB', 'Preço': 'a partir de ~$1.099', 'Veredito': 'Comprar' },
+          { 'Mini PC': 'GMKtec EVO-X2', 'Ideal para': 'Modelos locais maiores', 'RAM máx.': '128 GB', 'Preço': 'a partir de ~$2.199', 'Veredito': 'Melhor capacidade LLM' },
+          { 'Mini PC': 'MINISFORUM AI X1 Pro', 'Ideal para': 'Orçamento + RAM alta', 'RAM máx.': '128 GB (expansível)', 'Preço': 'a partir de ~$759 barebone', 'Veredito': 'Melhor custo-benefício' },
+          { 'Mini PC': 'Beelink SER10 MAX', 'Ideal para': 'Mesmo chip do PN55', 'RAM máx.': '64 GB', 'Preço': '~$1.299', 'Veredito': 'Evitar — menos RAM, sem suporte ASUS' },
+        ],
+        note: '*NUC 16 Pro: 96 GB em configurações LPDDR5x soldadas (Core Ultra X7/X9), 128 GB em configurações DDR5 expansíveis (Core Ultra 5/7) — veja "Qual configuração comprar" acima. Links de produto, sem relação de afiliação atual; os preços mudam rápido e variam por revendedor — confirme antes de comprar.',
+        affiliateLinks: [
+          { label: 'Ver preço do NUC 16 Pro →', url: 'https://eshop.asus.com/us/90ar00w2-m00040-asus-nuc-16-pro-mini-pc.html', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
+          { label: 'Ver preço do ExpertCenter PN55 →', url: 'https://eshop.asus.com/us/90ms03c1-m000t0-asus-expertcenter-pn55.html', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
+          { label: 'Ver preço do GMKtec EVO-X2 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
+          { label: 'Ver preço do MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+          { label: 'Ver preço do Beelink SER10 MAX →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
+        ],
+      },
+      llmCapacity: {
+        id: 'llm-capacity',
+        title: 'O que esses equipamentos ASUS rodam de verdade?',
+        content:
+          '**A RAM define o limite; não diz se a máquina vai rodar um modelo rápido.** A tabela abaixo mostra a memória necessária para carregar um modelo quantizado — "cabe na RAM" e "roda rápido" são perguntas diferentes, e nenhum dos dois equipamentos ASUS tem ainda um benchmark independente de tokens por segundo (veja Erros comuns abaixo).',
+        columns: ['Tamanho do modelo', 'Quantização', 'RAM necessária', 'Cabe na config. de 96 GB?', 'Cabe na config. de 128 GB?'],
+        rows: [
+          { 'Tamanho do modelo': '7B', 'Quantização': 'Q4', 'RAM necessária': '~5 GB', 'Cabe na config. de 96 GB?': 'Sim — bastante folga', 'Cabe na config. de 128 GB?': 'Sim — bastante folga' },
+          { 'Tamanho do modelo': '14B', 'Quantização': 'Q4', 'RAM necessária': '~9 GB', 'Cabe na config. de 96 GB?': 'Sim — bastante folga', 'Cabe na config. de 128 GB?': 'Sim — bastante folga' },
+          { 'Tamanho do modelo': '32B', 'Quantização': 'Q4', 'RAM necessária': '~20 GB', 'Cabe na config. de 96 GB?': 'Sim — confortável', 'Cabe na config. de 128 GB?': 'Sim — confortável' },
+          { 'Tamanho do modelo': '70B', 'Quantização': 'Q4', 'RAM necessária': '~40–45 GB', 'Cabe na config. de 96 GB?': 'Sim — menos folga para contexto', 'Cabe na config. de 128 GB?': 'Sim — confortável' },
+          { 'Tamanho do modelo': '70B', 'Quantização': 'Q8', 'RAM necessária': '~75 GB+', 'Cabe na config. de 96 GB?': 'Apertado — folga mínima', 'Cabe na config. de 128 GB?': 'Sim — confortável' },
+        ],
+        note: 'O cálculo de RAM é aritmética de quantização (parâmetros do modelo × bits por peso), não um benchmark — mostra o que cabe, não a velocidade de execução. Os tokens por segundo reais dependem da largura de banda de memória e de quanto do pool compartilhado o sistema operacional aloca para a iGPU, números que nenhum dos dois equipamentos ASUS publicou de forma independente até setembro de 2026.',
+      },
+      configurations: {
+        id: 'configurations',
+        title: 'Qual configuração comprar?',
+        content:
+          '**A configuração escolhida importa mais do que o nome do modelo — os dois equipamentos ASUS são vendidos em vários níveis de RAM/armazenamento, e escolher errado desperdiça dinheiro ou limita o tamanho de modelo que você realmente quer rodar.**',
+        items: [
+          '**NUC 16 Pro — 32 GB/1 TB (LPDDR5x):** não compre para uso sério de LLM local. Lida bem com modelos 7B–14B, mas não deixa margem para crescer para 32B+ depois, já que o LPDDR5x é soldado.',
+          '**NUC 16 Pro — 64 GB–96 GB LPDDR5x:** o ponto ideal para modelos 14B–32B com memória soldada rápida. É a configuração que a maioria dos compradores de IA local deveria buscar se não precisar de modelos classe 70B.',
+          '**NUC 16 Pro — 128 GB DDR5 (SKUs Core Ultra 5/7):** a configuração a escolher se a capacidade máxima de modelo importar mais do que a largura de banda mais rápida do LPDDR5x — é o único caminho do NUC 16 Pro que iguala o limite de RAM do GMKtec EVO-X2 e do MINISFORUM AI X1 Pro. Também significa abrir mão do chip principal Core Ultra X7/X9, já que a opção de 128 GB DDR5 vem no nível inferior Core Ultra 5/7 — uma troca real, não um simples upgrade.',
+          '**ExpertCenter PN55 — níveis de RAM menores:** bons para modelos 7B–14B e recursos do Windows Copilot+; não a configuração se você quiser especificamente rodar modelos 32B+.',
+          '**ExpertCenter PN55 — 96 GB DDR5 (nível máximo):** a configuração a comprar se você quiser este equipamento especificamente para IA local — cobre confortavelmente até 70B em quantização Q4 com alguma folga.',
+        ],
+        note: 'Nenhum dos fabricantes publica um mapeamento oficial entre códigos SKU exatos e o nível de RAM em cada mercado — confirme a configuração específica na página do produto antes de comprar, não apenas o nome do modelo base.',
+      },
+      whereToBuy: {
+        id: 'where-to-buy',
+        title: 'Onde comprar',
+        content:
+          '**Os dois equipamentos têm disponibilidade confirmada direto na ASUS. O NUC 16 Pro também tem uma listagem barebone confirmada na Newegg; não encontramos uma listagem atual na Amazon ou na Newegg para o ExpertCenter PN55 até setembro de 2026 — confirme diretamente na ASUS.com para esse.**',
+        items: [
+          '**ASUS NUC 16 Pro:** loja oficial da ASUS (configurações completas de varejo, garantia ASUS) ou Newegg (SKU barebone — você adiciona RAM/SSD por conta própria).',
+          '**ASUS ExpertCenter PN55:** apenas a loja oficial da ASUS, até o momento — nenhuma listagem confirmada em revendedor terceirizado.',
         ],
         affiliateLinks: [
-          { label: 'Ver preço do NUC 16 Pro →', url: 'https://www.asus.com/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
-          { label: 'Ver preço do ExpertCenter PN55 →', url: 'https://www.asus.com/us/displays-desktops/mini-pcs/pn-series/asus-expertcenter-pn55/', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
-          { label: 'Ver preço do GMKtec EVO-X2 →', url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', productName: 'GMKtec EVO-X2', productCategory: 'Mini PC' },
-          { label: 'Ver preço do Beelink SER10 MAX →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
-          { label: 'Ver preço do MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
+          { label: 'NUC 16 Pro — loja oficial da ASUS →', url: 'https://eshop.asus.com/us/90ar00w2-m00040-asus-nuc-16-pro-mini-pc.html', productName: 'ASUS NUC 16 Pro', productCategory: 'Mini PC' },
+          { label: 'NUC 16 Pro — Newegg (barebone) →', url: 'https://www.newegg.com/asus-barebone-systems-intel-core-ultra-7-356h-rnuc16gdku76000u/p/N82E16856110376', productName: 'ASUS NUC 16 Pro (barebone)', productCategory: 'Mini PC' },
+          { label: 'ExpertCenter PN55 — loja oficial da ASUS →', url: 'https://eshop.asus.com/us/90ms03c1-m000t0-asus-expertcenter-pn55.html', productName: 'ASUS ExpertCenter PN55', productCategory: 'Mini PC' },
         ],
-        note: 'Links de produto, sem relação de afiliação atual. Os preços mudam rápido e variam por revendedor — confirme antes de comprar.',
+        note: 'Links de produto, sem relação de afiliação atual. Disponibilidade e opções de configuração mudam — a página vinculada é a fonte confiável, não esta tabela.',
       },
       vsBoutique: {
         id: 'vs-boutique',
         title: 'Como a ASUS se compara com Beelink, GMKtec e MINISFORUM em LLMs locais?',
         content: [
-          '**A diferença honesta é real, mas mais estreita do que "ASUS contra marcas boutique" sugere — é sobretudo uma diferença de limite de RAM, não de chip.** O ASUS ExpertCenter PN55 e o Beelink SER10 MAX usam exatamente o mesmo chip AMD Ryzen AI 9 HX 470. A vantagem da Beelink não é um hardware melhor — a empresa oferece atualmente o mesmo chip a um preço de entrada semelhante e praticamente o mesmo limite de RAM (64 GB confirmados na própria loja da Beelink, contra 96 GB na ficha técnica da ASUS).',
+          '**A diferença honesta é real, mas mais estreita do que "ASUS contra marcas boutique" sugere — é sobretudo uma diferença de limite de RAM, não de chip.** O ASUS ExpertCenter PN55 e o Beelink SER10 MAX usam exatamente o mesmo chip AMD Ryzen AI 9 HX 470. A vantagem da Beelink não é um hardware melhor — a empresa oferece atualmente o mesmo chip a um preço de entrada semelhante e um limite de RAM menor (64 GB confirmados na própria loja da Beelink, contra 96 GB na ficha técnica da ASUS). Nessa comparação específica, o PN55 da ASUS até vence em RAM.',
           'Os verdadeiros líderes em especificações são o GMKtec EVO-X2 e o MINISFORUM AI X1 Pro, por motivos diferentes. O EVO-X2 usa o carro-chefe da AMD, o Ryzen AI Max+ 395 ("Strix Halo"), com uma GPU integrada genuinamente maior (Radeon 8060S, 40 unidades de computação RDNA 3.5) e 128 GB de LPDDR5X soldada — uma parte considerável dessa memória pode ser alocada como memória endereçável pela GPU, o que permite a um mini PC rodar modelos quantizados maiores do que uma máquina típica de 96 GB de DDR5 consegue. O AI X1 Pro chega ao mesmo limite de 128 GB por outro caminho: módulos DDR5 SO-DIMM expansíveis padrão em vez de memória soldada, com preço de entrada em barebone abaixo de $800.',
-          'Nenhum dos dois equipamentos ASUS traz atualmente o Ryzen AI Max+ 395 nem a combinação completa do Panther Lake (mais de 96 GB somados a uma iGPU grande) que o tornaria um verdadeiro rival do EVO-X2 em capacidade bruta para IA local. Se sua única pergunta for "qual mini PC comporta o maior modelo", o EVO-X2 ou o AI X1 Pro respondem de forma mais direta do que qualquer um dos dois equipamentos ASUS.',
+          'O NUC 16 Pro da ASUS fecha parte dessa diferença na configuração de 128 GB DDR5, igualando o EVO-X2 e o AI X1 Pro em limite bruto de RAM — mas isso acontece no nível inferior Core Ultra 5/7, não no chip principal X7/X9, e ainda sem a GPU integrada maior do EVO-X2. Se sua única pergunta for "qual mini PC comporta o maior modelo com a melhor GPU", o EVO-X2 continua respondendo de forma mais direta do que qualquer configuração ASUS.',
         ],
-        note: 'Evite a ASUS se o limite de RAM e os TOPS por dólar para LLM local forem seu único critério de compra — o GMKtec EVO-X2 e o MINISFORUM AI X1 Pro superam ambos os equipamentos ASUS exatamente nessa métrica, e o AI X1 Pro faz isso com um preço de entrada menor do que o ASUS NUC 16 Pro.',
+        note: 'Evite a ASUS se o throughput bruto de GPU para LLM local for seu único critério de compra — a GPU integrada maior do GMKtec EVO-X2 supera qualquer configuração dos dois equipamentos ASUS exatamente nessa métrica, mesmo com a configuração de 128 GB DDR5 do NUC 16 Pro agora igualando o limite só em RAM.',
       },
       whoShouldBuy: {
         id: 'who-should-buy',
-        title: 'Quem deveria comprar ASUS em vez de um mini PC boutique?',
+        title: 'Comprar ASUS ou não?',
         content:
-          '**Compre ASUS se o canal de compra, as condições de garantia e a certificação Copilot+ tiverem peso real para você ou sua organização. Compre o GMKtec EVO-X2 ou o MINISFORUM AI X1 Pro se o único critério for a capacidade máxima de LLM local por dólar.**',
+          '**Compre ASUS se o canal de compra, as condições de garantia e a certificação Copilot+ tiverem peso real para você ou sua organização, ou se você configurou o nível de 128 GB DDR5 do NUC 16 Pro e a iGPU Arc B390 dele já basta. Compre em vez disso o GMKtec EVO-X2 ou o MINISFORUM AI X1 Pro se o único critério for a capacidade máxima de LLM local por dólar.**',
         items: [
-          '**Compre ASUS se:** você compra por um canal de aquisição corporativo que já tem relação com a ASUS como fornecedora, precisa de certificação Copilot+ por motivos de conformidade ou política de TI, quer a garantia comercial padrão da ASUS e seu caminho de suporte em vez do processo de RMA mais limitado de uma marca boutique, ou quer especificamente a iGPU Arc B390 do Panther Lake para cargas mistas de IA e gráficos.',
-          '**Compre o GMKtec EVO-X2 ou o MINISFORUM AI X1 Pro em vez disso se:** sua única prioridade é o maior modelo local que roda em um único equipamento, você é sensível a preço (o barebone do AI X1 Pro é mais barato do que os dois equipamentos ASUS), ou você não precisa de garantia corporativa/canal de compra e se sente confortável comprando direto de uma marca boutique.',
+          '**Compre o NUC 16 Pro se:** você quer uma máquina Windows compacta para IA com a arquitetura Intel mais recente, valoriza o suporte corporativo da ASUS, quer gráficos Intel Arc para cargas mistas de IA e gráficos, ou escolheu especificamente a configuração de 128 GB DDR5 para igualar o limite de RAM da concorrência boutique.',
+          '**Evite o NUC 16 Pro se:** você quer principalmente LLMs locais de 70B+ na melhor velocidade possível, quer o máximo de tokens por segundo por dólar, precisa de uma GPU NVIDIA dedicada, ou a configuração que você realmente consegue comprar é o nível de 96 GB LPDDR5x soldado e você sabe que vai querer mais RAM depois.',
+          '**Compre o PN55 se:** você quer uma máquina Windows compacta para IA no preço de entrada ASUS mais baixo, precisa de recursos Copilot+, ou não precisa de mais de 96 GB de RAM para seus modelos.',
+          '**Evite o PN55 se:** você quer especificamente mais de 96 GB de RAM — nenhuma configuração do PN55 chega ao nível de 128 GB DDR5 do NUC 16 Pro nem ao limite da concorrência boutique.',
+          '**Compre o GMKtec EVO-X2 ou o MINISFORUM AI X1 Pro em vez disso se:** sua única prioridade é o maior modelo local pelo melhor preço que roda em um único equipamento, ou você não precisa de garantia corporativa/canal de compra e se sente confortável comprando direto de uma marca boutique.',
           '**Não é indicado para ninguém (de nenhuma marca) se:** você precisa de um modelo maior do que 96–128 GB de memória unificada/compartilhada conseguem comportar em uma quantização utilizável — esse é um caso de uso para GPU de estação de trabalho ou aluguel em nuvem, não para um mini PC.',
         ],
       },
@@ -2074,9 +2157,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Erros comuns ao comprar um mini PC ASUS para IA local',
         items: [
           'Tratar os TOPS da NPU como um indicador de tokens por segundo em LLM local. As NPUs aceleram caminhos de inferência específicos do Windows Copilot+ (Studio Effects, recursos tipo Recall); a maioria das ferramentas de LLM local (Ollama, LM Studio, llama.cpp) roda na CPU e na GPU integrada, não na NPU — então um número de TOPS mais alto não significa respostas de chatbot mais rápidas.',
+          'Comprar o NUC 16 Pro apenas pelo nome do modelo, sem verificar a configuração de RAM que realmente vem instalada. A configuração de 96 GB LPDDR5x e a de 128 GB DDR5 são na prática produtos diferentes, com nível de chip e possibilidade de expansão distintos — veja "Qual configuração comprar" acima.',
           'Presumir que uma especificação de RAM mais alta significa que tudo pode ser usado como memória endereçável pela GPU para um modelo. Quanto da memória compartilhada de um mini PC pode ser alocado à iGPU depende das configurações de BIOS e do suporte do sistema operacional, e varia conforme o equipamento — consulte a documentação do modelo específico, não presuma que o número total de RAM se aplica.',
           'Comparar o ASUS ROG NUC 2026 com os mini PCs deste guia. É um NUC voltado para jogos com GPU dedicada, com preço próximo de $4.500 — uma categoria de produto diferente que resolve um problema distinto, não um mini PC de IA local nessa faixa de preço.',
-          'Presumir que "marca boutique" significa automaticamente chip melhor. O Beelink SER10 MAX usa o chip Ryzen AI 9 HX 470 idêntico ao do ExpertCenter PN55 da ASUS — a diferença real de especificações nesta comparação está especificamente com o GMKtec EVO-X2 e o MINISFORUM AI X1 Pro, não com marcas boutique em geral.',
+          'Presumir que "marca boutique" significa automaticamente chip melhor. O Beelink SER10 MAX usa o chip Ryzen AI 9 HX 470 idêntico ao do ExpertCenter PN55 da ASUS e tem menos RAM (64 GB contra 96 GB) — a diferença real de especificações nesta comparação está especificamente com o GMKtec EVO-X2 e o MINISFORUM AI X1 Pro, não com marcas boutique em geral.',
           'Ignorar condições de garantia e suporte ao comparar o preço por GB entre marcas. Um equipamento barebone mais barato, que exige que você mesmo compre e instale RAM/SSD e que vem com o processo de RMA padrão para consumidores de uma marca boutique, não é uma comparação equivalente a um equipamento de canal corporativo com um caminho de suporte estabelecido.',
         ],
       },
@@ -2085,8 +2169,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: 'Qual mini PC ASUS comprar para IA local?',
+            a: 'O ExpertCenter PN55 (Ryzen AI 9 HX 470, até 96 GB de DDR5, certificado Copilot+, a partir de ~$1.099) é o melhor custo-benefício da ASUS. O NUC 16 Pro (Intel Core Ultra Series 3, gráficos Arc B390, até 96 GB de LPDDR5x ou 128 GB em configurações DDR5 expansíveis, a partir de ~$1.600) é a plataforma ASUS mais completa. Se a capacidade máxima de IA local por dólar for sua única prioridade, o GMKtec EVO-X2 e o MINISFORUM AI X1 Pro superam atualmente os dois.',
+          },
+          {
+            q: 'O ASUS NUC 16 Pro realmente suporta 128 GB de RAM?',
+            a: 'Sim, mas só em configurações específicas. Os SKUs Core Ultra X7/X9 usam LPDDR5x soldada, limitada a 96 GB e não expansível. Os SKUs Core Ultra 5/7 usam DDR5 SO-DIMM, que suporta até 128 GB e é expansível. São níveis de chip diferentes, não a mesma máquina com uma opção de RAM — confirme o SKU exato antes de comprar se capacidade importa para você.',
+          },
+          {
             q: 'Um mini PC ASUS é bom para rodar modelos de IA local?',
-            a: 'É utilizável, mas não é líder em especificações. O ExpertCenter PN55 (Ryzen AI 9 HX 470, até 96 GB de DDR5) e o NUC 16 Pro (Intel Core Ultra Series 3, até 96 GB de LPDDR5x) rodam modelos locais via Ollama ou LM Studio, mas o GMKtec EVO-X2 (128 GB de memória unificada) e o MINISFORUM AI X1 Pro (128 GB de DDR5 expansível) oferecem atualmente mais RAM por dólar para esse uso específico.',
+            a: 'É utilizável, mas não é líder em especificações. O ExpertCenter PN55 (Ryzen AI 9 HX 470, até 96 GB de DDR5) e o NUC 16 Pro (Intel Core Ultra Series 3, até 96 GB de LPDDR5x ou 128 GB em configurações DDR5) rodam modelos locais via Ollama ou LM Studio, mas o GMKtec EVO-X2 (128 GB de memória unificada, GPU integrada maior) e o MINISFORUM AI X1 Pro (128 GB de DDR5 expansível) oferecem atualmente mais RAM e potência de GPU por dólar para esse uso específico.',
           },
           {
             q: 'O ASUS ExpertCenter PN55 suporta Ollama ou LM Studio?',
@@ -2102,7 +2194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso rodar um modelo de 70 bilhões de parâmetros em um mini PC ASUS?',
-            a: 'Com quantização de 4 bits, um modelo de 70B precisa de aproximadamente 40–45 GB de RAM/VRAM só para carregar, deixando margem para contexto em um equipamento de 96 GB, mas com menos folga do que em uma máquina de 128 GB como o GMKtec EVO-X2. Ele vai rodar, mas espere tokens por segundo visivelmente mais lentos do que na GPU integrada maior do EVO-X2, e nenhum benchmark independente confirma o throughput exato em qualquer um dos dois equipamentos ASUS.',
+            a: 'Com quantização de 4 bits (Q4), um modelo de 70B precisa de aproximadamente 40–45 GB de RAM só para carregar — confortável em qualquer configuração ASUS de 96 GB ou 128 GB, com mais folga para contexto no nível de 128 GB DDR5 do NUC 16 Pro. Com quantização de 8 bits (Q8) precisa de aproximadamente 75 GB ou mais, o que é apertado em um equipamento de 96 GB mas confortável com 128 GB. Ele vai rodar nos dois casos, mas espere tokens por segundo visivelmente mais lentos do que na GPU integrada maior do GMKtec EVO-X2, já que nenhum benchmark independente confirma o throughput exato em um equipamento ASUS.',
           },
           {
             q: 'O GMKtec EVO-X2 é melhor do que os mini PCs ASUS para LLMs locais?',
@@ -2123,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fontes',
         links: [
           { url: 'https://press.asus.com/news/press-releases/expertcenter-pn55-mini-pc-ryzen-ai-copilot-plus/', title: 'ASUS anuncia o mini PC ExpertCenter PN55', description: 'Comunicado de imprensa oficial da ASUS: Ryzen AI 9 HX 470, NPU de 55 TOPS, até 96 GB de DDR5, certificação Copilot+.' },
-          { url: 'https://www.asus.com/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', title: 'ASUS NUC 16 Pro — Página oficial do produto', description: 'Especificações oficiais da ASUS para o NUC 16 Pro (Core Ultra Series 3, Arc B390, até 96 GB de LPDDR5x).' },
+          { url: 'https://www.asus.com/us/displays-desktops/nucs/nuc-mini-pcs/asus-nuc-16-pro/', title: 'ASUS NUC 16 Pro — Página oficial do produto', description: 'Especificações oficiais da ASUS para o NUC 16 Pro, incluindo a distinção entre LPDDR5x (até 96 GB, soldada) e DDR5 SO-DIMM (até 128 GB, expansível).' },
           { url: 'https://www.techpowerup.com/review/asus-nuc-16-pro/', title: 'Análise do ASUS NUC 16 Pro', description: 'Análise e benchmark independentes do NUC 16 Pro pela TechPowerUp.' },
           { url: 'https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc', title: 'GMKtec EVO-X2 — Página oficial do produto', description: 'Especificações oficiais da GMKtec: Ryzen AI Max+ 395, Radeon 8060S, até 128 GB de LPDDR5X.' },
           { url: 'https://www.tomshardware.com/desktops/mini-pcs/gmktec-evo-x2-ai-mini-pc-review', title: 'Análise do GMKtec EVO-X2 AI Mini PC', description: 'Análise independente do GMKtec EVO-X2 pela Tom\'s Hardware.' },
@@ -2135,9 +2227,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Mini PC ASUS para IA local: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
-      'description': 'Mini PC ASUS para IA local comparados: NUC 16 Pro (a partir de ~$1.600, 96 GB) vs. ExpertCenter PN55 (a partir de ~$1.099, 96 GB) vs. GMKtec EVO-X2, Beelink SER10 MAX e MINISFORUM AI X1 Pro.',
+      'description': 'Melhor mini PC ASUS para IA local 2026: NUC 16 Pro vs. ExpertCenter PN55, comparados em preço, configuração de RAM e capacidade real de IA local — além do posicionamento frente ao GMKtec EVO-X2 e MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-01',
+      'dateModified': '2026-09-05',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -2150,10 +2242,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'inLanguage': 'pt-BR',
       'url': 'https://www.promptquorum.com/pt/power-local-llm/asus-mini-pc-local-ai-2026',
-      'articleBody': 'A ASUS vende dois mini PCs que valem a pena considerar para IA local em 2026: o NUC 16 Pro e o ExpertCenter PN55. Nenhum dos dois vence claramente a corrida de especificações frente ao GMKtec EVO-X2 ou ao MINISFORUM AI X1 Pro.',
+      'articleBody': 'Melhor ASUS no geral: NUC 16 Pro. Melhor custo-benefício ASUS: ExpertCenter PN55. Para LLMs locais grandes: olhe além da ASUS para o GMKtec EVO-X2 ou o MINISFORUM AI X1 Pro.',
       'educationalLevel': 'Intermediate',
       'proficiencyLevel': 'Intermediate',
-      'audience': { '@type': 'Audience', 'audienceType': 'Compradores decidindo entre um mini PC ASUS e um mini PC boutique Ryzen AI Max para inferência de LLM local' },
+      'audience': { '@type': 'Audience', 'audienceType': 'Compradores decidindo qual mini PC ASUS comprar para IA local, e se a ASUS é a marca certa frente a um mini PC boutique Ryzen AI Max' },
     },
   },
   ar: {
