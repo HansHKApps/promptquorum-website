@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect, useState, useCallback, useRef } from 'react'
-import { useSearchParams, usePathname } from 'next/navigation'
-import { Suspense } from 'react'
+import { usePathname } from 'next/navigation'
+import { useLang } from '@/hooks/useLang'
+import { getLangDir } from '@/lib/i18n/constants'
+import { claimPromptSlot, releasePromptSlot } from '@/lib/promptSlot'
 
 const STORAGE_KEY = 'push_prompt_dismissed_until'
 const SESSION_COUNT_KEY = 'pq_session_count'
@@ -11,6 +13,7 @@ const TIME_ON_SITE_KEY = 'pq_time_on_site_ms'
 // Permanent, not a suppression window: once someone has actually subscribed we
 // never ask again on this browser.
 const SUBSCRIBED_KEY = 'pq_push_subscribed'
+const SLOT_ID = 'push_prompt'
 const SUPPRESS_DURATION_MS = 90 * 24 * 60 * 60 * 1000 // 3 months
 // Single rule for everyone: 5 minutes of cumulative time on the site, passive or
 // active. Accumulates across page views and visits, so it is real time spent, not
@@ -84,6 +87,30 @@ const COPY: Record<
     allow: '加入',
     dismiss: '暂不',
   },
+  es: {
+    title: 'Haz que la IA haga lo que realmente quieres',
+    body: 'Técnicas reales. Prompts probados. Cero relleno. En tu navegador en cuanto publicamos.',
+    allow: 'Me apunto',
+    dismiss: 'Quizá más tarde',
+  },
+  pt: {
+    title: 'Faça a IA fazer o que você realmente quer',
+    body: 'Técnicas reais. Prompts testados. Zero enrolação. No seu navegador assim que publicamos.',
+    allow: 'Quero sim',
+    dismiss: 'Talvez depois',
+  },
+  ar: {
+    title: 'اجعل الذكاء الاصطناعي ينفّذ ما تريده فعلاً',
+    body: 'تقنيات حقيقية. مطالبات مُختبرة. بلا حشو. تصلك في متصفحك فور النشر.',
+    allow: 'أنا معكم',
+    dismiss: 'ربما لاحقاً',
+  },
+  ko: {
+    title: 'AI가 진짜 원하는 대로 움직이게',
+    body: '검증된 기법과 실전 프롬프트. 군더더기 없이, 게시되는 순간 브라우저로.',
+    allow: '참여할게요',
+    dismiss: '나중에',
+  },
 }
 
 /**
@@ -120,21 +147,12 @@ function markSubscribed(): void {
 }
 
 function PushPromptBannerInner() {
-  const searchParams = useSearchParams()
   const pathname = usePathname()
-
-  // Detect language from query param, pathname, or default to en
-  const rawLang = searchParams?.get('lang') ?? ''
-  let lang = 'en'
-  if (['en', 'de', 'fr', 'ja', 'zh'].includes(rawLang)) {
-    lang = rawLang
-  } else {
-    // Try to detect from pathname (e.g., /de/prompt-bites → de)
-    const pathMatch = pathname?.match(/^\/([a-z]{2})\//)
-    if (pathMatch && ['en', 'de', 'fr', 'ja', 'zh'].includes(pathMatch[1])) {
-      lang = pathMatch[1]
-    }
-  }
+  // Same resolution as the rest of the site: path prefix wins, legacy ?lang= is
+  // handled (and cleaned up) by the hook. The hand-rolled detector this replaces
+  // knew only 5 of the 9 locales and served English to /es/, /pt/, /ar/ and /ko/.
+  const lang = useLang()
+  const dir = getLangDir(lang)
   const c = (COPY[lang as keyof typeof COPY] ?? COPY.en)!
 
   const [visible, setVisible] = useState(false)
@@ -154,6 +172,7 @@ function PushPromptBannerInner() {
       if (OneSignal.User?.PushSubscription?.optedIn) {
         markSubscribed()
         setVisible(false)
+        releasePromptSlot(SLOT_ID)
       }
     })
 
@@ -203,10 +222,17 @@ function PushPromptBannerInner() {
 
       if (elapsed < REQUIRED_TIME_ON_SITE_MS) return
 
-      clearInterval(timer)
       // Re-check: they may have subscribed during these 5 minutes.
-      if (isAlreadySubscribed()) return
+      if (isAlreadySubscribed()) {
+        clearInterval(timer)
+        return
+      }
 
+      // The Google preferred-sources card may already own the screen. Keep the
+      // heartbeat running and try again next tick rather than stacking on it.
+      if (!claimPromptSlot(SLOT_ID)) return
+
+      clearInterval(timer)
       setVisible(true)
       try {
         window.umami?.track('push_prompt_shown', {
@@ -220,7 +246,10 @@ function PushPromptBannerInner() {
       }
     }, HEARTBEAT_MS)
 
-    return () => clearInterval(timer)
+    return () => {
+      clearInterval(timer)
+      releasePromptSlot(SLOT_ID)
+    }
     // Armed once per mount — pathname/lang are only read inside the heartbeat.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -232,6 +261,7 @@ function PushPromptBannerInner() {
       /* ignore */
     }
     setVisible(false)
+    releasePromptSlot(SLOT_ID)
     try {
       window.umami?.track('push_prompt_dismiss', {
         visitor_type: visitorTypeRef.current,
@@ -250,6 +280,7 @@ function PushPromptBannerInner() {
       /* ignore */
     }
     setVisible(false)
+    releasePromptSlot(SLOT_ID)
     try {
       window.umami?.track('push_prompt_allow', {
         visitor_type: visitorTypeRef.current,
@@ -291,6 +322,7 @@ function PushPromptBannerInner() {
     <div
       role="dialog"
       aria-label="Push notification opt-in"
+      dir={dir}
       style={{
         position: 'fixed',
         bottom: '96px',
@@ -364,9 +396,7 @@ function PushPromptBannerInner() {
 }
 
 export function PushPromptBanner() {
-  return (
-    <Suspense>
-      <PushPromptBannerInner />
-    </Suspense>
-  )
+  // No Suspense boundary needed since useSearchParams() is gone — usePathname()
+  // and useLang() do not suspend.
+  return <PushPromptBannerInner />
 }
