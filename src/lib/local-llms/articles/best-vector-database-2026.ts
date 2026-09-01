@@ -3526,7 +3526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '构建 RAG 应用的开发者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '约 15 分钟阅读',
     primaryTerm: '向量数据库',
     targetKeywords: [
@@ -3661,7 +3661,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: '自托管还是托管云',
-        content: '**自托管给你成本控制与数据驻留，同时把可用性、备份与扩容交到你手上；托管云再把这些卖回给你。** 坦率地说，金钱上的差距比多数团队预想的小，时间上的差距则更大。\n\n一台普通机器上的单节点 Qdrant 或 Weaviate，跑一百万条向量的基础设施成本约为每月 40 到 80 美元。同等规模下，托管版本落在相近区间。真正把两者分开的，是每月有人花在打补丁、监控、从失败部署中恢复、以及磁盘写满时被叫醒上的两到五个小时。按你团队真实的时薪计价，这个比较通常会反转。\n\n自托管明显胜出的场景，主要不是钱的问题。它们是数据驻留、隔离或本地部署的要求，以及高到让按量计费超过固定机器的用量。托管明显胜出的场景，是没有富余工程师的小团队——在那里，不付费的替代方案不是省钱，而是更晚上线。',
+        content: '**自托管给你成本控制与数据驻留，同时把可用性、备份与扩容交到你手上；托管云再把这些卖回给你。** 坦率地说，金钱上的差距比多数团队预想的小，时间上的差距则更大。\n\n一台普通机器上的单节点 Qdrant 或 Weaviate，跑一百万条向量的基础设施成本约为每月 40 到 80 美元。同等规模下，托管版本落在相近区间。真正把两者分开的，是每月有人花在打补丁、监控、从失败部署中恢复、以及磁盘写满时被叫醒上的两到五个小时。按你团队真实的时薪计价，这个比较通常会反转。\n\n**自托管在远超「玩具项目」规模之后依然舒适，但它确实存在一个真实的上限。** Qdrant 自己的容量规划文档建议，一旦集合超过大约 100 万条向量，就应该开始考虑分片；其内存消耗基准显示，在 1,536 维（OpenAI 嵌入尺寸）下，完全驻留内存的 HNSW 索引每百万条向量大约需要 6 到 7 GB 内存，若接受磁盘支持（mmap）存储并付出少量速度代价，则每百万条低至约 1.2 GB。实际上这意味着，一台配置得当的节点——32 GB 内存或更多——在多节点分布式方案值得承担其运维复杂度之前，就能容纳数千万条向量；Chroma 的嵌入模式是最早需要被替换掉的，因为它是单个 Python 进程而非服务器，从来就不是为承载生产规模的索引而设计的。\n\n自托管明显胜出的场景，主要不是钱的问题。它们是数据驻留、隔离或本地部署的要求，以及高到让按量计费超过固定机器的用量。托管明显胜出的场景，是没有富余工程师的小团队——在那里，不付费的替代方案不是省钱，而是更晚上线。',
+        decisionBlock: {
+          title: '自托管还是托管云？',
+          localIf: [
+            '你在做原型验证、学习，或运行中小规模数据集——Chroma（嵌入式，免费）或自托管 Qdrant 除一台小型虚拟机外不产生额外成本',
+            '数据驻留或隔离部署是硬性要求——索引永远不会离开你所控制的基础设施',
+            '你已经在运行 Kubernetes 或 Docker Compose，并能承担每月 2 到 5 小时的运维工作',
+            '你的向量数量还远低于数千万这个量级，一台资源充足的节点（32 GB 以上内存）仍能把索引完全放进内存——参见上文 Qdrant 自己给出的容量规划建议',
+          ],
+          cloudIf: [
+            '你没有专职的 DevOps 人力，无法承担自托管所需的每月 2 到 5 小时打补丁、监控与备份工作',
+            '你需要有保障的可用性 SLA，而非尽力而为——Pinecone Enterprise 提供 99.95%，Qdrant Premium 提供 99.9%',
+            '你需要开箱即用的企业功能：SSO、审计日志、HIPAA 合规、专属支持',
+            '你的规模已经超出团队能舒适运维的范围，宁愿支付可预测的按量账单，也不想为此招聘或培训',
+          ],
+          quick: [
+            '零成本、零服务器、用于原型验证 → Chroma 嵌入式',
+            '免费自托管，实际规模下性价比最优 → Qdrant',
+            '零运维工作，愿意为此付费 → Pinecone Builder（每月 20 美元固定价）',
+            '混合检索准确性优先 → Weaviate（自 2026 年 6 月起提供免费层级）',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -3972,6 +3993,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '资料来源',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud 定价', description: '永久免费层级 0.5 vCPU、1 GB 内存与 4 GB 磁盘的额度，以及 Standard 的按量计费与 99.5%、99.9% 的可用性承诺。' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant 容量规划', description: '官方指南，说明集合超过约 100 万条向量后应开始分片，以及用于上文自托管上限的 RAM 计算公式（向量数 × 维度 × 4 字节 × 1.5）。' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：服务 100 万条向量所需的最小内存', description: '1,536 维向量每百万条约需 6 到 7 GB 内存（内存驻留 HNSW）、磁盘支持（mmap）存储下每百万条约 1.2 GB 这一数据的出处。' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 仓库', description: '星标 34,242、Apache-2.0 许可证与 Rust 实现语言，于 2026 年 8 月 28 日读自 GitHub API。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone 定价', description: 'Starter、Builder、Standard 与 Enterprise 的额度，包括 20 美元的 Builder 固定方案以及每月 50 美元与 500 美元的最低额。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone 合作伙伴页面', description: '确认面向内容创作者的联盟计划，与技术、解决方案、推荐三类伙伴并列。' },
@@ -4000,7 +4023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年最佳向量数据库：Qdrant、Pinecone、Weaviate 还是 Chroma',
       description: '对比 Qdrant、Pinecone、Weaviate 与 Chroma 在 RAG 场景中的表现，包含核实过的价格、许可证、星标数与免费层级额度，以及 Weaviate 于 2026 年 6 月推出的不过期免费层级和 Chroma Cloud。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/zh/local-llms/best-vector-database-2026',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
