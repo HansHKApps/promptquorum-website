@@ -1918,7 +1918,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '什么是最好的提示框架适用于所有任务？',
+            'name': '所有任务最好的提示词框架是什么？',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': '没有通用的最佳框架。Chain-of-Thought用于推理，ReAct用于工具使用，Tree-of-Thought用于复杂多步任务。在您的特定任务上测试框架找到最佳选择。',
