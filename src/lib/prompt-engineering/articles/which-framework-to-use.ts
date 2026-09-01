@@ -266,10 +266,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       intro: 'Die Wahl des richtigen Prompt-Frameworks hängt von Ihrer Aufgabe, Ihrem Erfahrungsgrad und davon ab, ob Sie Kreativität, Präzision oder zuverlässiges Reasoning optimieren. PromptQuorum erleichtert diese Entscheidung mit mehreren integrierten Frameworks, einem automatischen Selektor und einem benutzerdefinierten Framework-Builder.',
       publishDate: '2026-03-24',
       readTime: '9 Min. Lesezeit',
-      seoTitle: 'Prompt-Framework 2026: Welches passt zu deiner Aufgabe?',
+      seoTitle: 'Prompt-Framework 2026: Welches passt zu Ihrer Aufgabe?',
       metaDescription: 'Chain-of-Thought, ReAct, Tree-of-Thought: Welches Framework passt zu Ihrem LLM-Projekt? Vergleich, Vor- und Nachteile und konkrete Entscheidungshilfen.',
       educationalLevel: 'Intermediate',
-      leadAnswerBlock: 'Es gibt kein einzelnes bestes Prompt-Framework. Wähle ein Struktur-Framework — CO-STAR, CRAFT, SPECS, RISEN oder TRACE — für den Aufbau deines Prompts und eine Reasoning-Strategie — Chain-of-Thought, ReAct oder Tree-of-Thought — dafür, wie das Modell die Aufgabe durcharbeitet. Die meisten Aufgaben brauchen je eines von beiden, nicht eines von zwei.',
+      leadAnswerBlock: 'Es gibt kein einzelnes bestes Prompt-Framework. Wählen Sie ein Struktur-Framework — CO-STAR, CRAFT, SPECS, RISEN oder TRACE — für den Aufbau Ihres Prompts und eine Reasoning-Strategie — Chain-of-Thought, ReAct oder Tree-of-Thought — dafür, wie das Modell die Aufgabe durcharbeitet. Die meisten Aufgaben brauchen je eines von beiden, nicht eines von zwei.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -331,10 +331,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wichtigste Erkenntnisse',
           isTldr: true,
           items: [
-            '**Struktur-Frameworks und Reasoning-Strategien sind zwei verschiedene Ebenen.** Meist kombinierst du je eines, statt zwischen ihnen zu wählen.',
+            '**Struktur-Frameworks und Reasoning-Strategien sind zwei verschiedene Ebenen.** Meist kombinieren Sie je eines, statt zwischen ihnen zu wählen.',
             '**Wähle das Struktur-Framework nach dem gewünschten Ergebnis:** CO-STAR oder TRACE für Analysen, CRAFT für kreative Arbeit, SPECS für strikte Formate, RISEN für Iteration.',
             '**Wähle die Reasoning-Strategie nach der Art des Problems:** Chain-of-Thought für Logik, ReAct für Tool- und Retrieval-Nutzung, Tree-of-Thought für Probleme mit mehreren gangbaren Wegen.',
-            '**Teste 2–3 Kandidaten an deiner eigenen Aufgabe, bevor du dich festlegst.** Die Framework-Wahl ist iterativ, nicht endgültig.',
+            '**Testen Sie 2–3 Kandidaten an Ihrer eigenen Aufgabe, bevor Sie sich festlegen.** Die Framework-Wahl ist iterativ, nicht endgültig.',
             '**Aufwendigere Frameworks kosten mehr Tokens.** Tree-of-Thought ist die teuerste der gängigen Optionen — nutze sie nur für Probleme, die sich wirklich verzweigen.',
           ],
         },
@@ -356,8 +356,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         reasoningStrategies: {
           title: 'Struktur-Frameworks vs. Reasoning-Strategien',
           content: [
-            '**Die obigen Frameworks bestimmen den Aufbau deines Prompts; Reasoning-Strategien bestimmen, wie das Modell die Aufgabe durcharbeiten soll.** Sie liegen auf unterschiedlichen Ebenen — deshalb ist „CO-STAR oder Chain-of-Thought?" die falsche Frage: Du kannst und solltest meist beides gleichzeitig einsetzen.',
-            'Die drei Reasoning-Strategien, die dir am häufigsten begegnen:',
+            '**Die obigen Frameworks bestimmen den Aufbau Ihres Prompts; Reasoning-Strategien bestimmen, wie das Modell die Aufgabe durcharbeiten soll.** Sie liegen auf unterschiedlichen Ebenen — deshalb ist „CO-STAR oder Chain-of-Thought?" die falsche Frage: Sie können und sollten meist beides gleichzeitig einsetzen.',
+            'Die drei Reasoning-Strategien, die Ihnen am häufigsten begegnen:',
           ],
           columns: ['Strategie', 'Am besten für', 'Kernidee'],
           rows: [
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         combiningFrameworks: {
-          content: 'In der Praxis kombinierst du sie: CO-STAR für Kontext und Zielgruppe, dann Chain-of-Thought für explizites Reasoning, dann ein SPECS-artiger Constraint-Block für das Ausgabeformat. Achte auf die Kosten — Tree-of-Thought erkundet mehrere Zweige und verbraucht daher deutlich mehr Tokens als ein direkter Prompt. Ausführlich behandelt in [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) und [Tree-of-Thought und ReAct](/prompt-engineering/tree-of-thought-and-react).',
+          content: 'In der Praxis kombinieren Sie sie: CO-STAR für Kontext und Zielgruppe, dann Chain-of-Thought für explizites Reasoning, dann ein SPECS-artiger Constraint-Block für das Ausgabeformat. Achten Sie auf die Kosten — Tree-of-Thought erkundet mehrere Zweige und verbraucht daher deutlich mehr Tokens als ein direkter Prompt. Ausführlich behandelt in [Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) und [Tree-of-Thought und ReAct](/prompt-engineering/tree-of-thought-and-react).',
         },
         howToChooseByUseCase: {
           title: 'Framework nach Anwendungsfall auswählen',
@@ -547,6 +547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        inLanguage: 'es',
         mainEntity: [
           {
             '@type': 'Question',
@@ -798,6 +799,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        inLanguage: 'ar',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1048,6 +1050,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        inLanguage: 'pt-BR',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1549,7 +1552,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-08-31',
         keywords: ['プロンプトフレームワーク', 'プロンプトエンジニアリング', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
       },
@@ -1833,7 +1836,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         datePublished: '2026-03-24',
         dateModified: '2026-08-31',
         keywords: ['提示框架', '提示工程', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
-        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+        author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
       },
@@ -2124,15 +2127,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 로컬 모델에 적합한 프롬프트 프레임워크 선택 방법과 PromptQuorum의 프레임워크 자동 선택 기능을 소개합니다.',
         datePublished: '2026-03-24',
         dateModified: '2026-08-31',
-        'url': 'https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use',
-        keywords: ['prompt frameworks', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
+        'url': 'https://www.promptquorum.com/ko/prompt-engineering/which-prompt-framework-should-you-use',
+        inLanguage: 'ko',
+        keywords: ['프롬프트 프레임워크', '프롬프트 엔지니어링', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
         about: [
-          { '@type': 'Thing', name: 'Prompt Engineering' },
-          { '@type': 'Thing', name: 'Large Language Models' },
-          { '@type': 'Thing', name: 'Prompt Frameworks' },
+          { '@type': 'Thing', name: '프롬프트 엔지니어링' },
+          { '@type': 'Thing', name: '대형 언어 모델' },
+          { '@type': 'Thing', name: '프롬프트 프레임워크' },
         ],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2157,6 +2161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       faqSchema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
+        inLanguage: 'ko',
         'mainEntity': [
           {
             '@type': 'Question',
