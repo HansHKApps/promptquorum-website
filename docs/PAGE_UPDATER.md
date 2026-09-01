@@ -235,6 +235,25 @@ Check the `current_models_mentioned` and `current_benchmarks_used` frontmatter f
 
 Cross-reference this with the GSC data from Step 0: are any of the new/superseded items appearing in user queries? If users are already searching for Qwen 3.6 and the page still features Qwen 2.5, that's a priority fix.
 
+### Step 2.5: "Nothing to Update" Gate (two-pass rule + Freshness Expansion Block)
+
+**"Nothing to update" is never the end of a run.** `dateModified` may only move when readers see different information (Anti-Pattern #8) — so a no-change verdict must either be disproven by a deeper look, or converted into real new content that earns the fresh date. The site strategy requires visible freshness; a page stuck on a historic "Last updated" date is its own defect.
+
+**When Steps 1–2 find zero content changes, run a mandatory second, much more detailed pass:**
+
+1. Sentence-level re-read of **every locale block** (all 9 languages), not just EN — non-EN blocks frequently lag EN, sometimes by a whole article version. Compare section key sets per locale.
+2. Web research from angles the first pass didn't take: adjacent models/tools competitors now cover, new user questions, regulatory/pricing changes, newer benchmarks, broken or superseded external links and sources.
+3. The Data-Free Meta Review checks (Step 0) on title/meta/OG/FAQ schema in all locales — a meta defect counts as "something to update."
+4. Structural sweep: FAQ schema vs visible content, internal links, Sources freshness, comparison tables missing new entrants.
+
+**If pass 2 finds anything** → continue with Steps 3–6 normally; `dateModified` updates legitimately.
+
+**If pass 2 still finds nothing → add a Freshness Expansion Block:** author ONE substantial new section that adds real reader value — e.g. a new FAQ cluster (3–5 q/a), a "common mistakes" section, a new use-case/persona section, troubleshooting, or a new comparison angle. It must be grounded in the pass-2 research (factual, sourced — never invented facts or filler), GEO-compliant, meaningfully sized (~150–300 words EN or 3–5 FAQ entries), tier-safe (no model names/years on `evergreen` pages), and translated to **all 9 locales** before the run counts as done. Then — and only then — update the top-level `dateModified` and roll `next_refresh_due`.
+
+**Repeat-run guard:** maximum one expansion block per refresh. If the same page hits this gate on two consecutive refreshes, add the block but also recommend a tier downgrade (e.g. `monthly` → `semi_annual`) — a page with repeatedly nothing real to update is in too fast a tier.
+
+Full templates and the detailed checklist live in the `/updater` skill (Step 4.7).
+
 ### Step 3: Update Top-Down, But Do Not Stop
 
 Update the page in reading order:
@@ -359,6 +378,10 @@ This report serves as the audit trail for the update and prevents the "I think I
 **Wrong:** Being told "don't update the title, it'll confuse Google" when the page content has fundamentally shifted.
 **When to override:** If the title references a benchmark, model family, or framing that the page itself now says is outdated (e.g., title says "Ranked by HumanEval" but body says "SWE-bench replaces HumanEval"), the title MUST change. Google penalizes title-content mismatch more than title changes.
 
+### 8. Date-Only Bump
+**Wrong:** Updating `dateModified` (or anything the visible "Last updated" badge reads) with no reader-visible content change in the same commit.
+**Why it fails:** Google detects and penalizes date manipulation. The fresh date must always be earned by content readers can see — that is exactly what the Step 2.5 Freshness Expansion Block exists for. The inverse is also wrong: giving up with "nothing to update" and leaving a historic date without running the Step 2.5 gate.
+
 ---
 
 ## Monthly Refresh Workflow (for `monthly` tier pages)
@@ -368,7 +391,7 @@ This report serves as the audit trail for the update and prevents the "I think I
 1. Run freshness audit: identify all pages with `next_refresh_due` in current month
 2. For each page, check: have new models/tools/benchmarks been released since `last_full_refresh`?
 3. If yes: run full-depth refresh process (Steps 1-6 above)
-4. If no: update `next_refresh_due` to next month, no content changes needed
+4. If no: in batch triage (page not opened for a full run), update `next_refresh_due` to next month — no content changes and no `dateModified` touch. But once a full refresh run has been started on a page, this shortcut no longer applies: the Step 2.5 "Nothing to Update" Gate governs, and the run must end in either real updates or a Freshness Expansion Block
 
 ### Batch Efficiency
 
