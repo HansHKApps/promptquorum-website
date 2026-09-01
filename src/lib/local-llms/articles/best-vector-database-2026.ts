@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Entwicklerinnen und Entwickler, die RAG-Anwendungen bauen',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '15 Min. Lesezeit',
     primaryTerm: 'Vektordatenbank',
     targetKeywords: [
@@ -736,7 +736,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: 'Selbst betreiben oder Managed Cloud',
-        content: '**Selbstbetrieb gibt Ihnen Kostenkontrolle und Datenresidenz und überträgt Ihnen Verfügbarkeit, Backups und Skalierung; die Managed Cloud verkauft Ihnen das zurück.** Ehrlich betrachtet ist der Geldunterschied kleiner, als die meisten Teams erwarten, und der Zeitunterschied größer.\n\nEin Qdrant oder Weaviate auf einem einzelnen bescheidenen Server bringt eine Million Vektoren für rund 40 bis 80 $ Infrastruktur im Monat unter. Die verwalteten Gegenstücke landen in dieser Größenordnung ähnlich. Was sie tatsächlich trennt, sind die zwei bis fünf Stunden im Monat, in denen jemand patcht, überwacht, nach einem misslungenen Deploy zurückspielt und geweckt wird, wenn eine Platte volläuft. Setzen Sie dafür den realen Stundensatz an, und der Vergleich kippt meist.\n\nDie Fälle, in denen Selbstbetrieb klar gewinnt, drehen sich nicht primär ums Geld. Es sind Datenresidenz, eine Anforderung nach Abschottung oder Betrieb im eigenen Rechenzentrum, und ein Volumen, das hoch genug ist, dass nutzungsabhängige Abrechnung einen festen Server überholt. Klar gewinnt Managed dort, wo ein kleines Team keine freie Entwicklungskraft hat und die Alternative zum Zahlen nicht Sparen heißt, sondern später ausliefern.',
+        content: '**Selbstbetrieb gibt Ihnen Kostenkontrolle und Datenresidenz und überträgt Ihnen Verfügbarkeit, Backups und Skalierung; die Managed Cloud verkauft Ihnen das zurück.** Ehrlich betrachtet ist der Geldunterschied kleiner, als die meisten Teams erwarten, und der Zeitunterschied größer.\n\nEin Qdrant oder Weaviate auf einem einzelnen bescheidenen Server bringt eine Million Vektoren für rund 40 bis 80 $ Infrastruktur im Monat unter. Die verwalteten Gegenstücke landen in dieser Größenordnung ähnlich. Was sie tatsächlich trennt, sind die zwei bis fünf Stunden im Monat, in denen jemand patcht, überwacht, nach einem misslungenen Deploy zurückspielt und geweckt wird, wenn eine Platte volläuft. Setzen Sie dafür den realen Stundensatz an, und der Vergleich kippt meist.\n\n**Selbstbetrieb bleibt weit über die "Spielprojekt"-Größenordnung hinaus komfortabel, hat aber eine reale Obergrenze.** Qdrants eigene Dokumentation zur Kapazitätsplanung empfiehlt, eine Collection ab etwa 1 Million Vektoren zu shardieren, und die Speicherverbrauchs-Benchmarks des Anbieters beziffern einen vollständig im Arbeitsspeicher gehaltenen HNSW-Index auf etwa 6–7 GB RAM je Million Vektoren bei 1.536 Dimensionen (der OpenAI-Embedding-Größe), oder nur rund 1,2 GB je Million, wenn Sie plattenbasierten (mmap) Speicher mit einem kleinen Geschwindigkeitsnachteil akzeptieren. In der Praxis bedeutet das: Ein gut ausgestatteter einzelner Knoten — 32 GB RAM oder mehr — trägt zig Millionen Vektoren, bevor sich die operative Komplexität einer Verteilung auf mehrere Knoten lohnt; Chromas eingebetteter Modus ist derjenige, aus dem Sie am frühesten herauswachsen sollten, da er ein einzelner Python-Prozess statt eines Servers ist und nie für einen Index in Produktionsgröße gedacht war.\n\nDie Fälle, in denen Selbstbetrieb klar gewinnt, drehen sich nicht primär ums Geld. Es sind Datenresidenz, eine Anforderung nach Abschottung oder Betrieb im eigenen Rechenzentrum, und ein Volumen, das hoch genug ist, dass nutzungsabhängige Abrechnung einen festen Server überholt. Klar gewinnt Managed dort, wo ein kleines Team keine freie Entwicklungskraft hat und die Alternative zum Zahlen nicht Sparen heißt, sondern später ausliefern.',
+        decisionBlock: {
+          title: 'Selbst betreiben oder Managed Cloud?',
+          localIf: [
+            'Sie prototypisieren, lernen oder betreiben einen kleinen bis mittleren Datensatz — Chroma (eingebettet, kostenlos) oder selbst betriebenes Qdrant kostet nichts außer einem kleinen Server',
+            'Datenresidenz oder eine abgeschottete Bereitstellung sind eine harte Anforderung — der Index verlässt nie Ihre eigene Infrastruktur',
+            'Sie betreiben bereits Kubernetes oder Docker Compose und können 2–5 Betriebsstunden im Monat auffangen',
+            'Ihre Vektorzahl liegt bequem unter dem zweistelligen Millionenbereich, in dem ein einzelner gut ausgestatteter Knoten (32 GB+ RAM) den Index noch im Arbeitsspeicher hält — siehe Qdrants eigene Kapazitätsplanungs-Hinweise oben',
+          ],
+          cloudIf: [
+            'Sie haben keine eigene DevOps-Kapazität und können die 2–5 Stunden im Monat für Patchen, Überwachen und Backups nicht auffangen, die Selbstbetrieb erfordert',
+            'Sie brauchen eine garantierte Verfügbarkeitszusage statt Best-Effort — Pinecone Enterprise bietet 99,95 %, Qdrant Premium 99,9 %',
+            'Sie brauchen Enterprise-Funktionen von Anfang an: SSO, Audit-Logs, HIPAA-Konformität, dedizierten Support',
+            'Sie skalieren über das hinaus, was Ihr Team komfortabel betreibt, und zahlen lieber eine planbare, nutzungsabhängige Rechnung, als dafür einzustellen oder zu schulen',
+          ],
+          quick: [
+            'Null Kosten, kein Server, Prototyping → Chroma eingebettet',
+            'Kostenlos selbst betrieben, bestes Kosten-Leistungs-Verhältnis in echtem Maßstab → Qdrant',
+            'Kein Betriebsaufwand, dafür zahlen → Pinecone Builder (20 $/Monat pauschal)',
+            'Genauigkeit der hybriden Suche hat Priorität → Weaviate (Gratisstufe seit Juni 2026)',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -1055,6 +1076,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quellen',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud-Preise', description: 'Grenzen der dauerhaft kostenlosen Stufe mit 0,5 vCPU, 1 GB RAM und 4 GB Speicher sowie nutzungsabhängiges Standard und die Zusagen von 99,5 % und 99,9 %.' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant-Kapazitätsplanung', description: 'Offizielle Hinweise zur Shardierung einer Collection ab etwa 1 Million Vektoren sowie die RAM-Formel (Vektoren × Dimensionen × 4 Byte × 1,5), die der oben beschriebenen Obergrenze für Selbstbetrieb zugrunde liegt.' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: minimaler RAM für 1 Mio. Vektoren', description: 'Grundlage für die ~6–7 GB RAM je Million 1.536-dimensionaler Vektoren (In-Memory-HNSW) gegenüber ~1,2 GB je Million bei plattenbasiertem (mmap) Speicher.' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant-Repository', description: 'Sternzahl 34.242, Apache-2.0-Lizenz und Rust als Implementierungssprache, am 28. August 2026 aus der GitHub-API gelesen.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone-Preise', description: 'Grenzen von Starter, Builder, Standard und Enterprise samt Builder-Pauschale von 20 $ und den Mindestbeträgen von 50 $ und 500 $ im Monat.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone-Partnerseite', description: 'Bestätigt das Affiliate-Programm für Content-Ersteller neben den Kategorien Technologie-, Lösungs- und Empfehlungspartner.' },
@@ -1083,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Beste Vektordatenbank 2026: Qdrant, Pinecone, Weaviate oder Chroma',
       description: 'Vergleicht Qdrant, Pinecone, Weaviate und Chroma für RAG, mit geprüften Preisen, Lizenzen, Sternzahlen und Gratisstufen, darunter Weaviates unbefristete Gratisstufe vom Juni 2026 und Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/de/local-llms/best-vector-database-2026',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
@@ -1174,7 +1197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Desarrolladores que construyen aplicaciones RAG',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '15 min de lectura',
     primaryTerm: 'base de datos vectorial',
     targetKeywords: [
@@ -1309,7 +1332,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: 'Autoalojar o nube gestionada',
-        content: '**Autoalojar le da control de costes y residencia de datos y le entrega la disponibilidad, las copias de seguridad y el escalado; la nube gestionada se los revende.** El planteamiento honesto es que la diferencia de dinero es menor de lo que la mayoría de equipos espera y la de tiempo es mayor.\n\nUn Qdrant o Weaviate de un solo nodo en una máquina modesta llevará un millón de vectores por unos 40 a 80 dólares al mes de infraestructura. Los equivalentes gestionados caen en una banda parecida a esa escala. Lo que de verdad los separa son las dos a cinco horas al mes que alguien dedica a parchear, monitorizar, restaurar tras un despliegue fallido y atender un aviso cuando se llena un disco. Ponga a eso la tarifa horaria real de su equipo y la comparación suele invertirse.\n\nLos casos donde autoalojar gana con claridad no son principalmente de dinero. Son residencia de datos, un requisito de aislamiento o instalación propia, y un volumen lo bastante alto como para que la facturación por consumo supere a una máquina fija. El caso donde gana lo gestionado es un equipo pequeño sin ingeniero de sobra, donde la alternativa a pagar no es ahorrar sino publicar más tarde.',
+        content: '**Autoalojar le da control de costes y residencia de datos y le entrega la disponibilidad, las copias de seguridad y el escalado; la nube gestionada se los revende.** El planteamiento honesto es que la diferencia de dinero es menor de lo que la mayoría de equipos espera y la de tiempo es mayor.\n\nUn Qdrant o Weaviate de un solo nodo en una máquina modesta llevará un millón de vectores por unos 40 a 80 dólares al mes de infraestructura. Los equivalentes gestionados caen en una banda parecida a esa escala. Lo que de verdad los separa son las dos a cinco horas al mes que alguien dedica a parchear, monitorizar, restaurar tras un despliegue fallido y atender un aviso cuando se llena un disco. Ponga a eso la tarifa horaria real de su equipo y la comparación suele invertirse.\n\n**Autoalojar sigue siendo cómodo mucho más allá de la escala de "proyecto de prueba", pero tiene un techo real.** La propia documentación de planificación de capacidad de Qdrant recomienda empezar a fragmentar (shard) una colección al superar aproximadamente 1 millón de vectores, y sus pruebas de consumo de memoria sitúan un índice HNSW totalmente en memoria en torno a 6-7 GB de RAM por millón de vectores a 1.536 dimensiones (el tamaño de los embeddings de OpenAI), o tan solo ~1,2 GB por millón si acepta almacenamiento respaldado en disco (mmap) con un pequeño coste de velocidad. En la práctica, eso significa que un solo nodo bien dimensionado — 32 GB de RAM o más — aguanta decenas de millones de vectores antes de que la distribución multi-nodo justifique su complejidad operativa; el modo embebido de Chroma es el primero del que conviene salir, ya que es un único proceso de Python en lugar de un servidor y nunca estuvo pensado para soportar un índice a escala de producción.\n\nLos casos donde autoalojar gana con claridad no son principalmente de dinero. Son residencia de datos, un requisito de aislamiento o instalación propia, y un volumen lo bastante alto como para que la facturación por consumo supere a una máquina fija. El caso donde gana lo gestionado es un equipo pequeño sin ingeniero de sobra, donde la alternativa a pagar no es ahorrar sino publicar más tarde.',
+        decisionBlock: {
+          title: '¿Autoalojar o nube gestionada?',
+          localIf: [
+            'Está prototipando, aprendiendo o manejando un conjunto de datos pequeño o mediano — Chroma (embebido, gratis) o Qdrant autoalojado no cuesta nada más allá de una VM pequeña',
+            'La residencia de datos o un despliegue aislado (air-gapped) es un requisito estricto — el índice nunca sale de infraestructura que usted controla',
+            'Ya opera Kubernetes o Docker Compose y puede absorber 2-5 horas de operaciones al mes',
+            'Su número de vectores está cómodamente por debajo del rango de decenas de millones, donde un solo nodo bien dotado (32 GB+ de RAM) aún mantiene el índice en memoria — vea la guía de planificación de capacidad de Qdrant mencionada arriba',
+          ],
+          cloudIf: [
+            'No tiene capacidad de DevOps dedicada y no puede absorber las 2-5 horas al mes de parcheo, monitorización y copias de seguridad que exige autoalojar',
+            'Necesita un SLA de disponibilidad garantizado en lugar de "mejor esfuerzo" — Pinecone Enterprise ofrece 99,95 %, Qdrant Premium 99,9 %',
+            'Necesita funciones de nivel empresarial listas de fábrica: SSO, registros de auditoría, cumplimiento HIPAA, soporte dedicado',
+            'Está escalando más allá de lo que su equipo puede operar cómodamente y prefiere pagar una factura predecible por consumo antes que contratar o formar personal para ello',
+          ],
+          quick: [
+            'Coste cero, sin servidor, para prototipar → Chroma embebido',
+            'Autoalojado gratis, mejor relación coste-rendimiento a escala real → Qdrant',
+            'Cero trabajo operativo, dispuesto a pagarlo → Pinecone Builder (20 $/mes fijos)',
+            'La precisión de la búsqueda híbrida es la prioridad → Weaviate (nivel gratuito desde junio de 2026)',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -1619,7 +1663,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://qdrant.tech/pricing/', title: 'Precios de Qdrant Cloud', description: 'Límites del nivel gratuito para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco, más la facturación por consumo de Standard y los SLA del 99,5 % y 99,9 %.' },
+          { url: 'https://qdrant.tech/pricing/', title: 'Precios de Qdrant Cloud', description: 'Límites del nivel gratuito para siempre con 0,5 vCPU, 1 GB de RAM y 4 GB de disco, más la facturación por consumo de Standard y los SLA del 99,5 % y 99,9 %. Reverificado en la página de precios en vivo el 1 de septiembre de 2026, sin cambios.' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Planificación de capacidad de Qdrant', description: 'Guía oficial sobre cuándo fragmentar (sharding) una colección al superar aproximadamente 1 millón de vectores, y la fórmula de RAM (vectores × dimensiones × 4 bytes × 1,5) usada para el techo de autoalojamiento descrito arriba.' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant: RAM mínima para servir 1 M de vectores', description: 'Base de los aproximadamente 6-7 GB de RAM por millón de vectores de 1.536 dimensiones (HNSW en memoria) frente a ~1,2 GB por millón con almacenamiento respaldado en disco (mmap).' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Repositorio de Qdrant', description: 'Recuento de 34.242 estrellas, licencia Apache-2.0 y Rust como lenguaje de implementación, leídos de la API de GitHub el 28 de agosto de 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Precios de Pinecone', description: 'Límites de Starter, Builder, Standard y Enterprise incluidos el plan plano Builder de 20 $ y los mínimos mensuales de 50 $ y 500 $.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Página de socios de Pinecone', description: 'Confirma el programa de afiliados para creadores de contenido junto a las categorías de socios tecnológicos, de soluciones y de referencia.' },
@@ -1648,7 +1694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor base de datos vectorial 2026: Qdrant, Pinecone, Weaviate o Chroma',
       description: 'Compara Qdrant, Pinecone, Weaviate y Chroma para RAG, con precios, licencias, recuentos de estrellas y límites de nivel gratuito verificados, incluidos el nivel gratuito sin caducidad de Weaviate de junio de 2026 y Chroma Cloud.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/es/local-llms/best-vector-database-2026',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
@@ -1739,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Developpeurs qui construisent des applications RAG',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '15 min de lecture',
     primaryTerm: 'base de donnees vectorielle',
     targetKeywords: [
@@ -1874,7 +1920,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: 'Auto-heberger ou cloud gere',
-        content: '**L auto-hebergement vous donne la maitrise des couts et la residence des donnees, et vous confie la disponibilite, les sauvegardes et la mise a l echelle ; le cloud gere vous les revend.** Dit honnetement, l ecart d argent est plus faible que la plupart des equipes ne l imaginent, et l ecart de temps plus grand.\n\nUn Qdrant ou un Weaviate mononoeud sur une machine modeste fera tourner un million de vecteurs pour environ 40 a 80 dollars d infrastructure par mois. Les equivalents geres se situent dans une fourchette voisine a cette echelle. Ce qui les separe vraiment, ce sont les deux a cinq heures par mois que quelqu un consacre aux correctifs, a la supervision, a la restauration apres un deploiement rate et aux alertes quand un disque se remplit. Valorisez cela au taux horaire reel de votre equipe et la comparaison s inverse le plus souvent.\n\nLes cas ou l auto-hebergement l emporte nettement ne relevent pas d abord de l argent. Ce sont la residence des donnees, une exigence d isolement ou d installation sur site, et un volume assez eleve pour que la facturation a l usage depasse une machine fixe. Le cas ou le gere l emporte nettement, c est une petite equipe sans ingenieur disponible, ou l alternative a payer n est pas d economiser mais de livrer plus tard.',
+        content: '**L auto-hebergement vous donne la maitrise des couts et la residence des donnees, et vous confie la disponibilite, les sauvegardes et la mise a l echelle ; le cloud gere vous les revend.** Dit honnetement, l ecart d argent est plus faible que la plupart des equipes ne l imaginent, et l ecart de temps plus grand.\n\nUn Qdrant ou un Weaviate mononoeud sur une machine modeste fera tourner un million de vecteurs pour environ 40 a 80 dollars d infrastructure par mois. Les equivalents geres se situent dans une fourchette voisine a cette echelle. Ce qui les separe vraiment, ce sont les deux a cinq heures par mois que quelqu un consacre aux correctifs, a la supervision, a la restauration apres un deploiement rate et aux alertes quand un disque se remplit. Valorisez cela au taux horaire reel de votre equipe et la comparaison s inverse le plus souvent.\n\n**L auto-hebergement reste confortable bien au-dela de l echelle d un projet jouet, mais il a un plafond reel.** La documentation de Qdrant sur le dimensionnement des capacites recommande de partitionner (sharder) une collection au-dela d environ 1 million de vecteurs, et les chiffres de consommation memoire publies par l editeur situent un index HNSW entierement en memoire a environ 6 a 7 Go de RAM par million de vecteurs a 1 536 dimensions (la taille des embeddings OpenAI), ou seulement environ 1,2 Go par million si vous acceptez un stockage sur disque (mmap) avec une legere perte de rapidite. En pratique, cela signifie qu un seul noeud bien dimensionne, 32 Go de RAM ou plus, supporte des dizaines de millions de vecteurs avant que la complexite operationnelle d une repartition sur plusieurs noeuds ne devienne rentable ; le mode integre de Chroma est celui dont vous devrez sortir le plus tot, car c est un simple processus Python plutot qu un serveur et il n a jamais ete concu pour un index a l echelle de la production.\n\nLes cas ou l auto-hebergement l emporte nettement ne relevent pas d abord de l argent. Ce sont la residence des donnees, une exigence d isolement ou d installation sur site, et un volume assez eleve pour que la facturation a l usage depasse une machine fixe. Le cas ou le gere l emporte nettement, c est une petite equipe sans ingenieur disponible, ou l alternative a payer n est pas d economiser mais de livrer plus tard.',
+        decisionBlock: {
+          title: 'Auto-heberger ou cloud gere ?',
+          localIf: [
+            'Vous prototypez, apprenez ou exploitez un jeu de donnees petit a moyen — Chroma (integre, gratuit) ou Qdrant auto-heberge ne coute rien de plus qu un petit serveur',
+            'La residence des donnees ou un deploiement isole est une exigence stricte — l index ne quitte jamais votre propre infrastructure',
+            'Vous exploitez deja Kubernetes ou Docker Compose et pouvez absorber 2 a 5 heures d exploitation par mois',
+            'Votre nombre de vecteurs reste confortablement sous la dizaine de millions, la ou un seul noeud bien dimensionne (32 Go de RAM et plus) garde encore l index en memoire — voir les notes de Qdrant sur le dimensionnement des capacites ci-dessus',
+          ],
+          cloudIf: [
+            'Vous n avez pas de capacite DevOps dediee et ne pouvez pas absorber les 2 a 5 heures par mois de correctifs, de supervision et de sauvegardes qu exige l auto-hebergement',
+            'Vous avez besoin d un engagement de disponibilite garanti plutot que du meilleur effort — Pinecone Enterprise offre 99,95 %, Qdrant Premium 99,9 %',
+            'Vous avez besoin de fonctionnalites entreprise des le depart : SSO, journaux d audit, conformite HIPAA, support dedie',
+            'Vous montez en charge au-dela de ce que votre equipe peut exploiter confortablement, et vous preferez une facture previsible a l usage plutot que de recruter ou former pour cela',
+          ],
+          quick: [
+            'Cout nul, sans serveur, prototypage → Chroma integre',
+            'Gratuit en auto-hebergement, meilleur rapport cout/performance a l echelle reelle → Qdrant',
+            'Aucune charge d exploitation, mais vous payez → Pinecone Builder (20 $/mois forfaitaires)',
+            'La precision de la recherche hybride est prioritaire → Weaviate (palier gratuit depuis juin 2026)',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -2185,6 +2252,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Tarifs Qdrant Cloud', description: 'Limites du palier gratuit a vie avec 0,5 vCPU, 1 Go de RAM et 4 Go de disque, plus la facturation a la consommation de Standard et les engagements de 99,5 % et 99,9 %.' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Dimensionnement des capacites Qdrant', description: 'Recommandation officielle de partitionner une collection au-dela d environ 1 million de vecteurs, ainsi que la formule de RAM (vecteurs x dimensions x 4 octets x 1,5) qui sous-tend le plafond d auto-hebergement decrit plus haut.' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant : RAM minimale pour 1 million de vecteurs', description: 'Base des ~6 a 7 Go de RAM par million de vecteurs a 1 536 dimensions (HNSW en memoire), contre ~1,2 Go par million en stockage sur disque (mmap).' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Depot Qdrant', description: 'Compte de 34 242 etoiles, licence Apache-2.0 et Rust comme langage d implementation, lus depuis l API GitHub le 28 aout 2026.' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Tarifs Pinecone', description: 'Limites de Starter, Builder, Standard et Enterprise, dont l offre forfaitaire Builder a 20 $ et les minimums mensuels de 50 $ et 500 $.' },
           { url: 'https://www.pinecone.io/partners/', title: 'Page partenaires de Pinecone', description: 'Confirme le programme d affiliation destine aux createurs de contenu, aux cotes des categories partenaires technologiques, solutions et prescripteurs.' },
@@ -2213,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Meilleure base de donnees vectorielle 2026 : Qdrant, Pinecone, Weaviate ou Chroma',
       description: 'Compare Qdrant, Pinecone, Weaviate et Chroma pour le RAG, avec tarifs, licences, nombres d etoiles et limites de paliers gratuits verifies, dont le palier gratuit sans expiration de Weaviate de juin 2026 et Chroma Cloud. Verifie en aout 2026.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/fr/local-llms/best-vector-database-2026',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
@@ -2869,7 +2938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'RAGアプリケーションを構築する開発者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '15分で読めます',
     primaryTerm: 'ベクトルデータベース',
     targetKeywords: [
@@ -3004,7 +3073,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: '自己ホストかマネージドか',
-        content: '**自己ホストはコストの制御とデータ所在地を手に入れ、可用性・バックアップ・スケーリングを引き受けることを意味します。マネージドはそれを売り戻してくれます。** 率直に言えば、金額の差は多くのチームが思うより小さく、時間の差は大きいというのが実態です。\n\n控えめなサーバー1台上のQdrantやWeaviateなら、100万ベクトルをインフラ費で月40〜80ドル程度に収められます。同規模ではマネージドの相当プランも似た帯に収まります。実際に両者を分けるのは、パッチ適用、監視、まずいデプロイからの復旧、ディスクが埋まったときの呼び出しに誰かが費やす月2〜5時間です。そこにチームの実際の時給を当てはめると、比較はたいてい逆転します。\n\n自己ホストが明確に勝つ場面は、主に費用の問題ではありません。データ所在地、隔離あるいはオンプレミスの要件、そして従量課金が固定サーバーを追い越すほど高い利用量です。マネージドが明確に勝つのは、余剰の技術者がいない小さなチームで、払わない選択肢が節約ではなく「出荷が遅れる」ことを意味する場合です。',
+        content: '**自己ホストはコストの制御とデータ所在地を手に入れ、可用性・バックアップ・スケーリングを引き受けることを意味します。マネージドはそれを売り戻してくれます。** 率直に言えば、金額の差は多くのチームが思うより小さく、時間の差は大きいというのが実態です。\n\n控えめなサーバー1台上のQdrantやWeaviateなら、100万ベクトルをインフラ費で月40〜80ドル程度に収められます。同規模ではマネージドの相当プランも似た帯に収まります。実際に両者を分けるのは、パッチ適用、監視、まずいデプロイからの復旧、ディスクが埋まったときの呼び出しに誰かが費やす月2〜5時間です。そこにチームの実際の時給を当てはめると、比較はたいてい逆転します。\n\n**自己ホストはおもちゃ規模をはるかに超えても十分快適に動きますが、現実の天井があります。** Qdrantのキャパシティ計画のドキュメントは、コレクションが約100万ベクトルを超えたらシャーディング（分割）することを推奨しており、同社が公開しているメモリ消費量の数値では、1,536次元（OpenAIの埋め込みサイズ）で完全にメモリ上に載るHNSWインデックスが100万ベクトルあたりRAM約6〜7 GBを必要とし、ディスク上のストレージ（mmap）を受け入れて速度をわずかに犠牲にすれば、100万ベクトルあたり約1.2 GBで済むとされています。実務上これは、適切にサイズ設計された単一ノード（RAM 32 GB以上）が、複数ノードへの分割という運用の複雑さを引き受けるだけの価値が出る前に、数千万ベクトルを支えるということです。最も早く卒業することになるのはChromaの組み込みモードで、これはサーバーではなく単なるPythonプロセスであり、そもそも本番規模のインデックス向けに設計されていません。\n\n自己ホストが明確に勝つ場面は、主に費用の問題ではありません。データ所在地、隔離あるいはオンプレミスの要件、そして従量課金が固定サーバーを追い越すほど高い利用量です。マネージドが明確に勝つのは、余剰の技術者がいない小さなチームで、払わない選択肢が節約ではなく「出荷が遅れる」ことを意味する場合です。',
+        decisionBlock: {
+          title: '自己ホストかマネージドか？',
+          localIf: [
+            '試作・学習中、または小〜中規模のデータセットを運用している — Chroma（組み込み・無料）や自己ホストのQdrantなら小さなサーバー以上の費用はかからない',
+            'データ所在地や隔離されたデプロイが厳格な要件である — インデックスが自社インフラから一切出ない',
+            'すでにKubernetesやDocker Composeを運用しており、月2〜5時間の運用工数を吸収できる',
+            'ベクトル数が数千万件を十分下回っている — 適切にサイズ設計された単一ノード（RAM 32 GB以上）ならまだインデックスをメモリ上に保てる水準。上記のQdrantのキャパシティ計画の注記を参照',
+          ],
+          cloudIf: [
+            '専任のDevOps余力がなく、自己ホストが求める月2〜5時間のパッチ適用・監視・バックアップを吸収できない',
+            'ベストエフォートではなく保証された可用性の約定が必要 — Pinecone Enterpriseは99.95%、Qdrant Premiumは99.9%',
+            '最初からエンタープライズ機能が必要 — SSO、監査ログ、HIPAA準拠、専任サポート',
+            'チームが快適に運用できる規模を超えて拡大しており、そのために採用や育成をするより、従量課金の予測可能な請求のほうがよい',
+          ],
+          quick: [
+            '費用ゼロ、サーバーなし、試作向け → Chroma組み込み',
+            '自己ホストは無料、実運用規模でのコスト対性能が最良 → Qdrant',
+            '運用負荷ゼロだが料金は払う → Pinecone Builder（月20ドル定額）',
+            'ハイブリッド検索の精度を最優先 → Weaviate（2026年6月以降は無料枠あり）',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -3315,6 +3405,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '出典',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud の料金', description: '0.5 vCPU・1 GB RAM・4 GBディスクという永続無料枠の上限、Standardの従量課金、99.5%と99.9%の稼働率保証。' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant のキャパシティ計画', description: 'コレクションが約100万ベクトルを超えたらシャーディングするという公式の推奨、および上記の自己ホストの天井の根拠となるRAMの計算式（ベクトル数×次元数×4バイト×1.5）。' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：100万ベクトルに必要な最小RAM', description: '1,536次元（HNSWをメモリ上に保持）で100万ベクトルあたり約6〜7 GBのRAM、ディスク上のストレージ（mmap）なら100万ベクトルあたり約1.2 GBという数値の出典。' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant リポジトリ', description: 'スター34,242件、Apache-2.0ライセンス、実装言語Rust。2026年8月28日にGitHub APIから取得。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone の料金', description: 'Starter・Builder・Standard・Enterpriseの上限。20ドルの定額Builderと月50ドル・月500ドルの最低額を含む。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone パートナーページ', description: '技術・ソリューション・紹介の各パートナー区分と並ぶ、コンテンツ制作者向けアフィリエイトプログラムの確認。' },
@@ -3343,7 +3435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年 最適なベクトルデータベース：Qdrant・Pinecone・Weaviate・Chroma',
       description: 'RAG向けにQdrant、Pinecone、Weaviate、Chromaを比較。確認済みの料金、ライセンス、スター数、無料枠の上限に加え、2026年6月に導入されたWeaviateの無期限無料枠とChroma Cloudを扱います。2026年8月時点で確認。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ja/local-llms/best-vector-database-2026',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
@@ -3434,7 +3526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '构建 RAG 应用的开发者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-09-01',
     readTime: '约 15 分钟阅读',
     primaryTerm: '向量数据库',
     targetKeywords: [
@@ -3569,7 +3661,28 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       selfHostVsManaged: {
         id: 'self-host-vs-managed',
         title: '自托管还是托管云',
-        content: '**自托管给你成本控制与数据驻留，同时把可用性、备份与扩容交到你手上；托管云再把这些卖回给你。** 坦率地说，金钱上的差距比多数团队预想的小，时间上的差距则更大。\n\n一台普通机器上的单节点 Qdrant 或 Weaviate，跑一百万条向量的基础设施成本约为每月 40 到 80 美元。同等规模下，托管版本落在相近区间。真正把两者分开的，是每月有人花在打补丁、监控、从失败部署中恢复、以及磁盘写满时被叫醒上的两到五个小时。按你团队真实的时薪计价，这个比较通常会反转。\n\n自托管明显胜出的场景，主要不是钱的问题。它们是数据驻留、隔离或本地部署的要求，以及高到让按量计费超过固定机器的用量。托管明显胜出的场景，是没有富余工程师的小团队——在那里，不付费的替代方案不是省钱，而是更晚上线。',
+        content: '**自托管给你成本控制与数据驻留，同时把可用性、备份与扩容交到你手上；托管云再把这些卖回给你。** 坦率地说，金钱上的差距比多数团队预想的小，时间上的差距则更大。\n\n一台普通机器上的单节点 Qdrant 或 Weaviate，跑一百万条向量的基础设施成本约为每月 40 到 80 美元。同等规模下，托管版本落在相近区间。真正把两者分开的，是每月有人花在打补丁、监控、从失败部署中恢复、以及磁盘写满时被叫醒上的两到五个小时。按你团队真实的时薪计价，这个比较通常会反转。\n\n**自托管在远超「玩具项目」规模之后依然舒适，但它确实存在一个真实的上限。** Qdrant 自己的容量规划文档建议，一旦集合超过大约 100 万条向量，就应该开始考虑分片；其内存消耗基准显示，在 1,536 维（OpenAI 嵌入尺寸）下，完全驻留内存的 HNSW 索引每百万条向量大约需要 6 到 7 GB 内存，若接受磁盘支持（mmap）存储并付出少量速度代价，则每百万条低至约 1.2 GB。实际上这意味着，一台配置得当的节点——32 GB 内存或更多——在多节点分布式方案值得承担其运维复杂度之前，就能容纳数千万条向量；Chroma 的嵌入模式是最早需要被替换掉的，因为它是单个 Python 进程而非服务器，从来就不是为承载生产规模的索引而设计的。\n\n自托管明显胜出的场景，主要不是钱的问题。它们是数据驻留、隔离或本地部署的要求，以及高到让按量计费超过固定机器的用量。托管明显胜出的场景，是没有富余工程师的小团队——在那里，不付费的替代方案不是省钱，而是更晚上线。',
+        decisionBlock: {
+          title: '自托管还是托管云？',
+          localIf: [
+            '你在做原型验证、学习，或运行中小规模数据集——Chroma（嵌入式，免费）或自托管 Qdrant 除一台小型虚拟机外不产生额外成本',
+            '数据驻留或隔离部署是硬性要求——索引永远不会离开你所控制的基础设施',
+            '你已经在运行 Kubernetes 或 Docker Compose，并能承担每月 2 到 5 小时的运维工作',
+            '你的向量数量还远低于数千万这个量级，一台资源充足的节点（32 GB 以上内存）仍能把索引完全放进内存——参见上文 Qdrant 自己给出的容量规划建议',
+          ],
+          cloudIf: [
+            '你没有专职的 DevOps 人力，无法承担自托管所需的每月 2 到 5 小时打补丁、监控与备份工作',
+            '你需要有保障的可用性 SLA，而非尽力而为——Pinecone Enterprise 提供 99.95%，Qdrant Premium 提供 99.9%',
+            '你需要开箱即用的企业功能：SSO、审计日志、HIPAA 合规、专属支持',
+            '你的规模已经超出团队能舒适运维的范围，宁愿支付可预测的按量账单，也不想为此招聘或培训',
+          ],
+          quick: [
+            '零成本、零服务器、用于原型验证 → Chroma 嵌入式',
+            '免费自托管，实际规模下性价比最优 → Qdrant',
+            '零运维工作，愿意为此付费 → Pinecone Builder（每月 20 美元固定价）',
+            '混合检索准确性优先 → Weaviate（自 2026 年 6 月起提供免费层级）',
+          ],
+        },
         callouts: [
           {
             type: 'tip',
@@ -3880,6 +3993,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '资料来源',
         links: [
           { url: 'https://qdrant.tech/pricing/', title: 'Qdrant Cloud 定价', description: '永久免费层级 0.5 vCPU、1 GB 内存与 4 GB 磁盘的额度，以及 Standard 的按量计费与 99.5%、99.9% 的可用性承诺。' },
+          { url: 'https://qdrant.tech/documentation/capacity-planning/', title: 'Qdrant 容量规划', description: '官方指南，说明集合超过约 100 万条向量后应开始分片，以及用于上文自托管上限的 RAM 计算公式（向量数 × 维度 × 4 字节 × 1.5）。' },
+          { url: 'https://qdrant.tech/articles/memory-consumption/', title: 'Qdrant：服务 100 万条向量所需的最小内存', description: '1,536 维向量每百万条约需 6 到 7 GB 内存（内存驻留 HNSW）、磁盘支持（mmap）存储下每百万条约 1.2 GB 这一数据的出处。' },
           { url: 'https://github.com/qdrant/qdrant', title: 'Qdrant 仓库', description: '星标 34,242、Apache-2.0 许可证与 Rust 实现语言，于 2026 年 8 月 28 日读自 GitHub API。' },
           { url: 'https://www.pinecone.io/pricing/', title: 'Pinecone 定价', description: 'Starter、Builder、Standard 与 Enterprise 的额度，包括 20 美元的 Builder 固定方案以及每月 50 美元与 500 美元的最低额。' },
           { url: 'https://www.pinecone.io/partners/', title: 'Pinecone 合作伙伴页面', description: '确认面向内容创作者的联盟计划，与技术、解决方案、推荐三类伙伴并列。' },
@@ -3908,7 +4023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年最佳向量数据库：Qdrant、Pinecone、Weaviate 还是 Chroma',
       description: '对比 Qdrant、Pinecone、Weaviate 与 Chroma 在 RAG 场景中的表现，包含核实过的价格、许可证、星标数与免费层级额度，以及 Weaviate 于 2026 年 6 月推出的不过期免费层级和 Chroma Cloud。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/zh/local-llms/best-vector-database-2026',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
