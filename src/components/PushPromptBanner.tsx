@@ -8,6 +8,9 @@ const STORAGE_KEY = 'push_prompt_dismissed_until'
 const SESSION_COUNT_KEY = 'pq_session_count'
 const SESSION_ACTIVE_KEY = 'pq_session_active'
 const TIME_ON_SITE_KEY = 'pq_time_on_site_ms'
+// Permanent, not a suppression window: once someone has actually subscribed we
+// never ask again on this browser.
+const SUBSCRIBED_KEY = 'pq_push_subscribed'
 const SUPPRESS_DURATION_MS = 90 * 24 * 60 * 60 * 1000 // 3 months
 // Single rule for everyone: 5 minutes of cumulative time on the site, passive or
 // active. Accumulates across page views and visits, so it is real time spent, not
@@ -83,6 +86,39 @@ const COPY: Record<
   },
 }
 
+/**
+ * True if this browser is already a push subscriber, by any of three signals:
+ * our own permanent flag, the live OneSignal SDK state, or a granted browser
+ * permission (which on this site can only come from this banner). The SDK loads
+ * async, so the flag and the permission check are what cover an early render.
+ */
+function isAlreadySubscribed(): boolean {
+  try {
+    if (localStorage.getItem(SUBSCRIBED_KEY) === '1') return true
+  } catch {
+    /* ignore */
+  }
+  try {
+    if (window.OneSignal?.User?.PushSubscription?.optedIn) return true
+  } catch {
+    /* ignore */
+  }
+  try {
+    if (typeof Notification !== 'undefined' && Notification.permission === 'granted') return true
+  } catch {
+    /* ignore */
+  }
+  return false
+}
+
+function markSubscribed(): void {
+  try {
+    localStorage.setItem(SUBSCRIBED_KEY, '1')
+  } catch {
+    /* ignore */
+  }
+}
+
 function PushPromptBannerInner() {
   const searchParams = useSearchParams()
   const pathname = usePathname()
@@ -105,6 +141,22 @@ function PushPromptBannerInner() {
   const visitorTypeRef = useRef<'new' | 'returning'>('new')
 
   useEffect(() => {
+    // Already a subscriber — never ask again, and don't even start the timer.
+    if (isAlreadySubscribed()) {
+      markSubscribed()
+      return
+    }
+
+    // The SDK may resolve after this effect runs; if it reports an existing
+    // subscription, record it permanently and pull the banner if it is up.
+    window.OneSignalDeferred = window.OneSignalDeferred || []
+    window.OneSignalDeferred.push(async (OneSignal: OneSignalType) => {
+      if (OneSignal.User?.PushSubscription?.optedIn) {
+        markSubscribed()
+        setVisible(false)
+      }
+    })
+
     try {
       const until = localStorage.getItem(STORAGE_KEY)
       if (until && Date.now() < parseInt(until, 10)) return
@@ -127,17 +179,6 @@ function PushPromptBannerInner() {
     }
 
     visitorTypeRef.current = sessionCount >= 2 ? 'returning' : 'new'
-
-    // Don't show if already subscribed via OneSignal
-    const checkSubscribed = () => {
-      try {
-        const w = window as Window & { OneSignal?: OneSignalType }
-        if (w.OneSignal?.User?.PushSubscription?.optedIn) return true
-      } catch {
-        /* ignore */
-      }
-      return false
-    }
 
     const readElapsed = () => {
       try {
@@ -163,7 +204,8 @@ function PushPromptBannerInner() {
       if (elapsed < REQUIRED_TIME_ON_SITE_MS) return
 
       clearInterval(timer)
-      if (checkSubscribed()) return
+      // Re-check: they may have subscribed during these 5 minutes.
+      if (isAlreadySubscribed()) return
 
       setVisible(true)
       try {
@@ -223,6 +265,7 @@ function PushPromptBannerInner() {
       // After permission, tag with language (mirrors OneSignalInit.tsx)
       const optedIn = OneSignal.User.PushSubscription.optedIn
       if (optedIn) {
+        markSubscribed()
         await OneSignal.User.addTags({ lang })
       }
       // Separates "clicked our banner" from "actually granted the browser prompt" —
