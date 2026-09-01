@@ -76,7 +76,7 @@ A `monthly` page has **two independent update cadences**. Do not conflate them.
 **Rules:**
 - The monthly content refresh is **facts-only**. It does **not** rewrite the title/meta/descriptions.
 - **Exception (always allowed):** if a monthly fact refresh makes the title or meta *contradict* the updated body (Anti-Pattern #6), fix it on the spot — a forced correction is not a scheduled SEO change.
-- The quarterly SEO review **requires GSC data** (Step 0) — it is the heaviest consumer of per-page query/CTR/position signal. Without GSC, skip the SEO review; do not guess at titles.
+- The quarterly SEO review **prefers GSC data** (Step 0) — it is the heaviest consumer of per-page query/CTR/position signal. Without GSC, do NOT skip the review: run the **Data-Free Meta Review** (see Step 0) instead — full field review (length, language, topic match, staleness, completeness) plus judgment optimization across all 9 locale blocks, labeled as data-free in the report. Never invent query data; fields that pass every check get `NO CHANGE`.
 - When `next_refresh_due` and `next_seo_review_due` both fall in the same month, do them together: facts first, then meta.
 - Set `last_seo_review` to the date a review actually ran, and roll `next_seo_review_due` to the next fixed quarter anchor.
 - Quarterly SEO review applies to **`monthly`-tier pages only**. `semi_annual` pages already fold a structural/meta review into their twice-yearly refresh.
@@ -173,7 +173,7 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 
 ### Step 0: Ingest GSC Query Data (MANDATORY FIRST STEP)
 
-**Before touching any content, the operator must provide Google Search Console data for the page being updated.** This is not optional. Without GSC data, the update is a guess. With it, the update is aligned to what real users actually search for.
+**Before touching any content, ask the operator for Google Search Console data for the page being updated.** Asking is not optional. With GSC data, the update is aligned to what real users actually search for. If the operator confirms no GSC data exists (new page, too few impressions), the refresh still runs — in **No-GSC mode**, with the Data-Free Meta Review below replacing the query analyses.
 
 **What to provide:**
 - GSC Performance report filtered to the specific page URL
@@ -204,7 +204,21 @@ Examples: "Ollama vs LM Studio," "Best Local LLM Frontends," "One-Click Installe
 | 10,506 US impressions, 0 clicks | US queries are likely informational/version-check — check if title signals "latest" or "updated" |
 | Mobile CTR 3.4% vs Desktop CTR 0.07% | Desktop impressions are low-intent bulk queries — don't optimize for them, focus on mobile-intent queries |
 
-**If no GSC data is provided:** Ask the operator for it. Do not proceed with the update without it. A content refresh without search data is guesswork.
+**If no GSC data is provided:** Ask the operator once. If they provide data → run the analyses above. If they confirm none exists → switch to No-GSC mode below and run the FULL refresh process anyway (Steps 1–6 all still run). Never stop the update, and never skip the meta review, because data is missing. Never fabricate query data.
+
+#### No-GSC mode: the Data-Free Meta Review
+
+When no GSC data exists, review the meta fields against the page itself instead of query data. Intent proxy = the page's own content + web research + the freshness tier. For **every locale block** (en, de, fr, ja, zh, es, pt, ar, ko), check and fix:
+
+1. **Length** — title/meta within per-locale limits (incl. CJK counts for ja/zh; use the limits in `/geo-meta-optimizer`).
+2. **Language** — every field in its block's own language; no English leakage into non-EN blocks.
+3. **Topic match** — title/meta/OG reflect the page's actual current content and top recommendation; no contradiction with the body (Anti-Pattern #6, applied per-locale).
+4. **Staleness** — no superseded model names/versions vs `current_models_mentioned`.
+5. **Site rules** — no month names in trailing-stamp position; year where the tier requires it; `| PromptQuorum` suffix only on titles ≤45 chars; no marketing superlatives.
+6. **Completeness** — no missing meta/OG description in any locale block; FAQ schema matches visible content.
+7. **Judgment optimization** — after defects are fixed, weak-but-not-wrong titles/metas MAY be improved by best judgment; fields that pass all checks get `NO CHANGE`.
+
+Label the run `GSC data: NONE — data-free review mode` in the Step 6 report, with a reason on every meta change, so a later GSC-backed review can re-evaluate. The full checklist with report templates lives in the `/updater` skill (Step 0-ALT).
 
 ### Step 1: Read the Entire Page First
 
@@ -220,6 +234,25 @@ Check the `current_models_mentioned` and `current_benchmarks_used` frontmatter f
 - Pricing that has shifted
 
 Cross-reference this with the GSC data from Step 0: are any of the new/superseded items appearing in user queries? If users are already searching for Qwen 3.6 and the page still features Qwen 2.5, that's a priority fix.
+
+### Step 2.5: "Nothing to Update" Gate (two-pass rule + Freshness Expansion Block)
+
+**"Nothing to update" is never the end of a run.** `dateModified` may only move when readers see different information (Anti-Pattern #8) — so a no-change verdict must either be disproven by a deeper look, or converted into real new content that earns the fresh date. The site strategy requires visible freshness; a page stuck on a historic "Last updated" date is its own defect.
+
+**When Steps 1–2 find zero content changes, run a mandatory second, much more detailed pass:**
+
+1. Sentence-level re-read of **every locale block** (all 9 languages), not just EN — non-EN blocks frequently lag EN, sometimes by a whole article version. Compare section key sets per locale.
+2. Web research from angles the first pass didn't take: adjacent models/tools competitors now cover, new user questions, regulatory/pricing changes, newer benchmarks, broken or superseded external links and sources.
+3. The Data-Free Meta Review checks (Step 0) on title/meta/OG/FAQ schema in all locales — a meta defect counts as "something to update."
+4. Structural sweep: FAQ schema vs visible content, internal links, Sources freshness, comparison tables missing new entrants.
+
+**If pass 2 finds anything** → continue with Steps 3–6 normally; `dateModified` updates legitimately.
+
+**If pass 2 still finds nothing → add a Freshness Expansion Block:** author ONE substantial new section that adds real reader value — e.g. a new FAQ cluster (3–5 q/a), a "common mistakes" section, a new use-case/persona section, troubleshooting, or a new comparison angle. It must be grounded in the pass-2 research (factual, sourced — never invented facts or filler), GEO-compliant, meaningfully sized (~150–300 words EN or 3–5 FAQ entries), tier-safe (no model names/years on `evergreen` pages), and translated to **all 9 locales** before the run counts as done. Then — and only then — update the top-level `dateModified` and roll `next_refresh_due`.
+
+**Repeat-run guard:** maximum one expansion block per refresh. If the same page hits this gate on two consecutive refreshes, add the block but also recommend a tier downgrade (e.g. `monthly` → `semi_annual`) — a page with repeatedly nothing real to update is in too fast a tier.
+
+Full templates and the detailed checklist live in the `/updater` skill (Step 4.7).
 
 ### Step 3: Update Top-Down, But Do Not Stop
 
@@ -345,6 +378,10 @@ This report serves as the audit trail for the update and prevents the "I think I
 **Wrong:** Being told "don't update the title, it'll confuse Google" when the page content has fundamentally shifted.
 **When to override:** If the title references a benchmark, model family, or framing that the page itself now says is outdated (e.g., title says "Ranked by HumanEval" but body says "SWE-bench replaces HumanEval"), the title MUST change. Google penalizes title-content mismatch more than title changes.
 
+### 8. Date-Only Bump
+**Wrong:** Updating `dateModified` (or anything the visible "Last updated" badge reads) with no reader-visible content change in the same commit.
+**Why it fails:** Google detects and penalizes date manipulation. The fresh date must always be earned by content readers can see — that is exactly what the Step 2.5 Freshness Expansion Block exists for. The inverse is also wrong: giving up with "nothing to update" and leaving a historic date without running the Step 2.5 gate.
+
 ---
 
 ## Monthly Refresh Workflow (for `monthly` tier pages)
@@ -354,7 +391,7 @@ This report serves as the audit trail for the update and prevents the "I think I
 1. Run freshness audit: identify all pages with `next_refresh_due` in current month
 2. For each page, check: have new models/tools/benchmarks been released since `last_full_refresh`?
 3. If yes: run full-depth refresh process (Steps 1-6 above)
-4. If no: update `next_refresh_due` to next month, no content changes needed
+4. If no: in batch triage (page not opened for a full run), update `next_refresh_due` to next month — no content changes and no `dateModified` touch. But once a full refresh run has been started on a page, this shortcut no longer applies: the Step 2.5 "Nothing to Update" Gate governs, and the run must end in either real updates or a Freshness Expansion Block
 
 ### Batch Efficiency
 
