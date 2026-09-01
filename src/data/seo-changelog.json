@@ -1563,5 +1563,30 @@
       "ctr": 0.08054169636493229,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "0421f2d9-864f-46e1-9e8d-676c40ff70bd",
+    "slug": "/es/local-llms/how-to-install-ollama",
+    "date": "2026-09-01T13:58:00.643Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Instalar Ollama en 2 minutos: macOS, Windows y Linux",
+        "new": "Instalar Ollama en Windows, macOS y Linux: Pasos Exactos"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Instala Ollama en 2 minutos en cualquier sistema: descarga, ejecuta `ollama run llama3.2` y empieza a chatear. Guía completa con solución de problemas.",
+        "new": "Instalar Ollama en Windows, macOS o Linux: pasos exactos, comando curl para Ubuntu/Linux, y solución a los errores más comunes de instalación 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR fix — Windows/Linux/Ubuntu queries ranked well (pos 4.7-9) but 0% CTR because meta named no platform. Reordered title to lead with Windows (highest query volume), named platforms explicitly in meta, added Ubuntu mention to body + 2 FAQs (Ubuntu install, Windows download-intent).",
+    "baseline": {
+      "position": 7.3,
+      "impressions": 7399,
+      "clicks": 37,
+      "ctr": 0.0050006757669955396,
+      "period": "GSC as pasted 2026-09-01"
+    }
   }
 ]
