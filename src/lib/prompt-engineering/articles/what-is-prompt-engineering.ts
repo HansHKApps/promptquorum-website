@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'What Is Prompt Engineering?',
         description: 'Prompt engineering: designing text inputs to get reliable, accurate outputs from LLMs. Learn essential techniques, frameworks, and why it matters.',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['prompt engineering', 'AI prompting', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -728,7 +728,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '¿Qué es el Prompt Engineering?',
         description: 'Prompt engineering: diseñar entradas de texto para obtener respuestas fiables y precisas de LLMs. Aprende las técnicas esenciales, los frameworks y por qué importa.',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['prompt engineering', 'prompting de IA', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -1074,7 +1074,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'ما هي هندسة الطلبات؟',
         description: 'هندسة الطلبات: تصميم المدخلات النصية للحصول على مخرجات موثوقة ودقيقة من نماذج LLM. تعلّم التقنيات الأساسية والأطر ولماذا تهم.',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['هندسة الطلبات', 'استدعاء الذكاء الاصطناعي', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },
@@ -2760,7 +2760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '프롬프트 엔지니어링이란?',
         description: '프롬프트 엔지니어링: LLM에서 신뢰할 수 있고 정확한 출력을 얻기 위해 텍스트 입력을 설계하는 기법. 핵심 기법, 프레임워크, 그리고 그 중요성을 알아보십시오.',
         datePublished: '2026-03-01',
-        dateModified: '2026-07-29',
+        dateModified: '2026-08-31',
         keywords: ['프롬프트 엔지니어링', 'AI 프롬프팅', 'LLM', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'Thing', name: 'PromptQuorum' },

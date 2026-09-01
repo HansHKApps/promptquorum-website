@@ -502,7 +502,7 @@
       ]
     },
     "best-local-llms-for-coding": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -858,7 +858,7 @@
       ]
     },
     "best-local-llm-frontends": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -2287,7 +2287,7 @@
       "images": []
     },
     "best-ai-coding-assistant-local-llm": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -3190,7 +3190,7 @@
       "images": []
     },
     "run-qwen-vl-locally-2026": {
-      "dateModified": "2026-05-22",
+      "dateModified": "2026-07-31",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -3415,7 +3415,7 @@
       ]
     },
     "uae-pdpl-data-sovereignty-local-ai-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-06-14",
       "hasSections": true,
@@ -3759,7 +3759,7 @@
   },
   "prompt-engineering": {
     "build-a-prompt-library": {
-      "dateModified": "2026-04-29",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -3858,7 +3858,7 @@
       ]
     },
     "ai-hallucinations-how-to-stop": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -3894,7 +3894,7 @@
       "images": []
     },
     "prompt-for-speed": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -3979,7 +3979,7 @@
       "images": []
     },
     "system-prompt-vs-user-prompt": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -4060,7 +4060,7 @@
       "images": []
     },
     "seo-meets-ai": {
-      "dateModified": "2026-04-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": "2026-04-28 against GPT-5, Claude 4.8 Opus, Gemini 3 Pro release data",
       "publishDate": "2026-03-23",
       "hasSections": true,
@@ -4078,7 +4078,7 @@
       "images": []
     },
     "teaching-with-ai": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-23",
       "hasSections": true,
@@ -4096,7 +4096,7 @@
       "images": []
     },
     "extract-and-summarise": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-23",
       "hasSections": true,
@@ -4163,7 +4163,7 @@
       "images": []
     },
     "your-brand-voice-ai": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": "2026-06-14",
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4181,7 +4181,7 @@
       "images": []
     },
     "build-quality-checks": {
-      "dateModified": "2026-04-29",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4445,7 +4445,7 @@
       "images": []
     },
     "trace-framework": {
-      "dateModified": "2026-04-28",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4481,7 +4481,7 @@
       "images": []
     },
     "rtf-framework": {
-      "dateModified": "2026-05-04",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4517,7 +4517,7 @@
       "images": []
     },
     "constrained-prompting": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-29",
       "lastFactChecked": "2026-04-28",
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -4535,7 +4535,7 @@
       "images": []
     },
     "chain-of-thought-prompting": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-31",
       "lastFactChecked": "2026-05-03",
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -4602,7 +4602,7 @@
       "images": []
     },
     "negative-prompting": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-31",
       "lastFactChecked": "2026-07-14",
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -4620,7 +4620,7 @@
       "images": []
     },
     "self-consistency-prompting": {
-      "dateModified": "2026-05-04",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -4638,7 +4638,7 @@
       "images": []
     },
     "tree-of-thought-react": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-29",
       "lastFactChecked": "2026-05-03 — Yao et al. ToT/ReAct papers, Claude Opus 5/GPT-5.6/Gemini 3.1 Pro native tool use APIs",
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -4674,7 +4674,7 @@
       "images": []
     },
     "structured-output-json-mode": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -4920,7 +4920,7 @@
       "images": []
     },
     "prompt-evaluation-metrics": {
-      "dateModified": "2026-04-10",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -4956,7 +4956,7 @@
       "images": []
     },
     "how-to-reduce-prompt-brittleness": {
-      "dateModified": "2026-04-29",
+      "dateModified": "2026-07-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-29",
       "hasSections": true,
@@ -4992,7 +4992,7 @@
       "images": []
     },
     "best-prompt-engineering-ides": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -5244,7 +5244,7 @@
       "images": []
     },
     "pe-for-content-teams": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-05-02",
       "hasSections": true,
@@ -5298,7 +5298,7 @@
       "images": []
     },
     "pe-for-support-operations": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-31",
       "lastFactChecked": null,
       "publishDate": "2026-05-02",
       "hasSections": true,

@@ -4,7 +4,7 @@ import type { Language } from '@/lib/blog/blogContent'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-30',
     seoTitle: 'Best AI Coding Assistant & IDE for Local LLMs 2026',
     metaDescription: 'Compare 5 AI coding assistants & IDEs with native local LLM support: Ollama, LM Studio, pricing, privacy. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp',
@@ -2447,7 +2447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-zh.webp',
     intro: '本地运行AI编程助手能保护企业代码隐私，满足监管要求。本指南对比5款领先工具，帮助您根据团队规模、预算、数据安全需求做出最佳选择。',
     publishDate: '2026-05-18',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-28',
     readTime: '8 分钟',
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM AI coding assistant',
