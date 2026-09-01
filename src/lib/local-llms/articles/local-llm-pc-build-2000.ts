@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '**A $2,000 PC with two RTX 5060 Ti 16GB cards (32GB combined VRAM), a Ryzen 7 9700X, and 64GB DDR5 RAM runs 70B-class models through tensor-split multi-GPU inference — something no single $2,000 GPU can do.** Rather than buying one expensive 24GB card, this build pools two mid-range 16GB cards over PCIe using llama.cpp\'s tensor-split mode, doubling VRAM capacity for less than the price of a single RTX 5090. This guide covers the exact parts, the motherboard requirement that makes dual-GPU work correctly, and real token-per-second speeds.',
     metaDescription: '$2,000 local LLM PC build: dual RTX 5060 Ti 16GB (32GB VRAM) + Ryzen 7 9700X + 64GB DDR5. Runs 70B Q4 at 12-18 tok/s via tensor-split. Full 2026 parts list.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-09-01',
     readTime: '10 min read',
     educationalLevel: 'Intermediate',
     audience: 'Builders who outgrew a single-GPU rig and want 70B-class local inference without buying a $3,000+ workstation GPU',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**Total build cost: ~$1,940.** Two RTX 5060 Ti 16GB ($860 combined), Ryzen 7 9700X ($330), 64GB DDR5-6000 ($180), 2TB Gen4 NVMe ($130), B650 ATX board with x8/x8 slots ($180), 850W 80+ Gold PSU ($130), ATX case ($90).',
-          '**Two 16GB GPUs beat one 24GB GPU on VRAM-per-dollar.** 32GB combined VRAM for ~$860 beats a used RTX 3090 24GB (~$700-750 for less total VRAM) and costs far less than a single 32GB workstation card.',
+          '**Two 16GB GPUs beat one 24GB GPU on VRAM-per-dollar.** 32GB combined VRAM for ~$860 beats a used RTX 3090 24GB (~$850-1,050 for less total VRAM) and costs far less than a single 32GB workstation card.',
           '**70B models fit and run at 12-18 tok/s** via llama.cpp tensor-split across both cards — the entire reason this build uses two GPUs instead of one bigger one.',
           '**The motherboard must support x8/x8 PCIe bifurcation,** not just two physical x16 slots. A board that runs the second slot at x4 electrical creates a real bandwidth bottleneck for tensor-split inference.',
           '**Single-GPU fallback still works well:** for smaller models, running on just one RTX 5060 Ti gives 32B at 25-30 tok/s — faster than splitting a model that would already fit on one card.',

@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Shop Professional Build components →', url: 'https://www.amazon.com/s?k=Threadripper+7960X+workstation', productName: 'Professional Workstation Parts', productCategory: 'pc-component', priceRange: '~$8,800' },
     ],
     publishDate: '2026-05-26',
-    dateModified: '2026-08-25',
+    dateModified: '2026-09-01',
     leadAnswerBlock: '**The best local AI workstation for most people in 2026 is the ~$5,300 RTX 4090 build: 24 GB VRAM + Ryzen 9 9950X + 64 GB DDR5. It runs 7B models at 100–120 tok/s, 14B at Q8 without offloading, and 30B Q4 at 25–35 tok/s. Skip to your tier: [Budget ~$2,700](#tier1) · [Recommended ~$5,300](#tier2) · [Professional ~$8,800](#tier3).**',
     quickAnswerTop: {
       en: {
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Component': 'Total', 'Model': '', 'Price (Aug 2026)': '~$2,720' },
         ],
         affiliateLinks: [
-          { label: 'Check used RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu', priceRange: '~$700–1,050' },
+          { label: 'Check used RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu', priceRange: '~$850–1,050' },
           { label: 'Check new RTX 3090 alternatives →', url: 'https://www.amazon.com/s?k=RTX+3090', productName: 'NVIDIA RTX 3090', productCategory: 'gpu' },
           { label: 'Ryzen 7 7700X on Amazon →', url: 'https://www.amazon.com/s?k=Ryzen+7+7700X', productName: 'AMD Ryzen 7 7700X', productCategory: 'cpu', priceRange: '~$200–280' },
           { label: 'Shop the complete Budget build →', url: 'https://www.amazon.com/s?k=RTX+3090+64GB+DDR5+budget+AI+workstation', productName: 'Budget Workstation Build', productCategory: 'pc-component', priceRange: '~$2,700' },
@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Recommended PSU:** Corsair RM850x or equivalent 80+ Gold',
         ],
         callouts: [
-          { type: 'tip', text: 'Used vs. new RTX 3090: used cards ($700–1,050 on eBay) save 30–50% over the few new-old-stock units still around, at the cost of an unknown warranty. Buy from a seller with return acceptance and check for mining wear (fan noise, thermal paste residue) before committing.' },
+          { type: 'tip', text: 'Used vs. new RTX 3090: used cards ($850–1,050 on eBay) save 30–50% over the few new-old-stock units still around, at the cost of an unknown warranty. Buy from a seller with return acceptance and check for mining wear (fan noise, thermal paste residue) before committing.' },
         ],
         image: '/images/best-workstation-build-local-ai-2026-tier-comparison-en.svg',
         imageCaption: 'Three local-AI workstation tiers compared by hardware: Budget uses an RTX 3090 (24 GB VRAM) running 70B models at 5-8 tok/s via CPU offload, Recommended uses an RTX 4090 (24 GB VRAM) at 10-15 tok/s, and Professional uses dual RTX 3090 GPUs (48 GB VRAM) at 25-40 tok/s on GPU.',
@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Component': 'Total', 'Model': '', 'Price (Aug 2026)': '~$8,820' },
         ],
         affiliateLinks: [
-          { label: 'Check 2× RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'gpu', priceRange: '~$700–1,050 each' },
+          { label: 'Check 2× RTX 3090 on eBay →', url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 (Dual)', productCategory: 'gpu', priceRange: '~$850–1,050 each' },
           { label: 'Ryzen Threadripper 7960X — check price →', url: 'https://www.amazon.com/s?k=Threadripper+7960X', productName: 'AMD Ryzen Threadripper 7960X', productCategory: 'cpu' },
           { label: 'ASUS TRX50-SAGE on Amazon →', url: 'https://www.amazon.com/s?k=ASUS+TRX50+Sage', productName: 'ASUS Pro WS TRX50-SAGE WiFi', productCategory: 'motherboard' },
           { label: 'Shop the complete Professional build →', url: 'https://www.amazon.com/s?k=Threadripper+7960X+dual+RTX+3090+workstation', productName: 'Professional Workstation Build', productCategory: 'pc-component', priceRange: '~$8,800' },
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Should I buy a used or new RTX 3090 for the Budget or Professional build?',
-            a: 'Used is the standard choice for the RTX 3090 in 2026 — production ended in 2022, so "new" units are old retailer stock at a premium, not fresher hardware. Used cards run $700–1,050 depending on condition; check for excessive fan noise or a burning smell under load (signs of mining wear), and prefer a seller who accepts returns. If you want factory warranty coverage instead, the RTX 4090 (still in production-adjacent supply) is the safer new-hardware pick, just at Recommended-tier pricing.',
+            a: 'Used is the standard choice for the RTX 3090 in 2026 — production ended in 2022, so "new" units are old retailer stock at a premium, not fresher hardware. Used cards run $850–1,050 depending on condition; check for excessive fan noise or a burning smell under load (signs of mining wear), and prefer a seller who accepts returns. If you want factory warranty coverage instead, the RTX 4090 (still in production-adjacent supply) is the safer new-hardware pick, just at Recommended-tier pricing.',
           },
           {
             q: 'Do I need NVLink to run Ollama across two GPUs?',
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best Workstation Build for Local AI (2026): Three Budget Tiers',
       description: 'Complete parts lists for three local AI workstation builds: ~$2,700 budget, ~$5,300 recommended, ~$8,800 professional. Includes performance benchmarks for 7B–70B models and the 2026 DDR5/NAND shortage pricing impact.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-25',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',

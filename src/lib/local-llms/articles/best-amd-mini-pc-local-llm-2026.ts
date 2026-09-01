@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     theme: 'Hardware Setups',
     title: 'Best AMD Mini PC for Local LLM 2026: AOOSTAR, Minisforum, Beelink, GMKtec Compared',
-    dateModified: '2026-08-26',
+    dateModified: '2026-09-01',
     seoTitle: 'Best Mini PC for Local LLM 2026: AMD Ryzen AI Max+ Compared',
     metaDescription: 'Best AMD mini PC for AI and local LLMs in 2026: Minisforum MS-A2, Beelink GTR9 Pro, GMKtec EVO-X2 \u2014 128GB unified memory, benchmarks and Ollama setup.',
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-en.webp',
@@ -474,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'You demand warranty service in hours: Chinese OEMs require shipping units back to Asia in some cases.',
           'You are running production inference for paying customers: If 99.9% uptime SLA is required, enterprise support beats consumer mini PCs.',
           'You want passive cooling: All four mini PCs need active fans under sustained load.',
-          'You are on a $500 budget: Used RTX 3090 ($800), used gaming laptop ($1,000), or budget GPU ($300–500) beats any new mini PC.',
+          'You are on a $500 budget: Used RTX 3090 ($850+), used gaming laptop ($1,000), or budget GPU ($300–500) beats any new mini PC.',
         ],
       },
       faq: {

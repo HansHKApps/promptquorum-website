@@ -37,7 +37,7 @@
       "images": []
     },
     "local-llm-pc-build-1000": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -68,7 +68,7 @@
       ]
     },
     "local-llm-pc-build-2000": {
-      "dateModified": "2026-07-18",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-07-18",
       "hasSections": true,
@@ -1241,7 +1241,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -1895,7 +1895,7 @@
       "images": []
     },
     "best-budget-gpus-local-llm": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -1949,7 +1949,7 @@
       ]
     },
     "used-gpus-for-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2095,7 +2095,7 @@
       ]
     },
     "best-amd-mini-pc-local-llm-2026": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -3235,7 +3235,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -3289,7 +3289,7 @@
       ]
     },
     "best-gpu-for-llm-inference-under-500-2026": {
-      "dateModified": null,
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7130,7 +7130,7 @@
       ]
     },
     "best-workstation-build-local-ai-2026": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-09-01",
       "lastFactChecked": "2026-08-25",
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7355,7 +7355,7 @@
       ]
     },
     "local-ai-video-generation-vs-cloud": {
-      "dateModified": "2026-08-21",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-08-21",
       "hasSections": true,
@@ -7528,7 +7528,7 @@
       "images": []
     },
     "vramFor70bModel": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -8095,7 +8095,7 @@
       "images": []
     },
     "bestGpuUnder600LocalLlm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -9937,7 +9937,7 @@
       "images": []
     },
     "best-hardware-for-local-smart-home": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,

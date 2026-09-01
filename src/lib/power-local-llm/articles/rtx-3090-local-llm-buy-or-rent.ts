@@ -7,10 +7,15 @@
 // EN block first; other locales render "Coming Soon" until per-market prices
 // are sourced — used-GPU pricing must not be USD-converted across markets.
 //
-// Prices: snapshot verified 1 September 2026, two sources per figure.
-//   Used RTX 3090 $750–$950 typical, eBay averages near $1,000 —
-//     bestvaluegpu.com price tracker + XDA (which quoted $600–$800 in
-//     March 2026, confirming the upward trend during the memory shortage).
+// Prices: snapshot verified 1 September 2026, cross-checked across three
+// independent used-GPU trackers (bestvaluegpu.com, gpudojo.com, plus the
+// getdeploying.com/eBay-derived figures) and reconciled site-wide — this
+// figure is now the canonical current-price reference used across every
+// article on the site that prices a used RTX 3090; if you touch this
+// number here, check for drift in the other ~12 files (search '3090' +
+// '$') rather than letting one page diverge again.
+//   Used RTX 3090 $850–$1,050, eBay averaging near $1,000 — up from
+//     $600–$800 in spring 2026 (XDA, March 2026) during the memory shortage.
 //   Cloud RTX 3090 — getdeploying.com provider table (8 providers, updated
 //     1 September 2026) cross-checked against runpod.io's own model page.
 //   Electricity $0.18/kWh — EIA US residential average 2026.
@@ -33,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'RTX 3090 for Local LLMs: Buy Used or Rent? | PromptQuorum',
 
     intro: 'The RTX 3090 is the cheapest way to get 24 GB of VRAM under your own desk, and renting the same card in the cloud costs cents per hour. This guide works out where the line between those two options actually falls.',
-    metaDescription: 'A used RTX 3090 costs $750–$950; renting one runs $0.12–$0.22/hour. Here is the break-even math on 24 GB of VRAM — and which side of it you are on.',
+    metaDescription: 'A used RTX 3090 costs $850–$1,050; renting one runs $0.12–$0.22/hour. Here is the break-even math on 24 GB of VRAM — and which side of it you are on.',
     publishDate: '2026-09-01',
     dateModified: '2026-09-01',
     readTime: '11 min read',
@@ -50,15 +55,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
     affiliateDisclosure: true,
 
-    leadAnswerBlock: '**Buy a used RTX 3090 if you will run it more than about four hours a day for the next two years, or if your data cannot leave your building. Rent one otherwise.** At $750–$950 used against $0.12–$0.22 per hour in the cloud, the card only pays for itself under sustained load — and in 2026 it costs more than it did in spring, which pushes the break-even further out than most buying guides admit.',
+    leadAnswerBlock: '**Buy a used RTX 3090 if you will run it more than about four hours a day for the next two years, or if your data cannot leave your building. Rent one otherwise.** At $850–$1,050 used against $0.12–$0.22 per hour in the cloud, the card only pays for itself under sustained load — and in 2026 it costs more than it did in spring, which pushes the break-even further out than most buying guides admit.',
 
     quickAnswerTop: {
       en: {
         question: 'Is an RTX 3090 still worth buying for local LLMs?',
-        answer: 'Yes, but only for sustained use or privacy-bound work. A used RTX 3090 gives you 24 GB of VRAM for $750–$950, which is still the cheapest route to running 27B-class models entirely on your own hardware. Renting the same GPU costs $0.12–$0.22 per hour, so at light use the cloud is cheaper for years.',
+        answer: 'Yes, but only for sustained use or privacy-bound work. A used RTX 3090 gives you 24 GB of VRAM for $850–$1,050, which is still the cheapest route to running 27B-class models entirely on your own hardware. Renting the same GPU costs $0.12–$0.22 per hour, so at light use the cloud is cheaper for years.',
         bullets: [
           '24 GB VRAM, 936 GB/s bandwidth, 350 W — unchanged since 2020, still the cheapest 24 GB card',
-          'Used price $750–$950; up from $600–$800 in spring 2026 because of the memory shortage',
+          'Used price $850–$1,050; up from $600–$800 in spring 2026 because of the memory shortage',
           'Cloud rental $0.12/hr (Vast.ai) to $0.22/hr (RunPod Community); median $0.15/hr across 8 providers',
           'Break-even against a $0.15/hr rental at 2 hours a day is roughly 17 years — at 8 hours a day it is about 4',
           'Buy for privacy, latency, always-on agents and constant fine-tuning; rent for bursts and experiments',
@@ -113,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Key Takeaways',
         numberedItems: [
-          'A used RTX 3090 costs $750–$950 and gives you 24 GB of VRAM — still the cheapest way to own that much video memory.',
+          'A used RTX 3090 costs $850–$1,050 and gives you 24 GB of VRAM — still the cheapest way to own that much video memory.',
           'Renting the identical GPU costs $0.12/hour on Vast.ai and $0.22/hour on RunPod Community, with a median of $0.15/hour across eight providers.',
           'Once you subtract about $0.08/hour in electricity, buying only wins after roughly 12,000 GPU-hours against a median rental — about four years at eight hours a day.',
           'The card got more expensive during 2026, not cheaper: it was $600–$800 in spring. That moves the break-even further away, which is the opposite of what most buying guides assume.',
@@ -167,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'VRAM: 24 GB GDDR6X — enough for a 27B-class model at 4-bit quantization with room for context.',
           'Memory bandwidth: 936 GB/s, which is what actually sets token generation speed on a memory-bound workload.',
           'Power: 350 W card TDP; budget roughly 450 W at the wall for the whole system under inference load.',
-          'Used price: $750–$950 typical, with eBay averages near $1,000 — up from $600–$800 in spring 2026.',
+          'Used price: $850–$1,050 typical, with eBay averages near $1,000 — up from $600–$800 in spring 2026.',
           'Cloud rental: $0.12/hour (Vast.ai) to $0.50/hour (RunPod Secure); median $0.15/hour across eight providers.',
           'Electricity: at the 2026 US residential average of $0.18/kWh, running it costs about $0.08/hour.',
         ],
@@ -189,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Buying Used: What to Check Before You Pay',
         sponsoredSlot: true,
         content: [
-          '**If you buy, buy used — nobody sells the RTX 3090 new any more, and the used market is where the price advantage lives.** At $750–$950 it is the cheapest 24 GB card available, and it holds resale value well, which materially reduces the real cost of ownership.',
+          '**If you buy, buy used — nobody sells the RTX 3090 new any more, and the used market is where the price advantage lives.** At $850–$1,050 it is the cheapest 24 GB card available, and it holds resale value well, which materially reduces the real cost of ownership.',
           'The honest caveat: these are five-year-old cards, many of them ex-mining or ex-gaming, sold without warranty by strangers. The failure modes are known and checkable, so the risk is manageable — but it is real, and it is the reason to buy from a seller with returns rather than the cheapest listing you can find.',
         ],
         items: [
@@ -210,14 +215,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://www.ebay.com/sch/i.html?_nkw=rtx+3090+24gb',
             productName: 'NVIDIA RTX 3090 24GB (used)',
             productCategory: 'gpu',
-            priceRange: '750-950',
+            priceRange: '850-1050',
             label: 'Check used RTX 3090 prices on eBay',
           },
           {
             url: 'https://www.newegg.com/p/pl?d=RTX+3090',
             productName: 'NVIDIA RTX 3090 24GB (used/refurbished)',
             productCategory: 'gpu',
-            priceRange: '750-950',
+            priceRange: '850-1050',
             label: 'Check RTX 3090 stock on Newegg',
           },
         ],
@@ -340,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is the RTX 3090 still worth buying in 2026?',
-            a: 'For sustained local inference, yes — it remains the cheapest 24 GB card at $750–$950 used. For light or occasional use, no: renting the same GPU at $0.12–$0.22 per hour is cheaper for years. The deciding factor is hours of actual use per week, not the specification.',
+            a: 'For sustained local inference, yes — it remains the cheapest 24 GB card at $850–$1,050 used. For light or occasional use, no: renting the same GPU at $0.12–$0.22 per hour is cheaper for years. The deciding factor is hours of actual use per week, not the specification.',
           },
           {
             q: 'RTX 3090 or RTX 4090 for local LLMs?',
@@ -356,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Why did used RTX 3090 prices go up in 2026?',
-            a: 'A memory shortage pushed GPU prices broadly above their earlier levels during 2026, and demand for 24 GB cards rose among people running models locally rather than among gamers. The card sold for $600–$800 in spring and $750–$950 by September. It is one of the few five-year-old products that got more expensive.',
+            a: 'A memory shortage pushed GPU prices broadly above their earlier levels during 2026, and demand for 24 GB cards rose among people running models locally rather than among gamers. The card sold for $600–$800 in spring and $850–$1,050 by September. It is one of the few five-year-old products that got more expensive.',
           },
           {
             q: 'Is it safe to buy a used mining GPU?',

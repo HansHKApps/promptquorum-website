@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/vram-for-70b-model-overview-hero-en.webp',
     title: 'How Much VRAM for a 70B Model?',
-    dateModified: '2026-08-26',
+    dateModified: '2026-09-01',
     seoTitle: '70B VRAM: 3 Run Options 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'A 70B model at Q4_K_M needs ~40 GB VRAM. Options: dual RTX 3090 (48 GB), M5 Max 128 GB unified memory, or cloud GPU. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'When Cloud Makes More Sense Than Local',
         content: [
-          'Cloud GPU rental for 70B inference runs $0.50–$1.50 per hour on RunPod and Lambda Labs. A dual RTX 3090 setup costs $1,500–$2,500 in hardware, which amortizes to cloud costs only after 1,500–3,000 hours of use. See <a href="/power-local-llm/rtx-3090-local-llm-buy-or-rent" class="text-primary hover:underline">the single-card buy-vs-rent breakdown</a> for the same math on one RTX 3090.',
+          'Cloud GPU rental for 70B inference runs $0.50–$1.50 per hour on RunPod and Lambda Labs. A dual RTX 3090 setup costs $1,700–$2,100 in hardware, which amortizes to cloud costs only after 1,500–3,000 hours of use. See <a href="/power-local-llm/rtx-3090-local-llm-buy-or-rent" class="text-primary hover:underline">the single-card buy-vs-rent breakdown</a> for the same math on one RTX 3090.',
           'For teams or individuals using 70B models fewer than 5 hours per week, cloud rental is both cheaper and easier to maintain. Local 70B is justified for privacy-sensitive use cases (no data leaving your hardware) or sustained high-frequency inference where cloud costs compound quickly. For smaller models that fit on consumer GPUs, see <a href="/prompt-bites/how-much-vram-for-local-llm" class="text-primary hover:underline">the VRAM tier guide</a>.',
           'For a full breakdown of 70B deployment strategies, see <a href="/local-llms/run-70b-models-24gb-vram" class="text-primary hover:underline">how to run 70B models with 24 GB VRAM</a>.',
         ],

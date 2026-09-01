@@ -13,7 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    leadAnswerBlock: '**The best GPU under $500 for local LLM inference is the RTX 4060 Ti 16GB (~$424): its 16 GB VRAM runs 14B models (Qwen3 14B) at Q4 fully in-GPU — and even at Q8 with room to spare — at ~55 tok/s on 8B Q4, drawing just 165 W. Runner-up: the RTX 3060 12GB (~$339) is the cheaper pick for 7B–13B models when 14B headroom is not required. Note: the used RTX 3090 and the RX 7800 XT 16GB have both risen above $500 in July 2026 ($1,000–1,100 and ~$832 respectively), so neither qualifies anymore. For 30B model capability, budget $1,000+.**',
+    dateModified: '2026-09-01',
+    leadAnswerBlock: '**The best GPU under $500 for local LLM inference is the RTX 4060 Ti 16GB (~$424): its 16 GB VRAM runs 14B models (Qwen3 14B) at Q4 fully in-GPU — and even at Q8 with room to spare — at ~55 tok/s on 8B Q4, drawing just 165 W. Runner-up: the RTX 3060 12GB (~$339) is the cheaper pick for 7B–13B models when 14B headroom is not required. Note: the used RTX 3090 and the RX 7800 XT 16GB have both risen well above $500 in 2026 ($850–1,050 and ~$832 respectively), so neither qualifies anymore. For 30B model capability, budget $1,000+.**',
     quickAnswerTop: {
       question: 'What is the best GPU for running LLMs locally under $500?',
       answer: '**The RTX 4060 Ti 16GB (~$424) is the best GPU under $500 for local LLM inference in July 2026.** Its 16 GB VRAM runs 14B models at Q4 fully in-GPU and 7B–14B at Q8 with no VRAM pressure. The RTX 3060 12GB (~$339) is the cheaper runner-up for 7B–13B models. The Intel Arc B580 12GB (~$303) is the value budget pick with newer architecture. Note: the RTX 3090 used market ($1,000+), the RTX 4070 12GB ($700+), and the RX 7800 XT 16GB (~$832) have all risen above $500 in July 2026 and no longer qualify.',
@@ -21,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Winner:** RTX 4060 Ti 16GB (~$424) — 16 GB VRAM, 165 W, ~55 tok/s on Llama 3.1 8B Q4, runs 14B at Q4 in-GPU',
         '**Runner-up:** RTX 3060 12GB (~$339) — cheaper NVIDIA pick, 12 GB VRAM for 7B–13B models',
         'Intel Arc B580 12GB (~$303) — value budget option, 12 GB VRAM for 7B–13B models',
-        '⚠️ RTX 3090 used: market price now $1,000–1,100 — no longer sub-$500',
+        '⚠️ RTX 3090 used: market price now $850–1,050 — no longer sub-$500',
         '⚠️ RTX 4070 12GB: now ~$700 — no longer sub-$500',
         '⚠️ RX 7800 XT 16GB: now ~$832 — no longer sub-$500',
       ],
@@ -34,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 4060 Ti 16GB wins for most users: 16 GB runs 14B at Q4 in-GPU (Q8 with room), ~$424 in July 2026, 165 W**',
           'RTX 3060 12GB is the ~$339 runner-up — cheaper NVIDIA pick, 12 GB VRAM handles 7B–13B models',
           'Intel Arc B580 12GB is the ~$303 value budget option — 12 GB VRAM, newer architecture, 7B–13B models',
-          '⚠️ Price alert: used RTX 3090 is now $1,000–1,100 — removed from sub-$500 list',
+          '⚠️ Price alert: used RTX 3090 is now $850–1,050 — removed from sub-$500 list',
           '⚠️ Price alert: RTX 4070 12GB is now ~$700 — removed from sub-$500 list',
           '⚠️ Price alert: RX 7800 XT 16GB is now ~$832 — removed from sub-$500 list',
           'Need 30B+ model capability? Budget at least $1,000 for a used RTX 3090 (24 GB) or save for an RTX 4080 SUPER (16 GB, ~$850)',
@@ -85,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Performance Comparison — July 2026 Prices + Test Results',
-        content: 'Benchmarks measured with Ollama 0.30.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Prices verified — used RTX 3090 ($1,000–1,100), RTX 4070 12GB (~$700), and RX 7800 XT 16GB (~$832) excluded: all now exceed $500.',
+        content: 'Benchmarks measured with Ollama 0.30.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Prices verified — used RTX 3090 ($850–1,050), RTX 4070 12GB (~$700), and RX 7800 XT 16GB (~$832) excluded: all now exceed $500.',
         columns: ['GPU', 'VRAM', 'Price', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Max Model (Q4)'],
         rows: [
           { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Price': '~$424', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Max Model (Q4)': '30B (Q4)' },
@@ -97,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       methodology: {
         title: 'How We Selected and Tested These GPUs',
-        content: 'Selection criteria: available to purchase new or used under $500 in July 2026; supported by at least one major inference runtime (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (8 GB cards excluded — insufficient for meaningful local LLM use). The used RTX 3090 (24 GB), RTX 4070 12GB, and RX 7800 XT 16GB were removed from this list after July 2026 price verification: used RTX 3090 now trades at $1,000–1,100 on eBay; RTX 4070 12GB lists at ~$700 on Amazon; RX 7800 XT 16GB lists at ~$832 on Amazon — all exceed the $500 threshold. All benchmarks are tok/s (tokens per second) generation speed, averaged over 10 runs at batch size 1, measured with Ollama 0.30.x on Ubuntu 22.04 LTS. GPU prices verified on Amazon.com and eBay sold listings (July 2026).',
+        content: 'Selection criteria: available to purchase new or used under $500 in July 2026; supported by at least one major inference runtime (Ollama, LM Studio, llama.cpp); VRAM ≥ 12 GB (8 GB cards excluded — insufficient for meaningful local LLM use). The used RTX 3090 (24 GB), RTX 4070 12GB, and RX 7800 XT 16GB were removed from this list after 2026 price verification: used RTX 3090 now trades at $850–1,050 on eBay; RTX 4070 12GB lists at ~$700 on Amazon; RX 7800 XT 16GB lists at ~$832 on Amazon — all exceed the $500 threshold. All benchmarks are tok/s (tokens per second) generation speed, averaged over 10 runs at batch size 1, measured with Ollama 0.30.x on Ubuntu 22.04 LTS. GPU prices verified on Amazon.com and eBay sold listings (July 2026).',
       },
       vramGuide: {
         title: 'VRAM Requirements by Model Size',
@@ -127,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Best all-around under $500** → RTX 4060 Ti 16GB (~$424 new, ~$340–$370 used). Runs 14B at Q4 fully in-GPU (Q8 with room), 16 GB VRAM, CUDA toolchain, and broad Windows/Linux support.',
           '**Cheapest CUDA card that works** → RTX 3060 12GB (~$339). Runner-up NVIDIA pick for 7B–13B models with the full CUDA toolchain; saves ~$85 if you do not need 14B-at-Q8 headroom.',
           '**Run 7B–13B on a budget** → Intel Arc B580 12GB (~$303). Best value for entry-level inference on newer architecture. 12 GB VRAM limits you to 13B Q4.',
-          '**Need 30B model capability?** → The sub-$500 window closed in mid-2026. Used RTX 3090 (24 GB) now trades at $1,000–1,100. Budget $1,000+ for a used RTX 3090 or $850+ for an RTX 4080 SUPER (16 GB).',
+          '**Need 30B model capability?** → The sub-$500 window closed in mid-2026. Used RTX 3090 (24 GB) now trades at $850–1,050. Budget $1,000+ for a used RTX 3090 or $850+ for an RTX 4080 SUPER (16 GB).',
           '**Windows user, no fuss** → RTX 4060 Ti 16GB. NVIDIA CUDA has the broadest Windows toolchain support for LLMs, fine-tuning, and multimodal runtimes.',
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-decision-tree-en.svg',
@@ -161,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I still buy a used RTX 3090 for under $500 in 2026?',
-            a: 'No —, used RTX 3090 cards trade at $1,000–1,100 on eBay. The price rose significantly from 2024 levels as LLM enthusiasts recognized its 24 GB VRAM value. It is no longer a sub-$500 option. If you need 30B model capability (which requires 24 GB VRAM), budget $1,000+ for a used RTX 3090 or consider an RTX 4080 SUPER (16 GB, ~$850 new) for faster 14B Q8 performance.',
+            a: 'No —, used RTX 3090 cards trade at $850–1,050 on eBay. The price rose significantly from 2024 levels as LLM enthusiasts recognized its 24 GB VRAM value. It is no longer a sub-$500 option. If you need 30B model capability (which requires 24 GB VRAM), budget $1,000+ for a used RTX 3090 or consider an RTX 4080 SUPER (16 GB, ~$850 new) for faster 14B Q8 performance.',
           },
           {
             q: 'Does AMD work for running LLMs locally?',
@@ -215,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           name: 'Can I still buy a used RTX 3090 for under $500 in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No — used RTX 3090 cards now trade at $1,000–1,100 on eBay (July 2026), up from ~$440 in early 2025. For 30B model capability you need a $1,000+ budget for a used RTX 3090 or ~$850 for an RTX 4080 SUPER (16 GB).',
+            text: 'No — used RTX 3090 cards now trade at $850–1,050 on eBay, up from ~$440 in early 2025. For 30B model capability you need a $1,000+ budget for a used RTX 3090 or ~$850 for an RTX 4080 SUPER (16 GB).',
           },
         },
         {
@@ -252,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best GPU for LLM Inference Under $500 (2026)',
       description: 'Ranked comparison of GPUs under $500 for local AI inference: RTX 4060 Ti 16GB, RTX 3060 12GB, Arc B580. Price-verified July 2026. RTX 3090, RTX 4070, and RX 7800 XT removed — all now exceed $500.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-2026',
       inLanguage: 'en',
       'proficiencyLevel': 'Intermediate',

@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Best GPU Under $600 for Local LLM 2026 | Prompt Bites',
     metaDescription: 'The RTX 4060 Ti 16GB is the best GPU under $600 for local LLMs — 16GB VRAM is the sweet spot for 14B models, and it has stayed far more price-stable than the newer RTX 5060 Ti during the 2026 shortage. Check today\'s price.',
     publishDate: '2026-05-22',
-    dateModified: '2026-08-26',
+    dateModified: '2026-09-01',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-26',
     current_models_mentioned: [],
@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '16GB VRAM comfortably runs 14B models at Q4 and even Qwen 32B at Q3_K_M (~13GB) — a tier above 12GB cards.',
           'The newer RTX 5060 Ti 16GB launched at $429 MSRP but has traded as high as $700-800 during the 2026 memory shortage — being newer doesn\'t make it the better buy right now.',
-          'A used RTX 3090 24GB now typically sells for $700-1,200 — no longer realistically obtainable under this budget.',
+          'A used RTX 3090 24GB now typically sells for $850-1,050 — no longer realistically obtainable under this budget.',
         ],
         updatedDate: '2026-08',
       },
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Best pick: NVIDIA RTX 4060 Ti 16GB — 16GB VRAM clears 14B models at Q4 with real context headroom',
           '16GB is the sweet spot: a 14B model at Q4 needs roughly 9-10GB, leaving 6GB for context and tooling',
           'Draws only 165W — runs on most existing power supplies without an upgrade',
-          'Check current prices before buying: the newer RTX 5060 Ti 16GB has spiked well past $600 in the 2026 shortage, and used RTX 3090 24GB now typically runs $700-1,200 — both are out of reach at this budget right now',
+          'Check current prices before buying: the newer RTX 5060 Ti 16GB has spiked well past $600 in the 2026 shortage, and used RTX 3090 24GB now typically runs $850-1,050 — both are out of reach at this budget right now',
         ],
       },
       bestPick: {
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { GPU: 'RTX 4060 Ti 16GB', VRAM: '16GB', 'Largest model': '14B at Q4, long context', Power: '165 W', Notes: 'Best pick — comparatively price-stable' },
           { GPU: 'RTX 3060 12GB (used)', VRAM: '12GB', 'Largest model': '14B at Q4, short context', Power: '170 W', Notes: 'Budget tier — see our sub-$300 GPU guide' },
           { GPU: 'RTX 5060 Ti 16GB', VRAM: '16GB', 'Largest model': '14B at Q4/Q5, long context', Power: '~150-180 W', Notes: 'Newer, but has spiked well past $600' },
-          { GPU: 'RTX 3090 24GB (used)', VRAM: '24GB', 'Largest model': '30B+, partial 70B', Power: '350 W', Notes: 'Now typically $700-1,200 — over budget' },
+          { GPU: 'RTX 3090 24GB (used)', VRAM: '24GB', 'Largest model': '30B+, partial 70B', Power: '350 W', Notes: 'Now typically $850-1,050 — over budget' },
         ],
       },
       faq: {
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Can the RTX 4060 Ti 16GB run a 30B model?',
-            a: 'A 30B model at Q4 needs roughly 18-20GB of VRAM, so it does not fit fully in 16GB — it will run with partial CPU offload at much lower speed. For 30B+ models you need a 24GB card, but check current used RTX 3090 prices first: it now typically runs $700-1,200, well over this budget.',
+            a: 'A 30B model at Q4 needs roughly 18-20GB of VRAM, so it does not fit fully in 16GB — it will run with partial CPU offload at much lower speed. For 30B+ models you need a 24GB card, but check current used RTX 3090 prices first: it now typically runs $850-1,050, well over this budget.',
           },
         ],
       },

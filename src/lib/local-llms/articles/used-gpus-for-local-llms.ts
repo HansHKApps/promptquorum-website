@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**Used GPUs offer 30-50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080.** The used market is generally well-stocked with ex-mining and ex-gaming cards at fairly stable prices. Buying used makes sense for your first rig or when upgrading; mining cards are risky unless you can test on-site.',
       metaDescription: 'Best used GPUs for local LLMs: RTX 3060, 3080, 3090, 4090. Where to buy, risk assessment, how to bench-test.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       leadAnswerBlock: '**Used GPUs offer 30-50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080. The used market is generally well-stocked with ex-mining and ex-gaming cards at fairly stable prices.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '8 min',
@@ -58,7 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**RTX 3060 12GB** ($200-250): Huge volume on used market. Reliable VRAM. Older architecture means fewer failures. Safe pick.',
             '**RTX 3080 10GB** ($350-400): Popular gaming card. Solid VRAM history. 10GB is usable (tight for some 70B models). Safe.',
             '**RTX 4090 24GB** ($1,000-1,300): Premium pricing, but high resale volume = data on failure rates. Rare VRAM failures. Safe if priced right.',
-            '**RTX 3090 24GB** ($400-600): High-end, expensive, fewer failures proportionally. Good if you find one under $500.',
+            '**RTX 3090 24GB** ($850-1,050): High-end, expensive, fewer failures proportionally. Prices rose sharply through 2026 — no longer a sub-$1,000 card in most listings.',
           ],
         },
         'pricing': {
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Should I buy a used RTX 4070 or RTX 3080?', a: 'RTX 3080 (10GB, $350-400 used) is better value for local LLMs than 4070 (12GB, $450-550 used). 4070 is newer but only 15% faster.' },
             { q: 'Can I return a used GPU on eBay if it fails after 1 month?', a: 'Depends on seller\'s policy. Most allow 14-day returns. After 30 days, you\'re on your own unless there\'s a manufacturer defect (rare on used cards).' },
             { q: 'Is it worth paying 20% more for a GPU with return protection?', a: 'Yes. Costs ~$30-50 on a $250 GPU, but saves you from a $250 loss if the card dies post-purchase.' },
-            { q: 'Should I buy a used RTX 3090 or RTX 4090?', a: 'RTX 4090 if you can afford it ($1,000-1,300). Better power efficiency, newer architecture. RTX 3090 is overkill for 7B models and not much cheaper used (~$500-600).' },
+            { q: 'Should I buy a used RTX 3090 or RTX 4090?', a: 'RTX 4090 if you can afford it ($1,000-1,300). Better power efficiency, newer architecture. RTX 3090 is overkill for 7B models and not much cheaper used (~$850-1,050).' },
           ],
         },
         'relatedReading': {
@@ -228,7 +228,7 @@ schema: {
             'name': 'Should I buy a used RTX 3090 or RTX 4090?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'RTX 4090 if you can afford it ($1,000-1,300). Better power efficiency, newer architecture. RTX 3090 is overkill for 7B models and not much cheaper used (~$500-600).'
+              'text': 'RTX 4090 if you can afford it ($1,000-1,300). Better power efficiency, newer architecture. RTX 3090 is overkill for 7B models and not much cheaper used (~$850-1,050).'
             }
           },
         ],

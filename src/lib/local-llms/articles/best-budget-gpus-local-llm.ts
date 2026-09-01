@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'Best budget GPU for local LLMs 2026: RTX 3060 12GB ($170–220 used) runs Qwen3 14B at 9–12 tok/s. New: RTX 5060 Ti 16GB. Cheaper: RX 6700 XT. Full speed table.',
       heroImage: '/images/best-budget-gpus-local-llm-model-speeds-hero-en.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-07-29',
+      dateModified: '2026-09-01',
       leadAnswerBlock: '**RTX 3060 12GB runs Qwen3 14B at 9–12 tok/sec, Qwen3 8B at 16–20 tok/sec, Gemma 4 E12B at 11–14 tok/sec, Mistral Small at 18 tok/sec, and DeepSeek-R1 7B at 10–12 tok/sec. The 6GB variant handles 3B models only. It is the cheapest GPU worth buying for local LLMs and local AI in 2026 at $170–220 used; RTX 5060 Ti 16GB (~$390–400 new) is the best new-card pick and the most cost-effective affordable route overall.**',
       quickAnswerTop: {
         question: 'What is the best budget GPU for local LLMs in 2026?',
@@ -209,7 +209,7 @@ rows: [
             { q: 'Can I upgrade my current GPU to run larger models later?', a: 'Yes, GPU upgrades are straightforward in desktop PCs. Start with RTX 3060 12GB, then upgrade to RTX 4090 or 5090 later. PCIE slot is backward-compatible across generations.' },
             { q: 'What is the best budget NVIDIA GPU for local LLM inference?', a: 'RTX 4060 Ti (8 GB, ~$250) for 7B models, or RTX 4070 Super (12 GB, ~$350-400) for 13B models. For used: RTX 3060 12GB ($200–250) runs 7-13B models smoothly at Q4. Best value is RTX 3060 12GB used, or RTX 4070 Super new.' },
             { q: 'How does the AMD 6800XT compare to the RTX 4070 for AI inference?', a: 'AMD RX 6800 XT (16 GB) beats RTX 4070 (12 GB) on VRAM and gaming performance but lags on LLM inference speed (15-20% slower). ROCm driver setup for llama.cpp is also more complex than CUDA. For pure LLM work, RTX 4070 is easier; for gaming + LLMs, 6800 XT offers better value.' },
-            { q: 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?', a: 'Used RTX 3090 (24 GB, ~$450-500) = $18-20 per GB. Used RTX 3060 (12 GB, ~$150-180) = $12-15 per GB. RTX 4070 Ti (12 GB, ~$600 new) = $50 per GB. Best value: RTX 3060 12GB used. Most capacity per dollar: RTX 3090 24GB used. Balance price + power: RTX 4070 new.' },
+            { q: 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?', a: 'Used RTX 3090 (24 GB, ~$850-1,050) = $35-44 per GB. Used RTX 3060 (12 GB, ~$150-180) = $12-15 per GB. RTX 4070 Ti (12 GB, ~$600 new) = $50 per GB. Best value: RTX 3060 12GB used. Most VRAM in one card if you need 24 GB: RTX 3090 24GB used, though its per-GB price has risen well above the RTX 3060\'s. Balance price + power: RTX 4070 new.' },
             { q: 'Can I use an AMD RX 6700 or 6800 XT instead of NVIDIA for local LLMs?', a: 'Yes, but AMD ROCm driver support for ONNX Runtime is weaker than NVIDIA CUDA. Expect more setup friction. NVIDIA is safer for budget builds.' },
             { q: 'What is the cheapest GPU for LLM inference?', a: 'The RTX 3060 12GB at roughly $170–220 used, and nothing else on the affordable end comes close on cost per usable GB of VRAM. Cheaper cards exist, but below 12GB the model sizes worth running stop fitting, so a cheaper card is not a cheaper way to run local AI — it is a card that cannot do the job. If you want new rather than used, the RTX 5060 Ti 16GB at roughly $390–400 is the most cost-effective new option. One scope note: this page ranks consumer cards for a single machine. Cheapest GPU inference at production scale is a different question, decided by throughput per watt and per rack unit rather than sticker price.' },
           ],
@@ -384,7 +384,7 @@ schema: {
             'name': 'What is the best price-per-GB VRAM GPU for local LLMs in 2026?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Used RTX 3090 (24 GB, ~$450-500) = $18-20 per GB. Used RTX 3060 (12 GB, ~$150-180) = $12-15 per GB. RTX 4070 Ti (12 GB, ~$600 new) = $50 per GB. Best value: RTX 3060 12GB used. Most capacity per dollar: RTX 3090 24GB used. Balance price + power: RTX 4070 new.',
+              'text': 'Used RTX 3090 (24 GB, ~$850-1,050) = $35-44 per GB. Used RTX 3060 (12 GB, ~$150-180) = $12-15 per GB. RTX 4070 Ti (12 GB, ~$600 new) = $50 per GB. Best value: RTX 3060 12GB used. Most VRAM in one card if you need 24 GB: RTX 3090 24GB used, though its per-GB price has risen well above the RTX 3060\'s. Balance price + power: RTX 4070 new.',
             },
           },
           {

@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-01',
     last_full_refresh: '2026-08-27',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-27',
@@ -381,7 +381,7 @@ curl http://localhost:11434/v1/chat/completions \\
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.com/dp/B0B5W8WD7H', productName: 'NVIDIA RTX 4090 24 GB', productCategory: 'GPU', priceRange: '$2,300–2,800', label: 'Check current price →' },
-              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (used)', productCategory: 'GPU', priceRange: '$1,050–1,300', label: 'See used listings →' },
+              { url: 'https://www.ebay.com/sch/i.html?_nkw=RTX+3090', productName: 'NVIDIA RTX 3090 24 GB (used)', productCategory: 'GPU', priceRange: '$850–1,050', label: 'See used listings →' },
             ],
           },
           {

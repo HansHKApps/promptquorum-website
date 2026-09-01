@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '**A $1,000 PC with an RTX 5060 Ti 16GB, Ryzen 5 7600, and 32GB DDR5 RAM runs every 7B–14B model at Q4 comfortably and fits 32B models at a tight Q4 quantization.** VRAM is the single limiting factor for local LLM inference, so this build spends nearly half its budget ($430 of $1,000) on the GPU rather than splitting funds evenly across parts. This guide lists the exact components, why each one was chosen over the alternatives, and the token-per-second speeds you can expect on real models.',
     metaDescription: '$1,000 local LLM PC build: RTX 5060 Ti 16GB + Ryzen 5 7600 + 32GB DDR5. Runs 7B at 55-65 tok/s, 14B at 28-35 tok/s, 32B at 12-15 tok/s. Full 2026 parts list.',
     publishDate: '2026-07-18',
-    dateModified: '2026-07-18',
+    dateModified: '2026-09-01',
     readTime: '9 min read',
     educationalLevel: 'Beginner',
     audience: 'Budget-conscious builders assembling their first dedicated local LLM PC',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RTX 5060 Ti 8GB ($330):** Fits 7B at Q4 only, and barely — long context windows will overflow VRAM. Not recommended.',
           '**RTX 4060 Ti 16GB (older gen, ~$450 used):** Same VRAM as the 5060 Ti at similar or higher price with lower compute — no reason to prefer it new.',
           '**RTX 5060 Ti 16GB ($430, this build):** Best VRAM-per-dollar in the 16GB tier.',
-          '**Used RTX 3090 24GB (~$650-750):** More VRAM (fits low-30B models more comfortably) but pushes total build cost past $1,300 and draws significantly more power.',
+          '**Used RTX 3090 24GB (~$850-1,050):** More VRAM (fits low-30B models more comfortably) but pushes total build cost well past $1,300 and draws significantly more power.',
         ],
       },
       performance: {
