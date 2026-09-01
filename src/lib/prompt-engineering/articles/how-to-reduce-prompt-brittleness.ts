@@ -4,18 +4,19 @@ import type { PEArticle } from '@/lib/prompt-engineering/types';
 export const article: Partial<Record<Language, PEArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-01',
     theme: 'Evaluation & Reliability',
     heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-en.webp',
     title: 'How to Reduce Prompt Brittleness: 7 Techniques for Reliable Prompts',
     intro: 'Prompt brittleness causes silent production failures. Learn 7 techniques — structured output, defensive instructions, regression testing — to make prompts reliable across input variations and model updates.',
     seoTitle: 'How to Reduce Prompt Brittleness: 7 Techniques',
-    metaDescription: 'Prompt brittleness causes silent failures on input changes. Apply 7 techniques: structured output, defensive instructions, regression testing, version pinning.',
+    metaDescription: 'Prompt brittleness causes silent failures on input changes. Use 7 techniques: structured output, defensive instructions, regression tests, version pinning.',
     ogTitle: 'How to Reduce Prompt Brittleness: 7 Techniques',
     ogDescription: 'A prompt that passes every internal test can produce wrong outputs when input phrasing, model versions, or context changes. Learn 7 techniques to prevent silent failures in production.',
     twitterTitle: 'How to Reduce Prompt Brittleness: 7 Techniques',
     twitterDescription: 'Prompts break silently on input variations. 7 techniques: structured output, few-shot anchoring, defensive instructions, parameterization, regression testing, version pinning, output validation.',
     publishDate: '2026-04-29',
-    dateModified: '2026-07-31',
+    dateModified: '2026-09-01',
     readTime: '8 min read',
     educationalLevel: 'Advanced',
     audience: 'Developers and prompt engineers managing prompts in production',
@@ -27,16 +28,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7 techniques: structured output, few-shot examples, defensive instructions, input parameterization, regression testing, model version pinning, output validation',
       '5 root causes: implicit format expectations, happy-path testing, model version sensitivity, context contamination, over-specific phrasing',
       'Temperature range for brittleness testing: 0.0, 0.5, and 1.0',
-      'Model version aliases (e.g., `gpt-4o`) update silently; always pin a dated identifier in production',
+      'Model version aliases (e.g., `gpt-5`) update silently; always pin a dated identifier in production',
     ],
     toc: [
-      { label: 'What Is Prompt Brittleness?', anchor: 'what-is-prompt-brittleness' },
-      { label: 'What Causes Prompt Brittleness?', anchor: 'causes-of-prompt-brittleness' },
-      { label: 'How Do You Reduce Prompt Brittleness?', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: 'What Do Brittle vs. Robust Prompts Look Like?', anchor: 'prompt-examples' },
-      { label: 'How Do You Test Prompts for Brittleness?', anchor: 'how-to-test-for-brittleness' },
-      { label: 'What Are the Most Common Mistakes?', anchor: 'common-mistakes' },
-      { label: 'How Do You Start Reducing Prompt Brittleness?', anchor: 'how-to-start' },
+      { label: 'Prompt Brittleness Is a Silent Failure Mode', anchor: 'what-is-prompt-brittleness' },
+      { label: 'The Five Root Causes of Prompt Brittleness', anchor: 'causes-of-prompt-brittleness' },
+      { label: 'Seven Techniques That Reduce Prompt Brittleness', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: 'Brittle vs. Robust Prompts: Three Examples', anchor: 'prompt-examples' },
+      { label: 'How to Test Prompts for Brittleness', anchor: 'how-to-test-for-brittleness' },
+      { label: 'Common Mistakes That Create Brittle Prompts', anchor: 'common-mistakes' },
+      { label: 'How to Start Reducing Prompt Brittleness', anchor: 'how-to-start' },
       { label: 'Frequently Asked Questions', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -57,7 +58,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: 'What Is Prompt Brittleness?',
+        title: 'Prompt Brittleness Is a Silent Failure Mode',
         content: [
           '**Prompt brittleness is when a prompt produces expected results on test inputs but breaks silently when inputs change slightly.** A brittle prompt breaks on rephrased questions, edge case inputs, model version updates, or stacked system prompts. The output does not error — it is just wrong, making brittleness invisible until it reaches production.',
           'Failures are silent because the model returns a plausible-sounding answer instead of throwing an exception. Users see a result and trust it. Teams don\'t discover brittleness until end-users report incorrect outputs, which can happen weeks after deployment.',
@@ -73,7 +74,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: 'What Causes Prompt Brittleness?',
+        title: 'The Five Root Causes of Prompt Brittleness',
         content: '**Most prompt brittleness comes from five patterns in how prompts are written and tested.** The two most common — implicit format expectations and happy-path-only testing — account for the majority of production failures. Understanding these causes is the first step toward [evaluating and improving your prompt quality](/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Implicit format expectations** — The prompt asks for a specific output format (JSON, bullet list, yes/no) without enforcing it. Any input variation that causes the model to add a preamble or rephrase breaks downstream parsing.',
@@ -88,7 +89,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: 'How Do You Reduce Prompt Brittleness?',
+        title: 'Seven Techniques That Reduce Prompt Brittleness',
         content: '**Seven techniques address the five root causes above and cover the full failure-mode surface.** Apply them in order — earlier techniques address the most common failures. In production codebases, format-related brittleness — prompts that parse free text expecting a specific shape — accounts for the majority of silent failures in classification and extraction tasks. Structured output enforcement (Technique 1) addresses this class entirely.',
         numberedItems: [
           '**Enforce structured output** — Use [JSON mode or native structured output APIs](/prompt-engineering/structured-output-and-json-mode) instead of asking the model to "respond in JSON". Format enforcement moves the reliability burden from the prompt to the API layer.',
@@ -96,7 +97,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Write defensive instructions** — Specify what the model should do when the input is missing, ambiguous, or outside scope. Example: "If no date is found, return `null`. Do not guess." Without this, the model fills gaps with plausible-sounding defaults.',
           '**Parameterise inputs** — Replace hardcoded values and inline examples with named variables (`{{customer_name}}`, `{{document_text}}`). Parameterised prompts are easier to test systematically and prevent accidental over-fitting to example values.',
           '**Build a regression test set before deploying** — Assemble 20+ test cases covering the expected distribution plus 5+ edge cases. Run the test set before every model upgrade or prompt change.',
-          '**Pin model versions in production** — Use versioned model identifiers (e.g., `gpt-4o-2024-08-06`) in production. Update only after running the full regression suite against the new version.',
+          '**Pin model versions in production** — Use versioned model identifiers (e.g., `gpt-5-2025-08-07`) in production. Update only after running the full regression suite against the new version.',
           '**Add an output validation layer** — Validate model output programmatically before passing it downstream. Check type, schema, length, or required field presence. Return a controlled fallback — not the raw model output — on validation failure.',
         ],
         callouts: [
@@ -115,7 +116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: 'What Do Brittle vs. Robust Prompts Look Like?',
+        title: 'Brittle vs. Robust Prompts: Three Examples',
         content: '**The three examples below show how each source of brittleness is eliminated by applying a specific technique.** Each pair demonstrates a brittle prompt on the left (producing inconsistent or incorrect output) and a robust equivalent on the right (enforcing format, handling edge cases, or anchoring behavior).',
         promptExamples: [
           {
@@ -143,7 +144,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: 'How Do You Test Prompts for Brittleness?',
+        title: 'How to Test Prompts for Brittleness',
         content: '**Testing for brittleness means deliberately stressing the prompt beyond its happy path.** Five patterns cover the most common failure modes and can be run before every deployment.',
         items: [
           '**Paraphrase testing** — Restate 5–10 test inputs using different wording and measure whether outputs stay consistent. Brittle prompts show high variance across paraphrases.',
@@ -158,7 +159,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'What Are the Most Common Mistakes That Create Brittle Prompts?',
+        title: 'Common Mistakes That Create Brittle Prompts',
         content: '**The four mistakes below are the most common causes of silent production failures in prompt-based systems.** Each one is preventable with a single design principle.',
         mistakes: [
           {
@@ -173,7 +174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'No model version pinning',
-            problem: 'Using an alias like `gpt-4o` instead of a versioned model ID means any provider update silently changes model behavior. Teams discover the regression only when users report wrong outputs.',
+            problem: 'Using an alias like `gpt-5` instead of a versioned model ID means any provider update silently changes model behavior. Teams discover the regression only when users report wrong outputs.',
             fix: 'Use versioned model identifiers in production deployments. Document which version the prompt was tuned on. Upgrade only after running the regression suite against the new version.',
           },
           {
@@ -188,7 +189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'How Do You Start Reducing Prompt Brittleness?',
+        title: 'How to Start Reducing Prompt Brittleness',
         content: '**Start with the three highest-risk prompts in production — this gives the highest return on the first hour of work.** The following 8-step process can be completed in a single afternoon.',
         numberedItems: [
           'Identify your three highest-traffic or highest-risk prompts in production',
@@ -259,9 +260,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Sources & Further Reading',
         items: [
-          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI: Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv: Towards a Unified Evaluation Framework for Prompt Robustness', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv: Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts (Zhu et al., 2023)', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo: Open-Source Prompt Testing and Evaluation Framework', url: 'https://www.promptfoo.dev' },
         ],
@@ -275,7 +276,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-07-31',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'en',
       about: [
@@ -304,7 +305,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Prompt-Brittleness reduzieren: 7 Techniken (2026)',
     twitterDescription: '7 Techniken gegen stille Prompt-Fehler in Produktion. Structured Output, Regressionstests, Version-Pinning — das komplette Playbook.',
     publishDate: '2026-04-29',
-    dateModified: '2026-07-31',
+    dateModified: '2026-09-01',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Advanced',
     audience: 'Entwickler und Prompt-Ingenieure, die Prompts in der Produktion verwalten',
@@ -316,16 +317,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7 Techniken: strukturierte Ausgabe, Few-Shot-Beispiele, defensive Anweisungen, Eingabeparametrisierung, Regressionstests, Model-Version-Pinning, Output-Validierung',
       '5 Grundursachen: implizite Formaterwartungen, Happy-Path-Tests, Modellversions-Empfindlichkeit, Kontext-Kontamination, zu spezifische Formulierungen',
       'Temperaturbereich für Brittleness-Tests: 0,0, 0,5 und 1,0',
-      'Modellversion-Aliase (z. B. `gpt-4o`) aktualisieren sich stillschweigend; pinnen Sie immer einen datierten Identifikator in der Produktion',
+      'Modellversion-Aliase (z. B. `gpt-5`) aktualisieren sich stillschweigend; pinnen Sie immer einen datierten Identifikator in der Produktion',
     ],
     toc: [
-      { label: 'Was ist Prompt-Brittleness?', anchor: 'what-is-prompt-brittleness' },
-      { label: 'Was verursacht Prompt-Brittleness?', anchor: 'causes-of-prompt-brittleness' },
-      { label: 'Wie reduziert man Prompt-Brittleness?', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: 'Wie sehen spröde vs. robuste Prompts aus?', anchor: 'prompt-examples' },
-      { label: 'Wie testet man Prompts auf Brittleness?', anchor: 'how-to-test-for-brittleness' },
-      { label: 'Was sind die häufigsten Fehler?', anchor: 'common-mistakes' },
-      { label: 'Wie startet man die Reduktion von Prompt-Brittleness?', anchor: 'how-to-start' },
+      { label: 'Prompt-Brittleness ist ein stiller Fehlermodus', anchor: 'what-is-prompt-brittleness' },
+      { label: 'Die fünf Hauptursachen von Prompt-Brittleness', anchor: 'causes-of-prompt-brittleness' },
+      { label: 'Sieben Techniken zur Reduktion von Prompt-Brittleness', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: 'Spröde vs. robuste Prompts: drei Beispiele', anchor: 'prompt-examples' },
+      { label: 'So testen Sie Prompts auf Brittleness', anchor: 'how-to-test-for-brittleness' },
+      { label: 'Häufige Fehler, die spröde Prompts erzeugen', anchor: 'common-mistakes' },
+      { label: 'So starten Sie die Reduktion von Prompt-Brittleness', anchor: 'how-to-start' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -346,7 +347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: 'Was ist Prompt-Brittleness?',
+        title: 'Prompt-Brittleness ist ein stiller Fehlermodus',
         content: [
           '**Prompt-Brittleness tritt auf, wenn ein Prompt bei Testeingaben erwartete Ergebnisse liefert, aber bei leicht veränderten Eingaben zusammenbricht.** Ein spröder Prompt bricht bei umformulierten Fragen, Randeingaben, Modellversion-Updates oder gestapelten System-Prompts zusammen. Die Ausgabe wirft keinen Fehler — sie ist nur falsch, was Brittleness unsichtbar macht, bis sie die Produktion erreicht.',
           'Fehler sind stillschweigend, weil das Modell eine plausibel klingende Antwort zurückgibt, anstatt eine Ausnahme auszulösen. Benutzer sehen ein Ergebnis und vertrauen ihm. Teams entdecken Brittleness nicht, bis Endbenutzer fehlerhafte Ausgaben melden, was Wochen nach der Bereitstellung geschehen kann.',
@@ -362,7 +363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: 'Was verursacht Prompt-Brittleness?',
+        title: 'Die fünf Hauptursachen von Prompt-Brittleness',
         content: '**Die meiste Prompt-Brittleness kommt aus fünf Mustern, wie Prompts geschrieben und getestet werden.** Die zwei häufigsten — implizite Formaterwartungen und Happy-Path-Only-Tests — machen die Mehrheit der Produktionsfehler aus. Das Verständnis dieser Ursachen ist der erste Schritt zum [Bewerten und Verbessern der Qualität Ihrer Prompts](/de/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Implizite Formaterwartungen** — Der Prompt fordert ein bestimmtes Ausgabeformat (JSON, Bullet-Liste, ja/nein) an, ohne es durchzusetzen. Jede Eingabevariante, die das Modell veranlasst, eine Präambel hinzuzufügen oder umzuformulieren, bricht das nachgelagerte Parsing.',
@@ -377,7 +378,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: 'Wie reduziert man Prompt-Brittleness?',
+        title: 'Sieben Techniken zur Reduktion von Prompt-Brittleness',
         content: '**Sieben Techniken behandeln die fünf Grundursachen oben und decken die gesamte Fehlermodell-Oberfläche ab.** Wenden Sie sie der Reihe nach an — frühere Techniken behandeln die häufigsten Fehler. In Produktions-Codebases macht Format-bezogene Brittleness — Prompts, die Freitext parsen und eine bestimmte Form erwarten — die Mehrheit der stillen Fehler in Klassifizierungs- und Extraktionsaufgaben aus. Durchsetzung strukturierter Ausgabe (Technik 1) behandelt diese Klasse vollständig.',
         numberedItems: [
           '**Strukturierte Ausgabe durchsetzen** — Verwenden Sie [JSON-Modus oder native strukturierte Ausgabe-APIs](/de/prompt-engineering/structured-output-and-json-mode) anstatt das Modell anzuweisen, „in JSON zu antworten". Formatdurchsetzung verlagert die Zuverlässigkeitslast vom Prompt zur API-Schicht.',
@@ -385,7 +386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Defensive Anweisungen schreiben** — Geben Sie an, was das Modell tun soll, wenn die Eingabe fehlend, mehrdeutig oder außerhalb des Geltungsbereichs ist. Beispiel: „Wenn kein Datum gefunden wird, geben Sie `null` zurück. Raten Sie nicht." Ohne dies füllt das Modell Lücken mit plausibel klingenden Standardwerten.',
           '**Eingaben parametrisieren** — Ersetzen Sie hartcodierte Werte und Inline-Beispiele durch benannte Variablen (`{{customer_name}}`, `{{document_text}}`). Parametrisierte Prompts sind leichter zu testen und verhindern versehentliche Überanpassung an Beispielwerte.',
           '**Vor der Bereitstellung einen Regressions-Testsatz erstellen** — Stellen Sie 20+ Testfälle zusammen, die die erwartete Verteilung plus 5+ Randfälle abdecken. Führen Sie den Testsatz vor jedem Modell-Upgrade oder Prompt-Änderung aus.',
-          '**Modellversionen in der Produktion pinnen** — Verwenden Sie versionierte Modell-Identifikatoren (z. B. `gpt-4o-2024-08-06`) in der Produktion. Aktualisieren Sie nur nach Ausführung der vollständigen Regressions-Suite gegen die neue Version.',
+          '**Modellversionen in der Produktion pinnen** — Verwenden Sie versionierte Modell-Identifikatoren (z. B. `gpt-5-2025-08-07`) in der Produktion. Aktualisieren Sie nur nach Ausführung der vollständigen Regressions-Suite gegen die neue Version.',
           '**Eine Output-Validierungsschicht hinzufügen** — Validieren Sie die Modellausgabe programmgesteuert, bevor Sie sie weitergeben. Überprüfen Sie Typ, Schema, Länge oder erforderliche Feldpräsenz. Geben Sie bei Validierungsfehlern ein kontrolliertes Fallback zurück — nicht die rohe Modellausgabe.',
         ],
         callouts: [
@@ -404,7 +405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: 'Wie sehen spröde vs. robuste Prompts aus?',
+        title: 'Spröde vs. robuste Prompts: drei Beispiele',
         content: '**Die drei folgenden Beispiele zeigen, wie jede Quelle von Brittleness durch Anwendung einer bestimmten Technik beseitigt wird.** Jedes Paar demonstriert einen spröden Prompt auf der linken Seite (mit inkonsistenter oder falscher Ausgabe) und ein robustes Äquivalent auf der rechten Seite (Formatdurchsetzung, Kantenfall-Handling oder Verhaltensverpflichtung).',
         promptExamples: [
           {
@@ -432,7 +433,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: 'Wie testet man Prompts auf Brittleness?',
+        title: 'So testen Sie Prompts auf Brittleness',
         content: '**Das Testen auf Brittleness bedeutet, den Prompt bewusst über seinen Happy Path hinaus zu belasten.** Fünf Muster decken die häufigsten Fehlermodi ab und können vor jeder Bereitstellung ausgeführt werden.',
         items: [
           '**Umformulierungstests** — Formulieren Sie 5–10 Testeingaben mit anderer Formulierung um und messen Sie, ob Ausgaben konsistent bleiben. Spröde Prompts zeigen eine hohe Varianz über Umformulierungen hinweg.',
@@ -447,7 +448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'Was sind die häufigsten Fehler, die spröde Prompts erstellen?',
+        title: 'Häufige Fehler, die spröde Prompts erzeugen',
         content: '**Die vier folgenden Fehler sind die häufigsten Ursachen für stille Produktionsfehler in Prompt-basierten Systemen.** Jede ist mit einem einzelnen Design-Prinzip vermeidbar.',
         mistakes: [
           {
@@ -462,7 +463,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Kein Modellversions-Pinning',
-            problem: 'Die Verwendung eines Alias wie `gpt-4o` anstelle einer versionierten Modell-ID bedeutet, dass jedes Provider-Update das Modellverhalten stillschweigend ändert. Teams entdecken die Regression nur, wenn Benutzer falsche Ausgaben melden.',
+            problem: 'Die Verwendung eines Alias wie `gpt-5` anstelle einer versionierten Modell-ID bedeutet, dass jedes Provider-Update das Modellverhalten stillschweigend ändert. Teams entdecken die Regression nur, wenn Benutzer falsche Ausgaben melden.',
             fix: 'Verwenden Sie versionierte Modell-Identifikatoren in Produktions-Deployments. Dokumentieren Sie, welche Version der Prompt abgestimmt wurde. Aktualisieren Sie nur nach Ausführung der Regressions-Suite gegen die neue Version.',
           },
           {
@@ -477,7 +478,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'Wie startet man die Reduktion von Prompt-Brittleness?',
+        title: 'So starten Sie die Reduktion von Prompt-Brittleness',
         content: '**Beginnen Sie mit den drei höchstrisikoreichsten Prompts in der Produktion — dies ergibt die höchste Rendite der ersten Stunde Arbeit.** Der folgende 8-Schritte-Prozess kann an einem einzigen Nachmittag abgeschlossen werden.',
         numberedItems: [
           'Identifizieren Sie Ihre drei höchstverwendeten oder höchstrisikoreichsten Prompts in der Produktion',
@@ -520,7 +521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Sollte ich denselben Prompt über alle Modelle hinweg verwenden?',
-            a: 'Nicht ohne Testen. Modelle unterscheiden sich in Instruktions-Befolgung, Standard-Output-Format und Ablehnung-Verhalten. Ein Prompt, der auf einem Modell abgestimmt ist, kann strukturell unterschiedliche Ausgabe auf einem anderen produzieren. Führen Sie Ihren Regressions-Testsatz auf jedem neuen Modell aus, bevor Sie Production-Traffic wechseln. Siehe „Wie testet man Prompts über Modelle hinweg" für ein Cross-Modell-Testing-Framework.',
+            a: 'Nicht ohne Testen. Modelle unterscheiden sich in Instruktions-Befolgung, Standard-Output-Format und Ablehnung-Verhalten. Ein Prompt, der auf einem Modell abgestimmt ist, kann strukturell unterschiedliche Ausgabe auf einem anderen produzieren. Führen Sie Ihren Regressions-Testsatz auf jedem neuen Modell aus, bevor Sie Production-Traffic wechseln. Siehe [Wie testet man Prompts über Modelle hinweg](/de/prompt-engineering/how-to-test-prompts-across-models) für ein Cross-Modell-Testing-Framework.',
           },
           {
             q: 'Wie oft sollte ich Prompts auf Regression testen?',
@@ -528,7 +529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Was ist der Unterschied zwischen Prompt-Brittleness und Prompt-Injection?',
-            a: 'Prompt-Brittleness ist ein Zuverlässigkeitsfehler: Der Prompt bricht bei legitimen Eingabevariationen außerhalb seiner Test-Verteilung. Prompt-Injection ist ein Sicherheitsfehler: Ein böswilliger Akteur erstellt absichtlich Eingabe, um Prompt-Anweisungen außer Kraft zu setzen. Beide sind Prompt-Design-Fehler, aber Brittleness wird durch Robustheitstechniken behandelt, während Injection Input-Sanitization und Privilege-Separation erfordert. Siehe „Prompt-Injection und Sicherheit" für Injection-spezifische Abschwächungen.',
+            a: 'Prompt-Brittleness ist ein Zuverlässigkeitsfehler: Der Prompt bricht bei legitimen Eingabevariationen außerhalb seiner Test-Verteilung. Prompt-Injection ist ein Sicherheitsfehler: Ein böswilliger Akteur erstellt absichtlich Eingabe, um Prompt-Anweisungen außer Kraft zu setzen. Beide sind Prompt-Design-Fehler, aber Brittleness wird durch Robustheitstechniken behandelt, während Injection Input-Sanitization und Privilege-Separation erfordert. Siehe [Prompt-Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security) für Injection-spezifische Abschwächungen.',
           },
           {
             q: 'Muss ich bei der Verwendung von Prompt-Brittleness-Techniken die DSGVO beachten?',
@@ -556,9 +557,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Quellen und weitere Lektüre',
         items: [
-          { title: 'Anthropic: Prompt-Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic: Prompt-Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI: Strukturierte Ausgaben', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv: Richtung eines vereinheitlichten Evaluierungs-Frameworks für Prompt-Robustheit', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv: Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench: Richtung der Evaluierung der Robustheit großer Sprachmodelle auf gegnerische Prompts (Zhu et al., 2023)', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo: Open-Source-Prompt-Test und Evaluierungs-Framework', url: 'https://www.promptfoo.dev' },
         ],
@@ -572,7 +573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-07-31',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/de/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'de',
       about: [
@@ -601,7 +602,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Fragilidad de prompts: 7 técnicas',
     twitterDescription: '7 técnicas para evitar que tus prompts fallen silenciosamente en producción. Salida estructurada, pruebas de regresión, version pinning.',
     publishDate: '2026-04-29',
-    dateModified: '2026-07-31',
+    dateModified: '2026-09-01',
     readTime: '8 min de lectura',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores y prompt engineers que gestionan prompts en producción',
@@ -613,16 +614,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7 técnicas: salida estructurada, ejemplos few-shot, instrucciones defensivas, parametrización de entrada, pruebas de regresión, version pinning del modelo, validación de salida',
       '5 causas raíz: expectativas de formato implícitas, pruebas solo del happy path, sensibilidad a la versión del modelo, contaminación de contexto, redacción demasiado específica',
       'Rango de temperatura para pruebas de fragilidad: 0.0, 0.5 y 1.0',
-      'Los alias de versión del modelo (por ejemplo, `gpt-4o`) se actualizan silenciosamente; siempre fija un identificador con fecha en producción',
+      'Los alias de versión del modelo (por ejemplo, `gpt-5`) se actualizan silenciosamente; siempre fija un identificador con fecha en producción',
     ],
     toc: [
-      { label: '¿Qué es la fragilidad de prompts?', anchor: 'what-is-prompt-brittleness' },
-      { label: '¿Qué causa la fragilidad de prompts?', anchor: 'causes-of-prompt-brittleness' },
-      { label: '¿Cómo reducir la fragilidad de prompts?', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: '¿Cómo son los prompts frágiles vs. robustos?', anchor: 'prompt-examples' },
-      { label: '¿Cómo probar la fragilidad de prompts?', anchor: 'how-to-test-for-brittleness' },
-      { label: '¿Cuáles son los errores más comunes?', anchor: 'common-mistakes' },
-      { label: '¿Cómo empezar a reducir la fragilidad?', anchor: 'how-to-start' },
+      { label: 'La fragilidad de prompts es un modo de fallo silencioso', anchor: 'what-is-prompt-brittleness' },
+      { label: 'Las cinco causas raíz de la fragilidad de prompts', anchor: 'causes-of-prompt-brittleness' },
+      { label: 'Siete técnicas para reducir la fragilidad de prompts', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: 'Prompts frágiles vs. robustos: tres ejemplos', anchor: 'prompt-examples' },
+      { label: 'Cómo probar la fragilidad de prompts', anchor: 'how-to-test-for-brittleness' },
+      { label: 'Errores comunes que crean prompts frágiles', anchor: 'common-mistakes' },
+      { label: 'Cómo empezar a reducir la fragilidad de prompts', anchor: 'how-to-start' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -643,7 +644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: '¿Qué es la fragilidad de prompts?',
+        title: 'La fragilidad de prompts es un modo de fallo silencioso',
         content: [
           '**La fragilidad de prompts ocurre cuando un prompt produce los resultados esperados en entradas de prueba pero falla silenciosamente cuando las entradas cambian ligeramente.** Un prompt frágil se rompe con preguntas reformuladas, entradas de casos límite, actualizaciones de versión del modelo o system prompts apilados. La salida no produce un error — simplemente es incorrecta, haciendo que la fragilidad sea invisible hasta que llega a producción.',
           'Los fallos son silenciosos porque el modelo devuelve una respuesta plausible en lugar de lanzar una excepción. Los usuarios ven un resultado y confían en él. Los equipos no descubren la fragilidad hasta que los usuarios finales reportan salidas incorrectas, lo que puede ocurrir semanas después del despliegue.',
@@ -659,8 +660,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: '¿Qué causa la fragilidad de prompts?',
-        content: '**La mayoría de la fragilidad de prompts proviene de cinco patrones en cómo se escriben y prueban los prompts.** Los dos más comunes — expectativas de formato implícitas y pruebas solo del happy path — explican la mayoría de los fallos en producción. Comprender estas causas es el primer paso para [evaluar y mejorar la calidad de tus prompts](/prompt-engineering/how-to-evaluate-prompt-quality).',
+        title: 'Las cinco causas raíz de la fragilidad de prompts',
+        content: '**La mayoría de la fragilidad de prompts proviene de cinco patrones en cómo se escriben y prueban los prompts.** Los dos más comunes — expectativas de formato implícitas y pruebas solo del happy path — explican la mayoría de los fallos en producción. Comprender estas causas es el primer paso para [evaluar y mejorar la calidad de tus prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Expectativas de formato implícitas** — El prompt pide un formato de salida específico (JSON, lista de puntos, sí/no) sin aplicarlo. Cualquier variación de entrada que haga que el modelo añada un preámbulo o reformule rompe el parseo posterior.',
           '**Pruebas solo del happy path** — Los prompts se validan con 3–5 ejemplos curados manualmente que siempre funcionan. Los casos límite — entradas vacías, texto muy largo, redacción ambigua — nunca se prueban.',
@@ -674,15 +675,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: '¿Cómo reducir la fragilidad de prompts?',
+        title: 'Siete técnicas para reducir la fragilidad de prompts',
         content: '**Siete técnicas abordan las cinco causas raíz anteriores y cubren toda la superficie de modos de fallo.** Aplícalas en orden — las técnicas anteriores abordan los fallos más comunes. En bases de código de producción, la fragilidad relacionada con el formato — prompts que analizan texto libre esperando una forma específica — explica la mayoría de los fallos silenciosos en tareas de clasificación y extracción. La aplicación de salida estructurada (Técnica 1) aborda completamente esta clase.',
         numberedItems: [
-          '**Aplica salida estructurada** — Usa el [modo JSON o las APIs de salida estructurada nativa](/prompt-engineering/structured-output-and-json-mode) en lugar de pedirle al modelo que "responda en JSON". La aplicación de formato traslada la carga de fiabilidad del prompt a la capa de API.',
-          '**Añade ejemplos few-shot explícitos** — Incluye 2–3 pares entrada/salida que demuestren el comportamiento correcto, incluyendo un caso límite. Los ejemplos anclan el comportamiento del modelo de forma más fiable que los prompts solo de instrucciones. Consulta [prompting zero-shot vs. few-shot](/prompt-engineering/zero-shot-vs-few-shot) para más orientación.',
+          '**Aplica salida estructurada** — Usa el [modo JSON o las APIs de salida estructurada nativa](/es/prompt-engineering/structured-output-and-json-mode) en lugar de pedirle al modelo que "responda en JSON". La aplicación de formato traslada la carga de fiabilidad del prompt a la capa de API.',
+          '**Añade ejemplos few-shot explícitos** — Incluye 2–3 pares entrada/salida que demuestren el comportamiento correcto, incluyendo un caso límite. Los ejemplos anclan el comportamiento del modelo de forma más fiable que los prompts solo de instrucciones. Consulta [prompting zero-shot vs. few-shot](/es/prompt-engineering/zero-shot-vs-few-shot) para más orientación.',
           '**Escribe instrucciones defensivas** — Especifica qué debe hacer el modelo cuando la entrada falta, es ambigua o está fuera del alcance. Ejemplo: "Si no se encuentra ninguna fecha, devuelve `null`. No adivines." Sin esto, el modelo rellena los huecos con valores predeterminados plausibles.',
           '**Parametriza las entradas** — Reemplaza los valores codificados de forma fija y los ejemplos en línea con variables nombradas (`{{customer_name}}`, `{{document_text}}`). Los prompts parametrizados son más fáciles de probar sistemáticamente y previenen el sobreajuste accidental a los valores de ejemplo.',
           '**Construye un conjunto de pruebas de regresión antes del despliegue** — Reúne 20+ casos de prueba que cubran la distribución esperada más 5+ casos límite. Ejecuta el conjunto de pruebas antes de cada actualización del modelo o cambio del prompt.',
-          '**Fija las versiones del modelo en producción** — Usa identificadores de modelo versionados (por ejemplo, `gpt-4o-2024-08-06`) en producción. Actualiza solo tras ejecutar la suite de regresión completa contra la nueva versión.',
+          '**Fija las versiones del modelo en producción** — Usa identificadores de modelo versionados (por ejemplo, `gpt-5-2025-08-07`) en producción. Actualiza solo tras ejecutar la suite de regresión completa contra la nueva versión.',
           '**Añade una capa de validación de salida** — Valida la salida del modelo de forma programática antes de pasarla a los sistemas posteriores. Comprueba tipo, esquema, longitud o presencia de campos requeridos. Devuelve un fallback controlado — no la salida bruta del modelo — ante fallos de validación.',
         ],
         callouts: [
@@ -701,7 +702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: '¿Cómo son los prompts frágiles vs. robustos?',
+        title: 'Prompts frágiles vs. robustos: tres ejemplos',
         content: '**Los tres ejemplos siguientes muestran cómo se elimina cada fuente de fragilidad aplicando una técnica específica.** Cada par muestra un prompt frágil a la izquierda (produciendo salida inconsistente o incorrecta) y un equivalente robusto a la derecha (aplicando formato, manejando casos límite o anclando el comportamiento).',
         promptExamples: [
           {
@@ -729,13 +730,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: '¿Cómo probar la fragilidad de prompts?',
+        title: 'Cómo probar la fragilidad de prompts',
         content: '**Probar la fragilidad significa someter deliberadamente el prompt a estrés más allá de su happy path.** Cinco patrones cubren los modos de fallo más comunes y pueden ejecutarse antes de cada despliegue.',
         items: [
           '**Pruebas de paráfrasis** — Reformula 5–10 entradas de prueba usando diferentes redacciones y mide si las salidas se mantienen consistentes. Los prompts frágiles muestran alta varianza entre paráfrasis.',
           '**Pruebas de casos límite** — Prueba entradas vacías, entradas de longitud máxima, texto en idiomas distintos al español, caracteres especiales y entradas que están dentro del alcance pero son inusuales. Estas exponen suposiciones implícitas.',
           '**Variación de temperatura** — Ejecuta las mismas entradas a temperatura 0.0, 0.5 y 1.0. Los prompts robustos muestran estructura consistente en todo el rango; los frágiles rompen el formato a temperaturas más altas.',
-          '**Pruebas de cambio de modelo** — Ejecuta el mismo prompt y los casos de prueba en al menos dos modelos. Las salidas divergentes señalan sobreajuste específico del modelo. Consulta [cómo probar prompts en múltiples modelos](/prompt-engineering/how-to-test-prompts-across-models) para un framework.',
+          '**Pruebas de cambio de modelo** — Ejecuta el mismo prompt y los casos de prueba en al menos dos modelos. Las salidas divergentes señalan sobreajuste específico del modelo. Consulta [cómo probar prompts en múltiples modelos](/es/prompt-engineering/how-to-test-prompts-across-models) para un framework.',
           '**Ejecuciones de regresión antes de cada actualización** — Ejecuta el conjunto de pruebas completo después de cada cambio de versión del modelo, actualización del system prompt o edición del prompt. Registra las tasas de éxito por categoría de prueba (formato, contenido, caso límite) para rastrear los patrones de regresión.',
         ],
         callouts: [
@@ -744,7 +745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: '¿Cuáles son los errores más comunes que crean prompts frágiles?',
+        title: 'Errores comunes que crean prompts frágiles',
         content: '**Los cuatro errores siguientes son las causas más comunes de fallos silenciosos en producción en sistemas basados en prompts.** Cada uno es prevenible con un único principio de diseño.',
         mistakes: [
           {
@@ -759,7 +760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Sin version pinning del modelo',
-            problem: 'Usar un alias como `gpt-4o` en lugar de un identificador de modelo versionado significa que cualquier actualización del proveedor cambia silenciosamente el comportamiento del modelo. Los equipos descubren la regresión solo cuando los usuarios reportan salidas incorrectas.',
+            problem: 'Usar un alias como `gpt-5` en lugar de un identificador de modelo versionado significa que cualquier actualización del proveedor cambia silenciosamente el comportamiento del modelo. Los equipos descubren la regresión solo cuando los usuarios reportan salidas incorrectas.',
             fix: 'Usa identificadores de modelo versionados en los despliegues de producción. Documenta en qué versión se ajustó el prompt. Actualiza solo tras ejecutar la suite de regresión contra la nueva versión.',
           },
           {
@@ -774,7 +775,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: '¿Cómo empezar a reducir la fragilidad de prompts?',
+        title: 'Cómo empezar a reducir la fragilidad de prompts',
         content: '**Empieza con los tres prompts de mayor riesgo en producción — esto da el mayor retorno en la primera hora de trabajo.** El siguiente proceso de 8 pasos puede completarse en una sola tarde.',
         numberedItems: [
           'Identifica tus tres prompts de mayor tráfico o mayor riesgo en producción',
@@ -817,7 +818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Debo usar el mismo prompt en todos los modelos?',
-            a: 'No sin probar. Los modelos difieren en el seguimiento de instrucciones, el formato de salida predeterminado y el comportamiento de rechazo. Un prompt ajustado en un modelo puede producir salida estructuralmente diferente en otro. Ejecuta tu conjunto de pruebas de regresión en cualquier modelo nuevo antes de cambiar el tráfico de producción. Consulta [cómo probar prompts en múltiples modelos](/prompt-engineering/how-to-test-prompts-across-models) para un framework de pruebas multi-modelo.',
+            a: 'No sin probar. Los modelos difieren en el seguimiento de instrucciones, el formato de salida predeterminado y el comportamiento de rechazo. Un prompt ajustado en un modelo puede producir salida estructuralmente diferente en otro. Ejecuta tu conjunto de pruebas de regresión en cualquier modelo nuevo antes de cambiar el tráfico de producción. Consulta [cómo probar prompts en múltiples modelos](/es/prompt-engineering/how-to-test-prompts-across-models) para un framework de pruebas multi-modelo.',
           },
           {
             q: '¿Con qué frecuencia debo probar la regresión de prompts?',
@@ -825,7 +826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Cuál es la diferencia entre fragilidad de prompts e injection de prompts?',
-            a: 'La fragilidad de prompts es un fallo de fiabilidad: el prompt se rompe en variaciones de entrada legítimas fuera de su distribución de pruebas. La prompt injection es un fallo de seguridad: un actor malicioso crea deliberadamente una entrada para anular las instrucciones del prompt. Ambos son defectos de diseño del prompt, pero la fragilidad se aborda con técnicas de robustez, mientras que la injection requiere saneamiento de entrada y separación de privilegios. Consulta [prompt injection y seguridad](/prompt-engineering/prompt-injection-and-security) para mitigaciones específicas de injection.',
+            a: 'La fragilidad de prompts es un fallo de fiabilidad: el prompt se rompe en variaciones de entrada legítimas fuera de su distribución de pruebas. La prompt injection es un fallo de seguridad: un actor malicioso crea deliberadamente una entrada para anular las instrucciones del prompt. Ambos son defectos de diseño del prompt, pero la fragilidad se aborda con técnicas de robustez, mientras que la injection requiere saneamiento de entrada y separación de privilegios. Consulta [prompt injection y seguridad](/es/prompt-engineering/prompt-injection-and-security) para mitigaciones específicas de injection.',
           },
         ],
       },
@@ -845,9 +846,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Fuentes y lectura adicional',
         items: [
-          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI: Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv: Towards a Unified Evaluation Framework for Prompt Robustness', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv: Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts (Zhu et al., 2023)', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo: Open-Source Prompt Testing and Evaluation Framework', url: 'https://www.promptfoo.dev' },
         ],
@@ -861,7 +862,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-07-31',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/es/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'es',
       about: [
@@ -879,6 +880,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
 
   pt: {
+    freshness_tier: 'semi_annual',
     theme: 'Evaluation & Reliability',
     heroImage: '/images/how-to-reduce-prompt-brittleness-overview-hero-pt.webp',
     title: 'Como reduzir a fragilidade de prompts: 7 técnicas para prompts confiáveis',
@@ -890,6 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Fragilidade de prompts: 7 técnicas',
     twitterDescription: '7 técnicas para evitar que seus prompts falhem silenciosamente em produção. Saída estruturada, testes de regressão, version pinning.',
     publishDate: '2026-04-29',
+    dateModified: '2026-09-01',
     readTime: '8 min de leitura',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores e engenheiros de prompts que gerenciam prompts em produção',
@@ -901,16 +904,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7 técnicas: saída estruturada, exemplos few-shot, instruções defensivas, parametrização de entrada, testes de regressão, version pinning do modelo, validação de saída',
       '5 causas raiz: expectativas de formato implícitas, testes apenas do happy path, sensibilidade à versão do modelo, contaminação de contexto, redação excessivamente específica',
       'Faixa de temperatura para testes de fragilidade: 0.0, 0.5 e 1.0',
-      'Aliases de versão do modelo (ex.: `gpt-4o`) se atualizam silenciosamente; sempre fixe um identificador com data em produção',
+      'Aliases de versão do modelo (ex.: `gpt-5`) se atualizam silenciosamente; sempre fixe um identificador com data em produção',
     ],
     toc: [
-      { label: 'O que é fragilidade de prompts?', anchor: 'what-is-prompt-brittleness' },
-      { label: 'O que causa a fragilidade de prompts?', anchor: 'causes-of-prompt-brittleness' },
-      { label: 'Como reduzir a fragilidade de prompts?', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: 'Como são os prompts frágeis vs. robustos?', anchor: 'prompt-examples' },
-      { label: 'Como testar a fragilidade de prompts?', anchor: 'how-to-test-for-brittleness' },
-      { label: 'Quais são os erros mais comuns?', anchor: 'common-mistakes' },
-      { label: 'Como começar a reduzir a fragilidade?', anchor: 'how-to-start' },
+      { label: 'Fragilidade de prompts é um modo de falha silencioso', anchor: 'what-is-prompt-brittleness' },
+      { label: 'As cinco causas raiz da fragilidade de prompts', anchor: 'causes-of-prompt-brittleness' },
+      { label: 'Sete técnicas para reduzir a fragilidade de prompts', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: 'Prompts frágeis vs. robustos: três exemplos', anchor: 'prompt-examples' },
+      { label: 'Como testar a fragilidade de prompts', anchor: 'how-to-test-for-brittleness' },
+      { label: 'Erros comuns que criam prompts frágeis', anchor: 'common-mistakes' },
+      { label: 'Como começar a reduzir a fragilidade de prompts', anchor: 'how-to-start' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -931,7 +934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: 'O que é fragilidade de prompts?',
+        title: 'Fragilidade de prompts é um modo de falha silencioso',
         content: [
           '**A fragilidade de prompts ocorre quando um prompt produz os resultados esperados em entradas de teste, mas falha silenciosamente quando as entradas mudam ligeiramente.** Um prompt frágil quebra com perguntas reformuladas, entradas de casos limítrofes, atualizações de versão do modelo ou system prompts empilhados. A saída não produz um erro — simplesmente está errada, tornando a fragilidade invisível até chegar à produção.',
           'As falhas são silenciosas porque o modelo retorna uma resposta plausível em vez de lançar uma exceção. Os usuários veem um resultado e confiam nele. As equipes não descobrem a fragilidade até que usuários finais reportem saídas incorretas, o que pode acontecer semanas após a implantação.',
@@ -947,8 +950,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: 'O que causa a fragilidade de prompts?',
-        content: '**A maior parte da fragilidade de prompts vem de cinco padrões na forma como os prompts são escritos e testados.** Os dois mais comuns — expectativas de formato implícitas e testes apenas do happy path — respondem pela maioria das falhas em produção. Entender essas causas é o primeiro passo para [avaliar e melhorar a qualidade dos seus prompts](/prompt-engineering/how-to-evaluate-prompt-quality).',
+        title: 'As cinco causas raiz da fragilidade de prompts',
+        content: '**A maior parte da fragilidade de prompts vem de cinco padrões na forma como os prompts são escritos e testados.** Os dois mais comuns — expectativas de formato implícitas e testes apenas do happy path — respondem pela maioria das falhas em produção. Entender essas causas é o primeiro passo para [avaliar e melhorar a qualidade dos seus prompts](/pt/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Expectativas de formato implícitas** — O prompt pede um formato de saída específico (JSON, lista com marcadores, sim/não) sem aplicá-lo. Qualquer variação de entrada que faça o modelo adicionar um preâmbulo ou reformular quebra o processamento subsequente.',
           '**Testes apenas do happy path** — Os prompts são validados com 3–5 exemplos curados manualmente que sempre funcionam. Casos limítrofes — entradas vazias, texto muito longo, redação ambígua — nunca são testados.',
@@ -962,15 +965,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: 'Como reduzir a fragilidade de prompts?',
+        title: 'Sete técnicas para reduzir a fragilidade de prompts',
         content: '**Sete técnicas abordam as cinco causas raiz acima e cobrem toda a superfície de modos de falha.** Aplique-as em ordem — as técnicas anteriores abordam as falhas mais comuns. Em bases de código de produção, a fragilidade relacionada ao formato — prompts que analisam texto livre esperando uma forma específica — responde pela maioria das falhas silenciosas em tarefas de classificação e extração. A aplicação de saída estruturada (Técnica 1) aborda essa classe completamente.',
         numberedItems: [
-          '**Aplique saída estruturada** — Use o [modo JSON ou as APIs de saída estruturada nativa](/prompt-engineering/structured-output-and-json-mode) em vez de pedir ao modelo que "responda em JSON". A aplicação de formato transfere o ônus de confiabilidade do prompt para a camada de API.',
-          '**Adicione exemplos few-shot explícitos** — Inclua 2–3 pares entrada/saída que demonstrem o comportamento correto, incluindo um caso limítrofe. Os exemplos ancoram o comportamento do modelo de forma mais confiável do que prompts apenas de instruções. Consulte [prompting zero-shot vs. few-shot](/prompt-engineering/zero-shot-vs-few-shot) para mais orientações.',
+          '**Aplique saída estruturada** — Use o [modo JSON ou as APIs de saída estruturada nativa](/pt/prompt-engineering/structured-output-and-json-mode) em vez de pedir ao modelo que "responda em JSON". A aplicação de formato transfere o ônus de confiabilidade do prompt para a camada de API.',
+          '**Adicione exemplos few-shot explícitos** — Inclua 2–3 pares entrada/saída que demonstrem o comportamento correto, incluindo um caso limítrofe. Os exemplos ancoram o comportamento do modelo de forma mais confiável do que prompts apenas de instruções. Consulte [prompting zero-shot vs. few-shot](/pt/prompt-engineering/zero-shot-vs-few-shot) para mais orientações.',
           '**Escreva instruções defensivas** — Especifique o que o modelo deve fazer quando a entrada estiver ausente, ambígua ou fora do escopo. Exemplo: "Se nenhuma data for encontrada, retorne `null`. Não adivinhe." Sem isso, o modelo preenche lacunas com padrões plausíveis.',
           '**Parametrize as entradas** — Substitua valores codificados e exemplos inline por variáveis nomeadas (`{{nome_do_cliente}}`, `{{texto_do_documento}}`). Prompts parametrizados são mais fáceis de testar sistematicamente e evitam o superajuste acidental a valores de exemplo.',
           '**Monte um conjunto de testes de regressão antes de implantar** — Reúna 20+ casos de teste cobrindo a distribuição esperada mais 5+ casos limítrofes. Execute o conjunto de testes antes de cada atualização de modelo ou mudança de prompt.',
-          '**Fixe as versões do modelo em produção** — Use identificadores de modelo versionados (ex.: `gpt-4o-2024-08-06`) em produção. Atualize somente após executar a suíte de regressão completa contra a nova versão.',
+          '**Fixe as versões do modelo em produção** — Use identificadores de modelo versionados (ex.: `gpt-5-2025-08-07`) em produção. Atualize somente após executar a suíte de regressão completa contra a nova versão.',
           '**Adicione uma camada de validação de saída** — Valide a saída do modelo programaticamente antes de passá-la para sistemas subsequentes. Verifique tipo, schema, comprimento ou presença de campos obrigatórios. Retorne um fallback controlado — não a saída bruta do modelo — em caso de falhas de validação.',
         ],
         callouts: [
@@ -989,7 +992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: 'Como são os prompts frágeis vs. robustos?',
+        title: 'Prompts frágeis vs. robustos: três exemplos',
         content: '**Os três exemplos a seguir mostram como cada fonte de fragilidade é eliminada aplicando uma técnica específica.** Cada par mostra um prompt frágil à esquerda (produzindo saída inconsistente ou incorreta) e um equivalente robusto à direita (aplicando formato, tratando casos limítrofes ou ancorando o comportamento).',
         promptExamples: [
           {
@@ -1017,13 +1020,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: 'Como testar a fragilidade de prompts?',
+        title: 'Como testar a fragilidade de prompts',
         content: '**Testar a fragilidade significa submeter deliberadamente o prompt a estresse além do seu happy path.** Cinco padrões cobrem os modos de falha mais comuns e podem ser executados antes de cada implantação.',
         items: [
           '**Testes de paráfrase** — Reformule 5–10 entradas de teste usando diferentes redações e meça se as saídas permanecem consistentes. Prompts frágeis mostram alta variância entre paráfrases.',
           '**Testes de casos limítrofes** — Teste entradas vazias, entradas de comprimento máximo, texto em idiomas diferentes do português, caracteres especiais e entradas que estão dentro do escopo, mas são incomuns. Esses expõem suposições implícitas.',
           '**Variação de temperatura** — Execute as mesmas entradas a temperatura 0.0, 0.5 e 1.0. Prompts robustos mostram estrutura consistente em toda a faixa; os frágeis quebram o formato em temperaturas mais altas.',
-          '**Testes de mudança de modelo** — Execute o mesmo prompt e os casos de teste em pelo menos dois modelos. Saídas divergentes indicam superajuste específico de modelo. Consulte [como testar prompts em múltiplos modelos](/prompt-engineering/how-to-test-prompts-across-models) para um framework.',
+          '**Testes de mudança de modelo** — Execute o mesmo prompt e os casos de teste em pelo menos dois modelos. Saídas divergentes indicam superajuste específico de modelo. Consulte [como testar prompts em múltiplos modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) para um framework.',
           '**Execuções de regressão antes de cada atualização** — Execute o conjunto de testes completo após cada mudança de versão do modelo, atualização do system prompt ou edição do prompt. Registre as taxas de sucesso por categoria de teste (formato, conteúdo, caso limítrofe) para rastrear os padrões de regressão.',
         ],
         callouts: [
@@ -1032,7 +1035,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'Quais são os erros mais comuns que criam prompts frágeis?',
+        title: 'Erros comuns que criam prompts frágeis',
         content: '**Os quatro erros a seguir são as causas mais comuns de falhas silenciosas em produção em sistemas baseados em prompts.** Cada um é evitável com um único princípio de design.',
         mistakes: [
           {
@@ -1047,7 +1050,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Sem version pinning do modelo',
-            problem: 'Usar um alias como `gpt-4o` em vez de um identificador de modelo versionado significa que qualquer atualização do provedor altera silenciosamente o comportamento do modelo. As equipes descobrem a regressão somente quando os usuários reportam saídas incorretas.',
+            problem: 'Usar um alias como `gpt-5` em vez de um identificador de modelo versionado significa que qualquer atualização do provedor altera silenciosamente o comportamento do modelo. As equipes descobrem a regressão somente quando os usuários reportam saídas incorretas.',
             fix: 'Use identificadores de modelo versionados nas implantações de produção. Documente em qual versão o prompt foi ajustado. Atualize somente após executar a suíte de regressão contra a nova versão.',
           },
           {
@@ -1062,7 +1065,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'Como começar a reduzir a fragilidade de prompts?',
+        title: 'Como começar a reduzir a fragilidade de prompts',
         content: '**Comece pelos três prompts de maior risco em produção — isso dá o maior retorno na primeira hora de trabalho.** O processo de 8 etapas a seguir pode ser concluído em uma única tarde.',
         numberedItems: [
           'Identifique seus três prompts de maior tráfego ou maior risco em produção',
@@ -1105,7 +1108,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Devo usar o mesmo prompt em todos os modelos?',
-            a: 'Não sem testar. Os modelos diferem no seguimento de instruções, formato de saída padrão e comportamento de recusa. Um prompt ajustado em um modelo pode produzir saída estruturalmente diferente em outro. Execute seu conjunto de testes de regressão em qualquer modelo novo antes de mudar o tráfego de produção. Consulte [como testar prompts em múltiplos modelos](/prompt-engineering/how-to-test-prompts-across-models) para um framework de testes multi-modelo.',
+            a: 'Não sem testar. Os modelos diferem no seguimento de instruções, formato de saída padrão e comportamento de recusa. Um prompt ajustado em um modelo pode produzir saída estruturalmente diferente em outro. Execute seu conjunto de testes de regressão em qualquer modelo novo antes de mudar o tráfego de produção. Consulte [como testar prompts em múltiplos modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) para um framework de testes multi-modelo.',
           },
           {
             q: 'Com que frequência devo testar a regressão de prompts?',
@@ -1113,7 +1116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Qual é a diferença entre fragilidade de prompts e injeção de prompts?',
-            a: 'A fragilidade de prompts é uma falha de confiabilidade: o prompt quebra em variações de entrada legítimas fora de sua distribuição de testes. A injeção de prompts é uma falha de segurança: um agente malicioso cria deliberadamente uma entrada para substituir as instruções do prompt. Ambas são defeitos de design do prompt, mas a fragilidade é abordada com técnicas de robustez, enquanto a injeção requer sanitização de entrada e separação de privilégios. Consulte [injeção de prompts e segurança](/prompt-engineering/prompt-injection-and-security) para mitigações específicas de injeção.',
+            a: 'A fragilidade de prompts é uma falha de confiabilidade: o prompt quebra em variações de entrada legítimas fora de sua distribuição de testes. A injeção de prompts é uma falha de segurança: um agente malicioso cria deliberadamente uma entrada para substituir as instruções do prompt. Ambas são defeitos de design do prompt, mas a fragilidade é abordada com técnicas de robustez, enquanto a injeção requer sanitização de entrada e separação de privilégios. Consulte [injeção de prompts e segurança](/pt/prompt-engineering/prompt-injection-and-security) para mitigações específicas de injeção.',
           },
         ],
       },
@@ -1133,9 +1136,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Fontes e leitura adicional',
         items: [
-          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI: Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv: Towards a Unified Evaluation Framework for Prompt Robustness', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv: Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts (Zhu et al., 2023)', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo: Open-Source Prompt Testing and Evaluation Framework', url: 'https://www.promptfoo.dev' },
         ],
@@ -1149,6 +1152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/pt/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'pt-BR',
       about: [
@@ -1178,7 +1182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'Fragilité des Prompts : 7 Techniques (2026)',
     twitterDescription: '7 techniques pour empêcher vos prompts de casser silencieusement en production. Output structuré, tests de régression, version pinning.',
     publishDate: '2026-04-29',
-    dateModified: '2026-07-31',
+    dateModified: '2026-09-01',
     readTime: '8 min de lecture',
     educationalLevel: 'Advanced',
     audience: 'Développeurs et ingénieurs de prompts gérant des prompts en production',
@@ -1190,16 +1194,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7 techniques : sortie structurée, exemples few-shot, instructions défensives, paramétrisation des entrées, tests de régression, verrouillage de version du modèle, validation de sortie',
       '5 causes racines : attentes de format implicites, tests happy-path uniquement, sensibilité à la version du modèle, contamination du contexte, formulations trop spécifiques',
       'Plage de température pour les tests de fragilité : 0.0, 0.5 et 1.0',
-      'Les alias de version du modèle (par ex. `gpt-4o`) se mettent à jour silencieusement ; épinglez toujours un identifiant daté en production',
+      'Les alias de version du modèle (par ex. `gpt-5`) se mettent à jour silencieusement ; épinglez toujours un identifiant daté en production',
     ],
     toc: [
-      { label: 'Qu\'est-ce que la fragilité des prompts ?', anchor: 'what-is-prompt-brittleness' },
-      { label: 'Qu\'est-ce qui cause la fragilité des prompts ?', anchor: 'causes-of-prompt-brittleness' },
-      { label: 'Comment réduire la fragilité des prompts ?', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: 'À quoi ressemblent les prompts fragiles vs. robustes ?', anchor: 'prompt-examples' },
-      { label: 'Comment tester les prompts pour la fragilité ?', anchor: 'how-to-test-for-brittleness' },
-      { label: 'Quelles sont les erreurs les plus courantes ?', anchor: 'common-mistakes' },
-      { label: 'Comment commencer à réduire la fragilité ?', anchor: 'how-to-start' },
+      { label: 'La fragilité des prompts : un mode de défaillance silencieux', anchor: 'what-is-prompt-brittleness' },
+      { label: 'Les cinq causes racines de la fragilité des prompts', anchor: 'causes-of-prompt-brittleness' },
+      { label: 'Sept techniques pour réduire la fragilité des prompts', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: 'Prompts fragiles vs. robustes : trois exemples', anchor: 'prompt-examples' },
+      { label: 'Comment tester la fragilité des prompts', anchor: 'how-to-test-for-brittleness' },
+      { label: 'Erreurs courantes qui créent des prompts fragiles', anchor: 'common-mistakes' },
+      { label: 'Comment commencer à réduire la fragilité des prompts', anchor: 'how-to-start' },
       { label: 'Foire aux questions', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -1220,7 +1224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: 'Qu\'est-ce que la fragilité des prompts ?',
+        title: 'La fragilité des prompts : un mode de défaillance silencieux',
         content: [
           '**La fragilité des prompts se produit quand un prompt donne les résultats attendus sur les entrées de test, mais se brise quand les entrées changent légèrement.** Un prompt fragile se brise sur des questions reformulées, des entrées limites, des mises à jour de version du modèle ou des prompts système empilés. La sortie ne lève pas d\'erreur — elle est juste mauvaise, rendant la fragilité invisible jusqu\'à ce qu\'elle atteigne la production.',
           'Les défaillances sont silencieuses parce que le modèle retourne une réponse plausible plutôt que de lever une exception. Les utilisateurs voient un résultat et le font confiance. Les équipes ne découvrent la fragilité que quand les utilisateurs finaux signalent des sorties incorrectes, ce qui peut survenir des semaines après le déploiement.',
@@ -1236,7 +1240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: 'Qu\'est-ce qui cause la fragilité des prompts ?',
+        title: 'Les cinq causes racines de la fragilité des prompts',
         content: '**La plupart des fragilités des prompts proviennent de cinq motifs dans la façon dont les prompts sont écrits et testés.** Les deux plus courants — attentes de format implicites et tests happy-path uniquement — expliquent la majorité des défaillances en production. Comprendre ces causes est la première étape pour [évaluer et améliorer la qualité de vos prompts](/fr/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**Attentes de format implicites** — Le prompt demande un format de sortie spécifique (JSON, liste à puces, oui/non) sans le forcer. Toute variation d\'entrée qui amène le modèle à ajouter un préambule ou reformuler casse l\'analyse en aval.',
@@ -1251,7 +1255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: 'Comment réduire la fragilité des prompts ?',
+        title: 'Sept techniques pour réduire la fragilité des prompts',
         content: '**Sept techniques traitent les cinq causes racines ci-dessus et couvrent toute la surface des modes de défaillance.** Appliquez-les dans l\'ordre — les techniques antérieures traitent les défaillances les plus courantes. Dans les codebases de production, la fragilité liée au format — des prompts qui analysent du texte libre en attendant une forme spécifique — explique la majorité des défaillances silencieuses dans les tâches de classification et d\'extraction. L\'application de la sortie structurée (Technique 1) traite entièrement cette classe.',
         numberedItems: [
           '**Forcer la sortie structurée** — Utilisez [le mode JSON ou les API de sortie structurée native](/fr/prompt-engineering/structured-output-and-json-mode) au lieu de demander au modèle de \"répondre en JSON\". L\'application du format déplace le fardeau de la fiabilité du prompt à la couche API.',
@@ -1259,7 +1263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**Écrire des instructions défensives** — Spécifiez ce que le modèle doit faire quand l\'entrée est manquante, ambiguë ou hors du champ. Exemple : \"Si aucune date n\'est trouvée, retournez `null`. Ne devinez pas.\" Sans ceci, le modèle remplit les lacunes avec des valeurs par défaut plausiblement sonnantes.',
           '**Paramétrer les entrées** — Remplacez les valeurs codées en dur et les exemples en ligne par des variables nommées (`{{customer_name}}`, `{{document_text}}`). Les prompts paramétrés sont plus faciles à tester systématiquement et préviennent le surapprentissage accidentel aux valeurs d\'exemple.',
           '**Construire un ensemble de tests de régression avant le déploiement** — Assemblez 20+ cas de test couvrant la distribution attendue plus 5+ cas limites. Exécutez l\'ensemble de tests avant chaque mise à niveau du modèle ou changement de prompt.',
-          '**Épingler les versions du modèle en production** — Utilisez des identifiants de modèle versionnés (par ex. `gpt-4o-2024-08-06`) en production. Mettez à jour uniquement après avoir exécuté la suite complète de régression contre la nouvelle version.',
+          '**Épingler les versions du modèle en production** — Utilisez des identifiants de modèle versionnés (par ex. `gpt-5-2025-08-07`) en production. Mettez à jour uniquement après avoir exécuté la suite complète de régression contre la nouvelle version.',
           '**Ajouter une couche de validation de sortie** — Validez la sortie du modèle par programmation avant de la transmettre en aval. Vérifiez le type, le schéma, la longueur ou la présence de champs obligatoires. Retournez un fallback contrôlé — pas la sortie brute du modèle — en cas d\'échec de validation.',
         ],
         callouts: [
@@ -1278,7 +1282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: 'À quoi ressemblent les prompts fragiles vs. robustes ?',
+        title: 'Prompts fragiles vs. robustes : trois exemples',
         content: '**Les trois exemples ci-dessous montrent comment chaque source de fragilité est éliminée en appliquant une technique spécifique.** Chaque paire démontre un prompt fragile à gauche (produisant une sortie incohérente ou incorrecte) et un équivalent robuste à droite (application de format, gestion des cas limites ou ancrage du comportement).',
         promptExamples: [
           {
@@ -1306,7 +1310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: 'Comment tester les prompts pour la fragilité ?',
+        title: 'Comment tester la fragilité des prompts',
         content: '**Tester la fragilité signifie délibérément stresser le prompt au-delà de son happy path.** Cinq motifs couvrent les modes de défaillance les plus courants et peuvent être exécutés avant chaque déploiement.',
         items: [
           '**Tests de paraphrase** — Reformulez 5–10 entrées de test en utilisant une formulation différente et mesurez si les sorties restent cohérentes. Les prompts fragiles affichent une variance élevée sur les paraphrases.',
@@ -1321,7 +1325,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'Quelles sont les erreurs les plus courantes qui créent des prompts fragiles ?',
+        title: 'Erreurs courantes qui créent des prompts fragiles',
         content: '**Les quatre erreurs ci-dessous sont les causes les plus courantes de défaillances silencieuses en production dans les systèmes basés sur des prompts.** Chacune est évitable avec un principe de conception unique.',
         mistakes: [
           {
@@ -1336,7 +1340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'Pas d\'épinglage de version du modèle',
-            problem: 'Utiliser un alias comme `gpt-4o` au lieu d\'un ID de modèle versionné signifie que toute mise à jour du fournisseur change silencieusement le comportement du modèle. Les équipes découvrent la régression uniquement quand les utilisateurs signalent des sorties incorrectes.',
+            problem: 'Utiliser un alias comme `gpt-5` au lieu d\'un ID de modèle versionné signifie que toute mise à jour du fournisseur change silencieusement le comportement du modèle. Les équipes découvrent la régression uniquement quand les utilisateurs signalent des sorties incorrectes.',
             fix: 'Utilisez des identifiants de modèle versionnés dans les déploiements de production. Documentez quelle version le prompt a été réglé. Mettez à jour uniquement après avoir exécuté la suite de régression contre la nouvelle version.',
           },
           {
@@ -1351,7 +1355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'Comment commencer à réduire la fragilité des prompts ?',
+        title: 'Comment commencer à réduire la fragilité des prompts',
         content: '**Commencez avec les trois prompts les plus à risque en production — cela donne le meilleur retour sur la première heure de travail.** Le processus en 8 étapes suivant peut être complété un seul après-midi.',
         numberedItems: [
           'Identifiez vos trois prompts les plus utilisés ou à risque le plus élevé en production',
@@ -1394,7 +1398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Devrais-je utiliser le même prompt sur tous les modèles ?',
-            a: 'Pas sans tester. Les modèles diffèrent dans le suivi des instructions, le format de sortie par défaut et le comportement de refus. Un prompt réglé sur un modèle peut produire une sortie structurellement différente sur un autre. Exécutez votre ensemble de tests de régression sur tout nouveau modèle avant de basculer le trafic de production. Voir \"Comment tester les prompts sur les modèles\" pour un framework de test cross-modèle.',
+            a: 'Pas sans tester. Les modèles diffèrent dans le suivi des instructions, le format de sortie par défaut et le comportement de refus. Un prompt réglé sur un modèle peut produire une sortie structurellement différente sur un autre. Exécutez votre ensemble de tests de régression sur tout nouveau modèle avant de basculer le trafic de production. Voir [Comment tester les prompts sur les modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) pour un framework de test cross-modèle.',
           },
           {
             q: 'Avec quelle fréquence devrais-je tester les prompts pour la régression ?',
@@ -1402,7 +1406,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Quelle est la différence entre la fragilité des prompts et l\'injection de prompts ?',
-            a: 'La fragilité des prompts est une défaillance de fiabilité : le prompt se brise sur les variations d\'entrée légitimes en dehors de sa distribution de test. L\'injection de prompts est une défaillance de sécurité : un acteur malveillant crée délibérément une entrée pour annuler les instructions du prompt. Les deux sont des défauts de conception de prompt, mais la fragilité est traitée par des techniques de robustesse, tandis que l\'injection nécessite la désinfection d\'entrée et la séparation des privilèges. Voir \"Injection de prompts et sécurité\" pour les atténuations spécifiques à l\'injection.',
+            a: 'La fragilité des prompts est une défaillance de fiabilité : le prompt se brise sur les variations d\'entrée légitimes en dehors de sa distribution de test. L\'injection de prompts est une défaillance de sécurité : un acteur malveillant crée délibérément une entrée pour annuler les instructions du prompt. Les deux sont des défauts de conception de prompt, mais la fragilité est traitée par des techniques de robustesse, tandis que l\'injection nécessite la désinfection d\'entrée et la séparation des privilèges. Voir [Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security) pour les atténuations spécifiques à l\'injection.',
           },
           {
             q: 'Devrais-je ajouter une couche de validation pour améliorer la fiabilité ?',
@@ -1430,9 +1434,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Sources et lectures supplémentaires',
         items: [
-          { title: 'Anthropic : Ingénierie des prompts', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic : Ingénierie des prompts', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI : Sorties structurées', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv : Vers un cadre d\'évaluation unifié pour la robustesse des prompts', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv : Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench : Vers l\'évaluation de la robustesse des grands modèles de langage sur les prompts adversariales (Zhu et al., 2023)', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo : Framework de test et d\'évaluation des prompts open-source', url: 'https://www.promptfoo.dev' },
         ],
@@ -1446,7 +1450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-07-31',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/fr/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'fr',
       about: [
@@ -1475,7 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'プロンプト脆弱性を低減する7つのテクニック',
     twitterDescription: '本番環境でプロンプトが静かに壊れるのを防ぐ7つのテクニック。構造化出力、回帰テスト、バージョン固定。',
     publishDate: '2026-04-29',
-    dateModified: '2026-07-31',
+    dateModified: '2026-09-01',
     readTime: '8分で読める',
     educationalLevel: 'Advanced',
     audience: '本番環境でプロンプトを管理する開発者とプロンプトエンジニア',
@@ -1487,16 +1491,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7つのテクニック：構造化出力、Few-Shot例、防御的指示、入力パラメータ化、回帰テスト、モデルバージョン固定、出力検証',
       '5つの根本原因：暗黙的な形式の期待、ハッピーパステスト、モデルバージョン感度、コンテキスト汚染、過度に特定のフレーズ',
       '脆弱性テストの温度範囲：0.0、0.5、1.0',
-      'モデルバージョンエイリアス（例：`gpt-4o`）は静かに更新されます。本番環境では常に日付付き識別子をピンします。',
+      'モデルバージョンエイリアス（例：`gpt-5`）は静かに更新されます。本番環境では常に日付付き識別子をピンします。',
     ],
     toc: [
-      { label: 'プロンプト脆弱性とは？', anchor: 'what-is-prompt-brittleness' },
-      { label: 'プロンプト脆弱性の原因は何か？', anchor: 'causes-of-prompt-brittleness' },
-      { label: 'プロンプト脆弱性を低減するには？', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: 'プロンプト脆弱性の定義と仕組み', anchor: 'what-is-prompt-brittleness' },
+      { label: 'プロンプト脆弱性の5つの根本原因', anchor: 'causes-of-prompt-brittleness' },
+      { label: 'プロンプト脆弱性を低減する7つのテクニック', anchor: 'techniques-to-reduce-prompt-brittleness' },
       { label: '脆いプロンプト vs 堅牢なプロンプト', anchor: 'prompt-examples' },
-      { label: 'プロンプト脆弱性をテストするには？', anchor: 'how-to-test-for-brittleness' },
-      { label: '最も一般的な間違いは何か？', anchor: 'common-mistakes' },
-      { label: 'プロンプト脆弱性の低減を開始するには？', anchor: 'how-to-start' },
+      { label: 'プロンプト脆弱性のテスト方法', anchor: 'how-to-test-for-brittleness' },
+      { label: '脆いプロンプトを生む一般的な間違い', anchor: 'common-mistakes' },
+      { label: 'プロンプト脆弱性低減の始め方', anchor: 'how-to-start' },
       { label: 'よくあるご質問', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -1517,7 +1521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: 'プロンプト脆弱性とは？',
+        title: 'プロンプト脆弱性の定義と仕組み',
         content: [
           '**プロンプト脆弱性は、プロンプトがテスト入力で期待される結果を提供しますが、入力がわずかに変わると破損する場合です。** 脆いプロンプトは、言い直された質問、エッジケース入力、モデルバージョン更新、または積み重ねられたシステムプロンプトで破損します。出力はエラーをスローしません — 単に間違っているだけで、脆弱性は本番環境に到達するまで見えません。',
           '失敗は静かです。モデルが例外をスローする代わりに、もっともらしい音の答えを返すからです。ユーザーは結果を見て信頼します。チームは、エンドユーザーが不正な出力を報告するまで脆弱性を発見しません。これはデプロイの数週間後に起こる可能性があります。',
@@ -1533,7 +1537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: 'プロンプト脆弱性の原因は何か？',
+        title: 'プロンプト脆弱性の5つの根本原因',
         content: '**ほとんどのプロンプト脆弱性は、プロンプトがどのように書かれてテストされるかの5つのパターンから生じます。** 最も一般的な2つ — 暗黙的な形式の期待とハッピーパステストのみ — は本番環境での失敗の大多数を説明しています。これらの原因を理解することは、[プロンプト品質を評価して改善する](/ja/prompt-engineering/how-to-evaluate-prompt-quality)ための最初のステップです。',
         items: [
           '**暗黙的な形式の期待** — プロンプトは特定の出力形式（JSON、箇条書き、はい/いいえ）を要求しますが、強制しません。モデルを前文を追加したり、言い直したりする入力バリエーションは、下流の解析を中断します。',
@@ -1543,12 +1547,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**過度に特定のトリガーフレーズ** — 正確なフレーズに依存するプロンプト（「ユーザーがXについて尋ねた場合のみ応答する」）は、ユーザーのフレーズがセマンティクス的に同等だが語彙的に異なる場合に失敗します。',
         ],
         callouts: [
-          { type: 'Warning', label: 'コンテキスト汚染が混合します', text: 'マルチターン会話またはエージェントパイプラインでは、追加の注入ポイントごとに新しい脆弱性ベクトルが追加されます。隔離されずに実際のランタイムコンテキストでプロンプトをテストします。' },
+          { type: 'Warning', label: 'コンテキスト汚染は複合的に悪化します', text: 'マルチターン会話またはエージェントパイプラインでは、追加の注入ポイントごとに新しい脆弱性ベクトルが追加されます。プロンプトは隔離環境ではなく、実際のランタイムコンテキストでテストしてください。' },
         ],
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: 'プロンプト脆弱性を低減するには？',
+        title: 'プロンプト脆弱性を低減する7つのテクニック',
         content: '**7つのテクニックは上記の5つの根本原因に対処し、失敗モードの全体的なサーフェスをカバーしています。** 順番に適用してください — 初期のテクニックは最も一般的な失敗に対処します。本番環境のコードベースでは、形式関連の脆弱性 — フリーテキストを解析し、特定の形状を期待するプロンプト — は分類タスクと抽出タスクで静かな失敗の大多数を説明しています。構造化出力の強制（テクニック1）はこのクラス全体に対処します。',
         numberedItems: [
           '**構造化出力を強制する** — モデルに「JSONで応答する」ように要求する代わりに、[JSONモードまたはネイティブ構造化出力API](/ja/prompt-engineering/structured-output-and-json-mode)を使用します。形式の強制は、信頼性の負担をプロンプトからAPI層に移動します。',
@@ -1556,7 +1560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**防御的指示を書く** — 入力が欠落している、あいまいである、または範囲外の場合にモデルが何をすべきかを指定します。例：「日付が見つからない場合は、`null`を返します。推測しないでください。」これなしで、モデルはもっともらしく聞こえるデフォルト値でギャップを埋めます。',
           '**入力をパラメータ化する** — ハードコードされた値とインライン例を名前付き変数（`{{customer_name}}`、`{{document_text}}`）に置き換えます。パラメータ化されたプロンプトはテストが容易で、例の値への偶発的なオーバーフィッティングを防ぎます。',
           '**デプロイ前に回帰テストセットを構築する** — 予想される分布プラス5以上のエッジケースをカバーする20以上のテストケースを組み立てます。モデルのアップグレードまたはプロンプトの変更の前にテストセットを実行します。',
-          '**本番環境でモデルバージョンをピンします** — 本番環境ではバージョン付きモデル識別子（例：`gpt-4o-2024-08-06`）を使用します。新しいバージョンに対して完全な回帰スイートを実行した後にのみ更新します。',
+          '**本番環境でモデルバージョンをピンします** — 本番環境ではバージョン付きモデル識別子（例：`gpt-5-2025-08-07`）を使用します。新しいバージョンに対して完全な回帰スイートを実行した後にのみ更新します。',
           '**出力検証レイヤーを追加する** — 下流に渡す前に、モデル出力をプログラムで検証します。タイプ、スキーマ、長さ、または必要なフィールドの存在を確認します。検証失敗時に — 生のモデル出力ではなく — 制御されたフォールバックを返します。',
         ],
         callouts: [
@@ -1598,12 +1602,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
         callouts: [
-          { type: 'Key Point', label: 'コピーする内容', text: '例1のJSON強制パターンと例2のnull戻るパターンは、さらなる変更なしに任意の抽出または分類プロンプトにコピーペーストできます。' },
+          { type: 'Key Point', label: 'コピーする内容', text: '例1のJSON強制パターンと例2のnull返却パターンは、さらなる変更なしに任意の抽出または分類プロンプトにコピーペーストできます。' },
         ],
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: 'プロンプト脆弱性をテストするには？',
+        title: 'プロンプト脆弱性のテスト方法',
         content: '**脆弱性のテストは、プロンプトを意図的にハッピーパスを超えてストレステストすることを意味します。** 5つのパターンは最も一般的な失敗モードをカバーし、デプロイメントの前に実行できます。',
         items: [
           '**言い換えテスト** — 5〜10個のテスト入力を異なる言葉で再述し、出力が一貫性を保つかどうかを測定します。脆いプロンプトは言い換え全体で高い分散を示します。',
@@ -1618,7 +1622,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: '最も一般的な間違いは何か？',
+        title: '脆いプロンプトを生む一般的な間違い',
         content: '**以下の4つの間違いは、プロンプトベースのシステムで静かな本番環境の失敗の最も一般的な原因です。** 各1つは単一の設計原則で防ぐことができます。',
         mistakes: [
           {
@@ -1633,7 +1637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'モデルバージョン固定なし',
-            problem: '`gpt-4o`のようなエイリアスを使用してバージョン付きモデルIDの代わりにバージョンIDを使用すると、プロバイダの更新はモデルの動作を静かに変更します。チームはユーザーが不正な出力を報告した場合にのみ回帰を発見します。',
+            problem: '`gpt-5`のようなエイリアスをバージョン付きモデルIDの代わりに使用すると、プロバイダの更新によってモデルの動作が静かに変わります。チームはユーザーが誤った出力を報告して初めてリグレッションに気づきます。',
             fix: '本番環境のデプロイメントではバージョン付きモデル識別子を使用します。プロンプトがどのバージョンで調整されたかを文書化します。新しいバージョンに対して回帰スイートを実行した後にのみアップグレードします。',
           },
           {
@@ -1643,12 +1647,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
         callouts: [
-          { type: 'Warning', label: '文字列マッチングは#1静かな失敗です', text: '「はい」応答の場合は「はい」または「はい」に壊れます。例外を発生させずに。' },
+          { type: 'Warning', label: '文字列マッチングは#1静かな失敗です', text: '`if "はい" in response` は本番コードベースで最も一般的な脆いパース処理パターンです。「はい、」や「はい。」の応答でも例外を発生させることなく壊れます。' },
         ],
       },
       howToStart: {
         id: 'how-to-start',
-        title: 'プロンプト脆弱性の低減を開始するには？',
+        title: 'プロンプト脆弱性低減の始め方',
         content: '**本番環境の3つの最高リスクプロンプトから始めます — これにより、最初の1時間の作業で最高のリターンが得られます。** 次の8ステップのプロセスは、単一の午後で完了できます。',
         numberedItems: [
           '本番環境で3つの最高トラフィックまたは最高リスクプロンプトを識別します',
@@ -1661,7 +1665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '本番環境の構成でモデルバージョン識別子をピンし、プロンプトが調整されたバージョンを文書化します',
         ],
         callouts: [
-          { type: 'Pro Tip', label: '小さく始めます', text: '3つのプロンプトの完全な監査には2時間未満かかります。10個のプロンプトの部分的な監査は、重要なエッジケースを見逃します。幅の深さ。' },
+          { type: 'Pro Tip', label: '小さく始めます', text: '3つのプロンプトの完全な監査には2時間未満かかります。10個のプロンプトの部分的な監査は、重要なエッジケースを見逃します。広さより深さです。' },
         ],
       },
       faq: {
@@ -1719,9 +1723,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'ソースと参考読書',
         items: [
-          { title: 'Anthropic：Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic：Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI：Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv：Towards a Unified Evaluation Framework for Prompt Robustness', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv：Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench：Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts（Zhu et al.、2023）', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo：Open-Source Prompt Testing and Evaluation Framework', url: 'https://www.promptfoo.dev' },
         ],
@@ -1735,7 +1739,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-07-31',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ja/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'ja',
       about: [
@@ -1764,7 +1768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: '减少Prompt脆弱性：7种技术',
     twitterDescription: '7种技术防止Prompt在生产环境中静默失败。结构化输出、回归测试、版本固定。',
     publishDate: '2026-04-29',
-    dateModified: '2026-07-31',
+    dateModified: '2026-09-01',
     readTime: '阅读约8分钟',
     educationalLevel: 'Advanced',
     audience: '在生产环境中管理Prompt的开发者和Prompt工程师',
@@ -1776,16 +1780,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7种技术：结构化输出、Few-Shot示例、防御性指令、输入参数化、回归测试、模型版本固定、输出验证',
       '5个根本原因：隐含的格式期望、仅正常路径测试、模型版本敏感性、上下文污染、过度特定的措辞',
       '脆弱性测试的温度范围：0.0、0.5、1.0',
-      '模型版本别名（例如`gpt-4o`）会静默更新；始终在生产环境中固定带日期的标识符。',
+      '模型版本别名（例如`gpt-5`）会静默更新；始终在生产环境中固定带日期的标识符。',
     ],
     toc: [
-      { label: '什么是Prompt脆弱性？', anchor: 'what-is-prompt-brittleness' },
-      { label: '什么导致Prompt脆弱性？', anchor: 'causes-of-prompt-brittleness' },
-      { label: '如何减少Prompt脆弱性？', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: '脆弱 vs 健壮Prompt是什么样的？', anchor: 'prompt-examples' },
-      { label: '如何测试Prompt脆弱性？', anchor: 'how-to-test-for-brittleness' },
-      { label: '最常见的错误是什么？', anchor: 'common-mistakes' },
-      { label: '如何开始减少Prompt脆弱性？', anchor: 'how-to-start' },
+      { label: 'Prompt脆弱性：一种静默失败模式', anchor: 'what-is-prompt-brittleness' },
+      { label: 'Prompt脆弱性的五大根本原因', anchor: 'causes-of-prompt-brittleness' },
+      { label: '减少Prompt脆弱性的7种技术', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: '脆弱 vs 健壮Prompt：三个示例', anchor: 'prompt-examples' },
+      { label: '测试Prompt脆弱性的方法', anchor: 'how-to-test-for-brittleness' },
+      { label: '导致Prompt脆弱的常见错误', anchor: 'common-mistakes' },
+      { label: '开始减少Prompt脆弱性的步骤', anchor: 'how-to-start' },
       { label: '常见问题', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -1806,7 +1810,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: '什么是Prompt脆弱性？',
+        title: 'Prompt脆弱性：一种静默失败模式',
         content: [
           '**Prompt脆弱性是指Prompt在测试输入上提供预期结果但在输入略有变化时破损的情况。** 脆弱的Prompt在改写的问题、边界情况输入、模型版本更新或堆叠的系统Prompt上破损。输出不会抛出错误 — 只是错误 — 使脆弱性在到达生产前一直看不见。',
           '失败是静默的。因为模型返回看似合理的答案而不是抛出异常。用户看到结果并信任它。团队只有在最终用户报告不正确的输出时才发现脆弱性，这可能在部署数周后发生。',
@@ -1822,7 +1826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: '什么导致Prompt脆弱性？',
+        title: 'Prompt脆弱性的五大根本原因',
         content: '**大多数Prompt脆弱性源于Prompt编写和测试方式的5个模式。** 最常见的两个 — 隐含的格式期望和仅正常路径测试 — 占生产失败的大多数。理解这些原因是[评估和改进Prompt质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)的第一步。',
         items: [
           '**隐含的格式期望** — Prompt要求特定的输出格式（JSON、项目列表、是/否）但不强制。任何导致模型添加前言或改写的输入变化都会破坏下游解析。',
@@ -1837,7 +1841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: '如何减少Prompt脆弱性？',
+        title: '减少Prompt脆弱性的7种技术',
         content: '**7种技术处理上述5个根本原因并覆盖整个失败模式表面。** 按顺序应用它们 — 早期技术处理最常见的失败。在生产代码库中，格式相关的脆弱性 — 解析自由文本并期望特定形状的Prompt — 占分类和提取任务中静默失败的大多数。强制结构化输出（技术1）完全处理这个类。',
         numberedItems: [
           '**强制结构化输出** — 使用[JSON模式或本机结构化输出API](/zh/prompt-engineering/structured-output-and-json-mode)而不是要求模型"以JSON响应"。格式强制将可靠性负担从Prompt转移到API层。',
@@ -1845,7 +1849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**编写防御性指令** — 指定当输入缺失、模糊或超出范围时模型应该做什么。示例："如果找不到日期，返回`null`。不要猜测。"没有这个，模型会用看似合理的默认值填补空白。',
           '**参数化输入** — 用命名变量（`{{customer_name}}`、`{{document_text}}`）替换硬编码值和内联示例。参数化Prompt更容易系统地测试，防止意外过拟合示例值。',
           '**部署前构建回归测试集** — 组装20多个测试案例，覆盖预期分布加5个以上的边界情况。在每次模型升级或Prompt更改前运行测试集。',
-          '**在生产环境中固定模型版本** — 在生产中使用带版本的模型标识符（例如`gpt-4o-2024-08-06`）。仅在对新版本运行完整回归套件后更新。',
+          '**在生产环境中固定模型版本** — 在生产中使用带版本的模型标识符（例如`gpt-5-2025-08-07`）。仅在对新版本运行完整回归套件后更新。',
           '**添加输出验证层** — 在向下游传递前以编程方式验证模型输出。检查类型、架构、长度或必需字段存在。验证失败时返回受控回退 — 不是原始模型输出。',
         ],
         callouts: [
@@ -1864,7 +1868,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: '脆弱 vs 健壮Prompt是什么样的？',
+        title: '脆弱 vs 健壮Prompt：三个示例',
         content: '**以下3个示例显示了通过应用特定技术来消除脆弱性的每个来源。** 每对在左侧演示脆弱Prompt（产生不一致或不正确的输出）和右侧的健壮等价物（强制格式、处理边界情况或锚定行为）。',
         promptExamples: [
           {
@@ -1892,7 +1896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: '如何测试Prompt脆弱性？',
+        title: '测试Prompt脆弱性的方法',
         content: '**测试脆弱性意味着故意在其正常路径之外对Prompt进行压力测试。** 5个模式覆盖最常见的失败模式，可以在每次部署前运行。',
         items: [
           '**改写测试** — 用不同的措辞重述5-10个测试输入，衡量输出是否保持一致。脆弱的Prompt在改写中显示高方差。',
@@ -1907,7 +1911,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: '最常见的错误是什么？',
+        title: '导致Prompt脆弱的常见错误',
         content: '**以下4个错误是Prompt基础系统中静默生产失败的最常见原因。** 每个都可以用单个设计原则防止。',
         mistakes: [
           {
@@ -1922,7 +1926,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: '无模型版本固定',
-            problem: '使用别名如`gpt-4o`而不是带版本的模型ID意味着任何提供商更新会静默改变模型行为。团队仅在用户报告不正确的输出时发现回归。',
+            problem: '使用别名如`gpt-5`而不是带版本的模型ID意味着任何提供商更新会静默改变模型行为。团队仅在用户报告不正确的输出时发现回归。',
             fix: '在生产部署中使用带版本的模型标识符。文档化Prompt调整的版本。仅在对新版本运行回归套件后升级。',
           },
           {
@@ -1932,12 +1936,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
         callouts: [
-          { type: 'Warning', label: '字符串匹配是#1静默失败', text: '`if "Yes" in response`是生产代码库中最常见的脆弱解析模式。在"是，"或"是。"上破损而不引发任何异常。' },
+          { type: 'Warning', label: '字符串匹配是#1静默失败', text: '`if "Yes" in response`是生产代码库中最常见的脆弱解析模式。在 "Yes," 或 "Yes." 上失效，且不引发任何异常。' },
         ],
       },
       howToStart: {
         id: 'how-to-start',
-        title: '如何开始减少Prompt脆弱性？',
+        title: '开始减少Prompt脆弱性的步骤',
         content: '**从生产中的3个最高风险Prompt开始 — 这给了第一小时工作的最高回报。** 以下8步过程可以在单个下午完成。',
         numberedItems: [
           '在生产中识别您的3个最高流量或最高风险Prompt',
@@ -1980,7 +1984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '我应该跨所有模型使用相同的Prompt吗？',
-            a: '未经测试不应该。模型在指令跟随、默认输出格式和拒绝行为上不同。在一个模型上调整的Prompt可能在另一个模型上产生结构上不同的输出。在切换生产流量之前，在任何新模型上运行回归测试集。参见如何在模型间测试Prompt了解框架。',
+            a: '未经测试不应该。模型在指令跟随、默认输出格式和拒绝行为上不同。在一个模型上调整的Prompt可能在另一个模型上产生结构上不同的输出。在切换生产流量之前，在任何新模型上运行回归测试集。参见[如何在模型间测试Prompt](/zh/prompt-engineering/how-to-test-prompts-across-models)了解框架。',
           },
           {
             q: '我应该多频繁地对Prompt进行回归测试？',
@@ -1988,7 +1992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Prompt脆弱性和Prompt注入的区别是什么？',
-            a: 'Prompt脆弱性是可靠性失败：Prompt在其测试分布外的合法输入变化中破损。Prompt注入是安全失败：恶意行为者故意创建输入以覆盖Prompt指令。两者都是Prompt设计缺陷，但脆弱性通过稳健性技术解决，注入需要输入清理和特权分离。参见Prompt注入和安全了解注入特定的缓解。',
+            a: 'Prompt脆弱性是可靠性失败：Prompt在其测试分布外的合法输入变化中破损。Prompt注入是安全失败：恶意行为者故意创建输入以覆盖Prompt指令。两者都是Prompt设计缺陷，但脆弱性通过稳健性技术解决，注入需要输入清理和特权分离。参见[Prompt注入和安全](/zh/prompt-engineering/prompt-injection-and-security)了解注入特定的缓解。',
           },
         ],
       },
@@ -2008,9 +2012,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: '来源和进一步阅读',
         items: [
-          { title: 'Anthropic：Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic：Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI：Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv：Towards a Unified Evaluation Framework for Prompt Robustness', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv：Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench：Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts（Zhu et al.，2023）', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo：Open-Source Prompt Testing and Evaluation Framework', url: 'https://www.promptfoo.dev' },
         ],
@@ -2024,7 +2028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-07-31',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/zh/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'zh',
       about: [
@@ -2054,7 +2058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: 'هشاشة الـ prompt: 7 تقنيات',
     twitterDescription: '⁨7⁩ تقنيات لمنع فشل الـ ⁨prompts⁩ الصامت في بيئة الإنتاج. الإخراج المهيكل، واختبار الانحدار، وتثبيت الإصدار.',
     publishDate: '2026-04-29',
-    dateModified: '2026-07-31',
+    dateModified: '2026-09-01',
     readTime: '8 دقائق للقراءة',
     educationalLevel: 'Advanced',
     audience: 'المطوِّرون ومهندسو الـ prompt الذين يديرون الـ prompts في بيئة الإنتاج',
@@ -2066,15 +2070,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7 تقنيات: الإخراج المهيكل، وأمثلة few-shot، والتعليمات الدفاعية، وقوالب المدخلات، واختبار الانحدار، وتثبيت إصدار النموذج، والتحقق من الإخراج',
       '5 أسباب جذرية: توقعات تنسيق ضمنية، واختبار المسار السعيد فقط، والحساسية لإصدار النموذج، وتلوُّث السياق، والصياغة المفرطة في التحديد',
       'نطاق درجة الحرارة لاختبار الهشاشة: 0.0 و0.5 و1.0',
-      'أسماء الإصدارات المختصرة (مثل `gpt-4o`) تُحدَّث بصمت؛ استخدم دائمًا معرِّفًا مُؤرَّخًا في الإنتاج',
+      'أسماء الإصدارات المختصرة (مثل `gpt-5`) تُحدَّث بصمت؛ استخدم دائمًا معرِّفًا مُؤرَّخًا في الإنتاج',
     ],
     toc: [
-      { label: 'ما هي هشاشة الـ prompt؟', anchor: 'what-is-prompt-brittleness' },
-      { label: 'ما الذي يُسبِّب هشاشة الـ prompt؟', anchor: 'causes-of-prompt-brittleness' },
-      { label: 'كيفية تقليل هشاشة الـ prompt', anchor: '#reduce-brittleness' },
-      { label: 'كيف تبدو الـ prompts الهشَّة مقارنةً بالمتينة؟', anchor: 'prompt-examples' },
+      { label: 'هشاشة الـ prompt: وضع فشل صامت', anchor: 'what-is-prompt-brittleness' },
+      { label: 'الأسباب الجذرية الخمسة لهشاشة الـ prompt', anchor: 'causes-of-prompt-brittleness' },
+      { label: 'كيفية تقليل هشاشة الـ prompt', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: 'الـ prompts الهشَّة مقابل المتينة: ثلاثة أمثلة', anchor: 'prompt-examples' },
       { label: 'كيفية اختبار هشاشة الـ prompt', anchor: 'how-to-test-for-brittleness' },
-      { label: 'ما الأخطاء الأكثر شيوعًا؟', anchor: 'common-mistakes' },
+      { label: 'أخطاء شائعة تُنتِج prompts هشَّة', anchor: 'common-mistakes' },
       { label: 'كيفية البدء في تقليل الهشاشة', anchor: 'how-to-start' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
     ],
@@ -2096,7 +2100,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: 'ما هي هشاشة الـ prompt؟',
+        title: 'هشاشة الـ prompt: وضع فشل صامت',
         content: [
           '**تحدث هشاشة الـ prompt عندما يُنتِج الـ prompt النتائج المتوقَّعة على المدخلات التجريبية لكنه يفشل بصمت عند تغيُّر المدخلات تغيُّرًا طفيفًا.** يتعطَّل الـ prompt الهشُّ مع الأسئلة المعاد صياغتها، ومدخلات حالات الحافة، وتحديثات إصدار النموذج، ونظام الـ prompts المتراكمة. لا يُنتِج الإخراج خطأً — بل يكون خاطئًا فحسب، مما يجعل الهشاشة غير مرئية حتى تصل إلى الإنتاج.',
           'الإخفاقات صامتة لأن النموذج يُعيد استجابةً معقولة بدلًا من إطلاق استثناء. يرى المستخدمون نتيجةً ويثقون بها. لا تكتشف الفِرَق الهشاشةَ حتى يُبلِّغ المستخدمون النهائيون عن إخراجات خاطئة، وقد يحدث ذلك بعد أسابيع من النشر.',
@@ -2112,8 +2116,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: 'ما الذي يُسبِّب هشاشة الـ prompt؟',
-        content: '**معظم هشاشة الـ prompt مصدرها خمسة أنماط في طريقة كتابة الـ prompts واختبارها.** أكثر الأنماط شيوعًا — توقعات التنسيق الضمنية، واختبار المسار السعيد فقط — يُفسِّران غالبية الإخفاقات في الإنتاج. فهم هذه الأسباب هو الخطوة الأولى نحو [تقييم جودة الـ prompts وتحسينها](/prompt-engineering/how-to-evaluate-prompt-quality).',
+        title: 'الأسباب الجذرية الخمسة لهشاشة الـ prompt',
+        content: '**معظم هشاشة الـ prompt مصدرها خمسة أنماط في طريقة كتابة الـ prompts واختبارها.** أكثر الأنماط شيوعًا — توقعات التنسيق الضمنية، واختبار المسار السعيد فقط — يُفسِّران غالبية الإخفاقات في الإنتاج. فهم هذه الأسباب هو الخطوة الأولى نحو [تقييم جودة الـ prompts وتحسينها](/ar/prompt-engineering/how-to-evaluate-prompt-quality).',
         items: [
           '**توقعات التنسيق الضمنية** — يطلب الـ prompt تنسيق إخراج محددًا (JSON، قائمة نقاط، نعم/لا) دون تطبيقه. أي تباين في المدخلات يجعل النموذج يُضيف مقدمةً أو يُعيد الصياغة يُعطِّل التحليل اللاحق.',
           '**اختبار المسار السعيد فقط** — تُتحقَّق صحة الـ prompts بـ 3–5 أمثلة منتقاة يدويًا تعمل دائمًا. حالات الحافة — مدخلات فارغة، نصوص طويلة جدًا، صياغة غامضة — لا تُختبَر أبدًا وتفشل في الإنتاج.',
@@ -2130,12 +2134,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'كيفية تقليل هشاشة الـ prompt',
         content: '**تُعالج سبعُ تقنياتٍ الأسبابَ الجذرية الخمسة السابقة وتُغطي كامل أوجه الإخفاق.** طبِّقها بالترتيب — فالتقنيات السابقة تُعالج الإخفاقات الأكثر شيوعًا. في قواعد كود الإنتاج، تُفسِّر الهشاشة المتعلقة بالتنسيق — prompts تُحلِّل نصًا حرًا متوقِّعةً شكلًا محددًا — معظمَ الإخفاقات الصامتة في مهام التصنيف والاستخراج. تُعالج تقنية تطبيق الإخراج المهيكل (التقنية 1) هذه الفئة بالكامل.',
         numberedItems: [
-          '**طبِّق الإخراج المهيكل** — استخدم [وضع JSON أو APIs الإخراج المهيكل الأصلية](/prompt-engineering/structured-output-and-json-mode) بدلًا من مطالبة النموذج بـ "الرد بـ JSON". تطبيق التنسيق ينقل عبء الموثوقية من الـ prompt إلى طبقة API.',
-          '**أضِف أمثلة few-shot صريحة** — أدرِج 2–3 أزواج من المدخلات/الإخراج توضِّح السلوك الصحيح، بما يشمل حالة حافة. تُثبِّت الأمثلةُ سلوكَ النموذج بشكل أكثر موثوقيةً من الـ prompts المعتمدة على التعليمات فقط. اطَّلع على [zero-shot مقابل few-shot prompting](/prompt-engineering/zero-shot-vs-few-shot) للمزيد من التوجيه.',
+          '**طبِّق الإخراج المهيكل** — استخدم [وضع JSON أو APIs الإخراج المهيكل الأصلية](/ar/prompt-engineering/structured-output-and-json-mode) بدلًا من مطالبة النموذج بـ "الرد بـ JSON". تطبيق التنسيق ينقل عبء الموثوقية من الـ prompt إلى طبقة API.',
+          '**أضِف أمثلة few-shot صريحة** — أدرِج 2–3 أزواج من المدخلات/الإخراج توضِّح السلوك الصحيح، بما يشمل حالة حافة. تُثبِّت الأمثلةُ سلوكَ النموذج بشكل أكثر موثوقيةً من الـ prompts المعتمدة على التعليمات فقط. اطَّلع على [zero-shot مقابل few-shot prompting](/ar/prompt-engineering/zero-shot-vs-few-shot) للمزيد من التوجيه.',
           '**اكتب تعليمات دفاعية** — حدِّد ما يجب على النموذج فعله عند غياب المدخل أو غموضه أو خروجه عن النطاق. مثال: "إذا لم تُعثر على تاريخ، أعِد `null`. لا تخمِّن." دون ذلك يملأ النموذج الفراغات بقيم افتراضية معقولة.',
           '**قوْلِب المدخلات** — استبدِل القيم المُضمَّنة بثبات والأمثلة المُدرَجة مباشرةً بمتغيِّرات مُسمَّاة (`{{customer_name}}`، `{{document_text}}`). الـ prompts المُقوْلَبة أسهل في الاختبار المنهجي وتمنع الضبط الزائد العرضي على قيم الأمثلة.',
           '**ابنِ مجموعة اختبار انحدار قبل النشر** — اجمع 20+ حالة اختبار تُغطي التوزيع المتوقَّع إضافةً إلى 5+ حالات حافة. شغِّل مجموعة الاختبار قبل كل تحديث للنموذج أو تغيير في الـ prompt.',
-          '**ثبِّت إصدارات النموذج في الإنتاج** — استخدم معرِّفات نموذج مُصدَّرة (مثل `gpt-4o-2024-08-06`) في الإنتاج. حدِّث فقط بعد تشغيل مجموعة الانحدار الكاملة مقابل الإصدار الجديد.',
+          '**ثبِّت إصدارات النموذج في الإنتاج** — استخدم معرِّفات نموذج مُصدَّرة (مثل `gpt-5-2025-08-07`) في الإنتاج. حدِّث فقط بعد تشغيل مجموعة الانحدار الكاملة مقابل الإصدار الجديد.',
           '**أضِف طبقة تحقق من الإخراج** — تحقَّق من إخراج النموذج برمجيًا قبل تمريره للأنظمة اللاحقة. تحقَّق من النوع والمخطط والطول ووجود الحقول المطلوبة. أعِد استجابةً احتياطية مُتحكَّمًا بها — لا الإخراج الخام للنموذج — عند فشل التحقق.',
         ],
         callouts: [
@@ -2154,7 +2158,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: 'كيف تبدو الـ prompts الهشَّة مقارنةً بالمتينة؟',
+        title: 'الـ prompts الهشَّة مقابل المتينة: ثلاثة أمثلة',
         content: '**توضِّح الأمثلة الثلاثة التالية كيفية إزالة كل مصدر من مصادر الهشاشة بتطبيق تقنية محددة.** يُظهر كل زوج prompt هشًّا على اليسار (يُنتِج إخراجًا غير متسق أو خاطئ) وما يعادله المتين على اليمين (يُطبِّق التنسيق، ويتعامل مع حالات الحافة، أو يُثبِّت السلوك).',
         promptExamples: [
           {
@@ -2188,7 +2192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**اختبار الصياغة البديلة** — أعِد صياغة 5–10 مدخلات تجريبية باستخدام صياغات مختلفة وقِس مدى اتساق الإخراج. تُظهِر الـ prompts الهشَّة تباينًا عاليًا بين الصياغات البديلة.',
           '**اختبار حالات الحافة** — اختبر المدخلات الفارغة، والمدخلات بالغة الطول، والنصوص بلغات أخرى، والأحرف الخاصة، والمدخلات ضمن النطاق لكنها غير معتادة. هذه الاختبارات تكشف الافتراضات الضمنية.',
           '**تغيير درجة الحرارة** — شغِّل المدخلات ذاتها بدرجات حرارة 0.0 و0.5 و1.0. تُظهِر الـ prompts المتينة بنيةً متسقة عبر النطاق كله؛ أما الهشَّة فتُعطِّل التنسيق عند درجات الحرارة الأعلى.',
-          '**اختبار تبديل النموذج** — شغِّل الـ prompt ذاته وحالات الاختبار على نموذجَين على الأقل. الإخراجات المتباينة تُشير إلى ضبط زائد خاص بنموذج مُعيَّن. اطَّلع على [كيفية اختبار الـ prompts عبر نماذج متعددة](/prompt-engineering/how-to-test-prompts-across-models) للحصول على framework.',
+          '**اختبار تبديل النموذج** — شغِّل الـ prompt ذاته وحالات الاختبار على نموذجَين على الأقل. الإخراجات المتباينة تُشير إلى ضبط زائد خاص بنموذج مُعيَّن. اطَّلع على [كيفية اختبار الـ prompts عبر نماذج متعددة](/ar/prompt-engineering/how-to-test-prompts-across-models) للحصول على framework.',
           '**تشغيل الانحدار قبل كل تحديث** — شغِّل مجموعة الاختبار الكاملة بعد كل تغيير في إصدار النموذج، أو تحديث system prompt، أو تعديل الـ prompt. سجِّل معدلات النجاح حسب فئة الاختبار (تنسيق، محتوى، حالة حافة) لتتبُّع أنماط الانحدار.',
         ],
         callouts: [
@@ -2197,7 +2201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: 'ما الأخطاء الأكثر شيوعًا التي تُنتِج prompts هشَّة؟',
+        title: 'أخطاء شائعة تُنتِج prompts هشَّة',
         content: '**الأخطاء الأربعة التالية هي الأسباب الأكثر شيوعًا للإخفاقات الصامتة في الإنتاج في الأنظمة القائمة على الـ prompts.** كل خطأ منها قابل للتفادي بمبدأ تصميم واحد.',
         mistakes: [
           {
@@ -2212,7 +2216,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: 'عدم تثبيت إصدار النموذج',
-            problem: 'استخدام اسم مختصر مثل `gpt-4o` بدلًا من معرِّف نموذج مُصدَّر يعني أن أي تحديث من المزوِّد يُغيِّر سلوك النموذج بصمت. تكتشف الفِرَق الانحدارَ فقط عندما يُبلِّغ المستخدمون عن إخراجات خاطئة.',
+            problem: 'استخدام اسم مختصر مثل `gpt-5` بدلًا من معرِّف نموذج مُصدَّر يعني أن أي تحديث من المزوِّد يُغيِّر سلوك النموذج بصمت. تكتشف الفِرَق الانحدارَ فقط عندما يُبلِّغ المستخدمون عن إخراجات خاطئة.',
             fix: 'استخدم معرِّفات نموذج مُصدَّرة في عمليات نشر الإنتاج. وثِّق الإصدار الذي ضُبِط عليه الـ prompt. حدِّث فقط بعد تشغيل مجموعة الانحدار مقابل الإصدار الجديد.',
           },
           {
@@ -2270,7 +2274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'هل يجب أن أستخدم الـ prompt ذاته عبر جميع النماذج؟',
-            a: 'لا، دون اختبار. تختلف النماذج في اتباع التعليمات وتنسيق الإخراج الافتراضي وسلوك الرفض. الـ prompt المُضبَّط على نموذج قد يُنتِج إخراجًا مختلفًا بنيويًا على نموذج آخر. شغِّل مجموعة اختبار الانحدار على أي نموذج جديد قبل تحويل حركة مرور الإنتاج. اطَّلع على [كيفية اختبار الـ prompts عبر نماذج متعددة](/prompt-engineering/how-to-test-prompts-across-models) للحصول على framework اختبار متعدد النماذج.',
+            a: 'لا، دون اختبار. تختلف النماذج في اتباع التعليمات وتنسيق الإخراج الافتراضي وسلوك الرفض. الـ prompt المُضبَّط على نموذج قد يُنتِج إخراجًا مختلفًا بنيويًا على نموذج آخر. شغِّل مجموعة اختبار الانحدار على أي نموذج جديد قبل تحويل حركة مرور الإنتاج. اطَّلع على [كيفية اختبار الـ prompts عبر نماذج متعددة](/ar/prompt-engineering/how-to-test-prompts-across-models) للحصول على framework اختبار متعدد النماذج.',
           },
           {
             q: 'كم مرة يجب أن أُجري اختبار انحدار الـ prompt؟',
@@ -2278,7 +2282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'ما الفرق بين هشاشة الـ prompt وحقن الـ prompt؟',
-            a: 'هشاشة الـ prompt هي إخفاق موثوقية: يتعطَّل الـ prompt على تباينات مدخلات مشروعة خارج توزيع اختباره. حقن الـ prompt هو إخفاق أمني: يُنشئ جهةٌ خبيثة مدخلًا عمدًا لتجاوز تعليمات الـ prompt. كلاهما خلل في تصميم الـ prompt، لكن الهشاشة تُعالَج بتقنيات المتانة، بينما يستلزم الحقن تعقيم المدخلات وفصل الصلاحيات. اطَّلع على [حقن الـ prompt والأمان](/prompt-engineering/prompt-injection-and-security) للتخفيفات المحددة للحقن.',
+            a: 'هشاشة الـ prompt هي إخفاق موثوقية: يتعطَّل الـ prompt على تباينات مدخلات مشروعة خارج توزيع اختباره. حقن الـ prompt هو إخفاق أمني: يُنشئ جهةٌ خبيثة مدخلًا عمدًا لتجاوز تعليمات الـ prompt. كلاهما خلل في تصميم الـ prompt، لكن الهشاشة تُعالَج بتقنيات المتانة، بينما يستلزم الحقن تعقيم المدخلات وفصل الصلاحيات. اطَّلع على [حقن الـ prompt والأمان](/ar/prompt-engineering/prompt-injection-and-security) للتخفيفات المحددة للحقن.',
           },
         ],
       },
@@ -2298,9 +2302,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'المصادر والقراءة الإضافية',
         items: [
-          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI: Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv: إطار تقييم موحّد لمتانة الـ Prompts', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv: Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench: تقييم متانة نماذج اللغة على الـ Prompts العدائية (Zhu et al., 2023)', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo: إطار اختبار الـ Prompts مفتوح المصدر', url: 'https://www.promptfoo.dev' },
         ],
@@ -2314,7 +2318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-07-31',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ar/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'ar',
       about: [
@@ -2344,7 +2348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterTitle: '프롬프트 취약성 줄이기: 7가지 기법',
     twitterDescription: '프롬프트는 입력 변형 시 조용히 실패합니다. 7가지 기법: 구조화된 출력, few-shot 앵커링, 방어적 지시문, 파라미터화, 회귀 테스트, 버전 고정, 출력 검증.',
     publishDate: '2026-04-29',
-    dateModified: '2026-08-30',
+    dateModified: '2026-09-01',
     readTime: '8분 읽기',
     educationalLevel: 'Advanced',
     audience: '프로덕션에서 프롬프트를 관리하는 개발자 및 프롬프트 엔지니어',
@@ -2356,16 +2360,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '7가지 기법: 구조화된 출력, few-shot 예시, 방어적 지시문, 입력 파라미터화, 회귀 테스트, 모델 버전 고정, 출력 검증',
       '5가지 근본 원인: 암묵적 형식 기대, 해피 패스 테스트, 모델 버전 민감성, 컨텍스트 오염, 과도하게 구체적인 표현',
       '취약성 테스트를 위한 온도 범위: 0.0, 0.5, 1.0',
-      '모델 버전 별칭(예: `gpt-4o`)은 자동으로 업데이트됩니다. 프로덕션에서는 항상 날짜가 포함된 식별자를 고정하십시오.',
+      '모델 버전 별칭(예: `gpt-5`)은 자동으로 업데이트됩니다. 프로덕션에서는 항상 날짜가 포함된 식별자를 고정하십시오.',
     ],
     toc: [
-      { label: '프롬프트 취약성이란 무엇인가?', anchor: 'what-is-prompt-brittleness' },
-      { label: '프롬프트 취약성의 원인은 무엇인가?', anchor: 'causes-of-prompt-brittleness' },
-      { label: '프롬프트 취약성을 어떻게 줄이는가?', anchor: 'techniques-to-reduce-prompt-brittleness' },
-      { label: '취약한 프롬프트와 강건한 프롬프트는 어떻게 다른가?', anchor: 'prompt-examples' },
-      { label: '프롬프트의 취약성을 어떻게 테스트하는가?', anchor: 'how-to-test-for-brittleness' },
-      { label: '가장 흔한 실수는 무엇인가?', anchor: 'common-mistakes' },
-      { label: '프롬프트 취약성 줄이기를 어떻게 시작하는가?', anchor: 'how-to-start' },
+      { label: '프롬프트 취약성은 조용한 실패 모드입니다', anchor: 'what-is-prompt-brittleness' },
+      { label: '프롬프트 취약성의 5가지 근본 원인', anchor: 'causes-of-prompt-brittleness' },
+      { label: '프롬프트 취약성을 줄이는 7가지 기법', anchor: 'techniques-to-reduce-prompt-brittleness' },
+      { label: '취약한 프롬프트 vs. 강건한 프롬프트: 세 가지 예시', anchor: 'prompt-examples' },
+      { label: '프롬프트 취약성을 테스트하는 방법', anchor: 'how-to-test-for-brittleness' },
+      { label: '취약한 프롬프트를 만드는 흔한 실수', anchor: 'common-mistakes' },
+      { label: '프롬프트 취약성 줄이기를 시작하는 방법', anchor: 'how-to-start' },
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
     gammaEmbedUrl: '/presentations/how-to-reduce-prompt-brittleness-static.html',
@@ -2386,7 +2390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       whatIsBrittleness: {
         id: 'what-is-prompt-brittleness',
-        title: '프롬프트 취약성이란 무엇인가?',
+        title: '프롬프트 취약성은 조용한 실패 모드입니다',
         content: [
           '**프롬프트 취약성이란 프롬프트가 테스트 입력에서는 기대한 결과를 생성하지만, 입력이 조금만 변경되면 조용히 실패하는 현상입니다.** 취약한 프롬프트는 질문의 재표현, 엣지 케이스 입력, 모델 버전 업데이트, 또는 중첩된 시스템 프롬프트에서 실패합니다. 출력은 오류를 던지지 않고 단지 잘못될 뿐이며, 이로 인해 프로덕션에 도달할 때까지 취약성이 보이지 않습니다.',
           '실패가 조용한 이유는 모델이 예외를 발생시키는 대신 그럴듯한 답변을 반환하기 때문입니다. 사용자는 결과를 보고 신뢰합니다. 팀은 최종 사용자가 잘못된 출력을 보고할 때까지 취약성을 발견하지 못하며, 이는 배포 후 몇 주가 지나서야 발생할 수 있습니다.',
@@ -2402,7 +2406,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       causesOfBrittleness: {
         id: 'causes-of-prompt-brittleness',
-        title: '프롬프트 취약성의 원인은 무엇인가?',
+        title: '프롬프트 취약성의 5가지 근본 원인',
         content: '**프롬프트 취약성의 대부분은 프롬프트가 작성되고 테스트되는 방식의 다섯 가지 패턴에서 비롯됩니다.** 가장 일반적인 두 가지인 암묵적 형식 기대와 해피 패스 전용 테스트가 프로덕션 실패의 대부분을 차지합니다. 이러한 원인을 이해하는 것이 [프롬프트 품질 평가 및 개선](/ko/prompt-engineering/how-to-evaluate-prompt-quality)의 첫 번째 단계입니다.',
         items: [
           '**암묵적 형식 기대** — 프롬프트가 특정 출력 형식(JSON, 글머리 목록, 예/아니오)을 요청하지만 이를 강제하지 않습니다. 모델이 서문을 추가하거나 표현을 바꾸게 만드는 입력 변형이 다운스트림 파싱을 깨뜨립니다.',
@@ -2417,7 +2421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       techniquesToReduce: {
         id: 'techniques-to-reduce-prompt-brittleness',
-        title: '프롬프트 취약성을 어떻게 줄이는가?',
+        title: '프롬프트 취약성을 줄이는 7가지 기법',
         content: '**일곱 가지 기법이 위의 다섯 가지 근본 원인을 해결하고 전체 실패 모드 범위를 포괄합니다.** 순서대로 적용하십시오. 앞의 기법들이 가장 일반적인 실패를 처리합니다. 프로덕션 코드베이스에서 형식 관련 취약성(자유 텍스트를 파싱하며 특정 형태를 기대하는 프롬프트)은 분류 및 추출 작업에서 조용한 실패의 대부분을 차지합니다. 구조화된 출력 강제(기법 1)가 이 클래스를 완전히 처리합니다.',
         numberedItems: [
           '**구조화된 출력 강제** — 모델에게 "JSON으로 응답"하도록 요청하는 대신 [JSON 모드 또는 네이티브 구조화된 출력 API](/ko/prompt-engineering/structured-output-and-json-mode)를 사용하십시오. 형식 강제는 신뢰성 부담을 프롬프트에서 API 레이어로 이동시킵니다.',
@@ -2425,7 +2429,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**방어적 지시문 작성** — 입력이 누락되거나, 모호하거나, 범위를 벗어났을 때 모델이 해야 할 일을 지정하십시오. 예: "날짜를 찾을 수 없으면 `null`을 반환하십시오. 추측하지 마십시오." 이것 없이는 모델이 그럴듯한 기본값으로 공백을 채웁니다.',
           '**입력 파라미터화** — 하드코딩된 값과 인라인 예시를 명명된 변수(`{{customer_name}}`, `{{document_text}}`)로 교체하십시오. 파라미터화된 프롬프트는 체계적으로 테스트하기 더 쉽고 예시 값에 대한 우발적 과적합을 방지합니다.',
           '**배포 전 회귀 테스트 세트 구축** — 예상 분포와 5개 이상의 엣지 케이스를 포괄하는 20개 이상의 테스트 케이스를 수집하십시오. 모든 모델 업그레이드 또는 프롬프트 변경 전에 테스트 세트를 실행하십시오.',
-          '**프로덕션에서 모델 버전 고정** — 프로덕션에서는 버전이 지정된 모델 식별자(예: `gpt-4o-2024-08-06`)를 사용하십시오. 새 버전에 대해 전체 회귀 테스트를 실행한 후에만 업데이트하십시오.',
+          '**프로덕션에서 모델 버전 고정** — 프로덕션에서는 버전이 지정된 모델 식별자(예: `gpt-5-2025-08-07`)를 사용하십시오. 새 버전에 대해 전체 회귀 테스트를 실행한 후에만 업데이트하십시오.',
           '**출력 검증 레이어 추가** — 다운스트림으로 전달하기 전에 모델 출력을 프로그래밍 방식으로 검증하십시오. 유형, 스키마, 길이, 또는 필수 필드 존재 여부를 확인하십시오. 검증 실패 시 원시 모델 출력이 아닌 제어된 폴백을 반환하십시오.',
         ],
         callouts: [
@@ -2444,7 +2448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       promptExamplesSection: {
         id: 'prompt-examples',
-        title: '취약한 프롬프트와 강건한 프롬프트는 어떻게 다른가?',
+        title: '취약한 프롬프트 vs. 강건한 프롬프트: 세 가지 예시',
         content: '**아래 세 가지 예시는 특정 기법을 적용하여 각 취약성의 원인을 어떻게 제거하는지 보여줍니다.** 각 쌍은 왼쪽의 취약한 프롬프트(일관성 없거나 잘못된 출력 생성)와 오른쪽의 강건한 등가물(형식 강제, 엣지 케이스 처리, 또는 동작 고정)을 보여줍니다.',
         promptExamples: [
           {
@@ -2472,7 +2476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToTestForBrittleness: {
         id: 'how-to-test-for-brittleness',
-        title: '프롬프트의 취약성을 어떻게 테스트하는가?',
+        title: '프롬프트 취약성을 테스트하는 방법',
         content: '**취약성 테스트는 해피 패스를 넘어서 프롬프트에 의도적으로 스트레스를 주는 것을 의미합니다.** 다섯 가지 패턴이 가장 일반적인 실패 모드를 포괄하며, 배포 전마다 실행할 수 있습니다.',
         items: [
           '**패러프레이즈 테스트** — 5~10개의 테스트 입력을 다른 표현으로 바꾸고 출력이 일관성을 유지하는지 측정하십시오. 취약한 프롬프트는 패러프레이즈 전반에서 높은 분산을 보입니다.',
@@ -2487,7 +2491,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       commonMistakes: {
         id: 'common-mistakes',
-        title: '취약한 프롬프트를 만드는 가장 흔한 실수는 무엇인가?',
+        title: '취약한 프롬프트를 만드는 흔한 실수',
         content: '**아래 네 가지 실수는 프롬프트 기반 시스템에서 조용한 프로덕션 실패의 가장 일반적인 원인입니다.** 각각은 단일 설계 원칙으로 방지할 수 있습니다.',
         mistakes: [
           {
@@ -2502,7 +2506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             mistake: '모델 버전 고정 없음',
-            problem: '버전이 지정된 모델 ID 대신 `gpt-4o`와 같은 별칭을 사용하면 제공자 업데이트가 모델 동작을 자동으로 변경합니다. 팀은 사용자가 잘못된 출력을 보고할 때까지만 회귀를 발견합니다.',
+            problem: '버전이 지정된 모델 ID 대신 `gpt-5`와 같은 별칭을 사용하면 제공자 업데이트가 모델 동작을 자동으로 변경합니다. 팀은 사용자가 잘못된 출력을 보고할 때까지만 회귀를 발견합니다.',
             fix: '프로덕션 배포에서 버전이 지정된 모델 식별자를 사용하십시오. 프롬프트가 어떤 버전에 맞게 조정되었는지 문서화하십시오. 새 버전에 대해 회귀 테스트를 실행한 후에만 업그레이드하십시오.',
           },
           {
@@ -2517,7 +2521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       howToStart: {
         id: 'how-to-start',
-        title: '프롬프트 취약성 줄이기를 어떻게 시작하는가?',
+        title: '프롬프트 취약성 줄이기를 시작하는 방법',
         content: '**프로덕션에서 가장 위험한 세 가지 프롬프트부터 시작하십시오. 이것이 첫 한 시간의 작업에서 가장 높은 수익을 가져옵니다.** 다음 8단계 프로세스는 하루 오후에 완료할 수 있습니다.',
         numberedItems: [
           '프로덕션에서 가장 트래픽이 많거나 위험이 높은 세 가지 프롬프트를 파악하십시오.',
@@ -2588,9 +2592,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: '출처 및 추가 읽기 자료',
         items: [
-          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/intro/getting-started' },
+          { title: 'Anthropic: Prompt Engineering', url: 'https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview' },
           { title: 'OpenAI: Structured Outputs', url: 'https://platform.openai.com/docs/guides/structured-outputs' },
-          { title: 'arXiv: Towards a Unified Evaluation Framework for Prompt Robustness', url: 'https://arxiv.org/abs/2310.14873' },
+          { title: 'arXiv: Quantifying Language Models\' Sensitivity to Spurious Features in Prompt Design (Sclar et al., 2023)', url: 'https://arxiv.org/abs/2310.11324' },
           { title: 'PromptBench: Towards Evaluating the Robustness of Large Language Models on Adversarial Prompts (Zhu et al., 2023)', url: 'https://arxiv.org/abs/2306.04528' },
           { title: 'Promptfoo: Open-Source Prompt Testing and Evaluation Framework', url: 'https://www.promptfoo.dev' },
         ],
@@ -2604,7 +2608,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-04-29',
-      dateModified: '2026-08-30',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ko/prompt-engineering/how-to-reduce-prompt-brittleness',
       inLanguage: 'ko',
       about: [
