@@ -1588,5 +1588,25 @@
       "ctr": 0.0050006757669955396,
       "period": "GSC as pasted 2026-09-01"
     }
+  },
+  {
+    "id": "12725e26-de61-402f-93f4-cefe8654aa55",
+    "slug": "/ar/local-llms/mobile-local-llms",
+    "date": "2026-09-01T14:21:43.991Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل تطبيقات ⁨LLM⁩ المحلية لـ ⁨Android⁩ و⁨iOS 2026⁩",
+        "new": "⁨MLC Chat⁩ و⁨PocketPal AI⁩: أفضل تطبيقات ⁨LLM⁩ للهواتف ⁨2026⁩"
+      }
+    ],
+    "reason": "geo-meta-optimizer: ~35 impr of ar queries specifically named the apps (mlc chat ios app store local llm, pocketpal ai ios local llm app) at good position (5.8-8.4) but 0% CTR; title was generic and didn't name either app even though metaDescription already did. Injected both app names into title for entity match. Noted separately (not fixed here): ~32 impr are English-language queries landing on this Arabic page at 0% CTR (language-serving/hreflang issue, not a title problem); 'إطارات عمل llm'/'برنامج llm' are intent-mismatched generic framework queries out of this page's scope.",
+    "baseline": {
+      "position": 9.3,
+      "impressions": 124,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC as pasted 2026-09-01"
+    }
   }
 ]
