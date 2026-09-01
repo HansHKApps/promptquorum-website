@@ -1789,9 +1789,9 @@ schema: {
     fr: {
       theme: 'Best Models',
       title: 'Ollama Dernière Version 2026 : v0.33.1 + Top 10 Modèles Open Source',
-      seoTitle: 'Ollama Dernière Version 2026 : v0.33.1 + Top 10 Modèles',
+      seoTitle: 'Les 10 Meilleurs Modèles Ollama en 2026 (Chat, Code, Vision)',
       intro: 'Mise à jour août 2026. La version actuelle d\'Ollama est la v0.33.1 (publiée le 26 août 2026), qui ajoute la prise en charge MLX de Qwen3.8 Flash Next, la sortie structurée et des correctifs de délai GPU. La série v0.33 a également apporté la passerelle Claude Desktop. Les modèles les plus récents de la bibliothèque sont Laguna XS 2.1 (Poolside, 2 juillet, codage agentique) et Kimi K2.7 Code (Moonshot AI, juin 2026), rejoignant Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss et Gemma 4. Le plus téléchargé reste la famille Llama (Llama 4 Scout, Llama 3.x) ; le meilleur global sur materiel grand public est Qwen3.8-27B (61,7% SWE-bench).',
-      metaDescription: 'La dernière version d\'Ollama est la v0.33.1. Changelog complet v0.32-v0.33, nouveaux modèles 2026 et lequel choisir pour le chat, le code et la vision.',
+      metaDescription: 'Quel modèle Ollama choisir en 2026 ? Comparatif des 10 meilleurs pour le chat, le code et la vision, avec benchmarks réels et la dernière version v0.33.1.',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-fr.webp',
       publishDate: '2026-04-11',
       readTime: '9 min de lecture',
