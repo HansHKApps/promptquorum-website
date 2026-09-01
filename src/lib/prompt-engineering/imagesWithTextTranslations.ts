@@ -116,7 +116,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
       '**Bild-Labels oder Kontext vergessen:** Sag dem Modell, was das Bild zeigt, bevor du Fragen stellst. „Dies ist ein Mikroskopiebild eines Viruspartikels. Beschreibe die sichtbare Struktur." ist besser als „Was ist das?"',
       '**Falscher Analysierungsumfang:** [Schlechter Prompt] „Zähle die Objekte in diesem Bild." [Guter Prompt] „Zähle nur die roten Äpfel in dieser Obstschale. Zähle keine anderen Früchte. Falls unsicher, beachte es."',
       '**Präzision annehmen:** Vision-Language-Modelle sind anfällig für Halluzinationen. Verlass dich nicht auf sie für Pixel-perfekte Genauigkeit. Für kritische Aufgaben verwende spezialisierte Werkzeuge (OCR für Text, Objekterkennungs-APIs für Zählen) zusammen mit VLMs.',
-      '**Mit mehreren Bildern überlasten:** Die meisten VLMs handhaben 2–10 Bilder zuverlässig; die Leistung verschlechtert sich darüber hinaus. Batch sie: „Analysiere die ersten 5 Bilder. Dann analysiere die nächsten 5." Label klar: „Bild 1: [Beschreibung], Bild 2: [Beschreibung]."',
+      '**Mit mehreren Bildern überlasten:** Die API-Limits liegen höher, als die meisten erwarten: Claude erlaubt bei Modellen mit 200K-Kontext bis zu 100 Bilder pro Anfrage (10 MB Limit pro Bild), Gemini 3.1 Pro akzeptiert bis zu 3.600 Bilddateien pro Anfrage innerhalb eines 20-MB-Inline-Anfragelimits (für größere Batches die File API nutzen). Die Ausgabequalität verschlechtert sich allerdings schon deutlich vor diesen Grenzen — teile Anfragen für zuverlässige Analysen in Gruppen von 5–10 Bildern auf. Beschrifte klar: „Bild 1: [Beschreibung], Bild 2: [Beschreibung]."',
       '**Datenschutz und Jurisdiktionsrisiken mit Cloud-VLMs:** In der EU fällt das Senden von Bildern mit persönlichen Daten an Cloud-VLMs wie GPT-5.6 oder Gemini unter GDPR-Artikel 9, wenn biometrische Informationen beteiligt sind. Lokale Modelle über Ollama oder LM Studio verarbeiten Bilder vor Ort, halten Daten innerhalb deiner Jurisdiktion ohne externe API-Aufrufe.',
     ],
   },
@@ -172,11 +172,11 @@ export const imagesWithTextDe: Record<string, PESection> = {
       },
       {
         q: 'Wie viele Bilder kann ich in einen Prompt aufnehmen?',
-        a: 'Die meisten VLMs handhaben 2–10 Bilder zuverlässig. Die Leistung verschlechtert sich über 10 hinaus. Falls du viele Bilder analysieren musst, batch sie und verarbeite in Runden. Beschrifte jedes Bild klar: „Bild 1: [Beschreibung], Bild 2: [Beschreibung]."',
+        a: 'Die API-Limits liegen höher, als die meisten erwarten: Claude erlaubt bei Modellen mit 200K-Kontext bis zu 100 Bilder pro Anfrage, Gemini 3.1 Pro akzeptiert bis zu 3.600 Bilddateien pro Anfrage (innerhalb eines 20-MB-Inline-Limits; für mehr die File API nutzen). Die Ausgabequalität verschlechtert sich aber schon deutlich vor diesen Grenzen — teile Anfragen für zuverlässige Analysen in Gruppen von 5–10 Bildern auf und beschrifte jedes einzeln.',
       },
       {
         q: 'Welche Bildformate unterstützen Vision-Language-Modelle?',
-        a: 'GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro akzeptieren JPEG, PNG, GIF und WebP. Die meisten unterstützen Bilder bis zu 20 MB. Spezifische Limits variieren nach Modell; überprüfe OpenAI- und Anthropic-Dokumentation für aktuelle Details.',
+        a: 'GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro akzeptieren JPEG, PNG, GIF und WebP. Die Größenlimits pro Bild unterscheiden sich: Bei Claude liegt das API-Limit bei 10 MB pro Bild (5 MB über Amazon Bedrock oder Google Cloud), bei Gemini bei 20 MB für die gesamte Inline-Anfrage — größere Dateien laufen über die File API. Aktuelle modellspezifische Limits findest du in der OpenAI-, Anthropic- und Google-Dokumentation.',
       },
       {
         q: 'Kann ich lokale Modelle wie Ollama für multimodales Prompting verwenden?',
@@ -328,7 +328,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
       '**Oublier les étiquettes d\'image ou le contexte :** Dites au modèle ce que l\'image montre avant de poser des questions. « Ceci est une image microscopique d\'une particule de virus. Décrivez la structure visible. » est mieux que « Qu\'est-ce que c\'est ? »',
       '**Mauvaise portée d\'analyse :** [Mauvais Prompt] « Comptez les objets dans cette image. » [Bon Prompt] « Comptez uniquement les pommes rouges dans ce panier de fruits. Ne comptez pas les autres fruits. Si incertain, notez-le. »',
       '**Assumant la précision :** Les modèles vision-langage sont sujets aux hallucinations. Ne vous fiez pas à eux pour une précision au pixel près. Pour les tâches critiques, utilisez des outils spécialisés (OCR pour le texte, APIs de détection d\'objets pour le comptage) aux côtés des VLM.',
-      '**Surcharger avec plusieurs images :** La plupart des VLM gèrent 2–10 images de manière fiable ; les performances se dégradent au-delà. Groupez-les : « Analysez les 5 premières images. Ensuite, analysez les 5 prochaines. » Étiquetez clairement : « Image 1 : [description], Image 2 : [description]. »',
+      '**Surcharger avec plusieurs images :** Les limites API sont plus élevées qu\'on ne le pense généralement : Claude autorise jusqu\'à 100 images par requête sur les modèles à contexte 200K (limite de 10 Mo par image), et Gemini 3.1 Pro accepte jusqu\'à 3 600 fichiers image par requête, dans une limite de 20 Mo pour la requête inline (utilisez la File API au-delà). La fiabilité des sorties se dégrade toutefois bien avant ces plafonds — regroupez vos requêtes par lots de 5 à 10 images pour une analyse cohérente. Étiquetez clairement : « Image 1 : [description], Image 2 : [description]. »',
       '**Risques de confidentialité et de juridiction avec les VLM cloud :** Dans l\'UE, l\'envoi d\'images contenant des données personnelles aux VLM cloud comme GPT-5.6 ou Gemini relève de l\'article 9 du RGPD si des informations biométriques sont impliquées. Les modèles locaux via Ollama ou LM Studio traitent les images sur l\'appareil, gardant les données dans votre juridiction sans appels d\'API externes.',
     ],
   },
@@ -384,11 +384,11 @@ export const imagesWithTextFr: Record<string, PESection> = {
       },
       {
         q: 'Combien d\'images puis-je inclure dans un seul prompt?',
-        a: 'La plupart des VLM gèrent 2–10 images de manière fiable. Les performances se dégradent au-delà de 10. Si vous avez besoin d\'analyser beaucoup d\'images, groupez-les et traitez-les par cycles. Étiquetez chaque image clairement : « Image 1 : [description], Image 2 : [description]. »',
+        a: 'Les limites API sont plus élevées qu\'on ne le pense généralement : Claude autorise jusqu\'à 100 images par requête sur les modèles à contexte 200K, et Gemini 3.1 Pro accepte jusqu\'à 3 600 fichiers image par requête (dans une limite de 20 Mo pour la requête inline ; au-delà, utilisez la File API). La fiabilité des sorties se dégrade toutefois bien avant ces plafonds — pour une analyse cohérente, regroupez vos requêtes par lots de 5 à 10 images et étiquetez chacune.',
       },
       {
         q: 'Quels formats d\'image les modèles vision-langage supportent-ils?',
-        a: 'GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro acceptent JPEG, PNG, GIF et WebP. La plupart prennent en charge des images jusqu\'à 20 MB. Les limites spécifiques varient selon le modèle ; consultez la documentation OpenAI et Anthropic pour les détails actuels.',
+        a: 'GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro acceptent JPEG, PNG, GIF et WebP. Les limites de taille par image diffèrent : chez Claude, la limite API est de 10 Mo par image (5 Mo via Amazon Bedrock ou Google Cloud), et chez Gemini, la limite est de 20 Mo pour l\'ensemble de la requête inline — les fichiers plus volumineux passent par la File API. Consultez la documentation OpenAI, Anthropic et Google pour les limites actuelles par modèle.',
       },
       {
         q: 'Puis-je utiliser des modèles locaux comme Ollama pour le prompting multimodal?',
@@ -540,7 +540,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
       '**画像ラベルまたはコンテキストを忘れる:** 質問する前に、画像が何を示しているかをモデルに伝えます。「これはウイルス粒子の顕微鏡画像です。表示される構造を説明してください。」は「それは何ですか?」よりも優れています。',
       '**間違った分析スコープ:** [悪いプロンプト] 「この画像のオブジェクトをカウントします。」[良いプロンプト] 「この果物ボウルの赤いリンゴのみをカウントしてください。他の果物をカウントしないでください。確実でない場合は、それをメモしてください。」',
       '**精度を仮定する:** ビジョン言語モデルは幻想の影響を受けやすいです。ピクセルパーフェクトの精度に頼らないでください。重大なタスクでは、VLMと一緒に特殊なツール(テキストの場合はOCR、カウントの場合はオブジェクト検出API)を使用してください。',
-      '**複数の画像で過負荷にする:** ほとんどのVLMは2〜10個の画像を確実に処理します; パフォーマンスはそれ以上に低下します。それらをバッチ化してください: 「最初の5つの画像を分析してください。その後、次の5つを分析します。」明確にラベル付けしてください: 「画像1:[説明]、画像2:[説明]。」',
+      '**複数の画像で過負荷にする:** APIの上限は多くの人が想定するより高くなっています。Claudeは200Kコンテキストのモデルで1リクエストあたり最大100枚の画像を許可し（画像1枚あたり10 MBの上限）、Gemini 3.1 Proは1リクエストあたり最大3,600枚の画像ファイルを受け付けます（インラインリクエストの上限20 MB以内。より大きなバッチにはFile APIを使用してください）。ただし出力の信頼性はこれらの上限に達するかなり手前から低下します — 安定した分析のためには5〜10枚単位でリクエストをバッチ化してください。明確にラベル付けしてください: 「画像1:[説明]、画像2:[説明]。」',
       '**クラウドVLMを使用した違反と法的管轄権リスク:** EUでは、生体認証情報が関連する場合、GPT-5.6やGeminiなどのクラウドVLMに個人データを含む画像を送信することはGDPR第9条に該当します。OllamaまたはLM Studioを介したローカルモデルは、外部APIコールなしに、デバイス上で画像を処理し、管轄区域内にデータを保ちます。',
     ],
   },
@@ -596,11 +596,11 @@ export const imagesWithTextJa: Record<string, PESection> = {
       },
       {
         q: '1つのプロンプトに何個の画像を含めることができますか?',
-        a: 'ほとんどのVLMは2〜10個の画像を確実に処理します。パフォーマンスはそれ以上に低下します。多数の画像を分析する必要がある場合は、バッチ化して処理してください。各画像に明確にラベルを付けてください: 「画像1:[説明]、画像2:[説明]。」',
+        a: 'APIの上限は多くの人が想定するより高くなっています。Claudeは200Kコンテキストのモデルで1リクエストあたり最大100枚の画像を許可し、Gemini 3.1 Proは1リクエストあたり最大3,600枚の画像ファイルを受け付けます（インラインリクエストの上限20 MB以内。それ以上はFile APIを使用）。ただし出力の信頼性はこれらの上限に達するかなり手前から低下するため、安定した分析のために5〜10枚単位でリクエストをバッチ化し、各画像にラベルを付けてください。',
       },
       {
         q: 'ビジョン言語モデルはどの画像形式をサポートしていますか?',
-        a: 'GPT-5.6、Claude Opus 5、Gemini 3.1 ProはJPEG、PNG、GIF、WebPを受け入れます。ほとんどは最大20 MBの画像をサポートしています。具体的な制限はモデルによって異なります。現在の詳細についてはOpenAIおよびAnthropicのドキュメントを確認してください。',
+        a: 'GPT-5.6、Claude Opus 5、Gemini 3.1 ProはJPEG、PNG、GIF、WebPを受け入れます。画像1枚あたりのサイズ上限はモデルによって異なります。ClaudeのAPI上限は画像1枚あたり10 MB（Amazon BedrockまたはGoogle Cloud経由では5 MB）、Geminiのインラインリクエスト上限は合計20 MBで、それを超えるファイルはFile API経由で処理されます。現在のモデル別上限はOpenAI、Anthropic、Googleのドキュメントで確認してください。',
       },
       {
         q: 'Ollamaなどのローカルモデルをマルチモーダルプロンプティングに使用できますか?',
@@ -752,7 +752,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
       '**Olvidar las etiquetas o el contexto de la imagen:** Dile al modelo lo que muestra la imagen antes de hacer preguntas. "Esta es una imagen microscópica de una partícula de virus. Describe la estructura visible." es mejor que "¿Qué es esto?"',
       '**Alcance de análisis incorrecto:** [Prompt malo] "Cuenta los objetos en esta imagen." [Prompt bueno] "Cuenta solo las manzanas rojas en este frutero. No cuentes otras frutas. Si no estás seguro, anótalo."',
       '**Asumir precisión:** Los modelos de visión-lenguaje son propensos a las alucinaciones. No dependas de ellos para una precisión perfecta a nivel de píxel. Para tareas críticas, usa herramientas especializadas (OCR para texto, APIs de detección de objetos para conteo) junto con los VLM.',
-      '**Sobrecargar con múltiples imágenes:** La mayoría de los VLM manejan 2–10 imágenes de manera confiable; el rendimiento se degrada a partir de ese número. Procésalas por lotes: "Analiza las primeras 5 imágenes. Luego analiza las siguientes 5." Etiqueta claramente: "Imagen 1: [descripción], Imagen 2: [descripción]."',
+      '**Sobrecargar con múltiples imágenes:** Los límites de la API son más altos de lo que la mayoría espera: Claude permite hasta 100 imágenes por solicitud en modelos con contexto de 200K (límite de 10 MB por imagen), y Gemini 3.1 Pro acepta hasta 3600 archivos de imagen por solicitud dentro de un límite de 20 MB para la solicitud en línea (usa la File API para lotes más grandes). Aun así, la fiabilidad de la salida se degrada mucho antes de alcanzar esos límites: agrupa las solicitudes en lotes de 5 a 10 imágenes para un análisis consistente. Etiqueta claramente: "Imagen 1: [descripción], Imagen 2: [descripción]."',
       '**Riesgos de privacidad y jurisdicción con VLM en la nube:** En la UE, enviar imágenes que contengan datos personales a VLM en la nube como GPT-5.6 o Gemini está sujeto al Artículo 9 del RGPD si se involucra información biométrica. Los modelos locales a través de Ollama o LM Studio procesan imágenes en el dispositivo, manteniendo los datos dentro de tu jurisdicción sin llamadas a API externas.',
     ],
   },
@@ -808,11 +808,11 @@ export const imagesWithTextEs: Record<string, PESection> = {
       },
       {
         q: '¿Cuántas imágenes puedo incluir en un solo prompt?',
-        a: 'La mayoría de los VLM manejan 2–10 imágenes de manera confiable. El rendimiento se degrada más allá de 10. Si necesitas analizar muchas imágenes, procésalas por lotes y en rondas. Etiqueta cada imagen claramente: "Imagen 1: [descripción], Imagen 2: [descripción]."',
+        a: 'Los límites de la API son más altos de lo que la mayoría espera: Claude permite hasta 100 imágenes por solicitud en modelos con contexto de 200K, y Gemini 3.1 Pro acepta hasta 3600 archivos de imagen por solicitud (dentro de un límite de 20 MB para la solicitud en línea; usa la File API para más). Aun así, la fiabilidad de la salida se degrada mucho antes de alcanzar esos límites: para un análisis consistente, agrupa las solicitudes en lotes de 5 a 10 imágenes y etiqueta cada una.',
       },
       {
         q: '¿Qué formatos de imagen admiten los modelos de visión-lenguaje?',
-        a: 'GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro aceptan JPEG, PNG, GIF y WebP. La mayoría admite imágenes de hasta 20 MB. Los límites específicos varían según el modelo; consulta la documentación de OpenAI y Anthropic para obtener detalles actuales.',
+        a: 'GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro aceptan JPEG, PNG, GIF y WebP. Los límites de tamaño por imagen varían: en Claude, el límite de la API es de 10 MB por imagen (5 MB a través de Amazon Bedrock o Google Cloud), y en Gemini, el límite es de 20 MB para toda la solicitud en línea, con los archivos más grandes gestionados a través de la File API. Consulta la documentación de OpenAI, Anthropic y Google para conocer los límites actuales por modelo.',
       },
       {
         q: '¿Puedo usar modelos locales como Ollama para el prompting multimodal?',
@@ -964,7 +964,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
       '**忘记图像标签或背景：** 在提问之前告诉模型图像显示的内容。「这是病毒粒子的显微镜图像。描述可见的结构。」比「这是什么？」更好。',
       '**错误的分析范围：** [坏提示] 「计数这个图像中的对象。」[好提示] 「仅计数这个果盘中的红苹果。不要计数其他水果。如果不确定，请记录。」',
       '**假设精度：** 视觉语言模型容易产生幻觉。不要依赖它们获得像素级精度。对于关键任务，在VLM旁使用专用工具(用于文本的OCR、用于计数的对象检测API)。',
-      '**用多个图像过载：** 大多数VLM可靠地处理2–10个图像；性能在此之外会下降。分批处理它们：「分析前5张图像。然后分析接下来的5张。」清楚地标记：「图像1:[描述]、图像2:[描述]。」',
+      '**用多个图像过载：** API限制比大多数人预期的要高：Claude在200K上下文模型上每次请求最多允许100张图像（每张图像限10 MB），Gemini 3.1 Pro每次请求最多接受3,600个图像文件（内联请求上限20 MB，超出部分需使用File API）。不过输出的可靠性在远未达到这些上限之前就会下降——为保证分析一致性，请将请求按5–10张图像分批处理。清楚地标记：「图像1:[描述]、图像2:[描述]。」',
       '**云VLM的隐私和司法管辖权风险：** 在欧盟中，将包含个人数据的图像发送到GPT-5.6或Gemini等云VLM如果涉及生物特征信息，则属于GDPR第9条。通过Ollama或LM Studio的本地模型在设备上处理图像，将数据保持在您的司法管辖范围内，无外部API调用。',
     ],
   },
@@ -1020,11 +1020,11 @@ export const imagesWithTextZh: Record<string, PESection> = {
       },
       {
         q: '我可以在一个提示中包含多少个图像?',
-        a: '大多数VLM可靠地处理2–10个图像。性能在此之外会下降。如果需要分析许多图像，分批处理并分轮处理。清楚地标记每个图像：「图像1:[描述]、图像2:[描述]。」',
+        a: 'API限制比大多数人预期的要高：Claude在200K上下文模型上每次请求最多允许100张图像，Gemini 3.1 Pro每次请求最多接受3,600个图像文件（内联请求上限20 MB，超出部分需使用File API）。不过输出的可靠性在远未达到这些上限之前就会下降，因此为保证分析一致性，请将请求按5–10张图像分批处理并逐一标记。',
       },
       {
         q: '视觉语言模型支持哪些图像格式?',
-        a: 'GPT-5.6、Claude Opus 5和Gemini 3.1 Pro接受JPEG、PNG、GIF和WebP。大多数支持高达20 MB的图像。具体限制因模型而异；查看OpenAI和Anthropic文档了解当前详情。',
+        a: 'GPT-5.6、Claude Opus 5和Gemini 3.1 Pro接受JPEG、PNG、GIF和WebP。每张图像的大小限制因模型而异：Claude的API限制为每张图像10 MB（通过Amazon Bedrock或Google Cloud为5 MB），Gemini的内联请求限制为总计20 MB，更大的文件需通过File API处理。查看OpenAI、Anthropic和Google文档了解当前的模型限制。',
       },
       {
         q: '我可以使用Ollama等本地模型进行多模态提示吗?',
@@ -1176,7 +1176,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
       '**Esquecer rótulos ou contexto da imagem:** Diga ao modelo o que a imagem mostra antes de fazer perguntas. "Esta é uma imagem microscópica de uma partícula de vírus. Descreva a estrutura visível." é melhor do que "O que é isto?"',
       '**Escopo de análise errado:** [Prompt ruim] "Conte os objetos nesta imagem." [Prompt bom] "Conte apenas as maçãs vermelhas nesta fruteira. Não conte outras frutas. Se não tiver certeza, anote."',
       '**Assumir precisão:** Os modelos de visão-linguagem são propensos a alucinações. Não dependa deles para precisão perfeita no nível de pixel. Para tarefas críticas, use ferramentas especializadas (OCR para texto, APIs de detecção de objetos para contagem) junto com os VLMs.',
-      '**Sobrecarregar com múltiplas imagens:** A maioria dos VLMs processa 2–10 imagens de forma confiável; o desempenho se degrada além disso. Processe em lotes: "Analise as primeiras 5 imagens. Em seguida, analise as próximas 5." Rotule claramente: "Imagem 1: [descrição], Imagem 2: [descrição]."',
+      '**Sobrecarregar com múltiplas imagens:** Os limites da API são mais altos do que a maioria imagina: o Claude permite até 100 imagens por solicitação em modelos com contexto de 200K (limite de 10 MB por imagem), e o Gemini 3.1 Pro aceita até 3.600 arquivos de imagem por solicitação, dentro de um limite de 20 MB para a solicitação inline (use a File API para lotes maiores). Ainda assim, a confiabilidade da saída se degrada bem antes desses limites — agrupe as solicitações em lotes de 5 a 10 imagens para uma análise consistente. Rotule claramente: "Imagem 1: [descrição], Imagem 2: [descrição]."',
       '**Riscos de privacidade e jurisdição com VLMs na nuvem:** Na UE, enviar imagens contendo dados pessoais para VLMs na nuvem como GPT-5.6 ou Gemini está sujeito ao Artigo 9 do RGPD se informações biométricas estiverem envolvidas. Modelos locais via Ollama ou LM Studio processam imagens no dispositivo, mantendo os dados dentro de sua jurisdição sem chamadas de API externas.',
     ],
   },
@@ -1232,11 +1232,11 @@ export const imagesWithTextPt: Record<string, PESection> = {
       },
       {
         q: 'Quantas imagens posso incluir em um único prompt?',
-        a: 'A maioria dos VLMs processa 2–10 imagens de forma confiável. O desempenho se degrada além de 10. Se você precisar analisar muitas imagens, processe-as em lotes e em rodadas. Rotule cada imagem claramente: "Imagem 1: [descrição], Imagem 2: [descrição]."',
+        a: 'Os limites da API são mais altos do que a maioria imagina: o Claude permite até 100 imagens por solicitação em modelos com contexto de 200K, e o Gemini 3.1 Pro aceita até 3.600 arquivos de imagem por solicitação (dentro de um limite de 20 MB para a solicitação inline; use a File API para mais). Ainda assim, a confiabilidade da saída se degrada bem antes desses limites — para uma análise consistente, agrupe as solicitações em lotes de 5 a 10 imagens e rotule cada uma.',
       },
       {
         q: 'Quais formatos de imagem os modelos de visão-linguagem suportam?',
-        a: 'GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro aceitam JPEG, PNG, GIF e WebP. A maioria suporta imagens de até 20 MB. Os limites específicos variam por modelo; consulte a documentação da OpenAI e da Anthropic para detalhes atuais.',
+        a: 'GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro aceitam JPEG, PNG, GIF e WebP. Os limites de tamanho por imagem variam: no Claude, o limite da API é de 10 MB por imagem (5 MB via Amazon Bedrock ou Google Cloud), e no Gemini, o limite é de 20 MB para toda a solicitação inline, com arquivos maiores processados pela File API. Consulte a documentação da OpenAI, da Anthropic e do Google para os limites atuais por modelo.',
       },
       {
         q: 'Posso usar modelos locais como Ollama para prompting multimodal?',
@@ -1388,7 +1388,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
       '**إهمال تسميات الصورة أو سياقها:** أخبر النموذج بما تُظهره الصورة قبل طرح الأسئلة. "هذه صورة مجهرية لجسيم فيروسي. صِف البنية المرئية." أفضل من "ما هذا؟"',
       '**نطاق التحليل الخاطئ:** [استفسار سيئ] "عدّ الكائنات في هذه الصورة." [استفسار جيد] "عدّ التفاح الأحمر فقط في هذه الفاكهة. لا تعدّ الفواكه الأخرى. إن لم تكن متأكداً، اذكر ذلك."',
       '**افتراض الدقة:** نماذج الرؤية واللغة عرضة للهلوسة. لا تعتمد عليها للحصول على دقة تصل إلى مستوى البكسل. للمهام الحرجة، استخدم أدوات متخصصة (OCR للنصوص، وواجهات برمجية لكشف الكائنات للعد) جنباً إلى جنب مع نماذج VLM.',
-      '**الإرهاق بصور متعددة:** تتعامل معظم نماذج VLM بشكل موثوق مع 2 إلى 10 صور؛ وتتدهور الأداء بعد ذلك. قسِّمها على دفعات: "حلِّل الصور الخمس الأولى. ثم حلِّل الخمس التالية." اجعل التسميات واضحة: "الصورة 1: [وصف]، الصورة 2: [وصف]."',
+      '**الإرهاق بصور متعددة:** حدود واجهة البرمجة (API) أعلى مما يتوقعه معظم الناس: يسمح Claude بما يصل إلى 100 صورة لكل طلب على النماذج ذات نافذة سياق 200K (بحد أقصى 10 ميجابايت لكل صورة)، ويقبل Gemini 3.1 Pro ما يصل إلى 3600 ملف صورة لكل طلب ضمن حد 20 ميجابايت للطلب المضمّن (استخدم File API للدفعات الأكبر). ومع ذلك تتدهور موثوقية المخرجات قبل بلوغ هذه الحدود بكثير — قسِّم الطلبات إلى دفعات من 5 إلى 10 صور لتحليل متسق. اجعل التسميات واضحة: "الصورة 1: [وصف]، الصورة 2: [وصف]."',
       '**مخاطر الخصوصية والاختصاص القضائي مع نماذج VLM السحابية:** في الاتحاد الأوروبي، يخضع إرسال الصور التي تحتوي على بيانات شخصية إلى نماذج VLM السحابية مثل GPT-5.6 أو Gemini للمادة التاسعة من اللائحة العامة لحماية البيانات (GDPR) إذا كانت تتضمن معلومات بيومترية. تعالج النماذج المحلية عبر Ollama أو LM Studio الصورَ على الجهاز مباشرة، مما يُبقي البيانات ضمن نطاق اختصاصك دون استدعاءات واجهة برمجية خارجية.',
     ],
   },
@@ -1444,11 +1444,11 @@ export const imagesWithTextAr: Record<string, PESection> = {
       },
       {
         q: 'كم صورة يمكنني تضمينها في استفسار واحد؟',
-        a: 'تتعامل معظم نماذج VLM بشكل موثوق مع 2 إلى 10 صور. يتدهور الأداء بعد 10 صور. إذا كنت بحاجة إلى تحليل صور كثيرة، قسِّمها على دفعات وجولات. سمِّ كل صورة بوضوح: "الصورة 1: [وصف]، الصورة 2: [وصف]."',
+        a: 'حدود واجهة البرمجة (API) أعلى مما يتوقعه معظم الناس: يسمح Claude بما يصل إلى 100 صورة لكل طلب على النماذج ذات نافذة سياق 200K، ويقبل Gemini 3.1 Pro ما يصل إلى 3600 ملف صورة لكل طلب (ضمن حد 20 ميجابايت للطلب المضمّن؛ استخدم File API لما هو أكبر). ومع ذلك تتدهور موثوقية المخرجات قبل بلوغ هذه الحدود بكثير — لتحليل متسق، قسِّم الطلبات إلى دفعات من 5 إلى 10 صور وسمِّ كل صورة.',
       },
       {
         q: 'ما تنسيقات الصور التي تدعمها نماذج الرؤية واللغة؟',
-        a: 'تقبل كل من GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro صيَغ JPEG وPNG وGIF وWebP. تدعم معظمها صوراً بحجم يصل إلى 20 ميجابايت. تتفاوت الحدود المحددة حسب النموذج؛ راجع وثائق OpenAI وAnthropic للاطلاع على التفاصيل الحالية.',
+        a: 'تقبل كل من GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro صيَغ JPEG وPNG وGIF وWebP. تختلف حدود الحجم لكل صورة حسب النموذج: حد واجهة برمجة Claude هو 10 ميجابايت لكل صورة (5 ميجابايت عبر Amazon Bedrock أو Google Cloud)، وحد الطلب المضمّن في Gemini هو 20 ميجابايت إجمالاً، وتُعالَج الملفات الأكبر عبر File API. راجع وثائق OpenAI وAnthropic وGoogle للاطلاع على الحدود الحالية لكل نموذج.',
       },
       {
         q: 'هل يمكنني استخدام نماذج محلية مثل Ollama للاستفسار متعدد الوسائط؟',
