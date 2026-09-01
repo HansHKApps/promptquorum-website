@@ -373,12 +373,12 @@ schema: {
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Instalar Ollama: Configuración en 2 Minutos para macOS, Windows y Linux',
-      seoTitle: 'Instalar Ollama en 2 minutos: macOS, Windows y Linux',
+      seoTitle: 'Instalar Ollama en Windows, macOS y Linux: Pasos Exactos',
       intro: 'Ollama se instala en menos de 2 minutos en macOS, Windows y Linux. Tras la instalación, un solo comando descarga y ejecuta cualquier modelo de la biblioteca de Ollama -- sin entorno Python, sin archivos de configuración y sin necesidad de GPU para empezar. Ollama mantiene una biblioteca de más de 200 modelos con descargas en un solo comando, incluidos Meta Llama 3.3, Qwen3 y Mistral.',
-      metaDescription: 'Instala Ollama en 2 minutos en cualquier sistema: descarga, ejecuta `ollama run llama3.2` y empieza a chatear. Guía completa con solución de problemas.',
+      metaDescription: 'Instalar Ollama en Windows, macOS o Linux: pasos exactos, comando curl para Ubuntu/Linux, y solución a los errores más comunes de instalación 2026.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       leadAnswerBlock: '**Ollama se instala en menos de 2 minutos en macOS, Windows y Linux. Tras la instalación, un solo comando descarga y ejecuta cualquier modelo de la biblioteca de Ollama -- sin entorno Python, sin archivos de configuración y sin necesidad de GPU para empezar.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '8 min de lectura',
@@ -463,7 +463,7 @@ schema: {
         installLinux: {
           id: 'install-on-linux',
           title: '¿Cómo se instala Ollama en Linux?',
-          content: 'Un solo comando instala Ollama en cualquier distribución de Linux:',
+          content: 'Un solo comando instala Ollama en cualquier distribución de Linux, incluidas Ubuntu, Debian y Fedora:',
           codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
           codeLanguage: 'bash',
         },
@@ -533,6 +533,8 @@ schema: {
             { q: '¿La API de Ollama es compatible con la API de OpenAI?', a: 'Sí. Ollama admite el endpoint de chat completions de OpenAI en /v1/chat/completions. Cualquier app creada para OpenAI puede usar Ollama estableciendo base_url en http://localhost:11434/v1.' },
             { q: '¿Cómo veo qué modelos están instalados en Ollama?', a: 'Ejecuta: ollama list. Esto muestra todos los modelos descargados, sus tamaños y niveles de cuantización. Elimina un modelo con ollama rm nombremodelo.' },
             { q: '¿Cómo actualizo Ollama a la última versión?', a: 'macOS/Windows: vuelve a descargar el instalador desde ollama.com -- sobrescribe la versión anterior. Linux: vuelve a ejecutar curl -fsSL https://ollama.com/install.sh | sh para actualizar en el mismo lugar.' },
+            { q: '¿Cómo instalo Ollama en Ubuntu?', a: 'Ubuntu usa el mismo comando que el resto de distribuciones Linux: curl -fsSL https://ollama.com/install.sh | sh. El script detecta Ubuntu automáticamente, instala Ollama y lo registra como servicio systemd. No hace falta ningún paso adicional específico de Ubuntu.' },
+            { q: '¿Cómo descargo Ollama para Windows?', a: 'Ve a ollama.com/download y haz clic en "Descargar para Windows" para obtener OllamaSetup.exe. Ejecuta el instalador descargado -- Ollama se instala en %LOCALAPPDATA%\\Programs\\Ollama y arranca automáticamente en la bandeja del sistema, sin pasos de configuración adicionales.' },
           ],
         },
         nextSteps: {
@@ -578,7 +580,7 @@ schema: {
         'description': 'Instala Ollama en 2 minutos en cualquier sistema operativo: descarga, ejecuta ollama run llama3.2, empieza a chatear. Guía completa de configuración con solución de problemas para principiantes 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-09-01',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -722,6 +724,22 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'macOS/Windows: vuelve a descargar el instalador desde ollama.com -- sobrescribe la versión anterior. Linux: vuelve a ejecutar curl -fsSL https://ollama.com/install.sh | sh para actualizar en el mismo lugar.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo instalo Ollama en Ubuntu?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ubuntu usa el mismo comando que el resto de distribuciones Linux: curl -fsSL https://ollama.com/install.sh | sh. El script detecta Ubuntu automáticamente, instala Ollama y lo registra como servicio systemd. No hace falta ningún paso adicional específico de Ubuntu.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo descargo Ollama para Windows?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ve a ollama.com/download y haz clic en "Descargar para Windows" para obtener OllamaSetup.exe. Ejecuta el instalador descargado -- Ollama se instala en %LOCALAPPDATA%\\Programs\\Ollama y arranca automáticamente en la bandeja del sistema, sin pasos de configuración adicionales.',
             },
           },
         ]

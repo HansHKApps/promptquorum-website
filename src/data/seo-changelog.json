@@ -1563,5 +1563,75 @@
       "ctr": 0.08054169636493229,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "0421f2d9-864f-46e1-9e8d-676c40ff70bd",
+    "slug": "/es/local-llms/how-to-install-ollama",
+    "date": "2026-09-01T13:58:00.643Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Instalar Ollama en 2 minutos: macOS, Windows y Linux",
+        "new": "Instalar Ollama en Windows, macOS y Linux: Pasos Exactos"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Instala Ollama en 2 minutos en cualquier sistema: descarga, ejecuta `ollama run llama3.2` y empieza a chatear. Guía completa con solución de problemas.",
+        "new": "Instalar Ollama en Windows, macOS o Linux: pasos exactos, comando curl para Ubuntu/Linux, y solución a los errores más comunes de instalación 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR fix — Windows/Linux/Ubuntu queries ranked well (pos 4.7-9) but 0% CTR because meta named no platform. Reordered title to lead with Windows (highest query volume), named platforms explicitly in meta, added Ubuntu mention to body + 2 FAQs (Ubuntu install, Windows download-intent).",
+    "baseline": {
+      "position": 7.3,
+      "impressions": 7399,
+      "clicks": 37,
+      "ctr": 0.0050006757669955396,
+      "period": "GSC as pasted 2026-09-01"
+    }
+  },
+  {
+    "id": "12725e26-de61-402f-93f4-cefe8654aa55",
+    "slug": "/ar/local-llms/mobile-local-llms",
+    "date": "2026-09-01T14:21:43.991Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل تطبيقات ⁨LLM⁩ المحلية لـ ⁨Android⁩ و⁨iOS 2026⁩",
+        "new": "⁨MLC Chat⁩ و⁨PocketPal AI⁩: أفضل تطبيقات ⁨LLM⁩ للهواتف ⁨2026⁩"
+      }
+    ],
+    "reason": "geo-meta-optimizer: ~35 impr of ar queries specifically named the apps (mlc chat ios app store local llm, pocketpal ai ios local llm app) at good position (5.8-8.4) but 0% CTR; title was generic and didn't name either app even though metaDescription already did. Injected both app names into title for entity match. Noted separately (not fixed here): ~32 impr are English-language queries landing on this Arabic page at 0% CTR (language-serving/hreflang issue, not a title problem); 'إطارات عمل llm'/'برنامج llm' are intent-mismatched generic framework queries out of this page's scope.",
+    "baseline": {
+      "position": 9.3,
+      "impressions": 124,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC as pasted 2026-09-01"
+    }
+  },
+  {
+    "id": "31b0de95-96fa-402a-8c15-0fd8f36158df",
+    "slug": "/pt/local-llms/best-budget-gpus-local-llm",
+    "date": "2026-09-01T14:38:40.780Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhor GPU econômica para LLMs locais 2026: RTX 3060",
+        "new": "Melhor Placa de Vídeo para IA Local 2026: RTX 3060 (GPU)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (US$ 270–300 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Mais barata: RX 6700 XT.",
+        "new": "Melhor GPU econômica para LLMs locais 2026: RTX 3060 12 GB (R$ 1.800–2.200 usada) roda Qwen3 14B a 9–12 tok/s. Nova: RTX 5060 Ti 16 GB. Mais barata: RX 6700 XT."
+      }
+    ],
+    "reason": "geo-meta-optimizer: title now leads with 'placa de vídeo'/'IA local' (matches the top real GSC query, 'melhor placa de video para rodar ia local', which the old GPU/LLM-anglicism title missed). Also fixed a real localization gap surfaced by the query 'rtx 2060 usada preco brasil 2026 olx mercado livre': the entire article priced every GPU in USD for a pt-BR audience. Converted every USD price to real Brazilian market prices researched from Mercado Livre/OLX (used) and Kabum!/Pichau (new) -- not currency-converted, actual local street prices, which run well above naive USD*rate due to Brazilian import taxes. Also swapped US-only retailer names (eBay/Newegg/Best Buy) for Mercado Livre/OLX/Kabum!/Pichau/Terabyte Shop, fixed a stale pre-price-shock BRL figure in one FAQ (R$900-1200, inconsistent with the article's own price-shock narrative), and fixed 'por dolar' -> 'por real gasto'. Left 2 unrelated relatedReading blurbs (Mac Mini M5, AMD mini PC) in USD -- their Brazilian prices belong to those other articles, not guessed here.",
+    "baseline": {
+      "position": 5.8,
+      "impressions": 3208,
+      "clicks": 35,
+      "ctr": 0.010910224438902744,
+      "period": "GSC as pasted 2026-09-01 (page-level); query-level sample was thin (68 impr across 26 rows)"
+    }
   }
 ]
