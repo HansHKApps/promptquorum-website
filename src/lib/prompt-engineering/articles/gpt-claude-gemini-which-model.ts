@@ -3176,6 +3176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'GPT, Claude ou Gemini: Como Escolher o Modelo de IA Certo',
       description: 'Um guia prático para escolher entre GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, DeepSeek e Baidu ERNIE com base na sua tarefa, orçamento e localização.',
       datePublished: '2026-03-23',
+      dateModified: '2026-08-31',
       keywords: ['GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'DeepSeek', 'Baidu ERNIE', 'comparação de modelos de IA', 'seleção de modelos', 'engenharia de prompts'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
