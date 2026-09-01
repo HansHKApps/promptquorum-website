@@ -67,6 +67,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
         'proficiencyLevel': 'Beginner',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -843,6 +844,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
         'proficiencyLevel': 'Beginner',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1183,7 +1185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/ar/prompt-engineering/control-the-output',
         inLanguage: 'ar',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-31',
+        dateModified: '2026-09-01',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: buildOgImageObject(OG_SLUG, 'ar'),
@@ -1196,6 +1198,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
         'proficiencyLevel': 'مبتدئ',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1336,6 +1339,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'إجبار JSON عبر الفك المقيّد يُقلّل دقة النموذج بمقدار ٢.٢٦ نقطة مئوية في معايير استدعاء الوظائف — حقّق تحليل النص الحر المتوافق مع مخطط BAML دقة ٩٣.٦٣٪ في BFCL مقابل ٩١.٣٧٪ للفك المقيّد الصارم في نفس المعيار.',
             'الآلية: الفك المقيّد يُطبّق آلة حالات محدودة تُخفي الرموز غير المتوافقة مع موضع المخطط الحالي. نموذج يريد إنتاج `51.7` لحقل عائم يُجبر على إنتاج `51` إن حدّد المخطط عددًا صحيحًا — منتجًا نتيجةً صالحة تقنيًّا لكن متدنية واقعيًّا. موجّهات التفكير التسلسلي (CoT) غير متوافقة مع الفك المقيّد بنفس الطريقة.',
             'الحل الجاهز للإنتاج للأنظمة التي تتطلب عمق الاستدلال وضمانات التنسيق: (١) **المرحلة الأولى** — أرسل إلى GPT-5.6 أو Claude Opus 5 بلا قيود: "حلّل هذا، استدلّ خطوةً بخطوة، اشرح منطقك." (٢) **المرحلة الثانية** — أطعم مخرجات المرحلة الأولى لنموذج متخصص صغير: "استخرج البيانات الرئيسية من هذا التحليل وأعِدها بمخطط JSON هذا بالضبط."',
+            'تحافظ هذه البنية على جودة الاستدلال في المرحلة الأولى وتحقق توافقًا كاملًا بنسبة ١٠٠٪ في المرحلة الثانية، بجزء يسير من تكلفة تشغيل نموذج متطور كامل في الوضع المقيّد.',
           ],
         },
         promptquorumTest: {
@@ -1534,7 +1538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         url: 'https://www.promptquorum.com/pt/prompt-engineering/control-the-output',
         inLanguage: 'pt-BR',
         datePublished: '2026-03-24',
-        dateModified: '2026-08-31',
+        dateModified: '2026-09-01',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: buildOgImageObject(OG_SLUG, 'pt'),
@@ -1547,6 +1551,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
         'proficiencyLevel': 'Beginner',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
@@ -1660,6 +1665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty e presence_penalty são seis parâmetros independentes que determinam conjuntamente o comprimento, a aleatoriedade e a repetição da saída.',
             'Temperature (T) escala a distribuição softmax de saída: com T = 0,0 o modelo sempre seleciona o token de maior probabilidade (determinístico); com T = 2,0 a distribuição é quase plana. Top-P (amostragem de núcleo) seleciona do conjunto mínimo de tokens cuja probabilidade acumulada alcança P. Top-K restringe a geração aos K tokens de maior probabilidade em cada etapa.',
+            'A fórmula do softmax com temperature: P(token) = exp(logit / T) / soma(exp(logits / T)). Conforme T se aproxima de 0, o token de maior logit se aproxima da probabilidade 1,0. Conforme T se aproxima do infinito, todos os tokens se aproximam de probabilidade igual.',
           ],
           columns: ['Parâmetro', 'Intervalo', 'Focado / Factual', 'Criativo / Diverso'],
           rows: [
@@ -1675,6 +1681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         parameterWarning: {
           content: [
             '**Regra crítica:** Não configure Temperature e Top-P em valores altos simultaneamente. Temperature escala primeiro a distribuição completa; depois Top-P amostra da massa de probabilidade superior já escalada. Combinar T = 1,5 e Top-P = 0,95 produz saída mais errática do que qualquer parâmetro sozinho.',
+            '`frequency_penalty` reduz a probabilidade de tokens proporcionalmente ao número de vezes que já apareceram — valores positivos eliminam frases repetitivas; valores negativos incentivam ativamente a repetição. `presence_penalty` aplica uma penalidade única e fixa a qualquer token que já tenha aparecido, independentemente da frequência — isso empurra o modelo a introduzir novo vocabulário e novos tópicos em vez de repetir os existentes.',
           ],
         },
         reasoningTradeoff: {
@@ -1682,7 +1689,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Qual é a compensação entre qualidade de raciocínio e garantias de formato de saída?',
           content: [
             'Forçar JSON por constrained decoding reduz a precisão do modelo em 2,26 pontos percentuais em benchmarks de function calling — o parsing alinhado com schema do BAML alcançou 93,63% de precisão no BFCL vs. 91,37% para o constrained decoding estrito da OpenAI no mesmo benchmark.',
+            'O mecanismo: o constrained decoding aplica uma máquina de estados finita que mascara tokens incompatíveis com a posição atual do schema. Um modelo que deseja produzir `51.7` para um campo float é forçado a produzir `51` se o schema especificar um número inteiro — gerando um resultado tecnicamente válido, mas factualmente degradado. O prompting Chain-of-Thought (CoT) é incompatível com o constrained decoding da mesma forma: incluir um campo de raciocínio força o modelo a escapar quebras de linha, aspas e caracteres especiais dentro de uma string JSON — degradando mensuravelmente a qualidade do raciocínio em todos os modelos testados.',
             'A solução pronta para produção para sistemas que exigem tanto profundidade de raciocínio quanto garantias de formato: (1) **Etapa 1** — Envie para GPT-5.6 ou Claude Opus 5 sem restrições: "Analise isso, raciocine passo a passo, explique sua lógica." (2) **Etapa 2** — Alimente a saída da Etapa 1 a um modelo especializado pequeno: "Extraia os dados principais desta análise e retorne-os neste schema JSON exato."',
+            'Essa arquitetura preserva a qualidade de raciocínio da Etapa 1 e alcança 100% de conformidade de formato na Etapa 2, por uma fração do custo de executar um modelo de fronteira completo em modo restrito.',
           ],
         },
         promptquorumTest: {
@@ -1714,7 +1723,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         formatChoices: {
           title: 'Que formato de saída usar para pipelines de produção?',
           content: [
-            'JSON é o formato de saída dominante para pipelines LLM de produção porque mapeia diretamente para objetos de API, arrays e dados tipados.',
+            'JSON é o formato de saída dominante para pipelines LLM de produção porque mapeia diretamente para objetos de API, arrays e dados tipados — mas forçar JSON via constrained decoding sacrifica 2–10% de qualidade de raciocínio, o que torna a escolha do formato uma decisão arquitetural relevante.',
+            'O TOON (Token-Optimised Output Notation) surgiu como um formato de entrada eficiente para prompts estruturados longos — usa minimização de espaços em branco e chaves abreviadas para reduzir o consumo de tokens de entrada antes de o modelo gerar a saída em JSON. Para a saída, a arquitetura de produção recomendada para 2026 é: TOON para entrada (eficiência de tokens) + JSON com constrained decoding para a saída (formato garantido) — aplicado somente após a conclusão do raciocínio livre da Etapa 1.',
           ],
           columns: ['Formato de saída', 'Caso de uso', 'Notas'],
           rows: [
@@ -1809,23 +1819,23 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             {
               q: 'Qual é a diferença entre Temperature e Top-P nos LLMs?',
-              a: 'Temperature (T) escala toda a distribuição de probabilidade softmax: T = 0,0 sempre seleciona o token de maior probabilidade (determinístico); T = 2,0 achata em direção à aleatoriedade. Top-P seleciona do conjunto mínimo de tokens cuja probabilidade acumulada alcança P. Controlam aspectos diferentes e não devem ser configurados ambos em valores altos simultaneamente.',
+              a: 'Temperature (T) escala toda a distribuição de probabilidade softmax de previsões do próximo token: T = 0,0 sempre seleciona o token de maior probabilidade (determinístico); T = 1,0 preserva a distribuição natural; T = 2,0 a achata em direção à aleatoriedade. Top-P (amostragem de núcleo) seleciona do conjunto mínimo de tokens cuja probabilidade acumulada alcança P. Controlam aspectos diferentes da geração e não devem ser configurados ambos em valores altos simultaneamente.',
             },
             {
               q: 'Forçar a saída JSON reduz a qualidade da resposta da IA?',
-              a: 'Sim — mensuravelmente. A redução é de 2,26 pontos percentuais de precisão. Para tarefas de raciocínio complexo, a abordagem de duas etapas (texto livre → estruturação especializada) preserva a qualidade alcançando 100% de conformidade de formato.',
+              a: 'Sim — mensuravelmente. O benchmark do BAML no BFCL mostrou que o parsing de texto livre alinhado com schema alcançou 93,63% de precisão vs. 91,37% para o constrained decoding estrito da OpenAI — uma redução de qualidade de 2,26 pontos. Para tarefas de raciocínio complexo, a abordagem de duas etapas (texto livre → estruturação especializada) preserva a qualidade alcançando 100% de conformidade de formato.',
             },
             {
               q: 'O que é constrained decoding e como ele garante a saída JSON?',
-              a: 'O constrained decoding aplica uma FSM sobre o processo de geração de tokens. Em cada etapa, a FSM mascara tokens incompatíveis com o schema. A OpenAI o implementa via `response_format: { type: "json_schema", strict: true }`. A Anthropic via Strict Tool Use Mode.',
+              a: 'O constrained decoding aplica uma máquina de estados finita (FSM) sobre o processo de geração de tokens do modelo. Em cada etapa, a FSM avalia quais tokens produziriam saída compatível com o schema alvo na posição atual — e mascara todos os outros tokens com probabilidade zero. A OpenAI o implementa via `response_format: { type: "json_schema", strict: true }`. A Anthropic o implementa via Strict Tool Use Mode.',
             },
             {
               q: 'Que formato de saída devo usar para pipelines LLM de produção?',
-              a: 'JSON é o padrão para pipelines LLM de produção. Use JSONL para fluxos de eventos e processamento em lote. Use CSV apenas para compatibilidade com sistemas legados. A arquitetura recomendada: TOON para entrada + JSON com constrained decoding para a saída da Etapa 2.',
+              a: 'JSON é o padrão para pipelines LLM de produção porque mapeia diretamente para objetos de API tipados e é suportado nativamente por todos os principais provedores. Use JSONL para fluxos de eventos e processamento em lote. Use CSV apenas para compatibilidade com sistemas legados. A arquitetura recomendada para 2026: TOON para eficiência de tokens de entrada + JSON com constrained decoding apenas para a saída da Etapa 2.',
             },
             {
               q: 'Em que as stop sequences diferem das restrições negativas nos prompts?',
-              a: 'As stop sequences são aplicadas no nível da API — o modelo para no instante em que a string especificada aparece, sem exceções. As restrições negativas no corpo do prompt não são vinculantes. Use ambas: stop sequences para terminação estrutural, restrições negativas para moldar o conteúdo.',
+              a: 'As stop sequences são aplicadas no nível da API/inferência — o modelo para a geração no instante em que a string especificada aparece, sem exceções. As restrições negativas no corpo do prompt ("Não inclua explicações", "Sem markdown") instruem o modelo a evitar certas saídas, mas não são vinculantes. Use ambas: stop sequences para garantias de terminação estrutural, restrições negativas para moldar o estilo do conteúdo.',
             },
           ],
         },
@@ -3052,6 +3062,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'Mistral AI' },
         ],
         'proficiencyLevel': 'Beginner',
+        speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       faqSchema: {
         '@context': 'https://schema.org',
