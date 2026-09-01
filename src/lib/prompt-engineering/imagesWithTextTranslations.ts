@@ -52,7 +52,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Wie Vision-Language-Modelle Bilder sehen',
     content: [
-      '**Vision-Language-Modelle wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro wandeln Bilder in hochdimensionale Vektoren (Embeddings) mit einem visuellen Encoder um und verarbeiten diese Embeddings dann neben Text-Token in einem gemeinsamen semantischen Raum.** Dieser Ansatz gibt VLMs klare Stärken über mehrere Aufgaben hinweg: Sie identifizieren Objekte, lesen Text, verstehen räumliche Beziehungen und schlussfolgern über Inhalte über mehrere Bilder hinweg. GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro unterstützen inzwischen alle ein 1-Millionen-Token-Kontextfenster, was die Analyse langer Multimodal-Sequenzen ohne Kürzungen ermöglicht. Das Verstehen von [Kontextfenster-Limits](/de/prompt-engineering/context-windows-explained-why-ai-forgets) hilft dir, Prompts zu strukturieren, die Kürzungen vermeiden, wenn du mit langen Bildbeschreibungen oder Multi-Bild-Sequenzen arbeitest.',
+      '**Vision-Language-Modelle wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro wandeln Bilder in hochdimensionale Vektoren (Embeddings) mit einem visuellen Encoder um und verarbeiten diese Embeddings dann neben Text-Token in einem gemeinsamen semantischen Raum.** Dieser Ansatz gibt VLMs klare Stärken über mehrere Aufgaben hinweg: Sie identifizieren Objekte, lesen Text, verstehen räumliche Beziehungen und schlussfolgern über Inhalte über mehrere Bilder hinweg. GPT-5.6 und Claude Opus 5 bieten beide ein Kontextfenster von rund 1 Million Token, und Gemini 3.1 Pro geht mit bis zu 2 Millionen Token noch weiter, was die Analyse langer Multimodal-Sequenzen ohne Kürzungen ermöglicht. Das Verstehen von [Kontextfenster-Limits](/de/prompt-engineering/context-windows-explained-why-ai-forgets) hilft dir, Prompts zu strukturieren, die Kürzungen vermeiden, wenn du mit langen Bildbeschreibungen oder Multi-Bild-Sequenzen arbeitest.',
       'VLMs zeichnen sich durch Szenenverständnis, Dokumentenanalyse und den Vergleich visueller Elemente aus. Sie haben jedoch vorhersehbare Schwächen:',
     ],
     items: [
@@ -164,7 +164,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
     faqs: [
       {
         q: 'Welches Vision-Language-Modell ist am besten zur Bildanalyse?',
-        a: 'Es gibt kein einzelnes bestes Modell. GPT-5.6 zeichnet sich durch allgemeines Szenenverständnis und komplexe Logik aus. Claude Opus 5 ist präzise bei Dokumentenanalyse und Textextraktion. GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro unterstützen inzwischen alle ein 1-Millionen-Token-Kontextfenster. Nutze PromptQuorum, um alle drei gegen deine spezifische Aufgabe zu testen.',
+        a: 'Es gibt kein einzelnes bestes Modell. GPT-5.6 zeichnet sich durch allgemeines Szenenverständnis und komplexe Logik aus. Claude Opus 5 ist präzise bei Dokumentenanalyse und Textextraktion. GPT-5.6 und Claude Opus 5 bieten beide rund 1 Million Token Kontextfenster, und Gemini 3.1 Pro unterstützt bis zu 2 Millionen Token. Nutze PromptQuorum, um alle drei gegen deine spezifische Aufgabe zu testen.',
       },
       {
         q: 'Können Vision-Language-Modelle Objekte genau zählen?',
@@ -264,7 +264,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Comment les Modèles Vision-Langage Voient les Images',
     content: [
-      '**Les modèles vision-langage comme GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro convertissent les images en vecteurs de haute dimension (embeddings) en utilisant un encodeur visuel, puis traitent ces embeddings aux côtés des tokens de texte dans un espace sémantique partagé.** Cette approche donne aux VLM des forces claires sur plusieurs tâches : ils identifient les objets, lisent le texte, comprennent les relations spatiales et raisonnent sur le contenu dans plusieurs images. GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro partagent désormais tous une fenêtre de contexte d\'1 million de tokens, permettant l\'analyse de longues séquences multimodales sans troncature. Comprendre [les limites des fenêtres de contexte](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) vous aide à structurer des prompts qui évitent la troncature lorsque vous travaillez avec de longues descriptions d\'images ou des séquences multi-images.',
+      '**Les modèles vision-langage comme GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro convertissent les images en vecteurs de haute dimension (embeddings) en utilisant un encodeur visuel, puis traitent ces embeddings aux côtés des tokens de texte dans un espace sémantique partagé.** Cette approche donne aux VLM des forces claires sur plusieurs tâches : ils identifient les objets, lisent le texte, comprennent les relations spatiales et raisonnent sur le contenu dans plusieurs images. GPT-5.6 et Claude Opus 5 offrent tous deux une fenêtre de contexte d\'environ 1 million de tokens, et Gemini 3.1 Pro va plus loin avec jusqu\'à 2 millions de tokens, permettant l\'analyse de longues séquences multimodales sans troncature. Comprendre [les limites des fenêtres de contexte](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) vous aide à structurer des prompts qui évitent la troncature lorsque vous travaillez avec de longues descriptions d\'images ou des séquences multi-images.',
       'Les VLM excellent à la compréhension de scènes, l\'analyse de documents et la comparaison d\'éléments visuels. Cependant, ils ont des faiblesses prévisibles :',
     ],
     items: [
@@ -376,7 +376,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
     faqs: [
       {
         q: 'Quel modèle vision-langage est le meilleur pour analyser les images?',
-        a: 'Il n\'y a pas de modèle unique meilleur. GPT-5.6 excelle à la compréhension générale des scènes et au raisonnement complexe. Claude Opus 5 est précis pour l\'analyse de documents et l\'extraction de texte. Gemini 3.1 Pro gère des contextes multimodaux plus longs (1 million de tokens). Utilisez PromptQuorum pour tester les trois contre votre tâche spécifique.',
+        a: 'Il n\'y a pas de modèle unique meilleur. GPT-5.6 excelle à la compréhension générale des scènes et au raisonnement complexe. Claude Opus 5 est précis pour l\'analyse de documents et l\'extraction de texte. GPT-5.6 et Claude Opus 5 offrent tous deux environ 1 million de tokens de contexte, et Gemini 3.1 Pro va jusqu\'à 2 millions. Utilisez PromptQuorum pour tester les trois contre votre tâche spécifique.',
       },
       {
         q: 'Les modèles vision-langage peuvent-ils compter les objets avec précision?',
@@ -476,7 +476,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
   howVisionWorks: {
     title: 'ビジョン言語モデルが画像を見る方法',
     content: [
-      '**GPT-5.6、Claude Opus 5、Gemini 3.1 Proなどのビジョン言語モデルは、ビジュアルエンコーダーを使用して画像を高次元ベクトル(埋め込み)に変換し、その後、共有されたセマンティック空間のテキストトークンと並行してこれらの埋め込みを処理します。** このアプローチはVLMに複数のタスク全体にわたって明確な強みを与えます: オブジェクトを識別し、テキストを読み、空間的関係を理解し、複数の画像全体でコンテンツについて推論します。GPT-5.6、Claude Opus 5、Gemini 3.1 Proはいずれも現在100万トークンのコンテキストウィンドウをサポートしており、長いマルチモーダルシーケンスを切り捨てなしで分析できます。[コンテキストウィンドウの制限](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を理解することは、長い画像説明またはマルチ画像シーケンスで作業する際にトリミングを回避するプロンプトを構造化するのに役立ちます。',
+      '**GPT-5.6、Claude Opus 5、Gemini 3.1 Proなどのビジョン言語モデルは、ビジュアルエンコーダーを使用して画像を高次元ベクトル(埋め込み)に変換し、その後、共有されたセマンティック空間のテキストトークンと並行してこれらの埋め込みを処理します。** このアプローチはVLMに複数のタスク全体にわたって明確な強みを与えます: オブジェクトを識別し、テキストを読み、空間的関係を理解し、複数の画像全体でコンテンツについて推論します。GPT-5.6とClaude Opus 5はいずれも約100万トークンのコンテキストウィンドウを提供し、Gemini 3.1 Proはさらに広い最大200万トークンに対応しており、長いマルチモーダルシーケンスを切り捨てなしで分析できます。[コンテキストウィンドウの制限](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を理解することは、長い画像説明またはマルチ画像シーケンスで作業する際にトリミングを回避するプロンプトを構造化するのに役立ちます。',
       'VLMはシーン理解、ドキュメント分析、および視覚的要素の比較に優れています。ただし、予測可能な弱点があります:',
     ],
     items: [
@@ -588,7 +588,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
     faqs: [
       {
         q: '画像を分析するのに最適なビジョン言語モデルはどれですか?',
-        a: '単一の最良のモデルはありません。GPT-5.6は一般的なシーン理解と複雑な推論に優れています。Claude Opus 5はドキュメント分析とテキスト抽出に正確です。GPT-5.6、Claude Opus 5、Gemini 3.1 Proはいずれも現在100万トークンのコンテキストウィンドウをサポートしています。PromptQuorumを使用して、特定のタスクに対して3つすべてをテストします。',
+        a: '単一の最良のモデルはありません。GPT-5.6は一般的なシーン理解と複雑な推論に優れています。Claude Opus 5はドキュメント分析とテキスト抽出に正確です。GPT-5.6とClaude Opus 5は約100万トークン、Gemini 3.1 Proは最大200万トークンのコンテキストウィンドウをサポートしています。PromptQuorumを使用して、特定のタスクに対して3つすべてをテストします。',
       },
       {
         q: 'ビジョン言語モデルはオブジェクトを正確にカウントできますか?',
@@ -688,7 +688,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Cómo los modelos de visión-lenguaje ven las imágenes',
     content: [
-      '**Los modelos de visión-lenguaje como GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro ahora comparten una context window de 1 millón de tokens, lo que permite analizar secuencias multimodales largas sin truncación. Entender los [límites de la context window](/es/prompt-engineering/context-windows-explained-why-ai-forgets) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
+      '**Los modelos de visión-lenguaje como GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. GPT-5.6 y Claude Opus 5 ofrecen ambos una context window de aproximadamente 1 millón de tokens, y Gemini 3.1 Pro va más allá con hasta 2 millones de tokens, lo que permite analizar secuencias multimodales largas sin truncación. Entender los [límites de la context window](/es/prompt-engineering/context-windows-explained-why-ai-forgets) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
       'Los VLM se destacan en la comprensión de escenas, el análisis de documentos y la comparación de elementos visuales. Sin embargo, tienen debilidades predecibles:',
     ],
     items: [
@@ -800,7 +800,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
     faqs: [
       {
         q: '¿Qué modelo de visión-lenguaje es mejor para analizar imágenes?',
-        a: 'No hay un único modelo mejor. GPT-5.6 se destaca en la comprensión general de escenas y el razonamiento complejo. Claude Opus 5 es preciso en el análisis de documentos y la extracción de texto. GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro ahora comparten una context window de 1 millón de tokens. Usa PromptQuorum para probar los tres en tu tarea específica.',
+        a: 'No hay un único modelo mejor. GPT-5.6 se destaca en la comprensión general de escenas y el razonamiento complejo. Claude Opus 5 es preciso en el análisis de documentos y la extracción de texto. GPT-5.6 y Claude Opus 5 ofrecen alrededor de 1 millón de tokens de contexto, y Gemini 3.1 Pro llega hasta 2 millones. Usa PromptQuorum para probar los tres en tu tarea específica.',
       },
       {
         q: '¿Pueden los modelos de visión-lenguaje contar objetos con precisión?',
@@ -900,7 +900,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
   howVisionWorks: {
     title: '视觉语言模型如何看到图像',
     content: [
-      '**GPT-5.6、Claude Opus 5和Gemini 3.1 Pro等视觉语言模型使用视觉编码器将图像转换为高维向量(嵌入)，然后在共享的语义空间中处理这些嵌入以及文本令牌。** 这种方法给VLM在多项任务中提供了明确的优势：它们识别对象、读取文本、理解空间关系，并推理多个图像中的内容。GPT-5.6、Claude Opus 5和Gemini 3.1 Pro现在都支持100万令牌的上下文窗口，可分析更长的多模态序列而不会被截断。理解[上下文窗口限制](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)有助于您在处理长图像描述或多图像序列时构建避免截断的提示。',
+      '**GPT-5.6、Claude Opus 5和Gemini 3.1 Pro等视觉语言模型使用视觉编码器将图像转换为高维向量(嵌入)，然后在共享的语义空间中处理这些嵌入以及文本令牌。** 这种方法给VLM在多项任务中提供了明确的优势：它们识别对象、读取文本、理解空间关系，并推理多个图像中的内容。GPT-5.6和Claude Opus 5均支持约100万令牌的上下文窗口，而Gemini 3.1 Pro更进一步，最高支持200万令牌，可分析更长的多模态序列而不会被截断。理解[上下文窗口限制](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)有助于您在处理长图像描述或多图像序列时构建避免截断的提示。',
       'VLM在场景理解、文档分析和比较视觉元素方面表现出色。但是，它们有可预测的弱点：',
     ],
     items: [
@@ -1012,7 +1012,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
     faqs: [
       {
         q: '分析图像的最佳视觉语言模型是什么?',
-        a: '没有单一的最佳模型。GPT-5.6在通用场景理解和复杂推理中表现出色。Claude Opus 5在文档分析和文本提取中精准。GPT-5.6、Claude Opus 5和Gemini 3.1 Pro现在都支持100万令牌的上下文窗口。使用PromptQuorum来针对您的特定任务测试所有三个。',
+        a: '没有单一的最佳模型。GPT-5.6在通用场景理解和复杂推理中表现出色。Claude Opus 5在文档分析和文本提取中精准。GPT-5.6和Claude Opus 5均支持约100万令牌的上下文窗口，Gemini 3.1 Pro最高可达200万令牌。使用PromptQuorum来针对您的特定任务测试所有三个。',
       },
       {
         q: '视觉语言模型能否精确计数对象?',
@@ -1112,7 +1112,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Como os modelos de visão-linguagem enxergam imagens',
     content: [
-      '**Modelos de visão-linguagem como GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro convertem imagens em vetores de alta dimensão (embeddings) usando um codificador visual e, em seguida, processam esses embeddings junto com tokens de texto em um espaço semântico compartilhado.** Essa abordagem confere aos VLMs pontos fortes claros em várias tarefas: eles identificam objetos, leem texto, compreendem relações espaciais e raciocinam sobre conteúdo em múltiplas imagens. O GPT-5.6, o Claude Opus 5 e o Gemini 3.1 Pro agora compartilham uma janela de contexto de 1 milhão de tokens, permitindo a análise de sequências multimodais longas sem truncamento. Compreender os [limites da janela de contexto](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) ajuda você a estruturar prompts que evitam truncamento ao trabalhar com descrições longas de imagens ou sequências de múltiplas imagens.',
+      '**Modelos de visão-linguagem como GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro convertem imagens em vetores de alta dimensão (embeddings) usando um codificador visual e, em seguida, processam esses embeddings junto com tokens de texto em um espaço semântico compartilhado.** Essa abordagem confere aos VLMs pontos fortes claros em várias tarefas: eles identificam objetos, leem texto, compreendem relações espaciais e raciocinam sobre conteúdo em múltiplas imagens. O GPT-5.6 e o Claude Opus 5 oferecem uma janela de contexto de cerca de 1 milhão de tokens, e o Gemini 3.1 Pro vai além, com até 2 milhões de tokens, permitindo a análise de sequências multimodais longas sem truncamento. Compreender os [limites da janela de contexto](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) ajuda você a estruturar prompts que evitam truncamento ao trabalhar com descrições longas de imagens ou sequências de múltiplas imagens.',
       'Os VLMs se destacam na compreensão de cenas, análise de documentos e comparação de elementos visuais. No entanto, eles têm pontos fracos previsíveis:',
     ],
     items: [
@@ -1224,7 +1224,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
     faqs: [
       {
         q: 'Qual modelo de visão-linguagem é melhor para analisar imagens?',
-        a: 'Não há um único modelo melhor. O GPT-5.6 se destaca na compreensão geral de cenas e no raciocínio complexo. O Claude Opus 5 é preciso na análise de documentos e extração de texto. O GPT-5.6, o Claude Opus 5 e o Gemini 3.1 Pro agora compartilham uma janela de contexto de 1 milhão de tokens. Use o PromptQuorum para testar os três em sua tarefa específica.',
+        a: 'Não há um único modelo melhor. O GPT-5.6 se destaca na compreensão geral de cenas e no raciocínio complexo. O Claude Opus 5 é preciso na análise de documentos e extração de texto. O GPT-5.6 e o Claude Opus 5 oferecem cerca de 1 milhão de tokens de contexto, e o Gemini 3.1 Pro chega a 2 milhões. Use o PromptQuorum para testar os três em sua tarefa específica.',
       },
       {
         q: 'Os modelos de visão-linguagem conseguem contar objetos com precisão?',
@@ -1324,7 +1324,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
   howVisionWorks: {
     title: 'كيف ترى نماذج الرؤية واللغة الصور',
     content: [
-      '**تحوّل نماذج الرؤية واللغة مثل GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro الصورَ إلى متجهات عالية الأبعاد (تضمينات) باستخدام مشفِّر بصري، ثم تعالج هذه التضمينات جنباً إلى جنب مع رموز النص في فضاء دلالي مشترك.** يمنح هذا النهج نماذج VLM مزايا واضحة عبر مهام متعددة: فهي تُعرِّف الكائنات، وتقرأ النصوص، وتفهم العلاقات المكانية، وتستدل على المحتوى عبر صور متعددة. أصبح كل من GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro يدعم الآن نافذة سياق تصل إلى مليون رمز، مما يتيح تحليل متتاليات متعددة الوسائط الطويلة دون اقتطاع. يساعدك فهم [حدود نافذة السياق](/ar/prompt-engineering/context-windows-explained-why-ai-forgets) على تنظيم الاستفسارات التي تتجنب الاقتطاع عند العمل مع أوصاف صور طويلة أو متتاليات صور متعددة.',
+      '**تحوّل نماذج الرؤية واللغة مثل GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro الصورَ إلى متجهات عالية الأبعاد (تضمينات) باستخدام مشفِّر بصري، ثم تعالج هذه التضمينات جنباً إلى جنب مع رموز النص في فضاء دلالي مشترك.** يمنح هذا النهج نماذج VLM مزايا واضحة عبر مهام متعددة: فهي تُعرِّف الكائنات، وتقرأ النصوص، وتفهم العلاقات المكانية، وتستدل على المحتوى عبر صور متعددة. يوفر كل من GPT-5.6 وClaude Opus 5 نافذة سياق تبلغ نحو مليون رمز، بينما تذهب Gemini 3.1 Pro أبعد من ذلك بدعمها حتى مليوني رمز، مما يتيح تحليل متتاليات متعددة الوسائط الطويلة دون اقتطاع. يساعدك فهم [حدود نافذة السياق](/ar/prompt-engineering/context-windows-explained-why-ai-forgets) على تنظيم الاستفسارات التي تتجنب الاقتطاع عند العمل مع أوصاف صور طويلة أو متتاليات صور متعددة.',
       'تتميز نماذج VLM في فهم المشاهد، وتحليل المستندات، ومقارنة العناصر البصرية. بيد أن لها نقاط ضعف يمكن التنبؤ بها:',
     ],
     items: [
@@ -1436,7 +1436,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
     faqs: [
       {
         q: 'ما أفضل نموذج رؤية ولغة لتحليل الصور؟',
-        a: 'لا يوجد نموذج أفضل بشكل مطلق. يتفوق GPT-5.6 في الفهم العام للمشاهد والاستدلال المعقد. Claude Opus 5 دقيق في تحليل المستندات واستخراج النصوص. أصبح كل من GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro يدعم الآن نافذة سياق مليون رمز. استخدم PromptQuorum لاختبار النماذج الثلاثة على مهمتك المحددة.',
+        a: 'لا يوجد نموذج أفضل بشكل مطلق. يتفوق GPT-5.6 في الفهم العام للمشاهد والاستدلال المعقد. Claude Opus 5 دقيق في تحليل المستندات واستخراج النصوص. يدعم كل من GPT-5.6 وClaude Opus 5 نافذة سياق تبلغ نحو مليون رمز، بينما تدعم Gemini 3.1 Pro حتى مليوني رمز. استخدم PromptQuorum لاختبار النماذج الثلاثة على مهمتك المحددة.',
       },
       {
         q: 'هل تستطيع نماذج الرؤية واللغة عد الكائنات بدقة؟',
