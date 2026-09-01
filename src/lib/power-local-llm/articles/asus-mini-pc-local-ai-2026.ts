@@ -120,6 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Check Beelink SER10 MAX price →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'Check MINISFORUM AI X1 Pro price →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: 'Product links, no current affiliate relationship. Prices move quickly and vary by retailer — confirm before buying.',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -346,6 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Beelink SER10 MAX Preis prüfen →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'MINISFORUM AI X1 Pro Preis prüfen →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: 'Produktlinks, aktuell keine Affiliate-Beziehung. Preise ändern sich schnell und variieren je nach Händler — vor dem Kauf prüfen.',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -572,6 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Vérifier le prix du Beelink SER10 MAX →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'Vérifier le prix du MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: 'Liens produits, aucune relation d\'affiliation actuelle. Les prix évoluent vite et varient selon le revendeur — vérifiez avant d\'acheter.',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -798,6 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Beelink SER10 MAXの価格を確認 →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'MINISFORUM AI X1 Proの価格を確認 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: '商品リンクであり、現時点でアフィリエイト関係はありません。価格は変動が速く販売店によって異なります — 購入前に確認してください。',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -1029,6 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '查看Beelink SER10 MAX价格 →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: '查看MINISFORUM AI X1 Pro价格 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: '产品链接,目前没有任何联盟营销关系。价格变动很快且因经销商而异——购买前请核实。',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -1260,6 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver precio del Beelink SER10 MAX →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'Ver precio del MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: 'Enlaces de producto, sin relación de afiliación actual. Los precios cambian rápido y varían según el vendedor — confirma antes de comprar.',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -1486,6 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Ver preço do Beelink SER10 MAX →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'Ver preço do MINISFORUM AI X1 Pro →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: 'Links de produto, sem relação de afiliação atual. Os preços mudam rápido e variam por revendedor — confirme antes de comprar.',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -1712,6 +1719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'تحقق من سعر Beelink SER10 MAX ←', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'تحقق من سعر MINISFORUM AI X1 Pro ←', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: 'روابط منتجات، لا توجد علاقة تسويق بالعمولة حاليًا. الأسعار تتغير بسرعة وتختلف حسب البائع — تحقق قبل الشراء.',
       },
       vsBoutique: {
         id: 'vs-boutique',
@@ -1937,6 +1945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Beelink SER10 MAX 가격 확인 →', url: 'https://www.bee-link.com/products/beelink-ser10-max-amd-pro-ryzen-ai-9-hx-470', productName: 'Beelink SER10 MAX', productCategory: 'Mini PC' },
           { label: 'MINISFORUM AI X1 Pro 가격 확인 →', url: 'https://www.minisforum.com/products/minisforum-ai-x1-pro', productName: 'MINISFORUM AI X1 Pro', productCategory: 'Mini PC' },
         ],
+        note: '제품 링크이며 현재 제휴 관계는 없습니다. 가격은 빠르게 변동하며 판매처마다 다릅니다 — 구매 전 확인하십시오.',
       },
       vsBoutique: {
         id: 'vs-boutique',
