@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared',
     seoTitle: 'Apple Silicon vs NVIDIA for Local LLMs 2026',
     intro: 'Apple Silicon vs NVIDIA GPU for local LLMs: M5 Max vs RTX 4090 speed, cost, power, VRAM limit vs unified memory, workflow comparison. The crossover point: ~24GB model size. Below that, NVIDIA is faster. Above that, Apple Silicon is the only consumer option.',
-    metaDescription: 'M5 Max vs RTX 4090: speed, cost, power, VRAM vs unified memory. Crossover at ~24GB. Below 24GB: NVIDIA faster. Above 24GB: Apple Silicon only. Full comparison.',
+    metaDescription: 'M5 Max vs RTX 4090 and RTX 5090: speed, cost, power, VRAM vs unified memory. Crossover at ~24GB. Below: NVIDIA faster. Above: Apple Silicon only.',
     twitterDescription: 'Mac vs NVIDIA for local AI 2026: M5 Max vs RTX 4090 benchmarks, 3-year TCO, power costs, and workflow comparison. Crossover threshold at 24GB model size.',
     publishDate: '2026-05-15',
     dateModified: '2026-08-28',
@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '13 min read',
     educationalLevel: 'Intermediate',
     primaryTerm: 'Apple Silicon vs NVIDIA GPU local LLM',
-    targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'local AI platform comparison', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090'],
+    targetKeywords: ['Mac vs GPU LLM', 'M5 vs RTX benchmark', 'local AI platform comparison', 'Apple Silicon vs NVIDIA', 'M5 Max vs RTX 4090', 'M5 Max vs RTX 5090'],
     leadAnswerBlock: '**Crossover threshold: ~24GB model size. RTX 4090 (1,008 GB/s) is faster on 8B–24B models. M5 Max (128GB unified memory) is the only consumer option for 70B models without dual-GPU complexity. Apple\'s August 25, 2026 refresh added a $899 entry-level M6 Mac mini (32GB max) and raised the Mac Studio M5 Ultra ceiling to 512GB unified memory (top configuration, ships late October 2026). 3-year TCO: Mac Mini M5 Pro $1,804 vs RTX 4090 desktop $3,682. Power: Mac Mini $35/year vs RTX 4090 $394/year at 24/7.**',
     ctaText: 'Choosing between Mac and NVIDIA for local AI? Compare your local Llama or Mistral output (running on either platform) against GPT-4, Claude, Gemini, and 22 other models with PromptQuorum — validate that your hardware investment delivers cloud-quality results for your specific tasks before committing $900–5,500 in hardware.',
     quickAnswerTop: {
