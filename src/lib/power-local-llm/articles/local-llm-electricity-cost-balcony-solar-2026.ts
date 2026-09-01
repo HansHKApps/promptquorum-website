@@ -1008,4 +1008,259 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
     },
   },
+  zh: {
+    freshness_tier: 'semi_annual',
+    publishDate: '2026-09-01',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
+    current_hardware_mentioned: [
+      'RTX 4090',
+      'RTX 3090',
+      'RTX 4070',
+      'Mac Mini M4',
+      'MacBook Pro M4 Max',
+      'EcoFlow STREAM Ultra',
+      'Jackery HomePower 2000 Ultra',
+      'Zendure SolarFlow Hub 2000',
+      'BLUETTI AC180',
+      'BLUETTI AC180P',
+    ],
+    theme: 'Overview & Reference',
+    affiliateDisclosure: true,
+    title: '运行本地LLM的电费是多少——阳台光伏能否抵消（2026版）',
+    seoTitle: '本地LLM电费对比阳台光伏（2026版）',
+    intro:
+      '一块每天运行本地LLM几个小时的GPU,会产生真实、可计算的电费——在美国,每天4小时的中等使用量约为每月$6.60,如果让耗电大户的显卡24小时不间断运行,则约为每月$60。一套800W的阳台光伏系统在晴朗的夏日可以轻松覆盖中等使用场景,但无法抵消长期满载运行的重度负载,尤其是在冬季。本指南给出常见本地LLM硬件的精确计算,对比美国和德国的电费,并测算你实际需要的电池容量——同时诚实说明太阳能在什么情况下真正有用、什么情况下没用。',
+    metaDescription:
+      '本地LLM电费计算:RTX 4090/3090/4070和Mac Mini M4的功耗、美国($0.184/kWh)和德国(约€0.32/kWh)的月度电费,以及800W阳台光伏系统能否抵消这笔费用。',
+    twitterDescription:
+      '本地LLM实际电费是多少——RTX 4090/3090/4070和Mac Mini M4功耗、美国与德国月度电费对比,以及800W阳台光伏能否切实抵消这笔支出。',
+    readTime: '阅读约10分钟',
+    educationalLevel: 'Intermediate',
+    audience: '想了解自己本地LLM设备真实电费、以及阳台光伏能否抵消该费用的用户',
+    primaryTerm: '本地LLM电费',
+    targetKeywords: [
+      '本地 llm 电费',
+      'llm 24小时运行 电费',
+      'gpu 阳台光伏',
+      '太阳能抵消ai电费',
+      '本地ai耗电计算',
+    ],
+    leadAnswerBlock:
+      '**一块处于空闲状态、每天运行本地LLM几个小时的GPU,在美国每月电费约为$6.60(每天1.2kWh,电价18.4美分/kWh)——如果让RTX 4090级别的显卡24小时不间断满载运行,月费用则接近$60。** 一套800W的阳台光伏系统在晴朗的夏日大约能发电3–4.5kWh,但冬季每天仅能发电约0.5–1.5kWh——夏季可以充分覆盖中等使用场景,但无论哪个季节都无法有意义地抵消长期满载运行的重度负载。请按GPU的实际耗电量而非光伏系统的额定功率来选择电池容量。',
+    quickAnswerTop: {
+      zh: {
+        question: '运行本地LLM的电费是多少？',
+        answer:
+          '一块300W的GPU每天运行4小时,在美国按18.4美分/kWh计算,每月电费约为$6.60;在德国,按每天1.2kWh、25–40欧分/kWh的电价区间计算,月费用约为€11–15(具体取决于电价方案)。一块450W的显卡24小时不间断运行,在美国月费用则接近$60。一套800W的阳台光伏系统可以抵消夏季中等使用场景,但无论哪个季节都无法抵消24小时重度使用场景。',
+        bullets: [
+          'RTX 4090:空闲约20–33W,满载最高450W(TBP)',
+          'RTX 3090:空闲约18–26W,满载约350W',
+          'RTX 4070:空闲10W,游戏平均功耗186W,额定TDP 200W',
+          'Mac Mini M4:空闲低于5W,LLM推理时最高约65W',
+          '800W阳台光伏:夏季每天约3–4.5kWh,冬季每天约0.5–1.5kWh(基于德国数据)',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: 'tldr' },
+      { label: '本地LLM硬件实际耗电多少？', anchor: 'gpu-power' },
+      { label: '每月电费是多少？', anchor: 'monthly-cost' },
+      { label: '阳台光伏能否抵消本地LLM设备的电费？', anchor: 'solar-offset' },
+      { label: '实际需要多大容量的电池？', anchor: 'battery-sizing' },
+      { label: '究竟谁适合这样做？', anchor: 'who-should-do-this' },
+      { label: '常见错误', anchor: 'common-mistakes' },
+      { label: '常见问题', anchor: 'faq' },
+      { label: '资料来源', anchor: 'sources' },
+    ],
+    snippetBlocks: [
+      { type: 'one-sentence', content: '一套本地LLM设备在每天4小时的中等使用量下,电费约为每月$6.60;若24小时运行,则约为每月$60——800W阳台光伏系统可以抵消夏季中等使用场景,但无论哪个季节都无法抵消24小时重度使用场景。' },
+      { type: 'plain-terms', content: 'kWh(千瓦时)是你电费账单的计价单位——一块300瓦的GPU运行1小时消耗0.3kWh。用瓦数乘以小时数,除以1,000,再乘以你的每千瓦时电价,即可得出费用。阳台光伏的发电量也用同样的单位衡量,因此这两个数字可以直接比较。' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        title: '核心要点',
+        isTldr: true,
+        items: [
+          '一块300W的GPU每天运行4小时,在美国电费约为每月$6.60(18.4美分/kWh),在德国根据电价方案约为每月€11–15',
+          '一块450W的GPU(RTX 4090级别)24小时不间断运行,在美国月费用接近$60——几乎是中等使用场景的10倍',
+          'Apple Silicon(Mac Mini M4:空闲低于5W,推理峰值约65W)的运行成本仅为独立GPU设备的一小部分',
+          '一套800W阳台光伏系统在晴朗的夏日每天可发电约3–4.5kWh,但冬季每天仅约0.5–1.5kWh——季节性差异约为3–7倍',
+          '请按GPU每天的实际耗电量来选择电池容量,而不是按光伏系统800W的额定功率——这两个数字不可直接比较',
+          '法国插电式光伏逆变器的功率上限为800W,与德国相同——并不存在针对这类系统的独立、更严格的法国限值',
+        ],
+      },
+      gpuPower: {
+        id: 'gpu-power',
+        title: '本地LLM硬件实际耗电多少？',
+        content:
+          '**空闲功耗与满载功耗之间的差距,正是电费计算并不简单的原因——一块显卡可能一天中有20个小时几乎无声待机,但只要剩下的4小时满载运行,它仍可能是你账单上最大的单项支出。** 以下数据来自厂商公布的规格和独立测量结果,并非PromptQuorum自行进行的基准测试。',
+        columns: ['硬件', '空闲', '满载 / 推理'],
+        rows: [
+          { '硬件': 'RTX 4090', '空闲': '约20–33W', '满载 / 推理': '最高450W(TBP)' },
+          { '硬件': 'RTX 3090', '空闲': '约18–26W', '满载 / 推理': '约350W' },
+          { '硬件': 'RTX 4070', '空闲': '10W', '满载 / 推理': '平均186W(额定TDP 200W)' },
+          { '硬件': 'Mac Mini M4', '空闲': '低于5W', '满载 / 推理': '最高约65W' },
+          { '硬件': 'MacBook Pro M4 Max', '空闲': '个位数低端', '满载 / 推理': '推理约40–80W;系统峰值约110W' },
+        ],
+        items: [
+          'RTX 4090:NVIDIA标称整卡功耗(TBP)为450W;独立测量显示空闲功耗在18W(激进限功率配置)到33W(Founders Edition)之间,满载功耗根据工作负载可达400–600W。',
+          'RTX 3090:空闲功耗根据显示器配置约为18–26W;游戏或推理工作负载下的满载功耗约为350W,部分测量结果高达365W。',
+          'RTX 4070:NVIDIA官方公布的数据——空闲10W、视频播放16W、游戏平均186W——对应额定TDP为200W。实际测试峰值曾达253W。',
+          'Mac Mini M4:独立测试显示空闲功耗低于5W,LLM推理时最高约65W(其中一项测量具体记录了50W的峰值)。五台Mac Mini组成的集群在全力推理时合计功耗约200W。',
+          'MacBook Pro M4 Max:LLM推理本身消耗约40–80W;包含显示屏在内的整机系统,在最苛刻的综合负载下峰值约为110W——Apple Silicon典型的30–70W推理功耗范围,远低于独立桌面GPU的300W以上。',
+        ],
+      },
+      monthlyCost: {
+        id: 'monthly-cost',
+        title: '每月电费是多少？',
+        content:
+          '**计算公式到处通用:kWh = 瓦数 ÷ 1,000 × 小时数,费用 = kWh × 你的每千瓦时电价。** 2026年年中,美国居民电价平均约为18.4美分/kWh(EIA数据);德国的居民电价则远不统一——新用户电价方案约为每千瓦时25–27欧分,而默认的"基本供应"(Grundversorgung)电价可高达每千瓦时40欧分,家庭平均电价约为每千瓦时31–32欧分。',
+        columns: ['使用模式', '每天kWh', '美国月费用', '德国月费用'],
+        rows: [
+          { '使用模式': '300W,每天4小时(中等)', '每天kWh': '1.2kWh', '美国月费用': '约$6.60', '德国月费用': '约€11–15' },
+          { '使用模式': '65W,每天4小时(Mac Mini M4)', '每天kWh': '0.26kWh', '美国月费用': '约$1.44', '德国月费用': '约€2.50–3.20' },
+          { '使用模式': '450W,每天24小时(重度、常开)', '每天kWh': '10.8kWh', '美国月费用': '约$59.60', '德国月费用': '约€100–130' },
+        ],
+        note: '美国数据采用EIA报告的18.4美分/kWh居民平均电价(2026年年中);德国数据采用反映真实电价差异的25–40欧分/kWh区间,而非单一费率——在将其中任一数字当作精确值使用前,请核对你自己的账单。',
+      },
+      solarOffset: {
+        id: 'solar-offset',
+        title: '阳台光伏能否抵消本地LLM设备的电费？',
+        content: [
+          '**一套800W的阳台光伏系统——这是德国插电式光伏的法定上限,截至本文撰写时法国也是如此(两国都将逆变器的交流输出限制在800W,而非组件功率)——在朝南、晴朗的夏日大约能发电3–4.5kWh,但冬季每天仅约发电0.5–1.5kWh。** 这是由太阳高度角和日照时长导致的约3–7倍季节性差异,并非系统故障。',
+          '将其与上文的中等使用场景比较:GPU每天耗电1.2kWh。夏季,800W系统每天3–4.5kWh的发电量足以覆盖这一需求,还有真正的余量可用于其他家庭用电。冬季,每天0.5–1.5kWh的光伏发电量低于或勉强等于每天1.2kWh的需求——在德国大部分地区,这套系统在一年中约三分之一的时间里不再是有意义的抵消手段。',
+          '对于每天10.8kWh的重度24小时使用场景,即便是夏季最佳的每天4.5kWh发电量,也远远覆盖不到负荷的一半,冬季发电量则只能覆盖其中很小一部分。太阳能可以显著降低日间安排的中等本地LLM使用的电费,但无论哪个季节,都无法把长期满载运行的重度设备变成"绿色AI"。',
+        ],
+        note: '如果你的使用是重度且常开的,请不要将太阳能与本地LLM设备搭配使用——即便是法定800W插电式系统在夏季的最佳发电量,也远远覆盖不到这类负荷的一半,冬季更是几乎覆盖不了。太阳能对日间安排的中等使用是真实、有意义的抵消手段;但它并不能让24小时的重度推理变得"环保"。',
+      },
+      batterySizing: {
+        id: 'battery-sizing',
+        title: '实际需要多大容量的电池？',
+        content:
+          '**请按GPU每天实际的kWh耗电量来选择电池容量,而不是按光伏系统800W的额定功率——这两个数字衡量的是不同的东西,不能直接比较。** 对于每天1.2kWh的中等使用场景,即使是小容量电池也能覆盖约一天的储电需求;对于每天10.8kWh的重度使用场景,下表中的任何单一设备都远远不够,除非叠加多个扩展模块。',
+        columns: ['电池', '容量', '价格'],
+        rows: [
+          { '电池': 'BLUETTI AC180', '容量': '1.15kWh(1,152Wh)', '价格': '$499' },
+          { '电池': 'BLUETTI AC180P', '容量': '1.44kWh(1,440Wh)', '价格': '$649' },
+          { '电池': 'Zendure SolarFlow Hub 2000', '容量': '基础1.92kWh,最高可扩展至7.68kWh(4个模块)', '价格': 'Hub单机€399起;完整套装€1,259起' },
+          { '电池': 'Jackery HomePower 2000 Ultra', '容量': '2–8kWh可扩展', '价格': '€1,268(基础机型)' },
+          { '电池': 'EcoFlow STREAM Ultra', '容量': '模块化/可扩展(请核实当前配置)', '价格': '$1,279(标价$1,899);10年质保,70%容量保持率下6,000次循环' },
+        ],
+        affiliateLinks: [
+          { label: '查看BLUETTI AC180价格 →', url: 'https://www.bluettipower.com/products/ac180', productName: 'BLUETTI AC180', productCategory: 'Balcony solar battery' },
+          { label: '查看BLUETTI AC180P价格 →', url: 'https://www.bluettipower.com/products/ac180p', productName: 'BLUETTI AC180P', productCategory: 'Balcony solar battery' },
+          { label: '查看Zendure SolarFlow Hub 2000价格 →', url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', productName: 'Zendure SolarFlow Hub 2000', productCategory: 'Balcony solar battery' },
+          { label: '查看Jackery HomePower 2000 Ultra价格 →', url: 'https://eu.jackery.com/products/homepower-2000-ultra', productName: 'Jackery HomePower 2000 Ultra', productCategory: 'Balcony solar battery' },
+          { label: '查看EcoFlow STREAM Ultra价格 →', url: 'https://us.ecoflow.com/products/stream-ultra', productName: 'EcoFlow STREAM Ultra', productCategory: 'Balcony solar battery' },
+        ],
+        note: '产品链接,目前没有任何联盟营销关系——仅为指向厂商官方产品页面的普通链接。本表未包含Anker SOLIX和ALLPOWERS:我们无法以上述相同的双来源标准核实其当前容量和价格,因此不会为它们发布占位数据。',
+      },
+      whoShouldDoThis: {
+        id: 'who-should-do-this',
+        title: '究竟谁适合这样做？',
+        content:
+          '**对于阳光充足地区、日间安排的中等本地LLM使用而言,太阳能加电池的组合是合理的——但把它当作让24小时重度推理"变绿"的手段则并不合理。**',
+        items: [
+          '**适合的情况:** 周末或晚间的爱好性使用(每天几个小时)、阳光充足或气候温和地区、已安装或计划为其他家庭用电安装阳台光伏、愿意将较重的本地LLM任务安排在白天以直接使用太阳能,而不是先储存再放电。',
+          '**不适合的情况:** 常开的重度推理(RTX 4090级别显卡24小时运行)、以冬季使用为主的模式、没有可用的朝南阳台或窗户来安装组件的公寓,或期望这种组合能完全消除电费而非有意义地降低电费。',
+          '**在表述上保持诚实:** 本地LLM加阳台光伏对中等使用而言是真实的成本削减,但对一台全天满载运行的设备而言,并不构成"碳中和AI"的说法——本指南的计算并不支持这种更强的说法,夸大其词会削弱中等使用场景本身真实成立的理由。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '常见错误',
+        items: [
+          '把光伏系统的额定功率(800W)直接与每天的实际发电量(kWh)相比较。一套800W系统若以额定功率运行24小时,理论上可发电19.2kWh——但实际发电量在夏季晴好天气下约为3–4.5kWh,冬季约为0.5–1.5kWh,因为太阳不会以满强度照射24小时。',
+          '按光伏系统的发电量而非GPU的实际耗电量来确定电池容量。太阳能每天kWh和GPU每天kWh这两个数字需要相互比较,而不能假定它们自动匹配。',
+          '假设一套法定限制在800W的阳台系统能完全覆盖一块24小时运行的450W GPU。即便是最佳的夏季发电量(每天最高4.5kWh),也覆盖不到每天10.8kWh负荷的一半,冬季发电量则只能覆盖其中很小一部分。',
+          '仅仅因为法国和德国经常被分开讨论,就认为法国的插电式光伏规则明显比德国更严格。两国目前都将逆变器的交流输出限制在800W——两国之间具体的差异在于登记流程(法国是向电网运营商免费在线申报,德国是在Marktstammdatenregister登记),而非功率限值本身。',
+          '在估算月度电费时忽略GPU的空闲功耗。一块每天20小时以20–30W空闲运行的显卡,仅这一项就会额外增加每天约0.4–0.6kWh的耗电——相较于24小时满载场景不算多,但也并非零,在计算准确的月度总额时值得考虑在内。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '运行本地LLM的电费是多少？',
+            a: '对于中等使用量(一块300W的GPU每天运行4小时),按18.4美分/kWh计算,在美国每月电费约为$6.60;在德国根据电价方案不同,约为每月€11–15。若在一块450W的显卡上进行重度24小时使用,美国月费用则接近$60。',
+          },
+          {
+            q: 'GPU的空闲功耗对电费有影响吗？',
+            a: '有影响,但影响程度小于满载功耗。一块每天20小时以20–30W空闲运行的显卡,大约会消耗0.4–0.6kWh——虽然增加的费用不多,但确实是真实存在的,尤其是按整月计算时,值得与实际推理时长一并计入。',
+          },
+          {
+            q: '阳台光伏能否完全为本地LLM设备供电？',
+            a: '对于夏季日间安排的中等使用,可以——800W系统每天3–4.5kWh的发电量足以充分覆盖每天1.2kWh的GPU用电需求。对于24小时的重度使用,无论哪个季节都不行——即便是最佳的夏季发电量,也远远覆盖不到每天10.8kWh负荷的一半。',
+          },
+          {
+            q: '800W的阳台光伏系统每天能发多少电？',
+            a: '在朝南、晴朗的夏日大约能发电3–4.5kWh,冬季每天约0.5–1.5kWh——这是由太阳高度角和日照时长导致的约3–7倍季节性差异,数据基于德国的光伏发电情况(德国的气候对中欧和北欧大部分地区来说是一个合理的参考)。',
+          },
+          {
+            q: '本地LLM设备需要多大容量的电池？',
+            a: '请按GPU每天实际的kWh耗电量来确定容量,而不是按光伏系统800W的额定功率。对于每天1.2kWh的中等使用量,像BLUETTI AC180(1.15kWh)或AC180P(1.44kWh)这样的单一设备就能覆盖约一天的储电量。对于24小时的重度使用,本对比中的任何单一设备都远远不够——你需要叠加多个扩展模块(Zendure SolarFlow最高可达7.68kWh,Jackery HomePower 2000 Ultra最高可达8kWh)。',
+          },
+          {
+            q: '在本地AI方面,Mac Mini M4比RTX 4090运行成本更低吗？',
+            a: '明显更低。Mac Mini M4空闲功耗低于5W,推理时最高约65W;而RTX 4090空闲功耗为20–33W,满载最高450W——按每天使用4小时计算,在美国Mac Mini的月费用约为$1.44,而RTX 4090约为$6.60,在更重、更长时间的工作负载下这一差距会进一步明显拉大。',
+          },
+          {
+            q: '法国的阳台光伏功率上限与德国不同吗？',
+            a: '不同。目前两国都将插电式光伏逆变器的交流输出限制在800W。两国之间的差异在于流程:法国采用向电网运营商免费在线申报,德国则采用Marktstammdatenregister登记。功率上限本身是相同的。',
+          },
+          {
+            q: '对于24小时重度使用来说,靠太阳能实现"绿色本地AI"现实吗？',
+            a: '在法定限制为800W的插电式系统下并不现实。无论哪个季节,计算结果都不支持对一台全天满载运行的设备实现完全抵消的说法——太阳能能够切实降低日间安排的中等本地LLM使用的电费,但无法消除让一块耗电大户的GPU不间断运行所产生的成本。',
+          },
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '资料来源',
+        links: [
+          { url: 'https://www.chooseenergy.com/electricity-rates-by-state/', title: 'Electricity Rates by State (2026)', description: '美国各州居民电价数据,包括本指南使用的约18.4美分/kWh全国平均值。' },
+          { url: 'https://www.stromauskunft.de/strompreise/', title: 'Aktuelle Strompreise (Stromauskunft.de)', description: '涵盖新用户电价、平均电价和基本供应(Grundversorgung)电价的德国居民电价数据。' },
+          { url: 'https://www.techpowerup.com/306765/nvidia-geforce-rtx-4070-has-an-average-gaming-power-draw-of-186-w', title: 'NVIDIA GeForce RTX 4070 Power Draw', description: 'TechPowerUp对NVIDIA官方公布的RTX 4070功耗数据(空闲、视频播放、游戏平均值)的报道。' },
+          { url: 'https://www.xda-developers.com/run-local-llms-one-worlds-priciest-energy-markets/', title: 'Running Local LLMs in a High-Cost Energy Market', description: '对Mac Mini M4空闲和推理功耗、以及多台设备集群功耗的独立测量。' },
+          { url: 'https://de.bluettipower.eu/blogs/solarstrom/balkonkraftwerk-800w-ertrag-pro-tag', title: 'Balkonkraftwerk 800W Ertrag pro Tag', description: '关于800W阳台光伏系统各季节每日发电量的德国市场数据。' },
+          { url: 'https://eu.zendure.com/products/solarflow-hub2000-balcony-power-plant', title: 'Zendure SolarFlow Hub 2000——官方产品页面', description: 'Hub 2000及其扩展电池的官方容量与价格信息。' },
+          { url: 'https://eu.jackery.com/products/homepower-2000-ultra', title: 'Jackery HomePower 2000 Ultra——官方产品页面', description: 'HomePower 2000 Ultra的官方容量、价格及扩展规格。' },
+          { url: 'https://www.bluettipower.com/products/ac180', title: 'BLUETTI AC180——官方产品页面', description: '便携电源AC180的官方容量与价格信息。' },
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      'headline': '运行本地LLM的电费是多少——阳台光伏能否抵消（2026版）',
+      'description': '本地LLM电费计算:RTX 4090/3090/4070和Mac Mini M4的功耗、美国和德国的月度电费,以及800W阳台光伏系统能否抵消这笔费用。',
+      'datePublished': '2026-09-01',
+      'dateModified': '2026-09-01',
+      'author': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'PromptQuorum',
+        'url': 'https://www.promptquorum.com',
+      },
+      'inLanguage': 'zh',
+      'url': 'https://www.promptquorum.com/zh/power-local-llm/local-llm-electricity-cost-balcony-solar-2026',
+      'articleBody': '一块每天运行本地LLM几个小时的GPU,会产生真实、可计算的电费。一套800W的阳台光伏系统在晴朗的夏日可以轻松覆盖中等使用场景,但无法抵消长期满载运行的重度负载,尤其是在冬季。',
+      'educationalLevel': 'Intermediate',
+      'proficiencyLevel': 'Intermediate',
+      'audience': { '@type': 'Audience', 'audienceType': '想了解自己本地LLM设备真实电费、以及阳台光伏能否抵消该费用的用户' },
+      'about': [
+        { '@type': 'Thing', 'name': 'RTX 4090' },
+        { '@type': 'Thing', 'name': 'Mac Mini M4' },
+        { '@type': 'Thing', 'name': '阳台光伏' },
+      ],
+      'speakable': { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways'] },
+    },
+  },
 }
