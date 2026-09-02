@@ -3246,6 +3246,14 @@
   "Stable Diffusion": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cloud-gpu-rental-comparison-2026",
         "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
@@ -3316,21 +3324,21 @@
         "url": "/local-llms/best-amd-mini-pc-local-llm-2026",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-vs-sillytavern",
-        "title": "Open WebUI vs SillyTavern: Best Chat UI for Local LLMs",
-        "url": "/local-llms/open-webui-vs-sillytavern",
-        "dateModified": "2026-08-30",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 13,
+    "totalCount": 15,
     "capped": true
   },
   "ComfyUI": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "local-ai-video-generation-vs-cloud",
@@ -3364,11 +3372,33 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
+    "capped": false
+  },
+  "AUTOMATIC1111 WebUI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "ControlNet": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
@@ -3386,7 +3416,37 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
+    "capped": false
+  },
+  "AnimateDiff": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "animatediff-video-generation-guide-2026",
+        "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
+        "url": "/power-local-llm/animatediff-video-generation-guide-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-video-generation-vs-cloud",
+        "title": "Invideo vs Local AI Video: One Costs $0 Plus Your Weekend — the Other Costs $17",
+        "url": "/power-local-llm/local-ai-video-generation-vs-cloud",
+        "dateModified": "2026-09-01",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-image-generation-vs-cloud",
+        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
+        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
+        "dateModified": "2026-08-21",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "Smart Connections": {

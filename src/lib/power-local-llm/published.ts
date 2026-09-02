@@ -113,6 +113,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-ai-video-generation-vs-cloud',
   'local-ai-image-generation-vs-cloud',
 
+  // AnimateDiff guide — 2026-09-02
+  'animatediff-video-generation-guide-2026',
+
   // Web Hosting Series 2026-08-30 — 9 localized pages, en+native per file
   'best-web-hosting-2026',
 
