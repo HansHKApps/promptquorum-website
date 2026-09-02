@@ -2517,23 +2517,23 @@
       ],
       "images": [
         {
-          "url": "/public/images/local-llm-cost-comparison.svg",
+          "url": "/images/local-llm-cost-comparison.svg",
           "title": "Year 1: Local LLM costs $3,100 hardware + electricity vs. $12,000–$36,000 for cloud APIs. Year 3+: Monthly cost drops to $120 amortized, saving $16,000+ annually for active teams."
         },
         {
-          "url": "/public/images/team-llm-architecture-comparison.svg",
+          "url": "/images/team-llm-architecture-comparison.svg",
           "title": "Single vLLM server handles 5-10 users with simple setup but single point of failure. Dual-GPU cluster (10-50 users) provides automatic failover and higher throughput with load balancing."
         },
         {
-          "url": "/public/images/team-llm-auth-flow.svg",
+          "url": "/images/team-llm-auth-flow.svg",
           "title": "Simple token-based auth for SMB teams, and OAuth 2.0 with SAML 2.0 for enterprise SSO integration with automatic group assignment and role-based access control."
         },
         {
-          "url": "/public/images/team-scaling-progression.svg",
+          "url": "/images/team-scaling-progression.svg",
           "title": "Scaling progression from 5-10 users on single GPU to 100+ users in enterprise multi-region deployment. Hardware requirements and setup time increase with team size."
         },
         {
-          "url": "/public/images/team-llm-monitoring-dashboard.svg",
+          "url": "/images/team-llm-monitoring-dashboard.svg",
           "title": "Real-time Prometheus metrics dashboard showing GPU utilization, request latency, queue depth, and throughput. Alerts trigger when latency exceeds 2 seconds or queue depth exceeds 10 requests."
         }
       ]
@@ -3961,7 +3961,7 @@
       ]
     },
     "prompt-with-images": {
-      "dateModified": null,
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-03-25",
       "hasSections": true,
@@ -5172,7 +5172,7 @@
       "images": []
     },
     "multi-model-prompt-testing": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-02",
       "hasSections": true,
@@ -5547,6 +5547,42 @@
         }
       ]
     },
+    "asus-mini-pc-local-ai-2026": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-01",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-electricity-cost-balcony-solar-2026": {
+      "dateModified": "2026-09-01",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-01",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "cloud-gpu-rental-guide-2026": {
       "dateModified": "2026-07-01",
       "lastFactChecked": null,
@@ -5887,7 +5923,7 @@
       ]
     },
     "best-local-llm-apps-iphone-2026": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -5905,15 +5941,15 @@
       "images": [
         {
           "url": "/images/best-local-llm-apps-iphone-2026-which-app-hero-en.webp",
-          "title": "Which local AI app to install on iPhone: PocketPal AI (free default), Private LLM (Siri + Shortcuts), MLC Chat (fastest on Apple Silicon), LLM Farm (configurable), Apple Intelligence (iOS 18+ built-in)."
+          "title": "Which local AI app to install on iPhone: PocketPal AI (free default), Private LLM (Siri + Shortcuts), Locally AI (free MLX, LM Studio team), MLC Chat (Metal-fast but dormant), Apple Intelligence (iOS built-in)."
         },
         {
           "url": "/images/best-local-llm-apps-iphone-2026-comparison-hero-en.webp",
-          "title": "iPhone local LLM app comparison: PocketPal AI and LLM Farm (free, ~10–15 tok/s), MLC Chat (free, ~14–20 tok/s Metal-accelerated), Private LLM (~£10 one-time, Siri + Shortcuts), Apple Intelligence (system-integrated, iOS 18+)."
+          "title": "iPhone local LLM app comparison: PocketPal AI (free, ~10–15 tok/s), Locally AI (free, Apple MLX + Shortcuts), MLC Chat (free, ~14–20 tok/s Metal-accelerated, dormant since late 2024), Private LLM ($4.99 one-time, Siri + Shortcuts), Apple Intelligence (system-integrated)."
         },
         {
           "url": "/images/iphone-llm-apps-models-tier-en.svg",
-          "title": "LLM model recommendations by iPhone RAM: Phi-4 Mini 3.8B Q4_K_M for 8 GB iPhones (15 Pro–17 Pro) at 8–20 tok/s; Qwen3 1.7B Q4_K_M for 6 GB iPhones (14 Pro, non-Pro) at 12–20 tok/s; iPhone SE (4 GB) not recommended."
+          "title": "LLM model recommendations by iPhone RAM: Phi-4 Mini 3.8B Q4_K_M for 8 GB+ iPhones (15 Pro–17 Pro) at 8–20 tok/s; Qwen3 1.7B Q4_K_M for 6 GB iPhones (14 Pro, non-Pro) at 12–20 tok/s; iPhone SE (4 GB) not recommended."
         },
         {
           "url": "/images/iphone-llm-apps-battery-thermal-en.svg",
@@ -5921,7 +5957,7 @@
         },
         {
           "url": "/images/iphone-llm-apps-ios-integration-en.svg",
-          "title": "iOS integration by local LLM app: Private LLM and Apple Intelligence support Shortcuts and Siri; PocketPal AI, MLC Chat, and LLM Farm are standalone chat apps with no Shortcuts actions as of 2026. PocketPal AI, MLC Chat, and LLM Farm are open-source."
+          "title": "iOS integration by local LLM app: Private LLM, Locally AI, and Apple Intelligence support Shortcuts (Private LLM adds Siri); PocketPal AI and MLC Chat are standalone chat apps with no Shortcuts actions as of 2026."
         }
       ]
     },
@@ -7058,7 +7094,7 @@
       ]
     },
     "cursor-vs-windsurf-vs-copilot-cline-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-08-27",
       "hasSections": true,
