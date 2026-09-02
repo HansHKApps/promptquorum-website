@@ -26,6 +26,10 @@ import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
+import toolArticleIndex from '@/generated/tool-article-index.json'
+
+type ToolArticleEntry = { cluster: string; slug: string; title: string; url: string; dateModified: string | null }
+type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number; capped: boolean }>
 
 interface Props {
   slug: string
@@ -84,6 +88,42 @@ const POST_UI: Record<string, Record<string, string>> = {
     pt: 'Última atualização:',
     ar: 'آخر تحديث:',
     ko: '최종 업데이트:',
+  },
+  // "Articles about {tool} ({count})" — collapsible disclosure label above the
+  // related-articles list in each directory item-heading card. {tool} and
+  // {count} are replaced at render time.
+  articlesAbout: {
+    en: 'Articles about {tool} ({count})',
+    de: 'Artikel über {tool} ({count})',
+    fr: 'Articles sur {tool} ({count})',
+    ja: '{tool}に関する記事（{count}件）',
+    zh: '关于{tool}的文章（{count}篇）',
+    es: 'Artículos sobre {tool} ({count})',
+    pt: 'Artigos sobre {tool} ({count})',
+    ar: 'مقالات حول {tool} ({count})',
+    ko: '{tool} 관련 문서 ({count}개)',
+  },
+  articlesAboutUpdated: {
+    en: 'Updated',
+    de: 'Aktualisiert',
+    fr: 'Mis à jour',
+    ja: '更新日',
+    zh: '更新于',
+    es: 'Actualizado',
+    pt: 'Atualizado',
+    ar: 'محدَّث',
+    ko: '업데이트',
+  },
+  articlesAboutMore: {
+    en: '+{count} more not shown',
+    de: '+{count} weitere nicht angezeigt',
+    fr: '+{count} autres non affichés',
+    ja: 'さらに{count}件（非表示）',
+    zh: '另有{count}篇未显示',
+    es: '+{count} más no mostrados',
+    pt: '+{count} mais não exibidos',
+    ar: '+{count} أخرى غير معروضة',
+    ko: '표시되지 않은 {count}개 더보기',
   },
   ctaText: {
     en: 'Run PromptQuorum with a local LLM, your own API keys, or both — you pick the backend.',
@@ -450,6 +490,46 @@ interface LightboxImage {
   caption?: string
 }
 
+// Collapsible "Articles about {tool}" disclosure rendered below each
+// software-directory item-heading card (see local-llm-software-directory-2026.ts).
+// Data is generated at build time by scripts/generate-tool-article-index.mjs
+// (src/generated/tool-article-index.json) — matched articles are always the
+// EN edition (first-pass scope, see TASK-related-articles-block.md Step 5).
+function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang: Language }) {
+  const entry = (toolArticleIndex as ToolArticleIndex)[toolName]
+  if (!entry || entry.articles.length === 0) return null
+
+  const labelTemplate = POST_UI.articlesAbout[lang] ?? POST_UI.articlesAbout['en']
+  const label = labelTemplate.replace('{tool}', toolName).replace('{count}', String(entry.totalCount))
+  const updatedLabel = POST_UI.articlesAboutUpdated[lang] ?? POST_UI.articlesAboutUpdated['en']
+  const moreTemplate = POST_UI.articlesAboutMore[lang] ?? POST_UI.articlesAboutMore['en']
+
+  return (
+    <details className="mt-3 group">
+      <summary className="cursor-pointer text-sm font-semibold text-primary select-none">
+        {label}
+      </summary>
+      <ul className="mt-2 space-y-1.5 text-sm">
+        {entry.articles.map((a) => (
+          <li key={`${a.cluster}/${a.slug}`} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+            <Link href={a.url} className="text-primary hover:underline">{a.title}</Link>
+            {a.dateModified && (
+              <span className="text-xs text-text-secondary shrink-0">
+                {updatedLabel} {formatDisplayDate(a.dateModified, lang)}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+      {entry.capped && (
+        <p className="mt-1.5 text-xs text-text-secondary italic">
+          {moreTemplate.replace('{count}', String(entry.totalCount - entry.articles.length))}
+        </p>
+      )}
+    </details>
+  )
+}
+
 function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
   const tableScrollRef = useRef<HTMLDivElement>(null)
@@ -680,6 +760,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                     </div>
                   ))}
                 </dl>
+                <RelatedArticlesDisclosure toolName={name.replace(/\*\*/g, '')} lang={lang} />
               </div>
             )
           })}
