@@ -5,13 +5,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Tool Comparisons',
     title: 'Best Local LLM Apps for Android?',
-    seoTitle: 'Best Offline AI Apps for Android 2026: Quick Picks',
-    metaDescription: 'Run AI offline on Android in 2026. Top pick: MLC Chat for most phones — easy setup, no cloud needed. Plus Pocketpal and Termux + Ollama. RAM guide included.',
+    seoTitle: 'Best Local LLM Apps for Android 2026: 3 Top Picks',
+    metaDescription: 'MLC Chat, Pocketpal, or Termux + Ollama — which local LLM app fits your Android phone? Compare setup, RAM needs, and GGUF support. Fully offline.',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-en.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-14',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Beginner',
@@ -126,11 +126,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'How do I install Ollama on Android via Termux?',
-            a: 'Install Termux from F-Droid (not Google Play — the Play Store version is outdated). Inside Termux, run <code>pkg update && pkg install ollama</code>. Then use standard Ollama commands: <code>ollama pull llama3</code> and <code>ollama run llama3</code>. Your device needs 8+ GB RAM for reliable operation.',
+            a: 'Install Termux from F-Droid (not Google Play — the Play Store version is outdated). Inside Termux, run <code>pkg update && pkg install ollama</code>. Then use standard Ollama commands: <code>ollama pull llama3</code> and <code>ollama run llama3</code>. Your device needs 8+ GB RAM for reliable operation. Termux runs CPU-only — there is no GPU acceleration path — so treat it as the most flexible option, not the fastest.',
           },
           {
             q: 'Which Android LLM app is best for beginners?',
             a: 'MLC Chat is the best starting point. It installs from Google Play in under a minute, offers a curated list of preoptimized models, and requires no command-line experience. See the <a href="/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">best Ollama frontend guide</a> for options if you want a richer chat interface.',
+          },
+          {
+            q: 'What models does MLC Chat officially support on Android?',
+            a: 'MLC Chat is the official app from the open-source MLC-LLM project, distributed on Google Play. It ships a curated, preoptimized model list — typically Llama 3, Gemma 2, Phi-3, and Qwen variants in the 2–4B range — chosen for reliable offline performance on phone hardware. It does not accept arbitrary GGUF files; new models appear only after the MLC-LLM compiler adds support for them.',
+          },
+          {
+            q: 'Can I load any GGUF model in Pocketpal AI?',
+            a: 'Yes. Pocketpal AI loads any GGUF-format model file from Hugging Face, public or (with a token) gated — including community fine-tunes that MLC Chat\'s curated list doesn\'t include. The trade-off is Pocketpal does not pre-verify that a model fits your hardware, so stick to Q4_K_M or smaller quantizations on midrange phones.',
+          },
+          {
+            q: 'Can I run uncensored or unfiltered local LLMs on Android?',
+            a: 'Only through apps that load arbitrary GGUF files — Pocketpal AI or Termux + Ollama. MLC Chat\'s model list is curated and limited to models the MLC-LLM project has safety-tuned and compiled; it has no way to load a different file. Because everything runs on-device, model behavior is determined entirely by which GGUF file you choose, not by the app.',
+          },
+          {
+            q: 'Is there an official Ollama app for Android?',
+            a: 'No — there is no standalone Ollama app in Google Play. The supported way to run Ollama on Android is Termux + Ollama: install Termux from F-Droid, then run <code>pkg install ollama</code> inside it for the same CLI as desktop Ollama. MLC Chat and Pocketpal are the closest app-store alternatives if you\'d rather avoid a terminal.',
           },
         ],
       },
@@ -143,9 +159,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'KI offline auf Android 2026: MLC Chat ist die Top-Empfehlung für die meisten Geräte. Pocketpal für eigene Modelle, Termux + Ollama für Power-User. RAM-Guide inklusive.',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-de.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-14',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       de: {
         question: 'Die besten lokalen LLM-Apps für Android?',
@@ -213,11 +229,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Wie installiere ich Ollama auf Android über Termux?',
-            a: 'Installieren Sie Termux von F-Droid (nicht von Google Play — die Play-Store-Version ist veraltet). Führen Sie in Termux <code>pkg update && pkg install ollama</code> aus. Verwenden Sie dann Standard-Ollama-Befehle: <code>ollama pull llama3</code> und <code>ollama run llama3</code>. Ihr Gerät benötigt 8+ GB RAM für einen zuverlässigen Betrieb.',
+            a: 'Installieren Sie Termux von F-Droid (nicht von Google Play — die Play-Store-Version ist veraltet). Führen Sie in Termux <code>pkg update && pkg install ollama</code> aus. Verwenden Sie dann Standard-Ollama-Befehle: <code>ollama pull llama3</code> und <code>ollama run llama3</code>. Ihr Gerät benötigt 8+ GB RAM für einen zuverlässigen Betrieb. Termux läuft ausschließlich auf der CPU — es gibt keinen GPU-Beschleunigungspfad —, betrachten Sie es also als die flexibelste, nicht die schnellste Option.',
           },
           {
             q: 'Welche Android-LLM-App eignet sich am besten für Einsteiger?',
             a: 'MLC Chat ist der beste Einstiegspunkt. Es installiert sich aus dem Google Play Store in unter einer Minute, bietet eine kuratierte Liste voroptimierter Modelle und erfordert keine Terminal-Kenntnisse. Den <a href="/de/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">besten Ollama-Frontend-Vergleich</a> finden Sie dort, wenn Sie eine reichhaltigere Chat-Oberfläche bevorzugen.',
+          },
+          {
+            q: 'Welche Modelle unterstützt MLC Chat offiziell auf Android?',
+            a: 'MLC Chat ist die offizielle App des Open-Source-Projekts MLC-LLM und im Google Play Store verfügbar. Sie enthält eine kuratierte, voroptimierte Modellliste — meist Llama 3, Gemma 2, Phi-3 und Qwen-Varianten im Bereich von 2–4B —, die für zuverlässige Offline-Leistung auf Smartphone-Hardware ausgewählt wurden. Beliebige GGUF-Dateien werden nicht akzeptiert; neue Modelle erscheinen erst, wenn der MLC-LLM-Compiler sie unterstützt.',
+          },
+          {
+            q: 'Kann ich in Pocketpal AI jedes beliebige GGUF-Modell laden?',
+            a: 'Ja. Pocketpal AI lädt jede GGUF-Modelldatei von Hugging Face, öffentlich oder — mit Token — zugangsbeschränkt, einschließlich Community-Finetunes, die in der kuratierten Liste von MLC Chat fehlen. Der Kompromiss: Pocketpal prüft nicht vorab, ob ein Modell zu Ihrer Hardware passt — bleiben Sie auf Mittelklasse-Handys bei Q4_K_M oder kleineren Quantisierungen.',
+          },
+          {
+            q: 'Kann ich unzensierte oder ungefilterte lokale LLMs auf Android ausführen?',
+            a: 'Nur über Apps, die beliebige GGUF-Dateien laden — Pocketpal AI oder Termux + Ollama. Die Modellliste von MLC Chat ist kuratiert und auf Modelle beschränkt, die das MLC-LLM-Projekt sicherheitsoptimiert und kompiliert hat; ein anderes Modell lässt sich dort nicht laden. Da alles auf dem Gerät läuft, bestimmt allein die gewählte GGUF-Datei das Modellverhalten, nicht die App.',
+          },
+          {
+            q: 'Gibt es eine offizielle Ollama-App für Android?',
+            a: 'Nein — im Google Play Store gibt es keine eigenständige Ollama-App. Der unterstützte Weg, Ollama auf Android auszuführen, ist Termux + Ollama: Installieren Sie Termux von F-Droid und führen Sie darin <code>pkg install ollama</code> aus, um dieselbe CLI wie am Desktop zu erhalten. MLC Chat und Pocketpal sind die nächstliegenden App-Store-Alternativen, wenn Sie kein Terminal nutzen möchten.',
           },
         ],
       },
@@ -230,9 +262,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'IA hors ligne sur Android 2026 : MLC Chat est le top pick pour la plupart des téléphones. Pocketpal et Termux + Ollama comparés. Guide RAM inclus.',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-fr.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-14',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       fr: {
         question: 'Meilleures applications LLM locales pour Android ?',
@@ -300,11 +332,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Comment installer Ollama sur Android via Termux ?',
-            a: 'Installez Termux depuis F-Droid (pas Google Play — la version du Play Store est obsolète). Dans Termux, exécutez <code>pkg update && pkg install ollama</code>. Utilisez ensuite les commandes Ollama standard : <code>ollama pull llama3</code> et <code>ollama run llama3</code>. Votre appareil nécessite 8+ Go de RAM pour un fonctionnement fiable.',
+            a: 'Installez Termux depuis F-Droid (pas Google Play — la version du Play Store est obsolète). Dans Termux, exécutez <code>pkg update && pkg install ollama</code>. Utilisez ensuite les commandes Ollama standard : <code>ollama pull llama3</code> et <code>ollama run llama3</code>. Votre appareil nécessite 8+ Go de RAM pour un fonctionnement fiable. Termux fonctionne uniquement sur le CPU — il n\'existe aucune accélération GPU — considérez-le donc comme l\'option la plus flexible, pas la plus rapide.',
           },
           {
             q: 'Quelle application LLM Android est la meilleure pour les débutants ?',
             a: 'MLC Chat est le meilleur point de départ. Elle s\'installe depuis Google Play en moins d\'une minute, propose une liste organisée de modèles préoptimisés et ne nécessite aucune expérience en ligne de commande. Consultez le <a href="/fr/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">guide des meilleurs frontends Ollama</a> pour des options si vous souhaitez une interface de chat plus riche.',
+          },
+          {
+            q: 'Quels modèles MLC Chat prend-il officiellement en charge sur Android ?',
+            a: 'MLC Chat est l\'application officielle du projet open-source MLC-LLM, distribuée sur Google Play. Elle propose une liste de modèles préoptimisés et sélectionnés — généralement Llama 3, Gemma 2, Phi-3 et des variantes Qwen dans la plage 2–4B — choisis pour une performance hors ligne fiable sur le matériel mobile. Elle n\'accepte pas de fichiers GGUF arbitraires ; de nouveaux modèles n\'apparaissent que lorsque le compilateur MLC-LLM les prend en charge.',
+          },
+          {
+            q: 'Puis-je charger n\'importe quel modèle GGUF dans Pocketpal AI ?',
+            a: 'Oui. Pocketpal AI charge tout fichier modèle au format GGUF depuis Hugging Face, public ou — avec un jeton — à accès restreint, y compris des fine-tunes communautaires absents de la liste sélectionnée de MLC Chat. Le compromis : Pocketpal ne vérifie pas au préalable qu\'un modèle convient à votre matériel — restez sur des quantisations Q4_K_M ou inférieures sur les téléphones milieu de gamme.',
+          },
+          {
+            q: 'Puis-je exécuter des LLM locaux non censurés sur Android ?',
+            a: 'Uniquement via des applications qui chargent des fichiers GGUF arbitraires — Pocketpal AI ou Termux + Ollama. La liste de modèles de MLC Chat est sélectionnée et limitée aux modèles que le projet MLC-LLM a ajustés pour la sécurité et compilés ; elle ne permet pas de charger un autre fichier. Comme tout s\'exécute sur l\'appareil, le comportement du modèle dépend entièrement du fichier GGUF choisi, pas de l\'application.',
+          },
+          {
+            q: 'Existe-t-il une application Ollama officielle pour Android ?',
+            a: 'Non — il n\'existe aucune application Ollama autonome sur Google Play. La méthode prise en charge pour exécuter Ollama sur Android est Termux + Ollama : installez Termux depuis F-Droid, puis exécutez <code>pkg install ollama</code> à l\'intérieur pour obtenir la même CLI que sur ordinateur. MLC Chat et Pocketpal sont les alternatives les plus proches en boutique d\'applications si vous préférez éviter le terminal.',
           },
         ],
       },
@@ -317,9 +365,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Android 2026年のオフライン AI：MLC Chat がほとんどの端末に最適。Pocketpal と Termux + Ollama も比較。RAM ガイド付き。',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-ja.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-14',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       ja: {
         question: 'Androidで最良のローカルLLMアプリは？',
@@ -387,11 +435,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'TermuxでAndroidにOllamaをインストールする方法は？',
-            a: 'F-DroidからTermuxをインストールします（Google Playではありません — Play Store版は古い）。Termux内で<code>pkg update && pkg install ollama</code>を実行します。その後、標準Ollamaコマンドを使用します：<code>ollama pull llama3</code>と<code>ollama run llama3</code>。デバイスは安定した動作のために8GB以上のRAMが必要です。',
+            a: 'F-DroidからTermuxをインストールします（Google Playではありません — Play Store版は古い）。Termux内で<code>pkg update && pkg install ollama</code>を実行します。その後、標準Ollamaコマンドを使用します：<code>ollama pull llama3</code>と<code>ollama run llama3</code>。デバイスは安定した動作のために8GB以上のRAMが必要です。TermuxはCPUのみで動作し、GPUアクセラレーションはありません。最も柔軟な選択肢であり、最速の選択肢ではないとお考えください。',
           },
           {
             q: '初心者に最適なAndroid LLMアプリはどれですか？',
             a: 'MLC Chatが最良の出発点です。Google Playから1分以内でインストールでき、厳選された事前最適化モデルのリストを提供し、コマンドライン経験は不要です。より充実したチャットインターフェースをお望みなら、<a href="/ja/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">最良のOllamaフロントエンドガイド</a>もご覧ください。',
+          },
+          {
+            q: 'MLC ChatはAndroidで公式にどのモデルをサポートしていますか？',
+            a: 'MLC Chatはオープンソースプロジェクト MLC-LLM の公式アプリで、Google Playで配布されています。厳選され事前最適化されたモデルリストを搭載しており、通常はLlama 3、Gemma 2、Phi-3、Qwenの2〜4Bクラスの派生モデルが含まれます。モバイルハードウェアでの安定したオフライン性能を基準に選ばれています。任意のGGUFファイルは受け付けません。新モデルはMLC-LLMコンパイラが対応した場合のみ追加されます。',
+          },
+          {
+            q: 'Pocketpal AIで任意のGGUFモデルを読み込めますか？',
+            a: 'はい。Pocketpal AIはHugging Face上の任意のGGUF形式モデルファイルを読み込めます（公開リポジトリ、またはトークンがあればゲート付きリポジトリも対応）。MLC Chatの厳選リストにはないコミュニティのファインチューンモデルも含まれます。トレードオフとして、Pocketpalはモデルが端末に適合するかを事前検証しません。ミッドレンジ端末ではQ4_K_M以下の量子化を選んでください。',
+          },
+          {
+            q: 'Androidで無検閲・無フィルターのローカルLLMを実行できますか？',
+            a: '任意のGGUFファイルを読み込めるアプリ、つまりPocketpal AIまたはTermux + Ollamaでのみ可能です。MLC Chatのモデルリストは厳選されており、MLC-LLMプロジェクトが安全性を調整しコンパイルしたモデルに限定されています。別のファイルを読み込む方法はありません。すべて端末上で実行されるため、モデルの挙動は選択したGGUFファイルによって完全に決まり、アプリ自体には依存しません。',
+          },
+          {
+            q: 'Android向けの公式Ollamaアプリはありますか？',
+            a: 'いいえ — Google Playに単独のOllamaアプリはありません。AndroidでOllamaを実行する対応方法はTermux + Ollamaです。F-DroidからTermuxをインストールし、その中で<code>pkg install ollama</code>を実行すれば、デスクトップ版と同じCLIが使えます。ターミナルを使いたくない場合、MLC ChatとPocketpalが最も近いアプリストア版の代替です。',
           },
         ],
       },
@@ -404,9 +468,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Android 2026 离线 AI：MLC Chat 为大多数手机首选，Pocketpal 适合自定义模型，Termux + Ollama 适合高级用户。含 RAM 指南。',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-zh.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-14',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       zh: {
         question: 'Android 上最好的本地 LLM 应用？',
@@ -474,11 +538,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '如何通过 Termux 在 Android 上安装 Ollama？',
-            a: '从 F-Droid 安装 Termux（不要用 Google Play——Play Store 版本已过时）。在 Termux 中运行 <code>pkg update && pkg install ollama</code>。然后使用标准 Ollama 命令：<code>ollama pull llama3</code> 和 <code>ollama run llama3</code>。设备需要 8+ GB 内存才能稳定运行。',
+            a: '从 F-Droid 安装 Termux（不要用 Google Play——Play Store 版本已过时）。在 Termux 中运行 <code>pkg update && pkg install ollama</code>。然后使用标准 Ollama 命令：<code>ollama pull llama3</code> 和 <code>ollama run llama3</code>。设备需要 8+ GB 内存才能稳定运行。Termux 仅在 CPU 上运行，没有 GPU 加速——请将其视为最灵活而非最快的方案。',
           },
           {
             q: '哪款 Android LLM 应用最适合初学者？',
             a: 'MLC Chat 是最佳起点。它可在一分钟内从 Google Play 安装完毕，提供精选的预优化模型列表，无需任何命令行经验。如需更丰富的对话界面，请参阅<a href="/zh/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">最佳Ollama前端指南</a>。',
+          },
+          {
+            q: 'MLC Chat 在 Android 上官方支持哪些模型？',
+            a: 'MLC Chat 是开源项目 MLC-LLM 的官方应用，通过 Google Play 分发。它提供精选的预优化模型列表——通常包括 Llama 3、Gemma 2、Phi-3 以及 2–4B 规模的 Qwen 变体——均为在手机硬件上稳定离线运行而精选。它不接受任意 GGUF 文件；只有当 MLC-LLM 编译器支持某个模型后，该模型才会加入列表。',
+          },
+          {
+            q: 'Pocketpal AI 可以加载任意 GGUF 模型吗？',
+            a: '可以。Pocketpal AI 可加载 Hugging Face 上任意 GGUF 格式的模型文件，公开仓库或（凭令牌）受限仓库均可，包括 MLC Chat 精选列表中没有的社区微调模型。代价是 Pocketpal 不会预先验证模型是否适合您的硬件——中端手机建议选择 Q4_K_M 或更低的量化版本。',
+          },
+          {
+            q: 'Android 上可以运行未经审查的本地 LLM 吗？',
+            a: '只能通过支持加载任意 GGUF 文件的应用实现——即 Pocketpal AI 或 Termux + Ollama。MLC Chat 的模型列表经过筛选，仅限 MLC-LLM 项目已完成安全调优并编译的模型，无法加载其他文件。由于一切均在设备本地运行，模型行为完全取决于您加载的 GGUF 文件，而非应用本身。',
+          },
+          {
+            q: 'Android 上有官方 Ollama 应用吗？',
+            a: '没有——Google Play 上没有独立的 Ollama 应用。在 Android 上运行 Ollama 的官方支持方式是 Termux + Ollama：从 F-Droid 安装 Termux，然后在其中运行 <code>pkg install ollama</code>，即可获得与桌面版相同的 CLI。如果不想使用终端，MLC Chat 和 Pocketpal 是最接近的应用商店替代方案。',
           },
         ],
       },
@@ -491,9 +571,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'IA sin conexión en Android 2026: MLC Chat es el top pick para la mayoría de móviles. Pocketpal y Termux + Ollama comparados. Guía de RAM incluida.',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-es.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-14',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Principiante',
@@ -531,6 +611,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Pocketpal AI (más flexible)</strong> — Carga cualquier modelo GGUF directamente desde Hugging Face. Requiere más configuración que MLC Chat pero te da libertad para elegir cualquier modelo. Interfaz de chat integrada.',
           '<strong>Termux + Ollama (control total)</strong> — Instala Ollama completo en Android. Todos los comandos de Ollama disponibles. Requiere terminal, 8+ GB RAM, conocimiento técnico. Para usuarios avanzados solo.',
         ],
+        columns: ['App', 'Esfuerzo de configuración', 'Flexibilidad de modelo'],
+        rows: [
+          { 'App': 'MLC Chat', 'Esfuerzo de configuración': 'Fácil (Play Store)', 'Flexibilidad de modelo': 'Solo modelos preoptimizados' },
+          { 'App': 'Pocketpal', 'Esfuerzo de configuración': 'Medio', 'Flexibilidad de modelo': 'GGUF desde Hugging Face' },
+          { 'App': 'Termux + Ollama', 'Esfuerzo de configuración': 'Avanzado (CLI)', 'Flexibilidad de modelo': 'Biblioteca Ollama completa' },
+        ],
         image: '/images/best-local-llm-apps-android-app-comparison-hero-es.webp',
         imageCaption: 'Mejores Apps de LLM Local para Android -- Esfuerzo de configuración vs flexibilidad de modelo',
       },
@@ -559,11 +645,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cómo instalo Ollama en Android mediante Termux?',
-            a: 'Instala Termux desde F-Droid (no uses Google Play — la versión de Play Store está desactualizada). En Termux ejecuta <code>pkg update && pkg install ollama</code>. Luego usa comandos estándar de Ollama: <code>ollama pull llama3</code> y <code>ollama run llama3</code>. Tu dispositivo necesita 8+ GB de memoria para funcionar de manera estable.',
+            a: 'Instala Termux desde F-Droid (no uses Google Play — la versión de Play Store está desactualizada). En Termux ejecuta <code>pkg update && pkg install ollama</code>. Luego usa comandos estándar de Ollama: <code>ollama pull llama3</code> y <code>ollama run llama3</code>. Tu dispositivo necesita 8+ GB de memoria para funcionar de manera estable. Termux funciona solo en CPU — no hay aceleración por GPU —, así que considéralo la opción más flexible, no la más rápida.',
           },
           {
             q: '¿Cuál es la mejor app Android para LLMs para principiantes?',
             a: 'MLC Chat es el mejor punto de partida. Se instala desde Google Play en un minuto, proporciona una lista seleccionada de modelos preoptimizados y no requiere experiencia en línea de comandos. Para una interfaz de chat más enriquecida, consulta la <a href="/es/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">guía de los mejores frontends para Ollama</a>.',
+          },
+          {
+            q: '¿Qué modelos admite oficialmente MLC Chat en Android?',
+            a: 'MLC Chat es la app oficial del proyecto de código abierto MLC-LLM, distribuida en Google Play. Incluye una lista curada de modelos preoptimizados — normalmente Llama 3, Gemma 2, Phi-3 y variantes de Qwen en el rango de 2–4B — elegidos por su rendimiento offline confiable en hardware móvil. No acepta archivos GGUF arbitrarios; los modelos nuevos aparecen solo cuando el compilador de MLC-LLM los soporta.',
+          },
+          {
+            q: '¿Puedo cargar cualquier modelo GGUF en Pocketpal AI?',
+            a: 'Sí. Pocketpal AI carga cualquier archivo de modelo en formato GGUF desde Hugging Face, sea público o (con un token) de acceso restringido — incluidos fine-tunes de la comunidad que no están en la lista curada de MLC Chat. La contrapartida es que Pocketpal no verifica de antemano si un modelo es compatible con tu hardware — en teléfonos de gama media, usa cuantizaciones Q4_K_M o menores.',
+          },
+          {
+            q: '¿Puedo ejecutar LLMs locales sin censura en Android?',
+            a: 'Solo a través de apps que cargan archivos GGUF arbitrarios — Pocketpal AI o Termux + Ollama. La lista de modelos de MLC Chat está curada y limitada a modelos que el proyecto MLC-LLM ajustó por seguridad y compiló; no permite cargar otro archivo. Como todo se ejecuta en el dispositivo, el comportamiento del modelo depende por completo del archivo GGUF que elijas, no de la app.',
+          },
+          {
+            q: '¿Existe una app oficial de Ollama para Android?',
+            a: 'No — no hay una app independiente de Ollama en Google Play. La forma soportada de ejecutar Ollama en Android es Termux + Ollama: instala Termux desde F-Droid y ejecuta <code>pkg install ollama</code> dentro, para obtener la misma CLI que en escritorio. MLC Chat y Pocketpal son las alternativas de tienda de apps más cercanas si prefieres evitar la terminal.',
           },
         ],
       },
@@ -576,9 +678,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'IA offline no Android 2026: MLC Chat é o top pick para a maioria dos celulares. Pocketpal e Termux + Ollama comparados. Guia de RAM incluído.',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-pt.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-14',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Principiante',
@@ -616,6 +718,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Pocketpal AI (mais flexível)</strong> — Carrega qualquer modelo GGUF diretamente do Hugging Face. Requer mais configuração do que o MLC Chat, mas dá liberdade para escolher qualquer modelo. Interface de chat integrada.',
           '<strong>Termux + Ollama (controle total)</strong> — Instala o Ollama completo no Android. Todos os comandos Ollama disponíveis. Requer terminal, 8+ GB de RAM, conhecimento técnico. Somente para usuários avançados.',
         ],
+        columns: ['App', 'Esforço de configuração', 'Flexibilidade de modelo'],
+        rows: [
+          { 'App': 'MLC Chat', 'Esforço de configuração': 'Fácil (Play Store)', 'Flexibilidade de modelo': 'Somente modelos pré-otimizados' },
+          { 'App': 'Pocketpal', 'Esforço de configuração': 'Médio', 'Flexibilidade de modelo': 'GGUF do Hugging Face' },
+          { 'App': 'Termux + Ollama', 'Esforço de configuração': 'Avançado (CLI)', 'Flexibilidade de modelo': 'Biblioteca Ollama completa' },
+        ],
         image: '/images/best-local-llm-apps-android-app-comparison-hero-pt.webp',
         imageCaption: 'Melhores Apps de LLM Local para Android -- Esforço de configuração vs flexibilidade de modelo',
       },
@@ -644,11 +752,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Como instalo o Ollama no Android via Termux?',
-            a: 'Instale o Termux pelo F-Droid (não use o Google Play — a versão da Play Store está desatualizada). No Termux execute <code>pkg update && pkg install ollama</code>. Depois use os comandos padrão do Ollama: <code>ollama pull llama3</code> e <code>ollama run llama3</code>. Seu dispositivo precisa de 8+ GB de memória para funcionar de forma estável.',
+            a: 'Instale o Termux pelo F-Droid (não use o Google Play — a versão da Play Store está desatualizada). No Termux execute <code>pkg update && pkg install ollama</code>. Depois use os comandos padrão do Ollama: <code>ollama pull llama3</code> e <code>ollama run llama3</code>. Seu dispositivo precisa de 8+ GB de memória para funcionar de forma estável. O Termux funciona apenas na CPU — não há aceleração por GPU —, então considere-o a opção mais flexível, não a mais rápida.',
           },
           {
             q: 'Qual é o melhor app Android para LLMs para iniciantes?',
             a: 'MLC Chat é o melhor ponto de partida. Instala-se do Google Play em um minuto, fornece uma lista selecionada de modelos pré-otimizados e não requer experiência em linha de comando. Para uma interface de chat mais completa, consulte o <a href="/pt/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">guia dos melhores frontends para Ollama</a>.',
+          },
+          {
+            q: 'Quais modelos o MLC Chat suporta oficialmente no Android?',
+            a: 'O MLC Chat é o app oficial do projeto open-source MLC-LLM, distribuído na Google Play. Ele traz uma lista selecionada de modelos pré-otimizados — geralmente Llama 3, Gemma 2, Phi-3 e variantes do Qwen na faixa de 2–4B — escolhidos por rodarem offline de forma confiável em hardware de celular. Ele não aceita arquivos GGUF arbitrários; novos modelos só aparecem quando o compilador MLC-LLM passa a suportá-los.',
+          },
+          {
+            q: 'Posso carregar qualquer modelo GGUF no Pocketpal AI?',
+            a: 'Sim. O Pocketpal AI carrega qualquer arquivo de modelo no formato GGUF do Hugging Face, seja público ou (com token) de acesso restrito — incluindo fine-tunes da comunidade que não estão na lista selecionada do MLC Chat. O trade-off é que o Pocketpal não verifica antecipadamente se um modelo é compatível com seu hardware — em celulares intermediários, prefira quantizações Q4_K_M ou menores.',
+          },
+          {
+            q: 'Posso rodar LLMs locais sem censura no Android?',
+            a: 'Somente por apps que carregam arquivos GGUF arbitrários — Pocketpal AI ou Termux + Ollama. A lista de modelos do MLC Chat é selecionada e limitada a modelos que o projeto MLC-LLM ajustou para segurança e compilou; não há como carregar outro arquivo. Como tudo roda no dispositivo, o comportamento do modelo depende inteiramente do arquivo GGUF escolhido, não do app.',
+          },
+          {
+            q: 'Existe um app oficial do Ollama para Android?',
+            a: 'Não — não há um app independente do Ollama na Google Play. A forma suportada de rodar o Ollama no Android é Termux + Ollama: instale o Termux pelo F-Droid e execute <code>pkg install ollama</code> dentro dele para ter a mesma CLI do desktop. O MLC Chat e o Pocketpal são as alternativas de loja de apps mais próximas se você preferir evitar o terminal.',
           },
         ],
       },
@@ -661,9 +785,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'ذكاء اصطناعي بلا إنترنت على ⁨Android 2026⁩: ⁨MLC Chat⁩ الأفضل لمعظم الهواتف. مقارنة مع ⁨Pocketpal⁩ و⁨Termux + Ollama⁩. دليل ⁨RAM⁩ مضمّن.',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-ar.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-20',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'مبتدئ',
@@ -701,6 +825,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Pocketpal AI (الأكثر مرونة)</strong> — يُحمِّل أي نموذج GGUF مباشرةً من Hugging Face. يتطلب إعداداً أكبر من MLC Chat لكنه يمنحك حرية اختيار أي نموذج. يتضمن واجهة دردشة مدمجة.',
           '<strong>Termux + Ollama (تحكم كامل)</strong> — يُثبّت Ollama الكاملة على Android. جميع أوامر Ollama متاحة. يتطلب طرفية و8 جيجابايت RAM أو أكثر ومعرفة تقنية. للمستخدمين المتقدمين فقط.',
         ],
+        columns: ['التطبيق', 'جهد الإعداد', 'مرونة النموذج'],
+        rows: [
+          { 'التطبيق': 'MLC Chat', 'جهد الإعداد': 'سهل (Play Store)', 'مرونة النموذج': 'نماذج مُحسَّنة مسبقاً فقط' },
+          { 'التطبيق': 'Pocketpal', 'جهد الإعداد': 'متوسط', 'مرونة النموذج': 'GGUF من Hugging Face' },
+          { 'التطبيق': 'Termux + Ollama', 'جهد الإعداد': 'متقدم (CLI)', 'مرونة النموذج': 'مكتبة Ollama الكاملة' },
+        ],
         image: '/images/best-local-llm-apps-android-app-comparison-hero-ar.webp',
         imageCaption: 'أفضل تطبيقات LLM المحلية لأندرويد -- جهد الإعداد مقابل مرونة النموذج',
       },
@@ -729,11 +859,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'كيف أثبّت Ollama على Android عبر Termux؟',
-            a: 'ثبّت Termux من F-Droid (لا تستخدم Google Play — نسخة متجر Play قديمة). في Termux نفّذ <code>pkg update && pkg install ollama</code>. ثم استخدم أوامر Ollama القياسية: <code>ollama pull llama3</code> و<code>ollama run llama3</code>. يحتاج جهازك إلى 8 جيجابايت RAM أو أكثر للتشغيل المستقر.',
+            a: 'ثبّت Termux من F-Droid (لا تستخدم Google Play — نسخة متجر Play قديمة). في Termux نفّذ <code>pkg update && pkg install ollama</code>. ثم استخدم أوامر Ollama القياسية: <code>ollama pull llama3</code> و<code>ollama run llama3</code>. يحتاج جهازك إلى 8 جيجابايت RAM أو أكثر للتشغيل المستقر. يعمل Termux على المعالج (CPU) فقط — لا يوجد تسريع عبر GPU — لذا اعتبره الخيار الأكثر مرونة، لا الأسرع.',
           },
           {
             q: 'ما أفضل تطبيق Android للنماذج اللغوية الكبيرة للمبتدئين؟',
             a: 'MLC Chat هو أفضل نقطة انطلاق. يُثبَّت من Google Play في دقيقة واحدة، يوفر قائمة منتقاة من النماذج المُحسَّنة مسبقاً، ولا يتطلب أي خبرة في سطر الأوامر. للحصول على واجهة دردشة أغنى، راجع <a href="/ar/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">دليل أفضل واجهات Ollama</a>.',
+          },
+          {
+            q: 'ما النماذج التي يدعمها MLC Chat رسمياً على Android؟',
+            a: 'MLC Chat هو التطبيق الرسمي لمشروع MLC-LLM مفتوح المصدر، ويُوزَّع عبر Google Play. يتضمن قائمة منتقاة من النماذج المُحسَّنة مسبقاً — عادةً Llama 3 وGemma 2 وPhi-3 ونماذج Qwen بحجم 2–4B — اختيرت لأدائها الموثوق دون اتصال بالإنترنت على أجهزة الهاتف. لا يقبل ملفات GGUF عشوائية؛ تظهر النماذج الجديدة فقط عندما يدعمها مُصرِّف MLC-LLM.',
+          },
+          {
+            q: 'هل يمكنني تحميل أي نموذج GGUF في Pocketpal AI؟',
+            a: 'نعم. يُحمِّل Pocketpal AI أي ملف نموذج بصيغة GGUF من Hugging Face، سواء كان عاماً أو (برمز وصول) مقيّداً — بما في ذلك نماذج مضبوطة من المجتمع غير موجودة في قائمة MLC Chat المنتقاة. المقابل هو أن Pocketpal لا يتحقق مسبقاً من توافق النموذج مع جهازك — على الهواتف متوسطة الفئة، التزم بضغط Q4_K_M أو أقل.',
+          },
+          {
+            q: 'هل يمكنني تشغيل نماذج لغوية محلية غير خاضعة للرقابة على Android؟',
+            a: 'فقط عبر التطبيقات التي تُحمِّل ملفات GGUF عشوائية — Pocketpal AI أو Termux مع Ollama. قائمة نماذج MLC Chat منتقاة ومقتصرة على النماذج التي عدّلها مشروع MLC-LLM لأغراض السلامة وصرّفها؛ ولا توجد طريقة لتحميل ملف آخر. وبما أن كل شيء يعمل على الجهاز، فإن سلوك النموذج يتحدد بالكامل بملف GGUF الذي تختاره، وليس بالتطبيق.',
+          },
+          {
+            q: 'هل يوجد تطبيق رسمي لـ Ollama على Android؟',
+            a: 'لا — لا يوجد تطبيق مستقل لـ Ollama على Google Play. الطريقة المدعومة لتشغيل Ollama على Android هي Termux مع Ollama: ثبّت Termux من F-Droid، ثم نفّذ <code>pkg install ollama</code> بداخله للحصول على نفس واجهة سطر الأوامر الموجودة على سطح المكتب. يُعد MLC Chat وPocketpal أقرب البدائل المتوفرة في متاجر التطبيقات إن كنت تفضّل تجنّب الطرفية.',
           },
         ],
       },
@@ -746,9 +892,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Android 2026 오프라인 AI: MLC Chat이 대부분의 기기에 최적. Pocketpal과 Termux + Ollama 비교. RAM 가이드 포함.',
     heroImage: '/images/best-local-llm-apps-android-app-comparison-hero-ko.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-20',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: '초급',
@@ -786,7 +932,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-apps-android',
       datePublished: '2026-05-18',
-      dateModified: '2026-05-18',
+      dateModified: '2026-09-02',
       'proficiencyLevel': '초급',
     },
     breadcrumbSchema: {
@@ -831,6 +977,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Pocketpal AI(더 유연함)</strong> — Hugging Face에서 직접 GGUF 모델을 로드할 수 있습니다. MLC Chat보다 설정이 복잡하지만 원하는 모델을 자유롭게 선택할 수 있습니다. 통합 채팅 인터페이스가 제공됩니다.',
           '<strong>Termux + Ollama(완전 제어)</strong> — Android에 전체 Ollama를 설치합니다. 모든 Ollama 명령어를 사용할 수 있습니다. 터미널, 8GB 이상의 RAM, 기술적 지식이 필요하며 고급 사용자 전용입니다.',
         ],
+        columns: ['앱', '설정 난이도', '모델 유연성'],
+        rows: [
+          { '앱': 'MLC Chat', '설정 난이도': '쉬움 (Play Store)', '모델 유연성': '사전 최적화 모델만' },
+          { '앱': 'Pocketpal', '설정 난이도': '중간', '모델 유연성': 'Hugging Face의 GGUF' },
+          { '앱': 'Termux + Ollama', '설정 난이도': '고급 (CLI)', '모델 유연성': '전체 Ollama 라이브러리' },
+        ],
         image: '/images/best-local-llm-apps-android-app-comparison-hero-ko.webp',
         imageCaption: '안드로이드 최고의 로컬 LLM 앱 -- 설정 난이도 대 모델 유연성',
       },
@@ -858,11 +1010,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Termux를 통해 Android에 Ollama를 설치하려면 어떻게 합니까?',
-            a: 'F-Droid에서 Termux를 설치하시기 바랍니다(Google Play 버전은 오래되어 사용하지 마십시오). Termux에서 <code>pkg update && pkg install ollama</code>를 실행합니다. 그런 다음 표준 Ollama 명령어를 사용하십시오: <code>ollama pull llama3</code> 및 <code>ollama run llama3</code>. 안정적인 실행을 위해 기기에 8GB 이상의 메모리가 필요합니다.',
+            a: 'F-Droid에서 Termux를 설치하시기 바랍니다(Google Play 버전은 오래되어 사용하지 마십시오). Termux에서 <code>pkg update && pkg install ollama</code>를 실행합니다. 그런 다음 표준 Ollama 명령어를 사용하십시오: <code>ollama pull llama3</code> 및 <code>ollama run llama3</code>. 안정적인 실행을 위해 기기에 8GB 이상의 메모리가 필요합니다. Termux는 CPU에서만 작동하며 GPU 가속은 지원되지 않습니다. 가장 빠른 옵션이 아니라 가장 유연한 옵션으로 간주하시기 바랍니다.',
           },
           {
             q: '초보자에게 가장 적합한 Android LLM 앱은 무엇입니까?',
             a: 'MLC Chat이 가장 좋은 시작점입니다. Google Play에서 1분 만에 설치할 수 있고, 사전 최적화된 모델 목록을 제공하며, 명령줄 경험이 전혀 필요하지 않습니다. 더 풍부한 채팅 인터페이스를 원하신다면 <a href="/ko/prompt-bites/best-frontend-for-ollama" class="text-primary hover:underline">Ollama 최고의 프론트엔드 가이드</a>를 참조하시기 바랍니다.',
+          },
+          {
+            q: 'MLC Chat은 Android에서 공식적으로 어떤 모델을 지원합니까?',
+            a: 'MLC Chat은 오픈소스 프로젝트 MLC-LLM의 공식 앱으로, Google Play를 통해 배포됩니다. Llama 3, Gemma 2, Phi-3, 그리고 2~4B 규모의 Qwen 변형 모델 등 선별된 사전 최적화 모델 목록을 제공하며, 모바일 하드웨어에서 안정적인 오프라인 성능을 기준으로 선정됩니다. 임의의 GGUF 파일은 지원하지 않으며, 새로운 모델은 MLC-LLM 컴파일러가 지원할 때만 추가됩니다.',
+          },
+          {
+            q: 'Pocketpal AI에서 임의의 GGUF 모델을 로드할 수 있습니까?',
+            a: '네, 가능합니다. Pocketpal AI는 Hugging Face에 있는 모든 GGUF 형식 모델 파일을 로드할 수 있습니다. 공개 저장소는 물론 토큰이 있으면 비공개 저장소도 가능합니다. MLC Chat의 선별 목록에 없는 커뮤니티 파인튜닝 모델도 포함됩니다. 다만 Pocketpal은 모델이 사용 중인 기기에 적합한지 사전에 검증하지 않으므로, 중급 사양 기기에서는 Q4_K_M 이하의 양자화를 선택하시기 바랍니다.',
+          },
+          {
+            q: 'Android에서 무검열 로컬 LLM을 실행할 수 있습니까?',
+            a: '임의의 GGUF 파일을 로드할 수 있는 앱, 즉 Pocketpal AI 또는 Termux + Ollama를 통해서만 가능합니다. MLC Chat의 모델 목록은 MLC-LLM 프로젝트가 안전성을 조정하고 컴파일한 모델로 제한되어 있으며, 다른 파일을 로드할 방법이 없습니다. 모든 처리가 기기에서 이루어지므로 모델의 동작은 앱이 아니라 사용자가 선택한 GGUF 파일에 의해 전적으로 결정됩니다.',
+          },
+          {
+            q: 'Android용 공식 Ollama 앱이 있습니까?',
+            a: '아니요, Google Play에는 독립형 Ollama 앱이 없습니다. Android에서 Ollama를 실행하는 공식적으로 지원되는 방법은 Termux + Ollama입니다. F-Droid에서 Termux를 설치한 후 그 안에서 <code>pkg install ollama</code>를 실행하면 데스크톱과 동일한 CLI를 사용할 수 있습니다. 터미널 사용을 피하고 싶다면 MLC Chat과 Pocketpal이 가장 가까운 앱 스토어 대안입니다.',
           },
         ],
       },
