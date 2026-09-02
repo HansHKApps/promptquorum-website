@@ -33,6 +33,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'autonomous-local-agents-actually-work':       'autonomous-local-agents-actually-work',
   'replace-zapier-with-local-ai-agents':         'replace-zapier-with-local-ai-agents',
   'local-ai-agents-business-workflows-eu-compliance': 'local-ai-agents-business-workflows-eu-compliance',
+  'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',

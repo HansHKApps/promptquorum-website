@@ -37,6 +37,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'autonomous-local-agents-actually-work',
   'local-ai-agents-business-workflows-eu-compliance',
   'replace-zapier-with-local-ai-agents',
+  'babyagi-review-autonomous-agent',
 
   // Cat 5 — Creative Writing
   'best-local-llm-creative-writing-2026',

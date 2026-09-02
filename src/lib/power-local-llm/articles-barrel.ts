@@ -7,6 +7,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './articles/anythingllm-vs-privategpt-vs-openwebui-rag'
 import { article as a_autonomous_local_agents_actually_work } from './articles/autonomous-local-agents-actually-work'
+import { article as a_babyagi_review_autonomous_agent } from './articles/babyagi-review-autonomous-agent'
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
 import { article as a_best_gpu_buying_guide_local_llm_2026 } from './articles/best-gpu-buying-guide-local-llm-2026'
 import { article as a_best_mac_for_local_ai_2026 } from './articles/best-mac-for-local-ai-2026'
@@ -97,6 +98,7 @@ import { article as a_khoj_ai_second_brain_review } from './articles/khoj-ai-sec
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
   'autonomous-local-agents-actually-work':  a_autonomous_local_agents_actually_work,
+  'babyagi-review-autonomous-agent':        a_babyagi_review_autonomous_agent,
   'best-embedding-models-local-rag-2026':   a_best_embedding_models_local_rag_2026,
   'best-gpu-buying-guide-local-llm-2026':   a_best_gpu_buying_guide_local_llm_2026,
   'best-mac-for-local-ai-2026':             a_best_mac_for_local_ai_2026,

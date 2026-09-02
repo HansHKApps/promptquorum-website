@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', 'Description': 'Roleplay frontend with character cards', 'License': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'Description': 'Mobile-friendly roleplay frontend', 'License': 'GPL 3.0' },
         ],
-        note: 'Deeper guide: [Local LLM With Obsidian in 2026](/power-local-llm/local-llm-with-obsidian-2026)',
+        note: 'Deeper guide: [Local LLM With Obsidian in 2026](/power-local-llm/local-llm-with-obsidian-2026). BabyAGI review: [BabyAGI in 2026: What the First AI Agent Became](/power-local-llm/babyagi-review-autonomous-agent).',
       },
       stacks: {
         id: 'stacks',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', 'Beschreibung': 'Rollenspiel-Frontend mit Charakter-Karten', 'Lizenz': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'Beschreibung': 'Mobilfreundliches Rollenspiel-Frontend', 'Lizenz': 'GPL 3.0' },
         ],
-        note: 'Vertiefender Artikel: [Lokale LLMs mit Obsidian in 2026](/de/power-local-llm/local-llm-with-obsidian-2026)',
+        note: 'Vertiefender Artikel: [Lokale LLMs mit Obsidian in 2026](/de/power-local-llm/local-llm-with-obsidian-2026). BabyAGI-Test: [BabyAGI 2026: Vom viralen Skript zum Function-Framework](/de/power-local-llm/babyagi-review-autonomous-agent).',
       },
       stacks: {
         id: 'stacks',
@@ -1317,7 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', 'Description': 'Frontend de jeu de rôle avec cartes de personnages', 'Licence': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'Description': 'Frontend de jeu de rôle adapté au mobile', 'Licence': 'GPL 3.0' },
         ],
-        note: 'Article approfondi : [LLM local avec Obsidian en 2026](/fr/power-local-llm/local-llm-with-obsidian-2026)',
+        note: 'Article approfondi : [LLM local avec Obsidian en 2026](/fr/power-local-llm/local-llm-with-obsidian-2026). Avis BabyAGI : [BabyAGI en 2026 : du script viral au framework de fonctions](/fr/power-local-llm/babyagi-review-autonomous-agent).',
       },
       stacks: {
         id: 'stacks',
@@ -1763,7 +1763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', '概要': 'キャラクターカード付きロールプレイフロントエンド', 'ライセンス': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', '概要': 'モバイル対応ロールプレイフロントエンド', 'ライセンス': 'GPL 3.0' },
         ],
-        note: '詳細記事：[2026年のObsidianとローカルLLM](/ja/power-local-llm/local-llm-with-obsidian-2026)',
+        note: '詳細記事：[2026年のObsidianとローカルLLM](/ja/power-local-llm/local-llm-with-obsidian-2026)。BabyAGIレビュー：[BabyAGI 2026：バイラルスクリプトから関数フレームワークへ](/ja/power-local-llm/babyagi-review-autonomous-agent)。',
       },
       stacks: {
         id: 'stacks',
@@ -2209,7 +2209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', '描述': '支持角色卡的角色扮演前端', '许可证': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', '描述': '移动端友好的角色扮演前端', '许可证': 'GPL 3.0' },
         ],
-        note: '深度指南：[2026年本地LLM与Obsidian集成](/zh/power-local-llm/local-llm-with-obsidian-2026)',
+        note: '深度指南：[2026年本地LLM与Obsidian集成](/zh/power-local-llm/local-llm-with-obsidian-2026)。BabyAGI评测：[BabyAGI 2026：从爆红脚本到函数框架](/zh/power-local-llm/babyagi-review-autonomous-agent)。',
       },
       stacks: {
         id: 'stacks',
@@ -2655,7 +2655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', 'Descripción': 'Frontend de juego de rol con tarjetas de personajes', 'Licencia': 'MIT' },
           { 'Tool': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'Descripción': 'Frontend de juego de rol adaptado para móvil', 'Licencia': 'GPL 3.0' },
         ],
-        note: 'Guía más detallada: [LLM local con Obsidian en 2026](/es/power-local-llm/local-llm-with-obsidian-2026)',
+        note: 'Guía más detallada: [LLM local con Obsidian en 2026](/es/power-local-llm/local-llm-with-obsidian-2026). Reseña de BabyAGI: [BabyAGI en 2026: del script viral al framework de funciones](/es/power-local-llm/babyagi-review-autonomous-agent).',
       },
       stacks: {
         id: 'stacks',
@@ -3115,7 +3115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**Agnai**', 'Link': '[agnai.chat](https://agnai.chat)', 'Descrição': 'Frontend de roleplay com cartões de personagens', 'Licença': 'MIT' },
           { 'Ferramenta': '**RisuAI**', 'Link': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'Descrição': 'Frontend de roleplay adaptado para mobile', 'Licença': 'GPL 3.0' },
         ],
-        note: 'Guia mais detalhado: [LLM local com Obsidian em 2026](/pt/power-local-llm/local-llm-with-obsidian-2026)',
+        note: 'Guia mais detalhado: [LLM local com Obsidian em 2026](/pt/power-local-llm/local-llm-with-obsidian-2026). Análise do BabyAGI: [BabyAGI em 2026: do script viral ao framework de funções](/pt/power-local-llm/babyagi-review-autonomous-agent).',
       },
       stacks: {
         id: 'stacks',
@@ -3574,7 +3574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**Agnai**', 'الرابط': '[agnai.chat](https://agnai.chat)', 'الوصف': 'واجهة لعب أدوار ببطاقات شخصيات', 'الترخيص': 'MIT' },
           { 'الأداة': '**RisuAI**', 'الرابط': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', 'الوصف': 'واجهة لعب أدوار متكيفة للمحمول', 'الترخيص': 'GPL 3.0' },
         ],
-        note: 'دليل أكثر تفصيلاً: [نماذج لغوية محلية مع Obsidian في 2026](/ar/power-local-llm/local-llm-with-obsidian-2026)',
+        note: 'دليل أكثر تفصيلاً: [نماذج لغوية محلية مع Obsidian في 2026](/ar/power-local-llm/local-llm-with-obsidian-2026). مراجعة BabyAGI: [BabyAGI في 2026: من نص برمجي منتشر إلى إطار وظائف](/ar/power-local-llm/babyagi-review-autonomous-agent).',
       },
       stacks: {
         id: 'stacks',
@@ -4038,7 +4038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**Agnai**', '링크': '[agnai.chat](https://agnai.chat)', '설명': '캐릭터 카드가 있는 롤플레이 프런트엔드', '라이선스': 'MIT' },
           { '도구': '**RisuAI**', '링크': '[github.com/kwaroran/RisuAI](https://github.com/kwaroran/RisuAI)', '설명': '모바일 친화적 롤플레이 프런트엔드', '라이선스': 'GPL 3.0' },
         ],
-        note: '상세 비교 가이드: [2026년 Obsidian과 로컬 LLM](/ko/power-local-llm/local-llm-with-obsidian-2026)',
+        note: '상세 비교 가이드: [2026년 Obsidian과 로컬 LLM](/ko/power-local-llm/local-llm-with-obsidian-2026). BabyAGI 리뷰: [BabyAGI 2026: 바이럴 스크립트에서 함수 프레임워크로](/ko/power-local-llm/babyagi-review-autonomous-agent).',
       },
       stacks: {
         id: 'stacks',
