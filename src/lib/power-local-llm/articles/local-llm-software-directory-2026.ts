@@ -1633,17 +1633,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '詳細比較：[SillyTavern vs Agnai vs RisuAI](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. コーディングアシスタント & IDE統合',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE & コードエディタ',
         itemHeadings: true,
         content:
-          '**コーディングアシスタントはOpenAI互換APIを介してローカルLLMをエディタまたはターミナルに接続します。** 選択はワークフローの好みによります：エディタ内自動補完（Continue.dev）、自律エージェント編集（Cline、OpenHands）、gitネイティブのdiff編集（Aider）。3つのパターンすべてがOpenAI Chat Completionsプロトコルに対応するランタイムで動作します。2026年最も一般的なバックエンドはOllamaです。',
+          '**IDE統合とAIファーストのコードエディターは、OpenAI互換APIを介してローカルLLMをエディタに接続します。** 選択はワークフロー次第です：エディタ内自動補完（Continue.dev、Twinny）、自律エージェント編集（Cline、OpenHands）、完全なIDE環境（PearAI、Windsurf）。すべてOpenAI Chat Completionsプロトコルに対応するランタイムで動作します。2026年最も一般的なバックエンドはOllamaです。',
         columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
         rows: [
           { 'Tool': '**Continue.dev**', 'Link': '[continue.dev](https://continue.dev)', '概要': 'ローカルモデルを使ったVS CodeとJetBrainsの自動補完・チャット', 'ライセンス': 'Apache 2.0' },
-          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', '概要': 'マルチファイル編集対応のターミナルペアプログラマー', 'ライセンス': 'Apache 2.0' },
-          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', '概要': 'VS Code向け自律コーディングエージェント', 'ライセンス': 'Apache 2.0' },
+          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', '概要': 'VS Code向け自律コーディングエージェント、ファイル編集対応', 'ライセンス': 'Apache 2.0' },
+          { 'Tool': '**PearAI**', 'Link': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', '概要': 'ローカルモデル対応のオープンソースAIコードエディター', 'ライセンス': 'Apache 2.0', 'スター': '706'},
+          { 'Tool': '**Windsurf**', 'Link': '[codeium.com/windsurf](https://codeium.com/windsurf)', '概要': 'ローカルモデル統合対応のAIファーストIDE', 'ライセンス': 'プロプライエタリ' },
+          { 'Tool': '**Sourcegraph Cody**', 'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', '概要': 'ローカルモデル対応のAIコーディングアシスタント', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Tabby**', 'Link': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', '概要': 'セルフホスト型GitHub Copilot代替', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**CodeGPT**', 'Link': '[codegpt.co](https://codegpt.co)', '概要': '複数エディター向けIDE統合', 'ライセンス': 'MIT' },
           { 'Tool': '**OpenHands**', 'Link': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', '概要': 'AIソフトウェアエンジニアエージェント（旧OpenDevin）', 'ライセンス': 'MIT', 'スター': '86k'},
@@ -1661,7 +1663,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-ja.svg',
-        imageCaption: 'ローカルLLMコーディングの3パターン：Continue.devはVS Code・JetBrainsでのインライン補完、Clineは自律エージェントによるファイル編集、AiderはGitネイティブのターミナルdiff編集 — すべてOllamaのOpenAI互換APIで接続。',
+        imageCaption: 'IDE統合：Continue.devはVS Code・JetBrainsでのインライン自動補完、Clineは自律エージェントによるファイル編集、PearAIとWindsurfは完全なAIファーストIDE環境を提供 — すべてOllamaのOpenAI互換APIで接続。',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. ターミナル & CLIツール',
+        itemHeadings: true,
+        content:
+          '**ターミナル・CLIツールは、ローカルLLMをシェルとコマンドライン作業に接続します。** Aiderはターミナルでのgitネイティブなコード編集における最も成熟した選択肢です。ShellGPT、aichat、tgptはコマンド生成とチャット用にローカルLLMをラップします。Blackbox AIとDevhatが同じパターンを拡張します。すべてOpenAI互換APIで動作します — ローカルで動くOllamaを指定してください。',
+        columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
+        rows: [
+          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', '概要': 'マルチファイルのgitネイティブなdiff編集対応のターミナルペアプログラマー', 'ライセンス': 'Apache 2.0' },
+          { 'Tool': '**ShellGPT**', 'Link': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', '概要': 'シェルコマンド生成とチャット用CLIツール', 'ライセンス': 'MIT', 'スター': '12.3k'},
+          { 'Tool': '**aichat**', 'Link': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', '概要': '複数のローカルバックエンドに対応するターミナルAIチャット', 'ライセンス': 'MIT', 'スター': '10.4k'},
+          { 'Tool': '**tgpt**', 'Link': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', '概要': 'ローカルLLMチャット用ターミナルラッパー', 'ライセンス': 'GPL 3.0', 'スター': '3.3k'},
+          { 'Tool': '**Blackbox AI（CLI）**', 'Link': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', '概要': 'シェルからのターミナルコード生成とチャット', 'ライセンス': 'Apache 2.0' },
+          { 'Tool': '**Devhat**', 'Link': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', '概要': 'ローカルLLM統合対応の開発ツールCLI', 'ライセンス': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -1706,23 +1724,45 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '詳細記事：[MCPを使ったローカルAIエージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. 音声・スピーチ & マルチモーダル',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. 音声認識（STT）',
         itemHeadings: true,
         content:
-          '**音声・マルチモーダルスタックはローカルLLMをテキスト以外に拡張します** — 音声入力（STT）、音声出力（TTS）、視覚。Whisper.cppとfaster-whisperがローカルSTT層を支配。PiperとCoquiがTTS層を共有し、XTTS v2が音声クローニングで優位。LLaVAとOllamaビジョンモデルがビジョン側を担当します。この層と小さなチャットモデルを組み合わせれば完全オフライン音声アシスタントが構築可能です。',
+          '**音声認識（STT）システムは、クラウド接続なしでローカルモデルを使って音声入力をテキストに変換します。** Whisper.cppとfaster-whisperがローカルSTT層を占めています。どちらもOpenAIのWhisperをベースに、CPU/GPU効率向けに最適化されています。この層が完全オフライン音声アシスタントの入力側を構成します。',
         columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
         rows: [
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '概要': 'CPUまたはGPUで動作するローカル音声認識', 'ライセンス': 'MIT', 'スター': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '概要': 'CTranslate2を使った高速Whisper文字起こし', 'ライセンス': 'MIT', 'スター': '25.2k'},
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. 音声合成（TTS）',
+        itemHeadings: true,
+        content:
+          '**音声合成（TTS）システムは、クラウド接続なしでローカルモデルを使ってテキストを自然な音声に変換します。** PiperとCoquiが複数の軽量モデルでTTS層を共有し、XTTS v2は音声クローニングに特化、Barkは非言語音を追加、StyleTTS 2は高品質な合成に注力しています。この層が完全オフライン音声アシスタントの出力側を構成します。',
+        columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
+        rows: [
           { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', '概要': '軽量ローカルテキスト読み上げ', 'ライセンス': 'MIT', 'スター': '11.3k'},
           { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', '概要': '複数モデル対応オープンソース音声合成', 'ライセンス': 'MPL 2.0', 'スター': '2.3k'},
           { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', '概要': '多言語対応の音声クローニング', 'ライセンス': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', '概要': '非言語音を含む生成音声合成', 'ライセンス': 'MIT', 'スター': '39.3k'},
           { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', '概要': '高品質な自然音声TTS', 'ライセンス': 'MIT', 'スター': '6.3k'},
+        ],
+        note: '詳細記事：[スマートフォンでのローカル音声アシスタント構築](/ja/power-local-llm/voice-assistant-local-mobile-offline)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. マルチモーダル & ビジョン',
+        itemHeadings: true,
+        content:
+          '**マルチモーダル・ビジョンシステムは、ローカルLLMを画像・動画・その他の非テキスト入力に対応できるよう拡張します。** LLaVAとOllamaビジョンモデル（Llama 3.2 Visionなど）がローカルビジョン理解の主な選択肢です。テキスト生成と組み合わせることで、画像キャプション生成・視覚的Q&Aなどのビジョン言語タスクに活用できます。',
+        columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
+        rows: [
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '概要': 'ローカルビジョン + 言語モデル', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Ollamaビジョンモデル**', 'Link': '[ollama.com](https://ollama.com)', '概要': 'Ollamaによるローカルビジョン（Llama 3.2 Vision、Llavaなど）', 'ライセンス': '各種' },
+          { 'Tool': '**Idefics**', 'Link': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', '概要': 'ビジョンと言語のためのオープンソースマルチモーダルモデル', 'ライセンス': 'Apache 2.0' },
         ],
         note: '詳細記事：[ローカルビジョンモデル2026：LLaVA・Llama 3.2 Vision・Qwen3-VL & Ollamaマルチモーダルセットアップ](/ja/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
@@ -1746,6 +1786,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', '概要': 'ローカルAnythingLLMワークスペースへのリモートアクセス', 'ライセンス': 'MIT' },
         ],
         note: '詳細記事：[2026年のiPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. 画像生成 & ビジュアルAI',
+        itemHeadings: true,
+        content:
+          '**画像生成・ビジュアルAIシステムは、クラウド呼び出しなしで自分のハードウェアだけで画像・動画・ビジュアルコンテンツを生成します。** Stable Diffusionが基盤です。ComfyUIとAUTOMATIC1111 WebUIが最も成熟したUIです。Invoke AIはユーザー体験を重視しています。FooocusとStableSwarmUIはワークフローを簡略化します。ControlNetは精密な制御を追加します。Real-ESRGANはアップスケーリングを担当します。AnimateDiffは動画を生成します。すべてVRAM 6〜24GBのコンシューマーGPUで動作します。',
+        columns: ['Tool', 'Link', '概要', 'ライセンス', 'スター'],
+        rows: [
+          { 'Tool': '**Stable Diffusion**', 'Link': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', '概要': '基盤となるオープンソース画像生成モデル', 'ライセンス': 'OpenRAIL' },
+          { 'Tool': '**ComfyUI**', 'Link': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', '概要': '高度な画像生成ワークフロー向けノードベースUI — アクティブ、1週間前にリリース', 'ライセンス': 'GPL 3.0', 'スター': '131.2k'},
+          { 'Tool': '**AUTOMATIC1111 WebUI**', 'Link': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', '概要': 'Stable Diffusion向け最も人気のWeb UI — 2025年以降リリースなし（19か月以上）', 'ライセンス': 'AGPL 3.0', 'スター': '164.8k'},
+          { 'Tool': '**Invoke AI**', 'Link': '[invoke.ai](https://invoke.ai)', '概要': '直感的なUIを備えたプロ品質の画像生成 — アクティブ、1週間前にリリース', 'ライセンス': 'Apache 2.0', 'スター': '28.1k' },
+          { 'Tool': '**Fooocus**', 'Link': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', '概要': '簡易セットアップの合理化されたStable Diffusion UI — 2024年以降リリースなし（2年以上）', 'ライセンス': 'GPL 3.0', 'スター': '52.7k'},
+          { 'Tool': '**StableSwarmUI**', 'Link': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', '概要': 'マルチモデル対応の公式Stability AI UI — 2024年以降リリースなし（2年以上）', 'ライセンス': 'Apache 2.0', 'スター': '4.9k'},
+          { 'Tool': '**ControlNet**', 'Link': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', '概要': '空間的ガイダンスによる画像生成の精密制御 — リリースなし、2024年にpush（2年以上）', 'ライセンス': 'Apache 2.0', 'スター': '34.1k'},
+          { 'Tool': '**Real-ESRGAN**', 'Link': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', '概要': '高品質な画像拡大のためのAIアップスケーラー — 2022年以降リリースなし（4年以上）', 'ライセンス': 'Apache 2.0', 'スター': '36.7k'},
+          { 'Tool': '**AnimateDiff**', 'Link': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', '概要': 'Stable Diffusionのテキストプロンプトからの動画生成 — リリースなし、2024年にpush（2年以上）', 'ライセンス': 'Apache 2.0', 'スター': '12.2k'},
+        ],
+        note: '詳細記事：[AnimateDiffガイド2026：あらゆるStable Diffusionモデルをアニメーション化](/ja/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -1793,7 +1853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'ディレクトリの最新性について',
         content:
-          '**このディレクトリは6か月ごとに見直され、見直しの合間にも更新されます（最終更新：2026年7月、次回見直し：2026年11月）。** 直近の見直しでは全リンクを再確認し、複数のプロジェクト名とライセンスを修正しました：FaradayはBackyard AIに改称、メンテナンスされているCoqui TTSフォークはIdiapがホスト、Cherry StudioはAGPL 3.0です。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか空白層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載提案はPromptQuorumリポジトリのissueまたはPRで受け付けています — プロジェクトURL、ライセンス、上記テーブル形式の一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
+          '**このディレクトリは6か月ごとに見直され、見直しの合間にもパッチ更新されます — 最終更新は2026年8月、次回の予定更新は2026年11月です。** 2026年8月の拡張では、全層にわたって72以上の新規ツールを追加し、音声・マルチモーダル層を3つの専門層（STT・TTS・ビジョン）に分割、コーディングアシスタント層をIDE統合（4a）とターミナルツール（4b）に分割、さらに画像生成という新しい層をまるごと追加しました。すべてのリンクとライセンスを再検証し、新規エントリー（PearAI、Windsurf、Sourcegraph Cody、SuperAGI、Leon AI、Draw Things、Fooocus、StableSwarmUIほか）はアクティブなメンテナンス状況を確認済みです。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか、それがなければ空白の層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載を提案する場合は、PromptQuorumリポジトリのissueまたはPRを開いてください — プロジェクトURL、ライセンス、上記の形式による一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
       },
       sources: {
         id: 'sources',
@@ -1850,6 +1910,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'このディレクトリはどのくらいの頻度で更新されますか？',
             a: '6か月ごと — 最終見直しは2026年7月、次回の予定更新は2026年11月です。中間の変更（プロジェクトが非活性になった、新しいツールが有意なシェアを獲得した、ライセンスが変わった）は既存エントリーへのパッチとして適用されます。新しいカテゴリや層は構造の安定性を保つため更新を待ちます。「参考文献」セクションに更新間のエコシステム監視に使用するコミュニティインデックスを掲載しています。',
+          },
+          {
+            q: '画像生成をクラウド呼び出しなしでローカルに行えますか？',
+            a: 'はい — Stable Diffusion、ComfyUI、Invoke AI、AUTOMATIC1111 WebUIなど、Tier 10のツールはすべてローカルハードウェア上で完結します。Stable Diffusionには6GB以上のVRAM（RTX 3060、RTX 4060など）が必要です。Fooocusなどの最適化UIは4〜6GBのカードでも動作します。Real-ESRGANは生成画像をアップスケールし、ControlNetは空間的な制御（エッジ・ポーズ・深度マップ）を追加、AnimateDiffはテキストから動画を生成します。すべて外部サーバーへデータを送信せずに動作します。',
           },
         ],
       },
