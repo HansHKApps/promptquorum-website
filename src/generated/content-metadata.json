@@ -2407,7 +2407,7 @@
       ]
     },
     "fastest-local-llms-low-end-pcs": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -7483,7 +7483,7 @@
       "images": []
     },
     "whatIsQ4KMQuantization": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -7510,7 +7510,7 @@
       ]
     },
     "q4KMVsQ80": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -7600,7 +7600,7 @@
       "images": []
     },
     "bestLocalLlm6gbVram": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -7622,7 +7622,7 @@
         },
         {
           "url": "/images/best-local-llm-6gb-vram-windows-vs-mac-hero-en.webp",
-          "title": "6 GB VRAM: Windows vs MacBook -- Llama 3 8B Q4_K_M speed"
+          "title": "6 GB VRAM: Windows vs MacBook -- Qwen3 8B Q4_K_M speed"
         }
       ]
     },
