@@ -188,4 +188,6 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-llm-evaluation-tools-2026':               'best-llm-evaluation-tools-2026',
   'best-llm-observability-tools-2026':            'best-llm-observability-tools-2026',
   'best-vector-database-2026':                    'best-vector-database-2026',
+  // Enterprise/B2B sprint 2026-09-02
+  'enterprise-gpu-server-buying-guide-2026':      'enterprise-gpu-server-buying-guide-2026',
 }

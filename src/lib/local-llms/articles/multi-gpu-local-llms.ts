@@ -195,6 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How Much VRAM Do Local LLMs Need?](/local-llms/how-much-vram-local-llm) -- VRAM requirements by model size and quantization.',
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Complete hardware build recommendations.',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparison of inference tools with multi-GPU support.',
+            '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) -- When multi-GPU outgrows a single workstation: Dell, Lenovo, HPE, and Supermicro rack servers compared.',
           ],
         },
         sources: {

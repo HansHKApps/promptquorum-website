@@ -168,6 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) -- Hardware and infrastructure costs.',
             '[Corporate RAG Local LLMs](/local-llms/corporate-rag-local-llms) -- Document Q&A at scale.',
             '[Enterprise Compliance Local LLMs](/local-llms/enterprise-compliance-local-llms) -- Compliance controls in scaled deployment.',
+            '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) -- Dell, Lenovo, HPE, and Supermicro rack-scale GPU servers compared for the hardware procurement behind this rollout.',
           ],
         },
         sources: {

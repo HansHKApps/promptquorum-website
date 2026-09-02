@@ -1,0 +1,3275 @@
+// Local LLMs — Enterprise GPU Server Buying Guide 2026
+// Slug: enterprise-gpu-server-buying-guide-2026
+// Rack-server / datacenter procurement buying guide for IT procurement leads and
+// infrastructure architects — Dell PowerEdge XE9680, Lenovo ThinkSystem SR675 V3,
+// HPE Cray XD670 / ProLiant DL380a Gen11, Supermicro SYS-821GE-TNHR.
+// Affiliate mode A (single-category buying guide). No affiliate program exists yet
+// (see src/lib/affiliate-links.ts HONESTY NOTE) — these are plain disclosed vendor
+// product/config-page links, rel="nofollow", no commission.
+// Pricing: September 2026 reseller/system-integrator quote ranges. Vendors do not
+// publish list pricing for 8-GPU configurations — every figure here is a range,
+// re-verify with a vendor quote before budgeting.
+
+import type { Language } from '@/lib/blog/blogContent'
+import type { LLMArticle } from '@/lib/local-llms/types'
+
+export const article: Partial<Record<Language, LLMArticle>> = {
+  en: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: 'Enterprise GPU Server Buying Guide 2026: Dell, Lenovo, HPE, Supermicro',
+    heroImage: '',
+    seoTitle: 'Enterprise GPU Server Buying Guide 2026: Vendor Comparison',
+    intro:
+      'Buying an enterprise GPU server is not the same purchase as building one AI workstation. A rack-mounted 8-GPU platform costs six figures, needs a cooling and power plan before it arrives, and locks you into a vendor support relationship for years. This guide compares the four vendors that actually sell rack-scale GPU servers for enterprise AI — Dell, Lenovo, HPE, and Supermicro — on GPU density, cooling requirements, networking, warranty tiers, and price band, so procurement can size the right purchase against the actual workload instead of the loudest spec sheet.',
+    metaDescription:
+      'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670, and Supermicro SYS-821GE-TNHR compared for enterprise AI: GPU density, cooling, networking, price bands, and which one fits inference vs. training.',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Dell PowerEdge XE9680 configurator' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Lenovo ThinkSystem SR675 V3 configurator' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Supermicro SYS-821GE-TNHR configurator' },
+    ],
+    twitterDescription:
+      'Dell vs Lenovo vs HPE vs Supermicro for enterprise AI GPU servers — density, cooling, networking, and price, compared for procurement teams sizing a real rack purchase.',
+    leadAnswerBlock:
+      '**For 8-GPU H100/H200 training clusters, Dell PowerEdge XE9680, HPE Cray XD670, and Supermicro SYS-821GE-TNHR are the closest direct competitors; for inference-only or budget-constrained deployments, HPE ProLiant DL380a Gen11 or Lenovo ThinkSystem SR675 V3 with PCIe GPUs cost roughly a third to half as much.** An 8x H100/H200 SXM5 configuration runs roughly $200,000–$400,000+ depending on memory and support tier — get a formal vendor quote, list pricing is not published.',
+    audience:
+      'IT procurement leads and infrastructure architects buying rack-mounted multi-GPU servers for enterprise AI inference or training deployment',
+    readTime: '13 min read',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'enterprise GPU server',
+    targetKeywords: [
+      'enterprise gpu server buying guide 2026',
+      'dell poweredge xe9680 vs lenovo vs hpe',
+      'rack gpu server for ai inference',
+      'h100 vs h200 vs l40s enterprise server',
+      'best gpu server vendor for llm training',
+    ],
+    quickAnswerTop: {
+      en: {
+        question: 'Which GPU server vendor should an enterprise buy for AI in 2026?',
+        answer:
+          'Pick by workload first, vendor second. For multi-node H100/H200 training clusters, Dell PowerEdge XE9680, HPE Cray XD670, and Supermicro SYS-821GE-TNHR are the closest competitors — all 8U-or-smaller, 8x SXM5 GPU, NVLink-connected platforms in the $200,000–$400,000+ range. For inference-only or single-node deployments, HPE ProLiant DL380a Gen11 (2U, PCIe GPUs) or Lenovo ThinkSystem SR675 V3 configured with L40S GPUs cost roughly a third to half as much and run on standard air cooling.',
+        bullets: [
+          'Training / multi-node: Dell XE9680, HPE Cray XD670, or Supermicro SYS-821GE-TNHR — 8x H100/H200 SXM5, NVLink, InfiniBand-ready',
+          'Inference-only / lower budget: HPE ProLiant DL380a Gen11 or Lenovo SR675 V3 with L40S — PCIe, air-cooled, no liquid loop required',
+          'Liquid-cooling-ready datacenter: Lenovo SR675 V3 with Neptune direct-to-chip cooling',
+          'Price band for an 8x H100/H200 SXM5 server: roughly $200,000–$400,000+ per reseller/SI quotes — vendors do not publish list price',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Key Takeaways', anchor: '#key-takeaways' },
+      { label: 'Quick Facts', anchor: '#quick-facts' },
+      { label: 'Best Choice by Buyer Profile', anchor: '#best-choice' },
+      { label: 'Vendor Comparison Table', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670 and ProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs. H200 vs. L40S', anchor: '#gpu-options' },
+      { label: 'Power and Cooling Requirements', anchor: '#power-cooling' },
+      { label: 'Networking: InfiniBand vs. RoCE', anchor: '#networking' },
+      { label: 'How to Size Your Purchase', anchor: '#sizing' },
+      { label: 'Warranty and Support Tiers', anchor: '#warranty-support' },
+      { label: 'Common Buying Mistakes', anchor: '#common-mistakes' },
+      { label: 'Frequently Asked Questions', anchor: '#faq' },
+      { label: 'Related Reading', anchor: '#related-reading' },
+      { label: 'Sources', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Enterprise GPU server buyers should match vendor to workload — Dell PowerEdge XE9680, HPE Cray XD670, and Supermicro SYS-821GE-TNHR compete directly on 8x H100/H200 SXM5 training platforms at $200,000-$400,000+, while HPE ProLiant DL380a Gen11 and Lenovo ThinkSystem SR675 V3 with PCIe L40S GPUs serve inference-only budgets at roughly a third to half the price.',
+          },
+          {
+            type: 'plain-terms',
+            text: "Buying one AI server for a company is a different purchase than building one gaming-style PC. These machines cost as much as a house, need a plan for cooling and electricity before they arrive, and come with a multi-year support contract. This guide compares the four companies that actually sell these rack-mounted AI servers — Dell, Lenovo, HPE, and Supermicro — so a buyer can pick the right size and vendor for the actual job (running AI models for employees vs. training new ones from scratch), not just the biggest spec sheet.",
+          },
+        ],
+        items: [
+          '**GPU density:** All four vendors ship 8-GPU SXM5 flagship platforms (Dell XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR); Lenovo and HPE also sell lower-density, lower-cost PCIe platforms.',
+          '**Price band:** An 8x H100/H200 SXM5 server runs roughly $200,000-$400,000+ depending on GPU memory (80GB H100 vs. 141GB H200) and support tier.',
+          '**Cooling is the real constraint.** Two or three 8-GPU SXM5 servers already exceed the ~20-40kW practical ceiling of air cooling per rack — liquid cooling becomes mandatory, not optional, above that density.',
+          '**Networking matters for training, less for inference.** Multi-node training clusters need InfiniBand NDR or RoCE v2 Ethernet fabric; single-node inference does not.',
+          '**Match GPU to workload, not budget alone.** L40S (48GB, PCIe, air-cooled) fits inference; H100/H200 (80-141GB, SXM5, NVLink) fits training and large-batch serving.',
+          'Buyers who need one or two GPUs of inference capacity should not buy a rack server at all — a workstation build is the right tier for that scale.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Quick Facts',
+        items: [
+          '**Dell PowerEdge XE9680:** 6U, up to 8x H100/H200 SXM5, dual Intel Xeon Platinum, up to 4TB DDR5.',
+          '**Lenovo ThinkSystem SR675 V3:** 3U, up to 8x GPU (H100/H200/L40S mix), dual AMD EPYC 9004/9005, up to 6TB DDR5, optional Neptune liquid cooling.',
+          '**HPE Cray XD670:** 5U, up to 8x H100/H200 SXM5, dual Intel Xeon 4th Gen, InfiniBand NDR / Slingshot 11 / Ethernet fabric options.',
+          '**HPE ProLiant DL380a Gen11:** 2U, up to 4 double-wide or 8 single-wide GPUs (L40S/H100 PCIe), dual Intel Xeon up to 64 cores.',
+          '**Supermicro SYS-821GE-TNHR:** 8U, up to 8x H100/H200 SXM5, dual Intel Xeon 5th/4th Gen, up to 8TB DDR5.',
+          '**GPU VRAM:** H100 = 80GB HBM3; H200 = 141GB HBM3e; L40S = 48GB GDDR6.',
+          '**Rack power:** a single 8x H100/H200 SXM5 node draws roughly 10-12kW at full load — two of them already exceed the practical air-cooling ceiling for one rack.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: 'Which GPU Server Should You Buy for Your Use Case?',
+        content: [
+          '**The right vendor depends on workload and datacenter readiness, not brand preference.** Training clusters, inference-only deployments, and liquid-cooling-ready facilities each point to a different platform.',
+        ],
+        items: [
+          '**Best for large-scale multi-node training:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) — the broadest enterprise sales and system-integrator network for building out an InfiniBand-connected multi-rack cluster.',
+          '**Best for a liquid-cooling-ready datacenter:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna) — Neptune direct-to-chip liquid cooling cuts cooling cost materially at sustained high GPU utilization, with an AMD EPYC CPU option.',
+          '**Best for inference-only or a smaller first purchase:** HPE ProLiant DL380a Gen11 — 2U, air-cooled, PCIe GPUs, roughly a third to half the cost of an 8x SXM5 training box.',
+          '**Best for configuration flexibility and price competitiveness:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html) — the widest build-to-order options via the system-integrator channel, often the most price-competitive route to an 8x H100/H200 SXM5 configuration.',
+          '**Skip rack servers entirely if:** your actual need is 1-2 GPUs of inference capacity for a small team — a [local LLM workstation build](/local-llms/local-llm-workstation-build) costs a fraction of the price and needs no datacenter cooling plan.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'How Do the Four Vendors Compare on Specs and Price?',
+        content: [
+          '**Dell, Lenovo, HPE, and Supermicro each field at least one 8-GPU SXM5 platform, but they diverge sharply on form factor, cooling options, and channel.**',
+        ],
+        columns: ['Vendor / Model', 'Form Factor', 'Max GPUs', 'GPU Options', 'Cooling', 'Price Band'],
+        rows: [
+          { 'Vendor / Model': 'Dell PowerEdge XE9680', 'Form Factor': '6U', 'Max GPUs': '8 (SXM5, NVLink)', 'GPU Options': 'H100 80GB / H200 141GB', 'Cooling': 'Air standard, liquid optional', 'Price Band': '~$200K-$375K (8x GPU)' },
+          { 'Vendor / Model': 'Lenovo SR675 V3', 'Form Factor': '3U', 'Max GPUs': '8 (PCIe or SXM)', 'GPU Options': 'H100 / H200 / L40S', 'Cooling': 'Air, or Neptune liquid', 'Price Band': 'Varies widely by config' },
+          { 'Vendor / Model': 'HPE Cray XD670', 'Form Factor': '5U', 'Max GPUs': '8 (SXM5, NVLink)', 'GPU Options': 'H100 80GB / H200 141GB', 'Cooling': 'Air standard', 'Price Band': 'Quote-only' },
+          { 'Vendor / Model': 'HPE ProLiant DL380a Gen11', 'Form Factor': '2U', 'Max GPUs': '4 double-wide / 8 single', 'GPU Options': 'L40S / H100 PCIe', 'Cooling': 'Air only', 'Price Band': 'Lower — quote-only' },
+          { 'Vendor / Model': 'Supermicro SYS-821GE-TNHR', 'Form Factor': '8U', 'Max GPUs': '8 (SXM5, NVLink)', 'GPU Options': 'H100 80GB / H200 141GB', 'Cooling': 'Air standard', 'Price Band': '~$200K-$320K (8x GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'What Does the Dell PowerEdge XE9680 Offer?',
+        content: [
+          '**The Dell PowerEdge XE9680 is a 6U rack server holding 8 NVIDIA HGX H100 or H200 SXM5 GPUs connected via NVLink, built specifically for large-model training and inference.** It pairs the GPUs with two 4th- or 5th-generation Intel Xeon Scalable processors (up to 56 cores each), up to 32 DDR5 DIMM slots (4TB max, 4800 MT/s), and 10 PCIe Gen5 x16 slots for networking and storage expansion.',
+          'It ships standard with air cooling; Dell offers liquid-cooling options for datacenters running above the ~20-30kW-per-rack density where air cooling stops being practical.',
+          'Pricing is not published — reseller and system-integrator quotes for a fully configured 8x H100/H200 unit have ranged roughly $200,000-$375,000 depending on GPU memory tier, RAM, storage, and support level. Get a formal quote through [Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) before budgeting.',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'What Does the Lenovo ThinkSystem SR675 V3 Offer?',
+        content: [
+          '**The Lenovo ThinkSystem SR675 V3 is a 3U rack server supporting up to 8 double-wide or single-wide GPUs — including NVIDIA H100, H200, and L40S — paired with two 5th-generation AMD EPYC 9004/9005 processors and up to 6TB of DDR5-4800 memory across 24 DIMM slots.**',
+          'The distinguishing feature is Lenovo Neptune, a direct-to-chip and hybrid liquid-to-air cooling system available as a configuration option — relevant for buyers whose facility already runs liquid cooling loops or plans to add one, since it materially reduces the cooling cost of sustained high-utilization GPU workloads versus air alone.',
+          'The SR675 V3 also supports mixed GPU configurations (H200 4-GPU NVLink builds, or L40S for inference-focused deployments), making it the most configuration-flexible platform in this comparison for buyers who want one chassis family to cover both training and inference tiers. Configure via [Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna).',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'What Do the HPE Cray XD670 and ProLiant DL380a Gen11 Offer?',
+        content: [
+          '**HPE sells two distinct GPU server tiers: the Cray XD670 for large-scale training, and the ProLiant DL380a Gen11 for inference and smaller deployments.**',
+          'The **Cray XD670** is a 5U chassis holding 8x NVIDIA H100 or H200 SXM5 GPUs with dual 4th-generation Intel Xeon processors. Its distinguishing feature is fabric choice: 8x PCIe Gen5 half-height slots supporting HPE Slingshot 11, InfiniBand NDR, or standard Ethernet — relevant for buyers already standardized on Slingshot from an existing HPE Cray supercomputing footprint.',
+          'The **ProLiant DL380a Gen11** is a 2U server supporting 4 double-wide or 8 single-wide GPUs (L40S or H100 PCIe), up to 3TB DDR5, and PCIe 5.0 — the air-cooled, lower-density option for inference workloads or a first GPU purchase that doesn\'t justify an 8-GPU SXM5 platform. See both at [HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html).',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'What Does the Supermicro SYS-821GE-TNHR Offer?',
+        content: [
+          '**The Supermicro SYS-821GE-TNHR is an 8U rack server supporting up to 8 NVIDIA HGX H100 (80GB) or HGX H200 (141GB) GPUs, dual 4th- or 5th-generation Intel Xeon Scalable processors, and up to 8TB of DDR5-5600 memory across 32 DIMM slots** — the highest maximum RAM capacity of the four platforms compared here.',
+          'Supermicro sells primarily through a system-integrator and reseller channel rather than direct enterprise account teams, which typically means more build-to-order flexibility (drive bays, networking cards, power supply redundancy) and, per current reseller listings, a competitive starting price for an 8x H100 configuration — starting-configuration quotes have ranged roughly $200,000-$320,000, with fully loaded configurations running higher.',
+          'Storage is a strength: up to 19 hot-swap 2.5" NVMe/SATA/SAS bays plus 2 M.2 slots, useful for buyers running large local datasets alongside inference or fine-tuning. See the base configuration at [Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html).',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: 'Should You Buy H100, H200, or L40S GPUs?',
+        content: [
+          '**H200 wins on memory and bandwidth, H100 is the more available and often cheaper SXM5 option, and L40S is the air-cooled, PCIe choice for inference-only deployments.** All three are current NVIDIA datacenter GPUs as of September 2026; none is being discontinued imminently, so the choice is workload fit, not obsolescence risk.',
+        ],
+        columns: ['GPU', 'VRAM', 'Memory Bandwidth', 'Best For'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', VRAM: '80GB HBM3', 'Memory Bandwidth': '3.35 TB/s', 'Best For': 'Multi-node training, widest availability' },
+          { GPU: 'NVIDIA H200 SXM', VRAM: '141GB HBM3e', 'Memory Bandwidth': '4.8 TB/s', 'Best For': 'Large-context serving, bigger batch training' },
+          { GPU: 'NVIDIA L40S', VRAM: '48GB GDDR6', 'Memory Bandwidth': '864 GB/s', 'Best For': 'Air-cooled PCIe inference, lower budget' },
+        ],
+        items: [
+          '**Choose H200 if:** you\'re serving large-context workloads or training larger models where 80GB per GPU forces cross-GPU sharding you\'d rather avoid.',
+          '**Choose H100 if:** you need the widest vendor and reseller availability for a multi-node NVLink/InfiniBand training cluster and 80GB per GPU is enough for your model size.',
+          '**Choose L40S if:** the workload is inference-only, the datacenter is air-cooled only, and 48GB per GPU covers your largest model at the quantization level you plan to run.',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'How Much Power and Cooling Does a GPU-Dense Rack Need?',
+        content: [
+          '**A single 8-GPU H100/H200 SXM5 server draws roughly 10-12kW at full load — 8x 700W GPUs alone account for 5.6kW before CPUs, memory, and fans.** Two or three of those servers in one rack already push past the practical ceiling of air cooling.',
+          'Industry figures put air cooling\'s practical limit at roughly 20-40kW per rack; liquid cooling (direct-to-chip or immersion) is needed above that, and can support 100-200kW+ per rack. For reference, NVIDIA\'s GB200 NVL72 rack-scale system draws roughly 120-130kW total — a data point on where AI rack density is heading, not a spec of any server compared here.',
+          'Practical implication for buyers: if you\'re racking more than one or two 8-GPU SXM5 servers per rack, plan for direct-to-chip liquid cooling (Lenovo Neptune, or a facility-level liquid loop) rather than assuming standard datacenter air handling will keep up.',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: 'Do You Need InfiniBand or Standard Ethernet?',
+        content: [
+          '**Single-node inference deployments do not need InfiniBand — standard 100/200GbE Ethernet is enough.** Multi-node training or fine-tuning clusters, where GPUs across servers need to synchronize gradients constantly, do need a dedicated high-bandwidth, low-latency fabric.',
+          'The two options for that fabric are **InfiniBand NDR** (400Gb/s per link, the traditional HPC choice, one NIC per GPU on flagship platforms) and **RoCE v2** (RDMA over Converged Ethernet — e.g. NVIDIA Spectrum-X — which delivers similar throughput over a standard Ethernet fabric your network team may already operate).',
+        ],
+        items: [
+          '**Use InfiniBand NDR if:** you\'re building a dedicated multi-node training cluster and want the most mature, widely deployed RDMA fabric for that scale.',
+          '**Use RoCE v2 (Ethernet) if:** your team already operates a converged Ethernet network and wants to avoid maintaining a separate InfiniBand fabric and skill set.',
+          '**Skip both if:** you\'re running single-node inference — standard networking is sufficient and the extra fabric cost isn\'t justified.',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: 'How Do You Size a GPU Server Purchase Against Your Workload?',
+        content: [
+          '**Size the purchase to the workload, not the biggest available configuration.** Inference-only deployments and training/fine-tuning deployments have fundamentally different GPU, memory, and networking requirements.',
+        ],
+        numberedItems: [
+          { title: 'Classify the workload first', whyItMatters: 'Inference-only (serving a fixed model to users) needs far less GPU memory and no multi-node fabric compared to training or fine-tuning, which needs to hold gradients and optimizer state in addition to model weights.' },
+          { title: 'Estimate GPU memory need from model size and quantization', whyItMatters: 'A 70B-parameter model at FP16 needs roughly 140GB of VRAM before overhead — that alone rules out a single-GPU L40S (48GB) and points toward multi-GPU H100/H200 sharding or a smaller/quantized model.' },
+          { title: 'Decide single-node vs. multi-node', whyItMatters: 'If one 8-GPU server\'s combined VRAM covers the model and concurrency target, skip InfiniBand/RoCE entirely and save the fabric cost; if not, budget for a dedicated networking fabric from the start.' },
+          { title: 'Match cooling to rack density before ordering', whyItMatters: 'Confirm with facilities whether the target rack can support liquid cooling before committing to more than one or two 8-GPU SXM5 servers per rack — retrofitting cooling after delivery is far more expensive than planning for it upfront.' },
+          { title: 'Get a formal quote and confirm lead time', whyItMatters: 'None of these vendors publish list pricing for 8-GPU configurations, and delivery lead times for GPU-dense servers have run several weeks to a few months depending on GPU allocation — budget the timeline, not just the price.' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: 'What Warranty and Support Tiers Should You Choose?',
+        content: [
+          '**All four vendors offer tiered enterprise support beyond the base hardware warranty, but the tier names, response times, and included services differ — confirm current terms directly with the vendor before purchase, since programs change.**',
+        ],
+        items: [
+          '**Dell** sells its ProSupport tiers (including options with faster, mission-critical response) alongside the XE9680 — ask specifically about GPU-server-qualified support, not the standard PowerEdge tier.',
+          '**Lenovo** sells Premier Support tiers for the ThinkSystem line, with options for on-site response and proactive monitoring.',
+          '**HPE** sells support through Pointnext Complete Care and offers HPE GreenLake as a consumption-based (pay-per-use) alternative to a capital purchase for buyers who want to avoid the six-figure upfront cost.',
+          '**Supermicro** support terms vary more by reseller/system-integrator than the other three vendors, since much of its volume moves through that channel rather than direct enterprise sales — get the support terms in writing from your specific reseller, not just the base Supermicro warranty page.',
+          'For any vendor: ask what happens on GPU failure specifically (replacement SLA, whether it requires shipping the whole node or just the GPU tray) — this is the failure mode most likely to actually happen on a GPU-dense server.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'What Mistakes Do Enterprise Buyers Make?',
+        items: [
+          '**Buying 8-GPU SXM5 capacity for an inference-only workload.** If you\'re only serving a fixed model to users, a 2U PCIe platform like the ProLiant DL380a Gen11 covers it at a fraction of the price and complexity.',
+          '**Ordering before confirming rack cooling capacity.** A second or third 8-GPU SXM5 server in the same rack can push past air cooling\'s practical ceiling — confirm with facilities before the hardware arrives, not after.',
+          '**Skipping the networking fabric budget for a "we might scale later" cluster.** Retrofitting InfiniBand or RoCE onto an already-deployed single-node fleet is more disruptive than budgeting for it in the original purchase.',
+          '**Treating the sticker price as the total cost.** Support contracts, networking fabric, cooling retrofit, and power infrastructure upgrades routinely add 15-30% on top of the server hardware line item.',
+          '**Assuming H200 is always the right upgrade over H100.** If your model and batch size fit comfortably in 80GB per GPU, H200\'s extra memory and cost buy you nothing — check actual VRAM need before paying the premium.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Frequently Asked Questions',
+        faqs: [
+          {
+            q: 'How many H100 or H200 GPUs do I need for enterprise inference vs. training?',
+            a: 'Inference-only deployments serving a single fixed model to a moderate number of concurrent users often fit on 1-4 GPUs and don\'t need an 8-GPU SXM5 platform at all. Training or fine-tuning large models (70B+ parameters) typically needs the full 8-GPU NVLink configuration to hold the model, gradients, and optimizer state across GPUs. Size the purchase from the workload, not a default of "buy the biggest platform."',
+          },
+          {
+            q: 'What is the real total cost of an 8-GPU H100 rack server?',
+            a: 'Reseller and system-integrator quotes for a fully configured 8x H100 unit have ranged roughly $200,000-$375,000 for the hardware alone, before support contracts, networking fabric, and any cooling infrastructure upgrade — those typically add another 15-30% on top. None of the four vendors publish list pricing; get a formal quote before budgeting.',
+          },
+          {
+            q: 'Do I need liquid cooling for a GPU-dense rack?',
+            a: 'If you\'re racking more than one or two 8-GPU H100/H200 SXM5 servers per rack, yes — each one draws roughly 10-12kW at full load, and air cooling\'s practical ceiling is around 20-40kW per rack. Below that density, standard air cooling can still work; confirm with facilities before ordering hardware.',
+          },
+          {
+            q: 'Should I choose InfiniBand or Ethernet (RoCE) for networking?',
+            a: 'For single-node inference, neither — standard Ethernet is enough. For multi-node training clusters, InfiniBand NDR is the more mature, widely deployed high-bandwidth RDMA fabric; RoCE v2 over Ethernet is the alternative if your network team wants to avoid running a separate InfiniBand fabric and skill set.',
+          },
+          {
+            q: 'Dell vs. Lenovo vs. HPE vs. Supermicro — which vendor has the best enterprise support?',
+            a: 'Dell, Lenovo, and HPE each sell tiered enterprise support (ProSupport, Premier Support, and Pointnext Complete Care respectively) through direct account teams. Supermicro sells primarily through system integrators and resellers, so support terms vary more by reseller than by a single Supermicro-wide tier — get support terms in writing from the specific reseller before purchase.',
+          },
+          {
+            q: 'H100 vs. H200 vs. L40S — which GPU should I buy?',
+            a: 'Choose H200 (141GB HBM3e) for large-context serving or training where 80GB per GPU forces cross-GPU sharding you\'d rather avoid. Choose H100 (80GB HBM3) for the widest vendor and reseller availability in a multi-node training cluster where 80GB is enough. Choose L40S (48GB GDDR6, PCIe, air-cooled) for inference-only deployments on a lower budget.',
+          },
+          {
+            q: 'Can I mix GPU models within the same rack or server?',
+            a: 'Within a single server, no — an 8-GPU SXM5 platform is built and NVLink-connected around one GPU model (all H100 or all H200), not a mix. Within a rack, yes — you can run one server configured with H100/H200 for training next to another configured with L40S for inference, as long as each server\'s own cooling and power draw is accounted for separately.',
+          },
+          {
+            q: 'What warranty and support tier should enterprise buyers choose?',
+            a: 'At minimum, confirm the vendor\'s replacement SLA specifically for GPU failure (not just general hardware failure) — GPU failure is the most likely failure mode on a GPU-dense server, and replacement logistics (shipping a GPU tray vs. the whole node) vary by vendor and tier. Match the response-time tier to how much downtime the workload can actually tolerate; a mission-critical inference service needs faster response than a batch training job that can wait a day.',
+          },
+          {
+            q: 'Is on-premises hardware cheaper than cloud GPU rental at enterprise scale?',
+            a: 'It depends on utilization, not just sticker price — on-premises hardware has a high upfront cost but a low per-hour cost once running, while cloud rental has no upfront cost but a much higher per-hour rate. The crossover point is typically sustained, near-constant utilization; occasional or bursty workloads usually cost less to rent. See our [cloud GPU rental guide](/local-llms/cloud-gpu-rental-comparison-2026) for a detailed cost comparison.',
+          },
+          {
+            q: 'How long does delivery take for an 8x H100 or H200 configuration?',
+            a: 'Lead times for GPU-dense servers have varied from several weeks to a few months depending on GPU allocation and current demand — this is not a stock item most vendors keep on the shelf in an 8-GPU configuration. Confirm lead time as part of the formal quote, and budget the project timeline around it, not just the price.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related Reading',
+        items: [
+          '[Scaling Local LLMs for Enterprise](/local-llms/scaling-local-llms-enterprise) — the software side of running this hardware: Kubernetes orchestration, load balancing, and redundancy across multiple GPU nodes.',
+          '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build) — a single desktop-tier build for one team or individual, not a rack purchase.',
+          '[Enterprise LLM Inference Servers 2026](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI, and NVIDIA NIM compared for the serving software that runs on this hardware.',
+          '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — single-machine multi-GPU setup for smaller deployments.',
+          '[Cloud GPU Rental Comparison 2026](/local-llms/cloud-gpu-rental-comparison-2026) — the rent-vs-buy alternative for occasional or bursty compute needs.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          'Dell PowerEdge XE9680 product page -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Lenovo ThinkSystem SR675 V3 Product Guide -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'HPE ProLiant DL380a Gen11 datasheet -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Supermicro SYS-821GE-TNHR datasheet -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'NVIDIA H100/H200 Tensor Core GPU specifications -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Enterprise GPU Server Buying Guide 2026: Dell, Lenovo, HPE, Supermicro',
+      description:
+        'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670, and Supermicro SYS-821GE-TNHR compared for enterprise AI: GPU density, cooling, networking, price bands, and which one fits inference vs. training.',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'IT procurement leads and infrastructure architects' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How many H100 or H200 GPUs do I need for enterprise inference vs. training?', acceptedAnswer: { '@type': 'Answer', text: 'Inference-only deployments often fit on 1-4 GPUs; training or fine-tuning large models typically needs the full 8-GPU NVLink configuration. Size the purchase from the workload, not a default of buying the biggest platform.' } },
+        { '@type': 'Question', name: 'What is the real total cost of an 8-GPU H100 rack server?', acceptedAnswer: { '@type': 'Answer', text: 'Reseller quotes for a fully configured 8x H100 unit have ranged roughly $200,000-$375,000 for hardware alone, before support contracts, networking fabric, and cooling upgrades, which typically add another 15-30%.' } },
+        { '@type': 'Question', name: 'Do I need liquid cooling for a GPU-dense rack?', acceptedAnswer: { '@type': 'Answer', text: 'If racking more than one or two 8-GPU SXM5 servers per rack, yes — each draws roughly 10-12kW at full load, and air cooling tops out around 20-40kW per rack.' } },
+        { '@type': 'Question', name: 'Should I choose InfiniBand or Ethernet (RoCE) for networking?', acceptedAnswer: { '@type': 'Answer', text: 'Single-node inference needs neither. Multi-node training clusters need InfiniBand NDR or RoCE v2 over Ethernet as the alternative.' } },
+        { '@type': 'Question', name: 'Dell vs. Lenovo vs. HPE vs. Supermicro — which vendor has the best enterprise support?', acceptedAnswer: { '@type': 'Answer', text: 'Dell, Lenovo, and HPE sell tiered enterprise support through direct account teams. Supermicro sells primarily through system integrators, so terms vary more by reseller.' } },
+        { '@type': 'Question', name: 'H100 vs. H200 vs. L40S — which GPU should I buy?', acceptedAnswer: { '@type': 'Answer', text: 'Choose H200 for large-context serving needing more than 80GB per GPU. Choose H100 for the widest availability when 80GB is enough. Choose L40S for air-cooled, PCIe inference on a lower budget.' } },
+        { '@type': 'Question', name: 'Can I mix GPU models within the same rack or server?', acceptedAnswer: { '@type': 'Answer', text: 'Not within one server — an 8-GPU SXM5 platform is built around one GPU model. Within a rack, yes, as long as each server\'s cooling and power draw is accounted for separately.' } },
+        { '@type': 'Question', name: 'What warranty and support tier should enterprise buyers choose?', acceptedAnswer: { '@type': 'Answer', text: 'Confirm the replacement SLA specifically for GPU failure, and match the response-time tier to how much downtime the workload can tolerate.' } },
+        { '@type': 'Question', name: 'Is on-premises hardware cheaper than cloud GPU rental at enterprise scale?', acceptedAnswer: { '@type': 'Answer', text: 'It depends on utilization — on-premises has high upfront cost but low per-hour cost; cloud rental has no upfront cost but a higher per-hour rate. Sustained, near-constant utilization favors buying.' } },
+        { '@type': 'Question', name: 'How long does delivery take for an 8x H100 or H200 configuration?', acceptedAnswer: { '@type': 'Answer', text: 'Lead times have varied from several weeks to a few months depending on GPU allocation — confirm as part of the formal quote.' } },
+      ],
+    },
+  },
+  de: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: 'Enterprise-GPU-Server-Kaufratgeber 2026: Dell, Lenovo, HPE, Supermicro im Vergleich',
+    heroImage: '',
+    seoTitle: 'Enterprise-GPU-Server 2026: Dell vs. Lenovo vs. HPE vs. Supermicro',
+    intro:
+      'Ein Enterprise-GPU-Server ist keine hochskalierte Workstation. Eine rackmontierte 8-GPU-Plattform kostet einen sechsstelligen Betrag, braucht vor der Lieferung ein Kühlungs- und Stromkonzept und bindet die IT für Jahre an einen Support-Vertrag. Dieser Ratgeber vergleicht die vier Anbieter, die tatsächlich rack-taugliche GPU-Server für Enterprise-KI verkaufen — Dell, Lenovo, HPE und Supermicro — nach GPU-Dichte, Kühlbedarf, Netzwerkanbindung, Support-Stufen und Preisband, damit Einkauf und IT-Architektur die Anschaffung am realen Workload ausrichten, nicht am lautesten Datenblatt.',
+    metaDescription:
+      'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 und Supermicro SYS-821GE-TNHR im Vergleich für Enterprise-KI: GPU-Dichte, Kühlung, Netzwerk, Preisband und Eignung für Inferenz vs. Training.',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Dell PowerEdge XE9680 Konfigurator' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Lenovo ThinkSystem SR675 V3 Konfigurator' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Supermicro SYS-821GE-TNHR Konfigurator' },
+    ],
+    twitterDescription:
+      'Dell vs. Lenovo vs. HPE vs. Supermicro bei Enterprise-GPU-Servern — Dichte, Kühlung, Netzwerk und Preis im direkten Vergleich für den Einkauf.',
+    leadAnswerBlock:
+      '**Für 8-GPU-H100/H200-Trainingscluster sind Dell PowerEdge XE9680, HPE Cray XD670 und Supermicro SYS-821GE-TNHR die direktesten Konkurrenten; für reine Inferenz oder ein begrenztes Budget kosten HPE ProLiant DL380a Gen11 oder Lenovo ThinkSystem SR675 V3 mit PCIe-GPUs nur etwa ein Drittel bis die Hälfte.** Eine 8x-H100/H200-SXM5-Konfiguration liegt je nach Speicherausstattung und Support-Stufe grob bei 200.000–400.000+ US-Dollar — für die Budgetplanung ein verbindliches Herstellerangebot einholen, Listenpreise werden nicht veröffentlicht.',
+    audience:
+      'IT-Einkaufsverantwortliche und Infrastrukturarchitekten, die rackmontierte Multi-GPU-Server für Enterprise-KI-Inferenz oder -Training beschaffen',
+    readTime: '13 Min. Lesezeit',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'Enterprise-GPU-Server',
+    targetKeywords: [
+      'enterprise gpu server kaufratgeber 2026',
+      'dell poweredge xe9680 vergleich',
+      'rack gpu server für ki inferenz',
+      'h100 vs h200 vs l40s enterprise server',
+      'bester gpu server anbieter für llm training',
+    ],
+    quickAnswerTop: {
+      de: {
+        question: 'Welchen GPU-Server-Anbieter sollte ein Unternehmen 2026 für KI kaufen?',
+        answer:
+          'Zuerst nach Workload wählen, dann nach Anbieter. Für Multi-Node-H100/H200-Trainingscluster sind Dell PowerEdge XE9680, HPE Cray XD670 und Supermicro SYS-821GE-TNHR die direktesten Konkurrenten — alle 8U-oder-kleiner, 8x-SXM5-GPU, NVLink-verbunden, im Bereich 200.000–400.000+ US-Dollar. Für reine Inferenz oder Single-Node-Einsatz kosten HPE ProLiant DL380a Gen11 (2U, PCIe-GPUs) oder Lenovo ThinkSystem SR675 V3 mit L40S-GPUs nur etwa ein Drittel bis die Hälfte und laufen mit Standard-Luftkühlung.',
+        bullets: [
+          'Training / Multi-Node: Dell XE9680, HPE Cray XD670 oder Supermicro SYS-821GE-TNHR — 8x H100/H200 SXM5, NVLink, InfiniBand-fähig',
+          'Reine Inferenz / kleineres Budget: HPE ProLiant DL380a Gen11 oder Lenovo SR675 V3 mit L40S — PCIe, luftgekühlt, kein Flüssigkühlkreislauf nötig',
+          'Rechenzentrum mit Flüssigkühlung: Lenovo SR675 V3 mit Neptune-Direct-to-Chip-Kühlung',
+          'Preisband für einen 8x-H100/H200-SXM5-Server: grob 200.000–400.000+ US-Dollar laut Reseller-/Systemhaus-Angeboten — Hersteller veröffentlichen keinen Listenpreis',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Das Wichtigste in Kürze', anchor: '#key-takeaways' },
+      { label: 'Kurzfakten', anchor: '#quick-facts' },
+      { label: 'Beste Wahl nach Einsatzszenario', anchor: '#best-choice' },
+      { label: 'Anbietervergleich', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670 und ProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs. H200 vs. L40S', anchor: '#gpu-options' },
+      { label: 'Strom- und Kühlbedarf', anchor: '#power-cooling' },
+      { label: 'Netzwerk: InfiniBand vs. RoCE', anchor: '#networking' },
+      { label: 'Beschaffung richtig dimensionieren', anchor: '#sizing' },
+      { label: 'Garantie- und Support-Stufen', anchor: '#warranty-support' },
+      { label: 'Typische Einkaufsfehler', anchor: '#common-mistakes' },
+      { label: 'Häufig gestellte Fragen', anchor: '#faq' },
+      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
+      { label: 'Quellen', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Beim Kauf eines Enterprise-GPU-Servers zählt der Workload mehr als die Marke — Dell PowerEdge XE9680, HPE Cray XD670 und Supermicro SYS-821GE-TNHR konkurrieren direkt bei 8x-H100/H200-SXM5-Trainingsplattformen für 200.000–400.000+ US-Dollar, während HPE ProLiant DL380a Gen11 und Lenovo ThinkSystem SR675 V3 mit PCIe-L40S-GPUs reine Inferenz-Budgets zu etwa einem Drittel bis der Hälfte des Preises bedienen.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Ein KI-Server für ein Unternehmen zu kaufen ist etwas anderes als einen leistungsstarken Gaming-PC zusammenzustellen. Diese Maschinen kosten so viel wie ein Haus, brauchen schon vor der Lieferung einen Plan für Kühlung und Stromversorgung und kommen mit einem mehrjährigen Support-Vertrag. Dieser Ratgeber vergleicht die vier Firmen, die solche rackmontierten KI-Server tatsächlich verkaufen — Dell, Lenovo, HPE und Supermicro —, damit der Einkauf die richtige Größe und den richtigen Anbieter für die tatsächliche Aufgabe wählt (KI-Modelle für Mitarbeitende bereitstellen vs. neue Modelle von Grund auf trainieren), statt nur nach dem größten Datenblatt zu gehen.',
+          },
+        ],
+        items: [
+          '**GPU-Dichte:** Alle vier Anbieter haben eine 8-GPU-SXM5-Flaggschiffplattform im Programm (Dell XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR); Lenovo und HPE bieten zusätzlich günstigere PCIe-Plattformen mit geringerer Dichte.',
+          '**Preisband:** Ein 8x-H100/H200-SXM5-Server kostet je nach GPU-Speicherausstattung (80GB H100 vs. 141GB H200) und Support-Stufe grob 200.000–400.000+ US-Dollar.',
+          '**Kühlung ist der eigentliche Engpass.** Schon zwei bis drei 8-GPU-SXM5-Server überschreiten die praktische Obergrenze der Luftkühlung von etwa 20-40kW pro Rack — oberhalb dieser Dichte wird Flüssigkühlung Pflicht, nicht Option.',
+          '**Netzwerk ist für Training wichtig, für Inferenz weniger.** Multi-Node-Trainingscluster brauchen InfiniBand NDR oder RoCE-v2-Ethernet; Single-Node-Inferenz nicht.',
+          '**GPU nach Workload wählen, nicht nur nach Budget.** L40S (48GB, PCIe, luftgekühlt) passt zu Inferenz; H100/H200 (80-141GB, SXM5, NVLink) passt zu Training und großvolumiger Auslieferung.',
+          'Wer nur ein bis zwei GPUs Inferenz-Kapazität braucht, sollte gar keinen Rack-Server kaufen — dafür ist ein Workstation-Aufbau die richtige Größenordnung.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Kurzfakten',
+        items: [
+          '**Dell PowerEdge XE9680:** 6U, bis zu 8x H100/H200 SXM5, zwei Intel-Xeon-Platinum-CPUs, bis zu 4TB DDR5.',
+          '**Lenovo ThinkSystem SR675 V3:** 3U, bis zu 8 GPUs (H100/H200/L40S-Mix), zwei AMD-EPYC-9004/9005-CPUs, bis zu 6TB DDR5, optionale Neptune-Flüssigkühlung.',
+          '**HPE Cray XD670:** 5U, bis zu 8x H100/H200 SXM5, zwei Intel-Xeon-CPUs der 4. Generation, InfiniBand NDR / Slingshot 11 / Ethernet als Fabric-Optionen.',
+          '**HPE ProLiant DL380a Gen11:** 2U, bis zu 4 doppelbreite oder 8 einfachbreite GPUs (L40S/H100 PCIe), zwei Intel-Xeon-CPUs mit bis zu 64 Kernen.',
+          '**Supermicro SYS-821GE-TNHR:** 8U, bis zu 8x H100/H200 SXM5, zwei Intel-Xeon-CPUs der 4./5. Generation, bis zu 8TB DDR5.',
+          '**GPU-VRAM:** H100 = 80GB HBM3; H200 = 141GB HBM3e; L40S = 48GB GDDR6.',
+          '**Stromaufnahme im Rack:** ein einzelner 8x-H100/H200-SXM5-Node zieht unter Volllast grob 10-12kW — zwei davon überschreiten bereits die praktische Luftkühlungs-Obergrenze für ein Rack.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: 'Welcher GPU-Server passt zu welchem Einsatzszenario?',
+        content: [
+          '**Der richtige Anbieter hängt vom Workload und der Rechenzentrums-Ausstattung ab, nicht von der Markenpräferenz.** Trainingscluster, reine Inferenz-Einsätze und Rechenzentren mit Flüssigkühlung führen jeweils zu einer anderen Plattform.',
+        ],
+        items: [
+          '**Beste Wahl für großes Multi-Node-Training:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) — das breiteste Enterprise-Vertriebs- und Systemhaus-Netzwerk für den Aufbau eines InfiniBand-verbundenen Multi-Rack-Clusters.',
+          '**Beste Wahl für ein Rechenzentrum mit Flüssigkühlung:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna) — Neptune-Direct-to-Chip-Flüssigkühlung senkt bei dauerhaft hoher GPU-Auslastung die Kühlkosten spürbar, mit AMD-EPYC-CPU-Option.',
+          '**Beste Wahl für reine Inferenz oder eine kleinere Erstanschaffung:** HPE ProLiant DL380a Gen11 — 2U, luftgekühlt, PCIe-GPUs, grob ein Drittel bis die Hälfte der Kosten einer 8x-SXM5-Trainingsbox.',
+          '**Beste Wahl für Konfigurationsflexibilität und Preiswettbewerb:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html) — die breitesten Build-to-Order-Optionen über den Systemhaus-Kanal, oft der preislich wettbewerbsfähigste Weg zu einer 8x-H100/H200-SXM5-Konfiguration.',
+          '**Auf Rack-Server ganz verzichten, wenn:** der tatsächliche Bedarf bei 1-2 GPUs Inferenz-Kapazität für ein kleines Team liegt — ein [Workstation-Aufbau für lokale LLMs](/de/local-llms/local-llm-workstation-build) kostet einen Bruchteil und braucht keinen Kühlungsplan fürs Rechenzentrum.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Wie schneiden die vier Anbieter bei Spezifikationen und Preis ab?',
+        content: [
+          '**Dell, Lenovo, HPE und Supermicro bieten jeweils mindestens eine 8-GPU-SXM5-Plattform, unterscheiden sich aber deutlich bei Formfaktor, Kühloptionen und Vertriebskanal.**',
+        ],
+        columns: ['Anbieter / Modell', 'Formfaktor', 'Max. GPUs', 'GPU-Optionen', 'Kühlung', 'Preisband'],
+        rows: [
+          { 'Anbieter / Modell': 'Dell PowerEdge XE9680', Formfaktor: '6U', 'Max. GPUs': '8 (SXM5, NVLink)', 'GPU-Optionen': 'H100 80GB / H200 141GB', Kühlung: 'Luft Standard, Flüssig optional', Preisband: '~200-375K $ (8x GPU)' },
+          { 'Anbieter / Modell': 'Lenovo SR675 V3', Formfaktor: '3U', 'Max. GPUs': '8 (PCIe oder SXM)', 'GPU-Optionen': 'H100 / H200 / L40S', Kühlung: 'Luft oder Neptune-Flüssig', Preisband: 'Stark konfigurationsabhängig' },
+          { 'Anbieter / Modell': 'HPE Cray XD670', Formfaktor: '5U', 'Max. GPUs': '8 (SXM5, NVLink)', 'GPU-Optionen': 'H100 80GB / H200 141GB', Kühlung: 'Luft Standard', Preisband: 'Nur auf Anfrage' },
+          { 'Anbieter / Modell': 'HPE ProLiant DL380a Gen11', Formfaktor: '2U', 'Max. GPUs': '4 doppelbreit / 8 einfach', 'GPU-Optionen': 'L40S / H100 PCIe', Kühlung: 'Nur Luft', Preisband: 'Niedriger — nur auf Anfrage' },
+          { 'Anbieter / Modell': 'Supermicro SYS-821GE-TNHR', Formfaktor: '8U', 'Max. GPUs': '8 (SXM5, NVLink)', 'GPU-Optionen': 'H100 80GB / H200 141GB', Kühlung: 'Luft Standard', Preisband: '~200-320K $ (8x GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'Was bietet der Dell PowerEdge XE9680?',
+        content: [
+          '**Der Dell PowerEdge XE9680 ist ein 6U-Rack-Server mit 8 NVIDIA-HGX-H100- oder -H200-SXM5-GPUs über NVLink, gebaut speziell für Training und Inferenz großer Modelle.** Dazu kommen zwei Intel-Xeon-Scalable-CPUs der 4. oder 5. Generation (bis zu 56 Kerne je CPU), bis zu 32 DDR5-DIMM-Slots (4TB max., 4800 MT/s) und 10 PCIe-Gen5-x16-Slots für Netzwerk und Storage-Erweiterung.',
+          'Standardmäßig wird luftgekühlt geliefert; für Rechenzentren oberhalb von etwa 20-30kW pro Rack, wo Luftkühlung praktisch an ihre Grenzen stößt, bietet Dell Flüssigkühlungsoptionen an.',
+          'Der Preis wird nicht veröffentlicht — Reseller- und Systemhaus-Angebote für eine voll konfigurierte 8x-H100/H200-Einheit lagen grob bei 200.000-375.000 US-Dollar, je nach GPU-Speicherstufe, RAM, Storage und Support-Level. Ein verbindliches Angebot über [Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) einholen, bevor budgetiert wird.',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'Was bietet der Lenovo ThinkSystem SR675 V3?',
+        content: [
+          '**Der Lenovo ThinkSystem SR675 V3 ist ein 3U-Rack-Server für bis zu 8 doppel- oder einfachbreite GPUs — darunter NVIDIA H100, H200 und L40S — kombiniert mit zwei AMD-EPYC-9004/9005-CPUs der 5. Generation und bis zu 6TB DDR5-4800-Speicher über 24 DIMM-Slots.**',
+          'Das entscheidende Merkmal ist Lenovo Neptune, ein Direct-to-Chip- und Hybrid-Flüssig-Luft-Kühlsystem als Konfigurationsoption — relevant für Betreiber, deren Rechenzentrum bereits mit Flüssigkühlkreisläufen arbeitet oder das plant, da es die Kühlkosten bei dauerhaft hoher GPU-Auslastung gegenüber reiner Luftkühlung spürbar senkt.',
+          'Der SR675 V3 unterstützt auch gemischte GPU-Konfigurationen (H200-4-GPU-NVLink-Builds oder L40S für inferenzorientierte Einsätze) und ist damit die konfigurationsflexibelste Plattform in diesem Vergleich für Kunden, die eine Chassis-Familie für Training und Inferenz zugleich nutzen wollen. Konfiguration über [Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna).',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'Was bieten der HPE Cray XD670 und der ProLiant DL380a Gen11?',
+        content: [
+          '**HPE verkauft zwei unterschiedliche GPU-Server-Stufen: den Cray XD670 für Training im großen Maßstab und den ProLiant DL380a Gen11 für Inferenz und kleinere Einsätze.**',
+          'Der **Cray XD670** ist ein 5U-Chassis mit 8x NVIDIA-H100- oder -H200-SXM5-GPUs und zwei Intel-Xeon-CPUs der 4. Generation. Sein Alleinstellungsmerkmal ist die Fabric-Wahl: 8x PCIe-Gen5-Half-Height-Slots für HPE Slingshot 11, InfiniBand NDR oder Standard-Ethernet — relevant für Betreiber, die bereits über eine bestehende HPE-Cray-Supercomputing-Infrastruktur auf Slingshot standardisiert sind.',
+          'Der **ProLiant DL380a Gen11** ist ein 2U-Server für 4 doppel- oder 8 einfachbreite GPUs (L40S oder H100 PCIe), bis zu 3TB DDR5 und PCIe 5.0 — die luftgekühlte Option mit geringerer Dichte für Inferenz-Workloads oder eine erste GPU-Anschaffung, die eine 8-GPU-SXM5-Plattform noch nicht rechtfertigt. Beide auf [HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html).',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'Was bietet der Supermicro SYS-821GE-TNHR?',
+        content: [
+          '**Der Supermicro SYS-821GE-TNHR ist ein 8U-Rack-Server für bis zu 8 NVIDIA-HGX-H100- (80GB) oder -HGX-H200-GPUs (141GB), zwei Intel-Xeon-Scalable-CPUs der 4. oder 5. Generation und bis zu 8TB DDR5-5600-Speicher über 32 DIMM-Slots** — die höchste maximale RAM-Kapazität der vier hier verglichenen Plattformen.',
+          'Supermicro verkauft vorrangig über einen Systemhaus- und Reseller-Kanal statt über direkte Enterprise-Vertriebsteams, was in der Regel mehr Build-to-Order-Flexibilität bedeutet (Laufwerksschächte, Netzwerkkarten, redundante Netzteile) und laut aktuellen Reseller-Listings oft einen wettbewerbsfähigen Einstiegspreis für eine 8x-H100-Konfiguration — Einstiegsangebote lagen grob bei 200.000-320.000 US-Dollar, voll ausgestattete Konfigurationen entsprechend höher.',
+          'Storage ist eine Stärke: bis zu 19 Hot-Swap-2,5"-NVMe/SATA/SAS-Einschübe plus 2 M.2-Slots — nützlich für Betreiber, die große lokale Datensätze parallel zu Inferenz oder Fine-Tuning vorhalten. Basiskonfiguration bei [Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html).',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: 'H100, H200 oder L40S — welche GPU kaufen?',
+        content: [
+          '**H200 gewinnt bei Speicher und Bandbreite, H100 ist die verfügbarere und oft günstigere SXM5-Option, und L40S ist die luftgekühlte PCIe-Wahl für reine Inferenz.** Alle drei sind Stand September 2026 aktuelle NVIDIA-Rechenzentrums-GPUs; keine steht vor unmittelbarer Abkündigung, die Entscheidung ist also Workload-Passung, kein Obsoleszenzrisiko.',
+        ],
+        columns: ['GPU', 'VRAM', 'Speicherbandbreite', 'Am besten für'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', VRAM: '80GB HBM3', Speicherbandbreite: '3,35 TB/s', 'Am besten für': 'Multi-Node-Training, breiteste Verfügbarkeit' },
+          { GPU: 'NVIDIA H200 SXM', VRAM: '141GB HBM3e', Speicherbandbreite: '4,8 TB/s', 'Am besten für': 'Large-Context-Serving, größeres Batch-Training' },
+          { GPU: 'NVIDIA L40S', VRAM: '48GB GDDR6', Speicherbandbreite: '864 GB/s', 'Am besten für': 'Luftgekühlte PCIe-Inferenz, kleineres Budget' },
+        ],
+        items: [
+          '**H200 wählen, wenn:** Large-Context-Workloads bedient werden oder größere Modelle trainiert werden, bei denen 80GB pro GPU ein Cross-GPU-Sharding erzwingen würden, das man lieber vermeidet.',
+          '**H100 wählen, wenn:** die breiteste Hersteller- und Reseller-Verfügbarkeit für ein Multi-Node-NVLink/InfiniBand-Trainingscluster benötigt wird und 80GB pro GPU für die Modellgröße ausreichen.',
+          '**L40S wählen, wenn:** der Workload reine Inferenz ist, das Rechenzentrum nur luftgekühlt ist und 48GB pro GPU das größte geplante Modell in der vorgesehenen Quantisierungsstufe abdecken.',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'Wie viel Strom und Kühlung braucht ein GPU-dichtes Rack?',
+        content: [
+          '**Ein einzelner 8-GPU-H100/H200-SXM5-Server zieht unter Volllast grob 10-12kW — allein 8x 700W-GPUs machen 5,6kW aus, noch vor CPUs, Speicher und Lüftern.** Schon zwei oder drei dieser Server in einem Rack überschreiten die praktische Grenze der Luftkühlung.',
+          'Branchenwerte setzen die praktische Grenze der Luftkühlung bei grob 20-40kW pro Rack; oberhalb davon ist Flüssigkühlung (Direct-to-Chip oder Immersion) nötig und kann 100-200kW+ pro Rack tragen. Zum Vergleich: NVIDIAs GB200-NVL72-Rack-System zieht insgesamt grob 120-130kW — ein Anhaltspunkt dafür, wohin sich die KI-Rack-Dichte entwickelt, keine Spezifikation eines hier verglichenen Servers.',
+          'Praktische Konsequenz für den Einkauf: Wer mehr als ein oder zwei 8-GPU-SXM5-Server pro Rack unterbringen will, sollte Direct-to-Chip-Flüssigkühlung einplanen (Lenovo Neptune oder einen rechenzentrumsweiten Flüssigkreislauf), statt sich auf die Standard-Luftkühlung des Rechenzentrums zu verlassen.',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: 'InfiniBand oder Standard-Ethernet?',
+        content: [
+          '**Single-Node-Inferenz braucht kein InfiniBand — Standard-100/200GbE-Ethernet reicht.** Multi-Node-Trainings- oder Fine-Tuning-Cluster, bei denen GPUs über mehrere Server hinweg ständig Gradienten synchronisieren, brauchen dagegen ein dediziertes Fabric mit hoher Bandbreite und niedriger Latenz.',
+          'Die zwei Optionen dafür sind **InfiniBand NDR** (400Gb/s pro Link, die klassische HPC-Wahl, eine NIC pro GPU bei Flaggschiff-Plattformen) und **RoCE v2** (RDMA over Converged Ethernet — z. B. NVIDIA Spectrum-X —, das ähnlichen Durchsatz über ein Standard-Ethernet-Fabric liefert, das das Netzwerkteam möglicherweise schon betreibt).',
+        ],
+        items: [
+          '**InfiniBand NDR nutzen, wenn:** ein dediziertes Multi-Node-Trainingscluster aufgebaut wird und das ausgereifteste, am weitesten verbreitete RDMA-Fabric für diese Größenordnung gewünscht ist.',
+          '**RoCE v2 (Ethernet) nutzen, wenn:** das Netzwerkteam bereits ein konvergentes Ethernet-Netz betreibt und den Aufwand für ein separates InfiniBand-Fabric samt Know-how vermeiden will.',
+          '**Beides überspringen, wenn:** nur Single-Node-Inferenz betrieben wird — Standard-Netzwerk reicht aus, der zusätzliche Fabric-Aufwand rechnet sich nicht.',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: 'Wie wird die Beschaffung richtig auf den Workload dimensioniert?',
+        content: [
+          '**Die Anschaffung nach dem Workload dimensionieren, nicht nach der größten verfügbaren Konfiguration.** Reine Inferenz-Einsätze und Trainings-/Fine-Tuning-Einsätze haben grundlegend unterschiedliche Anforderungen an GPU, Speicher und Netzwerk.',
+        ],
+        numberedItems: [
+          { title: 'Workload zuerst klassifizieren', whyItMatters: 'Reine Inferenz (ein festes Modell für Nutzer bereitstellen) braucht deutlich weniger GPU-Speicher und kein Multi-Node-Fabric im Vergleich zu Training oder Fine-Tuning, das zusätzlich zu den Modellgewichten Gradienten und Optimizer-State vorhalten muss.' },
+          { title: 'GPU-Speicherbedarf aus Modellgröße und Quantisierung ableiten', whyItMatters: 'Ein 70B-Parameter-Modell in FP16 braucht vor Overhead grob 140GB VRAM — das schließt eine Single-GPU-L40S (48GB) bereits aus und führt zu Multi-GPU-H100/H200-Sharding oder einem kleineren/quantisierten Modell.' },
+          { title: 'Single-Node vs. Multi-Node entscheiden', whyItMatters: 'Deckt der VRAM eines 8-GPU-Servers Modell und Nutzerlast ab, kann InfiniBand/RoCE komplett entfallen und die Fabric-Kosten gespart werden; wenn nicht, von Anfang an ein dediziertes Netzwerk-Fabric einplanen.' },
+          { title: 'Kühlung vor der Bestellung auf Rack-Dichte abstimmen', whyItMatters: 'Vor der Bestellung mit dem Facility-Team klären, ob das Ziel-Rack Flüssigkühlung unterstützt, bevor mehr als ein oder zwei 8-GPU-SXM5-Server pro Rack verpflichtend werden — eine nachträgliche Kühlungs-Nachrüstung ist deutlich teurer als vorausschauende Planung.' },
+          { title: 'Verbindliches Angebot und Lieferzeit einholen', whyItMatters: 'Keiner der Anbieter veröffentlicht Listenpreise für 8-GPU-Konfigurationen, und Lieferzeiten für GPU-dichte Server lagen je nach GPU-Zuteilung bei mehreren Wochen bis wenigen Monaten — den Zeitplan einbudgetieren, nicht nur den Preis.' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: 'Welche Garantie- und Support-Stufe wählen?',
+        content: [
+          '**Alle vier Anbieter bieten gestaffelten Enterprise-Support über die Basis-Hardware-Garantie hinaus, aber Stufenbezeichnungen, Reaktionszeiten und enthaltene Leistungen unterscheiden sich — die aktuellen Bedingungen vor dem Kauf direkt beim Anbieter bestätigen, da sich Programme ändern.**',
+        ],
+        items: [
+          '**Dell** verkauft seine ProSupport-Stufen (inklusive Optionen mit schnellerer, mission-kritischer Reaktion) zum XE9680 — explizit nach GPU-Server-qualifiziertem Support fragen, nicht nach der Standard-PowerEdge-Stufe.',
+          '**Lenovo** verkauft Premier-Support-Stufen für die ThinkSystem-Linie, mit Optionen für Vor-Ort-Reaktion und proaktives Monitoring.',
+          '**HPE** verkauft Support über Pointnext Complete Care und bietet HPE GreenLake als verbrauchsbasierte (Pay-per-Use) Alternative zum Kapitalkauf für Kunden, die die sechsstelligen Vorabkosten vermeiden wollen.',
+          '**Supermicro**-Support-Bedingungen variieren stärker je nach Reseller/Systemhaus als bei den anderen drei Anbietern, da ein Großteil des Volumens über diesen Kanal statt über Enterprise-Direktvertrieb läuft — Support-Bedingungen schriftlich vom konkreten Reseller einholen, nicht nur von der Basis-Garantieseite von Supermicro.',
+          'Bei jedem Anbieter gilt: konkret fragen, was bei einem GPU-Ausfall passiert (Ersatz-SLA, ob der gesamte Node oder nur die GPU-Tray eingeschickt werden muss) — das ist der Ausfallmodus, der bei einem GPU-dichten Server am wahrscheinlichsten tatsächlich eintritt.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Welche Fehler machen Enterprise-Einkäufer?',
+        items: [
+          '**8-GPU-SXM5-Kapazität für einen reinen Inferenz-Workload kaufen.** Wird nur ein festes Modell für Nutzer bereitgestellt, deckt eine 2U-PCIe-Plattform wie der ProLiant DL380a Gen11 das zu einem Bruchteil von Preis und Komplexität ab.',
+          '**Bestellen, bevor die Rack-Kühlkapazität geklärt ist.** Ein zweiter oder dritter 8-GPU-SXM5-Server im selben Rack kann die praktische Obergrenze der Luftkühlung überschreiten — das vor der Lieferung mit dem Facility-Team klären, nicht danach.',
+          '**Das Netzwerk-Fabric-Budget bei einem „vielleicht skalieren wir später“-Cluster überspringen.** InfiniBand oder RoCE nachträglich auf eine bereits ausgerollte Single-Node-Flotte aufzurüsten, ist störender als es von Anfang an einzuplanen.',
+          '**Den Listenpreis als Gesamtkosten behandeln.** Support-Verträge, Netzwerk-Fabric, Kühlungs-Nachrüstung und Stromversorgungs-Upgrades kommen regelmäßig zu 15-30% zusätzlich zur reinen Server-Hardware-Position hinzu.',
+          '**Annehmen, dass H200 immer das richtige Upgrade gegenüber H100 ist.** Passen Modell und Batch-Größe bequem in 80GB pro GPU, bringen der zusätzliche Speicher und Preisaufschlag des H200 keinen Vorteil — den tatsächlichen VRAM-Bedarf prüfen, bevor der Aufpreis gezahlt wird.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Wie viele H100- oder H200-GPUs braucht man für Enterprise-Inferenz vs. Training?',
+            a: 'Reine Inferenz-Einsätze, die ein festes Modell für eine moderate Anzahl gleichzeitiger Nutzer bereitstellen, kommen oft mit 1-4 GPUs aus und brauchen gar keine 8-GPU-SXM5-Plattform. Training oder Fine-Tuning großer Modelle (70B+ Parameter) benötigt in der Regel die volle 8-GPU-NVLink-Konfiguration, um Modell, Gradienten und Optimizer-State über die GPUs zu verteilen. Die Anschaffung nach dem Workload dimensionieren, nicht standardmäßig „die größte Plattform kaufen".',
+          },
+          {
+            q: 'Was kostet ein 8-GPU-H100-Rack-Server tatsächlich insgesamt?',
+            a: 'Reseller- und Systemhaus-Angebote für eine voll konfigurierte 8x-H100-Einheit lagen grob bei 200.000-375.000 US-Dollar allein für die Hardware, vor Support-Verträgen, Netzwerk-Fabric und einem eventuellen Kühlungs-Upgrade — die kommen typischerweise mit weiteren 15-30% obendrauf. Keiner der vier Anbieter veröffentlicht Listenpreise; für die Budgetierung ein verbindliches Angebot einholen.',
+          },
+          {
+            q: 'Braucht man Flüssigkühlung für ein GPU-dichtes Rack?',
+            a: 'Wer mehr als ein oder zwei 8-GPU-H100/H200-SXM5-Server pro Rack unterbringt, ja — jeder zieht unter Volllast grob 10-12kW, und die praktische Grenze der Luftkühlung liegt bei etwa 20-40kW pro Rack. Unterhalb dieser Dichte kann Standard-Luftkühlung noch funktionieren; das vor der Bestellung mit dem Facility-Team klären.',
+          },
+          {
+            q: 'InfiniBand oder Ethernet (RoCE) fürs Netzwerk wählen?',
+            a: 'Bei Single-Node-Inferenz keins von beiden — Standard-Ethernet reicht. Bei Multi-Node-Trainingsclustern ist InfiniBand NDR das ausgereiftere, weiter verbreitete High-Bandwidth-RDMA-Fabric; RoCE v2 über Ethernet ist die Alternative, wenn das Netzwerkteam kein separates InfiniBand-Fabric samt Know-how betreiben will.',
+          },
+          {
+            q: 'Dell vs. Lenovo vs. HPE vs. Supermicro — welcher Anbieter hat den besten Enterprise-Support?',
+            a: 'Dell, Lenovo und HPE verkaufen jeweils gestaffelten Enterprise-Support (ProSupport, Premier Support bzw. Pointnext Complete Care) über direkte Account-Teams. Supermicro verkauft vorrangig über Systemhäuser und Reseller, Support-Bedingungen variieren daher stärker je nach Reseller als über eine einheitliche Supermicro-Stufe — Support-Bedingungen vor dem Kauf schriftlich vom konkreten Reseller einholen.',
+          },
+          {
+            q: 'H100 vs. H200 vs. L40S — welche GPU sollte man kaufen?',
+            a: 'H200 (141GB HBM3e) für Large-Context-Serving oder Training, bei dem 80GB pro GPU ein ungewolltes Cross-GPU-Sharding erzwingen würden. H100 (80GB HBM3) für die breiteste Hersteller- und Reseller-Verfügbarkeit in einem Multi-Node-Trainingscluster, wenn 80GB ausreichen. L40S (48GB GDDR6, PCIe, luftgekühlt) für reine Inferenz mit kleinerem Budget.',
+          },
+          {
+            q: 'Können GPU-Modelle im selben Rack oder Server gemischt werden?',
+            a: 'Innerhalb eines einzelnen Servers nicht — eine 8-GPU-SXM5-Plattform ist um ein einziges GPU-Modell herum gebaut und per NVLink verbunden (nicht gemischt). Innerhalb eines Racks schon — ein für Training konfigurierter H100/H200-Server kann neben einem für Inferenz konfigurierten L40S-Server stehen, solange Kühlung und Stromaufnahme jedes Servers separat berücksichtigt werden.',
+          },
+          {
+            q: 'Welche Garantie- und Support-Stufe sollten Enterprise-Einkäufer wählen?',
+            a: 'Mindestens die Ersatz-SLA des Anbieters speziell für GPU-Ausfälle klären (nicht nur allgemeinen Hardware-Ausfall) — GPU-Ausfall ist der wahrscheinlichste Ausfallmodus bei einem GPU-dichten Server, und die Ersatzlogistik (Versand einer GPU-Tray vs. des gesamten Node) variiert je nach Anbieter und Stufe. Die Reaktionszeit-Stufe daran ausrichten, wie viel Ausfallzeit der Workload tatsächlich verkraftet.',
+          },
+          {
+            q: 'Ist On-Premises-Hardware bei Enterprise-Größenordnung günstiger als Cloud-GPU-Miete?',
+            a: 'Das hängt von der Auslastung ab, nicht nur vom Anschaffungspreis — On-Premises-Hardware hat hohe Vorabkosten, aber niedrige Kosten pro Stunde im Betrieb, während Cloud-Miete keine Vorabkosten, aber einen deutlich höheren Stundensatz hat. Der Break-even liegt typischerweise bei durchgängig hoher, konstanter Auslastung; gelegentliche oder stoßweise Workloads sind meist mit Miete günstiger. Siehe unseren [Cloud-GPU-Mietvergleich](/de/local-llms/cloud-gpu-rental-comparison-2026) für einen detaillierten Kostenvergleich.',
+          },
+          {
+            q: 'Wie lange dauert die Lieferung einer 8x-H100- oder -H200-Konfiguration?',
+            a: 'Lieferzeiten für GPU-dichte Server haben je nach GPU-Zuteilung und aktueller Nachfrage zwischen mehreren Wochen und wenigen Monaten geschwankt — das ist bei den meisten Anbietern kein Lagerartikel in einer 8-GPU-Konfiguration. Die Lieferzeit als Teil des verbindlichen Angebots klären und den Projektzeitplan danach ausrichten, nicht nur nach dem Preis.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Lokale LLMs für Enterprise skalieren](/de/local-llms/scaling-local-llms-enterprise) — die Software-Seite dieses Hardware-Betriebs: Kubernetes-Orchestrierung, Lastverteilung und Redundanz über mehrere GPU-Nodes.',
+          '[Workstation-Aufbau für lokale LLMs](/de/local-llms/local-llm-workstation-build) — ein einzelner Desktop-Aufbau für ein Team oder eine Person, keine Rack-Anschaffung.',
+          '[Enterprise-LLM-Inferenz-Server 2026](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI und NVIDIA NIM im Vergleich für die Serving-Software auf dieser Hardware.',
+          '[Multi-GPU für lokale LLMs](/de/local-llms/multi-gpu-local-llms) — Multi-GPU-Aufbau in einer einzelnen Maschine für kleinere Einsätze.',
+          '[Cloud-GPU-Mietvergleich 2026](/de/local-llms/cloud-gpu-rental-comparison-2026) — die Miet-statt-Kauf-Alternative für gelegentlichen oder stoßweisen Rechenbedarf.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        items: [
+          'Dell PowerEdge XE9680 Produktseite -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Lenovo ThinkSystem SR675 V3 Product Guide -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'HPE ProLiant DL380a Gen11 Datenblatt -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Supermicro SYS-821GE-TNHR Datenblatt -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'NVIDIA H100/H200 Tensor Core GPU Spezifikationen -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Enterprise-GPU-Server-Kaufratgeber 2026: Dell, Lenovo, HPE, Supermicro im Vergleich',
+      description:
+        'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 und Supermicro SYS-821GE-TNHR im Vergleich für Enterprise-KI: GPU-Dichte, Kühlung, Netzwerk, Preisband und Eignung für Inferenz vs. Training.',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/de/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'IT-Einkaufsverantwortliche und Infrastrukturarchitekten' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Wie viele H100- oder H200-GPUs braucht man für Enterprise-Inferenz vs. Training?', acceptedAnswer: { '@type': 'Answer', text: 'Reine Inferenz kommt oft mit 1-4 GPUs aus; Training oder Fine-Tuning großer Modelle braucht meist die volle 8-GPU-NVLink-Konfiguration. Die Anschaffung nach dem Workload dimensionieren, nicht standardmäßig die größte Plattform kaufen.' } },
+        { '@type': 'Question', name: 'Was kostet ein 8-GPU-H100-Rack-Server tatsächlich insgesamt?', acceptedAnswer: { '@type': 'Answer', text: 'Reseller-Angebote für eine voll konfigurierte 8x-H100-Einheit lagen grob bei 200.000-375.000 US-Dollar allein für Hardware, vor Support, Netzwerk-Fabric und Kühlungs-Upgrades, die typischerweise weitere 15-30% hinzufügen.' } },
+        { '@type': 'Question', name: 'Braucht man Flüssigkühlung für ein GPU-dichtes Rack?', acceptedAnswer: { '@type': 'Answer', text: 'Bei mehr als ein oder zwei 8-GPU-SXM5-Servern pro Rack ja — jeder zieht unter Volllast grob 10-12kW, Luftkühlung endet praktisch bei etwa 20-40kW pro Rack.' } },
+        { '@type': 'Question', name: 'InfiniBand oder Ethernet (RoCE) fürs Netzwerk wählen?', acceptedAnswer: { '@type': 'Answer', text: 'Single-Node-Inferenz braucht keins von beiden. Multi-Node-Trainingscluster brauchen InfiniBand NDR oder RoCE v2 über Ethernet als Alternative.' } },
+        { '@type': 'Question', name: 'Dell vs. Lenovo vs. HPE vs. Supermicro — welcher Anbieter hat den besten Enterprise-Support?', acceptedAnswer: { '@type': 'Answer', text: 'Dell, Lenovo und HPE verkaufen gestaffelten Enterprise-Support über direkte Account-Teams. Supermicro verkauft vorrangig über Systemhäuser, Bedingungen variieren daher stärker je Reseller.' } },
+        { '@type': 'Question', name: 'H100 vs. H200 vs. L40S — welche GPU sollte man kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'H200 für Large-Context-Serving mit Bedarf über 80GB pro GPU. H100 für breiteste Verfügbarkeit, wenn 80GB reichen. L40S für luftgekühlte PCIe-Inferenz mit kleinerem Budget.' } },
+        { '@type': 'Question', name: 'Können GPU-Modelle im selben Rack oder Server gemischt werden?', acceptedAnswer: { '@type': 'Answer', text: 'Nicht innerhalb eines Servers — eine 8-GPU-SXM5-Plattform ist um ein einziges GPU-Modell herum gebaut. Innerhalb eines Racks ja, solange Kühlung und Stromaufnahme je Server separat berücksichtigt werden.' } },
+        { '@type': 'Question', name: 'Welche Garantie- und Support-Stufe sollten Enterprise-Einkäufer wählen?', acceptedAnswer: { '@type': 'Answer', text: 'Die Ersatz-SLA speziell für GPU-Ausfall klären und die Reaktionszeit-Stufe an der tolerierbaren Ausfallzeit des Workloads ausrichten.' } },
+        { '@type': 'Question', name: 'Ist On-Premises-Hardware bei Enterprise-Größenordnung günstiger als Cloud-GPU-Miete?', acceptedAnswer: { '@type': 'Answer', text: 'Das hängt von der Auslastung ab — On-Premises hat hohe Vorabkosten, aber niedrige Stundenkosten; Cloud-Miete hat keine Vorabkosten, aber höhere Stundensätze. Dauerhaft hohe Auslastung spricht für Kauf.' } },
+        { '@type': 'Question', name: 'Wie lange dauert die Lieferung einer 8x-H100- oder -H200-Konfiguration?', acceptedAnswer: { '@type': 'Answer', text: 'Lieferzeiten schwankten je nach GPU-Zuteilung zwischen mehreren Wochen und wenigen Monaten — als Teil des verbindlichen Angebots klären.' } },
+      ],
+    },
+  },
+  fr: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: 'Guide d\'achat serveur GPU entreprise 2026 : Dell, Lenovo, HPE, Supermicro',
+    heroImage: '',
+    seoTitle: 'Serveur GPU entreprise 2026 : comparatif Dell, Lenovo, HPE, Supermicro',
+    intro:
+      'Acheter un serveur GPU d\'entreprise n\'a rien à voir avec l\'achat d\'une station de travail IA. Une plateforme 8-GPU montée en rack coûte six chiffres, nécessite un plan de refroidissement et d\'alimentation avant même la livraison, et engage l\'entreprise dans une relation de support avec le fournisseur pendant plusieurs années. Ce guide compare les quatre fournisseurs qui vendent réellement des serveurs GPU rack-scale pour l\'IA d\'entreprise — Dell, Lenovo, HPE et Supermicro — sur la densité GPU, les besoins de refroidissement, le réseau, les niveaux de garantie et la fourchette de prix, pour que les achats dimensionnent la commande sur la charge de travail réelle plutôt que sur la fiche technique la plus impressionnante.',
+    metaDescription:
+      'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 et Supermicro SYS-821GE-TNHR comparés pour l\'IA d\'entreprise : densité GPU, refroidissement, réseau, prix, et adéquation inférence vs entraînement.',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Configurateur Dell PowerEdge XE9680' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Configurateur Lenovo ThinkSystem SR675 V3' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Configurateur Supermicro SYS-821GE-TNHR' },
+    ],
+    twitterDescription:
+      'Dell vs Lenovo vs HPE vs Supermicro pour les serveurs GPU d\'entreprise — densité, refroidissement, réseau et prix comparés pour les équipes achats.',
+    leadAnswerBlock:
+      '**Pour les clusters d\'entraînement 8-GPU H100/H200, Dell PowerEdge XE9680, HPE Cray XD670 et Supermicro SYS-821GE-TNHR sont les concurrents les plus directs ; pour l\'inférence seule ou un budget contraint, HPE ProLiant DL380a Gen11 ou Lenovo ThinkSystem SR675 V3 avec GPU PCIe coûtent environ un tiers à la moitié du prix.** Une configuration 8x H100/H200 SXM5 tourne autour de 200 000-400 000+ dollars selon la mémoire et le niveau de support — demandez un devis formel au fournisseur, les prix catalogue ne sont pas publiés.',
+    audience:
+      'Responsables achats IT et architectes infrastructure achetant des serveurs multi-GPU montés en rack pour l\'inférence ou l\'entraînement IA en entreprise',
+    readTime: '13 min de lecture',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'serveur GPU entreprise',
+    targetKeywords: [
+      'guide achat serveur gpu entreprise 2026',
+      'dell poweredge xe9680 vs lenovo vs hpe',
+      'serveur gpu rack pour inférence ia',
+      'h100 vs h200 vs l40s serveur entreprise',
+      'meilleur fournisseur serveur gpu entraînement llm',
+    ],
+    quickAnswerTop: {
+      fr: {
+        question: 'Quel fournisseur de serveur GPU une entreprise devrait-elle choisir pour l\'IA en 2026 ?',
+        answer:
+          'Choisissez d\'abord selon la charge de travail, puis selon le fournisseur. Pour les clusters d\'entraînement multi-nœuds H100/H200, Dell PowerEdge XE9680, HPE Cray XD670 et Supermicro SYS-821GE-TNHR sont les plus proches concurrents — toutes des plateformes 8U ou moins, 8 GPU SXM5, connectées NVLink, dans la fourchette 200 000-400 000+ dollars. Pour l\'inférence seule ou un déploiement mono-nœud, HPE ProLiant DL380a Gen11 (2U, GPU PCIe) ou Lenovo ThinkSystem SR675 V3 avec GPU L40S coûtent environ un tiers à la moitié et fonctionnent avec un refroidissement à air standard.',
+        bullets: [
+          'Entraînement / multi-nœuds : Dell XE9680, HPE Cray XD670 ou Supermicro SYS-821GE-TNHR — 8x H100/H200 SXM5, NVLink, prêt InfiniBand',
+          'Inférence seule / budget réduit : HPE ProLiant DL380a Gen11 ou Lenovo SR675 V3 avec L40S — PCIe, refroidi à air, aucune boucle liquide requise',
+          'Datacenter prêt pour le refroidissement liquide : Lenovo SR675 V3 avec refroidissement direct-puce Neptune',
+          'Fourchette de prix pour un serveur 8x H100/H200 SXM5 : environ 200 000-400 000+ dollars selon les devis revendeurs/intégrateurs — les fournisseurs ne publient pas de prix catalogue',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'En bref', anchor: '#quick-facts' },
+      { label: 'Meilleur choix selon le profil acheteur', anchor: '#best-choice' },
+      { label: 'Tableau comparatif des fournisseurs', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670 et ProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs H200 vs L40S', anchor: '#gpu-options' },
+      { label: 'Besoins en énergie et refroidissement', anchor: '#power-cooling' },
+      { label: 'Réseau : InfiniBand vs RoCE', anchor: '#networking' },
+      { label: 'Comment dimensionner votre achat', anchor: '#sizing' },
+      { label: 'Niveaux de garantie et support', anchor: '#warranty-support' },
+      { label: 'Erreurs d\'achat fréquentes', anchor: '#common-mistakes' },
+      { label: 'Questions fréquentes', anchor: '#faq' },
+      { label: 'Lectures complémentaires', anchor: '#related-reading' },
+      { label: 'Sources', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Les acheteurs de serveurs GPU d\'entreprise doivent faire correspondre le fournisseur à la charge de travail — Dell PowerEdge XE9680, HPE Cray XD670 et Supermicro SYS-821GE-TNHR se disputent directement les plateformes d\'entraînement 8x H100/H200 SXM5 entre 200 000 et 400 000+ dollars, tandis que HPE ProLiant DL380a Gen11 et Lenovo ThinkSystem SR675 V3 avec GPU PCIe L40S couvrent les budgets d\'inférence seule pour environ un tiers à la moitié du prix.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Acheter un serveur IA pour une entreprise n\'est pas comme monter un PC gaming performant. Ces machines coûtent aussi cher qu\'une maison, nécessitent un plan de refroidissement et d\'électricité avant même leur arrivée, et s\'accompagnent d\'un contrat de support pluriannuel. Ce guide compare les quatre entreprises qui vendent réellement ces serveurs IA en rack — Dell, Lenovo, HPE et Supermicro — pour permettre à un acheteur de choisir la bonne taille et le bon fournisseur pour le besoin réel (faire tourner des modèles IA pour des employés vs entraîner de nouveaux modèles), pas simplement la plus grosse fiche technique.',
+          },
+        ],
+        items: [
+          '**Densité GPU :** les quatre fournisseurs proposent une plateforme phare 8-GPU SXM5 (Dell XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR) ; Lenovo et HPE vendent aussi des plateformes PCIe moins denses et moins chères.',
+          '**Fourchette de prix :** un serveur 8x H100/H200 SXM5 coûte environ 200 000-400 000+ dollars selon la mémoire GPU (80 Go H100 vs 141 Go H200) et le niveau de support.',
+          '**Le refroidissement est la vraie contrainte.** Deux ou trois serveurs 8-GPU SXM5 dépassent déjà le plafond pratique de 20-40 kW de la climatisation à air par rack — au-delà, le refroidissement liquide devient obligatoire, pas optionnel.',
+          '**Le réseau compte pour l\'entraînement, moins pour l\'inférence.** Les clusters d\'entraînement multi-nœuds ont besoin d\'InfiniBand NDR ou de fabric Ethernet RoCE v2 ; l\'inférence mono-nœud non.',
+          '**Choisissez le GPU selon la charge de travail, pas seulement le budget.** Le L40S (48 Go, PCIe, refroidi à air) convient à l\'inférence ; le H100/H200 (80-141 Go, SXM5, NVLink) convient à l\'entraînement et au service à haut volume.',
+          'Les acheteurs qui n\'ont besoin que d\'une ou deux GPU de capacité d\'inférence ne devraient pas acheter de serveur en rack du tout — une station de travail est le bon niveau pour cette échelle.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'En bref',
+        items: [
+          '**Dell PowerEdge XE9680 :** 6U, jusqu\'à 8x H100/H200 SXM5, double Intel Xeon Platinum, jusqu\'à 4 To de DDR5.',
+          '**Lenovo ThinkSystem SR675 V3 :** 3U, jusqu\'à 8 GPU (mix H100/H200/L40S), double AMD EPYC 9004/9005, jusqu\'à 6 To de DDR5, refroidissement liquide Neptune en option.',
+          '**HPE Cray XD670 :** 5U, jusqu\'à 8x H100/H200 SXM5, double Intel Xeon 4e génération, options de fabric InfiniBand NDR / Slingshot 11 / Ethernet.',
+          '**HPE ProLiant DL380a Gen11 :** 2U, jusqu\'à 4 GPU double largeur ou 8 simple largeur (L40S/H100 PCIe), double Intel Xeon jusqu\'à 64 cœurs.',
+          '**Supermicro SYS-821GE-TNHR :** 8U, jusqu\'à 8x H100/H200 SXM5, double Intel Xeon 4e/5e génération, jusqu\'à 8 To de DDR5.',
+          '**VRAM GPU :** H100 = 80 Go HBM3 ; H200 = 141 Go HBM3e ; L40S = 48 Go GDDR6.',
+          '**Puissance du rack :** un seul nœud 8x H100/H200 SXM5 consomme environ 10-12 kW à pleine charge — deux nœuds dépassent déjà le plafond pratique de la climatisation à air pour un rack.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: 'Quel serveur GPU choisir selon votre cas d\'usage ?',
+        content: [
+          '**Le bon fournisseur dépend de la charge de travail et de la préparation du datacenter, pas de la préférence de marque.** Les clusters d\'entraînement, les déploiements d\'inférence seule et les datacenters prêts pour le liquide pointent chacun vers une plateforme différente.',
+        ],
+        items: [
+          '**Meilleur choix pour l\'entraînement multi-nœuds à grande échelle :** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) — le réseau commercial et d\'intégrateurs le plus large pour construire un cluster multi-rack connecté en InfiniBand.',
+          '**Meilleur choix pour un datacenter prêt au refroidissement liquide :** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna) — le refroidissement liquide direct-puce Neptune réduit sensiblement le coût de refroidissement à forte utilisation GPU soutenue, avec une option CPU AMD EPYC.',
+          '**Meilleur choix pour l\'inférence seule ou un premier achat plus modeste :** HPE ProLiant DL380a Gen11 — 2U, refroidi à air, GPU PCIe, environ un tiers à la moitié du coût d\'une machine d\'entraînement 8x SXM5.',
+          '**Meilleur choix pour la flexibilité de configuration et la compétitivité tarifaire :** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html) — les options de configuration sur mesure les plus larges via le canal intégrateur, souvent la voie la plus compétitive vers une configuration 8x H100/H200 SXM5.',
+          '**Évitez complètement les serveurs en rack si :** votre besoin réel se limite à 1-2 GPU de capacité d\'inférence pour une petite équipe — une [station de travail LLM local](/fr/local-llms/local-llm-workstation-build) coûte une fraction du prix et ne nécessite aucun plan de refroidissement datacenter.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Comment les quatre fournisseurs se comparent-ils sur les specs et le prix ?',
+        content: [
+          '**Dell, Lenovo, HPE et Supermicro proposent chacun au moins une plateforme 8-GPU SXM5, mais divergent nettement sur le format, les options de refroidissement et le canal de vente.**',
+        ],
+        columns: ['Fournisseur / Modèle', 'Format', 'GPU max', 'Options GPU', 'Refroidissement', 'Fourchette de prix'],
+        rows: [
+          { 'Fournisseur / Modèle': 'Dell PowerEdge XE9680', Format: '6U', 'GPU max': '8 (SXM5, NVLink)', 'Options GPU': 'H100 80 Go / H200 141 Go', Refroidissement: 'Air standard, liquide en option', 'Fourchette de prix': '~200-375K $ (8x GPU)' },
+          { 'Fournisseur / Modèle': 'Lenovo SR675 V3', Format: '3U', 'GPU max': '8 (PCIe ou SXM)', 'Options GPU': 'H100 / H200 / L40S', Refroidissement: 'Air, ou liquide Neptune', 'Fourchette de prix': 'Très variable selon config' },
+          { 'Fournisseur / Modèle': 'HPE Cray XD670', Format: '5U', 'GPU max': '8 (SXM5, NVLink)', 'Options GPU': 'H100 80 Go / H200 141 Go', Refroidissement: 'Air standard', 'Fourchette de prix': 'Sur devis uniquement' },
+          { 'Fournisseur / Modèle': 'HPE ProLiant DL380a Gen11', Format: '2U', 'GPU max': '4 double / 8 simple largeur', 'Options GPU': 'L40S / H100 PCIe', Refroidissement: 'Air uniquement', 'Fourchette de prix': 'Plus bas — sur devis' },
+          { 'Fournisseur / Modèle': 'Supermicro SYS-821GE-TNHR', Format: '8U', 'GPU max': '8 (SXM5, NVLink)', 'Options GPU': 'H100 80 Go / H200 141 Go', Refroidissement: 'Air standard', 'Fourchette de prix': '~200-320K $ (8x GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'Que propose le Dell PowerEdge XE9680 ?',
+        content: [
+          '**Le Dell PowerEdge XE9680 est un serveur rack 6U hébergeant 8 GPU NVIDIA HGX H100 ou H200 SXM5 connectés via NVLink, conçu spécifiquement pour l\'entraînement et l\'inférence de grands modèles.** Il associe les GPU à deux processeurs Intel Xeon Scalable de 4e ou 5e génération (jusqu\'à 56 cœurs chacun), jusqu\'à 32 emplacements DIMM DDR5 (4 To max, 4800 MT/s) et 10 emplacements PCIe Gen5 x16 pour le réseau et l\'extension de stockage.',
+          'Il est livré en refroidissement à air standard ; Dell propose des options de refroidissement liquide pour les datacenters au-delà d\'environ 20-30 kW par rack, où l\'air cesse d\'être pratique.',
+          'Le prix n\'est pas publié — les devis revendeurs et intégrateurs pour une unité 8x H100/H200 entièrement configurée se sont situés environ entre 200 000 et 375 000 dollars selon le niveau de mémoire GPU, la RAM, le stockage et le niveau de support. Obtenez un devis formel sur [Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) avant de budgéter.',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'Que propose le Lenovo ThinkSystem SR675 V3 ?',
+        content: [
+          '**Le Lenovo ThinkSystem SR675 V3 est un serveur rack 3U prenant en charge jusqu\'à 8 GPU double ou simple largeur — dont NVIDIA H100, H200 et L40S — associés à deux processeurs AMD EPYC 9004/9005 de 5e génération et jusqu\'à 6 To de mémoire DDR5-4800 sur 24 emplacements DIMM.**',
+          'Sa caractéristique distinctive est Lenovo Neptune, un système de refroidissement direct-puce et hybride liquide-air disponible en option de configuration — pertinent pour les acheteurs dont l\'installation exploite déjà des boucles de refroidissement liquide ou prévoit d\'en ajouter, car il réduit sensiblement le coût de refroidissement des charges GPU à forte utilisation soutenue par rapport à l\'air seul.',
+          'Le SR675 V3 prend aussi en charge des configurations GPU mixtes (builds H200 4-GPU NVLink, ou L40S pour les déploiements orientés inférence), ce qui en fait la plateforme la plus flexible en configuration de ce comparatif pour les acheteurs voulant une seule famille de châssis couvrant à la fois l\'entraînement et l\'inférence. Configuration sur [Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna).',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'Que proposent le HPE Cray XD670 et le ProLiant DL380a Gen11 ?',
+        content: [
+          '**HPE vend deux niveaux de serveurs GPU distincts : le Cray XD670 pour l\'entraînement à grande échelle, et le ProLiant DL380a Gen11 pour l\'inférence et les déploiements plus modestes.**',
+          'Le **Cray XD670** est un châssis 5U hébergeant 8 GPU NVIDIA H100 ou H200 SXM5 avec deux processeurs Intel Xeon de 4e génération. Sa caractéristique distinctive est le choix de fabric : 8 emplacements PCIe Gen5 demi-hauteur prenant en charge HPE Slingshot 11, InfiniBand NDR ou Ethernet standard — pertinent pour les acheteurs déjà standardisés sur Slingshot via un parc HPE Cray existant.',
+          'Le **ProLiant DL380a Gen11** est un serveur 2U prenant en charge 4 GPU double largeur ou 8 simple largeur (L40S ou H100 PCIe), jusqu\'à 3 To de DDR5 et PCIe 5.0 — l\'option refroidie à air, moins dense, pour les charges d\'inférence ou un premier achat GPU qui ne justifie pas une plateforme 8-GPU SXM5. Les deux sur [HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html).',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'Que propose le Supermicro SYS-821GE-TNHR ?',
+        content: [
+          '**Le Supermicro SYS-821GE-TNHR est un serveur rack 8U prenant en charge jusqu\'à 8 GPU NVIDIA HGX H100 (80 Go) ou HGX H200 (141 Go), deux processeurs Intel Xeon Scalable de 4e ou 5e génération et jusqu\'à 8 To de mémoire DDR5-5600 sur 32 emplacements DIMM** — la capacité RAM maximale la plus élevée des quatre plateformes comparées ici.',
+          'Supermicro vend principalement via un canal intégrateur et revendeur plutôt que via des équipes commerciales entreprise directes, ce qui se traduit généralement par plus de flexibilité de configuration sur mesure (baies de disques, cartes réseau, redondance d\'alimentation) et, selon les listings revendeurs actuels, un prix de départ compétitif pour une configuration 8x H100 — les devis de configuration de base se sont situés environ entre 200 000 et 320 000 dollars, les configurations complètes coûtant davantage.',
+          'Le stockage est un point fort : jusqu\'à 19 baies 2,5" hot-swap NVMe/SATA/SAS plus 2 emplacements M.2 — utile pour les acheteurs faisant tourner de grands jeux de données locaux en parallèle de l\'inférence ou du fine-tuning. Voir la configuration de base sur [Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html).',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: 'Faut-il choisir H100, H200 ou L40S ?',
+        content: [
+          '**Le H200 l\'emporte en mémoire et bande passante, le H100 est l\'option SXM5 la plus disponible et souvent moins chère, et le L40S est le choix PCIe refroidi à air pour l\'inférence seule.** Les trois sont des GPU datacenter NVIDIA actuels en septembre 2026 ; aucun n\'est imminemment abandonné, le choix relève donc de l\'adéquation à la charge de travail, pas d\'un risque d\'obsolescence.',
+        ],
+        columns: ['GPU', 'VRAM', 'Bande passante mémoire', 'Idéal pour'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', VRAM: '80 Go HBM3', 'Bande passante mémoire': '3,35 To/s', 'Idéal pour': 'Entraînement multi-nœuds, disponibilité la plus large' },
+          { GPU: 'NVIDIA H200 SXM', VRAM: '141 Go HBM3e', 'Bande passante mémoire': '4,8 To/s', 'Idéal pour': 'Service à grand contexte, entraînement en gros lots' },
+          { GPU: 'NVIDIA L40S', VRAM: '48 Go GDDR6', 'Bande passante mémoire': '864 Go/s', 'Idéal pour': 'Inférence PCIe refroidie à air, budget réduit' },
+        ],
+        items: [
+          '**Choisissez H200 si :** vous servez des charges de travail à grand contexte ou entraînez des modèles plus grands où 80 Go par GPU forceraient un sharding inter-GPU que vous préféreriez éviter.',
+          '**Choisissez H100 si :** vous avez besoin de la plus large disponibilité fournisseur et revendeur pour un cluster d\'entraînement multi-nœuds NVLink/InfiniBand et que 80 Go par GPU suffit à la taille de votre modèle.',
+          '**Choisissez L40S si :** la charge de travail est de l\'inférence seule, le datacenter n\'est refroidi qu\'à l\'air, et 48 Go par GPU couvre votre plus grand modèle au niveau de quantification prévu.',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'Quelle puissance et quel refroidissement pour un rack dense en GPU ?',
+        content: [
+          '**Un seul serveur 8-GPU H100/H200 SXM5 consomme environ 10-12 kW à pleine charge — les 8 GPU de 700 W représentent à eux seuls 5,6 kW, avant CPU, mémoire et ventilateurs.** Deux ou trois de ces serveurs dans un même rack dépassent déjà le plafond pratique du refroidissement à air.',
+          'Les chiffres du secteur situent la limite pratique du refroidissement à air à environ 20-40 kW par rack ; au-delà, le refroidissement liquide (direct-puce ou immersion) est nécessaire et peut soutenir 100-200 kW+ par rack. À titre de référence, le système rack-scale GB200 NVL72 de NVIDIA consomme au total environ 120-130 kW — un repère sur la direction que prend la densité des racks IA, pas une spécification d\'un serveur comparé ici.',
+          'Implication pratique pour les acheteurs : si vous installez plus d\'un ou deux serveurs 8-GPU SXM5 par rack, prévoyez un refroidissement liquide direct-puce (Lenovo Neptune, ou une boucle liquide au niveau du site) plutôt que de compter sur la climatisation standard du datacenter.',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: 'Faut-il InfiniBand ou de l\'Ethernet standard ?',
+        content: [
+          '**Les déploiements d\'inférence mono-nœud n\'ont pas besoin d\'InfiniBand — de l\'Ethernet 100/200 GbE standard suffit.** Les clusters d\'entraînement ou de fine-tuning multi-nœuds, où les GPU de plusieurs serveurs doivent synchroniser en permanence les gradients, ont besoin d\'un fabric dédié à haute bande passante et faible latence.',
+          'Les deux options pour ce fabric sont **InfiniBand NDR** (400 Gb/s par lien, le choix HPC traditionnel, un NIC par GPU sur les plateformes phares) et **RoCE v2** (RDMA over Converged Ethernet — par exemple NVIDIA Spectrum-X — qui délivre un débit similaire sur un fabric Ethernet standard que votre équipe réseau exploite peut-être déjà).',
+        ],
+        items: [
+          '**Utilisez InfiniBand NDR si :** vous construisez un cluster d\'entraînement multi-nœuds dédié et voulez le fabric RDMA le plus mature et le plus déployé à cette échelle.',
+          '**Utilisez RoCE v2 (Ethernet) si :** votre équipe exploite déjà un réseau Ethernet convergé et veut éviter de maintenir un fabric InfiniBand et des compétences séparées.',
+          '**Évitez les deux si :** vous faites de l\'inférence mono-nœud — le réseau standard suffit et le coût du fabric supplémentaire ne se justifie pas.',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: 'Comment dimensionner un achat de serveur GPU selon votre charge de travail ?',
+        content: [
+          '**Dimensionnez l\'achat selon la charge de travail, pas selon la plus grosse configuration disponible.** Les déploiements d\'inférence seule et les déploiements d\'entraînement/fine-tuning ont des besoins fondamentalement différents en GPU, mémoire et réseau.',
+        ],
+        numberedItems: [
+          { title: 'Classifier la charge de travail en premier', whyItMatters: 'L\'inférence seule (servir un modèle fixe à des utilisateurs) a besoin de bien moins de mémoire GPU et d\'aucun fabric multi-nœuds comparé à l\'entraînement ou au fine-tuning, qui doit conserver gradients et état de l\'optimiseur en plus des poids du modèle.' },
+          { title: 'Estimer le besoin en mémoire GPU depuis la taille du modèle et la quantification', whyItMatters: 'Un modèle 70 milliards de paramètres en FP16 nécessite environ 140 Go de VRAM avant surcoût — cela exclut à lui seul un L40S mono-GPU (48 Go) et oriente vers un sharding multi-GPU H100/H200 ou un modèle plus petit/quantifié.' },
+          { title: 'Décider entre mono-nœud et multi-nœuds', whyItMatters: 'Si la VRAM combinée d\'un serveur 8-GPU couvre le modèle et l\'objectif de concurrence, ignorez complètement InfiniBand/RoCE et économisez le coût du fabric ; sinon, budgétez un fabric réseau dédié dès le départ.' },
+          { title: 'Adapter le refroidissement à la densité du rack avant de commander', whyItMatters: 'Confirmez avec les équipes facilities si le rack cible peut supporter le refroidissement liquide avant de vous engager sur plus d\'un ou deux serveurs 8-GPU SXM5 par rack — adapter le refroidissement après livraison coûte bien plus cher que de l\'anticiper.' },
+          { title: 'Obtenir un devis formel et confirmer le délai de livraison', whyItMatters: 'Aucun de ces fournisseurs ne publie de prix catalogue pour les configurations 8-GPU, et les délais de livraison pour les serveurs denses en GPU ont varié de plusieurs semaines à quelques mois selon l\'allocation GPU — budgétez le calendrier, pas seulement le prix.' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: 'Quel niveau de garantie et de support choisir ?',
+        content: [
+          '**Les quatre fournisseurs proposent un support entreprise échelonné au-delà de la garantie matérielle de base, mais les noms de niveaux, temps de réponse et services inclus diffèrent — confirmez les conditions actuelles directement auprès du fournisseur avant l\'achat, car les programmes évoluent.**',
+        ],
+        items: [
+          '**Dell** vend ses niveaux ProSupport (dont des options à réponse plus rapide, mission-critique) avec le XE9680 — demandez spécifiquement un support qualifié serveur GPU, pas le niveau PowerEdge standard.',
+          '**Lenovo** vend des niveaux Premier Support pour la gamme ThinkSystem, avec options de réponse sur site et de surveillance proactive.',
+          '**HPE** vend son support via Pointnext Complete Care et propose HPE GreenLake comme alternative à la consommation (paiement à l\'usage) à l\'achat en capital pour les acheteurs voulant éviter le coût initial à six chiffres.',
+          '**Supermicro** — les conditions de support varient davantage selon le revendeur/intégrateur que chez les trois autres fournisseurs, une grande partie du volume passant par ce canal plutôt que par la vente entreprise directe — obtenez les conditions de support par écrit auprès de votre revendeur spécifique, pas seulement de la page de garantie de base Supermicro.',
+          'Pour tout fournisseur : demandez précisément ce qui se passe en cas de panne GPU (SLA de remplacement, faut-il expédier tout le nœud ou juste le plateau GPU) — c\'est le mode de défaillance le plus probable sur un serveur dense en GPU.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Quelles erreurs font les acheteurs entreprise ?',
+        items: [
+          '**Acheter une capacité 8-GPU SXM5 pour une charge de travail purement inférence.** Si vous ne faites que servir un modèle fixe à des utilisateurs, une plateforme PCIe 2U comme le ProLiant DL380a Gen11 couvre le besoin pour une fraction du prix et de la complexité.',
+          '**Commander avant de confirmer la capacité de refroidissement du rack.** Un deuxième ou troisième serveur 8-GPU SXM5 dans le même rack peut dépasser le plafond pratique du refroidissement à air — confirmez avec les facilities avant l\'arrivée du matériel, pas après.',
+          '**Sauter le budget de fabric réseau pour un cluster « on scalera peut-être plus tard ».** Ajouter InfiniBand ou RoCE a posteriori sur un parc mono-nœud déjà déployé est plus perturbateur que de le budgéter dès l\'achat initial.',
+          '**Traiter le prix affiché comme le coût total.** Contrats de support, fabric réseau, mise à niveau du refroidissement et de l\'alimentation ajoutent régulièrement 15-30 % au-dessus de la ligne matérielle serveur.',
+          '**Supposer que le H200 est toujours la bonne montée en gamme par rapport au H100.** Si votre modèle et votre taille de lot tiennent confortablement dans 80 Go par GPU, la mémoire et le prix supplémentaires du H200 n\'apportent rien — vérifiez le besoin réel en VRAM avant de payer la prime.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Questions fréquentes',
+        faqs: [
+          {
+            q: 'Combien de GPU H100 ou H200 faut-il pour l\'inférence vs l\'entraînement en entreprise ?',
+            a: 'Les déploiements d\'inférence seule servant un modèle fixe à un nombre modéré d\'utilisateurs simultanés tiennent souvent sur 1-4 GPU et n\'ont pas besoin d\'une plateforme 8-GPU SXM5 du tout. L\'entraînement ou le fine-tuning de grands modèles (70 milliards+ de paramètres) nécessite généralement la configuration complète 8-GPU NVLink pour répartir modèle, gradients et état de l\'optimiseur entre les GPU. Dimensionnez l\'achat selon la charge de travail, pas selon un réflexe d\'acheter la plus grosse plateforme.',
+          },
+          {
+            q: 'Quel est le coût total réel d\'un serveur rack 8-GPU H100 ?',
+            a: 'Les devis revendeurs et intégrateurs pour une unité 8x H100 entièrement configurée se sont situés environ entre 200 000 et 375 000 dollars pour le matériel seul, avant contrats de support, fabric réseau et toute mise à niveau du refroidissement — ceux-ci ajoutent typiquement 15-30 % supplémentaires. Aucun des quatre fournisseurs ne publie de prix catalogue ; obtenez un devis formel avant de budgéter.',
+          },
+          {
+            q: 'Faut-il du refroidissement liquide pour un rack dense en GPU ?',
+            a: 'Si vous installez plus d\'un ou deux serveurs 8-GPU H100/H200 SXM5 par rack, oui — chacun consomme environ 10-12 kW à pleine charge, et le plafond pratique du refroidissement à air se situe autour de 20-40 kW par rack. En dessous de cette densité, le refroidissement à air standard peut encore fonctionner ; confirmez avec les facilities avant de commander.',
+          },
+          {
+            q: 'Faut-il choisir InfiniBand ou Ethernet (RoCE) pour le réseau ?',
+            a: 'Pour l\'inférence mono-nœud, ni l\'un ni l\'autre — l\'Ethernet standard suffit. Pour les clusters d\'entraînement multi-nœuds, InfiniBand NDR est le fabric RDMA à haute bande passante le plus mature et le plus déployé ; RoCE v2 sur Ethernet est l\'alternative si votre équipe réseau veut éviter de maintenir un fabric InfiniBand séparé.',
+          },
+          {
+            q: 'Dell vs Lenovo vs HPE vs Supermicro — quel fournisseur a le meilleur support entreprise ?',
+            a: 'Dell, Lenovo et HPE vendent chacun un support entreprise échelonné (ProSupport, Premier Support et Pointnext Complete Care respectivement) via des équipes commerciales directes. Supermicro vend principalement via intégrateurs et revendeurs, donc les conditions de support varient davantage selon le revendeur qu\'un niveau unique Supermicro — obtenez les conditions par écrit auprès du revendeur spécifique avant l\'achat.',
+          },
+          {
+            q: 'H100 vs H200 vs L40S — quel GPU acheter ?',
+            a: 'Choisissez H200 (141 Go HBM3e) pour le service à grand contexte ou l\'entraînement où 80 Go par GPU forceraient un sharding inter-GPU que vous préféreriez éviter. Choisissez H100 (80 Go HBM3) pour la plus large disponibilité fournisseur et revendeur dans un cluster d\'entraînement multi-nœuds où 80 Go suffit. Choisissez L40S (48 Go GDDR6, PCIe, refroidi à air) pour l\'inférence seule avec un budget réduit.',
+          },
+          {
+            q: 'Peut-on mélanger des modèles de GPU dans le même rack ou serveur ?',
+            a: 'Au sein d\'un même serveur, non — une plateforme 8-GPU SXM5 est construite et connectée en NVLink autour d\'un seul modèle de GPU (tout H100 ou tout H200), pas d\'un mélange. Au sein d\'un rack, oui — vous pouvez faire tourner un serveur configuré H100/H200 pour l\'entraînement à côté d\'un autre configuré L40S pour l\'inférence, tant que le refroidissement et la consommation de chaque serveur sont pris en compte séparément.',
+          },
+          {
+            q: 'Quel niveau de garantie et de support les acheteurs entreprise devraient-ils choisir ?',
+            a: 'Au minimum, confirmez le SLA de remplacement du fournisseur spécifiquement pour la panne GPU (pas seulement la panne matérielle générale) — la panne GPU est le mode de défaillance le plus probable sur un serveur dense en GPU, et la logistique de remplacement (expédier un plateau GPU vs tout le nœud) varie selon le fournisseur et le niveau. Adaptez le niveau de temps de réponse à la tolérance réelle de la charge de travail aux interruptions.',
+          },
+          {
+            q: 'Le matériel on-premise est-il moins cher que la location GPU cloud à l\'échelle entreprise ?',
+            a: 'Cela dépend de l\'utilisation, pas seulement du prix affiché — le matériel on-premise a un coût initial élevé mais un coût horaire faible une fois en service, tandis que la location cloud n\'a pas de coût initial mais un taux horaire bien plus élevé. Le point de bascule se situe typiquement à une utilisation soutenue et quasi constante ; les charges occasionnelles ou par pics coûtent généralement moins cher en location. Voir notre [guide de location GPU cloud](/fr/local-llms/cloud-gpu-rental-comparison-2026) pour une comparaison de coûts détaillée.',
+          },
+          {
+            q: 'Combien de temps prend la livraison d\'une configuration 8x H100 ou H200 ?',
+            a: 'Les délais de livraison pour les serveurs denses en GPU ont varié de plusieurs semaines à quelques mois selon l\'allocation GPU et la demande actuelle — ce n\'est pas un article en stock chez la plupart des fournisseurs en configuration 8-GPU. Confirmez le délai dans le cadre du devis formel, et budgétez le calendrier du projet en conséquence, pas seulement le prix.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures complémentaires',
+        items: [
+          '[Faire évoluer les LLM locaux en entreprise](/fr/local-llms/scaling-local-llms-enterprise) — le volet logiciel de cette infrastructure : orchestration Kubernetes, répartition de charge et redondance sur plusieurs nœuds GPU.',
+          '[Station de travail LLM local](/fr/local-llms/local-llm-workstation-build) — une seule machine de bureau pour une équipe ou une personne, pas un achat en rack.',
+          '[Serveurs d\'inférence LLM entreprise 2026](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI et NVIDIA NIM comparés pour le logiciel de service tournant sur ce matériel.',
+          '[LLM locaux multi-GPU](/fr/local-llms/multi-gpu-local-llms) — configuration multi-GPU sur une seule machine pour des déploiements plus modestes.',
+          '[Comparatif location GPU cloud 2026](/fr/local-llms/cloud-gpu-rental-comparison-2026) — l\'alternative louer plutôt qu\'acheter pour des besoins de calcul occasionnels ou par pics.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        items: [
+          'Page produit Dell PowerEdge XE9680 -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Guide produit Lenovo ThinkSystem SR675 V3 -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'Fiche technique HPE ProLiant DL380a Gen11 -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Fiche technique Supermicro SYS-821GE-TNHR -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'Spécifications NVIDIA H100/H200 Tensor Core GPU -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Guide d\'achat serveur GPU entreprise 2026 : Dell, Lenovo, HPE, Supermicro',
+      description:
+        'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 et Supermicro SYS-821GE-TNHR comparés pour l\'IA d\'entreprise : densité GPU, refroidissement, réseau, prix, et adéquation inférence vs entraînement.',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/fr/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'Responsables achats IT et architectes infrastructure' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Combien de GPU H100 ou H200 faut-il pour l\'inférence vs l\'entraînement en entreprise ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'inférence seule tient souvent sur 1-4 GPU ; l\'entraînement ou le fine-tuning de grands modèles nécessite généralement la configuration complète 8-GPU NVLink. Dimensionnez l\'achat selon la charge de travail, pas par réflexe d\'acheter la plus grosse plateforme.' } },
+        { '@type': 'Question', name: 'Quel est le coût total réel d\'un serveur rack 8-GPU H100 ?', acceptedAnswer: { '@type': 'Answer', text: 'Les devis revendeurs pour une unité 8x H100 entièrement configurée se sont situés environ entre 200 000 et 375 000 dollars pour le matériel seul, avant support, fabric réseau et mises à niveau de refroidissement, qui ajoutent typiquement 15-30 % de plus.' } },
+        { '@type': 'Question', name: 'Faut-il du refroidissement liquide pour un rack dense en GPU ?', acceptedAnswer: { '@type': 'Answer', text: 'Au-delà d\'un ou deux serveurs 8-GPU SXM5 par rack, oui — chacun consomme environ 10-12 kW à pleine charge, et le refroidissement à air plafonne pratiquement autour de 20-40 kW par rack.' } },
+        { '@type': 'Question', name: 'Faut-il choisir InfiniBand ou Ethernet (RoCE) pour le réseau ?', acceptedAnswer: { '@type': 'Answer', text: 'L\'inférence mono-nœud n\'a besoin ni de l\'un ni de l\'autre. Les clusters d\'entraînement multi-nœuds ont besoin d\'InfiniBand NDR ou de RoCE v2 sur Ethernet comme alternative.' } },
+        { '@type': 'Question', name: 'Dell vs Lenovo vs HPE vs Supermicro — quel fournisseur a le meilleur support entreprise ?', acceptedAnswer: { '@type': 'Answer', text: 'Dell, Lenovo et HPE vendent un support entreprise échelonné via des équipes commerciales directes. Supermicro vend principalement via des intégrateurs, donc les conditions varient davantage selon le revendeur.' } },
+        { '@type': 'Question', name: 'H100 vs H200 vs L40S — quel GPU acheter ?', acceptedAnswer: { '@type': 'Answer', text: 'H200 pour le service à grand contexte nécessitant plus de 80 Go par GPU. H100 pour la plus large disponibilité quand 80 Go suffisent. L40S pour l\'inférence PCIe refroidie à air avec un budget réduit.' } },
+        { '@type': 'Question', name: 'Peut-on mélanger des modèles de GPU dans le même rack ou serveur ?', acceptedAnswer: { '@type': 'Answer', text: 'Pas au sein d\'un même serveur — une plateforme 8-GPU SXM5 est construite autour d\'un seul modèle de GPU. Au sein d\'un rack oui, tant que le refroidissement et la consommation de chaque serveur sont pris en compte séparément.' } },
+        { '@type': 'Question', name: 'Quel niveau de garantie et de support les acheteurs entreprise devraient-ils choisir ?', acceptedAnswer: { '@type': 'Answer', text: 'Confirmez le SLA de remplacement spécifiquement pour la panne GPU et adaptez le niveau de temps de réponse à la tolérance réelle de la charge de travail aux interruptions.' } },
+        { '@type': 'Question', name: 'Le matériel on-premise est-il moins cher que la location GPU cloud à l\'échelle entreprise ?', acceptedAnswer: { '@type': 'Answer', text: 'Cela dépend de l\'utilisation — l\'on-premise a un coût initial élevé mais un faible coût horaire ; la location cloud n\'a pas de coût initial mais un taux horaire plus élevé. Une utilisation soutenue et élevée favorise l\'achat.' } },
+        { '@type': 'Question', name: 'Combien de temps prend la livraison d\'une configuration 8x H100 ou H200 ?', acceptedAnswer: { '@type': 'Answer', text: 'Les délais ont varié de plusieurs semaines à quelques mois selon l\'allocation GPU — à confirmer dans le cadre du devis formel.' } },
+      ],
+    },
+  },
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: 'Guía de compra de servidores GPU empresariales 2026: Dell, Lenovo, HPE, Supermicro',
+    heroImage: '',
+    seoTitle: 'Servidor GPU empresarial 2026: Dell vs. Lenovo vs. HPE vs. Supermicro',
+    intro:
+      'Comprar un servidor GPU empresarial no es lo mismo que armar una estación de trabajo de IA. Una plataforma de 8 GPU montada en rack cuesta seis cifras, necesita un plan de refrigeración y energía antes incluso de que llegue, y compromete a la empresa con un proveedor de soporte durante años. Esta guía compara a los cuatro proveedores que realmente venden servidores GPU de nivel rack para IA empresarial —Dell, Lenovo, HPE y Supermicro— en densidad de GPU, requisitos de refrigeración, redes, niveles de garantía y rango de precios, para que el equipo de compras dimensione la adquisición según la carga de trabajo real y no según la ficha técnica más llamativa.',
+    metaDescription:
+      'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 y Supermicro SYS-821GE-TNHR comparados para IA empresarial: densidad de GPU, refrigeración, redes, precios y cuál conviene para inferencia o entrenamiento.',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Configurador Dell PowerEdge XE9680' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Configurador Lenovo ThinkSystem SR675 V3' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Configurador Supermicro SYS-821GE-TNHR' },
+    ],
+    twitterDescription:
+      'Dell vs. Lenovo vs. HPE vs. Supermicro en servidores GPU empresariales — densidad, refrigeración, red y precio comparados para equipos de compras.',
+    leadAnswerBlock:
+      '**Para clústeres de entrenamiento de 8 GPU H100/H200, Dell PowerEdge XE9680, HPE Cray XD670 y Supermicro SYS-821GE-TNHR son los competidores más directos; para inferencia pura o presupuesto ajustado, el HPE ProLiant DL380a Gen11 o el Lenovo ThinkSystem SR675 V3 con GPU PCIe cuestan aproximadamente entre un tercio y la mitad.** Una configuración de 8x H100/H200 SXM5 ronda entre 200.000 y 400.000+ dólares según la memoria y el nivel de soporte — pida una cotización formal al proveedor, los precios de lista no se publican.',
+    audience:
+      'Responsables de compras de TI y arquitectos de infraestructura que adquieren servidores multi-GPU montados en rack para inferencia o entrenamiento de IA empresarial',
+    readTime: '13 min de lectura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'servidor GPU empresarial',
+    targetKeywords: [
+      'guía compra servidor gpu empresarial 2026',
+      'dell poweredge xe9680 vs lenovo vs hpe',
+      'servidor gpu rack para inferencia ia',
+      'h100 vs h200 vs l40s servidor empresarial',
+      'mejor proveedor servidor gpu para entrenamiento llm',
+    ],
+    quickAnswerTop: {
+      es: {
+        question: '¿Qué proveedor de servidores GPU debería elegir una empresa para IA en 2026?',
+        answer:
+          'Elija primero por carga de trabajo, luego por proveedor. Para clústeres de entrenamiento multi-nodo H100/H200, Dell PowerEdge XE9680, HPE Cray XD670 y Supermicro SYS-821GE-TNHR son los competidores más cercanos — todas plataformas de 8U o menos, 8 GPU SXM5, conectadas por NVLink, en el rango de 200.000-400.000+ dólares. Para inferencia pura o despliegues de un solo nodo, el HPE ProLiant DL380a Gen11 (2U, GPU PCIe) o el Lenovo ThinkSystem SR675 V3 con GPU L40S cuestan aproximadamente un tercio a la mitad y funcionan con refrigeración por aire estándar.',
+        bullets: [
+          'Entrenamiento / multi-nodo: Dell XE9680, HPE Cray XD670 o Supermicro SYS-821GE-TNHR — 8x H100/H200 SXM5, NVLink, listo para InfiniBand',
+          'Solo inferencia / presupuesto menor: HPE ProLiant DL380a Gen11 o Lenovo SR675 V3 con L40S — PCIe, refrigeración por aire, sin circuito líquido necesario',
+          'Centro de datos listo para refrigeración líquida: Lenovo SR675 V3 con refrigeración directa al chip Neptune',
+          'Rango de precio para un servidor 8x H100/H200 SXM5: aproximadamente 200.000-400.000+ dólares según cotizaciones de revendedores/integradores — los proveedores no publican precio de lista',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Datos rápidos', anchor: '#quick-facts' },
+      { label: 'Mejor opción según perfil de comprador', anchor: '#best-choice' },
+      { label: 'Tabla comparativa de proveedores', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670 y ProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs. H200 vs. L40S', anchor: '#gpu-options' },
+      { label: 'Requisitos de energía y refrigeración', anchor: '#power-cooling' },
+      { label: 'Red: InfiniBand vs. RoCE', anchor: '#networking' },
+      { label: 'Cómo dimensionar su compra', anchor: '#sizing' },
+      { label: 'Niveles de garantía y soporte', anchor: '#warranty-support' },
+      { label: 'Errores comunes de compra', anchor: '#common-mistakes' },
+      { label: 'Preguntas frecuentes', anchor: '#faq' },
+      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
+      { label: 'Fuentes', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Los compradores de servidores GPU empresariales deben elegir el proveedor según la carga de trabajo — Dell PowerEdge XE9680, HPE Cray XD670 y Supermicro SYS-821GE-TNHR compiten directamente en plataformas de entrenamiento 8x H100/H200 SXM5 de 200.000-400.000+ dólares, mientras que HPE ProLiant DL380a Gen11 y Lenovo ThinkSystem SR675 V3 con GPU PCIe L40S cubren presupuestos de inferencia pura por aproximadamente un tercio a la mitad del precio.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Comprar un servidor de IA para una empresa no es lo mismo que armar una PC gaming potente. Estas máquinas cuestan como una casa, necesitan un plan de refrigeración y electricidad antes de que lleguen, y vienen con un contrato de soporte de varios años. Esta guía compara a las cuatro empresas que realmente venden estos servidores de IA en rack —Dell, Lenovo, HPE y Supermicro— para que un comprador elija el tamaño y proveedor correctos para el trabajo real (ejecutar modelos de IA para empleados vs. entrenar modelos nuevos desde cero), no solo la ficha técnica más grande.',
+          },
+        ],
+        items: [
+          '**Densidad de GPU:** los cuatro proveedores ofrecen una plataforma insignia de 8 GPU SXM5 (Dell XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR); Lenovo y HPE también venden plataformas PCIe de menor densidad y menor costo.',
+          '**Rango de precio:** un servidor 8x H100/H200 SXM5 cuesta aproximadamente entre 200.000 y 400.000+ dólares según la memoria de GPU (80GB H100 vs. 141GB H200) y el nivel de soporte.',
+          '**La refrigeración es la verdadera limitación.** Dos o tres servidores de 8 GPU SXM5 ya superan el límite práctico de refrigeración por aire de 20-40kW por rack — por encima de esa densidad, la refrigeración líquida deja de ser opcional.',
+          '**La red importa para entrenamiento, menos para inferencia.** Los clústeres de entrenamiento multi-nodo necesitan InfiniBand NDR o red Ethernet RoCE v2; la inferencia de un solo nodo no.',
+          '**Elija la GPU según la carga de trabajo, no solo el presupuesto.** La L40S (48GB, PCIe, refrigerada por aire) sirve para inferencia; la H100/H200 (80-141GB, SXM5, NVLink) sirve para entrenamiento y servicio de gran volumen.',
+          'Los compradores que solo necesitan una o dos GPU de capacidad de inferencia no deberían comprar un servidor en rack — una estación de trabajo es el nivel adecuado para esa escala.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Datos rápidos',
+        items: [
+          '**Dell PowerEdge XE9680:** 6U, hasta 8x H100/H200 SXM5, doble Intel Xeon Platinum, hasta 4TB de DDR5.',
+          '**Lenovo ThinkSystem SR675 V3:** 3U, hasta 8 GPU (mezcla H100/H200/L40S), doble AMD EPYC 9004/9005, hasta 6TB de DDR5, refrigeración líquida Neptune opcional.',
+          '**HPE Cray XD670:** 5U, hasta 8x H100/H200 SXM5, doble Intel Xeon de 4.ª generación, opciones de red InfiniBand NDR / Slingshot 11 / Ethernet.',
+          '**HPE ProLiant DL380a Gen11:** 2U, hasta 4 GPU de doble ancho u 8 de ancho simple (L40S/H100 PCIe), doble Intel Xeon con hasta 64 núcleos.',
+          '**Supermicro SYS-821GE-TNHR:** 8U, hasta 8x H100/H200 SXM5, doble Intel Xeon de 4.ª/5.ª generación, hasta 8TB de DDR5.',
+          '**VRAM de GPU:** H100 = 80GB HBM3; H200 = 141GB HBM3e; L40S = 48GB GDDR6.',
+          '**Consumo del rack:** un solo nodo 8x H100/H200 SXM5 consume aproximadamente 10-12kW a plena carga — dos de ellos ya superan el límite práctico de refrigeración por aire para un rack.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '¿Qué servidor GPU comprar según su caso de uso?',
+        content: [
+          '**El proveedor adecuado depende de la carga de trabajo y la preparación del centro de datos, no de la preferencia de marca.** Los clústeres de entrenamiento, los despliegues de inferencia pura y los centros de datos con refrigeración líquida apuntan cada uno a una plataforma distinta.',
+        ],
+        items: [
+          '**Mejor para entrenamiento multi-nodo a gran escala:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) — la red de ventas empresariales e integradores de sistemas más amplia para construir un clúster multi-rack conectado por InfiniBand.',
+          '**Mejor para un centro de datos listo para refrigeración líquida:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna) — la refrigeración líquida directa al chip Neptune reduce de forma notable el costo de refrigeración con uso sostenido de GPU, con opción de CPU AMD EPYC.',
+          '**Mejor para inferencia pura o una primera compra más pequeña:** HPE ProLiant DL380a Gen11 — 2U, refrigerado por aire, GPU PCIe, aproximadamente un tercio a la mitad del costo de una máquina de entrenamiento 8x SXM5.',
+          '**Mejor para flexibilidad de configuración y competitividad de precio:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html) — las opciones de configuración a medida más amplias vía el canal de integradores, a menudo la vía más competitiva en precio hacia una configuración 8x H100/H200 SXM5.',
+          '**Evite los servidores en rack por completo si:** su necesidad real es 1-2 GPU de capacidad de inferencia para un equipo pequeño — una [estación de trabajo LLM local](/es/local-llms/local-llm-workstation-build) cuesta una fracción del precio y no necesita plan de refrigeración de centro de datos.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '¿Cómo se comparan los cuatro proveedores en especificaciones y precio?',
+        content: [
+          '**Dell, Lenovo, HPE y Supermicro tienen cada uno al menos una plataforma de 8 GPU SXM5, pero difieren notablemente en factor de forma, opciones de refrigeración y canal de venta.**',
+        ],
+        columns: ['Proveedor / Modelo', 'Factor de forma', 'GPU máx.', 'Opciones de GPU', 'Refrigeración', 'Rango de precio'],
+        rows: [
+          { 'Proveedor / Modelo': 'Dell PowerEdge XE9680', 'Factor de forma': '6U', 'GPU máx.': '8 (SXM5, NVLink)', 'Opciones de GPU': 'H100 80GB / H200 141GB', Refrigeración: 'Aire estándar, líquida opcional', 'Rango de precio': '~200-375K $ (8x GPU)' },
+          { 'Proveedor / Modelo': 'Lenovo SR675 V3', 'Factor de forma': '3U', 'GPU máx.': '8 (PCIe o SXM)', 'Opciones de GPU': 'H100 / H200 / L40S', Refrigeración: 'Aire, o líquida Neptune', 'Rango de precio': 'Muy variable según config.' },
+          { 'Proveedor / Modelo': 'HPE Cray XD670', 'Factor de forma': '5U', 'GPU máx.': '8 (SXM5, NVLink)', 'Opciones de GPU': 'H100 80GB / H200 141GB', Refrigeración: 'Aire estándar', 'Rango de precio': 'Solo bajo cotización' },
+          { 'Proveedor / Modelo': 'HPE ProLiant DL380a Gen11', 'Factor de forma': '2U', 'GPU máx.': '4 doble / 8 simple ancho', 'Opciones de GPU': 'L40S / H100 PCIe', Refrigeración: 'Solo aire', 'Rango de precio': 'Menor — solo cotización' },
+          { 'Proveedor / Modelo': 'Supermicro SYS-821GE-TNHR', 'Factor de forma': '8U', 'GPU máx.': '8 (SXM5, NVLink)', 'Opciones de GPU': 'H100 80GB / H200 141GB', Refrigeración: 'Aire estándar', 'Rango de precio': '~200-320K $ (8x GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: '¿Qué ofrece el Dell PowerEdge XE9680?',
+        content: [
+          '**El Dell PowerEdge XE9680 es un servidor en rack de 6U con 8 GPU NVIDIA HGX H100 o H200 SXM5 conectadas por NVLink, construido específicamente para entrenamiento e inferencia de modelos grandes.** Combina las GPU con dos procesadores Intel Xeon Scalable de 4.ª o 5.ª generación (hasta 56 núcleos cada uno), hasta 32 ranuras DIMM DDR5 (4TB máx., 4800 MT/s) y 10 ranuras PCIe Gen5 x16 para red y expansión de almacenamiento.',
+          'Viene con refrigeración por aire de serie; Dell ofrece opciones de refrigeración líquida para centros de datos por encima de aproximadamente 20-30kW por rack, donde el aire deja de ser práctico.',
+          'El precio no se publica — las cotizaciones de revendedores e integradores para una unidad 8x H100/H200 totalmente configurada han rondado entre 200.000 y 375.000 dólares, según el nivel de memoria de GPU, RAM, almacenamiento y nivel de soporte. Solicite una cotización formal en [Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) antes de presupuestar.',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: '¿Qué ofrece el Lenovo ThinkSystem SR675 V3?',
+        content: [
+          '**El Lenovo ThinkSystem SR675 V3 es un servidor en rack de 3U compatible con hasta 8 GPU de doble o simple ancho —incluidas NVIDIA H100, H200 y L40S— junto con dos procesadores AMD EPYC 9004/9005 de 5.ª generación y hasta 6TB de memoria DDR5-4800 en 24 ranuras DIMM.**',
+          'Su característica distintiva es Lenovo Neptune, un sistema de refrigeración directa al chip e híbrida líquido-aire disponible como opción de configuración — relevante para compradores cuya instalación ya usa circuitos de refrigeración líquida o planea añadirlos, ya que reduce notablemente el costo de refrigeración con cargas GPU de alta utilización sostenida frente al aire solo.',
+          'El SR675 V3 también admite configuraciones de GPU mixtas (compilaciones H200 de 4 GPU con NVLink, o L40S para despliegues orientados a inferencia), lo que lo convierte en la plataforma más flexible en configuración de esta comparativa para compradores que quieren una sola familia de chasis para entrenamiento e inferencia. Configuración en [Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna).',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: '¿Qué ofrecen el HPE Cray XD670 y el ProLiant DL380a Gen11?',
+        content: [
+          '**HPE vende dos niveles distintos de servidores GPU: el Cray XD670 para entrenamiento a gran escala, y el ProLiant DL380a Gen11 para inferencia y despliegues más pequeños.**',
+          'El **Cray XD670** es un chasis de 5U con 8 GPU NVIDIA H100 o H200 SXM5 y dos procesadores Intel Xeon de 4.ª generación. Su característica distintiva es la elección de red: 8 ranuras PCIe Gen5 de media altura compatibles con HPE Slingshot 11, InfiniBand NDR o Ethernet estándar — relevante para compradores ya estandarizados en Slingshot por un parque HPE Cray existente.',
+          'El **ProLiant DL380a Gen11** es un servidor de 2U compatible con 4 GPU de doble ancho u 8 de ancho simple (L40S o H100 PCIe), hasta 3TB de DDR5 y PCIe 5.0 — la opción refrigerada por aire y de menor densidad para cargas de inferencia o una primera compra de GPU que no justifica una plataforma de 8 GPU SXM5. Ambos en [HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html).',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: '¿Qué ofrece el Supermicro SYS-821GE-TNHR?',
+        content: [
+          '**El Supermicro SYS-821GE-TNHR es un servidor en rack de 8U compatible con hasta 8 GPU NVIDIA HGX H100 (80GB) o HGX H200 (141GB), dos procesadores Intel Xeon Scalable de 4.ª o 5.ª generación y hasta 8TB de memoria DDR5-5600 en 32 ranuras DIMM** — la mayor capacidad máxima de RAM de las cuatro plataformas comparadas aquí.',
+          'Supermicro vende principalmente a través de un canal de integradores y revendedores en lugar de equipos de venta empresarial directa, lo que suele traducirse en más flexibilidad de configuración a medida (bahías de disco, tarjetas de red, redundancia de fuente de alimentación) y, según listados actuales de revendedores, un precio inicial competitivo para una configuración 8x H100 — las cotizaciones de configuración base han rondado entre 200.000 y 320.000 dólares, con configuraciones completas más altas.',
+          'El almacenamiento es un punto fuerte: hasta 19 bahías 2,5" NVMe/SATA/SAS de intercambio en caliente más 2 ranuras M.2 — útil para compradores que ejecutan grandes conjuntos de datos locales junto a inferencia o ajuste fino. Vea la configuración base en [Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html).',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: '¿H100, H200 o L40S — cuál comprar?',
+        content: [
+          '**La H200 gana en memoria y ancho de banda, la H100 es la opción SXM5 más disponible y a menudo más barata, y la L40S es la opción PCIe refrigerada por aire para inferencia pura.** Las tres son GPU de centro de datos NVIDIA vigentes en septiembre de 2026; ninguna está próxima a descontinuarse, así que la elección es de ajuste a la carga de trabajo, no de riesgo de obsolescencia.',
+        ],
+        columns: ['GPU', 'VRAM', 'Ancho de banda de memoria', 'Mejor para'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', VRAM: '80GB HBM3', 'Ancho de banda de memoria': '3,35 TB/s', 'Mejor para': 'Entrenamiento multi-nodo, mayor disponibilidad' },
+          { GPU: 'NVIDIA H200 SXM', VRAM: '141GB HBM3e', 'Ancho de banda de memoria': '4,8 TB/s', 'Mejor para': 'Servicio de contexto grande, entrenamiento por lotes mayores' },
+          { GPU: 'NVIDIA L40S', VRAM: '48GB GDDR6', 'Ancho de banda de memoria': '864 GB/s', 'Mejor para': 'Inferencia PCIe refrigerada por aire, presupuesto menor' },
+        ],
+        items: [
+          '**Elija H200 si:** atiende cargas de contexto grande o entrena modelos más grandes donde 80GB por GPU forzaría un fragmentado entre GPU que preferiría evitar.',
+          '**Elija H100 si:** necesita la mayor disponibilidad de proveedores y revendedores para un clúster de entrenamiento multi-nodo NVLink/InfiniBand y 80GB por GPU son suficientes para su modelo.',
+          '**Elija L40S si:** la carga de trabajo es solo inferencia, el centro de datos solo tiene refrigeración por aire y 48GB por GPU cubren su modelo más grande en el nivel de cuantización previsto.',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: '¿Cuánta energía y refrigeración necesita un rack denso en GPU?',
+        content: [
+          '**Un solo servidor de 8 GPU H100/H200 SXM5 consume aproximadamente 10-12kW a plena carga — solo las 8 GPU de 700W suman 5,6kW, antes de CPU, memoria y ventiladores.** Dos o tres de esos servidores en un mismo rack ya superan el límite práctico de la refrigeración por aire.',
+          'Las cifras del sector sitúan el límite práctico de la refrigeración por aire en aproximadamente 20-40kW por rack; por encima se necesita refrigeración líquida (directa al chip o inmersión), que puede soportar 100-200kW+ por rack. Como referencia, el sistema de rack GB200 NVL72 de NVIDIA consume en total aproximadamente 120-130kW — un dato sobre hacia dónde va la densidad de racks de IA, no una especificación de ningún servidor comparado aquí.',
+          'Implicación práctica para compradores: si va a instalar más de uno o dos servidores de 8 GPU SXM5 por rack, planifique refrigeración líquida directa al chip (Lenovo Neptune, o un circuito líquido a nivel de instalación) en lugar de asumir que la refrigeración por aire estándar del centro de datos será suficiente.',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: '¿Necesita InfiniBand o Ethernet estándar?',
+        content: [
+          '**Los despliegues de inferencia de un solo nodo no necesitan InfiniBand — Ethernet estándar de 100/200GbE es suficiente.** Los clústeres de entrenamiento o ajuste fino multi-nodo, donde las GPU de varios servidores deben sincronizar gradientes constantemente, sí necesitan una red dedicada de alto ancho de banda y baja latencia.',
+          'Las dos opciones para esa red son **InfiniBand NDR** (400Gb/s por enlace, la opción HPC tradicional, una NIC por GPU en plataformas insignia) y **RoCE v2** (RDMA sobre Ethernet convergido — por ejemplo NVIDIA Spectrum-X— que ofrece un rendimiento similar sobre una red Ethernet estándar que su equipo de red quizá ya opera).',
+        ],
+        items: [
+          '**Use InfiniBand NDR si:** está construyendo un clúster de entrenamiento multi-nodo dedicado y quiere la red RDMA más madura y ampliamente desplegada a esa escala.',
+          '**Use RoCE v2 (Ethernet) si:** su equipo ya opera una red Ethernet convergida y quiere evitar mantener una red InfiniBand separada y las habilidades que requiere.',
+          '**Evite ambas si:** ejecuta inferencia de un solo nodo — la red estándar es suficiente y el costo de red adicional no se justifica.',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: '¿Cómo dimensionar la compra de un servidor GPU según su carga de trabajo?',
+        content: [
+          '**Dimensione la compra según la carga de trabajo, no según la configuración más grande disponible.** Los despliegues de inferencia pura y los de entrenamiento/ajuste fino tienen requisitos fundamentalmente distintos de GPU, memoria y red.',
+        ],
+        numberedItems: [
+          { title: 'Clasificar primero la carga de trabajo', whyItMatters: 'La inferencia pura (servir un modelo fijo a usuarios) necesita mucha menos memoria de GPU y ninguna red multi-nodo en comparación con entrenamiento o ajuste fino, que debe mantener gradientes y estado del optimizador además de los pesos del modelo.' },
+          { title: 'Estimar la necesidad de memoria de GPU a partir del tamaño del modelo y la cuantización', whyItMatters: 'Un modelo de 70B parámetros en FP16 necesita aproximadamente 140GB de VRAM antes de overhead — eso por sí solo descarta una L40S de una sola GPU (48GB) y apunta hacia fragmentado multi-GPU H100/H200 o un modelo más pequeño/cuantizado.' },
+          { title: 'Decidir entre un solo nodo o multi-nodo', whyItMatters: 'Si la VRAM combinada de un servidor de 8 GPU cubre el modelo y el objetivo de concurrencia, omita InfiniBand/RoCE por completo y ahorre el costo de red; si no, presupueste una red dedicada desde el principio.' },
+          { title: 'Ajustar la refrigeración a la densidad del rack antes de pedir', whyItMatters: 'Confirme con el equipo de instalaciones si el rack objetivo puede soportar refrigeración líquida antes de comprometerse a más de uno o dos servidores de 8 GPU SXM5 por rack — adaptar la refrigeración después de la entrega es mucho más caro que planificarlo de antemano.' },
+          { title: 'Obtener una cotización formal y confirmar el plazo de entrega', whyItMatters: 'Ninguno de estos proveedores publica precios de lista para configuraciones de 8 GPU, y los plazos de entrega de servidores densos en GPU han variado de varias semanas a algunos meses según la asignación de GPU — presupueste el cronograma, no solo el precio.' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: '¿Qué nivel de garantía y soporte elegir?',
+        content: [
+          '**Los cuatro proveedores ofrecen soporte empresarial por niveles más allá de la garantía básica de hardware, pero los nombres de nivel, tiempos de respuesta y servicios incluidos difieren — confirme las condiciones actuales directamente con el proveedor antes de comprar, ya que los programas cambian.**',
+        ],
+        items: [
+          '**Dell** vende sus niveles ProSupport (incluidas opciones de respuesta más rápida y misión crítica) junto con el XE9680 — pregunte específicamente por soporte calificado para servidores GPU, no el nivel PowerEdge estándar.',
+          '**Lenovo** vende niveles Premier Support para la línea ThinkSystem, con opciones de respuesta en sitio y monitoreo proactivo.',
+          '**HPE** vende soporte a través de Pointnext Complete Care y ofrece HPE GreenLake como alternativa de pago por uso a la compra de capital para compradores que quieren evitar el costo inicial de seis cifras.',
+          '**Supermicro** — las condiciones de soporte varían más según el revendedor/integrador que en los otros tres proveedores, ya que gran parte de su volumen pasa por ese canal en vez de ventas empresariales directas — obtenga las condiciones de soporte por escrito de su revendedor específico, no solo de la página de garantía base de Supermicro.',
+          'Para cualquier proveedor: pregunte concretamente qué ocurre ante un fallo de GPU (SLA de reemplazo, si hay que enviar todo el nodo o solo la bandeja de GPU) — es el modo de fallo más probable en un servidor denso en GPU.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '¿Qué errores cometen los compradores empresariales?',
+        items: [
+          '**Comprar capacidad de 8 GPU SXM5 para una carga de trabajo solo de inferencia.** Si solo sirve un modelo fijo a usuarios, una plataforma PCIe de 2U como el ProLiant DL380a Gen11 lo cubre a una fracción del precio y la complejidad.',
+          '**Pedir antes de confirmar la capacidad de refrigeración del rack.** Un segundo o tercer servidor de 8 GPU SXM5 en el mismo rack puede superar el límite práctico de la refrigeración por aire — confírmelo con instalaciones antes de que llegue el hardware, no después.',
+          '**Omitir el presupuesto de red para un clúster "tal vez escalemos después".** Añadir InfiniBand o RoCE después a una flota de un solo nodo ya desplegada es más disruptivo que presupuestarlo en la compra original.',
+          '**Tratar el precio de etiqueta como el costo total.** Contratos de soporte, red, actualización de refrigeración y de infraestructura de energía suelen añadir 15-30% adicional sobre la partida de hardware del servidor.',
+          '**Asumir que la H200 siempre es la mejora correcta sobre la H100.** Si su modelo y tamaño de lote caben cómodamente en 80GB por GPU, la memoria y el costo extra de la H200 no aportan nada — verifique la necesidad real de VRAM antes de pagar la prima.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿Cuántas GPU H100 o H200 necesito para inferencia empresarial vs. entrenamiento?',
+            a: 'Los despliegues de inferencia pura que sirven un modelo fijo a un número moderado de usuarios concurrentes suelen caber en 1-4 GPU y no necesitan una plataforma de 8 GPU SXM5 en absoluto. El entrenamiento o ajuste fino de modelos grandes (70B+ parámetros) normalmente necesita la configuración completa de 8 GPU con NVLink para mantener el modelo, gradientes y estado del optimizador entre GPU. Dimensione la compra según la carga de trabajo, no por defecto "comprar la plataforma más grande".',
+          },
+          {
+            q: '¿Cuál es el costo total real de un servidor rack de 8 GPU H100?',
+            a: 'Las cotizaciones de revendedores e integradores para una unidad 8x H100 totalmente configurada han rondado entre 200.000 y 375.000 dólares solo por el hardware, antes de contratos de soporte, red y cualquier actualización de refrigeración — esos suelen añadir otro 15-30% adicional. Ninguno de los cuatro proveedores publica precios de lista; solicite una cotización formal antes de presupuestar.',
+          },
+          {
+            q: '¿Necesito refrigeración líquida para un rack denso en GPU?',
+            a: 'Si va a instalar más de uno o dos servidores de 8 GPU H100/H200 SXM5 por rack, sí — cada uno consume aproximadamente 10-12kW a plena carga, y el límite práctico de la refrigeración por aire ronda los 20-40kW por rack. Por debajo de esa densidad, la refrigeración por aire estándar aún puede funcionar; confírmelo con instalaciones antes de pedir.',
+          },
+          {
+            q: '¿Debo elegir InfiniBand o Ethernet (RoCE) para la red?',
+            a: 'Para inferencia de un solo nodo, ninguno — Ethernet estándar es suficiente. Para clústeres de entrenamiento multi-nodo, InfiniBand NDR es la red RDMA de alto ancho de banda más madura y ampliamente desplegada; RoCE v2 sobre Ethernet es la alternativa si su equipo de red quiere evitar mantener una red InfiniBand separada.',
+          },
+          {
+            q: 'Dell vs. Lenovo vs. HPE vs. Supermicro — ¿qué proveedor tiene el mejor soporte empresarial?',
+            a: 'Dell, Lenovo y HPE venden soporte empresarial por niveles (ProSupport, Premier Support y Pointnext Complete Care respectivamente) a través de equipos de cuenta directos. Supermicro vende principalmente vía integradores y revendedores, así que las condiciones de soporte varían más según el revendedor que un nivel único de Supermicro — obtenga las condiciones por escrito del revendedor específico antes de comprar.',
+          },
+          {
+            q: 'H100 vs. H200 vs. L40S — ¿qué GPU comprar?',
+            a: 'Elija H200 (141GB HBM3e) para servicio de contexto grande o entrenamiento donde 80GB por GPU forzarían un fragmentado entre GPU que preferiría evitar. Elija H100 (80GB HBM3) para la mayor disponibilidad de proveedores y revendedores en un clúster de entrenamiento multi-nodo donde 80GB sean suficientes. Elija L40S (48GB GDDR6, PCIe, refrigerada por aire) para inferencia pura con presupuesto menor.',
+          },
+          {
+            q: '¿Puedo mezclar modelos de GPU en el mismo rack o servidor?',
+            a: 'Dentro de un mismo servidor, no — una plataforma de 8 GPU SXM5 está construida y conectada por NVLink alrededor de un solo modelo de GPU (todas H100 o todas H200), no una mezcla. Dentro de un rack, sí — puede tener un servidor configurado con H100/H200 para entrenamiento junto a otro configurado con L40S para inferencia, siempre que la refrigeración y el consumo de cada servidor se contabilicen por separado.',
+          },
+          {
+            q: '¿Qué nivel de garantía y soporte deberían elegir los compradores empresariales?',
+            a: 'Como mínimo, confirme el SLA de reemplazo del proveedor específicamente para fallo de GPU (no solo fallo general de hardware) — el fallo de GPU es el modo de falla más probable en un servidor denso en GPU, y la logística de reemplazo (enviar una bandeja de GPU vs. todo el nodo) varía según proveedor y nivel. Ajuste el nivel de tiempo de respuesta a cuánto tiempo de inactividad puede tolerar realmente la carga de trabajo.',
+          },
+          {
+            q: '¿Es más barato el hardware on-premises que el alquiler de GPU en la nube a escala empresarial?',
+            a: 'Depende de la utilización, no solo del precio de etiqueta — el hardware on-premises tiene un costo inicial alto pero un costo por hora bajo una vez en funcionamiento, mientras que el alquiler en la nube no tiene costo inicial pero una tarifa por hora mucho más alta. El punto de equilibrio suele estar en una utilización sostenida y casi constante; las cargas ocasionales o intermitentes suelen costar menos en alquiler. Vea nuestra [guía de alquiler de GPU en la nube](/es/local-llms/cloud-gpu-rental-comparison-2026) para una comparación de costos detallada.',
+          },
+          {
+            q: '¿Cuánto tarda la entrega de una configuración 8x H100 o H200?',
+            a: 'Los plazos de entrega de servidores densos en GPU han variado de varias semanas a algunos meses según la asignación de GPU y la demanda actual — no es un artículo en stock para la mayoría de proveedores en configuración de 8 GPU. Confirme el plazo como parte de la cotización formal y presupueste el cronograma del proyecto en consecuencia, no solo el precio.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Escalar LLM locales para empresas](/es/local-llms/scaling-local-llms-enterprise) — el lado del software de esta infraestructura: orquestación con Kubernetes, balanceo de carga y redundancia entre varios nodos GPU.',
+          '[Construcción de estación de trabajo LLM local](/es/local-llms/local-llm-workstation-build) — una sola máquina de escritorio para un equipo o persona, no una compra en rack.',
+          '[Servidores de inferencia LLM empresarial 2026](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI y NVIDIA NIM comparados como software de servicio para este hardware.',
+          '[LLM locales multi-GPU](/es/local-llms/multi-gpu-local-llms) — configuración multi-GPU en una sola máquina para despliegues más pequeños.',
+          '[Comparativa de alquiler de GPU en la nube 2026](/es/local-llms/cloud-gpu-rental-comparison-2026) — la alternativa de alquilar en vez de comprar para necesidades de cómputo ocasionales o intermitentes.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        items: [
+          'Página de producto Dell PowerEdge XE9680 -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Guía de producto Lenovo ThinkSystem SR675 V3 -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'Ficha técnica HPE ProLiant DL380a Gen11 -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Ficha técnica Supermicro SYS-821GE-TNHR -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'Especificaciones NVIDIA H100/H200 Tensor Core GPU -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Guía de compra de servidores GPU empresariales 2026: Dell, Lenovo, HPE, Supermicro',
+      description:
+        'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 y Supermicro SYS-821GE-TNHR comparados para IA empresarial: densidad de GPU, refrigeración, redes, precios y cuál conviene para inferencia o entrenamiento.',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/es/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'Responsables de compras de TI y arquitectos de infraestructura' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: '¿Cuántas GPU H100 o H200 necesito para inferencia empresarial vs. entrenamiento?', acceptedAnswer: { '@type': 'Answer', text: 'La inferencia pura suele caber en 1-4 GPU; el entrenamiento o ajuste fino de modelos grandes normalmente necesita la configuración completa de 8 GPU con NVLink. Dimensione la compra según la carga de trabajo, no por defecto comprando la plataforma más grande.' } },
+        { '@type': 'Question', name: '¿Cuál es el costo total real de un servidor rack de 8 GPU H100?', acceptedAnswer: { '@type': 'Answer', text: 'Las cotizaciones de revendedores para una unidad 8x H100 totalmente configurada han rondado entre 200.000 y 375.000 dólares solo por hardware, antes de soporte, red y actualizaciones de refrigeración, que suelen añadir otro 15-30%.' } },
+        { '@type': 'Question', name: '¿Necesito refrigeración líquida para un rack denso en GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Con más de uno o dos servidores de 8 GPU SXM5 por rack, sí — cada uno consume aproximadamente 10-12kW a plena carga, y la refrigeración por aire tiene un límite práctico de unos 20-40kW por rack.' } },
+        { '@type': 'Question', name: '¿Debo elegir InfiniBand o Ethernet (RoCE) para la red?', acceptedAnswer: { '@type': 'Answer', text: 'La inferencia de un solo nodo no necesita ninguno. Los clústeres de entrenamiento multi-nodo necesitan InfiniBand NDR o RoCE v2 sobre Ethernet como alternativa.' } },
+        { '@type': 'Question', name: 'Dell vs. Lenovo vs. HPE vs. Supermicro — ¿qué proveedor tiene el mejor soporte empresarial?', acceptedAnswer: { '@type': 'Answer', text: 'Dell, Lenovo y HPE venden soporte empresarial por niveles a través de equipos de cuenta directos. Supermicro vende principalmente vía integradores, así que las condiciones varían más según el revendedor.' } },
+        { '@type': 'Question', name: 'H100 vs. H200 vs. L40S — ¿qué GPU comprar?', acceptedAnswer: { '@type': 'Answer', text: 'H200 para servicio de contexto grande que necesite más de 80GB por GPU. H100 para la mayor disponibilidad cuando 80GB son suficientes. L40S para inferencia PCIe refrigerada por aire con presupuesto menor.' } },
+        { '@type': 'Question', name: '¿Puedo mezclar modelos de GPU en el mismo rack o servidor?', acceptedAnswer: { '@type': 'Answer', text: 'No dentro de un mismo servidor — una plataforma de 8 GPU SXM5 está construida alrededor de un solo modelo de GPU. Dentro de un rack sí, siempre que la refrigeración y consumo de cada servidor se contabilicen por separado.' } },
+        { '@type': 'Question', name: '¿Qué nivel de garantía y soporte deberían elegir los compradores empresariales?', acceptedAnswer: { '@type': 'Answer', text: 'Confirme el SLA de reemplazo específicamente para fallo de GPU y ajuste el nivel de tiempo de respuesta a la tolerancia real de inactividad de la carga de trabajo.' } },
+        { '@type': 'Question', name: '¿Es más barato el hardware on-premises que el alquiler de GPU en la nube a escala empresarial?', acceptedAnswer: { '@type': 'Answer', text: 'Depende de la utilización — on-premises tiene costo inicial alto pero bajo costo por hora; el alquiler en la nube no tiene costo inicial pero una tarifa por hora más alta. Una utilización sostenida y alta favorece la compra.' } },
+        { '@type': 'Question', name: '¿Cuánto tarda la entrega de una configuración 8x H100 o H200?', acceptedAnswer: { '@type': 'Answer', text: 'Los plazos han variado de varias semanas a algunos meses según la asignación de GPU — confírmelo como parte de la cotización formal.' } },
+      ],
+    },
+  },
+  pt: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: 'Guia de compra de servidores GPU corporativos 2026: Dell, Lenovo, HPE, Supermicro',
+    heroImage: '',
+    seoTitle: 'Servidor GPU corporativo 2026: Dell vs. Lenovo vs. HPE vs. Supermicro',
+    intro:
+      'Comprar um servidor GPU corporativo não é a mesma compra que montar uma workstation de IA. Uma plataforma de 8 GPUs em rack custa seis dígitos, exige um plano de refrigeração e energia antes mesmo da entrega, e prende a empresa a um relacionamento de suporte com o fornecedor por anos. Este guia compara os quatro fornecedores que realmente vendem servidores GPU em escala de rack para IA corporativa — Dell, Lenovo, HPE e Supermicro — em densidade de GPU, requisitos de refrigeração, rede, níveis de garantia e faixa de preço, para que a área de compras dimensione a aquisição pela carga de trabalho real, não pela ficha técnica mais chamativa.',
+    metaDescription:
+      'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 e Supermicro SYS-821GE-TNHR comparados para IA corporativa: densidade de GPU, refrigeração, rede, faixa de preço e qual serve para inferência vs. treinamento.',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Configurador Dell PowerEdge XE9680' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Configurador Lenovo ThinkSystem SR675 V3' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Configurador Supermicro SYS-821GE-TNHR' },
+    ],
+    twitterDescription:
+      'Dell vs. Lenovo vs. HPE vs. Supermicro em servidores GPU corporativos — densidade, refrigeração, rede e preço comparados para times de compras.',
+    leadAnswerBlock:
+      '**Para clusters de treinamento de 8 GPUs H100/H200, Dell PowerEdge XE9680, HPE Cray XD670 e Supermicro SYS-821GE-TNHR são os concorrentes mais diretos; para inferência pura ou orçamento apertado, o HPE ProLiant DL380a Gen11 ou o Lenovo ThinkSystem SR675 V3 com GPUs PCIe custam cerca de um terço a metade do preço.** Uma configuração 8x H100/H200 SXM5 gira em torno de US$ 200.000-400.000+ dependendo da memória e do nível de suporte — peça uma cotação formal ao fornecedor, os preços de tabela não são publicados.',
+    audience:
+      'Responsáveis por compras de TI e arquitetos de infraestrutura que adquirem servidores multi-GPU em rack para inferência ou treinamento de IA corporativa',
+    readTime: '13 min de leitura',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'servidor GPU corporativo',
+    targetKeywords: [
+      'guia compra servidor gpu corporativo 2026',
+      'dell poweredge xe9680 vs lenovo vs hpe',
+      'servidor gpu rack para inferência ia',
+      'h100 vs h200 vs l40s servidor corporativo',
+      'melhor fornecedor servidor gpu para treinamento llm',
+    ],
+    quickAnswerTop: {
+      pt: {
+        question: 'Qual fornecedor de servidor GPU uma empresa deveria escolher para IA em 2026?',
+        answer:
+          'Escolha primeiro pela carga de trabalho, depois pelo fornecedor. Para clusters de treinamento multi-nó H100/H200, Dell PowerEdge XE9680, HPE Cray XD670 e Supermicro SYS-821GE-TNHR são os concorrentes mais próximos — todas plataformas de 8U ou menos, 8 GPUs SXM5, conectadas por NVLink, na faixa de US$ 200.000-400.000+. Para inferência pura ou implantações de nó único, o HPE ProLiant DL380a Gen11 (2U, GPUs PCIe) ou o Lenovo ThinkSystem SR675 V3 com GPUs L40S custam cerca de um terço a metade e rodam com refrigeração a ar padrão.',
+        bullets: [
+          'Treinamento / multi-nó: Dell XE9680, HPE Cray XD670 ou Supermicro SYS-821GE-TNHR — 8x H100/H200 SXM5, NVLink, pronto para InfiniBand',
+          'Inferência pura / orçamento menor: HPE ProLiant DL380a Gen11 ou Lenovo SR675 V3 com L40S — PCIe, refrigerado a ar, sem circuito líquido necessário',
+          'Data center pronto para refrigeração líquida: Lenovo SR675 V3 com refrigeração direta ao chip Neptune',
+          'Faixa de preço para um servidor 8x H100/H200 SXM5: cerca de US$ 200.000-400.000+ segundo cotações de revendedores/integradores — os fornecedores não publicam preço de tabela',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'Principais pontos', anchor: '#key-takeaways' },
+      { label: 'Fatos rápidos', anchor: '#quick-facts' },
+      { label: 'Melhor escolha por perfil de comprador', anchor: '#best-choice' },
+      { label: 'Tabela comparativa de fornecedores', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670 e ProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs. H200 vs. L40S', anchor: '#gpu-options' },
+      { label: 'Requisitos de energia e refrigeração', anchor: '#power-cooling' },
+      { label: 'Rede: InfiniBand vs. RoCE', anchor: '#networking' },
+      { label: 'Como dimensionar sua compra', anchor: '#sizing' },
+      { label: 'Níveis de garantia e suporte', anchor: '#warranty-support' },
+      { label: 'Erros comuns de compra', anchor: '#common-mistakes' },
+      { label: 'Perguntas frequentes', anchor: '#faq' },
+      { label: 'Leituras relacionadas', anchor: '#related-reading' },
+      { label: 'Fontes', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Compradores de servidores GPU corporativos devem escolher o fornecedor pela carga de trabalho — Dell PowerEdge XE9680, HPE Cray XD670 e Supermicro SYS-821GE-TNHR competem diretamente nas plataformas de treinamento 8x H100/H200 SXM5 na faixa de US$ 200.000-400.000+, enquanto HPE ProLiant DL380a Gen11 e Lenovo ThinkSystem SR675 V3 com GPUs PCIe L40S atendem orçamentos de inferência pura por cerca de um terço a metade do preço.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Comprar um servidor de IA para uma empresa não é como montar um PC gamer turbinado. Essas máquinas custam o preço de uma casa, precisam de um plano de refrigeração e energia elétrica antes mesmo de chegar, e vêm com um contrato de suporte de vários anos. Este guia compara as quatro empresas que realmente vendem esses servidores de IA em rack — Dell, Lenovo, HPE e Supermicro — para que o comprador escolha o tamanho e o fornecedor certos para a necessidade real (rodar modelos de IA para funcionários vs. treinar modelos novos do zero), não apenas a ficha técnica maior.',
+          },
+        ],
+        items: [
+          '**Densidade de GPU:** os quatro fornecedores têm uma plataforma principal de 8 GPUs SXM5 (Dell XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR); Lenovo e HPE também vendem plataformas PCIe de menor densidade e custo mais baixo.',
+          '**Faixa de preço:** um servidor 8x H100/H200 SXM5 custa cerca de US$ 200.000-400.000+ dependendo da memória da GPU (80GB H100 vs. 141GB H200) e do nível de suporte.',
+          '**A refrigeração é a real limitação.** Dois ou três servidores de 8 GPUs SXM5 já ultrapassam o teto prático de ~20-40kW por rack da refrigeração a ar — acima dessa densidade, refrigeração líquida deixa de ser opcional.',
+          '**Rede importa mais para treinamento, menos para inferência.** Clusters de treinamento multi-nó precisam de InfiniBand NDR ou rede Ethernet RoCE v2; inferência de nó único não.',
+          '**Escolha a GPU pela carga de trabalho, não só pelo orçamento.** A L40S (48GB, PCIe, refrigerada a ar) serve para inferência; a H100/H200 (80-141GB, SXM5, NVLink) serve para treinamento e atendimento de alto volume.',
+          'Compradores que precisam de apenas uma ou duas GPUs de capacidade de inferência não deveriam comprar um servidor em rack — uma workstation é o porte certo para essa escala.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'Fatos rápidos',
+        items: [
+          '**Dell PowerEdge XE9680:** 6U, até 8x H100/H200 SXM5, dois Intel Xeon Platinum, até 4TB de DDR5.',
+          '**Lenovo ThinkSystem SR675 V3:** 3U, até 8 GPUs (mix H100/H200/L40S), dois AMD EPYC 9004/9005, até 6TB de DDR5, refrigeração líquida Neptune opcional.',
+          '**HPE Cray XD670:** 5U, até 8x H100/H200 SXM5, dois Intel Xeon de 4ª geração, opções de rede InfiniBand NDR / Slingshot 11 / Ethernet.',
+          '**HPE ProLiant DL380a Gen11:** 2U, até 4 GPUs de largura dupla ou 8 de largura simples (L40S/H100 PCIe), dois Intel Xeon com até 64 núcleos.',
+          '**Supermicro SYS-821GE-TNHR:** 8U, até 8x H100/H200 SXM5, dois Intel Xeon de 4ª/5ª geração, até 8TB de DDR5.',
+          '**VRAM de GPU:** H100 = 80GB HBM3; H200 = 141GB HBM3e; L40S = 48GB GDDR6.',
+          '**Consumo do rack:** um único nó 8x H100/H200 SXM5 consome cerca de 10-12kW em carga máxima — dois deles já ultrapassam o teto prático de refrigeração a ar de um rack.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: 'Qual servidor GPU comprar para o seu caso de uso?',
+        content: [
+          '**O fornecedor certo depende da carga de trabalho e da prontidão do data center, não de preferência de marca.** Clusters de treinamento, implantações de inferência pura e data centers prontos para líquido apontam cada um para uma plataforma diferente.',
+        ],
+        items: [
+          '**Melhor para treinamento multi-nó em larga escala:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) — a maior rede de vendas corporativas e integradores de sistemas para montar um cluster multi-rack conectado por InfiniBand.',
+          '**Melhor para um data center pronto para refrigeração líquida:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna) — a refrigeração líquida direta ao chip Neptune reduz de forma relevante o custo de refrigeração em uso sustentado de GPU, com opção de CPU AMD EPYC.',
+          '**Melhor para inferência pura ou uma primeira compra menor:** HPE ProLiant DL380a Gen11 — 2U, refrigerado a ar, GPUs PCIe, cerca de um terço a metade do custo de uma máquina de treinamento 8x SXM5.',
+          '**Melhor para flexibilidade de configuração e competitividade de preço:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html) — as opções de configuração sob medida mais amplas via canal de integradores, muitas vezes o caminho mais competitivo em preço para uma configuração 8x H100/H200 SXM5.',
+          '**Evite servidores em rack completamente se:** sua necessidade real é 1-2 GPUs de capacidade de inferência para uma equipe pequena — uma [workstation para LLM local](/pt/local-llms/local-llm-workstation-build) custa uma fração do preço e não exige plano de refrigeração de data center.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'Como os quatro fornecedores se comparam em especificações e preço?',
+        content: [
+          '**Dell, Lenovo, HPE e Supermicro têm cada um pelo menos uma plataforma de 8 GPUs SXM5, mas divergem bastante em fator de forma, opções de refrigeração e canal de venda.**',
+        ],
+        columns: ['Fornecedor / Modelo', 'Fator de forma', 'GPUs máx.', 'Opções de GPU', 'Refrigeração', 'Faixa de preço'],
+        rows: [
+          { 'Fornecedor / Modelo': 'Dell PowerEdge XE9680', 'Fator de forma': '6U', 'GPUs máx.': '8 (SXM5, NVLink)', 'Opções de GPU': 'H100 80GB / H200 141GB', Refrigeração: 'Ar padrão, líquida opcional', 'Faixa de preço': '~US$ 200-375K (8x GPU)' },
+          { 'Fornecedor / Modelo': 'Lenovo SR675 V3', 'Fator de forma': '3U', 'GPUs máx.': '8 (PCIe ou SXM)', 'Opções de GPU': 'H100 / H200 / L40S', Refrigeração: 'Ar, ou líquida Neptune', 'Faixa de preço': 'Muito variável por config.' },
+          { 'Fornecedor / Modelo': 'HPE Cray XD670', 'Fator de forma': '5U', 'GPUs máx.': '8 (SXM5, NVLink)', 'Opções de GPU': 'H100 80GB / H200 141GB', Refrigeração: 'Ar padrão', 'Faixa de preço': 'Só sob cotação' },
+          { 'Fornecedor / Modelo': 'HPE ProLiant DL380a Gen11', 'Fator de forma': '2U', 'GPUs máx.': '4 dupla / 8 simples largura', 'Opções de GPU': 'L40S / H100 PCIe', Refrigeração: 'Só ar', 'Faixa de preço': 'Menor — só cotação' },
+          { 'Fornecedor / Modelo': 'Supermicro SYS-821GE-TNHR', 'Fator de forma': '8U', 'GPUs máx.': '8 (SXM5, NVLink)', 'Opções de GPU': 'H100 80GB / H200 141GB', Refrigeração: 'Ar padrão', 'Faixa de preço': '~US$ 200-320K (8x GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'O que o Dell PowerEdge XE9680 oferece?',
+        content: [
+          '**O Dell PowerEdge XE9680 é um servidor em rack de 6U com 8 GPUs NVIDIA HGX H100 ou H200 SXM5 conectadas via NVLink, construído especificamente para treinamento e inferência de modelos grandes.** Ele combina as GPUs com dois processadores Intel Xeon Scalable de 4ª ou 5ª geração (até 56 núcleos cada), até 32 slots DIMM DDR5 (4TB máx., 4800 MT/s) e 10 slots PCIe Gen5 x16 para rede e expansão de armazenamento.',
+          'Sai de fábrica com refrigeração a ar; a Dell oferece opções de refrigeração líquida para data centers acima de aproximadamente 20-30kW por rack, faixa em que o ar deixa de ser prático.',
+          'O preço não é publicado — cotações de revendedores e integradores para uma unidade 8x H100/H200 totalmente configurada giraram em torno de US$ 200.000-375.000, dependendo do nível de memória da GPU, RAM, armazenamento e nível de suporte. Peça uma cotação formal em [Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) antes de orçar.',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'O que o Lenovo ThinkSystem SR675 V3 oferece?',
+        content: [
+          '**O Lenovo ThinkSystem SR675 V3 é um servidor em rack de 3U que suporta até 8 GPUs de largura dupla ou simples — incluindo NVIDIA H100, H200 e L40S — combinado com dois processadores AMD EPYC 9004/9005 de 5ª geração e até 6TB de memória DDR5-4800 em 24 slots DIMM.**',
+          'O diferencial é o Lenovo Neptune, um sistema de refrigeração direta ao chip e híbrida líquido-ar disponível como opção de configuração — relevante para compradores cuja instalação já opera circuitos de refrigeração líquida ou planeja adicionar um, já que reduz de forma relevante o custo de refrigeração em cargas de GPU com alta utilização sustentada em comparação com o ar sozinho.',
+          'O SR675 V3 também suporta configurações mistas de GPU (builds H200 4-GPU com NVLink, ou L40S para implantações voltadas a inferência), tornando-o a plataforma mais flexível em configuração desta comparação para quem quer uma única família de chassi cobrindo treinamento e inferência. Configure em [Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna).',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'O que o HPE Cray XD670 e o ProLiant DL380a Gen11 oferecem?',
+        content: [
+          '**A HPE vende dois níveis distintos de servidores GPU: o Cray XD670 para treinamento em larga escala, e o ProLiant DL380a Gen11 para inferência e implantações menores.**',
+          'O **Cray XD670** é um chassi 5U com 8x GPUs NVIDIA H100 ou H200 SXM5 e dois processadores Intel Xeon de 4ª geração. Seu diferencial é a escolha de rede: 8 slots PCIe Gen5 de meia altura com suporte a HPE Slingshot 11, InfiniBand NDR ou Ethernet padrão — relevante para compradores já padronizados em Slingshot por um parque HPE Cray existente.',
+          'O **ProLiant DL380a Gen11** é um servidor 2U que suporta 4 GPUs de largura dupla ou 8 de largura simples (L40S ou H100 PCIe), até 3TB de DDR5 e PCIe 5.0 — a opção refrigerada a ar e de menor densidade para cargas de inferência ou uma primeira compra de GPU que não justifica uma plataforma de 8 GPUs SXM5. Ambos em [HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html).',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'O que o Supermicro SYS-821GE-TNHR oferece?',
+        content: [
+          '**O Supermicro SYS-821GE-TNHR é um servidor em rack de 8U que suporta até 8 GPUs NVIDIA HGX H100 (80GB) ou HGX H200 (141GB), dois processadores Intel Xeon Scalable de 4ª ou 5ª geração e até 8TB de memória DDR5-5600 em 32 slots DIMM** — a maior capacidade máxima de RAM entre as quatro plataformas comparadas aqui.',
+          'A Supermicro vende principalmente via canal de integradores e revendedores em vez de times de vendas corporativas diretas, o que geralmente significa mais flexibilidade de configuração sob medida (baias de disco, placas de rede, redundância de fonte) e, segundo listagens atuais de revendedores, um preço inicial competitivo para uma configuração 8x H100 — cotações de configuração básica giraram em torno de US$ 200.000-320.000, com configurações completas custando mais.',
+          'Armazenamento é um ponto forte: até 19 baias hot-swap de 2,5" NVMe/SATA/SAS mais 2 slots M.2 — útil para quem roda grandes conjuntos de dados locais junto com inferência ou fine-tuning. Veja a configuração base em [Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html).',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: 'H100, H200 ou L40S — qual GPU comprar?',
+        content: [
+          '**A H200 vence em memória e largura de banda, a H100 é a opção SXM5 mais disponível e muitas vezes mais barata, e a L40S é a escolha PCIe refrigerada a ar para inferência pura.** As três são GPUs de data center NVIDIA atuais em setembro de 2026; nenhuma está prestes a ser descontinuada, então a escolha é sobre adequação à carga de trabalho, não risco de obsolescência.',
+        ],
+        columns: ['GPU', 'VRAM', 'Largura de banda de memória', 'Melhor para'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', VRAM: '80GB HBM3', 'Largura de banda de memória': '3,35 TB/s', 'Melhor para': 'Treinamento multi-nó, maior disponibilidade' },
+          { GPU: 'NVIDIA H200 SXM', VRAM: '141GB HBM3e', 'Largura de banda de memória': '4,8 TB/s', 'Melhor para': 'Serviço de contexto grande, treinamento com lotes maiores' },
+          { GPU: 'NVIDIA L40S', VRAM: '48GB GDDR6', 'Largura de banda de memória': '864 GB/s', 'Melhor para': 'Inferência PCIe refrigerada a ar, orçamento menor' },
+        ],
+        items: [
+          '**Escolha H200 se:** você atende cargas de contexto grande ou treina modelos maiores nos quais 80GB por GPU forçariam um sharding entre GPUs que você preferiria evitar.',
+          '**Escolha H100 se:** você precisa da maior disponibilidade entre fornecedores e revendedores para um cluster de treinamento multi-nó NVLink/InfiniBand e 80GB por GPU são suficientes para o tamanho do seu modelo.',
+          '**Escolha L40S se:** a carga de trabalho é só inferência, o data center só tem refrigeração a ar, e 48GB por GPU cobrem o maior modelo no nível de quantização planejado.',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'Quanta energia e refrigeração um rack denso em GPU precisa?',
+        content: [
+          '**Um único servidor de 8 GPUs H100/H200 SXM5 consome cerca de 10-12kW em carga máxima — só as 8 GPUs de 700W já somam 5,6kW, antes de CPUs, memória e ventoinhas.** Dois ou três desses servidores no mesmo rack já ultrapassam o teto prático da refrigeração a ar.',
+          'Números do setor colocam o limite prático da refrigeração a ar em cerca de 20-40kW por rack; acima disso, refrigeração líquida (direta ao chip ou imersão) é necessária e pode suportar 100-200kW+ por rack. Para referência, o sistema em escala de rack GB200 NVL72 da NVIDIA consome no total cerca de 120-130kW — um dado sobre para onde a densidade de racks de IA está indo, não uma especificação de nenhum servidor comparado aqui.',
+          'Implicação prática para compradores: se você vai instalar mais de um ou dois servidores de 8 GPUs SXM5 por rack, planeje refrigeração líquida direta ao chip (Lenovo Neptune, ou um circuito líquido em nível de instalação) em vez de presumir que a refrigeração a ar padrão do data center vai dar conta.',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: 'Você precisa de InfiniBand ou Ethernet padrão?',
+        content: [
+          '**Implantações de inferência de nó único não precisam de InfiniBand — Ethernet padrão de 100/200GbE é suficiente.** Clusters de treinamento ou fine-tuning multi-nó, em que GPUs de vários servidores precisam sincronizar gradientes constantemente, precisam sim de uma rede dedicada de alta largura de banda e baixa latência.',
+          'As duas opções para essa rede são **InfiniBand NDR** (400Gb/s por link, a escolha HPC tradicional, uma NIC por GPU em plataformas principais) e **RoCE v2** (RDMA sobre Ethernet convergido — por exemplo NVIDIA Spectrum-X — que entrega throughput semelhante sobre uma rede Ethernet padrão que seu time de rede talvez já opere).',
+        ],
+        items: [
+          '**Use InfiniBand NDR se:** você está montando um cluster de treinamento multi-nó dedicado e quer a rede RDMA mais madura e amplamente implantada nessa escala.',
+          '**Use RoCE v2 (Ethernet) se:** seu time já opera uma rede Ethernet convergida e quer evitar manter uma rede InfiniBand separada e o conjunto de habilidades que ela exige.',
+          '**Evite as duas se:** você roda inferência de nó único — rede padrão é suficiente e o custo extra da rede dedicada não se justifica.',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: 'Como dimensionar a compra de um servidor GPU pela sua carga de trabalho?',
+        content: [
+          '**Dimensione a compra pela carga de trabalho, não pela maior configuração disponível.** Implantações de inferência pura e de treinamento/fine-tuning têm requisitos fundamentalmente diferentes de GPU, memória e rede.',
+        ],
+        numberedItems: [
+          { title: 'Classificar a carga de trabalho primeiro', whyItMatters: 'Inferência pura (servir um modelo fixo a usuários) precisa de bem menos memória de GPU e nenhuma rede multi-nó em comparação com treinamento ou fine-tuning, que precisa manter gradientes e estado do otimizador além dos pesos do modelo.' },
+          { title: 'Estimar a necessidade de memória de GPU a partir do tamanho do modelo e quantização', whyItMatters: 'Um modelo de 70B parâmetros em FP16 precisa de cerca de 140GB de VRAM antes de overhead — isso sozinho já descarta uma L40S de GPU única (48GB) e aponta para sharding multi-GPU H100/H200 ou um modelo menor/quantizado.' },
+          { title: 'Decidir entre nó único e multi-nó', whyItMatters: 'Se a VRAM combinada de um servidor de 8 GPUs cobre o modelo e a meta de concorrência, pule InfiniBand/RoCE inteiramente e economize o custo da rede; se não, orce uma rede dedicada desde o início.' },
+          { title: 'Ajustar a refrigeração à densidade do rack antes de encomendar', whyItMatters: 'Confirme com o time de facilities se o rack alvo suporta refrigeração líquida antes de se comprometer com mais de um ou dois servidores de 8 GPUs SXM5 por rack — adaptar a refrigeração depois da entrega é bem mais caro do que planejar com antecedência.' },
+          { title: 'Obter cotação formal e confirmar o prazo de entrega', whyItMatters: 'Nenhum desses fornecedores publica preço de tabela para configurações de 8 GPUs, e os prazos de entrega de servidores densos em GPU variaram de várias semanas a alguns meses dependendo da alocação de GPU — orce o cronograma, não só o preço.' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: 'Qual nível de garantia e suporte escolher?',
+        content: [
+          '**Os quatro fornecedores oferecem suporte corporativo em níveis além da garantia básica de hardware, mas os nomes dos níveis, tempos de resposta e serviços incluídos diferem — confirme as condições atuais diretamente com o fornecedor antes da compra, já que os programas mudam.**',
+        ],
+        items: [
+          '**Dell** vende seus níveis ProSupport (incluindo opções de resposta mais rápida, missão crítica) junto com o XE9680 — pergunte especificamente por suporte qualificado para servidor GPU, não o nível PowerEdge padrão.',
+          '**Lenovo** vende níveis Premier Support para a linha ThinkSystem, com opções de resposta no local e monitoramento proativo.',
+          '**HPE** vende suporte via Pointnext Complete Care e oferece HPE GreenLake como alternativa por consumo (pague pelo uso) à compra de capital para quem quer evitar o custo inicial de seis dígitos.',
+          '**Supermicro** — as condições de suporte variam mais conforme o revendedor/integrador do que nos outros três fornecedores, já que boa parte do volume passa por esse canal em vez de vendas corporativas diretas — obtenha as condições de suporte por escrito do revendedor específico, não só da página de garantia básica da Supermicro.',
+          'Para qualquer fornecedor: pergunte especificamente o que acontece em caso de falha de GPU (SLA de substituição, se é preciso enviar o nó inteiro ou só a bandeja de GPU) — esse é o modo de falha mais provável em um servidor denso em GPU.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Que erros os compradores corporativos cometem?',
+        items: [
+          '**Comprar capacidade de 8 GPUs SXM5 para uma carga de trabalho só de inferência.** Se você só serve um modelo fixo a usuários, uma plataforma PCIe 2U como o ProLiant DL380a Gen11 cobre isso por uma fração do preço e da complexidade.',
+          '**Encomendar antes de confirmar a capacidade de refrigeração do rack.** Um segundo ou terceiro servidor de 8 GPUs SXM5 no mesmo rack pode ultrapassar o teto prático da refrigeração a ar — confirme com facilities antes da chegada do hardware, não depois.',
+          '**Pular o orçamento de rede para um cluster "talvez a gente escale depois".** Adicionar InfiniBand ou RoCE depois em uma frota de nó único já implantada é mais disruptivo do que orçar isso na compra original.',
+          '**Tratar o preço de etiqueta como o custo total.** Contratos de suporte, rede, atualização de refrigeração e infraestrutura de energia costumam adicionar 15-30% acima da linha de hardware do servidor.',
+          '**Presumir que a H200 é sempre o upgrade certo em relação à H100.** Se o seu modelo e tamanho de lote cabem confortavelmente em 80GB por GPU, a memória e o custo extra da H200 não trazem vantagem — verifique a necessidade real de VRAM antes de pagar o adicional.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'Quantas GPUs H100 ou H200 eu preciso para inferência corporativa vs. treinamento?',
+            a: 'Implantações de inferência pura que servem um modelo fixo a um número moderado de usuários simultâneos muitas vezes cabem em 1-4 GPUs e nem precisam de uma plataforma de 8 GPUs SXM5. Treinamento ou fine-tuning de modelos grandes (70B+ parâmetros) geralmente precisa da configuração completa de 8 GPUs com NVLink para manter modelo, gradientes e estado do otimizador entre as GPUs. Dimensione a compra pela carga de trabalho, não pelo padrão de "comprar a maior plataforma".',
+          },
+          {
+            q: 'Qual é o custo total real de um servidor rack 8-GPU H100?',
+            a: 'Cotações de revendedores e integradores para uma unidade 8x H100 totalmente configurada giraram em torno de US$ 200.000-375.000 só pelo hardware, antes de contratos de suporte, rede e qualquer upgrade de refrigeração — esses costumam adicionar outros 15-30%. Nenhum dos quatro fornecedores publica preço de tabela; peça uma cotação formal antes de orçar.',
+          },
+          {
+            q: 'Eu preciso de refrigeração líquida para um rack denso em GPU?',
+            a: 'Se você vai instalar mais de um ou dois servidores de 8 GPUs H100/H200 SXM5 por rack, sim — cada um consome cerca de 10-12kW em carga máxima, e o teto prático da refrigeração a ar fica em torno de 20-40kW por rack. Abaixo dessa densidade, a refrigeração a ar padrão ainda pode funcionar; confirme com facilities antes de encomendar.',
+          },
+          {
+            q: 'Devo escolher InfiniBand ou Ethernet (RoCE) para a rede?',
+            a: 'Para inferência de nó único, nenhum dos dois — Ethernet padrão é suficiente. Para clusters de treinamento multi-nó, InfiniBand NDR é a rede RDMA de alta largura de banda mais madura e amplamente implantada; RoCE v2 sobre Ethernet é a alternativa se seu time de rede quiser evitar manter uma rede InfiniBand separada.',
+          },
+          {
+            q: 'Dell vs. Lenovo vs. HPE vs. Supermicro — qual fornecedor tem o melhor suporte corporativo?',
+            a: 'Dell, Lenovo e HPE vendem suporte corporativo em níveis (ProSupport, Premier Support e Pointnext Complete Care, respectivamente) via times de conta diretos. A Supermicro vende principalmente via integradores e revendedores, então as condições de suporte variam mais conforme o revendedor do que um único nível Supermicro — obtenha as condições por escrito do revendedor específico antes da compra.',
+          },
+          {
+            q: 'H100 vs. H200 vs. L40S — qual GPU comprar?',
+            a: 'Escolha H200 (141GB HBM3e) para serviço de contexto grande ou treinamento em que 80GB por GPU forçariam um sharding entre GPUs que você preferiria evitar. Escolha H100 (80GB HBM3) pela maior disponibilidade entre fornecedores e revendedores em um cluster de treinamento multi-nó quando 80GB são suficientes. Escolha L40S (48GB GDDR6, PCIe, refrigerada a ar) para inferência pura com orçamento menor.',
+          },
+          {
+            q: 'Posso misturar modelos de GPU no mesmo rack ou servidor?',
+            a: 'Dentro de um único servidor, não — uma plataforma de 8 GPUs SXM5 é construída e conectada por NVLink em torno de um único modelo de GPU (todas H100 ou todas H200), não uma mistura. Dentro de um rack, sim — você pode rodar um servidor configurado com H100/H200 para treinamento ao lado de outro configurado com L40S para inferência, desde que a refrigeração e o consumo de cada servidor sejam contabilizados separadamente.',
+          },
+          {
+            q: 'Que nível de garantia e suporte os compradores corporativos deveriam escolher?',
+            a: 'No mínimo, confirme o SLA de substituição do fornecedor especificamente para falha de GPU (não só falha geral de hardware) — falha de GPU é o modo de falha mais provável em um servidor denso em GPU, e a logística de substituição (enviar uma bandeja de GPU vs. o nó inteiro) varia por fornecedor e nível. Ajuste o nível de tempo de resposta a quanto tempo de inatividade a carga de trabalho realmente tolera.',
+          },
+          {
+            q: 'Hardware on-premises é mais barato que aluguel de GPU em nuvem em escala corporativa?',
+            a: 'Depende da utilização, não só do preço de etiqueta — hardware on-premises tem custo inicial alto mas custo por hora baixo depois de rodando, enquanto aluguel em nuvem não tem custo inicial mas uma tarifa por hora bem mais alta. O ponto de equilíbrio costuma ser utilização sustentada e quase constante; cargas ocasionais ou intermitentes geralmente custam menos alugando. Veja nosso [guia de aluguel de GPU em nuvem](/pt/local-llms/cloud-gpu-rental-comparison-2026) para uma comparação de custo detalhada.',
+          },
+          {
+            q: 'Quanto tempo leva a entrega de uma configuração 8x H100 ou H200?',
+            a: 'Os prazos de entrega de servidores densos em GPU variaram de várias semanas a alguns meses dependendo da alocação de GPU e da demanda atual — não é um item de estoque para a maioria dos fornecedores em configuração de 8 GPUs. Confirme o prazo como parte da cotação formal e orce o cronograma do projeto de acordo, não só o preço.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leituras relacionadas',
+        items: [
+          '[Escalando LLMs locais para empresas](/pt/local-llms/scaling-local-llms-enterprise) — o lado de software dessa infraestrutura: orquestração com Kubernetes, balanceamento de carga e redundância entre vários nós GPU.',
+          '[Montagem de workstation para LLM local](/pt/local-llms/local-llm-workstation-build) — uma única máquina desktop para uma equipe ou pessoa, não uma compra em rack.',
+          '[Servidores de inferência LLM corporativos 2026](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI e NVIDIA NIM comparados como software de atendimento para esse hardware.',
+          '[LLMs locais multi-GPU](/pt/local-llms/multi-gpu-local-llms) — configuração multi-GPU em uma única máquina para implantações menores.',
+          '[Comparativo de aluguel de GPU em nuvem 2026](/pt/local-llms/cloud-gpu-rental-comparison-2026) — a alternativa de alugar em vez de comprar para necessidades de computação ocasionais ou intermitentes.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        items: [
+          'Página do produto Dell PowerEdge XE9680 -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Guia de produto Lenovo ThinkSystem SR675 V3 -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'Ficha técnica HPE ProLiant DL380a Gen11 -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Ficha técnica Supermicro SYS-821GE-TNHR -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'Especificações NVIDIA H100/H200 Tensor Core GPU -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Guia de compra de servidores GPU corporativos 2026: Dell, Lenovo, HPE, Supermicro',
+      description:
+        'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670 e Supermicro SYS-821GE-TNHR comparados para IA corporativa: densidade de GPU, refrigeração, rede, faixa de preço e qual serve para inferência vs. treinamento.',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/pt/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'Responsáveis por compras de TI e arquitetos de infraestrutura' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Quantas GPUs H100 ou H200 eu preciso para inferência corporativa vs. treinamento?', acceptedAnswer: { '@type': 'Answer', text: 'Inferência pura muitas vezes cabe em 1-4 GPUs; treinamento ou fine-tuning de modelos grandes geralmente precisa da configuração completa de 8 GPUs com NVLink. Dimensione a compra pela carga de trabalho, não pelo padrão de comprar a maior plataforma.' } },
+        { '@type': 'Question', name: 'Qual é o custo total real de um servidor rack 8-GPU H100?', acceptedAnswer: { '@type': 'Answer', text: 'Cotações de revendedores para uma unidade 8x H100 totalmente configurada giraram em torno de US$ 200.000-375.000 só pelo hardware, antes de suporte, rede e upgrades de refrigeração, que costumam adicionar mais 15-30%.' } },
+        { '@type': 'Question', name: 'Eu preciso de refrigeração líquida para um rack denso em GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Com mais de um ou dois servidores de 8 GPUs SXM5 por rack, sim — cada um consome cerca de 10-12kW em carga máxima, e a refrigeração a ar tem teto prático de cerca de 20-40kW por rack.' } },
+        { '@type': 'Question', name: 'Devo escolher InfiniBand ou Ethernet (RoCE) para a rede?', acceptedAnswer: { '@type': 'Answer', text: 'Inferência de nó único não precisa de nenhum dos dois. Clusters de treinamento multi-nó precisam de InfiniBand NDR ou RoCE v2 sobre Ethernet como alternativa.' } },
+        { '@type': 'Question', name: 'Dell vs. Lenovo vs. HPE vs. Supermicro — qual fornecedor tem o melhor suporte corporativo?', acceptedAnswer: { '@type': 'Answer', text: 'Dell, Lenovo e HPE vendem suporte corporativo em níveis via times de conta diretos. A Supermicro vende principalmente via integradores, então as condições variam mais por revendedor.' } },
+        { '@type': 'Question', name: 'H100 vs. H200 vs. L40S — qual GPU comprar?', acceptedAnswer: { '@type': 'Answer', text: 'H200 para serviço de contexto grande que precise de mais de 80GB por GPU. H100 pela maior disponibilidade quando 80GB são suficientes. L40S para inferência PCIe refrigerada a ar com orçamento menor.' } },
+        { '@type': 'Question', name: 'Posso misturar modelos de GPU no mesmo rack ou servidor?', acceptedAnswer: { '@type': 'Answer', text: 'Não dentro de um mesmo servidor — uma plataforma de 8 GPUs SXM5 é construída em torno de um único modelo de GPU. Dentro de um rack sim, desde que a refrigeração e o consumo de cada servidor sejam contabilizados separadamente.' } },
+        { '@type': 'Question', name: 'Que nível de garantia e suporte os compradores corporativos deveriam escolher?', acceptedAnswer: { '@type': 'Answer', text: 'Confirme o SLA de substituição especificamente para falha de GPU e ajuste o nível de tempo de resposta à tolerância real de inatividade da carga de trabalho.' } },
+        { '@type': 'Question', name: 'Hardware on-premises é mais barato que aluguel de GPU em nuvem em escala corporativa?', acceptedAnswer: { '@type': 'Answer', text: 'Depende da utilização — on-premises tem custo inicial alto mas custo por hora baixo; aluguel em nuvem não tem custo inicial mas tarifa por hora mais alta. Utilização sustentada e alta favorece a compra.' } },
+        { '@type': 'Question', name: 'Quanto tempo leva a entrega de uma configuração 8x H100 ou H200?', acceptedAnswer: { '@type': 'Answer', text: 'Os prazos variaram de várias semanas a alguns meses dependendo da alocação de GPU — confirme como parte da cotação formal.' } },
+      ],
+    },
+  },
+  ja: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: 'エンタープライズGPUサーバー購入ガイド2026:Dell・Lenovo・HPE・Supermicro比較',
+    heroImage: '',
+    seoTitle: 'エンタープライズGPUサーバー2026:Dell vs Lenovo vs HPE vs Supermicro',
+    intro:
+      'エンタープライズGPUサーバーの購入は、AIワークステーションの購入とはまったく違う話だ。ラックマウント型の8GPU構成は6桁ドルの投資となり、納品前に冷却・電力計画が必須で、数年単位でベンダーのサポート契約に縛られる。本ガイドでは、実際にラックスケールのエンタープライズAI向けGPUサーバーを販売する4社——Dell、Lenovo、HPE、Supermicro——をGPU密度、冷却要件、ネットワーク、サポート階層、価格帯で比較し、調達担当が派手なスペックシートではなく実際のワークロードに合わせて購入規模を決められるようにする。',
+    metaDescription:
+      'Dell PowerEdge XE9680、Lenovo SR675 V3、HPE Cray XD670、Supermicro SYS-821GE-TNHRをエンタープライズAI向けに比較。GPU密度、冷却、ネットワーク、価格帯、推論と学習どちらに向くかを解説。',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Dell PowerEdge XE9680 コンフィグレーター' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Lenovo ThinkSystem SR675 V3 コンフィグレーター' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Supermicro SYS-821GE-TNHR コンフィグレーター' },
+    ],
+    twitterDescription:
+      'Dell vs Lenovo vs HPE vs Supermicro:エンタープライズGPUサーバーを密度・冷却・ネットワーク・価格で比較。調達チーム向け。',
+    leadAnswerBlock:
+      '**8GPU H100/H200学習クラスタでは、Dell PowerEdge XE9680、HPE Cray XD670、Supermicro SYS-821GE-TNHRが最も直接的な競合となる。推論専用や予算が限られる場合は、HPE ProLiant DL380a GenまたはPCIe GPU搭載のLenovo ThinkSystem SR675 V3が3分の1〜半額程度で済む。** 8x H100/H200 SXM5構成はメモリとサポート階層により20万〜40万ドル以上が目安——定価は公開されていないため、予算策定前に正式な見積もりを取得すること。',
+    audience:
+      'ラックマウント型マルチGPUサーバーをエンタープライズAI推論・学習向けに調達するIT調達担当者・インフラアーキテクト',
+    readTime: '13分で読了',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'エンタープライズGPUサーバー',
+    targetKeywords: [
+      'エンタープライズ gpu サーバー 購入ガイド 2026',
+      'dell poweredge xe9680 lenovo hpe 比較',
+      'ラック gpu サーバー ai 推論',
+      'h100 h200 l40s エンタープライズ サーバー',
+      'llm 学習 gpu サーバー ベンダー',
+    ],
+    quickAnswerTop: {
+      ja: {
+        question: '2026年、企業がAI向けに選ぶべきGPUサーバーベンダーはどこか?',
+        answer:
+          'まずワークロード、次にベンダーで選ぶ。マルチノードH100/H200学習クラスタでは、Dell PowerEdge XE9680、HPE Cray XD670、Supermicro SYS-821GE-TNHRが最も近い競合——いずれも8U以下、8x SXM5 GPU、NVLink接続で20万〜40万ドル以上のレンジ。推論専用またはシングルノード構成では、HPE ProLiant DL380a Gen11(2U、PCIe GPU)またはL40S搭載Lenovo ThinkSystem SR675 V3が3分の1〜半額程度で標準の空冷で運用できる。',
+        bullets: [
+          '学習・マルチノード:Dell XE9680、HPE Cray XD670、Supermicro SYS-821GE-TNHR——8x H100/H200 SXM5、NVLink、InfiniBand対応',
+          '推論専用・低予算:HPE ProLiant DL380a Gen11またはL40S搭載Lenovo SR675 V3——PCIe、空冷、液冷ループ不要',
+          '液冷対応データセンター向け:Neptuneダイレクト・トゥ・チップ冷却搭載のLenovo SR675 V3',
+          '8x H100/H200 SXM5サーバーの価格帯:リセラー・SI見積もりでおおむね20万〜40万ドル以上——ベンダーは定価非公開',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: '要点まとめ', anchor: '#key-takeaways' },
+      { label: 'クイックファクト', anchor: '#quick-facts' },
+      { label: '購入者プロファイル別のベスト選択', anchor: '#best-choice' },
+      { label: 'ベンダー比較表', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670とProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs H200 vs L40S', anchor: '#gpu-options' },
+      { label: '電力・冷却要件', anchor: '#power-cooling' },
+      { label: 'ネットワーク:InfiniBand vs RoCE', anchor: '#networking' },
+      { label: '購入規模の決め方', anchor: '#sizing' },
+      { label: '保証・サポート階層', anchor: '#warranty-support' },
+      { label: 'よくある購入ミス', anchor: '#common-mistakes' },
+      { label: 'よくある質問', anchor: '#faq' },
+      { label: '関連記事', anchor: '#related-reading' },
+      { label: '出典', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'エンタープライズGPUサーバー購入ではワークロードとベンダーを一致させることが重要——Dell PowerEdge XE9680、HPE Cray XD670、Supermicro SYS-821GE-TNHRは20万〜40万ドル以上の8x H100/H200 SXM5学習プラットフォームで直接競合し、PCIe L40S搭載のHPE ProLiant DL380a Gen11とLenovo ThinkSystem SR675 V3は推論専用予算を3分の1〜半額程度でカバーする。',
+          },
+          {
+            type: 'plain-terms',
+            text: '企業向けAIサーバーの購入は、性能の高いゲーミングPCを組むのとはまったく違う。この規模のマシンは家一軒分の価格になり、到着前に冷却と電力の計画が必要で、数年単位のサポート契約が付いてくる。本ガイドでは、実際にこうしたラックマウント型AIサーバーを販売する4社——Dell、Lenovo、HPE、Supermicro——を比較し、単に最も派手なスペックシートではなく、実際の用途(従業員向けにAIモデルを稼働させるのか、ゼロから新しいモデルを学習するのか)に合った適切な規模とベンダーを選べるようにする。',
+          },
+        ],
+        items: [
+          '**GPU密度:** 4社すべてが8GPU SXM5のフラッグシップ機種を持つ(Dell XE9680、HPE Cray XD670、Supermicro SYS-821GE-TNHR)。LenovoとHPEは低密度・低コストのPCIeモデルも販売。',
+          '**価格帯:** 8x H100/H200 SXM5サーバーはGPUメモリ(80GB H100 vs 141GB H200)とサポート階層により20万〜40万ドル以上。',
+          '**冷却が真の制約。** 8GPU SXM5サーバー2〜3台で、空冷の実用上限とされる1ラックあたり約20〜40kWを超える——この密度を超えると液冷はオプションではなく必須になる。',
+          '**ネットワークは学習で重要、推論ではあまり重要ではない。** マルチノード学習クラスタにはInfiniBand NDRまたはRoCE v2 Ethernetファブリックが必要だが、シングルノード推論には不要。',
+          '**予算だけでなくワークロードでGPUを選ぶ。** L40S(48GB、PCIe、空冷)は推論向き、H100/H200(80〜141GB、SXM5、NVLink)は学習・大規模バッチ配信向き。',
+          '推論容量がGPU1〜2基分で足りる購入者は、そもそもラックサーバーを買うべきではない——その規模にはワークステーション構成が適切。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'クイックファクト',
+        items: [
+          '**Dell PowerEdge XE9680:** 6U、最大8x H100/H200 SXM5、デュアルIntel Xeon Platinum、最大4TB DDR5。',
+          '**Lenovo ThinkSystem SR675 V3:** 3U、最大8GPU(H100/H200/L40S混在可)、デュアルAMD EPYC 9004/9005、最大6TB DDR5、Neptune液冷オプション。',
+          '**HPE Cray XD670:** 5U、最大8x H100/H200 SXM5、デュアル第4世代Intel Xeon、InfiniBand NDR / Slingshot 11 / Ethernetのファブリック選択肢。',
+          '**HPE ProLiant DL380a Gen11:** 2U、最大4基(ダブルワイド)または8基(シングルワイド)のGPU(L40S/H100 PCIe)、最大64コアのデュアルIntel Xeon。',
+          '**Supermicro SYS-821GE-TNHR:** 8U、最大8x H100/H200 SXM5、デュアル第4/5世代Intel Xeon、最大8TB DDR5。',
+          '**GPU VRAM:** H100 = 80GB HBM3、H200 = 141GB HBM3e、L40S = 48GB GDDR6。',
+          '**ラック消費電力:** 8x H100/H200 SXM5ノード1台でフル稼働時約10〜12kW——2台で1ラックの実用的な空冷上限を超える。',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: 'ユースケース別にどのGPUサーバーを選ぶべきか?',
+        content: [
+          '**適切なベンダーはブランドの好みではなく、ワークロードとデータセンターの準備状況によって決まる。** 学習クラスタ、推論専用構成、液冷対応データセンターは、それぞれ異なるプラットフォームを指し示す。',
+        ],
+        items: [
+          '**大規模マルチノード学習に最適:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)——InfiniBand接続のマルチラッククラスタを構築する上で最も広いエンタープライズ営業・SIネットワークを持つ。',
+          '**液冷対応データセンターに最適:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna)——Neptuneダイレクト・トゥ・チップ液冷は高負荷GPU利用時の冷却コストを大幅に削減し、AMD EPYC CPUオプションも用意。',
+          '**推論専用または小規模な初回導入に最適:** HPE ProLiant DL380a Gen11——2U、空冷、PCIe GPU、8x SXM5学習機の3分の1〜半額程度。',
+          '**構成の柔軟性と価格競争力に最適:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html)——SIチャネル経由で最も幅広いビルド・トゥ・オーダーの選択肢を持ち、8x H100/H200 SXM5構成への価格競争力あるルートになることが多い。',
+          '**次の場合はラックサーバーを完全に避ける:** 実際の需要が小規模チーム向けの推論容量GPU1〜2基分であれば、[ローカルLLMワークステーション構築](/ja/local-llms/local-llm-workstation-build)の方が価格は一部で済み、データセンターの冷却計画も不要。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '4社のスペックと価格をどう比較するか?',
+        content: [
+          '**Dell、Lenovo、HPE、Supermicroはいずれも少なくとも1機種の8GPU SXM5プラットフォームを持つが、フォームファクター・冷却オプション・販売チャネルは大きく異なる。**',
+        ],
+        columns: ['ベンダー / モデル', 'フォームファクター', '最大GPU', 'GPUオプション', '冷却方式', '価格帯'],
+        rows: [
+          { 'ベンダー / モデル': 'Dell PowerEdge XE9680', フォームファクター: '6U', 最大GPU: '8(SXM5、NVLink)', GPUオプション: 'H100 80GB / H200 141GB', 冷却方式: '標準空冷、液冷オプション', 価格帯: '約20〜37.5万ドル(8GPU)' },
+          { 'ベンダー / モデル': 'Lenovo SR675 V3', フォームファクター: '3U', 最大GPU: '8(PCIeまたはSXM)', GPUオプション: 'H100 / H200 / L40S', 冷却方式: '空冷またはNeptune液冷', 価格帯: '構成により大きく変動' },
+          { 'ベンダー / モデル': 'HPE Cray XD670', フォームファクター: '5U', 最大GPU: '8(SXM5、NVLink)', GPUオプション: 'H100 80GB / H200 141GB', 冷却方式: '標準空冷', 価格帯: '見積もりのみ' },
+          { 'ベンダー / モデル': 'HPE ProLiant DL380a Gen11', フォームファクター: '2U', 最大GPU: 'ダブルワイド4 / シングル8', GPUオプション: 'L40S / H100 PCIe', 冷却方式: '空冷のみ', 価格帯: '低価格帯——見積もりのみ' },
+          { 'ベンダー / モデル': 'Supermicro SYS-821GE-TNHR', フォームファクター: '8U', 最大GPU: '8(SXM5、NVLink)', GPUオプション: 'H100 80GB / H200 141GB', 冷却方式: '標準空冷', 価格帯: '約20〜32万ドル(8GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'Dell PowerEdge XE9680は何を提供するか?',
+        content: [
+          '**Dell PowerEdge XE9680は、NVLink接続の8基のNVIDIA HGX H100またはH200 SXM5 GPUを搭載する6Uラックサーバーで、大規模モデルの学習・推論専用に設計されている。** 第4/第5世代Intel Xeon Scalableプロセッサ(各最大56コア)2基、最大32枚のDDR5 DIMMスロット(最大4TB、4800 MT/s)、ネットワークとストレージ拡張用の10基のPCIe Gen5 x16スロットを組み合わせる。',
+          '標準では空冷で出荷される。ラックあたり約20〜30kWを超え、空冷が実用的でなくなるデータセンター向けにDellは液冷オプションを用意している。',
+          '価格は非公開——フル構成の8x H100/H200ユニットに対するリセラー・SI見積もりは、GPUメモリ階層・RAM・ストレージ・サポートレベルによりおおむね20万〜37.5万ドルの範囲で推移している。予算策定前に[Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)で正式見積もりを取得すること。',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'Lenovo ThinkSystem SR675 V3は何を提供するか?',
+        content: [
+          '**Lenovo ThinkSystem SR675 V3は、NVIDIA H100・H200・L40Sを含む最大8基のダブルワイドまたはシングルワイドGPUに対応する3Uラックサーバーで、第5世代AMD EPYC 9004/9005プロセッサ2基、24 DIMMスロットで最大6TBのDDR5-4800メモリを搭載する。**',
+          '最大の特徴はLenovo Neptune——ダイレクト・トゥ・チップおよびハイブリッド液空冷システムで、構成オプションとして選択可能。既に液冷ループを運用している、あるいは導入予定の施設を持つ購入者にとって、空冷単独と比較して持続的な高GPU利用時の冷却コストを大幅に削減できる点で意味がある。',
+          'SR675 V3は混合GPU構成(H200 4GPU NVLink構成、または推論寄りのL40S構成)にも対応しており、学習と推論の両方を1つのシャーシファミリーでカバーしたい購入者にとって、本比較の中で最も構成の柔軟性が高いプラットフォームとなる。構成は[Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna)から。',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'HPE Cray XD670とProLiant DL380a Gen11は何を提供するか?',
+        content: [
+          '**HPEは2つの異なるGPUサーバー階層を販売している:大規模学習向けのCray XD670と、推論・小規模導入向けのProLiant DL380a Gen11だ。**',
+          '**Cray XD670**は、第4世代Intel Xeonプロセッサ2基と8基のNVIDIA H100またはH200 SXM5 GPUを搭載する5Uシャーシ。最大の特徴はファブリック選択の自由度——8基のPCIe Gen5ハーフハイトスロットがHPE Slingshot 11、InfiniBand NDR、標準Ethernetに対応する。既存のHPE Cray スーパーコンピューティング基盤でSlingshotに標準化済みの購入者に意味がある。',
+          '**ProLiant DL380a Gen11**は、4基のダブルワイドまたは8基のシングルワイドGPU(L40SまたはH100 PCIe)、最大3TBのDDR5、PCIe 5.0に対応する2Uサーバー——8GPU SXM5プラットフォームを正当化できない推論ワークロードや初回GPU購入向けの、空冷・低密度オプション。両モデルとも[HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html)で確認できる。',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'Supermicro SYS-821GE-TNHRは何を提供するか?',
+        content: [
+          '**Supermicro SYS-821GE-TNHRは、最大8基のNVIDIA HGX H100(80GB)またはHGX H200(141GB)GPU、第4/第5世代Intel Xeon Scalableプロセッサ2基、32枚のDIMMスロットで最大8TBのDDR5-5600メモリに対応する8Uラックサーバー**——本比較の4プラットフォーム中最大のRAM容量を持つ。',
+          'Supermicroは直接のエンタープライズ営業チームではなく、主にSI・リセラーチャネル経由で販売している。これは通常、より高いビルド・トゥ・オーダーの柔軟性(ドライブベイ、ネットワークカード、電源冗長性)を意味し、現行のリセラー掲載情報によれば8x H100構成に対して競争力のある開始価格になることが多い——ベース構成の見積もりはおおむね20万〜32万ドルで推移しており、フル構成はさらに高くなる。',
+          'ストレージが強み:最大19基のホットスワップ2.5インチNVMe/SATA/SASベイに加え、M.2スロット2基——推論やファインチューニングと並行して大規模なローカルデータセットを運用する購入者に有用。ベース構成は[Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html)で確認できる。',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: 'H100、H200、L40Sのどれを買うべきか?',
+        content: [
+          '**H200はメモリと帯域幅で優位、H100はより入手しやすく多くの場合安価なSXM5オプション、L40Sは推論専用向けの空冷PCIe選択肢だ。** 2026年9月時点で3種すべてが現行のNVIDIAデータセンター向けGPUであり、いずれも近く廃止される予定はない——選択基準は陳腐化リスクではなくワークロード適合性だ。',
+        ],
+        columns: ['GPU', 'VRAM', 'メモリ帯域幅', '最適な用途'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', VRAM: '80GB HBM3', メモリ帯域幅: '3.35 TB/s', 最適な用途: 'マルチノード学習、最も広い入手性' },
+          { GPU: 'NVIDIA H200 SXM', VRAM: '141GB HBM3e', メモリ帯域幅: '4.8 TB/s', 最適な用途: '大コンテキスト配信、より大きなバッチ学習' },
+          { GPU: 'NVIDIA L40S', VRAM: '48GB GDDR6', メモリ帯域幅: '864 GB/s', 最適な用途: '空冷PCIe推論、低予算' },
+        ],
+        items: [
+          '**H200を選ぶ場合:** 大コンテキストワークロードを配信する、あるいは80GB/GPUでは避けたいクロスGPUシャーディングが必要になる大きなモデルを学習する場合。',
+          '**H100を選ぶ場合:** マルチノードNVLink/InfiniBand学習クラスタで最も広いベンダー・リセラー入手性が必要で、80GB/GPUがモデルサイズに十分な場合。',
+          '**L40Sを選ぶ場合:** ワークロードが推論専用で、データセンターが空冷のみで、想定する量子化レベルで最大モデルが48GB/GPUに収まる場合。',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'GPU高密度ラックにはどれだけの電力・冷却が必要か?',
+        content: [
+          '**8GPU H100/H200 SXM5サーバー1台はフル稼働時約10〜12kWを消費する——700WのGPU8基だけでCPU・メモリ・ファンを除いても5.6kWに達する。** この種のサーバーが1ラックに2〜3台入るだけで、空冷の実用的な上限を超えてしまう。',
+          '業界の目安では空冷の実用上限は1ラックあたり約20〜40kW。それを超えると液冷(ダイレクト・トゥ・チップまたは液浸)が必要になり、1ラックあたり100〜200kW以上を支えられる。参考までに、NVIDIA GB200 NVL72ラックスケールシステムの総消費電力は約120〜130kW——これはAIラック密度が向かう方向を示すデータポイントであり、本記事で比較したいずれのサーバーの仕様でもない。',
+          '購入者にとっての実務的な含意:1ラックに8GPU SXM5サーバーを2台以上設置するなら、標準的なデータセンター空調が対応できると想定するのではなく、ダイレクト・トゥ・チップ液冷(Lenovo Neptune、または施設レベルの液冷ループ)を計画すべきだ。',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: 'InfiniBandと標準Ethernet、どちらが必要か?',
+        content: [
+          '**シングルノード推論の展開にはInfiniBandは不要——標準の100/200GbE Ethernetで十分だ。** 複数サーバーのGPU同士が絶えず勾配を同期する必要があるマルチノード学習・ファインチューニングクラスタには、専用の高帯域幅・低遅延ファブリックが必要になる。',
+          'そのファブリックの選択肢は2つ:**InfiniBand NDR**(400Gb/sのリンク、伝統的なHPCの選択肢で、フラッグシップ機ではGPU1基あたり1NIC)と**RoCE v2**(Converged Ethernet上のRDMA——例えばNVIDIA Spectrum-X——ネットワークチームが既に運用している可能性のある標準Ethernetファブリック上で同等のスループットを提供)。',
+        ],
+        items: [
+          '**InfiniBand NDRを使う場合:** 専用のマルチノード学習クラスタを構築しており、その規模で最も成熟し広く普及しているRDMAファブリックを求める場合。',
+          '**RoCE v2(Ethernet)を使う場合:** チームが既にコンバージドEthernetネットワークを運用しており、別途InfiniBandファブリックとスキルセットを維持したくない場合。',
+          '**両方とも不要な場合:** シングルノード推論のみを運用している場合——標準ネットワークで十分であり、追加ファブリックのコストは正当化されない。',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: 'ワークロードに合わせてGPUサーバー購入をどう規模設定するか?',
+        content: [
+          '**購入規模はワークロードに合わせて決めるべきで、入手可能な最大構成に合わせるべきではない。** 推論専用の展開と学習・ファインチューニングの展開では、GPU・メモリ・ネットワークの要件が根本的に異なる。',
+        ],
+        numberedItems: [
+          { title: 'まずワークロードを分類する', whyItMatters: '推論専用(固定モデルをユーザーに提供する)は、モデル重みに加えて勾配とオプティマイザ状態を保持する必要がある学習・ファインチューニングと比べて、必要なGPUメモリがはるかに少なく、マルチノードファブリックも不要。' },
+          { title: 'モデルサイズと量子化からGPUメモリ需要を見積もる', whyItMatters: '70Bパラメータのモデルは FP16でオーバーヘッド前に約140GBのVRAMが必要——これだけでシングルGPUのL40S(48GB)は選択肢から外れ、マルチGPU H100/H200シャーディングか、より小さい・量子化されたモデルのいずれかを検討することになる。' },
+          { title: 'シングルノードかマルチノードかを決める', whyItMatters: '8GPUサーバー1台の合計VRAMがモデルと想定同時実行数をカバーできるなら、InfiniBand/RoCEは完全にスキップしてファブリックコストを節約できる。カバーできない場合は最初から専用ネットワークファブリックの予算を組むこと。' },
+          { title: '発注前に冷却をラック密度に合わせる', whyItMatters: '1ラックに8GPU SXM5サーバーを2台以上導入する前に、対象ラックが液冷に対応できるか施設チームと確認すること——納品後の冷却改修は事前計画よりはるかに高コストになる。' },
+          { title: '正式見積もりと納期を確認する', whyItMatters: 'これらのベンダーはいずれも8GPU構成の定価を公開しておらず、GPU高密度サーバーの納期はGPUの割当状況によって数週間から数か月まで幅がある——価格だけでなくスケジュールも予算に組み込むこと。' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: 'どの保証・サポート階層を選ぶべきか?',
+        content: [
+          '**4社すべてが基本的なハードウェア保証を超えた階層型のエンタープライズサポートを提供しているが、階層名・応答時間・含まれるサービスは異なる——プログラムは変更されるため、購入前に必ずベンダーに直接最新条件を確認すること。**',
+        ],
+        items: [
+          '**Dell**はXE9680と併せてProSupport階層(より迅速なミッションクリティカル対応を含むオプションも)を販売している——標準のPowerEdge階層ではなく、GPUサーバー適格サポートを具体的に確認すること。',
+          '**Lenovo**はThinkSystemライン向けにPremier Support階層を販売しており、オンサイト対応や予防的モニタリングのオプションがある。',
+          '**HPE**はPointnext Complete Care経由でサポートを販売し、6桁の初期費用を避けたい購入者向けに、資本購入の代替として従量課金型のHPE GreenLakeも用意している。',
+          '**Supermicro**のサポート条件は、他の3社よりもリセラー・SIごとの差が大きい。その理由は、直接のエンタープライズ営業よりもこのチャネル経由の販売量が多いためだ——Supermicroのベースとなる保証ページだけでなく、具体的なリセラーからサポート条件を書面で入手すること。',
+          'どのベンダーでも共通して確認すべき点:GPU故障時に何が起こるか具体的に聞く(交換SLA、ノード全体を送る必要があるのかGPUトレイだけでよいのか)——これはGPU高密度サーバーで実際に最も起こりやすい故障モードだ。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'エンタープライズ購入者が犯しがちなミスは?',
+        items: [
+          '**推論専用ワークロードに対して8GPU SXM5容量を購入する。** 固定モデルをユーザーに提供するだけなら、ProLiant DL380a Gen11のような2U PCIeプラットフォームで、価格と複雑さの一部でカバーできる。',
+          '**ラックの冷却容量を確認する前に発注する。** 同じラックに2台目・3台目の8GPU SXM5サーバーを入れると空冷の実用上限を超える可能性がある——ハードウェア到着前に施設チームと確認すべきで、後からでは遅い。',
+          '**「後で拡張するかもしれない」クラスタでネットワークファブリック予算を省く。** 既に展開済みのシングルノード群に後からInfiniBandやRoCEを追加する方が、当初購入時に予算化するより破壊的になる。',
+          '**定価を総コストと見なす。** サポート契約、ネットワークファブリック、冷却改修、電力インフラのアップグレードは、サーバーハードウェアの項目に対して定常的に15〜30%を上乗せする。',
+          '**H200が常にH100からの正しいアップグレードだと仮定する。** モデルとバッチサイズが80GB/GPUに余裕を持って収まるなら、H200の追加メモリと追加コストは何も生まない——プレミアムを支払う前に実際のVRAM需要を確認すること。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: 'エンタープライズの推論と学習それぞれ、H100またはH200は何基必要か?',
+            a: '中程度の同時ユーザー数に固定モデルを提供する推論専用の展開は、多くの場合1〜4基で足り、8GPU SXM5プラットフォームは全く必要ない。大規模モデル(70B以上のパラメータ)の学習・ファインチューニングでは、通常GPU間でモデル・勾配・オプティマイザ状態を分散するためフル8GPU NVLink構成が必要になる。購入規模は「最大プラットフォームを買う」というデフォルトではなく、ワークロードから決めること。',
+          },
+          {
+            q: '8GPU H100ラックサーバーの実際の総コストはいくらか?',
+            a: 'フル構成の8x H100ユニットに対するリセラー・SI見積もりは、ハードウェアのみでおおむね20万〜37.5万ドルの範囲。これにサポート契約、ネットワークファブリック、冷却インフラのアップグレードが加わり、通常さらに15〜30%上乗せされる。4社いずれも定価を公開していないため、予算策定前に正式見積もりを取得すること。',
+          },
+          {
+            q: 'GPU高密度ラックには液冷が必要か?',
+            a: '1ラックに8GPU H100/H200 SXM5サーバーを2台以上設置するなら必要——各サーバーがフル稼働時約10〜12kWを消費し、空冷の実用上限は1ラックあたり約20〜40kW程度とされる。この密度以下であれば標準の空冷でも機能する可能性があるため、発注前に施設チームと確認すること。',
+          },
+          {
+            q: 'ネットワークにはInfiniBandとEthernet(RoCE)のどちらを選ぶべきか?',
+            a: 'シングルノード推論であればどちらも不要——標準Ethernetで十分。マルチノード学習クラスタでは、InfiniBand NDRがより成熟し広く普及した高帯域幅RDMAファブリック。ネットワークチームが別途InfiniBandファブリックとスキルセットを維持したくない場合の代替がEthernet上のRoCE v2だ。',
+          },
+          {
+            q: 'Dell vs Lenovo vs HPE vs Supermicro——どのベンダーのエンタープライズサポートが最も優れているか?',
+            a: 'Dell、Lenovo、HPEはそれぞれ直接のアカウントチーム経由で階層型のエンタープライズサポート(それぞれProSupport、Premier Support、Pointnext Complete Care)を販売している。Supermicroは主にシステムインテグレーターとリセラー経由で販売するため、サポート条件は単一のSupermicro全社階層よりもリセラーごとの差が大きい——購入前に具体的なリセラーからサポート条件を書面で入手すること。',
+          },
+          {
+            q: 'H100 vs H200 vs L40S——どのGPUを買うべきか?',
+            a: '大コンテキスト配信、または80GB/GPUでは避けたいクロスGPUシャーディングが必要な学習にはH200(141GB HBM3e)。80GBで十分なマルチノード学習クラスタで最も広いベンダー・リセラー入手性を求めるならH100(80GB HBM3)。低予算での推論専用にはL40S(48GB GDDR6、PCIe、空冷)を選ぶ。',
+          },
+          {
+            q: '同じラックやサーバー内でGPUモデルを混在できるか?',
+            a: '1台のサーバー内では不可——8GPU SXM5プラットフォームは単一のGPUモデル(すべてH100、またはすべてH200)を中心にNVLink接続で構築されており、混在はできない。ラック内では可能——学習用にH100/H200を構成したサーバーと、推論用にL40Sを構成した別のサーバーを、各サーバーの冷却と消費電力を個別に考慮する限り併設できる。',
+          },
+          {
+            q: 'エンタープライズ購入者はどの保証・サポート階層を選ぶべきか?',
+            a: '最低限、GPU故障に特化したベンダーの交換SLAを確認すること(一般的なハードウェア故障ではなく)——GPU故障はGPU高密度サーバーで最も起こりやすい故障モードであり、交換ロジスティクス(GPUトレイのみの発送かノード全体か)はベンダーと階層によって異なる。応答時間の階層は、ワークロードが実際に許容できるダウンタイムに合わせて選ぶこと。',
+          },
+          {
+            q: 'エンタープライズ規模では、オンプレミスハードウェアはクラウドGPUレンタルより安いか?',
+            a: 'これは定価だけでなく稼働率に左右される——オンプレミスハードウェアは初期費用が高いが稼働後の時間あたりコストは低い一方、クラウドレンタルは初期費用がないが時間あたりのレートははるかに高い。分岐点は通常、持続的でほぼ一定の稼働率にある。散発的・バースト的なワークロードは通常レンタルの方が安くつく。詳しいコスト比較は[クラウドGPUレンタルガイド](/ja/local-llms/cloud-gpu-rental-comparison-2026)を参照。',
+          },
+          {
+            q: '8x H100またはH200構成の納期はどのくらいか?',
+            a: 'GPU高密度サーバーの納期は、GPUの割当状況と現在の需要によって数週間から数か月まで幅がある——ほとんどのベンダーにとって8GPU構成は在庫品ではない。正式見積もりの一部として納期を確認し、価格だけでなくプロジェクトのスケジュールもそれに合わせて予算化すること。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[エンタープライズ向けローカルLLMのスケーリング](/ja/local-llms/scaling-local-llms-enterprise)——このハードウェアを運用するソフトウェア面:Kubernetesオーケストレーション、ロードバランシング、複数GPUノード間の冗長性。',
+          '[ローカルLLMワークステーション構築](/ja/local-llms/local-llm-workstation-build)——ラック購入ではなく、1チームまたは1人向けの単一デスクトップ構成。',
+          '[エンタープライズLLM推論サーバー2026](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026)——このハードウェア上で動く配信ソフトウェアとしてvLLM、TGI、NVIDIA NIMを比較。',
+          '[マルチGPUローカルLLM](/ja/local-llms/multi-gpu-local-llms)——小規模な展開向けの単一マシン内マルチGPU構成。',
+          '[クラウドGPUレンタル比較2026](/ja/local-llms/cloud-gpu-rental-comparison-2026)——散発的・バースト的な計算需要向けのレンタルvs購入の代替案。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        items: [
+          'Dell PowerEdge XE9680 製品ページ -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Lenovo ThinkSystem SR675 V3 Product Guide -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'HPE ProLiant DL380a Gen11 データシート -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Supermicro SYS-821GE-TNHR データシート -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'NVIDIA H100/H200 Tensor Core GPU仕様 -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'エンタープライズGPUサーバー購入ガイド2026:Dell・Lenovo・HPE・Supermicro比較',
+      description:
+        'Dell PowerEdge XE9680、Lenovo SR675 V3、HPE Cray XD670、Supermicro SYS-821GE-TNHRをエンタープライズAI向けに比較。GPU密度、冷却、ネットワーク、価格帯、推論と学習どちらに向くかを解説。',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ja/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'IT調達担当者・インフラアーキテクト' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'エンタープライズの推論と学習それぞれ、H100またはH200は何基必要か?', acceptedAnswer: { '@type': 'Answer', text: '推論専用は多くの場合1〜4基で足りる。大規模モデルの学習・ファインチューニングには通常フル8GPU NVLink構成が必要。購入規模は最大プラットフォームありきではなく、ワークロードから決めること。' } },
+        { '@type': 'Question', name: '8GPU H100ラックサーバーの実際の総コストはいくらか?', acceptedAnswer: { '@type': 'Answer', text: 'リセラー見積もりはハードウェアのみでおおむね20万〜37.5万ドル。これにサポート、ネットワークファブリック、冷却アップグレードが通常さらに15〜30%加わる。' } },
+        { '@type': 'Question', name: 'GPU高密度ラックには液冷が必要か?', acceptedAnswer: { '@type': 'Answer', text: '1ラックに2台以上の8GPU SXM5サーバーを設置する場合は必要——各サーバーがフル稼働時約10〜12kWを消費し、空冷の実用上限は約20〜40kW/ラック。' } },
+        { '@type': 'Question', name: 'ネットワークにはInfiniBandとEthernet(RoCE)のどちらを選ぶべきか?', acceptedAnswer: { '@type': 'Answer', text: 'シングルノード推論はどちらも不要。マルチノード学習クラスタにはInfiniBand NDRか、代替のEthernet上RoCE v2が必要。' } },
+        { '@type': 'Question', name: 'Dell vs Lenovo vs HPE vs Supermicro——どのベンダーのエンタープライズサポートが最も優れているか?', acceptedAnswer: { '@type': 'Answer', text: 'Dell、Lenovo、HPEは直接のアカウントチーム経由で階層型サポートを販売。Supermicroは主にシステムインテグレーター経由のため、条件はリセラーごとに差が大きい。' } },
+        { '@type': 'Question', name: 'H100 vs H200 vs L40S——どのGPUを買うべきか?', acceptedAnswer: { '@type': 'Answer', text: '80GB超が必要な大コンテキスト配信にはH200。80GBで足りる場合、最も広い入手性を求めるならH100。低予算の空冷PCIe推論にはL40S。' } },
+        { '@type': 'Question', name: '同じラックやサーバー内でGPUモデルを混在できるか?', acceptedAnswer: { '@type': 'Answer', text: '1台のサーバー内では不可——単一GPUモデルを中心に構築される。ラック内では、各サーバーの冷却と消費電力を個別に考慮すれば可能。' } },
+        { '@type': 'Question', name: 'エンタープライズ購入者はどの保証・サポート階層を選ぶべきか?', acceptedAnswer: { '@type': 'Answer', text: 'GPU故障に特化した交換SLAを確認し、応答時間の階層をワークロードが許容できるダウンタイムに合わせること。' } },
+        { '@type': 'Question', name: 'エンタープライズ規模では、オンプレミスハードウェアはクラウドGPUレンタルより安いか?', acceptedAnswer: { '@type': 'Answer', text: '稼働率次第——オンプレミスは初期費用が高いが時間あたりコストは低い。クラウドレンタルは初期費用なしだが時間あたりレートが高い。持続的な高稼働率は購入が有利。' } },
+        { '@type': 'Question', name: '8x H100またはH200構成の納期はどのくらいか?', acceptedAnswer: { '@type': 'Answer', text: 'GPU割当状況により数週間から数か月まで幅がある——正式見積もりの一部として確認すること。' } },
+      ],
+    },
+  },
+  zh: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: '2026企业级GPU服务器采购指南:Dell、Lenovo、HPE、Supermicro对比',
+    heroImage: '',
+    seoTitle: '2026企业级GPU服务器:Dell vs Lenovo vs HPE vs Supermicro',
+    intro:
+      '采购企业级GPU服务器与组装一台AI工作站完全是两回事。一台机架式8-GPU平台的花费是六位数美元,交付前就需要确定制冷和电力方案,并且会让企业与厂商绑定多年的支持关系。本指南比较了真正销售机架级企业AI GPU服务器的四家厂商——Dell、Lenovo、HPE和Supermicro——从GPU密度、制冷需求、网络、保修等级和价格区间等维度出发,帮助采购团队根据实际工作负载而非最花哨的规格表来确定采购规模。',
+    metaDescription:
+      '对比Dell PowerEdge XE9680、Lenovo SR675 V3、HPE Cray XD670和Supermicro SYS-821GE-TNHR在企业AI场景下的表现:GPU密度、制冷、网络、价格区间,以及推理与训练场景的适配。',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Dell PowerEdge XE9680 配置页' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Lenovo ThinkSystem SR675 V3 配置页' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Supermicro SYS-821GE-TNHR 配置页' },
+    ],
+    twitterDescription:
+      'Dell vs Lenovo vs HPE vs Supermicro:企业级GPU服务器在密度、制冷、网络和价格上的对比,面向采购团队。',
+    leadAnswerBlock:
+      '**对于8-GPU H100/H200训练集群,Dell PowerEdge XE9680、HPE Cray XD670和Supermicro SYS-821GE-TNHR是最直接的竞品;如果只做推理或预算有限,搭载PCIe GPU的HPE ProLiant DL380a Gen11或Lenovo ThinkSystem SR675 V3的成本大约只有前者的三分之一到一半。** 一套8x H100/H200 SXM5配置的价格大致在20万至40万美元以上,具体取决于显存配置和支持等级——预算前请务必向厂商索取正式报价,厂商不公开标价。',
+    audience:
+      '负责采购机架式多GPU服务器用于企业AI推理或训练部署的IT采购负责人和基础设施架构师',
+    readTime: '13分钟阅读',
+    educationalLevel: 'Advanced',
+    primaryTerm: '企业级GPU服务器',
+    targetKeywords: [
+      '企业级 gpu 服务器 采购指南 2026',
+      'dell poweredge xe9680 对比 lenovo hpe',
+      '机架 gpu 服务器 ai 推理',
+      'h100 vs h200 vs l40s 企业服务器',
+      '最佳 gpu 服务器 厂商 llm 训练',
+    ],
+    quickAnswerTop: {
+      zh: {
+        question: '2026年企业应该为AI选择哪家GPU服务器厂商?',
+        answer:
+          '先看工作负载,再选厂商。对于多节点H100/H200训练集群,Dell PowerEdge XE9680、HPE Cray XD670和Supermicro SYS-821GE-TNHR是最接近的竞品——均为8U或更小机身、8x SXM5 GPU、NVLink互联,价格区间在20万至40万美元以上。对于纯推理或单节点部署,HPE ProLiant DL380a Gen11(2U,PCIe GPU)或搭载L40S的Lenovo ThinkSystem SR675 V3成本大约只有前者的三分之一到一半,且可用标准风冷运行。',
+        bullets: [
+          '训练/多节点:Dell XE9680、HPE Cray XD670或Supermicro SYS-821GE-TNHR——8x H100/H200 SXM5、NVLink、支持InfiniBand',
+          '纯推理/预算较低:HPE ProLiant DL380a Gen11或搭载L40S的Lenovo SR675 V3——PCIe、风冷、无需液冷回路',
+          '已具备液冷条件的数据中心:搭载Neptune直接芯片液冷的Lenovo SR675 V3',
+          '8x H100/H200 SXM5服务器价格区间:根据经销商/系统集成商报价,大致在20万至40万美元以上——厂商不公开标价',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '速览事实', anchor: '#quick-facts' },
+      { label: '按买家画像选出最佳方案', anchor: '#best-choice' },
+      { label: '厂商对比表', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670与ProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs H200 vs L40S', anchor: '#gpu-options' },
+      { label: '电力与制冷需求', anchor: '#power-cooling' },
+      { label: '网络:InfiniBand vs RoCE', anchor: '#networking' },
+      { label: '如何确定采购规模', anchor: '#sizing' },
+      { label: '保修与支持等级', anchor: '#warranty-support' },
+      { label: '常见采购误区', anchor: '#common-mistakes' },
+      { label: '常见问题', anchor: '#faq' },
+      { label: '相关阅读', anchor: '#related-reading' },
+      { label: '资料来源', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '企业GPU服务器买家应根据工作负载而非品牌来选择厂商——Dell PowerEdge XE9680、HPE Cray XD670和Supermicro SYS-821GE-TNHR在20万至40万美元以上的8x H100/H200 SXM5训练平台上直接竞争,而搭载PCIe L40S的HPE ProLiant DL380a Gen11和Lenovo ThinkSystem SR675 V3则以约三分之一到一半的价格覆盖纯推理预算。',
+          },
+          {
+            type: 'plain-terms',
+            text: '为企业采购一台AI服务器,和攒一台高性能游戏电脑完全不是一回事。这类机器的花费堪比一套房子,到货前就需要制冷和用电方案,还附带多年的支持合同。本指南比较了真正销售这类机架式AI服务器的四家公司——Dell、Lenovo、HPE和Supermicro——帮助采购者根据实际用途(为员工运行AI模型,还是从零训练新模型)而不是单纯看谁的规格表更大,来选择合适的规模和厂商。',
+          },
+        ],
+        items: [
+          '**GPU密度:** 四家厂商都拥有8-GPU SXM5旗舰平台(Dell XE9680、HPE Cray XD670、Supermicro SYS-821GE-TNHR);Lenovo和HPE还销售密度更低、成本更低的PCIe平台。',
+          '**价格区间:** 一台8x H100/H200 SXM5服务器的价格大致在20万至40万美元以上,取决于GPU显存(80GB H100 vs 141GB H200)和支持等级。',
+          '**制冷才是真正的瓶颈。** 两三台8-GPU SXM5服务器就已超过风冷每机架约20-40kW的实际上限——超过这个密度,液冷就不再是可选项,而是必需品。',
+          '**网络对训练更重要,对推理影响较小。** 多节点训练集群需要InfiniBand NDR或RoCE v2以太网结构;单节点推理则不需要。',
+          '**根据工作负载而非仅凭预算选GPU。** L40S(48GB、PCIe、风冷)适合推理;H100/H200(80-141GB、SXM5、NVLink)适合训练和大批量服务。',
+          '只需要一两块GPU推理算力的买家根本不该购买机架服务器——工作站方案才是这一规模的合适选择。',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '速览事实',
+        items: [
+          '**Dell PowerEdge XE9680:** 6U,最多8x H100/H200 SXM5,双路Intel Xeon Platinum,最高4TB DDR5。',
+          '**Lenovo ThinkSystem SR675 V3:** 3U,最多8块GPU(可混搭H100/H200/L40S),双路AMD EPYC 9004/9005,最高6TB DDR5,可选Neptune液冷。',
+          '**HPE Cray XD670:** 5U,最多8x H100/H200 SXM5,双路第4代Intel Xeon,可选InfiniBand NDR / Slingshot 11 / 以太网网络方案。',
+          '**HPE ProLiant DL380a Gen11:** 2U,最多4块双宽或8块单宽GPU(L40S/H100 PCIe),双路Intel Xeon最多64核。',
+          '**Supermicro SYS-821GE-TNHR:** 8U,最多8x H100/H200 SXM5,双路第4/5代Intel Xeon,最高8TB DDR5。',
+          '**GPU显存:** H100 = 80GB HBM3;H200 = 141GB HBM3e;L40S = 48GB GDDR6。',
+          '**机架功耗:** 一台8x H100/H200 SXM5节点满载功耗约10-12kW——两台就已超过单个机架风冷的实际上限。',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '不同使用场景该买哪款GPU服务器?',
+        content: [
+          '**合适的厂商取决于工作负载和数据中心的准备程度,而非品牌偏好。** 训练集群、纯推理部署和已具备液冷条件的数据中心,分别指向不同的平台。',
+        ],
+        items: [
+          '**大规模多节点训练首选:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)——拥有最广泛的企业销售和系统集成商网络,适合搭建InfiniBand互联的多机架集群。',
+          '**已具备液冷条件的数据中心首选:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna)——Neptune直接芯片液冷在持续高GPU利用率下能显著降低制冷成本,并可选配AMD EPYC处理器。',
+          '**纯推理或较小规模首次采购首选:** HPE ProLiant DL380a Gen11——2U,风冷,PCIe GPU,成本大约是8x SXM5训练机型的三分之一到一半。',
+          '**配置灵活性和价格竞争力首选:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html)——通过系统集成商渠道提供最广泛的按需定制选项,往往是获得8x H100/H200 SXM5配置最具价格竞争力的途径。',
+          '**以下情况请完全避开机架服务器:** 如果实际需求只是为小团队提供1-2块GPU的推理算力,[本地LLM工作站搭建方案](/zh/local-llms/local-llm-workstation-build)成本只是零头,也无需数据中心级制冷方案。',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '四家厂商在规格和价格上如何对比?',
+        content: [
+          '**Dell、Lenovo、HPE和Supermicro都至少拥有一款8-GPU SXM5平台,但在外形规格、制冷选项和销售渠道上差异明显。**',
+        ],
+        columns: ['厂商/型号', '外形规格', '最大GPU数', 'GPU选项', '制冷方式', '价格区间'],
+        rows: [
+          { '厂商/型号': 'Dell PowerEdge XE9680', 外形规格: '6U', 最大GPU数: '8(SXM5,NVLink)', GPU选项: 'H100 80GB / H200 141GB', 制冷方式: '标配风冷,可选液冷', 价格区间: '约20万-37.5万美元(8GPU)' },
+          { '厂商/型号': 'Lenovo SR675 V3', 外形规格: '3U', 最大GPU数: '8(PCIe或SXM)', GPU选项: 'H100 / H200 / L40S', 制冷方式: '风冷或Neptune液冷', 价格区间: '因配置差异很大' },
+          { '厂商/型号': 'HPE Cray XD670', 外形规格: '5U', 最大GPU数: '8(SXM5,NVLink)', GPU选项: 'H100 80GB / H200 141GB', 制冷方式: '标配风冷', 价格区间: '仅提供报价' },
+          { '厂商/型号': 'HPE ProLiant DL380a Gen11', 外形规格: '2U', 最大GPU数: '4双宽/8单宽', GPU选项: 'L40S / H100 PCIe', 制冷方式: '仅风冷', 价格区间: '更低——仅提供报价' },
+          { '厂商/型号': 'Supermicro SYS-821GE-TNHR', 外形规格: '8U', 最大GPU数: '8(SXM5,NVLink)', GPU选项: 'H100 80GB / H200 141GB', 制冷方式: '标配风冷', 价格区间: '约20万-32万美元(8GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'Dell PowerEdge XE9680提供什么?',
+        content: [
+          '**Dell PowerEdge XE9680是一款6U机架服务器,搭载8块通过NVLink互联的NVIDIA HGX H100或H200 SXM5 GPU,专为大模型训练和推理而设计。** 它将GPU与两颗第4或第5代Intel Xeon Scalable处理器(每颗最多56核)、最多32根DDR5内存插槽(最高4TB,4800 MT/s)以及10个PCIe Gen5 x16插槽(用于网络和存储扩展)搭配在一起。',
+          '标配风冷出厂;对于机架功耗超过约20-30kW、风冷已不再实用的数据中心,Dell提供液冷选项。',
+          '价格不公开——经销商和系统集成商对满配8x H100/H200机型的报价大致在20万至37.5万美元之间,具体取决于GPU显存档位、内存、存储和支持等级。预算前请通过[Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)获取正式报价。',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'Lenovo ThinkSystem SR675 V3提供什么?',
+        content: [
+          '**Lenovo ThinkSystem SR675 V3是一款3U机架服务器,支持最多8块双宽或单宽GPU——包括NVIDIA H100、H200和L40S——搭配两颗第5代AMD EPYC 9004/9005处理器,以及最高6TB、24根DIMM插槽的DDR5-4800内存。**',
+          '其显著特点是Lenovo Neptune,一种可选配的直接芯片液冷及混合液气冷系统——对于设施已经运行液冷回路、或计划添加液冷的买家而言尤为重要,因为相比纯风冷,它能在持续高GPU利用率下显著降低制冷成本。',
+          'SR675 V3还支持混合GPU配置(H200四卡NVLink配置,或面向推理的L40S配置),使其成为本对比中配置灵活性最高的平台,适合希望用同一个机箱系列同时覆盖训练和推理的买家。可在[Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna)配置。',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'HPE Cray XD670和ProLiant DL380a Gen11提供什么?',
+        content: [
+          '**HPE销售两个不同层级的GPU服务器:面向大规模训练的Cray XD670,以及面向推理和较小规模部署的ProLiant DL380a Gen11。**',
+          '**Cray XD670**是一款5U机箱,搭载8块NVIDIA H100或H200 SXM5 GPU,配备两颗第4代Intel Xeon处理器。其显著特点是网络结构可选——8个PCIe Gen5半高插槽支持HPE Slingshot 11、InfiniBand NDR或标准以太网——对于已在现有HPE Cray超算体系中标准化使用Slingshot的买家尤为相关。',
+          '**ProLiant DL380a Gen11**是一款2U服务器,支持4块双宽或8块单宽GPU(L40S或H100 PCIe)、最高3TB DDR5和PCIe 5.0——适合推理工作负载或还不足以采购8-GPU SXM5平台的首次GPU采购,提供风冷、低密度的选项。两款机型均可在[HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html)查看。',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'Supermicro SYS-821GE-TNHR提供什么?',
+        content: [
+          '**Supermicro SYS-821GE-TNHR是一款8U机架服务器,最多支持8块NVIDIA HGX H100(80GB)或HGX H200(141GB)GPU、两颗第4或第5代Intel Xeon Scalable处理器,以及最高8TB、32根DIMM插槽的DDR5-5600内存**——是本次对比的四款平台中最大内存容量的机型。',
+          'Supermicro主要通过系统集成商和经销商渠道销售,而非直接的企业销售团队,这通常意味着更灵活的按需定制空间(硬盘位、网卡、电源冗余),而且根据当前经销商报价,其8x H100配置的起价往往更具竞争力——基础配置报价大致在20万至32万美元之间,满配价格更高。',
+          '存储是其一大优势:最多19个2.5英寸热插拔NVMe/SATA/SAS硬盘位外加2个M.2插槽——适合需要在推理或微调之外并行运行大规模本地数据集的买家。基础配置详见[Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html)。',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: '该买H100、H200还是L40S?',
+        content: [
+          '**H200在显存和带宽上占优,H100是更易获取、通常也更便宜的SXM5选项,而L40S是面向纯推理的风冷PCIe选择。** 截至2026年9月,三者都是NVIDIA当前在售的数据中心GPU;没有一款即将停产,因此选择的关键在于工作负载匹配度,而非过时风险。',
+        ],
+        columns: ['GPU', '显存', '显存带宽', '最适合场景'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', 显存: '80GB HBM3', 显存带宽: '3.35 TB/s', 最适合场景: '多节点训练,可获取性最高' },
+          { GPU: 'NVIDIA H200 SXM', 显存: '141GB HBM3e', 显存带宽: '4.8 TB/s', 最适合场景: '大上下文服务,更大批量训练' },
+          { GPU: 'NVIDIA L40S', 显存: '48GB GDDR6', 显存带宽: '864 GB/s', 最适合场景: '风冷PCIe推理,预算更低' },
+        ],
+        items: [
+          '**选H200的情况:** 服务大上下文工作负载,或训练更大模型时80GB/GPU会导致你想避免的跨GPU分片。',
+          '**选H100的情况:** 需要在多节点NVLink/InfiniBand训练集群中获得最广泛的厂商和经销商可得性,且80GB/GPU足以满足模型规模。',
+          '**选L40S的情况:** 工作负载仅为推理,数据中心只有风冷条件,且48GB/GPU在计划的量化水平下能容纳最大模型。',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'GPU高密度机架需要多少电力和制冷?',
+        content: [
+          '**一台8-GPU H100/H200 SXM5服务器满载功耗约10-12kW——仅8块700W的GPU就占用5.6kW,还不算CPU、内存和风扇。** 一个机架内放两三台这样的服务器就已超过风冷的实际上限。',
+          '行业数据显示,风冷的实际上限大致为每机架20-40kW;超过这个范围就需要液冷(直接芯片或浸没式),可支持每机架100-200kW以上。作为参考,NVIDIA的GB200 NVL72机架级系统总功耗约120-130kW——这是AI机架密度发展方向的一个参考点,而非本文所比较的任何服务器的规格。',
+          '对买家的实际启示:如果计划在一个机架内安装超过一两台8-GPU SXM5服务器,应规划直接芯片液冷方案(Lenovo Neptune,或设施级液冷回路),而不是假设数据中心的标准风冷系统能够应付。',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: '需要InfiniBand还是标准以太网?',
+        content: [
+          '**单节点推理部署不需要InfiniBand——标准100/200GbE以太网就已足够。** 多节点训练或微调集群中,多台服务器上的GPU需要不断同步梯度,因此需要专用的高带宽、低延迟网络结构。',
+          '该网络结构有两个选项:**InfiniBand NDR**(每链路400Gb/s,传统HPC首选,旗舰平台通常每GPU配一个网卡)和**RoCE v2**(基于融合以太网的RDMA——例如NVIDIA Spectrum-X——可在你的网络团队可能已经运营的标准以太网结构上提供相近的吞吐量)。',
+        ],
+        items: [
+          '**使用InfiniBand NDR的情况:** 正在搭建专用的多节点训练集群,希望获得该规模下最成熟、部署最广泛的RDMA网络结构。',
+          '**使用RoCE v2(以太网)的情况:** 团队已经运营融合以太网网络,希望避免维护独立的InfiniBand网络结构及相关技能团队。',
+          '**两者都不需要的情况:** 只运行单节点推理——标准网络已经足够,额外的网络结构成本不值得投入。',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: '如何根据工作负载确定GPU服务器采购规模?',
+        content: [
+          '**采购规模应匹配工作负载,而不是选择可购买的最大配置。** 纯推理部署与训练/微调部署在GPU、内存和网络方面的需求根本不同。',
+        ],
+        numberedItems: [
+          { title: '先对工作负载分类', whyItMatters: '纯推理(为用户提供固定模型服务)所需的GPU显存远少于训练或微调,后者除了模型权重外还需保存梯度和优化器状态,也不需要多节点网络结构。' },
+          { title: '根据模型规模和量化水平估算GPU显存需求', whyItMatters: '一个700亿参数模型在FP16精度下,不算开销就需要约140GB显存——这直接排除了单卡L40S(48GB),意味着需要多GPU H100/H200分片,或改用更小/量化后的模型。' },
+          { title: '决定采用单节点还是多节点', whyItMatters: '如果单台8-GPU服务器的总显存能覆盖模型和并发目标,可以完全跳过InfiniBand/RoCE,节省网络结构成本;如果不能,则应从一开始就为专用网络结构留出预算。' },
+          { title: '下单前将制冷方案与机架密度匹配', whyItMatters: '在承诺每机架部署超过一两台8-GPU SXM5服务器之前,应与设施团队确认目标机架是否支持液冷——交付后再改造制冷系统,成本远高于提前规划。' },
+          { title: '获取正式报价并确认交付周期', whyItMatters: '这些厂商都不公开8-GPU配置的标价,而GPU高密度服务器的交付周期根据GPU分配情况可能从数周到数月不等——预算时不仅要考虑价格,也要考虑时间表。' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: '应该选择哪种保修和支持等级?',
+        content: [
+          '**四家厂商都在基础硬件保修之外提供分层的企业支持,但等级名称、响应时间和包含的服务各不相同——由于计划会调整,购买前请直接向厂商确认当前条款。**',
+        ],
+        items: [
+          '**Dell**在XE9680上销售ProSupport等级(包括响应更快的关键任务选项)——请明确询问GPU服务器专属支持,而非标准PowerEdge等级。',
+          '**Lenovo**为ThinkSystem系列销售Premier Support等级,提供现场响应和主动监测选项。',
+          '**HPE**通过Pointnext Complete Care销售支持,并提供HPE GreenLake作为按用量付费的替代方案,适合希望避免六位数前期支出的买家。',
+          '**Supermicro**的支持条款比其他三家厂商更依赖具体经销商/系统集成商而有较大差异,因为其大部分销量通过该渠道而非直接企业销售完成——请从具体经销商那里以书面形式获取支持条款,而不仅仅参考Supermicro的基础保修页面。',
+          '无论选择哪家厂商,都应具体询问GPU故障时会发生什么(更换SLA、是否需要寄回整个节点还是仅GPU托架)——这是GPU高密度服务器最可能实际发生的故障模式。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '企业买家常犯哪些错误?',
+        items: [
+          '**为纯推理工作负载购买8-GPU SXM5算力。** 如果只是为用户提供固定模型服务,像ProLiant DL380a Gen11这样的2U PCIe平台就能以更低的价格和复杂度覆盖需求。',
+          '**在确认机架制冷能力前就下单。** 同一机架内的第二台或第三台8-GPU SXM5服务器可能超过风冷的实际上限——应在硬件到货前而非到货后与设施团队确认。',
+          '**为"以后可能要扩容"的集群省略网络结构预算。** 在已部署的单节点机群上事后追加InfiniBand或RoCE,比在最初采购时就纳入预算更具破坏性。',
+          '**把标价当作总成本。** 支持合同、网络结构、制冷改造和电力基础设施升级通常会在服务器硬件项之外再增加15-30%的成本。',
+          '**认为H200总是比H100更好的升级选择。** 如果模型和批量大小能够轻松容纳在80GB/GPU以内,H200额外的显存和成本并不会带来任何好处——在支付溢价之前先核实真实的显存需求。',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '企业推理与训练分别需要多少块H100或H200 GPU?',
+            a: '为适中数量的并发用户提供固定模型服务的纯推理部署,通常1-4块GPU就够了,根本不需要8-GPU SXM5平台。训练或微调大模型(700亿参数以上)通常需要完整的8-GPU NVLink配置,以在GPU间分摊模型权重、梯度和优化器状态。采购规模应由工作负载决定,而不是默认"买最大的平台"。',
+          },
+          {
+            q: '一台8-GPU H100机架服务器的实际总成本是多少?',
+            a: '经销商和系统集成商对满配8x H100机型的报价,仅硬件本身大致在20万至37.5万美元之间,还不包括支持合同、网络结构以及任何制冷基础设施升级——这些通常还会再增加15-30%。四家厂商都不公开标价;预算前请获取正式报价。',
+          },
+          {
+            q: 'GPU高密度机架需要液冷吗?',
+            a: '如果计划在一个机架内安装超过一两台8-GPU H100/H200 SXM5服务器,就需要——每台满载功耗约10-12kW,而风冷的实际上限大致为每机架20-40kW。低于这个密度,标准风冷仍可能可行;下单前请与设施团队确认。',
+          },
+          {
+            q: '网络该选InfiniBand还是以太网(RoCE)?',
+            a: '单节点推理两者都不需要——标准以太网就已足够。多节点训练集群中,InfiniBand NDR是该规模下最成熟、部署最广泛的高带宽RDMA网络结构;如果网络团队想避免维护独立的InfiniBand网络结构,以太网上的RoCE v2是替代方案。',
+          },
+          {
+            q: 'Dell vs Lenovo vs HPE vs Supermicro——哪家厂商的企业支持最好?',
+            a: 'Dell、Lenovo和HPE分别通过直接客户团队销售分层企业支持(分别为ProSupport、Premier Support和Pointnext Complete Care)。Supermicro主要通过系统集成商和经销商销售,因此支持条款按经销商差异较大,而非统一的Supermicro等级——购买前请从具体经销商处以书面形式获取支持条款。',
+          },
+          {
+            q: 'H100 vs H200 vs L40S——该买哪种GPU?',
+            a: '如果服务大上下文场景,或训练时80GB/GPU会导致你想避免的跨GPU分片,选H200(141GB HBM3e)。如果80GB已经足够,且需要在多节点训练集群中获得最广泛的厂商和经销商可得性,选H100(80GB HBM3)。如果预算较低且仅做推理,选L40S(48GB GDDR6、PCIe、风冷)。',
+          },
+          {
+            q: '同一机架或服务器内可以混用不同型号的GPU吗?',
+            a: '在单台服务器内不行——8-GPU SXM5平台是围绕单一GPU型号(全部H100或全部H200)通过NVLink构建的,不能混用。在同一机架内可以——只要每台服务器的制冷和功耗分别核算,你可以让一台配置H100/H200用于训练的服务器,和另一台配置L40S用于推理的服务器共处一个机架。',
+          },
+          {
+            q: '企业买家应该选择哪种保修和支持等级?',
+            a: '至少应确认厂商针对GPU故障(而非一般硬件故障)的具体更换SLA——GPU故障是GPU高密度服务器最可能实际发生的故障模式,而更换物流(寄送GPU托架还是整个节点)因厂商和等级而异。响应时间等级应与工作负载实际能承受的停机时间相匹配。',
+          },
+          {
+            q: '在企业规模下,本地部署硬件是否比云GPU租用更便宜?',
+            a: '这取决于利用率,而不仅仅是标价——本地部署硬件前期成本高但运行后每小时成本低,而云端租用没有前期成本但每小时费率高得多。收支平衡点通常出现在持续、接近满负荷利用的情况下;偶发或突发性的工作负载通常租用更划算。详细成本对比请见我们的[云GPU租用指南](/zh/local-llms/cloud-gpu-rental-comparison-2026)。',
+          },
+          {
+            q: '8x H100或H200配置的交付需要多久?',
+            a: 'GPU高密度服务器的交付周期根据GPU分配情况和当前需求,从数周到数月不等——对大多数厂商而言,8-GPU配置都不是现货商品。请将交付周期作为正式报价的一部分加以确认,并据此为项目时间表做预算,而不仅仅是价格。',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '相关阅读',
+        items: [
+          '[企业级本地LLM扩展方案](/zh/local-llms/scaling-local-llms-enterprise)——运行这类硬件的软件层面:Kubernetes编排、负载均衡以及多GPU节点间的冗余。',
+          '[本地LLM工作站搭建方案](/zh/local-llms/local-llm-workstation-build)——面向单个团队或个人的单机方案,而非机架级采购。',
+          '[2026企业级LLM推理服务器](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026)——对比运行在这类硬件上的服务软件vLLM、TGI和NVIDIA NIM。',
+          '[多GPU本地LLM方案](/zh/local-llms/multi-gpu-local-llms)——面向较小规模部署的单机多GPU方案。',
+          '[2026云GPU租用对比](/zh/local-llms/cloud-gpu-rental-comparison-2026)——面向偶发或突发性算力需求的租用替代方案。',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '资料来源',
+        items: [
+          'Dell PowerEdge XE9680产品页 -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Lenovo ThinkSystem SR675 V3产品指南 -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'HPE ProLiant DL380a Gen11数据表 -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Supermicro SYS-821GE-TNHR数据表 -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'NVIDIA H100/H200 Tensor Core GPU规格 -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026企业级GPU服务器采购指南:Dell、Lenovo、HPE、Supermicro对比',
+      description:
+        '对比Dell PowerEdge XE9680、Lenovo SR675 V3、HPE Cray XD670和Supermicro SYS-821GE-TNHR在企业AI场景下的表现:GPU密度、制冷、网络、价格区间,以及推理与训练场景的适配。',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/zh/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'IT采购负责人和基础设施架构师' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: '企业推理与训练分别需要多少块H100或H200 GPU?', acceptedAnswer: { '@type': 'Answer', text: '纯推理通常1-4块GPU就够了;训练或微调大模型通常需要完整的8-GPU NVLink配置。采购规模应由工作负载决定,而非默认购买最大平台。' } },
+        { '@type': 'Question', name: '一台8-GPU H100机架服务器的实际总成本是多少?', acceptedAnswer: { '@type': 'Answer', text: '经销商报价仅硬件本身大致在20万至37.5万美元之间,还需加上支持、网络结构和制冷升级,通常再增加15-30%。' } },
+        { '@type': 'Question', name: 'GPU高密度机架需要液冷吗?', acceptedAnswer: { '@type': 'Answer', text: '每机架超过一两台8-GPU SXM5服务器就需要——每台满载功耗约10-12kW,而风冷的实际上限大致为每机架20-40kW。' } },
+        { '@type': 'Question', name: '网络该选InfiniBand还是以太网(RoCE)?', acceptedAnswer: { '@type': 'Answer', text: '单节点推理两者都不需要。多节点训练集群需要InfiniBand NDR,或作为替代方案的以太网上RoCE v2。' } },
+        { '@type': 'Question', name: 'Dell vs Lenovo vs HPE vs Supermicro——哪家厂商的企业支持最好?', acceptedAnswer: { '@type': 'Answer', text: 'Dell、Lenovo和HPE通过直接客户团队销售分层企业支持。Supermicro主要通过系统集成商销售,因此条款按经销商差异较大。' } },
+        { '@type': 'Question', name: 'H100 vs H200 vs L40S——该买哪种GPU?', acceptedAnswer: { '@type': 'Answer', text: '需要超过80GB/GPU的大上下文服务选H200。80GB已足够且需要最广泛可得性时选H100。预算较低的风冷PCIe推理选L40S。' } },
+        { '@type': 'Question', name: '同一机架或服务器内可以混用不同型号的GPU吗?', acceptedAnswer: { '@type': 'Answer', text: '单台服务器内不行——8-GPU SXM5平台围绕单一GPU型号构建。同一机架内可以,只要各服务器的制冷和功耗分别核算。' } },
+        { '@type': 'Question', name: '企业买家应该选择哪种保修和支持等级?', acceptedAnswer: { '@type': 'Answer', text: '确认针对GPU故障的具体更换SLA,并将响应时间等级与工作负载可承受的停机时间相匹配。' } },
+        { '@type': 'Question', name: '在企业规模下,本地部署硬件是否比云GPU租用更便宜?', acceptedAnswer: { '@type': 'Answer', text: '取决于利用率——本地部署前期成本高但每小时成本低;云端租用无前期成本但每小时费率更高。持续高利用率更适合购买。' } },
+        { '@type': 'Question', name: '8x H100或H200配置的交付需要多久?', acceptedAnswer: { '@type': 'Answer', text: '交付周期根据GPU分配情况从数周到数月不等——请作为正式报价的一部分加以确认。' } },
+      ],
+    },
+  },
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: 'دليل شراء خوادم GPU للمؤسسات 2026: مقارنة Dell وLenovo وHPE وSupermicro',
+    heroImage: '',
+    seoTitle: 'خادم GPU للمؤسسات 2026: Dell مقابل Lenovo مقابل HPE مقابل Supermicro',
+    intro:
+      'شراء خادم GPU على مستوى المؤسسة ليس كشراء محطة عمل واحدة للذكاء الاصطناعي. فمنصة تضم 8 وحدات GPU مُركّبة في رف تكلف مبالغ بست خانات، وتحتاج إلى خطة تبريد وطاقة قبل وصولها، وتُلزم المؤسسة بعلاقة دعم فني مع المورّد لسنوات. يقارن هذا الدليل بين الشركات الأربع التي تبيع فعليًا خوادم GPU على مستوى الرفوف للذكاء الاصطناعي المؤسسي — Dell وLenovo وHPE وSupermicro — من حيث كثافة وحدات GPU ومتطلبات التبريد والشبكات ومستويات الضمان ونطاق السعر، حتى يتمكن فريق المشتريات من تحديد حجم الشراء وفق عبء العمل الفعلي لا وفق ورقة المواصفات الأكثر بريقًا.',
+    metaDescription:
+      'مقارنة بين Dell PowerEdge XE9680 وLenovo SR675 V3 وHPE Cray XD670 وSupermicro SYS-821GE-TNHR للذكاء الاصطناعي المؤسسي: كثافة وحدات GPU، التبريد، الشبكات، نطاق السعر، وأيها يناسب الاستدلال أو التدريب.',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'صفحة تهيئة Dell PowerEdge XE9680' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'صفحة تهيئة Lenovo ThinkSystem SR675 V3' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'صفحة تهيئة Supermicro SYS-821GE-TNHR' },
+    ],
+    twitterDescription:
+      'Dell مقابل Lenovo مقابل HPE مقابل Supermicro: مقارنة خوادم GPU المؤسسية من حيث الكثافة والتبريد والشبكات والسعر لفرق المشتريات.',
+    leadAnswerBlock:
+      '**بالنسبة لعناقيد التدريب المزوّدة بثماني وحدات H100/H200، تُعد Dell PowerEdge XE9680 وHPE Cray XD670 وSupermicro SYS-821GE-TNHR المنافسين الأقرب مباشرة؛ أما للاستدلال فقط أو مع ميزانية محدودة، فإن HPE ProLiant DL380a Gen11 أو Lenovo ThinkSystem SR675 V3 المزوّد بوحدات GPU من نوع PCIe يكلفان نحو ثلث إلى نصف السعر.** يتراوح سعر تهيئة 8x H100/H200 SXM5 تقريبًا بين 200,000 و400,000+ دولار حسب الذاكرة ومستوى الدعم — يجب طلب عرض سعر رسمي من المورّد قبل التخطيط للميزانية، إذ لا يُنشر السعر المُعلن.',
+    audience:
+      'مسؤولو المشتريات التقنية ومهندسو البنية التحتية الذين يشترون خوادم متعددة وحدات GPU مُركّبة في رفوف للاستدلال أو التدريب في بيئات الذكاء الاصطناعي المؤسسية',
+    readTime: '13 دقيقة قراءة',
+    educationalLevel: 'Advanced',
+    primaryTerm: 'خادم GPU للمؤسسات',
+    targetKeywords: [
+      'دليل شراء خادم gpu للمؤسسات 2026',
+      'dell poweredge xe9680 مقارنة lenovo hpe',
+      'خادم gpu رفي للاستدلال بالذكاء الاصطناعي',
+      'h100 مقابل h200 مقابل l40s خادم مؤسسي',
+      'أفضل مورّد خادم gpu لتدريب النماذج اللغوية',
+    ],
+    quickAnswerTop: {
+      ar: {
+        question: 'ما هو مورّد خادم GPU الذي يجب أن تختاره المؤسسة للذكاء الاصطناعي في 2026؟',
+        answer:
+          'اختر أولًا حسب عبء العمل، ثم حسب المورّد. بالنسبة لعناقيد التدريب متعددة العُقد المزوّدة بوحدات H100/H200، تُعد Dell PowerEdge XE9680 وHPE Cray XD670 وSupermicro SYS-821GE-TNHR أقرب المنافسين — جميعها منصات بحجم 8U أو أقل، مزوّدة بثماني وحدات GPU من نوع SXM5، متصلة عبر NVLink، ضمن نطاق سعري يتراوح بين 200,000 و400,000+ دولار. أما للاستدلال فقط أو النشر بعُقدة واحدة، فإن HPE ProLiant DL380a Gen11 (بحجم 2U، وحدات GPU من نوع PCIe) أو Lenovo ThinkSystem SR675 V3 المزوّد بوحدات L40S يكلفان نحو ثلث إلى نصف السعر ويعملان بتبريد هوائي قياسي.',
+        bullets: [
+          'التدريب / عُقد متعددة: Dell XE9680 أو HPE Cray XD670 أو Supermicro SYS-821GE-TNHR — 8x H100/H200 SXM5، توصيل NVLink، جاهز لتقنية InfiniBand',
+          'الاستدلال فقط / ميزانية أقل: HPE ProLiant DL380a Gen11 أو Lenovo SR675 V3 مع L40S — PCIe، تبريد هوائي، لا حاجة لدارة تبريد سائل',
+          'مركز بيانات جاهز للتبريد السائل: Lenovo SR675 V3 مزوّد بتبريد Neptune المباشر على الشريحة',
+          'نطاق سعر خادم 8x H100/H200 SXM5: نحو 200,000-400,000+ دولار وفق عروض أسعار الموزّعين وشركات التكامل — لا تنشر الشركات المصنّعة سعرًا معلنًا',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: 'أبرز النقاط', anchor: '#key-takeaways' },
+      { label: 'حقائق سريعة', anchor: '#quick-facts' },
+      { label: 'أفضل خيار حسب نوع المشتري', anchor: '#best-choice' },
+      { label: 'جدول مقارنة المورّدين', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670 وProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 مقابل H200 مقابل L40S', anchor: '#gpu-options' },
+      { label: 'متطلبات الطاقة والتبريد', anchor: '#power-cooling' },
+      { label: 'الشبكات: InfiniBand مقابل RoCE', anchor: '#networking' },
+      { label: 'كيفية تحديد حجم الشراء', anchor: '#sizing' },
+      { label: 'مستويات الضمان والدعم', anchor: '#warranty-support' },
+      { label: 'أخطاء شائعة عند الشراء', anchor: '#common-mistakes' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
+      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
+      { label: 'المصادر', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'على مشتري خوادم GPU المؤسسية اختيار المورّد وفق عبء العمل — تتنافس Dell PowerEdge XE9680 وHPE Cray XD670 وSupermicro SYS-821GE-TNHR مباشرة على منصات تدريب 8x H100/H200 SXM5 بسعر 200,000-400,000+ دولار، بينما تُغطي HPE ProLiant DL380a Gen11 وLenovo ThinkSystem SR675 V3 المزوّدتان بوحدات GPU من نوع L40S ميزانيات الاستدلال فقط بنحو ثلث إلى نصف السعر.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'شراء خادم ذكاء اصطناعي لشركة ليس مثل تجميع جهاز حاسوب قوي للألعاب. تكلف هذه الأجهزة مبالغ تعادل ثمن منزل، وتحتاج إلى خطة تبريد وكهرباء قبل وصولها، وتأتي مع عقد دعم فني يمتد لسنوات عديدة. يقارن هذا الدليل بين الشركات الأربع التي تبيع فعليًا هذه الخوادم الرفية المخصصة للذكاء الاصطناعي — Dell وLenovo وHPE وSupermicro — حتى يختار المشتري الحجم والمورّد المناسبين للمهمة الفعلية (تشغيل نماذج الذكاء الاصطناعي للموظفين مقابل تدريب نماذج جديدة من الصفر)، لا مجرد أكبر ورقة مواصفات.',
+          },
+        ],
+        items: [
+          '**كثافة وحدات GPU:** تطرح الشركات الأربع جميعها منصة رئيسية بثماني وحدات GPU من نوع SXM5 (Dell XE9680، HPE Cray XD670، Supermicro SYS-821GE-TNHR)؛ كما تبيع Lenovo وHPE منصات PCIe أقل كثافة وأقل تكلفة.',
+          '**نطاق السعر:** يتراوح سعر خادم 8x H100/H200 SXM5 تقريبًا بين 200,000 و400,000+ دولار حسب ذاكرة وحدة GPU (80 جيجابايت لـ H100 مقابل 141 جيجابايت لـ H200) ومستوى الدعم.',
+          '**التبريد هو القيد الحقيقي.** خادمان أو ثلاثة بثماني وحدات GPU من نوع SXM5 يتجاوزان بالفعل السقف العملي للتبريد الهوائي البالغ نحو 20-40 كيلوواط لكل رف — وفوق هذه الكثافة يصبح التبريد السائل إلزاميًا لا اختياريًا.',
+          '**تُعد الشبكة أكثر أهمية للتدريب منها للاستدلال.** تحتاج عناقيد التدريب متعددة العُقد إلى تقنية InfiniBand NDR أو نسيج شبكة RoCE v2 عبر Ethernet؛ أما الاستدلال بعُقدة واحدة فلا يحتاج ذلك.',
+          '**اختر وحدة GPU وفق عبء العمل لا وفق الميزانية فقط.** تناسب L40S (48 جيجابايت، PCIe، تبريد هوائي) الاستدلال؛ بينما تناسب H100/H200 (80-141 جيجابايت، SXM5، NVLink) التدريب والخدمة عالية الحجم.',
+          'المشترون الذين يحتاجون فقط إلى وحدة أو وحدتين GPU لسعة استدلال لا ينبغي أن يشتروا خادمًا رفيًا على الإطلاق — بناء محطة عمل هو الحل المناسب لهذا النطاق.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: 'حقائق سريعة',
+        items: [
+          '**Dell PowerEdge XE9680:** حجم 6U، حتى 8x H100/H200 SXM5، معالجَا Intel Xeon Platinum مزدوجان، حتى 4 تيرابايت من DDR5.',
+          '**Lenovo ThinkSystem SR675 V3:** حجم 3U، حتى 8 وحدات GPU (مزيج من H100/H200/L40S)، معالجَا AMD EPYC 9004/9005 مزدوجان، حتى 6 تيرابايت من DDR5، مع خيار تبريد Neptune السائل.',
+          '**HPE Cray XD670:** حجم 5U، حتى 8x H100/H200 SXM5، معالجَا Intel Xeon من الجيل الرابع مزدوجان، خيارات شبكة InfiniBand NDR / Slingshot 11 / Ethernet.',
+          '**HPE ProLiant DL380a Gen11:** حجم 2U، حتى 4 وحدات GPU عريضة مزدوجة أو 8 وحدات عريضة مفردة (L40S/H100 PCIe)، معالجَا Intel Xeon مزدوجان بحتى 64 نواة.',
+          '**Supermicro SYS-821GE-TNHR:** حجم 8U، حتى 8x H100/H200 SXM5، معالجَا Intel Xeon من الجيل الرابع/الخامس مزدوجان، حتى 8 تيرابايت من DDR5.',
+          '**ذاكرة وحدة GPU:** H100 = 80 جيجابايت HBM3؛ H200 = 141 جيجابايت HBM3e؛ L40S = 48 جيجابايت GDDR6.',
+          '**استهلاك الطاقة في الرف:** يستهلك خادم واحد بثماني وحدات H100/H200 SXM5 نحو 10-12 كيلوواط عند الحمل الكامل — وخادمان منه يتجاوزان بالفعل السقف العملي للتبريد الهوائي لرف واحد.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: 'أي خادم GPU يجب شراؤه حسب حالة الاستخدام؟',
+        content: [
+          '**يعتمد اختيار المورّد المناسب على عبء العمل وجاهزية مركز البيانات، لا على تفضيل العلامة التجارية.** تشير عناقيد التدريب والنشر المخصص للاستدلال فقط ومراكز البيانات الجاهزة للتبريد السائل، كل منها إلى منصة مختلفة.',
+        ],
+        items: [
+          '**الأفضل للتدريب واسع النطاق متعدد العُقد:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) — يمتلك أوسع شبكة مبيعات مؤسسية وشركات تكامل لبناء عنقود متعدد الرفوف متصل عبر InfiniBand.',
+          '**الأفضل لمركز بيانات جاهز للتبريد السائل:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna) — يخفض تبريد Neptune المباشر على الشريحة تكلفة التبريد بشكل ملموس عند الاستخدام العالي المستمر لوحدات GPU، مع خيار معالج AMD EPYC.',
+          '**الأفضل للاستدلال فقط أو أول عملية شراء أصغر:** HPE ProLiant DL380a Gen11 — حجم 2U، تبريد هوائي، وحدات GPU من نوع PCIe، بتكلفة تعادل تقريبًا ثلث إلى نصف تكلفة آلة تدريب 8x SXM5.',
+          '**الأفضل من حيث مرونة التهيئة والقدرة التنافسية في السعر:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html) — يوفر أوسع خيارات التهيئة المخصصة عبر قناة شركات التكامل، وغالبًا ما يكون الطريق الأكثر تنافسية من حيث السعر للوصول إلى تهيئة 8x H100/H200 SXM5.',
+          '**تجنّب الخوادم الرفية تمامًا إذا:** كانت حاجتك الفعلية تقتصر على سعة استدلال بوحدة أو وحدتَي GPU لفريق صغير — فتكلفة [بناء محطة عمل للنماذج اللغوية المحلية](/ar/local-llms/local-llm-workstation-build) تعادل جزءًا يسيرًا من السعر ولا تحتاج إلى خطة تبريد على مستوى مركز البيانات.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: 'كيف تُقارَن الشركات الأربع من حيث المواصفات والسعر؟',
+        content: [
+          '**تمتلك كل من Dell وLenovo وHPE وSupermicro منصة واحدة على الأقل بثماني وحدات GPU من نوع SXM5، لكنها تتباين بوضوح في الشكل الفيزيائي وخيارات التبريد وقناة البيع.**',
+        ],
+        columns: ['المورّد / الطراز', 'الشكل الفيزيائي', 'أقصى عدد GPU', 'خيارات GPU', 'التبريد', 'نطاق السعر'],
+        rows: [
+          { 'المورّد / الطراز': 'Dell PowerEdge XE9680', 'الشكل الفيزيائي': '6U', 'أقصى عدد GPU': '8 (SXM5، NVLink)', 'خيارات GPU': 'H100 80GB / H200 141GB', التبريد: 'هوائي قياسي، سائل اختياري', 'نطاق السعر': '~200-375 ألف دولار (8 GPU)' },
+          { 'المورّد / الطراز': 'Lenovo SR675 V3', 'الشكل الفيزيائي': '3U', 'أقصى عدد GPU': '8 (PCIe أو SXM)', 'خيارات GPU': 'H100 / H200 / L40S', التبريد: 'هوائي أو Neptune السائل', 'نطاق السعر': 'متفاوت جدًا حسب التهيئة' },
+          { 'المورّد / الطراز': 'HPE Cray XD670', 'الشكل الفيزيائي': '5U', 'أقصى عدد GPU': '8 (SXM5، NVLink)', 'خيارات GPU': 'H100 80GB / H200 141GB', التبريد: 'هوائي قياسي', 'نطاق السعر': 'عرض سعر فقط' },
+          { 'المورّد / الطراز': 'HPE ProLiant DL380a Gen11', 'الشكل الفيزيائي': '2U', 'أقصى عدد GPU': '4 عريضة مزدوجة / 8 مفردة', 'خيارات GPU': 'L40S / H100 PCIe', التبريد: 'هوائي فقط', 'نطاق السعر': 'أقل — عرض سعر فقط' },
+          { 'المورّد / الطراز': 'Supermicro SYS-821GE-TNHR', 'الشكل الفيزيائي': '8U', 'أقصى عدد GPU': '8 (SXM5، NVLink)', 'خيارات GPU': 'H100 80GB / H200 141GB', التبريد: 'هوائي قياسي', 'نطاق السعر': '~200-320 ألف دولار (8 GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'ما الذي يقدّمه Dell PowerEdge XE9680؟',
+        content: [
+          '**يُعد Dell PowerEdge XE9680 خادمًا رفيًا بحجم 6U يستوعب 8 وحدات NVIDIA HGX H100 أو H200 SXM5 متصلة عبر NVLink، وقد صُمم خصيصًا لتدريب واستدلال النماذج الكبيرة.** يقرن هذا الخادم وحدات GPU بمعالجَي Intel Xeon Scalable من الجيل الرابع أو الخامس (حتى 56 نواة لكل معالج)، وحتى 32 فتحة ذاكرة DDR5 (بحد أقصى 4 تيرابايت، 4800 ميجا-انتقال/ثانية)، و10 فتحات PCIe Gen5 x16 لتوسعة الشبكة والتخزين.',
+          'يُشحن بتبريد هوائي كخيار قياسي؛ وتوفر Dell خيارات تبريد سائل لمراكز البيانات التي تتجاوز نحو 20-30 كيلوواط لكل رف، حيث يتوقف التبريد الهوائي عن أن يكون عمليًا.',
+          'لا يُنشر السعر — تراوحت عروض أسعار الموزّعين وشركات التكامل لوحدة 8x H100/H200 كاملة التهيئة تقريبًا بين 200,000 و375,000 دولار حسب مستوى ذاكرة GPU والذاكرة العشوائية والتخزين ومستوى الدعم. يُنصح بطلب عرض سعر رسمي عبر [Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) قبل التخطيط للميزانية.',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'ما الذي يقدّمه Lenovo ThinkSystem SR675 V3؟',
+        content: [
+          '**يُعد Lenovo ThinkSystem SR675 V3 خادمًا رفيًا بحجم 3U يدعم حتى 8 وحدات GPU عريضة مزدوجة أو مفردة — بما فيها NVIDIA H100 وH200 وL40S — مقرونة بمعالجَي AMD EPYC 9004/9005 من الجيل الخامس، وحتى 6 تيرابايت من ذاكرة DDR5-4800 عبر 24 فتحة DIMM.**',
+          'الميزة المميزة هي تقنية Lenovo Neptune، وهي نظام تبريد مباشر على الشريحة وهجين سائل-هوائي متاح كخيار تهيئة — وهو مهم للمشترين الذين تعمل منشآتهم بالفعل بدارات تبريد سائل أو تخطط لإضافتها، إذ يخفض تكلفة التبريد بشكل ملموس في أحمال GPU عالية الاستخدام المستمر مقارنة بالهواء وحده.',
+          'كما يدعم SR675 V3 تهيئات GPU مختلطة (تهيئات H200 بأربع وحدات GPU متصلة عبر NVLink، أو L40S للنشر الموجّه نحو الاستدلال)، ما يجعله المنصة الأكثر مرونة في التهيئة ضمن هذه المقارنة للمشترين الراغبين في عائلة واحدة من الهياكل تغطي التدريب والاستدلال معًا. يمكن التهيئة عبر [Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna).',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'ما الذي يقدّمه HPE Cray XD670 وProLiant DL380a Gen11؟',
+        content: [
+          '**تبيع HPE مستويَين مختلفين من خوادم GPU: Cray XD670 للتدريب واسع النطاق، وProLiant DL380a Gen11 للاستدلال والنشر الأصغر حجمًا.**',
+          'يُعد **Cray XD670** هيكلًا بحجم 5U يستوعب 8 وحدات NVIDIA H100 أو H200 SXM5 مع معالجَي Intel Xeon من الجيل الرابع. تكمن ميزته المميزة في مرونة اختيار نسيج الشبكة: 8 فتحات PCIe Gen5 نصف الارتفاع تدعم HPE Slingshot 11 أو InfiniBand NDR أو Ethernet القياسية — وهو أمر مهم للمشترين الذين وحّدوا معاييرهم بالفعل على Slingshot ضمن بنية تحتية حالية من طراز HPE Cray للحوسبة الفائقة.',
+          'أما **ProLiant DL380a Gen11** فهو خادم بحجم 2U يدعم 4 وحدات GPU عريضة مزدوجة أو 8 وحدات عريضة مفردة (L40S أو H100 PCIe)، وحتى 3 تيرابايت من DDR5، ودعم PCIe 5.0 — وهو الخيار المُبرَّد هوائيًا الأقل كثافة لأحمال الاستدلال أو أول عملية شراء لوحدات GPU لا تبرر منصة بثماني وحدات SXM5. كلا الطرازين متاحان على [HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html).',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'ما الذي يقدّمه Supermicro SYS-821GE-TNHR؟',
+        content: [
+          '**يُعد Supermicro SYS-821GE-TNHR خادمًا رفيًا بحجم 8U يدعم حتى 8 وحدات NVIDIA HGX H100 (80 جيجابايت) أو HGX H200 (141 جيجابايت)، ومعالجَين Intel Xeon Scalable من الجيل الرابع أو الخامس، وحتى 8 تيرابايت من ذاكرة DDR5-5600 عبر 32 فتحة DIMM** — وهو ما يمثل أعلى سعة ذاكرة عشوائية قصوى بين المنصات الأربع المقارَنة هنا.',
+          'تبيع Supermicro منتجاتها بشكل أساسي عبر قناة شركات التكامل والموزّعين لا عبر فرق مبيعات مؤسسية مباشرة، ما يعني عادةً مرونة أكبر في التهيئة حسب الطلب (فتحات الأقراص، بطاقات الشبكة، تكرار مزوّد الطاقة)، ووفقًا لقوائم الموزّعين الحالية، سعرًا افتتاحيًا تنافسيًا لتهيئة 8x H100 — إذ تراوحت عروض أسعار التهيئة الأساسية تقريبًا بين 200,000 و320,000 دولار، مع ارتفاع أسعار التهيئات الكاملة عن ذلك.',
+          'يُعد التخزين نقطة قوة: حتى 19 فتحة أقراص 2.5 بوصة قابلة للتبديل الفوري من نوع NVMe/SATA/SAS، بالإضافة إلى فتحتَي M.2 — وهو أمر مفيد للمشترين الذين يشغّلون مجموعات بيانات محلية كبيرة إلى جانب الاستدلال أو الضبط الدقيق. يمكن الاطلاع على التهيئة الأساسية عبر [Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html).',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: 'هل يجب شراء H100 أم H200 أم L40S؟',
+        content: [
+          '**تتفوق H200 من حيث الذاكرة وعرض النطاق الترددي، بينما تُعد H100 الخيار الأوسع توفرًا وغالبًا الأرخص من فئة SXM5، أما L40S فهي الخيار المُبرَّد هوائيًا من نوع PCIe المخصص للاستدلال فقط.** جميع الوحدات الثلاث هي وحدات GPU حالية لمراكز البيانات من NVIDIA اعتبارًا من سبتمبر 2026؛ ولا يُتوقع إيقاف تصنيع أي منها قريبًا، لذا فإن الاختيار يعتمد على ملاءمة عبء العمل لا على خطر التقادم.',
+        ],
+        columns: ['وحدة GPU', 'الذاكرة', 'عرض النطاق الترددي', 'الأنسب لـ'],
+        rows: [
+          { 'وحدة GPU': 'NVIDIA H100 SXM5', الذاكرة: '80 جيجابايت HBM3', 'عرض النطاق الترددي': '3.35 تيرابايت/ثانية', 'الأنسب لـ': 'التدريب متعدد العُقد، أوسع توفر' },
+          { 'وحدة GPU': 'NVIDIA H200 SXM', الذاكرة: '141 جيجابايت HBM3e', 'عرض النطاق الترددي': '4.8 تيرابايت/ثانية', 'الأنسب لـ': 'خدمة السياق الكبير، تدريب دفعات أكبر' },
+          { 'وحدة GPU': 'NVIDIA L40S', الذاكرة: '48 جيجابايت GDDR6', 'عرض النطاق الترددي': '864 جيجابايت/ثانية', 'الأنسب لـ': 'استدلال PCIe مُبرَّد هوائيًا، ميزانية أقل' },
+        ],
+        items: [
+          '**اختر H200 إذا:** كنت تخدم أحمال عمل ذات سياق كبير أو تدرّب نماذج أكبر حيث تفرض 80 جيجابايت لكل وحدة GPU تجزئة عبر وحدات GPU تفضّل تجنّبها.',
+          '**اختر H100 إذا:** كنت بحاجة إلى أوسع توفر لدى الشركات المصنّعة والموزّعين لعنقود تدريب متعدد العُقد يستخدم NVLink/InfiniBand، وكانت 80 جيجابايت لكل وحدة GPU كافية لحجم نموذجك.',
+          '**اختر L40S إذا:** كان عبء العمل استدلالًا فقط، ومركز البيانات مُبرَّد هوائيًا فقط، وتغطي 48 جيجابايت لكل وحدة GPU أكبر نموذج لديك عند مستوى التكميم المخطط له.',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'كم من الطاقة والتبريد يحتاجه رف عالي الكثافة بوحدات GPU؟',
+        content: [
+          '**يستهلك خادم واحد بثماني وحدات H100/H200 SXM5 نحو 10-12 كيلوواط عند الحمل الكامل — إذ تستهلك وحدات GPU الثماني وحدها بقدرة 700 واط لكل منها 5.6 كيلوواط، قبل احتساب المعالجات والذاكرة والمراوح.** خادمان أو ثلاثة من هذا النوع في رف واحد يتجاوزان بالفعل السقف العملي للتبريد الهوائي.',
+          'تُشير أرقام الصناعة إلى أن الحد العملي للتبريد الهوائي يبلغ نحو 20-40 كيلوواط لكل رف؛ وفوق ذلك يصبح التبريد السائل (المباشر على الشريحة أو بالغمر) ضروريًا، ويمكنه دعم 100-200 كيلوواط أو أكثر لكل رف. وللمقارنة، يستهلك نظام NVIDIA GB200 NVL72 على مستوى الرف نحو 120-130 كيلوواط إجمالًا — وهو مؤشر على الاتجاه الذي تسير نحوه كثافة رفوف الذكاء الاصطناعي، وليس مواصفة لأي خادم من الخوادم المقارَنة هنا.',
+          'الأثر العملي على المشترين: إذا كنت تخطط لتركيب أكثر من خادم أو خادمين بثماني وحدات GPU من نوع SXM5 في الرف الواحد، فخطط لتبريد سائل مباشر على الشريحة (Lenovo Neptune، أو دارة تبريد سائل على مستوى المنشأة) بدلًا من افتراض أن التبريد الهوائي القياسي لمركز البيانات سيكون كافيًا.',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: 'هل تحتاج إلى InfiniBand أم إلى Ethernet قياسية؟',
+        content: [
+          '**لا تحتاج عمليات نشر الاستدلال بعُقدة واحدة إلى InfiniBand — تكفي شبكة Ethernet قياسية بسرعة 100/200 جيجابت في الثانية.** أما عناقيد التدريب أو الضبط الدقيق متعددة العُقد، حيث تحتاج وحدات GPU عبر خوادم متعددة إلى مزامنة التدرّجات باستمرار، فتحتاج فعليًا إلى نسيج شبكة مخصص بعرض نطاق ترددي عالٍ وزمن استجابة منخفض.',
+          'الخياران المتاحان لهذا النسيج هما **InfiniBand NDR** (400 جيجابت/ثانية لكل رابط، الخيار التقليدي في الحوسبة عالية الأداء، بطاقة شبكة واحدة لكل وحدة GPU في المنصات الرئيسية) و**RoCE v2** (نقل بيانات RDMA عبر شبكة Ethernet متقاربة — مثل NVIDIA Spectrum-X — وهي تقدّم إنتاجية مماثلة عبر نسيج Ethernet قياسي قد يكون فريق الشبكة لديك يشغّله بالفعل).',
+        ],
+        items: [
+          '**استخدم InfiniBand NDR إذا:** كنت تبني عنقود تدريب متعدد العُقد مخصصًا وتريد نسيج RDMA الأنضج والأوسع انتشارًا في هذا النطاق.',
+          '**استخدم RoCE v2 (Ethernet) إذا:** كان فريقك يشغّل بالفعل شبكة Ethernet متقاربة ويريد تجنّب صيانة نسيج InfiniBand منفصل ومهارات مستقلة له.',
+          '**تجنّب الخيارين معًا إذا:** كنت تشغّل استدلالًا بعُقدة واحدة فقط — تكفي الشبكة القياسية، ولا تُبرَّر تكلفة نسيج الشبكة الإضافي.',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: 'كيف تحدد حجم شراء خادم GPU وفق عبء العمل لديك؟',
+        content: [
+          '**حدّد حجم الشراء وفق عبء العمل، لا وفق أكبر تهيئة متاحة.** تختلف متطلبات GPU والذاكرة والشبكة اختلافًا جوهريًا بين نشر الاستدلال فقط ونشر التدريب/الضبط الدقيق.',
+        ],
+        numberedItems: [
+          { title: 'صنّف عبء العمل أولًا', whyItMatters: 'يحتاج الاستدلال فقط (تقديم نموذج ثابت للمستخدمين) إلى ذاكرة GPU أقل بكثير ولا يحتاج إلى نسيج شبكة متعدد العُقد، مقارنة بالتدريب أو الضبط الدقيق الذي يحتاج إلى الاحتفاظ بالتدرّجات وحالة المُحسِّن إضافة إلى أوزان النموذج.' },
+          { title: 'قدّر حاجة ذاكرة GPU من حجم النموذج ومستوى التكميم', whyItMatters: 'يحتاج نموذج بـ70 مليار معلمة عند دقة FP16 إلى نحو 140 جيجابايت من الذاكرة قبل احتساب النفقات الإضافية — وهذا وحده يستبعد وحدة L40S منفردة (48 جيجابايت) ويوجّه نحو تجزئة متعددة الوحدات من نوع H100/H200، أو اختيار نموذج أصغر أو مُكمَّم.' },
+          { title: 'قرّر بين عُقدة واحدة أو عُقد متعددة', whyItMatters: 'إذا كانت ذاكرة خادم بثماني وحدات GPU مجتمعة كافية لتغطية النموذج وهدف التزامن، فتجاوز InfiniBand/RoCE تمامًا ووفّر تكلفة نسيج الشبكة؛ وإن لم تكن كافية، فخصص ميزانية لنسيج شبكة مخصص منذ البداية.' },
+          { title: 'واءم التبريد مع كثافة الرف قبل الطلب', whyItMatters: 'تأكد مع فريق المنشآت مما إذا كان الرف المستهدف يدعم التبريد السائل قبل الالتزام بأكثر من خادم أو خادمين بثماني وحدات GPU من نوع SXM5 لكل رف — فتعديل التبريد بعد التسليم أكثر تكلفة بكثير من التخطيط له مسبقًا.' },
+          { title: 'احصل على عرض سعر رسمي وأكّد مدة التسليم', whyItMatters: 'لا يُنشر أي من هذه الشركات المصنّعة سعرًا معلنًا لتهيئات ثماني وحدات GPU، وتراوحت مدد تسليم الخوادم عالية الكثافة بوحدات GPU بين عدة أسابيع وبضعة أشهر حسب تخصيص وحدات GPU — خصص ميزانية للجدول الزمني، لا للسعر فقط.' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: 'ما مستوى الضمان والدعم الذي يجب اختياره؟',
+        content: [
+          '**تقدّم الشركات الأربع جميعها دعمًا مؤسسيًا متدرجًا يتجاوز ضمان الجهاز الأساسي، لكن أسماء المستويات وأوقات الاستجابة والخدمات المتضمنة تختلف — لذا يجب تأكيد الشروط الحالية مباشرة مع المورّد قبل الشراء لأن البرامج تتغير.**',
+        ],
+        items: [
+          '**Dell** تبيع مستويات ProSupport (بما فيها خيارات استجابة أسرع للمهام الحرجة) مع خادم XE9680 — اسأل تحديدًا عن دعم مؤهل لخوادم GPU، لا مستوى PowerEdge القياسي.',
+          '**Lenovo** تبيع مستويات Premier Support لسلسلة ThinkSystem، مع خيارات استجابة ميدانية ومراقبة استباقية.',
+          '**HPE** تبيع الدعم عبر Pointnext Complete Care، وتقدّم HPE GreenLake كبديل يقوم على الدفع حسب الاستخدام بدلًا من الشراء الرأسمالي للمشترين الراغبين في تجنّب التكلفة الأولية بست خانات.',
+          '**Supermicro** — تختلف شروط الدعم فيها حسب الموزّع/شركة التكامل أكثر مما هو الحال لدى الشركات الثلاث الأخرى، إذ يمر معظم حجم مبيعاتها عبر هذه القناة بدلًا من المبيعات المؤسسية المباشرة — احصل على شروط الدعم كتابيًا من الموزّع المحدد، لا من صفحة الضمان الأساسية لشركة Supermicro فقط.',
+          'لدى أي مورّد: اسأل تحديدًا عمّا يحدث عند تعطّل وحدة GPU (اتفاقية مستوى خدمة الاستبدال، وهل يتطلب الأمر إرسال العقدة كاملة أم درج وحدة GPU فقط) — فهذا هو نمط العطل الأكثر احتمالًا فعليًا في خادم عالي الكثافة بوحدات GPU.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'ما الأخطاء التي يرتكبها المشترون المؤسسيون؟',
+        items: [
+          '**شراء سعة ثماني وحدات GPU من نوع SXM5 لعبء عمل استدلال فقط.** إذا كنت تقدّم فقط نموذجًا ثابتًا للمستخدمين، فإن منصة PCIe بحجم 2U مثل ProLiant DL380a Gen11 تغطي ذلك بجزء يسير من السعر والتعقيد.',
+          '**الطلب قبل التأكد من سعة تبريد الرف.** قد يتجاوز خادم ثانٍ أو ثالث بثماني وحدات GPU من نوع SXM5 في الرف نفسه السقف العملي للتبريد الهوائي — تأكد مع فريق المنشآت قبل وصول الجهاز، لا بعده.',
+          '**تجاهل ميزانية نسيج الشبكة لعنقود "قد نوسّعه لاحقًا".** إضافة InfiniBand أو RoCE لاحقًا إلى أسطول عُقدة واحدة منشور بالفعل أكثر إرباكًا من تخصيص ميزانية لها ضمن الشراء الأصلي.',
+          '**اعتبار السعر المعلن التكلفة الإجمالية.** عادةً ما تضيف عقود الدعم ونسيج الشبكة وتحديث التبريد وترقيات البنية التحتية للطاقة 15-30% فوق بند جهاز الخادم نفسه.',
+          '**افتراض أن H200 هي دائمًا الترقية الصحيحة مقارنة بـH100.** إذا كان نموذجك وحجم دفعتك يتناسبان بارتياح مع 80 جيجابايت لكل وحدة GPU، فإن الذاكرة والتكلفة الإضافية لوحدة H200 لا تحققان أي فائدة — تحقق من الحاجة الفعلية للذاكرة قبل دفع الفارق السعري.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'كم عدد وحدات H100 أو H200 التي أحتاجها للاستدلال المؤسسي مقابل التدريب؟',
+            a: 'غالبًا ما تكفي 1-4 وحدات GPU لعمليات نشر الاستدلال فقط التي تقدّم نموذجًا ثابتًا لعدد معتدل من المستخدمين المتزامنين، ولا تحتاج إلى منصة بثماني وحدات SXM5 على الإطلاق. أما تدريب أو ضبط النماذج الكبيرة (70 مليار معلمة أو أكثر) فيحتاج عادةً إلى التهيئة الكاملة بثماني وحدات GPU وNVLink للاحتفاظ بالنموذج والتدرّجات وحالة المُحسِّن عبر وحدات GPU. حدّد حجم الشراء وفق عبء العمل، لا وفق الافتراض الافتراضي "شراء أكبر منصة".',
+          },
+          {
+            q: 'ما التكلفة الإجمالية الفعلية لخادم رفي بثماني وحدات H100؟',
+            a: 'تراوحت عروض أسعار الموزّعين وشركات التكامل لوحدة 8x H100 كاملة التهيئة تقريبًا بين 200,000 و375,000 دولار للجهاز فقط، قبل احتساب عقود الدعم ونسيج الشبكة وأي ترقية للبنية التحتية للتبريد — وهذه عادةً ما تضيف 15-30% أخرى. لا تنشر أي من الشركات الأربع سعرًا معلنًا؛ لذا احصل على عرض سعر رسمي قبل التخطيط للميزانية.',
+          },
+          {
+            q: 'هل أحتاج إلى تبريد سائل لرف عالي الكثافة بوحدات GPU؟',
+            a: 'إذا كنت ستركّب أكثر من خادم أو خادمين بثماني وحدات H100/H200 SXM5 لكل رف، فنعم — يستهلك كل خادم نحو 10-12 كيلوواط عند الحمل الكامل، ويقع الحد العملي للتبريد الهوائي عند نحو 20-40 كيلوواط لكل رف. أما دون هذه الكثافة، فقد يظل التبريد الهوائي القياسي فعالًا؛ تأكد مع فريق المنشآت قبل الطلب.',
+          },
+          {
+            q: 'هل يجب اختيار InfiniBand أم Ethernet (RoCE) للشبكة؟',
+            a: 'لا يحتاج الاستدلال بعُقدة واحدة إلى أي منهما — تكفي شبكة Ethernet القياسية. أما عناقيد التدريب متعددة العُقد فتحتاج إلى InfiniBand NDR، وهو نسيج RDMA الأنضج والأوسع انتشارًا بعرض نطاق ترددي عالٍ؛ ويُعد RoCE v2 عبر Ethernet البديل إن أراد فريق الشبكة تجنّب صيانة نسيج InfiniBand منفصل.',
+          },
+          {
+            q: 'Dell مقابل Lenovo مقابل HPE مقابل Supermicro — أي مورّد لديه أفضل دعم مؤسسي؟',
+            a: 'تبيع كل من Dell وLenovo وHPE دعمًا مؤسسيًا متدرجًا (ProSupport وPremier Support وPointnext Complete Care على التوالي) عبر فرق حسابات مباشرة. أما Supermicro فتبيع بشكل أساسي عبر شركات التكامل والموزّعين، لذا تختلف شروط الدعم حسب الموزّع أكثر من اختلافها عبر مستوى موحّد لدى Supermicro — احصل على شروط الدعم كتابيًا من الموزّع المحدد قبل الشراء.',
+          },
+          {
+            q: 'H100 مقابل H200 مقابل L40S — أي وحدة GPU يجب شراؤها؟',
+            a: 'اختر H200 (141 جيجابايت HBM3e) لخدمة السياق الكبير أو التدريب حيث تفرض 80 جيجابايت لكل وحدة GPU تجزئة عبر وحدات GPU تفضّل تجنّبها. اختر H100 (80 جيجابايت HBM3) لأوسع توفر لدى الشركات المصنّعة والموزّعين في عنقود تدريب متعدد العُقد عندما تكفي 80 جيجابايت. اختر L40S (48 جيجابايت GDDR6، PCIe، تبريد هوائي) للاستدلال فقط بميزانية أقل.',
+          },
+          {
+            q: 'هل يمكن مزج طرازات مختلفة من GPU في الرف أو الخادم نفسه؟',
+            a: 'لا يمكن ذلك ضمن الخادم الواحد — إذ تُبنى منصة الثماني وحدات SXM5 وتتصل عبر NVLink حول طراز واحد من وحدات GPU (إما H100 جميعًا أو H200 جميعًا)، لا مزيجًا منهما. أما ضمن الرف الواحد فيمكن ذلك — يمكنك تشغيل خادم مُهيّأ بوحدات H100/H200 للتدريب بجانب خادم آخر مُهيّأ بوحدات L40S للاستدلال، طالما احتُسب تبريد واستهلاك طاقة كل خادم بشكل منفصل.',
+          },
+          {
+            q: 'ما مستوى الضمان والدعم الذي ينبغي أن يختاره المشترون المؤسسيون؟',
+            a: 'كحد أدنى، تأكد من اتفاقية مستوى خدمة الاستبدال لدى المورّد المخصصة تحديدًا لتعطّل وحدة GPU (لا لعطل الجهاز العام فقط) — فتعطّل وحدة GPU هو نمط العطل الأكثر احتمالًا فعليًا في خادم عالي الكثافة بوحدات GPU، وتختلف لوجستيات الاستبدال (إرسال درج وحدة GPU مقابل العقدة كاملة) حسب المورّد والمستوى. واءم مستوى وقت الاستجابة مع مقدار التعطّل الذي يتحمله عبء العمل فعليًا.',
+          },
+          {
+            q: 'هل الأجهزة المحلية أرخص من استئجار وحدات GPU السحابية على النطاق المؤسسي؟',
+            a: 'يعتمد ذلك على معدل الاستخدام لا على السعر المعلن فقط — تتميز الأجهزة المحلية بتكلفة أولية مرتفعة لكن بتكلفة منخفضة لكل ساعة بعد التشغيل، بينما لا يتطلب الاستئجار السحابي تكلفة أولية لكن بمعدل أعلى بكثير لكل ساعة. تقع نقطة التعادل عادةً عند استخدام مستمر وشبه ثابت؛ أما أحمال العمل العرضية أو المتقطعة فتكون التكلفة عادةً أقل مع الاستئجار. راجع [دليل استئجار وحدات GPU السحابية](/ar/local-llms/cloud-gpu-rental-comparison-2026) لمقارنة تفصيلية للتكاليف.',
+          },
+          {
+            q: 'كم تستغرق مدة تسليم تهيئة 8x H100 أو H200؟',
+            a: 'تراوحت مدد تسليم الخوادم عالية الكثافة بوحدات GPU بين عدة أسابيع وبضعة أشهر حسب تخصيص وحدات GPU والطلب الحالي — فهذا ليس صنفًا متوفرًا في المخزون لدى معظم الموردين ضمن تهيئة ثماني وحدات GPU. أكّد مدة التسليم كجزء من عرض السعر الرسمي، وخصص ميزانية للجدول الزمني للمشروع وفقًا لذلك، لا للسعر فقط.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[توسيع نطاق النماذج اللغوية المحلية للمؤسسات](/ar/local-llms/scaling-local-llms-enterprise) — الجانب البرمجي لهذه البنية التحتية: تنسيق Kubernetes وموازنة الأحمال والتكرار عبر عُقد GPU متعددة.',
+          '[بناء محطة عمل للنماذج اللغوية المحلية](/ar/local-llms/local-llm-workstation-build) — جهاز مكتبي واحد لفريق أو فرد، لا شراء على مستوى الرفوف.',
+          '[خوادم استدلال النماذج اللغوية المؤسسية 2026](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — مقارنة بين vLLM وTGI وNVIDIA NIM كبرمجيات خدمة تعمل على هذا الجهاز.',
+          '[النماذج اللغوية المحلية متعددة وحدات GPU](/ar/local-llms/multi-gpu-local-llms) — إعداد متعدد وحدات GPU على جهاز واحد لعمليات نشر أصغر.',
+          '[مقارنة استئجار وحدات GPU السحابية 2026](/ar/local-llms/cloud-gpu-rental-comparison-2026) — بديل الاستئجار بدلًا من الشراء لاحتياجات الحوسبة العرضية أو المتقطعة.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        items: [
+          'صفحة منتج Dell PowerEdge XE9680 -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'دليل منتج Lenovo ThinkSystem SR675 V3 -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'ورقة بيانات HPE ProLiant DL380a Gen11 -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'ورقة بيانات Supermicro SYS-821GE-TNHR -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'مواصفات NVIDIA H100/H200 Tensor Core GPU -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'دليل شراء خوادم GPU للمؤسسات 2026: مقارنة Dell وLenovo وHPE وSupermicro',
+      description:
+        'مقارنة بين Dell PowerEdge XE9680 وLenovo SR675 V3 وHPE Cray XD670 وSupermicro SYS-821GE-TNHR للذكاء الاصطناعي المؤسسي: كثافة وحدات GPU، التبريد، الشبكات، نطاق السعر، وأيها يناسب الاستدلال أو التدريب.',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ar/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'مسؤولو المشتريات التقنية ومهندسو البنية التحتية' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'كم عدد وحدات H100 أو H200 التي أحتاجها للاستدلال المؤسسي مقابل التدريب؟', acceptedAnswer: { '@type': 'Answer', text: 'غالبًا ما يكفي 1-4 وحدات GPU للاستدلال فقط؛ ويحتاج تدريب أو ضبط النماذج الكبيرة عادةً إلى التهيئة الكاملة بثماني وحدات GPU وNVLink. حدّد حجم الشراء وفق عبء العمل لا وفق الشراء الافتراضي لأكبر منصة.' } },
+        { '@type': 'Question', name: 'ما التكلفة الإجمالية الفعلية لخادم رفي بثماني وحدات H100؟', acceptedAnswer: { '@type': 'Answer', text: 'تراوحت عروض أسعار الموزّعين لوحدة 8x H100 كاملة التهيئة تقريبًا بين 200,000 و375,000 دولار للجهاز فقط، قبل احتساب الدعم ونسيج الشبكة وترقيات التبريد التي عادةً ما تضيف 15-30% أخرى.' } },
+        { '@type': 'Question', name: 'هل أحتاج إلى تبريد سائل لرف عالي الكثافة بوحدات GPU؟', acceptedAnswer: { '@type': 'Answer', text: 'مع أكثر من خادم أو خادمين بثماني وحدات SXM5 لكل رف، نعم — يستهلك كل منهما نحو 10-12 كيلوواط عند الحمل الكامل، ويبلغ الحد العملي للتبريد الهوائي نحو 20-40 كيلوواط لكل رف.' } },
+        { '@type': 'Question', name: 'هل يجب اختيار InfiniBand أم Ethernet (RoCE) للشبكة؟', acceptedAnswer: { '@type': 'Answer', text: 'لا يحتاج الاستدلال بعُقدة واحدة إلى أي منهما. تحتاج عناقيد التدريب متعددة العُقد إلى InfiniBand NDR أو بديلها RoCE v2 عبر Ethernet.' } },
+        { '@type': 'Question', name: 'Dell مقابل Lenovo مقابل HPE مقابل Supermicro — أي مورّد لديه أفضل دعم مؤسسي؟', acceptedAnswer: { '@type': 'Answer', text: 'تبيع Dell وLenovo وHPE دعمًا مؤسسيًا متدرجًا عبر فرق حسابات مباشرة. أما Supermicro فتبيع بشكل أساسي عبر شركات التكامل، لذا تختلف الشروط حسب الموزّع.' } },
+        { '@type': 'Question', name: 'H100 مقابل H200 مقابل L40S — أي وحدة GPU يجب شراؤها؟', acceptedAnswer: { '@type': 'Answer', text: 'H200 لخدمة السياق الكبير التي تحتاج أكثر من 80 جيجابايت لكل وحدة GPU. H100 لأوسع توفر عندما تكفي 80 جيجابايت. L40S للاستدلال PCIe المُبرَّد هوائيًا بميزانية أقل.' } },
+        { '@type': 'Question', name: 'هل يمكن مزج طرازات مختلفة من GPU في الرف أو الخادم نفسه؟', acceptedAnswer: { '@type': 'Answer', text: 'لا يمكن ذلك ضمن الخادم الواحد — تُبنى منصة الثماني وحدات SXM5 حول طراز واحد من وحدات GPU. أما ضمن الرف الواحد فيمكن ذلك طالما احتُسب تبريد واستهلاك طاقة كل خادم بشكل منفصل.' } },
+        { '@type': 'Question', name: 'ما مستوى الضمان والدعم الذي ينبغي أن يختاره المشترون المؤسسيون؟', acceptedAnswer: { '@type': 'Answer', text: 'تأكد من اتفاقية مستوى خدمة الاستبدال المخصصة لتعطّل وحدة GPU وواءم مستوى وقت الاستجابة مع مقدار التعطّل الذي يتحمله عبء العمل فعليًا.' } },
+        { '@type': 'Question', name: 'هل الأجهزة المحلية أرخص من استئجار وحدات GPU السحابية على النطاق المؤسسي؟', acceptedAnswer: { '@type': 'Answer', text: 'يعتمد ذلك على معدل الاستخدام — الأجهزة المحلية تكلفتها الأولية مرتفعة لكن تكلفتها لكل ساعة منخفضة؛ الاستئجار السحابي بلا تكلفة أولية لكن بمعدل أعلى لكل ساعة. الاستخدام المستمر المرتفع يرجّح كفة الشراء.' } },
+        { '@type': 'Question', name: 'كم تستغرق مدة تسليم تهيئة 8x H100 أو H200؟', acceptedAnswer: { '@type': 'Answer', text: 'تراوحت المدد بين عدة أسابيع وبضعة أشهر حسب تخصيص وحدات GPU — أكّدها كجزء من عرض السعر الرسمي.' } },
+      ],
+    },
+  },
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
+    current_hardware_mentioned: [
+      'NVIDIA H100 80GB SXM5',
+      'NVIDIA H200 141GB SXM5',
+      'NVIDIA L40S 48GB',
+      'Dell PowerEdge XE9680',
+      'Lenovo ThinkSystem SR675 V3',
+      'HPE Cray XD670',
+      'HPE ProLiant DL380a Gen11',
+      'Supermicro SYS-821GE-TNHR',
+    ],
+    theme: 'Enterprise',
+    title: '2026 엔터프라이즈 GPU 서버 구매 가이드: Dell·Lenovo·HPE·Supermicro 비교',
+    heroImage: '',
+    seoTitle: '2026 엔터프라이즈 GPU 서버: Dell vs Lenovo vs HPE vs Supermicro',
+    intro:
+      '엔터프라이즈 GPU 서버 구매는 AI 워크스테이션 한 대를 구매하는 것과는 전혀 다른 차원의 결정입니다. 랙 마운트형 8-GPU 플랫폼은 수십만 달러에 이르는 투자이며, 도입 전부터 냉각과 전력 계획이 필요하고, 수년간 벤더 지원 관계에 묶이게 됩니다. 이 가이드는 실제로 엔터프라이즈 AI용 랙스케일 GPU 서버를 판매하는 4개 벤더 — Dell, Lenovo, HPE, Supermicro — 를 GPU 밀도, 냉각 요건, 네트워킹, 지원 등급, 가격대 기준으로 비교하여, 구매 담당자가 화려한 스펙시트가 아니라 실제 워크로드에 맞춰 구매 규모를 정할 수 있도록 돕습니다.',
+    metaDescription:
+      'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670, Supermicro SYS-821GE-TNHR을 엔터프라이즈 AI 관점에서 비교합니다. GPU 밀도, 냉각, 네트워크, 가격대, 추론 대 학습 적합성을 다룹니다.',
+    publishDate: '2026-09-02',
+    dateModified: '2026-09-02',
+    affiliateDisclosure: true,
+    affiliateLinks: [
+      { url: 'https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680', productName: 'Dell PowerEdge XE9680', productCategory: 'enterprise-gpu-server', label: 'Dell PowerEdge XE9680 구성 페이지' },
+      { url: 'https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna', productName: 'Lenovo ThinkSystem SR675 V3', productCategory: 'enterprise-gpu-server', label: 'Lenovo ThinkSystem SR675 V3 구성 페이지' },
+      { url: 'https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html', productName: 'Supermicro SYS-821GE-TNHR', productCategory: 'enterprise-gpu-server', label: 'Supermicro SYS-821GE-TNHR 구성 페이지' },
+    ],
+    twitterDescription:
+      'Dell vs Lenovo vs HPE vs Supermicro: 엔터프라이즈 GPU 서버를 밀도, 냉각, 네트워크, 가격 기준으로 비교합니다. 구매 담당자를 위한 정리입니다.',
+    leadAnswerBlock:
+      '**8-GPU H100/H200 학습 클러스터의 경우, Dell PowerEdge XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR이 가장 직접적인 경쟁 제품입니다. 추론 전용이거나 예산이 제한적인 경우에는 PCIe GPU를 탑재한 HPE ProLiant DL380a Gen11 또는 Lenovo ThinkSystem SR675 V3이 약 3분의 1에서 절반 수준의 비용으로 가능합니다.** 8x H100/H200 SXM5 구성은 메모리와 지원 등급에 따라 대략 20만~40만 달러 이상입니다 — 정가는 공개되지 않으므로 예산 수립 전 반드시 벤더로부터 공식 견적을 받으시기 바랍니다.',
+    audience:
+      '엔터프라이즈 AI 추론 또는 학습용으로 랙 마운트형 멀티 GPU 서버를 도입하는 IT 구매 담당자 및 인프라 아키텍트',
+    readTime: '13분 소요',
+    educationalLevel: 'Advanced',
+    primaryTerm: '엔터프라이즈 GPU 서버',
+    targetKeywords: [
+      '엔터프라이즈 gpu 서버 구매 가이드 2026',
+      'dell poweredge xe9680 lenovo hpe 비교',
+      '랙 gpu 서버 ai 추론',
+      'h100 h200 l40s 엔터프라이즈 서버',
+      'llm 학습 gpu 서버 벤더',
+    ],
+    quickAnswerTop: {
+      ko: {
+        question: '2026년 기업이 AI를 위해 선택해야 할 GPU 서버 벤더는 어디인가요?',
+        answer:
+          '워크로드를 먼저 기준으로 삼고, 그다음 벤더를 선택하시기 바랍니다. 멀티 노드 H100/H200 학습 클러스터의 경우, Dell PowerEdge XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR이 가장 가까운 경쟁 제품입니다 — 모두 8U 이하 폼팩터, 8x SXM5 GPU, NVLink 연결이며 가격대는 20만~40만 달러 이상입니다. 추론 전용이나 단일 노드 배포의 경우, HPE ProLiant DL380a Gen11(2U, PCIe GPU) 또는 L40S를 탑재한 Lenovo ThinkSystem SR675 V3이 약 3분의 1에서 절반 수준의 비용이며 표준 공랭으로 운영할 수 있습니다.',
+        bullets: [
+          '학습·멀티 노드: Dell XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR — 8x H100/H200 SXM5, NVLink, InfiniBand 대응',
+          '추론 전용·예산 제한: HPE ProLiant DL380a Gen11 또는 L40S 탑재 Lenovo SR675 V3 — PCIe, 공랭, 액체 냉각 루프 불필요',
+          '액체 냉각 대응 데이터센터: Neptune 다이렉트 투 칩 냉각을 탑재한 Lenovo SR675 V3',
+          '8x H100/H200 SXM5 서버 가격대: 리셀러·SI 견적 기준 대략 20만~40만 달러 이상 — 벤더는 정가를 공개하지 않음',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
+    toc: [
+      { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '요약 정보', anchor: '#quick-facts' },
+      { label: '구매자 유형별 최적 선택', anchor: '#best-choice' },
+      { label: '벤더 비교표', anchor: '#comparison-table' },
+      { label: 'Dell PowerEdge XE9680', anchor: '#dell' },
+      { label: 'Lenovo ThinkSystem SR675 V3', anchor: '#lenovo' },
+      { label: 'HPE Cray XD670과 ProLiant DL380a Gen11', anchor: '#hpe' },
+      { label: 'Supermicro SYS-821GE-TNHR', anchor: '#supermicro' },
+      { label: 'H100 vs H200 vs L40S', anchor: '#gpu-options' },
+      { label: '전력 및 냉각 요건', anchor: '#power-cooling' },
+      { label: '네트워크: InfiniBand vs RoCE', anchor: '#networking' },
+      { label: '구매 규모 산정 방법', anchor: '#sizing' },
+      { label: '보증 및 지원 등급', anchor: '#warranty-support' },
+      { label: '흔한 구매 실수', anchor: '#common-mistakes' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
+      { label: '관련 글', anchor: '#related-reading' },
+      { label: '출처', anchor: '#sources' },
+    ],
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '엔터프라이즈 GPU 서버 구매자는 워크로드에 맞춰 벤더를 선택해야 합니다 — Dell PowerEdge XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR은 20만~40만 달러 이상의 8x H100/H200 SXM5 학습 플랫폼에서 직접 경쟁하며, PCIe L40S를 탑재한 HPE ProLiant DL380a Gen11과 Lenovo ThinkSystem SR675 V3은 추론 전용 예산을 약 3분의 1에서 절반 가격으로 충족시킵니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '기업용 AI 서버 구매는 고성능 게이밍 PC를 조립하는 것과는 전혀 다릅니다. 이런 장비는 집 한 채 가격에 맞먹으며, 도착하기도 전에 냉각과 전력 계획이 필요하고, 수년짜리 지원 계약이 함께 따라옵니다. 이 가이드는 이러한 랙 마운트형 AI 서버를 실제로 판매하는 4개 회사 — Dell, Lenovo, HPE, Supermicro — 를 비교하여, 구매자가 가장 화려한 스펙시트가 아니라 실제 용도(직원용 AI 모델 운영 vs 새 모델을 처음부터 학습)에 맞는 규모와 벤더를 선택할 수 있도록 돕습니다.',
+          },
+        ],
+        items: [
+          '**GPU 밀도:** 4개 벤더 모두 8-GPU SXM5 플래그십 플랫폼을 보유하고 있습니다(Dell XE9680, HPE Cray XD670, Supermicro SYS-821GE-TNHR). Lenovo와 HPE는 밀도와 비용이 낮은 PCIe 플랫폼도 판매합니다.',
+          '**가격대:** 8x H100/H200 SXM5 서버는 GPU 메모리(80GB H100 vs 141GB H200)와 지원 등급에 따라 대략 20만~40만 달러 이상입니다.',
+          '**냉각이야말로 진짜 제약입니다.** 8-GPU SXM5 서버 2~3대만으로도 랙당 약 20-40kW로 알려진 공랭의 실질적 한계를 넘어섭니다 — 이 밀도를 넘어서면 액체 냉각은 선택이 아니라 필수가 됩니다.',
+          '**네트워크는 학습에 중요하고 추론에는 덜 중요합니다.** 멀티 노드 학습 클러스터는 InfiniBand NDR 또는 RoCE v2 이더넷 패브릭이 필요하지만, 단일 노드 추론은 필요하지 않습니다.',
+          '**예산만이 아니라 워크로드에 맞춰 GPU를 선택하세요.** L40S(48GB, PCIe, 공랭)는 추론에 적합하고, H100/H200(80-141GB, SXM5, NVLink)은 학습과 대용량 서빙에 적합합니다.',
+          '추론 용량이 GPU 1~2개면 충분한 구매자는 애초에 랙 서버를 구매해서는 안 됩니다 — 이 규모에는 워크스테이션 구성이 적합합니다.',
+        ],
+      },
+      quickFacts: {
+        id: 'quick-facts',
+        title: '요약 정보',
+        items: [
+          '**Dell PowerEdge XE9680:** 6U, 최대 8x H100/H200 SXM5, 듀얼 Intel Xeon Platinum, 최대 4TB DDR5.',
+          '**Lenovo ThinkSystem SR675 V3:** 3U, 최대 8 GPU(H100/H200/L40S 혼합 가능), 듀얼 AMD EPYC 9004/9005, 최대 6TB DDR5, Neptune 액체 냉각 옵션.',
+          '**HPE Cray XD670:** 5U, 최대 8x H100/H200 SXM5, 듀얼 4세대 Intel Xeon, InfiniBand NDR / Slingshot 11 / 이더넷 패브릭 선택 가능.',
+          '**HPE ProLiant DL380a Gen11:** 2U, 최대 더블와이드 4개 또는 싱글와이드 8개 GPU(L40S/H100 PCIe), 최대 64코어 듀얼 Intel Xeon.',
+          '**Supermicro SYS-821GE-TNHR:** 8U, 최대 8x H100/H200 SXM5, 듀얼 4/5세대 Intel Xeon, 최대 8TB DDR5.',
+          '**GPU VRAM:** H100 = 80GB HBM3; H200 = 141GB HBM3e; L40S = 48GB GDDR6.',
+          '**랙 전력 소비:** 8x H100/H200 SXM5 노드 1대는 최대 부하 시 약 10-12kW를 소비합니다 — 2대만 있어도 랙 하나의 공랭 실질 한계를 넘어섭니다.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '사용 사례별로 어떤 GPU 서버를 구매해야 할까요?',
+        content: [
+          '**적합한 벤더는 브랜드 선호가 아니라 워크로드와 데이터센터 준비 상태에 따라 달라집니다.** 학습 클러스터, 추론 전용 배포, 액체 냉각이 준비된 데이터센터는 각각 다른 플랫폼을 가리킵니다.',
+        ],
+        items: [
+          '**대규모 멀티 노드 학습에 최적:** [Dell PowerEdge XE9680](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680) — InfiniBand로 연결된 멀티 랙 클러스터를 구축하기 위한 가장 넓은 엔터프라이즈 영업 및 SI 네트워크를 보유하고 있습니다.',
+          '**액체 냉각 대응 데이터센터에 최적:** [Lenovo ThinkSystem SR675 V3](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna) — Neptune 다이렉트 투 칩 액체 냉각은 지속적인 고부하 GPU 사용 시 냉각 비용을 크게 절감하며, AMD EPYC CPU 옵션도 제공합니다.',
+          '**추론 전용 또는 소규모 첫 도입에 최적:** HPE ProLiant DL380a Gen11 — 2U, 공랭, PCIe GPU, 8x SXM5 학습 서버 대비 약 3분의 1에서 절반 수준의 비용입니다.',
+          '**구성 유연성과 가격 경쟁력에 최적:** [Supermicro SYS-821GE-TNHR](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html) — SI 채널을 통해 가장 폭넓은 맞춤 구성 옵션을 제공하며, 8x H100/H200 SXM5 구성으로 가는 가격 경쟁력 있는 경로인 경우가 많습니다.',
+          '**다음의 경우 랙 서버 자체를 피하십시오:** 실제 필요가 소규모 팀을 위한 GPU 1~2개 분량의 추론 용량이라면, [로컬 LLM 워크스테이션 구축](/ko/local-llms/local-llm-workstation-build)이 훨씬 저렴하고 데이터센터 수준의 냉각 계획도 필요하지 않습니다.',
+        ],
+      },
+      comparisonTable: {
+        id: 'comparison-table',
+        title: '4개 벤더는 스펙과 가격 면에서 어떻게 비교되나요?',
+        content: [
+          '**Dell, Lenovo, HPE, Supermicro는 각각 최소 하나의 8-GPU SXM5 플랫폼을 보유하고 있지만, 폼팩터, 냉각 옵션, 판매 채널에서 뚜렷한 차이를 보입니다.**',
+        ],
+        columns: ['벤더 / 모델', '폼팩터', '최대 GPU', 'GPU 옵션', '냉각 방식', '가격대'],
+        rows: [
+          { '벤더 / 모델': 'Dell PowerEdge XE9680', 폼팩터: '6U', '최대 GPU': '8 (SXM5, NVLink)', 'GPU 옵션': 'H100 80GB / H200 141GB', '냉각 방식': '표준 공랭, 액체 냉각 옵션', 가격대: '약 20-37.5만 달러 (8GPU)' },
+          { '벤더 / 모델': 'Lenovo SR675 V3', 폼팩터: '3U', '최대 GPU': '8 (PCIe 또는 SXM)', 'GPU 옵션': 'H100 / H200 / L40S', '냉각 방식': '공랭 또는 Neptune 액체 냉각', 가격대: '구성에 따라 큰 폭 변동' },
+          { '벤더 / 모델': 'HPE Cray XD670', 폼팩터: '5U', '최대 GPU': '8 (SXM5, NVLink)', 'GPU 옵션': 'H100 80GB / H200 141GB', '냉각 방식': '표준 공랭', 가격대: '견적 전용' },
+          { '벤더 / 모델': 'HPE ProLiant DL380a Gen11', 폼팩터: '2U', '최대 GPU': '더블와이드 4 / 싱글 8', 'GPU 옵션': 'L40S / H100 PCIe', '냉각 방식': '공랭 전용', 가격대: '더 저렴 — 견적 전용' },
+          { '벤더 / 모델': 'Supermicro SYS-821GE-TNHR', 폼팩터: '8U', '최대 GPU': '8 (SXM5, NVLink)', 'GPU 옵션': 'H100 80GB / H200 141GB', '냉각 방식': '표준 공랭', 가격대: '약 20-32만 달러 (8GPU)' },
+        ],
+      },
+      dell: {
+        id: 'dell',
+        title: 'Dell PowerEdge XE9680은 무엇을 제공하나요?',
+        content: [
+          '**Dell PowerEdge XE9680은 NVLink로 연결된 NVIDIA HGX H100 또는 H200 SXM5 GPU 8개를 탑재한 6U 랙 서버로, 대형 모델 학습과 추론을 위해 특별히 설계되었습니다.** GPU와 함께 4세대 또는 5세대 Intel Xeon Scalable 프로세서 2개(각 최대 56코어), 최대 32개의 DDR5 DIMM 슬롯(최대 4TB, 4800 MT/s), 네트워킹과 스토리지 확장을 위한 10개의 PCIe Gen5 x16 슬롯을 갖추고 있습니다.',
+          '기본적으로 공랭으로 출하되며, 랙당 약 20-30kW를 초과해 공랭이 실질적으로 한계에 달하는 데이터센터를 위해 Dell은 액체 냉각 옵션을 제공합니다.',
+          '가격은 공개되지 않습니다 — 완전히 구성된 8x H100/H200 유닛에 대한 리셀러 및 SI 견적은 GPU 메모리 등급, RAM, 스토리지, 지원 수준에 따라 대략 20만~37만 5천 달러 범위였습니다. 예산을 수립하기 전에 [Dell.com](https://www.dell.com/en-us/shop/ipovw/poweredge-xe9680)에서 공식 견적을 받으시기 바랍니다.',
+        ],
+      },
+      lenovo: {
+        id: 'lenovo',
+        title: 'Lenovo ThinkSystem SR675 V3은 무엇을 제공하나요?',
+        content: [
+          '**Lenovo ThinkSystem SR675 V3은 NVIDIA H100, H200, L40S를 포함한 최대 8개의 더블와이드 또는 싱글와이드 GPU를 지원하는 3U 랙 서버로, 5세대 AMD EPYC 9004/9005 프로세서 2개, 24개 DIMM 슬롯을 통한 최대 6TB의 DDR5-4800 메모리를 갖추고 있습니다.**',
+          '가장 큰 특징은 구성 옵션으로 제공되는 Lenovo Neptune입니다. 이는 다이렉트 투 칩 및 하이브리드 액체-공기 냉각 시스템으로, 이미 액체 냉각 루프를 운영 중이거나 도입을 계획하는 시설을 가진 구매자에게 중요합니다. 지속적인 고부하 GPU 사용 시 공랭 단독 대비 냉각 비용을 크게 절감하기 때문입니다.',
+          'SR675 V3은 혼합 GPU 구성(H200 4-GPU NVLink 빌드, 또는 추론 중심의 L40S 구성)도 지원하여, 하나의 섀시 제품군으로 학습과 추론을 모두 커버하고 싶은 구매자에게 이 비교에서 가장 구성 유연성이 높은 플랫폼입니다. 구성은 [Lenovo.com](https://www.lenovo.com/us/en/p/servers-storage/servers/racks/thinksystem-sr675-v3/7d9ra00lna)에서 가능합니다.',
+        ],
+      },
+      hpe: {
+        id: 'hpe',
+        title: 'HPE Cray XD670과 ProLiant DL380a Gen11은 무엇을 제공하나요?',
+        content: [
+          '**HPE는 두 가지 뚜렷한 GPU 서버 등급을 판매합니다: 대규모 학습을 위한 Cray XD670과, 추론 및 소규모 배포를 위한 ProLiant DL380a Gen11입니다.**',
+          '**Cray XD670**은 4세대 Intel Xeon 프로세서 2개와 8x NVIDIA H100 또는 H200 SXM5 GPU를 탑재한 5U 섀시입니다. 가장 큰 특징은 패브릭 선택의 자유도입니다 — 8개의 PCIe Gen5 하프 하이트 슬롯이 HPE Slingshot 11, InfiniBand NDR, 표준 이더넷을 지원하여, 기존 HPE Cray 슈퍼컴퓨팅 환경에서 이미 Slingshot으로 표준화한 구매자에게 유의미합니다.',
+          '**ProLiant DL380a Gen11**은 더블와이드 4개 또는 싱글와이드 8개 GPU(L40S 또는 H100 PCIe), 최대 3TB DDR5, PCIe 5.0을 지원하는 2U 서버입니다 — 8-GPU SXM5 플랫폼을 정당화하기 어려운 추론 워크로드나 첫 GPU 도입을 위한 공랭·저밀도 옵션입니다. 두 모델 모두 [HPE.com](https://www.hpe.com/us/en/hpe-cray-xd670.html)에서 확인할 수 있습니다.',
+        ],
+      },
+      supermicro: {
+        id: 'supermicro',
+        title: 'Supermicro SYS-821GE-TNHR은 무엇을 제공하나요?',
+        content: [
+          '**Supermicro SYS-821GE-TNHR은 최대 8개의 NVIDIA HGX H100(80GB) 또는 HGX H200(141GB) GPU, 4세대 또는 5세대 Intel Xeon Scalable 프로세서 2개, 32개 DIMM 슬롯을 통한 최대 8TB DDR5-5600 메모리를 지원하는 8U 랙 서버입니다** — 여기서 비교한 4개 플랫폼 중 최대 RAM 용량이 가장 높습니다.',
+          'Supermicro는 직접 엔터프라이즈 영업팀보다는 주로 SI 및 리셀러 채널을 통해 판매하며, 이는 일반적으로 드라이브 베이, 네트워크 카드, 전원 이중화 등 맞춤 구성의 유연성이 더 크다는 것을 의미합니다. 현재 리셀러 목록에 따르면 8x H100 구성에 경쟁력 있는 시작 가격을 제시하는 경우가 많습니다 — 기본 구성 견적은 대략 20만~32만 달러 범위였으며, 풀 구성은 그보다 높습니다.',
+          '스토리지가 강점입니다: 최대 19개의 핫스왑 2.5인치 NVMe/SATA/SAS 베이와 M.2 슬롯 2개를 갖추고 있어, 추론이나 파인튜닝과 병행해 대규모 로컬 데이터셋을 운영하는 구매자에게 유용합니다. 기본 구성은 [Supermicro.com](https://store.supermicro.com/us_en/8u-gpu-superserver-sys-821ge-tnhr.html)에서 확인하실 수 있습니다.',
+        ],
+      },
+      gpuOptions: {
+        id: 'gpu-options',
+        title: 'H100, H200, L40S 중 어느 것을 구매해야 할까요?',
+        content: [
+          '**H200은 메모리와 대역폭에서 우위를 보이고, H100은 더 쉽게 구할 수 있으면서 대체로 더 저렴한 SXM5 옵션이며, L40S는 추론 전용을 위한 공랭 PCIe 선택지입니다.** 2026년 9월 기준 세 GPU 모두 NVIDIA의 현행 데이터센터 GPU이며, 어느 것도 단종이 임박하지 않았으므로 선택 기준은 진부화 위험이 아니라 워크로드 적합성입니다.',
+        ],
+        columns: ['GPU', 'VRAM', '메모리 대역폭', '최적 용도'],
+        rows: [
+          { GPU: 'NVIDIA H100 SXM5', VRAM: '80GB HBM3', '메모리 대역폭': '3.35 TB/s', '최적 용도': '멀티 노드 학습, 가장 넓은 구매 가능성' },
+          { GPU: 'NVIDIA H200 SXM', VRAM: '141GB HBM3e', '메모리 대역폭': '4.8 TB/s', '최적 용도': '대용량 컨텍스트 서빙, 더 큰 배치 학습' },
+          { GPU: 'NVIDIA L40S', VRAM: '48GB GDDR6', '메모리 대역폭': '864 GB/s', '최적 용도': '공랭 PCIe 추론, 저예산' },
+        ],
+        items: [
+          '**H200을 선택하는 경우:** 대용량 컨텍스트 워크로드를 서빙하거나, 80GB/GPU로는 피하고 싶은 크로스 GPU 샤딩이 필요한 더 큰 모델을 학습하는 경우입니다.',
+          '**H100을 선택하는 경우:** 멀티 노드 NVLink/InfiniBand 학습 클러스터에서 가장 폭넓은 벤더·리셀러 구매 가능성이 필요하고, 80GB/GPU가 모델 크기에 충분한 경우입니다.',
+          '**L40S를 선택하는 경우:** 워크로드가 추론 전용이고, 데이터센터가 공랭만 지원하며, 계획한 양자화 수준에서 48GB/GPU가 가장 큰 모델을 커버하는 경우입니다.',
+        ],
+      },
+      powerCooling: {
+        id: 'power-cooling',
+        title: 'GPU 고밀도 랙에는 얼마나 많은 전력과 냉각이 필요한가요?',
+        content: [
+          '**8-GPU H100/H200 SXM5 서버 1대는 최대 부하 시 약 10-12kW를 소비합니다 — 700W GPU 8개만으로도 CPU, 메모리, 팬을 제외하고 5.6kW에 달합니다.** 이런 서버 2~3대만 한 랙에 들어가도 공랭의 실질적 한계를 넘어섭니다.',
+          '업계 자료에 따르면 공랭의 실질적 한계는 랙당 약 20-40kW이며, 그 이상에서는 액체 냉각(다이렉트 투 칩 또는 침지식)이 필요하고 랙당 100-200kW 이상을 지원할 수 있습니다. 참고로 NVIDIA GB200 NVL72 랙스케일 시스템은 전체적으로 약 120-130kW를 소비합니다 — 이는 AI 랙 밀도가 향하는 방향을 보여주는 참고 수치이지, 여기서 비교한 어떤 서버의 사양도 아닙니다.',
+          '구매자를 위한 실무적 시사점: 한 랙에 8-GPU SXM5 서버를 2대 이상 설치할 계획이라면, 데이터센터의 표준 공조가 감당할 수 있다고 가정하기보다는 다이렉트 투 칩 액체 냉각(Lenovo Neptune 또는 시설 단위 액체 냉각 루프)을 계획해야 합니다.',
+        ],
+      },
+      networking: {
+        id: 'networking',
+        title: 'InfiniBand와 표준 이더넷 중 무엇이 필요한가요?',
+        content: [
+          '**단일 노드 추론 배포에는 InfiniBand가 필요하지 않습니다 — 표준 100/200GbE 이더넷으로 충분합니다.** 여러 서버의 GPU가 끊임없이 그래디언트를 동기화해야 하는 멀티 노드 학습·파인튜닝 클러스터에는 고대역폭·저지연 전용 패브릭이 필요합니다.',
+          '해당 패브릭의 두 가지 선택지는 **InfiniBand NDR**(링크당 400Gb/s, 전통적인 HPC 선택지로 플래그십 플랫폼에서는 GPU당 NIC 1개)와 **RoCE v2**(컨버지드 이더넷 상의 RDMA — 예: NVIDIA Spectrum-X — 네트워크 팀이 이미 운영 중일 수 있는 표준 이더넷 패브릭에서 유사한 처리량을 제공)입니다.',
+        ],
+        items: [
+          '**InfiniBand NDR을 사용하는 경우:** 전용 멀티 노드 학습 클러스터를 구축 중이며 이 규모에서 가장 성숙하고 널리 배포된 RDMA 패브릭을 원하는 경우입니다.',
+          '**RoCE v2(이더넷)를 사용하는 경우:** 팀이 이미 컨버지드 이더넷 네트워크를 운영 중이며 별도의 InfiniBand 패브릭과 관련 전문 인력 유지를 피하고 싶은 경우입니다.',
+          '**둘 다 필요 없는 경우:** 단일 노드 추론만 운영하는 경우입니다 — 표준 네트워크로 충분하며 추가 패브릭 비용이 정당화되지 않습니다.',
+        ],
+      },
+      sizing: {
+        id: 'sizing',
+        title: '워크로드에 맞춰 GPU 서버 구매 규모를 어떻게 산정하나요?',
+        content: [
+          '**구매 규모는 사용 가능한 최대 구성이 아니라 워크로드에 맞춰 결정해야 합니다.** 추론 전용 배포와 학습·파인튜닝 배포는 GPU, 메모리, 네트워크 요건이 근본적으로 다릅니다.',
+        ],
+        numberedItems: [
+          { title: '먼저 워크로드를 분류합니다', whyItMatters: '추론 전용(고정 모델을 사용자에게 서빙)은 모델 가중치 외에 그래디언트와 옵티마이저 상태까지 보관해야 하는 학습·파인튜닝에 비해 훨씬 적은 GPU 메모리가 필요하며 멀티 노드 패브릭도 필요 없습니다.' },
+          { title: '모델 크기와 양자화로부터 GPU 메모리 필요량을 추정합니다', whyItMatters: '70B 파라미터 모델은 FP16 기준 오버헤드를 제외하고도 약 140GB의 VRAM이 필요합니다 — 이는 그 자체로 단일 GPU L40S(48GB)를 배제하며, 멀티 GPU H100/H200 샤딩이나 더 작거나 양자화된 모델로의 방향을 시사합니다.' },
+          { title: '단일 노드와 멀티 노드 중 결정합니다', whyItMatters: '8-GPU 서버 한 대의 결합된 VRAM이 모델과 동시성 목표를 충족한다면, InfiniBand/RoCE를 완전히 건너뛰고 패브릭 비용을 절약할 수 있습니다. 그렇지 않다면 처음부터 전용 네트워크 패브릭 예산을 편성해야 합니다.' },
+          { title: '주문 전에 냉각을 랙 밀도에 맞춥니다', whyItMatters: '한 랙에 8-GPU SXM5 서버를 2대 이상 도입하기로 결정하기 전에, 대상 랙이 액체 냉각을 지원하는지 시설 팀과 확인해야 합니다 — 납품 후 냉각을 개조하는 것은 사전 계획보다 훨씬 비용이 많이 듭니다.' },
+          { title: '공식 견적과 납기를 확인합니다', whyItMatters: '이들 벤더 중 어느 곳도 8-GPU 구성의 정가를 공개하지 않으며, GPU 고밀도 서버의 납기는 GPU 할당 상황에 따라 몇 주에서 몇 달까지 다양했습니다 — 가격뿐 아니라 일정도 예산에 반영해야 합니다.' },
+        ],
+      },
+      warrantySupport: {
+        id: 'warranty-support',
+        title: '어떤 보증·지원 등급을 선택해야 할까요?',
+        content: [
+          '**4개 벤더 모두 기본 하드웨어 보증을 넘어서는 단계별 엔터프라이즈 지원을 제공하지만, 등급 명칭, 응답 시간, 포함된 서비스는 서로 다릅니다 — 프로그램이 수시로 변경되므로 구매 전 반드시 벤더에 직접 최신 조건을 확인하시기 바랍니다.**',
+        ],
+        items: [
+          '**Dell**은 XE9680과 함께 ProSupport 등급(더 빠른 미션 크리티컬 응답 옵션 포함)을 판매합니다 — 표준 PowerEdge 등급이 아니라 GPU 서버 전용 인증 지원을 구체적으로 문의하시기 바랍니다.',
+          '**Lenovo**는 ThinkSystem 라인에 Premier Support 등급을 판매하며, 현장 대응 및 사전 모니터링 옵션을 제공합니다.',
+          '**HPE**는 Pointnext Complete Care를 통해 지원을 판매하며, 6자리 초기 비용을 피하고 싶은 구매자를 위해 사용량 기반 대안으로 HPE GreenLake도 제공합니다.',
+          '**Supermicro**의 지원 조건은 직접 엔터프라이즈 판매보다 주로 이 채널을 통해 물량이 이동하기 때문에 다른 세 벤더보다 리셀러·SI별 편차가 큽니다 — Supermicro의 기본 보증 페이지뿐 아니라 구체적인 리셀러로부터 서면으로 지원 조건을 받으시기 바랍니다.',
+          '어떤 벤더든 GPU 장애 시 구체적으로 무슨 일이 일어나는지 물어보시기 바랍니다(교체 SLA, 노드 전체를 보내야 하는지 GPU 트레이만 보내면 되는지) — 이는 GPU 고밀도 서버에서 실제로 가장 발생 가능성이 높은 장애 유형입니다.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '엔터프라이즈 구매자가 흔히 저지르는 실수는 무엇인가요?',
+        items: [
+          '**추론 전용 워크로드에 8-GPU SXM5 용량을 구매하는 것.** 고정 모델을 사용자에게 서빙만 하는 경우라면, ProLiant DL380a Gen11 같은 2U PCIe 플랫폼이 훨씬 저렴한 가격과 낮은 복잡도로 이를 충족할 수 있습니다.',
+          '**랙 냉각 용량을 확인하기 전에 주문하는 것.** 같은 랙에 두 번째, 세 번째 8-GPU SXM5 서버를 추가하면 공랭의 실질적 한계를 넘어설 수 있습니다 — 하드웨어 도착 후가 아니라 도착 전에 시설 팀과 확인해야 합니다.',
+          '**"나중에 확장할 수도 있는" 클러스터에서 네트워크 패브릭 예산을 생략하는 것.** 이미 배포된 단일 노드 환경에 나중에 InfiniBand나 RoCE를 추가하는 것은 처음 구매 시 예산을 편성하는 것보다 훨씬 더 혼란스럽습니다.',
+          '**정가를 총비용으로 간주하는 것.** 지원 계약, 네트워크 패브릭, 냉각 개조, 전력 인프라 업그레이드는 서버 하드웨어 항목 대비 정기적으로 15-30%를 추가합니다.',
+          '**H200이 항상 H100보다 올바른 업그레이드라고 가정하는 것.** 모델과 배치 크기가 80GB/GPU 안에 여유 있게 들어간다면, H200의 추가 메모리와 비용은 아무런 이득이 없습니다 — 프리미엄을 지불하기 전에 실제 VRAM 필요량을 확인하시기 바랍니다.',
+        ],
+      },
+      faqSection: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '엔터프라이즈 추론 대 학습에 H100 또는 H200 GPU가 각각 몇 개 필요한가요?',
+            a: '적당한 수의 동시 사용자에게 고정 모델을 서빙하는 추론 전용 배포는 대개 1~4개 GPU로 충분하며 8-GPU SXM5 플랫폼 자체가 필요하지 않습니다. 대형 모델(70B 이상 파라미터)의 학습 또는 파인튜닝은 일반적으로 모델, 그래디언트, 옵티마이저 상태를 GPU 간에 유지하기 위해 완전한 8-GPU NVLink 구성이 필요합니다. 구매 규모는 "가장 큰 플랫폼을 산다"는 기본값이 아니라 워크로드로부터 산정해야 합니다.',
+          },
+          {
+            q: '8-GPU H100 랙 서버의 실제 총비용은 얼마인가요?',
+            a: '완전히 구성된 8x H100 유닛에 대한 리셀러 및 SI 견적은 하드웨어만으로 대략 20만~37만 5천 달러 범위였으며, 여기에 지원 계약, 네트워크 패브릭, 냉각 인프라 업그레이드가 추가되면 일반적으로 15-30%가 더 붙습니다. 4개 벤더 모두 정가를 공개하지 않으므로 예산 수립 전 공식 견적을 받으시기 바랍니다.',
+          },
+          {
+            q: 'GPU 고밀도 랙에는 액체 냉각이 필요한가요?',
+            a: '한 랙에 8-GPU H100/H200 SXM5 서버를 2대 이상 설치할 계획이라면 필요합니다 — 각 서버는 최대 부하 시 약 10-12kW를 소비하며, 공랭의 실질적 한계는 랙당 약 20-40kW 정도입니다. 이 밀도 이하라면 표준 공랭도 여전히 작동할 수 있으므로, 주문 전 시설 팀과 확인하시기 바랍니다.',
+          },
+          {
+            q: '네트워크에는 InfiniBand와 이더넷(RoCE) 중 무엇을 선택해야 하나요?',
+            a: '단일 노드 추론이라면 둘 다 필요하지 않으며 표준 이더넷으로 충분합니다. 멀티 노드 학습 클러스터에서는 InfiniBand NDR이 가장 성숙하고 널리 배포된 고대역폭 RDMA 패브릭이며, 네트워크 팀이 별도의 InfiniBand 패브릭 유지를 피하고 싶다면 이더넷 상의 RoCE v2가 대안입니다.',
+          },
+          {
+            q: 'Dell vs Lenovo vs HPE vs Supermicro — 어느 벤더의 엔터프라이즈 지원이 가장 우수한가요?',
+            a: 'Dell, Lenovo, HPE는 각각 직접 계정팀을 통해 단계별 엔터프라이즈 지원(각각 ProSupport, Premier Support, Pointnext Complete Care)을 판매합니다. Supermicro는 주로 시스템 통합업체와 리셀러를 통해 판매하므로, 지원 조건은 단일한 Supermicro 전사 등급보다 리셀러별로 더 크게 달라집니다 — 구매 전 구체적인 리셀러로부터 서면으로 지원 조건을 받으시기 바랍니다.',
+          },
+          {
+            q: 'H100 vs H200 vs L40S — 어떤 GPU를 구매해야 하나요?',
+            a: '대용량 컨텍스트 서빙이나, 80GB/GPU로는 피하고 싶은 크로스 GPU 샤딩이 필요한 학습에는 H200(141GB HBM3e)을 선택하시기 바랍니다. 80GB로 충분한 멀티 노드 학습 클러스터에서 가장 넓은 벤더·리셀러 구매 가능성이 필요하다면 H100(80GB HBM3)을 선택하시기 바랍니다. 저예산의 추론 전용이라면 L40S(48GB GDDR6, PCIe, 공랭)를 선택하시기 바랍니다.',
+          },
+          {
+            q: '같은 랙이나 서버 안에서 GPU 모델을 혼합할 수 있나요?',
+            a: '단일 서버 내에서는 불가능합니다 — 8-GPU SXM5 플랫폼은 단일 GPU 모델(모두 H100 또는 모두 H200)을 중심으로 NVLink 연결되어 구축되며, 혼합은 지원되지 않습니다. 랙 내에서는 가능합니다 — 각 서버의 냉각과 전력 소비를 별도로 계산하는 한, 학습용으로 구성된 H100/H200 서버와 추론용으로 구성된 L40S 서버를 나란히 운영할 수 있습니다.',
+          },
+          {
+            q: '엔터프라이즈 구매자는 어떤 보증·지원 등급을 선택해야 하나요?',
+            a: '최소한 일반적인 하드웨어 장애가 아니라 GPU 장애에 특화된 벤더의 교체 SLA를 확인하시기 바랍니다 — GPU 장애는 GPU 고밀도 서버에서 실제로 가장 발생 가능성이 높은 장애 유형이며, 교체 물류(GPU 트레이만 발송 vs 노드 전체 발송)는 벤더와 등급에 따라 다릅니다. 응답 시간 등급은 워크로드가 실제로 감당할 수 있는 다운타임에 맞춰 선택하시기 바랍니다.',
+          },
+          {
+            q: '엔터프라이즈 규모에서는 온프레미스 하드웨어가 클라우드 GPU 대여보다 저렴한가요?',
+            a: '이는 정가보다는 활용률에 달려 있습니다 — 온프레미스 하드웨어는 초기 비용이 높지만 가동 후 시간당 비용이 낮은 반면, 클라우드 대여는 초기 비용이 없지만 시간당 요금이 훨씬 높습니다. 손익분기점은 대체로 지속적이고 거의 일정한 활용률에서 형성되며, 간헐적이거나 급증하는 워크로드는 대여가 대개 더 저렴합니다. 자세한 비용 비교는 [클라우드 GPU 대여 가이드](/ko/local-llms/cloud-gpu-rental-comparison-2026)를 참고하시기 바랍니다.',
+          },
+          {
+            q: '8x H100 또는 H200 구성의 납기는 얼마나 걸리나요?',
+            a: 'GPU 고밀도 서버의 납기는 GPU 할당 상황과 현재 수요에 따라 몇 주에서 몇 달까지 다양했습니다 — 대부분의 벤더에게 8-GPU 구성은 재고로 보유하는 품목이 아닙니다. 공식 견적의 일부로 납기를 확인하고, 가격뿐 아니라 프로젝트 일정도 이에 맞춰 예산에 반영하시기 바랍니다.',
+          },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '관련 글',
+        items: [
+          '[엔터프라이즈용 로컬 LLM 스케일링](/ko/local-llms/scaling-local-llms-enterprise) — 이 하드웨어를 운영하는 소프트웨어 측면: Kubernetes 오케스트레이션, 로드 밸런싱, 여러 GPU 노드 간 이중화.',
+          '[로컬 LLM 워크스테이션 구축](/ko/local-llms/local-llm-workstation-build) — 랙 도입이 아니라 팀 또는 개인 한 명을 위한 단일 데스크톱 구성.',
+          '[2026 엔터프라이즈 LLM 추론 서버](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — 이 하드웨어에서 실행되는 서빙 소프트웨어로서 vLLM, TGI, NVIDIA NIM 비교.',
+          '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) — 소규모 배포를 위한 단일 머신 내 멀티 GPU 구성.',
+          '[2026 클라우드 GPU 대여 비교](/ko/local-llms/cloud-gpu-rental-comparison-2026) — 간헐적이거나 급증하는 컴퓨팅 수요를 위한 대여 대 구매 대안.',
+        ],
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        items: [
+          'Dell PowerEdge XE9680 제품 페이지 -- dell.com/en-us/shop/ipovw/poweredge-xe9680',
+          'Lenovo ThinkSystem SR675 V3 Product Guide -- lenovopress.lenovo.com/lp1611-thinksystem-sr675-v3-server',
+          'HPE Cray XD670 QuickSpecs -- hpe.com/us/en/hpe-cray-xd670.html',
+          'HPE ProLiant DL380a Gen11 데이터시트 -- hpe.com/us/en/compute/hpe-proliant-compute/dl380a-gen11.html',
+          'Supermicro SYS-821GE-TNHR 데이터시트 -- supermicro.com/en/products/system/datasheet/SYS-821GE-TNHR',
+          'NVIDIA H100/H200 Tensor Core GPU 사양 -- nvidia.com',
+        ],
+      },
+    },
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: '2026 엔터프라이즈 GPU 서버 구매 가이드: Dell·Lenovo·HPE·Supermicro 비교',
+      description:
+        'Dell PowerEdge XE9680, Lenovo SR675 V3, HPE Cray XD670, Supermicro SYS-821GE-TNHR을 엔터프라이즈 AI 관점에서 비교합니다. GPU 밀도, 냉각, 네트워크, 가격대, 추론 대 학습 적합성을 다룹니다.',
+      datePublished: '2026-09-02',
+      dateModified: '2026-09-02',
+      author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      url: 'https://www.promptquorum.com/ko/local-llms/enterprise-gpu-server-buying-guide-2026',
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+      educationalLevel: 'Advanced',
+      proficiencyLevel: 'Advanced',
+      audience: { '@type': 'Audience', audienceType: 'IT 구매 담당자 및 인프라 아키텍트' },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: '엔터프라이즈 추론 대 학습에 H100 또는 H200 GPU가 각각 몇 개 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '추론 전용은 대개 1~4개 GPU로 충분합니다. 대형 모델의 학습이나 파인튜닝은 일반적으로 완전한 8-GPU NVLink 구성이 필요합니다. 구매 규모는 가장 큰 플랫폼을 기본으로 사는 것이 아니라 워크로드로부터 산정해야 합니다.' } },
+        { '@type': 'Question', name: '8-GPU H100 랙 서버의 실제 총비용은 얼마인가요?', acceptedAnswer: { '@type': 'Answer', text: '리셀러 견적은 하드웨어만으로 대략 20만~37만 5천 달러 범위였으며, 여기에 지원, 네트워크 패브릭, 냉각 업그레이드가 일반적으로 15-30% 추가됩니다.' } },
+        { '@type': 'Question', name: 'GPU 고밀도 랙에는 액체 냉각이 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '랙당 8-GPU SXM5 서버가 2대를 넘으면 필요합니다 — 각각 최대 부하 시 약 10-12kW를 소비하며, 공랭의 실질적 한계는 랙당 약 20-40kW입니다.' } },
+        { '@type': 'Question', name: '네트워크에는 InfiniBand와 이더넷(RoCE) 중 무엇을 선택해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: '단일 노드 추론에는 둘 다 필요하지 않습니다. 멀티 노드 학습 클러스터에는 InfiniBand NDR 또는 대안으로 이더넷 상의 RoCE v2가 필요합니다.' } },
+        { '@type': 'Question', name: 'Dell vs Lenovo vs HPE vs Supermicro — 어느 벤더의 엔터프라이즈 지원이 가장 우수한가요?', acceptedAnswer: { '@type': 'Answer', text: 'Dell, Lenovo, HPE는 직접 계정팀을 통해 단계별 엔터프라이즈 지원을 판매합니다. Supermicro는 주로 시스템 통합업체를 통해 판매하므로 조건이 리셀러별로 더 크게 달라집니다.' } },
+        { '@type': 'Question', name: 'H100 vs H200 vs L40S — 어떤 GPU를 구매해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: '80GB를 초과하는 대용량 컨텍스트 서빙에는 H200. 80GB로 충분하고 가장 넓은 구매 가능성이 필요하면 H100. 저예산 공랭 PCIe 추론에는 L40S를 선택하시기 바랍니다.' } },
+        { '@type': 'Question', name: '같은 랙이나 서버 안에서 GPU 모델을 혼합할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '단일 서버 내에서는 불가능합니다 — 8-GPU SXM5 플랫폼은 단일 GPU 모델을 중심으로 구축됩니다. 랙 내에서는 각 서버의 냉각과 전력 소비를 별도로 계산하면 가능합니다.' } },
+        { '@type': 'Question', name: '엔터프라이즈 구매자는 어떤 보증·지원 등급을 선택해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: 'GPU 장애에 특화된 교체 SLA를 확인하고, 응답 시간 등급을 워크로드가 실제로 감당할 수 있는 다운타임에 맞추시기 바랍니다.' } },
+        { '@type': 'Question', name: '엔터프라이즈 규모에서는 온프레미스 하드웨어가 클라우드 GPU 대여보다 저렴한가요?', acceptedAnswer: { '@type': 'Answer', text: '활용률에 달려 있습니다 — 온프레미스는 초기 비용이 높지만 시간당 비용은 낮습니다. 클라우드 대여는 초기 비용이 없지만 시간당 요금이 더 높습니다. 지속적으로 높은 활용률은 구매가 유리합니다.' } },
+        { '@type': 'Question', name: '8x H100 또는 H200 구성의 납기는 얼마나 걸리나요?', acceptedAnswer: { '@type': 'Answer', text: '납기는 GPU 할당 상황에 따라 몇 주에서 몇 달까지 다양했습니다 — 공식 견적의 일부로 확인하시기 바랍니다.' } },
+      ],
+    },
+  },
+}

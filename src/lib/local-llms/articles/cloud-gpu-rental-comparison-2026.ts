@@ -468,6 +468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Q4_K_M vs Q5_K_M vs Q8_0',
           '[Alibaba Cloud vs Tencent Cloud GPU for AI (2026)](/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026) — Price/performance for Chinese-market GPU cloud: PAI-DSW vs TI Platform.',
           '[Best Cloud GPU for Fine-Tuning Under $1/hr](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour) — RunPod, Vast.ai, Lambda: cheapest A100/H100 hourly slots for LoRA fine-tuning.',
+          '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — Dell, Lenovo, HPE, and Supermicro rack-scale GPU servers compared for buyers who cross the buy-vs-rent break-even point.',
         ],
       },
       faq: {
