@@ -6541,6 +6541,24 @@
       ],
       "images": []
     },
+    "backyard-ai-review-local-roleplay-2026": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "mobile-llm-models-phi4-gemma-smollm": {
       "dateModified": "2026-07-14",
       "lastFactChecked": null,

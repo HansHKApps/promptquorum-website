@@ -371,6 +371,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-ide-plugins-2026",
         "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
         "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
@@ -386,7 +394,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Llamafile": {
@@ -820,6 +828,44 @@
     "totalCount": 2,
     "capped": false
   },
+  "Backyard AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+        "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
+        "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+        "dateModified": "2026-08-29",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-08-24",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-creative-writing-2026",
+        "title": "Best Local LLMs for Creative Writing 2026: Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing-2026",
+        "dateModified": "2026-07-16",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 4,
+    "capped": false
+  },
   "Enchanted": {
     "articles": [
       {
@@ -1000,6 +1046,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
@@ -1062,21 +1116,21 @@
         "url": "/local-llms/llamacpp-vs-ollama-vs-vllm",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lm-studio-advanced-features",
-        "title": "LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning",
-        "url": "/local-llms/lm-studio-advanced-features",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "SillyTavern": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "open-webui-vs-sillytavern",
@@ -1150,7 +1204,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "LobeChat": {
@@ -3224,6 +3278,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
         "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
         "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
@@ -3271,13 +3333,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "RisuAI": {
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "backyard-ai-review-local-roleplay-2026",
+        "title": "Backyard AI Review (2026): Local AI Character Chat and Roleplay",
+        "url": "/power-local-llm/backyard-ai-review-local-roleplay-2026",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
         "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
         "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
@@ -3325,7 +3395,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   }
 }

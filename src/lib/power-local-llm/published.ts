@@ -45,6 +45,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'sillytavern-vs-agnai-vs-risuai-roleplay',
   'uncensored-local-llm-creative-writing-ethics',
 
+  // Backyard AI review — 2026-09-02
+  'backyard-ai-review-local-roleplay-2026',
+
   // Cat 6 — Mobile & Edge LLMs (6)
   'best-local-llm-apps-iphone-2026',
   'best-local-llm-apps-android-2026',
