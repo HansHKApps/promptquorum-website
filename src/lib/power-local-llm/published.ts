@@ -122,6 +122,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Flowise shutdown coverage — 2026-09-02
   'flowise-ai-visual-workflow-builder-review',
+
+  // Haystack (deepset) RAG framework review — 2026-09-02
+  'haystack-deepset-rag-framework-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

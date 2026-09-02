@@ -109,4 +109,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Flowise shutdown coverage 2026-09-02
   'flowise-ai-visual-workflow-builder-review':    'flowise-ai-visual-workflow-builder-review',
+
+  // Haystack (deepset) RAG framework review 2026-09-02
+  'haystack-deepset-rag-framework-review':        'haystack-deepset-rag-framework-review',
 }
