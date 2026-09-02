@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'Readers researching Yuma as a company',
-    intro: 'This profile covers Yuma as a company: its founding, ownership structure, product lineup, confirmed markets, and supplier relationships. It draws on the same registry data and standards referenced throughout PromptQuorum\'s balcony solar coverage, including the industry overview linked below. Readers comparing balcony solar kits or batteries before buying should see the dedicated comparison pages instead — this page does not cover pricing or a buying recommendation.',
+    intro: 'Yuma doesn\'t manufacture the inverters or batteries in its own kits — the Cologne-based company\'s own product is mounting hardware, while the electronics come from Hoymiles, EcoFlow, and Anker SOLIX. Founded in 2020 by three co-founders, Yuma is self-funded with no external investor round found, and confirms sales only in Germany and Austria.',
     leadAnswerBlock: '**Yuma is a self-funded balcony solar company headquartered in Cologne, Germany, founded in 2020 by three co-founders, with no external investor round found.** Yuma does not manufacture its own inverters or batteries — it assembles kits from third-party components, including hardware from Hoymiles, EcoFlow, and Anker SOLIX, and its own product contribution is the mounting hardware, which varies by installation surface. Confirmed markets are Germany and Austria, per Yuma\'s own shipping and support documentation.',
     sections: {
       tldr: {
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'Leser, die sich über das Unternehmen Yuma informieren möchten',
-    intro: 'Dieses Profil behandelt Yuma als Unternehmen: Gründung, Eigentümerstruktur, Produktpalette, bestätigte Märkte und Lieferantenbeziehungen. Die Angaben stammen aus denselben Register- und Normendaten, auf die sich die gesamte Balkonsolar-Berichterstattung von PromptQuorum stützt, einschließlich des unten verlinkten Branchenüberblicks. Leser, die vor dem Kauf Balkonkraftwerk-Sets oder -Batterien vergleichen möchten, sollten stattdessen die dedizierten Vergleichsseiten lesen — dieser Beitrag behandelt weder Preise noch eine Kaufempfehlung.',
+    intro: 'Yuma stellt die Wechselrichter und Batterien in den eigenen Sets nicht selbst her — das Kölner Unternehmen liefert nur die Montagehardware, während die Elektronik von Hoymiles, EcoFlow und Anker SOLIX stammt. Yuma wurde 2020 von drei Mitgründern gegründet, ist selbstfinanziert ohne gefundene externe Investorenrunde und bestätigt Verkäufe nur in Deutschland und Österreich.',
     leadAnswerBlock: '**Yuma ist ein selbstfinanziertes Balkonsolar-Unternehmen mit Sitz in Köln, das 2020 von drei Mitgründern gegründet wurde; eine externe Investorenrunde wurde nicht gefunden.** Yuma fertigt keine eigenen Wechselrichter oder Batterien — das Unternehmen stellt Sets aus Drittanbieter-Komponenten zusammen, darunter Hardware von Hoymiles, EcoFlow und Anker SOLIX, und der eigene Produktbeitrag ist die Montagehardware, die je nach Installationsfläche variiert. Bestätigte Märkte sind Deutschland und Österreich, laut Yumas eigener Versand- und Support-Dokumentation.',
     sections: {
       tldr: {
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'Lecteurs qui recherchent des informations sur l\'entreprise Yuma',
-    intro: 'Ce profil couvre Yuma en tant qu\'entreprise : sa fondation, sa structure de propriété, sa gamme de produits, les marchés confirmés et ses relations fournisseurs. Il s\'appuie sur les mêmes données de registre et normes citées dans l\'ensemble de la couverture du solaire de balcon de PromptQuorum, y compris l\'aperçu de l\'industrie lié ci-dessous. Les lecteurs qui comparent des kits ou des batteries solaires de balcon avant d\'acheter devraient plutôt consulter les pages de comparaison dédiées — cette page ne couvre ni les prix ni une recommandation d\'achat.',
+    intro: 'Yuma ne fabrique pas les onduleurs ni les batteries de ses propres kits — l\'entreprise, basée à Cologne, ne fournit que le matériel de fixation, tandis que l\'électronique provient de Hoymiles, EcoFlow et Anker SOLIX. Fondée en 2020 par trois cofondateurs, Yuma est autofinancée, sans tour de financement externe recensé, et ne confirme des ventes qu\'en Allemagne et en Autriche.',
     leadAnswerBlock: '**Yuma est une entreprise solaire de balcon autofinancée, dont le siège est à Cologne, en Allemagne, fondée en 2020 par trois cofondateurs, sans aucun tour de financement externe recensé.** Yuma ne fabrique ni ses propres onduleurs ni ses propres batteries — l\'entreprise assemble des kits à partir de composants tiers, dont du matériel de Hoymiles, EcoFlow et Anker SOLIX, et sa propre contribution produit est le matériel de fixation, qui varie selon la surface d\'installation. Les marchés confirmés sont l\'Allemagne et l\'Autriche, selon la documentation d\'expédition et de support de Yuma elle-même.',
     sections: {
       tldr: {
@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'Yumaという企業について調べている読者',
-    intro: '本プロフィールでは、企業としてのYumaについて解説します。設立経緯、所有構造、製品ラインナップ、確認済み市場、サプライヤー関係を取り上げます。数値はPromptQuorumのベランダ太陽光発電関連記事全体で使用しているものと同じ登録データ・規格に基づいており、下記の業界概観記事とも整合しています。購入前にベランダ太陽光発電用キットやバッテリーを比較検討したい読者は、専用の比較ページをご覧ください。本記事では価格や購入推奨は扱いません。',
+    intro: 'Yumaは自社キットのインバーターやバッテリーを製造していません。ケルン拠点の同社が手掛けるのは取り付け用ハードウェアのみで、電子部品はHoymiles、EcoFlow、Anker SOLIXから調達しています。2020年に3名の共同創業者が設立したYumaは、外部投資家からの出資ラウンドが確認されない自己資金運営の企業であり、確認済みの販売市場はドイツとオーストリアのみです。',
     leadAnswerBlock: '**Yumaは、2020年に3名の共同創業者によってドイツ・ケルンで設立された自己資金運営のベランダ太陽光発電企業で、外部投資家からの出資ラウンドは確認されていません。**Yumaは自社でインバーターやバッテリーを製造しておらず、Hoymiles、EcoFlow、Anker SOLIXなどサードパーティ製のハードウェアを組み合わせてキットを構成しています。自社製品としての貢献は取り付け用ハードウェアであり、設置面に応じて異なります。確認済みの市場はドイツとオーストリアで、Yuma自身の配送・サポート資料に基づいています。',
     sections: {
       tldr: {
@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: '正在研究Yuma这家公司的读者',
-    intro: '本简介介绍作为公司的Yuma:其创立历程、所有权结构、产品线、已确认的市场以及供应商关系。内容参考了PromptQuorum阳台太阳能全部报道中使用的相同注册数据与标准,包括下方链接的行业概览。如果读者是在购买前比较阳台太阳能套件或电池,建议改为查阅专门的对比页面——本页不涉及价格或购买建议。',
+    intro: 'Yuma并不制造自家套件中的逆变器或电池——这家总部位于科隆的公司只提供安装硬件,电子元件则来自Hoymiles、EcoFlow和Anker SOLIX。Yuma由三位联合创始人于2020年创立,为自筹资金运营,未发现外部投资方参与融资,目前确认的销售市场仅为德国和奥地利。',
     leadAnswerBlock: '**Yuma是一家自筹资金运营的阳台太阳能公司,总部位于德国科隆,由三位联合创始人于2020年创立,未发现任何外部投资方参与融资。**Yuma并不自行制造逆变器或电池——公司使用第三方组件组装套件,包括来自Hoymiles、EcoFlow和Anker SOLIX的硬件,其自有产品贡献是安装硬件,具体形式因安装表面而异。已确认的市场为德国和奥地利,依据Yuma官方的配送与支持文档。',
     sections: {
       tldr: {
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'Lectores que investigan a Yuma como empresa',
-    intro: 'Este perfil cubre a Yuma como empresa: su fundación, estructura de propiedad, gama de productos, mercados confirmados y relaciones con proveedores. Se basa en los mismos datos de registro y normas citados en toda la cobertura de solar de balcón de PromptQuorum, incluido el resumen del sector enlazado más abajo. Los lectores que comparan kits o baterías solares de balcón antes de comprar deberían consultar en su lugar las páginas de comparación dedicadas — esta página no cubre precios ni una recomendación de compra.',
+    intro: 'Yuma no fabrica los inversores ni las baterías de sus propios kits: la empresa, con sede en Colonia, solo aporta el hardware de fijación, mientras que la electrónica procede de Hoymiles, EcoFlow y Anker SOLIX. Fundada en 2020 por tres cofundadores, Yuma es autofinanciada, sin ninguna ronda de inversión externa registrada, y solo confirma ventas en Alemania y Austria.',
     leadAnswerBlock: '**Yuma es una empresa de solar de balcón autofinanciada, con sede en Colonia (Alemania), fundada en 2020 por tres cofundadores, sin ninguna ronda de inversión externa identificada.** Yuma no fabrica sus propios inversores ni baterías: ensambla kits con componentes de terceros, incluido hardware de Hoymiles, EcoFlow y Anker SOLIX, y su propia contribución de producto es el hardware de montaje, que varía según la superficie de instalación. Los mercados confirmados son Alemania y Austria, según la propia documentación de envío y soporte de Yuma.',
     sections: {
       tldr: {
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'Leitores que estão pesquisando a empresa Yuma',
-    intro: 'Este perfil aborda a Yuma como empresa: sua fundação, estrutura societária, linha de produtos, mercados confirmados e relações com fornecedores. Baseia-se nos mesmos dados de registro e normas citados em toda a cobertura de energia solar de varanda da PromptQuorum, incluindo a visão geral do setor com link mais abaixo. Leitores que estão comparando kits ou baterias solares de varanda antes de comprar devem consultar as páginas de comparação dedicadas — este texto não trata de preços nem traz recomendação de compra.',
+    intro: 'A Yuma não fabrica os inversores nem as baterias de seus próprios kits — a empresa, sediada em Colônia, fornece apenas o hardware de fixação, enquanto a eletrônica vem da Hoymiles, EcoFlow e Anker SOLIX. Fundada em 2020 por três cofundadores, a Yuma é autofinanciada, sem nenhuma rodada de investimento externo encontrada, e confirma vendas somente na Alemanha e na Áustria.',
     leadAnswerBlock: '**A Yuma é uma empresa de energia solar de varanda autofinanciada, sediada em Colônia, na Alemanha, fundada em 2020 por três cofundadores, sem nenhuma rodada de investimento externo identificada.** A Yuma não fabrica seus próprios inversores nem baterias — a empresa monta kits com componentes de terceiros, incluindo hardware da Hoymiles, EcoFlow e Anker SOLIX, e sua própria contribuição de produto é o hardware de montagem, que varia conforme a superfície de instalação. Os mercados confirmados são Alemanha e Áustria, segundo a própria documentação de envio e suporte da Yuma.',
     sections: {
       tldr: {
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'القراء الذين يبحثون عن شركة Yuma',
-    intro: 'يتناول هذا الملف التعريفي شركة Yuma من الناحية المؤسسية: تأسيسها، وهيكل ملكيتها، ومجموعة منتجاتها، والأسواق المؤكدة، وعلاقاتها مع الموردين. يستند إلى نفس بيانات السجلات والمعايير المستخدمة في تغطية PromptQuorum بأكملها للطاقة الشمسية للشرفات، بما في ذلك نظرة السوق والصناعة العامة المرتبطة أدناه. القراء الذين يقارنون أطقم أو بطاريات الطاقة الشمسية للشرفات قبل الشراء يجب عليهم مراجعة صفحات المقارنة المخصصة بدلاً من ذلك — لا تتناول هذه الصفحة الأسعار أو توصية شراء.',
+    intro: 'لا تصنّع Yuma العاكسات أو البطاريات المستخدمة في أطقمها — فالشركة، ومقرها كولونيا، توفر فقط عتاد التثبيت، بينما تأتي الإلكترونيات من Hoymiles وEcoFlow وAnker SOLIX. تأسست Yuma عام 2020 على يد ثلاثة شركاء مؤسسين، وهي ممولة ذاتيًا دون أي جولة استثمار خارجية تم العثور عليها، وتؤكد المبيعات فقط في ألمانيا والنمسا.',
     leadAnswerBlock: '**Yuma هي شركة طاقة شمسية للشرفات ممولة ذاتيًا، ومقرها كولونيا، ألمانيا، تأسست عام 2020 على يد ثلاثة شركاء مؤسسين، ولم يُعثر على أي جولة استثمار خارجية.** لا تصنّع Yuma عاكساتها أو بطارياتها الخاصة — بل تجمّع أطقمًا من مكونات جهات خارجية، بما في ذلك عتاد من Hoymiles وEcoFlow وAnker SOLIX، ومساهمتها الخاصة في المنتج هي عتاد التركيب، الذي يختلف حسب سطح التركيب. الأسواق المؤكدة هي ألمانيا والنمسا، وفقًا لوثائق الشحن والدعم الخاصة بشركة Yuma.',
     sections: {
       tldr: {
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-20',
     audience: 'Yuma라는 기업을 조사 중인 독자',
-    intro: '이 프로필은 기업으로서의 Yuma를 다룹니다. 설립 배경, 소유 구조, 제품 라인업, 확인된 시장, 공급업체 관계를 살펴봅니다. 내용은 PromptQuorum의 발코니 태양광 관련 전체 콘텐츠에서 사용하는 것과 동일한 등록 데이터 및 표준을 참고했으며, 아래에 링크된 산업 개요와도 일치합니다. 구매 전 발코니 태양광 키트나 배터리를 비교하려는 독자는 전용 비교 페이지를 참고하시기 바랍니다. 이 문서는 가격이나 구매 추천을 다루지 않습니다.',
+    intro: 'Yuma는 자사 키트에 들어가는 인버터나 배터리를 직접 제조하지 않습니다. 쾰른에 본사를 둔 이 회사가 자체적으로 제공하는 것은 마운팅 하드웨어뿐이며, 전자 장비는 Hoymiles, EcoFlow, Anker SOLIX에서 공급받습니다. 2020년 세 명의 공동 창업자가 설립한 Yuma는 외부 투자 라운드가 확인되지 않은 자체 자금 조달 기업이며, 확인된 판매 시장은 독일과 오스트리아뿐입니다.',
     leadAnswerBlock: '**Yuma는 2020년 세 명의 공동 창업자가 독일 쾰른에서 설립한 자체 자금 운영 발코니 태양광 기업으로, 외부 투자 라운드는 확인되지 않았습니다.** Yuma는 자체적으로 인버터나 배터리를 제조하지 않으며, Hoymiles, EcoFlow, Anker SOLIX 등 타사 하드웨어를 조합해 키트를 구성합니다. 자체 제품 기여 부분은 설치 표면에 따라 달라지는 장착용 하드웨어입니다. 확인된 시장은 독일과 오스트리아로, Yuma 자체의 배송 및 지원 문서에 근거합니다.',
     sections: {
       tldr: {

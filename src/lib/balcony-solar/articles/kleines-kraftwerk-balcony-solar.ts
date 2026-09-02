@@ -17,6 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Readers researching Kleines Kraftwerk as a company',
+    intro: 'Kleines Kraftwerk started in a garage in Achim, Germany, in 2022, when two friends founded the company with 100% self-financing. Its only proprietary product is an in-house mounting-bracket system — the battery and inverter hardware in its kits comes from named third-party partners. The company remains Germany-focused, with no official Austria or Switzerland storefront found in this research.',
     // No cross-link requirement specified for this profile in Phase 1.
     sections: {
       snapshot: { title: 'Kleines Kraftwerk: Company Snapshot', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: 'Achim, Germany; founded 2022 by two friends, starting from a garage; 100% self-financed.' },
@@ -36,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leser, die Kleines Kraftwerk als Unternehmen recherchieren',
+    intro: 'Kleines Kraftwerk begann 2022 in einer Garage in Achim, als zwei Freunde das Unternehmen zu 100 % selbstfinanziert gründeten. Das einzige Eigenprodukt ist ein hauseigenes Halterungssystem — die Batterie- und Wechselrichter-Hardware in den Sets stammt von namentlich genannten Drittanbieter-Partnern. Das Unternehmen konzentriert sich weiterhin auf Deutschland; ein offizieller Shop für Österreich oder die Schweiz wurde in dieser Recherche nicht gefunden.',
     sections: {
       snapshot: { title: 'Kleines Kraftwerk: Unternehmensüberblick', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: 'Achim, Deutschland; 2022 von zwei Freunden gegründet, Start in einer Garage; zu 100 % selbstfinanziert.' },
       timeline: { title: 'Zeitleiste', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: 'Gründungsgeschichte und frühes Wachstum bestätigt durch Presseinterviews (Weser-Kurier, Forbes AT).' },
@@ -54,6 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lecteurs qui recherchent des informations sur l\'entreprise Kleines Kraftwerk',
+    intro: 'Kleines Kraftwerk a démarré dans un garage à Achim, en Allemagne, en 2022, lorsque deux amis ont fondé l\'entreprise, autofinancée à 100 %. Son seul produit propriétaire est un système de fixation interne — le matériel de batterie et d\'onduleur de ses kits provient de partenaires tiers nommés. L\'entreprise reste centrée sur l\'Allemagne ; aucune boutique officielle pour l\'Autriche ou la Suisse n\'a été trouvée dans cette recherche.',
     sections: {
       snapshot: { title: 'Kleines Kraftwerk : aperçu de l\'entreprise', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: 'Achim, Allemagne ; fondée en 2022 par deux amis, débuts dans un garage ; autofinancée à 100 %.' },
       timeline: { title: 'Chronologie', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: 'Histoire de la fondation et croissance initiale confirmées par des interviews de presse (Weser-Kurier, Forbes AT).' },
@@ -72,6 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'クレイネス・クラフトヴェルクという企業について調べている読者',
+    intro: 'Kleines Kraftwerkは2022年、ドイツ・アヒムのガレージで、友人2人が自己資金100%で設立した企業です。唯一の自社製品は独自の取付ブラケットシステムで、キットに含まれるバッテリーとインバーターは名指しされたサードパーティのパートナーから供給されています。同社は現在もドイツ市場に注力しており、本調査ではオーストリアやスイス向けの公式販売サイトは確認されませんでした。',
     sections: {
       snapshot: { title: 'クレイネス・クラフトヴェルク:企業スナップショット', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: 'ドイツ・アヒム;2022年に友人2人が設立、ガレージからスタート;自己資金100%。' },
       timeline: { title: '沿革', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: '設立の経緯と初期の成長は、報道インタビュー(Weser-Kurier、Forbes AT)により確認されています。' },
@@ -90,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: '了解Kleines Kraftwerk公司背景的读者',
+    intro: 'Kleines Kraftwerk于2022年在德国阿希姆的一间车库中起步,由两位朋友以100%自筹资金创立。其唯一的自有产品是内部研发的安装支架系统——套件中的电池和逆变器硬件均来自指定的第三方合作伙伴。公司目前仍专注于德国市场,本次调研未发现面向奥地利或瑞士的官方销售渠道。',
     sections: {
       snapshot: { title: 'Kleines Kraftwerk:公司概况', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: '德国阿希姆(Achim);2022年由两位朋友创立,从车库起步;100%自筹资金。' },
       timeline: { title: '发展历程', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: '创立故事及早期发展已通过媒体采访确认(Weser-Kurier、Forbes AT)。' },
@@ -108,6 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lectores que investigan a Kleines Kraftwerk como empresa',
+    intro: 'Kleines Kraftwerk comenzó en un garaje en Achim, Alemania, en 2022, cuando dos amigos fundaron la empresa con financiación propia al 100%. Su único producto propio es un sistema de soportes de montaje desarrollado internamente — el hardware de batería e inversor de sus kits proviene de socios externos identificados. La empresa sigue centrada en Alemania, y esta investigación no encontró una tienda oficial para Austria o Suiza.',
     sections: {
       snapshot: { title: 'Kleines Kraftwerk: resumen de la empresa', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: 'Achim, Alemania; fundada en 2022 por dos amigos, empezando en un garaje; 100% autofinanciada.' },
       timeline: { title: 'Cronología', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: 'La historia fundacional y el crecimiento inicial están confirmados mediante entrevistas de prensa (Weser-Kurier, Forbes AT).' },
@@ -126,6 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leitores que pesquisam a Kleines Kraftwerk como empresa',
+    intro: 'A Kleines Kraftwerk começou em uma garagem em Achim, na Alemanha, em 2022, quando dois amigos fundaram a empresa com financiamento próprio de 100%. Seu único produto proprietário é um sistema de suportes de fixação desenvolvido internamente — o hardware de bateria e inversor de seus kits vem de parceiros terceirizados identificados. A empresa continua focada na Alemanha, e esta pesquisa não encontrou uma loja oficial para Áustria ou Suíça.',
     sections: {
       snapshot: { title: 'Kleines Kraftwerk: visão geral da empresa', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: 'Achim, Alemanha; fundada em 2022 por dois amigos, começando em uma garagem; 100% autofinanciada.' },
       timeline: { title: 'Linha do tempo', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: 'História de fundação e crescimento inicial confirmados por entrevistas à imprensa (Weser-Kurier, Forbes AT).' },
@@ -144,6 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'قراء يبحثون عن معلومات عن شركة Kleines Kraftwerk',
+    intro: 'بدأت Kleines Kraftwerk من كراج في مدينة أخيم بألمانيا عام 2022، حين أسسها صديقان بتمويل ذاتي كامل بنسبة 100%. منتجها الحصري الوحيد هو نظام حوامل تثبيت مُطوَّر داخليًا — أما عتاد البطارية والعاكس في أطقمها فيأتي من شركاء خارجيين محددين بالاسم. لا تزال الشركة تركّز على السوق الألماني، ولم يُعثر في هذا البحث على متجر رسمي للنمسا أو سويسرا.',
     sections: {
       snapshot: { title: 'Kleines Kraftwerk: لمحة عن الشركة', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: 'أخيم، ألمانيا؛ تأسست عام 2022 على يد صديقين، بدءًا من كراج؛ ممولة ذاتيًا بنسبة 100%.' },
       timeline: { title: 'الجدول الزمني', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: 'قصة التأسيس والنمو المبكر مؤكدة عبر مقابلات صحفية (Weser-Kurier، Forbes AT).' },
@@ -162,6 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Kleines Kraftwerk를 기업으로서 조사하는 독자',
+    intro: 'Kleines Kraftwerk는 2022년 독일 아힘(Achim)의 한 차고에서 두 친구가 100% 자체 자금으로 설립한 회사입니다. 유일한 자체 개발 제품은 사내에서 만든 마운팅 브래킷 시스템이며, 키트에 포함된 배터리와 인버터 하드웨어는 명시된 외부 파트너사로부터 공급받습니다. 이 회사는 여전히 독일 시장에 집중하고 있으며, 본 조사에서는 오스트리아나 스위스의 공식 판매처가 확인되지 않았습니다.',
     sections: {
       snapshot: { title: 'Kleines Kraftwerk: 기업 스냅샷', image: '/images/kleines-kraftwerk-balcony-solar-snapshot-en.svg', imageCaption: '독일 아힘(Achim); 2022년 두 친구가 차고에서 시작하여 설립; 100% 자체 자금으로 운영.' },
       timeline: { title: '연혁', image: '/images/kleines-kraftwerk-balcony-solar-timeline-en.svg', imageCaption: '설립 배경과 초기 성장은 언론 인터뷰(Weser-Kurier, Forbes AT)를 통해 확인되었습니다.' },

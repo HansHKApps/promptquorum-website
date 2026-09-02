@@ -17,7 +17,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Readers researching German balcony solar panel manufacturers',
-    // No cross-link requirement specified for this profile in Phase 1.
+    intro: 'Meyer Burger has a balcony solar kit, but its manufacturing subsidiaries entered insolvency proceedings in 2025 — the single fact that should govern any purchase decision involving its products. Heckert Solar\'s balcony line is the only one of the three fully confirmed with named modules; Solarwatt publishes advisory content but no confirmed balcony SKUs. All three are established German panel manufacturers, not startups, but their balcony-specific fulfillment status differs sharply.',
+    // Cross-link requirement: none specified for this profile in Phase 1; intro added post-launch to fix missing hub-card excerpt.
     sections: {
       snapshot: { title: 'Three German Panel Makers, Three Different Situations', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'Meyer Burger has a real balcony kit but is in active insolvency proceedings — the single most important fact on this page.' },
       timeline: { title: 'Meyer Burger: Insolvency Timeline', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: 'This is the fact that should govern any purchase advice involving Meyer Burger’s balcony kit.' },
@@ -36,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leserinnen und Leser, die zu deutschen Balkonkraftwerk-Panelherstellern recherchieren',
+    intro: 'Meyer Burger bietet ein Balkonkraftwerk-Kit an, doch die Fertigungstochtergesellschaften befinden sich seit 2025 in einem Insolvenzverfahren – die eine Tatsache, die jede Kaufentscheidung zu diesen Produkten bestimmen sollte. Nur die Balkonkraftwerk-Linie von Heckert Solar ist von den dreien vollständig mit benannten Modulen bestätigt; Solarwatt veröffentlicht Beratungsinhalte, aber keine bestätigten Balkonkraftwerk-Artikelnummern. Alle drei sind etablierte deutsche Panelhersteller, keine Start-ups, doch ihr Lieferstatus für Balkonkraftwerke unterscheidet sich deutlich.',
     sections: {
       snapshot: { title: 'Drei deutsche Panelhersteller, drei unterschiedliche Situationen', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'Meyer Burger hat ein echtes Balkonkraftwerk-Kit im Angebot, befindet sich jedoch in einem laufenden Insolvenzverfahren — die wichtigste Tatsache auf dieser Seite.' },
       timeline: { title: 'Meyer Burger: Zeitlinie des Insolvenzverfahrens', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: 'Diese Tatsache sollte jede Kaufempfehlung zum Balkonkraftwerk-Kit von Meyer Burger bestimmen.' },
@@ -54,6 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lecteurs qui recherchent des fabricants allemands de panneaux solaires pour balcon',
+    intro: 'Meyer Burger propose un kit solaire pour balcon, mais ses filiales de production sont en procédure d\'insolvabilité depuis 2025 — le fait déterminant pour toute décision d\'achat concernant ses produits. Seule la gamme balcon de Heckert Solar, parmi les trois, est entièrement confirmée avec des modules nommés ; Solarwatt publie du contenu conseil mais aucune référence balcon confirmée. Les trois sont des fabricants allemands établis, pas des start-ups, mais leur capacité à livrer des kits balcon diffère nettement.',
     sections: {
       snapshot: { title: 'Trois fabricants allemands, trois situations différentes', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'Meyer Burger propose un vrai kit solaire pour balcon, mais fait l\'objet d\'une procédure d\'insolvabilité active — le fait le plus important de cette page.' },
       timeline: { title: 'Meyer Burger : chronologie de la procédure d\'insolvabilité', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: 'Ce fait devrait déterminer toute recommandation d\'achat concernant le kit solaire pour balcon de Meyer Burger.' },
@@ -72,6 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'ドイツ製バルコニー太陽光パネルメーカーについて調べている読者',
+    intro: 'Meyer Burgerはバルコニー太陽光キットを提供していますが、製造子会社は2025年から倒産手続き中です——これが同社製品の購入判断を左右する最重要事実です。3社のうちHeckert Solarのバルコニーラインのみ、指定モジュールで完全に確認されています。Solarwattはアドバイス情報を公開していますが、確認済みのバルコニー製品型番はありません。3社ともドイツの確立されたパネルメーカーであり新興企業ではありませんが、バルコニー製品の供給状況は大きく異なります。',
     sections: {
       snapshot: { title: '3社のドイツ製パネルメーカー、それぞれ異なる状況', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'マイヤーブルガーには実際のバルコニーキットがありますが、現在倒産手続き中です——このページで最も重要な事実です。' },
       timeline: { title: 'マイヤーブルガー：倒産手続きのタイムライン', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: 'この事実は、マイヤーブルガーのバルコニーキットに関するあらゆる購入判断を左右するはずです。' },
@@ -90,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: '正在研究德国阳台太阳能板制造商的读者',
+    intro: 'Meyer Burger推出了阳台太阳能套件,但其制造子公司自2025年起已进入破产程序——这是决定是否购买其产品时最应考虑的事实。三家公司中,只有Heckert Solar的阳台产品线通过具名模块得到完全确认;Solarwatt发布了咨询内容,但没有确认的阳台产品型号。三家公司均为德国老牌面板制造商,并非初创企业,但各自的阳台产品供货状况差异明显。',
     sections: {
       snapshot: { title: '三家德国面板制造商，三种不同处境', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'Meyer Burger确实推出了阳台套件，但目前正处于破产程序中——这是本页最重要的事实。' },
       timeline: { title: 'Meyer Burger：破产程序时间线', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: '这一事实应决定任何关于Meyer Burger阳台套件的购买建议。' },
@@ -108,6 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lectores que investigan fabricantes alemanes de paneles solares para balcón',
+    intro: 'Meyer Burger tiene un kit solar para balcón, pero sus filiales de fabricación entraron en proceso de insolvencia en 2025, el dato que debería determinar cualquier decisión de compra sobre sus productos. De las tres empresas, solo la línea de balcón de Heckert Solar está totalmente confirmada con módulos identificados; Solarwatt publica contenido informativo pero sin referencias de balcón confirmadas. Las tres son fabricantes alemanes establecidos, no start-ups, pero su capacidad de suministro de kits para balcón difiere notablemente.',
     sections: {
       snapshot: { title: 'Tres fabricantes alemanes de paneles, tres situaciones distintas', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'Meyer Burger tiene un kit solar para balcón real, pero está en un proceso de insolvencia activo: el dato más importante de esta página.' },
       timeline: { title: 'Meyer Burger: cronología del proceso de insolvencia', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: 'Este hecho debería determinar cualquier recomendación de compra relacionada con el kit solar para balcón de Meyer Burger.' },
@@ -126,6 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leitores que pesquisam fabricantes alemães de painéis solares para varanda',
+    intro: 'A Meyer Burger tem um kit solar de varanda, mas suas subsidiárias de fabricação entraram em processo de insolvência em 2025 — o fato que deveria orientar qualquer decisão de compra envolvendo seus produtos. Das três empresas, apenas a linha de varanda da Heckert Solar está totalmente confirmada com módulos nomeados; a Solarwatt publica conteúdo consultivo, mas sem SKUs de varanda confirmados. As três são fabricantes alemãs estabelecidas, não startups, mas a capacidade de entrega de kits de varanda varia bastante entre elas.',
     sections: {
       snapshot: { title: 'Três fabricantes alemães de painéis, três situações diferentes', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'A Meyer Burger tem um kit solar de varanda real, mas está em processo de insolvência ativo — o fato mais importante desta página.' },
       timeline: { title: 'Meyer Burger: linha do tempo da insolvência', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: 'Esse fato deveria orientar qualquer recomendação de compra envolvendo o kit solar de varanda da Meyer Burger.' },
@@ -144,6 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'القراء الذين يبحثون عن الشركات الألمانية المصنّعة لألواح الطاقة الشمسية للشرفات',
+    intro: 'تمتلك Meyer Burger مجموعة طاقة شمسية للشرفات، لكن شركاتها التابعة للتصنيع دخلت في إجراءات إفلاس منذ عام 2025 — وهي الحقيقة الوحيدة التي ينبغي أن تحكم أي قرار شراء يتعلق بمنتجاتها. من بين الشركات الثلاث، خط إنتاج الشرفات من Heckert Solar وحده مؤكَّد بالكامل بوحدات محددة الاسم؛ بينما تنشر Solarwatt محتوى استشاريًا دون رموز منتجات شرفة مؤكَّدة. الشركات الثلاث جميعها مصنّعو ألواح ألمان راسخون وليسوا شركات ناشئة، إلا أن قدرتها على توريد أطقم الشرفات تتفاوت بشكل كبير.',
     sections: {
       snapshot: { title: 'ثلاث شركات ألمانية مصنّعة للألواح، وثلاث أوضاع مختلفة تمامًا', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'تمتلك Meyer Burger مجموعة شرفة حقيقية، لكنها تخضع حاليًا لإجراءات إفلاس فعلية — وهي أهم حقيقة في هذه الصفحة.' },
       timeline: { title: 'Meyer Burger: الجدول الزمني لإجراءات الإفلاس', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: 'هذه الحقيقة يجب أن تحكم أي نصيحة شراء تتعلق بمجموعة الشرفة من Meyer Burger.' },
@@ -162,6 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: '독일 발코니 태양광 패널 제조사를 조사하는 독자',
+    intro: 'Meyer Burger는 발코니 태양광 키트를 보유하고 있지만, 제조 자회사는 2025년부터 파산 절차를 밟고 있습니다 — 이는 해당 제품 구매 결정을 좌우해야 할 가장 중요한 사실입니다. 세 회사 중 Heckert Solar의 발코니 라인만 지정 모듈로 완전히 확인되었으며, Solarwatt는 안내 콘텐츠를 게시하지만 확인된 발코니 제품 코드는 없습니다. 세 회사 모두 신생 기업이 아닌 독일의 확립된 패널 제조사이지만, 발코니 키트 공급 능력에는 큰 차이가 있습니다.',
     sections: {
       snapshot: { title: '독일 패널 제조사 3곳, 서로 다른 3가지 상황', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-snapshot-en.svg', imageCaption: 'Meyer Burger는 실제 발코니 키트를 보유하고 있지만 현재 파산 절차가 진행 중입니다 — 이 페이지에서 가장 중요한 사실입니다.' },
       timeline: { title: 'Meyer Burger: 파산 절차 타임라인', image: '/images/meyer-burger-solarwatt-heckert-balcony-solar-timeline-en.svg', imageCaption: '이 사실은 Meyer Burger의 발코니 키트와 관련된 모든 구매 조언을 좌우해야 합니다.' },

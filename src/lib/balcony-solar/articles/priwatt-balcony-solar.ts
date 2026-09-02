@@ -17,6 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Readers researching priwatt as a company',
+    intro: 'priwatt, founded in Leipzig in 2020 by three co-founders including Lukas and Niklas Hoffmeier, pairs every one of its DIY kits with the same inverter and storage brand: GoodWe. The founder has confirmed directly that priwatt sources its modules and inverters externally rather than manufacturing them, then assembles and sells the finished kits. Germany is priwatt\'s primary market, with Austria and Switzerland confirmed as shipping destinations.',
     // No cross-link requirement specified for this profile in Phase 1.
     sections: {
       snapshot: { title: 'priwatt: Company Snapshot', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: 'Leipzig, Germany; founded 2020 by three co-founders (Lukas Hoffmeier, Niklas Hoffmeier, Kay Theuer).' },
@@ -36,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leser, die priwatt als Unternehmen recherchieren',
+    intro: 'priwatt, 2020 in Leipzig von drei Mitgründern gegründet, darunter Lukas und Niklas Hoffmeier, kombiniert jedes seiner DIY-Kits mit derselben Wechselrichter- und Speichermarke: GoodWe. Der Gründer hat direkt bestätigt, dass priwatt Module und Wechselrichter extern bezieht, statt sie selbst herzustellen, und die fertigen Kits montiert und verkauft. Deutschland ist priwatts Hauptmarkt; Österreich und die Schweiz sind als Versandziele bestätigt.',
     sections: {
       snapshot: { title: 'priwatt: Unternehmensüberblick', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: 'Leipzig, Deutschland; 2020 von drei Mitgründern gegründet (Lukas Hoffmeier, Niklas Hoffmeier, Kay Theuer).' },
       timeline: { title: 'Zeitleiste', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: 'Gründungsdatum und Wachstum bestätigt durch priwatts eigene Über-uns-Seite und ein Interview mit den Gründern.' },
@@ -54,6 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lecteurs qui recherchent des informations sur l\'entreprise priwatt',
+    intro: 'priwatt, fondée à Leipzig en 2020 par trois cofondateurs dont Lukas et Niklas Hoffmeier, associe chacun de ses kits DIY à la même marque d\'onduleur et de stockage : GoodWe. Le fondateur a confirmé directement que priwatt achète modules et onduleurs auprès de fournisseurs externes plutôt que de les fabriquer, puis assemble et vend les kits finis. L\'Allemagne est le marché principal de priwatt, l\'Autriche et la Suisse étant confirmées comme destinations d\'expédition.',
     sections: {
       snapshot: { title: 'priwatt : aperçu de l\'entreprise', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: 'Leipzig, Allemagne ; fondée en 2020 par trois cofondateurs (Lukas Hoffmeier, Niklas Hoffmeier, Kay Theuer).' },
       timeline: { title: 'Chronologie', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: 'Date de fondation et croissance confirmées via la page « À propos » de priwatt et un entretien avec les fondateurs.' },
@@ -72,6 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'priwattという企業について調べている読者',
+    intro: 'priwattは2020年にライプツィヒで、ルーカス・ホフマイヤーとニクラス・ホフマイヤーを含む3名の共同創業者により設立され、すべてのDIYキットで同じインバーター・蓄電池ブランド「GoodWe」を組み合わせています。創業者本人が、priwattはモジュールとインバーターを外部から調達しており自社製造ではないこと、そして完成したキットを組み立てて販売していることを直接確認しています。ドイツがpriwattの主要市場であり、オーストリアとスイスは配送先として確認されています。',
     sections: {
       snapshot: { title: 'priwatt:企業スナップショット', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: 'ドイツ・ライプツィヒ拠点。2020年に3名の共同創業者(ルーカス・ホフマイヤー、ニクラス・ホフマイヤー、カイ・トイヤー)により設立。' },
       timeline: { title: '沿革', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: '設立日と成長の経緯はpriwatt自社の会社概要ページと創業者インタビューで確認済み。' },
@@ -90,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: '希望了解priwatt公司背景的读者',
+    intro: 'priwatt由三位联合创始人(包括Lukas Hoffmeier和Niklas Hoffmeier)于2020年在莱比锡创立,其每一套DIY套件都搭配同一逆变器与储能品牌——GoodWe。创始人已直接确认,priwatt从外部采购组件和逆变器而非自行制造,再组装并销售成品套件。德国是priwatt的主要市场,奥地利和瑞士已确认为配送目的地。',
     sections: {
       snapshot: { title: 'priwatt:公司概况', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: '总部位于德国莱比锡;由三位联合创始人(Lukas Hoffmeier、Niklas Hoffmeier、Kay Theuer)于2020年创立。' },
       timeline: { title: '发展历程', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: '成立时间和发展情况已通过priwatt官方“关于我们”页面及创始人访谈确认。' },
@@ -108,6 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lectores que investigan a priwatt como empresa',
+    intro: 'priwatt, fundada en Leipzig en 2020 por tres cofundadores, entre ellos Lukas y Niklas Hoffmeier, combina cada uno de sus kits DIY con la misma marca de inversor y almacenamiento: GoodWe. El fundador ha confirmado directamente que priwatt obtiene módulos e inversores de proveedores externos en lugar de fabricarlos, y luego ensambla y vende los kits terminados. Alemania es el mercado principal de priwatt, con Austria y Suiza confirmadas como destinos de envío.',
     sections: {
       snapshot: { title: 'priwatt: panorama de la empresa', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: 'Leipzig, Alemania; fundada en 2020 por tres cofundadores (Lukas Hoffmeier, Niklas Hoffmeier, Kay Theuer).' },
       timeline: { title: 'Cronología', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: 'Fecha de fundación y crecimiento confirmados a través de la propia página “Sobre nosotros” de priwatt y una entrevista con los fundadores.' },
@@ -126,6 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leitores que estão pesquisando a priwatt como empresa',
+    intro: 'A priwatt, fundada em Leipzig em 2020 por três cofundadores, entre eles Lukas e Niklas Hoffmeier, combina cada um de seus kits DIY com a mesma marca de inversor e armazenamento: a GoodWe. O fundador confirmou diretamente que a priwatt obtém módulos e inversores de fornecedores externos em vez de fabricá-los, e depois monta e vende os kits prontos. A Alemanha é o principal mercado da priwatt, com Áustria e Suíça confirmados como destinos de envio.',
     sections: {
       snapshot: { title: 'priwatt: visão geral da empresa', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: 'Leipzig, Alemanha; fundada em 2020 por três cofundadores (Lukas Hoffmeier, Niklas Hoffmeier, Kay Theuer).' },
       timeline: { title: 'Linha do tempo', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: 'Data de fundação e crescimento confirmados na própria página “Sobre” da priwatt e em uma entrevista com os fundadores.' },
@@ -144,6 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'القراء الذين يبحثون عن شركة priwatt',
+    intro: 'تأسست priwatt في لايبزيغ عام 2020 على يد ثلاثة شركاء مؤسسين، من بينهم Lukas وNiklas Hoffmeier، وتقرن كل طقم من أطقمها الجاهزة للتركيب الذاتي (DIY) بنفس علامة العاكس والتخزين: GoodWe. وقد أكد المؤسس مباشرة أن priwatt تحصل على الألواح والعاكسات من موردين خارجيين بدلاً من تصنيعها، ثم تُجمّع وتبيع الأطقم الجاهزة. تُعد ألمانيا السوق الرئيسي لـ priwatt، بينما تم تأكيد النمسا وسويسرا كوجهتي شحن.',
     sections: {
       snapshot: { title: 'priwatt: لمحة عن الشركة', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: 'مقرها في لايبزيغ بألمانيا؛ تأسست عام 2020 على يد ثلاثة شركاء مؤسسين (Lukas Hoffmeier وNiklas Hoffmeier وKay Theuer).' },
       timeline: { title: 'الجدول الزمني', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: 'تم تأكيد تاريخ التأسيس والنمو عبر صفحة "من نحن" الخاصة بشركة priwatt ومقابلة مع المؤسسين.' },
@@ -162,6 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'priwatt라는 기업을 조사 중인 독자',
+    intro: 'priwatt는 2020년 라이프치히에서 Lukas Hoffmeier와 Niklas Hoffmeier를 포함한 세 명의 공동 창업자가 설립했으며, 모든 DIY 키트에 동일한 인버터·저장장치 브랜드인 GoodWe를 결합하고 있습니다. 창업자는 priwatt가 모듈과 인버터를 자체 제조하지 않고 외부에서 조달한 뒤 완제품 키트를 조립하여 판매한다고 직접 확인했습니다. 독일은 priwatt의 주요 시장이며, 오스트리아와 스위스는 배송 대상국으로 확인되었습니다.',
     sections: {
       snapshot: { title: 'priwatt: 기업 스냅샷', image: '/images/priwatt-balcony-solar-snapshot-en.svg', imageCaption: '독일 라이프치히에 본사를 두고 있으며, 2020년에 세 명의 공동 창업자(Lukas Hoffmeier, Niklas Hoffmeier, Kay Theuer)가 설립했습니다.' },
       timeline: { title: '연혁', image: '/images/priwatt-balcony-solar-timeline-en.svg', imageCaption: '설립일과 성장 과정은 priwatt 자체 소개 페이지와 창업자 인터뷰를 통해 확인되었습니다.' },

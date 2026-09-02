@@ -17,6 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Readers researching balkonstrom.com as a company',
+    intro: 'balkonstrom.com commissions custom "Made in Germany" DC cables from a named supplier rather than sourcing generic cabling for its kits. Registered as a GmbH in Uettingen, Bavaria, in August 2023 by two brothers from the Würzburg district, the company\'s own earlier claim of an informal 2021 start could not be independently verified — only the 2023 registration date is registry-confirmed. Germany is confirmed via a physical showroom in Uettingen; an Austria claim was not independently confirmed in this research.',
     // No cross-link requirement specified for this profile in Phase 1.
     sections: {
       snapshot: { title: 'balkonstrom.com: Company Snapshot', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: 'Uettingen, Bavaria, Germany; GmbH registered August 2023, founded by two brothers from the Würzburg district.' },
@@ -36,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leser, die sich über balkonstrom.com als Unternehmen informieren',
+    intro: 'balkonstrom.com lässt individuelle DC-Kabel „Made in Germany" von einem namentlich genannten Lieferanten fertigen, statt generische Verkabelung für seine Sets zu beziehen. Die im August 2023 in Uettingen, Bayern, eingetragene GmbH wurde von zwei Brüdern aus dem Landkreis Würzburg gegründet; eine frühere eigene Angabe eines informellen Starts 2021 konnte nicht unabhängig verifiziert werden — nur das Eintragungsdatum 2023 ist registerlich bestätigt. Deutschland ist durch einen physischen Showroom in Uettingen bestätigt; eine Österreich-Angabe wurde in dieser Recherche nicht unabhängig bestätigt.',
     sections: {
       snapshot: { title: 'balkonstrom.com: Unternehmensüberblick', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: 'Uettingen, Bayern, Deutschland; GmbH eingetragen im August 2023, gegründet von zwei Brüdern aus dem Landkreis Würzburg.' },
       timeline: { title: 'Zeitleiste', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'Das GmbH-Eintragungsdatum ist das einzige registerlich bestätigte Datum; eine frühere informelle Gründungsangabe (2021) ist nicht verifiziert.' },
@@ -54,6 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lecteurs qui recherchent des informations sur balkonstrom.com en tant qu\'entreprise',
+    intro: 'balkonstrom.com fait fabriquer des câbles CC personnalisés « Made in Germany » par un fournisseur nommé plutôt que d\'utiliser du câblage générique pour ses kits. Immatriculée comme GmbH à Uettingen, en Bavière, en août 2023 par deux frères originaires du district de Würzburg, l\'entreprise revendique un début informel en 2021 qui n\'a pas pu être vérifié de manière indépendante — seule la date d\'immatriculation de 2023 est confirmée par le registre. L\'Allemagne est confirmée par un showroom physique à Uettingen ; une présence revendiquée en Autriche n\'a pas été confirmée de manière indépendante dans cette recherche.',
     sections: {
       snapshot: { title: 'balkonstrom.com : aperçu de l\'entreprise', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: 'Uettingen, Bavière, Allemagne ; GmbH immatriculée en août 2023, fondée par deux frères du district de Würzburg.' },
       timeline: { title: 'Chronologie', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'La date d\'immatriculation de la GmbH est la seule date confirmée par le registre ; une allégation antérieure de démarrage informel (2021) n\'est pas vérifiée.' },
@@ -72,6 +75,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'balkonstrom.comを企業として調査している読者向け',
+    intro: 'balkonstrom.comは、キットに汎用ケーブルを使うのではなく、指定サプライヤーに「Made in Germany」のカスタムDCケーブルを発注しています。同社は2023年8月にドイツ・バイエルン州ウェッティンゲンでGmbH(有限会社)として登記され、ヴュルツブルク郡出身の兄弟2人が設立しましたが、以前主張していた2021年の非公式な創業時期は独立した検証ができておらず、登記簿で確認できる確実な日付は2023年の登記日のみです。ドイツでの展開はウェッティンゲンの実店舗ショールームにより確認されている一方、オーストリアでの展開という主張は本調査では独立した確認が取れませんでした。',
     sections: {
       snapshot: { title: 'balkonstrom.com:企業スナップショット', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: 'ドイツ・バイエルン州ウェッティンゲンに所在。GmbH(有限会社)は2023年8月に登記され、ヴュルツブルク郡出身の兄弟2人によって設立されました。' },
       timeline: { title: '沿革', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'GmbHの登記日のみが登記簿で確認された確実な日付です。それ以前の非公式な創業時期(2021年)という主張は未確認です。' },
@@ -90,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: '正在调研balkonstrom.com这家公司的读者',
+    intro: 'balkonstrom.com并未为其套件采购通用线缆,而是委托指定供应商定制生产"德国制造"的直流电缆。该公司于2023年8月在德国巴伐利亚州厄廷根注册为GmbH,由来自维尔茨堡地区的两兄弟创立;此前公司自称2021年非正式起步的说法未能独立核实——唯有2023年的注册日期经登记机构确认。德国市场已通过厄廷根的实体展厅得到确认;而奥地利市场的说法在本次调研中未能独立证实。',
     sections: {
       snapshot: { title: 'balkonstrom.com:公司概览', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: '位于德国巴伐利亚州厄廷根(Uettingen);GmbH于2023年8月注册,由维尔茨堡地区的两兄弟创立。' },
       timeline: { title: '发展历程', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'GmbH注册日期是唯一经登记机构确认的日期;更早的非正式创立说法(2021年)未经证实。' },
@@ -108,6 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lectores que investigan balkonstrom.com como empresa',
+    intro: 'balkonstrom.com encarga cables de CC personalizados "Made in Germany" a un proveedor especificado, en lugar de usar cableado genérico en sus kits. Registrada como GmbH en Uettingen, Baviera, en agosto de 2023 por dos hermanos del distrito de Würzburg, la afirmación previa de la propia empresa sobre un inicio informal en 2021 no pudo verificarse de forma independiente — solo la fecha de registro de 2023 está confirmada por el registro mercantil. Alemania está confirmada mediante una sala de exposición física en Uettingen; una afirmación sobre Austria no se confirmó de forma independiente en esta investigación.',
     sections: {
       snapshot: { title: 'balkonstrom.com: panorama de la empresa', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: 'Uettingen, Baviera, Alemania; GmbH registrada en agosto de 2023, fundada por dos hermanos del distrito de Würzburg.' },
       timeline: { title: 'Cronología', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'La fecha de registro de la GmbH es la única fecha confirmada por el registro mercantil; una afirmación anterior de inicio informal (2021) no está verificada.' },
@@ -126,6 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leitores que pesquisam a balkonstrom.com como empresa',
+    intro: 'A balkonstrom.com encomenda cabos DC personalizados "Made in Germany" de um fornecedor especificado, em vez de usar cabeamento genérico em seus kits. Registrada como GmbH em Uettingen, na Baviera, em agosto de 2023 por dois irmãos do distrito de Würzburg, a alegação anterior da própria empresa de um início informal em 2021 não pôde ser verificada de forma independente — apenas a data de registro de 2023 é confirmada oficialmente. A Alemanha é confirmada por um showroom físico em Uettingen; uma alegação sobre a Áustria não foi confirmada de forma independente nesta pesquisa.',
     sections: {
       snapshot: { title: 'balkonstrom.com: visão geral da empresa', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: 'Uettingen, Baviera, Alemanha; GmbH registrada em agosto de 2023, fundada por dois irmãos do distrito de Würzburg.' },
       timeline: { title: 'Linha do tempo', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'A data de registro da GmbH é a única data confirmada oficialmente; uma alegação anterior de início informal (2021) não foi verificada.' },
@@ -144,6 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'القراء الذين يبحثون عن balkonstrom.com كشركة',
+    intro: 'تطلب balkonstrom.com تصنيع كابلات تيار مستمر (DC) مخصصة بعلامة "Made in Germany" من مورد محدد بالاسم، بدلاً من استخدام كابلات عامة في أطقمها. سُجّلت الشركة كشركة (GmbH) في أوتينغن ببافاريا في أغسطس 2023 على يد شقيقين من منطقة فورتسبورغ، ولم يتم التحقق بشكل مستقل من ادعاء سابق للشركة نفسها ببداية غير رسمية عام 2021 — إذ إن تاريخ التسجيل عام 2023 هو وحده المؤكد رسميًا من السجل. تم تأكيد وجود الشركة في ألمانيا عبر صالة عرض فعلية في أوتينغن؛ أما الادعاء بالتواجد في النمسا فلم يتم تأكيده بشكل مستقل في هذا البحث.',
     sections: {
       snapshot: { title: 'balkonstrom.com: لمحة عن الشركة', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: 'أوتينغن، بافاريا، ألمانيا؛ تم تسجيل الشركة (GmbH) في أغسطس 2023، وأسسها شقيقان من منطقة فورتسبورغ (Würzburg).' },
       timeline: { title: 'الجدول الزمني', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'تاريخ تسجيل الشركة (GmbH) هو التاريخ الوحيد المؤكد رسميًا من السجل؛ أما الادعاء السابق ببداية غير رسمية في عام 2021 فغير موثق.' },
@@ -162,6 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'balkonstrom.com을 기업으로 조사하는 독자',
+    intro: 'balkonstrom.com은 키트에 일반 케이블을 사용하는 대신, 지정된 공급업체에 "Made in Germany" 맞춤형 DC 케이블 제작을 의뢰합니다. 이 회사는 2023년 8월 독일 바이에른주 우에팅엔(Uettingen)에서 뷔르츠부르크(Würzburg) 지역 출신 형제 두 명이 GmbH로 등록했으며, 이전에 회사가 주장했던 2021년 비공식 창업 시점은 독립적으로 검증되지 않았습니다 — 등기부상 확인된 확실한 날짜는 2023년 등록일뿐입니다. 독일 시장은 우에팅엔의 실제 쇼룸을 통해 확인되었으나, 오스트리아 관련 주장은 이번 조사에서 독립적으로 확인되지 않았습니다.',
     sections: {
       snapshot: { title: 'balkonstrom.com: 기업 스냅샷', image: '/images/balkonstrom-balcony-solar-snapshot-en.svg', imageCaption: '독일 바이에른주 우에팅엔(Uettingen) 소재; GmbH는 2023년 8월에 등록되었으며, 뷔르츠부르크(Würzburg) 지역 출신 형제 두 명이 설립했습니다.' },
       timeline: { title: '연혁', image: '/images/balkonstrom-balcony-solar-timeline-en.svg', imageCaption: 'GmbH 등록일만이 등기부상 확인된 확실한 날짜이며, 그 이전의 비공식 창업 시점(2021년)이라는 주장은 검증되지 않았습니다.' },

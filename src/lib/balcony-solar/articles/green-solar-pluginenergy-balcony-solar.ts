@@ -16,7 +16,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Readers researching smaller-volume balcony solar resellers',
-    // No cross-link requirement specified for this profile in Phase 1.
+    intro: 'Green Solar and PluginEnergy are resellers, not manufacturers — neither builds its own solar cells, modules, or inverters. Green Solar (Austria) sells through general retail, including OBI stores, while PluginEnergy (Germany) assembles kits from named third-party module suppliers listed directly in its product materials. Both are young GmbHs registered within the past five years, and Green Solar\'s own module suppliers remain unconfirmed.',
+    // Cross-link requirement: none specified for this profile in Phase 1; intro added post-launch to fix missing hub-card excerpt.
     sections: {
       snapshot: { title: 'Green Solar & PluginEnergy: Snapshot', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: 'Two separate, smaller German-speaking-market resellers — Green Solar (Austria) and PluginEnergy (Germany).' },
       timeline: { title: 'Registration Timeline', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: 'Both companies are young GmbHs, formally registered within the last five years.' },
@@ -35,6 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leser, die kleinere Balkonsolar-Händler recherchieren',
+    intro: 'Green Solar und PluginEnergy sind Wiederverkäufer, keine Hersteller – keines der beiden Unternehmen produziert eigene Solarzellen, Module oder Wechselrichter. Green Solar (Österreich) vertreibt über den allgemeinen Einzelhandel, unter anderem über OBI-Filialen, während PluginEnergy (Deutschland) Kits aus namentlich genannten Modulen von Drittanbietern zusammenstellt, die direkt in den Produktunterlagen aufgeführt sind. Beide sind junge GmbHs, die innerhalb der letzten fünf Jahre registriert wurden; die Modullieferanten von Green Solar selbst bleiben unbestätigt.',
     sections: {
       snapshot: { title: 'Green Solar &amp; PluginEnergy: Überblick', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: 'Zwei getrennte, kleinere Händler im deutschsprachigen Raum – Green Solar (Österreich) und PluginEnergy (Deutschland).' },
       timeline: { title: 'Registrierungs-Zeitleiste', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: 'Beide Unternehmen sind junge GmbHs, die innerhalb der letzten fünf Jahre offiziell registriert wurden.' },
@@ -53,6 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lecteurs qui recherchent des revendeurs de solaire de balcon à plus petit volume',
+    intro: 'Green Solar et PluginEnergy sont des revendeurs, pas des fabricants — aucun des deux ne produit ses propres cellules, modules ou onduleurs. Green Solar (Autriche) vend via la distribution générale, notamment les magasins OBI, tandis que PluginEnergy (Allemagne) assemble des kits à partir de modules de fournisseurs tiers nommés directement dans sa documentation produit. Les deux sont de jeunes GmbH immatriculées au cours des cinq dernières années ; les fournisseurs de modules de Green Solar restent non confirmés.',
     sections: {
       snapshot: { title: 'Green Solar et PluginEnergy : aperçu', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: 'Deux revendeurs distincts, de plus petit volume, sur le marché germanophone — Green Solar (Autriche) et PluginEnergy (Allemagne).' },
       timeline: { title: 'Chronologie d\'immatriculation', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: 'Les deux entreprises sont de jeunes GmbH, officiellement immatriculées au cours des cinq dernières années.' },
@@ -71,6 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'ベランダ太陽光の小規模販売店を調べている読者',
+    intro: 'Green SolarとPluginEnergyは販売代理店であり、メーカーではありません。両社ともセル、モジュール、インバーターを自社製造していません。Green Solar(オーストリア)はOBI店舗を含む一般小売で販売し、PluginEnergy(ドイツ)は製品資料に直接記載された指定の第三者モジュールサプライヤーからキットを組み立てています。両社とも過去5年以内に登記された若いGmbHであり、Green Solar自身のモジュールサプライヤーは未確認です。',
     sections: {
       snapshot: { title: 'Green SolarとPluginEnergy:概要', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: 'ドイツ語圏市場の小規模な販売店2社、Green Solar(オーストリア)とPluginEnergy(ドイツ)です。' },
       timeline: { title: '登記の沿革', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: '両社とも若いGmbH(有限会社)であり、過去5年以内に正式に登記されています。' },
@@ -89,6 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: '正在了解中小规模阳台太阳能经销商的读者',
+    intro: 'Green Solar与PluginEnergy是经销商,而非制造商——两家公司均不自行生产电池片、组件或逆变器。Green Solar(奥地利)通过普通零售渠道销售,包括OBI门店;PluginEnergy(德国)则从产品资料中直接列明的指定第三方组件供应商处组装套件。两家公司均为成立不足五年的年轻有限责任公司(GmbH),Green Solar自身的组件供应商尚未得到确认。',
     sections: {
       snapshot: { title: 'Green Solar与PluginEnergy:概览', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: '两家独立的中小规模德语区经销商——Green Solar(奥地利)与PluginEnergy(德国)。' },
       timeline: { title: '注册时间线', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: '两家公司均为成立不久的有限责任公司(GmbH),均在过去五年内正式注册。' },
@@ -107,6 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Lectores que investigan revendedores de solar de balcón de menor volumen',
+    intro: 'Green Solar y PluginEnergy son revendedores, no fabricantes: ninguno de los dos produce sus propias células, módulos ni inversores. Green Solar (Austria) vende a través del comercio minorista general, incluidas las tiendas OBI, mientras que PluginEnergy (Alemania) ensambla kits con módulos de proveedores externos identificados directamente en su documentación de producto. Ambas son GmbH jóvenes, registradas en los últimos cinco años, y los proveedores de módulos de Green Solar aún no están confirmados.',
     sections: {
       snapshot: { title: 'Green Solar y PluginEnergy: resumen', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: 'Dos revendedores independientes de menor volumen en el mercado de habla alemana: Green Solar (Austria) y PluginEnergy (Alemania).' },
       timeline: { title: 'Cronología de registro', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: 'Ambas empresas son GmbH jóvenes, registradas oficialmente en los últimos cinco años.' },
@@ -125,6 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'Leitores que pesquisam revendedores de solar de varanda de menor volume',
+    intro: 'Green Solar e PluginEnergy são revendedoras, não fabricantes — nenhuma das duas produz suas próprias células, módulos ou inversores. A Green Solar (Áustria) vende por meio do varejo geral, incluindo lojas OBI, enquanto a PluginEnergy (Alemanha) monta kits com módulos de fornecedores terceiros identificados diretamente em seus materiais de produto. Ambas são GmbHs jovens, registradas nos últimos cinco anos, e os fornecedores de módulos da própria Green Solar ainda não foram confirmados.',
     sections: {
       snapshot: { title: 'Green Solar e PluginEnergy: visão geral', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: 'Dois revendedores distintos e de menor volume no mercado de língua alemã — Green Solar (Áustria) e PluginEnergy (Alemanha).' },
       timeline: { title: 'Linha do tempo de registro', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: 'Ambas as empresas são GmbHs jovens, registradas oficialmente nos últimos cinco anos.' },
@@ -143,6 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: 'القراء الذين يبحثون عن موزعي طاقة شمسية للشرفات بحجم أصغر',
+    intro: 'Green Solar وPluginEnergy موزعان وليسا مُصنِّعَين — لا تنتج أي منهما خلاياها أو وحداتها أو عواكسها الخاصة. تبيع Green Solar (النمسا) عبر تجارة التجزئة العامة، بما في ذلك متاجر OBI، بينما تُجمِّع PluginEnergy (ألمانيا) أطقمًا من موردي وحدات خارجيين محددين بالاسم مباشرة في موادها التسويقية. كلتا الشركتين شركتا GmbH حديثتا التأسيس، سُجِّلتا خلال السنوات الخمس الماضية، ولم يتم بعد تأكيد موردي الوحدات الخاصين بشركة Green Solar.',
     sections: {
       snapshot: { title: 'Green Solar وPluginEnergy: لمحة عامة', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: 'موزعان منفصلان بحجم أصغر في السوق الناطقة بالألمانية — Green Solar (النمسا) وPluginEnergy (ألمانيا).' },
       timeline: { title: 'الجدول الزمني للتسجيل', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: 'كلتا الشركتين شركتا GmbH حديثتا التأسيس، مسجلتان رسميًا خلال السنوات الخمس الماضية.' },
@@ -161,6 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-19',
     dateModified: '2026-07-19',
     audience: '소규모 베란다 태양광 판매업체를 조사하는 독자',
+    intro: 'Green Solar와 PluginEnergy는 제조사가 아니라 판매업체입니다 — 두 회사 모두 셀, 모듈, 인버터를 직접 생산하지 않습니다. Green Solar(오스트리아)는 OBI 매장을 포함한 일반 소매 채널을 통해 판매하며, PluginEnergy(독일)는 제품 자료에 직접 명시된 지정 제3자 모듈 공급업체로부터 부품을 조달해 키트를 조립합니다. 두 회사 모두 지난 5년 이내에 등록된 신생 GmbH이며, Green Solar 자체의 모듈 공급업체는 아직 확인되지 않았습니다.',
     sections: {
       snapshot: { title: 'Green Solar와 PluginEnergy: 개요', image: '/images/green-solar-pluginenergy-balcony-solar-snapshot-en.svg', imageCaption: '독일어권 시장의 소규모 판매업체 두 곳, Green Solar(오스트리아)와 PluginEnergy(독일)입니다.' },
       timeline: { title: '등록 타임라인', image: '/images/green-solar-pluginenergy-balcony-solar-timeline-en.svg', imageCaption: '두 회사 모두 설립된 지 얼마 되지 않은 GmbH(유한회사)이며, 지난 5년 이내에 공식 등록되었습니다.' },
