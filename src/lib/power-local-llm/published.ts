@@ -138,6 +138,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'quivr-self-hosted-knowledge-assistant-review',
   // RAGFlow deep document understanding review — 2026-09-02
   'ragflow-document-understanding-rag-review',
+  // Khoj review — 2026-09-02
+  'khoj-ai-second-brain-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
