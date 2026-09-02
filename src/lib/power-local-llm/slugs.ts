@@ -112,4 +112,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Haystack (deepset) RAG framework review 2026-09-02
   'haystack-deepset-rag-framework-review':        'haystack-deepset-rag-framework-review',
+
+  // Dify LLMOps platform review 2026-09-02
+  'dify-ai-workflow-builder-review':              'dify-ai-workflow-builder-review',
 }

@@ -125,6 +125,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Haystack (deepset) RAG framework review — 2026-09-02
   'haystack-deepset-rag-framework-review',
+
+  // Dify LLMOps platform review — 2026-09-02
+  'dify-ai-workflow-builder-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

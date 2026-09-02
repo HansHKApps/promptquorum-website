@@ -789,22 +789,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "flowise-ai-visual-workflow-builder-review",
-        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
-        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "haystack-deepset-rag-framework-review",
-        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
-        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Msty": {
@@ -1012,7 +1012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 44,
+    "totalCount": 45,
     "capped": true
   },
   "LibreChat": {
@@ -1723,6 +1723,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
@@ -1760,21 +1768,21 @@
         "url": "/power-local-llm/chat-with-1000-pdfs-locally",
         "dateModified": "2026-08-27",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
-        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Dify": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-rag-tools-for-business-documents-2026",
@@ -1782,13 +1790,29 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "Flowise": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
@@ -1814,11 +1838,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LlamaIndex": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
@@ -1890,17 +1922,9 @@
         "url": "/power-local-llm/best-embedding-models-local-rag-2026",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "easiest-local-ai-app-windows-mac-linux",
-        "title": "Easiest Local AI App for Windows, Mac, and Linux (2026)",
-        "url": "/power-local-llm/easiest-local-ai-app-windows-mac-linux",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Haystack": {
@@ -1965,6 +1989,14 @@
   },
   "LangChain": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
@@ -2036,17 +2068,9 @@
         "url": "/power-local-llm/best-embedding-models-local-rag-2026",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-rag-2026",
-        "title": "Local RAG 2026: Build Document Q&A Systems Without Cloud APIs",
-        "url": "/local-llms/local-rag-2026",
-        "dateModified": "2026-08-31",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "CrewAI": {
@@ -2185,6 +2209,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
@@ -2198,17 +2230,9 @@
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-business-workflows-eu-compliance",
-        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
-        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "OpenClaw": {
