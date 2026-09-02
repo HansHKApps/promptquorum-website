@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-en.webp',
     title: 'Smart Home Ecosystems Compared (2026): Alexa vs Google vs Apple vs HA',
@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa, Google Home, Apple Home, and Home Assistant cover most of the market and split clearly on privacy and local control.** Each suits a different priority.',
         items: [
-          '**Amazon Alexa:** the widest third-party device and skill support, cloud-first, voice-led.',
+          '**Amazon Alexa:** the widest third-party device and skill support; now runs on the generative-AI Alexa+ assistant, which Amazon has confirmed processes every request in the cloud with no local option.',
           '**Google Home:** strong voice assistant and broad device support, cloud-first.',
           '**Apple Home:** privacy-focused within the Apple ecosystem, with local control via a home hub.',
           '**Home Assistant:** open-source, local-first, the most flexible and private — see [the complete local smart home guide](/smart-home/local-smart-home-complete-guide).',
@@ -119,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa and Google Home are the easiest to start because they are app-guided and cloud-managed.** Choose them if you want minimal setup and accept the privacy trade-off.',
         items: [
-          'Use Alexa for the widest device and voice-skill support out of the box.',
+          'Use Alexa for the widest device and voice-skill support out of the box, now with the Alexa+ generative AI layer for richer conversations.',
           'Use Google Home if you prefer Google\'s assistant and services.',
           'Both trade privacy and offline reliability for convenience — see [why a local smart home beats the cloud](/smart-home/why-local-smart-home-beats-cloud).',
         ],
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Which smart home ecosystem is most private?', a: 'Home Assistant is the most private because control and automations run locally on your own hardware with no vendor data collection. Among the mainstream cloud ecosystems, Apple Home is the most privacy-focused.' },
-          { q: 'Which ecosystem works offline?', a: 'Home Assistant works offline for local devices and automations. Alexa and Google Home depend heavily on the cloud and lose most functions without internet; Apple Home retains some local control through a home hub.' },
+          { q: 'Which ecosystem works offline?', a: 'Home Assistant works offline for local devices and automations. Alexa and Google Home depend heavily on the cloud and lose most functions without internet — Amazon has confirmed the Alexa+ generative AI assistant has zero local processing capability; Apple Home retains some local control through a home hub.' },
           { q: 'Can I mix smart home ecosystems?', a: 'Yes, to a degree. Home Assistant can integrate devices and even bridge Alexa, Google, and Apple, which is the most flexible way to mix ecosystems. Mixing cloud ecosystems directly is more limited.' },
           { q: 'Which ecosystem is easiest for beginners?', a: 'Amazon Alexa and Google Home are easiest for beginners because setup is app-guided and cloud-managed. Home Assistant offers more privacy and control but takes more effort to set up.' },
         ],
@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -191,7 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
       mainEntity: [
         { '@type': 'Question', name: 'Which smart home ecosystem is most private?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant, because control and automations run locally with no vendor data collection. Among mainstream cloud ecosystems, Apple Home is the most privacy-focused.' } },
-        { '@type': 'Question', name: 'Which ecosystem works offline?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant works offline for local devices and automations. Alexa and Google Home depend on the cloud; Apple Home retains some local control via a home hub.' } },
+        { '@type': 'Question', name: 'Which ecosystem works offline?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant works offline for local devices and automations. Alexa and Google Home depend on the cloud — Amazon has confirmed Alexa+ has zero local processing capability; Apple Home retains some local control via a home hub.' } },
         { '@type': 'Question', name: 'Can I mix smart home ecosystems?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, to a degree. Home Assistant can integrate devices and bridge Alexa, Google, and Apple, which is the most flexible way to mix ecosystems.' } },
         { '@type': 'Question', name: 'Which ecosystem is easiest for beginners?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa and Google Home, because setup is app-guided and cloud-managed. Home Assistant offers more privacy and control but takes more effort.' } },
       ],
@@ -201,8 +201,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-ar.webp',
     title: 'مقارنة منظومات المنزل الذكي (⁨2026⁩): ⁨Alexa⁩ مقابل ⁨Google⁩ مقابل ⁨Apple⁩ مقابل ⁨HA⁩',
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**تغطي Amazon Alexa وGoogle Home وApple Home وHome Assistant معظم السوق وتنقسم بوضوح على الخصوصية والتحكم المحلي.** كلٌّ منها يناسب أولوية مختلفة.',
         items: [
-          '**Amazon Alexa:** أوسع دعم لأجهزة ومهارات الطرف الثالث، سحابة أولًا، مُقاد بالصوت.',
+          '**Amazon Alexa:** أوسع دعم لأجهزة ومهارات الطرف الثالث؛ تعمل الآن على مساعد Alexa+ التوليدي بالذكاء الاصطناعي، الذي أكدت Amazon أنه يعالج كل طلب في السحابة دون أي خيار محلي.',
           '**Google Home:** مساعد صوتي قوي ودعم واسع للأجهزة، سحابة أولًا.',
           '**Apple Home:** يُركز على الخصوصية ضمن منظومة Apple، مع تحكم محلي عبر مركز المنزل.',
           '**Home Assistant:** مفتوح المصدر، محلي أولًا، الأكثر مرونةً وخصوصيةً — راجع [الدليل الكامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide).',
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa وGoogle Home الأسهل للبدء لأنهما مُدارتان عبر تطبيق وسحابة.** اختَرهما إذا أردت إعدادًا أدنى وقبلت تنازل الخصوصية.',
         items: [
-          'استخدم Alexa للحصول على أوسع دعم للأجهزة والمهارات الصوتية مباشرةً.',
+          'استخدم Alexa للحصول على أوسع دعم للأجهزة والمهارات الصوتية مباشرةً، والآن مع طبقة Alexa+ التوليدية بالذكاء الاصطناعي لمحادثات أكثر ثراءً.',
           'استخدم Google Home إذا كنت تفضل مساعد Google وخدماته.',
           'كلاهما يُقايض الخصوصية وموثوقية الاتصال بلا إنترنت مقابل الراحة — راجع [لماذا يتفوق المنزل الذكي المحلي على السحابة](/ar/smart-home/why-local-smart-home-beats-cloud).',
         ],
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
             { q: 'أي منظومة منزل ذكي هي الأكثر خصوصية؟', a: 'Home Assistant هو الأكثر خصوصية لأن التحكم والأتمتة تعمل محليًا على أجهزتك الخاصة دون جمع بيانات من المورد. بين المنظومات السحابية السائدة، Apple Home هو الأكثر تركيزًا على الخصوصية.' },
-            { q: 'أي منظومة تعمل بدون اتصال بالإنترنت؟', a: 'Home Assistant يعمل بدون اتصال للأجهزة والأتمتة المحلية. Alexa وGoogle Home تعتمدان بشدة على السحابة وتفقدان معظم الوظائف بدون إنترنت؛ Apple Home يحتفظ ببعض التحكم المحلي عبر مركز المنزل.' },
+            { q: 'أي منظومة تعمل بدون اتصال بالإنترنت؟', a: 'Home Assistant يعمل بدون اتصال للأجهزة والأتمتة المحلية. Alexa وGoogle Home تعتمدان بشدة على السحابة وتفقدان معظم الوظائف بدون إنترنت — وقد أكدت Amazon أن مساعد Alexa+ التوليدي ليس لديه أي قدرة معالجة محلية؛ Apple Home يحتفظ ببعض التحكم المحلي عبر مركز المنزل.' },
             { q: 'هل يمكنني مزج منظومات المنزل الذكي؟', a: 'نعم، إلى حد ما. يمكن لـ Home Assistant دمج الأجهزة وحتى ربط Alexa وGoogle وApple، وهو الأسلوب الأكثر مرونة لمزج المنظومات. المزج المباشر بين المنظومات السحابية أكثر محدودية.' },
             { q: 'أي منظومة الأسهل للمبتدئين؟', a: 'Amazon Alexa وGoogle Home الأسهل للمبتدئين لأن الإعداد مُقاد عبر تطبيق ومُدار في السحابة. Home Assistant يوفر مزيدًا من الخصوصية والتحكم لكنه يتطلب جهدًا أكبر.' },
           ],
@@ -376,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'أي منظومة تعمل بدون اتصال بالإنترنت؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Home Assistant يعمل بدون اتصال للأجهزة والأتمتة المحلية. Alexa وGoogle Home تعتمدان بشدة على السحابة وتفقدان معظم الوظائف بدون إنترنت؛ Apple Home يحتفظ ببعض التحكم المحلي عبر مركز المنزل.',
+              'text': 'Home Assistant يعمل بدون اتصال للأجهزة والأتمتة المحلية. Alexa وGoogle Home تعتمدان بشدة على السحابة — وقد أكدت Amazon أن مساعد Alexa+ ليس لديه أي قدرة معالجة محلية؛ Apple Home يحتفظ ببعض التحكم المحلي عبر مركز المنزل.',
             },
           },
           {
@@ -425,8 +425,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-de.webp',
     title: 'Smart-Home-Ökosysteme im Vergleich (2026): Alexa, Google, Apple, HA',
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa, Google Home, Apple Home und Home Assistant decken den größten Teil des Markts ab und teilen sich klar bei Datenschutz und lokaler Steuerung.** Jedes passt zu einer anderen Priorität.',
         items: [
-          '**Amazon Alexa:** die breiteste Unterstützung für Drittanbietergeräte und Skills, Cloud-zuerst, sprachgeführt.',
+          '**Amazon Alexa:** die breiteste Unterstützung für Drittanbietergeräte und Skills; läuft nun auf dem generativen KI-Assistenten Alexa+, bei dem Amazon bestätigt hat, dass jede Anfrage ausschließlich in der Cloud verarbeitet wird.',
           '**Google Home:** starker Sprachassistent und breite Geräteunterstützung, Cloud-zuerst.',
           '**Apple Home:** datenschutzorientiert innerhalb des Apple-Ökosystems, mit lokaler Steuerung über einen Home-Hub.',
           '**Home Assistant:** Open Source, lokal-zuerst, am flexibelsten und privatesten – siehe [der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide).',
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa und Google Home sind am einfachsten zu starten, weil sie per App geführt und Cloud-verwaltet sind.** Wählen Sie sie, wenn Sie minimale Einrichtung wollen und den Datenschutz-Kompromiss akzeptieren.',
         items: [
-          'Nutzen Sie Alexa für die breiteste Geräte- und Sprach-Skill-Unterstützung von Haus aus.',
+          'Nutzen Sie Alexa für die breiteste Geräte- und Sprach-Skill-Unterstützung von Haus aus, jetzt mit der generativen KI-Ebene Alexa+ für reichhaltigere Gespräche.',
           'Nutzen Sie Google Home, wenn Sie Googles Assistenten und Dienste bevorzugen.',
           'Beide tauschen Datenschutz und Offline-Zuverlässigkeit gegen Komfort – siehe [warum ein lokales Smart Home die Cloud schlägt](/de/smart-home/why-local-smart-home-beats-cloud).',
         ],
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Welches Smart-Home-Ökosystem ist am privatesten?', a: 'Home Assistant ist am privatesten, weil Steuerung und Automatisierungen lokal auf Ihrer eigenen Hardware ohne Datensammlung des Herstellers laufen. Unter den gängigen Cloud-Ökosystemen ist Apple Home am datenschutzfreundlichsten.' },
-          { q: 'Welches Ökosystem funktioniert offline?', a: 'Home Assistant funktioniert offline für lokale Geräte und Automatisierungen. Alexa und Google Home hängen stark von der Cloud ab und verlieren ohne Internet die meisten Funktionen; Apple Home behält über einen Home-Hub etwas lokale Steuerung.' },
+          { q: 'Welches Ökosystem funktioniert offline?', a: 'Home Assistant funktioniert offline für lokale Geräte und Automatisierungen. Alexa und Google Home hängen stark von der Cloud ab und verlieren ohne Internet die meisten Funktionen — Amazon hat bestätigt, dass der generative KI-Assistent Alexa+ über keinerlei lokale Verarbeitung verfügt; Apple Home behält über einen Home-Hub etwas lokale Steuerung.' },
           { q: 'Kann ich Smart-Home-Ökosysteme mischen?', a: 'Ja, bis zu einem gewissen Grad. Home Assistant kann Geräte integrieren und sogar Alexa, Google und Apple einbinden, was der flexibelste Weg ist, Ökosysteme zu mischen. Das direkte Mischen von Cloud-Ökosystemen ist begrenzter.' },
           { q: 'Welches Ökosystem ist am einfachsten für Einsteiger?', a: 'Amazon Alexa und Google Home sind am einfachsten für Einsteiger, weil die Einrichtung per App geführt und Cloud-verwaltet ist. Home Assistant bietet mehr Datenschutz und Kontrolle, erfordert aber mehr Aufwand.' },
         ],
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       mainEntity: [
         { '@type': 'Question', name: 'Welches Smart-Home-Ökosystem ist am privatesten?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant, weil Steuerung und Automatisierungen lokal ohne Datensammlung des Herstellers laufen. Unter den Cloud-Ökosystemen ist Apple Home am datenschutzfreundlichsten.' } },
-        { '@type': 'Question', name: 'Welches Ökosystem funktioniert offline?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant funktioniert offline für lokale Geräte und Automatisierungen. Alexa und Google Home hängen von der Cloud ab; Apple Home behält über einen Home-Hub etwas lokale Steuerung.' } },
+        { '@type': 'Question', name: 'Welches Ökosystem funktioniert offline?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant funktioniert offline für lokale Geräte und Automatisierungen. Alexa und Google Home hängen von der Cloud ab — Amazon hat bestätigt, dass Alexa+ keine lokale Verarbeitung bietet; Apple Home behält über einen Home-Hub etwas lokale Steuerung.' } },
         { '@type': 'Question', name: 'Kann ich Smart-Home-Ökosysteme mischen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, bis zu einem gewissen Grad. Home Assistant kann Geräte integrieren und Alexa, Google und Apple einbinden, der flexibelste Weg zum Mischen von Ökosystemen.' } },
         { '@type': 'Question', name: 'Welches Ökosystem ist am einfachsten für Einsteiger?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa und Google Home, weil die Einrichtung per App geführt und Cloud-verwaltet ist. Home Assistant bietet mehr Kontrolle, erfordert aber mehr Aufwand.' } },
       ],
@@ -621,8 +621,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-es.webp',
     title: 'Ecosistemas de Smart Home Comparados (2026): Alexa, Google, Apple, HA',
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa, Google Home, Apple Home y Home Assistant cubren la mayor parte del mercado y se dividen claramente en privacidad y control local.** Cada uno encaja con una prioridad distinta.',
         items: [
-          '**Amazon Alexa:** el soporte más amplio de dispositivos y skills de terceros, nube-primero, guiado por voz.',
+          '**Amazon Alexa:** el soporte más amplio de dispositivos y skills de terceros; ahora funciona con el asistente de IA generativa Alexa+, que Amazon ha confirmado que procesa cada solicitud en la nube sin opción local.',
           '**Google Home:** asistente de voz potente y amplio soporte de dispositivos, nube-primero.',
           '**Apple Home:** orientado a la privacidad dentro del ecosistema Apple, con control local vía un home hub.',
           '**Home Assistant:** de código abierto, local-primero, el más flexible y privado — consulta [la guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide).',
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa y Google Home son los más fáciles de empezar porque están guiados por app y gestionados en la nube.** Elígelos si quieres una configuración mínima y aceptas el compromiso de privacidad.',
         items: [
-          'Usa Alexa para el soporte más amplio de dispositivos y skills de voz de fábrica.',
+          'Usa Alexa para el soporte más amplio de dispositivos y skills de voz de fábrica, ahora con la capa de IA generativa Alexa+ para conversaciones más ricas.',
           'Usa Google Home si prefieres el asistente y los servicios de Google.',
           'Ambos cambian privacidad y fiabilidad sin conexión por comodidad — consulta [por qué un smart home local supera a la nube](/es/smart-home/why-local-smart-home-beats-cloud).',
         ],
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Qué ecosistema de smart home es más privado?', a: 'Home Assistant es el más privado porque el control y las automatizaciones corren localmente en tu propio hardware sin recopilación de datos del fabricante. Entre los ecosistemas en la nube convencionales, Apple Home es el más orientado a la privacidad.' },
-          { q: '¿Qué ecosistema funciona sin conexión?', a: 'Home Assistant funciona sin conexión para dispositivos y automatizaciones locales. Alexa y Google Home dependen mucho de la nube y pierden la mayoría de funciones sin internet; Apple Home conserva algo de control local mediante un home hub.' },
+          { q: '¿Qué ecosistema funciona sin conexión?', a: 'Home Assistant funciona sin conexión para dispositivos y automatizaciones locales. Alexa y Google Home dependen mucho de la nube y pierden la mayoría de funciones sin internet — Amazon ha confirmado que el asistente de IA generativa Alexa+ no tiene ninguna capacidad de procesamiento local; Apple Home conserva algo de control local mediante un home hub.' },
           { q: '¿Puedo mezclar ecosistemas de smart home?', a: 'Sí, hasta cierto punto. Home Assistant puede integrar dispositivos e incluso unir Alexa, Google y Apple, que es la forma más flexible de mezclar ecosistemas. Mezclar ecosistemas en la nube directamente es más limitado.' },
           { q: '¿Qué ecosistema es más fácil para principiantes?', a: 'Amazon Alexa y Google Home son los más fáciles para principiantes porque la configuración está guiada por app y gestionada en la nube. Home Assistant ofrece más privacidad y control pero requiere más esfuerzo.' },
         ],
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       mainEntity: [
         { '@type': 'Question', name: '¿Qué ecosistema de smart home es más privado?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant, porque el control y las automatizaciones corren localmente sin recopilación de datos del fabricante. Entre los ecosistemas en la nube, Apple Home es el más privado.' } },
-        { '@type': 'Question', name: '¿Qué ecosistema funciona sin conexión?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant funciona sin conexión para dispositivos y automatizaciones locales. Alexa y Google Home dependen de la nube; Apple Home conserva algo de control local vía un home hub.' } },
+        { '@type': 'Question', name: '¿Qué ecosistema funciona sin conexión?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant funciona sin conexión para dispositivos y automatizaciones locales. Alexa y Google Home dependen de la nube — Amazon ha confirmado que Alexa+ no tiene capacidad de procesamiento local; Apple Home conserva algo de control local vía un home hub.' } },
         { '@type': 'Question', name: '¿Puedo mezclar ecosistemas de smart home?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, hasta cierto punto. Home Assistant puede integrar dispositivos y unir Alexa, Google y Apple, la forma más flexible de mezclar ecosistemas.' } },
         { '@type': 'Question', name: '¿Qué ecosistema es más fácil para principiantes?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa y Google Home, porque la configuración está guiada por app y gestionada en la nube. Home Assistant ofrece más control pero requiere más esfuerzo.' } },
       ],
@@ -817,8 +817,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-ko.webp',
     title: '스마트홈 에코시스템 비교 (2026): Alexa, Google, Apple, HA',
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa, Google Home, Apple Home, Home Assistant가 시장 대부분을 차지하며 프라이버시와 로컬 제어 측면에서 명확하게 나뉩니다.** 각 에코시스템은 서로 다른 우선순위에 맞습니다.',
         items: [
-          '**Amazon Alexa:** 가장 넓은 기기 및 서드파티 스킬 지원, 클라우드 우선, 음성 중심.',
+          '**Amazon Alexa:** 가장 넓은 기기 및 서드파티 스킬 지원. 이제 생성형 AI 어시스턴트 Alexa+로 작동하며, Amazon은 모든 요청이 로컬 처리 옵션 없이 클라우드에서만 처리된다고 확인했습니다.',
           '**Google Home:** 강력한 음성 어시스턴트와 넓은 기기 지원, 클라우드 우선.',
           '**Apple Home:** Apple 생태계 내에서 프라이버시 지향, 홈 허브를 통한 로컬 제어.',
           '**Home Assistant:** 오픈소스, 로컬 우선, 가장 유연하고 프라이빗 — [로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa와 Google Home은 앱 가이드 방식으로 클라우드 관리되므로 시작하기 가장 쉽습니다.** 설정 최소화를 원하고 프라이버시 트레이드오프를 수용할 수 있다면 선택하십시오.',
         items: [
-          '가장 넓은 기기 지원과 기본 음성 스킬을 원한다면 Alexa를 사용하십시오.',
+          '가장 넓은 기기 지원과 기본 음성 스킬을 원한다면 Alexa를 사용하십시오. 이제 생성형 AI 계층인 Alexa+로 더 풍부한 대화가 가능합니다.',
           'Google 어시스턴트와 서비스를 선호한다면 Google Home을 사용하십시오.',
           '두 에코시스템 모두 편의성을 위해 프라이버시와 오프라인 신뢰성을 희생합니다 — [로컬 스마트홈이 클라우드보다 나은 이유](/ko/smart-home/why-local-smart-home-beats-cloud)를 참조하십시오.',
         ],
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: '어떤 스마트홈 에코시스템이 가장 프라이빗합니까?', a: 'Home Assistant가 가장 프라이빗합니다. 제조사 데이터 수집 없이 제어와 자동화가 자신의 하드웨어에서 로컬로 실행되기 때문입니다. 일반 클라우드 에코시스템 중에서는 Apple Home이 가장 프라이버시 지향입니다.' },
-          { q: '어떤 에코시스템이 오프라인에서 작동합니까?', a: 'Home Assistant는 로컬 기기 및 자동화에 대해 오프라인에서 작동합니다. Alexa와 Google Home은 클라우드에 크게 의존하며 인터넷 없이는 대부분의 기능을 잃습니다. Apple Home은 홈 허브를 통해 일부 로컬 제어를 유지합니다.' },
+          { q: '어떤 에코시스템이 오프라인에서 작동합니까?', a: 'Home Assistant는 로컬 기기 및 자동화에 대해 오프라인에서 작동합니다. Alexa와 Google Home은 클라우드에 크게 의존하며 인터넷 없이는 대부분의 기능을 잃습니다 — Amazon은 생성형 AI 어시스턴트 Alexa+에 로컬 처리 기능이 전혀 없다고 확인했습니다. Apple Home은 홈 허브를 통해 일부 로컬 제어를 유지합니다.' },
           { q: '스마트홈 에코시스템을 혼용할 수 있습니까?', a: '예, 어느 정도는 가능합니다. Home Assistant는 기기를 통합하고 Alexa, Google, Apple을 브리징할 수 있으며, 이것이 에코시스템을 혼용하는 가장 유연한 방법입니다. 클라우드 에코시스템을 직접 혼용하는 것은 더 제한적입니다.' },
           { q: '초보자에게 가장 쉬운 에코시스템은 무엇입니까?', a: 'Amazon Alexa와 Google Home이 초보자에게 가장 쉽습니다. 설정이 앱 가이드 방식으로 이루어지고 클라우드에서 관리되기 때문입니다. Home Assistant는 더 많은 프라이버시와 제어를 제공하지만 더 많은 노력이 필요합니다.' },
         ],
@@ -992,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       mainEntity: [
         { '@type': 'Question', name: '어떤 스마트홈 에코시스템이 가장 프라이빗합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant. 제조사 데이터 수집 없이 제어와 자동화가 로컬로 실행되기 때문입니다. 클라우드 에코시스템 중에서는 Apple Home이 가장 프라이빗합니다.' } },
-        { '@type': 'Question', name: '어떤 에코시스템이 오프라인에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant는 로컬 기기 및 자동화에 대해 오프라인에서 작동합니다. Alexa와 Google Home은 클라우드에 의존합니다. Apple Home은 홈 허브를 통해 일부 로컬 제어를 유지합니다.' } },
+        { '@type': 'Question', name: '어떤 에코시스템이 오프라인에서 작동합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant는 로컬 기기 및 자동화에 대해 오프라인에서 작동합니다. Alexa와 Google Home은 클라우드에 의존합니다 — Amazon은 Alexa+에 로컬 처리 기능이 없다고 확인했습니다. Apple Home은 홈 허브를 통해 일부 로컬 제어를 유지합니다.' } },
         { '@type': 'Question', name: '스마트홈 에코시스템을 혼용할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. Home Assistant는 기기를 통합하고 Alexa, Google, Apple을 브리징할 수 있으며, 이것이 에코시스템 혼용의 가장 유연한 방법입니다.' } },
         { '@type': 'Question', name: '초보자에게 가장 쉬운 에코시스템은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa와 Google Home. 앱 가이드 방식으로 설정하고 클라우드에서 관리됩니다. Home Assistant는 더 많은 제어를 제공하지만 더 많은 노력이 필요합니다.' } },
       ],
@@ -1013,8 +1013,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-fr.webp',
     title: 'Écosystèmes de Maison Connectée Comparés (2026) : Alexa, Google, Apple, HA',
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa, Google Home, Apple Home et Home Assistant couvrent l\'essentiel du marché et se distinguent nettement sur la confidentialité et le contrôle local.** Chacun correspond à une priorité différente.',
         items: [
-          '**Amazon Alexa :** la plus large prise en charge d\'appareils et de skills tiers, cloud d\'abord, piloté par la voix.',
+          '**Amazon Alexa :** la plus large prise en charge d\'appareils et de skills tiers ; fonctionne désormais avec l\'assistant d\'IA générative Alexa+, dont Amazon a confirmé qu\'il traite chaque requête dans le cloud, sans option locale.',
           '**Google Home :** assistant vocal puissant et large prise en charge d\'appareils, cloud d\'abord.',
           '**Apple Home :** axé sur la confidentialité dans l\'écosystème Apple, avec un contrôle local via un home hub.',
           '**Home Assistant :** open source, local d\'abord, le plus flexible et le plus privé — voir [le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide).',
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa et Google Home sont les plus faciles à démarrer car guidés par application et gérés dans le cloud.** Choisissez-les si vous voulez une configuration minimale et acceptez le compromis de confidentialité.',
         items: [
-          'Utilisez Alexa pour la plus large prise en charge d\'appareils et de skills vocaux prête à l\'emploi.',
+          'Utilisez Alexa pour la plus large prise en charge d\'appareils et de skills vocaux prête à l\'emploi, désormais avec la couche d\'IA générative Alexa+ pour des conversations plus riches.',
           'Utilisez Google Home si vous préférez l\'assistant et les services de Google.',
           'Les deux échangent confidentialité et fiabilité hors ligne contre commodité — voir [pourquoi une maison connectée locale bat le cloud](/fr/smart-home/why-local-smart-home-beats-cloud).',
         ],
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Quel écosystème de maison connectée est le plus privé ?', a: 'Home Assistant est le plus privé car le contrôle et les automatisations tournent localement sur votre propre matériel sans collecte de données par le fabricant. Parmi les écosystèmes cloud grand public, Apple Home est le plus axé sur la confidentialité.' },
-          { q: 'Quel écosystème fonctionne hors ligne ?', a: 'Home Assistant fonctionne hors ligne pour les appareils et automatisations locaux. Alexa et Google Home dépendent fortement du cloud et perdent la plupart des fonctions sans internet ; Apple Home conserve un peu de contrôle local via un home hub.' },
+          { q: 'Quel écosystème fonctionne hors ligne ?', a: 'Home Assistant fonctionne hors ligne pour les appareils et automatisations locaux. Alexa et Google Home dépendent fortement du cloud et perdent la plupart des fonctions sans internet — Amazon a confirmé que l\'assistant d\'IA générative Alexa+ n\'a aucune capacité de traitement local ; Apple Home conserve un peu de contrôle local via un home hub.' },
           { q: 'Puis-je mélanger des écosystèmes de maison connectée ?', a: 'Oui, dans une certaine mesure. Home Assistant peut intégrer des appareils et même relier Alexa, Google et Apple, ce qui est la façon la plus flexible de mélanger les écosystèmes. Mélanger directement les écosystèmes cloud est plus limité.' },
           { q: 'Quel écosystème est le plus facile pour les débutants ?', a: 'Amazon Alexa et Google Home sont les plus faciles pour les débutants car la configuration est guidée par application et gérée dans le cloud. Home Assistant offre plus de confidentialité et de contrôle mais demande plus d\'effort.' },
         ],
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1199,7 +1199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       mainEntity: [
         { '@type': 'Question', name: 'Quel écosystème de maison connectée est le plus privé ?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant, car le contrôle et les automatisations tournent localement sans collecte de données par le fabricant. Parmi les écosystèmes cloud, Apple Home est le plus privé.' } },
-        { '@type': 'Question', name: 'Quel écosystème fonctionne hors ligne ?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant fonctionne hors ligne pour les appareils et automatisations locaux. Alexa et Google Home dépendent du cloud ; Apple Home conserve un peu de contrôle local via un home hub.' } },
+        { '@type': 'Question', name: 'Quel écosystème fonctionne hors ligne ?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant fonctionne hors ligne pour les appareils et automatisations locaux. Alexa et Google Home dépendent du cloud — Amazon a confirmé qu\'Alexa+ n\'a aucun traitement local ; Apple Home conserve un peu de contrôle local via un home hub.' } },
         { '@type': 'Question', name: 'Puis-je mélanger des écosystèmes de maison connectée ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, dans une certaine mesure. Home Assistant peut intégrer des appareils et relier Alexa, Google et Apple, la façon la plus flexible de mélanger les écosystèmes.' } },
         { '@type': 'Question', name: 'Quel écosystème est le plus facile pour les débutants ?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa et Google Home, car la configuration est guidée par application et gérée dans le cloud. Home Assistant offre plus de contrôle mais demande plus d\'effort.' } },
       ],
@@ -1209,8 +1209,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-ja.webp',
     title: 'スマートホームのエコシステム比較（2026）：Alexa・Google・Apple・HA',
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa、Google Home、Apple Home、Home Assistant が市場の大半を占め、プライバシーとローカル制御で明確に分かれます。** それぞれ異なる優先事項に合います。',
         items: [
-          '**Amazon Alexa：** 最も広いサードパーティ機器とスキルの対応、クラウド優先、音声主導。',
+          '**Amazon Alexa：** 最も広いサードパーティ機器とスキルの対応。現在は生成AIアシスタント Alexa+ で動作しており、Amazon はすべてのリクエストをローカル処理の選択肢なしにクラウドで処理すると確認しています。',
           '**Google Home：** 強力な音声アシスタントと広い機器対応、クラウド優先。',
           '**Apple Home：** Apple エコシステム内でプライバシー重視、ホームハブ経由のローカル制御あり。',
           '**Home Assistant：** オープンソース、ローカル優先、最も柔軟でプライベート——[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide)を参照。',
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa と Google Home はアプリ案内・クラウド管理のため最も始めやすいです。** 最小限の設定を望み、プライバシーのトレードオフを許容するなら選びましょう。',
         items: [
-          '最も広い機器・音声スキル対応をそのまま使うなら Alexa を。',
+          '最も広い機器・音声スキル対応をそのまま使うなら Alexa を。生成AIレイヤーの Alexa+ により会話がより豊かになりました。',
           'Google のアシスタントとサービスを好むなら Google Home を。',
           'どちらもプライバシーとオフラインの信頼性を利便性と引き換えにします——[ローカルがクラウドに勝る理由](/ja/smart-home/why-local-smart-home-beats-cloud)を参照。',
         ],
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: '最もプライベートなスマートホームエコシステムはどれですか？', a: 'Home Assistant が最もプライベートです。制御と自動化が自分のハードウェア上でメーカーのデータ収集なしに動くからです。主流のクラウドエコシステムの中では Apple Home が最もプライバシー重視です。' },
-          { q: 'オフラインで動くエコシステムはどれですか？', a: 'Home Assistant はローカル機器と自動化でオフライン動作します。Alexa と Google Home はクラウド依存が強く、インターネットなしでは多くの機能を失います；Apple Home はホームハブ経由で一部のローカル制御を保ちます。' },
+          { q: 'オフラインで動くエコシステムはどれですか？', a: 'Home Assistant はローカル機器と自動化でオフライン動作します。Alexa と Google Home はクラウド依存が強く、インターネットなしでは多くの機能を失います——生成AIアシスタント Alexa+ にはローカル処理機能が一切ないと Amazon が確認しています；Apple Home はホームハブ経由で一部のローカル制御を保ちます。' },
           { q: 'スマートホームのエコシステムを混在できますか？', a: 'ある程度はできます。Home Assistant は機器を統合し、Alexa、Google、Apple を橋渡しすることもでき、最も柔軟にエコシステムを混在できます。クラウドエコシステム同士を直接混ぜるのはより限定的です。' },
           { q: '初心者に最も簡単なエコシステムはどれですか？', a: 'Amazon Alexa と Google Home が初心者に最も簡単です。設定がアプリ案内・クラウド管理だからです。Home Assistant はより高いプライバシーと制御を提供しますが、より多くの手間がかかります。' },
         ],
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1395,7 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       mainEntity: [
         { '@type': 'Question', name: '最もプライベートなスマートホームエコシステムはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant です。制御と自動化が自分のハードウェア上でメーカーのデータ収集なしに動くからです。クラウドエコシステムの中では Apple Home が最もプライバシー重視です。' } },
-        { '@type': 'Question', name: 'オフラインで動くエコシステムはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant はローカル機器と自動化でオフライン動作します。Alexa と Google Home はクラウド依存；Apple Home はホームハブ経由で一部のローカル制御を保ちます。' } },
+        { '@type': 'Question', name: 'オフラインで動くエコシステムはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant はローカル機器と自動化でオフライン動作します。Alexa と Google Home はクラウド依存——Alexa+ にはローカル処理機能がないと Amazon が確認しています；Apple Home はホームハブ経由で一部のローカル制御を保ちます。' } },
         { '@type': 'Question', name: 'スマートホームのエコシステムを混在できますか？', acceptedAnswer: { '@type': 'Answer', text: 'ある程度は可能です。Home Assistant は機器を統合し、Alexa、Google、Apple を橋渡しでき、最も柔軟にエコシステムを混在できます。' } },
         { '@type': 'Question', name: '初心者に最も簡単なエコシステムはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa と Google Home です。設定がアプリ案内・クラウド管理だからです。Home Assistant はより高い制御を提供しますが手間がかかります。' } },
       ],
@@ -1405,8 +1405,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-pt.webp',
     title: 'Ecossistemas de Casa Inteligente Comparados (2026): Alexa, Google, Apple, HA',
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa, Google Home, Apple Home e Home Assistant cobrem a maior parte do mercado e se dividem claramente em privacidade e controle local.** Cada um combina com uma prioridade diferente.',
         items: [
-          '**Amazon Alexa:** o suporte mais amplo a dispositivos e skills de terceiros, nuvem-primeiro, guiado por voz.',
+          '**Amazon Alexa:** o suporte mais amplo a dispositivos e skills de terceiros; agora funciona com o assistente de IA generativa Alexa+, que a Amazon confirmou processar cada solicitação na nuvem, sem opção local.',
           '**Google Home:** assistente de voz forte e amplo suporte a dispositivos, nuvem-primeiro.',
           '**Apple Home:** voltado à privacidade dentro do ecossistema Apple, com controle local via um home hub.',
           '**Home Assistant:** de código aberto, local-primeiro, o mais flexível e privado — veja [o guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide).',
@@ -1519,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**A Amazon Alexa e o Google Home são os mais fáceis de começar porque são guiados por aplicativo e gerenciados na nuvem.** Escolha-os se você quer configuração mínima e aceita o compromisso de privacidade.',
         items: [
-          'Use a Alexa pelo suporte mais amplo a dispositivos e skills de voz de fábrica.',
+          'Use a Alexa pelo suporte mais amplo a dispositivos e skills de voz de fábrica, agora com a camada de IA generativa Alexa+ para conversas mais ricas.',
           'Use o Google Home se você prefere o assistente e os serviços do Google.',
           'Ambos trocam privacidade e confiabilidade offline por comodidade — veja [por que uma casa inteligente local supera a nuvem](/pt/smart-home/why-local-smart-home-beats-cloud).',
         ],
@@ -1554,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Qual ecossistema de casa inteligente é mais privado?', a: 'O Home Assistant é o mais privado porque o controle e as automações rodam localmente no seu próprio hardware sem coleta de dados do fabricante. Entre os ecossistemas na nuvem populares, o Apple Home é o mais voltado à privacidade.' },
-          { q: 'Qual ecossistema funciona offline?', a: 'O Home Assistant funciona offline para dispositivos e automações locais. Alexa e Google Home dependem muito da nuvem e perdem a maioria das funções sem internet; o Apple Home mantém algum controle local via um home hub.' },
+          { q: 'Qual ecossistema funciona offline?', a: 'O Home Assistant funciona offline para dispositivos e automações locais. Alexa e Google Home dependem muito da nuvem e perdem a maioria das funções sem internet — a Amazon confirmou que o assistente de IA generativa Alexa+ não tem nenhuma capacidade de processamento local; o Apple Home mantém algum controle local via um home hub.' },
           { q: 'Posso misturar ecossistemas de casa inteligente?', a: 'Sim, até certo ponto. O Home Assistant pode integrar dispositivos e até unir Alexa, Google e Apple, que é a forma mais flexível de misturar ecossistemas. Misturar ecossistemas na nuvem diretamente é mais limitado.' },
           { q: 'Qual ecossistema é mais fácil para iniciantes?', a: 'Amazon Alexa e Google Home são os mais fáceis para iniciantes porque a configuração é guiada por aplicativo e gerenciada na nuvem. O Home Assistant oferece mais privacidade e controle, mas exige mais esforço.' },
         ],
@@ -1580,7 +1580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1591,7 +1591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'Qual ecossistema de casa inteligente é mais privado?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant, porque o controle e as automações rodam localmente sem coleta de dados do fabricante. Entre os ecossistemas na nuvem, o Apple Home é o mais privado.' } },
-        { '@type': 'Question', name: 'Qual ecossistema funciona offline?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant funciona offline para dispositivos e automações locais. Alexa e Google Home dependem da nuvem; o Apple Home mantém algum controle local via um home hub.' } },
+        { '@type': 'Question', name: 'Qual ecossistema funciona offline?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant funciona offline para dispositivos e automações locais. Alexa e Google Home dependem da nuvem — a Amazon confirmou que o Alexa+ não tem processamento local; o Apple Home mantém algum controle local via um home hub.' } },
         { '@type': 'Question', name: 'Posso misturar ecossistemas de casa inteligente?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, até certo ponto. O Home Assistant pode integrar dispositivos e unir Alexa, Google e Apple, a forma mais flexível de misturar ecossistemas.' } },
         { '@type': 'Question', name: 'Qual ecossistema é mais fácil para iniciantes?', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa e Google Home, porque a configuração é guiada por aplicativo e gerenciada na nuvem. O Home Assistant oferece mais controle, mas exige mais esforço.' } },
       ],
@@ -1601,8 +1601,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Smart Home Foundations',
     heroImage: '/images/smart-home-ecosystems-compared-overview-hero-zh.webp',
     title: '智能家居生态系统对比（2026）：Alexa、Google、Apple、HA',
@@ -1675,7 +1675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa、Google Home、Apple Home 和 Home Assistant 覆盖了市场的大部分，并在隐私和本地控制上清晰分野。** 各自契合不同的优先事项。',
         items: [
-          '**Amazon Alexa：** 第三方设备与技能支持最广、云端优先、语音主导。',
+          '**Amazon Alexa：** 第三方设备与技能支持最广；现已运行生成式 AI 助手 Alexa+，Amazon 已确认每个请求都仅在云端处理，没有本地选项。',
           '**Google Home：** 语音助手强大、设备支持广泛、云端优先。',
           '**Apple Home：** 在 Apple 生态内注重隐私，经由 home hub 提供本地控制。',
           '**Home Assistant：** 开源、本地优先、最灵活也最私密——参见[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide)。',
@@ -1715,7 +1715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Amazon Alexa 和 Google Home 上手最易，因为它们由应用引导、云端托管。** 若你想要最少的配置并接受隐私上的取舍，就选它们。',
         items: [
-          '若想要最广的设备与语音技能开箱即用，选 Alexa。',
+          '若想要最广的设备与语音技能开箱即用，选 Alexa，现在还有生成式 AI 层 Alexa+ 带来更丰富的对话。',
           '若偏好 Google 的助手与服务，选 Google Home。',
           '两者都以隐私和离线可靠性换取便利——参见[本地智能家居为何胜过云端](/zh/smart-home/why-local-smart-home-beats-cloud)。',
         ],
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: '哪个智能家居生态系统最私密？', a: 'Home Assistant 最私密，因为控制和自动化在你自己的硬件上本地运行，没有厂商数据收集。在主流云端生态系统中，Apple Home 最注重隐私。' },
-          { q: '哪个生态系统能离线工作？', a: 'Home Assistant 对本地设备和自动化可离线工作。Alexa 和 Google Home 高度依赖云端，断网时会失去大部分功能；Apple Home 经由 home hub 保留部分本地控制。' },
+          { q: '哪个生态系统能离线工作？', a: 'Home Assistant 对本地设备和自动化可离线工作。Alexa 和 Google Home 高度依赖云端，断网时会失去大部分功能——Amazon 已确认生成式 AI 助手 Alexa+ 完全没有本地处理能力；Apple Home 经由 home hub 保留部分本地控制。' },
           { q: '我可以混用智能家居生态系统吗？', a: '在一定程度上可以。Home Assistant 能集成设备，甚至桥接 Alexa、Google 和 Apple，这是混用生态系统最灵活的方式。直接混用云端生态系统则更受限。' },
           { q: '哪个生态系统对新手最简单？', a: 'Amazon Alexa 和 Google Home 对新手最简单，因为配置由应用引导、云端托管。Home Assistant 提供更高的隐私与掌控，但需要更多投入。' },
         ],
@@ -1776,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Amazon Alexa' }, { '@type': 'Thing', name: 'Google Home' }, { '@type': 'Thing', name: 'Apple Home' }, { '@type': 'Thing', name: 'Home Assistant' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       mainEntity: [
         { '@type': 'Question', name: '哪个智能家居生态系统最私密？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 最私密，因为控制和自动化在你自己的硬件上本地运行，没有厂商数据收集。云端生态系统中 Apple Home 最私密。' } },
-        { '@type': 'Question', name: '哪个生态系统能离线工作？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 对本地设备和自动化可离线工作。Alexa 和 Google Home 依赖云端；Apple Home 经由 home hub 保留部分本地控制。' } },
+        { '@type': 'Question', name: '哪个生态系统能离线工作？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 对本地设备和自动化可离线工作。Alexa 和 Google Home 依赖云端——Amazon 已确认 Alexa+ 没有本地处理能力；Apple Home 经由 home hub 保留部分本地控制。' } },
         { '@type': 'Question', name: '我可以混用智能家居生态系统吗？', acceptedAnswer: { '@type': 'Answer', text: '在一定程度上可以。Home Assistant 能集成设备并桥接 Alexa、Google 和 Apple，是混用生态系统最灵活的方式。' } },
         { '@type': 'Question', name: '哪个生态系统对新手最简单？', acceptedAnswer: { '@type': 'Answer', text: 'Amazon Alexa 和 Google Home 对新手最简单，因为配置由应用引导、云端托管。Home Assistant 提供更高掌控但需要更多投入。' } },
       ],
