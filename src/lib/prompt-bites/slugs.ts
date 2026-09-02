@@ -170,6 +170,9 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'is-balcony-solar-legal-new-hampshire': 'isBalconySolarLegalNewHampshire',
   'is-balcony-solar-legal-vermont':       'isBalconySolarLegalVermont',
   'is-balcony-solar-legal-connecticut':   'isBalconySolarLegalConnecticut',
+  'is-balcony-solar-legal-new-jersey':    'isBalconySolarLegalNewJersey',
+  'is-balcony-solar-legal-california':    'isBalconySolarLegalCalifornia',
+  'is-balcony-solar-legal-new-york':      'isBalconySolarLegalNewYork',
 
   // Local AI Trends 2027 — 10-part series (not yet in PROMPT_BITES_PUBLISHED_SLUGS)
   'local-ai-trend-2027-cloud-subsidy-collapse':      'localAiTrend2027CloudSubsidyCollapse',

@@ -161,11 +161,22 @@ export const US_STATES: USStateEntry[] = [
   {
     state: 'New York',
     status: 'Passed legislature, awaiting governor signature',
-    bill: 'SUNNY Act',
+    bill: 'SUNNY Act (A.9111C/S.8512C)',
     signedDate: null,
     effectiveDate: null,
-    powerLimitW: null,
-    sourceUrls: ['https://pv-magazine-usa.com/2026/06/01/new-york-legislature-passes-sunny-act-plug-in-solar-legislation/'],
+    powerLimitW: 1200,
+    powerLimitNote: "Passed both chambers May 28-29, 2026. Gov. Hochul's office has said the bill is under review; she has until end of 2026 to sign or veto. Would exempt devices from utility interconnection/net metering (UL-listed + fire-code compliant) but would NOT preempt landlord/co-op/HOA restrictions — existing NY solar-rights law is roof-only.",
+    sourceUrls: ['https://pv-magazine-usa.com/2026/06/01/new-york-legislature-passes-sunny-act-plug-in-solar-legislation/', 'https://www.canarymedia.com/articles/solar/new-york-gov-sign-balcony-solar-bill'],
+  },
+  {
+    state: 'California',
+    status: 'Passed legislature, awaiting governor signature',
+    bill: 'SB 868 (Plug and Play Solar Act)',
+    signedDate: null,
+    effectiveDate: null,
+    powerLimitW: 1200,
+    powerLimitNote: 'Passed the Assembly Aug 25, 2026 and the Senate shortly after; on Gov. Newsom\'s desk with a Sep 30, 2026 deadline to sign or veto. Would exempt devices from utility interconnection only through Jan 1, 2030 (sunset date, not permanent). Would NOT preempt landlord leases or HOA rules — CA Solar Rights Act is roof-only.',
+    sourceUrls: ['https://pv-magazine-usa.com/2026/08/26/california-plug-in-solar-bill-sb-868-earns-approval-of-both-legislative-houses-nears-governors-desk/', 'https://news.bloomberglaw.com/environment-and-energy/california-balcony-solar-bill-heads-to-governors-desk'],
   },
   {
     state: 'New Hampshire',
@@ -187,10 +198,20 @@ export const US_STATES: USStateEntry[] = [
     powerLimitNote: 'UL 3700 (or equivalent) certification explicitly required by statute; net metering explicitly excluded.',
     sourceUrls: ['https://www.brightsaver.org/legislation-tracker'],
   },
+  {
+    state: 'New Jersey',
+    status: 'Signed',
+    bill: 'Garden State Balcony Solar Act (S2368/A4836)',
+    signedDate: '2026-09-01',
+    effectiveDate: '2027-03-01',
+    powerLimitW: 1200,
+    powerLimitNote: 'Devices of 400W or less get a lighter installation/certification exemption tier. Explicitly preempts HOA/landlord bans (2nd state after Colorado) — "reasonable restrictions" on size/placement allowed with 14 days\' written notice + safety docs.',
+    sourceUrls: ['https://pv-magazine-usa.com/2026/09/01/new-jersey-legalizes-plug-in-solar-up-to-1200-w/', 'https://www.nj.gov/governor/news/2026/approved/20260901a.shtml'],
+  },
 ];
 
 export const US_STATE_COUNT_NOTE =
-  'State count moves monthly — re-verify at write-time (BSOL-12 next_refresh_due is +60 days, not the default 6-month semi_annual interval, for this reason). As of 2026-09-02 (corrected — see docs/BALCONY_SOLAR_Q1_2027_REFRESH_TODO.md and the 2026-08-29 New Hampshire date correction in is-balcony-solar-legal-new-hampshire.ts): 8 states signed (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), 1 more (New York) passed legislature and awaiting governor signature. Three of the 8 signed states are not yet in effect: Colorado (Jan 1 2027), New Hampshire (Jan 1 2027), and Connecticut (Oct 1 2026). CO/MD/CT dates were cross-verified only via secondary trackers (pluginsolarhub.org, pv-tech.org), not primary legislative text — confirm against official state legislative records before publishing exact signing dates. NH was independently re-verified 2026-08-29 against primary/local press sources (NH Bulletin/NHPR, NH Business Review, Valley News, bill chapter number) and is more reliable than the CO/MD/CT secondary-tracker dates.';
+  'State count moves monthly — re-verify at write-time (BSOL-12 next_refresh_due is +60 days, not the default 6-month semi_annual interval, for this reason). As of 2026-09-02 (corrected — see docs/BALCONY_SOLAR_Q1_2027_REFRESH_TODO.md, the 2026-08-29 New Hampshire date correction in is-balcony-solar-legal-new-hampshire.ts, and the 2026-09-02 addition of New Jersey/California): 9 states signed (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut, New Jersey), 2 more (New York, California) passed their legislature and are awaiting governor signature. Four of the 9 signed states are not yet in effect: Colorado (Jan 1 2027), New Hampshire (Jan 1 2027), New Jersey (Mar 1 2027), and Connecticut (Oct 1 2026). CO/MD/CT dates were cross-verified only via secondary trackers (pluginsolarhub.org, pv-tech.org), not primary legislative text — confirm against official state legislative records before publishing exact signing dates. NH and NJ were independently re-verified against primary/local press sources and are more reliable than the CO/MD/CT secondary-tracker dates. California\'s SB 868 has a Sep 30, 2026 gubernatorial deadline — re-check status at every refresh until resolved.';
 
 // ─── PER-COUNTRY / PER-REGION DATA ─────────────────────────────────────────────
 

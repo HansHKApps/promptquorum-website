@@ -37,6 +37,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -140,6 +143,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -243,6 +249,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -346,6 +355,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -449,6 +461,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -552,6 +567,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -655,6 +673,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -758,6 +779,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {
@@ -861,6 +885,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'is-balcony-solar-legal-colorado',
       'is-balcony-solar-legal-vermont',
       'is-balcony-solar-legal-connecticut',
+      'is-balcony-solar-legal-new-jersey',
+      'is-balcony-solar-legal-california',
+      'is-balcony-solar-legal-new-york',
     ],
     is_living_page: false,
     quickAnswerTop: {

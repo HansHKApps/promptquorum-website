@@ -143,6 +143,9 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'is-balcony-solar-legal-new-hampshire',
   'is-balcony-solar-legal-vermont',
   'is-balcony-solar-legal-connecticut',
+  'is-balcony-solar-legal-new-jersey',
+  'is-balcony-solar-legal-california',
+  'is-balcony-solar-legal-new-york',
 
   // Local AI Trends 2027 — 10-part series (all 9 languages)
   'local-ai-trend-2027-cloud-subsidy-collapse',
