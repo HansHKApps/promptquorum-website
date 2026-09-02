@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 187,
+    "totalCount": 188,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 103,
+    "totalCount": 104,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 63,
+    "totalCount": 64,
     "capped": true
   },
   "LocalAI": {
@@ -1946,6 +1946,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llm-stack-use-case",
         "title": "Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents",
@@ -1984,17 +1992,9 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langflow-visual-ai-orchestration-review",
-        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
-        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "Haystack": {
@@ -2063,6 +2063,36 @@
       }
     ],
     "totalCount": 1,
+    "capped": false
+  },
+  "txtai": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-embedding-models-local-rag-2026",
+        "title": "Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)",
+        "url": "/power-local-llm/best-embedding-models-local-rag-2026",
+        "dateModified": "2026-09-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "LangChain": {
@@ -2148,7 +2178,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "CrewAI": {

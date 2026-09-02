@@ -119,4 +119,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'langflow-visual-ai-orchestration-review':      'langflow-visual-ai-orchestration-review',
   // LlamaIndex deep-dive 2026-09-02
   'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
+  // txtai embedded vector database review — 2026-09-02
+  'txtai-embedded-vector-database-review':        'txtai-embedded-vector-database-review',
 }
