@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor GPU para inferencia LLM por menos de 500 € (2026)',
       description: 'Comparación clasificada de GPU por menos de 500 € para inferencia de IA local: RTX 4060 Ti 16GB, RTX 3060 12GB, Arc B580. Precios verificados. RTX 3090, RTX 4070 y RX 7800 XT eliminadas — todas superan ahora los 500 €.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/es/local-llms/best-gpu-for-llm-inference-under-500-2026',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'بطاقة RTX 4060 Ti 16GB هي أفضل GPU بأقل من $500 للاستدلال المحلي على نماذج LLM لأن 16 GB من VRAM تستوعب نماذج 14B بجودة Q8 كاملة دون ضغط على الذاكرة.',
+            text: 'بطاقة Intel Arc B580 12GB هي أفضل GPU بأقل من $500 للاستدلال المحلي على نماذج LLM لأنها البطاقة الجديدة الوحيدة بسعة 12 GB التي ما زالت متوفرة بشكل موثوق تحت $500 بعد نقص الذاكرة في 2026.',
           },
           {
             type: 'plain-terms',
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ماذا عن بطاقات Intel Arc للذكاء الاصطناعي؟',
-            a: 'بطاقة Intel Arc B580 12GB هي أفضل خيار Arc في 2026. تشغّل Ollama على Windows وLinux عبر الواجهة الخلفية SYCL، رغم أن الأداء أقل بنسبة 30–40% من NVIDIA في tok/s الخام. القيمة مقابل السعر قوية: 12 GB من VRAM بسعر $280 دون مشاكل تعريفات على الأنظمة الحديثة. القيد الرئيسي هو البرمجيات: vLLM وأدوات fine-tuning وأنظمة تشغيل متعددة الوسائط لا تدعم Arc جيداً بعد.',
+            a: 'بطاقة Intel Arc B580 12GB هي أفضل خيار Arc في 2026، وبعد أن أعاد نقص الذاكرة تسعير مجال NVIDIA بأكمله، صارت أفضل بطاقة في هذه الصفحة على الإطلاق. تشغّل Ollama على Windows وLinux عبر الواجهة الخلفية SYCL، رغم أن الأداء أقل بنسبة 30–40% من NVIDIA في tok/s الخام. القيمة مقابل السعر صارت حاسمة لا مجرد قوية: 12 GB من VRAM بسعر $250–290 بينما تقع البطاقات المماثلة من NVIDIA عند $474–599. القيد الرئيسي لا يزال البرمجيات — إذ لا تدعم vLLM وأدوات الضبط الدقيق وأنظمة التشغيل متعددة الوسائط بطاقات Arc جيداً بعد، فإن كنت تحتاج الضبط الدقيق LoRA، اشترِ بدلاً من ذلك RTX 3060 12GB مستعملة.',
           },
           {
             q: 'هل يمكنني تشغيل نموذج 70B على بطاقة GPU واحدة بأقل من $500؟',
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل GPU للاستدلال على نماذج LLM بأقل من $500 (2026)',
       description: 'مقارنة مصنّفة لبطاقات GPU بأقل من $500 للاستدلال المحلي على الذكاء الاصطناعي: Intel Arc B580 12GB، وRTX 3060 12GB مستعملة، وRTX 4060 Ti 16GB. دفع نقص الذاكرة في 2026 بطاقات RTX 3090 وRTX 4070 وRX 7800 XT وRTX 3060 الجديدة فوق $500.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ar/local-llms/best-gpu-for-llm-inference-under-500-2026',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1053,7 +1053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhor GPU para inferência de LLM por menos de US$ 500 (2026)',
       description: 'Comparação classificada de GPUs por menos de US$ 500 para inferência de IA local: RTX 4060 Ti 16GB, RTX 3060 12GB, Arc B580. Preços verificados. RTX 3090, RTX 4070 e RX 7800 XT removidas — todas excedem US$ 500 agora.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/pt/local-llms/best-gpu-for-llm-inference-under-500-2026',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1293,7 +1293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'NVIDIA RTX 4060 Ti 16GB', description: 'Beste Hardware, aber zur UVP von 399 € nicht lieferbar und ~560 € wenn verfügbar' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Beste GPU für LLM-Inferenz unter 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-08-28', url: 'https://www.promptquorum.com/de/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'Beste GPU für LLM-Inferenz unter 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-09-01', url: 'https://www.promptquorum.com/de/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'de' },
   },
 
   fr: {
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'NVIDIA RTX 4060 Ti 16 Go', description: 'Meilleur matériel, mais en rupture au tarif conseillé de 399 € et ~560 € quand disponible' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Meilleure GPU pour l\'inférence LLM à moins de 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-08-28', url: 'https://www.promptquorum.com/fr/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'Meilleure GPU pour l\'inférence LLM à moins de 500 € (2026)', datePublished: '2026-05-26', dateModified: '2026-09-01', url: 'https://www.promptquorum.com/fr/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'fr' },
   },
 
   ja: {
@@ -1764,7 +1764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'NVIDIA RTX 4060 Ti 16GB', description: '最良のハードウェアだが希望小売価格$399では在庫がなく、入手可能な個体は約$562' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '500ドル以下のLLM推論向けGPUおすすめランキング（2026年）', datePublished: '2026-05-26', dateModified: '2026-08-28', url: 'https://www.promptquorum.com/ja/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: '500ドル以下のLLM推論向けGPUおすすめランキング（2026年）', datePublished: '2026-05-26', dateModified: '2026-09-01', url: 'https://www.promptquorum.com/ja/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'ja' },
   },
 
   zh: {
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'ListItem', position: 3, name: 'NVIDIA RTX 4060 Ti 16GB', description: '最强硬件，但$399官方定价缺货，有货时约$562' },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: '2026年500美元以下LLM推理最佳GPU排行', datePublished: '2026-05-26', dateModified: '2026-08-28', url: 'https://www.promptquorum.com/zh/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: '2026年500美元以下LLM推理最佳GPU排行', datePublished: '2026-05-26', dateModified: '2026-09-01', url: 'https://www.promptquorum.com/zh/local-llms/best-gpu-for-llm-inference-under-500-2026', inLanguage: 'zh' },
   },
 
   ko: {
@@ -2248,7 +2248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '500달러 이하 LLM 추론용 최고 GPU 순위 (2026년)',
       description: '500달러 이하 로컬 AI 추론 GPU 비교 순위: Intel Arc B580 12GB, 중고 RTX 3060 12GB, RTX 4060 Ti 16GB. 2026년 메모리 공급 부족으로 RTX 3090, RTX 4070, RX 7800 XT, 신품 RTX 3060이 $500을 넘었습니다.',
       datePublished: '2026-05-26',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ko/local-llms/best-gpu-for-llm-inference-under-500-2026',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
