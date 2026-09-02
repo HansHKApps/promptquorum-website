@@ -24,6 +24,9 @@ playwright-report/
 geo-audit-report.csv
 *.audit.csv
 
+# Legal/reputational risk pre-scan output (generated; re-run npm run risk:scan)
+risk-scan-report.csv
+
 # Screenshot / image artifacts dropped in the tree (e.g. Playwright captures)
 *.png
 # ...except real content assets (Discover-compliant hero PNGs, brand images)

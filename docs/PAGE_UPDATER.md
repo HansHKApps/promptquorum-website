@@ -322,12 +322,30 @@ If, at any point during the refresh, a language block is found to be missing sec
 
 **Why:** A structural gap between languages is the same failure class as a shallow content update (Anti-Pattern #1) — it leaves some language versions contradicting or underserving readers relative to others, and non-EN pages rank independently, so an incomplete DE/FR/JA/ZH page underperforms silently. "Found but not fixed" defeats the purpose of running the page updater at all.
 
+### Step 5.7: Legal & Reputational Risk Gate (MANDATORY — every page-updater run)
+
+After Steps 5 and 5.5 have left every locale block final, and before writing the Step 6 report, run the `risk-checker` skill on the updated file:
+
+```
+/risk-checker src/lib/<cluster>/articles/<slug>.ts
+```
+
+It is read-only, needs no GSC data, and covers all locale blocks in one run (`~/.claude/skills/risk-checker/SKILL.md`; full rule text in `docs/GEO_WRITING_GUIDELINES.md` Rule 35b).
+
+**Gate rule:**
+- `BLOCK` (any CRITICAL finding) → fix the flagged sentences in every affected locale, re-run, and only then write the report. A page with a CRITICAL finding does not ship.
+- `REVIEW` (HIGH findings, no CRITICAL) → fix what a hedge, source, or disclaimer can fix in this pass; list the rest verbatim under the `Risk gate` line of the Step 6 report so the operator can decide. Never drop them silently.
+- `PASS` → record the score line in the report.
+
+**Why:** a refresh changes exactly the things that create liability — numbers, model names, recommendations, compliance framing — and Step 5 propagation is where a hedged EN sentence becomes an absolute DE/FR/JA one. The June 2026 legal review (`docs/german-legal-review.md`) found seven Abmahnung-grade sentences that all entered the site through refresh and translation passes. "Updated but not risk-checked" is the same failure class as Anti-Pattern #1.
+
 ### Step 6: Report What Was Updated
 
 After completing the update, output a section-by-section report:
 
 ```
 ## Update Report: [page-slug]
+- Risk gate: [PASS n/10 / REVIEW — HIGH items listed below / BLOCK → fixed, re-run PASS]
 - GSC data reviewed: [date range], [X] queries, [Y] impressions, [Z] clicks
 - Top GSC query gaps addressed: [list queries that were missing from content]
 - Title tag: UPDATED (was "X", now "Y") — aligned to top query: "[query]"

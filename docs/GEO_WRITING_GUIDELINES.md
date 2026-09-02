@@ -1139,6 +1139,32 @@ If CTR is <20% below your avg or <5% below competitors on similar queries, revis
 
 ---
 
+### Rule 35b: Legal & Reputational Risk Gate (Mandatory Before Publishing — Every New Article)
+
+**Every new article written under these guidelines must pass the `risk-checker` skill before it is committed.** No exceptions for short articles, prompt bites, or "just a translation" — translations are where hedged English claims turn into absolute German/French/Japanese ones.
+
+```
+/risk-checker src/lib/<cluster>/articles/<slug>.ts
+```
+
+The skill (`~/.claude/skills/risk-checker/SKILL.md`) is read-only, needs no GSC data, and audits every locale block in the file for the four things that get a publisher sued or embarrassed:
+
+1. **Legal-status guarantees** — "GDPR-compliant", "DSGVO-konform ab Inbetriebnahme", "certified", "legally safe".
+2. **Under-disclaimed advice** — legal, medical, financial, hardware-safety, smart-home camera topics with no "not legal advice / consult a professional" note in that locale.
+3. **Negative statements about named vendors, models, or people** without a dated source or an opinion marker.
+4. **Claims of testing the site did not do** — "we tested", "our benchmarks", "our lab" with no hardware + software methodology note in the same locale.
+
+plus absolutes, fabricated citations, undisclosed commercial links, licence misstatements, fake review schema, and locale drift (full list in the skill's `references/risk-taxonomy.md`).
+
+**Gate:**
+- `BLOCK` (any CRITICAL) → fix every flagged sentence in every locale, re-run until it clears. Do not commit.
+- `REVIEW` (HIGH, no CRITICAL) → fix what a hedge, source, or disclaimer can fix now; list the remainder verbatim in the commit message or PR so the operator can decide.
+- `PASS` → note the score in the commit message (`risk-check: PASS 10/10`).
+
+**Why:** the June 2026 German legal review (`docs/german-legal-review.md`) found seven Abmahnung-grade sentences that all passed the GEO checklist above — GEO rules test for answer quality, not for liability. This rule closes that gap at the point where the sentence is written, which is the cheapest place to fix it.
+
+---
+
 ### Rule 36: First Screen Must Answer + Decide (Mandatory)
 
 **Everything above the fold must allow the reader to make a decision WITHOUT scrolling.** Users and AI systems both prioritize top-visible content. If the visitor must scroll to understand the answer or make a choice, you lose the interaction.

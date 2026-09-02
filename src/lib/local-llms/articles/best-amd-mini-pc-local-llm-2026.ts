@@ -2507,7 +2507,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Minisforum' },
           'model': 'MS-A2',
           'offers': { '@type': 'Offer', 'price': '1599', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://store.minisforum.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.5', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -2517,7 +2516,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Beelink' },
           'model': 'GTR9 Pro',
           'offers': { '@type': 'Offer', 'price': '1999', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://www.bee-link.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.7', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -2527,7 +2525,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'AOOSTAR' },
           'model': 'GEM12 Pro',
           'offers': { '@type': 'Offer', 'price': '1899', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://aoostar.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.6', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -2537,7 +2534,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'GMKtec' },
           'model': 'EVO-X2',
           'offers': { '@type': 'Offer', 'price': '1299', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://www.gmktec.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.2', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
       ],
     },
@@ -3028,7 +3024,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Minisforum' },
           'model': 'MS-A2',
           'offers': { '@type': 'Offer', 'price': '1599', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://store.minisforum.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.5', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -3038,7 +3033,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Beelink' },
           'model': 'GTR9 Pro',
           'offers': { '@type': 'Offer', 'price': '1999', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://www.bee-link.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.7', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -3048,7 +3042,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'AOOSTAR' },
           'model': 'GEM12 Pro',
           'offers': { '@type': 'Offer', 'price': '1899', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://aoostar.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.6', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -3058,7 +3051,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'GMKtec' },
           'model': 'EVO-X2',
           'offers': { '@type': 'Offer', 'price': '1299', 'priceCurrency': 'EUR', 'availability': 'https://schema.org/InStock', 'url': 'https://www.gmktec.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.2', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
       ],
     },
@@ -3524,7 +3516,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Minisforum' },
           'model': 'MS-A2',
           'offers': { '@type': 'Offer', 'price': '172000', 'priceCurrency': 'JPY', 'availability': 'https://schema.org/InStock', 'url': 'https://store.minisforum.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.5', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -3534,7 +3525,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Beelink' },
           'model': 'GTR9 Pro',
           'offers': { '@type': 'Offer', 'price': '205000', 'priceCurrency': 'JPY', 'availability': 'https://schema.org/InStock', 'url': 'https://www.bee-link.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.7', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -3544,7 +3534,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'AOOSTAR' },
           'model': 'GEM12 Pro',
           'offers': { '@type': 'Offer', 'price': '189000', 'priceCurrency': 'JPY', 'availability': 'https://schema.org/InStock', 'url': 'https://aoostar.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.6', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -3554,7 +3543,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'GMKtec' },
           'model': 'EVO-X2',
           'offers': { '@type': 'Offer', 'price': '130000', 'priceCurrency': 'JPY', 'availability': 'https://schema.org/InStock', 'url': 'https://www.gmktec.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.2', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
       ],
     },
@@ -4020,7 +4008,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Minisforum' },
           'model': 'MS-A2',
           'offers': { '@type': 'Offer', 'price': '10500', 'priceCurrency': 'CNY', 'availability': 'https://schema.org/InStock', 'url': 'https://store.minisforum.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.5', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -4030,7 +4017,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'Beelink' },
           'model': 'GTR9 Pro',
           'offers': { '@type': 'Offer', 'price': '13700', 'priceCurrency': 'CNY', 'availability': 'https://schema.org/InStock', 'url': 'https://www.bee-link.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.7', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -4040,7 +4026,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'AOOSTAR' },
           'model': 'GEM12 Pro',
           'offers': { '@type': 'Offer', 'price': '13000', 'priceCurrency': 'CNY', 'availability': 'https://schema.org/InStock', 'url': 'https://aoostar.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.6', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
         {
           '@context': 'https://schema.org',
@@ -4050,7 +4035,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'brand': { '@type': 'Brand', 'name': 'GMKtec' },
           'model': 'EVO-X2',
           'offers': { '@type': 'Offer', 'price': '8600', 'priceCurrency': 'CNY', 'availability': 'https://schema.org/InStock', 'url': 'https://www.gmktec.com' },
-          'review': { '@type': 'Review', 'reviewRating': { '@type': 'Rating', 'ratingValue': '4.2', 'bestRating': '5' }, 'author': { '@type': 'Person', 'name': 'PromptQuorum' } }
         },
       ],
     },
