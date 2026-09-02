@@ -134,6 +134,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'llamaindex-rag-framework-review',
   // txtai embedded vector database review — 2026-09-02
   'txtai-embedded-vector-database-review',
+  // Quivr maintenance-status review — 2026-09-02
+  'quivr-self-hosted-knowledge-assistant-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

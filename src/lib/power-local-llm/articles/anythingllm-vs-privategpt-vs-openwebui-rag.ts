@@ -482,6 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Langflow Review 2026: The IBM-Owned Alternative to Flowise](/power-local-llm/langflow-visual-ai-orchestration-review) — a visual RAG/agent builder with dedicated Astra DB and vector store components.',
+          '[Quivr Review: Is the Open-Source "Second Brain" Still Alive?](/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — a maintenance-status check on the Quivr RAG library — no main-branch commits since mid-2025.',
           '[Local RAG on Your PDFs Step by Step](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — practical walkthrough once you have picked a platform.',
           '[Best Embedding Models for Local RAG 2026](/power-local-llm/best-embedding-models-local-rag-2026) — the deeper technical layer behind retrieval quality.',
           '[Chat With 1,000 PDFs Locally](/power-local-llm/chat-with-1000-pdfs-locally) — what to do when the corpus crosses the 10K-page scaling cliff.',
@@ -923,6 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Literatur',
         items: [
           '[Langflow 2026: Visueller LangChain-Builder unter IBM, MIT-Lizenz](/de/power-local-llm/langflow-visual-ai-orchestration-review) — ein visueller RAG-/Agenten-Builder mit eigenen Astra-DB- und Vektordatenbank-Komponenten.',
+          '[Quivr Test: Ist das Open-Source-„zweite Gehirn" noch am Leben?](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — ein Pflegestatus-Check zur Quivr-RAG-Bibliothek — kein Commit im Hauptzweig seit Mitte 2025.',
           '[Lokale RAG für Ihre PDFs Schritt für Schritt](/de/power-local-llm/local-rag-on-your-pdfs-step-by-step) — praktische Anleitung, sobald Sie eine Plattform gewählt haben.',
           '[Beste Einbettungsmodelle für lokale RAG 2026](/de/power-local-llm/best-embedding-models-local-rag-2026) — die tiefere technische Schicht hinter Abrufqualität.',
           '[Chat mit 1.000 PDFs lokal](/de/power-local-llm/chat-with-1000-pdfs-locally) — was zu tun ist, wenn der Korpus die 10K-Seiten-Skalierungsklippe überschreitet.',
@@ -1354,6 +1356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Langflow en 2026 : guide du constructeur visuel LangChain racheté par IBM](/fr/power-local-llm/langflow-visual-ai-orchestration-review) — un constructeur visuel de RAG/agents avec des composants dédiés Astra DB et bases vectorielles.',
+          '[Quivr en 2026 : une bibliothèque Python, plus une appli à héberger](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — un état des lieux de la bibliothèque RAG Quivr — aucun commit sur la branche principale depuis mi-2025.',
           '[RAG locale sur vos PDFs pas à pas](/fr/power-local-llm/local-rag-on-your-pdfs-step-by-step) — walkthrough pratique une fois que vous avez choisi une plateforme.',
           '[Meilleurs modèles d\'embedding pour RAG locale 2026](/fr/power-local-llm/best-embedding-models-local-rag-2026) — la couche technique plus profonde derrière la qualité d\'extraction.',
           '[Chat avec 1 000 PDFs localement](/fr/power-local-llm/chat-with-1000-pdfs-locally) — que faire quand le corpus franchit la falaise d\'échelle de 10K pages.',
@@ -1851,6 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連読書',
         items: [
           '[Langflow 2026：LangChain可視化ビルダー（MITライセンス・IBM傘下）](/ja/power-local-llm/langflow-visual-ai-orchestration-review) — Astra DBなど専用のベクトルデータベースコンポーネントを備えた、ビジュアルなRAG/エージェントビルダー。',
+          '[Quivr（quivr-core）2026年版レビュー](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — Quivr RAGライブラリのメンテナンス状況チェック — mainブランチは2025年半ば以降コミットなし。',
           '[ローカルLLMでObsidianを使用する方法 - 5つのステップ](/ja/power-local-llm/local-llm-with-obsidian-2026) — 知識管理向けのローカルRAGの実際の例。',
           '[Ollamaのインストール方法：ローカルオープンソースLLM実行](/ja/local-llms/how-to-install-ollama) — Open WebUI、AnythingLLM、PrivateGPTすべてで使用するLLMランタイムのセットアップガイド。',
           'LM StudioでローカルLLMをファインチューン：完全ガイド — AnythingLLMやPrivateGPTで使用する小さいモデルを適応させる方法。',
@@ -2545,6 +2549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Langflow en 2026: constructor visual de LangChain con licencia MIT (ahora de IBM)](/es/power-local-llm/langflow-visual-ai-orchestration-review) — un constructor visual de RAG/agentes con componentes propios de Astra DB y bases vectoriales.',
+          '[Quivr en 2026: ¿sigue mantenido?](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — una revisión del estado de mantenimiento de la librería RAG Quivr — sin commits en la rama principal desde mediados de 2025.',
           '[RAG local con tus PDFs paso a paso](/es/power-local-llm/local-rag-on-your-pdfs-step-by-step) — guía práctica una vez que hayas elegido una plataforma.',
           '[Los mejores modelos de embedding para RAG local en 2026](/es/power-local-llm/best-embedding-models-local-rag-2026) — la capa técnica más profunda detrás de la calidad de recuperación.',
           '[Chatea con 1.000 PDFs de forma local](/es/power-local-llm/chat-with-1000-pdfs-locally) — qué hacer cuando el corpus supera el límite de escala de 10K páginas.',
@@ -3151,6 +3156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Langflow em 2026: construtor visual de agentes de IA agora da IBM](/pt/power-local-llm/langflow-visual-ai-orchestration-review) — um construtor visual de RAG/agentes com componentes próprios de Astra DB e bancos vetoriais.',
+          '[Quivr em 2026: ainda é mantido?](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — uma checagem do status de manutenção da biblioteca RAG Quivr — sem commits na branch principal desde meados de 2025.',
           '[RAG local com seus PDFs passo a passo](/pt/power-local-llm/local-rag-on-your-pdfs-step-by-step) — guia prático depois que você escolher uma plataforma.',
           '[Os melhores modelos de embedding para RAG local em 2026](/pt/power-local-llm/best-embedding-models-local-rag-2026) — a camada técnica mais profunda por trás da qualidade de recuperação.',
           '[Converse com 1.000 PDFs localmente](/pt/power-local-llm/chat-with-1000-pdfs-locally) — o que fazer quando o corpus supera o limite de escala de 10K páginas.',
@@ -3757,6 +3763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[Langflow في 2026: أداة بصرية مفتوحة المصدر أصبحت ملكًا لـ IBM](/ar/power-local-llm/langflow-visual-ai-orchestration-review) — أداة بصرية لبناء RAG والوكلاء تضم مكونات مخصصة لـ Astra DB وقواعد البيانات المتجهية.',
+          '[مراجعة Quivr 2026: هل ما زال مُصانًا؟](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — فحص حالة صيانة مكتبة Quivr لـ RAG — لا التزامات على الفرع الرئيسي منذ منتصف 2025.',
           '[RAG محلي مع ملفات PDF خطوة بخطوة](/ar/power-local-llm/local-rag-on-your-pdfs-step-by-step) — دليل عملي بعد اختيار منصة.',
           '[أفضل نماذج التضمين لـRAG المحلي في 2026](/ar/power-local-llm/best-embedding-models-local-rag-2026) — الطبقة التقنية الأعمق خلف جودة الاسترجاع.',
           '[تحدّث مع 1.000 ملف PDF محليًا](/ar/power-local-llm/chat-with-1000-pdfs-locally) — ما يجب فعله حين تتجاوز مجموعة النصوص حد 10K صفحة.',
@@ -4363,6 +4370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[2026 Langflow 리뷰: MIT 라이선스 오픈소스, 이제는 IBM 소유](/ko/power-local-llm/langflow-visual-ai-orchestration-review) — Astra DB 등 전용 벡터 데이터베이스 컴포넌트를 갖춘 시각적 RAG/에이전트 빌더.',
+          '[Quivr 2026 리뷰: 아직 관리되나?](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — Quivr RAG 라이브러리의 유지관리 상태 점검 — 2025년 중반 이후 메인 브랜치 커밋 없음.',
           '[PDF 파일로 로컬 RAG 단계별 가이드](/ko/power-local-llm/local-rag-on-your-pdfs-step-by-step) — 플랫폼 선택 후 실용적인 가이드.',
           '[2026년 로컬 RAG를 위한 최고의 임베딩 모델](/ko/power-local-llm/best-embedding-models-local-rag-2026) — 검색 품질 뒤의 더 깊은 기술 레이어.',
           '[로컬에서 1,000개의 PDF와 채팅하기](/ko/power-local-llm/chat-with-1000-pdfs-locally) — 코퍼스가 10K 페이지 확장 한계를 초과할 때 해야 할 일.',
