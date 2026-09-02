@@ -91,6 +91,7 @@ import { article as a_langflow_visual_ai_orchestration_review } from './articles
 import { article as a_llamaindex_rag_framework_review } from './articles/llamaindex-rag-framework-review'
 import { article as a_txtai_embedded_vector_database_review } from './articles/txtai-embedded-vector-database-review'
 import { article as a_quivr_self_hosted_knowledge_assistant_review } from './articles/quivr-self-hosted-knowledge-assistant-review'
+import { article as a_ragflow_document_understanding_rag_review } from './articles/ragflow-document-understanding-rag-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
@@ -180,4 +181,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'llamaindex-rag-framework-review':                   a_llamaindex_rag_framework_review,
   'txtai-embedded-vector-database-review':             a_txtai_embedded_vector_database_review,
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
+  'ragflow-document-understanding-rag-review':         a_ragflow_document_understanding_rag_review,
 }
