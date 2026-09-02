@@ -191,4 +191,5 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   // Enterprise/B2B sprint 2026-09-02
   'enterprise-gpu-server-buying-guide-2026':      'enterprise-gpu-server-buying-guide-2026',
   'soc2-iso27001-self-hosted-llm-compliance':     'soc2-iso27001-self-hosted-llm-compliance',
+  'data-residency-sovereign-ai-eu-gdpr-enterprise': 'data-residency-sovereign-ai-eu-gdpr-enterprise',
 }

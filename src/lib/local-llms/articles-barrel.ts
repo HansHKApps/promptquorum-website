@@ -156,6 +156,7 @@ import { article as a_best_llm_observability_tools_2026 } from "./articles/best-
 import { article as a_best_vector_database_2026 } from "./articles/best-vector-database-2026";
 import { article as a_enterprise_gpu_server_buying_guide_2026 } from "./articles/enterprise-gpu-server-buying-guide-2026";
 import { article as a_soc2_iso27001_self_hosted_llm_compliance } from "./articles/soc2-iso27001-self-hosted-llm-compliance";
+import { article as a_data_residency_sovereign_ai_eu_gdpr_enterprise } from "./articles/data-residency-sovereign-ai-eu-gdpr-enterprise";
 
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   "local-llm-lgpd-compliance-brazil-2026": a_local_llm_lgpd_compliance_brazil_2026,
@@ -306,4 +307,5 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "best-vector-database-2026": a_best_vector_database_2026,
   "enterprise-gpu-server-buying-guide-2026": a_enterprise_gpu_server_buying_guide_2026,
   "soc2-iso27001-self-hosted-llm-compliance": a_soc2_iso27001_self_hosted_llm_compliance,
+  "data-residency-sovereign-ai-eu-gdpr-enterprise": a_data_residency_sovereign_ai_eu_gdpr_enterprise,
 };

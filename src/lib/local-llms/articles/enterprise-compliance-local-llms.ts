@@ -175,6 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) -- Production deployment with compliance controls.',
             '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- Compliance verification steps.',
             '[SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments](/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- deep dive into Trust Services Criteria and Annex A controls beyond this GDPR/HIPAA/SOC2 overview.',
+            '[Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- Schrems II exposure and a multinational deployment decision framework for this GDPR requirement specifically.',
             '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
           ],
         },
@@ -451,6 +452,7 @@ schema: {
             '[Escalado de LLMs locales en la empresa](/es/local-llms/scaling-local-llms-enterprise) -- Despliegue en producción con controles de cumplimiento.',
             '[Lista de verificación de seguridad y privacidad de LLMs locales](/es/local-llms/local-llm-security-privacy-checklist) -- Pasos de verificación del cumplimiento.',
             '[Preparación SOC 2 e ISO 27001 para LLMs autoalojados](/es/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- análisis profundo de los Trust Services Criteria y los controles Annex A.',
+            '[Residencia de datos e IA soberana: despliegue empresarial de LLM bajo RGPD/UE](/es/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- exposición a Schrems II y marco de decisión para despliegues multinacionales.',
           ],
         },
         sources: {
@@ -726,6 +728,7 @@ schema: {
             '[توسيع نماذج LLM المحلية في المؤسسات](/ar/local-llms/scaling-local-llms-enterprise) -- النشر في الإنتاج بضوابط الامتثال.',
             '[قائمة تحقق أمن وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) -- خطوات التحقق من الامتثال.',
             '[الاستعداد لتدقيق SOC 2 وISO 27001 لنماذج LLM المستضافة ذاتيًا](/ar/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- تعمّق في معايير Trust Services وضوابط Annex A.',
+            '[إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي وفق اللائحة العامة](/ar/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- التعرض لمخاطر Schrems II وإطار قرار للنشر متعدد الجنسيات.',
           ],
         },
         sources: {
@@ -971,6 +974,7 @@ schema: {
             '[RAG corporativo com LLMs locais](/pt/local-llms/corporate-rag-local-llms) -- Governança de documentos.',
             '[Por que empresas usam LLMs locais](/pt/local-llms/why-enterprises-use-local-llms) -- Caso de negócio.',
             '[SOC 2 e ISO 27001: preparação de auditoria para LLMs auto-hospedados](/pt/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- aprofundamento nos Trust Services Criteria e controles Annex A.',
+            '[Residência de dados e IA soberana: implantação empresarial de LLM sob GDPR/UE](/pt/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- exposição ao Schrems II e um framework de decisão para implantações multinacionais.',
           ],
         },
         sources: {
@@ -1192,6 +1196,7 @@ schema: {
             '[Scaling Local LLMs Enterprise](/de/local-llms/scaling-local-llms-enterprise) -- Produktionsdeployment mit Compliance-Kontrollen.',
             '[Local LLM Security & Privacy Checklist](/de/local-llms/local-llm-security-privacy-checklist) -- Compliance-Überprüfungsschritte.',
             '[SOC 2 & ISO 27001: Audit-Bereitschaft für selbst gehostete LLMs](/de/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- vertiefende Betrachtung der Trust Services Criteria und Annex-A-Kontrollen.',
+            '[Datenresidenz & souveräne KI: DSGVO-konforme Enterprise-LLM-Bereitstellung](/de/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- Schrems-II-Risiko und ein Entscheidungsrahmen für multinationale Bereitstellungen.',
           ],
         },
         sources: {
@@ -1410,6 +1415,7 @@ schema: {
             '[Mise à l\'échelle des Local LLMs Entreprise](/fr/local-llms/scaling-local-llms-enterprise) -- Déploiement en production avec contrôles de conformité.',
             '[Liste de contrôle Sécurité & Confidentialité Local LLM](/fr/local-llms/local-llm-security-privacy-checklist) -- Étapes de vérification de conformité.',
             '[SOC 2 et ISO 27001 : préparer un déploiement de LLM auto-hébergé](/fr/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- approfondissement des Trust Services Criteria et des contrôles Annex A.',
+            '[Résidence des données et IA souveraine : déploiement de LLM d\'entreprise sous RGPD/UE](/fr/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- exposition Schrems II et cadre de décision pour les déploiements multinationaux.',
           ],
         },
         sources: {
@@ -1624,6 +1630,7 @@ schema: {
             '[Scaling Local LLMs Enterprise](/ja/local-llms/scaling-local-llms-enterprise) -- コンプライアンスコントロール付き本番展開。',
             '[Local LLM Security & Privacy Checklist](/ja/local-llms/local-llm-security-privacy-checklist) -- コンプライアンス確認ステップ。',
             '[セルフホストLLMのSOC 2・ISO 27001監査対応ガイド](/ja/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- Trust Services CriteriaとAnnex A統制を深掘り。',
+            '[データレジデンシーと主権AI:EU/GDPR企業向けLLM導入ガイド](/ja/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- Schrems IIリスクと多国籍展開の意思決定フレームワーク。',
           ],
         },
         sources: {
@@ -1837,6 +1844,7 @@ schema: {
             '[扩展企业 Local LLMs](/zh/local-llms/scaling-local-llms-enterprise) -- 具有合规控制的生产部署。',
             '[Local LLM 安全与隐私检查清单](/zh/local-llms/local-llm-security-privacy-checklist) -- 合规验证步骤。',
             '[自托管LLM部署的SOC 2与ISO 27001审计准备指南](/zh/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- 深入解读Trust Services Criteria与Annex A控制项。',
+            '[数据驻留与主权AI：欧盟/GDPR企业级LLM部署指南](/zh/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- Schrems II风险敞口与跨国部署决策框架。',
           ],
         },
         sources: {
@@ -2054,6 +2062,7 @@ schema: {
             '[로컬 LLM 기업 확장](/ko/local-llms/scaling-local-llms-enterprise) -- 컴플라이언스 통제를 갖춘 프로덕션 배포.',
             '[로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) -- 컴플라이언스 검증 단계.',
             '[셀프호스팅 LLM을 위한 SOC 2·ISO 27001 감사 준비 가이드](/ko/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- Trust Services Criteria와 Annex A 통제에 대한 심층 분석.',
+            '[데이터 레지던시와 주권 AI: EU/GDPR 기업용 LLM 배포 가이드](/ko/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- Schrems II 리스크와 다국적 배포 의사결정 프레임워크.',
             '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
           ],
         },

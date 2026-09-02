@@ -313,6 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best LLM Observability Tools 2026](/local-llms/best-llm-observability-tools-2026) — explore logging and monitoring tools that support the audit-log requirements above',
           '[Scaling Local LLMs for the Enterprise](/local-llms/scaling-local-llms-enterprise) — see how audit-readiness controls hold up as inference load grows',
           '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — check hardware options for a self-hosted, network-segmented inference server',
+          '[Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — go deeper on the EU/GDPR cross-border transfer question that sits alongside SOC 2 and ISO 27001 readiness',
         ],
       },
       sources: {
@@ -644,6 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best LLM Observability Tools 2026](/de/local-llms/best-llm-observability-tools-2026) — Logging- und Monitoring-Tools für die oben beschriebenen Audit-Log-Anforderungen',
           '[Scaling Local LLMs für Enterprises](/de/local-llms/scaling-local-llms-enterprise) — wie Audit-Bereitschafts-Kontrollen bei wachsender Inference-Last standhalten',
           '[Enterprise GPU Server Kaufberatung 2026](/de/local-llms/enterprise-gpu-server-buying-guide-2026) — Hardware-Optionen für einen selbst gehosteten, netzwerksegmentierten Inference-Server',
+          '[Datenresidenz & souveräne KI: DSGVO-konforme Enterprise-LLM-Bereitstellung](/de/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — vertiefende Betrachtung der grenzüberschreitenden DSGVO-Übermittlungsfrage neben SOC 2 und ISO 27001',
         ],
       },
       sources: {
@@ -963,6 +965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Meilleurs outils d\'observabilité LLM 2026](/fr/local-llms/best-llm-observability-tools-2026) — explorez les outils de journalisation et de surveillance adaptés aux exigences d\'audit',
           '[Faire évoluer les LLM locaux pour l\'entreprise](/fr/local-llms/scaling-local-llms-enterprise) — voyez comment les contrôles de préparation à l\'audit tiennent quand la charge d\'inférence augmente',
           '[Guide d\'achat serveur GPU entreprise 2026](/fr/local-llms/enterprise-gpu-server-buying-guide-2026) — vérifiez les options matérielles pour un serveur d\'inférence auto-hébergé et segmenté',
+          '[Résidence des données et IA souveraine : déploiement de LLM d\'entreprise sous RGPD/UE](/fr/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — approfondissez la question du transfert transfrontalier RGPD aux côtés de SOC 2 et ISO 27001',
         ],
       },
       sources: {
@@ -1281,6 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLMオブザーバビリティツール ベスト2026](/ja/local-llms/best-llm-observability-tools-2026) — 上記の監査ログ要件を支えるログ・監視ツールを確認する',
           '[エンタープライズ向けローカルLLMのスケーリング](/ja/local-llms/scaling-local-llms-enterprise) — 推論負荷増大時に監査対応統制がどう維持されるか確認する',
           '[エンタープライズGPUサーバー購入ガイド2026](/ja/local-llms/enterprise-gpu-server-buying-guide-2026) — セルフホストでネットワークセグメント化された推論サーバー向けハードウェア選択肢を確認する',
+          '[データレジデンシーと主権AI:EU/GDPR企業向けLLM導入ガイド](/ja/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — SOC 2・ISO 27001と並ぶGDPR越境移転の論点を深掘りする',
         ],
       },
       sources: {
@@ -1599,6 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026最佳LLM可观测性工具](/zh/local-llms/best-llm-observability-tools-2026) — 了解支持上述审计日志要求的日志与监控工具',
           '[面向企业的本地LLM扩展](/zh/local-llms/scaling-local-llms-enterprise) — 查看审计准备控制措施在推理负载增长时如何保持有效',
           '[2026企业GPU服务器购买指南](/zh/local-llms/enterprise-gpu-server-buying-guide-2026) — 查看用于自托管、网络隔离推理服务器的硬件选项',
+          '[数据驻留与主权AI：欧盟/GDPR企业级LLM部署指南](/zh/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — 深入了解与SOC 2和ISO 27001并行的GDPR跨境传输问题',
         ],
       },
       sources: {
@@ -1917,6 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Mejores herramientas de observabilidad de LLM 2026](/es/local-llms/best-llm-observability-tools-2026) — explore herramientas de registro y monitoreo que soportan los requisitos de registro de auditoría anteriores',
           '[Escalar LLMs locales para la empresa](/es/local-llms/scaling-local-llms-enterprise) — vea cómo se mantienen los controles de preparación para auditoría al crecer la carga de inferencia',
           '[Guía de compra de servidores GPU empresariales 2026](/es/local-llms/enterprise-gpu-server-buying-guide-2026) — revise opciones de hardware para un servidor de inferencia autoalojado y segmentado en red',
+          '[Residencia de datos e IA soberana: despliegue empresarial de LLM bajo RGPD/UE](/es/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — profundice en la cuestión de transferencia transfronteriza del RGPD junto a SOC 2 e ISO 27001',
         ],
       },
       sources: {
@@ -2235,6 +2241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Melhores ferramentas de observabilidade de LLM 2026](/pt/local-llms/best-llm-observability-tools-2026) — explore ferramentas de log e monitoramento que sustentam os requisitos de log de auditoria acima',
           '[Escalando LLMs locais para a empresa](/pt/local-llms/scaling-local-llms-enterprise) — veja como os controles de preparação para auditoria se sustentam com o crescimento da carga de inferência',
           '[Guia de compra de servidor GPU corporativo 2026](/pt/local-llms/enterprise-gpu-server-buying-guide-2026) — verifique opções de hardware para um servidor de inferência auto-hospedado e segmentado na rede',
+          '[Residência de dados e IA soberana: implantação empresarial de LLM sob GDPR/UE](/pt/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — aprofunde-se na questão de transferência transfronteiriça do GDPR ao lado de SOC 2 e ISO 27001',
         ],
       },
       sources: {
@@ -2553,6 +2560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل أدوات مراقبة LLM لعام 2026](/ar/local-llms/best-llm-observability-tools-2026) — استكشف أدوات التسجيل والمراقبة التي تدعم متطلبات سجل التدقيق أعلاه',
           '[توسيع نطاق نماذج LLM المحلية للمؤسسات](/ar/local-llms/scaling-local-llms-enterprise) — اطّلع على كيفية صمود ضوابط الاستعداد للتدقيق مع نمو حِمل الاستدلال',
           '[دليل شراء خادم GPU للمؤسسات لعام 2026](/ar/local-llms/enterprise-gpu-server-buying-guide-2026) — تحقق من خيارات الأجهزة لخادم استدلال مستضاف ذاتيًا ومجزّأ الشبكة',
+          '[إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي وفق اللائحة العامة](/ar/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — تعمّق في مسألة النقل العابر للحدود وفق اللائحة العامة إلى جانب SOC 2 وISO 27001',
         ],
       },
       sources: {
@@ -2871,6 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026 최고의 LLM 관측 가능성 도구](/ko/local-llms/best-llm-observability-tools-2026) — 위 감사 로그 요건을 뒷받침하는 로깅·모니터링 도구 살펴보기',
           '[엔터프라이즈를 위한 로컬 LLM 확장](/ko/local-llms/scaling-local-llms-enterprise) — 추론 부하가 증가할 때 감사 준비 통제가 어떻게 유지되는지 확인',
           '[2026 엔터프라이즈 GPU 서버 구매 가이드](/ko/local-llms/enterprise-gpu-server-buying-guide-2026) — 셀프호스팅되고 네트워크가 분리된 추론 서버를 위한 하드웨어 옵션 확인',
+          '[데이터 레지던시와 주권 AI: EU/GDPR 기업용 LLM 배포 가이드](/ko/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — SOC 2·ISO 27001과 나란히 GDPR 국경 간 이전 문제를 더 깊이 살펴보기',
         ],
       },
       sources: {
