@@ -128,6 +128,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Dify LLMOps platform review — 2026-09-02
   'dify-ai-workflow-builder-review',
+  // Langflow review — 2026-09-02
+  'langflow-visual-ai-orchestration-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
