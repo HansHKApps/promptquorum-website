@@ -6,12 +6,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-en.webp',
     title: 'Q4_K_M vs Q8_0: Which Should You Pick?',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     seoTitle: 'Q4_K_M vs Q8_0: Which? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Use Q4_K_M with 8 GB VRAM or less. Use Q8_0 with 12+ GB. Q4_K_M delivers 95% of Q8_0 quality at half the size. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    last_full_refresh: '2026-09-02',
     current_models_mentioned: [],
     current_hardware_mentioned: ['RTX 3060 12 GB'],
     educationalLevel: 'Intermediate',
@@ -28,57 +29,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Q8_0: ~8–9 GB for 7B models, needs 12+ GB VRAM',
           'Quality difference is under 5% in real-world use',
         ],
-        updatedDate: '2026-05',
-      },
-      de: {
-        question: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
-        answer: 'Verwenden Sie Q4_K_M bei 8 GB VRAM oder weniger. Verwenden Sie Q8_0 bei 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei ungefähr halbem Dateivolumen.',
-        bullets: [
-          'Q4_K_M: ~5–6 GB für 7B-Modelle, ideal für 8 GB VRAM',
-          'Q8_0: ~8–9 GB für 7B-Modelle, benötigt 12+ GB VRAM',
-          'Qualitätsunterschied unter 5 % im realen Einsatz',
-        ],
-        updatedDate: '2026-05',
-      },
-      fr: {
-        question: 'Q4_K_M ou Q8_0 : lequel choisir ?',
-        answer: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à environ la moitié de la taille.',
-        bullets: [
-          'Q4_K_M : ~5–6 Go pour les modèles 7B, idéal pour 8 Go de VRAM',
-          'Q8_0 : ~8–9 Go pour les modèles 7B, nécessite 12+ Go de VRAM',
-          'Différence de qualité inférieure à 5 % en usage réel',
-        ],
-        updatedDate: '2026-05',
-      },
-      ja: {
-        question: 'Q4_K_MとQ8_0：どちらを選ぶべきですか？',
-        answer: 'VRAMが8 GB以下ならQ4_K_Mを使用してください。12 GB以上あるならQ8_0を使用してください。Q4_K_Mはおよそ半分のファイルサイズでQ8_0の95%の品質を提供します。',
-        bullets: [
-          'Q4_K_M：7Bモデルで~5–6 GB、8 GB VRAMに最適',
-          'Q8_0：7Bモデルで~8–9 GB、12+ GB VRAM必要',
-          '実際の使用では品質差は5%未満',
-        ],
-        updatedDate: '2026-05',
-      },
-      zh: {
-        question: 'Q4_K_M和Q8_0：该选哪个？',
-        answer: 'VRAM为8 GB或更少时使用Q4_K_M。VRAM为12 GB以上时使用Q8_0。Q4_K_M以约一半的文件大小提供Q8_0 95%的质量。',
-        bullets: [
-          'Q4_K_M：7B模型约5–6 GB，适合8 GB显存',
-          'Q8_0：7B模型约8–9 GB，需12+ GB显存',
-          '实际使用中质量差异不足5%',
-        ],
-        updatedDate: '2026-05',
-      },
-      es: {
-        question: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
-        answer: 'Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 aproximadamente a la mitad del tamaño de archivo.',
-        bullets: [
-          'Q4_K_M: ~5–6 GB para modelos 7B, ideal para 8 GB de VRAM',
-          'Q8_0: ~8–9 GB para modelos 7B, necesita 12+ GB de VRAM',
-          'La diferencia de calidad es inferior al 5% en uso real',
-        ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-09',
       },
     },
     sections: {
@@ -94,7 +45,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'The Quick Verdict',
         content: [
-          'As of May 2026, <strong>Q8_0 is ~99% of full-precision quality. Q4_K_M is ~92%.</strong> The 7-point gap is invisible in chat, coding, and summarization — three tasks that cover 95% of local LLM use. Q8_0 only pulls ahead on long-form factual recall, multi-step math, and code requiring exact syntax over 500+ lines.',
+          '<strong>Q8_0 preserves ~99% of full-precision quality. Q4_K_M preserves ~92%.</strong> The 7-point gap is invisible in chat, coding, and summarization — three tasks that cover 95% of local LLM use. Q8_0 only pulls ahead on long-form factual recall, multi-step math, and code requiring exact syntax over 500+ lines.',
           'Q4_K_M is the right default because the extra quality from Q8_0 only shows up in edge cases: long-form generation with exact factual recall, or mathematical reasoning that requires higher precision. For everything else, Q4_K_M matches Q8_0 in practice.',
           'If you are already using Q4_K_M and your results feel wrong, the issue is almost never the quantization — it is the model size or prompt structure.',
         ],
@@ -145,9 +96,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M vs. Q8_0: Wählen 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M bei 8 GB VRAM oder weniger, Q8_0 ab 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei halbem Dateivolumen. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      de: {
+        question: 'Q4_K_M vs. Q8_0: Was sollten Sie wählen?',
+        answer: 'Verwenden Sie Q4_K_M bei 8 GB VRAM oder weniger. Verwenden Sie Q8_0 bei 12+ GB. Q4_K_M liefert 95 % der Q8_0-Qualität bei ungefähr halbem Dateivolumen.',
+        bullets: [
+          'Q4_K_M: ~5–6 GB für 7B-Modelle, ideal für 8 GB VRAM',
+          'Q8_0: ~8–9 GB für 7B-Modelle, benötigt 12+ GB VRAM',
+          'Qualitätsunterschied unter 5 % im realen Einsatz',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -161,7 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Das schnelle Fazit',
         content: [
-          'Stand Mai 2026: <strong>Q8_0 ist ~99 % der vollpräzisen Qualität. Q4_K_M ist ~92 %.</strong> Der 7-Punkte-Abstand ist unsichtbar bei Chat, Coding und Zusammenfassung — drei Aufgaben, die 95 % der lokalen LLM-Nutzung abdecken. Q8_0 zieht nur bei langem faktischem Abruf, mehrstufiger Mathematik und Code vor, der exakte Syntax über 500+ Zeilen erfordert.',
+          '<strong>Q8_0 erreicht ~99 % der vollpräzisen Qualität. Q4_K_M erreicht ~92 %.</strong> Der 7-Punkte-Abstand ist unsichtbar bei Chat, Coding und Zusammenfassung — drei Aufgaben, die 95 % der lokalen LLM-Nutzung abdecken. Q8_0 zieht nur bei langem faktischem Abruf, mehrstufiger Mathematik und Code vor, der exakte Syntax über 500+ Zeilen erfordert.',
           'Q4_K_M ist der richtige Standard, weil die zusätzliche Qualität von Q8_0 nur in Randfällen auftaucht: lange Textgenerierung mit exaktem Faktenrückruf oder mathematisches Schlussfolgern, das höhere Präzision erfordert. Für alles andere entspricht Q4_K_M Q8_0 in der Praxis.',
           'Wenn Sie bereits Q4_K_M verwenden und Ihre Ergebnisse falsch erscheinen, liegt das Problem fast nie an der Quantisierung — es liegt an der Modellgröße oder Prompt-Struktur.',
         ],
@@ -212,9 +175,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M ou Q8_0 2026 : lequel ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à la moitié de la taille. Réponse rapide.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      fr: {
+        question: 'Q4_K_M ou Q8_0 : lequel choisir ?',
+        answer: 'Utilisez Q4_K_M avec 8 Go de VRAM ou moins. Utilisez Q8_0 avec 12+ Go. Q4_K_M offre 95 % de la qualité de Q8_0 à environ la moitié de la taille.',
+        bullets: [
+          'Q4_K_M : ~5–6 Go pour les modèles 7B, idéal pour 8 Go de VRAM',
+          'Q8_0 : ~8–9 Go pour les modèles 7B, nécessite 12+ Go de VRAM',
+          'Différence de qualité inférieure à 5 % en usage réel',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -228,7 +203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Le verdict rapide',
         content: [
-          'En mai 2026, <strong>Q8_0 est à ~99 % de la qualité pleine précision. Q4_K_M est à ~92 %.</strong> L\'écart de 7 points est invisible en chat, code et résumé — trois tâches qui couvrent 95 % de l\'usage local LLM. Q8_0 ne prend l\'avantage que sur le rappel factuel long, les mathématiques multi-étapes et le code nécessitant une syntaxe exacte sur 500+ lignes.',
+          '<strong>Q8_0 atteint ~99 % de la qualité pleine précision. Q4_K_M atteint ~92 %.</strong> L\'écart de 7 points est invisible en chat, code et résumé — trois tâches qui couvrent 95 % de l\'usage local LLM. Q8_0 ne prend l\'avantage que sur le rappel factuel long, les mathématiques multi-étapes et le code nécessitant une syntaxe exacte sur 500+ lignes.',
           'Q4_K_M est le bon choix par défaut car la qualité supplémentaire de Q8_0 ne se manifeste que dans des cas limites : génération longue avec rappel factuel exact, ou raisonnement mathématique nécessitant une précision élevée. Pour tout le reste, Q4_K_M équivaut à Q8_0 en pratique.',
           'Si vous utilisez déjà Q4_K_M et que vos résultats semblent incorrects, le problème n\'est presque jamais la quantisation — c\'est la taille du modèle ou la structure du prompt.',
         ],
@@ -276,12 +251,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ja.webp',
     title: 'Q4_K_M vs Q8_0：どちらを選ぶべきですか？',
-    seoTitle: 'Q4_K_M vs Q8_0：2026年の選び方 | Prompt Bites | PromptQuorum',
-    metaDescription: 'VRAMが8 GB以下ならQ4_K_Mを使用。12 GB以上ならQ8_0を使用。Q4_K_MはQ8_0の95%の品質を約半分のサイズで提供します。PromptQuorumの解説。',
+    seoTitle: 'Q4_K_M vs Q8_0：2026年の選び方',
+    metaDescription: 'VRAM 8 GB以下ならQ4_K_M、12 GB以上ならQ8_0。Q4_K_MはQ8_0の95%の品質を半分のサイズで実現します。',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      ja: {
+        question: 'Q4_K_MとQ8_0：どちらを選ぶべきですか？',
+        answer: 'VRAMが8 GB以下ならQ4_K_Mを使用してください。12 GB以上あるならQ8_0を使用してください。Q4_K_Mはおよそ半分のファイルサイズでQ8_0の95%の品質を提供します。',
+        bullets: [
+          'Q4_K_M：7Bモデルで~5–6 GB、8 GB VRAMに最適',
+          'Q8_0：7Bモデルで~8–9 GB、12+ GB VRAM必要',
+          '実際の使用では品質差は5%未満',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -295,7 +282,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '簡潔な結論',
         content: [
-          '2026年5月現在、<strong>Q8_0は完全精度品質の約99%です。Q4_K_Mは約92%です。</strong>この7ポイントの差はチャット、コーディング、要約では見えません — ローカルLLM使用の95%をカバーする3つのタスクです。Q8_0が優位に立つのは、長文の事実想起、複数ステップの数学、500行以上の正確な構文が必要なコードのみです。',
+          '<strong>Q8_0は完全精度品質の約99%を維持します。Q4_K_Mは約92%です。</strong>この7ポイントの差はチャット、コーディング、要約では見えません — ローカルLLM使用の95%をカバーする3つのタスクです。Q8_0が優位に立つのは、長文の事実想起、複数ステップの数学、500行以上の正確な構文が必要なコードのみです。',
           'Q4_K_Mが正しいデフォルトである理由は、Q8_0の追加品質が現れるのがエッジケースのみだからです：正確な事実想起を必要とする長文生成、または高精度を必要とする数学的推論。他のすべてに対して、Q4_K_Mは実際にはQ8_0と同等です。',
           'すでにQ4_K_Mを使用していて結果がおかしく感じる場合、問題はほとんどの場合量化ではありません — モデルのサイズやプロンプト構造にあります。',
         ],
@@ -343,12 +330,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-zh.webp',
     title: 'Q4_K_M与Q8_0：该如何选择？',
-    seoTitle: 'Q4_K_M与Q8_0：2026年选择指南 | Prompt Bites | PromptQuorum',
-    metaDescription: '显存8 GB或更少时使用Q4_K_M。12 GB以上时使用Q8_0。Q4_K_M以约一半的文件大小提供Q8_0 95%的质量。PromptQuorum快速解答。',
+    seoTitle: 'Q4_K_M对比Q8_0：2026年选择指南',
+    metaDescription: '显存8 GB或更少用Q4_K_M，12 GB以上用Q8_0。Q4_K_M以约一半文件大小提供Q8_0 95%的质量。',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      zh: {
+        question: 'Q4_K_M和Q8_0：该选哪个？',
+        answer: 'VRAM为8 GB或更少时使用Q4_K_M。VRAM为12 GB以上时使用Q8_0。Q4_K_M以约一半的文件大小提供Q8_0 95%的质量。',
+        bullets: [
+          'Q4_K_M：7B模型约5–6 GB，适合8 GB显存',
+          'Q8_0：7B模型约8–9 GB，需12+ GB显存',
+          '实际使用中质量差异不足5%',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -362,7 +361,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '快速结论',
         content: [
-          '截至2026年5月，<strong>Q8_0约为完整精度质量的99%。Q4_K_M约为92%。</strong>这7个百分点的差距在聊天、编程和摘要中是不可见的——这三个任务涵盖了95%的本地LLM使用场景。Q8_0只在长篇事实回忆、多步数学推理以及需要500行以上精确语法的代码生成上表现更好。',
+          '<strong>Q8_0保持完整精度质量的约99%。Q4_K_M约为92%。</strong>这7个百分点的差距在聊天、编程和摘要中是不可见的——这三个任务涵盖了95%的本地LLM使用场景。Q8_0只在长篇事实回忆、多步数学推理以及需要500行以上精确语法的代码生成上表现更好。',
           'Q4_K_M是正确的默认选择，因为Q8_0的额外质量仅在边缘情况下出现：需要精确事实回忆的长篇生成，或需要更高精度的数学推理。对于其他所有情况，Q4_K_M在实践中与Q8_0持平。',
           '如果您已经在使用Q4_K_M但结果感觉不对，问题几乎从不在于量化——而在于模型大小或提示词结构。',
         ],
@@ -413,9 +412,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M vs Q8_0: qual? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Use Q4_K_M com 8 GB de VRAM ou menos. Use Q8_0 com 12+ GB. Q4_K_M oferece 95% da qualidade do Q8_0 à metade do tamanho. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-02',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       pt: {
         question: 'Q4_K_M vs Q8_0: qual escolher?',
@@ -425,7 +424,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Q8_0: ~8–9 GB para modelos 7B, precisa de 12+ GB de VRAM',
           'A diferença de qualidade é inferior a 5% no uso real',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-09',
       },
     },
     sections: {
@@ -441,7 +440,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O veredicto rápido',
         content: [
-          'Em maio de 2026, <strong>Q8_0 representa ~99% da qualidade de precisão total. Q4_K_M representa ~92%.</strong> A diferença de 7 pontos é invisível em chat, codificação e resumo — três tarefas que cobrem 95% do uso de LLM local. Q8_0 só se sobressai em recuperação factual de documentos longos, matemática de múltiplas etapas e código que requer sintaxe exata em 500+ linhas.',
+          '<strong>Q8_0 mantém ~99% da qualidade de precisão total. Q4_K_M mantém ~92%.</strong> A diferença de 7 pontos é invisível em chat, codificação e resumo — três tarefas que cobrem 95% do uso de LLM local. Q8_0 só se sobressai em recuperação factual de documentos longos, matemática de múltiplas etapas e código que requer sintaxe exata em 500+ linhas.',
           'Q4_K_M é a opção padrão correta porque a qualidade extra do Q8_0 só aparece em casos extremos: geração longa com recuperação factual exata ou raciocínio matemático que requer maior precisão. Para todo o resto, Q4_K_M equivale ao Q8_0 na prática.',
           'Se você já está usando Q4_K_M e seus resultados parecem errados, o problema quase nunca é a quantização — é o tamanho do modelo ou a estrutura do prompt.',
         ],
@@ -492,9 +491,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Q4_K_M vs Q8_0: ¿cuál? 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Usa Q4_K_M con 8 GB de VRAM o menos. Usa Q8_0 con 12+ GB. Q4_K_M ofrece el 95% de la calidad de Q8_0 a la mitad del tamaño. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       es: {
         question: 'Q4_K_M vs Q8_0: ¿cuál elegir?',
@@ -504,7 +503,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Q8_0: ~8–9 GB para modelos 7B, necesita 12+ GB de VRAM',
           'La diferencia de calidad es inferior al 5% en uso real',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-09',
       },
     },
     sections: {
@@ -520,7 +519,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'El veredicto rápido',
         content: [
-          'A mayo de 2026, <strong>Q8_0 es ~99% de la calidad de plena precisión. Q4_K_M es ~92%.</strong> La diferencia de 7 puntos es invisible en chat, programación y resúmenes — tres tareas que cubren el 95% del uso de LLMs locales. Q8_0 solo aventaja en recuperación factual de documentos largos, matemáticas de múltiples pasos y código que requiere sintaxis exacta en más de 500 líneas.',
+          '<strong>Q8_0 mantiene ~99% de la calidad de plena precisión. Q4_K_M mantiene ~92%.</strong> La diferencia de 7 puntos es invisible en chat, programación y resúmenes — tres tareas que cubren el 95% del uso de LLMs locales. Q8_0 solo aventaja en recuperación factual de documentos largos, matemáticas de múltiples pasos y código que requiere sintaxis exacta en más de 500 líneas.',
           'Q4_K_M es la opción predeterminada correcta porque la calidad extra de Q8_0 solo aparece en casos extremos: generación larga con recuperación factual exacta, o razonamiento matemático que requiere mayor precisión. Para todo lo demás, Q4_K_M iguala a Q8_0 en la práctica.',
           'Si ya usas Q4_K_M y los resultados parecen incorrectos, el problema casi nunca es la cuantización — es el tamaño del modelo o la estructura del prompt.',
         ],
@@ -568,12 +567,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ar.webp',
     title: '⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q8⁩_⁨0⁩: أيهما تختار؟',
-    seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q8⁩_⁨0⁩: أيهما يناسب ⁨VRAM⁩ لديك؟',
-    metaDescription: 'نموذج ⁨7B⁩ بـ ⁨Q4⁩_⁨K⁩_⁨M⁩ يبلغ ⁨4.1 GB⁩ (~⁨92%⁩ جودة)؛ ⁨Q8⁩_⁨0⁩ يبلغ ⁨7.7 GB⁩ (~⁨99%⁩). استخدم ⁨Q4⁩_⁨K⁩_⁨M⁩ مع ⁨8 GB VRAM⁩ أو أقل، و⁨Q8⁩_⁨0⁩ مع ⁨12 GB VRAM⁩ فما فوق.',
+    seoTitle: '⁨Q4⁩_⁨K⁩_⁨M⁩ مقابل ⁨Q8⁩_⁨0⁩ ⁨2026⁩: أيهما تختار؟',
+    metaDescription: 'استخدم ⁨Q4⁩_⁨K⁩_⁨M⁩ مع ⁨8 GB VRAM⁩ أو أقل، و⁨Q8⁩_⁨0⁩ مع ⁨12+ GB⁩. يوفر ⁨Q4⁩_⁨K⁩_⁨M⁩ ⁨95%⁩ من جودة ⁨Q8⁩_⁨0⁩ بنصف الحجم.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-20',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       ar: {
         question: 'Q4_K_M مقابل Q8_0: أيهما تختار؟',
@@ -583,7 +582,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Q8_0: ~8–9 GB لنماذج 7B، يحتاج 12+ GB VRAM',
           'فارق الجودة أقل من 5% في الاستخدام الفعلي',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-09',
       },
     },
     sections: {
@@ -599,7 +598,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'الحكم السريع',
         content: [
-          'اعتبارًا من مايو 2026، <strong>يمثل Q8_0 حوالي 99% من جودة الدقة الكاملة، ويمثل Q4_K_M حوالي 92%.</strong> الفارق البالغ 7 نقاط غير مرئي في الدردشة والبرمجة والتلخيص — وهي المهام الثلاث التي تغطي 95% من استخدام نماذج اللغة المحلية. لا يتفوق Q8_0 إلا في استرجاع الحقائق من المستندات الطويلة والرياضيات متعددة الخطوات وتوليد الكود الذي يتطلب بناءً صحيحًا في 500+ سطر.',
+          '<strong>يحافظ Q8_0 على حوالي 99% من جودة الدقة الكاملة، بينما يحافظ Q4_K_M على حوالي 92%.</strong> الفارق البالغ 7 نقاط غير مرئي في الدردشة والبرمجة والتلخيص — وهي المهام الثلاث التي تغطي 95% من استخدام نماذج اللغة المحلية. لا يتفوق Q8_0 إلا في استرجاع الحقائق من المستندات الطويلة والرياضيات متعددة الخطوات وتوليد الكود الذي يتطلب بناءً صحيحًا في 500+ سطر.',
           'يُعدّ Q4_K_M الخيار الافتراضي الصحيح لأن الجودة الإضافية لـ Q8_0 تظهر فقط في الحالات القصوى: التوليد الطويل مع استرجاع دقيق للحقائق، أو الاستدلال الرياضي الذي يتطلب دقة أعلى. لكل شيء آخر، يعادل Q4_K_M أداء Q8_0 عمليًا.',
           'إذا كنت تستخدم Q4_K_M بالفعل وبدت النتائج خاطئة، فالمشكلة في الغالب ليست في الكميّة — بل في حجم النموذج أو بنية الموجّه.',
         ],
@@ -647,12 +646,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/q4-k-m-vs-q8-0-overview-hero-ko.webp',
     title: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',
-    seoTitle: 'Q4_K_M vs Q8_0: 2026년 선택 가이드 | Prompt Bites | PromptQuorum',
-    metaDescription: 'VRAM이 8 GB 이하이면 Q4_K_M을 사용하십시오. 12 GB 이상이면 Q8_0을 사용하십시오. Q4_K_M은 절반의 파일 크기로 Q8_0 품질의 95%를 제공합니다. PromptQuorum의 빠른 답변.',
+    seoTitle: 'Q4_K_M vs Q8_0: 2026년 선택 가이드',
+    metaDescription: 'VRAM 8 GB 이하는 Q4_K_M, 12 GB 이상은 Q8_0을 사용하십시오. Q4_K_M은 절반 크기로 Q8_0 품질의 95%를 제공합니다.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       ko: {
         question: 'Q4_K_M vs Q8_0: 어느 것을 선택해야 합니까?',
@@ -662,7 +661,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Q8_0: 7B 모델에서 ~8–9 GB, 12+ GB VRAM 필요',
           '실제 사용에서 품질 차이는 5% 미만입니다',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-09',
       },
     },
     sections: {
@@ -678,7 +677,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '빠른 결론',
         content: [
-          '2026년 5월 기준, <strong>Q8_0은 완전 정밀도 품질의 ~99%입니다. Q4_K_M은 ~92%입니다.</strong> 이 7포인트 차이는 채팅, 코딩, 요약에서는 눈에 보이지 않습니다. 이 세 가지 작업이 로컬 LLM 사용의 95%를 차지합니다. Q8_0이 우위를 보이는 경우는 장문 사실 회상, 다단계 수학, 그리고 500줄 이상의 정확한 구문이 필요한 코드뿐입니다.',
+          '<strong>Q8_0은 완전 정밀도 품질의 ~99%를 유지합니다. Q4_K_M은 ~92%입니다.</strong> 이 7포인트 차이는 채팅, 코딩, 요약에서는 눈에 보이지 않습니다. 이 세 가지 작업이 로컬 LLM 사용의 95%를 차지합니다. Q8_0이 우위를 보이는 경우는 장문 사실 회상, 다단계 수학, 그리고 500줄 이상의 정확한 구문이 필요한 코드뿐입니다.',
           'Q4_K_M이 올바른 기본값인 이유는 Q8_0의 추가 품질이 엣지 케이스에서만 나타나기 때문입니다: 정확한 사실 회상이 필요한 장문 생성, 또는 높은 정밀도가 필요한 수학적 추론. 그 외 모든 상황에서 Q4_K_M은 실제로 Q8_0과 동등합니다.',
           '이미 Q4_K_M을 사용하고 있는데 결과가 올바르지 않게 느껴진다면, 문제는 거의 항상 양자화가 아닌 모델 크기나 프롬프트 구조에 있습니다.',
         ],
