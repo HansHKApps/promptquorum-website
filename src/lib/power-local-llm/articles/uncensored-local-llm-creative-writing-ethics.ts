@@ -398,6 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay-2026) — free desktop app with a built-in Character Hub and Fimbulvetr 10.7B; the low-friction alternative to the frontends covered in this article.',
           '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) — model comparison including model picks, sampling settings, and performance for narrative generation.',
           '[Local LLM Prompts for Fiction Writers: Templates & Techniques](/power-local-llm/local-llm-prompts-for-fiction-writers) — prompt templates for scene-writing, dialogue, worldbuilding, and style transfer that work on both standard and uncensored models.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — frontend comparison for character-card roleplay, including setup instructions for Ollama backends.',
@@ -795,6 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
+          '[Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — kostenlose Desktop-App mit integriertem Character Hub und Fimbulvetr 10.7B; die unkomplizierte Alternative zu den in diesem Artikel behandelten Frontends.',
           '[Best Local LLMs for Creative Writing 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) — Modellvergleich einschließlich Modellauswahl, Sampling-Einstellungen und Performance für narrative Generierung.',
           '[Local LLM Prompts for Fiction Writers: Templates & Techniques](/de/power-local-llm/local-llm-prompts-for-fiction-writers) — Prompt-Vorlagen für Szenen-Schreiben, Dialog, Weltenbau und Stiltransfer, die auf Standard- und Uncensored-Modellen funktionieren.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Frontend-Vergleich für Charakter-Karten-Roleplay, einschließlich Einrichtungsanleitungen für Ollama-Backends.',
@@ -1200,6 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Avis sur Backyard AI : chat de personnages IA et roleplay local](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) — application de bureau gratuite avec Character Hub intégré et Fimbulvetr 10.7B ; l\'alternative sans friction aux frontends traités dans cet article.',
           '[Best Local LLMs for Creative Writing 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) — comparaison de modèles incluant les choix de modèles, les paramètres d\'échantillonnage et les performances pour la génération narrative.',
           '[Local LLM Prompts for Fiction Writers: Templates & Techniques](/fr/power-local-llm/local-llm-prompts-for-fiction-writers) — modèles de prompts pour l\'écriture de scènes, le dialogue, la construction d\'univers et le transfert de style, fonctionnant sur les modèles standard et non censurés.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparaison de frontends pour le jeu de rôle par fiches de personnages, avec instructions de configuration pour les backends Ollama.',
@@ -1653,6 +1656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連読み物',
         items: [
+          '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026) — Character HubとFimbulvetr 10.7Bを内蔵した無料デスクトップアプリ。本記事で扱うフロントエンドに対する手軽な代替アプリ。',
           '[2026年創作向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing-2026) ― モデル比較。ナラティブ生成のモデル選択、サンプリング設定、パフォーマンスを含む。',
           '[フィクション作家向けローカルLLMプロンプト：テンプレートとテクニック](/ja/power-local-llm/local-llm-prompts-for-fiction-writers) ― 場面執筆、対話、世界構築、スタイル転換のプロンプトテンプレート。標準モデルと無検閲モデルの両方で機能する。',
           '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) ― キャラクターカードロールプレイのフロントエンド比較。Ollamaバックエンドのセットアップ手順を含む。',
@@ -2052,6 +2056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026) ——内置Character Hub和Fimbulvetr 10.7B的免费桌面应用;是本文所述前端之外低门槛的替代方案。',
           '[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing-2026) — 模型对比，包括模型选择、采样设置和叙事生成性能。',
           '[小说作家本地LLM提示词指南：模板与技巧](/zh/power-local-llm/local-llm-prompts-for-fiction-writers) — 场景写作、对话、世界构建和风格迁移的提示词模板，在标准和无审查模型上均有效。',
           '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 角色卡角色扮演前端对比，包括Ollama后端配置说明。',
@@ -2450,6 +2455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Análisis de Backyard AI: chat de personajes IA y roleplay local](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) — app de escritorio gratuita con Character Hub integrado y Fimbulvetr 10.7B; la alternativa de baja fricción a los frontends cubiertos en este artículo.',
           '[Mejores LLMs locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) — comparación de modelos que incluye las selecciones de modelos, los ajustes de muestreo y el rendimiento para la generación narrativa.',
           '[Prompts de LLM local para escritores de ficción: plantillas y técnicas](/es/power-local-llm/local-llm-prompts-for-fiction-writers) — plantillas de prompts para escritura de escenas, diálogo, construcción de mundos y transferencia de estilo que funcionan en modelos estándar y sin censura.',
           '[SillyTavern vs Agnai vs RisuAI: mejor frontend de roleplay local](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparación de frontends para roleplay con fichas de personajes, incluidas instrucciones de configuración para backends de Ollama.',
@@ -2859,6 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026) — 내장 Character Hub와 Fimbulvetr 10.7B를 갖춘 무료 데스크톱 앱으로, 이 글에서 다루는 프런트엔드에 대한 손쉬운 대안입니다.',
           '[2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 내러티브 생성을 위한 모델 선택, 샘플링 설정, 성능을 포함한 모델 비교.',
           '[픽션 작가를 위한 로컬 LLM 프롬프트: 템플릿 및 기법](/ko/power-local-llm/local-llm-prompts-for-fiction-writers) — 표준 모델과 무검열 모델 모두에서 작동하는 장면 글쓰기, 대화, 세계 구축, 스타일 전이를 위한 프롬프트 템플릿.',
           '[SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 프론트엔드](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Ollama 백엔드를 위한 설정 지침을 포함한 캐릭터 카드가 있는 롤플레이를 위한 프론트엔드 비교.',
@@ -3268,6 +3275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Análise do Backyard AI: chat de personagens IA e roleplay local](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) — app de desktop gratuito com Character Hub integrado e Fimbulvetr 10.7B; a alternativa sem fricção aos frontends abordados neste artigo.',
           '[Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing-2026) — comparação de modelos que inclui as seleções de modelos, os ajustes de amostragem e o desempenho para a geração narrativa.',
           '[Prompts de LLM local para escritores de ficção: modelos e técnicas](/pt/power-local-llm/local-llm-prompts-for-fiction-writers) — modelos de prompts para escrita de cenas, diálogo, construção de mundos e transferência de estilo que funcionam em modelos padrão e sem censura.',
           '[SillyTavern vs Agnai vs RisuAI: melhor frontend de roleplay local](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparação de frontends para roleplay com fichas de personagens, incluindo instruções de configuração para backends do Ollama.',
@@ -3678,6 +3686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
+          '[مراجعة Backyard AI: محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) — تطبيق سطح مكتب مجاني مع Character Hub مدمج وFimbulvetr 10.7B؛ البديل السلس للواجهات التي يغطيها هذا المقال.',
           '[أفضل نماذج LLM المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing-2026) — مقارنة النماذج التي تتضمن الاختيارات الموصى بها وضبط أخذ العينات والأداء لتوليد السرد.',
           '[موجّهات LLM المحلية لكتّاب الخيال: قوالب وتقنيات](/ar/power-local-llm/local-llm-prompts-for-fiction-writers) — قوالب موجّهات لكتابة المشاهد والحوار وبناء العوالم ونقل الأسلوب تعمل في النماذج القياسية وبدون القيود.',
           '[SillyTavern مقابل Agnai مقابل RisuAI: أفضل واجهة roleplay محلية](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — مقارنة الواجهات للـ roleplay ببطاقات الشخصيات، بما فيها تعليمات الإعداد لخلفيات Ollama.',

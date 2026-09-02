@@ -40,6 +40,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-prompts-for-fiction-writers':       'local-llm-prompts-for-fiction-writers',
   'uncensored-local-llm-creative-writing-ethics':'uncensored-local-llm-creative-writing-ethics',
   'local-llm-screenwriting-and-novel-drafting':  'local-llm-screenwriting-and-novel-drafting',
+  'backyard-ai-review-local-roleplay-2026':      'backyard-ai-review-local-roleplay-2026',
 
   // Category 6 — Mobile & Edge LLMs
   'best-local-llm-apps-iphone-2026':             'best-local-llm-apps-iphone-2026',
