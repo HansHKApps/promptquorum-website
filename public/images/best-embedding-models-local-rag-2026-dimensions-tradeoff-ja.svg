@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    &#x6b21;&#x5143;&#x306e;&#x30c8;&#x30ec;&#x30fc;&#x30c9;&#x30aa;&#x30d5;&#xff1a;&#x30b9;&#x30c8;&#x30ec;&#x30fc;&#x30b8;&#x3068;&#x691c;&#x7d22;&#x54c1;&#x8cea;&#xff08;5&#x4e07;&#x30da;&#x30fc;&#x30b8;&#x306e;&#x30b3;&#x30fc;&#x30d1;&#x30b9;&#xff09;
+  </text>
+
+  <!-- Storage size section -->
+  <text x="50" y="65" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">&#x30c7;&#x30a3;&#x30b9;&#x30af;&#x4e0a;&#x306e;&#x30b9;&#x30c8;&#x30ec;&#x30fc;&#x30b8;</text>
+  <line x1="50" y1="72" x2="250" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- 768 dims -->
+  <text x="50" y="105" font-size="11" font-weight="600" fill="#49454F" font-family="'SF Mono', Monaco, monospace">768&#x6b21;&#x5143;</text>
+  <rect x="130" y="95" width="50" height="16" fill="#6750A4"/>
+  <text x="190" y="105" font-size="11" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">0.9 GB</text>
+
+  <!-- 1024 dims -->
+  <text x="50" y="145" font-size="11" font-weight="600" fill="#49454F" font-family="'SF Mono', Monaco, monospace">1,024&#x6b21;&#x5143;</text>
+  <rect x="130" y="135" width="65" height="16" fill="#6750A4"/>
+  <text x="210" y="145" font-size="11" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">1.2 GB (+33%)</text>
+
+  <!-- 1536 dims -->
+  <text x="50" y="185" font-size="11" font-weight="600" fill="#49454F" font-family="'SF Mono', Monaco, monospace">1,536&#x6b21;&#x5143;</text>
+  <rect x="130" y="175" width="97" height="16" fill="#6750A4"/>
+  <text x="245" y="185" font-size="11" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">1.8 GB (+100%)</text>
+
+  <!-- 3072 dims -->
+  <text x="50" y="225" font-size="11" font-weight="600" fill="#49454F" font-family="'SF Mono', Monaco, monospace">3,072&#x6b21;&#x5143;</text>
+  <rect x="130" y="215" width="195" height="16" fill="#6750A4" opacity="0.6"/>
+  <text x="345" y="225" font-size="11" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">3.6 GB (+300%)</text>
+
+  <!-- Retrieval quality section -->
+  <text x="420" y="65" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">Retrieval@10&#x54c1;&#x8cea;</text>
+  <line x1="420" y1="72" x2="750" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- 768 dims -->
+  <circle cx="680" cy="99" r="12" fill="#34A853"/>
+  <text x="680" y="105" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">88%</text>
+
+  <!-- 1024 dims -->
+  <circle cx="700" cy="139" r="12" fill="#34A853"/>
+  <text x="700" y="145" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">92%</text>
+
+  <!-- 1536 dims -->
+  <circle cx="702" cy="179" r="12" fill="#34A853"/>
+  <text x="702" y="185" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">93%</text>
+
+  <!-- 3072 dims -->
+  <circle cx="703" cy="219" r="12" fill="#34A853"/>
+  <text x="703" y="225" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="'SF Mono', Monaco, monospace">93%</text>
+
+  <!-- Insight box -->
+  <rect x="50" y="270" width="700" height="70" fill="#F7F2FA" stroke="#E8DEF8" stroke-width="1" rx="4"/>
+  <text x="70" y="295" font-size="12" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">&#x8981;&#x70b9;&#xff1a;&#x6b21;&#x5143;&#x306e;&#x30d7;&#x30e9;&#x30c8;&#x30fc;</text>
+  <text x="70" y="315" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">&#x2022; 1,024&#x6b21;&#x5143;&#x4ee5;&#x964d;&#x306f;&#x52b9;&#x679c;&#x304c;&#x982d;&#x6253;&#x3061;&#xff1a;3,072&#x6b21;&#x5143;&#x306b;&#x3057;&#x3066;&#x3082;retrieval&#x306f;<0.5%&#x5897;&#x3001;&#x30b9;&#x30c8;&#x30ec;&#x30fc;&#x30b8;&#x306f;3&#x500d;&#x3002;</text>
+  <text x="70" y="333" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">&#x2022; &#x30de;&#x30c8;&#x30ea;&#x30e7;&#x30fc;&#x30b7;&#x30ab;&#x306e;&#x624b;&#x6cd5;&#xff1a;1,024&#x6b21;&#x5143;&#x3067;&#x57cb;&#x3081;&#x8fbc;&#x307f;&#x3001;&#x4fdd;&#x5b58;&#x6642;&#x306f;512&#x307e;&#x305f;&#x306f;256&#x6b21;&#x5143;&#x306b;&#x5207;&#x308a;&#x8a70;&#x3081;&#xff08;retrieval&#x640d;&#x5931;~1%&#x3001;&#x30b9;&#x30c8;&#x30ec;&#x30fc;&#x30b8;50%&#x524a;&#x6e1b;&#xff09;&#x3002;</text>
+<text x="792" y="345" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

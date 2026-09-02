@@ -2517,23 +2517,23 @@
       ],
       "images": [
         {
-          "url": "/public/images/local-llm-cost-comparison.svg",
+          "url": "/images/local-llm-cost-comparison.svg",
           "title": "Year 1: Local LLM costs $3,100 hardware + electricity vs. $12,000–$36,000 for cloud APIs. Year 3+: Monthly cost drops to $120 amortized, saving $16,000+ annually for active teams."
         },
         {
-          "url": "/public/images/team-llm-architecture-comparison.svg",
+          "url": "/images/team-llm-architecture-comparison.svg",
           "title": "Single vLLM server handles 5-10 users with simple setup but single point of failure. Dual-GPU cluster (10-50 users) provides automatic failover and higher throughput with load balancing."
         },
         {
-          "url": "/public/images/team-llm-auth-flow.svg",
+          "url": "/images/team-llm-auth-flow.svg",
           "title": "Simple token-based auth for SMB teams, and OAuth 2.0 with SAML 2.0 for enterprise SSO integration with automatic group assignment and role-based access control."
         },
         {
-          "url": "/public/images/team-scaling-progression.svg",
+          "url": "/images/team-scaling-progression.svg",
           "title": "Scaling progression from 5-10 users on single GPU to 100+ users in enterprise multi-region deployment. Hardware requirements and setup time increase with team size."
         },
         {
-          "url": "/public/images/team-llm-monitoring-dashboard.svg",
+          "url": "/images/team-llm-monitoring-dashboard.svg",
           "title": "Real-time Prometheus metrics dashboard showing GPU utilization, request latency, queue depth, and throughput. Alerts trigger when latency exceeds 2 seconds or queue depth exceeds 10 requests."
         }
       ]
@@ -3961,7 +3961,7 @@
       ]
     },
     "prompt-with-images": {
-      "dateModified": null,
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-03-25",
       "hasSections": true,
@@ -5172,7 +5172,7 @@
       "images": []
     },
     "multi-model-prompt-testing": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-02",
       "hasSections": true,
@@ -5451,7 +5451,7 @@
       ]
     },
     "best-embedding-models-local-rag-2026": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5546,6 +5546,42 @@
           "title": "Unified memory by model size at Q4_K_M: 8B needs 8-9 GB, 13-14B needs 11-13 GB, 34B needs 21-25 GB, 70B Q4 needs 39-42 GB, and 70B Q5 or concurrent models need 50-70+ GB."
         }
       ]
+    },
+    "asus-mini-pc-local-ai-2026": {
+      "dateModified": "2026-09-05",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-01",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-electricity-cost-balcony-solar-2026": {
+      "dateModified": "2026-09-01",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-01",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     },
     "cloud-gpu-rental-guide-2026": {
       "dateModified": "2026-07-01",
@@ -7058,7 +7094,7 @@
       ]
     },
     "cursor-vs-windsurf-vs-copilot-cline-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-08-27",
       "hasSections": true,
