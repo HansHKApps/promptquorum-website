@@ -5923,7 +5923,7 @@
       ]
     },
     "best-local-llm-apps-iphone-2026": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -5941,15 +5941,15 @@
       "images": [
         {
           "url": "/images/best-local-llm-apps-iphone-2026-which-app-hero-en.webp",
-          "title": "Which local AI app to install on iPhone: PocketPal AI (free default), Private LLM (Siri + Shortcuts), MLC Chat (fastest on Apple Silicon), LLM Farm (configurable), Apple Intelligence (iOS 18+ built-in)."
+          "title": "Which local AI app to install on iPhone: PocketPal AI (free default), Private LLM (Siri + Shortcuts), Locally AI (free MLX, LM Studio team), MLC Chat (Metal-fast but dormant), Apple Intelligence (iOS built-in)."
         },
         {
           "url": "/images/best-local-llm-apps-iphone-2026-comparison-hero-en.webp",
-          "title": "iPhone local LLM app comparison: PocketPal AI and LLM Farm (free, ~10–15 tok/s), MLC Chat (free, ~14–20 tok/s Metal-accelerated), Private LLM (~£10 one-time, Siri + Shortcuts), Apple Intelligence (system-integrated, iOS 18+)."
+          "title": "iPhone local LLM app comparison: PocketPal AI (free, ~10–15 tok/s), Locally AI (free, Apple MLX + Shortcuts), MLC Chat (free, ~14–20 tok/s Metal-accelerated, dormant since late 2024), Private LLM ($4.99 one-time, Siri + Shortcuts), Apple Intelligence (system-integrated)."
         },
         {
           "url": "/images/iphone-llm-apps-models-tier-en.svg",
-          "title": "LLM model recommendations by iPhone RAM: Phi-4 Mini 3.8B Q4_K_M for 8 GB iPhones (15 Pro–17 Pro) at 8–20 tok/s; Qwen3 1.7B Q4_K_M for 6 GB iPhones (14 Pro, non-Pro) at 12–20 tok/s; iPhone SE (4 GB) not recommended."
+          "title": "LLM model recommendations by iPhone RAM: Phi-4 Mini 3.8B Q4_K_M for 8 GB+ iPhones (15 Pro–17 Pro) at 8–20 tok/s; Qwen3 1.7B Q4_K_M for 6 GB iPhones (14 Pro, non-Pro) at 12–20 tok/s; iPhone SE (4 GB) not recommended."
         },
         {
           "url": "/images/iphone-llm-apps-battery-thermal-en.svg",
@@ -5957,7 +5957,7 @@
         },
         {
           "url": "/images/iphone-llm-apps-ios-integration-en.svg",
-          "title": "iOS integration by local LLM app: Private LLM and Apple Intelligence support Shortcuts and Siri; PocketPal AI, MLC Chat, and LLM Farm are standalone chat apps with no Shortcuts actions as of 2026. PocketPal AI, MLC Chat, and LLM Farm are open-source."
+          "title": "iOS integration by local LLM app: Private LLM, Locally AI, and Apple Intelligence support Shortcuts (Private LLM adds Siri); PocketPal AI and MLC Chat are standalone chat apps with no Shortcuts actions as of 2026."
         }
       ]
     },
