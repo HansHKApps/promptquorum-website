@@ -20,6 +20,8 @@ import { PreferredSourceConfirmDialog } from './PreferredSourceConfirmDialog'
 
 const DISMISS_KEY = 'pq_google_ps_dismissed_until'
 const DISMISS_DURATION_MS = 14 * 24 * 60 * 60 * 1000
+const SHOWN_KEY = 'pq_google_ps_shown_until'
+const SHOWN_DURATION_MS = 14 * 24 * 60 * 60 * 1000
 const SHOW_DELAY_MS = 30 * 1000
 const SLOT_ID = 'google_preferred_sources'
 
@@ -105,11 +107,16 @@ export function GooglePreferredSourcesCard() {
   const [showConfirm, setShowConfirm] = useState(false)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Respect prior dismissal, then arm the 30-second timer
+  // Respect prior dismissal or a recent passive "shown" impression, then arm the 30-second timer
   useEffect(() => {
     try {
       const until = localStorage.getItem(DISMISS_KEY)
       if (until && Date.now() < parseInt(until, 10)) {
+        setDismissed(true)
+        return
+      }
+      const shownUntil = localStorage.getItem(SHOWN_KEY)
+      if (shownUntil && Date.now() < parseInt(shownUntil, 10)) {
         setDismissed(true)
         return
       }
@@ -121,6 +128,11 @@ export function GooglePreferredSourcesCard() {
       // Never stack on the push opt-in banner — one interruptive prompt at a time.
       if (!claimPromptSlot(SLOT_ID)) return
       setMountedVisible(true)
+      try {
+        localStorage.setItem(SHOWN_KEY, String(Date.now() + SHOWN_DURATION_MS))
+      } catch {
+        /* ignore */
+      }
       trackPrefSource('shown', { surface: 'popup_card', source_page: pathname, lang })
     }, SHOW_DELAY_MS)
 
