@@ -230,6 +230,7 @@ https://www.promptquorum.com/local-llms/xinference-llama-qwen-chatglm-mistral
 https://www.promptquorum.com/power-local-llm
 https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
+https://www.promptquorum.com/power-local-llm/asus-mini-pc-local-ai-2026
 https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work
 https://www.promptquorum.com/power-local-llm/best-affiliate-tools-ai-developers-2026
 https://www.promptquorum.com/power-local-llm/best-ai-coding-tools-comparison-2026
@@ -273,6 +274,7 @@ https://www.promptquorum.com/power-local-llm/local-ai-video-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-workstation-build-guide-2026
 https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet
 https://www.promptquorum.com/power-local-llm/local-llm-code-review-ci-cd
+https://www.promptquorum.com/power-local-llm/local-llm-electricity-cost-balcony-solar-2026
 https://www.promptquorum.com/power-local-llm/local-llm-email-and-calendar-automation
 https://www.promptquorum.com/power-local-llm/local-llm-personal-knowledge-base-2026
 https://www.promptquorum.com/power-local-llm/local-llm-prompts-for-fiction-writers
