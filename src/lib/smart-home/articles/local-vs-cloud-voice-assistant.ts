@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-en.webp',
     title: 'Local vs Cloud Voice Assistants: Privacy, Cost & Capability (2026)',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cloud leads on broad third-party skills and zero setup',
           'Choose by privacy/control vs convenience',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -166,7 +166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Voice assistant' }, { '@type': 'Thing', name: 'Local AI' }, { '@type': 'Thing', name: 'Privacy' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -187,8 +187,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ar.webp',
     title: 'المساعدون الصوتيون المحليون مقابل السحابيون: الخصوصية والتكلفة والقدرة (⁨2026⁩)',
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'يتفوق المساعدون الصوتيون المحليون في الخصوصية والتكلفة؛ بينما لا تزال المساعدات السحابية تتقدم في سهولة الاستخدام والمهارات الواسعة. يقارن دليل القرار هذا بنية محلية (Home Assistant Assist + Whisper + نموذج لغوي محلي) مقابل المساعدات السحابية (Alexa، Google) عبر الخصوصية والتكلفة والدقة والمهارات والعمل دون إنترنت والجهد، ويوضح متى يفوز كل منهما.',
     metaDescription:
-      'المحلي يفوز في الخصوصية والتكلفة؛ السحابي يتقدم في المهارات الواسعة. مقارنة Alexa مقابل Home Assistant Assist + Whisper + LLM في 2026.',
+      'المحلي يفوز في الخصوصية والتكلفة والعمل دون إنترنت؛ السحابي يتقدم في المهارات الواسعة. مقارنة Alexa مقابل Home Assistant Assist + Whisper + LLM في 2026.',
     twitterDescription:
       'مساعد صوتي محلي مقابل سحابي: المحلي يفوز في الخصوصية والتكلفة، والسحابة تتقدم في الأناقة والمهارات. متى يفوز كل منهما في 2026.',
     readTime: '8 دقائق للقراءة',
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'السحابة تتقدم في مهارات طرف ثالث واسعة وإعداد صفري',
           'اختر بناءً على الخصوصية/التحكم مقابل الراحة',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المقارنة',
         content:
           '**المحلي يفوز في الخصوصية والتكلفة ودون إنترنت؛ السحابي يفوز في المهارات والجهد.** استخدم الجدول لمطابقة أولويتك.',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-ar.svg',
         imageCaption: 'مقارنة المساعد الصوتي المحلي والسحابي عبر الخصوصية والتكلفة والدقة والمهارات والعمل دون إنترنت والجهد: يفوز المحلي في 3 معايير، ويفوز السحابي في 3.',
         columns: ['المعيار', 'محلي (Assist + Whisper + نموذج لغوي)', 'سحابي (Alexa / Google)'],
         rows: [
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'التوصية',
         content:
           '**اختر المحلي إذا كانت الخصوصية أو التكلفة أو العمل دون إنترنت مهمة؛ اختر السحابي إذا أردت إعدادًا صفريًا وأوسع المهارات.** إذا لم تكن متأكدًا وتُقدِّر الخصوصية، ابدأ محليًا بجهاز كمبيوتر مصغر.',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-ar.svg',
         imageCaption: 'شجرة قرار المساعد الصوتي المحلي مقابل السحابي: الخصوصية/التكلفة/دون إنترنت تؤدي إلى المحلي، وإعداد صفري وأوسع المهارات يؤدي إلى السحابي، وغير المتأكدين المائلين للخصوصية يبدؤون محليًا بجهاز كمبيوتر مصغر مزود بـ GPU.',
         items: [
           '**خصوصية / دون إنترنت / بدون رسوم:** البنية المحلية.',
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'مساعد صوتي' }, { '@type': 'Thing', name: 'ذكاء اصطناعي محلي' }, { '@type': 'Thing', name: 'الخصوصية' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -369,8 +369,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-de.webp',
     title: 'Lokale vs Cloud-Sprachassistenten: Datenschutz, Kosten & Fähigkeit (2026)',
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cloud führt bei breiten Drittanbieter-Skills und null Einrichtung',
           'Wählen Sie nach Datenschutz/Kontrolle vs Komfort',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Der Vergleich',
         content:
           '**Lokal gewinnt Datenschutz, Kosten und Offline; Cloud gewinnt Skills und Aufwand.** Nutzen Sie die Tabelle, um Ihre Priorität zuzuordnen.',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-de.svg',
         imageCaption: 'Vergleich lokaler und Cloud-Sprachassistenten bei Datenschutz, Kosten, Genauigkeit, Skills, Offline und Aufwand: lokal gewinnt 3 Kriterien, Cloud gewinnt 3.',
         columns: ['Kriterium', 'Lokal (Assist + Whisper + LLM)', 'Cloud (Alexa / Google)'],
         rows: [
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Empfehlung',
         content:
           '**Wählen Sie lokal, wenn Datenschutz, Kosten oder Offline-Betrieb zählen; wählen Sie Cloud, wenn Sie null Einrichtung und die breitesten Skills wollen.** Wenn unsicher und Sie Datenschutz schätzen, starten Sie lokal mit einem Mini-PC.',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-de.svg',
         imageCaption: 'Entscheidungsbaum lokal vs Cloud-Sprachassistent: Datenschutz/Kosten/Offline führt zu lokal, null Einrichtung und breiteste Skills führt zu Cloud, Unentschlossene mit Datenschutzneigung starten lokal auf einem Mini-PC mit GPU.',
         items: [
           '**Datenschutz / offline / keine Gebühren:** lokaler Stack.',
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Sprachassistent' }, { '@type': 'Thing', name: 'Lokale KI' }, { '@type': 'Thing', name: 'Datenschutz' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -551,8 +551,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-es.webp',
     title: 'Asistentes de Voz Local vs Nube: Privacidad, Coste y Capacidad (2026)',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La nube lidera en skills de terceros amplias y cero configuración',
           'Elige por privacidad/control vs comodidad',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La comparación',
         content:
           '**Local gana privacidad, coste y sin conexión; la nube gana skills y esfuerzo.** Usa la tabla para asignar tu prioridad.',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-es.svg',
         imageCaption: 'Comparación de asistente de voz local vs nube en privacidad, coste, precisión, skills, offline y esfuerzo: local gana 3 criterios, la nube gana 3.',
         columns: ['Criterio', 'Local (Assist + Whisper + LLM)', 'Nube (Alexa / Google)'],
         rows: [
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendación',
         content:
           '**Elige local si la privacidad, el coste o la operación sin conexión importan; elige la nube si quieres cero configuración y las skills más amplias.** Si dudas y valoras la privacidad, empieza local con un mini PC.',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-es.svg',
         imageCaption: 'Árbol de decisión local vs nube para asistente de voz: privacidad/coste/offline lleva a local, cero configuración y skills más amplias lleva a la nube, e indecisos con tendencia a la privacidad empiezan local en un mini PC con GPU.',
         items: [
           '**Privacidad / sin conexión / sin cuotas:** stack local.',
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Asistente de voz' }, { '@type': 'Thing', name: 'IA local' }, { '@type': 'Thing', name: 'Privacidad' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -733,8 +733,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ko.webp',
     title: '로컬 vs 클라우드 음성 어시스턴트: 프라이버시, 비용, 성능 (2026)',
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '클라우드가 광범위한 타사 스킬과 제로 설정에서 앞섬',
           '프라이버시/제어 vs 편의성으로 선택하십시오',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -816,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '비교',
         content:
           '**로컬이 프라이버시, 비용, 오프라인에서 우세합니다. 클라우드가 스킬과 노력에서 우세합니다.** 표를 사용해 우선순위를 매핑하십시오.',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-ko.svg',
         imageCaption: '프라이버시, 비용, 정확도, 스킬, 오프라인, 노력 기준으로 본 로컬 vs 클라우드 음성 비서 비교: 로컬이 3개 기준, 클라우드가 3개 기준에서 우세합니다.',
         columns: ['기준', '로컬(Assist + Whisper + LLM)', '클라우드(Alexa / Google)'],
         rows: [
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '권장 사항',
         content:
           '**프라이버시, 비용, 오프라인 동작이 중요하다면 로컬을 선택하십시오. 제로 설정과 가장 광범위한 스킬을 원한다면 클라우드를 선택하십시오.** 확신이 없지만 프라이버시를 중시한다면 미니 PC로 로컬부터 시작하십시오.',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-ko.svg',
         imageCaption: '로컬 vs 클라우드 음성 비서 결정 트리: 프라이버시/비용/오프라인은 로컬로, 제로 설정과 가장 광범위한 스킬은 클라우드로, 프라이버시 성향이지만 미결정인 경우 GPU 장착 미니 PC로 로컬부터 시작합니다.',
         items: [
           '**프라이버시 / 오프라인 / 구독 없음:** 로컬 스택.',
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: '음성 어시스턴트' }, { '@type': 'Thing', name: '로컬 AI' }, { '@type': 'Thing', name: '프라이버시' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -915,8 +915,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-fr.webp',
     title: 'Assistants Vocaux Local vs Cloud : Confidentialité, Coût et Capacité (2026)',
@@ -924,7 +924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Les assistants vocaux locaux gagnent sur la confidentialité et le coût ; les assistants cloud mènent encore sur la finition prête à l\'emploi et l\'étendue des skills. Ce guide de décision compare une pile locale (Home Assistant Assist + Whisper + un LLM local) aux assistants cloud (Alexa, Google) sur la confidentialité, le coût, la précision, les skills, le fonctionnement hors ligne et l\'effort, et dit quand chacun gagne.',
     metaDescription:
-      'Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills et hors ligne comparés. Quand la pile locale gagne, quand le cloud mène encore.',
+      'Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills, hors ligne comparés. Local gagne en confidentialité, cloud mène en skills.',
     twitterDescription:
       'Assistants vocaux local vs cloud : le local gagne sur la confidentialité et le coût, le cloud mène sur la finition et les skills. Quand chacun gagne en 2026.',
     readTime: '8 min de lecture',
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le cloud mène sur les skills tierces larges et zéro configuration',
           'Choisissez par confidentialité/contrôle vs commodité',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -998,7 +998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'La comparaison',
         content:
           '**Le local gagne confidentialité, coût et hors ligne ; le cloud gagne skills et effort.** Utilisez le tableau pour associer votre priorité.',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-fr.svg',
         imageCaption: 'Comparaison assistant vocal local vs cloud sur confidentialité, coût, précision, skills, hors ligne et effort : le local gagne 3 critères, le cloud gagne 3.',
         columns: ['Critère', 'Local (Assist + Whisper + LLM)', 'Cloud (Alexa / Google)'],
         rows: [
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recommandation',
         content:
           '**Choisissez le local si la confidentialité, le coût ou le fonctionnement hors ligne comptent ; choisissez le cloud si vous voulez zéro configuration et les skills les plus larges.** En cas de doute et si vous valorisez la confidentialité, commencez en local avec un mini-PC.',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-fr.svg',
         imageCaption: 'Arbre de décision local vs cloud pour l\'assistant vocal : confidentialité/coût/hors ligne mène au local, zéro configuration et skills les plus larges mène au cloud, les indécis penchant pour la confidentialité commencent en local sur un mini-PC équipé d\'un GPU.',
         items: [
           '**Confidentialité / hors ligne / sans frais :** pile locale.',
@@ -1070,13 +1070,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Assistants Vocaux Local vs Cloud : Confidentialité, Coût et Capacité (2026)',
-      description: 'Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills et hors ligne comparés. Quand la pile locale gagne, quand le cloud mène encore.',
+      description: 'Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills, hors ligne comparés. Local gagne en confidentialité, cloud mène en skills.',
       url: 'https://www.promptquorum.com/fr/smart-home/local-vs-cloud-voice-assistant',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Assistant vocal' }, { '@type': 'Thing', name: 'IA locale' }, { '@type': 'Thing', name: 'Confidentialité' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1097,8 +1097,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-ja.webp',
     title: 'ローカル対クラウドの音声アシスタント：プライバシー・コスト・能力（2026）',
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'クラウドは幅広いサードパーティスキルとゼロ設定で先行',
           'プライバシー/制御 対 利便性で選ぶ',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -1180,7 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '比較',
         content:
           '**ローカルはプライバシー・コスト・オフラインで勝り、クラウドはスキルと手間で勝ります。** 表で自分の優先事項を対応づけましょう。',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-ja.svg',
         imageCaption: 'プライバシー・コスト・精度・スキル・オフライン・手間で見るローカル対クラウド音声アシスタント比較。ローカルが3項目、クラウドが3項目で優位。',
         columns: ['基準', 'ローカル (Assist + Whisper + LLM)', 'クラウド (Alexa / Google)'],
         rows: [
@@ -1219,7 +1219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '推奨',
         content:
           '**プライバシー・コスト・オフライン動作が重要ならローカル、ゼロ設定と最も幅広いスキルが欲しいならクラウドを選びましょう。** 迷っていてプライバシーを重んじるなら、ミニPCでローカルから始めましょう。',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-ja.svg',
         imageCaption: 'ローカル対クラウド音声アシスタントの決定木。プライバシー・コスト・オフラインはローカルへ、ゼロ設定と最も幅広いスキルはクラウドへ、迷うがプライバシー寄りの場合はGPU搭載ミニPCでローカルから始めます。',
         items: [
           '**プライバシー / オフライン / 料金なし：** ローカルスタック。',
@@ -1258,7 +1258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: '音声アシスタント' }, { '@type': 'Thing', name: 'ローカルAI' }, { '@type': 'Thing', name: 'プライバシー' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1279,8 +1279,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-pt.webp',
     title: 'Assistentes de Voz Local vs Nuvem: Privacidade, Custo e Capacidade (2026)',
@@ -1316,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A nuvem lidera em skills de terceiros amplas e zero configuração',
           'Escolha por privacidade/controle vs comodidade',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'A comparação',
         content:
           '**O local ganha privacidade, custo e offline; a nuvem ganha skills e esforço.** Use a tabela para associar a sua prioridade.',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-pt.svg',
         imageCaption: 'Comparação de assistente de voz local vs nuvem em privacidade, custo, precisão, skills, offline e esforço: o local vence 3 critérios, a nuvem vence 3.',
         columns: ['Critério', 'Local (Assist + Whisper + LLM)', 'Nuvem (Alexa / Google)'],
         rows: [
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendação',
         content:
           '**Escolha local se privacidade, custo ou operação offline importam; escolha nuvem se você quer zero configuração e as skills mais amplas.** Na dúvida e se você valoriza a privacidade, comece local com um mini PC.',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-pt.svg',
         imageCaption: 'Árvore de decisão local vs nuvem para assistente de voz: privacidade/custo/offline leva ao local, zero configuração e skills mais amplas leva à nuvem, e indecisos tendendo à privacidade começam local em um mini PC com GPU.',
         items: [
           '**Privacidade / offline / sem taxas:** stack local.',
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Assistente de voz' }, { '@type': 'Thing', name: 'IA local' }, { '@type': 'Thing', name: 'Privacidade' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1461,8 +1461,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Decision & Comparison',
     heroImage: '/images/local-vs-cloud-voice-assistant-overview-hero-zh.webp',
     title: '本地对云端的语音助手：隐私、成本与能力（2026）',
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '云端在广泛第三方技能和零配置上领先',
           '按隐私/掌控对便利来选择',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '对比',
         content:
           '**本地在隐私、成本和离线上胜出；云端在技能和投入上胜出。** 用下表对应你的优先事项。',
-        image: '/images/local-vs-cloud-voice-assistant-comparison-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-comparison-zh.svg',
         imageCaption: '本地与云端语音助手在隐私、成本、准确度、技能、离线和投入上的对比：本地在3项标准中胜出，云端在3项中胜出。',
         columns: ['标准', '本地 (Assist + Whisper + LLM)', '云端 (Alexa / Google)'],
         rows: [
@@ -1583,7 +1583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '推荐',
         content:
           '**若看重隐私、成本或离线运行就选本地；若想要零配置和最广技能就选云端。** 若拿不定主意且看重隐私，就用一台迷你 PC 从本地起步。',
-        image: '/images/local-vs-cloud-voice-assistant-decision-tree-en.svg',
+        image: '/images/local-vs-cloud-voice-assistant-decision-tree-zh.svg',
         imageCaption: '本地与云端语音助手决策树：隐私/成本/离线指向本地，零配置和最广技能指向云端，拿不定主意但偏向隐私的用户从配 GPU 的迷你 PC 本地起步。',
         items: [
           '**隐私 / 离线 / 无费用：** 本地堆栈。',
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: '语音助手' }, { '@type': 'Thing', name: '本地 AI' }, { '@type': 'Thing', name: '隐私' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },

@@ -1633,5 +1633,33 @@
       "ctr": 0.010910224438902744,
       "period": "GSC as pasted 2026-09-01 (page-level); query-level sample was thin (68 impr across 26 rows)"
     }
+  },
+  {
+    "id": "835e16f3-54fa-4f56-9252-d0ee25233c31",
+    "slug": "/fr/smart-home/local-vs-cloud-voice-assistant",
+    "date": "2026-09-02T09:15:44.162Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills et hors ligne comparés. Quand la pile locale gagne, quand le cloud mène encore.",
+        "new": "Assistants vocaux local vs cloud 2026 : confidentialité, coût, précision, skills, hors ligne comparés. Local gagne en confidentialité, cloud mène en skills."
+      }
+    ],
+    "reason": "page-updater: data-free meta review — FR meta was 160 chars, over the 158 max",
+    "baseline": null
+  },
+  {
+    "id": "b003b20e-5ad7-4032-8ec9-c1464df2ffff",
+    "slug": "/ar/smart-home/local-vs-cloud-voice-assistant",
+    "date": "2026-09-02T09:15:44.271Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "المحلي يفوز في الخصوصية والتكلفة؛ السحابي يتقدم في المهارات الواسعة. مقارنة Alexa مقابل Home Assistant Assist + Whisper + LLM في 2026.",
+        "new": "المحلي يفوز في الخصوصية والتكلفة والعمل دون إنترنت؛ السحابي يتقدم في المهارات الواسعة. مقارنة Alexa مقابل Home Assistant Assist + Whisper + LLM في 2026."
+      }
+    ],
+    "reason": "page-updater: data-free meta review — AR meta was 134 chars, under the 140 min",
+    "baseline": null
   }
 ]
