@@ -53,7 +53,7 @@
   
   <!-- Tier 8: Mobile -->
   <rect x="50" y="410" width="900" height="40" class="tier"/>
-  <text x="60" y="435" class="tier-title">8. Mobile & Edge (10 tools)</text>
+  <text x="60" y="435" class="tier-title">8. Mobile &amp; Edge (10 tools)</text>
   <text x="550" y="435" class="tier-desc">MLC Chat, Loci, PocketPal AI...</text>
   
   <!-- Tier 9: Specialized -->
