@@ -797,14 +797,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "easiest-local-ai-app-windows-mac-linux",
-        "title": "Easiest Local AI App for Windows, Mac, and Linux (2026)",
-        "url": "/power-local-llm/easiest-local-ai-app-windows-mac-linux",
-        "dateModified": "2026-09-01",
+        "slug": "haystack-deepset-rag-framework-review",
+        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
+        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Msty": {
@@ -1012,7 +1012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 43,
+    "totalCount": 44,
     "capped": true
   },
   "LibreChat": {
@@ -1731,6 +1731,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "haystack-deepset-rag-framework-review",
+        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
+        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "build-local-voice-assistant-2026",
         "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
         "url": "/power-local-llm/build-local-voice-assistant-2026",
@@ -1760,17 +1768,9 @@
         "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
         "dateModified": "2026-08-27",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-rag-for-private-business-data",
-        "title": "Local RAG for Business Data: GDPR-Compliant AI for Sensitive Documents (2026)",
-        "url": "/power-local-llm/local-rag-for-private-business-data",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Dify": {
@@ -1824,6 +1824,14 @@
         "slug": "flowise-ai-visual-workflow-builder-review",
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "haystack-deepset-rag-framework-review",
+        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
+        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -1890,21 +1898,21 @@
         "url": "/power-local-llm/easiest-local-ai-app-windows-mac-linux",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "corporate-rag-local-llms",
-        "title": "Corporate RAG With Local LLMs: Document Q&A for Organizations",
-        "url": "/local-llms/corporate-rag-local-llms",
-        "dateModified": "2026-08-31",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "Haystack": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "haystack-deepset-rag-framework-review",
+        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
+        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "best-llm-observability-tools-2026",
@@ -1928,9 +1936,17 @@
         "url": "/power-local-llm/local-whisper-stt-comparison-2026",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 5,
     "capped": false
   },
   "RAGFlow": {
@@ -1954,6 +1970,14 @@
         "slug": "flowise-ai-visual-workflow-builder-review",
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "haystack-deepset-rag-framework-review",
+        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
+        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -1990,6 +2014,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-vector-database-2026",
         "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
@@ -2012,25 +2044,9 @@
         "url": "/local-llms/local-rag-2026",
         "dateModified": "2026-08-31",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-stack-use-case",
-        "title": "Best Local LLM Stack by Use Case 2026: Writing, Coding, RAG, Agents",
-        "url": "/local-llms/best-local-llm-stack-use-case",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "CrewAI": {
@@ -2177,23 +2193,23 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "haystack-deepset-rag-framework-review",
+        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
+        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-agents-business-workflows-eu-compliance",
         "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
         "dateModified": "2026-08-27",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "replace-zapier-with-local-ai-agents",
-        "title": "Replace Zapier With Local AI Agents: 5 Workflows That Save $30/Month (2026)",
-        "url": "/power-local-llm/replace-zapier-with-local-ai-agents",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "OpenClaw": {
     "articles": [
