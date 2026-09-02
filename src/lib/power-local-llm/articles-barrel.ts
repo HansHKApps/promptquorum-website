@@ -84,6 +84,7 @@ import { article as a_best_local_llm_ide_plugins_2026 } from './articles/best-lo
 import { article as a_best_rag_tools_for_business_documents_2026 } from './articles/best-rag-tools-for-business-documents-2026'
 import { article as a_wechat_bot_local_llm_personal_assistant_2026 } from './articles/wechat-bot-local-llm-personal-assistant-2026'
 import { article as a_best_web_hosting_2026 } from './articles/best-web-hosting-2026'
+import { article as a_flowise_ai_visual_workflow_builder_review } from './articles/flowise-ai-visual-workflow-builder-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
@@ -166,4 +167,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-ai-video-generation-vs-cloud':                a_local_ai_video_generation_vs_cloud,
   'local-ai-image-generation-vs-cloud':                a_local_ai_image_generation_vs_cloud,
   'best-web-hosting-2026':                             a_best_web_hosting_2026,
+  'flowise-ai-visual-workflow-builder-review':         a_flowise_ai_visual_workflow_builder_review,
 }

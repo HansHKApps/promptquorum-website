@@ -106,4 +106,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Hosting Guides 2026-08-30
   'best-web-hosting-2026':                        'best-web-hosting-2026',
+
+  // Flowise shutdown coverage 2026-09-02
+  'flowise-ai-visual-workflow-builder-review':    'flowise-ai-visual-workflow-builder-review',
 }

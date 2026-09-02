@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "small-local-llm-models",
         "title": "Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026",
         "url": "/local-llms/small-local-llm-models",
@@ -72,17 +80,9 @@
         "url": "/local-llms/qwen-local-deployment-guide-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "asus-mini-pc-local-ai-2026",
-        "title": "ASUS Mini PC for Local AI: NUC 16 Pro vs. ExpertCenter PN55 (2026)",
-        "url": "/power-local-llm/asus-mini-pc-local-ai-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 185,
+    "totalCount": 186,
     "capped": true
   },
   "llama.cpp": {
@@ -404,7 +404,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -450,6 +451,14 @@
   },
   "LM Studio": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "local-llm-pc-build-1000",
@@ -521,17 +530,9 @@
         "url": "/local-llms/local-llm-one-click-installers",
         "dateModified": "2026-08-30",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
-        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 119,
+    "totalCount": 120,
     "capped": true
   },
   "Atomic Chat": {
@@ -788,22 +789,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "easiest-local-ai-app-windows-mac-linux",
         "title": "Easiest Local AI App for Windows, Mac, and Linux (2026)",
         "url": "/power-local-llm/easiest-local-ai-app-windows-mac-linux",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-08-31",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Msty": {
@@ -889,7 +890,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
@@ -1010,7 +1012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 43,
     "capped": true
   },
   "LibreChat": {
@@ -1214,7 +1216,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1227,7 +1230,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1240,7 +1244,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1253,7 +1258,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1266,7 +1272,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1716,6 +1723,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "build-local-voice-assistant-2026",
         "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
         "url": "/power-local-llm/build-local-voice-assistant-2026",
@@ -1753,18 +1768,10 @@
         "url": "/power-local-llm/local-rag-for-private-business-data",
         "dateModified": "2026-08-27",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-rag-on-your-pdfs-step-by-step",
-        "title": "Build Local RAG on Your PDFs in 30 Minutes (Ollama + AnythingLLM)",
-        "url": "/power-local-llm/local-rag-on-your-pdfs-step-by-step",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Dify": {
     "articles": [
@@ -1780,8 +1787,46 @@
     "totalCount": 1,
     "capped": false
   },
+  "Flowise": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
   "LlamaIndex": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "best-local-llm-stack-use-case",
@@ -1853,17 +1898,9 @@
         "url": "/local-llms/corporate-rag-local-llms",
         "dateModified": "2026-08-31",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-rag-2026",
-        "title": "Local RAG 2026: Build Document Q&A Systems Without Cloud APIs",
-        "url": "/local-llms/local-rag-2026",
-        "dateModified": "2026-08-31",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "Haystack": {
@@ -1913,6 +1950,14 @@
   "LangChain": {
     "articles": [
       {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-llm-observability-tools-2026",
         "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
@@ -1934,6 +1979,14 @@
         "title": "Local AI Agents With LangGraph and Ollama: Build Autonomous Decision-Making Systems",
         "url": "/local-llms/local-ai-agents-langgraph-ollama",
         "dateModified": "2026-08-28",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
         "tier": "about"
       },
       {
@@ -1975,25 +2028,9 @@
         "url": "/power-local-llm/autonomous-local-agents-actually-work",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-behind-firewall-offline-2026",
-        "title": "Run Local AI Behind a Firewall: Offline Deployment Guide 2026",
-        "url": "/power-local-llm/local-ai-behind-firewall-offline-2026",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "qwen-local-deployment-complete-guide-2026",
-        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
-        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 22,
     "capped": true
   },
   "CrewAI": {
@@ -2132,6 +2169,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-agents-business-workflows-eu-compliance",
         "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
         "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
@@ -2147,7 +2192,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "OpenClaw": {
