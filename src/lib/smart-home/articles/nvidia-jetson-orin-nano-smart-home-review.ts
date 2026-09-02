@@ -15,12 +15,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // for the hardware-acceleration friction note. This article stays informational — no affiliateLinks —
     // per scope: only the 6 named Buyer's-Guide slugs carry affiliate links, not every article that
     // mentions a specific product.
-    title: 'NVIDIA Jetson Orin Nano for Smart Home AI: Review (2027)',
-    seoTitle: 'Jetson Orin Nano for Smart Home AI (2027)',
+    title: 'NVIDIA Jetson Orin Nano for Smart Home AI: Review (2026)',
+    seoTitle: 'Jetson Orin Nano for Smart Home AI (2026)',
     intro:
       'The NVIDIA Jetson Orin Nano Super Developer Kit ($249, 8GB) is a GPU-inference edge board — a fundamentally different hardware class from the x86 mini-PCs reviewed elsewhere in this cluster — built around CUDA/TensorRT-accelerated inference rather than general-purpose computing. Ollama has official Jetson support, and Frigate can use its GPU via a dedicated TensorRT build, though both come with more setup friction than the x86 path. This review scopes who it fits versus the existing x86 mini-PC roundup.',
     metaDescription:
-      "NVIDIA Jetson Orin Nano for smart home AI in 2027: a GPU-inference edge board, distinct from the x86 mini-PCs reviewed elsewhere. Who it fits and current specs to verify.",
+      "NVIDIA Jetson Orin Nano for smart home AI in 2026: a GPU-inference edge board, distinct from the x86 mini-PCs reviewed elsewhere. Who it fits and current specs to verify.",
     twitterDescription:
       "The Jetson Orin Nano for Home Assistant + local AI: a CUDA/TensorRT edge board, a different hardware class from the x86 mini-PC reviews on this site.",
     readTime: '7 min read',
@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nano for Smart Home AI: Review (2027)',
+      headline: 'NVIDIA Jetson Orin Nano for Smart Home AI: Review (2026)',
       description: 'NVIDIA Jetson Orin Nano for smart home AI: a GPU-inference edge board, distinct from the x86 mini-PCs reviewed elsewhere.',
       url: 'https://www.promptquorum.com/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'en',
@@ -174,12 +174,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-de.webp',
-    title: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2027)',
-    seoTitle: 'Jetson Orin Nano für Smart-Home-KI (2027)',
+    title: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2026)',
+    seoTitle: 'Jetson Orin Nano für Smart-Home-KI (2026)',
     intro:
       'Das NVIDIA Jetson Orin Nano Super Developer Kit ($249, 8GB) ist ein GPU-Inferenz-Edge-Board — eine grundlegend andere Hardwareklasse als die x86-Mini-PCs, die anderswo in diesem Cluster getestet werden — aufgebaut rund um CUDA/TensorRT-beschleunigte Inferenz statt allgemeiner Datenverarbeitung. Ollama bietet offizielle Jetson-Unterstützung, und Frigate kann dessen GPU über einen dedizierten TensorRT-Build nutzen, wobei beide mehr Einrichtungsaufwand mit sich bringen als der x86-Weg. Dieser Test ordnet ein, für wen es sich eignet, im Vergleich zum bestehenden x86-Mini-PC-Überblick.',
     metaDescription:
-      'NVIDIA Jetson Orin Nano für Smart-Home-KI 2027: ein GPU-Inferenz-Edge-Board, das sich von den anderswo getesteten x86-Mini-PCs unterscheidet. Für wen es sich eignet und aktuelle Specs zum Nachprüfen.',
+      'NVIDIA Jetson Orin Nano für Smart-Home-KI 2026: ein GPU-Inferenz-Edge-Board, das sich von den anderswo getesteten x86-Mini-PCs unterscheidet. Für wen es sich eignet und aktuelle Specs zum Nachprüfen.',
     twitterDescription:
       'Der Jetson Orin Nano für Home Assistant + lokale KI: ein CUDA/TensorRT-Edge-Board, eine andere Hardwareklasse als die x86-Mini-PC-Tests auf dieser Seite.',
     readTime: '7 Min. Lesezeit',
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2027)',
+      headline: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2026)',
       description: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: ein GPU-Inferenz-Edge-Board, das sich von den anderswo getesteten x86-Mini-PCs unterscheidet.',
       url: 'https://www.promptquorum.com/de/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'de',
@@ -333,12 +333,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-fr.webp',
-    title: 'NVIDIA Jetson Orin Nano pour la maison connectée : test (2027)',
-    seoTitle: 'Jetson Orin Nano pour maison connectée (2027)',
+    title: 'NVIDIA Jetson Orin Nano pour la maison connectée : test (2026)',
+    seoTitle: 'Jetson Orin Nano pour maison connectée (2026)',
     intro:
       "Le NVIDIA Jetson Orin Nano Super Developer Kit ($249, 8 Go) est une carte edge d'inférence GPU — une classe de matériel fondamentalement différente des mini-PC x86 testés ailleurs dans ce cluster — construite autour d'une inférence accélérée par CUDA/TensorRT plutôt que d'une informatique généraliste. Ollama dispose d'une prise en charge officielle de Jetson, et Frigate peut utiliser son GPU via une build TensorRT dédiée, bien que les deux impliquent davantage de complexité de configuration que la voie x86. Ce test précise à qui elle convient par rapport au comparatif de mini-PC x86 existant.",
     metaDescription:
-      "NVIDIA Jetson Orin Nano pour l'IA en maison connectée en 2027 : une carte edge d'inférence GPU, distincte des mini-PC x86 testés ailleurs. À qui elle convient et les caractéristiques actuelles à vérifier.",
+      "NVIDIA Jetson Orin Nano pour l'IA en maison connectée en 2026 : une carte edge d'inférence GPU, distincte des mini-PC x86 testés ailleurs. À qui elle convient et les caractéristiques actuelles à vérifier.",
     twitterDescription:
       "Le Jetson Orin Nano pour Home Assistant + IA locale : une carte edge CUDA/TensorRT, une classe de matériel différente des tests de mini-PC x86 sur ce site.",
     readTime: '7 min de lecture',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nano pour la maison connectée : test (2027)',
+      headline: 'NVIDIA Jetson Orin Nano pour la maison connectée : test (2026)',
       description: "NVIDIA Jetson Orin Nano pour l'IA en maison connectée : une carte edge d'inférence GPU, distincte des mini-PC x86 testés ailleurs.",
       url: 'https://www.promptquorum.com/fr/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'fr',
@@ -492,12 +492,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ja.webp',
-    title: 'NVIDIA Jetson Orin Nanoでスマートホームaiを実現：レビュー（2027年）',
-    seoTitle: 'スマートホームAI向けJetson Orin Nano（2027年）',
+    title: 'NVIDIA Jetson Orin Nanoでスマートホームaiを実現：レビュー（2026年）',
+    seoTitle: 'スマートホームAI向けJetson Orin Nano（2026年）',
     intro:
       'NVIDIA Jetson Orin Nano Super Developer Kit（$249、8GB）はGPU推論エッジボードであり、このクラスターの他記事でレビューしているx86ミニPCとは根本的に異なるハードウェアクラスです。汎用コンピューティングではなく、CUDA/TensorRTによる高速化推論を中心に構築されています。Ollamaは公式にJetsonをサポートしており、Frigateも専用のTensorRTビルドを通じてそのGPUを利用できますが、いずれもx86の経路より導入の手間が多くかかります。このレビューでは、既存のx86ミニPCまとめ記事と比較して、誰に向いているかを整理します。',
     metaDescription:
-      '2027年のスマートホームAI向けNVIDIA Jetson Orin Nano：他記事でレビューしているx86ミニPCとは異なるGPU推論エッジボード。誰に向いているか、そして確認すべき最新スペックを解説。',
+      '2026年のスマートホームAI向けNVIDIA Jetson Orin Nano：他記事でレビューしているx86ミニPCとは異なるGPU推論エッジボード。誰に向いているか、そして確認すべき最新スペックを解説。',
     twitterDescription:
       'Home Assistant + ローカルAI向けのJetson Orin Nano：CUDA/TensorRTエッジボードであり、このサイトのx86ミニPCレビューとは異なるハードウェアクラスです。',
     readTime: '読了時間7分',
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nanoでスマートホームaiを実現：レビュー（2027年）',
+      headline: 'NVIDIA Jetson Orin Nanoでスマートホームaiを実現：レビュー（2026年）',
       description: 'NVIDIA Jetson Orin Nanoでスマートホームaiを実現：他記事でレビューしているx86ミニPCとは異なるGPU推論エッジボード。',
       url: 'https://www.promptquorum.com/ja/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'ja',
@@ -651,12 +651,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-zh.webp',
-    title: 'NVIDIA Jetson Orin Nano智能家居AI评测（2027年）',
-    seoTitle: 'Jetson Orin Nano智能家居AI（2027年）',
+    title: 'NVIDIA Jetson Orin Nano智能家居AI评测（2026年）',
+    seoTitle: 'Jetson Orin Nano智能家居AI（2026年）',
     intro:
       'NVIDIA Jetson Orin Nano Super Developer Kit（$249，8GB）是一款GPU推理边缘板——与本系列其他文章评测的x86迷你主机相比，属于根本不同的硬件类别，其构建核心是CUDA/TensorRT加速推理，而非通用计算。Ollama已官方支持Jetson，Frigate也可通过专用的TensorRT构建版本使用其GPU，但两者的配置难度都高于x86路线。本评测将说明它适合哪些用户，并与本站现有的x86迷你主机汇总文章进行对比。',
     metaDescription:
-      '2027年智能家居AI的NVIDIA Jetson Orin Nano：一款与本站其他文章评测的x86迷你主机不同的GPU推理边缘板。适合哪些用户，以及需要核实的当前规格。',
+      '2026年智能家居AI的NVIDIA Jetson Orin Nano：一款与本站其他文章评测的x86迷你主机不同的GPU推理边缘板。适合哪些用户，以及需要核实的当前规格。',
     twitterDescription:
       '用于Home Assistant + 本地AI的Jetson Orin Nano：一款CUDA/TensorRT边缘板，与本站的x86迷你主机评测属于不同硬件类别。',
     readTime: '阅读时间7分钟',
@@ -778,7 +778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nano智能家居AI评测（2027年）',
+      headline: 'NVIDIA Jetson Orin Nano智能家居AI评测（2026年）',
       description: 'NVIDIA Jetson Orin Nano智能家居AI：一款与本站其他文章评测的x86迷你主机不同的GPU推理边缘板。',
       url: 'https://www.promptquorum.com/zh/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'zh',
@@ -810,12 +810,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-es.webp',
-    title: 'NVIDIA Jetson Orin Nano para IA en el hogar inteligente: análisis (2027)',
-    seoTitle: 'Jetson Orin Nano para IA en el hogar inteligente (2027)',
+    title: 'NVIDIA Jetson Orin Nano para IA en el hogar inteligente: análisis (2026)',
+    seoTitle: 'Jetson Orin Nano para IA en el hogar inteligente (2026)',
     intro:
       'El NVIDIA Jetson Orin Nano Super Developer Kit ($249, 8GB) es una placa de inferencia GPU edge — una clase de hardware fundamentalmente distinta a los mini PCs x86 analizados en otras partes de este grupo de artículos — construida en torno a inferencia acelerada por CUDA/TensorRT en lugar de computación de propósito general. Ollama ofrece soporte oficial para Jetson, y Frigate puede usar su GPU mediante una compilación TensorRT dedicada, aunque ambos requieren más esfuerzo de configuración que la vía x86. Este análisis delimita para quién es adecuado en comparación con el resumen de mini PCs x86 ya existente.',
     metaDescription:
-      'NVIDIA Jetson Orin Nano para IA en el hogar inteligente en 2027: una placa de inferencia GPU edge, distinta de los mini PCs x86 analizados en otras partes. Para quién es adecuada y las especificaciones actuales a verificar.',
+      'NVIDIA Jetson Orin Nano para IA en el hogar inteligente en 2026: una placa de inferencia GPU edge, distinta de los mini PCs x86 analizados en otras partes. Para quién es adecuada y las especificaciones actuales a verificar.',
     twitterDescription:
       'El Jetson Orin Nano para Home Assistant + IA local: una placa edge CUDA/TensorRT, una clase de hardware distinta de los análisis de mini PCs x86 en este sitio.',
     readTime: '7 min de lectura',
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nano para IA en el hogar inteligente: análisis (2027)',
+      headline: 'NVIDIA Jetson Orin Nano para IA en el hogar inteligente: análisis (2026)',
       description: 'NVIDIA Jetson Orin Nano para IA en el hogar inteligente: una placa de inferencia GPU edge, distinta de los mini PCs x86 analizados en otras partes.',
       url: 'https://www.promptquorum.com/es/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'es',
@@ -969,12 +969,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-pt.webp',
-    title: 'NVIDIA Jetson Orin Nano para IA em casa inteligente: análise (2027)',
-    seoTitle: 'Jetson Orin Nano para IA em casa inteligente (2027)',
+    title: 'NVIDIA Jetson Orin Nano para IA em casa inteligente: análise (2026)',
+    seoTitle: 'Jetson Orin Nano para IA em casa inteligente (2026)',
     intro:
       'O NVIDIA Jetson Orin Nano Super Developer Kit ($249, 8GB) é uma placa de inferência GPU de borda — uma classe de hardware fundamentalmente diferente dos mini PCs x86 analisados em outras partes deste conjunto de artigos — construída em torno de inferência acelerada por CUDA/TensorRT em vez de computação de propósito geral. O Ollama tem suporte oficial para Jetson, e o Frigate pode usar sua GPU por meio de uma compilação TensorRT dedicada, embora ambos exijam mais esforço de configuração do que o caminho x86. Esta análise delimita para quem ela é adequada em comparação com o resumo de mini PCs x86 já existente.',
     metaDescription:
-      'NVIDIA Jetson Orin Nano para IA em casa inteligente em 2027: uma placa de inferência GPU de borda, distinta dos mini PCs x86 analisados em outras partes. Para quem é adequada e as especificações atuais a verificar.',
+      'NVIDIA Jetson Orin Nano para IA em casa inteligente em 2026: uma placa de inferência GPU de borda, distinta dos mini PCs x86 analisados em outras partes. Para quem é adequada e as especificações atuais a verificar.',
     twitterDescription:
       'O Jetson Orin Nano para Home Assistant + IA local: uma placa de borda CUDA/TensorRT, uma classe de hardware distinta das análises de mini PCs x86 neste site.',
     readTime: 'Leitura de 7 min',
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nano para IA em casa inteligente: análise (2027)',
+      headline: 'NVIDIA Jetson Orin Nano para IA em casa inteligente: análise (2026)',
       description: 'NVIDIA Jetson Orin Nano para IA em casa inteligente: uma placa de inferência GPU de borda, distinta dos mini PCs x86 analisados em outras partes.',
       url: 'https://www.promptquorum.com/pt/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'pt-BR',
@@ -1128,12 +1128,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ar.webp',
-    title: 'مراجعة NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2027)',
-    seoTitle: 'Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2027)',
+    title: 'مراجعة NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2026)',
+    seoTitle: 'Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2026)',
     intro:
       'يُعد NVIDIA Jetson Orin Nano Super Developer Kit ($249، 8 جيجابايت) لوحة استدلال طرفية تعتمد على معالج الرسوميات — فئة أجهزة مختلفة جذريًا عن الحواسيب المصغرة x86 التي راجعناها في أماكن أخرى من هذه المجموعة — مبنية حول استدلال مُسرَّع بتقنيتي CUDA/TensorRT بدلًا من الحوسبة العامة. يوفر Ollama دعمًا رسميًا لـ Jetson، ويمكن لـ Frigate استخدام وحدة معالجة الرسوميات الخاصة به عبر إصدار TensorRT مخصص، رغم أن كليهما يتطلب إعدادًا أكثر تعقيدًا من مسار x86. تحدد هذه المراجعة الفئة المناسبة لهذا الجهاز مقارنة بقائمة الحواسيب المصغرة x86 الموجودة بالفعل.',
     metaDescription:
-      'NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي في 2027: لوحة استدلال طرفية تعتمد على معالج الرسوميات، تختلف عن الحواسيب المصغرة x86 التي رُوجعت في أماكن أخرى. لمن تناسب والمواصفات الحالية الواجب التحقق منها.',
+      'NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي في 2026: لوحة استدلال طرفية تعتمد على معالج الرسوميات، تختلف عن الحواسيب المصغرة x86 التي رُوجعت في أماكن أخرى. لمن تناسب والمواصفات الحالية الواجب التحقق منها.',
     twitterDescription:
       'Jetson Orin Nano لـ Home Assistant + الذكاء الاصطناعي المحلي: لوحة طرفية CUDA/TensorRT، فئة أجهزة مختلفة عن مراجعات الحواسيب المصغرة x86 في هذا الموقع.',
     readTime: '7 دقائق قراءة',
@@ -1255,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'مراجعة NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2027)',
+      headline: 'مراجعة NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي (2026)',
       description: 'NVIDIA Jetson Orin Nano للذكاء الاصطناعي في المنزل الذكي: لوحة استدلال طرفية تعتمد على معالج الرسوميات، تختلف عن الحواسيب المصغرة x86 التي رُوجعت في أماكن أخرى.',
       url: 'https://www.promptquorum.com/ar/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'ar',
@@ -1287,12 +1287,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-ko.webp',
-    title: '스마트홈 AI용 NVIDIA Jetson Orin Nano 리뷰 (2027)',
-    seoTitle: '스마트홈 AI용 Jetson Orin Nano (2027)',
+    title: '스마트홈 AI용 NVIDIA Jetson Orin Nano 리뷰 (2026)',
+    seoTitle: '스마트홈 AI용 Jetson Orin Nano (2026)',
     intro:
       'NVIDIA Jetson Orin Nano Super Developer Kit($249, 8GB)는 GPU 추론 엣지 보드로, 이 클러스터의 다른 글에서 리뷰한 x86 미니 PC와는 근본적으로 다른 하드웨어 클래스입니다. 범용 컴퓨팅이 아니라 CUDA/TensorRT 가속 추론을 중심으로 설계되었습니다. Ollama는 Jetson을 공식 지원하며, Frigate도 전용 TensorRT 빌드를 통해 GPU를 활용할 수 있지만, 둘 다 x86 경로보다 설정 부담이 더 큽니다. 이 리뷰는 기존 x86 미니 PC 모음과 비교해 누구에게 적합한지 정리합니다.',
     metaDescription:
-      '2027년 스마트홈 AI를 위한 NVIDIA Jetson Orin Nano: 다른 글에서 리뷰한 x86 미니 PC와는 구별되는 GPU 추론 엣지 보드. 누구에게 적합한지와 확인해야 할 현재 사양.',
+      '2026년 스마트홈 AI를 위한 NVIDIA Jetson Orin Nano: 다른 글에서 리뷰한 x86 미니 PC와는 구별되는 GPU 추론 엣지 보드. 누구에게 적합한지와 확인해야 할 현재 사양.',
     twitterDescription:
       'Home Assistant + 로컬 AI를 위한 Jetson Orin Nano: 이 사이트의 x86 미니 PC 리뷰와는 다른 하드웨어 클래스인 CUDA/TensorRT 엣지 보드.',
     readTime: '읽는 시간 7분',
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '스마트홈 AI용 NVIDIA Jetson Orin Nano 리뷰 (2027)',
+      headline: '스마트홈 AI용 NVIDIA Jetson Orin Nano 리뷰 (2026)',
       description: '스마트홈 AI용 NVIDIA Jetson Orin Nano: 다른 글에서 리뷰한 x86 미니 PC와는 구별되는 GPU 추론 엣지 보드.',
       url: 'https://www.promptquorum.com/ko/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'ko',

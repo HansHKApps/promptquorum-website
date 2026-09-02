@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-en.webp',
-    title: 'Sensor Fusion in the Smart Home (2027)',
-    seoTitle: 'Sensor Fusion in the Smart Home (2027)',
+    title: 'Sensor Fusion in the Smart Home (2026)',
+    seoTitle: 'Sensor Fusion in the Smart Home (2026)',
     intro:
       'Sensor fusion means combining multiple sensor types — motion, radar, contact, camera, audio — into a single automation decision, rather than triggering off any one sensor alone, which reduces both false positives and false negatives. This article explains the pattern, using radar-plus-motion occupancy detection as the running example, and how to build it in Home Assistant.',
     metaDescription:
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Sensor Fusion in the Smart Home (2027)',
+      headline: 'Sensor Fusion in the Smart Home (2026)',
       description: 'Sensor fusion in the smart home: combining multiple sensor types into one automation decision to reduce false positives and false negatives.',
       url: 'https://www.promptquorum.com/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'en',
@@ -157,8 +157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-de.webp',
-    title: 'Sensorfusion im Smart Home (2027)',
-    seoTitle: 'Sensorfusion im Smart Home (2027)',
+    title: 'Sensorfusion im Smart Home (2026)',
+    seoTitle: 'Sensorfusion im Smart Home (2026)',
     intro:
       'Sensorfusion bedeutet, mehrere Sensortypen — Bewegung, Radar, Kontakt, Kamera, Audio — zu einer einzigen Automatisierungsentscheidung zu kombinieren, statt sich auf einen einzelnen Sensor zu verlassen, was sowohl False Positives als auch False Negatives reduziert. Dieser Artikel erklärt das Muster anhand von Radar-plus-Bewegungs-Anwesenheitserkennung als durchgängigem Beispiel und zeigt, wie man es in Home Assistant umsetzt.',
     metaDescription:
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Sensorfusion im Smart Home (2027)',
+      headline: 'Sensorfusion im Smart Home (2026)',
       description: 'Sensorfusion im Smart Home: mehrere Sensortypen zu einer Automatisierungsentscheidung kombinieren, um False Positives und False Negatives zu reduzieren.',
       url: 'https://www.promptquorum.com/de/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'de',
@@ -305,8 +305,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-fr.webp',
-    title: 'Fusion de capteurs dans la maison connectée (2027)',
-    seoTitle: 'Fusion de capteurs dans la maison connectée (2027)',
+    title: 'Fusion de capteurs dans la maison connectée (2026)',
+    seoTitle: 'Fusion de capteurs dans la maison connectée (2026)',
     intro:
       "La fusion de capteurs consiste à combiner plusieurs types de capteurs — mouvement, radar, contact, caméra, audio — en une seule décision d'automatisation, plutôt que de se déclencher sur un seul capteur, ce qui réduit à la fois les faux positifs et les faux négatifs. Cet article explique ce modèle, en prenant la détection d'occupation radar-plus-mouvement comme exemple filé, et comment le construire dans Home Assistant.",
     metaDescription:
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Fusion de capteurs dans la maison connectée (2027)',
+      headline: 'Fusion de capteurs dans la maison connectée (2026)',
       description: "Fusion de capteurs dans la maison connectée : combiner plusieurs types de capteurs en une seule décision d'automatisation pour réduire les faux positifs et les faux négatifs.",
       url: 'https://www.promptquorum.com/fr/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'fr',
@@ -453,8 +453,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ja.webp',
-    title: 'スマートホームにおけるセンサーフュージョン（2027年）',
-    seoTitle: 'スマートホームにおけるセンサーフュージョン（2027年）',
+    title: 'スマートホームにおけるセンサーフュージョン（2026年）',
+    seoTitle: 'スマートホームにおけるセンサーフュージョン（2026年）',
     intro:
       'センサーフュージョンとは、モーション、レーダー、接点、カメラ、音声など複数のセンサータイプを組み合わせて1つの自動化判断を下すことを意味します。単一のセンサーだけをトリガーにするのではなく、複数を組み合わせることで誤検知(false positive)と検知漏れ(false negative)の両方を減らせます。この記事では、レーダーとモーションを組み合わせた在室検知を具体例として、このパターンをHome Assistantでどう構築するかを解説します。',
     metaDescription:
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'スマートホームにおけるセンサーフュージョン(2027年)',
+      headline: 'スマートホームにおけるセンサーフュージョン(2026年)',
       description: 'スマートホームにおけるセンサーフュージョン:複数のセンサータイプを1つの自動化判断に組み合わせ、誤検知と検知漏れを減らす方法。',
       url: 'https://www.promptquorum.com/ja/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'ja',
@@ -601,8 +601,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-zh.webp',
-    title: '智能家居中的传感器融合(2027年)',
-    seoTitle: '智能家居中的传感器融合(2027年)',
+    title: '智能家居中的传感器融合(2026年)',
+    seoTitle: '智能家居中的传感器融合(2026年)',
     intro:
       '传感器融合是指将多种传感器类型——运动、雷达、接触、摄像头、音频——组合成一个自动化判断,而不是仅依赖单一传感器触发,从而同时减少误报和漏报。本文以雷达加运动的在室检测为例讲解这种模式,并说明如何在Home Assistant中构建它。',
     metaDescription:
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '智能家居中的传感器融合(2027年)',
+      headline: '智能家居中的传感器融合(2026年)',
       description: '智能家居中的传感器融合:将多种传感器类型组合成一个自动化判断,以减少误报和漏报。',
       url: 'https://www.promptquorum.com/zh/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'zh',
@@ -749,8 +749,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-es.webp',
-    title: 'Fusión de sensores en el hogar inteligente (2027)',
-    seoTitle: 'Fusión de sensores en el hogar inteligente (2027)',
+    title: 'Fusión de sensores en el hogar inteligente (2026)',
+    seoTitle: 'Fusión de sensores en el hogar inteligente (2026)',
     intro:
       'La fusión de sensores consiste en combinar varios tipos de sensor — movimiento, radar, contacto, cámara, audio — en una sola decisión de automatización, en lugar de activarse con un único sensor, lo que reduce tanto los falsos positivos como los falsos negativos. Este artículo explica el patrón, usando la detección de ocupación por radar más movimiento como ejemplo guía, y cómo construirlo en Home Assistant.',
     metaDescription:
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Fusión de sensores en el hogar inteligente (2027)',
+      headline: 'Fusión de sensores en el hogar inteligente (2026)',
       description: 'Fusión de sensores en el hogar inteligente: combinar varios tipos de sensor en una sola decisión de automatización para reducir falsos positivos y falsos negativos.',
       url: 'https://www.promptquorum.com/es/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'es',
@@ -897,8 +897,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-pt.webp',
-    title: 'Fusão de sensores na casa inteligente (2027)',
-    seoTitle: 'Fusão de sensores na casa inteligente (2027)',
+    title: 'Fusão de sensores na casa inteligente (2026)',
+    seoTitle: 'Fusão de sensores na casa inteligente (2026)',
     intro:
       'Fusão de sensores significa combinar vários tipos de sensor — movimento, radar, contato, câmera, áudio — em uma única decisão de automação, em vez de disparar com base em apenas um sensor, o que reduz tanto os falsos positivos quanto os falsos negativos. Este artigo explica o padrão, usando a detecção de ocupação por radar mais movimento como exemplo condutor, e como construí-lo no Home Assistant.',
     metaDescription:
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Fusão de sensores na casa inteligente (2027)',
+      headline: 'Fusão de sensores na casa inteligente (2026)',
       description: 'Fusão de sensores na casa inteligente: combinar vários tipos de sensor em uma única decisão de automação para reduzir falsos positivos e falsos negativos.',
       url: 'https://www.promptquorum.com/pt/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'pt-BR',
@@ -1045,8 +1045,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ar.webp',
-    title: 'دمج بيانات الاستشعار في المنزل الذكي (2027)',
-    seoTitle: 'دمج بيانات الاستشعار في المنزل الذكي (2027)',
+    title: 'دمج بيانات الاستشعار في المنزل الذكي (2026)',
+    seoTitle: 'دمج بيانات الاستشعار في المنزل الذكي (2026)',
     intro:
       'دمج بيانات الاستشعار (Sensor Fusion) يعني الجمع بين عدة أنواع من أجهزة الاستشعار — الحركة، الرادار، التلامس، الكاميرا، الصوت — في قرار أتمتة واحد، بدلًا من الاعتماد على مشغّل من جهاز استشعار واحد فقط، مما يقلل من الإيجابيات الخاطئة والسلبيات الخاطئة معًا. يشرح هذا المقال هذا النمط، مستخدمًا كشف الإشغال بالرادار مع الحركة كمثال أساسي، وكيفية بنائه في Home Assistant.',
     metaDescription:
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'دمج بيانات الاستشعار في المنزل الذكي (2027)',
+      headline: 'دمج بيانات الاستشعار في المنزل الذكي (2026)',
       description: 'دمج بيانات الاستشعار في المنزل الذكي: الجمع بين عدة أنواع من أجهزة الاستشعار في قرار أتمتة واحد لتقليل الإيجابيات والسلبيات الخاطئة.',
       url: 'https://www.promptquorum.com/ar/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'ar',
@@ -1193,8 +1193,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ko.webp',
-    title: '스마트홈의 센서 퓨전 (2027년)',
-    seoTitle: '스마트홈의 센서 퓨전 (2027년)',
+    title: '스마트홈의 센서 퓨전 (2026년)',
+    seoTitle: '스마트홈의 센서 퓨전 (2026년)',
     intro:
       '센서 퓨전이란 모션, 레이더, 접점, 카메라, 오디오 등 여러 유형의 센서를 하나의 자동화 결정에 결합하는 것으로, 단일 센서 하나에만 의존해 작동시키는 대신 오탐(false positive)과 미탐(false negative)을 모두 줄입니다. 이 글은 레이더와 모션을 결합한 재실 감지를 대표 사례로 사용하여 이 패턴을 설명하고, Home Assistant에서 이를 구축하는 방법을 다룹니다.',
     metaDescription:
@@ -1310,7 +1310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '스마트홈의 센서 퓨전 (2027년)',
+      headline: '스마트홈의 센서 퓨전 (2026년)',
       description: '스마트홈의 센서 퓨전: 여러 유형의 센서를 하나의 자동화 결정으로 결합하여 오탐과 미탐을 줄이는 방법.',
       url: 'https://www.promptquorum.com/ko/smart-home/sensor-fusion-smart-home-2027',
       inLanguage: 'ko',

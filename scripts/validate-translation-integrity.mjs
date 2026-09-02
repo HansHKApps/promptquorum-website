@@ -58,7 +58,7 @@ const CLUSTERS = [
       'Local AI & LLMs in the Smart Home',
       'Decision & Comparison',
       'Energy & Solar Integration',
-      '2027 Protocols & Regulation',
+      '2026 Protocols & Regulation',
       'Advanced Local AI',
       "Buyer's Guides",
     ]),

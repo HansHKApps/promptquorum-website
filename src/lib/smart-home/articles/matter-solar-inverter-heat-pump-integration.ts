@@ -19,8 +19,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-en.webp',
-    title: 'Matter for Solar Inverters and Heat Pumps: What\'s Coming (2027)',
-    seoTitle: 'Matter for Solar Inverters + Heat Pumps: Not Yet (2027)',
+    title: 'Matter for Solar Inverters and Heat Pumps: What\'s Coming (2026)',
+    seoTitle: 'Matter for Solar Inverters + Heat Pumps: Not Yet (2026)',
     intro:
       'Matter\'s specification has defined device types for energy-management hardware — solar inverters, battery storage, EV chargers, and heat pumps — since Matter 1.4+ (per the Connectivity Standards Alliance\'s own roadmap announcement), but as of write-time no shipping, Matter-certified inverter, battery, or heat pump product from any manufacturer has been confirmed. This is an early-mover explainer: what the spec defines today, and what to watch for before it becomes a real buying option, not a guide to hardware you can use right now. It also explains how this differs from the monitoring-and-dashboard integrations already covered for balcony solar, which do work today.',
     metaDescription:
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter for Solar Inverters and Heat Pumps: What\'s Coming (2027)',
+      headline: 'Matter for Solar Inverters and Heat Pumps: What\'s Coming (2026)',
       description: 'Matter defines device types for solar inverters and heat pumps (Matter 1.4+), but no shipping certified products exist yet — what\'s coming, not what works today.',
       url: 'https://www.promptquorum.com/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'en',
@@ -185,8 +185,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-de.webp',
-    title: 'Matter für Solarwechselrichter und Wärmepumpen: Was kommt (2027)',
-    seoTitle: 'Matter für Wechselrichter + Wärmepumpen: Noch nicht (2027)',
+    title: 'Matter für Solarwechselrichter und Wärmepumpen: Was kommt (2026)',
+    seoTitle: 'Matter für Wechselrichter + Wärmepumpen: Noch nicht (2026)',
     intro:
       'Die Matter-Spezifikation definiert seit Matter 1.4+ Gerätetypen für Energiehardware — Solarwechselrichter, Batteriespeicher, E-Auto-Ladegeräte und Wärmepumpen (laut der eigenen Roadmap-Ankündigung der Connectivity Standards Alliance) —, doch zum Zeitpunkt dieses Textes ist kein ausgeliefertes, Matter-zertifiziertes Wechselrichter-, Batterie- oder Wärmepumpenprodukt eines Herstellers bestätigt. Dies ist eine Early-Mover-Erklärung: was die Spezifikation heute definiert und worauf zu achten ist, bevor daraus eine echte Kaufoption wird — kein Leitfaden zu Hardware, die Sie jetzt schon nutzen können. Er erklärt zudem, wie sich dies von den bereits für Balkonsolar behandelten Monitoring- und Dashboard-Integrationen unterscheidet, die schon heute funktionieren.',
     metaDescription:
@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter für Solarwechselrichter und Wärmepumpen: Was kommt (2027)',
+      headline: 'Matter für Solarwechselrichter und Wärmepumpen: Was kommt (2026)',
       description: 'Matter definiert Gerätetypen für Solarwechselrichter und Wärmepumpen (Matter 1.4+), aber es gibt noch keine ausgelieferten zertifizierten Produkte (Stand Juli 2026) — was kommt, nicht was heute funktioniert.',
       url: 'https://www.promptquorum.com/de/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'de',
@@ -351,8 +351,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-fr.webp',
-    title: 'Matter pour onduleurs solaires et pompes à chaleur : ce qui arrive (2027)',
-    seoTitle: 'Matter pour onduleurs + pompes à chaleur : pas encore (2027)',
+    title: 'Matter pour onduleurs solaires et pompes à chaleur : ce qui arrive (2026)',
+    seoTitle: 'Matter pour onduleurs + pompes à chaleur : pas encore (2026)',
     intro:
       'La spécification Matter définit des types d\'appareils pour le matériel de gestion énergétique — onduleurs solaires, stockage par batterie, chargeurs de véhicules électriques et pompes à chaleur — depuis Matter 1.4+ (selon l\'annonce de feuille de route de la Connectivity Standards Alliance elle-même), mais à l\'heure où ces lignes sont écrites, aucun produit onduleur, batterie ou pompe à chaleur certifié Matter et commercialisé par un fabricant n\'est confirmé. Ceci est une explication pour early adopters : ce que la spécification définit aujourd\'hui, et ce qu\'il faut surveiller avant que cela devienne une véritable option d\'achat, pas un guide sur du matériel utilisable dès maintenant. Il explique aussi en quoi cela diffère des intégrations de surveillance et de tableau de bord déjà couvertes pour le solaire de balcon, qui elles fonctionnent aujourd\'hui.',
     metaDescription:
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter pour onduleurs solaires et pompes à chaleur : ce qui arrive (2027)',
+      headline: 'Matter pour onduleurs solaires et pompes à chaleur : ce qui arrive (2026)',
       description: 'Matter définit des types d\'appareils pour onduleurs solaires et pompes à chaleur (Matter 1.4+), mais aucun produit certifié commercialisé n\'existe encore en juillet 2026 — ce qui arrive, pas ce qui fonctionne aujourd\'hui.',
       url: 'https://www.promptquorum.com/fr/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'fr',
@@ -517,8 +517,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-ja.webp',
-    title: '太陽光インバーターとヒートポンプ向けMatter：今後の展望（2027年）',
-    seoTitle: '太陽光インバーター＋ヒートポンプのMatter：まだ先（2027年）',
+    title: '太陽光インバーターとヒートポンプ向けMatter：今後の展望（2026年）',
+    seoTitle: '太陽光インバーター＋ヒートポンプのMatter：まだ先（2026年）',
     intro:
       'Matter仕様は、Matter 1.4以降（Connectivity Standards Alliance自身のロードマップ発表による）、太陽光インバーター、蓄電池、EV充電器、ヒートポンプといったエネルギー管理機器のデバイスタイプを定義していますが、本稿執筆時点で、いずれのメーカーからもMatter認証済みで出荷されているインバーター・電池・ヒートポンプ製品は確認されていません。これはアーリーアダプター向けの解説です：仕様が今日何を定義しているか、そして実際の購入選択肢になる前に何を注視すべきかを扱うものであり、今すぐ使えるハードウェアのガイドではありません。また、すでに稼働しているバルコニーソーラー向けの監視・ダッシュボード連携とどう違うかも説明します。',
     metaDescription:
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '太陽光インバーターとヒートポンプ向けMatter：今後の展望（2027年）',
+      headline: '太陽光インバーターとヒートポンプ向けMatter：今後の展望（2026年）',
       description: 'Matterは太陽光インバーターとヒートポンプ向けにデバイスタイプを定義済み（Matter 1.4以降）ですが、2026年7月時点で出荷済みの認証製品はまだ存在しません — 今日動くものではなく、今後の展望です。',
       url: 'https://www.promptquorum.com/ja/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'ja',
@@ -683,8 +683,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-zh.webp',
-    title: '太阳能逆变器与热泵的Matter支持：即将到来（2027年）',
-    seoTitle: '太阳能逆变器＋热泵的Matter：尚未到来（2027年）',
+    title: '太阳能逆变器与热泵的Matter支持：即将到来（2026年）',
+    seoTitle: '太阳能逆变器＋热泵的Matter：尚未到来（2026年）',
     intro:
       '自Matter 1.4起（根据Connectivity Standards Alliance自己的路线图公告），Matter规范已经为能源管理硬件——太阳能逆变器、电池储能、电动车充电器和热泵——定义了设备类型，但截至本文撰写时，尚未确认有任何厂商推出经Matter认证并已上市的逆变器、电池或热泵产品。这是一篇面向早期关注者的解读：说明规范目前定义了什么，以及在其成为真正可购买的选项之前应关注哪些动态，而不是一份可以现在就使用的硬件指南。文章还说明了这与已经为阳台光伏介绍过的、目前已经可用的监测与仪表盘集成有何不同。',
     metaDescription:
@@ -816,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '太阳能逆变器与热泵的Matter支持：即将到来（2027年）',
+      headline: '太阳能逆变器与热泵的Matter支持：即将到来（2026年）',
       description: 'Matter已为太阳能逆变器和热泵定义设备类型（Matter 1.4及以上），但截至2026年7月尚无已上市的认证产品——这是即将到来的内容，而非今天就能用的功能。',
       url: 'https://www.promptquorum.com/zh/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'zh',
@@ -849,8 +849,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-es.webp',
-    title: 'Matter para inversores solares y bombas de calor: lo que viene (2027)',
-    seoTitle: 'Matter para inversores + bombas de calor: aún no (2027)',
+    title: 'Matter para inversores solares y bombas de calor: lo que viene (2026)',
+    seoTitle: 'Matter para inversores + bombas de calor: aún no (2026)',
     intro:
       'La especificación Matter ha definido tipos de dispositivo para hardware de gestión energética — inversores solares, almacenamiento por batería, cargadores de VE y bombas de calor — desde Matter 1.4+ (según el propio anuncio de hoja de ruta de la Connectivity Standards Alliance), pero al momento de escribir esto no se ha confirmado ningún producto de inversor, batería o bomba de calor certificado Matter y comercializado por ningún fabricante. Esta es una explicación para adoptantes tempranos: lo que la especificación define hoy, y qué vigilar antes de que se convierta en una opción de compra real, no una guía de hardware que puedas usar ahora mismo. También explica en qué se diferencia de las integraciones de monitoreo y panel ya cubiertas para el solar de balcón, que sí funcionan hoy.',
     metaDescription:
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter para inversores solares y bombas de calor: lo que viene (2027)',
+      headline: 'Matter para inversores solares y bombas de calor: lo que viene (2026)',
       description: 'Matter define tipos de dispositivo para inversores solares y bombas de calor (Matter 1.4+), pero no existen productos certificados comercializados a julio de 2026 — lo que viene, no lo que funciona hoy.',
       url: 'https://www.promptquorum.com/es/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'es',
@@ -1015,8 +1015,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-pt.webp',
-    title: 'Matter para inversores solares e bombas de calor: o que está por vir (2027)',
-    seoTitle: 'Matter para inversores + bombas de calor: ainda não (2027)',
+    title: 'Matter para inversores solares e bombas de calor: o que está por vir (2026)',
+    seoTitle: 'Matter para inversores + bombas de calor: ainda não (2026)',
     intro:
       'A especificação Matter define tipos de dispositivo para hardware de gestão energética — inversores solares, armazenamento por bateria, carregadores de VE e bombas de calor — desde o Matter 1.4+ (segundo o próprio anúncio de roadmap da Connectivity Standards Alliance), mas no momento em que este texto foi escrito, nenhum produto de inversor, bateria ou bomba de calor certificado Matter e à venda foi confirmado por nenhum fabricante. Esta é uma explicação para early adopters: o que a especificação define hoje, e o que observar antes que isso se torne uma opção de compra real, não um guia de hardware que você pode usar agora. Também explica em que isso difere das integrações de monitoramento e painel já cobertas para energia solar de varanda, que funcionam hoje.',
     metaDescription:
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter para inversores solares e bombas de calor: o que está por vir (2027)',
+      headline: 'Matter para inversores solares e bombas de calor: o que está por vir (2026)',
       description: 'O Matter define tipos de dispositivo para inversores solares e bombas de calor (Matter 1.4+), mas não há produtos certificados à venda em julho de 2026 — o que está por vir, não o que funciona hoje.',
       url: 'https://www.promptquorum.com/pt/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'pt-BR',
@@ -1181,8 +1181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-ar.webp',
-    title: 'معيار Matter للعاكسات الشمسية ومضخات الحرارة: ما القادم (⁨2027⁩)',
-    seoTitle: 'Matter للعاكسات + مضخات الحرارة: ليس بعد (⁨2027⁩)',
+    title: 'معيار Matter للعاكسات الشمسية ومضخات الحرارة: ما القادم (⁨2026⁩)',
+    seoTitle: 'Matter للعاكسات + مضخات الحرارة: ليس بعد (⁨2026⁩)',
     intro:
       'حدّدت مواصفة Matter أنواع أجهزة لعتاد إدارة الطاقة — العاكسات الشمسية وتخزين البطارية وشواحن السيارات الكهربائية ومضخات الحرارة — منذ Matter 1.4 وما بعدها (وفق إعلان خارطة الطريق الخاص بـ Connectivity Standards Alliance نفسها)، لكن حتى وقت كتابة هذا النص، لم يُؤكَّد أي منتج عاكس أو بطارية أو مضخة حرارة معتمد بمعيار Matter ومطروح في السوق من أي شركة مصنّعة. هذا شرح لأصحاب السبق: ما تحدده المواصفة اليوم، وما يجب مراقبته قبل أن يصبح خيار شراء حقيقي، وليس دليلًا لعتاد يمكنك استخدامه الآن. كما يوضّح كيف يختلف هذا عن تكاملات المراقبة واللوحة التي سبق تناولها للطاقة الشمسية للشرفة، والتي تعمل بالفعل اليوم.',
     metaDescription:
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'معيار Matter للعاكسات الشمسية ومضخات الحرارة: ما القادم (⁨2027⁩)',
+      headline: 'معيار Matter للعاكسات الشمسية ومضخات الحرارة: ما القادم (⁨2026⁩)',
       description: 'يحدد Matter أنواع أجهزة للعاكسات الشمسية ومضخات الحرارة (Matter 1.4 وما بعدها)، لكن لا توجد منتجات معتمدة مطروحة بعد حتى يوليو 2026 — ما هو قادم، وليس ما يعمل اليوم.',
       url: 'https://www.promptquorum.com/ar/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'ar',
@@ -1347,8 +1347,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/matter-solar-inverter-heat-pump-integration-overview-hero-ko.webp',
-    title: '태양광 인버터와 히트펌프를 위한 Matter: 다가오는 것 (2027년)',
-    seoTitle: '태양광 인버터 + 히트펌프용 Matter: 아직 아님 (2027년)',
+    title: '태양광 인버터와 히트펌프를 위한 Matter: 다가오는 것 (2026년)',
+    seoTitle: '태양광 인버터 + 히트펌프용 Matter: 아직 아님 (2026년)',
     intro:
       'Matter 사양은 Matter 1.4 이상부터(Connectivity Standards Alliance 자체 로드맵 발표에 따르면) 태양광 인버터, 배터리 저장 장치, 전기차 충전기, 히트펌프 등 에너지 관리 하드웨어를 위한 기기 유형을 정의해 왔지만, 이 글을 쓰는 시점에는 어떤 제조사로부터도 Matter 인증을 받고 실제 출시된 인버터, 배터리, 히트펌프 제품이 확인되지 않았습니다. 이는 얼리어답터를 위한 해설입니다: 사양이 오늘 무엇을 정의하는지, 그리고 이것이 실제 구매 옵션이 되기 전에 무엇을 지켜봐야 하는지를 다루며, 지금 당장 사용할 수 있는 하드웨어 가이드가 아닙니다. 또한 이미 발코니 태양광에서 다룬, 오늘날 실제로 작동하는 모니터링·대시보드 연동과 어떻게 다른지도 설명합니다.',
     metaDescription:
@@ -1480,7 +1480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '태양광 인버터와 히트펌프를 위한 Matter: 다가오는 것 (2027년)',
+      headline: '태양광 인버터와 히트펌프를 위한 Matter: 다가오는 것 (2026년)',
       description: 'Matter는 태양광 인버터와 히트펌프용 기기 유형을 정의했지만(Matter 1.4 이상), 2026년 7월 기준 출시된 인증 제품은 아직 없습니다 — 다가오는 것이지, 오늘 작동하는 것이 아닙니다.',
       url: 'https://www.promptquorum.com/ko/smart-home/matter-solar-inverter-heat-pump-integration',
       inLanguage: 'ko',

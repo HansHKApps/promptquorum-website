@@ -7,10 +7,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-en.webp',
-    title: 'The EU Data Act and Your Smart Home (2027)',
-    seoTitle: 'EU Data Act: Smart Home Guide (2027)',
+    title: 'The EU Data Act and Your Smart Home (2026)',
+    seoTitle: 'EU Data Act: Smart Home Guide (2026)',
     // Verified 2026-07-16 against the European Commission's own Data Act pages
     // (digital-strategy.ec.europa.eu/en/policies/data-act and .../en/factpages/data-act-explained).
     // Legal basis: the data-access-and-portability obligation this article describes is Chapter II
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'The EU Data Act and Your Smart Home (2027)',
+      headline: 'The EU Data Act and Your Smart Home (2026)',
       description: "The EU Data Act's implications for smart home devices in the EU: data portability rights, distinct from GDPR.",
       url: 'https://www.promptquorum.com/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'en',
@@ -163,10 +163,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-de.webp',
-    title: 'Der EU Data Act und dein Smart Home (2027)',
-    seoTitle: 'EU Data Act: Smart-Home-Leitfaden (2027)',
+    title: 'Der EU Data Act und dein Smart Home (2026)',
+    seoTitle: 'EU Data Act: Smart-Home-Leitfaden (2026)',
     intro:
       'Der EU Data Act (Verordnung (EU) 2023/2854) schafft in Kapitel II Datenzugangs- und Portabilitätsrechte für Nutzer vernetzter Geräte, getrennt von den Regeln der DSGVO zur Verarbeitung personenbezogener Daten — er regelt, ob du die von deinem Gerät erzeugten Daten herausbekommen und mit einem anderen Dienst teilen kannst, nicht wie deine personenbezogenen Daten verarbeitet werden. Seine Hauptpflichten gelten seit dem 12. September 2025 und er erfasst ausdrücklich Smart-Home-Geräte für Verbraucher als „vernetzte Produkte". Dieser Artikel erklärt den Unterschied zur DSGVO und worauf du als EU-Smart-Home-Besitzer achten solltest.',
     metaDescription:
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Der EU Data Act und dein Smart Home (2027)',
+      headline: 'Der EU Data Act und dein Smart Home (2026)',
       description: 'Die Auswirkungen des EU Data Act auf Smart-Home-Geräte in der EU: Datenportabilitätsrechte, getrennt von der DSGVO.',
       url: 'https://www.promptquorum.com/de/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'de',
@@ -312,10 +312,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-fr.webp',
-    title: "Le règlement européen sur les données (Data Act) et votre maison connectée (2027)",
-    seoTitle: 'EU Data Act : guide maison connectée (2027)',
+    title: "Le règlement européen sur les données (Data Act) et votre maison connectée (2026)",
+    seoTitle: 'EU Data Act : guide maison connectée (2026)',
     intro:
       "Le règlement européen sur les données (Data Act, règlement (UE) 2023/2854) crée des droits d'accès aux données et de portabilité pour les utilisateurs d'appareils connectés au chapitre II, distincts des règles du RGPD sur le traitement des données personnelles — il traite de la question de savoir si vous pouvez récupérer les données générées par votre appareil et les partager avec un autre service, pas de la façon dont vos données personnelles sont traitées. Ses principales obligations s'appliquent depuis le 12 septembre 2025, et il couvre explicitement les appareils de maison connectée grand public en tant que « produits connectés ». Cet article explique la distinction avec le RGPD et ce à quoi il faut prêter attention en tant que propriétaire de maison connectée dans l'UE.",
     metaDescription:
@@ -431,7 +431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: "Le règlement européen sur les données (Data Act) et votre maison connectée (2027)",
+      headline: "Le règlement européen sur les données (Data Act) et votre maison connectée (2026)",
       description: "Les implications du règlement européen sur les données pour les appareils de maison connectée dans l'UE : droits de portabilité des données, distincts du RGPD.",
       url: 'https://www.promptquorum.com/fr/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'fr',
@@ -461,10 +461,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ja.webp',
-    title: 'EUデータ法とあなたのスマートホーム（2027年）',
-    seoTitle: 'EUデータ法：スマートホームガイド（2027年）',
+    title: 'EUデータ法とあなたのスマートホーム（2026年）',
+    seoTitle: 'EUデータ法：スマートホームガイド（2026年）',
     intro:
       'EUデータ法（規則(EU) 2023/2854）は第II章の下で、GDPRの個人データ処理ルールとは別に、接続機器の利用者にデータアクセスおよび移植性の権利を創設します — これは、あなたの個人データがどのように処理されるかではなく、あなたの機器が生成したデータを取り出して別のサービスと共有できるかどうかを扱うものです。その主な義務は2026年9月12日から適用されており、消費者向けスマートホーム機器を「接続製品」として明示的に対象としています。この記事はGDPRとの違いと、EUのスマートホーム所有者として何に注意すべきかを説明します。',
     metaDescription:
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'EUデータ法とあなたのスマートホーム（2027年）',
+      headline: 'EUデータ法とあなたのスマートホーム（2026年）',
       description: 'EUデータ法がEU内のスマートホーム機器に与える影響：データ移植性の権利、GDPRとは別のもの。',
       url: 'https://www.promptquorum.com/ja/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'ja',
@@ -610,10 +610,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-zh.webp',
-    title: '欧盟《数据法案》与你的智能家居（2027年）',
-    seoTitle: '欧盟数据法案：智能家居指南（2027年）',
+    title: '欧盟《数据法案》与你的智能家居（2026年）',
+    seoTitle: '欧盟数据法案：智能家居指南（2026年）',
     intro:
       '欧盟《数据法案》（(EU) 2023/2854号法规）第二章为联网设备用户创设了数据访问权和可携权，与GDPR关于个人数据处理的规则不同——它解决的是你能否取出设备生成的数据并与其他服务共享，而不是你的个人数据如何被处理。其主要义务自2025年9月12日起适用，并明确将消费类智能家居设备纳入"联网产品"范畴。本文解释它与GDPR的区别，以及作为欧盟智能家居用户应留意的事项。',
     metaDescription:
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '欧盟《数据法案》与你的智能家居（2027年）',
+      headline: '欧盟《数据法案》与你的智能家居（2026年）',
       description: '欧盟《数据法案》对欧盟境内智能家居设备的影响：数据可携权，与GDPR不同。',
       url: 'https://www.promptquorum.com/zh/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'zh',
@@ -759,10 +759,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-es.webp',
-    title: 'La Ley de Datos de la UE y tu hogar inteligente (2027)',
-    seoTitle: 'Ley de Datos de la UE: guía para el hogar inteligente (2027)',
+    title: 'La Ley de Datos de la UE y tu hogar inteligente (2026)',
+    seoTitle: 'Ley de Datos de la UE: guía para el hogar inteligente (2026)',
     intro:
       'La Ley de Datos de la UE (Reglamento (UE) 2023/2854) crea derechos de acceso y portabilidad de datos para usuarios de dispositivos conectados bajo el Capítulo II, separados de las reglas del RGPD sobre el procesamiento de datos personales — aborda si puedes obtener los datos generados por tu dispositivo y compartirlos con un servicio diferente, no cómo se procesan tus datos personales. Sus principales obligaciones se aplican desde el 12 de septiembre de 2025, y cubre explícitamente los dispositivos de hogar inteligente de consumo como "productos conectados". Este artículo explica la distinción con el RGPD y qué vigilar como propietario de un hogar inteligente en la UE.',
     metaDescription:
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'La Ley de Datos de la UE y tu hogar inteligente (2027)',
+      headline: 'La Ley de Datos de la UE y tu hogar inteligente (2026)',
       description: 'Las implicaciones de la Ley de Datos de la UE para los dispositivos de hogar inteligente en la UE: derechos de portabilidad de datos, distintos del RGPD.',
       url: 'https://www.promptquorum.com/es/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'es',
@@ -908,10 +908,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-pt.webp',
-    title: 'A Lei de Dados da UE e sua casa inteligente (2027)',
-    seoTitle: 'Lei de Dados da UE: guia para casa inteligente (2027)',
+    title: 'A Lei de Dados da UE e sua casa inteligente (2026)',
+    seoTitle: 'Lei de Dados da UE: guia para casa inteligente (2026)',
     intro:
       'A Lei de Dados da UE (Regulamento (UE) 2023/2854) cria direitos de acesso e portabilidade de dados para usuários de dispositivos conectados sob o Capítulo II, separados das regras do RGPD sobre o processamento de dados pessoais — ela trata de saber se você pode obter os dados gerados pelo seu dispositivo e compartilhá-los com um serviço diferente, não como seus dados pessoais são processados. Suas principais obrigações se aplicam desde 12 de setembro de 2025, e ela cobre explicitamente dispositivos de casa inteligente de consumo como "produtos conectados". Este artigo explica a distinção em relação ao RGPD e o que observar como proprietário de casa inteligente na UE.',
     metaDescription:
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'A Lei de Dados da UE e sua casa inteligente (2027)',
+      headline: 'A Lei de Dados da UE e sua casa inteligente (2026)',
       description: 'As implicações da Lei de Dados da UE para dispositivos de casa inteligente na UE: direitos de portabilidade de dados, distintos do RGPD.',
       url: 'https://www.promptquorum.com/pt/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'pt-BR',
@@ -1057,10 +1057,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ar.webp',
-    title: 'قانون البيانات الأوروبي ومنزلك الذكي (⁨2027⁩)',
-    seoTitle: 'قانون البيانات الأوروبي: دليل المنزل الذكي (⁨2027⁩)',
+    title: 'قانون البيانات الأوروبي ومنزلك الذكي (⁨2026⁩)',
+    seoTitle: 'قانون البيانات الأوروبي: دليل المنزل الذكي (⁨2026⁩)',
     intro:
       'ينشئ قانون البيانات الأوروبي (اللائحة (الاتحاد الأوروبي) 2023/2854) بموجب الفصل الثاني حقوق الوصول إلى البيانات وقابليتها للنقل لمستخدمي الأجهزة المتصلة، بمعزل عن قواعد GDPR المتعلقة بمعالجة البيانات الشخصية — فهو يعالج ما إذا كان بإمكانك الحصول على البيانات التي يولّدها جهازك ومشاركتها مع خدمة مختلفة، وليس كيفية معالجة بياناتك الشخصية. تُطبَّق التزاماته الرئيسية منذ 12 سبتمبر 2025، ويغطي بوضوح أجهزة المنزل الذكي الاستهلاكية باعتبارها "منتجات متصلة". يوضح هذا المقال الفرق عن GDPR وما الذي يجب الانتباه إليه كمالك منزل ذكي في الاتحاد الأوروبي.',
     metaDescription:
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'قانون البيانات الأوروبي ومنزلك الذكي (⁨2027⁩)',
+      headline: 'قانون البيانات الأوروبي ومنزلك الذكي (⁨2026⁩)',
       description: 'آثار قانون البيانات الأوروبي على أجهزة المنزل الذكي في الاتحاد الأوروبي: حقوق قابلية نقل البيانات، منفصلة عن GDPR.',
       url: 'https://www.promptquorum.com/ar/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'ar',
@@ -1206,10 +1206,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/eu-data-act-smart-home-2027-overview-hero-ko.webp',
-    title: 'EU 데이터법과 당신의 스마트홈 (2027년)',
-    seoTitle: 'EU 데이터법: 스마트홈 가이드 (2027년)',
+    title: 'EU 데이터법과 당신의 스마트홈 (2026년)',
+    seoTitle: 'EU 데이터법: 스마트홈 가이드 (2026년)',
     intro:
       'EU 데이터법(규정 (EU) 2023/2854)은 제2장에서 연결된 기기 사용자에게 GDPR의 개인정보 처리 규칙과는 별개로 데이터 접근 및 이동권을 창설합니다 — 이는 개인정보가 어떻게 처리되는지가 아니라, 기기가 생성한 데이터를 꺼내 다른 서비스와 공유할 수 있는지를 다룹니다. 주요 의무는 2025년 9월 12일부터 적용되며, 소비자용 스마트홈 기기를 "연결 제품"으로 명시적으로 포함합니다. 이 글은 GDPR과의 차이점과 EU 스마트홈 소유자로서 주의할 점을 설명합니다.',
     metaDescription:
@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'EU 데이터법과 당신의 스마트홈 (2027년)',
+      headline: 'EU 데이터법과 당신의 스마트홈 (2026년)',
       description: 'EU 데이터법이 EU 내 스마트홈 기기에 미치는 영향: 데이터 이동권, GDPR과는 별개.',
       url: 'https://www.promptquorum.com/ko/smart-home/eu-data-act-smart-home-2027',
       inLanguage: 'ko',

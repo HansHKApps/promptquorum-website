@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Turning Your Home Into an Energy Microgrid (2027)](/smart-home/home-as-energy-microgrid-2027) — cross-cluster: sizing a backup system and prioritizing circuits once you have a home battery like these',
+          '[Turning Your Home Into an Energy Microgrid (2026)](/smart-home/home-as-energy-microgrid-2027) — cross-cluster: sizing a backup system and prioritizing circuits once you have a home battery like these',
         ],
       },
       faqSection: {
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Ihr Zuhause zum Energie-Microgrid machen (2027)](/de/smart-home/home-as-energy-microgrid-2027) — clusterübergreifend: ein Sicherungssystem dimensionieren und Stromkreise priorisieren, sobald Sie eine Hausbatterie wie diese haben',
+          '[Ihr Zuhause zum Energie-Microgrid machen (2026)](/de/smart-home/home-as-energy-microgrid-2027) — clusterübergreifend: ein Sicherungssystem dimensionieren und Stromkreise priorisieren, sobald Sie eine Hausbatterie wie diese haben',
         ],
       },
       faqSection: {
@@ -1105,7 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Transformer votre maison en microgrid énergétique (2027)](/fr/smart-home/home-as-energy-microgrid-2027) — inter-cluster : dimensionner un système de sauvegarde et prioriser les circuits une fois équipé d\'une batterie domestique comme celles-ci',
+          '[Transformer votre maison en microgrid énergétique (2026)](/fr/smart-home/home-as-energy-microgrid-2027) — inter-cluster : dimensionner un système de sauvegarde et prioriser les circuits une fois équipé d\'une batterie domestique comme celles-ci',
         ],
       },
       faqSection: {
@@ -1535,7 +1535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[家をエネルギーマイクログリッドに変える（2027年）](/ja/smart-home/home-as-energy-microgrid-2027) — クラスター横断：このようなホームバッテリーを導入したら、バックアップシステムの規模決定と回路優先順位づけをどう行うか',
+          '[家をエネルギーマイクログリッドに変える（2026年）](/ja/smart-home/home-as-energy-microgrid-2027) — クラスター横断：このようなホームバッテリーを導入したら、バックアップシステムの規模決定と回路優先順位づけをどう行うか',
         ],
       },
       faqSection: {
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[把你家变成能源微电网（2027年）](/zh/smart-home/home-as-energy-microgrid-2027) — 跨专题：拥有这类家用电池后，如何确定备用系统规模并设置电路优先级',
+          '[把你家变成能源微电网（2026年）](/zh/smart-home/home-as-energy-microgrid-2027) — 跨专题：拥有这类家用电池后，如何确定备用系统规模并设置电路优先级',
         ],
       },
       faqSection: {
@@ -2386,7 +2386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Convertir tu hogar en una microrred de energía (2027)](/es/smart-home/home-as-energy-microgrid-2027) — entre clústers: cómo dimensionar un sistema de respaldo y priorizar circuitos una vez que tienes una batería doméstica como estas',
+          '[Convertir tu hogar en una microrred de energía (2026)](/es/smart-home/home-as-energy-microgrid-2027) — entre clústers: cómo dimensionar un sistema de respaldo y priorizar circuitos una vez que tienes una batería doméstica como estas',
         ],
       },
       faqSection: {
@@ -2816,7 +2816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Transformando sua casa em uma microrrede de energia (2027)](/pt/smart-home/home-as-energy-microgrid-2027) — entre clusters: como dimensionar um sistema de backup e priorizar circuitos depois de ter uma bateria doméstica como estas',
+          '[Transformando sua casa em uma microrrede de energia (2026)](/pt/smart-home/home-as-energy-microgrid-2027) — entre clusters: como dimensionar um sistema de backup e priorizar circuitos depois de ter uma bateria doméstica como estas',
         ],
       },
       faqSection: {
@@ -3246,7 +3246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[تحويل منزلك إلى شبكة طاقة صغيرة (2027)](/ar/smart-home/home-as-energy-microgrid-2027) — عبر المجموعات: كيفية تحديد حجم نظام النسخ الاحتياطي وترتيب أولوية الدوائر بعد امتلاك بطارية منزلية كهذه',
+          '[تحويل منزلك إلى شبكة طاقة صغيرة (2026)](/ar/smart-home/home-as-energy-microgrid-2027) — عبر المجموعات: كيفية تحديد حجم نظام النسخ الاحتياطي وترتيب أولوية الدوائر بعد امتلاك بطارية منزلية كهذه',
         ],
       },
       faqSection: {
@@ -3673,7 +3673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[집을 에너지 마이크로그리드로 만들기 (2027년)](/ko/smart-home/home-as-energy-microgrid-2027) — 클러스터 간: 이런 가정용 배터리를 갖춘 후 백업 시스템 규모를 정하고 회로 우선순위를 정하는 방법',
+          '[집을 에너지 마이크로그리드로 만들기 (2026년)](/ko/smart-home/home-as-energy-microgrid-2027) — 클러스터 간: 이런 가정용 배터리를 갖춘 후 백업 시스템 규모를 정하고 회로 우선순위를 정하는 방법',
         ],
       },
       faqSection: {

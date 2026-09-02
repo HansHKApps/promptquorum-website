@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-en.webp',
-    title: 'Radar Presence Sensing: Room Occupancy Without a Camera (2027)',
-    seoTitle: 'Radar Presence Sensing, No Camera (2027)',
+    title: 'Radar Presence Sensing: Room Occupancy Without a Camera (2026)',
+    seoTitle: 'Radar Presence Sensing, No Camera (2026)',
     // Verified 2026-07-16 against Aqara's own spec page (us.aqara.com/pages/product-specs/presence-sensor-fp-2),
     // major US retailer listings (Amazon, Best Buy, Home Depot) for the Aqara FP2, and SmartHomeScene's
     // mmWave sensor module roundup + ESPHome's own LD2410 component docs for the Hi-Link LD2410/LD2410C/LD2450
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Radar Presence Sensing: Room Occupancy Without a Camera (2027)',
+      headline: 'Radar Presence Sensing: Room Occupancy Without a Camera (2026)',
       description: 'Radar presence sensors for room occupancy detection without a camera: how mmWave sensing works and where it beats motion sensors or cameras.',
       url: 'https://www.promptquorum.com/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'en',
@@ -164,8 +164,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-de.webp',
-    title: 'Radarpräsenzsensorik: Raumbelegung ohne Kamera (2027)',
-    seoTitle: 'Radarpräsenzsensorik ohne Kamera (2027)',
+    title: 'Radarpräsenzsensorik: Raumbelegung ohne Kamera (2026)',
+    seoTitle: 'Radarpräsenzsensorik ohne Kamera (2026)',
     intro:
       'mmWave-Radarsensoren erkennen Raumbelegung und sogar Mikrobewegungen wie Atmung, ohne dabei ein Bild aufzunehmen — das macht sie zu einer datenschutzfreundlicheren Alternative zu einer Kamera für präsenzbasierte Automatisierungen. Der Aqara FP2 (etwa 80–85 $ bei großen US-Händlern) ist eine gebrauchsfertige Option, während Hi-Links LD2410/LD2410C/LD2450-Chips (etwa 15–25 $ als DIY-ESPHome-Build mit einem ESP32-Board) der übliche kostengünstigere Weg sind. Dieser Artikel erklärt, wie Radarpräsenzsensorik funktioniert, wo sie eine Kamera oder einen Bewegungsmelder übertrifft, und wie man sie in Home Assistant einbindet.',
     metaDescription:
@@ -282,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Radarpräsenzsensorik: Raumbelegung ohne Kamera (2027)',
+      headline: 'Radarpräsenzsensorik: Raumbelegung ohne Kamera (2026)',
       description: 'Radarpräsenzsensoren zur Raumbelegungserkennung ohne Kamera: wie mmWave-Sensorik funktioniert und wo sie Bewegungsmelder oder Kameras übertrifft.',
       url: 'https://www.promptquorum.com/de/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'de',
@@ -314,8 +314,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-fr.webp',
-    title: "Détection de présence radar : occupation d'une pièce sans caméra (2027)",
-    seoTitle: 'Détection de présence radar sans caméra (2027)',
+    title: "Détection de présence radar : occupation d'une pièce sans caméra (2026)",
+    seoTitle: 'Détection de présence radar sans caméra (2026)',
     intro:
       "Les capteurs radar mmWave détectent l'occupation d'une pièce et même des micro-mouvements comme la respiration, sans capturer aucune image, ce qui en fait une alternative plus respectueuse de la vie privée qu'une caméra pour les automatisations basées sur la présence. L'Aqara FP2 (environ 80–85 $ chez les grands revendeurs américains) est une option prête à l'emploi, tandis que les puces LD2410/LD2410C/LD2450 de Hi-Link (environ 15–25 $ en montage DIY ESPHome avec une carte ESP32) constituent la voie courante à moindre coût. Cet article explique comment fonctionne la détection de présence radar, où elle surpasse une caméra ou un capteur de mouvement, et comment l'intégrer à Home Assistant.",
     metaDescription:
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: "Détection de présence radar : occupation d'une pièce sans caméra (2027)",
+      headline: "Détection de présence radar : occupation d'une pièce sans caméra (2026)",
       description: "Capteurs de présence radar pour détecter l'occupation d'une pièce sans caméra : comment fonctionne la détection mmWave et où elle surpasse les capteurs de mouvement ou les caméras.",
       url: 'https://www.promptquorum.com/fr/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'fr',
@@ -464,8 +464,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ja.webp',
-    title: 'レーダー式人感センサー：カメラなしの部屋の在室検知（2027年）',
-    seoTitle: 'カメラ不要のレーダー人感センサー（2027年）',
+    title: 'レーダー式人感センサー：カメラなしの部屋の在室検知（2026年）',
+    seoTitle: 'カメラ不要のレーダー人感センサー（2026年）',
     intro:
       'mmWaveレーダーセンサーは、画像を一切撮影することなく部屋の在室状況や呼吸のような微小な動きまで検知できるため、プレゼンスベースの自動化においてカメラよりプライバシーに配慮した代替手段となります。Aqara FP2（米国の主要小売店で約80〜85ドル）はすぐに使えるオプションであり、Hi-LinkのLD2410/LD2410C/LD2450チップ（ESP32ボードを使ったDIY ESPHomeビルドで約15〜25ドル）は一般的な低コストの選択肢です。この記事では、レーダー式人感検知の仕組み、カメラや人感センサーより優れている点、そしてHome Assistantへの組み込み方を解説します。',
     metaDescription:
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'レーダー式人感センサー：カメラなしの部屋の在室検知（2027年）',
+      headline: 'レーダー式人感センサー：カメラなしの部屋の在室検知（2026年）',
       description: 'カメラなしで部屋の在室を検知するレーダー人感センサー：mmWaveセンシングの仕組みと、人感センサーやカメラより優れている点。',
       url: 'https://www.promptquorum.com/ja/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'ja',
@@ -614,8 +614,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-zh.webp',
-    title: '雷达人体存在感应：无需摄像头的房间占用检测（2027年）',
-    seoTitle: '无摄像头雷达存在感应（2027年）',
+    title: '雷达人体存在感应：无需摄像头的房间占用检测（2026年）',
+    seoTitle: '无摄像头雷达存在感应（2026年）',
     intro:
       '毫米波（mmWave）雷达传感器可以检测房间的占用情况，甚至呼吸等微小动作，而无需捕获任何图像，这使其成为基于存在感应自动化时比摄像头更注重隐私的替代方案。Aqara FP2（美国主要零售商售价约80–85美元）是一款即插即用的选择，而Hi-Link的LD2410/LD2410C/LD2450芯片（配合ESP32开发板进行DIY ESPHome构建，约15–25美元）是常见的低成本方案。本文介绍雷达存在感应的工作原理、它在哪些方面优于摄像头或运动传感器，以及如何将其接入Home Assistant。',
     metaDescription:
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '雷达人体存在感应：无需摄像头的房间占用检测（2027年）',
+      headline: '雷达人体存在感应：无需摄像头的房间占用检测（2026年）',
       description: '无需摄像头即可检测房间占用的雷达存在传感器：毫米波感应的工作原理，以及它优于运动传感器或摄像头的地方。',
       url: 'https://www.promptquorum.com/zh/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'zh',
@@ -764,8 +764,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-es.webp',
-    title: 'Detección de presencia por radar: ocupación de habitaciones sin cámara (2027)',
-    seoTitle: 'Detección de presencia por radar sin cámara (2027)',
+    title: 'Detección de presencia por radar: ocupación de habitaciones sin cámara (2026)',
+    seoTitle: 'Detección de presencia por radar sin cámara (2026)',
     intro:
       'Los sensores de radar mmWave detectan la ocupación de una habitación e incluso micromovimientos como la respiración sin capturar ninguna imagen, lo que los convierte en una alternativa más respetuosa con la privacidad que una cámara para automatizaciones basadas en presencia. El Aqara FP2 (alrededor de 80-85 $ en los principales minoristas de EE. UU.) es una opción lista para usar, mientras que los chips LD2410/LD2410C/LD2450 de Hi-Link (alrededor de 15-25 $ como montaje DIY con ESPHome y una placa ESP32) son la vía habitual de menor coste. Este artículo explica cómo funciona la detección de presencia por radar, en qué casos supera a una cámara o a un sensor de movimiento, y cómo integrarla en Home Assistant.',
     metaDescription:
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Detección de presencia por radar: ocupación de habitaciones sin cámara (2027)',
+      headline: 'Detección de presencia por radar: ocupación de habitaciones sin cámara (2026)',
       description: 'Sensores de presencia por radar para detectar la ocupación de una habitación sin cámara: cómo funciona la detección mmWave y en qué supera a los sensores de movimiento o a las cámaras.',
       url: 'https://www.promptquorum.com/es/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'es',
@@ -914,8 +914,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-pt.webp',
-    title: 'Detecção de presença por radar: ocupação de ambientes sem câmera (2027)',
-    seoTitle: 'Detecção de presença por radar sem câmera (2027)',
+    title: 'Detecção de presença por radar: ocupação de ambientes sem câmera (2026)',
+    seoTitle: 'Detecção de presença por radar sem câmera (2026)',
     intro:
       'Sensores de radar mmWave detectam a ocupação de um ambiente e até micromovimentos como a respiração sem captar nenhuma imagem, tornando-os uma alternativa mais respeitosa com a privacidade do que uma câmera para automações baseadas em presença. O Aqara FP2 (cerca de US$ 80-85 nos principais varejistas dos EUA) é uma opção pronta para uso, enquanto os chips LD2410/LD2410C/LD2450 da Hi-Link (cerca de US$ 15-25 em uma montagem DIY com ESPHome e uma placa ESP32) são o caminho comum de menor custo. Este artigo explica como funciona a detecção de presença por radar, em quais situações ela supera uma câmera ou um sensor de movimento, e como integrá-la ao Home Assistant.',
     metaDescription:
@@ -1032,7 +1032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Detecção de presença por radar: ocupação de ambientes sem câmera (2027)',
+      headline: 'Detecção de presença por radar: ocupação de ambientes sem câmera (2026)',
       description: 'Sensores de presença por radar para detecção de ocupação de ambientes sem câmera: como funciona a detecção mmWave e onde ela supera sensores de movimento ou câmeras.',
       url: 'https://www.promptquorum.com/pt/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'pt-BR',
@@ -1064,8 +1064,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ar.webp',
-    title: 'استشعار الحضور بالرادار: اكتشاف إشغال الغرفة دون كاميرا (2027)',
-    seoTitle: 'استشعار الحضور بالرادار دون كاميرا (2027)',
+    title: 'استشعار الحضور بالرادار: اكتشاف إشغال الغرفة دون كاميرا (2026)',
+    seoTitle: 'استشعار الحضور بالرادار دون كاميرا (2026)',
     intro:
       'تكتشف مستشعرات الرادار بموجات المليمتر (mmWave) إشغال الغرفة، بل وحتى الحركات الدقيقة مثل التنفس، دون التقاط أي صورة، مما يجعلها بديلاً أكثر مراعاة للخصوصية من الكاميرا في أتمتة قائمة على الحضور. يُعد Aqara FP2 (بسعر يتراوح بين 80 و85 دولارًا تقريبًا لدى كبرى المتاجر الأمريكية) خيارًا جاهزًا للاستخدام، بينما تُعد شرائح Hi-Link من طراز LD2410/LD2410C/LD2450 (بسعر يتراوح بين 15 و25 دولارًا تقريبًا كمشروع تركيب ذاتي باستخدام ESPHome مع لوحة ESP32) الطريق الشائع الأقل تكلفة. يتناول هذا المقال كيفية عمل استشعار الحضور بالرادار، والحالات التي يتفوق فيها على الكاميرا أو مستشعر الحركة، وكيفية ربطه بـ Home Assistant.',
     metaDescription:
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'استشعار الحضور بالرادار: اكتشاف إشغال الغرفة دون كاميرا (2027)',
+      headline: 'استشعار الحضور بالرادار: اكتشاف إشغال الغرفة دون كاميرا (2026)',
       description: 'مستشعرات حضور بالرادار لاكتشاف إشغال الغرفة دون كاميرا: كيف يعمل الاستشعار بموجات المليمتر وأين يتفوق على مستشعرات الحركة أو الكاميرات.',
       url: 'https://www.promptquorum.com/ar/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'ar',
@@ -1214,8 +1214,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ko.webp',
-    title: '레이더 존재 감지: 카메라 없이 방 재실 여부 파악하기 (2027년)',
-    seoTitle: '카메라 없는 레이더 존재 감지 (2027년)',
+    title: '레이더 존재 감지: 카메라 없이 방 재실 여부 파악하기 (2026년)',
+    seoTitle: '카메라 없는 레이더 존재 감지 (2026년)',
     intro:
       'mmWave 레이더 센서는 이미지를 전혀 촬영하지 않고도 방의 재실 여부는 물론 호흡과 같은 미세한 움직임까지 감지할 수 있어, 존재 감지 기반 자동화에서 카메라보다 프라이버시 친화적인 대안이 됩니다. Aqara FP2(미국 주요 소매업체 기준 약 80~85달러)는 바로 사용 가능한 옵션이며, Hi-Link의 LD2410/LD2410C/LD2450 칩(ESP32 보드를 사용한 DIY ESPHome 빌드로 약 15~25달러)은 일반적인 저비용 대안입니다. 이 글에서는 레이더 존재 감지의 작동 방식, 카메라나 동작 센서보다 뛰어난 부분, 그리고 Home Assistant에 연동하는 방법을 다룹니다.',
     metaDescription:
@@ -1332,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '레이더 존재 감지: 카메라 없이 방 재실 여부 파악하기 (2027년)',
+      headline: '레이더 존재 감지: 카메라 없이 방 재실 여부 파악하기 (2026년)',
       description: '카메라 없이 방 재실 여부를 감지하는 레이더 존재 센서: mmWave 감지 방식과 동작 센서나 카메라보다 뛰어난 부분.',
       url: 'https://www.promptquorum.com/ko/smart-home/radar-presence-sensing-no-camera',
       inLanguage: 'ko',

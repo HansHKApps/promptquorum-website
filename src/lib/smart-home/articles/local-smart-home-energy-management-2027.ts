@@ -9,12 +9,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-en.webp',
-    title: 'Local Smart Home Energy Management (2027)',
-    seoTitle: 'Local Smart Home Energy Management (2027)',
+    title: 'Local Smart Home Energy Management (2026)',
+    seoTitle: 'Local Smart Home Energy Management (2026)',
     intro:
       'Local smart home energy management means tracking and automating solar, battery, and appliance usage entirely on your own hardware, with Home Assistant\'s Energy dashboard as the hub — no usage data leaves your network. This guide covers why cloud energy apps expose granular usage patterns, how a local setup replaces them device by device, and where to go next for inverter/heat-pump integration, the dashboard setup itself, and whole-home battery backup.',
     metaDescription:
-      'Local smart home energy management in 2027: run solar, battery, and appliance monitoring through Home Assistant\'s Energy dashboard, with no usage data sent to the cloud.',
+      'Local smart home energy management in 2026: run solar, battery, and appliance monitoring through Home Assistant\'s Energy dashboard, with no usage data sent to the cloud.',
     twitterDescription:
       'Local energy management for smart homes: Home Assistant\'s Energy dashboard, local smart plugs, and load-shifting automations — no cloud usage tracking.',
     readTime: '8 min read',
@@ -147,8 +147,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Local Smart Home Energy Management (2027)',
-      description: 'Local smart home energy management in 2027: run solar, battery, and appliance monitoring through Home Assistant\'s Energy dashboard, with no usage data sent to the cloud.',
+      headline: 'Local Smart Home Energy Management (2026)',
+      description: 'Local smart home energy management in 2026: run solar, battery, and appliance monitoring through Home Assistant\'s Energy dashboard, with no usage data sent to the cloud.',
       url: 'https://www.promptquorum.com/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -180,12 +180,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-de.webp',
-    title: 'Lokales Energiemanagement im Smart Home (2027)',
-    seoTitle: 'Lokales Energiemanagement im Smart Home (2027)',
+    title: 'Lokales Energiemanagement im Smart Home (2026)',
+    seoTitle: 'Lokales Energiemanagement im Smart Home (2026)',
     intro:
       'Lokales Energiemanagement im Smart Home bedeutet, Solar-, Batterie- und Gerätenutzung vollständig auf eigener Hardware zu erfassen und zu automatisieren, mit dem Energie-Dashboard von Home Assistant als Zentrale — keine Nutzungsdaten verlassen Ihr Netzwerk. Dieser Leitfaden erklärt, warum Cloud-Energie-Apps detaillierte Nutzungsmuster preisgeben, wie ein lokales Setup sie Gerät für Gerät ersetzt, und wohin es als Nächstes geht: Wechselrichter-/Wärmepumpen-Integration, das Dashboard-Setup selbst und Batteriesicherung fürs ganze Haus.',
     metaDescription:
-      'Lokales Energiemanagement im Smart Home 2027: Solar-, Batterie- und Gerätenutzung über das Energie-Dashboard von Home Assistant, ohne dass Nutzungsdaten in die Cloud gehen.',
+      'Lokales Energiemanagement im Smart Home 2026: Solar-, Batterie- und Gerätenutzung über das Energie-Dashboard von Home Assistant, ohne dass Nutzungsdaten in die Cloud gehen.',
     twitterDescription:
       'Lokales Energiemanagement für Smart Homes: Home-Assistant-Energie-Dashboard, lokale Smart Plugs und Lastverschiebungs-Automatisierungen — ohne Cloud-Tracking.',
     readTime: '8 Min. Lesezeit',
@@ -318,8 +318,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Lokales Energiemanagement im Smart Home (2027)',
-      description: 'Lokales Energiemanagement im Smart Home 2027: Solar-, Batterie- und Gerätenutzung über das Energie-Dashboard von Home Assistant, ohne dass Nutzungsdaten in die Cloud gehen.',
+      headline: 'Lokales Energiemanagement im Smart Home (2026)',
+      description: 'Lokales Energiemanagement im Smart Home 2026: Solar-, Batterie- und Gerätenutzung über das Energie-Dashboard von Home Assistant, ohne dass Nutzungsdaten in die Cloud gehen.',
       url: 'https://www.promptquorum.com/de/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -351,12 +351,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-fr.webp',
-    title: 'Gestion locale de l\'énergie dans la maison connectée (2027)',
-    seoTitle: 'Gestion locale de l\'énergie (2027)',
+    title: 'Gestion locale de l\'énergie dans la maison connectée (2026)',
+    seoTitle: 'Gestion locale de l\'énergie (2026)',
     intro:
       'La gestion locale de l\'énergie dans une maison connectée consiste à suivre et automatiser l\'usage du solaire, de la batterie et des appareils entièrement sur votre propre matériel, avec le tableau de bord Énergie de Home Assistant comme centre — aucune donnée d\'usage ne quitte votre réseau. Ce guide explique pourquoi les applications d\'énergie cloud exposent des habitudes de consommation détaillées, comment une installation locale les remplace appareil par appareil, et où aller ensuite pour l\'intégration onduleur/pompe à chaleur, la configuration du tableau de bord lui-même, et la sauvegarde par batterie pour toute la maison.',
     metaDescription:
-      'Gestion locale de l\'énergie dans la maison connectée en 2027 : suivez solaire, batterie et appareils via le tableau de bord Énergie de Home Assistant, sans envoyer de données au cloud.',
+      'Gestion locale de l\'énergie dans la maison connectée en 2026 : suivez solaire, batterie et appareils via le tableau de bord Énergie de Home Assistant, sans envoyer de données au cloud.',
     twitterDescription:
       'Gestion locale de l\'énergie pour maisons connectées : tableau de bord Énergie de Home Assistant, prises connectées locales et automatisations de décalage de charge — sans suivi cloud.',
     readTime: '8 min de lecture',
@@ -489,8 +489,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Gestion locale de l\'énergie dans la maison connectée (2027)',
-      description: 'Gestion locale de l\'énergie dans la maison connectée en 2027 : suivez solaire, batterie et appareils via le tableau de bord Énergie de Home Assistant, sans envoyer de données au cloud.',
+      headline: 'Gestion locale de l\'énergie dans la maison connectée (2026)',
+      description: 'Gestion locale de l\'énergie dans la maison connectée en 2026 : suivez solaire, batterie et appareils via le tableau de bord Énergie de Home Assistant, sans envoyer de données au cloud.',
       url: 'https://www.promptquorum.com/fr/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -522,12 +522,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ja.webp',
-    title: 'ローカルなスマートホームのエネルギー管理（2027年）',
-    seoTitle: 'ローカルなスマートホームのエネルギー管理（2027年）',
+    title: 'ローカルなスマートホームのエネルギー管理（2026年）',
+    seoTitle: 'ローカルなスマートホームのエネルギー管理（2026年）',
     intro:
       'ローカルなスマートホームのエネルギー管理とは、太陽光・バッテリー・家電の使用状況を自分のハードウェアだけで記録・自動化することを意味します。Home AssistantのEnergyダッシュボードを中心に据え、使用データがネットワーク外に出ることはありません。本ガイドでは、クラウド型エネルギーアプリが詳細な使用パターンを外部に晒す理由、ローカル構成が機器ごとにそれをどう置き換えるか、そしてインバーター・ヒートポンプ連携、ダッシュボード自体の設定、家全体のバッテリーバックアップへの次のステップを解説します。',
     metaDescription:
-      '2027年のローカルなスマートホームエネルギー管理：Home AssistantのEnergyダッシュボードで太陽光・バッテリー・家電を監視し、使用データをクラウドに送信しません。',
+      '2026年のローカルなスマートホームエネルギー管理：Home AssistantのEnergyダッシュボードで太陽光・バッテリー・家電を監視し、使用データをクラウドに送信しません。',
     twitterDescription:
       'スマートホームのローカルエネルギー管理：Home AssistantのEnergyダッシュボード、ローカルスマートプラグ、負荷シフト自動化 — クラウド追跡なし。',
     readTime: '8分で読めます',
@@ -660,8 +660,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'ローカルなスマートホームのエネルギー管理（2027年）',
-      description: '2027年のローカルなスマートホームエネルギー管理：Home AssistantのEnergyダッシュボードで太陽光・バッテリー・家電を監視し、使用データをクラウドに送信しません。',
+      headline: 'ローカルなスマートホームのエネルギー管理（2026年）',
+      description: '2026年のローカルなスマートホームエネルギー管理：Home AssistantのEnergyダッシュボードで太陽光・バッテリー・家電を監視し、使用データをクラウドに送信しません。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -693,12 +693,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-zh.webp',
-    title: '本地智能家居能源管理（2027年）',
-    seoTitle: '本地智能家居能源管理（2027年）',
+    title: '本地智能家居能源管理（2026年）',
+    seoTitle: '本地智能家居能源管理（2026年）',
     intro:
       '本地智能家居能源管理意味着完全在自己的硬件上追踪并自动化太阳能、电池和家电的用电情况，以Home Assistant的能源仪表盘作为中枢——使用数据不会离开你的网络。本指南将说明为什么云端能源应用会暴露详细的用电模式、本地方案如何逐设备取而代之，以及接下来该看逆变器/热泵集成、仪表盘本身的设置，以及全屋电池备用电源。',
     metaDescription:
-      '2027年本地智能家居能源管理：通过Home Assistant的能源仪表盘运行太阳能、电池和家电监测，使用数据不发送到云端。',
+      '2026年本地智能家居能源管理：通过Home Assistant的能源仪表盘运行太阳能、电池和家电监测，使用数据不发送到云端。',
     twitterDescription:
       '智能家居的本地能源管理：Home Assistant能源仪表盘、本地智能插座与负荷转移自动化——无需云端追踪。',
     readTime: '阅读需8分钟',
@@ -831,8 +831,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '本地智能家居能源管理（2027年）',
-      description: '2027年本地智能家居能源管理：通过Home Assistant的能源仪表盘运行太阳能、电池和家电监测，使用数据不发送到云端。',
+      headline: '本地智能家居能源管理（2026年）',
+      description: '2026年本地智能家居能源管理：通过Home Assistant的能源仪表盘运行太阳能、电池和家电监测，使用数据不发送到云端。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -864,12 +864,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-es.webp',
-    title: 'Gestión local de energía en el hogar inteligente (2027)',
-    seoTitle: 'Gestión local de energía en el hogar (2027)',
+    title: 'Gestión local de energía en el hogar inteligente (2026)',
+    seoTitle: 'Gestión local de energía en el hogar (2026)',
     intro:
       'La gestión local de energía en el hogar inteligente consiste en registrar y automatizar el uso de solar, batería y electrodomésticos completamente en tu propio hardware, con el panel de Energía de Home Assistant como centro — ningún dato de uso sale de tu red. Esta guía explica por qué las apps de energía en la nube exponen patrones de uso detallados, cómo una configuración local las reemplaza dispositivo por dispositivo, y adónde ir después para la integración de inversor/bomba de calor, la configuración del propio panel, y la copia de respaldo de batería para toda la casa.',
     metaDescription:
-      'Gestión local de energía en el hogar inteligente en 2027: monitorea solar, batería y electrodomésticos mediante el panel de Energía de Home Assistant, sin enviar datos a la nube.',
+      'Gestión local de energía en el hogar inteligente en 2026: monitorea solar, batería y electrodomésticos mediante el panel de Energía de Home Assistant, sin enviar datos a la nube.',
     twitterDescription:
       'Gestión local de energía para hogares inteligentes: panel de Energía de Home Assistant, enchufes inteligentes locales y automatizaciones de desplazamiento de carga — sin seguimiento en la nube.',
     readTime: '8 min de lectura',
@@ -1002,8 +1002,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Gestión local de energía en el hogar inteligente (2027)',
-      description: 'Gestión local de energía en el hogar inteligente en 2027: monitorea solar, batería y electrodomésticos mediante el panel de Energía de Home Assistant, sin enviar datos a la nube.',
+      headline: 'Gestión local de energía en el hogar inteligente (2026)',
+      description: 'Gestión local de energía en el hogar inteligente en 2026: monitorea solar, batería y electrodomésticos mediante el panel de Energía de Home Assistant, sin enviar datos a la nube.',
       url: 'https://www.promptquorum.com/es/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1035,12 +1035,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-pt.webp',
-    title: 'Gestão local de energia na casa inteligente (2027)',
-    seoTitle: 'Gestão local de energia na casa (2027)',
+    title: 'Gestão local de energia na casa inteligente (2026)',
+    seoTitle: 'Gestão local de energia na casa (2026)',
     intro:
       'Gestão local de energia na casa inteligente significa rastrear e automatizar o uso de solar, bateria e eletrodomésticos inteiramente no seu próprio hardware, com o painel de Energia do Home Assistant como centro — nenhum dado de uso sai da sua rede. Este guia explica por que apps de energia na nuvem expõem padrões de uso detalhados, como uma configuração local os substitui dispositivo por dispositivo, e para onde ir a seguir para a integração de inversor/bomba de calor, a configuração do próprio painel, e o backup de bateria para a casa toda.',
     metaDescription:
-      'Gestão local de energia na casa inteligente em 2027: monitore solar, bateria e eletrodomésticos pelo painel de Energia do Home Assistant, sem enviar dados de uso à nuvem.',
+      'Gestão local de energia na casa inteligente em 2026: monitore solar, bateria e eletrodomésticos pelo painel de Energia do Home Assistant, sem enviar dados de uso à nuvem.',
     twitterDescription:
       'Gestão local de energia para casas inteligentes: painel de Energia do Home Assistant, tomadas inteligentes locais e automações de deslocamento de carga — sem rastreamento na nuvem.',
     readTime: '8 min de leitura',
@@ -1173,8 +1173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Gestão local de energia na casa inteligente (2027)',
-      description: 'Gestão local de energia na casa inteligente em 2027: monitore solar, bateria e eletrodomésticos pelo painel de Energia do Home Assistant, sem enviar dados de uso à nuvem.',
+      headline: 'Gestão local de energia na casa inteligente (2026)',
+      description: 'Gestão local de energia na casa inteligente em 2026: monitore solar, bateria e eletrodomésticos pelo painel de Energia do Home Assistant, sem enviar dados de uso à nuvem.',
       url: 'https://www.promptquorum.com/pt/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1206,12 +1206,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ar.webp',
-    title: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2027⁩)',
-    seoTitle: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2027⁩)',
+    title: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2026⁩)',
+    seoTitle: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2026⁩)',
     intro:
       'تعني إدارة الطاقة المحلية في المنزل الذكي تتبع وأتمتة استخدام الطاقة الشمسية والبطارية والأجهزة بالكامل على جهازك الخاص، مع لوحة Energy في Home Assistant كمركز — لا تغادر بيانات الاستخدام شبكتك. يوضّح هذا الدليل لماذا تكشف تطبيقات الطاقة السحابية أنماط استخدام تفصيلية، وكيف يستبدلها إعداد محلي جهازًا بجهاز، وإلى أين تذهب بعد ذلك لدمج العاكس/مضخة الحرارة، وإعداد اللوحة نفسها، والنسخ الاحتياطي للبطارية للمنزل بالكامل.',
     metaDescription:
-      'إدارة الطاقة المحلية في المنزل الذكي 2027: شغّل مراقبة الطاقة الشمسية والبطارية والأجهزة عبر لوحة Energy في Home Assistant، دون إرسال بيانات الاستخدام إلى السحابة.',
+      'إدارة الطاقة المحلية في المنزل الذكي 2026: شغّل مراقبة الطاقة الشمسية والبطارية والأجهزة عبر لوحة Energy في Home Assistant، دون إرسال بيانات الاستخدام إلى السحابة.',
     twitterDescription:
       'إدارة الطاقة المحلية للمنازل الذكية: لوحة Energy في Home Assistant، مقابس ذكية محلية، وأتمتة تحويل الحمل — دون تتبع سحابي.',
     readTime: '8 دقائق للقراءة',
@@ -1344,8 +1344,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2027⁩)',
-      description: 'إدارة الطاقة المحلية في المنزل الذكي 2027: شغّل مراقبة الطاقة الشمسية والبطارية والأجهزة عبر لوحة Energy في Home Assistant، دون إرسال بيانات الاستخدام إلى السحابة.',
+      headline: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2026⁩)',
+      description: 'إدارة الطاقة المحلية في المنزل الذكي 2026: شغّل مراقبة الطاقة الشمسية والبطارية والأجهزة عبر لوحة Energy في Home Assistant، دون إرسال بيانات الاستخدام إلى السحابة.',
       url: 'https://www.promptquorum.com/ar/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1377,12 +1377,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ko.webp',
-    title: '로컬 스마트홈 에너지 관리 (2027년)',
-    seoTitle: '로컬 스마트홈 에너지 관리 (2027년)',
+    title: '로컬 스마트홈 에너지 관리 (2026년)',
+    seoTitle: '로컬 스마트홈 에너지 관리 (2026년)',
     intro:
       '로컬 스마트홈 에너지 관리란 태양광, 배터리, 가전제품 사용량을 오직 자신의 하드웨어에서만 추적하고 자동화하는 것을 의미하며, Home Assistant의 Energy 대시보드가 그 중심이 됩니다 — 사용 데이터는 네트워크를 벗어나지 않습니다. 이 가이드에서는 클라우드 에너지 앱이 세밀한 사용 패턴을 노출하는 이유, 로컬 구성이 기기별로 이를 어떻게 대체하는지, 그리고 인버터/히트펌프 연동, 대시보드 자체 설정, 전체 가정용 배터리 백업으로 이어지는 다음 단계를 다룹니다.',
     metaDescription:
-      '2027년 로컬 스마트홈 에너지 관리: Home Assistant의 Energy 대시보드를 통해 태양광, 배터리, 가전제품을 모니터링하며 사용 데이터를 클라우드로 보내지 않습니다.',
+      '2026년 로컬 스마트홈 에너지 관리: Home Assistant의 Energy 대시보드를 통해 태양광, 배터리, 가전제품을 모니터링하며 사용 데이터를 클라우드로 보내지 않습니다.',
     twitterDescription:
       '스마트홈을 위한 로컬 에너지 관리: Home Assistant Energy 대시보드, 로컬 스마트 플러그, 부하 이동 자동화 — 클라우드 추적 없음.',
     readTime: '8분 소요',
@@ -1515,8 +1515,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '로컬 스마트홈 에너지 관리 (2027년)',
-      description: '2027년 로컬 스마트홈 에너지 관리: Home Assistant의 Energy 대시보드를 통해 태양광, 배터리, 가전제품을 모니터링하며 사용 데이터를 클라우드로 보내지 않습니다.',
+      headline: '로컬 스마트홈 에너지 관리 (2026년)',
+      description: '2026년 로컬 스마트홈 에너지 관리: Home Assistant의 Energy 대시보드를 통해 태양광, 배터리, 가전제품을 모니터링하며 사용 데이터를 클라우드로 보내지 않습니다.',
       url: 'https://www.promptquorum.com/ko/smart-home/local-smart-home-energy-management-2027',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

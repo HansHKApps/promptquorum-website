@@ -20,12 +20,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // dated snapshots — retail prices fluctuate; check the linked page at time of purchase. PromptQuorum
     // has not tested, benchmarked, or implemented any camera on this page — see the editorial-scoring
     // section for the research-based methodology behind the ratings.
-    title: 'Best Local Security Cameras for Home Assistant & Frigate in 2027',
-    seoTitle: 'Best Local Security Cameras 2027 (No Subscription)',
+    title: 'Best Local Security Cameras for Home Assistant & Frigate in 2026',
+    seoTitle: 'Best Local Security Cameras 2026 (No Subscription)',
     intro:
       "The best local security camera isn't the one with the best cloud subscription — it's the one that gives you the most control over your own footage. Reolink, Amcrest, Ubiquiti UniFi Protect, Eufy, and Aqara's Camera Hub G5 Pro each offer confirmed local-storage options without a mandatory cloud subscription for basic recording, but they differ sharply in whether they also expose RTSP/ONVIF for Frigate and Home Assistant — verified 2026-08-25 against official sources; prices are snapshots, not fixed figures. This guide is a hardware-buying complement to the Frigate how-to guide already on this site, and treats the decision as a system (cameras plus a PoE switch, storage, and a Frigate-capable box), not a single purchase.",
     metaDescription:
-      'Best local security cameras 2027 for Home Assistant and Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro compared on RTSP/ONVIF, local storage, and subscription — no cloud lock-in required.',
+      'Best local security cameras 2026 for Home Assistant and Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro compared on RTSP/ONVIF, local storage, and subscription — no cloud lock-in required.',
     twitterDescription:
       'Buying guide for local-storage security cameras that work with Frigate and Home Assistant — RTSP/ONVIF verified per model, no mandatory cloud subscription.',
     readTime: '14 min read',
@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'security camera no subscription 2027',
     ],
     leadAnswerBlock:
-      "**Reolink's current PoE line is the best overall local security camera for 2027 — RTSP and ONVIF Profile S confirmed on every current PoE and Wi-Fi model, local SD/NVR recording with no subscription required, and prices from ~$80 (RLC-810A) to $299.99 (triple-lens OMVI 3i PoE).** Amcrest's PoE line (~$100–200) has the deepest third-party ONVIF Profile S/T/G/M support for a DIY Frigate/NVR build. Ubiquiti's UniFi Protect + UNVR ($199–499) is the best premium, fully-local-recording ecosystem but uses a proprietary protocol, not open RTSP. Eufy's HomeBase 3 (~$150) is the easiest local-storage setup but has no open streaming protocol. Aqara's Camera Hub G5 Pro PoE (~$200) adds a built-in Zigbee/Thread hub, but Home Assistant's native Matter integration for it is currently limited — connect it via RTSP/Frigate instead.",
+      "**Reolink's current PoE line is the best overall local security camera for 2026 — RTSP and ONVIF Profile S confirmed on every current PoE and Wi-Fi model, local SD/NVR recording with no subscription required, and prices from ~$80 (RLC-810A) to $299.99 (triple-lens OMVI 3i PoE).** Amcrest's PoE line (~$100–200) has the deepest third-party ONVIF Profile S/T/G/M support for a DIY Frigate/NVR build. Ubiquiti's UniFi Protect + UNVR ($199–499) is the best premium, fully-local-recording ecosystem but uses a proprietary protocol, not open RTSP. Eufy's HomeBase 3 (~$150) is the easiest local-storage setup but has no open streaming protocol. Aqara's Camera Hub G5 Pro PoE (~$200) adds a built-in Zigbee/Thread hub, but Home Assistant's native Matter integration for it is currently limited — connect it via RTSP/Frigate instead.",
     quickAnswerTop: {
       en: {
         question: 'Which security cameras work locally with Home Assistant and Frigate without a subscription?',
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: "The best local security cameras for Home Assistant and Frigate in 2027 are Reolink's and Amcrest's PoE lines — both confirm RTSP/ONVIF support with local recording and no mandatory subscription, unlike UniFi Protect (proprietary protocol), Eufy (closed streaming), or Aqara's G5 Pro (limited Home Assistant Matter support today)." },
+      { type: 'one-sentence', content: "The best local security cameras for Home Assistant and Frigate in 2026 are Reolink's and Amcrest's PoE lines — both confirm RTSP/ONVIF support with local recording and no mandatory subscription, unlike UniFi Protect (proprietary protocol), Eufy (closed streaming), or Aqara's G5 Pro (limited Home Assistant Matter support today)." },
       { type: 'plain-terms', content: '"Local" can mean four different things: footage saved locally, a live feed you can pull directly without the cloud, AI detection that runs on your own hardware, or day-to-day control without a manufacturer account. A camera can have some of these and not others — this guide rates each brand on all four separately instead of using one vague "local" label.' },
     ],
     sections: {
@@ -423,8 +423,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Best Local Security Cameras for Home Assistant & Frigate in 2027',
-      description: 'Best local security cameras 2027 for Home Assistant and Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro compared on RTSP/ONVIF, local storage, and subscription requirements.',
+      headline: 'Best Local Security Cameras for Home Assistant & Frigate in 2026',
+      description: 'Best local security cameras 2026 for Home Assistant and Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro compared on RTSP/ONVIF, local storage, and subscription requirements.',
       url: 'https://www.promptquorum.com/smart-home/best-local-security-cameras-2027',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -452,12 +452,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-de.webp',
     affiliateDisclosure: true,
-    title: 'Beste lokale Sicherheitskameras für Home Assistant & Frigate (2027)',
-    seoTitle: 'Beste lokale Sicherheitskameras 2027 (ohne Abo)',
+    title: 'Beste lokale Sicherheitskameras für Home Assistant & Frigate (2026)',
+    seoTitle: 'Beste lokale Sicherheitskameras 2026 (ohne Abo)',
     intro:
       "Die beste lokale Sicherheitskamera ist nicht die mit dem besten Cloud-Abo — es ist die, die Ihnen die meiste Kontrolle über Ihre eigenen Aufnahmen gibt. Reolink, Amcrest, Ubiquiti UniFi Protect, Eufy und Aqaras Camera Hub G5 Pro bieten jeweils bestätigte lokale Speicheroptionen ohne verpflichtendes Cloud-Abo für die Basisaufzeichnung — unterscheiden sich aber stark darin, ob sie auch RTSP/ONVIF für Frigate und Home Assistant bereitstellen (geprüft am 25.08.2026 anhand offizieller Quellen; Preise sind Momentaufnahmen). Dieser Leitfaden ist eine Hardware-Kaufergänzung zum Frigate-Anleitungsartikel auf dieser Website und behandelt die Entscheidung als System (Kameras plus PoE-Switch, Speicher und eine Frigate-fähige Box), nicht als Einzelkauf.",
     metaDescription:
-      'Beste lokale Sicherheitskameras 2027 für Home Assistant und Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro im Vergleich bei RTSP/ONVIF, lokalem Speicher und Abo-Pflicht.',
+      'Beste lokale Sicherheitskameras 2026 für Home Assistant und Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro im Vergleich bei RTSP/ONVIF, lokalem Speicher und Abo-Pflicht.',
     twitterDescription:
       'Kaufratgeber für Sicherheitskameras mit lokalem Speicher, die mit Frigate und Home Assistant funktionieren — RTSP/ONVIF pro Modell geprüft, kein verpflichtendes Cloud-Abo.',
     readTime: '14 Min. Lesezeit',
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sicherheitskamera ohne abo 2027',
     ],
     leadAnswerBlock:
-      "**Reolinks aktuelle PoE-Reihe ist die beste lokale Sicherheitskamera für 2027 insgesamt — RTSP und ONVIF Profile S sind auf jedem aktuellen PoE- und WLAN-Modell bestätigt, lokale SD-/NVR-Aufzeichnung ohne Abo-Pflicht, Preise von ca. 80 $ (RLC-810A) bis 299,99 $ (Dreifach-Objektiv OMVI 3i PoE).** Amcrests PoE-Linie (ca. 100–200 $) bietet die breiteste ONVIF-Profile-S/T/G/M-Unterstützung für einen DIY-Frigate/NVR-Aufbau. Ubiquitis UniFi Protect + UNVR (199–499 $) ist das beste Premium-Ökosystem mit vollständig lokaler Aufzeichnung, nutzt aber ein proprietäres Protokoll statt offenem RTSP. Eufys HomeBase 3 (ca. 150 $) ist der einfachste lokale Speicheraufbau, hat aber kein offenes Streaming-Protokoll. Aqaras Camera Hub G5 Pro PoE (ca. 200 $) bringt einen eingebauten Zigbee/Thread-Hub mit, aber Home Assistants native Matter-Integration dafür ist derzeit eingeschränkt — verbinden Sie ihn stattdessen über RTSP/Frigate.",
+      "**Reolinks aktuelle PoE-Reihe ist die beste lokale Sicherheitskamera für 2026 insgesamt — RTSP und ONVIF Profile S sind auf jedem aktuellen PoE- und WLAN-Modell bestätigt, lokale SD-/NVR-Aufzeichnung ohne Abo-Pflicht, Preise von ca. 80 $ (RLC-810A) bis 299,99 $ (Dreifach-Objektiv OMVI 3i PoE).** Amcrests PoE-Linie (ca. 100–200 $) bietet die breiteste ONVIF-Profile-S/T/G/M-Unterstützung für einen DIY-Frigate/NVR-Aufbau. Ubiquitis UniFi Protect + UNVR (199–499 $) ist das beste Premium-Ökosystem mit vollständig lokaler Aufzeichnung, nutzt aber ein proprietäres Protokoll statt offenem RTSP. Eufys HomeBase 3 (ca. 150 $) ist der einfachste lokale Speicheraufbau, hat aber kein offenes Streaming-Protokoll. Aqaras Camera Hub G5 Pro PoE (ca. 200 $) bringt einen eingebauten Zigbee/Thread-Hub mit, aber Home Assistants native Matter-Integration dafür ist derzeit eingeschränkt — verbinden Sie ihn stattdessen über RTSP/Frigate.",
     quickAnswerTop: {
       de: {
         question: 'Welche Sicherheitskameras funktionieren lokal mit Home Assistant und Frigate ohne Abo?',
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Die besten lokalen Sicherheitskameras für Home Assistant und Frigate 2027 sind Reolinks und Amcrests PoE-Linien — beide bestätigen RTSP/ONVIF mit lokaler Aufzeichnung ohne Abo-Pflicht, im Gegensatz zu UniFi Protect (proprietäres Protokoll), Eufy (geschlossenes Streaming) oder Aqaras G5 Pro (derzeit eingeschränkte Matter-Unterstützung in Home Assistant).' },
+      { type: 'one-sentence', content: 'Die besten lokalen Sicherheitskameras für Home Assistant und Frigate 2026 sind Reolinks und Amcrests PoE-Linien — beide bestätigen RTSP/ONVIF mit lokaler Aufzeichnung ohne Abo-Pflicht, im Gegensatz zu UniFi Protect (proprietäres Protokoll), Eufy (geschlossenes Streaming) oder Aqaras G5 Pro (derzeit eingeschränkte Matter-Unterstützung in Home Assistant).' },
       { type: 'plain-terms', content: '"Lokal" kann vier verschiedene Dinge bedeuten: lokal gespeicherte Aufnahmen, ein Live-Feed, den man ohne Cloud direkt abrufen kann, KI-Erkennung, die auf der eigenen Hardware läuft, oder tägliche Steuerung ohne Herstellerkonto. Eine Kamera kann einige davon haben und andere nicht — dieser Leitfaden bewertet jede Marke separat in allen vier Punkten statt eines vagen "lokal"-Labels.' },
     ],
     sections: {
@@ -855,8 +855,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Beste lokale Sicherheitskameras für Home Assistant & Frigate (2027)',
-      description: 'Beste lokale Sicherheitskameras 2027 für Home Assistant und Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro im Vergleich bei RTSP/ONVIF, lokalem Speicher und Abo-Pflicht.',
+      headline: 'Beste lokale Sicherheitskameras für Home Assistant & Frigate (2026)',
+      description: 'Beste lokale Sicherheitskameras 2026 für Home Assistant und Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro im Vergleich bei RTSP/ONVIF, lokalem Speicher und Abo-Pflicht.',
       url: 'https://www.promptquorum.com/de/smart-home/best-local-security-cameras-2027',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -884,12 +884,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-fr.webp',
     affiliateDisclosure: true,
-    title: 'Meilleures caméras de sécurité locales pour Home Assistant & Frigate (2027)',
-    seoTitle: 'Meilleures caméras de sécurité locales 2027 (sans abonnement)',
+    title: 'Meilleures caméras de sécurité locales pour Home Assistant & Frigate (2026)',
+    seoTitle: 'Meilleures caméras de sécurité locales 2026 (sans abonnement)',
     intro:
       "La meilleure caméra de sécurité locale n'est pas celle avec le meilleur abonnement cloud — c'est celle qui vous donne le plus de contrôle sur vos propres images. Reolink, Amcrest, Ubiquiti UniFi Protect, Eufy et le Camera Hub G5 Pro d'Aqara offrent chacun des options de stockage local confirmées sans abonnement cloud obligatoire pour l'enregistrement de base, mais diffèrent nettement sur l'exposition de RTSP/ONVIF pour Frigate et Home Assistant — vérifié le 25/08/2026 auprès de sources officielles ; les prix sont des instantanés, pas des chiffres fixes. Ce guide complète le tutoriel Frigate déjà présent sur ce site et traite la décision comme un système (caméras plus un switch PoE, du stockage et un boîtier compatible Frigate), pas comme un achat isolé.",
     metaDescription:
-      'Meilleures caméras de sécurité locales 2027 pour Home Assistant et Frigate : Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro comparés sur RTSP/ONVIF, stockage local et abonnement.',
+      'Meilleures caméras de sécurité locales 2026 pour Home Assistant et Frigate : Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro comparés sur RTSP/ONVIF, stockage local et abonnement.',
     twitterDescription:
       'Guide d\'achat de caméras à stockage local compatibles Frigate et Home Assistant — RTSP/ONVIF vérifié par modèle, aucun abonnement cloud obligatoire.',
     readTime: '14 min de lecture',
@@ -904,7 +904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'caméra de sécurité sans abonnement 2027',
     ],
     leadAnswerBlock:
-      "**La gamme PoE actuelle de Reolink est la meilleure caméra de sécurité locale de 2027 dans l'ensemble — RTSP et ONVIF Profile S confirmés sur tous les modèles PoE et Wi-Fi actuels, enregistrement local SD/NVR sans abonnement, prix de ~80 $ (RLC-810A) à 299,99 $ (triple objectif OMVI 3i PoE).** La gamme PoE d'Amcrest (~100–200 $) offre le meilleur support ONVIF Profile S/T/G/M tiers pour un montage DIY Frigate/NVR. UniFi Protect + UNVR d'Ubiquiti (199–499 $) est le meilleur écosystème premium à enregistrement entièrement local, mais utilise un protocole propriétaire, pas du RTSP ouvert. Le HomeBase 3 d'Eufy (~150 $) est l'installation à stockage local la plus simple, mais sans protocole de streaming ouvert. Le Camera Hub G5 Pro PoE d'Aqara (~200 $) ajoute un hub Zigbee/Thread intégré, mais l'intégration Matter native de Home Assistant est actuellement limitée — connectez-le plutôt via RTSP/Frigate.",
+      "**La gamme PoE actuelle de Reolink est la meilleure caméra de sécurité locale de 2026 dans l'ensemble — RTSP et ONVIF Profile S confirmés sur tous les modèles PoE et Wi-Fi actuels, enregistrement local SD/NVR sans abonnement, prix de ~80 $ (RLC-810A) à 299,99 $ (triple objectif OMVI 3i PoE).** La gamme PoE d'Amcrest (~100–200 $) offre le meilleur support ONVIF Profile S/T/G/M tiers pour un montage DIY Frigate/NVR. UniFi Protect + UNVR d'Ubiquiti (199–499 $) est le meilleur écosystème premium à enregistrement entièrement local, mais utilise un protocole propriétaire, pas du RTSP ouvert. Le HomeBase 3 d'Eufy (~150 $) est l'installation à stockage local la plus simple, mais sans protocole de streaming ouvert. Le Camera Hub G5 Pro PoE d'Aqara (~200 $) ajoute un hub Zigbee/Thread intégré, mais l'intégration Matter native de Home Assistant est actuellement limitée — connectez-le plutôt via RTSP/Frigate.",
     quickAnswerTop: {
       fr: {
         question: 'Quelles caméras de sécurité fonctionnent localement avec Home Assistant et Frigate sans abonnement ?',
@@ -944,7 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: "Les meilleures caméras de sécurité locales pour Home Assistant et Frigate en 2027 sont les gammes PoE de Reolink et Amcrest — toutes deux confirment RTSP/ONVIF avec enregistrement local sans abonnement obligatoire, contrairement à UniFi Protect (protocole propriétaire), Eufy (streaming fermé) ou le G5 Pro d'Aqara (support Matter actuellement limité dans Home Assistant)." },
+      { type: 'one-sentence', content: "Les meilleures caméras de sécurité locales pour Home Assistant et Frigate en 2026 sont les gammes PoE de Reolink et Amcrest — toutes deux confirment RTSP/ONVIF avec enregistrement local sans abonnement obligatoire, contrairement à UniFi Protect (protocole propriétaire), Eufy (streaming fermé) ou le G5 Pro d'Aqara (support Matter actuellement limité dans Home Assistant)." },
       { type: 'plain-terms', content: '"Local" peut désigner quatre choses différentes : des images enregistrées localement, un flux en direct récupérable directement sans le cloud, une détection IA qui tourne sur votre propre matériel, ou un contrôle quotidien sans compte fabricant. Une caméra peut avoir certains de ces points sans les autres — ce guide note chaque marque séparément sur les quatre, plutôt que d\'utiliser une étiquette "locale" vague.' },
     ],
     sections: {
@@ -1287,8 +1287,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Meilleures caméras de sécurité locales pour Home Assistant & Frigate (2027)',
-      description: 'Meilleures caméras de sécurité locales 2027 pour Home Assistant et Frigate : Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro comparés sur RTSP/ONVIF, stockage local et abonnement.',
+      headline: 'Meilleures caméras de sécurité locales pour Home Assistant & Frigate (2026)',
+      description: 'Meilleures caméras de sécurité locales 2026 pour Home Assistant et Frigate : Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro comparés sur RTSP/ONVIF, stockage local et abonnement.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-local-security-cameras-2027',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1316,12 +1316,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-ja.webp',
     affiliateDisclosure: true,
-    title: 'Home Assistant & Frigate向け ベストなローカル防犯カメラ(2027年)',
-    seoTitle: 'ベストなローカル防犯カメラ2027(サブスク不要)',
+    title: 'Home Assistant & Frigate向け ベストなローカル防犯カメラ(2026年)',
+    seoTitle: 'ベストなローカル防犯カメラ2026(サブスク不要)',
     intro:
       '最高のローカル防犯カメラとは、クラウドサブスクリプションが優れているカメラではなく、自分の映像を最も自分でコントロールできるカメラです。Reolink、Amcrest、Ubiquiti UniFi Protect、Eufy、AqaraのCamera Hub G5 Proは、いずれも基本録画に必須のクラウドサブスクリプションを必要としないローカルストレージオプションを確認済みですが、FrigateやHome Assistant向けにRTSP/ONVIFを公開しているかどうかは大きく異なります(2026年8月25日に公式情報源で確認済み。価格はスナップショットであり固定値ではありません)。本ガイドはこのサイトに既にあるFrigate導入ガイドを補完するハードウェア購入ガイドであり、単品購入ではなくシステム(カメラ+PoEスイッチ+ストレージ+Frigate対応機器)としての意思決定として扱います。',
     metaDescription:
-      'Home AssistantとFrigate向けベストなローカル防犯カメラ2027:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 ProをRTSP/ONVIF、ローカルストレージ、サブスクリプションで比較。',
+      'Home AssistantとFrigate向けベストなローカル防犯カメラ2026:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 ProをRTSP/ONVIF、ローカルストレージ、サブスクリプションで比較。',
     twitterDescription:
       'FrigateとHome Assistantで動作するローカルストレージ防犯カメラの購入ガイド — モデルごとにRTSP/ONVIFを確認、クラウドサブスクリプション不要。',
     readTime: '14分で読めます',
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '防犯カメラ サブスク不要 2027',
     ],
     leadAnswerBlock:
-      '**Reolinkの現行PoEラインは2027年における総合ベストのローカル防犯カメラです — 現行の全PoE/Wi-Fiモデルで RTSP と ONVIF Profile S を確認済み、ローカルSD/NVR録画にサブスクリプション不要、価格は約80ドル(RLC-810A)から299.99ドル(トリプルレンズOMVI 3i PoE)まで。** Amcrestの PoE ライン(約100〜200ドル)は、DIYのFrigate/NVR構築向けにサードパーティONVIF Profile S/T/G/Mサポートが最も充実しています。UbiquitiのUniFi Protect + UNVR(199〜499ドル)は完全ローカル録画のプレミアムエコシステムとして最良ですが、独自プロトコルであり、オープンなRTSPではありません。EufyのHomeBase 3(約150ドル)は最も簡単なローカルストレージ構成ですが、オープンなストリーミングプロトコルがありません。AqaraのCamera Hub G5 Pro PoE(約200ドル)はZigbee/Threadハブを内蔵していますが、Home AssistantのネイティブMatter統合は現時点で限定的です — 代わりにRTSP/Frigateで接続してください。',
+      '**Reolinkの現行PoEラインは2026年における総合ベストのローカル防犯カメラです — 現行の全PoE/Wi-Fiモデルで RTSP と ONVIF Profile S を確認済み、ローカルSD/NVR録画にサブスクリプション不要、価格は約80ドル(RLC-810A)から299.99ドル(トリプルレンズOMVI 3i PoE)まで。** Amcrestの PoE ライン(約100〜200ドル)は、DIYのFrigate/NVR構築向けにサードパーティONVIF Profile S/T/G/Mサポートが最も充実しています。UbiquitiのUniFi Protect + UNVR(199〜499ドル)は完全ローカル録画のプレミアムエコシステムとして最良ですが、独自プロトコルであり、オープンなRTSPではありません。EufyのHomeBase 3(約150ドル)は最も簡単なローカルストレージ構成ですが、オープンなストリーミングプロトコルがありません。AqaraのCamera Hub G5 Pro PoE(約200ドル)はZigbee/Threadハブを内蔵していますが、Home AssistantのネイティブMatter統合は現時点で限定的です — 代わりにRTSP/Frigateで接続してください。',
     quickAnswerTop: {
       ja: {
         question: 'サブスクリプションなしでHome AssistantとFrigateにローカルで対応する防犯カメラは?',
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'よくある質問', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '2027年にHome AssistantとFrigateに最適なローカル防犯カメラは、ReolinkとAmcrestのPoEラインです — どちらもRTSP/ONVIFのサポートとサブスク不要のローカル録画を確認済みで、独自プロトコルのUniFi Protect、クローズドなストリーミングのEufy、現時点でHome AssistantのMatterサポートが限定的なAqara G5 Proとは異なります。' },
+      { type: 'one-sentence', content: '2026年にHome AssistantとFrigateに最適なローカル防犯カメラは、ReolinkとAmcrestのPoEラインです — どちらもRTSP/ONVIFのサポートとサブスク不要のローカル録画を確認済みで、独自プロトコルのUniFi Protect、クローズドなストリーミングのEufy、現時点でHome AssistantのMatterサポートが限定的なAqara G5 Proとは異なります。' },
       { type: 'plain-terms', content: '「ローカル」には4つの異なる意味があり得ます:映像がローカルに保存される、クラウドを介さずライブ映像を直接取得できる、AI検出が自分のハードウェアで動く、メーカーアカウントなしで日常的に操作できる、の4つです。カメラによってはこれらの一部だけを備えている場合もあります — 本ガイドは曖昧な「ローカル」ラベルの代わりに、各ブランドをこの4項目それぞれで評価します。' },
     ],
     sections: {
@@ -1719,8 +1719,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant & Frigate向け ベストなローカル防犯カメラ(2027年)',
-      description: 'Home AssistantとFrigate向けベストなローカル防犯カメラ2027:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 ProをRTSP/ONVIF、ローカルストレージ、サブスクリプションで比較。',
+      headline: 'Home Assistant & Frigate向け ベストなローカル防犯カメラ(2026年)',
+      description: 'Home AssistantとFrigate向けベストなローカル防犯カメラ2026:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 ProをRTSP/ONVIF、ローカルストレージ、サブスクリプションで比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-local-security-cameras-2027',
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1748,12 +1748,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-zh.webp',
     affiliateDisclosure: true,
-    title: '2027年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头',
-    seoTitle: '2027最佳本地安防摄像头(无需订阅)',
+    title: '2026年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头',
+    seoTitle: '2026最佳本地安防摄像头(无需订阅)',
     intro:
       '最好的本地安防摄像头,不是订阅服务最好的那款,而是能让你对自己的录像拥有最多控制权的那款。Reolink、Amcrest、Ubiquiti UniFi Protect、Eufy 以及 Aqara 的 Camera Hub G5 Pro 都提供经确认的本地存储选项,基础录像无需强制云订阅,但在是否为 Frigate 和 Home Assistant 暴露 RTSP/ONVIF 方面差异很大——已于2026年8月25日对照官方来源核实;价格为时点快照,并非固定数字。本指南是对本站已有的 Frigate 教程的硬件采购补充,将其视为一个系统(摄像头加 PoE 交换机、存储与一台支持 Frigate 的设备),而非单件采购。',
     metaDescription:
-      '2027年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 Pro 在 RTSP/ONVIF、本地存储与订阅要求上的对比。',
+      '2026年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 Pro 在 RTSP/ONVIF、本地存储与订阅要求上的对比。',
     twitterDescription:
       '兼容 Frigate 与 Home Assistant 的本地存储安防摄像头购买指南——逐型号核实 RTSP/ONVIF,无需强制云订阅。',
     readTime: '14分钟阅读',
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '安防摄像头 无需订阅 2027',
     ],
     leadAnswerBlock:
-      '**Reolink 目前的 PoE 系列是2027年综合最佳的本地安防摄像头——其所有现行 PoE 与 Wi-Fi 型号均已确认支持 RTSP 与 ONVIF Profile S,本地 SD/NVR 录像无需订阅,价格从约80美元(RLC-810A)到299.99美元(三镜头 OMVI 3i PoE)不等。** Amcrest 的 PoE 系列(约100–200美元)对第三方 ONVIF Profile S/T/G/M 的支持最为全面,适合 DIY 搭建 Frigate/NVR。Ubiquiti 的 UniFi Protect + UNVR(199–499美元)是完全本地录像的最佳高端生态系统,但使用的是专有协议,而非开放 RTSP。Eufy 的 HomeBase 3(约150美元)是最简单的本地存储方案,但没有开放的流媒体协议。Aqara 的 Camera Hub G5 Pro PoE(约200美元)内置 Zigbee/Thread 集线器,但 Home Assistant 原生 Matter 集成目前功能有限——建议改用 RTSP/Frigate 连接。',
+      '**Reolink 目前的 PoE 系列是2026年综合最佳的本地安防摄像头——其所有现行 PoE 与 Wi-Fi 型号均已确认支持 RTSP 与 ONVIF Profile S,本地 SD/NVR 录像无需订阅,价格从约80美元(RLC-810A)到299.99美元(三镜头 OMVI 3i PoE)不等。** Amcrest 的 PoE 系列(约100–200美元)对第三方 ONVIF Profile S/T/G/M 的支持最为全面,适合 DIY 搭建 Frigate/NVR。Ubiquiti 的 UniFi Protect + UNVR(199–499美元)是完全本地录像的最佳高端生态系统,但使用的是专有协议,而非开放 RTSP。Eufy 的 HomeBase 3(约150美元)是最简单的本地存储方案,但没有开放的流媒体协议。Aqara 的 Camera Hub G5 Pro PoE(约200美元)内置 Zigbee/Thread 集线器,但 Home Assistant 原生 Matter 集成目前功能有限——建议改用 RTSP/Frigate 连接。',
     quickAnswerTop: {
       zh: {
         question: '哪些安防摄像头能在无订阅情况下与 Home Assistant 和 Frigate 本地联动?',
@@ -1808,7 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '2027年最适合 Home Assistant 和 Frigate 的本地安防摄像头是 Reolink 和 Amcrest 的 PoE 系列——两者均已确认支持 RTSP/ONVIF 且本地录像无需强制订阅,而 UniFi Protect(专有协议)、Eufy(封闭式流媒体)以及 Aqara G5 Pro(目前 Home Assistant 的 Matter 支持有限)则各有局限。' },
+      { type: 'one-sentence', content: '2026年最适合 Home Assistant 和 Frigate 的本地安防摄像头是 Reolink 和 Amcrest 的 PoE 系列——两者均已确认支持 RTSP/ONVIF 且本地录像无需强制订阅,而 UniFi Protect(专有协议)、Eufy(封闭式流媒体)以及 Aqara G5 Pro(目前 Home Assistant 的 Matter 支持有限)则各有局限。' },
       { type: 'plain-terms', content: '"本地"可以有四种不同含义:录像保存在本地、可以不经云端直接获取实时画面、AI 检测运行在自己的硬件上、日常操作无需厂商账号。一款摄像头可能只具备其中部分特性——本指南针对每个品牌在这四个方面分别打分,而不是使用一个笼统的"本地"标签。' },
     ],
     sections: {
@@ -2151,8 +2151,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '2027年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头',
-      description: '2027年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 Pro 在 RTSP/ONVIF、本地存储与订阅要求上的对比。',
+      headline: '2026年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头',
+      description: '2026年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 Pro 在 RTSP/ONVIF、本地存储与订阅要求上的对比。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-local-security-cameras-2027',
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2180,12 +2180,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-es.webp',
     affiliateDisclosure: true,
-    title: 'Mejores cámaras de seguridad locales para Home Assistant y Frigate (2027)',
-    seoTitle: 'Mejores cámaras de seguridad locales 2027 (sin suscripción)',
+    title: 'Mejores cámaras de seguridad locales para Home Assistant y Frigate (2026)',
+    seoTitle: 'Mejores cámaras de seguridad locales 2026 (sin suscripción)',
     intro:
       "La mejor cámara de seguridad local no es la que tiene la mejor suscripción en la nube, sino la que le da más control sobre sus propias grabaciones. Reolink, Amcrest, Ubiquiti UniFi Protect, Eufy y el Camera Hub G5 Pro de Aqara ofrecen opciones de almacenamiento local confirmadas sin suscripción obligatoria en la nube para la grabación básica, pero difieren notablemente en si también exponen RTSP/ONVIF para Frigate y Home Assistant — verificado el 25/08/2026 con fuentes oficiales; los precios son instantáneas, no cifras fijas. Esta guía complementa el tutorial de Frigate ya presente en este sitio y trata la decisión como un sistema (cámaras más un switch PoE, almacenamiento y un equipo compatible con Frigate), no como una compra aislada.",
     metaDescription:
-      'Mejores cámaras de seguridad locales 2027 para Home Assistant y Frigate: Reolink, Amcrest, UniFi Protect, Eufy y Aqara G5 Pro comparadas en RTSP/ONVIF, almacenamiento local y suscripción.',
+      'Mejores cámaras de seguridad locales 2026 para Home Assistant y Frigate: Reolink, Amcrest, UniFi Protect, Eufy y Aqara G5 Pro comparadas en RTSP/ONVIF, almacenamiento local y suscripción.',
     twitterDescription:
       'Guía de compra de cámaras de almacenamiento local compatibles con Frigate y Home Assistant — RTSP/ONVIF verificado por modelo, sin suscripción obligatoria en la nube.',
     readTime: '14 min de lectura',
@@ -2200,7 +2200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'cámara de seguridad sin suscripción 2027',
     ],
     leadAnswerBlock:
-      "**La línea PoE actual de Reolink es la mejor cámara de seguridad local en general para 2027 — RTSP y ONVIF Profile S confirmados en todos los modelos PoE y Wi-Fi actuales, grabación local en SD/NVR sin suscripción, precios desde ~80 $ (RLC-810A) hasta 299,99 $ (triple lente OMVI 3i PoE).** La línea PoE de Amcrest (~100–200 $) tiene el soporte ONVIF Profile S/T/G/M de terceros más completo para un montaje DIY de Frigate/NVR. UniFi Protect + UNVR de Ubiquiti (199–499 $) es el mejor ecosistema premium con grabación totalmente local, pero usa un protocolo propietario, no RTSP abierto. El HomeBase 3 de Eufy (~150 $) es la configuración de almacenamiento local más sencilla, pero sin protocolo de streaming abierto. El Camera Hub G5 Pro PoE de Aqara (~200 $) añade un hub Zigbee/Thread integrado, pero la integración Matter nativa de Home Assistant es actualmente limitada — conéctelo mediante RTSP/Frigate en su lugar.",
+      "**La línea PoE actual de Reolink es la mejor cámara de seguridad local en general para 2026 — RTSP y ONVIF Profile S confirmados en todos los modelos PoE y Wi-Fi actuales, grabación local en SD/NVR sin suscripción, precios desde ~80 $ (RLC-810A) hasta 299,99 $ (triple lente OMVI 3i PoE).** La línea PoE de Amcrest (~100–200 $) tiene el soporte ONVIF Profile S/T/G/M de terceros más completo para un montaje DIY de Frigate/NVR. UniFi Protect + UNVR de Ubiquiti (199–499 $) es el mejor ecosistema premium con grabación totalmente local, pero usa un protocolo propietario, no RTSP abierto. El HomeBase 3 de Eufy (~150 $) es la configuración de almacenamiento local más sencilla, pero sin protocolo de streaming abierto. El Camera Hub G5 Pro PoE de Aqara (~200 $) añade un hub Zigbee/Thread integrado, pero la integración Matter nativa de Home Assistant es actualmente limitada — conéctelo mediante RTSP/Frigate en su lugar.",
     quickAnswerTop: {
       es: {
         question: '¿Qué cámaras de seguridad funcionan localmente con Home Assistant y Frigate sin suscripción?',
@@ -2240,7 +2240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Las mejores cámaras de seguridad locales para Home Assistant y Frigate en 2027 son las líneas PoE de Reolink y Amcrest — ambas confirman soporte RTSP/ONVIF con grabación local sin suscripción obligatoria, a diferencia de UniFi Protect (protocolo propietario), Eufy (streaming cerrado) o el G5 Pro de Aqara (soporte Matter actualmente limitado en Home Assistant).' },
+      { type: 'one-sentence', content: 'Las mejores cámaras de seguridad locales para Home Assistant y Frigate en 2026 son las líneas PoE de Reolink y Amcrest — ambas confirman soporte RTSP/ONVIF con grabación local sin suscripción obligatoria, a diferencia de UniFi Protect (protocolo propietario), Eufy (streaming cerrado) o el G5 Pro de Aqara (soporte Matter actualmente limitado en Home Assistant).' },
       { type: 'plain-terms', content: '"Local" puede significar cuatro cosas distintas: grabaciones guardadas localmente, una transmisión en vivo que se puede obtener directamente sin la nube, detección por IA que se ejecuta en su propio hardware, o control cotidiano sin una cuenta del fabricante. Una cámara puede tener algunas de estas características sin las otras — esta guía califica cada marca por separado en las cuatro, en lugar de usar una etiqueta vaga de "local".' },
     ],
     sections: {
@@ -2583,8 +2583,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Mejores cámaras de seguridad locales para Home Assistant y Frigate (2027)',
-      description: 'Mejores cámaras de seguridad locales 2027 para Home Assistant y Frigate: Reolink, Amcrest, UniFi Protect, Eufy y Aqara G5 Pro comparadas en RTSP/ONVIF, almacenamiento local y suscripción.',
+      headline: 'Mejores cámaras de seguridad locales para Home Assistant y Frigate (2026)',
+      description: 'Mejores cámaras de seguridad locales 2026 para Home Assistant y Frigate: Reolink, Amcrest, UniFi Protect, Eufy y Aqara G5 Pro comparadas en RTSP/ONVIF, almacenamiento local y suscripción.',
       url: 'https://www.promptquorum.com/es/smart-home/best-local-security-cameras-2027',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2612,12 +2612,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-pt.webp',
     affiliateDisclosure: true,
-    title: 'Melhores câmeras de segurança locais para Home Assistant e Frigate (2027)',
-    seoTitle: 'Melhores câmeras de segurança locais 2027 (sem assinatura)',
+    title: 'Melhores câmeras de segurança locais para Home Assistant e Frigate (2026)',
+    seoTitle: 'Melhores câmeras de segurança locais 2026 (sem assinatura)',
     intro:
       "A melhor câmera de segurança local não é a que tem a melhor assinatura na nuvem — é a que te dá mais controle sobre suas próprias gravações. Reolink, Amcrest, Ubiquiti UniFi Protect, Eufy e o Camera Hub G5 Pro da Aqara oferecem opções de armazenamento local confirmadas, sem assinatura obrigatória na nuvem para a gravação básica, mas diferem bastante em relação a expor ou não RTSP/ONVIF para Frigate e Home Assistant — verificado em 25/08/2026 em fontes oficiais; os preços são instantâneos, não valores fixos. Este guia complementa o tutorial de Frigate já existente neste site e trata a decisão como um sistema (câmeras mais um switch PoE, armazenamento e um equipamento compatível com Frigate), não como uma compra isolada.",
     metaDescription:
-      'Melhores câmeras de segurança locais 2027 para Home Assistant e Frigate: Reolink, Amcrest, UniFi Protect, Eufy e Aqara G5 Pro comparadas em RTSP/ONVIF, armazenamento local e assinatura.',
+      'Melhores câmeras de segurança locais 2026 para Home Assistant e Frigate: Reolink, Amcrest, UniFi Protect, Eufy e Aqara G5 Pro comparadas em RTSP/ONVIF, armazenamento local e assinatura.',
     twitterDescription:
       'Guia de compra de câmeras com armazenamento local compatíveis com Frigate e Home Assistant — RTSP/ONVIF verificado por modelo, sem assinatura obrigatória na nuvem.',
     readTime: '14 min de leitura',
@@ -2632,7 +2632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'câmera de segurança sem assinatura 2027',
     ],
     leadAnswerBlock:
-      "**A linha PoE atual da Reolink é a melhor câmera de segurança local em geral para 2027 — RTSP e ONVIF Profile S confirmados em todos os modelos PoE e Wi-Fi atuais, gravação local em SD/NVR sem assinatura, preços de ~US$ 80 (RLC-810A) a US$ 299,99 (tripla lente OMVI 3i PoE).** A linha PoE da Amcrest (~US$ 100–200) tem o suporte ONVIF Profile S/T/G/M de terceiros mais completo para uma montagem DIY de Frigate/NVR. O UniFi Protect + UNVR da Ubiquiti (US$ 199–499) é o melhor ecossistema premium com gravação totalmente local, mas usa um protocolo proprietário, não RTSP aberto. O HomeBase 3 da Eufy (~US$ 150) é a configuração de armazenamento local mais simples, mas sem protocolo de streaming aberto. O Camera Hub G5 Pro PoE da Aqara (~US$ 200) adiciona um hub Zigbee/Thread integrado, mas a integração Matter nativa do Home Assistant é atualmente limitada — conecte-o via RTSP/Frigate em vez disso.",
+      "**A linha PoE atual da Reolink é a melhor câmera de segurança local em geral para 2026 — RTSP e ONVIF Profile S confirmados em todos os modelos PoE e Wi-Fi atuais, gravação local em SD/NVR sem assinatura, preços de ~US$ 80 (RLC-810A) a US$ 299,99 (tripla lente OMVI 3i PoE).** A linha PoE da Amcrest (~US$ 100–200) tem o suporte ONVIF Profile S/T/G/M de terceiros mais completo para uma montagem DIY de Frigate/NVR. O UniFi Protect + UNVR da Ubiquiti (US$ 199–499) é o melhor ecossistema premium com gravação totalmente local, mas usa um protocolo proprietário, não RTSP aberto. O HomeBase 3 da Eufy (~US$ 150) é a configuração de armazenamento local mais simples, mas sem protocolo de streaming aberto. O Camera Hub G5 Pro PoE da Aqara (~US$ 200) adiciona um hub Zigbee/Thread integrado, mas a integração Matter nativa do Home Assistant é atualmente limitada — conecte-o via RTSP/Frigate em vez disso.",
     quickAnswerTop: {
       pt: {
         question: 'Quais câmeras de segurança funcionam localmente com Home Assistant e Frigate sem assinatura?',
@@ -2672,7 +2672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'As melhores câmeras de segurança locais para Home Assistant e Frigate em 2027 são as linhas PoE da Reolink e da Amcrest — ambas confirmam suporte a RTSP/ONVIF com gravação local sem assinatura obrigatória, diferente do UniFi Protect (protocolo proprietário), da Eufy (streaming fechado) ou do G5 Pro da Aqara (suporte a Matter atualmente limitado no Home Assistant).' },
+      { type: 'one-sentence', content: 'As melhores câmeras de segurança locais para Home Assistant e Frigate em 2026 são as linhas PoE da Reolink e da Amcrest — ambas confirmam suporte a RTSP/ONVIF com gravação local sem assinatura obrigatória, diferente do UniFi Protect (protocolo proprietário), da Eufy (streaming fechado) ou do G5 Pro da Aqara (suporte a Matter atualmente limitado no Home Assistant).' },
       { type: 'plain-terms', content: '"Local" pode significar quatro coisas diferentes: gravações salvas localmente, uma transmissão ao vivo que você pode acessar diretamente sem a nuvem, detecção por IA que roda no seu próprio hardware, ou controle do dia a dia sem uma conta do fabricante. Uma câmera pode ter algumas dessas características sem as outras — este guia avalia cada marca separadamente nesses quatro pontos, em vez de usar um rótulo vago de "local".' },
     ],
     sections: {
@@ -3015,8 +3015,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Melhores câmeras de segurança locais para Home Assistant e Frigate (2027)',
-      description: 'Melhores câmeras de segurança locais 2027 para Home Assistant e Frigate: Reolink, Amcrest, UniFi Protect, Eufy e Aqara G5 Pro comparadas em RTSP/ONVIF, armazenamento local e assinatura.',
+      headline: 'Melhores câmeras de segurança locais para Home Assistant e Frigate (2026)',
+      description: 'Melhores câmeras de segurança locais 2026 para Home Assistant e Frigate: Reolink, Amcrest, UniFi Protect, Eufy e Aqara G5 Pro comparadas em RTSP/ONVIF, armazenamento local e assinatura.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-local-security-cameras-2027',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -3044,12 +3044,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-ar.webp',
     affiliateDisclosure: true,
-    title: 'أفضل كاميرات الأمان المحلية لـ Home Assistant وFrigate (2027)',
-    seoTitle: 'أفضل كاميرات أمان محلية 2027 (دون اشتراك)',
+    title: 'أفضل كاميرات الأمان المحلية لـ Home Assistant وFrigate (2026)',
+    seoTitle: 'أفضل كاميرات أمان محلية 2026 (دون اشتراك)',
     intro:
       'أفضل كاميرا أمان محلية ليست تلك التي تمتلك أفضل اشتراك سحابي — بل التي تمنحك أكبر قدر من التحكم في تسجيلاتك الخاصة. توفر كل من Reolink وAmcrest وUniFi Protect من Ubiquiti وEufy وCamera Hub G5 Pro من Aqara خيارات تخزين محلي مؤكدة دون اشتراك سحابي إلزامي للتسجيل الأساسي، لكنها تختلف بشكل كبير في ما إذا كانت توفر أيضًا RTSP/ONVIF لـ Frigate وHome Assistant — تم التحقق في 25/08/2026 من مصادر رسمية؛ الأسعار لقطات زمنية وليست أرقامًا ثابتة. هذا الدليل مكمّل لدليل Frigate الموجود بالفعل على هذا الموقع من ناحية اختيار الأجهزة، ويتعامل مع القرار كنظام (كاميرات بالإضافة إلى مبدل PoE وتخزين وجهاز يدعم Frigate)، وليس كشراء منفرد.',
     metaDescription:
-      'أفضل كاميرات الأمان المحلية 2027 لـ Home Assistant وFrigate: مقارنة Reolink وAmcrest وUniFi Protect وEufy وAqara G5 Pro من حيث RTSP/ONVIF والتخزين المحلي ومتطلبات الاشتراك.',
+      'أفضل كاميرات الأمان المحلية 2026 لـ Home Assistant وFrigate: مقارنة Reolink وAmcrest وUniFi Protect وEufy وAqara G5 Pro من حيث RTSP/ONVIF والتخزين المحلي ومتطلبات الاشتراك.',
     twitterDescription:
       'دليل شراء كاميرات أمان بتخزين محلي متوافقة مع Frigate وHome Assistant — تم التحقق من RTSP/ONVIF لكل طراز، دون اشتراك سحابي إلزامي.',
     readTime: 'وقت القراءة 14 دقيقة',
@@ -3064,7 +3064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'كاميرا أمان بدون اشتراك 2027',
     ],
     leadAnswerBlock:
-      '**خط PoE الحالي من Reolink هو أفضل كاميرا أمان محلية بشكل عام لعام 2027 — تم تأكيد RTSP وONVIF Profile S على جميع طرازات PoE وWi-Fi الحالية، تسجيل محلي على SD/NVR دون اشتراك، وأسعار تتراوح من حوالي 80 دولارًا (RLC-810A) إلى 299.99 دولارًا (ثلاثية العدسات OMVI 3i PoE).** يتمتع خط PoE من Amcrest (حوالي 100–200 دولار) بأوسع دعم لـ ONVIF Profile S/T/G/M من جهات خارجية لبناء Frigate/NVR بشكل ذاتي (DIY). يُعد UniFi Protect + UNVR من Ubiquiti (199–499 دولارًا) أفضل نظام بيئي متميز بتسجيل محلي بالكامل، لكنه يستخدم بروتوكولًا خاصًا وليس RTSP مفتوحًا. يُعد HomeBase 3 من Eufy (حوالي 150 دولارًا) أبسط إعداد للتخزين المحلي، لكنه يفتقر إلى بروتوكول بث مفتوح. يضيف Camera Hub G5 Pro PoE من Aqara (حوالي 200 دولار) محورًا مدمجًا لـ Zigbee/Thread، لكن تكامل Matter الأصلي في Home Assistant محدود حاليًا — لذا يُنصح بالاتصال عبر RTSP/Frigate بدلًا من ذلك.',
+      '**خط PoE الحالي من Reolink هو أفضل كاميرا أمان محلية بشكل عام لعام 2026 — تم تأكيد RTSP وONVIF Profile S على جميع طرازات PoE وWi-Fi الحالية، تسجيل محلي على SD/NVR دون اشتراك، وأسعار تتراوح من حوالي 80 دولارًا (RLC-810A) إلى 299.99 دولارًا (ثلاثية العدسات OMVI 3i PoE).** يتمتع خط PoE من Amcrest (حوالي 100–200 دولار) بأوسع دعم لـ ONVIF Profile S/T/G/M من جهات خارجية لبناء Frigate/NVR بشكل ذاتي (DIY). يُعد UniFi Protect + UNVR من Ubiquiti (199–499 دولارًا) أفضل نظام بيئي متميز بتسجيل محلي بالكامل، لكنه يستخدم بروتوكولًا خاصًا وليس RTSP مفتوحًا. يُعد HomeBase 3 من Eufy (حوالي 150 دولارًا) أبسط إعداد للتخزين المحلي، لكنه يفتقر إلى بروتوكول بث مفتوح. يضيف Camera Hub G5 Pro PoE من Aqara (حوالي 200 دولار) محورًا مدمجًا لـ Zigbee/Thread، لكن تكامل Matter الأصلي في Home Assistant محدود حاليًا — لذا يُنصح بالاتصال عبر RTSP/Frigate بدلًا من ذلك.',
     quickAnswerTop: {
       ar: {
         question: 'ما هي كاميرات الأمان التي تعمل محليًا مع Home Assistant وFrigate دون اشتراك؟',
@@ -3104,7 +3104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'أفضل كاميرات الأمان المحلية لـ Home Assistant وFrigate في 2027 هي خطوط PoE من Reolink وAmcrest — كلاهما يؤكد دعم RTSP/ONVIF مع تسجيل محلي دون اشتراك إلزامي، على عكس UniFi Protect (بروتوكول خاص) أو Eufy (بث مغلق) أو G5 Pro من Aqara (دعم Matter محدود حاليًا في Home Assistant).' },
+      { type: 'one-sentence', content: 'أفضل كاميرات الأمان المحلية لـ Home Assistant وFrigate في 2026 هي خطوط PoE من Reolink وAmcrest — كلاهما يؤكد دعم RTSP/ONVIF مع تسجيل محلي دون اشتراك إلزامي، على عكس UniFi Protect (بروتوكول خاص) أو Eufy (بث مغلق) أو G5 Pro من Aqara (دعم Matter محدود حاليًا في Home Assistant).' },
       { type: 'plain-terms', content: 'يمكن أن تعني "المحلية" أربعة أشياء مختلفة: تسجيلات محفوظة محليًا، بث مباشر يمكن الوصول إليه مباشرة دون السحابة، كشف بالذكاء الاصطناعي يعمل على جهازك الخاص، أو تحكم يومي دون حساب لدى الشركة المصنّعة. قد تمتلك كاميرا بعض هذه الخصائص دون غيرها — يقيّم هذا الدليل كل علامة تجارية بشكل منفصل في هذه النقاط الأربع بدلًا من استخدام وصف غامض لكلمة "محلية".' },
     ],
     sections: {
@@ -3447,8 +3447,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'أفضل كاميرات الأمان المحلية لـ Home Assistant وFrigate (2027)',
-      description: 'أفضل كاميرات الأمان المحلية 2027 لـ Home Assistant وFrigate: مقارنة Reolink وAmcrest وUniFi Protect وEufy وAqara G5 Pro من حيث RTSP/ONVIF والتخزين المحلي ومتطلبات الاشتراك.',
+      headline: 'أفضل كاميرات الأمان المحلية لـ Home Assistant وFrigate (2026)',
+      description: 'أفضل كاميرات الأمان المحلية 2026 لـ Home Assistant وFrigate: مقارنة Reolink وAmcrest وUniFi Protect وEufy وAqara G5 Pro من حيث RTSP/ONVIF والتخزين المحلي ومتطلبات الاشتراك.',
       url: 'https://www.promptquorum.com/ar/smart-home/best-local-security-cameras-2027',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -3476,12 +3476,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-ko.webp',
     affiliateDisclosure: true,
-    title: 'Home Assistant 및 Frigate를 위한 최고의 로컬 보안 카메라(2027년)',
-    seoTitle: '2027년 최고의 로컬 보안 카메라(구독 불필요)',
+    title: 'Home Assistant 및 Frigate를 위한 최고의 로컬 보안 카메라(2026년)',
+    seoTitle: '2026년 최고의 로컬 보안 카메라(구독 불필요)',
     intro:
       '최고의 로컬 보안 카메라는 클라우드 구독이 가장 뛰어난 카메라가 아니라, 자신의 영상을 가장 잘 통제할 수 있는 카메라입니다. Reolink, Amcrest, Ubiquiti UniFi Protect, Eufy, 그리고 Aqara의 Camera Hub G5 Pro는 모두 기본 녹화에 필수 클라우드 구독이 필요 없는 확인된 로컬 저장 옵션을 제공하지만, Frigate와 Home Assistant를 위한 RTSP/ONVIF 노출 여부는 크게 다릅니다(2026년 8월 25일 공식 자료 기준 확인, 가격은 특정 시점의 스냅샷이며 고정 수치가 아님). 이 가이드는 이미 이 사이트에 있는 Frigate 사용법 가이드를 보완하는 하드웨어 구매 가이드로, 이를 단품 구매가 아니라 시스템(카메라와 PoE 스위치, 저장소, Frigate 호환 기기)으로서의 의사결정으로 다룹니다.',
     metaDescription:
-      'Home Assistant와 Frigate를 위한 2027년 최고의 로컬 보안 카메라: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro를 RTSP/ONVIF, 로컬 저장소, 구독 요건으로 비교.',
+      'Home Assistant와 Frigate를 위한 2026년 최고의 로컬 보안 카메라: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro를 RTSP/ONVIF, 로컬 저장소, 구독 요건으로 비교.',
     twitterDescription:
       'Frigate 및 Home Assistant와 호환되는 로컬 저장소 보안 카메라 구매 가이드 — 모델별로 RTSP/ONVIF 확인, 필수 클라우드 구독 불필요.',
     readTime: '읽는 데 14분',
@@ -3496,7 +3496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '구독 없는 보안 카메라 2027',
     ],
     leadAnswerBlock:
-      '**Reolink의 현재 PoE 라인은 2027년 전반적으로 가장 뛰어난 로컬 보안 카메라입니다 — 현재 모든 PoE 및 Wi-Fi 모델에서 RTSP와 ONVIF Profile S가 확인되었고, 로컬 SD/NVR 녹화에 구독이 필요 없으며, 가격은 약 80달러(RLC-810A)부터 299.99달러(트리플 렌즈 OMVI 3i PoE)까지입니다.** Amcrest의 PoE 라인(약 100~200달러)은 DIY Frigate/NVR 구축에 있어 타사 ONVIF Profile S/T/G/M 지원이 가장 폭넓습니다. Ubiquiti의 UniFi Protect + UNVR(199~499달러)은 완전한 로컬 녹화를 갖춘 최고의 프리미엄 생태계지만, 개방형 RTSP가 아닌 독자 프로토콜을 사용합니다. Eufy의 HomeBase 3(약 150달러)는 가장 간단한 로컬 저장소 구성이지만 개방형 스트리밍 프로토콜이 없습니다. Aqara의 Camera Hub G5 Pro PoE(약 200달러)는 내장 Zigbee/Thread 허브를 추가하지만, Home Assistant의 네이티브 Matter 통합은 현재 제한적입니다 — 대신 RTSP/Frigate로 연결하세요.',
+      '**Reolink의 현재 PoE 라인은 2026년 전반적으로 가장 뛰어난 로컬 보안 카메라입니다 — 현재 모든 PoE 및 Wi-Fi 모델에서 RTSP와 ONVIF Profile S가 확인되었고, 로컬 SD/NVR 녹화에 구독이 필요 없으며, 가격은 약 80달러(RLC-810A)부터 299.99달러(트리플 렌즈 OMVI 3i PoE)까지입니다.** Amcrest의 PoE 라인(약 100~200달러)은 DIY Frigate/NVR 구축에 있어 타사 ONVIF Profile S/T/G/M 지원이 가장 폭넓습니다. Ubiquiti의 UniFi Protect + UNVR(199~499달러)은 완전한 로컬 녹화를 갖춘 최고의 프리미엄 생태계지만, 개방형 RTSP가 아닌 독자 프로토콜을 사용합니다. Eufy의 HomeBase 3(약 150달러)는 가장 간단한 로컬 저장소 구성이지만 개방형 스트리밍 프로토콜이 없습니다. Aqara의 Camera Hub G5 Pro PoE(약 200달러)는 내장 Zigbee/Thread 허브를 추가하지만, Home Assistant의 네이티브 Matter 통합은 현재 제한적입니다 — 대신 RTSP/Frigate로 연결하세요.',
     quickAnswerTop: {
       ko: {
         question: '구독 없이 Home Assistant와 Frigate에 로컬로 연동되는 보안 카메라는?',
@@ -3536,7 +3536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '2027년 Home Assistant와 Frigate에 가장 적합한 로컬 보안 카메라는 Reolink와 Amcrest의 PoE 라인입니다 — 둘 다 필수 구독 없이 RTSP/ONVIF 지원과 로컬 녹화를 확인했으며, 독자 프로토콜의 UniFi Protect, 폐쇄형 스트리밍의 Eufy, 현재 Home Assistant Matter 지원이 제한적인 Aqara G5 Pro와는 다릅니다.' },
+      { type: 'one-sentence', content: '2026년 Home Assistant와 Frigate에 가장 적합한 로컬 보안 카메라는 Reolink와 Amcrest의 PoE 라인입니다 — 둘 다 필수 구독 없이 RTSP/ONVIF 지원과 로컬 녹화를 확인했으며, 독자 프로토콜의 UniFi Protect, 폐쇄형 스트리밍의 Eufy, 현재 Home Assistant Matter 지원이 제한적인 Aqara G5 Pro와는 다릅니다.' },
       { type: 'plain-terms', content: '"로컬"은 네 가지 다른 의미를 가질 수 있습니다: 영상이 로컬에 저장되는 것, 클라우드 없이 실시간 영상을 직접 가져올 수 있는 것, AI 감지가 자체 하드웨어에서 실행되는 것, 제조사 계정 없이 일상적으로 조작할 수 있는 것입니다. 카메라는 이 중 일부만 갖추고 다른 것은 갖추지 못할 수 있습니다 — 이 가이드는 모호한 "로컬" 라벨 대신 각 브랜드를 이 네 가지 항목에서 별도로 평가합니다.' },
     ],
     sections: {
@@ -3879,8 +3879,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant 및 Frigate를 위한 최고의 로컬 보안 카메라(2027년)',
-      description: 'Home Assistant와 Frigate를 위한 2027년 최고의 로컬 보안 카메라: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro를 RTSP/ONVIF, 로컬 저장소, 구독 요건으로 비교.',
+      headline: 'Home Assistant 및 Frigate를 위한 최고의 로컬 보안 카메라(2026년)',
+      description: 'Home Assistant와 Frigate를 위한 2026년 최고의 로컬 보안 카메라: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro를 RTSP/ONVIF, 로컬 저장소, 구독 요건으로 비교.',
       url: 'https://www.promptquorum.com/ko/smart-home/best-local-security-cameras-2027',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

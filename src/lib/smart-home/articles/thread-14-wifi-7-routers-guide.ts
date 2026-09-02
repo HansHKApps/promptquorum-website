@@ -7,10 +7,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-en.webp',
-    title: 'Thread and Wi-Fi 7 Routers for Smart Homes (2027)',
-    seoTitle: 'Thread + Wi-Fi 7 Routers for Smart Homes (2027)',
+    title: 'Thread and Wi-Fi 7 Routers for Smart Homes (2026)',
+    seoTitle: 'Thread + Wi-Fi 7 Routers for Smart Homes (2026)',
     // Thread version confirmed 2026-07-16 directly against threadgroup.org: Thread 1.4.0 (Sept 2024)
     // is current, sole Border Router certification path since Jan 1, 2026. Wi-Fi 7 (802.11be) remains
     // the current mainstream standard; Wi-Fi 8 (802.11bn) isn't ratified yet (targeted 2028), though
@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A smart home\'s networking layer needs two things: a Thread border router for low-power mesh devices (sensors, locks, some lighting), and enough Wi-Fi bandwidth/low latency for cameras and voice. Thread 1.4.0 and Wi-Fi 7 (802.11be) are both current, real specifications — but which specific router chipsets and models actually ship both, and at what price, is not covered here; that needs a dedicated hardware-sourcing pass rather than a spec-version check. This guide explains what to look for rather than naming unverified current models.',
     metaDescription:
-      "Thread border routers and Wi-Fi 7 networking for smart homes in 2027: what actually matters for camera/voice bandwidth and Thread mesh coverage.",
+      "Thread border routers and Wi-Fi 7 networking for smart homes in 2026: what actually matters for camera/voice bandwidth and Thread mesh coverage.",
     twitterDescription:
       'What smart home networking actually needs: a Thread border router for mesh devices, and enough Wi-Fi bandwidth for cameras and voice — not every marketing feature matters.',
     readTime: '7 min read',
@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Thread and Wi-Fi 7 Routers for Smart Homes (2027)',
+      headline: 'Thread and Wi-Fi 7 Routers for Smart Homes (2026)',
       description: 'Thread border routers and Wi-Fi networking for smart homes: what actually matters for camera/voice bandwidth and Thread mesh coverage.',
       url: 'https://www.promptquorum.com/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'en',
@@ -165,14 +165,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-de.webp',
-    title: 'Thread und Wi-Fi-7-Router für Smart Homes (2027)',
-    seoTitle: 'Thread + Wi-Fi-7-Router für Smart Homes (2027)',
+    title: 'Thread und Wi-Fi-7-Router für Smart Homes (2026)',
+    seoTitle: 'Thread + Wi-Fi-7-Router für Smart Homes (2026)',
     intro:
       'Die Netzwerkschicht eines Smart Homes braucht zwei Dinge: einen Thread-Border-Router für stromsparende Mesh-Geräte (Sensoren, Schlösser, manche Beleuchtung) und genug Wi-Fi-Bandbreite/niedrige Latenz für Kameras und Sprachassistenten. Thread 1.4.0 und Wi-Fi 7 (802.11be) sind beide aktuelle, reale Spezifikationen — aber welche konkreten Router-Chipsätze und Modelle beides tatsächlich bieten, und zu welchem Preis, wird hier nicht behandelt; das erfordert eine eigene Hardware-Recherche statt einer Spezifikationsprüfung. Dieser Leitfaden erklärt, worauf zu achten ist, statt unverifizierte aktuelle Modelle zu nennen.',
     metaDescription:
-      'Thread-Border-Router und Wi-Fi-7-Netzwerke für Smart Homes in 2027: was für Kamera-/Sprach-Bandbreite und Thread-Mesh-Abdeckung tatsächlich zählt.',
+      'Thread-Border-Router und Wi-Fi-7-Netzwerke für Smart Homes in 2026: was für Kamera-/Sprach-Bandbreite und Thread-Mesh-Abdeckung tatsächlich zählt.',
     twitterDescription:
       'Was Smart-Home-Netzwerke wirklich brauchen: einen Thread-Border-Router für Mesh-Geräte und genug Wi-Fi-Bandbreite für Kameras und Sprache — nicht jedes Marketing-Feature zählt.',
     readTime: '7 Min. Lesezeit',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Thread und Wi-Fi-7-Router für Smart Homes (2027)',
+      headline: 'Thread und Wi-Fi-7-Router für Smart Homes (2026)',
       description: 'Thread-Border-Router und Wi-Fi-Netzwerke für Smart Homes: was für Kamera-/Sprach-Bandbreite und Thread-Mesh-Abdeckung tatsächlich zählt.',
       url: 'https://www.promptquorum.com/de/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'de',
@@ -317,14 +317,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-fr.webp',
-    title: 'Thread et routeurs Wi-Fi 7 pour maisons connectées (2027)',
-    seoTitle: 'Thread + routeurs Wi-Fi 7 pour maisons connectées (2027)',
+    title: 'Thread et routeurs Wi-Fi 7 pour maisons connectées (2026)',
+    seoTitle: 'Thread + routeurs Wi-Fi 7 pour maisons connectées (2026)',
     intro:
       "La couche réseau d'une maison connectée a besoin de deux choses : un routeur frontalier Thread pour les appareils maillés à faible consommation (capteurs, serrures, certains éclairages), et suffisamment de bande passante Wi-Fi/faible latence pour les caméras et la voix. Thread 1.4.0 et le Wi-Fi 7 (802.11be) sont tous deux des spécifications actuelles et réelles — mais quels chipsets et modèles de routeurs spécifiques offrent réellement les deux, et à quel prix, n'est pas couvert ici ; cela nécessite une recherche matérielle dédiée plutôt qu'une vérification de version de spécification. Ce guide explique ce qu'il faut rechercher plutôt que de nommer des modèles actuels non vérifiés.",
     metaDescription:
-      "Routeurs frontaliers Thread et réseau Wi-Fi 7 pour maisons connectées en 2027 : ce qui compte réellement pour la bande passante caméra/voix et la couverture maillée Thread.",
+      "Routeurs frontaliers Thread et réseau Wi-Fi 7 pour maisons connectées en 2026 : ce qui compte réellement pour la bande passante caméra/voix et la couverture maillée Thread.",
     twitterDescription:
       "Ce dont un réseau de maison connectée a réellement besoin : un routeur frontalier Thread pour les appareils maillés, et suffisamment de bande passante Wi-Fi pour les caméras et la voix — toutes les fonctionnalités marketing ne comptent pas.",
     readTime: '7 min de lecture',
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Thread et routeurs Wi-Fi 7 pour maisons connectées (2027)',
+      headline: 'Thread et routeurs Wi-Fi 7 pour maisons connectées (2026)',
       description: "Routeurs frontaliers Thread et réseau Wi-Fi pour maisons connectées : ce qui compte réellement pour la bande passante caméra/voix et la couverture maillée Thread.",
       url: 'https://www.promptquorum.com/fr/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'fr',
@@ -469,14 +469,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-ja.webp',
-    title: 'スマートホーム向けThreadとWi-Fi 7ルーター（2027年）',
-    seoTitle: 'スマートホーム向けThread + Wi-Fi 7ルーター（2027年）',
+    title: 'スマートホーム向けThreadとWi-Fi 7ルーター（2026年）',
+    seoTitle: 'スマートホーム向けThread + Wi-Fi 7ルーター（2026年）',
     intro:
       'スマートホームのネットワーク層には2つのものが必要です：低電力メッシュデバイス（センサー、ロック、一部の照明）向けのThreadボーダールーターと、カメラや音声のための十分なWi-Fi帯域幅/低遅延です。Thread 1.4.0とWi-Fi 7（802.11be）はどちらも現行の実際の仕様ですが、具体的にどのルーターチップセットやモデルが両方を実際にサポートしていて、いくらなのかはここでは扱いません — それは仕様バージョンの確認ではなく、専用のハードウェア調達作業が必要です。このガイドは未検証の現行モデルを名指しするのではなく、何を確認すべきかを説明します。',
     metaDescription:
-      '2027年のスマートホーム向けThreadボーダールーターとWi-Fi 7ネットワーク：カメラ/音声の帯域幅とThreadメッシュのカバレッジで実際に重要なこと。',
+      '2026年のスマートホーム向けThreadボーダールーターとWi-Fi 7ネットワーク：カメラ/音声の帯域幅とThreadメッシュのカバレッジで実際に重要なこと。',
     twitterDescription:
       'スマートホームのネットワークに本当に必要なもの：メッシュデバイス向けのThreadボーダールーターと、カメラと音声のための十分なWi-Fi帯域幅 — すべてのマーケティング機能が重要なわけではない。',
     readTime: '読了時間7分',
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'スマートホーム向けThreadとWi-Fi 7ルーター（2027年）',
+      headline: 'スマートホーム向けThreadとWi-Fi 7ルーター（2026年）',
       description: 'スマートホーム向けThreadボーダールーターとWi-Fiネットワーク：カメラ/音声の帯域幅とThreadメッシュのカバレッジで実際に重要なこと。',
       url: 'https://www.promptquorum.com/ja/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'ja',
@@ -621,14 +621,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-zh.webp',
-    title: '智能家居的Thread与Wi-Fi 7路由器（2027年）',
-    seoTitle: '智能家居Thread + Wi-Fi 7路由器（2027年）',
+    title: '智能家居的Thread与Wi-Fi 7路由器（2026年）',
+    seoTitle: '智能家居Thread + Wi-Fi 7路由器（2026年）',
     intro:
       '智能家居的网络层需要两样东西：为低功耗网状设备（传感器、门锁、部分照明）提供的Thread边界路由器，以及为摄像头和语音提供足够的Wi-Fi带宽/低延迟。Thread 1.4.0和Wi-Fi 7（802.11be）都是当前真实存在的规范——但具体哪些路由器芯片组和型号真正同时支持两者，以及价格如何，本文不作介绍；这需要专门的硬件调研，而非规范版本核实。本指南解释应关注什么，而不是列举未经核实的现行型号。',
     metaDescription:
-      '2027年智能家居的Thread边界路由器与Wi-Fi 7网络：对摄像头/语音带宽和Thread网状覆盖真正重要的因素。',
+      '2026年智能家居的Thread边界路由器与Wi-Fi 7网络：对摄像头/语音带宽和Thread网状覆盖真正重要的因素。',
     twitterDescription:
       '智能家居网络真正需要什么：为网状设备提供的Thread边界路由器，以及为摄像头和语音提供足够的Wi-Fi带宽——并非每一项营销功能都同样重要。',
     readTime: '阅读需7分钟',
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '智能家居的Thread与Wi-Fi 7路由器（2027年）',
+      headline: '智能家居的Thread与Wi-Fi 7路由器（2026年）',
       description: '智能家居的Thread边界路由器与Wi-Fi网络：对摄像头/语音带宽和Thread网状覆盖真正重要的因素。',
       url: 'https://www.promptquorum.com/zh/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'zh',
@@ -773,14 +773,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-es.webp',
-    title: 'Thread y routers Wi-Fi 7 para hogares inteligentes (2027)',
-    seoTitle: 'Thread + routers Wi-Fi 7 para hogares inteligentes (2027)',
+    title: 'Thread y routers Wi-Fi 7 para hogares inteligentes (2026)',
+    seoTitle: 'Thread + routers Wi-Fi 7 para hogares inteligentes (2026)',
     intro:
       'La capa de red de un hogar inteligente necesita dos cosas: un router frontera Thread para dispositivos en malla de bajo consumo (sensores, cerraduras, algo de iluminación), y suficiente ancho de banda Wi-Fi/baja latencia para cámaras y voz. Thread 1.4.0 y Wi-Fi 7 (802.11be) son ambas especificaciones actuales y reales — pero qué chipsets y modelos de router específicos realmente ofrecen ambos, y a qué precio, no se cubre aquí; eso requiere una investigación de hardware dedicada en lugar de una verificación de versión de especificación. Esta guía explica qué buscar en lugar de nombrar modelos actuales no verificados.',
     metaDescription:
-      'Routers frontera Thread y redes Wi-Fi 7 para hogares inteligentes en 2027: lo que realmente importa para el ancho de banda de cámara/voz y la cobertura de malla Thread.',
+      'Routers frontera Thread y redes Wi-Fi 7 para hogares inteligentes en 2026: lo que realmente importa para el ancho de banda de cámara/voz y la cobertura de malla Thread.',
     twitterDescription:
       'Lo que la red de un hogar inteligente realmente necesita: un router frontera Thread para dispositivos en malla, y suficiente ancho de banda Wi-Fi para cámaras y voz — no toda característica de marketing importa.',
     readTime: '7 min de lectura',
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Thread y routers Wi-Fi 7 para hogares inteligentes (2027)',
+      headline: 'Thread y routers Wi-Fi 7 para hogares inteligentes (2026)',
       description: 'Routers frontera Thread y redes Wi-Fi para hogares inteligentes: lo que realmente importa para el ancho de banda de cámara/voz y la cobertura de malla Thread.',
       url: 'https://www.promptquorum.com/es/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'es',
@@ -925,14 +925,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-pt.webp',
-    title: 'Thread e roteadores Wi-Fi 7 para casas inteligentes (2027)',
-    seoTitle: 'Thread + roteadores Wi-Fi 7 para casas inteligentes (2027)',
+    title: 'Thread e roteadores Wi-Fi 7 para casas inteligentes (2026)',
+    seoTitle: 'Thread + roteadores Wi-Fi 7 para casas inteligentes (2026)',
     intro:
       'A camada de rede de uma casa inteligente precisa de duas coisas: um roteador de fronteira Thread para dispositivos em malha de baixo consumo (sensores, fechaduras, alguma iluminação), e largura de banda Wi-Fi/baixa latência suficiente para câmeras e voz. O Thread 1.4.0 e o Wi-Fi 7 (802.11be) são ambas especificações atuais e reais — mas quais chipsets e modelos de roteador específicos realmente oferecem ambos, e a que preço, não é abordado aqui; isso requer uma pesquisa de hardware dedicada em vez de uma verificação de versão de especificação. Este guia explica o que procurar em vez de nomear modelos atuais não verificados.',
     metaDescription:
-      'Roteadores de fronteira Thread e redes Wi-Fi 7 para casas inteligentes em 2027: o que realmente importa para a largura de banda de câmera/voz e a cobertura de malha Thread.',
+      'Roteadores de fronteira Thread e redes Wi-Fi 7 para casas inteligentes em 2026: o que realmente importa para a largura de banda de câmera/voz e a cobertura de malha Thread.',
     twitterDescription:
       'O que a rede de uma casa inteligente realmente precisa: um roteador de fronteira Thread para dispositivos em malha, e largura de banda Wi-Fi suficiente para câmeras e voz — nem todo recurso de marketing importa.',
     readTime: '7 min de leitura',
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Thread e roteadores Wi-Fi 7 para casas inteligentes (2027)',
+      headline: 'Thread e roteadores Wi-Fi 7 para casas inteligentes (2026)',
       description: 'Roteadores de fronteira Thread e redes Wi-Fi para casas inteligentes: o que realmente importa para a largura de banda de câmera/voz e a cobertura de malha Thread.',
       url: 'https://www.promptquorum.com/pt/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'pt-BR',
@@ -1077,14 +1077,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-ar.webp',
-    title: 'Thread وأجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2027⁩)',
-    seoTitle: 'Thread + أجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2027⁩)',
+    title: 'Thread وأجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2026⁩)',
+    seoTitle: 'Thread + أجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2026⁩)',
     intro:
       'تحتاج طبقة الشبكة في المنزل الذكي إلى أمرين: موجّه حدودي Thread للأجهزة الشبكية منخفضة الطاقة (أجهزة الاستشعار، الأقفال، بعض الإضاءة)، وعرض نطاق Wi-Fi كافٍ/زمن استجابة منخفض للكاميرات والصوت. كلا من Thread 1.4.0 وWi-Fi 7 (802.11be) هما مواصفتان حاليتان وحقيقيتان — لكن أي مجموعات شرائح وموديلات أجهزة توجيه محددة تدعم كلاهما فعليًا، وبأي سعر، لا يُغطى هنا؛ يتطلب ذلك بحثًا مخصصًا في الأجهزة بدلًا من التحقق من إصدار المواصفة. يشرح هذا الدليل ما يجب البحث عنه بدلًا من ذكر موديلات حالية غير موثقة.',
     metaDescription:
-      'موجّهات Thread الحدودية وشبكات Wi-Fi 7 للمنازل الذكية في 2027: ما يهم فعليًا لعرض نطاق الكاميرا/الصوت وتغطية شبكة Thread.',
+      'موجّهات Thread الحدودية وشبكات Wi-Fi 7 للمنازل الذكية في 2026: ما يهم فعليًا لعرض نطاق الكاميرا/الصوت وتغطية شبكة Thread.',
     twitterDescription:
       'ما تحتاجه شبكة المنزل الذكي فعليًا: موجّه حدودي Thread للأجهزة الشبكية، وعرض نطاق Wi-Fi كافٍ للكاميرات والصوت — ليست كل ميزة تسويقية مهمة.',
     readTime: '7 دقائق للقراءة',
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Thread وأجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2027⁩)',
+      headline: 'Thread وأجهزة توجيه Wi-Fi 7 للمنازل الذكية (⁨2026⁩)',
       description: 'موجّهات Thread الحدودية وشبكات Wi-Fi للمنازل الذكية: ما يهم فعليًا لعرض نطاق الكاميرا/الصوت وتغطية شبكة Thread.',
       url: 'https://www.promptquorum.com/ar/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'ar',
@@ -1229,14 +1229,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/thread-14-wifi-7-routers-guide-overview-hero-ko.webp',
-    title: '스마트홈을 위한 Thread와 Wi-Fi 7 라우터 (2027년)',
-    seoTitle: '스마트홈용 Thread + Wi-Fi 7 라우터 (2027년)',
+    title: '스마트홈을 위한 Thread와 Wi-Fi 7 라우터 (2026년)',
+    seoTitle: '스마트홈용 Thread + Wi-Fi 7 라우터 (2026년)',
     intro:
       '스마트홈의 네트워킹 계층에는 두 가지가 필요합니다: 저전력 메시 기기(센서, 잠금장치, 일부 조명)를 위한 Thread 경계 라우터, 그리고 카메라와 음성을 위한 충분한 Wi-Fi 대역폭/낮은 지연 시간입니다. Thread 1.4.0과 Wi-Fi 7(802.11be)은 둘 다 현재 실제로 존재하는 사양이지만, 구체적으로 어떤 라우터 칩셋과 모델이 실제로 둘 다를 지원하는지, 그리고 가격은 얼마인지는 여기서 다루지 않습니다 — 이는 사양 버전 확인이 아니라 전용 하드웨어 조사 작업이 필요합니다. 이 가이드는 검증되지 않은 현재 모델을 명시하는 대신 무엇을 확인해야 하는지 설명합니다.',
     metaDescription:
-      '2027년 스마트홈을 위한 Thread 경계 라우터와 Wi-Fi 7 네트워킹: 카메라/음성 대역폭과 Thread 메시 커버리지에 실제로 중요한 것.',
+      '2026년 스마트홈을 위한 Thread 경계 라우터와 Wi-Fi 7 네트워킹: 카메라/음성 대역폭과 Thread 메시 커버리지에 실제로 중요한 것.',
     twitterDescription:
       '스마트홈 네트워킹이 실제로 필요로 하는 것: 메시 기기를 위한 Thread 경계 라우터, 그리고 카메라와 음성을 위한 충분한 Wi-Fi 대역폭 — 모든 마케팅 기능이 중요한 것은 아닙니다.',
     readTime: '7분 소요',
@@ -1350,7 +1350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '스마트홈을 위한 Thread와 Wi-Fi 7 라우터 (2027년)',
+      headline: '스마트홈을 위한 Thread와 Wi-Fi 7 라우터 (2026년)',
       description: '스마트홈을 위한 Thread 경계 라우터와 Wi-Fi 네트워킹: 카메라/음성 대역폭과 Thread 메시 커버리지에 실제로 중요한 것.',
       url: 'https://www.promptquorum.com/ko/smart-home/thread-14-wifi-7-routers-guide',
       inLanguage: 'ko',

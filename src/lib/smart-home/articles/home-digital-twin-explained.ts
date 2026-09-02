@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-en.webp',
-    title: 'Home Digital Twin Explained (2027)',
-    seoTitle: 'Home Digital Twin Explained (2027)',
+    title: 'Home Digital Twin Explained (2026)',
+    seoTitle: 'Home Digital Twin Explained (2026)',
     intro:
       'A home digital twin is a live, unified model of your home\'s state — every device, sensor reading, and occupancy signal combined into one representation an automation or local LLM can reason over, rather than checking each entity individually. This is an emerging pattern built on top of existing Home Assistant entities and sensor fusion, not an established off-the-shelf product category — this article scopes what\'s realistically achievable today versus what remains conceptual.',
     metaDescription:
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Digital Twin Explained (2027)',
+      headline: 'Home Digital Twin Explained (2026)',
       description: "Home digital twin explained: a live, unified model of your home's state that automations and a local LLM can reason over, built on existing Home Assistant data.",
       url: 'https://www.promptquorum.com/smart-home/home-digital-twin-explained',
       inLanguage: 'en',
@@ -168,8 +168,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-de.webp',
-    title: 'Home Digital Twin erklärt (2027)',
-    seoTitle: 'Home Digital Twin erklärt (2027)',
+    title: 'Home Digital Twin erklärt (2026)',
+    seoTitle: 'Home Digital Twin erklärt (2026)',
     intro:
       'Ein Home Digital Twin ist ein live aktualisiertes, einheitliches Modell des Zustands deines Zuhauses — jedes Gerät, jeder Sensorwert und jedes Anwesenheitssignal wird zu einer einzigen Darstellung zusammengeführt, über die eine Automatisierung oder ein lokales LLM nachdenken kann, statt jede Entität einzeln zu prüfen. Dies ist ein aufkommendes Muster, das auf bestehenden Home-Assistant-Entitäten und Sensorfusion aufbaut, keine etablierte Produktkategorie von der Stange — dieser Artikel grenzt ab, was heute realistisch erreichbar ist, gegenüber dem, was noch konzeptionell bleibt.',
     metaDescription:
@@ -296,7 +296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Digital Twin erklärt (2027)',
+      headline: 'Home Digital Twin erklärt (2026)',
       description: 'Home Digital Twin erklärt: ein live aktualisiertes, einheitliches Modell des Zustands deines Zuhauses, über das Automatisierungen und ein lokales LLM nachdenken können, aufbauend auf bestehenden Home-Assistant-Daten.',
       url: 'https://www.promptquorum.com/de/smart-home/home-digital-twin-explained',
       inLanguage: 'de',
@@ -327,8 +327,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-fr.webp',
-    title: 'Jumeau numérique de la maison expliqué (2027)',
-    seoTitle: 'Jumeau numérique de la maison expliqué (2027)',
+    title: 'Jumeau numérique de la maison expliqué (2026)',
+    seoTitle: 'Jumeau numérique de la maison expliqué (2026)',
     intro:
       "Un jumeau numérique de la maison est un modèle unifié et en temps réel de l'état de votre maison — chaque appareil, chaque relevé de capteur et chaque signal de présence combinés en une seule représentation qu'une automatisation ou un LLM local peut exploiter, plutôt que de vérifier chaque entité individuellement. Il s'agit d'un modèle émergent construit sur les entités Home Assistant existantes et la fusion de capteurs, pas d'une catégorie de produit établie et prête à l'emploi — cet article délimite ce qui est réalistement atteignable aujourd'hui par rapport à ce qui reste conceptuel.",
     metaDescription:
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Jumeau numérique de la maison expliqué (2027)',
+      headline: 'Jumeau numérique de la maison expliqué (2026)',
       description: "Jumeau numérique de la maison expliqué : un modèle unifié et en temps réel de l'état de votre maison, que les automatisations et un LLM local peuvent exploiter, construit sur les données Home Assistant existantes.",
       url: 'https://www.promptquorum.com/fr/smart-home/home-digital-twin-explained',
       inLanguage: 'fr',
@@ -486,8 +486,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-ja.webp',
-    title: 'ホームデジタルツインを解説（2027年）',
-    seoTitle: 'ホームデジタルツインを解説（2027年）',
+    title: 'ホームデジタルツインを解説（2026年）',
+    seoTitle: 'ホームデジタルツインを解説（2026年）',
     intro:
       'ホームデジタルツインとは、家のあらゆるデバイス、センサーの値、在室状況の信号をひとつの表現にまとめた、ライブで統一的な家の状態モデルであり、オートメーションやローカルLLMが各エンティティを個別に確認する代わりにまとめて推論できるようにするものです。これは既存のHome Assistantエンティティとセンサーフュージョンの上に構築される新興のパターンであり、確立された既製の製品カテゴリではありません — この記事では、今日現実的に実現可能なことと、まだ概念にとどまっていることの範囲を明確にします。',
     metaDescription:
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'ホームデジタルツインを解説（2027年）',
+      headline: 'ホームデジタルツインを解説（2026年）',
       description: 'ホームデジタルツインを解説：オートメーションやローカルLLMが推論に使える、既存のHome Assistantデータをもとにしたライブで統一的な家の状態モデル。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-digital-twin-explained',
       inLanguage: 'ja',
@@ -645,8 +645,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-zh.webp',
-    title: '家庭数字孪生详解（2027年）',
-    seoTitle: '家庭数字孪生详解（2027年）',
+    title: '家庭数字孪生详解（2026年）',
+    seoTitle: '家庭数字孪生详解（2026年）',
     intro:
       '家庭数字孪生是你家中状态的实时统一模型——将每个设备、每个传感器读数和每个占用信号合并为单一表示，供自动化或本地LLM整体推理，而不是逐个检查每个实体。这是一种建立在现有Home Assistant实体和传感器融合之上的新兴模式，而不是一个成熟的现成产品类别——本文界定了今天实际可实现的内容，以及哪些仍停留在概念阶段。',
     metaDescription:
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '家庭数字孪生详解（2027年）',
+      headline: '家庭数字孪生详解（2026年）',
       description: '家庭数字孪生详解：一个实时统一的家庭状态模型，自动化和本地LLM可以据此推理，建立在现有的Home Assistant数据之上。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-digital-twin-explained',
       inLanguage: 'zh',
@@ -804,8 +804,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-es.webp',
-    title: 'Gemelo digital del hogar explicado (2027)',
-    seoTitle: 'Gemelo digital del hogar explicado (2027)',
+    title: 'Gemelo digital del hogar explicado (2026)',
+    seoTitle: 'Gemelo digital del hogar explicado (2026)',
     intro:
       'Un gemelo digital del hogar es un modelo unificado y en vivo del estado de tu casa — cada dispositivo, lectura de sensor y señal de ocupación combinados en una sola representación sobre la que una automatización o un LLM local puede razonar, en lugar de comprobar cada entidad individualmente. Se trata de un patrón emergente construido sobre las entidades de Home Assistant existentes y la fusión de sensores, no una categoría de producto establecida y lista para usar — este artículo delimita lo que hoy es realistamente alcanzable frente a lo que sigue siendo conceptual.',
     metaDescription:
@@ -932,7 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Gemelo digital del hogar explicado (2027)',
+      headline: 'Gemelo digital del hogar explicado (2026)',
       description: 'Gemelo digital del hogar explicado: un modelo unificado y en vivo del estado de tu casa sobre el que las automatizaciones y un LLM local pueden razonar, construido sobre datos existentes de Home Assistant.',
       url: 'https://www.promptquorum.com/es/smart-home/home-digital-twin-explained',
       inLanguage: 'es',
@@ -963,8 +963,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-pt.webp',
-    title: 'Gêmeo digital da casa explicado (2027)',
-    seoTitle: 'Gêmeo digital da casa explicado (2027)',
+    title: 'Gêmeo digital da casa explicado (2026)',
+    seoTitle: 'Gêmeo digital da casa explicado (2026)',
     intro:
       'Um gêmeo digital da casa é um modelo unificado e ao vivo do estado da sua casa — cada dispositivo, leitura de sensor e sinal de ocupação combinados em uma única representação sobre a qual uma automação ou um LLM local pode raciocinar, em vez de verificar cada entidade individualmente. Este é um padrão emergente construído sobre as entidades já existentes do Home Assistant e a fusão de sensores, não uma categoria de produto estabelecida e pronta para uso — este artigo delimita o que é realisticamente alcançável hoje em comparação com o que ainda é conceitual.',
     metaDescription:
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Gêmeo digital da casa explicado (2027)',
+      headline: 'Gêmeo digital da casa explicado (2026)',
       description: 'Gêmeo digital da casa explicado: um modelo unificado e ao vivo do estado da sua casa sobre o qual automações e um LLM local podem raciocinar, construído sobre dados já existentes do Home Assistant.',
       url: 'https://www.promptquorum.com/pt/smart-home/home-digital-twin-explained',
       inLanguage: 'pt-BR',
@@ -1122,8 +1122,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-ar.webp',
-    title: 'شرح التوأم الرقمي للمنزل (⁨2027⁩)',
-    seoTitle: 'شرح التوأم الرقمي للمنزل (⁨2027⁩)',
+    title: 'شرح التوأم الرقمي للمنزل (⁨2026⁩)',
+    seoTitle: 'شرح التوأم الرقمي للمنزل (⁨2026⁩)',
     intro:
       'التوأم الرقمي للمنزل هو نموذج حي وموحّد لحالة منزلك — يجمع كل جهاز، وقراءة حساس، وإشارة إشغال في تمثيل واحد يمكن لأتمتة أو نموذج لغوي محلي كبير أن يفكر فيه بدلاً من التحقق من كل كيان على حدة. هذا نمط ناشئ مبني فوق كيانات Home Assistant الحالية ودمج الحساسات، وليس فئة منتج جاهزة ومستقرة — يحدد هذا المقال ما هو قابل للتحقيق واقعيًا اليوم مقابل ما يظل مفاهيميًا.',
     metaDescription:
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'شرح التوأم الرقمي للمنزل (⁨2027⁩)',
+      headline: 'شرح التوأم الرقمي للمنزل (⁨2026⁩)',
       description: 'شرح التوأم الرقمي للمنزل: نموذج حي وموحّد لحالة منزلك يمكن للأتمتة ونموذج لغوي محلي كبير التفكير فيه، مبني على بيانات Home Assistant الحالية.',
       url: 'https://www.promptquorum.com/ar/smart-home/home-digital-twin-explained',
       inLanguage: 'ar',
@@ -1281,8 +1281,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/home-digital-twin-explained-overview-hero-ko.webp',
-    title: '홈 디지털 트윈 해설 (2027년)',
-    seoTitle: '홈 디지털 트윈 해설 (2027년)',
+    title: '홈 디지털 트윈 해설 (2026년)',
+    seoTitle: '홈 디지털 트윈 해설 (2026년)',
     intro:
       '홈 디지털 트윈이란 집의 상태를 실시간으로 통합한 모델로, 모든 기기, 센서 값, 재실 신호를 하나의 표현으로 결합하여 자동화나 로컬 LLM이 각 엔티티를 개별적으로 확인하는 대신 한꺼번에 추론할 수 있게 해줍니다. 이는 기존 Home Assistant 엔티티와 센서 퓨전 위에 구축되는 신흥 패턴이지 확립된 기성 제품 카테고리가 아닙니다 — 이 글은 오늘날 현실적으로 달성 가능한 것과 여전히 개념적인 것의 범위를 구분합니다.',
     metaDescription:
@@ -1409,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '홈 디지털 트윈 해설 (2027년)',
+      headline: '홈 디지털 트윈 해설 (2026년)',
       description: '홈 디지털 트윈 해설: 자동화와 로컬 LLM이 추론에 활용할 수 있는, 기존 Home Assistant 데이터를 기반으로 한 실시간 통합 홈 상태 모델.',
       url: 'https://www.promptquorum.com/ko/smart-home/home-digital-twin-explained',
       inLanguage: 'ko',
