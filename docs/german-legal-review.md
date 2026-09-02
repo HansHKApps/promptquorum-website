@@ -4,6 +4,7 @@
 **Jurisdiction:** German primary (UWG, DDG, DSGVO, MStV); EU secondary (UCPD, DSA)  
 **Status:** READ-ONLY pattern review — no files edited. All proposed rewrites are suggestions only.  
 **⚠️ This is a pattern audit, NOT legal advice. Any borderline item should be reviewed by a German Medienrecht / Wettbewerbsrecht lawyer before going live.**
+**Repeatable version (added 2026-09-02):** the `risk-checker` skill (`~/.claude/skills/risk-checker/SKILL.md`) runs this review on any article file, all 9 locales, and is mandatory for every new article (GEO Rule 35b) and every page-updater run (Step 5.7). Site-wide regex triage: `npm run risk:scan`.
 
 ---
 

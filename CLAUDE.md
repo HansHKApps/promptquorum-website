@@ -8,6 +8,8 @@ Before writing or editing any user-facing text on this website, read and apply t
 
 **`docs/ARTICLE_SCAFFOLD_2026.md`** — canonical field order, required schema fields, and localized FAQ titles for all new articles. Check this before writing any new article to avoid repeating the defects fixed in the June 2026 GEO audit.
 
+**Risk gate (mandatory):** every new article and every page-updater run must pass the `risk-checker` skill (`/risk-checker <article file>`) before commit — GEO Rule 35b and `docs/PAGE_UPDATER.md` Step 5.7. `BLOCK` never ships. Site-wide triage: `npm run risk:scan`.
+
 Summary of non-negotiable rules:
 - **Answer-first:** Lead every section with the direct answer or key fact. Explanation follows.
 - **Structure:** Use H2/H3 headings, bullet lists, short paragraphs (≤3 sentences each).
