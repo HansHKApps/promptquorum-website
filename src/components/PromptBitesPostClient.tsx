@@ -138,6 +138,30 @@ const RELATED_BITES_LABEL: Partial<Record<Language, string>> = {
   ko: '관련 프롬프트 요점',
 }
 
+const SNIPPET_ONE_SENTENCE: Partial<Record<Language, string>> = {
+  en: '📍 In One Sentence',
+  de: '📍 In einem Satz',
+  fr: '📍 En une phrase',
+  ja: '📍 一文で説明',
+  zh: '📍 简单一句话',
+  es: '📍 En una frase',
+  pt: '📍 Em uma frase',
+  ar: '📍 بجملة واحدة',
+  ko: '📍 한 문장으로',
+}
+
+const SNIPPET_PLAIN_TERMS: Partial<Record<Language, string>> = {
+  en: '💬 In Plain Terms',
+  de: '💬 In einfachen Worten',
+  fr: '💬 En termes simples',
+  ja: '💬 簡潔に説明',
+  zh: '💬 简单来说',
+  es: '💬 En términos simples',
+  pt: '💬 Em termos simples',
+  ar: '💬 بعبارات بسيطة',
+  ko: '💬 쉽게 설명하면',
+}
+
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
   Beginner:     { en: 'Beginner',     de: 'Einsteiger',      fr: 'Débutant',      ja: '初級', zh: '初级', es: 'Principiante', pt: 'Iniciante',     ar: 'مبتدئ',  ko: '초보자' }, // VERIFY
   Intermediate: { en: 'Intermediate', de: 'Fortgeschritten', fr: 'Intermédiaire', ja: '中級', zh: '中级', es: 'Intermedio',    pt: 'Intermediário', ar: 'متوسط',  ko: '기초 이해' }, // VERIFY
@@ -281,6 +305,23 @@ function BodySection({ section, lang }: { section: LLMSection; lang: Language })
       ))}
       {section.rows && section.columns && (
         <SectionTable rows={section.rows} columns={section.columns} />
+      )}
+      {section.snippetBlocks && section.snippetBlocks.length > 0 && (
+        <div className="space-y-3 my-6">
+          {section.snippetBlocks.map((snippet, i) => (
+            <div key={i} className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">
+                {snippet.type === 'one-sentence'
+                  ? (SNIPPET_ONE_SENTENCE[lang] ?? SNIPPET_ONE_SENTENCE['en'])
+                  : (SNIPPET_PLAIN_TERMS[lang] ?? SNIPPET_PLAIN_TERMS['en'])}
+              </p>
+              <p
+                className="text-text-secondary text-sm leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: mdLinksToHtml(snippet.text) }}
+              />
+            </div>
+          ))}
+        </div>
       )}
       {section.items && section.items.length > 0 && (
         <ul className="space-y-2 mt-3">
@@ -489,6 +530,16 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
         <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-3 leading-tight">
           {article.title}
         </h1>
+
+        {/* Lead Answer Block — canonical definition for AI crawlers */}
+        {article.leadAnswerBlock && (
+          <div className="bg-primary/5 border-l-4 border-primary rounded-r-xl px-5 py-4 mb-6">
+            <p
+              className="text-text-primary font-semibold leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: mdLinksToHtml(article.leadAnswerBlock) }}
+            />
+          </div>
+        )}
 
         {/* Last updated date */}
         {((article as any).dateModified ?? (article as any).publishDate) && (
