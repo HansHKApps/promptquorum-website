@@ -174,6 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[On-Prem Air-Gapped Local LLM](/local-llms/on-prem-air-gapped-local-llm) -- Maximum security for classified data.',
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) -- Production deployment with compliance controls.',
             '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- Compliance verification steps.',
+            '[SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments](/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- deep dive into Trust Services Criteria and Annex A controls beyond this GDPR/HIPAA/SOC2 overview.',
             '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
           ],
         },
@@ -449,6 +450,7 @@ schema: {
             '[LLM local en instalaciones propias con air gap](/es/local-llms/on-prem-air-gapped-local-llm) -- Máxima seguridad para datos clasificados.',
             '[Escalado de LLMs locales en la empresa](/es/local-llms/scaling-local-llms-enterprise) -- Despliegue en producción con controles de cumplimiento.',
             '[Lista de verificación de seguridad y privacidad de LLMs locales](/es/local-llms/local-llm-security-privacy-checklist) -- Pasos de verificación del cumplimiento.',
+            '[Preparación SOC 2 e ISO 27001 para LLMs autoalojados](/es/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- análisis profundo de los Trust Services Criteria y los controles Annex A.',
           ],
         },
         sources: {
@@ -723,6 +725,7 @@ schema: {
             '[LLM محلي داخل المنشأة بعزل شبكي](/ar/local-llms/on-prem-air-gapped-local-llm) -- أقصى أمن للبيانات المصنّفة.',
             '[توسيع نماذج LLM المحلية في المؤسسات](/ar/local-llms/scaling-local-llms-enterprise) -- النشر في الإنتاج بضوابط الامتثال.',
             '[قائمة تحقق أمن وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) -- خطوات التحقق من الامتثال.',
+            '[الاستعداد لتدقيق SOC 2 وISO 27001 لنماذج LLM المستضافة ذاتيًا](/ar/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- تعمّق في معايير Trust Services وضوابط Annex A.',
           ],
         },
         sources: {
@@ -967,6 +970,7 @@ schema: {
           items: [
             '[RAG corporativo com LLMs locais](/pt/local-llms/corporate-rag-local-llms) -- Governança de documentos.',
             '[Por que empresas usam LLMs locais](/pt/local-llms/why-enterprises-use-local-llms) -- Caso de negócio.',
+            '[SOC 2 e ISO 27001: preparação de auditoria para LLMs auto-hospedados](/pt/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- aprofundamento nos Trust Services Criteria e controles Annex A.',
           ],
         },
         sources: {
@@ -1187,6 +1191,7 @@ schema: {
             '[On-Prem Air-Gapped Local LLM](/de/local-llms/on-prem-air-gapped-local-llm) -- Maximale Sicherheit für klassifizierte Daten.',
             '[Scaling Local LLMs Enterprise](/de/local-llms/scaling-local-llms-enterprise) -- Produktionsdeployment mit Compliance-Kontrollen.',
             '[Local LLM Security & Privacy Checklist](/de/local-llms/local-llm-security-privacy-checklist) -- Compliance-Überprüfungsschritte.',
+            '[SOC 2 & ISO 27001: Audit-Bereitschaft für selbst gehostete LLMs](/de/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- vertiefende Betrachtung der Trust Services Criteria und Annex-A-Kontrollen.',
           ],
         },
         sources: {
@@ -1404,6 +1409,7 @@ schema: {
             '[Local LLM Air-Gappé On-Prem](/fr/local-llms/on-prem-air-gapped-local-llm) -- Sécurité maximale pour données classifiées.',
             '[Mise à l\'échelle des Local LLMs Entreprise](/fr/local-llms/scaling-local-llms-enterprise) -- Déploiement en production avec contrôles de conformité.',
             '[Liste de contrôle Sécurité & Confidentialité Local LLM](/fr/local-llms/local-llm-security-privacy-checklist) -- Étapes de vérification de conformité.',
+            '[SOC 2 et ISO 27001 : préparer un déploiement de LLM auto-hébergé](/fr/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- approfondissement des Trust Services Criteria et des contrôles Annex A.',
           ],
         },
         sources: {
@@ -1617,6 +1623,7 @@ schema: {
             '[On-Prem Air-Gapped Local LLM](/ja/local-llms/on-prem-air-gapped-local-llm) -- 機密データの最大セキュリティ。',
             '[Scaling Local LLMs Enterprise](/ja/local-llms/scaling-local-llms-enterprise) -- コンプライアンスコントロール付き本番展開。',
             '[Local LLM Security & Privacy Checklist](/ja/local-llms/local-llm-security-privacy-checklist) -- コンプライアンス確認ステップ。',
+            '[セルフホストLLMのSOC 2・ISO 27001監査対応ガイド](/ja/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- Trust Services CriteriaとAnnex A統制を深掘り。',
           ],
         },
         sources: {
@@ -1829,6 +1836,7 @@ schema: {
             '[本地空气隔离 Local LLM](/zh/local-llms/on-prem-air-gapped-local-llm) -- 机密数据的最大安全性。',
             '[扩展企业 Local LLMs](/zh/local-llms/scaling-local-llms-enterprise) -- 具有合规控制的生产部署。',
             '[Local LLM 安全与隐私检查清单](/zh/local-llms/local-llm-security-privacy-checklist) -- 合规验证步骤。',
+            '[自托管LLM部署的SOC 2与ISO 27001审计准备指南](/zh/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- 深入解读Trust Services Criteria与Annex A控制项。',
           ],
         },
         sources: {
@@ -2045,6 +2053,7 @@ schema: {
             '[온프레미스 에어갭 로컬 LLM](/ko/local-llms/on-prem-air-gapped-local-llm) -- 기밀 데이터를 위한 최고 수준의 보안.',
             '[로컬 LLM 기업 확장](/ko/local-llms/scaling-local-llms-enterprise) -- 컴플라이언스 통제를 갖춘 프로덕션 배포.',
             '[로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) -- 컴플라이언스 검증 단계.',
+            '[셀프호스팅 LLM을 위한 SOC 2·ISO 27001 감사 준비 가이드](/ko/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- Trust Services Criteria와 Annex A 통제에 대한 심층 분석.',
             '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
           ],
         },

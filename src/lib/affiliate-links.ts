@@ -20,6 +20,7 @@ export type AffiliateCategory =
   | 'cooling'
   | 'laptop'
   | 'cloud-gpu'
+  | 'compliance-saas'
 
 export interface AffiliateProduct {
   /** Visible link text. */
@@ -50,6 +51,10 @@ export type AffiliateProductKey =
   | 'autodl-gpu-cloud'
   | 'alibaba-cloud-international'
   | 'tencent-cloud-ti'
+  // ── Compliance automation SaaS (SOC 2 / ISO 27001 readiness article) ────
+  | 'vanta-compliance-platform'
+  | 'drata-compliance-platform'
+  | 'secureframe-compliance-platform'
 
 export const AFFILIATE_PRODUCTS: Record<AffiliateProductKey, AffiliateProduct> = {
   // ── AMD desktop GPUs ─────────────────────────────────────────────────────
@@ -151,6 +156,31 @@ export const AFFILIATE_PRODUCTS: Record<AffiliateProductKey, AffiliateProduct> =
     vendor: 'Tencent Cloud',
     category: 'cloud-gpu',
     priceRange: 'From ¥3.5/hr (~$0.55/hr)', // VERIFY price — CNY rates
+  },
+
+  // ── Compliance automation SaaS — direct vendor links, no affiliate
+  //    program (see affiliate-writing SKILL.md "Product & Program Source
+  //    of Truth" — cloud/SaaS products link direct to the vendor) ─────────
+  'vanta-compliance-platform': {
+    label: 'Vanta compliance automation platform',
+    url: 'https://www.vanta.com',
+    vendor: 'Vanta',
+    category: 'compliance-saas',
+    priceRange: 'Custom pricing — contact sales', // VERIFY — Vanta does not publish list pricing
+  },
+  'drata-compliance-platform': {
+    label: 'Drata compliance automation platform',
+    url: 'https://drata.com',
+    vendor: 'Drata',
+    category: 'compliance-saas',
+    priceRange: 'Custom pricing — contact sales', // VERIFY — Drata does not publish list pricing
+  },
+  'secureframe-compliance-platform': {
+    label: 'Secureframe compliance automation platform',
+    url: 'https://secureframe.com',
+    vendor: 'Secureframe',
+    category: 'compliance-saas',
+    priceRange: 'Custom pricing — contact sales', // VERIFY — Secureframe does not publish list pricing
   },
 }
 
