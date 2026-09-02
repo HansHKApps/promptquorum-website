@@ -125,4 +125,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'quivr-self-hosted-knowledge-assistant-review': 'quivr-self-hosted-knowledge-assistant-review',
   // RAGFlow deep document understanding review 2026-09-02
   'ragflow-document-understanding-rag-review':    'ragflow-document-understanding-rag-review',
+  // Khoj review 2026-09-02
+  'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
 }
