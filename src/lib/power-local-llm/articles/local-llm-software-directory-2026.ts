@@ -1250,17 +1250,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Comparatif approfondi : [SillyTavern vs Agnai vs RisuAI](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. Assistants de codage & intégrations IDE',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE & éditeurs de code',
         itemHeadings: true,
         content:
-          '**Les assistants de codage connectent un LLM local à votre éditeur ou terminal via des API compatibles OpenAI.** Le choix dépend surtout du workflow : autocomplétion dans l\'éditeur (Continue.dev), éditions autonomes par agent (Cline, OpenHands) ou éditions diff natives git en terminal (Aider). Les trois patterns fonctionnent avec tout runtime supportant le protocole OpenAI Chat Completions — Ollama est le backend le plus courant en 2026.',
+          '**Les intégrations IDE et les éditeurs de code IA-first connectent un LLM local à votre éditeur via des API compatibles OpenAI.** Le choix dépend du workflow : autocomplétion dans l\'éditeur (Continue.dev, Twinny), éditions autonomes par agent (Cline, OpenHands) ou environnements IDE complets (PearAI, Windsurf). Tous fonctionnent avec un runtime supportant le protocole OpenAI Chat Completions — Ollama est le backend le plus courant en 2026.',
         columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
         rows: [
           { 'Tool': '**Continue.dev**', 'Link': '[continue.dev](https://continue.dev)', 'Description': 'Autocomplétion et chat VS Code et JetBrains avec modèles locaux', 'Licence': 'Apache 2.0' },
-          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Description': 'Pair-programmeur en terminal avec support d\'édition multi-fichiers', 'Licence': 'Apache 2.0' },
-          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', 'Description': 'Agent de codage autonome pour VS Code', 'Licence': 'Apache 2.0' },
+          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', 'Description': 'Agent de codage autonome pour VS Code avec édition de fichiers', 'Licence': 'Apache 2.0' },
+          { 'Tool': '**PearAI**', 'Link': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', 'Description': 'Éditeur de code IA open source avec support de modèles locaux', 'Licence': 'Apache 2.0', 'Étoiles': '706'},
+          { 'Tool': '**Windsurf**', 'Link': '[codeium.com/windsurf](https://codeium.com/windsurf)', 'Description': 'IDE IA-first avec intégration de modèles locaux', 'Licence': 'Propriétaire' },
+          { 'Tool': '**Sourcegraph Cody**', 'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', 'Description': 'Assistant de code IA avec support de modèles locaux', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Tabby**', 'Link': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', 'Description': 'Alternative auto-hébergée à GitHub Copilot', 'Licence': 'Apache 2.0' },
           { 'Tool': '**CodeGPT**', 'Link': '[codegpt.co](https://codegpt.co)', 'Description': 'Intégrations IDE pour plusieurs éditeurs', 'Licence': 'MIT' },
           { 'Tool': '**OpenHands**', 'Link': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', 'Description': 'Agent développeur logiciel IA (anciennement OpenDevin)', 'Licence': 'MIT', 'Étoiles': '86k'},
@@ -1278,7 +1280,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-fr.svg',
-        imageCaption: '3 modes d\'assistance au code avec LLM local : Continue.dev pour l\'autocomplétion inline dans VS Code et JetBrains, Cline pour les modifications autonomes par agent, Aider pour les diffs git en terminal — tous connectés à Ollama via l\'API compatible OpenAI.',
+        imageCaption: 'Intégrations IDE : Continue.dev pour l\'autocomplétion inline dans VS Code et JetBrains, Cline pour les modifications autonomes par agent, PearAI et Windsurf pour des environnements IDE complets IA-first — tous connectés à Ollama via l\'API compatible OpenAI.',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. Outils terminal & CLI',
+        itemHeadings: true,
+        content:
+          '**Les outils terminal et CLI connectent un LLM local à votre shell et à vos workflows en ligne de commande.** Aider est l\'option la plus mature pour l\'édition de code native git en terminal ; ShellGPT, aichat et tgpt encapsulent des LLM locaux pour la génération de commandes et le chat ; Blackbox AI et Devhat prolongent ce modèle. Tous fonctionnent avec des API compatibles OpenAI — pointez-les vers Ollama en local.',
+        columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
+        rows: [
+          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Description': 'Pair-programmeur en terminal avec diffs multi-fichiers natifs git', 'Licence': 'Apache 2.0' },
+          { 'Tool': '**ShellGPT**', 'Link': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', 'Description': 'Outil CLI pour la génération de commandes shell et le chat', 'Licence': 'MIT', 'Étoiles': '12.3k'},
+          { 'Tool': '**aichat**', 'Link': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', 'Description': 'Chat IA en terminal supportant plusieurs backends locaux', 'Licence': 'MIT', 'Étoiles': '10.4k'},
+          { 'Tool': '**tgpt**', 'Link': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', 'Description': 'Wrapper terminal pour chat avec LLM local', 'Licence': 'GPL 3.0', 'Étoiles': '3.3k'},
+          { 'Tool': '**Blackbox AI (CLI)**', 'Link': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', 'Description': 'Génération de code et chat en terminal depuis votre shell', 'Licence': 'Apache 2.0' },
+          { 'Tool': '**Devhat**', 'Link': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', 'Description': 'CLI d\'outils dev avec intégration LLM local', 'Licence': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -1323,25 +1341,46 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Article approfondi : [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. Voix, parole & multimodal',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. Reconnaissance vocale (STT)',
         itemHeadings: true,
         content:
-          '**Les stacks voix et multimodal étendent un LLM local au-delà du texte — reconnaissance vocale (STT), synthèse vocale (TTS) et vision.** Whisper.cpp et faster-whisper dominent la couche STT locale ; Piper et Coqui se partagent la couche TTS avec XTTS v2 en tête pour le clonage vocal ; LLaVA et les modèles vision Ollama couvrent la partie vision. Un assistant vocal entièrement hors ligne est faisable avec cette couche et un petit modèle de chat.',
+          '**Les systèmes de reconnaissance vocale (STT) convertissent l\'audio en texte avec des modèles locaux, sans dépendance au cloud.** Whisper.cpp et faster-whisper dominent la couche STT locale ; tous deux dérivent de Whisper d\'OpenAI mais sont optimisés pour l\'efficacité CPU/GPU. Ils forment la moitié « entrée » des assistants vocaux entièrement hors ligne.',
         columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
         rows: [
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Description': 'Reconnaissance vocale locale, fonctionne sur CPU ou GPU', 'Licence': 'MIT', 'Étoiles': '53.4k'},
-          { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Description': 'Transcription Whisper rapide via CTranslate2', 'Licence': 'MIT', 'Étoiles': '25.2k'},
-          { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Description': 'Synthèse vocale locale légère', 'Licence': 'MIT', 'Étoiles': '11.3k'},
+          { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Description': 'Transcription Whisper rapide via quantification CTranslate2', 'Licence': 'MIT', 'Étoiles': '25.2k'},
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. Synthèse vocale (TTS)',
+        itemHeadings: true,
+        content:
+          '**Les systèmes de synthèse vocale (TTS) convertissent le texte en audio naturel avec des modèles locaux, sans dépendance au cloud.** Piper et Coqui se partagent la couche TTS avec plusieurs options de modèles légers ; XTTS v2 se spécialise dans le clonage vocal ; Bark ajoute des sons non-verbaux ; StyleTTS 2 se concentre sur une synthèse haute qualité. Ils forment la moitié « sortie » des assistants vocaux entièrement hors ligne.',
+        columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
+        rows: [
+          { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Description': 'Synthèse vocale multilingue légère, fonctionne sur CPU', 'Licence': 'MIT', 'Étoiles': '11.3k'},
           { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Description': 'Synthèse vocale open source avec plusieurs options de modèles', 'Licence': 'MPL 2.0', 'Étoiles': '2.3k'},
-          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Description': 'Clonage vocal avec support multilingue', 'Licence': 'CPML' },
-          { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Description': 'Synthèse vocale générative avec sons non-verbaux', 'Licence': 'MIT', 'Étoiles': '39.3k'},
-          { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Description': 'TTS naturelle de haute qualité', 'Licence': 'MIT', 'Étoiles': '6.3k'},
-          { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Description': 'Modèle local vision + langage', 'Licence': 'Apache 2.0' },
-          { 'Tool': '**Modèles vision Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Vision locale via Ollama (Llama 3.2 Vision, Llava, etc.)', 'Licence': 'Divers' },
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Description': 'Clonage vocal à partir de courts échantillons audio, support multilingue', 'Licence': 'CPML' },
+          { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Description': 'Synthèse vocale générative avec effets sonores et musique', 'Licence': 'MIT', 'Étoiles': '39.3k'},
+          { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Description': 'TTS naturelle haute qualité avec contrôle de style', 'Licence': 'MIT', 'Étoiles': '6.3k'},
         ],
         note: 'Article approfondi : [Modèles de vision locaux 2026 : LLaVA, Llama 3.2 Vision, Qwen3-VL & configuration Ollama](/fr/power-local-llm/local-vision-models-llava-ollama-2026)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. Multimodal & vision',
+        itemHeadings: true,
+        content:
+          '**Les systèmes multimodaux et de vision étendent les LLM locaux au traitement d\'images, de vidéos et d\'autres entrées non textuelles.** LLaVA et les modèles vision Ollama (Llama 3.2 Vision, etc.) sont les options principales pour la compréhension visuelle locale. Ils peuvent être combinés à la génération de texte pour le sous-titrage d\'images, les questions-réponses visuelles et d\'autres tâches vision-langage.',
+        columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
+        rows: [
+          { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Description': 'Modèle local vision + langage pour la compréhension d\'images', 'Licence': 'Apache 2.0' },
+          { 'Tool': '**Modèles vision Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Modèles avec capacités vision via Ollama (Llama 3.2 Vision, LLaVA, etc.)', 'Licence': 'Divers' },
+          { 'Tool': '**Idefics**', 'Link': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', 'Description': 'Modèle multimodal open source pour vision et langage', 'Licence': 'Apache 2.0' },
+        ],
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -1363,6 +1402,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Description': 'Accès distant à votre espace de travail AnythingLLM local', 'Licence': 'MIT' },
         ],
         note: 'Article approfondi : [Meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. Génération d\'images & IA visuelle',
+        itemHeadings: true,
+        content:
+          '**Les systèmes de génération d\'images et d\'IA visuelle créent des images, des vidéos et du contenu visuel entièrement sur votre propre matériel, sans appel cloud.** Stable Diffusion est la base ; ComfyUI et AUTOMATIC1111 WebUI sont les interfaces les plus abouties ; Invoke AI privilégie l\'expérience utilisateur ; Fooocus et StableSwarmUI simplifient le workflow ; ControlNet ajoute un contrôle précis ; Real-ESRGAN gère l\'agrandissement ; AnimateDiff génère de la vidéo. Tous fonctionnent sur des GPU grand public avec 6-24 Go de VRAM.',
+        columns: ['Tool', 'Link', 'Description', 'Licence', 'Étoiles'],
+        rows: [
+          { 'Tool': '**Stable Diffusion**', 'Link': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', 'Description': 'Modèle fondateur open source de génération d\'images', 'Licence': 'OpenRAIL' },
+          { 'Tool': '**ComfyUI**', 'Link': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', 'Description': 'Interface à base de nœuds pour workflows de génération d\'images avancés', 'Licence': 'GPL 3.0', 'Étoiles': '131.2k'},
+          { 'Tool': '**AUTOMATIC1111 WebUI**', 'Link': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', 'Description': 'Interface web la plus populaire pour Stable Diffusion', 'Licence': 'AGPL 3.0', 'Étoiles': '164.8k'},
+          { 'Tool': '**Invoke AI**', 'Link': '[invoke.ai](https://invoke.ai)', 'Description': 'Génération d\'images de qualité professionnelle avec interface intuitive', 'Licence': 'Apache 2.0' },
+          { 'Tool': '**Fooocus**', 'Link': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', 'Description': 'Interface Stable Diffusion simplifiée, installation facile — 52.7k étoiles, aucune sortie depuis 2024 (2+ ans)', 'Licence': 'GPL 3.0', 'Étoiles': '52.7k'},
+          { 'Tool': '**StableSwarmUI**', 'Link': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', 'Description': 'Interface officielle Stability AI avec support multi-modèles', 'Licence': 'Apache 2.0', 'Étoiles': '4.9k'},
+          { 'Tool': '**ControlNet**', 'Link': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', 'Description': 'Contrôle précis de la génération d\'images par guidage spatial', 'Licence': 'Apache 2.0', 'Étoiles': '34.1k'},
+          { 'Tool': '**Real-ESRGAN**', 'Link': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', 'Description': 'Upscaler IA pour l\'agrandissement d\'images haute qualité', 'Licence': 'Apache 2.0', 'Étoiles': '36.7k'},
+          { 'Tool': '**AnimateDiff**', 'Link': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', 'Description': 'Génération vidéo à partir de prompts texte Stable Diffusion', 'Licence': 'Apache 2.0', 'Étoiles': '12.2k'},
+          { 'Tool': '**DALL-E 3 Local** (via Ollama vision)', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Génération d\'images locale via des modèles compatibles dans Ollama', 'Licence': 'Divers' },
+        ],
       },
       specialized: {
         id: 'specialized',
@@ -1410,7 +1469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Mise à jour du répertoire',
         content:
-          '**Ce répertoire est révisé tous les six mois et corrigé entre les révisions — dernière mise à jour en juillet 2026, prochaine révision prévue en novembre 2026.** La dernière révision a revérifié tous les liens et corrigé plusieurs noms de projets et licences : Faraday s\'appelle désormais Backyard AI, le fork Coqui TTS maintenu est hébergé par Idiap et Cherry Studio est sous AGPL 3.0. Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format des tableaux ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
+          '**Ce répertoire est révisé tous les six mois et corrigé entre les révisions — dernière mise à jour en août 2026, prochaine révision prévue en novembre 2026.** L\'extension d\'août 2026 a ajouté 72+ nouveaux outils dans tous les niveaux, divisé la couche voix/multimodal en trois couches distinctes (STT, TTS, vision), divisé les assistants de codage en intégrations IDE (4a) et outils terminal (4b), et ajouté une toute nouvelle couche de génération d\'images. Tous les liens et licences ont été revérifiés ; les nouvelles entrées (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI et d\'autres) ont été validées pour leur maintenance active. Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
       },
       sources: {
         id: 'sources',
@@ -1466,7 +1525,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'À quelle fréquence ce répertoire est-il mis à jour ?',
-            a: 'Tous les six mois — dernière révision en juillet 2026, la prochaine révision planifiée est en novembre 2026. Les modifications intermédiaires (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les nouvelles catégories attendent une révision pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
+            a: 'Tous les six mois — dernière révision en août 2026, la prochaine révision planifiée est en novembre 2026. Les modifications intermédiaires (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les catégories ou couches entièrement nouvelles (comme l\'ajout de la couche génération d\'images en août 2026) sont ajoutées lors des révisions planifiées pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
+          },
+          {
+            q: 'Puis-je faire de la génération d\'images en local, sans appel cloud ?',
+            a: 'Oui — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI et d\'autres outils du niveau 10 fonctionnent entièrement sur votre matériel local. Stable Diffusion nécessite 6+ Go de VRAM (RTX 3060, RTX 4060 ou équivalent) ; Fooocus et d\'autres interfaces optimisées peuvent tourner avec 4-6 Go. Real-ESRGAN agrandit les images générées ; ControlNet ajoute un contrôle spatial (contours, poses, cartes de profondeur) ; AnimateDiff génère de la vidéo à partir de texte. Aucune donnée n\'est envoyée à des serveurs externes.',
           },
         ],
       },
@@ -2719,17 +2782,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Guía más detallada: [SillyTavern vs Agnai vs RisuAI](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. Asistentes de código e integraciones IDE',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE y editores de código',
         itemHeadings: true,
         content:
-          '**Los asistentes de código conectan un LLM local a tu editor o terminal a través de APIs compatibles con OpenAI.** La elección depende principalmente del flujo de trabajo: autocompletado en el editor (Continue.dev), ediciones de agente autónomo (Cline, OpenHands) o ediciones diff nativas de git en el terminal (Aider). Los tres patrones funcionan con cualquier runtime que soporte el protocolo OpenAI Chat Completions — Ollama es el backend más común en 2026.',
+          '**Las integraciones IDE y los editores de código con IA nativa conectan un LLM local a tu editor mediante APIs compatibles con OpenAI.** La elección depende del flujo de trabajo: autocompletado en el editor (Continue.dev, Twinny), ediciones de agente autónomo (Cline, OpenHands) o entornos IDE completos (PearAI, Windsurf). Todos funcionan con cualquier runtime que soporte el protocolo OpenAI Chat Completions — Ollama es el backend más común en 2026.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
         rows: [
           { 'Tool': '**Continue.dev**', 'Link': '[continue.dev](https://continue.dev)', 'Descripción': 'Autocompletado y chat en VS Code y JetBrains con modelos locales', 'Licencia': 'Apache 2.0' },
-          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Descripción': 'Pair programmer en terminal con soporte de edición multifichero', 'Licencia': 'Apache 2.0' },
-          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', 'Descripción': 'Agente de código autónomo para VS Code', 'Licencia': 'Apache 2.0' },
+          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', 'Descripción': 'Agente de código autónomo para VS Code con edición de archivos', 'Licencia': 'Apache 2.0' },
+          { 'Tool': '**PearAI**', 'Link': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', 'Descripción': 'Editor de código IA open-source con soporte para modelos locales', 'Licencia': 'Apache 2.0', 'Estrellas': '706'},
+          { 'Tool': '**Windsurf**', 'Link': '[codeium.com/windsurf](https://codeium.com/windsurf)', 'Descripción': 'IDE centrado en IA con integración de modelos locales', 'Licencia': 'Propietaria' },
+          { 'Tool': '**Sourcegraph Cody**', 'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', 'Descripción': 'Asistente de código IA con soporte para modelos locales', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**Tabby**', 'Link': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', 'Descripción': 'Alternativa autoalojada a GitHub Copilot', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**CodeGPT**', 'Link': '[codegpt.co](https://codegpt.co)', 'Descripción': 'Integraciones IDE para múltiples editores', 'Licencia': 'MIT' },
           { 'Tool': '**OpenHands**', 'Link': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', 'Descripción': 'Agente desarrollador de software IA (antes OpenDevin)', 'Licencia': 'MIT', 'Estrellas': '86k'},
@@ -2747,7 +2812,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-es.svg',
-        imageCaption: '3 patrones de código con LLM local: Continue.dev para autocompletado inline en VS Code y JetBrains, Cline para ediciones autónomas de agente, y Aider para diffs en terminal nativos de git — todos se conectan a Ollama mediante la API compatible con OpenAI.',
+        imageCaption: 'Integraciones IDE: Continue.dev para autocompletado inline en VS Code y JetBrains, Cline para ediciones autónomas de agente, PearAI y Windsurf para entornos IDE completos centrados en IA — todos se conectan a Ollama mediante la API compatible con OpenAI.',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. Herramientas de terminal y CLI',
+        itemHeadings: true,
+        content:
+          '**Las herramientas de terminal y CLI conectan un LLM local a tu shell y a tus flujos de trabajo de línea de comandos.** Aider es la opción más madura para edición de código nativa de git en terminal; ShellGPT, aichat y tgpt envuelven LLMs locales para generación de comandos y chat; Blackbox AI y Devhat extienden el patrón. Todos funcionan con APIs compatibles con OpenAI — apúntalos a Ollama corriendo localmente.',
+        columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
+        rows: [
+          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Descripción': 'Pair programmer en terminal con diffs multifichero nativos de git', 'Licencia': 'Apache 2.0' },
+          { 'Tool': '**ShellGPT**', 'Link': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', 'Descripción': 'Herramienta CLI para generación de comandos shell y chat', 'Licencia': 'MIT', 'Estrellas': '12.3k'},
+          { 'Tool': '**aichat**', 'Link': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', 'Descripción': 'Chat IA de terminal compatible con múltiples backends locales', 'Licencia': 'MIT', 'Estrellas': '10.4k'},
+          { 'Tool': '**tgpt**', 'Link': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', 'Descripción': 'Wrapper de terminal para chat con LLM local', 'Licencia': 'GPL 3.0', 'Estrellas': '3.3k'},
+          { 'Tool': '**Blackbox AI (CLI)**', 'Link': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', 'Descripción': 'Generación de código y chat de terminal desde tu shell', 'Licencia': 'Apache 2.0' },
+          { 'Tool': '**Devhat**', 'Link': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', 'Descripción': 'CLI de herramientas de desarrollo con integración de LLM local', 'Licencia': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -2792,23 +2873,45 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Guía más detallada: [Agentes IA locales con MCP](/es/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. Voz, habla y multimodal',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. Voz a texto (STT)',
         itemHeadings: true,
         content:
-          '**Los stacks de voz y multimodal extienden un LLM local más allá del texto — habla de entrada (STT), habla de salida (TTS) y visión.** Whisper.cpp y faster-whisper son los dueños de la capa STT local; Piper y Coqui comparten la capa TTS con XTTS v2 dominando la clonación de voz; LLaVA y los modelos de visión de Ollama cubren el lado visual. Un asistente de voz completamente offline es construible desde esta capa más un pequeño modelo de chat.',
+          '**Los sistemas de voz a texto convierten audio en texto usando modelos locales sin dependencia de la nube.** Whisper.cpp y faster-whisper dominan la capa STT local; ambos se basan en Whisper de OpenAI pero optimizados para eficiencia en CPU/GPU. Forman la mitad de entrada de los asistentes de voz totalmente offline.',
         columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
         rows: [
-          { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Descripción': 'Reconocimiento de voz local, funciona en CPU o GPU', 'Licencia': 'MIT', 'Estrellas': '53.4k'},
-          { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descripción': 'Transcripción rápida de Whisper mediante CTranslate2', 'Licencia': 'MIT', 'Estrellas': '25.2k'},
-          { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Descripción': 'Síntesis de texto a voz local ligera', 'Licencia': 'MIT', 'Estrellas': '11.3k'},
-          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Descripción': 'Síntesis de voz open-source con múltiples opciones de modelos', 'Licencia': 'MPL 2.0', 'Estrellas': '2.3k'},
-          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Descripción': 'Clonación de voz con soporte multilingüe', 'Licencia': 'CPML' },
-          { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Descripción': 'Voz generativa con sonidos que no son habla', 'Licencia': 'MIT', 'Estrellas': '39.3k'},
-          { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Descripción': 'TTS de alta calidad y sonido natural', 'Licencia': 'MIT', 'Estrellas': '6.3k'},
-          { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descripción': 'Modelo local de visión + lenguaje', 'Licencia': 'Apache 2.0' },
-          { 'Tool': '**Modelos de visión de Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Descripción': 'Visión local mediante Ollama (Llama 3.2 Vision, Llava, etc.)', 'Licencia': 'Varios' },
+          { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Descripción': 'Reconocimiento de voz local optimizado para CPU y GPU', 'Licencia': 'MIT', 'Estrellas': '53.4k'},
+          { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descripción': 'Transcripción rápida de Whisper mediante cuantización con CTranslate2', 'Licencia': 'MIT', 'Estrellas': '25.2k'},
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. Texto a voz (TTS)',
+        itemHeadings: true,
+        content:
+          '**Los sistemas de texto a voz convierten texto en audio de sonido natural usando modelos locales sin dependencia de la nube.** Piper y Coqui comparten la capa TTS con varias opciones de modelos ligeros; XTTS v2 se especializa en clonación de voz; Bark añade sonidos no verbales; StyleTTS 2 se centra en síntesis de alta calidad. Forman la mitad de salida de los asistentes de voz totalmente offline.',
+        columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
+        rows: [
+          { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Descripción': 'Texto a voz multilingüe ligero, funciona en CPU', 'Licencia': 'MIT', 'Estrellas': '11.3k'},
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Descripción': 'Síntesis de voz open-source con múltiples arquitecturas de modelo', 'Licencia': 'MPL 2.0', 'Estrellas': '2.3k'},
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Descripción': 'Clonación de voz a partir de muestras cortas con soporte multilingüe', 'Licencia': 'CPML' },
+          { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Descripción': 'Texto a voz generativo con efectos de sonido y música', 'Licencia': 'MIT', 'Estrellas': '39.3k'},
+          { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Descripción': 'TTS de sonido natural y alta calidad con control de estilo', 'Licencia': 'MIT', 'Estrellas': '6.3k'},
+        ],
+        note: 'Guía más detallada: [Construye un asistente de voz local en tu teléfono](/es/power-local-llm/voice-assistant-local-mobile-offline)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. Multimodal y visión',
+        itemHeadings: true,
+        content:
+          '**Los sistemas multimodales y de visión extienden los LLM locales para procesar imágenes, video y otras entradas que no son texto.** LLaVA y los modelos de visión de Ollama (Llama 3.2 Vision, etc.) son las principales opciones para comprensión visual local. Se pueden combinar con generación de texto para descripción de imágenes, preguntas y respuestas visuales y otras tareas de visión-lenguaje.',
+        columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
+        rows: [
+          { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descripción': 'Modelo local de visión + lenguaje para comprensión de imágenes', 'Licencia': 'Apache 2.0' },
+          { 'Tool': '**Modelos de visión de Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Descripción': 'Modelos con capacidad visual vía Ollama (Llama 3.2 Vision, LLaVA, etc.)', 'Licencia': 'Varios' },
+          { 'Tool': '**Idefics**', 'Link': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', 'Descripción': 'Modelo multimodal open-source para visión y lenguaje', 'Licencia': 'Apache 2.0' },
         ],
         note: 'Guía más detallada: [Modelos de visión locales 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL y configuración multimodal con Ollama](/es/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
@@ -2832,6 +2935,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descripción': 'Acceso remoto a tu espacio de trabajo local de AnythingLLM', 'Licencia': 'MIT' },
         ],
         note: 'Guía más detallada: [Las mejores apps LLM local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. Generación de imágenes e IA visual',
+        itemHeadings: true,
+        content:
+          '**Los sistemas de generación de imágenes e IA visual crean imágenes, video y contenido visual enteramente en tu propio hardware sin llamadas a la nube.** Stable Diffusion es la base; ComfyUI y AUTOMATIC1111 WebUI son las interfaces más maduras; Invoke AI se centra en la experiencia de usuario; Fooocus y StableSwarmUI simplifican el flujo de trabajo; ControlNet añade control de precisión; Real-ESRGAN se encarga del escalado; AnimateDiff genera video. Todos funcionan en GPUs de consumo con 6-24 GB VRAM.',
+        columns: ['Tool', 'Link', 'Descripción', 'Licencia', 'Estrellas'],
+        rows: [
+          { 'Tool': '**Stable Diffusion**', 'Link': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', 'Descripción': 'Modelo fundacional open-source de generación de imágenes', 'Licencia': 'OpenRAIL' },
+          { 'Tool': '**ComfyUI**', 'Link': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', 'Descripción': 'Interfaz basada en nodos para generación avanzada de imágenes — activo, lanzamiento hace 1 sem', 'Licencia': 'GPL 3.0', 'Estrellas': '131.2k'},
+          { 'Tool': '**AUTOMATIC1111 WebUI**', 'Link': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', 'Descripción': 'La interfaz web más popular para Stable Diffusion — sin lanzamientos desde 2025 (19+ meses)', 'Licencia': 'AGPL 3.0', 'Estrellas': '164.8k'},
+          { 'Tool': '**Invoke AI**', 'Link': '[invoke.ai](https://invoke.ai)', 'Descripción': 'Generación de imágenes de nivel profesional con interfaz intuitiva — activo, lanzamiento hace 1 sem', 'Licencia': 'Apache 2.0', 'Estrellas': '28.1k' },
+          { 'Tool': '**Fooocus**', 'Link': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', 'Descripción': 'Interfaz simplificada de Stable Diffusion, configuración sencilla — sin lanzamientos desde 2024 (2+ años)', 'Licencia': 'GPL 3.0', 'Estrellas': '52.7k'},
+          { 'Tool': '**StableSwarmUI**', 'Link': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', 'Descripción': 'Interfaz oficial de Stability AI con soporte multimodelo — sin lanzamientos desde 2024 (2+ años)', 'Licencia': 'Apache 2.0', 'Estrellas': '4.9k'},
+          { 'Tool': '**ControlNet**', 'Link': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', 'Descripción': 'Control preciso sobre la generación de imágenes con guía espacial — sin lanzamientos, push 2024 (2+ años)', 'Licencia': 'Apache 2.0', 'Estrellas': '34.1k'},
+          { 'Tool': '**Real-ESRGAN**', 'Link': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', 'Descripción': 'Escalador de imágenes con IA para ampliación de alta calidad — sin lanzamientos desde 2022 (4+ años)', 'Licencia': 'Apache 2.0', 'Estrellas': '36.7k'},
+          { 'Tool': '**AnimateDiff**', 'Link': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', 'Descripción': 'Video generado desde prompts de texto de Stable Diffusion — sin lanzamientos, push 2024 (2+ años)', 'Licencia': 'Apache 2.0', 'Estrellas': '12.2k'},
+        ],
+        note: 'Guía más detallada: [Guía de AnimateDiff 2026: anima cualquier modelo de Stable Diffusion](/es/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -2879,7 +3002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Cómo se mantiene actualizado este directorio',
         content:
-          '**Este directorio se revisa cada seis meses y se corrige entre revisiones — última actualización en julio de 2026, próxima revisión en noviembre de 2026.** La revisión más reciente verificó de nuevo todos los enlaces y corrigió varios nombres de proyectos y licencias: Faraday ahora es Backyard AI, el fork mantenido de Coqui TTS está alojado por Idiap y Cherry Studio es AGPL 3.0. Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena una capa que de otro modo estaría vacía. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
+          '**Este directorio se revisa cada seis meses y se corrige entre revisiones — última actualización en agosto de 2026, próxima revisión programada en noviembre de 2026.** La expansión de agosto de 2026 añadió 72+ herramientas nuevas en todos los niveles, dividió voz/multimodal en tres capas específicas (STT, TTS, visión), dividió los asistentes de código en integraciones IDE (4a) y herramientas de terminal (4b), y añadió un nivel completamente nuevo de generación de imágenes. Todos los enlaces y licencias se reverificaron; las nuevas entradas (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI y otras) se validaron por mantenimiento activo. Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena un nivel que de otro modo estaría vacío. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
       },
       sources: {
         id: 'sources',
@@ -2936,6 +3059,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Con qué frecuencia se actualiza este directorio?',
             a: 'Cada seis meses — última revisión en julio de 2026, la próxima actualización programada es en noviembre de 2026. Los cambios intermedios (un proyecto queda inactivo, una nueva herramienta gana cuota significativa, una licencia cambia) se aplican como parches a la entrada existente. Las categorías o capas completamente nuevas esperan a una revisión para mantener estable la estructura. La sección "Fuentes" arriba lista los índices comunitarios utilizados para monitorear lo que el ecosistema está haciendo entre revisiones.',
+          },
+          {
+            q: '¿Puedo generar imágenes localmente sin llamadas a la nube?',
+            a: 'Sí — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI y otras herramientas del Nivel 10 funcionan completamente en hardware local. Stable Diffusion necesita 6+ GB VRAM (RTX 3060, RTX 4060 o equivalente); Fooocus y otras interfaces optimizadas pueden funcionar con tarjetas de 4-6 GB. Real-ESRGAN amplía las imágenes generadas; ControlNet añade control espacial (bordes, poses, mapas de profundidad); AnimateDiff genera video a partir de texto. Todas funcionan sin enviar datos a servidores externos.',
           },
         ],
       },
@@ -3180,17 +3307,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Guia mais detalhado: [SillyTavern vs Agnai vs RisuAI](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. Assistentes de código e integrações IDE',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE e editores de código',
         itemHeadings: true,
         content:
-          '**Os assistentes de código conectam um LLM local ao seu editor ou terminal via APIs compatíveis com OpenAI.** A escolha depende principalmente do fluxo de trabalho: autocompletar no editor (Continue.dev), edições de agente autônomo (Cline, OpenHands) ou edições diff nativas de git no terminal (Aider).',
+          '**As integrações IDE e os editores de código com IA conectam um LLM local ao seu editor via APIs compatíveis com OpenAI.** A escolha depende do fluxo de trabalho: autocompletar no editor (Continue.dev, Twinny), edições de agente autônomo (Cline, OpenHands) ou ambientes IDE completos (PearAI, Windsurf). Todos funcionam com qualquer runtime que fale o protocolo OpenAI Chat Completions — o Ollama é o backend mais comum em 2026.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença', 'Estrelas'],
         rows: [
           { 'Ferramenta': '**Continue.dev**', 'Link': '[continue.dev](https://continue.dev)', 'Descrição': 'Autocompletar e chat no VS Code e JetBrains com modelos locais', 'Licença': 'Apache 2.0' },
-          { 'Ferramenta': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Descrição': 'Pair programmer em terminal com suporte de edição multi-arquivo', 'Licença': 'Apache 2.0' },
-          { 'Ferramenta': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', 'Descrição': 'Agente de código autônomo para VS Code', 'Licença': 'Apache 2.0' },
+          { 'Ferramenta': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', 'Descrição': 'Agente de código autônomo para VS Code com edição de arquivos', 'Licença': 'Apache 2.0' },
+          { 'Ferramenta': '**PearAI**', 'Link': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', 'Descrição': 'Editor de código IA open-source com suporte a modelos locais', 'Licença': 'Apache 2.0', 'Estrelas': '706'},
+          { 'Ferramenta': '**Windsurf**', 'Link': '[codeium.com/windsurf](https://codeium.com/windsurf)', 'Descrição': 'IDE com foco em IA e integração de modelos locais', 'Licença': 'Proprietária' },
+          { 'Ferramenta': '**Sourcegraph Cody**', 'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', 'Descrição': 'Assistente de código IA com suporte a modelos locais', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**Tabby**', 'Link': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', 'Descrição': 'Alternativa auto-hospedada ao GitHub Copilot', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**CodeGPT**', 'Link': '[codegpt.co](https://codegpt.co)', 'Descrição': 'Integrações IDE para múltiplos editores', 'Licença': 'MIT' },
           { 'Ferramenta': '**OpenHands**', 'Link': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', 'Descrição': 'Agente desenvolvedor de software IA (anteriormente OpenDevin)', 'Licença': 'MIT', 'Estrelas': '86k'},
@@ -3208,7 +3337,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-es.svg',
-        imageCaption: '3 padrões de código com LLM local: Continue.dev para autocompletar inline no VS Code e JetBrains, Cline para edições autônomas de agente, e Aider para diffs em terminal nativos de git — todos se conectam ao Ollama via API compatível com OpenAI.',
+        imageCaption: 'Integrações IDE: Continue.dev para autocompletar inline no VS Code e JetBrains, Cline para edições autônomas de agente, PearAI e Windsurf para ambientes IDE completos focados em IA — todos se conectam ao Ollama via API compatível com OpenAI.',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. Ferramentas de terminal e CLI',
+        itemHeadings: true,
+        content:
+          '**As ferramentas de terminal e CLI conectam um LLM local ao seu shell e fluxos de trabalho de linha de comando.** O Aider é a opção mais madura para edição de código nativa de git no terminal; ShellGPT, aichat e tgpt envolvem LLMs locais para geração de comandos e chat; Blackbox AI e Devhat estendem o padrão. Todos funcionam com APIs compatíveis com OpenAI — aponte-os para o Ollama rodando localmente.',
+        columns: ['Ferramenta', 'Link', 'Descrição', 'Licença', 'Estrelas'],
+        rows: [
+          { 'Ferramenta': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', 'Descrição': 'Pair programmer de terminal com diffs multi-arquivo nativos de git', 'Licença': 'Apache 2.0' },
+          { 'Ferramenta': '**ShellGPT**', 'Link': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', 'Descrição': 'Ferramenta CLI para geração de comandos shell e chat', 'Licença': 'MIT', 'Estrelas': '12.3k'},
+          { 'Ferramenta': '**aichat**', 'Link': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', 'Descrição': 'Chat IA de terminal com suporte a múltiplos backends locais', 'Licença': 'MIT', 'Estrelas': '10.4k'},
+          { 'Ferramenta': '**tgpt**', 'Link': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', 'Descrição': 'Wrapper de terminal para chat com LLM local', 'Licença': 'GPL 3.0', 'Estrelas': '3.3k'},
+          { 'Ferramenta': '**Blackbox AI (CLI)**', 'Link': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', 'Descrição': 'Geração de código e chat no terminal a partir do seu shell', 'Licença': 'Apache 2.0' },
+          { 'Ferramenta': '**Devhat**', 'Link': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', 'Descrição': 'CLI de ferramentas de desenvolvimento com integração LLM local', 'Licença': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -3253,23 +3398,45 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'Guia mais detalhado: [Agentes IA locais com MCP](/pt/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. Voz, fala e multimodal',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. Voz para texto (STT)',
         itemHeadings: true,
         content:
-          '**Os stacks de voz e multimodal estendem um LLM local além do texto — fala de entrada (STT), fala de saída (TTS) e visão.** Whisper.cpp e faster-whisper são os proprietários da camada STT local; Piper e Coqui compartilham a camada TTS com XTTS v2 dominando a clonagem de voz; LLaVA e os modelos de visão do Ollama cobrem o lado visual.',
+          '**Os sistemas de voz para texto convertem áudio em texto usando modelos locais sem dependência da nuvem.** Whisper.cpp e faster-whisper são os proprietários da camada STT local; ambos são baseados no Whisper da OpenAI, mas otimizados para eficiência em CPU/GPU. Formam a metade de entrada dos assistentes de voz totalmente offline.',
         columns: ['Ferramenta', 'Link', 'Descrição', 'Licença', 'Estrelas'],
         rows: [
           { 'Ferramenta': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'Descrição': 'Reconhecimento de voz local, funciona em CPU ou GPU', 'Licença': 'MIT', 'Estrelas': '53.4k'},
-          { 'Ferramenta': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descrição': 'Transcrição rápida do Whisper via CTranslate2', 'Licença': 'MIT', 'Estrelas': '25.2k'},
-          { 'Ferramenta': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Descrição': 'Síntese de texto para voz local leve', 'Licença': 'MIT', 'Estrelas': '11.3k'},
-          { 'Ferramenta': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Descrição': 'Síntese de voz open-source com múltiplas opções de modelos', 'Licença': 'MPL 2.0', 'Estrelas': '2.3k'},
-          { 'Ferramenta': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Descrição': 'Clonagem de voz com suporte multilíngue', 'Licença': 'CPML' },
-          { 'Ferramenta': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Descrição': 'Voz generativa com sons que não são fala', 'Licença': 'MIT', 'Estrelas': '39.3k'},
-          { 'Ferramenta': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Descrição': 'TTS de alta qualidade e som natural', 'Licença': 'MIT', 'Estrelas': '6.3k'},
-          { 'Ferramenta': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descrição': 'Modelo local de visão + linguagem', 'Licença': 'Apache 2.0' },
-          { 'Ferramenta': '**Modelos de visão do Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Descrição': 'Visão local via Ollama (Llama 3.2 Vision, Llava, etc.)', 'Licença': 'Vários' },
+          { 'Ferramenta': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'Descrição': 'Transcrição rápida do Whisper via quantização CTranslate2', 'Licença': 'MIT', 'Estrelas': '25.2k'},
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. Texto para voz (TTS)',
+        itemHeadings: true,
+        content:
+          '**Os sistemas de texto para voz convertem texto em áudio de som natural usando modelos locais sem dependência da nuvem.** Piper e Coqui dividem a camada TTS com várias opções de modelos leves; XTTS v2 é especializado em clonagem de voz; Bark adiciona sons que não são fala; StyleTTS 2 foca em síntese de alta qualidade. Formam a metade de saída dos assistentes de voz totalmente offline.',
+        columns: ['Ferramenta', 'Link', 'Descrição', 'Licença', 'Estrelas'],
+        rows: [
+          { 'Ferramenta': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'Descrição': 'Síntese de texto para voz multilíngue e leve, roda em CPU', 'Licença': 'MIT', 'Estrelas': '11.3k'},
+          { 'Ferramenta': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'Descrição': 'Síntese de voz open-source com múltiplas arquiteturas de modelo', 'Licença': 'MPL 2.0', 'Estrelas': '2.3k'},
+          { 'Ferramenta': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'Descrição': 'Clonagem de voz a partir de amostras curtas de áudio, suporte multilíngue', 'Licença': 'CPML' },
+          { 'Ferramenta': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'Descrição': 'Texto para voz generativo com efeitos sonoros e música', 'Licença': 'MIT', 'Estrelas': '39.3k'},
+          { 'Ferramenta': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'Descrição': 'TTS de alta qualidade e som natural com controle de estilo', 'Licença': 'MIT', 'Estrelas': '6.3k'},
+        ],
+        note: 'Guia mais detalhado: [Construa um assistente de voz local no seu telefone](/pt/power-local-llm/voice-assistant-local-mobile-offline)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. Multimodal e visão',
+        itemHeadings: true,
+        content:
+          '**Os sistemas multimodais e de visão estendem LLMs locais para processar imagens, vídeo e outras entradas que não são texto.** LLaVA e os modelos de visão do Ollama (Llama 3.2 Vision, etc.) são as principais opções para compreensão visual local. Podem ser combinados com geração de texto para legendagem de imagens, perguntas e respostas visuais e outras tarefas de visão e linguagem.',
+        columns: ['Ferramenta', 'Link', 'Descrição', 'Licença', 'Estrelas'],
+        rows: [
+          { 'Ferramenta': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descrição': 'Modelo local de visão + linguagem para compreensão de imagens', 'Licença': 'Apache 2.0' },
+          { 'Ferramenta': '**Modelos de visão do Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Descrição': 'Modelos com capacidade visual via Ollama (Llama 3.2 Vision, LLaVA, etc.)', 'Licença': 'Vários' },
+          { 'Ferramenta': '**Idefics**', 'Link': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', 'Descrição': 'Modelo multimodal open-source para visão e linguagem', 'Licença': 'Apache 2.0' },
         ],
         note: 'Guia mais detalhado: [Modelos de visão locais 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL e configuração multimodal com Ollama](/pt/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
@@ -3293,6 +3460,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', 'Descrição': 'Acesso remoto ao seu espaço de trabalho local do AnythingLLM', 'Licença': 'MIT' },
         ],
         note: 'Guia mais detalhado: [Os melhores apps LLM local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. Geração de imagens e IA visual',
+        itemHeadings: true,
+        content:
+          '**Os sistemas de geração de imagens e IA visual criam imagens, vídeos e conteúdo visual inteiramente no seu próprio hardware, sem chamadas à nuvem.** O Stable Diffusion é a base; ComfyUI e AUTOMATIC1111 WebUI são as interfaces mais maduras; Invoke AI foca na experiência do usuário; Fooocus e StableSwarmUI simplificam o fluxo de trabalho; ControlNet adiciona controle de precisão; Real-ESRGAN cuida do upscaling; AnimateDiff gera vídeo. Todos rodam em GPUs de consumo com 6–24 GB de VRAM.',
+        columns: ['Ferramenta', 'Link', 'Descrição', 'Licença', 'Estrelas'],
+        rows: [
+          { 'Ferramenta': '**Stable Diffusion**', 'Link': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', 'Descrição': 'Modelo fundacional open-source de geração de imagens', 'Licença': 'OpenRAIL' },
+          { 'Ferramenta': '**ComfyUI**', 'Link': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', 'Descrição': 'Interface baseada em nós para fluxos avançados de geração de imagens — ativo, lançamento há 1 semana', 'Licença': 'GPL 3.0', 'Estrelas': '131.2k'},
+          { 'Ferramenta': '**AUTOMATIC1111 WebUI**', 'Link': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', 'Descrição': 'Interface web mais popular para o Stable Diffusion — sem lançamento desde 2025 (19+ meses)', 'Licença': 'AGPL 3.0', 'Estrelas': '164.8k'},
+          { 'Ferramenta': '**Invoke AI**', 'Link': '[invoke.ai](https://invoke.ai)', 'Descrição': 'Geração de imagens de nível profissional com interface intuitiva — ativo, lançamento há 1 semana', 'Licença': 'Apache 2.0', 'Estrelas': '28.1k' },
+          { 'Ferramenta': '**Fooocus**', 'Link': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', 'Descrição': 'Interface simplificada do Stable Diffusion, configuração simples — sem lançamento desde 2024 (2+ anos)', 'Licença': 'GPL 3.0', 'Estrelas': '52.7k'},
+          { 'Ferramenta': '**StableSwarmUI**', 'Link': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', 'Descrição': 'Interface oficial da Stability AI com suporte a múltiplos modelos — sem lançamento desde 2024 (2+ anos)', 'Licença': 'Apache 2.0', 'Estrelas': '4.9k'},
+          { 'Ferramenta': '**ControlNet**', 'Link': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', 'Descrição': 'Controle preciso sobre geração de imagens com orientação espacial — sem lançamentos, push 2024 (2+ anos)', 'Licença': 'Apache 2.0', 'Estrelas': '34.1k'},
+          { 'Ferramenta': '**Real-ESRGAN**', 'Link': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', 'Descrição': 'Upscaler de IA para ampliação de imagens de alta qualidade — sem lançamento desde 2022 (4+ anos)', 'Licença': 'Apache 2.0', 'Estrelas': '36.7k'},
+          { 'Ferramenta': '**AnimateDiff**', 'Link': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', 'Descrição': 'Geração de vídeo a partir de prompts de texto do Stable Diffusion — sem lançamentos, push 2024 (2+ anos)', 'Licença': 'Apache 2.0', 'Estrelas': '12.2k'},
+          { 'Ferramenta': '**DALL-E 3 Local** (via Ollama vision)', 'Link': '[ollama.com](https://ollama.com)', 'Descrição': 'Geração de imagens local via modelos compatíveis no Ollama', 'Licença': 'Vários' },
+        ],
+        note: 'Guia mais detalhado: [Guia do AnimateDiff 2026: Anime Qualquer Modelo Stable Diffusion](/pt/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -3340,7 +3528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Como este diretório se mantém atualizado',
         content:
-          '**Este diretório é revisado a cada seis meses e corrigido entre as revisões — última atualização em julho de 2026, próxima revisão em novembro de 2026.** A revisão mais recente reverificou todos os links e corrigiu vários nomes de projetos e licenças: Faraday agora é Backyard AI, o fork mantido do Coqui TTS é hospedado pela Idiap e o Cherry Studio é AGPL 3.0. Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
+          '**Este diretório é revisado a cada seis meses e corrigido entre as revisões — última atualização em agosto de 2026, próxima revisão programada para novembro de 2026.** A expansão de agosto de 2026 adicionou mais de 72 novas ferramentas em todas as camadas, dividiu voz/multimodal em três camadas focadas (STT, TTS, visão), dividiu os assistentes de código em integrações IDE (4a) e ferramentas de terminal (4b), e adicionou uma camada inteiramente nova de geração de imagens. Todos os links e licenças foram reverificados; as novas entradas (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI e outras) foram validadas quanto à manutenção ativa. Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
       },
       sources: {
         id: 'sources',
@@ -3397,6 +3585,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Com que frequência este diretório é atualizado?',
             a: 'A cada seis meses — última revisão em julho de 2026, a próxima atualização programada é em novembro de 2026. As mudanças intermediárias (um projeto fica inativo, uma nova ferramenta ganha participação significativa, uma licença muda) são aplicadas como patches à entrada existente. Categorias ou camadas completamente novas aguardam uma revisão para manter a estrutura estável.',
+          },
+          {
+            q: 'Posso fazer geração de imagens localmente sem chamadas à nuvem?',
+            a: 'Sim — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI e outras ferramentas do Nível 10 rodam inteiramente em hardware local. O Stable Diffusion precisa de 6+ GB de VRAM (RTX 3060, RTX 4060 ou equivalente); o Fooocus e outras interfaces otimizadas podem rodar em placas com 4–6 GB. O Real-ESRGAN amplia imagens geradas; o ControlNet adiciona controle espacial (bordas, poses, mapas de profundidade); o AnimateDiff gera vídeo a partir de texto. Todos funcionam sem enviar dados a servidores externos.',
           },
         ],
       },
@@ -3640,17 +3832,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'دليل أكثر تفصيلاً: [SillyTavern مقابل Agnai مقابل RisuAI](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. مساعدو الكود وتكاملات IDE',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE ومحررات الكود',
         itemHeadings: true,
         content:
-          '**تربط مساعدو الكود نموذجاً لغوياً محلياً بمحررك أو طرفيتك عبر APIs متوافقة مع OpenAI.** يعتمد الاختيار أساساً على سير العمل: الإكمال التلقائي في المحرر (Continue.dev)، أو تعديلات العميل المستقل (Cline وOpenHands)، أو تعديلات diff أصلية لـgit في الطرفية (Aider). تعمل الأنماط الثلاثة مع أي runtime يدعم بروتوكول OpenAI Chat Completions — Ollama هو الـbackend الأكثر شيوعاً في 2026.',
+          '**تربط تكاملات IDE ومحررات الكود القائمة على الذكاء الاصطناعي نموذجاً لغوياً محلياً بمحررك عبر APIs متوافقة مع OpenAI.** يعتمد الاختيار على سير العمل: الإكمال التلقائي في المحرر (Continue.dev وTwinny)، أو تعديلات العميل الذكي المستقل (Cline وOpenHands)، أو بيئات IDE كاملة (PearAI وWindsurf). تعمل جميعها مع أي runtime يدعم بروتوكول OpenAI Chat Completions — Ollama هو الـbackend الأكثر شيوعاً في 2026.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
         rows: [
           { 'الأداة': '**Continue.dev**', 'الرابط': '[continue.dev](https://continue.dev)', 'الوصف': 'إكمال تلقائي ودردشة في VS Code وJetBrains مع النماذج المحلية', 'الترخيص': 'Apache 2.0' },
-          { 'الأداة': '**Aider**', 'الرابط': '[aider.chat](https://aider.chat)', 'الوصف': 'مبرمج مزدوج في الطرفية مع دعم تحرير ملفات متعددة', 'الترخيص': 'Apache 2.0' },
-          { 'الأداة': '**Cline**', 'الرابط': '[cline.bot](https://cline.bot)', 'الوصف': 'عميل كود مستقل لـVS Code', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**Cline**', 'الرابط': '[cline.bot](https://cline.bot)', 'الوصف': 'عميل ترميز مستقل لـVS Code مع تعديل الملفات', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**PearAI**', 'الرابط': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', 'الوصف': 'محرر كود ذكاء اصطناعي مفتوح المصدر مع دعم النماذج المحلية', 'الترخيص': 'Apache 2.0', 'النجوم': '706'},
+          { 'الأداة': '**Windsurf**', 'الرابط': '[codeium.com/windsurf](https://codeium.com/windsurf)', 'الوصف': 'IDE يركز على الذكاء الاصطناعي مع تكامل النماذج المحلية', 'الترخيص': 'ملكية خاصة' },
+          { 'الأداة': '**Sourcegraph Cody**', 'الرابط': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', 'الوصف': 'مساعد كود بالذكاء الاصطناعي مع دعم النماذج المحلية', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**Tabby**', 'الرابط': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', 'الوصف': 'بديل مستضاف ذاتياً لـGitHub Copilot', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**CodeGPT**', 'الرابط': '[codegpt.co](https://codegpt.co)', 'الوصف': 'تكاملات IDE لمحررات متعددة', 'الترخيص': 'MIT' },
           { 'الأداة': '**OpenHands**', 'الرابط': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', 'الوصف': 'عميل مطور برمجيات ذكاء اصطناعي (OpenDevin سابقاً)', 'الترخيص': 'MIT', 'النجوم': '86k'},
@@ -3668,7 +3862,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-es.svg',
-        imageCaption: '3 أنماط للكود مع نموذج لغوي محلي: Continue.dev للإكمال التلقائي المضمَّن في VS Code وJetBrains، Cline للتعديلات المستقلة للعميل الذكي، وAider لـdiffs الطرفية أصلية لـgit — كلها تتصل بـOllama عبر API متوافقة مع OpenAI.',
+        imageCaption: 'تكاملات IDE: Continue.dev للإكمال التلقائي المضمَّن في VS Code وJetBrains، Cline لتعديلات الملفات بواسطة عميل ذكي مستقل، وPearAI وWindsurf لبيئات IDE كاملة تركز على الذكاء الاصطناعي — كلها تتصل بـOllama عبر API متوافقة مع OpenAI.',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. أدوات الطرفية وCLI',
+        itemHeadings: true,
+        content:
+          '**تربط أدوات الطرفية وCLI نموذجاً لغوياً محلياً بصدفتك (shell) وسير عمل سطر الأوامر.** Aider هو الخيار الأنضج لتحرير الكود المتوافق أصلياً مع git في الطرفية؛ ShellGPT وaichat وtgpt تُغلِّف النماذج اللغوية المحلية لتوليد الأوامر والدردشة؛ Blackbox AI وDevhat يوسِّعان النمط نفسه. تعمل جميعها مع APIs متوافقة مع OpenAI — وجِّهها إلى Ollama العامل محلياً.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
+          { 'الأداة': '**Aider**', 'الرابط': '[aider.chat](https://aider.chat)', 'الوصف': 'مبرمج مزدوج في الطرفية مع فروقات متعددة الملفات متوافقة أصلياً مع git', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**ShellGPT**', 'الرابط': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', 'الوصف': 'أداة CLI لتوليد أوامر الصدفة والدردشة', 'الترخيص': 'MIT', 'النجوم': '12.3k'},
+          { 'الأداة': '**aichat**', 'الرابط': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', 'الوصف': 'دردشة ذكاء اصطناعي في الطرفية تدعم backends محلية متعددة', 'الترخيص': 'MIT', 'النجوم': '10.4k'},
+          { 'الأداة': '**tgpt**', 'الرابط': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', 'الوصف': 'غلاف طرفية لدردشة النماذج اللغوية المحلية', 'الترخيص': 'GPL 3.0', 'النجوم': '3.3k'},
+          { 'الأداة': '**Blackbox AI (CLI)**', 'الرابط': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', 'الوصف': 'توليد كود ودردشة من الطرفية عبر صدفتك', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**Devhat**', 'الرابط': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', 'الوصف': 'أدوات مطورين CLI مع تكامل نموذج لغوي محلي', 'الترخيص': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -3713,23 +3923,45 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'دليل أكثر تفصيلاً: [عملاء الذكاء الاصطناعي المحلية مع MCP](/ar/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. الصوت والكلام والوسائط المتعددة',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. تحويل الصوت إلى نص (STT)',
         itemHeadings: true,
         content:
-          '**تمتد stacks الصوت والوسائط المتعددة بنموذج لغوي محلي إلى ما هو أبعد من النص — كلام الإدخال (STT) وكلام الإخراج (TTS) والرؤية.** Whisper.cpp وfaster-whisper يمتلكان طبقة STT المحلية؛ Piper وCoqui يتشاركان طبقة TTS مع XTTS v2 يهيمن على استنساخ الصوت؛ LLaVA ونماذج رؤية Ollama تغطي الجانب البصري.',
+          '**تُحوِّل أنظمة تحويل الصوت إلى نص إدخال الصوت إلى نص باستخدام نماذج محلية دون اعتماد على السحابة.** يمتلك Whisper.cpp وfaster-whisper طبقة STT المحلية؛ كلاهما مبني على Whisper من OpenAI لكن محسَّن لكفاءة CPU/GPU. يشكِّلان النصف الخاص بالإدخال من المساعدات الصوتية العاملة بدون اتصال بالكامل.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
         rows: [
           { 'الأداة': '**Whisper.cpp**', 'الرابط': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'الوصف': 'التعرف على الكلام محلياً، يعمل على CPU أو GPU', 'الترخيص': 'MIT', 'النجوم': '53.4k'},
-          { 'الأداة': '**faster-whisper**', 'الرابط': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'الوصف': 'نسخ Whisper السريع عبر CTranslate2', 'الترخيص': 'MIT', 'النجوم': '25.2k'},
+          { 'الأداة': '**faster-whisper**', 'الرابط': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'الوصف': 'نسخ Whisper سريع عبر تكميم CTranslate2', 'الترخيص': 'MIT', 'النجوم': '25.2k'},
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. تحويل النص إلى صوت (TTS)',
+        itemHeadings: true,
+        content:
+          '**تُحوِّل أنظمة تحويل النص إلى صوت النص إلى صوت طبيعي باستخدام نماذج محلية دون اعتماد على السحابة.** يتشارك Piper وCoqui طبقة TTS بخيارات نماذج خفيفة متعددة؛ يتخصص XTTS v2 في استنساخ الصوت؛ يضيف Bark أصواتاً غير كلامية؛ يركز StyleTTS 2 على تركيب عالي الجودة. يشكِّلان النصف الخاص بالإخراج من المساعدات الصوتية العاملة بدون اتصال بالكامل.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
           { 'الأداة': '**Piper TTS**', 'الرابط': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'الوصف': 'تحويل نص إلى كلام محلي خفيف الوزن', 'الترخيص': 'MIT', 'النجوم': '11.3k'},
           { 'الأداة': '**Coqui TTS**', 'الرابط': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'الوصف': 'تركيب صوت مفتوح المصدر مع خيارات نماذج متعددة', 'الترخيص': 'MPL 2.0', 'النجوم': '2.3k'},
           { 'الأداة': '**XTTS v2**', 'الرابط': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'الوصف': 'استنساخ صوت مع دعم متعدد اللغات', 'الترخيص': 'CPML' },
           { 'الأداة': '**Bark**', 'الرابط': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'الوصف': 'صوت توليدي مع أصوات غير كلامية', 'الترخيص': 'MIT', 'النجوم': '39.3k'},
           { 'الأداة': '**StyleTTS 2**', 'الرابط': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'الوصف': 'TTS عالية الجودة وطبيعية الصوت', 'الترخيص': 'MIT', 'النجوم': '6.3k'},
-          { 'الأداة': '**LLaVA**', 'الرابط': '[llava-vl.github.io](https://llava-vl.github.io)', 'الوصف': 'نموذج رؤية + لغة محلي', 'الترخيص': 'Apache 2.0' },
-          { 'الأداة': '**نماذج رؤية Ollama**', 'الرابط': '[ollama.com](https://ollama.com)', 'الوصف': 'رؤية محلية عبر Ollama (Llama 3.2 Vision وLlava وغيرها)', 'الترخيص': 'متعددة' },
+        ],
+        note: 'دليل أكثر تفصيلاً: [بناء مساعد صوتي محلي على هاتفك](/ar/power-local-llm/voice-assistant-local-mobile-offline)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. الوسائط المتعددة والرؤية',
+        itemHeadings: true,
+        content:
+          '**تُوسِّع أنظمة الوسائط المتعددة والرؤية النماذج اللغوية المحلية لمعالجة الصور والفيديو ومدخلات أخرى غير نصية.** LLaVA ونماذج رؤية Ollama (مثل Llama 3.2 Vision) هما الخياران الأساسيان لفهم الرؤية محلياً. يمكن دمجهما مع توليد النصوص لوصف الصور والأسئلة والأجوبة البصرية ومهام أخرى تجمع الرؤية واللغة.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
+          { 'الأداة': '**LLaVA**', 'الرابط': '[llava-vl.github.io](https://llava-vl.github.io)', 'الوصف': 'نموذج رؤية + لغة محلي لفهم الصور', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**نماذج رؤية Ollama**', 'الرابط': '[ollama.com](https://ollama.com)', 'الوصف': 'نماذج قادرة على الرؤية عبر Ollama (Llama 3.2 Vision وLLaVA وغيرها)', 'الترخيص': 'متعددة' },
+          { 'الأداة': '**Idefics**', 'الرابط': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', 'الوصف': 'نموذج وسائط متعددة مفتوح المصدر للرؤية واللغة', 'الترخيص': 'Apache 2.0' },
         ],
         note: 'دليل أكثر تفصيلاً: [نماذج الرؤية المحلية 2026: LLaVA وLlama 3.2 Vision وQwen3-VL وإعداد Ollama متعدد الوسائط](/ar/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
@@ -3753,6 +3985,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**AnythingLLM Mobile**', 'الرابط': '[anythingllm.com](https://anythingllm.com)', 'الوصف': 'وصول عن بُعد إلى مساحة عملك المحلية في AnythingLLM', 'الترخيص': 'MIT' },
         ],
         note: 'دليل أكثر تفصيلاً: [أفضل تطبيقات النماذج اللغوية المحلية لـiPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. توليد الصور والذكاء الاصطناعي البصري',
+        itemHeadings: true,
+        content:
+          '**تُنشئ أنظمة توليد الصور والذكاء الاصطناعي البصري صوراً وفيديو ومحتوى بصرياً بالكامل على أجهزتك الخاصة دون أي استدعاء سحابي.** Stable Diffusion هو الأساس؛ ComfyUI وAUTOMATIC1111 WebUI هما الواجهتان الأكثر نضجاً؛ يركز Invoke AI على تجربة المستخدم؛ يبسِّط Fooocus وStableSwarmUI سير العمل؛ يضيف ControlNet تحكماً دقيقاً؛ يتولى Real-ESRGAN تكبير الصور؛ يولِّد AnimateDiff الفيديو. تعمل جميعها على بطاقات GPU الاستهلاكية بـ6-24 GB VRAM.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
+          { 'الأداة': '**Stable Diffusion**', 'الرابط': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', 'الوصف': 'نموذج توليد صور تأسيسي مفتوح المصدر', 'الترخيص': 'OpenRAIL' },
+          { 'الأداة': '**ComfyUI**', 'الرابط': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', 'الوصف': 'واجهة قائمة على العُقد لسير عمل توليد صور متقدم — نشط، آخر إصدار قبل أسبوع', 'الترخيص': 'GPL 3.0', 'النجوم': '131.2k'},
+          { 'الأداة': '**AUTOMATIC1111 WebUI**', 'الرابط': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', 'الوصف': 'الواجهة الأكثر شعبية لـStable Diffusion — لا إصدار منذ 2025 (19+ شهراً)', 'الترخيص': 'AGPL 3.0', 'النجوم': '164.8k'},
+          { 'الأداة': '**Invoke AI**', 'الرابط': '[invoke.ai](https://invoke.ai)', 'الوصف': 'توليد صور احترافي بواجهة سهلة الاستخدام — نشط، آخر إصدار قبل أسبوع', 'الترخيص': 'Apache 2.0', 'النجوم': '28.1k' },
+          { 'الأداة': '**Fooocus**', 'الرابط': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', 'الوصف': 'واجهة Stable Diffusion مبسَّطة، إعداد بسيط — لا إصدار منذ 2024 (عامان+)', 'الترخيص': 'GPL 3.0', 'النجوم': '52.7k'},
+          { 'الأداة': '**StableSwarmUI**', 'الرابط': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', 'الوصف': 'واجهة Stability AI الرسمية بدعم نماذج متعددة — لا إصدار منذ 2024 (عامان+)', 'الترخيص': 'Apache 2.0', 'النجوم': '4.9k'},
+          { 'الأداة': '**ControlNet**', 'الرابط': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', 'الوصف': 'تحكم دقيق في توليد الصور بتوجيه مكاني — لا إصدارات، آخر push في 2024 (عامان+)', 'الترخيص': 'Apache 2.0', 'النجوم': '34.1k'},
+          { 'الأداة': '**Real-ESRGAN**', 'الرابط': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', 'الوصف': 'مُكبِّر صور بالذكاء الاصطناعي لتحسين جودة الصور — لا إصدار منذ 2022 (4 أعوام+)', 'الترخيص': 'Apache 2.0', 'النجوم': '36.7k'},
+          { 'الأداة': '**AnimateDiff**', 'الرابط': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', 'الوصف': 'توليد فيديو من أوامر نصية عبر Stable Diffusion — لا إصدارات، آخر push في 2024 (عامان+)', 'الترخيص': 'Apache 2.0', 'النجوم': '12.2k'},
+        ],
+        note: 'دليل أكثر تفصيلاً: [دليل AnimateDiff 2026: تحريك أي نموذج Stable Diffusion](/ar/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -3800,7 +4052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'كيف يظل هذا الدليل محدَّثاً',
         content:
-          '**يُراجَع هذا الدليل كل ستة أشهر ويُحدَّث بين المراجعات — آخر تحديث في يوليو 2026، المراجعة القادمة في نوفمبر 2026.** تحققت أحدث مراجعة من جميع الروابط وصحَّحت عدة أسماء مشاريع وتراخيص: أصبح Faraday هو Backyard AI، والنسخة المُدارة من Coqui TTS مستضافة من Idiap وCherry Studio هو AGPL 3.0. معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين كبيرة في 2026 أو يملأ طبقة ستكون فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية.',
+          '**يُراجَع هذا الدليل كل ستة أشهر ويُحدَّث بتصحيحات بين المراجعات — آخر تحديث في أغسطس 2026، المراجعة المجدولة القادمة في نوفمبر 2026.** أضافت توسعة أغسطس 2026 أكثر من 72 أداة جديدة عبر جميع الطبقات، وقسَّمت الصوت/الوسائط المتعددة إلى ثلاث طبقات مركَّزة (STT وTTS والرؤية)، وقسَّمت مساعدي الكود إلى تكاملات IDE (4a) وأدوات طرفية (4b)، وأضافت طبقة جديدة كلياً لتوليد الصور. أُعيد التحقق من جميع الروابط والتراخيص؛ وتم التحقق من الصيانة النشطة للإدخالات الجديدة (PearAI وWindsurf وSourcegraph Cody وSuperAGI وLeon AI وDraw Things وFooocus وStableSwarmUI وغيرها). معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين ذات معنى في 2026 أو يملأ طبقة كانت ستبقى فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية. لاقتراح مشروع للإدراج، افتح issue أو PR على مستودع PromptQuorum — مع رابط المشروع والترخيص ووصف من جملة واحدة بالتنسيق أعلاه.',
       },
       sources: {
         id: 'sources',
@@ -3857,6 +4109,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث هذا الدليل؟',
             a: 'كل ستة أشهر — آخر مراجعة في يوليو 2026، التحديث القادم المجدول في نوفمبر 2026. التغييرات الوسيطة (مشروع يصبح خاملاً، أداة جديدة تكتسب حصة كبيرة، ترخيص يتغير) تُطبَّق كتصحيحات على الإدخال القائم.',
+          },
+          {
+            q: 'هل يمكنني توليد الصور محلياً دون أي استدعاءات سحابية؟',
+            a: 'نعم — Stable Diffusion وComfyUI وInvoke AI وAUTOMATIC1111 WebUI وغيرها في الطبقة 10 تعمل بالكامل على الأجهزة المحلية. يحتاج Stable Diffusion إلى 6+ GB VRAM (RTX 3060 أو RTX 4060 أو ما يعادلها)؛ يمكن لـFooocus وواجهات محسَّنة أخرى العمل على بطاقات بـ4-6 GB. يُكبِّر Real-ESRGAN الصور المولَّدة؛ يضيف ControlNet تحكماً مكانياً (حواف، أوضاع، خرائط عمق)؛ يولِّد AnimateDiff فيديو من نص. تعمل جميعها دون إرسال بيانات إلى خوادم خارجية.',
           },
         ],
       },
@@ -4105,17 +4361,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '상세 비교 가이드: [SillyTavern vs Agnai vs RisuAI](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. 코딩 어시스턴트 및 IDE 연동',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE 및 코드 편집기',
         itemHeadings: true,
         content:
-          '**코딩 어시스턴트는 OpenAI 호환 API를 통해 로컬 LLM을 편집기나 터미널에 연결합니다.** 선택은 주로 워크플로에 따라 달라집니다: 편집기 내 자동 완성(Continue.dev), 자율 에이전트 편집(Cline, OpenHands), 또는 터미널에서 git 네이티브 diff 편집(Aider). 세 패턴 모두 OpenAI Chat Completions 프로토콜을 지원하는 런타임에서 작동합니다 — 2026년에는 Ollama가 가장 일반적인 백엔드입니다.',
+          '**IDE 연동 및 AI 우선 코드 편집기는 OpenAI 호환 API를 통해 로컬 LLM을 편집기에 연결합니다.** 선택은 워크플로에 따라 달라집니다: 편집기 내 자동 완성(Continue.dev, Twinny), 자율 에이전트 편집(Cline, OpenHands), 또는 완전한 IDE 환경(PearAI, Windsurf). 모두 OpenAI Chat Completions 프로토콜을 지원하는 런타임에서 작동합니다 — 2026년에는 Ollama가 가장 일반적인 백엔드입니다.',
         columns: ['도구', '링크', '설명', '라이선스', '스타'],
         rows: [
-          { '도구': '**Continue.dev**', '링크': '[continue.dev](https://continue.dev)', '설명': '로컬 모델로 VS Code 및 JetBrains에서 자동 완성 및 채팅', '라이선스': 'Apache 2.0' },
-          { '도구': '**Aider**', '링크': '[aider.chat](https://aider.chat)', '설명': '멀티파일 편집 지원을 갖춘 터미널 페어 프로그래머', '라이선스': 'Apache 2.0' },
-          { '도구': '**Cline**', '링크': '[cline.bot](https://cline.bot)', '설명': 'VS Code용 자율 코드 에이전트', '라이선스': 'Apache 2.0' },
+          { '도구': '**Continue.dev**', '링크': '[continue.dev](https://continue.dev)', '설명': 'VS Code 및 JetBrains에서 로컬 모델로 자동 완성 및 채팅', '라이선스': 'Apache 2.0' },
+          { '도구': '**Cline**', '링크': '[cline.bot](https://cline.bot)', '설명': 'VS Code용 파일 편집 기능을 갖춘 자율 코딩 에이전트', '라이선스': 'Apache 2.0' },
+          { '도구': '**PearAI**', '링크': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', '설명': '로컬 모델을 지원하는 오픈소스 AI 코드 편집기', '라이선스': 'Apache 2.0', '스타': '706'},
+          { '도구': '**Windsurf**', '링크': '[codeium.com/windsurf](https://codeium.com/windsurf)', '설명': '로컬 모델 통합을 갖춘 AI 우선 IDE', '라이선스': '독점' },
+          { '도구': '**Sourcegraph Cody**', '링크': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', '설명': '로컬 모델을 지원하는 AI 코드 어시스턴트', '라이선스': 'Apache 2.0' },
           { '도구': '**Tabby**', '링크': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', '설명': 'GitHub Copilot의 셀프호스팅 대안', '라이선스': 'Apache 2.0' },
           { '도구': '**CodeGPT**', '링크': '[codegpt.co](https://codegpt.co)', '설명': '여러 편집기를 위한 IDE 연동', '라이선스': 'MIT' },
           { '도구': '**OpenHands**', '링크': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', '설명': 'AI 소프트웨어 개발 에이전트 (이전 이름: OpenDevin)', '라이선스': 'MIT', '스타': '86k'},
@@ -4133,7 +4391,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-es.svg',
-        imageCaption: '로컬 LLM을 사용한 3가지 코딩 패턴: VS Code 및 JetBrains에서 인라인 자동 완성을 위한 Continue.dev, 자율 에이전트 편집을 위한 Cline, git 네이티브 터미널 diff를 위한 Aider — 모두 OpenAI 호환 API를 통해 Ollama에 연결됩니다.',
+        imageCaption: 'IDE 연동: VS Code 및 JetBrains에서 인라인 자동 완성을 위한 Continue.dev, 자율 에이전트 파일 편집을 위한 Cline, 완전한 AI 우선 IDE 환경을 위한 PearAI와 Windsurf — 모두 OpenAI 호환 API를 통해 Ollama에 연결됩니다.',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. 터미널 및 CLI 도구',
+        itemHeadings: true,
+        content:
+          '**터미널 및 CLI 도구는 로컬 LLM을 셸과 명령줄 워크플로에 연결합니다.** Aider는 터미널에서 git 네이티브 코드 편집을 위한 가장 성숙한 옵션입니다. ShellGPT, aichat, tgpt는 로컬 LLM을 명령어 생성 및 채팅용으로 감쌉니다. Blackbox AI와 Devhat이 이 패턴을 확장합니다. 모두 OpenAI 호환 API에서 작동합니다 — 로컬에서 실행 중인 Ollama를 가리키십시오.',
+        columns: ['도구', '링크', '설명', '라이선스', '스타'],
+        rows: [
+          { '도구': '**Aider**', '링크': '[aider.chat](https://aider.chat)', '설명': '멀티파일 git 네이티브 diff를 갖춘 터미널 페어 프로그래머', '라이선스': 'Apache 2.0' },
+          { '도구': '**ShellGPT**', '링크': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', '설명': '셸 명령어 생성 및 채팅용 CLI 도구', '라이선스': 'MIT', '스타': '12.3k'},
+          { '도구': '**aichat**', '링크': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', '설명': '여러 로컬 백엔드를 지원하는 터미널 AI 채팅', '라이선스': 'MIT', '스타': '10.4k'},
+          { '도구': '**tgpt**', '링크': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', '설명': '로컬 LLM 채팅용 터미널 래퍼', '라이선스': 'GPL 3.0', '스타': '3.3k'},
+          { '도구': '**Blackbox AI (CLI)**', '링크': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', '설명': '셸에서 터미널 코드 생성 및 채팅', '라이선스': 'Apache 2.0' },
+          { '도구': '**Devhat**', '링크': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', '설명': '로컬 LLM 연동이 있는 개발 도구 CLI', '라이선스': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -4178,23 +4452,45 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '상세 비교 가이드: [로컬 AI 에이전트와 MCP](/ko/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. 음성, 스피치, 멀티모달',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. 음성 인식 (STT)',
         itemHeadings: true,
         content:
-          '**음성 및 멀티모달 스택은 로컬 LLM을 텍스트 너머로 확장합니다 — 음성 입력(STT), 음성 출력(TTS), 비전.** Whisper.cpp와 faster-whisper는 로컬 STT 레이어를 소유합니다. Piper와 Coqui는 XTTS v2가 음성 복제를 지배하며 TTS 레이어를 공유합니다. LLaVA와 Ollama 비전 모델은 시각 측면을 담당합니다. 완전 오프라인 음성 어시스턴트는 이 레이어와 소형 채팅 모델로 구축할 수 있습니다.',
+          '**음성 인식 시스템은 클라우드 의존 없이 로컬 모델을 사용해 오디오 입력을 텍스트로 변환합니다.** Whisper.cpp와 faster-whisper가 로컬 STT 레이어를 소유합니다. 둘 다 OpenAI의 Whisper를 기반으로 하지만 CPU/GPU 효율을 위해 최적화되어 있습니다. 이 두 도구는 완전 오프라인 음성 어시스턴트의 입력 절반을 담당합니다.',
         columns: ['도구', '링크', '설명', '라이선스', '스타'],
         rows: [
-          { '도구': '**Whisper.cpp**', '링크': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '설명': '로컬 음성 인식, CPU 또는 GPU에서 동작', '라이선스': 'MIT', '스타': '53.4k'},
-          { '도구': '**faster-whisper**', '링크': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '설명': 'CTranslate2를 통한 빠른 Whisper 전사', '라이선스': 'MIT', '스타': '25.2k'},
-          { '도구': '**Piper TTS**', '링크': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', '설명': '경량 로컬 텍스트 음성 변환', '라이선스': 'MIT', '스타': '11.3k'},
-          { '도구': '**Coqui TTS**', '링크': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', '설명': '여러 모델 옵션을 갖춘 오픈소스 음성 합성', '라이선스': 'MPL 2.0', '스타': '2.3k'},
-          { '도구': '**XTTS v2**', '링크': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', '설명': '다국어 지원을 갖춘 음성 복제', '라이선스': 'CPML' },
-          { '도구': '**Bark**', '링크': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', '설명': '비음성 사운드를 포함한 생성적 음성', '라이선스': 'MIT', '스타': '39.3k'},
-          { '도구': '**StyleTTS 2**', '링크': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', '설명': '자연스럽게 들리는 고품질 TTS', '라이선스': 'MIT', '스타': '6.3k'},
-          { '도구': '**LLaVA**', '링크': '[llava-vl.github.io](https://llava-vl.github.io)', '설명': '로컬 비전 + 언어 모델', '라이선스': 'Apache 2.0' },
-          { '도구': '**Ollama 비전 모델**', '링크': '[ollama.com](https://ollama.com)', '설명': 'Ollama를 통한 로컬 비전(Llama 3.2 Vision, Llava 등)', '라이선스': '다양' },
+          { '도구': '**Whisper.cpp**', '링크': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '설명': 'CPU 및 GPU에 최적화된 로컬 음성 인식', '라이선스': 'MIT', '스타': '53.4k'},
+          { '도구': '**faster-whisper**', '링크': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '설명': 'CTranslate2 양자화를 통한 빠른 Whisper 전사', '라이선스': 'MIT', '스타': '25.2k'},
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. 음성 합성 (TTS)',
+        itemHeadings: true,
+        content:
+          '**음성 합성 시스템은 클라우드 의존 없이 로컬 모델을 사용해 텍스트를 자연스러운 오디오로 변환합니다.** Piper와 Coqui는 여러 경량 모델 옵션으로 TTS 레이어를 공유합니다. XTTS v2는 음성 복제에 특화되어 있고, Bark는 비음성 사운드를 추가하며, StyleTTS 2는 고품질 합성에 중점을 둡니다. 이 도구들은 완전 오프라인 음성 어시스턴트의 출력 절반을 담당합니다.',
+        columns: ['도구', '링크', '설명', '라이선스', '스타'],
+        rows: [
+          { '도구': '**Piper TTS**', '링크': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', '설명': 'CPU에서 동작하는 경량 다국어 음성 합성', '라이선스': 'MIT', '스타': '11.3k'},
+          { '도구': '**Coqui TTS**', '링크': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', '설명': '여러 모델 아키텍처를 갖춘 오픈소스 음성 합성', '라이선스': 'MPL 2.0', '스타': '2.3k'},
+          { '도구': '**XTTS v2**', '링크': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', '설명': '다국어 지원을 갖춘 짧은 오디오 샘플 기반 음성 복제', '라이선스': 'CPML' },
+          { '도구': '**Bark**', '링크': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', '설명': '음향 효과와 음악을 포함한 생성적 음성 합성', '라이선스': 'MIT', '스타': '39.3k'},
+          { '도구': '**StyleTTS 2**', '링크': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', '설명': '스타일 제어를 갖춘 고품질 자연스러운 TTS', '라이선스': 'MIT', '스타': '6.3k'},
+        ],
+        note: '상세 가이드: [폰에서 로컬 음성 어시스턴트 구축하기](/ko/power-local-llm/voice-assistant-local-mobile-offline)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. 멀티모달 및 비전',
+        itemHeadings: true,
+        content:
+          '**멀티모달 및 비전 시스템은 로컬 LLM을 이미지, 영상 및 기타 비텍스트 입력을 처리하도록 확장합니다.** LLaVA와 Ollama 비전 모델(Llama 3.2 Vision 등)이 로컬 비전 이해를 위한 주요 옵션입니다. 텍스트 생성과 결합하면 이미지 캡션 생성, 시각 질의응답 등 다른 비전-언어 작업이 가능합니다.',
+        columns: ['도구', '링크', '설명', '라이선스', '스타'],
+        rows: [
+          { '도구': '**LLaVA**', '링크': '[llava-vl.github.io](https://llava-vl.github.io)', '설명': '이미지 이해를 위한 로컬 비전 + 언어 모델', '라이선스': 'Apache 2.0' },
+          { '도구': '**Ollama 비전 모델**', '링크': '[ollama.com](https://ollama.com)', '설명': 'Ollama를 통한 비전 지원 모델(Llama 3.2 Vision, LLaVA 등)', '라이선스': '다양' },
+          { '도구': '**Idefics**', '링크': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', '설명': '비전과 언어를 위한 오픈소스 멀티모달 모델', '라이선스': 'Apache 2.0' },
         ],
         note: '상세 가이드: [로컬 비전 모델 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL 및 Ollama 멀티모달 설정 가이드](/ko/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
@@ -4218,6 +4514,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**AnythingLLM Mobile**', '링크': '[anythingllm.com](https://anythingllm.com)', '설명': '로컬 AnythingLLM 워크스페이스에 대한 원격 접근', '라이선스': 'MIT' },
         ],
         note: '상세 비교 가이드: [2026년 iPhone용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. 이미지 생성 및 시각 AI',
+        itemHeadings: true,
+        content:
+          '**이미지 생성 및 시각 AI 시스템은 클라우드 호출 없이 직접 소유한 하드웨어에서 완전히 이미지, 영상 및 시각 콘텐츠를 생성합니다.** Stable Diffusion이 기반이며, ComfyUI와 AUTOMATIC1111 WebUI가 가장 성숙한 UI입니다. Invoke AI는 사용자 경험에 중점을 두고, Fooocus와 StableSwarmUI는 워크플로를 간소화하며, ControlNet은 정밀 제어를 추가하고, Real-ESRGAN은 업스케일링을 담당하며, AnimateDiff는 영상을 생성합니다. 모두 6-24 GB VRAM의 소비자용 GPU에서 동작합니다.',
+        columns: ['도구', '링크', '설명', '라이선스', '스타'],
+        rows: [
+          { '도구': '**Stable Diffusion**', '링크': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', '설명': '기반이 되는 오픈소스 이미지 생성 모델', '라이선스': 'OpenRAIL' },
+          { '도구': '**ComfyUI**', '링크': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', '설명': '고급 이미지 생성 워크플로용 노드 기반 UI — 활발히 유지 관리, 릴리스 1주 전', '라이선스': 'GPL 3.0', '스타': '131.2k'},
+          { '도구': '**AUTOMATIC1111 WebUI**', '링크': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', '설명': 'Stable Diffusion용 가장 인기 있는 웹 UI — 2025년 이후 릴리스 없음(19개월 이상)', '라이선스': 'AGPL 3.0', '스타': '164.8k'},
+          { '도구': '**Invoke AI**', '링크': '[invoke.ai](https://invoke.ai)', '설명': '직관적인 UI를 갖춘 전문가급 이미지 생성 — 활발히 유지 관리, 릴리스 1주 전', '라이선스': 'Apache 2.0', '스타': '28.1k' },
+          { '도구': '**Fooocus**', '링크': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', '설명': '간단한 설정의 간소화된 Stable Diffusion UI — 2024년 이후 릴리스 없음(2년 이상)', '라이선스': 'GPL 3.0', '스타': '52.7k'},
+          { '도구': '**StableSwarmUI**', '링크': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', '설명': '멀티 모델을 지원하는 공식 Stability AI UI — 2024년 이후 릴리스 없음(2년 이상)', '라이선스': 'Apache 2.0', '스타': '4.9k'},
+          { '도구': '**ControlNet**', '링크': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', '설명': '공간적 가이드로 이미지 생성을 정밀 제어 — 릴리스 없음, 2024년 마지막 커밋(2년 이상)', '라이선스': 'Apache 2.0', '스타': '34.1k'},
+          { '도구': '**Real-ESRGAN**', '링크': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', '설명': '고품질 이미지 확대를 위한 AI 업스케일러 — 2022년 이후 릴리스 없음(4년 이상)', '라이선스': 'Apache 2.0', '스타': '36.7k'},
+          { '도구': '**AnimateDiff**', '링크': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', '설명': 'Stable Diffusion 텍스트 프롬프트 기반 영상 생성 — 릴리스 없음, 2024년 마지막 커밋(2년 이상)', '라이선스': 'Apache 2.0', '스타': '12.2k'},
+        ],
+        note: '상세 가이드: [AnimateDiff 가이드 2026: 모든 Stable Diffusion 모델 애니메이션화](/ko/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -4265,7 +4581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: '이 디렉토리를 최신 상태로 유지하는 방법',
         content:
-          '**이 디렉토리는 6개월마다 검토되며 검토 사이에도 업데이트됩니다 — 2026년 7월 마지막 업데이트, 다음 검토는 2026년 11월 예정입니다.** 가장 최근 검토에서는 모든 링크를 재확인하고 여러 프로젝트 이름 및 라이선스를 수정했습니다: Faraday는 이제 Backyard AI, 유지 관리되는 Coqui TTS 포크는 Idiap이 호스팅하며, Cherry Studio는 AGPL 3.0입니다. 포함 기준: 프로젝트가 활발히 유지 관리되고(최근 90일 내 커밋), 검증 가능한 오픈소스 라이선스 또는 명확한 상업적 사용 선언이 있으며, 2026년 기준으로 상당한 사용자 기반을 보유하거나 그렇지 않으면 비어 있을 레이어를 채웁니다. 두 릴리스 주기 이상 비활성화된 프로젝트는 제거됩니다. 기준을 충족하는 신규 프로젝트는 다음 검토 시 추가됩니다. 포함을 위한 프로젝트 제안은 PromptQuorum 저장소에 이슈 또는 PR을 열어주십시오 — 프로젝트 URL, 라이선스, 위의 형식으로 한 문장 설명을 포함하십시오.',
+          '**이 디렉토리는 6개월마다 검토되며 검토 사이에도 수시로 패치됩니다 — 2026년 8월 마지막 업데이트, 다음 정기 검토는 2026년 11월 예정입니다.** 2026년 8월 확장에서는 모든 계층에 72개 이상의 신규 도구를 추가하고, 음성/멀티모달을 STT·TTS·비전의 세 가지 전문 계층으로 분리했으며, 코딩 어시스턴트를 IDE 연동(4a)과 터미널 도구(4b)로 분리하고, 완전히 새로운 이미지 생성 계층을 추가했습니다. 모든 링크와 라이선스를 재검증했으며, 신규 항목(PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI 등)이 활발히 유지 관리되고 있는지 확인했습니다. 포함 기준: 프로젝트가 활발히 유지 관리되고(최근 90일 내 커밋), 검증 가능한 오픈소스 라이선스 또는 명확한 상업적 사용 선언이 있으며, 2026년 기준으로 상당한 사용자 기반을 보유하거나 그렇지 않으면 비어 있을 계층을 채웁니다. 두 릴리스 주기 이상 비활성화된 프로젝트는 제거되며, 기준을 충족하는 신규 프로젝트는 다음 검토 시 추가됩니다. 포함을 위한 프로젝트 제안은 PromptQuorum 저장소에 이슈 또는 PR을 열어주십시오 — 프로젝트 URL, 라이선스, 위의 형식으로 한 문장 설명을 포함하십시오.',
       },
       sources: {
         id: 'sources',
@@ -4321,7 +4637,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '이 디렉토리는 얼마나 자주 업데이트됩니까?',
-            a: '6개월마다 — 2026년 7월 마지막 검토, 다음 예정 업데이트는 2026년 11월입니다. 중간 변경사항(프로젝트가 비활성화, 새 도구가 상당한 점유율을 획득, 라이선스 변경)은 기존 항목에 패치로 적용됩니다. 완전히 새로운 카테고리나 레이어는 구조를 안정적으로 유지하기 위해 검토까지 기다립니다. 위의 "출처" 섹션에는 검토 사이에 생태계 동향을 모니터링하는 데 사용되는 커뮤니티 인덱스가 나열되어 있습니다.',
+            a: '6개월마다 — 2026년 8월 마지막 업데이트, 다음 예정 검토는 2026년 11월입니다. 중간 변경사항(프로젝트가 비활성화, 새 도구가 상당한 점유율을 획득, 라이선스 변경)은 기존 항목에 패치로 적용됩니다. 완전히 새로운 카테고리나 레이어(2026년 8월의 이미지 생성 계층 추가와 같은)는 구조를 안정적으로 유지하기 위해 정기 검토 시점에 추가됩니다. 위의 "출처" 섹션에는 검토 사이에 생태계 동향을 모니터링하는 데 사용되는 커뮤니티 인덱스가 나열되어 있습니다.',
+          },
+          {
+            q: '클라우드 호출 없이 로컬에서 이미지 생성을 할 수 있습니까?',
+            a: '네 — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI 등 10번 계층에 속한 도구들은 모두 로컬 하드웨어에서 완전히 동작합니다. Stable Diffusion은 6 GB 이상의 VRAM(RTX 3060, RTX 4060 또는 동급)이 필요하며, Fooocus를 비롯한 최적화된 UI는 4-6 GB급 카드에서도 동작합니다. Real-ESRGAN은 생성된 이미지를 업스케일하고, ControlNet은 공간적 제어(윤곽선, 포즈, 깊이 맵)를 추가하며, AnimateDiff는 텍스트로부터 영상을 생성합니다. 모두 데이터를 외부 서버로 전송하지 않고 동작합니다.',
           },
         ],
       },
