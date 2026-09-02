@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-quantization-6gb-vram-overview-hero-en.webp',
     title: 'Best Quantization for 6 GB VRAM: Which Level Fits?',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     seoTitle: 'Best Quantization for 6 GB VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M for 7B models: 4.9 GB, fits 6 GB VRAM with 1.1 GB for context. Q5_K_M fits tight. Q6_K and above exceed 6 GB. Quick answer from PromptQuorum.',
     publishDate: '2026-05-23',
@@ -16,12 +16,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     parentArticle: '/local-llms/llm-quantization-explained',
     siblingBites: ['best-local-llm-6gb-vram', 'what-is-q4-k-m-quantization'],
     is_living_page: false,
+    leadAnswerBlock: '**Q4_K_M is the best quantization level for a 6 GB VRAM GPU — 7B and 8B models use 4.7–4.9 GB, leaving 1.1 GB free for the KV-cache at a 4k-token context.** Q5_K_M also fits, but only if you cap context to 2k tokens to avoid running out of memory. Q6_K and higher exceed the 6 GB ceiling on any 7B+ model.',
     quickAnswerTop: {
       en: {
         question: 'What quantization level is best for 6 GB VRAM?',
         answer: 'Q4_K_M is the sweet spot — 7B/8B models at Q4_K_M use 4.7–4.9 GB, leaving 1.1 GB for the KV-cache. Q5_K_M fits but requires limiting context to 2k tokens. Avoid Q6_K and above on 6 GB cards.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B at Q4_K_M: 4.7–4.9 GB — safe 6 GB fit with 4k context',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B at Q4_K_M: 4.7–4.9 GB — safe 6 GB fit with 4k context',
           'Q5_K_M uses ~5.7 GB — fits but cap context to 2k tokens or risk OOM mid-session',
           '14B models at Q4_K_M need 9.3 GB — no viable quantization fits 6 GB at acceptable quality',
         ],
@@ -31,7 +32,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Welche Quantisierungsstufe ist die beste für 6 GB VRAM?',
         answer: 'Q4_K_M ist der optimale Punkt — 7B/8B-Modelle bei Q4_K_M verwenden 4,7–4,9 GB und lassen 1,1 GB für den KV-Cache. Q5_K_M passt, erfordert aber eine Begrenzung des Kontexts auf 2k Token. Q6_K und höher überschreiten 6 GB.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B bei Q4_K_M: 4,7–4,9 GB — sicher auf 6 GB mit 4k Kontext',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B bei Q4_K_M: 4,7–4,9 GB — sicher auf 6 GB mit 4k Kontext',
           'Q5_K_M verwendet ~5,7 GB — passt, aber Kontext auf 2k Token begrenzen um OOM zu vermeiden',
           '14B-Modelle bei Q4_K_M benötigen 9,3 GB — keine brauchbare Quantisierung passt auf 6 GB',
         ],
@@ -41,7 +42,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Quel niveau de quantisation est le meilleur pour 6 Go de VRAM ?',
         answer: 'Q4_K_M est le point idéal — les modèles 7B/8B en Q4_K_M utilisent 4,7–4,9 Go, laissant 1,1 Go pour le cache KV. Q5_K_M s\'insère mais nécessite de limiter le contexte à 2k tokens. Q6_K et au-dessus dépassent 6 Go.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B en Q4_K_M : 4,7–4,9 Go — ajustement sûr à 6 Go avec contexte 4k',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B en Q4_K_M : 4,7–4,9 Go — ajustement sûr à 6 Go avec contexte 4k',
           'Q5_K_M utilise ~5,7 Go — tient mais limitez le contexte à 2k tokens pour éviter les OOM',
           'Les modèles 14B en Q4_K_M nécessitent 9,3 Go — aucune quantisation viable ne tient dans 6 Go',
         ],
@@ -51,7 +52,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '6 GB VRAM に最適な量子化レベルはどれですか？',
         answer: 'Q4_K_M が最適なポイント — 7B/8B モデルは Q4_K_M で 4.7〜4.9 GB を使用し、KV キャッシュに 1.1 GB 残ります。Q5_K_M は収まりますが、コンテキストを 2k トークンに制限する必要があります。Q6_K 以上は 6 GB を超えます。',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B (Q4_K_M)：4.7〜4.9 GB — 4k コンテキストで 6 GB に安全に収まる',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B (Q4_K_M)：4.7〜4.9 GB — 4k コンテキストで 6 GB に安全に収まる',
           'Q5_K_M は約 5.7 GB — 収まりますが OOM を避けるためコンテキストを 2k に制限',
           '14B モデル (Q4_K_M) は 9.3 GB 必要 — 6 GB では実用的な量子化なし',
         ],
@@ -61,7 +62,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '6 GB 显存最佳量化等级是哪个？',
         answer: 'Q4_K_M 是最佳选择——7B/8B 模型在 Q4_K_M 下使用 4.7–4.9 GB，为 KV 缓存留出 1.1 GB。Q5_K_M 可以容纳但需将上下文限制在 2k tokens。Q6_K 及以上超出 6 GB。',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B (Q4_K_M)：4.7–4.9 GB——在 4k 上下文下安全适配 6 GB',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B (Q4_K_M)：4.7–4.9 GB——在 4k 上下文下安全适配 6 GB',
           'Q5_K_M 使用约 5.7 GB——可以放入但请将上下文限制在 2k tokens 以避免 OOM',
           '14B 模型 Q4_K_M 需要 9.3 GB——6 GB 无可用量化方案',
         ],
@@ -71,7 +72,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '¿Cuál es el mejor nivel de cuantización para 6 GB de VRAM?',
         answer: 'Q4_K_M es el punto óptimo — los modelos 7B/8B en Q4_K_M usan 4,7–4,9 GB, dejando 1,1 GB para la caché KV. Q5_K_M cabe pero requiere limitar el contexto a 2k tokens. Evita Q6_K y superiores en tarjetas de 6 GB.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B en Q4_K_M: 4,7–4,9 GB — cabe en 6 GB con contexto 4k',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B en Q4_K_M: 4,7–4,9 GB — cabe en 6 GB con contexto 4k',
           'Q5_K_M usa ~5,7 GB — cabe, pero limita el contexto a 2k tokens para evitar OOM',
           'Los modelos 14B en Q4_K_M necesitan 9,3 GB — ninguna cuantización es viable en 6 GB',
         ],
@@ -91,6 +92,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: 'Quantization VRAM Usage for 7B/8B Models on 6 GB',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M is the optimal quantization level for 7B/8B models on 6 GB VRAM, leaving 1.1 GB free for a 4k-token KV-cache.' },
+          { type: 'plain-terms', text: 'Higher quantization levels improve model quality but need more VRAM. Q4_K_M gives the best balance of quality and memory headroom on a 6 GB card.' },
+        ],
         content: [
           'Quantization level directly controls how much VRAM a model occupies. For 7B and 8B parameter models — the largest class that fits a 6 GB GPU — the practical options are Q3_K_M through Q5_K_M. Q2_K fits but degrades quality below useful levels; Q6_K and above exceed the 6 GB ceiling.',
           'Q4_K_M is the recommended default: a 7B model uses approximately 4.7 GB and an 8B model uses 4.9 GB at this quantization. This leaves 1.1 GB for the KV-cache, which Ollama allocates for the context window. At the default 2048-token context, this is sufficient. Increasing context to 4096 tokens requires approximately 0.5 GB additional KV-cache on a 7B model — still within budget on most 6 GB cards.',
@@ -109,8 +114,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Best Models to Run at Q4_K_M on 6 GB VRAM',
         content: [
-          'Three 7B/8B models stand out at Q4_K_M on a 6 GB card. Qwen 3 7B Instruct is the best all-rounder — strong coding (HumanEval ~60%), multilingual support, and 128k context architecture (though you will run at 4k due to VRAM). Run it with `ollama run qwen2.5:7b`.',
-          'Llama 3.1 8B is the fastest option. At Q4_K_M it runs at approximately 25 tokens per second on an RTX 3060 6 GB and handles general chat and instruction-following reliably. MMLU score of 66.6% is lower than Qwen 3 7B but the speed advantage makes it the better pick for interactive sessions.',
+          'Three 7B/8B models stand out at Q4_K_M on a 6 GB card. Qwen3 8B Instruct is the best all-rounder — strong coding (HumanEval ~60%), multilingual support, and 128k context architecture (though you will run at 4k due to VRAM). Run it with `ollama run qwen3:8b`.',
+          'Llama 3.1 8B is the fastest option. At Q4_K_M it runs at approximately 25 tokens per second on an RTX 3060 6 GB and handles general chat and instruction-following reliably. MMLU score of 66.6% is lower than Qwen3 8B but the speed advantage makes it the better pick for interactive sessions.',
           'Phi-4 Mini (3.8B) is the wild card. At Q8_0 it fits in approximately 4.1 GB — comfortably within 6 GB — and punches above its weight on reasoning benchmarks relative to its size. Use it when you need sub-5 GB footprint with better reasoning than older 7B models. Run with `ollama run phi4-mini`.',
           'Do not attempt 14B models on 6 GB. Qwen 3 14B at Q4_K_M requires 9.3 GB. Q2_K brings it to approximately 5.5 GB but the perplexity penalty is severe — the model produces noticeably degraded output. Stick to 7B/8B at Q4_K_M or 3B/4B at Q8_0.',
         ],
@@ -155,15 +160,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste Quantisierung für 6 GB VRAM 2026',
     metaDescription: 'Q4_K_M für 7B-Modelle: 4,9 GB, passt mit 1,1 GB Puffer für Kontext. Q5_K_M passt knapp. Q6_K und höher überschreiten 6 GB. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M ist die beste Quantisierungsstufe für eine 6-GB-VRAM-GPU — 7B- und 8B-Modelle verwenden 4,7–4,9 GB und lassen bei einem 4k-Token-Kontext 1,1 GB frei für den KV-Cache.** Q5_K_M passt ebenfalls, aber nur, wenn Sie den Kontext auf 2k Token begrenzen, um Speicherprobleme zu vermeiden. Q6_K und höher überschreiten bei jedem 7B+-Modell die 6-GB-Grenze.',
     quickAnswerTop: {
       de: {
         question: 'Welche Quantisierungsstufe ist die beste für 6 GB VRAM?',
         answer: 'Q4_K_M ist der optimale Punkt — 7B/8B-Modelle bei Q4_K_M verwenden 4,7–4,9 GB und lassen 1,1 GB für den KV-Cache. Q5_K_M passt, erfordert aber eine Begrenzung des Kontexts auf 2k Token. Q6_K und höher überschreiten 6 GB.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B bei Q4_K_M: 4,7–4,9 GB — sicher auf 6 GB mit 4k Kontext',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B bei Q4_K_M: 4,7–4,9 GB — sicher auf 6 GB mit 4k Kontext',
           'Q5_K_M verwendet ~5,7 GB — passt, aber Kontext auf 2k Token begrenzen um OOM zu vermeiden',
           '14B-Modelle bei Q4_K_M benötigen 9,3 GB — keine brauchbare Quantisierung passt auf 6 GB',
         ],
@@ -183,6 +189,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: 'VRAM-Verbrauch der Quantisierungsstufen für 7B/8B-Modelle auf 6 GB',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M ist die optimale Quantisierungsstufe für 7B/8B-Modelle auf 6 GB VRAM und lässt 1,1 GB für einen 4k-Token-KV-Cache frei.' },
+          { type: 'plain-terms', text: 'Höhere Quantisierungsstufen verbessern die Modellqualität, benötigen aber mehr VRAM. Q4_K_M bietet auf einer 6-GB-Karte die beste Balance aus Qualität und Speicherspielraum.' },
+        ],
         content: [
           'Die Quantisierungsstufe bestimmt direkt, wie viel VRAM ein Modell belegt. Für 7B- und 8B-Parameter-Modelle — die größte Klasse, die auf eine 6-GB-GPU passt — sind die praktischen Optionen Q3_K_M bis Q5_K_M. Q2_K passt, aber die Qualität sinkt unter ein nützliches Niveau; Q6_K und höher überschreiten die 6-GB-Grenze.',
           'Q4_K_M ist der empfohlene Standard: Ein 7B-Modell verwendet bei dieser Quantisierung etwa 4,7 GB und ein 8B-Modell etwa 4,9 GB. Das lässt 1,1 GB für den KV-Cache, den Ollama für das Kontextfenster zuweist. Beim Standard-Kontext von 2048 Token ist das ausreichend. Eine Erhöhung auf 4096 Token erfordert etwa 0,5 GB zusätzlichen KV-Cache bei einem 7B-Modell — bei den meisten 6-GB-Karten noch im Budget.',
@@ -201,8 +211,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Beste Modelle für Q4_K_M auf 6 GB VRAM',
         content: [
-          'Drei 7B/8B-Modelle stechen bei Q4_K_M auf einer 6-GB-Karte heraus. Qwen 3 7B Instruct ist der beste Allrounder — starkes Coding (HumanEval ~60%), mehrsprachige Unterstützung und 128k-Kontextarchitektur (obwohl Sie aufgrund des VRAMs bei 4k betreiben werden). Starten mit `ollama run qwen2.5:7b`.',
-          'Llama 3.1 8B ist die schnellste Option. Bei Q4_K_M läuft es auf einer RTX 3060 6 GB mit etwa 25 Tokens pro Sekunde und bewältigt allgemeinen Chat und Instruktionsbefolgung zuverlässig. Der MMLU-Score von 66,6 % ist niedriger als Qwen 3 7B, aber der Geschwindigkeitsvorteil macht es zur besseren Wahl für interaktive Sitzungen.',
+          'Drei 7B/8B-Modelle stechen bei Q4_K_M auf einer 6-GB-Karte heraus. Qwen3 8B Instruct ist der beste Allrounder — starkes Coding (HumanEval ~60%), mehrsprachige Unterstützung und 128k-Kontextarchitektur (obwohl Sie aufgrund des VRAMs bei 4k betreiben werden). Starten mit `ollama run qwen3:8b`.',
+          'Llama 3.1 8B ist die schnellste Option. Bei Q4_K_M läuft es auf einer RTX 3060 6 GB mit etwa 25 Tokens pro Sekunde und bewältigt allgemeinen Chat und Instruktionsbefolgung zuverlässig. Der MMLU-Score von 66,6 % ist niedriger als Qwen3 8B, aber der Geschwindigkeitsvorteil macht es zur besseren Wahl für interaktive Sitzungen.',
           'Phi-4 Mini (3,8B) ist die Wildcard. Bei Q8_0 passt es in etwa 4,1 GB — komfortabel innerhalb von 6 GB — und übertrifft seinen Größenklasse bei Reasoning-Benchmarks. Verwenden Sie es, wenn Sie einen Speicherbedarf unter 5 GB benötigen und besseres Reasoning als ältere 7B-Modelle möchten. Starten mit `ollama run phi4-mini`.',
           '14B-Modelle auf 6 GB sollten Sie nicht versuchen. Qwen 3 14B bei Q4_K_M benötigt 9,3 GB. Q2_K bringt es auf etwa 5,5 GB, aber der Perplexitätsabfall ist erheblich — das Modell produziert spürbar verschlechterte Ausgaben. Bleiben Sie bei 7B/8B bei Q4_K_M oder 3B/4B bei Q8_0.',
         ],
@@ -247,15 +257,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleure quantisation 6 Go VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M pour les modèles 7B : 4,9 Go, tient dans 6 Go avec 1,1 Go pour le contexte. Q5_K_M tient juste. Q6_K et au-dessus dépassent 6 Go. Réponse rapide de PromptQuorum.',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M est le meilleur niveau de quantisation pour un GPU à 6 Go de VRAM — les modèles 7B et 8B utilisent 4,7–4,9 Go, laissant 1,1 Go libre pour le cache KV à un contexte de 4k tokens.** Q5_K_M tient également, mais seulement si vous limitez le contexte à 2k tokens pour éviter les erreurs de mémoire. Q6_K et au-dessus dépassent le plafond de 6 Go pour tout modèle 7B et plus.',
     quickAnswerTop: {
       fr: {
         question: 'Quel niveau de quantisation est le meilleur pour 6 Go de VRAM ?',
         answer: 'Q4_K_M est le point idéal — les modèles 7B/8B en Q4_K_M utilisent 4,7–4,9 Go, laissant 1,1 Go pour le cache KV. Q5_K_M s\'insère mais nécessite de limiter le contexte à 2k tokens. Q6_K et au-dessus dépassent 6 Go.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B en Q4_K_M : 4,7–4,9 Go — ajustement sûr à 6 Go avec contexte 4k',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B en Q4_K_M : 4,7–4,9 Go — ajustement sûr à 6 Go avec contexte 4k',
           'Q5_K_M utilise ~5,7 Go — tient mais limitez le contexte à 2k tokens pour éviter les OOM',
           'Les modèles 14B en Q4_K_M nécessitent 9,3 Go — aucune quantisation viable ne tient dans 6 Go',
         ],
@@ -275,6 +286,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: 'Utilisation VRAM par niveau de quantisation pour les modèles 7B/8B sur 6 Go',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M est le niveau de quantisation optimal pour les modèles 7B/8B avec 6 Go de VRAM, laissant 1,1 Go libre pour un cache KV de 4k tokens.' },
+          { type: 'plain-terms', text: 'Des niveaux de quantisation plus élevés améliorent la qualité du modèle mais nécessitent plus de VRAM. Q4_K_M offre le meilleur équilibre entre qualité et marge mémoire sur une carte 6 Go.' },
+        ],
         content: [
           'Le niveau de quantisation contrôle directement la quantité de VRAM occupée par un modèle. Pour les modèles de 7 et 8 milliards de paramètres — la plus grande classe adaptée à un GPU 6 Go — les options pratiques vont de Q3_K_M à Q5_K_M. Q2_K tient mais dégrade la qualité en dessous d\'un niveau utile ; Q6_K et au-dessus dépassent le plafond de 6 Go.',
           'Q4_K_M est le choix par défaut recommandé : un modèle 7B utilise environ 4,7 Go et un modèle 8B utilise 4,9 Go à cette quantisation. Cela laisse 1,1 Go pour le cache KV qu\'Ollama alloue pour la fenêtre de contexte. Au contexte par défaut de 2048 tokens, c\'est suffisant. Passer à 4096 tokens nécessite environ 0,5 Go de cache KV supplémentaire pour un modèle 7B — encore dans le budget sur la plupart des cartes 6 Go.',
@@ -293,8 +308,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Meilleurs modèles à faire tourner en Q4_K_M sur 6 Go de VRAM',
         content: [
-          'Trois modèles 7B/8B se distinguent en Q4_K_M sur une carte 6 Go. Qwen 3 7B Instruct est le meilleur polyvalent — excellent en coding (HumanEval ~60%), support multilingue et architecture de contexte 128k (bien que vous opériez à 4k en raison du VRAM). Lancez-le avec `ollama run qwen2.5:7b`.',
-          'Llama 3.1 8B est l\'option la plus rapide. En Q4_K_M, il tourne à environ 25 tokens par seconde sur une RTX 3060 6 Go et gère fiablement le chat général et le suivi d\'instructions. Son score MMLU de 66,6 % est inférieur à Qwen 3 7B, mais l\'avantage en vitesse en fait le meilleur choix pour les sessions interactives.',
+          'Trois modèles 7B/8B se distinguent en Q4_K_M sur une carte 6 Go. Qwen3 8B Instruct est le meilleur polyvalent — excellent en coding (HumanEval ~60%), support multilingue et architecture de contexte 128k (bien que vous opériez à 4k en raison du VRAM). Lancez-le avec `ollama run qwen3:8b`.',
+          'Llama 3.1 8B est l\'option la plus rapide. En Q4_K_M, il tourne à environ 25 tokens par seconde sur une RTX 3060 6 Go et gère fiablement le chat général et le suivi d\'instructions. Son score MMLU de 66,6 % est inférieur à Qwen3 8B, mais l\'avantage en vitesse en fait le meilleur choix pour les sessions interactives.',
           'Phi-4 Mini (3,8B) est la carte surprise. En Q8_0, il tient dans environ 4,1 Go — confortablement dans 6 Go — et surpasse sa catégorie de taille sur les benchmarks de raisonnement. Utilisez-le quand vous avez besoin d\'une empreinte inférieure à 5 Go avec un meilleur raisonnement que les anciens modèles 7B. Lancez avec `ollama run phi4-mini`.',
           'N\'essayez pas les modèles 14B sur 6 Go. Qwen 3 14B en Q4_K_M nécessite 9,3 Go. Q2_K le ramène à environ 5,5 Go mais la pénalité de perplexité est sévère — le modèle produit des sorties notablement dégradées. Restez sur du 7B/8B en Q4_K_M ou du 3B/4B en Q8_0.',
         ],
@@ -339,15 +354,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB VRAM 最適量子化 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '7B モデルの Q4_K_M：4.9 GB、6 GB VRAM に収まり 1.1 GB のコンテキスト余裕あり。Q5_K_M はギリギリ。Q6_K 以上は 6 GB を超過。PromptQuorum による簡潔な回答。',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M は 6 GB VRAM GPU に最適な量子化レベルです — 7B/8B モデルは 4.7〜4.9 GB を使用し、4k トークンのコンテキストで KV キャッシュ用に 1.1 GB を残します。** Q5_K_M も収まりますが、メモリ不足を避けるためコンテキストを 2k トークンに制限する必要があります。Q6_K 以上は、7B 以上のどのモデルでも 6 GB の上限を超えます。',
     quickAnswerTop: {
       ja: {
         question: '6 GB VRAM に最適な量子化レベルはどれですか？',
         answer: 'Q4_K_M が最適なポイント — 7B/8B モデルは Q4_K_M で 4.7〜4.9 GB を使用し、KV キャッシュに 1.1 GB 残ります。Q5_K_M は収まりますが、コンテキストを 2k トークンに制限する必要があります。Q6_K 以上は 6 GB を超えます。',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B (Q4_K_M)：4.7〜4.9 GB — 4k コンテキストで 6 GB に安全に収まる',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B (Q4_K_M)：4.7〜4.9 GB — 4k コンテキストで 6 GB に安全に収まる',
           'Q5_K_M は約 5.7 GB — 収まりますが OOM を避けるためコンテキストを 2k に制限',
           '14B モデル (Q4_K_M) は 9.3 GB 必要 — 6 GB では実用的な量子化なし',
         ],
@@ -367,6 +383,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: '6 GB 上の 7B/8B モデルにおける量子化の VRAM 使用量',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M は 6 GB VRAM の 7B/8B モデルに最適な量子化レベルで、4k トークンの KV キャッシュ用に 1.1 GB を残します。' },
+          { type: 'plain-terms', text: '量子化レベルが高いほどモデル品質は向上しますが、より多くの VRAM が必要になります。Q4_K_M は 6 GB カードにおいて品質とメモリ余裕の最良のバランスを提供します。' },
+        ],
         content: [
           '量子化レベルはモデルが使用する VRAM を直接制御します。6 GB GPU に収まる最大クラスである 7B および 8B パラメータモデルでは、実用的な選択肢は Q3_K_M から Q5_K_M の範囲です。Q2_K は収まりますが品質が実用水準以下に低下します；Q6_K 以上は 6 GB の上限を超えます。',
           'Q4_K_M が推奨デフォルトです：7B モデルはこの量子化で約 4.7 GB、8B モデルは 4.9 GB を使用します。これにより Ollama がコンテキストウィンドウに割り当てる KV キャッシュ用に 1.1 GB が残ります。デフォルトの 2048 トークンコンテキストでは十分です。コンテキストを 4096 トークンに増やすと 7B モデルで約 0.5 GB の追加 KV キャッシュが必要になりますが、ほとんどの 6 GB カードでも予算内です。',
@@ -385,8 +405,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '6 GB VRAM で Q4_K_M を使う最適モデル',
         content: [
-          '6 GB カードで Q4_K_M を使う 7B/8B モデルの中で 3 つが際立ちます。Qwen 3 7B Instruct は最もバランスが取れたモデル — 強力なコーディング能力（HumanEval 約 60%）、多言語対応、128k コンテキストアーキテクチャ（ただし VRAM の制約により 4k で運用）。`ollama run qwen2.5:7b` で起動できます。',
-          'Llama 3.1 8B は最速の選択肢です。Q4_K_M では RTX 3060 6 GB で毎秒約 25 トークンで動作し、一般的なチャットと指示への従い方を確実にこなします。MMLU スコアの 66.6% は Qwen 3 7B より低いですが、速度の優位性によりインタラクティブなセッションにはより適しています。',
+          '6 GB カードで Q4_K_M を使う 7B/8B モデルの中で 3 つが際立ちます。Qwen3 8B Instruct は最もバランスが取れたモデル — 強力なコーディング能力（HumanEval 約 60%）、多言語対応、128k コンテキストアーキテクチャ（ただし VRAM の制約により 4k で運用）。`ollama run qwen3:8b` で起動できます。',
+          'Llama 3.1 8B は最速の選択肢です。Q4_K_M では RTX 3060 6 GB で毎秒約 25 トークンで動作し、一般的なチャットと指示への従い方を確実にこなします。MMLU スコアの 66.6% は Qwen3 8B より低いですが、速度の優位性によりインタラクティブなセッションにはより適しています。',
           'Phi-4 Mini（3.8B）はダークホースです。Q8_0 で約 4.1 GB に収まり — 6 GB に余裕で収まります — サイズ比でのベンチマーク性能が優秀です。5 GB 未満の使用量で古い 7B モデルより優れた推論が必要な場合に使用してください。`ollama run phi4-mini` で起動できます。',
           '6 GB で 14B モデルは試みないでください。Qwen 3 14B は Q4_K_M で 9.3 GB が必要です。Q2_K で約 5.5 GB になりますが、パープレキシティのペナルティが深刻で、出力品質が著しく低下します。7B/8B の Q4_K_M か 3B/4B の Q8_0 に留めてください。',
         ],
@@ -431,15 +451,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6 GB 显存最佳量化 2026 | Prompt Bites | PromptQuorum',
     metaDescription: '7B 模型 Q4_K_M：4.9 GB，6 GB 显存可容纳并留 1.1 GB 用于上下文。Q5_K_M 勉强能放。Q6_K 及以上超出 6 GB。PromptQuorum 快速解答。',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M 是 6 GB 显存 GPU 的最佳量化等级——7B/8B 模型使用 4.7–4.9 GB，在 4k 上下文下为 KV 缓存留出 1.1 GB。** Q5_K_M 也能容纳，但仅限将上下文限制在 2k tokens 以避免内存不足。Q6_K 及以上等级对任何 7B 及以上模型都会超出 6 GB 上限。',
     quickAnswerTop: {
       zh: {
         question: '6 GB 显存最佳量化等级是哪个？',
         answer: 'Q4_K_M 是最佳选择——7B/8B 模型在 Q4_K_M 下使用 4.7–4.9 GB，为 KV 缓存留出 1.1 GB。Q5_K_M 可以容纳但需将上下文限制在 2k tokens。Q6_K 及以上超出 6 GB。',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B (Q4_K_M)：4.7–4.9 GB——在 4k 上下文下安全适配 6 GB',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B (Q4_K_M)：4.7–4.9 GB——在 4k 上下文下安全适配 6 GB',
           'Q5_K_M 使用约 5.7 GB——可以放入但请将上下文限制在 2k tokens 以避免 OOM',
           '14B 模型 Q4_K_M 需要 9.3 GB——6 GB 无可用量化方案',
         ],
@@ -459,6 +480,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: '6 GB 上 7B/8B 模型的量化 VRAM 占用',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M 是 6 GB 显存下 7B/8B 模型的最佳量化等级，为 4k token 的 KV 缓存留出 1.1 GB。' },
+          { type: 'plain-terms', text: '量化等级越高，模型质量越好，但需要更多显存。在 6 GB 显卡上，Q4_K_M 在质量和显存余量之间提供最佳平衡。' },
+        ],
         content: [
           '量化等级直接控制模型占用多少显存。对于 7B 和 8B 参数模型——适合 6 GB GPU 的最大类别——实际可选范围是 Q3_K_M 到 Q5_K_M。Q2_K 能放入但质量下降到不实用的程度；Q6_K 及以上超出 6 GB 上限。',
           'Q4_K_M 是推荐默认值：7B 模型在此量化下使用约 4.7 GB，8B 模型使用 4.9 GB。这为 Ollama 分配给上下文窗口的 KV 缓存留出 1.1 GB。在默认的 2048 token 上下文下已经足够。将上下文增加到 4096 token 在 7B 模型上大约需要额外 0.5 GB 的 KV 缓存——在大多数 6 GB 显卡上仍在预算内。',
@@ -477,8 +502,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '在 6 GB 显存上以 Q4_K_M 运行的最佳模型',
         content: [
-          '三款 7B/8B 模型在 6 GB 显卡上以 Q4_K_M 运行时表现突出。Qwen 3 7B Instruct 是最全面的选择——强大的编程能力（HumanEval 约 60%）、多语言支持和 128k 上下文架构（尽管由于显存限制将在 4k 下运行）。使用 `ollama run qwen2.5:7b` 运行。',
-          'Llama 3.1 8B 是最快的选项。在 Q4_K_M 下，它在 RTX 3060 6 GB 上以每秒约 25 个 token 的速度运行，可靠地处理通用聊天和指令跟随。MMLU 得分 66.6% 低于 Qwen 3 7B，但速度优势使其成为交互式会话的更好选择。',
+          '三款 7B/8B 模型在 6 GB 显卡上以 Q4_K_M 运行时表现突出。Qwen3 8B Instruct 是最全面的选择——强大的编程能力（HumanEval 约 60%）、多语言支持和 128k 上下文架构（尽管由于显存限制将在 4k 下运行）。使用 `ollama run qwen3:8b` 运行。',
+          'Llama 3.1 8B 是最快的选项。在 Q4_K_M 下，它在 RTX 3060 6 GB 上以每秒约 25 个 token 的速度运行，可靠地处理通用聊天和指令跟随。MMLU 得分 66.6% 低于 Qwen3 8B，但速度优势使其成为交互式会话的更好选择。',
           'Phi-4 Mini（3.8B）是意外之选。在 Q8_0 下约占 4.1 GB——在 6 GB 内绰绰有余——其推理基准测试性能超出了其规模预期。在需要低于 5 GB 占用且推理能力优于旧版 7B 模型时使用。使用 `ollama run phi4-mini` 运行。',
           '不要在 6 GB 上尝试 14B 模型。Qwen 3 14B 在 Q4_K_M 下需要 9.3 GB。Q2_K 将其降至约 5.5 GB，但困惑度损失非常严重——模型产生明显退化的输出。坚持使用 Q4_K_M 的 7B/8B 或 Q8_0 的 3B/4B 模型。',
         ],
@@ -523,15 +548,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor quantização para 6 GB VRAM 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M para modelos 7B: 4,9 GB, cabe em 6 GB de VRAM com 1,1 GB para contexto. Q5_K_M cabe justo; Q6_K e superiores ultrapassam 6 GB. Resposta rápida.',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M é o melhor nível de quantização para uma GPU de 6 GB de VRAM — modelos 7B e 8B usam 4,7–4,9 GB, deixando 1,1 GB livres para o cache KV com um contexto de 4k tokens.** Q5_K_M também cabe, mas apenas se você limitar o contexto a 2k tokens para evitar ficar sem memória. Q6_K e superiores ultrapassam o limite de 6 GB em qualquer modelo de 7B ou mais.',
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor nível de quantização para 6 GB de VRAM?',
         answer: 'Q4_K_M é o ponto ideal — modelos 7B/8B em Q4_K_M usam 4,7–4,9 GB, deixando 1,1 GB para o cache KV. Q5_K_M cabe, mas exige limitar o contexto a 2k tokens. Evite Q6_K e superiores em placas de 6 GB.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B em Q4_K_M: 4,7–4,9 GB — cabe em 6 GB com contexto 4k',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B em Q4_K_M: 4,7–4,9 GB — cabe em 6 GB com contexto 4k',
           'Q5_K_M usa ~5,7 GB — cabe, mas limite o contexto a 2k tokens para evitar OOM',
           'Modelos 14B em Q4_K_M precisam de 9,3 GB — nenhuma quantização é viável em 6 GB',
         ],
@@ -551,6 +577,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: 'Uso de VRAM por nível de quantização para modelos 7B/8B em 6 GB',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M é o nível de quantização ideal para modelos 7B/8B com 6 GB de VRAM, deixando 1,1 GB livres para um cache KV de 4k tokens.' },
+          { type: 'plain-terms', text: 'Níveis de quantização mais altos melhoram a qualidade do modelo, mas exigem mais VRAM. O Q4_K_M oferece o melhor equilíbrio entre qualidade e folga de memória em uma placa de 6 GB.' },
+        ],
         content: [
           'O nível de quantização controla diretamente quanto VRAM um modelo ocupa. Para modelos de 7B e 8B parâmetros — a maior classe que cabe em uma GPU de 6 GB — as opções práticas vão de Q3_K_M a Q5_K_M. Q2_K cabe, mas degrada a qualidade abaixo de níveis úteis; Q6_K e superiores ultrapassam o teto de 6 GB.',
           'Q4_K_M é o padrão recomendado: um modelo 7B usa aproximadamente 4,7 GB e um modelo 8B usa 4,9 GB nessa quantização. Isso deixa 1,1 GB para o cache KV que o Ollama aloca para a janela de contexto. Com o contexto padrão de 2048 tokens, é suficiente. Aumentar o contexto para 4096 tokens requer aproximadamente 0,5 GB adicionais de cache KV em um modelo 7B — ainda dentro do orçamento na maioria das placas de 6 GB.',
@@ -569,8 +599,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Melhores modelos para rodar em Q4_K_M com 6 GB de VRAM',
         content: [
-          'Três modelos 7B/8B se destacam em Q4_K_M em uma placa de 6 GB. Qwen 3 7B Instruct é o melhor equilibrado — excelente em código (HumanEval ~60%), suporte multilíngue e arquitetura de contexto 128k (embora você opere em 4k por causa da VRAM). Execute com `ollama run qwen2.5:7b`.',
-          'Llama 3.1 8B é a opção mais rápida. Em Q4_K_M roda a aproximadamente 25 tokens por segundo em uma RTX 3060 6 GB e lida de forma confiável com chat geral e seguimento de instruções. Pontuação MMLU de 66,6% é inferior ao Qwen 3 7B, mas a vantagem em velocidade o torna a melhor escolha para sessões interativas.',
+          'Três modelos 7B/8B se destacam em Q4_K_M em uma placa de 6 GB. Qwen3 8B Instruct é o melhor equilibrado — excelente em código (HumanEval ~60%), suporte multilíngue e arquitetura de contexto 128k (embora você opere em 4k por causa da VRAM). Execute com `ollama run qwen3:8b`.',
+          'Llama 3.1 8B é a opção mais rápida. Em Q4_K_M roda a aproximadamente 25 tokens por segundo em uma RTX 3060 6 GB e lida de forma confiável com chat geral e seguimento de instruções. Pontuação MMLU de 66,6% é inferior ao Qwen3 8B, mas a vantagem em velocidade o torna a melhor escolha para sessões interativas.',
           'Phi-4 Mini (3,8B) é a surpresa. Em Q8_0 ocupa aproximadamente 4,1 GB — confortavelmente dentro de 6 GB — e supera sua classe de tamanho em benchmarks de raciocínio. Use quando precisar de pegada abaixo de 5 GB com melhor raciocínio do que modelos 7B mais antigos. Execute com `ollama run phi4-mini`.',
           'Não tente modelos 14B em 6 GB. Qwen 3 14B em Q4_K_M precisa de 9,3 GB. Q2_K o traz para aproximadamente 5,5 GB, mas a penalidade de perplexidade é severa — o modelo produz saídas notavelmente degradadas. Fique com 7B/8B em Q4_K_M ou 3B/4B em Q8_0.',
         ],
@@ -615,15 +645,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor cuantización para 6 GB VRAM 2026 | PromptQuorum',
     metaDescription: 'Q4_K_M para modelos 7B: 4,9 GB, cabe en 6 GB de VRAM con 1,1 GB para contexto. Q5_K_M cabe justo; Q6_K y superiores superan los 6 GB. Respuesta rápida.',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M es el mejor nivel de cuantización para una GPU de 6 GB de VRAM — los modelos 7B y 8B usan 4,7–4,9 GB, dejando 1,1 GB libres para la caché KV con un contexto de 4k tokens.** Q5_K_M también cabe, pero solo si limitas el contexto a 2k tokens para evitar quedarte sin memoria. Q6_K y superiores superan el límite de 6 GB en cualquier modelo de 7B o más.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor nivel de cuantización para 6 GB de VRAM?',
         answer: 'Q4_K_M es el punto óptimo — los modelos 7B/8B en Q4_K_M usan 4,7–4,9 GB, dejando 1,1 GB para la caché KV. Q5_K_M cabe pero requiere limitar el contexto a 2k tokens. Evita Q6_K y superiores en tarjetas de 6 GB.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B en Q4_K_M: 4,7–4,9 GB — cabe en 6 GB con contexto 4k',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B en Q4_K_M: 4,7–4,9 GB — cabe en 6 GB con contexto 4k',
           'Q5_K_M usa ~5,7 GB — cabe, pero limita el contexto a 2k tokens para evitar OOM',
           'Los modelos 14B en Q4_K_M necesitan 9,3 GB — ninguna cuantización viable cabe en 6 GB',
         ],
@@ -643,6 +674,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: 'Uso de VRAM por nivel de cuantización para modelos 7B/8B en 6 GB',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M es el nivel de cuantización óptimo para modelos 7B/8B con 6 GB de VRAM, dejando 1,1 GB libres para una caché KV de 4k tokens.' },
+          { type: 'plain-terms', text: 'Los niveles de cuantización más altos mejoran la calidad del modelo pero requieren más VRAM. Q4_K_M ofrece el mejor equilibrio entre calidad y margen de memoria en una tarjeta de 6 GB.' },
+        ],
         content: [
           'El nivel de cuantización controla directamente cuánta VRAM ocupa un modelo. Para modelos de 7.000 y 8.000 millones de parámetros — la clase más grande que cabe en una GPU de 6 GB — las opciones prácticas van de Q3_K_M a Q5_K_M. Q2_K cabe pero degrada la calidad por debajo de niveles útiles; Q6_K y superiores superan el techo de 6 GB.',
           'Q4_K_M es el valor predeterminado recomendado: un modelo 7B usa aproximadamente 4,7 GB y un modelo 8B usa 4,9 GB en esta cuantización. Esto deja 1,1 GB para la caché KV que Ollama asigna para la ventana de contexto. Con el contexto predeterminado de 2048 tokens, esto es suficiente. Aumentar el contexto a 4096 tokens requiere aproximadamente 0,5 GB adicionales de caché KV en un modelo 7B — aún dentro del presupuesto en la mayoría de tarjetas de 6 GB.',
@@ -661,8 +696,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Mejores modelos para ejecutar en Q4_K_M con 6 GB de VRAM',
         content: [
-          'Tres modelos 7B/8B destacan en Q4_K_M en una tarjeta de 6 GB. Qwen 3 7B Instruct es el mejor equilibrado — excelente en código (HumanEval ~60%), soporte multilingüe y arquitectura de contexto 128k (aunque operarás a 4k por la VRAM). Ejecútalo con `ollama run qwen2.5:7b`.',
-          'Llama 3.1 8B es la opción más rápida. En Q4_K_M funciona a unos 25 tokens por segundo en una RTX 3060 6 GB y maneja chat general y seguimiento de instrucciones de forma fiable. Su puntuación MMLU de 66,6% es inferior a Qwen 3 7B, pero la ventaja en velocidad lo convierte en la mejor opción para sesiones interactivas.',
+          'Tres modelos 7B/8B destacan en Q4_K_M en una tarjeta de 6 GB. Qwen3 8B Instruct es el mejor equilibrado — excelente en código (HumanEval ~60%), soporte multilingüe y arquitectura de contexto 128k (aunque operarás a 4k por la VRAM). Ejecútalo con `ollama run qwen3:8b`.',
+          'Llama 3.1 8B es la opción más rápida. En Q4_K_M funciona a unos 25 tokens por segundo en una RTX 3060 6 GB y maneja chat general y seguimiento de instrucciones de forma fiable. Su puntuación MMLU de 66,6% es inferior a Qwen3 8B, pero la ventaja en velocidad lo convierte en la mejor opción para sesiones interactivas.',
           'Phi-4 Mini (3,8B) es la sorpresa. En Q8_0 ocupa unos 4,1 GB — cómodamente dentro de 6 GB — y supera su clase de tamaño en benchmarks de razonamiento. Úsalo cuando necesites una huella inferior a 5 GB con mejor razonamiento que los modelos 7B más antiguos. Ejecútalo con `ollama run phi4-mini`.',
           'No intentes modelos 14B en 6 GB. Qwen 3 14B en Q4_K_M necesita 9,3 GB. Q2_K lo baja a unos 5,5 GB pero la penalidad de perplejidad es severa — el modelo produce salidas notablemente degradadas. Quédate con 7B/8B en Q4_K_M o 3B/4B en Q8_0.',
         ],
@@ -707,15 +742,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل تكميم لـ⁨6 GB VRAM⁩: ⁨Q4⁩_⁨K⁩_⁨M⁩ أم ⁨Q5⁩_⁨K⁩_⁨M⁩؟ ⁨2026⁩',
     metaDescription: '⁨Q4⁩_⁨K⁩_⁨M⁩ لنماذج ⁨7B/8B⁩ يستخدم ⁨4.7⁩–⁨4.9 GB⁩ ويترك ⁨1.1 GB⁩ لذاكرة ⁨KV. Q5⁩_⁨K⁩_⁨M⁩ يتسع بـ⁨5.7 GB⁩ فقط مع تقليل السياق إلى ⁨2k. Q6⁩_⁨K⁩ يتجاوز ⁨6 GB⁩.',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M هو أفضل مستوى تكميم لبطاقة GPU بذاكرة 6 GB — نماذج 7B و8B تستخدم 4.7–4.9 GB، تاركةً 1.1 GB حرة لذاكرة KV عند سياق 4k رمز.** يتسع Q5_K_M أيضاً، لكن فقط إذا قيّدت السياق إلى 2k رمز لتجنب نفاد الذاكرة. يتجاوز Q6_K وما فوق حد 6 GB في أي نموذج 7B فأكثر.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو أفضل مستوى تكميم لـ6 GB VRAM؟',
         answer: 'Q4_K_M هو النقطة المثلى — نماذج 7B/8B في Q4_K_M تستخدم 4.7–4.9 GB، تاركةً 1.1 GB لذاكرة KV. Q5_K_M يتسع لكن يستلزم تقليل السياق إلى 2k رمز. تجنّب Q6_K وما فوق على بطاقات 6 GB.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B في Q4_K_M: 4.7–4.9 GB — يتسع في 6 GB مع سياق 4k',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B في Q4_K_M: 4.7–4.9 GB — يتسع في 6 GB مع سياق 4k',
           'Q5_K_M يستخدم ~5.7 GB — يتسع لكن يحد السياق إلى 2k رمز لتجنب نفاد الذاكرة',
           'نماذج 14B في Q4_K_M تحتاج 9.3 GB — لا يوجد تكميم قابل للتطبيق يتسع في 6 GB',
         ],
@@ -735,6 +771,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       body1: {
         title: 'استخدام VRAM حسب مستوى التكميم لنماذج 7B/8B في 6 GB',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Q4_K_M هو مستوى التكميم الأمثل لنماذج 7B/8B على 6 GB VRAM، ويترك 1.1 GB حرة لذاكرة KV بسياق 4k رمز.' },
+          { type: 'plain-terms', text: 'مستويات التكميم الأعلى تحسّن جودة النموذج لكنها تحتاج مزيداً من VRAM. يوفر Q4_K_M أفضل توازن بين الجودة وهامش الذاكرة على بطاقة 6 GB.' },
+        ],
         content: [
           'مستوى التكميم يتحكم مباشرة في مساحة VRAM التي يشغلها النموذج. لنماذج 7 و8 مليارات معامل — أكبر فئة تتسع في GPU بـ6 GB — الخيارات العملية تتراوح من Q3_K_M إلى Q5_K_M. Q2_K يتسع لكنه يدهور الجودة إلى ما دون المستويات المفيدة؛ Q6_K وما فوق يتجاوز سقف 6 GB.',
           'Q4_K_M هو القيمة الافتراضية الموصى بها: نموذج 7B يستخدم حوالي 4.7 GB ونموذج 8B يستخدم 4.9 GB في هذا التكميم. هذا يترك 1.1 GB لذاكرة KV التي يخصصها Ollama لنافذة السياق. مع السياق الافتراضي 2048 رمز، هذا كافٍ. زيادة السياق إلى 4096 رمز تحتاج حوالي 0.5 GB إضافية لذاكرة KV في نموذج 7B — لا يزال ضمن الميزانية على معظم بطاقات 6 GB.',
@@ -753,8 +793,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'أفضل النماذج لتشغيلها في Q4_K_M بـ6 GB VRAM',
         content: [
-          'ثلاثة نماذج 7B/8B تتميز في Q4_K_M على بطاقة 6 GB. Qwen 3 7B Instruct هو الأفضل توازناً — ممتاز في البرمجة (HumanEval ~60%)، دعم متعدد اللغات، وبنية سياق 128k (رغم أنك ستعمل بـ4k بسبب VRAM). شغّله بـ`ollama run qwen2.5:7b`.',
-          'Llama 3.1 8B هو الخيار الأسرع. في Q4_K_M يعمل بحوالي 25 رمز/ثانية على RTX 3060 6 GB ويتعامل بشكل موثوق مع الدردشة العامة واتباع التعليمات. نقاط MMLU 66.6% أدنى من Qwen 3 7B، لكن ميزة السرعة تجعله الأفضل للجلسات التفاعلية.',
+          'ثلاثة نماذج 7B/8B تتميز في Q4_K_M على بطاقة 6 GB. Qwen3 8B Instruct هو الأفضل توازناً — ممتاز في البرمجة (HumanEval ~60%)، دعم متعدد اللغات، وبنية سياق 128k (رغم أنك ستعمل بـ4k بسبب VRAM). شغّله بـ`ollama run qwen3:8b`.',
+          'Llama 3.1 8B هو الخيار الأسرع. في Q4_K_M يعمل بحوالي 25 رمز/ثانية على RTX 3060 6 GB ويتعامل بشكل موثوق مع الدردشة العامة واتباع التعليمات. نقاط MMLU 66.6% أدنى من Qwen3 8B، لكن ميزة السرعة تجعله الأفضل للجلسات التفاعلية.',
           'Phi-4 Mini (3.8B) هو المفاجأة. في Q8_0 يحتل حوالي 4.1 GB — مريح ضمن 6 GB — ويتفوق على فئة حجمه في معايير الاستدلال. استخدمه عندما تحتاج بصمة أقل من 5 GB مع استدلال أفضل من نماذج 7B الأقدم. شغّله بـ`ollama run phi4-mini`.',
           'لا تحاول نماذج 14B في 6 GB. Qwen 3 14B في Q4_K_M يحتاج 9.3 GB. Q2_K يخفّضه إلى حوالي 5.5 GB لكن عقوبة التشتت شديدة — النموذج ينتج مخرجات متدهورة بشكل ملحوظ. التزم بـ7B/8B في Q4_K_M أو 3B/4B في Q8_0.',
         ],
@@ -799,9 +839,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '6GB VRAM 최적 양자화 2026: Q4_K_M vs Q5_K_M | PromptQuorum',
     metaDescription: '7B/8B 모델의 Q4_K_M은 4.7~4.9GB를 사용하여 KV 캐시에 1.1GB를 남깁니다. Q5_K_M은 5.7GB로 컨텍스트를 2k로 제한해야 합니다. Q6_K 이상은 6GB를 초과합니다.',
     publishDate: '2026-05-23',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-23',
+    leadAnswerBlock: '**Q4_K_M은 6GB VRAM GPU에 가장 적합한 양자화 레벨입니다 — 7B/8B 모델은 4.7~4.9GB를 사용하며, 4k 토큰 컨텍스트에서 KV 캐시에 1.1GB를 남깁니다.** Q5_K_M도 가능하지만 메모리 부족을 피하려면 컨텍스트를 2k 토큰으로 제한해야 합니다. Q6_K 이상은 7B 이상의 모델에서 6GB 한도를 초과합니다.',
     targetKeywords: [
       '6GB VRAM 양자화',
       '6GB 그래픽카드 LLM 실행',
@@ -815,7 +856,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '6GB VRAM에 가장 적합한 양자화 레벨은 무엇입니까?',
         answer: 'Q4_K_M이 최적입니다. 7B/8B 모델의 Q4_K_M은 4.7~4.9GB를 사용하며 KV 캐시에 1.1GB를 남깁니다. Q5_K_M도 가능하지만 컨텍스트를 2k 토큰으로 제한해야 합니다. 6GB 카드에서 Q6_K 이상은 사용하지 마십시오.',
         bullets: [
-          'Llama 3.1 8B / Mistral Small / Qwen 3 7B의 Q4_K_M: 4.7~4.9GB — 4k 컨텍스트로 6GB에서 실행 가능',
+          'Llama 3.1 8B / Mistral Small / Qwen3 8B의 Q4_K_M: 4.7~4.9GB — 4k 컨텍스트로 6GB에서 실행 가능',
           'Q5_K_M은 ~5.7GB 사용 — 실행 가능하지만 OOM 방지를 위해 컨텍스트를 2k 토큰으로 제한해야 합니다',
           '14B 모델의 Q4_K_M은 9.3GB 필요 — 어떤 양자화 레벨도 6GB에서 실행 불가능합니다',
         ],
@@ -868,8 +909,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '6GB VRAM에서 Q4_K_M으로 실행할 수 있는 최고의 모델',
         content: [
-          '6GB 카드에서 Q4_K_M으로 세 가지 7B/8B 모델이 두드러집니다. Qwen 3 7B Instruct는 가장 균형 잡혀 있습니다 — 코드 성능 우수(HumanEval ~60%), 다국어 지원, 128k 컨텍스트 아키텍처(단, VRAM 제한으로 4k에서 작동). `ollama run qwen2.5:7b`로 실행하십시오.',
-          'Llama 3.1 8B는 가장 빠른 옵션입니다. Q4_K_M에서 RTX 3060 6GB 기준 약 25 토큰/초로 실행되며 일반 대화 및 지시 따르기를 안정적으로 처리합니다. MMLU 점수 66.6%는 Qwen 3 7B보다 낮지만 속도 이점 덕분에 대화형 세션에 적합합니다.',
+          '6GB 카드에서 Q4_K_M으로 세 가지 7B/8B 모델이 두드러집니다. Qwen3 8B Instruct는 가장 균형 잡혀 있습니다 — 코드 성능 우수(HumanEval ~60%), 다국어 지원, 128k 컨텍스트 아키텍처(단, VRAM 제한으로 4k에서 작동). `ollama run qwen3:8b`로 실행하십시오.',
+          'Llama 3.1 8B는 가장 빠른 옵션입니다. Q4_K_M에서 RTX 3060 6GB 기준 약 25 토큰/초로 실행되며 일반 대화 및 지시 따르기를 안정적으로 처리합니다. MMLU 점수 66.6%는 Qwen3 8B보다 낮지만 속도 이점 덕분에 대화형 세션에 적합합니다.',
           'Phi-4 Mini (3.8B)는 의외의 선택입니다. Q8_0에서 약 4.1GB를 차지하여 6GB 내에 편안하게 들어가며 추론 벤치마크에서 동일 크기 클래스를 능가합니다. 이전 7B 모델보다 더 나은 추론으로 5GB 미만의 메모리 사용이 필요할 때 사용하십시오. `ollama run phi4-mini`로 실행하십시오.',
           '6GB에서 14B 모델은 시도하지 마십시오. Q4_K_M에서 Qwen 3 14B는 9.3GB가 필요합니다. Q2_K로 낮추면 약 5.5GB로 줄어들지만 퍼플렉시티 패널티가 심각합니다 — 모델이 현저히 저하된 출력을 생성합니다. Q4_K_M의 7B/8B 또는 Q8_0의 3B/4B 모델을 사용하십시오.',
         ],
