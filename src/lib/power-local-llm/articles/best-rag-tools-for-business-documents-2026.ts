@@ -496,6 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — the deeper head-to-head this guide links out to',
+          '[RAGFlow: Deep Document Understanding & Citations](/power-local-llm/ragflow-document-understanding-rag-review) — full review of the layout-aware parsing and citation traceability that makes RAGFlow the pick for complex documents.',
           '[Best Workstation Build for Local AI (2026): Three Budget Tiers](/power-local-llm/best-workstation-build-local-ai-2026) — hardware foundation for running large RAG models locally',
           '[Local AI Workstation Build Guide](/power-local-llm/local-ai-workstation-build-guide-2026) — full custom build for department/enterprise-scale RAG',
           '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm) — the cheapest way to run a solo/small-team RAG server',
@@ -1078,6 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — der tiefere Direktvergleich, auf den dieser Leitfaden verweist',
+          '[RAGFlow: Tiefes Dokumentenverständnis & Zitate](/de/power-local-llm/ragflow-document-understanding-rag-review) — vollständiger Test des layoutbewussten Parsings und der Zitat-Nachvollziehbarkeit, die RAGFlow zur richtigen Wahl für komplexe Dokumente machen.',
           '[Beste Workstation für lokale KI (2026): Drei Budgetstufen](/de/power-local-llm/best-workstation-build-local-ai-2026) — Hardware-Grundlage für den Betrieb großer RAG-Modelle lokal',
           '[Leitfaden für den Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide-2026) — kompletter individueller Build für RAG im Abteilungs-/Enterprise-Maßstab',
           '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) — der günstigste Weg, einen Solo-/Kleinteam-RAG-Server zu betreiben',
@@ -1652,6 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — le comparatif approfondi vers lequel ce guide renvoie',
+          '[RAGFlow : compréhension approfondie des documents et citations](/fr/power-local-llm/ragflow-document-understanding-rag-review) — test complet de l\'analyse sensible à la mise en page et de la traçabilité des citations qui font de RAGFlow le bon choix pour les documents complexes.',
           '[Meilleure configuration de station de travail pour l\'IA locale (2026) : trois budgets](/fr/power-local-llm/best-workstation-build-local-ai-2026) — la base matérielle pour exécuter de grands modèles RAG en local',
           '[Guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026) — construction complète sur mesure pour un RAG à l\'échelle service/entreprise',
           '[Meilleurs mini PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm) — la façon la moins chère d\'exécuter un serveur RAG solo/petite équipe',
@@ -2226,6 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[AnythingLLM対PrivateGPT対Open WebUI](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 本ガイドがリンクしているより詳細な比較記事',
+          '[RAGFlow：深い文書理解と引用](/ja/power-local-llm/ragflow-document-understanding-rag-review) — 複雑な文書にRAGFlowが適する理由となる、レイアウト認識解析と引用の追跡性を詳しく解説するレビュー。',
           '[ローカルAI最適ワークステーション構築（2026年）：3つの予算ティア](/ja/power-local-llm/best-workstation-build-local-ai-2026) — 大規模なRAGモデルをローカルで実行するためのハードウェア基盤',
           '[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026) — 部門／エンタープライズ規模のRAG向けフルカスタムビルド',
           '[ローカルLLM向けベストミニPC](/ja/local-llms/best-mini-pcs-local-llm) — 個人／小規模チーム向けRAGサーバーを最も安く実行する方法',
@@ -2787,6 +2791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[AnythingLLM vs PrivateGPT vs Open WebUI对比](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) —— 本指南延伸链接到的深度对比文章',
+          '[RAGFlow：深度文档理解与引用](/zh/power-local-llm/ragflow-document-understanding-rag-review) —— 详细评测版面感知解析与引用可追溯性,这正是RAGFlow适合处理复杂文档的原因。',
           '[2026年本地AI最佳工作站配置：三档预算方案](/zh/power-local-llm/best-workstation-build-local-ai-2026) —— 本地运行大型RAG模型的硬件基础',
           '[本地AI工作站构建指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026) —— 面向部门/企业级RAG的完整定制构建方案',
           '[本地LLM最佳迷你主机推荐](/zh/local-llms/best-mini-pcs-local-llm) —— 运行个人/小团队RAG服务器最省钱的方式',
@@ -3365,6 +3370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectura relacionada',
         items: [
           '[AnythingLLM frente a PrivateGPT frente a Open WebUI](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — la comparativa directa más detallada a la que enlaza esta guía',
+          '[RAGFlow: comprensión profunda de documentos y citas](/es/power-local-llm/ragflow-document-understanding-rag-review) — reseña completa del análisis sensible al diseño y la trazabilidad de citas que hacen de RAGFlow la mejor opción para documentos complejos.',
           '[Mejor construcción de estación de trabajo para IA local (2026): tres niveles de presupuesto](/es/power-local-llm/best-workstation-build-local-ai-2026) — la base de hardware para ejecutar grandes modelos RAG en local',
           '[Guía de construcción de estaciones de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026) — construcción personalizada completa para RAG a escala de departamento/empresa',
           '[Mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm) — la forma más económica de ejecutar un servidor RAG individual/de equipo pequeño',
@@ -3939,6 +3945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leitura Relacionada',
         items: [
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — o comparativo mais aprofundado para o qual este guia remete',
+          '[RAGFlow: compreensão profunda de documentos e citações](/pt/power-local-llm/ragflow-document-understanding-rag-review) — avaliação completa da análise sensível ao layout e da rastreabilidade de citações que tornam o RAGFlow a escolha certa para documentos complexos.',
           '[Melhor Estação de Trabalho para IA Local (2026): Três Faixas de Orçamento](/pt/power-local-llm/best-workstation-build-local-ai-2026) — a base de hardware para rodar grandes modelos RAG localmente',
           '[Guia de Montagem de Estação de Trabalho de IA Local](/pt/power-local-llm/local-ai-workstation-build-guide-2026) — montagem personalizada completa para RAG em escala de departamento/empresa',
           '[Melhores Mini PCs para LLMs Locais](/pt/local-llms/best-mini-pcs-local-llm) — a forma mais barata de rodar um servidor RAG individual/para pequenas equipes',
@@ -4517,6 +4524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءة ذات صلة',
         items: [
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — المقارنة المباشرة الأعمق التي يُحيل إليها هذا الدليل',
+          '[RAGFlow: فهم عميق للمستندات واستشهادات موثوقة](/ar/power-local-llm/ragflow-document-understanding-rag-review) — مراجعة كاملة للتحليل الواعي بالتخطيط وقابلية تتبع الاستشهادات التي تجعل RAGFlow الخيار الأنسب للمستندات المعقدة.',
           '[أفضل بناء محطة عمل للذكاء الاصطناعي المحلي (2026): ثلاث فئات ميزانية](/ar/power-local-llm/best-workstation-build-local-ai-2026) — الأساس المادي لتشغيل نماذج RAG الكبيرة محلياً',
           '[دليل بناء محطة عمل ذكاء اصطناعي محلي](/ar/power-local-llm/local-ai-workstation-build-guide-2026) — بناء مخصص كامل لـ RAG على مستوى قسم/مؤسسة',
           '[أفضل أجهزة الكمبيوتر المصغرة للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm) — أرخص طريقة لتشغيل خادم RAG فردي/لفريق صغير',
@@ -5091,6 +5099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 자료',
         items: [
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 이 가이드가 연결하는 더 심층적인 정면 비교',
+          '[RAGFlow: 깊이 있는 문서 이해와 인용](/ko/power-local-llm/ragflow-document-understanding-rag-review) — 복잡한 문서에 RAGFlow가 적합한 이유가 되는 레이아웃 인식 분석과 인용 추적성을 다루는 전체 리뷰.',
           '[로컬 AI 최고의 워크스테이션 빌드 (2026): 세 가지 예산 등급](/ko/power-local-llm/best-workstation-build-local-ai-2026) — 대형 RAG 모델을 로컬에서 실행하기 위한 하드웨어 기반',
           '[로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026) — 부서/엔터프라이즈 규모 RAG를 위한 완전한 맞춤 빌드',
           '[로컬 LLM용 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm) — 개인/소규모 팀 RAG 서버를 실행하는 가장 저렴한 방법',

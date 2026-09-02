@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 189,
+    "totalCount": 190,
     "capped": true
   },
   "llama.cpp": {
@@ -804,7 +804,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "Msty": {
@@ -1012,7 +1012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 47,
+    "totalCount": 48,
     "capped": true
   },
   "LibreChat": {
@@ -1763,14 +1763,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "build-local-voice-assistant-2026",
-        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
-        "url": "/power-local-llm/build-local-voice-assistant-2026",
-        "dateModified": "2026-08-28",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 15,
+    "totalCount": 16,
     "capped": true
   },
   "Quivr": {
@@ -1780,6 +1780,14 @@
         "slug": "quivr-self-hosted-knowledge-assistant-review",
         "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
         "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -1800,7 +1808,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Khoj": {
@@ -1824,6 +1832,14 @@
         "slug": "dify-ai-workflow-builder-review",
         "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -1860,7 +1876,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Flowise": {
@@ -1991,6 +2007,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "txtai-embedded-vector-database-review",
         "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
         "url": "/power-local-llm/txtai-embedded-vector-database-review",
@@ -2028,17 +2052,9 @@
         "url": "/power-local-llm/chat-with-1000-pdfs-locally",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
-        "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "Haystack": {
@@ -2099,14 +2115,30 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-rag-tools-for-business-documents-2026",
         "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chat-with-1000-pdfs-locally",
+        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
+        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
     "capped": false
   },
   "txtai": {
