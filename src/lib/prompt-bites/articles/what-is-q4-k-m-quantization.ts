@@ -5,14 +5,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Quantization & VRAM',
     title: 'What Is Q4_K_M Quantization?',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     seoTitle: 'Q4_K_M Quantization Guide 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4_K_M means 4-bit k-quant at medium quality. Better than Q4_0, smaller than Q8_0. Use Q4_K_M as your default for Ollama. Quick guide from PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-en.webp',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
-    current_models_mentioned: [],
+    next_refresh_due: '2027-03-02',
+    current_models_mentioned: ['Llama 3', 'Mistral', 'Qwen', 'Phi', 'Gemma'],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers running local LLMs for the first time',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Each Letter in Q4_K_M Means',
         content: [
-          'As of May 2026, <strong>Q4_K_M exists because old 4-bit formats (Q4_0) lost too much quality on critical weights.</strong> K-quant compression solves this by allocating more bits to weights that affect output most, and fewer bits to weights with minimal impact. The result: 5–8% better quality than Q4_0 at the same file size.',
+          '<strong>Q4_K_M exists because old 4-bit formats (Q4_0) lost too much quality on critical weights.</strong> K-quant compression solves this by allocating more bits to weights that affect output most, and fewer bits to weights with minimal impact. The result: 5–8% better quality than Q4_0 at the same file size.',
           'The "K" is the key differentiator. K-quant compression applies non-uniform bit allocation — critical weights get more bits, less important ones get fewer. This recovers 5–8% quality compared to the older Q4_0 format at the same file size.',
           'The "M" is the quality setting within k-quant. Q4_K_S (small) is slightly smaller with lower quality. Q4_K_M (medium) is the best balance. Q4_K_L (large) is marginally better but rarely worth the extra size.',
           '<strong>K-quant works by clustering weights and assigning bits based on importance.</strong> Top-importance clusters get 6 bits per weight. Mid-tier clusters get 4 bits. Low-importance clusters get 3 bits. The "M" tier averages 4.5 bits per weight across the model — explaining why Q4_K_M sits between Q4_K_S and Q5_K_M in both size and quality. For when the M tier is not enough, see <a href="/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
@@ -149,9 +149,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M = 4-Bit-K-Quant auf mittlerem Qualitätsniveau. Besser als Q4_0, kleiner als Q8_0. Verwenden Sie es als Standard. Schnelle Antwort von PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-de.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      de: {
+        question: 'Was bedeutet Q4_K_M-Quantisierung?',
+        answer: 'Q4_K_M = 4-Bit-Quantisierung mit K-Quant-Kompression auf mittlerem Qualitätsniveau. Besser als Q4_0 bei gleicher Dateigröße, kleiner als Q8_0. Verwenden Sie es als Standard.',
+        bullets: [
+          'Q = quantisiert, 4 = 4 Bit, K = K-Quant, M = mittel',
+          'Bessere Qualität als Q4_0 bei gleicher Dateigröße',
+          'Q4_K_M als Standard-Quantisierung verwenden',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -165,7 +177,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was jeder Buchstabe in Q4_K_M bedeutet',
         content: [
-          'Stand Mai 2026: <strong>Q4_K_M existiert, weil alte 4-Bit-Formate (Q4_0) bei kritischen Gewichten zu viel Qualität verloren.</strong> K-Quant-Kompression löst dies, indem sie wichtigen Gewichten mehr Bits zuweist und unwichtigeren Gewichten weniger. Das Ergebnis: 5–8 % bessere Qualität als Q4_0 bei gleicher Dateigröße.',
+          '<strong>Q4_K_M existiert, weil alte 4-Bit-Formate (Q4_0) bei kritischen Gewichten zu viel Qualität verloren.</strong> K-Quant-Kompression löst dies, indem sie wichtigen Gewichten mehr Bits zuweist und unwichtigeren Gewichten weniger. Das Ergebnis: 5–8 % bessere Qualität als Q4_0 bei gleicher Dateigröße.',
           'Das "K" ist der entscheidende Unterschied. K-Quant-Kompression wendet eine nicht-uniforme Bit-Zuweisung an — kritische Gewichte erhalten mehr Bits, weniger wichtige erhalten weniger. Das gewinnt 5–8 % Qualität gegenüber dem älteren Q4_0-Format bei gleicher Dateigröße zurück.',
           'Das "M" ist die Qualitätseinstellung innerhalb von K-Quant. Q4_K_S (small) ist etwas kleiner mit niedrigerer Qualität. Q4_K_M (medium) ist die beste Balance. Q4_K_L (large) ist geringfügig besser, aber selten die extra Größe wert.',
           '<strong>K-Quant funktioniert durch Clustering von Gewichten und Bit-Zuweisung basierend auf Wichtigkeit.</strong> Top-Wichtigkeits-Cluster erhalten 6 Bits pro Gewicht. Mittlere Cluster erhalten 4 Bits. Unwichtige Cluster erhalten 3 Bits. Die "M"-Stufe durchschnittlich 4,5 Bits pro Gewicht — was erklärt, warum Q4_K_M in Größe und Qualität zwischen Q4_K_S und Q5_K_M liegt. Für den Fall, dass die M-Stufe nicht ausreicht, siehe <a href="/de/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs. Q8_0</a>.',
@@ -220,9 +232,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M = k-quant 4 bits à qualité moyenne. Meilleure que Q4_0, plus petite que Q8_0. À utiliser comme standard. Réponse rapide par PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-fr.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      fr: {
+        question: 'Qu\'est-ce que la quantisation Q4_K_M ?',
+        answer: 'Q4_K_M signifie quantisation 4 bits avec compression k-quant à qualité moyenne. Meilleure que Q4_0 à taille égale, plus petite que Q8_0. À utiliser comme standard.',
+        bullets: [
+          'Q = quantisé, 4 = 4 bits, K = k-quant, M = moyen',
+          'Meilleure qualité que Q4_0 à la même taille de fichier',
+          'Utiliser Q4_K_M comme quantisation par défaut',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -236,7 +260,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Ce que signifie chaque lettre de Q4_K_M',
         content: [
-          'En mai 2026, <strong>Q4_K_M existe parce que les anciens formats 4 bits (Q4_0) perdaient trop de qualité sur les poids critiques.</strong> La compression k-quant résout ce problème en allouant plus de bits aux poids qui influencent le plus les sorties, et moins aux poids à faible impact. Résultat : 5 à 8 % de qualité en plus par rapport à Q4_0 à taille de fichier identique.',
+          '<strong>Q4_K_M existe parce que les anciens formats 4 bits (Q4_0) perdaient trop de qualité sur les poids critiques.</strong> La compression k-quant résout ce problème en allouant plus de bits aux poids qui influencent le plus les sorties, et moins aux poids à faible impact. Résultat : 5 à 8 % de qualité en plus par rapport à Q4_0 à taille de fichier identique.',
           'Le "K" est le différenciateur clé. La compression k-quant applique une allocation de bits non uniforme — les poids critiques reçoivent plus de bits, les moins importants en reçoivent moins. Cela récupère 5 à 8 % de qualité par rapport à l\'ancien format Q4_0 à même taille de fichier.',
           'Le "M" est le niveau de qualité au sein du k-quant. Q4_K_S (small) est légèrement plus petit avec une qualité moindre. Q4_K_M (medium) est le meilleur équilibre. Q4_K_L (large) est marginalement meilleur mais rarement justifié.',
           '<strong>Le k-quant fonctionne en regroupant les poids et en attribuant les bits selon leur importance.</strong> Les clusters de haute importance reçoivent 6 bits par poids. Les clusters intermédiaires reçoivent 4 bits. Les clusters peu importants reçoivent 3 bits. Le niveau "M" représente en moyenne 4,5 bits par poids — ce qui explique pourquoi Q4_K_M se situe entre Q4_K_S et Q5_K_M en taille et en qualité. Pour savoir quand le niveau M ne suffit pas, voir <a href="/fr/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
@@ -291,9 +315,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_Mは中品質のK-Quant 4ビット量化です。Q4_0より優れ、Q8_0より小さいです。デフォルトとして使用してください。PromptQuorumの解説。',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ja.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      ja: {
+        question: 'Q4_K_M量化とは何ですか？',
+        answer: 'Q4_K_MはK-Quant（K）圧縮を使用した4ビット量化で、品質は中程度（M）です。ほとんどのモデルのデフォルトとして最適：Q4_0より品質が高く、Q8_0より小さいです。',
+        bullets: [
+          'Q=量化済み、4=4ビット、K=K-Quant、M=中程度',
+          'Q4_0と同じファイルサイズでより高品質',
+          'Q4_K_Mをデフォルトの量化として使用する',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -307,7 +343,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Q4_K_Mの各文字の意味',
         content: [
-          '2026年5月現在、<strong>Q4_K_Mは古い4ビットフォーマット（Q4_0）が重要な重みで品質を失いすぎたために存在しています。</strong>K-Quant圧縮は、出力に最も影響を与える重みにより多くのビットを割り当て、影響の少ない重みには少ないビットを割り当てることでこれを解決します。結果：同じファイルサイズでQ4_0より5–8%品質が向上します。',
+          '<strong>Q4_K_Mは古い4ビットフォーマット（Q4_0）が重要な重みで品質を失いすぎたために存在しています。</strong>K-Quant圧縮は、出力に最も影響を与える重みにより多くのビットを割り当て、影響の少ない重みには少ないビットを割り当てることでこれを解決します。結果：同じファイルサイズでQ4_0より5–8%品質が向上します。',
           '「K」が主要な差別化要因です。K-Quant圧縮は非均一なビット割り当てを適用します — 重要な重みはより多くのビットを得て、重要でないものはより少ないビットを得ます。これにより同じファイルサイズで古いQ4_0フォーマットと比べて5–8%の品質を回復します。',
           '「M」はK-Quant内の品質設定です。Q4_K_S（small）は品質が低いが少し小さいです。Q4_K_M（medium）は最もバランスが取れています。Q4_K_L（large）はわずかに優れていますが、追加サイズの価値はほとんどありません。',
           '<strong>K-Quantは重みをクラスタリングし、重要度に基づいてビットを割り当てます。</strong>最重要クラスターは重みあたり6ビットを取得します。中間クラスターは4ビットを取得します。低重要クラスターは3ビットを取得します。「M」ティアはモデル全体で重みあたり平均4.5ビット — これがQ4_K_MがQ4_K_SとQ5_K_Mの間のサイズと品質に位置する理由です。Mティアで不十分な場合は、<a href="/ja/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>を参照してください。',
@@ -362,9 +398,21 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M是中等质量的K-Quant 4位量化格式。优于Q4_0，体积小于Q8_0。将其作为默认格式使用。PromptQuorum快速解答。',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-zh.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
+    quickAnswerTop: {
+      zh: {
+        question: 'Q4_K_M量化是什么？',
+        answer: 'Q4_K_M表示使用K-Quant（K）压缩的4位量化，品质为中等（M）。这是大多数模型的最佳默认选择：质量优于Q4_0，文件大小小于Q8_0。',
+        bullets: [
+          'Q=量化，4=4位，K=K-Quant，M=中等',
+          '相同文件大小下质量优于Q4_0',
+          '将Q4_K_M作为默认量化格式使用',
+        ],
+        updatedDate: '2026-09',
+      },
+    },
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -378,7 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Q4_K_M中每个字母的含义',
         content: [
-          '截至2026年5月，<strong>Q4_K_M的出现是因为旧有的4位格式（Q4_0）在关键权重上损失了过多质量。</strong>K-Quant压缩通过为影响输出最大的权重分配更多位、为影响较小的权重分配更少位来解决这个问题。结果：相同文件大小下比Q4_0质量提升5–8%。',
+          '<strong>Q4_K_M的出现是因为旧有的4位格式（Q4_0）在关键权重上损失了过多质量。</strong>K-Quant压缩通过为影响输出最大的权重分配更多位、为影响较小的权重分配更少位来解决这个问题。结果：相同文件大小下比Q4_0质量提升5–8%。',
           '「K」是核心区别。K-Quant压缩采用非均匀位分配——关键权重获得更多位，较不重要的权重获得更少位。与相同文件大小的旧Q4_0格式相比，可恢复5–8%的质量。',
           '「M」是K-Quant内的质量设置。Q4_K_S（small）体积略小但质量略低。Q4_K_M（medium）是最佳平衡点。Q4_K_L（large）质量略高但额外体积通常不值得。',
           '<strong>K-Quant通过对权重进行聚类并按重要性分配位数来工作。</strong>最重要的簇每个权重获得6位。中间级别的簇获得4位。低重要性的簇获得3位。「M」层的平均值为每权重4.5位——这解释了为什么Q4_K_M在大小和质量上都介于Q4_K_S和Q5_K_M之间。当M层不够用时，请参阅<a href="/zh/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M与Q8_0的对比</a>。',
@@ -433,9 +481,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M é quantização de 4 bits k-quant de qualidade média: melhor que Q4_0, menor que Q8_0. Use-a como padrão no Ollama. Guia rápido do PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-pt.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-02',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       pt: {
         question: 'O que é a quantização Q4_K_M?',
@@ -461,7 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que cada letra em Q4_K_M significa',
         content: [
-          'Em maio de 2026, <strong>Q4_K_M existe porque os formatos antigos de 4 bits (Q4_0) perdiam muita qualidade nos pesos críticos.</strong> A compressão k-quant resolve isso alocando mais bits para os pesos que mais afetam a saída e menos bits para os de menor impacto. Resultado: 5–8% mais qualidade que Q4_0 no mesmo tamanho de arquivo.',
+          '<strong>Q4_K_M existe porque os formatos antigos de 4 bits (Q4_0) perdiam muita qualidade nos pesos críticos.</strong> A compressão k-quant resolve isso alocando mais bits para os pesos que mais afetam a saída e menos bits para os de menor impacto. Resultado: 5–8% mais qualidade que Q4_0 no mesmo tamanho de arquivo.',
           'O "K" é o diferenciador principal. A compressão k-quant aplica alocação de bits não uniforme — pesos críticos recebem mais bits, os menos importantes recebem menos. Isso recupera 5–8% de qualidade em comparação com o formato Q4_0 mais antigo no mesmo tamanho de arquivo.',
           'O "M" é a configuração de qualidade dentro do k-quant. Q4_K_S (small) é ligeiramente menor com qualidade menor. Q4_K_M (medium) é o melhor equilíbrio. Q4_K_L (large) é marginalmente melhor, mas raramente vale o tamanho extra.',
           '<strong>K-quant funciona agrupando pesos e atribuindo bits com base na importância.</strong> Clusters de maior importância recebem 6 bits por peso. Clusters de nível médio recebem 4 bits. Clusters de baixa importância recebem 3 bits. O nível "M" tem uma média de 4,5 bits por peso em todo o modelo — explicando por que Q4_K_M fica entre Q4_K_S e Q5_K_M em tamanho e qualidade. Para quando o nível M não é suficiente, veja <a href="/pt/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
@@ -516,9 +564,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M es cuantización de 4 bits k-quant de calidad media: mejor que Q4_0, más pequeña que Q8_0. Úsala por defecto en Ollama. Guía rápida de PromptQuorum.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-es.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-31',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       es: {
         question: '¿Qué es la cuantización Q4_K_M?',
@@ -544,7 +592,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Qué significa cada letra de Q4_K_M',
         content: [
-          'A mayo de 2026, <strong>Q4_K_M existe porque los formatos antiguos de 4 bits (Q4_0) perdían demasiada calidad en los pesos críticos.</strong> La compresión k-quant resuelve esto asignando más bits a los pesos que más afectan a la salida, y menos bits a los de menor impacto. Resultado: 5–8% más calidad que Q4_0 al mismo tamaño de archivo.',
+          '<strong>Q4_K_M existe porque los formatos antiguos de 4 bits (Q4_0) perdían demasiada calidad en los pesos críticos.</strong> La compresión k-quant resuelve esto asignando más bits a los pesos que más afectan a la salida, y menos bits a los de menor impacto. Resultado: 5–8% más calidad que Q4_0 al mismo tamaño de archivo.',
           'La "K" es el diferenciador clave. La compresión k-quant aplica una asignación de bits no uniforme — los pesos críticos reciben más bits, los menos importantes reciben menos. Esto recupera 5–8% de calidad respecto al antiguo formato Q4_0 al mismo tamaño de archivo.',
           'La "M" es el ajuste de calidad dentro de k-quant. Q4_K_S (small) es ligeramente más pequeño con menor calidad. Q4_K_M (medium) es el mejor equilibrio. Q4_K_L (large) es marginalmente mejor pero rara vez justifica el tamaño extra.',
           '<strong>K-quant funciona agrupando pesos y asignando bits según su importancia.</strong> Los clusters de mayor importancia reciben 6 bits por peso. Los de nivel medio reciben 4 bits. Los de baja importancia reciben 3 bits. El nivel "M" promedia 4,5 bits por peso en todo el modelo — esto explica por qué Q4_K_M se sitúa entre Q4_K_S y Q5_K_M en tamaño y calidad. Para cuando el nivel M no es suficiente, consulta <a href="/es/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>.',
@@ -599,9 +647,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '⁨Q4⁩_⁨K⁩_⁨M⁩ يوفر جودة أعلى بـ ⁨5⁩–⁨8%⁩ من ⁨Q4⁩_⁨0⁩ بنفس حجم الملف. نموذج ⁨7B⁩ يحتاج ~⁨5.5 GB VRAM⁩. استخدمه افتراضيًا في ⁨Ollama⁩ بدلًا من ⁨Q4⁩_⁨0⁩ أو ⁨Q8⁩_⁨0⁩.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ar.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-20',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     quickAnswerTop: {
       ar: {
         question: 'ما هو ضغط Q4_K_M؟',
@@ -627,7 +675,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا تعني كل حرف في Q4_K_M',
         content: [
-          'اعتبارًا من مايو 2026، <strong>وُجد Q4_K_M لأن صيغ 4-bit القديمة (Q4_0) فقدت جودةً كبيرة في الأوزان الحرجة.</strong> يحل ضغط k-quant هذه المشكلة بتخصيص مزيد من البتات للأوزان الأكثر تأثيرًا في المخرجات وبتات أقل للأقل تأثيرًا. النتيجة: جودة أعلى بنسبة 5–8% من Q4_0 بنفس حجم الملف.',
+          '<strong>وُجد Q4_K_M لأن صيغ 4-bit القديمة (Q4_0) فقدت جودةً كبيرة في الأوزان الحرجة.</strong> يحل ضغط k-quant هذه المشكلة بتخصيص مزيد من البتات للأوزان الأكثر تأثيرًا في المخرجات وبتات أقل للأقل تأثيرًا. النتيجة: جودة أعلى بنسبة 5–8% من Q4_0 بنفس حجم الملف.',
           '"K" هي المُميِّز الرئيسي. يطبق ضغط k-quant تخصيص بتات غير منتظم — تحصل الأوزان الحرجة على بتات أكثر والأقل أهمية على بتات أقل. يستعيد هذا 5–8% من الجودة مقارنةً بصيغة Q4_0 القديمة بنفس حجم الملف.',
           '"M" هي إعداد الجودة ضمن k-quant. Q4_K_S (صغير) أصغر حجمًا قليلًا بجودة أدنى. Q4_K_M (متوسط) هو أفضل توازن. Q4_K_L (كبير) أفضل هامشيًا لكنه نادرًا ما يستحق الحجم الإضافي.',
           '<strong>يعمل k-quant بتجميع الأوزان وتخصيص البتات وفق الأهمية.</strong> تحصل المجموعات الأعلى أهمية على 6 بتات لكل وزن. المجموعات متوسطة المستوى على 4 بتات. المجموعات منخفضة الأهمية على 3 بتات. يتوسط المستوى "M" 4.5 بت لكل وزن عبر النموذج بأكمله — ما يُفسر لماذا يقع Q4_K_M بين Q4_K_S و Q5_K_M في الحجم والجودة. حين لا يكفي المستوى M، راجع <a href="/ar/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M مقابل Q8_0</a>.',
@@ -682,9 +730,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Q4_K_M은 중간 품질의 4비트 k-quant 양자화입니다. Q4_0보다 품질이 높고 Q8_0보다 파일 크기가 작습니다. Ollama의 기본 설정으로 사용하십시오.',
     heroImage: '/images/what-is-q4-k-m-quantization-letter-breakdown-hero-ko.webp',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-03-02',
     targetKeywords: [
       'Q4_K_M 양자화',
       'k-quant 4비트 차이',
@@ -762,7 +810,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
         content: [
-          '2026년 5월 기준, <strong>Q4_K_M은 기존 4비트 형식(Q4_0)이 중요한 가중치에서 너무 많은 품질을 손실했기 때문에 존재합니다.</strong> k-quant 압축은 출력에 가장 큰 영향을 미치는 가중치에 더 많은 비트를 할당하고 영향이 적은 가중치에는 더 적은 비트를 할당하여 이 문제를 해결합니다. 결과: 동일한 파일 크기에서 Q4_0보다 5~8% 높은 품질.',
+          '<strong>Q4_K_M은 기존 4비트 형식(Q4_0)이 중요한 가중치에서 너무 많은 품질을 손실했기 때문에 존재합니다.</strong> k-quant 압축은 출력에 가장 큰 영향을 미치는 가중치에 더 많은 비트를 할당하고 영향이 적은 가중치에는 더 적은 비트를 할당하여 이 문제를 해결합니다. 결과: 동일한 파일 크기에서 Q4_0보다 5~8% 높은 품질.',
           '"K"는 핵심적인 차별점입니다. k-quant 압축은 비균일 비트 할당을 적용합니다 — 중요한 가중치는 더 많은 비트를 받고, 덜 중요한 가중치는 더 적은 비트를 받습니다. 이를 통해 동일한 파일 크기에서 기존 Q4_0 형식 대비 5~8%의 품질을 회복합니다.',
           '"M"은 k-quant 내의 품질 설정입니다. Q4_K_S(small)는 더 낮은 품질로 약간 더 작습니다. Q4_K_M(medium)은 최적의 균형입니다. Q4_K_L(large)은 약간 더 낫지만 추가 크기를 정당화하는 경우는 거의 없습니다.',
           '<strong>k-quant는 가중치를 클러스터링하고 중요도에 따라 비트를 할당하는 방식으로 작동합니다.</strong> 최고 중요도 클러스터는 가중치당 6비트를 받습니다. 중간 수준 클러스터는 4비트를 받습니다. 낮은 중요도 클러스터는 3비트를 받습니다. "M" 수준은 모델 전체에서 가중치당 평균 4.5비트입니다 — 이것이 Q4_K_M이 크기와 품질 모두에서 Q4_K_S와 Q5_K_M 사이에 위치하는 이유입니다. M 수준으로 충분하지 않을 때는 <a href="/ko/prompt-bites/q4-k-m-vs-q8-0" class="text-primary hover:underline">Q4_K_M vs Q8_0</a>을 참조하십시오.',
