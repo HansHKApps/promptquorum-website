@@ -16,12 +16,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // cluster's own battery guide already applies (its own tableNote explicitly omits prices as
     // Section-301-tariff-sensitive and tells readers to verify at time of purchase). This article
     // stays informational — no affiliateLinks — per sourcing-pass scope.
-    title: 'Turning Your Home Into an Energy Microgrid (2027)',
-    seoTitle: 'Home Energy Microgrid Setup (2027)',
+    title: 'Turning Your Home Into an Energy Microgrid (2026)',
+    seoTitle: 'Home Energy Microgrid Setup (2026)',
     intro:
       'A home energy "microgrid" in the consumer sense means solar generation plus battery storage plus local automation that can keep essential circuits running during a grid outage — not a true islanded utility-scale microgrid, which is a different, commercial-scale engineering problem. This guide scopes what\'s realistically achievable with home battery + inverter + Home Assistant automation, and where to go for the hardware specifics.',
     metaDescription:
-      'Home energy microgrid setup in 2027: solar, battery, and local automation for outage backup — scoped to what home hardware actually supports.',
+      'Home energy microgrid setup in 2026: solar, battery, and local automation for outage backup — scoped to what home hardware actually supports.',
     twitterDescription:
       'What a "home microgrid" actually means: solar + battery + local automation for outage backup, not utility-scale islanding.',
     readTime: '7 min read',
@@ -149,8 +149,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Turning Your Home Into an Energy Microgrid (2027)',
-      description: 'Home energy microgrid setup in 2027: solar, battery, and local automation for outage backup — scoped to what home hardware actually supports.',
+      headline: 'Turning Your Home Into an Energy Microgrid (2026)',
+      description: 'Home energy microgrid setup in 2026: solar, battery, and local automation for outage backup — scoped to what home hardware actually supports.',
       url: 'https://www.promptquorum.com/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -182,12 +182,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-de.webp',
-    title: 'Ihr Zuhause zum Energie-Microgrid machen (2027)',
-    seoTitle: 'Heimisches Energie-Microgrid einrichten (2027)',
+    title: 'Ihr Zuhause zum Energie-Microgrid machen (2026)',
+    seoTitle: 'Heimisches Energie-Microgrid einrichten (2026)',
     intro:
       'Ein häusliches Energie-„Microgrid" bedeutet im Verbrauchersinn Solarerzeugung plus Batteriespeicher plus lokale Automatisierung, die wesentliche Stromkreise während eines Netzausfalls am Laufen hält — kein echtes, inselbetriebenes Microgrid im Versorgungsmaßstab, was ein anderes, kommerzielles Ingenieursproblem ist. Dieser Leitfaden umreißt, was mit Heimbatterie + Wechselrichter + Home-Assistant-Automatisierung realistisch erreichbar ist, und wohin Sie für die Hardware-Details gehen sollten.',
     metaDescription:
-      'Häusliches Energie-Microgrid-Setup 2027: Solar, Batterie und lokale Automatisierung für Notstromversorgung — begrenzt auf das, was Heimhardware tatsächlich leistet.',
+      'Häusliches Energie-Microgrid-Setup 2026: Solar, Batterie und lokale Automatisierung für Notstromversorgung — begrenzt auf das, was Heimhardware tatsächlich leistet.',
     twitterDescription:
       'Was ein „häusliches Microgrid" wirklich bedeutet: Solar + Batterie + lokale Automatisierung für Notstromversorgung, keine Insel-Bildung im Versorgungsmaßstab.',
     readTime: '7 Min. Lesezeit',
@@ -315,8 +315,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Ihr Zuhause zum Energie-Microgrid machen (2027)',
-      description: 'Häusliches Energie-Microgrid-Setup 2027: Solar, Batterie und lokale Automatisierung für Notstromversorgung — begrenzt auf das, was Heimhardware tatsächlich leistet.',
+      headline: 'Ihr Zuhause zum Energie-Microgrid machen (2026)',
+      description: 'Häusliches Energie-Microgrid-Setup 2026: Solar, Batterie und lokale Automatisierung für Notstromversorgung — begrenzt auf das, was Heimhardware tatsächlich leistet.',
       url: 'https://www.promptquorum.com/de/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -348,12 +348,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-fr.webp',
-    title: 'Transformer votre maison en microgrid énergétique (2027)',
-    seoTitle: 'Configuration d\'un microgrid énergétique domestique (2027)',
+    title: 'Transformer votre maison en microgrid énergétique (2026)',
+    seoTitle: 'Configuration d\'un microgrid énergétique domestique (2026)',
     intro:
       'Un « microgrid » énergétique domestique, au sens grand public, signifie production solaire plus stockage par batterie plus automatisation locale capable de maintenir en fonctionnement les circuits essentiels pendant une coupure réseau — pas un véritable microgrid en îlotage à l\'échelle d\'un service public, qui est un problème d\'ingénierie commerciale différent. Ce guide délimite ce qui est réalistement atteignable avec batterie domestique + onduleur + automatisation Home Assistant, et où aller pour les détails matériels.',
     metaDescription:
-      'Configuration d\'un microgrid énergétique domestique en 2027 : solaire, batterie et automatisation locale pour la sauvegarde en cas de coupure — délimité à ce que le matériel domestique supporte réellement.',
+      'Configuration d\'un microgrid énergétique domestique en 2026 : solaire, batterie et automatisation locale pour la sauvegarde en cas de coupure — délimité à ce que le matériel domestique supporte réellement.',
     twitterDescription:
       'Ce que signifie réellement un « microgrid domestique » : solaire + batterie + automatisation locale pour la sauvegarde en cas de coupure, pas un îlotage à l\'échelle d\'un service public.',
     readTime: '7 min de lecture',
@@ -481,8 +481,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Transformer votre maison en microgrid énergétique (2027)',
-      description: 'Configuration d\'un microgrid énergétique domestique en 2027 : solaire, batterie et automatisation locale pour la sauvegarde en cas de coupure — délimité à ce que le matériel domestique supporte réellement.',
+      headline: 'Transformer votre maison en microgrid énergétique (2026)',
+      description: 'Configuration d\'un microgrid énergétique domestique en 2026 : solaire, batterie et automatisation locale pour la sauvegarde en cas de coupure — délimité à ce que le matériel domestique supporte réellement.',
       url: 'https://www.promptquorum.com/fr/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -514,12 +514,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ja.webp',
-    title: '家をエネルギーマイクログリッドに変える（2027年）',
-    seoTitle: '家庭用エネルギーマイクログリッド構築（2027年）',
+    title: '家をエネルギーマイクログリッドに変える（2026年）',
+    seoTitle: '家庭用エネルギーマイクログリッド構築（2026年）',
     intro:
       '家庭用エネルギー「マイクログリッド」とは、消費者的な意味では、太陽光発電に蓄電池、そして停電時に重要な回路を稼働させ続けるローカル自動化を組み合わせたものを指します — 商業規模の別の工学的課題である、真に系統から切り離された電力会社規模のマイクログリッドとは異なります。本ガイドでは、家庭用バッテリー＋インバーター＋Home Assistant自動化で現実的に達成可能なことの範囲を示し、ハードウェアの詳細についてはどこを参照すべきかを説明します。',
     metaDescription:
-      '2027年の家庭用エネルギーマイクログリッド構築：停電時のバックアップのための太陽光、バッテリー、ローカル自動化 — 家庭用ハードウェアが実際にサポートする範囲に限定。',
+      '2026年の家庭用エネルギーマイクログリッド構築：停電時のバックアップのための太陽光、バッテリー、ローカル自動化 — 家庭用ハードウェアが実際にサポートする範囲に限定。',
     twitterDescription:
       '「家庭用マイクログリッド」が実際に意味するもの：停電時バックアップのための太陽光＋バッテリー＋ローカル自動化であり、電力会社規模の系統分離ではない。',
     readTime: '7分で読めます',
@@ -647,8 +647,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '家をエネルギーマイクログリッドに変える（2027年）',
-      description: '2027年の家庭用エネルギーマイクログリッド構築：停電時のバックアップのための太陽光、バッテリー、ローカル自動化 — 家庭用ハードウェアが実際にサポートする範囲に限定。',
+      headline: '家をエネルギーマイクログリッドに変える（2026年）',
+      description: '2026年の家庭用エネルギーマイクログリッド構築：停電時のバックアップのための太陽光、バッテリー、ローカル自動化 — 家庭用ハードウェアが実際にサポートする範囲に限定。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -680,12 +680,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-zh.webp',
-    title: '把你家变成能源微电网（2027年）',
-    seoTitle: '家庭能源微电网搭建（2027年）',
+    title: '把你家变成能源微电网（2026年）',
+    seoTitle: '家庭能源微电网搭建（2026年）',
     intro:
       '就消费级意义而言，家庭"微电网"指的是太阳能发电加上电池储能，再加上能在电网停电期间让关键回路持续运行的本地自动化——这不是真正的、脱离电网独立运行的公用事业级微电网，后者是另一种商业规模的工程问题。本指南界定了通过家用电池＋逆变器＋Home Assistant自动化在现实中能实现什么，以及要了解具体硬件信息该去哪里查阅。',
     metaDescription:
-      '2027年家庭能源微电网搭建：为停电备用提供太阳能、电池和本地自动化——限定在家用硬件真正能支持的范围内。',
+      '2026年家庭能源微电网搭建：为停电备用提供太阳能、电池和本地自动化——限定在家用硬件真正能支持的范围内。',
     twitterDescription:
       '"家庭微电网"到底意味着什么：为停电备用而设的太阳能＋电池＋本地自动化，而不是公用事业规模的孤岛运行。',
     readTime: '阅读需7分钟',
@@ -813,8 +813,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '把你家变成能源微电网（2027年）',
-      description: '2027年家庭能源微电网搭建：为停电备用提供太阳能、电池和本地自动化——限定在家用硬件真正能支持的范围内。',
+      headline: '把你家变成能源微电网（2026年）',
+      description: '2026年家庭能源微电网搭建：为停电备用提供太阳能、电池和本地自动化——限定在家用硬件真正能支持的范围内。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -846,12 +846,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-es.webp',
-    title: 'Convertir tu hogar en una microrred de energía (2027)',
-    seoTitle: 'Configuración de microrred energética doméstica (2027)',
+    title: 'Convertir tu hogar en una microrred de energía (2026)',
+    seoTitle: 'Configuración de microrred energética doméstica (2026)',
     intro:
       'Una "microrred" energética doméstica, en el sentido del consumidor, significa generación solar más almacenamiento por batería más automatización local que puede mantener funcionando circuitos esenciales durante un corte de red — no una verdadera microrred aislada a escala de servicio público, que es un problema de ingeniería comercial diferente. Esta guía delimita lo que es realistamente alcanzable con batería doméstica + inversor + automatización de Home Assistant, y adónde ir para los detalles de hardware.',
     metaDescription:
-      'Configuración de microrred energética doméstica en 2027: solar, batería y automatización local para respaldo en cortes — delimitado a lo que el hardware doméstico realmente soporta.',
+      'Configuración de microrred energética doméstica en 2026: solar, batería y automatización local para respaldo en cortes — delimitado a lo que el hardware doméstico realmente soporta.',
     twitterDescription:
       'Lo que realmente significa una "microrred doméstica": solar + batería + automatización local para respaldo en cortes, no aislamiento a escala de servicio público.',
     readTime: '7 min de lectura',
@@ -979,8 +979,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Convertir tu hogar en una microrred de energía (2027)',
-      description: 'Configuración de microrred energética doméstica en 2027: solar, batería y automatización local para respaldo en cortes — delimitado a lo que el hardware doméstico realmente soporta.',
+      headline: 'Convertir tu hogar en una microrred de energía (2026)',
+      description: 'Configuración de microrred energética doméstica en 2026: solar, batería y automatización local para respaldo en cortes — delimitado a lo que el hardware doméstico realmente soporta.',
       url: 'https://www.promptquorum.com/es/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1012,12 +1012,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-pt.webp',
-    title: 'Transformando sua casa em uma microrrede de energia (2027)',
-    seoTitle: 'Configuração de microrrede energética doméstica (2027)',
+    title: 'Transformando sua casa em uma microrrede de energia (2026)',
+    seoTitle: 'Configuração de microrrede energética doméstica (2026)',
     intro:
       'Uma "microrrede" de energia doméstica, no sentido do consumidor, significa geração solar mais armazenamento por bateria mais automação local que pode manter circuitos essenciais funcionando durante uma queda de rede — não uma verdadeira microrrede em ilha na escala de concessionária, que é um problema de engenharia comercial diferente. Este guia delimita o que é realisticamente alcançável com bateria doméstica + inversor + automação do Home Assistant, e onde ir para os detalhes de hardware.',
     metaDescription:
-      'Configuração de microrrede energética doméstica em 2027: solar, bateria e automação local para backup em quedas — delimitado ao que o hardware doméstico realmente suporta.',
+      'Configuração de microrrede energética doméstica em 2026: solar, bateria e automação local para backup em quedas — delimitado ao que o hardware doméstico realmente suporta.',
     twitterDescription:
       'O que uma "microrrede doméstica" realmente significa: solar + bateria + automação local para backup em quedas, não ilhamento na escala de concessionária.',
     readTime: '7 min de leitura',
@@ -1145,8 +1145,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Transformando sua casa em uma microrrede de energia (2027)',
-      description: 'Configuração de microrrede energética doméstica em 2027: solar, bateria e automação local para backup em quedas — delimitado ao que o hardware doméstico realmente suporta.',
+      headline: 'Transformando sua casa em uma microrrede de energia (2026)',
+      description: 'Configuração de microrrede energética doméstica em 2026: solar, bateria e automação local para backup em quedas — delimitado ao que o hardware doméstico realmente suporta.',
       url: 'https://www.promptquorum.com/pt/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1178,12 +1178,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ar.webp',
-    title: 'تحويل منزلك إلى شبكة طاقة صغيرة (⁨2027⁩)',
-    seoTitle: 'إعداد شبكة طاقة منزلية صغيرة (⁨2027⁩)',
+    title: 'تحويل منزلك إلى شبكة طاقة صغيرة (⁨2026⁩)',
+    seoTitle: 'إعداد شبكة طاقة منزلية صغيرة (⁨2026⁩)',
     intro:
       'تعني "الشبكة الصغيرة" للطاقة المنزلية بالمعنى الاستهلاكي توليدًا شمسيًا مع تخزين بطارية مع أتمتة محلية يمكنها إبقاء الدوائر الأساسية تعمل أثناء انقطاع الشبكة — وليست شبكة صغيرة معزولة حقيقية بحجم المرافق العامة، وهي مسألة هندسية تجارية مختلفة. يحدد هذا الدليل ما هو قابل للتحقيق واقعيًا باستخدام بطارية منزلية + عاكس + أتمتة Home Assistant، وإلى أين تذهب لمعرفة تفاصيل الأجهزة.',
     metaDescription:
-      'إعداد شبكة طاقة منزلية صغيرة في 2027: طاقة شمسية وبطارية وأتمتة محلية للنسخ الاحتياطي عند الانقطاع — محدد بما تدعمه أجهزة المنزل فعليًا.',
+      'إعداد شبكة طاقة منزلية صغيرة في 2026: طاقة شمسية وبطارية وأتمتة محلية للنسخ الاحتياطي عند الانقطاع — محدد بما تدعمه أجهزة المنزل فعليًا.',
     twitterDescription:
       'ما تعنيه "الشبكة الصغيرة المنزلية" فعليًا: طاقة شمسية + بطارية + أتمتة محلية للنسخ الاحتياطي عند الانقطاع، وليس عزلًا بحجم المرافق العامة.',
     readTime: '7 دقائق للقراءة',
@@ -1311,8 +1311,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'تحويل منزلك إلى شبكة طاقة صغيرة (⁨2027⁩)',
-      description: 'إعداد شبكة طاقة منزلية صغيرة في 2027: طاقة شمسية وبطارية وأتمتة محلية للنسخ الاحتياطي عند الانقطاع — محدد بما تدعمه أجهزة المنزل فعليًا.',
+      headline: 'تحويل منزلك إلى شبكة طاقة صغيرة (⁨2026⁩)',
+      description: 'إعداد شبكة طاقة منزلية صغيرة في 2026: طاقة شمسية وبطارية وأتمتة محلية للنسخ الاحتياطي عند الانقطاع — محدد بما تدعمه أجهزة المنزل فعليًا.',
       url: 'https://www.promptquorum.com/ar/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1344,12 +1344,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ko.webp',
-    title: '집을 에너지 마이크로그리드로 만들기 (2027년)',
-    seoTitle: '가정용 에너지 마이크로그리드 구축 (2027년)',
+    title: '집을 에너지 마이크로그리드로 만들기 (2026년)',
+    seoTitle: '가정용 에너지 마이크로그리드 구축 (2026년)',
     intro:
       '소비자 관점에서 가정용 에너지 "마이크로그리드"란 태양광 발전에 배터리 저장, 그리고 정전 시 필수 회로를 계속 작동시킬 수 있는 로컬 자동화를 결합한 것을 의미합니다 — 이는 상업 규모의 다른 공학적 과제인 진정한 계통 분리형 전력회사급 마이크로그리드와는 다릅니다. 이 가이드는 가정용 배터리 + 인버터 + Home Assistant 자동화로 현실적으로 달성할 수 있는 것의 범위를 정하고, 하드웨어 세부 사항은 어디서 확인해야 하는지 안내합니다.',
     metaDescription:
-      '2027년 가정용 에너지 마이크로그리드 구축: 정전 시 백업을 위한 태양광, 배터리, 로컬 자동화 — 가정용 하드웨어가 실제로 지원하는 범위로 한정.',
+      '2026년 가정용 에너지 마이크로그리드 구축: 정전 시 백업을 위한 태양광, 배터리, 로컬 자동화 — 가정용 하드웨어가 실제로 지원하는 범위로 한정.',
     twitterDescription:
       '"가정용 마이크로그리드"가 실제로 의미하는 것: 정전 백업을 위한 태양광 + 배터리 + 로컬 자동화이지, 전력회사급 계통 분리가 아님.',
     readTime: '7분 소요',
@@ -1477,8 +1477,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '집을 에너지 마이크로그리드로 만들기 (2027년)',
-      description: '2027년 가정용 에너지 마이크로그리드 구축: 정전 시 백업을 위한 태양광, 배터리, 로컬 자동화 — 가정용 하드웨어가 실제로 지원하는 범위로 한정.',
+      headline: '집을 에너지 마이크로그리드로 만들기 (2026년)',
+      description: '2026년 가정용 에너지 마이크로그리드 구축: 정전 시 백업을 위한 태양광, 배터리, 로컬 자동화 — 가정용 하드웨어가 실제로 지원하는 범위로 한정.',
       url: 'https://www.promptquorum.com/ko/smart-home/home-as-energy-microgrid-2027',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

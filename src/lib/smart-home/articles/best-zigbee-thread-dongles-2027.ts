@@ -26,12 +26,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // Ethernet + USB + Wi-Fi with 802.3af PoE). Could not get a single hard current USD number for
     // ConBee III or per-SKU SMLIGHT pricing from official sources in this pass — flagged as ranges
     // below, see the Step 6 report for what to re-check next refresh.
-    title: 'Best Zigbee & Thread USB Dongles for Home Assistant (2027)',
-    seoTitle: 'Best Zigbee & Thread Dongles for Home Assistant 2027',
+    title: 'Best Zigbee & Thread USB Dongles for Home Assistant (2026)',
+    seoTitle: 'Best Zigbee & Thread Dongles for Home Assistant 2026',
     intro:
       "A Zigbee coordinator dongle or Thread border router dongle is what turns a mini PC or Raspberry Pi running Home Assistant into a hub that can pair Zigbee and Thread/Matter devices directly. This guide compares five confirmed-current USB and Ethernet/PoE options (checked 2026-08-25): Home Assistant's own Connect ZBT-2 ($49/€45), SONOFF's ZBDongle-E (~$20–27) and Dongle Plus MG24 (~$35.50, the only one here that runs Zigbee and Thread at once), Dresden Elektronik's ConBee III (~€40), and SMLIGHT's SLZB-06 Ethernet/PoE family. None of these have been tested or benchmarked by PromptQuorum — every compatibility and range claim below comes from the manufacturers' own documentation and independent published reviews, cited inline.",
     metaDescription:
-      'Best Zigbee and Thread USB dongles for Home Assistant (2027): ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE coordinators, current prices, and which one to buy.',
+      'Best Zigbee and Thread USB dongles for Home Assistant (2026): ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE coordinators, current prices, and which one to buy.',
     twitterDescription:
       'Zigbee + Thread USB dongle buying guide for Home Assistant — ZBT-2, SONOFF, ConBee III, and Ethernet/PoE coordinators compared, current prices checked Aug 2026.',
     readTime: '11 min read',
@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Final Buying Decision', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'The Home Assistant Connect ZBT-2 ($49/€45) is the best overall Zigbee-or-Thread USB dongle for Home Assistant in 2027, with the SONOFF ZBDongle-E (~$20–27) as the budget Zigbee-only pick and the SONOFF Dongle Plus MG24 (~$35.50) the only one here confirmed to run Zigbee and Thread simultaneously.' },
+      { type: 'one-sentence', content: 'The Home Assistant Connect ZBT-2 ($49/€45) is the best overall Zigbee-or-Thread USB dongle for Home Assistant in 2026, with the SONOFF ZBDongle-E (~$20–27) as the budget Zigbee-only pick and the SONOFF Dongle Plus MG24 (~$35.50) the only one here confirmed to run Zigbee and Thread simultaneously.' },
       { type: 'plain-terms', content: 'A mini PC or Raspberry Pi running Home Assistant usually has no built-in radio for Zigbee sensors, bulbs, or plugs. A small USB dongle (or an Ethernet/PoE box for larger homes) adds that radio. Thread works the same way, though many households already own a Thread border router without realizing it — check your existing smart speakers before buying anything.' },
     ],
     sections: {
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is the best Zigbee dongle for Home Assistant in 2027?', a: 'The Home Assistant Connect ZBT-2 ($49/€45) is the best overall pick for most buyers — official first-party hardware on current-generation Silicon Labs MG24 silicon. See "Our Top Picks" above for budget and specialist alternatives.' },
+          { q: 'What is the best Zigbee dongle for Home Assistant in 2026?', a: 'The Home Assistant Connect ZBT-2 ($49/€45) is the best overall pick for most buyers — official first-party hardware on current-generation Silicon Labs MG24 silicon. See "Our Top Picks" above for budget and specialist alternatives.' },
           { q: 'ZBT-2 vs SONOFF ZBDongle-E — which should I buy?', a: 'Buy the ZBT-2 for official Home Assistant support and Thread capability (one mode at a time). Buy the ZBDongle-E if you only need Zigbee and want the lowest reliable price (~$20–27 vs $49/€45).' },
           { q: 'Does the ZBT-2 support Zigbee and Thread simultaneously?', a: 'No — confirmed on Home Assistant\'s own FAQ, the ZBT-2 runs one protocol at a time. For simultaneous Zigbee+Thread on one dongle, buy the SONOFF Dongle Plus MG24 instead.' },
           { q: 'Do I need a Thread border router if I already have a smart speaker?', a: 'Often no. Apple HomePod mini/Apple TV 4K, Google Nest Hub (2nd gen)/Nest Wifi Pro, and Amazon Echo (4th gen+)/eero already function as Thread border routers — check your existing hardware before buying a dedicated dongle.' },
@@ -358,13 +358,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ethernet/PoE vs USB coordinator — which is better?', a: 'USB is simpler and cheaper for apartments and small homes. Ethernet/PoE (like SMLIGHT\'s SLZB-06) is worth the extra cost and setup step for large or multi-floor houses, or a server-cabinet install, because it decouples radio placement from the mini PC\'s location.' },
           { q: 'How many Zigbee devices can one coordinator support?', a: 'It depends on your mesh, not just the coordinator — powered "router" devices (bulbs, plugs, in-wall switches) extend the network, and a dense mesh with an ordinary coordinator outperforms a high-spec coordinator with few router devices. Don\'t shop by a single device-count number.' },
           { q: 'Can I run multiple Thread border routers at once?', a: 'Yes — they cooperate to extend mesh coverage rather than conflict, so adding a dedicated one (ZBT-2 or Dongle Plus MG24 in Thread mode) alongside an existing Apple/Google/Amazon border router is additive, not a replacement requirement.' },
-          { q: 'Zigbee or Thread for a new smart home in 2027?', a: 'Don\'t choose exclusively — use Zigbee for its larger current device catalog and Thread/Matter for newer devices that ship Thread-first. The ZBT-2 or Dongle Plus MG24 let you cover both from day one.' },
+          { q: 'Zigbee or Thread for a new smart home in 2026?', a: 'Don\'t choose exclusively — use Zigbee for its larger current device catalog and Thread/Matter for newer devices that ship Thread-first. The ZBT-2 or Dongle Plus MG24 let you cover both from day one.' },
         ],
       },
       finalDecision: {
         id: 'final-decision',
-        title: 'Final Buying Decision (2027)',
-        content: "**PromptQuorum's 2027 buying recommendation, in one table.**",
+        title: 'Final Buying Decision (2026)',
+        content: "**PromptQuorum's 2026 buying recommendation, in one table.**",
         columns: ['You are…', 'Buy this'],
         rows: [
           { 'You are…': 'Most people, no strong preference', 'Buy this': 'HA Connect ZBT-2 ($49/€45)' },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'You are…': 'Focused specifically on Thread', 'Buy this': 'HA Connect ZBT-2, or Dongle Plus MG24 for simultaneous Zigbee' },
         ],
         items: [
-          "The slug and this page's framing keep the \"2027\" year reference from the original publish — the hardware landscape it describes (ZBT-2 as current-gen, ZBT-1 discontinued) is accurate as of this 2026-08-25 check and remains the right framing going into 2027.",
+          "The hardware landscape this guide describes (ZBT-2 as current-gen, ZBT-1 discontinued) is accurate as of this 2026-08-25 check.",
         ],
         affiliateLinks: [
           { label: 'Check current price — Home Assistant Connect ZBT-2', url: 'https://www.home-assistant.io/connect/zbt-2/', productName: 'Home Assistant Connect ZBT-2', productCategory: 'Zigbee/Thread coordinator', priceRange: '$49 / €45' },
@@ -395,7 +395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Best Zigbee & Thread USB Dongles for Home Assistant (2027)',
+      headline: 'Best Zigbee & Thread USB Dongles for Home Assistant (2026)',
       description: 'Best Zigbee and Thread USB dongles for Home Assistant: ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE, compared with current prices.',
       url: 'https://www.promptquorum.com/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'en',
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'What is the best Zigbee dongle for Home Assistant in 2027?', acceptedAnswer: { '@type': 'Answer', text: 'The Home Assistant Connect ZBT-2 ($49/€45) is the best overall pick for most buyers.' } },
+        { '@type': 'Question', name: 'What is the best Zigbee dongle for Home Assistant in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'The Home Assistant Connect ZBT-2 ($49/€45) is the best overall pick for most buyers.' } },
         { '@type': 'Question', name: 'Does the ZBT-2 support Zigbee and Thread simultaneously?', acceptedAnswer: { '@type': 'Answer', text: 'No — it runs one protocol at a time. The SONOFF Dongle Plus MG24 supports both simultaneously.' } },
         { '@type': 'Question', name: 'Do I need a USB extension cable?', acceptedAnswer: { '@type': 'Answer', text: 'A mini PC\'s USB 3.0 ports and Wi-Fi can interfere with Zigbee/Thread\'s 2.4GHz band — an extension cable commonly improves reliability.' } },
       ],
@@ -430,12 +430,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-de.webp',
     affiliateDisclosure: true,
-    title: 'Die besten Zigbee- & Thread-USB-Dongles für Home Assistant (2027)',
-    seoTitle: 'Beste Zigbee & Thread Dongles für Home Assistant 2027',
+    title: 'Die besten Zigbee- & Thread-USB-Dongles für Home Assistant (2026)',
+    seoTitle: 'Beste Zigbee & Thread Dongles für Home Assistant 2026',
     intro:
       "Ein Zigbee-Koordinator-Dongle oder Thread-Border-Router-Dongle verwandelt einen Mini-PC oder Raspberry Pi mit Home Assistant in einen Hub, der Zigbee- und Thread/Matter-Geräte direkt koppeln kann. Dieser Ratgeber vergleicht fünf bestätigte, aktuelle USB- und Ethernet/PoE-Optionen (geprüft am 25.08.2026): Home Assistants eigenen Connect ZBT-2 ($49/€45), SONOFFs ZBDongle-E (~$20–27) und Dongle Plus MG24 (~$35,50, der einzige hier, der Zigbee und Thread gleichzeitig ausführt), Dresden Elektroniks ConBee III (~€40) und SMLIGHTs SLZB-06-Ethernet/PoE-Familie. Keines dieser Geräte wurde von PromptQuorum getestet oder benchmarked — jede Kompatibilitäts- und Reichweitenangabe unten stammt aus der Dokumentation der Hersteller und unabhängigen veröffentlichten Tests, jeweils mit Quelle.",
     metaDescription:
-      'Die besten Zigbee- und Thread-USB-Dongles für Home Assistant (2027): ZBT-2 vs. SONOFF vs. ConBee III vs. Ethernet/PoE-Koordinatoren, aktuelle Preise und Kaufempfehlung.',
+      'Die besten Zigbee- und Thread-USB-Dongles für Home Assistant (2026): ZBT-2 vs. SONOFF vs. ConBee III vs. Ethernet/PoE-Koordinatoren, aktuelle Preise und Kaufempfehlung.',
     twitterDescription:
       'Zigbee + Thread USB-Dongle-Kaufratgeber für Home Assistant — ZBT-2, SONOFF, ConBee III und Ethernet/PoE-Koordinatoren im Vergleich, Preise geprüft im August 2026.',
     readTime: '11 Min. Lesezeit',
@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Finale Kaufentscheidung', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Der Home Assistant Connect ZBT-2 ($49/€45) ist 2027 der beste Zigbee-oder-Thread-USB-Dongle für Home Assistant insgesamt, mit dem SONOFF ZBDongle-E (~$20–27) als Budget-Zigbee-Only-Wahl und dem SONOFF Dongle Plus MG24 (~$35,50) als einzigem hier bestätigt gleichzeitig Zigbee-und-Thread-fähigen Gerät.' },
+      { type: 'one-sentence', content: 'Der Home Assistant Connect ZBT-2 ($49/€45) ist 2026 der beste Zigbee-oder-Thread-USB-Dongle für Home Assistant insgesamt, mit dem SONOFF ZBDongle-E (~$20–27) als Budget-Zigbee-Only-Wahl und dem SONOFF Dongle Plus MG24 (~$35,50) als einzigem hier bestätigt gleichzeitig Zigbee-und-Thread-fähigen Gerät.' },
       { type: 'plain-terms', content: 'Ein Mini-PC oder Raspberry Pi mit Home Assistant hat normalerweise kein eingebautes Funkmodul für Zigbee-Sensoren, -Lampen oder -Steckdosen. Ein kleiner USB-Dongle (oder eine Ethernet/PoE-Box für größere Häuser) fügt dieses Funkmodul hinzu. Bei Thread ist es ähnlich, auch wenn viele Haushalte bereits einen Thread-Border-Router besitzen, ohne es zu wissen — prüfe deine vorhandenen Smart Speaker, bevor du etwas kaufst.' },
     ],
     sections: {
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Was ist der beste Zigbee-Dongle für Home Assistant 2027?', a: 'Der Home Assistant Connect ZBT-2 ($49/€45) ist die beste Gesamtwahl für die meisten Käufer — offizielle Erstanbieter-Hardware auf aktuellem Silicon-Labs-MG24-Silizium. Siehe "Unsere Top-Empfehlungen" oben für Budget- und Spezial-Alternativen.' },
+          { q: 'Was ist der beste Zigbee-Dongle für Home Assistant 2026?', a: 'Der Home Assistant Connect ZBT-2 ($49/€45) ist die beste Gesamtwahl für die meisten Käufer — offizielle Erstanbieter-Hardware auf aktuellem Silicon-Labs-MG24-Silizium. Siehe "Unsere Top-Empfehlungen" oben für Budget- und Spezial-Alternativen.' },
           { q: 'ZBT-2 vs. SONOFF ZBDongle-E — was soll ich kaufen?', a: 'Kaufe den ZBT-2 für offiziellen Home-Assistant-Support und Thread-Fähigkeit (ein Modus nach dem anderen). Kaufe den ZBDongle-E, wenn du nur Zigbee brauchst und den niedrigsten zuverlässigen Preis willst (~$20–27 vs. $49/€45).' },
           { q: 'Unterstützt der ZBT-2 gleichzeitig Zigbee und Thread?', a: 'Nein — bestätigt in Home Assistants eigener FAQ läuft der ZBT-2 mit einem Protokoll nach dem anderen. Für gleichzeitiges Zigbee+Thread auf einem Dongle stattdessen den SONOFF Dongle Plus MG24 kaufen.' },
           { q: 'Brauche ich einen Thread-Border-Router, wenn ich bereits einen Smart Speaker habe?', a: 'Oft nicht. Apple HomePod mini/Apple TV 4K, Google Nest Hub (2. Gen.)/Nest Wifi Pro und Amazon Echo (4. Gen.+)/eero fungieren bereits als Thread-Border-Router — prüfe deine vorhandene Hardware, bevor du einen dedizierten Dongle kaufst.' },
@@ -761,8 +761,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: 'Finale Kaufentscheidung (2027)',
-        content: "**PromptQuorums Kaufempfehlung für 2027, in einer Tabelle.**",
+        title: 'Finale Kaufentscheidung (2026)',
+        content: "**PromptQuorums Kaufempfehlung für 2026, in einer Tabelle.**",
         columns: ['Du bist…', 'Kaufe dies'],
         rows: [
           { 'Du bist…': 'Die meisten Menschen, keine starke Präferenz', 'Kaufe dies': 'HA Connect ZBT-2 ($49/€45)' },
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Die besten Zigbee- & Thread-USB-Dongles für Home Assistant (2027)',
+      headline: 'Die besten Zigbee- & Thread-USB-Dongles für Home Assistant (2026)',
       description: 'Die besten Zigbee- und Thread-USB-Dongles für Home Assistant: ZBT-2 vs. SONOFF vs. ConBee III vs. Ethernet/PoE, mit aktuellen Preisen verglichen.',
       url: 'https://www.promptquorum.com/de/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'de',
@@ -810,7 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Was ist der beste Zigbee-Dongle für Home Assistant 2027?', acceptedAnswer: { '@type': 'Answer', text: 'Der Home Assistant Connect ZBT-2 ($49/€45) ist die beste Gesamtwahl für die meisten Käufer.' } },
+        { '@type': 'Question', name: 'Was ist der beste Zigbee-Dongle für Home Assistant 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Der Home Assistant Connect ZBT-2 ($49/€45) ist die beste Gesamtwahl für die meisten Käufer.' } },
         { '@type': 'Question', name: 'Unterstützt der ZBT-2 gleichzeitig Zigbee und Thread?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — er läuft mit einem Protokoll nach dem anderen. Der SONOFF Dongle Plus MG24 unterstützt beides gleichzeitig.' } },
         { '@type': 'Question', name: 'Brauche ich ein USB-Verlängerungskabel?', acceptedAnswer: { '@type': 'Answer', text: 'Die USB-3.0-Ports und das Wi-Fi eines Mini-PCs können das 2,4-GHz-Band von Zigbee/Thread stören — ein Verlängerungskabel verbessert häufig die Zuverlässigkeit.' } },
       ],
@@ -828,12 +828,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-fr.webp',
     affiliateDisclosure: true,
-    title: 'Meilleurs dongles USB Zigbee & Thread pour Home Assistant (2027)',
-    seoTitle: 'Meilleurs dongles Zigbee & Thread Home Assistant 2027',
+    title: 'Meilleurs dongles USB Zigbee & Thread pour Home Assistant (2026)',
+    seoTitle: 'Meilleurs dongles Zigbee & Thread Home Assistant 2026',
     intro:
       "Un dongle coordinateur Zigbee ou routeur de bordure Thread transforme un mini PC ou un Raspberry Pi exécutant Home Assistant en un hub capable d'appairer directement des appareils Zigbee et Thread/Matter. Ce guide compare cinq options actuelles confirmées, USB et Ethernet/PoE (vérifié le 25/08/2026) : le Connect ZBT-2 de Home Assistant lui-même ($49/€45), le ZBDongle-E (~$20–27) et le Dongle Plus MG24 (~$35,50, le seul ici à exécuter Zigbee et Thread en même temps) de SONOFF, le ConBee III de Dresden Elektronik (~€40), et la famille Ethernet/PoE SLZB-06 de SMLIGHT. Aucun de ces produits n'a été testé ni benchmarké par PromptQuorum — chaque affirmation de compatibilité et de portée ci-dessous provient de la documentation des fabricants et de tests publiés indépendants, cités en ligne.",
     metaDescription:
-      "Meilleurs dongles USB Zigbee et Thread pour Home Assistant (2027) : ZBT-2 vs SONOFF vs ConBee III vs coordinateurs Ethernet/PoE, prix actuels et lequel acheter.",
+      "Meilleurs dongles USB Zigbee et Thread pour Home Assistant (2026) : ZBT-2 vs SONOFF vs ConBee III vs coordinateurs Ethernet/PoE, prix actuels et lequel acheter.",
     twitterDescription:
       "Guide d'achat dongle USB Zigbee + Thread pour Home Assistant — ZBT-2, SONOFF, ConBee III et coordinateurs Ethernet/PoE comparés, prix vérifiés en août 2026.",
     readTime: '11 min de lecture',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Décision d\'achat finale', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: "Le Connect ZBT-2 de Home Assistant ($49/€45) est le meilleur dongle USB Zigbee-ou-Thread pour Home Assistant en 2027, avec le ZBDongle-E de SONOFF (~$20–27) comme choix économique Zigbee uniquement et le Dongle Plus MG24 de SONOFF (~$35,50) le seul ici confirmé pour exécuter Zigbee et Thread simultanément." },
+      { type: 'one-sentence', content: "Le Connect ZBT-2 de Home Assistant ($49/€45) est le meilleur dongle USB Zigbee-ou-Thread pour Home Assistant en 2026, avec le ZBDongle-E de SONOFF (~$20–27) comme choix économique Zigbee uniquement et le Dongle Plus MG24 de SONOFF (~$35,50) le seul ici confirmé pour exécuter Zigbee et Thread simultanément." },
       { type: 'plain-terms', content: "Un mini PC ou Raspberry Pi exécutant Home Assistant n'a généralement pas de radio intégrée pour les capteurs, ampoules ou prises Zigbee. Un petit dongle USB (ou un boîtier Ethernet/PoE pour les grandes maisons) ajoute cette radio. Thread fonctionne de la même façon, bien que de nombreux foyers possèdent déjà un routeur de bordure Thread sans le savoir — vérifiez vos enceintes connectées existantes avant d'acheter quoi que ce soit." },
     ],
     sections: {
@@ -1143,7 +1143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quel est le meilleur dongle Zigbee pour Home Assistant en 2027 ?', a: "Le Connect ZBT-2 de Home Assistant ($49/€45) est le meilleur choix global pour la plupart des acheteurs — matériel officiel de premier fournisseur sur silicium Silicon Labs MG24 actuel. Voir \"Nos meilleurs choix\" ci-dessus pour les alternatives économiques et spécialisées." },
+          { q: 'Quel est le meilleur dongle Zigbee pour Home Assistant en 2026 ?', a: "Le Connect ZBT-2 de Home Assistant ($49/€45) est le meilleur choix global pour la plupart des acheteurs — matériel officiel de premier fournisseur sur silicium Silicon Labs MG24 actuel. Voir \"Nos meilleurs choix\" ci-dessus pour les alternatives économiques et spécialisées." },
           { q: 'ZBT-2 vs SONOFF ZBDongle-E — lequel acheter ?', a: 'Achetez le ZBT-2 pour le support officiel Home Assistant et la capacité Thread (un mode à la fois). Achetez le ZBDongle-E si vous n\'avez besoin que de Zigbee et voulez le prix fiable le plus bas (~$20–27 contre $49/€45).' },
           { q: 'Le ZBT-2 supporte-t-il Zigbee et Thread simultanément ?', a: "Non — confirmé dans la FAQ officielle de Home Assistant, le ZBT-2 fonctionne avec un protocole à la fois. Pour Zigbee+Thread simultané sur un dongle, achetez plutôt le SONOFF Dongle Plus MG24." },
           { q: 'Ai-je besoin d\'un routeur de bordure Thread si j\'ai déjà une enceinte connectée ?', a: "Souvent non. L'Apple HomePod mini/Apple TV 4K, le Google Nest Hub (2e gén.)/Nest Wifi Pro, et l'Amazon Echo (4e gén.+)/eero fonctionnent déjà comme routeurs de bordure Thread — vérifiez votre matériel existant avant d'acheter un dongle dédié." },
@@ -1159,8 +1159,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: "Décision d'achat finale (2027)",
-        content: "**La recommandation d'achat 2027 de PromptQuorum, en un tableau.**",
+        title: "Décision d'achat finale (2026)",
+        content: "**La recommandation d'achat 2026 de PromptQuorum, en un tableau.**",
         columns: ['Vous êtes…', 'Achetez ceci'],
         rows: [
           { 'Vous êtes…': 'La plupart des gens, pas de préférence forte', 'Achetez ceci': 'HA Connect ZBT-2 ($49/€45)' },
@@ -1191,7 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Meilleurs dongles USB Zigbee & Thread pour Home Assistant (2027)',
+      headline: 'Meilleurs dongles USB Zigbee & Thread pour Home Assistant (2026)',
       description: "Meilleurs dongles USB Zigbee et Thread pour Home Assistant : ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE, comparés avec les prix actuels.",
       url: 'https://www.promptquorum.com/fr/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'fr',
@@ -1208,7 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        { '@type': 'Question', name: 'Quel est le meilleur dongle Zigbee pour Home Assistant en 2027 ?', acceptedAnswer: { '@type': 'Answer', text: 'Le Connect ZBT-2 de Home Assistant ($49/€45) est le meilleur choix global pour la plupart des acheteurs.' } },
+        { '@type': 'Question', name: 'Quel est le meilleur dongle Zigbee pour Home Assistant en 2026 ?', acceptedAnswer: { '@type': 'Answer', text: 'Le Connect ZBT-2 de Home Assistant ($49/€45) est le meilleur choix global pour la plupart des acheteurs.' } },
         { '@type': 'Question', name: 'Le ZBT-2 supporte-t-il Zigbee et Thread simultanément ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — il fonctionne avec un protocole à la fois. Le SONOFF Dongle Plus MG24 supporte les deux simultanément.' } },
         { '@type': 'Question', name: "Ai-je besoin d'un câble d'extension USB ?", acceptedAnswer: { '@type': 'Answer', text: "Les ports USB 3.0 et le Wi-Fi d'un mini PC peuvent interférer avec la bande 2,4GHz de Zigbee/Thread — un câble d'extension améliore couramment la fiabilité." } },
       ],
@@ -1226,12 +1226,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-es.webp',
     affiliateDisclosure: true,
-    title: 'Los mejores dongles USB Zigbee y Thread para Home Assistant (2027)',
-    seoTitle: 'Mejores dongles Zigbee y Thread para Home Assistant 2027',
+    title: 'Los mejores dongles USB Zigbee y Thread para Home Assistant (2026)',
+    seoTitle: 'Mejores dongles Zigbee y Thread para Home Assistant 2026',
     intro:
       "Un dongle coordinador Zigbee o un dongle router de borde Thread convierte un mini PC o Raspberry Pi con Home Assistant en un hub capaz de emparejar directamente dispositivos Zigbee y Thread/Matter. Esta guía compara cinco opciones actuales confirmadas, USB y Ethernet/PoE (verificado el 25/08/2026): el propio Connect ZBT-2 de Home Assistant ($49/€45), el ZBDongle-E (~$20–27) y el Dongle Plus MG24 (~$35,50, el único aquí que ejecuta Zigbee y Thread a la vez) de SONOFF, el ConBee III de Dresden Elektronik (~€40), y la familia Ethernet/PoE SLZB-06 de SMLIGHT. Ninguno de estos productos ha sido probado ni evaluado en laboratorio por PromptQuorum — cada afirmación de compatibilidad y alcance a continuación proviene de la documentación de los fabricantes y de pruebas publicadas independientes, citadas en el texto.",
     metaDescription:
-      'Los mejores dongles USB Zigbee y Thread para Home Assistant (2027): ZBT-2 vs SONOFF vs ConBee III vs coordinadores Ethernet/PoE, precios actuales y cuál comprar.',
+      'Los mejores dongles USB Zigbee y Thread para Home Assistant (2026): ZBT-2 vs SONOFF vs ConBee III vs coordinadores Ethernet/PoE, precios actuales y cuál comprar.',
     twitterDescription:
       'Guía de compra de dongles USB Zigbee + Thread para Home Assistant — ZBT-2, SONOFF, ConBee III y coordinadores Ethernet/PoE comparados, precios verificados en agosto de 2026.',
     readTime: '11 min de lectura',
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Decisión de compra final', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'El Connect ZBT-2 de Home Assistant ($49/€45) es el mejor dongle USB Zigbee-o-Thread para Home Assistant en 2027 en general, con el ZBDongle-E de SONOFF (~$20–27) como opción económica solo Zigbee y el Dongle Plus MG24 de SONOFF (~$35,50) como el único aquí confirmado para ejecutar Zigbee y Thread simultáneamente.' },
+      { type: 'one-sentence', content: 'El Connect ZBT-2 de Home Assistant ($49/€45) es el mejor dongle USB Zigbee-o-Thread para Home Assistant en 2026 en general, con el ZBDongle-E de SONOFF (~$20–27) como opción económica solo Zigbee y el Dongle Plus MG24 de SONOFF (~$35,50) como el único aquí confirmado para ejecutar Zigbee y Thread simultáneamente.' },
       { type: 'plain-terms', content: 'Un mini PC o Raspberry Pi con Home Assistant normalmente no tiene una radio integrada para sensores, bombillas o enchufes Zigbee. Un pequeño dongle USB (o una caja Ethernet/PoE para casas más grandes) añade esa radio. Thread funciona igual, aunque muchos hogares ya tienen un router de borde Thread sin saberlo — revisa tus altavoces inteligentes existentes antes de comprar nada.' },
     ],
     sections: {
@@ -1541,7 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Cuál es el mejor dongle Zigbee para Home Assistant en 2027?', a: 'El Connect ZBT-2 de Home Assistant ($49/€45) es la mejor opción general para la mayoría de compradores — hardware oficial de primera parte sobre silicio Silicon Labs MG24 actual. Ve "Nuestras mejores opciones" arriba para alternativas económicas y especializadas.' },
+          { q: '¿Cuál es el mejor dongle Zigbee para Home Assistant en 2026?', a: 'El Connect ZBT-2 de Home Assistant ($49/€45) es la mejor opción general para la mayoría de compradores — hardware oficial de primera parte sobre silicio Silicon Labs MG24 actual. Ve "Nuestras mejores opciones" arriba para alternativas económicas y especializadas.' },
           { q: '¿ZBT-2 vs SONOFF ZBDongle-E — cuál comprar?', a: 'Compra el ZBT-2 para soporte oficial de Home Assistant y capacidad Thread (un modo a la vez). Compra el ZBDongle-E si solo necesitas Zigbee y quieres el precio fiable más bajo (~$20–27 frente a $49/€45).' },
           { q: '¿El ZBT-2 soporta Zigbee y Thread simultáneamente?', a: 'No — confirmado en las propias preguntas frecuentes de Home Assistant, el ZBT-2 funciona con un protocolo a la vez. Para Zigbee+Thread simultáneo en un dongle, compra en su lugar el SONOFF Dongle Plus MG24.' },
           { q: '¿Necesito un router de borde Thread si ya tengo un altavoz inteligente?', a: 'A menudo no. El Apple HomePod mini/Apple TV 4K, el Google Nest Hub (2ª gen.)/Nest Wifi Pro, y el Amazon Echo (4ª gen.+)/eero ya funcionan como routers de borde Thread — revisa tu hardware existente antes de comprar un dongle dedicado.' },
@@ -1557,8 +1557,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: 'Decisión de compra final (2027)',
-        content: "**La recomendación de compra 2027 de PromptQuorum, en una tabla.**",
+        title: 'Decisión de compra final (2026)',
+        content: "**La recomendación de compra 2026 de PromptQuorum, en una tabla.**",
         columns: ['Eres…', 'Compra esto'],
         rows: [
           { 'Eres…': 'La mayoría de las personas, sin preferencia fuerte', 'Compra esto': 'HA Connect ZBT-2 ($49/€45)' },
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Los mejores dongles USB Zigbee y Thread para Home Assistant (2027)',
+      headline: 'Los mejores dongles USB Zigbee y Thread para Home Assistant (2026)',
       description: 'Los mejores dongles USB Zigbee y Thread para Home Assistant: ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE, comparados con precios actuales.',
       url: 'https://www.promptquorum.com/es/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'es',
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        { '@type': 'Question', name: '¿Cuál es el mejor dongle Zigbee para Home Assistant en 2027?', acceptedAnswer: { '@type': 'Answer', text: 'El Connect ZBT-2 de Home Assistant ($49/€45) es la mejor opción general para la mayoría de compradores.' } },
+        { '@type': 'Question', name: '¿Cuál es el mejor dongle Zigbee para Home Assistant en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'El Connect ZBT-2 de Home Assistant ($49/€45) es la mejor opción general para la mayoría de compradores.' } },
         { '@type': 'Question', name: '¿El ZBT-2 soporta Zigbee y Thread simultáneamente?', acceptedAnswer: { '@type': 'Answer', text: 'No — funciona con un protocolo a la vez. El SONOFF Dongle Plus MG24 soporta ambos simultáneamente.' } },
         { '@type': 'Question', name: '¿Necesito un cable de extensión USB?', acceptedAnswer: { '@type': 'Answer', text: 'Los puertos USB 3.0 y el Wi-Fi de un mini PC pueden interferir con la banda de 2,4GHz de Zigbee/Thread — un cable de extensión suele mejorar la fiabilidad.' } },
       ],
@@ -1624,12 +1624,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-ja.webp',
     affiliateDisclosure: true,
-    title: 'Home Assistant向け最良のZigbee & Thread USBドングル(2027年版)',
-    seoTitle: 'Home Assistant向け最良のZigbee & Threadドングル2027',
+    title: 'Home Assistant向け最良のZigbee & Thread USBドングル(2026年版)',
+    seoTitle: 'Home Assistant向け最良のZigbee & Threadドングル2026',
     intro:
       'ZigbeeコーディネータードングルまたはThreadボーダールータードングルは、Home Assistantを実行するミニPCやRaspberry PiをZigbeeおよびThread/Matterデバイスを直接ペアリングできるハブに変えます。本ガイドは確認済みの現行USBおよびEthernet/PoEオプション5製品を比較しています(2026年8月25日確認):Home Assistant純正のConnect ZBT-2($49/€45)、SonoffのZBDongle-E(約$20〜27)とDongle Plus MG24(約$35.50、本ガイド中で唯一ZigbeeとThreadを同時実行できる製品)、Dresden ElektronikのConBee III(約€40)、SMLIGHTのSLZB-06 Ethernet/PoEファミリー。これらの製品はPromptQuorumによってテストやベンチマークを行われていません — 以下の互換性・到達距離に関するすべての記述はメーカー自身の文書と独立した公開レビューに基づいており、それぞれ出典を明記しています。',
     metaDescription:
-      'Home Assistant向け最良のZigbee・Thread USBドングル(2027年版):ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoEコーディネーター比較、現在の価格とおすすめ。',
+      'Home Assistant向け最良のZigbee・Thread USBドングル(2026年版):ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoEコーディネーター比較、現在の価格とおすすめ。',
     twitterDescription:
       'Home Assistant向けZigbee + Thread USBドングル購入ガイド — ZBT-2、SONOFF、ConBee III、Ethernet/PoEコーディネーターを比較、2026年8月確認の価格。',
     readTime: '11分で読めます',
@@ -1681,7 +1681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '最終的な購入判断', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Connect ZBT-2($49/€45)は2027年のHome Assistant向けZigbeeまたはThread USBドングルの総合ベストであり、Sonoff ZBDongle-E(約$20〜27)は予算重視のZigbee専用ベスト、Sonoff Dongle Plus MG24(約$35.50)は本ガイド中で唯一ZigbeeとThreadの同時実行が確認されている製品です。' },
+      { type: 'one-sentence', content: 'Home Assistant Connect ZBT-2($49/€45)は2026年のHome Assistant向けZigbeeまたはThread USBドングルの総合ベストであり、Sonoff ZBDongle-E(約$20〜27)は予算重視のZigbee専用ベスト、Sonoff Dongle Plus MG24(約$35.50)は本ガイド中で唯一ZigbeeとThreadの同時実行が確認されている製品です。' },
       { type: 'plain-terms', content: 'Home Assistantを実行するミニPCやRaspberry Piには通常、Zigbeeセンサーや電球、プラグ用の無線モジュールが内蔵されていません。小さなUSBドングル(または大規模な住宅向けのEthernet/PoEボックス)がその無線機能を追加します。Threadも同様の仕組みですが、多くの家庭では気づかないうちに既にThreadボーダールーターを持っています — 何かを購入する前に、既存のスマートスピーカーを確認しましょう。' },
     ],
     sections: {
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: '2027年のHome Assistant向け最良のZigbeeドングルは何ですか?', a: 'Home Assistant Connect ZBT-2($49/€45)が、大半の購入者にとって総合ベストです — 現行世代のSilicon Labs MG24シリコン上に構築された純正の第一者ハードウェアです。予算重視や特化型の代替については上記「編集部おすすめ」を参照してください。' },
+          { q: '2026年のHome Assistant向け最良のZigbeeドングルは何ですか?', a: 'Home Assistant Connect ZBT-2($49/€45)が、大半の購入者にとって総合ベストです — 現行世代のSilicon Labs MG24シリコン上に構築された純正の第一者ハードウェアです。予算重視や特化型の代替については上記「編集部おすすめ」を参照してください。' },
           { q: 'ZBT-2 vs SONOFF ZBDongle-E — どちらを買うべき?', a: '公式Home Assistantサポートとthread機能(一度に1モード)が欲しいならZBT-2を購入してください。Zigbeeのみが必要で信頼できる最安値(約$20〜27 対 $49/€45)を求めるならZBDongle-Eを購入してください。' },
           { q: 'ZBT-2はZigbeeとThreadを同時にサポートしますか?', a: 'いいえ — Home Assistant自身のFAQで確認されている通り、ZBT-2は一度に1つのプロトコルで動作します。1台のドングルでZigbee+Threadを同時利用するには、代わりにSONOFF Dongle Plus MG24を購入してください。' },
           { q: '既にスマートスピーカーを持っている場合、Threadボーダールーターは必要ですか?', a: '多くの場合不要です。Apple HomePod mini/Apple TV 4K、Google Nest Hub(第2世代)/Nest Wifi Pro、Amazon Echo(第4世代以降)/eeroは既にThreadボーダールーターとして機能しています — 専用ドングルを購入する前に、既存のハードウェアを確認してください。' },
@@ -1955,8 +1955,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: '最終的な購入判断(2027年)',
-        content: '**PromptQuorumの2027年の購入おすすめを1つの表にまとめました。**',
+        title: '最終的な購入判断(2026年)',
+        content: '**PromptQuorumの2026年の購入おすすめを1つの表にまとめました。**',
         columns: ['あなたは…', '購入するもの'],
         rows: [
           { 'あなたは…': '特に強いこだわりのない大半の人', '購入するもの': 'HA Connect ZBT-2($49/€45)' },
@@ -1987,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant向け最良のZigbee & Thread USBドングル(2027年版)',
+      headline: 'Home Assistant向け最良のZigbee & Thread USBドングル(2026年版)',
       description: 'Home Assistant向け最良のZigbee・Thread USBドングル:ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE、現在の価格で比較。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'ja',
@@ -2004,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        { '@type': 'Question', name: '2027年のHome Assistant向け最良のZigbeeドングルは何ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Connect ZBT-2($49/€45)が、大半の購入者にとって総合ベストです。' } },
+        { '@type': 'Question', name: '2026年のHome Assistant向け最良のZigbeeドングルは何ですか?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Connect ZBT-2($49/€45)が、大半の購入者にとって総合ベストです。' } },
         { '@type': 'Question', name: 'ZBT-2はZigbeeとThreadを同時にサポートしますか?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ — 一度に1つのプロトコルで動作します。SONOFF Dongle Plus MG24は両方を同時にサポートします。' } },
         { '@type': 'Question', name: 'USB延長ケーブルは必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'ミニPCのUSB 3.0ポートとWi-FiはZigbee/Threadの2.4GHz帯に干渉することがあります — 延長ケーブルは一般的に信頼性を向上させます。' } },
       ],
@@ -2022,12 +2022,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-zh.webp',
     affiliateDisclosure: true,
-    title: 'Home Assistant最佳Zigbee与Thread USB加密狗指南(2027年)',
-    seoTitle: 'Home Assistant最佳Zigbee与Thread加密狗2027',
+    title: 'Home Assistant最佳Zigbee与Thread USB加密狗指南(2026年)',
+    seoTitle: 'Home Assistant最佳Zigbee与Thread加密狗2026',
     intro:
       'Zigbee协调器加密狗或Thread边界路由器加密狗,能把运行Home Assistant的迷你主机或树莓派变成可以直接配对Zigbee和Thread/Matter设备的中枢。本指南比较了五款经确认的当前USB与Ethernet/PoE选项(核实于2026年8月25日):Home Assistant官方的Connect ZBT-2($49/€45)、SONOFF的ZBDongle-E(约$20–27)与Dongle Plus MG24(约$35.50,本指南中唯一可同时运行Zigbee和Thread的产品)、Dresden Elektronik的ConBee III(约€40),以及SMLIGHT的SLZB-06 Ethernet/PoE系列。这些产品均未经PromptQuorum测试或跑分——以下所有兼容性与覆盖范围的说法均来自制造商自身文档及独立发布的评测,均已在文中注明来源。',
     metaDescription:
-      'Home Assistant最佳Zigbee与Thread USB加密狗(2027年):ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE协调器对比,当前价格与购买建议。',
+      'Home Assistant最佳Zigbee与Thread USB加密狗(2026年):ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE协调器对比,当前价格与购买建议。',
     twitterDescription:
       'Home Assistant Zigbee + Thread USB加密狗购买指南——对比ZBT-2、SONOFF、ConBee III与Ethernet/PoE协调器,价格核实于2026年8月。',
     readTime: '11分钟阅读',
@@ -2079,7 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '最终购买建议', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Connect ZBT-2($49/€45)是2027年Home Assistant最佳Zigbee或Thread USB加密狗综合之选,SONOFF ZBDongle-E(约$20–27)是预算型纯Zigbee首选,而SONOFF Dongle Plus MG24(约$35.50)是本指南中唯一经确认可同时运行Zigbee和Thread的产品。' },
+      { type: 'one-sentence', content: 'Home Assistant Connect ZBT-2($49/€45)是2026年Home Assistant最佳Zigbee或Thread USB加密狗综合之选,SONOFF ZBDongle-E(约$20–27)是预算型纯Zigbee首选,而SONOFF Dongle Plus MG24(约$35.50)是本指南中唯一经确认可同时运行Zigbee和Thread的产品。' },
       { type: 'plain-terms', content: '运行Home Assistant的迷你主机或树莓派通常没有内置的Zigbee传感器、灯泡或插座无线模块。一个小小的USB加密狗(或面向大户型的Ethernet/PoE设备)可以添加这种无线功能。Thread的原理相同,不过很多家庭其实已经拥有一台Thread边界路由器却不自知——购买任何东西之前,先检查一下你现有的智能音箱。' },
     ],
     sections: {
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '2027年Home Assistant的最佳Zigbee加密狗是什么?', a: 'Home Assistant Connect ZBT-2($49/€45)是大多数买家的综合最佳选择——基于当代Silicon Labs MG24芯片的官方原厂硬件。预算型和专用型替代方案请见上方"编辑部精选"。' },
+          { q: '2026年Home Assistant的最佳Zigbee加密狗是什么?', a: 'Home Assistant Connect ZBT-2($49/€45)是大多数买家的综合最佳选择——基于当代Silicon Labs MG24芯片的官方原厂硬件。预算型和专用型替代方案请见上方"编辑部精选"。' },
           { q: 'ZBT-2 vs SONOFF ZBDongle-E——该买哪一个?', a: '如果需要官方Home Assistant支持和Thread能力(一次一种模式),请购买ZBT-2。如果只需要Zigbee,想要最低的可靠价格(约$20–27,相较$49/€45),请购买ZBDongle-E。' },
           { q: 'ZBT-2是否支持同时运行Zigbee和Thread?', a: '不支持——Home Assistant官方FAQ已确认,ZBT-2一次只能运行一种协议。若需要一个加密狗同时支持Zigbee+Thread,请改为购买SONOFF Dongle Plus MG24。' },
           { q: '如果我已经有智能音箱,还需要Thread边界路由器吗?', a: '通常不需要。Apple HomePod mini/Apple TV 4K、Google Nest Hub(第2代)/Nest Wifi Pro,以及Amazon Echo(第4代及以上)/eero,都已充当Thread边界路由器——购买专用加密狗前,请先检查你现有的硬件。' },
@@ -2353,8 +2353,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: '最终购买建议(2027年)',
-        content: '**PromptQuorum的2027年购买建议,汇总如下表。**',
+        title: '最终购买建议(2026年)',
+        content: '**PromptQuorum的2026年购买建议,汇总如下表。**',
         columns: ['你的情况…', '购买这款'],
         rows: [
           { '你的情况…': '大多数人,没有强烈偏好', '购买这款': 'HA Connect ZBT-2($49/€45)' },
@@ -2385,7 +2385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant最佳Zigbee与Thread USB加密狗指南(2027年)',
+      headline: 'Home Assistant最佳Zigbee与Thread USB加密狗指南(2026年)',
       description: 'Home Assistant最佳Zigbee与Thread USB加密狗:ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE,基于当前价格对比。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'zh',
@@ -2402,7 +2402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        { '@type': 'Question', name: '2027年Home Assistant的最佳Zigbee加密狗是什么?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Connect ZBT-2($49/€45)是大多数买家的综合最佳选择。' } },
+        { '@type': 'Question', name: '2026年Home Assistant的最佳Zigbee加密狗是什么?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Connect ZBT-2($49/€45)是大多数买家的综合最佳选择。' } },
         { '@type': 'Question', name: 'ZBT-2是否支持同时运行Zigbee和Thread?', acceptedAnswer: { '@type': 'Answer', text: '不支持——它一次只能运行一种协议。SONOFF Dongle Plus MG24支持同时运行两者。' } },
         { '@type': 'Question', name: '我需要USB延长线吗?', acceptedAnswer: { '@type': 'Answer', text: '迷你主机的USB 3.0端口和Wi-Fi可能干扰Zigbee/Thread的2.4GHz频段——延长线通常能提升可靠性。' } },
       ],
@@ -2420,12 +2420,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-pt.webp',
     affiliateDisclosure: true,
-    title: 'Melhores dongles USB Zigbee e Thread para o Home Assistant (2027)',
-    seoTitle: 'Melhores dongles Zigbee e Thread Home Assistant 2027',
+    title: 'Melhores dongles USB Zigbee e Thread para o Home Assistant (2026)',
+    seoTitle: 'Melhores dongles Zigbee e Thread Home Assistant 2026',
     intro:
       "Um dongle coordenador Zigbee ou um dongle roteador de borda Thread transforma um mini PC ou Raspberry Pi rodando Home Assistant em um hub capaz de parear dispositivos Zigbee e Thread/Matter diretamente. Este guia compara cinco opções atuais confirmadas, USB e Ethernet/PoE (verificado em 25/08/2026): o próprio Connect ZBT-2 da Home Assistant ($49/€45), o ZBDongle-E (~$20–27) e o Dongle Plus MG24 (~$35,50, o único aqui que roda Zigbee e Thread ao mesmo tempo) da SONOFF, o ConBee III da Dresden Elektronik (~€40), e a família Ethernet/PoE SLZB-06 da SMLIGHT. Nenhum desses produtos foi testado ou avaliado em bancada pela PromptQuorum — toda afirmação de compatibilidade e alcance abaixo vem da documentação dos próprios fabricantes e de avaliações publicadas independentes, citadas ao longo do texto.",
     metaDescription:
-      'Melhores dongles USB Zigbee e Thread para o Home Assistant (2027): ZBT-2 vs SONOFF vs ConBee III vs coordenadores Ethernet/PoE, preços atuais e qual comprar.',
+      'Melhores dongles USB Zigbee e Thread para o Home Assistant (2026): ZBT-2 vs SONOFF vs ConBee III vs coordenadores Ethernet/PoE, preços atuais e qual comprar.',
     twitterDescription:
       'Guia de compra de dongle USB Zigbee + Thread para o Home Assistant — ZBT-2, SONOFF, ConBee III e coordenadores Ethernet/PoE comparados, preços verificados em agosto de 2026.',
     readTime: '11 min de leitura',
@@ -2477,7 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Decisão de compra final', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'O Connect ZBT-2 da Home Assistant ($49/€45) é o melhor dongle USB Zigbee-ou-Thread geral para o Home Assistant em 2027, com o ZBDongle-E da SONOFF (~$20–27) como opção econômica somente Zigbee e o Dongle Plus MG24 da SONOFF (~$35,50) o único aqui confirmado para rodar Zigbee e Thread simultaneamente.' },
+      { type: 'one-sentence', content: 'O Connect ZBT-2 da Home Assistant ($49/€45) é o melhor dongle USB Zigbee-ou-Thread geral para o Home Assistant em 2026, com o ZBDongle-E da SONOFF (~$20–27) como opção econômica somente Zigbee e o Dongle Plus MG24 da SONOFF (~$35,50) o único aqui confirmado para rodar Zigbee e Thread simultaneamente.' },
       { type: 'plain-terms', content: 'Um mini PC ou Raspberry Pi rodando Home Assistant geralmente não tem rádio embutido para sensores, lâmpadas ou tomadas Zigbee. Um pequeno dongle USB (ou uma caixa Ethernet/PoE para casas maiores) adiciona esse rádio. O Thread funciona da mesma forma, embora muitas casas já tenham um roteador de borda Thread sem saber — verifique suas caixas de som inteligentes existentes antes de comprar qualquer coisa.' },
     ],
     sections: {
@@ -2735,7 +2735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qual é o melhor dongle Zigbee para o Home Assistant em 2027?', a: 'O Connect ZBT-2 da Home Assistant ($49/€45) é a melhor escolha geral para a maioria dos compradores — hardware oficial de primeira parte sobre silício Silicon Labs MG24 atual. Veja "Nossas melhores escolhas" acima para alternativas econômicas e especializadas.' },
+          { q: 'Qual é o melhor dongle Zigbee para o Home Assistant em 2026?', a: 'O Connect ZBT-2 da Home Assistant ($49/€45) é a melhor escolha geral para a maioria dos compradores — hardware oficial de primeira parte sobre silício Silicon Labs MG24 atual. Veja "Nossas melhores escolhas" acima para alternativas econômicas e especializadas.' },
           { q: 'ZBT-2 vs SONOFF ZBDongle-E — qual comprar?', a: 'Compre o ZBT-2 para suporte oficial da Home Assistant e capacidade Thread (um modo por vez). Compre o ZBDongle-E se você só precisa de Zigbee e quer o preço confiável mais baixo (~$20–27 contra $49/€45).' },
           { q: 'O ZBT-2 suporta Zigbee e Thread simultaneamente?', a: 'Não — confirmado nas próprias perguntas frequentes da Home Assistant, o ZBT-2 roda um protocolo por vez. Para Zigbee+Thread simultâneo em um dongle, compre o SONOFF Dongle Plus MG24 em vez disso.' },
           { q: 'Preciso de um roteador de borda Thread se já tenho uma caixa de som inteligente?', a: 'Muitas vezes não. O Apple HomePod mini/Apple TV 4K, o Google Nest Hub (2ª geração)/Nest Wifi Pro, e o Amazon Echo (4ª geração ou mais recente)/eero já funcionam como roteadores de borda Thread — verifique seu hardware existente antes de comprar um dongle dedicado.' },
@@ -2751,8 +2751,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: 'Decisão de compra final (2027)',
-        content: "**A recomendação de compra 2027 da PromptQuorum, em uma tabela.**",
+        title: 'Decisão de compra final (2026)',
+        content: "**A recomendação de compra 2026 da PromptQuorum, em uma tabela.**",
         columns: ['Você é…', 'Compre isto'],
         rows: [
           { 'Você é…': 'A maioria das pessoas, sem preferência forte', 'Compre isto': 'HA Connect ZBT-2 ($49/€45)' },
@@ -2783,7 +2783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Melhores dongles USB Zigbee e Thread para o Home Assistant (2027)',
+      headline: 'Melhores dongles USB Zigbee e Thread para o Home Assistant (2026)',
       description: 'Melhores dongles USB Zigbee e Thread para o Home Assistant: ZBT-2 vs SONOFF vs ConBee III vs Ethernet/PoE, comparados com preços atuais.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'pt-BR',
@@ -2800,7 +2800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'Qual é o melhor dongle Zigbee para o Home Assistant em 2027?', acceptedAnswer: { '@type': 'Answer', text: 'O Connect ZBT-2 da Home Assistant ($49/€45) é a melhor escolha geral para a maioria dos compradores.' } },
+        { '@type': 'Question', name: 'Qual é o melhor dongle Zigbee para o Home Assistant em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'O Connect ZBT-2 da Home Assistant ($49/€45) é a melhor escolha geral para a maioria dos compradores.' } },
         { '@type': 'Question', name: 'O ZBT-2 suporta Zigbee e Thread simultaneamente?', acceptedAnswer: { '@type': 'Answer', text: 'Não — ele roda um protocolo por vez. O SONOFF Dongle Plus MG24 suporta os dois simultaneamente.' } },
         { '@type': 'Question', name: 'Preciso de um cabo de extensão USB?', acceptedAnswer: { '@type': 'Answer', text: 'As portas USB 3.0 e o Wi-Fi de um mini PC podem interferir na banda de 2,4GHz de Zigbee/Thread — um cabo de extensão costuma melhorar a confiabilidade.' } },
       ],
@@ -2818,12 +2818,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-ar.webp',
     affiliateDisclosure: true,
-    title: 'أفضل محولات USB لـ Zigbee وThread لـ Home Assistant (2027)',
-    seoTitle: 'أفضل محولات Zigbee وThread لـ Home Assistant 2027',
+    title: 'أفضل محولات USB لـ Zigbee وThread لـ Home Assistant (2026)',
+    seoTitle: 'أفضل محولات Zigbee وThread لـ Home Assistant 2026',
     intro:
       'محول منسق Zigbee أو محول موجه حدود Thread يحوّل جهاز الكمبيوتر المصغّر أو Raspberry Pi الذي يشغّل Home Assistant إلى مركز قادر على إقران أجهزة Zigbee وThread/Matter مباشرةً. يقارن هذا الدليل خمسة خيارات حالية مؤكدة، USB وEthernet/PoE (تم التحقق في 25/08/2026): محول Connect ZBT-2 الرسمي من Home Assistant نفسها ($49/€45)، ومحول ZBDongle-E (~$20–27) ومحول Dongle Plus MG24 (~$35.50، وهو الوحيد هنا الذي يشغّل Zigbee وThread في آن واحد) من SONOFF، ومحول ConBee III من Dresden Elektronik (~€40)، وعائلة SLZB-06 من SMLIGHT عبر Ethernet/PoE. لم يتم اختبار أو قياس أداء أي من هذه المنتجات بواسطة PromptQuorum — كل ادعاء بشأن التوافق أو المدى أدناه مأخوذ من وثائق الشركات المصنّعة نفسها ومن مراجعات مستقلة منشورة، مع ذكر المصدر في النص.',
     metaDescription:
-      'أفضل محولات USB لـ Zigbee وThread لـ Home Assistant (2027): مقارنة ZBT-2 مقابل SONOFF مقابل ConBee III مقابل منسقات Ethernet/PoE، الأسعار الحالية وما الذي يجب شراؤه.',
+      'أفضل محولات USB لـ Zigbee وThread لـ Home Assistant (2026): مقارنة ZBT-2 مقابل SONOFF مقابل ConBee III مقابل منسقات Ethernet/PoE، الأسعار الحالية وما الذي يجب شراؤه.',
     twitterDescription:
       'دليل شراء محول USB لـ Zigbee + Thread لـ Home Assistant — مقارنة ZBT-2 وSONOFF وConBee III ومنسقات Ethernet/PoE، أسعار تم التحقق منها في أغسطس 2026.',
     readTime: '11 دقيقة قراءة',
@@ -2875,7 +2875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قرار الشراء النهائي', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'محول Home Assistant Connect ZBT-2 ($49/€45) هو أفضل محول USB لـ Zigbee أو Thread بشكل عام لـ Home Assistant في 2027، مع محول SONOFF ZBDongle-E (~$20–27) كخيار اقتصادي مخصص لـ Zigbee فقط، ومحول SONOFF Dongle Plus MG24 (~$35.50) هو الوحيد هنا المؤكد أنه يشغّل Zigbee وThread في آن واحد.' },
+      { type: 'one-sentence', content: 'محول Home Assistant Connect ZBT-2 ($49/€45) هو أفضل محول USB لـ Zigbee أو Thread بشكل عام لـ Home Assistant في 2026، مع محول SONOFF ZBDongle-E (~$20–27) كخيار اقتصادي مخصص لـ Zigbee فقط، ومحول SONOFF Dongle Plus MG24 (~$35.50) هو الوحيد هنا المؤكد أنه يشغّل Zigbee وThread في آن واحد.' },
       { type: 'plain-terms', content: 'عادةً لا يحتوي جهاز الكمبيوتر المصغّر أو Raspberry Pi الذي يشغّل Home Assistant على وحدة لاسلكية مدمجة لأجهزة استشعار Zigbee أو المصابيح أو المقابس. محول USB صغير (أو صندوق Ethernet/PoE للمنازل الأكبر) يضيف هذه الوحدة اللاسلكية. يعمل Thread بنفس الطريقة، رغم أن العديد من المنازل تمتلك بالفعل موجه حدود Thread دون أن تدرك ذلك — تحقق من مكبرات الصوت الذكية الموجودة لديك قبل شراء أي شيء.' },
     ],
     sections: {
@@ -3133,7 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ما هو أفضل محول Zigbee لـ Home Assistant في 2027؟', a: 'محول Home Assistant Connect ZBT-2 ($49/€45) هو الخيار الأفضل عمومًا لمعظم المشترين — أجهزة رسمية على شريحة Silicon Labs MG24 الحالية. راجع "أفضل اختياراتنا" أعلاه للبدائل الاقتصادية والمتخصصة.' },
+          { q: 'ما هو أفضل محول Zigbee لـ Home Assistant في 2026؟', a: 'محول Home Assistant Connect ZBT-2 ($49/€45) هو الخيار الأفضل عمومًا لمعظم المشترين — أجهزة رسمية على شريحة Silicon Labs MG24 الحالية. راجع "أفضل اختياراتنا" أعلاه للبدائل الاقتصادية والمتخصصة.' },
           { q: 'ZBT-2 مقابل SONOFF ZBDongle-E — أيهما أشتري؟', a: 'اشترِ ZBT-2 للحصول على دعم رسمي من Home Assistant وإمكانية Thread (وضع واحد في كل مرة). اشترِ ZBDongle-E إذا كنت تحتاج فقط Zigbee وتريد أرخص سعر موثوق (~$20–27 مقابل $49/€45).' },
           { q: 'هل يدعم محول ZBT-2 تشغيل Zigbee وThread في آن واحد؟', a: 'لا — مؤكد في الأسئلة الشائعة الرسمية لـ Home Assistant، يعمل محول ZBT-2 ببروتوكول واحد في كل مرة. لتشغيل Zigbee+Thread في آن واحد على محول واحد، اشترِ بدلاً من ذلك محول SONOFF Dongle Plus MG24.' },
           { q: 'هل أحتاج إلى موجه حدود Thread إذا كان لدي بالفعل مكبر صوت ذكي؟', a: 'غالبًا لا. يعمل كل من Apple HomePod mini/Apple TV 4K، وGoogle Nest Hub (الجيل الثاني)/Nest Wifi Pro، وAmazon Echo (الجيل الرابع فأحدث)/eero بالفعل كموجهات حدود Thread — تحقق من أجهزتك الموجودة قبل شراء محول مخصص.' },
@@ -3149,8 +3149,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: 'قرار الشراء النهائي (2027)',
-        content: '**توصية PromptQuorum للشراء لعام 2027، في جدول واحد.**',
+        title: 'قرار الشراء النهائي (2026)',
+        content: '**توصية PromptQuorum للشراء لعام 2026، في جدول واحد.**',
         columns: ['أنت…', 'اشترِ هذا'],
         rows: [
           { 'أنت…': 'معظم الناس، بدون تفضيل قوي', 'اشترِ هذا': 'HA Connect ZBT-2 ($49/€45)' },
@@ -3181,7 +3181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'أفضل محولات USB لـ Zigbee وThread لـ Home Assistant (2027)',
+      headline: 'أفضل محولات USB لـ Zigbee وThread لـ Home Assistant (2026)',
       description: 'أفضل محولات USB لـ Zigbee وThread لـ Home Assistant: مقارنة ZBT-2 وSONOFF وConBee III ومنسقات Ethernet/PoE بالأسعار الحالية.',
       url: 'https://www.promptquorum.com/ar/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'ar',
@@ -3198,7 +3198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'ما هو أفضل محول Zigbee لـ Home Assistant في 2027؟', acceptedAnswer: { '@type': 'Answer', text: 'محول Home Assistant Connect ZBT-2 ($49/€45) هو الخيار الأفضل عمومًا لمعظم المشترين.' } },
+        { '@type': 'Question', name: 'ما هو أفضل محول Zigbee لـ Home Assistant في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'محول Home Assistant Connect ZBT-2 ($49/€45) هو الخيار الأفضل عمومًا لمعظم المشترين.' } },
         { '@type': 'Question', name: 'هل يدعم محول ZBT-2 تشغيل Zigbee وThread في آن واحد؟', acceptedAnswer: { '@type': 'Answer', text: 'لا — يعمل ببروتوكول واحد في كل مرة. يدعم محول SONOFF Dongle Plus MG24 كليهما في آن واحد.' } },
         { '@type': 'Question', name: 'هل أحتاج إلى كابل تمديد USB؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكن لمنافذ USB 3.0 وWi-Fi الخاصة بالكمبيوتر المصغّر أن تتداخل مع نطاق 2.4 غيغاهرتز لـ Zigbee/Thread — يُحسّن كابل التمديد الموثوقية عادةً.' } },
       ],
@@ -3216,12 +3216,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: "Buyer's Guides",
     heroImage: '/images/best-zigbee-thread-dongles-2027-overview-hero-ko.webp',
     affiliateDisclosure: true,
-    title: 'Home Assistant를 위한 최고의 Zigbee & Thread USB 동글(2027년)',
-    seoTitle: 'Home Assistant 최고의 Zigbee & Thread 동글 2027',
+    title: 'Home Assistant를 위한 최고의 Zigbee & Thread USB 동글(2026년)',
+    seoTitle: 'Home Assistant 최고의 Zigbee & Thread 동글 2026',
     intro:
       'Zigbee 코디네이터 동글 또는 Thread 경계 라우터 동글은 Home Assistant를 실행하는 미니 PC나 라즈베리 파이를 Zigbee 및 Thread/Matter 기기를 직접 페어링할 수 있는 허브로 바꿔줍니다. 이 가이드는 확인된 현재 USB 및 Ethernet/PoE 옵션 5종을 비교합니다(2026년 8월 25일 확인): Home Assistant 자체의 Connect ZBT-2($49/€45), SONOFF의 ZBDongle-E(약 $20–27)와 Dongle Plus MG24(약 $35.50, 본 가이드에서 Zigbee와 Thread를 동시에 실행할 수 있는 유일한 제품), Dresden Elektronik의 ConBee III(약 €40), 그리고 SMLIGHT의 SLZB-06 Ethernet/PoE 제품군입니다. 이 제품들 중 어느 것도 PromptQuorum이 직접 테스트하거나 벤치마크하지 않았습니다 — 아래의 모든 호환성 및 도달 범위 관련 서술은 제조사 자체 문서와 독립적으로 발행된 리뷰에 근거한 것이며, 본문에 각 출처를 명시했습니다.',
     metaDescription:
-      'Home Assistant를 위한 최고의 Zigbee 및 Thread USB 동글(2027년): ZBT-2 대 SONOFF 대 ConBee III 대 Ethernet/PoE 코디네이터 비교, 현재 가격 및 구매 추천.',
+      'Home Assistant를 위한 최고의 Zigbee 및 Thread USB 동글(2026년): ZBT-2 대 SONOFF 대 ConBee III 대 Ethernet/PoE 코디네이터 비교, 현재 가격 및 구매 추천.',
     twitterDescription:
       'Home Assistant용 Zigbee + Thread USB 동글 구매 가이드 — ZBT-2, SONOFF, ConBee III, Ethernet/PoE 코디네이터 비교, 2026년 8월 확인된 가격.',
     readTime: '11분 읽기',
@@ -3273,7 +3273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '최종 구매 결정', anchor: 'final-decision' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Connect ZBT-2($49/€45)는 2027년 Home Assistant를 위한 최고의 Zigbee 또는 Thread USB 동글이며, SONOFF ZBDongle-E(약 $20–27)는 예산형 Zigbee 전용 최고 선택, SONOFF Dongle Plus MG24(약 $35.50)는 본 가이드에서 Zigbee와 Thread를 동시에 실행할 수 있다고 확인된 유일한 제품입니다.' },
+      { type: 'one-sentence', content: 'Home Assistant Connect ZBT-2($49/€45)는 2026년 Home Assistant를 위한 최고의 Zigbee 또는 Thread USB 동글이며, SONOFF ZBDongle-E(약 $20–27)는 예산형 Zigbee 전용 최고 선택, SONOFF Dongle Plus MG24(약 $35.50)는 본 가이드에서 Zigbee와 Thread를 동시에 실행할 수 있다고 확인된 유일한 제품입니다.' },
       { type: 'plain-terms', content: 'Home Assistant를 실행하는 미니 PC나 라즈베리 파이에는 보통 Zigbee 센서, 전구, 플러그를 위한 무선 모듈이 내장되어 있지 않습니다. 작은 USB 동글(또는 더 큰 주택을 위한 Ethernet/PoE 박스)이 그 무선 기능을 추가해줍니다. Thread도 마찬가지 방식으로 작동하지만, 많은 가정에서 이미 자신도 모르게 Thread 경계 라우터를 보유하고 있습니다 — 무언가를 구매하기 전에 기존 스마트 스피커를 먼저 확인해보세요.' },
     ],
     sections: {
@@ -3531,7 +3531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '2027년 Home Assistant를 위한 최고의 Zigbee 동글은 무엇인가요?', a: 'Home Assistant Connect ZBT-2($49/€45)가 대부분의 구매자에게 종합적으로 가장 좋은 선택입니다 — 최신 세대 Silicon Labs MG24 칩 기반의 공식 1차 하드웨어입니다. 예산형 및 특화형 대안은 위의 "에디터 추천"을 참고하세요.' },
+          { q: '2026년 Home Assistant를 위한 최고의 Zigbee 동글은 무엇인가요?', a: 'Home Assistant Connect ZBT-2($49/€45)가 대부분의 구매자에게 종합적으로 가장 좋은 선택입니다 — 최신 세대 Silicon Labs MG24 칩 기반의 공식 1차 하드웨어입니다. 예산형 및 특화형 대안은 위의 "에디터 추천"을 참고하세요.' },
           { q: 'ZBT-2 대 SONOFF ZBDongle-E — 어느 것을 사야 하나요?', a: '공식 Home Assistant 지원과 Thread 기능(한 번에 한 모드)이 필요하면 ZBT-2를 구매하세요. Zigbee만 필요하고 가장 낮은 신뢰 가능한 가격(약 $20–27, $49/€45 대비)을 원하면 ZBDongle-E를 구매하세요.' },
           { q: 'ZBT-2는 Zigbee와 Thread를 동시에 지원하나요?', a: '아니요 — Home Assistant 자체 FAQ에서 확인된 대로, ZBT-2는 한 번에 한 프로토콜만 실행됩니다. 하나의 동글로 Zigbee+Thread를 동시에 사용하려면 대신 SONOFF Dongle Plus MG24를 구매하세요.' },
           { q: '이미 스마트 스피커가 있다면 Thread 경계 라우터가 필요한가요?', a: '많은 경우 필요하지 않습니다. Apple HomePod mini/Apple TV 4K, Google Nest Hub(2세대)/Nest Wifi Pro, Amazon Echo(4세대 이상)/eero는 이미 Thread 경계 라우터로 작동합니다 — 전용 동글을 구매하기 전에 기존 하드웨어를 확인하세요.' },
@@ -3547,8 +3547,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       finalDecision: {
         id: 'final-decision',
-        title: '최종 구매 결정(2027년)',
-        content: '**PromptQuorum의 2027년 구매 추천을 표 하나로 정리했습니다.**',
+        title: '최종 구매 결정(2026년)',
+        content: '**PromptQuorum의 2026년 구매 추천을 표 하나로 정리했습니다.**',
         columns: ['당신은…', '이것을 구매하세요'],
         rows: [
           { '당신은…': '강한 선호 없는 대부분의 사람', '이것을 구매하세요': 'HA Connect ZBT-2($49/€45)' },
@@ -3579,7 +3579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant를 위한 최고의 Zigbee & Thread USB 동글(2027년)',
+      headline: 'Home Assistant를 위한 최고의 Zigbee & Thread USB 동글(2026년)',
       description: 'Home Assistant를 위한 최고의 Zigbee 및 Thread USB 동글: ZBT-2 대 SONOFF 대 ConBee III 대 Ethernet/PoE, 현재 가격 기준 비교.',
       url: 'https://www.promptquorum.com/ko/smart-home/best-zigbee-thread-dongles-2027',
       inLanguage: 'ko',
@@ -3596,7 +3596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: '2027년 Home Assistant를 위한 최고의 Zigbee 동글은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Connect ZBT-2($49/€45)가 대부분의 구매자에게 종합적으로 가장 좋은 선택입니다.' } },
+        { '@type': 'Question', name: '2026년 Home Assistant를 위한 최고의 Zigbee 동글은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Connect ZBT-2($49/€45)가 대부분의 구매자에게 종합적으로 가장 좋은 선택입니다.' } },
         { '@type': 'Question', name: 'ZBT-2는 Zigbee와 Thread를 동시에 지원하나요?', acceptedAnswer: { '@type': 'Answer', text: '아니요 — 한 번에 한 프로토콜만 실행됩니다. SONOFF Dongle Plus MG24는 둘 다 동시에 지원합니다.' } },
         { '@type': 'Question', name: 'USB 연장 케이블이 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '미니 PC의 USB 3.0 포트와 Wi-Fi는 Zigbee/Thread의 2.4GHz 대역에 간섭할 수 있습니다 — 연장 케이블은 흔히 신뢰성을 개선합니다.' } },
       ],

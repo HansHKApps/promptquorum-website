@@ -9,12 +9,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-en.webp',
-    title: 'Home Assistant Energy Dashboard: Complete Setup Guide (2027)',
-    seoTitle: 'Home Assistant Energy Dashboard Setup (2027)',
+    title: 'Home Assistant Energy Dashboard: Complete Setup Guide (2026)',
+    seoTitle: 'Home Assistant Energy Dashboard Setup (2026)',
     intro:
       'Home Assistant\'s built-in Energy dashboard tracks grid consumption, solar generation, battery state, and individual-device usage in one local view — the setup takes adding a few sensor entities, not writing any automation code. This guide walks through adding a grid sensor, solar and battery sensors if you have them, individual device tracking, and reading the resulting cost and usage charts.',
     metaDescription:
-      'Set up Home Assistant\'s Energy dashboard in 2027: add grid, solar, battery, and device sensors, configure cost tracking, and read the usage charts.',
+      'Set up Home Assistant\'s Energy dashboard in 2026: add grid, solar, battery, and device sensors, configure cost tracking, and read the usage charts.',
     twitterDescription:
       'Step-by-step Home Assistant Energy dashboard setup: grid sensor, solar/battery integration, per-device tracking, and cost configuration.',
     readTime: '7 min read',
@@ -166,8 +166,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant Energy Dashboard: Complete Setup Guide (2027)',
-      description: 'Set up Home Assistant\'s Energy dashboard in 2027: add grid, solar, battery, and device sensors, configure cost tracking, and read the usage charts.',
+      headline: 'Home Assistant Energy Dashboard: Complete Setup Guide (2026)',
+      description: 'Set up Home Assistant\'s Energy dashboard in 2026: add grid, solar, battery, and device sensors, configure cost tracking, and read the usage charts.',
       url: 'https://www.promptquorum.com/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -212,12 +212,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-de.webp',
-    title: 'Home Assistant Energie-Dashboard: Komplette Einrichtungsanleitung (2027)',
-    seoTitle: 'Home Assistant Energie-Dashboard einrichten (2027)',
+    title: 'Home Assistant Energie-Dashboard: Komplette Einrichtungsanleitung (2026)',
+    seoTitle: 'Home Assistant Energie-Dashboard einrichten (2026)',
     intro:
       'Das eingebaute Energie-Dashboard von Home Assistant erfasst Netzbezug, Solarerzeugung, Batteriestatus und Gerätenutzung einzeln in einer lokalen Ansicht — die Einrichtung erfordert das Hinzufügen einiger Sensor-Entitäten, keinen Automatisierungscode. Diese Anleitung führt durch das Hinzufügen eines Netzsensors, Solar- und Batteriesensoren falls vorhanden, die Erfassung einzelner Geräte und das Lesen der resultierenden Kosten- und Nutzungsdiagramme.',
     metaDescription:
-      'Richten Sie 2027 das Energie-Dashboard von Home Assistant ein: Netz-, Solar-, Batterie- und Gerätesensoren hinzufügen, Kostenverfolgung konfigurieren, Nutzungsdiagramme lesen.',
+      'Richten Sie 2026 das Energie-Dashboard von Home Assistant ein: Netz-, Solar-, Batterie- und Gerätesensoren hinzufügen, Kostenverfolgung konfigurieren, Nutzungsdiagramme lesen.',
     twitterDescription:
       'Schritt-für-Schritt-Einrichtung des Home-Assistant-Energie-Dashboards: Netzsensor, Solar-/Batterieintegration, Pro-Gerät-Verfolgung und Kostenkonfiguration.',
     readTime: '7 Min. Lesezeit',
@@ -369,8 +369,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant Energie-Dashboard: Komplette Einrichtungsanleitung (2027)',
-      description: 'Richten Sie 2027 das Energie-Dashboard von Home Assistant ein: Netz-, Solar-, Batterie- und Gerätesensoren hinzufügen, Kostenverfolgung konfigurieren, Nutzungsdiagramme lesen.',
+      headline: 'Home Assistant Energie-Dashboard: Komplette Einrichtungsanleitung (2026)',
+      description: 'Richten Sie 2026 das Energie-Dashboard von Home Assistant ein: Netz-, Solar-, Batterie- und Gerätesensoren hinzufügen, Kostenverfolgung konfigurieren, Nutzungsdiagramme lesen.',
       url: 'https://www.promptquorum.com/de/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -415,12 +415,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-fr.webp',
-    title: 'Tableau de bord Énergie de Home Assistant : guide complet de configuration (2027)',
-    seoTitle: 'Configurer le tableau de bord Énergie de Home Assistant (2027)',
+    title: 'Tableau de bord Énergie de Home Assistant : guide complet de configuration (2026)',
+    seoTitle: 'Configurer le tableau de bord Énergie de Home Assistant (2026)',
     intro:
       'Le tableau de bord Énergie intégré de Home Assistant suit la consommation réseau, la production solaire, l\'état de la batterie et l\'usage par appareil individuel dans une vue locale unique — la configuration consiste à ajouter quelques entités capteurs, pas à écrire de code d\'automatisation. Ce guide explique comment ajouter un capteur réseau, des capteurs solaire et batterie si vous en avez, le suivi par appareil individuel, et la lecture des graphiques de coût et d\'usage qui en résultent.',
     metaDescription:
-      'Configurez le tableau de bord Énergie de Home Assistant en 2027 : ajoutez capteurs réseau, solaire, batterie et appareils, configurez le suivi des coûts, lisez les graphiques d\'usage.',
+      'Configurez le tableau de bord Énergie de Home Assistant en 2026 : ajoutez capteurs réseau, solaire, batterie et appareils, configurez le suivi des coûts, lisez les graphiques d\'usage.',
     twitterDescription:
       'Configuration pas à pas du tableau de bord Énergie de Home Assistant : capteur réseau, intégration solaire/batterie, suivi par appareil et configuration des coûts.',
     readTime: '7 min de lecture',
@@ -572,8 +572,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Tableau de bord Énergie de Home Assistant : guide complet de configuration (2027)',
-      description: 'Configurez le tableau de bord Énergie de Home Assistant en 2027 : ajoutez capteurs réseau, solaire, batterie et appareils, configurez le suivi des coûts, lisez les graphiques d\'usage.',
+      headline: 'Tableau de bord Énergie de Home Assistant : guide complet de configuration (2026)',
+      description: 'Configurez le tableau de bord Énergie de Home Assistant en 2026 : ajoutez capteurs réseau, solaire, batterie et appareils, configurez le suivi des coûts, lisez les graphiques d\'usage.',
       url: 'https://www.promptquorum.com/fr/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -618,12 +618,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ja.webp',
-    title: 'Home Assistant Energyダッシュボード：完全設定ガイド（2027年）',
-    seoTitle: 'Home Assistant Energyダッシュボード設定（2027年）',
+    title: 'Home Assistant Energyダッシュボード：完全設定ガイド（2026年）',
+    seoTitle: 'Home Assistant Energyダッシュボード設定（2026年）',
     intro:
       'Home Assistant内蔵のEnergyダッシュボードは、系統消費量・太陽光発電量・バッテリー状態・個別機器の使用量を1つのローカルビューで追跡します — 設定に必要なのはいくつかのセンサーエンティティの追加だけで、自動化コードを書く必要はありません。本ガイドでは、系統センサーの追加、（お持ちの場合は）太陽光・バッテリーセンサーの追加、個別機器の追跡、そして結果として得られるコストと使用量のグラフの読み方を説明します。',
     metaDescription:
-      '2027年版：Home AssistantのEnergyダッシュボードを設定する方法 — 系統・太陽光・バッテリー・機器センサーを追加し、コスト追跡を設定し、使用量グラフを読む。',
+      '2026年版：Home AssistantのEnergyダッシュボードを設定する方法 — 系統・太陽光・バッテリー・機器センサーを追加し、コスト追跡を設定し、使用量グラフを読む。',
     twitterDescription:
       'Home Assistant Energyダッシュボードのステップバイステップ設定：系統センサー、太陽光/バッテリー連携、機器別追跡、コスト設定。',
     readTime: '7分で読めます',
@@ -775,8 +775,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant Energyダッシュボード：完全設定ガイド（2027年）',
-      description: '2027年版：Home AssistantのEnergyダッシュボードを設定する方法 — 系統・太陽光・バッテリー・機器センサーを追加し、コスト追跡を設定し、使用量グラフを読む。',
+      headline: 'Home Assistant Energyダッシュボード：完全設定ガイド（2026年）',
+      description: '2026年版：Home AssistantのEnergyダッシュボードを設定する方法 — 系統・太陽光・バッテリー・機器センサーを追加し、コスト追跡を設定し、使用量グラフを読む。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -821,12 +821,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-zh.webp',
-    title: 'Home Assistant能源仪表盘：完整设置指南（2027年）',
-    seoTitle: 'Home Assistant能源仪表盘设置（2027年）',
+    title: 'Home Assistant能源仪表盘：完整设置指南（2026年）',
+    seoTitle: 'Home Assistant能源仪表盘设置（2026年）',
     intro:
       'Home Assistant内置的能源仪表盘可在一个本地视图中追踪电网用电、太阳能发电、电池状态和单个设备的用电情况——设置只需添加几个传感器实体，无需编写任何自动化代码。本指南将介绍如何添加电网传感器、（如果有的话）太阳能与电池传感器、单设备追踪，以及如何解读由此生成的成本和用电图表。',
     metaDescription:
-      '2027年设置Home Assistant能源仪表盘：添加电网、太阳能、电池和设备传感器，配置成本追踪，读取用电图表。',
+      '2026年设置Home Assistant能源仪表盘：添加电网、太阳能、电池和设备传感器，配置成本追踪，读取用电图表。',
     twitterDescription:
       'Home Assistant能源仪表盘分步设置：电网传感器、太阳能/电池集成、逐设备追踪与成本配置。',
     readTime: '阅读需7分钟',
@@ -978,8 +978,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant能源仪表盘：完整设置指南（2027年）',
-      description: '2027年设置Home Assistant能源仪表盘：添加电网、太阳能、电池和设备传感器，配置成本追踪，读取用电图表。',
+      headline: 'Home Assistant能源仪表盘：完整设置指南（2026年）',
+      description: '2026年设置Home Assistant能源仪表盘：添加电网、太阳能、电池和设备传感器，配置成本追踪，读取用电图表。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
@@ -1024,12 +1024,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-es.webp',
-    title: 'Panel de Energía de Home Assistant: guía completa de configuración (2027)',
-    seoTitle: 'Configurar el panel de Energía de Home Assistant (2027)',
+    title: 'Panel de Energía de Home Assistant: guía completa de configuración (2026)',
+    seoTitle: 'Configurar el panel de Energía de Home Assistant (2026)',
     intro:
       'El panel de Energía integrado de Home Assistant rastrea el consumo de red, la producción solar, el estado de la batería y el uso por dispositivo individual en una única vista local — la configuración consiste en añadir unas pocas entidades sensor, no en escribir código de automatización. Esta guía explica cómo añadir un sensor de red, sensores de solar y batería si los tienes, seguimiento de dispositivos individuales, y cómo leer los gráficos de costo y uso resultantes.',
     metaDescription:
-      'Configura el panel de Energía de Home Assistant en 2027: añade sensores de red, solar, batería y dispositivos, configura el seguimiento de costos, y lee los gráficos de uso.',
+      'Configura el panel de Energía de Home Assistant en 2026: añade sensores de red, solar, batería y dispositivos, configura el seguimiento de costos, y lee los gráficos de uso.',
     twitterDescription:
       'Configuración paso a paso del panel de Energía de Home Assistant: sensor de red, integración solar/batería, seguimiento por dispositivo, y configuración de costos.',
     readTime: '7 min de lectura',
@@ -1181,8 +1181,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Panel de Energía de Home Assistant: guía completa de configuración (2027)',
-      description: 'Configura el panel de Energía de Home Assistant en 2027: añade sensores de red, solar, batería y dispositivos, configura el seguimiento de costos, y lee los gráficos de uso.',
+      headline: 'Panel de Energía de Home Assistant: guía completa de configuración (2026)',
+      description: 'Configura el panel de Energía de Home Assistant en 2026: añade sensores de red, solar, batería y dispositivos, configura el seguimiento de costos, y lee los gráficos de uso.',
       url: 'https://www.promptquorum.com/es/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1227,12 +1227,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-pt.webp',
-    title: 'Painel de Energia do Home Assistant: guia completo de configuração (2027)',
-    seoTitle: 'Configurar o painel de Energia do Home Assistant (2027)',
+    title: 'Painel de Energia do Home Assistant: guia completo de configuração (2026)',
+    seoTitle: 'Configurar o painel de Energia do Home Assistant (2026)',
     intro:
       'O painel de Energia embutido do Home Assistant rastreia consumo de rede, geração solar, estado da bateria e uso por dispositivo individual em uma única visão local — a configuração consiste em adicionar algumas entidades de sensor, não em escrever código de automação. Este guia percorre como adicionar um sensor de rede, sensores de solar e bateria se você tiver, rastreamento de dispositivos individuais, e como ler os gráficos de custo e uso resultantes.',
     metaDescription:
-      'Configure o painel de Energia do Home Assistant em 2027: adicione sensores de rede, solar, bateria e dispositivos, configure o rastreamento de custos, e leia os gráficos de uso.',
+      'Configure o painel de Energia do Home Assistant em 2026: adicione sensores de rede, solar, bateria e dispositivos, configure o rastreamento de custos, e leia os gráficos de uso.',
     twitterDescription:
       'Configuração passo a passo do painel de Energia do Home Assistant: sensor de rede, integração solar/bateria, rastreamento por dispositivo, e configuração de custos.',
     readTime: '7 min de leitura',
@@ -1384,8 +1384,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Painel de Energia do Home Assistant: guia completo de configuração (2027)',
-      description: 'Configure o painel de Energia do Home Assistant em 2027: adicione sensores de rede, solar, bateria e dispositivos, configure o rastreamento de custos, e leia os gráficos de uso.',
+      headline: 'Painel de Energia do Home Assistant: guia completo de configuração (2026)',
+      description: 'Configure o painel de Energia do Home Assistant em 2026: adicione sensores de rede, solar, bateria e dispositivos, configure o rastreamento de custos, e leia os gráficos de uso.',
       url: 'https://www.promptquorum.com/pt/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1430,12 +1430,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ar.webp',
-    title: 'لوحة Energy في Home Assistant: دليل الإعداد الكامل (⁨2027⁩)',
-    seoTitle: 'إعداد لوحة Energy في Home Assistant (⁨2027⁩)',
+    title: 'لوحة Energy في Home Assistant: دليل الإعداد الكامل (⁨2026⁩)',
+    seoTitle: 'إعداد لوحة Energy في Home Assistant (⁨2026⁩)',
     intro:
       'تتبع لوحة Energy المدمجة في Home Assistant استهلاك الشبكة، والإنتاج الشمسي، وحالة البطارية، واستخدام الأجهزة الفردية في عرض محلي واحد — يتطلب الإعداد إضافة بضع كيانات مستشعر، وليس كتابة أي كود أتمتة. يستعرض هذا الدليل إضافة مستشعر شبكة، ومستشعرات شمسية وبطارية إن وُجدت، وتتبع الأجهزة الفردية، وقراءة رسوم التكلفة والاستخدام البيانية الناتجة.',
     metaDescription:
-      'أعدّ لوحة Energy في Home Assistant لعام 2027: أضف مستشعرات الشبكة والطاقة الشمسية والبطارية والأجهزة، واضبط تتبع التكلفة، واقرأ رسوم الاستخدام البيانية.',
+      'أعدّ لوحة Energy في Home Assistant لعام 2026: أضف مستشعرات الشبكة والطاقة الشمسية والبطارية والأجهزة، واضبط تتبع التكلفة، واقرأ رسوم الاستخدام البيانية.',
     twitterDescription:
       'إعداد لوحة Energy في Home Assistant خطوة بخطوة: مستشعر الشبكة، دمج الطاقة الشمسية/البطارية، التتبع لكل جهاز، وإعداد التكلفة.',
     readTime: '7 دقائق للقراءة',
@@ -1587,8 +1587,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'لوحة Energy في Home Assistant: دليل الإعداد الكامل (⁨2027⁩)',
-      description: 'أعدّ لوحة Energy في Home Assistant لعام 2027: أضف مستشعرات الشبكة والطاقة الشمسية والبطارية والأجهزة، واضبط تتبع التكلفة، واقرأ رسوم الاستخدام البيانية.',
+      headline: 'لوحة Energy في Home Assistant: دليل الإعداد الكامل (⁨2026⁩)',
+      description: 'أعدّ لوحة Energy في Home Assistant لعام 2026: أضف مستشعرات الشبكة والطاقة الشمسية والبطارية والأجهزة، واضبط تتبع التكلفة، واقرأ رسوم الاستخدام البيانية.',
       url: 'https://www.promptquorum.com/ar/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1633,12 +1633,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-assistant-energy-dashboard-guide-overview-hero-ko.webp',
-    title: 'Home Assistant Energy 대시보드: 완전 설정 가이드 (2027년)',
-    seoTitle: 'Home Assistant Energy 대시보드 설정 (2027년)',
+    title: 'Home Assistant Energy 대시보드: 완전 설정 가이드 (2026년)',
+    seoTitle: 'Home Assistant Energy 대시보드 설정 (2026년)',
     intro:
       'Home Assistant에 내장된 Energy 대시보드는 계통 소비량, 태양광 발전량, 배터리 상태, 개별 기기 사용량을 하나의 로컬 뷰에서 추적합니다 — 설정은 자동화 코드를 작성하는 것이 아니라 몇 개의 센서 엔티티를 추가하는 작업입니다. 이 가이드는 계통 센서 추가, (있다면) 태양광 및 배터리 센서 추가, 개별 기기 추적, 그리고 그 결과로 나오는 비용 및 사용량 그래프를 읽는 방법을 다룹니다.',
     metaDescription:
-      '2027년 Home Assistant Energy 대시보드 설정하기: 계통, 태양광, 배터리, 기기 센서를 추가하고, 비용 추적을 구성하고, 사용량 그래프를 읽는 법.',
+      '2026년 Home Assistant Energy 대시보드 설정하기: 계통, 태양광, 배터리, 기기 센서를 추가하고, 비용 추적을 구성하고, 사용량 그래프를 읽는 법.',
     twitterDescription:
       'Home Assistant Energy 대시보드 단계별 설정: 계통 센서, 태양광/배터리 연동, 기기별 추적, 비용 구성.',
     readTime: '7분 소요',
@@ -1790,8 +1790,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Home Assistant Energy 대시보드: 완전 설정 가이드 (2027년)',
-      description: '2027년 Home Assistant Energy 대시보드 설정하기: 계통, 태양광, 배터리, 기기 센서를 추가하고, 비용 추적을 구성하고, 사용량 그래프를 읽는 법.',
+      headline: 'Home Assistant Energy 대시보드: 완전 설정 가이드 (2026년)',
+      description: '2026년 Home Assistant Energy 대시보드 설정하기: 계통, 태양광, 배터리, 기기 센서를 추가하고, 비용 추적을 구성하고, 사용량 그래프를 읽는 법.',
       url: 'https://www.promptquorum.com/ko/smart-home/home-assistant-energy-dashboard-guide',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

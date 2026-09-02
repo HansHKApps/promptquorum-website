@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-en.webp',
-    title: 'Small Language Models for Smart Home Control (2027)',
-    seoTitle: 'Small Language Models for Smart Home (2027)',
+    title: 'Small Language Models for Smart Home Control (2026)',
+    seoTitle: 'Small Language Models for Smart Home (2026)',
     intro:
       'Small language models — roughly 1B to 4B parameters — are the practical choice for smart home voice and automation control, not because they are less capable in general but because they run fast enough on modest local hardware and specialize well at the narrow task of turning a spoken command into a device action. This article explains why smart home control favors small over large models, the architecture trade-offs involved, and how this differs from a model-picks shortlist already on this site.',
     metaDescription:
@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Small Language Models for Smart Home Control (2027)',
+      headline: 'Small Language Models for Smart Home Control (2026)',
       description: 'Why smart home voice and automation control favors small language models over large general-purpose LLMs.',
       url: 'https://www.promptquorum.com/smart-home/local-small-language-models-smart-home',
       inLanguage: 'en',
@@ -173,8 +173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-de.webp',
-    title: 'Kleine Sprachmodelle für die Smart-Home-Steuerung (2027)',
-    seoTitle: 'Kleine Sprachmodelle für Smart Home (2027)',
+    title: 'Kleine Sprachmodelle für die Smart-Home-Steuerung (2026)',
+    seoTitle: 'Kleine Sprachmodelle für Smart Home (2026)',
     intro:
       'Kleine Sprachmodelle — etwa 1 bis 4 Milliarden Parameter — sind die praktische Wahl für die Sprach- und Automatisierungssteuerung im Smart Home, nicht weil sie generell weniger leistungsfähig sind, sondern weil sie auf bescheidener lokaler Hardware schnell genug laufen und sich gut auf die enge Aufgabe spezialisieren lassen, einen gesprochenen Befehl in eine Geräteaktion umzuwandeln. Dieser Artikel erklärt, warum die Smart-Home-Steuerung kleine gegenüber großen Modellen bevorzugt, welche Architektur-Kompromisse dabei eine Rolle spielen, und wie sich das von einer bereits auf dieser Website vorhandenen Model-Picks-Kurzliste unterscheidet.',
     metaDescription:
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Kleine Sprachmodelle für die Smart-Home-Steuerung (2027)',
+      headline: 'Kleine Sprachmodelle für die Smart-Home-Steuerung (2026)',
       description: 'Warum die Sprach- und Automatisierungssteuerung im Smart Home kleine Sprachmodelle gegenüber großen, universell einsetzbaren LLMs bevorzugt.',
       url: 'https://www.promptquorum.com/de/smart-home/local-small-language-models-smart-home',
       inLanguage: 'de',
@@ -337,8 +337,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-fr.webp',
-    title: 'Petits modèles de langage pour le contrôle de la maison connectée (2027)',
-    seoTitle: 'Petits modèles de langage pour maison connectée (2027)',
+    title: 'Petits modèles de langage pour le contrôle de la maison connectée (2026)',
+    seoTitle: 'Petits modèles de langage pour maison connectée (2026)',
     intro:
       "Les petits modèles de langage — environ 1 à 4 milliards de paramètres — sont le choix pratique pour le contrôle vocal et l'automatisation de la maison connectée, non pas parce qu'ils sont globalement moins capables, mais parce qu'ils tournent assez vite sur du matériel local modeste et se spécialisent bien dans la tâche étroite consistant à transformer une commande vocale en action sur un appareil. Cet article explique pourquoi le contrôle de la maison connectée privilégie les petits modèles par rapport aux grands, les compromis d'architecture impliqués, et en quoi cela diffère d'une liste de modèles recommandés déjà présente sur ce site.",
     metaDescription:
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Petits modèles de langage pour le contrôle de la maison connectée (2027)',
+      headline: 'Petits modèles de langage pour le contrôle de la maison connectée (2026)',
       description: "Pourquoi le contrôle vocal et l'automatisation de la maison connectée privilégient les petits modèles de langage par rapport aux grands LLM généralistes.",
       url: 'https://www.promptquorum.com/fr/smart-home/local-small-language-models-smart-home',
       inLanguage: 'fr',
@@ -501,8 +501,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-ja.webp',
-    title: 'スマートホーム制御のための小規模言語モデル（2027年）',
-    seoTitle: 'スマートホーム向け小規模言語モデル（2027年）',
+    title: 'スマートホーム制御のための小規模言語モデル（2026年）',
+    seoTitle: 'スマートホーム向け小規模言語モデル（2026年）',
     intro:
       '小規模言語モデル——おおよそ10億〜40億パラメータ——は、スマートホームの音声・自動化制御にとって現実的な選択肢です。全般的な能力が低いからではなく、控えめなローカルハードウェア上でも十分速く動作し、話された指示をデバイス操作に変換するという狭いタスクに特化しやすいためです。この記事では、なぜスマートホーム制御が大規模モデルより小規模モデルを優先するのか、そこに関わるアーキテクチャ上のトレードオフ、そしてこのサイトに既にあるモデル選定の短いリストとどう違うのかを説明します。',
     metaDescription:
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'スマートホーム制御のための小規模言語モデル（2027年）',
+      headline: 'スマートホーム制御のための小規模言語モデル（2026年）',
       description: 'スマートホームの音声・自動化制御が大規模な汎用LLMより小規模言語モデルを優先する理由。',
       url: 'https://www.promptquorum.com/ja/smart-home/local-small-language-models-smart-home',
       inLanguage: 'ja',
@@ -665,8 +665,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-zh.webp',
-    title: '智能家居控制的小型语言模型（2027年）',
-    seoTitle: '智能家居小型语言模型（2027年）',
+    title: '智能家居控制的小型语言模型（2026年）',
+    seoTitle: '智能家居小型语言模型（2026年）',
     intro:
       '小型语言模型——大约10亿到40亿参数——是智能家居语音和自动化控制的实用选择，这不是因为它们整体能力较弱，而是因为它们能在配置一般的本地硬件上足够快速地运行，并很好地专精于将口头指令转化为设备操作这一狭窄任务。本文将解释为什么智能家居控制偏好小型模型而非大型模型，其中涉及的架构权衡，以及这与本网站已有的模型推荐简明清单有何不同。',
     metaDescription:
@@ -797,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '智能家居控制的小型语言模型（2027年）',
+      headline: '智能家居控制的小型语言模型（2026年）',
       description: '为什么智能家居语音和自动化控制偏好小型语言模型而非大型通用LLM。',
       url: 'https://www.promptquorum.com/zh/smart-home/local-small-language-models-smart-home',
       inLanguage: 'zh',
@@ -829,8 +829,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-es.webp',
-    title: 'Modelos de lenguaje pequeños para el control del hogar inteligente (2027)',
-    seoTitle: 'Modelos de lenguaje pequeños para hogar inteligente (2027)',
+    title: 'Modelos de lenguaje pequeños para el control del hogar inteligente (2026)',
+    seoTitle: 'Modelos de lenguaje pequeños para hogar inteligente (2026)',
     intro:
       'Los modelos de lenguaje pequeños — de aproximadamente 1.000 a 4.000 millones de parámetros — son la opción práctica para el control por voz y la automatización del hogar inteligente, no porque sean menos capaces en general, sino porque funcionan lo bastante rápido en hardware local modesto y se especializan bien en la tarea acotada de convertir un comando hablado en una acción sobre un dispositivo. Este artículo explica por qué el control del hogar inteligente favorece los modelos pequeños frente a los grandes, los compromisos de arquitectura implicados, y en qué se diferencia de una lista breve de modelos recomendados ya presente en este sitio.',
     metaDescription:
@@ -961,7 +961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Modelos de lenguaje pequeños para el control del hogar inteligente (2027)',
+      headline: 'Modelos de lenguaje pequeños para el control del hogar inteligente (2026)',
       description: 'Por qué el control por voz y la automatización del hogar inteligente favorecen los modelos de lenguaje pequeños frente a los grandes LLM de propósito general.',
       url: 'https://www.promptquorum.com/es/smart-home/local-small-language-models-smart-home',
       inLanguage: 'es',
@@ -993,8 +993,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-pt.webp',
-    title: 'Modelos de linguagem pequenos para o controle da casa inteligente (2027)',
-    seoTitle: 'Modelos de linguagem pequenos para casa inteligente (2027)',
+    title: 'Modelos de linguagem pequenos para o controle da casa inteligente (2026)',
+    seoTitle: 'Modelos de linguagem pequenos para casa inteligente (2026)',
     intro:
       'Os modelos de linguagem pequenos — aproximadamente 1 a 4 bilhões de parâmetros — são a escolha prática para o controle por voz e a automação da casa inteligente, não porque sejam menos capazes em geral, mas porque rodam rápido o suficiente em hardware local modesto e se especializam bem na tarefa restrita de transformar um comando falado em uma ação sobre um dispositivo. Este artigo explica por que o controle da casa inteligente favorece modelos pequenos em vez de grandes, os trade-offs de arquitetura envolvidos, e como isso difere de uma lista curta de modelos recomendados já presente neste site.',
     metaDescription:
@@ -1125,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Modelos de linguagem pequenos para o controle da casa inteligente (2027)',
+      headline: 'Modelos de linguagem pequenos para o controle da casa inteligente (2026)',
       description: 'Por que o controle por voz e a automação da casa inteligente favorecem modelos de linguagem pequenos em vez de LLMs grandes de propósito geral.',
       url: 'https://www.promptquorum.com/pt/smart-home/local-small-language-models-smart-home',
       inLanguage: 'pt-BR',
@@ -1157,8 +1157,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-ar.webp',
-    title: 'نماذج اللغة الصغيرة للتحكم في المنزل الذكي (⁨2027⁩)',
-    seoTitle: 'نماذج اللغة الصغيرة للمنزل الذكي (⁨2027⁩)',
+    title: 'نماذج اللغة الصغيرة للتحكم في المنزل الذكي (⁨2026⁩)',
+    seoTitle: 'نماذج اللغة الصغيرة للمنزل الذكي (⁨2026⁩)',
     intro:
       'نماذج اللغة الصغيرة — التي تتراوح تقريبًا بين مليار و4 مليارات معلمة — هي الخيار العملي للتحكم الصوتي والأتمتة في المنزل الذكي، ليس لأنها أقل قدرة بشكل عام، بل لأنها تعمل بسرعة كافية على أجهزة محلية متواضعة وتتخصص جيدًا في المهمة الضيقة المتمثلة في تحويل أمر منطوق إلى إجراء على جهاز. يوضح هذا المقال لماذا يفضّل التحكم في المنزل الذكي النماذج الصغيرة على الكبيرة، والمقايضات المعمارية المرتبطة بذلك، وكيف يختلف ذلك عن قائمة مختصرة لاختيار النماذج موجودة بالفعل على هذا الموقع.',
     metaDescription:
@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'نماذج اللغة الصغيرة للتحكم في المنزل الذكي (⁨2027⁩)',
+      headline: 'نماذج اللغة الصغيرة للتحكم في المنزل الذكي (⁨2026⁩)',
       description: 'لماذا يفضّل التحكم الصوتي والأتمتة في المنزل الذكي نماذج اللغة الصغيرة على نماذج اللغة الكبيرة متعددة الأغراض.',
       url: 'https://www.promptquorum.com/ar/smart-home/local-small-language-models-smart-home',
       inLanguage: 'ar',
@@ -1321,8 +1321,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/local-small-language-models-smart-home-overview-hero-ko.webp',
-    title: '스마트홈 제어를 위한 소형 언어 모델 (2027년)',
-    seoTitle: '스마트홈용 소형 언어 모델 (2027년)',
+    title: '스마트홈 제어를 위한 소형 언어 모델 (2026년)',
+    seoTitle: '스마트홈용 소형 언어 모델 (2026년)',
     intro:
       '소형 언어 모델—대략 10억~40억 파라미터—은 스마트홈 음성 및 자동화 제어에 실용적인 선택입니다. 전반적으로 성능이 낮아서가 아니라, 사양이 소박한 로컬 하드웨어에서도 충분히 빠르게 실행되며 음성 명령을 기기 동작으로 변환하는 좁은 작업에 잘 특화되기 때문입니다. 이 글은 왜 스마트홈 제어가 대형 모델보다 소형 모델을 선호하는지, 여기에 관련된 아키텍처 트레이드오프, 그리고 이 사이트에 이미 있는 모델 추천 목록과 어떻게 다른지 설명합니다.',
     metaDescription:
@@ -1453,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '스마트홈 제어를 위한 소형 언어 모델 (2027년)',
+      headline: '스마트홈 제어를 위한 소형 언어 모델 (2026년)',
       description: '스마트홈 음성 및 자동화 제어가 대형 범용 LLM보다 소형 언어 모델을 선호하는 이유.',
       url: 'https://www.promptquorum.com/ko/smart-home/local-small-language-models-smart-home',
       inLanguage: 'ko',

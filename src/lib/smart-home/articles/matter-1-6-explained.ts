@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-en.webp',
     // Verified 2026-07-16 directly against CSA's own newsroom (csa-iot.org/newsroom/matter-1-6-...):
     // Matter 1.6 released June 17, 2026 — no "Matter 2.0" exists, past or planned. Renamed from
@@ -16,8 +16,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // progressively across Matter 1.3-1.5, NOT in 1.6 — 1.6's own headline features are NFC-based
     // commissioning, Joint Fabric (multi-admin/multi-ecosystem device sharing), and Thermostat
     // Suggestions. Reframed below to reflect that, rather than crediting 1.6 with the energy work.
-    title: "Matter 1.6 Explained: What's New (2027)",
-    seoTitle: 'Matter 1.6 Explained (2027)',
+    title: "Matter 1.6 Explained: What's New (2026)",
+    seoTitle: 'Matter 1.6 Explained (2026)',
     intro:
       'Matter 1.6, released June 17, 2026, is the current version of the Matter smart home standard. Its headline additions are NFC-based device setup, Joint Fabric (letting multiple ecosystems co-administer the same device), and Thermostat Suggestions — not new energy-management device types, which arrived earlier across Matter 1.3-1.5 and are covered elsewhere in this cluster. This article explains what changed in 1.6 specifically and how it differs from the general protocol primer and local-control guide already on this site.',
     metaDescription:
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: "Matter 1.6 Explained: What's New (2027)",
+      headline: "Matter 1.6 Explained: What's New (2026)",
       description: "What's new in Matter 1.6: NFC setup, Joint Fabric, Thermostat Suggestions, and backward compatibility with 1.x devices.",
       url: 'https://www.promptquorum.com/smart-home/matter-1-6-explained',
       inLanguage: 'en',
@@ -168,10 +168,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-de.webp',
-    title: 'Matter 1.6 erklärt: Was ist neu (2027)',
-    seoTitle: 'Matter 1.6 erklärt (2027)',
+    title: 'Matter 1.6 erklärt: Was ist neu (2026)',
+    seoTitle: 'Matter 1.6 erklärt (2026)',
     intro:
       'Matter 1.6, veröffentlicht am 17. Juni 2026, ist die aktuelle Version des Smart-Home-Standards Matter. Die wichtigsten Neuerungen sind NFC-basiertes Setup, Joint Fabric (mehrere Ökosysteme können dasselbe Gerät gemeinsam verwalten) und Thermostat-Vorschläge — keine neuen Energiemanagement-Gerätetypen, die bereits früher in Matter 1.3-1.5 eingeführt wurden und an anderer Stelle in diesem Cluster behandelt werden. Dieser Artikel erklärt, was sich in 1.6 konkret geändert hat und wie sich das vom allgemeinen Protokoll-Grundlagenartikel und dem Leitfaden zur lokalen Steuerung auf dieser Website unterscheidet.',
     metaDescription:
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter 1.6 erklärt: Was ist neu (2027)',
+      headline: 'Matter 1.6 erklärt: Was ist neu (2026)',
       description: 'Was ist neu in Matter 1.6: NFC-Setup, Joint Fabric, Thermostat-Vorschläge und Abwärtskompatibilität mit 1.x-Geräten.',
       url: 'https://www.promptquorum.com/de/smart-home/matter-1-6-explained',
       inLanguage: 'de',
@@ -322,10 +322,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-fr.webp',
-    title: 'Matter 1.6 expliqué : les nouveautés (2027)',
-    seoTitle: 'Matter 1.6 expliqué (2027)',
+    title: 'Matter 1.6 expliqué : les nouveautés (2026)',
+    seoTitle: 'Matter 1.6 expliqué (2026)',
     intro:
       "Matter 1.6, sorti le 17 juin 2026, est la version actuelle du standard maison connectée Matter. Ses ajouts phares sont la configuration par NFC, Joint Fabric (permettant à plusieurs écosystèmes de co-administrer un même appareil) et les Suggestions de thermostat — pas de nouveaux types d'appareils de gestion énergétique, arrivés plus tôt via Matter 1.3-1.5 et couverts ailleurs dans ce cluster. Cet article explique ce qui a changé spécifiquement dans la version 1.6 et en quoi cela diffère du guide général sur les protocoles et du guide de contrôle local déjà présents sur ce site.",
     metaDescription:
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter 1.6 expliqué : les nouveautés (2027)',
+      headline: 'Matter 1.6 expliqué : les nouveautés (2026)',
       description: "Les nouveautés de Matter 1.6 : configuration NFC, Joint Fabric, Suggestions de thermostat, et compatibilité ascendante avec les appareils 1.x.",
       url: 'https://www.promptquorum.com/fr/smart-home/matter-1-6-explained',
       inLanguage: 'fr',
@@ -476,10 +476,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-ja.webp',
-    title: 'Matter 1.6を解説：新機能とは（2027年）',
-    seoTitle: 'Matter 1.6解説（2027年）',
+    title: 'Matter 1.6を解説：新機能とは（2026年）',
+    seoTitle: 'Matter 1.6解説（2026年）',
     intro:
       '2026年6月17日にリリースされたMatter 1.6は、Matterスマートホーム規格の現行バージョンです。主な追加機能はNFCベースのセットアップ、Joint Fabric（複数のエコシステムが同じデバイスを共同管理できる仕組み）、そしてサーモスタット提案であり、新しいエネルギー管理デバイスタイプではありません — それらはMatter 1.3〜1.5にかけて既に導入されており、このクラスターの別記事で扱っています。この記事では1.6で具体的に何が変わったのか、そしてこのサイトにある一般的なプロトコル解説やローカル制御ガイドとどう違うのかを説明します。',
     metaDescription:
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter 1.6を解説：新機能とは（2027年）',
+      headline: 'Matter 1.6を解説：新機能とは（2026年）',
       description: 'Matter 1.6の新機能：NFCセットアップ、Joint Fabric、サーモスタット提案、そして1.xデバイスとの後方互換性。',
       url: 'https://www.promptquorum.com/ja/smart-home/matter-1-6-explained',
       inLanguage: 'ja',
@@ -630,10 +630,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-zh.webp',
-    title: 'Matter 1.6 详解：有哪些新功能（2027年）',
-    seoTitle: 'Matter 1.6 详解（2027年）',
+    title: 'Matter 1.6 详解：有哪些新功能（2026年）',
+    seoTitle: 'Matter 1.6 详解（2026年）',
     intro:
       '于2026年6月17日发布的Matter 1.6，是Matter智能家居标准的当前版本。其主要新增功能是基于NFC的设置、Joint Fabric（让多个生态系统共同管理同一设备）以及温控器建议——而不是新的能源管理设备类型，那些已在Matter 1.3-1.5中逐步引入，并在本系列的其他文章中介绍。本文将解释1.6版本具体改变了什么，以及它与本网站已有的通用协议入门文章和本地控制指南有何不同。',
     metaDescription:
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter 1.6 详解：有哪些新功能（2027年）',
+      headline: 'Matter 1.6 详解：有哪些新功能（2026年）',
       description: 'Matter 1.6的新功能：NFC设置、Joint Fabric、温控器建议，以及与1.x设备的向后兼容性。',
       url: 'https://www.promptquorum.com/zh/smart-home/matter-1-6-explained',
       inLanguage: 'zh',
@@ -784,10 +784,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-es.webp',
-    title: 'Matter 1.6 explicado: qué hay de nuevo (2027)',
-    seoTitle: 'Matter 1.6 explicado (2027)',
+    title: 'Matter 1.6 explicado: qué hay de nuevo (2026)',
+    seoTitle: 'Matter 1.6 explicado (2026)',
     intro:
       'Matter 1.6, lanzado el 17 de junio de 2026, es la versión actual del estándar de hogar inteligente Matter. Sus principales novedades son la configuración basada en NFC, Joint Fabric (que permite que múltiples ecosistemas coadministren el mismo dispositivo) y las Sugerencias de termostato — no nuevos tipos de dispositivos de gestión energética, que llegaron antes a través de Matter 1.3-1.5 y se cubren en otra parte de este clúster. Este artículo explica qué cambió específicamente en la 1.6 y en qué se diferencia de la guía general de protocolos y la guía de control local ya presentes en este sitio.',
     metaDescription:
@@ -907,7 +907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter 1.6 explicado: qué hay de nuevo (2027)',
+      headline: 'Matter 1.6 explicado: qué hay de nuevo (2026)',
       description: 'Qué hay de nuevo en Matter 1.6: configuración NFC, Joint Fabric, Sugerencias de termostato, y compatibilidad con versiones anteriores con dispositivos 1.x.',
       url: 'https://www.promptquorum.com/es/smart-home/matter-1-6-explained',
       inLanguage: 'es',
@@ -938,10 +938,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-pt.webp',
-    title: 'Matter 1.6 explicado: o que há de novo (2027)',
-    seoTitle: 'Matter 1.6 explicado (2027)',
+    title: 'Matter 1.6 explicado: o que há de novo (2026)',
+    seoTitle: 'Matter 1.6 explicado (2026)',
     intro:
       'O Matter 1.6, lançado em 17 de junho de 2026, é a versão atual do padrão de casa inteligente Matter. Suas principais novidades são a configuração baseada em NFC, o Joint Fabric (permitindo que vários ecossistemas coadministrem o mesmo dispositivo) e as Sugestões de termostato — não novos tipos de dispositivos de gestão de energia, que chegaram antes através do Matter 1.3-1.5 e são cobertos em outra parte deste cluster. Este artigo explica o que mudou especificamente na versão 1.6 e como isso difere do guia geral de protocolos e do guia de controle local já presentes neste site.',
     metaDescription:
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter 1.6 explicado: o que há de novo (2027)',
+      headline: 'Matter 1.6 explicado: o que há de novo (2026)',
       description: 'O que há de novo no Matter 1.6: configuração NFC, Joint Fabric, Sugestões de termostato, e compatibilidade retroativa com dispositivos 1.x.',
       url: 'https://www.promptquorum.com/pt/smart-home/matter-1-6-explained',
       inLanguage: 'pt-BR',
@@ -1092,10 +1092,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-ar.webp',
-    title: 'شرح Matter 1.6: ما الجديد (⁨2027⁩)',
-    seoTitle: 'شرح Matter 1.6 (⁨2027⁩)',
+    title: 'شرح Matter 1.6: ما الجديد (⁨2026⁩)',
+    seoTitle: 'شرح Matter 1.6 (⁨2026⁩)',
     intro:
       'يُعد Matter 1.6، الذي صدر في 17 يونيو 2026، النسخة الحالية من معيار المنزل الذكي Matter. إضافاته الرئيسية هي الإعداد القائم على NFC، وJoint Fabric (الذي يتيح لأنظمة بيئية متعددة إدارة الجهاز نفسه معًا)، واقتراحات الترموستات — وليس أنواع أجهزة إدارة طاقة جديدة، والتي وصلت سابقًا عبر Matter 1.3-1.5 وتُغطى في مكان آخر من هذه المجموعة. يوضح هذا الدليل ما تغير تحديدًا في 1.6 وكيف يختلف عن الشرح العام للبروتوكولات ودليل التحكم المحلي الموجودين بالفعل على هذا الموقع.',
     metaDescription:
@@ -1215,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'شرح Matter 1.6: ما الجديد (⁨2027⁩)',
+      headline: 'شرح Matter 1.6: ما الجديد (⁨2026⁩)',
       description: 'ما الجديد في Matter 1.6: إعداد NFC، Joint Fabric، اقتراحات الترموستات، والتوافق مع الإصدارات السابقة مع أجهزة 1.x.',
       url: 'https://www.promptquorum.com/ar/smart-home/matter-1-6-explained',
       inLanguage: 'ar',
@@ -1246,10 +1246,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/matter-1-6-explained-overview-hero-ko.webp',
-    title: 'Matter 1.6 해설: 무엇이 새로운가 (2027년)',
-    seoTitle: 'Matter 1.6 해설 (2027년)',
+    title: 'Matter 1.6 해설: 무엇이 새로운가 (2026년)',
+    seoTitle: 'Matter 1.6 해설 (2026년)',
     intro:
       '2026년 6월 17일에 출시된 Matter 1.6은 Matter 스마트홈 표준의 현재 버전입니다. 주요 추가 기능은 NFC 기반 설정, Joint Fabric(여러 생태계가 동일한 기기를 공동 관리할 수 있게 함), 그리고 온도조절기 제안이며, 새로운 에너지 관리 기기 유형은 아닙니다 — 그것들은 이미 Matter 1.3~1.5에 걸쳐 도입되었고 이 클러스터의 다른 글에서 다룹니다. 이 글은 1.6에서 구체적으로 무엇이 변경되었는지, 그리고 이 사이트에 이미 있는 일반 프로토콜 입문 글이나 로컬 제어 가이드와 어떻게 다른지 설명합니다.',
     metaDescription:
@@ -1369,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Matter 1.6 해설: 무엇이 새로운가 (2027년)',
+      headline: 'Matter 1.6 해설: 무엇이 새로운가 (2026년)',
       description: 'Matter 1.6의 새로운 점: NFC 설정, Joint Fabric, 온도조절기 제안, 그리고 1.x 기기와의 하위 호환성.',
       url: 'https://www.promptquorum.com/ko/smart-home/matter-1-6-explained',
       inLanguage: 'ko',

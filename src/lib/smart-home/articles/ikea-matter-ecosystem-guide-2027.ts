@@ -7,16 +7,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-en.webp',
-    title: "IKEA's Matter Ecosystem: Complete Guide (2027)",
-    seoTitle: 'IKEA Matter Ecosystem Guide (2027)',
+    title: "IKEA's Matter Ecosystem: Complete Guide (2026)",
+    seoTitle: 'IKEA Matter Ecosystem Guide (2026)',
     // Verified 2026-07-16 against IKEA's own US product listing (ikea.com/us/en/cat/smart-home-products-36812/)
     // and Home Assistant's own product page (home-assistant.io/green/) for the price comparison.
     intro:
       "IKEA sells a Matter-compatible smart home lineup — the DIRIGERA hub ($119.99), plus sensors and lighting — positioned as a lower-cost entry point to local-first smart home control compared to dedicated hub appliances. This guide explains what the ecosystem is for and how it compares to other hub options already covered on this site.",
     metaDescription:
-      "IKEA's Matter smart home lineup in 2027: the DIRIGERA hub, sensors, and lighting as a budget entry point to local control.",
+      "IKEA's Matter smart home lineup in 2026: the DIRIGERA hub, sensors, and lighting as a budget entry point to local control.",
     twitterDescription:
       "IKEA's Matter-compatible smart home products as a budget entry point to local control, compared to Home Assistant Green and other hub options.",
     readTime: '6 min read',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: "IKEA's Matter Ecosystem: Complete Guide (2027)",
+      headline: "IKEA's Matter Ecosystem: Complete Guide (2026)",
       description: "IKEA's Matter smart home lineup: hub, sensors, and lighting as a budget entry point to local control.",
       url: 'https://www.promptquorum.com/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'en',
@@ -156,14 +156,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-de.webp',
-    title: 'Das Matter-Ökosystem von IKEA: Kompletter Leitfaden (2027)',
-    seoTitle: 'IKEA-Matter-Ökosystem-Leitfaden (2027)',
+    title: 'Das Matter-Ökosystem von IKEA: Kompletter Leitfaden (2026)',
+    seoTitle: 'IKEA-Matter-Ökosystem-Leitfaden (2026)',
     intro:
       'IKEA verkauft eine Matter-kompatible Smart-Home-Produktreihe — den DIRIGERA-Hub ($119.99), plus Sensoren und Beleuchtung — positioniert als kostengünstigerer Einstiegspunkt in lokal-first Smart-Home-Steuerung im Vergleich zu dedizierten Hub-Geräten. Dieser Leitfaden erklärt, wofür das Ökosystem gedacht ist und wie es im Vergleich zu anderen bereits auf dieser Website behandelten Hub-Optionen abschneidet.',
     metaDescription:
-      'Die Matter-Smart-Home-Produktreihe von IKEA in 2027: der DIRIGERA-Hub, Sensoren und Beleuchtung als preisgünstiger Einstieg in die lokale Steuerung.',
+      'Die Matter-Smart-Home-Produktreihe von IKEA in 2026: der DIRIGERA-Hub, Sensoren und Beleuchtung als preisgünstiger Einstieg in die lokale Steuerung.',
     twitterDescription:
       'Die Matter-kompatiblen Smart-Home-Produkte von IKEA als preisgünstiger Einstieg in die lokale Steuerung, im Vergleich zu Home Assistant Green und anderen Hub-Optionen.',
     readTime: '6 Min. Lesezeit',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Das Matter-Ökosystem von IKEA: Kompletter Leitfaden (2027)',
+      headline: 'Das Matter-Ökosystem von IKEA: Kompletter Leitfaden (2026)',
       description: 'Die Matter-Smart-Home-Produktreihe von IKEA: Hub, Sensoren und Beleuchtung als preisgünstiger Einstieg in die lokale Steuerung.',
       url: 'https://www.promptquorum.com/de/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'de',
@@ -303,14 +303,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-fr.webp',
-    title: "L'écosystème Matter d'IKEA : guide complet (2027)",
-    seoTitle: "Guide de l'écosystème Matter IKEA (2027)",
+    title: "L'écosystème Matter d'IKEA : guide complet (2026)",
+    seoTitle: "Guide de l'écosystème Matter IKEA (2026)",
     intro:
       "IKEA vend une gamme de produits de maison connectée compatibles Matter — le hub DIRIGERA (119,99 $), plus des capteurs et de l'éclairage — positionnée comme un point d'entrée moins coûteux vers le contrôle local que les appareils hub dédiés. Ce guide explique à quoi sert cet écosystème et comment il se compare aux autres options de hub déjà couvertes sur ce site.",
     metaDescription:
-      "La gamme Matter de maison connectée d'IKEA en 2027 : le hub DIRIGERA, les capteurs et l'éclairage comme point d'entrée économique vers le contrôle local.",
+      "La gamme Matter de maison connectée d'IKEA en 2026 : le hub DIRIGERA, les capteurs et l'éclairage comme point d'entrée économique vers le contrôle local.",
     twitterDescription:
       "Les produits de maison connectée compatibles Matter d'IKEA comme point d'entrée économique vers le contrôle local, comparés à Home Assistant Green et d'autres options de hub.",
     readTime: '6 min de lecture',
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: "L'écosystème Matter d'IKEA : guide complet (2027)",
+      headline: "L'écosystème Matter d'IKEA : guide complet (2026)",
       description: "La gamme Matter de maison connectée d'IKEA : hub, capteurs et éclairage comme point d'entrée économique vers le contrôle local.",
       url: 'https://www.promptquorum.com/fr/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'fr',
@@ -450,14 +450,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ja.webp',
-    title: 'IKEAのMatterエコシステム：完全ガイド（2027年）',
-    seoTitle: 'IKEA Matterエコシステムガイド（2027年）',
+    title: 'IKEAのMatterエコシステム：完全ガイド（2026年）',
+    seoTitle: 'IKEA Matterエコシステムガイド（2026年）',
     intro:
       'IKEAはMatter互換のスマートホーム製品ライン — DIRIGERAハブ（$119.99）に加え、センサーと照明 — を、専用ハブ機器と比較してより低コストなローカルファーストのスマートホーム制御への入り口として位置づけて販売しています。このガイドでは、このエコシステムが何のためのものか、そしてこのサイトですでに扱っている他のハブの選択肢とどう比較されるかを説明します。',
     metaDescription:
-      '2027年のIKEAのMatterスマートホーム製品ライン：DIRIGERAハブ、センサー、照明を、ローカル制御への低予算な入り口として。',
+      '2026年のIKEAのMatterスマートホーム製品ライン：DIRIGERAハブ、センサー、照明を、ローカル制御への低予算な入り口として。',
     twitterDescription:
       'IKEAのMatter互換スマートホーム製品を、ローカル制御への低予算な入り口として、Home Assistant Greenや他のハブの選択肢と比較。',
     readTime: '読了時間6分',
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'IKEAのMatterエコシステム：完全ガイド（2027年）',
+      headline: 'IKEAのMatterエコシステム：完全ガイド（2026年）',
       description: 'IKEAのMatterスマートホーム製品ライン：ハブ、センサー、照明を、ローカル制御への低予算な入り口として。',
       url: 'https://www.promptquorum.com/ja/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'ja',
@@ -597,14 +597,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-zh.webp',
-    title: '宜家的Matter生态系统：完整指南（2027年）',
-    seoTitle: '宜家Matter生态系统指南（2027年）',
+    title: '宜家的Matter生态系统：完整指南（2026年）',
+    seoTitle: '宜家Matter生态系统指南（2026年）',
     intro:
       '宜家销售一系列兼容Matter的智能家居产品——DIRIGERA中枢（$119.99），以及传感器和照明——相较于专用中枢设备，将其定位为进入本地优先智能家居控制的一个更低成本入门选择。本指南解释该生态系统的用途，以及它与本站已介绍的其他中枢选择相比如何。',
     metaDescription:
-      '2027年宜家的Matter智能家居产品线：DIRIGERA中枢、传感器和照明，作为进入本地控制的经济实惠入门选择。',
+      '2026年宜家的Matter智能家居产品线：DIRIGERA中枢、传感器和照明，作为进入本地控制的经济实惠入门选择。',
     twitterDescription:
       '宜家兼容Matter的智能家居产品作为进入本地控制的经济实惠入门选择，与Home Assistant Green及其他中枢选项对比。',
     readTime: '阅读需6分钟',
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '宜家的Matter生态系统：完整指南（2027年）',
+      headline: '宜家的Matter生态系统：完整指南（2026年）',
       description: '宜家的Matter智能家居产品线：中枢、传感器和照明，作为进入本地控制的经济实惠入门选择。',
       url: 'https://www.promptquorum.com/zh/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'zh',
@@ -744,14 +744,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-es.webp',
-    title: 'El ecosistema Matter de IKEA: guía completa (2027)',
-    seoTitle: 'Guía del ecosistema Matter de IKEA (2027)',
+    title: 'El ecosistema Matter de IKEA: guía completa (2026)',
+    seoTitle: 'Guía del ecosistema Matter de IKEA (2026)',
     intro:
       'IKEA vende una línea de productos de hogar inteligente compatibles con Matter — el hub DIRIGERA ($119.99), además de sensores e iluminación — posicionada como un punto de entrada de menor costo al control local del hogar inteligente en comparación con los electrodomésticos hub dedicados. Esta guía explica para qué sirve el ecosistema y cómo se compara con otras opciones de hub ya cubiertas en este sitio.',
     metaDescription:
-      'La línea de hogar inteligente Matter de IKEA en 2027: el hub DIRIGERA, sensores e iluminación como punto de entrada económico al control local.',
+      'La línea de hogar inteligente Matter de IKEA en 2026: el hub DIRIGERA, sensores e iluminación como punto de entrada económico al control local.',
     twitterDescription:
       'Los productos de hogar inteligente compatibles con Matter de IKEA como punto de entrada económico al control local, comparados con Home Assistant Green y otras opciones de hub.',
     readTime: '6 min de lectura',
@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'El ecosistema Matter de IKEA: guía completa (2027)',
+      headline: 'El ecosistema Matter de IKEA: guía completa (2026)',
       description: 'La línea de hogar inteligente Matter de IKEA: hub, sensores e iluminación como punto de entrada económico al control local.',
       url: 'https://www.promptquorum.com/es/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'es',
@@ -891,14 +891,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-pt.webp',
-    title: 'O ecossistema Matter da IKEA: guia completo (2027)',
-    seoTitle: 'Guia do ecossistema Matter da IKEA (2027)',
+    title: 'O ecossistema Matter da IKEA: guia completo (2026)',
+    seoTitle: 'Guia do ecossistema Matter da IKEA (2026)',
     intro:
       'A IKEA vende uma linha de produtos de casa inteligente compatíveis com Matter — o hub DIRIGERA ($119.99), além de sensores e iluminação — posicionada como um ponto de entrada de menor custo para o controle local de casa inteligente em comparação com eletrodomésticos hub dedicados. Este guia explica para que serve o ecossistema e como ele se compara a outras opções de hub já abordadas neste site.',
     metaDescription:
-      'A linha de casa inteligente Matter da IKEA em 2027: o hub DIRIGERA, sensores e iluminação como ponto de entrada econômico para o controle local.',
+      'A linha de casa inteligente Matter da IKEA em 2026: o hub DIRIGERA, sensores e iluminação como ponto de entrada econômico para o controle local.',
     twitterDescription:
       'Os produtos de casa inteligente compatíveis com Matter da IKEA como ponto de entrada econômico para o controle local, comparados ao Home Assistant Green e outras opções de hub.',
     readTime: '6 min de leitura',
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'O ecossistema Matter da IKEA: guia completo (2027)',
+      headline: 'O ecossistema Matter da IKEA: guia completo (2026)',
       description: 'A linha de casa inteligente Matter da IKEA: hub, sensores e iluminação como ponto de entrada econômico para o controle local.',
       url: 'https://www.promptquorum.com/pt/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'pt-BR',
@@ -1038,14 +1038,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ar.webp',
-    title: 'نظام IKEA البيئي لـ Matter: دليل شامل (⁨2027⁩)',
-    seoTitle: 'دليل نظام IKEA البيئي لـ Matter (⁨2027⁩)',
+    title: 'نظام IKEA البيئي لـ Matter: دليل شامل (⁨2026⁩)',
+    seoTitle: 'دليل نظام IKEA البيئي لـ Matter (⁨2026⁩)',
     intro:
       'تبيع IKEA مجموعة منتجات منزل ذكي متوافقة مع Matter — محور DIRIGERA (119.99 دولارًا)، بالإضافة إلى أجهزة استشعار وإضاءة — يتم تسويقها كنقطة دخول أقل تكلفة للتحكم المحلي في المنزل الذكي مقارنة بأجهزة المحاور المخصصة. يشرح هذا الدليل الغرض من هذا النظام البيئي وكيف يقارَن بخيارات المحاور الأخرى التي سبق تناولها على هذا الموقع.',
     metaDescription:
-      'مجموعة منتجات المنزل الذكي Matter من IKEA في 2027: محور DIRIGERA، وأجهزة الاستشعار، والإضاءة كنقطة دخول اقتصادية للتحكم المحلي.',
+      'مجموعة منتجات المنزل الذكي Matter من IKEA في 2026: محور DIRIGERA، وأجهزة الاستشعار، والإضاءة كنقطة دخول اقتصادية للتحكم المحلي.',
     twitterDescription:
       'منتجات المنزل الذكي المتوافقة مع Matter من IKEA كنقطة دخول اقتصادية للتحكم المحلي، مقارنة بـ Home Assistant Green وخيارات المحاور الأخرى.',
     readTime: '6 دقائق للقراءة',
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'نظام IKEA البيئي لـ Matter: دليل شامل (⁨2027⁩)',
+      headline: 'نظام IKEA البيئي لـ Matter: دليل شامل (⁨2026⁩)',
       description: 'مجموعة منتجات المنزل الذكي Matter من IKEA: المحور، وأجهزة الاستشعار، والإضاءة كنقطة دخول اقتصادية للتحكم المحلي.',
       url: 'https://www.promptquorum.com/ar/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'ar',
@@ -1185,14 +1185,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     publishDate: '2026-07-16',
     dateModified: '2026-07-16',
     next_refresh_due: '2027-01-16',
-    theme: '2027 Protocols & Regulation',
+    theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ko.webp',
-    title: 'IKEA의 Matter 생태계: 완전 가이드 (2027년)',
-    seoTitle: 'IKEA Matter 생태계 가이드 (2027년)',
+    title: 'IKEA의 Matter 생태계: 완전 가이드 (2026년)',
+    seoTitle: 'IKEA Matter 생태계 가이드 (2026년)',
     intro:
       'IKEA는 Matter 호환 스마트홈 제품군 — DIRIGERA 허브($119.99)와 센서 및 조명 — 을 전용 허브 기기에 비해 더 저렴한 로컬 우선 스마트홈 제어 진입점으로 포지셔닝하여 판매합니다. 이 가이드는 이 생태계가 무엇을 위한 것인지, 그리고 이 사이트에서 이미 다룬 다른 허브 옵션들과 어떻게 비교되는지 설명합니다.',
     metaDescription:
-      '2027년 IKEA의 Matter 스마트홈 제품군: DIRIGERA 허브, 센서, 조명을 로컬 제어로의 예산 진입점으로.',
+      '2026년 IKEA의 Matter 스마트홈 제품군: DIRIGERA 허브, 센서, 조명을 로컬 제어로의 예산 진입점으로.',
     twitterDescription:
       'IKEA의 Matter 호환 스마트홈 제품을 로컬 제어로의 예산 진입점으로, Home Assistant Green 및 기타 허브 옵션과 비교.',
     readTime: '6분 소요',
@@ -1303,7 +1303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'IKEA의 Matter 생태계: 완전 가이드 (2027년)',
+      headline: 'IKEA의 Matter 생태계: 완전 가이드 (2026년)',
       description: 'IKEA의 Matter 스마트홈 제품군: 허브, 센서, 조명을 로컬 제어로의 예산 진입점으로.',
       url: 'https://www.promptquorum.com/ko/smart-home/ikea-matter-ecosystem-guide-2027',
       inLanguage: 'ko',

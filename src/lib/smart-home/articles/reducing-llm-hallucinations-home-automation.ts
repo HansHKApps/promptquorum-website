@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-en.webp',
-    title: 'Reducing LLM Hallucinations in Home Automation (2027)',
-    seoTitle: 'Reducing LLM Hallucinations in Home Automation (2027)',
+    title: 'Reducing LLM Hallucinations in Home Automation (2026)',
+    seoTitle: 'Reducing LLM Hallucinations in Home Automation (2026)',
     intro:
       'An LLM hallucination in home automation looks different from a hallucinated fact in a chatbot: it means triggering the wrong device, misreading a sensor\'s actual state, or referencing an entity that doesn\'t exist in your Home Assistant setup. This article covers the smart-home-specific failure modes and the grounding techniques — function-calling schemas and entity-list constraints — that reduce them, building on general hallucination-reduction advice already covered elsewhere on this site.',
     metaDescription:
@@ -140,7 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Reducing LLM Hallucinations in Home Automation (2027)',
+      headline: 'Reducing LLM Hallucinations in Home Automation (2026)',
       description: 'Reducing LLM hallucinations in home automation: why an AI triggers the wrong device or invents entities, and the grounding techniques that fix it.',
       url: 'https://www.promptquorum.com/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'en',
@@ -172,8 +172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-de.webp',
-    title: 'LLM-Halluzinationen in der Hausautomation reduzieren (2027)',
-    seoTitle: 'LLM-Halluzinationen in der Hausautomation reduzieren (2027)',
+    title: 'LLM-Halluzinationen in der Hausautomation reduzieren (2026)',
+    seoTitle: 'LLM-Halluzinationen in der Hausautomation reduzieren (2026)',
     intro:
       'Eine LLM-Halluzination in der Hausautomation sieht anders aus als eine halluzinierte Tatsache in einem Chatbot: Sie bedeutet, dass das falsche Gerät ausgelöst wird, der tatsächliche Zustand eines Sensors falsch gelesen wird oder eine Entität referenziert wird, die in deiner Home-Assistant-Konfiguration gar nicht existiert. Dieser Artikel behandelt die Smart-Home-spezifischen Fehlermodi und die Grounding-Techniken — Function-Calling-Schemas und Entitätslisten-Beschränkungen —, die sie reduzieren, aufbauend auf den allgemeinen Hinweisen zur Halluzinationsreduktion, die an anderer Stelle auf dieser Website bereits behandelt werden.',
     metaDescription:
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'LLM-Halluzinationen in der Hausautomation reduzieren (2027)',
+      headline: 'LLM-Halluzinationen in der Hausautomation reduzieren (2026)',
       description: 'LLM-Halluzinationen in der Hausautomation reduzieren: Warum eine KI das falsche Gerät auslöst oder Entitäten erfindet, und die Grounding-Techniken, die das beheben.',
       url: 'https://www.promptquorum.com/de/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'de',
@@ -334,8 +334,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-fr.webp',
-    title: "Réduire les hallucinations LLM dans la domotique (2027)",
-    seoTitle: "Réduire les hallucinations LLM dans la domotique (2027)",
+    title: "Réduire les hallucinations LLM dans la domotique (2026)",
+    seoTitle: "Réduire les hallucinations LLM dans la domotique (2026)",
     intro:
       "Une hallucination LLM en domotique ne ressemble pas à un fait halluciné par un chatbot : elle se traduit par le déclenchement du mauvais appareil, une mauvaise lecture de l'état réel d'un capteur, ou la référence à une entité qui n'existe pas dans votre installation Home Assistant. Cet article couvre les modes de défaillance propres à la maison connectée et les techniques de grounding — schémas de function calling et contraintes de liste d'entités — qui les réduisent, en s'appuyant sur les conseils généraux de réduction des hallucinations déjà couverts ailleurs sur ce site.",
     metaDescription:
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: "Réduire les hallucinations LLM dans la domotique (2027)",
+      headline: "Réduire les hallucinations LLM dans la domotique (2026)",
       description: "Réduire les hallucinations LLM en domotique : pourquoi une IA déclenche le mauvais appareil ou invente des entités, et les techniques de grounding qui corrigent cela.",
       url: 'https://www.promptquorum.com/fr/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'fr',
@@ -496,8 +496,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ja.webp',
-    title: 'ホームオートメーションにおけるLLM幻覚の低減（2027年）',
-    seoTitle: 'ホームオートメーションにおけるLLM幻覚の低減（2027年）',
+    title: 'ホームオートメーションにおけるLLM幻覚の低減（2026年）',
+    seoTitle: 'ホームオートメーションにおけるLLM幻覚の低減（2026年）',
     intro:
       'ホームオートメーションにおけるLLM幻覚は、チャットボットの事実に関する幻覚とは様子が異なります。それは、間違ったデバイスを作動させる、センサーの実際の状態を誤って読み取る、あるいはHome Assistantのセットアップに存在しないエンティティを参照することを意味します。この記事では、スマートホーム特有の失敗モードと、それを減らすためのグラウンディング技術（関数呼び出しスキーマとエンティティリストによる制約）を扱います。これは、このサイトの他の箇所で既に扱われている一般的な幻覚低減のアドバイスを土台にしています。',
     metaDescription:
@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'ホームオートメーションにおけるLLM幻覚の低減（2027年）',
+      headline: 'ホームオートメーションにおけるLLM幻覚の低減（2026年）',
       description: 'ホームオートメーションにおけるLLM幻覚の低減：AIが間違ったデバイスを作動させたりエンティティを作り出したりする理由と、それを解決するグラウンディング技術。',
       url: 'https://www.promptquorum.com/ja/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'ja',
@@ -658,8 +658,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-zh.webp',
-    title: '减少家庭自动化中的LLM幻觉（2027年）',
-    seoTitle: '减少家庭自动化中的LLM幻觉（2027年）',
+    title: '减少家庭自动化中的LLM幻觉（2026年）',
+    seoTitle: '减少家庭自动化中的LLM幻觉（2026年）',
     intro:
       '家庭自动化中的LLM幻觉与聊天机器人中的事实幻觉表现不同：它意味着触发了错误的设备、误读了传感器的实际状态，或引用了你的Home Assistant设置中并不存在的实体。本文介绍智能家居特有的失败模式，以及减少这些问题的锚定（grounding）技术——函数调用架构和实体列表约束，并以本网站其他地方已经介绍过的通用幻觉减少建议为基础。',
     metaDescription:
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '减少家庭自动化中的LLM幻觉（2027年）',
+      headline: '减少家庭自动化中的LLM幻觉（2026年）',
       description: '减少家庭自动化中的LLM幻觉：为什么AI会触发错误的设备或凭空捏造实体，以及能解决这一问题的锚定技术。',
       url: 'https://www.promptquorum.com/zh/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'zh',
@@ -820,8 +820,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-es.webp',
-    title: 'Reducir las alucinaciones de LLM en la domótica (2027)',
-    seoTitle: 'Reducir las alucinaciones de LLM en la domótica (2027)',
+    title: 'Reducir las alucinaciones de LLM en la domótica (2026)',
+    seoTitle: 'Reducir las alucinaciones de LLM en la domótica (2026)',
     intro:
       'Una alucinación de LLM en la domótica se ve diferente de un hecho alucinado por un chatbot: significa activar el dispositivo equivocado, leer mal el estado real de un sensor, o hacer referencia a una entidad que no existe en tu configuración de Home Assistant. Este artículo cubre los modos de fallo específicos del hogar inteligente y las técnicas de grounding — esquemas de function calling y restricciones de lista de entidades — que los reducen, apoyándose en los consejos generales de reducción de alucinaciones ya cubiertos en otra parte de este sitio.',
     metaDescription:
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Reducir las alucinaciones de LLM en la domótica (2027)',
+      headline: 'Reducir las alucinaciones de LLM en la domótica (2026)',
       description: 'Reducir las alucinaciones de LLM en la domótica: por qué una IA activa el dispositivo equivocado o inventa entidades, y las técnicas de grounding que lo solucionan.',
       url: 'https://www.promptquorum.com/es/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'es',
@@ -982,8 +982,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-pt.webp',
-    title: 'Reduzindo alucinações de LLM na automação residencial (2027)',
-    seoTitle: 'Reduzindo alucinações de LLM na automação residencial (2027)',
+    title: 'Reduzindo alucinações de LLM na automação residencial (2026)',
+    seoTitle: 'Reduzindo alucinações de LLM na automação residencial (2026)',
     intro:
       'Uma alucinação de LLM na automação residencial é diferente de um fato alucinado em um chatbot: significa acionar o dispositivo errado, ler incorretamente o estado real de um sensor, ou referenciar uma entidade que não existe na sua configuração do Home Assistant. Este artigo aborda os modos de falha específicos da casa inteligente e as técnicas de grounding — esquemas de function calling e restrições de lista de entidades — que os reduzem, com base nas orientações gerais de redução de alucinações já abordadas em outras partes deste site.',
     metaDescription:
@@ -1112,7 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Reduzindo alucinações de LLM na automação residencial (2027)',
+      headline: 'Reduzindo alucinações de LLM na automação residencial (2026)',
       description: 'Reduzindo alucinações de LLM na automação residencial: por que uma IA aciona o dispositivo errado ou inventa entidades, e as técnicas de grounding que resolvem isso.',
       url: 'https://www.promptquorum.com/pt/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'pt-BR',
@@ -1144,8 +1144,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ar.webp',
-    title: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2027)',
-    seoTitle: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2027)',
+    title: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2026)',
+    seoTitle: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2026)',
     intro:
       'تبدو هلوسة نموذج اللغة الكبير في أتمتة المنزل مختلفة عن هلوسة حقيقة في روبوت محادثة: فهي تعني تشغيل الجهاز الخطأ، أو قراءة الحالة الفعلية لمستشعر بشكل خاطئ، أو الإشارة إلى كيان غير موجود في إعداد Home Assistant الخاص بك. يتناول هذا المقال أنماط الفشل الخاصة بالمنزل الذكي وتقنيات التأصيل الواقعي (grounding) — مخططات استدعاء الوظائف وقيود قائمة الكيانات — التي تقلل منها، بناءً على نصائح تقليل الهلوسة العامة التي سبق تناولها في مكان آخر على هذا الموقع.',
     metaDescription:
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2027)',
+      headline: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل (2026)',
       description: 'تقليل هلوسة نماذج اللغة الكبيرة في أتمتة المنزل: لماذا يشغّل الذكاء الاصطناعي الجهاز الخطأ أو يخترع كيانات، وتقنيات التأصيل الواقعي التي تعالج ذلك.',
       url: 'https://www.promptquorum.com/ar/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'ar',
@@ -1306,8 +1306,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: 'Advanced Local AI',
     heroImage: '/images/reducing-llm-hallucinations-home-automation-overview-hero-ko.webp',
-    title: '홈 자동화에서 LLM 환각 줄이기 (2027)',
-    seoTitle: '홈 자동화에서 LLM 환각 줄이기 (2027)',
+    title: '홈 자동화에서 LLM 환각 줄이기 (2026)',
+    seoTitle: '홈 자동화에서 LLM 환각 줄이기 (2026)',
     intro:
       '홈 자동화에서의 LLM 환각은 챗봇에서 사실을 환각하는 것과는 다른 모습입니다. 이는 잘못된 기기를 작동시키거나, 센서의 실제 상태를 잘못 읽거나, Home Assistant 설정에 존재하지 않는 엔티티를 참조하는 것을 의미합니다. 이 글에서는 스마트홈 특유의 실패 모드와 이를 줄이는 그라운딩 기법 — 함수 호출 스키마와 엔티티 목록 제약 — 을 다루며, 이 사이트의 다른 곳에서 이미 다룬 일반적인 환각 감소 조언을 기반으로 합니다.',
     metaDescription:
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: '홈 자동화에서 LLM 환각 줄이기 (2027)',
+      headline: '홈 자동화에서 LLM 환각 줄이기 (2026)',
       description: '홈 자동화에서 LLM 환각 줄이기: AI가 잘못된 기기를 작동시키거나 엔티티를 지어내는 이유와, 이를 해결하는 그라운딩 기법.',
       url: 'https://www.promptquorum.com/ko/smart-home/reducing-llm-hallucinations-home-automation',
       inLanguage: 'ko',

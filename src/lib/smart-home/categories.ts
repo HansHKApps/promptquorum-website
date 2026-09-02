@@ -92,8 +92,8 @@ export const SMART_HOME_CATEGORIES: SmartHomeCategory[] = [
   {
     id: 'protocols-regulation-2027',
     slug: 'protocols-regulation-2027',
-    titleEn: '2027 Protocols & Regulation',
-    descriptionEn: 'What changed in 2027: Matter 1.6, Thread 1.4 and Wi-Fi 7 networking, the EU Data Act, and the IKEA Matter ecosystem.',
+    titleEn: '2026 Protocols & Regulation',
+    descriptionEn: 'What changed in 2026: Matter 1.6, Thread 1.4 and Wi-Fi 7 networking, the EU Data Act, and the IKEA Matter ecosystem.',
     articleSlugs: [
       'matter-1-6-explained',
       'thread-14-wifi-7-routers-guide',
