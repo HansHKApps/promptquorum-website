@@ -884,6 +884,29 @@
         }
       ]
     },
+    "lobechat-bigagi-nextchat-pageassist-chatbox-compared": {
+      "dateModified": "2026-09-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": [
+        {
+          "url": "/images/lobechat-bigagi-nextchat-pageassist-chatbox-compared-hero-en.webp",
+          "title": "Five AI chat-interface apps, compared by license, platform, and price."
+        }
+      ]
+    },
     "text-generation-webui-vs-vllm-vs-llamacpp": {
       "dateModified": "2026-08-29",
       "lastFactChecked": null,
