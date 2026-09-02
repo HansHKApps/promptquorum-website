@@ -176,6 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Security & Privacy Checklist](/local-llms/local-llm-security-privacy-checklist) -- Compliance verification steps.',
             '[SOC 2 & ISO 27001 Readiness for Self-Hosted LLM Deployments](/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- deep dive into Trust Services Criteria and Annex A controls beyond this GDPR/HIPAA/SOC2 overview.',
             '[Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- Schrems II exposure and a multinational deployment decision framework for this GDPR requirement specifically.',
+            '[Local LLM Licensing Guide for Businesses (2026)](/local-llms/local-llm-commercial-license-guide-business) -- commercial license terms for Llama, Qwen, Mistral, and Gemma, a compliance question distinct from but adjacent to GDPR/HIPAA/SOC2.',
             '[Conformidade de LLMs Locais para Empresas (Português)](/pt/local-llms/enterprise-compliance-local-llms) — versão em português deste guia',
           ],
         },
@@ -453,6 +454,7 @@ schema: {
             '[Lista de verificación de seguridad y privacidad de LLMs locales](/es/local-llms/local-llm-security-privacy-checklist) -- Pasos de verificación del cumplimiento.',
             '[Preparación SOC 2 e ISO 27001 para LLMs autoalojados](/es/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- análisis profundo de los Trust Services Criteria y los controles Annex A.',
             '[Residencia de datos e IA soberana: despliegue empresarial de LLM bajo RGPD/UE](/es/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- exposición a Schrems II y marco de decisión para despliegues multinacionales.',
+            '[Guía de licencias de LLM locales para empresas (2026)](/es/local-llms/local-llm-commercial-license-guide-business) -- condiciones de licencia comercial de Llama, Qwen, Mistral y Gemma, una cuestión de cumplimiento distinta pero relacionada con RGPD/HIPAA/SOC2.',
           ],
         },
         sources: {
@@ -729,6 +731,7 @@ schema: {
             '[قائمة تحقق أمن وخصوصية نماذج LLM المحلية](/ar/local-llms/local-llm-security-privacy-checklist) -- خطوات التحقق من الامتثال.',
             '[الاستعداد لتدقيق SOC 2 وISO 27001 لنماذج LLM المستضافة ذاتيًا](/ar/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- تعمّق في معايير Trust Services وضوابط Annex A.',
             '[إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي وفق اللائحة العامة](/ar/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- التعرض لمخاطر Schrems II وإطار قرار للنشر متعدد الجنسيات.',
+            '[دليل تراخيص نماذج اللغة المحلية للشركات (2026)](/ar/local-llms/local-llm-commercial-license-guide-business) -- شروط الترخيص التجاري لـLlama وQwen وMistral وGemma، مسألة امتثال منفصلة لكنها مرتبطة بـGDPR/HIPAA/SOC2.',
           ],
         },
         sources: {
@@ -975,6 +978,7 @@ schema: {
             '[Por que empresas usam LLMs locais](/pt/local-llms/why-enterprises-use-local-llms) -- Caso de negócio.',
             '[SOC 2 e ISO 27001: preparação de auditoria para LLMs auto-hospedados](/pt/local-llms/soc2-iso27001-self-hosted-llm-compliance) -- aprofundamento nos Trust Services Criteria e controles Annex A.',
             '[Residência de dados e IA soberana: implantação empresarial de LLM sob GDPR/UE](/pt/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) -- exposição ao Schrems II e um framework de decisão para implantações multinacionais.',
+            '[Guia de licenças de LLM locais para empresas (2026)](/pt/local-llms/local-llm-commercial-license-guide-business) -- condições de licença comercial de Llama, Qwen, Mistral e Gemma, uma questão de compliance distinta mas relacionada a GDPR/HIPAA/SOC2.',
           ],
         },
         sources: {

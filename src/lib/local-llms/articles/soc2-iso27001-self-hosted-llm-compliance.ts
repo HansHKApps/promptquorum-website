@@ -314,6 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Scaling Local LLMs for the Enterprise](/local-llms/scaling-local-llms-enterprise) — see how audit-readiness controls hold up as inference load grows',
           '[Enterprise GPU Server Buying Guide 2026](/local-llms/enterprise-gpu-server-buying-guide-2026) — check hardware options for a self-hosted, network-segmented inference server',
           '[Data Residency & Sovereign AI: EU/GDPR Enterprise LLM Deployment](/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — go deeper on the EU/GDPR cross-border transfer question that sits alongside SOC 2 and ISO 27001 readiness',
+          '[Local LLM Licensing Guide for Businesses (2026)](/local-llms/local-llm-commercial-license-guide-business) — the vendor risk section above flags licence review as a control; see the full commercial license breakdown for Llama, Qwen, Mistral, and Gemma',
         ],
       },
       sources: {
@@ -646,6 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Scaling Local LLMs für Enterprises](/de/local-llms/scaling-local-llms-enterprise) — wie Audit-Bereitschafts-Kontrollen bei wachsender Inference-Last standhalten',
           '[Enterprise GPU Server Kaufberatung 2026](/de/local-llms/enterprise-gpu-server-buying-guide-2026) — Hardware-Optionen für einen selbst gehosteten, netzwerksegmentierten Inference-Server',
           '[Datenresidenz & souveräne KI: DSGVO-konforme Enterprise-LLM-Bereitstellung](/de/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — vertiefende Betrachtung der grenzüberschreitenden DSGVO-Übermittlungsfrage neben SOC 2 und ISO 27001',
+          '[Lizenzleitfaden für lokale LLMs im Unternehmen (2026)](/de/local-llms/local-llm-commercial-license-guide-business) — die Lizenzprüfung aus dem Abschnitt zum Lieferantenrisiko oben, vertieft für Llama, Qwen, Mistral und Gemma',
         ],
       },
       sources: {
@@ -966,6 +968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Faire évoluer les LLM locaux pour l\'entreprise](/fr/local-llms/scaling-local-llms-enterprise) — voyez comment les contrôles de préparation à l\'audit tiennent quand la charge d\'inférence augmente',
           '[Guide d\'achat serveur GPU entreprise 2026](/fr/local-llms/enterprise-gpu-server-buying-guide-2026) — vérifiez les options matérielles pour un serveur d\'inférence auto-hébergé et segmenté',
           '[Résidence des données et IA souveraine : déploiement de LLM d\'entreprise sous RGPD/UE](/fr/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — approfondissez la question du transfert transfrontalier RGPD aux côtés de SOC 2 et ISO 27001',
+          '[Guide des licences LLM locaux pour entreprises (2026)](/fr/local-llms/local-llm-commercial-license-guide-business) — approfondissez la revue de licence mentionnée dans la section risque fournisseur ci-dessus, pour Llama, Qwen, Mistral et Gemma',
         ],
       },
       sources: {
@@ -1285,6 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[エンタープライズ向けローカルLLMのスケーリング](/ja/local-llms/scaling-local-llms-enterprise) — 推論負荷増大時に監査対応統制がどう維持されるか確認する',
           '[エンタープライズGPUサーバー購入ガイド2026](/ja/local-llms/enterprise-gpu-server-buying-guide-2026) — セルフホストでネットワークセグメント化された推論サーバー向けハードウェア選択肢を確認する',
           '[データレジデンシーと主権AI:EU/GDPR企業向けLLM導入ガイド](/ja/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — SOC 2・ISO 27001と並ぶGDPR越境移転の論点を深掘りする',
+          '[企業向けローカルLLMライセンスガイド(2026)](/ja/local-llms/local-llm-commercial-license-guide-business) — 上記のベンダーリスクの節で触れたライセンス確認を、Llama・Qwen・Mistral・Gemmaについて詳しく解説する',
         ],
       },
       sources: {
@@ -1604,6 +1608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[面向企业的本地LLM扩展](/zh/local-llms/scaling-local-llms-enterprise) — 查看审计准备控制措施在推理负载增长时如何保持有效',
           '[2026企业GPU服务器购买指南](/zh/local-llms/enterprise-gpu-server-buying-guide-2026) — 查看用于自托管、网络隔离推理服务器的硬件选项',
           '[数据驻留与主权AI：欧盟/GDPR企业级LLM部署指南](/zh/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — 深入了解与SOC 2和ISO 27001并行的GDPR跨境传输问题',
+          '[企业本地LLM商用许可证指南(2026)](/zh/local-llms/local-llm-commercial-license-guide-business) — 深入了解上文供应商风险部分提到的许可证审查,涵盖Llama、Qwen、Mistral和Gemma',
         ],
       },
       sources: {
@@ -1923,6 +1928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Escalar LLMs locales para la empresa](/es/local-llms/scaling-local-llms-enterprise) — vea cómo se mantienen los controles de preparación para auditoría al crecer la carga de inferencia',
           '[Guía de compra de servidores GPU empresariales 2026](/es/local-llms/enterprise-gpu-server-buying-guide-2026) — revise opciones de hardware para un servidor de inferencia autoalojado y segmentado en red',
           '[Residencia de datos e IA soberana: despliegue empresarial de LLM bajo RGPD/UE](/es/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — profundice en la cuestión de transferencia transfronteriza del RGPD junto a SOC 2 e ISO 27001',
+          '[Guía de licencias de LLM locales para empresas (2026)](/es/local-llms/local-llm-commercial-license-guide-business) — profundice en la revisión de licencia mencionada en la sección de riesgo de proveedor, para Llama, Qwen, Mistral y Gemma',
         ],
       },
       sources: {
@@ -2242,6 +2248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Escalando LLMs locais para a empresa](/pt/local-llms/scaling-local-llms-enterprise) — veja como os controles de preparação para auditoria se sustentam com o crescimento da carga de inferência',
           '[Guia de compra de servidor GPU corporativo 2026](/pt/local-llms/enterprise-gpu-server-buying-guide-2026) — verifique opções de hardware para um servidor de inferência auto-hospedado e segmentado na rede',
           '[Residência de dados e IA soberana: implantação empresarial de LLM sob GDPR/UE](/pt/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — aprofunde-se na questão de transferência transfronteiriça do GDPR ao lado de SOC 2 e ISO 27001',
+          '[Guia de licenças de LLM locais para empresas (2026)](/pt/local-llms/local-llm-commercial-license-guide-business) — aprofunde a revisão de licença mencionada na seção de risco de fornecedor acima, para Llama, Qwen, Mistral e Gemma',
         ],
       },
       sources: {
@@ -2561,6 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[توسيع نطاق نماذج LLM المحلية للمؤسسات](/ar/local-llms/scaling-local-llms-enterprise) — اطّلع على كيفية صمود ضوابط الاستعداد للتدقيق مع نمو حِمل الاستدلال',
           '[دليل شراء خادم GPU للمؤسسات لعام 2026](/ar/local-llms/enterprise-gpu-server-buying-guide-2026) — تحقق من خيارات الأجهزة لخادم استدلال مستضاف ذاتيًا ومجزّأ الشبكة',
           '[إقامة البيانات والذكاء الاصطناعي السيادي: نشر LLM المؤسسي وفق اللائحة العامة](/ar/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — تعمّق في مسألة النقل العابر للحدود وفق اللائحة العامة إلى جانب SOC 2 وISO 27001',
+          '[دليل تراخيص نماذج اللغة المحلية للشركات (2026)](/ar/local-llms/local-llm-commercial-license-guide-business) — تعمّق في مراجعة الترخيص المذكورة في قسم مخاطر المورد أعلاه، بالنسبة لـLlama وQwen وMistral وGemma',
         ],
       },
       sources: {
@@ -2880,6 +2888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[엔터프라이즈를 위한 로컬 LLM 확장](/ko/local-llms/scaling-local-llms-enterprise) — 추론 부하가 증가할 때 감사 준비 통제가 어떻게 유지되는지 확인',
           '[2026 엔터프라이즈 GPU 서버 구매 가이드](/ko/local-llms/enterprise-gpu-server-buying-guide-2026) — 셀프호스팅되고 네트워크가 분리된 추론 서버를 위한 하드웨어 옵션 확인',
           '[데이터 레지던시와 주권 AI: EU/GDPR 기업용 LLM 배포 가이드](/ko/local-llms/data-residency-sovereign-ai-eu-gdpr-enterprise) — SOC 2·ISO 27001과 나란히 GDPR 국경 간 이전 문제를 더 깊이 살펴보기',
+          '[기업용 로컬 LLM 라이선스 가이드(2026)](/ko/local-llms/local-llm-commercial-license-guide-business) — 위 공급업체 위험 절에서 언급한 라이선스 검토를 Llama·Qwen·Mistral·Gemma에 대해 자세히 다룸',
         ],
       },
       sources: {

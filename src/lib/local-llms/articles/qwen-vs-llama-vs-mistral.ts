@@ -308,6 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Long-Context Local LLMs 2026](/local-llms/long-context-local-llms) -- 100K+ context models for document analysis',
             '[Chain-of-Thought Prompting](/prompt-engineering/chain-of-thought-prompting) -- Improves reasoning across all three families',
             '[Open Source vs Proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) -- When local models match cloud APIs',
+            '[Local LLM Licensing Guide for Businesses (2026)](/local-llms/local-llm-commercial-license-guide-business) -- Commercial license terms for Llama, Qwen, Mistral, and Gemma before you deploy any of these models',
           ],
         },
         faqSection: {
@@ -841,6 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LLM locales de contexto largo 2026](/es/local-llms/long-context-local-llms) -- Modelos con contexto de 100K+ para análisis de documentos',
             '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) -- Mejora el razonamiento en las tres familias',
             '[LLM de código abierto vs propietarios](/es/prompt-engineering/open-source-vs-proprietary-llms) -- Cuándo los modelos locales igualan a las APIs en la nube',
+            '[Guía de licencias de LLM locales para empresas (2026)](/es/local-llms/local-llm-commercial-license-guide-business) -- Condiciones de licencia comercial de Llama, Qwen, Mistral y Gemma antes de desplegar cualquiera de estos modelos',
           ],
         },
         faqSection: {
@@ -1327,6 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[نماذج LLM المحلية ذات السياق الطويل 2026](/ar/local-llms/long-context-local-llms) -- نماذج بسياق 100K+ لتحليل المستندات',
             '[أمر سلسلة التفكير](/ar/prompt-engineering/chain-of-thought-prompting) -- يحسّن الاستدلال في العائلات الثلاث',
             '[نماذج LLM مفتوحة المصدر مقابل المملوكة](/ar/prompt-engineering/open-source-vs-proprietary-llms) -- متى تساوي النماذج المحلية واجهات API السحابية',
+            '[دليل تراخيص نماذج اللغة المحلية للشركات (2026)](/ar/local-llms/local-llm-commercial-license-guide-business) -- شروط الترخيص التجاري لـLlama وQwen وMistral وGemma قبل نشر أي من هذه النماذج',
           ],
         },
         faqSection: {
@@ -1865,6 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Modelformate verstehen',
             '[Beste Local LLMs für Coding](/local-llms/best-local-llms-for-coding) -- Coding-optimierte Modellvergleiche',
             '[Mehrsprachige Local LLMs](/local-llms/multilingual-local-llms) -- Nicht-englische Modellunterstützung',
+            '[Lizenzleitfaden für lokale LLMs im Unternehmen (2026)](/de/local-llms/local-llm-commercial-license-guide-business) -- Kommerzielle Lizenzbedingungen für Llama, Qwen, Mistral und Gemma vor dem Einsatz',
           ],
         },
         regionalContext: {
@@ -2279,6 +2283,7 @@ schema: {
             '[Prompt Engineering : Guide complet](/fr/prompt-engineering/what-is-prompt-engineering) — Maximiser qualité réponses',
             '[GPT vs Claude vs Gemini : Comment choisir](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — Propriétaire vs local',
             '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — Technique pour améliorer raisonnement',
+            '[Guide des licences LLM locaux pour entreprises (2026)](/fr/local-llms/local-llm-commercial-license-guide-business) — Conditions de licence commerciale de Llama, Qwen, Mistral et Gemma avant déploiement',
             'Techniques avancées prompting — Few-shot, system messages',
             '[Constrained Prompting](/fr/prompt-engineering/constrained-prompting) — Formats structurés, JSON',
           ],
@@ -2630,6 +2635,7 @@ schema: {
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- モデルフォーマットの理解',
             '[コーディング用の最高のLocal LLMs](/local-llms/best-local-llms-for-coding) -- コーディング最適化モデル比較',
             '[多言語Local LLMs](/local-llms/multilingual-local-llms) -- 非英語モデルサポート',
+            '[企業向けローカルLLMライセンスガイド(2026)](/ja/local-llms/local-llm-commercial-license-guide-business) -- 導入前に確認すべきLlama・Qwen・Mistral・Gemmaの商用ライセンス条件',
           ],
         },
         regionalContext: {
@@ -3024,6 +3030,7 @@ schema: {
             '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- 理解模型格式',
             '[最佳本地LLMs用于编码](/local-llms/best-local-llms-for-coding) -- 编码优化的模型对比',
             '[多语言本地LLMs](/local-llms/multilingual-local-llms) -- 非英文模型支持',
+            '[企业本地LLM商用许可证指南(2026)](/zh/local-llms/local-llm-commercial-license-guide-business) -- 部署前须核实的Llama、Qwen、Mistral、Gemma商用许可条款',
           ],
         },
         regionalContext: {
@@ -3498,6 +3505,7 @@ schema: {
             '[2026년 장문 컨텍스트 로컬 LLM](/ko/local-llms/long-context-local-llms) — 문서 분석을 위한 100K+ 컨텍스트 모델',
             '[연쇄적 사고 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 세 패밀리 모두의 추론 개선',
             '[오픈소스 vs 독점 LLM](/ko/prompt-engineering/open-source-vs-proprietary-llms) — 로컬 모델이 클라우드 API를 대체하는 경우',
+            '[기업용 로컬 LLM 라이선스 가이드(2026)](/ko/local-llms/local-llm-commercial-license-guide-business) — 배포 전 확인해야 할 Llama·Qwen·Mistral·Gemma의 상업용 라이선스 조건',
           ],
         },
         faqSection: {
