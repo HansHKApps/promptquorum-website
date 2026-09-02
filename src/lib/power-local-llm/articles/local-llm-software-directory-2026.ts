@@ -347,6 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**Ollama vision models**', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Vision-capable models via Ollama (Llama 3.2 Vision, LLaVA, etc.)', 'License': 'Various' },
           { 'Tool': '**Idefics**', 'Link': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', 'Description': 'Open-source multimodal model for vision and language', 'License': 'Apache 2.0' },
         ],
+        note: 'Deeper guide: [Local Vision Models 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL & Ollama Multimodal Setup](/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -386,7 +387,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**ControlNet**', 'Link': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', 'Description': 'Precise control over image generation with spatial guidance — no releases, push 2024 (2+ yrs)', 'License': 'Apache 2.0', 'Stars': '34.1k'},
           { 'Tool': '**Real-ESRGAN**', 'Link': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', 'Description': 'AI upscaler for high-quality image enlargement — no release since 2022 (4+ yrs)', 'License': 'Apache 2.0', 'Stars': '36.7k'},
           { 'Tool': '**AnimateDiff**', 'Link': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', 'Description': 'Video generation from Stable Diffusion text prompts — no releases, push 2024 (2+ yrs)', 'License': 'Apache 2.0', 'Stars': '12.2k'},
-          { 'Tool': '**DALL-E 3 Local** (via Ollama vision)', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Local image generation via compatible models in Ollama', 'License': 'Various' },
         ],
         note: 'Deeper guide: [AnimateDiff Guide 2026: Animate Any Stable Diffusion Model](/power-local-llm/animatediff-video-generation-guide-2026)',
       },
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Beschreibung': 'Lokales Vision-und-Sprache-Modell', 'Lizenz': 'Apache 2.0' },
           { 'Tool': '**Ollama Vision-Modelle**', 'Link': '[ollama.com](https://ollama.com)', 'Beschreibung': 'Lokales Vision via Ollama (Llama 3.2 Vision, Llava u. a.)', 'Lizenz': 'Verschiedene' },
         ],
-        note: 'Vertiefender Artikel: [Lokalen Sprachassistenten auf dem Smartphone aufbauen](/de/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: 'Vertiefender Artikel: [Lokale Vision-Modelle 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL & Ollama Multimodal-Setup](/de/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -1277,7 +1277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Description': 'Modèle local vision + langage', 'Licence': 'Apache 2.0' },
           { 'Tool': '**Modèles vision Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Vision locale via Ollama (Llama 3.2 Vision, Llava, etc.)', 'Licence': 'Divers' },
         ],
-        note: 'Article approfondi : [Construire un assistant vocal local sur mobile](/fr/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: 'Article approfondi : [Modèles de vision locaux 2026 : LLaVA, Llama 3.2 Vision, Qwen3-VL & configuration Ollama](/fr/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -1724,7 +1724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '概要': 'ローカルビジョン + 言語モデル', 'ライセンス': 'Apache 2.0' },
           { 'Tool': '**Ollamaビジョンモデル**', 'Link': '[ollama.com](https://ollama.com)', '概要': 'Ollamaによるローカルビジョン（Llama 3.2 Vision、Llavaなど）', 'ライセンス': '各種' },
         ],
-        note: '詳細記事：[スマートフォンでローカル音声アシスタントを構築する](/ja/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: '詳細記事：[ローカルビジョンモデル2026：LLaVA・Llama 3.2 Vision・Qwen3-VL & Ollamaマルチモーダルセットアップ](/ja/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -2171,7 +2171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '描述': '本地视觉+语言模型', '许可证': 'Apache 2.0' },
           { 'Tool': '**Ollama视觉模型**', 'Link': '[ollama.com](https://ollama.com)', '描述': '通过Ollama运行的本地视觉模型（Llama 3.2 Vision、Llava等）', '许可证': 'Various' },
         ],
-        note: '深度指南：[在手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: '深度指南：[本地视觉模型2026：LLaVA、Llama 3.2 Vision、Qwen3-VL与Ollama多模态配置](/zh/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -2618,7 +2618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descripción': 'Modelo local de visión + lenguaje', 'Licencia': 'Apache 2.0' },
           { 'Tool': '**Modelos de visión de Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Descripción': 'Visión local mediante Ollama (Llama 3.2 Vision, Llava, etc.)', 'Licencia': 'Varios' },
         ],
-        note: 'Guía más detallada: [Construir un asistente de voz local en tu teléfono](/es/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: 'Guía más detallada: [Modelos de visión locales 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL y configuración multimodal con Ollama](/es/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -3079,7 +3079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', 'Descrição': 'Modelo local de visão + linguagem', 'Licença': 'Apache 2.0' },
           { 'Ferramenta': '**Modelos de visão do Ollama**', 'Link': '[ollama.com](https://ollama.com)', 'Descrição': 'Visão local via Ollama (Llama 3.2 Vision, Llava, etc.)', 'Licença': 'Vários' },
         ],
-        note: 'Guia mais detalhado: [Construa um assistente de voz local no seu telefone](/pt/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: 'Guia mais detalhado: [Modelos de visão locais 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL e configuração multimodal com Ollama](/pt/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -3539,7 +3539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**LLaVA**', 'الرابط': '[llava-vl.github.io](https://llava-vl.github.io)', 'الوصف': 'نموذج رؤية + لغة محلي', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**نماذج رؤية Ollama**', 'الرابط': '[ollama.com](https://ollama.com)', 'الوصف': 'رؤية محلية عبر Ollama (Llama 3.2 Vision وLlava وغيرها)', 'الترخيص': 'متعددة' },
         ],
-        note: 'دليل أكثر تفصيلاً: [بناء مساعد صوتي محلي على هاتفك](/ar/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: 'دليل أكثر تفصيلاً: [نماذج الرؤية المحلية 2026: LLaVA وLlama 3.2 Vision وQwen3-VL وإعداد Ollama متعدد الوسائط](/ar/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
@@ -4004,7 +4004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**LLaVA**', '링크': '[llava-vl.github.io](https://llava-vl.github.io)', '설명': '로컬 비전 + 언어 모델', '라이선스': 'Apache 2.0' },
           { '도구': '**Ollama 비전 모델**', '링크': '[ollama.com](https://ollama.com)', '설명': 'Ollama를 통한 로컬 비전(Llama 3.2 Vision, Llava 등)', '라이선스': '다양' },
         ],
-        note: '상세 비교 가이드: [스마트폰에서 로컬 음성 어시스턴트 구축](/ko/power-local-llm/voice-assistant-local-mobile-offline)',
+        note: '상세 가이드: [로컬 비전 모델 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL 및 Ollama 멀티모달 설정 가이드](/ko/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
       mobileEdge: {
         id: 'mobile-edge',
