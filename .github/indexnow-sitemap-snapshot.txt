@@ -157,6 +157,7 @@ https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm
 https://www.promptquorum.com/local-llms/llm-quantization-explained
 https://www.promptquorum.com/local-llms/lm-studio-advanced-features
 https://www.promptquorum.com/local-llms/lm-studio-vs-jan-ai
+https://www.promptquorum.com/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared
 https://www.promptquorum.com/local-llms/local-ai-agents-langgraph-ollama
 https://www.promptquorum.com/local-llms/local-ai-code-review-vs-coderabbit-2026
 https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026
@@ -232,6 +233,7 @@ https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwe
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
 https://www.promptquorum.com/power-local-llm/asus-mini-pc-local-ai-2026
 https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work
+https://www.promptquorum.com/power-local-llm/backyard-ai-review-local-roleplay-2026
 https://www.promptquorum.com/power-local-llm/best-affiliate-tools-ai-developers-2026
 https://www.promptquorum.com/power-local-llm/best-ai-coding-tools-comparison-2026
 https://www.promptquorum.com/power-local-llm/best-ai-courses-certifications-2026
@@ -261,8 +263,11 @@ https://www.promptquorum.com/power-local-llm/deepseek-offline-china-self-hosted-
 https://www.promptquorum.com/power-local-llm/deepseek-r1-vs-distills-explained-2026
 https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026
 https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-local-comparison-2026
+https://www.promptquorum.com/power-local-llm/dify-ai-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux
 https://www.promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts
+https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
+https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance
 https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026
