@@ -128,6 +128,20 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Enterprise/B2B infrastructure — 2026-09-02
   'enterprise-llm-inference-servers-vllm-tgi-nim-2026',
+  // Dify LLMOps platform review — 2026-09-02
+  'dify-ai-workflow-builder-review',
+  // Langflow review — 2026-09-02
+  'langflow-visual-ai-orchestration-review',
+  // LlamaIndex deep-dive — 2026-09-02
+  'llamaindex-rag-framework-review',
+  // txtai embedded vector database review — 2026-09-02
+  'txtai-embedded-vector-database-review',
+  // Quivr maintenance-status review — 2026-09-02
+  'quivr-self-hosted-knowledge-assistant-review',
+  // RAGFlow deep document understanding review — 2026-09-02
+  'ragflow-document-understanding-rag-review',
+  // Khoj review — 2026-09-02
+  'khoj-ai-second-brain-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

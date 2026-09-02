@@ -235,6 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Langflow Review 2026: The IBM-Owned Alternative to Flowise](/power-local-llm/langflow-visual-ai-orchestration-review) — a still-maintained, Python-based visual builder worth evaluating if you are migrating off Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — actively maintained RAG tools compared for self-hosted use.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — a buying guide for document-chat RAG tools beyond Flowise.',
@@ -477,6 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Langflow 2026: Visueller LangChain-Builder unter IBM, MIT-Lizenz](/de/power-local-llm/langflow-visual-ai-orchestration-review) — ein weiterhin gepflegter, Python-basierter visueller Builder für alle, die von Flowise migrieren.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — aktiv gepflegte RAG-Tools für Self-Hosting im Vergleich.',
           '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — ein Kaufratgeber für Dokumenten-Chat-RAG-Tools jenseits von Flowise.',
@@ -717,6 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
+          '[Langflow en 2026 : guide du constructeur visuel LangChain racheté par IBM](/fr/power-local-llm/langflow-visual-ai-orchestration-review) — un constructeur visuel Python toujours maintenu, à envisager pour migrer depuis Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparatif d\'outils RAG activement maintenus pour l\'auto-hébergement.',
           '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel cet article appartient.',
           '[Meilleurs outils RAG pour documents d\'entreprise](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — un guide d\'achat pour les outils RAG de chat documentaire au-delà de Flowise.',
@@ -957,6 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Langflow en 2026: constructor visual de LangChain con licencia MIT (ahora de IBM)](/es/power-local-llm/langflow-visual-ai-orchestration-review) — un constructor visual en Python aún mantenido, a evaluar si migras desde Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparativa de herramientas RAG activamente mantenidas para autoalojamiento.',
           '[Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
           '[Mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — una guía de compra de herramientas RAG de chat con documentos más allá de Flowise.',
@@ -1197,6 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Langflow 2026：LangChain可視化ビルダー（MITライセンス・IBM傘下）](/ja/power-local-llm/langflow-visual-ai-orchestration-review) — Flowiseから移行する場合に検討すべき、今も開発が続くPythonベースの可視化ビルダー。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI（RAG比較）](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — セルフホスト向けに、積極的にメンテナンスされているRAGツールを比較。',
           '[ローカルLLMソフトウェア一覧](/ja/power-local-llm/local-llm-software-directory-2026) — この記事が属する、ローカルAIツールの全カタログ。',
           '[ビジネス文書向けの優れたRAGツール](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — Flowise以外のドキュメントチャット系RAGツールの選び方ガイド。',
@@ -1437,6 +1442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[Langflow 2026：MIT许可开源可视化LangChain/RAG构建工具（IBM旗下）](/zh/power-local-llm/langflow-visual-ai-orchestration-review) — 一款仍在积极维护的Python可视化构建工具，适合从Flowise迁移的用户评估。',
           '[AnythingLLM 与 PrivateGPT、Open WebUI 的 RAG 对比](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 比较适合自托管、持续维护的 RAG 工具。',
           '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的完整本地 AI 工具目录。',
           '[适合企业文档的优秀 RAG 工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — 一份除 Flowise 之外的文档聊天类 RAG 工具选购指南。',
@@ -1677,6 +1683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Langflow em 2026: construtor visual de agentes de IA agora da IBM](/pt/power-local-llm/langflow-visual-ai-orchestration-review) — um construtor visual em Python ainda mantido, para avaliar ao migrar do Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparação de ferramentas RAG ativamente mantidas para auto-hospedagem.',
           '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
           '[Melhores ferramentas RAG para documentos empresariais](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — um guia de compra de ferramentas RAG de chat com documentos além do Flowise.',
@@ -1917,6 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[Langflow في 2026: أداة بصرية مفتوحة المصدر أصبحت ملكًا لـ IBM](/ar/power-local-llm/langflow-visual-ai-orchestration-review) — أداة بصرية بلغة Python ما زالت تُصان، تستحق التقييم عند الهجرة من Flowise.',
           '[مقارنة AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـ RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة لأدوات RAG مُصانة بنشاط للاستضافة الذاتية.',
           '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
           '[أفضل أدوات RAG لمستندات الأعمال](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — دليل شراء لأدوات RAG للدردشة مع المستندات غير Flowise.',
@@ -2157,6 +2165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[2026 Langflow 리뷰: MIT 라이선스 오픈소스, 이제는 IBM 소유](/ko/power-local-llm/langflow-visual-ai-orchestration-review) — Flowise에서 이전할 때 검토할 만한, 지금도 활발히 개발되는 Python 기반 시각적 빌더.',
           '[RAG를 위한 AnythingLLM vs. PrivateGPT vs. Open WebUI 비교](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 셀프 호스팅을 위해 활발히 유지보수되는 RAG 도구 비교.',
           '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory-2026) — 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[비즈니스 문서를 위한 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — Flowise 외의 문서 채팅 RAG 도구 구매 가이드.',

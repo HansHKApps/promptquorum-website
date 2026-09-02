@@ -115,4 +115,19 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Haystack (deepset) RAG framework review 2026-09-02
   'haystack-deepset-rag-framework-review':        'haystack-deepset-rag-framework-review',
+
+  // Dify LLMOps platform review 2026-09-02
+  'dify-ai-workflow-builder-review':              'dify-ai-workflow-builder-review',
+  // Langflow review — 2026-09-02
+  'langflow-visual-ai-orchestration-review':      'langflow-visual-ai-orchestration-review',
+  // LlamaIndex deep-dive 2026-09-02
+  'llamaindex-rag-framework-review':              'llamaindex-rag-framework-review',
+  // txtai embedded vector database review — 2026-09-02
+  'txtai-embedded-vector-database-review':        'txtai-embedded-vector-database-review',
+  // Quivr maintenance-status review 2026-09-02
+  'quivr-self-hosted-knowledge-assistant-review': 'quivr-self-hosted-knowledge-assistant-review',
+  // RAGFlow deep document understanding review 2026-09-02
+  'ragflow-document-understanding-rag-review':    'ragflow-document-understanding-rag-review',
+  // Khoj review 2026-09-02
+  'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
 }

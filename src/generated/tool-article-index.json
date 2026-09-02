@@ -26,6 +26,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "khoj-ai-second-brain-review",
+        "title": "Khoj Review 2026: Self-Hosted AI Second Brain, No Cloud Left",
+        "url": "/power-local-llm/khoj-ai-second-brain-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-amd-gpus-local-llm",
         "title": "Best AMD GPU for Local LLMs",
@@ -72,17 +80,9 @@
         "url": "/local-llms/local-llm-pc-build-1000",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 186,
+    "totalCount": 191,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 103,
+    "totalCount": 104,
     "capped": true
   },
   "vLLM": {
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 63,
+    "totalCount": 65,
     "capped": true
   },
   "LocalAI": {
@@ -725,6 +725,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-embedding-models-local-rag-2026",
         "title": "Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)",
         "url": "/power-local-llm/best-embedding-models-local-rag-2026",
@@ -789,22 +797,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "flowise-ai-visual-workflow-builder-review",
-        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
-        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "haystack-deepset-rag-framework-review",
-        "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
-        "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 24,
     "capped": true
   },
   "Msty": {
@@ -1012,7 +1012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 44,
+    "totalCount": 49,
     "capped": true
   },
   "LibreChat": {
@@ -1723,6 +1723,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
@@ -1739,61 +1747,47 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "build-local-voice-assistant-2026",
-        "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
-        "url": "/power-local-llm/build-local-voice-assistant-2026",
-        "dateModified": "2026-08-28",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-08-28",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "chat-with-1000-pdfs-locally",
-        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
-        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "lm-studio-vs-jan-vs-gpt4all-2026",
-        "title": "LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026",
-        "url": "/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026",
-        "dateModified": "2026-08-27",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 16,
     "capped": true
   },
-  "Dify": {
+  "Quivr": {
     "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
         "tier": "about"
-      }
-    ],
-    "totalCount": 1,
-    "capped": false
-  },
-  "Flowise": {
-    "articles": [
+      },
       {
         "cluster": "power-local-llm",
-        "slug": "flowise-ai-visual-workflow-builder-review",
-        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
-        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -1807,6 +1801,144 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "chat-with-1000-pdfs-locally",
+        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
+        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 4,
+    "capped": false
+  },
+  "Khoj": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "khoj-ai-second-brain-review",
+        "title": "Khoj Review 2026: Self-Hosted AI Second Brain, No Cloud Left",
+        "url": "/power-local-llm/khoj-ai-second-brain-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-08-30",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
+    "capped": false
+  },
+  "Dify": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 6,
+    "capped": false
+  },
+  "Flowise": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-rag-tools-for-business-documents-2026",
         "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
@@ -1814,11 +1946,57 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 6,
+    "capped": false
+  },
+  "Langflow": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "flowise-ai-visual-workflow-builder-review",
+        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
+        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 4,
     "capped": false
   },
   "LlamaIndex": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
@@ -1832,6 +2010,30 @@
         "slug": "haystack-deepset-rag-framework-review",
         "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -1866,41 +2068,9 @@
         "url": "/power-local-llm/chat-with-1000-pdfs-locally",
         "dateModified": "2026-08-27",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-rag-tools-for-business-documents-2026",
-        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
-        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
-        "dateModified": "2026-08-26",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database-2026",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-embedding-models-local-rag-2026",
-        "title": "Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)",
-        "url": "/power-local-llm/best-embedding-models-local-rag-2026",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "easiest-local-ai-app-windows-mac-linux",
-        "title": "Easiest Local AI App for Windows, Mac, and Linux (2026)",
-        "url": "/power-local-llm/easiest-local-ai-app-windows-mac-linux",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 24,
     "capped": true
   },
   "Haystack": {
@@ -1912,6 +2082,14 @@
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
@@ -1946,11 +2124,19 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "RAGFlow": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ragflow-document-understanding-rag-review",
+        "title": "RAGFlow Review 2026: Citation-Grade RAG for Complex Documents",
+        "url": "/power-local-llm/ragflow-document-understanding-rag-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "best-rag-tools-for-business-documents-2026",
@@ -1958,13 +2144,59 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chat-with-1000-pdfs-locally",
+        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
+        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 3,
+    "capped": false
+  },
+  "txtai": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "txtai-embedded-vector-database-review",
+        "title": "txtai Review 2026: The Embedded Vector Database That Skips the Server",
+        "url": "/power-local-llm/txtai-embedded-vector-database-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-embedding-models-local-rag-2026",
+        "title": "Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)",
+        "url": "/power-local-llm/best-embedding-models-local-rag-2026",
+        "dateModified": "2026-09-01",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-rag-tools-for-business-documents-2026",
+        "title": "Best RAG Tools for Business Documents 2026: Local & Private AI Compared",
+        "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
+        "dateModified": "2026-08-26",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 3,
     "capped": false
   },
   "LangChain": {
     "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
@@ -1978,6 +2210,22 @@
         "slug": "haystack-deepset-rag-framework-review",
         "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "langflow-visual-ai-orchestration-review",
+        "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
+        "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -2020,33 +2268,9 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database-2026",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-embedding-models-local-rag-2026",
-        "title": "Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)",
-        "url": "/power-local-llm/best-embedding-models-local-rag-2026",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-rag-2026",
-        "title": "Local RAG 2026: Build Document Q&A Systems Without Cloud APIs",
-        "url": "/local-llms/local-rag-2026",
-        "dateModified": "2026-08-31",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 27,
     "capped": true
   },
   "CrewAI": {
@@ -2185,6 +2409,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "dify-ai-workflow-builder-review",
+        "title": "Dify Review 2026: Open-Source LLMOps Platform vs. LangChain, Flowise",
+        "url": "/power-local-llm/dify-ai-workflow-builder-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "flowise-ai-visual-workflow-builder-review",
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
@@ -2198,17 +2430,9 @@
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-agents-business-workflows-eu-compliance",
-        "title": "Local AI Agents for Business Workflows: EU Compliance Guide (2026)",
-        "url": "/power-local-llm/local-ai-agents-business-workflows-eu-compliance",
-        "dateModified": "2026-08-27",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 13,
     "capped": true
   },
   "OpenClaw": {
