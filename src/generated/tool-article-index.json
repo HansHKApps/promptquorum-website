@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "small-local-llm-models",
         "title": "Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026",
         "url": "/local-llms/small-local-llm-models",
@@ -72,17 +80,9 @@
         "url": "/local-llms/qwen-local-deployment-guide-2026",
         "dateModified": "2026-09-01",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "asus-mini-pc-local-ai-2026",
-        "title": "ASUS Mini PC for Local AI: NUC 16 Pro vs. ExpertCenter PN55 (2026)",
-        "url": "/power-local-llm/asus-mini-pc-local-ai-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 185,
+    "totalCount": 186,
     "capped": true
   },
   "llama.cpp": {
@@ -404,7 +404,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
@@ -450,6 +451,14 @@
   },
   "LM Studio": {
     "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
       {
         "cluster": "local-llms",
         "slug": "local-llm-pc-build-1000",
@@ -521,17 +530,9 @@
         "url": "/local-llms/local-llm-one-click-installers",
         "dateModified": "2026-08-30",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
-        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 119,
+    "totalCount": 120,
     "capped": true
   },
   "Atomic Chat": {
@@ -889,7 +890,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
@@ -1214,7 +1216,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1227,7 +1230,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1240,7 +1244,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1253,7 +1258,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
@@ -1266,7 +1272,8 @@
         "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
-        "dateModified": "2026-09-02"
+        "dateModified": "2026-09-02",
+        "tier": "about"
       }
     ],
     "totalCount": 1,
