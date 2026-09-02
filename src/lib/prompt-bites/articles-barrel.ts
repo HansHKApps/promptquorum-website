@@ -125,6 +125,9 @@ import { article as isBalconySolarLegalColorado } from './articles/is-balcony-so
 import { article as isBalconySolarLegalNewHampshire } from './articles/is-balcony-solar-legal-new-hampshire'
 import { article as isBalconySolarLegalVermont } from './articles/is-balcony-solar-legal-vermont'
 import { article as isBalconySolarLegalConnecticut } from './articles/is-balcony-solar-legal-connecticut'
+import { article as isBalconySolarLegalNewJersey } from './articles/is-balcony-solar-legal-new-jersey'
+import { article as isBalconySolarLegalCalifornia } from './articles/is-balcony-solar-legal-california'
+import { article as isBalconySolarLegalNewYork } from './articles/is-balcony-solar-legal-new-york'
 
 // Local AI Trends 2027 — 10-part series
 import { article as localAiTrend2027CloudSubsidyCollapse } from './articles/local-ai-trend-2027-cloud-subsidy-collapse'
@@ -266,6 +269,9 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   isBalconySolarLegalNewHampshire,
   isBalconySolarLegalVermont,
   isBalconySolarLegalConnecticut,
+  isBalconySolarLegalNewJersey,
+  isBalconySolarLegalCalifornia,
+  isBalconySolarLegalNewYork,
 
   // Local AI Trends 2027 — 10-part series
   localAiTrend2027CloudSubsidyCollapse,
