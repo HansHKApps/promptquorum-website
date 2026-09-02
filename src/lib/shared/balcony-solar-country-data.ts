@@ -171,9 +171,10 @@ export const US_STATES: USStateEntry[] = [
     state: 'New Hampshire',
     status: 'Signed',
     bill: 'SB 540',
-    signedDate: '2026-05-28',
-    effectiveDate: '2026-07-27',
+    signedDate: '2026-07-02',
+    effectiveDate: '2027-01-01',
     powerLimitW: 1200,
+    powerLimitNote: 'Corrected 2026-08-29 (Chapter 262, signed by Gov. Kelly Ayotte per NH Bulletin/NHPR, NH Business Review, Valley News, and two plug-in-solar trackers) — supersedes an earlier 2026-05-28 signed / 2026-07-27 effective date used at initial cluster launch. Not yet in effect as of write-time.',
     sourceUrls: ['https://www.brightsaver.org/legislation-tracker'],
   },
   {
@@ -189,7 +190,7 @@ export const US_STATES: USStateEntry[] = [
 ];
 
 export const US_STATE_COUNT_NOTE =
-  'State count moves monthly — re-verify at write-time (BSOL-12 next_refresh_due is +60 days, not the default 6-month semi_annual interval, for this reason). As of 2026-07-16 (corrected — see docs/BALCONY_SOLAR_Q1_2027_REFRESH_TODO.md): 8 states signed (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), 1 more (New York) passed legislature and awaiting governor signature. Two of the 8 signed states are not yet in effect: Colorado (Jan 1 2027) and Connecticut (Oct 1 2026). CO/MD/CT/NH dates were cross-verified only via secondary trackers (pluginsolarhub.org, pv-tech.org), not primary legislative text — confirm against official state legislative records before publishing exact signing dates.';
+  'State count moves monthly — re-verify at write-time (BSOL-12 next_refresh_due is +60 days, not the default 6-month semi_annual interval, for this reason). As of 2026-09-02 (corrected — see docs/BALCONY_SOLAR_Q1_2027_REFRESH_TODO.md and the 2026-08-29 New Hampshire date correction in is-balcony-solar-legal-new-hampshire.ts): 8 states signed (Utah, Maine, Virginia, Maryland, Colorado, New Hampshire, Vermont, Connecticut), 1 more (New York) passed legislature and awaiting governor signature. Three of the 8 signed states are not yet in effect: Colorado (Jan 1 2027), New Hampshire (Jan 1 2027), and Connecticut (Oct 1 2026). CO/MD/CT dates were cross-verified only via secondary trackers (pluginsolarhub.org, pv-tech.org), not primary legislative text — confirm against official state legislative records before publishing exact signing dates. NH was independently re-verified 2026-08-29 against primary/local press sources (NH Bulletin/NHPR, NH Business Review, Valley News, bill chapter number) and is more reliable than the CO/MD/CT secondary-tracker dates.';
 
 // ─── PER-COUNTRY / PER-REGION DATA ─────────────────────────────────────────────
 
