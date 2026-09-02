@@ -12,23 +12,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: 'Easiest Local AI App for Windows, Mac, and Linux (2026)',
     seoTitle: 'LM Studio on Apple Silicon: Easiest Local AI App 2026',
     intro:
-      'LM Studio is the easiest local AI app in 2026 for Windows, Mac, and Linux — download, install, pull a model, and start chatting in under 10 minutes with no terminal use. It runs fastest on Apple Silicon (M1 through M5), with full Intel Mac and Linux support too. This guide covers LM Studio, Jan, and GPT4All as the three no-code options, compares them by setup time, supported models, and system requirements, and explains which one to start with depending on your hardware and goals.',
+      'LM Studio is the easiest local AI app in 2026 for Windows, Mac, and Linux — download, install, pull a model, and start chatting in under 10 minutes with no terminal use. It runs fastest on Apple Silicon (M1 through M5); on an Intel Mac, Jan and GPT4All cover the same job, since LM Studio now requires Apple Silicon on macOS. This guide covers LM Studio, Jan, and GPT4All as the three no-code options, compares them by setup time, supported models, and system requirements, and explains which one to start with depending on your hardware and goals.',
     metaDescription:
-      'LM Studio on Apple Silicon, Intel Mac, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
+      'LM Studio on Apple Silicon, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-en.webp',
     twitterDescription:
-      'LM Studio on Apple Silicon (M1–M5), Intel Mac, Windows, and Linux: supported models, system requirements, and setup time — ranked against Jan and GPT4All for 2026.',
+      'LM Studio on Apple Silicon (M1–M5), Windows, and Linux: supported models, system requirements, and setup time — ranked against Jan and GPT4All for 2026.',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -63,9 +65,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Start with Phi-4 Mini (3B, ~3 GB RAM) or Llama 3.2 3B on low-end hardware — runs on any laptop made after 2018.',
           'No GPU required for 3B–8B models on Apple Silicon or modern Intel/AMD CPUs.',
           'All three are free, open-source, and run with no cloud account or internet connection after download.',
-          'LM Studio also exposes a local OpenAI-compatible API for developers who want to go further.',
+          'LM Studio also exposes a local OpenAI- and Anthropic-compatible API for developers who want to go further.',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -90,25 +92,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio is the fastest path from zero to chatting locally.** Download the installer from lmstudio.ai, open the Discover tab, search "Phi-4 Mini", download, and start chatting. Under 10 minutes on any decent internet connection.',
-          '**Jan is the open-source alternative.** Same ease of use as LM Studio, fully open-source, works on Linux AppImage. If you prefer open-source software or want to see the source code, Jan is the equivalent pick.',
-          '**GPT4All is the most simplified experience.** Single chat window, curated model recommendations, no model browsing overhead. Best for users who want to type a question and get an answer without any setup decisions.',
+          '**Jan is the open-source alternative.** Same ease of use as LM Studio, fully open-source under Apache 2.0 (relicensed from AGPLv3 in 2025), works on Linux AppImage. If you prefer open-source software or want to see the source code, Jan is the equivalent pick.',
+          '**GPT4All is the most simplified experience.** Single chat window, curated model recommendations, no model browsing overhead. Best for users who want to type a question and get an answer without any setup decisions — but note its development has stalled since early 2025, so its curated model list no longer includes the newest models.',
           '**Start with Phi-4 Mini or Llama 3.2 3B on any hardware.** These 3B models run on any laptop made in the last 7 years — no GPU, no 32 GB of RAM, no special hardware. They are slower than a cloud AI but produce usable output for most everyday tasks.',
           '**No cloud account required.** After the initial download (the app + the model file), everything runs locally with no internet connection. No API key, no subscription, no data sent to any server.',
           '**On Apple Silicon, almost any model runs well.** The M3 MacBook Air (8 GB) runs Llama 3.2 3B and Phi-4 Mini fluently. The M3 Pro or M4 (16 GB+) runs Qwen3 8B comfortably. The M5 Max (64 GB) runs 70B models.',
-          '**LM Studio also serves a local API.** If you later want to connect Obsidian, VS Code, or another tool to your local model, LM Studio\'s Local Server tab exposes an OpenAI-compatible API at localhost — no additional setup.',
+          '**LM Studio also serves a local API.** If you later want to connect Obsidian, VS Code, or another tool to your local model, LM Studio\'s Local Server tab exposes an OpenAI- and Anthropic-compatible API at localhost:1234 — no additional setup. Since version 0.4 it can also use local MCP tools.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb).',
-          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
-          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
+          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, macOS 14+; no Intel Mac support), Linux (AppImage, .deb). Current release line: 0.4.x.',
+          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Current release line: 0.8.x, Apache 2.0.',
+          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Last major release: v3.10, early 2025 — development has stalled.',
           '**Minimum hardware:** any laptop with 8 GB RAM for 3B–7B models; 16 GB+ for 8B–14B models; 24 GB+ for 30B+.',
           '**No GPU required** for 3B–7B models on Apple Silicon or CPU inference mode.',
-          '**All three are free** and open-source (LM Studio is free but source-available, not fully open-source).',
-          '**First model recommendation:** Phi-4 Mini (3B, ~2.7 GB download) for hardware under 8 GB; Qwen3 8B for 8–16 GB systems.',
+          '**All three are free**; Jan (Apache 2.0) and GPT4All (MIT) are fully open-source, LM Studio is free but source-available.',
+          '**First model recommendation:** Phi-4 Mini (3.8B, ~2.7 GB download) or Gemma 4 E2B for hardware under 8 GB; Qwen3 8B for 8–16 GB systems.',
         ],
       },
       comparison: {
@@ -129,10 +131,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Feature', 'LM Studio', 'Jan', 'GPT4All'],
         rows: [
           { 'Feature': 'Setup time (first run)', 'LM Studio': '~8 minutes', 'Jan': '~10 minutes', 'GPT4All': '~5 minutes' },
-          { 'Feature': 'Model library', 'LM Studio': 'Full Hugging Face GGUF search (~50,000+ models)', 'Jan': 'Curated + Hugging Face search', 'GPT4All': 'Curated list (~20 models)' },
-          { 'Feature': 'Local API server', 'LM Studio': 'Yes (OpenAI-compatible, Local Server tab)', 'Jan': 'Yes (OpenAI-compatible)', 'GPT4All': 'Yes (limited, less documented)' },
+          { 'Feature': 'Model library', 'LM Studio': 'Full Hugging Face GGUF + MLX search (~50,000+ models)', 'Jan': 'Curated + Hugging Face search', 'GPT4All': 'Curated list (~20 models, dated)' },
+          { 'Feature': 'Local API server', 'LM Studio': 'Yes (OpenAI + Anthropic compatible)', 'Jan': 'Yes (OpenAI-compatible)', 'GPT4All': 'Yes (limited, less documented)' },
           { 'Feature': 'Multi-chat / conversation history', 'LM Studio': 'Yes', 'Jan': 'Yes', 'GPT4All': 'Single chat window' },
-          { 'Feature': 'Source licence', 'LM Studio': 'Free, source-available (not OSI)', 'Jan': 'AGPLv3 (fully open-source)', 'GPT4All': 'MIT (fully open-source)' },
+          { 'Feature': 'Source licence', 'LM Studio': 'Free, source-available (not OSI)', 'Jan': 'Apache 2.0 (fully open-source)', 'GPT4All': 'MIT (fully open-source)' },
+          { 'Feature': 'Active development', 'LM Studio': 'Frequent (0.4.x, 2026)', 'Jan': 'Frequent (0.8.x, 2026)', 'GPT4All': 'Stalled since early 2025' },
           { 'Feature': 'Linux support', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Feature': 'Best for', 'LM Studio': 'Users who want the best UI + developer API access', 'Jan': 'Users who prefer open-source software', 'GPT4All': 'Pure beginners who want the simplest interface' },
         ],
@@ -143,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-en.webp',
-        imageCaption: 'LM Studio vs Jan vs GPT4All feature comparison: LM Studio offers 50,000+ models, local API, multi-chat, and the best UI; Jan is the open-source alternative (AGPLv3); GPT4All is the simplest single-window option for pure beginners.',
+        imageCaption: 'LM Studio vs Jan vs GPT4All feature comparison: LM Studio offers 50,000+ models, local API, multi-chat, and the best UI; Jan is the open-source alternative (Apache 2.0); GPT4All is the simplest single-window option for pure beginners.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -151,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**LM Studio installs in 3 minutes and has you chatting in under 10.** The process is identical on Windows and macOS — download, install, browse models, download a model, chat.',
         numberedItems: [
-          'Go to lmstudio.ai and download the installer for your platform (Windows .exe, macOS .dmg, Linux .AppImage or .deb).',
+          'Go to lmstudio.ai and download the installer for your platform (Windows .exe, macOS .dmg for Apple Silicon, Linux .AppImage or .deb).',
           'Run the installer. Accept any security prompt (it is a new app, not code-signed by Apple/Microsoft by default on some versions).',
           'Open LM Studio. The left sidebar shows: Chat, Search (Discover), Models, and Local Server.',
           'Click "Discover" (the telescope icon). In the search bar, type "Phi-4 Mini" (for 8 GB systems or under) or "Qwen3 8B" (for 16 GB+ systems).',
@@ -172,7 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: Setup Guide',
         content:
-          '**Jan is the open-source alternative to LM Studio — same ease of use, identical model download experience, AGPLv3 licence.** Use Jan if open-source software matters to you or if you want to inspect or modify the application code.',
+          '**Jan is the open-source alternative to LM Studio — same ease of use, identical model download experience, Apache 2.0 licence (relicensed from AGPLv3 in 2025).** Use Jan if open-source software matters to you, if you run an Intel Mac, or if you want to inspect or modify the application code.',
         numberedItems: [
           'Go to jan.ai and download the installer for your platform.',
           'Run the installer and open Jan.',
@@ -192,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gpt4all',
         title: 'GPT4All: Setup Guide',
         content:
-          '**GPT4All offers the most simplified experience — a single chat window and a curated list of recommended models.** If LM Studio and Jan have too many options and you just want to type a question and get an answer, start here.',
+          '**GPT4All offers the most simplified experience — a single chat window and a curated list of recommended models.** If LM Studio and Jan have too many options and you just want to type a question and get an answer, start here. One caveat for 2026: GPT4All\'s development has stalled since early 2025 (last major release v3.10), so the app still works fine offline but its curated model list no longer includes the newest models. Pick LM Studio or Jan if you want current model releases.',
         numberedItems: [
           'Go to gpt4all.io and download the installer for your platform.',
           'Run the installer and open GPT4All.',
@@ -207,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-en.svg',
-        imageCaption: 'Which local AI app to install: LM Studio for best UI and API access (50,000+ models); Jan as open-source AGPLv3 alternative; GPT4All for the simplest single-window beginner experience with ~20 curated models. All three are free and run with no cloud account.',
+        imageCaption: 'Which local AI app to install: LM Studio for best UI and API access (50,000+ models); Jan as open-source Apache 2.0 alternative; GPT4All for the simplest single-window beginner experience with ~20 curated models. All three are free and run with no cloud account.',
       },
       firstModel: {
         id: 'first-model',
@@ -216,10 +219,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**The right first model depends on how much RAM your computer has.** More RAM = larger model = better answers, but any modern computer can run something useful.',
         columns: ['Available RAM', 'Recommended First Model', 'Download Size', 'Expected Speed'],
         rows: [
-          { 'Available RAM': '8 GB or less', 'Recommended First Model': 'Phi-4 Mini (3.8B Q4)', 'Download Size': '~2.7 GB', 'Expected Speed': '15–30 tokens/sec on Apple Silicon; 5–10 tok/sec on CPU-only Intel/AMD' },
+          { 'Available RAM': '8 GB or less', 'Recommended First Model': 'Phi-4 Mini (3.8B Q4) or Gemma 4 E2B', 'Download Size': '~2–3 GB', 'Expected Speed': '15–30 tokens/sec on Apple Silicon; 5–10 tok/sec on CPU-only Intel/AMD' },
           { 'Available RAM': '8–16 GB', 'Recommended First Model': 'Llama 3.2 3B (Q4) or Qwen3 8B (Q4)', 'Download Size': '2.0–4.9 GB', 'Expected Speed': '20–40 tok/sec on Apple Silicon; 8–15 tok/sec CPU-only' },
-          { 'Available RAM': '16–32 GB', 'Recommended First Model': 'Qwen3 14B (Q4)', 'Download Size': '~8.9 GB', 'Expected Speed': '15–25 tok/sec on Apple Silicon; GPU required for real-time on x86' },
-          { 'Available RAM': '32 GB+ (Apple Silicon) or 24 GB VRAM (NVIDIA)', 'Recommended First Model': 'Llama 3.3 70B (Q4)', 'Download Size': '~40 GB', 'Expected Speed': '10–20 tok/sec on Apple M5 Max; 15–25 tok/sec RTX 4090' },
+          { 'Available RAM': '16–32 GB', 'Recommended First Model': 'gpt-oss 20B (~13 GB) or Qwen3 14B (Q4)', 'Download Size': '~9–13 GB', 'Expected Speed': '15–25 tok/sec on Apple Silicon (Qwen3 14B); GPU required for real-time on x86' },
+          { 'Available RAM': '32 GB+ (Apple Silicon) or 24 GB VRAM (NVIDIA)', 'Recommended First Model': 'Qwen 3.6 27B (Q4) — best overall consumer model', 'Download Size': '~16 GB', 'Expected Speed': 'Real-time on M4 Pro/M5-class Macs and RTX 4090-class GPUs' },
         ],
         callouts: [
           {
@@ -228,13 +231,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-en.svg',
-        imageCaption: 'First model guide by available RAM: ≤8 GB → Phi-4 Mini 3.8B (~2.7 GB, 15–30 tok/s on Apple Silicon); 8–16 GB → Llama 3.2 3B or Qwen3 8B; 16–32 GB → Qwen3 14B (~8.9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
+        imageCaption: 'First model guide by available RAM: ≤8 GB → Phi-4 Mini 3.8B or Gemma 4 E2B (~2–3 GB, 15–30 tok/s on Apple Silicon); 8–16 GB → Llama 3.2 3B or Qwen3 8B; 16–32 GB → gpt-oss 20B or Qwen3 14B (~9–13 GB); 32 GB+ → Qwen 3.6 27B (~16 GB).',
       },
       hardware: {
         id: 'hardware',
         title: 'Hardware Requirements',
         content:
-          '**You do not need a gaming PC or a dedicated GPU to run local AI in 2026.** Apple Silicon Macs are the best consumer hardware for local LLMs; any MacBook Air from M1 onward runs small models well. On Windows and Linux, the CPU inference mode works for 3B–7B models on any laptop with 8 GB RAM.',
+          '**You do not need a gaming PC or a dedicated GPU to run local AI in 2026.** Apple Silicon Macs are the best consumer hardware for local LLMs; any MacBook Air from M1 onward runs small models well. On Windows and Linux, the CPU inference mode works for 3B–7B models on any laptop with 8 GB RAM. One platform note: LM Studio requires Apple Silicon on macOS — on an Intel Mac, use Jan or GPT4All, which still support Intel via CPU inference.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -242,12 +245,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'No GPU needed for the small models (Phi-4 Mini, Llama 3.2 3B). These run on CPU inference and produce a response at typing speed on any modern laptop. If you have an NVIDIA GPU with 8 GB+ VRAM, LM Studio will automatically use it and run larger models (Mistral Small, Qwen3 8B) much faster. If you have an Apple Silicon Mac, the unified memory architecture means you can run models up to the size of your RAM.',
+            text: 'No GPU needed for the small models (Phi-4 Mini, Gemma 4 E2B, Llama 3.2 3B). These run on CPU inference and produce a response at typing speed on any modern laptop. If you have an NVIDIA GPU with 8 GB+ VRAM, LM Studio will automatically use it and run larger models (Qwen3 8B, gpt-oss 20B) much faster. If you have an Apple Silicon Mac, the unified memory architecture means you can run models up to the size of your RAM.',
           },
         ],
         items: [
-          '**Apple Silicon (M1–M5):** best consumer hardware for local LLMs. Unified memory means the GPU and CPU share RAM — an M3 MacBook Air with 8 GB runs Phi-4 Mini at 20+ tokens/sec; an M5 Max with 64 GB runs Llama 3.3 70B.',
-          '**NVIDIA GPU (Windows/Linux):** CUDA acceleration in LM Studio and Jan dramatically speeds up generation. RTX 3060 12 GB runs Mistral Small and Qwen3 8B in real time. RTX 4090 24 GB runs 30B models.',
+          '**Apple Silicon (M1–M5):** best consumer hardware for local LLMs. Unified memory means the GPU and CPU share RAM — an M3 MacBook Air with 8 GB runs Phi-4 Mini at 20+ tokens/sec; an M5 Max with 64 GB runs Llama 3.3 70B. LM Studio runs both GGUF (llama.cpp) and MLX models here.',
+          '**NVIDIA GPU (Windows/Linux):** CUDA acceleration in LM Studio and Jan dramatically speeds up generation. RTX 3060 12 GB runs Qwen3 8B in real time. RTX 4090 24 GB runs Qwen 3.6 27B and other 30B-class models.',
           '**AMD GPU (Windows/Linux):** ROCm support in LM Studio and Jan is improving but less mature than CUDA. If you have an AMD GPU, check the LM Studio release notes for your specific card before relying on GPU acceleration.',
           '**CPU-only Intel/AMD:** works for 3B–7B models at 5–15 tokens/sec — usable but slow. The experience is better for tasks where you send a prompt and go do something else (summarisation, email drafting) than for real-time conversational use.',
           '**RAM and VRAM:** the model must fit in RAM (or VRAM) entirely. A 4B model needs ~3 GB; an 8B model needs ~5 GB; a 14B model needs ~9 GB; a 70B model needs ~42 GB. If the model is too large, LM Studio will warn you before downloading.',
@@ -276,9 +279,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          'LM Studio release notes and hardware compatibility — [lmstudio.ai](https://lmstudio.ai)',
-          'Jan documentation and hardware requirements — [jan.ai/docs](https://jan.ai/docs)',
-          'GPT4All model library and LocalDocs documentation — [gpt4all.io](https://gpt4all.io)',
+          'LM Studio 0.4 changelog, release notes, and hardware compatibility — [lmstudio.ai/changelog](https://lmstudio.ai/changelog)',
+          'Jan documentation and open-source repository (Apache 2.0) — [jan.ai/docs](https://jan.ai/docs)',
+          'GPT4All model library, LocalDocs documentation, and release history — [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)',
           'Phi-4 Mini technical report — [Microsoft Research](https://microsoft.com/research)',
           'GGUF quantisation format specification — [llama.cpp](https://github.com/ggerganov/llama.cpp)',
         ],
@@ -305,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use a local AI app on an older MacBook?',
-            a: 'Yes, if it meets the RAM requirement (8 GB minimum for 3B models). MacBook Air and MacBook Pro models from 2018 onward with 8 GB RAM can run Phi-4 Mini at slow but usable speed (~5–10 tokens/sec on Intel Mac). Apple Silicon Macs (M1 onward) are significantly faster due to the unified memory architecture and Neural Engine. A 2020 M1 MacBook Air runs Phi-4 Mini at 20+ tokens/sec.',
+            a: 'Yes, if it meets the RAM requirement (8 GB minimum for 3B models). On an Intel MacBook from 2018 onward, use Jan or GPT4All — LM Studio requires Apple Silicon on macOS. An Intel Mac runs Phi-4 Mini at slow but usable speed (~5–10 tokens/sec, CPU inference). Apple Silicon Macs (M1 onward) are significantly faster due to the unified memory architecture and Neural Engine. A 2020 M1 MacBook Air runs Phi-4 Mini at 20+ tokens/sec.',
           },
           {
             q: 'Can I run multiple models at the same time?',
@@ -321,11 +324,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which models does LM Studio support on Apple Silicon Macs?',
-            a: 'LM Studio supports the full GGUF model library on Apple Silicon (M1 through M5), using Metal for GPU acceleration through the unified memory architecture. Recommended starting points: Phi-4 Mini (3.8B) or Llama 3.2 3B on 8 GB Macs, Qwen3 8B on 16 GB+ Macs, Qwen3 14B on 16–32 GB Macs, and Llama 3.3 70B on 32 GB+ Macs (M3 Max, M4 Max, or M5 Max). LM Studio detects available memory automatically and recommends a quantisation level — usually Q4_K_M — that fits your hardware.',
+            a: 'LM Studio supports the full GGUF model library plus Apple\'s MLX format on Apple Silicon (M1 through M5), using Metal for GPU acceleration through the unified memory architecture. Recommended starting points: Phi-4 Mini (3.8B) or Gemma 4 E2B on 8 GB Macs, Qwen3 8B on 16 GB+ Macs, gpt-oss 20B or Qwen3 14B on 16–32 GB Macs, and Qwen 3.6 27B on 32 GB+ Macs — with Llama 3.3 70B still an option on 48–64 GB Max-class machines. LM Studio detects available memory automatically and recommends a quantisation level — usually Q4_K_M — that fits your hardware.',
           },
           {
             q: 'What are LM Studio\'s system requirements on Windows, Intel Mac, and Apple Silicon?',
-            a: 'The minimum across all platforms is 8 GB RAM for 3B–7B models. Apple Silicon (M1–M5) runs fastest, using unified memory and Metal acceleration with no separate GPU needed. Intel Mac runs on CPU inference only — there is no Metal GPU acceleration for LLM inference on Intel Macs — so expect roughly 5–10 tokens/sec for a 3B model. Windows needs 8 GB RAM minimum, with an NVIDIA GPU (8 GB+ VRAM) optional for CUDA acceleration on larger models. Linux has the same 8 GB RAM minimum via AppImage or .deb, with CUDA support available if an NVIDIA GPU is present.',
+            a: 'On macOS, LM Studio requires an Apple Silicon Mac (M1 or newer) running macOS 14 or later — Intel Macs are not supported; Intel Mac users should install Jan or GPT4All instead, which run CPU inference at roughly 5–10 tokens/sec for a 3B model. On Windows, the minimum is 8 GB RAM for 3B–7B models, with an NVIDIA GPU (8 GB+ VRAM) optional for CUDA acceleration on larger models. Linux has the same 8 GB RAM minimum via AppImage or .deb, with CUDA support available if an NVIDIA GPU is present. Apple Silicon runs fastest overall, using unified memory and Metal acceleration with no separate GPU needed.',
           },
           {
             q: 'Does LM Studio run on Linux?',
@@ -333,7 +336,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What are the best LM Studio alternatives in 2026?',
-            a: 'Jan is the closest alternative — the same ease of setup, fully open-source under AGPLv3, and Linux AppImage support. GPT4All is the simplest alternative for pure beginners, with a curated model list and a single-window chat interface. For developers who prefer a command-line tool, Ollama is the leading alternative, though it requires terminal use instead of a GUI. All four run the same GGUF model files and are free to use.',
+            a: 'Jan is the closest alternative — the same ease of setup, fully open-source under Apache 2.0, and Linux AppImage support. GPT4All is the simplest alternative for pure beginners, with a curated model list and a single-window chat interface, though its development has stalled since early 2025. For developers who prefer a command-line tool, Ollama is the leading alternative, though it requires terminal use instead of a GUI. All four run the same GGUF model files and are free to use.',
+          },
+          {
+            q: 'Can I connect my local model to other applications?',
+            a: 'Yes. LM Studio\'s Local Server exposes an OpenAI- and Anthropic-compatible API at http://localhost:1234, and Jan serves an OpenAI-compatible API at http://localhost:1337. Point Obsidian, VS Code, or any other tool that accepts a custom API endpoint at that address. Many workflows — RAG, prompt testing, chatbot integration — become possible once your local API is available. Since version 0.4, LM Studio can also use local MCP tools.',
+          },
+          {
+            q: 'Which quantisation should I use — Q3, Q4, Q5, or Q6?',
+            a: 'Most users should use Q4_K_M, which is what LM Studio recommends by default. Q3 is heavily compressed and loses noticeable quality. Q4 is the recommended balance of quality and file size. Q5 and Q6 are larger and slightly better if you have spare RAM. On hardware under 8 GB, start with Q4_K_M of a 3B-class model rather than a lower quantisation of a bigger one.',
+          },
+          {
+            q: 'Is GPT4All still maintained in 2026?',
+            a: 'Not actively. GPT4All\'s last major release (v3.10) shipped in early 2025, and its GitHub repository has seen no significant updates since. The app still installs and works fully offline, and it remains the simplest single-window option — but its curated model list is dated, so newer models like Qwen 3.6 or gpt-oss are not offered in it. If you want current model releases with a no-terminal setup, choose LM Studio or Jan.',
           },
         ],
       },
@@ -355,37 +370,56 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'LM Studio on Apple Silicon: Easiest Local AI App 2026',
-      description: 'LM Studio on Apple Silicon, Intel Mac, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
+      description: 'LM Studio on Apple Silicon, Windows, and Linux: supported models, system requirements, and setup time. No terminal. Ranked vs Jan and GPT4All, 2026.',
       url: 'https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'en',
       image: buildOgImageObject(OG_SLUG, 'en'),
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      educationalLevel: 'Beginner',
+      about: [
+        { '@type': 'Thing', name: 'LM Studio' },
+        { '@type': 'Thing', name: 'Jan' },
+        { '@type': 'Thing', name: 'GPT4All' },
+        { '@type': 'Thing', name: 'Phi-4 Mini' },
+        { '@type': 'Thing', name: 'Qwen 3.6' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'LM Studio' },
+        { '@type': 'SoftwareApplication', name: 'Jan' },
+        { '@type': 'SoftwareApplication', name: 'GPT4All' },
+      ],
       'proficiencyLevel': 'Beginner',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
   },
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: 'Die einfachste lokale AI-App für Windows, Mac und Linux (2026)',
     seoTitle: 'Einfachste lokale KI-App 2026: Windows, Mac, Linux',
     intro:
-      'LM Studio ist die einfachste lokale AI-App 2026 für Windows, Mac und Linux — Herunterladen, Installieren, ein Modell laden und in unter 10 Minuten chatten, ohne Terminal. Dieser Leitfaden behandelt LM Studio, Jan und GPT4All als die drei No-Code-Optionen, vergleicht sie nach Installationszeit und Funktionalität und erklärt, welche je nach Hardware und Zielen gewählt werden sollte.',
+      'LM Studio ist die einfachste lokale AI-App 2026 für Windows, Mac und Linux — Herunterladen, Installieren, ein Modell laden und in unter 10 Minuten chatten, ohne Terminal. Am schnellsten läuft es auf Apple Silicon (M1 bis M5); auf einem Intel-Mac übernehmen Jan oder GPT4All dieselbe Aufgabe, da LM Studio unter macOS inzwischen Apple Silicon voraussetzt. Dieser Leitfaden behandelt LM Studio, Jan und GPT4All als die drei No-Code-Optionen, vergleicht sie nach Installationszeit und Funktionalität und erklärt, welche je nach Hardware und Zielen gewählt werden sollte.',
     metaDescription:
       'Einfachste lokale KI-App 2026 im Vergleich: LM Studio, Jan und GPT4All für Windows, Mac und Linux -- Systemanforderungen und Einrichtungszeit ohne Terminal.',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-de.webp',
     twitterDescription:
-      'LM Studio auf Apple Silicon (M1–M5), Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit — im Vergleich zu Jan und GPT4All für 2026.',
+      'LM Studio auf Apple Silicon (M1–M5), Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit — im Vergleich zu Jan und GPT4All für 2026.',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -420,9 +454,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Beginnen Sie mit Phi-4 Mini (3B, ~3 GB RAM) oder Llama 3.2 3B auf Low-End-Hardware — läuft auf jedem Laptop nach 2018.',
           'Keine GPU erforderlich für 3B–8B-Modelle auf Apple Silicon oder modernen Intel/AMD-CPUs.',
           'Alle drei sind kostenlos, Open-Source und laufen nach dem Download ohne Cloud-Konto oder Internetverbindung.',
-          'LM Studio stellt auch eine lokale OpenAI-kompatible API bereit — für Entwickler, die weitergehen möchten.',
+          'LM Studio stellt auch eine lokale OpenAI- und Anthropic-kompatible API bereit — für Entwickler, die weitergehen möchten.',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -447,25 +481,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio ist der schnellste Weg von Null zum lokalen Chatten.** Laden Sie das Installationsprogramm von lmstudio.ai herunter, öffnen Sie den Discover-Tab, suchen Sie nach „Phi-4 Mini", laden Sie herunter und beginnen Sie zu chatten. Unter 10 Minuten bei einer anständigen Internetverbindung.',
-          '**Jan ist die Open-Source-Alternative zu LM Studio.** Gleiche Benutzerfreundlichkeit wie LM Studio, vollständig Open-Source, funktioniert auf Linux AppImage. Wenn Sie Open-Source-Software bevorzugen oder den Quellcode sehen möchten, ist Jan die gleichwertige Wahl.',
-          '**GPT4All ist das am meisten vereinfachte Erlebnis.** Einzelnes Chat-Fenster, kuratierte Modellempfehlungen, kein Modellbrowser-Overhead. Am besten für Benutzer, die eine Frage eingeben und eine Antwort erhalten möchten, ohne Setup-Entscheidungen zu treffen.',
+          '**Jan ist die Open-Source-Alternative zu LM Studio.** Gleiche Benutzerfreundlichkeit wie LM Studio, vollständig Open-Source unter Apache 2.0 (2025 von AGPLv3 umlizenziert), funktioniert auf Linux AppImage. Wenn Sie Open-Source-Software bevorzugen oder den Quellcode sehen möchten, ist Jan die gleichwertige Wahl.',
+          '**GPT4All ist das am meisten vereinfachte Erlebnis.** Einzelnes Chat-Fenster, kuratierte Modellempfehlungen, kein Modellbrowser-Overhead. Am besten für Benutzer, die eine Frage eingeben und eine Antwort erhalten möchten, ohne Setup-Entscheidungen zu treffen — beachten Sie jedoch: Die Entwicklung stagniert seit Anfang 2025, die kuratierte Modellliste enthält die neuesten Modelle nicht mehr.',
           '**Beginnen Sie mit Phi-4 Mini oder Llama 3.2 3B auf jeder Hardware.** Diese 3B-Modelle laufen auf jedem Laptop der letzten 7 Jahre — keine GPU, keine 32 GB RAM, keine spezielle Hardware. Sie sind langsamer als Cloud-AI, produzieren aber verwertbare Ergebnisse für die meisten alltäglichen Aufgaben.',
           '**Kein Cloud-Konto erforderlich.** Nach dem anfänglichen Download (die App + die Modelldatei) läuft alles lokal ohne Internetverbindung. Kein API-Schlüssel, kein Abonnement, keine Daten, die an einen Server gesendet werden.',
           '**Auf Apple Silicon läuft fast jedes Modell gut.** Das M3 MacBook Air (8 GB) führt Llama 3.2 3B und Phi-4 Mini flüssig aus. Das M3 Pro oder M4 (16 GB+) führt Qwen3 8B komfortabel aus. Das M5 Max (64 GB) führt 70B-Modelle aus.',
-          '**LM Studio stellt auch einen lokalen API-Server bereit.** Wenn Sie später Obsidian, VS Code oder ein anderes Tool mit Ihrem lokalen Modell verbinden möchten, stellt LM Studios Local Server-Tab eine OpenAI-kompatible API auf localhost bereit — keine zusätzliche Konfiguration erforderlich.',
+          '**LM Studio stellt auch einen lokalen API-Server bereit.** Wenn Sie später Obsidian, VS Code oder ein anderes Tool mit Ihrem lokalen Modell verbinden möchten, stellt LM Studios Local Server-Tab eine OpenAI- und Anthropic-kompatible API auf localhost:1234 bereit — keine zusätzliche Konfiguration erforderlich. Seit Version 0.4 kann LM Studio zudem lokale MCP-Tools nutzen.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Grundfakten',
         items: [
-          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb).',
-          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
-          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
+          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, macOS 14+; keine Intel-Mac-Unterstützung), Linux (AppImage, .deb). Aktuelle Versionslinie: 0.4.x.',
+          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Aktuelle Versionslinie: 0.8.x, Apache 2.0.',
+          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Letzte große Version: v3.10, Anfang 2025 — die Entwicklung stagniert.',
           '**Mindestens erforderliche Hardware:** jeder Laptop mit 8 GB RAM für 3B–7B-Modelle; 16 GB+ für 8B–14B-Modelle; 24 GB+ für 30B+.',
           '**Keine GPU erforderlich** für 3B–7B-Modelle auf Apple Silicon oder CPU-Inferenzmodus.',
-          '**Alle drei sind kostenlos** und Open-Source (LM Studio ist kostenlos aber quelloffen verfügbar, nicht vollständig Open-Source).',
-          '**Erste Modellempfehlung:** Phi-4 Mini (3B, ~2,7 GB Download) für Hardware unter 8 GB; Qwen3 8B für 8–16 GB Systeme.',
+          '**Alle drei sind kostenlos**; Jan (Apache 2.0) und GPT4All (MIT) sind vollständig Open-Source, LM Studio ist kostenlos, aber nur quelloffen verfügbar.',
+          '**Erste Modellempfehlung:** Phi-4 Mini (3,8B, ~2,7 GB Download) oder Gemma 4 E2B für Hardware unter 8 GB; Qwen3 8B für 8–16 GB Systeme.',
         ],
       },
       comparison: {
@@ -473,18 +507,35 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Die drei Optionen verglichen',
         content:
           '**Alle drei Apps werden wie Standard-Desktop-Anwendungen installiert und erfordern keine Befehlszeilenverwertung.** Die Unterschiede sind Feature-Tiefe, Modellbibliotheksgröße und der Ausgleich zwischen Einfachheit und Konfigurierbarkeit.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'LM Studio ist die einfachste lokale AI-App für Windows und Mac — installieren, Modelle durchsuchen, herunterladen, chatten — mit Jan als Open-Source-Pendant und GPT4All als der am stärksten vereinfachten Einzelfenster-Option.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Wenn Sie so schnell wie möglich einen lokalen AI-Chat starten möchten: Laden Sie LM Studio herunter, öffnen Sie es, klicken Sie auf Discover, tippen Sie „Phi-4 Mini" ein, laden Sie das Modell herunter (~2,7 GB), klicken Sie auf Chat und legen Sie los. Das ist die komplette Einrichtung. Kein Terminal, kein Python, kein Konto. Wenn LM Studio zu viele Optionen hat, probieren Sie GPT4All — ein Fenster und eine kurze Liste vorausgewählter Modelle.',
+          },
+        ],
         columns: ['Funktion', 'LM Studio', 'Jan', 'GPT4All'],
         rows: [
           { 'Funktion': 'Installationszeit (erste Ausführung)', 'LM Studio': '~8 Minuten', 'Jan': '~10 Minuten', 'GPT4All': '~5 Minuten' },
-          { 'Funktion': 'Modellbibliothek', 'LM Studio': 'Vollständige Hugging Face GGUF-Suche (~50.000+ Modelle)', 'Jan': 'Kuratiert + Hugging Face-Suche', 'GPT4All': 'Kuratierte Liste (~20 Modelle)' },
-          { 'Funktion': 'Lokaler API-Server', 'LM Studio': 'Ja (OpenAI-kompatibel, Local Server-Tab)', 'Jan': 'Ja (OpenAI-kompatibel)', 'GPT4All': 'Ja (eingeschränkt, weniger dokumentiert)' },
+          { 'Funktion': 'Modellbibliothek', 'LM Studio': 'Vollständige Hugging Face GGUF- + MLX-Suche (~50.000+ Modelle)', 'Jan': 'Kuratiert + Hugging Face-Suche', 'GPT4All': 'Kuratierte Liste (~20 Modelle, veraltet)' },
+          { 'Funktion': 'Lokaler API-Server', 'LM Studio': 'Ja (OpenAI- + Anthropic-kompatibel)', 'Jan': 'Ja (OpenAI-kompatibel)', 'GPT4All': 'Ja (eingeschränkt, weniger dokumentiert)' },
           { 'Funktion': 'Multi-Chat / Gesprächsverlauf', 'LM Studio': 'Ja', 'Jan': 'Ja', 'GPT4All': 'Einzelnes Chat-Fenster' },
-          { 'Funktion': 'Quellcode-Lizenz', 'LM Studio': 'Kostenlos, quelloffen verfügbar (nicht OSI)', 'Jan': 'AGPLv3 (vollständig Open-Source)', 'GPT4All': 'MIT (vollständig Open-Source)' },
+          { 'Funktion': 'Quellcode-Lizenz', 'LM Studio': 'Kostenlos, quelloffen verfügbar (nicht OSI)', 'Jan': 'Apache 2.0 (vollständig Open-Source)', 'GPT4All': 'MIT (vollständig Open-Source)' },
+          { 'Funktion': 'Aktive Entwicklung', 'LM Studio': 'Häufig (0.4.x, 2026)', 'Jan': 'Häufig (0.8.x, 2026)', 'GPT4All': 'Stagniert seit Anfang 2025' },
           { 'Funktion': 'Linux-Unterstützung', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Funktion': 'Am besten für', 'LM Studio': 'Benutzer, die die beste Benutzeroberfläche + Entwickler-API-Zugriff wünschen', 'Jan': 'Benutzer, die Open-Source-Software bevorzugen', 'GPT4All': 'Absolute Anfänger, die die einfachste Oberfläche wünschen' },
         ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Beginnen Sie mit LM Studio, sofern nichts Konkretes dagegen spricht. Es hat die beste Benutzeroberfläche, die größte Modellbibliothek und einen klaren Ausbaupfad (Local Server-Tab), wenn Sie später weitere Tools anbinden möchten. Wenn Sie Open-Source-Software klar bevorzugen, ist Jan die gleichwertige Wahl.',
+          },
+        ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-de.webp',
-        imageCaption: 'LM Studio vs. Jan vs. GPT4All Funktionsvergleich: LM Studio bietet 50.000+ Modelle, lokale API, Multi-Chat und die beste Benutzeroberfläche; Jan ist die Open-Source-Alternative (AGPLv3); GPT4All ist die einfachste Einzelfenster-Option für absolute Anfänger.',
+        imageCaption: 'LM Studio vs. Jan vs. GPT4All Funktionsvergleich: LM Studio bietet 50.000+ Modelle, lokale API, Multi-Chat und die beste Benutzeroberfläche; Jan ist die Open-Source-Alternative (Apache 2.0); GPT4All ist die einfachste Einzelfenster-Option für absolute Anfänger.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -492,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**LM Studio wird in 3 Minuten installiert und Sie chatten in unter 10 Minuten.** Der Prozess ist auf Windows und macOS identisch — Herunterladen, Installieren, Modelle durchsuchen, ein Modell herunterladen, chatten.',
         numberedItems: [
-          'Gehen Sie zu lmstudio.ai und laden Sie das Installationsprogramm für Ihre Plattform herunter (Windows .exe, macOS .dmg, Linux .AppImage oder .deb).',
+          'Gehen Sie zu lmstudio.ai und laden Sie das Installationsprogramm für Ihre Plattform herunter (Windows .exe, macOS .dmg für Apple Silicon, Linux .AppImage oder .deb).',
           'Führen Sie das Installationsprogramm aus. Akzeptieren Sie alle Sicherheitsfenster (es ist eine neue App, nicht standardmäßig von Apple/Microsoft code-signiert bei einigen Versionen).',
           'Öffnen Sie LM Studio. Die linke Randleiste zeigt: Chat, Search (Discover), Models und Local Server.',
           'Klicken Sie auf „Discover" (das Teleskopsymbol). Geben Sie in der Suchleiste „Phi-4 Mini" ein (für 8 GB Systeme oder weniger) oder „Qwen3 8B" (für 16 GB+ Systeme).',
@@ -507,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: Installationsleitfaden',
         content:
-          '**Jan ist die Open-Source-Alternative zu LM Studio — gleiche Benutzerfreundlichkeit, identisches Modell-Download-Erlebnis, AGPLv3-Lizenz.** Nutzen Sie Jan, wenn Open-Source-Software für Sie wichtig ist oder wenn Sie den Anwendungscode inspizieren oder ändern möchten.',
+          '**Jan ist die Open-Source-Alternative zu LM Studio — gleiche Benutzerfreundlichkeit, identisches Modell-Download-Erlebnis, Apache-2.0-Lizenz (2025 von AGPLv3 umlizenziert).** Nutzen Sie Jan, wenn Open-Source-Software für Sie wichtig ist, Sie einen Intel-Mac verwenden, oder wenn Sie den Anwendungscode inspizieren oder ändern möchten.',
         numberedItems: [
           'Gehen Sie zu jan.ai und laden Sie das Installationsprogramm für Ihre Plattform herunter.',
           'Führen Sie das Installationsprogramm aus und öffnen Sie Jan.',
@@ -521,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gpt4all',
         title: 'GPT4All: Installationsleitfaden',
         content:
-          '**GPT4All bietet das am meisten vereinfachte Erlebnis — ein einzelnes Chat-Fenster und eine kuratierte Liste empfohlener Modelle.** Wenn LM Studio und Jan zu viele Optionen haben und Sie einfach eine Frage eingeben und eine Antwort erhalten möchten, beginnen Sie hier.',
+          '**GPT4All bietet das am meisten vereinfachte Erlebnis — ein einzelnes Chat-Fenster und eine kuratierte Liste empfohlener Modelle.** Wenn LM Studio und Jan zu viele Optionen haben und Sie einfach eine Frage eingeben und eine Antwort erhalten möchten, beginnen Sie hier. Eine Einschränkung für 2026: Die Entwicklung von GPT4All stagniert seit Anfang 2025 (letzte große Version v3.10), die App funktioniert weiterhin offline einwandfrei, aber die kuratierte Modellliste enthält die neuesten Modelle nicht mehr. Für aktuelle Modell-Releases ohne Terminal wählen Sie LM Studio oder Jan.',
         numberedItems: [
           'Gehen Sie zu gpt4all.io und laden Sie das Installationsprogramm für Ihre Plattform herunter.',
           'Führen Sie das Installationsprogramm aus und öffnen Sie GPT4All.',
@@ -530,7 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All hat keinen Multi-Gesprächs-Verlauf — jede Sitzung beginnt von vorne. Es ist für die Einzelaufgaben-Nutzung statt für erweiterte Gespräche konzipiert.',
         ],
         image: '/images/easiest-local-ai-app-which-app-de.svg',
-        imageCaption: 'Welche lokale KI-App installieren: LM Studio für die beste Benutzeroberfläche und API-Zugriff (50.000+ Modelle); Jan als Open-Source AGPLv3-Alternative; GPT4All für das einfachste Einzelfenster-Einsteigererlebnis mit ~20 kuratierten Modellen. Alle drei kostenlos, kein Cloud-Konto erforderlich.',
+        imageCaption: 'Welche lokale KI-App installieren: LM Studio für die beste Benutzeroberfläche und API-Zugriff (50.000+ Modelle); Jan als Open-Source Apache-2.0-Alternative; GPT4All für das einfachste Einzelfenster-Einsteigererlebnis mit ~20 kuratierten Modellen. Alle drei kostenlos, kein Cloud-Konto erforderlich.',
       },
       firstModel: {
         id: 'first-model',
@@ -539,22 +590,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Das richtige erste Modell hängt davon ab, wie viel RAM Ihr Computer hat.** Mehr RAM = größeres Modell = bessere Antworten, aber jeder moderne Computer kann etwas Nützliches ausführen.',
         columns: ['Verfügbarer RAM', 'Empfohlenes erstes Modell', 'Download-Größe', 'Erwartete Geschwindigkeit'],
         rows: [
-          { 'Verfügbarer RAM': '8 GB oder weniger', 'Empfohlenes erstes Modell': 'Phi-4 Mini (3,8B Q4)', 'Download-Größe': '~2,7 GB', 'Erwartete Geschwindigkeit': '15–30 Token/Sek. auf Apple Silicon; 5–10 Token/Sek. auf reiner Intel/AMD-CPU' },
+          { 'Verfügbarer RAM': '8 GB oder weniger', 'Empfohlenes erstes Modell': 'Phi-4 Mini (3,8B Q4) oder Gemma 4 E2B', 'Download-Größe': '~2–3 GB', 'Erwartete Geschwindigkeit': '15–30 Token/Sek. auf Apple Silicon; 5–10 Token/Sek. auf reiner Intel/AMD-CPU' },
           { 'Verfügbarer RAM': '8–16 GB', 'Empfohlenes erstes Modell': 'Llama 3.2 3B (Q4) oder Qwen3 8B (Q4)', 'Download-Größe': '2,0–4,9 GB', 'Erwartete Geschwindigkeit': '20–40 Token/Sek. auf Apple Silicon; 8–15 Token/Sek. reine CPU' },
-          { 'Verfügbarer RAM': '16–32 GB', 'Empfohlenes erstes Modell': 'Qwen3 14B (Q4)', 'Download-Größe': '~8,9 GB', 'Erwartete Geschwindigkeit': '15–25 Token/Sek. auf Apple Silicon; GPU erforderlich für Echtzeit auf x86' },
-          { 'Verfügbarer RAM': '32 GB+ (Apple Silicon) oder 24 GB VRAM (NVIDIA)', 'Empfohlenes erstes Modell': 'Llama 3.3 70B (Q4)', 'Download-Größe': '~40 GB', 'Erwartete Geschwindigkeit': '10–20 Token/Sek. auf Apple M5 Max; 15–25 Token/Sek. RTX 4090' },
+          { 'Verfügbarer RAM': '16–32 GB', 'Empfohlenes erstes Modell': 'gpt-oss 20B (~13 GB) oder Qwen3 14B (Q4)', 'Download-Größe': '~9–13 GB', 'Erwartete Geschwindigkeit': '15–25 Token/Sek. auf Apple Silicon (Qwen3 14B); GPU erforderlich für Echtzeit auf x86' },
+          { 'Verfügbarer RAM': '32 GB+ (Apple Silicon) oder 24 GB VRAM (NVIDIA)', 'Empfohlenes erstes Modell': 'Qwen 3.6 27B (Q4) — bestes Gesamtmodell für Consumer-Hardware', 'Download-Größe': '~16 GB', 'Erwartete Geschwindigkeit': 'Echtzeit auf M4-Pro-/M5-Klasse-Macs und GPUs der RTX-4090-Klasse' },
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-de.svg',
-        imageCaption: 'Erstmodell-Leitfaden nach verfügbarem RAM: ≤8 GB → Phi-4 Mini 3,8B (~2,7 GB, 15–30 Token/Sek. auf Apple Silicon); 8–16 GB → Llama 3.2 3B oder Qwen3 8B; 16–32 GB → Qwen3 14B (~8,9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
+        imageCaption: 'Erstmodell-Leitfaden nach verfügbarem RAM: ≤8 GB → Phi-4 Mini 3,8B oder Gemma 4 E2B (~2–3 GB, 15–30 Token/Sek. auf Apple Silicon); 8–16 GB → Llama 3.2 3B oder Qwen3 8B; 16–32 GB → gpt-oss 20B oder Qwen3 14B (~9–13 GB); 32 GB+ → Qwen 3.6 27B (~16 GB).',
       },
       hardware: {
         id: 'hardware',
         title: 'Hardware-Anforderungen',
         content:
-          '**Sie benötigen keinen Gaming-PC oder eine dedizierte GPU, um 2026 lokal AI auszuführen.** Apple Silicon Macs sind die beste Consumer-Hardware für lokale LLMs; alle MacBook Air ab M1 führen kleine Modelle gut aus. Auf Windows und Linux funktioniert der CPU-Inferenzmodus für 3B–7B-Modelle auf jedem Laptop mit 8 GB RAM.',
+          '**Sie benötigen keinen Gaming-PC oder eine dedizierte GPU, um 2026 lokal AI auszuführen.** Apple Silicon Macs sind die beste Consumer-Hardware für lokale LLMs; alle MacBook Air ab M1 führen kleine Modelle gut aus. Auf Windows und Linux funktioniert der CPU-Inferenzmodus für 3B–7B-Modelle auf jedem Laptop mit 8 GB RAM. Ein Plattformhinweis: LM Studio setzt unter macOS Apple Silicon voraus — auf einem Intel-Mac nutzen Sie Jan oder GPT4All, die Intel weiterhin per CPU-Inferenz unterstützen.',
         items: [
-          '**Apple Silicon (M1–M5):** beste Consumer-Hardware für lokale LLMs. Unified Memory bedeutet, dass GPU und CPU RAM teilen — ein M3 MacBook Air mit 8 GB führt Phi-4 Mini mit über 20 Token/Sekunde aus; ein M5 Max mit 64 GB führt Llama 3.3 70B aus.',
-          '**NVIDIA-GPU (Windows/Linux):** CUDA-Beschleunigung in LM Studio und Jan beschleunigt die Generierung dramatisch. RTX 3060 12 GB führt Mistral Small und Qwen3 8B in Echtzeit aus. RTX 4090 24 GB führt 30B-Modelle aus.',
+          '**Apple Silicon (M1–M5):** beste Consumer-Hardware für lokale LLMs. Unified Memory bedeutet, dass GPU und CPU RAM teilen — ein M3 MacBook Air mit 8 GB führt Phi-4 Mini mit über 20 Token/Sekunde aus; ein M5 Max mit 64 GB führt Llama 3.3 70B aus. LM Studio unterstützt hier sowohl GGUF (llama.cpp) als auch MLX-Modelle.',
+          '**NVIDIA-GPU (Windows/Linux):** CUDA-Beschleunigung in LM Studio und Jan beschleunigt die Generierung dramatisch. RTX 3060 12 GB führt Qwen3 8B in Echtzeit aus. RTX 4090 24 GB führt Qwen 3.6 27B und andere Modelle der 30B-Klasse aus.',
           '**AMD-GPU (Windows/Linux):** ROCm-Unterstützung in LM Studio und Jan wird besser, ist aber weniger reif als CUDA. Wenn Sie eine AMD-GPU haben, überprüfen Sie die LM Studio-Versionsinformationen für Ihre spezifische Karte, bevor Sie auf GPU-Beschleunigung angewiesen sind.',
           '**Reine Intel/AMD-CPU:** funktioniert für 3B–7B-Modelle mit 5–15 Token/Sekunde — nutzbar aber langsam. Das Erlebnis ist besser für Aufgaben, bei denen Sie einen Prompt senden und etwas anderes tun (Zusammenfassung, E-Mail-Entwurf) als für Echtzeit-Gesprächsnutzung.',
           '**RAM und VRAM:** das Modell muss vollständig in RAM (oder VRAM) passen. Ein 4B-Modell benötigt ~3 GB; ein 8B-Modell benötigt ~5 GB; ein 14B-Modell benötigt ~9 GB; ein 70B-Modell benötigt ~42 GB. Wenn das Modell zu groß ist, warnt LM Studio Sie vor dem Download.',
@@ -588,9 +639,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[LM Studio Versionshinweise und Hardware-Kompatibilität — lmstudio.ai](https://lmstudio.ai)',
-          '[Jan Dokumentation und Hardware-Anforderungen — jan.ai/docs](https://jan.ai/docs)',
-          '[GPT4All Modellbibliothek und LocalDocs-Dokumentation — gpt4all.io](https://gpt4all.io)',
+          '[LM Studio 0.4-Changelog und Hardware-Kompatibilität — lmstudio.ai/changelog](https://lmstudio.ai/changelog)',
+          '[Jan Dokumentation und Open-Source-Repository (Apache 2.0) — jan.ai/docs](https://jan.ai/docs)',
+          '[GPT4All Modellbibliothek, LocalDocs-Dokumentation und Release-Historie — github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)',
           '[Phi-4 Mini Technischer Bericht — Microsoft Research](https://microsoft.com/research)',
           '[GGUF-Quantisierungsformat-Spezifikation — llama.cpp](https://github.com/ggerganov/llama.cpp)',
         ],
@@ -617,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich eine lokale AI-App auf einem älteren MacBook verwenden?',
-            a: 'Ja, wenn es die RAM-Anforderung erfüllt (8 GB Minimum für 3B-Modelle). MacBook Air und MacBook Pro Modelle ab 2018 mit 8 GB RAM können Phi-4 Mini mit langsamer aber nutzbarer Geschwindigkeit (~5–10 Token/Sekunde auf Intel Mac) ausführen. Apple Silicon Macs (M1 und später) sind aufgrund der vereinheitlichten Speicherarchitektur und Neural Engine erheblich schneller. Ein 2020 M1 MacBook Air führt Phi-4 Mini mit über 20 Token/Sekunde aus.',
+            a: 'Ja, wenn es die RAM-Anforderung erfüllt (8 GB Minimum für 3B-Modelle). Auf einem Intel-MacBook ab 2018 nutzen Sie Jan oder GPT4All — LM Studio setzt unter macOS Apple Silicon voraus. Ein Intel-Mac führt Phi-4 Mini mit langsamer, aber nutzbarer Geschwindigkeit aus (~5–10 Token/Sekunde, CPU-Inferenz). Apple Silicon Macs (M1 und später) sind aufgrund der vereinheitlichten Speicherarchitektur und Neural Engine erheblich schneller. Ein 2020 M1 MacBook Air führt Phi-4 Mini mit über 20 Token/Sekunde aus.',
           },
           {
             q: 'Kann ich mehrere Modelle gleichzeitig ausführen?',
@@ -633,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich mein lokales Modell mit anderen Anwendungen verbinden?',
-            a: 'Ja. LM Studio und Jan stellen beide eine lokale OpenAI-kompatible API auf localhost:1234 oder localhost:5000 bereit. Sie können Obsidian, VS Code oder andere Tools auf diesen Endpunkt verweisen. Viele Workflows (RAG, Prompt-Testing, Chatbot-Integration) werden möglich, wenn Sie Ihre lokale API verfügbar machen.',
+            a: 'Ja. Der Local Server von LM Studio stellt eine OpenAI- und Anthropic-kompatible API unter http://localhost:1234 bereit, Jan eine OpenAI-kompatible API unter http://localhost:1337. Verweisen Sie Obsidian, VS Code oder jedes andere Tool, das einen eigenen API-Endpunkt akzeptiert, auf diese Adresse. Viele Workflows (RAG, Prompt-Testing, Chatbot-Integration) werden möglich, sobald Ihre lokale API verfügbar ist. Seit Version 0.4 kann LM Studio zudem lokale MCP-Tools nutzen.',
           },
           {
             q: 'Welche Quantisierung sollte ich verwenden — Q3, Q4, Q5 oder Q6?',
@@ -649,11 +700,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Modelle unterstützt LM Studio auf Apple-Silicon-Macs?',
-            a: 'LM Studio unterstützt die gesamte GGUF-Modellbibliothek auf Apple Silicon (M1 bis M5) und nutzt Metal für die GPU-Beschleunigung über die Unified-Memory-Architektur. Empfohlene Einstiegsmodelle: Phi-4 Mini (3,8B) oder Llama 3.2 3B auf Macs mit 8 GB, Qwen3 8B auf Macs mit 16 GB+, Qwen3 14B auf Macs mit 16–32 GB und Llama 3.3 70B auf Macs mit 32 GB+ (M3 Max, M4 Max oder M5 Max). LM Studio erkennt den verfügbaren Speicher automatisch und empfiehlt eine passende Quantisierungsstufe — meist Q4_K_M.',
+            a: 'LM Studio unterstützt die gesamte GGUF-Modellbibliothek sowie Apples MLX-Format auf Apple Silicon (M1 bis M5) und nutzt Metal für die GPU-Beschleunigung über die Unified-Memory-Architektur. Empfohlene Einstiegsmodelle: Phi-4 Mini (3,8B) oder Gemma 4 E2B auf Macs mit 8 GB, Qwen3 8B auf Macs mit 16 GB+, gpt-oss 20B oder Qwen3 14B auf Macs mit 16–32 GB und Qwen 3.6 27B auf Macs mit 32 GB+ — Llama 3.3 70B bleibt auf 48–64 GB Max-Klasse-Geräten eine Option. LM Studio erkennt den verfügbaren Speicher automatisch und empfiehlt eine passende Quantisierungsstufe — meist Q4_K_M.',
           },
           {
             q: 'Welche Systemanforderungen hat LM Studio unter Windows, auf Intel-Mac und auf Apple Silicon?',
-            a: 'Das Minimum liegt auf allen Plattformen bei 8 GB RAM für 3B–7B-Modelle. Apple Silicon (M1–M5) läuft am schnellsten dank Unified Memory und Metal-Beschleunigung, ohne separate GPU. Intel-Mac läuft ausschließlich über CPU-Inferenz — es gibt keine Metal-GPU-Beschleunigung für LLM-Inferenz auf Intel-Macs —, daher sind etwa 5–10 Token/Sekunde für ein 3B-Modell realistisch. Windows benötigt mindestens 8 GB RAM, eine NVIDIA-GPU (8 GB+ VRAM) ist optional für CUDA-Beschleunigung bei größeren Modellen. Linux hat dasselbe Minimum von 8 GB RAM über AppImage oder .deb, mit CUDA-Unterstützung, sofern eine NVIDIA-GPU vorhanden ist.',
+            a: 'Unter macOS setzt LM Studio einen Apple-Silicon-Mac (M1 oder neuer) mit macOS 14 oder höher voraus — Intel-Macs werden nicht unterstützt; Intel-Mac-Nutzer sollten stattdessen Jan oder GPT4All installieren, die per CPU-Inferenz etwa 5–10 Token/Sekunde für ein 3B-Modell erreichen. Unter Windows liegt das Minimum bei 8 GB RAM für 3B–7B-Modelle, eine NVIDIA-GPU (8 GB+ VRAM) ist optional für CUDA-Beschleunigung bei größeren Modellen. Linux hat dasselbe Minimum von 8 GB RAM über AppImage oder .deb, mit CUDA-Unterstützung, sofern eine NVIDIA-GPU vorhanden ist. Apple Silicon läuft insgesamt am schnellsten dank Unified Memory und Metal-Beschleunigung, ohne separate GPU.',
           },
           {
             q: 'Läuft LM Studio unter Linux?',
@@ -661,7 +712,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was sind die besten Alternativen zu LM Studio 2026?',
-            a: 'Jan ist die naheliegendste Alternative — gleiche Einrichtungsgeschwindigkeit, vollständig Open-Source unter AGPLv3 und Linux-AppImage-Unterstützung. GPT4All ist die einfachste Alternative für absolute Anfänger, mit kuratierter Modellliste und Einzelfenster-Chat-Oberfläche. Für Entwickler, die ein Befehlszeilentool bevorzugen, ist Ollama die führende Alternative, erfordert aber Terminal-Nutzung statt einer grafischen Oberfläche. Alle vier führen dieselben GGUF-Modelldateien aus und sind kostenlos.',
+            a: 'Jan ist die naheliegendste Alternative — gleiche Einrichtungsgeschwindigkeit, vollständig Open-Source unter Apache 2.0 und Linux-AppImage-Unterstützung. GPT4All ist die einfachste Alternative für absolute Anfänger, mit kuratierter Modellliste und Einzelfenster-Chat-Oberfläche, allerdings stagniert die Entwicklung seit Anfang 2025. Für Entwickler, die ein Befehlszeilentool bevorzugen, ist Ollama die führende Alternative, erfordert aber Terminal-Nutzung statt einer grafischen Oberfläche. Alle vier führen dieselben GGUF-Modelldateien aus und sind kostenlos.',
+          },
+          {
+            q: 'Wird GPT4All 2026 noch weiterentwickelt?',
+            a: 'Nicht aktiv. Die letzte große Version von GPT4All (v3.10) erschien Anfang 2025, das GitHub-Repository zeigt seither keine wesentlichen Updates mehr. Die App installiert sich weiterhin und funktioniert vollständig offline, und sie bleibt die einfachste Einzelfenster-Option — aber die kuratierte Modellliste ist veraltet, sodass neuere Modelle wie Qwen 3.6 oder gpt-oss dort nicht angeboten werden. Wenn Sie aktuelle Modell-Releases mit einer Einrichtung ohne Terminal wünschen, wählen Sie LM Studio oder Jan.',
           },
         ],
       },
@@ -684,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'LM Studio auf Apple Silicon: Einfachste KI-App 2026',
       description:
-        'LM Studio auf Apple Silicon, Intel Mac, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit. Ohne Terminal. Im Vergleich zu Jan und GPT4All, 2026.',
+        'LM Studio auf Apple Silicon, Windows und Linux: unterstützte Modelle, Systemanforderungen und Einrichtungszeit. Ohne Terminal. Im Vergleich zu Jan und GPT4All, 2026.',
       url: 'https://www.promptquorum.com/de/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'de',
       image: buildOgImageObject(OG_SLUG, 'de'),
@@ -698,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
@@ -748,23 +803,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-28',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: 'Application IA locale la plus facile pour Windows, Mac et Linux (2026)',
     seoTitle: 'LM Studio sur Apple Silicon : IA locale la plus facile 2026',
     intro:
-      'LM Studio est l\'application IA locale la plus facile en 2026 pour Windows, Mac et Linux — téléchargez, installez, importez un modèle et commencez à discuter en moins de 10 minutes sans terminal. Ce guide couvre LM Studio, Jan et GPT4All comme trois options sans code, les compare par temps de configuration et capacité, et explique laquelle choisir selon votre matériel et objectifs.',
+      'LM Studio est l\'application IA locale la plus facile en 2026 pour Windows, Mac et Linux — téléchargez, installez, importez un modèle et commencez à discuter en moins de 10 minutes sans terminal. Il fonctionne le plus rapidement sur Apple Silicon (M1 à M5) ; sur un Mac Intel, Jan ou GPT4All remplissent le même rôle, car LM Studio nécessite désormais Apple Silicon sous macOS. Ce guide couvre LM Studio, Jan et GPT4All comme trois options sans code, les compare par temps de configuration et capacité, et explique laquelle choisir selon votre matériel et objectifs.',
     metaDescription:
       'LM Studio sur Apple Silicon, Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-fr.webp',
     twitterDescription:
       'LM Studio sur Apple Silicon (M1–M5), Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation — face à Jan et GPT4All pour 2026.',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -801,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les trois sont gratuits, open-source, et marchent sans compte cloud ou connexion internet après téléchargement.',
           'LM Studio expose également une API locale compatible OpenAI pour développeurs qui veulent aller plus loin.',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -838,13 +895,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**LM Studio :** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb).',
-          '**Jan :** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
-          '**GPT4All :** gpt4all.io — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage).',
-          '**Modèles recommandés :** Phi-4 Mini (3B, ~3 GB), Llama 3.2 3B (~2.2 GB), Qwen3 8B (~5 GB), Mistral Small (~4 GB).',
+          '**LM Studio :** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, macOS 14+ ; pas de support Mac Intel), Linux (AppImage, .deb). Version actuelle : 0.4.x.',
+          '**Jan :** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Version actuelle : 0.8.x, Apache 2.0.',
+          '**GPT4All :** gpt4all.io — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage). Dernière version majeure : v3.10, début 2025 — développement au ralenti.',
+          '**Modèles recommandés :** Phi-4 Mini (3,8B, ~2.7 GB) ou Gemma 4 E2B, Llama 3.2 3B (~2.2 GB), Qwen3 8B (~5 GB), gpt-oss 20B (~13 GB), Qwen 3.6 27B (~16 GB, meilleur modèle grand public).',
           '**GPU optionnel :** Tous trois supportent CUDA (NVIDIA) et Metal (Apple Silicon). GPU accélère 5–10x mais n\'est pas nécessaire.',
           '**RAM minimum :** 6 GB pour modèles 3B–8B sans GPU. 4 GB pour Phi-4 Mini seul. 16 GB+ recommandé pour plusieurs modèles.',
-          '**Coût :** Tous trois gratuits et open-source (ou fermés mais sans frais). Aucun abonnement requis.',
+          '**Coût :** Jan (Apache 2.0) et GPT4All (MIT) sont entièrement open-source ; LM Studio est gratuit mais à code source disponible. Aucun abonnement requis.',
         ],
       },
       comparison: {
@@ -857,12 +914,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Critère': 'Idéal pour', 'LM Studio': 'Vitesse et flexibilité', 'Jan': 'Open-source et contrôle', 'GPT4All': 'Débutants absolus' },
           { 'Critère': 'Facilité d\'installation', 'LM Studio': '9/10', 'Jan': '9/10', 'GPT4All': '10/10' },
           { 'Critère': 'Performance (M3 Mac, Llama 8B)', 'LM Studio': '28 tokens/sec', 'Jan': '22 tokens/sec', 'GPT4All': '16 tokens/sec' },
-          { 'Critère': 'Licence', 'LM Studio': 'Propriétaire', 'Jan': 'AGPL', 'GPT4All': 'MIT (open-source)' },
+          { 'Critère': 'Licence', 'LM Studio': 'Propriétaire (gratuit)', 'Jan': 'Apache 2.0', 'GPT4All': 'MIT (open-source)' },
           { 'Critère': 'Taille téléchargement', 'LM Studio': '~450 MB', 'Jan': '~380 MB', 'GPT4All': '~290 MB' },
-          { 'Critère': 'API OpenAI locale', 'LM Studio': 'Oui', 'Jan': 'Oui', 'GPT4All': 'Oui' },
+          { 'Critère': 'API OpenAI locale', 'LM Studio': 'Oui (+ compatible Anthropic)', 'Jan': 'Oui', 'GPT4All': 'Oui' },
+          { 'Critère': 'Développement actif', 'LM Studio': 'Fréquent (0.4.x, 2026)', 'Jan': 'Fréquent (0.8.x, 2026)', 'GPT4All': 'Au ralenti depuis début 2025' },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-fr.webp',
-        imageCaption: 'Comparaison des fonctionnalités LM Studio vs Jan vs GPT4All : LM Studio offre 50 000+ modèles, API locale, multi-chat et la meilleure UI ; Jan est l\'alternative open-source (AGPLv3) ; GPT4All est l\'option fenêtre unique la plus simple pour les débutants absolus.',
+        imageCaption: 'Comparaison des fonctionnalités LM Studio vs Jan vs GPT4All : LM Studio offre 50 000+ modèles, API locale, multi-chat et la meilleure UI ; Jan est l\'alternative open-source (Apache 2.0) ; GPT4All est l\'option fenêtre unique la plus simple pour les débutants absolus, mais son développement est au ralenti.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -967,11 +1025,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'Choisissez en fonction de votre matériel. Les trois applications vous permettent de télécharger plusieurs modèles et de basculer entre eux.',
         items: [
-          '**Matériel bas de gamme (8 GB RAM, pas de GPU) :** Phi-4 Mini (3B, ~3 GB). Le plus rapide sur appareils faibles. Comprend bien le code et les questions techniques. Légèrement moins bon pour la conversation créative.',
-          '**Matériel moyen (16 GB RAM, GPU optionnel) :** Llama 3.2 3B ou Llama 3.2 8B. Plus polyvalent que Phi-4. Bon équilibre entre vitesse et qualité. Recommandé pour la plupart des utilisateurs.',
-          '**Apple Silicon (M3, M4, M5) :** Qwen3 8B ou Llama 3.1 8B. Apple Silicon excelle avec modèles 8B grâce au contrôle de la mémoire unifiée. Qualité et vitesse supérieures.',
-          '**NVIDIA RTX 3060 ou meilleur :** Llama 3.1 8B, Mistral Small ou Qwen3 8B. Le GPU accélère ces modèles 5–10x. Bonne qualité et vitesse combinées.',
-          '**RTX 4090 ou A100 :** Llama 3.3 70B ou Mixtral 8x22B. Les plus grands modèles disponibles pour local. Qualité proche du cloud. Mais lent (5–10 tokens/sec).',
+          '**Matériel bas de gamme (8 GB RAM, pas de GPU) :** Phi-4 Mini (3,8B, ~2.7 GB) ou Gemma 4 E2B. Le plus rapide sur appareils faibles. Comprend bien le code et les questions techniques.',
+          '**Matériel moyen (8–16 GB RAM, GPU optionnel) :** Llama 3.2 3B ou Qwen3 8B. Bon équilibre entre vitesse et qualité. Recommandé pour la plupart des utilisateurs.',
+          '**Apple Silicon (M3, M4, M5, 16–32 GB) :** gpt-oss 20B ou Qwen3 14B. Apple Silicon excelle grâce à la mémoire unifiée. Qualité et vitesse supérieures.',
+          '**NVIDIA RTX 3060 ou meilleur :** Qwen3 8B ou gpt-oss 20B selon la VRAM disponible. Le GPU accélère ces modèles 5–10x par rapport au CPU seul.',
+          '**RTX 4090 ou Mac 32 GB+ :** Qwen 3.6 27B — le meilleur modèle grand public en 2026 (77,2 % SWE-bench, Apache 2.0). Qualité proche du cloud, temps réel sur ce matériel.',
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-fr.svg',
         imageCaption: 'Guide du premier modèle par RAM disponible : ≤8 GB → Phi-4 Mini 3.8B (~2.7 GB, 15–30 tok/s sur Apple Silicon) ; 8–16 GB → Llama 3.2 3B ou Qwen3 8B ; 16–32 GB → Qwen3 14B (~8.9 GB) ; 32 GB+ → Llama 3.3 70B (~40 GB).',
@@ -980,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Exigences matérielles',
         content:
-          'Les trois applications fonctionnent sur n\'importe quel matériel moderne. Les modèles 3B fonctionnent sur les appareils bas de gamme. Les modèles 8B+ requièrent un minimum de 16 GB RAM.',
+          'Les trois applications fonctionnent sur n\'importe quel matériel moderne. Les modèles 3B fonctionnent sur les appareils bas de gamme. Les modèles 8B+ requièrent un minimum de 16 GB RAM. Note de plateforme : LM Studio nécessite Apple Silicon sous macOS — sur un Mac Intel, utilisez Jan ou GPT4All, qui prennent toujours en charge Intel via l\'inférence CPU.',
         items: [
           '**Matériel minimum recommandé :** MacBook Air M3 (8 GB), PC Windows avec Intel i7/i5 (16 GB RAM), ou ordinateur portable Linux équivalent.',
           '**GPU recommandé :** NVIDIA RTX 3060 ou meilleur (12+ GB VRAM) pour amélioration de vitesse 5–10x. Apple Silicon fournit l\'amélioration équivalente via Metal.',
@@ -1007,9 +1065,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[LM Studio](https://lmstudio.ai) — Application de bureau officielle avec navigateur de modèles intégré.',
-          '[Jan](https://jan.ai) — Alternative open-source à LM Studio.',
-          '[GPT4All](https://gpt4all.io) — Application la plus simple pour débutants.',
+          '[LM Studio](https://lmstudio.ai/changelog) — Application de bureau officielle avec navigateur de modèles intégré ; changelog de la version 0.4.',
+          '[Jan](https://jan.ai) — Alternative open-source (Apache 2.0) à LM Studio.',
+          '[GPT4All](https://github.com/nomic-ai/gpt4all) — Application la plus simple pour débutants ; dépôt et historique des versions.',
           '[Hugging Face](https://huggingface.co/models) — Dépôt principal pour modèles GGUF open-source.',
           '[llama.cpp](https://github.com/ggerganov/llama.cpp) — Moteur d\'inférence de bas niveau utilisé par LM Studio, Jan et GPT4All.',
           '[Ollama](https://ollama.ai) — Alternative en ligne de commande pour développeurs et power users.',
@@ -1033,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je connecter mon modèle local à d\'autres applications ?',
-            a: 'Oui. LM Studio et Jan exposent tous deux une API locale compatible OpenAI sur localhost:1234 ou localhost:5000. Vous pouvez pointer Obsidian, VS Code, ou d\'autres outils vers cet endpoint.',
+            a: 'Oui. Le Local Server de LM Studio expose une API compatible OpenAI et Anthropic sur localhost:1234, et Jan une API compatible OpenAI sur localhost:1337. Vous pouvez pointer Obsidian, VS Code, ou d\'autres outils vers ces endpoints. Depuis la version 0.4, LM Studio peut aussi utiliser des outils MCP locaux.',
           },
           {
             q: 'Que fait la quantification ? Comment choisir Q4 vs Q5 vs Q6 ?',
@@ -1049,7 +1107,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelle application est la plus stable ? Dois-je m\'attendre à des plantages ?',
-            a: 'Toutes les trois sont stables. Les plantages sont rares et généralement causés par un manque de mémoire (décharger le modèle résout le problème). Jan a l\'historique le plus court mais est aussi stable que les deux autres.',
+            a: 'Toutes les trois sont stables. Les plantages sont rares et généralement causés par un manque de mémoire (décharger le modèle résout le problème). GPT4All reçoit toutefois beaucoup moins de correctifs qu\'auparavant — son développement est au ralenti depuis début 2025 — alors que LM Studio et Jan publient des mises à jour fréquentes en 2026.',
+          },
+          {
+            q: 'GPT4All est-il encore activement développé en 2026 ?',
+            a: 'Pas activement. Sa dernière version majeure (v3.10) date de début 2025, et son dépôt GitHub n\'a pas reçu de mise à jour notable depuis. L\'application s\'installe et fonctionne toujours parfaitement hors ligne, et reste l\'option la plus simple à fenêtre unique — mais sa liste de modèles sélectionnés n\'inclut plus les modèles récents comme Qwen 3.6 ou gpt-oss. Pour des modèles à jour sans terminal, préférez LM Studio ou Jan.',
           },
           {
             q: 'Puis-je utiliser ces applications sur un réseau local ou distant ?',
@@ -1061,11 +1123,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quels modèles LM Studio prend-il en charge sur les Mac Apple Silicon ?',
-            a: 'LM Studio prend en charge toute la bibliothèque de modèles GGUF sur Apple Silicon (M1 à M5), en utilisant Metal pour l\'accélération GPU via l\'architecture de mémoire unifiée. Modèles de départ recommandés : Phi-4 Mini (3,8B) ou Llama 3.2 3B sur les Mac avec 8 Go, Qwen3 8B sur les Mac avec 16 Go et plus, Qwen3 14B sur les Mac avec 16 à 32 Go, et Llama 3.3 70B sur les Mac avec 32 Go et plus (M3 Max, M4 Max ou M5 Max). LM Studio détecte automatiquement la mémoire disponible et recommande un niveau de quantification adapté — généralement Q4_K_M.',
+            a: 'LM Studio prend en charge toute la bibliothèque de modèles GGUF ainsi que le format MLX d\'Apple sur Apple Silicon (M1 à M5), en utilisant Metal pour l\'accélération GPU via l\'architecture de mémoire unifiée. Modèles de départ recommandés : Phi-4 Mini (3,8B) ou Gemma 4 E2B sur les Mac avec 8 Go, Qwen3 8B sur les Mac avec 16 Go et plus, gpt-oss 20B ou Qwen3 14B sur les Mac avec 16 à 32 Go, et Qwen 3.6 27B sur les Mac avec 32 Go et plus — Llama 3.3 70B reste une option sur les machines 48–64 Go de classe Max. LM Studio détecte automatiquement la mémoire disponible et recommande un niveau de quantification adapté — généralement Q4_K_M.',
           },
           {
             q: 'Quelle est la configuration requise pour LM Studio sur Windows, Mac Intel et Apple Silicon ?',
-            a: 'Le minimum sur les trois plateformes est de 8 Go de RAM pour les modèles 3B à 7B. Apple Silicon (M1–M5) est le plus rapide, grâce à la mémoire unifiée et à l\'accélération Metal, sans GPU séparé nécessaire. Mac Intel fonctionne uniquement en inférence CPU — il n\'y a pas d\'accélération GPU Metal pour l\'inférence LLM sur Mac Intel —, comptez donc environ 5 à 10 tokens/seconde pour un modèle 3B. Windows nécessite au minimum 8 Go de RAM, avec une GPU NVIDIA (8 Go+ de VRAM) optionnelle pour l\'accélération CUDA sur les modèles plus grands. Linux a le même minimum de 8 Go de RAM via AppImage ou .deb, avec support CUDA si une GPU NVIDIA est présente.',
+            a: 'Sous macOS, LM Studio nécessite un Mac Apple Silicon (M1 ou plus récent) avec macOS 14 ou supérieur — les Mac Intel ne sont pas pris en charge ; les utilisateurs de Mac Intel doivent installer Jan ou GPT4All à la place, qui tournent en inférence CPU à environ 5–10 tokens/seconde pour un modèle 3B. Sous Windows, le minimum est de 8 Go de RAM pour les modèles 3B à 7B, avec une GPU NVIDIA (8 Go+ de VRAM) optionnelle pour l\'accélération CUDA sur les modèles plus grands. Linux a le même minimum de 8 Go de RAM via AppImage ou .deb, avec support CUDA si une GPU NVIDIA est présente. Apple Silicon reste globalement le plus rapide, grâce à la mémoire unifiée et à l\'accélération Metal, sans GPU séparé nécessaire.',
           },
           {
             q: 'LM Studio fonctionne-t-il sous Linux ?',
@@ -1073,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quelles sont les meilleures alternatives à LM Studio en 2026 ?',
-            a: 'Jan est l\'alternative la plus proche — même rapidité d\'installation, entièrement open-source sous licence AGPLv3, et support AppImage pour Linux. GPT4All est l\'alternative la plus simple pour les débutants purs, avec une liste de modèles sélectionnés et une interface de chat à fenêtre unique. Pour les développeurs qui préfèrent un outil en ligne de commande, Ollama est l\'alternative de référence, mais nécessite l\'utilisation du terminal plutôt qu\'une interface graphique. Les quatre utilisent les mêmes fichiers de modèles GGUF et sont gratuits.',
+            a: 'Jan est l\'alternative la plus proche — même rapidité d\'installation, entièrement open-source sous licence Apache 2.0, et support AppImage pour Linux. GPT4All est l\'alternative la plus simple pour les débutants purs, avec une liste de modèles sélectionnés et une interface de chat à fenêtre unique, même si son développement est au ralenti depuis début 2025. Pour les développeurs qui préfèrent un outil en ligne de commande, Ollama est l\'alternative de référence, mais nécessite l\'utilisation du terminal plutôt qu\'une interface graphique. Les quatre utilisent les mêmes fichiers de modèles GGUF et sont gratuits.',
           },
         ],
       },
@@ -1096,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'LM Studio sur Apple Silicon : IA locale la plus facile 2026',
       description:
-        'LM Studio sur Apple Silicon, Mac Intel, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
+        'LM Studio sur Apple Silicon, Windows et Linux : modèles supportés, configuration requise et temps d\'installation. Sans terminal. Face à Jan et GPT4All, 2026.',
       url: 'https://www.promptquorum.com/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'fr',
       image: buildOgImageObject(OG_SLUG, 'fr'),
@@ -1110,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       educationalLevel: 'Beginner',
       'proficiencyLevel': 'Beginner',
       about: [
@@ -1156,23 +1218,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-28',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: '最も簡単なローカルAIアプリ Windows、Mac、Linux (2026)',
     seoTitle: 'LM Studio × Apple Silicon：最も簡単なローカルAI 2026',
     intro:
-      '2026年、LM Studioは最も簡単なローカルAIアプリです — Windows、Mac、Linuxで使えます。ダウンロード、インストール、モデルをロード、わずか10分以内でチャットを開始できます。このガイドは、LM Studio、Jan、GPT4Allの3つのターミナル不要なオプションをカバーし、セットアップ時間と機能で比較して、ハードウェアと目標に基づいてどれを選ぶべきかを説明します。',
+      '2026年、LM Studioは最も簡単なローカルAIアプリです — Windows、Mac、Linuxで使えます。ダウンロード、インストール、モデルをロード、わずか10分以内でチャットを開始できます。Apple Silicon（M1〜M5）で最速に動作します。Intel MacではLM StudioがApple Silicon必須となったため、JanまたはGPT4Allが同じ役割を果たします。このガイドは、LM Studio、Jan、GPT4Allの3つのターミナル不要なオプションをカバーし、セットアップ時間と機能で比較して、ハードウェアと目標に基づいてどれを選ぶべきかを説明します。',
     metaDescription:
       'LM StudioのApple Silicon、Intel Mac、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-ja.webp',
     twitterDescription:
       'LM Studio on Apple Silicon（M1〜M5）、Intel Mac、Windows、Linux：サポートモデル、システム要件、セットアップ時間 — Jan・GPT4Allとの比較、2026年。',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -1209,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '3つすべてフリー、オープンソース、ダウンロード後クラウドアカウントなしで実行。',
           'LM StudioはローカルOpenAI互換API提供 — さらに進みたい開発者向け。',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -1246,10 +1310,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '基本情報',
         items: [
-          '**LM Studio :** lmstudio.ai — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage、.deb）。',
-          '**Jan :** jan.ai — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）。',
-          '**GPT4All :** gpt4all.io — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage）。',
-          '**推奨モデル :** Phi-4 Mini（3B、約3 GB）、Llama 3.2 3B（約2.2 GB）、Qwen3 8B（約5 GB）、Mistral Small（約4 GB）。',
+          '**LM Studio :** lmstudio.ai — Windows（x64、ARM）、macOS（Apple Silicon、macOS 14以降；Intel Mac非対応）、Linux（AppImage、.deb）。現行バージョン：0.4.x。',
+          '**Jan :** jan.ai — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）。現行バージョン：0.8.x、Apache 2.0。',
+          '**GPT4All :** gpt4all.io — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage）。最終メジャーリリース：v3.10（2025年初頭）— 開発は停滞中。',
+          '**推奨モデル :** Phi-4 Mini（3.8B、約2.7 GB）またはGemma 4 E2B、Llama 3.2 3B（約2.2 GB）、Qwen3 8B（約5 GB）、gpt-oss 20B（約13 GB）、Qwen 3.6 27B（約16 GB、コンシューマー向け最良モデル）。',
           '**GPU オプション :** 3つすべてCUDA（NVIDIA）とMetal（Apple Silicon）をサポート。GPUは5–10倍高速化しますが必須ではありません。',
           '**最小RAM :** GPUなしで3B–8Bモデル向け6 GB。Phi-4 Mini単体で4 GB。複数モデル向け16 GB+推奨。',
           '**コスト :** 3つすべてフリーでオープンソース（または独占だが無料）。サブスクリプション不要。',
@@ -1265,12 +1329,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '基準': '最適用途', 'LM Studio': '速度と柔軟性', 'Jan': 'オープンソースと制御', 'GPT4All': '完全初心者' },
           { '基準': 'インストール容易さ', 'LM Studio': '9/10', 'Jan': '9/10', 'GPT4All': '10/10' },
           { '基準': 'パフォーマンス（M3 Mac、Llama 8B）', 'LM Studio': '28 tokens/sec', 'Jan': '22 tokens/sec', 'GPT4All': '16 tokens/sec' },
-          { '基準': 'ライセンス', 'LM Studio': 'プロプライエタリ', 'Jan': 'AGPL', 'GPT4All': 'MIT（オープンソース）' },
+          { '基準': 'ライセンス', 'LM Studio': 'プロプライエタリ（無料）', 'Jan': 'Apache 2.0', 'GPT4All': 'MIT（オープンソース）' },
           { '基準': 'ダウンロードサイズ', 'LM Studio': '約450 MB', 'Jan': '約380 MB', 'GPT4All': '約290 MB' },
-          { '基準': 'ローカルOpenAI API', 'LM Studio': 'あり', 'Jan': 'あり', 'GPT4All': 'あり' },
+          { '基準': 'ローカルOpenAI API', 'LM Studio': 'あり（Anthropic互換も対応）', 'Jan': 'あり', 'GPT4All': 'あり' },
+          { '基準': '活発な開発', 'LM Studio': '頻繁（0.4.x、2026年）', 'Jan': '頻繁（0.8.x、2026年）', 'GPT4All': '2025年初頭から停滞' },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-ja.webp',
-        imageCaption: 'LM Studio対Jan対GPT4All機能比較：LM Studioは50,000以上のモデル、ローカルAPI、マルチチャット、最高のUIを提供；JanはオープンソースのAGPLv3代替；GPT4Allは完全な初心者向けの最もシンプルな単一ウィンドウオプション。',
+        imageCaption: 'LM Studio対Jan対GPT4All機能比較：LM Studioは50,000以上のモデル、ローカルAPI、マルチチャット、最高のUIを提供；JanはオープンソースのApache 2.0代替；GPT4Allは完全な初心者向けの最もシンプルな単一ウィンドウオプションだが開発は停滞している。',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -1375,11 +1440,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           'ハードウェアに基づいて選択。3つすべてのアプリが複数モデルをダウンロードしてそれらの間でスイッチ可能。',
         items: [
-          '**低スペックハードウェア（8 GB RAM、GPU無し）：** Phi-4 Mini（3B、約3 GB）。弱いデバイスで最速。コードと技術的質問をよく理解。やや創作的会話に劣る。',
-          '**ミッドレンジハードウェア（16 GB RAM、オプションGPU）：** Llama 3.2 3BまたはLlama 3.2 8B。Phi-4よりも多目的。速度と品質の良いバランス。大多数のユーザーで推奨。',
-          '**Apple Silicon（M3、M4、M5）：** Qwen3 8BまたはLlama 3.1 8B。Apple Siliconは統一メモリ制御で8Bモデルに優秀。優れた品質と速度。',
-          '**NVIDIA RTX 3060またはそれ以上：** Llama 3.1 8B、Mistral Small、またはQwen3 8B。GPUはこれら8Bモデルを5–10倍高速化。良い品質と速度の組み合わせ。',
-          '**RTX 4090またはA100：** Llama 3.3 70BまたはMixtral 8x22B。最大利用可能モデル。クラウドに近い品質。しかし遅い（5–10 tokens/sec）。',
+          '**低スペックハードウェア（8 GB RAM、GPU無し）：** Phi-4 Mini（3.8B、約2.7 GB）またはGemma 4 E2B。弱いデバイスで最速。コードと技術的質問をよく理解。',
+          '**ミッドレンジハードウェア（8–16 GB RAM、オプションGPU）：** Llama 3.2 3BまたはQwen3 8B。速度と品質の良いバランス。大多数のユーザーで推奨。',
+          '**Apple Silicon（M3、M4、M5、16–32 GB）：** gpt-oss 20BまたはQwen3 14B。Apple Siliconは統一メモリで優秀。優れた品質と速度。',
+          '**NVIDIA RTX 3060またはそれ以上：** VRAMに応じてQwen3 8Bまたはgpt-oss 20B。GPUはCPU単体より5–10倍高速化。',
+          '**RTX 4090またはMac 32 GB+：** Qwen 3.6 27B — 2026年のコンシューマー向け最良モデル（SWE-bench 77.2%、Apache 2.0）。この環境でリアルタイム実行、クラウドに近い品質。',
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-ja.svg',
         imageCaption: '利用可能なRAMによる最初のモデルガイド：≤8 GB → Phi-4 Mini 3.8B（~2.7 GB、Apple Siliconで15–30 tok/s）；8–16 GB → Llama 3.2 3BまたはQwen3 8B；16–32 GB → Qwen3 14B（~8.9 GB）；32 GB+ → Llama 3.3 70B（~40 GB）。',
@@ -1388,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'ハードウェア要件',
         content:
-          '3つすべてのアプリはいかなるモダンハードウェアでも動作。3Bモデルはローエンドデバイスで、8B+モデルは最小16 GB RAMで動作。',
+          '3つすべてのアプリはいかなるモダンハードウェアでも動作。3Bモデルはローエンドデバイスで、8B+モデルは最小16 GB RAMで動作。プラットフォームの注意点：LM StudioはmacOSでApple Siliconが必須です — Intel Macの場合はJanまたはGPT4Allを使用してください（両方ともCPU推論でIntelを引き続きサポート）。',
         items: [
           '**推奨最小ハードウェア :** MacBook Air M3（8 GB）、Intel i7/i5付きWindowsPC（16 GB RAM）、または同等Linux。',
           '**推奨GPU :** NVIDIA RTX 3060以上（12+ GB VRAM）でスピード向上5–10倍。Apple Siliconはメタル経由で同等改善を提供。',
@@ -1415,9 +1480,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'ソース',
         items: [
-          '[LM Studio](https://lmstudio.ai) — 組み込みモデルブラウザ付きの公式デスクトップアプリケーション。',
-          '[Jan](https://jan.ai) — LM Studioのオープンソース代替。',
-          '[GPT4All](https://gpt4all.io) — 初心者向け最も単純なアプリケーション。',
+          '[LM Studio](https://lmstudio.ai/changelog) — 組み込みモデルブラウザ付きの公式デスクトップアプリケーション。0.4系の変更履歴。',
+          '[Jan](https://jan.ai) — LM Studioのオープンソース（Apache 2.0）代替。',
+          '[GPT4All](https://github.com/nomic-ai/gpt4all) — 初心者向け最も単純なアプリケーション。リポジトリとリリース履歴。',
           '[Hugging Face](https://huggingface.co/models) — オープンソースGGUFモデルの主要リポジトリ。',
           '[llama.cpp](https://github.com/ggerganov/llama.cpp) — LM Studio、Jan、GPT4Allで使用される低レベルの推論エンジン。',
           '[Ollama](https://ollama.ai) — 開発者とパワーユーザー向けのコマンドラインの代替。',
@@ -1441,7 +1506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルモデルを他のアプリに接続できますか？',
-            a: 'はい。LM StudioとJanの両方はlocalhostでOpenAI互換APIを公開します：localhost:1234またはlocalhost:5000。Obsidian、VS Code、または他のツールをこのエンドポイントに向けられます。',
+            a: 'はい。LM StudioのLocal Serverはlocalhost:1234でOpenAI・Anthropic互換APIを公開し、Janはlocalhost:1337でOpenAI互換APIを公開します。Obsidian、VS Code、または他のツールをこれらのエンドポイントに向けられます。バージョン0.4以降、LM Studioはローカルの MCP ツールも使用できます。',
           },
           {
             q: '量子化は何をしますか？Q4対Q5対Q6をどう選ぶ？',
@@ -1457,7 +1522,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'どのアプリが最も安定していますか？クラッシュを予想すべき？',
-            a: '3つすべて安定。クラッシュはまれで、一般的にメモリ不足により発生（モデルアンロードで解決）。Janは最短歴但し他の2つと同等の安定。',
+            a: '3つすべて安定。クラッシュはまれで、一般的にメモリ不足により発生（モデルアンロードで解決）。ただしGPT4Allは2025年初頭から開発が停滞しており、以前ほど更新が入っていない一方、LM StudioとJanは2026年も頻繁に更新されています。',
+          },
+          {
+            q: 'GPT4Allは2026年も活発に開発されていますか？',
+            a: 'いいえ、活発ではありません。最終メジャーリリース（v3.10）は2025年初頭で、GitHubリポジトリもそれ以降大きな更新はありません。アプリ自体は問題なくインストールでき、オフラインでも完全に動作し、最もシンプルな単一ウィンドウの選択肢であり続けていますが、選定済みモデルリストは古く、Qwen 3.6やgpt-ossなどの新しいモデルは提供されていません。ターミナル不要で最新モデルを使いたい場合はLM StudioまたはJanを選んでください。',
           },
           {
             q: 'これらのアプリをローカルネットワークまたはリモートで使用できますか？',
@@ -1469,11 +1538,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LM StudioはApple SiliconのMacでどのモデルをサポートしていますか？',
-            a: 'LM StudioはApple Silicon（M1〜M5）上でGGUFモデルライブラリ全体をサポートし、統合メモリアーキテクチャを通じてMetalによるGPUアクセラレーションを使用します。推奨される最初のモデル：8GBのMacではPhi-4 Mini（3.8B）またはLlama 3.2 3B、16GB以上のMacではQwen3 8B、16〜32GBのMacではQwen3 14B、32GB以上のMac（M3 Max、M4 Max、M5 Max）ではLlama 3.3 70B。LM Studioは利用可能なメモリを自動検出し、ハードウェアに適した量子化レベル（通常はQ4_K_M）を推奨します。',
+            a: 'LM StudioはApple Silicon（M1〜M5）上でGGUFモデルライブラリ全体に加え、AppleのMLX形式もサポートし、統合メモリアーキテクチャを通じてMetalによるGPUアクセラレーションを使用します。推奨される最初のモデル：8GBのMacではPhi-4 Mini（3.8B）またはGemma 4 E2B、16GB以上のMacではQwen3 8B、16〜32GBのMacではgpt-oss 20BまたはQwen3 14B、32GB以上のMacではQwen 3.6 27B — 48〜64GBのMaxクラス機種ではLlama 3.3 70Bも選択肢です。LM Studioは利用可能なメモリを自動検出し、ハードウェアに適した量子化レベル（通常はQ4_K_M）を推奨します。',
           },
           {
             q: 'Windows、Intel Mac、Apple SiliconでのLM Studioのシステム要件は？',
-            a: 'すべてのプラットフォームで最低要件は3B〜7BモデルでRAM 8GB。Apple Silicon（M1〜M5）は統合メモリとMetalアクセラレーションにより最速で動作し、専用GPUは不要。Intel MacはCPU推論のみで動作 — Intel MacにはLLM推論用のMetal GPUアクセラレーションが存在しないため、3Bモデルで毎秒約5〜10トークン程度が目安。Windowsは最低RAM 8GBが必要で、大きいモデルのCUDAアクセラレーションにはNVIDIA GPU（VRAM 8GB以上）が任意で使用可能。LinuxもAppImageまたは.deb経由で同じくRAM 8GBが最低要件で、NVIDIA GPUがあればCUDAサポートが利用可能。',
+            a: 'macOSでは、LM StudioはApple Silicon Mac（M1以降）とmacOS 14以降が必須です — Intel Macは非対応で、Intel Macユーザーは代わりにJanまたはGPT4Allをインストールしてください（CPU推論で3Bモデルにつき毎秒約5〜10トークン）。Windowsでは3B〜7BモデルでRAM 8GBが最低要件で、大きいモデルのCUDAアクセラレーションにはNVIDIA GPU（VRAM 8GB以上）が任意で使用可能。LinuxもAppImageまたは.deb経由で同じくRAM 8GBが最低要件で、NVIDIA GPUがあればCUDAサポートが利用可能。Apple Siliconは統合メモリとMetalアクセラレーションにより全体として最速です。',
           },
           {
             q: 'LM StudioはLinuxで動作しますか？',
@@ -1481,7 +1550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026年のLM Studioの代替として最適なアプリは？',
-            a: 'Janが最も近い代替アプリです — 同等のセットアップの手軽さ、AGPLv3ライセンスの完全なオープンソース、Linux AppImageサポート。GPT4Allは純粋な初心者向けの最もシンプルな代替アプリで、厳選されたモデルリストと単一ウィンドウのチャットインターフェースを備えています。コマンドラインツールを好む開発者にはOllamaが主要な代替アプリですが、GUIではなくターミナル操作が必要です。この4つはすべて同じGGUFモデルファイルを実行でき、無料で利用できます。',
+            a: 'Janが最も近い代替アプリです — 同等のセットアップの手軽さ、Apache 2.0ライセンスの完全なオープンソース、Linux AppImageサポート。GPT4Allは純粋な初心者向けの最もシンプルな代替アプリで、厳選されたモデルリストと単一ウィンドウのチャットインターフェースを備えていますが、開発は2025年初頭から停滞しています。コマンドラインツールを好む開発者にはOllamaが主要な代替アプリですが、GUIではなくターミナル操作が必要です。この4つはすべて同じGGUFモデルファイルを実行でき、無料で利用できます。',
           },
         ],
       },
@@ -1504,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'LM Studio × Apple Silicon：最も簡単なローカルAI 2026',
       description:
-        'LM StudioのApple Silicon、Intel Mac、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
+        'LM StudioのApple Silicon、Windows、Linux対応：サポートモデル、システム要件、セットアップ時間。ターミナル不要。Jan・GPT4Allとの比較、2026年版。',
       url: 'https://www.promptquorum.com/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ja',
       image: buildOgImageObject(OG_SLUG, 'ja'),
@@ -1518,7 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
@@ -1568,23 +1637,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-28',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
     seoTitle: 'LM Studio × Apple Silicon：2026年最简单本地AI应用',
     intro:
-      '2026年，LM Studio是Windows、Mac、Linux上最简单的本地AI应用。下载、安装、加载模型，10分钟内开始聊天，无需终端。本指南涵盖LM Studio、Jan和GPT4All这三个无代码选项，按设置时间和功能比较它们，并根据你的硬件和目标解释选择哪一个。',
+      '2026年，LM Studio是Windows、Mac、Linux上最简单的本地AI应用。下载、安装、加载模型，10分钟内开始聊天，无需终端。它在Apple Silicon（M1至M5）上运行最快；在Intel Mac上，Jan或GPT4All承担同样的角色，因为LM Studio在macOS上现在需要Apple Silicon。本指南涵盖LM Studio、Jan和GPT4All这三个无代码选项，按设置时间和功能比较它们，并根据你的硬件和目标解释选择哪一个。',
     metaDescription:
       'LM Studio在Apple Silicon、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-zh.webp',
     twitterDescription:
       'LM Studio在Apple Silicon（M1–M5）、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间 — 对比Jan和GPT4All，2026年版。',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -1621,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三者都免费、开源、下载后无云账户或互联网连接即可运行。',
           'LM Studio也提供本地OpenAI兼容API — 想进一步发展的开发者。',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -1658,10 +1729,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '基本信息',
         items: [
-          '**LM Studio :** lmstudio.ai — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage、.deb）。',
-          '**Jan :** jan.ai — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）。',
-          '**GPT4All :** gpt4all.io — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage）。',
-          '**推荐模型 :** Phi-4 Mini（3B、约3 GB）、Llama 3.2 3B（约2.2 GB）、Qwen3 8B（约5 GB）、Mistral Small（约4 GB）。',
+          '**LM Studio :** lmstudio.ai — Windows（x64、ARM）、macOS（Apple Silicon，macOS 14+；不支持Intel Mac）、Linux（AppImage、.deb）。当前版本线：0.4.x。',
+          '**Jan :** jan.ai — Windows（x64）、macOS（Apple Silicon、Intel）、Linux（AppImage）。当前版本线：0.8.x，Apache 2.0。',
+          '**GPT4All :** gpt4all.io — Windows（x64、ARM）、macOS（Apple Silicon、Intel）、Linux（AppImage）。最后一次重大发布：v3.10，2025年初 — 开发已停滞。',
+          '**推荐模型 :** Phi-4 Mini（3.8B、约2.7 GB）或Gemma 4 E2B、Llama 3.2 3B（约2.2 GB）、Qwen3 8B（约5 GB）、gpt-oss 20B（约13 GB）、Qwen 3.6 27B（约16 GB，消费级硬件最佳模型）。',
           '**GPU可选 :** 三者都支持CUDA（NVIDIA）和Metal（Apple Silicon）。GPU加速5–10倍但不是必需的。',
           '**最小RAM :** 无GPU 3B–8B模型需要6 GB。仅Phi-4 Mini 4 GB。多个模型建议16 GB+。',
           '**成本 :** 三者都免费开源（或专有但无成本）。无需订阅。',
@@ -1677,12 +1748,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '标准': '最适用', 'LM Studio': '速度和灵活性', 'Jan': '开源和控制', 'GPT4All': '完全初学者' },
           { '标准': '安装容易', 'LM Studio': '9/10', 'Jan': '9/10', 'GPT4All': '10/10' },
           { '标准': '性能（M3 Mac、Llama 8B）', 'LM Studio': '28 tokens/sec', 'Jan': '22 tokens/sec', 'GPT4All': '16 tokens/sec' },
-          { '标准': '许可证', 'LM Studio': '专有', 'Jan': 'AGPL', 'GPT4All': 'MIT（开源）' },
+          { '标准': '许可证', 'LM Studio': '专有（免费）', 'Jan': 'Apache 2.0', 'GPT4All': 'MIT（开源）' },
           { '标准': '下载大小', 'LM Studio': '约450 MB', 'Jan': '约380 MB', 'GPT4All': '约290 MB' },
-          { '标准': '本地OpenAI API', 'LM Studio': '是', 'Jan': '是', 'GPT4All': '是' },
+          { '标准': '本地OpenAI API', 'LM Studio': '是（同时兼容Anthropic）', 'Jan': '是', 'GPT4All': '是' },
+          { '标准': '活跃开发', 'LM Studio': '频繁（0.4.x，2026年）', 'Jan': '频繁（0.8.x，2026年）', 'GPT4All': '自2025年初已停滞' },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-zh.webp',
-        imageCaption: 'LM Studio与Jan与GPT4All功能对比：LM Studio提供50,000+模型、本地API、多聊天和最佳UI；Jan是开源替代品（AGPLv3）；GPT4All是纯初学者最简单的单窗口选项。',
+        imageCaption: 'LM Studio与Jan与GPT4All功能对比：LM Studio提供50,000+模型、本地API、多聊天和最佳UI；Jan是开源替代品（Apache 2.0）；GPT4All是纯初学者最简单的单窗口选项，但开发已停滞。',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -1787,11 +1859,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '根据你的硬件选择。三个应用都允许下载多个模型并在它们之间切换。',
         items: [
-          '**低端硬件（8 GB RAM、无GPU）：** Phi-4 Mini（3B、约3 GB）。在弱设备上最快。很好地理解代码和技术问题。略少创意会话。',
-          '**中端硬件（16 GB RAM、可选GPU）：** Llama 3.2 3B或Llama 3.2 8B。比Phi-4更多功能。速度和质量的良好平衡。为大多数用户推荐。',
-          '**Apple Silicon（M3、M4、M5）：** Qwen3 8B或Llama 3.1 8B。Apple Silicon在统一内存控制中对8B模型表现出色。优质和速度结合。',
-          '**NVIDIA RTX 3060或更高版本：** Llama 3.1 8B、Mistral Small或Qwen3 8B。GPU将这些8B模型加速5–10倍。速度和质量的良好组合。',
-          '**RTX 4090或A100：** Llama 3.3 70B或Mixtral 8x22B。最大可用模型。接近云端质量。但速度慢（5–10 tokens/sec）。',
+          '**低端硬件（8 GB RAM、无GPU）：** Phi-4 Mini（3.8B、约2.7 GB）或Gemma 4 E2B。在弱设备上最快。很好地理解代码和技术问题。',
+          '**中端硬件（8–16 GB RAM、可选GPU）：** Llama 3.2 3B或Qwen3 8B。速度和质量的良好平衡。为大多数用户推荐。',
+          '**Apple Silicon（M3、M4、M5，16–32 GB）：** gpt-oss 20B或Qwen3 14B。Apple Silicon凭借统一内存表现出色。优质和速度结合。',
+          '**NVIDIA RTX 3060或更高版本：** 根据显存选择Qwen3 8B或gpt-oss 20B。GPU比纯CPU加速5–10倍。',
+          '**RTX 4090或32 GB+ Mac：** Qwen 3.6 27B — 2026年消费级硬件最佳模型（SWE-bench 77.2%，Apache 2.0）。在此硬件上可实时运行，接近云端质量。',
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-zh.svg',
         imageCaption: '按可用RAM的首个模型指南：≤8 GB → Phi-4 Mini 3.8B（~2.7 GB，Apple Silicon上15–30 tok/s）；8–16 GB → Llama 3.2 3B或Qwen3 8B；16–32 GB → Qwen3 14B（~8.9 GB）；32 GB+ → Llama 3.3 70B（~40 GB）。',
@@ -1800,7 +1872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: '硬件要求',
         content:
-          '三个应用都在任何现代硬件上运行。3B模型在低端设备上运行，8B+模型需要最少16 GB RAM。',
+          '三个应用都在任何现代硬件上运行。3B模型在低端设备上运行，8B+模型需要最少16 GB RAM。平台提示：LM Studio在macOS上需要Apple Silicon — 在Intel Mac上请使用Jan或GPT4All，它们仍通过CPU推理支持Intel。',
         items: [
           '**推荐最小硬件 :** M3 MacBook Air（8 GB）、带Intel i7/i5的Windows PC（16 GB RAM）或同等Linux。',
           '**推荐GPU :** NVIDIA RTX 3060或更高（12+ GB VRAM）加速5–10倍。Apple Silicon通过Metal提供同等改进。',
@@ -1827,9 +1899,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '来源',
         items: [
-          '[LM Studio](https://lmstudio.ai) — 官方桌面应用，带内置模型浏览器。',
-          '[Jan](https://jan.ai) — LM Studio的开源替代品。',
-          '[GPT4All](https://gpt4all.io) — 最简单的初学者应用。',
+          '[LM Studio](https://lmstudio.ai/changelog) — 官方桌面应用，带内置模型浏览器；0.4系列更新日志。',
+          '[Jan](https://jan.ai) — LM Studio的开源（Apache 2.0）替代品。',
+          '[GPT4All](https://github.com/nomic-ai/gpt4all) — 最简单的初学者应用；仓库与发布历史。',
           '[Hugging Face](https://huggingface.co/models) — 开源GGUF模型的主要存储库。',
           '[llama.cpp](https://github.com/ggerganov/llama.cpp) — LM Studio、Jan、GPT4All使用的低级推理引擎。',
           '[Ollama](https://ollama.ai) — 开发者和高级用户的命令行替代品。',
@@ -1853,7 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '能将本地模型连接到其他应用吗？',
-            a: '能。LM Studio和Jan都在localhost上公开OpenAI兼容API：localhost:1234或localhost:5000。你可以将Obsidian、VS Code或其他工具指向此端点。',
+            a: '能。LM Studio的Local Server在localhost:1234上公开OpenAI和Anthropic兼容API，Jan在localhost:1337上公开OpenAI兼容API。你可以将Obsidian、VS Code或其他工具指向这些端点。自0.4版本起，LM Studio还可以使用本地MCP工具。',
           },
           {
             q: '量化做什么？如何选择Q4对Q5对Q6？',
@@ -1869,7 +1941,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪个应用最稳定？应该预期崩溃吗？',
-            a: '三者都稳定。崩溃罕见，通常由内存不足引起（卸载模型解决）。Jan最年轻但与其他两个同样稳定。',
+            a: '三者都稳定。崩溃罕见，通常由内存不足引起（卸载模型解决）。不过GPT4All自2025年初以来开发已停滞，更新明显减少，而LM Studio和Jan在2026年仍频繁更新。',
+          },
+          {
+            q: 'GPT4All在2026年还在积极开发吗？',
+            a: '不算积极。它的最后一次重大发布（v3.10）是2025年初，此后GitHub仓库没有明显更新。应用本身仍可正常安装并完全离线运行，也仍是最简单的单窗口选项 — 但其精选模型列表已过时，不包含Qwen 3.6或gpt-oss等较新模型。如果你想要免终端设置且使用最新模型，请选择LM Studio或Jan。',
           },
           {
             q: '能在本地网络或远程使用这些应用吗？',
@@ -1881,11 +1957,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LM Studio在Apple Silicon Mac上支持哪些模型？',
-            a: 'LM Studio在Apple Silicon（M1到M5）上支持完整的GGUF模型库，通过统一内存架构使用Metal进行GPU加速。推荐的入门模型：8GB内存的Mac使用Phi-4 Mini（3.8B）或Llama 3.2 3B，16GB以上的Mac使用Qwen3 8B，16–32GB的Mac使用Qwen3 14B，32GB以上的Mac（M3 Max、M4 Max或M5 Max）使用Llama 3.3 70B。LM Studio会自动检测可用内存，并推荐适合硬件的量化级别（通常是Q4_K_M）。',
+            a: 'LM Studio在Apple Silicon（M1到M5）上支持完整的GGUF模型库以及Apple的MLX格式，通过统一内存架构使用Metal进行GPU加速。推荐的入门模型：8GB内存的Mac使用Phi-4 Mini（3.8B）或Gemma 4 E2B，16GB以上的Mac使用Qwen3 8B，16–32GB的Mac使用gpt-oss 20B或Qwen3 14B，32GB以上的Mac使用Qwen 3.6 27B — 在48–64GB的Max级机型上Llama 3.3 70B仍是一个选项。LM Studio会自动检测可用内存，并推荐适合硬件的量化级别（通常是Q4_K_M）。',
           },
           {
             q: 'LM Studio在Windows、Intel Mac和Apple Silicon上的系统要求是什么？',
-            a: '三个平台的最低要求都是3B–7B模型需要8GB内存。Apple Silicon（M1–M5）运行最快，得益于统一内存和Metal加速，无需独立GPU。Intel Mac仅通过CPU推理运行 — Intel Mac没有用于LLM推理的Metal GPU加速 — 因此3B模型大约为每秒5–10个token。Windows最低需要8GB内存，NVIDIA GPU（8GB以上显存）为可选项，用于更大模型的CUDA加速。Linux通过AppImage或.deb安装，同样最低需要8GB内存，若有NVIDIA GPU则支持CUDA。',
+            a: '在macOS上，LM Studio需要Apple Silicon Mac（M1或更新）并运行macOS 14或更高版本 — 不支持Intel Mac；Intel Mac用户应改为安装Jan或GPT4All，它们通过CPU推理运行3B模型大约每秒5–10个token。在Windows上，3B–7B模型的最低要求是8GB内存，NVIDIA GPU（8GB以上显存）为可选项，用于更大模型的CUDA加速。Linux通过AppImage或.deb安装，同样最低需要8GB内存，若有NVIDIA GPU则支持CUDA。得益于统一内存和Metal加速且无需独立GPU，Apple Silicon总体运行最快。',
           },
           {
             q: 'LM Studio支持Linux吗？',
@@ -1893,7 +1969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026年LM Studio的最佳替代品是什么？',
-            a: 'Jan是最接近的替代品 — 安装同样简便，采用AGPLv3许可证完全开源，并支持Linux AppImage。GPT4All是纯新手的最简单替代品，提供精选模型列表和单窗口聊天界面。对于偏好命令行工具的开发者，Ollama是主要替代品，但需要使用终端而非图形界面。这四款应用都运行相同的GGUF模型文件，且都是免费的。',
+            a: 'Jan是最接近的替代品 — 安装同样简便，采用Apache 2.0许可证完全开源，并支持Linux AppImage。GPT4All是纯新手的最简单替代品，提供精选模型列表和单窗口聊天界面，不过其开发自2025年初起已经停滞。对于偏好命令行工具的开发者，Ollama是主要替代品，但需要使用终端而非图形界面。这四款应用都运行相同的GGUF模型文件，且都是免费的。',
           },
         ],
       },
@@ -1916,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'LM Studio × Apple Silicon：2026年最简单本地AI应用',
       description:
-        'LM Studio在Apple Silicon、Intel Mac、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
+        'LM Studio在Apple Silicon、Windows和Linux上的支持模型、系统要求与安装时间，无需终端。对比Jan和GPT4All，2026年版。',
       url: 'https://www.promptquorum.com/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'zh',
       image: buildOgImageObject(OG_SLUG, 'zh'),
@@ -1930,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-08-28',
+      dateModified: '2026-09-01',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
@@ -1980,23 +2056,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: 'La aplicación de IA local más fácil para Windows, Mac y Linux (2026)',
     seoTitle: 'LM Studio en Apple Silicon: la IA local más fácil 2026',
     intro:
-      'LM Studio es la aplicación de IA local más fácil en 2026 para Windows, Mac y Linux — descárgala, instálala, carga un modelo y empieza a chatear en menos de 10 minutos sin usar la terminal. Esta guía cubre LM Studio, Jan y GPT4All como las tres opciones sin código, las compara por tiempo de configuración y capacidad, y explica cuál elegir según tu hardware y objetivos.',
+      'LM Studio es la aplicación de IA local más fácil en 2026 para Windows, Mac y Linux — descárgala, instálala, carga un modelo y empieza a chatear en menos de 10 minutos sin usar la terminal. Funciona más rápido en Apple Silicon (M1 a M5); en un Mac Intel, Jan o GPT4All cumplen el mismo papel, ya que LM Studio ahora requiere Apple Silicon en macOS. Esta guía cubre LM Studio, Jan y GPT4All como las tres opciones sin código, las compara por tiempo de configuración y capacidad, y explica cuál elegir según tu hardware y objetivos.',
     metaDescription:
-      'LM Studio en Apple Silicon, Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
+      'LM Studio en Apple Silicon, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-es.webp',
     twitterDescription:
-      'LM Studio en Apple Silicon (M1–M5), Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración — comparado con Jan y GPT4All para 2026.',
+      'LM Studio en Apple Silicon (M1–M5), Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración — comparado con Jan y GPT4All para 2026.',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -2031,9 +2109,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Comienza con Phi-4 Mini (3B, ~3 GB RAM) o Llama 3.2 3B en hardware de gama baja — funciona en cualquier portátil fabricado después de 2018.',
           'No se necesita GPU para modelos de 3B–8B en Apple Silicon o CPUs Intel/AMD modernas.',
           'Las tres son gratuitas, de código abierto y se ejecutan sin cuenta en la nube ni conexión a internet tras la descarga.',
-          'LM Studio también expone una API local compatible con OpenAI para desarrolladores que quieran ir más lejos.',
+          'LM Studio también expone una API local compatible con OpenAI y Anthropic para desarrolladores que quieran ir más lejos.',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -2058,25 +2136,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio es el camino más rápido de cero a chatear localmente.** Descarga el instalador desde lmstudio.ai, abre la pestaña Discover, busca "Phi-4 Mini", descarga el modelo y empieza a chatear. En menos de 10 minutos con una conexión a internet decente.',
-          '**Jan es la alternativa de código abierto.** Misma facilidad de uso que LM Studio, completamente de código abierto, funciona en Linux AppImage. Si prefieres software de código abierto o quieres ver el código fuente, Jan es la opción equivalente.',
-          '**GPT4All es la experiencia más simplificada.** Ventana de chat única, recomendaciones de modelos seleccionados, sin sobrecarga de navegación de modelos. Lo mejor para usuarios que quieren escribir una pregunta y obtener una respuesta sin tomar decisiones de configuración.',
+          '**Jan es la alternativa de código abierto.** Misma facilidad de uso que LM Studio, completamente de código abierto bajo Apache 2.0 (relicenciado desde AGPLv3 en 2025), funciona en Linux AppImage. Si prefieres software de código abierto o quieres ver el código fuente, Jan es la opción equivalente.',
+          '**GPT4All es la experiencia más simplificada.** Ventana de chat única, recomendaciones de modelos seleccionados, sin sobrecarga de navegación de modelos. Lo mejor para usuarios que quieren escribir una pregunta y obtener una respuesta sin tomar decisiones de configuración — pero su desarrollo está estancado desde principios de 2025, así que su lista de modelos seleccionados ya no incluye los modelos más recientes.',
           '**Empieza con Phi-4 Mini o Llama 3.2 3B en cualquier hardware.** Estos modelos de 3B funcionan en cualquier portátil fabricado en los últimos 7 años — sin GPU, sin 32 GB de RAM, sin hardware especial. Son más lentos que una IA en la nube pero producen resultados utilizables para la mayoría de las tareas cotidianas.',
           '**No se necesita cuenta en la nube.** Tras la descarga inicial (la aplicación y el archivo del modelo), todo se ejecuta localmente sin conexión a internet. Sin clave de API, sin suscripción, sin datos enviados a ningún servidor.',
           '**En Apple Silicon, casi cualquier modelo funciona bien.** El MacBook Air M3 (8 GB) ejecuta Llama 3.2 3B y Phi-4 Mini con fluidez. El M3 Pro o M4 (16 GB+) ejecuta Qwen3 8B cómodamente. El M5 Max (64 GB) ejecuta modelos de 70B.',
-          '**LM Studio también sirve una API local.** Si más adelante quieres conectar Obsidian, VS Code u otra herramienta a tu modelo local, la pestaña Local Server de LM Studio expone una API compatible con OpenAI en localhost — sin configuración adicional.',
+          '**LM Studio también sirve una API local.** Si más adelante quieres conectar Obsidian, VS Code u otra herramienta a tu modelo local, la pestaña Local Server de LM Studio expone una API compatible con OpenAI y Anthropic en localhost:1234 — sin configuración adicional. Desde la versión 0.4 también puede usar herramientas MCP locales.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb).',
-          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
-          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
+          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, macOS 14+; sin soporte para Mac Intel), Linux (AppImage, .deb). Línea de versión actual: 0.4.x.',
+          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Línea de versión actual: 0.8.x, Apache 2.0.',
+          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Última versión importante: v3.10, a principios de 2025 — el desarrollo está estancado.',
           '**Hardware mínimo:** cualquier portátil con 8 GB RAM para modelos de 3B–7B; 16 GB+ para modelos de 8B–14B; 24 GB+ para 30B+.',
           '**No se necesita GPU** para modelos de 3B–7B en Apple Silicon o modo de inferencia por CPU.',
-          '**Las tres son gratuitas** y de código abierto (LM Studio es gratuita pero con código disponible, no completamente de código abierto).',
-          '**Recomendación de primer modelo:** Phi-4 Mini (3B, ~2,7 GB de descarga) para hardware con menos de 8 GB; Qwen3 8B para sistemas de 8–16 GB.',
+          '**Las tres son gratuitas**; Jan (Apache 2.0) y GPT4All (MIT) son completamente de código abierto, LM Studio es gratuita pero solo con código disponible.',
+          '**Recomendación de primer modelo:** Phi-4 Mini (3,8B, ~2,7 GB de descarga) o Gemma 4 E2B para hardware con menos de 8 GB; Qwen3 8B para sistemas de 8–16 GB.',
         ],
       },
       comparison: {
@@ -2097,10 +2175,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Característica', 'LM Studio', 'Jan', 'GPT4All'],
         rows: [
           { 'Característica': 'Tiempo de configuración (primera ejecución)', 'LM Studio': '~8 minutos', 'Jan': '~10 minutos', 'GPT4All': '~5 minutos' },
-          { 'Característica': 'Biblioteca de modelos', 'LM Studio': 'Búsqueda GGUF completa de Hugging Face (~50.000+ modelos)', 'Jan': 'Seleccionados + búsqueda en Hugging Face', 'GPT4All': 'Lista seleccionada (~20 modelos)' },
-          { 'Característica': 'Servidor de API local', 'LM Studio': 'Sí (compatible con OpenAI, pestaña Local Server)', 'Jan': 'Sí (compatible con OpenAI)', 'GPT4All': 'Sí (limitado, menos documentado)' },
+          { 'Característica': 'Biblioteca de modelos', 'LM Studio': 'Búsqueda GGUF + MLX completa de Hugging Face (~50.000+ modelos)', 'Jan': 'Seleccionados + búsqueda en Hugging Face', 'GPT4All': 'Lista seleccionada (~20 modelos, desactualizada)' },
+          { 'Característica': 'Servidor de API local', 'LM Studio': 'Sí (compatible con OpenAI y Anthropic)', 'Jan': 'Sí (compatible con OpenAI)', 'GPT4All': 'Sí (limitado, menos documentado)' },
           { 'Característica': 'Multi-chat / historial de conversaciones', 'LM Studio': 'Sí', 'Jan': 'Sí', 'GPT4All': 'Ventana de chat única' },
-          { 'Característica': 'Licencia del código fuente', 'LM Studio': 'Gratuito, código disponible (no OSI)', 'Jan': 'AGPLv3 (completamente de código abierto)', 'GPT4All': 'MIT (completamente de código abierto)' },
+          { 'Característica': 'Licencia del código fuente', 'LM Studio': 'Gratuito, código disponible (no OSI)', 'Jan': 'Apache 2.0 (completamente de código abierto)', 'GPT4All': 'MIT (completamente de código abierto)' },
+          { 'Característica': 'Desarrollo activo', 'LM Studio': 'Frecuente (0.4.x, 2026)', 'Jan': 'Frecuente (0.8.x, 2026)', 'GPT4All': 'Estancado desde principios de 2025' },
           { 'Característica': 'Compatibilidad con Linux', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Característica': 'Lo mejor para', 'LM Studio': 'Usuarios que quieren la mejor interfaz + acceso a API para desarrolladores', 'Jan': 'Usuarios que prefieren software de código abierto', 'GPT4All': 'Principiantes absolutos que quieren la interfaz más sencilla' },
         ],
@@ -2111,7 +2190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-es.webp',
-        imageCaption: 'Comparación de características LM Studio vs Jan vs GPT4All: LM Studio ofrece 50.000+ modelos, API local, multi-chat y la mejor interfaz; Jan es la alternativa de código abierto (AGPLv3); GPT4All es la opción más sencilla de ventana única para principiantes absolutos.',
+        imageCaption: 'Comparación de características LM Studio vs Jan vs GPT4All: LM Studio ofrece 50.000+ modelos, API local, multi-chat y la mejor interfaz; Jan es la alternativa de código abierto (Apache 2.0); GPT4All es la opción más sencilla de ventana única para principiantes absolutos.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -2119,7 +2198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**LM Studio se instala en 3 minutos y te tiene chateando en menos de 10.** El proceso es idéntico en Windows y macOS — descarga, instala, navega por los modelos, descarga un modelo, chatea.',
         numberedItems: [
-          'Ve a lmstudio.ai y descarga el instalador para tu plataforma (Windows .exe, macOS .dmg, Linux .AppImage o .deb).',
+          'Ve a lmstudio.ai y descarga el instalador para tu plataforma (Windows .exe, macOS .dmg para Apple Silicon, Linux .AppImage o .deb).',
           'Ejecuta el instalador. Acepta cualquier aviso de seguridad (es una aplicación nueva, no firmada por Apple/Microsoft de forma predeterminada en algunas versiones).',
           'Abre LM Studio. La barra lateral izquierda muestra: Chat, Search (Discover), Models y Local Server.',
           'Haz clic en "Discover" (el ícono del telescopio). En la barra de búsqueda, escribe "Phi-4 Mini" (para sistemas de 8 GB o menos) o "Qwen3 8B" (para sistemas de 16 GB+).',
@@ -2140,7 +2219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: guía de configuración',
         content:
-          '**Jan es la alternativa de código abierto a LM Studio — misma facilidad de uso, experiencia de descarga de modelos idéntica, licencia AGPLv3.** Usa Jan si el software de código abierto es importante para ti o si quieres inspeccionar o modificar el código de la aplicación.',
+          '**Jan es la alternativa de código abierto a LM Studio — misma facilidad de uso, experiencia de descarga de modelos idéntica, licencia Apache 2.0 (relicenciada desde AGPLv3 en 2025).** Usa Jan si el software de código abierto es importante para ti, si usas un Mac Intel, o si quieres inspeccionar o modificar el código de la aplicación.',
         numberedItems: [
           'Ve a jan.ai y descarga el instalador para tu plataforma.',
           'Ejecuta el instalador y abre Jan.',
@@ -2160,7 +2239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gpt4all',
         title: 'GPT4All: guía de configuración',
         content:
-          '**GPT4All ofrece la experiencia más simplificada — una ventana de chat única y una lista seleccionada de modelos recomendados.** Si LM Studio y Jan tienen demasiadas opciones y solo quieres escribir una pregunta y obtener una respuesta, empieza aquí.',
+          '**GPT4All ofrece la experiencia más simplificada — una ventana de chat única y una lista seleccionada de modelos recomendados.** Si LM Studio y Jan tienen demasiadas opciones y solo quieres escribir una pregunta y obtener una respuesta, empieza aquí. Una advertencia para 2026: el desarrollo de GPT4All está estancado desde principios de 2025 (última versión importante v3.10), así que la app sigue funcionando bien sin conexión pero su lista de modelos seleccionados ya no incluye los más recientes. Elige LM Studio o Jan si quieres los lanzamientos de modelos actuales.',
         numberedItems: [
           'Ve a gpt4all.io y descarga el instalador para tu plataforma.',
           'Ejecuta el instalador y abre GPT4All.',
@@ -2175,7 +2254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-es.svg',
-        imageCaption: 'Qué aplicación de IA local instalar: LM Studio para la mejor interfaz y acceso a API (50.000+ modelos); Jan como alternativa de código abierto AGPLv3; GPT4All para la experiencia más sencilla de ventana única para principiantes con ~20 modelos seleccionados. Las tres son gratuitas y funcionan sin cuenta en la nube.',
+        imageCaption: 'Qué aplicación de IA local instalar: LM Studio para la mejor interfaz y acceso a API (50.000+ modelos); Jan como alternativa de código abierto Apache 2.0; GPT4All para la experiencia más sencilla de ventana única para principiantes con ~20 modelos seleccionados. Las tres son gratuitas y funcionan sin cuenta en la nube.',
       },
       firstModel: {
         id: 'first-model',
@@ -2184,10 +2263,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**El primer modelo correcto depende de cuánta RAM tiene tu computadora.** Más RAM = modelo más grande = mejores respuestas, pero cualquier computadora moderna puede ejecutar algo útil.',
         columns: ['RAM disponible', 'Primer modelo recomendado', 'Tamaño de descarga', 'Velocidad esperada'],
         rows: [
-          { 'RAM disponible': '8 GB o menos', 'Primer modelo recomendado': 'Phi-4 Mini (3,8B Q4)', 'Tamaño de descarga': '~2,7 GB', 'Velocidad esperada': '15–30 tokens/seg en Apple Silicon; 5–10 tok/seg solo CPU Intel/AMD' },
+          { 'RAM disponible': '8 GB o menos', 'Primer modelo recomendado': 'Phi-4 Mini (3,8B Q4) o Gemma 4 E2B', 'Tamaño de descarga': '~2–3 GB', 'Velocidad esperada': '15–30 tokens/seg en Apple Silicon; 5–10 tok/seg solo CPU Intel/AMD' },
           { 'RAM disponible': '8–16 GB', 'Primer modelo recomendado': 'Llama 3.2 3B (Q4) o Qwen3 8B (Q4)', 'Tamaño de descarga': '2,0–4,9 GB', 'Velocidad esperada': '20–40 tok/seg en Apple Silicon; 8–15 tok/seg solo CPU' },
-          { 'RAM disponible': '16–32 GB', 'Primer modelo recomendado': 'Qwen3 14B (Q4)', 'Tamaño de descarga': '~8,9 GB', 'Velocidad esperada': '15–25 tok/seg en Apple Silicon; GPU necesaria para tiempo real en x86' },
-          { 'RAM disponible': '32 GB+ (Apple Silicon) o 24 GB VRAM (NVIDIA)', 'Primer modelo recomendado': 'Llama 3.3 70B (Q4)', 'Tamaño de descarga': '~40 GB', 'Velocidad esperada': '10–20 tok/seg en Apple M5 Max; 15–25 tok/seg RTX 4090' },
+          { 'RAM disponible': '16–32 GB', 'Primer modelo recomendado': 'gpt-oss 20B (~13 GB) o Qwen3 14B (Q4)', 'Tamaño de descarga': '~9–13 GB', 'Velocidad esperada': '15–25 tok/seg en Apple Silicon (Qwen3 14B); GPU necesaria para tiempo real en x86' },
+          { 'RAM disponible': '32 GB+ (Apple Silicon) o 24 GB VRAM (NVIDIA)', 'Primer modelo recomendado': 'Qwen 3.6 27B (Q4) — el mejor modelo de consumo', 'Tamaño de descarga': '~16 GB', 'Velocidad esperada': 'Tiempo real en Macs de clase M4 Pro/M5 y GPUs de clase RTX 4090' },
         ],
         callouts: [
           {
@@ -2196,13 +2275,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-es.svg',
-        imageCaption: 'Guía del primer modelo según RAM disponible: ≤8 GB → Phi-4 Mini 3,8B (~2,7 GB, 15–30 tok/s en Apple Silicon); 8–16 GB → Llama 3.2 3B o Qwen3 8B; 16–32 GB → Qwen3 14B (~8,9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
+        imageCaption: 'Guía del primer modelo según RAM disponible: ≤8 GB → Phi-4 Mini 3,8B o Gemma 4 E2B (~2–3 GB, 15–30 tok/s en Apple Silicon); 8–16 GB → Llama 3.2 3B o Qwen3 8B; 16–32 GB → gpt-oss 20B o Qwen3 14B (~9–13 GB); 32 GB+ → Qwen 3.6 27B (~16 GB).',
       },
       hardware: {
         id: 'hardware',
         title: 'Requisitos de hardware',
         content:
-          '**No necesitas una PC para juegos ni una GPU dedicada para ejecutar IA local en 2026.** Los Mac con Apple Silicon son el mejor hardware de consumo para LLMs locales; cualquier MacBook Air desde M1 en adelante ejecuta modelos pequeños bien. En Windows y Linux, el modo de inferencia por CPU funciona para modelos de 3B–7B en cualquier portátil con 8 GB RAM.',
+          '**No necesitas una PC para juegos ni una GPU dedicada para ejecutar IA local en 2026.** Los Mac con Apple Silicon son el mejor hardware de consumo para LLMs locales; cualquier MacBook Air desde M1 en adelante ejecuta modelos pequeños bien. En Windows y Linux, el modo de inferencia por CPU funciona para modelos de 3B–7B en cualquier portátil con 8 GB RAM. Una nota de plataforma: LM Studio requiere Apple Silicon en macOS — en un Mac Intel, usa Jan o GPT4All, que siguen admitiendo Intel mediante inferencia por CPU.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2214,8 +2293,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '**Apple Silicon (M1–M5):** el mejor hardware de consumo para LLMs locales. La memoria unificada significa que la GPU y la CPU comparten RAM — un MacBook Air M3 con 8 GB ejecuta Phi-4 Mini a más de 20 tokens/seg; un M5 Max con 64 GB ejecuta Llama 3.3 70B.',
-          '**GPU NVIDIA (Windows/Linux):** la aceleración CUDA en LM Studio y Jan acelera drásticamente la generación. RTX 3060 12 GB ejecuta Mistral Small y Qwen3 8B en tiempo real. RTX 4090 24 GB ejecuta modelos de 30B.',
+          '**Apple Silicon (M1–M5):** el mejor hardware de consumo para LLMs locales. La memoria unificada significa que la GPU y la CPU comparten RAM — un MacBook Air M3 con 8 GB ejecuta Phi-4 Mini a más de 20 tokens/seg; un M5 Max con 64 GB ejecuta Llama 3.3 70B. LM Studio ejecuta aquí tanto modelos GGUF (llama.cpp) como MLX.',
+          '**GPU NVIDIA (Windows/Linux):** la aceleración CUDA en LM Studio y Jan acelera drásticamente la generación. RTX 3060 12 GB ejecuta Qwen3 8B en tiempo real. RTX 4090 24 GB ejecuta Qwen 3.6 27B y otros modelos de clase 30B.',
           '**GPU AMD (Windows/Linux):** el soporte ROCm en LM Studio y Jan está mejorando pero es menos maduro que CUDA. Si tienes una GPU AMD, consulta las notas de la versión de LM Studio para tu tarjeta específica antes de depender de la aceleración por GPU.',
           '**Solo CPU Intel/AMD:** funciona para modelos de 3B–7B a 5–15 tokens/seg — utilizable pero lento. La experiencia es mejor para tareas donde envías un prompt y haces otra cosa (resumen, redacción de correos) que para uso conversacional en tiempo real.',
           '**RAM y VRAM:** el modelo debe caber completamente en RAM (o VRAM). Un modelo de 4B necesita ~3 GB; un modelo de 8B necesita ~5 GB; un modelo de 14B necesita ~9 GB; un modelo de 70B necesita ~42 GB. Si el modelo es demasiado grande, LM Studio te avisará antes de descargarlo.',
@@ -2244,9 +2323,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          'Notas de la versión de LM Studio y compatibilidad de hardware — [lmstudio.ai](https://lmstudio.ai)',
-          'Documentación de Jan y requisitos de hardware — [jan.ai/docs](https://jan.ai/docs)',
-          'Biblioteca de modelos de GPT4All y documentación de LocalDocs — [gpt4all.io](https://gpt4all.io)',
+          'Registro de cambios de LM Studio 0.4 y compatibilidad de hardware — [lmstudio.ai/changelog](https://lmstudio.ai/changelog)',
+          'Documentación de Jan y repositorio de código abierto (Apache 2.0) — [jan.ai/docs](https://jan.ai/docs)',
+          'Biblioteca de modelos de GPT4All, documentación de LocalDocs e historial de versiones — [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)',
           'Informe técnico de Phi-4 Mini — [Microsoft Research](https://microsoft.com/research)',
           'Especificación del formato de cuantización GGUF — [llama.cpp](https://github.com/ggerganov/llama.cpp)',
         ],
@@ -2273,7 +2352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar una aplicación de IA local en un MacBook más antiguo?',
-            a: 'Sí, si cumple con el requisito de RAM (8 GB mínimo para modelos de 3B). Los modelos MacBook Air y MacBook Pro de 2018 en adelante con 8 GB RAM pueden ejecutar Phi-4 Mini a velocidad lenta pero utilizable (~5–10 tokens/seg en Mac Intel). Los Mac con Apple Silicon (M1 en adelante) son significativamente más rápidos debido a la arquitectura de memoria unificada y el Neural Engine. Un MacBook Air M1 de 2020 ejecuta Phi-4 Mini a más de 20 tokens/seg.',
+            a: 'Sí, si cumple con el requisito de RAM (8 GB mínimo para modelos de 3B). En un MacBook Intel de 2018 en adelante, usa Jan o GPT4All — LM Studio requiere Apple Silicon en macOS. Un Mac Intel ejecuta Phi-4 Mini a velocidad lenta pero utilizable (~5–10 tokens/seg, inferencia por CPU). Los Mac con Apple Silicon (M1 en adelante) son significativamente más rápidos debido a la arquitectura de memoria unificada y el Neural Engine. Un MacBook Air M1 de 2020 ejecuta Phi-4 Mini a más de 20 tokens/seg.',
           },
           {
             q: '¿Puedo ejecutar varios modelos al mismo tiempo?',
@@ -2289,11 +2368,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué modelos admite LM Studio en Mac con Apple Silicon?',
-            a: 'LM Studio admite toda la biblioteca de modelos GGUF en Apple Silicon (de M1 a M5), usando Metal para la aceleración por GPU a través de la arquitectura de memoria unificada. Puntos de partida recomendados: Phi-4 Mini (3.8B) o Llama 3.2 3B en Mac con 8 GB, Qwen3 8B en Mac con 16 GB o más, Qwen3 14B en Mac con 16–32 GB, y Llama 3.3 70B en Mac con 32 GB o más (M3 Max, M4 Max o M5 Max). LM Studio detecta automáticamente la memoria disponible y recomienda un nivel de cuantización adecuado — normalmente Q4_K_M.',
+            a: 'LM Studio admite toda la biblioteca de modelos GGUF además del formato MLX de Apple en Apple Silicon (de M1 a M5), usando Metal para la aceleración por GPU a través de la arquitectura de memoria unificada. Puntos de partida recomendados: Phi-4 Mini (3.8B) o Gemma 4 E2B en Mac con 8 GB, Qwen3 8B en Mac con 16 GB o más, gpt-oss 20B o Qwen3 14B en Mac con 16–32 GB, y Qwen 3.6 27B en Mac con 32 GB o más — Llama 3.3 70B sigue siendo una opción en equipos de clase Max con 48–64 GB. LM Studio detecta automáticamente la memoria disponible y recomienda un nivel de cuantización adecuado — normalmente Q4_K_M.',
           },
           {
             q: '¿Cuáles son los requisitos del sistema de LM Studio en Windows, Mac Intel y Apple Silicon?',
-            a: 'El mínimo en las tres plataformas es 8 GB de RAM para modelos de 3B–7B. Apple Silicon (M1–M5) es el más rápido, gracias a la memoria unificada y la aceleración Metal, sin necesidad de GPU separada. Mac Intel funciona solo mediante inferencia por CPU — no existe aceleración GPU Metal para inferencia de LLM en Mac Intel —, así que espera entre 5 y 10 tokens/seg para un modelo de 3B. Windows necesita un mínimo de 8 GB de RAM, con una GPU NVIDIA (8 GB+ de VRAM) opcional para aceleración CUDA en modelos más grandes. Linux tiene el mismo mínimo de 8 GB de RAM vía AppImage o .deb, con soporte CUDA si hay una GPU NVIDIA presente.',
+            a: 'En macOS, LM Studio requiere un Mac con Apple Silicon (M1 o posterior) con macOS 14 o superior — los Mac Intel no son compatibles; los usuarios de Mac Intel deben instalar Jan o GPT4All, que ejecutan inferencia por CPU a unos 5–10 tokens/seg para un modelo de 3B. En Windows, el mínimo es 8 GB de RAM para modelos de 3B–7B, con una GPU NVIDIA (8 GB+ de VRAM) opcional para aceleración CUDA en modelos más grandes. Linux tiene el mismo mínimo de 8 GB de RAM vía AppImage o .deb, con soporte CUDA si hay una GPU NVIDIA presente. Apple Silicon es el más rápido en general, gracias a la memoria unificada y la aceleración Metal, sin necesidad de GPU separada.',
           },
           {
             q: '¿LM Studio funciona en Linux?',
@@ -2301,7 +2380,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuáles son las mejores alternativas a LM Studio en 2026?',
-            a: 'Jan es la alternativa más cercana — la misma facilidad de instalación, completamente de código abierto bajo AGPLv3, y soporte de AppImage para Linux. GPT4All es la alternativa más simple para principiantes puros, con una lista de modelos seleccionados y una interfaz de chat de una sola ventana. Para desarrolladores que prefieren una herramienta de línea de comandos, Ollama es la alternativa líder, aunque requiere el uso de terminal en lugar de una interfaz gráfica. Las cuatro ejecutan los mismos archivos de modelo GGUF y son gratuitas.',
+            a: 'Jan es la alternativa más cercana — la misma facilidad de instalación, completamente de código abierto bajo Apache 2.0, y soporte de AppImage para Linux. GPT4All es la alternativa más simple para principiantes puros, con una lista de modelos seleccionados y una interfaz de chat de una sola ventana, aunque su desarrollo está estancado desde principios de 2025. Para desarrolladores que prefieren una herramienta de línea de comandos, Ollama es la alternativa líder, aunque requiere el uso de terminal en lugar de una interfaz gráfica. Las cuatro ejecutan los mismos archivos de modelo GGUF y son gratuitas.',
+          },
+          {
+            q: '¿Puedo conectar mi modelo local a otras aplicaciones?',
+            a: 'Sí. El Local Server de LM Studio expone una API compatible con OpenAI y Anthropic en http://localhost:1234, y Jan una API compatible con OpenAI en http://localhost:1337. Apunta Obsidian, VS Code o cualquier otra herramienta que acepte un endpoint de API personalizado a esa dirección. Muchos flujos de trabajo — RAG, pruebas de prompts, integración de chatbots — se vuelven posibles una vez que tu API local está disponible. Desde la versión 0.4, LM Studio también puede usar herramientas MCP locales.',
+          },
+          {
+            q: '¿Qué cuantización debo usar — Q3, Q4, Q5 o Q6?',
+            a: 'La mayoría de los usuarios deberían usar Q4_K_M, que es lo que LM Studio recomienda por defecto. Q3 está muy comprimida y pierde calidad notable. Q4 es el equilibrio recomendado entre calidad y tamaño de archivo. Q5 y Q6 son más grandes y algo mejores si tienes RAM de sobra. En hardware con menos de 8 GB, empieza con Q4_K_M de un modelo de clase 3B en lugar de una cuantización menor de uno más grande.',
+          },
+          {
+            q: '¿Sigue manteniéndose GPT4All en 2026?',
+            a: 'No de forma activa. La última versión importante de GPT4All (v3.10) se lanzó a principios de 2025, y su repositorio de GitHub no ha tenido actualizaciones significativas desde entonces. La aplicación se sigue instalando y funciona completamente sin conexión, y sigue siendo la opción más sencilla de ventana única — pero su lista de modelos seleccionados está desactualizada, así que modelos más nuevos como Qwen 3.6 o gpt-oss no están disponibles en ella. Si quieres los lanzamientos de modelos actuales con una configuración sin terminal, elige LM Studio o Jan.',
           },
         ],
       },
@@ -2323,37 +2414,56 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'LM Studio en Apple Silicon: la IA local más fácil 2026',
-      description: 'LM Studio en Apple Silicon, Mac Intel, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
+      description: 'LM Studio en Apple Silicon, Windows y Linux: modelos compatibles, requisitos del sistema y tiempo de configuración. Sin terminal. Comparado con Jan y GPT4All, 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'es',
       image: buildOgImageObject(OG_SLUG, 'es'),
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      educationalLevel: 'Beginner',
+      about: [
+        { '@type': 'Thing', name: 'LM Studio' },
+        { '@type': 'Thing', name: 'Jan' },
+        { '@type': 'Thing', name: 'GPT4All' },
+        { '@type': 'Thing', name: 'Phi-4 Mini' },
+        { '@type': 'Thing', name: 'Qwen 3.6' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'LM Studio' },
+        { '@type': 'SoftwareApplication', name: 'Jan' },
+        { '@type': 'SoftwareApplication', name: 'GPT4All' },
+      ],
       'proficiencyLevel': 'Beginner',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
   },
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: 'O aplicativo de IA local mais fácil para Windows, Mac e Linux (2026)',
     seoTitle: 'LM Studio no Apple Silicon: IA local mais fácil 2026',
     intro:
-      'O LM Studio é o aplicativo de IA local mais fácil em 2026 para Windows, Mac e Linux — baixe, instale, carregue um modelo e comece a conversar em menos de 10 minutos sem usar o terminal. Este guia cobre LM Studio, Jan e GPT4All como as três opções sem código, compara-os por tempo de configuração e capacidade, e explica qual escolher conforme o seu hardware e objetivos.',
+      'O LM Studio é o aplicativo de IA local mais fácil em 2026 para Windows, Mac e Linux — baixe, instale, carregue um modelo e comece a conversar em menos de 10 minutos sem usar o terminal. Ele roda mais rápido no Apple Silicon (M1 a M5); em um Mac Intel, o Jan ou o GPT4All cumprem o mesmo papel, já que o LM Studio agora exige Apple Silicon no macOS. Este guia cobre LM Studio, Jan e GPT4All como as três opções sem código, compara-os por tempo de configuração e capacidade, e explica qual escolher conforme o seu hardware e objetivos.',
     metaDescription:
-      'LM Studio no Apple Silicon, Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
+      'LM Studio no Apple Silicon, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-pt.webp',
     twitterDescription:
-      'LM Studio no Apple Silicon (M1–M5), Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração — comparado com Jan e GPT4All para 2026.',
+      'LM Studio no Apple Silicon (M1–M5), Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração — comparado com Jan e GPT4All para 2026.',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -2388,9 +2498,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Comece com Phi-4 Mini (3B, ~3 GB RAM) ou Llama 3.2 3B em hardware de baixo desempenho — funciona em qualquer notebook fabricado depois de 2018.',
           'Nenhuma GPU é necessária para modelos de 3B–8B no Apple Silicon ou em CPUs Intel/AMD modernas.',
           'Os três são gratuitos, de código aberto e rodam sem conta na nuvem nem conexão à internet após o download.',
-          'O LM Studio também expõe uma API local compatível com OpenAI para desenvolvedores que queiram ir mais longe.',
+          'O LM Studio também expõe uma API local compatível com OpenAI e Anthropic para desenvolvedores que queiram ir mais longe.',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -2415,25 +2525,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**O LM Studio é o caminho mais rápido de zero a conversar localmente.** Baixe o instalador em lmstudio.ai, abra a aba Discover, busque "Phi-4 Mini", baixe o modelo e comece a conversar. Em menos de 10 minutos com uma conexão à internet decente.',
-          '**O Jan é a alternativa de código aberto.** Mesma facilidade de uso que o LM Studio, totalmente de código aberto, funciona no Linux AppImage. Se você prefere software de código aberto ou quer ver o código-fonte, o Jan é a opção equivalente.',
-          '**O GPT4All é a experiência mais simplificada.** Janela de chat única, recomendações de modelos selecionados, sem a sobrecarga de navegar por modelos. Melhor para usuários que querem digitar uma pergunta e obter uma resposta sem tomar decisões de configuração.',
+          '**O Jan é a alternativa de código aberto.** Mesma facilidade de uso que o LM Studio, totalmente de código aberto sob Apache 2.0 (relicenciado de AGPLv3 em 2025), funciona no Linux AppImage. Se você prefere software de código aberto ou quer ver o código-fonte, o Jan é a opção equivalente.',
+          '**O GPT4All é a experiência mais simplificada.** Janela de chat única, recomendações de modelos selecionados, sem a sobrecarga de navegar por modelos. Melhor para usuários que querem digitar uma pergunta e obter uma resposta sem tomar decisões de configuração — mas seu desenvolvimento está estagnado desde o início de 2025, então sua lista de modelos selecionados não inclui mais os modelos mais recentes.',
           '**Comece com Phi-4 Mini ou Llama 3.2 3B em qualquer hardware.** Esses modelos de 3B funcionam em qualquer notebook fabricado nos últimos 7 anos — sem GPU, sem 32 GB de RAM, sem hardware especial. São mais lentos do que uma IA na nuvem, mas produzem resultados utilizáveis para a maioria das tarefas do dia a dia.',
           '**Nenhuma conta na nuvem é necessária.** Após o download inicial (o aplicativo e o arquivo do modelo), tudo roda localmente sem conexão à internet. Sem chave de API, sem assinatura, sem dados enviados a nenhum servidor.',
           '**No Apple Silicon, quase qualquer modelo funciona bem.** O MacBook Air M3 (8 GB) roda Llama 3.2 3B e Phi-4 Mini com fluidez. O M3 Pro ou M4 (16 GB+) roda o Qwen3 8B confortavelmente. O M5 Max (64 GB) roda modelos de 70B.',
-          '**O LM Studio também serve uma API local.** Se mais adiante você quiser conectar o Obsidian, o VS Code ou outra ferramenta ao seu modelo local, a aba Local Server do LM Studio expõe uma API compatível com OpenAI no localhost — sem configuração adicional.',
+          '**O LM Studio também serve uma API local.** Se mais adiante você quiser conectar o Obsidian, o VS Code ou outra ferramenta ao seu modelo local, a aba Local Server do LM Studio expõe uma API compatível com OpenAI e Anthropic no localhost:1234 — sem configuração adicional. Desde a versão 0.4, ele também pode usar ferramentas MCP locais.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'Dados rápidos',
         items: [
-          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb).',
-          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
-          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
+          '**LM Studio:** lmstudio.ai — Windows (x64, ARM), macOS (Apple Silicon, macOS 14+; sem suporte a Mac Intel), Linux (AppImage, .deb). Linha de versão atual: 0.4.x.',
+          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Linha de versão atual: 0.8.x, Apache 2.0.',
+          '**GPT4All:** gpt4all.io — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). Última versão importante: v3.10, início de 2025 — o desenvolvimento está estagnado.',
           '**Hardware mínimo:** qualquer notebook com 8 GB RAM para modelos de 3B–7B; 16 GB+ para modelos de 8B–14B; 24 GB+ para 30B+.',
           '**Nenhuma GPU é necessária** para modelos de 3B–7B no Apple Silicon ou no modo de inferência por CPU.',
-          '**Os três são gratuitos** e de código aberto (o LM Studio é gratuito, mas com código disponível, não totalmente de código aberto).',
-          '**Recomendação de primeiro modelo:** Phi-4 Mini (3B, ~2,7 GB de download) para hardware com menos de 8 GB; Qwen3 8B para sistemas de 8–16 GB.',
+          '**Os três são gratuitos**; Jan (Apache 2.0) e GPT4All (MIT) são totalmente de código aberto, o LM Studio é gratuito, mas apenas com código disponível.',
+          '**Recomendação de primeiro modelo:** Phi-4 Mini (3,8B, ~2,7 GB de download) ou Gemma 4 E2B para hardware com menos de 8 GB; Qwen3 8B para sistemas de 8–16 GB.',
         ],
       },
       comparison: {
@@ -2454,10 +2564,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Recurso', 'LM Studio', 'Jan', 'GPT4All'],
         rows: [
           { 'Recurso': 'Tempo de configuração (primeira execução)', 'LM Studio': '~8 minutos', 'Jan': '~10 minutos', 'GPT4All': '~5 minutos' },
-          { 'Recurso': 'Biblioteca de modelos', 'LM Studio': 'Busca GGUF completa do Hugging Face (~50.000+ modelos)', 'Jan': 'Selecionados + busca no Hugging Face', 'GPT4All': 'Lista selecionada (~20 modelos)' },
-          { 'Recurso': 'Servidor de API local', 'LM Studio': 'Sim (compatível com OpenAI, aba Local Server)', 'Jan': 'Sim (compatível com OpenAI)', 'GPT4All': 'Sim (limitado, menos documentado)' },
+          { 'Recurso': 'Biblioteca de modelos', 'LM Studio': 'Busca GGUF + MLX completa do Hugging Face (~50.000+ modelos)', 'Jan': 'Selecionados + busca no Hugging Face', 'GPT4All': 'Lista selecionada (~20 modelos, desatualizada)' },
+          { 'Recurso': 'Servidor de API local', 'LM Studio': 'Sim (compatível com OpenAI e Anthropic)', 'Jan': 'Sim (compatível com OpenAI)', 'GPT4All': 'Sim (limitado, menos documentado)' },
           { 'Recurso': 'Multi-chat / histórico de conversas', 'LM Studio': 'Sim', 'Jan': 'Sim', 'GPT4All': 'Janela de chat única' },
-          { 'Recurso': 'Licença do código-fonte', 'LM Studio': 'Gratuito, código disponível (não OSI)', 'Jan': 'AGPLv3 (totalmente de código aberto)', 'GPT4All': 'MIT (totalmente de código aberto)' },
+          { 'Recurso': 'Licença do código-fonte', 'LM Studio': 'Gratuito, código disponível (não OSI)', 'Jan': 'Apache 2.0 (totalmente de código aberto)', 'GPT4All': 'MIT (totalmente de código aberto)' },
+          { 'Recurso': 'Desenvolvimento ativo', 'LM Studio': 'Frequente (0.4.x, 2026)', 'Jan': 'Frequente (0.8.x, 2026)', 'GPT4All': 'Estagnado desde início de 2025' },
           { 'Recurso': 'Compatibilidade com Linux', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'Recurso': 'Melhor para', 'LM Studio': 'Usuários que querem a melhor interface + acesso a API para desenvolvedores', 'Jan': 'Usuários que preferem software de código aberto', 'GPT4All': 'Iniciantes absolutos que querem a interface mais simples' },
         ],
@@ -2468,7 +2579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-pt.webp',
-        imageCaption: 'Comparação de recursos LM Studio vs Jan vs GPT4All: o LM Studio oferece 50.000+ modelos, API local, multi-chat e a melhor interface; o Jan é a alternativa de código aberto (AGPLv3); o GPT4All é a opção mais simples de janela única para iniciantes absolutos.',
+        imageCaption: 'Comparação de recursos LM Studio vs Jan vs GPT4All: o LM Studio oferece 50.000+ modelos, API local, multi-chat e a melhor interface; o Jan é a alternativa de código aberto (Apache 2.0); o GPT4All é a opção mais simples de janela única para iniciantes absolutos.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -2476,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O LM Studio se instala em 3 minutos e coloca você conversando em menos de 10.** O processo é idêntico no Windows e no macOS — baixe, instale, navegue pelos modelos, baixe um modelo, converse.',
         numberedItems: [
-          'Vá a lmstudio.ai e baixe o instalador para a sua plataforma (Windows .exe, macOS .dmg, Linux .AppImage ou .deb).',
+          'Vá a lmstudio.ai e baixe o instalador para a sua plataforma (Windows .exe, macOS .dmg para Apple Silicon, Linux .AppImage ou .deb).',
           'Execute o instalador. Aceite qualquer aviso de segurança (é um aplicativo novo, não assinado pela Apple/Microsoft por padrão em algumas versões).',
           'Abra o LM Studio. A barra lateral esquerda mostra: Chat, Search (Discover), Models e Local Server.',
           'Clique em "Discover" (o ícone do telescópio). Na barra de busca, digite "Phi-4 Mini" (para sistemas de 8 GB ou menos) ou "Qwen3 8B" (para sistemas de 16 GB+).',
@@ -2497,7 +2608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: guia de configuração',
         content:
-          '**O Jan é a alternativa de código aberto ao LM Studio — mesma facilidade de uso, experiência de download de modelos idêntica, licença AGPLv3.** Use o Jan se o software de código aberto for importante para você ou se quiser inspecionar ou modificar o código do aplicativo.',
+          '**O Jan é a alternativa de código aberto ao LM Studio — mesma facilidade de uso, experiência de download de modelos idêntica, licença Apache 2.0 (relicenciada de AGPLv3 em 2025).** Use o Jan se o software de código aberto for importante para você, se você usa um Mac Intel, ou se quiser inspecionar ou modificar o código do aplicativo.',
         numberedItems: [
           'Vá a jan.ai e baixe o instalador para a sua plataforma.',
           'Execute o instalador e abra o Jan.',
@@ -2517,7 +2628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gpt4all',
         title: 'GPT4All: guia de configuração',
         content:
-          '**O GPT4All oferece a experiência mais simplificada — uma janela de chat única e uma lista selecionada de modelos recomendados.** Se o LM Studio e o Jan têm opções demais e você só quer digitar uma pergunta e obter uma resposta, comece aqui.',
+          '**O GPT4All oferece a experiência mais simplificada — uma janela de chat única e uma lista selecionada de modelos recomendados.** Se o LM Studio e o Jan têm opções demais e você só quer digitar uma pergunta e obter uma resposta, comece aqui. Um alerta para 2026: o desenvolvimento do GPT4All está estagnado desde o início de 2025 (última versão importante v3.10), então o app continua funcionando bem offline, mas sua lista de modelos selecionados não inclui mais os mais recentes. Escolha LM Studio ou Jan se quiser os lançamentos de modelos atuais.',
         numberedItems: [
           'Vá a gpt4all.io e baixe o instalador para a sua plataforma.',
           'Execute o instalador e abra o GPT4All.',
@@ -2532,7 +2643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-pt.svg',
-        imageCaption: 'Qual aplicativo de IA local instalar: LM Studio para a melhor interface e acesso a API (50.000+ modelos); Jan como alternativa de código aberto AGPLv3; GPT4All para a experiência mais simples de janela única para iniciantes com ~20 modelos selecionados. Os três são gratuitos e funcionam sem conta na nuvem.',
+        imageCaption: 'Qual aplicativo de IA local instalar: LM Studio para a melhor interface e acesso a API (50.000+ modelos); Jan como alternativa de código aberto Apache 2.0; GPT4All para a experiência mais simples de janela única para iniciantes com ~20 modelos selecionados. Os três são gratuitos e funcionam sem conta na nuvem.',
       },
       firstModel: {
         id: 'first-model',
@@ -2541,10 +2652,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**O primeiro modelo certo depende de quanta RAM o seu computador tem.** Mais RAM = modelo maior = melhores respostas, mas qualquer computador moderno consegue rodar algo útil.',
         columns: ['RAM disponível', 'Primeiro modelo recomendado', 'Tamanho do download', 'Velocidade esperada'],
         rows: [
-          { 'RAM disponível': '8 GB ou menos', 'Primeiro modelo recomendado': 'Phi-4 Mini (3,8B Q4)', 'Tamanho do download': '~2,7 GB', 'Velocidade esperada': '15–30 tokens/seg no Apple Silicon; 5–10 tok/seg só CPU Intel/AMD' },
+          { 'RAM disponível': '8 GB ou menos', 'Primeiro modelo recomendado': 'Phi-4 Mini (3,8B Q4) ou Gemma 4 E2B', 'Tamanho do download': '~2–3 GB', 'Velocidade esperada': '15–30 tokens/seg no Apple Silicon; 5–10 tok/seg só CPU Intel/AMD' },
           { 'RAM disponível': '8–16 GB', 'Primeiro modelo recomendado': 'Llama 3.2 3B (Q4) ou Qwen3 8B (Q4)', 'Tamanho do download': '2,0–4,9 GB', 'Velocidade esperada': '20–40 tok/seg no Apple Silicon; 8–15 tok/seg só CPU' },
-          { 'RAM disponível': '16–32 GB', 'Primeiro modelo recomendado': 'Qwen3 14B (Q4)', 'Tamanho do download': '~8,9 GB', 'Velocidade esperada': '15–25 tok/seg no Apple Silicon; GPU necessária para tempo real em x86' },
-          { 'RAM disponível': '32 GB+ (Apple Silicon) ou 24 GB VRAM (NVIDIA)', 'Primeiro modelo recomendado': 'Llama 3.3 70B (Q4)', 'Tamanho do download': '~40 GB', 'Velocidade esperada': '10–20 tok/seg no Apple M5 Max; 15–25 tok/seg RTX 4090' },
+          { 'RAM disponível': '16–32 GB', 'Primeiro modelo recomendado': 'gpt-oss 20B (~13 GB) ou Qwen3 14B (Q4)', 'Tamanho do download': '~9–13 GB', 'Velocidade esperada': '15–25 tok/seg no Apple Silicon (Qwen3 14B); GPU necessária para tempo real em x86' },
+          { 'RAM disponível': '32 GB+ (Apple Silicon) ou 24 GB VRAM (NVIDIA)', 'Primeiro modelo recomendado': 'Qwen 3.6 27B (Q4) — melhor modelo para hardware de consumo', 'Tamanho do download': '~16 GB', 'Velocidade esperada': 'Tempo real em Macs classe M4 Pro/M5 e GPUs classe RTX 4090' },
         ],
         callouts: [
           {
@@ -2553,13 +2664,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-pt.svg',
-        imageCaption: 'Guia do primeiro modelo conforme a RAM disponível: ≤8 GB → Phi-4 Mini 3,8B (~2,7 GB, 15–30 tok/s no Apple Silicon); 8–16 GB → Llama 3.2 3B ou Qwen3 8B; 16–32 GB → Qwen3 14B (~8,9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
+        imageCaption: 'Guia do primeiro modelo conforme a RAM disponível: ≤8 GB → Phi-4 Mini 3,8B ou Gemma 4 E2B (~2–3 GB, 15–30 tok/s no Apple Silicon); 8–16 GB → Llama 3.2 3B ou Qwen3 8B; 16–32 GB → gpt-oss 20B ou Qwen3 14B (~9–13 GB); 32 GB+ → Qwen 3.6 27B (~16 GB).',
       },
       hardware: {
         id: 'hardware',
         title: 'Requisitos de hardware',
         content:
-          '**Você não precisa de um PC gamer nem de uma GPU dedicada para executar IA local em 2026.** Os Macs com Apple Silicon são o melhor hardware de consumo para LLMs locais; qualquer MacBook Air do M1 em diante roda modelos pequenos bem. No Windows e Linux, o modo de inferência por CPU funciona para modelos de 3B–7B em qualquer notebook com 8 GB RAM.',
+          '**Você não precisa de um PC gamer nem de uma GPU dedicada para executar IA local em 2026.** Os Macs com Apple Silicon são o melhor hardware de consumo para LLMs locais; qualquer MacBook Air do M1 em diante roda modelos pequenos bem. No Windows e Linux, o modo de inferência por CPU funciona para modelos de 3B–7B em qualquer notebook com 8 GB RAM. Uma observação de plataforma: o LM Studio exige Apple Silicon no macOS — em um Mac Intel, use o Jan ou o GPT4All, que continuam a oferecer suporte a Intel via inferência por CPU.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2571,8 +2682,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '**Apple Silicon (M1–M5):** o melhor hardware de consumo para LLMs locais. A memória unificada significa que a GPU e a CPU compartilham a RAM — um MacBook Air M3 com 8 GB roda o Phi-4 Mini a mais de 20 tokens/seg; um M5 Max com 64 GB roda o Llama 3.3 70B.',
-          '**GPU NVIDIA (Windows/Linux):** a aceleração CUDA no LM Studio e no Jan acelera drasticamente a geração. A RTX 3060 12 GB roda Mistral Small e Qwen3 8B em tempo real. A RTX 4090 24 GB roda modelos de 30B.',
+          '**Apple Silicon (M1–M5):** o melhor hardware de consumo para LLMs locais. A memória unificada significa que a GPU e a CPU compartilham a RAM — um MacBook Air M3 com 8 GB roda o Phi-4 Mini a mais de 20 tokens/seg; um M5 Max com 64 GB roda o Llama 3.3 70B. O LM Studio roda tanto modelos GGUF (llama.cpp) quanto MLX aqui.',
+          '**GPU NVIDIA (Windows/Linux):** a aceleração CUDA no LM Studio e no Jan acelera drasticamente a geração. A RTX 3060 12 GB roda Qwen3 8B em tempo real. A RTX 4090 24 GB roda o Qwen 3.6 27B e outros modelos de classe 30B.',
           '**GPU AMD (Windows/Linux):** o suporte a ROCm no LM Studio e no Jan está melhorando, mas é menos maduro do que o CUDA. Se você tem uma GPU AMD, consulte as notas de versão do LM Studio para a sua placa específica antes de depender da aceleração por GPU.',
           '**Só CPU Intel/AMD:** funciona para modelos de 3B–7B a 5–15 tokens/seg — utilizável, mas lento. A experiência é melhor para tarefas em que você envia um prompt e vai fazer outra coisa (resumo, redação de e-mails) do que para uso conversacional em tempo real.',
           '**RAM e VRAM:** o modelo deve caber inteiramente na RAM (ou VRAM). Um modelo de 4B precisa de ~3 GB; um modelo de 8B precisa de ~5 GB; um modelo de 14B precisa de ~9 GB; um modelo de 70B precisa de ~42 GB. Se o modelo for grande demais, o LM Studio avisará você antes de baixá-lo.',
@@ -2601,9 +2712,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          'Notas de versão do LM Studio e compatibilidade de hardware — [lmstudio.ai](https://lmstudio.ai)',
-          'Documentação do Jan e requisitos de hardware — [jan.ai/docs](https://jan.ai/docs)',
-          'Biblioteca de modelos do GPT4All e documentação do LocalDocs — [gpt4all.io](https://gpt4all.io)',
+          'Changelog do LM Studio 0.4 e compatibilidade de hardware — [lmstudio.ai/changelog](https://lmstudio.ai/changelog)',
+          'Documentação do Jan e repositório de código aberto (Apache 2.0) — [jan.ai/docs](https://jan.ai/docs)',
+          'Biblioteca de modelos do GPT4All, documentação do LocalDocs e histórico de versões — [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)',
           'Relatório técnico do Phi-4 Mini — [Microsoft Research](https://microsoft.com/research)',
           'Especificação do formato de quantização GGUF — [llama.cpp](https://github.com/ggerganov/llama.cpp)',
         ],
@@ -2630,7 +2741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usar um aplicativo de IA local em um MacBook mais antigo?',
-            a: 'Sim, se ele atender ao requisito de RAM (8 GB no mínimo para modelos de 3B). Os modelos MacBook Air e MacBook Pro de 2018 em diante com 8 GB RAM conseguem rodar o Phi-4 Mini a uma velocidade lenta, mas utilizável (~5–10 tokens/seg no Mac Intel). Os Macs com Apple Silicon (M1 em diante) são significativamente mais rápidos devido à arquitetura de memória unificada e ao Neural Engine. Um MacBook Air M1 de 2020 roda o Phi-4 Mini a mais de 20 tokens/seg.',
+            a: 'Sim, se ele atender ao requisito de RAM (8 GB no mínimo para modelos de 3B). Em um MacBook Intel de 2018 em diante, use o Jan ou o GPT4All — o LM Studio exige Apple Silicon no macOS. Um Mac Intel roda o Phi-4 Mini a uma velocidade lenta, mas utilizável (~5–10 tokens/seg, inferência por CPU). Os Macs com Apple Silicon (M1 em diante) são significativamente mais rápidos devido à arquitetura de memória unificada e ao Neural Engine. Um MacBook Air M1 de 2020 roda o Phi-4 Mini a mais de 20 tokens/seg.',
           },
           {
             q: 'Posso executar vários modelos ao mesmo tempo?',
@@ -2646,11 +2757,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais modelos o LM Studio suporta em Macs com Apple Silicon?',
-            a: 'O LM Studio suporta toda a biblioteca de modelos GGUF no Apple Silicon (de M1 a M5), usando o Metal para aceleração por GPU por meio da arquitetura de memória unificada. Pontos de partida recomendados: Phi-4 Mini (3,8B) ou Llama 3.2 3B em Macs com 8 GB, Qwen3 8B em Macs com 16 GB ou mais, Qwen3 14B em Macs com 16–32 GB, e Llama 3.3 70B em Macs com 32 GB ou mais (M3 Max, M4 Max ou M5 Max). O LM Studio detecta automaticamente a memória disponível e recomenda um nível de quantização adequado — geralmente Q4_K_M.',
+            a: 'O LM Studio suporta toda a biblioteca de modelos GGUF além do formato MLX da Apple no Apple Silicon (de M1 a M5), usando o Metal para aceleração por GPU por meio da arquitetura de memória unificada. Pontos de partida recomendados: Phi-4 Mini (3,8B) ou Gemma 4 E2B em Macs com 8 GB, Qwen3 8B em Macs com 16 GB ou mais, gpt-oss 20B ou Qwen3 14B em Macs com 16–32 GB, e Qwen 3.6 27B em Macs com 32 GB ou mais — o Llama 3.3 70B continua sendo uma opção em equipamentos classe Max com 48–64 GB. O LM Studio detecta automaticamente a memória disponível e recomenda um nível de quantização adequado — geralmente Q4_K_M.',
           },
           {
             q: 'Quais são os requisitos de sistema do LM Studio no Windows, no Mac Intel e no Apple Silicon?',
-            a: 'O mínimo em todas as plataformas é 8 GB de RAM para modelos de 3B–7B. O Apple Silicon (M1–M5) roda mais rápido, graças à memória unificada e à aceleração Metal, sem precisar de GPU separada. O Mac Intel funciona apenas por inferência via CPU — não há aceleração de GPU Metal para inferência de LLM em Macs Intel —, então espere cerca de 5 a 10 tokens/seg para um modelo de 3B. O Windows precisa de no mínimo 8 GB de RAM, com uma GPU NVIDIA (8 GB+ de VRAM) opcional para aceleração CUDA em modelos maiores. O Linux tem o mesmo mínimo de 8 GB de RAM via AppImage ou .deb, com suporte a CUDA se houver uma GPU NVIDIA presente.',
+            a: 'No macOS, o LM Studio exige um Mac com Apple Silicon (M1 ou mais recente) com macOS 14 ou superior — Macs Intel não são compatíveis; usuários de Mac Intel devem instalar o Jan ou o GPT4All, que rodam por inferência via CPU a cerca de 5–10 tokens/seg para um modelo de 3B. No Windows, o mínimo é 8 GB de RAM para modelos de 3B–7B, com uma GPU NVIDIA (8 GB+ de VRAM) opcional para aceleração CUDA em modelos maiores. O Linux tem o mesmo mínimo de 8 GB de RAM via AppImage ou .deb, com suporte a CUDA se houver uma GPU NVIDIA presente. O Apple Silicon roda mais rápido no geral, graças à memória unificada e à aceleração Metal, sem precisar de GPU separada.',
           },
           {
             q: 'O LM Studio roda no Linux?',
@@ -2658,7 +2769,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quais são as melhores alternativas ao LM Studio em 2026?',
-            a: 'O Jan é a alternativa mais próxima — a mesma facilidade de instalação, totalmente de código aberto sob AGPLv3, e suporte a AppImage no Linux. O GPT4All é a alternativa mais simples para iniciantes puros, com uma lista de modelos selecionados e uma interface de chat de janela única. Para desenvolvedores que preferem uma ferramenta de linha de comando, o Ollama é a principal alternativa, embora exija o uso do terminal em vez de uma interface gráfica. Os quatro rodam os mesmos arquivos de modelo GGUF e são gratuitos.',
+            a: 'O Jan é a alternativa mais próxima — a mesma facilidade de instalação, totalmente de código aberto sob Apache 2.0, e suporte a AppImage no Linux. O GPT4All é a alternativa mais simples para iniciantes puros, com uma lista de modelos selecionados e uma interface de chat de janela única, embora seu desenvolvimento esteja estagnado desde o início de 2025. Para desenvolvedores que preferem uma ferramenta de linha de comando, o Ollama é a principal alternativa, embora exija o uso do terminal em vez de uma interface gráfica. Os quatro rodam os mesmos arquivos de modelo GGUF e são gratuitos.',
+          },
+          {
+            q: 'Posso conectar meu modelo local a outros aplicativos?',
+            a: 'Sim. O Local Server do LM Studio expõe uma API compatível com OpenAI e Anthropic em http://localhost:1234, e o Jan expõe uma API compatível com OpenAI em http://localhost:1337. Aponte o Obsidian, o VS Code ou qualquer outra ferramenta que aceite um endpoint de API personalizado para esse endereço. Muitos fluxos de trabalho — RAG, testes de prompt, integração de chatbot — se tornam possíveis assim que sua API local está disponível. Desde a versão 0.4, o LM Studio também pode usar ferramentas MCP locais.',
+          },
+          {
+            q: 'Qual quantização devo usar — Q3, Q4, Q5 ou Q6?',
+            a: 'A maioria dos usuários deve usar Q4_K_M, que é o que o LM Studio recomenda por padrão. Q3 é fortemente comprimida e perde qualidade perceptível. Q4 é o equilíbrio recomendado entre qualidade e tamanho do arquivo. Q5 e Q6 são maiores e um pouco melhores se houver RAM sobrando. Em hardware com menos de 8 GB, comece com Q4_K_M de um modelo classe 3B em vez de uma quantização menor de um modelo maior.',
+          },
+          {
+            q: 'O GPT4All ainda é mantido em 2026?',
+            a: 'Não ativamente. A última versão importante do GPT4All (v3.10) saiu no início de 2025, e seu repositório no GitHub não recebeu atualizações significativas desde então. O app continua instalando e funcionando totalmente offline, e permanece a opção mais simples de janela única — mas sua lista de modelos selecionados está desatualizada, então modelos mais novos como Qwen 3.6 ou gpt-oss não são oferecidos nela. Se você quer lançamentos de modelos atuais com uma configuração sem terminal, escolha o LM Studio ou o Jan.',
           },
         ],
       },
@@ -2680,37 +2803,56 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'LM Studio no Apple Silicon: IA local mais fácil 2026',
-      description: 'LM Studio no Apple Silicon, Mac Intel, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
+      description: 'LM Studio no Apple Silicon, Windows e Linux: modelos compatíveis, requisitos de sistema e tempo de configuração. Sem terminal. Comparado com Jan e GPT4All, 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'pt-BR',
       image: buildOgImageObject(OG_SLUG, 'pt'),
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      educationalLevel: 'Beginner',
+      about: [
+        { '@type': 'Thing', name: 'LM Studio' },
+        { '@type': 'Thing', name: 'Jan' },
+        { '@type': 'Thing', name: 'GPT4All' },
+        { '@type': 'Thing', name: 'Phi-4 Mini' },
+        { '@type': 'Thing', name: 'Qwen 3.6' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'LM Studio' },
+        { '@type': 'SoftwareApplication', name: 'Jan' },
+        { '@type': 'SoftwareApplication', name: 'GPT4All' },
+      ],
       'proficiencyLevel': 'Beginner',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
   },
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: 'أسهل تطبيق ذكاء اصطناعي محلي لنظامي ⁨Windows⁩ و⁨Mac⁩ و⁨Linux⁩ (⁨2026⁩)',
     seoTitle: 'LM Studio على Apple Silicon: أسهل ذكاء اصطناعي محلي ⁨2026⁩',
     intro:
-      'يُعدّ تطبيق LM Studio أسهل تطبيق للذكاء الاصطناعي المحلي في 2026 لأنظمة Windows وMac وLinux — قم بتنزيله وتثبيته وتحميل نموذج والبدء بالدردشة في أقل من 10 دقائق دون الحاجة إلى أي طرفية. يغطي هذا الدليل تطبيقات LM Studio وJan وGPT4All بوصفها الخيارات الثلاثة التي لا تستلزم أي برمجة، ويقارنها من حيث وقت الإعداد والقدرات، ويوضح أيّها تختار بناءً على أجهزتك وأهدافك.',
+      'يُعدّ تطبيق LM Studio أسهل تطبيق للذكاء الاصطناعي المحلي في 2026 لأنظمة Windows وMac وLinux — قم بتنزيله وتثبيته وتحميل نموذج والبدء بالدردشة في أقل من 10 دقائق دون الحاجة إلى أي طرفية. يعمل بأسرع أداء على Apple Silicon (M1 إلى M5)؛ على جهاز Mac بمعالج Intel، يقوم تطبيقا Jan أو GPT4All بالمهمة نفسها، إذ بات LM Studio يتطلب الآن Apple Silicon على macOS. يغطي هذا الدليل تطبيقات LM Studio وJan وGPT4All بوصفها الخيارات الثلاثة التي لا تستلزم أي برمجة، ويقارنها من حيث وقت الإعداد والقدرات، ويوضح أيّها تختار بناءً على أجهزتك وأهدافك.',
     metaDescription:
       'LM Studio على Apple Silicon وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد. بلا طرفية. مقارنةً بـJan وGPT4All، 2026.',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-ar.webp',
     twitterDescription:
       'LM Studio على Apple Silicon (M1–M5) وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد — مقارنةً بـJan وGPT4All لعام 2026.',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -2745,9 +2887,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ابدأ بنموذج Phi-4 Mini (3B، حوالي 3 جيجابايت RAM) أو Llama 3.2 3B على الأجهزة ذات الإمكانيات المنخفضة — يعمل على أي حاسوب محمول صُنع بعد عام 2018.',
           'لا GPU مطلوبة للنماذج من 3B إلى 8B على Apple Silicon أو معالجات Intel/AMD الحديثة.',
           'الثلاثة مجانية ومفتوحة المصدر وتعمل بدون حساب سحابي أو اتصال بالإنترنت بعد التنزيل.',
-          'يعرض تطبيق LM Studio أيضاً واجهة برمجية محلية متوافقة مع OpenAI للمطورين الذين يريدون المضي أبعد.',
+          'يعرض تطبيق LM Studio أيضاً واجهة برمجية محلية متوافقة مع OpenAI وAnthropic للمطورين الذين يريدون المضي أبعد.',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -2772,25 +2914,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**تطبيق LM Studio هو أسرع طريق من الصفر إلى الدردشة محلياً.** نزّل المثبّت من lmstudio.ai، وافتح تبويب Discover، وابحث عن "Phi-4 Mini"، ونزّل النموذج وابدأ الدردشة. في أقل من 10 دقائق مع اتصال إنترنت معقول.',
-          '**تطبيق Jan هو البديل مفتوح المصدر.** نفس سهولة الاستخدام كـLM Studio، مفتوح المصدر بالكامل، يعمل على Linux AppImage. إذا كنت تفضّل برامج مفتوحة المصدر أو تريد الاطلاع على الشفرة المصدرية، فـJan هو الخيار المعادل.',
-          '**تطبيق GPT4All هو التجربة الأكثر تبسيطاً.** نافذة دردشة واحدة، وتوصيات نماذج منتقاة، بدون التعقيد في تصفح النماذج. الأفضل للمستخدمين الذين يريدون كتابة سؤال والحصول على إجابة بدون اتخاذ قرارات إعداد.',
+          '**تطبيق Jan هو البديل مفتوح المصدر.** نفس سهولة الاستخدام كـLM Studio، مفتوح المصدر بالكامل بموجب رخصة Apache 2.0 (أُعيد ترخيصه من AGPLv3 في 2025)، يعمل على Linux AppImage. إذا كنت تفضّل برامج مفتوحة المصدر أو تريد الاطلاع على الشفرة المصدرية، فـJan هو الخيار المعادل.',
+          '**تطبيق GPT4All هو التجربة الأكثر تبسيطاً.** نافذة دردشة واحدة، وتوصيات نماذج منتقاة، بدون التعقيد في تصفح النماذج. الأفضل للمستخدمين الذين يريدون كتابة سؤال والحصول على إجابة بدون اتخاذ قرارات إعداد — لكن تطويره متوقف عملياً منذ أوائل 2025، لذا لم تعد قائمة النماذج المنتقاة تشمل أحدث النماذج.',
           '**ابدأ بنموذج Phi-4 Mini أو Llama 3.2 3B على أي جهاز.** هذه النماذج ذات 3B معاملات تعمل على أي حاسوب محمول صُنع في السنوات السبع الماضية — بدون GPU، بدون 32 جيجابايت RAM، بدون أجهزة خاصة. هي أبطأ من الذكاء الاصطناعي السحابي لكنها تنتج نتائج قابلة للاستخدام لمعظم المهام اليومية.',
           '**لا حاجة لحساب سحابي.** بعد التنزيل الأولي (التطبيق وملف النموذج)، يعمل كل شيء محلياً بدون اتصال بالإنترنت. بلا مفتاح API، بلا اشتراك، بلا بيانات مُرسَلة إلى أي خادم.',
           '**على Apple Silicon، تعمل تقريباً جميع النماذج بشكل جيد.** MacBook Air M3 (8 جيجابايت) يشغّل Llama 3.2 3B وPhi-4 Mini بسلاسة. M3 Pro أو M4 (16 جيجابايت+) يشغّل Qwen3 8B بشكل مريح. M5 Max (64 جيجابايت) يشغّل نماذج 70B.',
-          '**يعرض تطبيق LM Studio أيضاً واجهة برمجية محلية.** إذا أردت لاحقاً ربط Obsidian أو VS Code أو أداة أخرى بنموذجك المحلي، فانقر على تبويب Local Server في LM Studio واضغط Start. تتصل الأدوات الأخرى بـ`http://localhost:1234` باستخدام الواجهة البرمجية المتوافقة مع OpenAI — دون أي إعداد إضافي.',
+          '**يعرض تطبيق LM Studio أيضاً واجهة برمجية محلية.** إذا أردت لاحقاً ربط Obsidian أو VS Code أو أداة أخرى بنموذجك المحلي، فانقر على تبويب Local Server في LM Studio واضغط Start. تتصل الأدوات الأخرى بـ`http://localhost:1234` باستخدام الواجهة البرمجية المتوافقة مع OpenAI وAnthropic — دون أي إعداد إضافي. ومنذ الإصدار 0.4، يمكن لـLM Studio أيضاً استخدام أدوات MCP المحلية.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**LM Studio:** lmstudio.ai — Windows (x64، ARM)، macOS (Apple Silicon، Intel)، Linux (AppImage، .deb).',
-          '**Jan:** jan.ai — Windows (x64)، macOS (Apple Silicon، Intel)، Linux (AppImage).',
-          '**GPT4All:** gpt4all.io — Windows (x64)، macOS (Apple Silicon، Intel)، Linux (AppImage).',
+          '**LM Studio:** lmstudio.ai — Windows (x64، ARM)، macOS (Apple Silicon، macOS 14 فأحدث؛ بلا دعم لأجهزة Mac بمعالج Intel)، Linux (AppImage، .deb). الإصدار الحالي: سلسلة 0.4.x.',
+          '**Jan:** jan.ai — Windows (x64)، macOS (Apple Silicon، Intel)، Linux (AppImage). الإصدار الحالي: سلسلة 0.8.x، رخصة Apache 2.0.',
+          '**GPT4All:** gpt4all.io — Windows (x64)، macOS (Apple Silicon، Intel)، Linux (AppImage). آخر إصدار رئيسي: v3.10 في أوائل 2025 — والتطوير متوقف عملياً.',
           '**الحد الأدنى للأجهزة:** أي حاسوب محمول بـ8 جيجابايت RAM للنماذج من 3B إلى 7B؛ 16 جيجابايت+ للنماذج من 8B إلى 14B؛ 24 جيجابايت+ للـ30B+.',
           '**لا GPU مطلوبة** للنماذج من 3B إلى 7B على Apple Silicon أو وضع الاستنتاج بالمعالج فقط.',
-          '**الثلاثة مجانية** ومفتوحة المصدر (LM Studio مجانية لكن بكود متاح، غير مفتوح المصدر بالكامل).',
-          '**توصية النموذج الأول:** Phi-4 Mini (3B، حوالي 2.7 جيجابايت تنزيل) للأجهزة ذات الإمكانيات الأقل من 8 جيجابايت؛ Qwen3 8B للأنظمة من 8 إلى 16 جيجابايت.',
+          '**الثلاثة مجانية**؛ Jan (Apache 2.0) وGPT4All (MIT) مفتوحا المصدر بالكامل، وLM Studio مجاني لكن بكود متاح فقط.',
+          '**توصية النموذج الأول:** Phi-4 Mini (3.8B، حوالي 2.7 جيجابايت تنزيل) أو Gemma 4 E2B للأجهزة ذات الإمكانيات الأقل من 8 جيجابايت؛ Qwen3 8B للأنظمة من 8 إلى 16 جيجابايت.',
         ],
       },
       comparison: {
@@ -2811,10 +2953,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الميزة', 'LM Studio', 'Jan', 'GPT4All'],
         rows: [
           { 'الميزة': 'وقت الإعداد (التشغيل الأول)', 'LM Studio': '~8 دقائق', 'Jan': '~10 دقائق', 'GPT4All': '~5 دقائق' },
-          { 'الميزة': 'مكتبة النماذج', 'LM Studio': 'بحث GGUF كامل في Hugging Face (أكثر من 50,000 نموذج)', 'Jan': 'نماذج منتقاة + بحث في Hugging Face', 'GPT4All': 'قائمة منتقاة (~20 نموذجاً)' },
-          { 'الميزة': 'خادم API محلي', 'LM Studio': 'نعم (متوافق مع OpenAI، تبويب Local Server)', 'Jan': 'نعم (متوافق مع OpenAI)', 'GPT4All': 'نعم (محدود، توثيق أقل)' },
+          { 'الميزة': 'مكتبة النماذج', 'LM Studio': 'بحث GGUF وMLX كامل في Hugging Face (أكثر من 50,000 نموذج)', 'Jan': 'نماذج منتقاة + بحث في Hugging Face', 'GPT4All': 'قائمة منتقاة (~20 نموذجاً، قديمة)' },
+          { 'الميزة': 'خادم API محلي', 'LM Studio': 'نعم (متوافق مع OpenAI وAnthropic)', 'Jan': 'نعم (متوافق مع OpenAI)', 'GPT4All': 'نعم (محدود، توثيق أقل)' },
           { 'الميزة': 'دردشة متعددة / سجل المحادثات', 'LM Studio': 'نعم', 'Jan': 'نعم', 'GPT4All': 'نافذة دردشة واحدة' },
-          { 'الميزة': 'ترخيص الشفرة المصدرية', 'LM Studio': 'مجاني، كود متاح (غير OSI)', 'Jan': 'AGPLv3 (مفتوح المصدر بالكامل)', 'GPT4All': 'MIT (مفتوح المصدر بالكامل)' },
+          { 'الميزة': 'ترخيص الشفرة المصدرية', 'LM Studio': 'مجاني، كود متاح (غير OSI)', 'Jan': 'Apache 2.0 (مفتوح المصدر بالكامل)', 'GPT4All': 'MIT (مفتوح المصدر بالكامل)' },
+          { 'الميزة': 'تطوير نشط', 'LM Studio': 'متكرر (0.4.x، 2026)', 'Jan': 'متكرر (0.8.x، 2026)', 'GPT4All': 'متوقف منذ أوائل 2025' },
           { 'الميزة': 'توافق Linux', 'LM Studio': 'AppImage، .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { 'الميزة': 'الأفضل لـ', 'LM Studio': 'المستخدمون الذين يريدون أفضل واجهة + وصول API للمطورين', 'Jan': 'المستخدمون الذين يفضّلون البرامج مفتوحة المصدر', 'GPT4All': 'المبتدئون المطلقون الذين يريدون الواجهة الأبسط' },
         ],
@@ -2825,7 +2968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-ar.webp',
-        imageCaption: 'مقارنة ميزات LM Studio مقابل Jan مقابل GPT4All: LM Studio يوفر أكثر من 50,000 نموذج، API محلية، دردشة متعددة وأفضل واجهة؛ Jan هو البديل مفتوح المصدر (AGPLv3)؛ GPT4All هو الخيار الأبسط ذو النافذة الواحدة للمبتدئين المطلقين.',
+        imageCaption: 'مقارنة ميزات LM Studio مقابل Jan مقابل GPT4All: LM Studio يوفر أكثر من 50,000 نموذج، API محلية، دردشة متعددة وأفضل واجهة؛ Jan هو البديل مفتوح المصدر (Apache 2.0)؛ GPT4All هو الخيار الأبسط ذو النافذة الواحدة للمبتدئين المطلقين، لكن تطويره متوقف.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -2833,7 +2976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**يُثبَّت تطبيق LM Studio في 3 دقائق ويجعلك تتحدث في أقل من 10.** العملية متطابقة على Windows وmacOS — نزّل، ثبّت، تصفّح النماذج، نزّل نموذجاً، تحدّث.',
         numberedItems: [
-          'توجّه إلى lmstudio.ai ونزّل المثبّت لمنصتك (Windows .exe، macOS .dmg، Linux .AppImage أو .deb).',
+          'توجّه إلى lmstudio.ai ونزّل المثبّت لمنصتك (Windows .exe، macOS .dmg لأجهزة Apple Silicon، Linux .AppImage أو .deb).',
           'شغّل المثبّت. اقبل أي تحذيرات أمنية (إنه تطبيق جديد، غير موقّع من Apple/Microsoft افتراضياً في بعض الإصدارات).',
           'افتح تطبيق LM Studio. يعرض الشريط الجانبي الأيسر: Chat وSearch (Discover) وModels وLocal Server.',
           'انقر على "Discover" (أيقونة التلسكوب). في شريط البحث، اكتب "Phi-4 Mini" (للأنظمة ذات 8 جيجابايت أو أقل) أو "Qwen3 8B" (للأنظمة ذات 16 جيجابايت+).',
@@ -2854,7 +2997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: دليل الإعداد',
         content:
-          '**تطبيق Jan هو البديل مفتوح المصدر لـLM Studio — نفس سهولة الاستخدام، تجربة تنزيل نماذج مطابقة، ترخيص AGPLv3.** استخدم Jan إذا كان البرنامج مفتوح المصدر مهماً لك أو إذا أردت فحص شفرة التطبيق أو تعديلها.',
+          '**تطبيق Jan هو البديل مفتوح المصدر لـLM Studio — نفس سهولة الاستخدام، تجربة تنزيل نماذج مطابقة، ترخيص Apache 2.0 (أُعيد ترخيصه من AGPLv3 في 2025).** استخدم Jan إذا كان البرنامج مفتوح المصدر مهماً لك، أو إذا كنت تستخدم جهاز Mac بمعالج Intel، أو إذا أردت فحص شفرة التطبيق أو تعديلها.',
         numberedItems: [
           'توجّه إلى jan.ai ونزّل المثبّت لمنصتك.',
           'شغّل المثبّت وافتح تطبيق Jan.',
@@ -2874,7 +3017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gpt4all',
         title: 'GPT4All: دليل الإعداد',
         content:
-          '**يوفر تطبيق GPT4All التجربة الأكثر تبسيطاً — نافذة دردشة واحدة وقائمة منتقاة من النماذج الموصى بها.** إذا كان تطبيقا LM Studio وJan يحتويان على خيارات كثيرة جداً وتريد فقط كتابة سؤال والحصول على إجابة، فابدأ من هنا.',
+          '**يوفر تطبيق GPT4All التجربة الأكثر تبسيطاً — نافذة دردشة واحدة وقائمة منتقاة من النماذج الموصى بها.** إذا كان تطبيقا LM Studio وJan يحتويان على خيارات كثيرة جداً وتريد فقط كتابة سؤال والحصول على إجابة، فابدأ من هنا. تنبيه لعام 2026: تطوير GPT4All متوقف عملياً منذ أوائل 2025 (آخر إصدار رئيسي v3.10)، فالتطبيق لا يزال يعمل جيداً دون اتصال، لكن قائمة نماذجه المنتقاة لم تعد تشمل أحدث النماذج. اختر LM Studio أو Jan إذا أردت إصدارات النماذج الحالية.',
         numberedItems: [
           'توجّه إلى gpt4all.io ونزّل المثبّت لمنصتك.',
           'شغّل المثبّت وافتح تطبيق GPT4All.',
@@ -2889,7 +3032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-es.svg',
-        imageCaption: 'أيّ تطبيق ذكاء اصطناعي محلي تثبّت: LM Studio للحصول على أفضل واجهة ووصول API (أكثر من 50,000 نموذج)؛ Jan كبديل مفتوح المصدر AGPLv3؛ GPT4All لأبسط تجربة ذات نافذة واحدة للمبتدئين مع حوالي 20 نموذجاً منتقى. الثلاثة مجانية وتعمل بدون حساب سحابي.',
+        imageCaption: 'أيّ تطبيق ذكاء اصطناعي محلي تثبّت: LM Studio للحصول على أفضل واجهة ووصول API (أكثر من 50,000 نموذج)؛ Jan كبديل مفتوح المصدر Apache 2.0؛ GPT4All لأبسط تجربة ذات نافذة واحدة للمبتدئين مع حوالي 20 نموذجاً منتقى. الثلاثة مجانية وتعمل بدون حساب سحابي.',
       },
       firstModel: {
         id: 'first-model',
@@ -2898,10 +3041,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**النموذج الأول الصحيح يعتمد على حجم RAM في حاسوبك.** المزيد من RAM = نموذج أكبر = إجابات أفضل، لكن أي حاسوب حديث يستطيع تشغيل شيء مفيد.',
         columns: ['RAM المتاحة', 'النموذج الأول الموصى به', 'حجم التنزيل', 'السرعة المتوقعة'],
         rows: [
-          { 'RAM المتاحة': '8 جيجابايت أو أقل', 'النموذج الأول الموصى به': 'Phi-4 Mini (3.8B Q4)', 'حجم التنزيل': '~2.7 جيجابايت', 'السرعة المتوقعة': '15–30 رمز/ثانية على Apple Silicon؛ 5–10 رمز/ثانية CPU فقط Intel/AMD' },
+          { 'RAM المتاحة': '8 جيجابايت أو أقل', 'النموذج الأول الموصى به': 'Phi-4 Mini (3.8B Q4) أو Gemma 4 E2B', 'حجم التنزيل': '~2–3 جيجابايت', 'السرعة المتوقعة': '15–30 رمز/ثانية على Apple Silicon؛ 5–10 رمز/ثانية CPU فقط Intel/AMD' },
           { 'RAM المتاحة': '8–16 جيجابايت', 'النموذج الأول الموصى به': 'Llama 3.2 3B (Q4) أو Qwen3 8B (Q4)', 'حجم التنزيل': '2.0–4.9 جيجابايت', 'السرعة المتوقعة': '20–40 رمز/ثانية على Apple Silicon؛ 8–15 رمز/ثانية CPU فقط' },
-          { 'RAM المتاحة': '16–32 جيجابايت', 'النموذج الأول الموصى به': 'Qwen3 14B (Q4)', 'حجم التنزيل': '~8.9 جيجابايت', 'السرعة المتوقعة': '15–25 رمز/ثانية على Apple Silicon؛ GPU مطلوبة للوقت الفعلي على x86' },
-          { 'RAM المتاحة': '32 جيجابايت+ (Apple Silicon) أو 24 جيجابايت VRAM (NVIDIA)', 'النموذج الأول الموصى به': 'Llama 3.3 70B (Q4)', 'حجم التنزيل': '~40 جيجابايت', 'السرعة المتوقعة': '10–20 رمز/ثانية على Apple M5 Max؛ 15–25 رمز/ثانية RTX 4090' },
+          { 'RAM المتاحة': '16–32 جيجابايت', 'النموذج الأول الموصى به': 'gpt-oss 20B (~13 جيجابايت) أو Qwen3 14B (Q4)', 'حجم التنزيل': '~9–13 جيجابايت', 'السرعة المتوقعة': '15–25 رمز/ثانية على Apple Silicon (Qwen3 14B)؛ GPU مطلوبة للوقت الفعلي على x86' },
+          { 'RAM المتاحة': '32 جيجابايت+ (Apple Silicon) أو 24 جيجابايت VRAM (NVIDIA)', 'النموذج الأول الموصى به': 'Qwen 3.6 27B (Q4) — أفضل نموذج للأجهزة الاستهلاكية', 'حجم التنزيل': '~16 جيجابايت', 'السرعة المتوقعة': 'وقت فعلي على أجهزة Mac من فئة M4 Pro/M5 وGPU من فئة RTX 4090' },
         ],
         callouts: [
           {
@@ -2910,13 +3053,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-es.svg',
-        imageCaption: 'دليل النموذج الأول حسب RAM المتاحة: أقل من 8 جيجابايت ← Phi-4 Mini 3.8B (~2.7 جيجابايت، 15–30 رمز/ثانية على Apple Silicon)؛ 8–16 جيجابايت ← Llama 3.2 3B أو Qwen3 8B؛ 16–32 جيجابايت ← Qwen3 14B (~8.9 جيجابايت)؛ 32 جيجابايت+ ← Llama 3.3 70B (~40 جيجابايت).',
+        imageCaption: 'دليل النموذج الأول حسب RAM المتاحة: أقل من 8 جيجابايت ← Phi-4 Mini 3.8B أو Gemma 4 E2B (~2–3 جيجابايت، 15–30 رمز/ثانية على Apple Silicon)؛ 8–16 جيجابايت ← Llama 3.2 3B أو Qwen3 8B؛ 16–32 جيجابايت ← gpt-oss 20B أو Qwen3 14B (~9–13 جيجابايت)؛ 32 جيجابايت+ ← Qwen 3.6 27B (~16 جيجابايت).',
       },
       hardware: {
         id: 'hardware',
         title: 'متطلبات الأجهزة',
         content:
-          '**لا تحتاج إلى حاسوب ألعاب ولا GPU مخصصة لتشغيل الذكاء الاصطناعي المحلي في 2026.** أجهزة Mac مع Apple Silicon هي أفضل أجهزة استهلاكية للنماذج اللغوية المحلية؛ أي MacBook Air من M1 فصاعداً يشغّل النماذج الصغيرة بشكل جيد. على Windows وLinux، يعمل وضع الاستنتاج بالمعالج فقط للنماذج من 3B إلى 7B على أي حاسوب محمول بـ8 جيجابايت RAM.',
+          '**لا تحتاج إلى حاسوب ألعاب ولا GPU مخصصة لتشغيل الذكاء الاصطناعي المحلي في 2026.** أجهزة Mac مع Apple Silicon هي أفضل أجهزة استهلاكية للنماذج اللغوية المحلية؛ أي MacBook Air من M1 فصاعداً يشغّل النماذج الصغيرة بشكل جيد. على Windows وLinux، يعمل وضع الاستنتاج بالمعالج فقط للنماذج من 3B إلى 7B على أي حاسوب محمول بـ8 جيجابايت RAM. ملاحظة حول المنصات: يتطلب LM Studio معالج Apple Silicon على macOS — على جهاز Mac بمعالج Intel، استخدم Jan أو GPT4All، اللذين ما زالا يدعمان Intel عبر الاستنتاج بالمعالج.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2928,8 +3071,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '**Apple Silicon (M1–M5):** أفضل أجهزة استهلاكية للنماذج اللغوية المحلية. الذاكرة الموحدة تعني أن GPU وCPU يتشاركان RAM — MacBook Air M3 بـ8 جيجابايت يشغّل Phi-4 Mini بأكثر من 20 رمزاً في الثانية؛ M5 Max بـ64 جيجابايت يشغّل Llama 3.3 70B.',
-          '**GPU NVIDIA (Windows/Linux):** تسريع CUDA في LM Studio وJan يسرّع التوليد بشكل كبير. RTX 3060 12 جيجابايت يشغّل Mistral Small وQwen3 8B في الوقت الفعلي. RTX 4090 24 جيجابايت يشغّل نماذج 30B.',
+          '**Apple Silicon (M1–M5):** أفضل أجهزة استهلاكية للنماذج اللغوية المحلية. الذاكرة الموحدة تعني أن GPU وCPU يتشاركان RAM — MacBook Air M3 بـ8 جيجابايت يشغّل Phi-4 Mini بأكثر من 20 رمزاً في الثانية؛ M5 Max بـ64 جيجابايت يشغّل Llama 3.3 70B. يشغّل LM Studio هنا كلاً من نماذج GGUF (llama.cpp) وMLX.',
+          '**GPU NVIDIA (Windows/Linux):** تسريع CUDA في LM Studio وJan يسرّع التوليد بشكل كبير. RTX 3060 12 جيجابايت يشغّل Qwen3 8B في الوقت الفعلي. RTX 4090 24 جيجابايت يشغّل Qwen 3.6 27B ونماذج أخرى من فئة 30B.',
           '**GPU AMD (Windows/Linux):** دعم ROCm في LM Studio وJan يتحسن لكنه أقل نضجاً من CUDA. إذا كان لديك GPU من AMD، راجع ملاحظات إصدار LM Studio لبطاقتك المحددة قبل الاعتماد على تسريع GPU.',
           '**CPU فقط Intel/AMD:** يعمل للنماذج من 3B إلى 7B بسرعة 5 إلى 15 رمزاً في الثانية — قابل للاستخدام لكن بطيء. التجربة أفضل للمهام التي تُرسل فيها prompt وتذهب لعمل شيء آخر (تلخيص، كتابة رسائل) من الاستخدام التحادثي الفوري.',
           '**RAM وVRAM:** يجب أن يتسع النموذج بالكامل في RAM (أو VRAM). نموذج 4B يحتاج حوالي 3 جيجابايت؛ نموذج 8B يحتاج حوالي 5 جيجابايت؛ نموذج 14B يحتاج حوالي 9 جيجابايت؛ نموذج 70B يحتاج حوالي 42 جيجابايت. إذا كان النموذج كبيراً جداً، سيُنبّهك تطبيق LM Studio قبل تنزيله.',
@@ -2958,9 +3101,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          'ملاحظات إصدار LM Studio وتوافق الأجهزة — [lmstudio.ai](https://lmstudio.ai)',
-          'توثيق Jan ومتطلبات الأجهزة — [jan.ai/docs](https://jan.ai/docs)',
-          'مكتبة نماذج GPT4All وتوثيق LocalDocs — [gpt4all.io](https://gpt4all.io)',
+          'سجل تغييرات LM Studio 0.4 وتوافق الأجهزة — [lmstudio.ai/changelog](https://lmstudio.ai/changelog)',
+          'توثيق Jan ومستودع الشفرة المفتوحة (Apache 2.0) — [jan.ai/docs](https://jan.ai/docs)',
+          'مكتبة نماذج GPT4All وتوثيق LocalDocs وسجل الإصدارات — [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)',
           'التقرير التقني لـPhi-4 Mini — [Microsoft Research](https://microsoft.com/research)',
           'مواصفة تنسيق كمية GGUF — [llama.cpp](https://github.com/ggerganov/llama.cpp)',
         ],
@@ -2987,7 +3130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدام تطبيق ذكاء اصطناعي محلي على MacBook قديم؟',
-            a: 'نعم، إذا استوفى متطلب RAM (8 جيجابايت كحد أدنى للنماذج ذات 3B معاملات). طرازات MacBook Air وMacBook Pro من 2018 فصاعداً بـ8 جيجابايت RAM تستطيع تشغيل Phi-4 Mini بسرعة بطيئة لكن قابلة للاستخدام (~5 إلى 10 رموز في الثانية على Mac Intel). أجهزة Mac مع Apple Silicon (من M1 فصاعداً) أسرع بشكل ملحوظ بسبب بنية الذاكرة الموحدة والمحرك العصبي. MacBook Air M1 من 2020 يشغّل Phi-4 Mini بأكثر من 20 رمزاً في الثانية.',
+            a: 'نعم، إذا استوفى متطلب RAM (8 جيجابايت كحد أدنى للنماذج ذات 3B معاملات). على جهاز MacBook بمعالج Intel من 2018 فصاعداً، استخدم Jan أو GPT4All — إذ يتطلب LM Studio معالج Apple Silicon على macOS. يشغّل جهاز Mac بمعالج Intel تطبيق Phi-4 Mini بسرعة بطيئة لكن قابلة للاستخدام (~5 إلى 10 رموز في الثانية، عبر الاستنتاج بالمعالج). أجهزة Mac مع Apple Silicon (من M1 فصاعداً) أسرع بشكل ملحوظ بسبب بنية الذاكرة الموحدة والمحرك العصبي. MacBook Air M1 من 2020 يشغّل Phi-4 Mini بأكثر من 20 رمزاً في الثانية.',
           },
           {
             q: 'هل يمكنني تشغيل عدة نماذج في نفس الوقت؟',
@@ -3003,11 +3146,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما النماذج التي يدعمها LM Studio على أجهزة Mac ذات معالج Apple Silicon؟',
-            a: 'يدعم LM Studio مكتبة نماذج GGUF كاملةً على معالجات Apple Silicon (من M1 إلى M5)، مستخدماً Metal لتسريع GPU عبر بنية الذاكرة الموحدة. نقاط البداية الموصى بها: Phi-4 Mini (بحجم 3.8B) أو Llama 3.2 3B على أجهزة Mac بذاكرة 8 جيجابايت، وQwen3 8B على الأجهزة بذاكرة 16 جيجابايت فأكثر، وQwen3 14B على الأجهزة بذاكرة 16–32 جيجابايت، وLlama 3.3 70B على الأجهزة بذاكرة 32 جيجابايت فأكثر (M3 Max أو M4 Max أو M5 Max). يكتشف LM Studio الذاكرة المتاحة تلقائياً ويوصي بمستوى تكميم مناسب — عادةً Q4_K_M.',
+            a: 'يدعم LM Studio مكتبة نماذج GGUF كاملةً بالإضافة إلى تنسيق MLX من Apple على معالجات Apple Silicon (من M1 إلى M5)، مستخدماً Metal لتسريع GPU عبر بنية الذاكرة الموحدة. نقاط البداية الموصى بها: Phi-4 Mini (بحجم 3.8B) أو Gemma 4 E2B على أجهزة Mac بذاكرة 8 جيجابايت، وQwen3 8B على الأجهزة بذاكرة 16 جيجابايت فأكثر، وgpt-oss 20B أو Qwen3 14B على الأجهزة بذاكرة 16–32 جيجابايت، وQwen 3.6 27B على الأجهزة بذاكرة 32 جيجابايت فأكثر — بينما يبقى Llama 3.3 70B خياراً على الأجهزة من فئة Max بذاكرة 48–64 جيجابايت. يكتشف LM Studio الذاكرة المتاحة تلقائياً ويوصي بمستوى تكميم مناسب — عادةً Q4_K_M.',
           },
           {
             q: 'ما متطلبات النظام لتشغيل LM Studio على Windows وMac Intel وApple Silicon؟',
-            a: 'الحد الأدنى على جميع المنصات هو 8 جيجابايت RAM للنماذج من 3B إلى 7B. تعمل أجهزة Apple Silicon (M1–M5) بأسرع أداء بفضل الذاكرة الموحدة وتسريع Metal، دون حاجة إلى GPU منفصلة. يعمل Mac Intel فقط عبر الاستدلال بواسطة CPU — إذ لا يوجد تسريع GPU من نوع Metal للاستدلال بنماذج اللغة على أجهزة Mac Intel — لذا تتوقع نحو 5 إلى 10 رموز في الثانية لنموذج 3B. يحتاج Windows إلى 8 جيجابايت RAM كحد أدنى، مع إمكانية استخدام GPU من NVIDIA (بذاكرة VRAM 8 جيجابايت فأكثر) اختيارياً لتسريع CUDA على النماذج الأكبر. يتطلب Linux نفس الحد الأدنى وهو 8 جيجابايت RAM عبر AppImage أو .deb، مع دعم CUDA إذا كانت هناك GPU من NVIDIA.',
+            a: 'على macOS، يتطلب LM Studio جهاز Mac بمعالج Apple Silicon (M1 أو أحدث) مع macOS 14 أو أحدث — ولا يدعم أجهزة Mac بمعالج Intel؛ ينبغي على مستخدمي هذه الأجهزة تثبيت Jan أو GPT4All بدلاً من ذلك، واللذين يعملان عبر الاستنتاج بالمعالج بسرعة تقارب 5 إلى 10 رموز في الثانية لنموذج 3B. على Windows، الحد الأدنى هو 8 جيجابايت RAM للنماذج من 3B إلى 7B، مع إمكانية استخدام GPU من NVIDIA (بذاكرة VRAM 8 جيجابايت فأكثر) اختيارياً لتسريع CUDA على النماذج الأكبر. يتطلب Linux نفس الحد الأدنى وهو 8 جيجابايت RAM عبر AppImage أو .deb، مع دعم CUDA إذا كانت هناك GPU من NVIDIA. تعمل أجهزة Apple Silicon بأسرع أداء إجمالاً بفضل الذاكرة الموحدة وتسريع Metal، دون حاجة إلى GPU منفصلة.',
           },
           {
             q: 'هل يعمل LM Studio على Linux؟',
@@ -3015,7 +3158,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما أفضل بدائل LM Studio في عام 2026؟',
-            a: 'يُعد Jan أقرب بديل — بنفس سهولة الإعداد، ومفتوح المصدر بالكامل بموجب رخصة AGPLv3، ويدعم AppImage على Linux. أما GPT4All فهو البديل الأبسط للمبتدئين تماماً، بقائمة نماذج منتقاة وواجهة دردشة بنافذة واحدة. أما بالنسبة للمطورين الذين يفضلون أداة سطر الأوامر، فإن Ollama هو البديل الرائد، رغم أنه يتطلب استخدام الطرفية بدلاً من واجهة رسومية. تشغّل التطبيقات الأربعة جميعها نفس ملفات نماذج GGUF وهي مجانية.',
+            a: 'يُعد Jan أقرب بديل — بنفس سهولة الإعداد، ومفتوح المصدر بالكامل بموجب رخصة Apache 2.0، ويدعم AppImage على Linux. أما GPT4All فهو البديل الأبسط للمبتدئين تماماً، بقائمة نماذج منتقاة وواجهة دردشة بنافذة واحدة، وإن كان تطويره متوقفاً عملياً منذ أوائل 2025. أما بالنسبة للمطورين الذين يفضلون أداة سطر الأوامر، فإن Ollama هو البديل الرائد، رغم أنه يتطلب استخدام الطرفية بدلاً من واجهة رسومية. تشغّل التطبيقات الأربعة جميعها نفس ملفات نماذج GGUF وهي مجانية.',
+          },
+          {
+            q: 'هل يمكنني ربط نموذجي المحلي بتطبيقات أخرى؟',
+            a: 'نعم. يعرض Local Server في LM Studio واجهة برمجية متوافقة مع OpenAI وAnthropic على العنوان http://localhost:1234، ويعرض Jan واجهة متوافقة مع OpenAI على العنوان http://localhost:1337. وجّه Obsidian أو VS Code أو أي أداة أخرى تقبل نقطة نهاية API مخصصة إلى هذا العنوان. تصبح العديد من مهام سير العمل — RAG، واختبار الطلبات النصية، ودمج روبوتات الدردشة — ممكنة بمجرد توفّر واجهتك البرمجية المحلية. ومنذ الإصدار 0.4، يمكن لـLM Studio أيضاً استخدام أدوات MCP المحلية.',
+          },
+          {
+            q: 'أي مستوى تكميم يجب أن أستخدمه — Q3 أم Q4 أم Q5 أم Q6؟',
+            a: 'ينبغي لمعظم المستخدمين استخدام Q4_K_M، وهو ما يوصي به LM Studio افتراضياً. مستوى Q3 مضغوط بشدة ويفقد جودة ملحوظة. Q4 هو التوازن الموصى به بين الجودة وحجم الملف. Q5 وQ6 أكبر حجماً وأفضل قليلاً إذا كان لديك RAM إضافية. على الأجهزة التي تقل عن 8 جيجابايت، ابدأ بمستوى Q4_K_M لنموذج من فئة 3B بدلاً من مستوى تكميم أقل لنموذج أكبر.',
+          },
+          {
+            q: 'هل ما زال GPT4All يخضع لتطوير نشط في 2026؟',
+            a: 'ليس بشكل نشط. صدر آخر إصدار رئيسي له (v3.10) في أوائل 2025، ولم يشهد مستودعه على GitHub تحديثات ملحوظة منذ ذلك الحين. لا يزال التطبيق يُثبَّت ويعمل بشكل كامل دون اتصال بالإنترنت، ويظل الخيار الأبسط ذا النافذة الواحدة — لكن قائمة نماذجه المنتقاة قديمة، فلا تتوفر فيها نماذج أحدث مثل Qwen 3.6 أو gpt-oss. إذا أردت إصدارات نماذج حديثة مع إعداد بلا طرفية، اختر LM Studio أو Jan.',
           },
         ],
       },
@@ -3037,37 +3192,56 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'LM Studio على Apple Silicon: أسهل ذكاء اصطناعي محلي 2026',
-      description: 'LM Studio على Apple Silicon وMac Intel وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد. بلا طرفية. مقارنةً بـJan وGPT4All، 2026.',
+      description: 'LM Studio على Apple Silicon وWindows وLinux: النماذج المدعومة ومتطلبات النظام ووقت الإعداد. بلا طرفية. مقارنةً بـJan وGPT4All، 2026.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ar',
       image: buildOgImageObject(OG_SLUG, 'ar'),
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      educationalLevel: 'Beginner',
+      about: [
+        { '@type': 'Thing', name: 'LM Studio' },
+        { '@type': 'Thing', name: 'Jan' },
+        { '@type': 'Thing', name: 'GPT4All' },
+        { '@type': 'Thing', name: 'Phi-4 Mini' },
+        { '@type': 'Thing', name: 'Qwen 3.6' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'LM Studio' },
+        { '@type': 'SoftwareApplication', name: 'Jan' },
+        { '@type': 'SoftwareApplication', name: 'GPT4All' },
+      ],
       'proficiencyLevel': 'Beginner',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
   },
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'Easiest Desktop Apps',
     title: 'Windows, Mac, Linux에서 가장 쉬운 로컬 AI 앱 (2026)',
     seoTitle: 'LM Studio × Apple Silicon: 가장 쉬운 로컬 AI 2026',
     intro:
-      'LM Studio는 2026년 Windows, Mac, Linux에서 가장 쉬운 로컬 AI 앱입니다 — 다운로드하고, 설치하고, 모델을 불러와 터미널 없이 10분 이내에 채팅을 시작할 수 있습니다. 이 가이드에서는 코드 없이 사용할 수 있는 세 가지 옵션인 LM Studio, Jan, GPT4All을 다루며, 설정 시간과 기능을 비교하고 하드웨어와 목표에 따라 어떤 것을 선택할지 설명합니다.',
+      'LM Studio는 2026년 Windows, Mac, Linux에서 가장 쉬운 로컬 AI 앱입니다 — 다운로드하고, 설치하고, 모델을 불러와 터미널 없이 10분 이내에 채팅을 시작할 수 있습니다. Apple Silicon(M1~M5)에서 가장 빠르게 작동합니다. Intel Mac에서는 LM Studio가 이제 Apple Silicon을 필요로 하므로 Jan이나 GPT4All이 같은 역할을 합니다. 이 가이드에서는 코드 없이 사용할 수 있는 세 가지 옵션인 LM Studio, Jan, GPT4All을 다루며, 설정 시간과 기능을 비교하고 하드웨어와 목표에 따라 어떤 것을 선택할지 설명합니다.',
     metaDescription:
       'LM Studio의 Apple Silicon, Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간. 터미널 불필요. Jan, GPT4All과 비교, 2026년.',
     heroImage: '/images/easiest-local-ai-app-comparison-table-hero-ko.webp',
     twitterDescription:
       'LM Studio의 Apple Silicon(M1–M5), Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간 — Jan, GPT4All과 비교한 2026년판.',
     current_models_mentioned: [
+      'Phi-4 Mini',
+      'Gemma 4 E2B',
       'Llama 3.2 3B',
       'Qwen3 8B',
-      'Phi-4 Mini',
-      'Mistral Small',
+      'gpt-oss 20B',
+      'Qwen 3.6 27B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -3102,9 +3276,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '저사양 하드웨어에서는 Phi-4 Mini (3B, ~3 GB RAM) 또는 Llama 3.2 3B로 시작하십시오 — 2018년 이후 제조된 모든 노트북에서 작동합니다.',
           'Apple Silicon 또는 최신 Intel/AMD CPU의 3B–8B 모델에는 GPU가 필요하지 않습니다.',
           '세 가지 모두 무료, 오픈소스이며, 다운로드 후에는 클라우드 계정이나 인터넷 연결 없이 실행됩니다.',
-          'LM Studio는 더 나아가고 싶은 개발자를 위해 OpenAI 호환 로컬 API도 제공합니다.',
+          'LM Studio는 더 나아가고 싶은 개발자를 위해 OpenAI 및 Anthropic 호환 로컬 API도 제공합니다.',
         ],
-        updatedDate: '2026-07-14',
+        updatedDate: '2026-09-01',
       },
     },
     toc: [
@@ -3129,25 +3303,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**LM Studio는 로컬 채팅을 가장 빠르게 시작하는 방법입니다.** lmstudio.ai에서 설치 프로그램을 다운로드하고, Discover 탭을 열고, "Phi-4 Mini"를 검색하고, 모델을 다운로드한 후 채팅을 시작하십시오. 괜찮은 인터넷 연결이 있다면 10분 이내에 완료됩니다.',
-          '**Jan은 오픈소스 대안입니다.** LM Studio와 동일한 사용 편의성을 제공하고, 완전한 오픈소스이며, Linux AppImage에서도 작동합니다. 오픈소스 소프트웨어를 선호하거나 소스 코드를 확인하고 싶다면 Jan이 동등한 선택지입니다.',
-          '**GPT4All은 가장 단순화된 경험을 제공합니다.** 단일 채팅 창, 선별된 모델 추천, 모델 탐색 과부하 없음. 설정을 결정하지 않고 질문을 입력하고 답변을 받고 싶은 사용자에게 가장 적합합니다.',
+          '**Jan은 오픈소스 대안입니다.** LM Studio와 동일한 사용 편의성을 제공하고, Apache 2.0(2025년에 AGPLv3에서 재라이선싱됨) 하에 완전한 오픈소스이며, Linux AppImage에서도 작동합니다. 오픈소스 소프트웨어를 선호하거나 소스 코드를 확인하고 싶다면 Jan이 동등한 선택지입니다.',
+          '**GPT4All은 가장 단순화된 경험을 제공합니다.** 단일 채팅 창, 선별된 모델 추천, 모델 탐색 과부하 없음. 설정을 결정하지 않고 질문을 입력하고 답변을 받고 싶은 사용자에게 가장 적합합니다 — 다만 2025년 초 이후 개발이 정체되어, 선별된 모델 목록에 최신 모델이 더 이상 포함되지 않는다는 점에 유의하십시오.',
           '**어떤 하드웨어에서든 Phi-4 Mini 또는 Llama 3.2 3B로 시작하십시오.** 이 3B 모델들은 지난 7년 이내에 제조된 모든 노트북에서 작동합니다 — GPU, 32 GB RAM, 특수 하드웨어가 필요하지 않습니다. 클라우드 AI보다 느리지만 대부분의 일상 작업에서 사용 가능한 결과를 생성합니다.',
           '**클라우드 계정이 필요하지 않습니다.** 초기 다운로드(앱과 모델 파일) 후에는 인터넷 연결 없이 모든 것이 로컬에서 실행됩니다. API 키, 구독, 어떤 서버로도 데이터 전송이 없습니다.',
           '**Apple Silicon에서는 거의 모든 모델이 잘 작동합니다.** MacBook Air M3 (8 GB)는 Llama 3.2 3B와 Phi-4 Mini를 원활하게 실행합니다. M3 Pro 또는 M4 (16 GB+)는 Qwen3 8B를 편안하게 실행합니다. M5 Max (64 GB)는 70B 모델을 실행합니다.',
-          '**LM Studio는 로컬 API도 제공합니다.** 나중에 Obsidian, VS Code 또는 다른 도구를 로컬 모델에 연결하고 싶다면, LM Studio의 Local Server 탭이 localhost에 OpenAI 호환 API를 노출합니다 — 추가 설정이 필요 없습니다.',
+          '**LM Studio는 로컬 API도 제공합니다.** 나중에 Obsidian, VS Code 또는 다른 도구를 로컬 모델에 연결하고 싶다면, LM Studio의 Local Server 탭이 localhost:1234에 OpenAI 및 Anthropic 호환 API를 노출합니다 — 추가 설정이 필요 없습니다. 버전 0.4부터는 로컬 MCP 도구도 사용할 수 있습니다.',
         ],
       },
       quickFacts: {
         id: 'quick-facts',
         title: '빠른 사실',
         items: [
-          '**LM Studio:** lmstudio.ai에서 다운로드 — Windows (x64, ARM), macOS (Apple Silicon, Intel), Linux (AppImage, .deb) 지원.',
-          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage).',
-          '**GPT4All:** gpt4all.io에서 다운로드 — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage) 지원.',
+          '**LM Studio:** lmstudio.ai에서 다운로드 — Windows (x64, ARM), macOS (Apple Silicon, macOS 14 이상; Intel Mac 미지원), Linux (AppImage, .deb) 지원. 현재 버전 라인: 0.4.x.',
+          '**Jan:** jan.ai — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage). 현재 버전 라인: 0.8.x, Apache 2.0.',
+          '**GPT4All:** gpt4all.io에서 다운로드 — Windows (x64), macOS (Apple Silicon, Intel), Linux (AppImage) 지원. 마지막 주요 릴리스: v3.10, 2025년 초 — 개발이 정체됨.',
           '**최소 하드웨어:** 3B–7B 모델의 경우 8 GB RAM이 있는 모든 노트북; 8B–14B 모델의 경우 16 GB+; 30B+의 경우 24 GB+.',
           '**GPU 불필요** — Apple Silicon 또는 CPU 추론 모드에서 3B–7B 모델 실행 시.',
-          '**세 가지 모두 무료** 오픈소스입니다 (LM Studio는 무료이나 코드 공개, 완전 오픈소스는 아님).',
-          '**첫 번째 모델 추천:** 8 GB 미만 하드웨어에는 Phi-4 Mini (3B, ~2.7 GB 다운로드); 8–16 GB 시스템에는 Qwen3 8B.',
+          '**세 가지 모두 무료**입니다. Jan(Apache 2.0)과 GPT4All(MIT)은 완전한 오픈소스이며, LM Studio는 무료이나 코드만 공개되어 있습니다.',
+          '**첫 번째 모델 추천:** 8 GB 미만 하드웨어에는 Phi-4 Mini (3.8B, ~2.7 GB 다운로드) 또는 Gemma 4 E2B; 8–16 GB 시스템에는 Qwen3 8B.',
         ],
       },
       comparison: {
@@ -3168,10 +3342,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['기능', 'LM Studio', 'Jan', 'GPT4All'],
         rows: [
           { '기능': '설정 시간 (첫 실행)', 'LM Studio': '~8분', 'Jan': '~10분', 'GPT4All': '~5분' },
-          { '기능': '모델 라이브러리', 'LM Studio': 'Hugging Face 전체 GGUF 검색 (~50,000+ 모델)', 'Jan': '선별된 모델 + Hugging Face 검색', 'GPT4All': '선별된 목록 (~20 모델)' },
-          { '기능': '로컬 API 서버', 'LM Studio': '예 (OpenAI 호환, Local Server 탭)', 'Jan': '예 (OpenAI 호환)', 'GPT4All': '예 (제한적, 문서화 미흡)' },
+          { '기능': '모델 라이브러리', 'LM Studio': 'Hugging Face 전체 GGUF + MLX 검색 (~50,000+ 모델)', 'Jan': '선별된 모델 + Hugging Face 검색', 'GPT4All': '선별된 목록 (~20 모델, 오래됨)' },
+          { '기능': '로컬 API 서버', 'LM Studio': '예 (OpenAI 및 Anthropic 호환)', 'Jan': '예 (OpenAI 호환)', 'GPT4All': '예 (제한적, 문서화 미흡)' },
           { '기능': '다중 채팅 / 대화 기록', 'LM Studio': '예', 'Jan': '예', 'GPT4All': '단일 채팅 창' },
-          { '기능': '소스 코드 라이선스', 'LM Studio': '무료, 코드 공개 (비OSI)', 'Jan': 'AGPLv3 (완전 오픈소스)', 'GPT4All': 'MIT (완전 오픈소스)' },
+          { '기능': '소스 코드 라이선스', 'LM Studio': '무료, 코드 공개 (비OSI)', 'Jan': 'Apache 2.0 (완전 오픈소스)', 'GPT4All': 'MIT (완전 오픈소스)' },
+          { '기능': '활발한 개발', 'LM Studio': '빈번함 (0.4.x, 2026년)', 'Jan': '빈번함 (0.8.x, 2026년)', 'GPT4All': '2025년 초부터 정체' },
           { '기능': 'Linux 호환성', 'LM Studio': 'AppImage, .deb', 'Jan': 'AppImage', 'GPT4All': 'AppImage' },
           { '기능': '최적 대상', 'LM Studio': '최고의 인터페이스 + 개발자 API 액세스를 원하는 사용자', 'Jan': '오픈소스 소프트웨어를 선호하는 사용자', 'GPT4All': '가장 단순한 인터페이스를 원하는 완전 초보자' },
         ],
@@ -3182,7 +3357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-comparison-table-hero-ko.webp',
-        imageCaption: 'LM Studio vs Jan vs GPT4All 기능 비교: LM Studio는 50,000+ 모델, 로컬 API, 다중 채팅, 최고의 인터페이스를 제공합니다; Jan은 오픈소스 대안(AGPLv3)입니다; GPT4All은 완전 초보자를 위한 가장 단순한 단일 창 옵션입니다.',
+        imageCaption: 'LM Studio vs Jan vs GPT4All 기능 비교: LM Studio는 50,000+ 모델, 로컬 API, 다중 채팅, 최고의 인터페이스를 제공합니다; Jan은 오픈소스 대안(Apache 2.0)입니다; GPT4All은 완전 초보자를 위한 가장 단순한 단일 창 옵션이지만 개발이 정체되어 있습니다.',
       },
       lmStudio: {
         id: 'lm-studio',
@@ -3190,7 +3365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**LM Studio는 3분 안에 설치되고 10분 이내에 채팅을 시작할 수 있습니다.** 프로세스는 Windows와 macOS에서 동일합니다 — 다운로드, 설치, 모델 탐색, 모델 다운로드, 채팅.',
         numberedItems: [
-          'lmstudio.ai를 방문하여 플랫폼용 설치 프로그램을 다운로드하십시오 (Windows .exe, macOS .dmg, Linux .AppImage 또는 .deb).',
+          'lmstudio.ai를 방문하여 플랫폼용 설치 프로그램을 다운로드하십시오 (Windows .exe, macOS .dmg는 Apple Silicon용, Linux .AppImage 또는 .deb).',
           '설치 프로그램을 실행하십시오. 보안 경고가 나타나면 수락하십시오 (일부 버전에서 기본적으로 Apple/Microsoft 서명이 없는 새 앱입니다).',
           'LM Studio를 여십시오. 왼쪽 사이드바에는 Chat, Search (Discover), Models, Local Server가 표시됩니다.',
           '"Discover" (망원경 아이콘)를 클릭하십시오. 검색창에 "Phi-4 Mini" (8 GB 이하 시스템의 경우) 또는 "Qwen3 8B" (16 GB+ 시스템의 경우)를 입력하십시오.',
@@ -3211,7 +3386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'jan',
         title: 'Jan: 설정 가이드',
         content:
-          '**Jan은 LM Studio의 오픈소스 대안입니다 — 동일한 사용 편의성, 동일한 모델 다운로드 경험, AGPLv3 라이선스.** 오픈소스 소프트웨어가 중요하거나 앱 코드를 검사하거나 수정하고 싶다면 Jan을 사용하십시오.',
+          '**Jan은 LM Studio의 오픈소스 대안입니다 — 동일한 사용 편의성, 동일한 모델 다운로드 경험, Apache 2.0 라이선스(2025년에 AGPLv3에서 재라이선싱됨).** 오픈소스 소프트웨어가 중요하거나, Intel Mac을 사용하거나, 앱 코드를 검사하거나 수정하고 싶다면 Jan을 사용하십시오.',
         numberedItems: [
           'jan.ai를 방문하여 플랫폼용 설치 프로그램을 다운로드하십시오.',
           '설치 프로그램을 실행하고 Jan을 여십시오.',
@@ -3231,7 +3406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gpt4all',
         title: 'GPT4All: 설정 가이드',
         content:
-          '**GPT4All은 가장 단순화된 경험을 제공합니다 — 단일 채팅 창과 선별된 추천 모델 목록.** LM Studio와 Jan에 옵션이 너무 많고 질문을 입력하고 답변만 받고 싶다면 여기서 시작하십시오.',
+          '**GPT4All은 가장 단순화된 경험을 제공합니다 — 단일 채팅 창과 선별된 추천 모델 목록.** LM Studio와 Jan에 옵션이 너무 많고 질문을 입력하고 답변만 받고 싶다면 여기서 시작하십시오. 2026년 기준 한 가지 유의점: GPT4All의 개발은 2025년 초 이후 정체되어 있어(마지막 주요 릴리스 v3.10) 앱 자체는 오프라인에서 여전히 잘 작동하지만, 선별된 모델 목록에는 최신 모델이 포함되어 있지 않습니다. 최신 모델을 원한다면 LM Studio나 Jan을 선택하십시오.',
         numberedItems: [
           'gpt4all.io를 방문하여 플랫폼용 설치 프로그램을 다운로드하십시오.',
           '설치 프로그램을 실행하고 GPT4All을 여십시오.',
@@ -3246,7 +3421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-which-app-ko.svg',
-        imageCaption: '설치할 로컬 AI 앱: 최고의 인터페이스와 API 액세스를 위한 LM Studio (50,000+ 모델); AGPLv3 오픈소스 대안으로 Jan; ~20개의 선별 모델을 갖춘 초보자를 위한 가장 단순한 단일 창 경험을 위한 GPT4All. 세 가지 모두 무료이며 클라우드 계정 없이 작동합니다.',
+        imageCaption: '설치할 로컬 AI 앱: 최고의 인터페이스와 API 액세스를 위한 LM Studio (50,000+ 모델); Apache 2.0 오픈소스 대안으로 Jan; ~20개의 선별 모델을 갖춘 초보자를 위한 가장 단순한 단일 창 경험을 위한 GPT4All. 세 가지 모두 무료이며 클라우드 계정 없이 작동합니다.',
       },
       firstModel: {
         id: 'first-model',
@@ -3255,10 +3430,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**올바른 첫 번째 모델은 컴퓨터의 RAM 크기에 따라 달라집니다.** RAM이 많을수록 = 더 큰 모델 = 더 좋은 답변이지만, 어떤 최신 컴퓨터라도 유용한 것을 실행할 수 있습니다.',
         columns: ['가용 RAM', '추천 첫 번째 모델', '다운로드 크기', '예상 속도'],
         rows: [
-          { '가용 RAM': '8 GB 이하', '추천 첫 번째 모델': 'Phi-4 Mini (3.8B Q4)', '다운로드 크기': '~2.7 GB', '예상 속도': 'Apple Silicon에서 15–30 토큰/초; Intel/AMD CPU 전용 5–10 토큰/초' },
+          { '가용 RAM': '8 GB 이하', '추천 첫 번째 모델': 'Phi-4 Mini (3.8B Q4) 또는 Gemma 4 E2B', '다운로드 크기': '~2–3 GB', '예상 속도': 'Apple Silicon에서 15–30 토큰/초; Intel/AMD CPU 전용 5–10 토큰/초' },
           { '가용 RAM': '8–16 GB', '추천 첫 번째 모델': 'Llama 3.2 3B (Q4) 또는 Qwen3 8B (Q4)', '다운로드 크기': '2.0–4.9 GB', '예상 속도': 'Apple Silicon에서 20–40 토큰/초; CPU 전용 8–15 토큰/초' },
-          { '가용 RAM': '16–32 GB', '추천 첫 번째 모델': 'Qwen3 14B (Q4)', '다운로드 크기': '~8.9 GB', '예상 속도': 'Apple Silicon에서 15–25 토큰/초; x86 실시간에는 GPU 필요' },
-          { '가용 RAM': '32 GB+ (Apple Silicon) 또는 24 GB VRAM (NVIDIA)', '추천 첫 번째 모델': 'Llama 3.3 70B (Q4)', '다운로드 크기': '~40 GB', '예상 속도': 'Apple M5 Max에서 10–20 토큰/초; RTX 4090에서 15–25 토큰/초' },
+          { '가용 RAM': '16–32 GB', '추천 첫 번째 모델': 'gpt-oss 20B (~13 GB) 또는 Qwen3 14B (Q4)', '다운로드 크기': '~9–13 GB', '예상 속도': 'Apple Silicon에서 15–25 토큰/초 (Qwen3 14B); x86 실시간에는 GPU 필요' },
+          { '가용 RAM': '32 GB+ (Apple Silicon) 또는 24 GB VRAM (NVIDIA)', '추천 첫 번째 모델': 'Qwen 3.6 27B (Q4) — 소비자 하드웨어 최고 모델', '다운로드 크기': '~16 GB', '예상 속도': 'M4 Pro/M5급 Mac 및 RTX 4090급 GPU에서 실시간 처리' },
         ],
         callouts: [
           {
@@ -3267,13 +3442,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-ko.svg',
-        imageCaption: '가용 RAM에 따른 첫 번째 모델 가이드: ≤8 GB → Phi-4 Mini 3.8B (~2.7 GB, Apple Silicon에서 15–30 토큰/초); 8–16 GB → Llama 3.2 3B 또는 Qwen3 8B; 16–32 GB → Qwen3 14B (~8.9 GB); 32 GB+ → Llama 3.3 70B (~40 GB).',
+        imageCaption: '가용 RAM에 따른 첫 번째 모델 가이드: ≤8 GB → Phi-4 Mini 3.8B 또는 Gemma 4 E2B (~2–3 GB, Apple Silicon에서 15–30 토큰/초); 8–16 GB → Llama 3.2 3B 또는 Qwen3 8B; 16–32 GB → gpt-oss 20B 또는 Qwen3 14B (~9–13 GB); 32 GB+ → Qwen 3.6 27B (~16 GB).',
       },
       hardware: {
         id: 'hardware',
         title: '하드웨어 요구 사항',
         content:
-          '**2026년에 로컬 AI를 실행하기 위해 게이밍 PC나 전용 GPU가 필요하지 않습니다.** Apple Silicon Mac은 로컬 LLM을 위한 최고의 소비자 하드웨어입니다; M1 이후의 모든 MacBook Air는 소형 모델을 잘 실행합니다. Windows와 Linux에서는 8 GB RAM이 있는 모든 노트북에서 3B–7B 모델에 CPU 추론 모드가 작동합니다.',
+          '**2026년에 로컬 AI를 실행하기 위해 게이밍 PC나 전용 GPU가 필요하지 않습니다.** Apple Silicon Mac은 로컬 LLM을 위한 최고의 소비자 하드웨어입니다; M1 이후의 모든 MacBook Air는 소형 모델을 잘 실행합니다. Windows와 Linux에서는 8 GB RAM이 있는 모든 노트북에서 3B–7B 모델에 CPU 추론 모드가 작동합니다. 플랫폼 참고 사항: LM Studio는 macOS에서 Apple Silicon이 필요합니다 — Intel Mac에서는 CPU 추론으로 Intel을 계속 지원하는 Jan이나 GPT4All을 사용하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3285,8 +3460,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '**Apple Silicon (M1–M5):** 로컬 LLM을 위한 최고의 소비자 하드웨어. 통합 메모리는 GPU와 CPU가 RAM을 공유한다는 것을 의미합니다 — 8 GB MacBook Air M3는 Phi-4 Mini를 초당 20 토큰 이상으로 실행합니다; 64 GB M5 Max는 Llama 3.3 70B를 실행합니다.',
-          '**NVIDIA GPU (Windows/Linux):** LM Studio와 Jan에서의 CUDA 가속은 생성 속도를 크게 높입니다. RTX 3060 12 GB는 Mistral Small과 Qwen3 8B를 실시간으로 실행합니다. RTX 4090 24 GB는 30B 모델을 실행합니다.',
+          '**Apple Silicon (M1–M5):** 로컬 LLM을 위한 최고의 소비자 하드웨어. 통합 메모리는 GPU와 CPU가 RAM을 공유한다는 것을 의미합니다 — 8 GB MacBook Air M3는 Phi-4 Mini를 초당 20 토큰 이상으로 실행합니다; 64 GB M5 Max는 Llama 3.3 70B를 실행합니다. 여기서 LM Studio는 GGUF(llama.cpp)와 MLX 모델을 모두 실행합니다.',
+          '**NVIDIA GPU (Windows/Linux):** LM Studio와 Jan에서의 CUDA 가속은 생성 속도를 크게 높입니다. RTX 3060 12 GB는 Qwen3 8B를 실시간으로 실행합니다. RTX 4090 24 GB는 Qwen 3.6 27B 등 30B급 모델을 실행합니다.',
           '**AMD GPU (Windows/Linux):** LM Studio와 Jan에서의 ROCm 지원이 개선되고 있지만 CUDA보다 성숙도가 낮습니다. AMD GPU가 있다면 GPU 가속에 의존하기 전에 특정 카드에 대한 LM Studio 릴리스 노트를 확인하십시오.',
           '**Intel/AMD CPU 전용:** 3B–7B 모델을 5–15 토큰/초로 실행 가능 — 사용 가능하지만 느립니다. 프롬프트를 보내고 다른 일을 하는 작업(요약, 이메일 작성)에는 실시간 대화형 사용보다 경험이 더 좋습니다.',
           '**RAM과 VRAM:** 모델이 RAM(또는 VRAM)에 완전히 맞아야 합니다. 4B 모델은 ~3 GB가 필요합니다; 8B 모델은 ~5 GB; 14B 모델은 ~9 GB; 70B 모델은 ~42 GB. 모델이 너무 크면 LM Studio가 다운로드 전에 경고합니다.',
@@ -3315,9 +3490,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          'LM Studio 릴리스 노트 및 하드웨어 호환성 — [lmstudio.ai](https://lmstudio.ai)',
-          'Jan 문서 및 하드웨어 요구 사항 — [jan.ai/docs](https://jan.ai/docs)',
-          'GPT4All 모델 라이브러리 및 LocalDocs 문서 — [gpt4all.io](https://gpt4all.io)',
+          'LM Studio 0.4 변경 로그 및 하드웨어 호환성 — [lmstudio.ai/changelog](https://lmstudio.ai/changelog)',
+          'Jan 문서 및 오픈소스 저장소 (Apache 2.0) — [jan.ai/docs](https://jan.ai/docs)',
+          'GPT4All 모델 라이브러리, LocalDocs 문서 및 릴리스 이력 — [github.com/nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)',
           'Phi-4 Mini 기술 보고서 — [Microsoft Research](https://microsoft.com/research)',
           'GGUF 양자화 형식 사양 — [llama.cpp](https://github.com/ggerganov/llama.cpp)',
         ],
@@ -3344,7 +3519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '구형 MacBook에서 로컬 AI 앱을 사용할 수 있나요?',
-            a: 'RAM 요구 사항(3B 모델의 경우 최소 8 GB)을 충족한다면 가능합니다. 8 GB RAM이 있는 2018년 이후 MacBook Air 및 MacBook Pro 모델은 Phi-4 Mini를 느리지만 사용 가능한 속도(Intel Mac에서 ~5–10 토큰/초)로 실행할 수 있습니다. Apple Silicon Mac(M1 이후)은 통합 메모리 아키텍처와 Neural Engine으로 인해 훨씬 빠릅니다. 2020년 MacBook Air M1은 Phi-4 Mini를 초당 20 토큰 이상으로 실행합니다.',
+            a: 'RAM 요구 사항(3B 모델의 경우 최소 8 GB)을 충족한다면 가능합니다. 2018년 이후 Intel MacBook에서는 Jan이나 GPT4All을 사용하십시오 — LM Studio는 macOS에서 Apple Silicon이 필요합니다. Intel Mac은 Phi-4 Mini를 느리지만 사용 가능한 속도(~5–10 토큰/초, CPU 추론)로 실행합니다. Apple Silicon Mac(M1 이후)은 통합 메모리 아키텍처와 Neural Engine으로 인해 훨씬 빠릅니다. 2020년 MacBook Air M1은 Phi-4 Mini를 초당 20 토큰 이상으로 실행합니다.',
           },
           {
             q: '여러 모델을 동시에 실행할 수 있나요?',
@@ -3360,11 +3535,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'LM Studio는 Apple Silicon Mac에서 어떤 모델을 지원하나요?',
-            a: 'LM Studio는 통합 메모리 아키텍처를 통한 Metal GPU 가속을 활용하여 Apple Silicon(M1~M5)에서 전체 GGUF 모델 라이브러리를 지원합니다. 권장 시작 모델: 8GB Mac에는 Phi-4 Mini(3.8B) 또는 Llama 3.2 3B, 16GB 이상 Mac에는 Qwen3 8B, 16~32GB Mac에는 Qwen3 14B, 32GB 이상 Mac(M3 Max, M4 Max, M5 Max)에는 Llama 3.3 70B. LM Studio는 사용 가능한 메모리를 자동으로 감지하고 하드웨어에 맞는 양자화 수준(보통 Q4_K_M)을 추천합니다.',
+            a: 'LM Studio는 통합 메모리 아키텍처를 통한 Metal GPU 가속을 활용하여 Apple Silicon(M1~M5)에서 전체 GGUF 모델 라이브러리와 Apple의 MLX 형식을 지원합니다. 권장 시작 모델: 8GB Mac에는 Phi-4 Mini(3.8B) 또는 Gemma 4 E2B, 16GB 이상 Mac에는 Qwen3 8B, 16~32GB Mac에는 gpt-oss 20B 또는 Qwen3 14B, 32GB 이상 Mac에는 Qwen 3.6 27B — 48~64GB의 Max급 기기에서는 Llama 3.3 70B도 여전히 선택지입니다. LM Studio는 사용 가능한 메모리를 자동으로 감지하고 하드웨어에 맞는 양자화 수준(보통 Q4_K_M)을 추천합니다.',
           },
           {
             q: 'Windows, Intel Mac, Apple Silicon에서 LM Studio의 시스템 요구 사항은 무엇인가요?',
-            a: '모든 플랫폼에서 최소 요구 사항은 3B~7B 모델 기준 RAM 8GB입니다. Apple Silicon(M1~M5)은 통합 메모리와 Metal 가속 덕분에 별도 GPU 없이도 가장 빠르게 실행됩니다. Intel Mac은 CPU 추론으로만 작동합니다 — Intel Mac에는 LLM 추론용 Metal GPU 가속이 없으므로 3B 모델 기준 초당 약 5~10 토큰을 예상하십시오. Windows는 최소 RAM 8GB가 필요하며, 더 큰 모델의 CUDA 가속을 위해 NVIDIA GPU(VRAM 8GB 이상)를 선택적으로 사용할 수 있습니다. Linux도 AppImage 또는 .deb를 통해 동일한 최소 RAM 8GB가 필요하며, NVIDIA GPU가 있으면 CUDA를 지원합니다.',
+            a: 'macOS에서 LM Studio는 Apple Silicon Mac(M1 이상)과 macOS 14 이상을 필요로 합니다 — Intel Mac은 지원되지 않으며, Intel Mac 사용자는 대신 Jan이나 GPT4All을 설치해야 합니다. 이들은 CPU 추론으로 3B 모델 기준 초당 약 5~10 토큰의 속도를 냅니다. Windows에서는 3B~7B 모델 기준 최소 RAM 8GB가 필요하며, 더 큰 모델의 CUDA 가속을 위해 NVIDIA GPU(VRAM 8GB 이상)를 선택적으로 사용할 수 있습니다. Linux도 AppImage 또는 .deb를 통해 동일한 최소 RAM 8GB가 필요하며, NVIDIA GPU가 있으면 CUDA를 지원합니다. Apple Silicon은 통합 메모리와 Metal 가속 덕분에 별도 GPU 없이도 전체적으로 가장 빠르게 실행됩니다.',
           },
           {
             q: 'LM Studio는 Linux에서 실행되나요?',
@@ -3372,7 +3547,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026년 LM Studio의 가장 좋은 대안은 무엇인가요?',
-            a: 'Jan이 가장 가까운 대안입니다 — 동일한 설치 편의성, AGPLv3 하의 완전한 오픈소스, Linux AppImage 지원을 갖추고 있습니다. GPT4All은 순수 초보자를 위한 가장 단순한 대안으로, 선별된 모델 목록과 단일 창 채팅 인터페이스를 제공합니다. 명령줄 도구를 선호하는 개발자에게는 Ollama가 주요 대안이지만, GUI 대신 터미널 사용이 필요합니다. 네 가지 모두 동일한 GGUF 모델 파일을 실행하며 무료입니다.',
+            a: 'Jan이 가장 가까운 대안입니다 — 동일한 설치 편의성, Apache 2.0 하의 완전한 오픈소스, Linux AppImage 지원을 갖추고 있습니다. GPT4All은 순수 초보자를 위한 가장 단순한 대안으로, 선별된 모델 목록과 단일 창 채팅 인터페이스를 제공하지만 2025년 초부터 개발이 정체되어 있습니다. 명령줄 도구를 선호하는 개발자에게는 Ollama가 주요 대안이지만, GUI 대신 터미널 사용이 필요합니다. 네 가지 모두 동일한 GGUF 모델 파일을 실행하며 무료입니다.',
+          },
+          {
+            q: '로컬 모델을 다른 애플리케이션에 연결할 수 있나요?',
+            a: '예. LM Studio의 Local Server는 http://localhost:1234에서 OpenAI 및 Anthropic 호환 API를 제공하며, Jan은 http://localhost:1337에서 OpenAI 호환 API를 제공합니다. Obsidian, VS Code, 또는 사용자 정의 API 엔드포인트를 지원하는 다른 도구를 해당 주소로 연결하십시오. 로컬 API가 준비되면 RAG, 프롬프트 테스트, 챗봇 통합 등 다양한 워크플로가 가능해집니다. 버전 0.4부터 LM Studio는 로컬 MCP 도구도 사용할 수 있습니다.',
+          },
+          {
+            q: '어떤 양자화를 사용해야 하나요 — Q3, Q4, Q5, 아니면 Q6?',
+            a: '대부분의 사용자는 LM Studio가 기본으로 권장하는 Q4_K_M을 사용해야 합니다. Q3은 압축이 강해 품질 저하가 눈에 띕니다. Q4는 품질과 파일 크기 사이의 권장 균형점입니다. Q5와 Q6은 더 크지만 RAM에 여유가 있다면 약간 더 나은 품질을 제공합니다. 8 GB 미만 하드웨어에서는 더 큰 모델을 낮은 양자화로 쓰기보다 3B급 모델의 Q4_K_M으로 시작하십시오.',
+          },
+          {
+            q: 'GPT4All은 2026년에도 유지 관리되고 있나요?',
+            a: '활발하게는 아닙니다. GPT4All의 마지막 주요 릴리스(v3.10)는 2025년 초에 나왔으며, 그 이후 GitHub 저장소에 큰 업데이트가 없었습니다. 앱 자체는 여전히 정상적으로 설치되고 완전히 오프라인에서 작동하며, 가장 단순한 단일 창 옵션으로 남아 있습니다 — 다만 선별된 모델 목록이 오래되어 Qwen 3.6이나 gpt-oss 같은 최신 모델은 제공되지 않습니다. 터미널 없이 최신 모델을 원한다면 LM Studio나 Jan을 선택하십시오.',
           },
         ],
       },
@@ -3394,15 +3581,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'LM Studio × Apple Silicon: 가장 쉬운 로컬 AI 2026',
-      description: 'LM Studio의 Apple Silicon, Intel Mac, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간. 터미널 불필요. Jan, GPT4All과 비교, 2026년.',
+      description: 'LM Studio의 Apple Silicon, Windows, Linux 지원 모델과 시스템 요구 사항, 설정 시간. 터미널 불필요. Jan, GPT4All과 비교, 2026년.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux',
       inLanguage: 'ko',
       image: buildOgImageObject(OG_SLUG, 'ko'),
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
+      educationalLevel: 'Beginner',
+      about: [
+        { '@type': 'Thing', name: 'LM Studio' },
+        { '@type': 'Thing', name: 'Jan' },
+        { '@type': 'Thing', name: 'GPT4All' },
+        { '@type': 'Thing', name: 'Phi-4 Mini' },
+        { '@type': 'Thing', name: 'Qwen 3.6' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'LM Studio' },
+        { '@type': 'SoftwareApplication', name: 'Jan' },
+        { '@type': 'SoftwareApplication', name: 'GPT4All' },
+      ],
       'proficiencyLevel': 'Beginner',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.article-intro', '.key-takeaways'],
+      },
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
