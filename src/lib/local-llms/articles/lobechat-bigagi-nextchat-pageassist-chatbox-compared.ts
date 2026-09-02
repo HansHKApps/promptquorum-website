@@ -35,7 +35,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
       { label: 'Sources', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     quickAnswerTop: {
       en: {
         question: 'What is the best AI chat interface app in 2026: LobeChat, Big-AGI, NextChat, Page Assist, or Chatbox?',
@@ -164,15 +163,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 Key Point', text: 'You do not need a paid Chatbox AI plan to use local models. Bring your own Ollama or LM Studio server and the free Chatbox app works fully offline with no subscription.' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'AI chat software',
-            priceRange: 'Free app / hosted plans from $3.99mo',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -247,7 +237,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ChatGPTNextWeb Contributors. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- Source code, MIT license, and Vercel deploy instructions.',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- Source code, MIT license, and browser-extension setup guide.',
           '[Chatbox. (2026). "Chatbox AI Official Site."](https://chatboxai.app) -- Pricing plans, platform downloads, and product documentation.',
-          '[Chatbox AI. (2026). "Chatbox AI Affiliate Program."](https://chatboxai.tolt.io/) -- Affiliate program signup and terms.',
         ],
       },
     },
@@ -335,7 +324,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
       { label: 'Quellen', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -450,15 +438,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 Wichtig', text: 'Sie brauchen keinen bezahlten Chatbox-AI-Plan, um lokale Modelle zu nutzen. Bringen Sie Ihren eigenen Ollama- oder LM-Studio-Server mit, und die kostenlose Chatbox-App funktioniert vollständig offline ohne Abo.' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'KI-Chat-Software',
-            priceRange: 'Kostenlose App / gehostete Pläne ab 3,99 $/Mon.',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -509,7 +488,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ChatGPTNextWeb-Mitwirkende. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- Quellcode, MIT-Lizenz und Vercel-Deploy-Anleitung.',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- Quellcode, MIT-Lizenz und Anleitung zur Browser-Erweiterung.',
           '[Chatbox. (2026). "Chatbox AI offizielle Website."](https://chatboxai.app) -- Preispläne, Plattform-Downloads und Produktdokumentation.',
-          '[Chatbox AI. (2026). "Chatbox AI Partnerprogramm."](https://chatboxai.tolt.io/) -- Anmeldung und Bedingungen des Partnerprogramms.',
         ],
       },
     },
@@ -594,7 +572,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
       { label: 'Sources', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -709,15 +686,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 Point clé', text: 'Vous n\'avez pas besoin d\'une offre Chatbox AI payante pour utiliser des modèles locaux. Apportez votre propre serveur Ollama ou LM Studio, et l\'application Chatbox gratuite fonctionne entièrement hors ligne sans abonnement.' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'logiciel de chat IA',
-            priceRange: 'App gratuite / offres hébergées dès 3,99 $/mois',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -768,7 +736,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Contributeurs ChatGPTNextWeb. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- Code source, licence MIT et instructions de déploiement Vercel.',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- Code source, licence MIT et guide d\'installation de l\'extension.',
           '[Chatbox. (2026). "Site officiel Chatbox AI."](https://chatboxai.app) -- Offres tarifaires, téléchargements par plateforme et documentation produit.',
-          '[Chatbox AI. (2026). "Programme d\'affiliation Chatbox AI."](https://chatboxai.tolt.io/) -- Inscription et conditions du programme d\'affiliation.',
         ],
       },
     },
@@ -853,7 +820,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連記事', anchor: '#related-reading' },
       { label: '出典', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -968,15 +934,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 重要ポイント', text: 'ローカルモデルを使うのに有料のChatbox AIプランは不要です。自分のOllamaやLM Studioサーバーを持ち込めば、無料のChatboxアプリはサブスクリプションなしで完全オフラインで動作します。' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'AIチャットソフトウェア',
-            priceRange: '無料アプリ / ホスト型プラン月額3.99ドル〜',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -1027,7 +984,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ChatGPTNextWeb Contributors. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- ソースコード、MITライセンス、Vercelデプロイ手順。',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- ソースコード、MITライセンス、ブラウザ拡張機能セットアップガイド。',
           '[Chatbox. (2026). "Chatbox AI公式サイト."](https://chatboxai.app) -- 価格プラン、プラットフォーム別ダウンロード、製品資料。',
-          '[Chatbox AI. (2026). "Chatbox AIアフィリエイトプログラム."](https://chatboxai.tolt.io/) -- アフィリエイトプログラムの登録と規約。',
         ],
       },
     },
@@ -1112,7 +1068,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '延伸阅读', anchor: '#related-reading' },
       { label: '来源', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1227,15 +1182,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 要点', text: '使用本地模型无需付费的 Chatbox AI 方案。自带你自己的 Ollama 或 LM Studio 服务器,免费的 Chatbox 应用即可完全离线运行,无需订阅。' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'AI 聊天软件',
-            priceRange: '免费应用 / 托管方案 3.99美元/月起',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -1286,7 +1232,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ChatGPTNextWeb Contributors. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- 源代码、MIT 许可证和 Vercel 部署说明。',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- 源代码、MIT 许可证和浏览器扩展设置指南。',
           '[Chatbox. (2026). "Chatbox AI 官方网站."](https://chatboxai.app) -- 价格方案、各平台下载和产品文档。',
-          '[Chatbox AI. (2026). "Chatbox AI 联盟计划."](https://chatboxai.tolt.io/) -- 联盟计划注册和条款。',
         ],
       },
     },
@@ -1371,7 +1316,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
       { label: 'Fuentes', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1486,15 +1430,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 Punto clave', text: 'No necesitas un plan de pago de Chatbox AI para usar modelos locales. Trae tu propio servidor Ollama o LM Studio y la app gratuita de Chatbox funciona completamente offline sin suscripción.' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'software de chat IA',
-            priceRange: 'App gratis / planes alojados desde 3,99 $/mes',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -1545,7 +1480,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Colaboradores de ChatGPTNextWeb. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- Código fuente, licencia MIT e instrucciones de despliegue en Vercel.',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- Código fuente, licencia MIT y guía de instalación de la extensión.',
           '[Chatbox. (2026). "Sitio oficial de Chatbox AI."](https://chatboxai.app) -- Planes de precios, descargas por plataforma y documentación del producto.',
-          '[Chatbox AI. (2026). "Programa de afiliados de Chatbox AI."](https://chatboxai.tolt.io/) -- Registro y condiciones del programa de afiliados.',
         ],
       },
     },
@@ -1630,7 +1564,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leituras relacionadas', anchor: '#related-reading' },
       { label: 'Fontes', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -1745,15 +1678,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 Ponto-chave', text: 'Você não precisa de um plano pago do Chatbox AI para usar modelos locais. Traga seu próprio servidor Ollama ou LM Studio, e o app gratuito do Chatbox funciona totalmente offline, sem assinatura.' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'software de chat de IA',
-            priceRange: 'App grátis / planos hospedados a partir de US$ 3,99/mês',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -1804,7 +1728,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Colaboradores da ChatGPTNextWeb. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- Código-fonte, licença MIT e instruções de deploy no Vercel.',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- Código-fonte, licença MIT e guia de instalação da extensão.',
           '[Chatbox. (2026). "Site oficial do Chatbox AI."](https://chatboxai.app) -- Planos de preços, downloads por plataforma e documentação do produto.',
-          '[Chatbox AI. (2026). "Programa de afiliados do Chatbox AI."](https://chatboxai.tolt.io/) -- Inscrição e termos do programa de afiliados.',
         ],
       },
     },
@@ -1889,7 +1812,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءات ذات صلة', anchor: '#related-reading' },
       { label: 'المصادر', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2004,15 +1926,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 نقطة مهمة', text: 'لست بحاجة إلى خطة Chatbox AI مدفوعة لاستخدام النماذج المحلية. أحضر خادم Ollama أو LM Studio الخاص بك، ويعمل تطبيق Chatbox المجاني بالكامل دون اتصال ودون اشتراك.' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'برنامج دردشة ذكاء اصطناعي',
-            priceRange: 'تطبيق مجاني / خطط مستضافة من 3.99$/شهريًا',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -2063,7 +1976,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مساهمو ChatGPTNextWeb. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- الشيفرة المصدرية، رخصة MIT، وتعليمات نشر Vercel.',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- الشيفرة المصدرية، رخصة MIT، ودليل إعداد الإضافة.',
           '[Chatbox. (2026). "الموقع الرسمي لـ Chatbox AI."](https://chatboxai.app) -- خطط الأسعار، تنزيلات المنصات، ووثائق المنتج.',
-          '[Chatbox AI. (2026). "برنامج شراكة Chatbox AI."](https://chatboxai.tolt.io/) -- التسجيل وشروط برنامج الشراكة.',
         ],
       },
     },
@@ -2148,7 +2060,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 읽을거리', anchor: '#related-reading' },
       { label: '출처', anchor: '#sources' },
     ],
-    affiliateDisclosure: true,
     sections: {
       tldr: {
         id: 'key-takeaways',
@@ -2263,15 +2174,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           { type: '📌 핵심 포인트', text: '로컬 모델을 사용하는 데 유료 Chatbox AI 플랜이 필요하지 않습니다. 자신의 Ollama나 LM Studio 서버를 가져오면 무료 Chatbox 앱은 구독 없이 완전히 오프라인으로 작동합니다.' },
         ],
-        affiliateLinks: [
-          {
-            url: 'https://chatboxai.tolt.io/',
-            productName: 'Chatbox AI',
-            productCategory: 'AI 채팅 소프트웨어',
-            priceRange: '무료 앱 / 호스팅 플랜 월 3.99달러부터',
-            label: 'Chatbox AI',
-          },
-        ],
       },
       whichToChoose: {
         id: 'which-to-choose',
@@ -2322,7 +2224,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ChatGPTNextWeb 기여자. (2026). "NextChat GitHub Repository."](https://github.com/ChatGPTNextWeb/NextChat) -- 소스 코드, MIT 라이선스, Vercel 배포 지침.',
           '[n4ze3m. (2026). "Page Assist GitHub Repository."](https://github.com/n4ze3m/page-assist) -- 소스 코드, MIT 라이선스, 브라우저 확장 설정 가이드.',
           '[Chatbox. (2026). "Chatbox AI 공식 사이트."](https://chatboxai.app) -- 가격 플랜, 플랫폼별 다운로드, 제품 문서.',
-          '[Chatbox AI. (2026). "Chatbox AI 제휴 프로그램."](https://chatboxai.tolt.io/) -- 제휴 프로그램 등록 및 약관.',
         ],
       },
     },
