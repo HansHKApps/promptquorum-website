@@ -2208,17 +2208,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '深度指南：[SillyTavern vs Agnai vs RisuAI](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. 编程助手与IDE集成',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE与代码编辑器',
         itemHeadings: true,
         content:
-          '**编程助手通过OpenAI兼容API将本地LLM接入编辑器或终端。**选择主要取决于工作流偏好：编辑器内自动补全（Continue.dev）、自主智能体编辑（Cline、OpenHands）或终端内git原生差异编辑（Aider）。三种模式均可与任何支持OpenAI Chat Completions协议的运行时配合使用——Ollama是2026年最常见的后端。',
+          '**IDE集成与AI优先代码编辑器通过OpenAI兼容API将本地LLM接入编辑器。**具体选择取决于工作流：编辑器内自动补全（Continue.dev、Twinny）、自主智能体编辑（Cline、OpenHands），或完整IDE环境（PearAI、Windsurf）。均可与任何支持OpenAI Chat Completions协议的运行时配合使用——Ollama是2026年最常见的后端。',
         columns: ['Tool', 'Link', '描述', '许可证', '星标'],
         rows: [
           { 'Tool': '**Continue.dev**', 'Link': '[continue.dev](https://continue.dev)', '描述': '支持本地模型的VS Code和JetBrains自动补全与聊天', '许可证': 'Apache 2.0' },
-          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', '描述': '支持多文件编辑的终端结对编程工具', '许可证': 'Apache 2.0' },
-          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', '描述': 'VS Code的自主编程智能体', '许可证': 'Apache 2.0' },
+          { 'Tool': '**Cline**', 'Link': '[cline.bot](https://cline.bot)', '描述': 'VS Code自主编程智能体，可自动编辑文件', '许可证': 'Apache 2.0' },
+          { 'Tool': '**PearAI**', 'Link': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', '描述': '支持本地模型的开源AI代码编辑器', '许可证': 'Apache 2.0', '星标': '706'},
+          { 'Tool': '**Windsurf**', 'Link': '[codeium.com/windsurf](https://codeium.com/windsurf)', '描述': '支持本地模型集成的AI优先IDE', '许可证': '专有' },
+          { 'Tool': '**Sourcegraph Cody**', 'Link': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', '描述': '支持本地模型的AI编程助手', '许可证': 'Apache 2.0' },
           { 'Tool': '**Tabby**', 'Link': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', '描述': '自托管的GitHub Copilot替代方案', '许可证': 'Apache 2.0' },
           { 'Tool': '**CodeGPT**', 'Link': '[codegpt.co](https://codegpt.co)', '描述': '支持多编辑器的IDE集成工具', '许可证': 'MIT' },
           { 'Tool': '**OpenHands**', 'Link': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', '描述': 'AI软件工程智能体（原OpenDevin）', '许可证': 'MIT', '星标': '86k'},
@@ -2236,7 +2238,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-zh.svg',
-        imageCaption: '本地LLM编程辅助的3种模式：Continue.dev用于VS Code和JetBrains行内自动补全，Cline用于自主智能体文件编辑，Aider用于Git原生终端差异编辑 — 均通过OpenAI兼容API连接Ollama。',
+        imageCaption: 'IDE集成对比：Continue.dev用于VS Code和JetBrains行内自动补全，Cline用于自主智能体文件编辑，PearAI和Windsurf提供完整的AI优先IDE环境——均通过OpenAI兼容API连接Ollama。',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. 终端与CLI工具',
+        itemHeadings: true,
+        content:
+          '**终端与CLI工具将本地LLM接入您的Shell和命令行工作流。**Aider是终端git原生代码编辑最成熟的选择；ShellGPT、aichat和tgpt封装本地LLM用于命令生成和聊天；Blackbox AI和Devhat延续了同样的模式。均可与OpenAI兼容API配合使用——指向本地运行的Ollama即可。',
+        columns: ['Tool', 'Link', '描述', '许可证', '星标'],
+        rows: [
+          { 'Tool': '**Aider**', 'Link': '[aider.chat](https://aider.chat)', '描述': '支持多文件git原生diff的终端结对编程工具', '许可证': 'Apache 2.0' },
+          { 'Tool': '**ShellGPT**', 'Link': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', '描述': 'Shell命令生成与聊天CLI工具', '许可证': 'MIT', '星标': '12.3k'},
+          { 'Tool': '**aichat**', 'Link': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', '描述': '支持多种本地后端的终端AI聊天工具', '许可证': 'MIT', '星标': '10.4k'},
+          { 'Tool': '**tgpt**', 'Link': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', '描述': '本地LLM聊天终端封装工具', '许可证': 'GPL 3.0', '星标': '3.3k'},
+          { 'Tool': '**Blackbox AI（CLI）**', 'Link': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', '描述': '在Shell中进行终端代码生成与聊天', '许可证': 'Apache 2.0' },
+          { 'Tool': '**Devhat**', 'Link': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', '描述': '集成本地LLM的开发工具CLI', '许可证': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -2281,23 +2299,45 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: '深度指南：[使用MCP的本地AI智能体](/zh/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. 语音、语音合成与多模态',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. 语音转文字（STT）',
         itemHeadings: true,
         content:
-          '**语音和多模态技术栈将本地LLM的能力从文本扩展至语音输入（STT）、语音输出（TTS）和视觉理解。**Whisper.cpp和faster-whisper占据本地STT层；Piper和Coqui共享TTS层，XTTS v2主导语音克隆；LLaVA和Ollama视觉模型覆盖视觉端。基于这一层加上一个小型聊天模型，即可构建完全离线的语音助手。',
+          '**语音转文字系统使用本地模型将音频输入转换为文本，无需依赖云端。**Whisper.cpp和faster-whisper主导本地STT层；两者均基于OpenAI的Whisper，但针对CPU/GPU效率做了优化。二者构成全离线语音助手的输入端。',
         columns: ['Tool', 'Link', '描述', '许可证', '星标'],
         rows: [
           { 'Tool': '**Whisper.cpp**', 'Link': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', '描述': '本地语音识别，支持CPU或GPU运行', '许可证': 'MIT', '星标': '53.4k'},
           { 'Tool': '**faster-whisper**', 'Link': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', '描述': '通过CTranslate2实现的快速Whisper转录', '许可证': 'MIT', '星标': '25.2k'},
-          { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', '描述': '轻量级本地文字转语音', '许可证': 'MIT', '星标': '11.3k'},
-          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', '描述': '支持多模型的开源语音合成', '许可证': 'MPL 2.0', '星标': '2.3k'},
-          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', '描述': '支持多语言的语音克隆', '许可证': 'CPML' },
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. 文字转语音（TTS）',
+        itemHeadings: true,
+        content:
+          '**文字转语音系统使用本地模型将文本转换为自然音质的音频，无需依赖云端。**Piper和Coqui在TTS层提供多种轻量级模型选择；XTTS v2专注于语音克隆；Bark可生成非语音音效；StyleTTS 2专注于高质量合成。二者构成全离线语音助手的输出端。',
+        columns: ['Tool', 'Link', '描述', '许可证', '星标'],
+        rows: [
+          { 'Tool': '**Piper TTS**', 'Link': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', '描述': '轻量级多语言文字转语音，可在CPU上运行', '许可证': 'MIT', '星标': '11.3k'},
+          { 'Tool': '**Coqui TTS**', 'Link': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', '描述': '支持多种模型架构的开源语音合成', '许可证': 'MPL 2.0', '星标': '2.3k'},
+          { 'Tool': '**XTTS v2**', 'Link': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', '描述': '通过简短音频样本实现多语言语音克隆', '许可证': 'CPML' },
           { 'Tool': '**Bark**', 'Link': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', '描述': '支持非语音声音的生成式语音', '许可证': 'MIT', '星标': '39.3k'},
-          { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', '描述': '高质量自然音色TTS', '许可证': 'MIT', '星标': '6.3k'},
-          { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '描述': '本地视觉+语言模型', '许可证': 'Apache 2.0' },
-          { 'Tool': '**Ollama视觉模型**', 'Link': '[ollama.com](https://ollama.com)', '描述': '通过Ollama运行的本地视觉模型（Llama 3.2 Vision、Llava等）', '许可证': 'Various' },
+          { 'Tool': '**StyleTTS 2**', 'Link': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', '描述': '高质量自然音色TTS，支持风格控制', '许可证': 'MIT', '星标': '6.3k'},
+        ],
+        note: '深度指南：[在手机上搭建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. 多模态与视觉',
+        itemHeadings: true,
+        content:
+          '**多模态与视觉系统将本地LLM的能力扩展到图像、视频等非文本输入。**LLaVA和Ollama视觉模型（Llama 3.2 Vision等）是本地视觉理解的主要选择。可与文本生成结合，用于图像描述、视觉问答等视觉-语言任务。',
+        columns: ['Tool', 'Link', '描述', '许可证', '星标'],
+        rows: [
+          { 'Tool': '**LLaVA**', 'Link': '[llava-vl.github.io](https://llava-vl.github.io)', '描述': '本地视觉+语言模型，用于图像理解', '许可证': 'Apache 2.0' },
+          { 'Tool': '**Ollama视觉模型**', 'Link': '[ollama.com](https://ollama.com)', '描述': '通过Ollama运行的视觉模型（Llama 3.2 Vision、LLaVA等）', '许可证': 'Various' },
+          { 'Tool': '**Idefics**', 'Link': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', '描述': '支持视觉与语言的开源多模态模型', '许可证': 'Apache 2.0' },
         ],
         note: '深度指南：[本地视觉模型2026：LLaVA、Llama 3.2 Vision、Qwen3-VL与Ollama多模态配置](/zh/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
@@ -2321,6 +2361,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**AnythingLLM Mobile**', 'Link': '[anythingllm.com](https://anythingllm.com)', '描述': '远程访问本地AnythingLLM工作区', '许可证': 'MIT' },
         ],
         note: '深度指南：[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. 图像生成与视觉AI',
+        itemHeadings: true,
+        content:
+          '**图像生成与视觉AI系统完全在自有硬件上生成图像、视频等视觉内容，无需任何云端调用。**Stable Diffusion是基础模型；ComfyUI和AUTOMATIC1111 WebUI是最成熟的两款UI；Invoke AI专注于用户体验；Fooocus和StableSwarmUI简化了工作流程；ControlNet增加了精确控制能力；Real-ESRGAN负责图像放大；AnimateDiff用于生成视频。以上工具均可在配备6-24 GB显存的消费级GPU上运行。',
+        columns: ['Tool', 'Link', '描述', '许可证', '星标'],
+        rows: [
+          { 'Tool': '**Stable Diffusion**', 'Link': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', '描述': '基础性开源图像生成模型', '许可证': 'OpenRAIL' },
+          { 'Tool': '**ComfyUI**', 'Link': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', '描述': '基于节点的高级图像生成工作流UI——活跃维护，1周前发布新版本', '许可证': 'GPL 3.0', '星标': '131.2k'},
+          { 'Tool': '**AUTOMATIC1111 WebUI**', 'Link': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', '描述': 'Stable Diffusion最受欢迎的Web UI——自2025年起无新版本发布（19+个月）', '许可证': 'AGPL 3.0', '星标': '164.8k'},
+          { 'Tool': '**Invoke AI**', 'Link': '[invoke.ai](https://invoke.ai)', '描述': '专业级图像生成，界面直观——活跃维护，1周前发布新版本', '许可证': 'Apache 2.0', '星标': '28.1k' },
+          { 'Tool': '**Fooocus**', 'Link': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', '描述': '简化版Stable Diffusion UI，设置简单——自2024年起无新版本发布（2年以上）', '许可证': 'GPL 3.0', '星标': '52.7k'},
+          { 'Tool': '**StableSwarmUI**', 'Link': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', '描述': 'Stability AI官方UI，支持多模型——自2024年起无新版本发布（2年以上）', '许可证': 'Apache 2.0', '星标': '4.9k'},
+          { 'Tool': '**ControlNet**', 'Link': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', '描述': '通过空间引导实现图像生成的精确控制——无新版本发布，最后一次代码推送在2024年（2年以上）', '许可证': 'Apache 2.0', '星标': '34.1k'},
+          { 'Tool': '**Real-ESRGAN**', 'Link': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', '描述': 'AI图像放大工具，实现高质量图像放大——自2022年起无新版本发布（4年以上）', '许可证': 'Apache 2.0', '星标': '36.7k'},
+          { 'Tool': '**AnimateDiff**', 'Link': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', '描述': '基于Stable Diffusion文本提示生成视频——无新版本发布，最后一次代码推送在2024年（2年以上）', '许可证': 'Apache 2.0', '星标': '12.2k'},
+        ],
+        note: '深度指南：[AnimateDiff指南2026：为任意Stable Diffusion模型生成动画](/zh/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -2368,7 +2428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: '本目录如何保持及时更新',
         content:
-          '**中国（数据安全法）：** 中国2021年《数据安全法》对数据本地化处理和跨境传输有明确规定。本地推理在技术上直接满足合规需求——模型权重和推理计算全部在本地完成，数据不经过任何第三方云服务器。对于需要处理中文企业文本的场景（金融报告、医疗记录、法律合同），在中文理解和指令遵循方面具有针对性优化的模型是本地部署的可选方案，可在满足数据留存要求的同时实现文档理解与知识问答。\n\n**亚太地区（数据跨境合规）：** 亚太地区各经济体正在建立和完善数据本地化框架。本地推理是满足跨境数据传输限制的技术路径——在本地运行模型意味着推理输入和输出不需要离开所在司法管辖区。对于在多个亚太市场运营的企业，在每个合规区域内部署独立的本地LLM实例，是规避数据主权合规风险的实践路径之一。\n\n**企业部署（金融、医疗、法律）：** 在受监管行业，金融机构、医院和律所通常面临严格的数据外发限制。本地LLM部署——尤其是与RAG系统结合后——可在不向外部云服务发送任何敏感数据的前提下实现文档理解、合同分析和知识库问答等用例。本目录每六个月审查一次，并在两次审查之间进行更新（最近更新：2026年7月，下次审查：2026年11月）。最近一次审查重新核实了所有链接，并修正了若干项目名称与许可证：Faraday已更名为Backyard AI，维护中的Coqui TTS分支现由Idiap托管，Cherry Studio采用AGPL 3.0。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户基础或填补了某一层的空缺。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及上述格式的一句话描述。',
+          '**本目录每六个月审查一次，并在两次审查之间进行补丁更新——最近更新于2026年8月，下次计划审查为2026年11月。**2026年8月的扩充在所有层级新增了72多款工具，将语音/多模态拆分为三个专注层级（STT、TTS、视觉），将编程助手拆分为IDE集成（4a）和终端工具（4b），并新增了一个全新的图像生成层级。所有链接与许可证均已重新核实；新增条目（PearAI、Windsurf、Sourcegraph Cody、SuperAGI、Leon AI、Draw Things、Fooocus、StableSwarmUI等）均已验证处于活跃维护状态。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户份额或填补了某一层原本的空缺。连续两个以上发布周期未活跃的项目将被移除；符合标准的新项目将在下次审查时纳入。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及采用上述格式的一句话描述。',
       },
       sources: {
         id: 'sources',
@@ -2425,6 +2485,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '本目录多久更新一次？',
             a: '每六个月更新一次——最近审查为2026年7月，下次计划更新为2026年11月。中期变化（项目失活、新工具取得显著份额、许可证变更）将以补丁形式应用到现有条目。全新类别或层级等待定期更新以保持结构稳定。上方"参考来源"部分列出了更新之间用于监测生态系统动态的社区索引。',
+          },
+          {
+            q: '我能否在不联网的情况下本地生成图像？',
+            a: '可以——Stable Diffusion、ComfyUI、Invoke AI、AUTOMATIC1111 WebUI以及第10层中的其他工具均完全运行在本地硬件上。Stable Diffusion需要6 GB以上显存（RTX 3060、RTX 4060或同等级别）；Fooocus等优化后的UI可在4-6 GB显存的显卡上运行。Real-ESRGAN用于放大生成的图像；ControlNet提供空间控制（边缘、姿态、深度图）；AnimateDiff可根据文本生成视频。以上工具均无需向外部服务器发送任何数据。',
           },
         ],
       },
