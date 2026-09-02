@@ -1,0 +1,965 @@
+{
+  "source": "Google Search Console export, Performance on Search",
+  "exportedAt": "2026-09-02",
+  "filters": {
+    "searchType": "Web",
+    "dateRange": "Last 3 months"
+  },
+  "note": "clicks/impressions summed across all locale URL variants (e.g. /power-local-llm/x and /ja/power-local-llm/x) for the same cluster+slug. Used by scripts/generate-tool-article-index.mjs as the importance signal for ranking a tool's related-article list when it has more than 3 matches. To refresh: export a fresh GSC 'Pages' performance sheet (Performance on Search, last 3 months), group rows by cluster+slug summing clicks/impressions across locale-prefixed URL variants, and overwrite this file in the same shape (source/exportedAt/filters/note/pages). Ranking quality degrades as this snapshot ages.",
+  "pages": [
+    {
+      "cluster": "power-local-llm",
+      "slug": "uncensored-local-llm-creative-writing-ethics",
+      "clicks": 4490,
+      "impressions": 95302
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llms-for-coding",
+      "clicks": 2991,
+      "impressions": 273731
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-cpu-only-llm",
+      "clicks": 2489,
+      "impressions": 101079
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-local-llm-apps-android-2026",
+      "clicks": 2441,
+      "impressions": 135867
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "apple-silicon-local-llm-guide-2026",
+      "clicks": 1457,
+      "impressions": 82817
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llm-frontends",
+      "clicks": 1307,
+      "impressions": 78711
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "top-open-source-models-ollama",
+      "clicks": 1305,
+      "impressions": 427640
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-hardware-guide-2026",
+      "clicks": 1246,
+      "impressions": 461610
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-amd-gpus-local-llm",
+      "clicks": 1158,
+      "impressions": 103333
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "fastest-local-llms-low-end-pcs",
+      "clicks": 1147,
+      "impressions": 91670
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "apple-silicon-m5-local-llm",
+      "clicks": 1123,
+      "impressions": 123098
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-budget-gpus-local-llm",
+      "clicks": 1075,
+      "impressions": 127096
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "llm-quantization-explained",
+      "clicks": 1013,
+      "impressions": 271709
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-beginner-local-llm-models",
+      "clicks": 1009,
+      "impressions": 109609
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-laptops-local-llm-2026",
+      "clicks": 969,
+      "impressions": 32453
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "small-local-llm-models",
+      "clicks": 949,
+      "impressions": 37034
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "run-qwen-locally-guide-2026",
+      "clicks": 880,
+      "impressions": 57295
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-local-llm-creative-writing-2026",
+      "clicks": 837,
+      "impressions": 58124
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-local-llm-apps-iphone-2026",
+      "clicks": 803,
+      "impressions": 40663
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-mac-for-local-ai-2026",
+      "clicks": 781,
+      "impressions": 54281
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-ai-coding-assistant-local-llm",
+      "clicks": 767,
+      "impressions": 91391
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-amd-mini-pc-local-llm-2026",
+      "clicks": 751,
+      "impressions": 52511
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-mini-pcs-local-llm",
+      "clicks": 715,
+      "impressions": 34035
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+      "clicks": 667,
+      "impressions": 57053
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "run-ai-on-tablet-ipad-android",
+      "clicks": 646,
+      "impressions": 24796
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "how-much-unified-memory-for-local-llm",
+      "clicks": 625,
+      "impressions": 44107
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-gpus-for-local-llms",
+      "clicks": 603,
+      "impressions": 17816
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llms-with-vscode-cursor",
+      "clicks": 562,
+      "impressions": 19221
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llms-for-creative-writing",
+      "clicks": 528,
+      "impressions": 27804
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-local-llm-ide-plugins-2026",
+      "clicks": 526,
+      "impressions": 25011
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-whisper-stt-comparison-2026",
+      "clicks": 486,
+      "impressions": 199283
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-screenwriting-and-novel-drafting",
+      "clicks": 436,
+      "impressions": 8050
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-local-models-tool-calling-2026",
+      "clicks": 434,
+      "impressions": 52313
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-laptops-local-llm",
+      "clicks": 426,
+      "impressions": 24149
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+      "clicks": 421,
+      "impressions": 43049
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-on-laptop",
+      "clicks": 408,
+      "impressions": 69969
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "qwen-local-deployment-guide-2026",
+      "clicks": 398,
+      "impressions": 35847
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "m5-pro-max-llm-benchmarks-2026",
+      "clicks": 393,
+      "impressions": 23376
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-with-obsidian-2026",
+      "clicks": 386,
+      "impressions": 36268
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "sillytavern-vs-agnai-vs-risuai-roleplay",
+      "clicks": 373,
+      "impressions": 36569
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-gpu-buying-guide-local-llm-2026",
+      "clicks": 364,
+      "impressions": 23115
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-prompts-for-fiction-writers",
+      "clicks": 363,
+      "impressions": 5976
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "long-context-local-llms",
+      "clicks": 358,
+      "impressions": 61111
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "ollama-vs-lm-studio",
+      "clicks": 355,
+      "impressions": 50930
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-models-apple-silicon-2026",
+      "clicks": 325,
+      "impressions": 17089
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "what-are-local-llms",
+      "clicks": 314,
+      "impressions": 15080
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-security-privacy-checklist",
+      "clicks": 294,
+      "impressions": 45530
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-ai-app-non-technical-users",
+      "clicks": 279,
+      "impressions": 34469
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "lm-studio-advanced-features",
+      "clicks": 255,
+      "impressions": 10329
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "quantization-levels-comparison",
+      "clicks": 247,
+      "impressions": 26522
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-nas-storage-local-ai-models-2026",
+      "clicks": 242,
+      "impressions": 13695
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "deepseek-vs-qwen-coding-local-2026",
+      "clicks": 241,
+      "impressions": 36901
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "qwen-vs-llama-vs-mistral",
+      "clicks": 240,
+      "impressions": 62612
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "how-to-install-lm-studio",
+      "clicks": 215,
+      "impressions": 17201
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llms-code-review",
+      "clicks": 211,
+      "impressions": 12393
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llms-2026",
+      "clicks": 209,
+      "impressions": 39101
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-local-ai-app-low-end-pc",
+      "clicks": 206,
+      "impressions": 9920
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "easiest-local-ai-app-windows-mac-linux",
+      "clicks": 185,
+      "impressions": 30181
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "how-much-vram-local-llm",
+      "clicks": 171,
+      "impressions": 70304
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "mac-vs-windows-vs-linux-local-llm",
+      "clicks": 170,
+      "impressions": 12542
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "how-to-install-ollama",
+      "clicks": 164,
+      "impressions": 30569
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "multi-gpu-local-llms",
+      "clicks": 159,
+      "impressions": 7973
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-limitations",
+      "clicks": 146,
+      "impressions": 47943
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llm-stack-use-case",
+      "clicks": 146,
+      "impressions": 20676
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "70b-models-consumer-hardware",
+      "clicks": 145,
+      "impressions": 22708
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "qwen-local-deployment-complete-guide-2026",
+      "clicks": 144,
+      "impressions": 11618
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-vision-models-llava-ollama-2026",
+      "clicks": 140,
+      "impressions": 17805
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-local-coding-models-2026",
+      "clicks": 140,
+      "impressions": 20897
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "gpu-vs-cpu-vs-apple-silicon",
+      "clicks": 136,
+      "impressions": 23502
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-embedding-models-local-rag-2026",
+      "clicks": 136,
+      "impressions": 7800
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "build-local-voice-assistant-2026",
+      "clicks": 135,
+      "impressions": 21493
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "running-70b-models-apple-silicon-m5-max",
+      "clicks": 133,
+      "impressions": 24728
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-ai-workstation-build-guide-2026",
+      "clicks": 130,
+      "impressions": 7427
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "mobile-local-llms",
+      "clicks": 129,
+      "impressions": 17714
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-tts-voice-cloning-piper-coqui-xtts",
+      "clicks": 127,
+      "impressions": 155859
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "double-local-llm-speed",
+      "clicks": 125,
+      "impressions": 3286
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "mobile-llm-models-phi4-gemma-smollm",
+      "clicks": 121,
+      "impressions": 20716
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-rag-on-your-pdfs-step-by-step",
+      "clicks": 120,
+      "impressions": 2829
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "voice-assistant-local-mobile-offline",
+      "clicks": 109,
+      "impressions": 7444
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "rtx-5090-vs-rtx-4090-local-llm",
+      "clicks": 108,
+      "impressions": 14385
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-monitors-ai-development-2026",
+      "clicks": 96,
+      "impressions": 4340
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-arabic-local-llms-2026",
+      "clicks": 91,
+      "impressions": 8921
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "llamacpp-vs-ollama-vs-vllm",
+      "clicks": 91,
+      "impressions": 4234
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "vram-calculator-local-llm",
+      "clicks": 90,
+      "impressions": 6622
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "troubleshooting-local-llm-setup",
+      "clicks": 89,
+      "impressions": 9581
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "mac-mini-m5-local-ai-server",
+      "clicks": 88,
+      "impressions": 3675
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+      "clicks": 85,
+      "impressions": 15584
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-ai-agents-langgraph-ollama",
+      "clicks": 83,
+      "impressions": 2081
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "galaxy-s26-local-ai-on-device-2026",
+      "clicks": 79,
+      "impressions": 3762
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-gpu-for-llm-inference-under-500-2026",
+      "clicks": 79,
+      "impressions": 10714
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-7b-models-consumer-hardware",
+      "clicks": 77,
+      "impressions": 3083
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "replace-github-copilot-with-local-llm",
+      "clicks": 76,
+      "impressions": 3478
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-rag-tools",
+      "clicks": 71,
+      "impressions": 2481
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "lm-studio-vs-jan-ai",
+      "clicks": 69,
+      "impressions": 8841
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "laptop-vs-desktop-local-llm",
+      "clicks": 68,
+      "impressions": 6224
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+      "clicks": 67,
+      "impressions": 26825
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-reasoning-model-deepseek-r1-2026",
+      "clicks": 63,
+      "impressions": 6910
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "open-webui-vs-sillytavern",
+      "clicks": 62,
+      "impressions": 5350
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-with-logseq-and-joplin",
+      "clicks": 62,
+      "impressions": 6162
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "continue-dev-vs-cline-vs-aider-local",
+      "clicks": 62,
+      "impressions": 3004
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "autonomous-local-agents-actually-work",
+      "clicks": 60,
+      "impressions": 10169
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "replace-grammarly-notion-ai-with-local",
+      "clicks": 59,
+      "impressions": 3466
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "qwen-coder-vs-deepseek-mistral-local-2026",
+      "clicks": 54,
+      "impressions": 9084
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "hbm-memory-on-device-ai-samsung-sk-hynix-2026",
+      "clicks": 50,
+      "impressions": 6084
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-workstation-build-local-ai-2026",
+      "clicks": 50,
+      "impressions": 3959
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-model-updates-2026",
+      "clicks": 49,
+      "impressions": 17243
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "apple-on-device-ai-vs-local-llms",
+      "clicks": 49,
+      "impressions": 2892
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-openai-compatible-api",
+      "clicks": 47,
+      "impressions": 46887
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llms-business-writing",
+      "clicks": 47,
+      "impressions": 2212
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-email-and-calendar-automation",
+      "clicks": 44,
+      "impressions": 709
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "future-of-local-llms",
+      "clicks": 43,
+      "impressions": 862
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "ollama-command-guide",
+      "clicks": 43,
+      "impressions": 7356
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llms-for-coding-workflows",
+      "clicks": 42,
+      "impressions": 3899
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-ai-agents-with-mcp-2026",
+      "clicks": 42,
+      "impressions": 1314
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "apple-silicon-whisper-metal-benchmark",
+      "clicks": 40,
+      "impressions": 4225
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "cloud-gpu-rental-guide-2026",
+      "clicks": 40,
+      "impressions": 19028
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llms-vs-chatgpt-plus",
+      "clicks": 39,
+      "impressions": 1185
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-one-click-installers",
+      "clicks": 38,
+      "impressions": 14930
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llms-vs-claude-pro",
+      "clicks": 37,
+      "impressions": 2701
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "mram-in-memory-computing-local-ai-2026",
+      "clicks": 36,
+      "impressions": 4315
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "ollama-on-mac-apple-silicon-setup-2026",
+      "clicks": 36,
+      "impressions": 3355
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "qwen-vs-claude-vs-deepseek-local-2026",
+      "clicks": 35,
+      "impressions": 1090
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llms-vs-cloud-apis",
+      "clicks": 33,
+      "impressions": 609
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "cloud-gpu-rental-comparison-2026",
+      "clicks": 33,
+      "impressions": 1857
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-rag-2026",
+      "clicks": 32,
+      "impressions": 501
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-cost-calculator-build-vs-rent-2026",
+      "clicks": 32,
+      "impressions": 986
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-power-consumption",
+      "clicks": 31,
+      "impressions": 1398
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "create-custom-local-models",
+      "clicks": 30,
+      "impressions": 644
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "galaxy-vs-iphone-on-device-ai-2026",
+      "clicks": 30,
+      "impressions": 3172
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-ai-app-with-built-in-rag",
+      "clicks": 30,
+      "impressions": 4353
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-ai-coding-tools-comparison-2026",
+      "clicks": 29,
+      "impressions": 14175
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "glm-5-2-open-weights-frontier-2026",
+      "clicks": 28,
+      "impressions": 966
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
+      "clicks": 28,
+      "impressions": 2702
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "run-qwen-vl-locally-2026",
+      "clicks": 26,
+      "impressions": 784
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "desktop-vs-webui-local-llm",
+      "clicks": 26,
+      "impressions": 1481
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-nas-storage-local-llm",
+      "clicks": 26,
+      "impressions": 1501
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "multilingual-local-llms",
+      "clicks": 23,
+      "impressions": 882
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "deepseek-vs-qwen-local-comparison-2026",
+      "clicks": 22,
+      "impressions": 731
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "run-first-local-llm",
+      "clicks": 20,
+      "impressions": 1180
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "wechat-bot-local-llm-personal-assistant-2026",
+      "clicks": 20,
+      "impressions": 3254
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "wechat-local-llm-integration-2026",
+      "clicks": 19,
+      "impressions": 1201
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-coding-llm-without-internet",
+      "clicks": 18,
+      "impressions": 493
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-personal-knowledge-base-2026",
+      "clicks": 18,
+      "impressions": 570
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-vs-cloud-gpu-cost",
+      "clicks": 17,
+      "impressions": 440
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "best-vpn-ai-privacy-local-llm-2026",
+      "clicks": 16,
+      "impressions": 2620
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "uae-pdpl-data-sovereignty-local-ai-2026",
+      "clicks": 16,
+      "impressions": 1802
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "why-enterprises-use-local-llms",
+      "clicks": 16,
+      "impressions": 457
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-vs-cloud-agents",
+      "clicks": 15,
+      "impressions": 249
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "local-llm-workstation-build",
+      "clicks": 14,
+      "impressions": 1960
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "eu-cloud-gpu-gdpr-2026",
+      "clicks": 12,
+      "impressions": 195
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-software-directory-2026",
+      "clicks": 9,
+      "impressions": 671
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "fine-tuning-local-llms-lora",
+      "clicks": 8,
+      "impressions": 5187
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-code-review-ci-cd",
+      "clicks": 8,
+      "impressions": 47
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-local-llms-portuguese-language-2026",
+      "clicks": 7,
+      "impressions": 444
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "deepseek-r1-vs-distills-explained-2026",
+      "clicks": 7,
+      "impressions": 429
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "qwen-gdpr-privacy-manifesto-2026",
+      "clicks": 7,
+      "impressions": 413
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "best-saudi-arabic-local-llms-allam-2026",
+      "clicks": 7,
+      "impressions": 155
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "run-70b-models-24gb-vram",
+      "clicks": 6,
+      "impressions": 1524
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "headless-local-llms",
+      "clicks": 6,
+      "impressions": 424
+    }
+  ]
+}
