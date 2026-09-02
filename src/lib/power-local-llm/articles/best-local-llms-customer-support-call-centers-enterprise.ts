@@ -518,6 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Enterprise Chatbot Deployment: Internal Helpdesk & HR Bots](/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — the internal, employee-facing counterpart to this guide: IT helpdesk and HR chatbots with per-employee access control, HR-data sensitivity, and SSO.',
           '[GDPR-Compliant Local RAG for Sensitive Documents](/power-local-llm/local-rag-for-private-business-data) — the compliance control set (audit logging, DPIA, deployment patterns) that applies to any regulated RAG deployment, support included.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — self-hosted RAG platform comparison for grounding answers in a document corpus.',
           '[Enterprise LLM Inference Servers: vLLM vs TGI vs NVIDIA NIM vs Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — the serving-infrastructure decision behind a multi-agent concurrent support deployment.',
@@ -910,6 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Interne Chatbots: IT-Helpdesk & HR-Bots](/de/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — das interne, mitarbeiterseitige Gegenstück zu diesem Leitfaden: IT-Helpdesk- und HR-Chatbots mit Zugriffskontrolle pro Mitarbeiter, HR-Datensensibilität und SSO.',
           '[DSGVO-konformes lokales RAG für sensible Dokumente](/power-local-llm/local-rag-for-private-business-data) — das Kontrollset (Audit-Logging, DPIA, Bereitstellungsmuster), das für jede regulierte RAG-Implementierung gilt, Support eingeschlossen.',
           '[Beste RAG-Tools für Geschäftsdokumente](/power-local-llm/best-rag-tools-for-business-documents-2026) — Vergleich selbst gehosteter RAG-Plattformen zur Verankerung von Antworten in einem Dokumentenkorpus.',
           '[Enterprise-LLM-Inferenz-Server: vLLM vs. TGI vs. NVIDIA NIM vs. Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — die Serving-Infrastruktur-Entscheidung hinter einer gleichzeitigen Multi-Agent-Support-Implementierung.',
@@ -1302,6 +1304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Chatbots internes : helpdesk IT & bots RH](/fr/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — le pendant interne, côté salarié, de ce guide : chatbots helpdesk IT et RH avec contrôle d\'accès par salarié, sensibilité des données RH et SSO.',
           '[RAG local conforme RGPD pour documents sensibles](/power-local-llm/local-rag-for-private-business-data) — l\'ensemble de contrôles de conformité (journalisation d\'audit, AIPD, schémas de déploiement) applicable à tout déploiement RAG réglementé, support compris.',
           '[Meilleurs outils RAG pour documents d\'entreprise](/power-local-llm/best-rag-tools-for-business-documents-2026) — comparaison de plateformes RAG auto-hébergées pour ancrer les réponses dans un corpus documentaire.',
           '[Serveurs d\'inférence LLM en entreprise : vLLM vs TGI vs NVIDIA NIM vs Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — la décision d\'infrastructure de serving derrière un déploiement de support multi-agents concurrent.',
@@ -1582,6 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
+          '[Chatbots internos: helpdesk de IT y bots de RR. HH.](/es/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — la contraparte interna, de cara al empleado, de esta guía: chatbots de helpdesk de IT y RR. HH. con control de acceso por empleado, sensibilidad de datos de RR. HH. y SSO.',
           '[RAG Local Conforme al RGPD para Documentos Sensibles](/power-local-llm/local-rag-for-private-business-data) — el conjunto de controles de cumplimiento (registro de auditoría, DPIA, patrones de despliegue) que aplica a cualquier despliegue de RAG regulado, soporte incluido.',
           '[Mejores Herramientas RAG para Documentos Empresariales](/power-local-llm/best-rag-tools-for-business-documents-2026) — comparación de plataformas RAG autoalojadas para anclar respuestas en un corpus documental.',
           '[Servidores de Inferencia LLM Empresariales: vLLM vs TGI vs NVIDIA NIM vs Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — la decisión de infraestructura de servicio detrás de un despliegue de soporte multiagente concurrente.',
@@ -1862,6 +1866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras Relacionadas',
         items: [
+          '[Chatbots internos: helpdesk de TI e bots de RH](/pt/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — a contraparte interna, voltada ao colaborador, deste guia: chatbots de helpdesk de TI e RH com controle de acesso por colaborador, sensibilidade de dados de RH e SSO.',
           '[RAG Local em Conformidade com o GDPR para Documentos Sensíveis](/power-local-llm/local-rag-for-private-business-data) — o conjunto de controles de conformidade (registro de auditoria, DPIA, padrões de implantação) aplicável a qualquer implantação de RAG regulada, suporte incluso.',
           '[Melhores Ferramentas de RAG para Documentos Empresariais](/power-local-llm/best-rag-tools-for-business-documents-2026) — comparação de plataformas de RAG auto-hospedadas para embasar respostas em um corpus documental.',
           '[Servidores de Inferência LLM Corporativos: vLLM vs TGI vs NVIDIA NIM vs Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — a decisão de infraestrutura de serving por trás de uma implantação de suporte multiagente concorrente.',
@@ -2142,6 +2147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[社内チャットボット構築:ITヘルプデスク・人事Bot](/ja/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — 本記事に対応する社内・従業員向けガイド。従業員単位のアクセス制御、人事データの機密性、SSOを扱うITヘルプデスク・人事チャットボット。',
           '[機密文書向けGDPR準拠ローカルRAG](/power-local-llm/local-rag-for-private-business-data) — サポートを含むあらゆる規制対象RAG導入に適用されるコンプライアンス制御セット（監査ログ、DPIA、導入パターン）。',
           '[ビジネス文書向けベストRAGツール](/power-local-llm/best-rag-tools-for-business-documents-2026) — 文書コーパスに回答を根拠づけるためのセルフホスト型RAGプラットフォーム比較。',
           '[エンタープライズLLM推論サーバー：vLLM vs TGI vs NVIDIA NIM vs Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — 同時多エージェントサポート導入を支える配信インフラの判断。',
@@ -2422,6 +2428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[内部聊天机器人部署:IT帮助台与HR机器人](/zh/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — 本指南的内部、面向员工的对应版本:涵盖按员工划分的访问控制、HR数据敏感性和SSO的IT帮助台与HR聊天机器人。',
           '[面向敏感文档的GDPR合规本地RAG](/power-local-llm/local-rag-for-private-business-data) — 适用于任何受监管RAG部署（包括支持场景）的合规控制集（审计日志、DPIA、部署模式）。',
           '[面向商业文档的最佳RAG工具](/power-local-llm/best-rag-tools-for-business-documents-2026) — 用于将回答锚定在文档语料库中的自托管RAG平台对比。',
           '[企业LLM推理服务器：vLLM vs TGI vs NVIDIA NIM vs Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — 支撑并发多坐席支持部署的服务基础设施决策。',
@@ -2702,6 +2709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
+          '[사내 챗봇 구축: IT 헬프데스크 & HR 봇](/ko/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — 이 가이드의 사내, 직원 대상 버전으로, 직원 단위 접근 제어, HR 데이터 민감도, SSO를 다루는 IT 헬프데스크 및 HR 챗봇 가이드입니다.',
           '[민감한 문서를 위한 GDPR 준수 로컬 RAG](/power-local-llm/local-rag-for-private-business-data) — 지원 업무를 포함해 규제 대상 RAG 배포 전반에 적용되는 통제 항목(감사 로깅, DPIA, 배포 패턴).',
           '[비즈니스 문서를 위한 최고의 RAG 도구](/power-local-llm/best-rag-tools-for-business-documents-2026) — 문서 코퍼스에 답변을 근거시키기 위한 셀프 호스팅 RAG 플랫폼 비교.',
           '[엔터프라이즈 LLM 추론 서버: vLLM vs TGI vs NVIDIA NIM vs Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — 동시 다중 상담원 지원 배포를 뒷받침하는 서빙 인프라 결정.',
@@ -2982,6 +2990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[روبوتات دردشة داخلية: الدعم التقني والموارد البشرية](/ar/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — النظير الداخلي الموجّه للموظفين لهذا الدليل: روبوتات دردشة للدعم التقني والموارد البشرية مع تحكم بالوصول لكل موظف وحساسية بيانات الموارد البشرية وSSO.',
           '[RAG محلي متوافق مع اللائحة العامة لحماية البيانات للمستندات الحساسة](/power-local-llm/local-rag-for-private-business-data) — مجموعة ضوابط الامتثال (تسجيل التدقيق، تقييم أثر حماية البيانات، أنماط النشر) التي تنطبق على أي نشر RAG خاضع للتنظيم، بما في ذلك الدعم.',
           '[أفضل أدوات RAG لمستندات الأعمال](/power-local-llm/best-rag-tools-for-business-documents-2026) — مقارنة منصات RAG المستضافة ذاتيًا لترسيخ الإجابات في مجموعة مستندات.',
           '[خوادم استدلال نماذج اللغة للمؤسسات: vLLM مقابل TGI مقابل NVIDIA NIM مقابل Ollama](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — قرار بنية التقديم خلف نشر دعم متزامن لعدة موظفين.',

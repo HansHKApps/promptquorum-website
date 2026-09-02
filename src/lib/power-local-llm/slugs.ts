@@ -133,4 +133,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',
+  // Enterprise/B2B — internal IT helpdesk & HR chatbots — 2026-09-03
+  'enterprise-chatbot-deployment-helpdesk-hr-bots': 'enterprise-chatbot-deployment-helpdesk-hr-bots',
 }

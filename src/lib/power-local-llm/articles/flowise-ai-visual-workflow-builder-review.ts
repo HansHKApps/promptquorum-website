@@ -235,6 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Enterprise Chatbot Deployment: Internal Helpdesk & HR Bots](/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — the internal-facing deployment pattern for IT helpdesk and HR bots, including how Flowise fits alongside Dify and Open WebUI.',
           '[Langflow Review 2026: The IBM-Owned Alternative to Flowise](/power-local-llm/langflow-visual-ai-orchestration-review) — a still-maintained, Python-based visual builder worth evaluating if you are migrating off Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — actively maintained RAG tools compared for self-hosted use.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
@@ -478,6 +479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Interne Chatbots: IT-Helpdesk & HR-Bots](/de/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — das interne Deployment-Muster für IT-Helpdesk- und HR-Bots, inklusive der Rolle von Flowise neben Dify und Open WebUI.',
           '[Langflow 2026: Visueller LangChain-Builder unter IBM, MIT-Lizenz](/de/power-local-llm/langflow-visual-ai-orchestration-review) — ein weiterhin gepflegter, Python-basierter visueller Builder für alle, die von Flowise migrieren.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — aktiv gepflegte RAG-Tools für Self-Hosting im Vergleich.',
           '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
@@ -719,6 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
+          '[Chatbots internes : helpdesk IT & bots RH](/fr/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — le schéma de déploiement interne pour les bots helpdesk IT et RH, avec la place de Flowise aux côtés de Dify et Open WebUI.',
           '[Langflow en 2026 : guide du constructeur visuel LangChain racheté par IBM](/fr/power-local-llm/langflow-visual-ai-orchestration-review) — un constructeur visuel Python toujours maintenu, à envisager pour migrer depuis Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparatif d\'outils RAG activement maintenus pour l\'auto-hébergement.',
           '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel cet article appartient.',
@@ -960,6 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Chatbots internos: helpdesk de IT y bots de RR. HH.](/es/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — el patrón de despliegue interno para bots de helpdesk de IT y RR. HH., con el papel de Flowise junto a Dify y Open WebUI.',
           '[Langflow en 2026: constructor visual de LangChain con licencia MIT (ahora de IBM)](/es/power-local-llm/langflow-visual-ai-orchestration-review) — un constructor visual en Python aún mantenido, a evaluar si migras desde Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparativa de herramientas RAG activamente mantenidas para autoalojamiento.',
           '[Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
@@ -1201,6 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[内部聊天机器人部署:IT帮助台与HR机器人](/zh/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — IT帮助台与HR机器人的内部部署模式,以及Flowise与Dify、Open WebUI相比的定位。',
           '[Langflow 2026：LangChain可視化ビルダー（MITライセンス・IBM傘下）](/ja/power-local-llm/langflow-visual-ai-orchestration-review) — Flowiseから移行する場合に検討すべき、今も開発が続くPythonベースの可視化ビルダー。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI（RAG比較）](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — セルフホスト向けに、積極的にメンテナンスされているRAGツールを比較。',
           '[ローカルLLMソフトウェア一覧](/ja/power-local-llm/local-llm-software-directory-2026) — この記事が属する、ローカルAIツールの全カタログ。',
@@ -1442,6 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[Chatbots internos: helpdesk de TI e bots de RH](/pt/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — o padrão de implantação interna pra bots de helpdesk de TI e RH, com o papel do Flowise ao lado do Dify e do Open WebUI.',
           '[Langflow 2026：MIT许可开源可视化LangChain/RAG构建工具（IBM旗下）](/zh/power-local-llm/langflow-visual-ai-orchestration-review) — 一款仍在积极维护的Python可视化构建工具，适合从Flowise迁移的用户评估。',
           '[AnythingLLM 与 PrivateGPT、Open WebUI 的 RAG 对比](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 比较适合自托管、持续维护的 RAG 工具。',
           '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的完整本地 AI 工具目录。',
@@ -1683,6 +1689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[روبوتات دردشة داخلية: الدعم التقني والموارد البشرية](/ar/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — نمط النشر الداخلي لروبوتات الدعم التقني والموارد البشرية، ودور Flowise إلى جانب Dify وOpen WebUI.',
           '[Langflow em 2026: construtor visual de agentes de IA agora da IBM](/pt/power-local-llm/langflow-visual-ai-orchestration-review) — um construtor visual em Python ainda mantido, para avaliar ao migrar do Flowise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparação de ferramentas RAG ativamente mantidas para auto-hospedagem.',
           '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
@@ -1924,6 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[사내 챗봇 구축: IT 헬프데스크 & HR 봇](/ko/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — IT 헬프데스크 및 HR 봇의 사내 배포 패턴과, Dify·Open WebUI와 나란히 놓인 Flowise의 역할.',
           '[Langflow في 2026: أداة بصرية مفتوحة المصدر أصبحت ملكًا لـ IBM](/ar/power-local-llm/langflow-visual-ai-orchestration-review) — أداة بصرية بلغة Python ما زالت تُصان، تستحق التقييم عند الهجرة من Flowise.',
           '[مقارنة AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـ RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة لأدوات RAG مُصانة بنشاط للاستضافة الذاتية.',
           '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',

@@ -247,6 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Enterprise Chatbot Deployment: Internal Helpdesk & HR Bots](/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — the internal-facing deployment pattern for IT helpdesk and HR bots built on Dify, with the access-control layer this use case needs.',
           '[Flowise Review: Visual Workflow Builder](/power-local-llm/flowise-ai-visual-workflow-builder-review) — a lighter-weight visual builder compared against Dify\'s all-in-one platform.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG-focused tools if you don\'t need Dify\'s full workflow/agent scope.',
           '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory-2026) — the full catalog of local AI tools this article belongs to.',
@@ -502,6 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Interne Chatbots: IT-Helpdesk & HR-Bots](/de/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — das interne Deployment-Muster für IT-Helpdesk- und HR-Bots auf Dify, inklusive der dafür nötigen Zugriffskontrollschicht.',
           '[Flowise Test: Visueller Workflow-Builder](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — ein leichtgewichtigerer visueller Builder im Vergleich zu Difys All-in-one-Plattform.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG-fokussierte Tools, falls Sie nicht Difys vollen Workflow-/Agenten-Umfang brauchen.',
           '[Local-LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory-2026) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
@@ -755,6 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
+          '[Chatbots internes : helpdesk IT & bots RH](/fr/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — le schéma de déploiement interne pour les bots helpdesk IT et RH construits sur Dify, avec la couche de contrôle d\'accès nécessaire.',
           '[Avis Flowise : constructeur de workflows visuel](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review) — un constructeur visuel plus léger, comparé à la plateforme tout-en-un de Dify.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — des outils centrés RAG si vous n\'avez pas besoin du périmètre complet workflow/agents de Dify.',
           '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory-2026) — le catalogue complet d\'outils d\'IA locale auquel cet article appartient.',
@@ -1008,6 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Chatbots internos: helpdesk de IT y bots de RR. HH.](/es/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — el patrón de despliegue interno para bots de helpdesk de IT y RR. HH. construidos sobre Dify, con la capa de control de acceso necesaria.',
           '[Reseña de Flowise: constructor visual de workflows](/es/power-local-llm/flowise-ai-visual-workflow-builder-review) — un constructor visual más ligero, comparado con la plataforma todo en uno de Dify.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — herramientas centradas en RAG si no necesitas el alcance completo de workflows/agentes de Dify.',
           '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory-2026) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
@@ -1261,6 +1265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[روبوتات دردشة داخلية: الدعم التقني والموارد البشرية](/ar/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — نمط النشر الداخلي لروبوتات الدعم التقني والموارد البشرية المبنية على Dify، مع طبقة التحكم بالوصول اللازمة.',
           '[Análise do Flowise: construtor visual de workflows](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review) — um construtor visual mais leve, comparado à plataforma tudo em um do Dify.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — ferramentas focadas em RAG se você não precisa do escopo completo de workflows/agentes do Dify.',
           '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory-2026) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
@@ -1514,6 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[内部聊天机器人部署:IT帮助台与HR机器人](/zh/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — 基于Dify构建IT帮助台和HR机器人的内部部署模式,以及所需的访问控制层。',
           '[مراجعة Flowise: أداة بناء سير عمل مرئية](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review) — أداة بناء مرئية أخف، مقارنة بمنصة Dify الشاملة.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـ RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — أدوات مركّزة على RAG إذا لم تكن بحاجة إلى نطاق سير العمل/الوكلاء الكامل في Dify.',
           '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory-2026) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
@@ -1767,6 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[社内チャットボット構築:ITヘルプデスク・人事Bot](/ja/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — Dify上に構築するITヘルプデスク・人事Bot向けの社内展開パターンと、その際に必要なアクセス制御層。',
           '[Flowise 评测：可视化工作流构建器](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review) — 与 Dify 一体化平台相比更轻量的可视化构建器。',
           '[AnythingLLM 对比 PrivateGPT 对比 Open WebUI 的 RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 如果不需要 Dify 完整的工作流/智能体范围，可考虑聚焦 RAG 的工具。',
           '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory-2026) — 本文所属的本地 AI 工具完整目录。',
@@ -2020,6 +2027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[사내 챗봇 구축: IT 헬프데스크 & HR 봇](/ko/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — Dify로 구축하는 IT 헬프데스크 및 HR 봇의 사내 배포 패턴과 필요한 접근 제어 계층.',
           '[Flowiseレビュー：ビジュアルワークフロービルダー](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review) — Difyのオールインワン基盤と比較した、より軽量なビジュアルビルダー。',
           '[AnythingLLM vs PrivateGPT vs Open WebUI（RAG比較）](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — Difyの完全なワークフロー/エージェント範囲が不要な場合のRAG特化ツール。',
           '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory-2026) — 本記事が属するローカルAIツールの全カタログ。',

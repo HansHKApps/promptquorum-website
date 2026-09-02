@@ -144,6 +144,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'khoj-ai-second-brain-review',
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise',
+  // Enterprise/B2B — internal IT helpdesk & HR chatbots — 2026-09-03
+  'enterprise-chatbot-deployment-helpdesk-hr-bots',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

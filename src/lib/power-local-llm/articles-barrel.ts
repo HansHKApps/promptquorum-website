@@ -7,6 +7,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_best_local_llms_customer_support_call_centers_enterprise } from './articles/best-local-llms-customer-support-call-centers-enterprise'
+import { article as a_enterprise_chatbot_deployment_helpdesk_hr_bots } from './articles/enterprise-chatbot-deployment-helpdesk-hr-bots'
 import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './articles/anythingllm-vs-privategpt-vs-openwebui-rag'
 import { article as a_autonomous_local_agents_actually_work } from './articles/autonomous-local-agents-actually-work'
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
@@ -188,4 +189,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'ragflow-document-understanding-rag-review':         a_ragflow_document_understanding_rag_review,
   'khoj-ai-second-brain-review':                       a_khoj_ai_second_brain_review,
   'best-local-llms-customer-support-call-centers-enterprise': a_best_local_llms_customer_support_call_centers_enterprise,
+  'enterprise-chatbot-deployment-helpdesk-hr-bots': a_enterprise_chatbot_deployment_helpdesk_hr_bots,
 }
