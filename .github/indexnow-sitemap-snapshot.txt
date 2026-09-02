@@ -268,6 +268,9 @@ https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-li
 https://www.promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
+https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
+https://www.promptquorum.com/power-local-llm/langflow-visual-ai-orchestration-review
+https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance
 https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026
@@ -296,13 +299,16 @@ https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison-2026
 https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026
+https://www.promptquorum.com/power-local-llm/quivr-self-hosted-knowledge-assistant-review
 https://www.promptquorum.com/power-local-llm/qwen-local-deployment-complete-guide-2026
+https://www.promptquorum.com/power-local-llm/ragflow-document-understanding-rag-review
 https://www.promptquorum.com/power-local-llm/replace-github-copilot-with-local-llm
 https://www.promptquorum.com/power-local-llm/replace-grammarly-notion-ai-with-local
 https://www.promptquorum.com/power-local-llm/replace-zapier-with-local-ai-agents
 https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent
 https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
 https://www.promptquorum.com/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay
+https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
 https://www.promptquorum.com/power-local-llm/voice-ai-writers-cloud-vs-local
 https://www.promptquorum.com/power-local-llm/voice-assistant-local-mobile-offline
