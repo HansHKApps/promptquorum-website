@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 186,
+    "totalCount": 187,
     "capped": true
   },
   "llama.cpp": {
@@ -1801,6 +1801,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -1808,7 +1816,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Flowise": {
@@ -1839,6 +1847,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -1854,7 +1870,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "Langflow": {
@@ -1877,6 +1893,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -1884,7 +1908,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LlamaIndex": {
@@ -1910,6 +1934,14 @@
         "slug": "haystack-deepset-rag-framework-review",
         "title": "Haystack Review 2026: deepset's RAG Framework vs. LangChain and LlamaIndex",
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       },
@@ -1960,17 +1992,9 @@
         "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database-2026",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "Haystack": {
@@ -1982,6 +2006,14 @@
         "url": "/power-local-llm/haystack-deepset-rag-framework-review",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
       },
       {
         "cluster": "local-llms",
@@ -2016,7 +2048,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "RAGFlow": {
@@ -2068,6 +2100,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "llamaindex-rag-framework-review",
+        "title": "LlamaIndex Review 2026: Code-First RAG Framework, Not a No-Code Builder",
+        "url": "/power-local-llm/llamaindex-rag-framework-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-llm-observability-tools-2026",
         "title": "Best LLM Observability Tool 2026: Langfuse vs LangSmith vs Helicone",
@@ -2106,17 +2146,9 @@
         "url": "/power-local-llm/best-rag-tools-for-business-documents-2026",
         "dateModified": "2026-08-26",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-vector-database-2026",
-        "title": "Best Vector Database 2026: Qdrant vs Pinecone vs Weaviate vs Chroma",
-        "url": "/local-llms/best-vector-database-2026",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "CrewAI": {
