@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 188,
+    "totalCount": 189,
     "capped": true
   },
   "llama.cpp": {
@@ -725,6 +725,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-embedding-models-local-rag-2026",
         "title": "Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)",
         "url": "/power-local-llm/best-embedding-models-local-rag-2026",
@@ -794,17 +802,9 @@
         "url": "/power-local-llm/dify-ai-workflow-builder-review",
         "dateModified": "2026-09-02",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "flowise-ai-visual-workflow-builder-review",
-        "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
-        "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
-        "dateModified": "2026-09-02",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "Msty": {
@@ -1012,7 +1012,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 46,
+    "totalCount": 47,
     "capped": true
   },
   "LibreChat": {
@@ -1755,23 +1755,67 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "build-local-voice-assistant-2026",
         "title": "Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)",
         "url": "/power-local-llm/build-local-voice-assistant-2026",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
+      }
+    ],
+    "totalCount": 15,
+    "capped": true
+  },
+  "Quivr": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
+        "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-multimodal-pipeline-voice-vision-text",
-        "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
-        "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
-        "dateModified": "2026-08-28",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-08-27",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "chat-with-1000-pdfs-locally",
+        "title": "Chat With 1000+ PDFs Locally: Scaling RAG Beyond Toy Examples",
+        "url": "/power-local-llm/chat-with-1000-pdfs-locally",
+        "dateModified": "2026-08-27",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
-    "capped": true
+    "totalCount": 3,
+    "capped": false
+  },
+  "Khoj": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "quivr-self-hosted-knowledge-assistant-review",
+        "title": "Quivr Review 2026: Is the Open-Source \"Second Brain\" Still Alive?",
+        "url": "/power-local-llm/quivr-self-hosted-knowledge-assistant-review",
+        "dateModified": "2026-09-02",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   },
   "Dify": {
     "articles": [

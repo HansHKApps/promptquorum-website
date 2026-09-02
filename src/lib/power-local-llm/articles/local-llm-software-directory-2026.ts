@@ -505,6 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Quivr Review: Is the Open-Source "Second Brain" Still Alive?](/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — a maintenance-status check on the Quivr RAG library — no main-branch commits since mid-2025.',
           '[llama.cpp vs Ollama vs vLLM](/local-llms/llamacpp-vs-ollama-vs-vllm) — runtime layer, head-to-head.',
           '[LM Studio vs Jan vs GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — desktop GUI showdown.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG layer comparison.',
@@ -958,6 +959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
+          '[Quivr Test: Ist das Open-Source-„zweite Gehirn" noch am Leben?](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — ein Pflegestatus-Check zur Quivr-RAG-Bibliothek — kein Commit im Hauptzweig seit Mitte 2025.',
           '[llama.cpp vs Ollama vs vLLM](/de/local-llms/llamacpp-vs-ollama-vs-vllm) — Laufzeitumgebungen im direkten Vergleich.',
           '[LM Studio vs Jan vs GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — Desktop-GUI-Vergleich.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG-Schicht im Vergleich.',
@@ -1401,6 +1403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Quivr en 2026 : une bibliothèque Python, plus une appli à héberger](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — un état des lieux de la bibliothèque RAG Quivr — aucun commit sur la branche principale depuis mi-2025.',
           '[llama.cpp vs Ollama vs vLLM](/fr/local-llms/llamacpp-vs-ollama-vs-vllm) — comparatif de la couche runtime.',
           '[LM Studio vs Jan vs GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparatif des applications bureau.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparatif de la couche RAG.',
@@ -1844,6 +1847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
+          '[Quivr（quivr-core）2026年版レビュー](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — Quivr RAGライブラリのメンテナンス状況チェック — mainブランチは2025年半ば以降コミットなし。',
           '[llama.cpp vs Ollama vs vLLM](/ja/local-llms/llamacpp-vs-ollama-vs-vllm) — ランタイム層の直接比較。',
           '[LM Studio vs Jan vs GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — デスクトップGUIの比較。',
           '[AnythingLLM vs PrivateGPT vs Open WebUI（RAG比較）](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG層の比較。',
@@ -2287,6 +2291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[Quivr 2026评测：还在维护吗？](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — 对 Quivr RAG 库维护状态的核查——主分支自2025年年中起无提交。',
           '[llama.cpp vs Ollama vs vLLM](/zh/local-llms/llamacpp-vs-ollama-vs-vllm) — 运行时层横向对比。',
           '[LM Studio vs Jan vs GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 桌面GUI对比。',
           '[AnythingLLM vs PrivateGPT vs Open WebUI（RAG对比）](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG层对比。',
@@ -2730,6 +2735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Quivr en 2026: ¿sigue mantenido?](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — una revisión del estado de mantenimiento de la librería RAG Quivr — sin commits en la rama principal desde mediados de 2025.',
           '[llama.cpp vs Ollama vs vLLM](/es/local-llms/llamacpp-vs-ollama-vs-vllm) — capa de runtime, cara a cara.',
           '[LM Studio vs Jan vs GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparativa de GUI de escritorio.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparativa de la capa RAG.',
@@ -3187,6 +3193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Quivr em 2026: ainda é mantido?](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — uma checagem do status de manutenção da biblioteca RAG Quivr — sem commits na branch principal desde meados de 2025.',
           '[llama.cpp vs Ollama vs vLLM](/pt/local-llms/llamacpp-vs-ollama-vs-vllm) — camada de runtime, frente a frente.',
           '[LM Studio vs Jan vs GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — comparativo de GUI de desktop.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — comparativo da camada RAG.',
@@ -3643,6 +3650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[مراجعة Quivr 2026: هل ما زال مُصانًا؟](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — فحص حالة صيانة مكتبة Quivr لـ RAG — لا التزامات على الفرع الرئيسي منذ منتصف 2025.',
           '[llama.cpp مقابل Ollama مقابل vLLM](/ar/local-llms/llamacpp-vs-ollama-vs-vllm) — طبقة runtime، وجهاً لوجه.',
           '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — مقارنة واجهة سطح المكتب.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـRAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة طبقة RAG.',
@@ -4104,6 +4112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
+          '[Quivr 2026 리뷰: 아직 관리되나?](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — Quivr RAG 라이브러리의 유지관리 상태 점검 — 2025년 중반 이후 메인 브랜치 커밋 없음.',
           '[llama.cpp vs Ollama vs vLLM](/ko/local-llms/llamacpp-vs-ollama-vs-vllm) — 런타임 레이어, 직접 비교.',
           '[LM Studio vs Jan vs GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 데스크톱 GUI 비교.',
           '[RAG용 AnythingLLM vs PrivateGPT vs Open WebUI](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — RAG 레이어 비교.',

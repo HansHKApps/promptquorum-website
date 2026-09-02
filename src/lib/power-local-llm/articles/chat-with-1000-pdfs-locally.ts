@@ -527,6 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Quivr Review: Is the Open-Source "Second Brain" Still Alive?](/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — a maintenance-status check on the Quivr RAG library — no main-branch commits since mid-2025.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — base context for choosing the desktop RAG platform before scaling.',
           '[Best Embedding Models for Local RAG in 2026](/power-local-llm/best-embedding-models-local-rag-2026) — embedder choice is the single most consequential decision before indexing 10,000 documents.',
           '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — natural escalation when personal-scale RAG meets enterprise compliance requirements.',
@@ -1120,6 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
+          '[Quivr Test: Ist das Open-Source-„zweite Gehirn" noch am Leben?](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — ein Pflegestatus-Check zur Quivr-RAG-Bibliothek — kein Commit im Hauptzweig seit Mitte 2025.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI: Best Local RAG in 2026](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) – Basis-Kontext zum Wählen der Desktop-RAG-Plattform vor Skalierung.',
           '[Best Embedding Models for Local RAG in 2026](/de/power-local-llm/best-embedding-models-local-rag-2026) – Embedding-Wahl ist die einzelne wichtigste Entscheidung vor Indexierung von 10.000 Dokumenten.',
           '[Local RAG for Private Business Data](/de/power-local-llm/local-rag-for-private-business-data) – natürliche Eskalation, wenn persönliche-Skalen-RAG Enterprise-Compliance-Anforderungen trifft.',
@@ -1714,6 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Quivr en 2026 : une bibliothèque Python, plus une appli à héberger](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — un état des lieux de la bibliothèque RAG Quivr — aucun commit sur la branche principale depuis mi-2025.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI : Meilleur RAG local en 2026](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) – contexte base pour choisir plateforme RAG desktop avant évolution.',
           '[Meilleurs modèles embedding pour RAG local en 2026](/fr/power-local-llm/best-embedding-models-local-rag-2026) – choix embedder décision seule plus importante avant indexation 10.000 documents.',
           '[RAG local pour données business privées](/fr/power-local-llm/local-rag-for-private-business-data) – escalade naturelle quand RAG scale-personnel rencontre exigences compliance enterprise.',
@@ -2308,6 +2311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連資料',
         items: [
+          '[Quivr（quivr-core）2026年版レビュー](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — Quivr RAGライブラリのメンテナンス状況チェック — mainブランチは2025年半ば以降コミットなし。',
           '[AnythingLLM vs PrivateGPT vs Open WebUI : 2026年ベストローカルRAG](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) – スケーリング前に desktop RAG platform 選択のベース文脈。',
           '[2026年ローカルRAGベスト埋め込みモデル](/ja/power-local-llm/best-embedding-models-local-rag-2026) – Embedder 選択は10,000ドキュメント索引前の最単独重要決定。',
           '[Private ビジネスデータ向けローカルRAG](/ja/power-local-llm/local-rag-for-private-business-data) – personal-scale RAG がenterprise compliance 要件に出会う自然エスカレーション。',
@@ -2901,6 +2905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[Quivr 2026评测：还在维护吗？](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — 对 Quivr RAG 库维护状态的核查——主分支自2025年年中起无提交。',
           '[AnythingLLM vs PrivateGPT vs Open WebUI：2026年本地RAG选型](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 在扩展之前，先了解如何选择桌面端RAG平台的基础背景。',
           '[2026年本地RAG最佳Embedding模型](/zh/power-local-llm/best-embedding-models-local-rag-2026) — 在索引10000个文档之前，embedder的选择是最关键的一步决策。',
           '[面向私有企业数据的本地RAG](/zh/power-local-llm/local-rag-for-private-business-data) — 当个人规模的RAG遇上企业合规要求时的自然升级路径。',
@@ -3494,6 +3499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Quivr en 2026: ¿sigue mantenido?](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — una revisión del estado de mantenimiento de la librería RAG Quivr — sin commits en la rama principal desde mediados de 2025.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — contexto base para elegir la plataforma RAG de escritorio antes de escalar.',
           '[Los mejores modelos de embedding para RAG local en 2026](/es/power-local-llm/best-embedding-models-local-rag-2026) — la elección del embedder es la decisión individual más importante antes de indexar 10.000 documentos.',
           '[RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data) — escalada natural cuando el RAG a escala personal se encuentra con requisitos de cumplimiento empresarial.',
@@ -4060,6 +4066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽기',
         items: [
+          '[Quivr 2026 리뷰: 아직 관리되나?](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — Quivr RAG 라이브러리의 유지관리 상태 점검 — 2025년 중반 이후 메인 브랜치 커밋 없음.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 확장하기 전에 데스크톱 RAG 플랫폼을 선택하기 위한 기본 컨텍스트.',
           '[2026년 로컬 RAG를 위한 최고의 임베딩 모델](/ko/power-local-llm/best-embedding-models-local-rag-2026) — 임베더 선택은 10,000개 문서를 인덱싱하기 전에 가장 중요한 단일 결정입니다.',
           '[프라이빗 기업 데이터를 위한 로컬 RAG](/ko/power-local-llm/local-rag-for-private-business-data) — 개인 규모 RAG가 기업 규정 준수 요구사항을 만날 때의 자연스러운 확장.',
@@ -4648,6 +4655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Quivr em 2026: ainda é mantido?](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — uma checagem do status de manutenção da biblioteca RAG Quivr — sem commits na branch principal desde meados de 2025.',
           '[AnythingLLM vs PrivateGPT vs Open WebUI: O melhor RAG local em 2026](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — contexto base para escolher a plataforma RAG de desktop antes de escalar.',
           '[Os melhores modelos de embedding para RAG local em 2026](/pt/power-local-llm/best-embedding-models-local-rag-2026) — a escolha do embedder é a decisão individual mais importante antes de indexar 10.000 documentos.',
           '[RAG local para dados empresariais privados](/pt/power-local-llm/local-rag-for-private-business-data) — escalonamento natural quando o RAG em escala pessoal encontra requisitos de conformidade empresarial.',
@@ -5238,6 +5246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[مراجعة Quivr 2026: هل ما زال مُصانًا؟](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — فحص حالة صيانة مكتبة Quivr لـ RAG — لا التزامات على الفرع الرئيسي منذ منتصف 2025.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI: أفضل RAG محلي في 2026](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — السياق الأساسي لاختيار منصة RAG لسطح المكتب قبل التوسع.',
           '[أفضل نماذج التضمين لـ RAG المحلي في 2026](/ar/power-local-llm/best-embedding-models-local-rag-2026) — اختيار أداة التضمين هو القرار الفردي الأهم قبل فهرسة 10,000 مستند.',
           '[RAG محلي للبيانات التجارية الخاصة](/ar/power-local-llm/local-rag-for-private-business-data) — التوسع الطبيعي حين يلتقي RAG على نطاق شخصي بمتطلبات امتثال مؤسسية.',
