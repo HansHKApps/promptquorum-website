@@ -388,6 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**AnimateDiff**', 'Link': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', 'Description': 'Video generation from Stable Diffusion text prompts', 'License': 'Apache 2.0', 'Stars': '12.2k'},
           { 'Tool': '**DALL-E 3 Local** (via Ollama vision)', 'Link': '[ollama.com](https://ollama.com)', 'Description': 'Local image generation via compatible models in Ollama', 'License': 'Various' },
         ],
+        note: 'Deeper guide: [AnimateDiff Guide 2026: Animate Any Stable Diffusion Model](/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',

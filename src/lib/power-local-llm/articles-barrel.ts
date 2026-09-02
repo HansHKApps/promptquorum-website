@@ -77,6 +77,7 @@ import { article as a_deepseek_r1_vs_distills_explained_2026 } from './articles/
 import { article as a_deepseek_offline_china_self_hosted_2026 } from './articles/deepseek-offline-china-self-hosted-2026'
 import { article as a_local_ai_video_generation_vs_cloud } from './articles/local-ai-video-generation-vs-cloud'
 import { article as a_local_ai_image_generation_vs_cloud } from './articles/local-ai-image-generation-vs-cloud'
+import { article as a_animatediff_video_generation_guide_2026 } from './articles/animatediff-video-generation-guide-2026'
 import { article as a_loci_ai_review_offline_local_ai } from './articles/loci-ai-review-offline-local-ai'
 import { article as a_backyard_ai_review_local_roleplay_2026 } from './articles/backyard-ai-review-local-roleplay-2026'
 import { article as a_voice_ai_writers_cloud_vs_local } from './articles/voice-ai-writers-cloud-vs-local'
@@ -178,6 +179,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud':                a_local_ai_video_generation_vs_cloud,
   'local-ai-image-generation-vs-cloud':                a_local_ai_image_generation_vs_cloud,
+  'animatediff-video-generation-guide-2026':           a_animatediff_video_generation_guide_2026,
   'best-web-hosting-2026':                             a_best_web_hosting_2026,
   'flowise-ai-visual-workflow-builder-review':         a_flowise_ai_visual_workflow_builder_review,
   'haystack-deepset-rag-framework-review':             a_haystack_deepset_rag_framework_review,
