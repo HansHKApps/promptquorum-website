@@ -3448,17 +3448,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'دليل أكثر تفصيلاً: [SillyTavern مقابل Agnai مقابل RisuAI](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
       },
-      codingAssistants: {
-        id: 'coding-assistants',
-        title: '4. مساعدو الكود وتكاملات IDE',
+      ideEditors: {
+        id: 'ide-editors',
+        title: '4a. IDE ومحررات الكود',
         itemHeadings: true,
         content:
-          '**تربط مساعدو الكود نموذجاً لغوياً محلياً بمحررك أو طرفيتك عبر APIs متوافقة مع OpenAI.** يعتمد الاختيار أساساً على سير العمل: الإكمال التلقائي في المحرر (Continue.dev)، أو تعديلات العميل المستقل (Cline وOpenHands)، أو تعديلات diff أصلية لـgit في الطرفية (Aider). تعمل الأنماط الثلاثة مع أي runtime يدعم بروتوكول OpenAI Chat Completions — Ollama هو الـbackend الأكثر شيوعاً في 2026.',
+          '**تربط تكاملات IDE ومحررات الكود القائمة على الذكاء الاصطناعي نموذجاً لغوياً محلياً بمحررك عبر APIs متوافقة مع OpenAI.** يعتمد الاختيار على سير العمل: الإكمال التلقائي في المحرر (Continue.dev وTwinny)، أو تعديلات العميل الذكي المستقل (Cline وOpenHands)، أو بيئات IDE كاملة (PearAI وWindsurf). تعمل جميعها مع أي runtime يدعم بروتوكول OpenAI Chat Completions — Ollama هو الـbackend الأكثر شيوعاً في 2026.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
         rows: [
           { 'الأداة': '**Continue.dev**', 'الرابط': '[continue.dev](https://continue.dev)', 'الوصف': 'إكمال تلقائي ودردشة في VS Code وJetBrains مع النماذج المحلية', 'الترخيص': 'Apache 2.0' },
-          { 'الأداة': '**Aider**', 'الرابط': '[aider.chat](https://aider.chat)', 'الوصف': 'مبرمج مزدوج في الطرفية مع دعم تحرير ملفات متعددة', 'الترخيص': 'Apache 2.0' },
-          { 'الأداة': '**Cline**', 'الرابط': '[cline.bot](https://cline.bot)', 'الوصف': 'عميل كود مستقل لـVS Code', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**Cline**', 'الرابط': '[cline.bot](https://cline.bot)', 'الوصف': 'عميل ترميز مستقل لـVS Code مع تعديل الملفات', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**PearAI**', 'الرابط': '[github.com/trypear/pearai-app](https://github.com/trypear/pearai-app)', 'الوصف': 'محرر كود ذكاء اصطناعي مفتوح المصدر مع دعم النماذج المحلية', 'الترخيص': 'Apache 2.0', 'النجوم': '706'},
+          { 'الأداة': '**Windsurf**', 'الرابط': '[codeium.com/windsurf](https://codeium.com/windsurf)', 'الوصف': 'IDE يركز على الذكاء الاصطناعي مع تكامل النماذج المحلية', 'الترخيص': 'ملكية خاصة' },
+          { 'الأداة': '**Sourcegraph Cody**', 'الرابط': '[sourcegraph.com/cody](https://sourcegraph.com/cody)', 'الوصف': 'مساعد كود بالذكاء الاصطناعي مع دعم النماذج المحلية', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**Tabby**', 'الرابط': '[tabby.tabbyml.com](https://tabby.tabbyml.com)', 'الوصف': 'بديل مستضاف ذاتياً لـGitHub Copilot', 'الترخيص': 'Apache 2.0' },
           { 'الأداة': '**CodeGPT**', 'الرابط': '[codegpt.co](https://codegpt.co)', 'الوصف': 'تكاملات IDE لمحررات متعددة', 'الترخيص': 'MIT' },
           { 'الأداة': '**OpenHands**', 'الرابط': '[github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)', 'الوصف': 'عميل مطور برمجيات ذكاء اصطناعي (OpenDevin سابقاً)', 'الترخيص': 'MIT', 'النجوم': '86k'},
@@ -3476,7 +3478,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-llm-software-directory-2026-coding-patterns-es.svg',
-        imageCaption: '3 أنماط للكود مع نموذج لغوي محلي: Continue.dev للإكمال التلقائي المضمَّن في VS Code وJetBrains، Cline للتعديلات المستقلة للعميل الذكي، وAider لـdiffs الطرفية أصلية لـgit — كلها تتصل بـOllama عبر API متوافقة مع OpenAI.',
+        imageCaption: 'تكاملات IDE: Continue.dev للإكمال التلقائي المضمَّن في VS Code وJetBrains، Cline لتعديلات الملفات بواسطة عميل ذكي مستقل، وPearAI وWindsurf لبيئات IDE كاملة تركز على الذكاء الاصطناعي — كلها تتصل بـOllama عبر API متوافقة مع OpenAI.',
+      },
+      terminalTools: {
+        id: 'terminal-tools',
+        title: '4b. أدوات الطرفية وCLI',
+        itemHeadings: true,
+        content:
+          '**تربط أدوات الطرفية وCLI نموذجاً لغوياً محلياً بصدفتك (shell) وسير عمل سطر الأوامر.** Aider هو الخيار الأنضج لتحرير الكود المتوافق أصلياً مع git في الطرفية؛ ShellGPT وaichat وtgpt تُغلِّف النماذج اللغوية المحلية لتوليد الأوامر والدردشة؛ Blackbox AI وDevhat يوسِّعان النمط نفسه. تعمل جميعها مع APIs متوافقة مع OpenAI — وجِّهها إلى Ollama العامل محلياً.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
+          { 'الأداة': '**Aider**', 'الرابط': '[aider.chat](https://aider.chat)', 'الوصف': 'مبرمج مزدوج في الطرفية مع فروقات متعددة الملفات متوافقة أصلياً مع git', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**ShellGPT**', 'الرابط': '[github.com/TheR1D/shell_gpt](https://github.com/TheR1D/shell_gpt)', 'الوصف': 'أداة CLI لتوليد أوامر الصدفة والدردشة', 'الترخيص': 'MIT', 'النجوم': '12.3k'},
+          { 'الأداة': '**aichat**', 'الرابط': '[github.com/sigoden/aichat](https://github.com/sigoden/aichat)', 'الوصف': 'دردشة ذكاء اصطناعي في الطرفية تدعم backends محلية متعددة', 'الترخيص': 'MIT', 'النجوم': '10.4k'},
+          { 'الأداة': '**tgpt**', 'الرابط': '[github.com/aandrew-me/tgpt](https://github.com/aandrew-me/tgpt)', 'الوصف': 'غلاف طرفية لدردشة النماذج اللغوية المحلية', 'الترخيص': 'GPL 3.0', 'النجوم': '3.3k'},
+          { 'الأداة': '**Blackbox AI (CLI)**', 'الرابط': '[github.com/Blackboxai/blackbox](https://github.com/Blackboxai/blackbox)', 'الوصف': 'توليد كود ودردشة من الطرفية عبر صدفتك', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**Devhat**', 'الرابط': '[github.com/ysnows/devhat](https://github.com/ysnows/devhat)', 'الوصف': 'أدوات مطورين CLI مع تكامل نموذج لغوي محلي', 'الترخيص': 'MIT' },
+        ],
       },
       ragSystems: {
         id: 'rag-systems',
@@ -3521,23 +3539,45 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         note: 'دليل أكثر تفصيلاً: [عملاء الذكاء الاصطناعي المحلية مع MCP](/ar/power-local-llm/local-ai-agents-with-mcp-2026)',
       },
-      voiceMultimodal: {
-        id: 'voice-multimodal',
-        title: '7. الصوت والكلام والوسائط المتعددة',
+      speechToText: {
+        id: 'speech-to-text',
+        title: '7a. تحويل الصوت إلى نص (STT)',
         itemHeadings: true,
         content:
-          '**تمتد stacks الصوت والوسائط المتعددة بنموذج لغوي محلي إلى ما هو أبعد من النص — كلام الإدخال (STT) وكلام الإخراج (TTS) والرؤية.** Whisper.cpp وfaster-whisper يمتلكان طبقة STT المحلية؛ Piper وCoqui يتشاركان طبقة TTS مع XTTS v2 يهيمن على استنساخ الصوت؛ LLaVA ونماذج رؤية Ollama تغطي الجانب البصري.',
+          '**تُحوِّل أنظمة تحويل الصوت إلى نص إدخال الصوت إلى نص باستخدام نماذج محلية دون اعتماد على السحابة.** يمتلك Whisper.cpp وfaster-whisper طبقة STT المحلية؛ كلاهما مبني على Whisper من OpenAI لكن محسَّن لكفاءة CPU/GPU. يشكِّلان النصف الخاص بالإدخال من المساعدات الصوتية العاملة بدون اتصال بالكامل.',
         columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
         rows: [
           { 'الأداة': '**Whisper.cpp**', 'الرابط': '[github.com/ggerganov/whisper.cpp](https://github.com/ggerganov/whisper.cpp)', 'الوصف': 'التعرف على الكلام محلياً، يعمل على CPU أو GPU', 'الترخيص': 'MIT', 'النجوم': '53.4k'},
-          { 'الأداة': '**faster-whisper**', 'الرابط': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'الوصف': 'نسخ Whisper السريع عبر CTranslate2', 'الترخيص': 'MIT', 'النجوم': '25.2k'},
+          { 'الأداة': '**faster-whisper**', 'الرابط': '[github.com/SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper)', 'الوصف': 'نسخ Whisper سريع عبر تكميم CTranslate2', 'الترخيص': 'MIT', 'النجوم': '25.2k'},
+        ],
+      },
+      textToSpeech: {
+        id: 'text-to-speech',
+        title: '7b. تحويل النص إلى صوت (TTS)',
+        itemHeadings: true,
+        content:
+          '**تُحوِّل أنظمة تحويل النص إلى صوت النص إلى صوت طبيعي باستخدام نماذج محلية دون اعتماد على السحابة.** يتشارك Piper وCoqui طبقة TTS بخيارات نماذج خفيفة متعددة؛ يتخصص XTTS v2 في استنساخ الصوت؛ يضيف Bark أصواتاً غير كلامية؛ يركز StyleTTS 2 على تركيب عالي الجودة. يشكِّلان النصف الخاص بالإخراج من المساعدات الصوتية العاملة بدون اتصال بالكامل.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
           { 'الأداة': '**Piper TTS**', 'الرابط': '[github.com/rhasspy/piper](https://github.com/rhasspy/piper)', 'الوصف': 'تحويل نص إلى كلام محلي خفيف الوزن', 'الترخيص': 'MIT', 'النجوم': '11.3k'},
           { 'الأداة': '**Coqui TTS**', 'الرابط': '[github.com/idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)', 'الوصف': 'تركيب صوت مفتوح المصدر مع خيارات نماذج متعددة', 'الترخيص': 'MPL 2.0', 'النجوم': '2.3k'},
           { 'الأداة': '**XTTS v2**', 'الرابط': '[huggingface.co/coqui/XTTS-v2](https://huggingface.co/coqui/XTTS-v2)', 'الوصف': 'استنساخ صوت مع دعم متعدد اللغات', 'الترخيص': 'CPML' },
           { 'الأداة': '**Bark**', 'الرابط': '[github.com/suno-ai/bark](https://github.com/suno-ai/bark)', 'الوصف': 'صوت توليدي مع أصوات غير كلامية', 'الترخيص': 'MIT', 'النجوم': '39.3k'},
           { 'الأداة': '**StyleTTS 2**', 'الرابط': '[github.com/yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)', 'الوصف': 'TTS عالية الجودة وطبيعية الصوت', 'الترخيص': 'MIT', 'النجوم': '6.3k'},
-          { 'الأداة': '**LLaVA**', 'الرابط': '[llava-vl.github.io](https://llava-vl.github.io)', 'الوصف': 'نموذج رؤية + لغة محلي', 'الترخيص': 'Apache 2.0' },
-          { 'الأداة': '**نماذج رؤية Ollama**', 'الرابط': '[ollama.com](https://ollama.com)', 'الوصف': 'رؤية محلية عبر Ollama (Llama 3.2 Vision وLlava وغيرها)', 'الترخيص': 'متعددة' },
+        ],
+        note: 'دليل أكثر تفصيلاً: [بناء مساعد صوتي محلي على هاتفك](/ar/power-local-llm/voice-assistant-local-mobile-offline)',
+      },
+      multimodalVision: {
+        id: 'multimodal-vision',
+        title: '7c. الوسائط المتعددة والرؤية',
+        itemHeadings: true,
+        content:
+          '**تُوسِّع أنظمة الوسائط المتعددة والرؤية النماذج اللغوية المحلية لمعالجة الصور والفيديو ومدخلات أخرى غير نصية.** LLaVA ونماذج رؤية Ollama (مثل Llama 3.2 Vision) هما الخياران الأساسيان لفهم الرؤية محلياً. يمكن دمجهما مع توليد النصوص لوصف الصور والأسئلة والأجوبة البصرية ومهام أخرى تجمع الرؤية واللغة.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
+          { 'الأداة': '**LLaVA**', 'الرابط': '[llava-vl.github.io](https://llava-vl.github.io)', 'الوصف': 'نموذج رؤية + لغة محلي لفهم الصور', 'الترخيص': 'Apache 2.0' },
+          { 'الأداة': '**نماذج رؤية Ollama**', 'الرابط': '[ollama.com](https://ollama.com)', 'الوصف': 'نماذج قادرة على الرؤية عبر Ollama (Llama 3.2 Vision وLLaVA وغيرها)', 'الترخيص': 'متعددة' },
+          { 'الأداة': '**Idefics**', 'الرابط': '[huggingface.co/HuggingFaceM4/idefics](https://huggingface.co/HuggingFaceM4/idefics)', 'الوصف': 'نموذج وسائط متعددة مفتوح المصدر للرؤية واللغة', 'الترخيص': 'Apache 2.0' },
         ],
         note: 'دليل أكثر تفصيلاً: [نماذج الرؤية المحلية 2026: LLaVA وLlama 3.2 Vision وQwen3-VL وإعداد Ollama متعدد الوسائط](/ar/power-local-llm/local-vision-models-llava-ollama-2026)',
       },
@@ -3561,6 +3601,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**AnythingLLM Mobile**', 'الرابط': '[anythingllm.com](https://anythingllm.com)', 'الوصف': 'وصول عن بُعد إلى مساحة عملك المحلية في AnythingLLM', 'الترخيص': 'MIT' },
         ],
         note: 'دليل أكثر تفصيلاً: [أفضل تطبيقات النماذج اللغوية المحلية لـiPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026)',
+      },
+      imageGeneration: {
+        id: 'image-generation',
+        title: '10. توليد الصور والذكاء الاصطناعي البصري',
+        itemHeadings: true,
+        content:
+          '**تُنشئ أنظمة توليد الصور والذكاء الاصطناعي البصري صوراً وفيديو ومحتوى بصرياً بالكامل على أجهزتك الخاصة دون أي استدعاء سحابي.** Stable Diffusion هو الأساس؛ ComfyUI وAUTOMATIC1111 WebUI هما الواجهتان الأكثر نضجاً؛ يركز Invoke AI على تجربة المستخدم؛ يبسِّط Fooocus وStableSwarmUI سير العمل؛ يضيف ControlNet تحكماً دقيقاً؛ يتولى Real-ESRGAN تكبير الصور؛ يولِّد AnimateDiff الفيديو. تعمل جميعها على بطاقات GPU الاستهلاكية بـ6-24 GB VRAM.',
+        columns: ['الأداة', 'الرابط', 'الوصف', 'الترخيص', 'النجوم'],
+        rows: [
+          { 'الأداة': '**Stable Diffusion**', 'الرابط': '[stability.ai/stable-diffusion](https://stability.ai/stable-diffusion)', 'الوصف': 'نموذج توليد صور تأسيسي مفتوح المصدر', 'الترخيص': 'OpenRAIL' },
+          { 'الأداة': '**ComfyUI**', 'الرابط': '[github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)', 'الوصف': 'واجهة قائمة على العُقد لسير عمل توليد صور متقدم — نشط، آخر إصدار قبل أسبوع', 'الترخيص': 'GPL 3.0', 'النجوم': '131.2k'},
+          { 'الأداة': '**AUTOMATIC1111 WebUI**', 'الرابط': '[github.com/AUTOMATIC1111/stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)', 'الوصف': 'الواجهة الأكثر شعبية لـStable Diffusion — لا إصدار منذ 2025 (19+ شهراً)', 'الترخيص': 'AGPL 3.0', 'النجوم': '164.8k'},
+          { 'الأداة': '**Invoke AI**', 'الرابط': '[invoke.ai](https://invoke.ai)', 'الوصف': 'توليد صور احترافي بواجهة سهلة الاستخدام — نشط، آخر إصدار قبل أسبوع', 'الترخيص': 'Apache 2.0', 'النجوم': '28.1k' },
+          { 'الأداة': '**Fooocus**', 'الرابط': '[github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus)', 'الوصف': 'واجهة Stable Diffusion مبسَّطة، إعداد بسيط — لا إصدار منذ 2024 (عامان+)', 'الترخيص': 'GPL 3.0', 'النجوم': '52.7k'},
+          { 'الأداة': '**StableSwarmUI**', 'الرابط': '[github.com/Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)', 'الوصف': 'واجهة Stability AI الرسمية بدعم نماذج متعددة — لا إصدار منذ 2024 (عامان+)', 'الترخيص': 'Apache 2.0', 'النجوم': '4.9k'},
+          { 'الأداة': '**ControlNet**', 'الرابط': '[github.com/lllyasviel/ControlNet](https://github.com/lllyasviel/ControlNet)', 'الوصف': 'تحكم دقيق في توليد الصور بتوجيه مكاني — لا إصدارات، آخر push في 2024 (عامان+)', 'الترخيص': 'Apache 2.0', 'النجوم': '34.1k'},
+          { 'الأداة': '**Real-ESRGAN**', 'الرابط': '[github.com/xinntao/Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN)', 'الوصف': 'مُكبِّر صور بالذكاء الاصطناعي لتحسين جودة الصور — لا إصدار منذ 2022 (4 أعوام+)', 'الترخيص': 'Apache 2.0', 'النجوم': '36.7k'},
+          { 'الأداة': '**AnimateDiff**', 'الرابط': '[github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)', 'الوصف': 'توليد فيديو من أوامر نصية عبر Stable Diffusion — لا إصدارات، آخر push في 2024 (عامان+)', 'الترخيص': 'Apache 2.0', 'النجوم': '12.2k'},
+        ],
+        note: 'دليل أكثر تفصيلاً: [دليل AnimateDiff 2026: تحريك أي نموذج Stable Diffusion](/ar/power-local-llm/animatediff-video-generation-guide-2026)',
       },
       specialized: {
         id: 'specialized',
@@ -3608,7 +3668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'كيف يظل هذا الدليل محدَّثاً',
         content:
-          '**يُراجَع هذا الدليل كل ستة أشهر ويُحدَّث بين المراجعات — آخر تحديث في يوليو 2026، المراجعة القادمة في نوفمبر 2026.** تحققت أحدث مراجعة من جميع الروابط وصحَّحت عدة أسماء مشاريع وتراخيص: أصبح Faraday هو Backyard AI، والنسخة المُدارة من Coqui TTS مستضافة من Idiap وCherry Studio هو AGPL 3.0. معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين كبيرة في 2026 أو يملأ طبقة ستكون فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية.',
+          '**يُراجَع هذا الدليل كل ستة أشهر ويُحدَّث بتصحيحات بين المراجعات — آخر تحديث في أغسطس 2026، المراجعة المجدولة القادمة في نوفمبر 2026.** أضافت توسعة أغسطس 2026 أكثر من 72 أداة جديدة عبر جميع الطبقات، وقسَّمت الصوت/الوسائط المتعددة إلى ثلاث طبقات مركَّزة (STT وTTS والرؤية)، وقسَّمت مساعدي الكود إلى تكاملات IDE (4a) وأدوات طرفية (4b)، وأضافت طبقة جديدة كلياً لتوليد الصور. أُعيد التحقق من جميع الروابط والتراخيص؛ وتم التحقق من الصيانة النشطة للإدخالات الجديدة (PearAI وWindsurf وSourcegraph Cody وSuperAGI وLeon AI وDraw Things وFooocus وStableSwarmUI وغيرها). معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين ذات معنى في 2026 أو يملأ طبقة كانت ستبقى فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية. لاقتراح مشروع للإدراج، افتح issue أو PR على مستودع PromptQuorum — مع رابط المشروع والترخيص ووصف من جملة واحدة بالتنسيق أعلاه.',
       },
       sources: {
         id: 'sources',
@@ -3665,6 +3725,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'كم مرة يُحدَّث هذا الدليل؟',
             a: 'كل ستة أشهر — آخر مراجعة في يوليو 2026، التحديث القادم المجدول في نوفمبر 2026. التغييرات الوسيطة (مشروع يصبح خاملاً، أداة جديدة تكتسب حصة كبيرة، ترخيص يتغير) تُطبَّق كتصحيحات على الإدخال القائم.',
+          },
+          {
+            q: 'هل يمكنني توليد الصور محلياً دون أي استدعاءات سحابية؟',
+            a: 'نعم — Stable Diffusion وComfyUI وInvoke AI وAUTOMATIC1111 WebUI وغيرها في الطبقة 10 تعمل بالكامل على الأجهزة المحلية. يحتاج Stable Diffusion إلى 6+ GB VRAM (RTX 3060 أو RTX 4060 أو ما يعادلها)؛ يمكن لـFooocus وواجهات محسَّنة أخرى العمل على بطاقات بـ4-6 GB. يُكبِّر Real-ESRGAN الصور المولَّدة؛ يضيف ControlNet تحكماً مكانياً (حواف، أوضاع، خرائط عمق)؛ يولِّد AnimateDiff فيديو من نص. تعمل جميعها دون إرسال بيانات إلى خوادم خارجية.',
           },
         ],
       },
