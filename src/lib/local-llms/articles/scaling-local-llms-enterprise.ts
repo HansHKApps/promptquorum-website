@@ -163,6 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
+            '[Enterprise LLM Inference Servers 2026](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI, and NVIDIA NIM compared for multi-GPU, multi-tenant serving infrastructure.',
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) -- Single-machine multi-GPU setup.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) -- Hardware and infrastructure costs.',
             '[Corporate RAG Local LLMs](/local-llms/corporate-rag-local-llms) -- Document Q&A at scale.',
@@ -427,6 +428,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectura relacionada',
           items: [
+            '[Servidores de inferencia LLM empresarial 2026](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI y NVIDIA NIM comparados para infraestructura de servicio multi-GPU y multiusuario.',
             '[LLMs locales multi-GPU](/es/local-llms/multi-gpu-local-llms) -- Configuración multi-GPU en una sola máquina.',
             '[Consumo eléctrico de LLMs locales](/es/local-llms/local-llm-power-consumption) -- Costos de hardware e infraestructura.',
             '[RAG corporativo con LLMs locales](/es/local-llms/corporate-rag-local-llms) -- Preguntas y respuestas sobre documentos a escala.',
@@ -691,6 +693,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
+            '[خوادم استدلال LLM للمؤسسات 2026](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- مقارنة vLLM وTGI وNVIDIA NIM كبنية تحتية للخدمة متعددة وحدات المعالجة الرسومية والمستأجرين.',
             '[نماذج LLM المحلية متعددة GPU](/ar/local-llms/multi-gpu-local-llms) -- إعداد متعدد GPU على جهاز واحد.',
             '[استهلاك الطاقة لنماذج LLM المحلية](/ar/local-llms/local-llm-power-consumption) -- تكاليف العتاد والبنية التحتية.',
             '[RAG للشركات مع نماذج LLM المحلية](/ar/local-llms/corporate-rag-local-llms) -- أسئلة وأجوبة عن المستندات على نطاق واسع.',
@@ -907,6 +910,7 @@ schema: {
           id: 'related-reading',
           title: 'Leitura relacionada',
           items: [
+            '[Servidores de inferência LLM para empresas 2026](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI e NVIDIA NIM comparados para serving multi-GPU e multiusuário.',
             '[Segurança de LLM local offline](/pt/local-llms/secure-offline-local-llm-workflow) — Fluxo de trabalho seguro para dados sensíveis.',
             '[Por que empresas usam LLMs locais](/pt/local-llms/why-enterprises-use-local-llms) — Casos de uso e ROI empresarial.',
             '[RAG local 2026](/pt/local-llms/local-rag-2026) — Recuperação aumentada por recuperação para contexto empresarial.',
@@ -1122,6 +1126,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
+            '[Enterprise-LLM-Inferenzserver 2026](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI und NVIDIA NIM im Vergleich für Multi-GPU-Mehrnutzer-Serving-Infrastruktur.',
             '[Multi-GPU Local LLMs](/de/local-llms/multi-gpu-local-llms) -- Single-Machine Multi-GPU Setup.',
             '[Local LLM Power Consumption](/de/local-llms/local-llm-power-consumption) -- Hardware- und Infrastrukturkosten.',
             '[Corporate RAG Local LLMs](/de/local-llms/corporate-rag-local-llms) -- Dokument-Q&A in der Skalierung.',
@@ -1403,6 +1408,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
+            '[Serveurs d\'inférence LLM en entreprise 2026](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- vLLM, TGI et NVIDIA NIM comparés pour une infrastructure de serving multi-GPU et multi-utilisateurs.',
             '[LLM locaux multi-GPU](/fr/local-llms/multi-gpu-local-llms) -- Configuration multi-GPU sur une seule machine.',
             '[Consommation d\'énergie des LLM locaux](/fr/local-llms/local-llm-power-consumption) -- Coûts matériels et d\'infrastructure.',
             '[LLM locaux pour RAG d\'entreprise](/fr/local-llms/corporate-rag-local-llms) -- Q&A sur documents à l\'échelle.',
@@ -1670,6 +1676,7 @@ schema: {
           id: 'related-reading',
           title: '関連資料',
           items: [
+            '[エンタープライズLLM推論サーバー2026](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- マルチGPU・マルチテナントのサービング基盤としてvLLM・TGI・NVIDIA NIMを比較。',
             '[マルチGPU Local LLM](/ja/local-llms/multi-gpu-local-llms) -- 単一マシンマルチGPUセットアップ。',
             '[Local LLM電力消費](/ja/local-llms/local-llm-power-consumption) -- ハードウェアとインフラストラクチャのコスト。',
             '[Corporate RAG Local LLM](/ja/local-llms/corporate-rag-local-llms) -- スケール時のドキュメントQ&A。',
@@ -1937,6 +1944,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
+            '[企业级LLM推理服务器2026](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- 从多GPU、多租户服务基础设施角度比较vLLM、TGI和NVIDIA NIM。',
             '[多GPU本地LLM](/zh/local-llms/multi-gpu-local-llms) -- 单机多GPU设置。',
             '[本地LLM功耗](/zh/local-llms/local-llm-power-consumption) -- 硬件和基础设施成本。',
             '[企业RAG本地LLM](/zh/local-llms/corporate-rag-local-llms) -- 规模文档问答。',
@@ -2217,6 +2225,7 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
+            '[엔터프라이즈 LLM 추론 서버 2026](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) -- 멀티 GPU, 다중 테넌트 서빙 인프라 관점에서 vLLM, TGI, NVIDIA NIM을 비교합니다.',
             '[다중 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 단일 머신 다중 GPU 설정.',
             '[로컬 LLM 전력 소비](/ko/local-llms/local-llm-power-consumption) -- 하드웨어 및 인프라 비용.',
             '[기업용 RAG 로컬 LLM](/ko/local-llms/corporate-rag-local-llms) -- 규모에서의 문서 Q&A.',

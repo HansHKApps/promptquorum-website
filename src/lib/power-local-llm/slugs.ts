@@ -57,6 +57,9 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-llm-email-and-calendar-automation':     'local-llm-email-and-calendar-automation',
   'replace-grammarly-notion-ai-with-local':      'replace-grammarly-notion-ai-with-local',
 
+  // Enterprise/B2B infrastructure — 2026-09-02
+  'enterprise-llm-inference-servers-vllm-tgi-nim-2026': 'enterprise-llm-inference-servers-vllm-tgi-nim-2026',
+
   // Category 10 — Hardware Buying Guides
   'best-gpu-buying-guide-local-llm-2026':        'best-gpu-buying-guide-local-llm-2026',
   'rtx-3090-local-llm-buy-or-rent':              'rtx-3090-local-llm-buy-or-rent',

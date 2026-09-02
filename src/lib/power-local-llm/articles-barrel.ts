@@ -5,6 +5,7 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
 
+import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './articles/anythingllm-vs-privategpt-vs-openwebui-rag'
 import { article as a_autonomous_local_agents_actually_work } from './articles/autonomous-local-agents-actually-work'
 import { article as a_best_embedding_models_local_rag_2026 } from './articles/best-embedding-models-local-rag-2026'
@@ -170,4 +171,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-web-hosting-2026':                             a_best_web_hosting_2026,
   'flowise-ai-visual-workflow-builder-review':         a_flowise_ai_visual_workflow_builder_review,
   'haystack-deepset-rag-framework-review':             a_haystack_deepset_rag_framework_review,
+  'enterprise-llm-inference-servers-vllm-tgi-nim-2026': a_enterprise_llm_inference_servers_vllm_tgi_nim_2026,
 }

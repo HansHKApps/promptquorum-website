@@ -125,6 +125,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Haystack (deepset) RAG framework review — 2026-09-02
   'haystack-deepset-rag-framework-review',
+
+  // Enterprise/B2B infrastructure — 2026-09-02
+  'enterprise-llm-inference-servers-vllm-tgi-nim-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
