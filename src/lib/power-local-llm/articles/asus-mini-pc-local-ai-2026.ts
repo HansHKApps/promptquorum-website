@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'ASUS Mini PC for Local AI: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Best ASUS mini PC for local AI 2026: NUC 16 Pro vs. ExpertCenter PN55, compared on price, RAM configuration, and real local-LLM capacity — plus GMKtec EVO-X2 and MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -326,7 +326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'ASUS Mini-PC für lokale KI: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Bester ASUS Mini-PC für lokale KI 2026: NUC 16 Pro vs. ExpertCenter PN55 im Vergleich bei Preis, RAM-Konfiguration und realer lokaler LLM-Kapazität — plus GMKtec EVO-X2 und MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'Mini PC ASUS pour l\'IA locale : NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Meilleur mini PC ASUS pour l\'IA locale 2026 : NUC 16 Pro vs. ExpertCenter PN55, comparés sur le prix, la configuration RAM et la capacité réelle pour l\'IA locale — plus GMKtec EVO-X2 et MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -965,7 +965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'ローカルAI向けASUS mini PC: NUC 16 Pro vs. ExpertCenter PN55（2026年）',
       'description': 'ローカルAI向けベストASUS mini PC 2026: NUC 16 Pro vs. ExpertCenter PN55を価格・RAM構成・実際のローカルLLM容量で比較 — GMKtec EVO-X2、MINISFORUM AI X1 Proとの位置づけも解説。',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': '本地AI用ASUS迷你主机：NUC 16 Pro对比ExpertCenter PN55（2026版）',
       'description': '2026年本地AI最佳ASUS迷你主机:NUC 16 Pro对比ExpertCenter PN55,从价格、RAM配置和真实本地LLM容量对比——并说明相对GMKtec EVO-X2、MINISFORUM AI X1 Pro的定位。',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -1613,7 +1613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'Mini PC ASUS para IA local: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Mejor mini PC ASUS para IA local 2026: NUC 16 Pro vs. ExpertCenter PN55, comparados en precio, configuración de RAM y capacidad real de IA local — más su posición frente a GMKtec EVO-X2 y MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1932,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -2229,7 +2229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'Mini PC ASUS para IA local: NUC 16 Pro vs. ExpertCenter PN55 (2026)',
       'description': 'Melhor mini PC ASUS para IA local 2026: NUC 16 Pro vs. ExpertCenter PN55, comparados em preço, configuração de RAM e capacidade real de IA local — além do posicionamento frente ao GMKtec EVO-X2 e MINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -2251,7 +2251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -2548,7 +2548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': 'كمبيوتر ASUS المصغر للذكاء الاصطناعي المحلي: NUC 16 Pro مقابل ExpertCenter PN55 (2026)',
       'description': 'أفضل كمبيوتر ASUS مصغر للذكاء الاصطناعي المحلي 2026: NUC 16 Pro مقابل ExpertCenter PN55، مقارنة من حيث السعر وإعداد الذاكرة والقدرة الفعلية للذكاء الاصطناعي المحلي — مع موقعهما أمام GMKtec EVO-X2 وMINISFORUM AI X1 Pro.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -2569,7 +2569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-01',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-01',
     next_refresh_due: '2027-03-01',
     current_hardware_mentioned: [
       'ASUS NUC 16 Pro',
@@ -2866,7 +2866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'headline': '로컬 AI용 ASUS 미니 PC: NUC 16 Pro와 ExpertCenter PN55 비교 (2026)',
       'description': '2026년 로컬 AI용 최고의 ASUS 미니 PC: NUC 16 Pro 대 ExpertCenter PN55를 가격, RAM 구성, 실제 로컬 LLM 용량 기준으로 비교 — GMKtec EVO-X2, MINISFORUM AI X1 Pro와의 위치도 함께 설명.',
       'datePublished': '2026-09-01',
-      'dateModified': '2026-09-05',
+      'dateModified': '2026-09-01',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
