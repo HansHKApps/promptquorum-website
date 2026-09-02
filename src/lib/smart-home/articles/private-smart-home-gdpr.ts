@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
+    dateModified: '2026-09-02',
     next_refresh_due: '2026-12-04',
     theme: 'Local-First Smart Home',
     heroImage: '/images/private-smart-home-gdpr-overview-hero-ko.webp',
@@ -791,7 +791,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**개인정보 보호법(PIPA)은 개인 데이터를 규율하며, 스마트홈은 재실 정보, 루틴, 음성, 영상 등 많은 데이터를 생성합니다.** 해당 데이터가 처리되는 위치가 누가 개입하고 얼마나 노출되는지를 결정합니다.',
         items: [
           '스마트홈 데이터(재실, 녹음, 영상)는 PIPA 하에서 개인 데이터입니다.',
-          '클라우드 처리는 외부 처리수탁자를 도입합니다(PIPA 제26조 유사 의무 적용).',
+          '클라우드 처리는 개인정보를 위탁받아 처리하는 외부 처리수탁자를 도입합니다.',
+          '2026년 개정 PIPA(2026년 3월 공포, 9월 시행)는 위반 시 과징금 상한을 전체 매출액의 최대 10%까지 높이고 경영진의 감독 책임을 강화했습니다 — 데이터를 로컬에 유지하면 이러한 위탁 관계 자체가 생기지 않습니다.',
           '로컬 처리는 외부 수탁자 없이 귀하가 통제권을 유지합니다.',
         ],
       },
@@ -832,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'checklist',
         title: '한국 체크리스트',
         content:
-          '**가정 데이터를 집에 유지하려면 로컬 지원 기기, 로컬 허브, 로컬 음성/AI를 우선시하십시오.** 표는 PIPA 관련 항목에서 클라우드와 로컬을 대조합니다. 이 가이드는 개인정보 보호법(PIPA) 및 개인정보보호위원회(PIPC) 집행에 초점을 맞추고 있으며, 처리를 로컬에 유지하는 논리는 한국의 개인정보 보호 원칙과 직접적으로 부합합니다.',
+          '**가정 데이터를 집에 유지하려면 로컬 지원 기기, 로컬 허브, 로컬 음성/AI를 우선시하십시오.** 표는 PIPA 관련 항목에서 클라우드와 로컬을 대조합니다. 이 가이드는 개인정보 보호법(PIPA) 및 개인정보보호위원회(PIPC) 집행 — 2026년 개정으로 과징금과 경영진 책임이 한층 강화되었습니다 — 에 초점을 맞추고 있으며, 처리를 로컬에 유지하는 논리는 한국의 개인정보 보호 원칙과 직접적으로 부합합니다.',
         columns: ['항목', '클라우드 기기', '로컬 구성'],
         rows: [
           { '항목': '데이터 위치', '클라우드 기기': '제조사 데이터센터', '로컬 구성': '내 집' },
@@ -873,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: '개인정보 보호법(PIPA)' }, { '@type': 'Thing', name: '스마트홈 프라이버시' }, { '@type': 'Thing', name: '데이터 상주' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
