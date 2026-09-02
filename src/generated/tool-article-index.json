@@ -86,7 +86,7 @@
         "dateModified": "2026-09-01"
       }
     ],
-    "totalCount": 184,
+    "totalCount": 185,
     "capped": true
   },
   "llama.cpp": {
@@ -392,6 +392,13 @@
   "Llamafile": {
     "articles": [
       {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
@@ -399,7 +406,7 @@
         "dateModified": "2026-07-14"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "MLX-LM": {
@@ -516,7 +523,7 @@
         "dateModified": "2026-08-27"
       }
     ],
-    "totalCount": 118,
+    "totalCount": 119,
     "capped": true
   },
   "Atomic Chat": {
@@ -619,7 +626,7 @@
         "dateModified": "2026-09-01"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "GPT4All": {
@@ -861,13 +868,20 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "text-generation-webui-vs-vllm-vs-llamacpp",
         "title": "Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison",
         "url": "/local-llms/text-generation-webui-vs-vllm-vs-llamacpp",
         "dateModified": "2026-08-29"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Open WebUI": {
@@ -957,7 +971,7 @@
         "dateModified": "2026-08-27"
       }
     ],
-    "totalCount": 41,
+    "totalCount": 42,
     "capped": true
   },
   "LibreChat": {
@@ -1139,6 +1153,71 @@
     "totalCount": 9,
     "capped": false
   },
+  "LobeChat": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Big-AGI": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "NextChat": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Page Assist": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Chatbox": {
+    "articles": [
+      {
+        "cluster": "local-llms",
+        "slug": "lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
+        "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
+        "dateModified": "2026-09-02"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Continue.dev": {
     "articles": [
       {
@@ -1226,7 +1305,7 @@
         "dateModified": "2026-08-28"
       }
     ],
-    "totalCount": 33,
+    "totalCount": 34,
     "capped": true
   },
   "Cline": {

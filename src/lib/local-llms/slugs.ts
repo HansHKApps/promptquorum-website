@@ -33,6 +33,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   // Tools & Interfaces
   'ollama-vs-lm-studio':                  'ollama-vs-lm-studio',
   'best-local-llm-frontends':             'best-local-llm-frontends',
+  'lobechat-bigagi-nextchat-pageassist-chatbox-compared': 'lobechat-bigagi-nextchat-pageassist-chatbox-compared',
   'text-generation-webui-vs-vllm-vs-llamacpp': 'text-generation-webui-vs-vllm-vs-llamacpp',
   'local-llm-openai-compatible-api':      'local-llm-openai-compatible-api',
   'lm-studio-advanced-features':          'lm-studio-advanced-features',
