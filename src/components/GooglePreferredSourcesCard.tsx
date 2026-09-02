@@ -14,8 +14,9 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLang } from '@/hooks/useLang'
-import { cn } from '@/lib/utils'
 import { claimPromptSlot, releasePromptSlot } from '@/lib/promptSlot'
+import { trackPrefSource } from '@/lib/preferredSource'
+import { PreferredSourceConfirmDialog } from './PreferredSourceConfirmDialog'
 
 const DISMISS_KEY = 'pq_google_ps_dismissed_until'
 const DISMISS_DURATION_MS = 14 * 24 * 60 * 60 * 1000
@@ -29,10 +30,6 @@ type Copy = {
   description: string
   cta: string
   dismiss: string
-  confirmTitle: string
-  confirmBody: string
-  confirmCta: string
-  confirmDismiss: string
 }
 
 const COPY: Record<string, Copy> = {
@@ -41,90 +38,54 @@ const COPY: Record<string, Copy> = {
     description: 'Add PromptQuorum to your Google preferred sources. Your searches will prioritize our guides and tools in Google results.',
     cta: 'Set as Preferred Source',
     dismiss: 'Not now',
-    confirmTitle: 'Set PromptQuorum as a preferred source?',
-    confirmBody: 'This will open Google\'s settings page where you can confirm adding PromptQuorum to your preferred sources. Your future searches will prioritize our content.',
-    confirmCta: 'Continue to Google',
-    confirmDismiss: 'Cancel',
   },
   de: {
     title: 'Verbessern Sie Ihre PromptQuorum-Ergebnisse in Google',
     description: 'Fügen Sie PromptQuorum zu Ihren bevorzugten Google-Quellen hinzu. Ihre Suchergebnisse werden unsere Leitfäden und Tools priorisieren.',
     cta: 'Als bevorzugte Quelle festlegen',
     dismiss: 'Jetzt nicht',
-    confirmTitle: 'PromptQuorum als bevorzugte Quelle festlegen?',
-    confirmBody: 'Dies öffnet Googles Einstellungsseite, auf der Sie PromptQuorum zu Ihren bevorzugten Quellen hinzufügen können. Zukünftige Suchen werden unsere Inhalte priorisieren.',
-    confirmCta: 'Zu Google weiterleiten',
-    confirmDismiss: 'Abbrechen',
   },
   fr: {
     title: 'Améliorez vos résultats PromptQuorum dans Google',
     description: 'Ajoutez PromptQuorum à vos sources préférées dans Google. Vos recherches prioriseront nos guides et outils dans les résultats.',
     cta: 'Définir comme source préférée',
     dismiss: 'Pas maintenant',
-    confirmTitle: 'Définir PromptQuorum comme source préférée?',
-    confirmBody: 'Ceci ouvrira la page de paramètres de Google où vous pourrez confirmer l\'ajout de PromptQuorum à vos sources préférées. Vos futures recherches prioriseront notre contenu.',
-    confirmCta: 'Continuer vers Google',
-    confirmDismiss: 'Annuler',
   },
   es: {
     title: 'Mejora tus resultados de PromptQuorum en Google',
     description: 'Añade PromptQuorum a tus fuentes preferidas de Google. Tus búsquedas priorizarán nuestras guías y herramientas en los resultados.',
     cta: 'Establecer como fuente preferida',
     dismiss: 'Ahora no',
-    confirmTitle: '¿Establecer PromptQuorum como fuente preferida?',
-    confirmBody: 'Esto abrirá la página de configuración de Google donde puedes confirmar agregar PromptQuorum a tus fuentes preferidas. Tus futuras búsquedas priorizarán nuestro contenido.',
-    confirmCta: 'Continuar a Google',
-    confirmDismiss: 'Cancelar',
   },
   pt: {
     title: 'Melhore seus resultados do PromptQuorum no Google',
     description: 'Adicione PromptQuorum às suas fontes preferidas do Google. Suas buscas priorizarão nossos guias e ferramentas nos resultados.',
     cta: 'Definir como fonte preferida',
     dismiss: 'Agora não',
-    confirmTitle: 'Definir PromptQuorum como fonte preferida?',
-    confirmBody: 'Isso abrirá a página de configurações do Google onde você pode confirmar adicionar PromptQuorum às suas fontes preferidas. Suas futuras buscas priorizarão nosso conteúdo.',
-    confirmCta: 'Continuar para Google',
-    confirmDismiss: 'Cancelar',
   },
   ja: {
     title: 'Google での PromptQuorum 結果を改善',
     description: 'PromptQuorum を Google の優先ソースに追加してください。検索結果で当社のガイドとツールが優先されます。',
     cta: 'Google で優先ソースに設定',
     dismiss: 'あとで',
-    confirmTitle: 'PromptQuorum を優先ソースに設定しますか?',
-    confirmBody: 'Google の設定ページが開きます。ここで PromptQuorum を優先ソースに追加することを確認できます。今後の検索では当社のコンテンツが優先されます。',
-    confirmCta: 'Google に進む',
-    confirmDismiss: 'キャンセル',
   },
   zh: {
     title: '改进您在 Google 中的 PromptQuorum 结果',
     description: '将 PromptQuorum 添加到您的 Google 优先来源。您的搜索将在结果中优先显示我们的指南和工具。',
     cta: '在 Google 中设为优先来源',
     dismiss: '暂不设置',
-    confirmTitle: '将 PromptQuorum 设为优先来源?',
-    confirmBody: '这将打开 Google 设置页面，您可以在其中确认将 PromptQuorum 添加到您的优先来源。您的未来搜索将优先显示我们的内容。',
-    confirmCta: '继续前往 Google',
-    confirmDismiss: '取消',
   },
   ko: {
     title: 'Google에서 PromptQuorum 결과 개선',
     description: 'PromptQuorum을 Google의 선호 소스에 추가하세요. 검색 결과에서 당사의 가이드와 도구를 우선으로 표시합니다.',
     cta: 'Google에서 선호 소스로 설정',
     dismiss: '나중에',
-    confirmTitle: 'PromptQuorum을 선호 소스로 설정하시겠습니까?',
-    confirmBody: 'Google 설정 페이지가 열리며, 여기서 PromptQuorum을 선호 소스에 추가하는 것을 확인할 수 있습니다. 향후 검색 결과에서 당사의 콘텐츠가 우선 표시됩니다.',
-    confirmCta: 'Google로 계속',
-    confirmDismiss: '취소',
   },
   ar: {
     title: 'حسّن نتائج PromptQuorum في Google',
     description: 'أضف PromptQuorum إلى مصادرك المفضلة في Google. ستعطي عمليات البحث الأولوية لأدلتنا وأدواتنا في النتائج.',
     cta: 'تعيين كمصدر مفضل في Google',
     dismiss: 'ليس الآن',
-    confirmTitle: 'تعيين PromptQuorum كمصدر مفضل؟',
-    confirmBody: 'سيؤدي هذا إلى فتح صفحة إعدادات Google حيث يمكنك تأكيد إضافة PromptQuorum إلى مصادرك المفضلة. ستعطي عمليات البحث المستقبلية الأولوية لمحتوانا.',
-    confirmCta: 'المتابعة إلى Google',
-    confirmDismiss: 'إلغاء',
   },
 }
 
@@ -160,14 +121,7 @@ export function GooglePreferredSourcesCard() {
       // Never stack on the push opt-in banner — one interruptive prompt at a time.
       if (!claimPromptSlot(SLOT_ID)) return
       setMountedVisible(true)
-      try {
-        window.umami?.track('google_preferred_sources_shown', {
-          source_page: pathname,
-          lang,
-        })
-      } catch {
-        // silent
-      }
+      trackPrefSource('shown', { surface: 'popup_card', source_page: pathname, lang })
     }, SHOW_DELAY_MS)
 
     return () => {
@@ -175,22 +129,6 @@ export function GooglePreferredSourcesCard() {
       releasePromptSlot(SLOT_ID)
     }
   }, [pathname, lang])
-
-  const cancelConfirm = useCallback(
-    (via: 'cancel_button' | 'backdrop') => {
-      setShowConfirm(false)
-      try {
-        window.umami?.track('google_preferred_sources_confirm_cancel', {
-          via,
-          source_page: pathname,
-          lang,
-        })
-      } catch {
-        // silent
-      }
-    },
-    [pathname, lang]
-  )
 
   const dismiss = useCallback(() => {
     try {
@@ -218,14 +156,7 @@ export function GooglePreferredSourcesCard() {
             <button
               onClick={() => {
                 setShowConfirm(true)
-                try {
-                  window.umami?.track('google_preferred_sources_cta_click', {
-                    source_page: pathname,
-                    lang,
-                  })
-                } catch {
-                  // silent
-                }
+                trackPrefSource('cta_clicked', { surface: 'popup_card', source_page: pathname, lang })
               }}
               className="inline-flex items-center justify-center rounded-md bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
@@ -234,14 +165,7 @@ export function GooglePreferredSourcesCard() {
             <button
               onClick={() => {
                 dismiss()
-                try {
-                  window.umami?.track('google_preferred_sources_dismiss', {
-                    source_page: pathname,
-                    lang,
-                  })
-                } catch {
-                  // silent
-                }
+                trackPrefSource('dismissed', { surface: 'popup_card', source_page: pathname, lang })
               }}
               className="text-xs text-text-secondary hover:text-text-primary transition-colors"
             >
@@ -252,15 +176,7 @@ export function GooglePreferredSourcesCard() {
         <button
           onClick={() => {
             dismiss()
-            try {
-              window.umami?.track('google_preferred_sources_dismiss', {
-                via: 'close_button',
-                source_page: pathname,
-                lang,
-              })
-            } catch {
-              // silent
-            }
+            trackPrefSource('dismissed', { surface: 'popup_card', via: 'close_button', source_page: pathname, lang })
           }}
           aria-label="Close"
           className="flex-none text-text-muted hover:text-text-secondary transition-colors p-1 -m-1"
@@ -272,49 +188,13 @@ export function GooglePreferredSourcesCard() {
       </div>
 
       {showConfirm && (
-        <div
+        <PreferredSourceConfirmDialog
+          surface="popup_card"
+          lang={lang}
+          sourcePage={pathname}
           dir={dir}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-          onClick={() => cancelConfirm('backdrop')}
-        >
-          <div
-            className="w-full max-w-sm rounded-lg bg-white p-6 shadow-lg"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2 className="text-lg font-semibold text-text-primary">{c.confirmTitle}</h2>
-            <p className="mt-3 text-sm text-text-secondary leading-relaxed">{c.confirmBody}</p>
-            <div className="mt-6 flex gap-3">
-              <button
-                onClick={() => cancelConfirm('cancel_button')}
-                className="flex-1 rounded-md border border-gray-200 px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:bg-gray-50"
-              >
-                {c.confirmDismiss}
-              </button>
-              <button
-                onClick={() => {
-                  try {
-                    window.umami?.track('google_preferred_sources_click', {
-                      via: 'card_confirm',
-                      source_page: pathname,
-                      lang,
-                    })
-                  } catch {
-                    // silent
-                  }
-                  window.open(
-                    'https://google.com/preferences/source?q=promptquorum.com',
-                    'GooglePreferredSources',
-                    'width=600,height=700,resizable=yes,scrollbars=yes'
-                  )
-                  setShowConfirm(false)
-                }}
-                className="flex-1 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                {c.confirmCta}
-              </button>
-            </div>
-          </div>
-        </div>
+          onClose={() => setShowConfirm(false)}
+        />
       )}
     </div>
   )
