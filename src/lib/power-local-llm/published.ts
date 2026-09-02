@@ -142,6 +142,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'ragflow-document-understanding-rag-review',
   // Khoj review — 2026-09-02
   'khoj-ai-second-brain-review',
+  // Enterprise/B2B — customer support & call centers — 2026-09-03
+  'best-local-llms-customer-support-call-centers-enterprise',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
