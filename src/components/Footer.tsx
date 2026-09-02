@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Logo } from './Logo'
 import { CookieSettingsLink } from './CookieSettingsLink'
+import { PreferredSourceConfirmDialog } from './PreferredSourceConfirmDialog'
+import { trackPrefSource } from '@/lib/preferredSource'
 import type { Language } from '@/lib/geo-schema'
 
 // Icons (minimal set for footer)
@@ -247,15 +249,11 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
             <button
               onClick={() => {
                 setShowConfirm(true)
-                try {
-                  window.umami?.track('preferred_source_click', {
-                    via: 'footer',
-                    source_page: window.location.pathname,
-                    lang: effectiveLang,
-                  })
-                } catch {
-                  // silent
-                }
+                trackPrefSource('cta_clicked', {
+                  surface: 'footer',
+                  source_page: window.location.pathname,
+                  lang: effectiveLang,
+                })
               }}
               className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-gray-300 bg-white hover:bg-gray-50 transition-colors text-xs font-medium text-gray-700 shadow-sm hover:shadow-md"
               aria-label={t.preferredSource}
@@ -270,46 +268,13 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
       </div>
 
       {showConfirm && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-          onClick={() => setShowConfirm(false)}
-        >
-          <div
-            className="w-full max-w-sm rounded-lg bg-white p-6 shadow-lg"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center gap-2 mb-3">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <text x="2" y="20" fontSize="16" fontWeight="bold" fill="#4285F4">G</text>
-              </svg>
-              <h2 className="text-lg font-semibold text-text-primary">Set PromptQuorum as a preferred source?</h2>
-            </div>
-            <p className="text-sm text-text-secondary leading-relaxed">
-              This will open Google's settings where you can add PromptQuorum to your preferred sources. Your future searches will prioritize our content.
-            </p>
-            <div className="mt-6 flex gap-3">
-              <button
-                onClick={() => setShowConfirm(false)}
-                className="flex-1 rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:bg-gray-50"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  window.open(
-                    'https://google.com/preferences/source?q=promptquorum.com',
-                    'GooglePreferredSources',
-                    'width=600,height=700,resizable=yes,scrollbars=yes'
-                  )
-                  setShowConfirm(false)
-                }}
-                className="flex-1 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-              >
-                Continue to Google
-              </button>
-            </div>
-          </div>
-        </div>
+        <PreferredSourceConfirmDialog
+          surface="footer"
+          lang={effectiveLang}
+          sourcePage={pathname}
+          dir={effectiveLang === 'ar' ? 'rtl' : undefined}
+          onClose={() => setShowConfirm(false)}
+        />
       )}
     </footer>
   )

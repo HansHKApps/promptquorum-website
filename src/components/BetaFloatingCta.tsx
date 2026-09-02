@@ -41,6 +41,8 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLang } from '@/hooks/useLang'
 import { cn } from '@/lib/utils'
+import { PreferredSourceConfirmDialog } from './PreferredSourceConfirmDialog'
+import { trackPrefSource } from '@/lib/preferredSource'
 
 const DISMISS_KEY = 'pq_beta_fab_dismissed_until'
 const DISMISS_DURATION_MS = 14 * 24 * 60 * 60 * 1000 // 14 days
@@ -200,6 +202,7 @@ export function BetaFloatingCta() {
   const [dismissed, setDismissed] = useState(false)
   const [expanded, setExpanded] = useState(false)
   const [os, setOs] = useState<string | null>(null)
+  const [showPrefSourceConfirm, setShowPrefSourceConfirm] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
   // Click/tap anywhere outside the widget, or Escape, collapses the card
@@ -369,22 +372,26 @@ export function BetaFloatingCta() {
           >
             {ctaLabel}
           </a>
-          <a
-            href="https://google.com/preferences/source?q=promptquorum.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
             onClick={() => {
-              try {
-                window.umami?.track('preferred_source_click', { via: 'beta_fab', source_page: pathname, lang })
-              } catch {
-                // silent
-              }
+              setShowPrefSourceConfirm(true)
+              trackPrefSource('cta_clicked', { surface: 'beta_fab', source_page: pathname, lang })
             }}
             className="mt-2 inline-flex w-full items-center justify-center text-xs text-text-secondary hover:text-primary transition-colors"
           >
             {c.preferredSourceLabel}
-          </a>
+          </button>
         </div>
+      )}
+
+      {showPrefSourceConfirm && (
+        <PreferredSourceConfirmDialog
+          surface="beta_fab"
+          lang={lang}
+          sourcePage={pathname}
+          dir={dir}
+          onClose={() => setShowPrefSourceConfirm(false)}
+        />
       )}
     </div>
   )
