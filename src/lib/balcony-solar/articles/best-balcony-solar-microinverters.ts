@@ -11,18 +11,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['Hoymiles HMS-800-2T-NA', 'Deye SUN600-1000G3', 'APsystems EZ1-M'],
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-en.webp',
+    affiliateDisclosure: true,
     title: 'Best Balcony Solar Micro-Inverters (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Best Balcony Solar Micro-Inverters 2026: Local vs. Cloud',
     intro: 'The micro-inverter is the component that actually determines whether your balcony solar system needs a cloud account to monitor — and whether it will play nicely with Home Assistant. Hoymiles, Deye, and APsystems dominate the US plug-in market, but they take very different approaches to local vs. cloud control.',
     metaDescription: 'Hoymiles, Deye, and APsystems balcony solar micro-inverters compared on price, monitoring, and local control — including the only one with a native local API.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '9 min read',
     educationalLevel: 'Advanced',
     audience: 'DIY balcony solar buyers comparing micro-inverter brands, especially Home Assistant users',
     primaryTerm: 'balcony solar micro-inverter',
     targetKeywords: ['best balcony solar microinverter', 'hoymiles vs deye vs apsystems', 'apsystems ez1 review', 'balcony solar local api', 'ul 3700 microinverter'],
-    leadAnswerBlock: '**APsystems\' EZ1-M is the only one of the three major balcony-solar micro-inverter brands (Hoymiles, Deye, APsystems) with a manufacturer-native local API — no cloud account or workaround required.** Hoymiles defaults to its S-Miles cloud platform with only DIY/reverse-engineered local access, while Deye offers an unofficial cloud-free path that depends on running an older firmware version. None of the three has a UL 3700-certified product on the market yet as of write-time.',
+    leadAnswerBlock: '**APsystems\' EZ1-M is the only one of the three major balcony-solar micro-inverter brands (Hoymiles, Deye, APsystems) with a manufacturer-native local API — no cloud account or workaround required.** Hoymiles defaults to its S-Miles cloud platform with only DIY/reverse-engineered local access, while Deye offers an unofficial cloud-free path that depends on running an older firmware version. None of the three has a UL 3700-certified product on the market yet as of write-time. [Check current price for the EZ1-M at APsystems →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       en: {
         question: 'Which balcony solar micro-inverter brand has the best local control?',
@@ -39,6 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
+      { label: 'Our Pick: APsystems EZ1-M', anchor: '#primary-pick' },
       { label: 'What Does a Micro-Inverter Do?', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems: How We Compared Them', anchor: '#how-we-chose' },
       { label: 'Cloud vs. Local Monitoring: The No-Cloud Angle', anchor: '#cloud-vs-local' },
@@ -57,6 +59,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No micro-inverter from any brand has achieved UL 3700 certification as of write-time (Jul 2026) — the standard launched Jan 2026 but certification testing is still pending across the industry.',
           'All three brands already carry UL 1741 and IEEE 1547 compliance, the pre-existing grid-interconnection standards — these are not the same thing as UL 3700 and predate it by years.',
           'For a genuinely no-cloud setup, hardware choice matters more than software configuration — Home Assistant cannot add local access to a device that doesn\'t expose it.',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: 'Our Pick: APsystems EZ1-M',
+        content: [
+          'If you want a balcony solar micro-inverter that works with Home Assistant out of the box and never needs a cloud account, the APsystems EZ1-M is the pick among these three.',
+        ],
+        items: [
+          'Native local HTTP API — no cloud account or reverse engineering required, unlike Hoymiles and Deye, which both need community workarounds',
+          '$325 direct from APsystems\' official US store, with free shipping to the lower 48 states',
+          'Official-style open-source Home Assistant integration built directly against the local API',
+          'APsystems states the EZ1 line is CSA-certified to UL 3700 on its own product page — verify your exact SKU\'s current status before buying, since third-party certification trackers show mixed results',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Skip this if you need airtight UL 3700 certification confirmed for your exact model: third-party trackers show mixed status specifically for the "EZ1-M kit," Hoymiles\' certified product is a different model (HiFlow Pro, not the HMS-800-2T-NA compared on this page), and Deye has no confirmed UL 3700 certification. Also skip if plug-in balcony solar isn\'t yet legal or utility-cleared where you live — check your state\'s rules before buying any of these three.' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: 'Check current price',
+          },
         ],
       },
       whatItDoes: {
@@ -101,9 +128,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparison Table',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~$279–290', monitoring: 'S-Miles Cloud (default); local via DIY Modbus/DTU workarounds', ul3700: 'Not certified' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: 'US price uncertain — EU pricing found only', monitoring: 'SOLARMAN Cloud (default); unofficial cloud-free local tool, firmware-dependent', ul3700: 'Not certified' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '$325 (direct, APsystems US)', monitoring: 'Native local API (official) + optional cloud', ul3700: 'Not certified' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~$279–290 · [Check current price](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud (default); local via DIY Modbus/DTU workarounds', ul3700: 'Not certified' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: 'US price uncertain — no verified US retailer found', monitoring: 'SOLARMAN Cloud (default); unofficial cloud-free local tool, firmware-dependent', ul3700: 'Not certified' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '$325 · [Check current price](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: 'Native local API (official) + optional cloud', ul3700: 'Not certified' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -129,7 +156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best Balcony Solar Micro-Inverters (2026): Hoymiles vs. Deye vs. APsystems',
       description: 'Hoymiles, Deye, and APsystems balcony solar micro-inverters compared on price, monitoring, and local control — including the only one with a native local API.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -156,18 +183,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-es.webp',
+    affiliateDisclosure: true,
     title: 'Mejores microinversores solares de balcón (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Mejores microinversores solares de balcón 2026: local vs. nube',
     intro: 'El microinversor es el componente que realmente determina si tu sistema solar de balcón necesita una cuenta en la nube para monitorearlo — y si funcionará bien con Home Assistant. Hoymiles, Deye y APsystems dominan el mercado plug-in de EE. UU., pero adoptan enfoques muy distintos sobre control local frente a control en la nube.',
     metaDescription: 'Hoymiles, Deye y APsystems: microinversores solares de balcón comparados en precio, monitoreo y control local — incluyendo el único con API local nativa.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '9 min de lectura',
     educationalLevel: 'Advanced',
     audience: 'Compradores DIY de energía solar de balcón que comparan marcas de microinversores, especialmente usuarios de Home Assistant',
     primaryTerm: 'balcony solar micro-inverter',
     targetKeywords: ['mejor microinversor solar de balcón', 'hoymiles vs deye vs apsystems', 'reseña apsystems ez1', 'api local energía solar balcón', 'ul 3700 microinversor'],
-    leadAnswerBlock: '**El EZ1-M de APsystems es el único de las tres marcas principales de microinversores solares de balcón (Hoymiles, Deye, APsystems) con una API local nativa del fabricante — sin cuenta en la nube ni soluciones alternativas necesarias.** Hoymiles usa por defecto su plataforma en la nube S-Miles con solo acceso local DIY/de ingeniería inversa, mientras que Deye ofrece una vía no oficial sin nube que depende de ejecutar una versión anterior del firmware. Ninguna de las tres tiene todavía un producto certificado bajo UL 3700 en el mercado, hasta el momento de escribir esto.',
+    leadAnswerBlock: '**El EZ1-M de APsystems es el único de las tres marcas principales de microinversores solares de balcón (Hoymiles, Deye, APsystems) con una API local nativa del fabricante — sin cuenta en la nube ni soluciones alternativas necesarias.** Hoymiles usa por defecto su plataforma en la nube S-Miles con solo acceso local DIY/de ingeniería inversa, mientras que Deye ofrece una vía no oficial sin nube que depende de ejecutar una versión anterior del firmware. Ninguna de las tres tiene todavía un producto certificado bajo UL 3700 en el mercado, hasta el momento de escribir esto. [Consulta el precio actual del EZ1-M en APsystems →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       es: {
         question: '¿Qué marca de microinversor solar de balcón tiene el mejor control local?',
@@ -184,6 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
+      { label: 'Nuestra elección: APsystems EZ1-M', anchor: '#primary-pick' },
       { label: '¿Qué hace un microinversor?', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems: cómo los comparamos', anchor: '#how-we-chose' },
       { label: 'Monitoreo en la nube vs. local: el enfoque sin nube', anchor: '#cloud-vs-local' },
@@ -202,6 +231,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ningún microinversor de ninguna marca ha logrado la certificación UL 3700 hasta el momento de escribir esto (julio 2026) — el estándar se lanzó en enero de 2026 pero las pruebas de certificación siguen pendientes en toda la industria.',
           'Las tres marcas ya cuentan con cumplimiento UL 1741 e IEEE 1547, los estándares de interconexión a la red preexistentes — no son lo mismo que UL 3700 y son anteriores por años.',
           'Para una configuración verdaderamente sin nube, la elección del hardware importa más que la configuración del software — Home Assistant no puede añadir acceso local a un dispositivo que no lo expone.',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: 'Nuestra elección: APsystems EZ1-M',
+        content: [
+          'Si quieres un microinversor solar de balcón que funcione con Home Assistant desde el primer momento y que nunca necesite una cuenta en la nube, el APsystems EZ1-M es la opción entre estos tres.',
+        ],
+        items: [
+          'API HTTP local nativa — sin cuenta en la nube ni ingeniería inversa necesarias, a diferencia de Hoymiles y Deye, que requieren soluciones de la comunidad',
+          '$325 directo desde la tienda oficial de APsystems en EE. UU., con envío gratuito a los 48 estados continentales',
+          'Integración de código abierto de estilo oficial para Home Assistant, construida directamente sobre la API local',
+          'APsystems indica en su propia página de producto que la línea EZ1 cuenta con certificación CSA para UL 3700 — verifica el estado actual de tu modelo exacto antes de comprar, ya que los rastreadores de certificación de terceros muestran resultados dispares',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Evita esta compra si necesitas una certificación UL 3700 confirmada al 100% para tu modelo exacto: los rastreadores de terceros muestran un estado dispar específicamente para el "kit EZ1-M", el producto certificado de Hoymiles es un modelo distinto (HiFlow Pro, no el HMS-800-2T-NA comparado en esta página), y Deye no tiene certificación UL 3700 confirmada. Evítala también si la energía solar de balcón plug-in todavía no es legal ni está autorizada por tu compañía eléctrica donde vives — verifica las normas de tu estado antes de comprar cualquiera de estos tres.' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: 'Ver precio actual',
+          },
         ],
       },
       whatItDoes: {
@@ -246,9 +300,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tabla comparativa',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~$279–290', monitoring: 'S-Miles Cloud (por defecto); local mediante soluciones DIY Modbus/DTU', ul3700: 'No certificado' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: 'Precio en EE. UU. incierto — solo se encontró precio de la UE', monitoring: 'SOLARMAN Cloud (por defecto); herramienta local no oficial sin nube, depende del firmware', ul3700: 'No certificado' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '$325 (directo, APsystems EE. UU.)', monitoring: 'API local nativa (oficial) + nube opcional', ul3700: 'No certificado' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~$279–290 · [Ver precio actual](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud (por defecto); local mediante soluciones DIY Modbus/DTU', ul3700: 'No certificado' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: 'Precio EE. UU. incierto — sin distribuidor verificado', monitoring: 'SOLARMAN Cloud (por defecto); herramienta local no oficial sin nube, depende del firmware', ul3700: 'No certificado' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '$325 · [Ver precio actual](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: 'API local nativa (oficial) + nube opcional', ul3700: 'No certificado' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -274,7 +328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejores microinversores solares de balcón (2026): Hoymiles vs. Deye vs. APsystems',
       description: 'Hoymiles, Deye y APsystems: microinversores solares de balcón comparados en precio, monitoreo y control local — incluyendo el único con API local nativa.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -303,18 +357,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-pt.webp',
+    affiliateDisclosure: true,
     title: 'Melhores microinversores solares de varanda (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Melhores microinversores solares de varanda 2026: local vs. nuvem',
     intro: 'O microinversor é o componente que realmente determina se o seu sistema solar de varanda precisa de uma conta na nuvem para monitoramento — e se ele vai funcionar bem com o Home Assistant. Hoymiles, Deye e APsystems dominam o mercado plug-in dos EUA, mas adotam abordagens muito diferentes em relação ao controle local versus na nuvem.',
     metaDescription: 'Hoymiles, Deye e APsystems: microinversores solares de varanda comparados em preço, monitoramento e controle local — incluindo o único com API local nativa.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '9 min de leitura',
     educationalLevel: 'Advanced',
     audience: 'Compradores DIY de energia solar de varanda comparando marcas de microinversores, especialmente usuários do Home Assistant',
     primaryTerm: 'balcony solar micro-inverter',
     targetKeywords: ['melhor microinversor solar de varanda', 'hoymiles vs deye vs apsystems', 'análise apsystems ez1', 'api local energia solar varanda', 'ul 3700 microinversor'],
-    leadAnswerBlock: '**O EZ1-M da APsystems é o único entre as três principais marcas de microinversores solares de varanda (Hoymiles, Deye, APsystems) com uma API local nativa do fabricante — sem necessidade de conta na nuvem ou soluções alternativas.** A Hoymiles usa por padrão sua plataforma na nuvem S-Miles com apenas acesso local DIY/de engenharia reversa, enquanto a Deye oferece um caminho não oficial sem nuvem que depende de rodar uma versão mais antiga do firmware. Nenhuma das três tem ainda um produto certificado pela UL 3700 no mercado, até o momento desta publicação.',
+    leadAnswerBlock: '**O EZ1-M da APsystems é o único entre as três principais marcas de microinversores solares de varanda (Hoymiles, Deye, APsystems) com uma API local nativa do fabricante — sem necessidade de conta na nuvem ou soluções alternativas.** A Hoymiles usa por padrão sua plataforma na nuvem S-Miles com apenas acesso local DIY/de engenharia reversa, enquanto a Deye oferece um caminho não oficial sem nuvem que depende de rodar uma versão mais antiga do firmware. Nenhuma das três tem ainda um produto certificado pela UL 3700 no mercado, até o momento desta publicação. [Veja o preço atual do EZ1-M na APsystems →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       pt: {
         question: 'Qual marca de microinversor solar de varanda tem o melhor controle local?',
@@ -331,6 +386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
+      { label: 'Nossa escolha: APsystems EZ1-M', anchor: '#primary-pick' },
       { label: 'O que faz um microinversor?', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems: como comparamos', anchor: '#how-we-chose' },
       { label: 'Monitoramento na nuvem vs. local: a abordagem sem nuvem', anchor: '#cloud-vs-local' },
@@ -349,6 +405,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nenhum microinversor de nenhuma marca alcançou a certificação UL 3700 até o momento desta publicação (jul. 2026) — o padrão foi lançado em janeiro de 2026, mas os testes de certificação ainda estão pendentes em toda a indústria.',
           'As três marcas já possuem conformidade UL 1741 e IEEE 1547, os padrões de interconexão à rede pré-existentes — não são a mesma coisa que a UL 3700 e são anteriores a ela por anos.',
           'Para uma configuração verdadeiramente sem nuvem, a escolha do hardware importa mais que a configuração do software — o Home Assistant não pode adicionar acesso local a um dispositivo que não o expõe.',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: 'Nossa escolha: APsystems EZ1-M',
+        content: [
+          'Se você quer um microinversor solar de varanda que funcione com o Home Assistant desde o primeiro dia e nunca precise de conta na nuvem, o APsystems EZ1-M é a escolha entre estes três.',
+        ],
+        items: [
+          'API HTTP local nativa — sem necessidade de conta na nuvem ou engenharia reversa, ao contrário da Hoymiles e da Deye, que exigem soluções da comunidade',
+          '$325 direto da loja oficial da APsystems nos EUA, com frete grátis para os 48 estados contíguos',
+          'Integração de código aberto no estilo oficial para o Home Assistant, construída diretamente sobre a API local',
+          'A APsystems afirma, na própria página do produto, que a linha EZ1 tem certificação CSA para UL 3700 — verifique o status atual do seu modelo exato antes de comprar, já que rastreadores de certificação de terceiros mostram resultados divergentes',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Evite esta compra se você precisa de certificação UL 3700 100% confirmada para o seu modelo exato: rastreadores de terceiros mostram status divergente especificamente para o "kit EZ1-M", o produto certificado da Hoymiles é um modelo diferente (HiFlow Pro, não o HMS-800-2T-NA comparado nesta página), e a Deye não tem certificação UL 3700 confirmada. Evite também se a energia solar de varanda plug-in ainda não é legal ou autorizada pela concessionária onde você mora — confira as regras do seu estado antes de comprar qualquer um destes três.' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: 'Ver preço atual',
+          },
         ],
       },
       whatItDoes: {
@@ -393,9 +474,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tabela comparativa',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~$279–290', monitoring: 'S-Miles Cloud (padrão); local via soluções DIY Modbus/DTU', ul3700: 'Não certificado' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: 'Preço nos EUA incerto — apenas preço da UE encontrado', monitoring: 'SOLARMAN Cloud (padrão); ferramenta local não oficial sem nuvem, dependente de firmware', ul3700: 'Não certificado' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '$325 (direto, APsystems EUA)', monitoring: 'API local nativa (oficial) + nuvem opcional', ul3700: 'Não certificado' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~$279–290 · [Ver preço atual](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud (padrão); local via soluções DIY Modbus/DTU', ul3700: 'Não certificado' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: 'Preço nos EUA incerto — sem revendedor verificado', monitoring: 'SOLARMAN Cloud (padrão); ferramenta local não oficial sem nuvem, dependente de firmware', ul3700: 'Não certificado' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '$325 · [Ver preço atual](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: 'API local nativa (oficial) + nuvem opcional', ul3700: 'Não certificado' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -421,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhores microinversores solares de varanda (2026): Hoymiles vs. Deye vs. APsystems',
       description: 'Hoymiles, Deye e APsystems: microinversores solares de varanda comparados em preço, monitoramento e controle local — incluindo o único com API local nativa.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -450,18 +531,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ar.webp',
+    affiliateDisclosure: true,
     title: 'أفضل عاكسات (مايكرو إنفرتر) الطاقة الشمسية للشرفة (2026): Hoymiles مقابل Deye مقابل APsystems',
     seoTitle: 'أفضل مايكرو إنفرتر للطاقة الشمسية للشرفة 2026: محلي مقابل سحابي',
     intro: 'المايكرو إنفرتر هو المكوّن الذي يحدد فعليًا ما إذا كان نظام الطاقة الشمسية الخاص بشرفتك يحتاج إلى حساب سحابي للمراقبة — وما إذا كان سيعمل بشكل جيد مع Home Assistant. تهيمن Hoymiles وDeye وAPsystems على سوق التوصيل المباشر الأمريكي، لكنها تتبنى نهجًا مختلفًا تمامًا فيما يخص التحكم المحلي مقابل التحكم السحابي.',
     metaDescription: 'مقارنة بين مايكرو إنفرتر Hoymiles وDeye وAPsystems للطاقة الشمسية للشرفة من حيث السعر والمراقبة والتحكم المحلي — بما في ذلك الوحيد الذي يمتلك واجهة برمجة تطبيقات محلية أصلية.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '9 دقائق للقراءة',
     educationalLevel: 'Advanced',
     audience: 'مشترو الطاقة الشمسية للشرفة من هواة DIY الذين يقارنون بين علامات المايكرو إنفرتر، وخصوصًا مستخدمي Home Assistant',
     primaryTerm: 'balcony solar micro-inverter',
     targetKeywords: ['أفضل مايكرو إنفرتر للطاقة الشمسية للشرفة', 'hoymiles مقابل deye مقابل apsystems', 'مراجعة apsystems ez1', 'واجهة برمجة تطبيقات محلية للطاقة الشمسية للشرفة', 'ul 3700 مايكرو إنفرتر'],
-    leadAnswerBlock: '**يُعد EZ1-M من APsystems الوحيد من بين العلامات الثلاث الرئيسية لمايكرو إنفرتر الطاقة الشمسية للشرفة (Hoymiles وDeye وAPsystems) الذي يمتلك واجهة برمجة تطبيقات محلية أصلية من الشركة المصنّعة — دون الحاجة إلى حساب سحابي أو حلول بديلة.** تعتمد Hoymiles افتراضيًا على منصتها السحابية S-Miles مع وصول محلي فقط عبر حلول DIY أو هندسة عكسية، بينما تقدّم Deye مسارًا غير رسمي دون سحابة يعتمد على تشغيل إصدار أقدم من البرنامج الثابت. لا تملك أي من العلامات الثلاث بعد منتجًا حاصلًا على شهادة UL 3700 في السوق حتى وقت كتابة هذا المحتوى.',
+    leadAnswerBlock: '**يُعد EZ1-M من APsystems الوحيد من بين العلامات الثلاث الرئيسية لمايكرو إنفرتر الطاقة الشمسية للشرفة (Hoymiles وDeye وAPsystems) الذي يمتلك واجهة برمجة تطبيقات محلية أصلية من الشركة المصنّعة — دون الحاجة إلى حساب سحابي أو حلول بديلة.** تعتمد Hoymiles افتراضيًا على منصتها السحابية S-Miles مع وصول محلي فقط عبر حلول DIY أو هندسة عكسية، بينما تقدّم Deye مسارًا غير رسمي دون سحابة يعتمد على تشغيل إصدار أقدم من البرنامج الثابت. لا تملك أي من العلامات الثلاث بعد منتجًا حاصلًا على شهادة UL 3700 في السوق حتى وقت كتابة هذا المحتوى. [تحقق من السعر الحالي لـ EZ1-M على موقع APsystems ←](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       ar: {
         question: 'ما هي العلامة التجارية لمايكرو إنفرتر الطاقة الشمسية للشرفة الأفضل من حيث التحكم المحلي؟',
@@ -478,6 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'أبرز النقاط', anchor: '#key-takeaways' },
+      { label: 'اختيارنا: APsystems EZ1-M', anchor: '#primary-pick' },
       { label: 'ماذا يفعل المايكرو إنفرتر؟', anchor: '#what-it-does' },
       { label: 'Hoymiles مقابل Deye مقابل APsystems: كيف قارنّا بينها', anchor: '#how-we-chose' },
       { label: 'المراقبة السحابية مقابل المحلية: نهج بلا سحابة', anchor: '#cloud-vs-local' },
@@ -496,6 +579,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لم يحصل أي مايكرو إنفرتر من أي علامة تجارية على شهادة UL 3700 حتى وقت كتابة هذا المحتوى (يوليو 2026) — أُطلق المعيار في يناير 2026 لكن اختبارات الاعتماد ما تزال معلّقة في القطاع بأكمله.',
           'تمتلك العلامات الثلاث بالفعل التوافق مع UL 1741 وIEEE 1547، وهي معايير الربط بالشبكة الكهربائية السابقة — وهي ليست الشيء نفسه مثل UL 3700 وتسبقها بسنوات.',
           'لإعداد خالٍ من السحابة فعليًا، يهم اختيار الجهاز أكثر من إعداد البرنامج — لا يمكن لـ Home Assistant إضافة وصول محلي إلى جهاز لا يوفره أصلًا.',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: 'اختيارنا: APsystems EZ1-M',
+        content: [
+          'إذا كنت تريد مايكرو إنفرتر للطاقة الشمسية للشرفة يعمل مع Home Assistant من أول يوم ولا يحتاج أبدًا إلى حساب سحابي، فإن EZ1-M من APsystems هو الخيار من بين الثلاثة.',
+        ],
+        items: [
+          'واجهة برمجة تطبيقات HTTP محلية أصلية — دون الحاجة إلى حساب سحابي أو هندسة عكسية، على عكس Hoymiles وDeye اللتين تتطلبان حلولًا من المجتمع',
+          '325 دولارًا مباشرة من متجر APsystems الرسمي في الولايات المتحدة، مع شحن مجاني إلى الولايات الـ48 المتجاورة',
+          'تكامل مفتوح المصدر شبه رسمي مع Home Assistant، مبني مباشرة على تلك الواجهة المحلية',
+          'تذكر APsystems في صفحة منتجها الخاصة أن سلسلة EZ1 حاصلة على شهادة CSA لمعيار UL 3700 — تحقق من الحالة الراهنة لموديلك المحدد قبل الشراء، إذ تُظهر أدوات تتبع الاعتماد الخارجية نتائج متباينة',
+        ],
+        callouts: [
+          { type: 'warning', text: 'تجنّب هذا الشراء إذا كنت بحاجة إلى شهادة UL 3700 مؤكدة تمامًا لموديلك المحدد: تُظهر أدوات التتبع الخارجية حالة متباينة تحديدًا بشأن "طقم EZ1-M"، ومنتج Hoymiles المعتمد هو موديل مختلف (HiFlow Pro، وليس HMS-800-2T-NA الذي تتم مقارنته في هذه الصفحة)، ولا تملك Deye شهادة UL 3700 مؤكدة. تجنّبه أيضًا إذا كانت الطاقة الشمسية للشرفة القابلة للتوصيل المباشر غير قانونية أو غير معتمدة من شركة الكهرباء في منطقتك بعد — تحقق من لوائح ولايتك قبل شراء أي من هذه الثلاثة.' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: 'تحقق من السعر الحالي',
+          },
         ],
       },
       whatItDoes: {
@@ -540,9 +648,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'جدول المقارنة',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~279–290 دولارًا', monitoring: 'S-Miles Cloud (افتراضيًا)؛ محليًا عبر حلول DIY لـ Modbus/DTU', ul3700: 'غير معتمد' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: 'السعر في الولايات المتحدة غير مؤكد — تم العثور على سعر أوروبا فقط', monitoring: 'SOLARMAN Cloud (افتراضيًا)؛ أداة محلية غير رسمية بلا سحابة، تعتمد على البرنامج الثابت', ul3700: 'غير معتمد' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '325 دولارًا (مباشرة من APsystems الأمريكية)', monitoring: 'واجهة برمجة تطبيقات محلية أصلية (رسمية) + سحابة اختيارية', ul3700: 'غير معتمد' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~279–290 دولارًا · [تحقق من السعر الحالي](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud (افتراضيًا)؛ محليًا عبر حلول DIY لـ Modbus/DTU', ul3700: 'غير معتمد' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: 'السعر في الولايات المتحدة غير مؤكد — لا يوجد بائع موثّق', monitoring: 'SOLARMAN Cloud (افتراضيًا)؛ أداة محلية غير رسمية بلا سحابة، تعتمد على البرنامج الثابت', ul3700: 'غير معتمد' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '325 دولارًا · [تحقق من السعر الحالي](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: 'واجهة برمجة تطبيقات محلية أصلية (رسمية) + سحابة اختيارية', ul3700: 'غير معتمد' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -568,7 +676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل عاكسات (مايكرو إنفرتر) الطاقة الشمسية للشرفة (2026): Hoymiles مقابل Deye مقابل APsystems',
       description: 'مقارنة بين مايكرو إنفرتر Hoymiles وDeye وAPsystems للطاقة الشمسية للشرفة من حيث السعر والمراقبة والتحكم المحلي — بما في ذلك الوحيد الذي يمتلك واجهة برمجة تطبيقات محلية أصلية.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -596,18 +704,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ja.webp',
+    affiliateDisclosure: true,
     title: 'バルコニーソーラー用マイクロインバーター比較(2026年): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'バルコニーソーラー用マイクロインバーター2026年版: ローカル vs. クラウド',
     intro: 'マイクロインバーターは、バルコニーソーラーシステムの監視にクラウドアカウントが必要かどうか、そしてHome Assistantとうまく連携できるかどうかを実質的に決定するコンポーネントです。Hoymiles、Deye、APsystemsは米国のプラグイン市場を席巻していますが、ローカル制御とクラウド制御に対するアプローチはそれぞれ大きく異なります。',
     metaDescription: 'Hoymiles、Deye、APsystemsのバルコニーソーラー用マイクロインバーターを価格・監視方式・ローカル制御で比較。ネイティブなローカルAPIを持つ唯一の製品を含め、2026年7月に検証済み。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '約9分',
     educationalLevel: 'Advanced',
     audience: 'マイクロインバーターのブランドを比較検討しているDIYバルコニーソーラー購入者、特にHome Assistantユーザー',
     primaryTerm: 'balcony solar micro-inverter',
     targetKeywords: ['バルコニーソーラー マイクロインバーター おすすめ', 'hoymiles vs deye vs apsystems', 'apsystems ez1 レビュー', 'バルコニーソーラー ローカルapi', 'ul 3700 マイクロインバーター'],
-    leadAnswerBlock: '**APsystemsのEZ1-Mは、バルコニーソーラー用マイクロインバーターの主要3ブランド(Hoymiles、Deye、APsystems)の中で、メーカー純正のローカルAPIを備える唯一の製品です — クラウドアカウントや回避策は一切不要です。** Hoymilesは標準でS-Milesクラウドプラットフォームを使用し、DIYやリバースエンジニアリングによるローカルアクセスしか提供していません。一方Deyeは、旧バージョンのファームウェアの実行に依存する非公式なクラウドフリー手段を提供しています。執筆時点で、3ブランドのいずれもUL 3700認証を取得した製品を市場に出していません。',
+    leadAnswerBlock: '**APsystemsのEZ1-Mは、バルコニーソーラー用マイクロインバーターの主要3ブランド(Hoymiles、Deye、APsystems)の中で、メーカー純正のローカルAPIを備える唯一の製品です — クラウドアカウントや回避策は一切不要です。** Hoymilesは標準でS-Milesクラウドプラットフォームを使用し、DIYやリバースエンジニアリングによるローカルアクセスしか提供していません。一方Deyeは、旧バージョンのファームウェアの実行に依存する非公式なクラウドフリー手段を提供しています。執筆時点で、3ブランドのいずれもUL 3700認証を取得した製品を市場に出していません。[APsystemsでEZ1-Mの現在価格を確認する →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       ja: {
         question: 'ローカル制御が最も優れているバルコニーソーラー用マイクロインバーターのブランドはどれですか?',
@@ -624,6 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: '主要ポイント', anchor: '#key-takeaways' },
+      { label: 'おすすめ: APsystems EZ1-M', anchor: '#primary-pick' },
       { label: 'マイクロインバーターとは何か', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems: 比較方法', anchor: '#how-we-chose' },
       { label: 'クラウド監視 vs. ローカル監視: ノークラウドという視点', anchor: '#cloud-vs-local' },
@@ -642,6 +752,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '執筆時点(2026年7月)で、どのブランドのマイクロインバーターもUL 3700認証を取得していない — 規格は2026年1月に開始されたが、業界全体で認証テストはまだ保留中。',
           '3ブランドとも既存のUL 1741およびIEEE 1547適合(以前から存在する系統連系規格)を取得済み — これらはUL 3700とは異なるもので、UL 3700より何年も前から存在する。',
           '真にノークラウドな構成を目指す場合、ソフトウェア設定よりもハードウェア選定の方が重要 — Home Assistantは、そもそもローカルアクセスを公開していないデバイスにローカルアクセスを追加することはできない。',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: 'おすすめ: APsystems EZ1-M',
+        content: [
+          'クラウドアカウントなしで最初からHome Assistantと連携できるバルコニーソーラー用マイクロインバーターを探しているなら、この3製品の中ではAPsystems EZ1-Mがおすすめです。',
+        ],
+        items: [
+          'ネイティブなローカルHTTP API — クラウドアカウントもリバースエンジニアリングも不要。コミュニティによる回避策が必要なHoymilesやDeyeとは異なる',
+          'APsystems米国公式ストアから直販で325ドル、本土48州への送料無料',
+          '公式相当のオープンソースHome Assistant連携が、そのローカルAPIに直接対応する形で構築されている',
+          'APsystemsは自社の製品ページでEZ1シリーズがUL 3700のCSA認証を取得済みとしている — サードパーティの認証トラッカーでは結果にばらつきがあるため、購入前にお使いの型番の最新状況を確認すること',
+        ],
+        callouts: [
+          { type: 'warning', text: 'お使いの型番についてUL 3700認証が完全に確定していることが必須の場合は、購入を見送ってください。サードパーティの認証トラッカーは「EZ1-Mキット」について結果がばらついており、Hoymilesの認証取得製品はこのページで比較しているHMS-800-2T-NAとは別のモデル(HiFlow Pro)であり、Deyeには確認済みのUL 3700認証がありません。また、お住まいの地域でプラグイン式バルコニーソーラーがまだ合法でない、または電力会社に承認されていない場合も見送ってください — 購入前に州の規制を確認してください。' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: '現在の価格を確認',
+          },
         ],
       },
       whatItDoes: {
@@ -686,9 +821,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '比較表',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '約279〜290ドル', monitoring: 'S-Miles Cloud(標準); DIYのModbus/DTU回避策でローカル対応', ul3700: '未認証' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: '米国価格は不明確 — 欧州価格のみ確認', monitoring: 'SOLARMAN Cloud(標準); 非公式のクラウドフリーツール、ファームウェア依存', ul3700: '未認証' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '325ドル(APsystems米国から直販)', monitoring: 'ネイティブなローカルAPI(公式)+ オプションのクラウド', ul3700: '未認証' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '約279〜290ドル · [現在の価格を確認](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud(標準); DIYのModbus/DTU回避策でローカル対応', ul3700: '未認証' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: '米国価格は不明確 — 確認済みの販売店なし', monitoring: 'SOLARMAN Cloud(標準); 非公式のクラウドフリーツール、ファームウェア依存', ul3700: '未認証' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '325ドル · [現在の価格を確認](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: 'ネイティブなローカルAPI(公式)+ オプションのクラウド', ul3700: '未認証' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -714,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'バルコニーソーラー用マイクロインバーター比較(2026年): Hoymiles vs. Deye vs. APsystems',
       description: 'Hoymiles、Deye、APsystemsのバルコニーソーラー用マイクロインバーターを価格・監視方式・ローカル制御で比較。ネイティブなローカルAPIを持つ唯一の製品を含め、2026年7月に検証済み。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -742,18 +877,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-zh.webp',
+    affiliateDisclosure: true,
     title: '2026年阳台光伏微逆变器推荐:Hoymiles vs. Deye vs. APsystems',
     seoTitle: '2026年阳台光伏微逆变器:本地控制 vs. 云端控制',
     intro: '微逆变器是真正决定你的阳台光伏系统是否需要云端账户才能监控的部件——也决定了它能否与Home Assistant顺畅配合。Hoymiles、Deye和APsystems主导着美国插电式阳台光伏市场,但在本地控制与云端控制上采取的策略截然不同。',
     metaDescription: '对比Hoymiles、Deye、APsystems三款阳台光伏微逆变器的价格、监控方式与本地控制能力——包括唯一具备原生本地API的产品。',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '约9分钟',
     educationalLevel: 'Advanced',
     audience: '正在比较微逆变器品牌的DIY阳台光伏买家,尤其是Home Assistant用户',
     primaryTerm: '阳台光伏',
     targetKeywords: ['阳台光伏微逆变器推荐', 'hoymiles vs deye vs apsystems', 'apsystems ez1 评测', '阳台光伏 本地api', 'ul 3700 微逆变器'],
-    leadAnswerBlock: '**在阳台光伏微逆变器三大品牌(Hoymiles、Deye、APsystems)中,APsystems的EZ1-M是唯一拥有厂商原生本地API的产品——无需云端账户,也无需任何变通方案。** Hoymiles默认使用其S-Miles云平台,仅能通过DIY或逆向工程实现本地访问;Deye则提供一种非官方的无云方案,但依赖运行较旧版本的固件。截至撰写本文时,三个品牌都还没有任何一款产品通过UL 3700认证上市。值得注意的是,Deye和Hoymiles这两个品牌本身就是中国制造商,这在阳台光伏这一细分市场中相当常见。',
+    leadAnswerBlock: '**在阳台光伏微逆变器三大品牌(Hoymiles、Deye、APsystems)中,APsystems的EZ1-M是唯一拥有厂商原生本地API的产品——无需云端账户,也无需任何变通方案。** Hoymiles默认使用其S-Miles云平台,仅能通过DIY或逆向工程实现本地访问;Deye则提供一种非官方的无云方案,但依赖运行较旧版本的固件。截至撰写本文时,三个品牌都还没有任何一款产品通过UL 3700认证上市。值得注意的是,Deye和Hoymiles这两个品牌本身就是中国制造商,这在阳台光伏这一细分市场中相当常见。[查看APsystems官网上EZ1-M的当前价格 →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       zh: {
         question: '哪个阳台光伏微逆变器品牌的本地控制能力最好?',
@@ -770,6 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
+      { label: '我们的推荐:APsystems EZ1-M', anchor: '#primary-pick' },
       { label: '微逆变器的作用是什么', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems:我们的对比方法', anchor: '#how-we-chose' },
       { label: '云端监控 vs. 本地监控:无云方案的视角', anchor: '#cloud-vs-local' },
@@ -788,6 +925,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至撰写本文时(2026年7月),任何品牌的微逆变器均未获得UL 3700认证——该标准于2026年1月推出,但全行业的认证测试仍在进行中。',
           '三个品牌均已具备UL 1741和IEEE 1547合规认证,这是早已存在的并网标准——它们与UL 3700并非同一回事,且比UL 3700早了许多年。',
           '若想真正实现无云方案,硬件选择比软件配置更重要——Home Assistant无法为一款本身不支持本地访问的设备添加本地访问能力。',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: '我们的推荐:APsystems EZ1-M',
+        content: [
+          '如果你想要一款开箱即用就能与Home Assistant配合、且永远不需要云端账户的阳台光伏微逆变器,在这三款产品中,APsystems EZ1-M是首选。',
+        ],
+        items: [
+          '原生本地HTTP API——无需云端账户,也无需逆向工程,这与需要依赖社区变通方案的Hoymiles和Deye不同',
+          '325美元,直接从APsystems美国官方商店购买,美国本土48州包邮',
+          '准官方级别的开源Home Assistant集成,直接基于该本地API构建',
+          'APsystems在其产品页面上表示EZ1系列已通过UL 3700的CSA认证——由于第三方认证追踪平台显示的结果不一致,购买前请核实你具体型号的最新认证状态',
+        ],
+        callouts: [
+          { type: 'warning', text: '如果你需要针对具体型号完全确认的UL 3700认证,请跳过这次购买:第三方认证追踪平台针对“EZ1-M套件”显示的状态并不一致,Hoymiles已获认证的产品是另一款型号(HiFlow Pro,而非本页对比的HMS-800-2T-NA),而Deye目前没有已确认的UL 3700认证。如果你所在地区的插电式阳台光伏尚未合法或未获电力公司批准,也请先跳过——购买这三款产品中的任何一款前,请先核实所在州的相关规定。' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: '查看当前价格',
+          },
         ],
       },
       whatItDoes: {
@@ -832,9 +994,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '对比表',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '约279–290美元', monitoring: 'S-Miles Cloud(默认);可通过DIY的Modbus/DTU变通方案实现本地访问', ul3700: '未认证' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: '美国价格不确定——仅找到欧盟价格', monitoring: 'SOLARMAN Cloud(默认);非官方无云工具,依赖固件版本', ul3700: '未认证' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '325美元(APsystems美国官方直销)', monitoring: '原生本地API(官方)+ 可选云端', ul3700: '未认证' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '约279–290美元 · [查看当前价格](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud(默认);可通过DIY的Modbus/DTU变通方案实现本地访问', ul3700: '未认证' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: '美国价格不确定——未找到已核实的经销商', monitoring: 'SOLARMAN Cloud(默认);非官方无云工具,依赖固件版本', ul3700: '未认证' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '325美元 · [查看当前价格](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: '原生本地API(官方)+ 可选云端', ul3700: '未认证' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -860,7 +1022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年阳台光伏微逆变器推荐:Hoymiles vs. Deye vs. APsystems',
       description: '对比Hoymiles、Deye、APsystems三款阳台光伏微逆变器的价格、监控方式与本地控制能力——包括唯一具备原生本地API的产品。',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -888,18 +1050,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-fr.webp',
+    affiliateDisclosure: true,
     title: 'Meilleurs micro-onduleurs solaires de balcon (2026) : Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Meilleurs micro-onduleurs solaires de balcon 2026 : local vs. cloud',
     intro: 'Le micro-onduleur est le composant qui détermine réellement si votre système solaire de balcon nécessite un compte cloud pour le suivi — et s\'il fonctionnera bien avec Home Assistant. Hoymiles, Deye et APsystems dominent le marché américain des kits plug-and-play, mais adoptent des approches très différentes en matière de contrôle local et de contrôle cloud.',
     metaDescription: 'Comparatif des micro-onduleurs solaires de balcon Hoymiles, Deye et APsystems sur le prix, le suivi et le contrôle local — dont le seul modèle doté d\'une API locale native.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '9 min de lecture',
     educationalLevel: 'Advanced',
     audience: 'Acheteurs solaires de balcon en DIY comparant les marques de micro-onduleurs, en particulier les utilisateurs de Home Assistant',
     primaryTerm: 'balcony solar micro-inverter',
     targetKeywords: ['meilleur micro-onduleur solaire de balcon', 'hoymiles vs deye vs apsystems', 'avis apsystems ez1', 'api locale solaire de balcon', 'micro-onduleur ul 3700'],
-    leadAnswerBlock: '**L\'EZ1-M d\'APsystems est le seul des trois grandes marques de micro-onduleurs solaires de balcon (Hoymiles, Deye, APsystems) doté d\'une API locale native du fabricant — sans compte cloud ni solution de contournement nécessaire.** Hoymiles utilise par défaut sa plateforme cloud S-Miles, avec un accès local possible uniquement en DIY ou par rétro-ingénierie, tandis que Deye propose une voie non officielle sans cloud qui dépend de l\'exécution d\'une version de firmware plus ancienne. Aucune des trois marques ne propose encore de produit certifié UL 3700 sur le marché à l\'heure où ces lignes sont écrites.',
+    leadAnswerBlock: '**L\'EZ1-M d\'APsystems est le seul des trois grandes marques de micro-onduleurs solaires de balcon (Hoymiles, Deye, APsystems) doté d\'une API locale native du fabricant — sans compte cloud ni solution de contournement nécessaire.** Hoymiles utilise par défaut sa plateforme cloud S-Miles, avec un accès local possible uniquement en DIY ou par rétro-ingénierie, tandis que Deye propose une voie non officielle sans cloud qui dépend de l\'exécution d\'une version de firmware plus ancienne. Aucune des trois marques ne propose encore de produit certifié UL 3700 sur le marché à l\'heure où ces lignes sont écrites. [Voir le prix actuel de l\'EZ1-M chez APsystems →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       fr: {
         question: 'Quelle marque de micro-onduleur solaire de balcon offre le meilleur contrôle local ?',
@@ -916,6 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
+      { label: 'Notre choix : APsystems EZ1-M', anchor: '#primary-pick' },
       { label: 'À quoi sert un micro-onduleur ?', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems : notre méthode de comparaison', anchor: '#how-we-chose' },
       { label: 'Suivi cloud vs. local : l\'angle sans cloud', anchor: '#cloud-vs-local' },
@@ -934,6 +1098,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aucun micro-onduleur, toutes marques confondues, n\'a obtenu la certification UL 3700 à l\'heure où ces lignes sont écrites (juillet 2026) — la norme a été lancée en janvier 2026, mais les tests de certification sont encore en attente dans tout le secteur.',
           'Les trois marques disposent déjà de la conformité UL 1741 et IEEE 1547, les normes d\'interconnexion au réseau préexistantes — ce n\'est pas la même chose que l\'UL 3700, qui leur est postérieure de plusieurs années.',
           'Pour une installation véritablement sans cloud, le choix du matériel compte plus que la configuration logicielle — Home Assistant ne peut pas ajouter un accès local à un appareil qui ne l\'expose pas.',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: 'Notre choix : APsystems EZ1-M',
+        content: [
+          'Si vous voulez un micro-onduleur solaire de balcon qui fonctionne avec Home Assistant dès le départ et qui ne nécessite jamais de compte cloud, l\'EZ1-M d\'APsystems est le choix parmi ces trois modèles.',
+        ],
+        items: [
+          'API HTTP locale native — sans compte cloud ni rétro-ingénierie nécessaire, contrairement à Hoymiles et Deye, qui exigent des solutions communautaires',
+          '325 $ directement depuis la boutique officielle américaine d\'APsystems, avec livraison gratuite dans les 48 États contigus',
+          'Intégration Home Assistant open source de type officiel, construite directement sur cette API locale',
+          'APsystems indique sur sa propre fiche produit que la gamme EZ1 est certifiée CSA UL 3700 — vérifiez le statut actuel de votre modèle exact avant l\'achat, car les outils de suivi de certification tiers montrent des résultats variables',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Évitez cet achat si vous avez besoin d\'une certification UL 3700 totalement confirmée pour votre modèle exact : les outils de suivi tiers montrent un statut variable spécifiquement pour le « kit EZ1-M », le produit certifié de Hoymiles est un modèle différent (HiFlow Pro, pas le HMS-800-2T-NA comparé sur cette page), et Deye n\'a aucune certification UL 3700 confirmée. Évitez-le aussi si le solaire de balcon plug-and-play n\'est pas encore légal ou autorisé par votre fournisseur d\'électricité là où vous vivez — vérifiez la réglementation locale avant d\'acheter l\'un de ces trois produits.' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: 'Voir le prix actuel',
+          },
         ],
       },
       whatItDoes: {
@@ -978,9 +1167,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tableau comparatif',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~279–290 $', monitoring: 'S-Miles Cloud (par défaut) ; accès local via des solutions DIY Modbus/DTU', ul3700: 'Non certifié' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: 'Prix US incertain — seul le prix UE a été trouvé', monitoring: 'SOLARMAN Cloud (par défaut) ; outil local sans cloud non officiel, dépendant du firmware', ul3700: 'Non certifié' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '325 $ (direct, APsystems US)', monitoring: 'API locale native (officielle) + cloud en option', ul3700: 'Non certifié' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '~279–290 $ · [Voir le prix actuel](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud (par défaut) ; accès local via des solutions DIY Modbus/DTU', ul3700: 'Non certifié' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: 'Prix US incertain — aucun revendeur vérifié', monitoring: 'SOLARMAN Cloud (par défaut) ; outil local sans cloud non officiel, dépendant du firmware', ul3700: 'Non certifié' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '325 $ · [Voir le prix actuel](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: 'API locale native (officielle) + cloud en option', ul3700: 'Non certifié' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -1006,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Meilleurs micro-onduleurs solaires de balcon (2026) : Hoymiles vs. Deye vs. APsystems',
       description: 'Comparatif des micro-onduleurs solaires de balcon Hoymiles, Deye et APsystems sur le prix, le suivi et le contrôle local — dont le seul modèle doté d\'une API locale native.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1035,18 +1224,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-ko.webp',
+    affiliateDisclosure: true,
     title: '2026년 최고의 베란다형 태양광 마이크로인버터: Hoymiles vs. Deye vs. APsystems',
     seoTitle: '2026년 베란다 태양광 마이크로인버터: 로컬 vs. 클라우드',
     intro: '마이크로인버터는 베란다형 태양광 시스템을 모니터링하는 데 클라우드 계정이 필요한지, 그리고 Home Assistant와 원활하게 연동되는지를 실질적으로 결정하는 부품입니다. Hoymiles, Deye, APsystems는 미국의 플러그인 시장을 장악하고 있지만, 로컬 제어와 클라우드 제어에 대해 매우 다른 접근 방식을 취합니다.',
     metaDescription: 'Hoymiles, Deye, APsystems 베란다 태양광 마이크로인버터를 가격, 모니터링 방식, 로컬 제어 기준으로 비교. 네이티브 로컬 API를 갖춘 유일한 제품 포함.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '9분 읽기',
     educationalLevel: 'Advanced',
     audience: '마이크로인버터 브랜드를 비교 중인 DIY 베란다 태양광 구매자, 특히 Home Assistant 사용자',
     primaryTerm: 'balcony solar micro-inverter',
     targetKeywords: ['베란다 태양광 마이크로인버터 추천', 'hoymiles vs deye vs apsystems', 'apsystems ez1 리뷰', '베란다 태양광 로컬 api', 'ul 3700 마이크로인버터'],
-    leadAnswerBlock: '**APsystems의 EZ1-M은 베란다형 태양광 마이크로인버터 3대 브랜드(Hoymiles, Deye, APsystems) 중 제조사가 직접 제공하는 로컬 API를 갖춘 유일한 제품입니다 — 클라우드 계정이나 우회 방법이 전혀 필요하지 않습니다.** Hoymiles는 기본적으로 자사의 S-Miles 클라우드 플랫폼을 사용하며, DIY 또는 리버스 엔지니어링을 통한 로컬 접근만 가능합니다. 반면 Deye는 이전 버전의 펌웨어 실행에 의존하는 비공식 클라우드 프리 방식을 제공합니다. 이 글을 작성하는 시점 기준으로 세 브랜드 모두 UL 3700 인증을 받은 제품을 아직 출시하지 않았습니다.',
+    leadAnswerBlock: '**APsystems의 EZ1-M은 베란다형 태양광 마이크로인버터 3대 브랜드(Hoymiles, Deye, APsystems) 중 제조사가 직접 제공하는 로컬 API를 갖춘 유일한 제품입니다 — 클라우드 계정이나 우회 방법이 전혀 필요하지 않습니다.** Hoymiles는 기본적으로 자사의 S-Miles 클라우드 플랫폼을 사용하며, DIY 또는 리버스 엔지니어링을 통한 로컬 접근만 가능합니다. 반면 Deye는 이전 버전의 펌웨어 실행에 의존하는 비공식 클라우드 프리 방식을 제공합니다. 이 글을 작성하는 시점 기준으로 세 브랜드 모두 UL 3700 인증을 받은 제품을 아직 출시하지 않았습니다. [APsystems에서 EZ1-M의 현재 가격 확인하기 →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       ko: {
         question: '어떤 베란다 태양광 마이크로인버터 브랜드가 로컬 제어 기능이 가장 뛰어난가요?',
@@ -1063,6 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },
+      { label: '추천 제품: APsystems EZ1-M', anchor: '#primary-pick' },
       { label: '마이크로인버터의 역할', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems: 비교 방법', anchor: '#how-we-chose' },
       { label: '클라우드 모니터링 vs. 로컬 모니터링: 노클라우드 관점', anchor: '#cloud-vs-local' },
@@ -1081,6 +1272,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 글 작성 시점(2026년 7월) 기준, 어떤 브랜드의 마이크로인버터도 UL 3700 인증을 획득하지 못했습니다 — 해당 표준은 2026년 1월에 시작되었으나 업계 전반의 인증 테스트가 여전히 진행 중입니다.',
           '세 브랜드 모두 이미 기존의 UL 1741 및 IEEE 1547 계통 연계 표준을 준수하고 있습니다 — 이는 UL 3700과는 다른 것이며, UL 3700보다 수년 앞서 존재해왔습니다.',
           '진정한 노클라우드 구성을 원한다면 소프트웨어 설정보다 하드웨어 선택이 더 중요합니다 — Home Assistant는 로컬 접근 기능을 노출하지 않는 기기에 로컬 접근을 추가해줄 수 없습니다.',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: '추천 제품: APsystems EZ1-M',
+        content: [
+          '처음부터 Home Assistant와 연동되고 클라우드 계정이 전혀 필요 없는 베란다 태양광 마이크로인버터를 원한다면, 이 세 제품 중에서는 APsystems EZ1-M을 추천합니다.',
+        ],
+        items: [
+          '네이티브 로컬 HTTP API — 클라우드 계정이나 리버스 엔지니어링이 필요 없습니다. 커뮤니티 우회 방법이 필요한 Hoymiles, Deye와는 다릅니다.',
+          'APsystems 미국 공식 스토어에서 직접 구매 시 325달러, 미국 본토 48개 주 무료 배송',
+          '해당 로컬 API를 기반으로 직접 구축된 준공식 오픈소스 Home Assistant 연동',
+          'APsystems는 자사 제품 페이지에서 EZ1 라인이 UL 3700 CSA 인증을 받았다고 명시하고 있습니다 — 서드파티 인증 추적 사이트마다 결과가 엇갈리므로, 구매 전 정확한 모델의 최신 인증 상태를 확인하세요.',
+        ],
+        callouts: [
+          { type: 'warning', text: '정확한 모델에 대해 100% 확정된 UL 3700 인증이 반드시 필요하다면 이번 구매는 건너뛰세요: 서드파티 추적 사이트는 "EZ1-M 키트"에 대해 엇갈린 결과를 보여주고 있으며, Hoymiles의 인증받은 제품은 이 페이지에서 비교한 HMS-800-2T-NA가 아닌 다른 모델(HiFlow Pro)이고, Deye는 확인된 UL 3700 인증이 없습니다. 거주 지역에서 플러그인 방식 베란다 태양광이 아직 합법이 아니거나 전력회사의 승인을 받지 못한 경우에도 건너뛰세요 — 이 세 제품 중 어느 것이든 구매하기 전에 해당 주의 규정을 확인하십시오.' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: '현재 가격 확인',
+          },
         ],
       },
       whatItDoes: {
@@ -1125,9 +1341,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '비교표',
         rows: [
-          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '약 279–290달러', monitoring: 'S-Miles Cloud(기본값); DIY Modbus/DTU 우회 방법으로 로컬 접근', ul3700: '미인증' },
-          { brand: 'Deye', model: 'SUN600–1000G3', price: '미국 가격 불확실 — EU 가격만 확인됨', monitoring: 'SOLARMAN Cloud(기본값); 비공식 클라우드 프리 도구, 펌웨어 의존적', ul3700: '미인증' },
-          { brand: 'APsystems', model: 'EZ1-M', price: '325달러(APsystems 미국 직판)', monitoring: '네이티브 로컬 API(공식) + 선택적 클라우드', ul3700: '미인증' },
+          { brand: 'Hoymiles', model: 'HMS-800-2T-NA', price: '약 279–290달러 · [현재 가격 확인](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', monitoring: 'S-Miles Cloud(기본값); DIY Modbus/DTU 우회 방법으로 로컬 접근', ul3700: '미인증' },
+          { brand: 'Deye', model: 'SUN600–1000G3', price: '미국 가격 불확실 — 확인된 판매처 없음', monitoring: 'SOLARMAN Cloud(기본값); 비공식 클라우드 프리 도구, 펌웨어 의존적', ul3700: '미인증' },
+          { brand: 'APsystems', model: 'EZ1-M', price: '325달러 · [현재 가격 확인](https://usa.apsystems.com/product/ez1-microinverter/)', monitoring: '네이티브 로컬 API(공식) + 선택적 클라우드', ul3700: '미인증' },
         ],
         columns: ['brand', 'model', 'price', 'monitoring', 'ul3700'],
         tableFormat: true,
@@ -1153,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 최고의 베란다형 태양광 마이크로인버터: Hoymiles vs. Deye vs. APsystems',
       description: 'Hoymiles, Deye, APsystems 베란다 태양광 마이크로인버터를 가격, 모니터링 방식, 로컬 제어 기준으로 비교. 네이티브 로컬 API를 갖춘 유일한 제품 포함.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -1181,18 +1397,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     theme: 'Balcony Solar Money Pages',
     heroImage: '/images/best-balcony-solar-microinverters-overview-hero-de.webp',
+    affiliateDisclosure: true,
     title: 'Beste Balkonkraftwerk Wechselrichter (2026): Hoymiles vs. Deye vs. APsystems',
     seoTitle: 'Beste Balkonkraftwerk Wechselrichter 2026: Lokal vs. Cloud',
     intro: 'Der Mikrowechselrichter ist die Komponente, die tatsächlich bestimmt, ob Ihr Balkonkraftwerk ein Cloud-Konto zur Überwachung benötigt — und ob er gut mit Home Assistant zusammenarbeitet. Hoymiles, Deye und APsystems dominieren den US-Plug-in-Markt, verfolgen beim Local- vs. Cloud-Control jedoch sehr unterschiedliche Ansätze.',
     metaDescription: 'Hoymiles, Deye und APsystems: Balkonkraftwerk-Wechselrichter verglichen nach Preis, Monitoring und lokalem Zugriff — einschließlich des einzigen mit nativer lokaler API.',
     publishDate: '2026-07-02',
-    dateModified: '2026-07-02',
+    dateModified: '2026-09-02',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Advanced',
     audience: 'DIY-Balkonkraftwerk-Käufer, die Mikrowechselrichter-Marken vergleichen, insbesondere Home-Assistant-Nutzer',
     primaryTerm: 'Balkonkraftwerk Wechselrichter',
     targetKeywords: ['bester Balkonkraftwerk Wechselrichter', 'hoymiles vs deye vs apsystems', 'apsystems ez1 test', 'balkonkraftwerk lokale api', 'ul 3700 mikrowechselrichter'],
-    leadAnswerBlock: '**APsystems EZ1-M ist der einzige der drei großen Balkonkraftwerk-Mikrowechselrichter-Marken (Hoymiles, Deye, APsystems) mit einer herstellereigenen nativen lokalen API — kein Cloud-Konto oder Workaround erforderlich.** Hoymiles verwendet standardmäßig seine S-Miles-Cloud-Plattform mit nur DIY/Reverse-Engineering-basiertem lokalem Zugriff, während Deye einen inoffiziellen Cloud-freien Weg bietet, der von einer älteren Firmware-Version abhängt. Keine der drei Marken hat zum Zeitpunkt der Erstellung ein UL-3700-zertifiziertes Produkt auf dem Markt.',
+    leadAnswerBlock: '**APsystems EZ1-M ist der einzige der drei großen Balkonkraftwerk-Mikrowechselrichter-Marken (Hoymiles, Deye, APsystems) mit einer herstellereigenen nativen lokalen API — kein Cloud-Konto oder Workaround erforderlich.** Hoymiles verwendet standardmäßig seine S-Miles-Cloud-Plattform mit nur DIY/Reverse-Engineering-basiertem lokalem Zugriff, während Deye einen inoffiziellen Cloud-freien Weg bietet, der von einer älteren Firmware-Version abhängt. Keine der drei Marken hat zum Zeitpunkt der Erstellung ein UL-3700-zertifiziertes Produkt auf dem Markt. [Aktuellen Preis des EZ1-M bei APsystems ansehen →](https://usa.apsystems.com/product/ez1-microinverter/)',
     quickAnswerTop: {
       de: {
         question: 'Welche Balkonkraftwerk-Mikrowechselrichter-Marke bietet die beste lokale Steuerung?',
@@ -1209,6 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     toc: [
       { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
+      { label: 'Unsere Empfehlung: APsystems EZ1-M', anchor: '#primary-pick' },
       { label: 'Was macht ein Mikrowechselrichter?', anchor: '#what-it-does' },
       { label: 'Hoymiles vs. Deye vs. APsystems: So haben wir verglichen', anchor: '#how-we-chose' },
       { label: 'Cloud vs. lokales Monitoring: Der No-Cloud-Ansatz', anchor: '#cloud-vs-local' },
@@ -1227,6 +1445,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kein Mikrowechselrichter irgendeiner Marke hat die UL-3700-Zertifizierung erhalten (Stand Juli 2026) — der Standard startete im Januar 2026, Zertifizierungstests stehen branchenweit noch aus.',
           'Alle drei Marken haben bereits UL 1741 und IEEE 1547 Compliance, die vorbestehenden Netzanschlussstandards — das ist nicht dasselbe wie UL 3700 und ist um Jahre älter.',
           'Für ein wirklich Cloud-freies Setup ist die Hardware-Wahl wichtiger als die Software-Konfiguration — Home Assistant kann keinem Gerät lokalen Zugriff hinzufügen, das ihn nicht anbietet.',
+        ],
+      },
+      primaryPick: {
+        id: 'primary-pick',
+        title: 'Unsere Empfehlung: APsystems EZ1-M',
+        content: [
+          'Wenn Sie einen Balkonkraftwerk-Mikrowechselrichter wollen, der von Anfang an mit Home Assistant funktioniert und nie ein Cloud-Konto benötigt, ist der APsystems EZ1-M unter diesen drei Modellen die richtige Wahl.',
+        ],
+        items: [
+          'Native lokale HTTP-API — kein Cloud-Konto oder Reverse Engineering erforderlich, anders als bei Hoymiles und Deye, die beide auf Community-Workarounds angewiesen sind',
+          '325 $ direkt aus dem offiziellen US-Shop von APsystems, mit kostenlosem Versand in die 48 zusammenhängenden US-Bundesstaaten',
+          'Offiziell anmutende Open-Source-Home-Assistant-Integration, direkt auf dieser lokalen API aufgebaut',
+          'APsystems gibt auf der eigenen Produktseite an, dass die EZ1-Reihe CSA-zertifiziert nach UL 3700 ist — prüfen Sie vor dem Kauf den aktuellen Status Ihres genauen Modells, da unabhängige Zertifizierungs-Tracker uneinheitliche Ergebnisse zeigen',
+        ],
+        callouts: [
+          { type: 'warning', text: 'Verzichten Sie auf diesen Kauf, wenn Sie eine für Ihr genaues Modell vollständig bestätigte UL-3700-Zertifizierung benötigen: Unabhängige Tracker zeigen speziell für das „EZ1-M-Kit" einen uneinheitlichen Status, das zertifizierte Produkt von Hoymiles ist ein anderes Modell (HiFlow Pro, nicht das auf dieser Seite verglichene HMS-800-2T-NA), und Deye hat keine bestätigte UL-3700-Zertifizierung. Verzichten Sie auch, wenn steckerfertiges Balkonkraftwerk an Ihrem Wohnort noch nicht legal oder vom Netzbetreiber freigegeben ist — prüfen Sie die Vorschriften Ihres Bundesstaats, bevor Sie eines dieser drei Produkte kaufen.' },
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://usa.apsystems.com/product/ez1-microinverter/',
+            productName: 'APsystems EZ1-M Micro-Inverter',
+            productCategory: 'balcony-solar-microinverter',
+            priceRange: '$325',
+            label: 'Aktuellen Preis prüfen',
+          },
         ],
       },
       whatItDoes: {
@@ -1271,9 +1514,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Vergleichstabelle',
         rows: [
-          { Marke: 'Hoymiles', Modell: 'HMS-800-2T-NA', Preis: 'ca. 279–290 $', Monitoring: 'S-Miles Cloud (Standard); lokal via DIY-Modbus/DTU-Workarounds', ul3700: 'Nicht zertifiziert' },
-          { Marke: 'Deye', Modell: 'SUN600–1000G3', Preis: 'US-Preis unklar — nur EU-Preis gefunden', Monitoring: 'SOLARMAN Cloud (Standard); inoffizielles Cloud-freies lokales Tool, firmware-abhängig', ul3700: 'Nicht zertifiziert' },
-          { Marke: 'APsystems', Modell: 'EZ1-M', Preis: '325 $ (direkt, APsystems USA)', Monitoring: 'Native lokale API (offiziell) + optionale Cloud', ul3700: 'Nicht zertifiziert' },
+          { Marke: 'Hoymiles', Modell: 'HMS-800-2T-NA', Preis: 'ca. 279–290 $ · [Aktuellen Preis prüfen](https://ussolarsupplier.com/products/hoymiles-hms-microinverter-1)', Monitoring: 'S-Miles Cloud (Standard); lokal via DIY-Modbus/DTU-Workarounds', ul3700: 'Nicht zertifiziert' },
+          { Marke: 'Deye', Modell: 'SUN600–1000G3', Preis: 'US-Preis unklar — kein verifizierter Händler', Monitoring: 'SOLARMAN Cloud (Standard); inoffizielles Cloud-freies lokales Tool, firmware-abhängig', ul3700: 'Nicht zertifiziert' },
+          { Marke: 'APsystems', Modell: 'EZ1-M', Preis: '325 $ · [Aktuellen Preis prüfen](https://usa.apsystems.com/product/ez1-microinverter/)', Monitoring: 'Native lokale API (offiziell) + optionale Cloud', ul3700: 'Nicht zertifiziert' },
         ],
         columns: ['Marke', 'Modell', 'Preis', 'Monitoring', 'ul3700'],
         tableFormat: true,
@@ -1299,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Beste Balkonkraftwerk Wechselrichter (2026): Hoymiles vs. Deye vs. APsystems',
       description: 'Hoymiles, Deye und APsystems: Balkonkraftwerk-Wechselrichter verglichen nach Preis, Monitoring und lokalem Zugriff — einschließlich des einzigen mit nativer lokaler API.',
       datePublished: '2026-07-02',
-      dateModified: '2026-07-02',
+      dateModified: '2026-09-02',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
