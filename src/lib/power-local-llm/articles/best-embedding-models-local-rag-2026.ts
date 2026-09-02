@@ -1,6 +1,6 @@
 // Power Local LLM — Best Embedding Models for Local RAG in 2026 (Tested on Real Documents)
 // Slug: best-embedding-models-local-rag-2026
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 languages authored (en, es, pt, de, fr, ja, zh, ar, ko).
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,9 +9,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    last_full_refresh: '2026-07-14',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    last_full_refresh: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-en.webp',
     title: 'Best Local Embedding Models for RAG in 2026 (Tested on Real Documents)',
@@ -34,6 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -104,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**bge-large-en-v1.5 wins on English-only content** — 91% on legal contracts and research papers, but drops to 79% on multilingual text. Use it when the corpus is English and accuracy beats throughput.',
           '**nomic-embed-text-v2 wins CPU throughput** — 580 chunks/sec on a modern CPU, ~5× faster than the 1,024-dim alternatives. The right pick when no GPU is available.',
           '**Larger dimensions help only up to ~1,024.** Beyond that, recall gains are below 1 percentage point and storage doubles. The Matryoshka models (jina-embeddings-v3, nomic-embed-text-v2) let you truncate without re-embedding.',
-          '**Code retrieval is the hardest task.** All six models lose 5–10 points on a TypeScript/Python codebase compared to natural-language documents. None of the six is a real "code embedder" — for code-heavy corpora, jina-embeddings-v3 (87%) is the best of this benchmark, with the API-only voyage-code-3 the published specialist option (see Code Search and RAG below).',
+          '**Code retrieval is the hardest task.** All six models lose 5–10 points on a TypeScript/Python codebase compared to natural-language documents. None of the six is a real "code embedder" — for code-heavy corpora, jina-embeddings-v3 (87%) is the best of this benchmark, with the API-only voyage-code-3 and the self-hostable BAAI/bge-code-v1 the published specialist options (see Code Search and RAG below).',
           '**Multilingual support is not free — and Chinese needs a dedicated model.** English-only embedders (bge-large-en-v1.5, gte-large, mxbai-embed-large-v1) drop 10–15 points on mixed-language text. For German/French/Japanese documents, use jina-embeddings-v3, nomic-embed-text-v2, or BAAI/bge-m3. For Chinese-majority corpora, none of the six is the right default — use BAAI/bge-large-zh-v1.5 or Qwen3-Embedding-4B instead (see Chinese and CJK RAG below).',
           '**Switching embedders forces a full re-index** in every local RAG platform tested. Budget 30–90 minutes per 5,000 pages on consumer hardware and plan the swap accordingly.',
         ],
@@ -208,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'Need permissive Apache-2.0 license for commercial product', 'Pick': 'gte-large or mxbai-embed-large-v1' },
           { 'Your situation': 'Long documents (8k+ token chunks) and multilingual', 'Pick': 'snowflake-arctic-embed-l-v2.0' },
           { 'Your situation': 'Want flexibility to truncate dimensions later (storage cost control)', 'Pick': 'jina-embeddings-v3 (Matryoshka)' },
-          { 'Your situation': 'Code-heavy corpus (TypeScript, Python, Rust)', 'Pick': 'None of the six — use a code-specific embedder' },
+          { 'Your situation': 'Code-heavy corpus (TypeScript, Python, Rust)', 'Pick': 'None of the six — use a code-specific embedder (BAAI/bge-code-v1, voyage-code-3)' },
           { 'Your situation': 'Multilingual is the dominant requirement, GPU available', 'Pick': 'BAAI/bge-m3 (not in this benchmark, dedicated multilingual)' },
         ],
         columns: ['Your situation', 'Pick'],
@@ -378,13 +379,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Model': 'jina-embeddings-v3 (this benchmark)', 'Code retrieval@10 (this test / published)': '87% (general-purpose leader)', 'Dim': '1,024 (Matryoshka → 256)', 'License': 'CC BY-NC 4.0', 'Best for': 'Mixed code + prose corpus, one embedder for everything' },
           { 'Model': 'voyage-code-3', 'Code retrieval@10 (this test / published)': 'Published leader on code-retrieval benchmarks (not in this local test)', 'Dim': '1,024 (Matryoshka → 256)', 'License': 'Commercial API only — not self-hostable', 'Best for': 'Code-only corpora where API use is acceptable' },
+          { 'Model': 'BAAI/bge-code-v1', 'Code retrieval@10 (this test / published)': 'Published open-weight code specialist (not in this local test)', 'Dim': '1,536', 'License': 'Apache-2.0', 'Best for': 'Self-hosted code-heavy corpora wanting a dedicated code embedder' },
           { 'Model': 'gte-large (this benchmark)', 'Code retrieval@10 (this test / published)': '86%', 'Dim': '1,024', 'License': 'Apache-2.0', 'Best for': 'Self-hosted, permissive licence, second-best code score here' },
           { 'Model': 'mxbai-embed-large-v1 (this benchmark)', 'Code retrieval@10 (this test / published)': '84%', 'Dim': '1,024', 'License': 'Apache-2.0', 'Best for': 'Balanced code + English prose' },
         ],
         callouts: [
           {
             type: 'note',
-            text: 'We did not benchmark a dedicated open-weight code embedder locally in this round — voyage-code-3 is API-only, so it cannot be run fully local. Among the self-hostable models actually tested, jina-embeddings-v3 is the best code-retrieval pick (87%), with gte-large (86%, Apache-2.0) the best permissively licensed alternative. The practical approach for code-heavy corpora: start with jina-embeddings-v3 for everything, measure retrieval@10 on a held-out set of real code queries, and only add a second, code-specific index if the gap actually hurts your results.',
+            text: 'We did not benchmark a dedicated code embedder locally in this round — voyage-code-3 is API-only, so it cannot be run fully local, and the open-weight BAAI/bge-code-v1 (Apache-2.0) was outside the scope of this run. Among the models actually tested, jina-embeddings-v3 is the best code-retrieval pick (87%), with gte-large (86%, Apache-2.0) the best permissively licensed alternative. The practical approach for code-heavy corpora: start with jina-embeddings-v3 for everything, measure retrieval@10 on a held-out set of real code queries, and only add a second, code-specific index — BAAI/bge-code-v1 is the natural self-hosted candidate — if the gap actually hurts your results.',
           },
         ],
       },
@@ -475,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which embedding model handles code best?',
-            a: 'None of the six tested are dedicated code embedders. On a TypeScript/Python codebase, jina-embeddings-v3 led at 87% retrieval@10, with the others between 82–86%. For code-heavy corpora — code search, repository RAG, agent tooling over a codebase — pair a general embedder with a code-specific one (voyage-code-3, API-only, or a fine-tuned variant) and use the better-scoring one for code chunks. See the [Best Embedding Model for Code Search and RAG](#code-embeddings) section above for a direct comparison. The simplest approach: embed everything with jina-embeddings-v3 first, measure retrieval@10 on a held-out query set, and only swap if it falls below your threshold.',
+            a: 'None of the six tested are dedicated code embedders. On a TypeScript/Python codebase, jina-embeddings-v3 led at 87% retrieval@10, with the others between 82–86%. For code-heavy corpora — code search, repository RAG, agent tooling over a codebase — pair a general embedder with a code-specific one (the self-hostable BAAI/bge-code-v1, Apache-2.0, or the API-only voyage-code-3) and use the better-scoring one for code chunks. See the [Best Embedding Model for Code Search and RAG](#code-embeddings) section above for a direct comparison. The simplest approach: embed everything with jina-embeddings-v3 first, measure retrieval@10 on a held-out query set, and only swap if it falls below your threshold.',
           },
           {
             q: 'Which embedding model is best for Chinese RAG?',
@@ -530,8 +532,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-es.webp',
     title: 'Mejores modelos de embedding local para RAG en 2026 (probados con documentos reales)',
@@ -554,6 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -624,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**bge-large-en-v1.5 gana en contenido solo en inglés** — 91% en contratos legales y artículos de investigación, pero cae al 79% en texto multilingüe. Úsalo cuando el corpus sea en inglés y la precisión supere al rendimiento.',
           '**nomic-embed-text-v2 gana en rendimiento CPU** — 580 chunks/seg en una CPU moderna, ~5× más rápido que las alternativas de 1.024 dimensiones. La elección correcta cuando no hay GPU disponible.',
           '**Las dimensiones más grandes solo ayudan hasta ~1.024.** Más allá de eso, las ganancias de recall son inferiores a 1 punto porcentual y el almacenamiento se duplica. Los modelos Matryoshka (jina-embeddings-v3, nomic-embed-text-v2) permiten truncar sin re-embedder.',
-          '**La recuperación de código es la tarea más difícil.** Los seis modelos pierden entre 5 y 10 puntos en una base de código TypeScript/Python frente a documentos en lenguaje natural. Ninguno de los seis es un verdadero "embedder de código" — para corpus con mucho código, jina-embeddings-v3 (87%) es el mejor de este benchmark, y voyage-code-3, solo por API, es la opción especializada publicada (ver Búsqueda de código y RAG más abajo).',
+          '**La recuperación de código es la tarea más difícil.** Los seis modelos pierden entre 5 y 10 puntos en una base de código TypeScript/Python frente a documentos en lenguaje natural. Ninguno de los seis es un verdadero "embedder de código" — para corpus con mucho código, jina-embeddings-v3 (87%) es el mejor de este benchmark, y voyage-code-3 (solo por API) junto con BAAI/bge-code-v1 (autoalojable) son las opciones especializadas publicadas (ver Búsqueda de código y RAG más abajo).',
           '**El soporte multilingüe no es gratuito — y el chino necesita un modelo dedicado.** Los embedders solo en inglés (bge-large-en-v1.5, gte-large, mxbai-embed-large-v1) pierden 10–15 puntos en texto de idiomas mixtos. Para documentos en alemán, francés o japonés, usa jina-embeddings-v3, nomic-embed-text-v2 o BAAI/bge-m3. Para corpus mayoritariamente en chino, ninguno de los seis es la opción correcta por defecto — usa en su lugar BAAI/bge-large-zh-v1.5 o Qwen3-Embedding-4B (ver Chino y CJK en RAG más abajo).',
           '**Cambiar de embedder obliga a reindexar completamente** en todas las plataformas de RAG local probadas. Presupuesta 30–90 minutos por cada 5.000 páginas en hardware de consumo y planifica el cambio en consecuencia.',
         ],
@@ -728,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Necesitas licencia permisiva Apache-2.0 para producto comercial', 'Elige': 'gte-large o mxbai-embed-large-v1' },
           { 'Tu situación': 'Documentos largos (chunks de 8k+ tokens) y multilingüe', 'Elige': 'snowflake-arctic-embed-l-v2.0' },
           { 'Tu situación': 'Quieres flexibilidad para truncar dimensiones después (control de costos de almacenamiento)', 'Elige': 'jina-embeddings-v3 (Matryoshka)' },
-          { 'Tu situación': 'Corpus con mucho código (TypeScript, Python, Rust)', 'Elige': 'Ninguno de los seis — usa un embedder específico para código' },
+          { 'Tu situación': 'Corpus con mucho código (TypeScript, Python, Rust)', 'Elige': 'Ninguno de los seis — usa un embedder específico para código (BAAI/bge-code-v1, voyage-code-3)' },
           { 'Tu situación': 'El multilingüe es el requisito dominante, GPU disponible', 'Elige': 'BAAI/bge-m3 (no incluido en este benchmark, multilingüe dedicado)' },
         ],
         columns: ['Tu situación', 'Elige'],
@@ -898,13 +901,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Modelo': 'jina-embeddings-v3 (este benchmark)', 'retrieval@10 código (esta prueba / publicado)': '87% (líder de propósito general)', 'Dim': '1.024 (Matryoshka → 256)', 'Licencia': 'CC BY-NC 4.0', 'Mejor para': 'Corpus mixto de código + prosa, un solo embedder para todo' },
           { 'Modelo': 'voyage-code-3', 'retrieval@10 código (esta prueba / publicado)': 'Líder publicado en benchmarks de recuperación de código (no incluido en esta prueba local)', 'Dim': '1.024 (Matryoshka → 256)', 'Licencia': 'Solo API comercial — no autoalojable', 'Mejor para': 'Corpus solo de código donde el uso de API es aceptable' },
+          { 'Modelo': 'BAAI/bge-code-v1', 'retrieval@10 código (esta prueba / publicado)': 'Especialista en código de pesos abiertos publicado (no incluido en esta prueba local)', 'Dim': '1.536', 'Licencia': 'Apache-2.0', 'Mejor para': 'Corpus autoalojados con mucho código que quieren un embedder de código dedicado' },
           { 'Modelo': 'gte-large (este benchmark)', 'retrieval@10 código (esta prueba / publicado)': '86%', 'Dim': '1.024', 'Licencia': 'Apache-2.0', 'Mejor para': 'Autoalojado, licencia permisiva, segunda mejor puntuación de código aquí' },
           { 'Modelo': 'mxbai-embed-large-v1 (este benchmark)', 'retrieval@10 código (esta prueba / publicado)': '84%', 'Dim': '1.024', 'Licencia': 'Apache-2.0', 'Mejor para': 'Equilibrio entre código y prosa en inglés' },
         ],
         callouts: [
           {
             type: 'note',
-            text: 'No hicimos benchmark local de un embedder de código dedicado de pesos abiertos en esta ronda — voyage-code-3 es solo API, por lo que no se puede ejecutar totalmente en local. Entre los modelos autoalojables realmente probados, jina-embeddings-v3 es la mejor opción para recuperación de código (87%), con gte-large (86%, Apache-2.0) como la mejor alternativa con licencia permisiva. El enfoque práctico para corpus con mucho código: empieza con jina-embeddings-v3 para todo, mide retrieval@10 en un conjunto reservado de consultas de código reales, y solo añade un segundo índice específico para código si la brecha realmente perjudica tus resultados.',
+            text: 'No hicimos benchmark local de un embedder de código dedicado en esta ronda — voyage-code-3 es solo API, por lo que no se puede ejecutar totalmente en local, y el BAAI/bge-code-v1 de pesos abiertos (Apache-2.0) quedó fuera del alcance de esta ejecución. Entre los modelos realmente probados, jina-embeddings-v3 es la mejor opción para recuperación de código (87%), con gte-large (86%, Apache-2.0) como la mejor alternativa con licencia permisiva. El enfoque práctico para corpus con mucho código: empieza con jina-embeddings-v3 para todo, mide retrieval@10 en un conjunto reservado de consultas de código reales, y solo añade un segundo índice específico para código — BAAI/bge-code-v1 es el candidato autoalojable natural — si la brecha realmente perjudica tus resultados.',
           },
         ],
       },
@@ -1007,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo mezclar modelos de embedding en el mismo sistema RAG?',
-            a: 'Técnicamente sí, en la práctica no. Mezclar requiere dos índices vectoriales paralelos (consultar ambos, combinar resultados — añade 50–150 ms de latencia y complica la puntuación de relevancia) o entrenar una pequeña capa de proyección para alinear dimensiones (nivel de investigación, frágil). Para el 95% de los despliegues locales, elige un embedder y reindexca. La excepción: repositorios de código con un embedder de código dedicado para chunks de código y un embedder general para documentación — divide por tipo de documento en la ingesta, consulta ambos índices cuando la consulta del usuario sea ambigua.',
+            a: 'Técnicamente sí, en la práctica no. Mezclar requiere dos índices vectoriales paralelos (consultar ambos, combinar resultados — añade 50–150 ms de latencia y complica la puntuación de relevancia) o entrenar una pequeña capa de proyección para alinear dimensiones (nivel de investigación, frágil). Para el 95% de los despliegues locales, elige un embedder y reindexa. La excepción: repositorios de código con un embedder de código dedicado para chunks de código y un embedder general para documentación — divide por tipo de documento en la ingesta, consulta ambos índices cuando la consulta del usuario sea ambigua.',
           },
           {
             q: '¿Los embeddings de código abierto son tan buenos como los de OpenAI?',
@@ -1019,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué modelo es el mejor para documentos legales?',
-            a: 'bge-large-en-v1.5 lideró el subconjunto legal con el 94% de retrieval@10 — el número individual más alto del benchmark — pero solo para contratos en inglés. Para corpus legales en alemán, francés o multilingüe, jina-embeddings-v3 (93% inglés / 89% multilingüe) es el mejor generalista. El texto legal favorece los modelos de 1.024 dimensiones porque la precisión terminológica importa; nomic-embed-text-v2 de 768 dimensiones quedó 6 puntos por debajo en el subconjunto legal. Para contratos muy largos (más de 50 páginas de leguaje jurídico denso), snowflake-arctic-embed-l-v2.0 con chunks de 8k tokens reduce las pérdidas por fragmentación.',
+            a: 'bge-large-en-v1.5 lideró el subconjunto legal con el 94% de retrieval@10 — el número individual más alto del benchmark — pero solo para contratos en inglés. Para corpus legales en alemán, francés o multilingüe, jina-embeddings-v3 (93% inglés / 89% multilingüe) es el mejor generalista. El texto legal favorece los modelos de 1.024 dimensiones porque la precisión terminológica importa; nomic-embed-text-v2 de 768 dimensiones quedó 6 puntos por debajo en el subconjunto legal. Para contratos muy largos (más de 50 páginas de lenguaje jurídico denso), snowflake-arctic-embed-l-v2.0 con chunks de 8k tokens reduce las pérdidas por fragmentación.',
           },
           {
             q: '¿Se pueden reutilizar los embeddings si cambio de plataforma RAG?',
@@ -1050,11 +1054,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores modelos de embedding local para RAG en 2026 (probados con documentos reales)',
-      description: 'Nomic, BGE, GTE, Mixedbread, Snowflake y Jina probados en contratos legales, artículos de investigación, código y wiki multilingüe. retrieval@10, velocidad, memoria. Veredicto de mayo 2026.',
+      description: 'Nomic, BGE, GTE, Mixedbread, Snowflake y Jina probados en contratos legales, artículos de investigación, código y wiki multilingüe. retrieval@10, velocidad, memoria. Veredicto 2026.',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-embedding-models-local-rag-2026',
       inLanguage: 'es',
-      datePublished: '2026-05-24',
-      dateModified: '2026-07-14',
+      datePublished: '2026-05-07',
+      dateModified: '2026-09-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -1063,8 +1067,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-pt.webp',
     title: 'Melhores modelos de embedding local para RAG em 2026 (testados com documentos reais)',
@@ -1087,6 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -1157,7 +1162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**bge-large-en-v1.5 vence em conteúdo só em inglês** — 91% em contratos jurídicos e artigos de pesquisa, mas cai para 79% em texto multilíngue. Use-o quando o corpus for em inglês e a precisão superar o desempenho.',
           '**nomic-embed-text-v2 vence em desempenho de CPU** — 580 chunks/seg em uma CPU moderna, ~5× mais rápido que as alternativas de 1.024 dimensões. A escolha certa quando não há GPU disponível.',
           '**As dimensões maiores só ajudam até ~1.024.** Além disso, os ganhos de recall são inferiores a 1 ponto percentual e o armazenamento dobra. Os modelos Matryoshka (jina-embeddings-v3, nomic-embed-text-v2) permitem truncar sem refazer o embedding.',
-          '**A recuperação de código é a tarefa mais difícil.** Os seis modelos perdem entre 5 e 10 pontos em uma base de código TypeScript/Python frente a documentos em linguagem natural. Nenhum dos seis é um verdadeiro "embedder de código" — para corpus com muito código, o jina-embeddings-v3 (87%) é o melhor deste benchmark, com o voyage-code-3 (só via API) como a opção especialista publicada (veja Busca de código e RAG abaixo).',
+          '**A recuperação de código é a tarefa mais difícil.** Os seis modelos perdem entre 5 e 10 pontos em uma base de código TypeScript/Python frente a documentos em linguagem natural. Nenhum dos seis é um verdadeiro "embedder de código" — para corpus com muito código, o jina-embeddings-v3 (87%) é o melhor deste benchmark, com o voyage-code-3 (só via API) e o BAAI/bge-code-v1 (auto-hospedável) como as opções especialistas publicadas (veja Busca de código e RAG abaixo).',
           '**O suporte multilíngue não é gratuito — e o chinês precisa de um modelo dedicado.** Os embedders só em inglês (bge-large-en-v1.5, gte-large, mxbai-embed-large-v1) perdem 10–15 pontos em texto de idiomas misturados. Para documentos em alemão, francês ou japonês, use jina-embeddings-v3, nomic-embed-text-v2 ou BAAI/bge-m3. Para corpus majoritariamente em chinês, nenhum dos seis é o padrão certo — use o BAAI/bge-large-zh-v1.5 ou o Qwen3-Embedding-4B em vez disso (veja Chinês e RAG em CJK abaixo).',
           '**Trocar de embedder obriga a reindexar completamente** em todas as plataformas de RAG local testadas. Reserve 30–90 minutos por cada 5.000 páginas em hardware de consumo e planeje a troca de acordo.',
         ],
@@ -1177,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Um modelo de embedding transforma trechos de documentos em números (vetores) para que o sistema encontre rapidamente as partes relevantes. Um modelo melhor significa que os números representam o significado real, não apenas as palavras. Em hardware local, a velocidade com que um modelo transforma texto em números também determina quanto tempo você espera quando um novo documento é adicionado.',
           },
         ],
-        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-pt.svg',
         imageCaption: 'Precisão retrieval@10 em 4 tipos de documentos: jina-embeddings-v3 lidera globalmente em 92%, bge-large domina o texto em inglês (94% jurídico, 93% pesquisa) mas cai para 79% em conteúdo multilíngue, nomic-embed-text-v2 se destaca em multilíngue (92%) com o maior suporte entre idiomas.',
         columns: ['Modelo', 'Dim', 'Velocidade (CPU)', 'Velocidade (GPU)', 'Memória', 'retrieval@10', 'Multilíngue', 'Melhor para'],
         rows: [
@@ -1261,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Você precisa de licença permissiva Apache-2.0 para produto comercial', 'Escolha': 'gte-large ou mxbai-embed-large-v1' },
           { 'Sua situação': 'Documentos longos (chunks de 8k+ tokens) e multilíngue', 'Escolha': 'snowflake-arctic-embed-l-v2.0' },
           { 'Sua situação': 'Você quer flexibilidade para truncar dimensões depois (controle de custos de armazenamento)', 'Escolha': 'jina-embeddings-v3 (Matryoshka)' },
-          { 'Sua situação': 'Corpus com muito código (TypeScript, Python, Rust)', 'Escolha': 'Nenhum dos seis — use um embedder específico para código' },
+          { 'Sua situação': 'Corpus com muito código (TypeScript, Python, Rust)', 'Escolha': 'Nenhum dos seis — use um embedder específico para código (BAAI/bge-code-v1, voyage-code-3)' },
           { 'Sua situação': 'O multilíngue é o requisito dominante, GPU disponível', 'Escolha': 'BAAI/bge-m3 (não incluído neste benchmark, multilíngue dedicado)' },
         ],
         columns: ['Sua situação', 'Escolha'],
@@ -1292,7 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Precisão de recuperação por tipo de documento (retrieval@10)',
         content:
           '**retrieval@10 = % de consultas onde o chunk correto aparece nos 10 primeiros resultados.** Maior é melhor. Os números vêm de 25 consultas avaliadas por tipo de documento por modelo.',
-        image: '/images/best-embedding-models-local-rag-2026-document-types-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-pt.svg',
         imageCaption: 'Retrieval@10 por tipo de documento: jina-embeddings-v3 é o único modelo que se mantém acima de 87% nos quatro tipos (jurídico 93%, pesquisa 92%, código 87%, multilíngue 89%). Os modelos só em inglês (bge-large, gte-large) se destacam em jurídico/pesquisa mas caem 10–15 pontos em multilíngue. A recuperação de código continua a mais difícil (82–87% em todos os modelos).',
         columns: ['Modelo', 'Jurídico', 'Pesquisa', 'Código', 'Multilíngue', 'Global'],
         rows: [
@@ -1315,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Velocidade de embedding em CPU (chunks por segundo)',
         content:
           '**Desempenho com tamanho de lote 32, chunks de 256 tokens, em Apple M3 Pro (sem GPU).** Maior é melhor. A velocidade de CPU determina se você consegue reindexar um corpus de 5.000 páginas no almoço (jina, nomic) ou precisa planejar uma execução noturna (bge-large, gte-large).',
-        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-pt.svg',
         imageCaption: 'Desempenho de embedding CPU vs GPU: nomic-embed-text-v2 domina em CPU a 580 chunks/seg (5× mais rápido que bge-large a 95), reduzindo o tempo de reindexação de 55 minutos para 9 minutos em um corpus de 5K páginas. A GPU reduz a diferença; nomic continua liderando a 4.800 chunks/seg em RTX 4070.',
         columns: ['Modelo', 'Chunks/seg (CPU)', 'Tempo de indexação corpus 5K páginas', 'Notas'],
         rows: [
@@ -1359,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pegada de memória e o trade-off de dimensões',
         content:
           '**O número de dimensões é a escolha mais sobre-engenheirada em RAG local.** Mais dimensões ajudam a recuperação até ~1.024, depois se estabilizam. Além disso, você paga o dobro de armazenamento por ganhos inferiores a 1 ponto percentual.',
-        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-pt.svg',
         imageCaption: 'Trade-off de dimensões vs armazenamento em corpus de 50K páginas: 768 dims = 0,9 GB, 1.024 dims = 1,2 GB (+33%), 3.072 dims = 3,6 GB (+300%) com apenas <0,5% de ganho de retrieval. Os modelos Matryoshka (jina-v3, nomic) permitem truncar de 1.024→512→256 dimensões sem refazer o embedding, trocando ~1–3% de retrieval por 50% de economia em armazenamento.',
         items: [
           '**768 dimensões (nomic-embed-text-v2):** 768 × 4 bytes = 3 KB por chunk. Um corpus de 5.000 páginas dividido em chunks de 256 tokens (~30.000 chunks) precisa de ~90 MB apenas para vetores.',
@@ -1431,13 +1436,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Modelo': 'jina-embeddings-v3 (este benchmark)', 'retrieval@10 em código (este teste / publicado)': '87% (líder de propósito geral)', 'Dim': '1.024 (Matryoshka → 256)', 'Licença': 'CC BY-NC 4.0', 'Melhor para': 'Corpus misto de código + texto, um único embedder para tudo' },
           { 'Modelo': 'voyage-code-3', 'retrieval@10 em código (este teste / publicado)': 'Líder publicado em benchmarks de recuperação de código (não testado localmente aqui)', 'Dim': '1.024 (Matryoshka → 256)', 'Licença': 'Só API comercial — não pode ser auto-hospedado', 'Melhor para': 'Corpus só de código onde o uso via API é aceitável' },
+          { 'Modelo': 'BAAI/bge-code-v1', 'retrieval@10 em código (este teste / publicado)': 'Especialista em código de pesos abertos publicado (não testado localmente aqui)', 'Dim': '1.536', 'Licença': 'Apache-2.0', 'Melhor para': 'Corpus auto-hospedados com muito código que querem um embedder de código dedicado' },
           { 'Modelo': 'gte-large (este benchmark)', 'retrieval@10 em código (este teste / publicado)': '86%', 'Dim': '1.024', 'Licença': 'Apache-2.0', 'Melhor para': 'Auto-hospedado, licença permissiva, segunda melhor pontuação de código aqui' },
           { 'Modelo': 'mxbai-embed-large-v1 (este benchmark)', 'retrieval@10 em código (este teste / publicado)': '84%', 'Dim': '1.024', 'Licença': 'Apache-2.0', 'Melhor para': 'Equilíbrio entre código e texto em inglês' },
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Não testamos localmente nesta rodada um embedder de código de pesos abertos dedicado — o voyage-code-3 é só via API, então não pode ser executado totalmente local. Entre os modelos auto-hospedáveis que testamos de fato, o jina-embeddings-v3 é a melhor escolha para recuperação de código (87%), com o gte-large (86%, Apache-2.0) como a melhor alternativa com licença permissiva. A abordagem prática para corpus com muito código: comece com o jina-embeddings-v3 para tudo, meça o retrieval@10 em um conjunto reservado de consultas de código reais e só adicione um segundo índice específico para código se a diferença realmente prejudicar os seus resultados.',
+            text: 'Não testamos localmente nesta rodada um embedder de código dedicado — o voyage-code-3 é só via API, então não pode ser executado totalmente local, e o BAAI/bge-code-v1 de pesos abertos (Apache-2.0) ficou fora do escopo desta execução. Entre os modelos que testamos de fato, o jina-embeddings-v3 é a melhor escolha para recuperação de código (87%), com o gte-large (86%, Apache-2.0) como a melhor alternativa com licença permissiva. A abordagem prática para corpus com muito código: comece com o jina-embeddings-v3 para tudo, meça o retrieval@10 em um conjunto reservado de consultas de código reais e só adicione um segundo índice específico para código — o BAAI/bge-code-v1 é o candidato auto-hospedável natural — se a diferença realmente prejudicar os seus resultados.',
           },
         ],
       },
@@ -1487,7 +1493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Árvore de decisão: qual embedder você deve escolher?',
         content:
           '**Cinco perguntas binárias, em ordem, levam a maioria dos leitores ao embedder correto.**',
-        image: '/images/best-embedding-models-local-rag-2026-decision-tree-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-pt.svg',
         imageCaption: 'Fluxograma de 5 passos: disponibilidade de GPU → idioma do corpus → comprimento do documento → necessidades de truncamento de dimensões → licença comercial. Escolha padrão se você não tem certeza: jina-embeddings-v3 (92% retrieval@10, 89 idiomas multilíngue, flexibilidade de dimensões Matryoshka). Verifique a licença CC BY-NC para implantações comerciais.',
         items: [
           '**1. Você tem uma GPU disponível para indexar?** → Não: nomic-embed-text-v2 (5× velocidade de CPU). Sim: continue.',
@@ -1583,11 +1589,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores modelos de embedding para RAG local em 2026 (testados com documentos reais)',
-      description: 'Nomic, BGE, GTE, Mixedbread, Snowflake e Jina testados em contratos jurídicos, artigos de pesquisa, código e wiki multilíngue. retrieval@10, velocidade, memória. Veredito de maio de 2026.',
+      description: 'Nomic, BGE, GTE, Mixedbread, Snowflake e Jina testados em contratos jurídicos, artigos de pesquisa, código e wiki multilíngue. retrieval@10, velocidade, memória. Veredito 2026.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-embedding-models-local-rag-2026',
       inLanguage: 'pt-BR',
-      datePublished: '2026-05-24',
-      dateModified: '2026-07-14',
+      datePublished: '2026-05-07',
+      dateModified: '2026-09-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -1596,8 +1602,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-de.webp',
     title: 'Beste lokale Embedding-Modelle für RAG 2026 (Getestet auf echten Dokumenten)',
@@ -1620,6 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -1690,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**bge-large-en-v1.5 gewinnt bei rein Englisch-Inhalt** — 91% bei Rechtsverträgen und Forschungsarbeiten, fällt aber auf 79% bei mehrsprachigem Text. Verwenden Sie es, wenn der Corpus auf Englisch beschränkt ist und Genauigkeit dem Durchsatz vorgezogen wird.',
           '**nomic-embed-text-v2 gewinnt beim CPU-Durchsatz** — 580 Chunks/Sekunde auf einer modernen CPU, etwa 5-mal schneller als die 1.024-Dim-Alternativen. Die richtige Wahl, wenn keine GPU verfügbar ist.',
           '**Größere Dimensionen helfen nur bis etwa 1.024.** Darüber hinaus liegt der Recall-Gewinn unter 1 Prozentpunkt und die Speicherung verdoppelt sich. Die Matryoshka-Modelle (jina-embeddings-v3, nomic-embed-text-v2) ermöglichen die Trunkierung ohne Neueinbettung.',
-          '**Code-Abruf ist die schwierigste Aufgabe.** Alle sechs Modelle verlieren 5–10 Punkte bei einer TypeScript/Python-Codebasis im Vergleich zu Dokumenten in natürlicher Sprache. Keines der sechs ist ein echter „Code-Embedder" — für Code-intensive Korpora ist jina-embeddings-v3 (87%) das beste dieses Benchmarks, mit dem API-only voyage-code-3 als veröffentlichter Spezialist-Option (siehe Code-Suche und RAG unten).',
+          '**Code-Abruf ist die schwierigste Aufgabe.** Alle sechs Modelle verlieren 5–10 Punkte bei einer TypeScript/Python-Codebasis im Vergleich zu Dokumenten in natürlicher Sprache. Keines der sechs ist ein echter „Code-Embedder" — für Code-intensive Korpora ist jina-embeddings-v3 (87%) das beste dieses Benchmarks, mit dem API-only voyage-code-3 und dem selbst hostbaren BAAI/bge-code-v1 als veröffentlichten Spezialisten-Optionen (siehe Code-Suche und RAG unten).',
           '**Mehrsprachige Unterstützung ist nicht kostenlos — und Chinesisch braucht ein dediziertes Modell.** Rein Englisch-Embedder (bge-large-en-v1.5, gte-large, mxbai-embed-large-v1) verlieren 10–15 Punkte bei mehrsprachigem Text. Für deutsche/französische/japanische Dokumente verwenden Sie jina-embeddings-v3, nomic-embed-text-v2 oder BAAI/bge-m3. Für Chinesisch-dominierte Korpora ist keines der sechs die richtige Standardwahl — verwenden Sie stattdessen BAAI/bge-large-zh-v1.5 oder Qwen3-Embedding-4B (siehe Chinesisch und CJK-RAG unten).',
           '**Der Wechsel des Embedders erzwingt einen vollständigen Neuindex** in allen getesteten lokalen RAG-Plattformen. Budgetieren Sie 30–90 Minuten pro 5.000 Seiten auf Consumer-Hardware und planen Sie den Austausch entsprechend.',
         ],
@@ -1710,6 +1717,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ein Embedding-Modell wandelt Dokumentabschnitte in Zahlen (Vektoren) um, damit das System relevante Teile schnell finden kann. Ein besseres Modell bedeutet, dass die Zahlen die tatsächliche Bedeutung abbilden, nicht nur die Wörter. Auf lokaler Hardware bestimmt die Geschwindigkeit, mit der ein Modell Text in Zahlen umwandelt, auch, wie lange Sie warten, wenn ein neues Dokument hinzugefügt wird.',
           },
         ],
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-de.svg',
+        imageCaption: 'Retrieval@10-Genauigkeit über 4 Dokumenttypen: jina-embeddings-v3 führt insgesamt mit 92%, bge-large dominiert englischen Text (94% Recht, 93% Forschung), fällt aber auf 79% bei mehrsprachigem Inhalt, nomic-embed-text-v2 glänzt bei mehrsprachig (92%) mit der stärksten sprachübergreifenden Unterstützung.',
         columns: ['Modell', 'Dim', 'Geschwindigkeit (CPU)', 'Geschwindigkeit (GPU)', 'Speicher', 'retrieval@10', 'Mehrsprachig', 'Am besten für'],
         rows: [
           {
@@ -1792,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ihre Situation': 'Benötige permissive Apache-2.0-Lizenz für kommerzielles Produkt', 'Wählen Sie': 'gte-large oder mxbai-embed-large-v1' },
           { 'Ihre Situation': 'Lange Dokumente (8k+ Token-Chunks) und mehrsprachig', 'Wählen Sie': 'snowflake-arctic-embed-l-v2.0' },
           { 'Ihre Situation': 'Möchte Dimensionen später flexibel abschneiden (Speicherkostenregelung)', 'Wählen Sie': 'jina-embeddings-v3 (Matryoshka)' },
-          { 'Ihre Situation': 'Code-intensiver Corpus (TypeScript, Python, Rust)', 'Wählen Sie': 'Keines der sechs — verwenden Sie einen Code-spezifischen Embedder' },
+          { 'Ihre Situation': 'Code-intensiver Corpus (TypeScript, Python, Rust)', 'Wählen Sie': 'Keines der sechs — verwenden Sie einen Code-spezifischen Embedder (BAAI/bge-code-v1, voyage-code-3)' },
           { 'Ihre Situation': 'Mehrsprachigkeit ist die dominierende Anforderung, GPU verfügbar', 'Wählen Sie': 'BAAI/bge-m3 (nicht in diesem Benchmark, dediziert mehrsprachig)' },
         ],
         columns: ['Ihre Situation', 'Wählen Sie'],
@@ -1823,6 +1832,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Abrufgenauigkeit nach Dokumenttyp (retrieval@10)',
         content:
           '**retrieval@10 = % der Abfragen, bei denen der korrekte Chunk in den Top-10-Ergebnissen erscheint.** Höher ist besser. Zahlen sind aus 25 bewerteten Abfragen pro Dokumenttyp pro Modell.',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-de.svg',
+        imageCaption: 'Retrieval@10 nach Dokumenttyp: jina-embeddings-v3 ist das einzige Modell, das bei allen vier Typen über 87% bleibt (Recht 93%, Forschung 92%, Code 87%, mehrsprachig 89%). Rein englische Modelle (bge-large, gte-large) glänzen bei Recht/Forschung, fallen aber bei mehrsprachig um 10–15 Punkte. Code-Abruf bleibt für alle Modelle am schwersten (82–87%).',
         columns: ['Modell', 'Recht', 'Forschung', 'Code', 'Mehrsprachig', 'Insgesamt'],
         rows: [
           { 'Modell': 'nomic-embed-text-v2', 'Recht': '88%', 'Forschung': '90%', 'Code': '82%', 'Mehrsprachig': '92%', 'Insgesamt': '88%' },
@@ -1844,6 +1855,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CPU-Embedding-Geschwindigkeit (Chunks pro Sekunde)',
         content:
           '**Durchsatz bei Batch-Größe 32, 256-Token-Chunks, auf Apple M3 Pro (keine GPU).** Höher ist besser. Die CPU-Geschwindigkeit bestimmt, ob Sie einen 5.000-Seiten-Corpus mittags nachindexieren können (jina, nomic) oder über Nacht planen müssen (bge-large, gte-large).',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-de.svg',
+        imageCaption: 'CPU- vs. GPU-Embedding-Durchsatz: nomic-embed-text-v2 dominiert die CPU mit 580 Chunks/Sek. (5× schneller als bge-large mit 95) und verkürzt die Neuindexierungszeit eines 5K-Seiten-Corpus von 55 auf 9 Minuten. Die GPU verkleinert den Abstand; nomic führt weiterhin mit 4.800 Chunks/Sek. auf der RTX 4070.',
         columns: ['Modell', 'Chunks/Sekunde (CPU)', 'Indexierungszeit 5K-Seiten-Corpus', 'Notizen'],
         rows: [
           { 'Modell': 'nomic-embed-text-v2', 'Chunks/Sekunde (CPU)': '580', 'Indexierungszeit 5K-Seiten-Corpus': '~9 min', 'Notizen': 'Mixture-of-Experts; aktiviert 305 Mio. von 475 Mio. Parametern pro Token' },
@@ -1886,6 +1899,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Speichergröße und Dimensions-Verhältnis',
         content:
           '**Die Dimensionszahl ist die am meisten über-konstruierte Wahl in lokaler RAG.** Mehr Dimensionen helfen den Abruf bis zu etwa 1.024, dann Plateau. Darüber hinaus zahlen Sie die doppelte Speicherung für Gewinne unter 1 Prozentpunkt.',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-de.svg',
+        imageCaption: 'Dimensions- vs. Speicher-Tradeoff bei einem 50K-Seiten-Corpus: 768 Dim = 0,9 GB, 1.024 Dim = 1,2 GB (+33%), 3.072 Dim = 3,6 GB (+300%) bei nur <0,5% Retrieval-Gewinn. Matryoshka-Modelle (jina-v3, nomic) erlauben das Kürzen von 1.024→512→256 Dim ohne Neueinbettung, mit ~1–3% Retrieval-Verlust bei 50% Speicherersparnis.',
         items: [
           '**768 Dimensionen (nomic-embed-text-v2):** 768 × 4 Byte = 3 KB pro Chunk. Ein 5.000-Seiten-Corpus, das bei 256 Token in Chunks aufgeteilt ist (~30.000 Chunks), benötigt etwa 90 MB nur für Vektoren.',
           '**1.024 Dimensionen (alles andere):** 4 KB pro Chunk. Gleicher Corpus benötigt ~120 MB für Vektoren. Speicher skaliert linear — ein 50.000-Seiten-Corpus benötigt 1,2 GB bei 1.024 Dimensionen gegenüber 0,9 GB bei 768 Dimensionen.',
@@ -1956,13 +1971,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Modell': 'jina-embeddings-v3 (dieser Benchmark)', 'Code retrieval@10 (dieser Test / veröffentlicht)': '87% (Führer unter allgemeinen Modellen)', 'Dim': '1.024 (Matryoshka → 256)', 'Lizenz': 'CC BY-NC 4.0', 'Am besten für': 'Gemischter Code- und Prosa-Corpus, ein Embedder für alles' },
           { 'Modell': 'voyage-code-3', 'Code retrieval@10 (dieser Test / veröffentlicht)': 'Veröffentlichter Führer bei Code-Abruf-Benchmarks (nicht in diesem lokalen Test)', 'Dim': '1.024 (Matryoshka → 256)', 'Lizenz': 'Nur kommerzielle API — nicht selbst hostbar', 'Am besten für': 'Reine Code-Korpora, wo API-Nutzung akzeptabel ist' },
+          { 'Modell': 'BAAI/bge-code-v1', 'Code retrieval@10 (dieser Test / veröffentlicht)': 'Veröffentlichter Open-Weight-Code-Spezialist (nicht in diesem lokalen Test)', 'Dim': '1.536', 'Lizenz': 'Apache-2.0', 'Am besten für': 'Selbst gehostete code-lastige Korpora mit dediziertem Code-Embedder' },
           { 'Modell': 'gte-large (dieser Benchmark)', 'Code retrieval@10 (dieser Test / veröffentlicht)': '86%', 'Dim': '1.024', 'Lizenz': 'Apache-2.0', 'Am besten für': 'Selbst gehostet, permissive Lizenz, zweitbester Code-Score hier' },
           { 'Modell': 'mxbai-embed-large-v1 (dieser Benchmark)', 'Code retrieval@10 (dieser Test / veröffentlicht)': '84%', 'Dim': '1.024', 'Lizenz': 'Apache-2.0', 'Am besten für': 'Ausgewogener Code + Englisch-Prosa' },
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Wir haben in dieser Runde keinen dedizierten Open-Weight-Code-Embedder lokal benchmarkt — voyage-code-3 ist nur API, kann also nicht vollständig lokal ausgeführt werden. Unter den tatsächlich getesteten, selbst hostbaren Modellen ist jina-embeddings-v3 die beste Code-Abruf-Wahl (87%), mit gte-large (86%, Apache-2.0) als beste permissiv lizenzierte Alternative. Der praktische Ansatz für code-lastige Korpora: Beginnen Sie mit jina-embeddings-v3 für alles, messen Sie retrieval@10 auf einem zurückgehaltenen Set echter Code-Abfragen, und fügen Sie nur dann einen zweiten, code-spezifischen Index hinzu, wenn die Lücke Ihre Ergebnisse tatsächlich beeinträchtigt.',
+            text: 'Wir haben in dieser Runde keinen dedizierten Code-Embedder lokal benchmarkt — voyage-code-3 ist nur per API nutzbar und damit nicht vollständig lokal lauffähig, und das Open-Weight-Modell BAAI/bge-code-v1 (Apache-2.0) lag außerhalb des Umfangs dieses Laufs. Unter den tatsächlich getesteten Modellen ist jina-embeddings-v3 die beste Code-Abruf-Wahl (87%), mit gte-large (86%, Apache-2.0) als bester permissiv lizenzierter Alternative. Der praktische Ansatz für code-lastige Korpora: Beginnen Sie mit jina-embeddings-v3 für alles, messen Sie retrieval@10 auf einem zurückgehaltenen Set echter Code-Abfragen, und fügen Sie nur dann einen zweiten, code-spezifischen Index hinzu — BAAI/bge-code-v1 ist der naheliegende selbst gehostete Kandidat —, wenn die Lücke Ihre Ergebnisse tatsächlich beeinträchtigt.',
           },
         ],
       },
@@ -2012,6 +2028,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Entscheidungsbaum: Welchen Embedder sollten Sie wählen?',
         content:
           '**Fünf binäre Fragen, in dieser Reihenfolge, führen die meisten Leser zum richtigen Embedder.**',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-de.svg',
+        imageCaption: '5-Schritte-Entscheidungsdiagramm: GPU-Verfügbarkeit → Corpus-Sprache → Dokumentlänge → Bedarf an Dimensionstrunkierung → kommerzielle Lizenzierung. Standardwahl im Zweifel: jina-embeddings-v3 (92% retrieval@10, 89 Sprachen mehrsprachig, Matryoshka-Dimensionsflexibilität). CC-BY-NC-Lizenz für kommerzielle Bereitstellungen prüfen.',
         items: [
           '**1. Haben Sie eine GPU für die Indexierung verfügbar?** → Nein: nomic-embed-text-v2 (5× CPU-Geschwindigkeit). Ja: fortfahren.',
           '**2. Ist der Corpus rein Englisch?** → Nein: fortfahren. Ja: bge-large-en-v1.5, wenn Genauigkeit am wichtigsten ist, gte-large oder mxbai-embed-large-v1, wenn Apache-2.0-Lizenz wichtig ist.',
@@ -2051,7 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welches Embedding-Modell behandelt Code am besten?',
-            a: 'Keines der sechs getesteten sind dedizierte Code-Embedder. Bei einer TypeScript/Python-Codebasis führte jina-embeddings-v3 mit 87% retrieval@10 an, die anderen lagen zwischen 82–86%. Für Code-intensive Korpora — Code-Suche, Repository-RAG, Agent-Tooling über einer Codebasis — kombinieren Sie einen allgemeinen Embedder mit einem Code-spezifischen (voyage-code-3, nur API, oder eine Fine-Tuned-Variante) und verwenden Sie den besser bewerteten für Code-Chunks. Siehe den Abschnitt [Bestes Embedding-Modell für Code-Suche und RAG](#code-embeddings) oben für einen direkten Vergleich. Der einfachste Ansatz: Betten Sie alles zuerst mit jina-embeddings-v3 ein, messen Sie retrieval@10 auf einem gehaltenen Abfrage-Set und tauschen Sie nur aus, wenn es unter Ihren Schwellenwert fällt.',
+            a: 'Keines der sechs getesteten sind dedizierte Code-Embedder. Bei einer TypeScript/Python-Codebasis führte jina-embeddings-v3 mit 87% retrieval@10 an, die anderen lagen zwischen 82–86%. Für Code-intensive Korpora — Code-Suche, Repository-RAG, Agent-Tooling über einer Codebasis — kombinieren Sie einen allgemeinen Embedder mit einem Code-spezifischen (das selbst hostbare BAAI/bge-code-v1, Apache-2.0, oder das API-only voyage-code-3) und verwenden Sie den besser bewerteten für Code-Chunks. Siehe den Abschnitt [Bestes Embedding-Modell für Code-Suche und RAG](#code-embeddings) oben für einen direkten Vergleich. Der einfachste Ansatz: Betten Sie alles zuerst mit jina-embeddings-v3 ein, messen Sie retrieval@10 auf einem gehaltenen Abfrage-Set und tauschen Sie nur aus, wenn es unter Ihren Schwellenwert fällt.',
           },
           {
             q: 'Welches Embedding-Modell ist am besten für Chinesisch-RAG?',
@@ -2106,8 +2124,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-fr.webp',
     title: "Meilleurs modèles d'embedding local pour RAG en 2026 (Testés sur documents réels)",
@@ -2127,6 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -2194,7 +2213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**bge-large-en-v1.5 gagne sur contenu anglophone pur** — 91% contrats et recherche, mais chute à 79% sur texte multilingue. À privilégier quand corpus anglophone et précision prioritaire.",
           "**nomic-embed-text-v2 gagne en débit CPU** — 580 chunks/sec sur CPU moderne, ~5× plus rapide que alternatives 1 024-dim. Choix correct sans GPU.",
           "**Dimensions utiles seulement jusqu'à ~1 024.** Au-delà, gains <1 point et stockage doublé. Modèles Matryoshka (jina-embeddings-v3, nomic-embed-text-v2) permettent troncature sans ré-embedding.",
-          "**Retrieval sur code est tâche la plus difficile.** Les six perdent 5–10 points sur codebase TypeScript/Python vs documents langage naturel. Aucun n'est vrai « code embedder » — corpora lourds en code : jina-embeddings-v3 (87%) meilleur de ce benchmark, voyage-code-3 (API seule) option spécialiste publiée (voir Recherche de code et RAG plus bas).",
+          "**Retrieval sur code est tâche la plus difficile.** Les six perdent 5–10 points sur codebase TypeScript/Python vs documents langage naturel. Aucun n'est vrai « code embedder » — corpora lourds en code : jina-embeddings-v3 (87%) meilleur de ce benchmark, voyage-code-3 (API seule) et BAAI/bge-code-v1 (auto-hébergeable) options spécialistes publiées (voir Recherche de code et RAG plus bas).",
           "**Support multilingue ne vient pas gratuitement — et le chinois demande un modèle dédié.** Embedders anglophone seul (bge-large-en-v1.5, gte-large, mxbai-embed-large-v1) perdent 10–15 points sur texte mélangé. Documents allemand/français/japonais : utilisez jina-embeddings-v3, nomic-embed-text-v2 ou BAAI/bge-m3. Corpus majoritairement chinois : aucun des six n'est le bon défaut — utilisez BAAI/bge-large-zh-v1.5 ou Qwen3-Embedding-4B (voir Chinois et CJK en RAG plus bas).",
           "**Changer d'embedder force ré-index complet.** Aucune plateforme RAG locale ne supporte migration incrémentale. Budget 30–90 min par 5 000 pages sur matériel grand public.",
         ],
@@ -2213,6 +2232,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "Un modèle d'embedding transforme des fragments de document en nombres (vecteurs) pour que le système puisse trouver rapidement les passages pertinents. Un meilleur modèle signifie que les nombres représentent le sens réel, pas seulement les mots. Sur du matériel local, la vitesse à laquelle un modèle transforme le texte en nombres détermine aussi combien de temps vous attendez lorsqu'un nouveau document est ajouté.",
           },
         ],
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-fr.svg',
+        imageCaption: "Précision retrieval@10 sur 4 types de documents : jina-embeddings-v3 mène globalement à 92%, bge-large domine le texte anglophone (94% légal, 93% recherche) mais chute à 79% en multilingue, nomic-embed-text-v2 excelle en multilingue (92%) avec le meilleur support cross-langue.",
         columns: ['Modèle', 'Dim', 'Vitesse CPU', 'Vitesse GPU', 'Mémoire', 'retrieval@10', 'Multilingue', 'Meilleur pour'],
         rows: [
           {
@@ -2294,7 +2315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Situation': 'Licence Apache-2.0 requise produit commercial', 'Choisir': 'gte-large ou mxbai-embed-large-v1' },
           { 'Situation': 'Documents longs (8k+ tokens), multilingue', 'Choisir': 'snowflake-arctic-embed-l-v2.0' },
           { 'Situation': 'Troncature dimension future (contrôle coût storage)', 'Choisir': 'jina-embeddings-v3 (Matryoshka)' },
-          { 'Situation': 'Corpus lourd code (TypeScript, Python, Rust)', 'Choisir': 'Aucun — embedder code spécialisé' },
+          { 'Situation': 'Corpus lourd code (TypeScript, Python, Rust)', 'Choisir': 'Aucun — embedder code spécialisé (BAAI/bge-code-v1, voyage-code-3)' },
           { 'Situation': 'Multilingue dominant, GPU disponible', 'Choisir': 'BAAI/bge-m3 (non dans benchmark)' },
         ],
         columns: ['Situation', 'Choisir'],
@@ -2323,6 +2344,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'retrieval-accuracy',
         title: 'Précision retrieval par type (retrieval@10)',
         content: "**retrieval@10 = % requêtes où chunk correct dans top-10.** Plus haut mieux. Basé 25 requêtes notées par type par modèle.",
+        image: '/images/best-embedding-models-local-rag-2026-document-types-fr.svg',
+        imageCaption: "Retrieval@10 par type de document : jina-embeddings-v3 est le seul modèle à rester au-dessus de 87% sur les quatre types (légal 93%, recherche 92%, code 87%, multilingue 89%). Les modèles anglophones (bge-large, gte-large) excellent en légal/recherche mais chutent de 10–15 points en multilingue. Le code reste la tâche la plus dure pour tous (82–87%).",
         columns: ['Modèle', 'Légal', 'Recherche', 'Code', 'Multilingue', 'Global'],
         rows: [
           { 'Modèle': 'nomic-embed-text-v2', 'Légal': '88%', 'Recherche': '90%', 'Code': '82%', 'Multilingue': '92%', 'Global': '88%' },
@@ -2343,6 +2366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'cpu-speed',
         title: 'Vitesse CPU (Chunks par seconde)',
         content: "**Débit batch 32, chunks 256-tokens, M3 Pro sans GPU.** Plus rapide réindexe corpus 5K pages midi (jina, nomic) ou planifie nuit (bge, gte).",
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-fr.svg',
+        imageCaption: "Débit CPU vs GPU : nomic-embed-text-v2 domine sur CPU à 580 chunks/sec (5× plus rapide que bge-large à 95), réduisant le temps de réindexation de 55 à 9 minutes sur un corpus de 5K pages. Le GPU réduit l'écart ; nomic reste en tête à 4 800 chunks/sec sur RTX 4070.",
         columns: ['Modèle', 'Chunks/sec CPU', 'Temps index 5K pages', 'Notes'],
         rows: [
           { 'Modèle': 'nomic-embed-text-v2', 'Chunks/sec CPU': '580', 'Temps index 5K pages': '~9 min', 'Notes': 'MoE ; active 305M de 475M params/token' },
@@ -2383,6 +2408,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-and-dimensions',
         title: 'Mémoire et dimensions',
         content: "**Dimension est choix le plus sur-construit RAG local.** Aide retrieval jusqu'à ~1 024, puis plateau. Au-delà : gains <1 point, storage doublé.",
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-fr.svg',
+        imageCaption: "Compromis dimensions vs stockage sur corpus de 50K pages : 768 dims = 0,9 GB, 1 024 dims = 1,2 GB (+33%), 3 072 dims = 3,6 GB (+300%) pour seulement <0,5% de gain retrieval. Les modèles Matryoshka (jina-v3, nomic) permettent de tronquer 1 024→512→256 dims sans ré-embedding, avec ~1–3% de perte retrieval pour 50% d'économie de stockage.",
         items: [
           "**768 dims (nomic-embed-text-v2) :** 768 × 4 bytes = 3 KB/chunk. Corpus 5K pages chunked 256 tokens (~30K chunks) = ~90 MB vecteurs.",
           "**1 024 dims (autres) :** 4 KB/chunk. Corpus 5K pages = ~120 MB. Storage linéaire — 50K pages = 1.2 GB à 1 024 dims vs 0.9 GB à 768 dims.",
@@ -2451,13 +2478,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Modèle': 'jina-embeddings-v3 (ce benchmark)', 'retrieval@10 code (ce test / publié)': '87% (leader généraliste)', 'Dim': '1 024 (Matryoshka → 256)', 'Licence': 'CC BY-NC 4.0', 'Meilleur pour': 'Corpus mixte code + prose, un seul embedder pour tout' },
           { 'Modèle': 'voyage-code-3', 'retrieval@10 code (ce test / publié)': 'Leader publié benchmarks retrieval code (pas dans ce test local)', 'Dim': '1 024 (Matryoshka → 256)', 'Licence': 'API commerciale seule — non auto-hébergeable', 'Meilleur pour': 'Corpus code seul où usage API acceptable' },
+          { 'Modèle': 'BAAI/bge-code-v1', 'retrieval@10 code (ce test / publié)': 'Spécialiste code open-weight publié (pas dans ce test local)', 'Dim': '1 536', 'Licence': 'Apache-2.0', 'Meilleur pour': 'Corpus auto-hébergés lourds en code voulant un embedder code dédié' },
           { 'Modèle': 'gte-large (ce benchmark)', 'retrieval@10 code (ce test / publié)': '86%', 'Dim': '1 024', 'Licence': 'Apache-2.0', 'Meilleur pour': 'Auto-hébergé, licence permissive, second meilleur score code ici' },
           { 'Modèle': 'mxbai-embed-large-v1 (ce benchmark)', 'retrieval@10 code (ce test / publié)': '84%', 'Dim': '1 024', 'Licence': 'Apache-2.0', 'Meilleur pour': 'Équilibre code + prose anglophone' },
         ],
         callouts: [
           {
             type: 'note',
-            text: "Aucun embedder code dédié open-weight testé localement ce round — voyage-code-3 API seule, ne peut tourner full local. Parmi modèles auto-hébergeables réellement testés, jina-embeddings-v3 meilleur pick retrieval code (87%), gte-large (86%, Apache-2.0) meilleure alternative licence permissive. Approche pratique corpus lourd code : démarrer jina-embeddings-v3 pour tout, mesurer retrieval@10 sur set requêtes code réelles réservé, ajouter second index code-spécifique seulement si écart nuit vraiment aux résultats.",
+            text: "Aucun embedder code dédié testé localement ce round — voyage-code-3 API seule, ne peut tourner full local, et BAAI/bge-code-v1 open-weight (Apache-2.0) était hors du périmètre de ce test. Parmi les modèles réellement testés, jina-embeddings-v3 meilleur pick retrieval code (87%), gte-large (86%, Apache-2.0) meilleure alternative licence permissive. Approche pratique corpus lourd code : démarrer jina-embeddings-v3 pour tout, mesurer retrieval@10 sur set requêtes code réelles réservé, ajouter un second index code-spécifique — BAAI/bge-code-v1 est le candidat auto-hébergeable naturel — seulement si l'écart nuit vraiment aux résultats.",
           },
         ],
       },
@@ -2504,6 +2532,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'decision-tree',
         title: 'Arbre de décision : quel embedder choisir ?',
         content: "**Cinq questions binaires, cet ordre, guident plupart lecteurs au bon embedder.**",
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-fr.svg',
+        imageCaption: "Diagramme de décision en 5 étapes : disponibilité GPU → langue du corpus → longueur des documents → besoin de troncature de dimensions → licence commerciale. Choix par défaut en cas de doute : jina-embeddings-v3 (92% retrieval@10, 89 langues multilingues, flexibilité de dimensions Matryoshka). Vérifiez la licence CC BY-NC pour un usage commercial.",
         items: [
           '**1. GPU disponible indexing ?** → Non : nomic-embed-text-v2 (5× CPU). Oui : continuer.',
           '**2. Corpus anglophone seul ?** → Non : continuer. Oui : bge-large-en-v1.5 si précision prime, gte-large ou mxbai-embed-large-v1 si licence Apache-2.0.',
@@ -2543,7 +2573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Modèle meilleur pour code ?',
-            a: "Aucun des six vrais « code embedder ». TypeScript/Python codebase : jina-embeddings-v3 mène 87% retrieval@10, autres 82–86%. Corpus lourd code — code search, repo RAG, agent tooling — combinez general embedder + code-specific (bge-code-v1, voyage-code-3, fine-tuned variant), utilisez meilleur-scorer code chunks. Simplest : embed tout jina d'abord, mesurer retrieval@10 query set, swap seul si <threshold. Voir la section [Meilleur modèle d'embedding pour la recherche de code et RAG](#code-embeddings) ci-dessus pour comparaison directe.",
+            a: "Aucun des six vrais « code embedder ». TypeScript/Python codebase : jina-embeddings-v3 mène 87% retrieval@10, autres 82–86%. Corpus lourd code — code search, repo RAG, agent tooling — combinez general embedder + code-specific (BAAI/bge-code-v1 auto-hébergeable, Apache-2.0, ou voyage-code-3 API seule), utilisez meilleur-scorer code chunks. Simplest : embed tout jina d'abord, mesurer retrieval@10 query set, swap seul si <threshold. Voir la section [Meilleur modèle d'embedding pour la recherche de code et RAG](#code-embeddings) ci-dessus pour comparaison directe.",
           },
           {
             q: 'Quel modèle d\'embedding est meilleur pour RAG chinois ?',
@@ -2598,8 +2628,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-ja.webp',
     title: 'ローカルRAGの最高埋め込みモデル2026（実文書でテスト済み）',
@@ -2622,6 +2652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -2651,7 +2682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: '2026年のローカルRAGに最適な埋め込みモデルは何ですか？',
         answer:
-          'jina-embeddings-v3は最強のオールラウンダーです—4ドキュメントタイプ全体で92% retrieval@10、ネイティブ多言語サポート、およびマトリョーシカ次元切り詰めにより、ベクトルサイズを1,024から512または256次元に削減でき、再埋め込みは不要です。コーパスが英語のみで、多言語サポートより精度の方が重要な場合はbge-large-en-v1.5を使用してください。jinaより約3ポイント上回ります（法的および研究テキスト）。CPUのみの推論がハードな制約である場合はnomic-embed-text-v2を使用してください—最新のCPUで約580チャンク/秒で埋め込みます。これは1,024次元の代替品より約5倍高速です。GPUを備えていて最高の多言語カバレッジを必要とする場合はBAI/bge-m3を使用してください（このベンチマークには含まれていませんが、フラグを立てる価値があります）。',
+          'jina-embeddings-v3は最強のオールラウンダーです—4ドキュメントタイプ全体で92% retrieval@10、ネイティブ多言語サポート、およびマトリョーシカ次元切り詰めにより、ベクトルサイズを1,024から512または256次元に削減でき、再埋め込みは不要です。コーパスが英語のみで、多言語サポートより精度の方が重要な場合はbge-large-en-v1.5を使用してください。jinaより約3ポイント上回ります（法的および研究テキスト）。CPUのみの推論がハードな制約である場合はnomic-embed-text-v2を使用してください—最新のCPUで約580チャンク/秒で埋め込みます。これは1,024次元の代替品より約5倍高速です。GPUを備えていて最高の多言語カバレッジを必要とする場合はBAAI/bge-m3を使用してください（このベンチマークには含まれていませんが、フラグを立てる価値があります）。',
         bullets: [
           'jina-embeddings-v3—92% retrieval@10全体、多言語、マトリョーシカ切り詰め、1,024→512→256次元（再埋め込み不要）。デフォルトを超える選択肢。',
           'bge-large-en-v1.5—英語で91%（法的、研究）、1,024次元、遅い（CPU上で約95チャンク/秒）。英語のみ、精度が重要な作業に最適。',
@@ -2692,7 +2723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**bge-large-en-v1.5はピュア英語コンテンツで勝利**—法的契約書および研究論文で91%ですが、多言語テキストでは79%に低下します。コーパスが英語に限定され、精度がスループットより優先される場合に使用してください。',
           '**nomic-embed-text-v2はCPUスループットで勝利**—最新のCPUで580チャンク/秒、重い1024次元モデルの約5倍高速。GPUが利用できない場合の正しい選択。',
           '**より大きな次元は～1,024までのみ役立ちます。** それ以上、リコール利得は1パーセントポイント未満で、ストレージは2倍になります。マトリョーシカモデル（jina-embeddings-v3、nomic-embed-text-v2）は再埋め込みなしで切り詰めを許可します。',
-          '**コード検索は最も難しいタスクです。** すべての6つのモデルは、TypeScript/Pythonコードベースで自然言語ドキュメントと比較して5〜10ポイント失われます。6つのどれも真の「コード埋め込み機」ではありません—コード集約的なコーパスの場合、このベンチマークで最良のjina-embeddings-v3（87%）が最有力候補で、API限定のvoyage-code-3が公開されている専門オプションです（下記のコード検索とRAGを参照）。',
+          '**コード検索は最も難しいタスクです。** すべての6つのモデルは、TypeScript/Pythonコードベースで自然言語ドキュメントと比較して5〜10ポイント失われます。6つのどれも真の「コード埋め込み機」ではありません—コード集約的なコーパスの場合、このベンチマークで最良のjina-embeddings-v3（87%）が最有力候補で、API限定のvoyage-code-3とセルフホスト可能なBAAI/bge-code-v1が公開されている専門オプションです（下記のコード検索とRAGを参照）。',
           '**多言語サポートは無料ではなく、中国語には専用モデルが必要です。** 英語のみの埋め込み機（bge-large-en-v1.5、gte-large、mxbai-embed-large-v1）は混合言語テキストで10〜15ポイント失われます。ドイツ語/フランス語/日本語ドキュメントの場合、jina-embeddings-v3、nomic-embed-text-v2、またはBAAI/bge-m3を使用してください。中国語が過半数を占めるコーパスの場合、6つのどれも正しいデフォルトではありません—代わりにBAAI/bge-large-zh-v1.5またはQwen3-Embedding-4Bを使用してください（下記の中国語とCJKのRAGを参照）。',
           '**エンベッダーの切り替えはテストされたすべてのローカルRAGプラットフォームで完全な再インデックスを強制します。** コンシューマーハードウェアで5,000ページあたり30〜90分を予算し、スワップを計画してください。',
         ],
@@ -2712,6 +2743,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '埋め込みモデルは、ドキュメントの断片を数値（ベクトル）に変換し、システムが関連する部分を素早く見つけられるようにします。優れたモデルほど、その数値は単なる単語ではなく実際の意味を表します。ローカルハードウェアでは、モデルがテキストを数値に変換する速度が、新しいドキュメントが追加されたときにどれだけ待つかも左右します。',
           },
         ],
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-ja.svg',
+        imageCaption: '4つのドキュメントタイプにおけるretrieval@10精度：jina-embeddings-v3が総合92%で首位、bge-largeは英語テキストで優勢（法的94%、研究93%）だが多言語では79%に低下、nomic-embed-text-v2は多言語（92%)で際立ち、言語間サポートが最も強い。',
         columns: ['モデル', '次元', 'スピード（CPU）', 'スピード（GPU）', 'メモリ', 'retrieval@10', '多言語', '最適用途'],
         rows: [
           {
@@ -2794,7 +2827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '状況': '商用製品に寛容なApache-2.0ライセンスが必要です', '選択': 'gte-large または mxbai-embed-large-v1' },
           { '状況': '長いドキュメント（8k+トークンチャンク）および多言語', '選択': 'snowflake-arctic-embed-l-v2.0' },
           { '状況': '後で柔軟に次元を切り詰めたい（ストレージコスト管理）', '選択': 'jina-embeddings-v3（マトリョーシカ）' },
-          { '状況': 'コード集約的コーパス（TypeScript、Python、Rust）', '選択': '6つのいずれでもない—コード固有のエンベッダーを使用してください' },
+          { '状況': 'コード集約的コーパス（TypeScript、Python、Rust）', '選択': '6つのいずれでもない—コード固有のエンベッダーを使用してください（BAAI/bge-code-v1、voyage-code-3）' },
           { '状況': '多言語がドミナント要件、GPUが利用可能です', '選択': 'BAAI/bge-m3（このベンチマークには含まれていない、多言語対応）' },
         ],
         columns: ['状況', '選択'],
@@ -2825,6 +2858,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ドキュメントタイプ別取得精度（retrieval@10）',
         content:
           '**retrieval@10 =上位10の結果に正しいチャンクが表示されるクエリのパーセンテージ。** 高いほど良いです。番号はドキュメントタイプあたりモデルあたり25グレード付きクエリから出ています。',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-ja.svg',
+        imageCaption: '文書タイプ別retrieval@10：jina-embeddings-v3は4タイプすべてで87%を超える唯一のモデル（法的93%、研究92%、コード87%、多言語89%）。英語専用モデル（bge-large、gte-large）は法的/研究で優れるが多言語で10〜15ポイント低下。コード検索は全モデル共通で最難関（82〜87%）。',
         columns: ['モデル', '法的', '研究', 'コード', '多言語', '総体'],
         rows: [
           { 'モデル': 'nomic-embed-text-v2', '法的': '88%', '研究': '90%', 'コード': '82%', '多言語': '92%', '総体': '88%' },
@@ -2846,6 +2881,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CPU埋め込み速度（1秒あたりのチャンク数）',
         content:
           '**バッチサイズ32、256トークンチャンク、Apple M3 Pro（GPUなし）でのスループット。** 高いほど良いです。CPU速度は、5,000ページコーパスを再埋め込みできるかどうか（jina、nomic）、または夜間実行を計画する必要があるかどうか（bge-large、gte-large）を決定します。',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-ja.svg',
+        imageCaption: 'CPU対GPU埋め込み速度：nomic-embed-text-v2がCPUで580チャンク/秒と圧倒的（bge-largeの95の5倍）、5Kページコーパスの再インデックス時間を55分から9分に短縮。GPUでは差が縮まるが、nomicはRTX 4070で4,800チャンク/秒と依然首位。',
         columns: ['モデル', 'チャンク/秒（CPU）', '5Kページコーパスインデックス時間', 'ノート'],
         rows: [
           { 'モデル': 'nomic-embed-text-v2', 'チャンク/秒（CPU）': '580', '5Kページコーパスインデックス時間': '～9分', 'ノート': '混合専門家；1トークンあたり475Mパラメータのうち305Mを活性化' },
@@ -2888,6 +2925,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'メモリフットプリントと次元トレードオフ',
         content:
           '**次元数は、ローカルRAGで最も過度に設計されている選択肢です。** より多くの次元は～1,024まで取得に役立ちます。それ以上、1パーセントポイント以下の利得のために2倍のストレージを支払います。',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-ja.svg',
+        imageCaption: '5万ページのコーパスにおける次元対ストレージのトレードオフ：768次元=0.9GB、1,024次元=1.2GB（+33%）、3,072次元=3.6GB（+300%）で、retrieval向上はわずか<0.5%。マトリョーシカモデル（jina-v3、nomic）は再埋め込みなしで1,024→512→256次元に切り詰め可能で、~1〜3%のretrieval低下と引き換えに50%のストレージを節約できます。',
         items: [
           '**768次元（nomic-embed-text-v2）：** 768×4バイト= 1チャンクあたり3KB。256トークルで分割された5,000ページのコーパス（～30,000チャンク）はベクトルだけで約90MBが必要です。',
           '**1,024次元（その他すべて）：** 1チャンクあたり4KB。同じコーパスはベクトルに～120MBが必要です。ストレージはスケーリング直線的—50,000ページコーパスは1,024次元で1.2GB対768次元で0.9GBが必要です。',
@@ -2957,13 +2996,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'モデル': 'jina-embeddings-v3（このベンチマーク）', 'コードretrieval@10（本テスト／公開値）': '87%（汎用モデルの首位）', '次元': '1,024（マトリョーシカ→256）', 'ライセンス': 'CC BY-NC 4.0', '最適用途': 'コード＋文章の混合コーパス、すべてを1つのエンベッダーで' },
           { 'モデル': 'voyage-code-3', 'コードretrieval@10（本テスト／公開値）': 'コード取得ベンチマークでの公開値首位（本ローカルテストには含まれていない）', '次元': '1,024（マトリョーシカ→256）', 'ライセンス': '商用APIのみ—セルフホスト不可', '最適用途': 'API利用が許容されるコード専用コーパス' },
+          { 'モデル': 'BAAI/bge-code-v1', 'コードretrieval@10（本テスト／公開値）': '公開されているオープンウェイトのコード専用モデル（本ローカルテストには含まれていない）', '次元': '1,536', 'ライセンス': 'Apache-2.0', '最適用途': 'セルフホストでコード専用エンベッダーを求めるコード集約コーパス' },
           { 'モデル': 'gte-large（このベンチマーク）', 'コードretrieval@10（本テスト／公開値）': '86%', '次元': '1,024', 'ライセンス': 'Apache-2.0', '最適用途': 'セルフホスト、寛容なライセンス、ここでは2番目に良いコードスコア' },
           { 'モデル': 'mxbai-embed-large-v1（このベンチマーク）', 'コードretrieval@10（本テスト／公開値）': '84%', '次元': '1,024', 'ライセンス': 'Apache-2.0', '最適用途': 'コードと英語の文章のバランス' },
         ],
         callouts: [
           {
             type: 'note',
-            text: '今回のラウンドでは、専用のオープンウェイトコードエンベッダーをローカルでベンチマークしませんでした—voyage-code-3はAPI専用のため、完全にローカルで実行することはできません。実際にテストしたセルフホスト可能なモデルの中では、jina-embeddings-v3が最良のコード取得選択肢（87%）で、gte-large（86%、Apache-2.0）が最良の寛容なライセンスの代替です。コード集約的なコーパスへの実用的なアプローチ：まずjina-embeddings-v3ですべてを賄い、実際のコードクエリのホールドアウトセットでretrieval@10を測定し、そのギャップが実際に結果を損なう場合のみ、2番目のコード専用インデックスを追加してください。',
+            text: '今回のラウンドでは専用のコードエンベッダーをローカルでベンチマークしませんでした—voyage-code-3はAPI専用のため完全にローカルで実行できず、オープンウェイトのBAAI/bge-code-v1（Apache-2.0）は今回のテスト範囲外でした。実際にテストしたモデルの中では、jina-embeddings-v3が最良のコード取得選択肢（87%）で、gte-large（86%、Apache-2.0）が最良の寛容なライセンスの代替です。コード集約的なコーパスへの実用的なアプローチ：まずjina-embeddings-v3ですべてを賄い、実際のコードクエリのホールドアウトセットでretrieval@10を測定し、そのギャップが実際に結果を損なう場合のみ—BAAI/bge-code-v1が自然なセルフホスト候補です—2番目のコード専用インデックスを追加してください。',
           },
         ],
       },
@@ -2984,7 +3024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '統合時に常にライセンスを再確認してください。埋め込みモデルライセンスは複数回シフトしました—BGEはMITからより制限的な商用用語に戻り、jina-embeddings-v3はオープンウェイトのCC BY-NCで出荷、Snowflakeはアップル2.0の上に受け入れられた使用ポリシーを追加しました。READMEを履歴文書ではなく、最新ステートメントとして扱ってください。',
+            text: '統合時に常にライセンスを再確認してください。埋め込みモデルライセンスは複数回シフトしました—BGEはMITからより制限的な商用用語に戻り、jina-embeddings-v3はオープンウェイトのCC BY-NCで出荷、SnowflakeはApache-2.0の上に利用規約（Acceptable Use Policy）を追加しました。READMEを履歴文書ではなく、最新ステートメントとして扱ってください。',
           },
         ],
       },
@@ -3013,12 +3053,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '決定木：どのエンベッダーを選ぶべきですか？',
         content:
           '**5つのバイナリ質問、順序で、ほとんどの読者を正しいエンベッダーに取得します。**',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-ja.svg',
+        imageCaption: '5ステップの決定フロー：GPUの有無→コーパスの言語→文書の長さ→次元切り詰めの必要性→商用ライセンス。迷ったときのデフォルト：jina-embeddings-v3（92% retrieval@10、89言語対応、マトリョーシカ次元の柔軟性）。商用デプロイではCC BY-NCライセンスを確認してください。',
         items: [
           '**1. インデックス化に利用可能なGPUはありますか？** →いいえ：nomic-embed-text-v2（5倍のCPU速度）。はい：続行してください。',
           '**2. コーパスは英語のみですか？** →いいえ：続行してください。はい：精度が最も重要な場合はbge-large-en-v1.5、Apache-2.0ライセンスが重要な場合はgte-largeまたはmxbai-embed-large-v1。',
           '**3. ドキュメントは非常に長い（8k+トークンチャンク）ですか？** →はい：snowflake-arctic-embed-l-v2.0。いいえ：続行してください。',
           '**4. 後でストレージコスト用に柔軟に次元を切り詰めたいですか？** →はい：jina-embeddings-v3（マトリョーシカ）。いいえ：続行してください。',
-          '**5. デプロイメントは商用製品ですか？** →はい：jina-embeddings-v3（CC BY-NC）を避けてください。商用ライセンスを購入しない限り—代わりにnomic-embed-text-v2（Apache-2.0）またはBAI/bge-m3（MIT）を使用してください。',
+          '**5. デプロイメントは商用製品ですか？** →はい：jina-embeddings-v3（CC BY-NC）を避けてください。商用ライセンスを購入しない限り—代わりにnomic-embed-text-v2（Apache-2.0）またはBAAI/bge-m3（MIT）を使用してください。',
           '**不確かな場合：jina-embeddings-v3。** これはベンチマークの最高精度の一般的な選択であり、すべてのドキュメントタイプで87%以上のままである唯一のモデルです。ライセンスを許可するデプロイメントはデフォルトでそれを選ぶべきです。',
         ],
       },
@@ -3052,7 +3094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'どの埋め込みモデルがコードを最も良く処理しますか？',
-            a: 'テストされた6つのいずれも専用コードエンベッダーではありません。TypeScript/Pythonコードベースで、jina-embeddings-v3は87% retrieval@10で主導し、他は82〜86%の間にあります。コード集約的なコーパス—コード検索、リポジトリRAG、コードベース上のエージェントツーリング—一般的なエンベッダーをコード固有のエンベッダー（voyage-code-3、API専用、またはファインチューニングバリアント）と組み合わせ、コードチャンクのための高スコアを使用してください。上記の[コード検索とRAGに最適な埋め込みモデル](#code-embeddings)セクションで直接比較を確認してください。最も簡単なアプローチ：最初にjina-embeddings-v3で徹底して、開催されたクエリセットでretrieval@10を測定し、しきい値を下回る場合のみスワップしてください。',
+            a: 'テストされた6つのいずれも専用コードエンベッダーではありません。TypeScript/Pythonコードベースで、jina-embeddings-v3は87% retrieval@10で主導し、他は82〜86%の間にあります。コード集約的なコーパス—コード検索、リポジトリRAG、コードベース上のエージェントツーリング—一般的なエンベッダーをコード固有のエンベッダー（セルフホスト可能なBAAI/bge-code-v1、Apache-2.0、またはAPI専用のvoyage-code-3）と組み合わせ、コードチャンクのための高スコアを使用してください。上記の[コード検索とRAGに最適な埋め込みモデル](#code-embeddings)セクションで直接比較を確認してください。最も簡単なアプローチ：最初にjina-embeddings-v3で徹底して、開催されたクエリセットでretrieval@10を測定し、しきい値を下回る場合のみスワップしてください。',
           },
           {
             q: '中国語RAGに最適な埋め込みモデルはどれですか？',
@@ -3107,8 +3149,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: "semi_annual",
     publishDate: "2026-05-07",
-    dateModified: "2026-07-15",
-    next_refresh_due: "2027-01-14",
+    dateModified: "2026-09-01",
+    next_refresh_due: "2027-03-01",
     theme: "RAG & Document Chat",
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-zh.webp',
     title: "2026年本地RAG最佳嵌入模型（真实文档测试）",
@@ -3131,6 +3173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "Qwen3-Embedding-4B",
       "Qwen3-Embedding-8B",
       "voyage-code-3",
+      "BAAI/bge-code-v1",
       "all-MiniLM-L6-v2",
       "OpenAI text-embedding-3-large",
     ],
@@ -3201,7 +3244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**bge-large-en-v1.5在纯英文内容上获胜**——在法律合同和研究论文上为91%，但在多语言文本上下降到79%。当语料库仅英文且精度优于吞吐量时使用它。",
           "**nomic-embed-text-v2在CPU吞吐量上获胜**——在现代CPU上580块/秒，大约比1,024维替代品快5倍。当没有GPU可用时选择。",
           "**更大的维度仅在~1,024时有帮助。** 超过此范围，recall增益低于1个百分点，存储翻倍。Matryoshka模型（jina-embeddings-v3、nomic-embed-text-v2）允许在不重新嵌入的情况下截断。",
-          "**代码检索是最难的任务。** 所有六个模型在TypeScript/Python代码库上与自然语言文档相比失去5–10个百分点。六个中没有一个是真正的“代码嵌入器”——对于代码重文语料库，jina-embeddings-v3（87%）是本基准中最好的，仅API可用的voyage-code-3是已发布的专用选项（见下方代码搜索和RAG部分）。",
+          "**代码检索是最难的任务。** 所有六个模型在TypeScript/Python代码库上与自然语言文档相比失去5–10个百分点。六个中没有一个是真正的“代码嵌入器”——对于代码重文语料库，jina-embeddings-v3（87%）是本基准中最好的，仅API可用的voyage-code-3和可自托管的BAAI/bge-code-v1是已发布的专用选项（见下方代码搜索和RAG部分）。",
           "**多语言支持不是免费的——中文需要专用模型。** 纯英文嵌入器（bge-large-en-v1.5、gte-large、mxbai-embed-large-v1）在混合语言文本上失去10–15个百分点。对于德文/法文/日文文档，请使用jina-embeddings-v3、nomic-embed-text-v2或BAAI/bge-m3。对于以中文为主的语料库，六个模型中没有一个是正确的默认选择——请改用BAAI/bge-large-zh-v1.5或Qwen3-Embedding-4B（见下方中文和CJK RAG部分）。",
           "**更换嵌入器在所有测试的本地RAG平台中强制完整重新索引。** 在消费级硬件上每5,000页预算30–90分钟，并相应规划交换。",
         ],
@@ -3221,6 +3264,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "嵌入模型将文档片段转换为数字（向量），以便系统能够快速找到相关部分。更好的模型意味着这些数字代表的是实际含义，而不仅仅是单词。在本地硬件上，模型将文本转换为数字的速度也决定了添加新文档时您需要等待多长时间。",
           },
         ],
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-zh.svg',
+        imageCaption: "4种文档类型的retrieval@10精度：jina-embeddings-v3以总体92%领先，bge-large在英文文本上占优（法律94%、研究93%）但在多语言内容上降至79%，nomic-embed-text-v2在多语言（92%）上表现突出，拥有最强的跨语言支持。",
         columns: ["模型", "维度", "速度（CPU）", "速度（GPU）", "内存", "retrieval@10", "多语言", "最适合"],
         rows: [
           {
@@ -3303,7 +3348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { "您的情况": "商业产品需要宽松的Apache-2.0许可证", "选择": "gte-large或mxbai-embed-large-v1" },
           { "您的情况": "长文档（8k+令牌块）且多语言", "选择": "snowflake-arctic-embed-l-v2.0" },
           { "您的情况": "想要稍后灵活地截断维度（存储成本控制）", "选择": "jina-embeddings-v3（Matryoshka）" },
-          { "您的情况": "代码重文语料库（TypeScript、Python、Rust）", "选择": "六个都不是——使用代码特定的嵌入器" },
+          { "您的情况": "代码重文语料库（TypeScript、Python、Rust）", "选择": "六个都不是——使用代码专用嵌入器（BAAI/bge-code-v1、voyage-code-3）" },
           { "您的情况": "多语言是主导要求、可用GPU", "选择": "BAAI/bge-m3（不在此基准中、专门多语言）" },
         ],
         columns: ["您的情况", "选择"],
@@ -3334,6 +3379,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "按文档类型的检索精度（retrieval@10）",
         content:
           "**retrieval@10 =正确块出现在前10个结果中的查询百分比。** 越高越好。数字来自每种文档类型每个模型的25个分级查询。",
+        image: '/images/best-embedding-models-local-rag-2026-document-types-zh.svg',
+        imageCaption: "按文档类型的retrieval@10：jina-embeddings-v3是唯一在全部4种类型上保持87%以上的模型（法律93%、研究92%、代码87%、多语言89%）。纯英文模型（bge-large、gte-large）在法律/研究上领先，但在多语言上下降10–15个百分点。代码检索对所有模型都最难（82–87%）。",
         columns: ["模型", "法律", "研究", "代码", "多语言", "总体"],
         rows: [
           { "模型": "nomic-embed-text-v2", "法律": "88%", "研究": "90%", "代码": "82%", "多语言": "92%", "总体": "88%" },
@@ -3355,6 +3402,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "CPU嵌入速度（每秒块数）",
         content:
           "**批大小32、256令牌块、Apple M3 Pro（无GPU）上的吞吐量。** 越高越好。CPU速度决定了您是否可以在午餐时间重新嵌入5,000页语料库（jina、nomic）或需要计划夜间运行（bge-large、gte-large）。",
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-zh.svg',
+        imageCaption: "CPU与GPU嵌入吞吐量：nomic-embed-text-v2在CPU上以580块/秒占绝对优势（比bge-large的95快5倍），将5K页语料库的重新索引时间从55分钟缩短到9分钟。GPU缩小了差距；nomic在RTX 4070上仍以4,800块/秒领先。",
         columns: ["模型", "块/秒（CPU）", "5K页语料库索引时间", "注释"],
         rows: [
           { "模型": "nomic-embed-text-v2", "块/秒（CPU）": "580", "5K页语料库索引时间": "~9分钟", "注释": "混合专家；每个令牌激活475M中的305M参数" },
@@ -3397,6 +3446,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "内存占用和维度权衡",
         content:
           "**维度数是本地RAG中最过度设计的选择。** 更大的维度在~1,024处有帮助，然后就不行了。超过此范围，您为sub-1百分点的增益支付双倍的存储。",
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-zh.svg',
+        imageCaption: "5万页语料库上的维度与存储权衡：768维=0.9 GB，1,024维=1.2 GB（+33%），3,072维=3.6 GB（+300%），而retrieval仅提升<0.5%。Matryoshka模型（jina-v3、nomic）允许在不重新嵌入的情况下将1,024→512→256维截断，以约1–3%的retrieval损失换取50%的存储节省。",
         items: [
           "**768维（nomic-embed-text-v2）：** 768×4字节=每块3 KB。在256令牌处分块的5,000页语料库（~30,000块）仅向量需要约90 MB。",
           "**1,024维（其他所有）：** 4 KB每块。同一语料库需要~120 MB用于向量。存储线性缩放——50,000页语料库在1,024维需要1.2 GB对768维的0.9 GB。",
@@ -3466,13 +3517,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { "模型": "jina-embeddings-v3（本基准）", "代码retrieval@10（本测试/已发布）": "87%（通用领导者）", "维度": "1,024（Matryoshka→256）", "许可证": "CC BY-NC 4.0", "最适合": "混合代码+散文语料库，一个嵌入器处理所有内容" },
           { "模型": "voyage-code-3", "代码retrieval@10（本测试/已发布）": "在代码检索基准上已发布的领导者（未在本地测试中）", "维度": "1,024（Matryoshka→256）", "许可证": "仅商业API——不可自托管", "最适合": "可接受API使用的纯代码语料库" },
+          { "模型": "BAAI/bge-code-v1", "代码retrieval@10（本测试/已发布）": "已发布的开源权重代码专用模型（未在本地测试中）", "维度": "1,536", "许可证": "Apache-2.0", "最适合": "希望使用专用代码嵌入器的自托管代码重语料库" },
           { "模型": "gte-large（本基准）", "代码retrieval@10（本测试/已发布）": "86%", "维度": "1,024", "许可证": "Apache-2.0", "最适合": "自托管、许可证宽松，此处第二好的代码分数" },
           { "模型": "mxbai-embed-large-v1（本基准）", "代码retrieval@10（本测试/已发布）": "84%", "维度": "1,024", "许可证": "Apache-2.0", "最适合": "均衡的代码+英文散文" },
         ],
         callouts: [
           {
             type: "note",
-            text: "本轮我们没有在本地基准测试专用的开源权重代码嵌入器——voyage-code-3仅限API，因此无法完全本地运行。在实际测试的可自托管模型中，jina-embeddings-v3是最佳代码检索选择（87%），gte-large（86%、Apache-2.0）是许可证最宽松的替代方案。代码重语料库的实用方法：首先对所有内容使用jina-embeddings-v3嵌入，在保留的真实代码查询集上测量retrieval@10，仅在差距确实影响您的结果时才添加第二个代码特定的索引。",
+            text: "本轮我们没有在本地基准测试专用的代码嵌入器——voyage-code-3仅限API，因此无法完全本地运行，开源权重的BAAI/bge-code-v1（Apache-2.0）也不在本次测试范围内。在实际测试的模型中，jina-embeddings-v3是最佳代码检索选择（87%），gte-large（86%、Apache-2.0）是许可证最宽松的替代方案。代码重语料库的实用方法：首先对所有内容使用jina-embeddings-v3嵌入，在保留的真实代码查询集上测量retrieval@10，仅在差距确实影响您的结果时才添加第二个代码专用的索引——BAAI/bge-code-v1是自然的自托管候选。",
           },
         ],
       },
@@ -3522,6 +3574,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "决策树：应该选择哪个嵌入器？",
         content:
           "**五个二元问题，按顺序，让大多数读者到达正确的嵌入器。**",
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-zh.svg',
+        imageCaption: "5步决策流程：GPU可用性→语料库语言→文档长度→维度截断需求→商业许可。不确定时的默认选择：jina-embeddings-v3（92% retrieval@10，89种语言多语言支持，Matryoshka维度灵活性）。商业部署请核查CC BY-NC许可。",
         items: [
           "**1. 您有可用的GPU用于索引吗？** →否：nomic-embed-text-v2（5倍CPU速度）。是：继续。",
           "**2. 语料库是仅英文吗？** →否：继续。是：如果精度最重要则选bge-large-en-v1.5，如果Apache-2.0许可重要则选gte-large或mxbai-embed-large-v1。",
@@ -3616,8 +3670,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-ar.webp',
     title: 'أفضل نماذج التضمين المحلية لـ ⁨RAG⁩ في ⁨2026⁩ (اختبار بوثائق حقيقية)',
@@ -3640,6 +3694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -3730,61 +3785,69 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'نموذج التضمين يُحوِّل مقاطع الوثيقة إلى أرقام (متجهات) حتى يتمكن النظام من إيجاد الأجزاء ذات الصلة بسرعة. يتشابه النموذج الأفضل حيث الأرقام تُمثّل المعنى الفعلي لا مجرد الكلمات. على الأجهزة المحلية، السرعة التي يُحوِّل بها النموذج الكود إلى أرقام تعني أيضاً المدة التي تنتظرها حين تُضاف وثيقة جديدة.',
           },
         ],
-        columns: ['النموذج', 'retrieval@10 كلي', 'سرعة CPU', 'سرعة GPU', 'الأبعاد', 'الترخيص', 'الأنسب لـ'],
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-ar.svg',
+        imageCaption: 'دقة retrieval@10 عبر 4 أنواع وثائق: jina-embeddings-v3 يتصدر إجمالاً بـ92%، bge-large يهيمن على النص الإنجليزي (94% قانوني، 93% بحثي) لكنه يهبط إلى 79% على المحتوى متعدد اللغات، وnomic-embed-text-v2 يتفوق في متعدد اللغات (92%) بأقوى دعم عبر اللغات.',
+        columns: ['النموذج', 'الأبعاد', 'السرعة (CPU)', 'السرعة (GPU)', 'الذاكرة', 'retrieval@10', 'متعدد اللغات', 'الأنسب لـ'],
         rows: [
           {
-            'النموذج': 'jina-embeddings-v3',
-            'retrieval@10 كلي': '92%',
-            'سرعة CPU': '115 chunk/ثانية',
-            'سرعة GPU': '4800 chunk/ثانية',
-            'الأبعاد': '1024 (Matryoshka)',
-            'الترخيص': 'CC BY-NC 4.0',
-            'الأنسب لـ': 'الدقة العامة ومتعدد اللغات',
+            'النموذج': 'nomic-embed-text-v2',
+            'الأبعاد': '768',
+            'السرعة (CPU)': '580 chunk/ثانية',
+            'السرعة (GPU)': '4800 chunk/ثانية',
+            'الذاكرة': '1.2 GB',
+            'retrieval@10': '88%',
+            'متعدد اللغات': 'أكثر من 100 لغة (MoE)',
+            'الأنسب لـ': 'نشرات تعتمد على CPU فقط، أجهزة متوسطة',
           },
           {
             'النموذج': 'bge-large-en-v1.5',
-            'retrieval@10 كلي': '89% (91% إنجليزي)',
-            'سرعة CPU': '95 chunk/ثانية',
-            'سرعة GPU': '3200 chunk/ثانية',
             'الأبعاد': '1024',
-            'الترخيص': 'MIT',
-            'الأنسب لـ': 'الدقة الإنجليزية الصرفة',
-          },
-          {
-            'النموذج': 'nomic-embed-text-v2',
-            'retrieval@10 كلي': '88%',
-            'سرعة CPU': '580 chunk/ثانية',
-            'سرعة GPU': '6100 chunk/ثانية',
-            'الأبعاد': '768 (Matryoshka)',
-            'الترخيص': 'Apache 2.0',
-            'الأنسب لـ': 'سرعة وحدة المعالجة المركزية الحصرية',
-          },
-          {
-            'النموذج': 'mxbai-embed-large-v1',
-            'retrieval@10 كلي': '90%',
-            'سرعة CPU': '105 chunk/ثانية',
-            'سرعة GPU': '3500 chunk/ثانية',
-            'الأبعاد': '1024',
-            'الترخيص': 'Apache 2.0',
-            'الأنسب لـ': 'الإنجليزية عالية الدقة مع ترخيص مرن',
+            'السرعة (CPU)': '95 chunk/ثانية',
+            'السرعة (GPU)': '1400 chunk/ثانية',
+            'الذاكرة': '2.4 GB',
+            'retrieval@10': '91% (إنجليزي) / 79% (متعدد اللغات)',
+            'متعدد اللغات': 'إنجليزية فقط',
+            'الأنسب لـ': 'RAG إنجليزي صرف حساس للدقة',
           },
           {
             'النموذج': 'gte-large',
-            'retrieval@10 كلي': '88%',
-            'سرعة CPU': '110 chunk/ثانية',
-            'سرعة GPU': '3400 chunk/ثانية',
             'الأبعاد': '1024',
-            'الترخيص': 'Apache 2.0',
-            'الأنسب لـ': 'الاسترجاع الإنجليزي العام',
+            'السرعة (CPU)': '110 chunk/ثانية',
+            'السرعة (GPU)': '1600 chunk/ثانية',
+            'الذاكرة': '2.2 GB',
+            'retrieval@10': '90% (إنجليزي) / 78% (متعدد اللغات)',
+            'متعدد اللغات': 'تركيز إنجليزي',
+            'الأنسب لـ': 'نشرات مرخصة بـ Apache-2.0',
+          },
+          {
+            'النموذج': 'mxbai-embed-large-v1',
+            'الأبعاد': '1024',
+            'السرعة (CPU)': '105 chunk/ثانية',
+            'السرعة (GPU)': '1500 chunk/ثانية',
+            'الذاكرة': '2.1 GB',
+            'retrieval@10': '89% (إنجليزي) / 80% (متعدد اللغات)',
+            'متعدد اللغات': 'تركيز إنجليزي',
+            'الأنسب لـ': 'RAG إنجليزي متوازن برخصة متساهلة',
           },
           {
             'النموذج': 'snowflake-arctic-embed-l-v2.0',
-            'retrieval@10 كلي': '87%',
-            'سرعة CPU': '90 chunk/ثانية',
-            'سرعة GPU': '3000 chunk/ثانية',
             'الأبعاد': '1024',
-            'الترخيص': 'Apache 2.0',
-            'الأنسب لـ': 'العقود الطويلة (نافذة 8K رمز)',
+            'السرعة (CPU)': '130 chunk/ثانية',
+            'السرعة (GPU)': '1800 chunk/ثانية',
+            'الذاكرة': '1.9 GB',
+            'retrieval@10': '87% (إنجليزي) / 86% (متعدد اللغات)',
+            'متعدد اللغات': '~30 لغة',
+            'الأنسب لـ': 'أجزاء سياق طويل (8 آلاف رمز)، متعدد اللغات',
+          },
+          {
+            'النموذج': 'jina-embeddings-v3',
+            'الأبعاد': '1024 (Matryoshka → 256)',
+            'السرعة (CPU)': '220 chunk/ثانية',
+            'السرعة (GPU)': '3200 chunk/ثانية',
+            'الذاكرة': '2.0 GB',
+            'retrieval@10': '92% (إنجليزي) / 89% (متعدد اللغات)',
+            'متعدد اللغات': '89 لغة',
+            'الأنسب لـ': 'الاختيار الذي يتفوق على الافتراضي لمعظم RAG المحلي',
           },
         ],
         callouts: [
@@ -3824,66 +3887,68 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       retrievalAccuracy: {
         id: 'retrieval-accuracy',
-        title: 'دقة الاسترجاع حسب نوع الوثيقة',
+        title: 'دقة الاسترجاع حسب نوع الوثيقة (retrieval@10)',
         content:
-          'نتائج retrieval@10 بالنسبة المئوية لكل نموذج على كل نوع وثيقة. الأرقام وسيط ثلاث تشغيلات على نفس المجموعة والأسئلة.',
-        image: '/images/embedding-models-retrieval-accuracy-2026.svg',
-        imageCaption: 'دقة retrieval@10 لستة نماذج تضمين على أربعة أنواع وثائق. جميع الأرقام وسيط ثلاث تشغيلات بحجم chunk 256 رمزاً.',
+          'retrieval@10 = نسبة الاستعلامات التي يظهر فيها الجزء الصحيح ضمن أعلى 10 نتائج. الأعلى أفضل. الأرقام من 25 استعلاماً مقيَّماً لكل نوع وثيقة لكل نموذج.',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-ar.svg',
+        imageCaption: 'retrieval@10 حسب نوع الوثيقة: jina-embeddings-v3 هو النموذج الوحيد الذي يبقى فوق 87% في الأنواع الأربعة (قانوني 93%، بحثي 92%، كود 87%، متعدد اللغات 89%). النماذج الإنجليزية فقط (bge-large، gte-large) تتفوق في القانوني/البحثي لكنها تهبط 10–15 نقطة في متعدد اللغات. استرجاع الكود يبقى الأصعب (82–87% عبر كل النماذج).',
         columns: ['النموذج', 'قانوني', 'بحثي', 'كود', 'متعدد اللغات', 'الكلي'],
         rows: [
-          { 'النموذج': 'jina-embeddings-v3', 'قانوني': '93%', 'بحثي': '91%', 'كود': '87%', 'متعدد اللغات': '89%', 'الكلي': '92%' },
-          { 'النموذج': 'bge-large-en-v1.5', 'قانوني': '94%', 'بحثي': '91%', 'كود': '85%', 'متعدد اللغات': '79%', 'الكلي': '89%' },
-          { 'النموذج': 'mxbai-embed-large-v1', 'قانوني': '92%', 'بحثي': '90%', 'كود': '84%', 'متعدد اللغات': '81%', 'الكلي': '90%' },
-          { 'النموذج': 'gte-large', 'قانوني': '90%', 'بحثي': '89%', 'كود': '83%', 'متعدد اللغات': '80%', 'الكلي': '88%' },
-          { 'النموذج': 'nomic-embed-text-v2', 'قانوني': '88%', 'بحثي': '87%', 'كود': '84%', 'متعدد اللغات': '86%', 'الكلي': '88%' },
-          { 'النموذج': 'snowflake-arctic-embed-l-v2.0', 'قانوني': '89%', 'بحثي': '88%', 'كود': '83%', 'متعدد اللغات': '80%', 'الكلي': '87%' },
+          { 'النموذج': 'nomic-embed-text-v2', 'قانوني': '88%', 'بحثي': '90%', 'كود': '82%', 'متعدد اللغات': '92%', 'الكلي': '88%' },
+          { 'النموذج': 'bge-large-en-v1.5', 'قانوني': '94%', 'بحثي': '93%', 'كود': '85%', 'متعدد اللغات': '79%', 'الكلي': '88%' },
+          { 'النموذج': 'gte-large', 'قانوني': '92%', 'بحثي': '92%', 'كود': '86%', 'متعدد اللغات': '78%', 'الكلي': '87%' },
+          { 'النموذج': 'mxbai-embed-large-v1', 'قانوني': '91%', 'بحثي': '91%', 'كود': '84%', 'متعدد اللغات': '80%', 'الكلي': '87%' },
+          { 'النموذج': 'snowflake-arctic-embed-l-v2.0', 'قانوني': '88%', 'بحثي': '89%', 'كود': '83%', 'متعدد اللغات': '86%', 'الكلي': '87%' },
+          { 'النموذج': 'jina-embeddings-v3', 'قانوني': '93%', 'بحثي': '92%', 'كود': '87%', 'متعدد اللغات': '89%', 'الكلي': '92%' },
         ],
         callouts: [
           {
             type: 'note',
-            text: 'تقدُّم bge-large-en-v1.5 على jina-embeddings-v3 بنقطة مئوية واحدة في القانونية (94% مقابل 93%) يصغر حين تأخذ في الاعتبار الكلي — bge-large ينهار بنسبة 10 نقاط مئوية على النص متعدد اللغات حيث يصمد jina.',
+            text: 'jina-embeddings-v3 هو النموذج الوحيد في الاختبار الذي يبقى فوق 87% في كل نوع وثيقة. النماذج الإنجليزية فقط (bge-large-en-v1.5، gte-large، mxbai-embed-large-v1) تتقدم على النص الإنجليزي الصرف لكنها تخسر 10–15 نقطة مئوية على المحتوى متعدد اللغات. إذا كانت مجموعتك مختلطة، فخِّ "الأفضل بالإنجليزية" حقيقي.',
           },
         ],
       },
       cpuSpeed: {
         id: 'cpu-speed',
-        title: 'سرعة التضمين على وحدة المعالجة المركزية',
+        title: 'سرعة التضمين على وحدة المعالجة المركزية (chunks في الثانية)',
         content:
-          'الإنتاجية (chunks/ثانية) على Apple M3 Pro (18 جيجابايت ذاكرة موحدة) وAMD Ryzen 9 7900X (64 جيجابايت RAM) بحجم دُفعة 32. التضمين على وحدة المعالجة المركزية أمر عملي في النشر بدون GPU، لكن الإنتاجية تتباين تبايناً كبيراً.',
-        columns: ['النموذج', 'Apple M3 Pro', 'Ryzen 9 7900X', 'الأبعاد', 'النسبية'],
+          'الإنتاجية بحجم دُفعة 32، chunks من 256 رمزاً، على Apple M3 Pro (بدون GPU). الأعلى أفضل. سرعة CPU تحدد ما إذا كان بإمكانك إعادة فهرسة مجموعة من 5000 صفحة خلال استراحة الغداء (jina، nomic) أو تحتاج لتخطيط تشغيل ليلي (bge-large، gte-large).',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-ar.svg',
+        imageCaption: 'إنتاجية التضمين CPU مقابل GPU: nomic-embed-text-v2 يهيمن على CPU بـ580 chunk/ثانية (أسرع 5 أضعاف من bge-large عند 95)، ما يقلص وقت إعادة الفهرسة من 55 دقيقة إلى 9 دقائق على مجموعة 5 آلاف صفحة. GPU يُضيّق الفجوة؛ nomic لا يزال يتصدر بـ4800 chunk/ثانية على RTX 4070.',
+        columns: ['النموذج', 'Chunks/ثانية (CPU)', 'وقت فهرسة مجموعة 5K صفحة', 'ملاحظات'],
         rows: [
-          { 'النموذج': 'nomic-embed-text-v2', 'Apple M3 Pro': '580 chunk/ثانية', 'Ryzen 9 7900X': '310 chunk/ثانية', 'الأبعاد': '768', 'النسبية': '5× bge-large' },
-          { 'النموذج': 'gte-large', 'Apple M3 Pro': '110 chunk/ثانية', 'Ryzen 9 7900X': '65 chunk/ثانية', 'الأبعاد': '1024', 'النسبية': '1.16× bge-large' },
-          { 'النموذج': 'mxbai-embed-large-v1', 'Apple M3 Pro': '105 chunk/ثانية', 'Ryzen 9 7900X': '62 chunk/ثانية', 'الأبعاد': '1024', 'النسبية': '1.1× bge-large' },
-          { 'النموذج': 'jina-embeddings-v3', 'Apple M3 Pro': '115 chunk/ثانية', 'Ryzen 9 7900X': '68 chunk/ثانية', 'الأبعاد': '1024', 'النسبية': '1.2× bge-large' },
-          { 'النموذج': 'bge-large-en-v1.5', 'Apple M3 Pro': '95 chunk/ثانية', 'Ryzen 9 7900X': '58 chunk/ثانية', 'الأبعاد': '1024', 'النسبية': '1×' },
-          { 'النموذج': 'snowflake-arctic-embed-l-v2.0', 'Apple M3 Pro': '90 chunk/ثانية', 'Ryzen 9 7900X': '52 chunk/ثانية', 'الأبعاد': '1024', 'النسبية': '0.95× bge-large' },
+          { 'النموذج': 'nomic-embed-text-v2', 'Chunks/ثانية (CPU)': '580', 'وقت فهرسة مجموعة 5K صفحة': '~9 دقائق', 'ملاحظات': 'خبراء هجينون؛ يُنشِّط 305 مليون من 475 مليون معامل لكل رمز' },
+          { 'النموذج': 'jina-embeddings-v3', 'Chunks/ثانية (CPU)': '220', 'وقت فهرسة مجموعة 5K صفحة': '~24 دقيقة', 'ملاحظات': 'محولات LoRA؛ يمكن تعطيلها لسرعة إضافية ~15%' },
+          { 'النموذج': 'snowflake-arctic-embed-l-v2.0', 'Chunks/ثانية (CPU)': '130', 'وقت فهرسة مجموعة 5K صفحة': '~40 دقيقة', 'ملاحظات': 'مُقطَّر من نموذج أساسي أكبر؛ flash-attention يساعد على AVX-512' },
+          { 'النموذج': 'gte-large', 'Chunks/ثانية (CPU)': '110', 'وقت فهرسة مجموعة 5K صفحة': '~48 دقيقة', 'ملاحظات': '1024 بُعداً BERT قياسي؛ بلا تحسين CPU خاص' },
+          { 'النموذج': 'mxbai-embed-large-v1', 'Chunks/ثانية (CPU)': '105', 'وقت فهرسة مجموعة 5K صفحة': '~50 دقيقة', 'ملاحظات': '1024 بُعداً قياسي؛ نسخة mxbai-embed-2d توفر أبعاداً أصغر' },
+          { 'النموذج': 'bge-large-en-v1.5', 'Chunks/ثانية (CPU)': '95', 'وقت فهرسة مجموعة 5K صفحة': '~55 دقيقة', 'ملاحظات': 'الأدق في الإنجليزية؛ الأبطأ على CPU بسبب 24 طبقة × 1024 بُعداً' },
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'سرعة nomic-embed-text-v2 على وحدة المعالجة المركزية مدفوعة بمعمارية الخبراء الهجينة — يُنشِّط نحو 305 مليون من 475 مليون معامل لكل رمز. لمجموعة من 50000 صفحة على جهاز بدون GPU، nomic يُنهي الفهرسة في وقت ملحوظ أقل من منافسيه.',
+            text: 'على أجهزة CPU فقط، اختر nomic-embed-text-v2 لأي مجموعة تفوق 1000 صفحة. ميزة السرعة 5–6× تتراكم: إعادة فهرسة تستغرق 9 دقائق مع nomic تستغرق أكثر من 50 دقيقة مع bge-large. هذا الفارق مهم في كل مرة تضبط فيها حجم الـchunk أو تبدّل مُضمِّناً لاختبار A/B.',
           },
         ],
       },
       gpuSpeed: {
         id: 'gpu-speed',
-        title: 'سرعة التضمين على وحدة المعالجة الرسومية',
+        title: 'سرعة التضمين على وحدة المعالجة الرسومية (chunks في الثانية)',
         content:
-          'الإنتاجية (chunks/ثانية) على NVIDIA RTX 4070 (12 جيجابايت VRAM) وNVIDIA RTX 4090 (24 جيجابايت) بحجم دُفعة 256. التضمين على وحدة المعالجة الرسومية يُسرّع التضمين الأولي بشكل كبير؛ الاستعلام عادةً يعمل على وحدة المعالجة المركزية حين يحدث.',
-        columns: ['النموذج', 'RTX 4070', 'RTX 4090', 'الأبعاد'],
+          'الإنتاجية بحجم دُفعة 64، chunks من 256 رمزاً، على NVIDIA RTX 4070 (12 جيجابايت VRAM). الأعلى أفضل. وحدة المعالجة الرسومية تُقلّص فجوة السرعة بين النماذج؛ أبطأ رقم GPU (1400 chunk/ثانية لـbge-large) لا يزال أسرع بـ2.4× من أسرع رقم CPU.',
+        columns: ['النموذج', 'Chunks/ثانية (GPU)', 'وقت فهرسة مجموعة 5K صفحة', 'ذاكرة GPU (الذروة)'],
         rows: [
-          { 'النموذج': 'nomic-embed-text-v2', 'RTX 4070': '6100 chunk/ثانية', 'RTX 4090': '11200 chunk/ثانية', 'الأبعاد': '768' },
-          { 'النموذج': 'jina-embeddings-v3', 'RTX 4070': '4800 chunk/ثانية', 'RTX 4090': '8900 chunk/ثانية', 'الأبعاد': '1024' },
-          { 'النموذج': 'mxbai-embed-large-v1', 'RTX 4070': '3500 chunk/ثانية', 'RTX 4090': '6800 chunk/ثانية', 'الأبعاد': '1024' },
-          { 'النموذج': 'gte-large', 'RTX 4070': '3400 chunk/ثانية', 'RTX 4090': '6600 chunk/ثانية', 'الأبعاد': '1024' },
-          { 'النموذج': 'bge-large-en-v1.5', 'RTX 4070': '3200 chunk/ثانية', 'RTX 4090': '6100 chunk/ثانية', 'الأبعاد': '1024' },
-          { 'النموذج': 'snowflake-arctic-embed-l-v2.0', 'RTX 4070': '3000 chunk/ثانية', 'RTX 4090': '5800 chunk/ثانية', 'الأبعاد': '1024' },
+          { 'النموذج': 'nomic-embed-text-v2', 'Chunks/ثانية (GPU)': '4800', 'وقت فهرسة مجموعة 5K صفحة': '~1 دقيقة و5 ثوانٍ', 'ذاكرة GPU (الذروة)': '1.6 GB' },
+          { 'النموذج': 'jina-embeddings-v3', 'Chunks/ثانية (GPU)': '3200', 'وقت فهرسة مجموعة 5K صفحة': '~1 دقيقة و35 ثانية', 'ذاكرة GPU (الذروة)': '2.4 GB' },
+          { 'النموذج': 'snowflake-arctic-embed-l-v2.0', 'Chunks/ثانية (GPU)': '1800', 'وقت فهرسة مجموعة 5K صفحة': '~2 دقيقة و50 ثانية', 'ذاكرة GPU (الذروة)': '2.2 GB' },
+          { 'النموذج': 'gte-large', 'Chunks/ثانية (GPU)': '1600', 'وقت فهرسة مجموعة 5K صفحة': '~3 دقائق و10 ثوانٍ', 'ذاكرة GPU (الذروة)': '2.5 GB' },
+          { 'النموذج': 'mxbai-embed-large-v1', 'Chunks/ثانية (GPU)': '1500', 'وقت فهرسة مجموعة 5K صفحة': '~3 دقائق و25 ثانية', 'ذاكرة GPU (الذروة)': '2.4 GB' },
+          { 'النموذج': 'bge-large-en-v1.5', 'Chunks/ثانية (GPU)': '1400', 'وقت فهرسة مجموعة 5K صفحة': '~3 دقائق و35 ثانية', 'ذاكرة GPU (الذروة)': '2.7 GB' },
         ],
         callouts: [
           {
             type: 'note',
-            text: 'على RTX 4070، nomic-embed-text-v2 يعمل بنحو 6100 chunk/ثانية مقابل 4800 لـjina-embeddings-v3. لمجموعة من 100000 صفحة مُقسَّمة إلى chunks من 256 رمزاً، nomic يوفر نحو 4 دقائق من وقت الفهرسة مقارنةً بـjina. إذا كانت جلسات الفهرسة منتظمة أو كبيرة، هذا الفارق يتراكم.',
+            text: 'تفترض هذه الأرقام أن نموذج التضمين هو المستخدم الوحيد لوحدة المعالجة الرسومية. إذا كان نموذج دردشة محمَّلاً بالفعل (Llama 3.1 8B Q4_K_M يشغل ~5 GB)، يتنافس المُضمِّن على VRAM وتنخفض الإنتاجية 30–50% بسبب التنافس. على بطاقة 12 GB، يمكنك إما الفهرسة أو الدردشة — وليس كلاهما بأقصى سرعة في آن واحد.',
           },
         ],
       },
@@ -3892,8 +3957,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'استخدام الذاكرة ومقايضات الأبعاد',
         content:
           'مساحة التخزين للمتجهات ومتطلبات RAM للنماذج تتباين تبايناً مادياً. الاعتبارات الرئيسية لعمليات نشر RAG المحلية الكبيرة.',
-        image: '/images/embedding-dimensions-storage-tradeoff-2026.svg',
-        imageCaption: 'لكل 10000 صفحة (مُقسَّمة إلى chunks من 256 رمزاً، 8 chunks/صفحة بالمتوسط)، حجم تخزين المتجه يتسع خطياً بالأبعاد.',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-ar.svg',
+        imageCaption: 'مقايضة الأبعاد مقابل التخزين على مجموعة 50 ألف صفحة: 768 بُعداً = 0.9 GB، 1024 بُعداً = 1.2 GB (+33%)، 3072 بُعداً = 3.6 GB (+300%) بمكسب استرجاع <0.5% فقط. نماذج Matryoshka (jina-v3، nomic) تتيح البتر من 1024→512→256 بُعداً دون إعادة تضمين، بخسارة استرجاع ~1–3% مقابل توفير تخزين 50%.',
         items: [
           '**وزن النموذج:** nomic-embed-text-v2 (0.5 جيجابايت)، bge-large-en-v1.5 (1.3 جيجابايت)، jina-embeddings-v3 (0.6 جيجابايت). جميعها تناسب RAM الأجهزة الاستهلاكية الحديثة.',
           '**تخزين المتجهات:** متجهات float32 لـ 50000 صفحة — 768 بُعداً: 0.9 جيجابايت، 1024 بُعداً: 1.2 جيجابايت، 3072 بُعداً: 3.6 جيجابايت. 1024 بُعداً هو النقطة المناسبة لمعظم النشرات.',
@@ -3962,13 +4027,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'النموذج': 'jina-embeddings-v3 (هذا المعيار)', 'retrieval@10 للكود (هذا الاختبار/منشور)': '87% (الأفضل بين النماذج العامة)', 'الأبعاد': '1024 (Matryoshka → 256)', 'الترخيص': 'CC BY-NC 4.0', 'الأنسب لـ': 'مجموعة مختلطة من كود ونص، مُضمِّن واحد لكل شيء' },
           { 'النموذج': 'voyage-code-3', 'retrieval@10 للكود (هذا الاختبار/منشور)': 'الرائد المنشور في معايير استرجاع الكود (غير مُختبَر محلياً هنا)', 'الأبعاد': '1024 (Matryoshka → 256)', 'الترخيص': 'API تجاري فقط — غير قابل للاستضافة الذاتية', 'الأنسب لـ': 'مجموعات كود صرفة حيث استخدام API مقبول' },
+          { 'النموذج': 'BAAI/bge-code-v1', 'retrieval@10 للكود (هذا الاختبار/منشور)': 'متخصص كود مفتوح الأوزان منشور (غير مُختبَر محلياً هنا)', 'الأبعاد': '1536', 'الترخيص': 'Apache 2.0', 'الأنسب لـ': 'مجموعات كود ثقيلة تريد مُضمِّن كود مخصص قابل للاستضافة الذاتية' },
           { 'النموذج': 'gte-large (هذا المعيار)', 'retrieval@10 للكود (هذا الاختبار/منشور)': '86%', 'الأبعاد': '1024', 'الترخيص': 'Apache 2.0', 'الأنسب لـ': 'الاستضافة الذاتية، ترخيص مرن، ثاني أفضل نتيجة كود هنا' },
           { 'النموذج': 'mxbai-embed-large-v1 (هذا المعيار)', 'retrieval@10 للكود (هذا الاختبار/منشور)': '84%', 'الأبعاد': '1024', 'الترخيص': 'Apache 2.0', 'الأنسب لـ': 'توازن بين الكود والنثر الإنجليزي' },
         ],
         callouts: [
           {
             type: 'note',
-            text: 'لم نختبر محلياً مُضمِّن كود مفتوح الأوزان مخصصاً في هذه الجولة — voyage-code-3 متاح عبر API فقط، فلا يمكن تشغيله محلياً بالكامل. بين النماذج القابلة للاستضافة الذاتية المُختبَرة فعلياً، jina-embeddings-v3 هو أفضل اختيار لاسترجاع الكود (87%)، وgte-large (86%، ترخيص Apache 2.0) هو أفضل بديل مرخّص بصورة متساهلة. النهج العملي للمجموعات الثقيلة الكود: ابدأ بـjina-embeddings-v3 لكل شيء، وقِس retrieval@10 على مجموعة محجوزة من استعلامات كود حقيقية، ولا تُضف فهرساً ثانياً مخصصاً للكود إلا إذا كانت الفجوة تضر فعلاً بنتائجك.',
+            text: 'لم نختبر محلياً مُضمِّن كود مخصصاً في هذه الجولة — voyage-code-3 متاح عبر API فقط، فلا يمكن تشغيله محلياً بالكامل، وBAAI/bge-code-v1 مفتوح الأوزان (Apache 2.0) كان خارج نطاق هذا الاختبار. بين النماذج المُختبَرة فعلياً، jina-embeddings-v3 هو أفضل اختيار لاسترجاع الكود (87%)، وgte-large (86%، ترخيص Apache 2.0) هو أفضل بديل مرخّص بصورة متساهلة. النهج العملي للمجموعات الثقيلة الكود: ابدأ بـjina-embeddings-v3 لكل شيء، وقِس retrieval@10 على مجموعة محجوزة من استعلامات كود حقيقية، ولا تُضف فهرساً ثانياً مخصصاً للكود — BAAI/bge-code-v1 هو المرشح الطبيعي القابل للاستضافة الذاتية — إلا إذا كانت الفجوة تضر فعلاً بنتائجك.',
           },
         ],
       },
@@ -4015,8 +4081,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decisionTree: {
         id: 'decision-tree',
         title: 'شجرة القرار: أي نموذج تضمين تختار؟',
-        image: '/images/embedding-model-decision-tree-2026.svg',
-        imageCaption: 'شجرة قرار من 5 خطوات لاختيار نموذج التضمين في RAG المحلي.',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-ar.svg',
+        imageCaption: 'مخطط قرار من 5 خطوات: توفر GPU ← لغة المجموعة ← طول الوثيقة ← الحاجة لبتر الأبعاد ← الترخيص التجاري. الاختيار الافتراضي عند التردد: jina-embeddings-v3 (92% retrieval@10، دعم 89 لغة، مرونة أبعاد Matryoshka). تحقق من رخصة CC BY-NC للنشرات التجارية.',
         items: [
           '**الخطوة 1: هل مجموعتك متعددة اللغات أو ستكون كذلك؟** نعم → jina-embeddings-v3 أو nomic-embed-text-v2. لا → تابع.',
           '**الخطوة 2: هل لديك GPU للتضمين؟** لا → nomic-embed-text-v2 (5× أسرع على وحدة المعالجة المركزية). نعم → تابع.',
@@ -4029,7 +4095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'الأخطاء الشائعة في اختيار نموذج التضمين',
         items: [
-          '**الاختيار بناءً على الدقة المطلقة دون اختبار على مجموعتك.** nnomic-embed-text-v2 يهزم bge-large-en-v1.5 على المجموعات متعددة اللغات بـ7 نقاط مئوية رغم تأخر dقة الاسترجاع الكلية. اختبر على عينة من وثائقك الفعلية قبل الالتزام.',
+          '**الاختيار بناءً على الدقة المطلقة دون اختبار على مجموعتك.** nomic-embed-text-v2 يهزم bge-large-en-v1.5 على المجموعات متعددة اللغات بعدة نقاط مئوية رغم تأخره في دقة الاسترجاع الكلية على النص الإنجليزي الصرف. اختبر على عينة من وثائقك الفعلية قبل الالتزام.',
           '**تجاهل الترخيص.** ترخيص CC BY-NC 4.0 لـjina-embeddings-v3 يحظر الاستخدام التجاري. إذا كنت تنشر لمستخدمين في الإنتاج أو تدرج التضمينات في منتج، تحقق من البنود الحالية.',
           '**الاختيار بناءً على الأبعاد الأعلى وليس الأداء.** 768 بُعداً (nomic-embed-text-v2) تُخرج 88% retrieval@10؛ 3072 بُعداً (بعض النماذج التجارية) تُخرج أقل من نقطتين أعلى بتكلفة تخزين 4 أضعاف. الأبعاد لا تُحسن الأداء فوق ~1024.',
           '**تجاهل حساب إعادة الفهرسة.** كل تغيير للنموذج هو إعادة فهرسة كاملة — 30–90 دقيقة لكل 5000 صفحة على الأجهزة الاستهلاكية. خطط لهذا التكلفة مقدماً، خاصةً إذا كانت المجموعة تنمو.',
@@ -4114,7 +4180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-embedding-models-local-rag-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',
@@ -4123,8 +4189,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-15',
-    next_refresh_due: '2027-01-14',
+    dateModified: '2026-09-01',
+    next_refresh_due: '2027-03-01',
     theme: 'RAG & Document Chat',
     heroImage: '/images/best-embedding-models-local-rag-2026-overview-hero-ko.webp',
     title: '2026년 로컬 RAG를 위한 최고의 임베딩 모델 (실제 문서로 테스트)',
@@ -4147,6 +4213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3-Embedding-4B',
       'Qwen3-Embedding-8B',
       'voyage-code-3',
+      'BAAI/bge-code-v1',
       'all-MiniLM-L6-v2',
       'OpenAI text-embedding-3-large',
     ],
@@ -4237,7 +4304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '2026년 6개 임베딩 모델 비교',
         content:
           '4가지 문서 유형(법률 계약서, 연구 논문, 소스 코드, 다국어 기업 위키)에서 모델당 100개 쿼리로 테스트하였습니다. 하드웨어: GPU 데이터는 NVIDIA RTX 4070(12 GB VRAM), CPU 데이터는 Apple M3 Pro(18 GB 통합 메모리). 청크 크기 256 토큰, 배치 크기 32. 수치는 3회 실행의 중앙값입니다.',
-        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-retrieval-accuracy-ko.svg',
         imageCaption: '4가지 문서 유형에서 retrieval@10 정확도: jina-embeddings-v3가 92%로 전체 1위, bge-large가 영어 텍스트에서 우세(법률 94%, 연구 93%)하지만 다국어 콘텐츠에서 79%로 하락, nomic-embed-text-v2가 다국어(92%)에서 두드러지며 가장 광범위한 언어 지원을 제공합니다.',
         columns: ['모델', '차원', '속도 (CPU)', '속도 (GPU)', '메모리', 'retrieval@10', '다국어', '최적 용도'],
         rows: [
@@ -4352,7 +4419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '문서 유형별 검색 정확도 (retrieval@10)',
         content:
           '**retrieval@10 = 올바른 청크가 상위 10개 결과에 나타난 쿼리의 비율입니다.** 높을수록 좋습니다. 수치는 모델당 문서 유형별 25개 쿼리에서 나온 것입니다.',
-        image: '/images/best-embedding-models-local-rag-2026-document-types-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-document-types-ko.svg',
         imageCaption: '문서 유형별 retrieval@10: jina-embeddings-v3는 4가지 유형 모두에서 87% 이상을 유지하는 유일한 모델입니다(법률 93%, 연구 92%, 코드 87%, 다국어 89%). 영어 전용 모델(bge-large, gte-large)은 법률/연구에서 뛰어나지만 다국어에서 10–15점 하락합니다. 코드 검색이 가장 어렵습니다(모든 모델에서 82–87%).',
         columns: ['모델', '법률', '연구', '코드', '다국어', '전체'],
         rows: [
@@ -4375,7 +4442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'CPU 임베딩 속도 (초당 청크 수)',
         content:
           '**배치 크기 32, 256 토큰 청크, Apple M3 Pro(GPU 없음) 성능입니다.** 높을수록 좋습니다. CPU 속도는 5,000페이지 코퍼스를 점심시간에 재인덱싱할 수 있는지(jina, nomic), 아니면 야간 실행을 계획해야 하는지(bge-large, gte-large)를 결정합니다.',
-        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-speed-comparison-ko.svg',
         imageCaption: 'CPU 대 GPU 임베딩 성능: nomic-embed-text-v2가 580 chunks/초로 CPU에서 압도적(bge-large의 95보다 5배 빠름), 5K 페이지 코퍼스 재인덱싱 시간을 55분에서 9분으로 단축. GPU는 격차를 줄이며 nomic은 RTX 4070에서 4,800 chunks/초로 여전히 선두.',
         columns: ['모델', 'Chunks/초 (CPU)', '5K 페이지 코퍼스 인덱싱 시간', '비고'],
         rows: [
@@ -4419,7 +4486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '메모리 사용량 및 차원 트레이드오프',
         content:
           '**차원 수는 로컬 RAG에서 가장 과도하게 설계된 선택입니다.** 더 많은 차원은 ~1,024까지 검색에 도움이 되다가 안정됩니다. 그 이상에서는 1%포인트 미만의 recall 향상을 위해 두 배의 저장 비용을 치릅니다.',
-        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-ko.svg',
         imageCaption: '5만 페이지 코퍼스에서 차원 대 저장 트레이드오프: 768차원 = 0.9 GB, 1,024차원 = 1.2 GB (+33%), 3,072차원 = 3.6 GB (+300%), retrieval 향상 <0.5%. Matryoshka 모델(jina-v3, nomic)은 재임베딩 없이 1,024→512→256차원으로 절단 가능하며 약 1–3%의 retrieval을 잃고 50%의 저장 절약.',
         items: [
           '**768차원 (nomic-embed-text-v2):** 768 × 4바이트 = 청크당 3 KB. 256 토큰 청크로 나눈 5,000페이지 코퍼스(약 30,000 청크)는 벡터만으로 약 90 MB가 필요합니다.',
@@ -4546,7 +4613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '의사결정 트리: 어떤 임베더를 선택해야 합니까?',
         content:
           '**5개의 이진 질문으로, 순서대로, 대부분의 독자를 올바른 임베더로 안내합니다.**',
-        image: '/images/best-embedding-models-local-rag-2026-decision-tree-en.svg',
+        image: '/images/best-embedding-models-local-rag-2026-decision-tree-ko.svg',
         imageCaption: '5단계 플로우차트: GPU 사용 가능성 → 코퍼스 언어 → 문서 길이 → 차원 절단 필요성 → 상업 라이선스. 불확실할 때의 기본 선택: jina-embeddings-v3 (92% retrieval@10, 89개 언어 다국어, Matryoshka 차원 유연성). 상업 배포 시 CC BY-NC 라이선스 확인하십시오.',
         items: [
           '**1. 인덱싱에 GPU가 있습니까?** → 아니오: nomic-embed-text-v2 (CPU 속도 5배). 예: 계속.',
@@ -4642,11 +4709,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 로컬 RAG를 위한 최고의 임베딩 모델 (실제 문서로 테스트)',
-      description: 'Nomic, BGE, GTE, Mixedbread, Snowflake, Jina를 법률 계약서, 연구 논문, 코드, 다국어 위키에서 테스트하였습니다. retrieval@10, 속도, 메모리. 2026년 5월 평가.',
+      description: 'Nomic, BGE, GTE, Mixedbread, Snowflake, Jina를 법률 계약서, 연구 논문, 코드, 다국어 위키에서 테스트하였습니다. retrieval@10, 속도, 메모리. 2026년 평가.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-embedding-models-local-rag-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-09-01',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',

@@ -1,0 +1,81 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="28" font-size="20" font-weight="700" fill="#1C1B1F" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    &#x623;&#x62f;&#x627;&#x621; retrieval@10 &#x62d;&#x633;&#x628; &#x646;&#x648;&#x639; &#x627;&#x644;&#x648;&#x62b;&#x64a;&#x642;&#x629; (25 &#x627;&#x633;&#x62a;&#x639;&#x644;&#x627;&#x645;&#x627;&#x64b; &#x644;&#x643;&#x644; &#x646;&#x648;&#x639;)
+  </text>
+
+  <!-- Headers -->
+  <text x="100" y="65" font-size="12" font-weight="700" fill="#79747E" font-family="system-ui, -apple-system, sans-serif">&#x627;&#x644;&#x646;&#x645;&#x648;&#x630;&#x62c;</text>
+  <text x="200" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">&#x642;&#x627;&#x646;&#x648;&#x646;&#x64a;</text>
+  <text x="300" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">&#x628;&#x62d;&#x62b;&#x64a;</text>
+  <text x="420" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">&#x643;&#x648;&#x62f;</text>
+  <text x="560" y="65" font-size="12" font-weight="700" fill="#6750A4" font-family="system-ui, -apple-system, sans-serif">&#x645;&#x62a;&#x639;&#x62f;&#x62f; &#x627;&#x644;&#x644;&#x63a;&#x627;&#x62a;</text>
+  <line x1="20" y1="72" x2="780" y2="72" stroke="#E8DEF8" stroke-width="1.5"/>
+
+  <!-- Row 1: nomic-embed-text-v2 -->
+  <text x="50" y="99" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">nomic-v2</text>
+  <text x="200" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">88%</text>
+  <text x="300" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">90%</text>
+  <text x="420" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">82%</text>
+  <text x="560" y="99" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <line x1="20" y1="108" x2="780" y2="108" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 2: bge-large-en-v1.5 -->
+  <text x="50" y="135" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">bge-large</text>
+  <text x="200" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">94%</text>
+  <text x="300" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">93%</text>
+  <text x="420" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">85%</text>
+  <text x="560" y="135" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">79%</text>
+  <line x1="20" y1="144" x2="780" y2="144" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 3: gte-large -->
+  <text x="50" y="171" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">gte-large</text>
+  <text x="200" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <text x="300" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <text x="420" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">86%</text>
+  <text x="560" y="171" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">78%</text>
+  <line x1="20" y1="180" x2="780" y2="180" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 4: mxbai-embed-large -->
+  <text x="50" y="207" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">mxbai-large</text>
+  <text x="200" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">91%</text>
+  <text x="300" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">91%</text>
+  <text x="420" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">84%</text>
+  <text x="560" y="207" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">80%</text>
+  <line x1="20" y1="216" x2="780" y2="216" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 5: snowflake-arctic -->
+  <text x="50" y="243" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">snowflake</text>
+  <text x="200" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">88%</text>
+  <text x="300" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">89%</text>
+  <text x="420" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">83%</text>
+  <text x="560" y="243" font-size="12" fill="#49454F" font-family="'SF Mono', Monaco, monospace">86%</text>
+  <line x1="20" y1="252" x2="780" y2="252" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Row 6: jina-embeddings-v3 -->
+  <text x="50" y="279" font-size="12" font-weight="600" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">jina-v3</text>
+  <rect x="180" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="200" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">93%</text>
+  <rect x="280" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="300" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">92%</text>
+  <rect x="400" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="420" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">87%</text>
+  <rect x="540" y="269" width="80" height="18" fill="#E8DEF8" rx="3"/>
+  <text x="560" y="283" font-size="12" font-weight="700" fill="#6750A4" font-family="'SF Mono', Monaco, monospace">89%</text>
+  <line x1="20" y1="288" x2="780" y2="288" stroke="#F7F2FA" stroke-width="1"/>
+
+  <!-- Key insights -->
+  <text x="50" y="330" font-size="13" font-weight="700" fill="#1C1B1F" font-family="system-ui, -apple-system, sans-serif">&#x623;&#x628;&#x631;&#x632; &#x627;&#x644;&#x646;&#x62a;&#x627;&#x626;&#x62c;:</text>
+  <text x="50" y="352" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">&#x2022; jina-v3 &#x647;&#x648; &#x627;&#x644;&#x646;&#x645;&#x648;&#x630;&#x62c; &#x627;&#x644;&#x648;&#x62d;&#x64a;&#x62f; &#x641;&#x648;&#x642; 87% &#x641;&#x64a; &#x62c;&#x645;&#x64a;&#x639; &#x623;&#x646;&#x648;&#x627;&#x639; &#x627;&#x644;&#x648;&#x62b;&#x627;&#x626;&#x642; &#x2014; &#x642;&#x627;&#x646;&#x648;&#x646;&#x64a; 93%&#x60c; &#x628;&#x62d;&#x62b;&#x64a; 92%&#x60c; &#x643;&#x648;&#x62f; 87%&#x60c; &#x645;&#x62a;&#x639;&#x62f;&#x62f; &#x627;&#x644;&#x644;&#x63a;&#x627;&#x62a; 89%.</text>
+  <text x="50" y="372" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">&#x2022; &#x627;&#x644;&#x646;&#x645;&#x627;&#x630;&#x62c; &#x627;&#x644;&#x625;&#x646;&#x62c;&#x644;&#x64a;&#x632;&#x64a;&#x629; &#x641;&#x642;&#x637; (bge-large&#x60c; gte-large) &#x62a;&#x647;&#x628;&#x637; 10&#x2013;15% &#x639;&#x644;&#x649; &#x627;&#x644;&#x645;&#x62d;&#x62a;&#x648;&#x649; &#x645;&#x62a;&#x639;&#x62f;&#x62f; &#x627;&#x644;&#x644;&#x63a;&#x627;&#x62a;. &#x627;&#x633;&#x62a;&#x631;&#x62c;&#x627;&#x639; &#x627;&#x644;&#x643;&#x648;&#x62f; &#x647;&#x648; &#x627;&#x644;&#x623;&#x635;&#x639;&#x628; &#x644;&#x644;&#x62c;&#x645;&#x64a;&#x639; (82&#x2013;87%).</text>
+  <text x="50" y="392" font-size="11" font-weight="600" fill="#49454F" font-family="system-ui, -apple-system, sans-serif">&#x2022; &#x644;&#x644;&#x645;&#x62c;&#x645;&#x648;&#x639;&#x627;&#x62a; &#x627;&#x644;&#x645;&#x62e;&#x62a;&#x644;&#x637;&#x629;&#x60c; &#x623;&#x635;&#x628;&#x62d;&#x62a; &#x627;&#x644;&#x645;&#x636;&#x645;&#x650;&#x651;&#x646;&#x627;&#x62a; &#x645;&#x62a;&#x639;&#x62f;&#x62f;&#x629; &#x627;&#x644;&#x644;&#x63a;&#x627;&#x62a; &#x62a;&#x648;&#x627;&#x632;&#x64a; &#x627;&#x644;&#x625;&#x646;&#x62c;&#x644;&#x64a;&#x632;&#x64a;&#x629; &#x641;&#x642;&#x637; &#x639;&#x644;&#x649; &#x627;&#x644;&#x625;&#x646;&#x62c;&#x644;&#x64a;&#x632;&#x64a;&#x629; &#x648;&#x62a;&#x628;&#x642;&#x649; &#x642;&#x648;&#x64a;&#x629; &#x639;&#x644;&#x649; &#x63a;&#x64a;&#x631;&#x647;&#x627;.</text>
+<text x="792" y="415" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -1639,6 +1639,51 @@
     "width": 800,
     "height": 450
   },
+  "/images/asus-mini-pc-local-ai-2026-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/asus-mini-pc-local-ai-2026-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/autonomous-local-agents-actually-work-decision-flow-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4859,6 +4904,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-embedding-models-local-rag-2026-decision-tree-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/best-embedding-models-local-rag-2026-decision-tree-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
   "/images/best-embedding-models-local-rag-2026-decision-tree-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4868,6 +4923,41 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/best-embedding-models-local-rag-2026-decision-tree-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/best-embedding-models-local-rag-2026-decision-tree-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/best-embedding-models-local-rag-2026-decision-tree-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/best-embedding-models-local-rag-2026-decision-tree-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/best-embedding-models-local-rag-2026-decision-tree-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
   },
   "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -4879,12 +4969,72 @@
     "width": 800,
     "height": 350
   },
+  "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-dimensions-tradeoff-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-document-types-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-embedding-models-local-rag-2026-document-types-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
   "/images/best-embedding-models-local-rag-2026-document-types-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
   },
   "/images/best-embedding-models-local-rag-2026-document-types-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-embedding-models-local-rag-2026-document-types-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-embedding-models-local-rag-2026-document-types-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-embedding-models-local-rag-2026-document-types-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-embedding-models-local-rag-2026-document-types-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 420
+  },
+  "/images/best-embedding-models-local-rag-2026-document-types-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
@@ -4934,6 +5084,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
   "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -4944,12 +5104,72 @@
     "width": 800,
     "height": 350
   },
+  "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-retrieval-accuracy-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-speed-comparison-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-speed-comparison-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
   "/images/best-embedding-models-local-rag-2026-speed-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
   },
   "/images/best-embedding-models-local-rag-2026-speed-comparison-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-speed-comparison-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-speed-comparison-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-speed-comparison-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-speed-comparison-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/best-embedding-models-local-rag-2026-speed-comparison-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
@@ -22945,6 +23165,51 @@
     "height": 675
   },
   "/images/local-llm-developer-stack-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-llm-electricity-cost-balcony-solar-2026-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
