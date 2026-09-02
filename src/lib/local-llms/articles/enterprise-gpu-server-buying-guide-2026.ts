@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Workstation Build](/local-llms/local-llm-workstation-build) — a single desktop-tier build for one team or individual, not a rack purchase.',
           '[Enterprise LLM Inference Servers 2026](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI, and NVIDIA NIM compared for the serving software that runs on this hardware.',
           '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) — single-machine multi-GPU setup for smaller deployments.',
-          '[Cloud GPU Rental Comparison 2026](/local-llms/cloud-gpu-rental-comparison-2026) — the rent-vs-buy alternative for occasional or bursty compute needs.',
+          '[Renting GPU Cloud vs Buying On-Prem for Enterprise AI (2026)](/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — the capex-vs-opex TCO model for deciding whether to buy this hardware at all, before picking a specific server.',
         ],
       },
       sources: {
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Workstation-Aufbau für lokale LLMs](/de/local-llms/local-llm-workstation-build) — ein einzelner Desktop-Aufbau für ein Team oder eine Person, keine Rack-Anschaffung.',
           '[Enterprise-LLM-Inferenz-Server 2026](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI und NVIDIA NIM im Vergleich für die Serving-Software auf dieser Hardware.',
           '[Multi-GPU für lokale LLMs](/de/local-llms/multi-gpu-local-llms) — Multi-GPU-Aufbau in einer einzelnen Maschine für kleinere Einsätze.',
-          '[Cloud-GPU-Mietvergleich 2026](/de/local-llms/cloud-gpu-rental-comparison-2026) — die Miet-statt-Kauf-Alternative für gelegentlichen oder stoßweisen Rechenbedarf.',
+          '[GPU-Cloud mieten vs. On-Prem-Hardware kaufen für Enterprise-KI (2026)](/de/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — das Capex-vs-Opex-TCO-Modell für die Frage, ob diese Hardware überhaupt gekauft werden sollte, bevor ein konkreter Server gewählt wird.',
         ],
       },
       sources: {
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Station de travail LLM local](/fr/local-llms/local-llm-workstation-build) — une seule machine de bureau pour une équipe ou une personne, pas un achat en rack.',
           '[Serveurs d\'inférence LLM entreprise 2026](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI et NVIDIA NIM comparés pour le logiciel de service tournant sur ce matériel.',
           '[LLM locaux multi-GPU](/fr/local-llms/multi-gpu-local-llms) — configuration multi-GPU sur une seule machine pour des déploiements plus modestes.',
-          '[Comparatif location GPU cloud 2026](/fr/local-llms/cloud-gpu-rental-comparison-2026) — l\'alternative louer plutôt qu\'acheter pour des besoins de calcul occasionnels ou par pics.',
+          '[Louer du GPU cloud ou acheter du matériel on-prem pour l\'IA d\'entreprise (2026)](/fr/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — le modèle TCO capex vs opex pour savoir s\'il faut acheter ce matériel avant même de choisir un serveur précis.',
         ],
       },
       sources: {
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Construcción de estación de trabajo LLM local](/es/local-llms/local-llm-workstation-build) — una sola máquina de escritorio para un equipo o persona, no una compra en rack.',
           '[Servidores de inferencia LLM empresarial 2026](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI y NVIDIA NIM comparados como software de servicio para este hardware.',
           '[LLM locales multi-GPU](/es/local-llms/multi-gpu-local-llms) — configuración multi-GPU en una sola máquina para despliegues más pequeños.',
-          '[Comparativa de alquiler de GPU en la nube 2026](/es/local-llms/cloud-gpu-rental-comparison-2026) — la alternativa de alquilar en vez de comprar para necesidades de cómputo ocasionales o intermitentes.',
+          '[Alquilar GPU en la nube vs comprar on-prem para IA empresarial (2026)](/es/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — el modelo de TCO capex vs opex para decidir si comprar este hardware, antes de elegir un servidor concreto.',
         ],
       },
       sources: {
@@ -1775,7 +1775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Montagem de workstation para LLM local](/pt/local-llms/local-llm-workstation-build) — uma única máquina desktop para uma equipe ou pessoa, não uma compra em rack.',
           '[Servidores de inferência LLM corporativos 2026](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — vLLM, TGI e NVIDIA NIM comparados como software de atendimento para esse hardware.',
           '[LLMs locais multi-GPU](/pt/local-llms/multi-gpu-local-llms) — configuração multi-GPU em uma única máquina para implantações menores.',
-          '[Comparativo de aluguel de GPU em nuvem 2026](/pt/local-llms/cloud-gpu-rental-comparison-2026) — a alternativa de alugar em vez de comprar para necessidades de computação ocasionais ou intermitentes.',
+          '[Alugar GPU na nuvem vs comprar on-prem para IA empresarial (2026)](/pt/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — o modelo de TCO capex vs opex para decidir se vale comprar esse hardware, antes de escolher um servidor específico.',
         ],
       },
       sources: {
@@ -2137,7 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルLLMワークステーション構築](/ja/local-llms/local-llm-workstation-build)——ラック購入ではなく、1チームまたは1人向けの単一デスクトップ構成。',
           '[エンタープライズLLM推論サーバー2026](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026)——このハードウェア上で動く配信ソフトウェアとしてvLLM、TGI、NVIDIA NIMを比較。',
           '[マルチGPUローカルLLM](/ja/local-llms/multi-gpu-local-llms)——小規模な展開向けの単一マシン内マルチGPU構成。',
-          '[クラウドGPUレンタル比較2026](/ja/local-llms/cloud-gpu-rental-comparison-2026)——散発的・バースト的な計算需要向けのレンタルvs購入の代替案。',
+          '[GPUクラウドレンタル vs オンプレ購入：エンタープライズAI TCO比較 2026](/ja/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai)——具体的なサーバーを選ぶ前に、そもそもこのハードウェアを買うべきかを判断するcapex対opexのTCOモデル。',
         ],
       },
       sources: {
@@ -2499,7 +2499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地LLM工作站搭建方案](/zh/local-llms/local-llm-workstation-build)——面向单个团队或个人的单机方案,而非机架级采购。',
           '[2026企业级LLM推理服务器](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026)——对比运行在这类硬件上的服务软件vLLM、TGI和NVIDIA NIM。',
           '[多GPU本地LLM方案](/zh/local-llms/multi-gpu-local-llms)——面向较小规模部署的单机多GPU方案。',
-          '[2026云GPU租用对比](/zh/local-llms/cloud-gpu-rental-comparison-2026)——面向偶发或突发性算力需求的租用替代方案。',
+          '[租用GPU云 vs 购买本地硬件：企业AI TCO对比 2026](/zh/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai)——在选择具体服务器之前，判断是否应该购买这类硬件的capex对opex TCO模型。',
         ],
       },
       sources: {
@@ -2861,7 +2861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[بناء محطة عمل للنماذج اللغوية المحلية](/ar/local-llms/local-llm-workstation-build) — جهاز مكتبي واحد لفريق أو فرد، لا شراء على مستوى الرفوف.',
           '[خوادم استدلال النماذج اللغوية المؤسسية 2026](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — مقارنة بين vLLM وTGI وNVIDIA NIM كبرمجيات خدمة تعمل على هذا الجهاز.',
           '[النماذج اللغوية المحلية متعددة وحدات GPU](/ar/local-llms/multi-gpu-local-llms) — إعداد متعدد وحدات GPU على جهاز واحد لعمليات نشر أصغر.',
-          '[مقارنة استئجار وحدات GPU السحابية 2026](/ar/local-llms/cloud-gpu-rental-comparison-2026) — بديل الاستئجار بدلًا من الشراء لاحتياجات الحوسبة العرضية أو المتقطعة.',
+          '[استئجار وحدات GPU السحابية مقابل شراء أجهزة محلية للذكاء الاصطناعي المؤسسي (2026)](/ar/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — نموذج التكلفة الإجمالية بين النفقات الرأسمالية والتشغيلية لتحديد ما إذا كان ينبغي شراء هذه الأجهزة أصلًا، قبل اختيار خادم محدد.',
         ],
       },
       sources: {
@@ -3223,7 +3223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 LLM 워크스테이션 구축](/ko/local-llms/local-llm-workstation-build) — 랙 도입이 아니라 팀 또는 개인 한 명을 위한 단일 데스크톱 구성.',
           '[2026 엔터프라이즈 LLM 추론 서버](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026) — 이 하드웨어에서 실행되는 서빙 소프트웨어로서 vLLM, TGI, NVIDIA NIM 비교.',
           '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) — 소규모 배포를 위한 단일 머신 내 멀티 GPU 구성.',
-          '[2026 클라우드 GPU 대여 비교](/ko/local-llms/cloud-gpu-rental-comparison-2026) — 간헐적이거나 급증하는 컴퓨팅 수요를 위한 대여 대 구매 대안.',
+          '[GPU 클라우드 임대 vs 온프레미스 구매: 기업 AI TCO 비교 (2026)](/ko/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) — 구체적인 서버를 고르기 전에 이 하드웨어를 애초에 구매해야 하는지 판단하는 capex 대 opex TCO 모델.',
         ],
       },
       sources: {

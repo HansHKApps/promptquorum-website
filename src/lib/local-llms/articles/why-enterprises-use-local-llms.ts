@@ -187,6 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Scaling Local LLMs Enterprise](/local-llms/scaling-local-llms-enterprise) -- Multi-user production setup.',
             '[Corporate RAG Local LLMs](/local-llms/corporate-rag-local-llms) -- Document Q&A for organizations.',
             '[Local LLM Trends 2026–2027: 5 Key Predictions for Enterprise Adoption and On-Device AI](/local-llms/future-of-local-llms) -- the future of local LLMs',
+            '[Renting GPU Cloud vs Buying On-Prem for Enterprise AI (2026)](/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- the capex-vs-opex financial model for deciding how to host the local LLM workload this article makes the case for.',
           ],
         },
         sources: {
@@ -464,6 +465,7 @@ schema: {
             '[Escalado de LLMs locales en empresas](/es/local-llms/scaling-local-llms-enterprise) — Configuración de producción multiusuario.',
             '[RAG corporativo con LLMs locales](/es/local-llms/corporate-rag-local-llms) — Preguntas y respuestas sobre documentos para organizaciones.',
             '[Tendencias de LLM local 2026–2027: 5 predicciones clave para la adopción empresarial y la IA en dispositivo](/es/local-llms/future-of-local-llms) -- el futuro de los LLMs locales',
+            '[Alquilar GPU en la nube vs comprar on-prem para IA empresarial (2026)](/es/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- el modelo financiero capex vs opex para decidir cómo alojar la carga de LLM local que defiende este artículo.',
           ],
         },
         sources: {
@@ -742,6 +744,7 @@ schema: {
             '[توسيع نطاق نماذج LLM المحلية في المؤسسات](/ar/local-llms/scaling-local-llms-enterprise) — إعداد إنتاجي متعدد المستخدمين.',
             '[RAG للشركات مع نماذج LLM المحلية](/ar/local-llms/corporate-rag-local-llms) — أسئلة وأجوبة عن المستندات للمؤسسات.',
             '[اتجاهات LLM المحلية 2026–2027: 5 تنبؤات رئيسية لتبني المؤسسات والذكاء الاصطناعي على الجهاز](/ar/local-llms/future-of-local-llms) -- مستقبل نماذج LLM المحلية',
+            '[استئجار وحدات GPU السحابية مقابل شراء أجهزة محلية للذكاء الاصطناعي المؤسسي (2026)](/ar/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- النموذج المالي بين النفقات الرأسمالية والتشغيلية لتحديد كيفية استضافة عبء عمل LLM المحلي الذي يدافع عنه هذا المقال.',
           ],
         },
         sources: {
@@ -1131,6 +1134,7 @@ schema: {
             '[Skalierung lokaler LLMs Enterprise](/de/local-llms/scaling-local-llms-enterprise) – Multi-User Production-Setup.',
             '[Corporate RAG lokale LLMs](/de/local-llms/corporate-rag-local-llms) – Dokument-Q&A für Organisationen.',
             '[Lokale LLM Trends 2026–2027: 5 Schlüsselvorhersagen für Enterprise-Adoption und On-Device-KI](/de/local-llms/future-of-local-llms) -- die Zukunft lokaler LLMs',
+            '[GPU-Cloud mieten vs. On-Prem-Hardware kaufen für Enterprise-KI (2026)](/de/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- das Capex-vs-Opex-Finanzmodell für die Frage, wie der hier beschriebene lokale LLM-Workload gehostet werden sollte.',
           ],
         },
         sources: {
@@ -1386,6 +1390,7 @@ schema: {
             '[Mise à l\'échelle LLM locaux Enterprise](/fr/local-llms/scaling-local-llms-enterprise) – Installation multi-utilisateur en production.',
             '[RAG Corporate LLM locaux](/fr/local-llms/corporate-rag-local-llms) – Q&A documentaire pour les organisations.',
             '[Tendances LLM local 2026–2027 : 5 prédictions clés pour l\'adoption entreprise et l\'IA sur appareil](/fr/local-llms/future-of-local-llms) -- l\'avenir des LLMs locaux',
+            '[Louer du GPU cloud ou acheter du matériel on-prem pour l\'IA d\'entreprise (2026)](/fr/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- le modèle financier capex vs opex pour décider comment héberger la charge LLM locale défendue par cet article.',
           ],
         },
         sources: {
@@ -1641,6 +1646,7 @@ schema: {
             '[ローカルLLM企業スケーリング](/ja/local-llms/scaling-local-llms-enterprise) – マルチユーザー本番セットアップ。',
             '[コーポレートRAGローカルLLM](/ja/local-llms/corporate-rag-local-llms) – 組織向けドキュメントQ&A。',
             '[ローカルLLMトレンド2026–2027：エンタープライズ導入と端末AI予測](/ja/local-llms/future-of-local-llms) -- ローカルLLMの未来',
+            '[GPUクラウドレンタル vs オンプレ購入：エンタープライズAI TCO比較 2026](/ja/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- 本記事が主張するローカルLLMワークロードをどうホストすべきかを判断するcapex対opexの財務モデル。',
           ],
         },
         sources: {
@@ -1896,6 +1902,7 @@ schema: {
             '[本地LLM企业扩展](/zh/local-llms/scaling-local-llms-enterprise) – 多用户生产设置。',
             '[企业RAG本地LLM](/zh/local-llms/corporate-rag-local-llms) – 组织的文档问答。',
             '[本地LLM趋势2026–2027：企业采用与端设备AI的5大预测](/zh/local-llms/future-of-local-llms) -- 本地LLM的未来',
+            '[租用GPU云 vs 购买本地硬件：企业AI TCO对比 2026](/zh/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- 判断本文所主张的本地LLM工作负载应如何托管的capex对opex财务模型。',
           ],
         },
         sources: {
@@ -2168,6 +2175,7 @@ schema: {
             '[엔터프라이즈 로컬 LLM 확장](/ko/local-llms/scaling-local-llms-enterprise) -- 다중 사용자 프로덕션 설정.',
             '[기업용 RAG 로컬 LLM](/ko/local-llms/corporate-rag-local-llms) -- 조직을 위한 문서 Q&A.',
             '[로컬 LLM 트렌드 2026–2027: 기업 도입과 온디바이스 AI를 위한 5가지 핵심 예측](/ko/local-llms/future-of-local-llms) -- 로컬 LLM의 미래',
+            '[GPU 클라우드 임대 vs 온프레미스 구매: 기업 AI TCO 비교 (2026)](/ko/local-llms/renting-gpu-cloud-vs-buying-on-prem-enterprise-ai) -- 이 글이 주장하는 로컬 LLM 워크로드를 어떻게 호스팅할지 판단하는 capex 대 opex 재무 모델.',
           ],
         },
         sources: {

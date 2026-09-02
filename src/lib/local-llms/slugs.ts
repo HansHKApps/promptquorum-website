@@ -193,4 +193,5 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'soc2-iso27001-self-hosted-llm-compliance':     'soc2-iso27001-self-hosted-llm-compliance',
   'data-residency-sovereign-ai-eu-gdpr-enterprise': 'data-residency-sovereign-ai-eu-gdpr-enterprise',
   'local-llm-commercial-license-guide-business':  'local-llm-commercial-license-guide-business',
+  'renting-gpu-cloud-vs-buying-on-prem-enterprise-ai': 'renting-gpu-cloud-vs-buying-on-prem-enterprise-ai',
 }
