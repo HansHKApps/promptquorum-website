@@ -582,7 +582,7 @@
         },
         {
           "url": "/images/small-local-llm-models-performance-tier-hero-en.webp",
-          "title": "Performance tiers: Phi-4 Mini leads on reasoning and coding, Gemma 4 E2B leads on context length (128K) at the smallest RAM footprint, Qwen3 excels at coding."
+          "title": "Performance tiers: Phi-4 Mini leads on reasoning and coding, Gemma 4 E2B leads on context length (128K) at the smallest RAM footprint, Qwen2.5 excels at coding."
         },
         {
           "url": "/images/small-local-llm-models-quantization-tradeoff-hero-en.webp",
@@ -3316,7 +3316,7 @@
       ]
     },
     "local-llm-cost-calculator-build-vs-rent-2026": {
-      "dateModified": null,
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -4974,7 +4974,7 @@
       "images": []
     },
     "how-to-reduce-prompt-brittleness": {
-      "dateModified": "2026-07-31",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-04-29",
       "hasSections": true,
@@ -5548,7 +5548,7 @@
       ]
     },
     "asus-mini-pc-local-ai-2026": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-09-01",
       "hasSections": true,
@@ -5989,7 +5989,7 @@
       ]
     },
     "best-local-models-tool-calling-2026": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6679,7 +6679,7 @@
       "images": []
     },
     "easiest-local-ai-app-windows-mac-linux": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6697,7 +6697,7 @@
       "images": [
         {
           "url": "/images/easiest-local-ai-app-comparison-table-hero-en.webp",
-          "title": "LM Studio vs Jan vs GPT4All feature comparison: LM Studio offers 50,000+ models, local API, multi-chat, and the best UI; Jan is the open-source alternative (AGPLv3); GPT4All is the simplest single-window option for pure beginners."
+          "title": "LM Studio vs Jan vs GPT4All feature comparison: LM Studio offers 50,000+ models, local API, multi-chat, and the best UI; Jan is the open-source alternative (Apache 2.0); GPT4All is the simplest single-window option for pure beginners."
         },
         {
           "url": "/images/easiest-local-ai-app-setup-steps-hero-en.webp",
@@ -6705,11 +6705,11 @@
         },
         {
           "url": "/images/easiest-local-ai-app-which-app-en.svg",
-          "title": "Which local AI app to install: LM Studio for best UI and API access (50,000+ models); Jan as open-source AGPLv3 alternative; GPT4All for the simplest single-window beginner experience with ~20 curated models. All three are free and run with no cloud account."
+          "title": "Which local AI app to install: LM Studio for best UI and API access (50,000+ models); Jan as open-source Apache 2.0 alternative; GPT4All for the simplest single-window beginner experience with ~20 curated models. All three are free and run with no cloud account."
         },
         {
           "url": "/images/easiest-local-ai-app-first-model-guide-en.svg",
-          "title": "First model guide by available RAM: ≤8 GB → Phi-4 Mini 3.8B (~2.7 GB, 15–30 tok/s on Apple Silicon); 8–16 GB → Llama 3.2 3B or Qwen3 8B; 16–32 GB → Qwen3 14B (~8.9 GB); 32 GB+ → Llama 3.3 70B (~40 GB)."
+          "title": "First model guide by available RAM: ≤8 GB → Phi-4 Mini 3.8B or Gemma 4 E2B (~2–3 GB, 15–30 tok/s on Apple Silicon); 8–16 GB → Llama 3.2 3B or Qwen3 8B; 16–32 GB → gpt-oss 20B or Qwen3 14B (~9–13 GB); 32 GB+ → Qwen 3.6 27B (~16 GB)."
         },
         {
           "url": "/images/easiest-local-ai-app-hardware-guide-en.svg",
@@ -7328,7 +7328,7 @@
       "images": []
     },
     "wechat-local-llm-integration-2026": {
-      "dateModified": "2026-05-26",
+      "dateModified": "2026-09-01",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7346,11 +7346,11 @@
       "images": [
         {
           "url": "/images/wechat-local-llm-integration-2026-architecture-flow-en.svg",
-          "title": "WeChat + local LLM message flow: WeChatFerry hooks the WeChat PC client, a Python bridge forwards messages to Ollama at localhost:11434, and Qwen3 7B Q4_K_M returns a reply in 2–5 seconds — entirely on local hardware with zero cloud API calls."
+          "title": "WeChat + local LLM message flow: WeChatFerry hooks the WeChat PC client, a Python bridge forwards messages to Ollama at localhost:11434, and Qwen3 8B Q4_K_M returns a reply in 2–5 seconds — entirely on local hardware with zero cloud API calls."
         },
         {
           "url": "/images/wechat-local-llm-integration-2026-cjk-tokenization-efficiency-en.svg",
-          "title": "Chinese text tokenization by model: Qwen3 7B needs 42 tokens for a 50-character sentence versus 98 for Llama 3 and 115 for Mistral — native CJK tokenisation cuts token count by 2.3–2.7×."
+          "title": "Chinese text tokenization by model: Qwen3 8B needs 42 tokens for a 50-character sentence versus 98 for Llama 3 and 115 for Mistral — native CJK tokenisation cuts token count by 2.3–2.7×."
         }
       ]
     },
@@ -7465,7 +7465,7 @@
   },
   "prompt-bites": {
     "howMuchVramForLocalLlm": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -7528,7 +7528,7 @@
       "images": []
     },
     "bestOllamaModelsRtx3060": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
