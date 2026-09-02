@@ -703,14 +703,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Unterstützt Backyard AI Sprachinteraktion?',
             a: 'Ja. Der lokale Modus umfasst Sprachinteraktion neben Text-Chat sowie erweiterte Einstellungen wie Lorebooks, Author\'s Notes, benutzerdefinierte Kontextgröße, Sampler-Einstellungen und Grammars.',
           },
-          {
-            q: 'Muss ich bei der Verwendung von Backyard AI die DSGVO beachten?',
-            a: 'Im lokalen Modus verlassen keine Gespräche Ihr Gerät, sodass keine personenbezogenen Daten an Backyard-Server übertragen werden — dies erfüllt die Grundsätze der Datenminimierung nach DSGVO Art. 28 ohne zusätzliche Auftragsverarbeitungsvereinbarung. Sobald Sie Backyard Cloud nutzen, verarbeitet der Anbieter Gesprächsdaten auf seinen Servern; prüfen Sie die aktuelle Datenschutzerklärung von Backyard AI und, für unternehmerische Nutzung, ob eine Auftragsverarbeitungsvereinbarung nach DSGVO Art. 28 sowie eine Einordnung nach BSI-Grundschutz-Katalogen vorliegt, bevor Sie sensible Daten in der Cloud-Stufe verarbeiten.',
-          },
-          {
-            q: 'Ist Backyard AI für den deutschen Mittelstand geeignet?',
-            a: 'Für interne Kreativ-Anwendungen — etwa Schulungsdialoge, Storytelling-Prototypen oder Kundenszenario-Training — bietet der lokale Modus von Backyard AI eine datenschutzfreundliche Basis ohne Cloud-Abhängigkeit, was BSI-Grundschutz-orientierten IT-Richtlinien entgegenkommt. Für professionellere, teamweite Einsatzzwecke mit Gruppenfunktionen und Auditierbarkeit ist SillyTavern (vollständig quelloffen) die geeignetere Wahl für den Mittelstand; Backyard AI eignet sich eher für Einzelanwender oder kleine Teams, die Einfachheit vor Anpassbarkeit stellen.',
-          },
         ],
       },
       verdict: {
