@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-en.webp',
     title: 'Why a Local Smart Home Beats the Cloud in 2026',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Longevity: a cloud shutdown cannot brick local devices',
           'Trade-off: more upfront setup effort',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -103,6 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Local camera recording (Frigate) has no subscription — see [local AI security cameras](/smart-home/local-ai-security-camera).',
           'Automations and control are free on a local hub.',
+          'Smart lock maker Nuki tried moving basic Wi-Fi connectivity behind a monthly paywall in 2025, a feature that had already shipped with the device — a pattern that cannot happen with a purely local setup.',
           'For the full no-fee approach, see [smart home without subscriptions](/smart-home/smart-home-without-subscriptions).',
         ],
       },
@@ -114,6 +115,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Local devices keep working regardless of vendor business decisions.',
           'No risk of a discontinued service disabling your hardware.',
+          'Belkin shut down Wemo cloud services in January 2026, turning app-dependent plugs and connected appliances into little more than manual switches — locally controlled devices were unaffected.',
+          'Norwegian smart-home vendor Futurehome required existing customers to accept a new annual subscription, with a firmware update reducing functionality for those who did not pay — a risk that cannot happen to a device with no cloud dependency.',
           'This longevity is a core reason users move to local control.',
         ],
       },
@@ -147,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What happens when a smart home cloud shuts down?', a: 'Cloud-dependent devices can lose core functions when a vendor discontinues the product cloud, sometimes becoming unusable. Local devices are unaffected because they do not rely on that cloud to operate, which is a key reason to choose local control.' },
+          { q: 'What happens when a smart home cloud shuts down?', a: "Cloud-dependent devices can lose core functions when a vendor discontinues the product cloud, sometimes becoming unusable — Belkin's January 2026 shutdown of Wemo cloud services left many smart plugs and connected appliances working as little more than manual switches. Local devices are unaffected because they do not rely on that cloud to operate, which is a key reason to choose local control." },
           { q: 'Is a local smart home faster?', a: 'Often, yes. Local commands skip the internet round-trip to a vendor server, so direct controls and automations respond quickly. Local voice latency depends on your hardware and model size rather than network conditions.' },
           { q: 'Is local really cheaper long-term?', a: 'Usually. Local setups avoid recurring subscriptions for camera storage and premium features, so after the one-time hardware cost they are cheaper over time than cloud ecosystems that charge monthly fees.' },
           { q: 'What is the downside of going local?', a: 'The main downside is more upfront setup effort — you install the hub, pair devices, and build automations yourself. Once configured, a local system is low-maintenance and not dependent on any vendor cloud.' },
@@ -175,7 +178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Local smart home' }, { '@type': 'Thing', name: 'Cloud smart home' }, { '@type': 'Thing', name: 'Home automation reliability' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -185,7 +188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
-        { '@type': 'Question', name: 'What happens when a smart home cloud shuts down?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-dependent devices can lose core functions or become unusable when a vendor discontinues the product cloud. Local devices are unaffected because they do not rely on that cloud.' } },
+        { '@type': 'Question', name: 'What happens when a smart home cloud shuts down?', acceptedAnswer: { '@type': 'Answer', text: "Cloud-dependent devices can lose core functions or become unusable when a vendor discontinues the product cloud — Belkin's January 2026 Wemo shutdown is a recent example. Local devices are unaffected because they do not rely on that cloud." } },
         { '@type': 'Question', name: 'Is a local smart home faster?', acceptedAnswer: { '@type': 'Answer', text: 'Often. Local commands skip the internet round-trip, so direct controls and automations respond quickly. Local voice latency depends on hardware rather than network.' } },
         { '@type': 'Question', name: 'Is local really cheaper long-term?', acceptedAnswer: { '@type': 'Answer', text: 'Usually. Local setups avoid recurring subscriptions, so after the one-time hardware cost they are cheaper than cloud ecosystems that charge monthly.' } },
         { '@type': 'Question', name: 'What is the downside of going local?', acceptedAnswer: { '@type': 'Answer', text: 'More upfront setup effort — you install the hub, pair devices, and build automations yourself. Once configured it is low-maintenance and not cloud-dependent.' } },
@@ -196,8 +199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-ar.webp',
     title: 'لماذا يتفوق المنزل الذكي المحلي على السحابة في ⁨2026⁩',
@@ -233,7 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المتانة: إغلاق السحابة لا يمكنه إتلاف الأجهزة المحلية',
           'التنازل: المزيد من جهد الإعداد في البداية',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -294,6 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'تسجيل الكاميرا المحلي (Frigate) لا يحتاج اشتراكًا — راجع [كاميرات الأمان بالذكاء الاصطناعي المحلي](/ar/smart-home/local-ai-security-camera).',
           'الأتمتة والتحكم مجانيان على المركز المحلي.',
+          'حاولت شركة Nuki لصناعة الأقفال الذكية وضع الاتصال الأساسي بشبكة Wi-Fi خلف اشتراك شهري في عام 2025، وهي ميزة كانت قد شُحنت بالفعل مع الجهاز — نمط لا يمكن أن يحدث مع إعداد محلي بحت.',
           'للنهج الكامل بدون رسوم، راجع [المنزل الذكي بدون اشتراكات](/ar/smart-home/smart-home-without-subscriptions).',
         ],
       },
@@ -305,6 +309,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'تستمر الأجهزة المحلية في العمل بغض النظر عن قرارات المورد التجارية.',
           'لا خطر من خدمة موقوفة تعطل أجهزتك.',
+          'أوقفت Belkin خدمات سحابة Wemo في يناير 2026، مما حوّل المقابس والأجهزة المتصلة المعتمدة على التطبيق إلى مجرد مفاتيح يدوية تقريبًا — لم تتأثر الأجهزة الخاضعة للتحكم المحلي.',
+          'طالبت شركة Futurehome النرويجية للمنازل الذكية عملاءها الحاليين بقبول اشتراك سنوي جديد، مع تحديث للبرنامج الثابت يقلّص الوظائف لمن لم يدفع — وهو خطر لا يمكن أن يحدث لجهاز لا يعتمد على السحابة.',
           'هذه المتانة هي سبب رئيسي لانتقال المستخدمين إلى التحكم المحلي.',
         ],
       },
@@ -338,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'ماذا يحدث عند إغلاق سحابة المنزل الذكي؟', a: 'الأجهزة المعتمدة على السحابة قد تفقد وظائفها الأساسية أو تصبح غير قابلة للاستخدام عندما يوقف المورد سحابة المنتج. الأجهزة المحلية لا تتأثر لأنها لا تعتمد على تلك السحابة للعمل — وهو سبب رئيسي لاختيار التحكم المحلي.' },
+          { q: 'ماذا يحدث عند إغلاق سحابة المنزل الذكي؟', a: 'الأجهزة المعتمدة على السحابة قد تفقد وظائفها الأساسية أو تصبح غير قابلة للاستخدام عندما يوقف المورد سحابة المنتج — ومن الأمثلة الحديثة إيقاف Belkin لخدمات سحابة Wemo في يناير 2026، ما ترك مقابس وأجهزة متصلة كثيرة تعمل كمفاتيح يدوية تقريبًا. الأجهزة المحلية لا تتأثر لأنها لا تعتمد على تلك السحابة للعمل — وهو سبب رئيسي لاختيار التحكم المحلي.' },
           { q: 'هل المنزل الذكي المحلي أسرع؟', a: 'في الغالب نعم. الأوامر المحلية تتجنب الجولة الإنترنت إلى خادم المورد، لذا تستجيب عمليات التحكم المباشر والأتمتة بسرعة. زمن وصول الصوت المحلي يعتمد على أجهزتك وحجم النموذج وليس على ظروف الشبكة.' },
           { q: 'هل المحلي أرخص فعلًا على المدى الطويل؟', a: 'عادةً نعم. الإعدادات المحلية تتجنب الاشتراكات المتكررة لتخزين الكاميرا والميزات المميزة، لذا بعد تكلفة الأجهزة الأولية تكون أرخص مع الوقت من الأنظمة السحابية التي تفرض رسومًا شهرية.' },
           { q: 'ما عيب التحول إلى المحلي؟', a: 'العيب الرئيسي هو المزيد من جهد الإعداد في البداية — تثبّت المركز، وتقترن بالأجهزة، وتبني الأتمتة بنفسك. بعد الإعداد، النظام المحلي يحتاج صيانة قليلة ولا يعتمد على سحابة أي مورد.' },
@@ -366,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'المنزل الذكي المحلي' }, { '@type': 'Thing', name: 'المنزل الذكي السحابي' }, { '@type': 'Thing', name: 'موثوقية أتمتة المنزل' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -376,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        { '@type': 'Question', name: 'ماذا يحدث عند إغلاق سحابة المنزل الذكي؟', acceptedAnswer: { '@type': 'Answer', text: 'الأجهزة المعتمدة على السحابة قد تفقد وظائفها الأساسية أو تصبح غير قابلة للاستخدام عند إيقاف المورد لسحابة المنتج. الأجهزة المحلية لا تتأثر لأنها لا تعتمد على تلك السحابة.' } },
+        { '@type': 'Question', name: 'ماذا يحدث عند إغلاق سحابة المنزل الذكي؟', acceptedAnswer: { '@type': 'Answer', text: 'الأجهزة المعتمدة على السحابة قد تفقد وظائفها الأساسية أو تصبح غير قابلة للاستخدام عند إيقاف المورد لسحابة المنتج — ومن الأمثلة الحديثة إيقاف Belkin لسحابة Wemo في يناير 2026. الأجهزة المحلية لا تتأثر لأنها لا تعتمد على تلك السحابة.' } },
         { '@type': 'Question', name: 'هل المنزل الذكي المحلي أسرع؟', acceptedAnswer: { '@type': 'Answer', text: 'في الغالب. الأوامر المحلية تتجنب الجولة الإنترنت، لذا تستجيب عمليات التحكم المباشر والأتمتة بسرعة. زمن وصول الصوت يعتمد على الأجهزة لا الشبكة.' } },
         { '@type': 'Question', name: 'هل المحلي أرخص فعلًا على المدى الطويل؟', acceptedAnswer: { '@type': 'Answer', text: 'عادةً. الإعدادات المحلية تتجنب الاشتراكات المتكررة، لذا بعد تكلفة الأجهزة الأولية تكون أرخص من الأنظمة السحابية ذات الرسوم الشهرية.' } },
         { '@type': 'Question', name: 'ما عيب التحول إلى المحلي؟', acceptedAnswer: { '@type': 'Answer', text: 'المزيد من جهد الإعداد في البداية: تثبّت المركز، وتقترن بالأجهزة، وتبني الأتمتة. بعد الإعداد يحتاج صيانة قليلة ولا يعتمد على السحابة.' } },
@@ -387,8 +393,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-de.webp',
     title: 'Warum ein lokales Smart Home 2026 die Cloud schlägt',
@@ -424,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Langlebigkeit: eine Cloud-Abschaltung kann lokale Geräte nicht unbrauchbar machen',
           'Kompromiss: mehr Einrichtungsaufwand am Anfang',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -485,6 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Lokale Kameraaufzeichnung (Frigate) hat kein Abonnement – siehe [lokale KI-Sicherheitskameras](/de/smart-home/local-ai-security-camera).',
           'Automatisierungen und Steuerung sind auf einem lokalen Hub kostenlos.',
+          'Der Smart-Lock-Hersteller Nuki versuchte, die grundlegende WLAN-Anbindung – eine Funktion, die bereits im Gerät enthalten war – hinter ein monatliches Abonnement zu legen. Ein solches Muster kann bei einem rein lokalen Setup nicht auftreten.',
           'Für den vollständigen gebührenfreien Ansatz siehe [Smart Home ohne Abonnements](/de/smart-home/smart-home-without-subscriptions).',
         ],
       },
@@ -496,6 +503,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Lokale Geräte laufen unabhängig von geschäftlichen Entscheidungen des Herstellers weiter.',
           'Kein Risiko, dass ein eingestellter Dienst Ihre Hardware deaktiviert.',
+          'Belkin schaltete im Januar 2026 die Wemo-Cloud-Dienste ab und machte app-abhängige Steckdosen und vernetzte Geräte zu kaum mehr als manuellen Schaltern – lokal gesteuerte Geräte waren nicht betroffen.',
+          'Der norwegische Smart-Home-Anbieter Futurehome verlangte von Bestandskunden ein neues Jahresabonnement; ein Firmware-Update schränkte die Funktionen derjenigen ein, die nicht zahlten – ein Risiko, das bei einem Gerät ohne Cloud-Abhängigkeit nicht entstehen kann.',
           'Diese Langlebigkeit ist ein Kerngrund, warum Nutzer zu lokaler Steuerung wechseln.',
         ],
       },
@@ -529,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Was passiert, wenn eine Smart-Home-Cloud abgeschaltet wird?', a: 'Cloud-abhängige Geräte können Kernfunktionen verlieren, wenn ein Hersteller die Produkt-Cloud einstellt, manchmal werden sie unbrauchbar. Lokale Geräte sind nicht betroffen, weil sie diese Cloud zum Betrieb nicht benötigen – ein zentraler Grund, lokale Steuerung zu wählen.' },
+          { q: 'Was passiert, wenn eine Smart-Home-Cloud abgeschaltet wird?', a: 'Cloud-abhängige Geräte können Kernfunktionen verlieren, wenn ein Hersteller die Produkt-Cloud einstellt, manchmal werden sie unbrauchbar – ein aktuelles Beispiel ist Belkins Abschaltung der Wemo-Cloud im Januar 2026, die viele Steckdosen und vernetzte Geräte zu kaum mehr als manuellen Schaltern machte. Lokale Geräte sind nicht betroffen, weil sie diese Cloud zum Betrieb nicht benötigen – ein zentraler Grund, lokale Steuerung zu wählen.' },
           { q: 'Ist ein lokales Smart Home schneller?', a: 'Oft ja. Lokale Befehle sparen den Internet-Umweg zu einem Hersteller-Server, sodass direkte Steuerungen und Automatisierungen schnell reagieren. Die lokale Sprachlatenz hängt von Ihrer Hardware und Modellgröße ab statt von Netzwerkbedingungen.' },
           { q: 'Ist lokal langfristig wirklich günstiger?', a: 'Meist. Lokale Setups vermeiden wiederkehrende Abonnements für Kameraspeicher und Premium-Funktionen, sodass sie nach den einmaligen Hardwarekosten mit der Zeit günstiger sind als Cloud-Ökosysteme mit Monatsgebühren.' },
           { q: 'Was ist der Nachteil, lokal zu gehen?', a: 'Der Hauptnachteil ist mehr Einrichtungsaufwand am Anfang – Sie installieren den Hub, koppeln Geräte und bauen Automatisierungen selbst. Einmal konfiguriert, ist ein lokales System wartungsarm und nicht von einer Hersteller-Cloud abhängig.' },
@@ -557,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Lokales Smart Home' }, { '@type': 'Thing', name: 'Cloud Smart Home' }, { '@type': 'Thing', name: 'Zuverlässigkeit der Heimautomatisierung' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -567,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Was passiert, wenn eine Smart-Home-Cloud abgeschaltet wird?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-abhängige Geräte können Kernfunktionen verlieren oder unbrauchbar werden, wenn ein Hersteller die Produkt-Cloud einstellt. Lokale Geräte sind nicht betroffen, weil sie diese Cloud nicht benötigen.' } },
+        { '@type': 'Question', name: 'Was passiert, wenn eine Smart-Home-Cloud abgeschaltet wird?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-abhängige Geräte können Kernfunktionen verlieren oder unbrauchbar werden, wenn ein Hersteller die Produkt-Cloud einstellt – ein Beispiel ist Belkins Wemo-Abschaltung im Januar 2026. Lokale Geräte sind nicht betroffen, weil sie diese Cloud nicht benötigen.' } },
         { '@type': 'Question', name: 'Ist ein lokales Smart Home schneller?', acceptedAnswer: { '@type': 'Answer', text: 'Oft. Lokale Befehle sparen den Internet-Umweg, sodass direkte Steuerungen und Automatisierungen schnell reagieren. Die Sprachlatenz hängt von der Hardware ab, nicht vom Netzwerk.' } },
         { '@type': 'Question', name: 'Ist lokal langfristig wirklich günstiger?', acceptedAnswer: { '@type': 'Answer', text: 'Meist. Lokale Setups vermeiden wiederkehrende Abonnements, sodass sie nach den einmaligen Hardwarekosten günstiger sind als Cloud-Ökosysteme mit Monatsgebühren.' } },
         { '@type': 'Question', name: 'Was ist der Nachteil, lokal zu gehen?', acceptedAnswer: { '@type': 'Answer', text: 'Mehr Einrichtungsaufwand am Anfang – Sie installieren den Hub, koppeln Geräte und bauen Automatisierungen selbst. Einmal konfiguriert, ist es wartungsarm und nicht cloud-abhängig.' } },
@@ -578,8 +587,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-es.webp',
     title: 'Por Qué un Smart Home Local Supera a la Nube en 2026',
@@ -615,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Longevidad: un cierre de la nube no puede inutilizar dispositivos locales',
           'Compromiso: más esfuerzo de configuración al principio',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -676,6 +685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'La grabación local de cámaras (Frigate) no tiene suscripción — consulta [cámaras de seguridad con IA local](/es/smart-home/local-ai-security-camera).',
           'Las automatizaciones y el control son gratuitos en un hub local.',
+          'El fabricante de cerraduras inteligentes Nuki intentó poner la conectividad Wi-Fi básica —una función que ya venía incluida en el dispositivo— detrás de un pago mensual. Ese patrón no puede darse con una configuración puramente local.',
           'Para el enfoque completo sin cuotas, consulta [smart home sin suscripciones](/es/smart-home/smart-home-without-subscriptions).',
         ],
       },
@@ -687,6 +697,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Los dispositivos locales siguen funcionando sin importar las decisiones de negocio del fabricante.',
           'Sin riesgo de que un servicio discontinuado desactive tu hardware.',
+          'Belkin cerró los servicios en la nube de Wemo en enero de 2026, dejando enchufes y electrodomésticos conectados que dependían de la app como poco más que interruptores manuales — los dispositivos con control local no se vieron afectados.',
+          'El fabricante noruego Futurehome exigió a sus clientes existentes aceptar una nueva suscripción anual, con una actualización de firmware que reducía la funcionalidad de quienes no pagaban — un riesgo que no puede ocurrir con un dispositivo sin dependencia de la nube.',
           'Esta longevidad es una razón central por la que los usuarios pasan al control local.',
         ],
       },
@@ -720,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué pasa cuando se cierra una nube de smart home?', a: 'Los dispositivos dependientes de la nube pueden perder funciones clave o quedar inutilizados cuando un fabricante discontinúa la nube del producto. Los dispositivos locales no se ven afectados porque no dependen de esa nube para operar, una razón clave para elegir local.' },
+          { q: '¿Qué pasa cuando se cierra una nube de smart home?', a: 'Los dispositivos dependientes de la nube pueden perder funciones clave o quedar inutilizados cuando un fabricante discontinúa la nube del producto — un ejemplo reciente es el cierre de la nube de Wemo por parte de Belkin en enero de 2026. Los dispositivos locales no se ven afectados porque no dependen de esa nube para operar, una razón clave para elegir local.' },
           { q: '¿Es más rápido un smart home local?', a: 'A menudo, sí. Los comandos locales se ahorran el viaje por internet a un servidor del fabricante, así que controles directos y automatizaciones responden rápido. La latencia de voz local depende de tu hardware y el tamaño del modelo, no de la red.' },
           { q: '¿Es local realmente más barato a largo plazo?', a: 'Normalmente. Las configuraciones locales evitan suscripciones recurrentes para almacenamiento de cámara y funciones premium, así que tras el coste único de hardware son más baratas con el tiempo que los ecosistemas en la nube con cuotas mensuales.' },
           { q: '¿Cuál es el inconveniente de ir local?', a: 'El principal inconveniente es más esfuerzo de configuración al principio: instalas el hub, emparejas dispositivos y construyes automatizaciones tú. Una vez configurado, un sistema local es de bajo mantenimiento y no depende de la nube de ningún fabricante.' },
@@ -748,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Smart home local' }, { '@type': 'Thing', name: 'Smart home en la nube' }, { '@type': 'Thing', name: 'Fiabilidad de la domótica' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -769,8 +781,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-ko.webp',
     title: '2026년 로컬 스마트홈이 클라우드를 능가하는 이유',
@@ -806,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '수명: 클라우드 종료로 로컬 기기가 벽돌이 될 수 없음',
           '트레이드오프: 더 많은 초기 설정 노력',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -867,6 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '로컬 카메라 녹화(Frigate)는 구독이 없습니다 — [로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera)를 참조하십시오.',
           '로컬 허브에서 자동화와 제어는 무료입니다.',
+          '스마트락 제조사 Nuki는 이미 기기에 포함되어 있던 기본 Wi-Fi 연결 기능을 월간 유료 구독 뒤에 두려고 시도했습니다 — 순수 로컬 구성에서는 이런 일이 발생할 수 없습니다.',
           '수수료 없는 완전한 접근 방식은 [구독 없는 스마트홈](/ko/smart-home/smart-home-without-subscriptions)을 참조하십시오.',
         ],
       },
@@ -878,6 +891,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '로컬 기기는 제조사의 사업적 결정과 관계없이 계속 작동합니다.',
           '중단된 서비스가 하드웨어를 비활성화할 위험이 없습니다.',
+          'Belkin은 2026년 1월 Wemo 클라우드 서비스를 종료하여 앱에 의존하던 플러그와 연결 기기들을 사실상 수동 스위치 수준으로 만들었습니다 — 로컬로 제어되는 기기는 영향을 받지 않았습니다.',
+          '노르웨이 스마트홈 업체 Futurehome은 기존 고객에게 새로운 연간 구독을 요구했고, 비용을 지불하지 않은 고객은 펌웨어 업데이트로 기능이 축소되었습니다 — 클라우드에 의존하지 않는 기기에서는 발생할 수 없는 위험입니다.',
           '이 수명이 사용자들이 로컬 제어로 이전하는 핵심 이유입니다.',
         ],
       },
@@ -911,7 +926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '스마트홈 클라우드가 종료되면 어떻게 됩니까?', a: '클라우드에 의존하는 기기는 제조사가 제품 클라우드를 중단할 때 핵심 기능을 잃거나 사용할 수 없게 될 수 있습니다. 로컬 기기는 그 클라우드에 의존하지 않기 때문에 영향을 받지 않습니다. 이것이 로컬 제어를 선택하는 핵심 이유입니다.' },
+          { q: '스마트홈 클라우드가 종료되면 어떻게 됩니까?', a: '클라우드에 의존하는 기기는 제조사가 제품 클라우드를 중단할 때 핵심 기능을 잃거나 사용할 수 없게 될 수 있습니다 — 최근 사례로 Belkin이 2026년 1월 Wemo 클라우드 서비스를 종료한 것을 들 수 있습니다. 로컬 기기는 그 클라우드에 의존하지 않기 때문에 영향을 받지 않습니다. 이것이 로컬 제어를 선택하는 핵심 이유입니다.' },
           { q: '로컬 스마트홈이 더 빠릅니까?', a: '대체로 그렇습니다. 로컬 명령은 제조사 서버로의 인터넷 왕복을 생략하므로 직접 제어와 자동화가 빠르게 응답합니다. 로컬 음성 지연은 네트워크 환경이 아닌 하드웨어와 모델 크기에 따라 다릅니다.' },
           { q: '로컬이 장기적으로 실제로 더 저렴합니까?', a: '보통은 그렇습니다. 로컬 설정은 카메라 저장 및 프리미엄 기능의 반복 구독을 피하므로 일회성 하드웨어 비용 이후 시간이 지날수록 월정액을 부과하는 클라우드 생태계보다 저렴합니다.' },
           { q: '로컬로 전환하는 단점은 무엇입니까?', a: '주요 단점은 더 많은 초기 설정 노력입니다. 허브를 설치하고, 기기를 페어링하고, 자동화를 직접 구축해야 합니다. 설정 후에는 유지 관리가 적고 어떤 제조사 클라우드에도 의존하지 않습니다.' },
@@ -939,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: '로컬 스마트홈' }, { '@type': 'Thing', name: '클라우드 스마트홈' }, { '@type': 'Thing', name: '홈 자동화 신뢰성' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -949,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
-        { '@type': 'Question', name: '스마트홈 클라우드가 종료되면 어떻게 됩니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드에 의존하는 기기는 제조사가 제품 클라우드를 중단할 때 핵심 기능을 잃거나 사용할 수 없게 될 수 있습니다. 로컬 기기는 그 클라우드에 의존하지 않기 때문에 영향을 받지 않습니다.' } },
+        { '@type': 'Question', name: '스마트홈 클라우드가 종료되면 어떻게 됩니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드에 의존하는 기기는 제조사가 제품 클라우드를 중단할 때 핵심 기능을 잃거나 사용할 수 없게 될 수 있습니다 — Belkin의 2026년 1월 Wemo 종료가 최근 사례입니다. 로컬 기기는 그 클라우드에 의존하지 않기 때문에 영향을 받지 않습니다.' } },
         { '@type': 'Question', name: '로컬 스마트홈이 더 빠릅니까?', acceptedAnswer: { '@type': 'Answer', text: '대체로 그렇습니다. 로컬 명령은 인터넷 왕복을 생략하므로 직접 제어와 자동화가 빠르게 응답합니다. 음성 지연은 네트워크가 아닌 하드웨어에 따라 다릅니다.' } },
         { '@type': 'Question', name: '로컬이 장기적으로 실제로 더 저렴합니까?', acceptedAnswer: { '@type': 'Answer', text: '보통은 그렇습니다. 로컬 설정은 반복 구독을 피하므로 일회성 하드웨어 비용 이후 월정액 클라우드 생태계보다 저렴합니다.' } },
         { '@type': 'Question', name: '로컬로 전환하는 단점은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '더 많은 초기 설정 노력입니다. 허브를 설치하고 기기를 페어링하고 자동화를 구축해야 합니다. 설정 후에는 유지 관리가 적고 클라우드에 의존하지 않습니다.' } },
@@ -960,8 +975,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-fr.webp',
     title: 'Pourquoi une Maison Connectée Locale Bat le Cloud en 2026',
@@ -997,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Longévité : une fermeture de cloud ne peut pas rendre les appareils locaux inutilisables',
           'Compromis : plus d\'effort de configuration au départ',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -1058,6 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'L\'enregistrement local des caméras (Frigate) n\'a pas d\'abonnement — voir [caméras de sécurité à IA locale](/fr/smart-home/local-ai-security-camera).',
           'Les automatisations et le contrôle sont gratuits sur un hub local.',
+          'Le fabricant de serrures connectées Nuki a tenté de placer la connectivité Wi-Fi de base — une fonction déjà incluse avec l\'appareil — derrière un abonnement mensuel. Un tel procédé ne peut pas se produire avec une configuration purement locale.',
           'Pour l\'approche entièrement sans frais, voir [maison connectée sans abonnement](/fr/smart-home/smart-home-without-subscriptions).',
         ],
       },
@@ -1069,6 +1085,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Les appareils locaux continuent de fonctionner quelles que soient les décisions commerciales du fabricant.',
           'Aucun risque qu\'un service abandonné désactive votre matériel.',
+          'Belkin a fermé les services cloud de Wemo en janvier 2026, réduisant les prises et appareils connectés dépendants de l\'application à de simples interrupteurs manuels — les appareils à contrôle local n\'ont pas été affectés.',
+          'Le fabricant norvégien de domotique Futurehome a exigé de ses clients existants qu\'ils acceptent un nouvel abonnement annuel, une mise à jour du firmware réduisant les fonctionnalités de ceux qui ne payaient pas — un risque impossible pour un appareil sans dépendance au cloud.',
           'Cette longévité est une raison centrale du passage au contrôle local.',
         ],
       },
@@ -1102,7 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
-          { q: 'Que se passe-t-il quand un cloud de maison connectée ferme ?', a: 'Les appareils dépendants du cloud peuvent perdre des fonctions clés ou devenir inutilisables quand un fabricant abandonne le cloud du produit. Les appareils locaux ne sont pas affectés car ils ne dépendent pas de ce cloud pour fonctionner — une raison clé de choisir le local.' },
+          { q: 'Que se passe-t-il quand un cloud de maison connectée ferme ?', a: "Les appareils dépendants du cloud peuvent perdre des fonctions clés ou devenir inutilisables quand un fabricant abandonne le cloud du produit — la fermeture par Belkin du cloud Wemo en janvier 2026 en est un exemple récent. Les appareils locaux ne sont pas affectés car ils ne dépendent pas de ce cloud pour fonctionner — une raison clé de choisir le local." },
           { q: 'Une maison connectée locale est-elle plus rapide ?', a: 'Souvent, oui. Les commandes locales s\'épargnent l\'aller-retour internet vers un serveur du fabricant, donc les commandes directes et les automatisations répondent vite. La latence de la voix locale dépend de votre matériel et de la taille du modèle, pas des conditions réseau.' },
           { q: 'Le local est-il vraiment moins cher à long terme ?', a: 'Généralement. Les configurations locales évitent les abonnements récurrents pour le stockage des caméras et les fonctions premium, donc après le coût matériel unique, elles sont moins chères avec le temps que les écosystèmes cloud à frais mensuels.' },
           { q: 'Quel est l\'inconvénient de passer au local ?', a: 'Le principal inconvénient est plus d\'effort de configuration au départ : vous installez le hub, appairez les appareils et construisez les automatisations vous-même. Une fois configuré, un système local demande peu d\'entretien et ne dépend du cloud d\'aucun fabricant.' },
@@ -1130,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Maison connectée locale' }, { '@type': 'Thing', name: 'Maison connectée cloud' }, { '@type': 'Thing', name: 'Fiabilité de la domotique' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1140,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        { '@type': 'Question', name: 'Que se passe-t-il quand un cloud de maison connectée ferme ?', acceptedAnswer: { '@type': 'Answer', text: 'Les appareils dépendants du cloud peuvent perdre des fonctions clés ou devenir inutilisables quand un fabricant abandonne le cloud du produit. Les appareils locaux ne sont pas affectés.' } },
+        { '@type': 'Question', name: 'Que se passe-t-il quand un cloud de maison connectée ferme ?', acceptedAnswer: { '@type': 'Answer', text: "Les appareils dépendants du cloud peuvent perdre des fonctions clés ou devenir inutilisables quand un fabricant abandonne le cloud du produit — la fermeture du cloud Wemo par Belkin en janvier 2026 en est un exemple. Les appareils locaux ne sont pas affectés." } },
         { '@type': 'Question', name: 'Une maison connectée locale est-elle plus rapide ?', acceptedAnswer: { '@type': 'Answer', text: 'Souvent. Les commandes locales s\'épargnent l\'aller-retour internet, donc les commandes directes et automatisations répondent vite. La latence vocale dépend du matériel, pas du réseau.' } },
         { '@type': 'Question', name: 'Le local est-il vraiment moins cher à long terme ?', acceptedAnswer: { '@type': 'Answer', text: 'Généralement. Les configurations locales évitent les abonnements récurrents, donc après le coût matériel unique, elles sont moins chères que les écosystèmes cloud à frais mensuels.' } },
         { '@type': 'Question', name: 'Quel est l\'inconvénient de passer au local ?', acceptedAnswer: { '@type': 'Answer', text: 'Plus d\'effort de configuration au départ : vous installez le hub, appairez les appareils et construisez les automatisations. Une fois configuré, il demande peu d\'entretien et ne dépend pas du cloud.' } },
@@ -1151,8 +1169,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-ja.webp',
     title: 'なぜ2026年にローカルスマートホームはクラウドに勝るのか',
@@ -1188,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '寿命：クラウド終了でローカル機器が使えなくなることはない',
           'トレードオフ：最初の設定の手間が増える',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -1249,6 +1267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ローカルのカメラ録画（Frigate）はサブスクなし——[ローカルAIセキュリティカメラ](/ja/smart-home/local-ai-security-camera)を参照。',
           '自動化と制御はローカルハブ上で無料です。',
+          'スマートロックメーカーのNukiは、すでに機器に含まれていた基本的なWi-Fi接続機能を月額課金の裏側に置こうとしました——純粋なローカル構成ではこうした事態は起こり得ません。',
           '完全に料金不要のやり方は[サブスクなしのスマートホーム](/ja/smart-home/smart-home-without-subscriptions)を参照。',
         ],
       },
@@ -1260,6 +1279,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ローカル機器はメーカーの事業判断に関わらず動き続けます。',
           '終了したサービスがあなたのハードウェアを無効化するリスクはありません。',
+          'Belkinは2026年1月にWemoのクラウドサービスを終了し、アプリ依存のプラグや接続機器の多くを事実上の手動スイッチにしてしまいました——ローカル制御の機器は影響を受けませんでした。',
+          'ノルウェーのスマートホームメーカーFuturehomeは既存顧客に新しい年間サブスクの受け入れを求め、支払わなかった顧客はファームウェア更新で機能が縮小されました——クラウドに依存しない機器では起こり得ないリスクです。',
           'この寿命の長さは、ユーザーがローカル制御へ移る中心的な理由です。',
         ],
       },
@@ -1293,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'スマートホームのクラウドが終了するとどうなりますか？', a: 'クラウド依存の機器は、メーカーが製品クラウドを終了すると主要機能を失うことがあり、使えなくなることもあります。ローカル機器は動作にそのクラウドを必要としないため影響を受けません——ローカル制御を選ぶ重要な理由です。' },
+          { q: 'スマートホームのクラウドが終了するとどうなりますか？', a: 'クラウド依存の機器は、メーカーが製品クラウドを終了すると主要機能を失うことがあり、使えなくなることもあります——最近の例では、Belkinが2026年1月にWemoのクラウドサービスを終了しています。ローカル機器は動作にそのクラウドを必要としないため影響を受けません——ローカル制御を選ぶ重要な理由です。' },
           { q: 'ローカルスマートホームは速いですか？', a: 'しばしば速いです。ローカルの命令はメーカーのサーバーへのインターネット往復を省くため、直接操作や自動化が素早く応答します。ローカル音声のレイテンシはネットワーク状況ではなく、ハードウェアとモデルサイズ次第です。' },
           { q: 'ローカルは長期的に本当に安いですか？', a: '通常は安いです。ローカル構成はカメラ保存やプレミアム機能の継続課金を避けるため、一度きりのハードウェア費用の後は、月額のクラウドエコシステムより時間とともに安くなります。' },
           { q: 'ローカルにする難点は何ですか？', a: '主な難点は最初の設定の手間です——ハブを設置し、機器をペアリングし、自動化を自分で作ります。一度構成すれば、ローカルシステムは手間が少なく、どのメーカーのクラウドにも依存しません。' },
@@ -1321,7 +1342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'ローカルスマートホーム' }, { '@type': 'Thing', name: 'クラウドスマートホーム' }, { '@type': 'Thing', name: 'ホームオートメーションの信頼性' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1331,7 +1352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
-        { '@type': 'Question', name: 'スマートホームのクラウドが終了するとどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'クラウド依存の機器は製品クラウドの終了で主要機能を失い、使えなくなることもあります。ローカル機器はそのクラウドを必要としないため影響を受けません。' } },
+        { '@type': 'Question', name: 'スマートホームのクラウドが終了するとどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'クラウド依存の機器は製品クラウドの終了で主要機能を失い、使えなくなることもあります——Belkinの2026年1月のWemo終了が一例です。ローカル機器はそのクラウドを必要としないため影響を受けません。' } },
         { '@type': 'Question', name: 'ローカルスマートホームは速いですか？', acceptedAnswer: { '@type': 'Answer', text: 'しばしば速いです。ローカルの命令はインターネット往復を省くため、直接操作や自動化が素早く応答します。音声のレイテンシはハードウェア次第です。' } },
         { '@type': 'Question', name: 'ローカルは長期的に本当に安いですか？', acceptedAnswer: { '@type': 'Answer', text: '通常は安いです。継続課金を避けるため、一度きりのハードウェア費用の後は月額のクラウドより時間とともに安くなります。' } },
         { '@type': 'Question', name: 'ローカルにする難点は何ですか？', acceptedAnswer: { '@type': 'Answer', text: '主に最初の設定の手間です——ハブ設置、機器のペアリング、自動化づくりを自分で行います。構成後は手間が少なくクラウド非依存です。' } },
@@ -1342,8 +1363,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-pt.webp',
     title: 'Por Que uma Casa Inteligente Local Supera a Nuvem em 2026',
@@ -1379,7 +1400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Longevidade: um encerramento de nuvem não pode inutilizar dispositivos locais',
           'Compromisso: mais esforço de configuração no início',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -1440,6 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'A gravação local de câmeras (Frigate) não tem assinatura — veja [câmeras de segurança com IA local](/pt/smart-home/local-ai-security-camera).',
           'Automações e controle são gratuitos em um hub local.',
+          'A fabricante de fechaduras inteligentes Nuki tentou colocar a conectividade Wi-Fi básica — um recurso que já vinha incluído no dispositivo — atrás de uma assinatura mensal. Esse padrão não pode acontecer com uma configuração totalmente local.',
           'Para a abordagem totalmente sem taxas, veja [casa inteligente sem assinaturas](/pt/smart-home/smart-home-without-subscriptions).',
         ],
       },
@@ -1451,6 +1473,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Dispositivos locais continuam funcionando independentemente das decisões de negócio do fabricante.',
           'Sem risco de um serviço descontinuado desativar seu hardware.',
+          'A Belkin encerrou os serviços de nuvem do Wemo em janeiro de 2026, reduzindo tomadas e aparelhos conectados dependentes do aplicativo a pouco mais que interruptores manuais — os dispositivos com controle local não foram afetados.',
+          'A fabricante norueguesa de casa inteligente Futurehome exigiu que clientes existentes aceitassem uma nova assinatura anual, com uma atualização de firmware reduzindo a funcionalidade de quem não pagava — um risco que não pode ocorrer em um dispositivo sem dependência de nuvem.',
           'Essa longevidade é uma razão central para os usuários migrarem ao controle local.',
         ],
       },
@@ -1484,7 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'O que acontece quando uma nuvem de casa inteligente é encerrada?', a: 'Dispositivos dependentes da nuvem podem perder funções principais ou ficar inutilizados quando um fabricante descontinua a nuvem do produto. Dispositivos locais não são afetados porque não dependem dessa nuvem para operar — uma razão-chave para escolher local.' },
+          { q: 'O que acontece quando uma nuvem de casa inteligente é encerrada?', a: 'Dispositivos dependentes da nuvem podem perder funções principais ou ficar inutilizados quando um fabricante descontinua a nuvem do produto — um exemplo recente é o encerramento da nuvem do Wemo pela Belkin em janeiro de 2026. Dispositivos locais não são afetados porque não dependem dessa nuvem para operar — uma razão-chave para escolher local.' },
           { q: 'Uma casa inteligente local é mais rápida?', a: 'Muitas vezes, sim. Comandos locais economizam a ida e volta pela internet a um servidor do fabricante, então controles diretos e automações respondem rápido. A latência de voz local depende do seu hardware e do tamanho do modelo, não das condições da rede.' },
           { q: 'O local é realmente mais barato a longo prazo?', a: 'Geralmente. Configurações locais evitam assinaturas recorrentes para armazenamento de câmera e recursos premium, então após o custo único de hardware são mais baratas ao longo do tempo que ecossistemas na nuvem com taxas mensais.' },
           { q: 'Qual a desvantagem de ir local?', a: 'A principal desvantagem é mais esforço de configuração no início: você instala o hub, pareia dispositivos e constrói automações. Uma vez configurado, um sistema local é de baixa manutenção e não depende da nuvem de nenhum fabricante.' },
@@ -1512,7 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: 'Casa inteligente local' }, { '@type': 'Thing', name: 'Casa inteligente na nuvem' }, { '@type': 'Thing', name: 'Confiabilidade da automação residencial' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1522,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
-        { '@type': 'Question', name: 'O que acontece quando uma nuvem de casa inteligente é encerrada?', acceptedAnswer: { '@type': 'Answer', text: 'Dispositivos dependentes da nuvem podem perder funções principais ou ficar inutilizados quando um fabricante descontinua a nuvem do produto. Dispositivos locais não são afetados.' } },
+        { '@type': 'Question', name: 'O que acontece quando uma nuvem de casa inteligente é encerrada?', acceptedAnswer: { '@type': 'Answer', text: 'Dispositivos dependentes da nuvem podem perder funções principais ou ficar inutilizados quando um fabricante descontinua a nuvem do produto — o encerramento da nuvem do Wemo pela Belkin em janeiro de 2026 é um exemplo. Dispositivos locais não são afetados.' } },
         { '@type': 'Question', name: 'Uma casa inteligente local é mais rápida?', acceptedAnswer: { '@type': 'Answer', text: 'Muitas vezes. Comandos locais economizam a ida e volta pela internet, então controles diretos e automações respondem rápido. A latência de voz depende do hardware, não da rede.' } },
         { '@type': 'Question', name: 'O local é realmente mais barato a longo prazo?', acceptedAnswer: { '@type': 'Answer', text: 'Geralmente. Configurações locais evitam assinaturas recorrentes, então após o custo único de hardware são mais baratas que ecossistemas na nuvem com taxas mensais.' } },
         { '@type': 'Question', name: 'Qual a desvantagem de ir local?', acceptedAnswer: { '@type': 'Answer', text: 'Mais esforço de configuração no início: você instala o hub, pareia dispositivos e constrói automações. Depois de configurado é de baixa manutenção e não depende da nuvem.' } },
@@ -1533,8 +1557,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-09-02',
+    next_refresh_due: '2027-03-02',
     theme: 'Local-First Smart Home',
     heroImage: '/images/why-local-smart-home-beats-cloud-overview-hero-zh.webp',
     title: '为何2026年本地智能家居胜过云端',
@@ -1570,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '寿命：云端关停无法让本地设备变砖',
           '取舍：前期配置投入更多',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-09',
       },
     },
     toc: [
@@ -1631,6 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '本地摄像头录制（Frigate）没有订阅——参见[本地 AI 安防摄像头](/zh/smart-home/local-ai-security-camera)。',
           '在本地中枢上，自动化和控制都是免费的。',
+          '智能锁厂商 Nuki 曾试图把设备本已内置的基础 Wi-Fi 连接功能，改为按月付费才能使用——纯本地方案不会出现这种情况。',
           '完全免费的做法参见[无订阅的智能家居](/zh/smart-home/smart-home-without-subscriptions)。',
         ],
       },
@@ -1642,6 +1667,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '无论厂商的商业决定如何，本地设备都照常运行。',
           '不存在某项停用的服务让你的硬件失效的风险。',
+          'Belkin 于 2026 年 1 月关停了 Wemo 云端服务，让依赖 App 的插座和联网电器沦为近乎手动开关——本地控制的设备不受影响。',
+          '挪威智能家居厂商 Futurehome 要求老用户接受新的年度订阅，未付费用户的功能被固件更新削减——这种风险不会出现在不依赖云端的设备上。',
           '这种长寿命是用户转向本地控制的核心原因之一。',
         ],
       },
@@ -1675,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '智能家居云端关停会怎样？', a: '当厂商停用产品云端时，依赖云端的设备可能失去核心功能，甚至变得不可用。本地设备不受影响，因为它们的运行并不依赖那个云端——这是选择本地的关键原因。' },
+          { q: '智能家居云端关停会怎样？', a: '当厂商停用产品云端时，依赖云端的设备可能失去核心功能，甚至变得不可用——Belkin 在 2026 年 1 月关停 Wemo 云端服务就是近期一例。本地设备不受影响，因为它们的运行并不依赖那个云端——这是选择本地的关键原因。' },
           { q: '本地智能家居更快吗？', a: '通常更快。本地命令省去到厂商服务器的互联网往返，因此直接控制和自动化响应迅速。本地语音的延迟取决于你的硬件和模型规模，而非网络状况。' },
           { q: '本地长期真的更便宜吗？', a: '通常是。本地配置避免了摄像头存储和高级功能的持续订阅，因此在一次性硬件成本之后，随时间推移比按月收费的云端生态更便宜。' },
           { q: '转向本地的缺点是什么？', a: '主要缺点是前期配置投入更多：你要安装中枢、配对设备并自己搭建自动化。一旦配置完成，本地系统维护成本低，且不依赖任何厂商云端。' },
@@ -1703,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-09-02',
       about: [{ '@type': 'Thing', name: '本地智能家居' }, { '@type': 'Thing', name: '云端智能家居' }, { '@type': 'Thing', name: '家庭自动化可靠性' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1713,7 +1740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
-        { '@type': 'Question', name: '智能家居云端关停会怎样？', acceptedAnswer: { '@type': 'Answer', text: '当厂商停用产品云端时，依赖云端的设备可能失去核心功能甚至不可用。本地设备不受影响，因为它们不依赖那个云端。' } },
+        { '@type': 'Question', name: '智能家居云端关停会怎样？', acceptedAnswer: { '@type': 'Answer', text: '当厂商停用产品云端时，依赖云端的设备可能失去核心功能甚至不可用——Belkin 在 2026 年 1 月关停 Wemo 云端服务即为一例。本地设备不受影响，因为它们不依赖那个云端。' } },
         { '@type': 'Question', name: '本地智能家居更快吗？', acceptedAnswer: { '@type': 'Answer', text: '通常更快。本地命令省去互联网往返，因此直接控制和自动化响应迅速。语音延迟取决于硬件，而非网络。' } },
         { '@type': 'Question', name: '本地长期真的更便宜吗？', acceptedAnswer: { '@type': 'Answer', text: '通常是。本地配置避免持续订阅，因此在一次性硬件成本之后，比按月收费的云端生态更便宜。' } },
         { '@type': 'Question', name: '转向本地的缺点是什么？', acceptedAnswer: { '@type': 'Answer', text: '主要是前期配置投入更多：你要安装中枢、配对设备并自己搭建自动化。配置完成后维护成本低，且不依赖云端。' } },
