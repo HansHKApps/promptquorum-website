@@ -58,7 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Two stacks ship real work: Cline + Ollama and Continue.dev Agent. Both are scoped to a single IDE, run one tool-calling model, and require human approval per step.',
           'Three stacks fail in non-obvious ways: LangGraph + Ollama (brittle on long horizons), OpenInterpreter (too eager to execute shell), MetaGPT local (multi-agent role-play breaks down).',
-          'AutoGPT-local was effectively unusable in our May 2026 evaluation (Python 3.11, Ollama 0.3.x, 5 task runs) — stalled project, dependency conflicts, planning loop drifted into circular calls in every run. Verify current project status before drawing conclusions.',
+          'AutoGPT-local was the weakest performer in our May 2026 evaluation (Python 3.11, Ollama 0.3.x, 5 task runs) — dependency conflicts against that combo and a planning loop that drifted into circular calls in every run. This is about classic AutoGPT-local\'s unscoped-loop architecture, not project abandonment — the AutoGPT GitHub repo itself remains active; see our full [AutoGPT review](/power-local-llm/autogpt-local-review-2026) for the current classic-vs-Platform breakdown.',
           'Tool-call reliability comes from the model, not the harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, and Llama 3.3 70B work in any of the reliable stacks. Models under 7B (e.g. Gemma 3 2B) fail in all of them.',
           'CrewAI and AutoGen/AG2 (evaluated separately) show the identical pattern: scripted, typed-step pipelines work; autonomous multi-agent teamwork does not, for the same handoff-state reasons as MetaGPT.',
           'Supervision cost is the metric that matters. The "best" agent is the one whose approvals you actually read — not the one with the longest autonomous run.',
@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What Fails: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'What Fails: MetaGPT Local', anchor: '#metagpt' },
       { label: 'Multi-Agent Orchestration: CrewAI & AutoGen/AG2', anchor: '#multi-agent-orchestration' },
-      { label: 'Unusable: AutoGPT-Local', anchor: '#autogpt' },
+      { label: 'AutoGPT-Local: Weakest Fit for Autonomy', anchor: '#autogpt' },
       { label: 'Why Agent Demos Look Better Than Reality', anchor: '#demos-vs-reality' },
       { label: 'Supervision Cost Is the Real Metric', anchor: '#supervision-cost' },
       { label: 'Tasks You Should Never Trust an Agent With', anchor: '#never-trust' },
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama and Continue.dev Agent are the only two local agent stacks that finish real tasks reliably in May 2026; LangGraph, OpenInterpreter, and MetaGPT each fail in a different way; AutoGPT-local is unusable.',
+            text: 'Cline + Ollama and Continue.dev Agent are the only two local agent stacks that finish real tasks reliably in May 2026; LangGraph, OpenInterpreter, and MetaGPT each fail in a different way; AutoGPT-local\'s unscoped planning loop is the weakest fit of the six.',
           },
           {
             type: 'plain-terms',
@@ -177,9 +177,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Stack': 'AutoGPT-local',
             'Task success rate': '0–2 of 15 runs land',
-            'Failures observed': 'Project stalled in 2024–2025; dependencies mismatch modern Ollama; planning loop drifts into circular tool calls within minutes',
+            'Failures observed': 'Classic agent\'s OpenAI-compatible setup mismatched our Ollama build; planning loop drifts into circular tool calls within minutes',
             'Supervision needed': 'Constant — the agent does not converge',
-            'Verdict': 'Unusable. Skip entirely in 2026.',
+            'Verdict': 'Weak fit for autonomy. See full AutoGPT review.',
           },
           {
             'Stack': 'OpenInterpreter',
@@ -300,15 +300,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autogpt: {
         id: 'autogpt',
-        title: 'Unusable: AutoGPT-Local Is Effectively Abandoned',
+        title: 'AutoGPT-Local: Weakest Fit for Unattended Local Work',
         content:
-          '**AutoGPT-local is not a stack to evaluate in 2026 — it is a stack to skip.** The project is effectively unmaintained, dependencies do not match modern Ollama, and the planning loop drifts within minutes.',
+          '**AutoGPT-local is not the stack to reach for if you want a local agent that finishes work unattended in 2026 — but that is an architecture verdict, not a claim that the AutoGPT project is dead.** The GitHub repository remains active; what has changed is where the project\'s energy goes.',
         items: [
-          '**What happened:** AutoGPT was the canonical "autonomous agent" project of 2023. The hype outran the technology — the planning loops were never reliable on real tasks. The project stalled, the maintainer team dispersed, and the local-only fork lagged behind every dependency update for 18+ months.',
-          '**Concrete breakage in May 2026:** the Ollama integration assumes an API shape that changed in 2024. The internal planning prompts were tuned for older-generation models and produce malformed plans on modern open-weights models. Issues filed on the repo in 2025 remain open and unanswered.',
-          '**The planning loop drifts:** in the runs that started, the agent typically entered a circular tool-call pattern within 2–4 minutes — re-reading the same files, re-running the same searches, never converging on the task. This is the well-known failure mode of unscoped autonomous loops, exactly the thing scoped harnesses (Cline, Continue.dev) avoid by design.',
-          '**Verdict:** unusable. Do not invest a weekend in AutoGPT-local in 2026. The interesting work has moved to scoped harnesses with explicit approval gates; AutoGPT is a historical artifact, not a current option.',
-          '**If you are nostalgic:** the original repo is still on GitHub. The right way to engage with it is as a lesson — autonomy was the wrong abstraction; supervised assistance is what works.',
+          '**What changed:** AutoGPT was the canonical "autonomous agent" project of 2023 — give an LLM a goal and let it plan, act, and self-critique in a loop with no human approving each step. The organization behind it has since pivoted its active feature development to a separate, commercial hosted "AutoGPT Platform" product; the original CLI agent now lives in a `classic/` folder that still receives maintenance and security commits but not new capabilities. We cover that split, the license difference, and how to run classic AutoGPT against Ollama in a [dedicated review](/power-local-llm/autogpt-local-review-2026).',
+          '**What we saw in May 2026:** classic AutoGPT-local\'s generic OpenAI-compatible setup did not line up cleanly with our Ollama build at the time, and the internal planning prompts — tuned against an earlier generation of models — produced malformed plans on the open-weight models we tested. That is a scoped, dated finding from our own run, not a claim about the project\'s current maintenance status.',
+          '**The planning loop drifts:** in the runs that started, the agent typically entered a circular tool-call pattern within 2–4 minutes — re-reading the same files, re-running the same searches, never converging on the task. This is the well-known failure mode of unscoped autonomous loops, exactly the thing scoped harnesses (Cline, Continue.dev) avoid by design, and it is a harder problem for local, often smaller, open-weight models than for large hosted ones.',
+          '**Verdict:** classic AutoGPT-local is a poor fit for unattended local agent work in 2026 — its unscoped planning-loop architecture is the weaker pattern next to scoped harnesses like Cline and Continue.dev, covered above. That is a comparative, architectural verdict, not a claim that the AutoGPT project itself is unmaintained or abandoned — it isn\'t.',
+          '**For the current picture:** the project as a whole is very active (hundreds of open issues, commits landing the same week we last checked), but that activity is concentrated in the paid, hosted AutoGPT Platform, not the classic CLI agent evaluated here. See our full [AutoGPT Review 2026](/power-local-llm/autogpt-local-review-2026) for the classic-vs-Platform split, the MIT/Polyform license difference, and how to point classic AutoGPT at Ollama if you want to experiment with it anyway.',
         ],
       },
       demosVsReality: {
@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I have a production workflow with deterministic tools and need orchestration', 'Pick': 'LangGraph + Ollama, with a real test suite for the graph' },
           { 'Your situation': 'I want a multi-agent orchestration framework (CrewAI, AutoGen/AG2) for a production pipeline with fixed steps', 'Pick': 'CrewAI Flows or AutoGen/AG2 with typed steps and a test suite — same reliability ceiling as LangGraph, pick based on your team\'s conventions' },
           { 'Your situation': 'I want autonomous unsupervised agents that ship work overnight', 'Pick': 'Wait. The 2026 stack does not deliver this. Use supervised stacks instead.' },
-          { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both. AutoGPT is unmaintained; MetaGPT\'s multi-agent abstraction does not hold up.' },
+          { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both for unattended work. Classic AutoGPT-local is feature-frozen (see our full review); MetaGPT\'s multi-agent abstraction does not hold up.' },
         ],
         image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
         imageCaption: 'Decision flow for picking a local AI agent stack: Cline + Ollama for multi-file coding, Continue.dev Agent for lighter tasks, LangGraph/CrewAI Flows/AutoGen-AG2 for scripted production pipelines, and no stack yet for fully unsupervised autonomy.',
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparativa de agentes llm locales',
     ],
     leadAnswerBlock:
-      '**En mayo de 2026, dos stacks de agentes locales completan trabajo real sin supervisión constante: Cline + Ollama y Continue.dev en modo Agent. Ambos son acotados, bien mantenidos y ejecutan un modelo con tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de un único editor con puertas de aprobación explícitas. Tres stacks fallan de formas sorprendentes: LangGraph + Ollama (la orquestación es frágil en horizontes largos), OpenInterpreter (ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido) y MetaGPT local (el juego de roles multiagente pierde el hilo tras dos traspasos). Un stack es prácticamente inutilizable: AutoGPT-local, el proyecto está estancado, las dependencias no coinciden con el Ollama moderno y el bucle de planificación deriva hacia llamadas circulares de herramientas en minutos. Los frameworks de orquestación multiagente evaluados por separado —CrewAI y AutoGen/AG2— confirman este patrón en lugar de romperlo: ambos funcionan para pipelines de pasos tipados y guionizados, y sufren la misma deriva de estado de traspaso que MetaGPT en cuanto se les pide dividir trabajo abierto por su cuenta. El patrón es consistente: los harnesses acotados y con criterio propio alrededor de un modelo fuerte con tool-calling superan a los agentes autónomos ambiciosos en cada tarea que ejecutamos.**',
+      '**En mayo de 2026, dos stacks de agentes locales completan trabajo real sin supervisión constante: Cline + Ollama y Continue.dev en modo Agent. Ambos son acotados, bien mantenidos y ejecutan un modelo con tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de un único editor con puertas de aprobación explícitas. Tres stacks fallan de formas sorprendentes: LangGraph + Ollama (la orquestación es frágil en horizontes largos), OpenInterpreter (ejecuta comandos de shell con demasiada facilidad para dejarlo desatendido) y MetaGPT local (el juego de roles multiagente pierde el hilo tras dos traspasos). Un stack resultó prácticamente inutilizable en nuestra evaluación de mayo de 2026: AutoGPT-local — las dependencias entraron en conflicto con Python 3.11/Ollama 0.3.x, y el bucle de planificación derivó hacia llamadas circulares de herramientas en cada prueba. Verifique el estado actual del proyecto antes de sacar conclusiones permanentes. Los frameworks de orquestación multiagente evaluados por separado —CrewAI y AutoGen/AG2— confirman este patrón en lugar de romperlo: ambos funcionan para pipelines de pasos tipados y guionizados, y sufren la misma deriva de estado de traspaso que MetaGPT en cuanto se les pide dividir trabajo abierto por su cuenta. El patrón es consistente: los harnesses acotados y con criterio propio alrededor de un modelo fuerte con tool-calling superan a los agentes autónomos ambiciosos en cada tarea que ejecutamos.**',
     quickAnswerTop: {
       es: {
         question: '¿Los agentes de IA autónomos locales realmente funcionan en 2026?',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Dos stacks entregan trabajo real: Cline + Ollama y Continue.dev Agent. Ambos están acotados a un único IDE, ejecutan un modelo con tool-calling y requieren aprobación humana por paso.',
           'Tres stacks fallan de formas no evidentes: LangGraph + Ollama (frágil en horizontes largos), OpenInterpreter (demasiado ansioso por ejecutar shell), MetaGPT local (el juego de roles multiagente se rompe).',
-          'AutoGPT-local resultó prácticamente inutilizable en nuestra evaluación de mayo de 2026 (Python 3.11, Ollama 0.3.x, 5 ejecuciones de tareas) — conflictos de dependencias, el bucle de planificación derivó hacia llamadas circulares en cada ejecución. Verifique el estado actual del proyecto antes de sacar conclusiones.',
+          'AutoGPT-local fue el que peor rendimiento tuvo en nuestra evaluación de mayo de 2026 (Python 3.11, Ollama 0.3.x, 5 ejecuciones de tareas) — conflictos de dependencias con esa combinación y un bucle de planificación que derivó hacia llamadas circulares en cada ejecución. Esto tiene que ver con la arquitectura de bucle sin acotar del AutoGPT-local clásico, no con el abandono del proyecto — el repositorio de GitHub de AutoGPT sigue activo; consulte nuestra [reseña completa de AutoGPT](/power-local-llm/autogpt-local-review-2026) para el desglose actual entre la versión clásica y Platform.',
           'La fiabilidad de las llamadas a herramientas proviene del modelo, no del harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B y Llama 3.3 70B funcionan en cualquiera de los stacks fiables. Los modelos por debajo de 7B (p. ej. Gemma 3 2B) fallan en todos.',
           'CrewAI y AutoGen/AG2 (evaluados por separado) muestran el mismo patrón: los pipelines guionizados y de pasos tipados funcionan; el trabajo autónomo multiagente no, por las mismas razones de estado de traspaso que MetaGPT.',
           'El coste de supervisión es la métrica que importa. El "mejor" agente es aquel cuyas aprobaciones realmente lees, no el que tiene la ejecución autónoma más larga.',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lo que falla: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'Lo que falla: MetaGPT Local', anchor: '#metagpt' },
       { label: 'Orquestación multiagente: CrewAI y AutoGen/AG2', anchor: '#multi-agent-orchestration' },
-      { label: 'Inutilizable: AutoGPT-Local', anchor: '#autogpt' },
+      { label: 'AutoGPT-Local: el peor encaje para la autonomía', anchor: '#autogpt' },
       { label: 'Por qué los demos de agentes parecen mejores que la realidad', anchor: '#demos-vs-reality' },
       { label: 'El coste de supervisión es la métrica real', anchor: '#supervision-cost' },
       { label: 'Tareas que nunca debes confiar a un agente', anchor: '#never-trust' },
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama y Continue.dev Agent son los únicos dos stacks de agentes de IA locales que completan tareas reales de forma fiable en mayo de 2026; LangGraph, OpenInterpreter y MetaGPT fallan cada uno de una manera distinta; AutoGPT-local es inutilizable.',
+            text: 'Cline + Ollama y Continue.dev Agent son los únicos dos stacks de agentes de IA locales que completan tareas reales de forma fiable en mayo de 2026; LangGraph, OpenInterpreter y MetaGPT fallan cada uno de una manera distinta; el bucle de planificación sin acotar de AutoGPT-local es el que peor encaja de los seis.',
           },
           {
             type: 'plain-terms',
@@ -660,9 +660,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Stack': 'AutoGPT-local',
             'Tasa de éxito de tareas': '0–2 de 15 ejecuciones completadas',
-            'Fallos observados': 'Proyecto estancado en 2024–2025; las dependencias no coinciden con el Ollama moderno; el bucle de planificación deriva hacia llamadas circulares de herramientas en minutos',
+            'Fallos observados': 'La configuración compatible con OpenAI del agente clásico no encajaba con nuestro Ollama; el bucle de planificación deriva a llamadas circulares en minutos',
             'Supervisión necesaria': 'Constante: el agente no converge',
-            'Veredicto': 'Inutilizable. Descártalo por completo en 2026.',
+            'Veredicto': 'Encaje débil para autonomía. Ver reseña completa de AutoGPT.',
           },
           {
             'Stack': 'OpenInterpreter',
@@ -783,15 +783,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autogpt: {
         id: 'autogpt',
-        title: 'Inutilizable: AutoGPT-Local está prácticamente abandonado',
+        title: 'AutoGPT-Local: el peor encaje para trabajo local sin supervisión',
         content:
-          '**AutoGPT-local no es un stack que evaluar en 2026, es un stack que descartar.** El proyecto está prácticamente sin mantenimiento, las dependencias no coinciden con el Ollama moderno y el bucle de planificación deriva en minutos.',
+          '**AutoGPT-local no es el stack al que recurrir si quieres un agente local que termine trabajo sin supervisión en 2026 — pero ese es un veredicto de arquitectura, no una afirmación de que el proyecto AutoGPT esté muerto.** El repositorio de GitHub sigue activo; lo que ha cambiado es hacia dónde va la energía del proyecto.',
         items: [
-          '**Qué ocurrió:** AutoGPT fue el proyecto canónico de "agente autónomo" de 2023. El hype superó a la tecnología: los bucles de planificación nunca fueron fiables en tareas reales. El proyecto se estancó, el equipo de mantenedores se dispersó y el fork local-only se quedó rezagado respecto a cada actualización de dependencias durante más de 18 meses.',
-          '**Rotura concreta en mayo de 2026:** la integración de Ollama asume una forma de API que cambió en 2024. Los prompts de planificación internos fueron ajustados para modelos de generación anterior y producen planes malformados en modelos de pesos abiertos modernos. Los problemas reportados en el repositorio en 2025 siguen abiertos y sin respuesta.',
-          '**El bucle de planificación deriva:** en las ejecuciones que arrancaron, el agente típicamente entraba en un patrón de llamada circular de herramientas en 2–4 minutos: releyendo los mismos archivos, volviendo a ejecutar las mismas búsquedas, sin converger nunca en la tarea. Este es el modo de fallo bien conocido de los bucles autónomos sin acotar, exactamente lo que los harnesses acotados (Cline, Continue.dev) evitan por diseño.',
-          '**Veredicto:** inutilizable. No inviertas un fin de semana en AutoGPT-local en 2026. El trabajo interesante se ha desplazado a harnesses acotados con puertas de aprobación explícitas; AutoGPT es un artefacto histórico, no una opción actual.',
-          '**Si sientes nostalgia:** el repositorio original sigue en GitHub. La forma correcta de relacionarse con él es como lección: la autonomía era la abstracción incorrecta; la asistencia supervisada es lo que funciona.',
+          '**Qué cambió:** AutoGPT fue el proyecto canónico de "agente autónomo" de 2023 — dale a un LLM un objetivo y déjalo planificar, actuar y autocriticarse en bucle sin que un humano apruebe cada paso. La organización detrás del proyecto ha trasladado desde entonces su desarrollo activo de funciones a un producto comercial independiente y alojado, "AutoGPT Platform"; el agente CLI original ahora vive en una carpeta `classic/` que sigue recibiendo commits de mantenimiento y seguridad, pero no nuevas capacidades. Cubrimos esa división, la diferencia de licencia y cómo ejecutar el AutoGPT clásico contra Ollama en una [reseña dedicada](/power-local-llm/autogpt-local-review-2026).',
+          '**Qué vimos en mayo de 2026:** la configuración genérica compatible con OpenAI del AutoGPT-local clásico no encajaba bien con nuestro Ollama en ese momento, y los prompts de planificación internos —ajustados para una generación anterior de modelos— produjeron planes malformados en los modelos de pesos abiertos que probamos. Ese es un hallazgo acotado y fechado de nuestra propia prueba, no una afirmación sobre el estado de mantenimiento actual del proyecto.',
+          '**El bucle de planificación deriva:** en las ejecuciones que arrancaron, el agente típicamente entraba en un patrón de llamada circular de herramientas en 2–4 minutos —releyendo los mismos archivos, repitiendo las mismas búsquedas, sin converger nunca en la tarea. Este es el modo de fallo bien conocido de los bucles autónomos sin acotar, justo lo que los harnesses acotados (Cline, Continue.dev) evitan por diseño, y es un problema más difícil para los modelos de pesos abiertos locales, a menudo más pequeños, que para los grandes modelos alojados.',
+          '**Veredicto:** el AutoGPT-local clásico encaja mal con el trabajo de agente local sin supervisión en 2026 — su arquitectura de bucle de planificación sin acotar es el patrón más débil frente a harnesses acotados como Cline y Continue.dev, cubiertos arriba. Ese es un veredicto comparativo y arquitectónico, no una afirmación de que el proyecto AutoGPT en sí no tenga mantenimiento o esté abandonado — no lo está.',
+          '**Panorama actual:** el proyecto en su conjunto está muy activo (cientos de issues abiertos, commits llegando la misma semana en que lo revisamos por última vez), pero esa actividad se concentra en el AutoGPT Platform de pago y alojado, no en el agente CLI clásico evaluado aquí. Consulta nuestra [reseña completa de AutoGPT 2026](/power-local-llm/autogpt-local-review-2026) para la división entre clásico y Platform, la diferencia de licencia MIT/Polyform y cómo apuntar el AutoGPT clásico a Ollama si quieres experimentar con él de todos modos.',
         ],
       },
       demosVsReality: {
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Tengo un flujo de trabajo de producción con herramientas deterministas y necesito orquestación', 'Elige': 'LangGraph + Ollama, con una suite de tests real para el grafo' },
           { 'Tu situación': 'Quiero un framework de orquestación multiagente (CrewAI, AutoGen/AG2) para un pipeline de producción con pasos fijos', 'Elige': 'CrewAI Flows o AutoGen/AG2 con pasos tipados y una suite de tests — mismo techo de fiabilidad que LangGraph, elige según las convenciones de tu equipo' },
           { 'Tu situación': 'Quiero agentes autónomos sin supervisión que entreguen trabajo de noche', 'Elige': 'Espera. El stack de 2026 no ofrece esto. Usa stacks supervisados en su lugar.' },
-          { 'Tu situación': 'Quiero evaluar AutoGPT o MetaGPT para trabajo real', 'Elige': 'Descarta ambos. AutoGPT no tiene mantenimiento; la abstracción multiagente de MetaGPT no se sostiene.' },
+          { 'Tu situación': 'Quiero evaluar AutoGPT o MetaGPT para trabajo real', 'Elige': 'Descarta ambos para trabajo sin supervisión. AutoGPT-local clásico está congelado en funciones (ver nuestra reseña completa); la abstracción multiagente de MetaGPT no se sostiene.' },
         ],
         image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
         imageCaption: 'Flujo de decisión para elegir un stack de agente de IA local: Cline + Ollama para codificación multiarchivo, Continue.dev Agent para tareas más ligeras, LangGraph/CrewAI Flows/AutoGen-AG2 para pipelines de producción con pasos guionados, y ningún stack todavía para autonomía totalmente no supervisada.',
@@ -1028,7 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparaison agents llm locaux',
     ],
     leadAnswerBlock:
-      '**En mai 2026, deux stacks d\'agents locaux accomplissent du travail réel sans surveillance constante : Cline + Ollama et Continue.dev Agent mode. Les deux sont limités, bien maintenus, et exécutent un modèle de tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) à l\'intérieur d\'un seul éditeur avec des portes d\'approbation explicites. Trois stacks échouent de façon surprenante — LangGraph + Ollama (l\'orchestration est fragile sur les longs horizons), OpenInterpreter (exécute les commandes shell trop facilement pour être laissé sans surveillance), et MetaGPT local (le jeu de rôles multi-agents perd le fil après deux échanges). Un stack est pratiquement inutilisable : AutoGPT-local — le projet a stagné, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes. Les frameworks d\'orchestration multi-agents évalués séparément — CrewAI et AutoGen/AG2 — confirment ce schéma plutôt que de le briser : les deux fonctionnent pour des pipelines scriptés à étapes typées et subissent la même dérive d\'état de remise que MetaGPT dès qu\'on leur demande de diviser un travail ouvert par eux-mêmes. Le schéma est cohérent : les harnesses limités et opinionnés autour d\'un modèle de tool-calling puissant battent les agents autonomes ambitieux sur chaque tâche que nous avons testée.**',
+      '**En mai 2026, deux stacks d\'agents locaux accomplissent du travail réel sans surveillance constante : Cline + Ollama et Continue.dev Agent mode. Les deux sont limités, bien maintenus, et exécutent un modèle de tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) à l\'intérieur d\'un seul éditeur avec des portes d\'approbation explicites. Trois stacks échouent de façon surprenante — LangGraph + Ollama (l\'orchestration est fragile sur les longs horizons), OpenInterpreter (exécute les commandes shell trop facilement pour être laissé sans surveillance), et MetaGPT local (le jeu de rôles multi-agents perd le fil après deux échanges). Un stack s\'est révélé pratiquement inutilisable dans notre évaluation de mai 2026 : AutoGPT-local — les dépendances entraient en conflit avec Python 3.11/Ollama 0.3.x, et la boucle de planification dérivait vers des appels d\'outils circulaires à chaque essai. Vérifiez l\'état actuel du projet avant d\'en tirer des conclusions définitives. Les frameworks d\'orchestration multi-agents évalués séparément — CrewAI et AutoGen/AG2 — confirment ce schéma plutôt que de le briser : les deux fonctionnent pour des pipelines scriptés à étapes typées et subissent la même dérive d\'état de remise que MetaGPT dès qu\'on leur demande de diviser un travail ouvert par eux-mêmes. Le schéma est cohérent : les harnesses limités et opinionnés autour d\'un modèle de tool-calling puissant battent les agents autonomes ambitieux sur chaque tâche que nous avons testée.**',
     quickAnswerTop: {
       fr: {
         question: 'Les agents IA autonomes locaux fonctionnent-ils réellement en 2026 ?',
@@ -1037,7 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Deux stacks livrent du travail réel : Cline + Ollama et Continue.dev Agent. Les deux sont limités à un seul IDE, exécutent un modèle de tool-calling, et nécessitent une approbation humaine par étape.',
           'Trois stacks échouent de façon non-évidente : LangGraph + Ollama (fragile sur les longs horizons), OpenInterpreter (trop pressé d\'exécuter le shell), MetaGPT local (le jeu de rôles multi-agents s\'effondre).',
-          'AutoGPT-local est pratiquement inutilisable en mai 2026 — projet stagnant, dépendances cassées, la boucle de planification dévie en quelques minutes.',
+          'AutoGPT-local a été le moins performant de notre évaluation de mai 2026 (Python 3.11, Ollama 0.3.x, 5 essais de tâches) — conflits de dépendances avec cette combinaison et une boucle de planification qui dérivait vers des appels circulaires à chaque essai. Cela concerne l\'architecture de boucle non limitée d\'AutoGPT-local classique, pas l\'abandon du projet — le dépôt GitHub d\'AutoGPT reste actif ; voir notre [revue complète d\'AutoGPT](/power-local-llm/autogpt-local-review-2026) pour le point actuel sur classic vs Platform.',
           'La fiabilité des appels d\'outils provient du modèle, pas du harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B fonctionnent dans n\'importe quel stack fiable. Les modèles sous 7B (p. ex. Gemma 3 2B) échouent dans tous.',
           'CrewAI et AutoGen/AG2 (évalués séparément) montrent le même schéma : les pipelines scriptés à étapes typées fonctionnent ; le travail autonome multi-agents non, pour les mêmes raisons d\'état de remise que MetaGPT.',
           'Le coût de supervision est la métrique qui compte. Le « meilleur » agent est celui dont vous lisez réellement les approbations — pas celui avec la plus longue exécution autonome.',
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ce qui échoue : OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'Ce qui échoue : MetaGPT Local', anchor: '#metagpt' },
       { label: 'Orchestration multi-agents : CrewAI et AutoGen/AG2', anchor: '#multi-agent-orchestration' },
-      { label: 'Inutilisable : AutoGPT-Local', anchor: '#autogpt' },
+      { label: 'AutoGPT-Local : l\'ajustement le plus faible pour l\'autonomie', anchor: '#autogpt' },
       { label: 'Pourquoi les démos des agents semblent meilleures que la réalité', anchor: '#demos-vs-reality' },
       { label: 'Le coût de supervision est la vraie métrique', anchor: '#supervision-cost' },
       { label: 'Les tâches que vous ne devriez jamais confier à un agent', anchor: '#never-trust' },
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Deux stacks livrent du travail réel en mai 2026 :** Cline + Ollama (agent de codage autonome dans VS Code) et Continue.dev Agent mode. Les deux sont limités à un éditeur, un modèle, et une porte d\'approbation par étape.',
           '**Trois stacks échouent de façon surprenante :** LangGraph + Ollama, l\'orchestration est fragile au-delà de 4–5 étapes, OpenInterpreter exécute les commandes shell trop facilement pour être laissé sans surveillance, MetaGPT local, le jeu de rôles multi-agents s\'effondre après deux échanges.',
-          '**Un stack est inutilisable :** AutoGPT-local est effectivement abandonné — les dépendances ne correspondent pas à Ollama moderne, la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes, et il n\'y a pas de mainteneur répondant aux problèmes.',
+          '**Un stack est inutilisable dans nos tests :** AutoGPT-local — les dépendances ne se résolvaient pas avec Python 3.11/Ollama 0.3.x, la boucle de planification a dérivé vers des appels d\'outils circulaires dans les 5 essais d\'évaluation, et aucun mainteneur n\'a répondu aux problèmes ouverts au moment des tests. Consultez le dépôt GitHub pour l\'activité actuelle avant d\'en tirer des conclusions définitives.',
           '**CrewAI et AutoGen/AG2 confirment le schéma, ils ne le brisent pas.** Évalués séparément du groupe de six stacks : CrewAI Flows et les schémas scriptés d\'AutoGen/AG2 fonctionnent pour les pipelines déterministes (comme LangGraph) ; leurs modes autonomes « Crew »/conversation multi-agents subissent la même dérive d\'état de remise que MetaGPT.',
           '**La fiabilité des appels d\'outils est une propriété du modèle, pas du harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, et Llama 3.3 70B émettent des appels d\'outils propres dans chaque stack fiable. Les modèles sous 7B (p. ex. Gemma 3 2B) émettent des appels malformés indépendamment du harness qui les enveloppe.',
           '**Le modèle « assistant supervisé » gagne en 2026.** Les agents qui proposent des actions multi-étapes et s\'arrêtent pour approbation terminent plus de tâches que les agents qui essaient de s\'exécuter sans surveillance. C\'est une limite des propriétés des LLM de 2026, pas une préférence UX.',
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama et Continue.dev Agent sont les deux seuls stacks d\'agents IA locaux qui terminent les tâches réelles de manière fiable en mai 2026 ; LangGraph, OpenInterpreter, et MetaGPT échouent chacun d\'une manière différente ; AutoGPT-local est inutilisable.',
+            text: 'Cline + Ollama et Continue.dev Agent sont les deux seuls stacks d\'agents IA locaux qui terminent les tâches réelles de manière fiable en mai 2026 ; LangGraph, OpenInterpreter, et MetaGPT échouent chacun d\'une manière différente ; la boucle de planification non limitée d\'AutoGPT-local est celle qui s\'ajuste le moins bien des six.',
           },
           {
             type: 'plain-terms',
@@ -1156,9 +1156,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Stack': 'AutoGPT-local',
             'Taux de réussite des tâches': '0–2 de 15 exécutions atterrissent',
-            'Échecs observés': 'Projet stagnant en 2024–2025 ; les dépendances ne correspondent pas à Ollama moderne ; la boucle de planification dévie vers des appels d\'outils circulaires en quelques minutes',
+            'Échecs observés': 'La configuration compatible OpenAI de l\'agent classique ne correspondait pas à notre Ollama ; la boucle de planification dérive en quelques minutes',
             'Supervision nécessaire': 'Constante — l\'agent ne converge pas',
-            'Verdict': 'Inutilisable. À sauter entièrement en 2026.',
+            'Verdict': 'Ajustement faible pour l\'autonomie. Voir la revue complète.',
           },
           {
             'Stack': 'OpenInterpreter',
@@ -1279,15 +1279,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autogpt: {
         id: 'autogpt',
-        title: 'Inutilisable : AutoGPT-Local est effectivement abandonné',
+        title: 'AutoGPT-Local : l\'ajustement le plus faible pour le travail local sans surveillance',
         content:
-          '**AutoGPT-local n\'est pas un stack à évaluer en 2026 — c\'est un stack à sauter.** Le projet est effectivement non maintenu, les dépendances ne correspondent pas à Ollama moderne, et la boucle de planification dévie en quelques minutes.',
+          '**AutoGPT-local n\'est pas le stack à privilégier pour un agent local qui termine du travail sans surveillance en 2026 — mais c\'est un verdict d\'architecture, pas une affirmation que le projet AutoGPT est mort.** Le dépôt GitHub reste actif ; ce qui a changé, c\'est là où va l\'énergie du projet.',
         items: [
-          '**Ce qui s\'est passé :** AutoGPT était le projet « agent autonome » canonique de 2023. Le battage excessif a dépassé la technologie — les boucles de planification n\'ont jamais été fiables sur les tâches réelles. Le projet a stagné, l\'équipe de mainteneurs s\'est dispersée, et le fork local uniquement a traîné derrière chaque mise à jour de dépendance pendant 18+ mois.',
-          '**Cassure concrète en mai 2026 :** l\'intégration Ollama suppose une forme d\'API qui a changé en 2024. Les prompts de planification interne ont été réglés pour les modèles d\'ancienne génération et produisent des plans malformés sur les modèles de poids modernes. Les problèmes déposés sur le repo en 2025 restent ouverts et sans réponse.',
-          '**La boucle de planification dévie :** dans les exécutions qui ont commencé, l\'agent entre généralement dans un schéma d\'appel d\'outil circulaire en 2–4 minutes — relisant les mêmes fichiers, réexécutant les mêmes recherches, ne convergeant jamais sur la tâche. C\'est le mode d\'échec bien connu des boucles autonomes non limitées, exactement la chose que les harnesses limités (Cline, Continue.dev) évitent par conception.',
-          '**Verdict :** inutilisable. N\'investissez pas un week-end dans AutoGPT-local en 2026. Le travail intéressant a avancé vers les harnesses limités avec les portes d\'approbation explicites ; AutoGPT est un artefact historique, pas une option actuelle.',
-          '**Si vous êtes nostalgique :** le repo original est toujours sur GitHub. La bonne façon de s\'y engager est comme une leçon — l\'autonomie était la mauvaise abstraction ; l\'assistance supervisée est ce qui fonctionne.',
+          '**Ce qui a changé :** AutoGPT était le projet « agent autonome » canonique de 2023 — donner un objectif à un LLM et le laisser planifier, agir et s\'autocritiquer en boucle sans qu\'un humain n\'approuve chaque étape. L\'organisation derrière le projet a depuis réorienté son développement actif de fonctionnalités vers un produit commercial hébergé distinct, « AutoGPT Platform » ; l\'agent CLI original vit désormais dans un dossier `classic/` qui reçoit toujours des commits de maintenance et de sécurité, mais pas de nouvelles capacités. Nous couvrons cette scission, la différence de licence, et comment exécuter AutoGPT classic contre Ollama dans une [revue dédiée](/power-local-llm/autogpt-local-review-2026).',
+          '**Ce que nous avons vu en mai 2026 :** la configuration générique compatible OpenAI d\'AutoGPT-local classic ne s\'alignait pas proprement avec notre installation Ollama à l\'époque, et les prompts de planification internes — calibrés sur une génération de modèles antérieure — produisaient des plans malformés sur les modèles à poids ouverts que nous avons testés. C\'est un constat limité et daté issu de notre propre test, pas une affirmation sur l\'état de maintenance actuel du projet.',
+          '**La boucle de planification dévie :** dans les exécutions qui ont commencé, l\'agent entre généralement dans un schéma d\'appel d\'outil circulaire en 2–4 minutes — relisant les mêmes fichiers, réexécutant les mêmes recherches, ne convergeant jamais sur la tâche. C\'est le mode d\'échec bien connu des boucles autonomes non limitées, exactement la chose que les harnesses limités (Cline, Continue.dev) évitent par conception, et c\'est un problème plus difficile pour les modèles à poids ouverts locaux, souvent plus petits, que pour les grands modèles hébergés.',
+          '**Verdict :** AutoGPT-local classic s\'ajuste mal au travail d\'agent local sans surveillance en 2026 — son architecture de boucle de planification non limitée est le schéma le plus faible face aux harnesses limités comme Cline et Continue.dev, couverts ci-dessus. C\'est un verdict comparatif et architectural, pas une affirmation que le projet AutoGPT lui-même n\'est pas maintenu ou est abandonné — il ne l\'est pas.',
+          '**Pour le tableau actuel :** le projet dans son ensemble est très actif (des centaines de problèmes ouverts, des commits arrivant la même semaine que notre dernière vérification), mais cette activité se concentre sur AutoGPT Platform, la version payante et hébergée, pas sur l\'agent CLI classic évalué ici. Consultez notre [revue complète AutoGPT 2026](/power-local-llm/autogpt-local-review-2026) pour la scission classic vs Platform, la différence de licence MIT/Polyform, et comment pointer AutoGPT classic vers Ollama si vous voulez tout de même l\'essayer.',
         ],
       },
       demosVsReality: {
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Votre situation': 'J\'ai un flux de travail de production avec des outils déterministes et j\'ai besoin d\'orchestration', 'Choisir': 'LangGraph + Ollama, avec une vraie suite de tests pour le graphe' },
           { 'Votre situation': 'Je veux un framework d\'orchestration multi-agents (CrewAI, AutoGen/AG2) pour un pipeline de production à étapes fixes', 'Choisir': 'CrewAI Flows ou AutoGen/AG2 avec des étapes typées et une suite de tests — même plafond de fiabilité que LangGraph, choisissez selon les conventions de votre équipe' },
           { 'Votre situation': 'Je veux des agents autonomes sans surveillance qui livrent le travail pendant la nuit', 'Choisir': 'Attendre. Le stack 2026 ne livre pas ça. Utilisez plutôt des stacks supervisés.' },
-          { 'Votre situation': 'Je veux évaluer AutoGPT ou MetaGPT pour du travail réel', 'Choisir': 'Sauter les deux. AutoGPT n\'est pas maintenu ; l\'abstraction multi-agents de MetaGPT ne se tient pas.' },
+          { 'Votre situation': 'Je veux évaluer AutoGPT ou MetaGPT pour du travail réel', 'Choisir': 'Sauter les deux pour du travail sans surveillance. AutoGPT-local classic est gelé côté fonctionnalités (voir notre revue complète) ; l\'abstraction multi-agents de MetaGPT ne se tient pas.' },
         ],
         image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
         imageCaption: 'Arbre de décision pour choisir un stack d\'agent IA local : Cline + Ollama pour le codage multi-fichiers, Continue.dev Agent pour les tâches plus légères, LangGraph/CrewAI Flows/AutoGen-AG2 pour les pipelines de production scriptés, et aucun stack encore pour l\'autonomie totalement non supervisée.',
@@ -1951,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale llm agent vergleich',
     ],
     leadAnswerBlock:
-      '**Im Mai 2026 landen zwei lokale Agent-Stacks echte Arbeit ohne ständiges Babysitting: Cline + Ollama und Continue.dev Agent mode. Beide sind scoped, gut gewartet und führen ein Tool-Calling-Modell (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) in einem einzelnen Editor mit expliziten Approval Gates aus. Drei Stacks fehlschlagen auf überraschende Weise — LangGraph + Ollama (Orchestrierung ist zerbrechlich über lange Horizonte), OpenInterpreter (führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden), und MetaGPT lokal (Multi-Agent-Rollenspiel verliert den Plot nach zwei Hand-offs). Ein Stack ist praktisch unbrauchbar: AutoGPT-local — das Projekt ist stagniert, Abhängigkeiten passen nicht zu modernem Ollama, und die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten. Separat evaluierte Multi-Agent-Orchestrierungs-Frameworks — CrewAI und AutoGen/AG2 — bestätigen dieses Muster, statt es zu brechen: beide funktionieren für geskriptete Pipelines mit typisierten Schritten und erleiden dasselbe Handoff-State-Drift wie MetaGPT, sobald sie gebeten werden, offene Arbeit selbststaendig aufzuteilen. Das Muster ist konsistent: scoped, eigensinnige Harnesses um ein starkes Tool-Calling-Modell schlagen ehrgeizige autonome Agenten bei jeder Aufgabe, die wir führten, ab.**',
+      '**Im Mai 2026 landen zwei lokale Agent-Stacks echte Arbeit ohne ständiges Babysitting: Cline + Ollama und Continue.dev Agent mode. Beide sind scoped, gut gewartet und führen ein Tool-Calling-Modell (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) in einem einzelnen Editor mit expliziten Approval Gates aus. Drei Stacks fehlschlagen auf überraschende Weise — LangGraph + Ollama (Orchestrierung ist zerbrechlich über lange Horizonte), OpenInterpreter (führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden), und MetaGPT lokal (Multi-Agent-Rollenspiel verliert den Plot nach zwei Hand-offs). Ein Stack war in unserer Mai-2026-Evaluation praktisch unbrauchbar: AutoGPT-local — Abhängigkeiten kollidierten mit Python 3.11/Ollama 0.3.x, und die Planungsschleife driftete bei jedem Testlauf in zirkuläre Tool Calls. Prüfe den aktuellen Projektstatus, bevor du dauerhafte Schlüsse ziehst. Separat evaluierte Multi-Agent-Orchestrierungs-Frameworks — CrewAI und AutoGen/AG2 — bestätigen dieses Muster, statt es zu brechen: beide funktionieren für geskriptete Pipelines mit typisierten Schritten und erleiden dasselbe Handoff-State-Drift wie MetaGPT, sobald sie gebeten werden, offene Arbeit selbststaendig aufzuteilen. Das Muster ist konsistent: scoped, eigensinnige Harnesses um ein starkes Tool-Calling-Modell schlagen ehrgeizige autonome Agenten bei jeder Aufgabe, die wir führten, ab.**',
     quickAnswerTop: {
       de: {
         question: 'Funktionieren autonome lokale KI-Agenten 2026 wirklich?',
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Zwei Stacks liefern echte Arbeit: Cline + Ollama und Continue.dev Agent. Beide sind auf eine einzelne IDE scoped, führen ein Tool-Calling-Modell durch und erfordern manuelles Approval pro Schritt.',
           'Drei Stacks fehlschlagen auf nicht offensichtliche Weise: LangGraph + Ollama (zerbrechlich über lange Horizonte), OpenInterpreter (zu eifrig bei Shell-Ausführung), MetaGPT lokal (Multi-Agent-Rollenspiel bricht ab).',
-          'AutoGPT-local ist praktisch unbrauchbar im Mai 2026 — stagniertes Projekt, kaputte Abhängigkeiten, Planungsschleife driftet innerhalb von Minuten ab.',
+          'AutoGPT-local war der schwächste Performer in unserer Mai-2026-Evaluation (Python 3.11, Ollama 0.3.x, 5 Task-Durchläufe) — Abhängigkeitskonflikte mit dieser Kombination und eine Planungsschleife, die bei jedem Durchlauf in zirkuläre Calls driftete. Das betrifft die Unscoped-Loop-Architektur des klassischen AutoGPT-local, nicht die Aufgabe des Projekts — das AutoGPT-GitHub-Repo bleibt aktiv; siehe unsere vollständige [AutoGPT-Review](/power-local-llm/autogpt-local-review-2026) für den aktuellen Classic-vs-Platform-Überblick.',
           'Tool-Call-Zuverlässigkeit kommt vom Modell, nicht vom Harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B funktionieren in jedem der zuverlässigen Stacks. Modelle unter 7B (z. B. Gemma 3 2B) fehlschlagen in allen.',
           'CrewAI und AutoGen/AG2 (separat evaluiert) zeigen dasselbe Muster: geskriptete Pipelines mit typisierten Schritten funktionieren; autonome Multi-Agent-Teamarbeit nicht, aus denselben Handoff-State-Gruenden wie bei MetaGPT.',
           'Überwachungskosten sind die Metrik, die zählt. Der „beste" Agent ist der, dessen Approvals du tatsächlich liest — nicht der mit dem längsten autonomen Lauf.',
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was fehlschlägt: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'Was fehlschlägt: MetaGPT Lokal', anchor: '#metagpt' },
       { label: 'Multi-Agent-Orchestrierung: CrewAI & AutoGen/AG2', anchor: '#multi-agent-orchestration' },
-      { label: 'Unbrauchbar: AutoGPT-Lokal', anchor: '#autogpt' },
+      { label: 'AutoGPT-Lokal: schwächste Eignung für Autonomie', anchor: '#autogpt' },
       { label: 'Warum Agent-Demos besser aussehen als die Wirklichkeit', anchor: '#demos-vs-reality' },
       { label: 'Überwachungskosten sind die echte Metrik', anchor: '#supervision-cost' },
       { label: 'Aufgaben, denen du nie einen Agent vertrauen solltest', anchor: '#never-trust' },
@@ -2000,7 +2000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Zwei Stacks landen echte Arbeit im Mai 2026:** Cline + Ollama (autonomer Coding-Agent in VS Code) und Continue.dev Agent mode. Beide sind auf einen Editor, ein Modell und ein Approval Gate pro Schritt scoped.',
           '**Drei Stacks fehlschlagen auf überraschende Weise:** LangGraph + Ollama-Orchestrierung ist über 4–5-Schritt-Horizonte zerbrechlich, OpenInterpreter führt Shell-Befehle zu eifrig aus, um unbeaufsichtigt gelassen zu werden, MetaGPT lokal Multi-Agent-Rollenspiel bricht nach zwei Hand-offs ab.',
-          '**Ein Stack ist unbrauchbar:** AutoGPT-local ist praktisch aufgegeben — Abhängigkeiten passen nicht zu modernem Ollama, die Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten ab, und es gibt keinen Maintainer, der auf Probleme antwortet.',
+          '**Ein Stack ist in unseren Tests unbrauchbar:** AutoGPT-local — Abhängigkeiten ließen sich nicht gegen Python 3.11/Ollama 0.3.x auflösen, die Planungsschleife driftete in allen 5 Evaluationsläufen in zirkuläre Tool Calls, und zum Testzeitpunkt antwortete kein Maintainer auf offene Issues. Prüfe das GitHub-Repository auf aktuelle Aktivität, bevor du dauerhafte Schlüsse ziehst.',
           '**CrewAI und AutoGen/AG2 bestaetigen das Muster, sie brechen es nicht.** Separat vom Sechs-Stack-Kohort evaluiert: CrewAI Flows und die geskripteten Muster von AutoGen/AG2 funktionieren fuer deterministische Pipelines (wie LangGraph); ihre autonomen Crew-/Multi-Agent-Konversationsmodi erleiden dasselbe Handoff-State-Drift wie MetaGPT.',
           '**Tool-Call-Zuverlässigkeit ist eine Eigenschaft des Modells, nicht des Harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B und Llama 3.3 70B geben saubere Tool Calls in jedem zuverlässigen Stack aus. Modelle unter 7B (z. B. Gemma 3 2B) geben malformed calls aus, egal welcher Agent sie umhüllt.',
           '**Das „beaufsichtigte Assistenten"-Modell gewinnt 2026.** Agenten, die Multi-Schritt-Aktionen vorschlagen und auf Approval anhalten, erledigen mehr Aufgaben als Agenten, die unbeaufsichtigt laufen wollen. Das ist eine Eigenschaft von 2026-LLMs, nicht eine UX-Präferenz.',
@@ -2046,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama und Continue.dev Agent sind die einzigen zwei lokalen KI-Agent-Stacks, die echte Aufgaben zuverlässig im Mai 2026 erledigen; LangGraph, OpenInterpreter und MetaGPT fehlschlagen jeweils auf unterschiedliche Weise; AutoGPT-local ist unbrauchbar.',
+            text: 'Cline + Ollama und Continue.dev Agent sind die einzigen zwei lokalen KI-Agent-Stacks, die echte Aufgaben zuverlässig im Mai 2026 erledigen; LangGraph, OpenInterpreter und MetaGPT fehlschlagen jeweils auf unterschiedliche Weise; die Unscoped-Planungsschleife von AutoGPT-local ist die schwächste Eignung der sechs.',
           },
           {
             type: 'plain-terms',
@@ -2079,9 +2079,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Stack': 'AutoGPT-local',
             'Task success rate': '0–2 von 15 Durchläufen landen',
-            'Failures observed': 'Projekt stagniert 2024–2025; Abhängigkeiten passen nicht zu modernem Ollama; Planungsschleife driftet in zirkuläre Tool Calls innerhalb von Minuten',
+            'Failures observed': 'OpenAI-kompatibles Setup des klassischen Agenten passte nicht zu unserem Ollama; Planungsschleife driftet in Minuten in Zirkelbezüge',
             'Supervision needed': 'Konstant — der Agent konvergiert nicht',
-            'Verdict': 'Unbrauchbar. Überspringe vollständig in 2026.',
+            'Verdict': 'Schwache Eignung für Autonomie. Siehe vollständige AutoGPT-Review.',
           },
           {
             'Stack': 'OpenInterpreter',
@@ -2202,15 +2202,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autogpt: {
         id: 'autogpt',
-        title: 'Unbrauchbar: AutoGPT-Lokal ist praktisch aufgegeben',
+        title: 'AutoGPT-Lokal: schwächste Eignung für unbeaufsichtigte lokale Arbeit',
         content:
-          '**AutoGPT-local ist nicht ein Stack zu evaluieren in 2026 — es ist ein Stack zu überspringen.** Das Projekt ist praktisch unmaintained, Abhängigkeiten passen nicht zu modernem Ollama, und die Planungsschleife driftet innerhalb von Minuten ab.',
+          '**AutoGPT-local ist 2026 nicht der Stack, zu dem man greift, wenn man einen lokalen Agenten will, der Arbeit unbeaufsichtigt fertigstellt — aber das ist ein Architektur-Verdikt, keine Aussage, dass das AutoGPT-Projekt tot ist.** Das GitHub-Repository bleibt aktiv; was sich geändert hat, ist, wohin die Energie des Projekts fließt.',
         items: [
-          '**Was passiert ist:** AutoGPT war das kanonische „autonomer Agent"-Projekt von 2023. Der Hype überholte die Technologie — die Planungsschleifen waren nie zuverlässig bei echten Aufgaben. Das Projekt stagnierte, das Maintainer-Team zerstreute sich, und die lokale-only Fork blieb hinter jedem Abhängigkeits-Update für 18+ Monate zurück.',
-          '**Konkrete Breakage im Mai 2026:** die Ollama-Integration nimmt eine API-Form an, die sich 2024 änderte. Die internen Planungs-Prompts wurden für Modelle älterer Generation abgestimmt und produzieren malformed Pläne auf modernen Open-Weights-Modellen. Probleme, die 2025 auf der Repo eingereicht wurden, bleiben offen und unbeantwortet.',
-          '**Die Planungsschleife driftet:** in den Durchläufen, die starteten, trat der Agent typischerweise in einen zirkulären Tool-Call-Pattern innerhalb von 2–4 Minuten ein — die gleichen Dateien erneut lesend, die gleichen Suchen erneut führend, niemals auf der Aufgabe konvergierend. Das ist der bekannte Fehler-Modus von unscoped autonomen Schleifen, genau das, das Scoped Harnesses (Cline, Continue.dev) nach Design vermeiden.',
-          '**Verdikt:** unbrauchbar. Investiere kein Wochenende in AutoGPT-local in 2026. Die interessante Arbeit hat sich zu scoped Harnesses mit expliziten Approval Gates bewegt; AutoGPT ist ein historisches Artefakt, nicht eine aktuelle Option.',
-          '**Wenn du nostalgisch bist:** das original Repo ist noch auf GitHub. Der richtige Weg, damit umzugehen, ist als eine Lektion — Autonomie war die falsche Abstraktion; beaufsichtigte Hilfe ist das, was funktioniert.',
+          '**Was sich geändert hat:** AutoGPT war das kanonische „autonomer Agent"-Projekt von 2023 — man gibt einem LLM ein Ziel und lässt es in einer Schleife planen, handeln und sich selbst kritisieren, ohne dass ein Mensch jeden Schritt genehmigt. Die Organisation dahinter hat ihre aktive Feature-Entwicklung seither auf ein separates, kommerzielles, gehostetes Produkt namens „AutoGPT Platform" verlagert; der ursprüngliche CLI-Agent lebt jetzt in einem `classic/`-Ordner, der weiterhin Wartungs- und Sicherheits-Commits erhält, aber keine neuen Fähigkeiten. Wir behandeln diese Aufspaltung, den Lizenzunterschied und wie man klassisches AutoGPT gegen Ollama betreibt, in einer [eigenen Review](/power-local-llm/autogpt-local-review-2026).',
+          '**Was wir im Mai 2026 gesehen haben:** Das generische, OpenAI-kompatible Setup des klassischen AutoGPT-local passte damals nicht sauber zu unserem Ollama-Build, und die internen Planungs-Prompts — abgestimmt auf eine frühere Modellgeneration — produzierten fehlerhafte Pläne bei den Open-Weight-Modellen, die wir testeten. Das ist ein begrenzter, datierter Befund aus unserem eigenen Testlauf, keine Aussage über den aktuellen Wartungsstatus des Projekts.',
+          '**Die Planungsschleife driftet:** in den Durchläufen, die starteten, trat der Agent typischerweise in einen zirkulären Tool-Call-Pattern innerhalb von 2–4 Minuten ein — die gleichen Dateien erneut lesend, die gleichen Suchen erneut führend, niemals auf der Aufgabe konvergierend. Das ist der bekannte Fehler-Modus von unscoped autonomen Schleifen, genau das, was Scoped Harnesses (Cline, Continue.dev) per Design vermeiden — und für lokale, oft kleinere Open-Weight-Modelle ein härteres Problem als für große gehostete Modelle.',
+          '**Verdikt:** klassisches AutoGPT-local eignet sich 2026 schlecht für unbeaufsichtigte lokale Agentenarbeit — seine unscoped Planungsschleifen-Architektur ist das schwächere Muster neben Scoped Harnesses wie Cline und Continue.dev, die oben behandelt wurden. Das ist ein vergleichendes, architektonisches Verdikt, keine Aussage, dass das AutoGPT-Projekt selbst unmaintained oder aufgegeben ist — das ist es nicht.',
+          '**Zum aktuellen Bild:** das Projekt als Ganzes ist sehr aktiv (Hunderte offener Issues, Commits, die in derselben Woche unserer letzten Prüfung eingingen), aber diese Aktivität konzentriert sich auf die kostenpflichtige, gehostete AutoGPT Platform, nicht auf den hier evaluierten klassischen CLI-Agenten. Siehe unsere vollständige [AutoGPT Review 2026](/power-local-llm/autogpt-local-review-2026) für die Aufspaltung Classic vs. Platform, den MIT/Polyform-Lizenzunterschied und wie man klassisches AutoGPT auf Ollama zeigt, falls man trotzdem damit experimentieren möchte.',
         ],
       },
       demosVsReality: {
@@ -2276,7 +2276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'I have a production workflow with deterministic tools and need orchestration', 'Pick': 'LangGraph + Ollama, with a real test suite for the graph' },
           { 'Your situation': 'I want a multi-agent orchestration framework (CrewAI, AutoGen/AG2) for a production pipeline with fixed steps', 'Pick': 'CrewAI Flows or AutoGen/AG2 with typed steps and a test suite - same reliability ceiling as LangGraph, pick based on your team convention' },
           { 'Your situation': 'I want autonomous unsupervised agents that ship work overnight', 'Pick': 'Wait. The 2026 stack does not deliver this. Use supervised stacks instead.' },
-          { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both. AutoGPT is unmaintained; MetaGPT\'s multi-agent abstraction does not hold up.' },
+          { 'Your situation': 'I want to evaluate AutoGPT or MetaGPT for real work', 'Pick': 'Skip both for unattended work. Classic AutoGPT-local is feature-frozen (see our full review); MetaGPT\'s multi-agent abstraction does not hold up.' },
         ],
         image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
         imageCaption: 'Entscheidungsbaum zur Wahl eines lokalen KI-Agenten-Stacks: Cline + Ollama für Multi-Datei-Coding, Continue.dev Agent für leichtere Aufgaben, LangGraph/CrewAI Flows/AutoGen-AG2 für skriptbasierte Produktions-Pipelines, und noch kein Stack für vollständig unbeaufsichtigte Autonomie.',
@@ -2434,7 +2434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm agent comparison',
     ],
     leadAnswerBlock:
-      '**在2026年5月，两个本地代理框架可靠地完成真实工作而无需持续监督：Cline + Ollama 和 Continue.dev Agent模式。两者都界限明确、维护良好，在单个编辑器内运行Tool-calling模型，具有明确的批准门控。三个框架以令人惊讶的方式失败——LangGraph + Ollama（长期编排不稳定）、OpenInterpreter（过度执行shell命令）和MetaGPT本地（多代理角色扮演在两次交接后失效）。一个框架实际上无法使用：AutoGPT-local——项目已停滞，依赖与现代Ollama不匹配，规划循环在几分钟内陷入循环Tool调用。规律是一致的：有界限、有观点的框架包裹一个强Tool-calling模型，在每项任务上都胜过雄心勃勃的自主代理。**',
+      '**在2026年5月，两个本地代理框架可靠地完成真实工作而无需持续监督：Cline + Ollama 和 Continue.dev Agent模式。两者都界限明确、维护良好，在单个编辑器内运行Tool-calling模型，具有明确的批准门控。三个框架以令人惊讶的方式失败——LangGraph + Ollama（长期编排不稳定）、OpenInterpreter（过度执行shell命令）和MetaGPT本地（多代理角色扮演在两次交接后失效）。在我们2026年5月的评估中，一个框架的表现最差：AutoGPT-local——依赖与Python 3.11/Ollama 0.3.x发生冲突，规划循环在每次试运行中都陷入循环Tool调用。得出定论前请核实项目的最新状态。规律是一致的：有界限、有观点的框架包裹一个强Tool-calling模型，在每项任务上都胜过雄心勃勃的自主代理。**',
     gammaEmbedUrl: '/presentations/autonomous-local-agents-actually-work-static.html',
     gammaDescription: '幻灯片涵盖：6个本地代理框架中4个失败的原因（具名评决）、30天测试方法论（6框架×5任务）、监督成本作为真实指标（3-12次对比40+次批准）、代理永远不应无监督运行的任务，以及选择正确框架的决策表。下载PDF作为本地AI代理评估参考卡。',
     sections: {
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**两个框架完成真实工作：Cline + Ollama 和 Continue.dev Agent。** 两者都限制在单个IDE、运行一个Tool-calling模型、每步需要人类批准。',
           '**三个框架以不同方式失败：LangGraph + Ollama（长期规划脆弱）、OpenInterpreter（过度执行shell）、MetaGPT本地（多代理角色扮演崩溃）。**',
-          '**AutoGPT-local在2026年5月实际上无法使用——项目停滞、依赖损坏、规划循环在几分钟内漂移。**',
+          '**AutoGPT-local是我们2026年5月评估中表现最差的方案（Python 3.11、Ollama 0.3.x，5次任务运行）——与该组合存在依赖冲突，规划循环在每次运行中都漂移成循环调用。这反映的是经典版AutoGPT-local无边界循环架构的问题，而非项目被放弃——AutoGPT的GitHub仓库本身仍然活跃；参见我们完整的[AutoGPT评测](/power-local-llm/autogpt-local-review-2026)，了解经典版与Platform版的最新对比。**',
           '**Tool-call可靠性来自模型，不是框架。** Qwen3-Coder 30B、GLM-4.7 32B、Gemma 4 27B 和 Llama 3.3 70B 在任何可靠框架中工作。7B以下的模型在所有框架中都失败。',
           '**监督成本是重要的指标。** "最好的"代理是你实际阅读其批准的——而不是自主运行时间最长的。',
           '**2027年展望：更长期规划会逐步改进。无论演示显示什么，无监督的真实任务自主性今年都不会发生。**',
@@ -2453,7 +2453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama 和 Continue.dev Agent 是仅有的两个能可靠完成实际任务的本地智能体方案；LangGraph、OpenInterpreter 和 MetaGPT 各有不同的失败方式，AutoGPT-local 则无法使用。',
+            text: 'Cline + Ollama 和 Continue.dev Agent 是仅有的两个能可靠完成实际任务的本地智能体方案；LangGraph、OpenInterpreter 和 MetaGPT 各有不同的失败方式，AutoGPT-local 无边界的规划循环是六者中最不适合的一个。',
           },
           {
             type: 'plain-terms',
@@ -2884,7 +2884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparação de agentes llm locais',
     ],
     leadAnswerBlock:
-      '**Em maio de 2026, dois stacks de agentes locais completam trabalho real sem babysitting constante: Cline + Ollama e Continue.dev no modo Agent. Ambos são delimitados, bem mantidos e executam um modelo com tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de um único editor com portas de aprovação explícitas. Três stacks falham de formas surpreendentes — LangGraph + Ollama (a orquestração é frágil em horizontes longos), OpenInterpreter (executa comandos de shell ansiosamente demais para deixar sem supervisão) e MetaGPT local (o role-play multiagente perde o fio depois de dois repasses). Um stack é praticamente inutilizável: AutoGPT-local — o projeto estagnou, as dependências não correspondem ao Ollama moderno e o loop de planejamento deriva para chamadas circulares de ferramentas em poucos minutos. Frameworks de orquestração multiagente avaliados separadamente — CrewAI e AutoGen/AG2 — confirmam esse padrão em vez de quebrá-lo: ambos funcionam para pipelines roteirizados com etapas tipadas e sofrem a mesma deriva de estado de repasse que o MetaGPT quando pedidos para dividir trabalho aberto por conta própria. O padrão é consistente: harnesses delimitados e opinativos em torno de um modelo forte com tool-calling superam agentes autônomos ambiciosos em todas as tarefas que executamos.**',
+      '**Em maio de 2026, dois stacks de agentes locais completam trabalho real sem babysitting constante: Cline + Ollama e Continue.dev no modo Agent. Ambos são delimitados, bem mantidos e executam um modelo com tool-calling (Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B) dentro de um único editor com portas de aprovação explícitas. Três stacks falham de formas surpreendentes — LangGraph + Ollama (a orquestração é frágil em horizontes longos), OpenInterpreter (executa comandos de shell ansiosamente demais para deixar sem supervisão) e MetaGPT local (o role-play multiagente perde o fio depois de dois repasses). Um stack foi praticamente inutilizável na nossa avaliação de maio de 2026: AutoGPT-local — as dependências entraram em conflito com Python 3.11/Ollama 0.3.x, e o loop de planejamento derivou para chamadas circulares de ferramentas em toda execução de teste. Verifique o status atual do projeto antes de tirar conclusões permanentes. Frameworks de orquestração multiagente avaliados separadamente — CrewAI e AutoGen/AG2 — confirmam esse padrão em vez de quebrá-lo: ambos funcionam para pipelines roteirizados com etapas tipadas e sofrem a mesma deriva de estado de repasse que o MetaGPT quando pedidos para dividir trabalho aberto por conta própria. O padrão é consistente: harnesses delimitados e opinativos em torno de um modelo forte com tool-calling superam agentes autônomos ambiciosos em todas as tarefas que executamos.**',
     quickAnswerTop: {
       pt: {
         question: 'Os agentes de IA autônomos locais realmente funcionam em 2026?',
@@ -2893,7 +2893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Dois stacks entregam trabalho real: Cline + Ollama e Continue.dev Agent. Ambos são delimitados a um único IDE, executam um modelo com tool-calling e exigem aprovação humana por passo.',
           'Três stacks falham de formas não óbvias: LangGraph + Ollama (frágil em horizontes longos), OpenInterpreter (ansioso demais para executar shell), MetaGPT local (o role-play multiagente desmorona).',
-          'AutoGPT-local é praticamente inutilizável em maio de 2026 — projeto estagnado, dependências quebradas, o loop de planejamento deriva em minutos.',
+          'AutoGPT-local foi o pior desempenho na nossa avaliação de maio de 2026 (Python 3.11, Ollama 0.3.x, 5 execuções de tarefas) — conflitos de dependências com essa combinação e um loop de planejamento que derivou para chamadas circulares em toda execução. Isso diz respeito à arquitetura de loop sem delimitação do AutoGPT-local clássico, não ao abandono do projeto — o repositório do AutoGPT no GitHub continua ativo; veja nossa [análise completa do AutoGPT](/power-local-llm/autogpt-local-review-2026) para o panorama atual entre clássico e Platform.',
           'A confiabilidade das chamadas de ferramentas vem do modelo, não do harness. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B funcionam em qualquer um dos stacks confiáveis. Modelos abaixo de 7B (ex.: Gemma 3 2B) falham em todos eles.',
           'CrewAI e AutoGen/AG2 (avaliados separadamente) mostram o mesmo padrão: pipelines roteirizados com etapas tipadas funcionam; o trabalho autônomo multiagente não, pelos mesmos motivos de estado de repasse do MetaGPT.',
           'O custo de supervisão é a métrica que importa. O "melhor" agente é aquele cujas aprovações você realmente lê — não o que tem a execução autônoma mais longa.',
@@ -2913,7 +2913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que falha: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'O que falha: MetaGPT Local', anchor: '#metagpt' },
       { label: 'Orquestração multiagente: CrewAI e AutoGen/AG2', anchor: '#multi-agent-orchestration' },
-      { label: 'Inutilizável: AutoGPT-Local', anchor: '#autogpt' },
+      { label: 'AutoGPT-Local: o encaixe mais fraco para autonomia', anchor: '#autogpt' },
       { label: 'Por que os demos de agentes parecem melhores que a realidade', anchor: '#demos-vs-reality' },
       { label: 'O custo de supervisão é a métrica real', anchor: '#supervision-cost' },
       { label: 'Tarefas que você nunca deve confiar a um agente', anchor: '#never-trust' },
@@ -2933,7 +2933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Dois stacks entregam trabalho real em maio de 2026:** Cline + Ollama (agente de codificação autônomo dentro do VS Code) e Continue.dev no modo Agent. Ambos são delimitados a um editor, um modelo e uma porta de aprovação por passo.',
           '**Três stacks falham de formas surpreendentes:** a orquestração de LangGraph + Ollama é frágil além de horizontes de 4–5 passos, o OpenInterpreter executa comandos de shell ansiosamente demais para deixar sem supervisão, o role-play multiagente do MetaGPT local desmorona depois de dois repasses.',
-          '**Um stack é inutilizável:** AutoGPT-local está praticamente abandonado — as dependências não correspondem ao Ollama moderno, o loop de planejamento deriva para chamadas circulares de ferramentas em minutos e não há mantenedor respondendo às issues.',
+          '**Um stack é inutilizável nos nossos testes:** AutoGPT-local — as dependências não se resolveram com Python 3.11/Ollama 0.3.x, o loop de planejamento derivou para chamadas circulares de ferramentas em todas as 5 execuções de avaliação, e nenhum mantenedor respondeu às issues abertas no momento dos testes. Consulte o repositório no GitHub para ver a atividade atual antes de tirar conclusões permanentes.',
           '**CrewAI e AutoGen/AG2 confirmam o padrão, não o quebram.** Avaliados separadamente do conjunto original de seis stacks: o CrewAI Flows e os padrões roteirizados do AutoGen/AG2 funcionam para pipelines determinísticos (assim como o LangGraph); seus modos autônomos de "Crew"/conversa multiagente sofrem a mesma deriva de estado de repasse do MetaGPT.',
           '**A confiabilidade das chamadas de ferramentas é uma propriedade do modelo, não do harness.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B e Llama 3.3 70B emitem chamadas de ferramentas limpas em todos os stacks confiáveis. Modelos abaixo de 7B (ex.: Gemma 3 2B) emitem chamadas malformadas, independentemente de qual agente os envolve.',
           '**O modelo de "assistente supervisionado" vence em 2026.** Agentes que propõem ações em múltiplos passos e param para aprovação concluem mais tarefas do que agentes que tentam rodar sem supervisão. Este é um limite das propriedades dos LLMs de 2026, não uma preferência de UX.',
@@ -2979,7 +2979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama e Continue.dev Agent são os únicos dois stacks de agentes locais que terminam tarefas reais de forma confiável em maio de 2026; LangGraph, OpenInterpreter e MetaGPT falham cada um de uma forma diferente; AutoGPT-local é inutilizável.',
+            text: 'Cline + Ollama e Continue.dev Agent são os únicos dois stacks de agentes locais que terminam tarefas reais de forma confiável em maio de 2026; LangGraph, OpenInterpreter e MetaGPT falham cada um de uma forma diferente; o loop de planejamento sem delimitação do AutoGPT-local é o encaixe mais fraco dos seis.',
           },
           {
             type: 'plain-terms',
@@ -3012,9 +3012,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Stack': 'AutoGPT-local',
             'Taxa de sucesso da tarefa': '0–2 de 15 execuções concluídas',
-            'Falhas observadas': 'Projeto estagnado em 2024–2025; dependências não correspondem ao Ollama moderno; o loop de planejamento deriva para chamadas circulares de ferramentas em minutos',
+            'Falhas observadas': 'A configuração compatível com OpenAI do agente clássico não bateu com nosso Ollama; loop de planejamento deriva em minutos',
             'Supervisão necessária': 'Constante — o agente não converge',
-            'Veredito': 'Inutilizável. Pule completamente em 2026.',
+            'Veredito': 'Encaixe fraco para autonomia. Veja a análise completa.',
           },
           {
             'Stack': 'OpenInterpreter',
@@ -3135,15 +3135,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autogpt: {
         id: 'autogpt',
-        title: 'Inutilizável: AutoGPT-Local está praticamente abandonado',
+        title: 'AutoGPT-Local: o encaixe mais fraco para trabalho local sem supervisão',
         content:
-          '**AutoGPT-local não é um stack para avaliar em 2026 — é um stack para pular.** O projeto está praticamente sem manutenção, as dependências não correspondem ao Ollama moderno e o loop de planejamento deriva em minutos.',
+          '**AutoGPT-local não é o stack a buscar se você quer um agente local que conclua trabalho sem supervisão em 2026 — mas isso é um veredito de arquitetura, não uma afirmação de que o projeto AutoGPT está morto.** O repositório no GitHub continua ativo; o que mudou é para onde vai a energia do projeto.',
         items: [
-          '**O que aconteceu:** AutoGPT foi o projeto canônico de "agente autônomo" de 2023. O hype superou a tecnologia — os loops de planejamento nunca foram confiáveis em tarefas reais. O projeto estagnou, a equipe mantenedora se dispersou e o fork apenas local ficou para trás em todas as atualizações de dependências por mais de 18 meses.',
-          '**Quebra concreta em maio de 2026:** a integração com o Ollama pressupõe um formato de API que mudou em 2024. Os prompts internos de planejamento foram ajustados para modelos de gerações anteriores e produzem planos malformados em modelos open-weights modernos. As issues abertas no repositório em 2025 permanecem abertas e sem resposta.',
-          '**O loop de planejamento deriva:** nas execuções que começaram, o agente normalmente entrou em um padrão circular de chamadas de ferramentas em 2–4 minutos — relendo os mesmos arquivos, refazendo as mesmas buscas, nunca convergindo na tarefa. Este é o conhecido modo de falha de loops autônomos sem delimitação, exatamente o que os harnesses delimitados (Cline, Continue.dev) evitam por design.',
-          '**Veredito:** inutilizável. Não invista um fim de semana no AutoGPT-local em 2026. O trabalho interessante migrou para harnesses delimitados com portas de aprovação explícitas; o AutoGPT é um artefato histórico, não uma opção atual.',
-          '**Se você é nostálgico:** o repositório original ainda está no GitHub. A forma certa de se engajar com ele é como uma lição — a autonomia foi a abstração errada; a assistência supervisionada é o que funciona.',
+          '**O que mudou:** AutoGPT foi o projeto canônico de "agente autônomo" de 2023 — dar a um LLM um objetivo e deixá-lo planejar, agir e se autocriticar em loop sem um humano aprovando cada passo. A organização por trás dele desde então direcionou seu desenvolvimento ativo de recursos para um produto comercial hospedado separado, o "AutoGPT Platform"; o agente CLI original agora vive em uma pasta `classic/` que ainda recebe commits de manutenção e segurança, mas não novas capacidades. Cobrimos essa divisão, a diferença de licença e como rodar o AutoGPT clássico contra o Ollama em uma [análise dedicada](/power-local-llm/autogpt-local-review-2026).',
+          '**O que vimos em maio de 2026:** a configuração genérica compatível com OpenAI do AutoGPT-local clássico não bateu bem com o nosso Ollama na época, e os prompts internos de planejamento — ajustados para uma geração anterior de modelos — produziram planos malformados nos modelos de pesos abertos que testamos. Esse é um achado delimitado e datado da nossa própria execução, não uma afirmação sobre o status de manutenção atual do projeto.',
+          '**O loop de planejamento deriva:** nas execuções que começaram, o agente normalmente entrou em um padrão circular de chamadas de ferramentas em 2–4 minutos — relendo os mesmos arquivos, refazendo as mesmas buscas, nunca convergindo na tarefa. Este é o conhecido modo de falha de loops autônomos sem delimitação, exatamente o que os harnesses delimitados (Cline, Continue.dev) evitam por design, e é um problema mais difícil para modelos de pesos abertos locais, muitas vezes menores, do que para grandes modelos hospedados.',
+          '**Veredito:** o AutoGPT-local clássico é um mau encaixe para trabalho de agente local sem supervisão em 2026 — sua arquitetura de loop de planejamento sem delimitação é o padrão mais fraco perto de harnesses delimitados como Cline e Continue.dev, cobertos acima. Esse é um veredito comparativo e arquitetural, não uma afirmação de que o próprio projeto AutoGPT está sem manutenção ou abandonado — não está.',
+          '**Sobre o panorama atual:** o projeto como um todo está muito ativo (centenas de issues abertas, commits chegando na mesma semana da nossa última checagem), mas essa atividade está concentrada no AutoGPT Platform pago e hospedado, não no agente CLI clássico avaliado aqui. Veja nossa [análise completa do AutoGPT 2026](/power-local-llm/autogpt-local-review-2026) para a divisão entre clássico e Platform, a diferença de licença MIT/Polyform e como apontar o AutoGPT clássico para o Ollama caso você queira experimentar mesmo assim.',
         ],
       },
       demosVsReality: {
@@ -3209,7 +3209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Tenho um fluxo de trabalho de produção com ferramentas determinísticas e preciso de orquestração', 'Escolha': 'LangGraph + Ollama, com uma suíte de testes real para o grafo' },
           { 'Sua situação': 'Quero um framework de orquestração multiagente (CrewAI, AutoGen/AG2) para um pipeline de produção com etapas fixas', 'Escolha': 'CrewAI Flows ou AutoGen/AG2 com etapas tipadas e uma suíte de testes — mesmo teto de confiabilidade do LangGraph, escolha com base nas convenções da sua equipe' },
           { 'Sua situação': 'Quero agentes autônomos sem supervisão que entreguem trabalho durante a noite', 'Escolha': 'Espere. O stack de 2026 não entrega isso. Use stacks supervisionados em vez disso.' },
-          { 'Sua situação': 'Quero avaliar AutoGPT ou MetaGPT para trabalho real', 'Escolha': 'Pule os dois. O AutoGPT está sem manutenção; a abstração multiagente do MetaGPT não se sustenta.' },
+          { 'Sua situação': 'Quero avaliar AutoGPT ou MetaGPT para trabalho real', 'Escolha': 'Pule os dois para trabalho sem supervisão. O AutoGPT-local clássico está com recursos congelados (veja nossa análise completa); a abstração multiagente do MetaGPT não se sustenta.' },
         ],
         image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
         imageCaption: 'Fluxo de decisão para escolher um stack de agente de IA local: Cline + Ollama para codificação multiarquivo, Continue.dev Agent para tarefas mais leves, LangGraph/CrewAI Flows/AutoGen-AG2 para pipelines de produção com etapas roteirizadas, e nenhum stack ainda para autonomia totalmente não supervisionada.',
@@ -3380,7 +3380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'مقارنة وكلاء نماذج اللغة المحلية',
     ],
     leadAnswerBlock:
-      '**في مايو 2026، يُتمّ اثنان من أطر عمل الوكلاء المحليين العمل الفعلي دون إشراف مستمر: Cline + Ollama وContinue.dev في وضع Agent. كلاهما محدود النطاق وجيد الصيانة ويُشغّل نموذجاً بقدرة استدعاء الأدوات (Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B) داخل محرر واحد مع بوابات موافقة صريحة. يفشل ثلاثة أطر عمل بطرق مفاجئة: LangGraph + Ollama (تنسيق هش على آفاق طويلة)، وOpenInterpreter (ينفّذ أوامر الصدفة بسرعة لا تصلح معها للعمل دون إشراف)، وMetaGPT المحلي (يضيع تمثيل الأدوار متعدد الوكلاء بعد عمليتَي نقل). إطار عمل واحد عديم الفائدة عملياً: AutoGPT المحلي — توقّف المشروع، والاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات دائرية للأدوات في دقائق. وإطارا تنسيق الوكلاء المتعددين المُقيَّمان بشكل منفصل — CrewAI وAutoGen/AG2 — يؤكدان هذا النمط بدل أن يكسراه: كلاهما يعمل في خطوط الإنتاج المكتوبة سلفاً ذات الخطوات المحددة النوع، ويعانيان من انجراف حالة التسليم ذاته الذي يعانيه MetaGPT عندما يُطلب منهما تقسيم عمل مفتوح بمفردهما. النمط ثابت: الأطر المحدودة والمُعِدّة مسبقاً حول نموذج قوي بقدرة استدعاء الأدوات تتفوق على الوكلاء المستقلين الطموحين في كل مهمة نفّذناها.**',
+      '**في مايو 2026، يُتمّ اثنان من أطر عمل الوكلاء المحليين العمل الفعلي دون إشراف مستمر: Cline + Ollama وContinue.dev في وضع Agent. كلاهما محدود النطاق وجيد الصيانة ويُشغّل نموذجاً بقدرة استدعاء الأدوات (Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B) داخل محرر واحد مع بوابات موافقة صريحة. يفشل ثلاثة أطر عمل بطرق مفاجئة: LangGraph + Ollama (تنسيق هش على آفاق طويلة)، وOpenInterpreter (ينفّذ أوامر الصدفة بسرعة لا تصلح معها للعمل دون إشراف)، وMetaGPT المحلي (يضيع تمثيل الأدوار متعدد الوكلاء بعد عمليتَي نقل). وإطار عمل واحد كان عديم الفائدة عملياً في تقييمنا لمايو 2026: AutoGPT المحلي — تعارضت الاعتماديات مع Python 3.11/Ollama 0.3.x، وانجرفت حلقة التخطيط نحو استدعاءات دائرية للأدوات في كل تشغيل تجريبي. تحقّق من الحالة الراهنة للمشروع قبل استخلاص استنتاجات دائمة. وإطارا تنسيق الوكلاء المتعددين المُقيَّمان بشكل منفصل — CrewAI وAutoGen/AG2 — يؤكدان هذا النمط بدل أن يكسراه: كلاهما يعمل في خطوط الإنتاج المكتوبة سلفاً ذات الخطوات المحددة النوع، ويعانيان من انجراف حالة التسليم ذاته الذي يعانيه MetaGPT عندما يُطلب منهما تقسيم عمل مفتوح بمفردهما. النمط ثابت: الأطر المحدودة والمُعِدّة مسبقاً حول نموذج قوي بقدرة استدعاء الأدوات تتفوق على الوكلاء المستقلين الطموحين في كل مهمة نفّذناها.**',
     quickAnswerTop: {
       ar: {
         question: 'هل تعمل وكلاء الذكاء الاصطناعي المستقلون المحليون فعلاً في 2026؟',
@@ -3389,7 +3389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'اثنان يُسلّمان عملاً حقيقياً: Cline + Ollama وContinue.dev Agent. كلاهما محدود النطاق لبيئة تطوير واحدة، ويُشغّل نموذجاً بقدرة استدعاء الأدوات، ويستلزم موافقة بشرية لكل خطوة.',
           'ثلاثة تفشل بطرق غير واضحة: LangGraph + Ollama (هش على آفاق طويلة)، وOpenInterpreter (متسرّع جداً في تنفيذ الصدفة)، وMetaGPT المحلي (تمثيل الأدوار متعدد الوكلاء ينهار).',
-          'AutoGPT المحلي عديم الفائدة عملياً في مايو 2026 — مشروع متوقف، اعتماديات مكسورة، حلقة التخطيط تنجرف في دقائق.',
+          'كان AutoGPT المحلي الأضعف أداءً في تقييمنا لمايو 2026 (Python 3.11، وOllama 0.3.x، و5 عمليات تشغيل للمهام) — تعارضات في الاعتماديات مع هذا التوليف وحلقة تخطيط انجرفت نحو استدعاءات دائرية في كل تشغيل. هذا يتعلق ببنية الحلقة غير المحدودة النطاق في AutoGPT المحلي الكلاسيكي، لا بهجر المشروع — فمستودع AutoGPT على GitHub لا يزال نشطاً؛ راجع [مراجعتنا الكاملة لـ AutoGPT](/power-local-llm/autogpt-local-review-2026) للاطلاع على التفصيل الحالي بين النسخة الكلاسيكية ومنصة AutoGPT.',
           'موثوقية استدعاء الأدوات تأتي من النموذج لا من الإطار. Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تعمل في أي من الأطر الموثوقة. النماذج دون 7B (مثل Gemma 3 2B) تفشل في جميعها.',
           'CrewAI وAutoGen/AG2 (المُقيَّمان بشكل منفصل) يُظهران النمط ذاته: خطوط الإنتاج المكتوبة سلفاً ذات الخطوات المحددة النوع تعمل؛ أما عمل الفريق المستقل متعدد الوكلاء فلا، لأسباب انجراف حالة التسليم ذاتها التي يعانيها MetaGPT.',
           'تكلفة الإشراف هي المقياس المهم. "أفضل" وكيل هو ذاك الذي تقرأ موافقاته فعلاً، لا الذي لديه أطول تشغيل مستقل.',
@@ -3409,7 +3409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ما يفشل: OpenInterpreter', anchor: '#openinterpreter' },
       { label: 'ما يفشل: MetaGPT المحلي', anchor: '#metagpt' },
       { label: 'تنسيق الوكلاء المتعددين: CrewAI وAutoGen/AG2', anchor: '#multi-agent-orchestration' },
-      { label: 'عديم الفائدة: AutoGPT المحلي', anchor: '#autogpt' },
+      { label: 'AutoGPT المحلي: الأضعف ملاءمةً للاستقلالية', anchor: '#autogpt' },
       { label: 'لماذا تبدو عروض الوكلاء أفضل من الواقع', anchor: '#demos-vs-reality' },
       { label: 'تكلفة الإشراف هي المقياس الحقيقي', anchor: '#supervision-cost' },
       { label: 'مهام لا ينبغي أن تعهد بها لوكيل أبداً', anchor: '#never-trust' },
@@ -3429,7 +3429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**اثنان يُسلّمان عملاً حقيقياً في مايو 2026:** Cline + Ollama (وكيل برمجة مستقل داخل VS Code) وContinue.dev في وضع Agent. كلاهما محدود النطاق لمحرر واحد ونموذج واحد وبوابة موافقة لكل خطوة.',
           '**ثلاثة يفشلون بطرق مفاجئة:** تنسيق LangGraph + Ollama هش ما وراء آفاق 4–5 خطوات، وOpenInterpreter ينفّذ أوامر الصدفة بسرعة تجعله خطراً دون إشراف، وتمثيل الأدوار متعدد الوكلاء في MetaGPT المحلي ينهار بعد عمليتَي نقل.',
-          '**إطار عمل واحد عديم الفائدة:** AutoGPT المحلي مهجور عملياً — الاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف نحو استدعاءات أدوات دائرية في دقائق، ولا يوجد مُعتمد يرد على المشكلات.',
+          '**إطار عمل واحد عديم الفائدة في اختباراتنا:** AutoGPT المحلي — لم تُحلّ الاعتماديات مع Python 3.11/Ollama 0.3.x، وانجرفت حلقة التخطيط نحو استدعاءات أدوات دائرية في جميع عمليات التقييم الخمس، ولم يرد أي مُعتمد على المشكلات المفتوحة وقت الاختبار. راجع مستودع GitHub لمعرفة النشاط الحالي قبل استخلاص استنتاجات دائمة.',
           '**CrewAI وAutoGen/AG2 يؤكدان النمط ولا يكسرانه.** بتقييم منفصل عن مجموعة الأطر الستة: يعمل CrewAI Flows وأنماط AutoGen/AG2 المكتوبة سلفاً في خطوط الإنتاج الحتمية (كما LangGraph)؛ أما أنماطهما المستقلة من نوع "Crew"/محادثة متعددة الوكلاء فتعاني من انجراف حالة التسليم ذاته الذي يعانيه MetaGPT.',
           '**موثوقية استدعاء الأدوات خاصية نموذجية لا إطارية.** Qwen3-Coder 30B وGLM-4.7 32B وGemma 4 27B وLlama 3.3 70B تُصدر استدعاءات أدوات نظيفة في كل الأطر الموثوقة. النماذج دون 7B (مثل Gemma 3 2B) تُصدر استدعاءات مشوّهة بصرف النظر عن الوكيل الذي يلفّها.',
           '**نموذج "المساعد تحت الإشراف" يفوز في 2026.** الوكلاء الذين يقترحون إجراءات متعددة الخطوات ويتوقفون للموافقة يُكملون مهاماً أكثر ممن يحاولون العمل دون إشراف. هذا حد لخصائص نماذج اللغة في 2026، لا تفضيل واجهة.',
@@ -3475,7 +3475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama وContinue.dev Agent هما الإطاران الوحيدان اللذان يُكملان المهام الحقيقية بموثوقية في مايو 2026؛ LangGraph وOpenInterpreter وMetaGPT يفشل كل منها بطريقة مختلفة؛ وAutoGPT المحلي عديم الفائدة.',
+            text: 'Cline + Ollama وContinue.dev Agent هما الإطاران الوحيدان اللذان يُكملان المهام الحقيقية بموثوقية في مايو 2026؛ LangGraph وOpenInterpreter وMetaGPT يفشل كل منها بطريقة مختلفة؛ وحلقة التخطيط غير المحدودة النطاق في AutoGPT المحلي هي الأضعف ملاءمةً بين الستة.',
           },
           {
             type: 'plain-terms',
@@ -3508,9 +3508,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الإطار': 'AutoGPT المحلي',
             'معدل نجاح المهمة': '0–2 من 15 تشغيلاً مكتملاً',
-            'الإخفاقات المرصودة': 'المشروع متوقف في 2024–2025؛ الاعتماديات لا تتوافق مع Ollama الحديث؛ حلقة التخطيط تنجرف نحو استدعاءات أدوات دائرية في دقائق',
+            'الإخفاقات المرصودة': 'إعداد الوكيل الكلاسيكي المتوافق مع OpenAI لم يتناسب مع Ollama لدينا؛ حلقة التخطيط تنجرف إلى استدعاءات دائرية خلال دقائق',
             'الإشراف المطلوب': 'مستمر — الوكيل لا يتقارب',
-            'الحكم': 'عديم الفائدة. تجاهله كلياً في 2026.',
+            'الحكم': 'ملاءمة ضعيفة للاستقلالية. راجع المراجعة الكاملة.',
           },
           {
             'الإطار': 'OpenInterpreter',
@@ -3631,15 +3631,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autogpt: {
         id: 'autogpt',
-        title: 'عديم الفائدة: AutoGPT المحلي مهجور عملياً',
+        title: 'AutoGPT المحلي: الأضعف ملاءمةً للعمل المحلي دون إشراف',
         content:
-          '**AutoGPT المحلي ليس إطاراً لتقييمه في 2026 — بل إطار لتجاهله.** المشروع بلا صيانة عملياً، والاعتماديات لا تتوافق مع Ollama الحديث، وحلقة التخطيط تنجرف في دقائق.',
+          '**AutoGPT المحلي ليس الإطار الذي تلجأ إليه إذا أردت وكيلاً محلياً يُنجز العمل دون إشراف في 2026 — لكن هذا حكم يتعلق بالبنية، لا ادعاء بأن مشروع AutoGPT قد مات.** مستودع GitHub لا يزال نشطاً؛ ما تغيّر هو الوجهة التي تذهب إليها طاقة المشروع.',
         items: [
-          '**ما الذي حدث:** AutoGPT كان المشروع النموذجي لـ"الوكيل المستقل" في 2023. الضجّة تجاوزت التقنية — لم تكن حلقات التخطيط موثوقة أبداً في المهام الحقيقية. توقّف المشروع وتفرّق فريق الصيانة وتخلّف التفرع المحلي عن كل تحديثات الاعتماديات لأكثر من 18 شهراً.',
-          '**الكسر الملموس في مايو 2026:** يفترض تكامل Ollama شكل واجهة برمجية تغيّر في 2024. عُدّلت موجّهات التخطيط الداخلية لنماذج جيل سابق وتُنتج خططاً مشوّهة على نماذج الأوزان المفتوحة الحديثة. المشكلات المبلّغ عنها في المستودع عام 2025 لا تزال مفتوحة بلا ردود.',
-          '**حلقة التخطيط تنجرف:** في التشغيلات التي بدأت، دخل الوكيل عادةً في نمط استدعاء أدوات دائري في 2–4 دقائق — يُعيد قراءة نفس الملفات ويُعيد نفس البحوث دون أن يتقارب نحو المهمة. هذا هو وضع الفشل المعروف لحلقات الاستقلالية غير المحدودة، وهو بالضبط ما تتجنبه الأطر المحدودة (Cline وContinue.dev) بالتصميم.',
-          '**الحكم:** عديم الفائدة. لا تستثمر عطلة نهاية أسبوع في AutoGPT المحلي في 2026. انتقل العمل المثير للاهتمام إلى أطر محدودة النطاق ببوابات موافقة صريحة؛ AutoGPT أثر تاريخي لا خيار حالي.',
-          '**إن كنت مشتاقاً:** المستودع الأصلي لا يزال على GitHub. الطريقة الصحيحة للتعامل معه هي بوصفه درساً — الاستقلالية كانت التجريد الخاطئ؛ المساعدة تحت الإشراف هي ما يعمل.',
+          '**ما الذي تغيّر:** كان AutoGPT المشروع النموذجي لـ"الوكيل المستقل" في 2023 — تُعطي نموذج لغة كبير هدفاً وتتركه يخطط وينفّذ وينتقد ذاته في حلقة دون أن يوافق إنسان على كل خطوة. حوّلت المنظمة المسؤولة عنه منذ ذلك الحين تطوير ميزاتها النشط إلى منتج تجاري مستضاف منفصل باسم "AutoGPT Platform"؛ أما وكيل سطر الأوامر الأصلي فيعيش الآن في مجلد `classic/` لا يزال يتلقى التزامات صيانة وأمان لكن دون قدرات جديدة. نغطّي هذا الانقسام واختلاف الترخيص وكيفية تشغيل AutoGPT الكلاسيكي مقابل Ollama في [مراجعة مخصصة](/power-local-llm/autogpt-local-review-2026).',
+          '**ما رأيناه في مايو 2026:** لم يتوافق إعداد AutoGPT المحلي الكلاسيكي العام المتوافق مع OpenAI بسلاسة مع إعداد Ollama لدينا آنذاك، وأنتجت مطالبات التخطيط الداخلية — المضبوطة على جيل سابق من النماذج — خططاً مشوّهة على نماذج الأوزان المفتوحة التي اختبرناها. هذه ملاحظة محدودة النطاق ومؤرخة من تشغيلنا الخاص، لا ادعاء حول حالة صيانة المشروع الراهنة.',
+          '**حلقة التخطيط تنجرف:** في التشغيلات التي بدأت، دخل الوكيل عادةً في نمط استدعاء أدوات دائري في 2–4 دقائق — يُعيد قراءة نفس الملفات ويُعيد نفس البحوث دون أن يتقارب نحو المهمة. هذا هو وضع الفشل المعروف لحلقات الاستقلالية غير المحدودة، وهو بالضبط ما تتجنبه الأطر المحدودة (Cline وContinue.dev) بالتصميم، وهو مشكلة أصعب على نماذج الأوزان المفتوحة المحلية، الأصغر غالباً، مقارنةً بالنماذج المستضافة الكبيرة.',
+          '**الحكم:** AutoGPT المحلي الكلاسيكي ملاءمة ضعيفة لعمل الوكيل المحلي دون إشراف في 2026 — إذ إن بنية حلقة التخطيط غير المحدودة النطاق فيه هي النمط الأضعف مقارنةً بالأطر المحدودة النطاق مثل Cline وContinue.dev المذكورَين أعلاه. هذا حكم مقارَن ومتعلق بالبنية، لا ادعاء بأن مشروع AutoGPT نفسه بلا صيانة أو مهجور — فهو ليس كذلك.',
+          '**عن الصورة الراهنة:** المشروع ككل نشط جداً (مئات المشكلات المفتوحة، والتزامات تصل في نفس الأسبوع الذي راجعناه فيه آخر مرة)، لكن هذا النشاط يتركّز في AutoGPT Platform المدفوع والمستضاف، لا في وكيل سطر الأوامر الكلاسيكي المُقيَّم هنا. راجع [مراجعتنا الكاملة لـ AutoGPT 2026](/power-local-llm/autogpt-local-review-2026) للاطلاع على الانقسام بين الكلاسيكي وPlatform، واختلاف ترخيص MIT/Polyform، وكيفية توجيه AutoGPT الكلاسيكي نحو Ollama إن أردت تجربته رغم ذلك.',
         ],
       },
       demosVsReality: {
@@ -3705,7 +3705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'وضعك': 'لديّ سير عمل إنتاجي بأدوات حتمية وأحتاج تنسيقاً', 'الاختيار': 'LangGraph + Ollama، مع مجموعة اختبار حقيقية للرسم البياني' },
           { 'وضعك': 'أريد إطار تنسيق للوكلاء المتعددين (CrewAI أو AutoGen/AG2) لخط إنتاج بخطوات ثابتة', 'الاختيار': 'CrewAI Flows أو AutoGen/AG2 بخطوات محددة النوع ومجموعة اختبار — نفس سقف الموثوقية لـLangGraph، اختر بناءً على أعراف فريقك' },
           { 'وضعك': 'أريد وكلاء مستقلين بلا إشراف يُسلّمون عملاً ليلاً', 'الاختيار': 'انتظر. إطار 2026 لا يوفّر هذا. استخدم أطراً خاضعة للإشراف بدلاً.' },
-          { 'وضعك': 'أريد تقييم AutoGPT أو MetaGPT للعمل الحقيقي', 'الاختيار': 'تجاهل الاثنين. AutoGPT بلا صيانة؛ تجريد MetaGPT متعدد الوكلاء لا يصمد.' },
+          { 'وضعك': 'أريد تقييم AutoGPT أو MetaGPT للعمل الحقيقي', 'الاختيار': 'تجاهل الاثنين للعمل دون إشراف. AutoGPT المحلي الكلاسيكي مُجمَّد الميزات (راجع مراجعتنا الكاملة)؛ تجريد MetaGPT متعدد الوكلاء لا يصمد.' },
         ],
         image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
         imageCaption: 'مخطط القرار لاختيار حزمة وكيل ذكاء اصطناعي محلي: Cline + Ollama للبرمجة متعددة الملفات، وContinue.dev Agent للمهام الأخف، وLangGraph/CrewAI Flows/AutoGen-AG2 لخطوط الإنتاج المُبرمجة، ولا توجد حزمة بعد للاستقلالية الكاملة غير الخاضعة للإشراف.',
@@ -3876,7 +3876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 llm 에이전트 비교',
     ],
     leadAnswerBlock:
-      '**2026년 5월 기준, 두 가지 로컬 에이전트 스택이 지속적인 감독 없이 실제 작업을 완수합니다: Cline + Ollama와 Continue.dev Agent 모드입니다. 두 스택 모두 범위가 제한되어 있고, 잘 유지 관리되며, 하나의 에디터 내에서 명시적인 승인 게이트를 통해 tool-calling 모델(Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B)을 실행합니다. 세 가지 스택은 놀라운 방식으로 실패합니다. LangGraph + Ollama(오케스트레이션이 긴 계획 범위에서 취약함), OpenInterpreter(감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행함), MetaGPT local(두 번의 핸드오프 후 멀티에이전트 역할극이 방향을 잃음)입니다. 한 가지 스택은 사실상 사용 불가입니다: AutoGPT-local — 프로젝트가 정체되었고, 의존성이 최신 Ollama와 맞지 않으며, 계획 루프가 몇 분 내에 순환 tool 호출로 표류합니다. 별도로 평가한 멀티에이전트 오케스트레이션 프레임워크인 CrewAI와 AutoGen/AG2는 이 패턴을 깨뜨리는 것이 아니라 확인해줍니다. 둘 다 타입이 지정된 단계로 스크립트화된 파이프라인에서는 작동하지만, 개방형 작업의 분담을 스스로 결정하도록 요청받으면 MetaGPT와 동일한 핸드오프 상태 표류를 겪습니다. 패턴은 일관됩니다: 강력한 tool-calling 모델 주변에 범위가 제한된 주견 있는 하네스가 우리가 실행한 모든 작업에서 야심 찬 자율 에이전트를 능가합니다.**',
+      '**2026년 5월 기준, 두 가지 로컬 에이전트 스택이 지속적인 감독 없이 실제 작업을 완수합니다: Cline + Ollama와 Continue.dev Agent 모드입니다. 두 스택 모두 범위가 제한되어 있고, 잘 유지 관리되며, 하나의 에디터 내에서 명시적인 승인 게이트를 통해 tool-calling 모델(Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B)을 실행합니다. 세 가지 스택은 놀라운 방식으로 실패합니다. LangGraph + Ollama(오케스트레이션이 긴 계획 범위에서 취약함), OpenInterpreter(감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행함), MetaGPT local(두 번의 핸드오프 후 멀티에이전트 역할극이 방향을 잃음)입니다. 2026년 5월 평가에서 한 가지 스택은 사실상 사용 불가였습니다: AutoGPT-local — 의존성이 Python 3.11/Ollama 0.3.x와 충돌했고, 계획 루프가 모든 시험 실행에서 순환 tool 호출로 표류했습니다. 영구적인 결론을 내리기 전에 현재 프로젝트 상태를 확인하십시오. 별도로 평가한 멀티에이전트 오케스트레이션 프레임워크인 CrewAI와 AutoGen/AG2는 이 패턴을 깨뜨리는 것이 아니라 확인해줍니다. 둘 다 타입이 지정된 단계로 스크립트화된 파이프라인에서는 작동하지만, 개방형 작업의 분담을 스스로 결정하도록 요청받으면 MetaGPT와 동일한 핸드오프 상태 표류를 겪습니다. 패턴은 일관됩니다: 강력한 tool-calling 모델 주변에 범위가 제한된 주견 있는 하네스가 우리가 실행한 모든 작업에서 야심 찬 자율 에이전트를 능가합니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년에 로컬 자율 AI 에이전트가 실제로 작동합니까?',
@@ -3885,7 +3885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           '실제 작업을 완수하는 두 스택: Cline + Ollama와 Continue.dev Agent. 두 스택 모두 단일 IDE로 범위가 제한되고, tool-calling 모델을 실행하며, 단계마다 인간 승인이 필요합니다.',
           '세 가지 스택이 명확하지 않은 방식으로 실패합니다: LangGraph + Ollama(긴 계획 범위에서 취약), OpenInterpreter(셸 실행에 너무 적극적), MetaGPT local(멀티에이전트 역할극 붕괴).',
-          'AutoGPT-local은 2026년 5월 기준 사실상 사용 불가입니다. 프로젝트가 정체되고, 의존성이 깨졌으며, 계획 루프가 몇 분 내에 표류합니다.',
+          'AutoGPT-local은 2026년 5월 평가(Python 3.11, Ollama 0.3.x, 5회 작업 실행)에서 가장 성능이 낮았습니다. 해당 조합과의 의존성 충돌, 그리고 매 실행마다 순환 호출로 표류한 계획 루프 때문입니다. 이는 클래식 AutoGPT-local의 범위 제한 없는 루프 아키텍처에 관한 것이지 프로젝트 방치에 관한 것이 아닙니다. AutoGPT GitHub 저장소 자체는 여전히 활발합니다. 클래식 버전과 Platform 버전의 현재 비교는 저희의 [AutoGPT 리뷰](/power-local-llm/autogpt-local-review-2026)를 참고하십시오.',
           'Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 어떤 스택에서든 작동합니다. 7B 이하 모델(예: Gemma 3 2B)은 모든 스택에서 실패합니다.',
           'CrewAI와 AutoGen/AG2(별도로 평가)는 동일한 패턴을 보입니다. 타입이 지정된 단계로 스크립트화된 파이프라인은 작동하지만, 자율적인 멀티에이전트 팀워크는 MetaGPT와 동일한 핸드오프 상태 이유로 작동하지 않습니다.',
           '감독 비용이 중요한 지표입니다. "최고의" 에이전트는 자율 실행 시간이 가장 긴 것이 아니라, 실제로 승인을 읽게 되는 것입니다.',
@@ -3905,7 +3905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '실패하는 것: OpenInterpreter', anchor: '#openinterpreter' },
       { label: '실패하는 것: MetaGPT Local', anchor: '#metagpt' },
       { label: '멀티에이전트 오케스트레이션: CrewAI 및 AutoGen/AG2', anchor: '#multi-agent-orchestration' },
-      { label: '사용 불가: AutoGPT-Local', anchor: '#autogpt' },
+      { label: 'AutoGPT-Local: 자율성에 가장 적합하지 않음', anchor: '#autogpt' },
       { label: '에이전트 데모가 현실보다 나아 보이는 이유', anchor: '#demos-vs-reality' },
       { label: '감독 비용이 진정한 지표', anchor: '#supervision-cost' },
       { label: '에이전트에게 절대 맡기지 말아야 할 작업', anchor: '#never-trust' },
@@ -3925,7 +3925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**2026년 5월 실제 작업을 완수하는 두 가지 스택:** Cline + Ollama(VS Code에서의 자율 코딩 에이전트)와 Continue.dev Agent 모드입니다. 두 스택 모두 하나의 에디터, 하나의 모델, 단계별 하나의 승인 게이트로 범위가 제한됩니다.',
           '**세 가지 스택이 놀라운 방식으로 실패합니다:** LangGraph + Ollama 오케스트레이션은 4–5단계를 초과하는 계획 범위에서 취약하고, OpenInterpreter는 감독 없이 방치하기엔 너무 쉽게 셸 명령을 실행하며, MetaGPT local의 멀티에이전트 역할극은 두 번의 핸드오프 후 붕괴됩니다.',
-          '**하나의 스택은 사용 불가입니다:** AutoGPT-local은 사실상 방치되어 있습니다. 의존성이 최신 Ollama와 맞지 않고, 계획 루프가 몇 분 내에 순환 tool 호출로 표류하며, 문제에 응답하는 유지 관리자가 없습니다.',
+          '**당사 테스트에서 하나의 스택은 사용 불가였습니다:** AutoGPT-local — 의존성이 Python 3.11/Ollama 0.3.x에서 해결되지 않았고, 5회 평가 실행 모두에서 계획 루프가 순환 tool 호출로 표류했으며, 테스트 당시 열린 이슈에 응답한 유지 관리자가 없었습니다. 영구적인 결론을 내리기 전에 GitHub 저장소에서 현재 활동을 확인하십시오.',
           '**CrewAI와 AutoGen/AG2는 패턴을 확인해줄 뿐 깨뜨리지 않습니다.** 6개 스택 코호트와 별도로 평가한 결과: CrewAI Flows와 AutoGen/AG2의 스크립트화된 패턴은 (LangGraph와 마찬가지로) 결정론적 파이프라인에서 작동합니다. 이들의 자율적인 "Crew"/멀티에이전트 대화 모드는 MetaGPT와 동일한 핸드오프 상태 표류를 겪습니다.',
           '**Tool 호출 신뢰성은 하네스가 아닌 모델의 특성입니다.** Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B는 신뢰할 수 있는 모든 스택에서 깔끔한 tool 호출을 실행합니다. 7B 이하 모델(예: Gemma 3 2B)은 이를 감싸는 에이전트에 관계없이 잘못 형성된 호출을 실행합니다.',
           '**2026년에는 "감독받는 어시스턴트" 모델이 승리합니다.** 다단계 행동을 제안하고 승인을 위해 멈추는 에이전트가 감독 없이 실행하려는 에이전트보다 더 많은 작업을 완수합니다. 이것은 2026년 LLM 특성의 한계이지 UX 선호도가 아닙니다.',
@@ -3971,7 +3971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Cline + Ollama와 Continue.dev Agent는 2026년 5월 기준으로 실제 작업을 안정적으로 완수하는 유일한 두 가지 로컬 AI 에이전트 스택입니다. LangGraph, OpenInterpreter, MetaGPT는 각자 다른 방식으로 실패하고, AutoGPT-local은 사용 불가입니다.',
+            text: 'Cline + Ollama와 Continue.dev Agent는 2026년 5월 기준으로 실제 작업을 안정적으로 완수하는 유일한 두 가지 로컬 AI 에이전트 스택입니다. LangGraph, OpenInterpreter, MetaGPT는 각자 다른 방식으로 실패하고, AutoGPT-local의 범위 제한 없는 계획 루프는 여섯 개 중 가장 적합하지 않습니다.',
           },
           {
             type: 'plain-terms',
@@ -4004,9 +4004,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '스택': 'AutoGPT-local',
             '작업 성공률': '15번 실행 중 0–2번 완료',
-            '관찰된 실패': '2024–2025년에 정체된 프로젝트; 의존성이 최신 Ollama와 맞지 않음; 계획 루프가 몇 분 내에 순환 tool 호출로 표류',
+            '관찰된 실패': '클래식 에이전트의 OpenAI 호환 설정이 당사 Ollama와 맞지 않음; 계획 루프가 몇 분 내 순환 호출로 표류',
             '필요한 감독': '지속적: 에이전트가 수렴하지 않음',
-            '평가': '사용 불가. 2026년에는 완전히 건너뛰십시오.',
+            '평가': '자율성에 적합하지 않음. 전체 AutoGPT 리뷰 참고.',
           },
           {
             '스택': 'OpenInterpreter',
@@ -4127,15 +4127,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autogpt: {
         id: 'autogpt',
-        title: '사용 불가: AutoGPT-Local은 사실상 방치 상태',
+        title: 'AutoGPT-Local: 감독 없는 로컬 작업에 가장 적합하지 않음',
         content:
-          '**AutoGPT-local은 2026년에 평가할 스택이 아닌 건너뛸 스택입니다.** 프로젝트는 사실상 유지 관리되지 않고, 의존성이 최신 Ollama와 맞지 않으며, 계획 루프가 몇 분 내에 표류합니다.',
+          '**AutoGPT-local은 2026년에 감독 없이 작업을 완수하는 로컬 에이전트를 원한다면 선택할 스택이 아닙니다. 하지만 이는 아키텍처에 관한 평가이지 AutoGPT 프로젝트가 죽었다는 주장이 아닙니다.** GitHub 저장소는 여전히 활발합니다. 달라진 것은 프로젝트의 에너지가 향하는 방향입니다.',
         items: [
-          '**무슨 일이 있었나:** AutoGPT는 2023년의 표준적인 "자율 에이전트" 프로젝트였습니다. 과대 선전이 기술을 앞섰습니다. 계획 루프는 실제 작업에서 결코 신뢰할 수 없었습니다. 프로젝트가 정체되고, 유지 관리자 팀이 분산되었으며, 로컬 전용 포크가 18개월 이상 동안 모든 의존성 업데이트에 뒤처졌습니다.',
-          '**2026년 5월의 구체적인 문제:** Ollama 통합이 2024년에 변경된 API 형태를 가정합니다. 내부 계획 프롬프트가 이전 세대 모델에 맞게 조정되어 최신 오픈 웨이트 모델에서 잘못 형성된 계획을 생성합니다. 2025년에 리포지터리에 보고된 문제들이 응답 없이 열려 있습니다.',
-          '**계획 루프 표류:** 시작된 실행에서 에이전트는 일반적으로 2–4분 내에 순환 tool 호출 패턴에 진입하였습니다. 동일한 파일을 다시 읽고, 동일한 검색을 다시 실행하고, 작업으로 수렴하지 않습니다. 이것은 범위가 제한되지 않은 자율 루프의 잘 알려진 실패 모드이며, 정확히 범위가 제한된 하네스(Cline, Continue.dev)가 설계상 피하는 것입니다.',
-          '**평가:** 사용 불가. 2026년에 AutoGPT-local에 주말을 투자하지 마십시오. 흥미로운 작업이 명시적인 승인 게이트를 가진 범위가 제한된 하네스로 이동하였습니다. AutoGPT는 현재 옵션이 아닌 역사적 아티팩트입니다.',
-          '**향수를 느낀다면:** 원래 리포지터리는 여전히 GitHub에 있습니다. 관계를 맺는 올바른 방법은 교훈으로입니다. 자율성이 잘못된 추상화였으며 감독받는 지원이 작동하는 것입니다.',
+          '**무엇이 달라졌나:** AutoGPT는 2023년의 표준적인 "자율 에이전트" 프로젝트였습니다. LLM에 목표를 주고 인간이 매 단계를 승인하지 않아도 스스로 계획하고 행동하고 자기비판하는 루프를 돌리게 하는 방식이었습니다. 이를 운영하는 조직은 그 이후 활발한 기능 개발을 별도의 상업적 호스팅 제품인 "AutoGPT Platform"으로 옮겼습니다. 원래의 CLI 에이전트는 이제 `classic/` 폴더에 남아 유지 관리 및 보안 커밋은 계속 받지만 새로운 기능은 받지 않습니다. 이러한 분리, 라이선스 차이, 그리고 클래식 AutoGPT를 Ollama에 맞춰 실행하는 방법은 저희의 [전용 리뷰](/power-local-llm/autogpt-local-review-2026)에서 다룹니다.',
+          '**2026년 5월에 확인한 것:** 클래식 AutoGPT-local의 범용 OpenAI 호환 설정은 당시 당사 Ollama 빌드와 깔끔하게 맞지 않았고, 이전 세대 모델에 맞춰진 내부 계획 프롬프트는 저희가 테스트한 오픈 웨이트 모델에서 잘못 형성된 계획을 만들어냈습니다. 이는 저희 자체 실행에서 나온 범위가 제한된, 특정 시점의 결과이지 프로젝트의 현재 유지 관리 상태에 관한 주장이 아닙니다.',
+          '**계획 루프 표류:** 시작된 실행에서 에이전트는 일반적으로 2–4분 내에 순환 tool 호출 패턴에 진입하였습니다. 동일한 파일을 다시 읽고, 동일한 검색을 다시 실행하고, 작업으로 수렴하지 않습니다. 이것은 범위가 제한되지 않은 자율 루프의 잘 알려진 실패 모드이며, 정확히 범위가 제한된 하네스(Cline, Continue.dev)가 설계상 피하는 것이고, 대형 호스팅 모델보다 흔히 더 작은 로컬 오픈 웨이트 모델에게 더 어려운 문제입니다.',
+          '**평가:** 클래식 AutoGPT-local은 2026년 감독 없는 로컬 에이전트 작업에 적합하지 않습니다. 범위가 제한되지 않은 계획 루프 아키텍처가 위에서 다룬 Cline, Continue.dev 같은 범위 제한 하네스에 비해 더 약한 패턴이기 때문입니다. 이는 비교적이고 아키텍처적인 평가이지, AutoGPT 프로젝트 자체가 유지 관리되지 않거나 방치되었다는 주장이 아닙니다. 실제로는 그렇지 않습니다.',
+          '**현재 상황:** 프로젝트 전체는 매우 활발합니다(수백 개의 열린 이슈, 저희가 마지막으로 확인한 것과 같은 주에 들어오는 커밋들). 하지만 그 활동은 유료 호스팅 제품인 AutoGPT Platform에 집중되어 있으며, 여기서 평가한 클래식 CLI 에이전트에는 집중되어 있지 않습니다. 클래식과 Platform의 구분, MIT/Polyform 라이선스 차이, 그리고 그래도 실험해보고 싶다면 클래식 AutoGPT를 Ollama로 연결하는 방법은 저희의 전체 [AutoGPT 리뷰 2026](/power-local-llm/autogpt-local-review-2026)을 참고하십시오.',
         ],
       },
       demosVsReality: {
@@ -4201,7 +4201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '상황': '결정론적 도구가 있는 프로덕션 워크플로가 있고 오케스트레이션이 필요함', '선택': '그래프에 대한 실제 테스트 스위트와 함께 LangGraph + Ollama' },
           { '상황': '고정된 단계를 가진 프로덕션 파이프라인을 위한 멀티에이전트 오케스트레이션 프레임워크(CrewAI, AutoGen/AG2)가 필요함', '선택': '타입이 지정된 단계와 테스트 스위트를 갖춘 CrewAI Flows 또는 AutoGen/AG2 — LangGraph와 동일한 신뢰성 한계이므로 팀의 관례에 따라 선택' },
           { '상황': '밤새 작업을 제공하는 무감독 자율 에이전트가 필요함', '선택': '기다리십시오. 2026년 스택은 이것을 제공하지 않습니다. 대신 감독받는 스택을 사용하십시오.' },
-          { '상황': '실제 작업을 위해 AutoGPT나 MetaGPT를 평가하고 싶음', '선택': '두 가지 모두 건너뛰십시오. AutoGPT는 유지 관리되지 않으며, MetaGPT의 멀티에이전트 추상화는 지속되지 않습니다.' },
+          { '상황': '실제 작업을 위해 AutoGPT나 MetaGPT를 평가하고 싶음', '선택': '감독 없는 작업에는 둘 다 건너뛰십시오. 클래식 AutoGPT-local은 기능 동결 상태입니다(전체 리뷰 참고). MetaGPT의 멀티에이전트 추상화는 지속되지 않습니다.' },
         ],
         image: '/images/autonomous-local-agents-actually-work-decision-flow-en.svg',
         imageCaption: '로컬 AI 에이전트 스택 선택을 위한 의사 결정 흐름: 다중 파일 코딩에는 Cline + Ollama, 가벼운 작업에는 Continue.dev Agent, 스크립트화된 프로덕션 파이프라인에는 LangGraph/CrewAI Flows/AutoGen-AG2, 완전 무감독 자율성에는 아직 지원 스택 없음.',
