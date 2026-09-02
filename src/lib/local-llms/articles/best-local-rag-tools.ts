@@ -162,6 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Setup for embeddings.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Inference engines for RAG.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- Use LLMs via API in RAG pipelines.',
+            '[LlamaIndex Review: Code-First RAG Framework](/power-local-llm/llamaindex-rag-framework-review) -- a deep dive into LlamaIndex\'s architecture, LlamaCloud pricing, and a working code example.',
           ],
         },
         sources: {
@@ -362,6 +363,7 @@ schema: {
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Configuración para embeddings.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Motores de inferencia para RAG.',
             '[API compatible con OpenAI para LLM local](/es/local-llms/local-llm-openai-compatible-api) -- Usa LLMs vía API en pipelines de RAG.',
+            '[Reseña de LlamaIndex: framework RAG code-first](/es/power-local-llm/llamaindex-rag-framework-review) -- un análisis a fondo de la arquitectura de LlamaIndex, los precios de LlamaCloud y un ejemplo de código funcional.',
           ],
         },
         sources: {
@@ -579,6 +581,7 @@ schema: {
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- الإعداد للتضمينات.',
             '[Text-Generation-WebUI مقابل vLLM مقابل llama.cpp](/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- محركات الاستدلال لـ RAG.',
             '[واجهة API متوافقة مع OpenAI لـ LLM محلي](/ar/local-llms/local-llm-openai-compatible-api) -- استخدم نماذج LLM عبر API في خطوط أنابيب RAG.',
+            '[مراجعة LlamaIndex: إطار عمل RAG قائم على الكود](/ar/power-local-llm/llamaindex-rag-framework-review) -- شرح معمّق لبنية LlamaIndex وأسعار LlamaCloud ومثال كود عامل.',
           ],
         },
         sources: {
@@ -796,6 +799,7 @@ schema: {
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- Configuração para embeddings.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/pt/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Motores de inferência para RAG.',
             '[API compatível com OpenAI para LLM local](/pt/local-llms/local-llm-openai-compatible-api) -- Use LLMs via API em pipelines de RAG.',
+            '[Análise do LlamaIndex: framework RAG code-first](/pt/power-local-llm/llamaindex-rag-framework-review) -- uma análise aprofundada da arquitetura do LlamaIndex, dos preços do LlamaCloud e um exemplo de código funcional.',
           ],
         },
         sources: {
@@ -1021,6 +1025,7 @@ schema: {
             '[Wie man Ollama installiert](/de/local-llms/how-to-install-ollama) -- Setup für Embeddings.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/de/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Inference-Engines für RAG.',
             '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) -- LLMs über API in RAG-Pipelines verwenden.',
+            '[LlamaIndex Test: Code-First-RAG-Framework](/de/power-local-llm/llamaindex-rag-framework-review) -- ein tiefer Einblick in die Architektur von LlamaIndex, die LlamaCloud-Preise und ein funktionierendes Codebeispiel.',
           ],
         },
         sources: {
@@ -1227,6 +1232,7 @@ schema: {
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) -- Configuration pour les embeddings.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/fr/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Moteurs d\'inférence pour RAG.',
             '[API compatible OpenAI LLM local](/fr/local-llms/local-llm-openai-compatible-api) -- Utiliser les LLMs via API dans les pipelines RAG.',
+            '[Avis LlamaIndex : framework RAG code-first](/fr/power-local-llm/llamaindex-rag-framework-review) -- une analyse approfondie de l\'architecture de LlamaIndex, des tarifs LlamaCloud et un exemple de code fonctionnel.',
           ],
         },
         sources: {
@@ -1429,6 +1435,7 @@ schema: {
             '[Ollamaコマンドガイド](/ja/local-llms/ollama-command-guide) -- Ollamaのセットアップと使用方法。',
             '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- GPU選択と本番環境セットアップ。',
             '[LM Studioの詳細機能](/ja/local-llms/lm-studio-advanced-features) -- 高度なLLM実験とプロンプトエンジニアリング。',
+            '[LlamaIndexレビュー：コードファーストRAGフレームワーク](/ja/power-local-llm/llamaindex-rag-framework-review) -- LlamaIndexのアーキテクチャ、LlamaCloudの料金、動作するコード例を詳しく解説。',
           ],
         },
         sources: {
@@ -1681,6 +1688,7 @@ schema: {
             '[Ollama命令指南](/zh/local-llms/ollama-command-guide) -- Ollama设置和使用。',
             '[2026年本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) -- GPU选择和生产部署。',
             '[LM Studio高级功能](/zh/local-llms/lm-studio-advanced-features) -- 高级LLM实验和提示工程。',
+            '[LlamaIndex评测：代码优先的RAG框架](/zh/power-local-llm/llamaindex-rag-framework-review) -- 深入解析LlamaIndex的架构、LlamaCloud定价与可运行代码示例。',
           ],
         },
         sources: {
