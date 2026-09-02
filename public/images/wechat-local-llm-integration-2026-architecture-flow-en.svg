@@ -37,7 +37,7 @@
   <!-- Step 5 -->
   <circle cx="730" cy="110" r="20" fill="#34A853"/>
   <text x="730" y="116" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
-  <text x="730" y="147" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen3 7B Reply</text>
+  <text x="730" y="147" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Qwen3 8B Reply</text>
   <text x="730" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">8–15 tok/s</text>
   <text x="730" y="176" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#49454F" text-anchor="middle">Q4_K_M, 5.5 GB</text>
 
