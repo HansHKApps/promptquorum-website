@@ -143,6 +143,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'ragflow-document-understanding-rag-review',
   // Khoj review — 2026-09-02
   'khoj-ai-second-brain-review',
+  'real-esrgan-ai-image-upscaler-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
