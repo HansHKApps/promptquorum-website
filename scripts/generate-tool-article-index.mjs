@@ -17,12 +17,17 @@
 // unlikely. Ambiguous short/common-word tool names (e.g. "Jan") are printed
 // as warnings for manual spot-check, not blocked.
 //
-// Sorting: <=3 matches for a tool → newest dateModified first. >3 matches →
-// ranked by GSC clicks from docs/gsc-page-performance.json (a point-in-time
-// snapshot; see that file's header for how to refresh it), joined on
-// (cluster, slug); articles with no GSC entry (new/unindexed) sort last,
-// ordered among themselves by dateModified. Raw click counts are never
-// written to the output — they are an internal ranking signal only.
+// Tiering: each match is classified against the article's EN content —
+// Tier 1 ("about") if the tool name appears in the title/seoTitle, in a
+// section heading (H2/H3 `title` field), or gets >=2 sentences of specific
+// detail (a digit/measurement alongside the name) somewhere in the body.
+// Everything else that matched is Tier 2 ("mentioned") — a passing namedrop.
+//
+// Sorting + cap: within each tier, newest dateModified first. Tier 1 is
+// shown first (up to MAX_VISIBLE), Tier 2 fills any remaining slots. If the
+// combined pool exceeds MAX_VISIBLE, the excess is reported via
+// totalCount/capped so the UI can render a "+N more" affordance instead of
+// silently truncating or dumping the full list.
 //
 // Usage:
 //   node scripts/generate-tool-article-index.mjs          # write the file
@@ -36,9 +41,8 @@ import { createJiti } from 'jiti'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const OUTPUT_PATH = path.join(ROOT, 'src/generated/tool-article-index.json')
-const GSC_PATH = path.join(ROOT, 'docs/gsc-page-performance.json')
 const DIRECTORY_SLUG = 'local-llm-software-directory-2026'
-const MAX_VISIBLE = 12
+const MAX_VISIBLE = 10
 
 const jiti = createJiti(import.meta.url, { tsconfigPaths: true })
 
@@ -66,6 +70,40 @@ function isAmbiguous(name) {
 
 function enUrl(cluster, slug) {
   return `/${cluster}/${slug}`
+}
+
+// Flatten an EN article's prose into plain-text blocks (section body content
+// and list items) so tier classification can scan sentences without caring
+// about the section shape (string vs string[] vs items[]).
+function collectTextBlocks(en) {
+  const blocks = []
+  for (const section of Object.values(en.sections ?? {})) {
+    if (!section) continue
+    if (typeof section.content === 'string') blocks.push(section.content)
+    else if (Array.isArray(section.content)) blocks.push(...section.content.filter((c) => typeof c === 'string'))
+    if (Array.isArray(section.items)) blocks.push(...section.items.filter((i) => typeof i === 'string'))
+  }
+  return blocks
+}
+
+// Tier 1 ("about") if the tool is in the title/heading, or gets >=2
+// sentences of specific detail (a digit/measurement near the mention).
+// Everything else that matched the coarse scan is Tier 2 ("mentioned").
+function classifyTier(pattern, en) {
+  if (pattern.test(en.title ?? '') || pattern.test(en.seoTitle ?? '')) return 'about'
+
+  for (const section of Object.values(en.sections ?? {})) {
+    if (section?.title && pattern.test(section.title)) return 'about'
+  }
+
+  let detailSentences = 0
+  for (const block of collectTextBlocks(en)) {
+    for (const sentence of block.split(/(?<=[.!?])\s+/)) {
+      if (!pattern.test(sentence)) continue
+      if (/\d/.test(sentence) || sentence.length > 120) detailSentences++
+    }
+  }
+  return detailSentences >= 2 ? 'about' : 'mentioned'
 }
 
 async function main() {
@@ -117,12 +155,13 @@ async function main() {
         title: en.title ?? slug,
         dateModified: en.dateModified ?? en.publishDate ?? null,
         rawText: fs.readFileSync(path.join(dirPath, file), 'utf-8'),
+        en,
       })
     }
   }
   console.log(`Scanning ${candidates.length} candidate articles (local-llms + power-local-llm).`)
 
-  // ── 3. Match: case-insensitive whole-word/phrase scan of raw file text ──
+  // ── 3. Match (coarse scan) + classify each match into a tier ──
   const index = {}
   for (const toolName of toolNames) {
     const pattern = new RegExp(`(?<![A-Za-z0-9])${escapeRegex(toolName)}(?![A-Za-z0-9])`, 'i')
@@ -134,35 +173,25 @@ async function main() {
         title: c.title,
         url: enUrl(c.cluster, c.slug),
         dateModified: c.dateModified,
+        tier: classifyTier(pattern, c.en),
       }))
     if (matches.length > 0) index[toolName] = matches
   }
 
-  // ── 4. Sort + cap ──
-  const gsc = JSON.parse(fs.readFileSync(GSC_PATH, 'utf-8'))
-  const clicksByKey = new Map(gsc.pages.map((p) => [`${p.cluster}/${p.slug}`, p.clicks]))
+  // ── 4. Sort (most recent first) + cap: Tier 1 first, Tier 2 fills the rest ──
+  const byRecency = (a, b) => (b.dateModified ?? '').localeCompare(a.dateModified ?? '')
 
   const result = {}
   for (const [toolName, list] of Object.entries(index)) {
-    if (list.length <= 3) {
-      list.sort((a, b) => (b.dateModified ?? '').localeCompare(a.dateModified ?? ''))
-    } else {
-      list.sort((a, b) => {
-        const clicksA = clicksByKey.get(`${a.cluster}/${a.slug}`)
-        const clicksB = clicksByKey.get(`${b.cluster}/${b.slug}`)
-        if (clicksA == null && clicksB == null) return (b.dateModified ?? '').localeCompare(a.dateModified ?? '')
-        if (clicksA == null) return 1
-        if (clicksB == null) return -1
-        return clicksB - clicksA
-      })
-    }
+    const about = list.filter((a) => a.tier === 'about').sort(byRecency)
+    const mentioned = list.filter((a) => a.tier === 'mentioned').sort(byRecency)
 
-    const totalCount = list.length
-    const capped = totalCount > MAX_VISIBLE
+    const totalCount = about.length + mentioned.length
+    const articles = [...about, ...mentioned].slice(0, MAX_VISIBLE)
     result[toolName] = {
-      articles: capped ? list.slice(0, MAX_VISIBLE) : list,
+      articles,
       totalCount,
-      capped,
+      capped: totalCount > MAX_VISIBLE,
     }
   }
 

@@ -12,6 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Best Models',
       title: 'Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026',
       last_full_refresh: '2026-09-02',
+      dateModified: '2026-09-02',
       next_refresh_due: '2027-03-02',
       current_models_mentioned: ['Phi-4 Mini 3.8B', 'Gemma 4 E2B', 'Qwen2.5 3B', 'Llama 3.2 3B', 'Llama 3.2 1B'],
       seoTitle: 'Best Small Local LLM Models 2026: Top 5 Sub-4B Ranked',

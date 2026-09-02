@@ -28,7 +28,7 @@ import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 
-type ToolArticleEntry = { cluster: string; slug: string; title: string; url: string; dateModified: string | null }
+type ToolArticleEntry = { cluster: string; slug: string; title: string; url: string; dateModified: string | null; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number; capped: boolean }>
 
 interface Props {
@@ -124,6 +124,33 @@ const POST_UI: Record<string, Record<string, string>> = {
     pt: '+{count} mais não exibidos',
     ar: '+{count} أخرى غير معروضة',
     ko: '표시되지 않은 {count}개 더보기',
+  },
+  // Tier-2-only summary label (no Tier-1 "about" matches for this tool) —
+  // "Also mentioned in {tool} (N)". Used as the <summary> when there is
+  // nothing substantive to head the disclosure with.
+  articlesMentionedIn: {
+    en: 'Also mentioned in {tool} ({count})',
+    de: 'Auch erwähnt in {tool} ({count})',
+    fr: 'Également mentionné dans {tool} ({count})',
+    ja: '{tool}にも言及（{count}件）',
+    zh: '也提及{tool}（{count}篇）',
+    es: 'También mencionado en {tool} ({count})',
+    pt: 'Também mencionado em {tool} ({count})',
+    ar: 'مذكور أيضًا في {tool} ({count})',
+    ko: '{tool}에도 언급됨 ({count}개)',
+  },
+  // Sub-header used inside the disclosure when Tier-1 ("about") matches are
+  // also present, so the tool name isn't repeated a second time.
+  articlesMentionedInHeader: {
+    en: 'Also mentioned in:',
+    de: 'Auch erwähnt in:',
+    fr: 'Également mentionné dans :',
+    ja: 'その他の言及:',
+    zh: '其他提及：',
+    es: 'También mencionado en:',
+    pt: 'Também mencionado em:',
+    ar: 'مذكور أيضًا في:',
+    ko: '기타 언급:',
   },
   ctaText: {
     en: 'Run PromptQuorum with a local LLM, your own API keys, or both — you pick the backend.',
@@ -499,28 +526,49 @@ function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang:
   const entry = (toolArticleIndex as ToolArticleIndex)[toolName]
   if (!entry || entry.articles.length === 0) return null
 
-  const labelTemplate = POST_UI.articlesAbout[lang] ?? POST_UI.articlesAbout['en']
-  const label = labelTemplate.replace('{tool}', toolName).replace('{count}', String(entry.totalCount))
+  const about = entry.articles.filter((a) => a.tier === 'about')
+  const mentioned = entry.articles.filter((a) => a.tier === 'mentioned')
+  const hasAbout = about.length > 0
+
+  const summaryTemplate = hasAbout
+    ? (POST_UI.articlesAbout[lang] ?? POST_UI.articlesAbout['en'])
+    : (POST_UI.articlesMentionedIn[lang] ?? POST_UI.articlesMentionedIn['en'])
+  const summaryCount = hasAbout ? about.length : mentioned.length
+  const label = summaryTemplate.replace('{tool}', toolName).replace('{count}', String(summaryCount))
+
   const updatedLabel = POST_UI.articlesAboutUpdated[lang] ?? POST_UI.articlesAboutUpdated['en']
   const moreTemplate = POST_UI.articlesAboutMore[lang] ?? POST_UI.articlesAboutMore['en']
+  const mentionedInHeader = POST_UI.articlesMentionedInHeader[lang] ?? POST_UI.articlesMentionedInHeader['en']
+
+  const renderList = (articles: ToolArticleEntry[]) => (
+    <ul className="mt-2 space-y-1.5 text-sm">
+      {articles.map((a) => (
+        <li key={`${a.cluster}/${a.slug}`} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+          <Link href={a.url} className="text-primary hover:underline">{a.title}</Link>
+          {a.dateModified && (
+            <span className="text-xs text-text-secondary shrink-0">
+              {updatedLabel} {formatDisplayDate(a.dateModified, lang)}
+            </span>
+          )}
+        </li>
+      ))}
+    </ul>
+  )
 
   return (
     <details className="mt-3 group">
       <summary className="cursor-pointer text-sm font-semibold text-primary select-none">
         {label}
       </summary>
-      <ul className="mt-2 space-y-1.5 text-sm">
-        {entry.articles.map((a) => (
-          <li key={`${a.cluster}/${a.slug}`} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
-            <Link href={a.url} className="text-primary hover:underline">{a.title}</Link>
-            {a.dateModified && (
-              <span className="text-xs text-text-secondary shrink-0">
-                {updatedLabel} {formatDisplayDate(a.dateModified, lang)}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
+      {hasAbout && renderList(about)}
+      {mentioned.length > 0 && (
+        <>
+          <p className={hasAbout ? 'mt-3 text-xs font-semibold text-text-secondary uppercase tracking-wide' : 'sr-only'}>
+            {mentionedInHeader}
+          </p>
+          {renderList(mentioned)}
+        </>
+      )}
       {entry.capped && (
         <p className="mt-1.5 text-xs text-text-secondary italic">
           {moreTemplate.replace('{count}', String(entry.totalCount - entry.articles.length))}
