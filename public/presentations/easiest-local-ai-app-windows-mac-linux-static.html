@@ -171,7 +171,7 @@ const CONTENT = {
           { Feature: 'Model library', 'LM Studio': '50,000+ GGUF models', Jan: 'Curated + HuggingFace', GPT4All: '~20 curated models' },
           { Feature: 'Local API', 'LM Studio': 'Yes (OpenAI-compat.)', Jan: 'Yes (OpenAI-compat.)', GPT4All: 'Yes (limited)' },
           { Feature: 'Chat history', 'LM Studio': 'Yes', Jan: 'Yes', GPT4All: 'Single session only' },
-          { Feature: 'Licence', 'LM Studio': 'Free, source-available', Jan: 'AGPLv3 (OSS)', GPT4All: 'MIT (OSS)' },
+          { Feature: 'Licence', 'LM Studio': 'Free, source-available', Jan: 'Apache 2.0 (OSS)', GPT4All: 'MIT (OSS)' },
           { Feature: 'Linux', 'LM Studio': 'AppImage, .deb', Jan: 'AppImage', GPT4All: 'AppImage' },
           { Feature: 'Best for', 'LM Studio': 'Best UI + dev API', Jan: 'Open-source users', GPT4All: 'Pure beginners' }
         ]
@@ -216,7 +216,7 @@ const CONTENT = {
           '<strong>≤8 GB RAM:</strong> Phi-4 Mini (3.8B Q4, ~2.7 GB) — 15–30 tok/s on Apple Silicon; 5–10 tok/s CPU-only',
           '<strong>8–16 GB RAM:</strong> Llama 3.2 3B (Q4) or Qwen3 8B (Q4) — 20–40 tok/s on Apple Silicon',
           '<strong>16–32 GB RAM:</strong> Qwen3 14B (Q4, ~8.9 GB) — 15–25 tok/s on Apple Silicon',
-          '<strong>32 GB+ Apple Silicon or 24 GB VRAM:</strong> Llama 3.3 70B (~40 GB) — 10–20 tok/s on M5 Max',
+          '<strong>32 GB+ Apple Silicon or 24 GB VRAM:</strong> Qwen 3.6 27B (~16 GB) — real-time on M4 Pro/M5-class hardware',
           '<strong>Tip:</strong> Start with the smallest model that runs at 8+ tok/s — fast and small beats slow and large'
         ]
       },
@@ -318,7 +318,7 @@ const CONTENT = {
           { Funktion: 'Modellbibliothek', 'LM Studio': '50.000+ GGUF-Modelle', Jan: 'Kuratiert + HuggingFace', GPT4All: '~20 Modelle' },
           { Funktion: 'Lokale API', 'LM Studio': 'Ja (OpenAI-kompatibel)', Jan: 'Ja (OpenAI-kompatibel)', GPT4All: 'Ja (eingeschränkt)' },
           { Funktion: 'Chat-Verlauf', 'LM Studio': 'Ja', Jan: 'Ja', GPT4All: 'Nur einzelne Sitzung' },
-          { Funktion: 'Lizenz', 'LM Studio': 'Kostenlos, quelloffen', Jan: 'AGPLv3 (OSS)', GPT4All: 'MIT (OSS)' },
+          { Funktion: 'Lizenz', 'LM Studio': 'Kostenlos, quelloffen', Jan: 'Apache 2.0 (OSS)', GPT4All: 'MIT (OSS)' },
           { Funktion: 'Linux', 'LM Studio': 'AppImage, .deb', Jan: 'AppImage', GPT4All: 'AppImage' },
           { Funktion: 'Ideal für', 'LM Studio': 'Beste UI + Entwickler-API', Jan: 'Open-Source-Nutzer', GPT4All: 'Absolute Anfänger' }
         ]
@@ -363,7 +363,7 @@ const CONTENT = {
           '<strong>≤8 GB RAM:</strong> Phi-4 Mini (3,8B Q4, ~2,7 GB) — 15–30 Token/Sek. auf Apple Silicon',
           '<strong>8–16 GB RAM:</strong> Llama 3.2 3B (Q4) oder Qwen3 8B (Q4) — 20–40 Token/Sek. Apple Silicon',
           '<strong>16–32 GB RAM:</strong> Qwen3 14B (Q4, ~8,9 GB) — 15–25 Token/Sek. auf Apple Silicon',
-          '<strong>32 GB+ Apple Silicon oder 24 GB VRAM:</strong> Llama 3.3 70B (~40 GB) — 10–20 Token/Sek. M5 Max',
+          '<strong>32 GB+ Apple Silicon oder 24 GB VRAM:</strong> Qwen 3.6 27B (~16 GB) — Echtzeit auf M4-Pro-/M5-Klasse-Hardware',
           '<strong>Tipp:</strong> Beginnen Sie mit dem kleinsten Modell, das >8 Token/Sek. läuft'
         ]
       },
@@ -465,7 +465,7 @@ const CONTENT = {
           { Critère: 'Performance (M3, Llama 8B)', 'LM Studio': '28 tok/s', Jan: '22 tok/s', GPT4All: '16 tok/s' },
           { Critère: 'Bibliothèque modèles', 'LM Studio': '50 000+ GGUF', Jan: 'Curated + HuggingFace', GPT4All: '~20 curés' },
           { Critère: 'API locale', 'LM Studio': 'Oui', Jan: 'Oui', GPT4All: 'Oui' },
-          { Critère: 'Licence', 'LM Studio': 'Propriétaire (gratuit)', Jan: 'AGPL (open-source)', GPT4All: 'MIT (open-source)' },
+          { Critère: 'Licence', 'LM Studio': 'Propriétaire (gratuit)', Jan: 'Apache 2.0 (open-source)', GPT4All: 'MIT (open-source)' },
           { Critère: 'Linux', 'LM Studio': 'AppImage, .deb', Jan: 'AppImage', GPT4All: 'AppImage' }
         ]
       },
@@ -508,8 +508,8 @@ const CONTENT = {
         items: [
           '<strong>≤8 GB RAM :</strong> Phi-4 Mini (3B, ~3 GB) — 15–30 tok/s sur Apple Silicon',
           '<strong>8–16 GB RAM :</strong> Llama 3.2 3B ou Qwen3 8B — bon équilibre vitesse/qualité',
-          '<strong>Apple Silicon M3–M5 :</strong> Qwen3 8B ou Llama 3.3 8B — excellentes vitesse et qualité',
-          '<strong>NVIDIA RTX 3060+ :</strong> Llama 3.3 8B, Mistral Small — accélération GPU 5–10x',
+          '<strong>Apple Silicon M3–M5 :</strong> Qwen3 8B ou gpt-oss 20B — excellentes vitesse et qualité',
+          '<strong>NVIDIA RTX 3060+ :</strong> Qwen3 8B, gpt-oss 20B — accélération GPU 5–10x',
           '<strong>Conseil :</strong> commencez avec le modèle le plus petit qui tourne à >8 tok/s'
         ]
       },
@@ -611,7 +611,7 @@ const CONTENT = {
           { '基準': 'パフォーマンス（M3、Llama 8B）', 'LM Studio': '28 tok/s', Jan: '22 tok/s', GPT4All: '16 tok/s' },
           { '基準': 'モデルライブラリ', 'LM Studio': '50,000+ GGUF', Jan: 'キュレーション+HuggingFace', GPT4All: '約20モデル' },
           { '基準': 'ローカルAPI', 'LM Studio': 'あり', Jan: 'あり', GPT4All: 'あり' },
-          { '基準': 'ライセンス', 'LM Studio': 'プロプライエタリ（無料）', Jan: 'AGPL（OSS）', GPT4All: 'MIT（OSS）' },
+          { '基準': 'ライセンス', 'LM Studio': 'プロプライエタリ（無料）', Jan: 'Apache 2.0（OSS）', GPT4All: 'MIT（OSS）' },
           { '基準': 'Linux', 'LM Studio': 'AppImage、.deb', Jan: 'AppImage', GPT4All: 'AppImage' }
         ]
       },
@@ -654,8 +654,8 @@ const CONTENT = {
         items: [
           '<strong>≤8 GB RAM：</strong>Phi-4 Mini（3.8B Q4、~2.7 GB）— Apple Siliconで15–30 tok/s',
           '<strong>8–16 GB RAM：</strong>Llama 3.2 3B（Q4）またはQwen3 8B（Q4）— 速度と品質のバランス良好',
-          '<strong>Apple Silicon M3–M5：</strong>Qwen3 8BまたはLlama 3.3 8B — 優れた品質と速度',
-          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B、Mistral Small — GPU加速で5–10倍高速化',
+          '<strong>Apple Silicon M3–M5：</strong>Qwen3 8Bまたはgpt-oss 20B — 優れた品質と速度',
+          '<strong>NVIDIA RTX 3060+：</strong>Qwen3 8B、gpt-oss 20B — GPU加速で5–10倍高速化',
           '<strong>ヒント：</strong>8 tok/s以上で動作する最小モデルから始める'
         ]
       },
@@ -757,7 +757,7 @@ const CONTENT = {
           { '标准': '性能（M3 Mac，Llama 8B）', 'LM Studio': '28 tok/s', Jan: '22 tok/s', GPT4All: '16 tok/s' },
           { '标准': '模型库', 'LM Studio': '50,000+ GGUF', Jan: '精选+HuggingFace', GPT4All: '约20个精选' },
           { '标准': '本地API', 'LM Studio': '是', Jan: '是', GPT4All: '是' },
-          { '标准': '许可证', 'LM Studio': '专有（免费）', Jan: 'AGPL（开源）', GPT4All: 'MIT（开源）' },
+          { '标准': '许可证', 'LM Studio': '专有（免费）', Jan: 'Apache 2.0（开源）', GPT4All: 'MIT（开源）' },
           { '标准': 'Linux', 'LM Studio': 'AppImage，.deb', Jan: 'AppImage', GPT4All: 'AppImage' }
         ]
       },
@@ -800,8 +800,8 @@ const CONTENT = {
         items: [
           '<strong>≤8 GB RAM：</strong>Phi-4 Mini（3.8B Q4，约2.7 GB）— Apple Silicon上15–30 tok/s',
           '<strong>8–16 GB RAM：</strong>Llama 3.2 3B（Q4）或Qwen3 8B（Q4）— 速度与质量的良好平衡',
-          '<strong>Apple Silicon M3–M5：</strong>Qwen3 8B或Llama 3.3 8B — 卓越的质量和速度',
-          '<strong>NVIDIA RTX 3060+：</strong>Llama 3.3 8B，Mistral Small — GPU加速5–10倍',
+          '<strong>Apple Silicon M3–M5：</strong>Qwen3 8B或gpt-oss 20B — 卓越的质量和速度',
+          '<strong>NVIDIA RTX 3060+：</strong>Qwen3 8B，gpt-oss 20B — GPU加速5–10倍',
           '<strong>提示：</strong>从能以8+ tok/s运行的最小模型开始'
         ]
       },
