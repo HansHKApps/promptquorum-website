@@ -35,6 +35,7 @@ import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local
 import { article as a_best_local_coding_models_2026 } from './articles/best-local-coding-models-2026'
 import { article as a_best_local_llm_apps_android_2026 } from './articles/best-local-llm-apps-android-2026'
 import { article as a_best_local_llm_apps_iphone_2026 } from './articles/best-local-llm-apps-iphone-2026'
+import { article as a_enclave_ai_review_2026 } from './articles/enclave-ai-review-2026'
 import { article as a_best_local_llm_creative_writing_2026 } from './articles/best-local-llm-creative-writing-2026'
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
@@ -239,4 +240,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
   'ai-generated-content-ip-risk':                      a_ai_generated_content_ip_risk,
   'us-state-ai-employment-laws-compliance':            a_us_state_ai_employment_laws_compliance,
+  // Enclave AI review — 2026-09-03
+  'enclave-ai-review-2026':                            a_enclave_ai_review_2026,
 }
