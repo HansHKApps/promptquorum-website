@@ -32,6 +32,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-local-models-tool-calling-2026':         'best-local-models-tool-calling-2026',
   'autonomous-local-agents-actually-work':       'autonomous-local-agents-actually-work',
   'autogpt-local-review-2026':                   'autogpt-local-review-2026',
+  'open-interpreter-review':                     'open-interpreter-review',
   'replace-zapier-with-local-ai-agents':         'replace-zapier-with-local-ai-agents',
   'local-ai-agents-business-workflows-eu-compliance': 'local-ai-agents-business-workflows-eu-compliance',
   'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',
@@ -136,6 +137,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'khoj-ai-second-brain-review':                  'khoj-ai-second-brain-review',
   // Real-ESRGAN review 2026-09-02
   'real-esrgan-ai-image-upscaler-review':         'real-esrgan-ai-image-upscaler-review',
+  // LibreChat review 2026-09-03
+  'librechat-review-2026':                        'librechat-review-2026',
 
   // Enterprise/B2B — customer support & call centers — 2026-09-03
   'best-local-llms-customer-support-call-centers-enterprise': 'best-local-llms-customer-support-call-centers-enterprise',

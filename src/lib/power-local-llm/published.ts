@@ -160,6 +160,10 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-ai-marketing-software-enterprise-2026',
   // AutoGPT classic-vs-Platform review — 2026-09-02
   'autogpt-local-review-2026',
+  // LibreChat review — 2026-09-03
+  'librechat-review-2026',
+  // Open Interpreter Rust/Codex-fork review — 2026-09-03
+  'open-interpreter-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
