@@ -2818,30 +2818,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    title: '2026年ElevenLabs与本地TTS(Piper与XTTS)对比：质量、成本、隐私与声音克隆',
-    seoTitle: 'ElevenLabs对比Piper对比XTTS v2：质量、成本与隐私',
-    intro: '对大多数内容创作者、YouTuber和代理机构来说，ElevenLabs在速度和便利性上更胜一筹。对需要离线或嵌入式TTS的开发者来说，Piper这类本地引擎能提供更多控制权——但代价是搭建时间。若专门谈本地声音克隆，XTTS v2是值得关注的选项。本指南梳理真实的取舍，让你不必花一周时间摸索就能做出正确选择。',
-    metaDescription: '对比ElevenLabs与本地TTS(Piper、XTTS v2)。了解质量、搭建、隐私、成本和离线使用方面的取舍，选出适合你的TTS方案。',
+    title: '2026年ElevenLabs对比Piper对比XTTS v2：哪个TTS最好？',
+    seoTitle: 'ElevenLabs对比Piper对比XTTS v2(2026)：哪个最好？',
+    intro: 'ElevenLabs提供通往成品级AI语音最简单的路径。Piper是CPU-only和离线设备的轻量级本地选择。XTTS v2是本地声音克隆和隐私最重要时更值得关注的选项。为YouTube、播客、语音智能体、有声书或商业内容选择TTS系统时，关键不只是哪个语音听起来最好——而是你想要托管云服务，还是自己运维的本地语音技术栈。',
+    metaDescription: 'ElevenLabs：通往成品级AI语音最快的路径。Piper：免费、对CPU友好的本地方案。XTTS v2：本地声音克隆的最佳选择。完整对比。',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-03',
     readTime: '12分钟阅读',
     educationalLevel: 'Intermediate',
     audience: '在云端TTS和自托管语音合成之间做选择的内容创作者、开发者与团队。',
     primaryTerm: 'ElevenLabs对比本地TTS',
     targetKeywords: ['ElevenLabs对比Piper', '本地TTS', 'Piper TTS', 'XTTS v2', '云端与本地文本转语音', '免费TTS', '声音克隆', '离线语音合成'],
     twitterDescription: '该付费用ElevenLabs还是本地跑Piper？对比云端TTS与自托管语音合成。',
-    leadAnswerBlock: '**如果明天就要交付配音，先用ElevenLabs（1万免费额度，无需搭建，5分钟出音频）。** 对纯离线系统、嵌入式产品或隐私敏感的工作流，Piper是轻量级本地TTS的战略之选——但你要花1-2小时搭建。若专门谈本地声音克隆，XTTS v2是可选方案，代价是1-2天的搭建时间加一块GPU。大多数创作者应先试用ElevenLabs。',
+    leadAnswerBlock: '**对大多数创作者和企业来说，ElevenLabs是综合最佳之选——一个托管语音平台，有1万额度的免费版，无需本地搭建。** Piper是CPU-only和离线设备（如树莓派）的最佳免费/本地方案。XTTS v2是专门针对本地声音克隆的最佳选择，代价是需要GPU和明显更多的搭建工作。',
     quickAnswerTop: {
       zh: {
         question: '我该用ElevenLabs还是本地TTS？',
-        answer: 'ElevenLabs是一个托管云平台——快速、成品化、无需操心。几分钟内就能生成配音。本地TTS（Piper、XTTS v2）能给你控制权，但需要搭建、硬件投入和运维责任。赶工期的制作者：选ElevenLabs。离线或嵌入式系统：选本地TTS。',
+        answer: 'ElevenLabs是一个托管云平台——快速、成品化、无需操心，有免费版和按使用付费的API定价。本地TTS（Piper、XTTS v2）能给你离线控制权，但需要搭建、硬件投入和运维责任。综合最佳：ElevenLabs。离线/嵌入式设备最佳：Piper。本地声音克隆最佳：XTTS v2。',
         bullets: [
-          'ElevenLabs：每月0-22美元，浏览器端使用，每月1万-12.1万额度，付费方案含商用许可。几分钟出配音。',
-          'Piper：免费且MIT许可，对CPU友好，可离线运行。语音选择有限。搭建时间：几小时。',
-          'XTTS v2：免费，支持声音克隆，需要更多搭建和GPU。搭建时间：1-2天。',
-          '对大多数创作者：先用ElevenLabs免费版起步，遇到具体限制再转本地方案。'
+          'ElevenLabs：免费版（每月1万额度）、Starter每月6美元（3万额度）、Creator每月22美元（12.1万额度）、Pro每月99美元（60万额度）、Scale每月299美元、Business每月990美元。还提供无需订阅的按使用付费API额度。',
+          'ElevenLabs于2026年5月将自助API价格最多下调55%，并为不想按月订阅的开发者推出了按使用付费方案。',
+          'Piper：免费的MIT许可引擎，对CPU友好，安装后可离线运行。个别语音/模型许可可能不同。',
+          'XTTS v2：免费引擎，支持从一段简短参考音频克隆声音，需要更多搭建、通常还需要GPU。',
+          '对大多数创作者：先测试ElevenLabs免费版。只有遇到具体的离线、隐私或规模限制时才转向本地TTS。'
         ],
-        updatedDate: '2026-08'
+        updatedDate: '2026-09'
       }
     },
     snippetBlocks: [
@@ -2857,7 +2858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/elevenlabs-vs-local-tts-hero-zh.webp',
     toc: [
       { label: '快速答案', anchor: 'quick-answer' },
-      { label: '简短答案', anchor: 'short-answer' },
+      { label: '我们的结论', anchor: 'short-answer' },
       { label: '大多数人的推荐路径', anchor: 'recommended-path' },
       { label: '一览表', anchor: 'at-a-glance' },
       { label: '真正的对比：服务对比技术栈', anchor: 'service-vs-stack' },
@@ -2881,7 +2882,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       {
         url: 'https://elevenlabs.io/pricing',
         productName: 'ElevenLabs',
-        productCategory: 'Cloud TTS / Voice AI'
+        productCategory: 'Cloud TTS / Voice AI',
+        label: '免费试用ElevenLabs'
       },
       {
         url: 'https://github.com/rhasspy/piper',
@@ -2897,12 +2899,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabs是一个托管语音平台。它目前的方案将文本转语音与其他语音、媒体功能捆绑在一起；额度在各产品间共享。免费版列出每月1万额度，付费方案则增加商用许可和更高的额度上限。由于功能、额度和价格可能变动，依赖任何数字前请先查阅实时定价页面。\n\nPiper是一个开源本地TTS引擎。Piper软件仓库本身采用MIT许可，但各个语音数据集/模型检查点的许可和适用范围可能不同。请将引擎许可和所选语音/模型许可视为两个独立的问题。\n\nXTTS v2及其他支持本地克隆的技术栈能给你更强的本地控制权，但通常需要更多搭建工作、更强的硬件，以及对模型、语音和商用条款的更细致审查。\n\n因此，真正的决策不是"哪个语音最好？"而是：**你想要一个屏蔽了基础设施细节的生产级服务，还是一个由你自己运维和控制的本地语音系统？**\n\n本指南中的价格和方案详情核实于2026年8月——决定前请务必在实时定价页面确认最新数字。'
+        content: 'ElevenLabs是一个托管语音平台。它目前的方案将文本转语音与其他语音、媒体功能捆绑在一起；额度在各产品间共享。免费版列出每月1万额度，付费方案则增加商用许可和更高的额度上限。由于功能、额度和价格可能变动，依赖任何数字前请先查阅实时定价页面。\n\nPiper是一个开源本地TTS引擎。Piper软件仓库本身采用MIT许可，但各个语音数据集/模型检查点的许可和适用范围可能不同。请将引擎许可和所选语音/模型许可视为两个独立的问题。\n\nXTTS v2及其他支持本地克隆的技术栈能给你更强的本地控制权，但通常需要更多搭建工作、更强的硬件，以及对模型、语音和商用条款的更细致审查。\n\n因此，真正的决策不是"哪个语音最好？"而是：**你想要一个屏蔽了基础设施细节的生产级服务，还是一个由你自己运维和控制的本地语音系统？**\n\n本指南中的价格和方案详情会随每次更新与实时定价页面核对——由于服务商会在不另行通知的情况下调整方案和额度，请务必在那里确认最新数字。'
       },
       shortAnswer: {
         id: 'short-answer',
-        title: '简短答案',
-        content: '三种工具，三种不同的用途。根据你的实际需求来选，而不是哪个听起来最厉害：',
+        title: '我们的结论',
+        content: '🏆 **综合最佳：** ElevenLabs——无需本地搭建，通往成品级专业语音最简单的路径。\n💰 **最佳免费/本地TTS：** Piper——免费、MIT许可、对CPU友好、可离线运行。\n🔒 **本地声音克隆最佳：** XTTS v2——在你掌控的硬件上，从一段简短参考音频克隆声音。\n⚡ **今天就要配音的最佳选择：** ElevenLabs。\n🖥️ **树莓派/CPU-only最佳：** Piper。\n🧑‍💻 **追求最大本地控制权的开发者最佳：** XTTS v2。\n\n对大多数创作者和企业来说，从ElevenLabs开始。对离线、隐私敏感或嵌入式应用，看看Piper。对本地声音克隆，研究XTTS v2和同类本地模型。',
         decisionBlock: {
           title: '选择你的TTS方案',
           cloudIf: [
@@ -2919,7 +2921,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '对离线/嵌入式系统：Piper胜出。',
             '对本地声音克隆：XTTS v2是值得关注的选项。'
           ]
-        }
+        },
+        affiliateLinks: [
+          {
+            url: 'https://elevenlabs.io/pricing',
+            productName: 'ElevenLabs',
+            productCategory: 'Cloud TTS / Voice AI',
+            label: '免费试用ElevenLabs'
+          }
+        ]
       },
       recommendedPath: {
         id: 'recommended-path',
@@ -3027,7 +3037,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'Key Point',
-            text: 'ElevenLabs目前列出的免费方案含每月1万额度。其入门版为每月6美元，含3万额度，创作者版则为每月22美元，含12.1万额度；按年计费会改变实际月费。文本转语音使用会消耗共享额度，具体消耗量取决于所选模型和工作流。'
+            text: 'ElevenLabs目前的方案为：Free（0美元，每月1万额度，不含商用许可）、Starter（每月6美元，3万额度，含商用许可）、Creator（每月22美元，12.1万额度）、Pro（每月99美元，60万额度，支持更高质量的192kbps音频）、Scale（每月299美元，180万额度）、Business（每月990美元，600万额度）。企业版为定制报价。按年计费可降低实际月费。文本转语音使用会消耗共享额度，具体消耗量取决于所选模型和工作流——决定前请在实时定价页面确认最新数字。'
+          },
+          {
+            type: 'Key Point',
+            text: '2026年5月7日，ElevenLabs下调了自助API价格——文本转语音最多降55%，语音转文本最多降45%，ElevenAgents最多降20%——并为不想按月订阅的开发者推出了按使用付费额度，无需预先承诺。来源：[ElevenLabs — We\'ve lowered API & Agents pricing and introduced PAYG](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go)。'
           }
         ],
         blockquote: '**明天就要交配音，还不想搭建？** 先用ElevenLabs免费版——每月1万额度，无需信用卡。用你自己的内容测试语音质量。[免费试用ElevenLabs →](https://elevenlabs.io/pricing)',
@@ -3035,7 +3049,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: '免费试用ElevenLabs'
           }
         ]
       },
@@ -3108,16 +3123,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'XTTS v2 or Similar Local Cloning Stack': '本地模型/应用技术栈'
           },
           {
-            Dimension: '搭建时间',
-            ElevenLabs: '几分钟（注册账户、生成）',
-            Piper: '1-2小时',
-            'XTTS v2 or Similar Local Cloning Stack': '4-8小时或更长'
+            Dimension: '搭建',
+            ElevenLabs: '注册账户即可生成——无需安装',
+            Piper: '安装软件+下载语音模型',
+            'XTTS v2 or Similar Local Cloning Stack': '安装软件、下载模型、准备参考语音片段'
           },
           {
             Dimension: '首次出配音时间',
-            ElevenLabs: '5分钟',
-            Piper: '搭建完成后2-3小时',
-            'XTTS v2 or Similar Local Cloning Stack': '搭建完成后1-2天'
+            ElevenLabs: '当场即可，无需本地搭建',
+            Piper: '安装后——Piper官方将自己定位为快速的本地神经网络TTS引擎',
+            'XTTS v2 or Similar Local Cloning Stack': '安装并准备好参考片段后；明显比Piper更繁琐'
           },
           {
             Dimension: '网络要求',
@@ -3251,7 +3266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Scenario: '偶尔一次配音需求（本周一个视频）',
             'Cloud TTS': '简单；按需使用免费版或小额付费方案',
             'Local TTS': '搭建时间可能超过省下的使用费的价值',
-            'Practical answer': '云端始终是正确选择'
+            'Practical answer': '这种情况下云端通常是正确选择'
           },
           {
             Scenario: '每周创作者配音（YouTube、播客）',
@@ -3323,7 +3338,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: '免费试用ElevenLabs'
           }
         ]
       },
@@ -3363,14 +3379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '你在紧张的截稿期内做客户项目。',
           '你不想折腾模型、依赖项或音频工具链。'
         ],
-        blockquote: '如果这说的就是你，不如改用[ElevenLabs免费版 →](https://elevenlabs.io/pricing)——每月1万额度，无需信用卡。',
-        affiliateLinks: [
-          {
-            url: 'https://elevenlabs.io/pricing',
-            productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
-          }
-        ]
+        blockquote: '如果这说的就是你，不如改用[ElevenLabs免费版 →](https://elevenlabs.io/pricing)——每月1万额度，无需信用卡。'
       },
       testingWorkflow: {
         id: 'testing-workflow',
@@ -3402,7 +3411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Piper能替代ElevenLabs吗？',
-            a: '当你需要本地、离线的文本转语音，且可用语音满足你的质量和语言要求时，Piper可以作为替代方案。它并不能自动逐功能替代一个带精选语音库、托管工具和付费服务支持的托管云语音平台。搭建时间很关键：Piper需要1-2小时，ElevenLabs只需5分钟。'
+            a: '当你需要本地、离线的文本转语音，且可用语音满足你的质量和语言要求时，Piper可以作为替代方案。它并不能自动逐功能替代一个带精选语音库、托管工具和付费服务支持的托管云语音平台。搭建时间很关键：Piper需要先安装软件和语音模型，而ElevenLabs只需要一个账户。'
           },
           {
             q: '本地TTS商用是免费的吗？',
@@ -3461,7 +3470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '结论',
-        content: '**如果这周就需要一段配音，先用ElevenLabs。** 免费版（1万额度，无需信用卡）消除了浪费搭建时间的风险。对大多数创作者、YouTuber和营销团队来说，这是正确的第一步。测试质量，评估你的月用量，触及上限后再升级。\n\n**本地TTS只有在你有具体限制条件时才是战略之选：** 离线运行、嵌入式产品、隐私敏感的部署，或者用量高到云端按量计费变得不经济的程度。\n\n真正的决策不是"免费还是付费"，而是你更愿意花5分钟生成一段配音，还是花2-8小时搭建本地基础设施。对大多数人来说，答案是那条5分钟的路径。'
+        content: '**如果这周就需要一段配音，先用ElevenLabs。** 免费版（1万额度，无需信用卡）消除了浪费搭建时间的风险。对大多数创作者、YouTuber和营销团队来说，这是正确的第一步。测试质量，评估你的月用量，触及上限后再升级。\n\n**本地TTS只有在你有具体限制条件时才是战略之选：** 离线运行、嵌入式产品、隐私敏感的部署，或者用量高到云端按量计费变得不经济的程度。\n\n真正的决策不是"免费还是付费"，而是你更愿意今天就在浏览器里生成配音，还是自己安装并运维一套本地语音技术栈。对大多数带着实际配音需求来到这里的人来说，浏览器方案是正确的起点——之后如果不适合，随时可以转向本地TTS。'
       },
       ctaVerdictBlock: {
         id: 'cta-final',
@@ -3477,7 +3486,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: '免费试用ElevenLabs'
           }
         ]
       },
@@ -3494,6 +3504,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://elevenlabs.io/affiliates',
             title: 'ElevenLabs联盟计划',
             description: '官方联盟计划信息。'
+          },
+          {
+            url: 'https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go',
+            title: 'ElevenLabs: Lowered API & Agents Pricing, Introduced Pay-As-You-Go',
+            description: '官方公告：2026年5月的API降价（文本转语音最多降55%）及新的按使用付费方案。'
           },
           {
             url: 'https://github.com/rhasspy/piper',
@@ -3547,10 +3562,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': '2026年ElevenLabs与本地TTS(Piper与XTTS)对比：质量、成本、隐私与声音克隆',
-      'description': '对比ElevenLabs与本地TTS(Piper、XTTS v2)。了解质量、搭建、隐私、成本和离线使用方面的取舍，选出适合你的TTS方案。',
+      'headline': '2026年ElevenLabs对比Piper对比XTTS v2：哪个TTS最好？',
+      'description': 'ElevenLabs：通往成品级AI语音最快的路径。Piper：免费、对CPU友好的本地方案。XTTS v2：本地声音克隆的最佳选择。完整对比。',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-08-23',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -3621,7 +3636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Piper能替代ElevenLabs吗？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '当你需要本地、离线的文本转语音，且可用语音满足你的质量和语言要求时，Piper可以作为替代方案。它并不能自动逐功能替代一个带精选语音库、托管工具和付费服务支持的托管云语音平台。搭建时间很关键：Piper需要1-2小时，ElevenLabs只需5分钟。'
+            'text': '当你需要本地、离线的文本转语音，且可用语音满足你的质量和语言要求时，Piper可以作为替代方案。它并不能自动逐功能替代一个带精选语音库、托管工具和付费服务支持的托管云语音平台。搭建时间很关键：Piper需要先安装软件和语音模型，而ElevenLabs只需要一个账户。'
           }
         },
         {
@@ -3732,7 +3747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
-    current_benchmarks_used: ['每月1万额度（ElevenLabs免费版）', '每月6美元（ElevenLabs入门版）', '每月22美元（ElevenLabs创作者版）']
+    current_benchmarks_used: ['每月1万额度（ElevenLabs Free）', '每月6美元，3万额度（ElevenLabs Starter）', '每月22美元，12.1万额度（ElevenLabs Creator）', '每月99美元，60万额度（ElevenLabs Pro）', '每月299美元，180万额度（ElevenLabs Scale）', '每月990美元，600万额度（ElevenLabs Business）', 'API价格最多下调55%，2026年5月（ElevenLabs）']
   },
   ja: {
     freshness_tier: 'semi_annual',
