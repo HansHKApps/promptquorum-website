@@ -162,6 +162,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'autogpt-local-review-2026',
   // h2oGPT enterprise review — 2026-09-03
   'h2ogpt-review-2026',
+  // Hermes Agent (Nous Research) self-hosted agent review — 2026-09-03
+  'hermes-agent-review-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

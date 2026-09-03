@@ -104,8 +104,10 @@ import { article as a_ragflow_document_understanding_rag_review } from './articl
 import { article as a_khoj_ai_second_brain_review } from './articles/khoj-ai-second-brain-review'
 import { article as a_real_esrgan_ai_image_upscaler_review } from './articles/real-esrgan-ai-image-upscaler-review'
 import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local-review-2026'
+import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-review-2026'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
+  'hermes-agent-review-2026':               a_hermes_agent_review_2026,
   'anythingllm-vs-privategpt-vs-openwebui-rag': a_anythingllm_vs_privategpt_vs_openwebui_rag,
   'autonomous-local-agents-actually-work':  a_autonomous_local_agents_actually_work,
   'babyagi-review-autonomous-agent':        a_babyagi_review_autonomous_agent,
