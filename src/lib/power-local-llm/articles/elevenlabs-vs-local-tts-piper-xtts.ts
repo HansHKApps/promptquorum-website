@@ -3753,30 +3753,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-22',
     theme: 'Voice, Speech & Multimodal',
-    title: 'ElevenLabs対ローカルTTS(Piper・XTTS)徹底比較 2026年版:品質・コスト・プライバシー・音声クローン',
-    seoTitle: 'ElevenLabs対Piper対XTTS v2:品質・コスト・プライバシー比較',
-    intro: 'ほとんどのクリエイター、YouTuber、代理店にとって、ElevenLabsはスピードと利便性で勝ります。オフラインまたは組み込み向けTTSが必要な開発者にとっては、Piperのようなローカルエンジンが制御性を提供しますが、その代償としてセットアップ時間とインフラが必要になります。ローカル音声クローンに特化するなら、XTTS v2が注目の選択肢です。このガイドでは、セットアップに1週間を無駄にしないよう、実際のトレードオフを解説します。',
-    metaDescription: 'ElevenLabsとローカルTTS(Piper、XTTS v2)を比較。品質、セットアップ、プライバシー、コスト、オフライン利用のトレードオフを確認し、最適なTTS戦略を選びましょう。',
+    title: 'ElevenLabs対Piper対XTTS v2:2026年、最良のTTSは?',
+    seoTitle: 'ElevenLabs対Piper対XTTS v2(2026):どれが最良?',
+    intro: 'ElevenLabsは、洗練されたAI音声への最も簡単な道を提供します。Piperは、CPU専用・オフライン端末向けの軽量なローカル選択肢です。XTTS v2は、ローカル音声クローンとプライバシーが最優先の場合により注目すべき選択肢です。YouTube、ポッドキャスト、音声エージェント、オーディオブック、商用コンテンツ向けにTTSシステムを選ぶ際、決め手は音質だけではなく、マネージド型クラウドサービスと自分で運用するローカル音声スタックのどちらを望むかです。',
+    metaDescription: 'ElevenLabsは洗練されたAI音声への最速の道。Piperは無料でCPUに優しいローカル選択肢。XTTS v2はローカル音声クローンで勝る。完全な比較をお届けします。',
     publishDate: '2026-08-22',
-    dateModified: '2026-08-23',
+    dateModified: '2026-09-03',
     readTime: '12分で読了',
     educationalLevel: 'Intermediate',
     audience: 'クラウドTTSとセルフホスト型音声合成のどちらを選ぶか検討しているコンテンツクリエイター、開発者、チーム。',
     primaryTerm: 'ElevenLabs対ローカルTTS',
     targetKeywords: ['ElevenLabs Piper 比較', 'ローカルTTS', 'Piper TTS', 'XTTS v2', 'テキスト読み上げ クラウド対ローカル', '無料TTS', '音声クローン', 'オフライン音声合成'],
     twitterDescription: 'ElevenLabsに課金すべきか、それともPiperをローカルで動かすべきか?クラウドTTSとセルフホスト型音声合成を比較します。',
-    leadAnswerBlock: '**明日までにナレーションが必要なら、ElevenLabs(無料クレジット10,000、セットアップ不要、最初の音声まで5分)から始めましょう。**オフライン専用システム、組み込み製品、プライバシーが重要なワークフローでは、軽量なローカルTTSとしてPiperが戦略的な選択肢になります——ただしセットアップに1〜2時間かかります。ローカル音声クローンに特化するならXTTS v2が選択肢ですが、セットアップに1〜2日とGPUが必要です。ほとんどのクリエイターは、まずElevenLabsを試すべきです。',
+    leadAnswerBlock: '**ほとんどのクリエイターと企業にとって、ElevenLabsが総合的に最良の選択肢です——無料クレジット10,000のプランがあり、ローカルセットアップが不要なマネージド型音声プラットフォームです。** Piperは、Raspberry PiなどCPU専用・オフライン端末向けの最良の無料/ローカル選択肢です。XTTS v2は、ローカル音声クローンに特化した最良の選択肢ですが、GPUと大幅に多いセットアップ作業が必要です。',
     quickAnswerTop: {
       ja: {
         question: 'ElevenLabsとローカルTTS、どちらを使うべき?',
-        answer: 'ElevenLabsはマネージド型のクラウドプラットフォームで、高速・洗練されていて、手間がかかりません。数分でナレーションを生成できます。ローカルTTS(Piper、XTTS v2)は制御性を提供しますが、セットアップ、ハードウェア、運用責任が必要です。締め切りに追われている制作者にはElevenLabs、オフラインや組み込みシステムにはローカルTTSが最適です。',
+        answer: 'ElevenLabsはマネージド型のクラウドプラットフォームで、高速・洗練されていて、手間がかかりません。無料プランと従量課金制のAPI料金があります。ローカルTTS(Piper、XTTS v2)はオフラインでの制御性を提供しますが、セットアップ、ハードウェア、運用責任が必要です。総合的に最良:ElevenLabs。オフライン・組み込み端末に最良:Piper。ローカル音声クローンに最良:XTTS v2。',
         bullets: [
-          'ElevenLabs:月額$0〜$22、ブラウザベース、月間10,000〜121,000クレジット、有料プランでは商用ライセンスも利用可能。数分でナレーション生成。',
-          'Piper:無料でMITライセンス、CPUフレンドリー、オフライン対応可能。音声の選択肢は限定的。セットアップ時間:数時間。',
-          'XTTS v2:無料、音声クローンに対応、セットアップとGPUがより多く必要。セットアップ時間:1〜2日。',
-          'ほとんどのクリエイターには:まずElevenLabsの無料プランから始めましょう。特定の制約に直面した場合のみローカルへ切り替えます。'
+          'ElevenLabs:無料プラン(月間10,000クレジット)、Starter月額$6(30,000クレジット)、Creator月額$22(121,000クレジット)、Pro月額$99(600,000クレジット)、Scale月額$299、Business月額$990。サブスクリプション不要の従量課金APIクレジットも提供。',
+          'ElevenLabsは2026年5月、セルフサービスAPI料金を最大55%引き下げ、月額サブスクリプションを望まない開発者向けに従量課金制を導入しました。',
+          'Piper:無料のMITライセンスエンジン、CPUフレンドリー、インストール後はオフラインで動作。個々の音声・モデルのライセンスは異なる場合があります。',
+          'XTTS v2:無料エンジン、短い参照音声からの音声クローンに対応、より多くのセットアップと通常GPUが必要。',
+          'ほとんどのクリエイターには:まずElevenLabsの無料プランを試しましょう。特定のオフライン、プライバシー、規模の制約に直面した場合のみローカルTTSへ移行してください。'
         ],
-        updatedDate: '2026-08'
+        updatedDate: '2026-09'
       }
     },
     snippetBlocks: [
@@ -3816,7 +3817,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       {
         url: 'https://elevenlabs.io/pricing',
         productName: 'ElevenLabs',
-        productCategory: 'Cloud TTS / Voice AI'
+        productCategory: 'Cloud TTS / Voice AI',
+        label: 'ElevenLabsを無料で試す'
       },
       {
         url: 'https://github.com/rhasspy/piper',
@@ -3832,12 +3834,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       intro: {
         id: 'quick-answer',
-        content: 'ElevenLabsはホスト型の音声プラットフォームです。現在のプランでは、テキスト読み上げが他の音声・メディア機能とセットになっており、クレジットは製品間で共有されます。無料プランは月間10,000クレジットを提供し、有料プランでは商用ライセンスの利用権と割り当ての増加が追加されます。機能、クレジット、料金は変更される可能性があるため、金額を当てにする前に最新の料金ページを確認してください。\n\nPiperはオープンソースのローカルTTSエンジンです。Piperのソフトウェアリポジトリ自体はMITライセンスですが、個々の音声データセットやチェックポイントのライセンスと想定用途は異なる場合があります。エンジンのライセンスと、選択した音声・モデルのライセンスは別問題として扱ってください。\n\nXTTS v2や他のローカルクローン対応スタックは、より高いローカル制御性を提供できますが、多くの場合、より多くのセットアップ、より重いハードウェア、モデル・音声・商用利用条件のより慎重な確認が必要です。\n\nしたがって正しい判断基準は「どの音声が一番優れているか?」ではありません。「インフラを意識せずに済むプロダクションサービスが欲しいのか、それとも自分で運用・制御するローカル音声システムが欲しいのか?」です。\n\nこのガイドの料金とプラン詳細は2026年8月時点で確認したものです——判断の前に必ず最新の料金ページで現在の数値を確認してください。'
+        content: 'ElevenLabsはホスト型の音声プラットフォームです。現在のプランでは、テキスト読み上げが他の音声・メディア機能とセットになっており、クレジットは製品間で共有されます。無料プランは月間10,000クレジットを提供し、有料プランでは商用ライセンスの利用権と割り当ての増加が追加されます。機能、クレジット、料金は変更される可能性があるため、金額を当てにする前に最新の料金ページを確認してください。\n\nPiperはオープンソースのローカルTTSエンジンです。Piperのソフトウェアリポジトリ自体はMITライセンスですが、個々の音声データセットやチェックポイントのライセンスと想定用途は異なる場合があります。エンジンのライセンスと、選択した音声・モデルのライセンスは別問題として扱ってください。\n\nXTTS v2や他のローカルクローン対応スタックは、より高いローカル制御性を提供できますが、多くの場合、より多くのセットアップ、より重いハードウェア、モデル・音声・商用利用条件のより慎重な確認が必要です。\n\nしたがって正しい判断基準は「どの音声が一番優れているか?」ではありません。「インフラを意識せずに済むプロダクションサービスが欲しいのか、それとも自分で運用・制御するローカル音声システムが欲しいのか?」です。\n\nこのガイドの料金とプラン詳細は更新のたびに最新の料金ページと照合しています——プロバイダーは予告なくプランやクレジット割り当てを変更するため、判断の前に必ずそちらで最新の数値を確認してください。'
       },
       shortAnswer: {
         id: 'short-answer',
         title: '結論を先に',
-        content: '3つのツールには3つの異なる役割があります。どれが一番印象的に聞こえるかではなく、実際に何が必要かで選びましょう。',
+        content: '🏆 **総合的に最良:** ElevenLabs——ローカルセットアップ不要で洗練されたプロ品質の音声への最も簡単な道。\n💰 **最良の無料/ローカルTTS:** Piper——無料、MITライセンス、CPUフレンドリー、オフライン対応。\n🔒 **ローカル音声クローンに最良:** XTTS v2——自分で管理するハードウェア上で、短い参照音声からクローンを作成。\n⚡ **今すぐナレーションが欲しい場合に最良:** ElevenLabs。\n🖥️ **Raspberry Pi・CPU専用に最良:** Piper。\n🧑‍💻 **最大限のローカル制御を求める開発者に最良:** XTTS v2。\n\nほとんどのクリエイターと企業は、ElevenLabsから始めてください。オフライン、プライバシー重視、組み込み用途なら、Piperを検討してください。ローカル音声クローンなら、XTTS v2や同等のローカルモデルを調べてください。',
         decisionBlock: {
           title: 'TTSアプローチを選ぶ',
           cloudIf: [
@@ -3854,7 +3856,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'オフライン・組み込みシステムには:Piperが勝ります。',
             'ローカル音声クローンには:XTTS v2が注目の選択肢です。'
           ]
-        }
+        },
+        affiliateLinks: [
+          {
+            url: 'https://elevenlabs.io/pricing',
+            productName: 'ElevenLabs',
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'ElevenLabsを無料で試す'
+          }
+        ]
       },
       recommendedPath: {
         id: 'recommended-path',
@@ -3962,7 +3972,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'Key Point',
-            text: 'ElevenLabsは現在、月間10,000クレジットの無料プランを提供しています。Starterプランは月額$6で30,000クレジット、Creatorプランは月額$22で121,000クレジットとされていますが、年払いにすると実質月額料金が変わります。テキスト読み上げの利用は共有クレジットを消費し、正確なクレジット消費量は選択したモデルとワークフローによって異なります。'
+            text: 'ElevenLabsの現在のプラン:Free(0ドル、月間10,000クレジット、商用ライセンスなし)、Starter(月額$6、30,000クレジット、商用ライセンス込み)、Creator(月額$22、121,000クレジット)、Pro(月額$99、600,000クレジット、192kbpsの高音質)、Scale(月額$299、1,800,000クレジット)、Business(月額$990、6,000,000クレジット)。Enterpriseは個別見積もりです。年払いにすると実質月額料金が下がります。テキスト読み上げの利用は共有クレジットを消費し、正確なクレジット消費量は選択したモデルとワークフローによって異なります——判断の前に最新の料金ページで数値を確認してください。'
+          },
+          {
+            type: 'Key Point',
+            text: '2026年5月7日、ElevenLabsはセルフサービスAPI料金を引き下げました——テキスト読み上げは最大55%、音声認識は最大45%、ElevenAgentsは最大20%——さらに、月額サブスクリプションを望まない開発者向けに、事前のコミットメント不要の従量課金クレジットを導入しました。出典:[ElevenLabs — We\'ve lowered API & Agents pricing and introduced PAYG](https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go)。'
           }
         ],
         blockquote: '**明日までにセットアップなしでナレーションが必要?**ElevenLabsの無料プラン(月間10,000クレジット、カード登録不要)から始めましょう。自分のコンテンツで音声品質をテストできます。[ElevenLabsを無料で試す→](https://elevenlabs.io/pricing)',
@@ -3970,7 +3984,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'ElevenLabsを無料で試す'
           }
         ]
       },
@@ -4043,16 +4058,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'XTTS v2 or Similar Local Cloning Stack': 'ローカルのモデル・アプリケーションスタック'
           },
           {
-            Dimension: 'セットアップ時間',
-            ElevenLabs: '数分(アカウント作成、生成)',
-            Piper: '1〜2時間',
-            'XTTS v2 or Similar Local Cloning Stack': '4〜8時間以上'
+            Dimension: 'セットアップ',
+            ElevenLabs: 'アカウント作成後すぐ生成——インストール不要',
+            Piper: 'ソフトウェアのインストール+音声モデルのダウンロード',
+            'XTTS v2 or Similar Local Cloning Stack': 'ソフトウェアのインストール、モデルのダウンロード、参照音声クリップの準備'
           },
           {
             Dimension: '最初のナレーションまでの時間',
-            ElevenLabs: '5分',
-            Piper: 'セットアップ後2〜3時間',
-            'XTTS v2 or Similar Local Cloning Stack': 'セットアップ後1〜2日'
+            ElevenLabs: '同じセッション内、ローカルセットアップ不要',
+            Piper: 'インストール後——Piperは自らを高速なローカルニューラルTTSエンジンと表現',
+            'XTTS v2 or Similar Local Cloning Stack': 'インストールと参照クリップの準備後——Piperより明らかに手間がかかる'
           },
           {
             Dimension: 'インターネット要件',
@@ -4186,7 +4201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Scenario: '今週の動画向けの単発ナレーション',
             'Cloud TTS': 'シンプル。必要なら無料プランや小規模な有料プランを利用',
             'Local TTS': 'セットアップ時間が利用料金の節約を上回る可能性がある',
-            'Practical answer': '常にクラウドが正しい選択'
+            'Practical answer': 'この場合は通常クラウドが正しい選択'
           },
           {
             Scenario: '週次のクリエイターナレーション(YouTube、ポッドキャスト)',
@@ -4258,7 +4273,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'ElevenLabsを無料で試す'
           }
         ]
       },
@@ -4298,14 +4314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '厳しい締め切りの下でクライアント案件を制作している。',
           'モデル、依存関係、音声ツールのトラブルシューティングをしたくない。'
         ],
-        blockquote: 'これに当てはまるなら、代わりに[ElevenLabsの無料プラン→](https://elevenlabs.io/pricing)から始めましょう——月間10,000クレジット、カード登録不要。',
-        affiliateLinks: [
-          {
-            url: 'https://elevenlabs.io/pricing',
-            productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
-          }
-        ]
+        blockquote: 'これに当てはまるなら、代わりに[ElevenLabsの無料プラン→](https://elevenlabs.io/pricing)から始めましょう——月間10,000クレジット、カード登録不要。'
       },
       testingWorkflow: {
         id: 'testing-workflow',
@@ -4337,7 +4346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'PiperはElevenLabsの代わりになりますか?',
-            a: 'ローカルでオフラインのテキスト読み上げが必要で、利用可能な音声が品質・言語要件を満たす場合、Piperは代替手段になり得ます。ただし、キュレーションされた音声、ホスト型ツール、有料サービスサポートを備えたマネージド型クラウド音声プラットフォームの、機能ごとに同等な代替にはなりません。セットアップ時間も重要です:Piperは1〜2時間、ElevenLabsは5分です。'
+            a: 'ローカルでオフラインのテキスト読み上げが必要で、利用可能な音声が品質・言語要件を満たす場合、Piperは代替手段になり得ます。ただし、キュレーションされた音声、ホスト型ツール、有料サービスサポートを備えたマネージド型クラウド音声プラットフォームの、機能ごとに同等な代替にはなりません。セットアップ時間も重要です:Piperはまずソフトウェアと音声モデルのインストールが必要ですが、ElevenLabsはアカウントだけで済みます。'
           },
           {
             q: 'ローカルTTSは商用利用にも無料ですか?',
@@ -4396,7 +4405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '結論',
-        content: '**今週中にナレーションが必要なら、ElevenLabsから始めましょう。**無料プラン(クレジット10,000、カード登録不要)なら、セットアップ時間を無駄にするリスクがありません。ほとんどのクリエイター、YouTuber、マーケティングチームにとって、これが正しい最初のステップです。品質をテストし、月間の利用量を評価し、上限に達したらアップグレードしましょう。\n\n**ローカルTTSが戦略的な選択になるのは、特定の制約がある場合に限られます。**オフライン動作、組み込み製品、プライバシーが重要なデプロイ、あるいはクラウドの従量課金が採算に合わなくなるほどの大量利用です。\n\n本当の判断基準は「無料か有料か」ではありません。「ナレーション生成に5分かけたいか、それともローカルインフラのセットアップに2〜8時間かけたいか」です。ほとんどの人にとって、答えは5分の道です。'
+        content: '**今週中にナレーションが必要なら、ElevenLabsから始めましょう。**無料プラン(クレジット10,000、カード登録不要)なら、セットアップ時間を無駄にするリスクがありません。ほとんどのクリエイター、YouTuber、マーケティングチームにとって、これが正しい最初のステップです。品質をテストし、月間の利用量を評価し、上限に達したらアップグレードしましょう。\n\n**ローカルTTSが戦略的な選択になるのは、特定の制約がある場合に限られます。**オフライン動作、組み込み製品、プライバシーが重要なデプロイ、あるいはクラウドの従量課金が採算に合わなくなるほどの大量利用です。\n\n本当の判断基準は「無料か有料か」ではありません。「今すぐブラウザでナレーションを生成したいか、それとも自分でローカル音声スタックをインストール・運用したいか」です。実用的なナレーションの課題を抱えてここに来たほとんどの人にとって、ブラウザでの方法が正しい出発点です——合わなければ、後でいつでもローカルTTSに移行できます。'
       },
       ctaVerdictBlock: {
         id: 'cta-final',
@@ -4412,7 +4421,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             url: 'https://elevenlabs.io/pricing',
             productName: 'ElevenLabs',
-            productCategory: 'Cloud TTS / Voice AI'
+            productCategory: 'Cloud TTS / Voice AI',
+            label: 'ElevenLabsを無料で試す'
           }
         ]
       },
@@ -4429,6 +4439,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             url: 'https://elevenlabs.io/affiliates',
             title: 'ElevenLabsアフィリエイトプログラム',
             description: '公式アフィリエイトプログラム情報。'
+          },
+          {
+            url: 'https://elevenlabs.io/blog/weve-lowered-api-agents-pricing-and-introduced-pay-as-you-go',
+            title: 'ElevenLabs: Lowered API & Agents Pricing, Introduced Pay-As-You-Go',
+            description: '2026年5月のAPI値下げ(テキスト読み上げ最大55%)と新しい従量課金制についての公式発表。'
           },
           {
             url: 'https://github.com/rhasspy/piper',
@@ -4482,10 +4497,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'ElevenLabs対ローカルTTS(Piper・XTTS)徹底比較 2026年版:品質・コスト・プライバシー・音声クローン',
-      'description': 'ElevenLabsとローカルTTS(Piper、XTTS v2)を比較。品質、セットアップ、プライバシー、コスト、オフライン利用のトレードオフを確認し、最適なTTS戦略を選びましょう。',
+      'headline': 'ElevenLabs対Piper対XTTS v2:2026年、最良のTTSは?',
+      'description': 'ElevenLabsは洗練されたAI音声への最速の道。Piperは無料でCPUに優しいローカル選択肢。XTTS v2はローカル音声クローンで勝る。完全な比較をお届けします。',
       'datePublished': '2026-08-22',
-      'dateModified': '2026-08-23',
+      'dateModified': '2026-09-03',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -4556,7 +4571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'PiperはElevenLabsの代わりになりますか?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'ローカルでオフラインのテキスト読み上げが必要で、利用可能な音声が品質・言語要件を満たす場合、Piperは代替手段になり得ます。ただし、キュレーションされた音声、ホスト型ツール、有料サービスサポートを備えたマネージド型クラウド音声プラットフォームの、機能ごとに同等な代替にはなりません。セットアップ時間も重要です:Piperは1〜2時間、ElevenLabsは5分です。'
+            'text': 'ローカルでオフラインのテキスト読み上げが必要で、利用可能な音声が品質・言語要件を満たす場合、Piperは代替手段になり得ます。ただし、キュレーションされた音声、ホスト型ツール、有料サービスサポートを備えたマネージド型クラウド音声プラットフォームの、機能ごとに同等な代替にはなりません。セットアップ時間も重要です:Piperはまずソフトウェアと音声モデルのインストールが必要ですが、ElevenLabsはアカウントだけで済みます。'
           }
         },
         {
@@ -4667,7 +4682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     current_models_mentioned: [],
     current_hardware_mentioned: ['Raspberry Pi', 'GPU', 'CPU'],
-    current_benchmarks_used: ['月間10,000クレジット(ElevenLabs無料プラン)', '月額$6(ElevenLabs Starter)', '月額$22(ElevenLabs Creator)']
+    current_benchmarks_used: ['月間10,000クレジット(ElevenLabs Free)', '月額$6、30,000クレジット(ElevenLabs Starter)', '月額$22、121,000クレジット(ElevenLabs Creator)', '月額$99、600,000クレジット(ElevenLabs Pro)', '月額$299、1,800,000クレジット(ElevenLabs Scale)', '月額$990、6,000,000クレジット(ElevenLabs Business)', 'API料金最大55%値下げ、2026年5月(ElevenLabs)']
   },
   es: {
     freshness_tier: 'semi_annual',
