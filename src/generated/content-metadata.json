@@ -6340,7 +6340,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -11537,7 +11537,7 @@
       "images": []
     },
     "how-balcony-solar-became-legal-in-the-us": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -12636,6 +12636,32 @@
           "title": "BLUETTI's Balco series is built to comply with Germany's 800W balcony-solar output cap — a market-requirement claim, not independently re-verified against a specific certifying body in this research pass."
         }
       ]
+    }
+  },
+  "edge-ai": {
+    "edge-ai-hardware-for-local-llms": {
+      "dateModified": null,
+      "lastFactChecked": null,
+      "publishDate": null,
+      "hasSections": false,
+      "langs": [],
+      "images": []
+    },
+    "vla-models-robots-local-inference": {
+      "dateModified": null,
+      "lastFactChecked": null,
+      "publishDate": null,
+      "hasSections": false,
+      "langs": [],
+      "images": []
+    },
+    "vlm-video-analytics-drones-edge": {
+      "dateModified": null,
+      "lastFactChecked": null,
+      "publishDate": null,
+      "hasSections": false,
+      "langs": [],
+      "images": []
     }
   },
   "blog": {
