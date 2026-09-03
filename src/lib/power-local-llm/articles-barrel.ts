@@ -10,6 +10,10 @@ import { article as a_best_local_llms_customer_support_call_centers_enterprise }
 import { article as a_enterprise_chatbot_deployment_helpdesk_hr_bots } from './articles/enterprise-chatbot-deployment-helpdesk-hr-bots'
 import { article as a_best_ai_hr_software_enterprise_2026 } from './articles/best-ai-hr-software-enterprise-2026'
 import { article as a_best_ai_marketing_software_enterprise_2026 } from './articles/best-ai-marketing-software-enterprise-2026'
+import { article as a_shadow_ai_controls_by_company_size } from './articles/shadow-ai-controls-by-company-size'
+import { article as a_agentic_ai_security_identity_access } from './articles/agentic-ai-security-identity-access'
+import { article as a_ai_generated_content_ip_risk } from './articles/ai-generated-content-ip-risk'
+import { article as a_us_state_ai_employment_laws_compliance } from './articles/us-state-ai-employment-laws-compliance'
 import { article as a_anythingllm_vs_privategpt_vs_openwebui_rag } from './articles/anythingllm-vs-privategpt-vs-openwebui-rag'
 import { article as a_autonomous_local_agents_actually_work } from './articles/autonomous-local-agents-actually-work'
 import { article as a_babyagi_review_autonomous_agent } from './articles/babyagi-review-autonomous-agent'
@@ -230,4 +234,9 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'vla-models-robots-local-inference':                 a_vla_models_robots_local_inference,
   'vlm-video-analytics-drones-edge':                   a_vlm_video_analytics_drones_edge,
   'msty-go-review-2026':                               a_msty_go_review_2026,
+  // Enterprise/B2B — governance & risk — 2026-09-03
+  'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
+  'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,
+  'ai-generated-content-ip-risk':                      a_ai_generated_content_ip_risk,
+  'us-state-ai-employment-laws-compliance':            a_us_state_ai_employment_laws_compliance,
 }

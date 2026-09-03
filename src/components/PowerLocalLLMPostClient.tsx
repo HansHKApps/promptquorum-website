@@ -24,6 +24,10 @@ import { VramCalculator } from '@/components/VramCalculator'
 import { EdgeHardwareSelector } from '@/components/EdgeHardwareSelector'
 import { RobotInferenceBudgetCalculator } from '@/components/RobotInferenceBudgetCalculator'
 import { EdgeVideoBandwidthCalculator } from '@/components/EdgeVideoBandwidthCalculator'
+import { ShadowAiExposureAssessment } from '@/components/ShadowAiExposureAssessment'
+import { AgentBlastRadiusCalculator } from '@/components/AgentBlastRadiusCalculator'
+import { IpRiskTriageMatrix } from '@/components/IpRiskTriageMatrix'
+import { StateAiLawApplicabilityChecker } from '@/components/StateAiLawApplicabilityChecker'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
 import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
@@ -723,6 +727,26 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       {section.component === 'VramCalculator' && (
         <div className="my-8">
           <VramCalculator />
+        </div>
+      )}
+      {section.component === 'ShadowAiExposureAssessment' && (
+        <div className="my-8">
+          <ShadowAiExposureAssessment />
+        </div>
+      )}
+      {section.component === 'AgentBlastRadiusCalculator' && (
+        <div className="my-8">
+          <AgentBlastRadiusCalculator />
+        </div>
+      )}
+      {section.component === 'IpRiskTriageMatrix' && (
+        <div className="my-8">
+          <IpRiskTriageMatrix />
+        </div>
+      )}
+      {section.component === 'StateAiLawApplicabilityChecker' && (
+        <div className="my-8">
+          <StateAiLawApplicabilityChecker />
         </div>
       )}
 
