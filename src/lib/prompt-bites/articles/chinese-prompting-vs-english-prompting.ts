@@ -1413,9 +1413,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { '@type': 'ListItem', position: 3, name: '중국어 vs 영어 프롬프팅', item: 'https://www.promptquorum.com/ko/prompt-bites/chinese-prompting-vs-english-prompting' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { '@type': 'ListItem', position: 3, name: '중국어 vs 영어 프롬프팅', item: '[www.promptquorum.com/ko/prompt-bites/chinese-prompting-vs-english-prompting](https://www.promptquorum.com/ko/prompt-bites/chinese-prompting-vs-english-prompting)' },
       ],
     },
     faqSchema: {

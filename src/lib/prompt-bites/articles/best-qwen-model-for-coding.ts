@@ -1304,9 +1304,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { '@type': 'ListItem', position: 3, name: '코딩에 가장 적합한 Qwen 모델은?', item: 'https://www.promptquorum.com/ko/prompt-bites/best-qwen-model-for-coding' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { '@type': 'ListItem', position: 3, name: '코딩에 가장 적합한 Qwen 모델은?', item: '[www.promptquorum.com/ko/prompt-bites/best-qwen-model-for-coding](https://www.promptquorum.com/ko/prompt-bites/best-qwen-model-for-coding)' },
       ],
     },
     faqSchema: {

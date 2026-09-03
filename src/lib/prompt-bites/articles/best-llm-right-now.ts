@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-llm-right-now',
+      articleUrl: '[www.promptquorum.com/ko/prompt-bites/best-llm-right-now](https://www.promptquorum.com/ko/prompt-bites/best-llm-right-now)',
       breadcrumbSchema: {
         items: [
           { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },

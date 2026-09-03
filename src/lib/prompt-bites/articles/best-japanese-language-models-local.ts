@@ -946,9 +946,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '프롬프트 바이트', item: 'https://www.promptquorum.com/ko/prompt-bites' },
-        { '@type': 'ListItem', position: 3, name: '일본어를 가장 잘 지원하는 로친 LLM 모델은 무엇입니까?', item: 'https://www.promptquorum.com/ko/prompt-bites/best-japanese-language-models-local' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: '프롬프트 바이트', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
+        { '@type': 'ListItem', position: 3, name: '일본어를 가장 잘 지원하는 로친 LLM 모델은 무엇입니까?', item: '[www.promptquorum.com/ko/prompt-bites/best-japanese-language-models-local](https://www.promptquorum.com/ko/prompt-bites/best-japanese-language-models-local)' },
       ],
     },
     schema: { '@type': 'TechArticle', headline: '일본어를 가장 잘 지원하는 로친 LLM 모델은 무엇입니까?', author: { '@type': 'Organization', name: 'PromptQuorum' }, datePublished: '2026-05-27', url: 'https://www.promptquorum.com/ko/prompt-bites/best-japanese-language-models-local', inLanguage: 'ko' },

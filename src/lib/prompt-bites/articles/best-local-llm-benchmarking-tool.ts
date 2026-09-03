@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>llama-bench is the right default for anyone who needs a repeatable, hardware-comparable speed number.</strong> It ships as part of llama.cpp, runs from the command line, and reports two separate figures for every test: prompt-processing speed (how fast the model reads the input) and generation speed (how fast it produces new tokens). These two numbers behave very differently under load, so a tool that combines them into a single figure is hiding half the picture.',
           'Reach for llama-bench when comparing two GPUs before a purchase, testing a new Mac or PC, comparing quantization levels, publishing results publicly, or deciding whether a hardware upgrade is worth the cost. It repeats each test automatically and reports the average, so you do not need to run it five times by hand.',
           'The most common follow-up question is what the context-length and prompt/generation-length options actually control. In short: llama-bench lets you fix how long the test prompt is and how many tokens it generates, independent of each other, so you can test a short chat-style exchange or a long document-style prompt without changing anything else about the run — that separation is what makes two results comparable in the first place.',
-          'llama-bench is not a commercial product — it is a free, open-source part of the <a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">llama.cpp project on GitHub</a>, included automatically whenever you build or install llama.cpp.',
+          'llama-bench is not a commercial product — it is a free, open-source part of the <a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">llama.cpp project on GitHub</a>, included automatically whenever you build or install llama.cpp.',
         ],
       },
       ollamaQuickTest: {
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Ollama\'s `--verbose` flag is the fastest way to check whether your setup feels fast enough — not a replacement for llama-bench.</strong> Running <code>ollama run &lt;model&gt; --verbose</code> prints a tokens/sec figure at the end of a normal chat reply, with no separate benchmark step required.',
           'The number comes from a single, uncontrolled generation, not a repeated fixed-context run, so it is noisier and not suitable for comparing two different pieces of hardware. Use it to answer "is this usable for chat right now," and use llama-bench when the answer needs to hold up against another machine.',
-          'Ollama is free and open source — see the <a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">Ollama site</a> for setup instructions.',
+          'Ollama is free and open source — see the <a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">Ollama site</a> for setup instructions.',
         ],
       },
       lmStudioGui: {
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Best GUI Option: LM Studio',
         content: [
           '<strong>LM Studio is the best choice if you want a live tokens/sec readout without touching a terminal.</strong> Its chat interface shows generation speed in real time, which is convenient for quick hardware checks, model experimentation, and comparing quantizations side by side while you work.',
-          'Like Ollama\'s `--verbose` flag, LM Studio\'s live readout is convenient rather than rigorous — it does not expose the run-count or context-length controls that make a llama-bench result trustworthy for a hardware-purchase decision. LM Studio has a free tier; see the <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">LM Studio site</a> for downloads.',
+          'Like Ollama\'s `--verbose` flag, LM Studio\'s live readout is convenient rather than rigorous — it does not expose the run-count or context-length controls that make a llama-bench result trustworthy for a hardware-purchase decision. LM Studio has a free tier; see the <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">LM Studio site</a> for downloads.',
         ],
       },
       hardware: {
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>llama-bench ist die richtige Standardwahl für alle, die eine wiederholbare, hardwarevergleichbare Geschwindigkeitszahl benötigen.</strong> Es ist Teil von llama.cpp, läuft über die Kommandozeile und meldet für jeden Test zwei getrennte Werte: Prompt-Verarbeitungsgeschwindigkeit (wie schnell das Modell die Eingabe liest) und Generierungsgeschwindigkeit (wie schnell es neue Tokens erzeugt). Diese beiden Werte verhalten sich unter Last sehr unterschiedlich, weshalb ein Tool, das sie zu einer Zahl vermischt, das halbe Bild verbirgt.',
           'Greifen Sie zu llama-bench, wenn Sie zwei GPUs vor einem Kauf vergleichen, einen neuen Mac oder PC testen, Quantisierungsstufen vergleichen, Ergebnisse öffentlich veröffentlichen oder entscheiden, ob sich ein Hardware-Upgrade lohnt. Es wiederholt jeden Test automatisch und meldet den Durchschnitt, sodass Sie ihn nicht fünfmal von Hand ausführen müssen.',
           'Die häufigste Anschlussfrage ist, was die Optionen für Kontextlänge und Prompt-/Generierungslänge eigentlich steuern. Kurz gesagt: llama-bench lässt Sie festlegen, wie lang der Testprompt ist und wie viele Tokens er erzeugt — unabhängig voneinander —, sodass Sie ein kurzes, chat-ähnliches Szenario oder ein langes, dokumentähnliches Szenario testen können, ohne sonst etwas am Lauf zu ändern. Genau diese Trennung macht zwei Ergebnisse überhaupt erst vergleichbar.',
-          'llama-bench ist kein kommerzielles Produkt — es ist ein kostenloser, quelloffener Teil des <a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">llama.cpp-Projekts auf GitHub</a>, das automatisch enthalten ist, sobald Sie llama.cpp bauen oder installieren.',
+          'llama-bench ist kein kommerzielles Produkt — es ist ein kostenloser, quelloffener Teil des <a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">llama.cpp-Projekts auf GitHub</a>, das automatisch enthalten ist, sobald Sie llama.cpp bauen oder installieren.',
         ],
       },
       ollamaQuickTest: {
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Die `--verbose`-Option von Ollama ist der schnellste Weg zu prüfen, ob sich Ihr aktuelles Setup schnell genug anfühlt — kein Ersatz für llama-bench.</strong> Der Befehl <code>ollama run &lt;model&gt; --verbose</code> gibt am Ende einer normalen Chat-Antwort einen Tokens/Sek.-Wert aus, ohne dass ein separater Benchmark-Schritt nötig ist.',
           'Der Wert stammt aus einer einzelnen, unkontrollierten Generierung, nicht aus einem wiederholten Lauf mit festem Kontext, und ist daher verrauschter und nicht geeignet, um zwei unterschiedliche Hardware-Konfigurationen zu vergleichen. Nutzen Sie ihn, um „ist das gerade für Chat nutzbar" zu beantworten, und llama-bench, wenn die Antwort einem Vergleich mit einer anderen Maschine standhalten muss.',
-          'Ollama ist kostenlos und quelloffen — Installationshinweise finden Sie auf der <a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">Ollama-Website</a>.',
+          'Ollama ist kostenlos und quelloffen — Installationshinweise finden Sie auf der <a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">Ollama-Website</a>.',
         ],
       },
       lmStudioGui: {
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Beste GUI-Option: LM Studio',
         content: [
           '<strong>LM Studio ist die beste Wahl, wenn Sie eine Live-Anzeige der Tokens/Sek. wollen, ohne ein Terminal zu öffnen.</strong> Die Chat-Oberfläche zeigt die Generierungsgeschwindigkeit in Echtzeit an, was praktisch ist für schnelle Hardware-Checks, Modell-Experimente und den Vergleich von Quantisierungen nebeneinander während der Arbeit.',
-          'Wie die `--verbose`-Option von Ollama ist die Live-Anzeige von LM Studio praktisch, aber nicht streng — sie bietet nicht die Kontrolle über Laufanzahl oder Kontextlänge, die ein llama-bench-Ergebnis für eine Hardware-Kaufentscheidung vertrauenswürdig machen. LM Studio hat eine kostenlose Stufe; Downloads finden Sie auf der <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">LM-Studio-Website</a>.',
+          'Wie die `--verbose`-Option von Ollama ist die Live-Anzeige von LM Studio praktisch, aber nicht streng — sie bietet nicht die Kontrolle über Laufanzahl oder Kontextlänge, die ein llama-bench-Ergebnis für eine Hardware-Kaufentscheidung vertrauenswürdig machen. LM Studio hat eine kostenlose Stufe; Downloads finden Sie auf der <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">LM-Studio-Website</a>.',
         ],
       },
       hardware: {
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "<strong>llama-bench est le choix par défaut pour quiconque a besoin d'un chiffre de vitesse reproductible et comparable entre configurations matérielles.</strong> Il fait partie de llama.cpp, s'exécute en ligne de commande et indique deux chiffres distincts pour chaque test : la vitesse de traitement du prompt (la rapidité avec laquelle le modèle lit l'entrée) et la vitesse de génération (la rapidité avec laquelle il produit de nouveaux tokens). Ces deux chiffres se comportent très différemment sous charge, donc un outil qui les combine en un seul chiffre cache la moitié de l'image.",
           "Utilisez llama-bench pour comparer deux GPU avant un achat, tester un nouveau Mac ou PC, comparer des niveaux de quantification, publier des résultats, ou décider si une mise à niveau matérielle en vaut la peine. Il répète chaque test automatiquement et indique la moyenne, vous n'avez donc pas besoin de l'exécuter cinq fois à la main.",
           "La question la plus fréquente concerne ce que contrôlent réellement les options de longueur de contexte et de longueur de prompt/génération. En bref : llama-bench vous permet de fixer la longueur du prompt de test et le nombre de tokens générés, indépendamment l'un de l'autre, afin de tester un échange court de type chat ou un prompt long de type document sans changer quoi que ce soit d'autre dans l'exécution — c'est cette séparation qui rend deux résultats comparables.",
-          "llama-bench n'est pas un produit commercial — c'est un composant gratuit et open source du <a href=\"https://github.com/ggml-org/llama.cpp\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" onclick=\"try{window.umami&&window.umami.track('outbound_click',{product_name:'llama.cpp',source_page:window.location.pathname,language:'fr'})}catch(e){}\" class=\"text-primary hover:underline\">projet llama.cpp sur GitHub</a>, inclus automatiquement dès que vous compilez ou installez llama.cpp.",
+          "llama-bench n'est pas un produit commercial — c'est un composant gratuit et open source du <a href=\"[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" onclick=\"try{window.umami&&window.umami.track('outbound_click',{product_name:'llama.cpp',source_page:window.location.pathname,language:'fr'})}catch(e){}\" class=\"text-primary hover:underline\">projet llama.cpp sur GitHub</a>, inclus automatiquement dès que vous compilez ou installez llama.cpp.",
         ],
       },
       ollamaQuickTest: {
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           "<strong>L'option `--verbose` d'Ollama est le moyen le plus rapide de vérifier si votre configuration actuelle est suffisamment rapide — pas un remplacement pour llama-bench.</strong> La commande <code>ollama run &lt;model&gt; --verbose</code> affiche un chiffre de tokens/sec à la fin d'une réponse de chat normale, sans étape de benchmark séparée.",
           "Le chiffre provient d'une seule génération non contrôlée, pas d'une exécution répétée à contexte fixe, il est donc plus bruité et inadapté pour comparer deux matériels différents. Utilisez-le pour répondre à « est-ce utilisable pour du chat en ce moment », et llama-bench quand la réponse doit tenir face à une autre machine.",
-          "Ollama est gratuit et open source — consultez le <a href=\"https://ollama.com\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" onclick=\"try{window.umami&&window.umami.track('outbound_click',{product_name:'Ollama',source_page:window.location.pathname,language:'fr'})}catch(e){}\" class=\"text-primary hover:underline\">site d'Ollama</a> pour les instructions d'installation.",
+          "Ollama est gratuit et open source — consultez le <a href=\"[ollama.com](https://ollama.com)\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" onclick=\"try{window.umami&&window.umami.track('outbound_click',{product_name:'Ollama',source_page:window.location.pathname,language:'fr'})}catch(e){}\" class=\"text-primary hover:underline\">site d'Ollama</a> pour les instructions d'installation.",
         ],
       },
       lmStudioGui: {
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Meilleure interface graphique : LM Studio',
         content: [
           "<strong>LM Studio est le meilleur choix si vous voulez un affichage en direct des tokens/sec sans toucher à un terminal.</strong> Son interface de chat affiche la vitesse de génération en temps réel, ce qui est pratique pour des vérifications matérielles rapides, l'expérimentation de modèles et la comparaison de quantifications côte à côte pendant le travail.",
-          "Comme l'option `--verbose` d'Ollama, l'affichage en direct de LM Studio est pratique plutôt que rigoureux — il n'offre pas les contrôles de nombre d'exécutions ou de longueur de contexte qui rendent un résultat llama-bench fiable pour une décision d'achat matériel. LM Studio propose un niveau gratuit ; téléchargements sur le <a href=\"https://lmstudio.ai\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" onclick=\"try{window.umami&&window.umami.track('outbound_click',{product_name:'LM Studio',source_page:window.location.pathname,language:'fr'})}catch(e){}\" class=\"text-primary hover:underline\">site de LM Studio</a>.",
+          "Comme l'option `--verbose` d'Ollama, l'affichage en direct de LM Studio est pratique plutôt que rigoureux — il n'offre pas les contrôles de nombre d'exécutions ou de longueur de contexte qui rendent un résultat llama-bench fiable pour une décision d'achat matériel. LM Studio propose un niveau gratuit ; téléchargements sur le <a href=\"[lmstudio.ai](https://lmstudio.ai)\" rel=\"nofollow noopener noreferrer\" target=\"_blank\" onclick=\"try{window.umami&&window.umami.track('outbound_click',{product_name:'LM Studio',source_page:window.location.pathname,language:'fr'})}catch(e){}\" class=\"text-primary hover:underline\">site de LM Studio</a>.",
         ],
       },
       hardware: {
@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>llama-benchは、再現可能でハードウェア間比較が可能な速度数値を必要とするすべての人にとって適切な既定の選択です。</strong>llama.cppの一部として提供され、コマンドラインから実行し、テストごとに2つの別々の数値を報告します。プロンプト処理速度(モデルが入力をどれだけ速く読むか)と生成速度(新しいトークンをどれだけ速く生成するか)です。この2つの数値は負荷のかかり方が大きく異なるため、両者を1つの数値に混ぜるツールは全体像の半分を隠してしまいます。',
           '購入前に2枚のGPUを比較する場合、新しいMacやPCをテストする場合、量子化レベルを比較する場合、結果を公開する場合、ハードウェアのアップグレードが見合うか判断する場合にllama-benchを使ってください。各テストを自動的に繰り返し平均を報告するため、手動で5回実行する必要はありません。',
           '最もよくある追加の質問は、コンテキスト長やプロンプト/生成長のオプションが実際に何を制御するかです。簡単に言うと、llama-benchではテストプロンプトの長さと生成するトークン数を互いに独立して固定できるため、短いチャット的なやり取りでも長いドキュメント的なプロンプトでも、他の設定を一切変えずにテストできます。この分離があるからこそ、2つの結果を初めて比較できるのです。',
-          'llama-benchは商用製品ではありません。<a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">GitHub上のllama.cppプロジェクト</a>の無料でオープンソースな一部であり、llama.cppをビルドまたはインストールすれば自動的に含まれます。',
+          'llama-benchは商用製品ではありません。<a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">GitHub上のllama.cppプロジェクト</a>の無料でオープンソースな一部であり、llama.cppをビルドまたはインストールすれば自動的に含まれます。',
         ],
       },
       ollamaQuickTest: {
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Ollamaの`--verbose`フラグは、現在のセットアップが十分速く感じられるかを確認する最速の方法です。llama-benchの代わりにはなりません。</strong><code>ollama run &lt;model&gt; --verbose</code>を実行すると、通常のチャット応答の末尾にトークン/秒の値が表示され、別途ベンチマークの手順は不要です。',
           'この数値は単一の制御されていない生成から得られたものであり、繰り返しの固定コンテキスト実行ではないため、ノイズが多く、2つの異なるハードウェアを比較する用途には向きません。「今これはチャットに使えるか」を確認するにはこれを使い、「別のマシンと比較しても通用する答えが必要」な場合はllama-benchを使ってください。',
-          'Ollamaは無料でオープンソースです。セットアップ手順は<a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">Ollama公式サイト</a>をご覧ください。',
+          'Ollamaは無料でオープンソースです。セットアップ手順は<a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">Ollama公式サイト</a>をご覧ください。',
         ],
       },
       lmStudioGui: {
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '最良のGUIオプション:LM Studio',
         content: [
           '<strong>ターミナルを使わずにトークン/秒をリアルタイム表示したいなら、LM Studioが最良の選択です。</strong>チャットインターフェースで生成速度をリアルタイム表示するため、素早いハードウェアチェック、モデル実験、作業中の量子化の並列比較に便利です。',
-          'Ollamaの`--verbose`フラグと同様、LM Studioのリアルタイム表示は便利ではありますが厳密ではありません。ハードウェア購入の判断でllama-benchの結果を信頼できるものにする、実行回数やコンテキスト長の制御は提供していません。LM Studioには無料プランがあります。ダウンロードは<a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">LM Studio公式サイト</a>から。',
+          'Ollamaの`--verbose`フラグと同様、LM Studioのリアルタイム表示は便利ではありますが厳密ではありません。ハードウェア購入の判断でllama-benchの結果を信頼できるものにする、実行回数やコンテキスト長の制御は提供していません。LM Studioには無料プランがあります。ダウンロードは<a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">LM Studio公式サイト</a>から。',
         ],
       },
       hardware: {
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>对于任何需要可重复、可跨硬件比较的速度数值的人来说,llama-bench都是正确的默认选择。</strong>它是llama.cpp的一部分,通过命令行运行,并为每次测试报告两个独立数值:提示词处理速度(模型读取输入的速度)和生成速度(模型生成新token的速度)。这两个数值在负载下的表现差异很大,因此把它们合并成一个数字的工具只能给你看到一半的画面。',
           '在购买前比较两块GPU、测试新的Mac或PC、比较量化级别、公开发布结果,或判断硬件升级是否值得时,都应使用llama-bench。它会自动重复每次测试并报告平均值,你无需手动运行五次。',
           '最常见的后续问题是上下文长度以及提示词/生成长度选项到底控制什么。简而言之:llama-bench可以让你分别固定测试提示词的长度和生成的token数量,因此你可以在不改变其他任何设置的情况下,测试类似聊天的短场景或类似文档的长场景——正是这种分离才让两次结果具备可比性。',
-          'llama-bench不是商业产品——它是<a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">GitHub上llama.cpp项目</a>的一个免费开源组成部分,只要构建或安装llama.cpp就会自动包含。',
+          'llama-bench不是商业产品——它是<a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">GitHub上llama.cpp项目</a>的一个免费开源组成部分,只要构建或安装llama.cpp就会自动包含。',
         ],
       },
       ollamaQuickTest: {
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Ollama的`--verbose`标志是检查当前配置是否足够快的最快方式——但不能替代llama-bench。</strong>运行<code>ollama run &lt;model&gt; --verbose</code>会在普通聊天回复结束时打印每秒token数,无需单独的基准测试步骤。',
           '该数值来自单次、不受控的生成过程,而非重复的固定上下文运行,因此噪声更大,不适合比较两种不同的硬件。用它来回答"现在这个配置能不能用来聊天",而当答案需要经得起与另一台机器比较时,请使用llama-bench。',
-          'Ollama是免费开源的——安装说明请参见<a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">Ollama官网</a>。',
+          'Ollama是免费开源的——安装说明请参见<a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">Ollama官网</a>。',
         ],
       },
       lmStudioGui: {
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '最佳图形界面选择:LM Studio',
         content: [
           '<strong>如果你想在不打开终端的情况下实时查看每秒token数,LM Studio是最佳选择。</strong>它的聊天界面会实时显示生成速度,便于在工作时快速检查硬件、体验模型,并并排比较不同量化。',
-          '和Ollama的`--verbose`标志一样,LM Studio的实时读数便捷但不够严谨——它没有提供影响llama-bench结果可信度、用于硬件购买决策的运行次数或上下文长度控制。LM Studio提供免费版本;下载请见<a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">LM Studio官网</a>。',
+          '和Ollama的`--verbose`标志一样,LM Studio的实时读数便捷但不够严谨——它没有提供影响llama-bench结果可信度、用于硬件购买决策的运行次数或上下文长度控制。LM Studio提供免费版本;下载请见<a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">LM Studio官网</a>。',
         ],
       },
       hardware: {
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>llama-bench es la opción por defecto correcta para quien necesite una cifra de velocidad repetible y comparable entre hardwares.</strong> Es parte de llama.cpp, se ejecuta desde la línea de comandos y reporta dos cifras separadas en cada prueba: velocidad de procesamiento del prompt (qué tan rápido lee el modelo la entrada) y velocidad de generación (qué tan rápido produce nuevos tokens). Estas dos cifras se comportan de forma muy distinta bajo carga, así que una herramienta que las combina en una sola cifra te oculta la mitad del panorama.',
           'Recurre a llama-bench cuando compares dos GPU antes de una compra, pruebes un nuevo Mac o PC, compares niveles de cuantización, publiques resultados o decidas si vale la pena una actualización de hardware. Repite cada prueba automáticamente y reporta el promedio, así que no necesitas ejecutarlo cinco veces a mano.',
           'La pregunta de seguimiento más común es qué controlan realmente las opciones de longitud de contexto y longitud de prompt/generación. En resumen: llama-bench te permite fijar la longitud del prompt de prueba y cuántos tokens genera, de forma independiente entre sí, para que puedas probar un intercambio corto tipo chat o un prompt largo tipo documento sin cambiar nada más de la ejecución — esa separación es lo que hace comparables dos resultados.',
-          'llama-bench no es un producto comercial — es una parte gratuita y de código abierto del <a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'es\'})}catch(e){}" class="text-primary hover:underline">proyecto llama.cpp en GitHub</a>, incluida automáticamente cuando compilas o instalas llama.cpp.',
+          'llama-bench no es un producto comercial — es una parte gratuita y de código abierto del <a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'es\'})}catch(e){}" class="text-primary hover:underline">proyecto llama.cpp en GitHub</a>, incluida automáticamente cuando compilas o instalas llama.cpp.',
         ],
       },
       ollamaQuickTest: {
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>La opción `--verbose` de Ollama es la forma más rápida de comprobar si tu configuración actual se siente lo bastante rápida — no un reemplazo de llama-bench.</strong> Ejecutar <code>ollama run &lt;model&gt; --verbose</code> imprime una cifra de tokens/seg al final de una respuesta de chat normal, sin necesitar un paso de benchmark aparte.',
           'La cifra proviene de una única generación no controlada, no de una ejecución repetida a contexto fijo, por lo que es más ruidosa y no adecuada para comparar dos piezas de hardware distintas. Úsala para responder "¿esto es usable para chatear ahora mismo?", y usa llama-bench cuando la respuesta tenga que sostenerse frente a otra máquina.',
-          'Ollama es gratuita y de código abierto — consulta el <a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'es\'})}catch(e){}" class="text-primary hover:underline">sitio de Ollama</a> para instrucciones de instalación.',
+          'Ollama es gratuita y de código abierto — consulta el <a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'es\'})}catch(e){}" class="text-primary hover:underline">sitio de Ollama</a> para instrucciones de instalación.',
         ],
       },
       lmStudioGui: {
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Mejor opción de interfaz gráfica: LM Studio',
         content: [
           '<strong>LM Studio es la mejor opción si quieres una lectura en vivo de tokens/seg sin tocar una terminal.</strong> Su interfaz de chat muestra la velocidad de generación en tiempo real, lo cual es conveniente para comprobaciones rápidas de hardware, experimentar con modelos y comparar cuantizaciones lado a lado mientras trabajas.',
-          'Al igual que la opción `--verbose` de Ollama, la lectura en vivo de LM Studio es conveniente más que rigurosa — no expone los controles de número de ejecuciones o longitud de contexto que hacen confiable un resultado de llama-bench para una decisión de compra de hardware. LM Studio tiene un nivel gratuito; las descargas están en el <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'es\'})}catch(e){}" class="text-primary hover:underline">sitio de LM Studio</a>.',
+          'Al igual que la opción `--verbose` de Ollama, la lectura en vivo de LM Studio es conveniente más que rigurosa — no expone los controles de número de ejecuciones o longitud de contexto que hacen confiable un resultado de llama-bench para una decisión de compra de hardware. LM Studio tiene un nivel gratuito; las descargas están en el <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'es\'})}catch(e){}" class="text-primary hover:underline">sitio de LM Studio</a>.',
         ],
       },
       hardware: {
@@ -901,7 +901,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>O llama-bench é a escolha padrão certa para quem precisa de um número de velocidade repetível e comparável entre hardwares.</strong> Ele faz parte do llama.cpp, roda pela linha de comando e reporta dois números separados para cada teste: velocidade de processamento do prompt (quão rápido o modelo lê a entrada) e velocidade de geração (quão rápido ele produz novos tokens). Esses dois números se comportam de forma muito diferente sob carga, então uma ferramenta que os combina em um único número esconde metade do quadro.',
           'Recorra ao llama-bench ao comparar duas GPUs antes de uma compra, testar um novo Mac ou PC, comparar níveis de quantização, publicar resultados, ou decidir se um upgrade de hardware vale a pena. Ele repete cada teste automaticamente e reporta a média, então você não precisa rodá-lo cinco vezes manualmente.',
           'A pergunta de acompanhamento mais comum é o que as opções de comprimento de contexto e comprimento de prompt/geração realmente controlam. Resumindo: o llama-bench permite fixar o tamanho do prompt de teste e quantos tokens ele gera, de forma independente um do outro, para que você possa testar uma troca curta tipo chat ou um prompt longo tipo documento sem mudar mais nada na execução — essa separação é o que torna dois resultados comparáveis.',
-          'O llama-bench não é um produto comercial — é uma parte gratuita e de código aberto do <a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'pt\'})}catch(e){}" class="text-primary hover:underline">projeto llama.cpp no GitHub</a>, incluído automaticamente sempre que você compila ou instala o llama.cpp.',
+          'O llama-bench não é um produto comercial — é uma parte gratuita e de código aberto do <a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'pt\'})}catch(e){}" class="text-primary hover:underline">projeto llama.cpp no GitHub</a>, incluído automaticamente sempre que você compila ou instala o llama.cpp.',
         ],
       },
       ollamaQuickTest: {
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>A flag `--verbose` do Ollama é a forma mais rápida de verificar se sua configuração atual parece rápida o suficiente — não um substituto para o llama-bench.</strong> Rodar <code>ollama run &lt;model&gt; --verbose</code> imprime um número de tokens/seg ao final de uma resposta de chat normal, sem exigir uma etapa de benchmark separada.',
           'O número vem de uma única geração não controlada, não de uma execução repetida com contexto fixo, então é mais ruidoso e não é adequado para comparar dois hardwares diferentes. Use-o para responder "isso é utilizável para chat agora mesmo", e use o llama-bench quando a resposta precisar se sustentar contra outra máquina.',
-          'O Ollama é gratuito e de código aberto — veja o <a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'pt\'})}catch(e){}" class="text-primary hover:underline">site do Ollama</a> para instruções de instalação.',
+          'O Ollama é gratuito e de código aberto — veja o <a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'pt\'})}catch(e){}" class="text-primary hover:underline">site do Ollama</a> para instruções de instalação.',
         ],
       },
       lmStudioGui: {
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Melhor opção de interface: LM Studio',
         content: [
           '<strong>O LM Studio é a melhor escolha se você quiser uma leitura ao vivo de tokens/seg sem tocar em um terminal.</strong> Sua interface de chat mostra a velocidade de geração em tempo real, o que é conveniente para checagens rápidas de hardware, experimentação de modelos e comparação de quantizações lado a lado enquanto você trabalha.',
-          'Assim como a flag `--verbose` do Ollama, a leitura ao vivo do LM Studio é conveniente, não rigorosa — não expõe os controles de número de execuções ou comprimento de contexto que tornam um resultado do llama-bench confiável para uma decisão de compra de hardware. O LM Studio tem um plano gratuito; downloads no <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'pt\'})}catch(e){}" class="text-primary hover:underline">site do LM Studio</a>.',
+          'Assim como a flag `--verbose` do Ollama, a leitura ao vivo do LM Studio é conveniente, não rigorosa — não expõe os controles de número de execuções ou comprimento de contexto que tornam um resultado do llama-bench confiável para uma decisão de compra de hardware. O LM Studio tem um plano gratuito; downloads no <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'pt\'})}catch(e){}" class="text-primary hover:underline">site do LM Studio</a>.',
         ],
       },
       hardware: {
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>llama-bench هو الخيار الافتراضي الصحيح لكل من يحتاج إلى رقم سرعة قابل للتكرار ويمكن مقارنته بين الأجهزة.</strong> هو جزء من llama.cpp، ويعمل من سطر الأوامر، ويُبلغ عن رقمين منفصلين لكل اختبار: سرعة معالجة الـ prompt (مدى سرعة قراءة النموذج للمُدخل) وسرعة التوليد (مدى سرعة إنتاجه لـ tokens جديدة). يتصرف هذان الرقمان بشكل مختلف تمامًا تحت الحمل، لذا فإن أي أداة تدمجهما في رقم واحد تُخفي نصف الصورة.',
           'استخدم llama-bench عند مقارنة بطاقتي GPU قبل الشراء، أو اختبار جهاز Mac أو PC جديد، أو مقارنة مستويات الـ quantization، أو نشر النتائج علنًا، أو تحديد ما إذا كانت ترقية الأجهزة تستحق التكلفة. يُكرر كل اختبار تلقائيًا ويُبلغ عن المتوسط، لذا لست بحاجة لتشغيله خمس مرات يدويًا.',
           'السؤال الأكثر شيوعًا الذي يليها هو ما الذي تتحكم فيه فعليًا خيارات طول السياق وطول الـ prompt/التوليد. باختصار: تتيح لك llama-bench تثبيت طول الـ prompt الاختباري وعدد الـ tokens التي يولّدها، بشكل مستقل عن بعضهما، بحيث يمكنك اختبار تبادل قصير شبيه بالمحادثة أو prompt طويل شبيه بالمستند دون تغيير أي شيء آخر في التشغيل — هذا الفصل هو ما يجعل نتيجتين قابلتين للمقارنة أصلًا.',
-          'llama-bench ليست منتجًا تجاريًا — إنها جزء مجاني ومفتوح المصدر من <a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'ar\'})}catch(e){}" class="text-primary hover:underline">مشروع llama.cpp على GitHub</a>، وتأتي تلقائيًا مع بناء أو تثبيت llama.cpp.',
+          'llama-bench ليست منتجًا تجاريًا — إنها جزء مجاني ومفتوح المصدر من <a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'ar\'})}catch(e){}" class="text-primary hover:underline">مشروع llama.cpp على GitHub</a>، وتأتي تلقائيًا مع بناء أو تثبيت llama.cpp.',
         ],
       },
       ollamaQuickTest: {
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>خيار `--verbose` في Ollama هو أسرع طريقة للتحقق مما إذا كان إعدادك الحالي يبدو سريعًا بما يكفي — وليس بديلًا عن llama-bench.</strong> تشغيل <code>ollama run &lt;model&gt; --verbose</code> يطبع رقم tokens في الثانية في نهاية استجابة محادثة عادية، دون الحاجة إلى خطوة قياس أداء منفصلة.',
           'يأتي الرقم من عملية توليد واحدة غير متحكم بها، وليس من تشغيل متكرر بسياق ثابت، لذا فهو أكثر تشويشًا وغير مناسب لمقارنة قطعتي عتاد مختلفتين. استخدمه للإجابة على سؤال "هل هذا صالح للمحادثة الآن"، واستخدم llama-bench عندما تحتاج الإجابة إلى أن تصمد أمام مقارنة بجهاز آخر.',
-          'Ollama مجانية ومفتوحة المصدر — راجع <a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'ar\'})}catch(e){}" class="text-primary hover:underline">موقع Ollama</a> للحصول على تعليمات التثبيت.',
+          'Ollama مجانية ومفتوحة المصدر — راجع <a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'ar\'})}catch(e){}" class="text-primary hover:underline">موقع Ollama</a> للحصول على تعليمات التثبيت.',
         ],
       },
       lmStudioGui: {
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أفضل خيار واجهة رسومية: LM Studio',
         content: [
           '<strong>LM Studio هو الخيار الأفضل إذا أردت قراءة مباشرة لعدد tokens في الثانية دون فتح طرفية (terminal).</strong> تعرض واجهة المحادثة فيه سرعة التوليد في الوقت الفعلي، وهو أمر مريح للفحوصات السريعة للأجهزة، وتجربة النماذج، ومقارنة مستويات الـ quantization جنبًا إلى جنب أثناء العمل.',
-          'مثل خيار `--verbose` في Ollama، القراءة المباشرة في LM Studio مريحة وليست صارمة — فهي لا تكشف عناصر التحكم في عدد التشغيلات أو طول السياق التي تجعل نتيجة llama-bench موثوقة لقرار شراء عتاد. يوفر LM Studio مستوى مجانيًا؛ التنزيلات على <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ar\'})}catch(e){}" class="text-primary hover:underline">موقع LM Studio</a>.',
+          'مثل خيار `--verbose` في Ollama، القراءة المباشرة في LM Studio مريحة وليست صارمة — فهي لا تكشف عناصر التحكم في عدد التشغيلات أو طول السياق التي تجعل نتيجة llama-bench موثوقة لقرار شراء عتاد. يوفر LM Studio مستوى مجانيًا؛ التنزيلات على <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ar\'})}catch(e){}" class="text-primary hover:underline">موقع LM Studio</a>.',
         ],
       },
       hardware: {
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>llama-bench는 재현 가능하고 하드웨어 간 비교가 가능한 속도 수치가 필요한 모든 사람에게 적합한 기본 선택입니다.</strong> llama.cpp의 일부이며, 명령줄에서 실행되고, 각 테스트마다 두 가지 별도 수치를 보고합니다. 프롬프트 처리 속도(모델이 입력을 읽는 속도)와 생성 속도(새 토큰을 생성하는 속도)입니다. 이 두 수치는 부하 상태에서 매우 다르게 동작하므로, 이를 하나의 수치로 합치는 도구는 전체 그림의 절반을 가리는 셈입니다.',
           '구매 전에 두 GPU를 비교하거나, 새 Mac이나 PC를 테스트하거나, 양자화 수준을 비교하거나, 결과를 공개적으로 게시하거나, 하드웨어 업그레이드가 그만한 가치가 있는지 판단할 때 llama-bench를 사용하세요. 각 테스트를 자동으로 반복하고 평균을 보고하므로 수동으로 다섯 번 실행할 필요가 없습니다.',
           '가장 흔한 후속 질문은 컨텍스트 길이와 프롬프트/생성 길이 옵션이 실제로 무엇을 제어하는지입니다. 간단히 말해, llama-bench는 테스트 프롬프트의 길이와 생성할 토큰 수를 서로 독립적으로 고정할 수 있게 해주므로, 다른 설정을 전혀 바꾸지 않고도 짧은 채팅형 시나리오나 긴 문서형 시나리오를 테스트할 수 있습니다. 바로 이 분리가 두 결과를 애초에 비교 가능하게 만드는 요소입니다.',
-          'llama-bench는 상업용 제품이 아닙니다. <a href="https://github.com/ggml-org/llama.cpp" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'ko\'})}catch(e){}" class="text-primary hover:underline">GitHub의 llama.cpp 프로젝트</a>의 무료 오픈소스 구성 요소이며, llama.cpp를 빌드하거나 설치하면 자동으로 포함됩니다.',
+          'llama-bench는 상업용 제품이 아닙니다. <a href="[github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'llama.cpp\',source_page:window.location.pathname,language:\'ko\'})}catch(e){}" class="text-primary hover:underline">GitHub의 llama.cpp 프로젝트</a>의 무료 오픈소스 구성 요소이며, llama.cpp를 빌드하거나 설치하면 자동으로 포함됩니다.',
         ],
       },
       ollamaQuickTest: {
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Ollama의 `--verbose` 플래그는 현재 설정이 충분히 빠르게 느껴지는지 확인하는 가장 빠른 방법입니다. llama-bench를 대체하지는 않습니다.</strong> <code>ollama run &lt;model&gt; --verbose</code>를 실행하면 별도의 벤치마크 단계 없이 일반 채팅 응답 끝에 초당 토큰 수치가 출력됩니다.',
           '이 수치는 반복적인 고정 컨텍스트 실행이 아니라 단일한 통제되지 않은 생성에서 나온 것이므로, 더 잡음이 많고 서로 다른 두 하드웨어를 비교하는 데는 적합하지 않습니다. "지금 이게 채팅에 쓸 만한가"를 답하는 데 사용하고, 다른 기기와 비교해도 통할 답이 필요할 때는 llama-bench를 사용하세요.',
-          'Ollama는 무료 오픈소스입니다. 설치 방법은 <a href="https://ollama.com" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'ko\'})}catch(e){}" class="text-primary hover:underline">Ollama 공식 사이트</a>를 참고하세요.',
+          'Ollama는 무료 오픈소스입니다. 설치 방법은 <a href="[ollama.com](https://ollama.com)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'Ollama\',source_page:window.location.pathname,language:\'ko\'})}catch(e){}" class="text-primary hover:underline">Ollama 공식 사이트</a>를 참고하세요.',
         ],
       },
       lmStudioGui: {
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '최고의 GUI 옵션: LM Studio',
         content: [
           '<strong>터미널을 건드리지 않고 초당 토큰 수를 실시간으로 확인하고 싶다면 LM Studio가 최선의 선택입니다.</strong> 채팅 인터페이스에서 생성 속도를 실시간으로 표시하므로, 빠른 하드웨어 확인, 모델 실험, 작업 중 양자화 비교에 편리합니다.',
-          'Ollama의 `--verbose` 플래그와 마찬가지로 LM Studio의 실시간 표시는 편리하지만 엄격하지는 않습니다. 하드웨어 구매 결정에서 llama-bench 결과를 신뢰할 수 있게 만드는 실행 횟수나 컨텍스트 길이 제어를 제공하지 않습니다. LM Studio는 무료 플랜을 제공하며, 다운로드는 <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ko\'})}catch(e){}" class="text-primary hover:underline">LM Studio 공식 사이트</a>에서 가능합니다.',
+          'Ollama의 `--verbose` 플래그와 마찬가지로 LM Studio의 실시간 표시는 편리하지만 엄격하지는 않습니다. 하드웨어 구매 결정에서 llama-bench 결과를 신뢰할 수 있게 만드는 실행 횟수나 컨텍스트 길이 제어를 제공하지 않습니다. LM Studio는 무료 플랜을 제공하며, 다운로드는 <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ko\'})}catch(e){}" class="text-primary hover:underline">LM Studio 공식 사이트</a>에서 가능합니다.',
         ],
       },
       hardware: {

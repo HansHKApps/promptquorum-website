@@ -551,10 +551,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: 'Sources',
           items: [
-            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. https://arxiv.org/abs/2005.11401 — The original RAG paper introducing the retrieve-then-generate architecture.',
-            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. https://arxiv.org/abs/2312.10997 — Comprehensive survey of RAG architectures and variants through 2023.',
-            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. https://arxiv.org/abs/2002.08909 — Pre-training approach that integrates retrieval into language model training.',
-            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
+            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401) — The original RAG paper introducing the retrieve-then-generate architecture.',
+            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. [arxiv.org/abs/2312.10997](https://arxiv.org/abs/2312.10997) — Comprehensive survey of RAG architectures and variants through 2023.',
+            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. [arxiv.org/abs/2002.08909](https://arxiv.org/abs/2002.08909) — Pre-training approach that integrates retrieval into language model training.',
+            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
           ],
         },
 
@@ -918,10 +918,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: 'Quellen',
           items: [
-            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. https://arxiv.org/abs/2005.11401 — Das ursprüngliche RAG-Paper, das die Retrieve-Then-Generate-Architektur einführt.',
-            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. https://arxiv.org/abs/2312.10997 — Umfassender Survey zu RAG-Architekturen und Varianten bis 2023.',
-            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. https://arxiv.org/abs/2002.08909 — Pre-Training-Ansatz, der Abruf in Sprachmodell-Training integriert.',
-            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
+            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401) — Das ursprüngliche RAG-Paper, das die Retrieve-Then-Generate-Architektur einführt.',
+            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. [arxiv.org/abs/2312.10997](https://arxiv.org/abs/2312.10997) — Umfassender Survey zu RAG-Architekturen und Varianten bis 2023.',
+            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. [arxiv.org/abs/2002.08909](https://arxiv.org/abs/2002.08909) — Pre-Training-Ansatz, der Abruf in Sprachmodell-Training integriert.',
+            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
           ],
         },
 
@@ -2598,10 +2598,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: 'Sources',
           items: [
-            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." https://arxiv.org/abs/2005.11401',
-            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." https://arxiv.org/abs/2312.10997',
-            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." https://arxiv.org/abs/2002.08909',
-            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." https://platform.openai.com/docs/guides/prompt-engineering',
+            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401)',
+            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." [arxiv.org/abs/2312.10997](https://arxiv.org/abs/2312.10997)',
+            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." [arxiv.org/abs/2002.08909](https://arxiv.org/abs/2002.08909)',
+            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
           ],
         },
 
@@ -3105,10 +3105,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: 'ソース',
           items: [
-            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. https://arxiv.org/abs/2005.11401',
-            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. https://arxiv.org/abs/2312.10997',
-            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. https://arxiv.org/abs/2002.08909',
-            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
+            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401)',
+            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. [arxiv.org/abs/2312.10997](https://arxiv.org/abs/2312.10997)',
+            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. [arxiv.org/abs/2002.08909](https://arxiv.org/abs/2002.08909)',
+            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
           ],
         },
 
@@ -3608,10 +3608,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: '来源',
           items: [
-            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. https://arxiv.org/abs/2005.11401',
-            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. https://arxiv.org/abs/2312.10997',
-            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. https://arxiv.org/abs/2002.08909',
-            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
+            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401)',
+            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. [arxiv.org/abs/2312.10997](https://arxiv.org/abs/2312.10997)',
+            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. [arxiv.org/abs/2002.08909](https://arxiv.org/abs/2002.08909)',
+            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
           ],
         },
 
@@ -4170,10 +4170,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         sources: {
           title: '참고 자료',
           items: [
-            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. https://arxiv.org/abs/2005.11401 — 검색 후 생성 아키텍처를 소개한 원본 RAG 논문.',
-            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. https://arxiv.org/abs/2312.10997 — 2023년까지의 RAG 아키텍처 및 변형에 대한 종합 조사.',
-            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. https://arxiv.org/abs/2002.08909 — 언어 모델 학습에 검색을 통합하는 사전 학습 접근법.',
-            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. https://platform.openai.com/docs/guides/prompt-engineering',
+            'Lewis, P., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS 2020. [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401) — 검색 후 생성 아키텍처를 소개한 원본 RAG 논문.',
+            'Gao, Y., et al. (2023). "Retrieval-Augmented Generation for Large Language Models: A Survey." arXiv:2312.10997. [arxiv.org/abs/2312.10997](https://arxiv.org/abs/2312.10997) — 2023년까지의 RAG 아키텍처 및 변형에 대한 종합 조사.',
+            'Guu, K., et al. (2020). "REALM: Retrieval-Augmented Language Model Pre-Training." ICML 2020. arXiv:2002.08909. [arxiv.org/abs/2002.08909](https://arxiv.org/abs/2002.08909) — 언어 모델 학습에 검색을 통합하는 사전 학습 접근법.',
+            'OpenAI. (2024). "Retrieval and Augmentation in Language Models." Platform documentation. [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
           ],
         },
         faqSection: {

@@ -1483,7 +1483,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
 # Löst Reasoning-Aufgaben mit CoT aus`,
           codeLanguage: 'bash',
           items: [
-            'Öffnen Sie https://ollama.ai/library in einem Webbrowser für die vollständige durchsuchbare Bibliothek mit mehreren hundert Modellen.',
+            'Öffnen Sie [ollama.ai/library](https://ollama.ai/library) in einem Webbrowser für die vollständige durchsuchbare Bibliothek mit mehreren hundert Modellen.',
             'Filteroptionen: Modellgröße, Lizenz, Veröffentlichungsdatum, Benchmarks (MMLU, HumanEval, MATH).',
             'Ratings pro Modell: Nutzer-Downloads, GitHub-Sterne (für das Basis-Modell), Ollama-Sterne.',
             'Neue Modelle: Ollamás Bibliothek wird kontinuierlich aktualisiert (neue Modelle erscheinen Tage nach der Veröffentlichung).',
@@ -1957,7 +1957,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
 # Résout les tâches de raisonnement avec CoT`,
           codeLanguage: 'bash',
           items: [
-            'Ouvrez https://ollama.ai/library dans un navigateur pour la bibliothèque complète interrogeable de plusieurs centaines de modèles.',
+            'Ouvrez [ollama.ai/library](https://ollama.ai/library) dans un navigateur pour la bibliothèque complète interrogeable de plusieurs centaines de modèles.',
             'Options de filtrage : taille du modèle, licence, date de publication, benchmarks (MMLU, HumanEval, MATH).',
             'Notation par modèle : téléchargements utilisateur, étoiles GitHub (pour le modèle de base), étoiles Ollama.',
             'Nouveaux modèles : La bibliothèque Ollama est mise à jour chaque semaine (jeudis, 18:00 UTC).',
@@ -2432,7 +2432,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
 # CoTで推論タスク実行`,
           codeLanguage: 'bash',
           items: [
-            'ブラウザで https://ollama.ai/library を開く。数百のモデル検索可能。',
+            'ブラウザで [ollama.ai/library](https://ollama.ai/library) を開く。数百のモデル検索可能。',
             'フィルタオプション：モデルサイズ、ライセンス、リリース日、ベンチマーク（MMLU、HumanEval、MATH）。',
             'モデル評価：ユーザーDL数、GitHub⭐（ベースモデル）、Ollama⭐。',
             'Ollama新モデル：毎週木曜日UTC 18:00更新。',

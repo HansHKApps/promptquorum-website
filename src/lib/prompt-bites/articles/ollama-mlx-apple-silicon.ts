@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Best Pick: LM Studio for MLX + GUI',
         content: [
-          '<strong>If you want MLX speeds with an Ollama-like experience, use <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>.</strong> It supports both llama.cpp and MLX backends, lets you switch per model, and provides a full GUI. On Apple Silicon, select the MLX engine in LM Studio\'s model settings to get native MLX inference speeds. LM Studio is free for personal use.',
+          '<strong>If you want MLX speeds with an Ollama-like experience, use <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>.</strong> It supports both llama.cpp and MLX backends, lets you switch per model, and provides a full GUI. On Apple Silicon, select the MLX engine in LM Studio\'s model settings to get native MLX inference speeds. LM Studio is free for personal use.',
           'If you prefer the command line and maximum speed, install <a href="https://github.com/ml-explore/mlx-lm" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-lm\',source_page:window.location.pathname,language:\'en\'})}catch(e){}" class="text-primary hover:underline">mlx-lm</a> with <code>pip install mlx-lm</code>. It exposes an OpenAI-compatible server endpoint, so apps that work with Ollama\'s API will also work with mlx-lm\'s server.',
         ],
       },
@@ -179,7 +179,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Beste Wahl: LM Studio für MLX + GUI',
         content: [
-          '<strong>Wenn Sie MLX-Geschwindigkeiten mit einer Ollama-ähnlichen Erfahrung möchten, verwenden Sie <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>.</strong> Es unterstützt sowohl llama.cpp- als auch MLX-Backends, ermöglicht das Wechseln pro Modell und bietet eine vollständige GUI. Wählen Sie auf Apple Silicon die MLX-Engine in den Modelleinstellungen von LM Studio aus, um native MLX-Inferenzgeschwindigkeiten zu erhalten. LM Studio ist für den persönlichen Gebrauch kostenlos.',
+          '<strong>Wenn Sie MLX-Geschwindigkeiten mit einer Ollama-ähnlichen Erfahrung möchten, verwenden Sie <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>.</strong> Es unterstützt sowohl llama.cpp- als auch MLX-Backends, ermöglicht das Wechseln pro Modell und bietet eine vollständige GUI. Wählen Sie auf Apple Silicon die MLX-Engine in den Modelleinstellungen von LM Studio aus, um native MLX-Inferenzgeschwindigkeiten zu erhalten. LM Studio ist für den persönlichen Gebrauch kostenlos.',
           'Wenn Sie die Befehlszeile und maximale Geschwindigkeit bevorzugen, installieren Sie <a href="https://github.com/ml-explore/mlx-lm" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-lm\',source_page:window.location.pathname,language:\'de\'})}catch(e){}" class="text-primary hover:underline">mlx-lm</a> mit <code>pip install mlx-lm</code>. Es stellt einen OpenAI-kompatiblen Server-Endpunkt bereit, sodass Apps, die mit Ollamas API funktionieren, auch mit dem mlx-lm-Server funktionieren.',
         ],
       },
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Meilleur choix : LM Studio pour MLX + GUI',
         content: [
-          '<strong>Si vous voulez les vitesses MLX avec une expérience similaire à Ollama, utilisez <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'fr\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>.</strong> Il supporte les backends llama.cpp et MLX, vous permet de changer par modèle et fournit une interface graphique complète. Sur Apple Silicon, sélectionnez le moteur MLX dans les paramètres de modèle de LM Studio pour obtenir des vitesses d\'inférence MLX natives. LM Studio est gratuit pour un usage personnel.',
+          '<strong>Si vous voulez les vitesses MLX avec une expérience similaire à Ollama, utilisez <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'fr\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>.</strong> Il supporte les backends llama.cpp et MLX, vous permet de changer par modèle et fournit une interface graphique complète. Sur Apple Silicon, sélectionnez le moteur MLX dans les paramètres de modèle de LM Studio pour obtenir des vitesses d\'inférence MLX natives. LM Studio est gratuit pour un usage personnel.',
           'Si vous préférez la ligne de commande et la vitesse maximale, installez <a href="https://github.com/ml-explore/mlx-lm" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-lm\',source_page:window.location.pathname,language:\'fr\'})}catch(e){}" class="text-primary hover:underline">mlx-lm</a> avec <code>pip install mlx-lm</code>. Il expose un endpoint serveur compatible OpenAI, donc les applications qui fonctionnent avec l\'API d\'Ollama fonctionneront également avec le serveur de mlx-lm.',
         ],
       },
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'ベストな選択：MLX + GUIのためのLM Studio',
         content: [
-          '<strong>Ollamaのような体験でMLX速度を求めるなら、<a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>を使用してください。</strong> llama.cppとMLXの両バックエンドをサポートし、モデルごとに切り替えでき、完全なGUIを提供します。LM Studioは日本の開発者の間で高い人気を誇り、CLIツールよりも洗練されたGUIツールを好む日本の開発スタイルに非常にマッチしています。Apple Siliconでは、LM StudioのモデルI設定でMLXエンジンを選択すると、ネイティブMLX推論速度が得られます。LM Studioは個人使用であれば無料です。',
+          '<strong>Ollamaのような体験でMLX速度を求めるなら、<a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>を使用してください。</strong> llama.cppとMLXの両バックエンドをサポートし、モデルごとに切り替えでき、完全なGUIを提供します。LM Studioは日本の開発者の間で高い人気を誇り、CLIツールよりも洗練されたGUIツールを好む日本の開発スタイルに非常にマッチしています。Apple Siliconでは、LM StudioのモデルI設定でMLXエンジンを選択すると、ネイティブMLX推論速度が得られます。LM Studioは個人使用であれば無料です。',
           'コマンドラインと最大速度を好む場合は、<a href="https://github.com/ml-explore/mlx-lm" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-lm\',source_page:window.location.pathname,language:\'ja\'})}catch(e){}" class="text-primary hover:underline">mlx-lm</a>を<code>pip install mlx-lm</code>でインストールしてください。OpenAI互換のサーバーエンドポイントを公開しているため、OllamaのAPIで動作するアプリはmlx-lmのサーバーでも動作します。',
         ],
       },
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '最佳选择：LM Studio（MLX + GUI）',
         content: [
-          '<strong>如果您希望以类似 Ollama 的体验获得 MLX 速度，请使用 <a href="https://lmstudio.ai" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>。</strong>它同时支持 llama.cpp 和 MLX 后端，可按模型切换，并提供完整的 GUI。在 Apple Silicon 上，在 LM Studio 的模型设置中选择 MLX 引擎即可获得原生 MLX 推理速度。LM Studio 个人使用免费。',
+          '<strong>如果您希望以类似 Ollama 的体验获得 MLX 速度，请使用 <a href="[lmstudio.ai](https://lmstudio.ai)" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'LM Studio\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">LM Studio</a>。</strong>它同时支持 llama.cpp 和 MLX 后端，可按模型切换，并提供完整的 GUI。在 Apple Silicon 上，在 LM Studio 的模型设置中选择 MLX 引擎即可获得原生 MLX 推理速度。LM Studio 个人使用免费。',
           '如果您偏好命令行和最高速度，请通过 <code>pip install mlx-lm</code> 安装 <a href="https://github.com/ml-explore/mlx-lm" rel="nofollow noopener noreferrer" target="_blank" onclick="try{window.umami&&window.umami.track(\'outbound_click\',{product_name:\'mlx-lm\',source_page:window.location.pathname,language:\'zh\'})}catch(e){}" class="text-primary hover:underline">mlx-lm</a>。它提供 OpenAI 兼容的服务器端点，因此能与 Ollama API 配合工作的应用程序也能与 mlx-lm 的服务器配合使用。',
         ],
       },
@@ -775,19 +775,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '@type': 'ListItem',
           position: 1,
           name: '홈',
-          item: 'https://www.promptquorum.com/ko',
+          item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Prompt Bites',
-          item: 'https://www.promptquorum.com/ko/prompt-bites',
+          item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)',
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'Ollama는 Apple Silicon에서 MLX를 지원합니까?',
-          item: 'https://www.promptquorum.com/ko/prompt-bites/ollama-mlx-apple-silicon',
+          item: '[www.promptquorum.com/ko/prompt-bites/ollama-mlx-apple-silicon](https://www.promptquorum.com/ko/prompt-bites/ollama-mlx-apple-silicon)',
         },
       ],
     },

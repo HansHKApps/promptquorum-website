@@ -98,11 +98,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How to Run Sabiá-3 (Not on Ollama)',
         content: [
           'Sabiá-3 is developed by Maritaca AI, a Brazilian company specializing in Portuguese language models. It achieves performance close to GPT-4o on Portuguese tasks and is the strongest open-weight model for Brazilian Portuguese.',
-          'Sabiá-3 is not available in the Ollama model library. To run it locally, download the GGUF files from the Maritaca AI HuggingFace page at https://huggingface.co/maritaca-ai and run them with llama.cpp or LM Studio. LM Studio supports direct GGUF loading from HuggingFace with a built-in search interface — search for "maritaca" in the LM Studio model browser.',
+          'Sabiá-3 is not available in the Ollama model library. To run it locally, download the GGUF files from the Maritaca AI HuggingFace page at [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) and run them with llama.cpp or LM Studio. LM Studio supports direct GGUF loading from HuggingFace with a built-in search interface — search for "maritaca" in the LM Studio model browser.',
           'The first Sabiá generation (Sabiá-7B and Sabiá-65B) was based on the Llama architecture. Sabiá-3 continues this tradition of Portuguese-focused fine-tuning on a strong base model.',
         ],
         items: [
-          'Download path: https://huggingface.co/maritaca-ai',
+          'Download path: [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Run with: llama.cpp (CLI) or LM Studio (GUI, recommended for beginners)',
           'VRAM requirement: approximately 7GB at Q4 quantization',
           'Note: No `ollama run sabia` command exists — Sabiá is not in the Ollama library',
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'What is the best local LLM for Brazilian Portuguese in 2026?', a: 'Qwen3 8B is the top practical choice: runs on 8GB VRAM via Ollama, trained on 36 trillion tokens across 119 languages. For maximum PT-BR quality, Sabiá-3 from Maritaca AI approaches GPT-4o performance but requires downloading from HuggingFace.' },
           { q: 'Can I run local LLMs on a standard Brazilian laptop?', a: 'Yes. Most modern laptops with 16GB RAM can run Qwen3 8B via Ollama at 2–4 tokens/sec on CPU only. With a dedicated GPU (8GB VRAM), speed increases to 15–20 tokens/sec.' },
-          { q: 'What is Sabiá and where can I download it?', a: 'Sabiá-3 is a Portuguese-specialized model from Maritaca AI, a Brazilian company. Download GGUF files from https://huggingface.co/maritaca-ai and run with llama.cpp or LM Studio. It is not available in the Ollama library.' },
+          { q: 'What is Sabiá and where can I download it?', a: 'Sabiá-3 is a Portuguese-specialized model from Maritaca AI, a Brazilian company. Download GGUF files from [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) and run with llama.cpp or LM Studio. It is not available in the Ollama library.' },
           { q: 'Does Qwen3 understand Brazilian Portuguese differently from European Portuguese?', a: 'Qwen3 handles both variants. When prompted in PT-BR (using "você" and Brazilian vocabulary), it responds in PT-BR. Prompt explicitly in the variant you want for best results.' },
           { q: 'Is Llama 3.1 good for Portuguese?', a: 'Yes, Llama 3.1 8B is among the top three local models for Portuguese in 2026. It is available via Ollama and produces good PT-BR output for general use.' },
           { q: 'How do I install Ollama for Brazilian Portuguese use?', a: 'Install Ollama from ollama.com (same process for all languages), then run: ollama run qwen3:8b. See the full Ollama installation guide at /local-llms/how-to-install-ollama.' },
@@ -155,9 +155,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — Top 3 models for Portuguese including Qwen3 and Llama 3.1 8B',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Qwen3 training data: 36 trillion tokens, 119 languages',
-          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — https://huggingface.co/Qwen — dense 28B vision-language architecture, released 2026-08-14',
+          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — dense 28B vision-language architecture, released 2026-08-14',
           'PoETa v2 benchmark — Portuguese Language Evaluation Toolkit for LLMs',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'What is the best local LLM for Brazilian Portuguese in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B is the top practical choice: runs on 8GB VRAM via Ollama, trained on 36 trillion tokens across 119 languages. For maximum PT-BR quality, Sabiá-3 from Maritaca AI approaches GPT-4o performance but requires downloading from HuggingFace.' } },
         { '@type': 'Question', name: 'Can I run local LLMs on a standard Brazilian laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Most modern laptops with 16GB RAM can run Qwen3 8B via Ollama at 2–4 tokens/sec on CPU only. With a dedicated GPU (8GB VRAM), speed increases to 15–20 tokens/sec.' } },
-        { '@type': 'Question', name: 'What is Sabiá and where can I download it?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 is a Portuguese-specialized model from Maritaca AI, a Brazilian company. Download GGUF files from https://huggingface.co/maritaca-ai and run with llama.cpp or LM Studio. It is not available in the Ollama library.' } },
+        { '@type': 'Question', name: 'What is Sabiá and where can I download it?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 is a Portuguese-specialized model from Maritaca AI, a Brazilian company. Download GGUF files from [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) and run with llama.cpp or LM Studio. It is not available in the Ollama library.' } },
         { '@type': 'Question', name: 'Does Qwen3 understand Brazilian Portuguese differently from European Portuguese?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 handles both variants. When prompted in PT-BR (using "você" and Brazilian vocabulary), it responds in PT-BR. Prompt explicitly in the variant you want for best results.' } },
         { '@type': 'Question', name: 'Is Llama 3.1 good for Portuguese?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, Llama 3.1 8B is among the top three local models for Portuguese in 2026. It is available via Ollama and produces good PT-BR output for general use.' } },
         { '@type': 'Question', name: 'How do I install Ollama for Brazilian Portuguese use?', acceptedAnswer: { '@type': 'Answer', text: 'Install Ollama from ollama.com (same process for all languages), then run: ollama run qwen3:8b. See the full Ollama installation guide at /local-llms/how-to-install-ollama.' } },
@@ -298,11 +298,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'So betreiben Sie Sabiá-3 (nicht auf Ollama)',
         content: [
           'Sabiá-3 wird von Maritaca AI entwickelt, einem brasilianischen Unternehmen, das sich auf portugiesischsprachige Modelle spezialisiert hat. Es erreicht eine Leistung nahe GPT-4o bei portugiesischen Aufgaben und ist das stärkste Open-Weight-Modell für brasilianisches Portugiesisch.',
-          'Sabiá-3 ist nicht in der Ollama-Modellbibliothek verfügbar. Um es lokal zu betreiben, laden Sie die GGUF-Dateien von der Maritaca AI HuggingFace-Seite unter https://huggingface.co/maritaca-ai herunter und führen Sie sie mit llama.cpp oder LM Studio aus. LM Studio unterstützt das direkte Laden von GGUF-Dateien von HuggingFace über eine integrierte Suchoberfläche — suchen Sie nach "maritaca" im LM Studio-Modellbrowser.',
+          'Sabiá-3 ist nicht in der Ollama-Modellbibliothek verfügbar. Um es lokal zu betreiben, laden Sie die GGUF-Dateien von der Maritaca AI HuggingFace-Seite unter [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) herunter und führen Sie sie mit llama.cpp oder LM Studio aus. LM Studio unterstützt das direkte Laden von GGUF-Dateien von HuggingFace über eine integrierte Suchoberfläche — suchen Sie nach "maritaca" im LM Studio-Modellbrowser.',
           'Die erste Sabiá-Generation (Sabiá-7B und Sabiá-65B) basierte auf der Llama-Architektur. Sabiá-3 setzt diese Tradition des portugiesischfokussierten Fine-Tunings auf einem starken Basismodell fort.',
         ],
         items: [
-          'Download-Pfad: https://huggingface.co/maritaca-ai',
+          'Download-Pfad: [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Ausführen mit: llama.cpp (CLI) oder LM Studio (GUI, empfohlen für Einsteiger)',
           'VRAM-Anforderung: ca. 7 GB bei Q4-Quantisierung',
           'Hinweis: Es gibt keinen `ollama run sabia`-Befehl — Sabiá ist nicht in der Ollama-Bibliothek',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Was ist das beste lokale LLM für brasilianisches Portugiesisch in 2026?', a: 'Qwen3 8B ist die beste praktische Wahl: läuft auf 8 GB VRAM via Ollama, trainiert auf 36 Billionen Tokens in 119 Sprachen. Für maximale PT-BR-Qualität nähert sich Sabiá-3 von Maritaca AI GPT-4o-Leistung, erfordert aber den Download von HuggingFace.' },
           { q: 'Kann ich lokale LLMs auf einem Standard-Laptop betreiben?', a: 'Ja. Die meisten modernen Laptops mit 16 GB RAM können Qwen3 8B via Ollama mit 2–4 Tokens/Sek. auf der CPU allein betreiben. Mit einer dedizierten GPU (8 GB VRAM) steigt die Geschwindigkeit auf 15–20 Tokens/Sek.' },
-          { q: 'Was ist Sabiá und wo kann ich es herunterladen?', a: 'Sabiá-3 ist ein portugiesisch-spezialisiertes Modell von Maritaca AI, einem brasilianischen Unternehmen. Laden Sie GGUF-Dateien von https://huggingface.co/maritaca-ai herunter und führen Sie sie mit llama.cpp oder LM Studio aus. Es ist nicht in der Ollama-Bibliothek verfügbar.' },
+          { q: 'Was ist Sabiá und wo kann ich es herunterladen?', a: 'Sabiá-3 ist ein portugiesisch-spezialisiertes Modell von Maritaca AI, einem brasilianischen Unternehmen. Laden Sie GGUF-Dateien von [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) herunter und führen Sie sie mit llama.cpp oder LM Studio aus. Es ist nicht in der Ollama-Bibliothek verfügbar.' },
           { q: 'Versteht Qwen3 brasilianisches Portugiesisch anders als europäisches Portugiesisch?', a: 'Qwen3 verarbeitet beide Varianten. Bei Prompts in PT-BR (mit "você" und brasilianischem Vokabular) antwortet es auf PT-BR. Promten Sie explizit in der gewünschten Variante für beste Ergebnisse.' },
           { q: 'Ist Llama 3.1 gut für Portugiesisch?', a: 'Ja, Llama 3.1 8B gehört zu den drei besten lokalen Modellen für Portugiesisch in 2026. Es ist via Ollama verfügbar und liefert guten PT-BR-Output für den allgemeinen Gebrauch.' },
           { q: 'Wie installiere ich Ollama für brasilianisch-portugiesischen Einsatz?', a: 'Installieren Sie Ollama von ollama.com (gleicher Prozess für alle Sprachen), dann führen Sie aus: ollama run qwen3:8b. Den vollständigen Ollama-Installationsleitfaden finden Sie unter /local-llms/how-to-install-ollama.' },
@@ -357,9 +357,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quellen',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — Top-3-Modelle für Portugiesisch einschließlich Qwen3 und Llama 3.1 8B',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Qwen3-Trainingsdaten: 36 Billionen Tokens, 119 Sprachen',
-          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — https://huggingface.co/Qwen — dichte 28B-Vision-Language-Architektur, veröffentlicht am 14.08.2026',
+          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — dichte 28B-Vision-Language-Architektur, veröffentlicht am 14.08.2026',
           'PoETa v2 Benchmark — Portugiesisches Sprachauswertungs-Toolkit für LLMs',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Was ist das beste lokale LLM für brasilianisches Portugiesisch in 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B ist die beste praktische Wahl: läuft auf 8 GB VRAM via Ollama, trainiert auf 36 Billionen Tokens in 119 Sprachen. Für maximale PT-BR-Qualität nähert sich Sabiá-3 von Maritaca AI GPT-4o-Leistung, erfordert aber den Download von HuggingFace.' } },
         { '@type': 'Question', name: 'Kann ich lokale LLMs auf einem Standard-Laptop betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die meisten modernen Laptops mit 16 GB RAM können Qwen3 8B via Ollama mit 2–4 Tokens/Sek. auf der CPU allein betreiben. Mit einer dedizierten GPU (8 GB VRAM) steigt die Geschwindigkeit auf 15–20 Tokens/Sek.' } },
-        { '@type': 'Question', name: 'Was ist Sabiá und wo kann ich es herunterladen?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 ist ein portugiesisch-spezialisiertes Modell von Maritaca AI, einem brasilianischen Unternehmen. Laden Sie GGUF-Dateien von https://huggingface.co/maritaca-ai herunter und führen Sie sie mit llama.cpp oder LM Studio aus. Es ist nicht in der Ollama-Bibliothek verfügbar.' } },
+        { '@type': 'Question', name: 'Was ist Sabiá und wo kann ich es herunterladen?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 ist ein portugiesisch-spezialisiertes Modell von Maritaca AI, einem brasilianischen Unternehmen. Laden Sie GGUF-Dateien von [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) herunter und führen Sie sie mit llama.cpp oder LM Studio aus. Es ist nicht in der Ollama-Bibliothek verfügbar.' } },
         { '@type': 'Question', name: 'Versteht Qwen3 brasilianisches Portugiesisch anders als europäisches Portugiesisch?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 verarbeitet beide Varianten. Bei Prompts in PT-BR (mit "você" und brasilianischem Vokabular) antwortet es auf PT-BR. Promten Sie explizit in der gewünschten Variante für beste Ergebnisse.' } },
         { '@type': 'Question', name: 'Ist Llama 3.1 gut für Portugiesisch?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, Llama 3.1 8B gehört zu den drei besten lokalen Modellen für Portugiesisch in 2026. Es ist via Ollama verfügbar und liefert guten PT-BR-Output für den allgemeinen Gebrauch.' } },
         { '@type': 'Question', name: 'Wie installiere ich Ollama für brasilianisch-portugiesischen Einsatz?', acceptedAnswer: { '@type': 'Answer', text: 'Installieren Sie Ollama von ollama.com, dann führen Sie aus: ollama run qwen3:8b. Den vollständigen Ollama-Installationsleitfaden finden Sie unter /local-llms/how-to-install-ollama.' } },
@@ -502,11 +502,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo ejecutar Sabiá-3 (no está en Ollama)',
         content: [
           'Sabiá-3 es desarrollado por Maritaca AI, una empresa brasileña especializada en modelos de lenguaje portugués. Alcanza un rendimiento cercano a GPT-4o en tareas en portugués y es el modelo de pesos abiertos más fuerte para el portugués brasileño.',
-          'Sabiá-3 no está disponible en la biblioteca de modelos de Ollama. Para ejecutarlo localmente, descarga los archivos GGUF de la página de HuggingFace de Maritaca AI en https://huggingface.co/maritaca-ai y ejecútalos con llama.cpp o LM Studio. LM Studio admite la carga directa de GGUF desde HuggingFace con una interfaz de búsqueda integrada — busca "maritaca" en el explorador de modelos de LM Studio.',
+          'Sabiá-3 no está disponible en la biblioteca de modelos de Ollama. Para ejecutarlo localmente, descarga los archivos GGUF de la página de HuggingFace de Maritaca AI en [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) y ejecútalos con llama.cpp o LM Studio. LM Studio admite la carga directa de GGUF desde HuggingFace con una interfaz de búsqueda integrada — busca "maritaca" en el explorador de modelos de LM Studio.',
           'La primera generación de Sabiá (Sabiá-7B y Sabiá-65B) se basaba en la arquitectura Llama. Sabiá-3 continúa esta tradición de ajuste fino centrado en el portugués sobre un modelo base sólido.',
         ],
         items: [
-          'Ruta de descarga: https://huggingface.co/maritaca-ai',
+          'Ruta de descarga: [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Ejecutar con: llama.cpp (CLI) o LM Studio (GUI, recomendado para principiantes)',
           'Requisito de VRAM: aproximadamente 7 GB en cuantización Q4',
           'Nota: No existe el comando `ollama run sabia` — Sabiá no está en la biblioteca de Ollama',
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '¿Cuál es el mejor LLM local para portugués brasileño en 2026?', a: 'Qwen3 8B es la mejor opción práctica: funciona con 8 GB de VRAM vía Ollama, entrenado con 36 billones de tokens en 119 idiomas. Para máxima calidad PT-BR, Sabiá-3 de Maritaca AI se aproxima al rendimiento de GPT-4o, pero requiere descarga desde HuggingFace.' },
           { q: '¿Puedo ejecutar LLMs locales en una laptop estándar?', a: 'Sí. La mayoría de las laptops modernas con 16 GB de RAM pueden ejecutar Qwen3 8B vía Ollama a 2–4 tokens/seg solo con CPU. Con una GPU dedicada (8 GB de VRAM), la velocidad aumenta a 15–20 tokens/seg.' },
-          { q: '¿Qué es Sabiá y dónde puedo descargarlo?', a: 'Sabiá-3 es un modelo especializado en portugués de Maritaca AI, una empresa brasileña. Descarga los archivos GGUF de https://huggingface.co/maritaca-ai y ejecútalos con llama.cpp o LM Studio. No está disponible en la biblioteca de Ollama.' },
+          { q: '¿Qué es Sabiá y dónde puedo descargarlo?', a: 'Sabiá-3 es un modelo especializado en portugués de Maritaca AI, una empresa brasileña. Descarga los archivos GGUF de [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) y ejecútalos con llama.cpp o LM Studio. No está disponible en la biblioteca de Ollama.' },
           { q: '¿Qwen3 entiende el portugués brasileño de forma diferente al portugués europeo?', a: 'Qwen3 maneja ambas variantes. Cuando se le da el prompt en PT-BR (usando "você" y vocabulario brasileño), responde en PT-BR. Indica explícitamente la variante que deseas para obtener los mejores resultados.' },
           { q: '¿Es Llama 3.1 bueno para el portugués?', a: 'Sí, Llama 3.1 8B está entre los tres mejores modelos locales para portugués en 2026. Está disponible vía Ollama y produce buena salida en PT-BR para uso general.' },
           { q: '¿Cómo instalo Ollama para uso en portugués brasileño?', a: 'Instala Ollama desde ollama.com (el mismo proceso para todos los idiomas), luego ejecuta: ollama run qwen3:8b. Consulta la guía completa de instalación de Ollama en /es/local-llms/how-to-install-ollama.' },
@@ -559,9 +559,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fuentes',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — Los 3 mejores modelos para portugués, incluidos Qwen3 y Llama 3.1 8B',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Datos de entrenamiento de Qwen3: 36 billones de tokens, 119 idiomas',
-          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — https://huggingface.co/Qwen — arquitectura densa de 28B con visión-lenguaje, publicada el 2026-08-14',
+          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — arquitectura densa de 28B con visión-lenguaje, publicada el 2026-08-14',
           'PoETa v2 benchmark — Kit de evaluación de lengua portuguesa para LLMs',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -594,7 +594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: '¿Cuál es el mejor LLM local para portugués brasileño en 2026?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B es la mejor opción práctica: funciona con 8 GB de VRAM vía Ollama, entrenado con 36 billones de tokens en 119 idiomas. Para máxima calidad PT-BR, Sabiá-3 de Maritaca AI se aproxima al rendimiento de GPT-4o, pero requiere descarga desde HuggingFace.' } },
         { '@type': 'Question', name: '¿Puedo ejecutar LLMs locales en una laptop estándar?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. La mayoría de las laptops modernas con 16 GB de RAM pueden ejecutar Qwen3 8B vía Ollama a 2–4 tokens/seg solo con CPU. Con una GPU dedicada (8 GB de VRAM), la velocidad aumenta a 15–20 tokens/seg.' } },
-        { '@type': 'Question', name: '¿Qué es Sabiá y dónde puedo descargarlo?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 es un modelo especializado en portugués de Maritaca AI, una empresa brasileña. Descarga los archivos GGUF de https://huggingface.co/maritaca-ai y ejecútalos con llama.cpp o LM Studio. No está disponible en la biblioteca de Ollama.' } },
+        { '@type': 'Question', name: '¿Qué es Sabiá y dónde puedo descargarlo?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 es un modelo especializado en portugués de Maritaca AI, una empresa brasileña. Descarga los archivos GGUF de [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) y ejecútalos con llama.cpp o LM Studio. No está disponible en la biblioteca de Ollama.' } },
         { '@type': 'Question', name: '¿Qwen3 entiende el portugués brasileño de forma diferente al portugués europeo?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 maneja ambas variantes. Cuando se le da el prompt en PT-BR (usando "você" y vocabulario brasileño), responde en PT-BR. Indica explícitamente la variante que deseas para obtener los mejores resultados.' } },
         { '@type': 'Question', name: '¿Es Llama 3.1 bueno para el portugués?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, Llama 3.1 8B está entre los tres mejores modelos locales para portugués en 2026. Está disponible vía Ollama y produce buena salida en PT-BR para uso general.' } },
         { '@type': 'Question', name: '¿Cómo instalo Ollama para uso en portugués brasileño?', acceptedAnswer: { '@type': 'Answer', text: 'Instala Ollama desde ollama.com, luego ejecuta: ollama run qwen3:8b. Consulta la guía completa de instalación de Ollama en /es/local-llms/how-to-install-ollama.' } },
@@ -702,11 +702,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment exécuter Sabiá-3 (pas sur Ollama)',
         content: [
           'Sabiá-3 est développé par Maritaca AI, une entreprise brésilienne spécialisée dans les modèles de langue portugaise. Il atteint des performances proches de GPT-4o sur les tâches en portugais et constitue le modèle à poids ouverts le plus performant pour le portugais brésilien.',
-          'Sabiá-3 n\'est pas disponible dans la bibliothèque de modèles d\'Ollama. Pour l\'exécuter en local, téléchargez les fichiers GGUF depuis la page HuggingFace de Maritaca AI à l\'adresse https://huggingface.co/maritaca-ai et exécutez-les avec llama.cpp ou LM Studio. LM Studio prend en charge le chargement direct de GGUF depuis HuggingFace avec une interface de recherche intégrée — recherchez "maritaca" dans le navigateur de modèles de LM Studio.',
+          'Sabiá-3 n\'est pas disponible dans la bibliothèque de modèles d\'Ollama. Pour l\'exécuter en local, téléchargez les fichiers GGUF depuis la page HuggingFace de Maritaca AI à l\'adresse [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) et exécutez-les avec llama.cpp ou LM Studio. LM Studio prend en charge le chargement direct de GGUF depuis HuggingFace avec une interface de recherche intégrée — recherchez "maritaca" dans le navigateur de modèles de LM Studio.',
           'La première génération de Sabiá (Sabiá-7B et Sabiá-65B) reposait sur l\'architecture Llama. Sabiá-3 perpétue cette tradition d\'affinage axé sur le portugais sur un modèle de base solide.',
         ],
         items: [
-          'Chemin de téléchargement : https://huggingface.co/maritaca-ai',
+          'Chemin de téléchargement : [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Exécuter avec : llama.cpp (CLI) ou LM Studio (GUI, recommandé pour les débutants)',
           'Besoin en VRAM : environ 7 Go en quantification Q4',
           'Remarque : aucune commande `ollama run sabia` n\'existe — Sabiá n\'est pas dans la bibliothèque Ollama',
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Quel est le meilleur LLM local pour le portugais brésilien en 2026 ?', a: 'Qwen3 8B est le meilleur choix pratique : fonctionne avec 8 Go de VRAM via Ollama, entraîné sur 36 billions de tokens dans 119 langues. Pour une qualité PT-BR maximale, Sabiá-3 de Maritaca AI se rapproche des performances de GPT-4o, mais nécessite un téléchargement depuis HuggingFace.' },
           { q: 'Puis-je exécuter des LLM locaux sur un ordinateur portable standard ?', a: 'Oui. La plupart des ordinateurs portables modernes dotés de 16 Go de RAM peuvent exécuter Qwen3 8B via Ollama à 2–4 tokens/s sur CPU uniquement. Avec un GPU dédié (8 Go de VRAM), la vitesse augmente à 15–20 tokens/s.' },
-          { q: 'Qu\'est-ce que Sabiá et où puis-je le télécharger ?', a: 'Sabiá-3 est un modèle spécialisé en portugais de Maritaca AI, une entreprise brésilienne. Téléchargez les fichiers GGUF depuis https://huggingface.co/maritaca-ai et exécutez-les avec llama.cpp ou LM Studio. Il n\'est pas disponible dans la bibliothèque Ollama.' },
+          { q: 'Qu\'est-ce que Sabiá et où puis-je le télécharger ?', a: 'Sabiá-3 est un modèle spécialisé en portugais de Maritaca AI, une entreprise brésilienne. Téléchargez les fichiers GGUF depuis [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) et exécutez-les avec llama.cpp ou LM Studio. Il n\'est pas disponible dans la bibliothèque Ollama.' },
           { q: 'Qwen3 comprend-il le portugais brésilien différemment du portugais européen ?', a: 'Qwen3 gère les deux variantes. Lorsqu\'il reçoit un prompt en PT-BR (avec "você" et le vocabulaire brésilien), il répond en PT-BR. Indiquez explicitement la variante souhaitée pour de meilleurs résultats.' },
           { q: 'Llama 3.1 est-il bon pour le portugais ?', a: 'Oui, Llama 3.1 8B figure parmi les trois meilleurs modèles locaux pour le portugais en 2026. Il est disponible via Ollama et produit une bonne sortie PT-BR pour un usage général.' },
           { q: 'Comment installer Ollama pour un usage en portugais brésilien ?', a: 'Installez Ollama depuis ollama.com (même procédure pour toutes les langues), puis exécutez : ollama run qwen3:8b. Consultez le guide d\'installation complet d\'Ollama sur /fr/local-llms/how-to-install-ollama.' },
@@ -759,9 +759,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sources',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — Top 3 des modèles pour le portugais, dont Qwen3 et Llama 3.1 8B',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Données d\'entraînement de Qwen3 : 36 billions de tokens, 119 langues',
-          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — https://huggingface.co/Qwen — architecture dense 28B vision-langage, publiée le 2026-08-14',
+          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — architecture dense 28B vision-langage, publiée le 2026-08-14',
           'PoETa v2 benchmark — Boîte à outils d\'évaluation de la langue portugaise pour les LLM',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Quel est le meilleur LLM local pour le portugais brésilien en 2026 ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B est le meilleur choix pratique : fonctionne avec 8 Go de VRAM via Ollama, entraîné sur 36 billions de tokens dans 119 langues. Pour une qualité PT-BR maximale, Sabiá-3 de Maritaca AI se rapproche des performances de GPT-4o, mais nécessite un téléchargement depuis HuggingFace.' } },
         { '@type': 'Question', name: 'Puis-je exécuter des LLM locaux sur un ordinateur portable standard ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. La plupart des ordinateurs portables modernes dotés de 16 Go de RAM peuvent exécuter Qwen3 8B via Ollama à 2–4 tokens/s sur CPU uniquement. Avec un GPU dédié (8 Go de VRAM), la vitesse augmente à 15–20 tokens/s.' } },
-        { '@type': 'Question', name: 'Qu\'est-ce que Sabiá et où puis-je le télécharger ?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 est un modèle spécialisé en portugais de Maritaca AI, une entreprise brésilienne. Téléchargez les fichiers GGUF depuis https://huggingface.co/maritaca-ai et exécutez-les avec llama.cpp ou LM Studio. Il n\'est pas disponible dans la bibliothèque Ollama.' } },
+        { '@type': 'Question', name: 'Qu\'est-ce que Sabiá et où puis-je le télécharger ?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 est un modèle spécialisé en portugais de Maritaca AI, une entreprise brésilienne. Téléchargez les fichiers GGUF depuis [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) et exécutez-les avec llama.cpp ou LM Studio. Il n\'est pas disponible dans la bibliothèque Ollama.' } },
         { '@type': 'Question', name: 'Qwen3 comprend-il le portugais brésilien différemment du portugais européen ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 gère les deux variantes. Lorsqu\'il reçoit un prompt en PT-BR (avec "você" et le vocabulaire brésilien), il répond en PT-BR. Indiquez explicitement la variante souhaitée pour de meilleurs résultats.' } },
         { '@type': 'Question', name: 'Llama 3.1 est-il bon pour le portugais ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, Llama 3.1 8B figure parmi les trois meilleurs modèles locaux pour le portugais en 2026. Il est disponible via Ollama et produit une bonne sortie PT-BR pour un usage général.' } },
         { '@type': 'Question', name: 'Comment installer Ollama pour un usage en portugais brésilien ?', acceptedAnswer: { '@type': 'Answer', text: 'Installez Ollama depuis ollama.com, puis exécutez : ollama run qwen3:8b. Consultez le guide d\'installation complet d\'Ollama sur /fr/local-llms/how-to-install-ollama.' } },
@@ -902,11 +902,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sabiá-3の実行方法（Ollamaにはありません）',
         content: [
           'Sabiá-3は、ポルトガル語の言語モデルを専門とするブラジル企業Maritaca AIによって開発されています。ポルトガル語タスクでGPT-4oに近い性能を達成し、ブラジルポルトガル語向けで最も強力なオープンウェイトモデルです。',
-          'Sabiá-3はOllamaのモデルライブラリでは利用できません。ローカルで実行するには、Maritaca AIのHuggingFaceページ（https://huggingface.co/maritaca-ai）からGGUFファイルをダウンロードし、llama.cppまたはLM Studioで実行します。LM Studioは、組み込みの検索インターフェースでHuggingFaceからGGUFを直接読み込むことをサポートしています — LM Studioのモデルブラウザーで「maritaca」を検索してください。',
+          'Sabiá-3はOllamaのモデルライブラリでは利用できません。ローカルで実行するには、Maritaca AIのHuggingFaceページ（[huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)）からGGUFファイルをダウンロードし、llama.cppまたはLM Studioで実行します。LM Studioは、組み込みの検索インターフェースでHuggingFaceからGGUFを直接読み込むことをサポートしています — LM Studioのモデルブラウザーで「maritaca」を検索してください。',
           '第1世代のSabiá（Sabiá-7BおよびSabiá-65B）はLlamaアーキテクチャに基づいていました。Sabiá-3は、強力なベースモデル上でポルトガル語に焦点を当てたファインチューニングというこの伝統を引き継いでいます。',
         ],
         items: [
-          'ダウンロードパス：https://huggingface.co/maritaca-ai',
+          'ダウンロードパス：[huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           '実行方法：llama.cpp（CLI）またはLM Studio（GUI、初心者に推奨）',
           'VRAM要件：Q4量子化で約7GB',
           '注：`ollama run sabia`コマンドは存在しません — SabiáはOllamaライブラリにはありません',
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '2026年のブラジルポルトガル語向けで最良のローカルLLMは何ですか？', a: 'Qwen3 8Bが最良の実用的な選択肢です。Ollama経由で8GBのVRAMで動作し、119言語にわたる36兆トークンで学習されています。最高のPT-BR品質を求めるなら、Maritaca AIのSabiá-3がGPT-4oの性能に近づきますが、HuggingFaceからのダウンロードが必要です。' },
           { q: '標準的なノートパソコンでローカルLLMを実行できますか？', a: 'はい。16GBのRAMを搭載したほとんどの最新ノートパソコンは、CPUのみでOllama経由でQwen3 8Bを2〜4トークン/秒で実行できます。専用GPU（8GBのVRAM）があれば、速度は15〜20トークン/秒に上がります。' },
-          { q: 'Sabiáとは何ですか、どこでダウンロードできますか？', a: 'Sabiá-3は、ブラジル企業Maritaca AIによるポルトガル語特化モデルです。https://huggingface.co/maritaca-ai からGGUFファイルをダウンロードし、llama.cppまたはLM Studioで実行してください。Ollamaライブラリでは利用できません。' },
+          { q: 'Sabiáとは何ですか、どこでダウンロードできますか？', a: 'Sabiá-3は、ブラジル企業Maritaca AIによるポルトガル語特化モデルです。[huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) からGGUFファイルをダウンロードし、llama.cppまたはLM Studioで実行してください。Ollamaライブラリでは利用できません。' },
           { q: 'Qwen3はブラジルポルトガル語をヨーロッパポルトガル語と異なる形で理解しますか？', a: 'Qwen3は両方の変種を扱います。PT-BR（「você」とブラジルの語彙を使用）でプロンプトを入力すると、PT-BRで応答します。最良の結果を得るには、希望する変種を明示的に指定してください。' },
           { q: 'Llama 3.1はポルトガル語に適していますか？', a: 'はい、Llama 3.1 8Bは2026年のポルトガル語向けローカルモデルのトップ3に入ります。Ollama経由で利用でき、一般的な用途に適した良いPT-BR出力を生成します。' },
           { q: 'ブラジルポルトガル語の用途でOllamaをインストールするにはどうすればよいですか？', a: 'ollama.comからOllamaをインストールし（すべての言語で同じ手順）、次に実行します：ollama run qwen3:8b。Ollamaの完全なインストールガイドは /ja/local-llms/how-to-install-ollama をご覧ください。' },
@@ -959,9 +959,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '出典',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — Qwen3とLlama 3.1 8Bを含むポルトガル語向けトップ3モデル',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Qwen3の学習データ：36兆トークン、119言語',
-          'Alibaba Qwen Team（2026）。「Qwen3.8-27B Model Card」Hugging Face — https://huggingface.co/Qwen — 28Bの高密度ビジョン言語アーキテクチャ、2026年8月14日リリース',
+          'Alibaba Qwen Team（2026）。「Qwen3.8-27B Model Card」Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — 28Bの高密度ビジョン言語アーキテクチャ、2026年8月14日リリース',
           'PoETa v2 benchmark — LLM向けポルトガル語評価ツールキット',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: '2026年のブラジルポルトガル語向けで最良のローカルLLMは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8Bが最良の実用的な選択肢です。Ollama経由で8GBのVRAMで動作し、119言語にわたる36兆トークンで学習されています。最高のPT-BR品質を求めるなら、Maritaca AIのSabiá-3がGPT-4oの性能に近づきますが、HuggingFaceからのダウンロードが必要です。' } },
         { '@type': 'Question', name: '標準的なノートパソコンでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。16GBのRAMを搭載したほとんどの最新ノートパソコンは、CPUのみでOllama経由でQwen3 8Bを2〜4トークン/秒で実行できます。専用GPU（8GBのVRAM）があれば、速度は15〜20トークン/秒に上がります。' } },
-        { '@type': 'Question', name: 'Sabiáとは何ですか、どこでダウンロードできますか？', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3は、ブラジル企業Maritaca AIによるポルトガル語特化モデルです。https://huggingface.co/maritaca-ai からGGUFファイルをダウンロードし、llama.cppまたはLM Studioで実行してください。Ollamaライブラリでは利用できません。' } },
+        { '@type': 'Question', name: 'Sabiáとは何ですか、どこでダウンロードできますか？', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3は、ブラジル企業Maritaca AIによるポルトガル語特化モデルです。[huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) からGGUFファイルをダウンロードし、llama.cppまたはLM Studioで実行してください。Ollamaライブラリでは利用できません。' } },
         { '@type': 'Question', name: 'Qwen3はブラジルポルトガル語をヨーロッパポルトガル語と異なる形で理解しますか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3は両方の変種を扱います。PT-BR（「você」とブラジルの語彙を使用）でプロンプトを入力すると、PT-BRで応答します。最良の結果を得るには、希望する変種を明示的に指定してください。' } },
         { '@type': 'Question', name: 'Llama 3.1はポルトガル語に適していますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、Llama 3.1 8Bは2026年のポルトガル語向けローカルモデルのトップ3に入ります。Ollama経由で利用でき、一般的な用途に適した良いPT-BR出力を生成します。' } },
         { '@type': 'Question', name: 'ブラジルポルトガル語の用途でOllamaをインストールするにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'ollama.comからOllamaをインストールし、次に実行します：ollama run qwen3:8b。Ollamaの完全なインストールガイドは /ja/local-llms/how-to-install-ollama をご覧ください。' } },
@@ -1102,11 +1102,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '如何运行 Sabiá-3（不在 Ollama 上）',
         content: [
           'Sabiá-3 由专注于葡萄牙语语言模型的巴西公司 Maritaca AI 开发。它在葡萄牙语任务上达到接近 GPT-4o 的性能，是巴西葡萄牙语最强的开放权重模型。',
-          'Sabiá-3 不在 Ollama 模型库中提供。要在本地运行它，请从 Maritaca AI 的 HuggingFace 页面 https://huggingface.co/maritaca-ai 下载 GGUF 文件，并使用 llama.cpp 或 LM Studio 运行。LM Studio 支持通过内置搜索界面直接从 HuggingFace 加载 GGUF——在 LM Studio 的模型浏览器中搜索「maritaca」。',
+          'Sabiá-3 不在 Ollama 模型库中提供。要在本地运行它，请从 Maritaca AI 的 HuggingFace 页面 [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) 下载 GGUF 文件，并使用 llama.cpp 或 LM Studio 运行。LM Studio 支持通过内置搜索界面直接从 HuggingFace 加载 GGUF——在 LM Studio 的模型浏览器中搜索「maritaca」。',
           '第一代 Sabiá（Sabiá-7B 和 Sabiá-65B）基于 Llama 架构。Sabiá-3 延续了在强大基础模型上进行葡萄牙语专注微调的这一传统。',
         ],
         items: [
-          '下载路径：https://huggingface.co/maritaca-ai',
+          '下载路径：[huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           '运行方式：llama.cpp（CLI）或 LM Studio（GUI，推荐初学者使用）',
           '显存要求：Q4 量化下约 7GB',
           '注意：不存在 `ollama run sabia` 命令——Sabiá 不在 Ollama 库中',
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '2026 年巴西葡萄牙语最佳本地 LLM 是哪个？', a: 'Qwen3 8B 是最佳实用选择：通过 Ollama 在 8GB 显存上运行，基于 119 种语言的 36 万亿个 token 训练。若追求最高 PT-BR 质量，Maritaca AI 的 Sabiá-3 接近 GPT-4o 性能，但需要从 HuggingFace 下载。' },
           { q: '我能在标准笔记本电脑上运行本地 LLM 吗？', a: '可以。大多数配备 16GB 内存的现代笔记本电脑可以仅用 CPU 通过 Ollama 以 2–4 token/秒运行 Qwen3 8B。配备独立 GPU（8GB 显存）后，速度提升至 15–20 token/秒。' },
-          { q: 'Sabiá 是什么，我在哪里下载它？', a: 'Sabiá-3 是巴西公司 Maritaca AI 推出的葡萄牙语专用模型。从 https://huggingface.co/maritaca-ai 下载 GGUF 文件，并使用 llama.cpp 或 LM Studio 运行。它不在 Ollama 库中提供。' },
+          { q: 'Sabiá 是什么，我在哪里下载它？', a: 'Sabiá-3 是巴西公司 Maritaca AI 推出的葡萄牙语专用模型。从 [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) 下载 GGUF 文件，并使用 llama.cpp 或 LM Studio 运行。它不在 Ollama 库中提供。' },
           { q: 'Qwen3 对巴西葡萄牙语的理解与欧洲葡萄牙语不同吗？', a: 'Qwen3 处理两种变体。当用 PT-BR 编写提示词时（使用「você」和巴西词汇），它会用 PT-BR 回复。为获得最佳结果，请明确指定你想要的变体。' },
           { q: 'Llama 3.1 对葡萄牙语好用吗？', a: '是的，Llama 3.1 8B 位列 2026 年葡萄牙语本地模型的前三名。它通过 Ollama 提供，为通用用途生成良好的 PT-BR 输出。' },
           { q: '我如何为巴西葡萄牙语用途安装 Ollama？', a: '从 ollama.com 安装 Ollama（所有语言流程相同），然后运行：ollama run qwen3:8b。请参阅 /zh/local-llms/how-to-install-ollama 上的完整 Ollama 安装指南。' },
@@ -1159,9 +1159,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '来源',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — 葡萄牙语前 3 名模型，包括 Qwen3 和 Llama 3.1 8B',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Qwen3 训练数据：36 万亿个 token，119 种语言',
-          'Alibaba Qwen Team（2026）。《Qwen3.8-27B 模型卡》Hugging Face — https://huggingface.co/Qwen — 280 亿参数密集型视觉-语言架构，发布于 2026-08-14',
+          'Alibaba Qwen Team（2026）。《Qwen3.8-27B 模型卡》Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — 280 亿参数密集型视觉-语言架构，发布于 2026-08-14',
           'PoETa v2 benchmark — 面向 LLM 的葡萄牙语评估工具包',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: '2026 年巴西葡萄牙语最佳本地 LLM 是哪个？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B 是最佳实用选择：通过 Ollama 在 8GB 显存上运行，基于 119 种语言的 36 万亿个 token 训练。若追求最高 PT-BR 质量，Maritaca AI 的 Sabiá-3 接近 GPT-4o 性能，但需要从 HuggingFace 下载。' } },
         { '@type': 'Question', name: '我能在标准笔记本电脑上运行本地 LLM 吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。大多数配备 16GB 内存的现代笔记本电脑可以仅用 CPU 通过 Ollama 以 2–4 token/秒运行 Qwen3 8B。配备独立 GPU（8GB 显存）后，速度提升至 15–20 token/秒。' } },
-        { '@type': 'Question', name: 'Sabiá 是什么，我在哪里下载它？', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 是巴西公司 Maritaca AI 推出的葡萄牙语专用模型。从 https://huggingface.co/maritaca-ai 下载 GGUF 文件，并使用 llama.cpp 或 LM Studio 运行。它不在 Ollama 库中提供。' } },
+        { '@type': 'Question', name: 'Sabiá 是什么，我在哪里下载它？', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 是巴西公司 Maritaca AI 推出的葡萄牙语专用模型。从 [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) 下载 GGUF 文件，并使用 llama.cpp 或 LM Studio 运行。它不在 Ollama 库中提供。' } },
         { '@type': 'Question', name: 'Qwen3 对巴西葡萄牙语的理解与欧洲葡萄牙语不同吗？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 处理两种变体。当用 PT-BR 编写提示词时（使用「você」和巴西词汇），它会用 PT-BR 回复。为获得最佳结果，请明确指定你想要的变体。' } },
         { '@type': 'Question', name: 'Llama 3.1 对葡萄牙语好用吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，Llama 3.1 8B 位列 2026 年葡萄牙语本地模型的前三名。它通过 Ollama 提供，为通用用途生成良好的 PT-BR 输出。' } },
         { '@type': 'Question', name: '我如何为巴西葡萄牙语用途安装 Ollama？', acceptedAnswer: { '@type': 'Answer', text: '从 ollama.com 安装 Ollama，然后运行：ollama run qwen3:8b。请参阅 /zh/local-llms/how-to-install-ollama 上的完整 Ollama 安装指南。' } },
@@ -1302,11 +1302,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como rodar o Sabiá-3 (não está no Ollama)',
         content: [
           'O Sabiá-3 é desenvolvido pela Maritaca AI, uma empresa brasileira especializada em modelos de linguagem em português. Ele alcança desempenho próximo ao GPT-4o em tarefas em português e é o modelo de pesos abertos mais forte para o português do Brasil.',
-          'O Sabiá-3 não está disponível na biblioteca de modelos do Ollama. Para rodá-lo localmente, baixe os arquivos GGUF da página do HuggingFace da Maritaca AI em https://huggingface.co/maritaca-ai e execute-os com llama.cpp ou LM Studio. O LM Studio permite carregar GGUF diretamente do HuggingFace por meio de uma interface de busca integrada — pesquise "maritaca" no navegador de modelos do LM Studio.',
+          'O Sabiá-3 não está disponível na biblioteca de modelos do Ollama. Para rodá-lo localmente, baixe os arquivos GGUF da página do HuggingFace da Maritaca AI em [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) e execute-os com llama.cpp ou LM Studio. O LM Studio permite carregar GGUF diretamente do HuggingFace por meio de uma interface de busca integrada — pesquise "maritaca" no navegador de modelos do LM Studio.',
           'A primeira geração do Sabiá (Sabiá-7B e Sabiá-65B) era baseada na arquitetura Llama. O Sabiá-3 dá continuidade a essa tradição de ajuste fino focado no português sobre um modelo base forte.',
         ],
         items: [
-          'Caminho de download: https://huggingface.co/maritaca-ai',
+          'Caminho de download: [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Rodar com: llama.cpp (CLI) ou LM Studio (GUI, recomendado para iniciantes)',
           'Requisito de VRAM: aproximadamente 7 GB em quantização Q4',
           'Observação: Não existe o comando `ollama run sabia` — o Sabiá não está na biblioteca do Ollama',
@@ -1333,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Qual é o melhor LLM local para português do Brasil em 2026?', a: 'O Qwen3 8B é a melhor escolha prática: roda com 8 GB de VRAM via Ollama, treinado com 36 trilhões de tokens em 119 idiomas. Para máxima qualidade em PT-BR, o Sabiá-3 da Maritaca AI se aproxima do desempenho do GPT-4o, mas exige download do HuggingFace.' },
           { q: 'Consigo rodar LLMs locais em um notebook comum?', a: 'Sim. A maioria dos notebooks modernos com 16 GB de RAM consegue rodar o Qwen3 8B via Ollama a 2–4 tokens/seg apenas na CPU. Com uma GPU dedicada (8 GB de VRAM), a velocidade aumenta para 15–20 tokens/seg.' },
-          { q: 'O que é o Sabiá e onde posso baixá-lo?', a: 'O Sabiá-3 é um modelo especializado em português da Maritaca AI, uma empresa brasileira. Baixe os arquivos GGUF em https://huggingface.co/maritaca-ai e execute com llama.cpp ou LM Studio. Ele não está disponível na biblioteca do Ollama.' },
+          { q: 'O que é o Sabiá e onde posso baixá-lo?', a: 'O Sabiá-3 é um modelo especializado em português da Maritaca AI, uma empresa brasileira. Baixe os arquivos GGUF em [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) e execute com llama.cpp ou LM Studio. Ele não está disponível na biblioteca do Ollama.' },
           { q: 'O Qwen3 entende o português do Brasil de forma diferente do português europeu?', a: 'O Qwen3 lida com as duas variantes. Quando recebe o prompt em PT-BR (usando "você" e vocabulário brasileiro), ele responde em PT-BR. Indique explicitamente a variante que você quer para obter os melhores resultados.' },
           { q: 'O Llama 3.1 é bom para o português?', a: 'Sim, o Llama 3.1 8B está entre os três melhores modelos locais para o português em 2026. Ele está disponível via Ollama e produz boa saída em PT-BR para uso geral.' },
           { q: 'Como instalo o Ollama para uso em português do Brasil?', a: 'Instale o Ollama em ollama.com (o mesmo processo para todos os idiomas) e execute: ollama run qwen3:8b. Veja o guia completo de instalação do Ollama em /pt/local-llms/how-to-install-ollama.' },
@@ -1359,9 +1359,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fontes',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — Os 3 melhores modelos para português, incluindo Qwen3 e Llama 3.1 8B',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Dados de treinamento do Qwen3: 36 trilhões de tokens, 119 idiomas',
-          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — https://huggingface.co/Qwen — arquitetura densa de 28B com visão-linguagem, lançada em 2026-08-14',
+          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — arquitetura densa de 28B com visão-linguagem, lançada em 2026-08-14',
           'PoETa v2 benchmark — Kit de avaliação da língua portuguesa para LLMs',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -1395,7 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Qual é o melhor LLM local para português do Brasil em 2026?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3 8B é a melhor escolha prática: roda com 8 GB de VRAM via Ollama, treinado com 36 trilhões de tokens em 119 idiomas. Para máxima qualidade em PT-BR, o Sabiá-3 da Maritaca AI se aproxima do desempenho do GPT-4o, mas exige download do HuggingFace.' } },
         { '@type': 'Question', name: 'Consigo rodar LLMs locais em um notebook comum?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. A maioria dos notebooks modernos com 16 GB de RAM consegue rodar o Qwen3 8B via Ollama a 2–4 tokens/seg apenas na CPU. Com uma GPU dedicada (8 GB de VRAM), a velocidade aumenta para 15–20 tokens/seg.' } },
-        { '@type': 'Question', name: 'O que é o Sabiá e onde posso baixá-lo?', acceptedAnswer: { '@type': 'Answer', text: 'O Sabiá-3 é um modelo especializado em português da Maritaca AI, uma empresa brasileira. Baixe os arquivos GGUF em https://huggingface.co/maritaca-ai e execute com llama.cpp ou LM Studio. Ele não está disponível na biblioteca do Ollama.' } },
+        { '@type': 'Question', name: 'O que é o Sabiá e onde posso baixá-lo?', acceptedAnswer: { '@type': 'Answer', text: 'O Sabiá-3 é um modelo especializado em português da Maritaca AI, uma empresa brasileira. Baixe os arquivos GGUF em [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) e execute com llama.cpp ou LM Studio. Ele não está disponível na biblioteca do Ollama.' } },
         { '@type': 'Question', name: 'O Qwen3 entende o português do Brasil de forma diferente do português europeu?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3 lida com as duas variantes. Quando recebe o prompt em PT-BR (usando "você" e vocabulário brasileiro), ele responde em PT-BR. Indique explicitamente a variante que você quer para obter os melhores resultados.' } },
         { '@type': 'Question', name: 'O Llama 3.1 é bom para o português?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, o Llama 3.1 8B está entre os três melhores modelos locais para o português em 2026. Ele está disponível via Ollama e produz boa saída em PT-BR para uso geral.' } },
         { '@type': 'Question', name: 'Como instalo o Ollama para uso em português do Brasil?', acceptedAnswer: { '@type': 'Answer', text: 'Instale o Ollama em ollama.com e execute: ollama run qwen3:8b. Veja o guia completo de instalação do Ollama em /pt/local-llms/how-to-install-ollama.' } },
@@ -1503,11 +1503,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيفية تشغيل Sabiá-3 (غير متوفر على Ollama)',
         content: [
           'طُوِّر Sabiá-3 بواسطة Maritaca AI، وهي شركة برازيلية متخصصة في نماذج اللغة البرتغالية. ويحقق أداءً قريبًا من GPT-4o في المهام البرتغالية، وهو أقوى نموذج مفتوح الأوزان للبرتغالية البرازيلية.',
-          'Sabiá-3 غير متوفر في مكتبة نماذج Ollama. ولتشغيله محليًا، نزّل ملفات GGUF من صفحة HuggingFace الخاصة بـ Maritaca AI على https://huggingface.co/maritaca-ai وشغّلها باستخدام llama.cpp أو LM Studio. يدعم LM Studio التحميل المباشر لملفات GGUF من HuggingFace عبر واجهة بحث مدمجة — ابحث عن "maritaca" في متصفح النماذج في LM Studio.',
+          'Sabiá-3 غير متوفر في مكتبة نماذج Ollama. ولتشغيله محليًا، نزّل ملفات GGUF من صفحة HuggingFace الخاصة بـ Maritaca AI على [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) وشغّلها باستخدام llama.cpp أو LM Studio. يدعم LM Studio التحميل المباشر لملفات GGUF من HuggingFace عبر واجهة بحث مدمجة — ابحث عن "maritaca" في متصفح النماذج في LM Studio.',
           'استند الجيل الأول من Sabiá (Sabiá-7B وSabiá-65B) إلى بنية Llama. ويواصل Sabiá-3 هذا التقليد القائم على الضبط الدقيق الموجَّه للبرتغالية على نموذج أساسي قوي.',
         ],
         items: [
-          'مسار التنزيل: https://huggingface.co/maritaca-ai',
+          'مسار التنزيل: [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'التشغيل باستخدام: llama.cpp (سطر الأوامر) أو LM Studio (واجهة رسومية، يُوصى بها للمبتدئين)',
           'متطلب VRAM: نحو 7 جيجابايت بتكميم Q4',
           'ملاحظة: لا يوجد أمر `ollama run sabia` — فـ Sabiá ليس في مكتبة Ollama',
@@ -1534,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'ما هو أفضل نموذج LLM محلي للبرتغالية البرازيلية في 2026؟', a: 'يُعد Qwen3 8B الخيار العملي الأفضل: يعمل بذاكرة VRAM سعة 8 جيجابايت عبر Ollama، ودُرّب على 36 تريليون توكن عبر 119 لغة. وللحصول على أعلى جودة PT-BR، يقترب Sabiá-3 من Maritaca AI من أداء GPT-4o لكنه يتطلب التنزيل من HuggingFace.' },
           { q: 'هل يمكنني تشغيل نماذج LLM المحلية على حاسوب محمول عادي؟', a: 'نعم. تستطيع معظم الحواسيب المحمولة الحديثة المزوّدة بذاكرة RAM سعة 16 جيجابايت تشغيل Qwen3 8B عبر Ollama بسرعة 2–4 توكن/ثانية على وحدة المعالجة المركزية فقط. ومع وحدة معالجة رسوميات مخصصة (8 جيجابايت VRAM)، ترتفع السرعة إلى 15–20 توكن/ثانية.' },
-          { q: 'ما هو Sabiá وأين يمكنني تنزيله؟', a: 'Sabiá-3 هو نموذج متخصص في البرتغالية من Maritaca AI، وهي شركة برازيلية. نزّل ملفات GGUF من https://huggingface.co/maritaca-ai وشغّلها باستخدام llama.cpp أو LM Studio. وهو غير متوفر في مكتبة Ollama.' },
+          { q: 'ما هو Sabiá وأين يمكنني تنزيله؟', a: 'Sabiá-3 هو نموذج متخصص في البرتغالية من Maritaca AI، وهي شركة برازيلية. نزّل ملفات GGUF من [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) وشغّلها باستخدام llama.cpp أو LM Studio. وهو غير متوفر في مكتبة Ollama.' },
           { q: 'هل يفهم Qwen3 البرتغالية البرازيلية بشكل مختلف عن البرتغالية الأوروبية؟', a: 'يتعامل Qwen3 مع المتغيّرين. وعند توجيهه بـ PT-BR (باستخدام "você" والمفردات البرازيلية)، يرد بـ PT-BR. وجِّهه صراحةً بالمتغيّر الذي تريده للحصول على أفضل النتائج.' },
           { q: 'هل Llama 3.1 جيد للبرتغالية؟', a: 'نعم، يُعد Llama 3.1 8B من أفضل ثلاثة نماذج محلية للبرتغالية في 2026. وهو متوفر عبر Ollama وينتج مخرجات PT-BR جيدة للاستخدام العام.' },
           { q: 'كيف أثبّت Ollama لاستخدام البرتغالية البرازيلية؟', a: 'ثبّت Ollama من ollama.com (العملية نفسها لجميع اللغات)، ثم نفّذ: ollama run qwen3:8b. اطّلع على دليل تثبيت Ollama الكامل على /ar/local-llms/how-to-install-ollama.' },
@@ -1560,9 +1560,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'المصادر',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — أفضل 3 نماذج للبرتغالية بما في ذلك Qwen3 وLlama 3.1 8B',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — بيانات تدريب Qwen3: 36 تريليون توكن، 119 لغة',
-          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — https://huggingface.co/Qwen — بنية كثيفة بحجم 28B للرؤية واللغة، صدرت في 2026-08-14',
+          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — بنية كثيفة بحجم 28B للرؤية واللغة، صدرت في 2026-08-14',
           'PoETa v2 benchmark — مجموعة أدوات تقييم اللغة البرتغالية لنماذج LLM',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'ما هو أفضل نموذج LLM محلي للبرتغالية البرازيلية في 2026؟', acceptedAnswer: { '@type': 'Answer', text: 'يُعد Qwen3 8B الخيار العملي الأفضل: يعمل بذاكرة VRAM سعة 8 جيجابايت عبر Ollama، ودُرّب على 36 تريليون توكن عبر 119 لغة. وللحصول على أعلى جودة PT-BR، يقترب Sabiá-3 من Maritaca AI من أداء GPT-4o لكنه يتطلب التنزيل من HuggingFace.' } },
         { '@type': 'Question', name: 'هل يمكنني تشغيل نماذج LLM المحلية على حاسوب محمول عادي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. تستطيع معظم الحواسيب المحمولة الحديثة المزوّدة بذاكرة RAM سعة 16 جيجابايت تشغيل Qwen3 8B عبر Ollama بسرعة 2–4 توكن/ثانية على وحدة المعالجة المركزية فقط. ومع وحدة معالجة رسوميات مخصصة (8 جيجابايت VRAM)، ترتفع السرعة إلى 15–20 توكن/ثانية.' } },
-        { '@type': 'Question', name: 'ما هو Sabiá وأين يمكنني تنزيله؟', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 هو نموذج متخصص في البرتغالية من Maritaca AI، وهي شركة برازيلية. نزّل ملفات GGUF من https://huggingface.co/maritaca-ai وشغّلها باستخدام llama.cpp أو LM Studio. وهو غير متوفر في مكتبة Ollama.' } },
+        { '@type': 'Question', name: 'ما هو Sabiá وأين يمكنني تنزيله؟', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3 هو نموذج متخصص في البرتغالية من Maritaca AI، وهي شركة برازيلية. نزّل ملفات GGUF من [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) وشغّلها باستخدام llama.cpp أو LM Studio. وهو غير متوفر في مكتبة Ollama.' } },
         { '@type': 'Question', name: 'هل يفهم Qwen3 البرتغالية البرازيلية بشكل مختلف عن البرتغالية الأوروبية؟', acceptedAnswer: { '@type': 'Answer', text: 'يتعامل Qwen3 مع المتغيّرين. وعند توجيهه بـ PT-BR (باستخدام "você" والمفردات البرازيلية)، يرد بـ PT-BR. وجِّهه صراحةً بالمتغيّر الذي تريده للحصول على أفضل النتائج.' } },
         { '@type': 'Question', name: 'هل Llama 3.1 جيد للبرتغالية؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، يُعد Llama 3.1 8B من أفضل ثلاثة نماذج محلية للبرتغالية في 2026. وهو متوفر عبر Ollama وينتج مخرجات PT-BR جيدة للاستخدام العام.' } },
         { '@type': 'Question', name: 'كيف أثبّت Ollama لاستخدام البرتغالية البرازيلية؟', acceptedAnswer: { '@type': 'Answer', text: 'ثبّت Ollama من ollama.com، ثم نفّذ: ollama run qwen3:8b. اطّلع على دليل تثبيت Ollama الكامل على /ar/local-llms/how-to-install-ollama.' } },
@@ -1703,11 +1703,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sabiá-3 실행 방법(Ollama에는 없음)',
         content: [
           'Sabiá-3는 포르투갈어 언어 모델을 전문으로 하는 브라질 기업 Maritaca AI가 개발했습니다. 포르투갈어 작업에서 GPT-4o에 가까운 성능을 달성하며, 브라질 포르투갈어를 위한 가장 강력한 오픈 웨이트 모델입니다.',
-          'Sabiá-3는 Ollama 모델 라이브러리에서 제공되지 않습니다. 로컬에서 실행하려면 Maritaca AI의 HuggingFace 페이지 https://huggingface.co/maritaca-ai 에서 GGUF 파일을 다운로드하여 llama.cpp 또는 LM Studio로 실행하십시오. LM Studio는 내장 검색 인터페이스를 통해 HuggingFace에서 GGUF를 직접 로드하는 것을 지원합니다 — LM Studio 모델 브라우저에서 "maritaca"를 검색하십시오.',
+          'Sabiá-3는 Ollama 모델 라이브러리에서 제공되지 않습니다. 로컬에서 실행하려면 Maritaca AI의 HuggingFace 페이지 [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) 에서 GGUF 파일을 다운로드하여 llama.cpp 또는 LM Studio로 실행하십시오. LM Studio는 내장 검색 인터페이스를 통해 HuggingFace에서 GGUF를 직접 로드하는 것을 지원합니다 — LM Studio 모델 브라우저에서 "maritaca"를 검색하십시오.',
           '1세대 Sabiá(Sabiá-7B 및 Sabiá-65B)는 Llama 아키텍처를 기반으로 했습니다. Sabiá-3는 강력한 기본 모델 위에서 포르투갈어에 초점을 맞춘 미세 조정이라는 이 전통을 이어갑니다.',
         ],
         items: [
-          '다운로드 경로: https://huggingface.co/maritaca-ai',
+          '다운로드 경로: [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           '실행 방법: llama.cpp(CLI) 또는 LM Studio(GUI, 초보자에게 권장)',
           'VRAM 요건: Q4 양자화에서 약 7GB',
           '참고: `ollama run sabia` 명령은 존재하지 않습니다 — Sabiá는 Ollama 라이브러리에 없습니다',
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '2026년 브라질 포르투갈어를 위한 최고의 로컬 LLM은 무엇입니까?', a: 'Qwen3 8B가 최고의 실용적 선택입니다. Ollama를 통해 8GB VRAM에서 실행되고, 119개 언어에 걸친 36조 개의 토큰으로 학습되었습니다. 최고의 PT-BR 품질을 원한다면 Maritaca AI의 Sabiá-3가 GPT-4o 성능에 근접하지만 HuggingFace 다운로드가 필요합니다.' },
           { q: '일반 노트북에서 로컬 LLM을 실행할 수 있습니까?', a: '예. 16GB RAM을 갖춘 대부분의 최신 노트북은 CPU만으로 Ollama를 통해 Qwen3 8B를 2~4 토큰/초로 실행할 수 있습니다. 전용 GPU(8GB VRAM)가 있으면 속도가 15~20 토큰/초로 증가합니다.' },
-          { q: 'Sabiá는 무엇이며 어디서 다운로드할 수 있습니까?', a: 'Sabiá-3는 브라질 기업 Maritaca AI의 포르투갈어 특화 모델입니다. https://huggingface.co/maritaca-ai 에서 GGUF 파일을 다운로드하여 llama.cpp 또는 LM Studio로 실행하십시오. Ollama 라이브러리에서는 제공되지 않습니다.' },
+          { q: 'Sabiá는 무엇이며 어디서 다운로드할 수 있습니까?', a: 'Sabiá-3는 브라질 기업 Maritaca AI의 포르투갈어 특화 모델입니다. [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) 에서 GGUF 파일을 다운로드하여 llama.cpp 또는 LM Studio로 실행하십시오. Ollama 라이브러리에서는 제공되지 않습니다.' },
           { q: 'Qwen3는 브라질 포르투갈어를 유럽 포르투갈어와 다르게 이해합니까?', a: 'Qwen3는 두 변이형을 모두 처리합니다. PT-BR("você"와 브라질 어휘 사용)로 프롬프트를 작성하면 PT-BR로 응답합니다. 최상의 결과를 위해 원하는 변이형을 명시적으로 지정하십시오.' },
           { q: 'Llama 3.1은 포르투갈어에 적합합니까?', a: '예, Llama 3.1 8B는 2026년 포르투갈어를 위한 상위 3개 로컬 모델에 속합니다. Ollama를 통해 제공되며 일반 용도에 적합한 좋은 PT-BR 출력을 생성합니다.' },
           { q: '브라질 포르투갈어 용도로 Ollama를 어떻게 설치합니까?', a: 'ollama.com에서 Ollama를 설치한 후(모든 언어에 동일한 절차) ollama run qwen3:8b를 실행하십시오. 전체 Ollama 설치 가이드는 /ko/local-llms/how-to-install-ollama 에서 확인하십시오.' },
@@ -1760,9 +1760,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '출처',
         items: [
           'SiliconFlow (2026). "Best Open-Source LLM for Portuguese Language Tasks." — Qwen3와 Llama 3.1 8B를 포함한 포르투갈어 상위 3개 모델',
-          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — https://huggingface.co/maritaca-ai',
+          'Maritaca AI. "Sabiá-3 Model Card." HuggingFace — [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai)',
           'Qwen Team (2024). "Qwen Technical Report." arXiv — Qwen3 학습 데이터: 36조 개의 토큰, 119개 언어',
-          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — https://huggingface.co/Qwen — 28B 밀집형 비전-언어 아키텍처, 2026-08-14 출시',
+          'Alibaba Qwen Team (2026). "Qwen3.8-27B Model Card." Hugging Face — [huggingface.co/Qwen](https://huggingface.co/Qwen) — 28B 밀집형 비전-언어 아키텍처, 2026-08-14 출시',
           'PoETa v2 benchmark — LLM을 위한 포르투갈어 평가 툴킷',
           'C4AI-USP. "Tucano: Open-weight Portuguese LLM." HuggingFace',
         ],
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: '2026년 브라질 포르투갈어를 위한 최고의 로컬 LLM은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B가 최고의 실용적 선택입니다. Ollama를 통해 8GB VRAM에서 실행되고, 119개 언어에 걸친 36조 개의 토큰으로 학습되었습니다. 최고의 PT-BR 품질을 원한다면 Maritaca AI의 Sabiá-3가 GPT-4o 성능에 근접하지만 HuggingFace 다운로드가 필요합니다.' } },
         { '@type': 'Question', name: '일반 노트북에서 로컬 LLM을 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '예. 16GB RAM을 갖춘 대부분의 최신 노트북은 CPU만으로 Ollama를 통해 Qwen3 8B를 2~4 토큰/초로 실행할 수 있습니다. 전용 GPU(8GB VRAM)가 있으면 속도가 15~20 토큰/초로 증가합니다.' } },
-        { '@type': 'Question', name: 'Sabiá는 무엇이며 어디서 다운로드할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3는 브라질 기업 Maritaca AI의 포르투갈어 특화 모델입니다. https://huggingface.co/maritaca-ai 에서 GGUF 파일을 다운로드하여 llama.cpp 또는 LM Studio로 실행하십시오. Ollama 라이브러리에서는 제공되지 않습니다.' } },
+        { '@type': 'Question', name: 'Sabiá는 무엇이며 어디서 다운로드할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: 'Sabiá-3는 브라질 기업 Maritaca AI의 포르투갈어 특화 모델입니다. [huggingface.co/maritaca-ai](https://huggingface.co/maritaca-ai) 에서 GGUF 파일을 다운로드하여 llama.cpp 또는 LM Studio로 실행하십시오. Ollama 라이브러리에서는 제공되지 않습니다.' } },
         { '@type': 'Question', name: 'Qwen3는 브라질 포르투갈어를 유럽 포르투갈어와 다르게 이해합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3는 두 변이형을 모두 처리합니다. PT-BR("você"와 브라질 어휘 사용)로 프롬프트를 작성하면 PT-BR로 응답합니다. 최상의 결과를 위해 원하는 변이형을 명시적으로 지정하십시오.' } },
         { '@type': 'Question', name: 'Llama 3.1은 포르투갈어에 적합합니까?', acceptedAnswer: { '@type': 'Answer', text: '예, Llama 3.1 8B는 2026년 포르투갈어를 위한 상위 3개 로컬 모델에 속합니다. Ollama를 통해 제공되며 일반 용도에 적합한 좋은 PT-BR 출력을 생성합니다.' } },
         { '@type': 'Question', name: '브라질 포르투갈어 용도로 Ollama를 어떻게 설치합니까?', acceptedAnswer: { '@type': 'Answer', text: 'ollama.com에서 Ollama를 설치한 후 ollama run qwen3:8b를 실행하십시오. 전체 Ollama 설치 가이드는 /ko/local-llms/how-to-install-ollama 에서 확인하십시오.' } },

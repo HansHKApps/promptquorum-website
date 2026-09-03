@@ -68,15 +68,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — Best Overall',
-            text: 'Best for: most users wanting reliable 7B inference in a compact, quiet machine. The SER7 idles under 30 dB — suitable for Japanese apartment use. Skip if: you need to run 13B+ models regularly; upgrade to the 64 GB RAM variant instead. <a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Check on Amazon.co.jp</a>',
+            text: 'Best for: most users wanting reliable 7B inference in a compact, quiet machine. The SER7 idles under 30 dB — suitable for Japanese apartment use. Skip if: you need to run 13B+ models regularly; upgrade to the 64 GB RAM variant instead. <a href="[www.amazon.co.jp/s?k=Beelink](https://www.amazon.co.jp/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Check on Amazon.co.jp</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — Power Pick',
-            text: 'Best for: power users who want the headroom to expand to 64 GB DDR5 for 13B and 30B models. The Ryzen 9 7940HS delivers ~12 tok/s on a 7B Q4 model — the fastest of the three. Skip if: budget is the primary concern; the ¥15,000 premium over the Beelink buys speed but not dramatically more at 7B. <a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Check on Amazon.co.jp</a>',
+            text: 'Best for: power users who want the headroom to expand to 64 GB DDR5 for 13B and 30B models. The Ryzen 9 7940HS delivers ~12 tok/s on a 7B Q4 model — the fastest of the three. Skip if: budget is the primary concern; the ¥15,000 premium over the Beelink buys speed but not dramatically more at 7B. <a href="[www.amazon.co.jp/s?k=MINISFORUM](https://www.amazon.co.jp/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Check on Amazon.co.jp</a>',
           },
           {
             title: 'GMKtec NucBox K6 — Budget Pick',
-            text: 'Best for: budget buyers who want the same Ryzen 7 7840HS platform as the Beelink SER7 for ¥5,000 less. Skip if: you plan frequent heavy LLM sessions — the NucBox K6 runs noticeably hotter than the Beelink SER7 under sustained inference load. <a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Check on Amazon.co.jp</a>',
+            text: 'Best for: budget buyers who want the same Ryzen 7 7840HS platform as the Beelink SER7 for ¥5,000 less. Skip if: you plan frequent heavy LLM sessions — the NucBox K6 runs noticeably hotter than the Beelink SER7 under sustained inference load. <a href="[www.amazon.co.jp/s?k=GMKtec](https://www.amazon.co.jp/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Check on Amazon.co.jp</a>',
           },
           {
             title: 'Skip: Any Model with 16 GB RAM',
@@ -196,15 +196,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — Beste Gesamtwahl',
-            text: 'Empfohlen für: die meisten Nutzer, die zuverlässige 7B-Inferenz in einem kompakten, leisen Gehäuse suchen. Der SER7 läuft im Leerlauf unter 30 dB — geeignet für japanische Wohnungsnutzung. Überspringen wenn: Sie regelmäßig 13B+-Modelle benötigen; kaufen Sie dann die 64 GB RAM-Variante. <a href="https://www.amazon.de/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.de ansehen</a>',
+            text: 'Empfohlen für: die meisten Nutzer, die zuverlässige 7B-Inferenz in einem kompakten, leisen Gehäuse suchen. Der SER7 läuft im Leerlauf unter 30 dB — geeignet für japanische Wohnungsnutzung. Überspringen wenn: Sie regelmäßig 13B+-Modelle benötigen; kaufen Sie dann die 64 GB RAM-Variante. <a href="[www.amazon.de/s?k=Beelink](https://www.amazon.de/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.de ansehen</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — Power-Wahl',
-            text: 'Empfohlen für: Power-Nutzer, die Headroom für 64 GB DDR5-Erweiterung für 13B- und 30B-Modelle benötigen. Der Ryzen 9 7940HS liefert ~12 tok/s auf einem 7B-Q4-Modell — das schnellste der drei. Überspringen wenn: Budget die erste Priorität ist; der Aufpreis von ~€160 gegenüber dem Beelink bringt Geschwindigkeit, aber bei 7B keinen dramatischen Unterschied. <a href="https://www.amazon.de/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.de ansehen</a>',
+            text: 'Empfohlen für: Power-Nutzer, die Headroom für 64 GB DDR5-Erweiterung für 13B- und 30B-Modelle benötigen. Der Ryzen 9 7940HS liefert ~12 tok/s auf einem 7B-Q4-Modell — das schnellste der drei. Überspringen wenn: Budget die erste Priorität ist; der Aufpreis von ~€160 gegenüber dem Beelink bringt Geschwindigkeit, aber bei 7B keinen dramatischen Unterschied. <a href="[www.amazon.de/s?k=MINISFORUM](https://www.amazon.de/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.de ansehen</a>',
           },
           {
             title: 'GMKtec NucBox K6 — Budget-Wahl',
-            text: 'Empfohlen für: Budget-Käufer, die dieselbe Ryzen-7-7840HS-Plattform wie der Beelink SER7 für ~€40 weniger möchten. Überspringen wenn: Sie häufig intensive LLM-Sitzungen planen — der NucBox K6 läuft unter Dauerlast merklich wärmer als der Beelink SER7. <a href="https://www.amazon.de/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.de ansehen</a>',
+            text: 'Empfohlen für: Budget-Käufer, die dieselbe Ryzen-7-7840HS-Plattform wie der Beelink SER7 für ~€40 weniger möchten. Überspringen wenn: Sie häufig intensive LLM-Sitzungen planen — der NucBox K6 läuft unter Dauerlast merklich wärmer als der Beelink SER7. <a href="[www.amazon.de/s?k=GMKtec](https://www.amazon.de/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.de ansehen</a>',
           },
           {
             title: 'Überspringen: Modelle mit nur 16 GB RAM',
@@ -324,15 +324,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — Meilleur choix global',
-            text: 'Recommandé pour : la plupart des utilisateurs cherchant une inférence 7B fiable dans une machine compacte et silencieuse. Le SER7 tourne en dessous de 30 dB en veille — adapté aux appartements japonais. À éviter si : vous avez besoin de modèles 13B+ régulièrement ; passez plutôt au variant 64 Go de RAM. <a href="https://www.amazon.fr/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Voir sur Amazon.fr</a>',
+            text: 'Recommandé pour : la plupart des utilisateurs cherchant une inférence 7B fiable dans une machine compacte et silencieuse. Le SER7 tourne en dessous de 30 dB en veille — adapté aux appartements japonais. À éviter si : vous avez besoin de modèles 13B+ régulièrement ; passez plutôt au variant 64 Go de RAM. <a href="[www.amazon.fr/s?k=Beelink](https://www.amazon.fr/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Voir sur Amazon.fr</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — Choix puissance',
-            text: 'Recommandé pour : les utilisateurs puissance qui veulent la capacité d\'extension à 64 Go DDR5 pour les modèles 13B et 30B. Le Ryzen 9 7940HS délivre ~12 tok/s sur un modèle 7B Q4 — le plus rapide des trois. À éviter si : le budget est la préoccupation principale ; la prime de ~€120 par rapport au Beelink apporte de la vitesse mais pas de différence dramatique en 7B. <a href="https://www.amazon.fr/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Voir sur Amazon.fr</a>',
+            text: 'Recommandé pour : les utilisateurs puissance qui veulent la capacité d\'extension à 64 Go DDR5 pour les modèles 13B et 30B. Le Ryzen 9 7940HS délivre ~12 tok/s sur un modèle 7B Q4 — le plus rapide des trois. À éviter si : le budget est la préoccupation principale ; la prime de ~€120 par rapport au Beelink apporte de la vitesse mais pas de différence dramatique en 7B. <a href="[www.amazon.fr/s?k=MINISFORUM](https://www.amazon.fr/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Voir sur Amazon.fr</a>',
           },
           {
             title: 'GMKtec NucBox K6 — Choix budget',
-            text: 'Recommandé pour : les acheteurs budget qui veulent la même plateforme Ryzen 7 7840HS que le Beelink SER7 pour ~€40 de moins. À éviter si : vous prévoyez des sessions LLM intensives fréquentes — le NucBox K6 chauffe nettement plus que le Beelink SER7 sous charge d\'inférence soutenue. <a href="https://www.amazon.fr/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Voir sur Amazon.fr</a>',
+            text: 'Recommandé pour : les acheteurs budget qui veulent la même plateforme Ryzen 7 7840HS que le Beelink SER7 pour ~€40 de moins. À éviter si : vous prévoyez des sessions LLM intensives fréquentes — le NucBox K6 chauffe nettement plus que le Beelink SER7 sous charge d\'inférence soutenue. <a href="[www.amazon.fr/s?k=GMKtec](https://www.amazon.fr/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Voir sur Amazon.fr</a>',
           },
           {
             title: 'À éviter : tout modèle avec seulement 16 Go de RAM',
@@ -452,15 +452,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — 総合最良選択',
-            text: 'おすすめ：コンパクトで静かなマシンで信頼性の高い7B推論を求めるほとんどのユーザー向け。SER7はアイドル時30 dB以下で動作 — 日本のアパートでの使用に適しています。スキップすべき場合：定期的に13B+モデルを実行する必要がある場合は、代わりに64 GB RAMバリアントにアップグレードしてください。<a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jpで確認</a>',
+            text: 'おすすめ：コンパクトで静かなマシンで信頼性の高い7B推論を求めるほとんどのユーザー向け。SER7はアイドル時30 dB以下で動作 — 日本のアパートでの使用に適しています。スキップすべき場合：定期的に13B+モデルを実行する必要がある場合は、代わりに64 GB RAMバリアントにアップグレードしてください。<a href="[www.amazon.co.jp/s?k=Beelink](https://www.amazon.co.jp/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jpで確認</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — パワーユーザー選択',
-            text: 'おすすめ：13Bや30Bモデル向けに64 GB DDR5への拡張ヘッドルームが必要なパワーユーザー向け。Ryzen 9 7940HSは7B Q4モデルで約12 tok/sを提供 — 3機種中最速。スキップすべき場合：予算が最優先の場合。Beelinkとの¥15,000の差額は速度をもたらしますが、7Bでは劇的な違いはありません。<a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jpで確認</a>',
+            text: 'おすすめ：13Bや30Bモデル向けに64 GB DDR5への拡張ヘッドルームが必要なパワーユーザー向け。Ryzen 9 7940HSは7B Q4モデルで約12 tok/sを提供 — 3機種中最速。スキップすべき場合：予算が最優先の場合。Beelinkとの¥15,000の差額は速度をもたらしますが、7Bでは劇的な違いはありません。<a href="[www.amazon.co.jp/s?k=MINISFORUM](https://www.amazon.co.jp/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jpで確認</a>',
           },
           {
             title: 'GMKtec NucBox K6 — バジェット選択',
-            text: 'おすすめ：Beelink SER7と同じRyzen 7 7840HSプラットフォームを¥5,000安く手に入れたいバジェット購入者向け。スキップすべき場合：頻繁な高負荷LLMセッションを予定している場合 — NucBox K6は持続的な推論負荷下でBeelink SER7より著しく熱くなります。<a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jpで確認</a>',
+            text: 'おすすめ：Beelink SER7と同じRyzen 7 7840HSプラットフォームを¥5,000安く手に入れたいバジェット購入者向け。スキップすべき場合：頻繁な高負荷LLMセッションを予定している場合 — NucBox K6は持続的な推論負荷下でBeelink SER7より著しく熱くなります。<a href="[www.amazon.co.jp/s?k=GMKtec](https://www.amazon.co.jp/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jpで確認</a>',
           },
           {
             title: 'スキップ：16 GB RAMのみのモデル',
@@ -580,15 +580,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — Mejor opción global',
-            text: 'Ideal para: la mayoría de usuarios que buscan inferencia 7B confiable en una máquina compacta y silenciosa. El SER7 funciona por debajo de 30 dB en reposo — adecuado para uso en apartamentos japoneses. Evitar si: necesitas ejecutar modelos de 13B+ regularmente; en ese caso, opta por la variante de 64 GB de RAM. <a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Ver en Amazon.co.jp</a>',
+            text: 'Ideal para: la mayoría de usuarios que buscan inferencia 7B confiable en una máquina compacta y silenciosa. El SER7 funciona por debajo de 30 dB en reposo — adecuado para uso en apartamentos japoneses. Evitar si: necesitas ejecutar modelos de 13B+ regularmente; en ese caso, opta por la variante de 64 GB de RAM. <a href="[www.amazon.co.jp/s?k=Beelink](https://www.amazon.co.jp/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Ver en Amazon.co.jp</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — Opción de potencia',
-            text: 'Ideal para: usuarios avanzados que quieren margen para expandir a 64 GB DDR5 para modelos de 13B y 30B. El Ryzen 9 7940HS entrega ~12 tok/s en un modelo 7B Q4 — el más rápido de los tres. Evitar si: el presupuesto es la principal preocupación; el sobreprecio de ~€120 respecto al Beelink aporta velocidad pero no una diferencia dramática en 7B. <a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Ver en Amazon.co.jp</a>',
+            text: 'Ideal para: usuarios avanzados que quieren margen para expandir a 64 GB DDR5 para modelos de 13B y 30B. El Ryzen 9 7940HS entrega ~12 tok/s en un modelo 7B Q4 — el más rápido de los tres. Evitar si: el presupuesto es la principal preocupación; el sobreprecio de ~€120 respecto al Beelink aporta velocidad pero no una diferencia dramática en 7B. <a href="[www.amazon.co.jp/s?k=MINISFORUM](https://www.amazon.co.jp/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Ver en Amazon.co.jp</a>',
           },
           {
             title: 'GMKtec NucBox K6 — Opción económica',
-            text: 'Ideal para: compradores con presupuesto ajustado que quieren la misma plataforma Ryzen 7 7840HS que el Beelink SER7 por ~€40 menos. Evitar si: planeas sesiones de LLM intensivas frecuentes — el NucBox K6 se calienta notablemente más que el Beelink SER7 bajo carga de inferencia sostenida. <a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Ver en Amazon.co.jp</a>',
+            text: 'Ideal para: compradores con presupuesto ajustado que quieren la misma plataforma Ryzen 7 7840HS que el Beelink SER7 por ~€40 menos. Evitar si: planeas sesiones de LLM intensivas frecuentes — el NucBox K6 se calienta notablemente más que el Beelink SER7 bajo carga de inferencia sostenida. <a href="[www.amazon.co.jp/s?k=GMKtec](https://www.amazon.co.jp/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Ver en Amazon.co.jp</a>',
           },
           {
             title: 'Evitar: cualquier modelo con solo 16 GB de RAM',
@@ -708,15 +708,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — Melhor opção geral',
-            text: 'Ideal para: a maioria dos usuários que buscam inferência 7B confiável em uma máquina compacta e silenciosa. O SER7 fica abaixo de 30 dB em repouso — adequado para uso em apartamentos japoneses. Evite se: precisar executar modelos 13B+ regularmente; nesse caso, opte pela variante de 64 GB de RAM. <a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
+            text: 'Ideal para: a maioria dos usuários que buscam inferência 7B confiável em uma máquina compacta e silenciosa. O SER7 fica abaixo de 30 dB em repouso — adequado para uso em apartamentos japoneses. Evite se: precisar executar modelos 13B+ regularmente; nesse caso, opte pela variante de 64 GB de RAM. <a href="[www.amazon.co.jp/s?k=Beelink](https://www.amazon.co.jp/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — Opção de potência',
-            text: 'Ideal para: usuários avançados que querem margem para expandir para 64 GB DDR5 para modelos de 13B e 30B. O Ryzen 9 7940HS entrega ~12 tok/s em um modelo 7B Q4 — o mais rápido dos três. Evite se: o orçamento for a principal preocupação; o sobrecusto de ~R$ 700 sobre o Beelink traz velocidade, mas não uma diferença dramática em 7B. <a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
+            text: 'Ideal para: usuários avançados que querem margem para expandir para 64 GB DDR5 para modelos de 13B e 30B. O Ryzen 9 7940HS entrega ~12 tok/s em um modelo 7B Q4 — o mais rápido dos três. Evite se: o orçamento for a principal preocupação; o sobrecusto de ~R$ 700 sobre o Beelink traz velocidade, mas não uma diferença dramática em 7B. <a href="[www.amazon.co.jp/s?k=MINISFORUM](https://www.amazon.co.jp/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
           },
           {
             title: 'GMKtec NucBox K6 — Opção econômica',
-            text: 'Ideal para: compradores com orçamento que querem a mesma plataforma Ryzen 7 7840HS do Beelink SER7 por ~R$ 250 menos. Evite se: planeja sessões de LLM intensivas frequentes — o NucBox K6 esquenta notavelmente mais do que o Beelink SER7 sob carga de inferência contínua. <a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
+            text: 'Ideal para: compradores com orçamento que querem a mesma plataforma Ryzen 7 7840HS do Beelink SER7 por ~R$ 250 menos. Evite se: planeja sessões de LLM intensivas frequentes — o NucBox K6 esquenta notavelmente mais do que o Beelink SER7 sob carga de inferência contínua. <a href="[www.amazon.co.jp/s?k=GMKtec](https://www.amazon.co.jp/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Ver na Amazon.co.jp</a>',
           },
           {
             title: 'Pule: qualquer modelo com apenas 16 GB de RAM',
@@ -836,15 +836,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — 综合最佳',
-            text: '适合：大多数希望在紧凑静音机器中获得可靠7B推理的用户。SER7空闲时噪音低于30分贝 — 适合日本公寓使用。不适合：需要定期运行13B+模型的情况；请改选64 GB RAM版本。<a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">在亚马逊查看</a>',
+            text: '适合：大多数希望在紧凑静音机器中获得可靠7B推理的用户。SER7空闲时噪音低于30分贝 — 适合日本公寓使用。不适合：需要定期运行13B+模型的情况；请改选64 GB RAM版本。<a href="[www.amazon.co.jp/s?k=Beelink](https://www.amazon.co.jp/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">在亚马逊查看</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — 性能之选',
-            text: '适合：需要64 GB DDR5扩展空间运行13B和30B模型的高级用户。Ryzen 9 7940HS在7B Q4模型上提供约12 tok/s — 三款中最快。不适合：预算是首要考虑因素的情况；相比Beelink约$90 USD的溢价带来速度提升，但在7B模型上差异不显著。<a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">在亚马逊查看</a>',
+            text: '适合：需要64 GB DDR5扩展空间运行13B和30B模型的高级用户。Ryzen 9 7940HS在7B Q4模型上提供约12 tok/s — 三款中最快。不适合：预算是首要考虑因素的情况；相比Beelink约$90 USD的溢价带来速度提升，但在7B模型上差异不显著。<a href="[www.amazon.co.jp/s?k=MINISFORUM](https://www.amazon.co.jp/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">在亚马逊查看</a>',
           },
           {
             title: 'GMKtec NucBox K6 — 预算之选',
-            text: '适合：想以低约$30 USD获得与Beelink SER7相同Ryzen 7 7840HS平台的预算购买者。不适合：计划频繁进行高强度LLM会话的情况 — NucBox K6在持续推理负载下温度明显高于Beelink SER7。<a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">在亚马逊查看</a>',
+            text: '适合：想以低约$30 USD获得与Beelink SER7相同Ryzen 7 7840HS平台的预算购买者。不适合：计划频繁进行高强度LLM会话的情况 — NucBox K6在持续推理负载下温度明显高于Beelink SER7。<a href="[www.amazon.co.jp/s?k=GMKtec](https://www.amazon.co.jp/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">在亚马逊查看</a>',
           },
           {
             title: '跳过：仅有16 GB RAM的型号',
@@ -964,15 +964,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — الأفضل عموماً',
-            text: 'مناسب لـ: معظم المستخدمين الذين يبحثون عن استدلال 7B موثوق في جهاز مضغوط وهادئ. SER7 يعمل دون 30 dB في وضع الخمول — مناسب للاستخدام في شقق اليابان. تجنّبه إذا: كنت تحتاج لتشغيل نماذج 13B+ بانتظام؛ في هذه الحالة انتقل للإصدار بـ64 GB RAM. <a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">عرض على Amazon.co.jp</a>',
+            text: 'مناسب لـ: معظم المستخدمين الذين يبحثون عن استدلال 7B موثوق في جهاز مضغوط وهادئ. SER7 يعمل دون 30 dB في وضع الخمول — مناسب للاستخدام في شقق اليابان. تجنّبه إذا: كنت تحتاج لتشغيل نماذج 13B+ بانتظام؛ في هذه الحالة انتقل للإصدار بـ64 GB RAM. <a href="[www.amazon.co.jp/s?k=Beelink](https://www.amazon.co.jp/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">عرض على Amazon.co.jp</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — خيار الأداء',
-            text: 'مناسب لـ: المستخدمين المتقدمين الذين يريدون مساحة للتوسع إلى 64 GB DDR5 لنماذج 13B و30B. Ryzen 9 7940HS يحقق ~12 رمز/ثانية على نموذج 7B Q4 — الأسرع بين الثلاثة. تجنّبه إذا: كانت الميزانية الاعتبار الرئيسي؛ الفرق بـ~$90 USD عن Beelink يضيف سرعة لكن ليس فارقاً كبيراً في نماذج 7B. <a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">عرض على Amazon.co.jp</a>',
+            text: 'مناسب لـ: المستخدمين المتقدمين الذين يريدون مساحة للتوسع إلى 64 GB DDR5 لنماذج 13B و30B. Ryzen 9 7940HS يحقق ~12 رمز/ثانية على نموذج 7B Q4 — الأسرع بين الثلاثة. تجنّبه إذا: كانت الميزانية الاعتبار الرئيسي؛ الفرق بـ~$90 USD عن Beelink يضيف سرعة لكن ليس فارقاً كبيراً في نماذج 7B. <a href="[www.amazon.co.jp/s?k=MINISFORUM](https://www.amazon.co.jp/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">عرض على Amazon.co.jp</a>',
           },
           {
             title: 'GMKtec NucBox K6 — الخيار الاقتصادي',
-            text: 'مناسب لـ: المشترين ذوي الميزانية المحدودة الذين يريدون نفس منصة Ryzen 7 7840HS كـBeelink SER7 بـ~$30 USD أقل. تجنّبه إذا: كنت تخطط لجلسات نماذج لغة كبيرة مكثفة ومتكررة — NucBox K6 يسخن بشكل ملحوظ أكثر من Beelink SER7 تحت حمل الاستدلال المستمر. <a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">عرض على Amazon.co.jp</a>',
+            text: 'مناسب لـ: المشترين ذوي الميزانية المحدودة الذين يريدون نفس منصة Ryzen 7 7840HS كـBeelink SER7 بـ~$30 USD أقل. تجنّبه إذا: كنت تخطط لجلسات نماذج لغة كبيرة مكثفة ومتكررة — NucBox K6 يسخن بشكل ملحوظ أكثر من Beelink SER7 تحت حمل الاستدلال المستمر. <a href="[www.amazon.co.jp/s?k=GMKtec](https://www.amazon.co.jp/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">عرض على Amazon.co.jp</a>',
           },
           {
             title: 'تجنّب: أي طراز بـ16 GB RAM فقط',
@@ -1087,19 +1087,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '@type': 'ListItem',
           position: 1,
           name: '홈',
-          item: 'https://www.promptquorum.com/ko',
+          item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Prompt Bites',
-          item: 'https://www.promptquorum.com/ko/prompt-bites',
+          item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)',
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: '일본 로컬 LLM 미니 PC 2026',
-          item: 'https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-local-llm-japan',
+          item: '[www.promptquorum.com/ko/prompt-bites/best-mini-pc-local-llm-japan](https://www.promptquorum.com/ko/prompt-bites/best-mini-pc-local-llm-japan)',
         },
       ],
     },
@@ -1136,15 +1136,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         subsections: [
           {
             title: 'Beelink SER7 — 전체 최고 선택',
-            text: '추천 대상: 소형의 조용한 기기에서 안정적인 7B 추론을 원하는 대부분의 사용자. SER7은 유휴 시 30 dB 미만으로 작동합니다 — 일본 아파트 사용에 적합합니다. 비권장 경우: 13B+ 모델을 정기적으로 실행해야 하는 경우, 64 GB RAM 변형으로 업그레이드하십시오. <a href="https://www.amazon.co.jp/s?k=Beelink+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jp에서 확인하기</a>',
+            text: '추천 대상: 소형의 조용한 기기에서 안정적인 7B 추론을 원하는 대부분의 사용자. SER7은 유휴 시 30 dB 미만으로 작동합니다 — 일본 아파트 사용에 적합합니다. 비권장 경우: 13B+ 모델을 정기적으로 실행해야 하는 경우, 64 GB RAM 변형으로 업그레이드하십시오. <a href="[www.amazon.co.jp/s?k=Beelink](https://www.amazon.co.jp/s?k=Beelink)+SER7" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jp에서 확인하기</a>',
           },
           {
             title: 'MINISFORUM UM790 Pro — 고성능 선택',
-            text: '추천 대상: 13B 및 30B 모델을 위해 64 GB DDR5로 확장할 여유를 원하는 고급 사용자. Ryzen 9 7940HS는 7B Q4 모델에서 ~12 tok/s를 제공합니다 — 세 제품 중 가장 빠릅니다. 비권장 경우: 예산이 주요 고려 사항인 경우, Beelink 대비 ¥15,000 프리미엄은 속도를 제공하지만 7B에서 극적인 차이는 없습니다. <a href="https://www.amazon.co.jp/s?k=MINISFORUM+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jp에서 확인하기</a>',
+            text: '추천 대상: 13B 및 30B 모델을 위해 64 GB DDR5로 확장할 여유를 원하는 고급 사용자. Ryzen 9 7940HS는 7B Q4 모델에서 ~12 tok/s를 제공합니다 — 세 제품 중 가장 빠릅니다. 비권장 경우: 예산이 주요 고려 사항인 경우, Beelink 대비 ¥15,000 프리미엄은 속도를 제공하지만 7B에서 극적인 차이는 없습니다. <a href="[www.amazon.co.jp/s?k=MINISFORUM](https://www.amazon.co.jp/s?k=MINISFORUM)+UM790+Pro" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jp에서 확인하기</a>',
           },
           {
             title: 'GMKtec NucBox K6 — 예산 선택',
-            text: '추천 대상: Beelink SER7과 동일한 Ryzen 7 7840HS 플랫폼을 ¥5,000 적은 가격에 원하는 예산 구매자. 비권장 경우: 빈번한 집중 LLM 세션을 계획하는 경우 — NucBox K6은 지속적인 추론 부하 하에서 Beelink SER7보다 현저히 더 뜨거워집니다. <a href="https://www.amazon.co.jp/s?k=GMKtec+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jp에서 확인하기</a>',
+            text: '추천 대상: Beelink SER7과 동일한 Ryzen 7 7840HS 플랫폼을 ¥5,000 적은 가격에 원하는 예산 구매자. 비권장 경우: 빈번한 집중 LLM 세션을 계획하는 경우 — NucBox K6은 지속적인 추론 부하 하에서 Beelink SER7보다 현저히 더 뜨거워집니다. <a href="[www.amazon.co.jp/s?k=GMKtec](https://www.amazon.co.jp/s?k=GMKtec)+NucBox+K6" class="text-primary hover:underline" rel="nofollow sponsored">Amazon.co.jp에서 확인하기</a>',
           },
           {
             title: '건너뛰기: 16 GB RAM만 탑재한 모델',

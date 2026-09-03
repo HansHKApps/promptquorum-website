@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Sources',
           id: 'sources',
           items: [
-            'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — How models process and apply constraints across long inputs.',
+            'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. [arxiv.org/abs/2310.06835](https://arxiv.org/abs/2310.06835) — How models process and apply constraints across long inputs.',
           ],
         },
       },
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Quellen',
           id: 'sources',
           items: [
-            'Ye, J., et al. (2023). „In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — wie Modelle Einschränkungen über lange Eingaben hinweg verarbeiten und anwenden.',
+            'Ye, J., et al. (2023). „In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. [arxiv.org/abs/2310.06835](https://arxiv.org/abs/2310.06835) — wie Modelle Einschränkungen über lange Eingaben hinweg verarbeiten und anwenden.',
           ],
         },
       },
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Fuentes',
       id: 'sources',
       items: [
-        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — Cómo los modelos procesan y aplican constraints en entradas largas.',
+        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. [arxiv.org/abs/2310.06835](https://arxiv.org/abs/2310.06835) — Cómo los modelos procesan y aplican constraints en entradas largas.',
       ],
     },
   },
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'المصادر',
       id: 'sources',
       items: [
-        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — كيف تعالج النماذج القيود وتطبّقها في المدخلات الطويلة.',
+        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. [arxiv.org/abs/2310.06835](https://arxiv.org/abs/2310.06835) — كيف تعالج النماذج القيود وتطبّقها في المدخلات الطويلة.',
       ],
     },
   },
@@ -1572,7 +1572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Fontes',
       id: 'sources',
       items: [
-        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — Como os modelos processam e aplicam restrições em entradas longas.',
+        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. [arxiv.org/abs/2310.06835](https://arxiv.org/abs/2310.06835) — Como os modelos processam e aplicam restrições em entradas longas.',
       ],
     },
   },
@@ -2672,7 +2672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '来源',
           id: 'sources',
           items: [
-            'Ye, J., 等（2023）。"In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 —— 模型如何在长输入中处理并应用约束。',
+            'Ye, J., 等（2023）。"In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. [arxiv.org/abs/2310.06835](https://arxiv.org/abs/2310.06835) —— 模型如何在长输入中处理并应用约束。',
           ],
         },
       },
@@ -2948,7 +2948,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '출처',
       id: 'sources',
       items: [
-        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. https://arxiv.org/abs/2310.06835 — 모델이 긴 입력에서 제약을 처리하고 적용하는 방법.',
+        'Ye, J., et al. (2023). "In-Context Learning with Long-Context Models: An In-Depth Exploration." arXiv:2310.06835. [arxiv.org/abs/2310.06835](https://arxiv.org/abs/2310.06835) — 모델이 긴 입력에서 제약을 처리하고 적용하는 방법.',
       ],
     },
   },

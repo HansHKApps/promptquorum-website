@@ -3969,9 +3969,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: '로컬 LLM 파워 활용', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Logseq와 Joplin으로 로컬 LLM 활용하기', item: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-with-logseq-and-joplin' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: '로컬 LLM 파워 활용', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: 'Logseq와 Joplin으로 로컬 LLM 활용하기', item: '[www.promptquorum.com/ko/power-local-llm/local-llm-with-logseq-and-joplin](https://www.promptquorum.com/ko/power-local-llm/local-llm-with-logseq-and-joplin)' },
       ],
     },
   },

@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'en',
       url: 'https://www.promptquorum.com/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-en.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-en.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-en.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'de',
       url: 'https://www.promptquorum.com/de/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-de.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-de.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-de.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -640,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/de/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/de/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/de/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -941,7 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'fr',
       url: 'https://www.promptquorum.com/fr/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-fr.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-fr.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-fr.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/fr/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/fr/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/fr/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -1261,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'es',
       url: 'https://www.promptquorum.com/es/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-es.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-es.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-es.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/es/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/es/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/es/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'pt-BR',
       url: 'https://www.promptquorum.com/pt/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-pt.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-pt.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-pt.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/pt/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/pt/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/pt/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'ja',
       url: 'https://www.promptquorum.com/ja/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ja.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ja.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ja.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -1920,7 +1920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ja/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/ja/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/ja/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -2221,7 +2221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'zh',
       url: 'https://www.promptquorum.com/zh/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-zh.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-zh.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-zh.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -2240,7 +2240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/zh/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/zh/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/zh/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -2541,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'ar',
       url: 'https://www.promptquorum.com/ar/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ar.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ar.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ar.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -2560,7 +2560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ar/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/ar/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/ar/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },
@@ -2861,7 +2861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       inLanguage: 'ko',
       url: 'https://www.promptquorum.com/ko/power-local-llm/vlm-video-analytics-drones-edge',
-      image: 'https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ko.webp',
+      image: '[www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ko.webp](https://www.promptquorum.com/images/vlm-video-analytics-drones-edge-hero-ko.webp)',
       educationalLevel: 'Advanced',
       proficiencyLevel: 'Advanced',
       audience: {
@@ -2880,7 +2880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/ko/power-local-llm/vlm-video-analytics-drones-edge',
+        '@id': '[www.promptquorum.com/ko/power-local-llm/vlm-video-analytics-drones-edge](https://www.promptquorum.com/ko/power-local-llm/vlm-video-analytics-drones-edge)',
       },
     },
   },

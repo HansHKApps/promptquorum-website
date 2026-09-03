@@ -2736,9 +2736,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: '비즈니스 워크플로를 위한 로컬 AI 에이전트', item: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-agents-business-workflows-eu-compliance' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: '비즈니스 워크플로를 위한 로컬 AI 에이전트', item: '[www.promptquorum.com/ko/power-local-llm/local-ai-agents-business-workflows-eu-compliance](https://www.promptquorum.com/ko/power-local-llm/local-ai-agents-business-workflows-eu-compliance)' },
       ],
     },
     sections: {

@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent',
+        '@id': '[www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
       },
     },
 

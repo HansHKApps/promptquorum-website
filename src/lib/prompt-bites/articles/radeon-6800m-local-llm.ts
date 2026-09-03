@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/radeon-6800m-local-llm',
+      articleUrl: '[www.promptquorum.com/ko/prompt-bites/radeon-6800m-local-llm](https://www.promptquorum.com/ko/prompt-bites/radeon-6800m-local-llm)',
       breadcrumbSchema: {
         items: [
           { position: 1, name: '홈', url: 'https://www.promptquorum.com/ko' },

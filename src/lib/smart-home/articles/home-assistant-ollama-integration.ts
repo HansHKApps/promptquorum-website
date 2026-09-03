@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'How do I connect Ollama to Home Assistant?',
         answer:
-          'Run Ollama on a machine reachable from Home Assistant, pull a model, then in Home Assistant add the Ollama integration (Settings → Devices & Services), enter the Ollama URL (default http://host:11434), and select your model. Finally, set the Ollama conversation entity as the agent in your Assist pipeline.',
+          'Run Ollama on a machine reachable from Home Assistant, pull a model, then in Home Assistant add the Ollama integration (Settings → Devices & Services), enter the Ollama URL (default [host:11434](http://host:11434)), and select your model. Finally, set the Ollama conversation entity as the agent in your Assist pipeline.',
         bullets: [
           'Run Ollama and pull a model on a reachable host',
           'Add the Ollama integration in Home Assistant',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant ships an official Ollama integration — no custom add-on needed',
           'Run Ollama on the Home Assistant host or another machine on your LAN',
-          'Add integration → enter Ollama URL (default http://host:11434) → select a model',
+          'Add integration → enter Ollama URL (default [host:11434](http://host:11434)) → select a model',
           'Expose only the entities you want the model to control, then set it as the Assist agent',
           'Use a small function-calling model for low latency; link out for model/hardware depth',
           'Everything is local: no command or home state leaves your network',
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Step': '1', 'Action': 'Settings → Devices & Services → Add Integration', 'Result': 'Integration picker opens' },
           { 'Step': '2', 'Action': 'Search "Ollama" and select it', 'Result': 'Connection dialog appears' },
-          { 'Step': '3', 'Action': 'Enter the Ollama URL (http://host:11434)', 'Result': 'Home Assistant connects to Ollama' },
+          { 'Step': '3', 'Action': 'Enter the Ollama URL ([host:11434](http://host:11434))', 'Result': 'Home Assistant connects to Ollama' },
           { 'Step': '4', 'Action': 'Select a model from the list', 'Result': 'A conversation entity is created' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-en.webp',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ar: {
         question: 'كيف أربط Ollama بـ Home Assistant؟',
         answer:
-          'شغّل Ollama على جهاز يمكن الوصول إليه من Home Assistant وحمّل نموذجًا، ثم في Home Assistant أضف تكامل Ollama (الإعدادات ← الأجهزة والخدمات)، وأدخل عنوان URL لـ Ollama (الافتراضي http://host:11434) وحدد نموذجك. أخيرًا، عيّن كيان محادثة Ollama عاملًا في خط أنابيب Assist.',
+          'شغّل Ollama على جهاز يمكن الوصول إليه من Home Assistant وحمّل نموذجًا، ثم في Home Assistant أضف تكامل Ollama (الإعدادات ← الأجهزة والخدمات)، وأدخل عنوان URL لـ Ollama (الافتراضي [host:11434](http://host:11434)) وحدد نموذجك. أخيرًا، عيّن كيان محادثة Ollama عاملًا في خط أنابيب Assist.',
         bullets: [
           'شغّل Ollama وحمّل نموذجًا على مضيف يمكن الوصول إليه',
           'أضف تكامل Ollama في Home Assistant',
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'يأتي Home Assistant مع تكامل Ollama رسمي — لا حاجة لإضافة مخصصة',
           'شغّل Ollama على مضيف Home Assistant أو جهاز آخر على شبكتك المحلية',
-          'أضف التكامل ← أدخل عنوان URL لـ Ollama (الافتراضي http://host:11434) ← حدد نموذجًا',
+          'أضف التكامل ← أدخل عنوان URL لـ Ollama (الافتراضي [host:11434](http://host:11434)) ← حدد نموذجًا',
           'اعرض الكيانات التي تريد أن يتحكم فيها النموذج فقط، ثم عيّنه عامل Assist',
           'استخدم نموذجًا صغيرًا يدعم استدعاء الدوال لتقليل زمن الاستجابة؛ اربط للتعمق في النماذج والجهاز',
           'كل شيء محلي: لا يغادر أي أمر أو حالة منزلية شبكتك',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الخطوة': '1', 'الإجراء': 'الإعدادات ← الأجهزة والخدمات ← إضافة تكامل', 'النتيجة': 'يفتح منتقي التكاملات' },
           { 'الخطوة': '2', 'الإجراء': 'ابحث عن "Ollama" وحدده', 'النتيجة': 'يظهر مربع حوار الاتصال' },
-          { 'الخطوة': '3', 'الإجراء': 'أدخل عنوان URL لـ Ollama (http://host:11434)', 'النتيجة': 'يتصل Home Assistant بـ Ollama' },
+          { 'الخطوة': '3', 'الإجراء': 'أدخل عنوان URL لـ Ollama ([host:11434](http://host:11434))', 'النتيجة': 'يتصل Home Assistant بـ Ollama' },
           { 'الخطوة': '4', 'الإجراء': 'حدد نموذجًا من القائمة', 'النتيجة': 'يُنشأ كيان محادثة' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-ar.webp',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Wie verbinde ich Ollama mit Home Assistant?',
         answer:
-          'Betreiben Sie Ollama auf einer von Home Assistant erreichbaren Maschine, laden Sie ein Modell, fügen Sie dann in Home Assistant die Ollama-Integration hinzu (Einstellungen → Geräte & Dienste), geben Sie die Ollama-URL ein (Standard http://host:11434) und wählen Sie Ihr Modell. Setzen Sie zuletzt die Ollama-Konversations-Entität als Agenten in Ihrer Assist-Pipeline.',
+          'Betreiben Sie Ollama auf einer von Home Assistant erreichbaren Maschine, laden Sie ein Modell, fügen Sie dann in Home Assistant die Ollama-Integration hinzu (Einstellungen → Geräte & Dienste), geben Sie die Ollama-URL ein (Standard [host:11434](http://host:11434)) und wählen Sie Ihr Modell. Setzen Sie zuletzt die Ollama-Konversations-Entität als Agenten in Ihrer Assist-Pipeline.',
         bullets: [
           'Ollama betreiben und ein Modell auf einem erreichbaren Host laden',
           'Die Ollama-Integration in Home Assistant hinzufügen',
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant bringt eine offizielle Ollama-Integration mit – kein eigenes Add-on nötig',
           'Betreiben Sie Ollama auf dem Home-Assistant-Host oder einer anderen Maschine im LAN',
-          'Integration hinzufügen → Ollama-URL eingeben (Standard http://host:11434) → ein Modell wählen',
+          'Integration hinzufügen → Ollama-URL eingeben (Standard [host:11434](http://host:11434)) → ein Modell wählen',
           'Geben Sie nur die Entitäten frei, die das Modell steuern soll, und setzen Sie es als Assist-Agenten',
           'Nutzen Sie ein kleines Function-Calling-Modell für geringe Latenz; für Modell-/Hardware-Tiefe verlinken',
           'Alles ist lokal: kein Befehl oder Heimzustand verlässt Ihr Netzwerk',
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Schritt': '1', 'Aktion': 'Einstellungen → Geräte & Dienste → Integration hinzufügen', 'Ergebnis': 'Integrations-Auswahl öffnet sich' },
           { 'Schritt': '2', 'Aktion': '„Ollama" suchen und auswählen', 'Ergebnis': 'Verbindungsdialog erscheint' },
-          { 'Schritt': '3', 'Aktion': 'Die Ollama-URL eingeben (http://host:11434)', 'Ergebnis': 'Home Assistant verbindet sich mit Ollama' },
+          { 'Schritt': '3', 'Aktion': 'Die Ollama-URL eingeben ([host:11434](http://host:11434))', 'Ergebnis': 'Home Assistant verbindet sich mit Ollama' },
           { 'Schritt': '4', 'Aktion': 'Ein Modell aus der Liste wählen', 'Ergebnis': 'Eine Konversations-Entität wird erstellt' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-de.webp',
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       es: {
         question: '¿Cómo conecto Ollama a Home Assistant?',
         answer:
-          'Ejecuta Ollama en una máquina alcanzable desde Home Assistant, descarga un modelo, luego en Home Assistant añade la integración de Ollama (Ajustes → Dispositivos y servicios), introduce la URL de Ollama (por defecto http://host:11434) y selecciona tu modelo. Por último, fija la entidad de conversación de Ollama como el agente en tu pipeline de Assist.',
+          'Ejecuta Ollama en una máquina alcanzable desde Home Assistant, descarga un modelo, luego en Home Assistant añade la integración de Ollama (Ajustes → Dispositivos y servicios), introduce la URL de Ollama (por defecto [host:11434](http://host:11434)) y selecciona tu modelo. Por último, fija la entidad de conversación de Ollama como el agente en tu pipeline de Assist.',
         bullets: [
           'Ejecuta Ollama y descarga un modelo en un host alcanzable',
           'Añade la integración de Ollama en Home Assistant',
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant incluye una integración oficial de Ollama — no hace falta un add-on a medida',
           'Ejecuta Ollama en el host de Home Assistant o en otra máquina de tu LAN',
-          'Añadir integración → introducir URL de Ollama (por defecto http://host:11434) → seleccionar un modelo',
+          'Añadir integración → introducir URL de Ollama (por defecto [host:11434](http://host:11434)) → seleccionar un modelo',
           'Expón solo las entidades que quieras que el modelo controle, luego fíjalo como el agente de Assist',
           'Usa un modelo pequeño con llamada a funciones para baja latencia; enlaza para profundidad de modelo/hardware',
           'Todo es local: ningún comando o estado del hogar sale de tu red',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Paso': '1', 'Acción': 'Ajustes → Dispositivos y servicios → Añadir integración', 'Resultado': 'Se abre el selector de integraciones' },
           { 'Paso': '2', 'Acción': 'Busca "Ollama" y selecciónalo', 'Resultado': 'Aparece el diálogo de conexión' },
-          { 'Paso': '3', 'Acción': 'Introduce la URL de Ollama (http://host:11434)', 'Resultado': 'Home Assistant se conecta a Ollama' },
+          { 'Paso': '3', 'Acción': 'Introduce la URL de Ollama ([host:11434](http://host:11434))', 'Resultado': 'Home Assistant se conecta a Ollama' },
           { 'Paso': '4', 'Acción': 'Selecciona un modelo de la lista', 'Resultado': 'Se crea una entidad de conversación' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-es.webp',
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: 'Ollama를 Home Assistant에 어떻게 연결합니까?',
         answer:
-          'Home Assistant에서 접근 가능한 기기에서 Ollama를 실행하고 모델을 가져온 후, Home Assistant에서 Ollama 통합(설정 → 기기 및 서비스)을 추가하고 Ollama URL(기본값 http://host:11434)을 입력하여 모델을 선택합니다. 마지막으로 Assist 파이프라인에서 Ollama 대화 엔티티를 에이전트로 설정합니다.',
+          'Home Assistant에서 접근 가능한 기기에서 Ollama를 실행하고 모델을 가져온 후, Home Assistant에서 Ollama 통합(설정 → 기기 및 서비스)을 추가하고 Ollama URL(기본값 [host:11434](http://host:11434))을 입력하여 모델을 선택합니다. 마지막으로 Assist 파이프라인에서 Ollama 대화 엔티티를 에이전트로 설정합니다.',
         bullets: [
           '접근 가능한 호스트에서 Ollama를 실행하고 모델을 가져오십시오',
           'Home Assistant에서 Ollama 통합을 추가하십시오',
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant에는 공식 Ollama 통합이 내장되어 있습니다 — 사용자 정의 애드온이 필요 없습니다',
           'Home Assistant 호스트 또는 LAN의 다른 기기에서 Ollama를 실행하십시오',
-          '통합 추가 → Ollama URL 입력(기본값 http://host:11434) → 모델 선택',
+          '통합 추가 → Ollama URL 입력(기본값 [host:11434](http://host:11434)) → 모델 선택',
           '모델이 제어할 엔티티만 노출한 후 Assist 에이전트로 설정하십시오',
           '낮은 지연 시간을 위해 소형 함수 호출 모델을 사용하십시오. 모델/하드웨어 심층 정보는 링크를 참조하십시오',
           '모든 것이 로컬입니다: 어떤 명령이나 홈 상태도 네트워크 밖으로 나가지 않습니다',
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '단계': '1', '작업': '설정 → 기기 및 서비스 → 통합 추가', '결과': '통합 선택기가 열립니다' },
           { '단계': '2', '작업': '"Ollama"를 검색하여 선택합니다', '결과': '연결 대화 상자가 나타납니다' },
-          { '단계': '3', '작업': 'Ollama URL 입력(http://host:11434)', '결과': 'Home Assistant가 Ollama에 연결됩니다' },
+          { '단계': '3', '작업': 'Ollama URL 입력([host:11434](http://host:11434))', '결과': 'Home Assistant가 Ollama에 연결됩니다' },
           { '단계': '4', '작업': '목록에서 모델을 선택합니다', '결과': '대화 엔티티가 생성됩니다' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-ko.webp',
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       fr: {
         question: 'Comment connecter Ollama à Home Assistant ?',
         answer:
-          'Exécutez Ollama sur une machine joignable depuis Home Assistant, téléchargez un modèle, puis dans Home Assistant ajoutez l\'intégration Ollama (Paramètres → Appareils et services), saisissez l\'URL Ollama (par défaut http://host:11434) et sélectionnez votre modèle. Enfin, définissez l\'entité de conversation Ollama comme agent dans votre pipeline Assist.',
+          'Exécutez Ollama sur une machine joignable depuis Home Assistant, téléchargez un modèle, puis dans Home Assistant ajoutez l\'intégration Ollama (Paramètres → Appareils et services), saisissez l\'URL Ollama (par défaut [host:11434](http://host:11434)) et sélectionnez votre modèle. Enfin, définissez l\'entité de conversation Ollama comme agent dans votre pipeline Assist.',
         bullets: [
           'Exécutez Ollama et téléchargez un modèle sur un hôte joignable',
           'Ajoutez l\'intégration Ollama dans Home Assistant',
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant fournit une intégration Ollama officielle — aucun add-on personnalisé nécessaire',
           'Exécutez Ollama sur l\'hôte Home Assistant ou une autre machine de votre LAN',
-          'Ajouter l\'intégration → saisir l\'URL Ollama (par défaut http://host:11434) → sélectionner un modèle',
+          'Ajouter l\'intégration → saisir l\'URL Ollama (par défaut [host:11434](http://host:11434)) → sélectionner un modèle',
           'N\'exposez que les entités que le modèle doit contrôler, puis définissez-le comme agent Assist',
           'Utilisez un petit modèle à appel de fonctions pour une faible latence ; lien pour la profondeur modèle/matériel',
           'Tout est local : aucune commande ni état du foyer ne quitte votre réseau',
@@ -1171,7 +1171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Étape': '1', 'Action': 'Paramètres → Appareils et services → Ajouter une intégration', 'Résultat': 'Le sélecteur d\'intégrations s\'ouvre' },
           { 'Étape': '2', 'Action': 'Cherchez « Ollama » et sélectionnez-le', 'Résultat': 'La boîte de dialogue de connexion apparaît' },
-          { 'Étape': '3', 'Action': 'Saisissez l\'URL Ollama (http://host:11434)', 'Résultat': 'Home Assistant se connecte à Ollama' },
+          { 'Étape': '3', 'Action': 'Saisissez l\'URL Ollama ([host:11434](http://host:11434))', 'Résultat': 'Home Assistant se connecte à Ollama' },
           { 'Étape': '4', 'Action': 'Sélectionnez un modèle dans la liste', 'Résultat': 'Une entité de conversation est créée' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-fr.webp',
@@ -1312,7 +1312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'Ollama を Home Assistant にどう接続しますか？',
         answer:
-          'Home Assistant から到達できるマシンで Ollama を動かし、モデルをプルし、Home Assistant で Ollama 統合を追加し（設定 → デバイスとサービス）、Ollama の URL（既定 http://host:11434）を入力してモデルを選びます。最後に、Ollama の会話エンティティを Assist パイプラインのエージェントに設定します。',
+          'Home Assistant から到達できるマシンで Ollama を動かし、モデルをプルし、Home Assistant で Ollama 統合を追加し（設定 → デバイスとサービス）、Ollama の URL（既定 [host:11434](http://host:11434)）を入力してモデルを選びます。最後に、Ollama の会話エンティティを Assist パイプラインのエージェントに設定します。',
         bullets: [
           '到達可能なホストで Ollama を動かしモデルをプルする',
           'Home Assistant で Ollama 統合を追加する',
@@ -1346,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant は公式の Ollama 統合を備える——独自アドオンは不要',
           'Ollama を Home Assistant のホストか、LAN 上の別マシンで動かす',
-          '統合を追加 → Ollama の URL を入力（既定 http://host:11434）→ モデルを選ぶ',
+          '統合を追加 → Ollama の URL を入力（既定 [host:11434](http://host:11434)）→ モデルを選ぶ',
           'モデルに制御させたいエンティティだけ公開し、Assist エージェントに設定する',
           '低レイテンシのため小型の関数呼び出しモデルを使う；モデル／ハードウェアの詳細は外部リンク',
           'すべてローカル：命令も家の状態もネットワークを出ない',
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '手順': '1', '操作': '設定 → デバイスとサービス → 統合を追加', '結果': '統合の選択画面が開く' },
           { '手順': '2', '操作': '「Ollama」を検索して選択', '結果': '接続ダイアログが表示される' },
-          { '手順': '3', '操作': 'Ollama の URL を入力（http://host:11434）', '結果': 'Home Assistant が Ollama に接続' },
+          { '手順': '3', '操作': 'Ollama の URL を入力（[host:11434](http://host:11434)）', '結果': 'Home Assistant が Ollama に接続' },
           { '手順': '4', '操作': '一覧からモデルを選択', '結果': '会話エンティティが作成される' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-ja.webp',
@@ -1525,7 +1525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Como conecto o Ollama ao Home Assistant?',
         answer:
-          'Rode o Ollama em uma máquina alcançável a partir do Home Assistant, baixe um modelo, depois no Home Assistant adicione a integração do Ollama (Configurações → Dispositivos e serviços), insira a URL do Ollama (padrão http://host:11434) e selecione o seu modelo. Por fim, defina a entidade de conversa do Ollama como o agente no seu pipeline do Assist.',
+          'Rode o Ollama em uma máquina alcançável a partir do Home Assistant, baixe um modelo, depois no Home Assistant adicione a integração do Ollama (Configurações → Dispositivos e serviços), insira a URL do Ollama (padrão [host:11434](http://host:11434)) e selecione o seu modelo. Por fim, defina a entidade de conversa do Ollama como o agente no seu pipeline do Assist.',
         bullets: [
           'Rode o Ollama e baixe um modelo em um host alcançável',
           'Adicione a integração do Ollama no Home Assistant',
@@ -1559,7 +1559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'O Home Assistant traz uma integração oficial do Ollama — sem necessidade de add-on personalizado',
           'Rode o Ollama no host do Home Assistant ou em outra máquina da sua LAN',
-          'Adicionar integração → inserir a URL do Ollama (padrão http://host:11434) → selecionar um modelo',
+          'Adicionar integração → inserir a URL do Ollama (padrão [host:11434](http://host:11434)) → selecionar um modelo',
           'Exponha só as entidades que o modelo deve controlar, depois defina-o como o agente do Assist',
           'Use um modelo pequeno com chamada de funções para baixa latência; link externo para profundidade de modelo/hardware',
           'Tudo é local: nenhum comando ou estado do lar sai da sua rede',
@@ -1597,7 +1597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Passo': '1', 'Ação': 'Configurações → Dispositivos e serviços → Adicionar integração', 'Resultado': 'O seletor de integrações abre' },
           { 'Passo': '2', 'Ação': 'Busque "Ollama" e selecione', 'Resultado': 'A caixa de diálogo de conexão aparece' },
-          { 'Passo': '3', 'Ação': 'Insira a URL do Ollama (http://host:11434)', 'Resultado': 'O Home Assistant se conecta ao Ollama' },
+          { 'Passo': '3', 'Ação': 'Insira a URL do Ollama ([host:11434](http://host:11434))', 'Resultado': 'O Home Assistant se conecta ao Ollama' },
           { 'Passo': '4', 'Ação': 'Selecione um modelo da lista', 'Resultado': 'Uma entidade de conversa é criada' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-pt.webp',
@@ -1738,7 +1738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '我该如何把 Ollama 连接到 Home Assistant？',
         answer:
-          '在一台 Home Assistant 可访问的机器上运行 Ollama，拉取一个模型，然后在 Home Assistant 中添加 Ollama 集成（设置 → 设备与服务），输入 Ollama 的 URL（默认 http://host:11434）并选择你的模型。最后，把 Ollama 的对话实体设为你 Assist 流水线中的代理。',
+          '在一台 Home Assistant 可访问的机器上运行 Ollama，拉取一个模型，然后在 Home Assistant 中添加 Ollama 集成（设置 → 设备与服务），输入 Ollama 的 URL（默认 [host:11434](http://host:11434)）并选择你的模型。最后，把 Ollama 的对话实体设为你 Assist 流水线中的代理。',
         bullets: [
           '在可访问的主机上运行 Ollama 并拉取一个模型',
           '在 Home Assistant 中添加 Ollama 集成',
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant 自带官方 Ollama 集成——无需自定义加载项',
           '在 Home Assistant 主机或局域网中的另一台机器上运行 Ollama',
-          '添加集成 → 输入 Ollama 的 URL（默认 http://host:11434）→ 选择一个模型',
+          '添加集成 → 输入 Ollama 的 URL（默认 [host:11434](http://host:11434)）→ 选择一个模型',
           '只暴露你想让模型控制的实体，然后把它设为 Assist 代理',
           '为低延迟使用小型函数调用模型；模型/硬件细节走外链',
           '一切都在本地：任何命令或家庭状态都不离开你的网络',
@@ -1810,7 +1810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '步骤': '1', '操作': '设置 → 设备与服务 → 添加集成', '结果': '打开集成选择器' },
           { '步骤': '2', '操作': '搜索“Ollama”并选择', '结果': '出现连接对话框' },
-          { '步骤': '3', '操作': '输入 Ollama 的 URL（http://host:11434）', '结果': 'Home Assistant 连接到 Ollama' },
+          { '步骤': '3', '操作': '输入 Ollama 的 URL（[host:11434](http://host:11434)）', '结果': 'Home Assistant 连接到 Ollama' },
           { '步骤': '4', '操作': '从列表中选择一个模型', '结果': '创建一个对话实体' },
         ],
         image: '/images/home-assistant-ollama-integration-setup-steps-hero-zh.webp',

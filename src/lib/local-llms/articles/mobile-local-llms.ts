@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'video-walkthrough',
           title: 'Watch: Running Local AI Models on Your Phone with PocketPal AI',
           content: 'In this hands-on walkthrough, a developer demonstrates how to run Small Language Models completely offline on a smartphone using PocketPal AI. The video covers searching and downloading Hugging Face models directly on-device, optimizing memory usage and token generation speed, and unlocking vision capabilities — all with zero internet connection and full data privacy.',
-          youtubeUrl: 'https://www.youtube.com/watch?v=sMIEK_dzNLU',
+          youtubeUrl: '[www.youtube.com/watch?v=sMIEK_dzNLU](https://www.youtube.com/watch?v=sMIEK_dzNLU)',
         },
         faqSection: {
           id: 'faq',
@@ -3556,7 +3556,7 @@ schema: {
           id: 'video-walkthrough',
           title: '시청: PocketPal AI로 스마트폰에서 로컬 AI 모델 실행하기',
           content: '이 실습 연습에서 개발자는 PocketPal AI를 사용하여 스마트폰에서 완전히 오프라인으로 소형 언어 모델을 실행하는 방법을 시연합니다. 영상에서는 기기에서 직접 Hugging Face 모델 검색 및 다운로드, 메모리 사용량과 토큰 생성 속도 최적화, 비전 기능 활성화 등을 다룹니다 — 모두 인터넷 연결 없이 완전한 데이터 개인 정보 보호 하에 진행됩니다.',
-          youtubeUrl: 'https://www.youtube.com/watch?v=sMIEK_dzNLU',
+          youtubeUrl: '[www.youtube.com/watch?v=sMIEK_dzNLU](https://www.youtube.com/watch?v=sMIEK_dzNLU)',
         },
         faqSection: {
           id: 'faq',

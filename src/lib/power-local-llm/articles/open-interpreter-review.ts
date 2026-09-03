@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS or Linux: run `curl -fsSL https://www.openinterpreter.com/install | sh` in a terminal.',
-          'Windows: run `irm https://www.openinterpreter.com/install.ps1 | iex` in PowerShell.',
+          'Windows: run `irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex` in PowerShell.',
           'Start the agent by running `i` or `interpreter` from a terminal.',
           'Point it at an open model such as Kimi K3, DeepSeek, Qwen, or GLM/Z.AI per that provider\'s setup instructions — the project does not document a single required backend.',
           'Use it from the terminal directly, or connect it through an ACP-compatible editor if you prefer working inside an IDE rather than a standalone CLI.',
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS oder Linux: `curl -fsSL https://www.openinterpreter.com/install | sh` in einem Terminal ausführen.',
-          'Windows: `irm https://www.openinterpreter.com/install.ps1 | iex` in PowerShell ausführen.',
+          'Windows: `irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex` in PowerShell ausführen.',
           'Den Agenten mit `i` oder `interpreter` aus einem Terminal starten.',
           'Auf ein offenes Modell wie Kimi K3, DeepSeek, Qwen oder GLM/Z.AI verweisen, gemäß dessen Setup-Anleitung — das Projekt dokumentiert kein einzelnes zwingendes Backend.',
           'Direkt im Terminal nutzen oder über einen ACP-kompatiblen Editor anbinden, wer lieber in einer IDE als in einem eigenständigen CLI arbeitet.',
@@ -601,7 +601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS ou Linux : exécuter `curl -fsSL https://www.openinterpreter.com/install | sh` dans un terminal.',
-          'Windows : exécuter `irm https://www.openinterpreter.com/install.ps1 | iex` dans PowerShell.',
+          'Windows : exécuter `irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex` dans PowerShell.',
           'Démarrer l\'agent en exécutant `i` ou `interpreter` depuis un terminal.',
           'Le pointer vers un modèle ouvert comme Kimi K3, DeepSeek, Qwen ou GLM/Z.AI selon les instructions de configuration de ce fournisseur — le projet ne documente pas de backend unique obligatoire.',
           'L\'utiliser directement depuis le terminal, ou le connecter via un éditeur compatible ACP pour travailler dans un IDE plutôt qu\'en CLI autonome.',
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS o Linux: ejecuta `curl -fsSL https://www.openinterpreter.com/install | sh` en una terminal.',
-          'Windows: ejecuta `irm https://www.openinterpreter.com/install.ps1 | iex` en PowerShell.',
+          'Windows: ejecuta `irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex` en PowerShell.',
           'Inicia el agente ejecutando `i` o `interpreter` desde una terminal.',
           'Apúntalo a un modelo abierto como Kimi K3, DeepSeek, Qwen o GLM/Z.AI según las instrucciones de configuración de ese proveedor — el proyecto no documenta un único backend obligatorio.',
           'Úsalo directamente desde la terminal, o conéctalo mediante un editor compatible con ACP si prefieres trabajar dentro de un IDE en lugar de un CLI independiente.',
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS ou Linux: execute `curl -fsSL https://www.openinterpreter.com/install | sh` em um terminal.',
-          'Windows: execute `irm https://www.openinterpreter.com/install.ps1 | iex` no PowerShell.',
+          'Windows: execute `irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex` no PowerShell.',
           'Inicie o agente executando `i` ou `interpreter` a partir de um terminal.',
           'Aponte-o para um modelo aberto como Kimi K3, DeepSeek, Qwen ou GLM/Z.AI conforme as instruções de configuração daquele provedor — o projeto não documenta um único backend obrigatório.',
           'Use-o diretamente pelo terminal, ou conecte-o por meio de um editor compatível com ACP se preferir trabalhar dentro de uma IDE em vez de um CLI independente.',
@@ -1333,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOSまたはLinux:ターミナルで`curl -fsSL https://www.openinterpreter.com/install | sh`を実行する。',
-          'Windows:PowerShellで`irm https://www.openinterpreter.com/install.ps1 | iex`を実行する。',
+          'Windows:PowerShellで`irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex`を実行する。',
           'ターミナルから`i`または`interpreter`を実行してエージェントを起動する。',
           'その提供元のセットアップ手順に従い、Kimi K3、DeepSeek、Qwen、GLM/Z.AIなどのオープンモデルを指定する——プロジェクトは単一の必須バックエンドを定めていない。',
           'ターミナルから直接使うか、単独のCLIよりIDE内で作業したい場合はACP対応エディタ経由で接続する。',
@@ -1577,7 +1577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS或Linux：在终端中运行`curl -fsSL https://www.openinterpreter.com/install | sh`。',
-          'Windows：在PowerShell中运行`irm https://www.openinterpreter.com/install.ps1 | iex`。',
+          'Windows：在PowerShell中运行`irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex`。',
           '在终端中运行`i`或`interpreter`启动代理。',
           '按照相应服务商的配置说明，将其指向Kimi K3、DeepSeek、Qwen或GLM/Z.AI等开源模型——项目并未规定单一的必需后端。',
           '直接在终端中使用，或者如果你更喜欢在IDE中工作而非独立CLI，可通过兼容ACP的编辑器连接。',
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS أو Linux: نفّذ الأمر `curl -fsSL https://www.openinterpreter.com/install | sh` في طرفية.',
-          'Windows: نفّذ الأمر `irm https://www.openinterpreter.com/install.ps1 | iex` في PowerShell.',
+          'Windows: نفّذ الأمر `irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex` في PowerShell.',
           'ابدأ العميل بتشغيل `i` أو `interpreter` من طرفية.',
           'وجّهه نحو نموذج مفتوح مثل Kimi K3 أو DeepSeek أو Qwen أو GLM/Z.AI وفق تعليمات إعداد ذلك المزوّد — لا يوثّق المشروع خلفية واحدة إلزامية.',
           'استخدمه مباشرة من الطرفية، أو صِله عبر محرر متوافق مع ACP إذا كنت تفضّل العمل داخل بيئة تطوير متكاملة بدلًا من سطر أوامر مستقل.',
@@ -2065,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         numberedItems: [
           'macOS 또는 Linux: 터미널에서 `curl -fsSL https://www.openinterpreter.com/install | sh`를 실행합니다.',
-          'Windows: PowerShell에서 `irm https://www.openinterpreter.com/install.ps1 | iex`를 실행합니다.',
+          'Windows: PowerShell에서 `irm [www.openinterpreter.com/install.ps1](https://www.openinterpreter.com/install.ps1) | iex`를 실행합니다.',
           '터미널에서 `i` 또는 `interpreter`를 실행해 에이전트를 시작합니다.',
           '해당 제공사의 설정 안내에 따라 Kimi K3, DeepSeek, Qwen, GLM/Z.AI 같은 오픈 모델을 지정합니다 — 프로젝트는 반드시 필요한 단일 백엔드를 문서화하지 않습니다.',
           '터미널에서 직접 사용하거나, 독립 CLI보다 IDE 안에서 작업하고 싶다면 ACP 호환 에디터를 통해 연결합니다.',

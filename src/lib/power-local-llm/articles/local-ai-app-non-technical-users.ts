@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: 'Top 6 Local AI Apps for Non-Technical Users in 2026',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: 'Top 6 lokale KI-Apps für nicht-technische Nutzer 2026',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: 'Top 6 apps d\'IA locale pour débutants en 2026',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -1533,7 +1533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: '2026年の初心者向けトップ6ローカルAIアプリ',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -1927,7 +1927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: '2026年初学者本地AI应用Top 6',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -2321,7 +2321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: 'Top 6 apps de IA local para usuarios sin conocimientos técnicos en 2026',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -2716,7 +2716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: 'Top 6 apps de IA local para usuários não técnicos em 2026',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -3129,7 +3129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: 'أفضل 6 تطبيقات ذكاء اصطناعي محلي للمستخدمين غير التقنيين في 2026',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -3532,7 +3532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'ItemList',
       name: '2026년 비전문가를 위한 최고의 로컬 AI 앱 6가지',
       numberOfItems: 6,
-      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      itemListOrder: '[schema.org/ItemListOrderAscending](https://schema.org/ItemListOrderAscending)',
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -3603,9 +3603,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.promptquorum.com/ko' },
-        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://www.promptquorum.com/ko/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: '비전문가를 위한 로컬 AI 앱', item: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-non-technical-users' },
+        { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
+        { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
+        { '@type': 'ListItem', position: 3, name: '비전문가를 위한 로컬 AI 앱', item: '[www.promptquorum.com/ko/power-local-llm/local-ai-app-non-technical-users](https://www.promptquorum.com/ko/power-local-llm/local-ai-app-non-technical-users)' },
       ],
     },
   },
