@@ -448,6 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Best AI-Powered HR Software for Enterprises 2026](/power-local-llm/best-ai-hr-software-enterprise-2026) — compares mainstream AI-HR platforms against self-hosted options for resume screening, sentiment analysis, and performance-review drafting.',
           '[Best Local LLMs for Enterprise Customer Support & Call Centers](/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — the external, customer-facing counterpart to this internal-bot guide, with fuller model-selection and latency-budget detail.',
           '[GDPR-Compliant Local RAG for Sensitive Documents](/power-local-llm/local-rag-for-private-business-data) — the compliance control set for any RAG deployment touching regulated personal data, HR included.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — RAG platform comparison for the retrieval layer behind this deployment.',
@@ -767,6 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Beste KI-HR-Software für Unternehmen 2026](/de/power-local-llm/best-ai-hr-software-enterprise-2026) — vergleicht marktführende KI-HR-Plattformen mit selbst gehosteten Optionen für Lebenslauf-Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
           '[Beste lokale LLMs für Enterprise-Kundensupport & Callcenter](/de/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — das externe, kundenseitige Gegenstück zu diesem internen Bot-Leitfaden mit ausführlicherer Modellwahl und Latenzbudgets.',
           '[DSGVO-konformes lokales RAG für sensible Dokumente](/de/power-local-llm/local-rag-for-private-business-data) — das Kontrollset für jedes RAG-Deployment, das regulierte personenbezogene Daten berührt, HR eingeschlossen.',
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — RAG-Plattform-Vergleich für die Retrieval-Schicht dieses Deployments.',
@@ -1086,6 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Meilleurs logiciels RH IA pour entreprises 2026](/fr/power-local-llm/best-ai-hr-software-enterprise-2026) — compare les plateformes RH IA leaders aux options auto-hébergées pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
           '[Meilleurs LLM locaux pour le support client entreprise & centres d\'appels](/fr/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — le pendant externe côté client de ce guide de bot interne, avec un détail plus complet sur le choix du modèle et les budgets de latence.',
           '[RAG local conforme RGPD pour documents sensibles](/fr/power-local-llm/local-rag-for-private-business-data) — l\'ensemble de contrôles pour tout déploiement RAG touchant des données personnelles réglementées, RH incluses.',
           '[Meilleurs outils RAG pour documents métier](/fr/power-local-llm/best-rag-tools-for-business-documents-2026) — comparaison de plateformes RAG pour la couche de récupération de ce déploiement.',
@@ -1405,6 +1408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[企業向けAI人事ソフト2026](/ja/power-local-llm/best-ai-hr-software-enterprise-2026) —— 大手AI人事プラットフォームとセルフホスト型の選択肢を、履歴書スクリーニング・感情分析・考課下書きの観点で比較します。',
           '[エンタープライズ向けカスタマーサポート用ベストローカルLLM](/ja/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — 本記事の社内Botガイドに対応する、外部の顧客向けカウンターパート。モデル選定とレイテンシ予算をより詳しく解説。',
           '[GDPR準拠のローカルRAG(機密文書向け)](/ja/power-local-llm/local-rag-for-private-business-data) — 人事を含む、規制対象個人データに触れるあらゆるRAG展開に適用される管理策セット。',
           '[業務文書向けベストRAGツール](/ja/power-local-llm/best-rag-tools-for-business-documents-2026) — 本展開の検索層に関するRAGプラットフォーム比較。',
@@ -1724,6 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[2026年企业AI人力资源软件推荐](/zh/power-local-llm/best-ai-hr-software-enterprise-2026) —— 对比主流AI人力资源平台与自托管方案，涵盖简历筛选、情绪分析与绩效评语起草。',
           '[企业客户支持与呼叫中心最佳本地LLM](/zh/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — 本内部机器人指南的外部客户对应版本,包含更完整的模型选型与延迟预算细节。',
           '[面向敏感文档的GDPR合规本地RAG](/zh/power-local-llm/local-rag-for-private-business-data) — 适用于任何涉及受监管个人数据的RAG部署(含HR)的控制措施集合。',
           '[业务文档最佳RAG工具](/zh/power-local-llm/best-rag-tools-for-business-documents-2026) — 本部署检索层所需的RAG平台比较。',
@@ -2043,6 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Mejor software de RR. HH. con IA para empresas 2026](/es/power-local-llm/best-ai-hr-software-enterprise-2026) — compara las plataformas líderes de RR. HH. con IA frente a opciones autoalojadas para filtrado de CV, análisis de clima y redacción de evaluaciones.',
           '[Los mejores LLM locales para soporte al cliente empresarial y contact centers](/es/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — la contraparte externa, de cara al cliente, de esta guía de bot interno, con más detalle sobre selección de modelo y presupuestos de latencia.',
           '[RAG local conforme al RGPD para documentos sensibles](/es/power-local-llm/local-rag-for-private-business-data) — el conjunto de controles para cualquier despliegue RAG que toque datos personales regulados, RR. HH. incluido.',
           '[Las mejores herramientas RAG para documentos empresariales](/es/power-local-llm/best-rag-tools-for-business-documents-2026) — comparación de plataformas RAG para la capa de recuperación de este despliegue.',
@@ -2362,6 +2368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Melhor software de RH com IA para empresas 2026](/pt/power-local-llm/best-ai-hr-software-enterprise-2026) — compara plataformas líderes de RH com IA com opções auto-hospedadas para triagem de currículos, análise de sentimento e redação de avaliações.',
           '[Melhores LLMs locais pra suporte ao cliente corporativo e call centers](/pt/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — a contraparte externa, voltada ao cliente, deste guia de bot interno, com mais detalhe sobre escolha de modelo e orçamento de latência.',
           '[RAG local em conformidade com o RGPD pra documentos sensíveis](/pt/power-local-llm/local-rag-for-private-business-data) — o conjunto de controles pra qualquer implantação de RAG que toque em dados pessoais regulados, incluindo RH.',
           '[Melhores ferramentas de RAG pra documentos corporativos](/pt/power-local-llm/best-rag-tools-for-business-documents-2026) — comparação de plataformas de RAG pra camada de recuperação desta implantação.',
@@ -2681,6 +2688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[أفضل برمجيات الموارد البشرية بالذكاء الاصطناعي للمؤسسات 2026](/ar/power-local-llm/best-ai-hr-software-enterprise-2026) — يقارن المنصات الرائدة بخيارات مستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
           '[أفضل النماذج اللغوية المحلية لدعم العملاء ومراكز الاتصال في المؤسسات](/ar/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — النظير الخارجي الموجَّه للعملاء لهذا الدليل الخاص بالروبوت الداخلي، مع تفاصيل أوفى عن اختيار النموذج وميزانيات زمن الاستجابة.',
           '[RAG محلي متوافق مع GDPR للوثائق الحساسة](/ar/power-local-llm/local-rag-for-private-business-data) — مجموعة الضوابط لأي نشر RAG يلامس بيانات شخصية خاضعة للتنظيم، بما في ذلك الموارد البشرية.',
           '[أفضل أدوات RAG لوثائق الأعمال](/ar/power-local-llm/best-rag-tools-for-business-documents-2026) — مقارنة منصات RAG لطبقة الاسترجاع في هذا النشر.',
@@ -3000,6 +3008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
+          '[2026년 기업용 AI 인사 소프트웨어 추천](/ko/power-local-llm/best-ai-hr-software-enterprise-2026) — 주요 AI 인사 플랫폼과 자체 호스팅 옵션을 이력서 심사, 감정 분석, 인사고과 초안 작성 기준으로 비교합니다.',
           '[기업 고객 지원 및 콜센터를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — 이 사내 봇 가이드의 외부 고객 대응 버전으로, 모델 선정과 지연 시간 예산에 대해 더 자세히 다룹니다.',
           '[민감한 문서를 위한 GDPR 준수 로컬 RAG](/ko/power-local-llm/local-rag-for-private-business-data) — HR을 포함해 규제 대상 개인정보를 다루는 모든 RAG 구축에 적용되는 통제 항목 모음.',
           '[업무 문서용 최고의 RAG 도구](/ko/power-local-llm/best-rag-tools-for-business-documents-2026) — 이 구축의 검색 계층을 위한 RAG 플랫폼 비교.',

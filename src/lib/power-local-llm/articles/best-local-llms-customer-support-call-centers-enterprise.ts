@@ -518,6 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Best AI-Powered HR Software for Enterprises 2026](/power-local-llm/best-ai-hr-software-enterprise-2026) — compares mainstream AI-HR platforms against self-hosted options for resume screening, sentiment analysis, and performance-review drafting.',
           '[Enterprise Chatbot Deployment: Internal Helpdesk & HR Bots](/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — the internal, employee-facing counterpart to this guide: IT helpdesk and HR chatbots with per-employee access control, HR-data sensitivity, and SSO.',
           '[GDPR-Compliant Local RAG for Sensitive Documents](/power-local-llm/local-rag-for-private-business-data) — the compliance control set (audit logging, DPIA, deployment patterns) that applies to any regulated RAG deployment, support included.',
           '[Best RAG Tools for Business Documents](/power-local-llm/best-rag-tools-for-business-documents-2026) — self-hosted RAG platform comparison for grounding answers in a document corpus.',
@@ -911,6 +912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Beste KI-HR-Software für Unternehmen 2026](/de/power-local-llm/best-ai-hr-software-enterprise-2026) — vergleicht marktführende KI-HR-Plattformen mit selbst gehosteten Optionen für Lebenslauf-Screening, Stimmungsanalyse und Beurteilungsentwürfe.',
           '[Interne Chatbots: IT-Helpdesk & HR-Bots](/de/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — das interne, mitarbeiterseitige Gegenstück zu diesem Leitfaden: IT-Helpdesk- und HR-Chatbots mit Zugriffskontrolle pro Mitarbeiter, HR-Datensensibilität und SSO.',
           '[DSGVO-konformes lokales RAG für sensible Dokumente](/power-local-llm/local-rag-for-private-business-data) — das Kontrollset (Audit-Logging, DPIA, Bereitstellungsmuster), das für jede regulierte RAG-Implementierung gilt, Support eingeschlossen.',
           '[Beste RAG-Tools für Geschäftsdokumente](/power-local-llm/best-rag-tools-for-business-documents-2026) — Vergleich selbst gehosteter RAG-Plattformen zur Verankerung von Antworten in einem Dokumentenkorpus.',
@@ -1304,6 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Meilleurs logiciels RH IA pour entreprises 2026](/fr/power-local-llm/best-ai-hr-software-enterprise-2026) — compare les plateformes RH IA leaders aux options auto-hébergées pour le tri de CV, l\'analyse du climat social et la rédaction d\'évaluations.',
           '[Chatbots internes : helpdesk IT & bots RH](/fr/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — le pendant interne, côté salarié, de ce guide : chatbots helpdesk IT et RH avec contrôle d\'accès par salarié, sensibilité des données RH et SSO.',
           '[RAG local conforme RGPD pour documents sensibles](/power-local-llm/local-rag-for-private-business-data) — l\'ensemble de contrôles de conformité (journalisation d\'audit, AIPD, schémas de déploiement) applicable à tout déploiement RAG réglementé, support compris.',
           '[Meilleurs outils RAG pour documents d\'entreprise](/power-local-llm/best-rag-tools-for-business-documents-2026) — comparaison de plateformes RAG auto-hébergées pour ancrer les réponses dans un corpus documentaire.',
@@ -1585,6 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
+          '[Mejor software de RR. HH. con IA para empresas 2026](/es/power-local-llm/best-ai-hr-software-enterprise-2026) — compara las plataformas líderes de RR. HH. con IA frente a opciones autoalojadas para filtrado de CV, análisis de clima y redacción de evaluaciones.',
           '[Chatbots internos: helpdesk de IT y bots de RR. HH.](/es/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — la contraparte interna, de cara al empleado, de esta guía: chatbots de helpdesk de IT y RR. HH. con control de acceso por empleado, sensibilidad de datos de RR. HH. y SSO.',
           '[RAG Local Conforme al RGPD para Documentos Sensibles](/power-local-llm/local-rag-for-private-business-data) — el conjunto de controles de cumplimiento (registro de auditoría, DPIA, patrones de despliegue) que aplica a cualquier despliegue de RAG regulado, soporte incluido.',
           '[Mejores Herramientas RAG para Documentos Empresariales](/power-local-llm/best-rag-tools-for-business-documents-2026) — comparación de plataformas RAG autoalojadas para anclar respuestas en un corpus documental.',
@@ -1866,6 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras Relacionadas',
         items: [
+          '[Melhor software de RH com IA para empresas 2026](/pt/power-local-llm/best-ai-hr-software-enterprise-2026) — compara plataformas líderes de RH com IA com opções auto-hospedadas para triagem de currículos, análise de sentimento e redação de avaliações.',
           '[Chatbots internos: helpdesk de TI e bots de RH](/pt/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — a contraparte interna, voltada ao colaborador, deste guia: chatbots de helpdesk de TI e RH com controle de acesso por colaborador, sensibilidade de dados de RH e SSO.',
           '[RAG Local em Conformidade com o GDPR para Documentos Sensíveis](/power-local-llm/local-rag-for-private-business-data) — o conjunto de controles de conformidade (registro de auditoria, DPIA, padrões de implantação) aplicável a qualquer implantação de RAG regulada, suporte incluso.',
           '[Melhores Ferramentas de RAG para Documentos Empresariais](/power-local-llm/best-rag-tools-for-business-documents-2026) — comparação de plataformas de RAG auto-hospedadas para embasar respostas em um corpus documental.',
@@ -2147,6 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[企業向けAI人事ソフト2026](/ja/power-local-llm/best-ai-hr-software-enterprise-2026) —— 大手AI人事プラットフォームとセルフホスト型の選択肢を、履歴書スクリーニング・感情分析・考課下書きの観点で比較します。',
           '[社内チャットボット構築:ITヘルプデスク・人事Bot](/ja/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — 本記事に対応する社内・従業員向けガイド。従業員単位のアクセス制御、人事データの機密性、SSOを扱うITヘルプデスク・人事チャットボット。',
           '[機密文書向けGDPR準拠ローカルRAG](/power-local-llm/local-rag-for-private-business-data) — サポートを含むあらゆる規制対象RAG導入に適用されるコンプライアンス制御セット（監査ログ、DPIA、導入パターン）。',
           '[ビジネス文書向けベストRAGツール](/power-local-llm/best-rag-tools-for-business-documents-2026) — 文書コーパスに回答を根拠づけるためのセルフホスト型RAGプラットフォーム比較。',
@@ -2428,6 +2434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[2026年企业AI人力资源软件推荐](/zh/power-local-llm/best-ai-hr-software-enterprise-2026) —— 对比主流AI人力资源平台与自托管方案，涵盖简历筛选、情绪分析与绩效评语起草。',
           '[内部聊天机器人部署:IT帮助台与HR机器人](/zh/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — 本指南的内部、面向员工的对应版本:涵盖按员工划分的访问控制、HR数据敏感性和SSO的IT帮助台与HR聊天机器人。',
           '[面向敏感文档的GDPR合规本地RAG](/power-local-llm/local-rag-for-private-business-data) — 适用于任何受监管RAG部署（包括支持场景）的合规控制集（审计日志、DPIA、部署模式）。',
           '[面向商业文档的最佳RAG工具](/power-local-llm/best-rag-tools-for-business-documents-2026) — 用于将回答锚定在文档语料库中的自托管RAG平台对比。',
@@ -2709,6 +2716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
+          '[2026년 기업용 AI 인사 소프트웨어 추천](/ko/power-local-llm/best-ai-hr-software-enterprise-2026) — 주요 AI 인사 플랫폼과 자체 호스팅 옵션을 이력서 심사, 감정 분석, 인사고과 초안 작성 기준으로 비교합니다.',
           '[사내 챗봇 구축: IT 헬프데스크 & HR 봇](/ko/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — 이 가이드의 사내, 직원 대상 버전으로, 직원 단위 접근 제어, HR 데이터 민감도, SSO를 다루는 IT 헬프데스크 및 HR 챗봇 가이드입니다.',
           '[민감한 문서를 위한 GDPR 준수 로컬 RAG](/power-local-llm/local-rag-for-private-business-data) — 지원 업무를 포함해 규제 대상 RAG 배포 전반에 적용되는 통제 항목(감사 로깅, DPIA, 배포 패턴).',
           '[비즈니스 문서를 위한 최고의 RAG 도구](/power-local-llm/best-rag-tools-for-business-documents-2026) — 문서 코퍼스에 답변을 근거시키기 위한 셀프 호스팅 RAG 플랫폼 비교.',
@@ -2990,6 +2998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[أفضل برمجيات الموارد البشرية بالذكاء الاصطناعي للمؤسسات 2026](/ar/power-local-llm/best-ai-hr-software-enterprise-2026) — يقارن المنصات الرائدة بخيارات مستضافة ذاتيًا لفرز السير الذاتية وتحليل المشاعر وصياغة التقييمات.',
           '[روبوتات دردشة داخلية: الدعم التقني والموارد البشرية](/ar/power-local-llm/enterprise-chatbot-deployment-helpdesk-hr-bots) — النظير الداخلي الموجّه للموظفين لهذا الدليل: روبوتات دردشة للدعم التقني والموارد البشرية مع تحكم بالوصول لكل موظف وحساسية بيانات الموارد البشرية وSSO.',
           '[RAG محلي متوافق مع اللائحة العامة لحماية البيانات للمستندات الحساسة](/power-local-llm/local-rag-for-private-business-data) — مجموعة ضوابط الامتثال (تسجيل التدقيق، تقييم أثر حماية البيانات، أنماط النشر) التي تنطبق على أي نشر RAG خاضع للتنظيم، بما في ذلك الدعم.',
           '[أفضل أدوات RAG لمستندات الأعمال](/power-local-llm/best-rag-tools-for-business-documents-2026) — مقارنة منصات RAG المستضافة ذاتيًا لترسيخ الإجابات في مجموعة مستندات.',
