@@ -12640,27 +12640,57 @@
   },
   "edge-ai": {
     "edge-ai-hardware-for-local-llms": {
-      "dateModified": null,
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
-      "publishDate": null,
-      "hasSections": false,
-      "langs": [],
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
       "images": []
     },
     "vla-models-robots-local-inference": {
-      "dateModified": null,
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
-      "publishDate": null,
-      "hasSections": false,
-      "langs": [],
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
       "images": []
     },
     "vlm-video-analytics-drones-edge": {
-      "dateModified": null,
+      "dateModified": "2026-09-02",
       "lastFactChecked": null,
-      "publishDate": null,
-      "hasSections": false,
-      "langs": [],
+      "publishDate": "2026-09-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
       "images": []
     }
   },
