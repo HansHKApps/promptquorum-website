@@ -113,6 +113,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Check AnythingLLM →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: 'Explore RAGFlow →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: 'See best mini PCs to run it on →', url: '/local-llms/best-mini-pcs-local-llm', productName: 'Local RAG hardware', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: 'Check PrivateGPT →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: 'Check Open WebUI →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: 'Check Dify →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Check LlamaIndex →' },
         ],
       },
       scorecard: {
@@ -271,6 +275,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — Best RAG Framework for Developers',
         content:
           'LlamaIndex is a widely used Python framework for building production RAG systems. Unlike AnythingLLM or RAGFlow, it has no built-in UI — instead it provides composable abstractions: data loaders, index types (vector store, knowledge graph, summary), query engines, and agent workflows. This is the "I want to build my own RAG application" buyer profile, not "I want to upload 500 PDFs."\n\nFor Ollama integration, install the relevant `llama-index-llms-ollama` and embeddings packages. LlamaIndex supports Chroma, Qdrant, Weaviate, and 20+ other vector stores as backends, and handles chunking strategies, metadata filtering, and hybrid search.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Check LlamaIndex →' },
+        ],
         pros: ['Maximum pipeline flexibility — ingestion, chunking, embeddings, retrieval, reranking, evaluation, all controllable', 'Supports all major vector databases', 'Large, active community', 'Production-grade with enterprise support options'],
         cons: ['Requires Python knowledge', 'No built-in UI — you build the interface separately', 'More configuration than any turnkey Category A tool'],
         verdict: 'Best for development teams building domain-specific RAG applications that need fine-grained control over chunking, retrieval, and re-ranking — use with a vector database, not as a standalone product.',
@@ -688,6 +695,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'AnythingLLM ansehen →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG-Software' },
           { label: 'RAGFlow entdecken →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG-Software' },
           { label: 'Beste Mini-PCs dafür ansehen →', url: '/de/local-llms/best-mini-pcs-local-llm', productName: 'Lokale RAG-Hardware', productCategory: 'Mini-PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'Software', label: 'PrivateGPT ansehen →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'Software', label: 'Open WebUI ansehen →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'Software', label: 'Dify ansehen →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'LlamaIndex ansehen →' },
         ],
       },
       scorecard: {
@@ -846,6 +857,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — Bestes RAG-Framework für Entwickler',
         content:
           'LlamaIndex ist ein weit verbreitetes Python-Framework für den Bau produktionsreifer RAG-Systeme. Anders als AnythingLLM oder RAGFlow hat es keine eingebaute Oberfläche — stattdessen bietet es komponierbare Abstraktionen: Daten-Loader, Index-Typen (Vector Store, Wissensgraph, Zusammenfassung), Query-Engines und Agenten-Workflows. Das ist das Käuferprofil „ich will meine eigene RAG-Anwendung bauen", nicht „ich will 500 PDFs hochladen".\n\nFür die Ollama-Integration installieren Sie die passenden Pakete `llama-index-llms-ollama` und Embeddings. LlamaIndex unterstützt Chroma, Qdrant, Weaviate und mehr als 20 weitere Vektorspeicher als Backends und übernimmt Chunking-Strategien, Metadaten-Filterung und hybride Suche.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'LlamaIndex ansehen →' },
+        ],
         pros: ['Maximale Pipeline-Flexibilität — Ingestion, Chunking, Embeddings, Retrieval, Reranking, Evaluation, alles steuerbar', 'Unterstützt alle wichtigen Vektordatenbanken', 'Große, aktive Community', 'Produktionsreif mit Enterprise-Support-Optionen'],
         cons: ['Erfordert Python-Kenntnisse', 'Keine eingebaute Oberfläche — Sie bauen die Benutzeroberfläche separat', 'Mehr Konfiguration als jedes einsatzbereite Kategorie-A-Tool'],
         verdict: 'Am besten für Entwicklungsteams, die domänenspezifische RAG-Anwendungen bauen und feingranulare Kontrolle über Chunking, Retrieval und Re-Ranking brauchen — im Zusammenspiel mit einer Vektordatenbank, nicht als eigenständiges Produkt.',
@@ -1271,6 +1285,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Découvrir AnythingLLM →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: 'Explorer RAGFlow →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: 'Voir les meilleurs mini PC pour l\'exécuter →', url: '/fr/local-llms/best-mini-pcs-local-llm', productName: 'Local RAG hardware', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: 'Découvrir PrivateGPT →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: 'Découvrir Open WebUI →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: 'Découvrir Dify →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Découvrir LlamaIndex →' },
         ],
       },
       scorecard: {
@@ -1429,6 +1447,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — Meilleur framework RAG pour développeurs',
         content:
           'LlamaIndex est un framework Python largement utilisé pour construire des systèmes RAG en production. Contrairement à AnythingLLM ou RAGFlow, il n\'a pas d\'interface intégrée — il fournit à la place des abstractions composables : chargeurs de données, types d\'index (base vectorielle, graphe de connaissances, résumé), moteurs de requête et workflows d\'agents. C\'est le profil « je veux construire ma propre application RAG », pas « je veux importer 500 PDF ».\n\nPour l\'intégration Ollama, installez les paquets `llama-index-llms-ollama` et embeddings correspondants. LlamaIndex prend en charge Chroma, Qdrant, Weaviate et plus de 20 autres bases vectorielles comme backends, et gère les stratégies de découpage, le filtrage par métadonnées et la recherche hybride.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Découvrir LlamaIndex →' },
+        ],
         pros: ['Flexibilité de pipeline maximale — ingestion, découpage, embeddings, récupération, reclassement, évaluation, tout est configurable', 'Prend en charge toutes les principales bases vectorielles', 'Communauté large et active', 'Qualité production avec options de support entreprise'],
         cons: ['Nécessite des connaissances Python', 'Pas d\'interface intégrée — vous construisez l\'interface séparément', 'Plus de configuration que n\'importe quel outil clé en main de catégorie A'],
         verdict: 'Idéal pour les équipes de développement qui construisent des applications RAG spécifiques à un domaine et ont besoin d\'un contrôle fin du découpage, de la récupération et du reclassement — à utiliser avec une base vectorielle, pas comme produit autonome.',
@@ -1846,6 +1867,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'AnythingLLMを確認する →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: 'RAGFlowを見る →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: '実行に適したミニPCを見る →', url: '/ja/local-llms/best-mini-pcs-local-llm', productName: 'Local RAG hardware', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: 'PrivateGPTを確認する →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: 'Open WebUIを確認する →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: 'Difyを確認する →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'LlamaIndexを確認する →' },
         ],
       },
       scorecard: {
@@ -2004,6 +2029,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — 開発者向けベストRAGフレームワーク',
         content:
           'LlamaIndexは、本番運用のRAGシステムを構築するために広く使われているPythonフレームワークです。AnythingLLMやRAGFlowと異なり、組み込みのUIはありません。その代わりに、データローダー、インデックスの種類（ベクターストア、ナレッジグラフ、サマリー）、クエリエンジン、エージェントワークフローといった組み合わせ可能な抽象化を提供します。これは「500件のPDFをアップロードしたい」ではなく「独自のRAGアプリケーションを構築したい」という購入層です。\n\nOllamaとの連携には、対応する`llama-index-llms-ollama`と埋め込みパッケージをインストールします。LlamaIndexはChroma、Qdrant、Weaviateをはじめ20種類以上のベクターストアをバックエンドとしてサポートし、チャンク戦略、メタデータフィルタリング、ハイブリッド検索も処理します。\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'LlamaIndexを確認する →' },
+        ],
         pros: ['最大限のパイプライン柔軟性 — 取り込み、チャンク化、埋め込み、検索、再ランキング、評価まですべて制御可能', '主要なベクターデータベースすべてに対応', '大規模で活発なコミュニティ', 'エンタープライズサポートオプションのある本番グレード'],
         cons: ['Pythonの知識が必要', '組み込みUIがなく、インターフェースは別途構築が必要', 'あらゆるターンキー型カテゴリーAツールより設定項目が多い'],
         verdict: 'チャンク化、検索、再ランキングをきめ細かく制御する必要がある、ドメイン特化型RAGアプリケーションを構築する開発チームに最適です。単体の製品としてではなく、ベクターデータベースと組み合わせて使用してください。',
@@ -2408,6 +2436,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: '查看AnythingLLM →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: '了解RAGFlow →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: '查看运行它的最佳迷你主机 →', url: '/zh/local-llms/best-mini-pcs-local-llm', productName: '本地RAG硬件', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: '查看PrivateGPT →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: '查看Open WebUI →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: '查看Dify →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: '查看LlamaIndex →' },
         ],
       },
       scorecard: {
@@ -2566,6 +2598,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex——开发者最佳RAG框架',
         content:
           'LlamaIndex是一款被广泛使用的Python框架，用于构建生产级RAG系统。与AnythingLLM或RAGFlow不同，它没有内置界面——而是提供可组合的抽象层：数据加载器、索引类型（向量存储、知识图谱、摘要）、查询引擎和智能体工作流。这是"我要自己构建RAG应用"的买家画像，而不是"我要上传500份PDF"。\n\n若要接入Ollama，安装对应的`llama-index-llms-ollama`和嵌入模型包即可。LlamaIndex支持Chroma、Qdrant、Weaviate及20多种其他向量存储作为后端，并处理分块策略、元数据过滤和混合搜索。\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: '查看LlamaIndex →' },
+        ],
         pros: ['管道灵活性最高——摄取、分块、嵌入、检索、重排序、评估均可控制', '支持所有主流向量数据库', '社区规模大且活跃', '生产级可用，提供企业支持选项'],
         cons: ['需要Python知识', '没有内置界面——需要自行搭建', '相比任何开箱即用的A类工具，配置更复杂'],
         verdict: '最适合需要对分块、检索和重排序进行精细控制、构建特定领域RAG应用的开发团队——需搭配向量数据库使用，而非作为独立产品。',
@@ -2987,6 +3022,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Consulta AnythingLLM →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: 'Explora RAGFlow →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: 'Ver los mejores mini PC para ejecutarlo →', url: '/es/local-llms/best-mini-pcs-local-llm', productName: 'Local RAG hardware', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: 'Consulta PrivateGPT →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: 'Consulta Open WebUI →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: 'Consulta Dify →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Consulta LlamaIndex →' },
         ],
       },
       scorecard: {
@@ -3145,6 +3184,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — El mejor framework RAG para desarrolladores',
         content:
           'LlamaIndex es un framework de Python ampliamente utilizado para construir sistemas RAG en producción. A diferencia de AnythingLLM o RAGFlow, no tiene interfaz integrada — en su lugar ofrece abstracciones componibles: cargadores de datos, tipos de índice (almacén vectorial, grafo de conocimiento, resumen), motores de consulta y flujos de trabajo con agentes. Este es el perfil de comprador de "quiero construir mi propia aplicación RAG", no de "quiero subir 500 PDF".\n\nPara la integración con Ollama, instala los paquetes `llama-index-llms-ollama` y de embeddings correspondientes. LlamaIndex admite Chroma, Qdrant, Weaviate y más de 20 bases de datos vectoriales como backend, y gestiona estrategias de chunking, filtrado de metadatos y búsqueda híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Consulta LlamaIndex →' },
+        ],
         pros: ['Máxima flexibilidad de pipeline — ingesta, chunking, embeddings, recuperación, reordenamiento, evaluación, todo controlable', 'Compatible con todas las principales bases de datos vectoriales', 'Comunidad grande y activa', 'Nivel de producción con opciones de soporte empresarial'],
         cons: ['Requiere conocimientos de Python', 'Sin interfaz integrada — tienes que construir la interfaz por separado', 'Más configuración que cualquier herramienta llave en mano de la categoría A'],
         verdict: 'La mejor opción para equipos de desarrollo que construyen aplicaciones RAG específicas de su dominio y necesitan control detallado sobre el chunking, la recuperación y el reordenamiento — úsalo con una base de datos vectorial, no como producto independiente.',
@@ -3562,6 +3604,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'Conheça o AnythingLLM →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: 'Explore o RAGFlow →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: 'Veja os melhores mini PCs para rodar →', url: '/pt/local-llms/best-mini-pcs-local-llm', productName: 'Local RAG hardware', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: 'Conheça o PrivateGPT →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: 'Conheça o Open WebUI →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: 'Conheça o Dify →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Conheça o LlamaIndex →' },
         ],
       },
       scorecard: {
@@ -3720,6 +3766,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — Melhor Framework RAG para Desenvolvedores',
         content:
           'O LlamaIndex é um framework Python amplamente usado para construir sistemas RAG em produção. Diferente do AnythingLLM ou do RAGFlow, ele não tem interface integrada — em vez disso, oferece abstrações combináveis: carregadores de dados, tipos de índice (armazenamento vetorial, grafo de conhecimento, resumo), motores de consulta e fluxos de trabalho de agentes. Esse é o perfil de comprador "quero construir minha própria aplicação RAG", não "quero enviar 500 PDFs".\n\nPara integração com o Ollama, instale os pacotes `llama-index-llms-ollama` e de embeddings correspondentes. O LlamaIndex suporta Chroma, Qdrant, Weaviate e mais de 20 outros bancos de dados vetoriais como backends, e lida com estratégias de chunking, filtragem de metadados e busca híbrida.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'Conheça o LlamaIndex →' },
+        ],
         pros: ['Flexibilidade máxima de pipeline — ingestão, chunking, embeddings, recuperação, reordenação, avaliação, tudo controlável', 'Suporta todos os principais bancos de dados vetoriais', 'Comunidade grande e ativa', 'Nível de produção com opções de suporte corporativo'],
         cons: ['Requer conhecimento de Python', 'Sem interface integrada — você constrói a interface separadamente', 'Mais configuração do que qualquer ferramenta pronta para uso da Categoria A'],
         verdict: 'Melhor para equipes de desenvolvimento que constroem aplicações RAG específicas de domínio e precisam de controle refinado sobre chunking, recuperação e reordenação — use com um banco de dados vetorial, não como um produto independente.',
@@ -4141,6 +4190,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'تحقق من AnythingLLM ←', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: 'استكشف RAGFlow ←', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: 'شاهد أفضل أجهزة الكمبيوتر المصغرة لتشغيله ←', url: '/ar/local-llms/best-mini-pcs-local-llm', productName: 'Local RAG hardware', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: 'تحقق من PrivateGPT ←' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: 'تحقق من Open WebUI ←' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: 'تحقق من Dify ←' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'تحقق من LlamaIndex ←' },
         ],
       },
       scorecard: {
@@ -4299,6 +4352,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — أفضل إطار عمل RAG للمطورين',
         content:
           'LlamaIndex إطار عمل Python واسع الاستخدام لبناء أنظمة RAG في بيئة الإنتاج. على عكس AnythingLLM أو RAGFlow، ليس لديه واجهة مستخدم مدمجة — بدلاً من ذلك يُقدّم تجريدات قابلة للتركيب: محمّلات بيانات، وأنواع فهرسة (قاعدة بيانات متجهة، رسم بياني معرفي، ملخص)، ومحركات استعلام، وسير عمل وكلاء. هذا ملف تعريف مشترٍ من نوع "أريد بناء تطبيق RAG خاص بي"، لا "أريد رفع 500 ملف PDF".\n\nللتكامل مع Ollama، ثبّت حزمتي `llama-index-llms-ollama` والتضمين المرتبطة بها. يدعم LlamaIndex Chroma وQdrant وWeaviate وأكثر من 20 قاعدة بيانات متجهة أخرى كخلفيات، ويتعامل مع استراتيجيات التقطيع وتصفية البيانات الوصفية والبحث الهجين.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model="qwen3:14b", request_timeout=120)\ndocs = SimpleDirectoryReader("/path/to/docs").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query("What are the payment terms in the MSA?")\n```',
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'تحقق من LlamaIndex ←' },
+        ],
         pros: ['أقصى مرونة في خط الأنابيب — الاستيعاب، التقطيع، التضمين، الاسترجاع، إعادة الترتيب، التقييم، كلها قابلة للتحكم', 'يدعم جميع قواعد البيانات المتجهة الرئيسية', 'مجتمع كبير ونشط', 'جاهز للإنتاج مع خيارات دعم للشركات'],
         cons: ['يتطلب معرفة بلغة Python', 'لا توجد واجهة مستخدم مدمجة — تبني الواجهة بشكل منفصل', 'إعداد أكثر من أي أداة جاهزة من الفئة أ'],
         verdict: 'الأفضل لفرق التطوير التي تبني تطبيقات RAG خاصة بمجال معين وتحتاج إلى تحكم دقيق في التقطيع والاسترجاع وإعادة الترتيب — استخدمه مع قاعدة بيانات متجهة، لا كمنتج مستقل.',
@@ -4716,6 +4772,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { label: 'AnythingLLM 확인하기 →', url: 'https://anythingllm.com', productName: 'AnythingLLM', productCategory: 'RAG software' },
           { label: 'RAGFlow 살펴보기 →', url: 'https://ragflow.io', productName: 'RAGFlow', productCategory: 'RAG software' },
           { label: '실행할 최고의 미니 PC 보기 →', url: '/ko/local-llms/best-mini-pcs-local-llm', productName: 'Local RAG hardware', productCategory: 'Mini PC' },
+          { productName: 'PrivateGPT', url: 'https://github.com/zylon-ai/private-gpt', productCategory: 'software', label: 'PrivateGPT 확인하기 →' },
+          { productName: 'Open WebUI', url: 'https://openwebui.com', productCategory: 'software', label: 'Open WebUI 확인하기 →' },
+          { productName: 'Dify', url: 'https://dify.ai', productCategory: 'software', label: 'Dify 확인하기 →' },
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'LlamaIndex 확인하기 →' },
         ],
       },
       scorecard: {
@@ -4874,6 +4934,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LlamaIndex — 개발자를 위한 최고의 RAG 프레임워크',
         content:
           "LlamaIndex는 프로덕션 RAG 시스템을 구축하기 위해 널리 사용되는 Python 프레임워크입니다. AnythingLLM이나 RAGFlow와 달리 내장 UI가 없습니다 — 대신 데이터 로더, 인덱스 유형(벡터 스토어, 지식 그래프, 요약), 쿼리 엔진, 에이전트 워크플로우 등 조합 가능한 추상화를 제공합니다. 이는 '내가 직접 RAG 애플리케이션을 구축하고 싶다'는 구매자 프로필이지, '500개의 PDF를 업로드하고 싶다'는 프로필이 아닙니다.\n\nOllama 통합을 위해서는 관련 `llama-index-llms-ollama` 및 임베딩 패키지를 설치하십시오. LlamaIndex는 Chroma, Qdrant, Weaviate 등 20개 이상의 벡터 스토어를 백엔드로 지원하며, 청킹 전략, 메타데이터 필터링, 하이브리드 검색을 처리합니다.\n\n```python\nfrom llama_index.core import VectorStoreIndex, SimpleDirectoryReader\nfrom llama_index.llms.ollama import Ollama\n\nllm = Ollama(model=\"qwen3:14b\", request_timeout=120)\ndocs = SimpleDirectoryReader(\"/path/to/docs\").load_data()\nindex = VectorStoreIndex.from_documents(docs)\nquery_engine = index.as_query_engine(llm=llm)\nresponse = query_engine.query(\"What are the payment terms in the MSA?\")\n```",
+        affiliateLinks: [
+          { productName: 'LlamaIndex', url: 'https://www.llamaindex.ai', productCategory: 'software', label: 'LlamaIndex 확인하기 →' },
+        ],
         pros: ['수집, 청킹, 임베딩, 검색, 재순위, 평가까지 모두 제어 가능한 최대의 파이프라인 유연성', '모든 주요 벡터 데이터베이스 지원', '규모가 크고 활발한 커뮤니티', '엔터프라이즈 지원 옵션을 갖춘 프로덕션 수준'],
         cons: ['Python 지식 필요', '내장 UI 없음 — 인터페이스는 별도로 구축해야 함', '즉시 사용 가능한 범주 A 도구보다 설정이 많음'],
         verdict: '청킹, 검색, 재순위에 대한 세밀한 제어가 필요한 도메인 특화 RAG 애플리케이션을 구축하는 개발팀에 가장 적합합니다 — 독립형 제품이 아니라 벡터 데이터베이스와 함께 사용하십시오.',
