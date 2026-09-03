@@ -34,6 +34,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-local-models-tool-calling-2026':         'best-local-models-tool-calling-2026',
   'autonomous-local-agents-actually-work':       'autonomous-local-agents-actually-work',
   'autogpt-local-review-2026':                   'autogpt-local-review-2026',
+  'open-interpreter-review':                     'open-interpreter-review',
   'replace-zapier-with-local-ai-agents':         'replace-zapier-with-local-ai-agents',
   'local-ai-agents-business-workflows-eu-compliance': 'local-ai-agents-business-workflows-eu-compliance',
   'babyagi-review-autonomous-agent':             'babyagi-review-autonomous-agent',

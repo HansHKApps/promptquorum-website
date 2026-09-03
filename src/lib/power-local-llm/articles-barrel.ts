@@ -108,6 +108,7 @@ import { article as a_real_esrgan_ai_image_upscaler_review } from './articles/re
 import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local-review-2026'
 import { article as a_atomic_chat_review } from './articles/atomic-chat-review'
 import { article as a_hermes_agent_review_2026 } from './articles/hermes-agent-review-2026'
+import { article as a_open_interpreter_review } from './articles/open-interpreter-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -218,4 +219,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'librechat-review-2026':                             a_librechat_review_2026,
   // Bodega One Code review — 2026-09-03
   'bodega-one-code-review-2026':                       a_bodega_one_code_review_2026,
+  // Open Interpreter Rust/Codex-fork review — 2026-09-03
+  'open-interpreter-review':                           a_open_interpreter_review,
 }
