@@ -112,6 +112,7 @@ import { article as a_librechat_review_2026 } from './articles/librechat-review-
 import { article as a_quivr_self_hosted_knowledge_assistant_review } from './articles/quivr-self-hosted-knowledge-assistant-review'
 import { article as a_ragflow_document_understanding_rag_review } from './articles/ragflow-document-understanding-rag-review'
 import { article as a_khoj_ai_second_brain_review } from './articles/khoj-ai-second-brain-review'
+import { article as a_second_me_review_2026 } from './articles/second-me-review-2026'
 import { article as a_real_esrgan_ai_image_upscaler_review } from './articles/real-esrgan-ai-image-upscaler-review'
 import { article as a_autogpt_local_review_2026 } from './articles/autogpt-local-review-2026'
 import { article as a_atomic_chat_review } from './articles/atomic-chat-review'
@@ -215,6 +216,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'quivr-self-hosted-knowledge-assistant-review':      a_quivr_self_hosted_knowledge_assistant_review,
   'ragflow-document-understanding-rag-review':         a_ragflow_document_understanding_rag_review,
   'khoj-ai-second-brain-review':                       a_khoj_ai_second_brain_review,
+  'second-me-review-2026':                             a_second_me_review_2026,
   'real-esrgan-ai-image-upscaler-review':              a_real_esrgan_ai_image_upscaler_review,
   'best-local-llms-customer-support-call-centers-enterprise': a_best_local_llms_customer_support_call_centers_enterprise,
   'enterprise-chatbot-deployment-helpdesk-hr-bots': a_enterprise_chatbot_deployment_helpdesk_hr_bots,
