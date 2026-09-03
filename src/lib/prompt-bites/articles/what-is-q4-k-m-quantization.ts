@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
-    current_models_mentioned: ['Llama 3', 'Mistral', 'Qwen', 'Phi', 'Gemma'],
+    current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers running local LLMs for the first time',
