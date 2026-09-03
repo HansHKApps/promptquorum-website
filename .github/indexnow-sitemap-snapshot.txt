@@ -75,6 +75,7 @@ https://www.promptquorum.com/blog/research-prompt-optimization-impact
 https://www.promptquorum.com/blog/what-is-ai-consensus-scoring
 https://www.promptquorum.com/compare
 https://www.promptquorum.com/enterprise-ai
+https://www.promptquorum.com/enterprise-ai/agentic-ai-security-identity-access
 https://www.promptquorum.com/enterprise-ai/shadow-ai-controls-by-company-size
 https://www.promptquorum.com/faq
 https://www.promptquorum.com/features
@@ -131,6 +132,7 @@ https://www.promptquorum.com/local-llms/best-models-apple-silicon-2026
 https://www.promptquorum.com/local-llms/best-nas-storage-local-llm
 https://www.promptquorum.com/local-llms/best-saudi-arabic-local-llms-allam-2026
 https://www.promptquorum.com/local-llms/best-vector-database-2026
+https://www.promptquorum.com/local-llms/cherry-studio-ai-desktop-client-2026
 https://www.promptquorum.com/local-llms/cloud-gpu-rental-comparison-2026
 https://www.promptquorum.com/local-llms/corporate-rag-local-llms
 https://www.promptquorum.com/local-llms/create-custom-local-models
@@ -283,6 +285,7 @@ https://www.promptquorum.com/power-local-llm/enterprise-chatbot-deployment-helpd
 https://www.promptquorum.com/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim-2026
 https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
+https://www.promptquorum.com/power-local-llm/h2ogpt-review-2026
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
 https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
 https://www.promptquorum.com/power-local-llm/langflow-visual-ai-orchestration-review
