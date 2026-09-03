@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pick SillyTavern unless you have a specific reason not to — it is what most experienced users settle on. Pick Agnai if you want to share a server with other writers. Pick RisuAI if SillyTavern feels overbuilt and you want to start chatting in 5 minutes. Switching later is easy because all three load the same character cards.',
           },
         ],
-        columns: ['Feature', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['Feature', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { 'Feature': 'Primary surface', 'SillyTavern': 'Local Node.js + browser', 'Agnai': 'Local Node.js + browser, or shared server', 'RisuAI': 'Tauri/Electron desktop app + mobile' },
           { 'Feature': 'Setup time (first run)', 'SillyTavern': '~15 minutes', 'Agnai': '~10 minutes (single-user); ~30 minutes (server)', 'RisuAI': '~5 minutes' },
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wählen Sie SillyTavern, sofern kein spezifischer Grund dagegen spricht — es ist die Oberfläche, bei der die meisten erfahrenen Nutzerinnen und Nutzer landen. Wählen Sie Agnai, wenn Sie einen Server mit anderen Autorinnen und Autoren teilen möchten. Wählen Sie RisuAI, wenn SillyTavern zu umfangreich erscheint und Sie in 5 Minuten mit dem Chatten beginnen möchten. Der spätere Wechsel ist einfach, da alle drei dieselben Character Cards laden.',
           },
         ],
-        columns: ['Merkmal', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['Merkmal', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { 'Merkmal': 'Primäre Oberfläche', 'SillyTavern': 'Lokales Node.js + Browser', 'Agnai': 'Lokales Node.js + Browser oder gemeinsamer Server', 'RisuAI': 'Tauri/Electron-Desktop-App + Mobil' },
           { 'Merkmal': 'Setup-Zeit (Erstinstallation)', 'SillyTavern': '~15 Minuten', 'Agnai': '~10 Minuten (Einzelnutzer); ~30 Minuten (Server)', 'RisuAI': '~5 Minuten' },
@@ -968,7 +968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Elige SillyTavern a menos que tengas una razón específica para no hacerlo — es en la que la mayoría de usuarios experimentados termina. Elige Agnai si quieres compartir un servidor con otros escritores. Elige RisuAI si SillyTavern te parece excesivo y quieres empezar a chatear en 5 minutos. Cambiar después es sencillo porque las tres cargan las mismas tarjetas de personaje.',
           },
         ],
-        columns: ['Función', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['Función', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { 'Función': 'Superficie principal', 'SillyTavern': 'Node.js local + navegador', 'Agnai': 'Node.js local + navegador, o servidor compartido', 'RisuAI': 'App de escritorio Tauri/Electron + móvil' },
           { 'Función': 'Tiempo de configuración (primera ejecución)', 'SillyTavern': '~15 minutos', 'Agnai': '~10 minutos (usuario único); ~30 minutos (servidor)', 'RisuAI': '~5 minutos' },
@@ -1396,7 +1396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '특별한 이유가 없다면 SillyTavern을 선택하십시오 — 대부분의 경험 많은 사용자가 결국 정착하는 곳입니다. 다른 작가들과 서버를 공유하고 싶다면 Agnai를 선택하십시오. SillyTavern이 과하고 5분 안에 채팅을 시작하고 싶다면 RisuAI를 선택하십시오. 세 가지 모두 동일한 캐릭터 카드를 로드하므로 나중에 바꾸는 것이 간단합니다.',
           },
         ],
-        columns: ['기능', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['기능', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { '기능': '주요 표면', 'SillyTavern': 'Node.js 로컬 + 브라우저', 'Agnai': 'Node.js 로컬 + 브라우저, 또는 공유 서버', 'RisuAI': 'Tauri/Electron 데스크톱 앱 + 모바일' },
           { '기능': '설정 시간(첫 실행)', 'SillyTavern': '~15분', 'Agnai': '~10분(단일 사용자); ~30분(서버)', 'RisuAI': '~5분' },
@@ -1823,7 +1823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Escolha SillyTavern a menos que você tenha uma razão específica para não fazê-lo — é onde a maioria dos usuários experientes acaba. Escolha Agnai se quiser compartilhar um servidor com outros escritores. Escolha RisuAI se SillyTavern parece excessivo e você quer começar a conversar em 5 minutos. Trocar depois é simples porque as três carregam os mesmos cartões de personagens.',
           },
         ],
-        columns: ['Recurso', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['Recurso', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { 'Recurso': 'Superfície principal', 'SillyTavern': 'Node.js local + navegador', 'Agnai': 'Node.js local + navegador, ou servidor compartilhado', 'RisuAI': 'App de desktop Tauri/Electron + mobile' },
           { 'Recurso': 'Tempo de configuração (primeira execução)', 'SillyTavern': '~15 minutos', 'Agnai': '~10 minutos (usuário único); ~30 minutos (servidor)', 'RisuAI': '~5 minutos' },
@@ -2242,7 +2242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Choisissez SillyTavern sauf raison spécifique contraire — c\'est là que la plupart des utilisateurs expérimentés finissent. Choisissez Agnai si vous voulez partager un serveur avec d\'autres auteurs. Choisissez RisuAI si SillyTavern vous semble surdimensionné et que vous voulez commencer à chatter en 5 minutes. Changer plus tard est facile car les trois chargent les mêmes cartes.',
           },
         ],
-        columns: ['Caractéristique', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['Caractéristique', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { 'Caractéristique': 'Surface principale', 'SillyTavern': 'Node.js local + navigateur', 'Agnai': 'Node.js local + navigateur, ou serveur partagé', 'RisuAI': 'Application desktop Tauri/Electron + mobile' },
           { 'Caractéristique': 'Temps de configuration (premier lancement)', 'SillyTavern': '~15 minutes', 'Agnai': '~10 minutes (mono-utilisateur) ; ~30 minutes (serveur)', 'RisuAI': '~5 minutes' },
@@ -2647,7 +2647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '特別な理由がない限りSillyTavernを選んでください。ほとんどの経験豊富なユーザーが最終的にそこに落ち着きます。他のライターとサーバーを共有したい場合はAgnaiを選んでください。SillyTavernが過剰に感じられて5分でチャットを始めたい場合はRisuAIを選んでください。三者ともキャラクターカードが共通なので、後から切り替えることも容易です。',
           },
         ],
-        columns: ['機能', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['機能', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { '機能': '主な操作面', 'SillyTavern': 'ローカルNode.js＋ブラウザ', 'Agnai': 'ローカルNode.js＋ブラウザ、または共有サーバー', 'RisuAI': 'Tauri/Electronデスクトップアプリ＋モバイル' },
           { '機能': 'セットアップ時間（初回起動）', 'SillyTavern': '約15分', 'Agnai': '約10分（シングルユーザー）；約30分（サーバー）', 'RisuAI': '約5分' },
@@ -3066,7 +3066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '除非有特定原因，否则选择SillyTavern——这是大多数有经验用户最终的落脚点。如果想与其他作者共享服务器，选择Agnai。如果SillyTavern显得过于繁复且想在5分钟内开始聊天，选择RisuAI。由于三者使用相同的角色卡片，之后切换也很容易。',
           },
         ],
-        columns: ['功能', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['功能', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { '功能': '主要界面', 'SillyTavern': '本地Node.js + 浏览器', 'Agnai': '本地Node.js + 浏览器，或共享服务器', 'RisuAI': 'Tauri/Electron桌面应用 + 移动端' },
           { '功能': '配置时间（首次运行）', 'SillyTavern': '约15分钟', 'Agnai': '约10分钟（单用户）；约30分钟（服务器）', 'RisuAI': '约5分钟' },
@@ -3469,7 +3469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparison: {
         id: 'comparison',
         title: 'مقارنة الثلاث واجهات',
-        columns: ['الميزة', 'SillyTavern', 'Agnai', 'RisuAI'],
+        columns: ['الميزة', '[SillyTavern](https://github.com/SillyTavern/SillyTavern)', '[Agnai](https://github.com/agnaistic/agnai)', '[RisuAI](https://github.com/kwaroran/RisuAI)'],
         rows: [
           { 'الميزة': 'التخصيص العميق', 'SillyTavern': 'ممتاز', 'Agnai': 'متوسط', 'RisuAI': 'جيد' },
           { 'الميزة': 'المستخدمون المتعددون', 'SillyTavern': 'لا', 'Agnai': 'نعم (خادم مشترك)', 'RisuAI': 'لا' },

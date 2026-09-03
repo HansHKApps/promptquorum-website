@@ -223,7 +223,7 @@ schema: {
             { 'Feature': 'Ease for Developers', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { 'Feature': 'Price', 'Ollama': 'Free', 'LM Studio': 'Free' },
           ],
-          columns: ['Feature', 'Ollama', 'LM Studio'],
+          columns: ['Feature', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',
@@ -595,7 +595,7 @@ schema: {
             { 'Eigenschaft': 'Einfachheit für Entwickler', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { 'Eigenschaft': 'Preis', 'Ollama': 'Kostenlos', 'LM Studio': 'Kostenlos' },
           ],
-          columns: ['Eigenschaft', 'Ollama', 'LM Studio'],
+          columns: ['Eigenschaft', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',
@@ -972,7 +972,7 @@ schema: {
             { 'Caractéristique': 'Facilité développeurs', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { 'Caractéristique': 'Prix', 'Ollama': 'Gratuit', 'LM Studio': 'Gratuit' },
           ],
-          columns: ['Caractéristique', 'Ollama', 'LM Studio'],
+          columns: ['Caractéristique', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',
@@ -1364,7 +1364,7 @@ schema: {
             { '特徴': '開発者の容易さ', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { '特徴': '価格', 'Ollama': '無料', 'LM Studio': '無料' },
           ],
-          columns: ['特徴', 'Ollama', 'LM Studio'],
+          columns: ['特徴', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',
@@ -1663,7 +1663,7 @@ schema: {
             { '特征': '开发者易用性', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { '特征': '价格', 'Ollama': '免费', 'LM Studio': '免费' },
           ],
-          columns: ['特征', 'Ollama', 'LM Studio'],
+          columns: ['特征', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',
@@ -2064,7 +2064,7 @@ schema: {
             { 'Característica': 'Facilidad desarrolladores', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { 'Característica': 'Precio', 'Ollama': 'Gratis', 'LM Studio': 'Gratis' },
           ],
-          columns: ['Característica', 'Ollama', 'LM Studio'],
+          columns: ['Característica', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',
@@ -2433,7 +2433,7 @@ schema: {
             { 'Característica': 'سهولة المطورين', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { 'Característica': 'السعر', 'Ollama': 'مجاني', 'LM Studio': 'مجاني' },
           ],
-          columns: ['Característica', 'Ollama', 'LM Studio'],
+          columns: ['Característica', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',
@@ -2666,7 +2666,7 @@ schema: {
         quickComparisonTable: {
           id: 'quick-comparison-table',
           title: 'Tabela de comparação rápida',
-          columns: ['Recurso', 'Ollama', 'LM Studio'],
+          columns: ['Recurso', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
           rows: [
             { 'Recurso': 'Interface', 'Ollama': 'CLI (linha de comando)', 'LM Studio': 'GUI desktop' },
             { 'Recurso': 'Instalação', 'Ollama': '1 comando (curl)', 'LM Studio': 'Instalador clicável' },
@@ -2700,7 +2700,7 @@ schema: {
         setupAndInstallation: {
           id: 'setup-and-installation',
           title: 'Configuração e instalação',
-          columns: ['Etapa', 'Ollama', 'LM Studio'],
+          columns: ['Etapa', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
           rows: [
             { 'Etapa': 'Download', 'Ollama': '`curl -fsSL https://ollama.ai/install.sh | sh`', 'LM Studio': 'Baixar instalador em lmstudio.ai' },
             { 'Etapa': 'Instalação', 'Ollama': '~1 min (automático)', 'LM Studio': '~2 min (GUI)' },
@@ -3051,7 +3051,7 @@ schema: {
             { 'Feature': '개발자 친화성', 'Ollama': '★★★★★', 'LM Studio': '★★★☆☆' },
             { 'Feature': '가격', 'Ollama': '무료', 'LM Studio': '무료' },
           ],
-          columns: ['Feature', 'Ollama', 'LM Studio'],
+          columns: ['Feature', '[Ollama](https://ollama.com)', '[LM Studio](https://lmstudio.ai)'],
         },
         whatIsOllama: {
           id: 'what-is-ollama',

@@ -87,7 +87,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           "This is a relative comparison, not a price table — exact rates on both platforms change too often to quote reliably. Want easy? Choose RunPod. Want the cheapest possible price and you're willing to compare offers? Choose Vast.ai.",
         ],
-        columns: ['Category', 'RunPod', 'Vast.ai'],
+        columns: ['Category', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { 'Category': 'Price', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { 'Category': 'Ease of use', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Dies ist ein relativer Vergleich, keine Preistabelle — exakte Tarife auf beiden Plattformen ändern sich zu oft, um sie verlässlich zu nennen. Wollen Sie es einfach? RunPod. Wollen Sie den niedrigsten Preis und vergleichen Angebote selbst? Vast.ai.',
         ],
-        columns: ['Kategorie', 'RunPod', 'Vast.ai'],
+        columns: ['Kategorie', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { 'Kategorie': 'Preis', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { 'Kategorie': 'Einfachheit', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           "Ceci est une comparaison relative, pas un tableau de prix — les tarifs exacts sur les deux plateformes changent trop souvent pour être cités de façon fiable. Vous voulez la simplicité ? RunPod. Vous voulez le prix le plus bas possible et acceptez de comparer les offres ? Vast.ai.",
         ],
-        columns: ['Catégorie', 'RunPod', 'Vast.ai'],
+        columns: ['Catégorie', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { 'Catégorie': 'Prix', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { 'Catégorie': 'Facilité d\'usage', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'これは価格表ではなく相対比較です — 両プラットフォームの正確な料金は変動が激しく、信頼できる形で記載できません。簡単さを求めるならRunPod。最低価格を求め、出品比較も厭わないならVast.ai。',
         ],
-        columns: ['カテゴリ', 'RunPod', 'Vast.ai'],
+        columns: ['カテゴリ', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { 'カテゴリ': '価格', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { 'カテゴリ': '使いやすさ', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '这是相对比较，不是价格表——两个平台的确切费率变动太频繁，无法可靠列出。想要简单？选RunPod。想要尽可能低的价格并愿意比价？选Vast.ai。',
         ],
-        columns: ['类别', 'RunPod', 'Vast.ai'],
+        columns: ['类别', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { '类别': '价格', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { '类别': '易用性', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -1042,7 +1042,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Esta é uma comparação relativa, não uma tabela de preços — as tarifas exatas nas duas plataformas mudam com frequência demais para serem citadas com confiança. Quer simplicidade? RunPod. Quer o menor preço possível e está disposto a comparar ofertas? Vast.ai.',
         ],
-        columns: ['Categoria', 'RunPod', 'Vast.ai'],
+        columns: ['Categoria', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { 'Categoria': 'Preço', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { 'Categoria': 'Facilidade de uso', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -1233,7 +1233,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Esto es una comparación relativa, no una tabla de precios — las tarifas exactas en ambas plataformas cambian con demasiada frecuencia para citarlas con fiabilidad. ¿Quieres simplicidad? RunPod. ¿Quieres el precio más bajo posible y estás dispuesto a comparar ofertas? Vast.ai.',
         ],
-        columns: ['Categoría', 'RunPod', 'Vast.ai'],
+        columns: ['Categoría', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { 'Categoría': 'Precio', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { 'Categoría': 'Facilidad de uso', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'هذه مقارنة نسبية، وليست جدول أسعار — الأسعار الدقيقة على المنصتين تتغير بسرعة كبيرة بحيث لا يمكن ذكرها بشكل موثوق. تريد البساطة؟ RunPod. تريد أدنى سعر ممكن وتقبل مقارنة العروض؟ Vast.ai.',
         ],
-        columns: ['الفئة', 'RunPod', 'Vast.ai'],
+        columns: ['الفئة', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { 'الفئة': 'السعر', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { 'الفئة': 'سهولة الاستخدام', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '이것은 가격표가 아니라 상대 비교입니다 — 두 플랫폼의 정확한 요금은 너무 자주 변동하여 신뢰할 수 있게 기재할 수 없습니다. 단순함을 원한다면 RunPod. 가능한 최저가를 원하고 출품 비교도 마다하지 않는다면 Vast.ai.',
         ],
-        columns: ['항목', 'RunPod', 'Vast.ai'],
+        columns: ['항목', '[RunPod](https://www.runpod.io)', '[Vast.ai](https://vast.ai)'],
         rows: [
           { '항목': '가격', 'RunPod': '⭐⭐⭐', 'Vast.ai': '🏆' },
           { '항목': '사용 편의성', 'RunPod': '🏆', 'Vast.ai': '⭐⭐' },

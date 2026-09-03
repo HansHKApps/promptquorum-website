@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'For home or solo use: Open WebUI. For a team that needs document workspaces: AnythingLLM. For fully air-gapped deployments: PrivateGPT.',
           },
         ],
-        columns: ['Feature', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Feature', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             'Feature': 'Setup time (fresh install → first query)',
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Retrieval Latency on 5,047 Pages (p50 / p95)',
         content:
           '**Latency was measured end-to-end from query submission to first token of the answer**, on the RTX 4070 with the chat model already loaded. Median of 50 queries; p95 is the 48th worst of 50.',
-        columns: ['Stage', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Stage', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Stage': 'Embedding query (vector creation)', 'AnythingLLM': '40 ms', 'PrivateGPT': '35 ms', 'Open WebUI': '90 ms' },
           { 'Stage': 'Vector search (top-K=6)', 'AnythingLLM': '180 ms', 'PrivateGPT': '110 ms', 'Open WebUI': '210 ms' },
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hallucination Rate by Query Type',
         content:
           '**Hallucination = at least one factual error in the answer when the corpus contained the correct information.** Graded blind against an answer key. 10 queries per type, 50 total per platform. Numbers are % of answers with at least one error.',
-        columns: ['Query type', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Query type', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Query type': 'Factual lookup', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { 'Query type': 'Multi-hop reasoning', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Wählen Sie AnythingLLM, wenn Sie die einfachste Einrichtung und beste Antwortgenauigkeit für eine persönliche Dokumentbibliothek (unter 3.000 Docs) wünschen. Wählen Sie PrivateGPT, wenn Sie garantierten Offline-Betrieb ohne Cloud-Abhängigkeiten benötigen. Wählen Sie Open WebUI, wenn mehrere Personen dasselbe RAG-System mit separaten Konten und Zugriffskontrolle teilen müssen.',
           },
         ],
-        columns: ['Funktion', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Funktion', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             'Funktion': 'Einrichtungszeit (frische Installation → erste Abfrage)',
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Abruflatenz auf 5.047 Seiten (p50 / p95)',
         content:
           '**Die Latenz wurde End-to-End von der Abfrage-Einreichung bis zum ersten Token der Antwort gemessen**, auf dem RTX 4070 mit bereits geladenem Chat-Modell. Median von 50 Abfragen; p95 ist die 48. schlechteste von 50.',
-        columns: ['Phase', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Phase', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Phase': 'Abfrage einbetten (Vektorerzeugung)', 'AnythingLLM': '40 ms', 'PrivateGPT': '35 ms', 'Open WebUI': '90 ms' },
           { 'Phase': 'Vektorsuche (top-K=6)', 'AnythingLLM': '180 ms', 'PrivateGPT': '110 ms', 'Open WebUI': '210 ms' },
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Halluzinationsrate nach Abfragetyp',
         content:
           '**Halluzination = mindestens einen faktischen Fehler in der Antwort, wenn der Korpus die richtige Information enthielt.** Blind bewertet gegen einen Antwortschlüssel. 10 Abfragen pro Typ, 50 Gesamt pro Plattform. Die Zahlen sind % der Antworten mit mindestens einen Fehler.',
-        columns: ['Abfragetyp', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Abfragetyp', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Abfragetyp': 'Faktenhafte Lookup', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { 'Abfragetyp': 'Multi-Hop Reasoning', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
@@ -1046,7 +1046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Choisissez AnythingLLM si vous voulez l\'installation la plus simple et la meilleure précision pour une bibliothèque de documents personnels (moins de 3 000 docs). Choisissez PrivateGPT si vous avez besoin d\'une opération garantie hors ligne sans dépendances cloud. Choisissez Open WebUI si plusieurs personnes doivent partager le même système RAG avec comptes séparés et contrôles d\'accès.',
           },
         ],
-        columns: ['Fonctionnalité', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Fonctionnalité', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             'Fonctionnalité': 'Temps d\'installation (installation → première requête)',
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Latence d\'extraction sur 5 047 pages (p50 / p95)',
         content:
           '**La latence a été mesurée end-to-end depuis la soumission de requête jusqu\'au premier token de la réponse**, sur RTX 4070 avec le modèle de chat déjà chargé. Médiane de 50 requêtes ; p95 est la 48ème pire sur 50.',
-        columns: ['Étape', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Étape', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Étape': 'Embedding de requête (création vectorielle)', 'AnythingLLM': '40 ms', 'PrivateGPT': '35 ms', 'Open WebUI': '90 ms' },
           { 'Étape': 'Recherche vectorielle (top-K=6)', 'AnythingLLM': '180 ms', 'PrivateGPT': '110 ms', 'Open WebUI': '210 ms' },
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Taux d\'hallucination par type de requête',
         content:
           '**Hallucination = au moins une erreur factuelle dans la réponse quand le corpus contenait l\'information correcte.** Notée aveuglément contre une clé de réponse connue. 10 requêtes par type, 50 total par plateforme. Les nombres sont % des réponses avec au moins une erreur.',
-        columns: ['Type de requête', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Type de requête', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Type de requête': 'Lookup factuelle', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { 'Type de requête': 'Raisonnement multi-sauts', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
@@ -1482,7 +1482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '3,000ドキュメント未満の個人ドキュメントライブラリ向けに最も簡単なセットアップと最高の回答精度が必要な場合はAnythingLLMを選択します。保証されたオフライン操作とクラウド依存性がないことが必要な場合はPrivateGPTを選択します。複数の人が同じRAGシステムを共有アカウントとアクセス制御で共有する必要がある場合はOpen WebUIを選択します。',
           },
         ],
-        columns: ['機能', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['機能', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             '機能': 'セットアップ時間（新規インストール→最初のクエリ）',
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '5,047ページでの検索レイテンシ（p50 / p95）',
         content:
           '**レイテンシはRTX 4070でチャットモデルが既に読み込まれている状態で、クエリ送信から回答の最初のトークンまでエンドツーエンドで測定されました。** 50クエリの中央値。p95は50の48番目に悪いです。',
-        columns: ['ステージ', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['ステージ', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'ステージ': 'クエリ埋め込み（ベクトル作成）', 'AnythingLLM': '40ms', 'PrivateGPT': '35ms', 'Open WebUI': '90ms' },
           { 'ステージ': 'ベクトル検索（top-K=6）', 'AnythingLLM': '180ms', 'PrivateGPT': '110ms', 'Open WebUI': '210ms' },
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'クエリタイプ別ハルシネーション率',
         content:
           '**ハルシネーション=コーパスが正しい情報を含んでいたときに回答内の少なくとも1つの事実誤り。** 回答キーに対して盲検採点。タイプごとに10クエリ、プラットフォームごとに50合計。数値は少なくとも1つのエラーのある回答の%。',
-        columns: ['クエリタイプ', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['クエリタイプ', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'クエリタイプ': 'ファクト検索', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { 'クエリタイプ': 'マルチホップ推論', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
@@ -2189,7 +2189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Elige AnythingLLM si quieres la configuración más sencilla y la mejor precisión de respuestas para una biblioteca de documentos personal (menos de 3.000 docs). Elige PrivateGPT si necesitas operación offline garantizada sin dependencias en la nube. Elige Open WebUI si varias personas necesitan compartir el mismo sistema RAG con cuentas separadas y controles de acceso.',
           },
         ],
-        columns: ['Característica', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Característica', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             'Característica': 'Tiempo de instalación (instalación nueva → primera consulta)',
@@ -2370,7 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Latencia de recuperación en 5.047 páginas (p50 / p95)',
         content:
           '**La latencia se midió de extremo a extremo desde el envío de la consulta hasta el primer token de la respuesta**, en el RTX 4070 con el modelo de chat ya cargado. Mediana de 50 consultas; p95 es la 48.ª peor de 50.',
-        columns: ['Etapa', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Etapa', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Etapa': 'Embedding de la consulta (creación del vector)', 'AnythingLLM': '40 ms', 'PrivateGPT': '35 ms', 'Open WebUI': '90 ms' },
           { 'Etapa': 'Búsqueda vectorial (top-K=6)', 'AnythingLLM': '180 ms', 'PrivateGPT': '110 ms', 'Open WebUI': '210 ms' },
@@ -2393,7 +2393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tasa de alucinaciones por tipo de consulta',
         content:
           '**Alucinación = al menos un error factual en la respuesta cuando el corpus contenía la información correcta.** Valorado a ciegas contra una clave de respuestas. 10 consultas por tipo, 50 en total por plataforma. Los números son el % de respuestas con al menos un error.',
-        columns: ['Tipo de consulta', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Tipo de consulta', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Tipo de consulta': 'Búsqueda factual', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { 'Tipo de consulta': 'Razonamiento multi-salto', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
@@ -2797,7 +2797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Escolha o AnythingLLM se você quer a configuração mais simples e a melhor precisão de respostas para uma biblioteca de documentos pessoal (menos de 3.000 docs). Escolha o PrivateGPT se você precisa de operação offline garantida sem dependências na nuvem. Escolha o Open WebUI se várias pessoas precisam compartilhar o mesmo sistema RAG com contas separadas e controles de acesso.',
           },
         ],
-        columns: ['Característica', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Característica', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             'Característica': 'Tempo de instalação (instalação nova → primeira consulta)',
@@ -2978,7 +2978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Latência de recuperação em 5.047 páginas (p50 / p95)',
         content:
           '**A latência foi medida de ponta a ponta desde o envio da consulta até o primeiro token da resposta**, na RTX 4070 com o modelo de chat já carregado. Mediana de 50 consultas; p95 é a 48ª pior de 50.',
-        columns: ['Etapa', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Etapa', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Etapa': 'Embedding da consulta (criação do vetor)', 'AnythingLLM': '40 ms', 'PrivateGPT': '35 ms', 'Open WebUI': '90 ms' },
           { 'Etapa': 'Busca vetorial (top-K=6)', 'AnythingLLM': '180 ms', 'PrivateGPT': '110 ms', 'Open WebUI': '210 ms' },
@@ -3001,7 +3001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Taxa de alucinações por tipo de consulta',
         content:
           '**Alucinação = pelo menos um erro factual na resposta quando o corpus continha a informação correta.** Avaliado às cegas contra um gabarito de respostas. 10 consultas por tipo, 50 no total por plataforma. Os números são a % de respostas com pelo menos um erro.',
-        columns: ['Tipo de consulta', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['Tipo de consulta', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'Tipo de consulta': 'Busca factual', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { 'Tipo de consulta': 'Raciocínio multi-salto', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
@@ -3405,7 +3405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'اختر AnythingLLM إن أردت الإعداد الأبسط والدقة الأفضل في الردود لمكتبة وثائق شخصية (أقل من 3.000 وثيقة). اختر PrivateGPT إن احتجت تشغيلًا بدون اتصال مضمونًا بدون اعتماديات سحابية. اختر Open WebUI إن كان عدة أشخاص يحتاجون إلى مشاركة نظام RAG نفسه بحسابات منفصلة وضوابط وصول.',
           },
         ],
-        columns: ['الميزة', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['الميزة', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             'الميزة': 'وقت التثبيت (تثبيت جديد ← أول استعلام)',
@@ -3586,7 +3586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'زمن الاسترجاع في 5.047 صفحة (p50 / p95)',
         content:
           '**قِيس الزمن من طرف إلى طرف منذ إرسال الاستعلام حتى أول رمز في الإجابة**، على RTX 4070 مع نموذج المحادثة محمَّلًا مسبقًا. متوسط 50 استعلامًا؛ p95 هو الثامن والأربعون الأسوأ من 50.',
-        columns: ['المرحلة', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['المرحلة', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'المرحلة': 'تضمين الاستعلام (إنشاء المتجه)', 'AnythingLLM': '40 مللي ثانية', 'PrivateGPT': '35 مللي ثانية', 'Open WebUI': '90 مللي ثانية' },
           { 'المرحلة': 'البحث المتجهي (top-K=6)', 'AnythingLLM': '180 مللي ثانية', 'PrivateGPT': '110 مللي ثانية', 'Open WebUI': '210 مللي ثانية' },
@@ -3609,7 +3609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'معدل الهلوسة حسب نوع الاستعلام',
         content:
           '**الهلوسة = خطأ واقعي واحد على الأقل في الإجابة حين كانت مجموعة النصوص تحتوي المعلومات الصحيحة.** قُيِّمت بشكل أعمى مقابل مفتاح إجابات. 10 استعلامات لكل نوع، 50 إجمالًا لكل منصة. الأرقام هي نسبة الردود التي تحتوي خطأً واحدًا على الأقل.',
-        columns: ['نوع الاستعلام', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['نوع الاستعلام', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { 'نوع الاستعلام': 'بحث واقعي', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { 'نوع الاستعلام': 'استدلال متعدد الخطوات', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },
@@ -4013,7 +4013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '개인 문서 라이브러리(3,000개 문서 이하)에서 가장 간편한 설정과 최고의 응답 정확도를 원한다면 AnythingLLM을 선택하십시오. 클라우드 의존성 없이 완전 오프라인 작동이 보장되어야 한다면 PrivateGPT를 선택하십시오. 여러 사람이 별도 계정과 접근 제어를 사용해 동일한 RAG 시스템을 공유해야 한다면 Open WebUI를 선택하십시오.',
           },
         ],
-        columns: ['기능', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['기능', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           {
             '기능': '설치 시간 (신규 설치 → 첫 쿼리)',
@@ -4194,7 +4194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '5,047페이지에서 검색 지연 시간 (p50 / p95)',
         content:
           '**지연 시간은 쿼리 제출부터 첫 번째 응답 토큰까지 엔드-투-엔드로 측정되었습니다.** 채팅 모델이 이미 로드된 RTX 4070에서, 50개 쿼리의 중앙값; p95는 50개 중 48번째로 나쁜 결과입니다.',
-        columns: ['단계', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['단계', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { '단계': '쿼리 임베딩 (벡터 생성)', 'AnythingLLM': '40ms', 'PrivateGPT': '35ms', 'Open WebUI': '90ms' },
           { '단계': '벡터 검색 (top-K=6)', 'AnythingLLM': '180ms', 'PrivateGPT': '110ms', 'Open WebUI': '210ms' },
@@ -4217,7 +4217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '쿼리 유형별 환각 발생률',
         content:
           '**환각 = 코퍼스에 올바른 정보가 포함되어 있을 때 응답에 최소 한 가지 사실 오류가 있는 경우.** 알려진 답변 키와 대조하여 블라인드 평가했습니다. 유형별 10개 쿼리, 플랫폼당 총 50개. 수치는 최소 한 가지 오류가 있는 응답의 비율입니다.',
-        columns: ['쿼리 유형', 'AnythingLLM', 'PrivateGPT', 'Open WebUI'],
+        columns: ['쿼리 유형', '[AnythingLLM](https://anythingllm.com)', '[PrivateGPT](https://github.com/zylon-ai/private-gpt)', '[Open WebUI](https://openwebui.com)'],
         rows: [
           { '쿼리 유형': '사실 검색', 'AnythingLLM': '0%', 'PrivateGPT': '10%', 'Open WebUI': '10%' },
           { '쿼리 유형': '다단계 추론', 'AnythingLLM': '20%', 'PrivateGPT': '20%', 'Open WebUI': '30%' },

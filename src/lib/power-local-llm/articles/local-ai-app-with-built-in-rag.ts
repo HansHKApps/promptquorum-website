@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Sample Queries and What Each App Returned',
         content:
           '**Same documents, same chat model (Llama 3.1 8B Q4_K_M), same prompts.** Verbatim answers shortened where indicated. Each row shows whether the app retrieved the right chunk(s) and what it said.',
-        columns: ['Query', 'AnythingLLM', 'LM Studio', 'Jan + Documents'],
+        columns: ['Query', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documents](https://jan.ai)'],
         rows: [
           {
             'Query': 'What is the lease termination notice period?',
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + Documents': '7/12',
           },
         ],
-        columns: ['Behavior', 'AnythingLLM', 'LM Studio', 'Jan + Documents'],
+        columns: ['Behavior', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documents](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Beispielabfragen und was jede App zurückgegeben hat',
         content:
           '**Gleiche Dokumente, gleches Chat-Modell (Llama 3.1 8B Q4_K_M), gleche Prompts.** Wörtliche Antworten gekürzt, wo angegeben. Jede Zeile zeigt, ob die App den richtigen Chunk(s) abgerufen hat und was sie sagte.',
-        columns: ['Abfrage', 'AnythingLLM', 'LM Studio', 'Jan + Dokumente'],
+        columns: ['Abfrage', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Dokumente](https://jan.ai)'],
         rows: [
           {
             'Abfrage': 'Wie lange ist die Kündigungsfrist des Mietvertrags?',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + Dokumente': '7/12',
           },
         ],
-        columns: ['Verhalten', 'AnythingLLM', 'LM Studio', 'Jan + Dokumente'],
+        columns: ['Verhalten', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Dokumente](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -1287,7 +1287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Exemples de requêtes et résultats',
         content:
           '**Documents identiques, modèle identique (Llama 3.1 8B Q4_K_M), prompts identiques.** Chaque ligne montre si l\'app a retrieval le bon chunk et ce qu\'elle a répondu.',
-        columns: ['Requête', 'AnythingLLM', 'LM Studio', 'Jan + Documents'],
+        columns: ['Requête', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documents](https://jan.ai)'],
         rows: [
           {
             'Requête': 'Délai de préavis du contrat de location ?',
@@ -1386,7 +1386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + Documents': '7/12',
           },
         ],
-        columns: ['Metric', 'AnythingLLM', 'LM Studio', 'Jan + Documents'],
+        columns: ['Metric', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documents](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -1796,7 +1796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'サンプルクエリと各アプリの回答',
         content:
           '**ドキュメント同一、チャットモデル同一（Llama 3.1 8B Q4_K_M）、プロンプト同一。** 回答は必要に応じて短縮。各行は、アプリが正しいチャンク検索できたか、何を言ったかを表示。',
-        columns: ['クエリ', 'AnythingLLM', 'LM Studio', 'Jan + ドキュメント'],
+        columns: ['クエリ', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + ドキュメント](https://jan.ai)'],
         rows: [
           {
             'クエリ': '賃貸契約解約予告期間は？',
@@ -1895,7 +1895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + ドキュメント': '7/12',
           },
         ],
-        columns: ['メトリック', 'AnythingLLM', 'LM Studio', 'Jan + ドキュメント'],
+        columns: ['メトリック', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + ドキュメント](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -2309,7 +2309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '示例查询和每个应用返回的内容',
         content:
           '**相同的文档、相同的聊天模型（Llama 3.1 8B Q4_K_M）、相同的提示。** 逐字答案在适当处缩短。每行显示应用是否检索了正确的块以及它说了什么。',
-        columns: ['查询', 'AnythingLLM', 'LM Studio', 'Jan + 文档'],
+        columns: ['查询', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + 文档](https://jan.ai)'],
         rows: [
           {
             '查询': '租赁合同的解约通知期限是多少？',
@@ -2408,7 +2408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + 文档': '7/12',
           },
         ],
-        columns: ['行为', 'AnythingLLM', 'LM Studio', 'Jan + 文档'],
+        columns: ['行为', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + 文档](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -2840,7 +2840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Consultas de ejemplo y qué devolvió cada app',
         content:
           '**Mismos documentos, mismo modelo de chat (Llama 3.1 8B Q4_K_M), mismos prompts.** Las respuestas literales se acortan donde se indica. Cada fila muestra si la app recuperó los fragmentos correctos y qué respondió.',
-        columns: ['Consulta', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
+        columns: ['Consulta', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documentos](https://jan.ai)'],
         rows: [
           {
             'Consulta': '¿Cuál es el plazo de aviso para la rescisión del contrato?',
@@ -2939,7 +2939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + Documentos': '7/12',
           },
         ],
-        columns: ['Comportamiento', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
+        columns: ['Comportamiento', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documentos](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -3367,7 +3367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Consultas de exemplo e o que cada app retornou',
         content:
           '**Mesmos documentos, mesmo modelo de chat (Llama 3.1 8B Q4_K_M), mesmos prompts.** As respostas literais são encurtadas onde indicado. Cada linha mostra se o app recuperou os fragmentos corretos e o que respondeu.',
-        columns: ['Consulta', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
+        columns: ['Consulta', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documentos](https://jan.ai)'],
         rows: [
           {
             'Consulta': 'Qual é o prazo de aviso para a rescisão do contrato?',
@@ -3466,7 +3466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + Documentos': '7/12',
           },
         ],
-        columns: ['Comportamento', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
+        columns: ['Comportamento', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + Documentos](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -3868,7 +3868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'استعلامات نموذجية وما أعادته كل تطبيق',
         content:
           '**نفس المستندات ونفس نموذج الدردشة (Llama 3.1 8B Q4_K_M) ونفس المطالبات.** الإجابات الحرفية مُختصَرة حيث يُشار. كل صف يُظهر ما إذا كان التطبيق استرجع المقاطع الصحيحة وما أجاب به.',
-        columns: ['الاستعلام', 'AnythingLLM', 'LM Studio', 'Jan + المستندات'],
+        columns: ['الاستعلام', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + المستندات](https://jan.ai)'],
         rows: [
           {
             'الاستعلام': 'ما مهلة الإشعار لإنهاء العقد؟',
@@ -3967,7 +3967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + المستندات': '7/12',
           },
         ],
-        columns: ['السلوك', 'AnythingLLM', 'LM Studio', 'Jan + المستندات'],
+        columns: ['السلوك', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + المستندات](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',
@@ -4406,7 +4406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '샘플 쿼리 및 각 앱이 반환한 결과',
         content:
           '**동일한 문서, 동일한 채팅 모델(Llama 3.1 8B Q4_K_M), 동일한 프롬프트.** 실제 응답은 표시된 곳에서 단축했습니다. 각 행은 앱이 올바른 청크를 검색했는지와 응답 내용을 보여줍니다.',
-        columns: ['쿼리', 'AnythingLLM', 'LM Studio', 'Jan + 문서'],
+        columns: ['쿼리', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + 문서](https://jan.ai)'],
         rows: [
           {
             '쿼리': '계약 해지 통보 기간은 얼마입니까?',
@@ -4505,7 +4505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Jan + 문서': '7/12',
           },
         ],
-        columns: ['동작', 'AnythingLLM', 'LM Studio', 'Jan + 문서'],
+        columns: ['동작', '[AnythingLLM](https://anythingllm.com)', '[LM Studio](https://lmstudio.ai)', '[Jan + 문서](https://jan.ai)'],
         callouts: [
           {
             type: 'warning',

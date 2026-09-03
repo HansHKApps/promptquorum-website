@@ -224,7 +224,7 @@ schema: {
             { 'Feature': 'Chat UI', 'llama.cpp': '❌ (server only)', 'Ollama': '❌ (needs Open WebUI)', 'vLLM': '❌ (API only)' },
             { 'Feature': 'License', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['Feature', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['Feature', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         'batching': {
           id: 'batching',
@@ -555,7 +555,7 @@ schema: {
             { 'Característica': 'Interfaz de chat', 'llama.cpp': '❌ (solo servidor)', 'Ollama': '❌ (requiere Open WebUI)', 'vLLM': '❌ (solo API)' },
             { 'Característica': 'Licencia', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['Característica', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['Característica', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         'batching': {
           id: 'batching',
@@ -878,7 +878,7 @@ schema: {
             { 'الميزة': 'واجهة محادثة', 'llama.cpp': '❌ (خادم فقط)', 'Ollama': '❌ (يتطلب Open WebUI)', 'vLLM': '❌ (API فقط)' },
             { 'الميزة': 'الترخيص', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['الميزة', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['الميزة', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         'batching': {
           id: 'batching',
@@ -1204,7 +1204,7 @@ schema: {
             { 'Recurso': 'Interface de chat', 'llama.cpp': '❌ (apenas servidor)', 'Ollama': '❌ (requer Open WebUI)', 'vLLM': '❌ (apenas API)' },
             { 'Recurso': 'Licença', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['Recurso', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['Recurso', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         'batching': {
           id: 'batching',
@@ -1509,7 +1509,7 @@ schema: {
             { 'Merkmal': 'Chat-Oberfläche', 'llama.cpp': '❌ (nur Server)', 'Ollama': '❌ (Open WebUI nötig)', 'vLLM': '❌ (nur API)' },
             { 'Merkmal': 'Lizenz', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['Merkmal', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['Merkmal', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         'batching': {
           id: 'batching',
@@ -1820,7 +1820,7 @@ schema: {
             { 'Fonctionnalité': 'Interface de chat', 'llama.cpp': '❌ (serveur uniquement)', 'Ollama': '❌ (requiert Open WebUI)', 'vLLM': '❌ (API uniquement)' },
             { 'Fonctionnalité': 'Licence', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['Fonctionnalité', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['Fonctionnalité', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         'batching': { id: 'batching',
           title: 'Batching & débit',
@@ -2136,7 +2136,7 @@ schema: {
             { '機能': 'チャットUI', 'llama.cpp': '❌（サーバーのみ）', 'Ollama': '❌（Open WebUI必要）', 'vLLM': '❌（APIのみ）' },
             { '機能': 'ライセンス', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['機能', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['機能', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         'batching': {
           id: 'batching',
@@ -2315,7 +2315,7 @@ schema: {
         featureComparison: {
           id: 'feature-comparison',
           title: '功能对比',
-          columns: ['功能', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['功能', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
           rows: [
             { '功能': '安装时间', 'llama.cpp': '30分钟（编译）', 'Ollama': '5分钟（单命令）', 'vLLM': '15分钟（pip install）' },
             { '功能': 'OpenAI兼容API', 'llama.cpp': '✅（llama-server经由）', 'Ollama': '✅（原生）', 'vLLM': '✅（原生）' },
@@ -2835,7 +2835,7 @@ schema: {
             { '기능': '채팅 UI', 'llama.cpp': '❌ (서버 전용)', 'Ollama': '❌ (Open WebUI 필요)', 'vLLM': '❌ (API 전용)' },
             { '기능': '라이선스', 'llama.cpp': 'MIT', 'Ollama': 'MIT', 'vLLM': 'Apache 2.0' },
           ],
-          columns: ['기능', 'llama.cpp', 'Ollama', 'vLLM'],
+          columns: ['기능', '[llama.cpp](https://github.com/ggerganov/llama.cpp)', '[Ollama](https://ollama.com)', '[vLLM](https://github.com/vllm-project/vllm)'],
         },
         batching: {
           id: 'batching',

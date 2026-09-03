@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Use Jan if you want to extend the app, run it on Linux, or need AMD GPU support.</strong> Use LM Studio if you want a polished experience with a built-in model library and do not need customization.',
           'For the full comparison with setup steps and API details, see the <a href="/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">Jan vs LM Studio in-depth guide</a>.',
         ],
-        columns: ['Feature', 'Jan', 'LM Studio'],
+        columns: ['Feature', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Feature': 'License', 'Jan': 'MIT (open source)', 'LM Studio': 'Proprietary (free)' },
           { 'Feature': 'OS support', 'Jan': 'Mac / Windows / Linux', 'LM Studio': 'Mac / Windows' },
@@ -178,7 +178,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Nutzen Sie Jan, wenn Sie die App erweitern, unter Linux betreiben oder AMD-GPU-Unterstützung benötigen.</strong> Nutzen Sie LM Studio, wenn Sie ein ausgereiftes Erlebnis mit einer integrierten Modellbibliothek wünschen und keine Anpassungen benötigen.',
           'Den vollständigen Vergleich mit Einrichtungsschritten und API-Details finden Sie im <a href="/de/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">Jan vs LM Studio Vertiefungsvergleich</a>.',
         ],
-        columns: ['Funktion', 'Jan', 'LM Studio'],
+        columns: ['Funktion', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Funktion': 'Lizenz', 'Jan': 'MIT (Open Source)', 'LM Studio': 'Proprietär (kostenlos)' },
           { 'Funktion': 'Betriebssystem', 'Jan': 'Mac / Windows / Linux', 'LM Studio': 'Mac / Windows' },
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Utilisez Jan si vous souhaitez étendre l\'application, l\'exécuter sous Linux ou avoir besoin du support AMD GPU.</strong> Utilisez LM Studio si vous souhaitez une expérience soignée avec une bibliothèque de modèles intégrée et n\'avez pas besoin de personnalisation.',
           'Pour la comparaison complète avec les étapes de configuration et les détails de l\'API, consultez le <a href="/fr/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">guide approfondi Jan vs LM Studio</a>.',
         ],
-        columns: ['Fonctionnalité', 'Jan', 'LM Studio'],
+        columns: ['Fonctionnalité', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Fonctionnalité': 'Licence', 'Jan': 'MIT (open source)', 'LM Studio': 'Propriétaire (gratuit)' },
           { 'Fonctionnalité': 'Support OS', 'Jan': 'Mac / Windows / Linux', 'LM Studio': 'Mac / Windows' },
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>アプリを拡張したい、Linuxで動かしたい、またはAMD GPUサポートが必要な場合はJanを使用してください。</strong> 組み込みモデルライブラリを備えた洗練されたエクスペリエンスを求め、カスタマイズが不要な場合はLM Studioを使用してください。',
           'セットアップ手順やAPIの詳細を含む完全な比較については、<a href="/ja/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">Jan vs LM Studio 詳細ガイド</a>をご覧ください。',
         ],
-        columns: ['機能', 'Jan', 'LM Studio'],
+        columns: ['機能', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { '機能': 'ライセンス', 'Jan': 'MIT（オープンソース）', 'LM Studio': '独自（無料）' },
           { '機能': 'OS対応', 'Jan': 'Mac / Windows / Linux', 'LM Studio': 'Mac / Windows' },
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>如果您想扩展应用、在 Linux 上运行或需要 AMD GPU 支持，请使用 Jan。</strong> 如果您想要精致的使用体验和内置模型库且无需自定义，请使用 LM Studio。',
           '有关包含安装步骤和 API 详情的完整对比，请参阅 <a href="/zh/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">Jan vs LM Studio 深度指南</a>。',
         ],
-        columns: ['功能', 'Jan', 'LM Studio'],
+        columns: ['功能', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { '功能': '许可证', 'Jan': 'MIT（开源）', 'LM Studio': '专有（免费）' },
           { '功能': '操作系统支持', 'Jan': 'Mac / Windows / Linux', 'LM Studio': 'Mac / Windows' },
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Use Jan se quiser estender o app, executá-lo no Linux ou precisar de suporte a GPU AMD.</strong> Use LM Studio se quiser uma experiência refinada com uma biblioteca de modelos integrada e não precisar de personalização.',
           'Para a comparação completa com etapas de configuração e detalhes da API, consulte o <a href="/pt/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">guia aprofundado Jan vs LM Studio</a>.',
         ],
-        columns: ['Característica', 'Jan', 'LM Studio'],
+        columns: ['Característica', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Característica': 'Licença', 'Jan': 'MIT (código aberto)', 'LM Studio': 'Proprietário (gratuito)' },
           { 'Característica': 'Extensões', 'Jan': '~30 disponíveis', 'LM Studio': 'Não' },
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>Usa Jan si quieres extender la app, ejecutarla en Linux, o necesitas soporte para GPU AMD.</strong> Usa LM Studio si quieres una experiencia pulida con una librería de modelos integrada y no necesitas personalización.',
           'Para la comparación completa con pasos de instalación y detalles de API, consulta la <a href="/es/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">guía en profundidad de Jan vs LM Studio</a>.',
         ],
-        columns: ['Característica', 'Jan', 'LM Studio'],
+        columns: ['Característica', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'Característica': 'Licencia', 'Jan': 'MIT (código abierto)', 'LM Studio': 'Propietario (gratuito)' },
           { 'Característica': 'Extensiones', 'Jan': '~30 disponibles', 'LM Studio': 'No' },
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>استخدم Jan إذا أردت توسيع التطبيق، أو تشغيله على Linux، أو احتجت لدعم GPU من AMD.</strong> استخدم LM Studio إذا أردت تجربة مصقولة مع مكتبة نماذج مدمجة ولا تحتاج للتخصيص.',
           'للمقارنة الكاملة مع خطوات التثبيت وتفاصيل API، راجع <a href="/ar/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">الدليل المعمّق لـ Jan مقابل LM Studio</a>.',
         ],
-        columns: ['الميزة', 'Jan', 'LM Studio'],
+        columns: ['الميزة', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { 'الميزة': 'الترخيص', 'Jan': 'MIT (مفتوح المصدر)', 'LM Studio': 'ملكية خاصة (مجاني)' },
           { 'الميزة': 'الإضافات', 'Jan': '~30 متاحة', 'LM Studio': 'لا' },
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>앱을 확장하거나, Linux에서 실행하거나, AMD GPU 지원이 필요하다면 Jan을 사용하십시오.</strong> 커스터마이징 없이 내장 모델 라이브러리가 있는 세련된 환경을 원한다면 LM Studio를 사용하십시오.',
           '설치 단계 및 API 세부 정보가 포함된 전체 비교는 <a href="/ko/local-llms/lm-studio-vs-jan-ai" class="text-primary hover:underline">Jan vs LM Studio 심층 가이드</a>를 참조하십시오.',
         ],
-        columns: ['항목', 'Jan', 'LM Studio'],
+        columns: ['항목', '[Jan](https://jan.ai)', '[LM Studio](https://lmstudio.ai)'],
         rows: [
           { '항목': '라이선스', 'Jan': 'MIT (오픈 소스)', 'LM Studio': '독점 (무료)' },
           { '항목': '확장 기능', 'Jan': '약 30개 제공', 'LM Studio': '없음' },

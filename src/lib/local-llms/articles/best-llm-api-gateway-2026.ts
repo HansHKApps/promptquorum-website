@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs OpenRouter vs Portkey: Full Comparison',
         content: '**No single gateway wins every category: LiteLLM wins on cost and control, OpenRouter on setup speed, Prisma AIRS on enterprise governance.** Prices and program details verified against each vendor’s own pages on 27 August 2026 — recheck if this page has been live more than 90 days, since gateway pricing has moved repeatedly this year.',
         tableFormat: true,
-        columns: ['Factor', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['Factor', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { Factor: 'Best for', LiteLLM: 'Self-hosted teams wanting full control, no fees', OpenRouter: 'Fast multi-model work with no infrastructure', 'Portkey (Prisma AIRS)': 'Enterprises already buying Palo Alto security tooling' },
           { Factor: 'Pricing', LiteLLM: 'Free (OSS core); custom annual (Enterprise)', OpenRouter: 'No subscription; ~5.5% Stripe credit fee, 5% crypto', 'Portkey (Prisma AIRS)': 'Free 10k logs/mo; $49/mo Production; custom Enterprise' },
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Does Each Gateway Cost at Scale?',
         content: '**LiteLLM’s open-source core stays free regardless of volume; OpenRouter’s cost is a percentage of every dollar you fund; Portkey’s scales with log volume and contract terms.** The table below is straight arithmetic on OpenRouter’s published ~5.5% Stripe credit fee — it is not an estimate, and it is the number that decides this purchase.\n\nWe deliberately do not quote a dollar figure for running LiteLLM: the proxy is a small always-on service, and what that costs depends entirely on where you run it. Put your own hosting bill in the last column and the decision makes itself.',
         tableFormat: true,
-        columns: ['Monthly model spend', 'OpenRouter credit fee (~5.5%)', 'LiteLLM licence cost', 'Self-host wins below'],
+        columns: ['Monthly model spend', '[OpenRouter credit fee (~5.5%)](https://openrouter.ai)', '[LiteLLM licence cost](https://www.litellm.ai)', 'Self-host wins below'],
         rows: [
           { 'Monthly model spend': '$200', 'OpenRouter credit fee (~5.5%)': '~$11/mo (~$132/yr)', 'LiteLLM licence cost': '$0', 'Self-host wins below': '$11/mo' },
           { 'Monthly model spend': '$500', 'OpenRouter credit fee (~5.5%)': '~$27.50/mo (~$330/yr)', 'LiteLLM licence cost': '$0', 'Self-host wins below': '$27.50/mo' },
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs. OpenRouter vs. Portkey: der vollständige Vergleich',
         content: '**Kein Gateway gewinnt in allen Kategorien: LiteLLM führt bei Kosten und Kontrolle, OpenRouter beim Einrichtungstempo, Prisma AIRS bei Enterprise-Governance.** Preise und Programmdetails wurden am 27. August 2026 direkt auf den Anbieterseiten geprüft — prüfen Sie erneut, wenn diese Seite länger als 90 Tage online ist, denn die Gateway-Preise haben sich dieses Jahr mehrfach geändert.',
         tableFormat: true,
-        columns: ['Kriterium', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['Kriterium', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { Kriterium: 'Am besten für', LiteLLM: 'Selbst hostende Teams mit voller Kontrolle, ohne Gebühren', OpenRouter: 'Schnelle Multi-Modell-Arbeit ohne Infrastruktur', 'Portkey (Prisma AIRS)': 'Unternehmen, die ohnehin Palo-Alto-Security kaufen' },
           { Kriterium: 'Preis', LiteLLM: 'Kostenlos (OSS-Kern); Enterprise jährlich auf Anfrage', OpenRouter: 'Kein Abo; ca. 5,5 % Stripe-Guthabengebühr, 5 % Krypto', 'Portkey (Prisma AIRS)': 'Kostenlos 10k Logs/Monat; 49 $/Monat Production; Enterprise auf Anfrage' },
@@ -826,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was kostet jedes Gateway im laufenden Betrieb?',
         content: '**LiteLLMs Open-Source-Kern bleibt unabhängig vom Volumen kostenlos; OpenRouters Kosten sind ein Prozentsatz jedes aufgeladenen Dollars; Portkeys Kosten wachsen mit Log-Volumen und Vertragskonditionen.** Die Tabelle unten ist schlichte Arithmetik auf Basis der veröffentlichten Stripe-Guthabengebühr von ca. 5,5 % — keine Schätzung, und genau die Zahl, die diese Entscheidung trägt.\n\nWir nennen bewusst keinen Dollarbetrag für den Betrieb von LiteLLM: Der Proxy ist ein kleiner Dauerdienst, und was er kostet, hängt vollständig davon ab, wo Sie ihn betreiben. Tragen Sie Ihre eigene Hosting-Rechnung in die letzte Spalte ein — dann entscheidet sich die Frage von selbst.\n\nHinweis für DACH-Leserinnen und -Leser: Alle drei Anbieter rechnen in US-Dollar ab. Es gibt keine EUR-Preisliste; auf Ihrer Kreditkartenabrechnung kommen daher Wechselkurs und gegebenenfalls Fremdwährungsgebühr hinzu. Für B2B-Kunden in der EU greift in der Regel das Reverse-Charge-Verfahren mit gültiger USt-IdNr.',
         tableFormat: true,
-        columns: ['Monatliche Modellkosten', 'OpenRouter-Guthabengebühr (ca. 5,5 %)', 'LiteLLM-Lizenzkosten', 'Selbst-Hosting lohnt ab'],
+        columns: ['Monatliche Modellkosten', '[OpenRouter-Guthabengebühr (ca. 5,5 %)](https://openrouter.ai)', '[LiteLLM-Lizenzkosten](https://www.litellm.ai)', 'Selbst-Hosting lohnt ab'],
         rows: [
           { 'Monatliche Modellkosten': '200 $', 'OpenRouter-Guthabengebühr (ca. 5,5 %)': 'ca. 11 $/Monat (ca. 132 $/Jahr)', 'LiteLLM-Lizenzkosten': '0 $', 'Selbst-Hosting lohnt ab': '11 $/Monat' },
           { 'Monatliche Modellkosten': '500 $', 'OpenRouter-Guthabengebühr (ca. 5,5 %)': 'ca. 27,50 $/Monat (ca. 330 $/Jahr)', 'LiteLLM-Lizenzkosten': '0 $', 'Selbst-Hosting lohnt ab': '27,50 $/Monat' },
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs OpenRouter vs Portkey: comparativa completa',
         content: '**Ningún gateway gana en todas las categorías: LiteLLM manda en coste y control, OpenRouter en rapidez de puesta en marcha y Prisma AIRS en gobernanza empresarial.** Precios y detalles de programa verificados en las páginas de cada proveedor el 27 de agosto de 2026: vuelve a comprobarlos si esta página lleva más de 90 días publicada, porque los precios de los gateways se han movido varias veces este año.',
         tableFormat: true,
-        columns: ['Factor', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['Factor', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { Factor: 'Mejor para', LiteLLM: 'Equipos que autoalojan y quieren control total sin comisiones', OpenRouter: 'Trabajo multimodelo rápido sin infraestructura', 'Portkey (Prisma AIRS)': 'Empresas que ya compran seguridad de Palo Alto' },
           { Factor: 'Precio', LiteLLM: 'Gratis (núcleo OSS); Enterprise anual a medida', OpenRouter: 'Sin suscripción; ~5.5% con Stripe, 5% con cripto', 'Portkey (Prisma AIRS)': 'Gratis 10k logs/mes; $49/mes Production; Enterprise a medida' },
@@ -1393,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Cuánto cuesta cada gateway a escala?',
         content: '**El núcleo open source de LiteLLM sigue siendo gratis sin importar el volumen; el coste de OpenRouter es un porcentaje de cada dólar que cargas; el de Portkey escala con el volumen de logs y las condiciones del contrato.** La tabla siguiente es aritmética directa sobre la comisión publicada de ~5.5% de OpenRouter: no es una estimación, y es la cifra que decide esta compra.\n\nNo damos deliberadamente una cifra en dólares para operar LiteLLM: el proxy es un servicio pequeño y permanente, y lo que cuesta depende por completo de dónde lo ejecutes. Pon tu propia factura de hosting en la última columna y la decisión se resuelve sola.\n\nNota para lectores en España y Latinoamérica: los tres proveedores facturan en dólares estadounidenses. No existe lista de precios en euros ni en moneda local, así que a tu extracto se suman el tipo de cambio y, según tu banco, una comisión por divisa extranjera.',
         tableFormat: true,
-        columns: ['Gasto mensual en modelos', 'Comisión OpenRouter (~5.5%)', 'Coste de licencia LiteLLM', 'Autoalojar gana por debajo de'],
+        columns: ['Gasto mensual en modelos', '[Comisión OpenRouter (~5.5%)](https://openrouter.ai)', '[Coste de licencia LiteLLM](https://www.litellm.ai)', 'Autoalojar gana por debajo de'],
         rows: [
           { 'Gasto mensual en modelos': '$200', 'Comisión OpenRouter (~5.5%)': '~$11/mes (~$132/año)', 'Coste de licencia LiteLLM': '$0', 'Autoalojar gana por debajo de': '$11/mes' },
           { 'Gasto mensual en modelos': '$500', 'Comisión OpenRouter (~5.5%)': '~$27.50/mes (~$330/año)', 'Coste de licencia LiteLLM': '$0', 'Autoalojar gana por debajo de': '$27.50/mes' },
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs OpenRouter vs Portkey : le comparatif complet',
         content: '**Aucune passerelle ne gagne dans toutes les categories : LiteLLM domine sur le cout et le controle, OpenRouter sur la rapidite de mise en place, Prisma AIRS sur la gouvernance d\'entreprise.** Tarifs et details verifies sur les pages des editeurs le 27 aout 2026 ; verifiez a nouveau si cette page est en ligne depuis plus de 90 jours, les tarifs des passerelles ayant bouge plusieurs fois cette annee.',
         tableFormat: true,
-        columns: ['Critere', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['Critere', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { Critere: 'Ideal pour', LiteLLM: 'Equipes auto-hebergeant, controle total, sans frais', OpenRouter: 'Travail multi-modeles rapide sans infrastructure', 'Portkey (Prisma AIRS)': 'Entreprises achetant deja de la securite Palo Alto' },
           { Critere: 'Tarif', LiteLLM: 'Gratuit (OSS) ; Enterprise annuel sur devis', OpenRouter: 'Sans abonnement ; environ 5,5 % Stripe, 5 % crypto', 'Portkey (Prisma AIRS)': 'Gratuit 10k logs/mois ; 49 $/mois Production ; Enterprise sur devis' },
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Combien coute chaque passerelle a l\'echelle ?',
         content: '**Le coeur open source de LiteLLM reste gratuit quel que soit le volume ; le cout d\'OpenRouter est un pourcentage de chaque dollar credite ; celui de Portkey croit avec le volume de logs et les conditions contractuelles.** Le tableau ci-dessous est une arithmetique directe sur les frais Stripe publies d\'environ 5,5 % : ce n\'est pas une estimation, et c\'est le chiffre qui tranche cet achat.\n\nNous ne donnons volontairement aucun montant pour exploiter LiteLLM : le proxy est un petit service permanent, et son cout depend entierement de l\'endroit ou vous le faites tourner. Mettez votre propre facture d\'hebergement dans la derniere colonne et la decision se prend d\'elle-meme.\n\nNote pour les lecteurs francophones : les trois editeurs facturent en dollars americains. Il n\'existe pas de tarif en euros ; votre releve ajoutera donc le taux de change et, selon la banque, une commission sur devise etrangere.',
         tableFormat: true,
-        columns: ['Depenses mensuelles en modeles', 'Frais OpenRouter (environ 5,5 %)', 'Cout de licence LiteLLM', 'L\'auto-hebergement gagne en dessous de'],
+        columns: ['Depenses mensuelles en modeles', '[Frais OpenRouter (environ 5,5 %)](https://openrouter.ai)', '[Cout de licence LiteLLM](https://www.litellm.ai)', 'L\'auto-hebergement gagne en dessous de'],
         rows: [
           { 'Depenses mensuelles en modeles': '200 $', 'Frais OpenRouter (environ 5,5 %)': 'env. 11 $/mois (env. 132 $/an)', 'Cout de licence LiteLLM': '0 $', 'L\'auto-hebergement gagne en dessous de': '11 $/mois' },
           { 'Depenses mensuelles en modeles': '500 $', 'Frais OpenRouter (environ 5,5 %)': 'env. 27,50 $/mois (env. 330 $/an)', 'Cout de licence LiteLLM': '0 $', 'L\'auto-hebergement gagne en dessous de': '27,50 $/mois' },
@@ -2346,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs OpenRouter vs Portkey: o comparativo completo',
         content: '**Nenhum gateway vence em todas as categorias: o LiteLLM lidera em custo e controle, o OpenRouter na rapidez de configuração e o Prisma AIRS em governança corporativa.** Preços e detalhes verificados nas páginas dos próprios fornecedores em 27 de agosto de 2026 — confira de novo se esta página estiver no ar há mais de 90 dias, já que os preços de gateways se moveram várias vezes neste ano.',
         tableFormat: true,
-        columns: ['Critério', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['Critério', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { Critério: 'Melhor para', LiteLLM: 'Times que auto-hospedam, controle total, sem taxas', OpenRouter: 'Trabalho multimodelo rápido sem infraestrutura', 'Portkey (Prisma AIRS)': 'Empresas que já compram segurança da Palo Alto' },
           { Critério: 'Preço', LiteLLM: 'Gratuito (OSS); Enterprise anual sob consulta', OpenRouter: 'Sem assinatura; ~5,5% via Stripe, 5% em cripto', 'Portkey (Prisma AIRS)': 'Grátis 10 mil logs/mês; US$ 49/mês Production; Enterprise sob consulta' },
@@ -2491,7 +2491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quanto custa cada gateway em escala?',
         content: '**O núcleo open source do LiteLLM segue gratuito independentemente do volume; o custo do OpenRouter é um percentual de cada dólar creditado; o do Portkey cresce com o volume de logs e as condições contratuais.** A tabela abaixo é aritmética direta sobre a taxa Stripe publicada de ~5,5% — não é estimativa, e é o número que decide esta compra.\n\nDeliberadamente não damos um valor em dólares para operar o LiteLLM: o proxy é um serviço pequeno e permanente, e o custo depende inteiramente de onde você o executa. Coloque sua própria conta de hospedagem na última coluna e a decisão se resolve sozinha.\n\nObservação para leitores no Brasil: os três fornecedores cobram em dólares americanos. Não existe tabela em reais, então sua fatura soma câmbio e, conforme o cartão, IOF e spread.',
         tableFormat: true,
-        columns: ['Gasto mensal com modelos', 'Taxa OpenRouter (~5,5%)', 'Custo de licença LiteLLM', 'Auto-hospedar vence abaixo de'],
+        columns: ['Gasto mensal com modelos', '[Taxa OpenRouter (~5,5%)](https://openrouter.ai)', '[Custo de licença LiteLLM](https://www.litellm.ai)', 'Auto-hospedar vence abaixo de'],
         rows: [
           { 'Gasto mensal com modelos': 'US$ 200', 'Taxa OpenRouter (~5,5%)': '~US$ 11/mês (~US$ 132/ano)', 'Custo de licença LiteLLM': 'US$ 0', 'Auto-hospedar vence abaixo de': 'US$ 11/mês' },
           { 'Gasto mensal com modelos': 'US$ 500', 'Taxa OpenRouter (~5,5%)': '~US$ 27,50/mês (~US$ 330/ano)', 'Custo de licença LiteLLM': 'US$ 0', 'Auto-hospedar vence abaixo de': 'US$ 27,50/mês' },
@@ -2895,7 +2895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs OpenRouter vs Portkey：完全比較',
         content: '**すべての項目で勝つゲートウェイはありません。コストと制御ではLiteLLM、導入の速さではOpenRouter、エンタープライズ統制ではPrisma AIRSが優れます。** 価格とプログラム内容は2026年8月27日に各社の公式ページで確認しました。ゲートウェイの価格は今年何度も動いているため、本ページの公開から90日以上経過している場合は再確認してください。',
         tableFormat: true,
-        columns: ['評価軸', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['評価軸', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { 評価軸: '最適な対象', LiteLLM: 'セルフホストで完全な制御を求め、手数料を避けたいチーム', OpenRouter: 'インフラなしで素早くマルチモデルを扱いたい場合', 'Portkey (Prisma AIRS)': 'すでにPalo Altoのセキュリティを購入している企業' },
           { 評価軸: '価格', LiteLLM: '無料（OSS）／Enterpriseは年額・要問い合わせ', OpenRouter: 'サブスクなし。Stripeで約5.5%、暗号資産で5%', 'Portkey (Prisma AIRS)': '無料枠は月1万ログ／Production月額49ドル／Enterpriseは要問い合わせ' },
@@ -3040,7 +3040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '規模が大きくなると各ゲートウェイはいくらかかるか',
         content: '**LiteLLMのオープンソース中核は利用量にかかわらず無料のままです。OpenRouterのコストは入金額に対する割合、Portkeyのコストはログ量と契約条件に応じて増えます。** 下の表は、公開されている約5.5%のStripe手数料に対する単純な計算です。推計ではなく、この選択を決める数字そのものです。\n\nLiteLLMの運用費をあえてドル額で示していません。プロキシは小さな常駐サービスであり、その費用はどこで動かすかに完全に依存するためです。最後の列に自社のホスティング費用を入れれば、判断はおのずと決まります。\n\n日本の読者向けの注記：3社とも米ドル建てで請求します。円建ての価格表はないため、明細には為替レートと、カードによっては海外事務手数料が上乗せされます。',
         tableFormat: true,
-        columns: ['月間モデル費用', 'OpenRouter手数料（約5.5%）', 'LiteLLMライセンス費', 'セルフホストが有利になる目安'],
+        columns: ['月間モデル費用', '[OpenRouter手数料（約5.5%）](https://openrouter.ai)', '[LiteLLMライセンス費](https://www.litellm.ai)', 'セルフホストが有利になる目安'],
         rows: [
           { '月間モデル費用': '200ドル', 'OpenRouter手数料（約5.5%）': '約11ドル/月（約132ドル/年）', 'LiteLLMライセンス費': '0ドル', 'セルフホストが有利になる目安': '月11ドル未満' },
           { '月間モデル費用': '500ドル', 'OpenRouter手数料（約5.5%）': '約27.50ドル/月（約330ドル/年）', 'LiteLLMライセンス費': '0ドル', 'セルフホストが有利になる目安': '月27.50ドル未満' },
@@ -3444,7 +3444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs OpenRouter vs Portkey：完整对比',
         content: '**没有哪个网关能在所有维度取胜：成本与控制力上LiteLLM领先，上手速度上OpenRouter领先，企业治理上Prisma AIRS领先。** 价格与计划细节于2026年8月27日在各厂商官网核实；若本页上线已超过90天请重新核对，因为今年网关价格已多次变动。',
         tableFormat: true,
-        columns: ['维度', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['维度', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { 维度: '最适合', LiteLLM: '希望完全掌控且不付手续费的自托管团队', OpenRouter: '无基础设施、快速开展多模型工作', 'Portkey (Prisma AIRS)': '已在采购Palo Alto安全产品的企业' },
           { 维度: '价格', LiteLLM: '免费（开源）；Enterprise按年、需咨询', OpenRouter: '无订阅；Stripe约5.5%，加密货币5%', 'Portkey (Prisma AIRS)': '免费版每月1万条日志；Production每月49美元；Enterprise需咨询' },
@@ -3589,7 +3589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '规模化后每个网关要花多少钱？',
         content: '**LiteLLM的开源核心无论用量多大都免费；OpenRouter的成本是你每充一美元的一个百分比；Portkey的成本随日志量与合同条款增长。** 下表是对OpenRouter公开的约5.5% Stripe费率所做的直接算术——不是估算，而是决定这笔采购的那个数字。\n\n我们刻意不给出运维LiteLLM的美元金额：这个代理是一个常驻的小服务，其成本完全取决于你把它放在哪里跑。把你自己的托管账单填进最后一列，答案自然浮现。\n\n给中文读者的提示：三家厂商均以美元计费，没有人民币价目表，因此你的账单还会叠加汇率以及可能的境外交易手续费。',
         tableFormat: true,
-        columns: ['每月模型支出', 'OpenRouter费用（约5.5%）', 'LiteLLM许可费', '自托管更划算的门槛'],
+        columns: ['每月模型支出', '[OpenRouter费用（约5.5%）](https://openrouter.ai)', '[LiteLLM许可费](https://www.litellm.ai)', '自托管更划算的门槛'],
         rows: [
           { '每月模型支出': '200美元', 'OpenRouter费用（约5.5%）': '约11美元/月（约132美元/年）', 'LiteLLM许可费': '0美元', '自托管更划算的门槛': '低于11美元/月' },
           { '每月模型支出': '500美元', 'OpenRouter费用（约5.5%）': '约27.50美元/月（约330美元/年）', 'LiteLLM许可费': '0美元', '自托管更划算的门槛': '低于27.50美元/月' },
@@ -3993,7 +3993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM مقابل OpenRouter مقابل Portkey: المقارنة الكاملة',
         content: '**لا تتفوّق بوابة واحدة في كل الفئات: يتقدّم LiteLLM في التكلفة والتحكّم، وOpenRouter في سرعة الإعداد، وPrisma AIRS في الحوكمة المؤسسية.** جرى التحقّق من الأسعار وتفاصيل الخطط على صفحات كل مزوّد في 27 أغسطس 2026 — أعد التحقّق إن مضى على نشر هذه الصفحة أكثر من 90 يوماً، فأسعار البوابات تغيّرت مراراً هذا العام.',
         tableFormat: true,
-        columns: ['المعيار', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['المعيار', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { المعيار: 'الأنسب لـ', LiteLLM: 'فرق تستضيف ذاتياً وتريد تحكّماً كاملاً بلا رسوم', OpenRouter: 'عمل سريع متعدد النماذج بلا بنية تحتية', 'Portkey (Prisma AIRS)': 'مؤسسات تشتري بالفعل أمن Palo Alto' },
           { المعيار: 'السعر', LiteLLM: 'مجاني (مفتوح المصدر)؛ والمؤسسات سنوياً بالطلب', OpenRouter: 'بلا اشتراك؛ نحو 5.5% عبر Stripe و5% بالعملات الرقمية', 'Portkey (Prisma AIRS)': 'مجاني 10 آلاف سجل شهرياً؛ 49 دولاراً شهرياً لـProduction؛ والمؤسسات بالطلب' },
@@ -4138,7 +4138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كم تكلّف كل بوابة عند التوسّع؟',
         content: '**تبقى نواة LiteLLM مفتوحة المصدر مجانية مهما بلغ الحجم؛ وتكلفة OpenRouter نسبة من كل دولار تشحنه؛ وتكلفة Portkey تزداد مع حجم السجلات وشروط العقد.** والجدول أدناه حساب مباشر على رسم Stripe المنشور البالغ نحو 5.5% — ليس تقديراً، بل هو الرقم الذي يحسم هذا القرار.\n\nلم نذكر عمداً مبلغاً بالدولار لتشغيل LiteLLM: فالوكيل خدمة صغيرة دائمة التشغيل، وكلفتها تتوقّف كلياً على المكان الذي تشغّلها فيه. ضع فاتورة استضافتك أنت في العمود الأخير، وسيتّضح القرار من تلقاء نفسه.\n\nملاحظة للقرّاء في المنطقة: الشركات الثلاث تفوتر بالدولار الأمريكي، ولا توجد قائمة أسعار بالعملات المحلية، لذا يُضاف إلى كشف حسابك سعر الصرف وربما رسوم تحويل العملة بحسب بنكك.',
         tableFormat: true,
-        columns: ['الإنفاق الشهري على النماذج', 'رسم OpenRouter (نحو 5.5%)', 'كلفة ترخيص LiteLLM', 'الاستضافة الذاتية أوفر دون'],
+        columns: ['الإنفاق الشهري على النماذج', '[رسم OpenRouter (نحو 5.5%)](https://openrouter.ai)', '[كلفة ترخيص LiteLLM](https://www.litellm.ai)', 'الاستضافة الذاتية أوفر دون'],
         rows: [
           { 'الإنفاق الشهري على النماذج': '200 دولار', 'رسم OpenRouter (نحو 5.5%)': 'نحو 11 دولاراً شهرياً (نحو 132 دولاراً سنوياً)', 'كلفة ترخيص LiteLLM': '0 دولار', 'الاستضافة الذاتية أوفر دون': '11 دولاراً شهرياً' },
           { 'الإنفاق الشهري على النماذج': '500 دولار', 'رسم OpenRouter (نحو 5.5%)': 'نحو 27.50 دولاراً شهرياً (نحو 330 دولاراً سنوياً)', 'كلفة ترخيص LiteLLM': '0 دولار', 'الاستضافة الذاتية أوفر دون': '27.50 دولاراً شهرياً' },
@@ -4542,7 +4542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LiteLLM vs OpenRouter vs Portkey: 전체 비교',
         content: '**모든 항목에서 이기는 게이트웨이는 없습니다. 비용과 통제력은 LiteLLM, 도입 속도는 OpenRouter, 엔터프라이즈 거버넌스는 Prisma AIRS가 앞섭니다.** 가격과 요금제 내용은 2026년 8월 27일 각 공급사 공식 페이지에서 확인했습니다. 올해 게이트웨이 가격이 여러 차례 바뀌었으므로 이 페이지가 게시된 지 90일이 넘었다면 다시 확인하십시오.',
         tableFormat: true,
-        columns: ['기준', 'LiteLLM', 'OpenRouter', 'Portkey (Prisma AIRS)'],
+        columns: ['기준', '[LiteLLM](https://www.litellm.ai)', '[OpenRouter](https://openrouter.ai)', '[Portkey (Prisma AIRS)](https://portkey.ai)'],
         rows: [
           { 기준: '적합 대상', LiteLLM: '완전한 통제를 원하고 수수료를 피하려는 셀프 호스팅 팀', OpenRouter: '인프라 없이 빠르게 멀티모델 작업', 'Portkey (Prisma AIRS)': '이미 Palo Alto 보안을 구매 중인 기업' },
           { 기준: '가격', LiteLLM: '무료(오픈소스); Enterprise는 연간·문의', OpenRouter: '구독 없음; Stripe 약 5.5%, 암호화폐 5%', 'Portkey (Prisma AIRS)': '무료 월 1만 로그; Production 월 49달러; Enterprise 문의' },
@@ -4687,7 +4687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '규모가 커지면 각 게이트웨이 비용은 얼마입니까',
         content: '**LiteLLM의 오픈소스 코어는 사용량과 무관하게 무료로 유지되고, OpenRouter의 비용은 충전한 금액에 대한 비율이며, Portkey의 비용은 로그 규모와 계약 조건에 따라 늘어납니다.** 아래 표는 공개된 약 5.5%의 Stripe 수수료에 대한 단순 계산입니다. 추정치가 아니라 이 선택을 좌우하는 바로 그 숫자입니다.\n\nLiteLLM 운영 비용을 달러로 제시하지 않은 것은 의도적입니다. 이 프록시는 상시 구동되는 작은 서비스이고, 그 비용은 어디에서 돌리는지에 전적으로 달려 있습니다. 마지막 열에 여러분의 호스팅 비용을 넣으면 결론은 저절로 나옵니다.\n\n한국 독자를 위한 참고: 세 공급사 모두 미국 달러로 청구하며 원화 가격표는 없습니다. 따라서 명세서에는 환율과 카드사에 따라 해외 이용 수수료가 더해집니다.',
         tableFormat: true,
-        columns: ['월 모델 지출', 'OpenRouter 수수료(약 5.5%)', 'LiteLLM 라이선스 비용', '셀프 호스팅이 유리한 기준'],
+        columns: ['월 모델 지출', '[OpenRouter 수수료(약 5.5%)](https://openrouter.ai)', '[LiteLLM 라이선스 비용](https://www.litellm.ai)', '셀프 호스팅이 유리한 기준'],
         rows: [
           { '월 모델 지출': '200달러', 'OpenRouter 수수료(약 5.5%)': '약 11달러/월(약 132달러/년)', 'LiteLLM 라이선스 비용': '0달러', '셀프 호스팅이 유리한 기준': '월 11달러 미만' },
           { '월 모델 지출': '500달러', 'OpenRouter 수수료(약 5.5%)': '약 27.50달러/월(약 330달러/년)', 'LiteLLM 라이선스 비용': '0달러', '셀프 호스팅이 유리한 기준': '월 27.50달러 미만' },

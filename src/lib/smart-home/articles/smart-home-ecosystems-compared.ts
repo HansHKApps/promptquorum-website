@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Across the criteria that matter, Home Assistant leads on privacy and local control while Alexa and Google lead on ease and breadth.** Use the table to match an ecosystem to your priority.',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: 'Privacy and local control vs. setup convenience for the four ecosystems: Home Assistant scores highest on privacy and local control with the most setup effort; Amazon Alexa and Google Home are the most convenient but cloud-first; Apple Home sits in the middle.',
-        columns: ['Criterion', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['Criterion', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { 'Criterion': 'Device support', 'Amazon Alexa': 'Widest', 'Google Home': 'Broad', 'Apple Home': 'Narrower', 'Home Assistant': 'Widest via integrations' },
           { 'Criterion': 'Privacy', 'Amazon Alexa': 'Cloud data', 'Google Home': 'Cloud data', 'Apple Home': 'Stronger', 'Home Assistant': 'Best (local)' },
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**عبر المعايير المهمة، يتصدر Home Assistant في الخصوصية والتحكم المحلي بينما تتصدر Alexa وGoogle في السهولة والشمولية.** استخدم الجدول لمطابقة منظومة مع أولويتك.',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: 'الخصوصية والتحكم المحلي مقابل سهولة الإعداد للمنظومات الأربع: يتصدر Home Assistant الخصوصية والتحكم المحلي بأكبر جهد إعداد؛ Amazon Alexa وGoogle Home الأسهل لكنهما تعتمدان السحابة أولًا؛ Apple Home يقع في المنتصف.',
-        columns: ['المعيار', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['المعيار', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { 'المعيار': 'دعم الأجهزة', 'Amazon Alexa': 'الأوسع', 'Google Home': 'واسع', 'Apple Home': 'أضيق', 'Home Assistant': 'الأوسع عبر التكاملات' },
           { 'المعيار': 'الخصوصية', 'Amazon Alexa': 'بيانات سحابية', 'Google Home': 'بيانات سحابية', 'Apple Home': 'أقوى', 'Home Assistant': 'الأفضل (محلي)' },
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Über die wichtigen Kriterien hinweg führt Home Assistant bei Datenschutz und lokaler Steuerung, während Alexa und Google bei Einfachheit und Breite führen.** Nutzen Sie die Tabelle, um ein Ökosystem Ihrer Priorität zuzuordnen.',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: 'Datenschutz und lokale Steuerung vs. Einrichtungskomfort der vier Ökosysteme: Home Assistant führt bei Datenschutz und lokaler Steuerung mit dem größten Einrichtungsaufwand; Amazon Alexa und Google Home sind am bequemsten, aber Cloud-zuerst; Apple Home liegt dazwischen.',
-        columns: ['Kriterium', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['Kriterium', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { 'Kriterium': 'Geräteunterstützung', 'Amazon Alexa': 'Am breitesten', 'Google Home': 'Breit', 'Apple Home': 'Schmaler', 'Home Assistant': 'Am breitesten über Integrationen' },
           { 'Kriterium': 'Datenschutz', 'Amazon Alexa': 'Cloud-Daten', 'Google Home': 'Cloud-Daten', 'Apple Home': 'Stärker', 'Home Assistant': 'Am besten (lokal)' },
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A lo largo de los criterios que importan, Home Assistant lidera en privacidad y control local, mientras Alexa y Google lideran en facilidad y amplitud.** Usa la tabla para asignar un ecosistema a tu prioridad.',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: 'Privacidad y control local frente a comodidad de configuración de los cuatro ecosistemas: Home Assistant lidera en privacidad y control local con el mayor esfuerzo de configuración; Amazon Alexa y Google Home son los más cómodos pero nube-primero; Apple Home queda en medio.',
-        columns: ['Criterio', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['Criterio', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { 'Criterio': 'Compatibilidad de dispositivos', 'Amazon Alexa': 'La más amplia', 'Google Home': 'Amplia', 'Apple Home': 'Más limitada', 'Home Assistant': 'La más amplia vía integraciones' },
           { 'Criterio': 'Privacidad', 'Amazon Alexa': 'Datos en la nube', 'Google Home': 'Datos en la nube', 'Apple Home': 'Mayor', 'Home Assistant': 'La mejor (local)' },
@@ -904,7 +904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**중요한 기준 전반에 걸쳐 Home Assistant는 프라이버시와 로컬 제어에서 앞서고, Alexa와 Google은 편의성과 폭넓음에서 앞섭니다.** 표를 활용하여 에코시스템과 우선순위를 매칭하십시오.',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: '네 에코시스템의 프라이버시·로컬 제어 대 설정 편의성: Home Assistant가 프라이버시와 로컬 제어에서 앞서지만 설정 노력이 가장 크고, Amazon Alexa와 Google Home은 가장 편리하지만 클라우드 우선이며, Apple Home은 그 중간입니다.',
-        columns: ['기준', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['기준', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { '기준': '기기 호환성', 'Amazon Alexa': '가장 넓음', 'Google Home': '넓음', 'Apple Home': '더 제한적', 'Home Assistant': '통합을 통해 가장 넓음' },
           { '기준': '프라이버시', 'Amazon Alexa': '클라우드 데이터', 'Google Home': '클라우드 데이터', 'Apple Home': '높음', 'Home Assistant': '최고(로컬)' },
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sur les critères qui comptent, Home Assistant mène en confidentialité et contrôle local, tandis qu\'Alexa et Google mènent en simplicité et en étendue.** Utilisez le tableau pour associer un écosystème à votre priorité.',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: 'Confidentialité et contrôle local face à la facilité de configuration des quatre écosystèmes : Home Assistant mène en confidentialité et contrôle local avec le plus d\'effort de configuration ; Amazon Alexa et Google Home sont les plus pratiques mais cloud d\'abord ; Apple Home se situe entre les deux.',
-        columns: ['Critère', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['Critère', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { 'Critère': 'Prise en charge des appareils', 'Amazon Alexa': 'La plus large', 'Google Home': 'Large', 'Apple Home': 'Plus restreinte', 'Home Assistant': 'La plus large via intégrations' },
           { 'Critère': 'Confidentialité', 'Amazon Alexa': 'Données cloud', 'Google Home': 'Données cloud', 'Apple Home': 'Plus forte', 'Home Assistant': 'La meilleure (locale)' },
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**重要な基準全体で、Home Assistant はプライバシーとローカル制御で先行し、Alexa と Google は手軽さと幅で先行します。** 表を使って、自分の優先事項にエコシステムを対応づけましょう。',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: '4つのエコシステムのプライバシー・ローカル制御と設定の手軽さの比較：Home Assistant はプライバシーとローカル制御で先行するが設定の手間は最大、Amazon Alexa と Google Home は最も手軽だがクラウド優先、Apple Home はその中間。',
-        columns: ['基準', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['基準', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { '基準': '機器対応', 'Amazon Alexa': '最も広い', 'Google Home': '広い', 'Apple Home': 'やや狭い', 'Home Assistant': '統合経由で最も広い' },
           { '基準': 'プライバシー', 'Amazon Alexa': 'クラウドデータ', 'Google Home': 'クラウドデータ', 'Apple Home': 'より強い', 'Home Assistant': '最良（ローカル）' },
@@ -1492,7 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Nos critérios que importam, o Home Assistant lidera em privacidade e controle local, enquanto Alexa e Google lideram em facilidade e abrangência.** Use a tabela para associar um ecossistema à sua prioridade.',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: 'Privacidade e controle local vs. facilidade de configuração dos quatro ecossistemas: o Home Assistant lidera em privacidade e controle local com o maior esforço de configuração; Amazon Alexa e Google Home são os mais convenientes, mas nuvem-primeiro; o Apple Home fica no meio.',
-        columns: ['Critério', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['Critério', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { 'Critério': 'Suporte a dispositivos', 'Amazon Alexa': 'O mais amplo', 'Google Home': 'Amplo', 'Apple Home': 'Mais restrito', 'Home Assistant': 'O mais amplo via integrações' },
           { 'Critério': 'Privacidade', 'Amazon Alexa': 'Dados na nuvem', 'Google Home': 'Dados na nuvem', 'Apple Home': 'Maior', 'Home Assistant': 'A melhor (local)' },
@@ -1688,7 +1688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**在重要的各项标准上，Home Assistant 在隐私和本地控制上领先，而 Alexa 与 Google 在易用与覆盖面上领先。** 用下表把生态系统对应到你的优先事项。',
         image: '/images/smart-home-ecosystems-compared-privacy-convenience-matrix-en.svg',
         imageCaption: '四大生态系统的隐私与本地控制对比设置便利性：Home Assistant 在隐私和本地控制上领先，但配置投入最大；Amazon Alexa 和 Google Home 最便利，但云端优先；Apple Home 居中。',
-        columns: ['标准', 'Amazon Alexa', 'Google Home', 'Apple Home', 'Home Assistant'],
+        columns: ['标准', '[Amazon Alexa](https://www.amazon.com/alexa)', '[Google Home](https://home.google.com)', '[Apple Home](https://www.apple.com/home-app/)', '[Home Assistant](https://www.home-assistant.io)'],
         rows: [
           { '标准': '设备支持', 'Amazon Alexa': '最广', 'Google Home': '广', 'Apple Home': '较窄', 'Home Assistant': '经由集成最广' },
           { '标准': '隐私', 'Amazon Alexa': '云端数据', 'Google Home': '云端数据', 'Apple Home': '更强', 'Home Assistant': '最佳（本地）' },
