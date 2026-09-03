@@ -150,6 +150,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-ai-hr-software-enterprise-2026',
   // Enterprise/B2B — vector database procurement/deployment — 2026-09-03
   'enterprise-rag-vector-database-deployment-guide-2026',
+  // Enterprise/B2B — AI-powered marketing software for enterprises — 2026-09-03
+  'best-ai-marketing-software-enterprise-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

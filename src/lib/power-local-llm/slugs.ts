@@ -138,4 +138,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'enterprise-chatbot-deployment-helpdesk-hr-bots': 'enterprise-chatbot-deployment-helpdesk-hr-bots',
   // Enterprise/B2B — AI-powered HR software for enterprises — 2026-09-03
   'best-ai-hr-software-enterprise-2026':          'best-ai-hr-software-enterprise-2026',
+  // Enterprise/B2B — AI-powered marketing software for enterprises — 2026-09-03
+  'best-ai-marketing-software-enterprise-2026':   'best-ai-marketing-software-enterprise-2026',
 }
