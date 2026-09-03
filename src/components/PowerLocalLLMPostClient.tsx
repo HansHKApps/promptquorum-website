@@ -262,7 +262,28 @@ const POST_UI: Record<string, Record<string, string>> = {
     ar: '💬 بعبارات بسيطة',
     ko: '💬 쉽게 말하면',
   },
+  // Explains the "Stars" column in tool comparison tables — shown via an (i) tooltip
+  // next to the column header. Star counts only exist for GitHub-hosted projects, so
+  // the column is blank for tools without a public GitHub repo.
+  githubStarsTooltip: {
+    en: 'GitHub stars: how many GitHub users have bookmarked this repository — a rough popularity signal. Only available for tools hosted on GitHub.',
+    de: 'GitHub-Sterne: wie viele GitHub-Nutzer dieses Repository favorisiert haben — ein grober Beliebtheitsindikator. Nur für Tools mit einem öffentlichen GitHub-Repository verfügbar.',
+    fr: 'Étoiles GitHub : nombre d\'utilisateurs GitHub ayant mis ce dépôt en favori — un indicateur approximatif de popularité. Disponible uniquement pour les outils hébergés sur GitHub.',
+    ja: 'GitHubスター：このリポジトリをブックマークしたGitHubユーザー数を示す、大まかな人気の指標です。GitHubで公開されているツールにのみ表示されます。',
+    zh: 'GitHub 星标：收藏该仓库的 GitHub 用户数量，是一个大致的受欢迎程度指标。仅适用于托管在 GitHub 上的工具。',
+    es: 'Estrellas de GitHub: cuántos usuarios de GitHub han marcado este repositorio como favorito — una señal aproximada de popularidad. Solo disponible para herramientas alojadas en GitHub.',
+    pt: 'Estrelas do GitHub: quantos usuários do GitHub marcaram este repositório como favorito — um indicador aproximado de popularidade. Disponível apenas para ferramentas hospedadas no GitHub.',
+    ar: 'نجوم GitHub: عدد مستخدمي GitHub الذين أضافوا هذا المستودع إلى المفضلة — مؤشر تقريبي على الشعبية. متاح فقط للأدوات المستضافة على GitHub.',
+    ko: 'GitHub 스타: 이 저장소를 즐겨찾기한 GitHub 사용자 수 — 대략적인 인기 지표입니다. GitHub에서 호스팅되는 도구에만 표시됩니다.',
+  },
 }
+
+// Column header labels (across all 9 locales) that mark the GitHub star-count
+// column in tool comparison tables — used to attach the "what is a GitHub star"
+// tooltip and to suppress the placeholder dash when a tool has no GitHub repo.
+const STAR_COLUMN_LABELS = new Set([
+  'Stars', 'Sterne', 'Étoiles', 'Estrellas', 'Estrelas', '星标', 'スター', 'النجوم', '스타',
+])
 
 // Map language codes to their locale strings for date formatting
 const LANGUAGE_TO_LOCALE: Record<string, string> = {
@@ -801,12 +822,27 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                   {renderInlineLinks(name, lang)}
                 </h3>
                 <dl className="text-sm text-text-secondary space-y-1.5">
-                  {restCols.map((col) => (
-                    <div key={col} className="flex flex-col sm:flex-row sm:gap-2">
-                      <dt className="font-semibold text-text-primary shrink-0 sm:w-24">{col}:</dt>
-                      <dd>{renderInlineLinks(row[col] ?? '—', lang)}</dd>
-                    </div>
-                  ))}
+                  {restCols.map((col) => {
+                    const isStarCol = STAR_COLUMN_LABELS.has(col)
+                    if (isStarCol && !row[col]) return null
+                    return (
+                      <div key={col} className="flex flex-col sm:flex-row sm:gap-2">
+                        <dt className="font-semibold text-text-primary shrink-0 sm:w-24">
+                          {col}
+                          {isStarCol && (
+                            <span
+                              className="ml-1 inline-flex items-center justify-center w-3.5 h-3.5 rounded-full border border-text-secondary/40 text-[9px] font-normal text-text-secondary align-middle cursor-help"
+                              title={(POST_UI.githubStarsTooltip?.[lang] ?? POST_UI.githubStarsTooltip?.en)!}
+                            >
+                              i
+                            </span>
+                          )}
+                          :
+                        </dt>
+                        <dd>{renderInlineLinks(row[col]!, lang)}</dd>
+                      </div>
+                    )
+                  })}
                 </dl>
                 <RelatedArticlesDisclosure toolName={name.replace(/\*\*/g, '')} lang={lang} />
               </div>
@@ -829,6 +865,14 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
                 {section.columns.map((col, colIdx) => (
                   <th key={col} className={`text-left p-2 sm:p-3 font-bold text-text-primary bg-primary/5 whitespace-nowrap${colIdx === 0 ? ' sticky left-0 z-10' : ''}`}>
                     {col}
+                    {STAR_COLUMN_LABELS.has(col) && (
+                      <span
+                        className="ml-1 inline-flex items-center justify-center w-3.5 h-3.5 rounded-full border border-text-secondary/40 text-[9px] font-normal text-text-secondary align-middle cursor-help"
+                        title={(POST_UI.githubStarsTooltip?.[lang] ?? POST_UI.githubStarsTooltip?.en)!}
+                      >
+                        i
+                      </span>
+                    )}
                   </th>
                 ))}
               </tr>
@@ -836,11 +880,19 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
             <tbody>
               {section.rows.map((row, i) => (
                 <tr key={i} className="border-b border-primary/10 hover:bg-primary/5 transition-colors group">
-                  {section.columns!.map((col, colIdx) => (
-                    <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap' : 'p-2 sm:p-3 text-text-secondary'}>
-                      {renderInlineLinks(row[col] ?? row[String(colIdx)] ?? '—', lang)}
-                    </td>
-                  ))}
+                  {section.columns!.map((col, colIdx) => {
+                    const value = row[col] ?? row[String(colIdx)]
+                    if (!value && STAR_COLUMN_LABELS.has(col)) {
+                      return (
+                        <td key={col} className="p-2 sm:p-3 text-text-secondary" />
+                      )
+                    }
+                    return (
+                      <td key={col} className={colIdx === 0 ? 'p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap' : 'p-2 sm:p-3 text-text-secondary'}>
+                        {renderInlineLinks(value ?? '—', lang)}
+                      </td>
+                    )
+                  })}
                 </tr>
               ))}
             </tbody>
