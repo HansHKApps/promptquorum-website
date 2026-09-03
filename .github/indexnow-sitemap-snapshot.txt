@@ -74,9 +74,6 @@ https://www.promptquorum.com/blog/quorum
 https://www.promptquorum.com/blog/research-prompt-optimization-impact
 https://www.promptquorum.com/blog/what-is-ai-consensus-scoring
 https://www.promptquorum.com/compare
-https://www.promptquorum.com/enterprise-ai
-https://www.promptquorum.com/enterprise-ai/agentic-ai-security-identity-access
-https://www.promptquorum.com/enterprise-ai/shadow-ai-controls-by-company-size
 https://www.promptquorum.com/faq
 https://www.promptquorum.com/features
 https://www.promptquorum.com/features/optimization
@@ -140,6 +137,7 @@ https://www.promptquorum.com/local-llms/data-residency-sovereign-ai-eu-gdpr-ente
 https://www.promptquorum.com/local-llms/deepseek-local-china-data-privacy-2026
 https://www.promptquorum.com/local-llms/desktop-vs-webui-local-llm
 https://www.promptquorum.com/local-llms/double-local-llm-speed
+https://www.promptquorum.com/local-llms/edge-ai-hardware-for-local-llms
 https://www.promptquorum.com/local-llms/enterprise-compliance-local-llms
 https://www.promptquorum.com/local-llms/enterprise-gpu-server-buying-guide-2026
 https://www.promptquorum.com/local-llms/eu-cloud-gpu-gdpr-2026
@@ -232,6 +230,8 @@ https://www.promptquorum.com/local-llms/top-open-source-models-ollama
 https://www.promptquorum.com/local-llms/troubleshooting-local-llm-setup
 https://www.promptquorum.com/local-llms/uae-pdpl-data-sovereignty-local-ai-2026
 https://www.promptquorum.com/local-llms/used-gpus-for-local-llms
+https://www.promptquorum.com/local-llms/vla-models-robots-local-inference
+https://www.promptquorum.com/local-llms/vlm-video-analytics-drones-edge
 https://www.promptquorum.com/local-llms/vpn-for-local-llm-users
 https://www.promptquorum.com/local-llms/vram-calculator-local-llm
 https://www.promptquorum.com/local-llms/what-are-local-llms
@@ -242,6 +242,7 @@ https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide-
 https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag
 https://www.promptquorum.com/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026
 https://www.promptquorum.com/power-local-llm/asus-mini-pc-local-ai-2026
+https://www.promptquorum.com/power-local-llm/atomic-chat-review
 https://www.promptquorum.com/power-local-llm/autogpt-local-review-2026
 https://www.promptquorum.com/power-local-llm/autonomous-local-agents-actually-work
 https://www.promptquorum.com/power-local-llm/babyagi-review-autonomous-agent
@@ -269,6 +270,7 @@ https://www.promptquorum.com/power-local-llm/best-rag-tools-for-business-documen
 https://www.promptquorum.com/power-local-llm/best-vpn-ai-privacy-local-llm-2026
 https://www.promptquorum.com/power-local-llm/best-web-hosting-2026
 https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-2026
+https://www.promptquorum.com/power-local-llm/bodega-one-code-review-2026
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
 https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
 https://www.promptquorum.com/power-local-llm/cloud-gpu-rental-guide-2026
@@ -287,8 +289,10 @@ https://www.promptquorum.com/power-local-llm/enterprise-rag-vector-database-depl
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/h2ogpt-review-2026
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
+https://www.promptquorum.com/power-local-llm/hermes-agent-review-2026
 https://www.promptquorum.com/power-local-llm/khoj-ai-second-brain-review
 https://www.promptquorum.com/power-local-llm/langflow-visual-ai-orchestration-review
+https://www.promptquorum.com/power-local-llm/librechat-review-2026
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
 https://www.promptquorum.com/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026
 https://www.promptquorum.com/power-local-llm/local-ai-agents-business-workflows-eu-compliance
