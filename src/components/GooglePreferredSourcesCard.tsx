@@ -25,6 +25,11 @@ const SHOWN_DURATION_MS = 14 * 24 * 60 * 60 * 1000
 const SHOW_DELAY_MS = 30 * 1000
 const SLOT_ID = 'google_preferred_sources'
 
+// Fallback for browsers where localStorage throws (Safari ITP/private mode, blocked
+// in-app webviews, quota errors): keeps the cap effective for the life of this tab
+// even though it can't survive a reload or a new tab.
+let sessionShownFallback = false
+
 const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/, /\/settings(\/|$)/, /\/preferences(\/|$)/]
 
 type Copy = {
@@ -109,6 +114,8 @@ export function GooglePreferredSourcesCard() {
 
   // Respect prior dismissal or a recent passive "shown" impression, then arm the 30-second timer
   useEffect(() => {
+    if (sessionShownFallback) return
+
     try {
       const until = localStorage.getItem(DISMISS_KEY)
       if (until && Date.now() < parseInt(until, 10)) {
@@ -121,7 +128,9 @@ export function GooglePreferredSourcesCard() {
         return
       }
     } catch {
-      /* ignore — fall through to showing it */
+      // Can't verify the cap — assume it's set rather than showing on every page view.
+      setDismissed(true)
+      return
     }
 
     timerRef.current = setTimeout(() => {
@@ -131,7 +140,7 @@ export function GooglePreferredSourcesCard() {
       try {
         localStorage.setItem(SHOWN_KEY, String(Date.now() + SHOWN_DURATION_MS))
       } catch {
-        /* ignore */
+        sessionShownFallback = true
       }
       trackPrefSource('shown', { surface: 'popup_card', source_page: pathname, lang })
     }, SHOW_DELAY_MS)
